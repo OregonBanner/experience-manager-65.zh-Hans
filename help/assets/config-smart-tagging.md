@@ -1,0 +1,139 @@
+---
+title: 使用智能内容服务配置资产标记
+description: 了解如何使用智能内容服务在AEM中配置智能标记和增强的智能标记。
+contentOwner: AG
+translation-type: tm+mt
+source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+
+---
+
+
+# 使用智能内容服务配置资产标记 {#configure-asset-tagging-using-the-smart-content-service}
+
+您可以使用Adobe I/O将Adobe Experience Manager(AEM)与智能内容服务集成。使用此配置可从AEM中访问智能内容服务。
+
+文章详细介绍了配置智能内容服务所需的以下主要任务。 在后端，AEM服务器在将请求转发到智能内容服务之前，使用Adobe IO网关验证您的服务凭据。
+
+* 在AEM中创建智能内容服务配置以生成公钥。 获取用于OAuth集成的公共证书。
+* 在Adobe I/O中创建集成并上传生成的公钥。
+* 使用Adobe I/O中的API密钥和其他凭据配置AEM实例。
+* （可选）在资产上传时启用自动标记。
+
+## 前提条件 {#prerequisites}
+
+在使用智能内容服务之前，请确保以下各项在Adobe I/O上创建集成：
+
+* 具有组织管理员权限的Adobe ID帐户。
+* 您的组织启用了智能内容服务。
+
+## 获取公共证书 {#obtain-public-certificate}
+
+公共证书允许您在Adobe I/O上验证您的配置文件。
+
+1. 在AEM用户界面中，点按AEM徽标，然后转到工具> **[!UICONTROL 云服务]**> **[!UICONTROL 旧版云服务]**。
+
+1. 在云服务页面中，点按／单击资产智 **[!UICONTROL 能标记下]****[!UICONTROL 的立即配置]**。
+1. 在“创 **[!UICONTROL 建配置]** ”对话框中，指定智能标记配置的标题和名称。 点按/单击&#x200B;**[!UICONTROL 创建]**。
+1. 在 **[!UICONTROL AEM智能内容服务对话框中]** ，使用以下值：
+
+   **[!UICONTROL 服务 URL]**: `https://mc.adobe.io/marketingcloud/smartcontent`
+
+   **[!UICONTROL 授权服务器]**: `https://ims-na1.adobelogin.com`
+
+   现在将其他字段留空（稍后提供）。 Tap/click **[!UICONTROL OK]**.
+
+   ![用于提供内容服务URL的AEM智能内容服务对话框](assets/aem_scs.png)
+
+1. 点按／单 **[!UICONTROL 击下载用于OAuth集成的公共证书]**，然后下载公共证书文件 `AEM-SmartTags.crt`。
+
+   ![为智能标记服务创建的设置的表示形式](assets/download_link.png)
+
+### 证书过期时重新配置 {#certrenew}
+
+证书到期后，不再受信任。 要添加新证书，请执行以下步骤。 您无法续订过期的证书。
+
+1. 以管理员身份登录AEM部署。 单击“ **[!UICONTROL 工具]** ”>“安 **[!UICONTROL 全]** ” **[!UICONTROL >“]**&#x200B;用户”。
+
+1. 找到并单 **[!UICONTROL 击dam-update-service用户]** 。 单击“ **[!UICONTROL Keystore]** ”选项卡。
+1. 删除现有的 **[!UICONTROL 相似性search]** keystore及过期的证书。 单击 **[!UICONTROL 保存并关闭]**。
+
+   ![删除Keystore中现有的相似性搜索条目以添加新的安全证书](assets/smarttags_delete_similaritysearch_keystore.png)
+
+   删除Keystore中现有的相似性搜索条目以添加新的安全证书
+
+1. 导航到工 **[!UICONTROL 具]** > **[!UICONTROL 云服务]** > **[!UICONTROL 旧]**&#x200B;版云服务。 单击 **[!UICONTROL 资产智能标记]** >显 **[!UICONTROL 示配置]** >可 **[!UICONTROL 用配置]**。 单击所需的配置。
+
+1. 要下载公共证书，请单击“下 **[!UICONTROL 载用于OAuth集成的公共证书”]**。
+1. 访 [问https://console.adobe.io](https://console.adobe.io) ，然后导航到“集成”页面上的现有智能 **[!UICONTROL 内容服务]** 。 上传新证书。 有关详细信息，请参阅创建 [Adobe I/O集成中的说明](#create-adobe-i-o-integration)。
+
+## 创建Adobe I/O集成 {#create-adobe-i-o-integration}
+
+要使用智能内容服务API，请在Adobe I/O中创建集成，以生成API密钥、技术帐户Id、组织Id和客户端机密。
+
+1. 访问 [https://console.adobe.io](https://console.adobe.io/)。
+1. 在“集 **[!UICONTROL 成]** ”页面上，选择相应的帐户并验证关联的组织角色是否为系统管理员。
+1. 点按 **[!UICONTROL 新集成]**。
+1. 在“创 **[!UICONTROL 建新集成]** ”页面上，选 **[!UICONTROL 择访问API]**。 点按 **[!UICONTROL 继续]**。
+1. 在“ **[!UICONTROL Experience Cloud]**”下，选择“ **[!UICONTROL 智能内容]**”。 点按 **[!UICONTROL 继续]**。
+
+   ![创建新集成时，从可用的选项中选择Experience cloud下的智能内容](assets/smart_content.png)
+
+1. 在下一页，选择“新 **[!UICONTROL 建集成”]**。 点按／单击 **[!UICONTROL 继续]**。
+1. 在“集 **[!UICONTROL 成详细信息]** ”页面上，指定集成网关的名称并添加说明。
+1. 在公 **[!UICONTROL 钥证书中]**，上 `AEM-SmartTags.crt` 传您上面下载的文件。
+1. Tap/click **[!UICONTROL Create Integration]**.
+1. 要查看集成信息，请点按／单击继 **[!UICONTROL 续以查看集成详细信息]**。
+
+   ![在“概述”选项卡中，您可以查看为集成提供的信息。](assets/integration_details.png)
+
+## 配置智能内容服务 {#configure-smart-content-service}
+
+要配置集成，请使用Adobe I/O集成中的“技术帐户ID”、“组织ID”、“客户端机密”、“授权服务器”和API密钥字段的值。 创建智能标记云配置允许验证来自AEM实例的API请求。
+
+1. 在AEM用户界面中，点按／单击AEM徽标。 导航到 **[!UICONTROL 工具>云服务>旧版云服务]** ，以打开云服务控制台。
+1. 在资产智 **[!UICONTROL 能标记下]**，打开上面创建的配置。 在服务设置页面上，单击“编 **[!UICONTROL 辑”]**。
+1. 在“ **[!UICONTROL AEM智能内容服务]** ”对话框中，为“服务URL”和“授权服务器”字段使用预填充的值 ******** 。
+1. 对于字段 **[!UICONTROL API密钥]**、 **[!UICONTROL Technical Account Id]**、 **[!UICONTROL Organization Id]**，和Client Secret，请使 ****&#x200B;用上面生成的值。
+
+## 验证配置 {#validate-the-configuration}
+
+完成配置后，可使用JMX MBean验证配置。 要验证，请按照以下步骤操作。
+
+1. 访问您的AEM服务器，网址为 `https://[server]:[port]`。
+
+1. 转到“工 **[!UICONTROL 具”>“操作”>“Web控制台]** ”以打开OSGi控制台。 单击“ **[!UICONTROL 主> JMX]**”。
+1. 单 **[!UICONTROL 击com.day.cq.dam.similaritysearch.internal.impl]**。 它打开“相似 **[!UICONTROL 性搜索杂项任务”。]**
+1. 单击 **[!UICONTROL validateConfigs()]**。 在“验证 **[!UICONTROL 配置]** ”对话框中，单 **[!UICONTROL 击调用]**。
+
+   验证结果将显示在同一对话框中。
+
+## 在更新资产工作流程中启用智能标记（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
+
+1. 在AEM用户界面中，点按／单击AEM徽标，然后转到工具>工 **[!UICONTROL 作流>模型]**。
+1. 在“工 **[!UICONTROL 作流模型]** ”页面上，选择 **[!UICONTROL DAM更新资产工作流模型]** 。
+1. 点按／单击工 **[!UICONTROL 具栏中]** 的编辑。
+1. 展开侧面板以显示步骤。 拖 **[!UICONTROL 动DAM工作流部分中可用的智能标记资产]** ，并将其放在流程缩略图步骤之 **[!UICONTROL 后]** 。
+
+   ![在DAM更新资产工作流中的流程缩略图步骤之后添加智能标记资产步骤](assets/chlimage_1-105.png)
+
+1. 在编辑模式下打开该步骤。 在“ **[!UICONTROL 高级设置]**”下，确保选中“处理 **[!UICONTROL 程序高级]** ”选项。
+
+   ![chlimage_1-3](assets/chlimage_1-106.png)
+
+1. 在“参 **[!UICONTROL 数]** ”选项卡中，如果希望工作流完成，即使自动标记步骤失败，也 **** 可以选择“忽略错误”。
+
+   ![chlimage_1-4](assets/chlimage_1-107.png)
+
+   要在上传资产时标记资产，而不管文件夹是否启用了智能标记，请选择忽 **[!UICONTROL 略智能标记标志]**。
+
+   ![chlimage_1-5](assets/chlimage_1-108.png)
+
+1. 点按 **[!UICONTROL 确定]** ，以关闭进程步骤，然后保存工作流。
+
+>[!MORELIKETHIS]
+>
+>* [管理智能标记](managing-smart-tags.md)
+>* [智能标记的概述和如何培训](enhanced-smart-tags.md)
+>* [培训智能内容服务的准则和规则](smart-tags-training-guidelines.md)
+>* [有关如何配置智能标记的视频教程](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)
+
