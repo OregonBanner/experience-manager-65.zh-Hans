@@ -1,0 +1,30 @@
+---
+title: AEM Forms工作区中不提供Flex工作区的功能
+seo-title: AEM Forms工作区中不提供Flex工作区的功能
+description: AEM Forms工作区不仅具备基于Flex的工作区的创新功能。 了解特性和功能的差异。
+seo-description: AEM Forms工作区不仅具备基于Flex的工作区的创新功能。 了解特性和功能的差异。
+uuid: 128729b3-2367-42e8-8159-a080595e8455
+contentOwner: robhagat
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+topic-tags: forms-workspace
+discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
+translation-type: tm+mt
+source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+
+---
+
+
+# AEM Forms工作区中不提供Flex工作区的功能 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+
+AEM Forms工作区是全新的工作区。 以下是AEM Forms工作区中不提供的基于Flex的工作区的一些功能。
+
+* 欢迎页面不可用。 您可以将“开始进程”、“待办事项”、“跟踪”和“收藏夹”页面设置为登录工作区时显示的第一页。
+* AEM Forms工作区中不显示系统事件的消息和通知。 与消息（如“消息通知查看时间”）对应的所有设置也不适用于AEM Forms工作区。
+* 视图已重新组织，现在卡片视图和列表视图之间对于起点和任务没有区别。
+* 由于AEM Forms工作区中卡片视图和列表视图之间没有区别，因此“管理待办事项”、“历史记录”和“首选项”中的列标题设置不可用。
+* 用于管理跟踪页面的列标题的选项在AEM Forms工作区中不可用。
+* 在AEM Forms工作区中，不支持为用户任务设置批准容器或自定义容器。
+* 搜索模板的选项在“跟踪”选项卡中可用，但在“任务”选项卡中不可用。
+
+**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
