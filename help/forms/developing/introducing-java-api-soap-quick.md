@@ -1,0 +1,88 @@
+---
+title: 介绍Java API quickStart
+seo-title: 介绍Java API quickStart
+description: 'null'
+seo-description: 'null'
+uuid: 480e1809-f789-4ad8-b5d5-2d97aba8411a
+contentOwner: admin
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+topic-tags: development-tools
+discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
+translation-type: tm+mt
+source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+
+---
+
+
+# 介绍Java API快速入门 {#introducing-java-api-quickstart}
+
+Adobe AEM Forms API快速入门可以帮助您加快开发与AEM Forms服务交互的程序的工作。 *快速*&#x200B;入门是完整的程序，您可以将其复制并粘贴到您自己的项目中，并作为起点使用。 您可以运行快速入门来查看其行为方式，并根据您自己的需要对其进行修改。
+
+AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
+
+Java强类型API快速入门提供了执行Java应用程序所需的JAR文件列表。 大多数Java快速入门是在其中运行的控制台应用程序 `main`。 但是，Forms java强类型API快速入门是作为在Web应用程序中运行的Java servlet实现的。
+
+JAR文件列表位于快速入门开始处的注释部分。 例如，以下注释位于“输出”快速启动中，它是每个Java快速启动中都找到的典型JAR文件列表。
+
+```as3
+ /*
+     * This Java Quick Start uses the SOAP mode and contains the following JAR files
+     * in the class path:
+     * 1. adobe-output-client.jar
+     * 2. adobe--client.jar
+     * 3. adobe-usermanager-client.jar
+     *
+     * These JAR files are located in the following path:
+     * <install directory>/Adobe/Adobe_Experience_Manager_forms/SDK/client-libs/common
+     *
+     * The adobe-utilities.jar file is located in the following path:
+     * <install directory>/Adobe/Adobe_Experience_Manager_forms/SDK/client-libs/jboss
+     *
+     * The jboss-client.jar file is located in the following path:
+     * <install directory>/Adobe/Adobe_Experience_Manager_forms/jboss/bin/client
+     *
+     * If you want to invoke a remote AEM Forms instance and there is a
+     * firewall between the client application and AEM Forms, then it is
+     * recommended that you use the SOAP mode. When using the SOAP mode,
+     * you have to include additional JAR files located in the following
+     * path
+     * <install directory>/Adobe/Adobe_Experience_Manager_forms/SDK/client-libs/thirdparty
+     *
+     * For information about the SOAP
+     * mode and the additional JAR files that need to be included,
+     * see "Setting connection properties" in Programming
+     * with AEM Forms
+     *
+     * For complete details about the location of the AEM Forms JAR files,
+     * see "Including AEM Forms library files" in Programming
+     * with AEM Forms
+     */
+```
+
+## 多服务快速入门 {#multiple-services-quick-start}
+
+大多数快速入门(位于 *JEE上的AEM Forms编程中* )调用特定服务以执行操作。 但是，某些快速入门会调用多个AEM Forms服务以执行给定的工作流。 以下列表提供调用多个AEM Forms服务的Java快速入门：
+
+[快速入门（SOAP模式）:使用Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （调用存储库和输出服务）将AEM Forms存储库中的文档传递到输出服务
+
+[快速入门（SOAP模式）:使用Java API基于片段创建PDF文档](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （调用“汇编程序和输出”服务）
+
+[快速入门（SOAP模式）:使用Java API使用提交的XML数据创建PDF文档](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) （调用表单、输出和文档管理服务）
+
+[快速入门（SOAP模式）:使用Java API将文档传递到Forms Service](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) （调用Forms和Document Management服务）
+
+[快速入门（SOAP模式）:使用Java API对基于XFA的表单进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) （调用表单和签名服务）
+
+[快速入门（SOAP模式）:使用Java API管理角色和权限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （调用DirectoryManager和AuthorizationManager服务）
+
+[快速入门（SOAP模式）:使用Java API将文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) （调用输出和文档管理服务）
+
+>[!NOTE]
+>
+>使用AEM Forms进行编程中的“快速入门”基于JBoss® Application server和Microsoft® Windows®操作系统上部署的AEM Forms。 但是，如果您使用的是其他操作系统（如UNIX®），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
+
+>[!NOTE]
+>
+>大多数Web服务快速入门都以C#编写，并使用。NET框架。 但是，您可以创建客户端应用程序逻辑，该逻辑能够在支持SOAP标准的任何开发环境中调用AEM Forms服务。 (请参 [阅使用Web服务调用AEM表单](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)。)
+
