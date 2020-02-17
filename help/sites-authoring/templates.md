@@ -1,0 +1,717 @@
+---
+title: 创建页面模板
+seo-title: 创建页面模板
+description: 模板可定义生成页面的结构，而且有了模板编辑器，创建和维护模板不再只是开发人员的任务
+seo-description: 模板可定义生成页面的结构，而且有了模板编辑器，创建和维护模板不再只是开发人员的任务
+uuid: e14cd298-289f-43f0-aacb-314ed5d56c12
+contentOwner: Chris Bohnert
+products: SG_EXPERIENCEMANAGER/6.5/SITES
+content-type: reference
+topic-tags: site-features
+discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
+docset: aem65
+translation-type: tm+mt
+source-git-commit: e3f1c932a5937e8a115e2849935b8f5ea5c2613d
+
+---
+
+
+# 创建页面模板{#creating-page-templates}
+
+创建页面时，您必须选择一个模板，以用作创建新页面的基础。模板可定义生成页面的结构、任何初始内容以及可使用的组件。
+
+有了&#x200B;**模板编辑器**，创建和维护模板不再只是开发人员的任务。有一类称为&#x200B;**模板作者**&#x200B;的高级用户也可以参与这些任务的执行。不过，开发人员仍需要设置环境、创建客户端库以及创建要使用的组件，但是这些基本架构准备就绪后，**模板作者**&#x200B;便可以灵活地创建并配置模板，而无需启动开发项目。
+
+在&#x200B;**“模板”控制台**&#x200B;中，模板作者可以执行以下操作：
+
+* 创建新模板，或复制现有模板。
+* 管理模板的生命周期。
+
+在&#x200B;**模板编辑器**&#x200B;中，模板作者可以执行以下操作：
+
+* 将组件添加到模板并将它们置于响应式网格上。
+* 预先配置组件。
+* 定义可在使用模板创建的页面上编辑的组件。
+
+本文档将介绍&#x200B;**模板作者**&#x200B;如何使用“模板”控制台和模板编辑器来创建和管理可编辑的模板。
+
+有关如何在技术层面使用可编辑模板的详细信息，请参阅开发人员文档[页面模板 - 可编辑](/help/sites-developing/page-templates-editable.md)以了解更多信息。
+
+>[!NOTE]
+>
+>**模板编辑器**&#x200B;不支持直接在模板级别进行定位。可以定位根据可编辑模板创建的页面，但是不能定位模板本身。
+
+>[!CAUTION]
+>
+>Pages and templates created with the **Templates Console** are not meant to be used with the classic UI and such use is not supported.
+
+## 开始之前 {#before-you-start}
+
+>[!NOTE]
+>
+>管理员必须在&#x200B;**配置浏览器**&#x200B;中配置一个模板文件夹，并应用适当的权限，之后模板作者才能在该文件夹中创建模板。
+
+开始之前，请务必考虑以下几个要点：
+
+* 创建新模板需要协作。因此，为每项任务指明了对应的[角色](#roles)。
+
+* 根据您的实例的配置方式，AEM 现在提供了[两种基本类型的模板](/help/sites-authoring/templates.md#editable-and-static-templates)，了解这一点可能会对您有所帮助。这并不会影响您[使用模板来创建页面](#using-a-template-to-create-a-page)的实际操作方式，但却会影响您能够创建的模板类型以及页面与模板之间的关系。
+
+### 角色 {#roles}
+
+使用&#x200B;**“模板”控制台**&#x200B;和&#x200B;**模板编辑器**&#x200B;创建新模板时，需要以下角色之间的相互协作：
+
+* **管理员**：
+
+   * Creates a new folder for templates requires `admin` rights.
+
+   * 此类任务通常可由开发人员完成。
+
+* **开发人员**：
+
+   * 专注于技术/内部细节。
+   * 需要具有开发环境方面的经验。
+   * 为模板作者提供必要信息。
+
+* **模板作者**：
+
+   * This is a specific author who is member of the group `template-authors`
+
+      * 可分配所需的权限和许可。
+   * 可配置组件的使用及其他高级详细信息，因而需要掌握以下内容：
+
+      * 一些技术知识。
+
+         * 例如，会在定义路径时使用模式。
+      * 由开发人员提供的技术信息。
+
+
+
+鉴于某些任务（例如创建文件夹）的特定性质，需要用到开发环境，这又需要具备一定的知识/经验。
+
+本文档详细介绍的任务列有负责执行这些任务的角色。
+
+### 可编辑的模板和静态模板 {#editable-and-static-templates}
+
+现在，AEM 提供了两种基本类型的模板：
+
+* [可编辑的模板](/help/sites-authoring/templates.md#creatingandmanagingnewtemplates)
+
+   * 可由模板作者使用&#x200B;**模板**&#x200B;控制台和模板编辑器来[创建](#creatinganewtemplate)和[编辑](#editingatemplate)。**模板**&#x200B;控制台可在&#x200B;**工具**&#x200B;控制台的&#x200B;**常规**&#x200B;部分访问。
+
+   * 创建新页面后，页面与模板之间会保持动态连接。这意味着对模板结构和/或锁定内容所做的更改会反映到使用该模板创建的任何页面上。但是不会反映对已解锁（即初始）内容所做的更改。
+   * 可使用内容策略（可从模板编辑器定义这些策略）保留设计属性。页面编辑器中的设计模式不再适用于可编辑的模板。
+
+* 静态模板
+
+   * 静态模板已经在多个版本的 AEM 中可用。
+   * 此类模板[由开发人员提供](/help/sites-developing/page-templates-static.md)，因此不能由作者创建或编辑。
+   * 可复制此类模板，以创建新页面，但是创建之后，页面与模板之间不存在动态连接（即使已注册模板名称来获取相关信息）。
+   * 可使用[设计模式](/help/sites-authoring/default-components-designmode.md)来保留设计属性。
+   * Because editing static templates is the exclusive task of a developer, please see the developer document [Page Templates - Static](/help/sites-developing/page-templates-static.md) for more information.
+
+按照定义，“模板”控制台和模板编辑器只允许创建和编辑可编辑的模板。因此，本文档将专门重点介绍可编辑的模板。
+
+### 使用模板创建页面 {#using-a-template-to-create-a-page}
+
+使用静态模板和可编辑的模板[创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)的过程没有明显的区别，也没有孰优孰劣之分。对于页面作者而言，该创建过程一目了然。
+
+## 创建和管理模板 {#creating-and-managing-templates}
+
+创建新的可编辑模板时，您需要执行以下步骤：
+
+* 使用&#x200B;**模板**&#x200B;控制台。此控制台可从&#x200B;**工具**&#x200B;控制台的&#x200B;**常规**&#x200B;部分访问。
+
+   * Or directly at: [https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+
+* Can [create a folder for the templates](#creating-a-template-folder-admin) if necessary
+* [创建新模板](#creatinganewtemplateauthor)，新模板最初是空的 [](#templatedefinitions)
+
+* 如有必要，为该模板[定义其他属性](#definingtemplatepropertiesauthor)
+* [编辑该模板](#editingtemplates)，以定义以下各项：
+
+   * [结构](#editingatemplatestructureauthor) -在使用模板创建的页面上无法更改的预定义内容。
+   * [初始内容](#editing-a-template-initial-content-author) -可在使用模板创建的页面上更改的预定义内容。
+   * [布局](#editingatemplatelayoutauthor) -适用于各种设备。
+   * [样式](/help/sites-authoring/style-system.md) - 定义要用于该模板及其组件的样式。
+
+* [启用该模板](#enablingatemplateauthor)，以在创建页面时使用
+* [允许该模板](#allowing-a-template-author)用于您网站的所需页面或分支
+* [发布该模板](#publishingatemplateauthor)，以使其可用于发布环境
+
+>[!NOTE]
+>
+>通常，在最初设置您的网站时便会预定义&#x200B;**允许的模板**。
+
+>[!CAUTION]
+>
+>切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。
+
+### 创建模板文件夹 - 管理员 {#creating-a-template-folder-admin}
+
+您应该为项目创建模板文件夹，以保存特定于项目的模板。这是一项管理员任务，在[页面模板 - 可编辑](/help/sites-developing/page-templates-editable.md#template-folders)文档中有相关说明。
+
+### 创建新模板 - 模板作者 {#creating-a-new-template-template-author}
+
+1. Open the **Templates Console** (via **Tools ->** **General**) then navigate to the required folder.
+
+   >[!NOTE]
+   >
+   >In a standard AEM instance the **global** folder already exists in the template console. 此文件夹会保存默认模板，如果在当前文件夹中没有找到策略和/或模板类型，则此文件夹可以充当备用。
+   >
+   >
+   >建议最好使用[为您的项目创建的模板文件夹](/help/sites-developing/page-templates-editable.md#template-folders)。
+
+1. 选择&#x200B;**创建**，然后选择&#x200B;**创建模板**&#x200B;以打开向导。
+
+1. 选取&#x200B;**模板类型**，然后选择&#x200B;**下一步**。
+
+   >[!NOTE]
+   >
+   >模板类型是预定义的模板布局，可将其视为模板的模板。模板类型是由开发人员或系统管理员预定义的。要获取更多信息，请参阅开发人员文档[页面模板 - 可编辑](/help/sites-developing/page-templates-editable.md#template-type)。
+
+1. 填写&#x200B;**模板详细信息**：
+
+   * **模板名称**
+   * **描述**
+
+1. 选择&#x200B;**创建**。随即会显示确认对话框，选择&#x200B;**打开**&#x200B;以开始[编辑模板](#editingatemplate)，或选择&#x200B;**完成**&#x200B;以返回到“模板”控制台。
+
+   >[!NOTE]
+   >
+   >创建新模板后，会在控制台中将其标记为&#x200B;**草稿**，这表示页面作者还不能使用此模板。
+
+### 定义模板属性 - 模板作者 {#defining-template-properties-template-author}
+
+模板可能具有以下属性：
+
+* 图像
+
+   * 要用作[模板的缩略图](/help/sites-authoring/templates.md#template-thumbnail-image)以帮助进行选择的图像，例如“创建页面”向导中的图像。
+
+      * 可上传
+      * 可根据模板内容生成
+
+* 标题
+
+   * 用于标识模板的标题，例如&#x200B;**创建页面**&#x200B;向导中的标题。
+
+* 描述
+
+   * 可选描述，用于提供更多有关模板及其用法的信息，例如&#x200B;**创建页面**&#x200B;向导中显示的描述。
+
+要查看和/或编辑属性，请执行以下操作：
+
+1. In the **Templates Console**, select the template.
+1. 从工具栏或快速选项中选择&#x200B;**查看属性**&#x200B;以打开对话框。
+1. 此时您可以查看或编辑模板属性。
+
+>[!NOTE]
+>
+>控制台中会指示模板的状态（“草稿”、“已启用”或“已禁用”）。
+
+#### 模板缩略图图像 {#template-thumbnail-image}
+
+要定义模板缩略图，请执行以下操作：
+
+1. 编辑模板属性。
+1. 选择是要上传缩略图，还是要从模板内容中生成缩略图。
+
+   * 如果要上传缩略图，请单击或点按&#x200B;**上传图像**。
+   * 如果要生成缩略图，请单击或点按&#x200B;**生成预览**。
+
+1. 使用上述两种方法时，系统都会显示缩略图预览。
+
+   如果对缩略图不满意，请单击或点按&#x200B;**清除**&#x200B;以上传其他图像，或重新生成缩略图。
+
+1. 如果对缩略图满意，请单击或点按&#x200B;**保存并关闭**。
+
+### 启用并允许模板 - 模板作者 {#enabling-and-allowing-a-template-template-author}
+
+为了能够在创建页面时使用模板，您需要执行以下操作：
+
+* [启用模板](#enablingatemplate) ，以使其在创建页面时可用。
+* [允许模板](#allowingatemplate) ，以指定可以使用模板的内容分支。
+
+#### 启用模板 - 模板作者 {#enabling-a-template-template-author}
+
+可以启用或禁用模板，以使其在&#x200B;**创建页面**&#x200B;向导中可用或不可用。
+
+>[!CAUTION]
+>
+>启用模板后，当模板作者开始进一步更新模板时，系统会显示一条警告消息。此消息用于告知用户，该模板可能已被引用，因此所做的任何更改可能会影响引用该模板的页面。
+
+1. In the **Templates Console**, select the template.
+1. Select **Enable** or **Disable** from the toolbar, and again in the confirmation dialog.
+1. 现在，您便能够在[创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)时使用模板，不过您可能想要根据自己的需求[编辑模板](#editingatemplate)。
+
+>[!NOTE]
+>
+>控制台中会指示模板的状态（“草稿”、“已启用”或“已禁用”）。
+
+#### 允许模板 - 作者 {#allowing-a-template-author}
+
+可以使模板可用于或不可用于某些页面分支。
+
+1. 对于希望可在其中使用模板的分支，打开其根页面的[页面属性](/help/sites-authoring/editing-page-properties.md)。
+
+1. 打开&#x200B;**高级**&#x200B;选项卡。
+
+1. Under **Template Settings** use **Add field** to specify the path(s) to your template(s).
+
+   路径可以是显式的，也可以使用模式。例如：
+
+   `/conf/<your-folder>/settings/wcm/templates/.*`
+
+   路径的顺序无关紧要，所有路径都会经过扫描，任何模板都可以检索到。
+
+   >[!NOTE]
+   >
+   >如果&#x200B;**允许的模板**&#x200B;列表为空，则树会向上追溯，直到找到值/列表。
+   >
+   >
+   >See [Template Availability](/help/sites-developing/templates.md#template-availability) - the principles for allowed templates remain the same.
+
+1. 单击&#x200B;**保存**，以保存对页面属性所做的更改。
+
+>[!NOTE]
+>
+>通常，在设置您的网站时便会为整个网站预定义允许的模板。
+
+### 发布模板 - 模板作者 {#publishing-a-template-template-author}
+
+由于渲染页面时会引用模板，因此模板在完全配置后需要进行发布，才能用于发布环境。
+
+1. In the **Templates Console**, select the template.
+1. Select **Publish** from the toolbar to open the wizard.
+1. 选择要一同发布的&#x200B;**内容策略**。
+
+1. 从工具栏中选择&#x200B;**发布**&#x200B;以完成操作。
+
+## 编辑模板 - 模板作者 {#editing-templates-template-authors}
+
+创建或编辑模板时，您可以定义模板的多个方面。编辑模板类似于页面创作。
+
+可以编辑模板的以下方面：
+
+* [结构](#editingatemplatestructure)
+
+   页面作者不能从生成页面中移动/删除在此处添加的组件。如果要使页面作者能够在生成页面中添加和删除组件，则需要在模板中添加段落系统。
+
+   将组件锁定后，您可以添加页面作者无法编辑的内容。您可以解锁组件，以便能够定义[初始内容](#editingatemplateinitialcontent)。
+
+   >[!NOTE]
+   >
+   >在“结构”模式下，不能移动、剪切或删除已解锁组件的任何父组件。
+
+* [初始内容](#editingatemplateinitialcontent)
+
+   解锁组件后，您可以定义要复制到生成页面（使用模板创建）的初始内容。可以在生成页面上编辑这些已解锁的组件。
+
+   >[!NOTE]
+   >
+   >在&#x200B;**初始内容**&#x200B;模式下以及在生成页面上，可以删除任何具有可访问父项的已解锁组件（即，布局容器内的组件）。
+
+* [布局](#editingatemplatelayout)
+
+   您可以在此处预定义所需设备格式的模板布局。模板创作的&#x200B;**布局**&#x200B;模式与[**页面创作的布局&#x200B;**模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)具有相同的功能。
+
+* [页面策略](#editingatemplatepagepolicies)
+
+   在“页面策略”下方，您可以将预定义的页面策略关联到页面。这些页面策略可定义各种设计配置。
+
+* [样式](/help/sites-authoring/style-system.md)
+
+   样式系统允许模板作者在组件的内容策略中定义样式类，以便内容作者在页面上编辑组件时能够选择这些类。这些样式可以作为组件的替代可视化变量，从而使组件变得更加灵活。
+
+   有关更多信息，请参阅[样式系统文档](/help/sites-authoring/style-system.md)。
+
+使用工具栏中的&#x200B;**模式**&#x200B;选择器，可以选择并编辑模板的相应方面：
+
+* [结构](#editingatemplatestructure)
+* [初始内容](#editingatemplateinitialcontent)
+* [布局](#editingatemplatelayout)
+
+![chlimage_1-133](assets/chlimage_1-133.png)
+
+而使用&#x200B;**页面信息**&#x200B;菜单中的&#x200B;**页面策略**&#x200B;选项，可以[选择所需的页面策略](#editingatemplatepagepolicies)：
+
+![screen_shot_2018-03-23at120604](assets/screen_shot_2018-03-23at120604.png)
+
+>[!CAUTION]
+>
+>如果作者开始编辑已经启用的模板，系统会显示一条警告消息。此消息用于告知用户，该模板可能已被引用，因此所做的任何更改可能会影响引用该模板的页面。
+
+### 编辑模板 - 结构 - 模板作者 {#editing-a-template-structure-template-author}
+
+在&#x200B;**结构**&#x200B;模式下，您可以为模板定义组件和内容，并为模板及其组件定义策略。
+
+* 不能在生成页面上移动在模板结构中定义的组件，也不能从任何生成页面中删除这些组件。
+* 如果要使页面作者能够添加和删除组件，请在模板中添加段落系统。
+* 可以解锁组件，然后再将其锁定，以便定义[初始内容](#editingatemplateinitialcontent)。
+
+* 可为组件和页面定义设计策略。
+
+![screen_shot_2018-03-23at120819](assets/screen_shot_2018-03-23at120819.png)
+
+在模板编辑器的&#x200B;**结构**&#x200B;模式下，可执行以下操作：
+
+* **添加组件**
+
+   可使用以下几种方法将组件添加到模板：
+
+   * 从侧面板中的&#x200B;**组件**&#x200B;浏览器添加。
+   * 使用模板中现有组件的工具栏上的&#x200B;**插入组件**&#x200B;选项（**+** 图标），或使用&#x200B;**将组件拖动到此处**&#x200B;框。
+
+   * 将资产（从侧面板中的&#x200B;**资产**&#x200B;浏览器）直接拖动到模板，以就地生成相应的组件。
+   添加后，每个组件会带有以下标记：
+
+   * 边框
+   * 显示组件类型的标记
+   * 组件解锁后显示的标记
+   >[!NOTE]
+   >
+   >When you add an out-of-the-box **Title** component to the template it will contain the default text **structure**.
+   >
+   >
+   >如果更改此文本，并添加自己的文本，则在使用该模板创建页面时，将会使用更新的文本。
+   >
+   >
+   >如果您保留默认文本（“结构”），则标题会默认使用后续生成页面的名称。
+
+   >[!NOTE]
+   >
+   >将组件和资产添加到模板的操作与在[页面创作](/help/sites-authoring/editing-content.md)时执行的类似操作虽然并不完全相同，但也存在许多相似之处。
+
+* **组件操作**
+
+   将组件添加到模板后，可以对其执行一些操作。每个实例都有其各自的工具栏，以供您访问可用的操作。显示的工具栏取决于组件类型。
+
+   ![screen_shot_2018-03-23at120909](assets/screen_shot_2018-03-23at120909.png)
+
+   显示的工具栏还会取决于执行的操作，例如将策略与组件关联后，便会显示设计配置图标。
+
+* **编辑和配置**
+
+   通过这两项操作，您可以在组件中添加内容。
+
+* **指示结构的边框**
+
+   在&#x200B;**结构**&#x200B;模式下工作时，橙色边框指示当前选定的组件。虚线指示父组件。
+
+   例如，在下面的屏幕快照中，选定了&#x200B;**布局容器**（响应式网格）中的&#x200B;**文本**&#x200B;组件。
+
+   ![chlimage_1-134](assets/chlimage_1-134.png)
+
+* **策略和属性（常规）**
+
+   内容（或设计）策略可定义组件的设计属性。例如，可用的组件或最小/最大尺寸。这些属性适用于模板（和使用模板创建的页面）。
+
+   可为组件创建内容策略或选择现有策略。这允许您定义设计详细信息。
+
+   ![chlimage_1-135](assets/chlimage_1-135.png) ![chlimage_1-136](assets/chlimage_1-136.png)
+
+   配置窗口分为两个部分。
+
+   * In the left side of the dialogue under **Policy**, you have the ability to select an existing policy or select an existing one.
+   * In the right side of the dialogue under **Properties**, you can set the properties specific to the component type.
+   可用的属性取决于选定的组件。例如，对于文本组件，属性定义的是复制和粘贴选项、格式选项以及段落样式，等等。
+
+   ***策略***
+
+   内容（或设计）策略可定义组件的设计属性。例如，可用的组件或最小/最大尺寸。这些属性适用于模板（和使用模板创建的页面）。
+
+   Under **Policy** you can select an existing policy to apply to the component via the drop-down.
+
+   ![chlimage_1-137](assets/chlimage_1-137.png)
+
+   此外，也可以通过选择&#x200B;**选择策略**&#x200B;下拉列表旁边的“添加”按钮，来添加新策略。A new title should then be given in the **Policy Title** field.
+
+   ![chlimage_1-138](assets/chlimage_1-138.png)
+
+   使用&#x200B;**选择策略**&#x200B;下拉列表旁边的“复制”按钮，可复制在此下拉列表中选定的现有策略以将其作为新策略。A new title should then be given in the **Policy Title** field. By default the copied policy will be titled **Copy of X**, where X is the title of the copied policy.
+
+   ![chlimage_1-139](assets/chlimage_1-139.png)
+
+   **策略说明**&#x200B;字段中的策略说明是可选的。
+
+   In the **Other templates also using the selected policy** section, you can easily see which other templates use the policy selected in the **Select policy** dropdown.
+
+   ![chlimage_1-140](assets/chlimage_1-140.png)
+
+   >[!NOTE]
+   >
+   >如果将同一类型的多个组件添加为初始内容，则同一策略适用于所有这些组件。[**静态模板的设计模式&#x200B;**](/help/sites-authoring/default-components-designmode.md)存在相同的限制。
+
+   ***属性***
+
+   在&#x200B;**属性**&#x200B;标题下方，您可以定义组件的设置。该标题包含两个选项卡：
+
+   * 主要
+   * 功能
+   *主要*
+
+   在&#x200B;**主要**&#x200B;选项卡上，可定义最重要的组件设置。
+
+   例如，对于图像组件，可定义允许的宽度，并启用延迟加载。
+
+   如果某项设置允许多个配置，请单击或点按&#x200B;**添加**&#x200B;按钮，以添加其他配置。
+
+   ![chlimage_1-141](assets/chlimage_1-141.png)
+
+   要删除配置，请单击或点按位于配置右侧的&#x200B;**删除**&#x200B;按钮。
+
+   要删除配置，请单击或点按**删除**按钮。
+
+   ![chlimage_1-142](assets/chlimage_1-142.png)
+
+   *功能*
+
+   **功能**&#x200B;选项卡允许您启用或禁用组件的其他功能。
+
+   例如，对于图像组件，您可以定义裁剪比例、允许的图像方向，以及是否允许上传。
+
+   ![chlimage_1-143](assets/chlimage_1-143.png)
+
+   >[!CAUTION]
+   >
+   >Note that in AEM crop ratios are defined as **height/width**. 这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。只要您清楚地定义&#x200B;**名称**，页面创作用户便不会察觉到任何差异，因为您定义的名称才是 UI 中显示的内容。
+
+   >[!NOTE]
+   >
+   >只能为 RTE 通过其 UI 设置提供的选项定义[用于实施富文本编辑器的组件的内容策略](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)。[](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)[](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+
+* **策略和属性（布局容器）**
+
+   布局容器的策略和属性设置与常规用法类似，只存在些许不同之处。
+
+   >[!NOTE]
+   >
+   >对于容器组件而言，必须配置策略，因为这样才能定义可在容器中使用的组件。
+
+   配置窗口分为两个部分，其使用方式与该窗口的常规用法相同。
+
+   ***策略***
+
+   内容（或设计）策略可定义组件的设计属性。例如，可用的组件或最小/最大尺寸。这些属性适用于模板（和使用模板创建的页面）。
+
+   Under **Policy** you can select an existing policy to apply to the component via the drop-down. 此操作方式与该窗口的常规用法相同。
+
+   ***属性***
+
+   在&#x200B;**属性**&#x200B;标题下方，您可以选择可用于布局容器的组件，并定义其设置。该标题包含三个选项卡：
+
+   * 允许的组件
+   * 默认组件
+   * 响应设置
+   *允许的组件*
+
+   在&#x200B;**允许的组件**&#x200B;选项卡上，您可以定义可用于布局容器的组件。
+
+   * 这些组件按其组件组分组，各组可以展开和折叠。
+   * 可以通过选中组名称选择整个组，通过取消选中全部取消选择。
+   * 减号表示至少选中了组中的一个而并非所有项目。
+   * 可按名称进行搜索来筛选组件。
+   * 无论是否应用了筛选器，组件组名称右侧列出的数字都表示这些组中选定组件的总数。
+   ![chlimage_1-144](assets/chlimage_1-144.png)
+
+   *默认组件*
+
+   在&#x200B;**默认组件**&#x200B;选项卡上，您可以定义要自动与给定媒体类型关联的组件，以便作者从资产浏览器中拖动资产时，AEM 知道要将其与哪个组件关联。请注意，只有具有拖放区域的组件才可使用此类配置。
+
+   单击或点按&#x200B;**添加映射**，可添加全新的组件和 MIME 类型映射。
+
+   在列表中选择组件，然后单击或点按&#x200B;**添加类型**，可将其他 MIME 类型添加到已映射的组件。Click the **Delete** icon to remove a MIME type.
+
+   ![chlimage_1-145](assets/chlimage_1-145.png)
+
+   *响应设置*
+
+   在&#x200B;**响应设置**&#x200B;选项卡上，您可以配置布局容器的生成网格中的列数。
+
+* **解锁/锁定组件**
+
+   通过解锁/锁定组件，您可以定义内容是否可在&#x200B;**初始内容**&#x200B;模式下进行更改。
+
+   解锁组件后：
+
+   * 边框中会显示一个打开的挂锁指示符。
+   * 组件工具栏会相应地做出调整。
+   * **结构**&#x200B;模式将不再显示任何已输入的内容。
+
+      * Already entered content is considered initial content and is only visible in **Initial Content** mode.
+   * 无法移动、剪切或删除已解锁组件的父组件。
+   ![chlimage_1-146](assets/chlimage_1-146.png)
+
+   这包括解锁容器组件，以便能够在&#x200B;**初始内容**&#x200B;模式下或生成页面上添加其他组件。如果您在解锁容器前已经将组件/内容添加到了容器，则添加的这些组件/内容在&#x200B;**结构**&#x200B;模式下将不再显示，但是会在&#x200B;**初始内容**&#x200B;模式下显示。在&#x200B;**“结构”模式**&#x200B;下，只会显示容器组件本身，及其&#x200B;**允许的组件**&#x200B;列表。
+
+   ![chlimage_1-147](assets/chlimage_1-147.png)
+
+   为了节省空间，布局容器不会扩大来容纳允许的组件列表。容器而是会变为一个可滚动的列表。
+
+   可配置的组件显示有一个&#x200B;**策略**&#x200B;图标，点按或单击此图标可编辑该组件的策略和属性。
+
+   ![chlimage_1-148](assets/chlimage_1-148.png)
+
+* **与现有页面的关系**
+
+   如果在基于模板创建页面后更新了模板的结构，则这些页面会反映对模板所做的更改。工具栏中会显示一条警告消息，提醒您这一事实，同时还会显示确认对话框。
+
+   ![chlimage_1-149](assets/chlimage_1-149.png)
+
+### 编辑模板 - 初始内容 - 作者 {#editing-a-template-initial-content-author}
+
+**初始内容**&#x200B;模式可用于定义最初基于模板创建页面后将显示的内容。页面作者随后可以编辑初始内容。
+
+虽然在&#x200B;**结构**&#x200B;模式下创建的所有内容在&#x200B;**初始内容**&#x200B;模式下均可见，但只能选择和编辑已解锁的组件。
+
+>[!NOTE]
+>
+>可以将&#x200B;**初始内容**&#x200B;模式视为使用模板创建的页面的编辑模式。因此，策略不是在&#x200B;**初始内容**&#x200B;模式下定义的，而是在[**结构&#x200B;**模式](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)下定义的。
+
+* 可编辑的已解锁组件带有标记。选定此类组件后，它们会显示一个蓝色边框：
+
+   ![chlimage_1-150](assets/chlimage_1-150.png)
+
+* 已解锁组件的工具栏允许您编辑和配置内容：
+
+   ![chlimage_1-151](assets/chlimage_1-151.png)
+
+* 如果已将某个容器组件解锁（在&#x200B;**结构**&#x200B;模式下），则您可以将新组件添加到该容器（在&#x200B;**初始内容**&#x200B;模式下）。Components added in **Initial Content** mode can be moved on or deleted from resulting pages.
+
+   您可以通过以下两种方式添加组件：使用&#x200B;**将组件拖动到此处**&#x200B;区域，或使用相应容器工具栏中的&#x200B;**插入新组件**&#x200B;选项。
+
+   ![chlimage_1-152](assets/chlimage_1-152.png) ![chlimage_1-153](assets/chlimage_1-153.png)
+
+* 如果在基于模板创建页面后更新了模板的初始内容，则对模板的初始内容所做的更改不会影响这些页面。
+
+>[!NOTE]
+>
+>初始内容用于准备组件和页面布局，这将作为创建内容的起点。初始内容不能作为保持原样的实际内容。因此，无法翻译初始内容。
+>
+>如果需要在模板中包括可翻译的文本（如在页眉或页脚中），则可以使用核 [心组件的本地化功能](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/localization.html)。
+
+### 编辑模板 - 布局 - 模板作者 {#editing-a-template-layout-template-author}
+
+您可以为各种设备定义模板布局。[模板的响应式布局](/help/sites-authoring/responsive-layout.md) ，与页面创作的响应式布局一样。
+
+>[!NOTE]
+>
+>**初始内容**&#x200B;模式会反映布局更改，而&#x200B;**结构**&#x200B;模式则不会反映任何布局更改。
+
+![chlimage_1-154](assets/chlimage_1-154.png)
+
+### 编辑模板 - 页面设计 - 模板作者/开发人员 {#editing-a-template-page-design-template-author-developer}
+
+The page design including required client-side libraries and page policies are maintained under the **Page Design** option of the **Page Information** menu.
+
+要访问&#x200B;**页面设计**&#x200B;对话框，请执行以下操作：
+
+1. From the **Template Editor**, select **Page Information** from the toolbar, then **Page Design** to open the dialog.
+1. 随即会打开&#x200B;**页面设计**&#x200B;对话框，该对话框分成两个部分：
+
+   * 左半部分定义了[页面策略](/help/sites-authoring/templates.md#page-policies)
+   * 右半部分定义了[页面属性](/help/sites-authoring/templates.md#page-properties)
+   ![chlimage_1-155](assets/chlimage_1-155.png)
+
+#### 页面策略 {#page-policies}
+
+您可以将内容策略应用于模板或生成页面。这会为页面上的主要段落系统定义内容策略。
+
+![chlimage_1-156](assets/chlimage_1-156.png)
+
+* 您可以从&#x200B;**选择策略**&#x200B;下拉列表中为页面选择现有策略。
+
+   ![chlimage_1-157](assets/chlimage_1-157.png)
+
+   此外，也可以通过选择&#x200B;**选择策略**&#x200B;下拉列表旁边的“添加”按钮，来添加新策略。A new title should then be given in the **Policy Title** field.
+
+   ![chlimage_1-158](assets/chlimage_1-158.png)
+
+   使用&#x200B;**选择策略**&#x200B;下拉列表旁边的“复制”按钮，可复制在此下拉列表中选定的现有策略以将其作为新策略。A new title should then be given in the **Policy Title** field. By default the copied policy will be titled **Copy of X**, where X is the title of the copied policy.
+
+   ![chlimage_1-159](assets/chlimage_1-159.png)
+
+* 在&#x200B;**策略标题**&#x200B;字段中定义策略的标题。策略需要具有标题，以便能够轻松地在&#x200B;**选择策略**&#x200B;下拉列表中对其进行选择。
+
+   ![chlimage_1-160](assets/chlimage_1-160.png)
+
+* **策略说明**&#x200B;字段中的策略说明是可选的。
+* In the **Other templates also using the selected policy** section, you can easily see which other templates use the policy selected in the **Select policy** dropdown.
+
+   ![chlimage_1-161](assets/chlimage_1-161.png)
+
+#### 页面属性 {#page-properties}
+
+Using page properties, you can define the required client-side libraries by using the **Page Design** dialog. 这些客户端库包含要与模板以及使用该模板创建的页面一起加载的样式表和 JavaScript。
+
+![chlimage_1-162](assets/chlimage_1-162.png)
+
+* 指定要对使用此模板创建的页面应用的客户端库。在&#x200B;**客户端库**&#x200B;部分的文本字段中输入库的名称。
+
+   ![chlimage_1-163](assets/chlimage_1-163.png)
+
+* 如果需要多个库，请单击“添加”按钮，以添加更多用于填写库名称的文本字段。
+
+   ![chlimage_1-164](assets/chlimage_1-164.png)
+
+   为您的客户端库添加所需数量的文本字段。
+
+   ![chlimage_1-165](assets/chlimage_1-165.png)
+
+* 通过使用拖动手柄拖动字段，根据需要定义库的相对位置。
+
+   ![chlimage_1-166](assets/chlimage_1-166.png)
+
+>[!NOTE]
+>
+>虽然模板作者可以在模板上指定页面策略，但是他们需要从开发人员处获取相应客户端库的详细信息。
+
+### 编辑模板 - 初始页面属性 - 作者 {#editing-a-template-initial-page-properties-author}
+
+使用&#x200B;**初始页面属性**&#x200B;选项，您可以定义要在创建生成页面时使用的初始[页面属性](/help/sites-authoring/editing-page-properties.md)。
+
+1. 在模板编辑器中，从工具栏中选择&#x200B;**页面信息**，然后选择&#x200B;**初始页面属性**&#x200B;以打开相应的对话框。
+
+1. 在该对话框中，您可以定义要对使用此模板创建的页面应用的属性。
+
+   ![chlimage_1-167](assets/chlimage_1-167.png)
+
+1. 单击&#x200B;**完成**&#x200B;以确认您的定义。
+
+## 最佳实践 {#best-practices}
+
+创建模板时，您应该考虑以下事项：
+
+1. 使用模板创建页面后，对模板所做的更改会影响这些页面。
+
+   下面列出了可以对模板执行的不同操作，以及这些操作对使用模板创建的页面有何影响：
+
+   * 更改结构：
+
+      * 此类更改会立即应用于生成页面。
+      * 还需要发布已更改的模板，之后访客才能看见所做的更改。
+   * 更改内容策略和设计配置：
+
+      * 此类更改会立即应用于生成页面。
+      * 需要发布所做的更改，之后访客才能看见这些更改。
+   * 更改初始内容：
+
+      * 此类更改只会应用于对模板进行更改后创建的页面。
+   * 更改布局，具体影响取决于修改的组件属于以下哪种情况：
+
+      * 仅属于结构 - 立即应用
+      * 包含初始内容 - 仅应用于在更改后创建的页面
+   在执行以下操作时，请务必要特别小心：
+
+   * 在已启用的模板上锁定或解锁组件。
+   * 这可能会产生不良后果，因为现有页面可能已在使用该组件。通常：
+
+      * 解锁组件（之前已锁定）会使该组件从现有页面上缺失。
+      * 锁定组件（之前可编辑）会隐藏相关内容，使其不在页面上显示。
+   >[!NOTE]
+   >
+   >在已不再是草稿的模板上更改组件的锁定状态时，AEM 会显示明确的警告消息。
+
+1. 为特定于站点的模板[创建您自己的文件夹](#creatingatemplatefolderdeveloper)。
+1. 从&#x200B;**模板**&#x200B;控制台[发布您的模板](#publishingatemplateauthor)。
