@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
 ---
 
@@ -170,23 +170,29 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
    有关详细 [信息，请参阅同步您的工作流](#sync-your-workflow-generate-a-runtime-model) 。
 
 >[!NOTE]
-在临时模式下运行工作 [流时](/help/sites-developing/workflows.md#transient-workflows) ,AEM不会存储任何工作流历史记录。 因此， [时间轴](/help/sites-authoring/basic-handling.md#timeline) 不显示与该工作流相关的任何信息。 [](/help/sites-authoring/basic-handling.md#timeline)
+在临时模式下运行工作流 [时](/help/sites-developing/workflows.md#transient-workflows) ,AEM不会存储任何工作流历史记录。 因此， [时间轴](/help/sites-authoring/basic-handling.md#timeline) 不显示与该工作流相关的任何信息。 [](/help/sites-authoring/basic-handling.md#timeline)
 
 ## 使工作流模型在触屏UI中可用 {#classic2touchui}
 
-如果在经典UI中存在但在触屏UI的时间线边栏的选择弹出菜单中缺少工作流模型，请按照配置使其可用。 以下步骤说明了如何使用称为“请求激活”和“请 **[!UICONTROL 求取消激活]** ”的AEM **[!UICONTROL 资产工作流模型]**。
+如果工作流模型在经典UI中存在，但在触屏UI的时间轴边栏的选择弹出菜单中缺失，则请按照配置进行操作，以使其可用。 **** 以下步骤说明了如何使用称为“请求激活” **[!UICONTROL 的工作流模型]**。
 
-1. 确认该型号在触屏优化UI中不可用。 使用路径访问 `/assets.html/content/dam` 资产。 选择资产。 在左 **[!UICONTROL 边栏中]** ，打开时间轴。 单击 **[!UICONTROL 启动工作流]** ，并注意弹出 **[!UICONTROL 列表中不存在Request for Activation]** and **** Request for Acactivation模型。
-1. 单击“ **[!UICONTROL 工具”>“常规”>“标记]**”。 选择 **[!UICONTROL 工作流]**。
-1. 单击“ **[!UICONTROL 创建”>“创建标记]**”。 将标 **[!UICONTROL 题设置]**`DAM` 为，将名 **[!UICONTROL 称设置为]**`dam`。 单击 **[!UICONTROL 提交]**。
+1. 确认该型号在触屏优化UI中不可用。 使用路径访问 `/assets.html/content/dam` 资产。 选择资产。 在左 **[!UICONTROL 边栏中]** ，打开时间轴。 单击 **[!UICONTROL 启动工作流]** ，并确认弹出 **[!UICONTROL 式列表中不存在Request for Activation]** model（激活请求模型）。
 
+1. 在工具> **[!UICONTROL 常规>标记之间导航]**。 选择 **[!UICONTROL 工作流]**。
+
+1. 选择 **[!UICONTROL 创建>创建标记]**。 将标 **[!UICONTROL 题设置]**`DAM` 为，将名 **[!UICONTROL 称设置为]**`dam`。 选择&#x200B;**[!UICONTROL 提交]**。
    ![在工作流模型中创建标签](assets/workflow_create_tag.png)
 
-1. 单击“ **[!UICONTROL 工具”(Tools)>“工作流”(Workflow)>“模型”(Models]**)。 选择 **[!UICONTROL 请求激活]** (或请 **[!UICONTROL 求取消激活]**)。 单击&#x200B;**[!UICONTROL 编辑]**。
-1. 在Sidekick中，转到“页面 **[!UICONTROL ”选项]** 卡。 Open **[!UICONTROL Page Properties]**.
-1. 添加 `Workflow : DAM` 到“ **[!UICONTROL 标记／关键字]** ”字段。 单击&#x200B;**[!UICONTROL 确定]**。单击&#x200B;**[!UICONTROL 保存]**。
+1. 导航到工 **[!UICONTROL 具>工作流>模型]**。 选择 **[!UICONTROL 请求激活]**，然后选择 **[!UICONTROL 编辑]**。
 
+1. 选 **[!UICONTROL 择]**，打开“页面 **[!UICONTROL 信息”菜单，然后从中选择]** UICONTROL打开属性 **[，并转到]****** Basic Edit选项卡（如果尚未打开）。
+
+1. 添加 `Workflow : DAM` 到“ **[!UICONTROL 标记]** ”字段。 用勾号（勾号）确认选择。
+
+1. 确认添加了“保存并关 **[!UICONTROL 闭”标记]**。
    ![编辑模型的页面属性](assets/workflow_model_edit_activation1.png)
+
+1. 使用 **[!UICONTROL Sync完成该过程]**。 该工作流现在在触屏优化UI中可用。
 
 ### 为多资源支持配置工作流 {#configuring-a-workflow-for-multi-resource-support}
 
