@@ -1,0 +1,122 @@
+---
+title: 使用“管理者视图”管理组织层次结构中的任务
+seo-title: 使用“管理者视图”管理组织层次结构中的任务
+description: 管理者和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报告的任务。
+seo-description: 管理者和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报告的任务。
+uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
+contentOwner: robhagat
+content-type: reference
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+topic-tags: forms-workspace
+discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
+docset: aem65
+translation-type: tm+mt
+source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+
+---
+
+
+# 使用“管理者视图”管理组织层次结构中的任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+
+在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人的任务（直接或间接报告），并对其执行各种操作。 这些任务位于AEM Forms工作区的“待办事项”选项卡中。 对直接报告任务支持的操作包括：
+
+**转发** 将任务从直接报告转发给任何用户。
+
+**索赔** -申请直接报告的任务。
+
+**Claim &amp; Open** Claim a task of a direct report and automatically open it in the To-do list of the manager.
+
+**拒绝** “拒绝”其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接报告的任务。
+
+AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这样的检查可确保用户只能获取用户具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告以满足其需求。
+
+1. 创建DSC。 有关详细信息，请参阅使用AEM Forms编程指南中的“为AEM表单开发 [组件”主题](https://www.adobe.com/go/learn_aemforms_programming_63) 。
+1. 在DSC中，为层次管理定义新的SPI，以在AEM Forms用户中定义直接报告和层次。 以下是示例Java™代码片断。
+
+   ```as3
+   public class MyHierarchyMgmtService
+   {
+        /*
+       Input : Principal Oid for a livecycle user
+       Output : Returns true when the user is either the service invoker OR his direct/indirect report.
+       */
+       boolean isInHierarchy(String principalOid) {
+   
+       }
+   
+       /*
+       Input : Principal Oid for a livecycle user
+       Output : List of principal Oids for direct reports of the livecycle user
+       A user may get direct reports only for himself OR his direct/indirect reports.
+       So the API is functionally equivalent to -
+       isInHierarchy(principalOid) ? <return direct reports> : <return empty list>
+       */
+       List<String> getDirectReports(String principalOid) {
+   
+       }
+   
+       /*
+       Returns whether a livecycle user has direct reports or not.
+       It's functionally equivalent to -
+       getDirectReports(principalOid).size()>0
+       */
+       boolean isManager(String principalOid) {
+   
+       }
+   }
+   ```
+
+1. 创建component.xml文件。 请确保spec-id必须与下面的代码片断中所示相同。 以下是可重用的示例代码片段。
+
+   ```as3
+   <component xmlns="https://adobe.com/idp/dsc/component/document">
+       <component-id>com.adobe.sample.SampleDSC</component-id>
+       <version>1.1</version>
+       <supports-export>false</supports-export>
+         <descriptor-class>com.adobe.idp.dsc.component.impl.DefaultPOJODescriptorImpl</descriptor-class>
+         <services>
+           <service name="MyHierarchyMgmtService" title="My hierarchy management service" orchestrateable="false">
+           <auto-deploy service-id="MyHierarchyMgmtService" category-id="Sample DSC" major-version="1" minor-version="0" />
+           <description>Service for resolving hierarchy management.</description>
+            <specifications>
+            <specification spec-id="com.adobe.idp.taskmanager.dsc.enterprise.HierarchyManagementProvider"/>
+            </specifications>
+           <specification-version>1.0</specification-version>
+           <implementation-class>com.adobe.sample.hierarchymanagement.MyHierarchyMgmtService</implementation-class>
+           <request-processing-strategy>single_instance</request-processing-strategy>
+           <supported-connectors>default</supported-connectors>
+           <operation-config>
+               <operation-name>*</operation-name>
+               <transaction-type>Container</transaction-type>
+               <transaction-propagation>supports</transaction-propagation>
+               <!--transaction-timeout>3000</transaction-timeout-->
+           </operation-config>
+           <operations>
+               <operation anonymous-access="true" name="isInHierarchy" method="isInHierarchy">
+                   <input-parameter name="principalOid" type="java.lang.String" />
+                   <output-parameter name="result" type="java.lang.Boolean"/>
+               </operation>
+               <operation anonymous-access="true" name="getDirectReports" method="getDirectReports">
+                   <input-parameter name="principalOid" type="java.lang.String" />
+                   <output-parameter name="result" type="java.util.List"/>
+               </operation>
+               <operation anonymous-access="true" name="isManager" method="isManager">
+                   <input-parameter name="principalOid" type="java.lang.String" />
+                   <output-parameter name="result" type="java.lang.Boolean"/>
+               </operation>
+               </operations>
+               </service>
+         </services>
+   </component>
+   ```
+
+1. 通过Workbench部署DSC。 重新启动 `ProcessManagementTeamTasksService` 服务。
+1. 您可能必须刷新浏览器或再次注销／登录用户。
+
+以下屏幕说明了如何访问直接报告的任务和可用的操作。
+
+![cu_manager_view](assets/cu_manager_view.png)
+
+访问直接报告的任务并处理任务
+
+[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
