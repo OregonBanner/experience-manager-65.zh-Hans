@@ -3,7 +3,7 @@ title: 向数字图像添加具有超链接的图像映射
 description: 了解如何向图像添加具有超链接的图像映射。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: e547dde53011003a2db4814916c3e923da947cce
 
 ---
 
