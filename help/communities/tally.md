@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
-source-git-commit: 9532c1fb8af37b29285007bc72e86d42d5eb9c4d
+source-git-commit: 01f14c203e45b85c9d7733d88437bd56e3c27c8e
 
 ---
 
@@ -27,7 +27,7 @@ Tally是一个抽象类，它提供了从成员那里收集反馈的标准方法
 
 [评级](rating-basics.md) 是一种实施统计的方法，它使用星形系统来表达从正面到负面的各种意见。
 
-自AEM 6.1起，投票组 [件不再](poll-basics.md) 可用。
+自AEM 6.1起，投票组件不再可用。
 
 [审阅](reviews-basics.md) 是一个SCF组件，它是评论和评级的 [混合](essentials-comments.md)[组件](rating-basics.md)。
 
