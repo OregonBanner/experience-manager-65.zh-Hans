@@ -10,12 +10,12 @@ topic-tags: integrations
 discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
 
-# 查看和了解AEM Forms分析报告{#view-and-understand-aem-forms-analytics-reports}
+# 查看和了解AEM Forms分析报告 {#view-and-understand-aem-forms-analytics-reports}
 
 Adobe Experience Manager Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的是根据使表单或文档更易用所需的更改数据做出明智决策。
 
@@ -101,7 +101,7 @@ AEM Forms显示表单的分析报告以及表单中每个面板的分析报告�
 
 * **平均填充时间**:在面板上平均花费的时间，无论是否提交表单
 * **遇到的错误**:用户在面板中的字段上遇到的平均错误数。 “遇到的错误”是通过将字段中的总错误除以表单的演绎版数量得出的。
-* **访问的帮助**:用户访问面板中字段的上下文内帮助的平均次数。 通过将字段的帮助访问总次数除以表单的演绎版数，即可获得“访问的帮助”。
+* **访问的帮助**:用户访问面板中字段的上下文内帮助的平均次数。 通过将字段的帮助访问总次数除以表单的演绎版数，即可获取帮助。
 
 #### 详细面板报告 {#detailed-panel-report}
 
