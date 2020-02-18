@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd0b8e1605f6d8f6cc04a4173731351df002a67d
+source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: bd0b8e1605f6d8f6cc04a4173731351df002a67d
 |---|---|
 | 版本 | 6.5.3.0 |
 | 类型 | Service Pack 版本 |
-| 日期 | 2019年12月12日 |
+| 日期 | 2019 年 12 月 12 日 |
 | 下载 URL | [包共享](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.3.0)，软 [件分发](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aem.html#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.3.zip) |
 
 ## Adobe Experience Manager 6.5.3.0包含的功能 {#what-s-included-in-aem}
@@ -163,6 +163,8 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 在轮询资产的作业详细信息时，AEM中会显示一个例外(CQ-4283569)。
 
+* DAM中的XSS漏洞(NPR-31654)。
+
 #### 站点 {#sites}
 
 * 如果LiveCopy继承被破坏，Live copy页面将显示语言复制链接，而不是LiveCopy链接(NPR-30980)。
@@ -175,6 +177,9 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 * ResponsiveGridExporter API不返回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter接口。 com.day.cq.wcm.foundation.model.impl包声明为私有包(NPR-31398)。
 * 当在非编辑器模式下(在“作者”模式下(不带前缀和 `editor.html``wcmmode=disabled`，或在“发布者”中)打开包含某些ExperienceFragments的页面时，请求以HTTP状态错误代码500(NPR-30743)结束。
 * 用户无法更改其密码并访问其配置文件页面(NPR-31161)。
+* 在服务器端生成包含用户数据的JavaScript文件(NPR-30822)。
+* AEM创作UI允许使用外部内容进行网络钓鱼(NPR-29745)。
+* AEM 6.5元数据编辑器中的表达式语言注入漏洞(NPR-31017)。
 
 #### 搜索和用户界面 {#search-ui-interface}
 
@@ -196,7 +201,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 配置单点登录时，客户端证书不被接受(NPR-31165)。
 
-* 不保存基于Jetty的HTTP服务的缓冲区大小配置中的更新(NPR-30925)。
+* 基于 Jetty 的 HTTP 服务的缓冲区大小配置中的更新未保存 (NPR-30925)。
 
 * QueryBuilder现在支持 ``fn:name()`` xpath查询中的orderby(NPR-31322)。
 
@@ -214,7 +219,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 切换日历视图不起作用(NPR-31271)。
 
-#### 品牌门户 {#assets-brand-portal}
+#### Brand Portal {#assets-brand-portal}
 
 **产品增强功能**
 
@@ -237,9 +242,9 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 * “提及次数”功能使用的JCR查询区分大小写，并且返回结果需要太长时间(NPR-31475)。
 * AEM 6.5 uberJar文件引发异常， `cq-social-translation` AEM 6.5 uberJar文件中缺少捆绑包(NPR-31186)。
 * Jackson Databind库已更新至版本2.9.9.3以解决新的漏洞(NPR-30967)。
-* 活动和通知标题不一致(NPR-30941)。
-* 分页在社区博客中无法正常工作(NPR-30914)。
-* 分析报告未在AEM创作环境中填充，显示空白页面(NPR-30913)。
+* 活动和通知标题不一致 (NPR-30941)。
+* 在社区博客中无法正常分页 (NPR-30914)。
+* 在 AEM 创作环境中，Analytics 报表未填充，出现空白页面 (NPR-30913)。
 
 #### Oak {#oak}
 
@@ -275,15 +280,15 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 **HTML5 表单**
 
-* 在添加子表单实例时，生成XDP表单的HTML5预览会显示闪烁(NPR-30909)。
+* 在添加子表单的实例时，生成 XDP 表单的 HTML5 预览会显示闪烁 (NPR-30909)。
 
 ##### JEE安装程序上的表单 {#forms-jee-installer-6530}
 
-**Forms - 文档服务**
+**表单 - 文档服务**
 
 * 在。NET项目中使用MTOM的SOAP web服务显示AssemblerServiceClient调用和HtmlToPDF2方法的例外(NPR-4281771)。
 
-**基础JEE**
+**Foundation JEE**
 
 * 操作配置不会加载调用表单工作流提交操作的进程名称(NPR-31478)。
 
