@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
+source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
 
 ---
 
@@ -48,8 +48,9 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 >如果以编程方式（使用crx包）创建模型，则还可以在以下位置创建子文件夹：
 >
 >`/var/workflow/models`
-
+>
 >For example, `/var/workflow/models/prototypes`
+>
 >然后，该文件夹可用于管 [理对该文件夹中模型的访问](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)。
 
 ## 编辑工作流 {#editing-a-workflow}
@@ -89,7 +90,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 * 使您能够进行更改
 
 >[!NOTE]
-有关更 [多信息，请参阅工作流模型的位置](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) 。
+>
+>有关更 [多信息，请参阅工作流模型的位置](/help/sites-developing/workflows-best-practices.md#locations-workflow-models) 。
 
 ![wf-22](assets/wf-22.png)
 
@@ -102,7 +104,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 ![wf-10](assets/wf-10.png)
 
 >[!NOTE]
-有关随AEM一起安装的主要步骤组件的信息，请参阅工作 [流步骤参考](/help/sites-developing/workflows-step-ref.md)。
+>
+>有关随AEM一起安装的主要步骤组件的信息，请参阅工作 [流步骤参考](/help/sites-developing/workflows-step-ref.md)。
 
 要向工作流模型中添加步骤，请执行以下操作：
 
@@ -144,7 +147,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
    * 双击该步骤。
    >[!NOTE]
-   有关随AEM一起安装的主要步骤组件的信息，请参阅工作 [流步骤参考](/help/sites-developing/workflows-step-ref.md)。
+   >
+   >有关随AEM一起安装的主要步骤组件的信息，请参阅工作 [流步骤参考](/help/sites-developing/workflows-step-ref.md)。
 
 1. 根据需 **要配置步骤** “属性”;可用的属性取决于步骤类型，也可能有多个可用的选项卡。 例如，新工作流中 **的默认参加者步骤**，显示为 `Step 1`:
 
@@ -170,7 +174,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
    有关详细 [信息，请参阅同步您的工作流](#sync-your-workflow-generate-a-runtime-model) 。
 
 >[!NOTE]
-在临时模式下运行工作 [流时](/help/sites-developing/workflows.md#transient-workflows) ,AEM不会存储任何工作流历史记录。 因此， [时间轴](/help/sites-authoring/basic-handling.md#timeline) 不显示与该工作流相关的任何信息。 [](/help/sites-authoring/basic-handling.md#timeline)
+>
+>在临时模式下运行工作 [流时](/help/sites-developing/workflows.md#transient-workflows) ,AEM不会存储任何工作流历史记录。 因此， [时间轴](/help/sites-authoring/basic-handling.md#timeline) 不显示与该工作流相关的任何信息。 [](/help/sites-authoring/basic-handling.md#timeline)
 
 ## 使工作流模型在触屏UI中可用 {#classic2touchui}
 
@@ -214,7 +219,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 [工作流阶段](/help/sites-developing/workflows.md#workflow-stages) ，有助于在处理任务时可视化工作流的进度。
 
 >[!CAUTION]
-如果在页面属性中定义了工作流阶段 ****，但不用于任何工作流步骤，则进度栏将不显示任何进度（无论当前工作流步骤如何）。
+>
+>如果在页面属性中定义了工作流阶段 ****，但不用于任何工作流步骤，则进度栏将不显示任何进度（无论当前工作流步骤如何）。
 
 可用阶段在工作流模型中定义；可更新现有工作流模型以包含舞台定义。 您可以为工作流模型定义任意数量的阶段。
 
@@ -340,7 +346,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
    * Activate **Notify user via email**.
    * 为“ `Administrator` 用 `admin`户／组”字 **段选择(** )。
    >[!NOTE]
-   对于要发送的电子邮件， [需要配置邮件服务和用户帐户详细信息](/help/sites-administering/notification.md)。
+   >
+   >对于要发送的电子邮件， [需要配置邮件服务和用户帐户详细信息](/help/sites-administering/notification.md)。
 
 1. 用勾号确认更新。
 
@@ -393,7 +400,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
    `/apps/myapp/workflow/scripts`
 
    >[!NOTE]
-   脚本必须有一个返 [回 `check()`](#function-check) 布尔值的函数。
+   >
+   >脚本必须有一个返 [回 `check()`](#function-check) 布尔值的函数。
 
 1. 编辑工作流，并将“ **OR拆分** ”(OR Split)添加到模型。
 1. 编辑OR拆分 **的分支** 1的 **属性**:
@@ -403,7 +411,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
    * 作 **为规则**，设置脚本的路径。 例如：
       `/apps/myapp/workflow/scripts/myscript1.ecma`
    >[!NOTE]
-   您可以根据需要切换分支顺序。
+   >
+   >您可以根据需要切换分支顺序。
 
 1. 编辑OR拆分的 **Branch 2** 的 **属性**。
 
@@ -418,7 +427,8 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 #### Function Check() {#function-check}
 
 >[!NOTE]
-请参 [阅使用ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)。
+>
+>请参 [阅使用ECMAScript](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)。
 
 如果节点位于 `true` 以下位置，则以下示例脚 `JCR_PATH` 本将返回 `/content/we-retail/us/en`:
 
