@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93f3696242c681a019c2252364fe7cee510cb933
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
@@ -312,11 +312,15 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 **引用:**
 
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-administering/adobeanalytics-connect.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html](https://helpx.adobe.com/experience-manager/6-5/help/sites-authoring/pa-using.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-analytics-forms-documents.html)
-1. [https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/view-understand-aem-forms-analytics-reports.html)
+* [与Adobe Analytics集成](../../sites-administering/adobeanalytics.md)
+
+* [连接到Adobe Analytics和创建框架](../../sites-administering/adobeanalytics-connect.md)
+
+* [查看页面分析数据](../../sites-authoring/pa-using.md)
+
+* [配置分析和报告](configure-analytics-forms-documents.md)
+
+* [查看和了解AEM Forms分析报告](view-understand-aem-forms-analytics-reports.md)
 
 ### Adobe Analytics云服务配置 {#adobe-analytics-cloud-service-configuration}
 
@@ -432,7 +436,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 此包中包含的模板还支持样式系统：
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[样式系统](../../sites-authoring/style-system.md)
 
 #### 模板徽标 {#template-logos}
 
@@ -446,7 +450,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 有关详细信息，请参阅编辑页面内容：
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/editing-content.html#main-pars_title_32)
+[编辑页面内容](../../sites-authoring/editing-content.md)
 
 ### 站点页面自定义 {#sites-pages-customization}
 
@@ -458,7 +462,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 此包中包含的页面还支持样式系统：
 
-[https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html](https://helpx.adobe.com/ca/experience-manager/6-5/help/sites-authoring/style-system.html)
+[样式系统](../../sites-authoring/style-system.md)
 
 有关受支持样式的 [文档，您还可以参阅模板自定义样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) 。
 
@@ -480,8 +484,8 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 还可以使用样式编辑器或主题编辑器设置自适应表单的样式：
 
-* [https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html](https://helpx.adobe.com/experience-manager/6-5/forms/using/inline-style-adaptive-forms.html)
-* [https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html](https://helpx.adobe.com/ca/experience-manager/6-5/forms/using/themes.html)
+* [自适应表单组件的内联样式](inline-style-adaptive-forms.md)
+* [创建和使用主题](themes.md)
 
 ### 工作流自定义 {#workflow-customization}
 
