@@ -170,7 +170,7 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
    有关详细 [信息，请参阅同步您的工作流](#sync-your-workflow-generate-a-runtime-model) 。
 
 >[!NOTE]
-在临时模式下运行工作流 [时](/help/sites-developing/workflows.md#transient-workflows) ,AEM不会存储任何工作流历史记录。 因此， [时间轴](/help/sites-authoring/basic-handling.md#timeline) 不显示与该工作流相关的任何信息。 [](/help/sites-authoring/basic-handling.md#timeline)
+在临时模式下运行工作 [流时](/help/sites-developing/workflows.md#transient-workflows) ,AEM不会存储任何工作流历史记录。 因此， [时间轴](/help/sites-authoring/basic-handling.md#timeline) 不显示与该工作流相关的任何信息。 [](/help/sites-authoring/basic-handling.md#timeline)
 
 ## 使工作流模型在触屏UI中可用 {#classic2touchui}
 
@@ -189,7 +189,7 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
 1. 添加 `Workflow : DAM` 到“ **[!UICONTROL 标记]** ”字段。 用勾号（勾号）确认选择。
 
-1. 确认添加了“保存并关 **[!UICONTROL 闭”标记]**。
+1. 确认添加了“保存并关闭” **[!UICONTROL 标记]**。
    ![编辑模型的页面属性](assets/workflow_model_edit_activation1.png)
 
 1. 使用 **[!UICONTROL Sync完成该过程]**。 该工作流现在在触屏优化UI中可用。
