@@ -2,12 +2,9 @@
 title: 在AEM中搜索数字资产和图像
 description: 了解如何使用“筛选器”面板在AEM中查找所需的资产，以及如何使用在搜索中显示的资产。
 contentOwner: AG
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-discoiquuid: 98717f6d-1911-49ac-928c-01a75292ff01
-docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: dc38876e3905622a0ed6109c1718fcf464fe6374
+source-git-commit: b0ae7552a6dc0476a682bdbe715aac4b42315ff6
 
 ---
 
@@ -64,9 +61,13 @@ AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜�
 
 结果按相关性排序，以最接近的匹配项开始。 对于多个关键字，更具相关性的结果是在元数据中包含这两个术语的资产。 在元数据中，显示为智能标记的关键字的排名高于其他元数据字段中显示的关键字。 AEM允许为特定搜索词赋予更高的权重。 此外，还可以提高 [特定搜索词的](#searchrank) 少数目标资产的排名。
 
-为了快速找到相关资产，富界面提供了筛选、排序和选择机制。 您可以根据多个条件筛选结果，并查看为各种筛选器搜索的资产数量。 或者，您也可以通过在“Omnisearch”（搜索）字段中更改查询来重新运行搜索。 当您更改搜索词或筛选器时，其他筛选器仍会被应用，以保留搜索的上下文。 当结果大于1000时，AEM不显示所有搜索的资产，并显示1000+作为搜索的资产数。 这是为了提高搜索性能。 当您滚动以查看更多资产时，超过1000个资产的数量会逐渐增加200个步骤。
+为了快速找到相关资产，富界面提供了筛选、排序和选择机制。 您可以根据多个条件筛选结果，并查看为各种筛选器搜索的资产数量。 或者，您也可以通过在“Omnisearch”（搜索）字段中更改查询来重新运行搜索。 当您更改搜索词或筛选器时，其他筛选器仍会被应用，以保留搜索的上下文。
 
-有时，您可能会在搜索结果中看到一些意外的资产。 有关详细信息，请参阅 [意外的结果](#unexpectedresults)。
+当结果为多个资产时，AEM会在卡片视图中显示前100个，在列表视图中显示200个。 用户滚动时，会加载更多资产。 这是为了提高性能。
+
+>[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+
+有时，您可能会在搜索结果中看到一些意外的资产。 有关详细信息，请参阅 [意外的结果](#troubleshoot-unexpected-search-results-and-issues)。
 
 AEM可以搜索多种文件格式，并且可以自定义搜索筛选器以满足您的业务需求。 请联系您的管理员以了解为您的DAM存储库提供了哪些搜索选项以及您的帐户有哪些限制。
 
@@ -243,7 +244,7 @@ AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜�
 | assettype(S) | 图像，文档，多媒体，存档 | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | 使用此选项可根据传递的值筛选资产类型。 |
 | 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities) | 使用此选项可指定资产选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接／间接）。 |
 
-要访问资产选择器界面，请转到 `https://[AEM server]:[port]/aem/assetpicker`。 导航到所需的文件夹，然后选择一个或多个资产。 或者，从Omnisearch框中搜索所需的资产，根据需要应用筛选器，然后选择它。
+要访问资产选择器界面，请转到 `https://[aem_server]:[port]/aem/assetpicker`。 导航到所需的文件夹，然后选择一个或多个资产。 或者，从Omnisearch框中搜索所需的资产，根据需要应用筛选器，然后选择它。
 
 ![在资产选取器中浏览并选择资产](assets/assetpicker.png)
 
@@ -258,7 +259,7 @@ AEM资产中的搜索功能有以下限制：
 * 在您从搜索的结果中选择资产的属性，然后取消搜索后，AEM可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 搜索文件夹或文件和文件夹时，无法对任何参数对搜索结果进行排序。
 * 如果按回车键时未在Omnisearch栏中键入任何内容，AEM将返回仅包含文件而非文件夹的列表。 如果您在不使用关键字的情况下专门搜索文件夹，则AEM不会返回任何结果。
-* 使用全 [!UICONTROL 选复选框] ，您只能在卡片视图中选择前100个搜索的资产，在列表视图中选择前200个搜索的资产。
+* 使用全 [!UICONTROL 选复选框] ，您只能在卡片视图中选择前100个搜索的资产，在列表视图中选择前200个搜索的资产。 如果在用户界面中滚动并加载更多资产，则可以使用全选选项选 [!UICONTROL 择更多] 。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -454,10 +455,10 @@ AEM资产中的搜索功能有以下限制：
 | 不相关或部分相关的搜索结果 | 搜索行为会随智能标记而改变。 | 了解 [搜索在智能标记后的变化情况](#withsmarttags)。 |
 | 没有资产的自动完成建议 | 尚未对新上传的资产编制索引。 当您开始在Omnisearch栏中键入搜索关键字时，元数据不会立即作为建议可用。 | AEM资产会等到超时期（默认为一小时）到期后再运行后台作业，为所有新上传或更新的资产索引元数据，然后将元数据添加到建议列表。 |
 | 无搜索结果 | <ul><li>不存在与您的查询匹配的资产。</li><li>您在搜索查询前添加了空白。</li><li>不支持的元数据字段包含您搜索的关键字。</li><li>为资产配置了开启时间和结束时间，并在资产的结束时间内进行搜索。</li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用（智能）标记来改进搜索结果。</li><li>这是已知 [的限制](#limitations)。</li><li>并非所有元数据字段都会用于搜索。 请参阅 [范围](#scope)。</li><li>稍后搜索或修改所需资产的开启和关闭时间。</li></ul> |
-| 搜索筛选器／谓词不可用 | <ul><li>未配置搜索筛选器。</li><li>登录名中不提供此选项。</li><li>（不太可能）搜索选项未在您使用的部署中自定义。</li></ul> | <ul><li>联系管理员以检查搜索自定义是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义的权限／权限。</li><li>联系管理员并检查您所使用的AEM资产部署的可用自定义设置。</li></ul> |
+| 搜索筛选器／谓词不可用 | <ul><li>未配置搜索筛选器。</li><li>登录名中不提供此选项。</li><li>（不太可能）搜索选项未在您使用的部署中自定义。</li></ul> | <ul><li>联系管理员以检查搜索自定义是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义的权限。</li><li>联系管理员并检查您所使用的AEM资产部署的可用自定义设置。</li></ul> |
 | 在搜索视觉上相似的图像时，缺少期望的图像 | <ul><li>图像在AEM中不可用。</li><li>未索引图像。 通常，在最近上传时。</li><li>图像未标记为智能。</li></ul> | <ul><li>将图像添加到AEM资产。</li><li>请与管理员联系以重新为存储库编制索引。 另外，请确保您使用的是相应的索引。</li><li>请联系您的管理员以智能标记相关资产。</li></ul> |
 | 搜索视觉上相似的图像时，将显示不相关的图像 | 视觉搜索行为。 | AEM会显示尽可能多的潜在相关资产。 相关性较差的图像（如果有）会添加到结果中，但搜索级别较低。 当您向下滚动搜索结果时，搜索资产的匹配质量和相关性会降低。 |
-| 在选择和操作搜索的资产时，所有搜索的资产均不会在 | “全 [!UICONTROL 选] ”选项仅在卡片视图中选择前100个搜索结果，在列表视图中选择前200个搜索结果。 |  |
+| 在选择并操作搜索结果时，所有搜索的资产都不会在 | “全 [!UICONTROL 选] ”选项仅在卡片视图中选择前100个搜索结果，在列表视图中选择前200个搜索结果。 |  |
 
 >[!MORELIKETHIS]
 >
