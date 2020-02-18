@@ -9,12 +9,12 @@ topic-tags: author
 discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ---
 
 
-# 自适应表单组件的内联样式{#inline-styling-of-adaptive-form-components}
+# 自适应表单组件的内联样式 {#inline-styling-of-adaptive-form-components}
 
 您可以使用主题编辑器指定样式来定义自适应表单的整体外 [观和样式](../../forms/using/themes.md)。 此外，您还可以将内联CSS样式应用于单个自适应表单组件并快速预览更改。 内联样式将覆盖主题中提供的样式。
 
