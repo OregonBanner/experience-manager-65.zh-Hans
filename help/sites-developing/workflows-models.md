@@ -185,7 +185,7 @@ source-git-commit: d12313003cb94b27c1ce64442a1f3394af529a0d
 
 1. 导航到工 **[!UICONTROL 具>工作流>模型]**。 选择 **[!UICONTROL 请求激活]**，然后选择 **[!UICONTROL 编辑]**。
 
-1. 选 **[!UICONTROL 择]**，打开“页面 **[!UICONTROL 信息”菜单，然后从中选择]** UICONTROL打开属性 **[，并转到]****** Basic Edit选项卡（如果尚未打开）。
+1. 选择 **[!UICONTROL 编辑]**，打开页面信息 **[!UICONTROL 菜单，然后从]** 打开属性 **[!UICONTROL ，然后转到]****** Basic选项卡（如果尚未打开）。
 
 1. 添加 `Workflow : DAM` 到“ **[!UICONTROL 标记]** ”字段。 用勾号（勾号）确认选择。
 
