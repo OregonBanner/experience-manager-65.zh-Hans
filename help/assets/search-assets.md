@@ -7,7 +7,7 @@ discoiquuid: 98717f6d-1911-49ac-928c-01a75292ff01
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6d4f79c126a3c44666e2a42b2246c964813d24ab
+source-git-commit: dc38876e3905622a0ed6109c1718fcf464fe6374
 
 ---
 
@@ -26,7 +26,7 @@ AEM支持以下用例，本文介绍了这些用例的用法、概念、配置�
 | [了解搜索结果和行为](#searchbehavior) | [修改搜索彩块化](#searchfacets) | [批量元数据更新](#metadataupdates) |
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
-| [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[品牌门户](#brandportal)</li><li>[AEM 桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic media资产](#dynamicmedia)</li></ul> |  |  |
+| [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[AEM 桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic media资产](#dynamicmedia)</li></ul> |  |  |
 | [资产选择器／选取器](#assetselector) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [插图示例](#samples) |  |  |
@@ -450,7 +450,7 @@ AEM资产中的搜索功能有以下限制：
 | 错误、问题、症状 | 可能的原因 | 可能的问题修复或理解 |
 |---|---|---|
 | 搜索缺少元数据的资产时结果不正确 | 在搜索缺少必需元数据的资产时，AEM可能会显示一些具有有效元数据的资产。 结果基于索引元数据属性。 | 更新元数据后，需要重新构建索引以反映资产元数据的正确状态。 请参阅 [必填元数据](metadata-schemas.md#define-mandatory-metadata)。 |
-| 搜索结果过多 | 广泛的搜索参数。 | 考虑限制 [搜索范围](#scope)。 使用智能标记可能会为您提供比预期更多的搜索结果。 查看 [带有智能标记的搜索行为](#withsmarttags)。 |
+| 搜索结果过多 | 广泛的搜索参数。 | 考虑限制 [搜索范围](#scope)。 使用智能标记可能会为您带来比预期更多的搜索结果。 查看 [带有智能标记的搜索行为](#withsmarttags)。 |
 | 不相关或部分相关的搜索结果 | 搜索行为会随智能标记而改变。 | 了解 [搜索在智能标记后的变化情况](#withsmarttags)。 |
 | 没有资产的自动完成建议 | 尚未对新上传的资产编制索引。 当您开始在Omnisearch栏中键入搜索关键字时，元数据不会立即作为建议可用。 | AEM资产会等到超时期（默认为一小时）到期后再运行后台作业，为所有新上传或更新的资产索引元数据，然后将元数据添加到建议列表。 |
 | 无搜索结果 | <ul><li>不存在与您的查询匹配的资产。</li><li>您在搜索查询前添加了空白。</li><li>不支持的元数据字段包含您搜索的关键字。</li><li>为资产配置了开启时间和结束时间，并在资产的结束时间内进行搜索。</li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用（智能）标记来改进搜索结果。</li><li>这是已知 [的限制](#limitations)。</li><li>并非所有元数据字段都会用于搜索。 请参阅 [范围](#scope)。</li><li>稍后搜索或修改所需资产的开启和关闭时间。</li></ul> |
@@ -459,7 +459,7 @@ AEM资产中的搜索功能有以下限制：
 | 搜索视觉上相似的图像时，将显示不相关的图像 | 视觉搜索行为。 | AEM会显示尽可能多的潜在相关资产。 相关性较差的图像（如果有）会添加到结果中，但搜索级别较低。 当您向下滚动搜索结果时，搜索资产的匹配质量和相关性会降低。 |
 | 在选择和操作搜索的资产时，所有搜索的资产均不会在 | “全 [!UICONTROL 选] ”选项仅在卡片视图中选择前100个搜索结果，在列表视图中选择前200个搜索结果。 |  |
 
->[!MORE 这样]
+>[!MORELIKETHIS]
 >
 >* [AEM搜索实施指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [多值和标记搜索谓词的高级配置](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html)
