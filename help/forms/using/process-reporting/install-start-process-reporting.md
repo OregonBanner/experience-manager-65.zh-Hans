@@ -54,8 +54,8 @@ Process Reporting服务按计划将数据从AEM Forms数据库发布到Process R
 1. 停止AEM Forms服务器实例。
 1.
 
-   * （对于Windows）在编辑 `[JBoss root]/bin/run.conf.bat` 器中打开文件。
-   * （对于Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 文件。
+    * （对于Windows）在编辑 `[JBoss root]/bin/run.conf.bat` 器中打开文件。
+    * （对于Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 文件。
 
 1. 添加JVM参数 `-Dreporting.publisher.cron = <expression>.`
 
