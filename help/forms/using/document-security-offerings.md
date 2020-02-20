@@ -62,7 +62,7 @@ AEM Forms Document security提供了各种工具来应用安全策略。 您可�
 
    除上述功能外，可比例保护库还具有Document Security SDK的所有功能。 您可以使用Document Security SDK访问文档服务器功能、打开受策略保护的文档以及开发自定义扩展、插件或应用程序。 另请注意，可移植保护库(PPL)无法取消保护使用AEM Forms文档安全客户端SDK(CSDK)保护的文档，反之亦然。
 
-   可移植保护库可用于32位和64位版本的Java和C++语言。 它还可作为OSGi上的AEM Forms的OSGi捆绑提供。 C++ PPL可用Microsoft Visual Studio 2013进行编译。 如果您已获得AEM Forms Document security加载项的许可，则可联系 [](https://helpx.adobe.com/marketing-cloud/contact-support.html) AEM Forms Document security支持团队以购买可移植保护库。 稍后，您可以使用“便携保护库帮助”（与库捆绑）来设置和使用便携保护库。
+   可移植保护库可用于32位和64位版本的Java和C\+\+语言。 它还可作为OSGi上的AEM Forms的OSGi捆绑提供。 C\+\+ PPL可用Microsoft Visual Studio 2013进行编译。 如果您已获得AEM Forms Document security加载项的许可，则可联系 [](https://helpx.adobe.com/marketing-cloud/contact-support.html) AEM Forms Document security支持团队以购买可移植保护库。 稍后，您可以使用“便携保护库帮助”（与库捆绑）来设置和使用便携保护库。
 
 ### 查看或编辑受保护的文档 {#view-or-edit-protected-documents}
 
