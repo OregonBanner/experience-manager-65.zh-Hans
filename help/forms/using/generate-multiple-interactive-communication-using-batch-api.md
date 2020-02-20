@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 3ba9308f7a6252f7ea6ae0de6455ab3e97e3b8dd
+source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 
 ---
 
@@ -174,6 +174,22 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
 
 1. 登录到AEM实例并创建交互式通信。 要使用下面给出的示例代码中提到的交互式通信，请单 [击此处](assets/SimpleMediumIC.zip)。
 1. [在AEM实例上使用Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) ，构建和部署AEM项目。
+1. 将 [AEM Forms Client SDK版本6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 或更高版本以及最新的 [AEM Uber Jar](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) 添加到AEM项目POm文件的依赖关系列表中。 例如，
+
+   ```XML
+       <dependency>
+           <groupId>com.adobe.aemfd</groupId>
+           <artifactId>aemfd-client-sdk</artifactId>
+           <version>6.0.122</version>
+       </dependency>
+       <dependency>
+          <groupId>com.adobe.aem</groupId>
+          <artifactId>uber-jar</artifactId>
+          <version>6.5.0</version>
+          <classifier>apis</classifier>
+          <scope>provided</scope>
+       </dependency>
+   ```
 1. 打开Java项目，创建。java文件，例如CCMBatchServlet.java。 将以下代码添加到文件：
 
    ```java
@@ -271,7 +287,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
                            throw new Exception("Invalid JSON Data. File name : " + filePath, ex);
                        }
                    }
-                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/testsample/mediumic").build();
+                   BatchInput batchInput = batchBuilderFactory.getBatchInputBuilder().setData(inputJSONArray).setTemplatePath("/content/dam/formsanddocuments/[path of the interactive communcation]").build();
                    BatchConfig batchConfig = batchBuilderFactory.getBatchConfigBuilder().setBatchType(BatchType.WEB_AND_PRINT).build();
                    BatchResult batchResult = batchGeneratorService.generateBatch(batchInput, batchConfig);
                    List<RecordResult> recordList = batchResult.getRecordResults();
@@ -338,9 +354,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
    * 指定“打印”和“网络”选项时，将生成PDF文档和每个记录的JSON文件。
 
 1. [使用maven将更新的代码部署到AEM实例](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)。
-1. 调用批处理API以生成交互式通信。 批量API打印会根据记录数返回PDF和。json文件流。 您可以使用JSON文件 [预填充Web模板](#web-template)。
-
-   如果使用上述代码，则API将部署在 `http://localhost:4502/bin/batchServlet`。 如果您使用第1步中提供的交互式通信示例，则可以使用 [records.json](assets/records.json) 生成交互式通信。 例如， `http://localhost:4502/bin/batchServlet?filePath=C:/aem/records.json>.` 它打印并返回PDF和JSON文件的流。
+1. 调用批处理API以生成交互式通信。 批量API打印会根据记录数返回PDF和。json文件流。 您可以使用JSON文件 [预填充Web模板](#web-template)。 如果使用上述代码，则API将部署在 `http://localhost:4502/bin/batchServlet`。 该代码打印并返回PDF和JSON文件流。
 
 ### 预填Web模板 {#web-template}
 
