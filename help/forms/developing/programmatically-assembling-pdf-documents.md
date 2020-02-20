@@ -100,7 +100,7 @@ map.pdf文件和directions.pdf文件必须都放置在集合对象中。 键的�
 
 >[!NOTE]
 >
->如 `AssemblerResult` 果调用操作，将返回一个包含集合对象的对 `invokeDDX` 象。 将两个或多个输入的PDF文档传递给Assembler服务时，将使用此操作。 但是，如果只将一个输入PDF传递给Assembler服务并且只希望有一个返回文档，请调用该操 `invokeOneDocument` 作。 调用此操作时，将返回一个文档。 有关使用此操作的信息，请参阅 [Massigning Encrypted PDF Documents](/help/forms/developing/compasting-encrypted-pdf-documents-massigning-encrypted-pdf-documents-massigning.md#massigning-encrypted-pdf-documents-commesting.md#compasing-encrypted-pdf-documents)。
+>如 `AssemblerResult` 果调用操作，将返回一个包含集合对象的对 `invokeDDX` 象。 将两个或多个输入的PDF文档传递给Assembler服务时，将使用此操作。 但是，如果只将一个输入PDF传递给Assembler服务并且只希望有一个返回文档，请调用该操 `invokeOneDocument` 作。 调用此操作时，将返回一个文档。 有关使用此操作的信息，请参阅 [Massigning Encrypted PDF Documents](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
 
 **设置运行时选项**
 
