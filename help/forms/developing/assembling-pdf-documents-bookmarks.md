@@ -80,7 +80,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->在阅读本节之前，建议您熟悉使用Assembler服务汇编PDF文档。 本节不讨论概念，如创建包含输入文档的集合对象，或了解如何从返回的集合对象中提取结果。 (请参 [阅以编程方式组合PDF文档](/help/forms/developing/programmaly-compasing-pdf-documents-programmaly-commasting-pdf-documents-programmative-commassing-documents-programmative.md#programaly-commasing-pdf-documents)。)
+>在阅读本节之前，建议您熟悉使用Assembler服务汇编PDF文档。 本节不讨论概念，如创建包含输入文档的集合对象，或了解如何从返回的集合对象中提取结果。 (请参 [阅以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
 
 >[!NOTE]
 >
