@@ -138,7 +138,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **另请参阅**
 
-[Rendering Forms By Value](/help/forms/developing/rendering-forms-rendering-forms-rendering-forms-value-rendering-forms.md#rendering-forms-by-value)
+[Rendering Forms By Value](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)
 
 [快速入门（SOAP模式）:使用Java API按值呈现](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
