@@ -265,12 +265,10 @@ Adobe DAM 和 WCM 会显示是否上传了主视频。但它们不会显示以�
 >* 启用 [安全预览后](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Dynamic Media Classic上已发布和未发布的资产都会显示在Dynamic Media Classic内容浏览器中。
 >* If you do not see **[!UICONTROL Dynamic Media Classic]** or the **[!UICONTROL S7]** icon as an option in the content browser, you need to [configure Dynamic Media Classic to work with AEM](/help/sites-administering/scene7.md).
 >* 对于视频，Dynamic Media Classic内容浏览器支持：
-   >
-   >  
-* 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
+>
+>  * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
 >  * 单个MP4视频
 >  * 单个F4V视频
-
 
 ### Browsing content in the touch-optimized UI {#browsing-content-in-the-touch-optimized-ui}
 

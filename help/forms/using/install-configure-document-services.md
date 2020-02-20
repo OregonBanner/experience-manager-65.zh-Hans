@@ -415,6 +415,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1. 保存并关闭文件。
 
 ### 配置字体管理器服务 {#configuring-the-font-manager-service}

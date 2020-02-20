@@ -52,7 +52,7 @@ Process Reporting服务按计划将数据从AEM Forms数据库发布到Process R
 >如果您正在群集上运行AEM Forms实施，请对群集的每个节点执行以下步骤。
 
 1. 停止AEM Forms服务器实例。
-1. 
+1.
 
    * （对于Windows）在编辑 `[JBoss root]/bin/run.conf.bat` 器中打开文件。
    * （对于Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 文件。

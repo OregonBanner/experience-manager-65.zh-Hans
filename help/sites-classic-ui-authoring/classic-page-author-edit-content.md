@@ -153,8 +153,9 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 >
 >如果已经[将“用户属性”设置为显示“全局编辑工具栏”](/help/sites-classic-ui-authoring/author-env-user-props.md)，则还可以使用提供的&#x200B;**复制**、**剪切**、**粘贴**&#x200B;和&#x200B;**删除**&#x200B;按钮对段落执行某些操作。
 
->也可以使用各种[键盘快捷键](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
 >
+>也可以使用各种[键盘快捷键](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
+
 ## 剪切/复制/粘贴组件 {#cut-copy-paste-a-component}
 
 与[删除组件](#deleting-a-component)时一样，您可以使用上下文菜单复制、剪切和/或粘贴组件。

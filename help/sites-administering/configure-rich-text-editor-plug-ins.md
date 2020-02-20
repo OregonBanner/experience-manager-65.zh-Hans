@@ -282,19 +282,18 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 >
 >富文本编辑器使用ID为的容器DOM元素，该元素可 `CQrte` 用于提供不同的样式以供查看和编辑：
 >
->
-```>
+>```
 >#CQ td {
 > // defines the style for viewing
 > }
->```>
->```>
+>```
+>
+>```
 >#CQrte td {
 > // defines the style for editing
 > }
->```>
-
-
+>```
+>
 
 ### 在弹出列表中指定可用的样式 {#stylesindropdown}
 

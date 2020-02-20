@@ -103,16 +103,12 @@ source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
+>例如：
 >
-例如：
->
->
-```>
+>```>
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
 >```>
-
-
 
 ### 社区站点 {#community-site}
 

@@ -60,11 +60,8 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 >对于所有用例，建议阅读以下最佳实践：
 >
 >* [MSM的最佳实践](/help/sites-administering/msm-best-practices.md);特别是：
-   >
-   >  
-* [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
+>
+>  * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
 >  * [MSM和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
-   >
-   >
-* [翻译的最佳实践](/help/sites-administering/tc-bp.md)
-
+>
+>* [翻译的最佳实践](/help/sites-administering/tc-bp.md)

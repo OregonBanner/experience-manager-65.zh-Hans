@@ -1318,11 +1318,11 @@ N:apps
    >
    >这与定义相同：
    >
-   >
-   ```
+   >```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
+   >
    >其中，函数只返回它收到的值。
 
 1. 定义报告设计。 例如， `osgireport[cq:Page]` 在 `/etc/designs/reports`下。
@@ -1389,13 +1389,13 @@ N:apps
    >
    >由于此示例没有任何可分组列，因此图表将不可用。 要查看图表，请将其 `groupable` 设置为 `true`:
    >
-   >
-   ```
+   >```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
+   >
 
 ## 配置Report Framework Services {#configuring-the-report-framework-services}
 

@@ -190,6 +190,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
           <scope>provided</scope>
        </dependency>
    ```
+
 1. 打开Java项目，创建。java文件，例如CCMBatchServlet.java。 将以下代码添加到文件：
 
    ```java

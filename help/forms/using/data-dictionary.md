@@ -423,7 +423,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 1. 点按 **警报中** 的确定。 “通信管理”将名为DataDictionary-&lt;Dname>.zip的zip文件下载到您的计算机。
 1. Zip文件包含。properties文件。 此文件定义下载的数据字典。 属性文件的内容类似于以下内容：
 
-   # 2015年5月20日16时6分23秒
+   &#x200B;# 2015年5月20日16时6分23秒
    DataDictionary.EmployeeDD.description=DataDictionary.EmployeeDD.displayName=EmployeeDataDictionaryDataDictionaryElement.name.description=DataDictionaryElement.name.displayName=nameDataDictionaryElement.person.person.person.pson.dion.dion.displayDionname=person
 
    属性文件的结构为描述和数据字典中的数据字典和每个数据字典元素的显示名称定义一行。 此外，属性文件为每个数据字典元素的枚举值集定义一行。 与数据字典一样，相应的属性文件可以具有多个数据字典元素定义。 此外，该文件可以包含一个或多个枚举值集的定义。

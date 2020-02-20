@@ -183,16 +183,16 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 * 添加评分和标记属性
 
-   ```
+       ```
        scoringRules = [/etc/community/scoring/rules/comments-scoring,
         /etc/community/scoring/rules/forums-scoring]
        ```
-   
+
        ```
        badgingRules =[/etc/community/badging/rules/comments-scoring,
         /etc/community/badging/rules/forums-scoring]
        ```
-   
+
 * 找到论坛组件节点
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
@@ -207,7 +207,9 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 1. 为用户分配了使用cURL的审查方徽章：
 
 ```shell
+
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+
 ```
 
 由于用户已获得两个铜牌并被授予主持人徽章，因此用户在论坛条目中的显示方式如下：
