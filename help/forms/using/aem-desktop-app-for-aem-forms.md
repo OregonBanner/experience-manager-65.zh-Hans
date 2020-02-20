@@ -34,7 +34,7 @@ source-git-commit: 6fa293028332596bb93013119b4339c7721eb536
 AEM桌面应用程序在Microsoft windows上使用WebDAV协议，在Mac OS x上使用SMB1连接到AEM Forms服务器。 开箱即用后，AEM Forms服务器无法与WebDAV或SMB客户端同步二进制文件和其他资产。 执行以下步骤以启用AEM Forms for AEM桌面应用程序：
 
 1. 以管理员身份登录到AEM Forms。
-1. 在创作实例中，单击 ![adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager >工具锤&#x200B;**击![>部署](assets/hammer.png)**]**>操作> Web Console ConsoleCansoleCansoleCansole。 Web控制台将在新窗口中打开。
+1. 在创作实例中，单击 ![adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager >工具锤]**&#x200B;击![>部署](assets/hammer.png)]**[!UICONTROL >操作> Web Console Console]**&#x200B;CansoleCansoleCansole。 Web控制台将在新窗口中打开。
 1. 在Web控制台窗口中，找到并打开 **[!UICONTROL FormsManager AddOn配置选项]** 。
 1. 在FormsManager的“AddOn配置”对话框中，取消选中“ **[!UICONTROL 异步同步资源]** ”复选框，然后单击“ **[!UICONTROL 保存”]**。
 1. 重新启动AEM Forms服务器。 重新启动后，AEM Forms服务器将启用以接受内容并与AEM桌面应用程序共享内容。
