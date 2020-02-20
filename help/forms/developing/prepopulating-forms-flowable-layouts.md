@@ -36,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 预填充已包含数据的表单时，必须指定XML数据源中已显示的数据。 假定一个包含10个字段的表单在四个字段中包含数据。 接下来，假设您要预填充其余六个字段。 在这种情况下，必须在用于预填充表单的XML数据源中指定10个XML元素。 如果仅指定六个元素，则原始的四个字段为空。
 
-例如，您可以预填充表单，如示例确认表单。 (请参阅 [Rendering Interactive PDF Forms](/help/forms/developing/rendering-forms-rendering-forms-rendering-forms-rendering-interactive-pdf-forms-rendering.md#rendering-interactive-pdf-forms)中的“确认表单”。)
+例如，您可以预填充表单，如示例确认表单。 (请参阅 [Rendering Interactive PDF Forms](/help/forms/developing/rendering-forms-rendering-forms rendering-interactive-pdf-forms-rendering.md#rendering-interactive-pdf-forms)中的“确认表单”。)
 
 要预填充示例确认表单，您必须创建一个XML数据源，该数据源包含三个与表单中三个字段匹配的XML元素。 此表单包含以下三个字段： `FirstName`、 `LastName`和 `Amount`。 第一步是创建一个XML数据源，它包含与表单设计中的字段相匹配的XML元素。 下一步是为XML元素分配数据值，如以下XML代码所示。
 
