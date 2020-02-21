@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90d69ef0ed0fb38bec75a3d36982f80b85dd43af
+source-git-commit: 9d42526ff4c7b7d8a31690ebfb8b45d0e951ebac
 
 ---
 
@@ -575,7 +575,9 @@ Maven JspC插件的结果也可以作为OSGi Bundle的一部分进行捆绑和�
 >根据您是否实际在中使用JSP代码 `/libs` （即从中包括JSP），您需要优化要复制哪些JSP以进行编译。
 >
 >例如，如果您包括 `/libs/foundation/global.jsp`，则可以对以下配置而不是上面完全跳过 `maven-resources-plugin` 的配置进行使用 `/libs`。
->```
+>
+>
+```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
 >           <includes>  
@@ -583,7 +585,7 @@ Maven JspC插件的结果也可以作为OSGi Bundle的一部分进行捆绑和�
 >                   <include>libs/foundation/global.jsp</include>
 >       </includes>  
 >   </resource>  
->  ```
+>```
 
 ### 如何与SCM系统一起使用 {#how-to-work-with-scm-systems}
 
