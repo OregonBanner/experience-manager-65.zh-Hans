@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8f90dc4865126d52e04effc9197ef7145b1a167e
+source-git-commit: 8ae69f5bb67d51d759f143a076fef4f5f0375809
 
 ---
 
@@ -52,10 +52,10 @@ Process Reporting服务按计划将数据从AEM Forms数据库发布到Process R
 >如果您正在群集上运行AEM Forms实施，请对群集的每个节点执行以下步骤。
 
 1. 停止AEM Forms服务器实例。
-1.
+1. &#x200B;
 
-    * （对于Windows）在编辑 `[JBoss root]/bin/run.conf.bat` 器中打开文件。
-    * （对于Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 文件。
+   * （对于Windows）在编辑 `[JBoss root]/bin/run.conf.bat` 器中打开文件。
+   * （对于Linux、AIX和Solaris） `[JBoss root]/bin/run.conf.sh` 文件。
 
 1. 添加JVM参数 `-Dreporting.publisher.cron = <expression>.`
 
@@ -139,7 +139,7 @@ ReportConfiguration服务由Process Reporting用于配置进程报表查询服�
 
    在存储库上运行查询时，结果可能包含大量记录。 如果结果集较大，则查询执行可能会占用服务器资源。
 
-   要处理大的结果集，ReportConfiguration服务会将查询处理拆分为多批记录。 这样可减轻系统负载。
+   要处理大的结果集，ReportConfiguration服务会将查询处理拆分为多批记录。 这可以减少系统负载。
 
    `Default`: `1000`
 
