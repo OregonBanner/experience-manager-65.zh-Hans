@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
 
 ---
 
@@ -152,7 +152,6 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 >[!NOTE]
 >
 >如果已经[将“用户属性”设置为显示“全局编辑工具栏”](/help/sites-classic-ui-authoring/author-env-user-props.md)，则还可以使用提供的&#x200B;**复制**、**剪切**、**粘贴**&#x200B;和&#x200B;**删除**&#x200B;按钮对段落执行某些操作。
-
 >
 >也可以使用各种[键盘快捷键](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
 
@@ -161,8 +160,9 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 与[删除组件](#deleting-a-component)时一样，您可以使用上下文菜单复制、剪切和/或粘贴组件。
 
 >[!NOTE]
-如果已经[将“用户属性”设置为显示“全局编辑工具栏”](/help/sites-classic-ui-authoring/author-env-user-props.md)，则还可以使用提供的&#x200B;**复制**、**剪切**、**粘贴**&#x200B;和&#x200B;**删除**&#x200B;按钮对段落执行某些操作。
-
+>
+>如果已经[将“用户属性”设置为显示“全局编辑工具栏”](/help/sites-classic-ui-authoring/author-env-user-props.md)，则还可以使用提供的&#x200B;**复制**、**剪切**、**粘贴**&#x200B;和&#x200B;**删除**&#x200B;按钮对段落执行某些操作。
+>
 >也可以使用各种[键盘快捷键](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
 
 >[!NOTE]
