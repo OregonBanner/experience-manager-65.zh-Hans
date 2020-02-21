@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 868936e0fd20d3867e31f0351d7b388149472fd2
 
 ---
 
@@ -100,7 +100,7 @@ map.pdf文件和directions.pdf文件必须都放置在集合对象中。 键的�
 
 >[!NOTE]
 >
->如 `AssemblerResult` 果调用操作，将返回一个包含集合对象的对 `invokeDDX` 象。 将两个或多个输入的PDF文档传递给Assembler服务时，将使用此操作。 但是，如果只将一个输入PDF传递给Assembler服务并且只希望有一个返回文档，请调用该操 `invokeOneDocument` 作。 调用此操作时，将返回一个文档。 有关使用此操作的信息，请参阅 [Massigning Encrypted PDF Documents](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
+>如 `AssemblerResult` 果调用操作，将返回一个包含集合对象的对 `invokeDDX` 象。 将两个或多个输入的PDF文档传递给Assembler服务时，将使用此操作。 但是，如果只将一个输入PDF传递给Assembler服务并且只希望有一个返回文档，请调用该操 `invokeOneDocument` 作。 调用此操作时，将返回一个文档。 有关使用此操作的信息，请参阅组 [合加密的PDF文档](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
 
 **设置运行时选项**
 
