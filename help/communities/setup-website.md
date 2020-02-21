@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 
 ---
 
@@ -37,9 +37,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >* 在CRXDE中看到的名称是构成可寻址内容路径的节点名称
 >* 节点名称可能包含空格，但在URI中使用时，必须将空格编码为“%20”或“+”
 >* 节点名称可能包含连字符和下划线，但是当在Java文件中作为包名称引用时，必须对它们进行编码。 连字符和下划线都以下划线转义，后跟它们的Unicode值：
->
->  * 连字符变为&#39;_002d&#39;
->  * 下划线变为&#39;_005f&#39;
+   >
+   >   
+   * 连字符变为&#39;_002d&#39;
+   >   * 下划线变为&#39;_005f&#39;
+
 
 ## 设置应用程序目录(/apps) {#setup-the-application-directory-apps}
 
