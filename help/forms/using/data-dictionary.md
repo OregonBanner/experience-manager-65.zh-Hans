@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: 2b8d64082e3ba837c057ab5ee8c45ea0735ef6d0
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 1. 作者可以下载基于数据字典模式的示例数据XML文件。 作者可以修改样本数据XML文件，该文件可以作为测试数据与数据字典相关联。 在字母预览期间也会使用相同的功能。
 1. 在预 [览字母时](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)，作者选择使用数据预览字母（自定义预览）。 此时将打开预填充作者提供的数据的字母。 这将在创建对应界面中打开。 预览此信函的代理可以修改此信函中的内容、数据和附件，并可提交最终信函。 有关创建字母的详细信息，请参阅 [创建通信](../../forms/using/create-letter.md)。
 
-## 入门项目 {#prerequisite}
+## 先决条件 {#prerequisite}
 
 安装兼 [容性包](compatibility-package.md) ，以在“表单”页 **面上查看“数** 据字典”选项 **** 。
 
@@ -191,7 +191,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
    >
    >在此示例中，XML为集合元素的三个值创建了空间，但可以根据需要增加／减少值的数量。
 
-1. 创建数据条目后，在预览包含测试数据的字母时，可以使用此XML文件。
+1. 创建数据条目后，在预览包含测试数据的字母时可以使用此XML文件。
 
    您可以使用DD添加此测试数据（选择DD并点按上传测试数据并上传此xml文件），因此，在正常预览字母（而非自定义）后，此XML数据将用于字母。 您还可以点按自定义，然后上传此XML。
 
@@ -307,7 +307,7 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
   <tr>
    <td>表达式</td>
    <td>字符串</td>
-   <td>“已计算”DDE的表达式。 默认情况下提供的表达式评估服务支持JSP EL表达式。 您可以用自定义实现替换表达式服务。</td>
+   <td>“computed”DDE的表达式。 默认情况下提供的表达式评估服务支持JSP EL表达式。 您可以用自定义实现替换表达式服务。</td>
   </tr>
   <tr>
    <td>valueSet</td>
@@ -423,8 +423,15 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 1. 点按 **警报中** 的确定。 “通信管理”将名为DataDictionary-&lt;Dname>.zip的zip文件下载到您的计算机。
 1. Zip文件包含。properties文件。 此文件定义下载的数据字典。 属性文件的内容类似于以下内容：
 
-   &#x200B;# 2015年5月20日16时6分23秒
-   DataDictionary.EmployeeDD.description=DataDictionary.EmployeeDD.displayName=EmployeeDataDictionaryDataDictionaryElement.name.description=DataDictionaryElement.name.displayName=nameDataDictionaryElement.person.person.person.pson.dion.dion.displayDionname=person
+   ```
+   #Wed May 20 16:06:23 BST 2015
+   DataDictionary.EmployeeDD.description=
+   DataDictionary.EmployeeDD.displayName=EmployeeDataDictionary
+   DataDictionaryElement.name.description=
+   DataDictionaryElement.name.displayName=name
+   DataDictionaryElement.person.description=
+   DataDictionaryElement.person.displayName=person
+   ```
 
    属性文件的结构为描述和数据字典中的数据字典和每个数据字典元素的显示名称定义一行。 此外，属性文件为每个数据字典元素的枚举值集定义一行。 与数据字典一样，相应的属性文件可以具有多个数据字典元素定义。 此外，该文件可以包含一个或多个枚举值集的定义。
 
