@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
 
 ---
 
@@ -153,16 +153,16 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 * 添加评分和标记属性
 
-       “
-    规则= [/etc/community/etc/rules/rules/etc/community/rules/rules
- /etc/community/roules/roules]“Rules =     [/badgingEtc/community/badging规则／规则/badging评论-coming、社区/
- badoming/comming/comming/communitul/bominging等评论述评论     borering/等评论、评分/crulerering/
- bading评论、评分/commung评分/comulerering评论、评论、评论、评分/     
- cum/     bad评论
-    
-    
-    bad评论/coret
-   
+   ```
+   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   /etc/community/scoring/rules/forums-scoring]
+   ```
+
+   ```
+   badgingRules =[/etc/community/badging/rules/comments-scoring,
+   /etc/community/badging/rules/forums-scoring]
+   ```
+
 * 找到论坛组件节点
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
@@ -183,15 +183,15 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 * 添加评分和标记属性
 
-       ```
-       scoringRules = [/etc/community/scoring/rules/comments-scoring,
-        /etc/community/scoring/rules/forums-scoring]
-       ```
+   ```
+   scoringRules = [/etc/community/scoring/rules/comments-scoring,
+   /etc/community/scoring/rules/forums-scoring]
+   ```
 
-       ```
-       badgingRules =[/etc/community/badging/rules/comments-scoring,
-        /etc/community/badging/rules/forums-scoring]
-       ```
+   ```
+   badgingRules =[/etc/community/badging/rules/comments-scoring,
+   /etc/community/badging/rules/forums-scoring]
+   ```
 
 * 找到论坛组件节点
 
@@ -207,9 +207,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 1. 为用户分配了使用cURL的审查方徽章：
 
 ```shell
-
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
-
 ```
 
 由于用户已获得两个铜牌并被授予主持人徽章，因此用户在论坛条目中的显示方式如下：
