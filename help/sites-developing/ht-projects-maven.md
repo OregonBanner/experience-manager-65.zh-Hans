@@ -576,8 +576,7 @@ Maven JspC插件的结果也可以作为OSGi Bundle的一部分进行捆绑和�
 >
 >例如，如果您包括 `/libs/foundation/global.jsp`，则可以对以下配置而不是上面完全跳过 `maven-resources-plugin` 的配置进行使用 `/libs`。
 >
->
-```
+>```
 > <resource>  
 >           <directory>src/main/content/jcr_root</directory>  
 >           <includes>  
@@ -586,6 +585,7 @@ Maven JspC插件的结果也可以作为OSGi Bundle的一部分进行捆绑和�
 >       </includes>  
 >   </resource>  
 >```
+>
 
 ### 如何与SCM系统一起使用 {#how-to-work-with-scm-systems}
 
