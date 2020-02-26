@@ -3,7 +3,7 @@ title: 管理多个资产和收藏集
 description: 了解如何同时编辑多个资产和集合的元数据以快速传播常见的元数据更改。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 ---
 
@@ -44,31 +44,11 @@ Adobe Enterprise Manager(AEM)资产允许您同时编辑多个资产的元数据
 
 1. 要为资产选择其他元数据架构，请点按／单击工具栏中的 **[!UICONTROL 设置]** 图标，然后选择所需的架构。
 1. 保存更改。
-1. 要将新元数据与包含多个值的字段中的现有元数据一起追加，请选择“ **[!UICONTROL 追加”模式]**。 如果不选择此选项，则新元数据将替换字段中的现有元数据。 点按／单击 **[!UICONTROL 提交]**。
+1. 要将新元数据与现有元数据追加到包含多个值的字段中，请选择&#x200B;**[!UICONTROL 追加模式]**。如果不选中此选项，则新元数据将替换字段中的现有元数据。点按／单击 **[!UICONTROL 提交]**。
 
    >[!CAUTION]
    >
-   >对于单值字段，即使选择“追加”模式，新元数据也不会附加到字段中的现有 **[!UICONTROL 值中]**。
-
-## 编辑多个集合的元数据属性 {#editing-metadata-properties-of-multiple-collections}
-
-1. 从收藏集控制台中，选择要编辑的收藏集。
-1. 在工具栏中，点按／单 **[!UICONTROL 击属性]** ，以打开选定集合的属性页面。
-1. 修改各个选项卡下选定集合的元数据属性。
-
-   >[!NOTE]
-   >
-   >您为所选集合添加的元数据将覆盖这些集合的以前元数据，但标记除外。 您在“标记”字段中添 **[!UICONTROL 加的任何标记]** ，都会附加到元数据中的现有标记列表中。
-
-1. 要查看特定集合的元数据属性，请取消选择集合列表中的其余集合。 元数据编辑器字段会填充特定集合的元数据。
-
-   >[!NOTE]
-   >
-   >* 在收藏集属性页面中，可以通过取消选择收藏集从收藏集列表中删除收藏集。 集合列表默认选中所有集合。 您删除的集合的元数据不会更新。
-   >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
-
-
-1. 保存更改。
+   >对于单值字段，即使选择&#x200B;**[!UICONTROL 追加模式]**，新元数据也不会追加到字段中的现有值中。
 
 ## 配置批量元数据更新限制 {#configlimit}
 
@@ -76,4 +56,9 @@ Adobe Enterprise Manager(AEM)资产允许您同时编辑多个资产的元数据
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-要更改限制，请访问Web控制台( **[!UICONTROL “工具]** ”>“操作” **[!UICONTROL >]** Web Prosements **[!UICONTROL )，并更改]********** Apache Sling Handling Signi配置中Maximum POST Parameters PrametersInternts Apache Shandling Osgi Configuration的值。
+要更改限制，请访问 Web Console（**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web Console]**），更改 ]**Apache Sling 请求参数处理]** OSGi 配置中的&#x200B;**[!UICONTROL 最大 POST 参数**[!UICONTROL &#x200B;值。
+
+>[!MORELIKETHIS]
+>
+>* [编辑多个集合的元数据属性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+
