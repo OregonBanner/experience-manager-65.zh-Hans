@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -220,8 +220,8 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 安装包并启动作者实例和发布实例后，请在浏览器中访问以下URL:
 
-* https://[服务器]:[port]/wegov
-* https://[服务器]:[port]/wefinance
+* `https://[server]:[port]/wegov`
+* `https://[server]:[port]/wefinance`
 
 如果安装成功，您可以访问和We.Finance参考站点登录页面。
 
@@ -231,12 +231,12 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 要导入自动保险申请的自定义实体，请执行以下操作：
 
-1. 从AEM作 **者实例的https://** server[:]port[]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip下载WeFinanceAutoInsurance_1_0.zip解决方案包。
+1. 从您 **的AEM作者实例中下载WeFinanceAutoInsurance_1_0.zip**`https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/WeFinanceAutoInsurance_1_0.zip` 解决方案包。
 1. 在Microsoft Dynamics实例中，转到“设置”>“解 **决方案”** ，然后单击“ **导入”**。 选择并导入包。
 
 要导入自动保险申请的自定义实体，请执行以下操作：
 
-1. 从https:// **author** :[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip下载AEMFormsFSIRefsite_1_0.zip[]包。 选择并导入包。
+1. 从下 **载AEMFormsFSIRefsite_1_0.zip** 包 `https://[author]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`。 选择并导入包。
 
 1. 在Microsoft Dynamics实例中，转到“设置”>“解 **决方案”** ，然后单击“ **导入”**。 选择并导入包。
 
@@ -244,9 +244,9 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 1. 从AEM作 **者实例的以下位置下载We.Finance Customers.csv、We.Finance Auto Insurance Renewals.csv****和家庭抵押** :
 
-   * https://[服务器]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv
-   * https://[服务器]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance自动保险续订。csv
-   * https://[server]:[port]/content/aemforms-refsite-contruals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Customers.csv`
+   * `https://[server]:[port/content/aemforms-refsite-collaterals/we-finance/auto-insurance/ms-dynamics/We.Finance Auto Insurance Renewals.csv`
+   * `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
 1. 在Microsoft Dynamics实例中，执行以下操作：
 
@@ -260,7 +260,7 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 在AEM Forms中配置OAuth云服务，以启用AEM Forms与Microsoft Dynamics之间的通信。 执行以下步骤以在AEM作者和发布实例上配置OAuth云服务：
 
-1. 在AEM作者实例中，转到工 **具** > **Cloud Services** > **Data Sources** > **** global Cloud Services。 点按 **刷新Dynamics集成图标** ，然后点按属性。
+1. 在AEM作者实例中，转到工 **具** > **Cloud Services** > **Data Sources** > **** globalChick。 点按 **刷新Dynamics集成图标** ，然后点按属性。
 1. 转到Microsoft Azure Active Directory帐户。 将复制的云服务配置URL添加到注册应 **用程序的“回复URL** ”设置中。 保存配置。
 1. 在“身份验证设置”选项卡中， **为Microsoft Dynamics实例指定服务根**、客户端Id **、**&#x200B;客户端机密 **和****** 资源URL。 单 **击重定向到** Microsoft Dynamics登录页面的“连接到OAuth”。
 1. 提供登录凭据。 登录后，您将被重定向到AEM Forms云服务配置页面。 单击 **保存并关闭**。 将保存云服务配置。
@@ -273,7 +273,7 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 对作者实例和发布实例执行以下操作：
 
-1. 转到AEM web配置控制台(位于[https://]server:[host]/system/console/configMgr)。
+1. 转到AEM web配置控制台(位于 `https://[server]:[host]/system/console/configMgr`)。
 1. 查找并点 **[!UICONTROL 按Adobe sign配置服务]** ，以打开它进行配置。
 1. 将状 **[!UICONTROL 态更新调度程序表达式]****配置为0 0/2 * * * ?**。
 
@@ -287,7 +287,7 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 对作者实例和发布实例执行以下操作：
 
-1. 转到“ **工具** ”>“ **云服务** ” **>“** Adobe Sign”>“全 **局签名**”。 选择 **AEM Forms Reference Site Sign** ，然后点按属性。
+1. 转到“工 **具** ”>“ **云服务** ” **>“** Adobe Sign”>“全 **局签名**”。 选择 **AEM Forms Reference Site Sign** ，然后点按属性。
 
    >[!CAUTION]
    >
