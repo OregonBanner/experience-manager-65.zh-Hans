@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -83,7 +83,7 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
       * **JDBC驱动程序类**:指定JDBC驱动程序的Java类名。 对于MySQL数据库，指 **定com.mysql.jdbc.Driver**。
 
-      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构电话上运行的MySQL数据库，URL为：jdbc:mysql://[server]:3306/teleca?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8
+      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构电话上运行的MySQL数据库，URL为： `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **** 用户名：数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
       * **** 密码：数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
       * **** 借阅测试：启用“借 **阅时测试** ”选项。
