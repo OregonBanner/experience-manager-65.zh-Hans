@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -788,13 +788,13 @@ We.Finance Wealth Management情景包含以下角色：
 
 #### 工作原理 {#how-it-works-17}
 
-蓝筹增长基金的招股说明书是一种互动沟通。 它使用文本、图像、图表和表组件（文档片段）来显示产品摘要、股票风格、基金业绩、基金详细信息和其他相关信息。 [ 您可以在编辑模式下查看交互式通信，网址为https://]authorHost[:authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html
+蓝筹增长基金的招股说明书是一种互动沟通。 它使用文本、图像、图表和表组件（文档片段）来显示产品摘要、股票风格、基金业绩、基金详细信息和其他相关信息。 您可以在以下位置在编辑模式下查看交互式通信： `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`
 
-图表和表从表单数据模型检索数据。 表单数据模型连接到配置的数据源，即本演练中的数据库，以检索特定于基金的信息。 您可以在https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management查看表单数据模型
+图表和表从表单数据模型检索数据。 表单数据模型连接到配置的数据源，即本演练中的数据库，以检索特定于基金的信息。 您可以在 `https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-finance/wealth-management`
 
 #### 亲身体验 {#see-it-yourself-15}
 
-转到We.Finance门户，网址为https://[publishHost]:[publishPort]/wefinance，点按财富管理，按资产类别展开基金，然后点按We.Finance蓝筹股增长基金。 We.Finance Blue Chip Growth Fund招股说明书开始。
+访问We.Finance门户，点击Wealth Management, `https://[publishHost]:[publishPort]/wefinance`按资产类别展开Funds，然后点击We.Finance Blue Chip Growth Fund。 We.Finance Blue Chip Growth Fund招股说明书开始。
 
 ### Sarah探索Blue Chip Growth Fund招股说明书，了解该基金 {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
@@ -806,11 +806,11 @@ Sarah探索了招股说明书的“概述”、“价格和绩效”、“组合
 
 蓝筹成长基金的互动通讯使用母板和子板将相关信息分成不同的部分。 父面板将所有子面板组织到选项卡中。
 
-将父选项卡的布局设置为顶部的选项卡，以将所有子面板转换为选项卡。 [ 您可以在编辑模式下查看交互式通信的面板，网址为https://]authorHost[:authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html。
+将父选项卡的布局设置为顶部的选项卡，以将所有子面板转换为选项卡。 您可以在的编辑模式下查看交互式通信的面板 `https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`。
 
 #### 亲身体验 {#see-it-yourself-16}
 
-[ 请访问Blue Chip Growth Fund交互通信网https://]publishHost[:publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled。 浏览所有选项卡。
+访问Blue Chip Growth Fund的交互式通信 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled`。 浏览所有选项卡。
 
 ### Sarah查看PDF版Blue Chip Growth Fund页面并通过电子邮件发送 {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
 
@@ -820,15 +820,15 @@ Sarah探索了招股说明书的“概述”、“价格和绩效”、“组合
 
 #### 工作原理 {#how-it-works-19}
 
-蓝筹增长基金的招股说明书是一种互动沟通。 它有一个Web和PDF渠道。 交互式通信与AEM工作流集成，通过电子邮件发送PDF版本。 [ 您可以在https://]authorHost上查看工作流模型[:authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html。
+蓝筹增长基金的招股说明书是一种互动沟通。 它有一个Web和PDF渠道。 交互式通信与AEM工作流集成，通过电子邮件发送PDF版本。 您可以在上查看工作流模型 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html`。
 
 ![财富管理](assets/wealth-management.png)
 
 #### 亲身体验 {#see-it-yourself-17}
 
-[ 要下载PDF版本，请转到Blue Chip Growth Fund交互通信https://]publishHost[:publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html，点按下载PDF。
+要下载PDF版本，请转到Blue Chip Growth Fund交互通信，点 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`按下载PDF。
 
-[ 要通过电子邮件发送PDF，请转到Blue Chip Growth Fund交互式通信https://]publishHost[:publish端口]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html，点按电子邮件PDF。 指定 **全名** 和电 **子邮件地址**。 单击“ **发送电子邮件**”。
+要通过电子邮件发送PDF，请转到Blue Chip Growth Fund交互式通信，点 `https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html`按EMAIL PDF。 指定 **全名** 和电 **子邮件地址**。 单击“ **发送电子邮件**”。
 
 ## 汽车保险申请演练 {#auto-insurance-application-walkthrough}
 
@@ -849,13 +849,13 @@ Conrad登录AEM实例，打开“自动保险”仪表板，指定Sarah的 **客
 
 #### 工作原理 {#how-it-works-20}
 
-保险单续签通信是一种交互通信。 Conrad Simms使用代理UI将保险单续订通信发送给Sarah。 该通信包括打印(PDF)和指向交互式通信的Web通道的链接。 交互式通信使用AEM Workflow发送电子邮件。 [ 您可以在https://]authorHost上查看工作流[:authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
+保险单续签通信是一种交互通信。 Conrad Simms使用代理UI将保险单续订通信发送给Sarah。 该通信包括打印(PDF)和指向交互式通信的Web通道的链接。 交互式通信使用AEM Workflow发送电子邮件。 您可以在 `https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html`
 
 ![自动保险工作流](assets/auto-insurance-workflow.png)
 
 #### 亲身体验 {#see-it-yourself-18}
 
-以Conrad Simms(csimms/ **password)身份登录到We.Finance Auto Insurance Dashboard** 。 URL为https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html。 指定客 **户ID**。 Sarah Rose的客户ID为900001。 单击“ **续订策略**”。 交互式通信在代理UI中打开。 在代理UI中，输入有效的电子邮件地址以发送附加了策略文档的电子邮件，然后单击“提 **交”**。 屏幕上会显示一条消息“已启动提交”，然后在几秒内会显示另一条消息“已成功提交”。 一封电子邮件，主题为“ **您的自动保险续订** ”，并会在指定的电子邮件地址发送。 萨拉·罗斯的政策是优惠政策。
+以Conrad Simms(csimms/ **password)身份登录到We.Finance Auto Insurance Dashboard** 。 URL为 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定客 **户ID**。 Sarah Rose的客户ID为900001。 单击“ **续订策略**”。 交互式通信在代理UI中打开。 在代理UI中，输入有效的电子邮件地址以发送附加了策略文档的电子邮件，然后单击“提 **交”**。 屏幕上会显示一条消息“已启动提交”，然后在几秒内会显示另一条消息“已成功提交”。 一封电子邮件，主题为“ **您的自动保险续订** ”，并会在指定的电子邮件地址发送。 萨拉·罗斯的政策是优惠政策。
 
 汽车保险演练中还包含另一位客户艾莉森·琼斯。 Alison Jones的客户ID为900002。 当您将交互式通信发送给Alison Jones时，会发送标准策略。 标准和高级策略的区别在于：
 
@@ -863,18 +863,18 @@ Conrad登录AEM实例，打开“自动保险”仪表板，指定Sarah的 **客
 * 标准政策的成本低于高级政策。
 * 优惠政策有防盗奖励，标准政策有明智的骑乘奖励
 
-这两个策略都使用相同的交互式通信。 策略中的部分会根据策略类型条件进行更改或隐藏。 您可以直接从https://[authorHost访问和查看自动保险续订交互式通信]:authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal
+这两个策略都使用相同的交互式通信。 策略中的部分会根据策略类型条件进行更改或隐藏。 您可以直接从 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **将Microsoft dynamics用作数据源**
 
 该参考站点还提供交互式通信，该通信使用Microsoft Dynamics作为表单数据模型的数据源。 请执行以下步骤以配置用于自动保险演练的交互式通信：
 
-1. 以管理员身份登录[到https://]author:[port]/crx/de。
+1. 登录到 `https://[author]:[port]/crx/de as an administrator`。
 1. Open the `/apps/we-finance/components/ccrui/ccrui.jsp`file.
 1. Set the value of `FormFieldRequestParameter`to `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. 点按 **全部保存**。 该参考站点被配置为使用使用MS dynamics作为数据源的交互通信。
 
-现在，以Conrad Simms(csimms/ **password)身份登录We.Finance Auto Insurance Dashboard** 。 URL为https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html。 指定客 **户ID**。 Sarah Rose的客户ID为900001。 单击“ **续订策略**”。 交互式通信在代理UI中打开。 在代理UI中，输入有效的电子邮件地址以发送附加了策略文档的电子邮件，然后单击“提 **交”**。 屏幕上会显示一条消息“已启动提交”，然后在几秒内会显示另一条消息“已成功提交”。 以您的自动保险续 **订为主题的电子邮件** ，将在指定的电子邮件地址发送。
+现在，以Conrad Simms(csimms/ **password)身份登录We.Finance Auto Insurance Dashboard** 。 URL为 `https://[publishhost]:[publishport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html`。 指定客 **户ID**。 Sarah Rose的客户ID为900001。 单击“ **续订策略**”。 交互式通信在代理UI中打开。 在代理UI中，输入有效的电子邮件地址以发送附加了策略文档的电子邮件，然后单击“提 **交”**。 屏幕上会显示一条消息“已启动提交”，然后在几秒内会显示另一条消息“已成功提交”。 以您的自动保险续 **订为主题的电子邮件** ，将在指定的电子邮件地址发送。
 
 >[!NOTE]
 >
@@ -902,7 +902,7 @@ Sarah单击 **“立即续签** ”，并转到Web版的汽车保险信。 在�
 
 电 **子邮件中的** “立即续订”按钮将Sarah定向到策略的Web版本。 您可以访问以下URL:
 
-https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&amp;customerId=900001
+`https://[publishServer]:[publishPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=900001`
 
 您可以查看汽车保险续订的详细摘要，然后单击页 **面底部的** “立即续订”。
 
@@ -920,6 +920,6 @@ https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;docum
 
 单击 **立即续订** ，以访问付款页面。 填写您的信用卡信息，然后单击“ **付款”**。 您可以通过以下网址访问创作实例中的付款页面：
 
-https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=900001
+`https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&schema=fdm&customerId=900001`
 
 单击“付款”按钮后，将显示感谢信。
