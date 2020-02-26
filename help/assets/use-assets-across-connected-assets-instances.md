@@ -3,7 +3,7 @@ title: 在Adobe Experience Manager Sites创作工作流程中使用连接的资�
 description: 在另一个Experience Manager Site部署中创建网页时，使用远程Adobe Experience Manager Assets部署中可用的资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a107f3d3f10e2f5b5aed7722aee467a838f9d13d
+source-git-commit: a7082bc47bea1b8514121f482911da44919da73c
 
 ---
 
@@ -27,9 +27,9 @@ AEM Sites 提供了创建网页的功能，AEM Assets 是为网站提供所需�
 * 用户是每个部署中相应用户组的一部分。
 * 对于Adobe Experience manager的部署类型，符合支持的标准之一。 AEM 6.5资产可作为云服务与AEM一起使用。 有关详细信息，请参 [阅AEM中作为云服务的“已连接资产”功能](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | AEM Sites作为云服务 | AMS上的AEM 6.5站点 | AEM 6.5站点内部部署 |
+   |  | AEM Sites 云服务 | AMS上的AEM 6.5站点 | AEM 6.5站点内部部署 |
    |---|---|---|---|
-   | **AEM Assets as a Cloud Service** | 受支持 | 受支持 | 受支持 |
+   | **AEM Assets 云服务** | 受支持 | 受支持 | 受支持 |
    | **AMS上的AEM 6.5资产** | 不支持 | 受支持 | 受支持 |
    | **AEM 6.5资产内部部署** | 不支持 | 不支持 | 不支持 |
 
@@ -171,7 +171,7 @@ AEM管理员可以创建此集成。 创建后，使用它所需的权限会通�
 * 所有站点作者都对获取的副本具有读取权限，即使他们无权访问远程DAM部署。
 * 无API支持自定义集成。
 * 该功能支持无缝搜索和使用远程资源。 要一次性在本地部署中提供许多远程资产，请考虑迁移这些资产。 请参阅 [资产迁移指南](assets-migration-guide.md)。
-* 无法通过单击选择图像，将远程资产用作页面属性中“缩略图  ”选项卡中 [!UICONTROL 的网页缩] 略图 。
+* 无法在页面属性用户界面上将远程资产用作页 [!UICONTROL 面缩略图] 。 可以通过单击选择图像，在缩略图的“页 [!UICONTROL 面属性] ”用户界面中设 [!UICONTROL 置网页的缩] 略图 。
 
 **设置和许可**
 
