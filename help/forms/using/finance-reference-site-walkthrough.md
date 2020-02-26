@@ -884,7 +884,7 @@ Conrad登录AEM实例，打开“自动保险”仪表板，指定Sarah的 **客
 
 ### Sarah收到We.Finance发来的保险单续订通信，并决定续订 {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
-Sarah收到一封来自We.Finance的附件电子邮件，提醒她，她的汽车保险政策即将到期。 附件是其汽车保险单续订详细信息的打印版本。
+Sarah收到一封来自We.Finance的附件，其中提醒她，她的汽车保险政策即将到期。 附件是其汽车保险单续订详细信息的打印版本。
 
 Sarah单击 **“立即续签** ”，并转到Web版的汽车保险信。 在这封信的上面，莎拉找到了她的政策到期的剩余天数。 该页为Sarah提供了有关其保险单详细信息（如保单编号、到期金额）的概述，以及折扣优惠和忠诚度奖励等其他信息。 Sarah再次单 **击策略底部的** “立即续订”。
 
