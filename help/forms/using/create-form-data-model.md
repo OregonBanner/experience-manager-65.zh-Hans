@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ---
 
@@ -70,7 +70,7 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
       * **** 数据源名称：您可以指定任何名称。 例如，指定 **WeRetailMySQL**。
       * **DataSource服务属性名称**:指定包含DataSource名称的服务属性的名称。 在将数据源实例注册为OSGi服务时指定它。 例如， **datasource.name**。
       * **JDBC驱动程序类**:指定JDBC驱动程序的Java类名。 对于MySQL数据库，指 **定com.mysql.jdbc.Driver**。
-      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构weretail上运行的MySQL数据库，URL为：jdbc:mysql://[server]:3306/weretail?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8
+      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构weretail上运行的MySQL数据库，URL为： `jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **** 用户名：数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
       * **** 密码：数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
       * **** 借阅测试：启用“借 **阅时测试** ”选项。
