@@ -150,33 +150,19 @@ Smart collections are built by saving a search so you can alter their content by
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，从&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中查看收藏集元数据。
 1. 根据需要修改元数据，然后点按／单击工 **[!UICONTROL 具栏中的保存并关闭]** ，以保存更改。
 
-## 批量编辑多个集合的元数据 {#editing-collection-metadata-in-bulk}
+### 批量编辑集合元数据 {#editing-collection-metadata-in-bulk}
 
 您可以同时编辑多个集合的元数据。 此功能可帮助您快速复制多个集合中的常见元数据。
 
 1. 在“收藏集”控制台中，选择要编辑其元数据的两个或多个收藏集。
 1. 在工具栏中，点按／单击属 **[!UICONTROL 性图]** 标。
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，根据需要编辑&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡下的元数据。
-1. 要查看特定集合的元数据属性，请取消选择集合列表中的其余集合。 元数据编辑器字段会填充特定集合的元数据。
-
-   >[!NOTE]
-   >
-   >* 在收藏集属性页面中，可以通过取消选择收藏集从收藏集列表中删除收藏集。 集合列表默认选中所有集合。 您删除的集合的元数据不会更新。
-   >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
-
-
 1. 点按／单 **[!UICONTROL 击工具栏中的保存并关闭]** ，然后关闭确认对话框以完成该过程。
-1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. 如果不选中此选项，则新元数据将替换字段中的现有元数据。点按／单击 **[!UICONTROL 提交]**。
+1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. 如果不选中此选项，则新元数据将替换字段中的现有元数据。点按/单击&#x200B;**[!UICONTROL 提交]**。
 
    >[!NOTE]
    >
-   >您为所选集合添加的元数据将覆盖这些集合的先前元数据。 使用“ [!UICONTROL 追加”模式] ，在可包含多个值的字段中向现有元数据添加新值。 始终覆盖单值字段。 您在“标记”字段中添 [!UICONTROL 加的任何标记] ，都会附加到元数据中的现有标记列表中。
-
-要自定义元数据 [!UICONTROL 属性页] ，包括添加、修改和删除元数据属性，请使用架构编辑器。
-
->[!TIP]
->
->批量编辑方法适用于集合中的可用资源。 对于跨文件夹可用或符合通用标准的资产，可在搜索后 [批量更新元数据](/help/assets/search-assets.md#metadataupdates)。
+   >“追加模式”仅适用于可包含多个值的字段。对于只能包含单个值的字段，即使选择&#x200B;**[!UICONTROL 追加模式]**，新元数据也不会追加到字段中的现有值中。
 
 ## 搜索集合 {#searching-collections}
 
@@ -194,7 +180,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 您可以编辑集合设置（如标题和说明），或向集合添加成员。
 
-1. 选择一个集合，然后点按／单击工 **[!UICONTROL 具栏中的]** “设置”图标。 或者，也可以使 **[!UICONTROL 用集合缩览图]** 中的设置快速操作。
+1. 选择一个集合，然后点按／单击工 **[!UICONTROL 具栏中的]** “设置”图标。 或者，也可以使 **[!UICONTROL 用集合缩览图]** 中的“设置”快速操作。
 1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
 1. 要保存更改，请点按／单击 **[!UICONTROL 保存]**。
@@ -221,6 +207,34 @@ Smart collections are built by saving a search so you can alter their content by
 
    当您选择要下载的集合时，将下载集合下的完整文件夹层次结构。 要将您下载的每个集合（包括嵌套在父集合下的子集合中的资产）包含在单个文件夹中，请为每个资 **[!UICONTROL 产选择创建单独的文件夹]**。
 
+## 编辑多个集合的元数据属性 {#edit-metadata-in-bulk}
+
+Adobe Enterprise Manager(AEM)资产允许您批量编辑许多集合的元数据。 使用“ [!UICONTROL 属性] ”页可对多个集合执行元数据更改，例如，将元数据属性更改为通用值或添加或修改标记。
+
+要自定义元数据 [!UICONTROL 属性页] ，包括添加、修改和删除元数据属性，请使用架构编辑器。
+
+>[!NOTE]
+>
+>批量编辑方法适用于集合中的可用资产。 对于跨文件夹可用或符合通用标准的资产，可在搜索后 [批量更新元数据](/help/assets/search-assets.md#metadataupdates)。
+
+1. 从收藏集控制台中，选择要编辑的收藏集。
+1. 在工具栏中，点按／单 **[!UICONTROL 击属性]** ，以打开选 [!UICONTROL 定集合的] “属性”页面。
+1. 修改各个选项卡下选定集合的元数据属性。
+
+   >[!NOTE]
+   >
+   >您为所选集合添加的元数据将覆盖这些集合的以前元数据，但标记除外。 您在“标记”字段中添 **[!UICONTROL 加的任何标记]** ，都会附加到元数据中的现有标记列表中。
+
+1. 要查看特定集合的元数据属性，请取消选择集合列表中的其余集合。 元数据编辑器字段会填充特定集合的元数据。
+
+   >[!NOTE]
+   >
+   >* 在收藏集属性页面中，可以通过取消选择收藏集从收藏集列表中删除收藏集。 集合列表默认选中所有集合。 您删除的集合的元数据不会更新。
+   >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
+
+
+1. 保存更改。
+
 ## 创建嵌套集合 {#creating-nested-collections}
 
 您可以将一个收藏集添加到另一个收藏集中，从而创建嵌套式收藏集。
@@ -231,7 +245,7 @@ Smart collections are built by saving a search so you can alter their content by
 
    >[!NOTE]
    >
-   >默认情况下，最近更新的集合会在“添加到集合” **[!UICONTROL 页面中处于选中状态]** 。
+   >默认情况下，最近更新的集合会在“添加到集合 **[!UICONTROL ”页面中处于选中]** 。
 
 1. 点按／单击 **[!UICONTROL 添加]**。 系统会显示一条消息，确认该集合已添加到“选择目标”页面中 **[!UICONTROL 的目标集合]** 。 关闭消息以完成该过程。
 
@@ -286,5 +300,6 @@ Smart collections are built by saving a search so you can alter their content by
 >[!MORELIKETHIS]
 >
 >* [配置Experience Manager资产电子邮件通知](/help/sites-administering/notification.md#assetsconfig)
+>* [编辑多个集合的元数据属性](managing-multiple-assets.md)
 >* [为集合创建审核任务](bulk-approval.md)
 
