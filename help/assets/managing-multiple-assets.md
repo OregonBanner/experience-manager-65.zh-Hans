@@ -57,8 +57,3 @@ Adobe Enterprise Manager(AEM)资产允许您同时编辑多个资产的元数据
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
 要更改限制，请访问 Web Console（**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web Console]**），更改 ]**Apache Sling 请求参数处理]** OSGi 配置中的&#x200B;**[!UICONTROL 最大 POST 参数**[!UICONTROL &#x200B;值。
-
->[!MORELIKETHIS]
->
->* [编辑多个集合的元数据属性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
-
