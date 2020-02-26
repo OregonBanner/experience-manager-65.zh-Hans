@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 9f3129aff8a3e389231b0fe0973794e5d34480a0
 
 ---
 
@@ -93,7 +93,7 @@ Forms服务将表单渲染为HTML以响应来自Web浏览器的HTTP请求。 将
 
 您可以在提交表单之前调用自定义脚本。 此功能适用于所有可用的浏览器。 但是，仅当用户呈现其属性设置为的HTML表单时，才 `Output Type` 能使用它 `Form Body`。 当是时，它将不起 `Output Type` 作用 `Full HTML`。 有关配置此功能的步骤，请参阅管理帮助中的配置表单。
 
-必须首先定义在提交表单之前调用的回调函数，其中函数的名称为 `_user_onsubmit`。 假定该函数不会引发任何异常，或者如果引发异常，则会忽略该异常。 建议将JavaScript函数放在html的head部分；但是，您可以在包含脚本标签的末尾之前的任何地方声明它 `xfasubset.js`。
+必须首先定义在提交表单之前调用的回调函数，其中函数的名称为 `_user_onsubmit`。 假定该函数不会引发任何异常，或如果它引发异常，则将忽略该异常。 建议将JavaScript函数放在html的head部分；但是，您可以在包含脚本标签的末尾之前的任何地方声明它 `xfasubset.js`。
 
 当formserver呈现包含下拉列表的XDP时，除了创建下拉列表外，它还会创建两个隐藏的文本字段。 这些文本字段存储下拉列表的数据（一个存储选项的显示名称，另一个存储选项的值）。 因此，每次用户提交表单时，都会提交下拉列表的整个数据。 如果您不希望每次提交这么多数据，您可以编写自定义脚本来禁用它。 例如：下拉列表的名称为， `drpOrderedByStateProv` 并且包含在子表单标题下。 HTML输入元素的名称将为 `header[0].drpOrderedByStateProv[0]`。 存储和提交下拉列表数据的隐藏字段的名称具有以下名称： `header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
 
@@ -335,7 +335,7 @@ XFA子集定义映射到HTML事件的XFA事件。 在计算和验证事件的定
 
    * 一个字符串值，它指定表单设计名称，包括文件扩展名。 如果引用的表单设计是表单应用程序的一部分，请确保指定完整路径，如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * 指定 `TransformTo` HTML首选项类型的enum值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定 `TransformTo.MSDHTML`。
-   * 包含 `BLOB` 要与表单合并的数据的对象。 如果您不想合并数据，请传递 `null`。 (请参 [阅使用可流动布局](/help/forms/developing/rendering-forms-rendering-forms-prepluing-forms-frendering-forms prepluing-forms-ablouts-prepluing.md#preprepluing-forms-with-flable-layouts)预填充表单。)
+   * 包含 `BLOB` 要与表单合并的数据的对象。 如果您不想合并数据，请传递 `null`。 (请参阅 [使用可流式布局预填充表单](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts)。)
    * 存 `HTMLRenderSpec` 储HTML运行时选项的对象。
    * 指定标题值的字 `HTTP_USER_AGENT` 符串值；例如， `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。 如果不想设置此值，可以传递空字符串。
    * 存储 `URLSpec` 呈现HTML表单所需的URI值的对象。 (请参 [阅指定URI值](/help/forms/developing/rendering-interactive-pdf-forms.md)。)
