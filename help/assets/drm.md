@@ -3,12 +3,12 @@ title: 资产中的数字版权管理
 description: 了解如何在AEM中管理授权资产的资产到期状态和信息。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
 
-# 数字资产的数字版权管理 {#digital-rights-management-in-assets}
+# Digital Rights Management for digital assets {#digital-rights-management-in-assets}
 
 数字资产通常与许可证相关联，许可证会指定其使用条款和持续时间。 由于Adobe Experience Manager(AEM)资产已与AEM平台完全集成，因此您可以有效管理资产到期信息和资产状态。 您还可以将许可信息与资产关联。
 
@@ -18,11 +18,15 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 您可以在卡片视图和列表视图中的资产控制台中查看资产的到期状态。
 
-![expired_flag_card](assets/expired_flag_card.png)<br> *图：在卡片视图中，卡上的标记指示已过期的资产。*
+![expired_flag_card](assets/expired_flag_card.png)
+
+*图：在卡片视图中，卡上的标记指示已过期的资产。*
 
 **列表视图**
 
-![expired_flag_list](assets/expired_flag_list.png)*图：在列表视图中，“状&#x200B;**[!UICONTROL 态]**”列显示“**[!UICONTROL 已过期]**”横幅。*
+![expired_flag_list](assets/expired_flag_list.png)
+
+*图：在列表视图中，“状[!UICONTROL 态]”列显示“[!UICONTROL 已过期]”横幅。*
 
 您可以在时间轴中查看资产的到期状态。 选择资产，然后从GlobalNav菜单中选择时间轴。
 
@@ -59,7 +63,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. 单击／点按到 **[!UICONTROL 期状态]** ，以展开它。
+1. 单击/点按&#x200B;**[!UICONTROL 到期状态]**&#x200B;选项以展开。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -73,14 +77,14 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 此外，如果故障或错误导致调度程序无法检测当前周期中已过期的资产，则调度程序将在下一个周期中重新检查这些资产并检测其过期状态。
 
-要启用“资产”控制台以显示引用的复合资产以及过期的子资产，请在AEM配置管理器中配置 **Adobe CQ DAM Expiry Notification** （AEM CQ DAM到期通知）工作流。
+要启用 Assets 控制台以显示引用的复合资产以及过期的子资产，请在 AEM Configuration Manager 中配置 **Adobe CQ DAM 到期通知**&#x200B;工作流。
 
 1. 打开AEM配置管理器。
 1. 选择 **[!UICONTROL Adobe CQ DAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择“基于时间的计划程序]** ”，该计划程序会安排作业以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为已过期。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
-1. 要定期运行作业，请清除“基于时 **[!UICONTROL 间的调度程序规则]** ”字段，并在“周期性调度程序”字段中修改 **[!UICONTROL 时间（以秒为单位）]** 。 例如，示例表达式&#39;0 0 0 &amp;ast;&amp;ast;?&#39; 会在00小时开始工作。
+1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式“0 0 0 &amp;ast; &amp;ast; ?”会在 00 小时开始作业。
 1. 选择 **[!UICONTROL 发送电子邮件]** ，以在资产过期时接收电子邮件。
 
    >[!NOTE]
@@ -134,15 +138,15 @@ Adobe Experience Manager(AEM)资产的“资产”控制台可显示资产的各
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
 1. 按回车键，然后点 **[!UICONTROL 按GlobalNav]** 以显示“搜索”面板。
-1. 在“搜索”面板中，点按／单 **[!UICONTROL 击发布状态]** ，然后选择 **[!UICONTROL 已发布]** ，以在AEM资产中搜索已发布的资产。
+1. 在“搜索”面板中，点按/单击&#x200B;**[!UICONTROL 发布状态]**，然后选择&#x200B;**[!UICONTROL 已发布]**，以在 AEM Assets 中搜索已发布的资产。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. 点按／单击 **[!UICONTROL 批准状态]** ，然后单击相应的选项以搜索已批准或已拒绝的资产。
+1. 点按/单击&#x200B;**[!UICONTROL 批准状态]**，然后单击相应的选项以搜索已批准或已拒绝的资产。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. 要根据资产的到期状态搜索资产，请在“搜索” **[!UICONTROL 面板中选择“到期状态]** ”，然后选择相应的选项。
+1. 要根据资产的到期状态搜索资产，请在“搜索”面板中选择&#x200B;**[!UICONTROL 到期状态]**，然后选择相应的选项。
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
@@ -150,7 +154,7 @@ Adobe Experience Manager(AEM)资产的“资产”控制台可显示资产的各
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## 资产中的数字版权管理 {#digital-rights-management-in-assets-1}
+## Digital Rights Management in Assets {#digital-rights-management-in-assets-1}
 
 此功能强制您接受许可协议，然后您才能从Adobe Experience Manager(AEM)资产下载许可资产。
 
@@ -172,7 +176,7 @@ Adobe Experience Manager(AEM)资产的“资产”控制台可显示资产的各
 ### 下载受DRM保护的资源 {#downloading-drm-assets}
 
 1. 在卡片视图中，选择要下载的资产，然后单击下 **[!UICONTROL 载]**。
-1. 在版 **[!UICONTROL 权管理页面]** ，从列表中选择要下载的资产。
+1. 在&#x200B;**[!UICONTROL 版权管理]**&#x200B;页面，从列表中选择要下载的资产。
 1. 在“许可”窗格中，选择“ **[!UICONTROL 同意”]**。 您接受其许可协议的资产旁边会显示一个勾号。 点按／单击“下 **[!UICONTROL 载]** ”按钮。
 
    >[!NOTE]
