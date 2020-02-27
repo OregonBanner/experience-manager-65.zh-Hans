@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a67ff409107cbde04d10932d624340857b9f9f64
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -689,7 +689,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 时间轴允许您查看选定项目的各种事件，如资产的活动工作流、注释／注释、活动日志和版本。
 
-![对资产的时间轴条目排序](assets/sort_timeline.gif)*图：对资产的时间轴条目进行排序*
+![对资产的时间轴条目进行排序](assets/sort_timeline.gif)
+
+*图：对资产的时间轴条目进行排序*
 
 >[!NOTE]
 >
