@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: c5e6098b62ff7e3e787b5f0f3c3b32a35e3981c6
 
 ---
 
@@ -361,6 +361,8 @@ Tar Micro kernel的冷备用容量允许一个或多个备用AEM实例连接到�
 * `TransferredSegmentBytes:`传输到此客户端的总字节数。
 
 ## 冷备用存储库维护 {#cold-standby-repository-maintenance}
+
+### 修订清除 {#revision-clean}
 
 >[!NOTE]
 如果对主实 [例运行“在线修订清除](/help/sites-deploying/revision-cleanup.md) ”，则不需要执行下面介绍的手动过程。 此外，如果您使用“在线修订清除”，则 `cleanup ()` 将自动执行对备用实例的操作。
