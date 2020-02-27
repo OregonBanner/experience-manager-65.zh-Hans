@@ -3,12 +3,12 @@ title: 在AEM资产中管理Adobe Stock资产
 description: 在AEM中搜索、提取、许可和管理Adobe Stock资产。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 62e82b6da2a5f961acf8cbc30ad29b3c25b1ecef
 
 ---
 
 
-# 在AEM资产中使用Adobe Stock资产 {#use-adobe-stock-assets-in-aem-assets}
+# Use Adobe Stock assets in AEM Assets {#use-adobe-stock-assets-in-aem-assets}
 
 组织可以将其Adobe Stock企业计划与AEM资产相集成，以确保许可资产可广泛用于其创意和营销项目，并具备AEM强大的资产管理功能。
 
@@ -16,7 +16,7 @@ Adobe Stock 服务为设计师和企业提供了数百万种可用于所有创�
 
 ## 前提条件 {#prerequisites}
 
-该集成需要 [企业Adobe Stock计划](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) 和AEM 6.5或更高版本。 有关AEM 6.5 Service Pack的详细信息，请参阅这些 [发行说明](/help/release-notes/sp-release-notes.md)。
+该集成需要 [企业Adobe Stock计划](https://stockenterprise.adobe.com/) 和AEM 6.5或更高版本。 有关AEM 6.5 Service Pack的详细信息，请参阅这些 [发行说明](/help/release-notes/sp-release-notes.md)。
 
 ## 集成AEM和Adobe Stock {#integrate-aem-and-adobe-stock}
 
@@ -28,15 +28,15 @@ Adobe Stock 服务为设计师和企业提供了数百万种可用于所有创�
 
 ### 创建IMS配置 {#create-an-ims-configuration}
 
-1. 单击AEM徽标。 导航到 **[!UICONTROL 工具]** >安 **[!UICONTROL 全]** > **[!UICONTROL Adobe IMS配置]**。 单击 **[!UICONTROL 创建]** ，然后选择“ **[!UICONTROL 云解决方案]** ” **[!UICONTROL >“]** Adobe Stock”。
+1. 单击 AEM 徽标。导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL Adobe IMS 配置]**。单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 云解决方案]** > **[!UICONTROL Adobe Stock]**。
 1. 重复使用现有证书或选择“ **[!UICONTROL 创建新证书”]**。
 1. 单击“ **[!UICONTROL 创建证书]**”。 创建后，下载公钥。 单击&#x200B;**[!UICONTROL 下一步]**。
-1. 在标题为 **[!UICONTROL Adobe Authorization Server]**、 **[!UICONTROL Authorization Server]**、 **[!UICONTROL API Key、Secret Secret]**********、Payload客户端和PayloadPayload的字段中提供相应的值。 请参 [阅JWT身份验证快速入门](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)，以获取从Adobe I/O获取这些值的详细信息。
+1. 在标题为&#x200B;**[!UICONTROL 标题]**、**[!UICONTROL 授权服务器]**、**[!UICONTROL API 密钥]**、**[!UICONTROL 客户端密钥]**&#x200B;和&#x200B;**[!UICONTROL 负载]**&#x200B;的字段中提供相应的值。有关从 Adobe I/O 获取这些值的详细信息，请参阅 [JWT 身份验证快速入门](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)。
 1. 将下载的公钥添加到您的Adobe I/O服务帐户。
 
 ### 在AEM中创建Adobe Stock配置 {#create-adobe-stock-configuration-in-aem}
 
-1. 在AEM用户界面中，导航到工 **[!UICONTROL 具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**。
+1. 在 AEM 用户界面中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 云服务]** > **[!UICONTROL Adobe Stock]**。
 1. 单击 **[!UICONTROL 创建]** ，创建配置并将其与现有IMS配置关联。 选择 `PROD` 作为环境参数。
 1. 在“ **[!UICONTROL 许可资产路径]** ”字段中，保留原样。 请勿更改要存储Adobe Stock资源的位置。
 1. 通过添加所有必需属性完成创建。 单击 **[!UICONTROL 保存并关闭]**。
@@ -52,9 +52,11 @@ Adobe Stock 服务为设计师和企业提供了数百万种可用于所有创�
 
 在AEM中许可Adobe Stock资产后，就可以像典型资产一样使用和管理它。 在AEM中，用户可以搜索和预览资产；复制和发布资产；在Brand Portal上共享资产；通过AEM桌面应用程序访问和使用资产；等等。
 
-![搜索Adobe Stock资源并过滤AEM工作区中的结果](assets/adobe-stock-search-results-workspace.png)*图：搜索Adobe Stock资产并从AEM工作区过滤结果*
+![搜索Adobe Stock资产并从AEM工作区过滤结果](assets/adobe-stock-search-results-workspace.png)
 
-**** 答：搜索与提供Adobe Stock ID的资产类似的资产。 **** B.搜索与您选择的形状或方向匹配的资产。 **************** C.搜索&#x200B;**其中一种支持的资产类**&#x200B;型D。打开或折叠筛选器窗 **格E。在AEM** F中许可并保存选定的资产。在AEM中将资产保存为水印 **G。在Adobe Stock网站上浏览与所选资产** H类似的资产。在Adobe Stock网站 **I上查看选定资源。搜索结果** J中的选定资产数。在卡片视图和列表视图之间切换
+*图：搜索Adobe Stock资产并从AEM工作区过滤结果*
+
+**A.** 搜索与提供 Adobe Stock ID 的资产类似的资产。**B.** 搜索与您选择的形状或方向匹配的资产。**C.** 搜索一种或多种受支持的资产类型 **D.** 打开或折叠过滤器窗格 **E.** 在 AEM 中授权并保存选定的资产 **F.** 在 AEM 中保存带水印的资产 **G.** 在 Adobe Stock 网站上浏览与选定资产类似的资产 **H.** 在 Adobe Stock 网站上查看选定资产 **I.** 搜索结果中的选定资产数 **J.** 在卡片视图和列表视图之间切换
 
 ### 查找资产 {#find-assets}
 
@@ -70,7 +72,9 @@ Adobe Stock 服务为设计师和企业提供了数百万种可用于所有创�
 >
 >从Adobe Stock搜索的资产刚刚在AEM中显示。 只有在用户保存资产或许可资产后，才会获取Adobe Stock资产并将其 [存储在AEM存](/help/assets/aem-assets-adobe-stock.md#saveassets) 储 [库中](/help/assets/aem-assets-adobe-stock.md#licenseassets)。 为便于引用和访问，将显示和高亮显示已存储在AEM中的资产。 此外，这些资产会与一些其他元数据一起保存，以将源指示为Adobe Stock。
 
-![在AEM中搜索筛选器并在搜索结果中高亮显示Adobe Stock资产](assets/aem-search-filters2.jpg)*图：在AEM中搜索筛选器并在搜索结果中高亮显示Adobe Stock资产*
+![在AEM中搜索筛选器并在搜索结果中高亮显示Adobe Stock资产](assets/aem-search-filters2.jpg)
+
+*图：在AEM中搜索筛选器并在搜索结果中高亮显示Adobe Stock资产*
 
 ### 保存并查看所需的资产 {#saveassets}
 
@@ -86,7 +90,9 @@ Adobe Stock 服务为设计师和企业提供了数百万种可用于所有创�
 
 用户可以使用Adobe Stock企业计划的配额许可Adobe Stock资源。 在您为资产授权时，该资产会保存，但不会带有水印，并且可在AEM资产中搜索和使用。
 
-![用于在AEM资产中许可和保存Adobe Stock资产的对话框](assets/aem-stock_licenseandsave.jpg)*图：用于在AEM资产中许可和保存Adobe Stock资产的对话框*
+![用于在AEM资产中许可和保存Adobe Stock资产的对话框](assets/aem-stock_licenseandsave.jpg)
+
+*图：用于在AEM资产中许可和保存Adobe Stock资产的对话框*
 
 ### 访问元数据和资产属性 {#access-metadata-and-asset-properties}
 
@@ -94,7 +100,9 @@ Adobe Stock 服务为设计师和企业提供了数百万种可用于所有创�
 
 用户可以查看授权和未授权资产的属性。
 
-![查看和访问已保存资产的元数据和许可证引用](assets/metadata_properties.jpg)*图：查看和访问已保存资产的元数据和许可证引用*
+![查看和访问已保存资产的元数据和许可证引用](assets/metadata_properties.jpg)
+
+*图：查看和访问已保存资产的元数据和许可证引用*
 
 ## 已知限制 {#known-limitations}
 
