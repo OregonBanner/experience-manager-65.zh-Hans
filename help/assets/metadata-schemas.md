@@ -3,7 +3,7 @@ title: 元数据架构
 description: 元数据架构定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据架构、编辑元数据架构以及如何将元数据架构应用到资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 4efe021c2f3f6f38594182d27a76ff69b7466c92
 
 ---
 
@@ -28,26 +28,26 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    要修改资产的MIME类型，请使用自定义元数据架构表单或修改现有表单。 有关详 [细信息，请参阅编辑元数据架构表单](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) 。 如果修改了某些MIME类型的元数据架构，则将修改当前MIME类型和所有资产子类型的资产的属性页面布局。 例如，修改jpeg架构时，只 `default/image` 会修改MIME类型资产的元数据布局（资产属性） `image/jpeg`。 但是，如果您编辑默认架构，则所做的更改将修改所有类型资产的元数据布局。
 
-1. 要查看表单／模板列表，请单击AEM徽标，然后导航到工具 **[!UICONTROL >资产]** > **[!UICONTROL 元数据]** 架构 ****。
+1. 要查看表单/模板列表，请单击 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 元数据架构]**。
 
    ![chlimage_1-37](assets/chlimage_1-173.png)
 
    AEM提供了以下现成模板：
-
    * **default**:资产的基本元数据架构表单。
-   以下子表单继承默认表单的属性：i.图 **像**:此架构表单用于MIME类型为“image”(例如， `image/jpeg`、 `image/png`等)的资产。
-“图像”表单具有以下子表单模板：a. **jpeg**:子类型资产的架构表单 `jpeg`。
-b. **tiff**: Schema form for the assets with sub type `tiff`.
 
-   ii. **应用程序**:此架构表单用于MIME类 `application`型的资产， `application/pdf`例如 `application/zip`，等等。
-a. **pdf**: Schema form for assets with sub type `pdf`.
+      以下子表单继承默认表单的属性：
 
-   iii. **视频**:此架构表单用于MIME类 `video`型(如 `video/avi`、 `video/mp4`等)的资产。
+      1. **图像**:此架构表单用于MIME类型为“image”(例如， `image/jpeg`、 `image/png`等)的资产。
 
+         “图像”表单具有以下子表单模板：
+         * **jpeg**:子类型资产的架构表单 `jpeg`。
+         * **tiff**:子类型资产的架构表单 `tiff`。
+      1. **应用程序**:此架构表单用于MIME类 `application`型的资产， `application/pdf`例如 `application/zip`，等等。
+         * **pdf**:子类型资产的架构表单 `pdf`。
+      1. **视频**:此架构表单用于MIME类 `video`型(如 `video/avi`、 `video/mp4`等)的资产。
    * **集合**:集合的架构表单。
    * **** contentfragment:内容片段的架构表单。
    * **表单**:此架构表单与 [Adobe Experience Manager Forms相关](/help/forms/home.md)。
-
 
 >[!NOTE]
 >
@@ -76,11 +76,11 @@ a. **pdf**: Schema form for assets with sub type `pdf`.
 
 可以向元数据架构表单中添加新的选项卡或表单项目。从父项派生的选项卡和表单项目处于锁定状态。 无法从子级别更改它们。
 
-1. 在“架构表单”页中，选中表单前面的复选框，然后单击工具栏上的编辑图标。
+1. 在“架构表单”页面中，选中表单前面的复选框，然后单击工具栏上的编辑图标。
 
    ![chlimage_1-39](assets/chlimage_1-175.png)
 
-1. In the **[!UICONTROL Metadata Schema Editor]** page, customize the properties page of the asset by dragging one or more components from the list of component types in the **[!UICONTROL Build Form]** tab to the **[!UICONTROL Basic]** tab.
+1. 在元数 **[!UICONTROL 据架构编辑器页中]** ，通过将“构建表单”选项卡中的组件类型列表中的一个或多个组件拖至“基本”选项卡，自定义资产的属性页 ******** 。
 
    ![chlimage_1-40](assets/chlimage_1-176.png)
 
@@ -119,9 +119,9 @@ To edit the properties of a metadata component on the form, click the component 
 
 以下是此属性的有效值：
 
-* `./jcr:content/metadata/dc:title`:将该值存储在资产的元数据节点作为属性 `dc:title`。
+* `./jcr:content/metadata/dc:title`：将该值作为属性 `dc:title` 存储在资产的元数据节点中。
 
-* `./jcr:created`:在资产的节点上显示JCR属性。 如果您对查看属性配置这些属性，我们建议您将它们标记为“禁用编辑”，因为它们是受保护的属性。Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
+* `./jcr:created`:在资产的节点上显示JCR属性。 如果您在视图属性上配置这些属性，我们建议您将这些属性标记为“禁用编辑”，因为它们是受保护属性。Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
 
 要确保在元数据架构表单中正确显示组件，属性路径不应包括任何空格。
 
@@ -139,7 +139,7 @@ To edit the properties of a metadata component on the form, click the component 
 >
 >隐藏字段组件不包括这些属性。 而是包括属性，如名称、值、字段标签和说明。 无论何时保存资产，都会将“隐藏字段”组件的值作为 POST 参数进行发送。该组件的值不会作为资产的元数据进行保存。
 
-如果选择“必需 **[!UICONTROL ”]** ，则可以搜索缺少必需元数据的资产。 从“筛选 **[!UICONTROL 器]** ”面板中，展开“元数 **[!UICONTROL 据验证”谓词]** ，然后选择“ **[!UICONTROL 无效]** ”选项。 搜索结果中显示的资产缺少您通过架构表单配置的必需元数据。
+如果选择&#x200B;**[!UICONTROL 必需]**&#x200B;选项，则可以搜索缺少必需元数据的资产。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，展开&#x200B;**[!UICONTROL 元数据验证]**&#x200B;谓词，然后选择&#x200B;**[!UICONTROL 无效]**&#x200B;选项。搜索结果中显示的资产缺少您通过架构表单配置的必需元数据。
 
 ![chlimage_1-42](assets/chlimage_1-178.png)
 
@@ -153,11 +153,11 @@ To edit the properties of a metadata component on the form, click the component 
 
 ### 在JSON文件中指定属性 {#specify-properties-in-json-file}
 
-除了为“设置”选项卡中的选项指定属性 **[!UICONTROL 外]** ，您还可以通过指定相应的键值对在JSON文件中定义选项。 在“ **[!UICONTROL JSON路径”字段中指定JSON文件的路]** 径。
+您还可以通过指定相应的键值对在 JSON 文件中定义选项，而不是为&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中的选项指定属性。在 **[!UICONTROL JSON 路径]**&#x200B;字段中指定 JSON 文件的路径。
 
 #### 在架构表单中添加或删除选项卡 {#adding-deleting-a-tab-in-the-schema-form}
 
-通过架构编辑器，可以添加或删除选项卡。默认架构表单包括 **[!UICONTROL Basic]**、 **[!UICONTROL Advanced]** 、 **[!UICONTROL IPTC]**&#x200B;和 **** IPTC Extension选项卡（默认情况下）。
+通过架构编辑器，可以添加或删除选项卡。默认架构表单包括&#x200B;**[!UICONTROL 基本]**、**[!UICONTROL 高级]**、**[!UICONTROL IPTC]** 和 **[!UICONTROL IPTC 扩展]**&#x200B;选项卡（默认情况下）。
 
 ![chlimage_1-45](assets/chlimage_1-181.png)
 
@@ -189,7 +189,7 @@ AEM资产为各种开箱即用的MIME类型提供默认表单。 但是，您可
 
 ### Add new forms for MIME types {#add-new-forms-for-mime-types}
 
-可在相应的表单类型下创建新表单。For example, to add a new template for the **image/png** subtype, create the form under the &quot;image&quot; forms. 架构表单的标题为子类型名称。在此例中，标题为“png”。****
+在相应的表单类型下创建新表单。例如，要为 **image/png** 子类型添加新模板，请在“image”表单下创建表单。架构表单的标题是子类型名称。在这种情况下，标题为“png.**”**
 
 #### Use an existing schema template for various MIME types {#use-an-existing-schema-template-for-various-mime-types}
 
@@ -236,7 +236,7 @@ AEM资产允许您定义元数据架构的变体，并将其应用到特定文�
 
 如果文件夹有子文件夹，则子文件夹内的资产将继承子文件夹级别所应用的架构中的元数据（如果在子文件夹级别应用了其他架构）。 但是，如果子文件夹级别未应用架构或同一架构，则子文件夹资产将从父文件夹级别应用的架构继承元数据。
 
-1. 单击AEM徽标，然后导航到工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** >元数 **[!UICONTROL 据架构]**。 此时 **[!UICONTROL 会显示“元数据架构表单]** ”页。
+1. 单击 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 元数据架构]**。此时会显示&#x200B;**[!UICONTROL 元数据架构表单]**&#x200B;页面。
 1. 选中表单前面的复选框（例如默认元数据表单），然后单击或点按复制图标并将其另存为自定义表单。 例如，指定表单的自定义名称 `my_default`。 或者，您也可以创建自定义表单。
    ![chlimage_1-184](assets/chlimage_1-184.png)
 
@@ -269,7 +269,7 @@ AEM资产允许您定义元数据架构的变体，并将其应用到特定文�
 >
 >元数据字段可以根据其他字段的值定义为必填字段。 在“卡”视图中，AEM不显示有关此类强制元数据字段缺失元数据的警告消息。
 
-1. 单击AEM徽标，然后导航到工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** >元数 **[!UICONTROL 据架构]**。 此时 **[!UICONTROL 会显示“元数据架构表单]** ”页。
+1. 单击 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 元数据架构]**。此时会显示&#x200B;**[!UICONTROL 元数据架构表单]**&#x200B;页面。
 1. 将默认元数据表单另存为自定义表单。 例如，将其另存为 `my_default`。
 
    ![chlimage_1-53](assets/chlimage_1-189.png)
