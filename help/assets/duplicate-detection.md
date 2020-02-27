@@ -3,7 +3,7 @@ title: 支持检测重复的资产
 description: 了解如何在AEM中启用重复资产检测。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -17,7 +17,6 @@ source-git-commit: 07c1a4102539ba4678c55dee3a4882101e39864f
 1. Select the **[!UICONTROL detect duplicate]** option, and click/tap **[!UICONTROL Save]**.
 
    ![在servlet中选择检测重复项选项](assets/chlimage_1-377.png)
-
 
    *图：在servlet中选择检测重复项选项*
 
