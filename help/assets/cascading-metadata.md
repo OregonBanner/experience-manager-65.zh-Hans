@@ -3,12 +3,12 @@ title: 层叠元数据
 description: 本文介绍如何为资产定义级联元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
 
-# 层叠元数据 {#cascading-metadata}
+# 串联元数据 {#cascading-metadata}
 
 在捕获资产的元数据信息时，用户会在各种可用字段中提供信息。 您可以显示特定元数据字段或字段值，这些字段或字段值取决于在其他字段中选择的选项。 此类元数据的条件显示称为级联元数据。 换句话说，您可以在特定元数据字段／值与一个或多个字段和／或其值之间创建依赖关系。
 
@@ -32,8 +32,8 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 无论选择的资产类型如何，都可以将版权信息显示为必填字段。
 
-1. 点按／单击AEM徽标，然后转到工具 **** >资 **[!UICONTROL 产]** >元数 **[!UICONTROL 据架构]**。
-1. 在“架 **[!UICONTROL 构表单]** ”页中，选择一个架构表单，然后点按／单击工 **[!UICONTROL 具栏中的编辑]** ，以编辑架构。
+1. 点按/单击 AEM 徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 元数据架构]**。
+1. 在&#x200B;**[!UICONTROL 架构表单]**&#x200B;页面中，选择一个架构表单，然后点按/单击工具栏中的&#x200B;**[!UICONTROL 编辑]**，以编辑架构。
 
    ![select_form](assets/select_form.png)
 
@@ -74,8 +74,8 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    ![select_dependenfield](assets/select_dependentfield.png)
 
-1. 在“ **[!UICONTROL 要求]**”下，根据 **[!UICONTROL 新规则选项选择“必需]** ”。
-1. 点按／单 **[!UICONTROL 击添加规则]** ，然后选择“资 **[!UICONTROL 产类型]** ”字段以创建依赖关系。 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 Tap/click **[!UICONTROL Done]** to save the changes.
+1. Under **[!UICONTROL Requirement]**, choose the **[!UICONTROL Required, based on new rule]** option.
+1. 点按／单 **[!UICONTROL 击添加规则]** ，然后选择“资 **[!UICONTROL 产类型]** ”字段以创建依赖关系。 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 点按／单击 **[!UICONTROL 完成]** ，以保存更改。
 
    ![define_rule](assets/define_rule.png)
 
@@ -85,7 +85,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 1. 在“可 **[!UICONTROL 见性]**”下，根据新 **[!UICONTROL 规则选项选择“可见]** ”。
 
-1. 点按／单 **[!UICONTROL 击添加规则]** ，然后选择“资 **[!UICONTROL 产类型]** ”字段以创建依赖关系。 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 Tap/click **[!UICONTROL Done]** to save the changes.
+1. 点按／单 **[!UICONTROL 击添加规则]** ，然后选择“资 **[!UICONTROL 产类型]** ”字段以创建依赖关系。 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 点按／单击 **[!UICONTROL 完成]** ，以保存更改。
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
@@ -95,7 +95,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    >[!NOTE]
    >
-   >您可以应用 **[!UICONTROL Requirement]** condition（要求）条件 **** 和Visibility（可见性）条件，它们相互独立。
+   >您可以应用&#x200B;**[!UICONTROL 要求]**&#x200B;条件和&#x200B;**[!UICONTROL 可见性]**&#x200B;条件，二者相互独立。
 
 1. 同样，在“资产类型”字段中的值“视频”与其他字段（如编解码器和持续时间）之间创建依赖关系。
 1. 重复这些步骤，以在“资产类型”字段中的文档资产（PDF和Word）与“页数”和“作者”等字段之间创 [!UICONTROL 建依赖关系]。
@@ -104,7 +104,9 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 1. 导航到应用了元数据架构的文件夹，然后打开资产的属性页。 根据您在资产类型字段中的选择，将显示相关的级联元数据字段。
 
    ![视频资产的级联元数据](assets/video_asset.png)
+
    *图：视频的级联元数据*
 
    ![文档资产的层叠元数据](assets/doc_type_fields.png)
+
    *图：文档的级联元数据*
