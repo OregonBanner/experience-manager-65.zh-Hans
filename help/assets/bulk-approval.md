@@ -3,7 +3,7 @@ title: 审核文件夹资产和收藏集
 description: 为文件夹或集合中的资产设置审阅工作流程，并与审阅者或创意合作伙伴共享它以寻求反馈。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 ## 为文件夹创建审核任务 {#creating-a-review-task-for-folders}
 
 1. 从资产用户界面中，选择要为其创建审核任务的文件夹。
-1. 在工具栏中，点按创 **[!UICONTROL 建审核任务]** ，以打开审 **[!UICONTROL 核任务页]** 。 如果您在工具栏中看不到该选项，请点按／单 **[!UICONTROL 击更多]** ，然后选择该选项。
+1. From the toolbar, tap **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option in the toolbar, tap/click **[!UICONTROL More]** and then select the option.
 
    ![chlimage_1-403](assets/chlimage_1-403.png)
 
@@ -52,8 +52,8 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
    ![资产通知](assets/aemAssetsNotification.png)
 
-1. 在“审 **[!UICONTROL 核任务]** ”页面中，检查审核任务的详细信息，然后点按／单击审 **[!UICONTROL 核]**。
-1. 在审核任 **[!UICONTROL 务页面中]** ，选择资产，然后点按批准/ **[!UICONTROL 拒绝]** ，以根据需要批准或拒绝。
+1. 在&#x200B;**[!UICONTROL 审查任务]**&#x200B;页面中，检查审查任务的详细信息，然后点按/单击&#x200B;**[!UICONTROL 审查]**。
+1. In the **[!UICONTROL Review Task]** page, select assets, and tap **[!UICONTROL Approve/Reject]** to approve or reject, as appropriate.
 
    ![review_task](assets/review_task.png)
 
@@ -71,7 +71,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 ## 为集合创建审核任务 {#creating-a-review-task-for-collections}
 
 1. 从“收藏集”页面中，选择要为其创建审核任务的收藏集。
-1. 在工具栏中，点按创 **[!UICONTROL 建审核任务]** ，以打开审 **[!UICONTROL 核任务页]** 。 如果您在工具栏上看不到该选项，请点按 **[!UICONTROL 更多]** ，然后选择该选项。
+1. From the toolbar, tap **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option on the toolbar, tap **[!UICONTROL More]** and then select the option.
 
    ![chlimage_1-405](assets/chlimage_1-405.png)
 
@@ -93,7 +93,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 1. 点按／单 **[!UICONTROL 击提交]**，然后点按／单 **[!UICONTROL 击完成]** ，关闭确认消息。 新任务的通知将发送给审批者。
 1. 以批准者身份登录到AEM资产，然后导航到资产控制台。 要批准资产，请点按 **[!UICONTROL 通知]** ，然后从列表中选择审核任务。
-1. 在“审 **[!UICONTROL 核任务]** ”页面中，检查审核任务的详细信息，然后点按／单击审 **[!UICONTROL 核]**。
+1. 在&#x200B;**[!UICONTROL 审查任务]**&#x200B;页面中，检查审查任务的详细信息，然后点按/单击&#x200B;**[!UICONTROL 审查]**。
 1. 集合中的所有资产都显示在审核页面上。 选择资产，然后点按批 **[!UICONTROL 准／拒绝]** ，以根据需要批准或拒绝资产。
 
    ![review_task_collection](assets/review_task_collection.png)
@@ -102,7 +102,9 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 1. 导航到收藏集控制台，然后打开收藏集。 资产的批准状态图标会同时显示在卡片视图和列表视图中。
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
+
    *图：卡片视图*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
+
    *图：列表视图*
