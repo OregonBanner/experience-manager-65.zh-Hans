@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 37d0225f69800225e82f253ad9dbab8b2b30ac5e
+source-git-commit: fdcd9173b02347a7a9527b292635d63e8aa9ce19
 
 ---
 
@@ -291,6 +291,12 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 **Foundation JEE**
 
 * 操作配置不会加载调用表单工作流提交操作的进程名称(NPR-31478)。
+* JEE用户在导入。lca文件或在管理控制台中设置LDAP时，会遇到与以下类似的错误：
+
+   `com.ibm.ws.webcontainer.filter.FilterInstanceWrapper doFilter SRVE8109W: Uncaught exception thrown by filter um: java.lang.NoClassDefFoundError: org/apache/commons/io/IOUtils at org.apache.commons.fileupload.util.Streams.copy`
+
+   `Error 500: javax.servlet.ServletException: java.lang.NoClassDefFoundError: org.apache.commons.io.IOUtils` (NPR-30931)
+
 
 ### 包含的功能包 {#feature-packs-included-6530}
 
