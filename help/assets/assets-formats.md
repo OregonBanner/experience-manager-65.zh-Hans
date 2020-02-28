@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: AEM资产支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1e70a1a0f82bcdf698dec378df1c3d59815e692b
+source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
 
 ---
 
@@ -93,26 +93,26 @@ Adobe Camera raw库使AEM资产能够摄取原始图像。 See [Camera Raw Suppo
 
 资产管理功能支持的文档格式如下：
 
-| 格式 | 存储 | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | 分析 |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
-| DOC | ✓ | ✓ | ✓ | ✓ |  |  |  |
-| DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  |
-| ODT | ✓ | ✓ | ✓ |  |  |  |  |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HTML | ✓ | ✓ | ✓ |  |  |  |  |
-| RTF | ✓ | ✓ | ✓ |  |  |  |  |
-| TXT | ✓ | ✓ | ✓ |  |  |  |  |
-| XLS | ✓ | ✓ | ✓ |  |  |  |  |
-| XLSX | ✓ | ✓ | ✓ | ✓ |  |  |  |
-| ODS | ✓ | ✓ | ✓ |  |  |  |  |
-| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| ODP | ✓ | ✓ | ✓ |  |  |  |  |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
-| PS | ✓ | ✓ |  |  |  |  |  |
-| QXP | ✓ | ✓ |  |  |  |  |  |
-| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| 格式 | 存储 | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | 分析 | 连接的资产 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
+| DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
+| ODT | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| HTML | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| RTF | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| TXT | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| XLS | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
+| ODS | ✓ | ✓ | ✓ |  |  |  |  |  |
+| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
+| ODP | ✓ | ✓ | ✓ |  |  |  |  |  |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
+| PS | ✓ | ✓ |  |  |  |  |  |  |
+| QXP | ✓ | ✓ |  |  |  |  |  |  |
+| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
 Dynamic media功能支持的文档格式如下：
 
@@ -272,5 +272,4 @@ Dynamic media功能支持的文档格式如下：
 >[!MORELIKETHIS]
 >
 >* [支持基于MIME类型的资产/Scene7上传作业参数](../sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
->* [支持的“连接的资源”功能格式](/help/assets/use-assets-across-connected-assets-instances.md)
 
