@@ -4,7 +4,7 @@ seo-title: AEM 6.5资产用户指南
 description: 本指南涵盖所有AEM资产任务，如如何创建、管理、交付和优化数字资产。
 seo-description: 涵盖所有AEM资产任务，如如何创建、管理、交付和优化数字资产。
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: b90343874d5afd9858d8a6d82828eabdfa1d3ccd
 
 ---
 
@@ -39,11 +39,11 @@ source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
 
 ## 关键AEM资源
 
-* [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM视频教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
+* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [AEM Assets社区论坛](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [《调度程序用户指南》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
-* [GDPR就绪](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&mv=other#solutions/experience-manager)
-* [AEM社区论坛](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
