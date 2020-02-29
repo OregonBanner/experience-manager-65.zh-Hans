@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: AEM资产支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a014887f395c5ade0affcb3c199e090af263bdc
+source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
 
 ---
 
@@ -87,13 +87,13 @@ Adobe Imaging Tronding库是一款图像处理解决方案，可执行核心图�
 
 ## 支持的相机原始数据 {#supported-camera-raw}
 
-Adobe Camera raw库使AEM资产能够摄取原始图像。 See [Camera Raw Support](camera-raw.md).
+Adobe Camera raw库使AEM资产能够摄取原始图像。 See [Camera Raw support](camera-raw.md).
 
 ## Supported document formats {#supported-document-formats}
 
 资产管理功能支持的文档格式如下：
 
-| 格式 | 存储 | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | 分析 | 连接的资产 |
+| 格式 | 存储 | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [分析](touch-ui-asset-insights.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
