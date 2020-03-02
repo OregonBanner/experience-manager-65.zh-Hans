@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -62,7 +62,7 @@ AEM Forms支持以下Web服务标准：
  </thead>
  <tbody>
   <tr>
-   <td><p>汇编器</p></td>
+   <td><p>汇编程序</p></td>
    <td><p><code>http://localhost:8080/soap/services/ AssemblerService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@ AEM Forms支持以下Web服务标准：
    <td><p><code>http://localhost:8080/soap/services/EncryptionService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>Forms</p></td>
+   <td><p>表单</p></td>
    <td><p><code>http://localhost:8080/soap/services/FormsService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -368,7 +368,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Web服务API
 1. 安装JDK 1.6或更高版本。
 
    * 将JDK bin目录添加到类路径。
-   * 将JRE bin目录添加到类路径。 此bin位于 [*JDK_INSTALL_LOCATION*]/jre目录中。
+   * 将JRE bin目录添加到类路径。 此素材箱位于目 `[JDK_INSTALL_LOCATION]/jre` 录中。
    * 将环 `JAVA_HOME` 境变量设置为JDK的安装目录。
    JDK 1.6包括build.xml文件中使用的wsimport程序。 JDK 1.5不包含该程序。
 
@@ -558,7 +558,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Web服务API
    * xalan.jar
    * xbean.jar
    * xercesImpl.jar
-   这些JAR文件位于安 *[装目录]*/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdparty目录中。
+   这些JAR文件位于目 `[install directory]/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdparty` 录中。
 
 **另请参阅**
 
@@ -900,7 +900,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Web服务API
 
 1. 通过使用对象的构造函数创建对 `MyApplication/EncryptDocument` 象，检索要发送 `java.io.File` 到该进程的PDF文档。 传递指定PDF文档位置的字符串值。
 1. 使用构 `javax.activation.DataSource` 造函数创建对 `FileDataSource` 象。 传递对 `java.io.File` 象。
-1. 使用对 `javax.activation.DataHandler` 象的构造函数并传递该对象来创建 `javax.activation.DataSource` 对象。
+1. 使用对 `javax.activation.DataHandler` 象的构造函数并传递该对 `javax.activation.DataSource` 象。
 1. 使用对 `BLOB` 象的构造函数创建对象。
 1. 通过调 `BLOB` 用对象的方法并传 `setSwaRef` 递对象来填充 `javax.activation.DataHandler` 对象。
 1. 通过调 `MyApplication/EncryptDocument` 用对象的方 `MyApplicationEncryptDocument` 法并传递包含PDF文 `invoke``BLOB` 档的对象来调用该过程。 invoke方法返回一个 `BLOB` 包含加密PDF文档的对象。
@@ -1025,7 +1025,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Web服务API
 1. 通过调 `MyApplication/EncryptDocument` 用对象的方 `MyApplicationEncryptDocument` 法并传递包含PDF文 `invoke``BLOB` 档的对象来调用该过程。 此过程会在对象中返回加密的PDF `BLOB` 文档。
 1. 创建一个字节数组以存储表示加密的PDF文档的数据流。 调用对 `BLOB` 象的方 `getRemoteURL` 法(使用方 `BLOB` 法返回的对 `invoke` 象)。
 1. 使用对 `java.io.File` 象的构造函数创建对象。 此对象表示加密的PDF文档。
-1. 使用对 `java.io.FileOutputStream` 象的构造函数并传递该对 `java.io.File` 象。
+1. 使用对 `java.io.FileOutputStream` 象的构造函数并传递该对象来创建 `java.io.File` 对象。
 1. 调用 `java.io.FileOutputStream` 对象的方 `write` 法。 传递包含表示已加密PDF文档的数据流的字节数组。
 
 ## 使用DIME调用AEM Forms {#invoking-aem-forms-using-dime}
