@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -31,7 +31,7 @@ GDS是一个目录，用于存储进程中使用的长期文件。 长期文件�
 
 异步作业调用的输入文档也存储在GDS中，并且必须可用于处理请求。 因此，务必考虑承载GDS并采用独立磁盘冗余阵列(RAID)或其他技术的文件系统的可靠性，以满足您的质量和服务级别要求。
 
-GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制台确定的。 除了为GDS保留高可用性位置，您还可以为文档启用数据库存储。 请参 [阅将数据库用于文档存储时的备份选项](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。
+GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制台确定的。 除了为GDS保留高可用性位置外，您还可以为文档启用数据库存储。 请参 [阅将数据库用于文档存储时的备份选项](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。
 
 ### GDS位置 {#gds-location}
 
@@ -66,7 +66,7 @@ GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制�
 
 简单的“对应管理解决方案”设置包括同一台计算机或不同计算机上的作者实例和发布实例
 
-### 表单管理器 {#forms-manager}
+### forms manager {#forms-manager}
 
 表单管理器简化了更新、管理和退出表单的过程。
 
@@ -154,7 +154,7 @@ log-bin=logname
 
 内容存储根目录是在安装Content Services（已弃用）时创建的。 内容存储根目录的位置在AEM表单安装过程中确定。
 
-内容存储根目录的默认位置 *[为aem-forms root]*/lccs_data。
+内容存储根目录的默认位置为 `[aem-forms root]/lccs_data`。
 
 备份位于内容存储根目录中的以下目录：
 
@@ -176,7 +176,7 @@ log-bin=logname
 
 **** 索引根目录：在群集中每个节点上创建的目录，始终具有相同的路径和目录名
 
-“内容存储根目录”的默认位置是 *[GDS root]*/lccs_data，其中 *[GDS root]* 是 [GDS位置中描述的位置](files-back-recover.md#gds-location)。 备份位于内容存储根目录中的以下目录：
+内容存储根目录的默认位置是 `[GDS root]/lccs_data`GDS位 `[GDS root]` 置中描述的 [位置](files-back-recover.md#gds-location)。 备份位于内容存储根目录中的以下目录：
 
 /audit.contentstore
 
@@ -188,7 +188,7 @@ log-bin=logname
 
 如果/backup-lucene-indexes目录不存在，请备份/lucene-indexes目录，该目录也位于内容存储根目录中。 如果存在/backup-lucene-indexes目录，请不要备份/lucene-indexes目录，因为它可能导致错误。
 
-索引根目录的默认位置是每 *[个节点上的aem-forms root]*/lucene-indexes。
+索引根目录的默认位置位于每 `[aem-forms root]/lucene-indexes` 个节点上。
 
 ## 客户安装的字体 {#customer-installed-fonts}
 
@@ -196,6 +196,6 @@ log-bin=logname
 
 >[!NOTE]
 >
->默认情况下，随AEM表单一起安装的Adobe字体位于 [aem-forms root]/fonts目录中。
+>默认情况下，随AEM表单一起安装的Adobe字体位于该目 `[aem-forms root]/fonts` 录中。
 
 如果要重新初始化主机上的操作系统，并且希望使用先前操作系统中的字体，则还应备份系统字体目录的内容。 （有关具体说明，请参阅操作系统的文档）。
