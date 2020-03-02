@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
-source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -56,7 +56,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 使用下面的示例内容，创建一个名为 *nsrnmd_win.cfg的配置文件* ，并将其保存到Content server上的可访问位置。 此文件将由备份和还原命令调用。
 
-   以下文本包含换行符的格式。 如果将此文本复制到本文档外的某个位置，则一次复制一个部分，并在将其粘贴到新位置时删除格式设置字符。
+   以下文本包含换行符的格式。 如果将此文本复制到本文档外的某个位置，请一次复制一部分，并在将其粘贴到新位置时删除格式设置字符。
 
    ```as3
     ################################################
@@ -189,22 +189,22 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 
 1. 按如下方式设置配置文件密码：
 
-   * 打开命令提示符，并更改 *[到NetWorker_root]*\Legato\nsr\bin。
+   * 打开命令提示符，然后更改为 `[NetWorker_root]\Legato\nsr\bin`。
    * 运行以下命令： `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
 
 1. 创建用于备份数据库的可执行批处理(.bat)文件。 （请参阅NetWorker文档。）根据您的安装设置批处理文件中的详细信息。
 
    * 完整数据库备份(nsrnmddbf.bat):
 
-      *[NetWorker数据库_module_root]*`-s`*&lt;NetWorker_Server_Name>用户名&#x200B;*,`-U`*[password ]*Database`-P`*[]*`-l full`*&lt;数据库名>*
+      `NetWorker_database_module_root` `-s`*&lt;NetWorker_Server_Name>密&#x200B;*码`-U``[username]``-P`*[]*`-l full`*&lt;database_name>*
 
    * 增量式数据库备份(nsrnmddbi.bat):
 
-      *[NetWorker数据库_module_root]*`-s`*&lt;NetWorker_Server_Name>用户名&#x200B;*,`-U`*[password ]*Database`-P`*[]*`-l 1 -R`*&lt;数据库名>*
+      `[NetWorker_database_module_root]` `-s`*&lt;NetWorker_Server_Name>*`-U``[username]``-P``[password]``-l 1 -R`*&lt;database_name>*
 
    * 数据库日志备份(nsrnmddbl.bat):
 
-      *[NetWorker数据库_module_root]*`-s`*&lt;NetWorker_Server_Name>用户名&#x200B;*,`-U`*[password ]*Database`-P`*[]*`-l incr -R`*&lt;数据库名>*
+      `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]``-P``[password]``-l incr -R`*&lt;database_name>*
 
       其中：
 
@@ -240,7 +240,7 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
 >
 >命令脚本需要您在准备EMC Document Content server以进行备份和恢复中创建的nsrnmd_win.cfg文件的完整路径 [](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery)。
 
-1. 打开命令提示符，并更改 *[到NetWorker_root]*\Legato\nsr\bin。
+1. 打开命令提示符，然后更改为 `[NetWorker_root]\Legato\nsr\bin`。
 1. 运行以下命令：
 
    ```as3
@@ -266,4 +266,3 @@ source-git-commit: 8bc99ed3817398ae358d439a5c1fcc90bbd24327
    ```as3
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
-
