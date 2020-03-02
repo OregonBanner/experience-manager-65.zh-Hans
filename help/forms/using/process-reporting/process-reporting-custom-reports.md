@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -32,7 +32,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 CRX QueryBuilder REST界面通过Java API和REST API公开Asset Share Query Builder的功能。 在执行以下步骤之 [前](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)，了解如何使用CRX queryBuilder REST界面：
 
-1. 浏览到URL https://[server]:[port]/lc/bin/querybuilder.json
+1. 浏览到URL `https://[server]:[port]/lc/bin/querybuilder.json`
 1. 根据Process Reporting存储节点结构和节点属性创建查询。
 
    您可以指定可选参数来指定偏移、限制、点击和属性。 您可以硬编码静态报表的参数，并从动态报表的UI中提取参数。
