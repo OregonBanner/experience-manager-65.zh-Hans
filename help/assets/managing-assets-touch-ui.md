@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0f086ed9d1674149888d2921820eacce1aed9e24
+source-git-commit: 68692e7b82aecd81a21f3a970f3707f2ff39792a
 
 ---
 
@@ -145,7 +145,7 @@ Dynamic media支持通过FTP服务器批量上传资产。 如果要上传大资
 1. 使用您选择的FTP客户端，使用您从供应电子邮件收到的FTP用户名和密码登录到FTP服务器。 在FTP客户端中，将文件或文件夹上传到FTP服务器。
 1. [使用从供应电子邮件中收到的凭据](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) ，登录到Dynamic Media Classic。 在全局导航栏上，点按上 **[!UICONTROL 传]**。
 
-1. 在上传页面左上角附近，点按通过FTP **[!UICONTROL 选项卡]** 。
+1. 在上传页面左上角附近，点按通过FTP选 **[!UICONTROL 项卡]** 。
 1. 在页面左侧，选择要从中上传文件的FTP文件夹；在页面的右侧，选择目标文件夹。
 1. 在页面的右下角附近，单击“作 **[!UICONTROL 业选项]** ”，然后根据您选择的文件夹中的资产设置所需的选项。
 
@@ -227,7 +227,7 @@ Dynamic media支持通过FTP服务器批量上传资产。 如果要上传大资
 
 Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时，可以自动从文件创建图像模板(在“上传”屏幕上选 [!UICONTROL 择“创建模板] ”选项)。
 
-如果您使用PSD文件创建模板，Dynamic Media会使用图层从PSD文件创建多个图像；它为每个图层创建一个图像。
+如果您使用PSD文件创建模板，Dynamic media会使用图层从PSD文件创建多个图像；它为每个图层创建一个图像。
 
 使用上述 [!UICONTROL 的“裁剪选项] ”和“颜 [!UICONTROL 色配置文件选项”]，并包含Photoshop上传选项。
 
@@ -627,7 +627,7 @@ CUG是限制对资产访问的额外方式。 您还可以为文件夹配置登�
 
 ![select_quick_action](assets/select_quick_action.png)
 
-在浏览器中的“资产”用户界面中浏览文件夹或收藏集时，您可以使用右上角的“全选  ”选项选择所有资产。
+在浏览器中的“资产”用户界面中浏览文件夹或收藏集时，您可以使用右上角的“全选”选项选择所有显示或加载的资产  。 如果不在下方滚动，则卡片视图中仅加载100个资产，列表视图中加载200个资产。 选择全部选项将仅选择这些资产。
 
 有关详细信息，请参 [阅查看和选择资源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 
