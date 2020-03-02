@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -142,12 +142,12 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 1. 创建“生成PDF”客户端。
 
    * 创建包 `ServiceClientFactory` 含连接属性的对象。
-   * 使用对 `GeneratePdfServiceClient` 象的构造函数并传递该对象来创建 `ServiceClientFactory` 对象。
+   * 使用对 `GeneratePdfServiceClient` 象的构造函数并传递该对 `ServiceClientFactory` 象。
 
 1. 检索要转换为PDF文档的文件。
 
    * 创建一 `java.io.FileInputStream` 个对象，它使用其构造函数表示要转换的Word文件。 传递指定文件位置的字符串值。
-   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对象来创建 `java.io.FileInputStream` 对象。
+   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对 `java.io.FileInputStream` 象。
 
 1. 将文件转换为PDF文档。
 
@@ -461,7 +461,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 1. 检索要转换的PDF文档。
 
    * 创建一 `java.io.FileInputStream` 个对象，该对象使用其构造函数表示要转换的PDF文档。 传递指定PDF文档位置的字符串值。
-   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对象来创建 `java.io.FileInputStream` 对象。
+   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对 `java.io.FileInputStream` 象。
 
 1. 转换PDF文档。
 
@@ -702,7 +702,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 请注意以下问题：
 
-* Microsoft Spy\+\+通过使用&amp;符号(&amp;)来标识字幕的热键来显示字幕。 例如，Spy\+\+将一个“打印”对话框的标题显示为， `Pri&nt`这表示热键为 *n*。 脚本和对话框XML文件中的字幕标题必须忽略&amp;符号。
+* Microsoft Spy++通过使用&amp;符号(&amp;)来标识字幕的热键来显示字幕。 例如，Spy++将一个“打印”对话框的标题显示为， `Pri&nt`这表示热键为 *n*。 脚本和对话框XML文件中的字幕标题必须忽略&amp;符号。
 * 某些字幕包括换行符。 “生成PDF”服务无法识别换行符。 如果题注包含换行符，则包含足够的题注以将其与其他菜单项区分开，然后对省略的部分使用正则表达式。 例如( `^Long caption title$`)。]. (请参阅 [在题注属性中使用正则表达式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
 * 对保留的XML字符使用字符实体（也称为转义序列）。 例如，对于 `&` “和”, `<` 对于“ `>` 小于”和“大于”符号， `&apos;` 对于撇号和 `&quot;` 引号。
 
@@ -713,7 +713,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 对话框和脚本文件位于appmondata.jar文件中。 在可以修改其中任何文件或添加新脚本或对话框文件之前，必须先取消打包此JAR文件。 例如，假设您要添加对EditPlus应用程序的支持。 可以创建两个XML文件，名为appmon.editplus.script.en_US.xml和appmon.editplus.script.addition.en_US.xml。 必须将这些XML脚本添加到adobe-appmondata.jar文件的两个位置，如下所述：
 
 * adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.ear文件位于的导出文件夹中 `[AEM forms install directory]\configurationManager`。 （如果AEM Forms部署在另一台J2EE应用程序服务器上，请将adobe-livecycle-native-jboss-x86_win32.ear文件替换为与您的J2EE应用程序服务器对应的EAR文件。）
-* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar文件位于adobe-generatepdf-dsc.jar文件中）。 adobe-generatepdf-dsc.jar文件位于 *[AEM表单安装目录]*\deploy文件夹中。
+* adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar文件位于adobe-generatepdf-dsc.jar文件中）。 adobe-generatepdf-dsc.jar文件在文件夹中 `[AEM forms install directory]\deploy` 。
 
 将这些XML文件添加到adobe-appmondata.jar文件后，必须重新部署GeneratePDF组件。 要将对话框和脚本XML文件添加到adobe-appmondata.jar文件，请执行以下任务：
 
@@ -741,7 +741,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 如果要将文件定向到新的本机应用程序，则必须为该应用程序创建一个脚本XML文件。 如果要修改生成PDF服务与已支持的本机应用程序交互的方式，则必须修改该应用程序的脚本。
 
-该脚本包含在本机应用程序的窗口元素之间导航的说明，这些说明为这些元素提供特定的响应。 包含此信息的文件是appmon。*[appname]*.script。*[locale]*.xml。 例如appmon.notepad.script.en_US.xml。
+该脚本包含在本机应用程序的窗口元素之间导航的说明，这些说明为这些元素提供特定的响应。 包含此信息的文件为 `appmon.[appname]``.script.[locale].xml`。 例如appmon.notepad.script.en_US.xml。
 
 #### 确定脚本必须执行的步骤 {#identifying-steps-the-script-must-execute}
 
@@ -832,20 +832,20 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 ### 为本机应用程序创建或修改其他对话框XML文件 {#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application}
 
-如果为以前不支持的本机应用程序创建脚本，则还必须为该应用程序创建额外的对话框XML文件。 AppMon使用的每个本机应用程序必须只有一个额外的对话框XML文件。 即使不需要主动提供的对话框，也需要额外的对话框XML文件。 附加的对话框必须至少有一个元 `window` 素，即使该元素只是 `window` 一个占位符。
+如果为以前不支持的本机应用程序创建脚本，则还必须为该应用程序创建额外的对话框XML文件。 AppMon使用的每个本机应用程序必须只有一个额外的对话框XML文件。 即使不需要主动提供的对话框，也需要额外的对话框XML文件。 附加的对话框必须至少具有一个元 `window` 素，即使该元素仅 `window` 是一个占位符。
 
 >[!NOTE]
 >
->在这种情况下，术语“附加”表示应用程序的内容。[applicationname].addition.[locale].xml文件。 这样的文件会指定对话框XML文件的覆盖和添加。
+>在此上下文中，术语“附加”表示文件的内 `appmon.[applicationname].addition.[locale].xml` 容。 这样的文件会指定对话框XML文件的覆盖和添加。
 
 您还可以出于以下目的为本机应用程序修改额外的对话框XML文件：
 
 * 用不同的响应覆盖应用程序的对话框XML文件
 * 向该应用程序的对话框XML文件中未解决的对话框添加响应
 
-标识其他dialogXML文件的文件名称为appmon。*[appname]*.addition.*[locale]*.xml。 例如appmon.excel.addition.en_US.xml。
+标识其他dialogXML文件的文件名为 `appmon.[appname].addition.[locale].xml`。 例如appmon.excel.addition.en_US.xml。
 
-其他对话框XML文件的名称必须使用格式appmon。*[applicationname]*.addition.*[locale]*.xml，其中 *applicationname* 必须与XML配置文件和脚本中使用的应用程序名称完全匹配。
+附加对话框XML文件的名称必须使用格式 `appmon.[applicationname].addition.[locale].xml`，其中 *applicationname* 必须与XML配置文件和脚本中使用的应用程序名称完全匹配。
 
 >[!NOTE]
 >
@@ -898,7 +898,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 #### 创建环境变量以定位本机应用程序 {#creating-an-environment-variable-to-locate-the-native-application}
 
-创建一个环境变量，它指定本机应用程序可执行文件的位置。 变量必须使用 *[applicationname]*_PATH格式，其中 *applicationname* 必须与XML配置文件和脚本中使用的应用程序名称完全匹配，其中路径包含双引号表示的可执行文件的路径。 这样的环境变量的一个示例是 `Photoshop_PATH`。
+创建一个环境变量，它指定本机应用程序可执行文件的位置。 变量必须使用格式 `[applicationname]_PATH`，其中 *applicationname* 必须与XML配置文件和脚本中使用的应用程序名称完全匹配，并且路径包含双引号中可执行文件的路径。 这样的环境变量的一个示例是 `Photoshop_PATH`。
 
 创建新环境变量后，必须重新启动部署了“生成PDF”服务的服务器。
 
@@ -907,8 +907,8 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 1. 选择“ **控制面板”>“系统**”。
 1. 在“系统属性”对话框中，单击“高 **级** ”选项卡，然后单击“环 **境变量”**。
 1. 在“环境变量”对话框的“系统变量”下，单击“新 **建”**。
-1. 在“新建系统变量”对话框的“变 **量名称** ”框中，键入使用applicationname *[]*_PATH格式的名称。
-1. 在“变 **量值** ”(Variable value)框中，键入应用程序可执行文件的完整路径和文件名，然后单击“确 **定”(OK)**。 例如，类型： `c:\windows\Notepad.exe`
+1. 在“新建系统变量”对话框的“变 **量名称** ”框中，键入使用格式的名称 `[applicationname]_PATH`。
+1. 在“变 **量值** ”框中，键入应用程序可执行文件的完整路径和文件名，然后单击“确 **定”**。 例如，类型： `c:\windows\Notepad.exe`
 1. 在“环境变量”对话框中，单击“确 **定”**。
 
 **从命令行创建系统变量**
