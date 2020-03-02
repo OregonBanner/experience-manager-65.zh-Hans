@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: 049e28176c9b98eeb3c2c6764cb868c51f1141bb
+source-git-commit: a7c3848704ee2b4b984fafcd82e29a75ea8d3443
 
 ---
 
@@ -215,7 +215,7 @@ Options:
 
 以下是在VLT中执行的一些常见任务。 有关每个命令的详细信息，请参阅各个 [命令](#vlt-commands)。
 
-### 检出音频树 {#checking-out-a-subtree}
+### 检出子树 {#checking-out-a-subtree}
 
 例如，如果您只想签出存储库的子树，则可 `/apps/geometrixx`以通过键入以下内容执行此操作：
 
