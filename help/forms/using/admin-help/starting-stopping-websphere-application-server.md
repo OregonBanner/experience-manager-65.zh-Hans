@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: bcd16691-67ab-4694-9e6b-c9d3e0c7bf0b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 查看WebSphere Application server的状态 {#view-the-status-of-websphere-application-server}
 
-1. 从命令提示符下，转到 *[appserver root]*/bin目录。
+1. 从命令提示符下，转到目 `[appserver root]/bin` 录。
 1. 输入以下命令，将 *server_name* 替换为WebSphere应用程序服务器的名称：
 
    * (Windows) `serverStatus.bat`*server_name *
@@ -29,7 +29,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 启动WebSphere Application Server {#start-websphere-application-server}
 
-1. 从命令提示符下，转到 *[appserver root]*/bin目录。
+1. 从命令提示符下，转到目 `[appserver root]/bin` 录。
 1. 输入以下命令，将 *server_name* 替换为WebSphere应用程序服务器的名称：
 
    * (Windows) `startServer.bat`*server_name *
@@ -37,7 +37,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 停止WebSphere Application Server {#stop-websphere-application-server}
 
-1. 从命令提示符下，转到 *[appserver root]*/bin目录。
+1. 从命令提示符下，转到目 `[appserver root]/bin` 录。
 1. 输入以下命令，将 *server_name* 替换为WebSphere应用程序服务器的名称：
 
    * (Windows) `stopServer.bat`*server_name *
