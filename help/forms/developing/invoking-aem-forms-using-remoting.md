@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -963,7 +963,7 @@ AEM Forms复杂类型的完全限定数据类型将分配给别名标记。
 ActionScript类的字段与属于AEM Forms复杂类型的字段相匹配。 Customer ActionScript类中的六个字段与属于的字段相匹配 `com.adobe.livecycle.sample.customer.Customer`。
 
 >[!NOTE]
-确定属于Forms复杂类型的字段名称的一个好方法是在Web浏览器中查看服务的WSDL。 WSDL指定服务的复杂类型和相应的数据成员。 以下WSDL用于客户服务：https:// *[lyourServer]:[yourPort]/soap/services/CustomerService?wsdl。*
+确定属于Forms复杂类型的字段名称的一个好方法是在Web浏览器中查看服务的WSDL。 WSDL指定服务的复杂类型和相应的数据成员。 以下WSDL用于客户服务： `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.`
 
 Customer ActionScript类属于名为customer的包。 建议将映射到复杂AEM Forms数据类型的所有ActionScript类放入其自己的包中。 在Flex项目的src文件夹中创建一个文件夹，并将ActionScript文件放在该文件夹中，如下图所示。
 
