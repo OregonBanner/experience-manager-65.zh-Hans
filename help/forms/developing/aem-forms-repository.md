@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ---
 
@@ -43,7 +43,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->您可以使用Web浏览器浏览AEM Forms存储库。 要浏览存储库，请在Web浏览器中输入以下URL:https://[服务器名]:[server port]/repository。 您可以使用Web浏览器验证与使用AEM Forms存储库部分关联的快速启动结果。 例如，如果向AEM Forms存储库添加内容，则可以在Web浏览器中查看该内容。 (请参 [阅快速入门（SOAP模式）:使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)。)
+>您可以使用Web浏览器浏览AEM Forms存储库。 要浏览存储库，请在Web浏览器中输入以下URL `https://[server name]:[server port]/repository`。 您可以使用Web浏览器验证与使用AEM Forms存储库部分关联的快速启动结果。 例如，如果向AEM Forms存储库添加内容，则可以在Web浏览器中查看该内容。 (请参 [阅快速入门（SOAP模式）:使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)。)
 
 存储库API提供了许多操作，您可以使用这些操作来存储和检索存储库中的信息。 例如，当处理应用程序时需要资源时，您可以获取资源列表或检索存储在存储库中的特定资源。
 
@@ -714,7 +714,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **排序行为**
 
-调用对象的方法并指定排序 `ResourceRepositoryClient` 顺序时， `searchProperties` 不考虑排序顺序。 例如，假定您创建了一个包含三个自定义属性的资源，其中属 `name`性名 `secondName`为、和 `asecondName`。 然后，在属性名称上创建一个排序顺序元素，并将该 `ascending` 值设置为 `true`。
+调用对象的方法并指定排序 `ResourceRepositoryClient` 顺序时， `searchProperties` 不考虑排序顺序。 例如，假定您创建了一个包含三个自定义属性的资源，其中属 `name`性名 `secondName`为、和 `asecondName`。 然后，在属性名称上创建排序顺序元素，并将该 `ascending` 值设置为 `true`。
 
 然后调用对 `ResourceRepositoryClient` 象的方 `searchProperties` 法并按排序顺序传递。 搜索将返回具有三个属性的正确资源。 但是，属性不按属性名称排序。 它们按添加顺序返回： `name`、 `secondName`和 `asecondName`。
 
