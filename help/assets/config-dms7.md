@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 44c0b6c5a8e7688b597e4b9de857d7f54ff23d49
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
 
 使用新架构，AEM负责主资产并与Dynamic media同步以处理和发布资产：
 
-1. 主资产上传到AEM后，将复制到Dynamic Media。 此时，Dynamic media将处理所有资产处理和再现生成，如图像的视频编码和动态变体。 （在Dynamic Media - Scene7模式中，请注意，您只能上传文件大小为2 GB或更小的资产。）
+1. 主资产上传到AEM后，将复制到Dynamic Media。 此时，Dynamic media将处理所有资产处理和再现生成，如图像的视频编码和动态变体。 <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
 1. 生成演绎版后，AEM可以安全地访问和预览远程Dynamic media演绎版（不会将二进制文件发送回AEM实例）。
 1. 在内容可以发布和批准后，它会触发Dynamic media服务，将内容推出到交付服务器并在CDN中缓存内容。
 
@@ -75,7 +75,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 要配置Dynamic Media云服务，请执行以下操作：
 
 1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按或单击工具图标，然后点按 **[!UICONTROL 云服务> Dynamic Media配置]**。
-1. 在Dynamic Media配置浏览器页面的左侧窗格中，点按 **[!UICONTROL global]** (请勿点按或选择全局左侧的文件夹图标 ****)，然后点按创 **[!UICONTROL 建]**。
+1. 在 Dynamic Media 配置浏览器页面的左侧窗格中，点按&#x200B;**[!UICONTROL 全局]**（请勿点按或选择&#x200B;**[!UICONTROL 全局]**&#x200B;左侧的文件夹图标），然后点按&#x200B;**[!UICONTROL 创建]**。
 1. 在“创建Dynamic Media配置”页面上，输入标题、Dynamic media帐户电子邮件地址和密码，然后选择您所在的区域。 Adobe在供应电子邮件中向您提供了这些内容。 如果您未收到此信息，请与支持部门联系。
 
    Click **[!UICONTROL Connect to Dynamic Media]**.
@@ -96,7 +96,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 除非您有使用自己公司的服务器或特殊服务器的特殊安排，否则Adobe systems建议您按照指定的方式保留此设置。
    >[!NOTE]
    >
-   >DMS7中不支持版本控制。 此外，仅当“编辑Dynamic Media配置”页面中的 **[!UICONTROL “发布资产]** ”设置为“激活时”时，延迟激活才适用 ****，直到首次激活资产为止。
+   >DMS7中不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
    >
    >
    >在激活资产后，所有更新都会立即实时发布到S7交付。
@@ -179,7 +179,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 >[!NOTE]
 >
->默认情况下，当您选择演绎版时，系统会显示15个演绎版 ******** ，当您在资产的详细信息视图中选择查看器时，系统会显示15个查看器预设。 您可以提高此限制。 请参 [阅增加显示的图像预设数](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) , [或增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
+>默认情况下，当您选择&#x200B;**[!UICONTROL 呈现]**&#x200B;时，系统会显示 15 种呈现形式，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示 15 个查看器预设。您可以提高此限制。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 
 #### 配置颜色管理 {#configuring-color-management}
@@ -189,7 +189,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 配置默认颜色属性以在请求图像时启用颜色校正：
 
 1. [使用在配置过程中提供的凭据](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) ，登录到Dynamic Media Classic。 导航到“设 **[!UICONTROL 置”>“应用程序设置]**”。
-1. 展开“发 **[!UICONTROL 布设置]** ”区域，然后选择 **[!UICONTROL 图像服务器]**。 在为发 **[!UICONTROL 布实例设置默认值时]** ，将Publish Context设置为 **[!UICONTROL 图像服务]** 。
+1. 展开&#x200B;**[!UICONTROL 发布设置]**&#x200B;区域，然后选择&#x200B;**[!UICONTROL 图像服务器]**。设置发布实例的默认设置时，将&#x200B;**[!UICONTROL 发布上下文]**&#x200B;设置为&#x200B;**[!UICONTROL 图像提供]**。
 1. 滚动到您需要更改的属性，例如“颜色管理属性”区 **[!UICONTROL 域中的属性]** 。
 
    可以设置以下颜色校正属性：
@@ -197,11 +197,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL CMYK默认色彩空间]** -默认CMYK颜色配置文件的名称
    * **[!UICONTROL 灰度默认色彩空间]** -默认灰色配置文件的名称
    * **[!UICONTROL RGB默认色彩空间]** -默认RGB色彩配置文件的名称
-   * **[!UICONTROL 颜色转换渲染方法]** -指定渲染方法。 可接受的值为：感 **[!UICONTROL 知]**，相 **[!UICONTROL 对]**&#x200B;冷度 **[!UICONTROL ,]**&#x200B;饱和度 **[!UICONTROL ,]**&#x200B;绝对冷度 Adobe建议 **[!UICONTROL 将]]**作为默认值。
+   * **[!UICONTROL 颜色转换渲染方法]** -指定渲染方法。 Acceptable values are: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe recommends **[!UICONTROL relative]]**as the default.
 
 1. 点按&#x200B;**[!UICONTROL 保存]**。
 
-例如，可以将“ **[!UICONTROL RGB默认色彩空间]** ”设置为 *sRGB*，将“ **[!UICONTROL CMYK默认色彩空间”设置为]**** WebCoatedCoated。
+例如，可以将 **[!UICONTROL RGB 默认色彩空间]**&#x200B;设置为 *sRGB*，将 **[!UICONTROL CMYK 默认色彩空间]**&#x200B;设置为 *WebCoated*。
 
 这样做可以执行以下操作：
 
@@ -247,11 +247,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 #### 为不支持的格式添加自定义MIME类型 {#adding-custom-mime-types-for-unsupported-formats}
 
-您可以为AEM资产中不支持的格式添加自定义MIME类型。 要确保AEM不会删除您在CRXDE lite中添加的任何新节点，您必须确保在移动MIME类型之前移动，并将其启用 `image_` 值设置为 **[!UICONTROL false]**。
+您可以为 AEM Assets 中不支持的格式添加自定义 MIME 类型。要确保 AEM 不会删除您在 CRXDE Lite 中添加的任何新节点，务必确保将 MIME 类型移动到 `image_` 之前，并将其值设置为 **[!UICONTROL false]**。
 
 **为不支持的格式添加自定义MIME类型**
 
-1. 在AEM中，点按工 **[!UICONTROL 具>操作> Web Console]**。
+1. From AEM, tap **[!UICONTROL Tools > Operations > Web Console]**.
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -259,7 +259,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. 在页面上，向下滚动到名称 *Adobe CQ Scene7资产MIME类型服务* ，如下面的屏幕截图所示。 在名称的右侧，点按编辑配 **[!UICONTROL 置值]** （铅笔图标）。
+1. 在页面上，向下滚动到名称 *Adobe CQ Scene7 Asset MIME 类型服务*，如下面的屏幕截图所示。在名称的右侧，点按&#x200B;**[!UICONTROL 编辑配置值]**（铅笔图标）。
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
@@ -278,7 +278,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    此时，您可以关闭打开Adobe Experience Manager Web Console配置页面的浏览器选项卡。
 
 1. 返回至打开AEM控制台的浏览器选项卡。
-1. 在AEM中，点按工 **[!UICONTROL 具>常规> CRXDE Lite]**。
+1. From AEM, tap **[!UICONTROL Tools > General > CRXDE Lite]**.
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -290,7 +290,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
-1. 在“属性” `image_vnd.dwg` 选项卡中，从“属性 **** ”选项卡的启 **[!UICONTROL 用行中，在“值]********** ”列标题下双击值以打开mime类型值drop-down列表。
+1. 保持 mime 类型 `image_vnd.dwg` 仍被选中，在&#x200B;**[!UICONTROL 属性]**&#x200B;选项卡的&#x200B;**[!UICONTROL 已启用]**&#x200B;行中，双击&#x200B;**[!UICONTROL 值]**&#x200B;列标题下的值，以打开&#x200B;**[!UICONTROL 值]**&#x200B;下拉列表。
 1. 在字 `false` 段中键入(或从下 **[!UICONTROL 拉列表中选择]** false)。
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
@@ -322,7 +322,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
 1. 在页面顶部附近的导航栏上，点按设置>应 **[!UICONTROL 用程序设置>批量集预设>默认命名]**。
-1. 选择 **[!UICONTROL 查看表单]****[!UICONTROL 或查看代码]** ，以指定要查看的方式并输入有关每个元素的信息。
+1. 选择&#x200B;**[!UICONTROL 查看表单]**&#x200B;或&#x200B;**[!UICONTROL 查看代码]**，以指定要查看的方式并输入有关每个元素的信息。
 
    您可以选中“查 **[!UICONTROL 看代码]** ”复选框，查看在表单选择旁边构建的正则表达式值。 如果表单视图因任何原因限制您，您可以输入或更改这些值以帮助定义命名约定的元素。 如果无法在表单视图中分析您的值，则表单字段将变为非活动状态。
 
@@ -364,9 +364,9 @@ Dynamic media使用批量集预设将资产组织为一组图像（替代图像�
 1. 在批集类型下拉菜单中，选择预设类型。
 1. 执行下列操作之一：
 
-   * 如果您使用的是之前在“应用程序设置”>“批量集预设”>“默认命名 **[!UICONTROL ”下设置的默认命名约定，请展开“资产命名约定]**”，然后在“文件命名”下拉列表中，点按“默 **[!UICONTROL 认”]******。
+   * If you are using a default naming convention that you previously set up under **[!UICONTROL Application Setup > Batch Set Presets > Default Naming]**, expand **[!UICONTROL Asset Naming Conventions]**, and then in the File Naming drop-down list, tap **[!UICONTROL Default]**.
 
-   * 要在设置预设时定义新的命名约定，请展开“资产命名约定” **[!UICONTROL ，然后在“文件命名”下拉列表中，单击“自定]**&#x200B;义” ****。
+   * To define a new naming convention as you set up the preset, expand **[!UICONTROL Asset Naming Conventions]**, and then in the File Naming drop-down list, click **[!UICONTROL Custom]**.
 
 1. 对于“序列”顺序，定义在Dynamic media中将图像集组合在一起后图像的显示顺序。
 
@@ -403,7 +403,7 @@ spin-01-01
 
 旋转集的共享资产名称部分的分组将添加到“匹 **配** ”字段（高亮显示）。 资产名称中包含行和列的变量部分将分别添加到 **行** 和 **列字段** 。
 
-上传和发布旋转集后，您可以激活2D旋转集菜谱的名称，该菜谱列在“上传作业选项”对话框的“ **批集预设** ” **** 下方。
+上传和发布旋转集后，您可以激活&#x200B;**上传作业选项**&#x200B;对话框中&#x200B;**批集预设**&#x200B;下方 2D 旋转集方法的名称。
 
 **要创建批集预设以自动生成2D旋转集，请执行以下操作：**
 
@@ -417,10 +417,10 @@ spin-01-01
 
 1. 在“预设列表”面板中，单 **[!UICONTROL 击]** “添加”以激活屏幕右侧“详细信息”面板中的定义字段。
 1. 在“详细信息”面板的“预设名称”字段中，键入预设的名称。
-1. 在批集类型下拉菜单中，选择资 **[!UICONTROL 产集]**。
+1. 在“批集类型”下拉菜单中，选择&#x200B;**[!UICONTROL 资产集]**。
 1. 在“子类型”(Sub Type)下拉列表中，选择“ **[!UICONTROL 多轴旋转集”(Multi-Axis Spin Set)]**。
 1. 展开 **[!UICONTROL 资产命名约定]**，然后在文件命名下拉列表中，单击自定 **[!UICONTROL 义]**。
-1. 使用“ **[!UICONTROL 匹配]** ”和（可选）“ **[!UICONTROL 基本名称]** ”属性定义组成分组的图像资产命名的正则表达式。
+1. 使用&#x200B;**[!UICONTROL 匹配]**&#x200B;和（可选）**[!UICONTROL 基本名称]**&#x200B;属性定义组成分组的图像资产命名的正则表达式。
 
    例如，您的字面“匹配”正则表达式可能如下所示：
 
