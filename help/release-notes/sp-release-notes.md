@@ -12,7 +12,7 @@ source-git-commit: 9f4a460c7f64d86e35e950e512ed5b6cda1cbf2a
 ---
 
 
-# Adobe Experience Manager 6.5 Service pack发行说明 {#aem-service-pack-release-notes}
+# Adobe Experience Manager 6.5 Service Pack发行说明 {#aem-service-pack-release-notes}
 
 ## 发行信息 {#release-information}
 
@@ -37,9 +37,9 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 已在列表视图中启用基于名称列的资产排序。
 
-* Dynamic media现在支持智能裁剪视频资产。 Smart Crop是一项机器学习驱动的功能，它可在移动帧以跟随场景焦点的同时重新裁剪视频。
+* Dynamic Media现在支持智能裁剪视频资产。 Smart Crop是一项机器学习驱动的功能，它可在移动帧以跟随场景焦点的同时重新裁剪视频。
 
-* Dynamic media支持智能成像。
+* Dynamic Media支持智能成像。
 
 * 在AEM工 [作流程中设置](../forms/using/configure-out-of-office-settings.md) “出局”首选项。
 
@@ -65,9 +65,9 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 在Dynamic Media中的区块上传期间，会为区块节点触发ReplicationOnModifyListener事件(CQ-4281279)。
 
-* Dynamic media现在支持智能裁剪视频资产。 Smart Crop是一项机器学习驱动的功能，它可在移动帧时重新裁剪视频以跟随场景的焦点(CQ-4278995)。
+* Dynamic Media现在支持智能裁剪视频资产。 Smart Crop是一项机器学习驱动的功能，它可在移动帧时重新裁剪视频以跟随场景的焦点(CQ-4278995)。
 
-* Dynamic media支持智能成像(CQ-422249)。
+* Dynamic Media支持智能成像(CQ-422249)。
 
 * 如果查询参数在请求中传递，则搜索／浏览视图已设置为Foundation选取器中的默认视图(NPR-31601)。
 
@@ -107,7 +107,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 编辑远程图像集时，对于与Scene 7公司名称相同的文件夹中的图像，会出现错误(NPR-31340)。
 
-* 包含引用的Dynamic media资产将不会被发布(NPR-31180)。
+* 包含引用的Dynamic Media资产将不会被发布(NPR-31180)。
 
 * 从AEM Dynamic Media上传- Scene 7运行模式到Scene 7的过长时间无法完成(NPR-31048)。
 
@@ -167,7 +167,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 #### 站点 {#sites}
 
-* 如果LiveCopy继承被破坏，Live copy页面将显示语言复制链接，而不是LiveCopy链接(NPR-30980)。
+* 如果LiveCopy继承被破坏，Live Copy页面将显示语言复制链接，而不是LiveCopy链接(NPR-30980)。
 * 对于新的Blueprint，如果记录数大于40，则仅显示前40条记录。 Blueprint显示其余记录的空行(NPR-31182)。
 * 当用户在菜单的描述属性中添加日语或韩语字符时，该菜单显示日语和韩语文本的扭曲字符。 (NPR-31331).
 * 富文本编辑器(RTE)不允许将嵌入的表作为列表项插入(NPR-30879)。
@@ -240,7 +240,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 * 社区管理员（组管理员／站点管理员）看不到管理组（打开／编辑／发布／删除组）的快速链接(NPR-31627)。
 * 除非手动刷新／重新加载页面，否则不会显示提交的博客(NPR-31599)。
 * “提及次数”功能使用的JCR查询区分大小写，并且返回结果需要太长时间(NPR-31475)。
-* AEM 6.5 uberJar文件引发异常， `cq-social-translation` AEM 6.5 uberJar文件中缺少捆绑包(NPR-31186)。
+* AEM 6.5 UberJar文件引发异常， `cq-social-translation` AEM 6.5 UberJar文件中缺少捆绑包(NPR-31186)。
 * Jackson Databind库已更新至版本2.9.9.3以解决新的漏洞(NPR-30967)。
 * 活动和通知标题不一致 (NPR-30941)。
 * 在社区博客中无法正常分页 (NPR-30914)。
@@ -286,7 +286,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 **表单 - 文档服务**
 
-* 在。NET项目中使用MTOM的SOAP web服务显示AssemblerServiceClient调用和HtmlToPDF2方法的例外(NPR-4281771)。
+* 在。NET项目中使用MTOM的SOAP Web服务显示AssemblerServiceClient调用和HtmlToPDF2方法的例外(NPR-4281771)。
 
 **Foundation JEE**
 
