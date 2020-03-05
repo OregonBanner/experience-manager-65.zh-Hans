@@ -4,7 +4,7 @@ product: experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Release Notes
 translation-type: tm+mt
-source-git-commit: b1bcf4ebbb027ace7042a905376f9a9f1906e7d2
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -14,8 +14,9 @@ source-git-commit: b1bcf4ebbb027ace7042a905376f9a9f1906e7d2
 + [AEM 6.5概述](home.md)
 + [一般发行说明](release-notes.md)
 + Service Pack Release Notes {#service-pack}
+   + [新增功能——最新的Service Pack](new-features-latest-service-pack.md)
    + [最新服务包中包含的修补程序和功能包](sp-release-notes.md)
-   + [以前的Service pack中包含的修补程序和功能包](previous-hotfixes-featurepacks.md)
+   + [以前的Service Pack中包含的修补程序和功能包](previous-hotfixes-featurepacks.md)
 + [AEM Sites 发行说明](sites.md)
 + [AEM Assets 发行说明](assets.md)
 + [AEM Communities 发行说明](communities-release-notes.md)
