@@ -702,7 +702,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 请注意以下问题：
 
-* Microsoft Spy++通过使用&amp;符号(&amp;)来标识字幕的热键来显示字幕。 例如，Spy++将一个“打印”对话框的标题显示为， `Pri&nt`这表示热键为 *n*。 脚本和对话框XML文件中的字幕标题必须忽略&amp;符号。
+* Microsoft Spy+&#x200B;+通过使用&amp;符号(&amp;)来标识字幕的热键来显示字幕。 例如，Spy+&#x200B;+将一个“打印”对话框的标题显示为， `Pri&nt`这表示热键为 *n*。 脚本和对话框XML文件中的字幕标题必须忽略&amp;符号。
 * 某些字幕包括换行符。 “生成PDF”服务无法识别换行符。 如果题注包含换行符，则包含足够的题注以将其与其他菜单项区分开，然后对省略的部分使用正则表达式。 例如( `^Long caption title$`)。]. (请参阅 [在题注属性中使用正则表达式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
 * 对保留的XML字符使用字符实体（也称为转义序列）。 例如，对于 `&` “和”, `<` 对于“ `>` 小于”和“大于”符号， `&apos;` 对于撇号和 `&quot;` 引号。
 
