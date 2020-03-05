@@ -4,7 +4,7 @@ description: 了解管理资产集合的任务，如创建、查看、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
+source-git-commit: 27fdeaf50255379fd6e5bb45eaf593cec895cd04
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 9af0ee0ff9d1089b6cf09c52f7f606cce6775d72
 
 ## 访问收藏集控制台 {#navigating-the-collections-console}
 
-要打开收藏 **[!UICONTROL 集]**，请点按或单击Experience manager徽标。 From the navigation page, go to **[!UICONTROL Assets]** > **[!UICONTROL Collections]**.
+要打开收藏 **[!UICONTROL 集]**，请点按或单击Experience Manager徽标。 From the navigation page, go to **[!UICONTROL Assets]** > **[!UICONTROL Collections]**.
 
 ## 创建集合 {#creating-a-collection}
 
@@ -119,7 +119,7 @@ You can create a collection either with [static references](#creating-a-collecti
 
 ## 编辑智能收藏集 {#editing-a-smart-collection}
 
-Smart collections are built by saving a search so you can alter their content by modifying the search parameters of the [saved search](#editing-saved-searches).
+Smart collections are built by saving a search so you can alter their content by modifying the search parameters of the [saved search](#saved-searches).
 
 1. 在资产用户界面中，点按／单击工具栏中的搜索图标。
 
@@ -194,7 +194,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 您可以编辑集合设置（如标题和说明），或向集合添加成员。
 
-1. 选择一个集合，然后点按／单击工 **[!UICONTROL 具栏中的]** “设置”图标。 或者，也可以使 **[!UICONTROL 用集合缩览图]** 中的“设置”快速操作。
+1. 选择一个集合，然后点按／单击工 **[!UICONTROL 具栏中的]** “设置”图标。 或者，也可以使 **[!UICONTROL 用集合缩览图]** 中的设置快速操作。
 1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
 1. 要保存更改，请点按／单击 **[!UICONTROL 保存]**。
@@ -209,7 +209,7 @@ Smart collections are built by saving a search so you can alter their content by
 
    >[!NOTE]
    >
-   >You can also delete smart collections by [deleting saved searches](#deleting-saved-searches).
+   >You can also delete smart collections by [deleting saved searches](#saved-searches).
 
 ## 下载集合 {#downloading-a-collection}
 
@@ -227,7 +227,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 1. 从收藏集控制台中，选择所需的收藏集或收藏集组，然后点按或单击工具 **[!UICONTROL 栏中的至收藏]** 。
 
-1. 从“添 **[!UICONTROL 加到收藏集]** ”页面中，选择要在其中添加收藏集的收藏集。
+1. 从“添 **[!UICONTROL 加到收藏集]** ”页面，选择要在其中添加收藏集的收藏集。
 
    >[!NOTE]
    >
