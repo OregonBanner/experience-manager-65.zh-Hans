@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -36,14 +36,14 @@ source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
 ## 调整组件大小 {#resize-components}
 
 1. 在布局模式中，点按组件以调整大小。 蓝点显示在响应式网格的开始和结束处。
-1. 拖放蓝点以定义组件在响应式网格中的位置。
+1. 拖放蓝色圆点以定义组件在响应式网格中的位置。
 
    ![使用布局模式调整大小](assets/layout_mode_resize_new_updated.png)
 
    点击组件后显示的工具栏包含以下选项：
 
-   * **** 父项：选择组件的父项。
-   * **** 浮动到新行：如果同一行中有多个组件，请将组件移到下一行。
+   * **父项：** 选择组件的父项。
+   * **浮动到新行：** 如果同一行中有多个组件，请将组件移到下一行。
    您可以撤消所有调整大小的更改，并使用“还原断点”布局 **[!UICONTROL (“还原断点”]**![](assets/reverttopreviouslypublishedversion.png))选项将默认布局应用到包含已调整大小的组件的面板。 点按已调整大小的组件的父项以查看选项。
 
    >[!NOTE]
@@ -52,7 +52,7 @@ source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
 
 ### 示例 {#example}
 
-**** 目标：您希望插入表组件和图像组件，并在交互通信中将它们彼此平行放置。
+**目标：** 您希望插入表组件和图像组件，并在交互通信中将它们彼此平行放置。
 
 1. 在Web渠道中使用编辑模式插入表和图像组件。 图像组件显示在表组件之后。
 1. 切换到布局模式并点按表组件。 用于调整组件大小的蓝点显示在第1列和第12列。
@@ -76,6 +76,20 @@ source-git-commit: cc4b667bb20622949c71eee64b07d679109482c1
 
 1. 拖放蓝点以定义面板在响应式网格中的位置。
 您可以重复第1步和第2步，然后选择“ ![选择父项](assets/float_to_new_line_icon.svg) ”，将调整大小的面板移到下一行。
+
+## 为面板定义多列布局
+
+执行以下步骤以定义面板的列数：
+
+1. 在“编 **[!UICONTROL 辑]** ”模式中 ![，点按面板，选择“配置”](assets/configure_icon.png)，然后选择“响应式——页面上的所有内容(无导航选项 **** )”。
+
+1. 点按 ![保存](assets/save_icon.svg) ，以保存属性。
+
+1. 在布局模 **[!UICONTROL 式中]** ，点按面板中要调整大小的任何组件，选择 ![Select Parent](assets/select_parent_icon.svg)，然后在下拉列表中选择第一个选项（如果面板是组件的直接父项）。
+
+1. 点 ![按多列](assets/multi-column.svg) ，然后从下拉列表中选择列数。 列数范围从1到12。 该面板被分为多列布局。
+
+![布局模式中的多列](assets/multi-column-layout.png)
 
 ## 为旧的响应式布局启用新的响应式网格 {#enableresponsivegrid}
 
