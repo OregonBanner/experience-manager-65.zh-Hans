@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
+source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 
 ---
 
 
 # Publish folders to Brand Portal{#publish-folders-to-brand-portal}
 
-作为Adobe Experience Manager(AEM)资产管理员，您可以将资产和文件夹发布到AEM Assets Brand Portal实例（或将发布工作流计划到以后的日期／时间）。 但是，您必须先将AEM资产与Brand Portal集成。 有关详细信息，请参 [阅配置AEM资产与Brand Portal的集成](/help/assets/brand-portal-configuring-integration.md)。
+作为Adobe Experience Manager(AEM)资产管理员，您可以将资产和文件夹发布到AEM Assets Brand Portal实例（或将发布工作流计划到以后的日期／时间）。 但是，您必须先将AEM资产与Brand Portal集成。 有关详细信息，请 [参阅配置AEM资产与Brand Portal](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
 发布资产或文件夹后，该资产或文件夹便可供Brand Portal中的用户使用。
 
@@ -39,7 +39,7 @@ source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
    * 从工具栏中，选择“快 **速发布”**。 然后从菜单中，选择 **发布到Brand Portal**。
 
    * 从工具栏中，选择管 **理发布**。
-   1. 从“ **From** **Sect** Publish to Brand Portal **”中，从“Scheduling** Now **”中选择“发布到****Brand Portal”，然后单击“下一步”。**
+   1. 从“ **From** **Select** Publish to Brand Portal **”中，从“Scheduling** Now **”中选择“发布到****Brand Portal”，然后单击“下一步”。**
    1. 在范围中确认您的 **选择** ，然后单 **击发布到Brand Portal**。
    将显示一条消息，指明文件夹已排队等候发布到Brand Portal。 登录到Brand Portal界面，查看已发布的文件夹。
 
@@ -64,7 +64,7 @@ source-git-commit: 9c73abc3291f2847c705cb649d2993fb186b0993
 
 您可以通过从AEM作者实例中取消发布已发布到Brand Portal的任何资产文件夹，来删除该文件夹。 取消发布原始文件夹后，Brand Portal用户将无法再使用其副本。
 
-您可以选择快速从Brand Portal中取消发布文件夹，或将其安排在以后的日期和时间。 要从Brand Portal取消发布资产文件夹，请执行以下操作：
+您可以选择快速从Brand Portal中取消发布文件夹，或将其安排在以后的日期和时间内。 要从Brand Portal取消发布资产文件夹，请执行以下操作：
 
 1. 从AEM作者实例的AEM资产界面中，选择要取消发布的文件夹。
 
