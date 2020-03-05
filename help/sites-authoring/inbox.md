@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 这些任务也可以在 AEM UI 的不同位置创建，例如在&#x200B;**项目**&#x200B;下创建；
    * 这些任务可以是&#x200B;**创建任务**&#x200B;工作流或&#x200B;**创建项目任务**&#x200B;步骤的产物。
 
-* 工作流：
+* 工作流:
 
    * 表示您需要对页面内容执行的操作的工作项；
 
@@ -75,16 +75,16 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
 1. 单击/点按工具栏中的指示器。
 
-1. 选择&#x200B;**查看全部**。此时将打开 **AEM 收件箱**。收件箱会显示工作流、项目和任务中的项目。
-1. 默认视图为[列表视图](#inbox-list-view)，但您也可以切换到[日历视图](#inbox-calendar-view)。可通过视图选择器（工具栏，右上角）执行此操作。
+1. 选择 **查看全部**。 将 **打开AEM收件箱** 。 收件箱会显示工作流、项目和任务中的项目。
+1. 默认视图为“列 [表视图](#inbox-list-view)”，但您也可以切换到“日历 [视图”](#inbox-calendar-view)。 这是通过视图选择器（工具栏，右上方）完成的。
 
    对于这两个视图，您还可以定义[视图设置](#inbox-view-settings)；可用选项取决于当前视图。
 
-   ![wf-79](assets/wf-79.png)
+   ![wf-79](assets/inbox-list-view.png)
 
 >[!NOTE]
 >
->The Inbox operates as a console, so use [Global Navigation](/help/sites-authoring/basic-handling.md#global-navigation) or [Search](/help/sites-authoring/search.md) to navigate to another location when you are finished.
+>收件箱作为控制台运行，因此在您完成 [操作后，使用](/help/sites-authoring/basic-handling.md#global-navigation)[](/help/sites-authoring/search.md) 全局导航或搜索导航到其他位置。
 
 ### 收件箱 - 列表视图 {#inbox-list-view}
 
@@ -109,7 +109,7 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
 ![wf-91](assets/wf-91.png)
 
-### 收件箱 - 视图设置 {#inbox-view-settings}
+### Inbox - Settings {#inbox-view-settings}
 
 对于这两个视图（列表和日历），您可以定义设置：
 
@@ -118,7 +118,7 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
    对于&#x200B;**日历视图**，您可以配置：
 
    * **分组依据**
-   * **计划**&#x200B;或&#x200B;**无**
+   * **计划或** “无 **”**
    * **卡片大小**
    ![wf-92](assets/wf-92.png)
 
@@ -126,9 +126,29 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
    对于&#x200B;**列表视图**，您可以配置排序机制：
 
-   * **排序方式**
+   * **排序字段**
    * **排序顺序**
-   ![wf-83](assets/wf-83.png)
+   ![wf-83](assets/inbox-settings.png)
+
+### 收件箱——管理员控制 {#inbox-admin-control}
+
+属于工作流管理员组 **的用户** ，可以在列表中查看“管理员控制”选项。 使用此选项，管理员可以：
+
+* 为标题中可用的文本和徽标定义自定义。
+
+* 控制标题中可用导航选项的显示，并限制用户切换到工作流创作模式或导航到帮助或其他解决方案链接。
+
+![admin-control](assets/admin-control.png)
+
+* **品牌化自定义**
+
+   * **自定义标题文本：** 在此字段中指定文本以替换标题中显示的 **现有Adobe Experience Manager** 文本。
+
+   * **自定义徽标：** 在数字资产管理(DAM)中上传图像，然后使用此字段引用该图像以替换标题中显示的Adobe Experience Manager徽标。
+
+* **用户导航**
+   * **隐藏导航选项：** 选择此选项可隐藏标题中可用的导航选项，如导航到其他解决方案的选项、帮助链接以及点击Adobe Experience Manager徽标或文本时显示的选项。
+* **保存：** 点按／单击此选项以保存设置。
 
 ## 对某个项目执行操作 {#taking-action-on-an-item}
 
@@ -209,7 +229,7 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
    >
    >不能使用工作项（来自工作流）创建项目。
 
-1. 从工具栏中选择&#x200B;**创建项目**&#x200B;以打开向导。
+1. 从工 **具栏中选择** “创建项目”以打开向导。
 1. 选择相应的模板，然后选择&#x200B;**下一步**。
 1. 指定所需属性：
 
