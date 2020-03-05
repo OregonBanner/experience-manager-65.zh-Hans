@@ -10,14 +10,14 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 ---
 
 
 # 为HTML5表单设计表单模板{#designing-form-templates-for-html-forms}
 
-AEM中的HTML5表单组件提供将XFA表单模板渲染为HTML5格式。 表单设计人员可以使用 [Forms Designer设计表单模板](https://www.adobe.com/go/learn_aemforms_designer_63) ，并使用HTML5再现功能。 这些表单模板及其资产可以驻留在AEM存储库、文件系统中，或通过http公开。 但是，如果您计划使用Forms manager管理表单，则模板和资产应驻留在AEM存储库中。
+AEM中的HTML5表单组件提供将XFA表单模板渲染为HTML5格式。 表单设计人员可以使用 [Forms Designer设计表单模板](https://www.adobe.com/go/learn_aemforms_designer_63) ，并使用HTML5再现功能。 这些表单模板及其资产可以驻留在AEM存储库、文件系统中，或通过http公开。 但是，如果您计划使用Forms Manager管理表单，则模板和资产应驻留在AEM存储库中。
 
 尽管HTML5表单在很大程度上与PDF表单的行为匹配，但两种格式中有一些功能不适用于其他格式。 例如，Adobe Reader中PDF表单上的条形码应用方式因移动表单而异，或表单的数字签名方式也因格式而异。 有关这些变体的详细信息，请参 [阅HTML5表单与PDF表单功能区分](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md)。
 
@@ -38,5 +38,9 @@ AEM中的HTML5表单组件提供将XFA表单模板渲染为HTML5格式。 表单
 HTML5表单的主要目标是触控设备。 因此，AEM Forms Designer中新增了一个涂抹签名控件。 您可以单击或拖放表单模板上的涂鸦式签名控件并对其进行配置。 它在HTML5再现中呈现为涂抹字段，可用于在触控设备上涂抹签名。 在台式机器上，可以使用鼠标控制将其用作涂抹字段。 有关如何使用此功能的详细信息，请参阅 [XFA涂抹字段](../../forms/using/scribble-signature.md)。
 
 ![4](assets/4.png)
+
+#### Rich text format {#rich-text-format}
+
+要向呈现的HTML5表单中的文本字段添加格式选项列表，您可以在Forms Designer中为文本字段定义字段格式。 点按设计视图中的 **[!UICONTROL 文本字段]**。 在“字 **[!UICONTROL 段]** ”选项卡中，从“字段格式”下拉列表中选择“富文本 ******** ”以应用这些设置。 文本字段在HTML5表单中呈现时显示格式选项。
 
 [联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
