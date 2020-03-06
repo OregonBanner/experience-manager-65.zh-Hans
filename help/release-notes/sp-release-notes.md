@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: d361087667853d30d5e3b475bdc9262dfc8d9f00
 | 版本 | 6.5.4.0 |
 | 类型 | Service Pack 版本 |
 | 日期 | 2020年3月5日 |
-| 下载 URL | [包共享](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0) |
+| 下载 URL | [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.4.0), [Software Distribution（测试版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.4.zip) |
 
 ## Adobe Experience Manager 6.5.4.0包含的功能 {#what-s-included-in-aem}
 
@@ -128,8 +128,6 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 在同一文件夹内移动内容时，页面移动选项被禁用(NPR-31840)。
 
-* 当访问以/_jcr_content/.html或/jcr:content/.html结尾的URL时，CPU尖峰和AEM停止响应(NPR-31837)。
-
 * 在可编辑的模板结构模式下，布局容器中允许的组件列表显示错误的结果。 只有具有设计对话框的组件才会显示在布局容器中(NPR-31816)。
 
 * 当页面对用户具有只读权限时，“打开属性”选项在sites.html中可见，但在editor.html中不可见(NPR-31770)。
@@ -179,8 +177,6 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 ### WCM模板编辑器 {#wcm-template-editor-6540}
 
 * 在可编辑的模板结构模式下，布局容器中允许的组件列表不显示链接按钮组件(CQ-4282099)。
-
-* 当访问以或结尾的URL时，CPU高峰和Experience Manager会 `/_jcr_content/.html` 变 `/jcr:content/.html` 得无响应(CQ-4280770)。
 
 ### WCM Page Editor {#wcm-page-editor-6540}
 
