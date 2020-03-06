@@ -4,7 +4,7 @@ description: 了解如何使用“筛选器”面板在AEM中查找所需的资�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: c491b77dac1bf25b9e348ed12d16ed7894e5493e
 
 ---
 
@@ -23,12 +23,12 @@ AEM支持以下用例，本文介绍了这些用例的用法、概念、配置�
 | [了解搜索结果和行为](#searchbehavior) | [修改搜索彩块化](#searchfacets) | [批量元数据更新](#metadataupdates) |
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
-| [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[AEM 桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic media资产](#dynamicmedia)</li></ul> |  |  |
+| [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[AEM 桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic Media资产](#dynamicmedia)</li></ul> |  |  |
 | [资产选择器／选取器](#assetselector) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [插图示例](#samples) |  |  |
 
-使用AEM web界面顶部的Omnisearch字段搜索资产。 转到 **[!UICONTROL AEM中的“资]** 产 **** ” > “文件”，单击顶栏中的搜索图标，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键/（正斜杠）打开Omnisearch字段。 位置：资产已预先选中，可将搜索限制为DAM资产。 AEM在您开始键入搜索关键字时提供建议。
+使用AEM Web界面顶部的Omnisearch字段搜索资产。 转到 **[!UICONTROL AEM中的“资]** 产 **** ” > “文件”，单击顶栏中的搜索图标，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键/（正斜杠）打开Omnisearch字段。 位置：资产已预先选中，可将搜索限制为DAM资产。 AEM在您开始键入搜索关键字时提供建议。
 
 使用“ **[!UICONTROL 筛选器]** ”面板，可根据各种选项（谓词）筛选搜索结果，从而缩小搜索范围，这些选项（谓词）包括文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock许可。 管理员可以自定义“筛选器”面板，并使用搜索彩块化添加或删除搜索谓词。
 
@@ -42,7 +42,7 @@ AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜�
 
 *图：了解资产搜索结果界面的各个部分*
 
-**A.** 将搜索另存为智能收藏集。**B.** 过滤（谓词）以缩小搜索结果。**C.** 在搜索结果中显示文件和/或文件夹。**D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。************ F.包含用户提供的搜索关键字的Omnisearch字段。 **G.选中此复选框可选择所有搜索结果。** H.显示的搜索结果数（从总搜索结果中）。 **I.关闭搜索** J。在卡片视图和列表视图之间切换。
+**A.** 将搜索另存为智能收藏集。**B.** 过滤（谓词）以缩小搜索结果。**C.** 在搜索结果中显示文件和/或文件夹。**D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F.** 包含用户提供的搜索关键字的Omnisearch字段。 **G.** 选中此复选框可选择所有搜索结果。 **H.** 显示的搜索结果数（从总搜索结果中）。 **I.** 关闭搜索 **J。** 在卡片视图和列表视图之间切换。
 
 ### 动态搜索彩块化 {#dynamicfacets}
 
@@ -145,7 +145,7 @@ AEM提供了各种方法，如应用于已搜索资产的筛选器，以帮助�
 
 在AEM用户界面中，用户可以搜索 [Adobe Stock资产](/help/assets/aem-assets-adobe-stock.md) ，并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch栏中。 您还可以使用“筛选器”面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。
 
-### Dynamic media资产 {#dmassets}
+### Dynamic Media资产 {#dmassets}
 
 您可以通过选择&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中的 **[!UICONTROL Dynamic Media > 集]**&#x200B;来过滤 Dynamic Media 图像。该操作可过滤并显示图像集、轮播集、混合媒体集和旋转集等资产。
 
@@ -195,13 +195,13 @@ AEM提供了各种方法，如应用于已搜索资产的筛选器，以帮助�
 
 Adobe Experience Manager(AEM)将DAM存储库连接到各种其他AEM解决方案，以便更快地访问数字资产并简化创意工作流程。 任何资产搜索都以浏览或搜索开始。 搜索行为在不同的表面和解决方案上基本保持不变。 某些搜索方法会随目标受众、用例和用户界面的不同而改变，这些方法会因AEM解决方案而异。 下面的链接介绍了各个解决方案的具体方法。 本文介绍了普遍适用的提示和行为。
 
-### 从Adobe Asset link面板搜索资产 {#aal}
+### 从Adobe Asset Link面板搜索资产 {#aal}
 
-使用Adobe Asset Link，创意专业人士现在可以访问存储在AEM资产中的内容，而无需离开受支持的Adobe Creative cloud应用程序。 创意人员可以使用Creative cloud应用程序中的应用程序内面板无缝地浏览、搜索、注销和登记资产：Photoshop、Illustrator和InDesign。 资产链接还允许用户搜索视觉效果相似的结果。 视觉搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户查找美学上相似的图像。 请参 [阅使用Adobe资产链接搜索](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) 和浏览资产。
+使用Adobe Asset Link，创意专业人士现在可以访问存储在AEM资产中的内容，而无需离开受支持的Adobe Creative Cloud应用程序。 创意人员可以使用Creative Cloud应用程序中的应用程序内面板无缝地浏览、搜索、注销和登记资产：Photoshop、Illustrator和InDesign。 资产链接还允许用户搜索视觉效果相似的结果。 视觉搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户查找美学上相似的图像。 请参 [阅使用Adobe资产链接搜索](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) 和浏览资产。
 
 ### 在AEM桌面应用程序中搜索资产 {#desktopapp}
 
-创意专业人士使用桌面应用程序使AEM资产可轻松搜索并在其本地桌面（Win或Mac）上可用。 创意人员可以在Mac finder或Windows资源管理器中轻松显示所需的资产，在桌面应用程序中打开并在本地更改——这些更改将保存回AEM并在存储库中创建了新版本。 应用程序支持使用一个或多个关键字*和？进行基本搜索 通配符和AND运算符。 请参 [阅在桌面应用程序中浏览、搜索和预览](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 资源。
+创意专业人士使用桌面应用程序使AEM资产可轻松搜索并在其本地桌面（Win或Mac）上可用。 创意人员可以在Mac Finder或Windows资源管理器中轻松显示所需的资产，在桌面应用程序中打开并在本地更改——这些更改将保存回AEM并在存储库中创建了新版本。 应用程序支持使用一个或多个关键字*和？进行基本搜索 通配符和AND运算符。 请参 [阅在桌面应用程序中浏览、搜索和预览](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 资源。
 
 ### Search assets in Brand Portal {#brandportal}
 
@@ -211,7 +211,7 @@ Adobe Experience Manager(AEM)将DAM存储库连接到各种其他AEM解决方案
 
 从AEM用户界面中，用户可以搜索Adobe Stock资产并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch字段。 您还可以使用“ **[!UICONTROL 筛选器]** ”面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。 请参 [阅在AEM中管理Adobe Stock图像](/help/assets/aem-assets-adobe-stock.md#usemanage)。
 
-### 搜索Dynamic media资产 {#dynamicmedia}
+### 搜索Dynamic Media资产 {#dynamicmedia}
 
 您可以通过选择&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中的 **[!UICONTROL Dynamic Media]** > **[!UICONTROL 集]**&#x200B;来过滤 Dynamic Media 图像。该操作可过滤并显示图像集、轮播集、混合媒体集和旋转集等资产。在创作网页时，作者可以在内容查找器中搜索集。弹出菜单中提供集的过滤器。
 
@@ -254,7 +254,7 @@ AEM资产中的搜索功能有以下限制：
 * 在您从搜索的结果中选择资产的属性，然后取消搜索后，AEM可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 搜索文件夹或文件和文件夹时，无法对任何参数对搜索结果进行排序。
 * 如果按回车键时未在Omnisearch栏中键入任何内容，AEM将返回仅包含文件而非文件夹的列表。 如果您在不使用关键字的情况下专门搜索文件夹，则AEM不会返回任何结果。
-* 使用全 [!UICONTROL 选复选框] ，您只能在卡片视图中选择前100个搜索的资产，在列表视图中选择前200个搜索的资产。 如果在用户界面中滚动并加载更多资产，则可以使用全选选项选 [!UICONTROL 择更多] 。
+* 使用全 [!UICONTROL 选复选框] ，您只能在卡片视图中选择前100个搜索的资产，在列表视图中选择前200个搜索的资产。 如果您在用户界面中滚动并加载更多资产，则可以使用全选选项选 [!UICONTROL 择更多] 。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -355,7 +355,7 @@ AEM资产中的搜索功能有以下限制：
 
 ### 强制元数据 {#mandatorymetadata}
 
-商业用户、管理员或DAM管理员可以将某些元数据定义为必须的元数据，这是业务流程工作所必需的。 由于各种原因，某些资产可能缺少此元数据，如批量迁移的旧资产或资产。 会根据索引元数据属性检测和报告元数据缺失或无效的资产。 要进行配置，请参阅必 [需的元数据](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
+商业用户、管理员或DAM管理员可以将某些元数据定义为必须的元数据，这是业务流程工作所必需的。 由于各种原因，某些资产可能缺少此元数据，如批量迁移的旧版资产或资产。 会根据索引元数据属性检测和报告元数据缺失或无效的资产。 要进行配置，请参阅必 [需的元数据](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
 
 ### 修改搜索彩块化 {#searchfacets}
 
@@ -390,7 +390,7 @@ AEM资产中的搜索功能有以下限制：
 
 ## 使用资产搜索结果 {#aftersearch}
 
-当您看到一些已搜索的资产符合您的条件时，您可以执行以下典型任务，或对这些搜索结果执行以下操作：
+当您看到某些已搜索的资产符合您的条件时，您可以执行以下典型任务，或对这些搜索结果执行以下操作：
 
 * 查看元数据属性和其他信息。
 * 下载一个或多个资源。
@@ -443,8 +443,8 @@ AEM资产中的搜索功能有以下限制：
 | 搜索缺少元数据的资产时结果不正确 | 在搜索缺少必需元数据的资产时，AEM可能会显示一些具有有效元数据的资产。 结果基于索引元数据属性。 | 更新元数据后，需要重新构建索引以反映资产元数据的正确状态。 请参阅 [必填元数据](metadata-schemas.md#define-mandatory-metadata)。 |
 | 搜索结果过多 | 广泛的搜索参数。 | 考虑限制 [搜索范围](#scope)。 使用智能标记可能会为您提供比预期更多的搜索结果。 查看 [带有智能标记的搜索行为](#withsmarttags)。 |
 | 不相关或部分相关的搜索结果 | 搜索行为会随智能标记而改变。 | 了解 [搜索在智能标记后的变化情况](#withsmarttags)。 |
-| 没有资产的自动完成建议 | 尚未对新上传的资产编制索引。 当您开始在Omnisearch栏中键入搜索关键字时，元数据不会立即作为建议可用。 | AEM资产会等到超时期（默认为一小时）到期后再运行后台作业，为所有新上传或更新的资产索引元数据，然后将元数据添加到建议列表。 |
-| 无搜索结果 | <ul><li>不存在与您的查询匹配的资产。</li><li>您在搜索查询前添加了空白。</li><li>不支持的元数据字段包含您搜索的关键字。</li><li>为资产配置了开启时间和结束时间，并在资产的结束时间内进行搜索。</li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用（智能）标记来改进搜索结果。</li><li>这是已知 [的限制](#limitations)。</li><li>并非所有元数据字段都会用于搜索。 请参阅 [范围](#scope)。</li><li>稍后搜索或修改所需资产的开启和关闭时间。</li></ul> |
+| 没有资产的自动完成建议 | 尚未对新上传的资产编制索引。 当您开始在Omnisearch栏中键入搜索关键字时，元数据不会立即作为建议可用。 | AEM资产会等到超时期（默认为一小时）到期，然后运行后台作业为所有新上传或更新的资产的元数据编制索引，然后将元数据添加到建议列表。 |
+| 无搜索结果 | <ul><li>不存在与您的查询匹配的资产。</li><li>您在搜索查询前添加了空白。</li><li>不支持的元数据字段包含您搜索的关键字。</li><li>为资产配置了开始时间和结束时间，搜索是在资产的结束时间进行的。</li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用（智能）标记来改进搜索结果。</li><li>这是已知 [的限制](#limitations)。</li><li>并非所有元数据字段都会用于搜索。 请参阅 [范围](#scope)。</li><li>稍后搜索或修改所需资产的开启和关闭时间。</li></ul> |
 | 搜索筛选器／谓词不可用 | <ul><li>未配置搜索筛选器。</li><li>登录名中不提供此选项。</li><li>（不太可能）搜索选项未在您使用的部署中自定义。</li></ul> | <ul><li>联系管理员以检查搜索自定义是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义的权限。</li><li>联系管理员并检查您所使用的AEM资产部署的可用自定义设置。</li></ul> |
 | 在搜索视觉上相似的图像时，缺少期望的图像 | <ul><li>图像在AEM中不可用。</li><li>未索引图像。 通常，在最近上传时。</li><li>图像未标记为智能。</li></ul> | <ul><li>将图像添加到AEM资产。</li><li>请与管理员联系以重新为存储库编制索引。 另外，请确保您使用的是相应的索引。</li><li>请联系您的管理员以智能标记相关资产。</li></ul> |
 | 搜索视觉上相似的图像时，将显示不相关的图像 | 视觉搜索行为。 | AEM会显示尽可能多的潜在相关资产。 相关性较差的图像（如果有）会添加到结果中，但搜索级别较低。 当您向下滚动搜索结果时，搜索资产的匹配质量和相关性会降低。 |
