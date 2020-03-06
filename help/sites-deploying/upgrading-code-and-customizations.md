@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -52,7 +52,7 @@ AEM实施所需的所有代码和配置都应使用某种形式的版本控制�
 
 ### 更新AEM Uber Jar版本 {#update-the-aem-uber-jar-version}
 
-AEM Uber jar将所有AEM API作为单个依赖项包含在Maven项目的中 `pom.xml`。 将Uber Jar作为单个依赖关系而不是包含单个AEM API依赖关系，这始终是最佳做法。 升级代码库时，应将Uber jar的版本更改为指向AEM的目标版本。 如果您的项目是在Uber Jar存在之前在AEM版本上进行开发的，则所有单独的AEM API依赖项都应被删除，并由目标AEM版本的Uber Jar的单个包含所取代。 然后，应根据新版Uber Jar重新编译代码库。 应更新任何已弃用的API或方法，使其与目标版本的AEM兼容。
+AEM Uber jar将所有AEM API作为单个依赖项包含在Maven项目的中 `pom.xml`。 将Uber Jar作为单个依赖关系而不是包含单个AEM API依赖关系，这始终是最佳做法。 升级代码库时，应将Uber Jar的版本更改为指向AEM的目标版本。 如果您的项目是在Uber Jar存在之前在AEM版本上进行开发的，则所有单独的AEM API依赖项都应被删除，并由目标AEM版本的Uber Jar的单个包含所取代。 然后，应根据新版Uber Jar重新编译代码库。 应更新任何已弃用的API或方法，使其与目标版本的AEM兼容。
 
 ```
 <dependency>
@@ -66,7 +66,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在Maven项目的中 `pom
 
 ### 逐步停止使用管理资源解析程序 {#phase-out-use-of-administrative-resource-resolver}
 
-在AEM 6.0之前的代 `SlingRepository.loginAdministrative()` 码库 `ResourceResolverFactory.getAdministrativeResourceResolver()` 中，使用管理会话的情况非常普遍。由于安全原因，这些方法的访问级别过于宽泛，因此已经弃用。 [在Sling的未来版本中，将删除这些方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。 强烈建议重新构造任何代码以改用服务用户。 有关服务用户以及如 [何逐步退出管理会话的更多信息]，请访问此处(/help/sites-administering/security-service-users.md#how to phase out admin sessions)。
+在AEM 6.0之前的代 `SlingRepository.loginAdministrative()` 码库 `ResourceResolverFactory.getAdministrativeResourceResolver()` 中，使用管理会话的情况非常普遍。由于安全原因，这些方法的访问级别过于宽泛，因此已弃用。 [在Sling的未来版本中，这些方法将被删除](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。 强烈建议重新构造任何代码以改用服务用户。 有关服务用户以及如 [何逐步退出管理会话的更多信息]，请访问此处(/help/sites-administering/security-service-users.md#how to phase out admin sessions)。
 
 ### 查询和Oak索引 {#queries-and-oak-indexes}
 
@@ -88,11 +88,11 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在Maven项目的中 `pom
 
 为了使升级更简单，并确保升级过程中不会覆盖配置，将存储库重新调整为6.4格式，以将内容与配置分开。
 
-因此，必须将许多设置移至不再像 `/etc` 过去那样驻留。 要查看必须在更新到AEM 6.4中查看和修正的完整存储库重组问题集，请参阅AEM 6.4中的 [存储库重组](/help/sites-deploying/repository-restructuring-in-aem65.md)。
+因此，必须将许多设置移至不再像 `/etc` 过去那样驻留。 要查看必须在更新到AEM 6.4中查看和修正的完整存储库重组问题集，请参阅AEM 6.4中的 [存储库重组](/help/sites-deploying/repository-restructuring.md)。
 
 ## AEM自定义 {#aem-customizations}
 
-需要标识AEM源版本中对AEM创作环境的所有自定义。 识别后，建议将每个自定义存储在版本控制中或作为内容包的一部分至少备份一次。 在生产升级之前，所有自定义应在运行AEM目标版本的QA或暂存环境中部署和验证。
+需要标识AEM源版本中对AEM创作环境的所有自定义。 识别后，建议将每个自定义存储在版本控制中或作为内容包的一部分以最低备份速率进行存储。 在生产升级之前，所有自定义应在运行AEM目标版本的QA或暂存环境中部署和验证。
 
 ### 一般叠加 {#overlays-in-general}
 
@@ -142,7 +142,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在Maven项目的中 `pom
 
 ### InDesign脚本自定义 {#indesign-script-customizations}
 
-Adobe建议将自定义脚本放在 `/apps/settings/dam/indesign/scripts` 位置。 有关InDesign script自定义的更多信息，请访 [问](/help/assets/indesign.md#configuring-the-aem-assets-workflow)。
+Adobe建议将自定义脚本放在 `/apps/settings/dam/indesign/scripts` 位置。 有关InDesign Script自定义的更多信息，请访 [问](/help/assets/indesign.md#configuring-the-aem-assets-workflow)。
 
 ### 恢复ContextHub配置 {#recovering-contexthub-configurations}
 
@@ -191,7 +191,7 @@ ContextHub配置受升级影响。 有关如何恢复现有ContextHub配置的�
    <td>在创作层测试AEM实施和关联代码。 应包括页面、组件创作和对话框。</td>
   </tr>
   <tr>
-   <td>与Marketing cloud解决方案集成</td>
+   <td>与Marketing Cloud解决方案集成</td>
    <td>验证与Analytics、DTM和Target等产品的集成。</td>
   </tr>
   <tr>
