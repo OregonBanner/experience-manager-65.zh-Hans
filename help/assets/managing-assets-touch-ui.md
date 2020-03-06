@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3aee0ce89638cb997e84e62bbde76e32e49174da
+source-git-commit: 76fe7f99273139243e8944448ccfb013408b38de
 
 ---
 
@@ -562,8 +562,6 @@ See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 1. 从资产卡中选择&#x200B;**[!UICONTROL 发布]**&#x200B;以进行快速操作，或选择资产，然后点按/单击工具栏中的&#x200B;**[!UICONTROL 快速发布]**&#x200B;图标。
 1. 如果资产引用了其他资产，向导中便会列出这些引用。只显示自上次发布／取消发布以来未发布或已修改的引用。 选择要发布的引用。
-
-   ![chlimage_1-225](assets/chlimage_1-21.png)
 
    >[!NOTE]
    >
