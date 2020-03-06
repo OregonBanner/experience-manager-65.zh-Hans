@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -130,7 +130,7 @@ AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 [Communi
 
 1. 对所有作者实例和发布实例重复步骤3和4
 
-有关安装捆绑包的更多信息，请参阅 [Web控制台页](/help/sites-deploying/configuring-web-console.md#bundles) 。
+有关安装捆绑包的更多信息，请参阅 [Web控制台页](/help/sites-deploying/web-console.md) 。
 
 #### 示例：已安装的MySQL连接器包 {#example-installed-mysql-connector-bundle}
 
@@ -174,7 +174,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 ### 关于包共享的链接 {#about-links-to-package-share}
 
-**Adobe AEM cloud中可见的包**
+**Adobe AEM Cloud中可见的包**
 
 此页面上指向包的链接不需要AEM的正在运行实例，因为它们要在上进行包共享 `adobeaemcloud.com`。 当可查看包时，该按 `Install`钮用于将包安装到Adobe托管站点中。 如果打算安装在本地AEM实例上，选择 `Install`将导致错误。
 
