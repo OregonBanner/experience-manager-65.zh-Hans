@@ -11,7 +11,7 @@ topic-tags: upgrading
 discoiquuid: 49210824-ad87-4b6a-9ae8-77dcfe2b5c06
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 ---
 
@@ -106,7 +106,7 @@ AEM 6.5中的新增功能可在adobe.com [的AEM部分找到](/help/release-note
 
 ![测试计划](assets/test-plan.png)
 
-需要复制确切的生产环境，并在升级后对其执行测试，以确保所有应用程序和自定义代码仍按需要运行。 您需要重新执行所有自定义操作，并执行性能、负载和安全测试。 在组织测试计划时，除了开箱即用的UI和日常操作中利用的工作流外，还应确保涵盖对系统进行的所有自定义。 这些功能包括自定义OSGI服务和Servlet、与Adobe Marketing cloud的集成、通过AEM连接器与第三方的集成、自定义第三方集成、自定义组件和模板、AEM中的自定义UI叠加以及自定义工作流程。 对于从AEM 6之前版本迁移的客户，应分析任何自定义查询，因为可能需要索引这些查询。 对于已使用AEM 6.x版本的客户，仍应测试这些查询以确保其索引在升级后继续有效运行。
+需要复制确切的生产环境，并在升级后对其执行测试，以确保所有应用程序和自定义代码仍按需要运行。 您需要重新执行所有自定义操作，并执行性能、负载和安全测试。 在组织测试计划时，除了开箱即用的UI和日常操作中利用的工作流外，还应确保涵盖对系统进行的所有自定义。 这些功能包括自定义OSGI服务和Servlet、与Adobe Marketing Cloud的集成、通过AEM连接器与第三方的集成、自定义第三方集成、自定义组件和模板、AEM中的自定义UI叠加以及自定义工作流程。 对于从AEM 6之前版本迁移的客户，应分析任何自定义查询，因为可能需要索引这些查询。 对于已使用AEM 6.x版本的客户，仍应测试这些查询以确保其索引在升级后继续有效运行。
 
 ### 确定所需的架构和基础架构更改 {#determining-architectural-and-infrastructure-changes-needed}
 
@@ -136,7 +136,7 @@ AEM 6.5中的新增功能可在adobe.com [的AEM部分找到](/help/release-note
 
 #### 内容重组注意事项 {#content-restructuring-considerations}
 
-AEM对存储库结构进行了更改，这有助于使升级更加无缝。 这些更改包括根据Adobe或客户是否拥有该内容，将内容从/etc文件夹移出到包括/libs、/apps和/content在内的文件夹，从而限制在发布期间覆盖内容的可能性。 存储库重组的方式是，在6.5升级时不需要进行代码更改，但建议在计划升级时查看AEM中存储库重组的详细信息 [](/help/sites-deploying/repository-restructuring-in-aem65.md) 。
+AEM对存储库结构进行了更改，这有助于使升级更加无缝。 这些更改包括根据Adobe或客户是否拥有该内容，将内容从/etc文件夹移出到包括/libs、/apps和/content在内的文件夹，从而限制在发布期间覆盖内容的可能性。 存储库重组的方式是，在6.5升级时不需要进行代码更改，但建议在计划升级时查看AEM中存储库重组的详细信息 [](/help/sites-deploying/repository-restructuring.md) 。
 
 ### 评估升级复杂性 {#assessing-upgrade-complexity}
 
