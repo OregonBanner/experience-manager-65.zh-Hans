@@ -5,7 +5,7 @@ sub-product: forms
 audience: end-user
 user-guide-title: AEM 6.5 Forms User Guide
 translation-type: tm+mt
-source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
+source-git-commit: 42a08dca17df382b875c5326a64b5584028741d8
 
 ---
 
@@ -62,7 +62,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [安装和配置Automated Forms Conversion服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Install AEM Forms on JEE {#jee-installation}
       + [JEE上的AEM表单支持的平台](using/aem-forms-jee-supported-platforms.md)
-      + [在JEE上使用JBoss统包安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
+      + [在JEE上使用JBoss统包安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
       + [安装和配置AEM Forms Document Security服务器](using/installing-and-configuring-the-document-security-server.md)
       + [准备安装AEM Forms单台服务器](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
       + [在JEE上安装和部署AEM Forms for JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
@@ -93,7 +93,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [升级到JEE上的AEM 6.5表单](using/upgrade-forms-jee.md)
       + [从AEM Forms版本升级到JEE上的AEM 6.5 Forms for JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
       + [从AEM Forms版本升级到JEE上的AEM 6.5 Forms forms for JBtowny](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [从AEM Forms版本升级到JEE上的AEM 6.5 Forms for webSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+      + [从AEM Forms版本升级到JEE上的AEM 6.5 Forms for WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
 + 管理AEM表单 {#manage-administer-aem-forms}
    + [OSGi组和权限上的AEM Forms](using/forms-groups-privileges-tasks.md)
    + [创建新文件夹以对表单分类](using/creating-new-folders-categorize-forms.md)
@@ -110,8 +110,8 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [表单JEE工作流程](using/forms-workflow-jee-handling-user-data.md)
       + [Forms Portal](using/forms-portal-handling-user-data.md)
       + [通信管理](using/correspondence-management-handling-user-data.md)
-      + [与Adobe sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
-      + [Document Security](/help/forms/using/document-security-handling-user-data.md)
+      + [与Adobe Sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
+      + [文档安全](/help/forms/using/document-security-handling-user-data.md)
    + 强化AEM表单环境 {#hardening-aem-forms-environment}
       + [在OSGi环境上强化和保护AEM表单](using/hardening-securing-aem-forms-environment.md)
       + [JEE上AEM Forms的一般安全注意事项](using/general-security-considerations.md)
@@ -173,7 +173,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [自动测试自适应表单](using/calvin.md)
    + [自适应表单的样式构造](using/styling-constructs-adaptive-forms.md)
    + [将自适应表单与XFA表单模板同步](using/synchronizing-adaptive-forms-xfa.md)
-   + [将Adobe sign与AEM Forms集成](using/adobe-sign-integration-adaptive-forms.md)
+   + [将Adobe Sign与AEM Forms集成](using/adobe-sign-integration-adaptive-forms.md)
    + [在表单中创建和管理资产的审阅](using/create-reviews-forms.md)
    + [在AEM Sites单页应用程序中嵌入自适应表单或交互式通信](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
    + [标准验证错误消息自适应表单](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
@@ -241,17 +241,17 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [跟踪进程](using/tracking-processes.md)
    + [单一登录和超时处理程序](using/single-sign-timeout-handlers.md)
    + [在HTML工作区中使用自适应表单](using/using-adaptive-form-html-workspace.md)
-   + [将AEM表单工作区与Microsoft Office SharePoint server集成](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
+   + [将AEM表单工作区与Microsoft Office SharePoint Server集成](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
    + [使用待办事项列表](using/todo-lists.md)
    + [AEM Forms工作区疑难解答指南](using/troubleshooting-guidelines-html-workspace.md)
-+ AEM Forms应用程序 {#aem-forms-app}
++ AEM Forms app {#aem-forms-app}
    + [AEM Forms应用程序简介](using/aem-forms-app.md)
    + [为AEM Forms应用程序设置环境](using/setup-environment-mobile-workspace.md)
    + [设置Xcode项目并构建iOS应用程序](using/setup-xcode-project-build-installer.md)
    + [构建适用于iOS的安全AEM Forms应用程序](using/building-secure-mobile-workspace-app.md)
-   + [设置Visual studio项目并构建Windows应用程序](using/setup-visual-studio-project-build-installer.md)
-   + [设置Android studio项目并构建Android应用程序](using/setup-android-studio-project-build-installer.md)
-   + [构建AEM Forms android应用程序](using/setup-eclipse-project-build-installer.md)
+   + [设置Visual Studio项目并构建Windows应用程序](using/setup-visual-studio-project-build-installer.md)
+   + [设置Android Studio项目并构建Android应用程序](using/setup-android-studio-project-build-installer.md)
+   + [构建AEM Forms Android应用程序](using/setup-eclipse-project-build-installer.md)
    + [分发AEM Forms应用程序](using/distribute-mobile-workspace-app.md)
    + [手势自定义](using/gesture-customization.md)
    + [品牌化自定义](using/branding-customization.md)
@@ -286,7 +286,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [HTML5表单的屏幕阅读器](using/screen-readers.md)
    + [为HTML5表单创建自定义配置文件](using/custom-profile.md)
    + [HTML5表单中从右至左的语言](using/right-left-languages.md)
-   + [将Form bridge与HTML5表单的自定义门户集成](using/integrate-form-bridge-forms-portal.md)
+   + [将Form Bridge与HTML5表单的自定义门户集成](using/integrate-form-bridge-forms-portal.md)
    + [在HTML5表单中创建自定义外观](using/custom-widgets.md)
    + [更改HTML5表单的默认样式](using/changing-default-styles.md)
    + [HTML5表单的Picture子句支持](using/picture-clause-support.md)
@@ -302,11 +302,12 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [通信管理概述](using/cm-overview.md)
    + [布局设计](using/layout-design-details.md)
    + [数据字典](using/data-dictionary.md)
+   + [文档片段](using/document-fragments.md)
    + [创建书信](using/create-letter.md)
    + [创建对应](using/create-correspondence.md)
-   + [Expression builder中的远程函数](using/expression-builder.md)
+   + [Expression Builder中的远程函数](using/expression-builder.md)
    + [管理代理签名图像](using/manage-agent-signature-images.md)
-   + [信件和交互通信的后期处理](using/submit-letter-topostprocess.md)
+   + [信函和交互式通信的后期处理](using/submit-letter-topostprocess.md)
    + [向“资产列表”视图添加自定义操作](using/add-custom-action-asset-listing-view.md)
    + [在创建对应UI中添加自定义操作／按钮](using/add-action-button-in-create-correspondence-ui.md)
    + [将自定义属性添加到Correportence Management资产](using/add-custom-properties-cm-assets.md)
@@ -321,7 +322,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [内联条件，并在Interactive Communications和Letters中重复](using/cm-inline-condition.md)
    + [文档片段](using/lists.md)
    + [对应管理配置属性](using/cm-configuration-properties.md)
-+ 将AEM Forms与Experience cloud解决方案集成 {#integrate-aem-forms-with-experience-cloud-solutions}
++ 将AEM Forms与Experience Cloud解决方案集成 {#integrate-aem-forms-with-experience-cloud-solutions}
    + [在AEM Forms中创建目标体验](/help/forms/using/experience-targeting-forms.md)
    + [衡量和改进表单的有效性和转换](using/measure-improve-performance-forms-documents.md)
    + [配置分析和报告](using/configure-analytics-forms-documents.md)
@@ -349,7 +350,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [用于在表单门户上处理提交表单的API](using/report-submitted-data-forms.md)
    + [草稿和提交组件的自定义存储](using/adding-custom-storage-provider-forms.md)
 + 文档服务 {#use-document-services}
-   + [AEM Document services概述](using/overview-aem-document-services.md)
+   + [AEM Document Services概述](using/overview-aem-document-services.md)
    + [表单服务](using/forms-service.md)
    + [输出服务](using/output-service.md)
    + [转换PDF服务](using/using-convertpdf-service.md)
@@ -358,11 +359,11 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [使用HSM对文档进行数字签名或验证](using/hsm-certify-esign-docs.md)
    + [以编程方式使用AEM Document Services](using/aem-document-services-programmatically.md)
    + [使用sendToPrinter API](using/using-sendtoprinter-api.md)
-+ Document Security {#use-document-security}
++ 文档安全 {#use-document-security}
    + [文档安全产品](using/document-security-offerings.md)
    + [使AEM能搜索文档安全保护的PDF文档](using/enable-search-for-drm-protected-pdf-documents-in-aem.md)
    + [Reader使用可移植保护库扩展受策略保护的PDF文档](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
-   + [使AEM能够搜索文档安全保护的PDF和Microsoft office文档](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
+   + [使AEM能够搜索文档安全保护的PDF和Microsoft Office文档](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [代表其他用户保护文档](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
    + [使用Designer](http://www.adobe.com/go/learn_aemforms_designer_65)
@@ -423,7 +424,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [创建和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md)
    + 连接到内容管理系统 {#connect-content-management-system}
       + [为EMC Documentum配置Connector](/help/forms/using/admin-help/configuring-connector-emc-documentum.md)
-      + [为IBM fileNet配置Connector](/help/forms/using/admin-help/configuring-connector-ibm-filenet.md)
+      + [为IBM FileNet配置Connector](/help/forms/using/admin-help/configuring-connector-ibm-filenet.md)
       + [为IBM Content Manager配置Connector](/help/forms/using/admin-help/configuring-connector-ibm-content-manager.md)
       + [配置Connector for Microsoft SharePoint](/help/forms/using/admin-help/configuring-connector-microsoft-sharepoint.md)
    + 管理证书和凭据 {#manage-certificates-credentials}
@@ -434,7 +435,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [管理HSM凭据](/help/forms/using/admin-help/hsm-credentials.md)
       + [管理本地凭据](/help/forms/using/admin-help/local-credentials.md)
    + 导入和管理应用程序和存档 {#import-manage-applications-archives}
-      + [更改在“应用程序”和“服务”页面上显示的项目数](/help/forms/using/admin-help/change-number-items-displayed-applications.md)
+      + [更改“应用程序”和“服务”页面上显示的项目数](/help/forms/using/admin-help/change-number-items-displayed-applications.md)
       + [导入和管理存档](/help/forms/using/admin-help/import-archives.md)
       + [导入和管理应用程序](/help/forms/using/admin-help/import-applications.md)
    + 管理服务 {#manage-services}
@@ -454,7 +455,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [查看凭据使用信息](/help/forms/using/admin-help/review-credential-information.md)
       + [配置凭据以与Acrobat Reader DC扩展一起使用](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md)
       + [查看PDF文件的使用权限](/help/forms/using/admin-help/review-usage-rights-pdf-file.md)
-      + [启用Adobe Reader web浏览器插件的在线注释](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
+      + [启用Adobe Reader Web浏览器插件的在线注释](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [设置超时值以与Acrobat Reader DC扩展一起使用](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
    + 使用PDF生成器 {#work-with-pdf-generator}
       + [使用PDF生成器简介](/help/forms/using/admin-help/overview-5.md)
@@ -470,7 +471,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [使用PDF生成器转换文件](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)
    + 配置SSL {#configure-ssl}
       + [配置SSL的概述](/help/forms/using/admin-help/overview-6.md)
-      + [为JBoss Application server配置SSL](/help/forms/using/admin-help/configuring-ssl-jboss-application-server.md)
+      + [为JBoss Application Server配置SSL](/help/forms/using/admin-help/configuring-ssl-jboss-application-server.md)
       + [在Windows Vista上配置SSL](/help/forms/using/admin-help/configuring-ssl-windows-vista.md)
       + [为WebSphere应用程序服务器配置SSL](/help/forms/using/admin-help/configuring-ssl-websphere-application-server.md)
    + 使用文档安全性 {#work-with-document-security}
@@ -531,14 +532,14 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
       + [日志文件](/help/forms/using/admin-help/log-files.md)
       + [用户管理](/help/forms/using/admin-help/user-management.md)
       + [监视AEM表单部署](/help/forms/using/admin-help/monitoring-aem-forms-deployments.md)
-      + [Work manager和调节](/help/forms/using/admin-help/manager-throttling.md)
+      + [Work Manager和调节](/help/forms/using/admin-help/manager-throttling.md)
       + [在维护模式下运行AEM表单](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
    + 维护AEM表单数据库 {#maintain-aem-forms-database}
       + [DB2数据库：每周运行进程](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
       + [Oracle数据库最大打开游标阈值](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
       + [IBM DB2数据库：运行命令以进行定期维护](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
       + [清除流程数据](/help/forms/using/admin-help/purging-process-data.md)
-      + [Microsoft SQL server数据库：微调配置](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
+      + [Microsoft SQL Server数据库：微调配置](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
       + [最小化数据库增长的提示](/help/forms/using/admin-help/tips-minimizing-database-growth.md)
    + 维护应用程序服务器 {#manage-application-server}
       + [应用程序服务器网站](/help/forms/using/admin-help/application-server-websites.md)
@@ -560,7 +561,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + 系统信息服务 {#system-information-service}
       + [设置系统信息服务](/help/forms/using/admin-help/set-system-information-service.md)
       + [系统信息服务API](/help/forms/using/admin-help/system-information-service-apis.md)
-+ 流程报告 {#process-reporting}
++ 进程报告 {#process-reporting}
    + [流程报表简介](/help/forms/using/process-reporting/introduction-process-reporting.md)
    + [流程报表入门](/help/forms/using/process-reporting/install-start-process-reporting.md)
    + [流程报表的工作原理](/help/forms/using/process-reporting/process-reporting-architecture.md)
@@ -579,14 +580,14 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
    + [工作台帮助](http://www.adobe.com/go/learn_aemforms_workbench_65)
    + 在JEE上使用AEM Forms进行编程 {#programming-aem-forms-jee}
       + 在JEE上使用AEM Forms进行编程的简介 {#introduction-programming-aem-forms-jee}
-         + [介绍Java API quickStart](developing/introducing-java-api-soap-quick.md)
+         + [介绍Java API QuickStart](developing/introducing-java-api-soap-quick.md)
          + [使用API调用AEM Forms](developing/invoking-aem-forms-using-apis.md)
          + [了解AEM Forms流程](developing/aem-forms-processes.md)
          + [服务容器](developing/service-container.md)
       + Java API快速入门——代码示例 {#java-api-quick-start-code-examples}
          + [Application Manager客户端JavaAPI快速入门(SOAP)](developing/application-manager-client-java-api.md)
-         + [Application Manager Service javaAPI快速入门(SOAP)](developing/application-manager-service-java-api.md)
-         + [Assembler Service Java API quickStart(SOAP)](developing/assembler-service-java-api-quick.md)
+         + [Application Manager Service JavaAPI快速入门(SOAP)](developing/application-manager-service-java-api.md)
+         + [Assembler Service Java API QuickStart(SOAP)](developing/assembler-service-java-api-quick.md)
          + [Acrobat Reader DC扩展服务Java API快速入门(SOAP)](developing/acrobat-reader-dc-extensions-service.md)
          + [备份和恢复服务APIQ快速启动](developing/backup-restore-service-api-quick.md)
          + [Barcoded Forms Service Java APIQ快速启动(SOAP)](developing/barcoded-forms-service-java-api.md)
@@ -594,11 +595,11 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
          + [转换PDF服务Java API QuickStart(SOAP)](developing/convert-pdf-service-java-api.md)
          + [凭据服务Java API QuickStart(SOAP)](developing/credential-service-java-api-quick.md)
          + [Distiller Service Java API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
-         + [DocConverter Service Java API quickStart(SOAP)](developing/docconverter-service-java-api-quick.md)
+         + [DocConverter Service Java API QuickStart(SOAP)](developing/docconverter-service-java-api-quick.md)
          + [文档管理服务（已弃用）Java API快速入门(SOAP)](developing/document-management-service-deprecated-java.md)
-         + [Document Security Service javaAPI快速入门(SOAP)](developing/document-security-service-java-api.md)
+         + [Document Security Service JavaAPI快速入门(SOAP)](developing/document-security-service-java-api.md)
          + [Encryption Service Java API QuickStart(SOAP)](developing/encryption-service-java-api-quick.md)
-         + [端点注册表Java API quickStart(SOAP)](developing/endpoint-registry-java-api-quick.md)
+         + [端点注册表Java API QuickStart(SOAP)](developing/endpoint-registry-java-api-quick.md)
          + [表单数据集成服务JavaAPI快速入门(SOAP)](developing/form-data-integration-service-java.md)
          + [Forms Service API快速入门](developing/forms-service-api-quick-starts.md)
          + [生成PDF服务Java API QuickStart(SOAP)](developing/generate-pdf-service-java-api.md)
@@ -607,7 +608,7 @@ source-git-commit: a8212a6af2a2f4a805dc2c256b741a8b45896f83
          + [输出服务Java API快速启动(SOAP)](developing/output-service-java-api-quick.md)
          + [PDF实用程序服务Java APIQ快速启动(SOAP)](developing/pdf-utilities-service-java-api.md)
          + [存储库服务API快速入门](developing/repository-service-api-quick-starts.md)
-         + [签名服务Java API quickStart(SOAP)](developing/signature-service-java-api-quick.md)
+         + [签名服务Java API QuickStart(SOAP)](developing/signature-service-java-api-quick.md)
          + [任务管理器服务Java API QuickStart(SOAP)](developing/task-manager-service-java-api.md)
          + [用户管理器Java API快速入门(SOAP)](developing/user-manager-java-api-quick.md)
          + [XMP实用程序服务Java APIQ快速启动(SOAP)](developing/xmp-utilities-service-java-api.md)
