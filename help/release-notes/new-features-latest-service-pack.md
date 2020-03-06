@@ -4,14 +4,14 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d867ee46ca9cd5945c7413d42fc002b90332c3c
+source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-2020年，对于Adobe Experience Manager(AEM)6.5，每季度Service Pack中都会提供新功能和改进。 随着客户越来越快地采用创新技术，这种新方法将为客户带来好处。
+2020年，Adobe Experience Manager(AEM)6.5提供了季度Service Pack的功能和持续改进。 随着客户越来越快地采用创新技术，这种新方法将为客户带来好处。
 
 最新的AEM Service Pack 4(6.5.4.0)将于2020年3 **月5日发布**。 本文重点介绍了最新Service Pack提供的功能，以使您的AEM旅程更加丰富。
 
@@ -19,15 +19,16 @@ source-git-commit: 1d867ee46ca9cd5945c7413d42fc002b90332c3c
 
 ### 不同方面的性能改进 {#performance-improvements}
 
-* 缩短在站点(contexthub.kernel.js)中加载和初始化ContextHub的时间。 使得在站点访问期间加载第1页更快。
+* 缩短了在站点(contexthub.kernel.js)中加载和初始化ContextHub的时间。 这样，在网站访问期间，加载页面的速度就会更快。
 
-* 在页面编辑器中，将体验片段拖放到页面画布中后，缩短刷新页面的时间。
+* 在页面编辑器的画布中拖放体验片段后，可缩短刷新页面的时间。
 
-* 在Live Copy概述中，缩短在站点有多个Live Copy时加载条目的时间(+200)。
+* 在Live Copy概述中，缩短了在站点有200个以上Live Copy时加载条目的时间。
 
-* 在模板编辑器中，改进对可能触发模板编辑器减慢速度的不完整／无效URL的处理。
+* 在模板编辑器中，改进了对不完整或无效URL的处理，这些URL可触发模板编辑器减慢速度。
 
-此外，从AEM 6.5 SP4开始，样式系统已得到增强，样式现在也可以在组件对话框中进行选择。
+此外，AEM 6.5 SP4还包含样式系统增强功能。 您现在还可以在组件对话框中选择样式。
+
 
 ## AEM Assets {#aem-assets}
 
