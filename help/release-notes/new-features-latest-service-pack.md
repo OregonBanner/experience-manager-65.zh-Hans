@@ -112,7 +112,7 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 除了新增功能外，AEM 6.5 Service Pack 4还包含以下主要亮点：
 
-* 现在，只有选择性内容子树才能同步到 *Dynamic Media - Scene7模式* ，而不是所有子树 `content/dam`。
+* 现在，只有选择性内容子树才能同步到 ***Dynamic Media - Scene7模式*** ，而不是所有子树 `content/dam`。
 
 * 使用SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
 
