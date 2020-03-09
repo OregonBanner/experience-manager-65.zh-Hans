@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 ---
 
@@ -108,7 +108,7 @@ AEM Forms提供了规则编 [辑器](/help/forms/using/rule-editor.md) ，允许
 
 * 按相对唯一的层次结构引用组件，以避免任何冲突。 For example, `parentName.fieldName`.
 
-* 在处理复杂或常用的规则时，请考虑将业务逻辑编写为一个单独的客户端库中的函数，您可以在自适应表单中指定该函数并重复使用。 客户端库应为自包含库，除jQuery和Endrower.js外，不应具有任何外部依赖关系。 您还可以使用客户端库强制对已提 [交的表单数据进行](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 服务器端重新验证。
+* 在处理复杂或常用的规则时，请考虑将业务逻辑编写为一个单独的客户端库中的函数，您可以在自适应表单中指定和重用该函数。 客户端库应为自包含库，除jQuery和Endrower.js外，不应具有任何外部依赖关系。 您还可以使用客户端库强制对已提 [交的表单数据进行](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 服务器端重新验证。
 * 自适应表单提供一组API，您可以使用这些API与自适应表单通信并对自适应表单执行操作。 一些关键API如下所示。 有关详细信息，请参 [阅自适应表单的JavaScript库API参考](https://adobe.com/go/learn_aemforms_documentation_63)。
 
    * `guideBridge.reset()`:重置表单。
@@ -184,7 +184,7 @@ AEM Forms提供了规则编 [辑器](/help/forms/using/rule-editor.md) ，允许
 
 您可以在自适应表单中利用Adobe Sign的多签名体验。 在自适应表单中配置Adobe Sign时，请考虑以下事项。 有关详细信息，请 [参阅在自适应表单中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md)。
 
-* 只有在所有签名者都对表单进行了签名后，才会提交启用了Adobe sign的自适应表单。 表单以“待签名”状态显示，直到表单由所有签名者签名。
+* 只有在所有签名者都对表单进行了签名后，才会提交启用了Adobe Sign的自适应表单。 表单以“待签名”状态显示，直到表单由所有签名者签名。
 * 您可以配置表单内签名体验，或在提交时将签名者重定向到签名页面。
 * 根据需要配置顺序或并行签名体验。
 
@@ -231,7 +231,7 @@ Calvin SDK是一个实用程序API，供Adaptive Forms开发人员测试Adaptive
 需要服务器端验证，以防止任何尝试绕过客户端上的验证以及任何可能危及数据提交和违反业务规则的行为。 通过加载所需的客户端库在服务器上执行服务器端验证。
 
 * 在客户端库中包含用于验证自适应表单中表达式的函数，并在自适应表单容器对话框中指定客户端库。 有关详细信息，请参 [阅服务器端重新验证](/help/forms/using/configuring-submit-actions.md#p-server-side-revalidation-in-adaptive-form-p)。
-* 服务器端验证可验证表单模型。 建议为验证创建单独的客户端库，但不要将它与同一客户端库中的HTML样式和DOM操作等内容混合。
+* 服务器端验证可验证表单模型。 建议为验证创建单独的客户端库，但不要将它与同一客户端库中的HTML样式和DOM操作等内容混合使用。
 
 ### 本地化自适应表单 {#localizing-adaptive-forms}
 
@@ -245,7 +245,7 @@ AEM提供了翻译工作流程，您可以使用这些工作流来本地化自�
 
    `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Forms目前支持以英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语——巴西语(pt-br)、中文-(zh-tn)、中文——台湾语(zh-tw)和韩语(ko-kr)语言本地化自适应表单内容。 但是，您可以在运行时为自适应表单添加新区域设置支持。 有关详细信息，请参 [阅支持自适应表单本地化的新区域设置](/help/forms/using/supporting-new-language-localization.md)。
+* AEM Forms目前支持以英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语——巴西语(pt-BR)、中文(zh-CN)、中文——台湾语(zh-TW)和韩语(ko-KR)区域设置的自适应表单内容本地化。 但是，您可以在运行时为自适应表单添加新区域设置支持。 有关详细信息，请参 [阅支持自适应表单本地化的新区域设置](/help/forms/using/supporting-new-language-localization.md)。
 
 ## 为生产准备表单项目 {#prepare-forms-project-for-production}
 
@@ -254,7 +254,7 @@ AEM提供了翻译工作流程，您可以使用这些工作流来本地化自�
 您可以配置位于安全区域中防火墙后的AEM Forms服务器的其他实例。 您可以将此实例用于：
 
 * **批处理**:重负载成批重复或计划的作业。 例如，打印语句、生成对应内容和使用文档服务（如PDF Generator、Output和Assembler）。
-* **存储PII数据**:将PII数据保存到处理服务器上。 如果您已经使用自定义存储提供程序存储PII数据，则不需要此操作。
+* **存储PII数据**:将PII数据保存到处理服务器上。 如果您已经使用自定义存储提供程序存储PII数据，则不需要此设置。
 
 ### 将项目移至其他环境 {#moving-project-to-another-environment}
 
