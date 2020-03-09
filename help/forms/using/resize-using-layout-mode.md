@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 ---
 
@@ -81,11 +81,11 @@ source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
 
 执行以下步骤以定义面板的列数：
 
-1. 在“编 **[!UICONTROL 辑]** ”模式中 ![，点按面板，选择“配置”](assets/configure_icon.png)，然后选择“响应式——页面上的所有内容(无导航选项 **** )”。
+1. 在模 **[!UICONTROL 式中]** ，点按面板，选择配置 ![](assets/configure_icon.png)******** ，然后从面板布局编辑下拉列表中选择响应式——页面上的所有内容（无导航选项）。
 
 1. 点按 ![保存](assets/save_icon.svg) ，以保存属性。
 
-1. 在布局模 **[!UICONTROL 式中]** ，点按面板中要调整大小的任何组件，选择 ![Select Parent](assets/select_parent_icon.svg)，然后在下拉列表中选择第一个选项（如果面板是组件的直接父项）。
+1. 在布局 **[!UICONTROL 模式中]** ，点按面板中的任意组件，选择 ![选择父项](assets/select_parent_icon.svg)，然后选择面板。
 
 1. 点 ![按多列](assets/multi-column.svg) ，然后从下拉列表中选择列数。 列数范围从1到12。 该面板被分为多列布局。
 
