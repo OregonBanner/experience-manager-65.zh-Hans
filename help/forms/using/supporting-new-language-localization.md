@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 ---
 
@@ -42,7 +42,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 ## 添加对不支持的区域设置的本地化支持 {#add-localization-support-for-non-supported-locales}
 
-AEM Forms目前支持以英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语——巴西语(pt-br)、中文-(zh-tn)、中文——台湾语(zh-tw)和韩语(ko-kr)语言本地化自适应表单内容。
+AEM Forms目前支持以英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语——巴西语(pt-BR)、中文(zh-CN)、中文——台湾语(zh-TW)和韩语(ko-KR)区域设置的自适应表单内容本地化。
 
 要在自适应表单运行时添加对新区域设置的支持，请执行以下操作：
 
@@ -93,12 +93,12 @@ LogMessages.js
 
 ### 为词典添加区域设置支持 {#add-locale-support-for-the-dictionary-br}
 
-仅当添加不在 `<locale>` 、、、、、、、 `en`、添加中 `de`、添加中时，才 `es`执行此步 `fr``it``pt-br``zh-tn``zh-tw``ja``ko-kr`骤。
+仅当添加不在 `<locale>` 、、、、、、、 `en`、添加中 `de`、添加中时，才 `es`执行此步 `fr``it``pt-br``zh-cn``zh-tw``ja``ko-kr`骤。
 
 1. 在下 `nt:unstructured` 创建一 `languages` 个节 `etc`点（如果尚不存在）。
 
 1. 向节点添加多值字符串属 `languages` 性（如果尚不存在）。
-1. 添加默 `<locale>` 认区域设 `de`置值、 `es`区域设置值、区域设置值、区域设 `fr`置值、区域设 `it``pt-br``zh-tn``zh-tw``ja``ko-kr`置值、区域设置值、区域设置值、区域设置值、区域设置值。
+1. 添加默 `<locale>` 认区域设 `de`置值、 `es`区域设置值、区域设置值、区域设 `fr`置值、区域设 `it``pt-br``zh-cn``zh-tw``ja``ko-kr`置值、区域设置值、区域设置值、区域设置值、区域设置值。
 
 1. 添加 `<locale>` 到的属性 `languages` 的值 `/etc/languages`。
 
