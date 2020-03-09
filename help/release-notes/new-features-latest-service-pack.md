@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 14df85f7a815fe567ea87375727ebe1e54733464
+source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
 
 ---
 
@@ -86,9 +86,9 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 **自定义徽标**
 
-与自定义标题文本类似，属于工作流 **** 管理员组的用户现在可以自定义顶部可用的标志以及您选择的标志。
+与自定义标题文本类似，属于工作流 **** 管理员组的用户现在可以自定义顶部可用的标志以及您自己选择的标志。
 
-您可以在视图选择器> **[!UICONTROL Admin Control下找到新的“自定]** 义徽标 **[!UICONTROL ”选项]**。
+您可以在视图选择器> **[!UICONTROL Admin Control下找到新的自定]** 义徽标 ****。
 
 有关此功能的详细信息，请参阅您 [的收件箱](../sites-authoring/inbox.md)。
 
@@ -112,7 +112,7 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 除了新增功能外，AEM 6.5 Service Pack 4还包含以下主要亮点：
 
-* 现在，只有选择性内容子树才能同步到Scene7而不是所有子树 `content/dam`。
+* 现在，只有选择性内容子树才能同步到 *Dynamic Media - Scene7模式* ，而不是所有子树 `content/dam`。
 
 * 使用SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
 
