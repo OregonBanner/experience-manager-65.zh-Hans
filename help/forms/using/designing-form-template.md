@@ -10,7 +10,7 @@ topic-tags: hTML5_forms
 discoiquuid: f2e9dbe4-e210-41f3-8878-2fc4d166e63c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8ebe1a2c23ec5e3e16807072ac17ec13a6df9701
+source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 
 ---
 
@@ -41,6 +41,6 @@ HTML5表单的主要目标是触控设备。 因此，AEM Forms Designer中新�
 
 #### Rich text format {#rich-text-format}
 
-要向呈现的HTML5表单中的文本字段添加格式选项列表，您可以在Forms Designer中为文本字段定义字段格式。 点按设计视图中的 **[!UICONTROL 文本字段]**。 在“字 **[!UICONTROL 段]** ”选项卡中，从“字段格式”下拉列表中选择“富文本 ******** ”以应用这些设置。 文本字段在HTML5表单中呈现时显示格式选项。
+在Forms Designer中为文本字段定义富文本字段格式，以向呈现的HTML5表单中的字段添加格式选项列表。 要应用设置，请点按“设计”视图中的文 **[!UICONTROL 本字段]**。 在“字 **[!UICONTROL 段]** ”选项卡中，从“字段格式”下拉列表中选择“富文本”(Rich Text ******** )。 文本字段在HTML5表单中呈现时显示格式选项。
 
 [联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
