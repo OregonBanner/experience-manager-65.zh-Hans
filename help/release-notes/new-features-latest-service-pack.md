@@ -4,14 +4,14 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
+source-git-commit: c9e8e1f2ebb72efc2f54c13c3ddae525ec55349f
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-2020年，Adobe Experience Manager(AEM)6.5提供了季度Service Pack的功能和持续改进。 随着客户越来越快地采用创新技术，这种新方法将为客户带来好处。
+Adobe Experience Manager(AEM)6.5今年通过季度Service Pack提供功能并不断改进。 新方法使我们的客户能够更快地采用创新。
 
 最新的AEM Service Pack 4(6.5.4.0)将于2020年3 **月5日发布**。 本文重点介绍了最新Service Pack提供的功能，以使您的AEM旅程更加丰富。
 
@@ -23,20 +23,17 @@ source-git-commit: 93521f102596a7f5cb247ddc430626d352338ce8
 
 * 在页面编辑器的画布中拖放体验片段后，可缩短刷新页面的时间。
 
-* 在Live Copy概述中，缩短了在站点有200个以上Live Copy时加载条目的时间。
+* 缩短了在Live Copy概述中为包含200多个Live Copy的“站点”页面加载条目的时间。
 
-* 在模板编辑器中，改进了对不完整或无效URL的处理，这些URL可触发模板编辑器减慢速度。
+* 改进了对不完整或无效URL的处理，这些URL可触发模板编辑器在模板编辑器中放慢速度。
 
-此外，AEM 6.5 SP4还包含样式系统增强功能。 您现在还可以在组件对话框中选择样式。
-
+此外，AEM 6.5 Service Pack 4还包含样式系统增强功能。 您现在还可以在组件对话框中选择样式。
 
 ## AEM Assets {#aem-assets}
 
 ### 通过Adobe I/O Console与Brand Portal集成 {#assets-integration-bp}
 
-AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租户购买IMS令牌以授权。 以前，它是通过旧版OAuth网关在经典UI中配置的。
-
-2020年4月6日之后将不支持与旧版OAuth的新集成，并将转向Adobe I/O控制台。 如果不修改集成，则现有配置将继续工作。
+您现在可以通过Adobe I/O控制台配置带有Brand Portal的AEM资产。 Adobe I/O Console为Brand Portal租户购买IMS令牌以授权。 以前，AEM资产通过旧版OAuth网关在经典UI中配置了品牌门户。 在2020年4月6日之前，将支持使用传统OAuth网关的配置。 如果不修改集成，则现有配置将继续工作。
 
 您可以创建新集成或将集成设置升级到Adobe I/O控制台。
 
@@ -56,7 +53,7 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 ### 在AEM Forms工作流程中生成可打印输出 {#generate-printable-output}
 
-如果您希望解决方案打印源模板文件的多个副本并将其与具有大量记录的数据文件集成，AEM Forms中将提供新的“生成可打印输出”工作流步骤。 例如，如果要在每次打印源表单时打印其名称不同的表单，则可以在数据文件中具有这些名称，并将其与标准模板文件集成。
+如果您希望解决方案打印或保存源模板文件的多个副本并将其与具有大量记录的数据文件集成，AEM Forms中将提供新的“生成可打印输出”工作流步骤。 例如，如果要在每次打印源表单时打印其名称不同的表单，则可以在数据文件中具有这些名称，并将其与标准模板文件集成。
 
 充分利用此功能，使用“工 **具** ”>“工作流 **[!UICONTROL ”]** >“模型 **[!UICONTROL ”]********** >“创建并创建模型”，然后对“可打印输出”工作流步骤生成可打印的搜索。
 
@@ -68,7 +65,7 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 您现在可以在自适应表单和交互式通信中为面板定义列数。
 
-您可以通过切换到布局模式来查找新选项，点按要转换为多列格式的面板，选择其父项，然后点按多列图标（如下图所示），以定义面板的列数。
+可通过切换到布局模式来查找新选项。 点按要转换为多列格式的面板，选择其父项，然后点按多列图标，以定义该面板的列数。
 
 ![多列布局](assets/multi-column-layout.gif)
 
@@ -80,13 +77,13 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 **自定义标题文本**
 
-属于工作流管 **理员组的用户** ，现在可以自定义顶部可用的标题文本，以您自己选择的文本替换现有 **[!UICONTROL Adobe Experience Manager文本]** 。
+工作流管理员现在可以指定您自己选择的标题文本。
 
 您可以在视图选择器( **[!UICONTROL 工具栏右上角提供]** )>管理控制下找到新的自定义标题文 **[!UICONTROL 本选项]**。
 
 **自定义徽标**
 
-与自定义标题文本类似，属于工作流 **** 管理员组的用户现在可以自定义顶部可用的标志以及您自己选择的标志。
+与自定义标题文本类似，工作流管理员现在可以指定您自己选择的标题标志。
 
 您可以在视图选择器> **[!UICONTROL Admin Control下找到新的自定]** 义徽标 ****。
 
@@ -94,7 +91,7 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 ### 用户导航控件 {#user-navigation-control}
 
-属于工作流管 **理员组的用户** ，可以选择让用户根据其角色在受限模式下处理AEM。 管理员可以控制标题中可用导航选项的显示，并限制用户切换到工作流创作模式或导航到帮助或其他解决方案链接。
+工作流管理员现在可以选择让用户基于角色在受限模式下处理AEM。 管理员可以控制标题中可用导航选项的显示，以限制用户切换到工作流创作模式或其他解决方案链接。
 
 查看视图选择器> **[!UICONTROL Admin Control下的]** “隐藏”导航 **[!UICONTROL 选项]**。
 
@@ -102,9 +99,9 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 ### HTML5表单中的富文本支持 {#rich-text-support}
 
-文本字段现在可以在呈现的HTML5表单中显示格式选项列表。 您必须为Forms Designer中的文本字段定义字段格式，才能对字段应用相应的设置。
+文本字段现在可以在呈现的HTML5表单中显示格式选项列表。 您必须为Forms Designer中的文本字段定义一种格式，才能将相应的设置应用于该字段。
 
-要使用此功能，请点按Forms Designer中“设计” **[!UICONTROL 视图中的]** “文本”字段。 在“字 **[!UICONTROL 段]** ”选项卡中，从“字段格式”下拉列表中选择“富文本 ******** ”以应用这些设置。 文本字段现在在HTML5表单中呈现时显示格式选项。
+要使用此功能，请点按Forms Designer中“设计” **[!UICONTROL 视图中的]** “文本”字段。 在“字 **[!UICONTROL 段]** ”选项卡中，从“字段格式”下拉列表中选择“富文本 ******** ”以应用这些设置。
 
 有关详细信息，请参 [阅设计HTML5表单的表单模板](../forms/using/designing-form-template.md)。
 
@@ -112,9 +109,9 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 除了新增功能外，AEM 6.5 Service Pack 4还包含以下主要亮点：
 
-* 现在，只有选择性内容子树才能同步到 ***Dynamic Media - Scene7模式*** ，而不是所有子树 `content/dam`。
+* 您现在可以将选择性内容子树同步到Scene7，而不是上的所有可用内容 `content/dam`。
 
-* 使用SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
+* 与SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
 
 * SOAP输入或输出以及复杂的数据结构现在支持动态组替换。
 
@@ -158,7 +155,7 @@ AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租�
 
 * AEM Sites:Project Archetype 23启动新AEM项目的最佳方式。 借助Archetype 23，我们将 [SPA和常规站点的Project Archetype合并为一个](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23)，进一步提供一个默认主题以启动您的前端开发。
 
-* AEM Sites:WKND参考站点全 [新参考项目](https://www.wknd.site/) ，其中包含有关如何使用AEM构建站点的最佳实践。 阅读完全更新的 [WKND教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) ，了解更多信息并从 [GitHub获取代码](https://github.com/adobe/aem-guides-wknd/releases)。
+* AEM Sites:WKND参考站点全 [新参考项目](https://www.wknd.site/) ，其中包含有关如何使用AEM构建站点的最佳实践。 阅读完全更新的 [WKND教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) ，并从 [GitHub获取代码，了解更多信息](https://github.com/adobe/aem-guides-wknd/releases)。
 
 * AEM Sites:Commerce CIF Core Components 0.7.0和0.9.0Integrating AEM Sites and Magento Commerce. 我们不断扩 [展专用的核心组件和项目原型，重点关注商务](https://github.com/adobe/aem-core-cif-components/releases)。
 
