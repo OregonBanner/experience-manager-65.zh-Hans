@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ff006375b9ac958c7a5f9adf122990bf23808834
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -244,6 +244,8 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 设计人员：如果表中有合并的单元格，则使用输出服务从XDP表单转换的输出PDF文件的辅助功能测试将失败(CQ-4285372)。
 
+* 基础JEE:由于缓存问题，从群集断开连接的服务器无法重新连接(NPR-32412)。
+
 ## Install 6.5.4.0 {#install}
 
 **设置要求**
@@ -335,7 +337,7 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 </dependency>
 ```
 
-## Deprecated features {#removed-deprecated-features}
+## 已弃用功能 {#removed-deprecated-features}
 
 本节列出AEM 6.5.4.0中已标记为已弃用的功能和特性。计划在将来版本中删除的功能将设置为先弃用，然后使用替代选项。
 
