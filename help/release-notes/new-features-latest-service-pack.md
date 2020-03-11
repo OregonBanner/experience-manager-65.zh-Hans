@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d0038181326037ab71f4df9b509d2f0827191c86
+source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
 
 ---
 
@@ -19,15 +19,15 @@ Adobe Experience Manager(AEM)6.5今年通过季度Service Pack提供功能并不
 
 ### 不同方面的性能改进 {#performance-improvements}
 
-* 缩短了在站点(contexthub.kernel.js)中加载和初始化ContextHub的时间。 这样，在网站访问期间，加载页面的速度就会更快。
+* 缩短了在站点(contexthub.kernel.js)中加载和初始化ContextHub的时间。 这样，在网站访问过程中页面加载速度会更快。
 
-* 在页面编辑器的画布中拖放体验片段后，可缩短刷新页面的时间。
+* 将体验片段拖放到站点页面编辑器后，可缩短刷新页面的时间。
 
 * 缩短了在Live Copy概述中为包含200多个Live Copy的“站点”页面加载条目的时间。
 
-* 改进了对不完整或无效URL的处理，这些URL可触发模板编辑器在模板编辑器中放慢速度。
+* 改进了对不完整或无效URL的处理。 此类URL会减慢模板编辑器的速度。
 
-此外，AEM 6.5 Service Pack 4还包含样式系统增强功能。 您现在还可以在组件对话框中选择样式。
+此外，AEM 6.5.4.0还包含样式系统增强功能。 您现在可以在组件对话框中选择样式。
 
 ## AEM Assets {#aem-assets}
 
