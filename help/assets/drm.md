@@ -3,7 +3,7 @@ title: 资产中的数字版权管理
 description: 了解如何在AEM中管理授权资产的资产到期状态和信息。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*图：在卡片视图中，卡上的标记指示已过期的资产。*
+*图：在卡片视图中，卡上的标记指示已过期的资产*
 
 **列表视图**
 
@@ -35,7 +35,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 您还可以在引用边栏中查看资产的到期 **[!UICONTROL 状态]** 。 它管理资产到期状态以及复合资产与引用的子资产、集合和项目之间的关系。
 
 1. 导航到要查看其引用网页和复合资产的资产。
-1. 选择资产，然后选择Experience manager徽标。
+1. 选择资产，然后选择Experience Manager徽标。
 
 1. 从菜 **[!UICONTROL 单中选择]** “引用”(References)。
 
@@ -59,7 +59,7 @@ source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-1. 单击Experience manager徽标以显示搜索面板。
+1. 单击Experience Manager徽标以显示搜索面板。
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
