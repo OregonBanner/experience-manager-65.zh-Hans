@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -157,12 +157,12 @@ AEM通过Sling还支持开发和部署自定义sling渲染器以完全控制渲�
    <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>对于以下sling资源类型，不要返回默认的CaaSjson导出。<br /><br /> 通过将资源呈现为，返回客户json导出；&lt;RESOURCE&gt;。&lt;SELECTOR_TO_INC&gt;.json </td>
+   <td>对于以下sling资源类型，不要返回默认的CaaSjson导出。<br /> 通过将资源呈现为，返回客户json导出；<br /> &lt;RESOURCE&gt;。&lt;SELECTOR_TO_INC&gt;.json </td>
   </tr>
  </tbody>
 </table>
 
-### 现有Content services导出配置 {#existing-content-services-export-configs}
+### 现有Content Services导出配置 {#existing-content-services-export-configs}
 
 内容服务包括两种导出配置：
 
@@ -226,7 +226,7 @@ AEM通过Sling还支持开发和部署自定义sling渲染器以完全控制渲�
 
 请参阅以下资源，了解内容服务中的其他主题：
 
-* [开发模型](/help/mobile/models-in-repository.md)
+* [开发模型](/help/mobile/administer-mobile-apps.md)
 * [创作内容服务](/help/mobile/develop-content-as-a-service.md)
 * [管理内容服务](/help/mobile/developing-content-services.md)
 
