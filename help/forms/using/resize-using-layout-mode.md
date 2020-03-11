@@ -10,7 +10,7 @@ topic-tags: author
 discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
+source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
 
 ---
 
@@ -36,7 +36,7 @@ source-git-commit: 147c50adb02b48be8e3aba760dbac309ab49badf
 ## 调整组件大小 {#resize-components}
 
 1. 在布局模式中，点按组件以调整大小。 蓝点显示在响应式网格的开始和结束处。
-1. 拖放蓝色圆点以定义组件在响应式网格中的位置。
+1. 拖放蓝点以定义组件在响应式网格中的位置。
 
    ![使用布局模式调整大小](assets/layout_mode_resize_new_updated.png)
 
