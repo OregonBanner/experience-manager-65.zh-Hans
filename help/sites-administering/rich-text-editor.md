@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 2cde81d3-5fc1-4a32-a307-7dc592f37162
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
@@ -20,15 +20,21 @@ RTE可配置为启用、禁用和扩展创作组件中的可用功能。 要了�
 
 以下工作流说明了完成RTE配置任务的建议顺序。
 
-![了解如何配置rte的步骤顺序图](assets/rte_workflow_v1.png)*所示：学习如何配置RTE的步骤顺序*
+![学习如何配置rte的步骤顺序](assets/rte_workflow_v1.png)
+
+*图：学习如何配置RTE的步骤顺序*
 
 ## 了解触屏优化UI和经典UI {#understand-touch-enabled-ui-and-classic-ui}
 
 触屏优化UI是AEM的标准用户界面。 Adobe为创作环境引入了触 [控UI](/help/sites-authoring/responsive-layout.md) ，并提供响应式设计。 触屏UI专为触控和桌面设备设计。 UI与原始经典UI差别很大。
 
-![触屏优化UI中的富文本编辑器工具栏图](assets/chlimage_1-35.png)*:触屏优化UI中的富文本编辑器工具栏*
+![触屏优化UI中的富文本编辑器工具栏](assets/chlimage_1-35.png)
 
-![经典UI中的富文本编辑器工具栏](assets/rtedefault.png)*图：经典UI中的富文本编辑器工具栏*
+*图：触屏优化UI中的富文本编辑器工具栏*
+
+![经典UI中的富文本编辑器工具栏](assets/rtedefault.png)
+
+*图：经典UI中的富文本编辑器工具栏*
 
 >[!MORELIKETHIS]
 >
@@ -57,25 +63,33 @@ RTE可配置为启用、禁用和扩展创作组件中的可用功能。 要了�
 
 打开（慢速双击／单击）后，可在页面内编辑内容。 给出了一个包含非常基本选项的紧凑工具栏。
 
-![使用触屏优化UI中的基本工具栏进行内联编辑](assets/chlimage_1-36.png)*图：在触屏优化UI中使用基本工具栏进行内联编辑*
+![在触屏优化UI中使用基本工具栏进行内联编辑](assets/chlimage_1-36.png)
+
+*图：在触屏优化UI中使用基本工具栏进行内联编辑*
 
 在经典UI中，慢速双击组件可进行内联编辑，橙色轮廓可高亮显示内容。 如果内容查找器处于打开状态，则窗口顶部将显示一个包含可用RTE格式选项的工具栏。 如果内容查找器未打开，则不显示格式选项，您只能进行基本的文本编辑。
 
-### 全屏编辑 {#full-screen-editing}
+### Full screen editing {#full-screen-editing}
 
 AEM组件可以在全屏视图中打开，从而隐藏页面内容并占据可用屏幕。 考虑对内联编辑的详细版本进行全屏编辑，因为它提供的编辑选项最多。 使用内联编辑模式时，可 ![以从紧凑工具栏中单击rte_fullscreen](assets/rte_fullscreen.png)，打开它。
 
 在对话框全屏模式中，以及详细的RTE工具栏中，对话框中的可用选项和组件也可用。 它仅适用于包含RTE和其他组件的对话框。
 
-![在触屏优化UI中以全屏模式进行编辑时的详细RTE工具栏](assets/chlimage_1-37.png)*图：在触屏优化UI中以全屏模式进行编辑时的详细RTE工具栏*
+![在触屏优化UI中以全屏模式进行编辑时的详细RTE工具栏](assets/chlimage_1-37.png)
+
+*图：在触屏优化UI中以全屏模式进行编辑时的详细RTE工具栏*
 
 ### 对话框编辑 {#dialog-editing}
 
-双击组件后，将打开一个用于编辑内容的对话框。 该对话框在现有页面的顶部打开。 在某些特定情况下，对话框会以弹出窗口的形式打开。 例如，当文本组件是多列页面布局中某列的一部分，并且该对话框的可用区域较少时。
+双击组件后，将打开一个用于编辑内容的对话框。 该对话框将在现有页面的顶部打开。 在某些特定情况下，对话框会以弹出窗口的形式打开。 例如，当文本组件是多列页面布局中某列的一部分，并且该对话框的可用区域较少时。
 
-![触屏优化UI中的对话框编辑模式](assets/dialog_editing_modetouchui.png)*图：触屏优化UI中的对话框编辑模式*
+![触屏优化UI中的对话框编辑模式](assets/dialog_editing_modetouchui.png)
 
-![经典UI中包含用于编辑的详细工具栏的对话框](assets/chlimage_1-38.png)*图：经典UI中包含用于编辑的详细工具栏的对话框*
+*图：触屏优化UI中的对话框编辑模式*
+
+![经典UI中包含用于编辑的详细工具栏的对话框](assets/chlimage_1-38.png)
+
+*图：经典UI中包含用于编辑的详细工具栏的对话框*
 
 ## 关于RTE插件和相关功能 {#aboutplugins}
 
@@ -343,7 +357,7 @@ AEM RTE功能有以下限制：
 
 **如何选择多个表单元格？**
 
-要选择表中的多个单元格，请按 `Ctrl` 键或 `Cmd` 按键，然后逐个单击表单元格。
+要选择表中的多个单元格，请按 `Ctrl` 或 `Cmd` 按键，然后逐个单击表单元格。
 
 现在，对选择执行操作，例如设置选定单元格的属性。
 
