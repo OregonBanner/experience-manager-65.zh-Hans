@@ -1,14 +1,14 @@
 ---
-title: 从AEM下载资产
+title: 从 AEM 下载资产
 description: 了解如何从AEM下载资产以及启用或禁用下载功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 ---
 
 
-# 从AEM下载资产 {#download-assets-from-aem}
+# 从 AEM 下载资产 {#download-assets-from-aem}
 
 您可以下载包括静态和动态演绎版在内的资产。 或者，您也可以直接从AEM资产发送包含指向资产链接的电子邮件。 下载的资产会打包在 ZIP 文件中。对于导出作业，压缩的 ZIP 文件大小最大为 1 GB。每个导出作业最多允许处理的资产总数为 500 个。
 
@@ -20,13 +20,15 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 无法下载图像集、旋转集、混合媒体集和传送集等资产类型。
 
-![从AEM资产下载资产时可用的选项](assets/asset_download_dialog.png)*图：从AEM资产下载资产时可用的选项*
+![从AEM资产下载资产时可用的选项](assets/asset_download_dialog.png)
 
-以下是“导出／下载”选项。 动态演绎版是Dynamic Media特有的，它允许您在动态生成演绎版的同时选择资产——只有在启用了Dynamic media的情况下，此选项才可用。
+*图：从AEM资产下载资产时可用的选项*
+
+以下是“导出／下载”选项。 动态演绎版是Dynamic Media特有的，它允许您在动态生成演绎版的同时选择资产——只有在启用了Dynamic Media的情况下，此选项才可用。
 
 | 导出或下载选项 | 描述 |
 |---|---|
-| [!UICONTROL Assets] | 选择此选项可以下载资产的原始形式，而无需任何演绎版。 |
+| [!UICONTROL 资产] | 选择此选项可以下载资产的原始形式，而无需任何演绎版。 |
 | [!UICONTROL 演绎版] | 演绎版是资产的二进制表示形式。资产具有主要表示形式——已上传文件的表示形式。 他们可以有任意数量的表示形式。 <br> 通过此选项，您可以选择要下载的演绎版。 可用的演绎版取决于您选择的资产。 |
 | [!UICONTROL 动态演绎版] | 动态演绎版可动态生成其他演绎版。When you select this option, you also select the renditions you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>此外，您还可以选择大小和度量单位、格式、色彩空间、分辨率以及任何图像修饰符（例如反转图像） |
 | [!UICONTROL 电子邮件] | 将向用户发送电子邮件通知。 标准电子邮件模板位于以下位置：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> 在部署过程中自定义的模板应位于以下位置： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul>您可以在以下位置存储特定于租户的自定义模板：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> |
@@ -70,4 +72,4 @@ AEM中的默认servlet允许经过身份验证的用户发出任意大的并发�
 >
 >* [下载受DRM保护的资源](drm.md)
 >* [在Win或Mac桌面上使用AEM桌面应用程序下载资源](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [从支持的Adobe Creative cloud应用程序中使用Adobe Assets Link下载资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [从支持的Adobe Creative Cloud应用程序中使用Adobe Assets Link下载资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
