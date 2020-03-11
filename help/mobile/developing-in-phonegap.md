@@ -1,6 +1,6 @@
 ---
 title: PhoneGap
-seo-title: 为Adobe phoneGap Enterprise创作内容
+seo-title: 为Adobe PhoneGap Enterprise创作内容
 description: 本页是在AEM中使用PhoneGap Enterprise开发应用程序的起点。 AEM与PhoneGap集成，这样您就可以使用AEM页面轻松创建应用程序。 PhoneGap允许用户创建实用程序应用程序，以便用户使用内容。
 seo-description: 本页是在AEM中使用PhoneGap Enterprise开发应用程序的起点。 AEM与PhoneGap集成，这样您就可以使用AEM页面轻松创建应用程序。 PhoneGap允许用户创建实用程序应用程序，以便用户使用内容。
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
 
 ---
 
@@ -24,9 +24,9 @@ AEM与PhoneGap集成，这样您就可以使用AEM页面轻松创建应用程序
 
 >[!NOTE]
 >
->在开始使用Adobe phoneGap使用AEM Mobile之前，请确保设置环境并开始使用 [AEM Mobile应用程序控制面板](/help/mobile/phonegap-authoring-apps.md)。
+>在开始使用Adobe PhoneGap使用AEM Mobile之前，请确保设置环境并开始使用 [AEM Mobile应用程序控制面板](/help/mobile/phonegap-authoring-apps.md)。
 
-以下资源将帮助您开始使用Adobe phoneGap使用AEM Mobile:
+以下资源将帮助您开始使用Adobe PhoneGap使用AEM Mobile:
 
 * [在AEM中开发Mobile应用程序](/help/mobile/developing-mobile-applications.md)
 * [内容同步的移动设备](/help/mobile/phonegap-contentsync.md)
@@ -35,7 +35,7 @@ AEM与PhoneGap集成，这样您就可以使用AEM页面轻松创建应用程序
 * [AEM Mobile内容服务：概述](/help/mobile/develop-content-as-a-service.md)
 
    * 要启用内容服务和数据模型，请参阅管 [理内容服务](/help/mobile/developing-content-services.md)
-   * 要了解有关创建模型的信息，请参阅开 [发模型](/help/mobile/models-in-repository.md)
+   * 要了解有关创建模型的信息，请参阅开 [发模型](/help/mobile/administer-mobile-apps.md)
    * 要了解渲染和交付，请参 [阅渲染和交付内容服务](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
@@ -47,5 +47,5 @@ AEM与PhoneGap集成，这样您就可以使用AEM页面轻松创建应用程序
 要了解管理员和开发人员的角色和职责，请参阅以下资源：
 
 * [使用AEM为Adobe PhoneGap Enterprise进行创作](/help/mobile/phonegap.md)
-* [通过AEM管理Adobe phoneGap Enterprise的内容](/help/mobile/administer-phonegap.md)
+* [通过AEM管理Adobe PhoneGap Enterprise的内容](/help/mobile/administer-phonegap.md)
 
