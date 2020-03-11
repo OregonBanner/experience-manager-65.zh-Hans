@@ -3,7 +3,7 @@ title: 相关资产
 description: 了解如何关联共享某些共同属性的资产。 您还可以使用该功能在资产之间创建源／派生关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: fb0688afbadd1b27f1a3b3326f18c15d1c7811aa
+source-git-commit: 4fc656948e4c5cb4a3e927c25d3afd29102b7ab4
 
 ---
 
@@ -14,7 +14,7 @@ Adobe Experience Manager(AEM)资产允许您使用相关资产功能，根据组
 
 使用此功能，您可以灵活地与供应商或代理共享低分辨率PDF文件或JPG文件，并且只有在请求时才可用高分辨率INDD文件。
 
->[!NOTE] 具有编辑权限的用户可以关联和取消关联资产。
+>[!NOTE] 只有具有编辑权限的用户才能关联和取消关联资产。
 >
 
 ## Relate assets {#relating-assets}
@@ -63,7 +63,7 @@ Adobe Experience Manager(AEM)资产允许您使用相关资产功能，根据组
 
 ## 翻译相关资产 {#translating-related-assets}
 
-使用“相关资产”功能在资产之间创建源／派生关系在翻译工作流程中也很有帮助。 当您对派生的资产运行转换工作流时，AEM资产会自动获取源文件引用的任何资产，并包含该资产以进行转换。 这样，源资产引用的资产与源资产和派生资产一起进行换算。 例如，假设您的英语副本包含派生的资产及其源文件，如所示。
+使用“相关资产”功能在资产之间创建源／派生关系在翻译工作流程中也很有帮助。 当您对派生的资产运行转换工作流时，AEM资产会自动获取源文件引用的任何资产并包括该资产以进行转换。 这样，源资产引用的资产与源资产和派生资产一起进行换算。 例如，假设您的英语副本包含派生的资产及其源文件，如所示。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
