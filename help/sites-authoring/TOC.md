@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Authoring User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: e82fc1d3de3cff96cadb6a25a6ba6169cf7f7cd0
 
 ---
 
@@ -14,6 +14,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + [创作用户指南概述](home.md)
 + AEM创作的基本任务、工具和概念 {#essentials}
    + [创作的首要步骤](first-steps.md)
+   + [页面创作](page-authoring.md)
    + [页面创作快速指南](qg-page-authoring.md)
    + [创作的概念](author.md)
    + [基本操作](basic-handling.md)
@@ -75,7 +76,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [查看页面分析数据](pa-using.md)
    + [将 Search&amp;Promote 功能添加到您的页面](search-and-promote.md)
 + 个性化 {#personalization}
-   + [个人信息](personalization.md)
+   + [个性化](personalization.md)
    + [使用 ContextHub 数据预览页面](ch-previewing.md)
    + [使用定位模式创作目标内容](content-targeting-touch.md)
    + [在多个站点中使用目标内容](multisite-support-targeted-content.md)
