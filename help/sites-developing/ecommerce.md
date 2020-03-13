@@ -11,7 +11,7 @@ topic-tags: platform
 discoiquuid: 612b45de-4505-4fc8-9f11-ae5a0952ed65
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 7e23cfaf8d61ee268bc6062f0b87a3306e1e18ce
 
 ---
 
@@ -26,7 +26,7 @@ source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 有关详细信息，请参阅：
 
 * [开发（通用）](/help/sites-developing/generic.md)
-* [使用SAP Commerce cloud进行开发](/help/sites-developing/hybris.md)
+* [使用SAP Commerce Cloud进行开发](/help/sites-developing/sap-commerce-cloud.md)
 
 >[!NOTE]
 >
