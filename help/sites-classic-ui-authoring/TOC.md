@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Classic UI Authoring User Guide
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: c34993650bbd309b036085abfae4f7db547c7104
 
 ---
 
@@ -74,6 +74,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [使用 Adobe Campaign](classic-personalization-ac.md)
    + [Adobe Campaign 组件](classic-personalization-ac-components.md)
    + [定位您的 Adobe Campaign](classic-personalization-ac-target.md)
+   + [在 AEM 中创建 Adobe Campaign 表单](classic-personalization-ac-forms.md)
 + 在经典UI中创作资产 {#assets}
    + [处理资产](classicui-assets.md)
    + [传送 Dynamic Media 资产](dynamic-media-assets-delivering.md)
