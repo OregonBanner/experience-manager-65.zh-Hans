@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a986eb3154fba51de20e31b87e9082631f057d27
+source-git-commit: 9871cbf48a01298ab2b6fb1b79bb290714b84ab1
 
 ---
 
@@ -100,7 +100,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL 同步所有内容]** -默 <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->认情况下为选中状态。 如果要在同步到Dynamic Media时有选择地包括或排除资产，请取消选择此选项。 取消选择此选项可让您从以下两种Dynamic Media同步模式中进行选择：
 
    * **[!UICONTROL Dynamic Media 同步模式]**
-      * **[!UICONTROL 默认启用]** -默认情况下，该配置将应用于所有文件夹，除非您专门标记要导出的文件夹。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
+      * **[!UICONTROL 默认启用]** -默认情况下，该配置将应用于所有文件夹，除非您专门为排除标记文件夹。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 默认禁用]** -在明确标记选定文件夹以同步到Dynamic Media之前，该配置不会应用于任何文件夹。
 要将选定的文件夹标记为同步到Dynamic Media，请选择资产文件夹，然后在工具栏中单击属 **[!UICONTROL 性]**。 在“详 **[!UICONTROL 细信息]** ”选项卡上，在“ **[!UICONTROL Dynamic Media同步模式]** ”下拉列表中，从以下三个选项中进行选择。 完成后，点按保 **[!UICONTROL 存]**。 *记住：如果您之前选择了“同步所有内容”，则这三个&#x200B;**选项将不可用**。*
          * **[!UICONTROL 继承]** -文件夹上没有明确的同步值；相反，该文件夹会从其某个上级文件夹或云配置中的默认模式继承同步值。 通过工具提示显示继承的详细状态。
@@ -327,7 +327,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **配置默认命名**
 
-1. 登录到Dynamic Media Classic(Scene7)帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 登录Dynamic Media Classic(Scene7)帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
    您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
@@ -361,7 +361,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
 **要创建批集预设，请执行以下操作：**
 
-1. 登录到Dynamic Media Classic(Scene7)帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 登录Dynamic Media Classic(Scene7)帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
    您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
