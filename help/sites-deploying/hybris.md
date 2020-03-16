@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud
 seo-title: SAP Commerce Cloud
-description: 了解如何使用SAP Commerce cloud部署电子商务。
-seo-description: 了解如何使用SAP Commerce cloud部署电子商务。
+description: 了解如何使用SAP Commerce Cloud部署电子商务。
+seo-description: 了解如何使用SAP Commerce Cloud部署电子商务。
 uuid: 26ace49c-02d2-4b49-a959-e033def89bd4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: c5dcc90a-05d2-4701-a625-2b655ad0b458
 docset: aem65
 pagetitle: Deploying eCommerce with hybris
 translation-type: tm+mt
-source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
+source-git-commit: 9e39868768d2fc70f587b18d36042e742d5fae45
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
 >
 >此页包含指向hybris网站的链接。 对于某些页面，您需要帐户才能登录。
 
-## 使用SAP Commerce cloud部署电子商务 {#deploying-ecommerce-with-sap-commerce-cloud}
+## 使用SAP Commerce Cloud部署电子商务 {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
 
 此选项位于Geometrixx Outdoors站点的英语（美国）分支( `/content/geometrixx-outdoors/en_US`)下：
 
-* [产品信息](#productinformationwithcolorvariants) （适当时包含颜色变体）
+* [产品信息](#productinformationwithcolorvariants) （如果适用，带有颜色变体）
 
 * [购物车内容概述](#shoppingcartcontentoverview)
 * [客户注册](#customersignup)[和客户登录](#customersignin)
@@ -48,7 +48,7 @@ source-git-commit: d83cd0695f69d82e49b1761df2d8c64b0037e1f9
 
 ### Technical Requirements - hybris Server {#technical-requirements-hybris-server}
 
-The hybris extension of the eCommerce Integration Framework has beed updated to support Hybris 5(as default), while maintaining backward compatibility with [Hybris 4](/help/sites-developing/hybris.md#developing-for-hybris).
+The hybris extension of the eCommerce Integration Framework has been updated to support Hybris 5(as default)while maintaining backward compatibility with Hybris 4 <!--[Hybris 4](/help/sites-developing/hybris.md#developing-for-hybris). -->
 
 >[!NOTE]
 >
