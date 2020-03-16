@@ -1,13 +1,13 @@
 ---
 title: AEM Sites 发行说明
-description: 以下发行说明特定于 Adobe Experience Manager 6.4 Sites。
+description: 以下发行说明特定于 Adobe Experience Manager 6.5 Sites。
 uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
