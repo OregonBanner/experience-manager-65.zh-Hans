@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: edbe99460bb880ae118f7e826592bc7ad11d54c5
+source-git-commit: ed756d785864131c2e031aec4331388bc057576b
 
 ---
 
@@ -39,15 +39,17 @@ Adobe Experience Manager(AEM)6.5今年通过季度Service Pack提供功能并不
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
-* 混合状态复选框现在具有aria-checked属性，其值为“mixed”，以向屏幕阅读器显示其混合状态。
+Experience Manager资产包括以下辅助功能增强：
 
-* 现在，除了基于路径的手势之外，还支持基于键盘的控件以围绕缩放的图像移动。
+* 键盘上的箭头键可用于移动和平移缩放图像中的区域。 有关详细信息，请参阅 [仅使用键盘键预览资源](../assets/managing-assets-touch-ui.md#previewing-assets)。
 
-* 日期格式约束已在字段标签中提供，仅键盘用户可手动输入日期。
+* “筛选器”面板中的混合状态复选框（除非您选择所有嵌套谓词，否则不会选择第一级复选框，并将其删除）可由屏幕阅读器读取。
 
-* Alt属性已添加到装饰性图标中，并删除了role=img属性，因此此类图标和图像不会向屏幕阅读器用户公开。
+* 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
 
-* 已添加Alt属性以关闭图标，以指示屏幕阅读器用户在其上方切换时显示的图标。
+   For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军用格式的小时，mm是分钟。
+
+* 用于 `X` 删除当前选定标记的按钮上的符号现在由屏幕阅读器和选定标记的数量一起宣布。
 
 ## AEM Forms {#aem-forms}
 
