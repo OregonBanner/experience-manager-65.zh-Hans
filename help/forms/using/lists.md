@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f763359fb333ef6cc8a6748ccfa39ba9aee9ca48
+source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ---
 
@@ -60,7 +60,7 @@ The Commentering Management Solution支持两种动态数据项（可变数据�
 
    [ ![工具栏](assets/advancedediting.png)
 
-   * **链接**:在文本中插入超文本链接。 点 **[!UICONTROL 按链接]**，在 **[!UICONTROL URL字段中指定链接，从替代文本字段中删除默认对象名称]** ，然后点按 ****![](assets/save_icon.svg)保存。
+   * **链接**:在文 [本中插](#insert-hyperlink) 入超文本链接。
    * **重复**:重复使用分隔符在数据字典中打印集合元素。
    * **条件**:点按以插入条件。 根据条件插入文本。 如果条件为true，则文本以字母显示，否则不显示。
    * **添加说明**:向文本添加注释。 这是作者可见的元数据，但不是所创建字母的一部分。
@@ -131,6 +131,18 @@ The Commentering Management Solution支持两种动态数据项（可变数据�
 
 1. 您可以使用内联条件并重复这些操作，使您的字母具有高度的情境性和良好的结构性。 有关内联条件和重复的详细信息，请参阅 [内联条件和以字母表示的重复](/help/forms/using/cm-inline-condition.md)。
 1. 点按&#x200B;**保存**。
+
+#### 在文本中插入超链接 {#insert-hyperlink}
+
+执行以下步骤以在文本资产中创建超链接：
+
+1. 在文本编辑器中选择文本或数据模型对象。
+
+2. 点按 **[!UICONTROL 链接]**。 点按 **[!UICONTROL 替代文本]** ，以删除现有数据模型对象名称或文本。
+
+3. 指定URL并点按保 ![存](assets/save_icon.svg)。
+
+![在文本资产中创建超链接](assets/text-create-hyperlink.png)
 
 #### 搜索和替换文本 {#searching-and-replacing-text}
 
@@ -458,7 +470,7 @@ The Commentering Management Solution支持两种动态数据项（可变数据�
 
 许多字母模板都包含表。 表可以是静态的，如术语和条件表，其中每行表示一个条件，每个部分显示在单独的列中。 表也可以是动态的，如帐户信息，其中包含客户名称、帐户ID、事务编号和事务处理金额等信息。
 
-* **静态表**:表有时会使用列数不同的行创建，如条款和条件表。 其中，每行表示一个条件，并且每个条件可以具有不同的子部分。 每个部分都显示在单独的列中。
+* **静态表**:表有时会使用列数不同的行创建，例如条款和条件表。 其中，每行表示一个条件，并且每个条件可以具有不同的子部分。 每个部分都显示在单独的列中。
 * **动态表**:布局片段提供将动态表的字段绑定到集合DDE的功能。 在字母生成表行时，根据集合DDE的大小生成表行。
 
 DD有一个集合元素Ondimeed_details，它有一个包含三个基元元素的复合元素：Notified_name、Notified_address和Notified_geder。
