@@ -7,12 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 0ae42d9f81df89a7e1c08fac5cce5240f14e8c60
 
 ---
 
 
-# 已知问题{#known-issues}
+# 已知问题 {#known-issues}
 
 此页面列出了于 2019 年 4 月发布的 Adobe Experience Manager 6.5 中存在的已知问题列表。
 
@@ -32,7 +32,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
 
 ## 资产 {#assets}
 
-* **** 搜索：如果搜索字符串包含前导空格，则搜索不会产生任何返回([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
+* **搜索：** 如果搜索字符串包含前导空格，则搜索不会产生任何返回([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
 * **文件夹元数据架构**：添加选择按钮后，ID 和值字段未按预期呈现，且删除功能不起作用。(CQ-4261144)
 * 重命名资产时，无法在资产名称中使用空格。(CQ-4266403)
 
