@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 82ded190d4fee4e4ef9849dc34372774c529844f
+source-git-commit: cc72581f0de6f47cd1d7e207f228e64ba7c9e842
 
 ---
 
@@ -38,7 +38,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 支持 [HTML](../forms/using/designing-form-template.md) 5表单中的富文本。
 
-* 资产中的辅助功能增强。
+* [Experience Manager](new-features-latest-service-pack.md#accessibility-enhancements) Assets中的辅助功能增强。
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.8。
 
