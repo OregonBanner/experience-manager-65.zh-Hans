@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9871cbf48a01298ab2b6fb1b79bb290714b84ab1
+source-git-commit: 64fe2634bae6289aa313dd1e5a135d1bdd654dbe
 
 ---
 
@@ -92,8 +92,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL 公司根文件夹路径]**
 
-   * **[!UICONTROL 发布资产]** -“立即 **[!UICONTROL 发布]** ”选项表示上传资产时，系统会摄取资产并立即提供URL/嵌入。 发布资产不需要用户干预。 激活后 **[!UICONTROL 的选项]** ，意味着您需要先显式发布资产，然后才能提供URL/嵌入链接。
-
+   * **[!UICONTROL 发布资产]** -您可以从以下三个选项中进行选择：
+      * **[!UICONTROL 立即]** ，表示上传资产时，系统会立即摄取资产并提供URL/Embed。 发布资产不需要用户干预。
+      * **[!UICONTROL 激活后]** ，意味着您需要先显式发布资产，然后再提供URL/嵌入链接。
    * **[!UICONTROL 安全预览服务器]** -允许您指定到安全再现预览服务器的URL路径。 也就是说，在生成再现后，AEM可以安全地访问和预览远程Dynamic Media再现（不会将二进制文件发回到AEM实例）。
 除非您有使用自己公司的服务器或特殊服务器的特殊安排，否则Adobe Systems建议您保留指定的此设置。
 
@@ -327,7 +328,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **配置默认命名**
 
-1. 登录Dynamic Media Classic(Scene7)帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 登录到Dynamic Media Classic(Scene7)帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
 
    您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
