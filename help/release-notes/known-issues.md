@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
+source-git-commit: 86dbd52d44a78401aa50cce299850469c51b691c
 
 ---
 
@@ -20,15 +20,33 @@ source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
 
 ## 平台 {#platform}
 
-将报告删除CRX快速启动及其内容的问题。
+* 将报告删除CRX快速启动及其内容的问题。
 
-对于每个操作，请确保属性“*htmllibmanager.fileSystemOutputCacheLocation*”从不为空字符串：
+   对于每个操作，请确保属性“*htmllibmanager.fileSystemOutputCacheLocation*”从不为空字符串：
 
-1. 调用“*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*”。
-2. 升级到AEM 6.5。
-3. 在AEM 6.5上执行“延迟内容迁移”。
+   1. 调用“*/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*”。
+   2. 升级到AEM 6.5。
+   3. 在AEM 6.5上执行“延迟内容迁移”。
+   有一 [篇知识库文章](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) ，其中包含更多详细信息以及此问题的解决方法。
 
-有一 [篇知识库文章](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) ，其中包含更多详细信息以及此问题的解决方法。
+* 如果将JDK 11与AEM 6.5实例一起使用，则部署某些包后，某些页面可能显示为空。 日志文件中显示以下错误消息：
+
+   ```
+   *ERROR* [OsgiInstallerImpl] org.apache.sling.scripting.sightly bundle org.apache.sling.scripting.sightly:1.1.2.1_4_0 (558)[org.apache.sling.scripting.sightly.impl.engine.extension.use.JavaUseProvider(3345)] : Error during instantiation of the implementation object (java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl)
+   java.lang.NoClassDefFoundError: jdk/internal/reflect/ConstructorAccessorImpl
+   ```
+
+要解决此错误，请执行以下操作：
+
+1. 停止AEM实例。 转到并 `<aem_server_path_on_server>crx-quickstart\conf` 打开文 `sling.properties` 件。 Adobe建议备份此文件。
+
+2. 搜索 `org.osgi.framework.bootdelegation=`. 添加 `jdk.internal.reflect,jdk.internal.reflect.*` 属性以将结果显示为：
+
+   ```
+   org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.internal.reflect.*
+   ```
+
+3. 保存文件并重新启动AEM实例。
 
 ## 资产 {#assets}
 
@@ -39,7 +57,7 @@ source-git-commit: 3d607217e3d66998a8463db3f527a626beaca769
 ## Forms {#forms}
 
 * 在 Linux 操作系统上安装 AEM Forms 时，带有硬件安全模块的数字签名不起作用。(CQ-4266721)
-* (AEM Forms on WebSphere only) The **Forms Workflow **> **Task Search** option does not return any result if you search for an **Administrator** with **Username** as the search criteria. (CQ-4266457)
+* （仅限 WebSphere 上的 AEM Forms）如果您将&#x200B;**用户名**&#x200B;作为搜索条件搜索&#x200B;**管理员**，则 **Forms 工作流** > **任务搜索**&#x200B;选项不会返回任何结果。(CQ-4266457)
 
 * AEM Forms 无法将使用 JPEG 压缩的 .tif 和 .tiff 文件转换为 PDF 文档。(CQ-4265972)
 * **AEM Forms 迁移**&#x200B;页面上的 **AEM Forms 资产扫描程序**&#x200B;和&#x200B;**交互式通信迁移字符**&#x200B;选项不起作用。(CQ-4266572)
