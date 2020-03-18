@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed756d785864131c2e031aec4331388bc057576b
+source-git-commit: 1fde7fc5dd32b5a2a83fe6c01cfa2b24be32a899
 
 ---
 
@@ -31,11 +31,12 @@ Adobe Experience Manager(AEM)6.5今年通过季度Service Pack提供功能并不
 
 ## AEM Assets {#aem-assets}
 
-### 通过Adobe I/O Console与Brand Portal集成 {#assets-integration-bp}
+### 使用Brand Portal配置AEM资产 {#configure-assets-bp}
 
-您现在可以通过Adobe I/O控制台配置带有Brand Portal的AEM资产。 Adobe I/O Console为Brand Portal租户购买IMS令牌以授权。 以前，AEM资产通过旧版OAuth网关在经典UI中配置了品牌门户。 在2020年4月6日之前，将支持使用传统OAuth网关的配置。 如果不修改集成，则现有配置将继续工作。
+AEM资产与Brand Portal之间的授权渠道已更改。 以前，Brand Portal是通过旧版OAuth网关在经典UI中配置的，该网关使用JWT令牌交换获取IMS访问令牌以进行授权。 AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租户购买IMS令牌以授权。
 
-您可以创建新集成或将集成设置升级到Adobe I/O控制台。
+根据AEM版本以及您是首次配置还是升级现有配置，配置带有Brand Portal的AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
+
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
