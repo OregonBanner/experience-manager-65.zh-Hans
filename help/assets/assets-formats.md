@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: AEM资产支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8a701d98fed79648104c39816482ff94997ba2e6
+source-git-commit: 08ea08fc2f8c36d509509f761a76a428d6df7e6a
 
 ---
 
@@ -18,7 +18,7 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 
 | 支持级别 | 描述 |
 |:---:|---|
-| ✓ | 受支持 |
+| ✓ | 支持 |
 | * | 受支持，但需要附加功能 |
 | - | 不适用 |
 
@@ -42,7 +42,7 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-Dynamic media功能支持的栅格图像格式如下：
+Dynamic Media功能支持的栅格图像格式如下：
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -63,13 +63,13 @@ Dynamic media功能支持的栅格图像格式如下：
 
 * 将元数据写回添加到处理函数时，它适用于PSB文件格 `NComm` 式。
 
-* 要使用Dynamic media预览和生成EPS文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media预览和生成EPS文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 对于EPS文件，PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
 
 ## 支持的PDF栅格化器库 {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer库可为大型和内容密集型Adobe Illustrator和PDF文件生成高质量的缩览图和预览。 Adobe建议对以下项目使用PDF栅格化器库：
+Adobe PDF Rasterizer库可为大型和内容密集型Adobe Illustrator和PDF文件生成高质量的缩览图和预览。 Adobe建议对以下内容使用PDF栅格化器库：
 
 * 需要大量处理的内容密集型AI/PDF文件。
 * AI/PDF文件，默认情况下不生成缩略图。
@@ -87,7 +87,7 @@ Adobe Imaging Tronding库是一款图像处理解决方案，可执行核心图�
 
 ## 支持的相机原始数据 {#supported-camera-raw}
 
-Adobe Camera raw库使AEM资产能够摄取原始图像。 See [Camera Raw support](camera-raw.md).
+Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw support](camera-raw.md).
 
 ## Supported document formats {#supported-document-formats}
 
@@ -114,7 +114,7 @@ Adobe Camera raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-Dynamic media功能支持的文档格式如下：
+Dynamic Media功能支持的文档格式如下：
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -124,11 +124,11 @@ Dynamic media功能支持的文档格式如下：
 
 除了上述功能外，还要考虑以下几点：
 
-* 要使用Dynamic media为PDF文件生成动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media为PDF文件生成动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic media预览和生成AI文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media预览和生成AI文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic media为INDD文件生成动态演绎版，请参阅 [InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
+* 要使用Dynamic Media为INDD文件生成动态演绎版，请参阅 [InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
 ## 支持的多媒体格式 {#supported-multimedia-formats}
 
@@ -188,18 +188,17 @@ Dynamic media功能支持的文档格式如下：
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。
+下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持常见的DAM功能（Dynamic Media Delivery除外）。
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| * | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（当配置有自己的交付域时） |  |  |  |  |  | ✓ |
 
-**** &amp;ast;DAM中支持其他格式，用于存储、版本控制、ACL、工作流、发布和元数据管理。
+**&amp;ast;** DAM中支持其他格式，用于存储、版本控制、ACL、工作流、发布和元数据管理。
 
 ## Supported MIME types {#supported-mime-types}
 
