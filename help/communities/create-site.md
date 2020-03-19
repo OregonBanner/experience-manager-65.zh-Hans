@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 1. 使用管理员权限登录。
 1. 从全局导航，转到导航、 **社区、站点。**
 
-“社区站点”控制台提供了一个向导，用于指导用户完成创建社区站点的各个步骤。 在最后一步中提交站 `Next`点之 `Back`前，可以前进到步骤或上一步。
+“社区站点”控制台提供了一个向导，用于指导用户完成创建社区站点的各个步骤。 在最后一步中提交站点之 `Next` 前，可 `Back` 以前进到步骤或前一步。
 
 要开始创建新社区站点，请执行以下操作：
 
@@ -43,11 +43,11 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 * **社区站点描述**: `A site for engaging with the community.`
 * **社区站点根目录**:(默认根目录留空 `/content/sites`)
 * **云配置**:（如果未指定云配置，则留空）提供指向指定云配置的路径。
-* **社区站点基本语言**:(对于单种语言，请保持不变：英语)使用下拉列表从可用语言( *德语* 、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文（繁体中文）和简体中文)中选择一种或多种基本语言。 将根据多语言站点翻译内容中所述的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将存 [在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个子页面，该子页面由所选语言之一的语言代码命名，如英语为“en”或法语为“fr”。
+* **社区站点基本语言**:(对于单种语言，请保持不变：英语)使用下拉列表从可用语言中选择一 *种或多种基本语言* -德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文（繁体中文）和简体中文。 将根据多语言站点翻译内容中所述的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将存 [在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个子页面，该子页面由所选语言之一的语言代码命名，如英语为“en”或法语为“fr”。
 
 * **社区站点名称**:参与
 
-   * 仔细检查名称，因为创建站点后，该名称不易更改
+   * 请仔细检查名称，因为创建站点后该名称不易更改
    * 初始URL将显示在“社区站点名称”下方
    * 对于有效的URL，请附加基本语言代码+ &quot;。html&quot;
    * *例如*,https://localhost:4502/content/sites/ `engage/en.html`
@@ -100,8 +100,8 @@ Select **Next**
 
 使用预先键入搜索可轻松查找命名空间。 例如，
 
-* 键入“tut”
-* select `Tutorial`
+* 类型 `tut`
+* 选择 `Tutorial`
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -113,8 +113,8 @@ Select **Next**
 
 例如，
 
-* 键入“q”
-* 选择奎 [恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* 类型 `q`
+* 选择 [奎恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -140,11 +140,11 @@ Select **Next**
 
 “翻 [译设置](/help/communities/sites-console.md#translation) ”指定站点的基本语言，以及UGC是否可以翻译成哪种语言（如果可以）。
 
-* 检查允 **许机器翻译**
-* 在默认的机器翻译服务中，将默认语言保留为翻译选定
+* 选中“ **允许机器翻译”**
+* 默认的机器翻译服务将默认语言保留为翻译的选定语言
 * 保留默认翻译提供者和配置
 * 不需要全球商店，因为没有语言副本
-* 选择 **翻译整个页面**
+* 选择转 **换整个页面**
 * 保留默认持久性选项
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
@@ -181,16 +181,26 @@ Select **Create.**
 
 从左至右为：
 
-* **打开站点**&#x200B;选择铅笔图标以在作者编辑模式下打开社区站点，以添加和／或配置页面组件
+* **打开站点**
 
-* **编辑站点**&#x200B;选择属性图标以打开社区站点以修改属性，如标题或更改主题
+   选择铅笔图标以在创作编辑模式下打开社区站点，以添加和／或配置页面组件
 
-* **“发布站点**”选择“世界”图标以发布社区站点（例如，如果发布服务器在本地计算机上运行，则默认情况下为localhost:4503）
+* **编辑站点**
 
-* **“导出站**&#x200B;点”选择导出图标，以创建存储在包管理器中和已下载的社区站点 [的包](/help/sites-administering/package-manager.md) 。
+   选择属性图标以打开社区站点以修改属性，如标题或更改主题
+
+* **发布站点**
+
+   选择“全球”图标以发布社区站点（例如，如果发布服务器在本地计算机上运行，则默认情况下为localhost:4503）
+
+* **导出站点**
+
+   选择导出图标以创建存储在包管理器中和已下载的社区站点 [的包](/help/sites-administering/package-manager.md) 。
 请注意，UGC未包含在站点包中。
 
-* **删除站点**选择删除图标，以从“社区”>“站点”控制台中删除社区站点。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
+* **删除站点**
+
+   选择删除图标以从UIControl Communities >站点控制台中删 **[除社区站点]**。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
 
 ![siteactions](assets/siteactions.png)
 
@@ -200,15 +210,17 @@ Select **Create.**
 >
 >在创作实例上，从主菜单：
 >
->1. 导航到工具>操作>复制菜单。
-1. 选择“作者代理”。
-1. 选择“默认代理（发布）”。
-1. 在“设置”旁边，选择“编辑”。
-1. 在“代理设置”的弹出对话框中，选择“传输”选项卡。
-1. 在URI中，将端口号4503更改为所需的端口号>
-   * 例如，要使用端口6103:https://localhost:6103/bin/receive?sling:authRequestLogin=1
-1. 选择“确定”。
-1. （可选）选择“清除”或“强制重试”以重置复制队列。
+>1. 导航到 **[UIControl Tools > Operations > Replication]** menu。
+>1. 选择作 **[者上的UIControl Agents]**。
+>1. 选择 **[UIControl默认代理（发布）]**。
+>1. 在“UIControl设 **[置”旁]**，选择“ **[UIControl编辑”]**。
+>1. 在“代理设置”的弹出对话框中，选择“UIControl传输 **[”选项卡]** 。
+>1. 在URI中，将端口号4503更改为所需的端口号>
+   >    * 例如，要使用端口6103:
+      >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>
+1. 选择“ **[UIControl确定]**”。
+1. （可选）选择 **[UIControl Clear]** 或 **[UIControl Force Retry]** 以重置复制队列。
 
 
 
@@ -236,7 +248,7 @@ Select **Create.**
 * 社区参与特权成员
 * 社区参与站点内容管理器
 
-请注意， [Aaron mcDonald](/help/communities/tutorials.md#demo-users) 是
+请注意， [Aaron McDonald](/help/communities/tutorials.md#demo-users) 是
 
 * 社区参与社区经理
 * 社区参与版主
@@ -254,7 +266,7 @@ Select **Create.**
 
 添加为 `Login Page Mapping`
 
-* /content/sites/engage/cn:/content/sites/engage/cn
+* `/content/sites/engage/en/signin:/content/sites/engage/en`
 
 ## 可选步骤 {#optional-steps}
 
@@ -298,7 +310,8 @@ Select **Create.**
    * 请访问https://localhost:4503/content/sites/engage/en.html
 
 >[!NOTE]
-要禁用，只需在属性 `sling:match` 值前加上“x” - `xlocalhost.4503/$` -和“ **全部保存”**。
+>
+>要禁用，只需在属性 `sling:match` 值前加上“x” - `xlocalhost.4503/$` -和“ **全部保存”**。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -321,5 +334,6 @@ Select **Create.**
 在进行任何修改后，请记 **住保存** ，然后重&#x200B;**新发布站点** 。
 
 >[!NOTE]
-如果不熟悉AEM，请查看有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以及 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>
+>如果不熟悉AEM，请查看有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以及 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
