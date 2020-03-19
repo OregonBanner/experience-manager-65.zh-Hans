@@ -1,8 +1,8 @@
 ---
 title: 如何使用VLT工具
 seo-title: 如何使用VLT工具
-description: Jackrabbit fileVault工具(VLT)由Apache Foundation开发，该工具将Jackrabbit/AEM实例的内容映射到您的文件系统
-seo-description: Jackrabbit fileVault工具(VLT)由Apache Foundation开发，该工具将Jackrabbit/AEM实例的内容映射到您的文件系统
+description: Jackrabbit FileVault工具(VLT)由Apache Foundation开发，该工具将Jackrabbit/AEM实例的内容映射到您的文件系统
+seo-description: Jackrabbit FileVault工具(VLT)由Apache Foundation开发，该工具将Jackrabbit/AEM实例的内容映射到您的文件系统
 uuid: 579e7785-8b50-4366-b562-8e79b6451464
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
 translation-type: tm+mt
-source-git-commit: a7c3848704ee2b4b984fafcd82e29a75ea8d3443
+source-git-commit: 2da3da1a36f074593e276ddd15ed8331239ab70f
 
 ---
 
 
 # 如何使用VLT工具 {#how-to-use-the-vlt-tool}
 
-Jackrabbit fileVault工具(VLT)是由 [](https://www.apache.org/) Apache Foundation开发的一个工具，它将Jackrabbit/AEM实例的内容映射到您的文件系统。 VLT工具与源控制系统客户端(如Subversion(SVN)客户端)具有类似的功能，提供正常的登记、注销和管理操作，以及用于灵活表示项目内容的配置选项。
+Jackrabbit FileVault工具(VLT)是由 [](https://www.apache.org/) Apache Foundation开发的一个工具，它将Jackrabbit/AEM实例的内容映射到您的文件系统。 VLT工具与源控制系统客户端(如Subversion(SVN)客户端)具有类似的功能，提供正常的登记、注销和管理操作，以及用于灵活表示项目内容的配置选项。
 
 您可以从命令行运行VLT工具。 本文档介绍如何使用该工具，包括如何开始和获取帮助，以及所有命令和可用选 [项](#vlt-commands) 的列 [表](#vlt-global-options)。
 
@@ -39,7 +39,7 @@ Jackrabbit fileVault工具(VLT)是由 [](https://www.apache.org/) Apache Foundat
 
 要使用VLT工具，您首先需要安装它。 默认情况下，它不安装，因为它是一个附加工具。 此外，您还需要设置系统的环境变量。
 
-1. 从Apache Jackrabbit网站下载FileVault [存档文件。](https://jackrabbit.apache.org/jcr/downloads.html#vlt)
+1. 从Maven对象存储库下载FileVault [存档文件。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
    >VLT工具的源可在GitHub [上使用。](https://github.com/apache/jackrabbit-filevault)
@@ -295,7 +295,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 
 |  |  |
 |--- |--- |
-| Option | 描述 |
+| 选项 | 描述 |
 | `-Xjcrlog <arg>` | 扩展的JcrLog选项 |
 | `-Xdavex <arg>` | 扩展的JCR远程处理选项 |
 | `--credentials <arg>` | 要使用的默认凭据 |
@@ -604,7 +604,7 @@ proplist -q|-R <file1> [<file2> ...]
 |--- |--- |
 | `-q (--quiet)` | 打印量尽可能小 |
 | `-R (--recursive)` | 递归降 |
-| `<file> [<file> ...]` | 要列出属性的文件或目录 |
+| `<file> [<file> ...]` | file or directory to list the properties from |
 
 ### Propset {#propset}
 
@@ -616,7 +616,7 @@ proplist -q|-R <file1> [<file2> ...]
 >
 >`vlt:mime-type`
 >
->文件的mimetype。 用于确定是否合并文件。 以“text/”开头的mimetype（或缺少的mimetype）被视为文本。 任何其他内容均视为二进制。
+>The mimetype of the file. Used to determine whether to merge the file. A mimetype beginning with &#39;text/&#39; (or an absent mimetype) is treated as text. Anything else is treated as binary.
 
 #### 语法 {#syntax-12}
 
@@ -636,7 +636,7 @@ propset -q|-R <propname> <propval> <file1> [<file2> ...]
 
 ### 将 {#add}
 
-将文件和目录置于版本控制下，并安排它们添加到存储库。 将在下次提交时添加这些内容。
+Puts files and directories under version control, scheduling them for addition to repository. 将在下次提交时添加这些内容。
 
 #### 语法 {#syntax-13}
 
@@ -692,7 +692,7 @@ diff -N <file1> [<file2> ...]
 
 ### 控制台 {#console}
 
-运行交互式控制台。
+Runs an interactive console.
 
 #### 语法 {#syntax-16}
 
