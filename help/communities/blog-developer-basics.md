@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# Blog Essentials{#blog-essentials}
+# Blog Essentials {#blog-essentials}
 
 自AEM 6.1 Communities起，博客是社区活动。 博客文章现在从发布环境发布，以前，博客文章只能在创作环境中创建并发布。
 
