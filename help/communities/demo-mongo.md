@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -69,7 +69,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->如果MongoDB在*AEM之后*启动，**重新启动**所有**AEM **实例，这样它们就可以正确连接到MongoDB。
+>如果MongoDB在AEM后启 *动* ，请重新启 **动所有****** AEM实例，以便它们正确连接到MongoDB。
 
 ### 演示制作选项：设置MongoDB复制副本集 {#demo-production-option-setup-mongodb-replica-set}
 
@@ -185,7 +185,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * 在JCR中，if [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-      * 不包含srpc节 [点](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，这意味着存储提供者是JSRP
+      * 不包含srpc节 [点](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，它表示存储提供者是JSRP
       * 如果srpc节点存在并包含节点 [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则默认配置的属性应将MSRP定义为默认提供者
 
 
