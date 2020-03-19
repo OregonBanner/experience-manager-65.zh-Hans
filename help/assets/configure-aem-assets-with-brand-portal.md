@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 36e9743b8b41d53e735dce4ba13c986ea22e612b
+source-git-commit: f63e776d1f7a9433e80633cdcfdf5ffed37b29da
 
 ---
 
@@ -190,9 +190,6 @@ Adobe I/O集成生成API密钥、客户端机密和有效负荷(JWT)，这是设
 
    ![IMS帐户配置](assets/create-new-integration6.png)
 
-   >[!CAUTION]
-   >
-   >仅创建一个IMS配置。 请勿创建多个IMS配置。
 
 1. 选择IMS配置，然后单击“检 **[!UICONTROL 查运行状况”]**。 将显示一个对话框。
 
@@ -200,7 +197,13 @@ Adobe I/O集成生成API密钥、客户端机密和有效负荷(JWT)，这是设
 
    ![](assets/create-new-integration5.png)
 
-   <br/> <br/>
+>[!CAUTION]
+>
+>仅创建一个有效的IMS配置。 请勿创建多个IMS配置。
+>
+> 确保配置正常。 如果配置不健康，请删除该配置并创建一个新的健康配置。
+
+<br/> <br/>
 
 ### 配置云服务 {#configure-the-cloud-service}
 
@@ -223,7 +226,7 @@ Adobe I/O集成生成API密钥、客户端机密和有效负荷(JWT)，这是设
 
    ![](assets/create-cloud-service.png)
 
-1. 单击 **[!UICONTROL 保存并关闭]**。 云配置已创建。 您的AEM资产作者实例现在已与Brand Portal租户集成。
+1. Click **[!UICONTROL Save and Close]**. 云配置已创建。 您的AEM资产作者实例现在已与Brand Portal租户集成。
 
 ### Test configuration {#test-integration}
 
