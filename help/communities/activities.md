@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# 活动流功能{#activity-streams-feature}
+# 活动流功能 {#activity-streams-feature}
 
 ## 简介 {#introduction}
 
@@ -27,7 +27,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 文档描述：
 
 * 将“活动流”组件添加到AEM站点
-* 活动流组件的配置设置
+* “活动流”组件的配置设置
 
 ### 将活动流添加到页面 {#adding-activity-streams-to-a-page}
 
@@ -53,15 +53,25 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-* **最大活动数**、要显示的活动数
+* **活动最大数量**
 
-* **流资源路径**&#x200B;将空白保留为默认的社区站点或社区组。 流资源路径标识活动的源。 默认值为空。
+   要显示的活动数
 
-* **显示“用户活动**”视图（如果选中此项），则“活动”页面将包含一个选项卡，该选项卡根据当前成员在社区中生成的活动过滤活动。 选中默认值。
+* **流资源路径**
 
-* **显示所有活动视**&#x200B;图（如果选中此项），则活动页面将包含一个选项卡，其中包括当前成员有权访问的社区中生成的所有活动。 选中默认值。
+   留空将默认为社区站点或社区组。 流资源路径标识活动的源。 默认值为空。
 
-* **显示以下视**&#x200B;图（如果选中），则活动页面将包含一个选项卡，该选项卡根据当前成员正在跟踪的活动筛选活动。 选中默认值。
+* **显示“用户活动”视图**
+
+   如果选中此项，则活动页面将包含一个选项卡，该选项卡根据当前成员在社区中生成的活动筛选活动。 选中默认值。
+
+* **显示“全部活动”视图**
+
+   如果选中此项，则活动页面将包含一个选项卡，其中包含当前成员有权访问的社区中生成的所有活动。 选中默认值。
+
+* **显示“关注”视图**
+
+   如果选中此项，则活动页面将包含一个选项卡，该选项卡将根据当前成员所跟踪的活动筛选活动。 选中默认值。
 
 ### 后视图 {#following-view}
 
@@ -69,11 +79,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-**“关注”**按钮提供了以活动、通知或订阅等形式关注 [条目](/help/communities/notifications.md)的方 [法](/help/communities/subscriptions.md)。 每次选择**关注**按钮时，都可以打开或关闭选择。 仅 `Email Subscriptions` 在配置后才显示选择。
+“跟 **踪** ”按钮提供了以活动、通知或订阅等形式跟踪 [条目](/help/communities/notifications.md)的 [方法](/help/communities/subscriptions.md)。 每次选择“ **跟随** ”按钮时，都可以打开或关闭选择。 仅 `Email Subscriptions` 在配置后才显示选择。
 
 如果选择了以下任何方法，则按钮的文本将变为“以下 **”**。 为方便起见，可以选择 `Unfollow All` 关闭所有方法。
 
-将出现**关注**按钮
+将显 **示** “关注”按钮
 
 * 查看其他成员的配置文件时
 * 在主功能页面上，如论坛、问题与答案和博客
