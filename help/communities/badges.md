@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ---
 
 
-# 标记控制台{#badges-console}
+# 标记控制台 {#badges-console}
 
 ## 关于标记 {#about-badges}
 
@@ -26,7 +26,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 当前，社区成员赚取或分配的标记将与其姓名和头像一起显示在以下位置：
 
-* 配置文件
+* 个人资料
 * [论坛](/help/communities/forum.md)
 * [问题与解答](/help/communities/working-with-qna.md)
 * [排行榜](/help/communities/enabling-leaderboard.md)
@@ -34,7 +34,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在创作环境中，要访问标记控制台
 
-* 从全局导航：工 **具、社区、徽章**
+* 在全局导航中，导航到UIControl **[Tools > Communities > Badges]**
 
 此控制台显示当前可用的标记以及可以从中添加新标记。
 
@@ -48,13 +48,21 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-* **上传图像**(*必需*)建议大小为32 x 32像素、JPEG或PNG格式为72dpi的徽章图像。
+* **上传图像**
 
-* **名称**(*必需*)徽章名称。 它是默认的 `Display Name` 和存储库节点名称。 如果该 `Name` 节点不是有效的存储库节点名称，则将对其进行修改。
+   (必&#x200B;*需*)建议大小为32 x 32像素、JPEG或PNG格式为72dpi的徽章图像。
 
-* **显示名称**(*可选*)要在UI中显示徽章的名称。 默认值是为输入的未更改文本 `Name`。
+* **名称**
 
-* **说明**(*可选*)徽章的说明。
+   (必&#x200B;*需*)徽章名称。 它是默认的 `Display Name` 和存储库节点名称。 如果该 `Name` 节点不是有效的存储库节点名称，则将对其进行修改。
+
+* **显示名称**
+
+   (可&#x200B;*选*)在UI中为徽章显示的名称。 默认值是为输入的未更改文本 `Name`。
+
+* **描述**
+
+   (*可选*)徽章的说明。
 
 ## 附加信息 {#additional-information}
 
