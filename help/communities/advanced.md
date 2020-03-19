@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
@@ -20,35 +20,35 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 概述 {#overview}
 
-高级评分允许授予徽章，以便将会员标识为专家。 高级评分根据成员创建的内容数量*和*质量分配积分，而基本评分只根据创建的内容数量分配积分。
+高级评分允许授予徽章，以便将会员标识为专家。 高级评分根据成员创建的内 *容数量* 和质量分配积分，而基本评分只根据创建的内容数量分配积分。
 
 此差异是由于用于计算得分的得分引擎所致。 基本评分引擎应用简单的数学。 高级评分引擎是一种自适应算法，它奖励通过主题的自然语言处理(NLP)推导的贡献有价值和相关内容的活动成员。
 
 除了内容相关性外，评分算法还考虑成员活动，如投票和答案百分比。 虽然基本评分包括定量评分，但高级评分通过算法使用这些评分。
 
-因此，高级评分引擎需要足够的数据来使分析变得有意义。 随着算法不断根据所创建内容的体积和质量进行调整，不断重新评估成为专家的成就阈值。 还有一个概念，即成员的老职位******。 如果专家成员停止参与他们获得专家状态的主题事项，则在某个预定点(请参阅评分引擎配置 [](#configurable-scoring-engine))，他们可能失去其专家状态。
+因此，高级评分引擎需要足够的数据来使分析变得有意义。 随着算法不断根据所创建内容的体积和质量进行调整，不断重新评估成为专家的成就阈值。 还有一个概念是 *老* 员额的衰败。 如果专家成员停止参与他们获得专家状态的主题事项，则在某个预定点(请参阅评分引擎配置 [](#configurable-scoring-engine))，他们可能失去其专家状态。
 
 设置高级评分与基本评分基本相同：
 
-* 基本和高级评分和徽章规则 [以相同方式应用](/help/communities/implementing-scoring.md#apply-rules-to-content) 于内容
+* 基本和高级评分和徽章规则 [以相同方式应用于](/help/communities/implementing-scoring.md#apply-rules-to-content) 内容
 
    * 基本和高级评分和徽章规则可应用于相同内容
 
-* [为组件启用标记](/help/communities/implementing-scoring.md#enable-badges-for-component) ，是通用的
+* [为组件启用标记](/help/communities/implementing-scoring.md#enable-badges-for-component) 是通用的
 
 设置得分和徽章规则的区别是：
 
 * 可配置的高级评分引擎
 * 高级评分规则：
 
-   * scoringType设置为“advanced”
-   * 需要词
+   * `scoringType` 设置为 `advanced`
+   * requires `stopwords`
 
 * 高级标记规则：
 
-   * badgingType设置为“advanced”
-   * badging将级别设置为要授予的专家级别数
-   * 需要标记Paths标记阵列而不是标记的阈值阵列映射点
+   * `badgingType` 设置为 `advanced`
+   * `badgingLevels` 设置为 **要授予的专家级别数**
+   * 需要 `badgingPaths` 标记阵列而不是标记阈值阵列映射点
 
 >[!NOTE]
 >
@@ -60,19 +60,28 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-139](assets/chlimage_1-139.png)
 
-* **评分权**&#x200B;重对于主题，指定在计算得分时应给予最高优先级的动词。 可以输入一个或多个主题，但每个主题限 **于一个动词**。 请参 [阅主题和动词](/help/communities/implementing-scoring.md#topics-and-verbs)。
+* **评分权重**
+
+   对于主题，指定在计算得分时应给予最高优先级的动词。 可以输入一个或多个主题，但每个主题限 **于一个动词**。 请参 [阅主题和动词](/help/communities/implementing-scoring.md#topics-and-verbs)。
 以逗号转 `topic,verb` 义的形式输入。 例如：
    `/social/forum/hbs/social/forum\,ADD`
 对于QnA和论坛组件，默认设置为ADD动词。
 
-* **得分范围**高级得分的范围由此值（最高可能得分）和0（最低可能得分）定义。
-默认值为100，因此评分范围为0-100。
+* **评分范围**
 
-* **实体衰减时间**间隔此参数表示所有实体得分衰减后的小时数。 这要求不再在社区站点的分数中包含旧内容。
-默认值为216000小时（~24年）。
+   高级得分的范围由此值（最高可能得分）和0（最低可能得分）定义。
 
-* **评分增长率**此值指定0与评分范围之间的分数，超出该分数后，增长会放缓以限制专家数量。
-默认值为 50。
+   默认值为100，因此评分范围为0-100。
+
+* **实体衰减时间间隔**
+
+   此参数表示所有实体得分被延迟的小时数。 这要求不再在社区站点的分数中包含旧内容。
+
+   默认值为216000小时（~24年）。
+
+* **评分增长率**&#x200B;此选项指定0与评分范围之间的得分，超出该分数后，增长会放缓以限制专家数量。
+
+   默认值为 50。
 
 ## 高级评分规则 {#advanced-scoring-rules}
 
@@ -96,7 +105,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 高级评分包会安装一个配置文件夹，其中包含一个秒词文件：
 
-* /etc/community/scoring/configuration/stopwords
+* `/etc/community/scoring/configuration/stopwords`
 
 高级评分算法使用包含在秒词文件中的单词列表来识别在内容处理过程中忽略的常见英语单词。
 
@@ -127,7 +136,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
   <tr>
    <td>badgingLevels</td>
    <td>长整型</td>
-   <td><em>（可选）</em> ，指定要授予的专业知识级别。 例如，如果应该有一个 <code>expert </code>和( <code>almost expert</code> 两个标记)，则值应设置为2。 badgingLevel应与为badgingPath属性列出的专家相关标记图像的数量相对应。 默认值为1。</td>
+   <td><em>（可选）</em> 指定要授予的专业知识级别。 例如，如果应该有一个 <code>expert </code>和( <code>almost expert</code> 两个标记)，则值应设置为2。 badgingLevel应与为badgingPath属性列出的专家相关标记图像的数量相对应。 默认值为1。</td>
   </tr>
   <tr>
    <td>badgingType</td>
@@ -137,7 +146,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
   <tr>
    <td>scoringRules</td>
    <td>String[]</td>
-   <td><em>（可选）</em> ，用于将标记规则限制为由列出的评分规则标识的评分事件的多值字符串。<br /><br /> 示例条目：默 <code>/etc/community/scoring/rules/adv-comments-scoring</code><br /> 认为无限制。</td>
+   <td><em>（可选）</em> ，用于将标记规则限制为由列出的评分规则标识的评分事件的多值字符串。<br /> 示例条目：<br /> 默 <code>/etc/community/scoring/rules/adv-comments-scoring</code><br /> 认为无限制。</td>
   </tr>
  </tbody>
 </table>
@@ -148,13 +157,16 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 此测试版包含一个基于奖励的专家徽章：
 
-* expert/etc/community/badging/images/expert-badge/jcr:content/expert.png
+* `expert`
+
+   `/etc/community/badging/images/expert-badge/jcr:content/expert.png`
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
 要使专家徽章显示为活动奖励，请确保：
 
-* `badges` 为功能（如论坛或问题与答案组件）启用
+* `Badges` 为功能（如论坛或问题与答案组件）启用。
+
 * 高级评分和标记规则应用于放置组件的页面（或上级）
 
 请参阅以下基本信息：
@@ -166,36 +178,43 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 测试版包含两个用于论坛功能的高级评 [分规则](/help/communities/functions.md#forum-function) （论坛和论坛功能的评论组件各一个规则）:
 
-1. /etc/community/scoring/rules/adv-comments-scoring
+1. `/etc/community/scoring/rules/adv-comments-scoring`
 
-   * subRules[] =/etc/community/scoring/rules/sub-rules/adv-comments-rule/etc/community/scoring/rules/sub-rules/adv-porting-rule-owner/etc/community/scoring/rules/sub-rules/adv-porition-rule
+   * `subRules[] =
+/etc/community/scoring/rules/sub-rules/adv-comments-rule
+/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner
+/etc/community/scoring/rules/sub-rules/adv-voting-rule`
 
-1. /etc/community/scoring/rules/adv-forums-scoring
+1. `/etc/community/scoring/rules/adv-forums-scoring`
 
-   * subRules[] =/etc/community/scoring/rules/sub-rules/adv-forums-rule/etc/community/scoring/rules/sub-rules/adv-comments-rule/etc/community/scoring/rules/sub-rules/adv-porting-rule-owner
+   * `subRules[] =
+/etc/community/scoring/rules/sub-rules/adv-forums-rule
+/etc/community/scoring/rules/sub-rules/adv-comments-rule
+/etc/community/scoring/rules/sub-rules/adv-voting-rule-owner`
 
 **注释:**
 
-* both `rules`and `sub-rules` nodes are type cq:Page
+* 节 `rules`点 `sub-rules` 和节点的类型 `cq:Page`
 
 * `subRules`是规则节点上字符串类型的属性[] ，该属 `jcr:content` 性
 
 * `sub-rules` 可能在各种评分规则之间共享
+
 * `rules`应该位于存储库位置，并且每个人都具有读取权限
 
-   * 规则名称必须唯一，而不管位置
+   * 规则名称必须唯一，而不管位置如何
 
 ### 包含徽章规则 {#included-badging-rules}
 
 该版本包含两个与高级论坛和评论评分规则相 [对应的高级标记规则](#included-scoring-rules-and-sub-rules)。
 
-* /etc/community/badging/rules/adv-comments-badging
-* /etc/community/badging/rules/adv-forums-badging
+* `/etc/community/badging/rules/adv-comments-badging`
+* `/etc/community/badging/rules/adv-forums-badging`
 
 **注释:**
 
 * `rules` 节点的类型为cq:Page
-* `rules`应该位于存储库位置，并且每个人都具有读取权限
+* `rules` 应该位于存储库位置，并且每个人都具有读取权限
 
-   * 规则名称必须唯一，而不管位置
+   * 规则名称必须唯一，而不管位置如何
 
