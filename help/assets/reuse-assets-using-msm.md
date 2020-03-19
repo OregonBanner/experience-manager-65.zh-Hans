@@ -4,7 +4,7 @@ description: 跨从父资产派生并链接到父资产的多个页面／文件�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 44daaa61f7328e79fd4e11a503b0eef3ff9ffb56
+source-git-commit: dc1a9eb4c02c7751b99ed074e0f3250193957c59
 
 ---
 
@@ -34,25 +34,25 @@ MSM在源资产与其Live Copy之间保持实时关系，以便：
 
 ### MSM资产术语表 {#glossary}
 
-**来源** ：原始资产或文件夹。 从中派生Live Copy的主副本。
+**来源：** 原始资产或文件夹。 从中派生Live Copy的主副本。
 
-**Live Copy** 与其源同步的源资产／文件夹的副本。 Live Copy可以是其他Live Copy的源。 了解如何创建LC。
+**Live Copy:** 与其源同步的源资产／文件夹的副本。 Live Copy可以是其他Live Copy的源。 了解如何创建LC。
 
-**继承** Live Copy资产／文件夹与其源之间的链接／引用，系统使用它来记住将更新发送到的位置。 继承存在于元数据字段的粒度级别。 可以为选择性元数据字段删除继承，同时保留源与其Live Copy之间的Live关系。
+**继承：** Live Copy资产／文件夹与其源之间的链接／引用，系统使用它来记住将更新发送到的位置。 继承存在于元数据字段的粒度级别。 可以为选择性元数据字段删除继承，同时保留源与其Live Copy之间的Live关系。
 
-**转出** ：将修改推送到源的下游Live Copy的操作。 可以使用转出操作一次性更新一个或多个Live Copy。 请参阅转出。
+**转出：** 将对源所做的修改推送到其Live Copy下游的操作。 可以使用转出操作一次性更新一个或多个Live Copy。 请参阅转出。
 
-**确定要同步的属性** 、方式和时间的转出配置规则。 创建Live Copy时会应用这些配置；稍后可以编辑；并且子项可以从其父资产继承转出配置。 对于MSM for Assets，请仅使用标准转出配置。 其他转出配置对于资产不可用于MSM。
+**转出配置：** 确定同步哪些属性的规则、同步方式和同步时间。 创建Live Copy时会应用这些配置；稍后可以编辑；并且子项可以从其父资产继承转出配置。 对于MSM for Assets，请仅使用标准转出配置。 其他转出配置对于资产不可用于MSM。
 
-**Synchronize** Another action, and on the rollout, that is action actions the surce and its Live Copy by send the updates from source to live copy. 将为特定Live copy启动同步，并且操作会从源中提取更改。 使用此操作，只能更新其中一个Live Copy。 请参阅同步操作。
+**同步：** 除了转出之外，还有一个操作，通过从源向Live Copy发送更新来实现源与其Live Copy之间的对等性。 将为特定Live Copy启动同步，并且操作会从源中提取更改。 使用此操作，只能更新其中一个Live Copy。 请参阅同步操作。
 
-**暂停** 暂时删除Live copy与其源资产／文件夹之间的Live关系。 你可以恢复关系。 请参阅暂停操作。
+**暂停：** 临时删除Live Copy与其源资产／文件夹之间的Live关系。 你可以恢复关系。 请参阅暂停操作。
 
-**恢复** 恢复Live关系，以便Live copy再次开始从源接收更新。 请参阅恢复操作。
+**继续：** 恢复Live关系，以便Live Copy再次开始从源接收更新。 请参阅恢复操作。
 
-**重置** “重置”操作通过覆盖任何本地更改，使Live copy再次成为源的复制副本。 它还会删除继承取消，并重置所有元数据字段的继承。 要在将来进行本地修改，您必须再次取消特定字段的继承。 请参阅对LC的本地修改。
+**重置：** 重置操作会覆盖所有本地更改，从而使Live Copy再次成为源的复制副本。 它还会删除继承取消，并重置所有元数据字段的继承。 要在将来进行本地修改，您必须再次取消特定字段的继承。 请参阅对LC的本地修改。
 
-**分离** -不可撤消地删除Live copy资产／文件夹的Live关系。 分离操作后，Live Copy永远无法从源接收更新，并且不再是Live Copy。 请参阅删除关系。
+**分离：** 不可撤消地删除Live Copy资产／文件夹的Live Relationship。 分离操作后，Live Copy永远无法从源接收更新，并且不再是Live Copy。 请参阅删除关系。
 
 ## 创建资产的Live Copy {#createlc}
 
@@ -61,7 +61,7 @@ MSM在源资产与其Live Copy之间保持实时关系，以便：
 * 方法1:选择源资产，然后从顶 **[!UICONTROL 部的工具栏中单击创建]** > Live Copy。
 * 方法2:在AEM用户界面中，单 **[!UICONTROL 击界面右上角的创建]** > Live Copy。
 
-您可以一次创建资产或文件夹的Live Copy。 您可以创建从资产或作为Live copy本身的文件夹派生的Live Copy。 内容片段(CF)不支持用例。 在尝试创建其Live Copy时，CF会按原样复制，而不会与任何关系。 复制的CF是及时的快照，在更新原始CF时不更新。
+您可以一次创建资产或文件夹的Live Copy。 您可以创建从资产或作为Live Copy本身的文件夹派生的Live Copy。 内容片段(CF)不支持用例。 在尝试创建其Live Copy时，CF会按原样复制，而不会与任何关系。 复制的CF是及时的快照，在更新原始CF时不更新。
 
 要使用第一种方法创建Live Copy，请执行以下步骤：
 
@@ -90,15 +90,15 @@ MSM在源资产与其Live Copy之间保持实时关系，以便：
 
 >[!NOTE]
 >
->移动源或Live copy时，将保留关系。 删除Live copy后，将删除关系。
+>移动源或Live Copy时，将保留关系。 删除Live Copy后，将删除关系。
 
-## 查看源和Live copy的各种属性和状态 {#properties}
+## 查看源和Live Copy的各种属性和状态 {#properties}
 
-您可以从AEM用户界面的各个区域查看Live copy的信息和MSM相关状态，如关系、同步、转出等。
+您可以从AEM用户界面的各个区域查看Live Copy的信息和MSM相关状态，如关系、同步、转出等。
 
 以下两种方法适用于资产和文件夹：
 
-* 选择Live copy资产，并在其“属性”页面中查找信息。
+* 选择Live Copy资产，并在其“属性”页面中查找信息。
 * 选择源文件夹，然后从Live Copy控制台中查找每个Live Copy的详细信息。
 
 >[!TIP]
@@ -107,16 +107,16 @@ MSM在源资产与其Live Copy之间保持实时关系，以便：
 
 ### Live Copy的信息和状态 {#statuslcasset}
 
-要检查Live copy资产或文件夹的信息和状态，请执行以下步骤。
+要检查Live Copy资产或文件夹的信息和状态，请执行以下步骤。
 
-1. 选择Live copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
+1. 选择Live Copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
 1. Click **[!UICONTROL Live Copy]**. 您可以检查源的路径、暂停状态、同步状态、上次转出日期以及上次转出的用户。
 
-   ![Live copy信息和状态显示在控制台的“属性”中](assets/lcfolder_info_properties.png)
+   ![Live Copy信息和状态显示在控制台的“属性”中](assets/lcfolder_info_properties.png)
 
-   *图：Live copy信息和状态*
+   *图：Live Copy信息和状态*
 
-1. 在子资产借用Live copy配置时，可以启用或禁用。
+1. 在子资产借用Live Copy配置时，可以启用或禁用。
 
 1. 您可以选择Live Copy的选项以从父项继承转出配置或更改配置。
 
@@ -133,13 +133,13 @@ AEM提供了一个控制台，用于检查源文件夹的所有Live Copy的状�
 
 1. 要查看 Live Copy 文件夹中每个资产的详细信息，请选择一个资产，然后单击工具栏中的&#x200B;**[!UICONTROL 关系状态]**。
 
-   ![文件夹中Live copy子资产的详细信息和状态](assets/livecopy_relationship_status.png)
+   ![文件夹中Live Copy子资产的详细信息和状态](assets/livecopy_relationship_status.png)
 
-   文件夹中Live copy子资产的详细信息和状态
+   文件夹中Live Copy子资产的详细信息和状态
 
 >[!TIP]
 >
->您可以快速查看其他文件夹的Live Copy状态，而无需浏览太多。 只需更改Live copy概述界面中上半部分弹出列表中的 **[!UICONTROL 文件夹]** 。
+>您可以快速查看其他文件夹的Live Copy状态，而无需浏览太多。 只需更改Live Copy概述界面中上半部分弹出列表中的 **[!UICONTROL 文件夹]** 。
 
 ### 从源的“引用”边栏中快速执行操作 {#refrailsource}
 
@@ -149,7 +149,7 @@ AEM提供了一个控制台，用于检查源文件夹的所有Live Copy的状�
 * 在AEM用户界面中打开或显示特定Live Copy。
 * 将更新同步到特定Live Copy。
 * 暂停关系或更改特定Live Copy的转出配置。
-* 访问Live copy概述控制台。
+* 访问Live Copy概述控制台。
 
 Select the source asset or folder, open the left rail, and click **[!UICONTROL References]**. 或者，选择一个资产或文件夹，然后使用键盘快捷键 `Alt + 4`。
 
@@ -165,7 +165,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 ### 从Live Copy的“引用”边栏中快速执行操作 {#refraillc}
 
-对于Live copy资产或文件夹，您可以看到以下信息，并直接从引用边栏中执行以下操作：
+对于Live Copy资产或文件夹，您可以看到以下信息，并直接从引用边栏中执行以下操作：
 
 * 查看其源的路径。
 * 在AEM用户界面中打开或显示特定Live Copy。
@@ -185,7 +185,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 您可以从源资产中启动转出操作，并更新所有或几个选定的Live Copy。
 
-1. 选择Live copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
+1. 选择Live Copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
 1. 单击 **[!UICONTROL Live Copy 源]**。单击顶部工具栏中的&#x200B;**[!UICONTROL 转出]**。
 1. 选择要更新的Live Copy。 单击 **[!UICONTROL 转出]**。 要转出对子资产进行的更新，请选择转出 **[!UICONTROL 源和所有子资产]**。
 
@@ -195,7 +195,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 >[!NOTE]
 >
->在源资产中所做的修改仅转出到直接相关的Live Copy。 如果Live Copy是从其他Live copy派生的，则修改不会转出到派生的Live Copy。
+>在源资产中所做的修改仅转出到直接相关的Live Copy。 如果Live Copy是从其他Live Copy派生的，则修改不会转出到派生的Live Copy。
 
 或者，您也可以在选择特定Live Copy后，从引用边栏启动转出操作。 有关详细信息，请参 [阅Live Copy的“引用”边栏中的快速操作](#refraillc)。 在此转出方法中，只更新选定的Live Copy及其子项（可选）。
 
@@ -210,8 +210,8 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 | 在AEM界面中的位置 | 何时及为何使用 | 如何使用 |
 |---|---|---|
 | [!UICONTROL 引用边栏] | 在已选择源时快速同步。 | 请参 [阅源的“引用”边栏中的快速操作](#refrailsource) |
-| 工具栏 [!UICONTROL 中] 。 | 在您已打开Live copy属性时启动同步。 | 请参 [阅同步Live Copy](#synclc) |
-| [!UICONTROL Live copy概述控制台] | 选择源文件夹或Live Copy概述控制台已打开时，快速同步多个资产( [!UICONTROL 不一定全部] )。 同步操作会一次为一个资产启动，但这是一次为多个资产执行同步的更快方法。 | 请参 [阅对Live copy文件夹中的许多资产的操作](#bulkactions) |
+| 工具栏 [!UICONTROL 中] 。 | 在您已打开Live Copy属性时启动同步。 | 请参 [阅同步Live Copy](#synclc) |
+| [!UICONTROL Live Copy概述控制台] | 选择源文件夹或Live Copy概述控制台已打开时，快速同步多个资产( [!UICONTROL 不一定全部] )。 同步操作会一次为一个资产启动，但这是一次为多个资产执行同步的更快方法。 | 请参 [阅对Live Copy文件夹中的许多资产的操作](#bulkactions) |
 
 ### 同步Live Copy {#synclc}
 
@@ -229,7 +229,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 ## 暂停和恢复关系 {#suspendresume}
 
-您可以临时暂停关系，以防止Live copy接收对源资产或文件夹所做的修改。 还可以恢复关系，以便Live copy开始从源接收修改。
+您可以临时暂停关系，以防止Live Copy接收对源资产或文件夹所做的修改。 还可以恢复关系，以便Live Copy开始从源接收修改。
 
 要暂停或继续，请打 **[!UICONTROL 开Live Copy的]** “属性”页面，单击 **[!UICONTROL Live Copy]** ，然后从工具栏中单击所需的操作。
 
@@ -241,23 +241,23 @@ Live Copy是创建时原始源的副本。 Live Copy的元数据值是从源继�
 
 但是，您可以灵活地对Live Copy进行本地修改，以更改一些选定的属性。 要进行本地修改，请取消所需属性的继承。 取消一个或多个元数据字段的继承后，资产的实时关系和其他元数据字段的继承将保留。 任何同步或转出不会覆盖本地修改。 为此，请打开Live copy资 **[!UICONTROL 产的“属性]** ”页面，单击元数 **[!UICONTROL 据字段旁的“取消继承]** ”图标。
 
-您可以撤消所有本地修改并将资产还原到其源的状态。 不可撤消且即时地重置操作将覆盖所有本地修改，并在所有元数据字段上重新建立继承。 要还原 **[!UICONTROL ，请从Live copy资产的]** 属性页面中 **[!UICONTROL ，单击工具]** 栏中的重置。
+您可以撤消所有本地修改并将资产还原到其源的状态。 不可撤消且即时地重置操作将覆盖所有本地修改，并在所有元数据字段上重新建立继承。 要还原 **[!UICONTROL ，请从Live Copy资产的]** 属性页面中 **[!UICONTROL ，单击工具]** 栏中的重置。
 
 ![重置操作会覆盖本地编辑，并部分地将Live Copy与其源相关联。](assets/livecopy_reset.png)
 
-*图：重置操作会覆盖本地编辑，并部分地将Live copy与其源*
+*图：重置操作会覆盖本地编辑，并部分地将Live Copy与其源*
 
 ## 删除实时关系 {#detach}
 
-您可以使用分离操作完全删除源与Live copy之间的关系。 Live copy在分离后将成为独立的资产或文件夹。 它在分离后立即在AEM界面中显示为新资产。 要将Live copy从其源中分离出来，请执行以下步骤。
+您可以使用分离操作完全删除源与Live Copy之间的关系。 Live Copy在分离后将成为独立的资产或文件夹。 它在分离后立即在AEM界面中显示为新资产。 要将Live Copy从其源中分离出来，请执行以下步骤。
 
-1. 选择Live copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
+1. 选择Live Copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
 
 1. Click **[!UICONTROL Live Copy]**. 单击 **[!UICONTROL 工具栏中]** 的分离。 单击 **[!UICONTROL 显示的]** “从对话框分离”。
 
-   ![分离操作会完全消除源和Live copy之间的关系](assets/livecopy_detach.png)
+   ![分离操作会完全消除源和Live Copy之间的关系](assets/livecopy_detach.png)
 
-   *图：分离操作会完全消除源和Live copy之间的关系*
+   *图：分离操作会完全消除源和Live Copy之间的关系*
 
    >[!CAUTION]
    >
@@ -265,17 +265,17 @@ Live Copy是创建时原始源的副本。 Live Copy的元数据值是从源继�
 
 Alternatively, you can quickly detach multiple assets in a live copy folder from the **[!UICONTROL Live Copy Overview]** console. 请参阅[对 Live Copy 文件夹中的许多资产执行操作](#bulkactions)。
 
-## 对Live copy文件夹中的许多资产执行操作 {#bulkactions}
+## 对Live Copy文件夹中的许多资产执行操作 {#bulkactions}
 
-如果Live copy文件夹中有多个资产，则启动每个资产的操作可能会很繁琐。 您可以从Live Copy控制台快速对许多资产启动基本操作。 以上方法继续适用于单个资产。
+如果Live Copy文件夹中有多个资产，则启动每个资产的操作可能会很繁琐。 您可以从Live Copy控制台快速对许多资产启动基本操作。 以上方法继续适用于单个资产。
 
 1. 选择源文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
 1. 单击 **[!UICONTROL Live Copy 源]**。要打开控制台，请单击 **[!UICONTROL Live Copy 概述]**。
-1. 在此功能板中，从 Live Copy 文件夹中选择 Live Copy 资产。单击工具栏中的所需操作。可用的操作有&#x200B;**[!UICONTROL 同步]**、**[!UICONTROL 重置]**、**[!UICONTROL 暂停]**&#x200B;和&#x200B;**[!UICONTROL 分离]**。您可以快速对任意数量的Live copy文件夹中的任何资产启动这些操作，这些文件夹与选定的源文件夹处于Live关系中。
+1. 在此功能板中，从 Live Copy 文件夹中选择 Live Copy 资产。单击工具栏中的所需操作。可用的操作有&#x200B;**[!UICONTROL 同步]**、**[!UICONTROL 重置]**、**[!UICONTROL 暂停]**&#x200B;和&#x200B;**[!UICONTROL 分离]**。您可以快速对任意数量的Live Copy文件夹中的任何资产启动这些操作，这些文件夹与选定的源文件夹处于Live关系中。
 
-   ![从Live copy概述控制台轻松更新Live copy文件夹中的许多资产](assets/livecopyconsole_update_many_assets.png)
+   ![从Live Copy概述控制台轻松更新Live Copy文件夹中的许多资产](assets/livecopyconsole_update_many_assets.png)
 
-   *图：从Live copy概述控制台轻松更新Live copy文件夹中的许多资产*
+   *图：从Live Copy概述控制台轻松更新Live Copy文件夹中的许多资产*
 
 ## 扩展MSM资产 {#extendapi}
 
@@ -283,33 +283,33 @@ AEM允许您使用MSM Java API扩展功能。 对于“资产”，扩展的工�
 
 * [API概述](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
 * [创建新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
-* [创建新转出配置](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration)
+* [创建新的转出配置](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration)
 * [创建并使用一个简单的LiveActionFactory类](/help/sites-developing/extending-msm.md#creating-and-using-a-simple-liveactionfactory-class)
 
 >[!NOTE]
 >
->* 在MSM for Site中，Blueprint称为Live copy源，在MSM中，它用于资产。
+>* 在MSM for Site中，Blueprint称为Live Copy源，在MSM中，它用于资产。
 >* MSM for Assets不支持删除创建站点向导中的章节步骤。
 >* 对于资产，MSM不支持在页面属性（触屏优化UI）上配置MSM锁。
 
 
-## 资产管理任务对Live copy的影响 {#manageassets}
+## 资产管理任务对Live Copy的影响 {#manageassets}
 
 Live Copy和源是可以作为数字资产在一定程度上进行管理的资产或文件夹。 AEM中的某些资产管理任务对Live Copy具有特定影响。
 
-* 复制Live Copy时，将创建一个Live copy资产，其源与第一个Live copy相同。
+* 复制Live Copy时，将创建一个Live Copy资产，其源与第一个Live Copy相同。
 * 当您移动源或其Live Copy时，Live Relationship将保留。
-* 编辑操作不适用于Live copy资产。 如果Live copy的源本身是Live Copy，则编辑操作不适用。
-* Live copy资产不提供签出操作。
+* 编辑操作不适用于Live Copy资产。 如果Live Copy的源本身是Live Copy，则编辑操作不适用。
+* Live Copy资产不提供签出操作。
 * 对于源文件夹，可使用创建审阅任务的选项。
-* 在列表视图和列视图中查看资产列表时，Live copy资产或文件夹会针对其显示“Live Copy”。 这有助于您轻松识别文件夹中的Live Copy。
+* 在列表视图和列视图中查看资产列表时，Live Copy资产或文件夹会针对其显示“Live Copy”。 这有助于您轻松识别文件夹中的Live Copy。
 
 ## 比较资产和站点的MSM {#comparison}
 
 在更多情况下，“资产”为MSM，与“站点”为MSM的行为相匹配。 需要注意的主要区别是：
 
-* 在MSM for Site中，Blueprint称为Live copy源，在MSM中，它用于资产。
-* 在站点中，您可以比较Blueprint及其Live Copy，但是在资产中无法将源与其Live copy进行比较。
+* 在MSM for Site中，Blueprint称为Live Copy源，在MSM中，它用于资产。
+* 在站点中，您可以比较Blueprint及其Live Copy，但是在资产中无法将源与其Live Copy进行比较。
 * 您无法在资产中编辑Live Copy。
 * 网站通常有子项，但资产则没有。 创建单个资产的Live Copy时，不提供包含或排除子项的选项。
 * MSM for Assets不支持删除创建站点向导中的章节步骤。
