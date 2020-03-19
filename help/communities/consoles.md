@@ -10,14 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
 # 社区控制台 {#communities-consoles}
 
-AEM Communities控制台在创作环境中从全局导航面板提供，它允许您访问管理任务，例如
+AEM Communities控制台在创作环境中从全局导航面板提供，它允许您访问以下管理任务：
 
 * [创建社区站点](sites-console.md)
 * 添 [加嵌套](groups.md) 在站点中的组
@@ -33,7 +33,7 @@ AEM Communities控制台在创作环境中从全局导航面板提供，它允�
 
 >[!NOTE]
 >
->在发布环境中，当已登 [录的成员具有相](sites-console.md)`Administration`应的权限时，社区站点将显示一个菜单项。
+>在发布环境中，当已登 [录的成员具有相](sites-console.md)`Administration` 应的权限时，社区站点将显示一个菜单项。
 
 ## 全局导航面板 {#global-navigation-panel}
 
@@ -50,7 +50,7 @@ AEM Communities控制台在创作环境中从全局导航面板提供，它允�
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
-* [Sites](sites-console.md)
+* [站点](sites-console.md)
 
    站点控制台可在创作环境中访问，以创建和管理社区站点及其组 [](groups.md)。
 
