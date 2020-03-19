@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 2de88b55-dda9-4ccf-ad4d-dd67943ef610
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# 任务功能{#assignments-feature}
+# 任务功能 {#assignments-feature}
 
 在组件浏览器的“ [社区”组中找到的Enablement Assignments和Enablement Catalog](/help/communities/catalog.md) 组件是Enablement Community的 [组件](/help/communities/overview.md#enablement-community)。
 
