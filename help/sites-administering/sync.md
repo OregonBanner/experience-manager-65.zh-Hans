@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 ---
 
@@ -32,7 +32,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 ## Sling分发 {#sling-distribution}
 
-用户数据及其 [ACL](/help/sites-administering/security.md)，存储在 [Oak Core](/help/sites-deploying/platform.md)（Oak JCR下的层）中，并使用 [Oak API访问](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html)。 由于更新不频繁，因此使用 [Sling Content Distribution](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md) (Sling Distribution)将用户数据与其他发布实例同步是合理的。
+用户数据及其 [ACL](/help/sites-administering/security.md)，存储在 [Oak Core中，即Oak JCR下的层，并使用](/help/sites-deploying/platform.md)Oak API [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html)。 由于更新不频繁，因此使用 [Sling Content Distribution](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md) (Sling Distribution)将用户数据与其他发布实例同步是合理的。
 
 与传统复制相比，使用Sling分发进行用户同步的好处有：
 
@@ -328,7 +328,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 
 要验证所有Sling ID值是否不同，请在每个发布实例上：
 
-1. 浏览 [到https://*主机：port*/system/console/status-slingsettings](https://localhost:4503/system/console/status-slingsettings)
+1. 浏览至 `http://<host>:<port>/system/console/status-slingsettings`
 1. 检查 **Sling ID的值**
 
 ![](assets/chlimage_1-27.png)
@@ -336,7 +336,7 @@ source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
 如果发布实例的Sling ID与任何其他发布实例的Sling ID匹配，则：
 
 1. 停止一个具有匹配Sling ID的发布实例
-1. crx-quickstart/launchpad/felix目录
+1. crx-quickstart/launchpad/felix目录中
 
    * 搜索并删除名为sling.id.file的文 *件*
 
