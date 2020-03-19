@@ -1,6 +1,6 @@
 ---
-title: ASRP - adobe存储资源提供商
-seo-title: ASRP - adobe存储资源提供商
+title: ASRP - Adobe存储资源提供商
+seo-title: ASRP - Adobe存储资源提供商
 description: 设置AEM Communities以使用关系数据库作为其公用存储
 seo-description: 设置AEM Communities以使用关系数据库作为其公用存储
 uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# ASRP - adobe存储资源提供商{#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe存储资源提供商 {#asrp-adobe-storage-resource-provider}
 
 ## 关于ASRP {#about-asrp}
 
@@ -45,17 +45,17 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 **在AEM作者实例上：**
 
-* 从全局导航（工具、社区、存储配置）中，选择** Adobe存储资源提供商(ASRP)。**
+* 在全局导航中，导航到 **[UIControl Tools > Communities > Storage Configuration]** ，然后选择 **[UIControl Adobe Storage Resource Provider(ASRP)]**。
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
 以下信息来自供应过程：
 
-* **数据中心 URL. **下拉菜单，选择由您的客户代表标识的生产数据中心。
-* **默认报表包. **输入默认报表包的名称。
-* **使用者密钥**. 输入用户键。
-* **密钥. **输入机密。
-* Select **Submit.**
+* **数据中心URL**:下拉框可选择由您的客户代表标识的生产数据中心。
+* **默认报表包**:输入默认报表包的名称。
+* **消费者密钥**:输入用户键。
+* **秘密**:输入机密。
+* 选择&#x200B;**提交**。
 
 准备发布实例：
 
@@ -64,7 +64,9 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 提交配置后，测试连接：
 
-* 选择 **测试配置**。 对于每个作者实例和发布实例，请从“存储配置”控制台测试与数据中心的连接。
+* 选择 **测试配置**。
+
+   对于每个作者实例和发布实例，请从“存储配置”控制台测试与数据中心的连接。
 
 * 通过外部化链接，确保从数据中心路由配置文件数据的站 [点URL](#externalize-links)。
 
@@ -92,19 +94,19 @@ ASRP必须被标识为所有作者实例和发布实例上的公用商店。
 
 在AEM作者实例上：
 
-* 从主菜单导航到 `Tools > Operations > Replication.`
-* 选择 **激活树。**
-* **开始路径：**浏览至/etc/socialconfig/srpc/
-* 取消选 **择“仅修改”。**
-* 选择 **激活。**
+* 从主菜单导航到UIControl **[Tools > Operations > Replication]**。
+* 选择 **激活树**
+* **起始路径**:浏览至 `/etc/socialconfig/srpc/`
+* 取消选择 **仅已修改**
+* 选择激 **活**
 
 ## 从AEM 6.0升级 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
->如果在已发布的社区站点上启用ASRP，则 [](/help/communities/jsrp.md)JCR中已存储的任何UGC将不再可见，因为内部部署存储和云存储之间不会同步数据。
+>如果在已发布的社区站点上启用ASRP，则 [JCR](/help/communities/jsrp.md) 中已存储的任何UGC都不再可见，因为内部部署存储和云存储之间不会同步数据。
 
-**`AEM Communities Extension`**之前在AEM 6.0社交社区中作为云服务引入。 自AEM 6.1 Communities起，无需云配置，只需从存储配置控制台中选 [择ASRP即可](/help/communities/srp-config.md)。
+**`AEM Communities Extension`** 之前在AEM 6.0社交社区中作为云服务引入。 自AEM 6.1 Communities起，无需云配置，只需从存储配置控制台中选 [择ASRP即可](/help/communities/srp-config.md)。
 
 由于新的存储结构，从社交社区升级到社区时，必 [须按](/help/communities/upgrade.md#adobe-cloud-storage) “升级说明”操作。
 
@@ -141,6 +143,6 @@ Adobe云存储基础结构使用最 *终的一致性* ，实现其扩展和性�
 
 在JCR中，if [/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
-* 不包含srpc [节点](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，这意味着存储提供者是JSRP。
+* 不包含srpc节 [点](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，这意味着存储提供者是JSRP。
 * 如果srpc节点存在并包含节点 [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则默认配置的属性将ASRP定义为默认提供者。
 
