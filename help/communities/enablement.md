@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -29,13 +29,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **SCORM**&#x200B;可共享内容对象参考模型(SCORM)是电子教学的标准和规范的集合。 SCORM还定义如何将内容打包到可转让的ZIP文件中。
 
-* **MySQL** mySQL是关系型数据库，主要用于SCORM跟踪和报告支持数据以及跟踪视频进度的表。 SCORM for enablement功能包需要MySQL JDBC驱动程序。
+* **MySQL** MySQL是关系型数据库，主要用于SCORM跟踪和报告支持数据以及跟踪视频进度的表。 SCORM for enablement功能包需要MySQL JDBC驱动程序。
 
 * **FFmpeg** FFmpeg是用于转换音频和视频并实现流化的解决方案，安装后用于正确转码视频 [资产](../../help/sites-authoring/default-components-foundation.md#video)。 对于启用社区，它在创作环境中用于获取已上传资源的元数据，并在列出资源时生成要显示的缩略图。
 
 设置：
 
-* **社区管**&#x200B;理者对于启用社区，只能向用户组的成员分配其角色 `Community Enablement Managers``*Community Site* Enablement Manager`，其权限可能包括发布环境中的内容创建、分配和成员管理。
+* **社区管**&#x200B;理者对于启用社区，只能向用户组的成员分配其角色 `Community Enablement Managers``Community Site Enablement Manager`，其权限可能包括发布环境中的内容创建、分配和成员管理。
 
 可选配置：
 
@@ -90,4 +90,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## Dispatcher {#dispatcher}
 
-当部署包括 [AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)，为了使启用功能正常工作，这些部分和部分 `clientheader`需要 `filter`进行修改。 请参 [阅配置Dispatcher for Communities](dispatcher.md#enablement)。
+当部署包括 [AEM的Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)，为了使启用功能正常工作，需要修改 `clientheader` 该部 `filter` 分和部分。 请参 [阅配置Dispatcher for Communities](dispatcher.md#enablement)。
