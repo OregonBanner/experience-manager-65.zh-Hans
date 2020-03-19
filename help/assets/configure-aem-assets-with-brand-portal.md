@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f63e776d1f7a9433e80633cdcfdf5ffed37b29da
+source-git-commit: 4f3928558641af89d138bfbf85ba099a4286b2f3
 
 ---
 
@@ -203,7 +203,6 @@ Adobe I/O集成生成API密钥、客户端机密和有效负荷(JWT)，这是设
 >
 > 确保配置正常。 如果配置不健康，请删除该配置并创建一个新的健康配置。
 
-<br/> <br/>
 
 ### 配置云服务 {#configure-the-cloud-service}
 
