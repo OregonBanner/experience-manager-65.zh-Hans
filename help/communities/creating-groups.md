@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
 
-# 社区组{#community-groups}
+# 社区组 {#community-groups}
 
 社区组功能是允许从发布和创作环境中授权用户（社区成员和作者）在社区站点内动态创建子社区的功能。
 
@@ -26,39 +26,51 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 当该功能被添加到社区站点的结构或社区站点模板时，为该组功能选择一个或多个组模板。 此组模板列表会显示给从社区站点内动态创建新组的成员或作者。
 
-## 创建新组 {#creating-a-new-group}
+## Creating a New Group {#creating-a-new-group}
 
 创建新社区组的能力取决于社区站点的存在，该站点包含组功能，如从创建的站点 ` [Reference Site Template](/help/communities/sites.md)`。
 
 下面的示例使用从创建的社区站点， `Reference Site Template` 如AEM Communities入 [门教程中所述](/help/communities/getting-started.md) 。
 
-这是选择**组**菜单项时发布时加载的页面：
+这是选择“组”菜单项时在发 **布时** 加载的页面：
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 当您选择“新建 **用户组** ”图标时，将打开编辑对话框。
 
-在**设置**选项卡下，您提供组的基本功能：
+在“设 **置** ”选项卡下，您提供组的基本功能：
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-* **用户组名**&#x200B;称要在社区站点上显示的用户组的标题。
+* **组名称**
 
-* **说明**&#x200B;要在社区站点上显示的组的说明。
+   要在社区站点上显示的组的标题。
 
-* **邀请**&#x200B;要邀请加入组的成员列表。 提前键入搜索将提供社区成员邀请的建议。
+* **描述**
 
-* **用户组URL名**&#x200B;称成为URL一部分的用户组页面的名称。
+   要在社区站点上显示的组的说明。
 
-* **打开用户组**&#x200B;选择 `Open Group` 表示任何匿名站点访问者都可以查看内容，并将取消选择 `Member Only Group`。
+* **邀请**
 
-* **仅成员组**&#x200B;选 `Member Only Group` 择此选项表示只有组成员可以查看内容，并将取消选择 `Open Group`。
+   要邀请加入组的成员列表。 提前键入搜索将提供社区成员邀请的建议。
 
-在**模板**选项卡下，可以从社区组模板列表中进行选择，这些模板是在社区站点的结构或社区站点模板中包含组功能时指定的。
+* **组 URL 名称**
+
+   成为URL一部分的组页面的名称。
+
+* **开放组**
+
+   选择 `Open Group` 此选项表示任何匿名网站访问者都可以查看内容，并将取消选择 `Member Only Group`。
+
+* **仅限成员加入的组**
+
+   选择 `Member Only Group` 此选项表示只有组成员可以查看内容，并将取消选择 `Open Group`。
+
+在“模 **板** ”选项卡下，可以从社区组模板列表中进行选择，这些模板是在社区站点的结构或社区站点模板中包含组功能时指定的。
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 
-在**图像**选项卡下，可以上传要在社区站点的“组”页面上显示组的图像。 默认样式表将图像大小调整为170 x 90像素。
+在“图 **像** ”选项卡下，可以上传图像，以便在社区站点的“组”页面上显示组。 默认样式表将图像大小调整为170 x 90像素。
 
 ![chlimage_1-88](assets/chlimage_1-88.png)
 
