@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# 添加Clientlibs{#add-clientlibs}
+# 添加Clientlibs {#add-clientlibs}
 
 ## 添加ClientLibraryFolder(clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
@@ -31,25 +31,25 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
    * 名称 : `clientlibs`
    * 类型 : `cq:ClientLibraryFolder`
 
-1. click **OK**
+1. Click **OK**
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-在新节 **点的** “属性”选 `clientlibs` 项卡中，输入**`categories`**属性：
+在新节 **点的** “属性”选 `clientlibs` 项卡中 **，输入类别** 属性：
 
 * 名称：类 **别**
 * 类型：字 **符串**
 * 值：apps. **an-scf-sandbox**
-* click **Add**
+* Click **Add**
 * 单击“ **全部保存”**
 
-注意：使用“apps”为类别值预设。 是将“拥有的应用程序”标识为位于/apps文件夹（而非/libs）中的约定。  重要：添加占 `js.tx`位符t和**`css.tx`**t文件。 （没有cq:ClientLibraryFolder，它不是正式的cq:ClientLibraryFolder。）
+注意：使用“apps”为类别值预设。 是将“拥有的应用程序”标识为位于/apps文件夹（而非/libs）中的约定。  重要：添加占 `js.tx`位符t **`css.txt`** 和文件。 （没有cq:ClientLibraryFolder，它不是正式的cq:ClientLibraryFolder。）
 
 1. 右键单击 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 选择 **创建文件……**
-1. **输入**&#x200B;名称： `css.txt`
+1. Enter **Name:** `css.txt`
 1. 选择 **创建文件……**
-1. **输入**&#x200B;名称： `js.txt`
+1. Enter **Name:** `js.txt`
 1. 单击“ **全部保存”**
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
@@ -77,22 +77,26 @@ css.txt和js.txt的第一行标识了从中找到以下文件列表的基本位�
 
 **请注意** ，这可能是生产站点所使用的方法，也可能不是所需的方法，因为每页下载的clientlib的方便性与大小／速度有所不同。
 
-如果仅在一个页面上使用一个功能，则可以直接在页面上包含该功能的完整clientlib，例如&lt;% ui:includeClientLib类别=cq.social.hbs.forum&quot; %>
+如果仅在一个页面上使用一个功能，则可以直接在页面上包含该功能的完整clientlib，例如
+
+`% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
 在这种情况下，包括所有的SCF客户端，因此更基本的SCF客户端是作者的客户端：
 
 * 名称 : **`embed`**
 * 类型 : **`String`**
 * 单击 **`Multi`**
-* 值： **`cq.social.scf`***&lt;enter>将在每个条目后弹出一个对话框单击**[+] *,*以添加以下clientlib类别：*
+* 值: **`cq.social.scf`**
 
-   * **`cq.ckeditor`**
-   * **`cq.social.author.hbs.comments`**
-   * **`cq.social.author.hbs.forum`**
-   * **`cq.social.author.hbs.rating`**
-   * **`cq.social.author.hbs.reviews`**
-   * **`cq.social.author.hbs.voting`**
-   * click **OK**
+   * 它将弹出一个对话框，在每个条目后单击 **`+`** ，以添加以下clientlib类别：
+
+      * **`cq.ckeditor`**
+      * **`cq.social.author.hbs.comments`**
+      * **`cq.social.author.hbs.forum`**
+      * **`cq.social.author.hbs.rating`**
+      * **`cq.social.author.hbs.reviews`**
+      * **`cq.social.author.hbs.voting`**
+      * click **OK**
 
 * 单击“ **全部保存”**
 
@@ -114,16 +118,16 @@ css.txt和js.txt的第一行标识了从中找到以下文件列表的基本位�
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-包含语句属于 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 部分 <html> 脚本. 默认包 **`foundation head.jsp`** 括可覆盖的脚本： **`headlibs.jsp`**.
+include语句属于脚 `head` 本的部 `html` 分。 默认包 **`foundation head.jsp`** 括可覆盖的脚本： **`headlibs.jsp`**.
 
 **复制headlibs.jsp并包含clientlibs:**
 
 1. 使用 **CRXDE Lite**，选择 **`/libs/foundation/components/page/headlibs.jsp`**
 
-1. 右键单击并选择**复制**（或从工具栏中选择复制）
-1. select**`/apps/an-scf-sandbox/components/playpage`**
-1. 右键单击并选择**粘贴**（或从工具栏中选择粘贴）
-1. 双击 **`headlibs.jsp`** 以打开它
+1. 右键单击并选择复 **制** （或从工具栏中选择复制）
+1. 选择 **`/apps/an-scf-sandbox/components/playpage`**
+1. 右键单击并选择粘 **贴** （或从工具栏中选择粘贴）
+1. 双击以 **`headlibs.jsp`** 打开它
 1. 在文件末尾附加以下行
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
@@ -153,28 +157,28 @@ css.txt和js.txt的第一行标识了从中找到以下文件列表的基本位�
 
 要创建包，请执行以下操作：
 
-* 从CRXDE lite中，单击“包” [图标](https://localhost:4502/crx/packmgr/)
+* 从CRXDE Lite中，单击“包” [图标](https://localhost:4502/crx/packmgr/)
 * 单击“ **创建包”**
 
    * 包名称：an-scf-sandbox-minimal-pkg
    * 版本：0.1
-   * 组：&lt;leave as default>
-   * click **OK**
+   * 组: `leave as default`
+   * Click **OK**
 
-* click **Edit**
+* Click **Edit**
 
-   * 选择**过滤器**选项卡
+   * “选择过 **滤器** ”选项卡
 
       * 单击“ **添加过滤器”**
-      * 根路径：&lt;浏览至** /apps/an-scf-sandbox**>
-      * click **Done**
+      * 根路径：浏览至 `/apps/an-scf-sandbox`
+      * Click **Done**
       * 单击“ **添加过滤器”**
-      * 根路径：&lt;浏览到 **/etc/designs/an-scf-sandbox**>
-      * click **Done**
+      * 根路径：浏览至 `/etc/designs/an-scf-sandbox`
+      * Click **Done**
       * 单击“ **添加过滤器”**
-      * 根路径：&lt;浏览到 **/content/an-scf-sandbox**>
-      * click **Done**
-   * click **Save**
+      * 根路径：浏览至 `/content/an-scf-sandbox**`
+      * Click **Done**
+   * Click **Save**
 
 
 * 单击“构 **建”**
