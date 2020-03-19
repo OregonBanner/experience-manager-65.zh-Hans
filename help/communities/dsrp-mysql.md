@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -27,7 +27,7 @@ MySQL是一个关系数据库，可用于存储用户生成的内容(UGC)。
 * [MySQL的JDBC驱动程序](deploy-communities.md#jdbc-driver-for-mysql)
 * 关系数据库：
 
-   * [MySQL Server](https://dev.mysql.com/downloads/mysql/) Community server版本5.6或更高版本
+   * [MySQL server](https://dev.mysql.com/downloads/mysql/) Community Server版本5.6或更高版本
 
       * 可以与AEM在同一主机上运行或远程运行
    * [MySQL工作台](https://dev.mysql.com/downloads/tools/workbench/)
@@ -125,8 +125,8 @@ SQL脚本从AEM存储库获取：
 
 下载架构的一种方法是
 
-* 为sql `jcr:content`文件选择节点
-* 注意，该属性的 `jcr:data`值是一个视图链接
+* 为sql `jcr:content` 文件选择节点
+* 注意，该属性的 `jcr:data` 值是一个视图链接
 
 * 选择视图链接以将数据保存到本地文件
 
@@ -155,7 +155,7 @@ SQL脚本从AEM存储库获取：
 
 #### 刷新 {#refresh}
 
-执行脚本后，必须刷新该部分 `SCHEMAS`才能看 `Navigator` 到新数据库。 使用“架构”右侧的刷新图标：
+执行脚本后，必须刷新该部分， `SCHEMAS` 才能看 `Navigator` 到新数据库。 使用“架构”右侧的刷新图标：
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
