@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -38,34 +38,34 @@ source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
 
 * 如果不使用默认端口(4502、4503)，则配置复 [制代理](#replication-agents-on-author)
 * [复制加密密钥](#replicate-the-crypto-key)
-* 如果支持全球化，则设 [置自动翻译](/help/sites-administering/translation.md)（提供示例设置供开发）
+* 如果支持全球化， [则设置自动翻译](/help/sites-administering/translation.md)（提供示例设置以供开发）
 
 **对于“社[区”功能](/help/communities/overview.md)**
 
-* 如果部署发 [布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)，请 [确定主发布者](#primary-publisher)
+* 如果部署发 [布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [请标识主发布者](#primary-publisher)
 
 * [启用隧道服务](#tunnel-service-on-author)
 * [启用社交登录](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler)
 * [配置Adobe Analytics](/help/communities/analytics.md)
 * 设置默认 [电子邮件服务](/help/communities/email.md)
-* 确定共享 [UGC存储](/help/communities/working-with-srp.md) (**SRP**)的选择
+* 确定共享UGC [存储](/help/communities/working-with-srp.md) (**SRP**)的选择
 
-   * if MongoDB SRP [(MSRP)](/help/communities/msrp.md)
+   * 如果MongoDB SRP( [MSRP)](/help/communities/msrp.md)
 
       * [安装和配置MongoDB](/help/communities/msrp.md#mongodb-configuration)
-      * [配置解决方案](/help/communities/solr.md)
+      * [配置Solr](/help/communities/solr.md)
       * [选择MSRP](/help/communities/srp-config.md)
-   * 如果关系数据库SRP [(DSRP)](/help/communities/dsrp.md)
+   * 如果关系数据库SRP( [DSRP)](/help/communities/dsrp.md)
 
       * [安装MySQL的JDBC驱动程序](#jdbc-driver-for-mysql)
       * [安装和配置MySQL for DSRP](/help/communities/dsrp-mysql.md)
-      * [配置解决方案](/help/communities/solr.md)
+      * [配置Solr](/help/communities/solr.md)
       * [选择DSRP](/help/communities/srp-config.md)
-   * if Adobe SRP [(ASRP)](/help/communities/asrp.md)
+   * 如果是Adobe SRP [(ASRP)](/help/communities/asrp.md)
 
-      * 与您的客户代表合作进行资源调配
+      * 与您的客户代表合作进行配置
       * [选择ASRP](/help/communities/srp-config.md)
-   * if JCR SRP [(JSRP)](/help/communities/jsrp.md)
+   * 如果JCR SRP( [JSRP)](/help/communities/jsrp.md)
 
       * 不是共享的UGC存储：
 
@@ -102,14 +102,14 @@ AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 [Communi
 
 “两个社区”功能使用MySQL数据库：
 
-* 对于 [enablement](/help/communities/enablement.md) :记录SCORM活动和学员
+* 对于 [启用](/help/communities/enablement.md) :记录SCORM活动和学员
 * 对于 [DSRP](/help/communities/dsrp.md) :存储用户生成的内容(UGC)
 
 必须单独获取和安装MySQL连接器。
 
 必要的步骤有：
 
-1. 从https://dev.mysql.com/downloads/connector/j/下载ZIP存 [档](https://dev.mysql.com/downloads/connector/j/)
+1. 从https://dev.mysql.com/downloads/connector/j/下载ZIP存档文 [件](https://dev.mysql.com/downloads/connector/j/)
 
    * 版本必须>= 5.1.38
 
@@ -117,16 +117,16 @@ AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 [Communi
 1. 使用Web控制台安装并启动捆绑包：
 
    * 例如，https://localhost:4502/system/console/bundles
-   * select **`Install/Update`**
+   * 选择 **`Install/Update`**
    * 浏览……以选择从下载的ZIP存档中提取的包
-   * 检查Oracle Corporation的MySQLcom.mysql.jdbc*的JDBC驱动程序是否处于活动状态，如果未激活，则启动它（或检查日志）
+   * 检查 *Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驱动程序是否处于活动状态，如果未激活，则启动它（或检查日志）
 
 1. 如果在配置JDBC后在现有部署上进行安装，则通过从Web控制台中重新保存JDBC配置，将JDBC重新绑定到新连接器：
 
    * 例如，https://localhost:4502/system/console/configMgr
-   * 定位配 `Day Commons JDBC Connections Pool` 置
+   * 查找配 `Day Commons JDBC Connections Pool` 置
    * 选择以打开
-   * select `Save`
+   * 选择 `Save`
 
 1. 对所有作者实例和发布实例重复步骤3和4
 
@@ -176,18 +176,18 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 **Adobe AEM Cloud中可见的包**
 
-此页面上指向包的链接不需要AEM的正在运行实例，因为它们要在上进行包共享 `adobeaemcloud.com`。 当可查看包时，该按 `Install`钮用于将包安装到Adobe托管站点中。 如果打算安装在本地AEM实例上，选择 `Install`将导致错误。
+此页面上指向包的链接不需要AEM的正在运行实例，因为它们要在上进行包共享 `adobeaemcloud.com`。 当可查看包时，该按 `Install` 钮用于将包安装到Adobe托管站点中。 如果打算安装在本地AEM实例上，选择 `Install` 将导致错误。
 
 **如何在本地AEM实例上安装**
 
 要安装本地AEM实例中 `adobeaemcloud.com` 可见的包，必须先将包下载到本地磁盘：
 
-* select the **Assets** tab
+* Select the **Assets** tab
 * 选择 **下载到磁盘**
 
 在本地AEM实例上，使用包管理器(例如 [https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/))上传到本地AEM的包存储库。
 
-或者，也可以使用包共享从本地AEM实例(例如， [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/))访问包，该按钮 `Download`将下载到本地AEM实例的包存储库。
+或者，也可以使用包共享从本地AEM实例(例如， [https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/))访问包，该按钮将下载 `Download` 到本地AEM实例的包存储库。
 
 进入本地AEM实例的包存储库后，使用包管理器安装该包。
 
@@ -197,7 +197,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 在AEM Communities中，公用存储用于存储用户生成的内容(UGC)，通常称为存储资 [源提供商(SRP)](/help/communities/working-with-srp.md)。 建议的部署中心是为公用商店选择SRP选项。
 
-公用存储支持发布环境中对UGC的协调和分析，同时无需复 [制](/help/communities/sync.md) UGC。
+公用存储支持发布环境中对UGC的协调和分析，同时不需要复 [制](/help/communities/sync.md) UGC。
 
 * [社区内容商店](/help/communities/working-with-srp.md) :讨论AEM社区的SRP存储选项
 
@@ -213,7 +213,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 ### 主发布者 {#primary-publisher}
 
-如果选择的部署是 [发布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为不应在所有实例(如依赖于**通知**或 **`primary publisher`****** Adobe Analytics的功能)上发生的活动。
+当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为不应在所有实例(如依赖通知或 **`primary publisher`** Adobe Analytics的功能)上发生的活动 ********。
 
 默认情况下， `AEM Communities Publisher Configuration` OSGi配置中选中了该复选 **`Primary Publisher`** 框，这样发布群中的所有发布实例都将自标识为主实例。
 
@@ -223,15 +223,15 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 对于发布场中的所有其他（辅助）发布实例：
 
-* 使用管理员权限登录
-* 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
+* 以管理员权限登录
+* 访问Web [控制台](/help/sites-deploying/configuring-osgi.md)
 
    * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
-* 查找 `AEM Communities Publisher Configuration`
+* 找到 `AEM Communities Publisher Configuration`
 * 选择编辑图标
-* 取消选中“ **主发布者”框**
-* select **Save**
+* 取消选中“ **主发布者** ”框
+* Select **Save**
 
 ### 作者上的复制代理 {#replication-agents-on-author}
 
@@ -245,7 +245,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 * 在创作时访问复制控制台
 
-   * 从全局导航：工 **具、部署、复制、创作代理**
+   * 在全局导航中，导航到UIControl **[Tools > Deployment > Replication > Agent on Author]**
 
 * 对于两个代理，请遵循相同的流程：
 
@@ -253,8 +253,8 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
    * **反向复制代理（发布反向）**
 
       1. 选择代理
-      1. select **edit**
-      1. select the **Transport** tab
+      1. Select **edit**
+      1. Select the **Transport** tab
       1. 如果不是端 `4503`口，请编辑 **URI** ，以指定正确的端口
 
       1. 如果不是用 `admin`户，请编辑 **“用户** ”和“口 **令** ”以指定用户组的 `administrators` 成员
@@ -278,17 +278,17 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 要启用隧道服务，请执行以下操作：
 
 * 论作 **者**
-* 以管理权限登录
+* 使用管理权限登录
 * 如果发布者不是localhost:4503或传输用户不是， `admin`请配 [置复制代理](#replication-agents-on-author)
 
 * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
 
    * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-* 查找 `AEM Communities Publish Tunnel Service`
+* 找到 `AEM Communities Publish Tunnel Service`
 * 选择编辑图标
-* 选中**enable **box
-* select **Save**
+* 选中“ **启用** ”框
+* Select **Save**
 
 ![](/help/communities/assets/chlimage_1-129.png)
 
@@ -302,10 +302,10 @@ AEM Communities有两项功能，它们要求所有AEM服务器实例使用相�
 
 * 访问AEM实例（通常为作者实例），该实例包含要复制的关键材料
 
-   * 在本地 `com.adobe.granite.crypto.file` 文件系统中查找包，例如，
+   * 在本地 `com.adobe.granite.crypto.file` 文件系统中找到捆绑包，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
-      * 文 `bundle.info` 件将识别包
+      * 文 `bundle.info` 件将识别捆绑包
    * 导航到数据文件夹，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
@@ -313,13 +313,13 @@ AEM Communities有两项功能，它们要求所有AEM服务器实例使用相�
 
 
 
-* 针对每个目标AEM实例
+* 对于每个目标AEM实例
 
    * 导航到数据文件夹，例如，
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
    * 粘贴之前复制的2个文件
-   * 如果目标AEM实 [例当前正在运行，则必须刷新Granite Crypto包](#refresh-the-granite-crypto-bundle) 。
+   * 如果目标AEM实 [例当前正在运行](#refresh-the-granite-crypto-bundle) ，则必须刷新Granite Crypto包
 
 
 >[!CAUTION]
@@ -341,9 +341,9 @@ AEM Communities有两项功能，它们要求所有AEM服务器实例使用相�
 使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * 浏览 [到https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* select `/etc/key`
+* 选择 `/etc/key`
 * 打开选 `Replication` 项卡
-* select `Replicate`
+* 选择 `Replicate`
 
 * [刷新Granite加密捆绑](#refresh-the-granite-crypto-bundle)
 
@@ -355,12 +355,12 @@ AEM Communities有两项功能，它们要求所有AEM服务器实例使用相�
 
    * 例如， [https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
-* 定位 `Adobe Granite Crypto Support` 捆绑包(com.adobe.granite.crypto)
+* 找 `Adobe Granite Crypto Support` 到捆绑包(com.adobe.granite.crypto)
 * 选择刷 **新**
 
 ![](/help/communities/assets/chlimage_1-131.png)
 
-* 稍后，应显示**成功**对话框：
+* 稍后，应显示“ **成功** ”对话框：
    `Operation completed successfully.`
 
 ### Apache HTTP Server {#apache-http-server}
