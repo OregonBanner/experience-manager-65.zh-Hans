@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# 使用注释{#using-comments}
+# 使用注释 {#using-comments}
 
 ## 简介 {#introduction}
 
@@ -81,7 +81,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **允许的文件类型**
 
-   仅在选中“允许文件上传”时相关。 带有“点”分隔符的文件名扩展名列表，以逗号分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 默认值未指定，因此允许** **所有文件类型。
+   仅在选中“允许文件上传”时相关。 带有“点”分隔符的文件名扩展名列表，以逗号分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **富文本编辑器**
 
@@ -101,9 +101,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### “用户审核”选项卡 {#user-moderation-tab}
 
-在**用户协调**选项卡下，指定如何管理已发布的评论。 有关详细信息，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md)。
+在“用户 **审核** ”选项卡下，指定如何管理已发布的评论。 有关详细信息，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md)。
 
-* **预审核**&#x200B;如果选中此项，则注释必须经过批准，才能显示在发布站点上。 取消选择默认值。
+* **预审**
+
+   如果选中此项，则注释必须经过批准，才能显示在发布站点上。 取消选择默认值。
 
 * **删除评论**
 
@@ -139,7 +141,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### “排序设置”选项卡 {#sort-settings-tab}
 
-在**排序设置**选项卡下，指定显示已发布注释时的排序方式。
+在“排 **序设置** ”选项卡下，指定显示已发布注释时的排序方式。
 
 * **排序字段**
 
@@ -155,19 +157,19 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 确定自定义资源类型后，进入 [设计模式](/help/sites-authoring/default-components-designmode.md) ，双击放置的组件以打开 `Comments` 带有额外选项卡的对话框。
 
-在**资源类型**选项卡下，为组件的新实例指定自定义resourceType `Comments or Voting`:
+在“资 **源类型** ”选项卡下，为组件的新实例指定自定义resourceType `Comments or Voting`:
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
 * **评论资源类型**
 
-   导航到/apps中扩展组件( `comment`单个注释)的resourceType。 For example, `/apps/social/commons/components/hbs/comments/comment`
+   导航到/apps中扩展组件( `comment`单个注释)的resourceType。 例如，`/apps/social/commons/components/hbs/comments/comment`
 
    此资源标识访客发布评论时创建的UGC的resourceType。
 
 * **投票资源类型**
 
-   导航到/apps中扩展组件 `voting`的resourceType。 For example, `/apps/social/components/hbs/voting`
+   导航到/apps中扩展组件 `voting`的resourceType。 例如，`/apps/social/components/hbs/voting`
 
    此资源标识访客发布投票时创建的UGC的资源类型。
 
@@ -186,7 +188,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 当站点访客登录时，根据配置，他们可能
 
 * 发布新评论
-* 编辑自己的注释
+* 编辑他们自己的注释
 * 删除自己的注释
 * 标记其他人的注释
 
