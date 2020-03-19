@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -23,8 +23,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 按照将导 [致Adobe Photoshop](../../help/sites-deploying/deploy.md#getting-started) CS3 Extended
 
-* localhost:4502上 [的创作环境](http://localhost:4502/)
-* localhost:4503上 [的发布环境](http://localhost:4503/)
+* 本地主机上 [的创作环境：4502](http://localhost:4502/)
+* 本地主机上 [的发布环境：4503](http://localhost:4503/)
 
 对于AEM Communities,
 
@@ -37,7 +37,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 发布环境适用于
 
-   * 根据Enablement manager管理的主题进行学习／培训
+   * 根据Enablement Manager管理的主题进行学习／培训
    * 评论和评级支持资源和学习路径
    * 联系资源联系人
 
@@ -59,7 +59,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 配置 Analytics {#configure-analytics}
 
-为社 [区站点配置Adobe Analytics后](analytics.md)[](reports.md) ，可以在生成的报告中获取更多信息，这些报告涉及分配给社区成员（学员）的支持资源和学习路径。
+为社 [区站点配置Adobe Analytics后](analytics.md)[](reports.md) ，有关为社区成员（学员）分配的启用资源和学习路径生成的报告中会提供更多信息。
 
 ## 为通知配置电子邮件 {#configure-email-for-notifications}
 
@@ -141,7 +141,7 @@ For more information see [Managing Users and User Groups](users.md).
 * **名字**:西德尼
 * **姓氏**:克罗夫特
 
-### Quinn Harper - Enablement resource联系人和审查方 {#quinn-harper-enablement-resource-contact-and-moderator}
+### Quinn Harper - Enablement Resource联系人和审查方 {#quinn-harper-enablement-resource-contact-and-moderator}
 
 [创建一个成员](members.md#create-new-member) ，创建站点后，该成员将添加到社区站点的成员组。 此会员资格允许在为站点创建启用资源时，将 [该会员分配为启用资源联系人](resources.md#settings) 。
 
