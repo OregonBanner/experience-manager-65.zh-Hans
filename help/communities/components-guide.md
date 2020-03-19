@@ -10,12 +10,12 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ---
 
 
-# 社区组件指南 {#community-components-guide}
+# 社区组件指南  {#community-components-guide}
 
 “社区组件”指南是用于社交组件框架( [SCF)的交互式开发工具](scf.md)。 它提供了可用AEM Communities组件列表或由多个组件构建的更复杂的功能。
 
@@ -38,9 +38,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 如果已登录，则分配给成员的权限
 * 是否使用默认SRP( [JSRP](jsrp.md))
 
-在创作时，要进入编辑模式，请在服 `editor.html` 务器名 `cf#` 称后面插入或作为第一个路径段：
+在创作时，要进入编辑模式，请在服 `editor.html` 务器名 `cf#` 后插入或作为第一个路径段：
 
-* 标准UI:
+* 标准 UI:
 
    [https://&lt;server>:&lt;port>/editor.html/content/community-components/en.html](http://localhost:4502/editor.html/content/community-components/en.html)
 
@@ -118,7 +118,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->请注意，如果SRP默认为 [JSRP](jsrp.md)，则在发布实例上输入的UGC将仅在发布时可见，并且*not *be visible from the [](moderate-ugc.md) 仲裁控制台on the author instance.
+>请注意，如果SRP默认为 [JSRP](jsrp.md)，则在发布实例上输入的UGC将仅在发布时可见，并且在创作实例的审核控制台中 *不可见*[](moderate-ugc.md) 。
 
 ## 客户端库 {#client-side-libraries}
 
@@ -134,7 +134,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 自定义 {#customization}
 
-启用后，每个SCF组件都可以通过临时修改组件的模板、CSS和数据来为可能的自定义创建原型。
+启用后，每个SCF组件都可以通过临时修改组件的模板、CSS和数据，为可能的自定义创建原型。
 
 ### 启用自定义 {#enabling-customization}
 
@@ -152,7 +152,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 选择组件的节 `jcr:content` 点
 
-   For example, `/content/community-components/en/comments/jcr:content`
+   例如，`/content/community-components/en/comments/jcr:content`
 
 1. 添加属性
 
