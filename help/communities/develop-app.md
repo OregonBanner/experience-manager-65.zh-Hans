@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -30,9 +30,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 使用CRXDE Lite:
 
 <!--Resolve steps below-->
-    *名称：`sling:resourceSuperType`
-    *类型：“字符串”
-    *值：`foundation/components/page&#39;
+    名称：`sling:resourceSuperType&#39;
+    Type:“字符串”
+    值：`foundation/components/page&#39;
 
 1. 单击绿色 **[!UICONTROL [+添加]]**
 1. 单击“ **[!UICONTROL 全部保存”]**
@@ -86,7 +86,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    要设置创作，请使用本 `body.jsp` 地脚本叠加并在正文中包含段落系统(parsys):
 
-   1. navigate to `/apps/an-scf-sandbox/components`
+   1. 导航至 `/apps/an-scf-sandbox/components`
    1. 选择节 `playpage`点
    1. 右键单击并选择 `Create > Create File...`
 
@@ -159,7 +159,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在多语言环境中，根页面将包括一个脚本，该脚本将解析来自客户端的请求以确定首选语言。
 
-在这个简单的示例中，将根页面静态设置为重定向到英文页面，该页面将来可能会开发为包含播放页面链接的主登录页面。
+在这个简单的示例中，将根页面静态设置为重定向到英语页面，该页面将来可能会开发为主登录页面，并带有指向播放页面的链接。
 
 将浏览器URL更改为根页面： [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html)
 
@@ -174,4 +174,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 发布站点后，浏览到发布实例上的根页面将重定向到英文页面。
 
-播放社区SCF组件之前的最后一步是添加客户端库文件夹(clientlibs)。... **[⇒](add-clientlibs.md)**
+播放社区SCF组件之前的最后一步是添加客户端库文件夹(clientlibs)。... [添加Clinelbs](add-clientlibs.md)
