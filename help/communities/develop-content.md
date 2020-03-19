@@ -10,15 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
 # 开发沙箱内容 {#develop-sandbox-content}
 
-**[‡添加客户端](add-clientlibs.md)**
+**[添加Clientlibs](add-clientlibs.md)**
 
 此时，可以使用 [We-Retail社区、社区组件指南和功能要素在沙箱中探索社区功能](../../help/sites-developing/we-retail.md)，以 [供参考](components-guide.md)[](essentials.md) 。
 
-**[‡添加客户端](add-clientlibs.md)**
+
