@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
@@ -50,14 +50,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 以下是一些对AEM平台新手的开发人员有用的链接：
 
-* [入门](../../help/sites-deploying/deploy.md#getting-started) -用于部署AEM实例
+* [入门](../../help/sites-deploying/deploy.md#getting-started):用于部署AEM实例
 
-   * [基础知识](../../help/sites-developing/the-basics.md) -面向网站和功能的开发人员
-   * [作者的首要步骤](../../help/sites-authoring/first-steps.md) -用于创作页面内容
+   * [基础](../../help/sites-developing/the-basics.md):面向网站和功能开发人员
+   * [作者的首步](../../help/sites-authoring/first-steps.md):用于创作页面内容
 
 ## 使用CRXDE Lite开发环境 {#using-crxde-lite-development-environment}
 
-AEM开发人员在 [](../../help/sites-developing/developing-with-crxde-lite.md) CRXDE Lite开发环境中的大部分时间都花在创作实例上。 CRXDE lite提供对CRX存储库的较少限制的访问。 经典UI工具和触屏优化UI控制台提供对CRX存储库特定部分的更结构化的访问。
+AEM开发人员在 [](../../help/sites-developing/developing-with-crxde-lite.md) CRXDE Lite开发环境中的大部分时间都花在创作实例上。 CRXDE Lite提供对CRX存储库的较少限制的访问。 经典UI工具和触屏优化UI控制台提供对CRX存储库特定部分的更结构化的访问。
 
 使用管理权限登录后，可通过多种方式访问CRXDE Lite:
 
@@ -71,7 +71,7 @@ AEM开发人员在 [](../../help/sites-developing/developing-with-crxde-lite.md)
 
 3. 直接浏览到 `CRXDE Lite`: `<server>:<port>/crx/de`
 
-   例如，在本地作者实例上： ` [http://localhost:4502/crx/de](http://localhost:4502/crx/de)`
+   例如，在本地作者实例上： [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 要使用CRXDE Lite，您必须使用开发人员或管理员权限登录。 对于默认的localhost实例，您可以使用
 
