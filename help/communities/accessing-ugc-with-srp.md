@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 72d4022c-43ba-49e0-b94c-f2beabaef64d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 ---
 
 
-# 使用SRP访问UGC{#accessing-ugc-with-srp}
+# 使用SRP访问UGC {#accessing-ugc-with-srp}
 
 ## 关于SRP {#about-srp}
 
@@ -32,7 +32,7 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 
 有关UGC存储的重要信息是，将站点配置为使用ASRP或MSRP时，实际UGC不会存储在AEM的节 [点存储](/help/sites-deploying/data-store-config.md) (JCR)中。
 
-虽然JCR中可能存在使UGC阴影的节点以提供有用的元数据，但这些节点不应与实际UGC混淆。
+虽然JCR中可能存在使UGC阴影的节点，以提供有用的元数据，但这些节点不应与实际UGC混淆。
 
 请参 [阅存储资源提供者概述。](/help/communities/srp.md)
 
