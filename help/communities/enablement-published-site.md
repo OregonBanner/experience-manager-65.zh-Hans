@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
@@ -27,8 +27,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 首先，浏览到创建站点时显示的URL，但在发布服务器上，例如
 
-* author URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
-* publish URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
+* 作者URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
+* 发布URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
 如果设 [置了默认主页](enablement-create-site.md#changethedefaulthomepage)，则只需浏览 [http://localhost:4503/](http://localhost:4503/) ，就可以启动站点。
 
@@ -36,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![chlimage_1-432](assets/chlimage_1-433.png)
 
 ## 匿名网站访客 {#anonymous-site-visitor}
 
@@ -75,7 +75,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 已登记会员 {#enrolled-member}
 
-这一经验并被指派给 `Riley Taylor` Ski Lessons `Sidney Croft` , [并且](enablement-setup.md#publishcreateenablementmembers) ，通过Ski Lessons Lossens Lansers [(](resource.md#settings) Ski Lessons)的用户，通过其成为Ski Lessons Ski classGobumment的成员， **** ,Lis Las Ski Lits Lats LifsS SifsG Group.
+这一经验并被指派给 `Riley Taylor` Ski Lessons `Sidney Croft` , [并且](enablement-setup.md#publishcreateenablementmembers) ，通过Ski Lessons Lossens Lansers [(](resource.md#settings) Ski Lessons)的用户，通过其成为Ski Lessons Ski Class Group的成员， **** Lim Lap。
 
 登录方式
 
@@ -161,7 +161,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 管理 {#administration}
 
-其中包括两个学员的活动，并选 `Riley Taylor` 择 `Sidney Croft. By s`链 `Administration`接以访问审核控制台，Quinn可以使用批量审核控制台 [审核其帖子](moderation.md) 。
+这是两个学员的活动， `Riley Taylor` 和 `Sidney Croft`。 通过选择链 `Administration` 接以访问审核控制台，Quinn可以使用批量审核控制 [台审核其帖子](moderation.md) 。
 
 选择侧面板图标可切换打开用于搜索社区内容的筛选器。
 
@@ -203,8 +203,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * 使用管理权限登录
 * 从主菜单导航到“社区” **[!UICONTROL >“资源”]**
 * 选择站 `Enablement Tutorial` 点
-* 选择所 `Report`有资源的摘要图标
-* 选择一个资源，然后选择该 `Report`资源上的报表的图标
+* 选择所 `Report` 有资源的摘要图标
+* 选择一个资源，然后选择该 `Report` 资源上的报表的图标
 
 请注意，显示Adobe Analytics数据可能为时过早，Adobe Analytics可能需要1到12小时才能显示。 但是，基本的SCORM报告已经可用。
 
@@ -218,7 +218,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 打开卡 `Enablement Tutorial`
 * 打开卡 `Ski Lessons`
-* `select Report, User Report`
+* 选择 `Report > User Report`
 
 ![chlimage_1-444](assets/chlimage_1-444.png)
 
