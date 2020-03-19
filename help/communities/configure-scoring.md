@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d522c5ec6c72a9fd391d021f2fac37f88c686bd9
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# Scorning and Badges Essentials{#scoring-and-badges-essentials}
+# Scorning and Badges Essentials {#scoring-and-badges-essentials}
 
 AEM Communities评分和徽章功能提供了识别和奖励社区成员的能力。
 
@@ -26,7 +26,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 本页包含其他技术详细信息：
 
-* 如何 [将徽章显示为图像](#displaying-badges) 或文本
+* 如何将 [徽章显示为图像](#displaying-badges) 或文本
 * 如何打开大量调试 [日志记录](#debug-log-for-scoring-and-badging)
 * 如何访 [问与得分](#ugc-for-scoring-and-badging) 、徽章相关的UGC
 
@@ -38,7 +38,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 徽章显示为文本还是图像在HBS模板的客户端上受控。
 
-例如，在、中 `this.isAssigned` 搜索 `/libs/social/forum/components/hbs/topic/list-item.hbs`:
+例如，在以下位置 `this.isAssigned` 搜索 `/libs/social/forum/components/hbs/topic/list-item.hbs`:
 
 ```
 {{#each author.badges}}
@@ -68,7 +68,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 如果为true，则isAssigned指示为角色分配了徽章，并且该徽章应显示为文本。
 
-如果为false，则“已分配”表示标记已通过获得的得分获得，并且该标记应显示为图像。
+如果为false，则“已分配”表示标记已通过获得的得分获得，并且标记应显示为图像。
 
 对此行为所做的任何更改都应在自定义脚本中进行（覆盖或叠加）。 请参 [阅客户端自定义](/help/communities/client-customize.md)。
 
@@ -80,32 +80,32 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 要快速设置幻灯片日志文件，请执行以下操作：
 
-1. 访问 **Adobe Experience Manager web控制台日志支持**，例如
+1. 访问 **Adobe Experience Manager Web Console日志支持**，例如
 
    * https://localhost:4502/system/console/slinglog
 
 1. 选择 **添加新记录器**
 
-   1. 为日 `DEBUG`志级 **别选择**
+   1. 选择 `DEBUG` 日志 **级别**
 
    1. 输入日志文件 **的名称**，例如
 
       * logs/scoring-debug.log
-   1. 输入两个**Logger **(class)条目(使用图 `+` 标)
+   1. 输入两个 **Logger** （类）条目(使用 `+` 图标)
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
-   1. select **Save**
+   1. Select **Save**
 
 
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
-查看日志条目
+要查看日志条目，请执行以下操作：
 
 * 从Web控制台
 
-   * 在**状态**菜单下
+   * 在“状态 **”菜单下**
    * 选择 **日志文件**
    * 搜索您的日志文件名，例如 `scoring-debug`
 
@@ -113,7 +113,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
    * 日志文件位于&lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
-   * for example, `.../crx-quickstart/logs/scoring-debug.log`
+   * 例如，`.../crx-quickstart/logs/scoring-debug.log`
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -123,9 +123,9 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的能�
 
 访问评分和标记数据的描述使用JSRP，因为UGC可使用 [CRXDE Lite轻松访问](/help/sites-developing/developing-with-crxde-lite.md)。
 
-**作者JSRP** :在创作环境中进行试验会生成仅在创作环境中可见的UGC。
+**作者JSRP**:在创作环境中进行试验会生成仅在创作环境中可见的UGC。
 
-**发布时的JSRP** :同样，如果在发布环境上进行测试，则必须对发布实例具有管理权限访问CRXDE Lite。 如果发布实例在生产模 [式](/help/sites-administering/production-ready.md) （nosamplecontent运行模式）中运行 [，则需要启用](/help/sites-administering/enabling-crxde-lite.md)CRXDE Lite。
+**发布时的JSRP**:同样，如果在发布环境上进行测试，则必须对发布实例具有管理权限访问CRXDE Lite。 如果发布实例在生产模 [式](/help/sites-administering/production-ready.md) （nosamplecontent运行模式）中运行 [，则需要启用](/help/sites-administering/enabling-crxde-lite.md)CRXDE Lite。
 
 UGC在JSRP上的基本位置是 `/content/usergenerated/asi/jcr/`。
 
@@ -146,12 +146,12 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 1. 具有唯一 *ID* （使用向导创建的社区站点）的AEM站点：
 
-* 使用在入门教程中创建的入门教程(参 [与)站点](/help/communities/getting-started.md)
-* 找到论坛页面节点
+   * 使用在入门教程中创建的入门教程(参 [与)站点](/help/communities/getting-started.md)
+   * 找到论坛页面节点
 
-   * `/content/sites/engage/en/forum/jcr:content`
+      `/content/sites/engage/en/forum/jcr:content`
 
-* 添加评分和标记属性
+   * 添加评分和徽章属性
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -163,25 +163,26 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* 找到论坛组件节点
+   * 找到论坛组件节点
 
-   * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+      `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* 添加属性以显示标记
+   * 向显示标记添加属性
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* 用户登录，创建论坛主题，并获得铜制徽章
+   * 用户登录、创建论坛主题并获得铜牌奖章
+
 
 1. 没有唯一 *ID* 的AEM站点：
 
-* 使用“社 [区组件”指南](/help/communities/components-guide.md)
-* 找到论坛页面节点
+   * 使用“社 [区组件”指南](/help/communities/components-guide.md)
+   * 找到论坛页面节点
 
-   * `/content/community-components/en/forum/jcr:content`
+      `/content/community-components/en/forum/jcr:content`
 
-* 添加评分和标记属性
+   * 添加评分和徽章属性
 
    ```
    scoringRules = [/etc/community/scoring/rules/comments-scoring,
@@ -193,24 +194,25 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
    /etc/community/badging/rules/forums-scoring]
    ```
 
-* 找到论坛组件节点
+   * 找到论坛组件节点
 
-   * `/content/community-components/en/forum/jcr:content/content/forum`
+      `/content/community-components/en/forum/jcr:content/content/forum`
 ( `sling:resourceType = social/forum/components/hbs/forum`)
 
-* 添加属性以显示标记
+   * 向显示标记添加属性
 
-   * `allowBadges = true`
+      `allowBadges = true`
 
-* 用户登录，创建论坛主题，并获得铜制徽章
+   * 用户登录、创建论坛主题并获得铜牌奖章
+
 
 1. 为用户分配了使用cURL的审查方徽章：
 
-```shell
-curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
-```
+   ```shell
+   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+   ```
 
-由于用户已获得两个铜牌并被授予主持人徽章，因此用户在论坛条目中的显示方式如下：
+   由于用户已获得两个铜牌并被授予主持人徽章，因此用户在论坛条目中的显示方式就是这样。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -219,7 +221,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >此示例不遵循以下最佳实践：
 >
 >* 评分规则名称应具有全局唯一性；他们不应以同名结尾。
-   >  示例：
+   >  不要执行的 *操作* :
    >  /etc/community/scorning/rules/site1/forums-scoring
    >  /etc/community/scoring/rules/site2/forums-scoring
    >
@@ -237,7 +239,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-的子节点 `scoring`是评分规则名称。 因此，最佳实践是，服务器上的评分规则名称在全局上是唯一的。
+的子节点 `scoring` 是评分规则名称。 因此，最佳实践是，服务器上的评分规则名称在全局上是唯一的。
 
 对于Geometrixx Engage站点，用户及其得分所在的路径中包含评分规则名称、社区站点的站点ID( `engage-ba81p`)、唯一ID和用户的ID:
 
@@ -257,11 +259,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 为便于调查，例如，使用JSRP，将包含已分配或已授予标记信息的基本文件夹
 
-* /content/usergenerated/asi/jcr
+* `/content/usergenerated/asi/jcr`
 
 后跟用户配置文件的路径，以标记文件夹结尾，如
 
-* /home/users/community/w271Oup2Z4DjnOQrviv/profile/badges
+* `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
 #### 奖章 {#awarded-badge}
 
