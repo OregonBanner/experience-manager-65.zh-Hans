@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
 
 ---
 
 
-# Clientlibs for Communities组件{#clientlibs-for-communities-components}
+# Clientlibs for Communities组件 {#clientlibs-for-communities-components}
 
 ## 简介 {#introduction}
 
@@ -26,7 +26,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * [使用客户端库](/help/sites-developing/clientlibs.md) ，它提供使用详细信息和调试工具
 * [SCF的客户端库](/help/communities/client-customize.md#clientlibs) ，它在自定义SCF组件时提供有用信息
-* [博客：AEM客户端库（示例说明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
+* [博客：AEM Client Libraries（示例说明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## 为何需要Clientlibs {#why-clientlibs-are-required}
 
@@ -63,23 +63,23 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 使 [用CRXDE|Lite](#using-crxde-lite) ，为社区站点页面修改现有clientlibslist。
 
-要使用 [CRXDE lite为社区站点添加clientlib，请执行以下操作](/help/sites-developing/developing-with-crxde-lite.md) :
+要使用 [CRXDE Lite为社区站点添加clientlib，请执行以下操作](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * 浏览 [到https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
 * 找到 `clientlibslist` 要添加组件的页面的节点
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* 已选 `clientlibslist` 择节点
+* 选择 `clientlibslist` 节点后
 
-   * 查找字符串属性[] 。 `scg:requiredClientLibs`
-   * 选择其 `Value` 以访问字符串数组对话框
+   * 找到String属性[] 。 `scg:requiredClientLibs`
+   * 选择其 `Value` 以访问“字符串数组”对话框
 
-      * 根据需要向下滚动
-      * 选择+以进入新的客户端库
+      * 如果需要，向下滚动
+      * 选择+以输入新的客户端库
 
          * 重复以添加更多客户端库
-      * 选择**确定**
+      * 选择确 **定**
    * 选择 **全部保存**
 
 
