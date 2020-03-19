@@ -11,25 +11,25 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 ---
 
 
-# 为Enablement创作新社区站点{#author-a-new-community-site-for-enablement}
+# 为Enablement创作新社区站点 {#author-a-new-community-site-for-enablement}
 
 ## 创建社区站点 {#create-community-site}
 
-[“社区站点创建](/help/communities/sites-console.md) ”使用向导来指导您完成创建社区站点的各个步骤。 在最后一步中提交站 `Next`点之 `Back`前，可以前进到步骤或上一步。
+[“社区站点创建](/help/communities/sites-console.md) ”使用向导来指导您完成创建社区站点的各个步骤。 在最后一步中提交站点之 `Next` 前，可 `Back` 以前进到步骤或前一步。
 
 要开始创建新社区站点，请执行以下操作：
 
 使用作 [者实例](https://localhost:4502/)
 
-* 使用管理员权限登录
-* 导航到 **社区，站****点**
+* 以管理员权限登录
+* 导航到UIControl **[Communities >站点]**
 
-* select **Create**
+* Select **Create**
 
 ### 第1步：站点模板 {#step-site-template}
 
@@ -85,8 +85,8 @@ Select **Next**
 确保取消选中“用户管理”的大 [多数复选框](/help/communities/sites-console.md#user-management) :
 
 * 不允许站点访问者自行注册
-* 不允许匿名站点访问者查看站点
-* 可选是否允许社区成员之间的消息传递
+* 不允许匿名网站访问者查看网站
+* 是否允许社区成员之间的消息传递是可选的
 * 不允许使用Facebook登录
 * 不允许使用Twitter登录
 
@@ -100,8 +100,8 @@ Select **Next**
 
 使用预先键入搜索可轻松查找命名空间。 例如，
 
-* 键入“tut”
-* select `Tutorial`
+* 类型 `tut`
+* 选择 `Tutorial`
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
@@ -113,8 +113,8 @@ Select **Next**
 
 例如，
 
-* 键入“q”
-* 选择奎 [恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* 类型 `q`
+* 选择 [奎恩·哈珀](/help/communities/enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ Select **Next**
 
 “翻 [译设置](/help/communities/sites-console.md#translation) ”指定UGC是否可以翻译，如果可以，则指定翻译到哪种语言。
 
-* 检查允 **许机器翻译**
+* 选中“ **允许机器翻译”**
 * 使用默认设置
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
@@ -151,10 +151,10 @@ Select **Next**
 
 * **Enablement Managers**（必需）可选择用 `Community Enablement Managers` 于管理此社区站点的组成员。
 
-   * 类型“s”
-   * select `Sirius Nilson`
+   * 类型 `s`
+   * 选择 `Sirius Nilson`
 
-* **Marketing cloud组织Id**[](/help/communities/analytics.md#video-heartbeat-analytics) （可选）在启用报告中包括视频心率分析时必需的Adobe Analytics帐户ID。
+* **Marketing Cloud组织Id**[](/help/communities/analytics.md#video-heartbeat-analytics) （可选）在启用报告中包括视频心率分析时必需的Adobe Analytics帐户ID。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -166,7 +166,7 @@ Select **Create.**
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
-完成该过程后，新站点的文件夹将显示在“社区——站点”控制台中。
+完成该过程后，新站点的文件夹会显示在“社区”>“站点”控制台中。
 
 ![enablementsitecreated](assets/enablementsitecreated.png)
 
@@ -184,16 +184,26 @@ Select **Create.**
 
 从左至右为：
 
-* **打开站点**&#x200B;选择铅笔图标以在作者编辑模式下打开社区站点，以添加和／或配置页面组件
+* **打开站点**
 
-* **编辑站点**&#x200B;选择属性图标以打开社区站点以修改属性，如标题或更改主题
+   选择铅笔图标以在创作编辑模式下打开社区站点，以添加和／或配置页面组件
 
-* **“发布站**&#x200B;点”选择“世界”图标以发布社区站点（默认情况下为localhost:4503）
+* **编辑站点**
 
-* **“导出站**&#x200B;点”选择导出图标，以创建存储在包管理器中和已下载的社区站点 [的包](/help/sites-administering/package-manager.md) 。
+   选择属性图标以打开社区站点以修改属性，如标题或更改主题
+
+* **发布站点**
+
+   选择“世界”图标以发布社区站点（默认为localhost:4503）
+
+* **导出站点**
+
+   选择导出图标以创建存储在包管理器中和已下载的社区站点 [的包](/help/sites-administering/package-manager.md) 。
 请注意，UGC未包含在站点包中。
 
-* **删除站点**&#x200B;要删除社区站点，请选择将鼠标悬停在Communities站点控制台中站点上时显示的“删除站点”图标。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
+* **删除站点**
+
+   要删除社区站点，请选择将鼠标悬停在Communities站点控制台中站点上时显示的“删除站点”图标。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
 
 ![启用站点操作](assets/enablesiteactions.png)
 
@@ -225,14 +235,14 @@ Select **Create.**
 
 在此示例中，将 `Community Ski Class` 组添加为组的成员 `Community Enable Members` 和成员 `Quinn Harper`。
 
-* 导航到 **社区，组控制台**
-* 选择“ *社区启用成员* ”组
-* 在“将成员添加到组” **搜索框中输入** “ski”
+* 导航到“社 **区”、“组”控制台**
+* 选择 *社区启用成员* 组
+* 在“将成员添加到组”搜 **索框中输入** “ski”
 * 选择 *社区滑雪课* （学员组）
 * 在搜索框中输入“quinn”
 * 选择 *Quinn Harper* （启用资源联系人）
 
-* select **Save**
+* Select **Save**
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
@@ -260,7 +270,7 @@ Select **Create.**
 
 1. 在发布时，访问CRXDE并使用管理员权限登录
 
-   * 例如，浏览至 [https://localhost:4503/crx/de](https://localhost:4503/crx/de) ，然后登录 `admin/admin`
+   * 例如，浏览至https://localhost:4503/crx/de [](https://localhost:4503/crx/de) ，然后使用 `admin/admin`
 
 1. 在项目浏览器中，展开 `/etc/map`
 1. 选择节 `http` 点
@@ -273,27 +283,27 @@ Select **Create.**
 
       * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. 已选择新创建 `localhost.4503` 的节点
+1. 选择新创建 `localhost.4503` 的节点
 
-* 添加属性
+   * 添加属性
 
-   * **名称** sling:match
-   * **Type** String
-   * **值** localhost.4503/$
+      * **名称** sling:match
+      * **Type** String
+      * **值** localhost.4503/$
+   （必须以“$”字符结尾）
 
-      （必须以“$”字符结尾）
+   * 添加属性
 
-* 添加属性
+      * **名称** sling:internalRedirect
+      * **Type** String
+      * **值** /content/sites/enable/en.html
 
-   * **名称** sling:internalRedirect
-   * **Type** String
-   * **值** /content/sites/enable/en.html
 
 1. 选择 **全部保存**
 1. （可选）删除浏览历史记录
 1. 浏览至https://localhost:4503/
 
-* 请访问https://localhost:4503/content/sites/enable/en.html
+   * 请访问https://localhost:4503/content/sites/enable/en.html
 
 >[!NOTE]
 >
@@ -303,7 +313,7 @@ Select **Create.**
 
 #### 疑难解答：保存映射时出错 {#troubleshooting-error-saving-map}
 
-如果无法保存更改，请确保节点名称为“点”分隔符，而不是“冒号”分隔符，因为这不是 `localhost.4503``localhost:4503``localhost`有效的命名空间前缀。
+如果无法保存更改，请确保节点名称为“点”分隔符， `localhost.4503`而不是“冒号”分隔符，因为这不是 `localhost:4503``localhost` 有效的命名空间前缀。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -331,7 +341,7 @@ Select **Create.**
 
 如果站点结构中已包含目录功能，则可以更改其标题。
 
-要修改站点的结构，请导航到 **Communities** , Sites控制台，打开文件夹 `enable` ，然后选择**编辑站点**图标以访问的属性 `Enablement Tutorial`。
+要修改站点的结构，请导航到 **Communities, Sites** （社区）控制台，打开文 `enable` 件夹，然后选择 **Edit Site** （编辑站点）图标以访问其属性 `Enablement Tutorial`。
 
 选择“结构”面板以添加目录或修改现有目录：
 
