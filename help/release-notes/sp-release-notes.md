@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc72581f0de6f47cd1d7e207f228e64ba7c9e842
+source-git-commit: cc3cb8732e2c0b4a7275ec302517791a5babdd42
 
 ---
 
@@ -41,6 +41,12 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 * [Experience Manager](new-features-latest-service-pack.md#accessibility-enhancements) Assets中的辅助功能增强。
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.8。
+
+* 您现在可以将选择性内容子树同 *步到Dynamic Media - Scene7模式* ，而不是所有可在上使用的子树 `content/dam`。
+
+* 与SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
+
+* SOAP输入或输出以及复杂的数据结构现在支持动态组替换。
 
 有关先前AEM 6.5 Service Pack中引入的功能、主要亮点和主要功能的完整列表，请参阅 [Adobe Experience Manager 6.5 Service Pack 4的新增功能](new-features-latest-service-pack.md)。
 
