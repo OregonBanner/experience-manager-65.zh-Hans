@@ -3,7 +3,7 @@ title: 如何编辑或添加元数据
 description: 了解AEM资产中的资产元数据以及编辑资产元数据的各种方式。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: 91818198032de0580fe04d09fdd567dc470c021d
 
 ---
 
@@ -24,9 +24,13 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
    * 从资产缩略图中，选择查 **[!UICONTROL 看属性]** 快速操作。
    * 在资产页面中，单击／点按工具 **[!UICONTROL 栏中的查看]** 属性图标。
       ![chlimage_1-168](assets/chlimage_1-168.png)
+      *图：属性图标*
    资产页面会显示资产的所有元数据。 此元数据在上传（摄取）到AEM资产时会自动提取。
 
-   ![chlimage_1-169](assets/chlimage_1-169.png)
+   ![选择资产属性以查看元数据](assets/asset-metadata.png)
+
+
+   *图：在资产属性页面上编辑或添加元数据*
 
 1. 根据需要，在各个选项卡下对元数据进行编辑，完成后，单击／点按工具栏中的 **[!UICONTROL 保存]** ，以保存更改。 单击／点 **[!UICONTROL 按关闭]** ，以返回到资产Web界面。
 
