@@ -3,7 +3,7 @@ title: 创建翻译项目
 description: 了解如何在AEM中创建翻译项目。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -37,7 +37,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 使用“ **[!UICONTROL 仅创建结构]** ”选项可在目标语言根目录中创建目标文件夹层次结构，以匹配源语言根目录中源文件夹的层次结构。 在这种情况下，源资产会复制到目标文件夹。 但是，不会生成翻译项目。
 
 1. 在资产UI中，选择要在目标语言根目录中创建其结构的源文件夹。
-1. 打开“ **[!UICONTROL 引用]** ”窗格，然后单击／点按“副本” **[!UICONTROL 下的“语言副本]** ” ****。
+1. 打开&#x200B;**[!UICONTROL 引用]**&#x200B;窗格，然后单击/点按&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -45,15 +45,15 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
-1. 从“目 **[!UICONTROL 标语言]** ”列表中，选择要为其创建文件夹结构的语言。
+1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
-1. 从“项 **[!UICONTROL 目]** ”列表中，选择“ **[!UICONTROL 仅创建结构”]**。
+1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 仅创建结构]**。
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
-1. Click/tap **[!UICONTROL Create]**. 目标语言的新结构列在“语言副本” **[!UICONTROL 下]**。
+1. 单击/点按&#x200B;**[!UICONTROL 创建]**。目标语言的新结构列在“语言副本” **[!UICONTROL 下]**。
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
@@ -66,7 +66,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此选项，则要翻译的资产将复制到您要翻译的语言的语言的语言根目录中。 根据您选择的选项，系统会在“项目”控制台中为资产创建一个翻译项目。 根据设置，可以手动启动翻译项目，或在创建翻译项目后自动运行。
 
 1. 在资产UI中，选择要为其创建语言副本的源文件夹。
-1. 打开“ **[!UICONTROL 引用]** ”窗格，然后单击／点按“副本” **[!UICONTROL 下的“语言副本]** ” ****。
+1. 打开&#x200B;**[!UICONTROL 引用]**&#x200B;窗格，然后单击/点按&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**。
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -74,7 +74,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-64](assets/chlimage_1-64.png)
 
-1. 从“目 **[!UICONTROL 标语言]** ”列表中，选择要为其创建文件夹结构的语言。
+1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -82,11 +82,11 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 在“项 **[!UICONTROL 目标题]** ”字段中，输入项目标题。
+1. 在&#x200B;**[!UICONTROL 项目标题]**&#x200B;字段中，输入项目标题。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. Click/tap **[!UICONTROL Create]**. 源文件夹中的资产将复制到您在步骤4中选择的区域设置的目标文件夹。
+1. 单击/点按&#x200B;**[!UICONTROL 创建]**。源文件夹中的资产将复制到您在步骤4中选择的区域设置的目标文件夹。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -114,7 +114,10 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以查看已翻译的元数据。
 
-   ![chlimage_1-74](assets/chlimage_1-74.png)
+   ![在“资产属性”页中查看已翻译的元数据](assets/translated-metadata-asset-properties.png)
+
+   *图：资产属性页面中的已翻译元数据*
+
 
    >[!NOTE]
    >
@@ -125,13 +128,13 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此选项，则在运行以前的翻译工作流之后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含先前已翻译资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
 
 1. 在资产UI中，导航到包含未翻译资产的源文件夹。
-1. 选择要翻译的资产，然后打开“引用” **[!UICONTROL 窗格]**。 “语 **[!UICONTROL 言副本]** ”部分显示当前可用的翻译副本数。
-1. 单击／点按副 **[!UICONTROL 本下的语言副]****[!UICONTROL 本]**。 此时将显示可用翻译副本列表。
+1. 选择要翻译的资产，然后打开&#x200B;**[!UICONTROL “引用”窗格]**。**[!UICONTROL 语言副本]**&#x200B;部分显示当前可用的翻译副本数。
+1. 单击/点按&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**。此时将显示可用翻译副本列表。
 1. 单击／点按 **[!UICONTROL 底部的创建]** 和翻译。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
-1. 从“目 **[!UICONTROL 标语言]** ”列表中，选择要为其创建文件夹结构的语言。
+1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
@@ -147,7 +150,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. Click/tap **[!UICONTROL Create]**. 要翻译的资产将添加到目标文件夹。 更新的文件夹列在“语言副 **[!UICONTROL 本”部分下]** 。
+1. 单击/点按&#x200B;**[!UICONTROL 创建]**。要翻译的资产将添加到目标文件夹。更新的文件夹列在&#x200B;**[!UICONTROL 语言副本]**&#x200B;部分下。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -198,8 +201,8 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此选项，则会为要更新语言副本的一组资产创建一个翻译项目。
 
 1. 从资产UI中，选择您添加资产的源文件夹。
-1. 打开“ **[!UICONTROL 引用]** ”窗格，单击／点按“副本”下 **[!UICONTROL 的“语言副本]** ”以 **** 显示语言副本列表。
-1. 选中“语言副本” **[!UICONTROL 之前的复选框]**，然后选择相应区域设置的目标文件夹。
+1. 打开&#x200B;**[!UICONTROL 引用]**&#x200B;窗格，然后单击/点按&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**，以显示语言副本列表。
+1. 选中&#x200B;**[!UICONTROL 语言副本]**&#x200B;前面的复选框，然后选择相应区域设置的目标文件夹。
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -211,7 +214,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
    ![chlimage_1-86](assets/chlimage_1-86.png)
 
-1. 在“项 **[!UICONTROL 目标题]** ”字段中，输入项目标题。
+1. 在&#x200B;**[!UICONTROL 项目标题]**&#x200B;字段中，输入项目标题。
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
@@ -249,11 +252,11 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 如果您使用此选项，则资产集会添加到现有翻译项目中，以更新您选择的区域设置的语言副本。
 
 1. 从资产UI中，选择您添加资产文件夹的源文件夹。
-1. 打开“ **[!UICONTROL 引用”窗格]**，单击／点按“副本”下 **[!UICONTROL 的“语言副本]** ”以 **** 显示语言副本列表。
+1. 打开&#x200B;**[!UICONTROL 引用]**&#x200B;窗格，单击/点按&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**，以显示语言副本列表。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. 选中“语言副本”( **[!UICONTROL Language Copy]**)前面的复选框，该复选框将选择所有语言副本。 取消选择其他副本，但与您要翻译的区域设置对应的语言副本（副本）除外。
+1. 选中&#x200B;**[!UICONTROL 语言副本]**&#x200B;前面的复选框，这将选择所有语言副本。除与您要翻译的区域设置对应的语言副本外，取消选择其他副本。
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -288,7 +291,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 选中“标题”旁边的复 **[!UICONTROL 选框]**。
-1. 在工具栏中，单击／点按 **[!UICONTROL 接受翻译]****** ，然后单击／点按对话框中的接受，以使用已编辑资产的已翻译版本覆盖目标文件夹中的已翻译资产。
+1. 在工具栏中，单击/点按&#x200B;**[!UICONTROL 接受翻译]**，然后单击/点按对话框中的&#x200B;**[!UICONTROL 接受]**，以使用已编辑资产的已翻译版本覆盖目标文件夹中的已翻译资产。
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
