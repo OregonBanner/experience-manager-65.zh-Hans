@@ -3,7 +3,7 @@ title: 相关资产
 description: 了解如何关联共享某些共同属性的资产。 您还可以使用该功能在资产之间创建源／派生关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4fc656948e4c5cb4a3e927c25d3afd29102b7ab4
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -14,14 +14,16 @@ Adobe Experience Manager(AEM)资产允许您使用相关资产功能，根据组
 
 使用此功能，您可以灵活地与供应商或代理共享低分辨率PDF文件或JPG文件，并且只有在请求时才可用高分辨率INDD文件。
 
->[!NOTE] 只有具有编辑权限的用户才能关联和取消关联资产。
+>[!NOTE] 只有对资产具有编辑权限的用户才能与资产建立关系并取消资产的关联。
 >
 
 ## Relate assets {#relating-assets}
 
-1. 在AEM界面中，打开要 [!UICONTROL 关联的资产的] “属性”页面。
+1. 在AEM界面中，打开要 **[!UICONTROL 关联的资产的]** “属性”页面。
 
-   ![chlimage_1-272](assets/chlimage_1-272.png)
+   ![打开资产的“属性”页面以关联资产](assets/asset-properties-relate-assets.png)
+
+   *图：资产属性页面以关联资产*
 
    或者，从列表视图中选择资产。
 
@@ -63,15 +65,18 @@ Adobe Experience Manager(AEM)资产允许您使用相关资产功能，根据组
 
 ## 翻译相关资产 {#translating-related-assets}
 
-使用“相关资产”功能在资产之间创建源／派生关系在翻译工作流程中也很有帮助。 当您对派生的资产运行转换工作流时，AEM资产会自动获取源文件引用的任何资产并包括该资产以进行转换。 这样，源资产引用的资产与源资产和派生资产一起进行换算。 例如，假设您的英语副本包含派生的资产及其源文件，如所示。
+使用“相关资产”功能在资产之间创建源／派生关系在翻译工作流程中也很有帮助。 当您对派生的资产运行转换工作流时，AEM资产会自动获取源文件引用的任何资产，并包含该资产以进行转换。 这样，源资产引用的资产与源资产和派生资产一起进行换算。 例如，假设您的英语副本包含派生的资产及其源文件，如所示。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-如果源文件与另一个资产相关，AEM资产会获取引用的资产并将其包含在其中以进行转换。
+如果源文件与另一个资产相关，Experience Manager资产会获取引用的资产并包含该资产以进行转换。
 
-![chlimage_1-282](assets/chlimage_1-282.png)
+![“资产属性”页显示要包括以进行翻译的相关资产的源文件](assets/asset-properties-source-asset.png)
+
+*图：相关资产的来源资产，以包含作换算用途*
 
 1. 按照创建新翻译项目中的步骤，将源文件夹中的资产翻译 [为目标语言](translation-projects.md#create-a-new-translation-project)。 例如，在本例中，将您的资产翻译为法语。
+
 1. 从“项 [!UICONTROL 目] ”页面，打开翻译文件夹。
 
    ![chlimage_1-283](assets/chlimage_1-283.png)
