@@ -3,7 +3,7 @@ title: 在Experience Manager中使用引用和多页资产管理复合资产
 description: 了解如何从InDesign、Illustrator和Photoshop中创建对AEM资产的引用。 使用页面查看器功能可查看多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b13fe70c4b67b27e0f18bdb557c52e25d21e7f75
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: b13fe70c4b67b27e0f18bdb557c52e25d21e7f75
 
 Adobe Experience Manager(AEM)资产可以识别上传的文件是否包含对存储库中已存在资产的引用。 此功能仅对支持的文件格式可用。 如果已上传的资产包含对AEM资产的任何引用，则会在已上传和引用的资产之间创建双向链接。
 
-除了消除冗余外，在Adobe Creative cloud应用程序中引用AEM资产还可增强协作，并提高用户的效率和工作效率。
+除了消除冗余外，在Adobe Creative Cloud应用程序中引用AEM资产还可增强协作，并提高用户的效率和工作效率。
 
 AEM资产支持双向引用。 您可以在已上传文件的资产详细信息页面中查找引用的资产。 此外，您还可以在被引用资产的资产详细信息页面中查看AEM资产的引用文件。
 
@@ -24,7 +24,9 @@ AEM资产支持双向引用。 您可以在已上传文件的资产详细信息�
 
 1. 使用 [AEM桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，将AEM资产存储库作为驱动器装载到本地计算机。 在已装载的驱动器中，导航到要引用的资产所在的位置。
 1. 将资产从安装的驱动器拖到 Illustrator 文件。
+
 1. Save the Illustrator file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the AEM repository.
+
 1. 工作流完成后，转到资产的资产详细信息页面。 对现有AEM资产的引用列在“引用”列 **[!UICONTROL 的]** “依赖项 **[!UICONTROL ”下]** 。
 
    ![chlimage_1-84](assets/chlimage_1-258.png)
@@ -35,7 +37,9 @@ AEM资产支持双向引用。 您可以在已上传文件的资产详细信息�
 
 1. 单击 **[!UICONTROL 工具栏中的]** “查看属性”。 在“属 [!UICONTROL 性] ”页中，引用当前资产的文件列表显示在“基本”选项卡的“ **[!UICONTROL 引用]****[!UICONTROL ”列]** 下方。
 
-   ![chlimage_1-86](assets/chlimage_1-260.png)
+   ![在资产详细信息的“引用”列中查看Experience Manager资产的引用](assets/asset-references.png)
+
+   *图：资产详细信息中的资产引用*
 
 ## Add AEM assets as references in Adobe InDesign {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -80,7 +84,7 @@ Adobe InDesign 可将文档和关联的资产作为包导出。在这种情况�
 
 ## 创建子资产 {#generate-subassets}
 
-对于支持的多页格式资产— PDF文件、AI文件、Microsoft powerPoint和Apple Keynote文件以及Adobe inDesign文件— AEM可以生成与原始资产的每个单独页面对应的子资产。 这些子资产链接到父 *资产* ，便于多页查看。 出于所有其他目的，子资产在AEM中的处理方式与普通资产相同。
+对于支持的多页格式资产— PDF文件、AI文件、Microsoft PowerPoint和Apple Keynote文件以及Adobe InDesign文件— AEM可以生成与原始资产的每个单独页面对应的子资产。 这些子资产链接到父 *资产* ，便于多页查看。 出于所有其他目的，子资产在AEM中的处理方式与普通资产相同。
 
 默认情况下，子资产生成处于禁用状态。 要启用子资产生成，请执行以下步骤：
 
