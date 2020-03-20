@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f50369f269040bf7f1a30b018acbc1b441abdb15
+source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
 
 ---
 
@@ -17,6 +17,8 @@ Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断
 
 ## AEM Sites {#aem-sites}
 
+AEM 6.5.4.0包括样式系统增强。 您现在可以在组件对话框中选择样式。
+
 ### 不同方面的性能改进 {#performance-improvements}
 
 * 缩短了在站点()中加载和初始化ContextHub的时`contexthub.kernel.js`间。 这样，在网站访问过程中页面加载速度会更快。
@@ -26,8 +28,6 @@ Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断
 * 缩短了“站点”页面上包含超过200个Live Copy概述的条目的加 **[!UICONTROL 载时间]**。
 
 * 改进了对不完整或无效URL的处理。 此类URL会减慢模板编辑器的速度。
-
-此外，AEM 6.5.4.0还包含样式系统增强功能。 您现在可以在组件对话框中选择样式。
 
 ## AEM Assets {#aem-assets}
 
@@ -116,16 +116,19 @@ Experience Manager Forms包括以下辅助功能增强：
 
 您可以使用批处理API从模板生成多个交互式通信。 该模板是无任何数据的交互式通信。 Batch API将数据与模板相结合，以生成交互式通信。 该API在大规模制作交互式通信中很有用。 例如，电话单、多个客户的信用卡对帐单。 请参 [阅使用Batch API生成多个交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-
-
 ## 自AEM 6.5 SP3以来的主要发行版
 
 在2019年12月12日至2020年3月5日之间，Adobe发布了下列AEM可交付内容以外的功能：
 
-* AEM Cloud Manager 2020.1.0和2020.2.0版本更新改进了管道状态以及下载不同步骤的日志的能力。 有关详细信息，请参阅：
+* AEM Cloud Manager 2020.1.0和2020.2.0
+
+   版本更新改进了管道状态以及下载不同步骤的日志的能力。 有关详细信息，请参阅：
+
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
+
    * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+
 
 * AEM Cloud Manager CLI更新
 
