@@ -3,7 +3,7 @@ title: 资产中的数字版权管理
 description: 了解如何在AEM中管理授权资产的资产到期状态和信息。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ---
 
@@ -118,9 +118,12 @@ Adobe Experience Manager(AEM)资产的“资产”控制台可显示资产的各
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. 在高级选项卡中，从下面的过期字段中设置资产的过 **[!UICONTROL 期日]** 。
+1. 在高级选项卡中，从过期字段中设置资产的过 **[!UICONTROL 期日]** 。
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+   ![在“过期”字段中设置资产到期日期和时间](assets/asset-properties-advanced-tab.png)
+
+
+   *图：资产属性中的“高级”选项卡，用于设置资产过期时间*
 
 1. 单击 **[!UICONTROL 保存]** ，然后单 **[!UICONTROL 击关闭]** ，以显示资产控制台。
 1. 资产的发布状态会在卡片视图中资产缩略图的底部指示过期状态。 在列表视图中，资产的状态显示为“已过 **[!UICONTROL 期”]**。
