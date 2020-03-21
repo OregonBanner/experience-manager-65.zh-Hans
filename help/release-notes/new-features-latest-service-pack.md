@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da9d682a0392e5de8e012e254fb82bd15547a542
+source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断
 最新的AEM Service Pack 4(6.5.4.0)将于2020年3 **月5日发布**。 本文重点介绍了最新Service Pack提供的功能，以使您的AEM旅程更加丰富。
 
 ## AEM Sites {#aem-sites}
+
+### 样式系统增强
 
 AEM 6.5.4.0包括样式系统增强。 您现在可以在组件对话框中选择样式。
 
@@ -122,7 +124,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM Cloud Manager 2020.1.0和2020.2.0
 
-   版本更新改进了管道状态以及下载不同步骤的日志的能力。 有关详细信息，请参阅：
+   改进管道状态以及下载不同步骤的日志的能力。 请参阅：
 
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
@@ -132,7 +134,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM Cloud Manager CLI更新
 
-   此版本更新包括使用命令行工具自动完成Cloud Manager任务。 请参 [阅GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   使用命令行工具自动执行Cloud Manager任务。 请参 [阅GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEM Sites:Project Archetype 23
 
@@ -148,7 +150,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM资产：桌面应用程序2.0.1.1
 
-   有关详细信息，请参 [阅获取对资产的桌面访问](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
+   请参 [阅获取对资产的桌面访问](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
 
 * AEM Screens:功能包202001
 
