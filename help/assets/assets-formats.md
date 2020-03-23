@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: AEM资产支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8431275c0e4de408e1ebafafafa94dcfae3c1127
+source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
 
 ---
 
@@ -190,18 +190,15 @@ Dynamic Media功能支持的文档格式如下：
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持常见DAM功能（Dynamic Media Delivery除外）。
+下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件都支持通常的DAM功能，如存储、版本控制、ACL、工作流、发布和元数据管理（Dynamic Media Delivery除外）。
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **²** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（当配置有自己的交付域时） |  |  |  |  |  | ✓ |
-
-**²** DAM中支持其他格式，用于存储、版本控制、ACL、工作流、发布和元数据管理。
 
 ## Supported MIME types {#supported-mime-types}
 
