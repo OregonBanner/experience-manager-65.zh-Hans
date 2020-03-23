@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: AEM资产支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 08ea08fc2f8c36d509509f761a76a428d6df7e6a
+source-git-commit: 8431275c0e4de408e1ebafafafa94dcfae3c1127
 
 ---
 
@@ -37,10 +37,12 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD* | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
+
+**¹合并后的图像从PSD文件中提取。** 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
 Dynamic Media功能支持的栅格图像格式如下：
 
@@ -51,11 +53,11 @@ Dynamic Media功能支持的栅格图像格式如下：
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
-| PSD* | ✓ |  |  |  |  |
+| PSD **¹** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-&amp;ast;合并的图像从PSD文件中提取。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
+**¹合并后的图像从PSD文件中提取。** 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
 除了上述信息外，请考虑以下事项：
 
@@ -188,17 +190,18 @@ Dynamic Media功能支持的文档格式如下：
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持常见的DAM功能（Dynamic Media Delivery除外）。
+下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持常见DAM功能（Dynamic Media Delivery除外）。
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **²** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（当配置有自己的交付域时） |  |  |  |  |  | ✓ |
 
-**&amp;ast;** DAM中支持其他格式，用于存储、版本控制、ACL、工作流、发布和元数据管理。
+**²** DAM中支持其他格式，用于存储、版本控制、ACL、工作流、发布和元数据管理。
 
 ## Supported MIME types {#supported-mime-types}
 
