@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
+source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ---
 
@@ -81,7 +81,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    允许您输入此页面的虚 URL，以便使用更短并且/或者含意更清楚的 URL。
 
-   例如，如果虚URL设置为 `welcome`由网站路径标识的页 `/v1.0/startpage`面，则 `http://example.com,``http://example.com/welcome`该URL应为 `http://example.com/content/v1.0/startpage`
+   For example, if the Vanity URL is set to `welcome`to the page identified by the path `/v1.0/startpage`for the website `http://example.com,` then `http://example.com/welcome`would be the vanity URL of `http://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -122,11 +122,11 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    >[!NOTE]
    >
-   >Alias设置属 `sling:alias` 性以定义资源的别名（这仅影响资源，不影响路径）。
+   >别名会设置 `sling:alias` 属性以定义资源的别名（这仅会影响资源，不会影响路径）。
    >
-   >例如：如果为节点定义 `latin-lang` 别名，则 `/content/we-retail/spanish` 可通过 `/content/we-retail/latin-language`
+   >例如：如果您为节点 `/content/we-retail/spanish` 定义别名 `latin-lang`，则可以通过 `/content/we-retail/latin-language` 访问此页面。
    >
-   >有关详细信息，请参 [阅“SEO和URL管理最佳实践”下的本地化页面名称](/help/managing/seo-and-url-management.md#localized-page-names)。
+   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
 
 * **继承自 &lt;*路径*>**
 
@@ -191,7 +191,8 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    * **为 Facebook 启用用户共享**
    * **为 Pinterest 启用用户共享**
-   * **首选体验片段变量** 定义用于为页面生成元数据的体验片段变量
+   * **首选体验片段变量**
+定义用于为页面生成元数据的体验片段变量
 
 ### 云服务 {#cloud-services}
 
@@ -208,6 +209,9 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 * **定位配置**
 
    选择一个[品牌以指定定位的范围](/help/sites-authoring/target-adobe-campaign.md)。
+
+   >[!NOTE]
+   >此选项要求用户帐户位于组 `Target Adminstrators`中。
 
 ### 权限 {#permissions}
 
@@ -254,22 +258,22 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    * [创建一个新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)（一部分属性）
 
-   * Clicking or tapping **Properties**
+   * 单击或点按&#x200B;**属性**
 
       * 单个页面
       * 多个页面（只有一部分属性可用于整体编辑）
 
-* 从页面编辑器中：
+* 在页面编辑器中：
 
-   * Using **Page Information** (then **Open Properties**)
+   * 使用&#x200B;**页面信息**（然后&#x200B;**打开属性**）
 
 ### 从“站点”控制台中 - 单个页面 {#from-the-sites-console-single-page}
 
 单击或点按&#x200B;**属性**&#x200B;以定义页面属性：
 
-1. 使用“**站点**”控制台，导航到要查看和编辑属性的页面位置。
+1. 使用&#x200B;**站点**&#x200B;控制台，导航到要查看和编辑属性的页面位置。
 
-1. Select the **Properties** option for the required page using either:
+1. 使用以下任一方式为所需的页面选择&#x200B;**属性**&#x200B;选项：
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#selectionmode)
@@ -289,7 +293,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. 工具栏右侧还有以下按钮：
+1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. 工具栏右侧还提供以下按钮：
 
    * **取消**
    * **保存并关闭**
@@ -298,7 +302,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
 ### 从“站点”控制台中 - 多个页面 {#from-the-sites-console-multiple-pages}
 
-从&#x200B;**站点**&#x200B;控制台中，您可以选择多个页面，然后使用&#x200B;**查看属性**&#x200B;来查看和/或编辑页面属性。这称为批量编辑页面属性。
+从“站 **点** ”控制台中，您可以选择多个页面，然后使用 **查看属性** ，以查看和／或编辑页面属性。 这称为批量编辑页面属性。
 
 >[!NOTE]
 >
@@ -313,7 +317,7 @@ source-git-commit: 47a284a55f8d8f00ecda7be0bdcb8125cf976e3b
 
 ![epp-01](assets/epp-01.png)
 
-After selecting the pages and then clicking or tapping the **Properties option**, the bulk properties will be shown:
+选择页面后，单击或点按&#x200B;**属性选项**，此时将会显示批量属性：
 
 ![epp-02](assets/epp-02.png)
 
@@ -354,7 +358,7 @@ After selecting the pages and then clicking or tapping the **Properties option**
 
       * 当您选择&#x200B;**完成**&#x200B;时，新值将会应用于所有选定页面。
       * 当字段有多个值时（例如“标记”），您可以附加一个新值，也可以删除相同的值。
-   * Fields that are common, but have different values across the various pages will be indicated with a special value such as the text `<Mixed Entries>`. 编辑此类字段时应格外小心，以防数据丢失。
+   * 如果不同页面具有相同的字段，但这些字段的值不同，则会用一个特殊的值表示它们，例如，文本 `<Mixed Entries>`。编辑此类字段时应格外小心，以防数据丢失。
 
 
 >[!NOTE]
