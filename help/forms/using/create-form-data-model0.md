@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ## 关于教程 {#about-the-tutorial}
 
-AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户配置文件、RESTful web服务、基于SOAP的Web服务、OData服务和关系数据库）创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 通过这些服务，您可以预填自适应表单并将提交的表单数据写入数据模型对象。
+AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户配置文件、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库）创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 通过这些服务，您可以预填自适应表单并将提交的表单数据写入数据模型对象。
 
 有关表单数据集成和表单数据模型的更多信息，请参 [阅AEM表单数据集成](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html)。
 
@@ -38,7 +38,7 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
 ![表单数据模型](assets/form_data_model_callouts_new.png)
 
-**********答：已配置数**&#x200B;据源B。数据源架 **构** C.可用服 **务D.数据模型对**&#x200B;象E。配置的服务
+**答：** 已配置数 **据源B。** 数据源架 **构** C.可用服 **务D.** 数据模型对 **象E。** 配置的服务
 
 ## 前提条件 {#prerequisites}
 
@@ -54,9 +54,61 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
 ![sample_data_cust](assets/sample_data_cust.png)
 
-呼叫表包括呼叫详细信息，例如呼叫日期、呼叫时间、呼叫号码、呼叫持续时间和呼叫费用。 客户表使用Mobile Number(mobilenum)字段链接到呼叫表。 对于客户表中列出的每个手机号码，呼叫表中有多个记录。 例如，您可以通过引用呼叫表来检索 **1457892541** mobile号码的呼叫详细信息。
+使用以下DDL语句在数据库中 **创建** customer表。
 
-帐单表包括帐单详细信息，如帐单日期、帐单期间、月费和通话费。 客户表使用“清单计划”字段链接到清单表。 客户表中有一个与每位客户关联的计划。 清单表包括所有现有计划的定价详细信息。 例如，您可以从客户表中检索 **Sarah** 的计划详细信息，并使用这些详细信息从清单表中检索定价详细信息。
+```sql
+CREATE TABLE `customer` (
+   `mobilenum` int(11) NOT NULL,
+   `name` varchar(45) NOT NULL,
+   `address` varchar(45) NOT NULL,
+   `alternatemobilenumber` int(11) DEFAULT NULL,
+   `relationshipnumber` int(11) DEFAULT NULL,
+   `customerplan` varchar(45) DEFAULT NULL,
+   PRIMARY KEY (`mobilenum`),
+   UNIQUE KEY `mobilenum_UNIQUE` (`mobilenum`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+使用以下DDL语句在数据库中 **创建** bills表。
+
+```sql
+CREATE TABLE `bills` (
+   `billplan` varchar(45) NOT NULL,
+   `latepayment` decimal(4,2) NOT NULL,
+   `monthlycharges` decimal(4,2) NOT NULL,
+   `billdate` date NOT NULL,
+   `billperiod` varchar(45) NOT NULL,
+   `prevbal` decimal(4,2) NOT NULL,
+   `callcharges` decimal(4,2) NOT NULL,
+   `confcallcharges` decimal(4,2) NOT NULL,
+   `smscharges` decimal(4,2) NOT NULL,
+   `internetcharges` decimal(4,2) NOT NULL,
+   `roamingnational` decimal(4,2) NOT NULL,
+   `roamingintnl` decimal(4,2) NOT NULL,
+   `vas` decimal(4,2) NOT NULL,
+   `discounts` decimal(4,2) NOT NULL,
+   `tax` decimal(4,2) NOT NULL,
+   PRIMARY KEY (`billplan`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+使用以下DDL语句在数据库中 **创建** calls表。
+
+```sql
+CREATE TABLE `calls` (
+   `mobilenum` int(11) DEFAULT NULL,
+   `calldate` date DEFAULT NULL,
+   `calltime` varchar(45) DEFAULT NULL,
+   `callnumber` int(11) DEFAULT NULL,
+   `callduration` varchar(45) DEFAULT NULL,
+   `callcharges` decimal(4,2) DEFAULT NULL,
+   `calltype` varchar(45) DEFAULT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+呼 **叫表包括呼叫详细信息** ，例如呼叫日期、呼叫时间、呼叫号码、呼叫持续时间和呼叫费用。 客 **户表使用** “移动号码(mobilenum)”字段链接到呼叫表。 对于客户表中列出的每个 **手机** ，呼叫表中有多个 **记录** 。 例如，您可以通过引用调用表来检索 **1457892541** 移动号码的 **调用详细信息** 。
+
+帐单 **表包括** 帐单详细信息，如帐单日期、帐单期间、每月费用和电话费。 客 **户表使用“清单计** 划 **** ”字段链接到清单表。 客户表中有一个与每位客户关联的 **计划** 。 清单 **表包括** 所有现有计划的定价详细信息。 例如，您可以从客户表中检索 **Sarah** 的计划详细信息，并 **使用这些详细信息从清单表中检索** 定价详细信息 **** 。
 
 ## 第2步：将MySQL数据库配置为数据源 {#step-configure-mysql-database-as-data-source}
 
@@ -66,31 +118,31 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
 1. 将MySQL数据库的JDBC驱动程序作为OSGi包安装：
 
-   1. 以管理员身份登录到AEM Forms作者实例，然后转到AEM web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
+   1. 以管理员身份登录到AEM Forms作者实例，然后转到AEM Web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
    1. 点按 **安装／更新**。 出现 **“上传／安装包** ”对话框。
 
-   1. 点按 **选择文件** ，浏览并选择MySQL JDBC驱动程序OSGi包。 选择 **启动Bundle****和刷新包**，然后点按安 **装** 或 ****&#x200B;更新Reade Subdle。 确保Oracle Corporation的MySQL JDBC驱动程序处于活动状态。 已安装驱动程序。
+   1. 点按 **选择文件** ，浏览并选择MySQL JDBC驱动程序OSGi包。 选择 **启动Bundle****和刷新包**，然后点按 **Install** or **** Update Refresh Packages。 确保Oracle Corporation的MySQL JDBC驱动程序处于活动状态。 已安装驱动程序。
 
 1. 将MySQL数据库配置为数据源：
 
-   1. 转到AEM web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
+   1. 转到AEM Web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
    1. 找到 **Apache Sling Connection池化DataSource配置** 。 点按以在编辑模式下打开配置。
    1. 在配置对话框中，指定以下详细信息：
 
-      * **** 数据源名称：您可以指定任何名称。 例如，指定 **MySQL**。
+      * **数据源名称：** 您可以指定任何名称。 例如，指定 **MySQL**。
 
       * **DataSource服务属性名称**:指定包含DataSource名称的服务属性的名称。 在将数据源实例注册为OSGi服务时指定它。 例如， **datasource.name**。
 
       * **JDBC驱动程序类**:指定JDBC驱动程序的Java类名。 对于MySQL数据库，指 **定com.mysql.jdbc.Driver**。
 
       * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构电话上运行的MySQL数据库，URL为： `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **** 用户名：数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
-      * **** 密码：数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
-      * **** 借阅测试：启用“借 **阅时测试** ”选项。
+      * **用户名：** 数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
+      * **密码：** 数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
+      * **借阅测试：** 启用“借 **阅时测试** ”选项。
 
-      * **** 返回时测试：启用“ **返回时测试** ”选项。
+      * **返回时测试：** 启用“ **返回时测试** ”选项。
 
-      * **** 验证查询：指定SQL SELECT查询以验证池中的连接。 查询必须至少返回一行。 例如，从 **客户中选择***。
+      * **验证查询：** 指定SQL SELECT查询以验证池中的连接。 查询必须至少返回一行。 例如，从 **客户中选择***。
 
       * **事务隔离**:将该值设置 **为READ_COMMITTED**。
    将其他属性保留为默 [认值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) ，然后点 **按保存**。
@@ -144,7 +196,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 
       * 获取
       * 更新
-   点按 **添加选定项** ，将选定的数据模型对象和服务添加到表单数据模型。
+   点按 **添加选定项** ，将选定数据模型对象和服务添加到表单数据模型。
 
    ![选择数据模型对象服务](assets/select_data_model_object_services_new.png)
 
