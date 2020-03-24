@@ -166,7 +166,7 @@ AEM Communities的博客功能已从创作活动转变为发布环境中发生�
 
 * **允许关注**
 
-   如果选中此项，请为博客文章加入以下功能，这允许成员获 [得](/help/communities/notifications.md) 新帖子的通知。 默认为未选中。
+   如果选中此项，请为博客文章加入以下功能，这允许成员收到 [新](/help/communities/notifications.md) 帖子的通知。 默认为未选中。
 
 * **允许电子邮件订阅**
 
