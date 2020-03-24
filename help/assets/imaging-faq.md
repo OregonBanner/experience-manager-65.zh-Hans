@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 9807bd4366315ad470128911cb67a31e7e9fd288
+source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
 
 ---
 
@@ -44,7 +44,7 @@ Smart Imaging还可以从与Adobe同类最出色的高级CDN服务完全集成�
 * 使用“bfc”URL参数可以关闭智能成像。
 * TTL（生存时间）独立。 以前，智能成像的TTL最低为12小时是必须的。
 * 以前，原始图像和派生图像都被缓存，而使缓存失效的步骤为2。 在最新的智能成像中，只缓存衍生项，从而允许单步缓存失效过程。
-* 使用其规则集中的自定义标题的客户(例如，向图像响应添加自定义标题值|Dynamic Media Classic [](https://helpx.adobe.com/in/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建议的“Timing Allow Origin”、“X-Robot”)将从最新的智能成像中受益，因为这些标题不会被阻止，这与以前版本的智能成像不同。
+* 使用其规则集中的自定义标题的客户(例如，向图像响应添加自定义标题值|Dynamic Media Classic [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建议的“Timing Allow Origin”、“X-Robot”)将从最新的智能成像中受益，因为这些标题不会被阻止，这与以前版本的智能成像不同。
 
 ## 是否存在与智能成像相关的许可成本？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
