@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: d690bcc80052f356425cd85c498aa48b1caf44bc
+source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
 
 ---
 
@@ -88,7 +88,7 @@ Smart Imaging可与您现有的“图像预设”配合使用，并在所请求�
 
 ## 我是否必须更改任何URL、图像预设或在我的站点上部署任何用于智能成像的新代码？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-Smart Imaging可与您的现有图像URL和图像预设无缝协作。 此外，智能成像不要求您在网站上添加任何代码来检测用户的浏览器。 所有这些都是自动处理的。
+否. Smart Imaging可与您的现有图像URL和图像预设无缝协作。 此外，智能成像不要求您在网站上添加任何代码来检测用户的浏览器。 所有这些都是自动处理的。
 
 如前所述，Smart Imaging仅支持JPEG和PNG图像格式。 对于其他格式，您需要将修饰 `bfc=off` 符追加到URL，如前所述。
 
@@ -115,11 +115,11 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 查找标有�
 
 您必须发起使用智能成像的请求；它不会自动启用。
 
-1. 发起技术支持请求(电子邮件：s7support@adobe.com)。
+1. 发起技术支持请求(电子邮件： `s7support@adobe.com`)。
 1. 在您的支持请求中提供以下信息：
 
    1. 主要联系人姓名、电子邮件、电话。
-   1. 要启用智能成像的所有域（即images.company.com或mycompany.scene7.com）。
+   1. 要启用智能成像的所有域(即或 `images.company.com` 或 `mycompany.scene7.com`)。
 
       要查找您的域，请登录您的公司帐户或帐户。
 
