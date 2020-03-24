@@ -4,22 +4,22 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d9d4d2e97ebd321f73b97deca2fb7298802bbd0
+source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断改进。 新方法使我们的客户能够更快地采用创新。
+Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断改进。 随着创新更易于采用，该方法会为您带来好处。
 
-最新的AEM Service Pack 4(6.5.4.0)将于2020年3 **月5日发布**。 本文重点介绍了最新Service Pack提供的功能，以使您的AEM旅程更加丰富。
+AEM Service Pack 4(6.5.4.0)于2020年3 **月5日发布**。 本文重点介绍了6.5 Service Pack为使您的AEM旅程更加丰富而提供的主要功能。
 
 ## AEM Sites {#aem-sites}
 
 ### 样式系统增强
 
-AEM 6.5.4.0包括样式系统增强。 您现在可以在组件对话框中选择样式。
+您现在可以使用增强的样式系统在组件对话框中选择样式。
 
 ### 不同方面的性能改进 {#performance-improvements}
 
@@ -58,7 +58,7 @@ Experience Manager资产包括以下辅助功能增强：
 
 ### 在AEM Forms工作流程中生成可打印输出 {#generate-printable-output}
 
-新的“生成可打印输出”工作流步骤使您能够将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 例如，每次打印源表单时，您都可以打印其名称不同的表单。 将名称保存在数据文件中，并将数据文件与标准模板文件集成。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
+使用“生成可打印输出”工作流步骤，可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
 
 ![生成可打印输出](assets/generate-print-output-demo.gif)
 
@@ -66,10 +66,7 @@ Experience Manager资产包括以下辅助功能增强：
 
 您现在可以在自适应表单和交互式通信中为面板定义列数。 切换到布局模式以使用新的多列选项。 有关详细信息，请参 [阅使用布局模式调整组件大小](../forms/using/resize-using-layout-mode.md)。
 
-
 ![多列布局](assets/multi-column-layout.gif)
-
-
 
 ### AEM收件箱自定义 {#aem-inbox}
 
@@ -83,7 +80,7 @@ Experience Manager资产包括以下辅助功能增强：
 
 ### HTML5表单中的富文本支持 {#rich-text-support}
 
-现在，当在HTML5表单中呈现时，您可以将XFA表单中的文本字段转换为富文本字段。 因此，文本字段会显示HTML5表单中其他格式选项的列表。 有关详细信息，请参 [阅设计HTML5表单的表单模板](../forms/using/designing-form-template.md)。
+将XFA表单中的文本字段转换为HTML5表单中的富文本字段。 有关详细信息，请参 [阅设计HTML5表单的表单模板](../forms/using/designing-form-template.md)。
 
 ### Accessibility enhancements {#forms-accessibility-enhancements-6540}
 
@@ -105,16 +102,16 @@ Experience Manager Forms包括以下辅助功能增强：
 
 资产用户可以直观地搜索相似图像。AEM 显示 DAM 存储库中与用户所选图像相似的智能标记图像。See [Visual search](../assets/search-assets.md).
 
-### 共享和请求对用户收件箱项目的访问权限(6.5.3.0) {#share-request-access}
+### 共享并请求对AEM Forms用户收件箱项目的访问权限(6.5.3.0) {#share-request-access}
 
 您可以与其他用户共享您的收件箱项目。 当其他用户获得对您的收件箱项目的访问权时，用户可以声明共享项目并采取相应的操作。 同样，您也可以请求其他用户访问收件箱项目。 请参 [阅共享和请求对用户收件箱项目的访问权限](../forms/using/configure-shared-queues-osgi.md)。
 
-### 为收件箱项目(6.5.3.0)配置办公室外设置 {#configure-out-of-office}
+### 为AEM Forms用户(6.5.3.0)的收件箱项目配置办公室外设置 {#configure-out-of-office}
 
 如果您计划离开办公室，则可以指定在该期间分配给您的项目会发生什么情况。
 您可以选择指定开始日期、时间以及结束日期和时间，以使您的离职设置生效。 您可以设置将所有项目发送到的默认人员。 请参 [阅配置办公室外设置](../forms/using/configure-out-of-office-settings.md)。
 
-### 使用Batch API(6.5.3.0)生成多个交互式通信 {#generate-multiple-ic}
+### 使用AEM Forms的Batch API(6.5.3.0)生成多个交互式通信 {#generate-multiple-ic}
 
 您可以使用批处理API从模板生成多个交互式通信。 该模板是无任何数据的交互式通信。 Batch API将数据与模板相结合，以生成交互式通信。 该API在大规模制作交互式通信中很有用。 例如，电话单、多个客户的信用卡对帐单。 请参 [阅使用Batch API生成多个交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
