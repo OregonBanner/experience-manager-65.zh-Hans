@@ -36,7 +36,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-432](assets/chlimage_1-433.png)
+![chlimage_1-433](assets/chlimage_1-433.png)
 
 ## 匿名网站访客 {#anonymous-site-visitor}
 
