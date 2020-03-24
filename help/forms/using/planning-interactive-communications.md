@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ---
 
@@ -40,8 +40,6 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 ## 互动交流剖析 {#anatomy-of-the-interactive-communication}
 
 完成用于创建交互式通信的内容和元素后，您可以创建交互式通信的剖析。 解剖结构必须包含“规划考虑事项”部分 [中列出的详细信息](/help/forms/using/planning-interactive-communications.md#planning-considerations) 。 根据我们的使用案例，以下是电信运营商向其客户发送的月度账单剖析示例。
-
-解剖学视频的占位符
 
 解剖结构包括具有以下输入模式的数据：
 
