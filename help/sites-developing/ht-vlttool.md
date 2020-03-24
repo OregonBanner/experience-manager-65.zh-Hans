@@ -604,7 +604,7 @@ proplist -q|-R <file1> [<file2> ...]
 |--- |--- |
 | `-q (--quiet)` | 打印量尽可能小 |
 | `-R (--recursive)` | 递归降 |
-| `<file> [<file> ...]` | file or directory to list the properties from |
+| `<file> [<file> ...]` | 要列出属性的文件或目录 |
 
 ### Propset {#propset}
 
@@ -616,7 +616,7 @@ proplist -q|-R <file1> [<file2> ...]
 >
 >`vlt:mime-type`
 >
->The mimetype of the file. Used to determine whether to merge the file. A mimetype beginning with &#39;text/&#39; (or an absent mimetype) is treated as text. Anything else is treated as binary.
+>文件的mimetype。 用于确定是否合并文件。 以“text/”开头的mimetype（或缺少的mimetype）被视为文本。 任何其他内容均视为二进制。
 
 #### 语法 {#syntax-12}
 
@@ -636,7 +636,7 @@ propset -q|-R <propname> <propval> <file1> [<file2> ...]
 
 ### 将 {#add}
 
-Puts files and directories under version control, scheduling them for addition to repository. 将在下次提交时添加这些内容。
+将文件和目录置于版本控制下，并安排它们以添加到存储库。 将在下次提交时添加这些内容。
 
 #### 语法 {#syntax-13}
 
@@ -692,7 +692,7 @@ diff -N <file1> [<file2> ...]
 
 ### 控制台 {#console}
 
-Runs an interactive console.
+运行交互式控制台。
 
 #### 语法 {#syntax-16}
 
