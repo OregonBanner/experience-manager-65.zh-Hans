@@ -538,7 +538,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
    * [导入包](/help/sites-administering/package-manager.md#installing-packages)
 
-要配置或启用用户同步，请转到步骤1: [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+要配置或启用用户同步，请转到步骤1:Apache [Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
 
 ### 当发布者变得不可用时 {#when-a-publisher-becomes-unavailable}
 
