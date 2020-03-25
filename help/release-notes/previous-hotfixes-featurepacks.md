@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7ae0055e09c3ae2ff2898ac4f6c537a825dc0cf0
+source-git-commit: 7345d629aa628c2e2e094a8194d9306d7c3d2d60
 
 ---
 
@@ -22,9 +22,9 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.6。
 
-* Experience Manager Assets现在支持使用Deflate 64算法创建的ZIP存档。
+* Adobe Experience Manager Assets现在支持使用Deflate64算法创建的ZIP存档。
 
-* 创建日期的新列（可排序）已添加到DAM列表视图中，并添加到列表视图中的资产搜索结果中。
+* DAM列表视图中和列表视图中的资产搜索结果中都添加了可排序的创建日期的新列。
 
 * 已在列表视图中启用基于名称列的资产排序。
 
@@ -32,9 +32,9 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * Dynamic Media支持智能成像。
 
-* 在AEM工 [作流程中设置](../forms/using/configure-out-of-office-settings.md) “出局”首选项。
+* 在AEM工作流 [中设置](../forms/using/configure-out-of-office-settings.md) “出局”首选项。
 
-* 能够与AEM工 [作流中的其他用户共享收件箱](../forms/using/configure-shared-queues-osgi.md) 或收件箱项目。
+* 能够与AEM [工作流中的其他用户共享收件箱](../forms/using/configure-shared-queues-osgi.md) 或收件箱项目。
 
 * 能在“ [批处理”模式下生成交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
@@ -46,19 +46,19 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * Experience Manager Assets现在支持使用Deflate 64算法创建的ZIP存档(NPR-27573)。
 
-* 在DAM列表视图中和列表视图中的资产搜索结果中都添加了新的创建日期列（可排序）(NPR-31312)。
+* 在DAM列表视图中和列表视图中的资产搜索结果中添加了可排序的创建日期的新列(NPR-31312)。
 
-* 已允许在“列表”视图中基于“名称”列的资产排序(NPR-31299)。
+* 已允许在列表视图中基于名称列的资产排序(NPR-31299)。
 
 * GLB、GLTF、OBJ和STL资源文件支持在DAM的“资产详细信息”页面中预览资产(CQ-4282277)。
 
-* 在Dynamic Media中的区块上传期间，会为区块节点触发ReplicationOnModifyListener事件(CQ-4281279)。
+* 在Dynamic Media中的块上传期间，会为块节点触发ReplicationOnModifyListener事件(CQ-4281279)。
 
 * Dynamic Media现在支持智能裁剪视频资产。 Smart Crop是一项机器学习驱动的功能，它可在移动帧时重新裁剪视频以跟随场景的焦点(CQ-4278995)。
 
 * Dynamic Media支持智能成像(CQ-422249)。
 
-* 如果查询参数在请求中传递，则搜索／浏览视图已设置为Foundation选取器中的默认视图(NPR-31601)。
+* 如果在请求中传递了视图参数，则搜索／浏览视图在Foundation选取器中已设置为默认查询(NPR-31601)。
 
 **修复**
 
@@ -68,17 +68,17 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 在默认搜索表单“资产管理员”*“搜索边栏”中进行的编辑不按预期工作(NPR-31502)。
 
-* 在“资产视图”中使用Omnisearch搜索搜索资产时，不会显示建议(NPR-31496)。
+* 在使用Omnisearch搜索资产视图搜索资产时，不显示建议(NPR-31496)。
 
 * 当引用的资产被移到其他位置时，集合中的资产引用不会更新，因为不同用户引用的不同集合也会引用相同的资产(NPR-31486)。
 
-* 重复的IPTC标记会添加到资产元数据(NPR-31328)。
+* 重复IPTC标记添加到资产元数据(NPR-31328)。
 
 * 当从过滤边栏触发搜索时，右上角的搜索结果计数不会准确更新(NPR-31316)。
 
 * 取消选择“文件类型”过滤器中的第二级复选框时，将清除所有复选框，搜索栏中的文本与选定／未选定的属性(NPR-31287)不同步。
 
-* 不能从文件夹的“成员”部分删除所有成员（用户／用户组）;在尝试删除所有用户时，登录用户将添加到列表(NPR-31171)。
+* 不能从文件夹的“成员”部分删除所有成员（用户／用户组）;在尝试删除所有用户时，登录用户会添加到列表(NPR-31171)。
 
 * 无法删除文件名中带有加号“+”的资源(NPR-31162)。
 
@@ -86,7 +86,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 当对用户应用拒绝jcr:removeChildNodes和路径上的jcr:removeNode的ACL时，文件夹选择“创建”>“文件上传”操作项丢失(NPR-30840)。
 
-* 上传某些mp4资源时，DAM工作流将进入过时状态，导致所有剩余的工作流进入过时状态(NPR-30662)。
+* 当上传某些mp4资源时，DAM工作流会进入陈旧状态，导致所有剩余工作流进入陈旧状态(NPR-30662)。
 
 * 当将大型PDF文件（几GB）上传到DAM并处理其子资源时，会出现内存不足错误(NPR-30614)。
 
@@ -110,7 +110,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * Dynamic Media编码视频工作流无法为从Scene 7迁移到Dynamic Media - Scene 7运行模式的视频生成缩略图(CQ-4282011)。
 
-* 使用不同的Scene 7公司ID(CQ-4280548)将资源从一个实例迁移到另一个实例时观察到IpsApiException。
+* 使用不同的Scene 7公司ID将资源从一个实例迁移到另一个实例时观察到IpsApiException(CQ-4280548)。
 
 * 当支持的3D模型被收录到AEM中时，3D资产缩略图不会提供相关信息(CQ-4283701)。
 
@@ -124,7 +124,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 当MIME类型不是MP4时，资产详细信息上会出现扭曲的视频(CQ-4279704)。
 
-* 新摄取到具有视频配置文件的文件夹中的视频即使在编码百分比完成到100%后仍处于处理状态(CQ-4279389)。
+* 新摄取到具有视频用户档案的文件夹中的视频即使在编码百分比完成到100%后仍处于处理状态(CQ-4279389)。
 
 * 从文件夹移动资源会创建大量sling作业（Scene 7 API调用），而不是理想的必需(CQ-4278664)。
 
@@ -144,7 +144,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * 再现工作流失败(CQ-4271928)。
 
-* DAM事件清除将删除最新(maxSavedActivities)事件数据并保存先前创建的数据(NPR-31336)。
+* DAM事件清除功能会删除最新的(maxSavedActivities)事件数据并保存之前创建的数据(NPR-31336)。
 
 * 触屏UI搜索（通过Omnisearch完成）结果页面会自动向上滚动并丢失用户的滚动位置(NPR-31307)。
 
@@ -163,13 +163,13 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 * 当用户向多字段添加“文件上传”字段时，图像路径存储在组件节点而不是多字段节点中(NPR-30882)。
 * ResponsiveGridExporter API不返回com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter接口。 com.day.cq.wcm.foundation.model.impl包声明为私有包(NPR-31398)。
 * 当在非编辑器模式下(在“作者”模式下(不带前缀和 `editor.html``wcmmode=disabled`，或在“发布者”中)打开包含某些ExperienceFragments的页面时，请求以HTTP状态错误代码500(NPR-30743)结束。
-* 用户无法更改其密码并访问其配置文件页面(NPR-31161)。
+* 用户无法更改其密码并访问其用户档案页面(NPR-31161)。
 
 ### 搜索和用户界面 {#search-ui-interface}
 
-* 从搜索结果页面的“卡片”视图切换到“列表”视图时，页面滚动有一个延迟(NPR-31286)。
+* 在搜索结果页面上从卡视图切换到列表视图时，在可滚动页面之前会有延迟(NPR-31286)。
 
-* “全选”复选框隐藏在站点UI的“列表”视图中(NPR-31614)。
+* “全选”复选框隐藏在站点UI的列表视图中(NPR-31614)。
 
 * 搜索结果页上的“全选”计数不正确(NPR-31120)。
 
@@ -189,7 +189,7 @@ Adobe Experience Manager 6.5.3.0是一个重要版本，包括自2019年4月发�
 
 * QueryBuilder现在支持 ``fn:name()`` xpath查询中的orderby(NPR-31322)。
 
-* 从AEM 6.3升级时会创建重复的激活树(NPR-31513)。
+* 从AEM 6.3升级时将创建重复激活树(NPR-31513)。
 
 * 转发的请求不保留在sling身份验证过程中设置的响应头(NPR-30013)。
 
@@ -298,7 +298,7 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 
 * 增强了“连接的资产”功能，以增加对从远程 DAM 部署中提取文档的支持。现在，站点“作者”可以在“内容查找器”中搜索和筛选受支持的文档类型。可以将远程文档添加到网页上的“下载”组件中。请参阅[使用连接的资产](../assets/use-assets-across-connected-assets-instances.md)。
 
-* Enhance具有更多MIME类型的文档类型过滤器以支持多值选项。
+* 增强具有更多MIME类型的文档类型过滤器以支持多值选项。
 * 引入了一个外部“重新处理”工作流以支持多种资源。
 * 通过在复制中使用默认资产筛选器优化了 Dynamic Media 的性能。
 * 恢复了 DMS7 的裁剪/旋转资产编辑选项。
@@ -338,7 +338,7 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 * “共享链接”功能在使用 DMS7 配置的 AEM 实例中不起作用。NPR-30080、NPR-30492：适用于 CQ-4273651 的修补程序
 * 将 Dynamic Media Scene7 组件添加到页面，然后发布该页面，不会每次都触发 dmscene7 配置。NPR-30641：适用于 CQ-4275962 的修补程序
 * AEM 中添加了 IPSJobJournal，以在每个处理配置文件中仅创建一个入侵预防系统 (IPS)。NPR-30490：适用于 CQ-4273614 的修补程序
-* Dynamic Media:添加了默认筛选器，以排除资产被复制到AEM发布节点的情况。 NPR-30538：适用于 CQ-4274678 的修补程序
+* Dynamic Media:添加了默认过滤器，以排除资产被复制到AEM发布节点的情况。 NPR-30538：适用于 CQ-4274678 的修补程序
 * 为多资源支持引入了一个外部“重新处理”工作流，以允许文件夹作为有效负载。工作流包含两个步骤 - 通过到下一步的元数据映射重新处理没有句柄的资产，并在单个 IPS 作业中将所有没有资产句柄的资产重新上传到 S7。有关更多详细信息，请参阅“配置 Dynamic Media 云服务”。NPR-30489：适用于 CQ-4272903 的修补程序
 * 正确的 CSV 擦除正确的 CSV 后，会上传一个错误的 CSV。适用于 CQ-4277694、CQ-4277814 的修补程序
 * 特定于要删除的贡献文件夹的图标错误。适用于 CQ-4277580 的修补程序
@@ -380,7 +380,7 @@ AEM 6.5.2.0 is an important release that includes performance, stability, securi
 
 **产品增强功能**
 
-* Enhance具有更多MIME类型的文档类型过滤器，以支持多值选项。 适用于 CQ-4270694 的修补程序
+* 增强具有更多MIME类型的文档类型过滤器以支持多值选项。 适用于 CQ-4270694 的修补程序
 
 ### 内容片段管理 {#content-fragment-management-6520}
 
@@ -537,7 +537,7 @@ AEM 6.5.1.0 is an important release that includes performance, stability, securi
 ### 体验片段
 
 * 将 AEM 体验片段导出到 Adobe Target。适用于 CQ-4265469 的修补程序
-* 智能图像无法导出到目标的体验片段。 适用于 CQ-4269606 的修补程序
+* 智能图像导出到目标的体验片段失败。 适用于 CQ-4269606 的修补程序
 
 * 在卡片视图中尝试通过 Omnisearch 移动“体验片段”时，用户会陷入僵局。适用于 CQ-4263848 的修补程序
 
@@ -616,7 +616,7 @@ AEM 6.5.1.0 Forms 的重要功能亮点包括：
 * AEM Forms 安装在 IBM WebSphere 上时，创建基于 SOAP 的表单数据模型失败。适用于 CQ-4251134 的修补程序
 * 为 Microsoft Dynamics 内部部署集成启用了对 Active Directory 联合身份验证服务 (ADFS) v3.0 的支持。适用于 CQ-4270586 的修补程序
 * 数据源的标题发生更改时，表单数据模型不显示更新的标题。适用于 CQ-4265599 的修补程序
-* 如果实体或属性的名称包含连字符或空格，则表达式无法计算此类实体和属性。 适用于 CQ-4225129 的修补程序
+* 如果实体或属性的名称包含连字符或空格，则表达式无法评估此类实体和属性。 适用于 CQ-4225129 的修补程序
 
 * 当基元字符串输出中存在冒号时，会观察到错误的输出。 适用于 CQ-4260825 的修补程序
 
@@ -641,7 +641,7 @@ AEM 6.5.1.0 Forms 的重要功能亮点包括：
 * “交互式通信”模板未在允许的组件列表中列出页眉和页脚组件。适用于 CQ-4237895 的修补程序
 * 创建包含图像字段的交互式通信打印模板时，图表标题将设置为空白。适用于 CQ-4264772 的修补程序
 * 图表的线条颜色在删除后设置为未定义。适用于 CQ-4264762 的修补程序
-* 在执行保持更改同步时，在文档片段上所做的布局图层更改会消失。 适用于 CQ-4266054 的修补程序
+* 在执行保持更改同步时，文档片段上的布局图层更改会消失。 适用于 CQ-4266054 的修补程序
 * “文档片段”中绑定到文本字段的表单数据模型元素不显示继承图标，并且允许绑定。适用于 CQ-4261089 的修补程序
 * “打印渠道”呈现 API 没有在 API 中作为参数传递数据的选项。适用于 CQ-4263540 的修补程序
 * 当绑定类型从“文本片段”更改为“字符串字段／变量”的“无／数据模型对象”时，代理设置不可见，因为“由代理编辑”复选框会取消选中。 适用于 CQ-4261953 的修补程序
@@ -690,7 +690,7 @@ AEM 6.5.1.0 Forms 的重要功能亮点包括：
 * 带硬件安全模块(HSM)的数字签名在Java 11和Java 8的OSGi Linux上不工作。 NPR-29838：适用于 CQ-4270441 的修补程序
 * 带硬件安全模块 (HSM) 的数字签名在 JEE Linux 上，以及所有受支持的应用程序（例如，JBoss 和 Websphere）上不起作用。NPR-29839：适用于 CQ-4266721 的修补程序
 * 在 PDF 中使用“PDF 高级电子签名”(PAdES) 验证签名会生成 InvalidOperationException。NPR-29842：适用于 CQ-4244837 的修补程序
-* 增加了对Office 2019的Document Security Extension支持。 适用于 CQ-4254369、CQ-4259764 的修补程序
+* 添加了对Office 2019的文档安全扩展支持\。 适用于 CQ-4254369、CQ-4259764 的修补程序
 
 **表单 - 文档服务**
 
@@ -709,7 +709,7 @@ AEM 6.5.1.0 Forms 的重要功能亮点包括：
 
 ### 包含的功能包
 
-#### 资产 -包括
+#### 资产——已包含
 
 * 对 Assets 启用了多站点管理器支持。For more information, see [Reuse assets using MSM for Assets](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html). NPR-29199：适用于 CQ-4259922 的修补程序
 
