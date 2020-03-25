@@ -3,7 +3,7 @@ title: 关于AEM资产
 description: 了解什么是数字资产管理、其使用案例以及Adobe的AEM Asset产品
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: 01475dc8cf4f1e4cb0575c60523c27105ebd1150
 
 ---
 
@@ -37,18 +37,18 @@ AEM资产与CQ WCM完全集成，且功能可通过DAM图标使用：
 
 >[!NOTE]
 >
->基本的GUI处理与WCM的其他部分相同——有关完整 [的详细信息，请参阅GUI控制台的概述](/help/sites-authoring/page-authoring.md) 。
+>基本的GUI处理与WCM的其余部分相同——有关完整 [的详细信息，请参阅GUI控制台的概述](/help/sites-authoring/page-authoring.md) 。
 
 ### 数字资产管理与图像组件 {#digital-asset-management-versus-image-component}
 
-在确定是将图像放入AEM资产还是使用AEM image组件时，请考虑图像生命周期：
+在确定是将图像放入AEM资产还是使用AEM Image组件时，请考虑图像生命周期：
 
 * 如果图像具有与页面相同的生命周期，请使用图像组件。
 * 如果图像具有单独的生命周期，例如，如果您使用图像两次或在 WCM 之外使用图像，则使用 AEM Assets。
 
 ## What are digital assets? {#what-are-digital-assets}
 
-资产是指可以有多个演绎版且可以具有子资产（例如，Photoshop文件中的图层、PowerPoint文件中的幻灯片、pdf中的页面、ZIP中的文件）的数字文档、图像、视频或音频（或其一部分）。
+资产是数字文档、图像、视频或音频（或其一部分），可以具有多个演绎版，并可以具有子资产（例如，photoshop文件中的图层、PowerPoint文件中的幻灯片、pdf中的页面、ZIP中的文件）。
 
 资产本质上是一个具有元数据、演绎版和子资产的二进制文件。有关详细信息，请参阅 [DAM 性能指南](/help/sites-deploying/assets-performance-sizing.md)。
 
@@ -72,7 +72,7 @@ AEM资产与CQ WCM完全集成，且功能可通过DAM图标使用：
 
 * **演绎版** 演绎版是资产的二进制表示形式。 资产始终采用主要表示形式，即已上传文件的表示形式。它们可以采用创建的任何数量的其他表示形式，例如定制工作流程步骤或资产上传时创建的表示形式。演绎版可能大小不同、分辨率不同、添加了水印，或者更改了其他一些特性。
 
-* **版本** “版本控制”可创建数字资产在特定时间点的快照。 您可以将资产恢复至以前的版本。请参阅 AEM Assets 中的版本控制。
+* **版本** “版本控制”可创建数字资产在特定时间点的快照。 您可以将资产恢复至以前的版本。See [versioning in AEM Assets](managing-assets-touch-ui.md#asset-versioning).
 
 * **子资产** -子资产是组成资产的资产，例如，Adobe Photoshop文件中的图层或PDF文件中的页面。 在 AEM Assets 中，您可以像管理资产一样管理子资产。
 
@@ -80,7 +80,7 @@ AEM资产与CQ WCM完全集成，且功能可通过DAM图标使用：
 
 您可以对资产或收藏集执行操作。这些操作包括创建或修改资产、收藏集和演绎版。您对资产执行的许多基本操作——上传、删除、更新、保存子资产——都会触发预配置的工作流。 这些工作流将在 AEM Assets 中自动开启，AEM Assets 媒体处理程序中对这些工作流进行了详细介绍。
 
-您可以通过以下预配置工作流执行的任务：
+您可以对以下预配置任务执行工作流:
 
 * 在存储库中保存或删除资产。
 * 提取和保存资产的元数据；单个元数据项目会保存为 XMP。
