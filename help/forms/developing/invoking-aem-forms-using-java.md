@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 调用API是位于包中的 `com.adobe.idp.dsc` 类。 使用这些类，您可以将调用请求直接发送到服务并处理返回的调用响应。 使用调用API调用使用Workbench创建的短期或长期进程。
 
-以编程方式调用服务的建议方法是使用与服务相对应的Java客户端库，而不是调用API。 例如，要调用加密服务，请使用加密服务客户端库。 要执行加密服务操作，请调用属于加密服务客户端对象的方法。 可以通过调用对象的方法，使用口令 `EncryptionServiceClient` 加密PDF文 `encryptPDFUsingPassword` 档。
+以编程方式调用服务的建议方法是使用与服务相对应的Java客户端库，而不是调用API。 例如，要调用加密服务，请使用加密服务客户端库。 要执行加密服务操作，请调用属于加密服务客户端对象的方法。 您可以通过调用对象的方法来使用口令加 `EncryptionServiceClient` 密PDF文档 `encryptPDFUsingPassword` 。
 
 Java API支持以下功能：
 
@@ -41,7 +41,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 **另请参阅**
 
-[包括AEM Forms java库文件](#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](#including-aem-forms-java-library-files)
 
 [调用以人为中心的长寿命进程](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
 
@@ -55,19 +55,22 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 [使用调用API调用短时间进程](#invoking-a-short-lived-process-using-the-invocation-api)
 
-[创建调用以人为中心的长寿命流程的Java web应用程序](/help/forms/developing/invoking-human-centric-long-lived.md)
+[创建调用以人为中心的长寿命流程的Java Web应用程序](/help/forms/developing/invoking-human-centric-long-lived.md)
 
-## 包括AEM Forms java库文件 {#including-aem-forms-java-library-files}
+## 包括AEM Forms Java库文件 {#including-aem-forms-java-library-files}
 
 要通过使用Java API以编程方式调用AEM Forms服务，请在Java项目的类路径中包含所需的库文件（JAR文件）。 包含在客户端应用程序的类路径中的JAR文件取决于以下几个因素：
 
 * 要调用的AEM Forms服务。 客户端应用程序可以调用一个或多个服务。
 * 要调用AEM Forms服务的模式。 可以使用EJB或SOAP模式。 (请参阅 [设置连接属性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
+
+>[!NOTE] （仅限统包）用命令开始AEM Forms服务器，以 `standalone.bat -b <Server IP> -c lc_turnkey.xml` 指定EJB的服务器IP
+
 * 部署了AEM Forms的J2EE应用程序服务器。
 
 ### 特定于服务的JAR文件 {#service-specific-jar-files}
 
-下表列出了调用AEM Forms服务所需的JAR文件。
+下表列表了调用AEM Forms服务所需的JAR文件。
 
 <table>
  <thead>
@@ -95,7 +98,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
   </tr>
   <tr>
    <td><p>adobe-applicationmanager-client-sdk.jar</p></td>
-   <td><p>调用Application manager服务时需要。</p></td>
+   <td><p>调用Application Manager服务时需要。</p></td>
    <td><p>&lt;<i>install directory</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
@@ -187,7 +190,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
    <td>
     <ul>
      <li><p>adobe-rightsmanagement-client.jar</p></li>
-     <li><p>namespace.jar</p></li>
+     <li><p>命名空间.jar</p></li>
      <li><p>jaxb-api.jar</p></li>
      <li><p>jaxb-impl.jar</p></li>
      <li><p>jaxb-libs.jar</p></li>
@@ -205,7 +208,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
   </tr>
   <tr>
    <td><p>adobe-taskmanager-client-sdk.jar</p></td>
-   <td><p>调用任务管理器服务时需要。 </p></td>
+   <td><p>调用任务管理器服务时必需。 </p></td>
    <td><p>&lt;<i>install directory</i>&gt;/sdk/client-libs/common</p></td>
   </tr>
   <tr>
@@ -218,7 +221,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 ### 连接模式和J2EE应用程序JAR文件 {#connection-mode-and-j2ee-application-jar-files}
 
-下表列出了依赖于连接模式的JAR文件以及部署了AEM Forms的J2EE应用程序服务器。
+下表列表了依赖于连接模式和部署了AEM Forms的J2EE应用程序服务器的JAR文件。
 
 <table>
  <thead>
@@ -232,7 +235,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
   <tr>
    <td>
     <ul>
-     <li><p>activation.jar</p> </li>
+     <li><p>激活.jar</p> </li>
      <li><p>axis.jar</p> </li>
      <li><p>commons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
@@ -257,12 +260,12 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>如果AEM Forms部署在JBoss Application server上，请包含此JAR文件。</p> <p>如果jboss-client.jar和引用的jar未共同位置，则classloader将找不到必需的类。</p> </td>
+   <td><p>如果AEM Forms部署在JBoss Application Server上，请包含此JAR文件。</p> <p>如果jboss-client.jar和引用的jar未共同位置，则classloader将找不到必需的类。</p> </td>
    <td><p>JBoss客户端库目录</p> <p>如果在同一J2EE应用程序服务器上部署客户端应用程序，则无需包含此文件。</p> </td>
   </tr>
   <tr>
    <td><p>wlclient.jar</p> </td>
-   <td><p>如果AEM Forms部署在BEA webLogic Server®上，则包括此JAR文件。</p> </td>
+   <td><p>如果AEM Forms部署在BEA WebLogic Server®上，则包括此JAR文件。</p> </td>
    <td><p>特定于WebLogic的lib目录</p> <p>如果在同一J2EE应用程序服务器上部署客户端应用程序，则无需包含此文件。</p> </td>
   </tr>
   <tr>
@@ -273,7 +276,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
     </ul> </td>
    <td>
     <ul>
-     <li><p>如果AEM Forms部署在WebSphere Application server上，请包括这些JAR文件。</p> </li>
+     <li><p>如果AEM Forms部署在WebSphere Application Server上，请包括这些JAR文件。</p> </li>
      <li><p>(com.ibm.ws.webservices.thinclient_6.1.0.jar是Web服务调用的必需项)。</p> </li>
     </ul> </td>
    <td><p>特定于WebSphere的lib目<em>录([WAS_HOME]</em>/运行时)</p> <p>如果在同一J2EE应用程序服务器上部署客户端应用程序，则不必包括这些文件。</p> </td>
@@ -283,7 +286,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 ### 调用方案 {#invoking-scenarios}
 
-下表指定调用方案，并列出成功调用AEM Forms所需的JAR文件。
+下表指定调用方案并列表所需的JAR文件以成功调用AEM Forms。
 
 <table>
  <thead>
@@ -340,7 +343,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
      <li><p>adobe-livecycle-client.jar</p> </li>
      <li><p>adobe-usermanager-client.jar</p> </li>
      <li><p>wlclient.jar</p> </li>
-     <li><p>activation.jar</p> </li>
+     <li><p>激活.jar</p> </li>
      <li><p>axis.jar</p> </li>
      <li><p>commons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
@@ -369,7 +372,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
      <li><p>adobe-livecycle-client.jar</p> </li>
      <li><p>adobe-usermanager-client.jar</p> </li>
      <li><p>wlclient.jar</p> </li>
-     <li><p>activation.jar</p> </li>
+     <li><p>激活.jar</p> </li>
      <li><p>axis.jar</p> </li>
      <li><p>commons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
@@ -422,7 +425,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 要成功调用AEM Forms服务，请设置以下连接属性：
 
-* **** DSC_DEFAULT_EJB_ENDPOINT:如果使用EJB连接模式，则此值表示部署了AEM Forms的J2EE应用程序服务器的URL。 要远程调用AEM表单，请指定部署AEM表单的J2EE应用程序服务器名称。 如果您的客户端应用程序位于同一J2EE应用程序服务器上，则可以指定 `localhost`。 根据部署J2EE应用程序服务器AEM Forms时所在的位置，指定以下值之一：
+* **DSC_DEFAULT_EJB_ENDPOINT:** 如果使用EJB连接模式，则此值表示部署了AEM Forms的J2EE应用程序服务器的URL。 要远程调用AEM表单，请指定部署AEM表单的J2EE应用程序服务器名称。 如果您的客户端应用程序位于同一J2EE应用程序服务器上，则可以指定 `localhost`。 根据部署J2EE应用程序服务器AEM Forms时所在的位置，指定以下值之一：
 
    * JBoss: `https://<ServerName>:8080 (default port)`
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
@@ -430,7 +433,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 * **DSC_DEFAULT_SOAP_ENDPOINT**:如果您使用SOAP连接模式，此值表示向其发送调用请求的端点。 要远程调用AEM表单，请指定部署AEM表单的J2EE应用程序服务器名称。 如果您的客户端应用程序位于同一J2EE应用程序服务器上，则可以指 `localhost` 定(例如， `http://localhost:8080`)
 
-   * 如果J2EE应 `8080` 用程序是JBoss，则端口值适用。 如果J2EE应用程序服务器是IBM® webSphere®，请使用端口 `9080`。 同样，如果J2EE应用程序服务器是WebLogic，则使用端口 `7001`。 (这些值是默认端口值。 如果更改端口值，请使用适用的端口号。)
+   * 如果J2EE应 `8080` 用程序是JBoss，则端口值适用。 如果J2EE应用程序服务器是IBM® WebSphere®，请使用端口 `9080`。 同样，如果J2EE应用程序服务器是WebLogic，则使用端口 `7001`。 (这些值是默认端口值。 如果更改端口值，请使用适用的端口号。)
 
 * **DSC_TRANSPORT_PROTOCOL**:如果使用EJB连接模式，请为 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 此值指定。 如果使用SOAP连接模式，请指定 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`。
 * **DSC_SERVER_TYPE**:指定部署AEM Forms的J2EE应用程序服务器。 有效值 `JBoss`为， `WebSphere`、 `WebLogic`。
@@ -441,42 +444,42 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
    * 如果您不 `java.naming.factory.initial` 想使用默认值，可以将属性设置为符合要求的值。
    *注&#x200B;**意**:可以使用类的静态成员，而 `DSC_SERVER_TYPE` 不是使用字符串设置连接属 `ServiceClientFactoryProperties` 性。 可以使用以下值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
 
-* **** DSC_CREDENTIAL_USERNAME:指定AEM表单用户名。 要使用户成功调用AEM Forms服务，他们需要服务用户角色。 用户还可以具有包含服务调用权限的其他角色。 否则，当他们尝试调用服务时会引发异常。 如果禁用了服务安全性，则无需指定此连接属性。
-* **** DSC_CREDENTIAL_PASSWORD:指定相应的口令值。 如果禁用了服务安全性，则无需指定此连接属性。
-* **** DSC_REQUEST_TIMEOUT:SOAP请求的默认请求超时限制为1200000毫秒（20分钟）。 有时，请求可能需要更长的时间才能完成操作。 例如，检索大量记录的SOAP请求可能需要更长的超时限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 来增加SOAP请求的请求调用超时限制。
+* **DSC_CREDENTIAL_USERNAME:** 指定AEM表单用户名。 要使用户成功调用AEM Forms服务，他们需要服务用户角色。 用户还可以具有包含服务调用权限的其他角色。 否则，当他们尝试调用服务时会引发异常。 如果禁用了服务安全性，则无需指定此连接属性。
+* **DSC_CREDENTIAL_PASSWORD:** 指定相应的口令值。 如果禁用了服务安全性，则无需指定此连接属性。
+* **DSC_REQUEST_TIMEOUT:** SOAP请求的默认请求超时限制为1200000毫秒（20分钟）。 有时，请求可能需要更长的时间才能完成操作。 例如，检索大量记录的SOAP请求可能需要更长的超时限制。 您可以使用 `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` 来增加SOAP请求的请求调用超时限制。
 
    **注意**:只有基于SOAP的调用支持DSC_REQUEST_TIMEOUT属性。
 
-要设置连接属性，请执行以下任务：
+要设置连接属性，请执行以下任务:
 
 1. 使用对 `java.util.Properties` 象的构造函数创建对象。
 1. 要设置连 `DSC_DEFAULT_EJB_ENDPOINT` 接属性，请调用对 `java.util.Properties` 象的方法并 `setProperty` 传递以下值：
 
-   * 枚举 `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` 值
+   * 明细列表 `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` 值
    * 一个字符串值，它指定承载AEM Forms的J2EE应用程序服务器的URL
    >[!NOTE]
    >
-   >如果使用SOAP连接模式，请指定枚 `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` 举值而不是枚 `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` 举值。
+   >如果使用SOAP连接模式，请指定明细列表 `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` 值而不是明细列表 `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` 值。
 
 1. 要设置连 `DSC_TRANSPORT_PROTOCOL` 接属性，请调用对 `java.util.Properties` 象的方法并 `setProperty` 传递以下值：
 
-   * 枚举 `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL` 值
-   * 枚举 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 值
+   * 明细列表 `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL` 值
+   * 明细列表 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 值
    >[!NOTE]
    >
-   >如果使用SOAP连接模式，请指定枚 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`举值而不是枚 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 举值。
+   >如果使用SOAP连接模式，请指定 `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`明细列表值而不是 `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` 明细列表值。
 
 1. 要设置连 `DSC_SERVER_TYPE` 接属性，请调用对 `java.util.Properties` 象的方法并 `setProperty` 传递以下值：
 
-   * 枚举 `ServiceClientFactoryProperties.DSC_SERVER_TYPE`值
+   * 明细列表 `ServiceClientFactoryProperties.DSC_SERVER_TYPE`值
    * 一个字符串值，它指定承载AEM Forms的J2EE应用程序服务器(例如，如果AEM Forms部署在JBoss上，请指定 `JBoss`)。
 
       1. 要设置连 `DSC_CREDENTIAL_USERNAME` 接属性，请调用对 `java.util.Properties` 象的方法并 `setProperty` 传递以下值：
-   * 枚举 `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME` 值
+   * 明细列表 `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME` 值
    * 一个字符串值，它指定调用AEM Forms所需的用户名
 
       1. 要设置连 `DSC_CREDENTIAL_PASSWORD` 接属性，请调用对 `java.util.Properties` 象的方法并 `setProperty` 传递以下值：
-   * 枚举 `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD` 值
+   * 明细列表 `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD` 值
    * 指定相应密码值的字符串值
 
 
@@ -540,7 +543,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 **在禁用服务安全性时设置连接属性**
 
-以下Java代码示例设置调用在JBoss Application server上部署的AEM Forms以及禁用服务安全性时所需的连接属性。
+以下Java代码示例设置调用在JBoss Application Server上部署的AEM Forms以及禁用服务安全性时所需的连接属性。
 
 ```as3
  Properties ConnectionProps = new Properties();
@@ -551,7 +554,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 >[!NOTE]
 >
->与AEM Forms编程关联的所有Java快速入门都显示EJB和SOAP连接设置。
+>与AEM Forms编程关联的所有Java快速开始都显示EJB和SOAP连接设置。
 
 **使用自定义请求超时限制设置SOAP连接模式**
 
@@ -627,7 +630,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 >[!NOTE]
 >
->此方案是所有快速入门所基于的调用方案。
+>此方案是所有快速开始所基于的调用方案。
 
 ### 调用群集化AEM Forms实例的客户端应用程序 {#client-application-invoking-clustered-aem-forms-instances}
 
@@ -674,7 +677,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **另请参阅**
 
-[包括AEM Forms java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [使用Java API将数据传递到AEM Forms服务](invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)
 
@@ -682,13 +685,13 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 ## 使用Java API将数据传递到AEM Forms服务 {#passing-data-to-aem-forms-services-using-the-java-api}
 
-AEM Forms服务操作通常使用或生成PDF文档。 调用服务时，有时需要将PDF文档（或其他文档类型，如XML数据）传递给服务。 同样，有时也需要处理从服务返回的PDF文档。 允许您向AEM Forms服务传递数据和从AEM Forms服务传递数据的Java类是 `com.adobe.idp.Document`。
+AEM Forms服务操作通常使用或生成PDF文档。 调用服务时，有时需要将PDF文档(或其他文档类型，如XML数据)传递给服务。 同样，有时也需要处理从服务返回的PDF文档。 允许您向AEM Forms服务传递数据和从AEM Forms服务传递数据的Java类是 `com.adobe.idp.Document`。
 
 AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.InputStream` 象或字节数组。 对 `com.adobe.idp.Document` 象还可用于将XML数据等其他类型的数据传递给服务。
 
-对 `com.adobe.idp.Document` 象是Java可序列化类型，因此可以通过RMI调用传递它。 接收方可以配置（同一主机、同一类加载器）、本地（同一主机、不同类加载器）或远程（不同主机）。 针对每种情况优化了文档内容的传递。 例如，如果发送方和接收方位于同一主机上，则内容会通过本地文件系统进行传递。 （在某些情况下，文档可以在内存中传递。）
+对 `com.adobe.idp.Document` 象是Java可序列化类型，因此可以通过RMI调用传递它。 接收方可以配置（同一主机、同一类加载器）、本地（同一主机、不同类加载器）或远程（不同主机）。 针对每种情况优化了文档内容的传递。 例如，如果发送方和接收方位于同一主机上，则内容会通过本地文件系统进行传递。 (在某些情况下，文档可以在内存中传递。)
 
-根据对 `com.adobe.idp.Document` 象大小，数据将被传输到对象中或 `com.adobe.idp.Document` 存储在服务器的文件系统中。 该对象占用的任何临时存 `com.adobe.idp.Document` 储资源在处置时自动 `com.adobe.idp.Document` 删除。 (请参阅 [处理文档对象](invoking-aem-forms-using-java.md#disposing-document-objects)。)
+根据对 `com.adobe.idp.Document` 象大小，数据将被传输到对象中或 `com.adobe.idp.Document` 存储在服务器的文件系统中。 该对象占用的任何临时存储资 `com.adobe.idp.Document` 源在处置时自动被移 `com.adobe.idp.Document` 除。 (请参阅 [处理文档对象](invoking-aem-forms-using-java.md#disposing-document-objects)。)
 
 有时，在将对象传递给服务之前， `com.adobe.idp.Document` 必须了解该对象的内容类型。 例如，如果某个操作需要特定的内容类型(如 `application/pdf`，建议您确定内容类型)。 (请参 [阅确定文档的内容类型](invoking-aem-forms-using-java.md#determining-the-content-type-of-a-document)。)
 
@@ -696,11 +699,11 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
 
 如果附属文件位于同一文件系统中，则创建对象的 `com.adobe.idp.Document` 速度会更快。 如果附属文件驻留在远程文件系统上，则必须执行复制操作，这会影响性能。
 
-应用程序可以同时包含 `com.adobe.idp.Document` 数据 `org.w3c.dom.Document` 类型和数据类型。 但是，请确保您完全限定了数 `org.w3c.dom.Document` 据类型。 有关将对象转换 `org.w3c.dom.Document` 为对象的 `com.adobe.idp.Document` 信息，请参 [阅快速入门（EJB模式）:使用Java API使用可流动布局预填充表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)。
+应用程序可以同时包含 `com.adobe.idp.Document` 数据 `org.w3c.dom.Document` 类型和数据类型。 但是，请确保您完全限定了数 `org.w3c.dom.Document` 据类型。 有关将对象转换 `org.w3c.dom.Document` 为对象的 `com.adobe.idp.Document` 信息，请参 [阅快速开始（EJB模式）:使用Java API使用可流动布局预填充表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)。
 
 >[!NOTE]
 >
->要防止在使用对象时WebLogic中出现内存泄漏， `com.adobe.idp.Document` 请以2048字节或更少的块读取文档信息。 例如，以下代码以2048字节的块为单位读取文档信息：
+>为了在使用对象时防止WebLogic中的内存泄漏， `com.adobe.idp.Document` 请以2048字节或更少的块读取文档信息。 例如，以下代码读取2048字节的块中的文档信息：
 
 ```as3
         // Set up the chunk size to prevent a potential memory leak
@@ -747,7 +750,7 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
 
 ### 创建文档 {#creating-documents}
 
-在调用 `com.adobe.idp.Document` 需要PDF文档（或其他文档类型）作为输入值的服务操作之前，先创建一个对象。 类提 `com.adobe.idp.Document` 供了使您能够从以下内容类型创建文档的构造函数：
+在调用 `com.adobe.idp.Document` 需要PDF文档(或其他文档类型)作为输入值的服务操作之前，先创建一个对象。 类提 `com.adobe.idp.Document` 供了使您能够从以下内容类型创建文档的构造函数：
 
 * 字节数组
 * 现有对 `com.adobe.idp.Document` 象
@@ -759,7 +762,7 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
 
 下面的代码示例创建 `com.adobe.idp.Document` 一个基于字节数组的对象。
 
-**创建基于字节数组的Document对象**
+**创建基于字节数组的文档对象**
 
 ```as3
  Document myPDFDocument = new Document(myByteArray);
@@ -769,7 +772,7 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
 
 下面的代码示例创建一 `com.adobe.idp.Document` 个基于另一个对象的 `com.adobe.idp.Document` 对象。
 
-**创建基于其他文档的Document对象**
+**创建基于其他文档的文档对象**
 
 ```as3
  //Create a Document object based on a byte array
@@ -794,7 +797,7 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
 
 将此参数设 `false` 置为表示您保留此文件的所有权。 将此参数设置 `true` 为更高效。 原因是对象可 `com.adobe.idp.Document` 以将文件直接移到本地管理区域，而不是复制它（速度较慢）。
 
-**创建基于PDF文件的Document对象**
+**创建基于PDF文件的文档对象**
 
 ```as3
  //Create a Document object based on the map.pdf source file
@@ -802,11 +805,11 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
  Document myPDFDocument = new Document(mySourceMap,true);
 ```
 
-#### 基于InputStream对象创建文档 {#creating-a-document-based-on-an-inputstream-object}
+#### 创建基于InputStream对象的文档 {#creating-a-document-based-on-an-inputstream-object}
 
 下面的Java代码示例创建 `com.adobe.idp.Document` 一个基于对象的对 `java.io.InputStream` 象。
 
-**基于InputStream对象创建文档**
+**创建基于InputStream对象的文档**
 
 ```as3
  //Create a Document object based on an InputStream object
@@ -856,12 +859,12 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
      java.io.InputStream resultStream = myDocument.getInputStream();
 ```
 
-同样，您也可以通过执行以下任 `com.adobe.idp.Document` 务将本地文件的内容复制到：
+同样，您也可以通过执行以 `com.adobe.idp.Document` 下任务将本地文件的内容复制到：
 
 1. 创建对 `java.io.File` 象。
 1. 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法并传递对 `java.io.File`象。
 
-以下代码示例将对象的内容复 `com.adobe.idp.Document` 制到名为 *AnotherMap.pdf的文件*。
+下面的代码示例将对象的内容复 `com.adobe.idp.Document` 制到名为 *AnotherMap.pdf的文件*。
 
 **将文档对象的内容复制到文件**
 
@@ -925,7 +928,7 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 
 以下代码示例确定对象的内容类 `com.adobe.idp.Document` 型。
 
-**确定Document对象的内容类型**
+**确定文档对象的内容类型**
 
 ```as3
  //Determine the content type of the Document object
@@ -947,7 +950,7 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 
 [使用Java API调用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[包括AEM Forms java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [使用Java客户端库调用服务](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
@@ -969,10 +972,10 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 
 您可以通过使用Java客户端库并通过执行以下步骤调用存储库服务：
 
-1. 在Java项目的类路径中包含客户端JAR文件，如adobe-repository-client.jar。 有关这些文件的位置的信息，请参 [阅包括AEM Forms java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 在Java项目的类路径中包含客户端JAR文件，如adobe-repository-client.jar。 有关这些文件的位置的信息，请参 [阅包括AEM Forms Java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 1. 设置调用服务所需的连接属性。
 1. 通过调 `ServiceClientFactory` 用对象的静态方 `ServiceClientFactory` 法并传递包含连接属性 `createInstance` 的对 `java.util.Properties` 象来创建对象。
-1. 使用对 `ResourceRepositoryClient` 象的构造函数并传递该对 `ServiceClientFactory` 象。 使用该对 `ResourceRepositoryClient` 象调用存储库服务操作。
+1. 使用对 `ResourceRepositoryClient` 象的构造函数并传递该对象来创建 `ServiceClientFactory` 对象。 使用该对 `ResourceRepositoryClient` 象调用存储库服务操作。
 1. 使用对 `RepositoryInfomodelFactoryBean` 象的构造函数和传递创建对象 `null`。 通过此对象，您可以创 `Resource` 建一个对象，它表示已添加到存储库的内容。
 1. 通过调 `Resource` 用对象的方法并 `RepositoryInfomodelFactoryBean` 传递以 `newImage` 下值来创建对象：
 
@@ -994,11 +997,11 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 
 **另请参阅**
 
-[快速入门（EJB模式）:使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
+[快速开始（EJB模式）:使用Java API编写资源](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
 
 [使用Java API调用AEM Forms](invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[包括AEM Forms java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 ## 使用调用API调用短时间进程 {#invoking-a-short-lived-process-using-the-invocation-api}
 
@@ -1017,15 +1020,15 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 调用此进程时，它将执行以下操作：
 
 1. 获取传递给该流程的不安全的PDF文档。 此操作基于操 `SetValue` 作。 此进程的输入参数是一个名为的 `document` 进程变量 `inDoc`。
-1. 用密码加密PDF文档。 此操作基于操 `PasswordEncryptPDF` 作。 密码加密的PDF文档在名为的进程变量中返回 `outDoc`。
+1. 使用密码加密PDF文档。 此操作基于操 `PasswordEncryptPDF` 作。 密码加密的PDF文档在名为的进程变量中返回 `outDoc`。
 
 ### 使用Java调用API调用MyApplication/EncryptDocument短时进程 {#invoke-the-myapplication-encryptdocument-short-lived-process-using-the-java-invocation-api}
 
 使用 `MyApplication/EncryptDocument` Java调用API调用短期进程：
 
-1. 在Java项目的类路径中包含客户端JAR文件，如adobe-livecycle-client.jar。 (请参 [阅包括AEM Forms java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。)
+1. 在Java项目的类路径中包含客户端JAR文件，如adobe-livecycle-client.jar。 (请参 [阅包括AEM Forms Java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。)
 1. 创建包 `ServiceClientFactory` 含连接属性的对象。 (请参阅 [设置连接属性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
-1. 使用对 `ServiceClient` 象的构造函数并传递该对象来创建 `ServiceClientFactory` 对象。 对象 `ServiceClient` 允许您调用服务操作。 它处理查找、调度和路由调用请求等任务。
+1. 使用对 `ServiceClient` 象的构造函数并传递该对象来创建 `ServiceClientFactory` 对象。 对象 `ServiceClient` 允许您调用服务操作。 它处理诸如查找、调度和路由调用请求等任务。
 1. 使用对 `java.util.HashMap` 象的构造函数创建对象。
 1. 为每个输 `java.util.HashMap` 入参数调 `put` 用对象的方法，以传递到长寿命进程。 由于短 `MyApplication/EncryptDocument` 期进程需要一个类型的输入参数 `Document`，您只需调用一次方法， `put` 如下例所示。
 
@@ -1062,8 +1065,8 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 
 **另请参阅**
 
-[快速入门：使用调用API调用短时间进程](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-using-the-invocation-api)
+[快速开始:使用调用API调用短时间进程](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-using-the-invocation-api)
 
 [调用以人为中心的长寿命进程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
-[包括AEM Forms java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
