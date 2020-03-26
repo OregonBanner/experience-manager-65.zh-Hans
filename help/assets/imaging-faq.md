@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
+source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
 
 ---
 
@@ -17,14 +17,14 @@ source-git-commit: 3c2974911b9e9b45d4c4641f9c3683677a88db2f
 
 ## 什么是“智能成像”? {#what-is-smart-imaging}
 
-智能成像技术利用Adobe Sensei人工智能功能并与现有的“图像预设”配合使用，通过基于客户浏览器功能自动优化图像格式、大小和质量来增强图像交付性能。
+智能成像技术利用Adobe Sensei人工智能功能并与现有的“图像预设”配合使用，通过基于客户浏览器功能自动优化图像格式、大小和质量来增强图像投放性能。
 
 Smart Imaging还可以从与Adobe同类最出色的高级CDN服务完全集成所带来的性能提升中受益。 此服务在服务器、网络和对等点之间找到最佳的因特网路由，这些点的延迟和／或数据包丢失率都低于因特网上的默认路由。
 
 以下图像资产示例描述了添加的智能成像优化：
 
 | Image<br>(URL) | 缩略图 | 大小<br> (JPEG) | 大小(WebP)<br> (带有智 ***能成像***) | %降低 |
-|---|:---:|:---:|:---:|:---:|:---:|
+|---|---|---|---|---|
 | [图像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
 | [图像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
 | [图像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
@@ -44,7 +44,7 @@ Smart Imaging还可以从与Adobe同类最出色的高级CDN服务完全集成�
 * 使用“bfc”URL参数可以关闭智能成像。
 * TTL（生存时间）独立。 以前，智能成像的TTL最低为12小时是必须的。
 * 以前，原始图像和派生图像都被缓存，而使缓存失效的步骤为2。 在最新的智能成像中，只缓存衍生项，从而允许单步缓存失效过程。
-* 使用其规则集中的自定义标题的客户(例如，向图像响应添加自定义标题值|Dynamic Media Classic [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建议的“Timing Allow Origin”、“X-Robot”)将从最新的智能成像中受益，因为这些标题不会被阻止，这与以前版本的智能成像不同。
+* 使用其规则集中的自定义标题的客户(例如，向图像响应添加自定义标题值|Dynamic Media Classic [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建议的“允许定时来源”、“X-Robot”)将从最新的智能成像中受益，因为这些标题不会被阻止，这与以前版本的智能成像不同。
 
 ## 是否存在与智能成像相关的许可成本？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
@@ -100,14 +100,14 @@ Smart Imaging可处理通过HTTP或HTTPS传送的图像。 此外，它还适用
 
 ## 我是否有资格使用智能成像？ {#am-i-eligible-to-use-smart-imaging}
 
-要使用智能成像，您公司的AEM帐户上的Dynamic Media Classic或Dynamic Media必须满足以下要求：
+要使用智能成像，您的公司在AEM帐户上的Dynamic Media Classic或Dynamic Media必须满足以下要求：
 
-* 将Adobe捆绑的CDN（内容交付网络）作为许可的一部分。
+* 将Adobe捆绑的CDN(内容投放网络)作为许可的一部分。
 * 使用专用域(例如， `images.company.com` 或 `mycompany.scene7.com`)，而不是通用域(例如， `s7d1.scene7.com`、 `s7d2.scene7.com`或 `s7d13.scene7.com`)。
 
-要查找您的域，请登录您的公司帐户或帐户。
+要查找您的域，请登录到您的公司帐户或帐户。
 
-Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 查找标有“已发布服务 **[!UICONTROL 器名称”的字段]**。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求移至您自己的自定义域作为此过渡的一部分。
+Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 查找标有“已发布服务 **[!UICONTROL 器名称”的字段]**。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求移至您自己的自定义域作为本过渡的一部分。
 
 您的第一个自定义域不需要额外购买Dynamic Media许可证。
 
@@ -133,7 +133,7 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 查找标有�
 
       单击&#x200B;**[!UICONTROL 设置 > 应用程序设置 > 常规设置]**。
 
-      查找标有“已发布服务 **[!UICONTROL 器名称”的字段]**。 如果您当前使用的是通用的Dynamic Media Classic域，则可以请求移动到您自己的自定义域作为此过渡的一部分。
+      查找标有“已发布服务 **[!UICONTROL 器名称”的字段]**。 如果您当前使用的是通用的Dynamic Media Classic域，则可以请求移至您自己的自定义域作为本过渡的一部分。
    1. 指示您是否也需要它才能通过HTTP/2使用。
 
 1. 技术支持将根据请求的提交顺序将您添加到智能图像处理客户等待列表。
@@ -147,21 +147,21 @@ Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 查找标有�
 
 ## 我希望我的帐户何时启用智能成像？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
-请求将按技术支持部门收到请求的顺序进行处理，并根据等待列表进行处理。
+根据等待列表，请求将按技术支持接收的顺序进行处理。
 
 >[!NOTE]
-可能会有很长的提前期，因为启用智能成像会导致Adobe清除缓存。 因此，在任何给定时间都只能处理少数客户过渡。
+可能会有很长的提前期，因为启用智能成像会导致Adobe清除缓存。 因此，在任何给定时间只能处理少数客户过渡。
 
 ## 切换到使用Smart Imaging有哪些风险？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
-客户网页没有风险。 但是，您应该注意到，向智能成像的过渡会清除CDN中的缓存，因为它涉及在AEM上切换到Dynamic Media Classic或Dynamic Media的新配置。
+客户网页没有风险。 但是，您应该注意到，智能成像的过渡会清除CDN中的缓存，因为它涉及到在AEM上切换到Dynamic Media Classic或Dynamic Media的新配置。
 
-在初始过渡期间，未缓存的图像会直接点击Adobe的源服务器，直到重新构建缓存。 因此，Adobe计划一次处理几个客户过渡，以便在从我们的来源提取请求时保持可接受的性能。 对于大多数客户，在约1到2天内在CDN中重新完全建立缓存。
+在初始过渡期间，未缓存的图像会直接点击Adobe的来源服务器，直到重新构建缓存。 因此，Adobe计划同时处理几个客户过渡，以便在从我们的来源处理请求时保持可接受的性能。 对于大多数客户，在约1到2天内在CDN中重新完全建立缓存。
 
 ## 如何验证智能成像是否按预期工作？  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. 在您的帐户配置了智能成像后，请在浏览器上加载Dynamic Media Classic(Scene7)/Dynamic Media图像URL。
-1. 在浏览器中单击“查看”>“开发 **[!UICONTROL 人员”>“开发人员工具]** ”，打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
+1. 在浏览器中单击“视图”>“开发人 **[!UICONTROL 员”>“开发人员工具]** ”，打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
 
 1. 确保在开发人员工具打开时禁用缓存。
 
