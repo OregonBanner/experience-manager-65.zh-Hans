@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
+source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 5eff26237415160e80e622eacabf5c40dfad00af
 
 Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断改进。 随着创新更易于采用，该方法会为您带来好处。
 
-AEM Service Pack 4(6.5.4.0)于2020年3 **月5日发布**。 本文重点介绍了6.5 Service Pack为使您的AEM旅程更加丰富而提供的主要功能。
+AEM Service Pack 4(6.5.4.0)于2020年3 **月5日发布**。 本文重点介绍了6.5 Service Pack优惠可让您的AEM旅程更加丰富的主要功能。
 
 ## AEM Sites {#aem-sites}
 
@@ -35,7 +35,7 @@ AEM Service Pack 4(6.5.4.0)于2020年3 **月5日发布**。 本文重点介绍�
 
 ### 使用Brand Portal配置AEM资产 {#configure-assets-bp}
 
-AEM资产与Brand Portal之间的授权渠道已更改。 以前，Brand Portal是通过旧版OAuth网关在经典UI中配置的，该网关使用JWT令牌交换获取IMS访问令牌以进行授权。 AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租户购买IMS令牌以授权。
+AEM资产与Brand Portal之间的授权渠道已更改。 以前，Brand Portal是通过旧版OAuth网关在经典UI中配置的，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租户购买IMS令牌以授权。
 
 根据AEM版本以及您是首次配置还是升级现有配置，配置带有Brand Portal的AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
 
@@ -46,7 +46,7 @@ Experience Manager资产包括以下辅助功能增强：
 
 * 键盘上的箭头键可用于移动和平移缩放图像中的区域。 有关详细信息，请参阅 [仅使用键盘键预览资源](../assets/managing-assets-touch-ui.md#previewing-assets)。
 
-* “筛选器”面板中的混合状态复选框（除非您选择所有嵌套谓词，否则不会选择第一级复选框，并将其删除）可由屏幕阅读器读取。
+* 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
 * 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
 
@@ -56,7 +56,7 @@ Experience Manager资产包括以下辅助功能增强：
 
 ## AEM Forms {#aem-forms}
 
-### 在AEM Forms工作流程中生成可打印输出 {#generate-printable-output}
+### 在AEM Forms工作流中生成可打印输出 {#generate-printable-output}
 
 使用“生成可打印输出”工作流步骤，可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
 
@@ -86,8 +86,6 @@ Experience Manager资产包括以下辅助功能增强：
 
 Experience Manager Forms包括以下辅助功能增强：
 
-* 用户可以转移选项卡焦点，而无需为自适应表单的“超级可访问”参考主题提供任何问题。
-
 * 屏幕阅读器在自适应表单中正确宣布复选框、链接、日期选取器和日期输入字段。
 
 * 自适应表单的每页现在包含一个标题和一个主要地标标签。
@@ -96,7 +94,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 ### 动态媒体智能成像(6.5.3.0) {#smart-imaging}
 
-智能成像使用每个用户的独特查看特性自动提供为其体验优化的正确图像，从而提高性能和参与度。 智能成像可以与现有图像预设配合使用，并在传送的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 请参阅 [智能成像](../assets/imaging-faq.md)。
+智能成像使用每个用户的独特查看特性自动提供为其体验优化的正确图像，从而提高性能和参与度。 智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 请参阅 [智能成像](../assets/imaging-faq.md)。
 
 ### AEM资产的可视搜索(6.5.2.0) {#visual-search}
 
@@ -109,7 +107,7 @@ Experience Manager Forms包括以下辅助功能增强：
 ### 为AEM Forms用户(6.5.3.0)的收件箱项目配置办公室外设置 {#configure-out-of-office}
 
 如果您计划离开办公室，则可以指定在该期间分配给您的项目会发生什么情况。
-您可以选择指定开始日期、时间以及结束日期和时间，以使您的离职设置生效。 您可以设置将所有项目发送到的默认人员。 请参 [阅配置办公室外设置](../forms/using/configure-out-of-office-settings.md)。
+您可以选择指定开始日期和时间以及结束日期和时间，以使您的离职设置生效。 您可以设置将所有项目发送到的默认人员。 请参 [阅配置办公室外设置](../forms/using/configure-out-of-office-settings.md)。
 
 ### 使用AEM Forms的Batch API(6.5.3.0)生成多个交互式通信 {#generate-multiple-ic}
 
@@ -131,11 +129,11 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM Cloud Manager CLI更新
 
-   使用命令行工具自动执行Cloud Manager任务。 请参 [阅GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
+   使用命令行工具实现Cloud Manager任务自动化。 请参 [阅GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager/releases)。
 
 * AEM Sites:Project Archetype 23
 
-   启动新AEM项目的最佳方式。 Archetype 23将SPA和常规站点的 [Project Archetype合并为一个](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23) ，并提供一个默认主题来启动前端开发。
+   开始新AEM项目的最佳方式。 Archetype 23将SPA和常规站点的 [Project Archetype合并为一个](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-23) ，并提供一个默认主题来启动前端开发开始。
 
 * AEM Sites:WKND参考站点
 
