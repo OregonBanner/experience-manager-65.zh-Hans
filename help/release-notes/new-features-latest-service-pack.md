@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7c937b425d909a1f3a9af0a1c3357c44220af0f2
+source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
 
 ---
 
@@ -60,7 +60,7 @@ Experience Manager资产包括以下辅助功能增强：
 
 使用“生成可打印输出”工作流步骤，可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
 
-![生成可打印输出](assets/generate-print-output-demo.gif)
+![生成可打印输出](assets/generate-print-output-step.gif)
 
 ### 在布局模式下支持自适应表单和交互式通信的多列 {#multi-column-adaptive-forms}
 
@@ -124,7 +124,7 @@ Experience Manager Forms包括以下辅助功能增强：
    * [Cloud Manager 2020.1.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-1-0.html)
 
 
-   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+   * [Cloud Manager 2020.2.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-2-0.html)
 
 
 * AEM Cloud Manager CLI更新
@@ -149,7 +149,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM Screens:功能包202001
 
-   直接从AEM内的数字标牌。 安装最新功能包的改进功能， [跨多媒体播放器实现同步播放](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202001.html)。
+   直接从AEM内的数字标牌。 安装最新功能包的改进功能，以 [跨多媒体播放器实现同步播放](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202001.html)。
 
 ## 有用资源
 
