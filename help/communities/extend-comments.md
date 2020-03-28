@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -31,7 +31,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要实现此解决方案，请创建一个新组件，它扩展（覆盖）现有组件并修改Handlebars脚本。 使用新注释的站点区域可以使用扩展的注释，而使用默认外观的站点则不受影响。
 
-该注释组件实际上是构成该注释系统的两个组件之一。 因此，有两个要扩展的组件：评 *论* 和评 *论*。 要编辑的脚本位于*comment *component的文 `header.hbs` 件中，而父注释组件(注释系统 ** )则是作者实际添加到页面中的内容。
+该注释组件实际上是构成该注释系统的两个组件之一。 因此，有两个要扩展的组件：评 *论* 和评 *论*。 要编辑的脚本位于注释组 *件的文件中*`header.hbs`** ，而父注释组件（注释系统）是作者实际添加到页面的内容。
 
 要扩展注释，您需要：
 
