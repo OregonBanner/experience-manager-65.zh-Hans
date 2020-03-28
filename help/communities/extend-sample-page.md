@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a5040371-3bc2-43bc-a103-7175c4c6252d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 扩展注释还需要默认注释的样式和功能所必需的客户端库。
 
-《社 [区组件指南](/help/communities/components-guide.md) 》可标识所需的客户端库。 浏览到“组件指南”并查看“注释”组件，例如：
+《社 [区组件指南](/help/communities/components-guide.md) 》可标识所需的客户端库。 浏览到组件指南并视图注释组件，例如：
 
 [https://localhost:4502/content/community-components/en/comments.html](https://localhost:4502/content/community-components/en/comments.html)
 
