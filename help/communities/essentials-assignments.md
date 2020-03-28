@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Assignments Essentials{#assignments-essentials}
+# Assignments Essentials {#assignments-essentials}
 
 阅读以了解使用Enablement Community站点的任务功能的基本 [信息](/help/communities/overview.md#enablement-community) 。
 
@@ -48,7 +48,7 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="/help/communities/assignments.md">任务功能</a></td>
+   <td>请参阅，任 <a href="/help/communities/assignments.md">务功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -91,5 +91,5 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 
 * [报告API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [Reporting Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
+* [报告分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
 
