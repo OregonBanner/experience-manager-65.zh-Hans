@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >每个站点页面仅允许一个评论系统。
 >
->许多Communities功能已经包括一个注释系统，其resourceType可以被修改以引用扩展注释系统。
+>许多Communities功能已经包括一个注释系统，其resourceType可以修改为引用扩展注释系统。
 
 ## 创建注释组件 {#create-the-comments-component}
 
@@ -165,9 +165,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
-## 注册SCF模型并查看 {#register-the-scf-model-view}
+## 注册SCF模型和视图 {#register-the-scf-model-view}
 
-在扩展（覆盖）SCF组件时，resourceType是不同的(覆盖利用以前搜索的相对搜索机制，以 `/apps` 便 `/libs` resourceType保持不变)。 因此，必须编写JavaScript（在客户端库中）以注册SCF JS模型并查看自定义resourceType。
+在扩展（覆盖）SCF组件时，resourceType是不同的(覆盖利用以前搜索的相对搜索机制，以 `/apps` 便 `/libs` resourceType保持不变)。 因此，必须编写JavaScript（在客户端库中）来注册自定义resourceType的SCF JS模型和视图。
 
 输入以下文本作为内容 `customcommentsystem.js`:
 
@@ -193,7 +193,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 发布应用程序 {#publish-the-app}
 
-为了在发布环境中体验扩展组件，必须复制自定义组件。
+要体验发布环境中的扩展组件，必须复制自定义组件。
 
 这样做的一个方法是
 
