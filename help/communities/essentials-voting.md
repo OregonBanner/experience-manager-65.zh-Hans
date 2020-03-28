@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 允许在同一页面上放置多个投票组件实例；每个实例都必须配置一个唯一的 `tally name` 属性。
 
-不支持匿名发布投票。 网站访客只能注册并登录一次才能参加投票。已登录的访客（会员）可随时更改其投票。
+不支持匿名发布投票。 网站访客必须注册并登录才能参加投票一次，已签署的访客（会员）可随时更改其投票。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -49,7 +49,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td><p>请参阅 <a href="voting.md">使用投票</a></p> </td>
+   <td><p>请参阅，使 <a href="voting.md">用投票</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -69,7 +69,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 UGC应使用一种标准的仲裁方法进行仲裁。
 请参阅 [审核用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对 [UGC使用公用商店](working-with-srp.md) ，包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1 Communities起，对UGC使用公 [用商店](working-with-srp.md) ，包括以编程方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
