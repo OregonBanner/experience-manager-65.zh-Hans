@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# 排行榜功能{#leaderboard-feature}
+# 排行榜功能 {#leaderboard-feature}
 
 ## 简介 {#introduction}
 
@@ -51,7 +51,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 #### 设置选项卡 {#settings-tab}
 
-在**设置**选项卡下，指定显示与成员相关的信息：
+在“设 **置** ”选项卡下，指定显示与成员相关的信息：
 
 * **显示名称**
 
@@ -70,7 +70,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **使用头像**
 
-   如果选中此项，则会员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员配置文件。
+   如果选中此项，则会员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员用户档案。
 默认为未选中。
 
 #### “规则”选项卡 {#rules-tab}
@@ -91,9 +91,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **显示限制**
 
-   每页要显示的成员数。
-
-   默认值为10。
+   每页要显示的成员数。默认为10。
 
 ### 示例：参加者排行榜 {#example-participants-leaderboard}
 
