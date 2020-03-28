@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 582b7e9f36d3b9599058b4cfbe83897822b26d05
+source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
 
 ---
 
@@ -23,7 +23,7 @@ Smart Imaging还可以从与Adobe同类最出色的高级CDN服务完全集成�
 
 以下图像资产示例描述了添加的智能成像优化：
 
-| Image<br>(URL) | 缩略图 | 大小<br> (JPEG) | 大小(WebP)<br> (带有智 ***能成像***) | %降低 |
+| Image<br>(URL) | 缩略图 | 大小<br> (JPEG) | 大小(WebP)<br> （带有智能成像） | %降低 |
 |---|---|---|---|---|
 | [图像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
 | [图像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
