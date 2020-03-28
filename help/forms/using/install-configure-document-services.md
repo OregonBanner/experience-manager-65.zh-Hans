@@ -1,13 +1,13 @@
 ---
 title: 安装和配置文档服务
 seo-title: 安装和配置文档服务
-description: 安装AEM Forms文档服务以创建、组合、分发、存档PDF文档、添加数字签名以限制对文档的访问以及对条形码表单进行解码。
-seo-description: 安装AEM Forms文档服务以创建、组合、分发、存档PDF文档、添加数字签名以限制对文档的访问以及对条形码表单进行解码。
+description: 安装AEM Forms文档服务以创建、组合、分发、存档PDF文档，添加数字签名以限制对文档的访问，以及对条形码表单进行解码。
+seo-description: 安装AEM Forms文档服务以创建、组合、分发、存档PDF文档，添加数字签名以限制对文档的访问，以及对条形码表单进行解码。
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 0598f1e61218c540b6441182a3080e5217761ed4
+source-git-commit: a7ef7682df1dc627565f1cc30047ed775d2dbd13
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: 0598f1e61218c540b6441182a3080e5217761ed4
 
 ## 简介 {#introduction}
 
-AEM Forms提供一组OSGi服务，用于完成不同文档级操作，例如用于创建、组合、分发和存档PDF文档、添加数字签名以限制对文档的访问以及对条形码表单进行解码的服务。 这些服务包含在AEM Forms加载项包中。 这些服务统称为文档服务。 可用的文档服务及其主要功能列表如下：
+AEM Forms提供一组OSGi服务，用于完成不同的文档级别操作，例如用于创建、组合、分发和存档PDF文档的服务、添加数字签名以限制对文档的访问以及对条形码表单进行解码。 这些服务包含在AEM Forms加载项包中。 这些服务统称为文档服务。 现有文档服务的列表及其主要功能如下：
 
 使您能够合并、重新排列和增强PDF和XDP文档，并获取有关PDF文档的信息。 它还帮助将PDF文档转换并验证为PDF/A标准，将PDF表单、XML表单和PDF表单转换为PDF/A-1b、PDF/A-2b和PDFA/A-3b。 有关详细信息，请参 [阅Assembler Service](/help/forms/using/assembler-service.md)。
 
@@ -24,27 +24,27 @@ AEM Forms提供一组OSGi服务，用于完成不同文档级操作，例如用�
 
 使您能够从条形码的电子图像中提取数据。 该服务接受包含一个或多个条形码的TIFF和PDF文件作为输入并提取条形码数据。 有关详细信息，请参 [阅Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md)。
 
-使您能加密和解密文档、使用其他使用权限扩展Adobe reader的功能以及为文档添加数字签名。 文档保障服务包含三项服务：签名、加密和Reader扩展。 有关详细信息，请参 [阅DocAssurance Service](/help/forms/using/overview-aem-document-services.md)。
+允许您加密和解密文档，使用其他使用权限扩展Adobe Reader的功能，并向文档添加数字签名。 文档保障服务包含三项服务：签名、加密和Reader扩展。 有关详细信息，请参 [阅DocAssurance Service](/help/forms/using/overview-aem-document-services.md)。
 
-使您能够加密和解密文档。 文档加密后，其内容将变得不可读。 授权用户可以解密文档以获得对其内容的访问。 有关详细信息，请参 [阅Encryption Service](/help/forms/using/overview-aem-document-services.md#p-encryption-service-p)。
+允许您加密和解密文档。 文档加密后，其内容将变得不可读。 授权用户可解密文档以获得对其内容的访问。 有关详细信息，请参 [阅Encryption Service](/help/forms/using/overview-aem-document-services.md#p-encryption-service-p)。
 
-允许您创建交互式数据捕获客户端应用程序，这些应用程序验证、处理、转换和交付通常在Forms Designer中创建的表单。 表单服务可呈现您开发为PDF文档的任何表单设计。 有关详细信息，请参 [阅Forms Service](/help/forms/using/forms-service.md)。
+允许您创建交互式数据捕获客户端应用程序，这些应用程序验证、处理、转换和交付通常在Forms Designer中创建的表单。 Forms服务可呈现您开发为PDF文档的任何表单设计。 有关详细信息，请参 [阅Forms Service](/help/forms/using/forms-service.md)。
 
 使您能创建不同格式的文档，包括PDF、激光打印机格式和标签打印机格式。 激光打印机格式为PostScript和打印机控制语言(PCL)。 有关详细信息，请参阅 [输出服务](/help/forms/using/output-service.md)。
 
 PDF Generator服务提供API以将本机文件格式转换为PDF。 它还将PDF转换为其他文件格式并优化PDF文档的大小。 有关详细信息，请参 [阅PDF Generator Service](/help/forms/using/aem-document-services-programmatically.md#main-pars-header-27)。
 
-通过扩展Adobe Reader的功能并授予其他使用权限，使您的组织能够轻松共享交互式PDF文档。 该服务激活在使用Adobe reader打开PDF文档时不可用的功能，如向文档添加注释、填写表单和保存文档。 有关详细信息，请参 [阅Reader Extension Service](/help/forms/using/overview-aem-document-services.md#p-reader-extension-service-p)。
+通过扩展Adobe Reader的功能并授予其他使用权限，使您的组织能够轻松共享交互式PDF文档。 该服务激活在使用Adobe Reader打开PDF文档时不可用的功能，如向文档添加注释、填写表单和保存文档。 有关详细信息，请参 [阅Reader Extension Service](/help/forms/using/overview-aem-document-services.md#p-reader-extension-service-p)。
 
-允许您在AEM服务器上处理数字签名和文档。 例如，签名服务通常在以下情况下使用：
+允许您在AEM服务器上使用数字签名和文档。 例如，签名服务通常在以下情况下使用：
 
-* AEM服务器会在使用Acrobat或Adobe reader将表单发送给用户以打开前对其进行认证。
-* AEM服务器使用Acrobat或Adobe reader验证已添加到表单的签名。
+* AEM服务器会在使用Acrobat或Adobe Reader将表单发送给用户以打开前对其进行认证。
+* AEM服务器使用Acrobat或Adobe Reader验证已添加到表单的签名。
 * AEM服务器代表公证员签署表单。
 
 签名服务访问存储在信任存储中的证书和凭据。 有关详细信息，请参阅 [签名服务](/help/forms/using/aem-document-services-programmatically.md)。
 
-AEM Forms是一个功能强大的企业级平台，而文档服务只是AEM Forms的一项功能。 有关功能的完整列表，请参 [阅AEM Forms简介](/help/forms/using/introduction-aem-forms.md)。
+AEM Forms是一个功能强大的企业级平台，而文档服务只是AEM Forms的功能之一。 有关功能的完整列表，请参 [阅AEM Forms简介](/help/forms/using/introduction-aem-forms.md)。
 
 ## 部署拓扑 {#deployment-topology}
 
@@ -60,7 +60,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
 
 在开始安装和配置AEM Forms文档服务之前，请确保：
 
-* 硬件和软件基础结构就位。 有关支持的硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
+* 硬件和软件基础结构就位。 有关受支持硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
 
 * AEM实例的安装路径不包含空格。
 * AEM实例已启动并正在运行。 在AEM术语中，“实例”是在创作或发布模式下在服务器上运行的AEM的副本。 通常，您只需一个AEM实例（作者或发布）即可运行AEM Forms文档服务：
@@ -68,19 +68,19 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
    * **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。 内容准备就绪后，即会复制到发布实例。
    * **发布**:通过Internet或内部网络向公众提供已发布内容的AEM实例。
 
-* 满足内存要求。 AEM Forms Add-on包需要：
+* 满足内存要求。 AEM Forms加载项包需要：
 
-   * 15 GB临时空间，用于基于Microsoft windows的安装。
+   * 15 GB临时空间，用于基于Microsoft Windows的安装。
    * 6 GB临时空间，用于基于UNIX的安装。
 
-* 安装了PDF生成器在Microsoft windows和Linux上执行转换所需的客户端软件：
+* 安装了PDF生成器在Microsoft Windows和Linux上执行转换所需的客户端软件：
 
-   * **Microsoft Windows**:安 [装Microsoft](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)Office或 [Apache openOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
-   * **Linux**:安 [装Apache openOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
+   * **Microsoft Windows**:安 [装Microsoft](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)Office或 [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
+   * **Linux**:安 [装Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
 
 >[!NOTE]
 >
->* 在Microsoft windows上，PDF Generator支持WebKit、Acrobat webCapture和PhantomJS转换路由，以将HTML文件转换为PDF文档。
+>* 在Microsoft Windows上，PDF Generator支持WebKit、Acrobat WebCapture和PhantomJS转换路由，以将HTML文件转换为PDF文档。
 >* 在基于UNIX的操作系统上，PDF Generator支持WebKit和PhantomJS转换路由，以将HTML文件转换为PDF文档。
 >
 
@@ -171,7 +171,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **（仅限PDF Generator）** PDF Generator服务支持WebKit和PhantomJS路由以将HTML文件转换为PDF文档。 要启用PhantomJS路由的转换，请安装下面列出的64位库。 通常，这些库已安装。 如果缺少任何库，请手动安装它：
+* **（仅限PDF Generator）** PDF Generator服务支持WebKit和PhantomJS路由，以将HTML文件转换为PDF文档。 要启用PhantomJS路由的转换，请安装下面列出的64位库。 通常，这些库已安装。 如果缺少任何库，请手动安装它：
 
    * linux-gate.so.1
    * libz.so.1
@@ -189,22 +189,22 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
 
 ### 安装Adobe Acrobat和第三方应用程序 {#install-adobe-acrobat-and-third-party-applications}
 
-如果要使用PDF Generator服务将Microsoft Word、Microsoft Excel、Microsoft powerPoint、OpenOffice、WordPerfect X7和Adobe acrobat等本机文件格式转换为PDF文档，请确保在AEM Forms服务器上安装这些应用程序。
+如果要使用PDF Generator服务将Microsoft Word、Microsoft Excel、Microsoft PowerPoint、OpenOffice、WordPerfect X7和Adobe Acrobat等本机文件格式转换为PDF文档，请确保在AEM Forms服务器上安装这些应用程序。
 
 >[!NOTE]
 >
->* Adobe Acrobat、Microsoft Word、Excel和Powerpoint仅适用于Microsoft Windows。 如果您使用基于UNIX的操作系统，请安装OpenOffice，将富文本文件和支持的Microsoft office文件转换为PDF文档。
->* 为配置为使用PDF Generator服务的所有用户关闭安装Adobe acrobat和第三方软件后显示的所有对话框。
->* 至少启动一次所有已安装的软件。 关闭所有配置为使用PDF Generator服务的用户的所有对话框。
+>* Adobe Acrobat、Microsoft Word、Excel和Powerpoint仅适用于Microsoft Windows。 如果您使用基于UNIX的操作系统，请安装OpenOffice，将富文本文件和支持的Microsoft Office文件转换为PDF文档。
+>* 为配置为使用PDF Generator服务的所有用户关闭安装Adobe Acrobat和第三方软件后显示的所有对话框。
+>* 开始所有已安装的软件至少一次。 关闭所有配置为使用PDF Generator服务的用户的所有对话框。
 >
 
 
 
-安装Acrobat后，打开Microsoft Word。 在 **Acrobat**&#x200B;选项卡上，单击&#x200B;**** “创建PDF”，并将计算机上可用的。doc或。docx文件转换为PDF文档。 如果转换成功，AEM Forms就可以将Acrobat与PDF Generator服务结合使用。
+安装Acrobat后，打开Microsoft Word。 在 **Acrobat**&#x200B;选项卡上，单击&#x200B;**“创建PDF”** ，并将计算机上可用的。doc或。docx文件转换为PDF文档。 如果转换成功，AEM Forms就可以将Acrobat与PDF Generator服务结合使用。
 
 ### 设置环境变量 {#setup-environment-variables}
 
-为32位和64位Java开发工具包、第三方应用程序和Adobe Acrobat设置环境变量。 环境变量应包含用于启动相应应用程序的可执行程序的绝对路径，例如，下表列出了几个应用程序的环境变量：
+为32位和64位Java开发工具包、第三方应用程序和Adobe Acrobat设置环境变量。 环境变量应包含用于开始相应应用程序的可执行程序的绝对路径，例如，下表列出了一些应用程序的列表环境变量：
 
 <table> 
  <tbody> 
@@ -243,10 +243,10 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
 
 >[!NOTE]
 >
->* 所有环境变量和各自的路径均区分大小写。
+>* 所有环境变量和各个路径均区分大小写。
 >* JAVA_HOME、JAVA_HOME_32和Acrobat_PATH（仅限Windows）是必需的环境变量。
 >* 环境变量OpenOffice_PATH设置为安装文件夹，而不是可执行文件的路径。
->* 请勿为Microsoft office应用程序（如Word、PowerPoint、Excel和Project）或AutoCAD设置环境变量。 如果这些应用程序安装在服务器上，“生成PDF”服务将自动启动这些应用程序。
+>* 请勿为Microsoft Office应用程序（如Word、PowerPoint、Excel和Project）或AutoCAD设置环境变量。 如果这些应用程序安装在服务器上，“生成PDF”服务会自动开始这些应用程序。
 >* 在基于UNIX的平台上，将OpenOffice安装为/root。 如果OpenOffice未作为根安装，则PDF Generator服务将无法将OpenOffice文档转换为PDF文档。 如果需要以非根用户身份安装和运行OpenOffice，则为非根用户提供sudo权限。
 >* 如果您在基于UNIX的平台上使用OpenOffice，请运行以下命令以设置路径变量：\
    >  `export OpenOffice_PATH=/opt/openoffice.org4`
@@ -254,13 +254,13 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
 
 
 
-### （仅限IBM webSphere）配置IBM SSL套接字提供商 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
+### （仅限IBM WebSphere）配置IBM SSL套接字提供商 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
 * 执行以下步骤以配置IBM SSL套接字提供程序：
 
-1. 创建java.security文件的副本。 文件的默认位置为 [WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security。
+1. 创建java.security文件的副本。 文件的默认位置为 `[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`。
 1. 打开复制的java.security文件进行编辑。
-1. 将默认的SSL套接字工厂更改为使用JSSE2工厂而不是默认的IBM webSphere工厂：
+1. 将默认的SSL套接字工厂更改为使用JSSE2工厂而不是默认的IBM WebSphere工厂：
 
    **默认内容：**
 
@@ -289,62 +289,61 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
 
 ### 配置安装墨水和手写服务 {#configure-install-ink-and-handwriting-service}
 
-如果运行的是Microsoft Windows Server，请配置Ink and Sharttring服务。 需要该服务才能打开使用Microsoft office的链接功能的Microsoft powerPoint文件：
+如果运行的是Microsoft Windows Server，请配置Ink and Sharttring服务。 需要该服务才能打开使用Microsoft Office的链接功能的Microsoft PowerPoint文件：
 
 1. 打开服务器管理器。 单击“快 **[!UICONTROL 速启动”(Quick Launch)托盘上的“服务器管理器]** ”(Server Manager)图标。
 1. 单击 **[!UICONTROL “功能]** ”菜单中的“ **[!UICONTROL 添加功]** 能”。 选中“ **[!UICONTROL 墨水和手写服务]** ”复选框。
 1. **[!UICONTROL 选择“功能]** ”对话框，并选 **[!UICONTROL 择“墨水和手写服务]** ”。 单 **[!UICONTROL 击“安装]** ”，此时将安装服务。
 
-### 为Microsoft office配置文件块设置 {#configure-the-file-block-settings-for-microsoft-office}
+### 为Microsoft Office配置文件块设置 {#configure-the-file-block-settings-for-microsoft-office}
 
-更改Microsoft office信任中心设置，使PDF Generator服务能够转换使用旧版Microsoft office创建的文件。
+更改Microsoft Office信任中心设置，使PDF Generator服务能够转换使用旧版Microsoft Office创建的文件。
 
-1. 打开Microsoft office应用程序。 例如，Microsoft Word。 导航到“ **[!UICONTROL 文件]**”>“ **[!UICONTROL 选项”]**。 将出现选项对话框。
+1. 打开Microsoft Office应用程序。 例如，Microsoft Word。 导航到“ **[!UICONTROL 文件]**”>“ **[!UICONTROL 选项”]**。 将出现选项对话框。
 
 1. 单击“ **[!UICONTROL 信任中心]**”，然后单击“信 **[!UICONTROL 任中心设置”]**。
 1. 在“信任中 **[!UICONTROL 心”设置中]**，单击“ **[!UICONTROL 文件块设置”]**。
-1. 在“文 **[!UICONTROL 件类型]** ”列表中，取消选择“ **[!UICONTROL 打开]** ”以指定PDF Generator服务应允许转换为PDF文档的文件类型。
+1. 在“文 **[!UICONTROL 件类型]** ”列表中，取消选择“打开 **** ”以指定PDF Generator服务应允许转换为PDF文档的文件类型。
 
 ### 授予替换进程级令牌权限 {#grant-the-replace-a-process-level-token-privilege}
 
-用于启动应用程序服务器的用户帐户需要“替 **换进程级别令牌** ”权限。 默认情况下，本地系统帐 **户具有“替换进程级别令牌** ”权限。 对于与“本地管理员”组的用户一起运行的服务器，必须明确授予该权限。 执行以下步骤以授予权限：
+用于开始应用程序服务器的用户帐户需要“替 **换进程级别令牌** ”权限。 默认情况下，本地系统帐 **户具有“替换进程级别令牌** ”权限。 对于与“本地管理员”组的用户一起运行的服务器，必须明确授予该权限。 执行以下步骤以授予权限：
 
-1. 打开Microsoft windows的组策略编辑器。 要打开“组策略编辑器”，请单击“开 **[!UICONTROL 始]**”，在“开始搜索”框中键入 **gpedit.msc** ，然后单击“组策 **[!UICONTROL 略编辑器”]**。
-1. 导航到“本 **[!UICONTROL 地计算机策略]** ”>“配置” **[!UICONTROL >“配置]** ” **[!UICONTROL >“Windows设置]** ”>“Windows Settings Computer”>“ **************** Security Policies”>“Windows Rights User”>“Assignment A process level Token Policy”，并包括管理员组。
+1. 打开Microsoft Windows的组策略编辑器。 要打开“组策略编辑器”，请单击“ **[!UICONTROL 开始]**”，在“开始搜索”框中键入 **gpedit.msc** ，然后单击“组策 **[!UICONTROL 略编辑器”]**。
+1. 导航到“本 **[!UICONTROL 地计算机策略]** ”>“配置” **[!UICONTROL >“配置]** ” **[!UICONTROL >“Windows设置]** ”>“Windows Settings Computer”>“ **************** Security Policies”>“Windows Rights User”>“Assignment A process level Token Policy”，其中包括管理员组。
 1. 将用户添加到“替换进程级别令牌”条目。
 
 #### 为非管理员启用PDF Generator服务 {#enable-the-pdf-generator-service-for-non-administrators}
 
 您可以允许非管理员用户使用PDF Generator服务。 通常，只有具有管理权限的用户才能使用服务：
 
-1. 创建一个环境变量PDFG_NON_ADMIN_ENABLED。
-
+1. 创建环境变量PDFG_NON_ADMIN_ENABLED。
 1. 将环境变量的值设置为TRUE。
 1. 重新启动AEM Forms实例。
 
 ### 禁用用户帐户控制(UAC) {#disable-user-account-control-uac}
 
-1. 要访问系统配置实用程序，请转到“开 **[!UICONTROL 始”>“运行]** ”，然后输 **[!UICONTROL 入MSCONFIG]**。
+1. 要访问系统配置实用程序，请转到 **[!UICONTROL 开始>运行]** ，然后输 **[!UICONTROL 入MSCONFIG]**。
 1. 单击“工 **[!UICONTROL 具]** ”选项卡，向下滚动并选择“ **[!UICONTROL 更改UAC设置”]**。 单击 **[!UICONTROL 启动]** ，在新窗口中运行命令。
 1. 将滑块调整到“从不通知”级别。 完成后，关闭命令窗口并关闭“System Configuration（系统配置）”窗口。
 1. 验证UAC的注册表设置是否设置为0（零）。 执行以下步骤验证：
 
    1. Microsoft建议在修改注册表之前先备份它。 有关详细步骤， [请参阅如何在Windows中备份和恢复注册表](https://support.microsoft.com/en-us/help/322756)。
    1. 打开Microsoft Windows Registry编辑器。 要打开注册表编辑器，请转到“开始”>“运行”，键入regedit，然后单击“确定”。
-   1. 导航到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\。 确保将EnableLUA的值设置为0（零）。
+   1. 导航至 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. 确保将EnableLUA的值设置为0（零）。
    1. 确保 **EnableLUA的值** 设置为0（零）。 如果值不是0，则将该值更改为0。 关闭注册表编辑器。
 
 1. 重新启动计算机。
 
 ### 禁用错误报告服务 {#disable-error-reporting-service}
 
-在Windows服务器上使用PDF Generator服务将文档转换为PDF时，Windows server偶尔会报告可执行文件遇到问题并需要关闭。 但是，它不会影响PDF转换，因为它在后台继续。
+在Windows服务器上使用PDF Generator服务将文档转换为PDF时，Windows Server偶尔会报告可执行文件遇到问题，需要关闭。 但是，它不会影响PDF转换，因为它在后台继续。
 
-为避免收到错误，您可以禁用Windows错误报告。 有关禁用错误报告的详细信息，请参阅 [https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx)。
+为避免收到错误，您可以禁用Windows错误报告。 有关禁用错误报告的详细信息，请参 [阅https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx)。
 
 ### 配置HTML到PDF的转换 {#configure-html-to-pdf-conversion}
 
-PDF Generator服务提供WebKit、WebCapture和PhantomJS路由或方法以将HTML文件转换为PDF文档。 在Windows上，要启用WebKit和Acrobat webCapture路由的转换，请将Unicode字体复制到%windir%\fonts目录。
+PDF Generator服务提供WebKit、WebCapture和PhantomJS路由或方法，以将HTML文件转换为PDF文档。 在Windows上，要启用WebKit和Acrobat WebCapture路由的转换，请将Unicode字体复制到%windir%\fonts目录。
 
 >[!NOTE]
 >
@@ -353,7 +352,7 @@ PDF Generator服务提供WebKit、WebCapture和PhantomJS路由或方法以将HTM
 
 ### HTML到PDF转换的其他配置 {#extra-configurations-for-html-to-pdf-conversion}
 
-在基于UNIX的平台上，PDF Generator服务支持WebKit和PhantomJS路由，以将HTML文件转换为PDF文档。 要启用HTML到PDF的转换，请执行适用于您首选的转换路由的以下配置：
+在基于UNIX的平台上，PDF Generator服务支持WebKit和PhantomJS路由以将HTML文件转换为PDF文档。 要启用HTML到PDF的转换，请执行适用于您首选的转换路由的以下配置：
 
 #### 支持Unicode字体（仅限WebKit） {#enable-support-for-unicode-fonts-webkit-only}
 
@@ -371,7 +370,7 @@ PDF Generator服务提供WebKit、WebCapture和PhantomJS路由或方法以将HTM
 >
 >* 在RedHat Enterprise Linux 6.x和更高版本上，信使字体不可用。 要安装Courier字体，请下载font-ibm-type1-1.0.3.zip存档。 在/usr/share/fonts处解压缩存档。 创建从/usr/share/X11/fonts到/usr/share/fonts的符号链接。
 >* 从Html2PdfSvc/bin和/usr/share/fonts目录中删除所有。lst字体缓存文件。
->* 确保目录/usr/lib/X11/fonts和/usr/share/fonts存在。 如果目录不存在，则使用ln命令创建一个符号链接，从/usr/share/X11/fonts到/usr/lib/X11/fonts；使用另一个符号链接，从/usr/share/fonts到/usr/share/X11/fonts。 另外，请确保在/usr/lib/X11/fonts中提供了快递字体。
+>* 确保目录/usr/lib/X11/fonts和/usr/share/fonts存在。 如果目录不存在，则使用ln命令创建一个符号链接，从/usr/share/X11/fonts到/usr/lib/X11/fonts，并创建另一个符号链接，从/usr/share/fonts到/usr/share/X11/fonts。 另外，请确保在/usr/lib/X11/fonts中提供了快递字体。
 >* 确保所有字体（Unicode和非Unicode）在/usr/share/fonts或/usr/share/X11/fonts目录中都可用。
 >* 以非根用户身份运行PDF Generator服务时，请提供对所有字体目录的非根用户读写权限。
 >* 每当您将新字体安装到字体文件夹时，请重新启动AEM Forms实例。
@@ -381,7 +380,7 @@ PDF Generator服务提供WebKit、WebCapture和PhantomJS路由或方法以将HTM
 
 ## Install AEM Forms add-on package {#install-aem-forms-add-on-package}
 
-AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms Document services和其他AEM Forms功能。 请执行以下步骤来安装该包：
+AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms文档服务和其他AEM Forms功能。 请执行以下步骤来安装该包：
 
 1. 以管理员身份登录 [到AEM服务器](http://localhost:4502) ，然后打开包 [共享](http://localhost:4502/crx/packageshare)。 您需要Adobe ID才能登录到包共享。
 
@@ -393,7 +392,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
    如果您通过 [AEM Forms发行文章中列出的直接链接手动下载包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，请登录到包管理器，单击“上传包” ****，选择下载的包，然后单击“上传”。 上传包后，单击包名称，然后单击“安 **[!UICONTROL 装”]**。
 
-1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即停止服务器。** 在停止AEM Forms服务器之前，请等到AEM-Installation-Directory []/crx-quickstart/logs/error.log文件中显示“ServiceEvent REGISTERED”和“ServiceEvent UNREGISTERED”消息停止，并且日志是稳定的。
+1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即停止服务器。** 在停止AEM Forms服务器之前，请等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止显示在 `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log文件中，且日志是稳定的。
 
 ## 安装后配置 {#post-installation-configurations}
 
@@ -401,7 +400,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
 1. 停止AEM实例。 导航到 [AEM安装目录]\crx-quickstart\conf\ folder。 打开sling.properties文件进行编辑。
 
-   如果使用 [AEM安装目录]\crx-quickstart\bin\start.bat启动AEM实例，请编辑位于 [AEM_root]\crx-quickstart\的sling.properties。
+   如果您使 `[AEM installation directory]\crx-quickstart\bin\start.bat` 用开始AEM实例，请编辑位于的sling.properties `[AEM_root]\crx-quickstart\`。
 
 1. 将以下属性添加到sling.properties文件：
 
@@ -415,7 +414,6 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
-
 1. 保存并关闭文件。
 
 ### 配置字体管理器服务 {#configuring-the-font-manager-service}
@@ -425,7 +423,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
    >[!NOTE]
    >
-   >您使用Adobe以外各方提供的字体的权利受此类方向您提供的这些字体的许可协议所管辖，且您使用Adobe软件的许可不涵盖您的权利。 Adobe建议您在将非Adobe字体与Adobe软件一起使用之前检查并确保您符合所有适用的非Adobe许可协议，特别是在服务器环境中使用字体时。
+   >您使用Adobe以外各方提供的字体的权利受此类方向您提供的这些字体的许可协议所管辖，且您使用Adobe软件的许可不涵盖您的权利。 Adobe建议您在将非Adobe字体与Adobe软件一起使用之前，检查并确保您符合所有适用的非Adobe许可协议，特别是在服务器环境中使用字体时。
    > 将新字体安装到字体文件夹时，请重新启动AEM Forms实例。
 
 ### 配置本地用户帐户以运行PDF Generator服务 {#configure-a-local-user-account-to-run-the-pdf-generator-service}
@@ -434,7 +432,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
 1. 打开“ [AEM Forms PDF Generator配置](http://localhost:4502/libs/fd/pdfg/config/ui.html) ”页。
 
-1. 在“用 **[!UICONTROL 户帐户]** ”选项卡中，提供本地用户帐户的凭据，然后单击“提 **[!UICONTROL 交”]**。 如果Microsoft windows提示，则允许访问用户。 成功添加后，配置的用户将显示在“用户帐户” **[!UICONTROL 选项卡的“您的用户帐户]** ”部 **[!UICONTROL 分下方]** 。
+1. 在“用 **[!UICONTROL 户帐户]** ”选项卡中，提供本地用户帐户的凭据，然后单击“提 **[!UICONTROL 交”]**。 如果Microsoft Windows提示，则允许访问用户。 成功添加后，配置的用户将显示在“用户帐户” **[!UICONTROL 选项卡的“您的用户帐户]** ”部 **[!UICONTROL 分下方]** 。
 
 ### 配置超时设置 {#configure-the-time-out-settings}
 
@@ -446,7 +444,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
 1. 登录到AEM作者实例，然后导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **** Configure PDF Generator。 默认URL为http://localhost:4502/libs/fd/pdfg/config/ui.html。
 
-   打开“ **[!UICONTROL 常规配置]** ”选项卡，并修改以下字段的值以用于您的环境：
+   打开“ **[!UICONTROL 常规配置]** ”选项卡，并为环境修改以下字段的值：
 
 <table> 
  <tbody> 
@@ -475,15 +473,15 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
 ### 为PDF Generator服务配置Acrobat {#configure-acrobat-for-the-pdf-generator-service}
 
-在Microsoft windows上，PDF Generator服务使用Adobe acrobat将支持的文件格式转换为PDF文档。 执行以下步骤为PDF Generator服务配置Adobe Acrobat:
+在Microsoft Windows上，PDF Generator服务使用Adobe Acrobat将支持的文件格式转换为PDF文档。 执行以下步骤为PDF Generator服务配置Adobe Acrobat:
 
-1. 打开Acrobat，然后选择“ **[!UICONTROL 编辑]**”>“ **[!UICONTROL 首选项]**” **[!UICONTROL >“]**&#x200B;更新程序”。 在检查更新中，取消选择 **[!UICONTROL 自动安装更新]**，然后单击 **[!UICONTROL 确定]**。 关闭Acrobat。
-1. 双击系统上的PDF文档。 当Acrobat首次启动时，将显示登录、欢迎屏幕和EULA的对话框。 为配置为使用PDF生成器的所有用户关闭这些对话框。
+1. 打开Acrobat，然后选择“编 **[!UICONTROL 辑]**”>“首 **[!UICONTROL 选项]**” **[!UICONTROL >“更]**&#x200B;新程序”。 在检查更新中，取消选择 **[!UICONTROL 自动安装更新]**，然后单击 **[!UICONTROL 确定]**。 关闭Acrobat。
+1. 多次-单击系统上的PDF文档。 当Acrobat首次开始时，将显示登录、欢迎屏幕和EULA的对话框。 为配置为使用PDF生成器的所有用户关闭这些对话框。
 1. 运行PDF Generator实用程序批处理文件，为PDF Generator服务配置Acrobat:
 
-   1. 打开 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp) ，并从包管理器下载adobe-aemfd-pdfg-common-pkg-[version].zip文件。
+   1. 打开 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp) ，并从包 `adobe-aemfd-pdfg-common-pkg-[version].zip` 管理器下载文件。
    1. 解压缩下载的。zip文件。 以管理权限打开命令提示符。
-   1. 导航到 [extracted-zip-file][\jcr_root\etc\fd\pdfg\tools\adobe-aemfd-pdfg-utilities- version]-win.zip\scripts目录。 运行以下批处理文件：
+   1. 导览至目 `[extracted-zip-file]\jcr_root\etc\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\scripts` 录。 运行以下批处理文件：
 
       `Acrobat_for_PDFG_Configuration.bat`
 
@@ -491,19 +489,19 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms 
 
 1. 运行系统就绪性工具(SRT)以验证Acrobat安装。 该工具检查机器是否配置得当以运行PDF生成器转换，并在指定路径生成报告：
 
-   1. 打开命令提示符。 导览至 [extracted-adobe-aemfd-pdfg-common-pkg][\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-version]-win.zip\srt文件夹。 从命令提示符下运行以下命令：
+   1. 打开命令提示符。 导览至文 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` 件夹。 从命令提示符下运行以下命令：
 
       `cscript SystemReadinessTool.vbs [Path_of_reports_folder] en`
 
       >[!NOTE]
       >
-      >如果“系统就绪性工具”报告pdfgen.api文件不在acrobat增效工具文件夹中，则从 [extracted-adobe-aemfd-pdfg-common-pkg]\plugins\x86_win32 directory to the [Acrobat_root]\Acrobat\plug_ins directory复制pdfgen.api文件。
+      >如果“系统就绪性工具”报告pdfgen.api文件不在acrobat增效工具文件夹中，则将pdfgen.api文件从目录复制 `[extracted-adobe-aemfd-pdfg-common-pkg]\plugins\x86_win32` 到目 `[Acrobat_root]\Acrobat\plug_ins` 录。
 
-   1. 导航 [到Path_of_reports_folder]。 打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
+   1. 导航至 `[Path_of_reports_folder]`. 打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
 
 ### 配置HTML到PDF转换的主要路由（仅限Windows） {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator服务提供了将HTML文件转换为PDF文档的多条路径：Webkit、Acrobat webCapture（仅限Windows）和PhantomJS。 Adobe建议使用PhantomJS路由，因为它能够处理动态内容，并且不依赖32位库、32位JDK，或不需要任何额外的字体。 此外，PhantomJS路由不需要sudo或root访问即可运行转换。
+PDF Generator服务提供了将HTML文件转换为PDF文档的多条路径：Webkit、Acrobat WebCapture（仅限Windows）和PhantomJS。 Adobe建议使用PhantomJS路由，因为它能够处理动态内容，并且不依赖32位库、32位JDK，或不需要任何额外的字体。 此外，PhantomJS路由不需要sudo或root访问即可运行转换。
 
 HTML到PDF转换的默认主要途径是Webkit。 要更改转换路线：
 
@@ -521,7 +519,7 @@ HTML到PDF转换的默认主要途径是Webkit。 要更改转换路线：
 
 ### 为Reader扩展和加密服务设置证书 {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用使用权限，请配置证书。
+DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应用使用权限，请配置证书。
 
 在设置证书之前，请确保您有：
 
@@ -529,7 +527,8 @@ DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用�
 
 * 随证书提供的私钥密码。
 
-* 私钥别名. 您可以执行Java keytool命令来查看私钥别名：keytool -list -v -keystore [keystore-file] -storetype pkcs12
+* 私钥别名. 您可以执行Java keytool命令来视图私钥别名：
+   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * 密钥库文件密码。 如果您使用的是Adobe的Reader Extensions证书，则Keystore文件密码始终与私钥密码相同。
 
@@ -551,7 +550,7 @@ DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用�
 
 ### 启用AES-256 {#enable-aes}
 
-要对PDF文件使用AES 256加密，请获取并安装Java密码扩展(JCE)“无限强度管辖权策略”文件。 替换jre/lib/security文件夹中的local_policy.jar和US_export_policy.jar文件。 例如，如果您使用Sun JDK，则将下载的文件复制到 [JAVA_HOME]/jre/lib/security文件夹。
+要对PDF文件使用AES 256加密，请获取并安装Java密码扩展(JCE)“无限强度管辖权策略”文件。 替换jre/lib/security文件夹中的local_policy.jar和US_export_policy.jar文件。 例如，如果您使用Sun JDK，则将下载的文件复制到该文 `[JAVA_HOME]/jre/lib/security` 件夹。
 
 Assembler服务取决于Reader Extensions服务、签名服务、Forms服务和Output服务。 执行以下步骤以验证所需的服务是否已启动并正在运行：
 
@@ -585,17 +584,17 @@ Assembler服务取决于Reader Extensions服务、签名服务、Forms服务和O
 
 ## 已知问题和疑难解答 {#known-issues-and-troubleshooting}
 
-* 如果压缩的输入文件包含文件名中具有双字节字符的HTML文件，则HTML到PDF的转换将失败。 要避免此问题，请在命名HTML文件时不要使用双字节字符。
+* 如果压缩的输入文件包含文件名中带有多次字节字符的HTML文件，则HTML到PDF的转换将失败。 要避免此问题，请在命名HTML文件时不要使用多次字节字符。
 
 * 在基于UNIX的操作系统上，执行以下操作以查找任何缺少的库：
 
-1. 导航到 [crx-repository]/bindork/svcnative/HtmlToPdfSvc/bin/。
+1. 导航至 `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/`.
 
-1. 运行以下命令列出PhantomJS需要将HTML转换为PDF的所有库。
+1. 运行以下命令以列表PhantomJS转换HTML到PDF所需的所有库。
 
    `ldd phantomjs`
 
-   运行以下命令以列出缺少的库。
+   运行以下命令以列表缺少的库。
 
    `ldd phantomjs | grep not`
 
@@ -605,7 +604,7 @@ Assembler服务取决于Reader Extensions服务、签名服务、Forms服务和O
 
 您有一个有效的AEM Forms文档服务环境。 您可以通过以下方式使用文档服务：
 
-* [OSGi上以表单为中心的工作流程](/help/forms/using/aem-forms-workflow.md)
+* [OSGi上以表单为中心的工作流](/help/forms/using/aem-forms-workflow.md)
 * [观察文件夹](/help/forms/using/watched-folder-in-aem-forms.md)
 * [文档服务API](/help/forms/using/aem-document-services-programmatically.md)
 
