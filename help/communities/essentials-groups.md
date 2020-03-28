@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4f85cd3c-5158-4f23-abe2-7e375fd0c8d4
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
 # Community Group Essentials {#community-group-essentials}
 
-社区组功能是允许从发布和创作环境授权用户在社区站点内动态创建子社区的功能。
+社区组功能是允许通过发布和创作环境授权用户在社区站点内动态创建子社区的功能。
 
 自Communities功 [能包1起](deploy-communities.md#latestfeaturepack)，组可嵌套在其他组中
 
@@ -85,7 +85,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 组函数 {#groups-function}
 
-包含“组”功能的社区站 [点结构](functions.md#groups-function) ，将支持从发布和创 `community groups` 作环境创建新内容。 创建的社区组将包含 `community groups member list` 一个将列出组成员的组件。
+包含“组”功能的社区站 [点结构](functions.md#groups-function) ，将支持从发布和作 `community groups` 者环境创建新内容。 创建的社区组将包含 `community groups member list` 一个将列表组成员的组件。
 
 当该功 [能被添加到社区站点模板或嵌套在社区组模板中时](tools-groups.md)[](sites.md) ，可以为“组”功能配置一个或多个社区组模板，该模板提供社区组页面的设计。
 
@@ -98,9 +98,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 当社区站点或组模板包含“组”功能时，
 
 * 在创作环境中创建子社区
-* 在发布环境中创建组（如果配置为允许）
+* 在发布环境中创建组(当配置为允许组
 
-在创作环境中创建组时，首先必须发布社区站点，然后发布组。 发布社区站点将发布组的页面，而不创建设置了ACL的子社区的成员组。 因此，在显式发布组之前，受限（秘密）组可以是可见的。
+在创作环境中创建组时，必须首先发布社区站点，然后发布组。 发布社区站点将发布组的页面，而不创建设置了ACL的子社区的成员组。 因此，在显式发布组之前，受限（秘密）组可以是可见的。
 
 ## 链接和相关信息 {#links-and-related-information}
 
