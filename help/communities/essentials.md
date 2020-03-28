@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 941ffeb40805c991eec6a601d01796cfc2cc95e4
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
 # 组件、功能和功能要件 {#component-function-and-feature-essentials}
 
-AEM Communities功能要求站点访问者成为成员并登录社 [区站点](overview.md#communitiessites) ，然后才能发布内容。 因此， [从中创建社区站点的社区站点模](sites.md)板 [](sites-console.md)，设计为包括登录功能以及用户配置文件、消息、搜索、协调和翻译。
+AEM Communities功能要求站点访客成为成员并登录社 [区站点](overview.md#communitiessites) ，然后才能发布内容。 因此， [从中创建社区站点的社区站点模](sites.md)板 [](sites-console.md)，设计为包括登录功能以及用户用户档案、消息、搜索、协调和翻译。
 
 当社区组功能包含在所选社区站点模板中时，社 [区站点将支持创建](functions.md#groups-function) 社区组的成员。
 
