@@ -1,8 +1,8 @@
 ---
-title: OSGi Events for Communities组件
-seo-title: OSGi Events for Communities组件
-description: 发送可触发异步监听器的OSGi事件
-seo-description: 发送可触发异步监听器的OSGi事件
+title: OSGi事件社区组件
+seo-title: OSGi事件社区组件
+description: 发送OSGi事件以触发异步监听器
+seo-description: 发送OSGi事件以触发异步监听器
 uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,20 +10,20 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# OSGi Events for Communities组件 {#osgi-events-for-communities-components}
+# OSGi事件社区组件 {#osgi-events-for-communities-components}
 
 ## 概述 {#overview}
 
-当成员与Communities功能交互时，会发送可触发异步监听器的OSGi事件，如通知或游戏化（评分和徽章）。
+当成员与Communities功能交互时，会发送OSGi事件，它们可触发异步监听器，如通知或游戏化（评分和徽章）。
 
-组件的 [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 实例将事件记 `actions`录为发生的事件 `topic`。 SocialEvent包括一种方法，用于返回与 `verb`操作关联的内容。 和之间 *有n-1* 关 `actions`系 `verbs`。
+组件的 [SocialEvent实例将事件记](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) 录为某个组件的 `actions``topic`。 SocialEvent包括一种方法，用于返回与 `verb` 该操作关联的内容。 和之间 *有n-1* 关 `actions` 系 `verbs`。
 
-对于版本中提供的社区组件，下表介绍了为每个可 `verbs`用组件定 `topic`义的内容。
+对于版本中提供的社区组件，下表介绍了为每个可 `verbs` 用组件定 `topic` 义的内容。
 
 ## 主题与动词 {#topics-and-verbs}
 
@@ -33,7 +33,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 |---|---|
 | POST | 成员创建日历事件 |
 | 添加 | 日历事件上的成员评论 |
-| 更新 | 会员的日历活动或评论已编辑 |
+| 更新 | 会员的日历事件或评论已编辑 |
 | 删除 | 会员的日历事件或评论已被删除 |
 
 [评论组](essentials-comments.md)件SocialEvent `topic`= com/adobe/cq/social/comment
@@ -63,7 +63,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 | 更新 | 编辑成员的论坛主题或回复 |
 | 删除 | 会员的论坛主题或回复已被删除 |
 
-[日记帐组](blog-developer-basics.md)件SocialEvent `topic`= com/adobe/cq/social/journal
+[日志组](blog-developer-basics.md)件SocialEvent `topic`= com/adobe/cq/social/日志
 
 | **动词** | **描述** |
 |---|---|
@@ -118,9 +118,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ## 自定义组件的事件 {#events-for-custom-components}
 
-对于自定义组件，必 [须扩展SocialEvent抽象类](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) ，以将组件的事件记录 `actions`为某个事件 `topic`。
+对于自定义组件，必 [须扩展SocialEvent抽象类](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) d以记录组件的事件, `actions`与为相同 `topic`。
 
-自定义事件将覆盖该方 `getVerb()` 法，以便为每 `verb`个事件返回相应的值 `action`。 为 `verb` 操作返回的可能是常用的(如 `POST`)或专用于组件的(如 `ADD RATING`)。 和之间 *有n-1* 关 `actions`系 `verbs`。
+自定义事件将覆盖该方 `getVerb()` 法，以便为每 `verb`个对象返回相应的 `action`。 为 `verb` 操作返回的可能是常用的(如 `POST`)或专用于组件的(如 `ADD RATING`)。 和之间 *有n-1* 关 `actions`系 `verbs`。
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 自定义组件事件的伪代码 {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);[com.adobe.granite.activitystreams.Verbits](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
+[org.osgi.service.事件.事件](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);[com.adobe.granite.activitystreams.Verbits](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
 package com.mycompany.recipe;
@@ -226,9 +226,9 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 
 ## 过滤活动流数据的示例EventListener {#sample-eventlistener-to-filter-activity-stream-data}
 
-可以为修改活动流中显示的内容而侦听事件。
+可以侦听事件，以修改活动流中显示的内容。
 
-以下伪代码示例将从活动流中删除“注释”组件的DELETE事件。
+以下伪代码示例将从事件流中删除注释组件的DELETE活动。
 
 ### EventListener的伪代码 {#pseudo-code-for-eventlistener}
 
