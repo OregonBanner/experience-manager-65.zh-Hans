@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
    <td>是——在设计模式下可编辑 <i>属 </i>性</td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>Clientlibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.porting</td>
   </tr>
   <tr>
@@ -67,11 +67,11 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 * [问题与解答](qna-essentials.md)
 * [审核](reviews-basics.md)
 
-### 标记原因列表 {#flag-reason-list}
+### 旗标原因列表 {#flag-reason-list}
 
 可以通过向应用程序添加flagreasonlist.hbs来自定义标记原因列表以覆盖中的内容
 
-* /libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs
+* `/libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs`
 
 这适用于扩展注释系统的任何组件。
 
@@ -88,7 +88,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 UGC应使用一种标准的仲裁方法进行仲裁。
 请参阅 [审核用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对 [UGC使用公用商店](working-with-srp.md) ，包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1 Communities起，对UGC使用公 [用商店](working-with-srp.md) ，包括以编程方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
