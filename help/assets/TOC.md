@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Assets User Guide
 translation-type: tm+mt
-source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
+source-git-commit: 92e72695e267d4a8d1c18cf6842b17273e185444
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
 # AEM 6.5 Assets User Guide {#assets}
 
 + [资产用户指南](home.md)
-+ [AEM 6.5 Assets发行说明](../release-notes/assets.md)
++ [AEM 6.5 Assets发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [关于DAM](assets.md)
 + [资产的最佳实践](best-practices-for-assets.md)
 + 使用AEM资产 {#using}
@@ -74,7 +74,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [使用媒体处理程序和工作流处理资源](media-handlers.md)
    + [扩展搜索功能](searchx.md)
    + [安装和配置ImageMagick以与AEM Assets一起使用](best-practices-for-imagemagick.md)
-   + [将资产与活动流集成](extending-activity-stream.md)
+   + [将资源与活动流集成](extending-activity-stream.md)
    + [扩展资产编辑器](asseteditorx.md)
    + [资产 HTTP API](mac-api-assets.md)
    + [AEM Assets HTTP API中的内容片段支持](assets-api-content-fragments.md)
@@ -87,7 +87,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [资产链接共享](link-sharing.md)
    + [资产报表](asset-reports.md)
    + [增强的智能标记](enhanced-smart-tags.md)
-   + [用于处理元数据、图像和视频的配置文件](processing-profiles.md)
+   + [用户档案处理元数据、图像和视频](processing-profiles.md)
    + [串联元数据](cascading-metadata.md)
    + [创建和配置资产编辑器页面](assets-finder-editor.md)
    + [资产大小调整指南](assets-sizing-guide.md)
@@ -140,7 +140,7 @@ source-git-commit: 9f923782d3d0a7bdf45b18e8025bd2d083acf77c
    + [管理收藏集](managing-collections-touch-ui.md)
    + [管理多个资产和收藏集](managing-multiple-assets.md)
    + [使用智能内容服务配置标记](config-smart-tagging.md)
-   + [启用重复项检测](duplicate-detection.md)
+   + [启用重复检测](duplicate-detection.md)
    + [组织数字资产](organize-assets.md)
    + [管理视频资产](managing-video-assets.md)
    + [创建翻译项目](translation-projects.md)
