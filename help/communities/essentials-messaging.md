@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
-# Messaging Essentials{#messaging-essentials}
+# Messaging Essentials {#messaging-essentials}
 
-本页记录了使用消息传递组件在网站上包含消息传递功能的详细信息。
+本页文档了使用消息传递组件在网站上包含消息传递功能的详细信息。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -98,17 +98,21 @@ source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
 
 >[!CAUTION]
 >
->对于以下MessageBuilder方法，String参数必须*not *包含尾随斜杠“/”:
+>对于以下MessageBuilder *方法* ,“字符串”参数不得包含尾随斜杠“/”:
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
->例如：
 >
->```>
+例如：
+>
+>
+```>
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
 >```>
+
+
 
 ### 社区站点 {#community-site}
 
@@ -116,32 +120,32 @@ source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
 
 ### 示例代码：收到的消息通知 {#sample-code-message-received-notification}
 
-社交消息功能会为操作引发事件， `send`例如 `marking read`, `marking delete`。 可以捕获这些事件并对事件中包含的数据执行操作。
+社交消息功能会为操作引发事件, `send`例如 `marking read`, `marking delete`。 可以捕获这些事件并对事件中包含的数据采取操作。
 
-以下示例是一个事件处理函数，它监听该事件，并 `message sent` 使用该事件向所有消息收件人发送电子邮件 `Day CQ Mail Service`。
+以下示例是事件处理程序，它监听，并使用 `message sent` 事件向所有消息收件人发送电子邮件 `Day CQ Mail Service`。
 
-要试用服务器端范例脚本，您需要一个开发环境并能够构建OSGi捆绑包：
+要试用服务器端范例脚本，您需要开发环境和构建OSGi捆绑包的能力：
 
-1. 以管理员身份登录以 ` [CRXDE|Lite](https://localhost:4502/crx/de).`
+1. 以管理员身份登录 ` [CRXDE|Lite](https://localhost:4502/crx/de)`。
 1. 创建 `bundle node`具有 `/apps/engage/install` 任意名称的In，例如：
 
-   * 符号名称：com.engage.media.social.messaging.MessagingNotification
+   * 符号名称: `com.engage.media.social.messaging.MessagingNotification`
    * 名称：入门教程消息通知
    * 说明：用于在用户收到消息时向用户发送电子邮件通知的示例服务
-   * 包：com.engage.media.social.messaging.notification
+   * 包: `com.engage.media.social.messaging.notification`
 
-1. 导航到/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification，然后：
+1. 导航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然后：
 
-   1. 删除自动创建的Activator.java类。
-   1. 创建MessageEventHandler.java类。
-   1. 将下面的代码复制并粘贴到MessageEventHandler.java中。
+   1. 删除自 `Activator.java` 动创建的类。
+   1. 创建类 `MessageEventHandler.java`。
+   1. 将下面的代码复制并粘贴到中 `MessageEventHandler.java`。
 
-1. 单击“ **全部保存”。**
-1. 导航到/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd，并添加在MessageEventHandler.java代码中编写的所有导入语句。
+1. 单击“ **全部保存**”。
+1. 导航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`并添加代码中编写的所有导入语句 `MessageEventHandler.java` 。
 1. 构建捆绑包。
 1. 确保 `Day CQ Mail Service`已配置OSGi服务。
 1. 以演示用户身份登录，并向其他用户发送电子邮件。
-1. 收件人会收到一封关于新消息的电子邮件。
+1. 收件人会收到有关新消息的电子邮件。
 
 #### MessageEventHandler.java {#messageeventhandler-java}
 
