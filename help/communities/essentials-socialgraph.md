@@ -10,18 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ---
 
 
 # Social Graph Essentials {#social-graph-essentials}
 
-社区成员可以通过以下两个部 [分](essentials-activities.md) ，来开展和开展活动：
+社区会员既可以遵守 [活动](essentials-activities.md) ，也可以遵守其义务。
 
-该组 `follow`件必须与其他资源关联，并且该关联已针对社区站点中的现有社区成员和功能 [建立](overview.md#communitiessites)。
+该组 `following` 件必须与其他资源关联，并且该关联已针对社区站点中的现有社区成员和功能 [建立](overview.md#communitiessites)。
 
-组 `following`件列出当前成员之后或当前成员后面的成员。 此社交图形包含在为社区站点建立的用户配置文件中。
+组 `following` 件列表当前成员之后或当前成员后面的成员。 该成员之间关系的社交图包括在为社区站点建立的用户用户档案中。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -61,8 +61,8 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
      <li>类型：布尔型</li>
      <li>值:<br />
       <ul>
-       <li><i>true </i>-组 <code>following</code> 件将列出当前已登录成员的成员 <code>follows</code></li>
-       <li><i>false </i>-组 <code>following</code> 件将列出当前登 <code>follow </code>录成员的成员</li>
+       <li><i>True </i>-组 <code>following</code> 件将列表当前已登录成员的成员 <code>follows</code></li>
+       <li><i>False </i>-组 <code>following</code> 件将列表当前登 <code>follow </code>录成员的成员</li>
       </ul> </li>
     </ul> <p>如果属 <i>性缺失</i> ，则默认为true。 当前，无法在创作模式下使用编辑对话框设置此属性。 必须使用CRXDE|Lite将该属性添 <code>following </code>加到节 <a href="../../help/sites-developing/developing-with-crxde-lite.md">点实例中</a>。</p> </td>
   </tr>
@@ -71,11 +71,11 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 关注 {#follow}
 
-| **resourceType** | social/socialgraph/components/hbs/following |
+| **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
 | [**可包含&#x200B;**](scf.md#add-or-include-a-communities-component) | 否 |
-| **模板** | /libs/social/socialgraph/components/hbs/following/following.hbs |
-| **css** | /libs/social/socialgraph/components/hbs/following/clientlibs/following.css |
+| **模板** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
+| **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
 * [客户端自定义](client-customize.md)
 
