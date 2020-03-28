@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 61d1531c020b5a25207b5e3f1c2b0c14e2974e02
+source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
 
 ---
 
@@ -39,6 +39,10 @@ AEM资产与Brand Portal之间的授权渠道已更改。 以前，Brand Portal�
 
 根据AEM版本以及您是首次配置还是升级现有配置，配置带有Brand Portal的AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
 
+
+### 已知问题 {#known-issues-bp}
+
+* 在AEM 6.5.4上升级到Adobe I/O后，Brand Portal用户无法将贡献文件夹资产发布到AEM资产。
 
 ### Accessibility enhancements {#accessibility-enhancements}
 
@@ -149,7 +153,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM Screens:功能包202001
 
-   直接从AEM内的数字标牌。 安装最新功能包的改进功能，以 [跨多媒体播放器实现同步播放](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202001.html)。
+   直接从AEM内的数字标牌。 安装最新功能包的改进功能， [跨多媒体播放器实现同步播放](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202001.html)。
 
 ## 有用资源
 
