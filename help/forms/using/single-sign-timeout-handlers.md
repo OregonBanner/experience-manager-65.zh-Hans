@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ AEM Forms工作区已启用SSO。 如果用户已登录到AEM Forms应用程序�
 
 可以在管理控制台中配置用户的会话超时。
 
-要设置超时，请登录到 `https://[server]:[port]/adminui`，导航到“设置”>“用 **户管理”>“配置”>“配置高级系统属性**”，然后设置所需的设置。
+要设置超时，请登录到 `https://'[server]:[port]'/adminui`，导航到“设置”>“用 **户管理”>“配置”>“配置高级系统属性**”，然后设置所需的设置。
 
 在AEM Forms工作区中，超时处理为：
 
