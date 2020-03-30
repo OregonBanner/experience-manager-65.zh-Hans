@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,12 +18,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Forms的默认安装和设置只允许在服务器上提供一个AEM Forms工作区。 但是，您可能需要在单台AEM Forms服务器上承载两个不同的AEM Forms工作区实例。 两个实例可通过不同的URL访问。
 
-AEM Forms管理员可自定义工作区以创建两个不同的URL，并使两个工作区在同一服务器上可用。 在此自定义文章中，我们假定两个工作区可在 `https://[server]:[port]/lc/ws` 和访问 `https://[server]:[port]:/lc/ws2`。
+AEM Forms管理员可自定义工作区以创建两个不同的URL，并使两个工作区在同一服务器上可用。 在此自定义文章中，我们假定两个工作区可在 `https://'[server]:[port]'/lc/ws` 和访问 `https://'[server]:[port]':/lc/ws2`。
 
 请按照以下步骤配置AEM Forms工作区。
 
 1. 在服务器上安装AEM Forms Workspace的开发包。 有关 [创建开发包的说明](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，请参阅开发包。
-1. 通过访问，以管理员身份登录到CRXDE Lite `https://[server]:[port]/lc/crx/de/index.jsp`。
+1. 通过访问，以管理员身份登录到CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 复制节点位于/content，粘贴于/content。 将节点重命名为ws2。 单击“ **[!UICONTROL 全部保存]**”。 在此节点的属性中，将值更 `sling:resourceType` 改为ws2。 单击“ **[!UICONTROL 全部保存]**”。
 
 1. 从/libs复制文件夹，然后粘贴到/apps。 将文件夹重命名为ws2。 单击“ **[!UICONTROL 全部保存]**”。
