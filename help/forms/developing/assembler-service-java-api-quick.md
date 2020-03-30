@@ -1,6 +1,6 @@
 ---
-title: Assembler Service Java API quickStart(SOAP)
-seo-title: Assembler Service Java API quickStart(SOAP)
+title: Assembler Service Java API QuickStart(SOAP)
+seo-title: Assembler Service Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 33ad5f7a-4f4c-4e72-937d-85891498a80e
@@ -10,42 +10,42 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Assembler Service Java API quickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
+# Assembler Service Java API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
 
-Java API快速入门(SOAP)可用于Assembler服务
+Java API快速开始(SOAP)可用于Assembler服务
 
-[快速入门（SOAP模式）:使用Java API汇编PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API汇编PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API拆解PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API拆解PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API组合加密的PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API组合加密的PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API将PDF文档与bates编号组合在一起](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将PDF文档与bates编号组合在一起](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API组合非交互式PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API组合非交互式PDF文档](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API确定文档是否符合PDF/A规范](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API确定文档是否符合PDF/A规范](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API验证DDX文档](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API验证DDX文档](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API将PDF文档与书签组合](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将PDF文档与书签组合](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API动态创建DDX文档](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API动态创建DDX文档](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API组合PDF包](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API组合PDF包](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API组合多个XDP片段](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API组合多个XDP片段](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-***注意&#x200B;**:使用AEM Forms进行编程中的“快速入门”功能基于JBoss Application server和Microsoft windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:使用AEM Forms进行编程中的快速开始基于JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
-## 快速入门（SOAP模式）:使用Java API汇编PDF文档 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API汇编PDF文档 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
 以下Java代码示例将两个名为 *map.pdf和directions* .pdf的PDF源文档合并 ** 为一个PDF文档。 单个PDF文档的名称为 *AssemblerResultPDF.pdf*。 DDX文档的名称为 *shell.xml*。 (请参阅 [以编程方式组合PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
 
@@ -120,7 +120,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -189,9 +189,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API拆解PDF文档 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API拆解PDF文档 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-以下Java代码示例拆解了名为 *AssemblerResultPDF.pdf的PDF文档*。 请注意，DDX文档的名称是 *shell_disamscreable.xml*。 每个已拆卸的PDF文档均命名 `ResultPDF[Number].pdf`。 即，第一个已拆解的PDF文档名 *为ResultPDF1.pdf。* 有关此代码示 *例中使用的shell_dispresamble.xml* DDX文档的信息，请参阅以编程方 [式拆解PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
+以下Java代码示例拆解了名为 *AssemblerResultPDF.pdf的PDF文档*。 请注意，DDX文档的名称是 *shell_discreamble.xml*。 每个已拆卸的PDF文档均命名 `ResultPDF[Number].pdf`。 即，第一个已拆解的PDF文档名为 *ResultPDF1.pdf。* 有关此代码示 *例中使用的shell_dispresamble.xml* DDX文档的信息，请参阅以编程方 [式拆解PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
 
 ```as3
  /*
@@ -263,7 +263,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -328,9 +328,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API组合加密的PDF文档 {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API组合加密的PDF文档 {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
 
-以下Java代码示例组合了一个密码加密的PDF文档。 无抵押的PDF文档名 *为Loan.pdf*。 请注意，DDX文档的名称 *为shell_Encrypt.xml*。 加密的PDF文档名为 *AssemblerEncryptedPDF.pdf*。 (请参阅 [汇编加密的PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)。)
+以下Java代码示例组合了一个密码加密的PDF文档。 无抵押的PDF文档名 *为Loan.pdf*。 请注意，DDX文档的名称 *是shell_Encrypt.xml*。 加密的PDF文档名 *为AssemblerEncryptedPDF.pdf*。 (请参阅 [汇编加密的PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)。)
 
 ```as3
  /*
@@ -406,7 +406,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -451,9 +451,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API将PDF文档与bates编号组合在一起 {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API将PDF文档与bates编号组合在一起 {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
-以下Java代码示例将具有唯一页面标识符的PDF文档组合在一起（bates编号）。 请注意，DDX文档的名称 *为shell_Bates.xml*。 从Assembler服务返回的PDF文档将保存为名为AssemblerResultBatesPDF.pdf的 *PDF文件*。 (请参阅 [使用Bates编号组合文档](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)。)
+以下Java代码示例将PDF文档与唯一的页面标识符（bates编号）组合在一起。 请注意，DDX文档的名称 *为shell_Bates.xml*。 从Assembler服务返回的PDF文档将保存为名为AssemblerResultBatesPDF.pdf的PDF *文件*。 (请参阅 [使用Bates编号组合文档](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)。)
 
 ```as3
  /*
@@ -535,7 +535,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -609,9 +609,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API组合非交互式PDF文档 {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API组合非交互式PDF文档 {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
 
-以下Java代码示例组合了一个非交互式PDF文档。 传递给Assembler服务的交互式PDF文档名为 *Loan.pdf*。 请注意，DDX文档的名称 *为shell_XFA.xml*。 非交互式PDF文档将保存为名为AssembleNonInteractivePDF.pdf的 *PDF文件*。 (请参 [阅组合非交互式PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents)。)
+以下Java代码示例组合了一个非交互式PDF文档。 传递给Assembler服务的交互式PDF文档名为 *Loan.pdf*。 请注意，DDX文档的名称 *是shell_XFA.xml*。 非交互式PDF文档将保存为名为AssembleNonInteractivePDF.pdf的PDF *文件*。 (请参 [阅组合非交互式PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents)。)
 
 ```as3
  /*
@@ -684,7 +684,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -733,9 +733,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API确定文档是否符合PDF/A规范 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API确定文档是否符合PDF/A规范 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-以下Java代码示例确定输入的PDF文档是否符合PDF/A规范。 传递给Assembler服务的输入PDF文档名为 *Loan.pdf*。 DDX文档的名称为shell_PDFA.xml。 从Assembler服务返回的XML文档，它指定输入的PDF文档是否符合PDF/A规范，将另存为名为result.xml的XML文件。 有关此代码示例中 *使用的shell_PDFA.xml* DDX文档的信息，请参阅 [确定文档是否符合PDF/A规范](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)。
+以下Java代码示例确定输入的PDF文档是否符合PDF/A规范。 传递给Assembler服务的输入PDF文档名为 *Loan.pdf*。 DDX文档的名称为shell_PDFA.xml。 从Assembler服务返回的XML文档，它指定输入的PDF文档是否符合PDF/A规范，将保存为名为result.xml的XML文件。 有关此代码示例中 *使用的shell_PDFA.xml* DDX文档的信息，请参阅 [确定文档是否符合PDF/A规范](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)。
 
 ```as3
  /*
@@ -808,7 +808,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -879,9 +879,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API验证DDX文档 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API验证DDX文档 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
 
-以下Java代码示例基于名为bookmarkDDX.xml的文件验证DDX *文档*。 (请参阅 [验证DDX文档](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents)。)
+以下Java代码示例基于名为bookmarkDDX.xml的文件验证 *DDX文档*。 (请参 [阅验证DDX文档](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents)。)
 
 ```as3
  /*
@@ -958,7 +958,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1010,9 +1010,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API将PDF文档与书签组合 {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API将PDF文档与书签组合 {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
-以下Java代码示例组合了包含书签的PDF文档。 DDX文档的名称为 *bookmarkDDX.xml*。 描述要添加到PDF文档的书签的书签XML文档的名称为bookmarks.xml。 结果PDF文档将保存为名为AssemblerResultBookmarks.pdf的PDF文件。 (请参阅 [将PDF文档与书签组合](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)。)
+以下Java代码示例组合了包含书签的PDF文档。 DDX文档的名称为 *bookmarkDDX.xml*。 描述要添加到PDF文档的书签XML文档的名称是bookmarks.xml。 结果PDF文档将保存为名为AssemblerResultBookmarks.pdf的PDF文件。 (请参阅 [将PDF文档与书签组合](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)。)
 
 ```as3
  /*
@@ -1109,7 +1109,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1180,14 +1180,14 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API动态创建DDX文档 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API动态创建DDX文档 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
-以下Java代码示例动态创建一个拆分PDF文档的DDX文档。 将为输入PDF文档中的每个级别1书签创建一个新的PDF文档。 此代码示例包含两种用户定义的方法：
+以下Java代码示例动态创建一个DDX文档，它拆分了PDF文档。 将为输入PDF文档中的每个级别1书签创建新的PDF文档。 此代码示例包含两种用户定义的方法：
 
 * `createDDX`:创建一 `org.w3c.dom.Document` 个对象，它表示发送到Assembler服务的DDX文档。 此用户定义的方法返回该 `org.w3c.dom.Document` 对象。
-* `convertDDX`:将对象 `org.w3c.dom.Document` 转换为对 `com.adobe.idp.Document` 象。 此方法接受对 `org.w3c.dom.Document` 象作为输入参数并返回对 `com.adobe.idp.Document` 象。
+* `convertDDX`:将对象 `org.w3c.dom.Document` 转换为对 `com.adobe.idp.Document` 象。 此方法接受 `org.w3c.dom.Document` 对象作为输入参数并返回对 `com.adobe.idp.Document` 象。
 
-   在此快速启动中将调用这两种方法。 (请参阅 [动态创建DDX文档](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。)”
+   在此快速开始中将调用这两种方法。 (请参 [阅动态创建DDX文档](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。)”
 
 ```java
 /*
@@ -1267,7 +1267,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
     //Set connection properties required to invoke AEM Forms using SOAP mode
     Properties connectionProps = new Properties();
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT,
-     "https://[server]:[port]");
+     "https://'[server]:[port]'");
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceCl ientFactoryProperties.DSC_SOAP_PROTOCOL);
     connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE,
      "JBoss");
@@ -1376,7 +1376,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## 快速入门（SOAP模式）:使用Java API组合PDF包 {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API组合PDF包 {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
 以下Java代码示例创建PDF包。 PDF包将保存为名为AssemblerResultPortfolio.pdf的 *PDF文件*。 (请参 [阅组合PDF包](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios)。)
 
@@ -1447,7 +1447,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1527,7 +1527,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API组合多个XDP片段 {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API组合多个XDP片段 {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
 以下Java代码示例组合基于以下XDP文件的XDP片段： *tuc018_template_frued.xdp*、 *tuc018_contact.xdp*&#x200B;和* tuc018_patient.xdp*。 包含所有片段的已组合XDP文档将保存为名为 *AssemblerResultXDP.xdp的XDP文件*。 (请参 [阅组合多个XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)。)
 
@@ -1605,7 +1605,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1680,7 +1680,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API将PDF文档加密成密文 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API将PDF文档加密成密文 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
 以下代码示例使用密文标记PDF文档 `PDFUtility`。
 
@@ -1740,7 +1740,7 @@ public class RedactPDF
         {
             //Set connection properties required to invoke AEM Forms
             Properties connectionProps = new Properties();
-            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
