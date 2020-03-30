@@ -11,20 +11,20 @@ topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 为HTML5表单启用日志记录{#enable-logging-for-html-forms}
 
-您可以配置记录器实用程序以开始为HTML5表单创建日志。 记录器实用程序具有不同的级别，您可以根据要求设置一个级别。 HTML5表单具有服务器和客户端组件。 您可以为这两个组件配置日志。
+可以配置记录器实用程序以开始为HTML5表单创建日志。 记录器实用程序具有不同的级别，您可以根据要求设置一个级别。 HTML5表单具有服务器和客户端组件。 您可以为这两个组件配置日志。
 
 ## 配置服务器端日志记录 {#configuring-server-side-logging}
 
 执行以下步骤以配置服务器端日志：
 
-1. 转到 `https://[server]:[port]/system/console/configMgr`. 找到并打开 *Apace Sling日志记录器配置选项* 。 将显示一个对话框：
+1. 转到 `https://'[server]:[port]'/system/console/configMgr`. 找到并打开 *Apace Sling日志记录器配置选项* 。 将显示一个对话框：
 
    ![ Apace Sling日志记录器配置选项对话框](assets/logconfig.png)
 
@@ -130,7 +130,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
    <th>描述</th>
   </tr>
   <tr>
-   <td>a</td>
+   <td>某个 </td>
    <td>xfa（脚本引擎相关日志）</td>
   </tr>
   <tr>
@@ -146,7 +146,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 #### 日志配置 {#log-configuration}
 
-在日志URL中，日志配置查询字符串参数的定义如下：
+在日志URL中，日志配置查询字符串参数定义如下：
 
 `{destination}-{a level}-{b level}-{c level}`
 
@@ -176,7 +176,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 如果使用配置管理器启用日志记录，则会为每个渲染请求生成日志，直到再次禁用日志记录。
 
-1. 登录CQ Configuration Manager，然后使 `https://[server]:[port]/system/console/configMgr` 用管理员凭据登录。
+1. 登录CQ Configuration Manager，然后使 `https://'[server]:[port]'/system/console/configMgr` 用管理员凭据登录。
 1. 搜索并单击“移 **动表单配置”**。
 1. 在“调试选项”文本框中，按照上一节所述输入日志配置，例如， **2-a4-b5-c6**
 
@@ -186,13 +186,13 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 ## 上传日志 {#uploading-logs}
 
-如果目标设置为1，则所有客户端脚本日志消息都将定向到控制台。 如果管理员需要这些日志和服务器日志，请将目标级别设置为2。 在此级别上，所有日志都会收集在客户端的JS对象中，如果表单使用默认的配置文件呈现，则工具栏中“高亮显示现有字段 ******** ”按钮的左侧将显示“发送日志”按钮。 当用户单击该链接时，所有收集的日志都将发布到服务器，并记录到服务器上已配置的错误日志文件中。
+如果目标设置为1，则所有客户端脚本日志消息都将定向到控制台。 如果管理员需要这些日志和服务器日志，请将目标级别设置为2。 在此级别上，所有日志都收集在客户端的JS对象中，如果表单以默认用户档案呈现，则工具栏中“高亮显示现有字段 ******** ”按钮的左侧将显示“发送日志”按钮。 当用户单击该链接时，所有收集的日志都将发布到服务器，并记录到服务器上已配置的错误日志文件中。
 
 默认情况下，所有信息都会添加到/crx-repository/logs/目录下的error.log文件。
 
 要更改日志文件的位置和名称：
 
-1. 以管理员身份登录到配置管理器。 配置管理器的默认URL为 `https://[Server]:[Port]/system/console/configMgr`。
+1. 以管理员身份登录到配置管理器。 配置管理器的默认URL为 `https://'[server]:[port]'/system/console/configMgr`。
 1. 单击“ **Apache Sling Logging Logger Configuration”**。 将显示一个对话框。
 
    ![logconfig-1](assets/logconfig-1.png)
