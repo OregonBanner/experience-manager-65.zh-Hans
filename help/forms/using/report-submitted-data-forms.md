@@ -1,22 +1,22 @@
 ---
 title: 用于在表单门户上处理提交表单的API
 seo-title: 用于在表单门户上处理提交表单的API
-description: AEM Forms提供了API，您可以使用这些API在表单门户中查询已提交的表单数据并对其执行操作。
-seo-description: AEM Forms提供了API，您可以使用这些API在表单门户中查询已提交的表单数据并对其执行操作。
+description: AEM Forms提供了API，您可以使用这些API在表单门户中查询提交的表单数据并对其执行操作。
+seo-description: AEM Forms提供了API，您可以使用这些API在表单门户中查询提交的表单数据并对其执行操作。
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 用于在表单门户上处理提交表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms提供了API，您可以使用它查询通过表单门户提交的表单数据。 此外，您还可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
+AEM Forms提供了API，您可以使用它来查询通过表单门户提交的表单数据。 此外，您还可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
 
 >[!NOTE]
 >
@@ -92,7 +92,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （可选）</td>
-   <td>指定要包含在结果中的表单属性的逗号分隔列表。 <br /> 默认属性为： <code>formName</code>, <code>formPath</code><code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>指定要包含在结果中的表单属性的逗号分隔列表。 默认属性为：<br /><code>formName</code>, <code>formPath</code><code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> （可选）</td>
@@ -148,7 +148,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 **请求URL**
 
 ```
-https://[host:[port]/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
+https://[host:'port'/content/forms/portal/submission.review.json?func=addComment&submitID=1403037413508500&comment=API+test+comment
 ```
 
 **响应**
@@ -186,7 +186,7 @@ https://[host:[port]/content/forms/portal/submission.review.json?func=addComment
 **请求URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
+https://[host]:'port'/content/forms/portal/submission.review.json?func=getComments&submitID=1403037413508500
 ```
 
 **响应**
@@ -218,7 +218,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getCommen
 **请求URL**
 
 ```
-https://[host]:[port]/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
+https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSubmission&submitID=1403037413508500&value=sample_value&property=some_new_prop
 ```
 
 **响应**
