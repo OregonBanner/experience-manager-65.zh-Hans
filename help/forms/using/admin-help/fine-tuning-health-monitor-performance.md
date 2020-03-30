@@ -10,14 +10,14 @@ geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 微调运行状况监视器性能{#fine-tuning-health-monitor-performance}
 
-收集填充运行状况监视器的系统统计信息会对AEM表单环境的性能产生一定影响。 可通过设置应用程序服务器中下面列出的Java选项来控制此影响。
+收集填充运行状况监视器的系统统计信息会对AEM表单环境的性能产生影响。 可通过设置应用程序服务器中下面列出的Java选项来控制此影响。
 
 <table>
  <thead>
@@ -69,9 +69,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 将Java选项添加到WebLogic {#add-java-options-to-weblogic}
 
-1. 通过在Web浏览器的URL行中键入https://[主机名]:[port]/console，启动WebLogic管理控制台。
+1. 开始WebLogic管理控制台[，方法是在Web浏览器的URL行中键入https://]host name:&#39;port&#39;/console。
 1. 键入您为WebLogic服务器域创建的用户名和密码，然后单击“更改中心”下的“日志”，然后单击“锁定并编辑”。
-1. 在“域结构”下，单击“环境”>“服务器”，在右侧窗格中单击受控服务器名称。
+1. 在“域结构”下，单击“环境”>“服务器”，然后在右侧窗格中单击受控服务器名称。
 1. 在下一个屏幕上，单击“配置”选项卡>“服务器开始”选项卡。
 1. 在“参数”框中，将所需的参数追加到当前内容的末尾。 例如，添加——禁 `Dadobe.healthmonitor.enabled=false` 用健康监视器。
 1. 单击保存，然后单击激活更改。
