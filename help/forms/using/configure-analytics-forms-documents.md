@@ -10,14 +10,14 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 配置分析和报告{#configuring-analytics-and-reports}
 
-AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的是根据使表单或文档更易用所需的更改数据做出明智决策。
+AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的是根据使表单或文档更易用所需的更改数据做出明智决策。
 
 >[!NOTE]
 >
@@ -43,25 +43,25 @@ AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单�
 
 ## 创建报告套件 {#creating-report-suite}
 
-分析数据存储在称为报表包的客户特定存储库中。 要创建报表包并使用Adobe Analytics，您必须拥有有效的Adobe Marketing cloud帐户。 在执行以下步骤之前，请确保您拥有有效的Adobe Marketing cloud帐户。
+分析数据存储在称为报表包的客户特定存储库中。 要创建报表包并使用Adobe Analytics，您必须拥有有效的Adobe Marketing Cloud帐户。 在执行以下步骤之前，请确保您拥有有效的Adobe Marketing Cloud帐户。
 
 执行以下步骤以创建报表包。
 
 1. 登录网 [址：https://sc.omniture.com/login/](https://sc.omniture.com/login/)
-1. 在Marketing cloud中，选择“管 **理员** ”>“管 **理控制台** ” **>“报**&#x200B;表包”。
+1. 在Marketing Cloud中，选择“管 **理员** ”>“管 **理控制台** ” **>“**&#x200B;报表包”。
 1. 在“ **报表包管理器** ”中 **选择“新建”** > “报表包”。
 
    ![创建新的报告套件](assets/newreportsuite_new.png)
 
    创建新的报告套件
 
-1. 确保第一个下拉列表设置为“从模 **板创建”** ，然后选择“商 **务”**。
-1. 找到报 **表包ID字段** ，然后添加新的报表包ID。 例如，JJEsquire。 报表包ID显示在报表包ID字段的下方。 它包含一个自动前缀，通常是公司名称。
+1. 确保第一个下拉列表列表设置为“从模 **板创建”** ，然后选择“商 **务”**。
+1. 找到报 **表包ID字段** ，然后添加新的报表包ID。 例如，JJEsquire。 报表包ID显示在报表包ID字段的下方。 它包含一个自动前缀，通常是公司名。
 1. 添加新 **站点标题**。 例如，JJEsquire Getting Started Suite。 此标题在Analytics UI中使用。 在代码中使用报表包ID。
 1. 从下拉 **菜单中选择时区** 。 此报表包中的所有数据都将根据定义的时区进行记录。
-1. 将“基 **本URL** ”和“默 **认页面** ”字段留空。 这两个值只能从Adobe Marketing cloud界面中用于链接到您的网站。
+1. 将“基 **本URL** ”和“默 **认页面** ”字段留空。 这两个值只能从Adobe Marketing Cloud界面中用于链接到您的网站。
 1. 将“开始 **生效日期** ”设置为今天。 起始日期决定激活报表包的日期。
-1. 在“估 **计的每日页面查看次数** ”字段中，键入100。 使用此字段可估计您预计的网站每天的页面查看次数。 这一估计使Adobe能够部署适当数量的硬件来处理您要收集的数据。
+1. 在“估 **计的每天页面视图数** ”字段中，键入100。 使用此字段可估计您预计网站每天的页面视图数。 这一估计使Adobe能够部署适当数量的硬件来处理您要收集的数据。
 1. 从下拉 **菜单中选择基本货币** 。 此报表包中的所有货币数据都将转换并存储为此货币格式。
 1. 单击 **创建报告** Suite。 您应当看到页面刷新，并显示一条消息，告知您的报表包已成功创建。
 1. 选择新创建的报表包。 导航到“编 **辑设置** ”>“ **常规** ” **>“**&#x200B;常规帐户设置”。
@@ -70,7 +70,7 @@ AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单�
 
    常规帐户设置
 
-1. 在“常规帐户设置”屏幕中，启用“地 **理位置报告**”，然后单击“ **保存”。**
+1. 在“常规帐户设置”屏幕中，启用“ **地理报告**”，然后单击“ **保存”。**
 1. 导航到编 **辑设置** > **流量** > **流量变量**。
 1. 在报表包中，配置并启用以下流量变量。
 
@@ -83,7 +83,7 @@ AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单�
    * **panelTitle**:表单面板的标题。
    * **analyticsVersion**:表单分析版本。
 
-1. 导航到编 **辑设置** >转 **化** >成 **功事件**。 定义并启用以下成功事件：
+1. 导航到编 **辑设置** >转 **化** >成 **功事件**。 定义并启用以下成功事件:
 
    | 成功事件 | 类型 |
    |---|---|
@@ -99,9 +99,9 @@ AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单�
 
    >[!NOTE]
    >
-   >用于配置AEM Forms分析的事件编号和属性编号必须与 [AEM分析配置中使用的事件编号和属性编号](/help/sites-administering/adobeanalytics.md) 不同。
+   >用于配置AEM Forms分析的事件编号和属性编号必须与 [AEM分析配置中使用的事件编号和属性编号](/help/sites-administering/adobeanalytics.md) 。
 
-1. 注销Adobe Marketing cloud帐户。
+1. 注销Adobe Marketing Cloud帐户。
 
 ## 创建云服务配置 {#creating-cloud-service-configuration}
 
@@ -117,7 +117,7 @@ AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单�
 
 1. 当“编辑”面板在配置页面上打开时，填写以下字段：
 
-   * **公司**:您公司在Adobe Analytics中的特色名称。
+   * **公司**:您的公司在Adobe Analytics中的特色名称。
    * **用户名**:用于登录Adobe Analytics的名称。
    * **密码**:上述帐户的Adobe Analytics密码。
    * **数据中心**:Adobe Analytics帐户的数据中心。
@@ -160,11 +160,11 @@ Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射�
 1. 为以下字段指定相应的值，然后单击“保 **存”**。
 
    * **SiteCatalyst Framework**:在设置跟踪框架部分中选择您定义的框架／配置。
-   * **字段时间跟踪基准**:指定持续时间（以秒为单位），之后必须跟踪字段访问。 默认值为 0。当值大于0（零）时，将向Adobe Analytics服务器发送两个单独的跟踪事件。 第一个事件指示分析服务器停止跟踪退出的字段。 第二个事件在经过指定的持续时间后发送。 第二个事件指示分析服务器开始跟踪已访问字段。 使用两个单独的事件有助于准确测量在字段上花费的时间。 当值为0（零）时，单个跟踪事件将发送到Adobe Analytics服务器。
+   * **字段时间跟踪基准**:指定持续时间（以秒为单位），之后必须跟踪字段访问。 默认值为 0。当值大于0（零）时，将向Adobe Analytics服务器发送两个单独的跟踪事件。 第一事件指示分析服务器停止跟踪退出字段。 第二事件在经过指定的持续时间后发送。 第二事件指示分析服务器开始跟踪所访问字段。 使用两个单独的事件有助于准确测量在字段上花费的时间。 当值为0（零）时，单个跟踪事件将发送到Adobe Analytics服务器。
 
    * **分析报告同步cron**:指定从Adobe Analytics获取报告的cron表达式。 默认值是0 0 2 ?* *.
 
-   * **** 提取报告超时：指定等待服务器响应分析报告的持续时间（以秒为单位）。 默认时间为120秒。
+   * **提取报告超时：** 指定等待服务器响应分析报告的持续时间（以秒为单位）。 默认时间为120秒。
    >[!NOTE]
    >
    >超时报告提取操作和指定的秒数可能需要多达10秒的时间。
@@ -175,14 +175,14 @@ Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射�
 
 ## 为表单或文档启用分析 {#enabling-analytics-for-a-form-or-document}
 
-1. 登录到AEM门户，网址为 `https://[hostname]:[port]`。
-1. 单击 **表单>表单和文档**，选择表单或文档，然后单击启用 **分析**。 分析已启用。
+1. 登录到AEM门户，网址为 `https://[hostname]:'port'`。
+1. 单击 **表单>表单和文档**，选择表单或文档，然后单击启 **用分析**。 分析已启用。
 
    ![为表单或文档启用分析](assets/enable-analytics-1.png)
 
    为表单启用分析
 
-   ******答：“启用分析”按**&#x200B;钮B。所选表单
+   **答：** “启用分析”按 **钮B。** 所选表单
 
    有关查看表单分析报告的详细信息，请参阅查 [看和了解AEM表单分析报告](../../forms/using/view-understand-aem-forms-analytics-reports.md)
 
