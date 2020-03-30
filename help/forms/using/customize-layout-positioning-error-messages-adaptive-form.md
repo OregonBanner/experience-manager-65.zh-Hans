@@ -1,7 +1,7 @@
 ---
 title: 自定义自适应表单错误消息的布局和位置
 seo-title: 自定义自适应表单错误消息的布局和位置
-description: '您可以自定义自适应的错误消息的布局和位置。 '
+description: '您可以自定义自适应错误消息的布局和位置。 '
 seo-description: '您可以自定义自适应的错误消息的布局和位置。 '
 uuid: 6d3490f6-c867-44c9-a527-55f6d7221f99
 content-type: reference
@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 ### 自定义表单所有字段的布局 {#customize-layout-of-all-the-fields-of-a-form}
 
-使用AEM Forms，您现在可以创建主题并将其应用到表单。 通过主题编辑器，您可以在一个位置指定表单组件的样式。 创建主题时，可在组件级别指定样式。 有关主题的详细信息，请参 [阅AEM Forms中的主题](../../forms/using/themes.md)。
+使用AEM Forms，您现在可以创建主题并将其应用到表单。 通过主题编辑器，您可以在一个位置指定表单组件的样式。 创建主题时，可在组件级别指定样式。 有关主题的更多信息，请参阅AEM [表单中的主题](../../forms/using/themes.md)。
 
 使用主题编辑器创建主题以自定义表单中所有字段的布局。 在创建主题后，请执行以下步骤将其应用到表单：
 
@@ -50,7 +50,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 ## 创建自定义字段布局 {#create-a-custom-field-layout}
 
-1. 打开CRXDE lite。 默认URL为https://[Server]:[Port]/crx/de。
+1. 打开CRXDE lite。 默认URL为https://&#39;[server]:[port]&#39;/crx/de。
 1. 将字段布局从/libs/fd/af/layouts/field节点（例如，defaultFieldLayout）复制到/apps节点（例如，/apps/af-field-layout）。
 1. 重命名复制的节点和defaultFieldLayout.jsp文件。 例如，errorOnRight.jsp。
 
@@ -58,7 +58,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 1. 要添加新样式和行为，请在/etc节点中创建客户端库。
 
-   例如，在/etc/af-field-layout-clientlib位置，创建节点client-library。 添加具有af.field.errorOnRight值和style.less文件的categories属性，并包含以下代码：
+   例如，在/etc/af-field-layout-clientlib位置，创建节点client-library。 添加值为af.field.errorOnRight和style.less的类别属性，并使用以下代码：
 
    ```css
    .widgetErrorWrapper {
