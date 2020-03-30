@@ -1,6 +1,6 @@
 ---
-title: 创建使用HTTP令牌执行SSO身份验证的Flash builder应用程序
-seo-title: 创建使用HTTP令牌执行SSO身份验证的Flash builder应用程序
+title: 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序
+seo-title: 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序
 description: 'null'
 seo-description: 'null'
 uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序 {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
 
-您可以使用Flash builder创建客户端应用程序，该应用程序使用HTTP令牌执行单点登录(SSO)身份验证。 例如，假设您使用Flash builder创建基于Web的应用程序。 接下来假设应用程序包含不同的视图，其中每个视图调用不同的AEM Forms操作。 您可以创建一个登录页面，让用户进行一次身份验证，而不是对每个表单操作的用户进行身份验证。 一旦通过身份验证，用户便能够调用多个操作而无需再次进行身份验证。 例如，如果用户已登录Workspace（或其他Forms应用程序），则用户无需再次进行身份验证。
+您可以使用Flash Builder创建客户端应用程序，该应用程序使用HTTP令牌执行单点登录(SSO)身份验证。 例如，假设您使用Flash Builder创建基于Web的应用程序。 接下来假设应用程序包含不同的视图，其中每个视图调用不同的AEM Forms操作。 您可以创建一个登录页面，让用户进行一次身份验证，而不是对每个表单操作的用户进行身份验证。 一旦通过身份验证，用户便能够调用多个操作而无需再次进行身份验证。 例如，如果用户已登录Workspace（或其他Forms应用程序），则用户无需再次进行身份验证。
 
 尽管客户端应用程序包含执行SSO身份验证所需的应用程序逻辑，但AEM表单用户管理执行实际的用户身份验证。 要使用HTTP令牌对用户进行身份验证，客户端应用程序将调用Authentication Manager服务的操 `authenticateWithHTTPToken` 作。 用户管理可以使用HTTP令牌对用户进行身份验证。 对于对AEM Forms的后续远程处理或Web服务调用，您不必传递凭据进行身份验证。
 
@@ -33,7 +33,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >此过程不基于现有的AEM Forms流程。 要跟踪讨论如何调用此进程的代码示例，请使用工作台创建一个名 `MyApplication/EncryptDocument` 为的进程。 (请参 [阅使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。)
 
-使用Flash builder构建的客户端应用程序与在和中配置的用户管理器的安全servlet进行 `/um/login` 交互 `/um/logout`。 即，客户端应用程序在启动期间向 `/um/login` URL发送请求以确定用户的状态。 然后，用户管理器会响应用户状态。 客户端应用程序和用户管理器安全servlet使用HTTP进行通信。
+使用Flash Builder构建的客户端应用程序与在和中配置的用户管理器的安全servlet进行 `/um/login` 交互 `/um/logout`。 即，客户端应用程序在启动期间向 `/um/login` URL发送请求以确定用户的状态。 然后，用户管理器会响应用户状态。 客户端应用程序和用户管理器安全servlet使用HTTP进行通信。
 
 **请求格式**
 
@@ -66,7 +66,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **登录过程**
 
-当客户端应用程序启动时，可向安全servlet发出POST `/um/login` 请求。 For example, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. 当请求到达User Manager安全servlet时，它将执行以下步骤：
+当客户端应用程序开始时，您可以向安全servlet发出POST `/um/login` 请求。 For example, `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`. 当请求到达User Manager安全servlet时，它将执行以下步骤：
 
 1. 它查找名为的Cookie `lcAuthToken`。 如果用户已登录到其他Forms应用程序，则此Cookie存在。 如果找到cookie，则验证其内容。
 1. 如果启用了基于Header的SSO，则Servlet会查找已配置的标题以确定用户的标识。
@@ -89,7 +89,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 `https://<your_serverhost>:<your_port>/um/logout?um_no_redirect=true`
 
-收到此请求后，User Manager安全servlet将删除 `lcAuthToken` cookie并作出响应 `authstate=LOGGED_OUT`。 客户端应用程序收到此值后，应用程序可以执行清除任务。
+收到此请求后，User Manager安全servlet将删除 `lcAuthToken` cookie并作出响应 `authstate=LOGGED_OUT`。 客户端应用程序收到此值后，该应用程序可以执行清理任务。
 
 ## 创建客户端应用程序，该应用程序使用SSO验证AEM表单用户的身份 {#creating-a-client-application-that-authenticates-aem-forms-users-using-sso}
 
@@ -97,12 +97,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![cf_cf_flexsso](assets/cf_cf_flexsso.png)
 
-上图描述了客户端应用程序启动时发生的应用程序流。
+上图描述了在客户端应用程序开始时发生的应用程序流。
 
 1. 客户端应用程序触发 `applicationComplete` 事件。
 1. 发出呼 `ISSOManager.singleSignOn` 叫。 客户端应用程序向用户管理器安全servlet发送请求。
 1. 如果安全servlet对用户进行身份验证，则 `ISSOManager` 调度 `SSOEvent.AUTHENTICATION_SUCCESS`。 作为响应，客户端应用程序显示主页。 在此示例中，主页调用名为MyApplication/EncryptDocument的AEM Forms短期进程。
-1. 如果安全servlet无法确定用户是否有效，则应用程序会再次请求用户凭据。 该 `ISSOManager` 类调度事 `SSOEvent.AUTHENTICATION_REQUIRED` 件。 客户端应用程序显示登录页面。
+1. 如果安全servlet无法确定用户是否有效，则应用程序会再次请求用户凭据。 课 `ISSOManager` 程分派 `SSOEvent.AUTHENTICATION_REQUIRED` 事件。 客户端应用程序显示登录页面。
 1. 登录页面中提供的凭据将发送到该方 `ISSOManager.login` 法。 如果身份验证成功，则会导致步骤3。 否则， `SSOEvent.AUTHENTICATION_FAILED` 将触发事件。 客户端应用程序显示登录页面和相应的错误消息。
 
 ### 创建客户端应用程序 {#creating-the-client-application}
@@ -117,7 +117,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * `views/login.mxml`:表示登录屏幕。 (请参 [阅创建login.mxml文件](creating-flash-builder-applications-perform.md#creating-the-login-mxml-file)。)
 * `views/logout.mxml`:表示注销屏幕。 (请参 [阅创建logout.mxml文件](creating-flash-builder-applications-perform.md#creating-the-logout-mxml-file)。)
 * `views/progress.mxml`:表示进度视图。 (请参 [阅创建progress.mxml文件](creating-flash-builder-applications-perform.md#creating-the-progress-mxml-file)。)
-* `views/remoting.mxml`:表示使用远程处理调用名为MyApplication/EncryptDocument的AEM Forms短期进程的视图。 (请参 [阅创建remoting.mxml文件](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)。)
+* `views/remoting.mxml`:表示使用远程处理调用名为MyApplication/EncryptDocument的AEM Forms短时进程的视图。 (请参 [阅创建remoting.mxml文件](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)。)
 
 下图提供了客户端应用程序的可视表示形式。
 
@@ -125,7 +125,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->请注意，有两个名为um和view的包。 创建客户端应用程序时，请确保将文件放入其正确的包中。 另外，请确保将adobe-remoting-provider.swc文件添加到项目的类路径中。 (请参 [阅包括AEM Forms flex库文件](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)。)
+>请注意，有两个名为um和视图的包。 创建客户端应用程序时，请确保将文件放入其正确的包中。 另外，请确保将adobe-remoting-provider.swc文件添加到项目的类路径中。 (请参 [阅包括AEM Forms Flex库文件](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)。)
 
 ### 创建SSOStandalone.mxml文件 {#creating-the-ssostandalone-mxml-file}
 
@@ -667,7 +667,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 创建remoting.mxml文件 {#creating-the-remoting-mxml-file}
 
-以下代码表示调用该进程的remoting.mxml文 `MyApplication/EncryptDocument` 件。 由于文档被传递到该进程，因此负责将安全文档传递到AEM Forms的应用程序逻辑位于此文件中。 (请参阅 [使用远程处理传递安全文档以调用进程](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。)
+以下代码表示调用该进程的remoting.mxml文 `MyApplication/EncryptDocument` 件。 由于文档被传递到进程，因此负责将安全文档传递到AEM Forms的应用程序逻辑位于此文件中。 (请参阅 [传递安全文档以使用远程处理调用进程](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。)
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?>
@@ -697,8 +697,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
              private var fileRef:FileReference = new FileReference();
              private var docRef:DocumentReference = new DocumentReference();
              private var parentResourcePath:String = "/";
-             //private var serverPort:String = "[server]:[port]";
-             private var serverPort:String = "[server]:[port]";
+             //private var serverPort:String = "'[server]:[port]'";
+             private var serverPort:String = "'[server]:[port]'";
              private var now1:Date;
              private var userManager:UserManager;
  
@@ -869,7 +869,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 发生新的身份验证 {#a-new-authentication-occurs}
 
-在这种情况下，用户将首次尝试从客户端应用程序登录到AEM Forms。 （不存在与用户相关的先前会话。）在该事 `applicationComplete` 件中，将调 `SSOManager.singleSignOn` 用向用户管理器发送请求的方法。
+在这种情况下，用户将首次尝试从客户端应用程序登录到AEM Forms。 （不存在与用户相关的先前会话。）在事件 `applicationComplete` 中，将调 `SSOManager.singleSignOn` 用向用户管理器发送请求的方法。
 
 `GET /um/login?um%5Fno%5Fredirect=true HTTP/1.1`
 
