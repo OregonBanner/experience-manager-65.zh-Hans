@@ -10,18 +10,18 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 translation-type: tm+mt
-source-git-commit: 215ba1cb3e98954418b844849c812c9ba6cf572b
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 全局文档存储目录{#global-document-storage-directory}
 
-全 *局文档存储(GDS)* (Global Document Storage, GDS)目录是用于存储进程中使用的长寿命文件的目录。 这些文件包括PDF、策略和表单模板。 长期使用的文件是许多AEM表单部署的整体状态的关键部分。 如果某些或所有长期文档丢失或损坏，表单服务器可能会变得不稳定。 异步作业调用的输入文档也存储在GDS目录中，并且必须可用于处理请求。 务必考虑承载GDS目录的文件系统的可靠性。 根据您的服务质量和服务级别需要，使用独立磁盘冗余阵列(RAID)或其他技术。
+全 *局文档存储(GDS)* (global Compation Sicore, GDS)目录是用于存储进程中使用的长寿命文件的目录。 这些文件包括PDF、策略和表单模板。 长期使用的文件是许多AEM表单部署的整体状态的关键部分。 如果某些或所有长期文档丢失或损坏，表单服务器可能会变得不稳定。 异步作业调用的输入文档也存储在GDS目录中，必须可用于处理请求。 务必考虑承载GDS目录的文件系统的可靠性。 根据您的服务质量和服务级别需要，使用独立磁盘冗余阵列(RAID)或其他技术。
 
 长期使用的文件可能包含敏感的用户信息。 当通过使用AEM表单API或用户界面访问此信息时，可能需要特殊凭据。 通过操作系统正确保护GDS目录非常重要。 只有用于运行应用程序服务器的管理员帐户才应具有对GDS目录的读／写访问权限。
 
-除了为GDS选择安全、高度可用的目录外，您还可以选择在数据库中启用文档存储。 请注意，即使将AEM表单数据库用于文档存储，AEM表单仍需要GDS目录。 (请参 [阅将数据库用于文档存储时的备份选项](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。)
+除了为GDS选择安全、高度可用的目录外，您还可以选择在数据库中启用文档存储。 请注意，即使将AEM表单数据库用于文档存储,AEM表单仍需要GDS目录。 (请参 [阅使用数据库进行文档存储时的备份选项](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。)
 
 AEM表单应用程序数据驻留在GDS目录和AEM表单数据库中。 下表介绍了数据及其位置。
 
@@ -35,7 +35,7 @@ AEM表单应用程序数据驻留在GDS目录和AEM表单数据库中。 下表�
  </thead>
  <tbody>
   <tr>
-   <td><p>应用程序数据（用户、角色、进程、策略、端点、事件等）。</p></td>
+   <td><p>应用程序数据(用户、角色、进程、策略、端点、事件等)。</p></td>
    <td><p>是</p></td>
    <td><p>否</p></td>
   </tr>
@@ -45,7 +45,7 @@ AEM表单应用程序数据驻留在GDS目录和AEM表单数据库中。 下表�
    <td><p>否</p></td>
   </tr>
   <tr>
-   <td><p>文档管理器 </p></td>
+   <td><p>文档经理 </p></td>
    <td><p>否</p></td>
    <td><p>是</p></td>
   </tr>
@@ -72,8 +72,8 @@ AEM表单应用程序数据驻留在GDS目录和AEM表单数据库中。 下表�
 在AEM表单安装过程中，可以手动配置GDS目录的位置。 如果安装过程中位置设置保持为空，则位置默认为应用程序服务器安装下的目录，如下所示：
 
 * (JBoss) `[appserver root]/server/[type]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/[server]/adobe/DocumentServer/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
+* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 ## 更改默认GDS位置 {#change-the-default-gds-location}
 
