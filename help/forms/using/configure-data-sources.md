@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43780682ba27d9c7d578393df04267ed8be4f1de
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,19 +20,19 @@ source-git-commit: 43780682ba27d9c7d578393df04267ed8be4f1de
 
 AEM Forms Data Integration允许您配置并连接到不同的数据源。 现成支持以下类型。 但是，由于很少进行自定义，您还可以集成其他数据源。
 
-* 关系数据库- mySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
-* AEM用户配置文件
-* RESTful web服务
+* 关系数据库- MySQL、Microsoft SQL Server、IBM DB2和Oracle RDBMS。
+* AEM用户用户档案
+* RESTful Web服务
 * 基于SOAP的Web服务
 * OData服务
 
-数据集成支持OAuth2.0、基本身份验证和API密钥现成身份验证类型，并允许为访问Web服务实施自定义身份验证。 在AEM Cloud services中配置RESTful、基于SOAP和OData服务时，在AEM web控制台中配置关系数据库的JDBC和AEM用户配置文件的连接器。
+数据集成支持OAuth2.0、基本身份验证和API密钥现成身份验证类型，并允许为访问Web服务实施自定义身份验证。 在AEM Cloud Services中配置RESTful、基于SOAP和OData服务时，在AEM Web控制台中配置关系数据库的JDBC和AEM用户用户档案的连接器。
 
 ## 配置关系数据库 {#configure-relational-database}
 
 您可以使用AEM Web Console配置配置关系型数据库。 执行以下操作：
 
-1. 转到位于https://[server]:[host]/system/console/configMgr的AEM web控制台。
+1. 转到AEM Web控制台，网址为https://server:host/system/console/configMgr。
 1. 查找 **[!UICONTROL Apache Sling Connection池化DataSource配置]** 。 点按以在编辑模式下打开配置。
 1. 在配置对话框中，指定要配置的数据库的详细信息，如：
 
@@ -47,7 +47,7 @@ AEM Forms Data Integration允许您配置并连接到不同的数据源。 现�
    >
    >    
    >    
-   >    1. 转到https://[server]:[port]/system/console/crypto。
+   >    1. 转到https://&#39;[server]:[port]&#39;/system/console/crypto。
    >    1. 在纯文 **[!UICONTROL 本字段中]** ，指定要加密的口令或任何字符串，然后单击 **[!UICONTROL 保护]**。
    >    
    >    
@@ -55,20 +55,20 @@ AEM Forms Data Integration允许您配置并连接到不同的数据源。 现�
    >加密的文本将显示在可在配置中指定的“受保护文本”字段中。
 
 1. 启 **[!UICONTROL 用“借阅时测试]** ”或“退回时测试” **** ，以指定在从池借阅对象或从池返回对象之前，将验证这些对象。
-1. 在“验证查询”字段中指定SQL SELECT **[!UICONTROL 查询]** ，以验证池中的连接。 查询必须至少返回一行。 根据您的数据库，指定以下任一选项：
+1. 在验证查询字段中指定SQL SELECT **[!UICONTROL 查询]** ，以验证池中的连接。 查询必须至少返回一行。 根据您的数据库，指定以下任一选项：
 
    * 选择1（MySQL和MS SQL）
    * SELECT 1（来自Oracle）
 
 1. 点按 **[!UICONTROL 保存]** ，以保存配置。
 
-## 配置AEM用户配置文件 {#configure-aem-user-profile}
+## 配置AEM用户用户档案 {#configure-aem-user-profile}
 
-您可以使用AEM Web Console中的用户配置文件连接器配置来配置AEM用户配置文件。 执行以下操作：
+您可以使用AEM Web Console中的用户用户档案连接器配置来配置AEM用户用户档案。 执行以下操作：
 
-1. 转到位于https://[server]:[host]/system/console/configMgr的AEM web控制台。
-1. 查找 **[!UICONTROL AEM Forms数据集成——用户配置文件连接器配置]** ，然后点按以在编辑模式下打开配置。
-1. 在“用户配置文件连接器配置”对话框中，可以添加、删除或更新用户配置文件属性。 指定的属性将可用于表单数据模型中。 使用以下格式指定用户配置文件属性：
+1. 转到位于https://&#39;[server]:[port]&#39;system/console/configMgr的AEM Web控制台。
+1. 查找 **[!UICONTROL AEM Forms数据集成——用户用户档案连接器配置]** ，然后点按以在编辑模式下打开配置。
+1. 在“用户用户档案连接器配置”对话框中，可以添加、删除或更新用户用户档案属性。 指定的属性将可用于表单数据模型中。 使用以下格式指定用户用户档案属性：
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
 
@@ -78,7 +78,7 @@ AEM Forms Data Integration允许您配置并连接到不同的数据源。 现�
    * `name=profile/empLocation/*/city,type=string`
    >[!NOTE] {graybox=&quot;true&quot;}
    >
-   >上例 **中的*** ，表示CRXDE结构中AEM用户配置 `profile/empLocation/` 文件中节点下的所有节点。 这意味着表单数据模型可以访问节点下 `city` 任何节点中 `string` 存在的类型属 `profile/empLocation/` 性。 但是，包含指定属性的节点必须遵循一致的结构。
+   >上例 **中的*** ，表示CRXDE结构中AEM用户用户档案中 `profile/empLocation/` 节点下的所有节点。 这意味着表单数据模型可以访问节点下 `city` 任何节点中 `string` 存在的类型属 `profile/empLocation/` 性。 但是，包含指定属性的节点必须遵循一致的结构。
 
 1. 点按 **[!UICONTROL 保存]** ，以保存配置。
 
@@ -103,9 +103,9 @@ AEM中的所有云服务配置都整合在AEM存储库 `/conf` 的文件夹中�
 1. 在创建 **[!UICONTROL 配置对话框中]** ，指定文件夹的标题并启用 **[!UICONTROL 云配置]**。
 1. 点按 **[!UICONTROL 创建]** ，以创建为云服务配置启用的文件夹。
 
-## 配置RESTful web服务 {#configure-restful-web-services}
+## 配置RESTful Web服务 {#configure-restful-web-services}
 
-RESTful web服务可在Swagger定义文件中使 [用JSON格式的Swagger规范](https://swagger.io/specification/) 或YAML格式进行描述。 要在AEM云服务中配置RESTful web服务，请确保您的文件系统中有Swagger文件或文件托管的URL。
+RESTful Web服务可在Swagger定义文件中使 [用JSON格式的Swagger规范](https://swagger.io/specification/) 或YAML格式进行描述。 要在AEM云服务中配置RESTful Web服务，请确保您的文件系统中有Swagger文件或文件托管的URL。
 
 执行以下操作以配置RESTful服务：
 
@@ -119,16 +119,16 @@ RESTful web服务可在Swagger定义文件中使 [用JSON格式的Swagger规范]
    * 从“Swagger源”下拉菜单中选择“URL”或“文件”，然后相应地将Swagger URL指定到Swagger定义文件，或从本地文件系统上传Swagger文件。
    * 根据Swagger源输入，以下字段预填充了值：
 
-      * 方案：REST API使用的传输协议。 下拉列表中显示的方案类型数量取决于Swagger源中定义的方案。
+      * 方案：REST API使用的传输协议。 在下拉列表中显示的方案类型数取决于在Swagger源中定义的方案。
       * 主持人：提供REST API的主机的域名或IP地址。 这是必填字段。
       * 基本路径：所有API路径的URL前缀。 它是一个可选字段。\
          如有必要，请编辑这些字段的预填充值。
    * 选择身份验证类型— 无、OAuth2.0、基本身份验证、API密钥或自定义身份验证— 访问RESTful服务，并相应地提供身份验证详细信息。
-   如果选择 **[!UICONTROL API密钥]** ，则指定API密钥的值。 API密钥可以作为请求头或查询参数发送。 从“位置”( **[!UICONTROL Location]** )下拉列表中选择这些选项之一，并相应地在“参数名称”( **[!UICONTROL Parameter Name)字段中指定标题或查询参数]** 的名称。
+   如果选择 **[!UICONTROL API密钥]** ，则指定API密钥的值。 API密钥可以作为请求头或查询参数发送。 从“位置”下拉列表中选择 **[!UICONTROL 其中一个选项]** ，并相应地在“参数名称”字段中指定标题的名称或 **[!UICONTROL 查询参数]** 。
 
 1. 点 **[!UICONTROL 击创建]** ，以创建RESTful服务的云配置。
 
-## 配置SOAP web服务 {#configure-soap-web-services}
+## 配置SOAP Web服务 {#configure-soap-web-services}
 
 使用Web服务描述语言(WSDL)规范描述基于SOAP [的Web服务](https://www.w3.org/TR/wsdl)。 要在AEM云服务中配置基于SOAP的Web服务，请确保您拥有Web服务的WSDL URL，并执行以下操作：
 
@@ -137,13 +137,13 @@ RESTful web服务可在Swagger定义文件中使 [用JSON格式的Swagger规范]
    有关 [为云服务配置创建和配置文件夹的信息](../../forms/using/configure-data-sources.md#cloud-folder) ，请参阅为云服务配置配置配置文件夹。
 
 1. 点按 **[!UICONTROL 创建]** ，打开创 **[!UICONTROL 建数据源配置向导]**。 指定配置的名称和标题（可选），从“服务类型”下拉菜单中选择 **[!UICONTROL SOAP Web Service]** ，选择浏览并选择配置的缩略图，然后点按“下 **[!UICONTROL 一步]******”。
-1. 为SOAP web服务指定以下内容：
+1. 为SOAP Web服务指定以下内容：
 
    * Web服务的WSDL URL。
    * 服务端点. 在此字段中指定一个值以覆盖WSDL中提到的服务端点。
    * 选择身份验证类型— 无、OAuth2.0、基本身份验证或自定义身份验证— 访问SOAP服务，并相应地提供身份验证的详细信息。
 
-1. 点 **[!UICONTROL 击创建]** ，以创建SOAP web服务的云配置。
+1. 点 **[!UICONTROL 击创建]** ，以创建SOAP Web服务的云配置。
 
 ## 配置OData服务 {#config-odata}
 
