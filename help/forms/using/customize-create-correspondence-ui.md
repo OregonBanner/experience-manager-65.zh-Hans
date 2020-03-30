@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -51,7 +51,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 使用以下步骤在/apps分支中创建所需的文件夹结构：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在apps文件夹中，创建一个名为的文件夹， `css` 其路径／结构与css文件夹（位于ccrui文件夹中）类似。
 
    创建css文件夹的步骤：
@@ -62,11 +62,11 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
+      **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **** 叠加位置：/apps/
+      **叠加位置：** /apps/
 
-      **** 匹配节点类型：已选中
+      **匹配节点类型：** 已选中
 
       ![叠加节点路径](assets/0_1_5ioverlaynodedialog.png)
 
@@ -90,11 +90,11 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
    1. 右键单击以下路 **径的** “图像”文件夹，然后选择“ **叠加节点”**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
+      **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-      **** 叠加位置：/apps/
+      **叠加位置：** /apps/
 
-      **** 匹配节点类型：已选中
+      **匹配节点类型：** 已选中
 
    1. 单击&#x200B;**确定**。
 
@@ -110,11 +110,11 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 * 标志图像的默认尺寸为48 px * 48 px。 确保图像与此大小相似或大于48 px * 48 px。
 * 如果徽标图像的高度大于50 px，则“创建对应”用户界面会将图像缩小到最大50 px的高度，因为这是标题的高度。 缩小图像时，“创建对应”用户界面会保持图像的长宽比。
-* 如果图像很小，则“创建对应用户界面”不会放大图像，因此，请确保您使用的徽标图像高度至少为48像素，并且宽度足够清晰。
+* 如果图像很小，则“创建对应用户界面”不会放大图像，因此，请确保您使用的徽标图像的高度至少为48像素，并且宽度足够清晰。
 
 使用以下步骤将自定义徽标文件上传到CRX:
 
-1. 转到 `https://[server]:[port]/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
+1. 转到 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
 1. 在CRXDE中，右键单击以下路径的 **imgs** 文件夹，然后选择“创 **建”>“创建文件”**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
@@ -135,11 +135,11 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. 双击 **jcr:data属性** 。
+1. 多次-单击 **jcr:data属性** 。
 
    将出现“编辑jcr:data”对话框。
 
-   现在，单击newlogo.png文件夹，双击jcr:content（dim选项）并设置类型nt:resource。 如果不存在，请创建名为jcr:content的属性。
+   现在，单击newlogo.png文件夹，多次单击jcr:content（dim选项）并设置类型nt:resource。 如果不存在，请创建名为jcr:content的属性。
 
 1. 在“编辑jcr:data”对话框中，单击“浏 **览** ”，然后选择要用作标志的图像文件（此处为CustomLogo.png）。
 
@@ -157,7 +157,7 @@ source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
 
 使用以下步骤设置用于渲染标志的样式表：
 
-1. 转到 `https://[server]:[port]/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
+1. 转到 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
 1. 在以下位置创建一个名为customcss.css的文件（您不能使用其他文件名）:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css/`
