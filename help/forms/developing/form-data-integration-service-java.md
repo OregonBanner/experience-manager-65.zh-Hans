@@ -1,6 +1,6 @@
 ---
-title: 表单数据集成服务JavaAPI快速入门(SOAP)
-seo-title: 表单数据集成服务JavaAPI快速入门(SOAP)
+title: 表单数据集成服务JavaAPI快速开始(SOAP)
+seo-title: 表单数据集成服务JavaAPI快速开始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
@@ -10,24 +10,24 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 表单数据集成服务Java API快速入门(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
+# 表单数据集成服务Java API快速开始(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
-表单数据集成服务提供以下快速入门。
+以下快速开始可用于表单数据集成服务。
 
-[快速入门（SOAP模式）:使用Java API导入表单数据](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API导入表单数据](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API导出表单数据](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API导出表单数据](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-***注意&#x200B;**:使用AEM表单进行编程中的“快速入门”基于JBoss Application server和Microsoft windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:使用AEM表单进行编程中的快速开始基于JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
-## 快速入门（SOAP模式）:使用Java API导入表单数据 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API导入表单数据 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
 以下Java代码示例将数据导入PDF表单。 数据位于名为 *Loan_data.xml的XML文件中* ,PDF表单将另存为名为 *ResultLoanForm.pdf的PDF文件*。 (请参阅 [导入表单数据](/help/forms/developing/importing-exporting-data.md#importing-form-data)。)
 
@@ -94,7 +94,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -129,7 +129,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API导出表单数据 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API导出表单数据 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
 以下Java代码示例从PDF表单中导出数据。 表单数据将保存为名为 *Loan_data.xml的XML文件*。 (请参阅 [导出表单数据](/help/forms/developing/importing-exporting-data.md#exporting-form-data)。)
 
@@ -196,7 +196,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
      try{
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
