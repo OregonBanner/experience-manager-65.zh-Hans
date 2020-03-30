@@ -1,8 +1,8 @@
 ---
 title: 配置自适应表单缓存
 seo-title: 配置自适应表单缓存
-description: '自适应表单高速缓存专门设计用于自适应表单和文档。 它高速缓存自适应表单和自适应文档，以减少在客户端上呈现自适应表单或文档所需的时间。 '
-seo-description: '自适应表单高速缓存专门设计用于自适应表单和文档。 它高速缓存自适应表单和自适应文档，以减少在客户端上呈现自适应表单或文档所需的时间。 '
+description: '自适应表单缓存专门设计用于自适应表单和文档。 它缓存自适应表单和自适应文档，以减少在客户端上呈现自适应表单或文档所需的时间。 '
+seo-description: '自适应表单缓存专门设计用于自适应表单和文档。 它缓存自适应表单和自适应文档，以减少在客户端上呈现自适应表单或文档所需的时间。 '
 uuid: ba8f79fd-d8dc-4863-bc0d-7c642c45505c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,14 +25,14 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 >[!NOTE]
 >
->在开发自定义组件时，在用于开发的服务器上，保持自适应表单缓存被禁用。
+>在开发自定义组件时，在用于开发的服务器上，保持自适应表单缓存处于禁用状态。
 
 ## 配置缓存 {#configure-the-cache}
 
 请执行以下步骤以配置自适应表单缓存：
 
-1. 转到位于https://[server]:[port]/system/console/configMgr的AEM web控制台配置管理器。
-1. 单击“ **自适应表单和交互式通信Web通道配置** ”以编辑其配置值。
+1. 转到位于https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM Web控制台配置管理器。
+1. 单击“ **自适应表单和交互通信Web渠道配置** ”以编辑其配置值。
 1. 在编辑配置值对话框中，在自适应表单数字字段中指定AEM Forms服务器实例可以缓存的最大表 **单或文档数** 。 默认值为 100。
 
    >[!NOTE]
