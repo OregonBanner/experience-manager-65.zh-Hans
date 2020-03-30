@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -107,7 +107,7 @@ source-git-commit: 92a64c8a1ba38f592d18355b8233cb79a2575301
 * 在原始自适应表单上配置的提交操作将保留在嵌入式表单中。
 * 自适应表单规则在嵌入的表单中保留并完全可用。
 * 在原始自适应表单中配置的体验定位和A/B测试在嵌入式表单中不起作用。
-* 如果在原始表单上配置了Adobe Analytics，则Adobe Analytics服务器会捕获分析数据。 但是，表单分析报告中不提供此功能。
+* 如果在原始表单上配置了Adobe Analytics，则Adobe Analytics服务器会捕获分析数据。 但是，表单分析报告中不提供该功能。
 
 ## 示例拓扑 {#sample-topology}
 
@@ -154,15 +154,15 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 在网页中嵌入自适应表单时，请考虑以下最佳实践：
 
-* 确保网页CSS中定义的样式规则与表单对象CSS不冲突。 要避免冲突，您可以使用AEM客户端库在自适应表单主题中重用网页CSS。 有关在自适应表单主题中使用客户端库的信息，请参 [阅AEM Forms中的主题](../../forms/using/themes.md)。
-* 使网页中的表单容器使用整个窗口宽度。 它确保为移动设备配置的CSS规则工作而无需任何更改。 如果表单容器不占用整个窗口宽度，您需要编写自定义CSS以使表单适应不同的移动设备。
+* 确保网页CSS中定义的样式规则与表单对象CSS不冲突。 要避免冲突，您可以使用AEM客户端库在自适应表单主题中重用网页CSS。 有关在自适应表单主题中使用客户端库的信息，请参阅AEM [表单中的主题](../../forms/using/themes.md)。
+* 使网页中的表单容器使用整个窗口宽度。 它确保为移动设备配置的CSS规则工作而无需任何更改。 如果表单容器不采用整个窗口宽度，您需要编写自定义CSS以使表单适应不同的移动设备。
 * 使 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用API在客户端获取表单数据的XML或JSON表示形式。
 * 使 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用API从HTML DOM卸载自适应表单。
-* 从AEM服务器发送响应时设置访问控制源头。
+* 从AEM服务器发送响应时设置访问控制来源头。
 
 ## 使AEM Forms能够向跨域站点提供自适应表单 {#cross-site}
 
-1. 在AEM作者实例上，转到AEM Web Console Configuration Manager（位于） `https://[server]:[port]/system/console/configMgr`。
-1. 找到并打开 **Apache Sling Referrer过滤器配置** 。
-1. 在“允许的主机”字段中，指定网页所在的域。 它使主机能够向AEM服务器发出POST请求。 您还可以使用正则表达式指定一系列外部应用程序域。
+1. 在AEM作者实例上，转到AEM Web Console Configuration Manager（位于） `https://'[server]:[port]'/system/console/configMgr`。
+1. 找到并打开 **Apache Sling推荐人过滤器配置** 。
+1. 在“允许的主机”字段中，指定网页所在的域。 它使主机能够向AEM服务器发出POST请求。 您还可以使用常规表达式指定一系列外部应用程序域。
 
