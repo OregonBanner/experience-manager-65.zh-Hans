@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,40 +18,40 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 了解如何管理用户帐户和服务，尽管这些帐户和服务在私人开发环境中是必需的，但在JEE上的AEM Forms的生产环境中却不是必需的。
 
-通常，开发人员不使用生产环境构建和测试其应用程序。 因此，您必须管理用户帐户和服务，尽管在专用开发环境中是必需的，但在生产环境中却不是必需的。
+通常，开发人员不使用生产环境构建和测试其应用程序。 因此，您必须管理用户帐户和服务，尽管在私有开发环境中是必需的，但在生产环境中却不是必需的。
 
 本文介绍了通过JEE上的AEM Forms提供的管理选项来减少整个攻击面的方法。
 
 ## 禁用对服务的非基本远程访问 {#disabling-non-essential-remote-access-to-services}
 
-在JEE上安装和配置AEM表单后，许多服务都可通过SOAP和Enterprise javaBeans™(EJB)进行远程调用。在本例中，术语“remote”是指对应用程序服务器的SOAP、EJB或操作消息格式(AMF)端口具有网络访问权限的任何调用者。
+在JEE上安装和配置AEM表单后，许多服务都可通过SOAP和Enterprise JavaBeans™(EJB)进行远程调用。在本例中，术语“remote”是指对应用程序服务器的SOAP、EJB或操作消息格式(AMF)端口具有网络访问权限的任何调用者。
 
 尽管JEE服务上的AEM表单需要为授权调用者传递有效凭据，但您应仅允许远程访问需要远程访问的服务。 为了实现有限的辅助功能，您应将远程访问服务集减少到功能系统所能达到的最低限度，然后为需要的其他服务启用远程调用。
 
-JEE服务上的AEM表单始终至少需要SOAP访问。 这些服务通常由Workbench使用，但也包括由Workspace web应用程序调用的服务。
+JEE服务上的AEM表单始终至少需要SOAP访问。 这些服务通常由Workbench使用，但也包括由Workspace Web应用程序调用的服务。
 
 使用管理控制台中的“应用程序和服务”网页完成此过程：
 
 1. 在Web浏览器中键入以下URL，以登录到管理控制台：
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. 单击“ **服务”>“应用程序和服务”>“首选项”**。
-1. 设置“首选项”可在同一页面上查看多达200个服务和端点。
+1. 将“首选项”设置为在同一页面上视图最多200个服务和端点。
 1. 单击“ **服务** ”>“应 **用程序和服务** ” **>“端**&#x200B;点管理”。
-1. 从“提 **供者** ”列表中选择 **EJB** ，然后单击“过 **滤器”**。
+1. 从提 **供者列表** 中选择 **EJB** ，然后单击“过 **滤器”**。
 1. 要禁用所有EJB端点，请选中列表中每个端点旁边的复选框，然后单击“禁 **用”**。
 1. 单击 **下一步** ，然后为所有EJB端点重复上一步。 在禁用端点之前，请确保EJB列在“提供者”列中。
-1. 从“ **提供者** ”列表中选 **择SOAP** ，然后单击“ **过滤器**”。
+1. 从提 **供者列表** 中选择 **SOAP** ，然后单击“过 **滤器”**。
 1. 要删除SOAP端点，请选中列表中每个端点旁边的复选框，然后单击“删 **除”**。 请勿删除以下端点：
 
    * AuthenticationManagerService
    * DirectoryManagerService
    * JobManager
-   * event_management_service
-   * event_configuration_service
+   * 事件管理服务
+   * 事件配置服务
    * ProcessManager
    * TemplateManager
    * RepositoryService
@@ -61,7 +61,7 @@ JEE服务上的AEM表单始终至少需要SOAP访问。 这些服务通常由Wor
    * 工作区单点登录
    * ApplicationManager
 
-1. 单击 **下一步** ，然后对上面列表中不存在的SOAP端点重复上一步。 在删除端点之前，请确保SOAP列在“提供者”列中。
+1. 单 **击“下一步** ”，然后为不在上述列表中的SOAP端点重复上一步。 在删除端点之前，请确保SOAP列在“提供者”列中。
 
 ## 禁用对服务的非必要匿名访问 {#disabling-non-essential-anonymous-access-to-services}
 
@@ -70,7 +70,7 @@ JEE服务上的AEM表单始终至少需要SOAP访问。 这些服务通常由Wor
 1. 在Web浏览器中键入以下URL，登录到管理控制台：
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. 单击“ **服务”>“应用程序和服务”>“服务管理”**。
@@ -105,14 +105,14 @@ JEE服务上的AEM表单始终至少需要SOAP访问。 这些服务通常由Wor
 
 ## 更改默认全局超时 {#changing-the-default-global-time-out}
 
-最终用户可以通过Workbench、AEM Forms web应用程序或调用AEM Forms服务器服务的自定义应用程序验证到AEM Forms。 一个全局超时设置用于指定此类用户在被迫重新验证之前可以与AEM表单交互（使用基于SAML的断言）的时间。 默认设置为两小时。 在生产环境中，需要将时间减少到可接受的最小分钟数。
+最终用户可以通过Workbench、AEM Forms Web应用程序或调用AEM Forms服务器服务的自定义应用程序验证到AEM Forms。 一个全局超时设置用于指定此类用户在被迫重新验证之前可以与AEM表单交互（使用基于SAML的断言）的时间。 默认设置为两小时。 在生产环境中，时间量需要减少到可接受的最小分钟数。
 
 ### 将重新验证时间限制降至最低 {#minimize-reauthentication-time-limit}
 
 1. 在Web浏览器中键入以下URL，登录到管理控制台：
 
    ```as3
-            https://[host name]:[port]/adminui
+            https://[host name]:'port'/adminui
    ```
 
 1. 单击 **设置>用户管理>配置>导入和导出配置文件**。
