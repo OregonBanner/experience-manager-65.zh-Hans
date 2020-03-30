@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -31,15 +31,15 @@ GDS是一个目录，用于存储进程中使用的长期文件。 长期文件�
 
 异步作业调用的输入文档也存储在GDS中，并且必须可用于处理请求。 因此，务必考虑承载GDS并采用独立磁盘冗余阵列(RAID)或其他技术的文件系统的可靠性，以满足您的质量和服务级别要求。
 
-GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制台确定的。 除了为GDS保留高可用性位置外，您还可以为文档启用数据库存储。 请参 [阅将数据库用于文档存储时的备份选项](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。
+GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制台确定的。 除了为GDS保留高可用性位置，您还可以为文档启用数据库存储。 请参 [阅使用数据库进行文档存储时的备份选项](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)。
 
 ### GDS位置 {#gds-location}
 
 如果在安装过程中将位置设置留空，则位置默认为应用程序服务器安装下的目录。 必须备份应用程序服务器的以下目录：
 
-* (JBoss) `[appserver root]/server/[server]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/[server]/DocumentStorage`
+* (JBoss) `[appserver root]/server/'server'/svcnative/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage`
+* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 如果将GDS位置更改为非默认位置，则可以按如下方式确定它：
 
@@ -50,7 +50,7 @@ GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制�
 
 如果原始位置不再可用，则GDS的位置可以在恢复期间被更改。 (请参 [阅在恢复过程中更改GDS位置](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)。)
 
-### 将数据库用于文档存储时的备份选项 {#backup-options-when-database-is-used-for-document-storage}
+### 数据库用于文档存储时的备份选项 {#backup-options-when-database-is-used-for-document-storage}
 
 您可以使用管理控制台在AEM表单数据库中启用AEM表单文档存储。 即使此选项将所有永久文档保留在数据库中，AEM表单仍需要基于文件系统的GDS目录，因为它用于存储与AEM表单的会话和调用相关的永久和临时文件和资源。
 
@@ -62,7 +62,7 @@ GDS的位置是在AEM表单安装过程中或更高版本中使用管理控制�
 
 ### 通信管理解决方案 {#correspondence-management-solution}
 
-通信管理解决方案集中化和管理安全、个性化和交互式通信的创建、组装和交付。 它使您能够通过从创建到存档的简化流程，从预先批准的内容到自定义创作的内容，快速组合对应内容。 因此，您的客户可以获得及时、准确、便捷、安全和相关的通信。 您的企业通过简化的流程轻松、快速、高效，从而最大化客户互动的价值并最大限度地降低成本和风险。
+通信管理解决方案集中管理安全、个性化和交互式通信的创建、汇编和投放。 它使您能够通过从创建到存档的简化流程，从预先批准的内容到自定义创作的内容，快速组合对应内容。 因此，您的客户可以获得及时、准确、便捷、安全和相关的通信。 您的企业通过简化的流程轻松、快速、高效，从而最大化客户互动的价值并最大限度地降低成本和风险。
 
 简单的“对应管理解决方案”设置包括同一台计算机或不同计算机上的作者实例和发布实例
 
@@ -78,7 +78,7 @@ AEM Forms Workspace与（JEE上的AEM表单已弃用）Flex Workspace的功能�
 >
 >AEM表单发行版中已弃用Flex工作空间。
 
-它允许在没有Flash player和Adobe reader的客户端上进行任务管理。 除PDF表单和Flex表单外，它还便于HTML表单的再现。
+它允许在没有Flash Player和Adobe Reader的客户端上进行任务管理。 除PDF表单和Flex表单外，它还便于HTML表单的再现。
 
 ## AEM表单数据库 {#aem-forms-database}
 
@@ -90,7 +90,7 @@ AEM表单数据库存储对GDS和内容存储根目录（针对内容服务）�
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持将于2014年12月31日结束。 请参阅 [Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 要了解有关配置Content Services（已弃用）的信息，请参阅 [管理Content Services](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
+>Adobe® LiveCycle® Content Services ES（已弃用）是与LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持将于2014年12月31日结束。 请参 [阅Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 要了解有关配置Content Services（已弃用）的信息，请参阅 [管理Content Services](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
 
 ### DB2 {#db2}
 
@@ -100,12 +100,12 @@ AEM表单数据库存储对GDS和内容存储根目录（针对内容服务）�
 >
 >如果您的AEM表单环境是从AEM表单的先前版本升级的，并且使用DB2，则不支持联机备份。 在这种情况下，您必须关闭AEM表单并执行脱机备份。 未来版本的AEM表单将支持升级客户的在线备份。
 
-IBM拥有一套工具和帮助系统来帮助数据库管理员管理其备份和恢复任务：
+IBM拥有一套工具和帮助系统来帮助数据库管理员管理其备份和恢复任务:
 
 * IBM DB2 Archive Log Accelerator(请参阅 [IBM DB2 Archive Log Accelerator for z/OS用户指南](https://publib.boulder.ibm.com/infocenter/dzichelp/v2r2/topic/com.ibm.db2tools.alc.doc.ug/alcugb20.pdf?noframes=true)。)
 * IBM DB2数据存档专家(请参阅 [IBM DB2数据存档专家用户指南和参考](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true)。)
 
-DB2具有将数据库备份到Tivoli Storage Manager的内置功能。 通过使用Tivoli Storage Manager , DB2备份可以存储在其他介质或本地硬盘驱动器上。
+DB2具有将数据库备份到Tivoli存储管理器的内置功能。 通过使用Tivoli存储管理器，DB2备份可以存储在其他介质或本地硬盘上。
 
 有关DB2数据库备份和恢复的详细信息，请参 [阅为DB2开发备份和恢复策略](https://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp?topic=/com.ibm.db2.udb.admin.doc/doc/c0005945.htm)。
 
@@ -113,17 +113,17 @@ DB2具有将数据库备份到Tivoli Storage Manager的内置功能。 通过使
 
 使用快照备份或将Oracle数据库配置为以存档日志模式运行。 (请参 [阅Oracle备份：简介](https://www.databasedesign-resource.com/oracle-backup.md)。)有关备份和恢复Oracle数据库的详细信息，请转到以下站点：
 
-[](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Oracle备份和恢复：更详细地介绍备份和恢复的概念以及使用Recovery Manager(RMAN)进行备份、恢复和报告的最常用技术，并提供有关如何规划备份和恢复战略的更多信息。
+[Oracle备份和恢复：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) 更详细地介绍备份和恢复的概念以及使用Recovery Manager(RMAN)进行备份、恢复和报告的最常用技术，并提供有关如何规划备份和恢复战略的更多信息。
 
-[](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Oracle Database Backup and Recovery User&#39;s Guide:提供有关RMAN体系结构、备份和恢复概念和机制、高级恢复技术（如时间点恢复和数据库闪回功能）以及备份和恢复性能调整的详细信息。 它还包括使用主机操作系统设备（而非RMAN）进行用户管理的备份和恢复。 此卷对于备份和恢复更复杂的数据库部署以及高级恢复场景至关重要。
+[Oracle Database Backup and Recovery User&#39;s Guide:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) 提供有关RMAN体系结构、备份和恢复概念和机制、高级恢复技术（如时间点恢复和数据库闪回功能）以及备份和恢复性能调整的详细信息。 它还包括使用主机操作系统设备（而非RMAN）进行用户管理的备份和恢复。 此卷对于备份和恢复更复杂的数据库部署以及高级恢复场景至关重要。
 
-[](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Oracle数据库备份和恢复参考：提供有关所有RMAN命令的语法和语义的完整信息，并描述可用于报告备份和恢复活动的数据库视图。
+[Oracle数据库备份和恢复参考：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) 提供有关所有RMAN命令的语法和语义的完整信息，并描述可用于报告备份和恢复活动的数据库视图。
 
 ### SQL Server {#sql-server}
 
-使用快照备份或将SQL server数据库配置为以事务日志模式运行。
+使用快照备份或将SQL Server数据库配置为以事务日志模式运行。
 
-SQL server还提供两种备份和恢复工具：
+SQL Server还提供两种备份和恢复工具：
 
 * SQL Server Management Studio(GUI)
 * T-SQL（命令行）
@@ -134,10 +134,10 @@ SQL server还提供两种备份和恢复工具：
 
 使用MySQLAdmin或在Windows中修改INI文件，将MySQL数据库配置为以二进制日志模式运行。 (请参阅 [MySQL二进制日志](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。)InnoBase软件中也提供了MySQL的热备份工具。 (请参 [阅Innobase热备份](https://www.innodb.com/hot-backup/features.md)。)
 
-**注意**:MySQL *的默认二进制记录模式是“语句”，它与Content services使用的表（已弃用）不兼容。 在此默认模式下使用二进制日志记录会导致Content Services（已弃用）失败。 如果您的系统包含Content Services（已弃用），请使用“混合”日志记录模式。*要启用“混合”日志记录，请将以下参数添加到my.ini文件：
+**注意**:MySQL *的默认二进制记录模式是“语句”，它与Content Services使用的表（已弃用）不兼容。 在此默认模式下使用二进制日志记录会导致Content Services（已弃用）失败。 如果您的系统包含Content Services（已弃用），请使用“混合”日志记录模式。 要启用“混合”日志记录，请将以下参数添加到my.ini文件：*
 `binlog_format=mixed log-bin=logname`
 
-您可以使用mysqldump实用程序获取完整的数据库备份。 完全备份是必需的，但并不总是方便的。 它们生成大型备份文件并需要时间生成。 要执行增量备份，请确保使用——选项启动服 `log-bin` 务器，如上一节所述。 每次MySQL服务器重新启动时，它都停止写入当前的二进制日志，创建一个新的二进制日志，然后从此开始，新的二进制日志变成当前的二进制日志。 您可以使用命令手动强制切换 `FLUSH LOGS SQL` 器。 第一次完全备份后，将使用mysqladmin实用程序和命令（该命令创建下一个日志文件）执 `flush-logs` 行后续增量备份。
+您可以使用mysqldump实用程序获取完整的数据库备份。 完全备份是必需的，但并不总是方便的。 它们生成大型备份文件并需要时间生成。 要执行增量备份，请确保使用——选项开始服 `log-bin` 务器，如上一节所述。 每次MySQL服务器重新启动时，它都停止写入当前的二进制日志，创建一个新的二进制日志，然后从此开始，新的二进制日志变成当前的二进制日志。 您可以使用命令手动强制切换 `FLUSH LOGS SQL` 器。 第一次完全备份后，将使用mysqladmin实用程序和命令（该命令创建下一个日志文件）执 `flush-logs` 行后续增量备份。
 
 请参 [阅备份战略摘要](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)。
 
@@ -148,9 +148,9 @@ log-bin=logname
 
 ## 内容存储根目录（仅限Content Services） {#content-storage-root-directory-content-services-only}
 
-内容存储根目录包含Content Services（已弃用）存储库，其中存储了所有文档、对象和索引。 必须备份内容存储根目录树。 本节介绍如何确定独立环境和群集环境的内容存储根目录的位置。
+内容存储根目录包含Content Services（已弃用）存储库，其中存储了所有文档、对象和索引。 必须备份内容存储根目录树。 本节介绍如何确定独立和群集环境的内容存储根目录的位置。
 
-### 内容存储根位置（独立环境） {#content-storage-root-location-stand-alone-environment}
+### 内容存储根位置(独立环境) {#content-storage-root-location-stand-alone-environment}
 
 内容存储根目录是在安装Content Services（已弃用）时创建的。 内容存储根目录的位置在AEM表单安装过程中确定。
 
@@ -168,13 +168,13 @@ log-bin=logname
 
 如果/backup-lucene-indexes目录不存在，请备份/lucene-indexes目录，该目录也位于内容存储根目录中。 如果存在/backup-lucene-indexes目录，请不要备份/lucene-indexes目录，因为它可能导致错误。
 
-### 内容存储根位置（群集环境） {#content-storage-root-location-clustered-environment}
+### 内容存储根位置(群集环境) {#content-storage-root-location-clustered-environment}
 
 在群集环境中安装Content Services（已弃用）时，内容存储根目录将拆分为两个单独的目录：
 
-**** 内容存储根目录：通常，共享网络目录对于群集中的所有节点都可读／写访问
+**内容存储根目录：** 通常，共享网络目录对于群集中的所有节点都可读／写访问
 
-**** 索引根目录：在群集中每个节点上创建的目录，始终具有相同的路径和目录名
+**索引根目录：** 在群集中每个节点上创建的目录，始终具有相同的路径和目录名
 
 内容存储根目录的默认位置是 `[GDS root]/lccs_data`GDS位 `[GDS root]` 置中描述的 [位置](files-back-recover.md#gds-location)。 备份位于内容存储根目录中的以下目录：
 
