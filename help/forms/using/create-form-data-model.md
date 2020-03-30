@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 70350add185b932ee604e190aabaf972ff994ba2
 
 ## 关于教程 {#about-the-tutorial}
 
-AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户配置文件、RESTful web服务、基于SOAP的Web服务、OData服务和关系数据库）创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 通过这些服务，您可以预填自适应表单并将提交的表单数据写入数据模型对象。
+AEM Forms数据集成模块允许您从不同的后端数据源(如AEM用户用户档案、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库)创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 通过这些服务，您可以预填自适应表单并将提交的表单数据写入数据模型对象。
 
 有关表单数据集成和表单数据模型的更多信息，请参 [阅AEM表单数据集成](../../forms/using/data-integration.md)。
 
@@ -37,7 +37,7 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
 ![form-data-model_l](assets/form-data-model_l.png)
 
-**********答：已配置数**&#x200B;据源B。数据源架 **构** C.可用服 **务D.数据模型对**&#x200B;象E。配置的服务
+**答：** 已配置数 **据源B。** 数据源模式 **C.** Available services **D.** 数据模型对 **象E。** 配置的服务
 
 ## 前提条件 {#prerequisites}
 
@@ -55,27 +55,27 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
 1. 将MySQL数据库的JDBC驱动程序作为OSGi包安装：
 
-   1. 以管理员身份登录到AEM Forms作者实例，然后转到AEM web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
+   1. 以管理员身份登录到AEM Forms作者实例，然后转到AEM Web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
 
    1. 点按 **安装／更新**。 出现 **“上传／安装包** ”对话框。
 
-   1. 点按 **选择文件** ，浏览并选择MySQL JDBC驱动程序OSGi包。 选择“ **启动Bundle** ”和“ **刷新包”**，然后点按“ **安装”或“更新”**。 确保Oracle Corporation的MySQL JDBC驱动程序处于活动状态。 已安装驱动程序。
+   1. 点按 **选择文件** ，浏览并选择MySQL JDBC驱动程序OSGi包。 选择 **开始包** 和刷新包 **，然后点**&#x200B;按安装或更新 ****。 确保Oracle Corporation的MySQL JDBC驱动程序处于活动状态。 已安装驱动程序。
 
 1. 将MySQL数据库配置为数据源：
 
-   1. 转到AEM web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
+   1. 转到AEM Web控制台，网址为 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
    1. 找到 **Apache Sling Connection池化DataSource配置** 。 点按以在编辑模式下打开配置。
    1. 在配置对话框中，指定以下详细信息：
 
-      * **** 数据源名称：您可以指定任何名称。 例如，指定 **WeRetailMySQL**。
+      * **数据源名称：** 您可以指定任何名称。 例如，指定 **WeRetailMySQL**。
       * **DataSource服务属性名称**:指定包含DataSource名称的服务属性的名称。 在将数据源实例注册为OSGi服务时指定它。 例如， **datasource.name**。
       * **JDBC驱动程序类**:指定JDBC驱动程序的Java类名。 对于MySQL数据库，指 **定com.mysql.jdbc.Driver**。
-      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构weretail上运行的MySQL数据库，URL为： `jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
-      * **** 用户名：数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
-      * **** 密码：数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
-      * **** 借阅测试：启用“借 **阅时测试** ”选项。
-      * **** 返回时测试：启用“ **返回时测试** ”选项。
-      * **** 验证查询：指定SQL SELECT查询以验证池中的连接。 查询必须至少返回一行。 例如，从客 **户详细信息中选择***。
+      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和模式weretail上运行的MySQL数据库，URL为： `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **用户名：** 数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
+      * **密码：** 数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
+      * **借阅测试：** 启用“借 **阅时测试** ”选项。
+      * **返回时测试：** 启用“ **返回时测试** ”选项。
+      * **验证查询:** 指定SQL SELECT查询以验证池中的连接。 查询必须至少返回一行。 例如，从客 **户详细信息中选择***。
       * **事务隔离**:将该值设置 **为READ_COMMITTED**。
       将其他属性保留为默 [认值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) ，然后点 **按保存**。
    此时会创建与以下配置类似的配置。
@@ -91,7 +91,7 @@ AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../f
 1. 在AEM作者实例中，导航到“表 **单** ”>“ **数据集成”**。
 1. Tap **Create** > **Form Data Model**.
 1. 在“创建表单数据模型”对话框中，指定 **表单数据模** 型的名称。 例如， **customer-shipping-billing-details**。 点按下 **一步**。
-1. 选择数据源屏幕列出所有已配置的数据源。 选择 **WeRetailMySQL** 数据源，然后点按 **创建**。
+1. 选择数据源屏幕列表所有已配置的数据源。 选择 **WeRetailMySQL** 数据源，然后点按 **创建**。
 
    ![数据源选择](assets/data-source-selection.png)
 
@@ -113,7 +113,7 @@ AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../f
 
    ![default-fdm](assets/default-fdm.png)
 
-1. 展开WeRailMySQL数据源树。 从Weretail **>** customerdetails **** schema中选择以下数据模型对象和服务以形成数据模型：
+1. 展开WeRailMySQL数据源树。 从Weretail **>** customerdetails **模式中选择以下数据模型对象和服** 务以形成数据模型：
 
    * **数据模型对象**:
 
@@ -129,7 +129,7 @@ AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../f
       * 更新
    点按 **添加选定项** ，将选定的数据模型对象和服务添加到表单数据模型。
 
-   ![WeRetail架构](assets/weretail_schema_new.png)
+   ![WeRetail模式](assets/weretail_schema_new.png)
 
    >[!NOTE]
    >
@@ -166,9 +166,9 @@ AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../f
 
          此服务从MySQL数据库检索送货地址和其他客户详细信息
 
-      * **输出模型对象**:选择包含客户数据的架构。 例如：
+      * **输出模型对象**:选择包含客户数据的模式。 例如：
 
-         自定义详细信息架构
+         客户详细信息模式
 
       * **返回数组**:禁用“返 **回数组** ”选项。
       * **参数**:选择名为 **ID的参数**。
@@ -185,9 +185,9 @@ AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../f
 
          此服务更新MySQL数据库中的送货地址和相关字段
 
-      * **输入模型对象**:选择包含客户数据的架构。 例如：
+      * **输入模型对象**:选择包含客户数据的模式。 例如：
 
-         自定义详细信息架构
+         客户详细信息模式
 
       * **输出类型**:选择 **BOOLEAN**。
 
