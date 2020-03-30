@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 保存字母时出错 {#errors-when-saving-a-letter}
 
-### 问题 {#issue}
+### 带有 OS 剪贴板 {#issue}
 
 保存字母时显示以下错误之一：
 
@@ -38,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 预览字母时出错 {#error-when-previewing-a-letter}
 
-### 问题 {#issue-1}
+### 带有 OS 剪贴板 {#issue-1}
 
 预览字母时，出现错误“加载字母时出错：无法从XML输入导入资产”，即使在发布字母中以前未发布的文本资产时也是如此。
 
@@ -46,7 +46,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 使用以下步骤重置发布实例上的字母缓存，然后重试查看字母：
 
-1. 转到并 **`https://[server]:[port]/[contextPath]/system/console/configMgr`** 以管理员身份登录。
+1. 转到并 **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** 以管理员身份登录。
 1. 选择 **对应管理配置**。
 1. 在“对 **应管理配置”中**，禁用“ **启用字母缓存”,**&#x200B;然后单击&#x200B;**“保存”。**
 1. 启用 **字母缓存** ，然后单击 **保存**。
