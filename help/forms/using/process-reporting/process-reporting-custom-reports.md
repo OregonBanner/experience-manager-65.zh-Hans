@@ -1,8 +1,8 @@
 ---
-title: 流程中的自定义报告
-seo-title: 流程中的自定义报告
-description: 您可以创建自定义报告，并将这些报告添加到JEE进程报告UI上的AEM Forms。
-seo-description: 您可以创建自定义报告，并将这些报告添加到JEE进程报告UI上的AEM Forms。
+title: 在进程中自定义报告报告
+seo-title: 在进程中自定义报告报告
+description: 您可以创建自定义报告，并将这些报告添加到JEE进程报告UI上的AEM表单。
+seo-description: 您可以创建自定义报告，并将这些报告添加到JEE进程报告UI上的AEM表单。
 uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,12 +10,12 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 流程中的自定义报告{#custom-reports-in-process-reporting}
+# 在进程中自定义报告报告{#custom-reports-in-process-reporting}
 
 您可以使用QueryBuilder的REST界面，或使用QueryBuilder API创建OSGi服务以创建自定义报表。
 
@@ -23,31 +23,31 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 在添加任何自定义报告之前，请执行以下模板过程：
 
-1. 在自定义报告中使用的数据必须在进程报告中可用。 要确保数据的可用性，请计划cron作业或在“进程报 **[告](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**”UI上使用“同步”选项。
-1. URL请求（封装所需的查询）必须返回相应的查询结果对象。 要创建查询，可以使用 [QueryBuilder的REST界面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) ，使用QueryBuilder API创建OSGi服务。 您可以创建动态或静态查询。
+1. 在自定义报告中使用的数据必须在“进程”报告中可用。 要确保数据的可用性，请计划cron作业或在“进程报告 **[](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**”UI上使用“同步”选项。
+1. URL请求(封装所需的查询)必须返回相应的查询结果对象。 要创建查询，可使用 [QueryBuilder的REST界面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) ，使用QueryBuilder API创建OSGi服务。 您可以创建动态或静态查询。
 
-1. 创建自定义用户界面以显示结果。 您可以创建独立的用户界面，或将结果与现有的Process Reporting UI集成。
+1. 创建自定义用户界面以显示结果。 您可以创建独立的用户界面，或将结果与现有的进程报告UI集成。
 
 ## 使用QueryBuilder的REST界面 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST界面通过Java API和REST API公开Asset Share Query Builder的功能。 在执行以下步骤之 [前](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)，了解如何使用CRX queryBuilder REST界面：
+CRX QueryBuilder REST界面通过Java API和REST API公开Asset Share查询Builder的功能。 在执行以下步骤之 [前](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)，了解如何使用CRX QueryBuilder REST界面：
 
-1. 浏览到URL `https://[server]:[port]/lc/bin/querybuilder.json`
-1. 根据Process Reporting存储节点结构和节点属性创建查询。
+1. 浏览到URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
+1. 根据进程报告存储节点结构和节点属性创建查询。
 
    您可以指定可选参数来指定偏移、限制、点击和属性。 您可以硬编码静态报表的参数，并从动态报表的UI中提取参数。
 
    要获取所有进程名称，查询为：
 
-   `https://[Server]:[Port]/lc/bin/querybuilder.json?exact=false&p.hits=selective&p.properties=pmProcessTitle&path=%2fcontent%2freporting%2fpm&property=pmNodeType&property.operation=equals&property.value=ProcessType&type=sling%3aFolder`
+   `https://'[server]:[port]'/lc/bin/querybuilder.json?exact=false&p.hits=selective&p.properties=pmProcessTitle&path=%2fcontent%2freporting%2fpm&property=pmNodeType&property.operation=equals&property.value=ProcessType&type=sling%3aFolder`
 
    >[!NOTE]
    >
    >在每个查询中，路径参数都指向crx存储位置，字符会根据URL标准进行转义。
 
-## 使用Query Builder API创建服务 {#creating-a-service-using-query-builder-api-nbsp}
+## 使用查询构建器API创建服务 {#creating-a-service-using-query-builder-api-nbsp}
 
-使用Query Builder API创建服务的先决条件是创 [建和部署CQ OSGI包](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) , [以及使用Query Builder API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)。
+使用查询构建器API创建服务的先决条件是 [创建和部署CQ OSGI包](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) , [以及使用查询构建器API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)。
 
 1. 创建包含相应注释的OSGi服务。 要访问QueryBuilder，请使用：
 
@@ -63,7 +63,7 @@ CRX QueryBuilder REST界面通过Java API和REST API公开Asset Share Query Buil
     predicateGroup.setAllRequired(true);
    ```
 
-1. 将谓词添加到新创建的谓词Group。 JcrBoolPropertyPredicatePredicateActor [、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)JcrPropertyPredicatePrevidatePrediceActor、RangePropertyPredicePrevatiaterE求值器、 [、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)、RateraterrraterPuaterater、 [、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)、rradidaterReRradeReReReReReReRePateRePatereReReRePateRePaterePateResuatePatate求值器求值器求值器、谓谓词求值器、谓词求值器、谓词求值器、谓词求值器求值器
+1. 将谓词添加到新创建的谓词Group。 JcrBoolPropertyPredicatePredicateActor [、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)JcrPropertyPredicatePrevidatePrediceActor、RangePropertyPredicePrevateEvaluatator、 [、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)、 [、Rater、RRateraterR、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)、RradididateRR、RRateradeRepateReResuateReseResuadidididididePatePateReReseReRePatePatePatatePatePuatePuatePatePate
 
    对于静态报表，硬编码谓词，而对于动态报表，则从请求中提取谓词。
 
@@ -424,7 +424,7 @@ public class PeriodicProcessVolume {
 
 创建用于显示结果的单独UI的先决条件是 [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)、 [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) (创建CRX节点 [)和提供适当的访](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)问权限。
 
-1. 在节点处创建一个CRX节 `/apps` 点，并授予相应的访问权限。 (PERM_PROCESS_REPORTING_USER)
+1. 在节点处创建一个CRX节 `/apps` 点，并授予相应的访问权限。 (PERM_PROCESS_报告_USER)
 1. 在节点上定义呈示 `/content` 器。
 1. 将JSP或HTML文件添加到在步骤1中创建的节点。 您还可以添加CSS文件。
 
@@ -432,13 +432,13 @@ public class PeriodicProcessVolume {
 
    包含JSP和CSS文件的示例节点
 
-1. 添加javascript代码以启动对querybuilder REST API或服务的Ajax调用。 此外，添加适当的参数。
+1. 添加javascript代码以开始对querybuilder REST API或服务的Ajax调用。 此外，添加适当的参数。
 
 1. 向Ajax调用添加适当的成功处理程序以分析和显示结果。 您可以以多种格式（json/csv/用户定义）分析结果，并以表格形式或其他形式显示结果。
 
 1. （可选）向Ajax调用添加适当的错误处理程序。
 
-同时使用OSGi service和QueryBuilder API的示例JSP代码是：
+同时使用OSGi Service和QueryBuilder API的示例JSP代码是：
 
 ```
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling/1.0"%>
@@ -628,7 +628,7 @@ response.setCharacterEncoding("utf-8");
 </html>
 ```
 
-## 将报表UI集成到现有流程报表UI {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
+## 将报表UI集成到现有流程报告UI {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
 创建用于显示结果的单独UI的先决条件是 [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、 [Creating a CRX Node](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) (创建CRX节点 [)和提供适当的访](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)问权限。
 
@@ -644,7 +644,7 @@ response.setCharacterEncoding("utf-8");
 
    节点的属性
 
-1. 报表UI集成到流程报表UI。 集成UI后，更新的UI与以下图像类似：
+1. 报表UI集成到进程报告UI。 集成UI后，更新的UI与以下图像类似：
 
    ![新添加的自定义报告的用户界面](assets/sampleui_screenshot_new.png)
 
