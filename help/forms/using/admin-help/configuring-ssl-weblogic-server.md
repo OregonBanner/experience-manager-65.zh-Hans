@@ -1,6 +1,6 @@
 ---
-title: 为WebLogic server配置SSL
-seo-title: 为WebLogic server配置SSL
+title: 为WebLogic Server配置SSL
+seo-title: 为WebLogic Server配置SSL
 description: 了解如何创建用于WebLogic服务器的SSL凭据以及如何为WebLogic服务器配置SSL。
 seo-description: 了解如何创建用于WebLogic服务器的SSL凭据以及如何为WebLogic服务器配置SSL。
 uuid: 8ee979fd-2615-451b-a607-4f73ecfed4f9
@@ -10,14 +10,14 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 为WebLogic server配置SSL {#configuring-ssl-for-weblogic-server}
+# 为WebLogic Server配置SSL {#configuring-ssl-for-weblogic-server}
 
-要在WebLogic服务器上配置SSL，您需要SSL凭据进行身份验证。 您可以使用Java Keytool执行以下任务以创建凭据：
+要在WebLogic服务器上配置SSL，您需要SSL凭据进行身份验证。 您可以使用Java密钥工具执行以下任务来创建凭据：
 
 * 创建公钥／私钥对，将公钥包含在作为单元证书链存储的X.509 v1自签名证书中，然后将证书链和私钥存储在新密钥库中。 此密钥库是应用程序服务器的自定义标识密钥库。
 * 提取证书并将其插入新密钥库。 此密钥库是应用程序服务器的自定义信任密钥库。
@@ -111,7 +111,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
    >[!NOTE]
    >
-   >替 `[JAVA_HOME]`*换为安装JDK的目录，并将斜体文本替换为与您的环境相对应的值。*
+   >替 `[JAVA_HOME]`*换为安装JDK的目录，并将斜体文本替换为与您的环境对应的值。*
 
    例如：
 
@@ -156,25 +156,25 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-名为“ads-ca.jks”的自定义信任密钥库文件在appserverdomain [/adobe/]server[] 目录中创建。
+名为“ads-ca.jks”的自定义信任密钥库文件在 [appserverdomain]/adobe/&#39;server&#39;目录中创建。
 
 配置WebLogic，以使其使用您创建的自定义标识密钥库和自定义信任密钥库。 另外，禁用WebLogic主机名验证功能，因为用于创建密钥库文件的辨别名不包括承载WebLogic服务器的计算机的名称。
 
 ## 将WebLogic配置为使用SSL {#configure-weblogic-to-use-ssl}
 
-1. 通过在Web浏览器的URL行中键 `https://`*[入主机名&#x200B;]*`:7001/console`，启动WebLogic服务器管理控制台。
-1. 在“环境”下的“域配置”中，选择“服 **务器”>“[服务器]”>“配置”>“常规”**。
+1. 开始WebLogic服务器管理控制台，方法 `https://`*[是在Web浏&#x200B;]*览器的`:7001/console`URL行中键入主机名。
+1. 在“环境”下的“域配置”中，选 **择“服务器”>“服务器”>“配置”>“常规”**。
 1. 在“常规”下，在“配置”中，确 **保选中“启用监听端口** ”和“ **启用SSL监听端口** ”。 如果未启用，请执行以下操作：
 
    1. 在“更改中心”下，单击“锁 **定并编辑** ”以修改选择和值。
    1. 选中“启 **用监听端口** ”和“ **启用SSL监听端口** ”复选框。
 
 1. 如果此服务器是受控服务器，请将“监听端口”更改为未使用的端口值（如8001），将“SSL监听端口”更改为未使用的端口值（如8002）。 在独立服务器上，默认SSL端口为7002。
-1. 单击“ **释放配置**”。
-1. 在“环境”下的“域配置”中，单击“服 **务器”>“[*托管服务器*]”>“配置”>“常规”**。
+1. 单击“ **发行配置”**。
+1. 在“环境”的“域配置”下，单击“服 **务器”>“[*托管服务器*]”>“配置”>“常规”**。
 1. 在“常规”下，在“配置”中，选择“ **密钥库**”。
 1. 在“更改中心”下，单击“锁 **定并编辑** ”以修改选择和值。
-1. 单击 **更改** ，以将keystore列表作为下拉列表获取，然后选择“自定义标识 **和自定义信任”**。
+1. 单击 **更改** ，将keystore列表作为下拉列表获取，然后选择“自定义标识 **和自定义信任”**。
 1. 在“标识”下，指定以下值：
 
    **自定义标识密钥库**: *[appserverdomain]*/adobe/server name *[/ads-credentials.jks，其中*]* appserverdomain[*是实际路径，而服]*[]* 务器名是应用程序服务器的名称。
@@ -185,7 +185,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
 1. 在“信任”下，指定以下值：
 
-   **自定义信任密钥库文件名**: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`，其中 `*[appserverdomain]*` 是实际路径
+   **自定义信任密钥库文件名**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中 `*[appserverdomain]*` 是实际路径
 
    **自定义信任密钥库类型**:JKS
 
@@ -199,7 +199,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
    **密码短语**: *mypassword*
 
-1. 单击“ **释放配置**”。
+1. 单击“ **发行配置”**。
 
 ## 禁用主机名验证功能 {#disable-the-hostname-verification-feature}
 
