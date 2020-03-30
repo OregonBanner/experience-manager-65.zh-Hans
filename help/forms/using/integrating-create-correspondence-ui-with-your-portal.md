@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 概述 {#overview}
 
-本文详细介绍了如何将“创建通信解决方案”与您的环境相集成。
+本文详细介绍了如何将“创建通信解决方案”与您的环境集成。
 
 ## 基于URL的调用 {#url-based-invocation}
 
@@ -30,7 +30,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 * 从所需数据源获取的XML数据的URL（使用cmDataUrl参数）。
 
 例如，自定义门户会将URL准备为\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，这可以是门户上链接的href。
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，这可以是门户上链接的href。
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 基于内联数据的调用 {#inline-data-based-invocation}
 
-调用“创建通信”应用程序的另一种（也是更安全的）方法是只点击https://[server]:port[/]contextPath[]/aem/forms/createcorrespondence.html上的URL，同时发送参数和数据以作为POST请求调用“创建通信”应用程序（将其隐藏在最终用户面前）。 这也意味着您现在可以在线传递Create Commerence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），这在以前的方法中是不可能的／理想的。
+调用“创建通信”应用程序的另一种（也是更安全的）方法是只点击https://&#39;[server]:port[&#39;/]contextPath[]/aem/forms/createcorrespondence.html上的URL，同时发送参数和数据以作为POST请求调用“创建通信”应用程序（将其隐藏在最终用户面前）。 这也意味着您现在可以在线传递Create Commerence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），这在以前的方法中是不可能的／理想的。
 
 ### 用于指定字母的参数 {#parameters-for-specifying-letter}
 
