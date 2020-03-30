@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -72,19 +72,19 @@ We.Gov演示包随附以下内置虚拟用户：
 1. **链接**:位于We.Gov站点的主菜单顶部。
 1. **用户说明**:浏览用户故事时要遵循的一组数字步骤。
 1. **Forms Portal**: *https://&lt;aemserver>:&lt;port>/content/we-gov/formsportal.html*
-1. **Mobile View**:We.Gov用户使用重新调整大小的浏览器复制移动视图。
-1. **桌面视图**:We.gov用户可在笔记本电脑或台式机上查看演示。
-1. **预编剧表单**:We.Gov站点主页上的表单。
+1. **移动视图**:We.Gov用户使用重新调整大小的浏览器复制移动视图。
+1. **桌面视图**:We.gov用户在笔记本或台式机上视图演示。
+1. **预编剧表单**:We.Gov网站主页上的表单。
 1. **自适应表单**:We.gov演示的注册申请表。
 
    *https://&lt;aemserver>:&lt;port>/content/forms/af/adobe-gov-forms/enrollment-application-for-health-benefits.html*
 
 1. **Adobe We.Gov网站**: *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html*
-1. **Adobe收件箱**:位于AEM后端中的 [顶部菜单栏] “贝尔”图标。
+1. **Adobe收件箱**:位于AEM后端中的 [顶部菜单栏](assets/bell.svg) “贝尔”图标。
 
    *https://&lt;aemserver>:&lt;port>/aem/start.html*
 
-1. **电子邮件客户端**:查看电子邮件的首选方式(Gmail、Outlook)
+1. **电子邮件客户端**:视图电子邮件的首选方式(Gmail、Outlook)
 1. **CTA**:行动动员
 1. **导航**:在浏览器页面上查找特定的参考点。
 
@@ -127,7 +127,7 @@ Aya回答了几个问题，通过在手机上填写一份简短的自适应表�
 
 Aya发现她符合条件，开始填写她的应用程序，在她的移动设备上请求服务。
 
-Aya需要在家中查阅一些文档，然后才能完成服务请求申请。 她保存并退出应用程序。
+Aya需要在家查看一些文档，然后才能完成服务请求申请。 她保存并退出应用程序。
 
 **用户说明：**
 
@@ -172,7 +172,7 @@ Aya需要在家中查阅一些文档，然后才能完成服务请求申请。 �
 
 ## 桌面演示 {#desktop-demo}
 
-**** 本节：回到家里，Aya找到了她需要的信息，并从她的桌面恢复该应用程序。 Aya导航到在线表单门户以恢复其应用程序。 借助一些简单的自定义功能，机构还可以自动生成链接并通过电子邮件发送以恢复应用程序。
+**本节：** 回到家里，Aya找到了她需要的信息，并从她的桌面恢复该应用程序。 Aya导航到在线表单门户以恢复其应用程序。 借助一些简单的自定义功能，机构还可以自动生成链接并通过电子邮件发送以恢复应用程序。
 
 ### Aya用户案例（续自适应表单） {#aya-user-story-continued-adaptive-form}
 
@@ -196,7 +196,7 @@ Aya需要在家中查阅一些文档，然后才能完成服务请求申请。 �
 
    ![提交自适应表单](/help/forms/using/assets/submit_adaptive_form.png)
 
-   提交后，Aya会收到一封电子邮件，该电子邮件将打开并准备使用Adobe sign进行电子签名。
+   提交后，Aya会收到一封电子邮件，该电子邮件将打开并准备使用Adobe Sign进行电子签名。
 
 **用户说明：**
 
@@ -219,7 +219,7 @@ Aya需要在家中查阅一些文档，然后才能完成服务请求申请。 �
 
 ![政府代理乔治](/help/forms/using/assets/george_lang-1.png)
 
-**** 本节：乔治是政府机构的业务分析师，Aya是向其请求服务。 George有一个仪表板，在仪表板中他可以看到分配给他审阅的所有服务请求应用程序。
+**本节：** 乔治是政府机构的业务分析师，Aya是向其请求服务。 George有一个仪表板，在该环境中他可以查看分配给他的所有服务请求应用程序以供审阅。
 
 ### George User Story（AEM收件箱） {#george-user-story-aem-inbox}
 
@@ -230,8 +230,8 @@ Aya需要在家中查阅一些文档，然后才能完成服务请求申请。 �
 
    1. 登录方式：
 
-      1. **** 用户：george.lang
-      1. **** 密码：口令
+      1. **用户：** george.lang
+      1. **密码：** 口令
    1. 或模拟：
 
       1. 在“模&#x200B;**拟为**”字段中键&#x200B;**入“George**”。
@@ -240,14 +240,14 @@ Aya需要在家中查阅一些文档，然后才能完成服务请求申请。 �
 
 
 1. 从右上角，单击通知（铃）图标。
-1. 单击“**查看全部**”以导航到收件箱。
+1. 单击“**全部视图**”导航到收件箱。
 1. 从收件箱中，打开最新的“**Health Benefits Application Review**”任务。
 
-   ![健康福利应用审查](/help/forms/using/assets/health_benefits.png)
+   ![健康效益应用审查](/help/forms/using/assets/health_benefits.png)
 
 ### George User Story（AEM收件箱和MS Dynamics） {#george-user-story-aem-inbox-and-ms-dynamics}
 
-由于集成了数据并实现了自动化工作流程，Aya的应用程序以及在提交数据时自动生成的CRM记录都出现了。
+由于集成了数据并实现了自动工作流,Aya的应用程序以及在提交数据时自动生成的CRM记录也随之出现。
 
 **用户说明：**
 
@@ -270,15 +270,15 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 1. 导航到左上角，然后单击“批准&#x200B;****”以批准此应用程序。
 1. 在该模式中，您可以为CX潜在客户留言。
 1. 单击完成。
-1. （公民角色）打开电子邮件客户端，查看发送到Aya的电子邮件。
+1. （公民角色）打开电子邮件客户端，视图发送给Aya的电子邮件。
 
-   ![查看发送到Aya的电子邮件](/help/forms/using/assets/email_client.png)
+   ![视图发送到Aya的电子邮件](/help/forms/using/assets/email_client.png)
 
 ## CX潜在客户(Camila) {#cx-lead-camila}
 
 ![Camila（CX潜在客户）](/help/forms/using/assets/camila_santos-1.png)
 
-**** 本节：Camila CX Lead与Aya建立了欢迎电话联系，以说明如何利用她获得批准的政府服务。
+**本节：** Camila CX Lead与Aya建立了欢迎电话联系，以说明如何利用她获得批准的政府服务。
 
 ### Camila用户案例（AEM收件箱和MS Dynamics） {#camila-user-story-aem-inbox-ms-dynamics}
 
@@ -299,8 +299,8 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 
 
 1. 从右上角，单击通知（铃）图标。
-1. 单击“**查看全部**”以导航到收件箱。
-1. 从收件箱中，打开最新的“**New Contact Approval**”任务。
+1. 单击“**全部视图**”导航到收件箱。
+1. 从收件箱中，打开最新的“新联&#x200B;**系人批准**”任务。
 
    ![新的联系人批准](/help/forms/using/assets/new_contact_approval.png)
 
@@ -311,7 +311,7 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 1. 在CRM中，您可以看到所有信息都可以更新
 
    1. （可选）直接在Dynamics中添加新的调用活动。
-   1. 打开“活&#x200B;**动**”部分。
+   1. 打开“**活动**”部分。
    1. 单击“新&#x200B;**电话呼叫**”选项。
    1. 添加电话呼叫详细信息。
    1. 保存并关闭窗口。
@@ -320,11 +320,11 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 1. 在该模式中，您可以留言。
 1. 单击完成。
 
-   ![“活动”选项卡](/help/forms/using/assets/activities_tab.png) “确认 ![新联系人”](/help/forms/using/assets/confirm_new_contact.png)
+   ![活动选项卡](/help/forms/using/assets/activities_tab.png)![确认新联系人](/help/forms/using/assets/confirm_new_contact.png)
 
 ## 欢迎凯特市民（阿亚） {#welcome-kit-citizen-aya}
 
-**** 本节：Aya收到一封电子邮件，其中包含一个指向交互式通信的链接，该链接概括了Aya的优点，还包括要填写的表单字段。 附加PDF benefits语句并链接到邮件中的交互式通信函（与交互式通信具有相同的主题／品牌）。
+**本节：** Aya收到一封电子邮件，其中包含一个指向交互式通信的链接，该链接概括了Aya的优点，还包括要填写的表单字段。 附加PDF优势声明并链接到邮件中的交互式通信函（与交互式通信具有相同的主题／品牌）。
 
 ### Aya用户案例（电子邮件客户端） {#aya-user-story-email-client}
 
@@ -333,9 +333,9 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 1. 找到并打开欢迎工具包电子邮件。
 1. 滚动到页面底部的PDF附件。
 1. 单击以打开PDF附件。
-1. 在电子邮件客户端中向上滚动，然后单击“**在线查看欢迎工具包**”。
+1. 在电子邮件客户端中向上滚动，然后单击“**在线视图欢迎工具包**”。
 
-   1. 这将打开同一文档的Web渠道版本。
+   1. 这将打开同一渠道的Web文档版。
 
 1. 要直接快速参考PDF，请执行以下操作：
 
@@ -343,13 +343,13 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 
 1. 要直接快速参考IC:
 
-   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?channel=web&amp;mode=preview&amp;wcmmode=disabled*
+   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?渠道=web&amp;mode=disabled*
 
    ![Welcome Benefits Handbook](/help/forms/using/assets/welcome_benefits_handbook.png) ![Interactive Communication Link](/help/forms/using/assets/interactive_communication.png)
 
 ## 续订提醒市民(Aya) {#renewal-reminder-citizen-aya}
 
-**** 本节：卡蜜拉还安排了一年后的通讯提醒。 （自动／执行和通过电子邮件发送的工作流步骤）。
+**本节：** 卡米拉还计划了一年后的沟通提醒。 （自动／执行和通过电子邮件发送的工作流步骤）。
 
 ### Aya用户案例（电子邮件客户端） {#aya-user-story-email-client-1}
 
@@ -364,12 +364,12 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 
 ## Analytics CX Lead(Camila) {#analytics-cx-lead-camila}
 
-**** 本节：Camila导航到仪表板，在仪表板中，她可以看到机构KPI中开始填写服务请求表并放弃的公民百分比、从请求提交到批准／拒绝响应的平均时间长度以及她发送给市民的福利手册的参与统计数据。
+**本节：** 卡米拉导航到仪表板，她可以在此处查看机构KPI的各个方面，如开始填写服务请求表并放弃的公民百分比、从请求提交到批准／拒绝响应的平均时间长度以及她发送给公民的福利手册的参与统计数据。
 
 ### Camila评论网站报告(We.Gov Adobe Analytics) {#camila-reviews-sites-reporting-we-gov-adobe-analytics}
 
 1. 导航到 *https://&lt;aemserver>:&lt;port>/sites.html/content*
-1. 选择“**AEM Forms We.Gov Site**”以查看网站页面。
+1. 选择“**AEM Forms We.Gov Site**”以视图网站页面。
 1. 选择其中一个网站页面（例如“主页”），然后选择“**Analytics &amp; Recommendations**”。
 
    ![分析和推荐](/help/forms/using/assets/analytics_recommendation.jpg)
@@ -378,12 +378,12 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 
    ![Adobe Analytics关键指标](/help/forms/using/assets/analytics_key_metrics.jpg)
 
-1. 返回页面视图页面（在步骤3.中访问），您还可以通过将显示设置更改为查看“列表视图”中的项来查看页面&#x200B;**视图信息**。
-1. 找到“**View**”下拉菜单并选择“**List View**”。
+1. 返回页面视图页面（在步骤3.中访问），您还可以通过将显示设置更改为“视图视图”中的视图项来列表页面&#x200B;**视图**。
+1. 找到“**视图**”下拉菜单并选择“**列表视图**”。
 
-   ![“视图”(View)下拉菜单中的“列表”(List)视图](/help/forms/using/assets/list_view_view_dropdown.jpg)
+   ![列表视图下拉菜单中的视图](/help/forms/using/assets/list_view_view_dropdown.jpg)
 
-1. 从同一菜单中，选择“**View Setting**”(查看设置&#x200B;**)，然后从“** Analytics”（分析）部分选择要显示的列。
+1. 从同一菜单中，选择“**视图设置**”，然后从“**Analytics**”部分选择要显示的列。
 
    ![配置列的显示](/help/forms/using/assets/view_setting_analytics.jpg)
 
@@ -401,7 +401,7 @@ George批准了Aya的应用程序，并且由于现有的自动工作流程，�
 
    ![健康福利的注册申请](/help/forms/using/assets/analytics_report_benefits.jpg)
 
-1. 等待页面加载，并查看Analytics报告数据。
+1. 等待页面加载，并视图Analytics报告数据。
 
    ![分析报告数据](/help/forms/using/assets/analytics_report_data_updated.jpg)
 
