@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -27,8 +27,8 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
    **注意**:需要Acrobat® 9.2或更高版本才能将Microsoft XPS格式转换为PDF。*
 
-* Autodesk autoCAD 2005、2006、2007、2008和2009可转换DWF、DWG和DXW（仅英文版）
-* 转换WPD、QPW、SHW的Corel wordPerfect 12和X4（仅英文版）
+* Autodesk AutoCAD 2005、2006、2007、2008和2009可转换DWF、DWG和DXW（仅英文版）
+* 转换WPD、QPW、SHW的Corel WordPerfect 12和X4（仅英文版）
 * OpenOffice 2.0、2.4、3.0.1和3.1可转换ODT、ODS、ODP、ODG、ODF、SXW、SXI、SXC、SXD、DOC、DOCX、RTF、TXT、XLSX、 PPPSX、 PPPT、 PPPT、 PPP、 PPPtx、VSD、MPP、MPPX和PUB
 
    ***注意&#x200B;**:“生成PDF”服务不支持64位版本的OpenOffice。*
@@ -38,7 +38,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    *注&#x200B;**意**:不支持Photoshop CS3和CS4，因为它们不支持Windows Server 2003或Windows Server 2008。*
 
 * 转换FM的Adobe FrameMaker® 7.2和8（仅限Windows）
-* 用于转换PMD、PM6、P65和PM的Adobe pageMaker® 7.0（仅限Windows）
+* 用于转换PMD、PM6、P65和PM的Adobe PageMaker® 7.0（仅限Windows）
 * 第三方应用程序支持的本机格式（需要开发特定于该应用程序的设置文件）（仅限Windows）
 
 “生成PDF”服务将以下基于标准的文件格式转换为PDF。
@@ -59,7 +59,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 * 仅使用DeviceRGB色彩空间的PDF/A-1a
 * 仅使用DeviceRGB色彩空间的PDF/A-1b
 
-“生成PDF”服务要求您执行以下管理任务：
+生成PDF服务要求您执行以下管理任务:
 
 * 在承载AEM Forms的计算机上安装所需的本机应用程序
 * 在承载AEM Forms的计算机上安装Adobe Acrobat Professional或Acrobat Pro Extended 9.2
@@ -67,7 +67,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 使用JBoss Tunkly安装和部署AEM表单中介绍了这些任务。
 
-您可以使用“生成PDF”服务完成以下任务：
+您可以使用“生成PDF”服务完成以下任务:
 
 * 从本机文件格式转换为PDF。
 * 将HTML文档转换为PDF文档。
@@ -79,7 +79,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ## 将Word文档转换为PDF文档 {#converting-word-documents-to-pdf-documents}
 
-本节介绍如何使用“生成PDF API”以编程方式将Microsoft word文档转换为PDF文档。
+本节介绍如何使用“生成PDF API”以编程方式将Microsoft Word文档转换为PDF文档。
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ### 步骤摘要 {#summary-of-steps}
 
-要将Microsoft word文档转换为PDF文档，请执行以下任务：
+要将Microsoft Word文档转换为PDF文档，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建“生成PDF”客户端。
@@ -109,7 +109,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 **检索要转换为PDF文档的文件**
 
-检索要转换为PDF文档的Microsoft word文档。
+检索Microsoft Word文档以转换为PDF文档。
 
 **将文件转换为PDF文档**
 
@@ -125,15 +125,15 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 [使用Web服务API将Word文档转换为PDF文档](converting-file-formats-pdf.md#convert-word-documents-to-pdf-documents-using-the-web-service-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[生成PDF Service API快速入门](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
+[生成PDF Service API快速开始](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
 
 ### 使用Java API将Word文档转换为PDF文档 {#convert-word-documents-to-pdf-documents-using-the-java-api}
 
-使用“生成PDF API(Java)”将Microsoft word文档转换为PDF文档：
+使用“生成PDF API(Java)”将Microsoft Word文档转换为PDF文档:
 
 1. 包括项目文件。
 
@@ -142,21 +142,21 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 1. 创建“生成PDF”客户端。
 
    * 创建包 `ServiceClientFactory` 含连接属性的对象。
-   * 使用对 `GeneratePdfServiceClient` 象的构造函数并传递该对 `ServiceClientFactory` 象。
+   * 使用对 `GeneratePdfServiceClient` 象的构造函数并传递该对象来创建 `ServiceClientFactory` 对象。
 
 1. 检索要转换为PDF文档的文件。
 
    * 创建一 `java.io.FileInputStream` 个对象，它使用其构造函数表示要转换的Word文件。 传递指定文件位置的字符串值。
-   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对 `java.io.FileInputStream` 象。
+   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对象来创建 `java.io.FileInputStream` 对象。
 
 1. 将文件转换为PDF文档。
 
-   通过调用对象的方法并传递以 `GeneratePdfServiceClient` 下值，将文 `createPDF2` 件转换为PDF文档：
+   通过调用对象的方法并传递以 `GeneratePdfServiceClient` 下值，将文 `createPDF2` 件转换为PDF文档:
 
    * 表示 `com.adobe.idp.Document` 要转换的文件的对象。
    * 包含 `java.lang.String` 文件扩展名的对象。
    * 包含 `java.lang.String` 要在转换中使用的文件类型设置的对象。 文件类型设置为不同文件类型（如。doc或。xls）提供转换设置。
-   * 包 `java.lang.String` 含要使用的PDF设置名称的对象。 例如，您可以指定 `Standard`。
+   * 包 `java.lang.String` 含要使用的PDF设置名称的对象。 For example, you can specify `Standard`.
    * 包 `java.lang.String` 含要使用的安全设置名称的对象。
    * 可选对 `com.adobe.idp.Document` 象，其中包含在生成PDF文档时要应用的设置。
    * 一个可 `com.adobe.idp.Document` 选对象，其中包含要应用于PDF文档的元数据信息。
@@ -168,25 +168,25 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
    * 调用对 `CreatePDFResult` 象的方 `getCreatedDocument` 法，该方法返回一 `com.adobe.idp.Document` 个对象。
    * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法，以从在上一步中创建的对象中提取PDF文档。
-   如果您使用该 `createPDF2` 方法获取日志文档（不适用于HTML转换），请执行以下操作：
+   如果您使用该方 `createPDF2` 法获取日志文档（不适用于HTML转换），请执行以下操作：
 
    * 调用 `CreatePDFResult` 对象的方 `getLogDocument` 法。 这将返回一个 `com.adobe.idp.Document` 对象。
-   * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法提取日志文档。
+   * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法以提取日志文档。
 
 
 **另请参阅**
 
 [步骤摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入门（SOAP模式）:使用Java API将Microsoft word文档转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将Microsoft Word文档转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用Web服务API将Word文档转换为PDF文档 {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
 
-使用“生成PDF API（Web服务）”将Microsoft word文档转换为PDF文档：
+使用“生成PDF API（Web服务）”将Microsoft Word文档转换为PDF文档:
 
 1. 包括项目文件。
 
@@ -202,7 +202,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    * 使用构 `GeneratePDFServiceClient.Endpoint.Address` 造函数创建对 `System.ServiceModel.EndpointAddress` 象。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.)您无需使用该属 `lc_version` 性。 但是，请指 `?blob=mtom`定。
    * 通过 `System.ServiceModel.BasicHttpBinding` 获取字段的值创建对 `GeneratePDFServiceClient.Endpoint.Binding` 象。 将返回值转换为 `BasicHttpBinding`。
    * 将对 `System.ServiceModel.BasicHttpBinding` 象的字段 `MessageEncoding` 设置为 `WSMessageEncoding.Mtom`。 此值确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 通过执行以下任务，启用基本HTTP身份验证：
 
       * 将AEM表单用户名分配给字段 `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`。
       * 为字段分配相应的口令值 `GeneratePDFServiceClient.ClientCredentials.UserName.Password`。
@@ -219,7 +219,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 1. 将文件转换为PDF文档。
 
-   通过调用对象的方法并传递以 `GeneratePDFServiceService` 下值，将文 `CreatePDF2` 件转换为PDF文档：
+   通过调用对象的方法并传递以 `GeneratePDFServiceService` 下值，将文 `CreatePDF2` 件转换为PDF文档:
 
    * 表示 `BLOB` 要转换的文件的对象。
    * 包含文件扩展名的字符串。
@@ -229,12 +229,12 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    * 可选对 `BLOB` 象，其中包含在生成PDF文档时要应用的设置。
    * 一个可 `BLOB` 选对象，其中包含要应用于PDF文档的元数据信息。
    * 由该方法填充 `BLOB` 的输出参数类型 `CreatePDF2` 。 该方 `CreatePDF2` 法使用转换的文档填充此对象。 （此参数值仅对于Web服务调用是必需的）。
-   * 由该方法填充 `BLOB` 的输出参数类型 `CreatePDF2` 。 该方法 `CreatePDF2` 使用日志文档填充此对象。 （此参数值仅对于Web服务调用是必需的）。
+   * 由该方法填充 `BLOB` 的输出参数类型 `CreatePDF2` 。 该方 `CreatePDF2` 法使用日志文档填充此对象。 （此参数值仅对于Web服务调用是必需的）。
 
 1. 检索结果。
 
-   * 通过将对象的字段指定给字 `BLOB` 节数组来检 `MTOM` 索转换的PDF文档。 字节数组表示转换的PDF文档。 确保使用 `BLOB` 用作方法输出参数的对 `createPDF2` 象。
-   * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个表示已转换PDF文档的文件位置的字符串值来创建对象。
+   * 通过将对象的字段指定给字节数 `BLOB` 组，检索转 `MTOM` 换的PDF文档。 字节数组表示转换的PDF文档。 确保使用 `BLOB` 用作方法输出参数的对 `createPDF2` 象。
+   * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个表示已转换的PDF文档的文件位置的字符串值来创建对象。
    * 通过调 `System.IO.BinaryWriter` 用对象的构造函数并传递该对 `System.IO.FileStream` 象来创建。
    * 通过调用对象的方法并传递字节数组，将字 `System.IO.BinaryWriter` 节数组的内 `Write` 容写入PDF文件。
 
@@ -256,7 +256,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ### 步骤摘要 {#summary_of_steps-1}
 
-要将HTML文档转换为PDF文档，请执行以下任务：
+要将HTML文档转换为PDF文档，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建“生成PDF”客户端。
@@ -290,15 +290,15 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 [使用Web服务API将HTML内容转换为PDF文档](converting-file-formats-pdf.md#convert-html-content-to-a-pdf-document-using-the-web-service-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[生成PDF Service API快速入门](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
+[生成PDF Service API快速开始](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
 
 ### 使用Java API将HTML内容转换为PDF文档 {#convert-html-content-to-a-pdf-document-using-the-java-api}
 
-使用“生成PDF API”(Java)将HTML文档转换为PDF文档：
+使用“生成PDF API(Java)”将HTML文档转换为PDF文档:
 
 1. 包括项目文件。
 
@@ -333,17 +333,17 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 [将HTML文档转换为PDF文档](converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)
 
-[快速入门（SOAP模式）:使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ### 使用Web服务API将HTML内容转换为PDF文档 {#convert-html-content-to-a-pdf-document-using-the-web-service-api}
 
-使用“生成PDF API”（Web服务）将HTML内容转换为PDF文档：
+使用“生成PDF API”（Web服务）将HTML内容转换为PDF文档:
 
 1. 包括项目文件。
 
@@ -359,7 +359,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    * 使用构 `GeneratePDFServiceClient.Endpoint.Address` 造函数创建对 `System.ServiceModel.EndpointAddress` 象。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.)您无需使用该属 `lc_version` 性。 但是，请指 `?blob=mtom`定。
    * 通过 `System.ServiceModel.BasicHttpBinding` 获取字段的值创建对 `GeneratePDFServiceClient.Endpoint.Binding` 象。 将返回值转换为 `BasicHttpBinding`。
    * 将对 `System.ServiceModel.BasicHttpBinding` 象的字段 `MessageEncoding` 设置为 `WSMessageEncoding.Mtom`。 此值确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 通过执行以下任务，启用基本HTTP身份验证：
 
       * 将AEM表单用户名分配给字段 `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`。
       * 为字段分配相应的口令值 `GeneratePDFServiceClient.ClientCredentials.UserName.Password`。
@@ -372,7 +372,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 1. 将HTML内容转换为PDF文档。
 
-   通过调用对象的方法将HTML内容转换为PDF `GeneratePDFServiceService` 文档并 `HtmlToPDF2` 传递以下值：
+   通过调用对象的方法将HTML内容转换为PDF文档, `GeneratePDFServiceService` 并传递 `HtmlToPDF2` 以下值：
 
    * 包含要转换的HTML内容的字符串。
    * 包含 `java.lang.String` 要在转换中使用的文件类型设置的对象。
@@ -383,8 +383,8 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 1. 检索结果。
 
-   * 通过将对象的字段指定给字 `BLOB` 节数组来检 `MTOM` 索转换的PDF文档。 字节数组表示转换的PDF文档。 确保使用 `BLOB` 用作方法输出参数的对 `HtmlToPDF2` 象。
-   * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个表示已转换PDF文档的文件位置的字符串值来创建对象。
+   * 通过将对象的字段指定给字节数 `BLOB` 组，检索转 `MTOM` 换的PDF文档。 字节数组表示转换的PDF文档。 确保使用 `BLOB` 用作方法输出参数的对 `HtmlToPDF2` 象。
+   * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个表示已转换的PDF文档的文件位置的字符串值来创建对象。
    * 通过调 `System.IO.BinaryWriter` 用对象的构造函数并传递该对 `System.IO.FileStream` 象来创建。
    * 通过调用对象的方法并传递字节数组，将字 `System.IO.BinaryWriter` 节数组的内 `Write` 容写入PDF文件。
 
@@ -398,7 +398,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ## 将PDF文档转换为非图像格式 {#converting-pdf-documents-to-non-image-formats}
 
-本节介绍如何使用“生成PDF Java API”和“Web服务API”以编程方式将PDF文档转换为RTF文件，该文件是非图像格式的一个示例。 其他非图像格式包括HTML、文本、DOC和EPS。 将PDF文档转换为RTF时，请确保PDF文档不包含表单元素，如提交按钮。 表单元素不会转换。
+本节介绍如何使用“生成PDF Java API”和“Web服务API”以编程方式将PDF文档转换为RTF文件（非图像格式的示例）。 其他非图像格式包括HTML、文本、DOC和EPS。 将PDF文档转换为RTF时，请确保PDF文档不包含表单元素，如提交按钮。 表单元素不会转换。
 
 >[!NOTE]
 >
@@ -440,15 +440,15 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 [使用Web服务API将PDF文档转换为RTF文件](converting-file-formats-pdf.md#convert-a-pdf-document-to-a-rtf-file-using-the-web-service-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[生成PDF Service API快速入门](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
+[生成PDF Service API快速开始](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
 
 ### 使用Java API将PDF文档转换为RTF文件 {#convert-a-pdf-document-to-a-rtf-file-using-the-java-api}
 
-使用“生成PDF API”(Java)将PDF文档转换为RTF文件：
+使用“生成PDF API(Java)”将PDF文档转换为RTF文件：
 
 1. 包括项目文件。
 
@@ -460,8 +460,8 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 1. 检索要转换的PDF文档。
 
-   * 创建一 `java.io.FileInputStream` 个对象，该对象使用其构造函数表示要转换的PDF文档。 传递指定PDF文档位置的字符串值。
-   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对 `java.io.FileInputStream` 象。
+   * 创建一 `java.io.FileInputStream` 个对象，它使用其构造函数表示要转换的PDF文档。 传递一个指定PDF文档位置的字符串值。
+   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对象来创建 `java.io.FileInputStream` 对象。
 
 1. 转换PDF文档。
 
@@ -470,7 +470,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    * 表示 `com.adobe.idp.Document` 要转换的PDF文件的对象。
    * 包 `java.lang.String` 含要转换的文件名称的对象。
    * 包 `java.lang.String` 含Adobe PDF设置名称的对象。
-   * 指定 `ConvertPDFFormatType` 转换的目标文件类型的对象。
+   * 一个 `ConvertPDFFormatType` 对象，它指定转换的目标文件类型。
    * 可选对 `com.adobe.idp.Document` 象，其中包含在生成PDF文档时要应用的设置。
    该方 `exportPDF2` 法返回一个 `ExportPDFResult` 包含已转换文件的对象。
 
@@ -479,15 +479,15 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    要获取新创建的文件，请执行以下操作：
 
    * 调用 `ExportPDFResult` 对象的方 `getConvertedDocument` 法。 这将返回一个 `com.adobe.idp.Document` 对象。
-   * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法以提取新文档。
+   * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法提取新文档。
 
 **另请参阅**
 
 [步骤摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入门（SOAP模式）:使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -509,7 +509,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    * 使用构 `GeneratePDFServiceClient.Endpoint.Address` 造函数创建对 `System.ServiceModel.EndpointAddress` 象。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.)您无需使用该属 `lc_version` 性。 但是，请指 `?blob=mtom`定。
    * 通过 `System.ServiceModel.BasicHttpBinding` 获取字段的值创建对 `GeneratePDFServiceClient.Endpoint.Binding` 象。 将返回值转换为 `BasicHttpBinding`。
    * 将对 `System.ServiceModel.BasicHttpBinding` 象的字段 `MessageEncoding` 设置为 `WSMessageEncoding.Mtom`。 此值确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 通过执行以下任务，启用基本HTTP身份验证：
 
       * 将AEM表单用户名分配给字段 `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`。
       * 为字段分配相应的口令值 `GeneratePDFServiceClient.ClientCredentials.UserName.Password`。
@@ -531,7 +531,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
    * 表示 `BLOB` 要转换的PDF文件的对象。
    * 包含要转换的文件路径名的字符串。
    * 指定 `java.lang.String` 文件位置的对象。
-   * 一个字符串对象，它指定转换的目标文件类型。 指定 `RTF`。
+   * 一个字符串对象，它指定用于转换的目标文件类型。 指定 `RTF`。
    * 可选对 `BLOB` 象，其中包含在生成PDF文档时要应用的设置。
    * 由该方法填充 `BLOB` 的输出参数类型 `ExportPDF2` 。 该方 `ExportPDF2` 法使用转换的文档填充此对象。 （此参数值仅对于Web服务调用是必需的）。
 
@@ -562,15 +562,15 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 ### 组件交互 {#component-interactions}
 
-“生成PDF”服务通过调用与文件格式关联的应用程序，然后与应用程序交互，以使用默认打印机打印文档，来转换本机文件格式。 默认打印机必须设置为Adobe PDF打印机。
+“生成PDF”服务通过调用与文件格式关联的应用程序，然后与应用程序交互以使用默认打印机打印文档，来转换本机文件格式。 默认打印机必须设置为Adobe PDF打印机。
 
 此插图显示了与本机应用程序支持相关的组件和驱动程序。 它还提到影响交互的XML文法。
 
 用于本机文件转换的组件交互
 
-本文档使用术语“ *本机应用程序* ”来指示用于生成本机文件格式（如Microsoft Word）的应用程序。
+此文档使用术语 *本机应用程序* ，以指示用于生成本机文件格式的应用程序，如Microsoft Word。
 
-*AppMon是一个企业组件，它与本机应用程序交互的方式与用户在该应用程序显示的对话框中导航的方式相同。* AppMon用来指示应用程序（如Microsoft Word）打开和打印文件的XML文法涉及以下顺序任务：
+*AppMon是一个企业组件，它与本机应用程序交互的方式与用户在该应用程序显示的对话框中导航的方式相同。* AppMon用来指示应用程序（如Microsoft Word）打开和打印文件的XML文法包含以下顺序任务:
 
 1. 通过选择“文件”>“打开”打开文件
 1. 确保显示“打开”对话框；如果不是，则处理错误
@@ -581,13 +581,13 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 
 AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件，如按键和鼠标单击，这对于控制这些应用程序从它们生成PDF文件非常有用。
 
-由于这些Win32 API的限制，AppMon无法将这些UI事件调度到某些特定类型的窗口，如浮动菜单栏（在某些应用程序如TextPad中可找到）和某些类型的对话框，这些对话框的内容无法使用Win32 API检索。
+由于这些Win32 API的限制，AppMon无法将这些UI事件分派到某些特定类型的窗口，如浮动菜单栏（在某些应用程序中如TextPad）和某些类型的对话框，这些对话框的内容无法使用Win32 API检索。
 
-可以很容易地以可视方式识别浮动菜单栏；但是，可能无法仅通过视觉检查来识别特殊类型的对话框。 您需要第三方应用程序(如Microsoft Spy++（Microsoft Visual C++开发环境的一部分）或其等效的WinID(可免费从 [https://www.dennisbabkin.com/php/download.php?what=WinID下载](https://www.dennisbabkin.com/php/download.php?what=WinID))来检查对话框以确定AppMon是否能够使用标准Win32 API与它交互。
+可以很容易地以可视方式识别浮动菜单栏；但是，可能无法仅通过视觉检查来识别特殊类型的对话框。 您需要第三方应用程序(如Microsoft Spy++(Microsoft Visual C++开发环境的一部分)或其等效的WinID(可免费从 [https://www.dennisbabkin.com/php/download.php?what=WinID下载](https://www.dennisbabkin.com/php/download.php?what=WinID))来检查对话框以确定AppMon是否能够使用标准Win32 API与它交互。
 
 如果WinID能够提取对话框内容，如文本、子窗口、窗口类ID等，那么AppMon也可以提取这些内容。
 
-下表列出了打印本机文件格式时使用的信息类型。
+此表列表了打印本机文件格式时使用的信息类型。
 
 <table>
  <thead>
@@ -615,12 +615,12 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
   </tr>
   <tr>
    <td><p>特定于应用程序的对话框说明</p></td>
-   <td><p>指定如何响应特定于应用程序的对话框。 </p><p>包含此信息的文件是appmon。<i>[appname]</i>.dialog。<i>[locale]</i>.xml（例如，appmon.word.en_US.xml）。</p></td>
+   <td><p>指定如何响应特定于应用程序的对话框。 </p><p>包含此信息的文件是appmon。<i>“[appname]”“</i>.dialog。<i>“[locale]`</i>.xml（例如，appmon.word.en_US.xml）。</p></td>
    <td><p>请勿修改此文件。 </p><p>要为新的本机应用程序添加对话框说明，请参 <a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">阅为本机应用程序创建或修改其他对话框XML文件</a>。</p></td>
   </tr>
   <tr>
    <td><p>其他特定于应用程序的对话框说明 </p></td>
-   <td><p>指定对特定于应用程序的对话框说明的覆盖和添加。 本节提供了此类信息的示例。 </p><p>包含此信息的文件是appmon。<i>[appname]</i>.addition.<i>[locale]</i>.xml. 一个示例是appmon.addition.en_US.xml。</p></td>
+   <td><p>指定对特定于应用程序的对话框说明的覆盖和添加。 本节提供了此类信息的示例。 </p><p>包含此信息的文件是appmon。<i>“[appname]”</i>.addition。<i>“[区域设置]”</i>.xml。 一个示例是appmon.addition.en_US.xml。</p></td>
    <td><p>可以使用XML编辑应用程序创建和修改此类文件。 (请参 <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">阅为本机应用程序创建或修改其他对话框XML文件</a>。) </p><p><strong>重要说明</strong>:您必须为您的服务器将支持的每个本机应用程序创建其他特定于应用程序的对话框说明。 </p></td>
   </tr>
  </tbody>
@@ -636,7 +636,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 本节和下一节对对话框及其包含的组件使用不同的术语，具体取决于所描述的透视图。 对话框组件是按钮、字段和组合框等项。
 
-从用户的角度，本节和下一节介绍对话框及其组件时，会使用对 *话框*、 *按钮*、 *字段*、 ** 组合框等术语。
+从用户的角度，本节和下一节介绍对话框及其组件时，会使用对 *话框*、 *button*、 *field*、 ** combobox等术语。
 
 从对话框及其内部表示的角度来说，本部分和下一部分描述对话框及其组件时，将使 *用术语窗口元素* 。 窗口元素的内部表示是层次结构，其中每个窗口元素实例都由标签标识。 窗口元素实例还描述了其物理特性和行为。
 
@@ -646,7 +646,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 #### 层次结构 {#hierarchy}
 
-此图显示了脚本和对话框XML的层次结构。 脚本XML文件符合script.xsd架构，从XML意义上讲，该架构包括window.xsd架构。 同样，对话框XML文件符合dialogs.xsd架构，该架构还包括window.xsd架构。
+此图显示了脚本和对话框XML的层次结构。 脚本XML文件符合script.xsd模式，从XML意义上讲，该模式包括window.xsd。 同样，对话框XML文件符合dialogs.xsd模式，该模式还包括window.xsd。
 
 ![as_as_xml_hierarchy](assets/as_as_xml_hierarchy.png)
 
@@ -656,9 +656,9 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 脚 *本XML文件指定了一系列步骤* ，这些步骤引导本机应用程序导航到某些窗口元素，然后为这些元素提供响应。 大多数响应是文本或按键，这些文本或按键与用户向相应对话框中的字段、组合框或按钮提供的输入相对应。
 
-“生成PDF”服务对脚本XML文件的支持旨在引导本机应用程序打印本机文件。 但是，脚本XML文件可用于完成用户与本机应用程序对话框交互时可以执行的任何任务。
+“生成PDF”服务对脚本XML文件的支持旨在引导本机应用程序打印本机文件。 但是，脚本XML文件可用于完成用户与本机应用程序对话框交互时可执行的任何任务。
 
-脚本XML文件中的步骤按顺序执行，没有任何分支机会。 支持的唯一条件测试是超时／重试，如果某个步骤在特定时间段内和在特定的重试次数之后未成功完成，则会导致脚本终止。
+脚本XML文件中的步骤按顺序执行，没有任何分支机会。 支持的唯一条件测试是超时／重试，如果某个步骤在特定时间段内和在特定数量的重试之后未成功完成，则会导致脚本终止。
 
 除了顺序的步骤之外，步骤内的指令也按顺序执行。 您必须确保步骤和说明反映用户执行这些相同步骤的顺序。
 
@@ -672,9 +672,9 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 当系统或本机应用程序显示的对话框不由当前正在执行的脚本XML文件处理时，“生成PDF”服务将按此顺序搜索对话框XML文件，当它找到匹配项时停止：
 
-* appmon。*[appname]*.additional.*[locale]*.xml
-* appmon。*[appname]。[locale]*.xml（请勿修改此文件。）
-* appmon.global.*[locale]*.xml（请勿修改此文件。）
+* appmon。`[appname]`.additional.`[locale]`.xml
+* appmon。`[appname]`.`[locale]`.xml（请勿修改此文件。）
+* appmon.global.`[locale]`.xml（请勿修改此文件。）
 
 如果“生成PDF”服务找到对话框的匹配项，则会通过发送为对话框指定的按键或其他操作将其取消。 如果对话框的说明指定了中止消息，则“生成PDF”服务将终止当前正在执行的作业并生成错误消息。 将在脚本XML语法的元素中 `abortMessage` 指定此类中止消息。
 
@@ -702,8 +702,8 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 请注意以下问题：
 
-* Microsoft Spy+&#x200B;+通过使用&amp;符号(&amp;)来标识字幕的热键来显示字幕。 例如，Spy+&#x200B;+将一个“打印”对话框的标题显示为， `Pri&nt`这表示热键为 *n*。 脚本和对话框XML文件中的字幕标题必须忽略&amp;符号。
-* 某些字幕包括换行符。 “生成PDF”服务无法识别换行符。 如果题注包含换行符，则包含足够的题注以将其与其他菜单项区分开，然后对省略的部分使用正则表达式。 例如( `^Long caption title$`)。]. (请参阅 [在题注属性中使用正则表达式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
+* Microsoft Spy++通过使用&amp;符号(&amp;)来标识字幕的热键来显示字幕。 例如，Spy++将一个“打印”对话框的标题显示为， `Pri&nt`表示热键为 *n*。 脚本和对话框XML文件中的字幕标题必须忽略&amp;符号。
+* 某些字幕包括换行符。 “生成PDF”服务无法识别换行符。 如果题注包含换行符，则包含足够的题注以将其与其他菜单项区分开，然后对省略的部分使用常规表达式。 例如( `^Long caption title$`)。]. (请参阅 [在题注属性中使用常规表达式](converting-file-formats-pdf.md#using-regular-expressions-in-caption-attributes)。)
 * 对保留的XML字符使用字符实体（也称为转义序列）。 例如，对于 `&` “和”, `<` 对于“ `>` 小于”和“大于”符号， `&apos;` 对于撇号和 `&quot;` 引号。
 
 如果您计划处理对话框或脚本XML文件，则应安装应用程序Microsoft Spy++。
@@ -715,7 +715,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 * adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.ear文件位于的导出文件夹中 `[AEM forms install directory]\configurationManager`。 （如果AEM Forms部署在另一台J2EE应用程序服务器上，请将adobe-livecycle-native-jboss-x86_win32.ear文件替换为与您的J2EE应用程序服务器对应的EAR文件。）
 * adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar文件位于adobe-generatepdf-dsc.jar文件中）。 adobe-generatepdf-dsc.jar文件在文件夹中 `[AEM forms install directory]\deploy` 。
 
-将这些XML文件添加到adobe-appmondata.jar文件后，必须重新部署GeneratePDF组件。 要将对话框和脚本XML文件添加到adobe-appmondata.jar文件，请执行以下任务：
+将这些XML文件添加到adobe-appmondata.jar文件后，必须重新部署GeneratePDF组件。 要将对话框和脚本XML文件添加到adobe-appmondata.jar文件，请执行以下任务:
 
 1. 使用WinZip或WinRAR等工具，打开adobe-livecycle-native-jboss-x86_win32.earfile > adobe-Native2PDFSvc.war\WEB-INF\lib >adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar文件。
 1. 将对话框和脚本XML文件添加到appmondata.jar文件中，或修改此文件中的现有XML文件。 (请参 [阅为本机应用程序创建或修改脚本XML文](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)件和 [为本机应用程序创建或修改其他对话框XML文件](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。)
@@ -726,22 +726,22 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 **重新部署GeneratePDF组件**
 
 1. 登录到Workbench。
-1. 选择 **窗口** >显 **示视图** > **组件**。 此操作会将“组件”视图添加到Workbench。
+1. 选择 **窗口** >显 **示视图** > **组件**。 此操作会将组件视图添加到工作台。
 1. 右键单击“生成PDF”组件，然后选择“停 **止组件”**。
 1. 当组件停止时，右键单击并选择“卸载组件”将其删除。
 1. 右键单击“组件 **”图标** ，然后选择 **安装组件**。
 1. 浏览并选择修改后的adobe-generatepdf-dsc.jar文件，然后单击“打开”。 请注意，“生成PDF”组件旁边会显示一个红方。
 1. 展开GeneratePDF组件，选择“服务描述符”，然后右键单击“生成PDF服务”，然后选择“激活服务”。
 1. 在出现的配置对话框中，输入适用的配置值。 如果将这些值留空，则使用默认配置值。
-1. 右键单击“生成PDF”，然后选择“启动组件”。
+1. 右键单击“生成PDF”，然后选择“开始组件”。
 1. 展开活动服务。 如果服务名称正在运行，则该服务名称旁边将显示绿色箭头。 否则，服务处于停止状态。
-1. 如果服务处于停止状态，请右键单击服务名称，然后选择“启动服务”。
+1. 如果服务处于停止状态，请右键单击服务名称，然后选择“开始服务”。
 
 ### 为本机应用程序创建或修改脚本XML文件 {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 如果要将文件定向到新的本机应用程序，则必须为该应用程序创建一个脚本XML文件。 如果要修改生成PDF服务与已支持的本机应用程序交互的方式，则必须修改该应用程序的脚本。
 
-该脚本包含在本机应用程序的窗口元素之间导航的说明，这些说明为这些元素提供特定的响应。 包含此信息的文件为 `appmon.[appname]``.script.[locale].xml`。 例如appmon.notepad.script.en_US.xml。
+该脚本包含在本机应用程序的窗口元素之间导航的说明，这些说明为这些元素提供特定的响应。 包含此信息的文件是 `appmon.`[appname]&quot; `.script.`[locale]`.xml`。 例如appmon.notepad.script.en_US.xml。
 
 #### 确定脚本必须执行的步骤 {#identifying-steps-the-script-must-execute}
 
@@ -757,11 +757,11 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 使用Microsoft Spy++获取本机应用程序中窗口元素属性的标识。 您必须具有这些身份才能编写脚本。
 
-#### 在题注属性中使用正则表达式 {#using-regular-expressions-in-caption-attributes}
+#### 在题注属性中使用常规表达式 {#using-regular-expressions-in-caption-attributes}
 
-您可以在题注规范中使用正则表达式。 “生成PDF”服务使用 `java.util.regex.Matcher` 类支持正则表达式。 该实用程序支持中所述的正则表达式 `java.util.regex.Pattern`。 (请访问Java网站： [https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html](https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html)。)
+您可以在题注规范中使用常规表达式。 “生成PDF”服务使用 `java.util.regex.Matcher` 类支持常规表达式。 该实用程序支持中所述的常规表达式 `java.util.regex.Pattern`。 (请访问Java网站： [https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html](https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html)。)
 
-**在记事本横幅中，包含前置于记事本中的文件名的正则表达式**
+**在记事本横幅中，包含前缀于记事本的文件名的常规表达式**
 
 ```as3
  <!-- The regular expression ".*Notepad" means any number of non-terminating characters followed by Notepad. -->
@@ -772,7 +772,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
  </step>
 ```
 
-**区分打印与打印设置的正则表达式**
+**常规表达式区分打印和打印设置**
 
 ```as3
  <!-- This regular expression differentiates the Print dialog box from the Print Setup dialog box. The "^" specifies the beginning of the line, and the "$" specifies the end of the line. -->
@@ -785,7 +785,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 您必须按如 `window` 下方式 `windowList` 订购和元素：
 
-* 当多个 `window` 元素在某个或元素中显示为子元素时， `windowList` 请按降序排列这些元素，其名称的长 `dialog``window``caption` 度表示该顺序中的位置。
+* 当多个 `window` 元素在某个或元素中显示为子元素时， `windowList` 请按降序顺序排列这些元素，其名称的长 `dialog``window``caption` 度表示该顺序中的位置。
 * 当元素 `windowList` 中出现多个元素时， `window` 请按降序排列这些元素，第一个元素的属 `windowList` 性的长度表示该 `caption``indexes/`顺序中的位置。
 
 **将窗口元素排序到对话框文件中**
@@ -832,11 +832,11 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 ### 为本机应用程序创建或修改其他对话框XML文件 {#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application}
 
-如果为以前不支持的本机应用程序创建脚本，则还必须为该应用程序创建额外的对话框XML文件。 AppMon使用的每个本机应用程序必须只有一个额外的对话框XML文件。 即使不需要主动提供的对话框，也需要额外的对话框XML文件。 附加的对话框必须至少具有一个元 `window` 素，即使该元素仅 `window` 是一个占位符。
+如果为以前不支持的本机应用程序创建脚本，则还必须为该应用程序创建额外的对话框XML文件。 AppMon使用的每个本机应用程序必须只有一个额外的对话框XML文件。 即使不需要主动提供的对话框，也需要额外的对话框XML文件。 附加的对话框必须至少有一个元 `window` 素，即使该元素只是 `window` 一个占位符。
 
 >[!NOTE]
 >
->在此上下文中，术语“附加”表示文件的内 `appmon.[applicationname].addition.[locale].xml` 容。 这样的文件会指定对话框XML文件的覆盖和添加。
+>在此上下文中，术语“附加”指 `appmon.[applicationname].addition.[locale]`.xml”文件的内容。 这样的文件会指定对话框XML文件的覆盖和添加。
 
 您还可以出于以下目的为本机应用程序修改额外的对话框XML文件：
 
@@ -859,7 +859,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 #### 在XML配置文件中添加文件类型条目 {#adding-a-filetype-entry-in-the-xml-configuration-file}
 
-此过程介绍如何更新“生成PDF”服务配置文件，以将文件类型与本机应用程序关联。 要更新此配置文件，必须使用管理控制台将配置数据导出到文件。 配置数据的默认文件名为native2pdfconfig.xml。
+此过程介绍如何更新生成PDF服务配置文件以将文件类型与本机应用程序关联。 要更新此配置文件，必须使用管理控制台将配置数据导出到文件。 配置数据的默认文件名为native2pdfconfig.xml。
 
 **更新“生成PDF”服务配置文件**
 
@@ -869,9 +869,9 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 >[!NOTE]
 >
->应用程序的名称被指定为元素属 `GenericApp` 性的 `name` 值。 此值必须与为该应用程序开发的脚本中指定的相应名称完全匹配。 同样，元 `GenericApp` 素的属性 `displayName` 应与相应脚本的窗口题注完全 `expectedWindow` 匹配。 在解析任何出现在或属性中的正则表达式后，将计算这 `displayName` 种等 `caption` 价性。
+>应用程序的名称被指定为元素属 `GenericApp` 性的 `name` 值。 此值必须与为该应用程序开发的脚本中指定的相应名称完全匹配。 同样，元 `GenericApp` 素的属性 `displayName` 应与相应脚本的窗口题注完全 `expectedWindow` 匹配。 在解析出现在或属性中的任何常规表达式后，将评估此 `displayName` 等价 `caption` 关系。
 
-在此示例中，修改了随“生成PDF”服务提供的默认配置数据，以指定应使用记事本（而非Microsoft Word）处理文件扩展名为。txt的文件。 在此修改之前，将Microsoft word指定为应处理此类文件的本机应用程序。
+在此示例中，修改了随“生成PDF”服务提供的默认配置数据，以指定应使用记事本（而非Microsoft Word）处理文件扩展名为。txt的文件。 在此修改之前，将Microsoft Word指定为应处理此类文件的本机应用程序。
 
 **将文本文件定向到记事本的修改(native2pdfconfig.xml)**
 
@@ -898,17 +898,17 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
 #### 创建环境变量以定位本机应用程序 {#creating-an-environment-variable-to-locate-the-native-application}
 
-创建一个环境变量，它指定本机应用程序可执行文件的位置。 变量必须使用格式 `[applicationname]_PATH`，其中 *applicationname* 必须与XML配置文件和脚本中使用的应用程序名称完全匹配，并且路径包含双引号中可执行文件的路径。 这样的环境变量的一个示例是 `Photoshop_PATH`。
+创建一个环境变量，它指定本机应用程序可执行文件的位置。 变量必须使用格式 `[applicationname]_PATH`，其中 *applicationname* 必须与XML配置文件和脚本中使用的应用程序名称完全匹配，并且路径包含以多次引号表示的可执行文件的路径。 这样的环境变量的示例是 `Photoshop_PATH`。
 
-创建新环境变量后，必须重新启动部署了“生成PDF”服务的服务器。
+创建新的环境变量后，必须重新启动部署了“生成PDF”服务的服务器。
 
 **在Windows XP环境中创建系统变量**
 
 1. 选择“ **控制面板”>“系统**”。
-1. 在“系统属性”对话框中，单击“高 **级** ”选项卡，然后单击“环 **境变量”**。
+1. 在“系统属性”对话框中，单击“高 **级** ”选项卡，然后单击“ **环境变量”**。
 1. 在“环境变量”对话框的“系统变量”下，单击“新 **建”**。
 1. 在“新建系统变量”对话框的“变 **量名称** ”框中，键入使用格式的名称 `[applicationname]_PATH`。
-1. 在“变 **量值** ”框中，键入应用程序可执行文件的完整路径和文件名，然后单击“确 **定”**。 例如，类型： `c:\windows\Notepad.exe`
+1. 在“变 **量值** ”(Variable value)框中，键入应用程序可执行文件的完整路径和文件名，然后单击“确 **定”(OK)**。 例如，类型： `c:\windows\Notepad.exe`
 1. 在“环境变量”对话框中，单击“确 **定”**。
 
 **从命令行创建系统变量**
@@ -921,7 +921,7 @@ AppMon使用标准Win32 API与第三方应用程序交互，以便传输UI事件
 
    例如，类型： `NotePad_PATH=C:\WINDOWS\NOTEPAD.EXE`
 
-1. 启动新的命令行提示以使系统变量生效。
+1. 开始新的命令行提示，使系统变量生效。
 
 #### XML文件 {#xml-files}
 
