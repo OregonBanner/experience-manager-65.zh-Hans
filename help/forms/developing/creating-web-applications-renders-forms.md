@@ -1,6 +1,6 @@
 ---
-title: 创建呈现表单的Web应用程序
-seo-title: 创建呈现表单的Web应用程序
+title: 创建呈现表单的Web 应用程序
+seo-title: 创建呈现表单的Web 应用程序
 description: 'null'
 seo-description: 'null'
 uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
@@ -11,14 +11,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 创建呈现表单的Web应用程序 {#creating-web-applications-thatrenders-forms}
+# 创建呈现表单的Web 应用程序 {#creating-web-applications-thatrenders-forms}
 
-## 创建呈现表单的Web应用程序 {#creating-web-applications-that-renders-forms}
+## 创建呈现表单的Web 应用程序 {#creating-web-applications-that-renders-forms}
 
 您可以创建一个基于Web的应用程序，该应用程序使用Java Servlet调用Forms服务和呈现表单。 使用Java™ servlet的一个优点是可以将进程的返回值写入客户端Web浏览器。 即，Java servlet可用作返回表单的Forms服务与客户端Web浏览器之间的链接。
 
@@ -26,7 +26,7 @@ source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
 >
 >本节介绍如何创建基于Web的应用程序，该应用程序使用调用Forms服务的Java servlet并基于片段呈现表单。 (请参 [阅基于片段渲染表单](/help/forms/developing/rendering-forms-based-fragments.md)。)
 
-使用Java Servlet，您可以将表单写入客户端Web浏览器，以便客户可以查看表单并在表单中输入数据。 使用数据填充表单后，Web用户单击表单上的提交按钮，将信息发回Java servlet，在Java Servlet中可以检索和处理数据。 例如，数据可以发送到另一个进程。
+使用Java Servlet，您可以将表单写入客户端Web浏览器，以便客户能够视图并在表单中输入数据。 使用数据填充表单后，Web用户单击表单上的提交按钮，将信息发回Java servlet，在Java Servlet中可以检索和处理数据。 例如，数据可以发送到另一个进程。
 
 本节讨论如何创建基于Web的应用程序，该应用程序使用户能够选择基于美国的表单数据或基于加拿大的表单数据，如下图所示。
 
@@ -79,7 +79,7 @@ Web应用程序使用的XML数据文件已从“数据”文件夹移至 `C:\Ado
 
 ### 创建Web项目 {#creating-a-web-project}
 
-创建包含Java servlet的Web应用程序（可调用Forms服务）的第一步是创建新的Web项目。 此文档所基于的Java IDE是Eclipse 3.3。使用Eclipse IDE，创建一个Web项目并将所需的JAR文件添加到您的项目。 最后，将名为 *index.html* 的HTML页和Java servlet添加到项目。
+创建包含Java servlet的Web应用程序（可调用Forms服务）的第一步是创建新的Web项目。 此文档所基于的Java IDE是Eclipse 3.3。使用Eclipse IDE，创建一个Web项目并将所需的JAR文件添加到您的项目。 最后，将名为 *index.html* 的HTML页和Java servlet添加到项目中。
 
 以下列表指定了必须添加到Web项目的JAR文件：
 
@@ -88,11 +88,11 @@ Web应用程序使用的XML数据文件已从“数据”文件夹移至 `C:\Ado
 * adobe-usermanager-client.jar
 * adobe-utilities.jar
 
-有关这些JAR文件的位置，请参 [阅包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+有关这些JAR文件的位置，请参 [阅包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 **要创建Web项目，请执行以下操作：**
 
-1. 启动Eclipse，然后单击“ **文件** ”>“ **新建项目”**。
+1. 开始Eclipse，然后单击“ **文件** ”>“ **新建项目”**。
 1. 在“新 **建项目** ”对话框中，选择“ **Web** ” **>“**&#x200B;动态Web项目”。
 1. 键入 `FragmentsWebApplication` 项目名称，然后单击“完 **成”**。
 
@@ -120,7 +120,7 @@ Web应用程序使用的XML数据文件已从“数据”文件夹移至 `C:\Ado
 
 ### 创建Servlet的Java应用程序逻辑 {#creating-java-application-logic-for-the-servlet}
 
-您可以创建从Java servlet内调用Forms服务的Java应用程序逻辑。 以下代码显示了 `RenderFormFragment` Java servlet的语法：
+您可以创建从Java servlet内调用Forms服务的Java应用程序逻辑。 以下代码显示了 `RenderFormFragment` Java Servlet的语法：
 
 ```as3
      public class RenderFormFragment extends HttpServlet implements Servlet {
@@ -137,10 +137,10 @@ Web应用程序使用的XML数据文件已从“数据”文件夹移至 `C:\Ado
 
 通常，您不会将客户端代码放在Java servlet或方 `doGet` 法中 `doPost` 。 一个更好的编程实践是将此代码放在一个单独的类中，从该方法（或方法）中实 `doPost` 例化该类，并调 `doGet` 用相应的方法。 但是，对于代码简单性，本节中的代码示例将保持为最小值，并且代码示例将放在方法中 `doPost` 。
 
-要使用Forms服务API渲染基于片段的表单，请执行以下任务：
+要使用Forms服务API渲染基于片段的表单，请执行以下任务:
 
-1. 在Java项目的类路径中包含客户端JAR文件，如adobe-forms-client.jar。 有关这些文件的位置的信息，请参 [阅包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
-1. 检索从HTML表单提交的单选按钮的值，并指定是使用美国数据还是加拿大数据。 如果提交了American，请创建一 `com.adobe.idp.Document` 个存储Purchase Order US.xml中 *的数据的库*。 同样，如果是加拿大人，则创 `com.adobe.idp.Document` 建一个存储 *Purchase Order Canada.xml文件中的数据* 。
+1. 在Java项目的类路径中包含客户端JAR文件，如adobe-forms-client.jar。 有关这些文件的位置的信息，请参 [阅包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+1. 检索从HTML表单提交的单选按钮的值，并指定是使用美国数据还是加拿大数据。 如果提交了American，请创建一 `com.adobe.idp.Document` 个存储Purchase Order US.xml中 *的数据的库*。 同样，如果是加拿大人，则创建 `com.adobe.idp.Document` 一个存储 *Purchase Order Canada.xml文件中的数据* 。
 1. 创建包 `ServiceClientFactory` 含连接属性的对象。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
 1. 使用对 `FormsServiceClient` 象的构造函数并传递该对 `ServiceClientFactory` 象。
 1. 使用 `URLSpec` 其构造函数创建存储URI值的对象。
@@ -219,7 +219,7 @@ Web应用程序使用的XML数据文件已从“数据”文件夹移至 `C:\Ado
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -258,9 +258,9 @@ Web应用程序使用的XML数据文件已从“数据”文件夹移至 `C:\Ado
              //Specify URI values that are required to render a form
              //design based on fragments
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/RenderFormFragment");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/RenderFormFragment");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
              //Invoke the renderPDFForm method and write the
              //results to a client web browser
@@ -336,7 +336,7 @@ Java servlet通过使用以下Java代码捕获从HTML页发布的数据：
  </head>
  
  <body>
- <form name="myform" action="https://[server]:[port]/FragmentsWebApplication/RenderFormFragment" method="post">
+ <form name="myform" action="https://'[server]:[port]'/FragmentsWebApplication/RenderFormFragment" method="post">
       <table>
       <tr>
         <th>Forms Fragment Web Client</th>
