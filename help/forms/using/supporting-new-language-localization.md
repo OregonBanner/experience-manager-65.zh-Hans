@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,12 +25,12 @@ source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 **全局字典** AEM客户端库中有两个全局字典，管理为JSON对象。 这些词典包含默认错误消息、月名、货币符号、日期和时间模式等。 您可以在CRXDe Lite中找到这些字典，网址为/libs/fd/xfaforms/clientlibs/I18N。 这些位置为每个区域设置包含单独的文件夹。 由于全局字典通常不会频繁更新，因此保留每个区域设置的单独JavaScript文件使浏览器能够在访问同一服务器上的不同自适应表单时缓存它们并减少网络带宽使用。
 
-### 自适应表单的本地化工作方式 {#how-localization-of-adaptive-form-works}
+### 自适应表单的本地化如何工作 {#how-localization-of-adaptive-form-works}
 
 在渲染自适应表单时，它会通过按指定顺序查看以下参数来标识所请求的区域设置：
 
 * 请求参 `afAcceptLang`数要覆盖用户的浏览器区域设置，可以传递请 `afAcceptLang` 求参数以强制使用区域设置。 例如，以下URL将强制在日语区域设置中呈现表单：
-   `https://[server]:[port]/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
 * 为用户设置的浏览器区域设置，使用标题在请求中指 `Accept-Language` 定。
 
@@ -42,7 +42,7 @@ source-git-commit: dbfadb0b49c83c38aa2cb55c32517ad70bbd79d0
 
 ## 添加对不支持的区域设置的本地化支持 {#add-localization-support-for-non-supported-locales}
 
-AEM Forms目前支持以英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语——巴西语(pt-BR)、中文(zh-CN)、中文——台湾语(zh-TW)和韩语(ko-KR)区域设置的自适应表单内容本地化。
+AEM Forms目前支持以下语言本地化自适应表单内容：英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、葡萄牙语——巴西语(pt-BR)、中文(zh-CN)、中文——台湾语(zh-TW)和韩语(ko-KR)语言环境。
 
 要在自适应表单运行时添加对新区域设置的支持，请执行以下操作：
 
@@ -56,15 +56,15 @@ AEM Forms目前支持以英语(en)、西班牙语(es)、法语(fr)、意大利�
 
 ### 向指南本地化服务添加区域设置 {#add-a-locale-to-the-guide-localization-service-br}
 
-1. 转到 `https://[server]:[port]/system/console/configMgr`.
+1. 转到 `https://'[server]:[port]'/system/console/configMgr`.
 1. 单击以编辑“指 **南本地化服务** ”组件。
-1. 将要添加的区域设置添加到支持的区域设置列表。
+1. 将要添加的区域设置添加到支持的区域设置列表中。
 
 ![指南本地化服务](assets/configservice.png)
 
 ### 为区域设置添加XFA客户端库 {#add-xfa-client-library-for-a-locale-br}
 
-创建类型为“ `cq:ClientLibraryFolder` ”( `etc/<folderHierarchy>`带有类别) `xfaforms.I18N.<locale>`的节点，并将以下文件添加到客户端库：
+创建一个类型为“ `cq:ClientLibraryFolder` 类别 `etc/<folderHierarchy>`”的节点，并 `xfaforms.I18N.<locale>`将以下文件添加到客户端库：
 
 * **I18N.js** , `xfalib.locale.Strings` 定义 `<locale>` 中的定义 `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`。
 
@@ -78,7 +78,7 @@ I18N.js
 
 ### 为区域设置添加自适应表单客户端库 {#add-adaptive-form-client-library-for-a-locale-br}
 
-创建类型为以下的节 `cq:ClientLibraryFolder` 点，类 `etc/<folderHierarchy>`别为，依赖关系为， `guides.I18N.<locale>` 以及 `xfaforms.3rdparty`和 `xfaforms.I18N.<locale>``guide.common`。&quot;
+创建类型为以下的节 `cq:ClientLibraryFolder` 点，其 `etc/<folderHierarchy>`中类别为，依赖关系为 `guides.I18N.<locale>` 和， `xfaforms.3rdparty`且 `xfaforms.I18N.<locale>` 为 `guide.common`。&quot;
 
 将以下文件添加到客户端库：
 
@@ -102,7 +102,7 @@ LogMessages.js
 
 1. 添加 `<locale>` 到的属性 `languages` 的值 `/etc/languages`。
 
-此时 `<locale>` 将显示在 `https://[server]:[port]/libs/cq/i18n/translator.html`。
+此时 `<locale>` 将显示在 `https://'[server]:[port]'/libs/cq/i18n/translator.html`。
 
 ### Restart the server {#restart-the-server}
 
