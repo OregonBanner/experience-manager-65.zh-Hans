@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f5f6cc88bc0408af117ad5760d4313c9f7d54b9
+source-git-commit: 45de0f9d9570d64cacf7009d64072858012869a0
 
 ---
 
@@ -72,7 +72,7 @@ source-git-commit: 4f5f6cc88bc0408af117ad5760d4313c9f7d54b9
 
    发布图像集时，将会激活 URL 和嵌入字符串。此外，您还必须发 [布已创建的任何自定义查看器预设](/help/assets/managing-viewer-presets.md) 。 现成查看器预设已发布。
 
-1. [将URL关联到Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md) ，或 [嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
+1. [将URL关联到您的Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md) , [或嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
    在发布图像集后，AEM 资产会为该图像集创建 URL 调用并将其激活。预览资产时，您可以复制这些 URL。或者，您也可以将它们嵌入到您的网站中。
 
@@ -80,7 +80,7 @@ source-git-commit: 4f5f6cc88bc0408af117ad5760d4313c9f7d54b9
 
    请参 [阅将图像集链接到网页和嵌入视](/help/assets/linking-urls-to-yourwebapplication.md) 频查看器或图像查看器 [](/help/assets/embed-code.md)。
 
-要编辑图像集，请参阅编 [辑图像集。](#editing-image-sets) 此外，您还可以查看和编辑图 [像集属性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
+要编辑图像集，请参阅编 [辑图像集。](#editing-image-sets) 此外，您还可以视图和编辑图 [像集属性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
 
 如果创建集时遇到问题，请参阅Dynamic Media - Scene7模式 [疑难解答中的图像和集](/help/assets/troubleshoot-dms7.md#images-and-sets)。
 
@@ -150,7 +150,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
 1. 将资产添加到资产集时，资产会按字母数字顺序自动添加。 在添加资产后，您可以手动对资产重新排序或排序。
 
-   如有必要，将资产的重新排序图标拖动到资产文件名右侧，以在设置列表中向上或向下重新排序图像。
+   如有必要，将资产的“重新排序”图标拖动到资产文件名右侧，以在设置的列表中向上或向下重新排序图像。
 
    ![6_5_imageset_reorderassets](assets/6_5_imageset-reorderassets.png)
 
@@ -175,11 +175,11 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 >
 >批量集由IPS图像生产系 [统创建] ，作为资产摄取的一部分，并且仅在Dynamic Media - Scene7模式中可用。)
 
-但是，使用批量集预设创建的集 *不会* 显示在用户界面中。 您可以通过三种不同的方式查看这些集。 （即使您在用户界面中创建了图像集，这些方法也可用）。
+但是，使用批量集预设创建的集 *不会* 显示在用户界面中。 您可以通过三种不同的方式视图这些集合。 （即使您在用户界面中创建了图像集，这些方法也可用）。
 
 * 打开单个资产的属性。 属性指示引用选定资产或其成员的集。 单击集的名称可查看整个集。
 
-   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties.png)
+   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
 * 来自任何集的成员图像。选择 **[!UICONTROL 集**&#x200B;菜单以显示资产所属的集。
 
@@ -187,13 +187,13 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
 * 从搜索中，您可以选 **择[!UICONTROL过滤器**，然后展开 **[!UICONTROL Dynamic Media** ，并选择 **[!UICONTROL 集]**。
 
-   搜索会返回在UI中手动创建或通过批量集预设自动创建的匹配集。 对于自动集，搜索查询使用“开始于”搜索条件进行，该搜索条件与基于使用“包含”搜索条件的AEM搜索不同。 将过滤器设置为 **[!UICONTROL 集]** ，是搜索自动集的唯一方式。
+   搜索会返回在UI中手动创建或通过批量集预设自动创建的匹配集。 对于自动集，搜索查询是使用“带有开始”的搜索条件进行的，该搜索条件与基于使用“包含”搜索条件的AEM搜索不同。 将过滤器设置为 **[!UICONTROL 集]** ，是搜索自动集的唯一方式。
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
 >[!NOTE]
 >
->您可以按照编辑图像集中所述，通过用户界面查 [看集](#editing-image-sets)。
+>您可以通过用户界面视图集，如编辑图像集 [中所述](#editing-image-sets)。
 
 ## 编辑图像集 {#editing-image-sets}
 
