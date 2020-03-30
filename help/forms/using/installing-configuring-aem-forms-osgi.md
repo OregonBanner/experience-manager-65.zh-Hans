@@ -1,15 +1,15 @@
 ---
 title: 安装和配置数据捕获功能
 seo-title: 安装和配置数据捕获功能
-description: 安装和配置自适应表单、PDF表单和HTML5表单。 配置Adobe Analytics和Adobe Target以获得自适应表单，以分析表单的使用情况并根据用户的个人资料定位用户。
-seo-description: 安装和配置自适应表单、PDF表单和HTML5表单。 配置Adobe Analytics和Adobe Target以获得自适应表单，以分析表单的使用情况并根据用户的个人资料定位用户。
+description: 安装和配置自适应表单、PDF表单和HTML5表单。 配置Adobe Analytics和Adobe目标，以便自适应表单，以根据用户的用户档案分析表单和目标用户的使用情况。
+seo-description: 安装和配置自适应表单、PDF表单和HTML5表单。 配置Adobe Analytics和Adobe目标，以便自适应表单，以根据用户的用户档案分析表单和目标用户的使用情况。
 uuid: 5d49032a-4dea-4f21-9dad-a7a30c5872ea
 topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -18,13 +18,13 @@ source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
 
 ## 简介 {#introduction}
 
-AEM Forms提供一组表单以从最终用户处获取数据：自适应表单、HTML5表单和PDF表单。 它还提供了一些工具，用于列出网页上的所有可用表单、分析表单的使用情况并根据用户的个人资料定位用户。 这些功能包含在AEM Forms加载项包中。 加载项包部署在AEM的作者或发布实例上。
+AEM Forms提供一组表单以从最终用户处获取数据：自适应表单、HTML5表单和PDF表单。 它还提供工具，用于列表网页上所有可用的表单、分析表单的使用情况以及根据用户的用户档案目标用户。 这些功能包含在AEM Forms加载项包中。 加载项包部署在AEM的作者或发布实例上。
 
-**** 自适应表单：这些表单根据设备的屏幕大小更改外观，具有吸引力且具有交互性。 自适应表单还可以与Adobe Analytics、Adobe Sign和Adobe Target集成。 它使您能够根据用户的人口统计和其他功能向用户提供个性化的表单和面向流程的体验。 您还可以将自适应表单与Adobe sign集成。
+**自适应表单：** 这些表单根据设备的屏幕大小更改外观，具有吸引力且具有交互性。 自适应表单还可以与Adobe Analytics、Adobe Sign和Adobe目标集成。 它使您能够根据用户的人口统计和其他功能向用户提供个性化的表单和面向流程的体验。 您还可以将自适应表单与Adobe Sign集成。
 
-**PDF Forms适合** PDF文档中像素级完美的打印和数字信息捕捉。 在数字化头像中，您可以使用Adobe Acrobat或Acrobat Reader填写这些表单。 您可以将这些表单托管在您的网站上，或使用表单门户在AEM站点上列出这些表单。 您还可以将这些表单作为附件通过电子邮件发送给其他人。 这些表单最适合桌面环境。
+**PDF Forms适合** PDF文档中像素级完美的打印和数字信息捕捉。 在数字化头像中，您可以使用Adobe Acrobat或Acrobat Reader填写这些表单。 您可以将这些表单托管在您的网站上，或使用表单门户在AEM站点上列表这些表单。 您还可以将这些表单作为附件通过电子邮件发送给其他人。 这些表单最适合桌面环境。
 
-**HTML5 Forms** 是PDF表单的浏览器友好版本。 HTML5 Forms适用于不支持PDF插件的环境。 HTML5 Forms支持在不支持基于XFA的PDF的移动设备和桌面浏览器上呈现基于XFA的表单。 这些表单最适合平板电脑和桌面环境。
+**HTML5 Forms** 是PDF表单的浏览器友好版本。 HTML5表单适用于不支持PDF插件的环境。 HTML5 Forms支持在不支持基于XFA的PDF的移动设备和桌面浏览器上呈现基于XFA的表单。 这些表单最适合平板电脑和桌面环境。
 
 AEM Forms是一个功能强大的企业级平台，数据捕获（自适应表单、PDF表单和HTML5表单）只是AEM Forms的功能之一。 有关功能的完整列表，请参 [阅AEM Forms简介](/help/forms/using/introduction-aem-forms.md)。
 
@@ -38,7 +38,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 要运行AEM Forms数�
 
 在开始安装和配置AEM Forms的数据捕获功能之前，请确保：
 
-* 硬件和软件基础结构就位。 有关支持的硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
+* 硬件和软件基础结构就位。 有关受支持硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
 
 * AEM实例的安装路径不包含空格。
 * AEM实例已启动并正在运行。 在AEM术语中，“实例”是在创作或发布模式下在服务器上运行的AEM的副本。 您至少需要两个 [AEM实例（一个作者实例和一个发布实例）](/help/sites-deploying/deploy.md) ，才能运行AEM Forms数据捕获功能：
@@ -46,12 +46,12 @@ AEM Forms加载项包是部署到AEM上的应用程序。 要运行AEM Forms数�
    * **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。 内容准备就绪后，即会复制到发布实例。
    * **发布**:通过Internet或内部网络向公众提供已发布内容的AEM实例。
 
-* 满足内存要求。 AEM Forms Add-on包需要：
+* 满足内存要求。 AEM Forms加载项包需要：
 
-   * 15 GB临时空间，用于基于Microsoft windows的安装。
+   * 15 GB临时空间，用于基于Microsoft Windows的安装。
    * 6 GB临时空间，用于基于UNIX的安装。
 
-* 为作者实例和发布实例设置了复制和反向复制。 有关详细信息，请参阅 [复制](/help/sites-deploying/replication.md)。
+* 为作者实例和发布实例设置了复制和反向复制。 For details, see [Replication](/help/sites-deploying/replication.md).
 * 对于基于UNIX的系统：
 
    * 从安装介质安装以下32位包：
@@ -121,7 +121,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms�
 
 ## 安装后配置 {#post-installation-configurations}
 
-AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置调度程序、Forms门户、Adobe Sign、Adobe Analytics和Adobe Target。
+AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置调度程序、Forms门户、Adobe Sign、Adobe Analytics和Adobe目标。
 
 ### 强制安装后配置 {#mandatory-post-installation-configurations}
 
@@ -130,9 +130,9 @@ AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCast
 对所有“作者”和“发布”实例执行以下步骤以引导委派库：
 
 1. 停止基础AEM实例。
-1. 打开 [AEM安装目录\crx-quickstart\conf\sling.properties]文件进行编辑。
+1. Open the `[AEM installation directory]\crx-quickstart\conf\sling.properties` file for editing.
 
-   如果您使 [用AEM安装目录]\crx-quickstart\bin\start.bat启动AEM，请编辑位于 [AEM_root]\crx-quickstart\的sling.properties。
+   如果您使 `[AEM installation directory]\crx-quickstart\bin\start.bat` 用开始AEM，请编辑位于的sling.properties `[AEM_root]\crx-quickstart\`。
 
 1. 将以下属性添加到sling.properties文件：
 
@@ -141,14 +141,14 @@ AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCast
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
-1. 保存并关闭文件，然后启动AEM实例。
+1. 保存并关闭文件并开始AEM实例。
 1. 对所有“作者”和“发布”实例重复第1-4步。
 
 #### 配置序列化代理 {#configure-the-serialization-agent}
 
 对所有创作和发布实例执行以下步骤以将包列入白名单：
 
-1. 在浏览器窗口中打开AEM配置管理器。 默认URL为 `https://[server]:[port]/system/console/configMgr`。
+1. 在浏览器窗口中打开AEM配置管理器。 默认URL为 `https://'[server]:[port]'/system/console/configMgr`。
 1. 搜索 **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** 并打开配置。
 1. 将 **sun.util.calendar包添加到白名单** 字段 **** 。 单击&#x200B;**保存**。
 1. 对所有“作者”和“发布”实例重复第1-3步。
@@ -167,9 +167,9 @@ Dispatcher是用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有助�
 
    保存并关闭文件。 有关过滤器的详细信息，请参阅 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)。
 
-1. 配置引用过滤器服务：
+1. 配置推荐人过滤器服务：
 
-   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL是https://[server]:[port_number]/system/console/configMgr。 在**配置**菜单中，选择 **Apache Sling引用过滤器选项** 。 在“允许主机”字段中，输入调度程序的主机名以允许它作为引用，然后单击“保 **存”**。 条目的格式为https://[server]:[port]。
+   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL为 `https://[server]:[port_number]/system/console/configMgr`。 在“配 **置** ”菜单中，选择 **Apache Sling推荐人过滤器选项** 。 在“允许主机”字段中，输入调度程序的主机名以允许它作为推荐人，然后单击“保 **存”**。 条目的格式为“https://[server]:[port]”。
 
 #### 配置缓存 {#configure-cache}
 
@@ -180,8 +180,8 @@ Dispatcher是用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有助�
 
 请执行以下步骤以配置自适应表单缓存：
 
-1. 转到位于https://[server]:[port]/system/console/configMgr的AEM web控制台配置管理器。
-1. 单击“ **自适应表单和交互式通信Web通道配置** ”以编辑其配置值。 在编辑配置值对话框中，在自适应表单数字字段中指定AEM Forms服务器实例可以缓存的最大表 **单或文档数** 。 默认值为 100。单击&#x200B;**保存**。
+1. 转到位于https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM Web控制台配置管理器。
+1. 单击“ **自适应表单和交互通信Web渠道配置** ”以编辑其配置值。 在编辑配置值对话框中，在自适应表单数字字段中指定AEM Forms服务器实例可以缓存的最大表 **单或文档数** 。 默认值为 100。单击&#x200B;**保存**。
 
    >[!NOTE]
    >
@@ -195,27 +195,27 @@ Dispatcher是用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有助�
 
 #### 配置Adobe Sign {#configure-adobe-sign}
 
-Adobe Sign支持自适应表单的电子签名工作流程。 电子签名改进了处理法律、销售、工资单、人力资源管理等领域文档的工作流程。
+Adobe Sign支持自适应表单的电子签名工作流。 电子签名可提高处理法律、销售、工资单、人力资源管理等领域文档的工作流。
 
-在典型的Adobe sign和自适应表单场景中，用户填充自适应表单以 **申请服务**。 例如，信用卡申请和公民福利表。 当用户填写、提交和签署应用程序表单时，该表单将发送给服务提供商以进一步操作。 服务提供商会审阅应用程序，并使用Adobe Sign标记已批准的应用程序。 要启用类似的电子签名工作流程，您可以将Adobe Sign与AEM Forms集成。
+在典型的Adobe Sign和自适应表单场景中，用户填写自适应表单以 **申请服务**。 例如，信用卡申请和公民福利表。 当用户填写、提交和签署应用程序表单时，表单将发送到服务提供商以进一步操作。 服务提供商审阅应用程序，并使用Adobe Sign标记已批准的应用程序。 要启用类似的电子签名工作流，您可以将Adobe Sign与AEM Forms集成。
 
 要将Adobe Sign与AEM Forms结合使用，请 [将Adobe Sign与AEM Forms集成](/help/forms/using/adobe-sign-integration-adaptive-forms.md)。
 
 #### 配置Adobe Analytics {#configure-adobe-analytics}
 
-AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的是根据使表单或文档更易用所需的更改数据做出明智决策。
+AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的是根据使表单或文档更易用所需的更改数据做出明智决策。
 
 要将Adobe Analytics与AEM Forms结合使用，请参阅配 [置分析和报告](/help/forms/using/configure-analytics-forms-documents.md)。
 
-#### 集成Adobe Target {#integrate-adobe-target}
+#### 集成Adobe目标 {#integrate-adobe-target}
 
-如果表单提供的体验不具有吸引力，您的客户可能会放弃表单。 虽然这令客户感到沮丧，但也可以增加组织的支持量和成本。 识别和提供能够提高转化率的正确客户体验至关重要，也具有挑战性。 AEM表单是解决此问题的关键。
+如果表单提供的体验不具有吸引力，您的客户可能会放弃表单。 虽然这令客户感到沮丧，但也可以增加组织的支持量和成本。 识别和提供可提高转化率的正确客户体验至关重要，也具有挑战性。 AEM表单是解决此问题的关键。
 
-AEM表单与Adobe Target（Adobe Marketing cloud解决方案）集成，跨多个数字渠道提供个性化、引人入胜的客户体验。 要使用Adobe Target测试自适应表单，请将Adobe Target [与AEM Forms集成](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
+AEM表单与Adobe目标（Adobe Marketing Cloud解决方案）集成，跨多个数字渠道提供个性化、引人入胜的客户体验。 要使用Adobe目标测试自适应表单，请将 [Adobe目标与AEM表单集成](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
 
 ## 后续步骤 {#next-steps}
 
-您已将环境配置为使用AEM Forms数据捕获功能。 现在，使用该功能的后续步骤是：
+您已配置环境以使用AEM Forms数据捕获功能。 现在，使用该功能的后续步骤是：
 
 * [创建您的第一个自适应表单](/help/forms/using/create-your-first-adaptive-form.md)
 * [创建您的第一个PDF表单](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
