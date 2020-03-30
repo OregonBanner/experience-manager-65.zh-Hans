@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -21,10 +21,10 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 ## 缓存设置 {#cache-settings}
 
-您可以使用AEM web配置控制台中的 **Mobile Forms Configurations** （移动表单配置）组件，配置和控制AEM Forms的缓存策略：
+您可以使用AEM Web配置控制台中的 **Mobile Forms Configurations** （移动表单配置）组件，配置和控制AEM Forms的缓存策略：
 
-* （OSGi上的AEM Forms） `https://[server]:[port]/system/console/configMgr`
-* (AEM Forms on JEE) `https://[server]:[port]/lc/system/console/configMgr`
+* （OSGi上的AEM Forms） `https://'[server]:[port]'/system/console/configMgr`
+* (AEM Forms on JEE) `https://'[server]:[port]'/lc/system/console/configMgr`
 
 缓存的可用选项如下：
 
@@ -65,13 +65,13 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 ***注意&#x200B;**:以下说明不适用于除Apache Web Server 2.0 32位服务器之外的任何服务器。 有关特定于任何其他服务器的步骤，请参阅相应的产品文档。*
 
-以下步骤演示了使用Apache Web server启用压缩所需的更改
+以下步骤演示了使用Apache Web Server启用压缩所需的更改
 
-**获取适用于您的操作系统的Apache web服务器软件**
+**获取适用于您的操作系统的Apache Web服务器软件**
 
-* Windows:从Apache HTTP server项目站点下载Apache web服务器。
-* Solaris 64位：从Sunfreeware for Solaris网站下载Apache web服务器。
-* Linux:apache web服务器预装在Linux系统上。
+* Windows:从Apache HTTP Server项目站点下载Apache Web服务器。
+* Solaris 64位：从Sunfreeware for Solaris网站下载Apache Web服务器。
+* Linux:apache Web服务器预装在Linux系统上。
 
 Apache可以使用HTTP协议与CRX通信。 这些配置用于使用HTTP进行优化。
 
@@ -131,7 +131,7 @@ Apache可以使用HTTP协议与CRX通信。 这些配置用于使用HTTP进行�
    </Location>
    ```
 
-   要访问crx服务器，请使 `https://[server]:80`用，其 `server` 中是运行Apache服务器的服务器的名称。
+   要访问crx服务器，请使 `https://'server':80`用，其 `server` 中是运行Apache服务器的服务器的名称。
 
 ## 在运行AEM Forms的服务器上使用防病毒程序 {#using-an-antivirus-on-server-running-aem-forms}
 
@@ -149,13 +149,13 @@ Apache可以使用HTTP协议与CRX通信。 这些配置用于使用HTTP进行�
 
    * (Jboss) [AEM安装目录]\jboss\standalone\tmp
    * (Weblogic)\Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
-   * (Websphere)\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
+   * (Websphere)\项目Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
-* **（仅限JEE上的AEM Forms）** “全局文档存储(GDS)”目录。 默认位置为：
+* **（仅限JEE上的AEM Forms）** “全局文档存储”(GDS)目录。 默认位置为：
 
-   * (JBoss) [appserver root]/server/[server]/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/[server]/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere) [appserver root]/installedApps/adobe/[server]/DocumentStorage
+   * (JBoss) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+   * (WebSphere) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **（仅限JEE上的AEM Forms）** AEM Forms服务器日志和临时目录。 默认位置为：
 
@@ -164,7 +164,7 @@ Apache可以使用HTTP协议与CRX通信。 这些配置用于使用HTTP进行�
 
 >[!NOTE]
 >
->* 如果您对GDS和临时目录使用其他位置，请在打开AdminUI `https://[server]:[port]/adminui`，导航到“ **Home”（主页）> “Settings”（设置）> “Core System Settings”（核心系统设置）> “Core Configurations** ”（核心配置），以确认使用的位置。
+>* 如果您对GDS和临时目录使用其他位置，请在打开AdminUI `https://'[server]:[port]'/adminui`，导航到“ **Home”（主页）> “Settings”（设置）> “Core System Settings”（核心系统设置）> “Core Configurations** ”（核心配置），以确认使用的位置。
 
 * 如果AEM Forms服务器在排除建议的目录后运行缓慢，则也排除Java可执行文件(java.exe)。
 
