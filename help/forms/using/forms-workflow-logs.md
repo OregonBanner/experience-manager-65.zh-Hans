@@ -10,14 +10,14 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 登录AEM Forms工作流{#logging-in-aem-forms-workflows}
 
-表单工作流程步骤提供了详细的日志，可方便地调试与工作流程相关的问题。 为AEM Forms工作流启用调试日志记录以查看日志。
+表单工作流程步骤提供了详细的日志，可方便地调试与工作流程相关的问题。 为AEM Forms工作流启用调试日志记录以视图日志。
 
 默认情况下， **error.log文件中的** /crx-repository/logs/directory中提供所有日志信息 ** 。
 
@@ -69,18 +69,18 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 使用日志评估：
 
 * 您使用的是正确的Adobe Sign配置。
-* Adobe sign服务在成功创建协议后退出。
-* “签名文档”步骤将退出并显示成功消息。
+* Adobe Sign服务在成功创建协议后退出。
+* 签名文档步骤将退出并显示成功消息。
 
-如果有异常，您可以查看完整的堆栈跟踪以评估错误的原因。
+如果有异常，可以视图完整的堆栈跟踪来评估错误的原因。
 
 ## 为AEM Forms工作流启用调试日志记录 {#enable-debug-logging-for-aem-forms-workflows}
 
 执行以下步骤以启用AEM Forms工作流的调试日志记录：
 
-1. 转至AEM web控制台配置管理器：
+1. 转至AEM Web控制台配置管理器：
 
-   https://[服务器]:[port]/system/console/configMgr
+   https://&#39;[服务器]:[port]&#39;/system/console/configMgr
 
 1. 选择“ **[!UICONTROL Sling]** ”>“ **[!UICONTROL 日志支持”]**。
 1. 点按 **[!UICONTROL 添加新记录器。]**
@@ -88,7 +88,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 1. 指定日志文件的位置。 日志文件的默认位置为： *logs\error.log*
 1. 在“记录器”列中 **将包的名称指定为com.adobe.granite.workflow** . **[!UICONTROL core]** 。
 
-   执行这些步骤可存储 **com.adobe.granite.workflow.core包的调试日志** 。 点 **[!UICONTROL 按+]** ，并将以下包名称添加到列表中：
+   执行这些步骤可存储 **com.adobe.granite.workflow.core包的调试日志** 。 点 **[!UICONTROL 按+]** ，然后将以下包名称添加到列表:
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
