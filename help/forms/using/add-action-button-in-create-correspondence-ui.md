@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,8 +40,8 @@ Correponsement Management解决方案允许您向Create Correncese用户界面�
 
 ### 将按钮添加到“创建对应”用户界面 {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
-1. 在apps文件夹中，创建一个名为的文件夹，其路径／结 `defaultApp` 构与defaultApp文件夹（位于config文件夹中）类似。 使用以下步骤创建文件夹：
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
+1. 在apps文件夹中，创建一个名为的文件夹，其路径／结 `defaultApp` 构与defaultApp文件夹（位于配置文件夹中）类似。 使用以下步骤创建文件夹：
 
    1. 右键单击以下路 **径的defaultApp** 文件夹，然后选择 **叠加节点**:
 
@@ -51,11 +51,11 @@ Correponsement Management解决方案允许您向Create Correncese用户界面�
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/config/defaultApp/
+      **路径：** /libs/fd/cm/config/defaultApp/
 
-      **** 叠加位置：/apps/
+      **叠加位置：** /apps/
 
-      **** 匹配节点类型：已选中
+      **匹配节点类型：** 已选中
 
       ![叠加节点](assets/2_defaultappoverlaynode.png)
 
@@ -73,7 +73,7 @@ Correponsement Management解决方案允许您向Create Correncese用户界面�
    1. 右键单击“ **/apps/fd/cm/config/defaultApp/”处的defaultApp文件夹，然后选择“粘** 贴” ****。
    1. 单击“ **全部保存**”。
 
-1. 双击您新在apps文件夹中创建的acmExtentionsConfig.xml的副本。 此时会打开文件进行编辑。
+1. 多次，单击您新在apps文件夹中创建的acmExtentionsConfig.xml的副本。 此时会打开文件进行编辑。
 1. 找到以下代码：
 
    ```xml
@@ -100,11 +100,11 @@ Correponsement Management解决方案允许您向Create Correncese用户界面�
 
    ![customAction标签](assets/5_acmextensionsconfig_xml.png)
 
-   modelExtension标签有一组customAction子标签，用于配置操作按钮的操作、权限和外观。 以下是customAction配置标记列表：
+   modelExtension标签有一组customAction子标签，用于配置操作按钮的操作、权限和外观。 以下是customAction配置标记的列表:
 
    | **名称** | **描述** |
    |---|---|
-   | 名称 | 要执行的操作的字母数字名称。 此标签的值是必需的，必须是唯一的（在modelExtension标签中），并且必须以字母表开头。 |
+   | 名称 | 要执行的操作的字母数字名称。 此标签的值是必需的，必须是唯一的（在modelExtension标签中），并且必须与字母表开始。 |
    | 标签 | 要在操作按钮上显示的标签 |
    | 工具提示 | 按钮的工具提示文本，当用户悬停在按钮上时显示该文本。 |
    | styleName | 应用于操作按钮的自定义样式的名称。 |
@@ -131,11 +131,11 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 
 1. 确保“叠加节点”对话框具有以下值：
 
-   **** 路径：/libs/fd/cm/config/defaultApp/locale
+   **路径：** /libs/fd/cm/config/defaultApp/locale
 
-   **** 叠加位置：/apps/
+   **叠加位置：** /apps/
 
-   **** 匹配节点类型：已选中
+   **匹配节点类型：** 已选中
 
 1. 单击&#x200B;**确定**。
 1. 单击“ **全部保存**”。
@@ -143,7 +143,7 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 
    `/libs/fd/cm/config/defaultApp/locale/ACMExtensionsMessages.properties`
 
-1. 右键单击以下路 **径的区域设置** ，然后选择“粘 **贴”**:
+1. 右键单击以下路 **径的区域设** 置文件夹，然后选择 **粘贴**:
 
    `/apps/fd/cm/config/defaultApp/locale/`
 
@@ -167,13 +167,13 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 >
 >您可能需要清除浏览器缓存。
 
-1. 转到 `https://[host]:[port]/system/console/bundles`. 如有必要，请以管理员身份登录。
+1. 转到 `https://[host]:'port'/system/console/bundles`. 如有必要，请以管理员身份登录。
 
 1. 找到Adobe Asset Composer构建块捆绑包。 重新启动捆绑包：单击“停止”，然后单击“开始”。
 
    ![Adobe Asset Composer构建块](assets/6_assetcomposerbuildingblockbundle.png)
 
-重新启动Adobe Asset Composer构建块捆绑后，自定义按钮会显示在“创建对应用户界面”中。 您可以在创建对应用户界面中打开字母以预览自定义按钮。
+重新启动Adobe Asset Composer构建块捆绑后，自定义按钮会显示在“创建对应用户界面”中。 您可以在“创建对应用户界面”中打开一个字母以预览自定义按钮。
 
 ### 向按钮添加操作处理 {#add-action-handling-to-the-button}
 
@@ -189,7 +189,7 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 * 启用／禁用新添加的操作：通过覆盖actionEnabled()函数完成。
 * 用户单击按钮时实际操作操作：通过覆盖handleAction()函数的实现来完成。
 
-1. 转到 `https://[server]:[port]/[ContextPath]/crx/de`. 如有必要，请以管理员身份登录。
+1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de`. 如有必要，请以管理员身份登录。
 
 1. 在apps文件夹中，创建一个名为CRX的/apps `js` 分支中的文件夹，其结构与以下文件夹类似：
 
@@ -203,11 +203,11 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
+      **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
 
-      **** 叠加位置：/apps/
+      **叠加位置：** /apps/
 
-      **** 匹配节点类型：已选中
+      **匹配节点类型：** 已选中
 
    1. 单击&#x200B;**确定**。
    1. 单击“ **全部保存**”。
@@ -220,7 +220,7 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 
       将文件命名为ccrcustomization.js。
 
-   1. 双击ccrcustomization.js文件以在CRX中将其打开。
+   1. 多次-单击crcustomization.js文件以在CRX中打开它。
    1. 在文件中，粘贴以下代码，然后单击“全 **部保存”**:
 
       ```
@@ -330,7 +330,7 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
 下载并解压缩components.zip文件，获取DSCSample.jar和SendLetterForReview.lca文件。 按照以下过程中的指定使用这些文件。
 components.zip
 
-#### 将LiveCycle server配置为运行LCA进程 {#configure-the-livecycle-server-to-run-the-lca-process}
+#### 将LiveCycle Server配置为运行LCA进程 {#configure-the-livecycle-server-to-run-the-lca-process}
 
 >[!NOTE]
 >
@@ -338,8 +338,8 @@ components.zip
 
 LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭据。
 
-1. 转到并 `https://[server]:[port]/system/console/configMgr` 以管理员身份登录。
-1. 找到“Adobe liveCycle Client SDK Configuration”，然后单击“ **编辑** ”（编辑图标）。 “配置”(Configurations)面板将打开。
+1. 转到并 `https://'[server]:[port]'/system/console/configMgr` 以管理员身份登录。
+1. 找到“Adobe LiveCycle Client SDK Configuration”，然后单击“ **编辑** ”（编辑图标）。 “配置”(Configurations)面板将打开。
 
 1. 输入以下详细信息，然后单击“ **保存**”:
 
@@ -354,7 +354,7 @@ LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭�
 
 >[!NOTE]
 >
->要查看此流程的功能或创建您自己的类似流程，您需要Workbench。
+>要视图此流程的功能或创建您自己的类似流程，您需要Workbench。
 
 1. 以管理员身份登录到Livecycle Server adminui `https:/[lc server]/:[lc port]/adminui`。
 
@@ -370,7 +370,7 @@ LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭�
 
    ![选择SendLetterForReview.lca文件](assets/14_sendletterforreview_lca.png)
 
-1. 单击“ **预览**”。
+1. 单击 **预览**。
 
 1. 选择 **在导入完成时将资产部署到运行时**。
 
@@ -380,7 +380,7 @@ LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭�
 
 在AEM服务器中提及要访问AEM服务器的LiveCycle服务。
 
-1. 以管理员身份登录 `https:/[host]/:[port]/system/console/configMgr`。
+1. 以管理员身份登录 `https:/[host]:'port'/system/console/configMgr`。
 
 1. 找到并单 **击“Adobe LiveCycle Client SDK配置”**。 出现“Adobe LiveCycle Client SDK Configuration”（Adobe LiveCycle客户端SDK配置）面板。
 1. 在“服务名称”列表中，单击+图标，并添加一个serviceName **SendLetterForReview/SendLetterForReviewProcess**。
@@ -403,7 +403,7 @@ LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭�
 
 #### 配置DSC服务 {#configure-the-dsc-service}
 
-要使用Correponce Management API，请下载DSCSample.jar（作为components.zip的一部分附加在本文档中），并将其上传到LiveCycle服务器。 将DSCSample.jar文件上传到LiveCycle服务器后，AEM服务器使用DSCSample.jar文件访问renderLetter API。
+要使用Correponce Management API，请下载DSCSample.jar(作为components.zip的一部分附加在本文档中)并将其上传到LiveCycle服务器。 将DSCSample.jar文件上传到LiveCycle服务器后，AEM服务器使用DSCSample.jar文件访问renderLetter API。
 
 有关详细信息，请参 [阅将AEM Forms与Adobe LiveCycle连接](/help/forms/using/aem-livecycle-connector.md)。
 
@@ -413,7 +413,7 @@ LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭�
 
 1. 在配置文件中提供以下参数：
 
-   * **crx.serverUrl**=https:/[host]/:[port]/context path[/][AEM URL]
+   * **crx.serverUrl**=https:/host:port/[context path]/[AEM URL]
    * **crx.username**= AEM用户名
    * **crx.password**= AEM密码
    * **crx.appRoot**=/content/apps/cm
@@ -427,13 +427,13 @@ LCA进程在LiveCycle服务器上运行，并需要服务器地址和登录凭�
 
 DSCSample.jar文件使用renderLetter API将字母从C提供作为输入的XML数据呈现为PDF字节。 有关renderLetter和其他API的详细信息，请参 [阅Letter Render Service](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)。
 
-1. 启动Workbench并登录。
-1. 选择“ **窗口”>“显示视图”>“组件**”。 组件视图将添加到Workbench ES2。
+1. 开始工作台和登录。
+1. 选择 **窗口>显示视图>组件**。 组件视图将添加到Workbench ES2。
 
 1. 右键单击“组 **件** ”，然后选择 **安装组件**。
 
 1. 通过文 **件浏览器选择DSCSample.jar** 文件，然后单击“打 **开”**。
-1. 右键单击 **RenderWrapper** ，然后选择 **启动组件**。 如果组件启动，则组件名称旁边将显示绿色箭头。
+1. 右键单击 **RenderWrapper** ，然后选择 **开始组件**。 如果组件开始，则组件名称旁边将显示绿色箭头。
 
 ## 发送信函供审阅 {#send-letter-for-review}
 
