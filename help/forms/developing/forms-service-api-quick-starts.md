@@ -1,6 +1,6 @@
 ---
-title: Forms Service API快速入门
-seo-title: Forms Service API快速入门
+title: Forms Service API快速开始
+seo-title: Forms Service API快速开始
 description: 'null'
 seo-description: 'null'
 uuid: dfce259a-e392-4929-ad7e-6d902faceaeb
@@ -10,52 +10,52 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Forms Service API快速入门 {#forms-service-api-quick-starts}
+# Forms Service API快速开始 {#forms-service-api-quick-starts}
 
-Forms服务提供以下快速入门：
+Forms服务提供以下快速开始:
 
-[快速入门（SOAP模式）:使用Java API渲染交互式PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API渲染交互式PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API在客户端渲染表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API在客户端渲染表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API渲染基于片段的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API渲染基于片段的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API渲染支持权限的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API渲染支持权限的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API渲染HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API渲染HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API使用自定义工具栏渲染HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API使用自定义工具栏渲染HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API处理作为XML提交的PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理作为XML提交的PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API处理作为PDF提交的PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理作为PDF提交的PDF表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API处理作为XML提交的HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理作为XML提交的HTML表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API使用提交的XML数据创建PDF文档](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API使用提交的XML数据创建PDF文档](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API使用可流动布局预填充表单](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API使用可流动布局预填充表单](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API处理包含计算脚本的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理包含计算脚本的表单](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API优化性能](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API优化性能](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API按值呈现](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API按值呈现](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API将文档传递到Forms Service](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将文档传递到Forms服务](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 使用Forms服务API的应用程序逻辑作为Java Servlet实现。 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-* **注意**:使用v进行编程中的快速入门基于您正在使用其他操作系统（如Unix）的表单服务器，将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
+* **注意**:使用v进行编程中的快速开始基于您正在使用其他操作系统（如Unix）的表单服务器，将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
 
    **提示**:Adobe开发人员网站包含以下文章，其中讨论了如何创建调用Forms服务并呈现表单的ASP.NET应用程序。 请参 [阅创建表单渲染ASP.NET应用程序](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)。
 
-## 快速入门（SOAP模式）:使用Java API渲染交互式PDF表单 {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API渲染交互式PDF表单 {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
 以下代码示例将名为 *Loan.xdp的交互式PDF表单渲染到客户端Web浏览器* 。 文件将附加到表单。 请注意，表单设计是应用程序的一部分，它使用内容根URI值引用 `repository:///`。 (请参阅 [渲染交互式PDF表单](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)。)
 
@@ -122,7 +122,7 @@ Forms服务提供以下快速入门：
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -147,9 +147,9 @@ Forms服务提供以下快速入门：
  
              //Specify URI values that are required to render a form
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
              //Specify file attachments to attach to the form
              FileInputStream fileAttachment = new FileInputStream("C:\\rideau1.jpg");
@@ -197,7 +197,7 @@ Forms服务提供以下快速入门：
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API在客户端渲染表单 {#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API在客户端渲染表单 {#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api}
 
 以下代码示例使用Forms服务Java API在客 *户端呈现名为Loan.xdp* 的表单。 请注意，表单设计是应用程序的一部分，它使用内容根URI值引用 `repository:///`。 (请参阅 [在客户端渲染表单](/help/forms/developing/rendering-forms.md#rendering-forms-at-the-client)。)
 
@@ -263,7 +263,7 @@ Forms服务提供以下快速入门：
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -286,9 +286,9 @@ Forms服务提供以下快速入门：
  
          //Specify URI values required to render a form
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsServiceClientApp");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsServiceClientApp");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
          //Invoke the renderPDFForm method to render
          //an interactive PDF form on the client
@@ -330,7 +330,7 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API渲染指南（已弃用） {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API渲染指南（已弃用） {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}
 
 以下代码示例将名为TLALifeClaim.xdp的指南（已弃用）呈现 *到客户端Web浏览器* 。
 
@@ -397,7 +397,7 @@ Forms服务提供以下快速入门：
  
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -423,9 +423,9 @@ Forms服务提供以下快速入门：
          //Specify URI values that are required to render a form
          //design located in the AEM Forms repository
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
  
          //Invoke the renderFormGuide method
@@ -466,7 +466,7 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API渲染基于片段的表单 {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API渲染基于片段的表单 {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}
 
 下面的代码示例渲染基于片段的表单。 表单设计的名称为 *PurchaseOrderDynamic.xdp* ，它位于AEM Forms存储库中（XDP文件存储在存储库中名为FormsFolder的文件夹中）。 此外，POFragment表单引用的片段还必须位于存储库中。 (请参 [阅基于片段渲染表单](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)。)
 
@@ -532,7 +532,7 @@ Forms服务提供以下快速入门：
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -557,9 +557,9 @@ Forms服务提供以下快速入门：
              //Specify URI values that are required to render a form
              //design based on fragments
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/FormsServiceClientApp");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsServiceClientApp");
              uriValues.setContentRootURI("repository:///");
-             uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
              //Invoke the renderPDFForm method and write the
              //results to a client web browser
@@ -599,7 +599,7 @@ Forms服务提供以下快速入门：
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API渲染支持权限的表单 {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API渲染支持权限的表单 {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}
 
 下面的代码示例向客户端Web浏览器呈现一个启用权限的表单。 此代码示例中设置的使用权限允许用户在表单中添加注释并保存表单数据。 (请参 [阅渲染支持权限的表单](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms)。)
 
@@ -665,7 +665,7 @@ Forms服务提供以下快速入门：
      try{
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -692,9 +692,9 @@ Forms服务提供以下快速入门：
  
          //Specify URI values required to render the form
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
          //Render a rights-enabled PDF form
          FormsResult formOut = formsClient.renderPDFFormWithUsageRights(
@@ -736,7 +736,7 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API渲染HTML表单 {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API渲染HTML表单 {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}
 
 以下代码示例使用Forms服务Java API呈现HTML表单。 工具栏会添加到HTML表单以及两个文件附件。 此外，从对象获得用户代理 `HttpServletRequest` 值。 (请参阅 [将表单渲染为HTML](/help/forms/developing/rendering-forms.md#rendering-forms-as-html)。)
 
@@ -804,7 +804,7 @@ Forms服务提供以下快速入门：
  
                  //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
                  connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL","SOAP");
                  connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
                  connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -837,9 +837,9 @@ Forms服务提供以下快速入门：
  
                  //Specify URI values that are required to render a form
                  URLSpec uriValues = new URLSpec();
-                 uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+                 uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
                  uriValues.setContentRootURI("repository:///");
-                 uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleSubmittedHTMLForm");
+                 uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleSubmittedHTMLForm");
  
                  //Specify file attachments
                  FileInputStream myForm = new FileInputStream("C:\\Attach1.txt");
@@ -897,7 +897,7 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API渲染使用CSS文件的HTML表单 {#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API渲染使用CSS文件的HTML表单 {#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api}
 
 以下代码示例使用Forms服务客户端API呈现HTML表单。 引用的自定义CSS文件的名称为 *custom.css*。 (请参 [阅使用自定义CSS文件渲染HTML表单](/help/forms/developing/rendering-forms.md#rendering-html-forms-using-custom-css-files)。)
 
@@ -966,7 +966,7 @@ Forms服务提供以下快速入门：
              try{
                  //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+                 connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
                  connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -996,9 +996,9 @@ Forms服务提供以下快速入门：
  
                  //Specify URI values that are required to render a form
                  URLSpec uriValues = new URLSpec();
-                 uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+                 uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
                  uriValues.setContentRootURI("repository:///");
-                 uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+                 uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
                  //Specify file attachments
                  FileInputStream myForm = new FileInputStream("C:\\Attach1.txt");
@@ -1052,9 +1052,9 @@ Forms服务提供以下快速入门：
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API使用自定义工具栏渲染HTML表单 {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API使用自定义工具栏渲染HTML表单 {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
-以下代码示例呈现一个HTML表单，其中工具栏以法语显示。 fscmenu.xml的位置为C:\Adobe （此文件夹必须位于承载AEM Forms的服务器上）。 注意区域设置值为 `fr_FR`。 讨论如何使用自定义工具栏呈现HTML表单的部分显示了此快速入门中使用的fscmenu.xml文件的语法。 (请参阅 [使用自定义工具栏渲染HTML表单](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars)。)
+以下代码示例呈现一个HTML表单，其中工具栏以法语显示。 fscmenu.xml的位置为C:\Adobe （此文件夹必须位于承载AEM Forms的服务器上）。 注意区域设置值为 `fr_FR`。 讨论如何使用自定义工具栏呈现HTML表单的部分显示了此快速开始中使用的fscmenu.xml文件的语法。 (请参阅 [使用自定义工具栏渲染HTML表单](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars)。)
 
 ```as3
  /*
@@ -1119,7 +1119,7 @@ Forms服务提供以下快速入门：
              try{
                  //Set connection properties required to invoke AEM Forms
                  Properties connectionProps = new Properties();
-                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://[server]:[port]");
+                 connectionProps.setProperty("DSC_DEFAULT_SOAP_ENDPOINT", "https://'[server]:[port]'");
                  connectionProps.setProperty("DSC_TRANSPORT_PROTOCOL","SOAP");
                  connectionProps.setProperty("DSC_SERVER_TYPE", "JBoss");
                  connectionProps.setProperty("DSC_CREDENTIAL_USERNAME", "administrator");
@@ -1151,9 +1151,9 @@ Forms服务提供以下快速入门：
  
                  //Specify URI values that are required to render a form
                  URLSpec uriValues = new URLSpec();
-                 uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+                 uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
                  uriValues.setContentRootURI("repository:///");
-                 uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+                 uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
                  //Specify file attachments
                  FileInputStream myForm = new FileInputStream("C:\\Attach1.txt");
@@ -1208,9 +1208,9 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API处理作为XML提交的PDF表单 {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API处理作为XML提交的PDF表单 {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}
 
-以下代码示例处理作为XML提交的表单。 传递给方法的内容类 `processFormSubmission` 型值是 `CONTENT_TYPE=text/xml`。 将显示与名为、和的字 `mortgageAmount`段对 `lastName`应 `firstName` 的值。 此快速入门中使用名 `getNodeText` 为的用户定义方法。 它接受一个 `org.w3c.dom.Document` 实例和一个指定节点名称的字符串值。 此方法返回一个表示节点值的字符串值。 (请参阅 [处理提交的表单](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
+以下代码示例处理作为XML提交的表单。 传递给方法的内容类 `processFormSubmission` 型值是 `CONTENT_TYPE=text/xml`。 将显示与名为、和的字 `mortgageAmount`段对 `lastName`应 `firstName` 的值。 此快速开始中使用名 `getNodeText` 为的用户定义方法。 它接受一个 `org.w3c.dom.Document` 实例和一个指定节点名称的字符串值。 此方法返回一个表示节点值的字符串值。 (请参阅 [处理提交的表单](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
 
 ```as3
  /*
@@ -1283,7 +1283,7 @@ Forms服务提供以下快速入门：
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1377,7 +1377,7 @@ Forms服务提供以下快速入门：
 >
 >在同一应 `com.adobe.idp.Document` 用程序中使 `org.w3c.dom.Document` 用对象和对象时，完全符合条件 `org.w3c.dom.Document`。
 
-## 快速入门（SOAP模式）:使用Java API处理作为PDF提交的PDF表单 {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API处理作为PDF提交的PDF表单 {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
 
 以下代码示例处理作为PDF数据提交的表单。 传递给方法的内容类 `processFormSubmission` 型值是 `CONTENT_TYPE=application/pdf`。 提交的表单将保存为名为tempPDF.pdf *的PDF文件*。 此外，由于表单是以PDF形式提交的，因此可以检索文件附件。 任何文件附件都会保存为JPEG文件。 (请参阅 [处理提交的表单](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
 
@@ -1452,7 +1452,7 @@ Forms服务提供以下快速入门：
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1527,9 +1527,9 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API处理作为XML提交的HTML表单 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API处理作为XML提交的HTML表单 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
 
-以下代码示例处理作为XML数据提交的HTML表单。 传递给方法的内容类 `processFormSubmission` 型值 `CONTENT_TYPE=application/x-www-form-urlencoded`为。将显示与名为、和的字段 `mortgageAmount`对应 `lastName`的 `firstName` 值。 此快速入门中使用名 `getNodeText` 为的用户定义方法。 它接受一个 `org.w3c.dom.Document` 实例和一个指定节点名称的字符串值。 此方法返回一个表示节点值的字符串值。 (请参阅 [处理提交的表单](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
+以下代码示例处理作为XML数据提交的HTML表单。 传递给方法的内容类 `processFormSubmission` 型值 `CONTENT_TYPE=application/x-www-form-urlencoded`为。将显示与名为、和的字段 `mortgageAmount`对应 `lastName`的 `firstName` 值。 此快速开始中使用名 `getNodeText` 为的用户定义方法。 它接受一个 `org.w3c.dom.Document` 实例和一个指定节点名称的字符串值。 此方法返回一个表示节点值的字符串值。 (请参阅 [处理提交的表单](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
 
 ```as3
  /*
@@ -1605,7 +1605,7 @@ Forms服务提供以下快速入门：
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1687,7 +1687,7 @@ Forms服务提供以下快速入门：
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API使用提交的XML数据创建PDF文档 {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API使用提交的XML数据创建PDF文档 {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}
 
 以下Java代码示例处理作为XML提交的表单数据。 表单数据是使用Forms API从表单提交中检索的，并发送到输出服务。 表单数据和表单设计用于创建非交互式PDF文档。 非交互式PDF文档存储在名为的“内容服务”（已弃用）节点中 `/Company Home/Test Directory`。 表单的名称会动态创建。 即，用户的名和姓用于命名PDF文件。 将新内容的资源标识符写出到客户端Web浏览器。 (请参阅 [使用提交的XML数据创建PDF文档](/help/forms/developing/rendering-forms.md#creating-pdf-documents-with-submitted-xml-data)。)
 
@@ -1776,7 +1776,7 @@ Forms服务提供以下快速入门：
  
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1959,12 +1959,12 @@ Forms服务提供以下快速入门：
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API使用可流动布局预填充表单 {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API使用可流动布局预填充表单 {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
 
 下面的代码示例预填充了一个包含动态数据源的表单。 也就是说，数据源是在运行时创建的，不包含在XML文件中或在设计时创建的。 此代码示例包含三种用户定义的方法：
 
 * `createDataSource`:创建一 `org.w3c.dom.Document` 个对象，它表示用于预填充表单的数据源。 此用户定义的方法返回该 `org.w3c.dom.Document` 对象。
-* `convertDataSource`:将对象 `org.w3c.dom.Document` 转换为对 `com.adobe.idp.Document` 象。 此方法接受对 `org.w3c.dom.Document` 象作为输入参数并返回对 `com.adobe.idp.Document` 象。
+* `convertDataSource`:将对象 `org.w3c.dom.Document` 转换为对 `com.adobe.idp.Document` 象。 此方法接受 `org.w3c.dom.Document` 对象作为输入参数并返回对 `com.adobe.idp.Document` 象。
 * `renderPOForm`:使用Forms服务Java API渲染动态采购订单表。 由 `com.adobe.idp.Document` 方法返回的对象 `convertDataSource` 用于预填充表单。
 
    从Java servlet的方法中调用所有这些方 `doPost` 法。 (请参阅 [使用可流式布局预填充表单](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts)。)
@@ -2197,7 +2197,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
   try {
    //Set connection properties required to invoke AEM Forms
    Properties connectionProps = new Properties();
-   connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+   connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL, ServiceC
    lientFactoryProperties.DSC_SOAP_PROTOCOL);
    connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
@@ -2214,9 +2214,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
    pdfFormRenderSpec.setCacheEnabled(new Boolean(true));
    //Specify URI values that are required to render a form
    URLSpec uriValues = new URLSpec();
-   uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
+   uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
    uriValues.setContentRootURI("repository:///");
-   uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+   uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
    //Invoke the renderForm method
    FormsResult formOut = formsClient.renderPDFForm(
    formName, //formQuery
@@ -2244,7 +2244,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
 }
 ```
 
-## 快速入门（SOAP模式）:使用Java API处理包含计算脚本的表单 {#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API处理包含计算脚本的表单 {#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api}
 
 下面的代码示例处理一个包含计算脚本的表单并将结果写回客户端Web浏览器。 (请参阅 [计算表单数据](/help/forms/developing/rendering-forms.md#calculating-form-data)。)
 
@@ -2310,7 +2310,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2362,9 +2362,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API优化性能 {#quick-start-soap-mode-optimizing-performance-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API优化性能 {#quick-start-soap-mode-optimizing-performance-using-the-java-api}
 
-下面的代码示例通过设置缓存、独立和线性化选项来优化性能。 线性化文件经过优化，可在Web上传送。 (请参 [阅优化Forms服务的性能](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service)。)
+下面的代码示例通过设置缓存、独立和线性化选项来优化性能。 线性化文件经过优化，可在Web上投放。 (请参 [阅优化Forms服务的性能](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service)。)
 
 ```as3
  /*
@@ -2427,7 +2427,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  
          //Set connection properties required to invoke AEM Forms
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2452,9 +2452,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
          //Specify URI values that are required to render a form
          //design located in the AEM Forms Repository
          URLSpec uriValues = new URLSpec();
-         uriValues.setApplicationWebRoot("https://[server]:[port]/FormsServiceClientApp");
+         uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsServiceClientApp");
          uriValues.setContentRootURI("repository:///");
-         uriValues.setTargetURL("https://[server]:[port]/FormsServiceClientApp/HandleData");
+         uriValues.setTargetURL("https://'[server]:[port]'/FormsServiceClientApp/HandleData");
  
          //Invoke the renderPDFForm method and write the
          //results to a client web browser
@@ -2490,9 +2490,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API按值呈现 {#quick-start-soap-mode-rendering-by-value-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API按值呈现 {#quick-start-soap-mode-rendering-by-value-using-the-java-api}
 
-以下Java快速入门渲染一个交互式PDF表单，该表单基于名为 *Loan.xdp的表单设计(按值* )。 请注意，表单设计用于填充名为 `com.adobe.idp.Document` inputXDP的 *对象*。 (请参阅 [按值呈现表单](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)。)
+以下Java快速开始渲染交互式PDF表单，该表单基于名为 *Loan.xdp的表单设计(按值* )。 请注意，表单设计用于填充名为 `com.adobe.idp.Document` inputXDP的 *对象*。 (请参阅 [按值呈现表单](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)。)
 
 ```as3
  /*
@@ -2557,7 +2557,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -2575,8 +2575,8 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  
              //Specify URI values that are required to render a form
              URLSpec uriValues = new URLSpec();
-             uriValues.setApplicationWebRoot("https://[server]:[port]/FormsQS");
-             uriValues.setTargetURL("https://[server]:[port]/FormsQS/HandleData");
+             uriValues.setApplicationWebRoot("https://'[server]:[port]'/FormsQS");
+             uriValues.setTargetURL("https://'[server]:[port]'/FormsQS/HandleData");
  
              //Invoke the renderPDFForm method and pass the
              //form design by value
@@ -2617,9 +2617,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API将文档传递到Forms Service {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API将文档传递到Forms服务 {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}
 
-以下Java快速入门从Content Services（已弃用）中检索文件Loan.xdp。 此XDP文件位于空间中 `/Company Home/Form Designs`。 XDP文件在实例中返 `com.adobe.idp.Document` 回。 实 `com.adobe.idp.Document` 例将传递给Forms服务。 交互式表单被写入客户端Web浏览器。 (请参 [阅将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)。)
+以下Java快速开始从Content Services（已弃用）中检索文件Loan.xdp。 此XDP文件位于空间中 `/Company Home/Form Designs`。 XDP文件在实例中返 `com.adobe.idp.Document` 回。 实 `com.adobe.idp.Document` 例将传递给Forms服务。 交互式表单被写入客户端Web浏览器。 (请参 [阅将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)。)
 
 ```as3
  /*
@@ -2671,7 +2671,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
