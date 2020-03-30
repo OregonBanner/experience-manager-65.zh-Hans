@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: 1cb54c8a-9322-4b5a-b5a7-0eef342cee54
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eaace94bc0499aaebfcd389d4dc97b97c7d9160
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -55,7 +55,7 @@ Calvin允许您在Web浏览器中自动测试自适应表单。 卡尔文利 [�
    <td><p>表达式规则</p> <p> </p> </td>
    <td>
     <ul>
-     <li>是否在执行相关UI操作后执行与表单对象关联的表达式，如计算、可见、退出字段后执行脚本？<br /> </li>
+     <li>与表单对象关联的表达式，如计算、可见、退出字段后执行脚本、执行相关UI操作后执行脚本吗？<br /> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@ Calvin允许您在Web浏览器中自动测试自适应表单。 卡尔文利 [�
 
 以下示例将指导您逐步创建一个测试套件以测试多个自适应表单。 您需要为需要测试的每个表单创建单独的测试用例。 通过执行与以下步骤类似的步骤并在步骤11中修改JavaScript代码，您可以创建自己的测试套件来测试自适应表单。
 
-1. 在Web浏览器中转到CRXDE Lite: `https://[server]:[port]/crx/de`.
+1. 在Web浏览器中转到CRXDE Lite: `https://'[server]:[port]'/crx/de`.
 1. 右键单击/etc/clientlibs子文件夹，然后单击“创 **建** ” > “ **创建节点”**。 输入名称（此处为afTestRegistration），将节点类型指定为cq:ClientLibraryFolder，然后单击“确 **定”。**
 
    clientlibs文件夹包含应用程序（JS和Init）的注册方面。 建议您在clientlibs文件夹中注册特定于表单的所有Hobbes测试套件对象。
@@ -123,7 +123,7 @@ Calvin允许您在Web浏览器中自动测试自适应表单。 卡尔文利 [�
 
 >[!NOTE]
 >
->granite.testing.calvin.af clientlib包含所有自适应表单API。 这些API是calvin命名空间的一部分。
+>granite.testing.calvin.af clientlib包含所有自适应表单API。 这些API是卡尔文命名空间的一部分。
 
 ![1_aftestregistration](assets/1_aftestregistration.png)
 
@@ -169,7 +169,7 @@ Calvin允许您在Web浏览器中自动测试自适应表单。 卡尔文利 [�
 
    >[!NOTE]
    >
-   >此示例使用对客户端lib granite.testing.calvin.tests的依赖性来更好地管理。 此示例还添加一个客户端库类别“granite.testing.hobbes.tests.testForm”，以根据需要重用此客户端库。
+   >此示例使用对客户端lib granite.testing.calvin.tests的依赖性，以便更好地管理。 此示例还添加了客户端库类别“granite.testing.hobbes.tests.testForm”，以根据需要重用此客户端库。
 
    ![2_testformproperties](assets/2_testformproperties.png)
 
@@ -313,7 +313,7 @@ Calvin允许您在Web浏览器中自动测试自适应表单。 卡尔文利 [�
 <table>
  <tbody>
   <tr>
-   <td><strong>期限</strong></td>
+   <td><strong>术语</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
@@ -330,7 +330,7 @@ Calvin允许您在Web浏览器中自动测试自适应表单。 卡尔文利 [�
   </tr>
   <tr>
    <td><p>创作或发布环境</p> </td>
-   <td><p>通常，表单可以在创作或发布环境中进行测试。 在发布环境中，默认情况下，执行测试的访问权限受限。 这是因为与测试运行器相关的所有客户端库都位于JCR结构中的/libs内。</p> </td>
+   <td><p>通常，表单可以在创作或发布环境中测试。 在发布环境的情况下，默认情况下，执行测试的访问权限是受限的。 这是因为与测试运行器相关的所有客户端库都位于JCR结构中的/libs内。</p> </td>
   </tr>
  </tbody>
 </table>
