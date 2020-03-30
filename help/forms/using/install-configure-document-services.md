@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: a7ef7682df1dc627565f1cc30047ed775d2dbd13
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -554,7 +554,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 Assembler服务取决于Reader Extensions服务、签名服务、Forms服务和Output服务。 执行以下步骤以验证所需的服务是否已启动并正在运行：
 
-1. 以管理员身份登录 `https://[server]:[port]/system/console/bundles` 到URL。
+1. 以管理员身份登录 `https://'[server]:[port]'/system/console/bundles` 到URL。
 1. 搜索以下服务并确保服务已启动且正在运行：
 
 <table> 
