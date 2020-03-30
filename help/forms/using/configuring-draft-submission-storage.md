@@ -9,7 +9,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 translation-type: tm+mt
-source-git-commit: f9ed171c188a4dfb71f12ae9c98105a4c1895542
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,7 +28,7 @@ AEM Forms Portal数据和元数据服务支持草稿和提交。 默认情况下
 
 现有现成方法的问题是，它将所有数据存储在发布实例上，包括可以是个人识别信息(PII)的数据。
 
-除了上述默认方法之外，还有一种替代实现，可直接将表单数据推送到处理中，而不是保存在本地。 对在发布实例上存储可能敏感数据有顾虑的客户可以选择将数据发送到处理服务器的替代实施。 由于处理发生在创作实例上，因此它通常保持在安全区中。
+除了上述默认方法之外，还有一种替代实现，可直接将表单数据推送到处理中，而不是保存在本地。 对发布实例上可能敏感数据的存储存在疑虑的客户可以选择将数据发送到处理服务器的替代实施。 由于处理发生在创作实例上，因此它通常保持在安全区中。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ AEM Forms Portal数据和元数据服务支持草稿和提交。 默认情况下
 
 ## 配置Forms Portal草稿和提交服务 {#configuring-forms-portal-drafts-and-submissions-services}
 
-在AEM web控制台配置( `https://[host]:[port]/system/console/configMgr`)中，单击以编辑模 **式打开Forms Portal草稿和提交配置** 。
+在AEM Web控制台配置( `https://[host]:'port'/system/console/configMgr`)中，单击以编辑模 **式打开Forms Portal草稿和提交配置** 。
 
 根据您的要求指定属性的值，如下所述：
 
@@ -102,7 +102,7 @@ AEM Forms Portal数据和元数据服务支持草稿和提交。 默认情况下
 
 除了上述指定的配置之外，请提供有关已配置的远程处理实例的信息。
 
-在AEM web控制台配置( `https://[host]:[port]/system/console/configMgr`)中，单击以在编辑模 **式中打开AEM DS设置服务** 。 在“AEM DS设置服务”对话框中，提供有关处理服务器URL、处理服务器用户名和口令的信息。
+在AEM Web控制台配置( `https://[host]:'port'/system/console/configMgr`)中，单击以在编辑模 **式中打开AEM DS设置服务** 。 在“AEM DS设置服务”对话框中，提供有关处理服务器URL、处理服务器用户名和口令的信息。
 
 >[!NOTE]
 >
