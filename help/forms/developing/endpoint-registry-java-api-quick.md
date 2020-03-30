@@ -1,6 +1,6 @@
 ---
-title: 端点注册表Java API quickStart(SOAP)
-seo-title: 端点注册表Java API quickStart(SOAP)
+title: 端点注册表Java API QuickStart(SOAP)
+seo-title: 端点注册表Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 端点注册表Java API快速入门(SOAP) {#endpoint-registry-java-api-quickstart-soap}
+# 端点注册表Java API快速开始(SOAP) {#endpoint-registry-java-api-quickstart-soap}
 
-Java API快速入门(SOAP)可用于端点注册表。
+Java API快速开始(SOAP)可用于端点注册。
 
 [快速入门：使用Java API添加EJB端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
@@ -39,7 +39,7 @@ Java API快速入门(SOAP)可用于端点注册表。
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-***注意&#x200B;**:如果您使用的是其他操作系统（如Unix），则使用AEM表单编程中的快速入门基于表单，将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:使用AEM表单进行编程中的快速开始基于表单（如果您使用的是其他操作系统，如Unix），则使用适用操作系统支持的路径替换特定于窗口的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
 **注意**:不能通过使用Web服务使用端点。
 
@@ -109,7 +109,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
  
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -208,7 +208,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
      try{
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -248,7 +248,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->必须在项目中包含WatchedFolderEndpointConfigConstants.java文件才能编译和运行以下快速启动。 (请参阅 [监视文件夹配置值常数文件](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file)。)
+>必须在项目中包含WatchedFolderEndpointConfigConstants.java文件才能编译和运行以下快速开始。 (请参阅 [监视文件夹配置值常数文件](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file)。)
 
 ```as3
  /*
@@ -311,7 +311,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
      try{
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -383,7 +383,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->必须在项目中包含EmailEndpointConfigConstants.java文件才能编译和运行以下快速入门。 (请参阅 [电子邮件配置值常数文件](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file)。)
+>必须在项目中包含EmailEndpointConfigConstants.java文件才能编译和运行以下快速开始。 (请参阅 [电子邮件配置值常数文件](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file)。)
 
 ```as3
  /*
@@ -446,7 +446,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
      try{
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -590,7 +590,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
  
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -627,7 +627,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门：使用Java API添加TaskManager端点 {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
-以下Java代码示例将一个TaskManager端点添加到名为 *MyApplication/EncryptDocument的服务*。 请注意，类别的名称为 *EncryptProcess*。 (请参阅 [添加TaskManager端点](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints)。)
+以下Java代码示例将一个TaskManager端点添加到名为 *MyApplication/EncryptDocument的服务*。 请注意，类别的名称是 *EncryptProcess*。 (请参阅 [添加TaskManager端点](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints)。)
 
 ```as3
  /*
@@ -693,7 +693,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
  
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -804,7 +804,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -956,7 +956,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -1005,7 +1005,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 ## 快速入门：使用Java API检索端点连接器信息 {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
-以下Java代码检索有关“监视文件夹”端点的信息。 检索并显示有关每个配置值的信息。 此代码列表指定每个配置值是必需值还是可选值。 此外，还会显示每个配置值的名称和值。 (请参阅 [检索端点连接器信息](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)。)
+以下Java代码检索有关“监视文件夹”端点的信息。 检索并显示有关每个配置值的信息。 此代码列表指定每个配置值是必需的还是可选的。 此外，还会显示每个配置值的名称和值。 (请参阅 [检索端点连接器信息](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)。)
 
 ```as3
  /*
@@ -1070,7 +1070,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
          //Set connection properties    required to invoke AEM Forms
          Properties ConnectionProps = new Properties();
-         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
