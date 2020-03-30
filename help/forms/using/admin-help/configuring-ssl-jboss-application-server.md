@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: a7ce63433f7e46feae8b0d23778e36d10c33972a
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -158,7 +158,7 @@ source-git-commit: a7ce63433f7e46feae8b0d23778e36d10c33972a
 
 
 
-1. 要使用SSL访问管理控制台，请在Web `https://[host name]:[port]/adminui` 浏览器中键入：
+1. 要使用SSL访问管理控制台，请在Web `https://[host name]:'port'/adminui` 浏览器中键入：
 
    JBoss的默认SSL端口为8443。 从此处，在访问AEM表单时指定此端口。
 
