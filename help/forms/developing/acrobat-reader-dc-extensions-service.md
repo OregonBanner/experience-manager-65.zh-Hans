@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DC扩展服务Java API快速入门(SOAP)
-seo-title: Acrobat Reader DC扩展服务Java API快速入门(SOAP)
+title: Acrobat Reader DC扩展服务Java API快速开始(SOAP)
+seo-title: Acrobat Reader DC扩展服务Java API快速开始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -9,28 +9,28 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 687cdacc2868de16a4df968dddedd330ce3317bb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Acrobat Reader DC扩展服务Java API快速入门(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC扩展服务Java API快速开始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC Extensions服务提供以下快速入门。
+Acrobat Reader DC Extensions服务提供以下快速开始。
 
-[快速入门（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[从PDF文档删除使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#main-pars-heading-1)
+[从PDF文档中删除使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#main-pars-heading-1)
 
-[快速入门（SOAP模式）:使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-***注意&#x200B;**:使用AEM Forms进行编程中的“快速入门”基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:使用AEM Forms进行编程中的快速开始基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
-## 快速入门（SOAP模式）：使用Java API应用使用权限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## 快速开始（SOAP模式）：使用Java API应用使用权限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java代码示例将使用权限应用于名为 *Loan.pdf的PDF文档*。 启用权限的PDF文档将保存为名为 *LoanUsageRights.pdf的PDF文件*。 以下使用权限将应用于此PDF文档： `enabledComments`、 `enabledFormFillIn`和 `enabledDigitalSignatures`。 (请参 [阅将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例将使用权限应用于名为 *Loan.pdf的PDF文档*。 启用权限的PDF文档将保存为名为 *LoanUsageRights.pdf的PDF文件*。 以下使用权限将应用于此PDF文档: `enabledComments`、 `enabledFormFillIn`和 `enabledDigitalSignatures`。 (请参 [阅将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。)
 
 
 ```as3
@@ -90,7 +90,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
                    
            //Set connection properties required to invoke AEM Forms using SOAP mode                                 
            Properties connectionProps = new Properties(); 
-           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
@@ -141,9 +141,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API从PDF文档删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API从PDF文档删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-以下Java代码示例从名为 *LoanUsageRights.pdf的启用了权限的PDF文档中删除使用权限*。 (请参 [阅从PDF文档删除使用权限](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例从名为 *LoanUsageRights.pdf的启用了权限的PDF文档中删除使用权限*。 (请参 [阅从PDF文档中删除使用权](/help/forms/developing/assigning-usage-rights.md)。)
 
 ```as3
  /* 
@@ -208,7 +208,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
        try{ 
            //Set connection properties required to invoke AEM Forms                                 
            Properties connectionProps = new Properties(); 
-           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
@@ -241,9 +241,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-以下Java代码示例检索有关用于将使用权限应用到名为 *LoanUsageRights.pdf的启用权限的PDF文档的凭证的信息*。 (请参阅 [检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例检索有关用于将使用权限应用到名为 *LoanUsageRights.pdf的启用权限的PDF文档的凭据的信息*。 (请参阅 [检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。)
 
 ```as3
  /* 
@@ -308,7 +308,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
                    
            //Set connection properties required to invoke AEM Forms                             
            Properties connectionProps = new Properties(); 
-           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]"); 
+           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'"); 
           connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);           
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss"); 
            connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator"); 
