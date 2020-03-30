@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -33,17 +33,17 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ### 场景：向所有资产类型添加公用字段（属性） {#scenario-adding-a-common-field-property-to-all-the-asset-types}
 
-此方案显示如何将自定义属性添加到所有资产类型（文本、列表、条件和布局片段）和字母中。 使用此方案，您可以向所有资产和字母添加一个属性“收件人的位置”。 收件人位置属性有助于确定资产或信函的交付地理区域。
+此方案显示如何将自定义属性添加到所有资产类型(文本、列表、条件和布局片段)和字母中。 使用此方案，您可以向所有资产和字母中添加属性“收件人的位置”。 收件人地点物业有助识别资产或信件所涉及的投放地区。
 
 >[!NOTE]
 >
->如果已添加自定义属性，则该属性将开始显示在资产创建页面上。 要隐藏此类属性，请参阅在资产创建和属性页面上显示／隐藏自定义属性。
+>如果您已经添加了自定义属性，则资产创建页面上显示的属性开始。 要隐藏此类属性，请参阅在资产创建和属性页面上显示／隐藏自定义属性。
 
 ![自定义属性已添加到所有资产类型](assets/lcoationofrecipientsui.png)
 
 完成以下步骤，向所有资产类型和字母添加自定义属性：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在apps文件夹中，使用以下步骤创建一个名为css的文件夹，其路径／结构与css文件夹（位于ccrui文件夹中）类似：
 
    1. 右键单击以下路径中的项目文件夹，然后选择“叠 **加节点”**:
@@ -54,11 +54,11 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
+      **路径：** /libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
       ![叠加节点](assets/cmmetapropertiesoverlaynode.png)
 
@@ -74,9 +74,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：GeoLocation（或要为此属性提供的名称）
+      **名称：** GeoLocation（或要为此属性提供的名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
       ![创建节点：GeoLocation](assets/geographicallocationcreatenode.png)
 
@@ -92,7 +92,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 单击“ **全部保存**”。
 
-1. 要查看自定义，请将指针悬停在资产（文本、列表、条件或布局片段）或字母上，单击“查 **看属性**”，然后单击“ **编辑”**。 新字段（收件人的位置）显示在资产／信函属性的“基本”选项卡中。
+1. 要视图自定义，请将指针悬停在资产(文本、列表、条件或布局片段)或字母上，单击“视图属性 **”，然后单击“编**&#x200B;辑” ****。 新字段(收件人的位置)显示在资产／字母属性的“基本”选项卡中。
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    >[!NOTE]
    >
-   >您添加的所有资产的通用属性显示在资产属性的基本选项卡中。 默认情况下，为所有资产添加的公用属性显示在属性页面和资产创建页面上。 要隐藏常用属性，您需要 <!--link to show / hide properties]-->。
+   >您添加的所有资产的通用属性将显示在资产属性的基本选项卡中。 默认情况下，为所有资产添加的公用属性显示在属性页面和资产创建页面上。 要隐藏常用属性，您需要 <!--link to show / hide properties]-->。
 
 ### 场景：向自定义属性／字段添加自定义下拉列表和值 {#scenario-add-custom-drop-down-and-values-to-a-custom-property-field}
 
@@ -112,7 +112,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items`
 
-1. 在新创建的叠加节点(/apps/fd/cm/ma/gui/content/cmetaproperties/commonataproperties/col1/items)下，为需要为其创建nt:unstructured类型下拉框(此处 `geographicallocation`)的每个属性（字段）创建一个节点。
+1. 在新创建的叠加节点(/apps/fd/cm/ma/gui/content/cmetaproperties/commonproperties/col1/items)下，为需要为其创建nt:unstructured类型下拉列表(此处 `geographicallocation`)的每个属性（字段）创建一个节点。
 1. 将以下属性添加到节点（此处为地理分配），然后单击“全 **部保存”**:
 
    <table>
@@ -130,7 +130,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    <tr>
       <td>名称</td>
       <td>字符串</td>
-      <td>./extendedproperties/geographicallocation（使值与您在项目节点下创建的字段名保持相同）</td>
+      <td>。/extendedproperties/geographicallocation（使值与您在项目节点下创建的字段名保持相同）</td>
    </tr>
    <tr>
       <td>renderReadOnly</td>
@@ -179,13 +179,13 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ### 场景：所有资产类型的公用选项卡 {#scenario-common-tab-for-all-asset-types}
 
-此方案显示如何将自定义选项卡“收件人”添加到所有资产类型（文本、列表、条件和布局片段）和字母中。 在“收件人”选项卡中，您可以计划放置与收件人相关的所有自定义属性。
+此方案显示如何向所有资产类型(文本、列表、条件和布局片段)和字母添加自定义选项卡、收件人。 收件人选项卡是您计划将所有自定义属性放入与收件人相关的位置。
 
 ![为所有资产类型添加的自定义选项卡](assets/recipientstab.png)
 
 使用以下过程，您可以向所有资产添加包含字段的选项卡：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在apps文件夹中，使用以下步骤创建一个名为cmmetadataproperties的文件夹，其路径／结构与cmmetadataproperties文件夹（位于内容文件夹中）类似：
 
    1. 右键单击以下路径中的cmmetadataproperties文件夹，然后选择“ **叠加节点”**:
@@ -196,11 +196,11 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/content/cmmetadataproperties
+      **路径：** /libs/fd/cm/ma/gui/content/cmmetadataproperties
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
@@ -216,9 +216,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：commontab（或要为此属性提供的名称）
+      **名称：** commontab（或要为此属性提供的名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处为公用选项卡）。 CRX显示节点的属性。
    1. 将以下属性添加到节点（此处为公用选项卡）:
@@ -238,7 +238,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
          <tr>
           <td>sling:resourceType</td>
           <td>字符串</td>
-          <td>granite/ui/components/coral/foundation/container<br /> </td>
+          <td>granite/ui/components/coral/foundation/容器<br /> </td>
    </tr>
          </tbody>
        </table>
@@ -250,9 +250,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击相关节点（此处为公用选项卡），然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：项目
+      **名称：** 项目
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击“ **全部保存”:**
 
@@ -261,9 +261,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击项目节点，然后选择“创 **建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：Column1（或要为节点提供的名称——此名称不显示在用户界面中。）
+      **名称：** Column1（或要为节点提供的名称——此名称不显示在用户界面中。）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 将以下属性添加到节点（此处为Column1），然后单击“全 **部保存”**:
 
@@ -277,7 +277,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
          <tr>
            <td>sling:resourceType</td>
            <td>字符串</td>
-           <td>granite/ui/components/coral/foundation/container<br /> </td>
+           <td>granite/ui/components/coral/foundation/容器<br /> </td>
          </tr>
          </tbody>
        </table>
@@ -287,27 +287,27 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击节点（此处为Column1），然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：项目
+      **名称：** 项目
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击“ **全部保存**”。
 
-1. 要在自定义选项卡（此处为收件人）中创建字段，请添加一个节点（此处为GeoralicLocation）。 此属性与您创建的列相对应。 使用以下步骤创建字段（要创建更多字段／节点，请重复这些步骤。）: 
+1. 要在自定义选项卡(此处为收件人)中创建字段，请添加节点（此处为GeogralLocation）。 此属性与您创建的列相对应。 使用以下步骤创建字段（要创建更多字段／节点，请重复这些步骤。）: 
 
    1. 右键单击项目节点，然后选择“创 **建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：GeoralicationLocation（或字段属性的其他名称）
+      **名称：** GeoralicationLocation（或字段属性的其他名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 将以下属性添加到字段节点（此处为GeographicalLocation），然后单击“全 **部保存”**。
 
       | **名称** | **类型** | **值** |
       |---|---|---|
       | fieldLabel | 字符串 | 收件人的位置（或要为字段指定的名称）。 |
-      | 名称 | 字符串 | ./extendedproperties/GeoralLocation |
+      | 名称 | 字符串 | 。/extendedproperties/GeoralLocation |
       | renderReadOnly | 布尔型 | true |
       | sling:resourceType | 字符串 | `/libs/granite/ui/components/coral/foundation/form/textfield` |
 
@@ -315,7 +315,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items`
 
-   要为字母或其他资产创建叠加，请使用以下路径，方法是将资 [产类型替换为文本] 、条件、列表、dataditionary或片段：
+   要为字母或其他资产创建叠加，请使用以下路径，方法是将资 [产类型替换为文本] 、条件、列表、数据字典或片段：
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[assettype]/items/tabs/items`
 
@@ -327,9 +327,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
       **路径:** `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items`
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹已创建。 单击“ **全部保存**”。
 
@@ -338,9 +338,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击项目文件夹，然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：mytab（或要为此属性提供的名称）
+      **名称：** mytab（或要为此属性提供的名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处为mytab）。 CRX显示节点的属性。
    1. 将以下两个属性添加到节点（此处为自定义选项卡）:
@@ -367,7 +367,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 单击“ **全部保存**”。
 
-1. 要查看自定义，请将指针悬停在相关资产（此处为字母）上，单击查看属性，然后单击 **编辑**。 新选项卡（收件人）和字段（收件人的位置）显示在用户界面中。
+1. 要视图自定义，请将指针悬停在相关资产（此处为字母）上，单击视图属性，然后单击编 **辑**。 新选项卡(收件人)和字段(收件人的位置)显示在用户界面中。
 
    >[!NOTE]
    >
@@ -386,11 +386,11 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 * 数据字典
 * 书信
 
-例如，您只要向文本资产添加属性“收件人位置”，以标识资产与哪个地理区域相关。  ![向资产添加的自定义属性](assets/newtabui.png)
+例如，您只需要为文本资产添加属性“收件人位置”，以标识资产所涉及的地理区域。  ![向资产添加的自定义属性](assets/newtabui.png)
 
 要向资产类型添加属性，请完成以下步骤：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 要在资产类型（如文本）中创建选项卡，请在应用程序文件夹中创建以下文件夹结构：
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items`
@@ -411,11 +411,11 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items
+      **路径：** /libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[AssetType]/items/tabs/items
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
@@ -426,16 +426,16 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击项目文件夹，然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：customtab（或要为此属性提供的名称）
+      **名称：** customtab（或要为此属性提供的名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处为自定义选项卡）。 CRX显示节点的属性。
    1. 将以下两个属性添加到节点（此处为自定义选项卡）:
 
       | **名称** | **类型** | **值** |
       |---|---|---|
-      | sling:resourceType | 字符串 | granite/ui/components/coral/foundation/container |
+      | sling:resourceType | 字符串 | granite/ui/components/coral/foundation/容器 |
       | jcr:title | 字符串 | 用户界面上字段的名称（此处为“我的”选项卡） |
 
    1. 单击“ **全部保存**”。
@@ -445,9 +445,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击节点（此处为自定义选项卡），然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：项目
+      **名称：** 项目
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击“ **全部保存**”。
 
@@ -456,9 +456,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击项目节点，然后选择“创 **建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：Column1（或要给节点的名称）
+      **名称：** Column1（或要给节点的名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 将以下属性添加到节点（此处为Column1），然后单击“全 **部保存”**。
 
@@ -472,7 +472,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
          <tr>
            <td>sling:resourceType</td>
            <td>字符串</td>
-           <td>granite/ui/components/coral/foundation/container<br /> </td>
+           <td>granite/ui/components/coral/foundation/容器<br /> </td>
          </tr>
          </tbody>
        </table>
@@ -482,9 +482,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击相关的列节点（此处为Column1），然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：项目
+      **名称：** 项目
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击“ **全部保存”:**
 
@@ -493,9 +493,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击相关节点（此处项目位于Column1下），然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：您选择的名称（此处为GeoLocation）
+      **名称：** 您选择的名称（此处为GeoLocation）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 将以下属性添加到节点，然后单击“全 **部保存”**。
 
@@ -506,7 +506,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
       | renderReadOnly | 布尔型 | true |
       | sling:resourceType | 字符串 | granite/ui/components/coral/foundation/form/textfield |
 
-1. 要查看自定义，请将指针悬停在相关资产（此处为文本）上，单击查看属性，然后单击 **编辑**。 新选项卡和字段（收件人的位置）显示在用户界面中。
+1. 要视图自定义，请将指针悬停在相关资产（此处为文本）上，单击视图属性，然后单击编 **辑**。 新选项卡和字段(收件人的位置)显示在用户界面中。
 
    >[!NOTE]
    >
@@ -524,20 +524,20 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 1. 确保“叠加节点”对话框具有以下字母值。 对于其他资产类型，下表中给出了路径：
 
-   **** 路径：/libs/fd/cm/ma/gui/content/createasset/createleter/jcr:content/body/items/form/items/letterWizard/items/properties/properties/items/letterproperties/items
+   **路径：** /libs/fd/cm/ma/gui/content/createasset/createleter/jcr:content/body/items/form/items/letterWizard/items/properties/properties/items/letterproperties/items
 
-   **** 位置：/apps/
+   **位置：** /apps/
 
-   **** 匹配节点类型：已选择
+   **匹配节点类型：** 已选择
 
    根据资产的类型，路径必须包括以下内容：
 
-   | **资产／文档类型** | **要添加的路径** |
+   | **资产/文档类型** | **要添加的路径** |
    |---|---|
    | 文本 | /libs/fd/cm/gui/content/createasset/createtext/jcr:content/body/items/form/items/textwizard/items/editproperties/properties/items/tabs/items/tab1/items/tab1/items |
-   | 列表 | /libs/fd/cm/gui/content/createasset/createlist/jcr:content/body/items/form/items/listwizard/items/editproperties/properties/items/tabs/items/tab1/items/tab1/items |
+   | 列表 | /libs/fd/cm/gui/content/createasset/createlist/jcr:content/body/items/form/items/listwizard/items/editproperties/properties/items/tabs/items/tab1/items/atb1/items |
    | 条件 | /libs/fd/cm/gui/content/createasset/createcondition/jcr:content/body/items/form/orconditionwizard/items/editproperties/items/properties/items/tabs/items/tab1/items/tab1/items |
-   | 片段 | /libs/fd/cm/gui/content/createasset/createfragment/jcr:content/body/items/form/items/fragmentwizard/items/properties/properties/items/tabs2/items/tabs2/tab1/items |
+   | 片段 | /libs/fd/cm/gui/content/createasset/createfragment/jcr:content/body/items/form/items/fragmentwizard/items/properties/properties/items/tabs2/items/tab1/items/items/tab1/items |
    | 书信 | /libs/fd/cm/ma/gui/content/createasset/createleter/jcr:content/body/items/form/items/letterWizard/items/properties/properties/items/letterproperties/items |
 
 1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
@@ -584,7 +584,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 完成以下步骤以在Correponse Management的资产列表UI中显示自定义属性：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在应用程序文件夹中创建以下文件夹结构：
 
    `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns`
@@ -597,11 +597,11 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns
+      **路径：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/视图/列表/columns
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
@@ -612,9 +612,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击相关节点（列），然后选择“创 **建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：您选择的名称（此处为GeoralicalLocation）
+      **名称：** 您选择的名称（此处为GeoralicalLocation）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 将以下属性添加到节点，然后单击“全 **部保存”**。
 
@@ -655,11 +655,11 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/components/admin/childpagerer/childlistpage
+      **路径：** /libs/fd/cm/ma/gui/components/admin/childpagerer/childlistpage
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
@@ -723,7 +723,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 单击“ **全部保存**”。
 
-1. 要查看自定义，请打开文档片段或已在其中添加自定义属性的字母的列表视图。
+1. 要视图自定义，请打开文档片段或已添加自定义属性的字母的列表视图。
 
    此过程中添加的UI列和属性将针对所有资产类型显示。 但是，这些属性中的值只能为最初为其添加自定义属性的资产类型输入和显示。
 
@@ -743,7 +743,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   <tr>
    <td>sling:orderBefore</td>
    <td>字符串</td>
-   <td><p>路径“/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/list/columns”的列节点名称，此前需要在UI中显示自定义列。</p> <p>在此，如果希望“地理位置”列显示在“版本”列的前面（左侧），请将属性sling:orderBefore添加到路径“”/apps/fd/cm/ma/gui/content/cmassets/jcr:content/views/list/columns/GeoLocation”的GeoLocation节点中，并将属性值设置为版本。</p> </td>
+   <td><p>路径“/libs/fd/cm/ma/gui/content/cmassets/jcr:content/视图/列表/columns”的列节点名称，在此之前，自定义列需要显示在UI中。</p> <p>在此，如果希望“地理位置”列显示在“版本”列的前面（左侧），请将属性sling:orderBefore添加到路径“”/apps/fd/cm/ma/gui/content/cmassets/jcr:content/视图/列表/columns/GeoLocation”的GeoLocation节点中，并将属性值设置为版本。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -763,31 +763,31 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 要允许对自定义属性进行索引，请完成以下步骤：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
-1. 转到并 `/oak:index/cmLucene`在其下添加一个名 **为agges** 的节点。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `/oak:index/cmLucene`在其下添加一个名 **为聚合** 的节点。
 
    1. 右键单击cmLucene文件夹，然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：聚合
+      **名称：** 聚合
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击“ **全部保存**”。
 
-1. 在新创建的聚合文件夹下，添加一个节点cm:resource。 在cm:resource下，添加一个名为include0的节点。
+1. 在新创建的聚合文件夹下，添加节点cm:resource。 在cm:resource下，添加一个名为include0的节点。
 
    1. 右键单击聚合文件夹，然后选择 **创建** >创 **建节点**。 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：cm：资源
+      **名称：** cm：资源
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 右键单击cm:resource文件夹，然后选择 **创建** > **创建节点**。 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：include 0
+      **名称：** include 0
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处包括0）。 CRX显示节点的属性。
    1. 将以下属性添加到节点（此处包括0）:
@@ -816,9 +816,9 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    1. 右键单击属性文件夹，然后选择“ **创建** ”>“ **创建节点”**。
    1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
 
-      **** 名称：位置（或要添加到搜索的自定义属性的名称）
+      **名称：** 位置（或要添加到搜索的自定义属性的名称）
 
-      **** 类型：nt:unstructured
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处）。 CRX显示节点的属性。
    1. 将以下属性添加到节点（此处位置）:
@@ -842,8 +842,8 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ## 更改搜索页面的默认视图 {#change-default-view-of-the-search-page}
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
-1. 在apps文件夹中，创建一个名为list的文件夹，其路径／结构与位于/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views中的列表文件夹类似：
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
+1. 在apps文件夹中，创建一个名为“列表”的文件夹，其路径／结构与位于/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/视图中的“列表”文件夹类似：
 
    1. 右键单击以下路径中的项目文件夹，然后选择“叠 **加节点”**:
 
@@ -851,17 +851,17 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/views/list
+      **路径：** /libs/granite/ui/content/shell/omnisearch/searchresults/singleresults/视图/列表
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
    1. 单击“ **全部保存**”。
 
-1. 在新创建的节点中，列出，添加以下属性，然后单击“全 **部保存”**:
+1. 在新创建的节点列表中，添加以下属性，然后单击“全 **部保存”**:
 
    <table>
    <tbody>
@@ -878,18 +878,18 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    </tbody>
    </table>
 
-1. 自定义操作会在“列表”视图中显示所有控制台的搜索结果，包括表单和文档、资产和站点。
+1. 自定义功能可在列表视图中显示所有控制台(包括表单和文档、资产和站点)的搜索结果。
 
 ## 更改资产页面的默认视图 {#change-default-view-of-the-assets-page}
 
 >[!NOTE]
 >
->这些步骤更改了所有控制台（如“表单”和“文档”、“资产”和“站点”）的默认视图。
+>这些步骤更改了所有控制台(如表单和文档、资产和站点)的默认视图。
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
-1. 在apps文件夹中，创建一个名为list的文件夹，其路径／结构与位于以下位置的列表文件夹类似：
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
+1. 在apps文件夹中，创建一个名为“列表”的文件夹，其路径／结构与位于以下位置的“列表”文件夹类似：
 
-   /libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/
+   /libs/fd/cm/ma/gui/content/cmassets/jcr:content/视图/
 
    1. 右键单击以下路径中的项目文件夹，然后选择“叠 **加节点”**:
 
@@ -897,17 +897,17 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/list
+      **路径：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/视图/列表
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
    1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
    1. 单击“ **全部保存**”。
 
-1. 在新创建的节点中，列出，添加以下属性，然后单击“全 **部保存”**:
+1. 在新创建的节点列表中，添加以下属性，然后单击“全 **部保存”**:
 
    <table>
    <tbody>
@@ -924,7 +924,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    </tbody>
    </table>
 
-1. 清除浏览器cookies或使用浏览器的隐姓埋名模式查看资产。 默认情况下，资产页面显示在卡布局中。
+1. 清除浏览器cookies或使用浏览器的隐姓埋名模式视图资产。 默认情况下，资产页面显示在卡布局中。
 
 ## 在“资产创建”和“属性”页面上显示／隐藏自定义属性 {#show-hide-custom-properties-on-asset-creation-and-properties-pages}
 
