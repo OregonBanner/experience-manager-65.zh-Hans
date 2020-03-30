@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: db69c393fc44ca2fcb30f9fcb0c5ca456ba35ed5
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
 # 使用API在网页上列出表单 {#listing-forms-on-a-web-page-using-apis}
 
-AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检索一组满足搜索条件的表单。 您可以使用API根据各种筛选器搜索表单。 响应对象包含表单属性、属性和渲染表单的端点。
+AEM Forms提供了基于REST的搜索API,Web开发人员可以使用它来查询和检索一组满足搜索条件的表单。 您可以使用API根据各种过滤器搜索表单。 响应对象包含表单属性、属性和渲染表单的端点。
 
-要使用REST API搜索表单，请使用下面描述的查询参数将GET请 `https://[server]:[port]/libs/fd/fm/content/manage.json` 求发送到服务器。
+要使用REST API搜索表单，请使用下面描述的查询参数将GET请 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 求发送到服务器。
 
 ## Query parameters {#query-parameters}
 
@@ -32,11 +32,11 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
    <td>函数<br /> </td>
    <td><p>指定要调用的函数。 要搜索表单，请将属性的 <code>func </code>值设置为 <code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong></strong> 注意：此 <em>参数为必填。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> 此 <em>参数为必填。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
-   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性搜索所有在根节点级别可用的应用程序。<br /> </p> <p>您可以在单个搜索查询中指定多个应用程序路径。 用竖线(|)字符分隔多个路径。 </p> </td>
+   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性搜索所有在根节点级别可用的应用程序。<br /> </p> <p>您可以在一个搜索查询中指定多个应用程序路径。 用竖线(|)字符分隔多个路径。 </p> </td>
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
@@ -69,7 +69,7 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
   </tr>
   <tr>
    <td>语句</td>
-   <td><p>指定语句列表。 查询将在JSON格式中指定的语句列表中执行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
+   <td><p>指定语句的列表。 查询在列表JSON格式中指定的语句时执行。 </p> <p>例如，</p> <p><code class="code">JSONArray statementArray=new JSONArray();
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
@@ -87,11 +87,11 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
        <li>LTEQ —— 小于或等于</li>
        <li>CONTAINS —— 如果B是A的一部分，则A包含B</li>
        <li>全文——全文搜索</li>
-       <li>STARTSWITH —— 如果B是A的开头部分，则A以B开头</li>
+       <li>STARTSWITH —— 如果B是A的开头部分，则为B的开始</li>
        <li>ENDSWITH —— 如果B是A的结束部分，则A以B结束</li>
        <li>LIKE —— 实现LIKE运算符</li>
        <li>AND —— 合并多个语句</li>
-      </ul> <p><strong></strong> 注意： <em>GT、LT、GTEQ和LTEQ算子适用于线性类型的属性，如LONG、DOUBLE和DATE。</em></p> </li>
+      </ul> <p><strong>注意：</strong><em>GT、LT、GTEQ和LTEQ算子适用于线性类型的属性，如LONG、多次和DATE。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -170,7 +170,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 * [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
 * [创建表单门户页面](/help/forms/using/creating-form-portal-page.md)
-* [使用API在网页上列出表单](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [使用API在网页上列表表单](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
