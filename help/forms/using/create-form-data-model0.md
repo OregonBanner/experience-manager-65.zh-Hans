@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
+source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 1449ce9aba3014b13421b32db70c15ef09967375
 
 ## 关于教程 {#about-the-tutorial}
 
-AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户配置文件、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库）创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 通过这些服务，您可以预填自适应表单并将提交的表单数据写入数据模型对象。
+AEM Forms数据集成模块允许您从不同的后端数据源(如AEM用户用户档案、RESTful Web服务、基于SOAP的Web服务、OData服务和关系数据库)创建表单数据模型。 您可以在表单数据模型中配置数据模型对象和服务，并将其与自适应表单关联。 自适应表单字段绑定到数据模型对象属性。 通过这些服务，您可以预填自适应表单并将提交的表单数据写入数据模型对象。
 
 有关表单数据集成和表单数据模型的更多信息，请参 [阅AEM表单数据集成](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html)。
 
@@ -38,7 +38,7 @@ AEM Forms数据集成模块允许您从不同的后端数据源（如AEM用户�
 
 ![表单数据模型](assets/form_data_model_callouts_new.png)
 
-**答：** 已配置数 **据源B。** 数据源架 **构** C.可用服 **务D.** 数据模型对 **象E。** 配置的服务
+**答：** 已配置数 **据源B。** 数据源模式 **C.** Available services **D.** 数据模型对 **象E。** 配置的服务
 
 ## 前提条件 {#prerequisites}
 
@@ -121,7 +121,7 @@ CREATE TABLE `calls` (
    1. 以管理员身份登录到AEM Forms作者实例，然后转到AEM Web控制台包。 默认URL为 [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)。
    1. 点按 **安装／更新**。 出现 **“上传／安装包** ”对话框。
 
-   1. 点按 **选择文件** ，浏览并选择MySQL JDBC驱动程序OSGi包。 选择 **启动Bundle****和刷新包**，然后点按 **Install** or **** Update Refresh Packages。 确保Oracle Corporation的MySQL JDBC驱动程序处于活动状态。 已安装驱动程序。
+   1. 点按 **选择文件** ，浏览并选择MySQL JDBC驱动程序OSGi包。 选择 **开始包** 和刷新包 **，然后点按安**&#x200B;装 **或******&#x200B;更新Reade Bundle。 确保Oracle Corporation的MySQL JDBC驱动程序处于活动状态。 已安装驱动程序。
 
 1. 将MySQL数据库配置为数据源：
 
@@ -135,14 +135,14 @@ CREATE TABLE `calls` (
 
       * **JDBC驱动程序类**:指定JDBC驱动程序的Java类名。 对于MySQL数据库，指 **定com.mysql.jdbc.Driver**。
 
-      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和架构电话上运行的MySQL数据库，URL为： `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC连接URI**:指定数据库的连接URL。 对于在端口3306和模式电话上运行的MySQL数据库，URL为： `jdbc:mysql://'server':3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **用户名：** 数据库用户名。 需要使JDBC驱动程序能够与数据库建立连接。
       * **密码：** 数据库的口令。 需要使JDBC驱动程序能够与数据库建立连接。
       * **借阅测试：** 启用“借 **阅时测试** ”选项。
 
       * **返回时测试：** 启用“ **返回时测试** ”选项。
 
-      * **验证查询：** 指定SQL SELECT查询以验证池中的连接。 查询必须至少返回一行。 例如，从 **客户中选择***。
+      * **验证查询:** 指定SQL SELECT查询以验证池中的连接。 查询必须至少返回一行。 例如，从 **客户中选择***。
 
       * **事务隔离**:将该值设置 **为READ_COMMITTED**。
    将其他属性保留为默 [认值](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) ，然后点 **按保存**。
@@ -160,7 +160,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 1. 在AEM作者实例中，导航到“表 **单** ”>“ **数据集成”**。
 1. Tap **Create** > **Form Data Model**.
 1. 在“创建表单数据模型”向导中，指定表 **单数据模** 型的名称。 例如， **FDM_Create_First_IC**。 点按下 **一步**。
-1. 选择数据源屏幕列出所有已配置的数据源。 选 **择MySQL** 数据源并点 **按创建**。
+1. 选择数据源屏幕列表所有已配置的数据源。 选 **择MySQL** 数据源并点 **按创建**。
 
    ![MYSQL数据源](assets/fdm_mysql_data_source_new.png)
 
@@ -185,7 +185,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 
    ![FDM的MYSQL数据源](assets/mysql_fdm_new.png)
 
-1. 展开 **MySQL数据源树** 。 从电信架构中选择以下数据模型对象 **和服务** :
+1. 展开 **MySQL数据源树** 。 从电信模式中选择以下数据模型对象 **和服务** :
 
    * **数据模型对象**:
 
@@ -196,7 +196,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 
       * 获取
       * 更新
-   点按 **添加选定项** ，将选定数据模型对象和服务添加到表单数据模型。
+   点按 **添加选定项** ，将选定的数据模型对象和服务添加到表单数据模型。
 
    ![选择数据模型对象服务](assets/select_data_model_object_services_new.png)
 
@@ -206,7 +206,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 
 ### 为数据模型对象创建计算的子属性 {#create-computed-child-properties-for-data-model-object}
 
-计算的属性是根据规则或表达式计算其值的属性。 使用规则，您可以将计算属性的值设置为表单数据模型中的文本字符串、数字、数学表达式的结果或其他属性的值。
+计算属性是根据规则或表达式计算其值的属性。 使用规则，您可以将计算属性的值设置为表单数据模型中的文本字符串、数字、数学表达式的结果或其他属性的值。
 
 根据用例，使用以下数 **学表达式** ，在清单数据模型对 **** 象中创建Usagecharges子计算属性：
 
@@ -228,9 +228,9 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 
    ![使用费规则编辑器](assets/usage_charges_rule_editor_new.png)
 
-1. 在数学表达式中，分别选 **择调用** , **将调用调** 用电荷作为第一对象和第二对象。 选择 **加号** ，作为运算符。 在数学表达式中点击 **扩展表达式** ，以添 **加smscharges**、 **internetcharges**、internetcarges、ingnationalRoing、 ************ roingnl、roingingingingalCarges、intintintintVas对象到表达式中。
+1. 在数学表达式中，分别 **选择调用** , **并将调用** callcarges作为第一和第二对象。 选择 **加号** ，作为运算符。 在数学表达式内点击并点击扩展 **表达式** ，以将 **、互**&#x200B;连电荷、National **************** 、RoamingNational、RoamingInternit、RoamingIntintIntent、AmingVas对象添加到表达式中。
 
-   下图描述了规则编辑器中的数学表达式：
+   下图描述了规则编辑器中的数学表达式:
 
    ![使用费用规则](assets/usage_charges_rule_all_new.png)
 
@@ -256,24 +256,24 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 1. 在“添加 **关联** ”窗格中：
 
    * 指定关联的标题。 它是一个可选字段。
-   * 从“ **类型** ”(Type **** )下拉列表中选择“一对多”(One to Many)。
+   * 从“ **类型** ”下拉 **** 列表中选择“一对多”。
 
    * 从“ **模型对象** ”(Model Object **** )下拉列表中选择调用。
 
-   * 从 **服务****下拉列** 表中选择get。
+   * 从 **服务****下拉列表** 中选择“获取”。
 
    * 点 **按添加** ，链接 **客户数据模型对** 象以使用属性调 **** 用数据模型对象。 根据用例，调用数据模型对象必须链接到客户数据模型对象中的移动号码属性。 “添 **加参数** ”(Add Argument)对话框打开。
    ![添加关联](assets/add_association_new.png)
 
 1. 在“添 **加参数** ”对话框中：
 
-   * 从“ **名称****”(Name)下拉列表中选择** mobilenum。 移动号码属性是客户中可用的公用属性，它调用数据模型对象。 结果，它用于在客户和调用数据模型对象之间创建关联。
+   * 从 **名称****下拉列表** 中选择mobilenum。 移动号码属性是客户中可用的公用属性，它调用数据模型对象。 结果，它用于在客户和调用数据模型对象之间创建关联。
 对于客户数据模型对象中的每个可用移动号码，呼叫表中有多个可用的呼叫记录。
 
    * 为参数指定可选标题和说明。
    * 从 **绑定到****下拉列表中选** 择客户。
 
-   * 从“ **绑定值** ”(Binding Value **** )下拉列表中选择mobilenum。
+   * 从“ **绑定值** ”下 **拉列表中选择** mobilenum。
 
    * 点按 **添加**。
    ![为参数添加关联](assets/add_association_argument_new.png)
@@ -290,16 +290,16 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 1. 在“添加 **关联** ”窗格中：
 
    * 指定关联的标题。 它是一个可选字段。
-   * 从“ **类型** ”(Type **** )下拉列表中选择“一对一”(One)。
+   * 从 **类型下拉列表** ，选 **择一** 个到一个。
 
    * 从“ **模型对象** ”(Model Object **** )下拉列表中选择清单。
 
-   * 从 **服务****下拉列** 表中选择get。 “ **参数** ”部分中已提供帐单计划属性，该属性是帐单表的主要 **键** 。
+   * 从 **服务****下拉列表** 中选择“获取”。 “ **参数** ”部分中已提供帐单计划属性，该属性是帐单表的主要 **键** 。
 清单和客户数据模型对象分别使用清单计划（清单）和客户计划（客户）属性进行链接。 在这些属性之间创建一个绑定，以检索MySQL数据库中任何可用客户的计划详细信息。
 
    * 从 **绑定到****下拉列表中选** 择客户。
 
-   * 从“ **装订值** ”(Binding Value **** )下拉列表中选择Customerplan。
+   * 从“ **绑定值****”(Binding Value** )下拉列表中选择Customerplan。
 
    * 点按 **完成** ，以在开单计划和客户计划属性之间创建绑定。
    ![为客户帐单添加关联](assets/add_association_customer_bills_new.png)
@@ -314,19 +314,19 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 
 1. 选中客户数据模型对象顶部的复 **选框** ，将其选中并点按编辑 **属性**。 此时将 **打开“编辑属性** ”窗格。
 1. 将 **customer** 指定为 **顶级模型对象**。
-1. 从 **读取****服务下拉列** 表中选择“获取”。
+1. 从 **读取****服务下拉** 列表中选择获取。
 1. 在“参 **数** ”部分：
 
    * 从“ **绑定到** ”下 **拉列表中选择** “请求属性”。
 
    * 指定 **mobilenum** 作为绑定值。
 
-1. 从 **“写入****服务”下拉列** 表中选择“更新”。
+1. 从 **Write** **Service下拉列表中选** 择更新。
 1. 在“参 **数** ”部分：
 
    * 对于 **mobilenum** 属性，从“绑定到”(Binding To **)下拉列表中** 选择customer **** 。
 
-   * 从“ **绑定值** ”(Binding Value **** )下拉列表中选择mobilenum。
+   * 从“ **绑定值** ”下 **拉列表中选择** mobilenum。
 
 1. 点按 **完成** ，以保存属性。
 
@@ -345,7 +345,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 1. 在“编辑 **属性** ”窗格中：
 
    * 输入可选标题和说明。
-   * 从“ **输出模** 型对象 **”(Output Model Object** )下拉列表中选择客户。
+   * 从“ **输出模** 型对象 **** ”下拉列表中选择客户。
 
    * 点按 **完成** ，以保存属性。
    ![编辑属性](assets/edit_properties_get_details_new.png)
@@ -354,7 +354,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 1. 在“编辑 **属性** ”窗格中：
 
    * 输入可选标题和说明。
-   * 从“ **输入模** 型对象 **”(Input Model Object** )下拉列表中选择客户。
+   * 从“ **输入模** 型对象”(Input Model Object **** )下拉列表中选择客户。
 
    * 点按&#x200B;**完成**。
    * 点按 **保存** ，以保存表单数据模型。
@@ -367,7 +367,7 @@ AEM Forms提供了直观的用户界面，可 [从配置的数据源](https://he
 执行以下操作以运行测试：
 
 1. 转到“模 **型** ”选项卡，选择 **customer** 数据模型对象，然后点按 **测试模型对象**。
-1. 在“测 **试表单数据模型** ”窗口中，从“选择模型／服务”下拉列表中选择“读取模型对象 ******** ”。
+1. 在“测 **试表单数据模型********** ”窗口中，从“选择模型／服务”下拉列表中选择“读取模型对象”。
 1. 在“输 **入** ”部分中，为已配置的MySQL数据库中存在的 **mobilenum** 属性指定一个值，然后点按 **测试**。
 
    将获取与指定mobilenum属性关联的客户详细信息并在“输出”部分中显示，如下所示。 关闭对话框。
