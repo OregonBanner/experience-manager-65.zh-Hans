@@ -1,8 +1,8 @@
 ---
 title: 更改AEM Forms工作区用户界面的区域设置
 seo-title: 更改AEM Forms工作区用户界面的区域设置
-description: 如何修改AEM Forms工作区以本地化界面上的文本、折叠的类别、队列和进程以及日期选取器。
-seo-description: 如何修改AEM Forms工作区以本地化界面上的文本、折叠的类别、队列和进程以及日期选取器。
+description: 如何修改AEM Forms工作区以本地化文本、折叠的类别、队列和进程，以及界面上的日期选取器。
+seo-description: 如何修改AEM Forms工作区以本地化文本、折叠的类别、队列和进程，以及界面上的日期选取器。
 uuid: c89ff150-a36e-45cc-99a6-8768dbe58eab
 contentOwner: robhagat
 content-type: reference
@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ AEM Forms工作区提供针对英语、法语、德语和日语的开箱即用�
 请执行以下步骤以添加对新语言和浏览器区 *域设置* 代码的 *支持*。
 
 1. 登录到CRXDE Lite。
-CRXDE lite的默认URL为 `https://[server]:[port]/lc/crx/de/index.jsp`。
+CRXDE Lite的默认URL为 `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 导览至该位置并 `apps/ws/locales` 创建新文件夹 `nw.`
 1. 将文件从 `translation.json`位置复制 `/apps/ws/locales/en-US` 到位置 `/apps/ws/locales/nw` 。
 1. 导航到并 `/apps/ws/locales/nw` 打开以 `translation.json` 进行编辑。 对translation.json文件进行特定于区域设置的更改。
@@ -50,11 +50,11 @@ CRXDE lite的默认URL为 `https://[server]:[port]/lc/crx/de/index.jsp`。
 
 AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需要开发包来本地化这些标题。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](../../forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
 
-在以下步骤中，假定新的本地化图像文件为 *Categories_nw.png*、 *Queue_nw.png*&#x200B;和 *Processes_nw.png*。 建议的图像宽度为19px。
+在以下步骤中，假定新的本地化图像文件是 *类别_nw.png*、 *Queue_nw.png*&#x200B;和 *Processes_nw.png*。 建议的图像宽度为19px。
 
 >[!NOTE]
 >
->查找浏览器的浏览器语言区域设置代码。 打开 `https://[server]:[port]/lc/libs/ws/Locale.html`.
+>查找浏览器的浏览器语言区域设置代码。 打开 `https://'[server]:[port]'/lc/libs/ws/Locale.html`.
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
