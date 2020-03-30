@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
 
 1. 将现有AEM实例升级到AEM 6.5。以下步骤列出：
 
-   1. 安装AEM 6.3 Forms或AEM 6.4 Forms的最新Service pack和修补程序。 有关详细信息，请参 [阅AEM Supertance Hub](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
+   1. 安装AEM 6.3 Forms或AEM 6.4 Forms的最新Service Pack和修补程序。 有关详细信息，请参 [阅AEM Supertance Hub](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
    1. 为升级准备源实例。 有关详细步骤，请 [参阅升级到AEM 6.5](/help/sites-deploying/upgrade.md)。
    1. 下载 [AEM 6.5快速入门](/help/sites-deploying/deploy.md#getting%20the%20software)。
    1. **（仅限基于Unix/Linux的安装）** ，如果您使用UNIX或Linux作为基础操作系统，请打开终端窗口，导览至包含crx-quickstart的文件夹，然后运行以下命令：
@@ -38,11 +38,11 @@ source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
 
       >[!NOTE]
       >
-      >服务器启动并运行后，一些AEM Forms捆绑包仍处于安装状态。 每个安装的捆绑包数量可能不同。 您可以安全地忽略这些包的状态。 这些包列在https://[server]:[port]/system/console/。
+      >服务器启动并运行后，一些AEM Forms捆绑包仍处于安装状态。 每个安装的捆绑包数量可能不同。 您可以安全地忽略这些包的状态。 这些包列在https://&#39;[server]:[port]&#39;/system/console/中。
 
 1. 安装AEM Forms加载项包。 以下步骤列出：
 
-   1. 以管理员身份登录到AEM服务器，然后打开包共享。 包共享的默认URL为 `https://[server]:[port]/crx/packageshare`。
+   1. 以管理员身份登录到AEM服务器，然后打开包共享。 包共享的默认URL为 `https://'[server]:[port]'/crx/packageshare`。
    1. 在包共享中，搜索 **AEM 6.5 Forms Add-on包**，单击适用于您的操作系统的包，然后单击“下 **载”**。 阅读并接受许可协议，然后单击“确 **定”**。 下载开始。 下载后，包旁 **会显示** “已下载”一词。
 
       或者，您也可以使用 [AEM Forms发行版中列出的超链接](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，手动下载包。
@@ -63,7 +63,7 @@ source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
 
       迁移实用程序使早期版本的自适应表单和对应管理资源与AEM 6.5表单兼容。 您可以从AEM包共享下载该实用程序。 有关配置和使用迁移实用程序的分步信息，请参阅迁 [移实用程序](../../forms/using/migration-utility.md)。
 
-      如果您使用示 [例将草稿和提交组件与数据库集成](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) ，并从先前版本升级，则在执行升级后运行以下SQL查询：
+      如果您使用示 [例将草稿和提交组件与数据库集成](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) ，并从先前版本升级，则在执行升级后运行以下SQL查询:
 
       ```
       UPDATE metadata m, additionalmetadatatable am
@@ -79,28 +79,28 @@ source-git-commit: 0a7c243589b410a671674b85d27fad158fe96b2a
 
    * **（如果仅从AEM 6.2表单或先前版本升级）重新配置Adobe Sign**
 
-      如果您在AEM Forms的先前版本中配置了Adobe Sign，则从AEM cloud服务重新配置Adobe Sign。 有关详细信息，请参 [阅将Adobe sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md)。
+      如果您在AEM Forms的先前版本中配置了Adobe Sign，则从AEM Cloud服务重新配置Adobe Sign。 有关详细信息，请参 [阅将Adobe Sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md)。
 
    * **支持jQuery**
 
       在AEM 6.5表单中，jQuery的版本将更新为3.2.1，而jQuery UI版本将更新为1.12.1。AEM Form在noConflict模式下使 **用JQuery** 。 因此，如果您使用任何其他jQuery版本，则在执行升级时不会显示任何问题。 但是，升级到AEM 6.5表单时：
 
       * 确保您的自定义组件（如果有）与支持的jQuery版本兼容。
-      * 从自定义组件中删除不支持的API。 有关 [已删除的API的列表](https://jquery.com/upgrade-guide/3.0/) ，请参阅升级指南。 例如，删除了对load()、 .unload()和。error()API的支持。 使用。on()方法代替前面提到的API。 例如，将$(&quot;img&quot;)。load(fn)更改为$(&quot;img&quot;)。on(&quot;load&quot;, fn)。
+      * 从自定义组件中删除不支持的API。 请参 [阅升级指南](https://jquery.com/upgrade-guide/3.0/) ，以了解删除的API的列表。 例如，删除了对load()、 .unload()和。error()API的支持。 使用。on()方法代替前面提到的API。 例如，将$(&quot;img&quot;)。load(fn)更改为$(&quot;img&quot;)。on(&quot;load&quot;, fn)。
    * **（如果仅从AEM 6.2表单或先前版本升级）重新配置分析和报告**
 
-      在AEM 6.4 Forms中，不提供源的流量变量和印象的成功事件。 因此，当您从AEM 6.2 Forms或先前版本升级时，AEM Forms将停止向Adobe Analytics服务器发送数据，并且自适应表单的分析报告不可用。 此外，AEM 6.4 Forms还为表单分析版本和成功事件引入了流量变量，用于指定字段所用时间。 因此，请为AEM Forms环境重新配置分析和报告。 有关详细步骤，请参 [阅配置分析和报告](../../forms/using/configure-analytics-forms-documents.md)。
+      在AEM 6.4表单中，不提供源的流量变量和印象的成功事件。 因此，当您从AEM 6.2 Forms或先前版本升级时，AEM Forms将停止向Adobe Analytics服务器发送数据，并且自适应表单的分析报告不可用。 此外，AEM 6.4 Forms还为表单分析版本和成功事件引入了流量变量，用于指定字段所用的时间。 因此，请为AEM Forms环境重新配置分析和报告。 有关详细步骤，请参 [阅配置分析和报告](../../forms/using/configure-analytics-forms-documents.md)。
 
 
 1. 验证服务器是否成功升级，所有数据是否也成功迁移，并且它可以正常运行。
 
-   * **** 验证包的状态：确保所有捆绑包都处于活动状态。
-   * **** 验证复制和反向复制：发布、填写和提交一些迁移的表单。 同时验证提交的数据。
-   * **** 验证对管理员和开发人员用户界面的访问权限：从管理员帐户登录到AEM实例，并验证您是否有权访问以下URL:
+   * **验证包的状态：** 确保所有捆绑包都处于活动状态。
+   * **验证复制和反向复制：** 发布、填写和提交一些迁移的表单。 同时验证提交的数据。
+   * **验证对管理员和开发人员用户界面的访问权限：** 从管理员帐户登录到AEM实例，并验证您是否有权访问以下URL:
 
-      * `https://[server]:[port]/crx/packmgr`
-      * `https://[server]:[port]/crx/de`
-      * `https://[server]:[port]/aem/forms.html/content/dam/formsanddocuments`
+      * `https://'[server]:[port]'/crx/packmgr`
+      * `https://'[server]:[port]'/crx/de`
+      * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
    >[!NOTE]
-   在AEM 6.4 Forms中，crx-repository的结构已更改。 如果从6.3表单升级到AEM 6.5表单，请使用您重新创建的已更改路径进行自定义。 有关更改的路径的完整列表，请参阅AEM [中的表单存储库重组](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)。
+   在AEM 6.4 Forms中，crx-repository的结构已更改。 如果从6.3表单升级到AEM 6.5表单，请使用您重新创建的已更改路径进行自定义。 有关更改路径的完整列表，请参阅AEM [中的表单存储库重组](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)。
 
