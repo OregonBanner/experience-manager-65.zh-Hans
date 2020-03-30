@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -20,10 +20,10 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 执行任何自定义的一般步骤包括：
 
-1. 通过访问，登录到CRXDE Lite `https://[server]:[port]/lc/crx/de/index.jsp`。
+1. 通过访问，登录到CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 如果文件夹不 `ws`存在 `/apps`，请创建名为的文件夹。 单击“ **[!UICONTROL 全部保存]**”。
-1. 浏览至 `/apps/ws`，然后导航到“访问控 **[!UICONTROL 制”选项卡]** 。
-1. 在“访 **[!UICONTROL 问控制]** ”列表中，单击 **[!UICONTROL +]** 以添加新条目。 再次 **[!UICONTROL 单击]** +。
+1. 浏览至 `/apps/ws`访问控制，然后导航至 **** 。
+1. 在 **[!UICONTROL 访问控制列表]** ，单击 **[!UICONTROL +]** 以添加新条目。 再次 **[!UICONTROL 单击]** +。
 1. 搜索并选择 **PERM_WORKSPACE_USER** Principal。
 
    ![选择PERM_WORKSPACE_USER主体作为自定义HTML工作区的常规步骤的一部分](assets/perm_workspace_user.png)
@@ -97,6 +97,6 @@ source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
 
 1. 单击 **[!UICONTROL 全部保存]**，清除缓存，然后刷新AEM Forms工作区。
 
-   访问URL, `https://[server]:[port]/lc/ws` 然后使用管理员／密码凭据登录。 浏览器将重定向到 `https://[server]:[port]/lc/apps/ws/index.html`。
+   访问URL, `https://'[server]:[port]'/lc/ws` 然后使用管理员／密码凭据登录。 浏览器将重定向到 `https://'[server]:[port]'/lc/apps/ws/index.html`。
 
 [联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
