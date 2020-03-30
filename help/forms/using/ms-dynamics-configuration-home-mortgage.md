@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: Configuration
 discoiquuid: 6b31397a-fb06-4043-9368-59fb4fce8afa
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
 
 ---
 
@@ -34,14 +34,14 @@ AEM Forms提供了一项云服务，可将Dynamics 365与 [Forms数据集成模�
 * 使用Microsoft® Azure Active Directory注册Dynamics 365服务的应用程序
 * 注册应用程序的客户端ID和客户端机密
 
-## 将主页抵押计算器与您的网站主页关联 {#link-the-home-mortgage-calculator-with-your-site-home-page}
+## 将家庭抵押计算器与您的网站主页关联 {#link-the-home-mortgage-calculator-with-your-site-home-page}
 
 1. 在创作实例中，转到以下页面：
 
-   https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html
+   `https://[server]:[port]/editor.html/content/we-finance/global/en/loan-landing-page.html`
 
 1. 向下滚动到“家庭抵押计算器”。
-1. 高亮显示右列（计算器）面板，然后点按以显示弹出菜单。 在弹出菜单中，点按配置。 此时会显示“编辑AEM表单容器”对话框。
+1. 高亮显示右列（计算器）面板，然后点按以显示弹出菜单。 在弹出菜单中，点按配置。 此时将显示“编辑AEM表单容器”对话框。
 
    ![计算器配置面板](assets/calculatorconfigurepanel.png)
 
@@ -56,13 +56,13 @@ AEM Forms提供了一项云服务，可将Dynamics 365与 [Forms数据集成模�
 
    >[!NOTE]
    >
-   >计算器字段与FDM的绑定是通过We.Finance参考站点包预配置的。 要查看绑定，您可以在创作模式下打开表单并查看字段绑定引用。
+   >计算器字段与FDM的绑定是通过We.Finance参考站点包预配置的。 要视图绑定，您可以在创作模式下打开表单并查看字段绑定引用。
 
 1. 要创建自定义实体以存储家庭抵押申请的申请者记录，请将AEMFormsFSIRefsite_1_0.zip解决方案包导入您的Microsoft® Dynamics实例：
 
    1. 从以下位置下载包：
 
-      `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
+      `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
    1. 将解决方案包导入Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到“设置 **”>“解决方** 案 **”** ，然后点 **按导入**。
 
@@ -70,7 +70,7 @@ AEM Forms提供了一项云服务，可将Dynamics 365与 [Forms数据集成模�
 
    1. 从以下位置下载包：
 
-      `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
+      `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
    1. 将包导入Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到“ **Sales** > **Contacts** ”，然后点按“ **Import Data**”。
 
