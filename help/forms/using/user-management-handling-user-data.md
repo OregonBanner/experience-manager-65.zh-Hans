@@ -8,7 +8,7 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -17,17 +17,17 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 用户管理是一个AEM Forms JEE组件，它允许创建、管理AEM Forms用户并对其授权以访问AEM Forms。 用户管理使用域作为获取用户信息的目录。 支持以下域类型：
 
-**本地域**:此类型的域未连接到第三方存储系统。 而是在本地创建用户和用户组，并驻留在用户管理数据库中。 密码存储在本地，身份验证使用本地数据库完成。
+**本地域**:此类域未连接到第三方存储系统。 而是在本地创建用户和用户组，并驻留在用户管理数据库中。 密码存储在本地，身份验证使用本地数据库完成。
 
-**混合域**:此类型的域未连接到第三方存储系统。 而是在本地创建用户和用户组，并驻留在用户管理数据库中。 与本地域不同，混合域使用外部身份验证提供程序，该提供程序可以是LDAP、Kerberos、SAML或自定义身份验证提供程序。
+**混合域**:此类域未连接到第三方存储系统。 而是在本地创建用户和用户组，并驻留在用户管理数据库中。 与本地域不同，混合域使用外部身份验证提供程序，该提供程序可以是LDAP、Kerberos、SAML或自定义身份验证提供程序。
 
-**企业域**:由驻留在第三方存储系统（如LDAP目录）中的用户和用户组组成。 用户管理不会写入第三方存储系统。 相反，用户管理会将用户和组信息与用户管理数据库同步。 企业域还使用外部身份验证提供程序，它可以是LDAP、Kerberos、SAML或自定义身份验证提供程序。
+**企业域**:由驻留在第三方存储系统（如LDAP目录）中的用户和用户组组成。 用户管理不写入第三方存储系统。 相反，用户管理会将用户和组信息与用户管理数据库同步。 企业域还使用外部身份验证提供程序，它可以是LDAP、Kerberos、SAML或自定义身份验证提供程序。
 
 <!-- Fix broken links For more information about how user management works and configured, see AEM Forms JEE administration help. -->
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-用户管理将用户数据存储在数据库中，如My Sql、Oracle、MS SQL server和IBM DB2。 此外，在AEM作者的Forms应用程序中至少登录一次的任何用户， `https://[server]:[host]/lc`都会在AEM存储库中创建该用户。 因此，用户管理被存储在以下数据存储中：
+用户管理将用户数据存储在数据库中，如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在AEM作者的Forms应用程序中至少登录一次的任何用户， `https://'[server]:[port]'lc`都会在AEM存储库中创建该用户。 因此，用户管理被存储在以下数据存储中：
 
 * 数据库
 * AEM存储库
@@ -35,7 +35,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 >[!NOTE]
 >
->存储在第三方存储中的数据超出本文档的范围。 直接与第三方供应商联系以管理此类存储中的用户数据。
+>存储在第三方存储中的数据不在此文档的范围内。 直接与第三方供应商联系以管理此类存储中的用户数据。
 
 ### 数据库 {#database}
 
@@ -86,7 +86,7 @@ source-git-commit: 3226edb575de3d9f8bff53f5ca81e2957f37c544
 
 ### AEM存储库 {#aem-repository}
 
-至少访问过AEM下的表单应用程序的用户管理数 `https://[server]:[host]/lc` 据也存储在AEM存储库中。
+对于至少访问过AEM下的表单应用程序的用户，用户管 `https://'[server]:[port]'lc` 理数据也存储在AEM存储库中。
 
 ## 访问和删除用户数据 {#access-and-delete-user-data}
 
@@ -170,7 +170,7 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
    Delete from EdcPrincipalEntity where id='<principal_id>';
    ```
 
-1. 启动AEM Forms服务器。
+1. 开始AEM Forms服务器。
 
 ### AEM存储库 {#aem-repository-1}
 
@@ -178,14 +178,14 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 #### 访问用户数据 {#access-user-data}
 
-要查看在AEM存储库中创建的用户，请使用AEM管 `https://[server]:[port]/lc/useradmin` 理员凭据登录。 请注意， `server` URL `port` 中和URL是AEM作者实例的URL。 在此，您可以使用用户名搜索用户。 双击用户可查看用户的属性、权限和用户组等信息。 用户 `Path` 的属性指定在AEM存储库中创建的用户节点的路径。
+要视图在AEM存储库中创建的用户，请使用AEM管 `https://'[server]:[port]'/lc/useradmin` 理员凭据登录。 请注意， `server` URL `port` 中和URL是AEM作者实例的URL。 在此，您可以使用用户名搜索用户。 多次-单击用户以视图用户的属性、权限和用户组等信息。 用户 `Path` 的属性指定在AEM存储库中创建的用户节点的路径。
 
 #### 删除用户数据 {#delete-aem}
 
 删除用户：
 
-1. 使用AEM管 `https://[server]:[port]/lc/useradmin` 理员凭据转到。
-1. 搜索用户并双击用户名以打开用户属性。 复制属 `Path` 性。
-1. 转到AEM CRX DELite，然后 `https://[server]:[port]/lc/crx/de/index.jsp` 导航或搜索用户路径。
+1. 使用AEM管 `https://'[server]:[port]'/lc/useradmin` 理员凭据转到。
+1. 搜索用户并按住多次单击用户名以打开用户属性。 复制属 `Path` 性。
+1. 转到AEM CRX DELite，然后 `https://'[server]:[port]'/lc/crx/de/index.jsp` 导航或搜索用户路径。
 1. 删除路径，然后单击 **[!UICONTROL 全部保存]** ，以从AEM存储库中永久删除用户。
 
