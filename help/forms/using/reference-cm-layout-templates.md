@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -30,7 +30,7 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 安装包后，布局模板(XDP)列在templates-folder中的以下位置：
 
-`https://[server]:[port]/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
+`https://'[server]:[port]'/[context-root]/aem/forms.html/content/dam/formsanddocuments/templates-folder`
 
 以下是此包中所有模板中的常用字段：
 
@@ -49,15 +49,15 @@ Classic模板顶部有标志，适合用于简朴的专业字母。
 
 ![经典](assets/classic.png)
 
-使用经典模板创建的字母的PDF预览
+PDF预览使用经典模板创建的字母
 
 ## 经典Simple {#classic-simple}
 
-包括用于捕获电话号码和电子邮件地址的字段。 经典简单模板与经典模板类似，只是它没有可输入收件人地址的字段。
+包括用于捕获电话号码和电子邮件地址的字段。 经典简单模板与经典模板类似，只是它没有可以输入收件人地址的字段。
 
 ![联系信息片段](assets/classicsimple.png)
 
-使用经典简单模板创建的字母的PDF预览
+PDF预览使用经典简单模板创建的字母
 
 ## 平衡左 {#balanced-left}
 
@@ -77,25 +77,25 @@ Classic模板顶部有标志，适合用于简朴的专业字母。
 
 ## 可视左侧 {#visual-left}
 
-“可视左侧”模板的左侧有一个侧标题，其中公司徽标位于侧标题上方。 “可视左侧”模板有一个主题字段，但没有页脚。
+“可视左侧”模板的左侧有一个侧标题，侧标题上方放置有公司标志。 Visual Left template has a subject field but no footer.
 
 ![visualleft](assets/visualleft.png)
 
-使用可视左侧模板创建的字母的PDF预览
+PDF preview of a letter created using the Visual Left template
 
-## 视觉效果 {#visual-top}
+## Visual Top {#visual-top}
 
-“视觉效果最佳”模板顶部有视觉边距。 “视觉顶部”模板在页面本身中有一个用于输入收件人地址的字段。 “视觉顶部”模板具有主题字段和页脚，用于重排扩展到多个页面的字母。
+“视觉效果最佳”模板顶部有视觉边距。 The Visual Top template has a field for entering recipient&#39;s address on the page itself. The Visual Top template has the subject field and a footer that reflows for letters that extend to multiple pages.
 
 ![visualtop](assets/visualtop.png)
 
-使用视觉顶部模板创建的字母的PDF预览
+PDF preview of a letter created using the Visual Top template
 
 ## 视觉顶部——经典 {#visual-top-classic}
 
-视觉顶部——经典模板在页面顶部有一个标题，其中带有公司徽标。 “视觉效果最佳——经典”模板有一个字段用于输入主题，但没有页脚。
+The Visual Top - Classic template has a header on top of the page with the company logo. “视觉效果最佳——经典”模板有一个字段用于输入主题，但没有页脚。
 
 ![visualtopclassic](assets/visualtopclassic.png)
 
-使用视觉顶部——经典模板创建的字母的PDF预览
+PDF预览使用视觉顶部——经典模板创建的字母
 
