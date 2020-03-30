@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,14 +18,14 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 ## 示例概述 {#sample-overview}
 
-AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，并稍后从任何设备提交。 此外，用户可以在门户上查看其提交的表单。 要启用此功能，AEM Forms提供数据和元数据服务，以存储用户在表单中填写的数据以及与草稿和已提交表单关联的表单元数据。 默认情况下，此数据存储在CRX存储库中。 但是，当用户通过AEM发布实例与表单交互时（通常在企业防火墙之外），组织可能希望自定义数据存储以使其更安全、更可靠。
+AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，并稍后从任何设备提交。 此外，用户还可以在门户上视图其提交的表单。 要启用此功能，AEM Forms提供数据和元数据服务，以存储用户在表单中填写的数据以及与草稿和已提交表单关联的表单元数据。 默认情况下，此数据存储在CRX存储库中。 但是，当用户通过AEM发布实例与表单交互时（通常在企业防火墙之外），组织可能希望自定义数据存储，以使其更安全、更可靠。
 
-本文中讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成在一起。 示例实现中使用的数据库 **是MySQL 5.6.24**。 但是，您可以将草稿和提交组件与您选择的任何数据库集成。
+本文档讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成在一起。 示例实现中使用的数据库 **是MySQL 5.6.24**。 但是，您可以将草稿和提交组件与您选择的任何数据库集成。
 
 >[!NOTE]
 >
 >* 本文档中介绍的示例和配置符合MySQL 5.6.24的要求，您必须将它们相应地替换为数据库系统。
->* 确保您已安装最新版AEM Forms加载项包。 有关可用包的列表，请参阅 [AEM Forms发行文章](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
+>* 确保您已安装最新版AEM Forms加载项包。 有关可用包的列表，请参阅 [AEM Forms发布文章](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
 >
 
 
@@ -77,12 +77,12 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
    * 在“Web控制台配置”中，查找并单击“表单门户元数据服务示例实施”。 您可以更改数据源、元数据／其他元数据表名称的值。
    要为数据表提供其他名称：
 
-   * 在“Web控制台配置”中，查找并单击“Forms Portal Data service示例实施”。 您可以更改数据源和数据表名称的值。
+   * 在“Web控制台配置”中，查找并单击“Forms Portal Data Service示例实施”。 您可以更改数据源和数据表名称的值。
    **注意**:如果更改表名，请在表单门户配置中提供这些名称。
 
 1. 保留其他配置，然后单击“保 **[!UICONTROL 存”]**。
 
-1. 可通过Apache Sling Connection Pooled Data source进行数据库连接。
+1. 可通过Apache Sling Connection Pooled Data Source进行数据库连接。
 1. 对于Apache Sling连接，在Web控制台配置中查找并单击以在编辑模式下打开 **** Apache Sling Connection池化数据源。 如下表所述，指定属性的值：
 
 <table>
@@ -101,7 +101,7 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
   </tr>
   <tr>
    <td>JDBC连接URI<br /> </td>
-   <td>jdbc:mysql://[<em>host</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
+   <td>jdbc:mysql://[<em>host</em>]:[<em>port</em>]/[<em>模式名称</em>]</td>
   </tr>
   <tr>
    <td>用户名</td>
@@ -164,9 +164,9 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
 
 1. 保留其他配置，然后单击“保 **[!UICONTROL 存”]**。
 
-1. 如果数据库架构中已有表，请跳到下一步。
+1. 如果数据库模式中已有表，请跳到下一步。
 
-   否则，如果数据库架构中还没有表，请执行以下SQL语句，为数据库架构中的数据、元数据和其他元数据创建单独的表：
+   否则，如果数据库模式中还没有表，请执行以下SQL语句，为数据库模式中的数据、元数据和其他元数据创建单独的表：
 
    >[!NOTE]
    >
@@ -247,7 +247,7 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
    `time` varchar(255) DEFAULT NULL);
    ```
 
-1. 如果数据库架构中已有表（数据、元数据和其他元数据表），请执行以下更改表查询：
+1. 如果数据库模式中已有表（数据、元数据和其他元数据表），请执行以下更改表查询:
 
    **用于更改数据表的SQL语句**
 
@@ -263,7 +263,7 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
 
    >[!NOTE]
    >
-   >如果您已经运行ALTER TABLE元数据添加查询，并且表中存在markedforDeletion列，则该查询将失败。
+   >如果您已经运行ALTER TABLE元数据添加查询，并且表中存在markedforDeletion列，则该元数据添加操作将失败。
 
    ```sql
    ALTER TABLE metadata add agreementId varchar(255) DEFAULT NULL,
@@ -296,19 +296,19 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
    ALTER TABLE `additionalmetadatatable` CHANGE `value` `value` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL, CHANGE `key` `key` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
    ```
 
-现在配置了示例实施，您可以使用它列出草稿和提交内容，同时将所有数据和元数据存储在数据库中。 现在，我们来看一下示例中如何配置数据和元数据服务。
+现在配置了示例实施，您可以使用它列表草稿和提交，同时将所有数据和元数据存储在数据库中。 现在，我们来看一下示例中如何配置数据和元数据服务。
 
 ## 安装mysql-connector-java-5.1.39-bin.jar文件 {#install-mysql-connector-java-bin-jar-file}
 
 对所有作者实例和发布实例执行以下步骤以安装mysql-connector-java-5.1.39-bin.jar文件：
 
-1. 导航到 `https://[server]:[port]/system/console/depfinder` com.mysql.jdbc包并搜索。
+1. 导航到 `https://'[server]:[port]'/system/console/depfinder` com.mysql.jdbc包并搜索。
 1. 在“导出依据”列中，检查包是否由任何包导出。
 
    如果包未由任何包导出，请继续。
 
-1. 导航到并 `https://[server]:[port]/system/console/bundles` 单击“ **[!UICONTROL 安装／更新”]**。
-1. 单 **[!UICONTROL 击“选择文件]** ”并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选中“启 **[!UICONTROL 动捆绑”和]** “刷新 **[!UICONTROL 包”复选框]** 。
+1. 导航到并 `https://'[server]:[port]'/system/console/bundles` 单击“ **[!UICONTROL 安装／更新”]**。
+1. 单 **[!UICONTROL 击“选择文件]** ”并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选中“ **[!UICONTROL 开始包]** ”和“ **[!UICONTROL 刷新包]** ”复选框。
 1. 单击“ **[!UICONTROL 安装”或“更新]**”。 完成后，重新启动服务器。
 1. (仅&#x200B;*限Windows*)关闭操作系统的系统防火墙。
 
@@ -399,13 +399,13 @@ Forms Portal的数据库实现使用其他元数据表。 该表具有基于表�
 
 1. 将以下属性添加到在步骤2中创建的文件夹，然后单击“全 **[!UICONTROL 部保存”]**。
 
-   * **** 名称：类别
+   * **[!UICONTROL 名称：]** 类别
 
-   * **** 类型：字符串
+   * **[!UICONTROL 类型：]** 字符串
 
-   * **** 值：fp.validation
+   * **[!UICONTROL 值：]** fp.validation
 
-   * **** 多选项：已启用
+   * **[!UICONTROL 多选项：]** 已启用
 
 1. 导航到 `/libs/fd/af/runtime/clientlibs/guideRuntime`embed属性并 `fp.validation` 将值附加到该属性。
 
@@ -413,7 +413,7 @@ Forms Portal的数据库实现使用其他元数据表。 该表具有基于表�
 
    >[!NOTE]
    >
-   >如果您使用的是自定义客户端库，而不是guideRuntime和guideRuntimeWithXfa客户端库，请使用类别名称将在此过程中创建的客户端库嵌入到运行时加载的自定义库中。
+   >如果您使用的是自定义客户端库，而不是guideRuntime和guideRuntimeWithXfa客户端库，请使用类别名将在此过程中创建的客户端库嵌入到运行时加载的自定义库中。
 
 1. 单击“ **[!UICONTROL 全部保存”。]** 现在，当文件名大于150（包括扩展名）字符时，将显示一条消息。
 
