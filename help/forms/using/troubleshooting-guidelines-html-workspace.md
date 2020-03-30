@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -25,12 +25,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 安装包时，如果遇到错误，请 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`执行以下步骤：
 
-1. 登录CRX DE lite。 默认url为 `https://[localhost]:[port]/lc/crx/de/index.jsp`
+1. 登录CRX DE lite。 默认url为 `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. 删除以下节点：
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. 转到“包管理器”。 默认URL为 `https://[localhost]:[port]/lc/crx/packmgr/index.jsp.`
+1. 转到“包管理器”。 默认URL为 `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
 1. 搜索并安装 `adobe-lc-workspace-pkg-[version].zip` 包。
 1. 重新启动应用程序服务器。
 
@@ -52,7 +52,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * 用户设置的日志级别仅对该浏览器会话进行维护。 当用户刷新页面时，所有组件的日志级别将设置为其初始值。
 
-### AEM Forms工作区中的组件文件列表 {#list-of-component-files-in-nbsp-aem-forms-workspace}
+### 列表AEM Forms工作区中的组件文件 {#list-of-component-files-in-nbsp-aem-forms-workspace}
 
 <table>
  <tbody>
@@ -151,7 +151,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 浏览器调试信息 {#debugging-information-for-browsers}
 
-脚本和样式可以在不同浏览器中调试。
+脚本和样式可以在不同的浏览器中调试。
 
 * **在IE中调试**:要在IE中调试AEM Forms工作区，请参阅： [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx)。
 
@@ -164,14 +164,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. PDF表单在Google Chrome中无法呈现或提交。
 
    1. 安装Adobe® Reader®增效工具。
-   1. 在Chrome中，打开chrome://plugins以查看可用的插件。
+   1. 在Chrome中，打开chrome://plugins,视图可用插件。
    1. 禁用Chrome PDF Viewer插件，并启用Adobe Reader插件。
 
 1. SWF表单或指南未在Google Chrome中呈现。
 
-   1. 在Chrome中，打开chrome://plugins以查看可用的插件。
-   1. 查看Adobe Flash® player增效工具的详细信息。
-   1. 在Adobe Flash player增效工具下禁用PepperFlash。
+   1. 在Chrome中，打开chrome://plugins,视图可用插件。
+   1. 查看Adobe Flash® Player增效工具的详细信息。
+   1. 在Adobe Flash Player增效工具下禁用PepperFlash。
 
 1. 我已自定义AEM Forms工作区，但无法看到更改。
 
@@ -179,11 +179,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 用户需要做什么才能使表单在桌面中打开时以HTML呈现？
 
-   在使用工作台时，在分配任务步骤中为默认配置文件选择HTML单选按钮。
+   在使用工作台时，在分配用户档案步骤中为默认任务选择HTML单选按钮。
 
 1. 单击时，附件不显示。
 
-   要查看附件，请在浏览器中启用弹出窗口。
+   要视图附件，请在浏览器中启用弹出窗口。
 
 1. 用户已登录到表单应用程序。 如果用户尝试登录到工作区，但没有工作区权限，则可能无法加载。
 
