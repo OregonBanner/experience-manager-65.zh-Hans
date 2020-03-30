@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -18,16 +18,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 概述 {#overview}
 
-“转换PDF”服务将PDF文档转换为PostScript或图像文件（JPEG、JPEG 2000、PNG和TIFF）。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人值守打印都很有用。 将PDF文档转换为多页TIFF文件是在不支持PDF文档的内容管理系统中归档文档时非常实用的。
+“转换PDF”服务将PDF文档转换为PostScript或图像文件（JPEG、JPEG 2000、PNG和TIFF）。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人值守打印都很有用。 将PDF文档转换为多页TIFF文件在不支持PDF文档的内容管理系统中归档文档时非常实用。
 
 您可以通过“转换PDF”服务完成以下操作：
 
-* 将PDF文档转换为PostScript。 转换为PostScript时，可以使用转换操作指定源文档以及是转换为PostScript级别2还是3。 转换为PostScript文件的PDF文档必须是非交互式的。
-* 将PDF文档转换为JPEG、JPEG 2000、PNG和TIFF图像格式。 转换为任何这些图像格式时，可以使用转换操作指定源文档和图像选项规范。 该规范包含各种首选项，如图像转换格式、图像分辨率和颜色转换。
+* 将PDF文档转换为PostScript。 转换为PostScript时，可以使用转换操作指定源文档以及是转换为PostScript级别2还是3。 转换为PostScript文件的PDF文档必须是非交互的。
+* 将PDF文档转换为JPEG、JPEG 2000、PNG和TIFF图像格式。 转换为任何这些图像格式时，您可以使用转换操作指定源文档和图像选项规范。 该规范包含各种首选项，如图像转换格式、图像分辨率和颜色转换。
 
 ## 配置服务的属性 {#properties}
 
-您可以在AEM控制 **台中使用AEMFD ConvertPDF服务** ，为此服务配置属性。 AEM控制台的默认URL为 `https://[host]:[port]/system/console/configMgr`。
+您可以在AEM控制 **台中使用AEMFD ConvertPDF服务** ，为此服务配置属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服务 {#using-the-service}
 
@@ -128,11 +128,11 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### 将ConvertPDF service与AEM工作流程结合使用 {#using-convertpdf-service-with-aem-workflows}
+### 将ConvertPDF服务与AEM工作流结合使用 {#using-convertpdf-service-with-aem-workflows}
 
 从工作流中运行ConvertPDF服务与从JSP/Servlet运行类似。
 
-唯一的区别是从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象中自动检索ResourceResolver对象的实例。 当从工作流调用代码时，此自动机制不起作用。 对于工作流，将ResourceResolver对象的一个实例显式传递给Document类构造函数。 然后，Document对象使用提供的ResourceResolver对象从存储库读取内容。
+唯一的区别是从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象中自动检索ResourceResolver对象的实例。 当从工作流调用代码时，此自动机制不起作用。 对于工作流，将ResourceResolver对象的一个实例显式传递给文档类构造函数。 然后，文档对象使用提供的ResourceResolver对象从存储库读取内容。
 
 以下工作流程示例将输入文档转换为PostScript文档。 代码以ECMAScript编写，文档作为工作流有效负荷传递：
 
