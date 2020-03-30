@@ -10,32 +10,32 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f12c10c3-1ce6-4415-ba9d-5349d1888237
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# Encryption Service Java API快速入门(SOAP) {#encryption-service-java-api-quickstart-soap}
+# Encryption Service Java API快速开始(SOAP) {#encryption-service-java-api-quickstart-soap}
 
-[快速入门（SOAP模式）:使用Java API加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API删除基于密码的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API删除基于口令的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API使用证书加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API使用证书加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API删除基于证书的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API删除基于证书的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API解锁加密的PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API解锁加密的PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API确定加密类型](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API确定加密类型](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-***注意&#x200B;**:使用AEM表单进行编程中的“快速入门”基于JBoss Application server和Microsoft windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
+***注意&#x200B;**:使用AEM表单进行编程中的快速开始基于JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)*
 
-## 快速入门（SOAP模式）:使用Java API加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
 
-以下Java代码示例使用密码值 *加密名为Loan.pdf* 的PDF文档 `OpenPassword`。 主密码为 `PermissionPassword`。 受保护的PDF文档将另存为名为 *EncryptLoan.pdf的PDF文件*。 (请参 [阅使用口令加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
+以下Java代码示例使用密码值 *加密名为Loan.pdf* 的PDF文档 `OpenPassword`。 主密码为 `PermissionPassword`。 安全的PDF文档将保存为名为 *EncryptLoan.pdf的PDF文件*。 (请参 [阅使用口令加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
 
 ```as3
  /*
@@ -102,7 +102,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
      try{
          //Set connection properties required to invoke AEM Forms using SOAP mode
          Properties connectionProps = new Properties();
-         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+         connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
          connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -153,9 +153,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API删除基于密码的加密 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API删除基于口令的加密 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
-以下Java代码示例从名为 *EncryptLoan.pdf的PDF文档中删除了基于口令的加密*。 用于删除基于密码的加密的主密码值是 *PermissionPassword*。 不安全的PDF文档将另存为名为noEncryptionLoan.pdf *的PDF文件*。 (请参阅 [删除密码加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)。)
+以下Java代码示例从名为 *EncryptLoan.pdf的PDF文档中删除了基于密码的加密*。 用于删除基于密码的加密的主密码值是 *PermissionPassword*。 不安全的PDF文档将另存为名为noEncryptionLoan.pdf *的PDF文件*。 (请参阅 [删除密码加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)。)
 
 ```as3
  /*
@@ -220,7 +220,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -250,9 +250,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API使用证书加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API使用证书加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
 
-以下Java代码示例使用名为 *Encryption.cer的证书加密名为* Loan.pdf *的PDF文档*。 加密的PDF文档将保存为名为 *EncryptLoanCert.pdf的PDF文件*。 (请参阅 [使用证书加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。)
+以下Java代码示例使用名为 *Encryption.cer的证书加密名为* Loan.pdf *的PDF*&#x200B;文档。 加密的PDF文档将保存为名为 *EncryptLoanCert.pdf的PDF文件*。 (请参阅 [使用证书加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。)
 
 ```as3
  /*
@@ -320,7 +320,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -379,9 +379,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API删除基于证书的加密 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API删除基于证书的加密 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
 
-以下Java代码示例从名为 *EncryptLoanCert.pdf的PDF文档中删除基于证书的加密*。 用于删除加密的公钥的别名为 `Encryption`。 不安全的PDF文档将另存为名为noEncryptionLoan.pdf *的PDF文件*。 (请参阅 [删除基于证书的加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)。)
+以下Java代码示例从名为 *EncryptLoanCert.pdf的PDF文档中删除基于证书的加密*。 用于删除加密的公钥的别名是 `Encryption`。 不安全的PDF文档将另存为名为noEncryptionLoan.pdf *的PDF文件*。 (请参阅 [删除基于证书的加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)。)
 
 ```as3
  /*
@@ -446,7 +446,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -476,7 +476,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速入门（SOAP模式）:使用Java API解锁加密的PDF文档 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API解锁加密的PDF文档 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
 
 以下Java代码示例解锁名为 *EncryptLoan.pdf的密码加密PDF文档*。 (请参阅解 [锁加密的PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)。)
 
@@ -542,7 +542,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
@@ -572,7 +572,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）:使用Java API确定加密类型 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API确定加密类型 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
 
 以下Java代码示例确定保护名为 *EncryptLoan.pdf的PDF文档的加密类型*。 (请参阅 [确定加密类型](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type)。)
 
@@ -638,7 +638,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
          try{
              //Set connection properties required to invoke AEM Forms using SOAP mode
              Properties connectionProps = new Properties();
-             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://[server]:[port]");
+             connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
              connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
