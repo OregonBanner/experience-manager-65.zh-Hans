@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -37,7 +37,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 要通过编辑tbxeditor-config.xml文件自定义字体，请执行以下操作：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在apps文件夹中，使用以下步骤创建一个名为config的文件夹，其路径／结构与配置文件夹类似，该文件夹位于libs/fd/cm/config中：
 
    1. 右键单击以下路径中的项目文件夹，然后选择“叠 **加节点”**:
@@ -48,11 +48,11 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/config
+      **路径：** /libs/fd/cm/config
 
-      **** 位置：/apps/
+      **位置：** /apps/
 
-      **** 匹配节点类型：已选择
+      **匹配节点类型：** 已选择
 
       ![叠加节点](assets/2.png)
 
@@ -71,7 +71,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 1. 在apps/fd/cm/config中打开tbxeditor-config.xml文件，然后进行所需的更改。
 
-   1. 双击apps/fd/cm/config处的tbxeditor-config.xml文件。 文件将打开。
+   1. 多次，在apps/fd/cm/config处单击tbxeditor-config.xml文件。 文件将打开。
 
       ```xml
       <editorConfig>
@@ -173,7 +173,7 @@ source-git-commit: 8e724af4d69cb859537dd088119aaca652ea3931
 
 ## 将自定义字体添加到客户端计算机 {#addcustomfonts}
 
-当您在“对应管理”文本编辑器中访问字体时，该字体需要存在于您用来访问“对应管理”的客户端计算机中。 要在文本编辑器中使用自定义字体，首先您需要在客户端计算机上安装同一字体。
+当您在“对应管理”文本编辑器中访问字体时，它需要显示在您用来访问“对应管理”的客户端机器中。 要在文本编辑器中使用自定义字体，首先您需要在客户端计算机上安装同一字体。
 
 有关安装字体的详细信息，请参阅以下内容：
 
