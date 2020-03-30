@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 08e53eec26e29c2403cdfc3239da3ea23da3f321
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -40,7 +40,7 @@ Correponsement Management内置了默认支持210个特殊字符，您可以轻�
 
 使用以下步骤添加对自定义特殊字符的支持：
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在apps文件夹中，创建一个名为 **[!UICONTROL specialcharacters的文件夹]** ，其路径／结构与specialcharacters文件夹（位于libs下的textEditorConfig文件夹中）类似：
 
    1. 右键单击以下路 **径中的** “特定字符”文件夹，然后选择“ **叠加节点”**:
@@ -49,11 +49,11 @@ Correponsement Management内置了默认支持210个特殊字符，您可以轻�
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
+      **路径：** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
 
-      **** 叠加位置：/apps/
+      **叠加位置：** /apps/
 
-      **** 匹配节点类型：已选中
+      **匹配节点类型：** 已选中
 
       >[!NOTE]
       >
