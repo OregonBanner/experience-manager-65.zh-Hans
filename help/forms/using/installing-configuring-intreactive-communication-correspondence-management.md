@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -17,9 +17,9 @@ source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
 
 ## 简介 {#introduction}
 
-AEM Form能够集中创建、汇编、管理和交付安全的交互式文档，如业务通信、文档、声明、利益声明、营销邮件、帐单和欢迎工具包。 此功能称为交互通信。 该功能包含在AEM Forms加载项包中。 加载项包部署在AEM的作者或发布实例上。
+AEM Form能够集中创建、汇编、管理和投放安全的交互式文档，如业务通信、文档、声明、利益声明、营销邮件、帐单和欢迎工具包。 此功能称为交互通信。 该功能包含在AEM Forms加载项包中。 加载项包部署在AEM的作者或发布实例上。
 
-您可以使用交互式通信功能以多种格式生成通信。 例如，Web和PDF。 您可以将交互式通信与AEM Workflow集成，以便通过客户选择的渠道处理和交付组合的通信。 例如，通过电子邮件向最终用户发送通信。
+您可以使用交互式通信功能以多种格式生成通信。 例如，Web和PDF。 您可以将交互式通信与AEM Workflow集成，以便根据客户选择的渠道处理组合通信并将其交付给客户。 例如，通过电子邮件向最终用户发送通信。
 
 如果您从先前版本升级并已投资于通信管理，则可以安装兼容 [包](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package) ，以继续使用通信管理。 有关交互式通信与通信管理之间差异的信息，请参阅 [交互式通信概述](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management)。
 
@@ -37,19 +37,19 @@ AEM Forms Interactive Communications在AEM Forms的“作者”实例上运行�
 
 在开始安装和配置AEM Forms的交互式通信和通信管理功能之前，请确保：
 
-* 硬件和软件基础结构就位。 有关支持的硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
+* 硬件和软件基础结构就位。 有关受支持硬件和软件的详细列表，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
 
 * AEM实例的安装路径不包含空格。
 * AEM实例已启动并正在运行。 在AEM术语中，“实例”是在创作或发布模式下在服务器上运行的AEM的副本。 您至少需要一个AEM实例（创作或处理）才能运行AEM Forms交互式通信和通信管理功能：
 
    * **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。 内容准备就绪后，即会复制到发布实例。
-   * **** 处理：处理实例是加强的 [AEM作者实例](/help/forms/using/hardening-securing-aem-forms-environment.md) 。 您可以设置一个作者实例，并在执行安装后对其进行强化。
+   * **处理：** 处理实例是加强的 [AEM作者实例](/help/forms/using/hardening-securing-aem-forms-environment.md) 。 您可以设置一个作者实例，并在执行安装后对其进行强化。
 
    * **发布**:通过Internet或内部网络向公众提供已发布内容的AEM实例。
 
-* 满足内存要求。 AEM Forms Add-on包需要：
+* 满足内存要求。 AEM Forms加载项包需要：
 
-   * 15 GB临时空间，用于基于Microsoft windows的安装。
+   * 15 GB临时空间，用于基于Microsoft Windows的安装。
    * 6 GB临时空间，用于基于UNIX的安装。
 
 * 基于UNIX的系统的其他要求：如果您使用基于UNIX的操作系统，请从相应操作系统的安装介质安装以下包。
@@ -96,12 +96,12 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms�
 
    如果您通过 [AEM Forms发行文章中列出的直接链接手动下载包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，请登录到包管理器，单击“上传包” ****，选择下载的包，然后单击“上传”。 上传包后，单击包名称，然后单击“安 **装”。**
 
-1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即重新启动服务器。** 在停止AEM Forms服务器之前，请等到AEM-Installation-Directory []/crx-quickstart/logs/error.log文件中显示“ServiceEvent REGISTERED”和“ServiceEvent UNREGISTERED”消息停止，并且日志是稳定的。
+1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即重新启动服务器。** 在停止AEM Forms服务器之前，请等到AEM-Installation-Directory []/crx-quickstart/logs/error.log文件中显示ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止，并且日志是稳定的。
 1. 对所有“作者”和“发布”实例重复步骤1-4。
 
 ## 安装后配置 {#post-installation-configurations}
 
-AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置调度程序和Adobe Target。
+AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置调度程序和Adobe目标。
 
 ### 强制安装后配置 {#mandatory-post-installation-configurations}
 
@@ -112,7 +112,7 @@ AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCast
 1. 停止基础AEM实例。
 1. 打开 [AEM安装目录\crx-quickstart\conf\sling.properties]文件进行编辑。
 
-   如果您使 [用AEM安装目录]\crx-quickstart\bin\start.bat启动AEM，请编辑位于 [AEM_root]\crx-quickstart\的sling.properties。
+   如果您使用 [AEM安装目录]\crx-quickstart\bin\start.bat来开始AEM，请编辑位于 [AEM_root]\crx-quickstart\的sling.properties。
 
 1. 将以下属性添加到sling.properties文件：
 
@@ -121,14 +121,14 @@ AEM Forms具有一些必需和可选配置。 必需配置包括配置BouncyCast
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
-1. 保存并关闭文件，然后启动AEM实例。
+1. 保存并关闭文件并开始AEM实例。
 1. 对所有“作者”和“发布”实例重复步骤1-4。
 
 #### 配置序列化代理 {#configure-the-serialization-agent}
 
 对所有创作和发布实例执行以下步骤以将包列入白名单：
 
-1. 在浏览器窗口中打开AEM配置管理器。 默认URL为https://[server]:[port]/system/console/configMgr。
+1. 在浏览器窗口中打开AEM配置管理器。 默认URL为https://&#39;[server]:[port]&#39;/system/console/configMgr。
 1. 搜索并打开反序 **列化防火墙配置**。
 1. 将 **sun.util.calendar包添加到白名单** 字段 **** 。 单击保存。
 1. 对所有“作者”和“发布”实例重复步骤1-3。
@@ -158,15 +158,15 @@ Dispatcher是用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有助�
 
    保存并关闭文件。 有关过滤器的详细信息，请参阅 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)。
 
-1. 配置引用过滤器服务：
+1. 配置推荐人过滤器服务：
 
-   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL是https://[server]:[port_number]/system/console/configMgr。 在“配 **置** ”菜单中，选择 **Apache Sling Referrer过滤器选项** 。 在“允许主机”字段中，输入调度程序的主机名以允许它作为引用，然后单击“保 **存”**。 条目的格式为https://[server]:[port]。
+   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL为https://&#39;server&#39;:[port_number]/system/console/configMgr。 在“配 **置** ”菜单中，选择 **Apache Sling推荐人过滤器选项** 。 在“允许主机”字段中，输入调度程序的主机名以允许它作为推荐人，然后单击“保 **存”**。 条目的格式为https://&#39;[server]:[port]&#39;。
 
-#### 集成Adobe Target {#integrate-adobe-target}
+#### 集成Adobe目标 {#integrate-adobe-target}
 
-如果您的客户提供的体验没有吸引力，则他们可能会放弃交互式通信。 虽然这令客户感到沮丧，但也可以增加组织的支持量和成本。 识别和提供能够提高转化率的正确客户体验至关重要，也具有挑战性。 AEM表单是解决此问题的关键。
+如果您的客户提供的体验没有吸引力，则他们可能会放弃交互式通信。 虽然这令客户感到沮丧，但也可以增加组织的支持量和成本。 识别和提供可提高转化率的正确客户体验至关重要，也具有挑战性。 AEM表单是解决此问题的关键。
 
-AEM表单与Adobe Target（Adobe Marketing cloud解决方案）集成，跨多个数字渠道提供个性化、引人入胜的客户体验。 要使用Adobe Target实现交互式通信的个性化，请 [将Adobe Target与AEM Forms集成](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
+AEM表单与Adobe目标（Adobe Marketing Cloud解决方案）集成，跨多个数字渠道提供个性化、引人入胜的客户体验。 要使用Adobe目标实现交互式通信的个性化，请 [将Adobe目标与AEM Forms集成](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
 
 #### 为表单数据模型配置SSL通信 {#configure-ssl-communcation-for-form-data-model}
 
@@ -176,7 +176,7 @@ AEM表单与Adobe Target（Adobe Marketing cloud解决方案）集成，跨多�
 
 ## 后续步骤 {#next-steps}
 
-您已将环境配置为使用交互式通信和通信管理功能。 现在，使用该功能的步骤是：
+您已配置环境以使用交互式通信和通信管理功能。 现在，使用该功能的步骤是：
 
 * [通信管理概述](/help/forms/using/interactive-communications-overview.md)
 
