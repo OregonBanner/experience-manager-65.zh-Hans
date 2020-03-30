@@ -1,6 +1,6 @@
 ---
-title: 查看和了解AEM Forms分析报告
-seo-title: 查看和了解AEM Forms分析报告
+title: 视图和了解AEM Forms分析报告
+seo-title: 视图和了解AEM Forms分析报告
 description: AEM Forms与Adobe Analytics集成，为您提供有关已发布自适应表单的摘要和详细分析。
 seo-description: AEM Forms与Adobe Analytics集成，为您提供有关已发布自适应表单的摘要和详细分析。
 uuid: b15ba5f3-aea7-40f5-893e-aaf3834cbc33
@@ -10,12 +10,12 @@ topic-tags: integrations
 discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
 
-# 查看和了解AEM Forms分析报告 {#view-and-understand-aem-forms-analytics-reports}
+# 视图和了解AEM Forms分析报告 {#view-and-understand-aem-forms-analytics-reports}
 
 Adobe Experience Manager Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的是根据使表单或文档更易用所需的更改数据做出明智决策。
 
@@ -29,7 +29,7 @@ AEM Forms中的分析功能可作为AEM Forms加载项包的一部分使用。 �
 
 ### 如何记录用户交互信息 {#how-user-interaction-information-is-recorded}
 
-当用户与表单交互时，将记录交互并发送到Analytics服务器。 以下列表指示服务器对各种用户活动的调用：
+当用户与表单交互时，将记录交互并发送到Analytics服务器。 以下列表指示对各种用户活动的服务器调用：
 
 * 每次现场访问2次
 * 1个小组访问
@@ -43,28 +43,28 @@ AEM Forms中的分析功能可作为AEM Forms加载项包的一部分使用。 �
 
 >[!NOTE]
 >
->此列表并非详尽无遗。
+>此列表并非完全。
 
 ### 查看分析报告 {#summary-report}
 
-执行以下步骤以查看分析报告：
+执行以下步骤以视图分析报告：
 
-1. 登录AEM门户网站： `https://[hostname]:[port]`
-1. 单击“ **表单”>“表单和文档”**。
-1. 选择要查看其分析报告的表单。
+1. 登录AEM门户网站： `https://[hostname]:'port'`
+1. 单击“ **表单”>“表单和文档**”。
+1. 选择要视图分析报告的表单。
 1. 选择 **更多>分析报告**。
 
 ![分析报告](assets/analyticsreport.png)
 
-**** 答：分析报告命令
+**答：** 分析报告命令
 
 AEM Forms显示表单的分析报告以及表单中每个面板的分析报告，如下所示。
 
 ![自适应表单的摘要报告](assets/analyticsdashboard_callout.png)
 
-************ 答：转 **化B.表单级摘要** C.**面板级摘要** D.访客的浏览器——过 **滤器E。访客操作系统——过**&#x200B;滤器F。访客语言——过滤器
+**答：** 转 **化B.** 表单级摘要 **C.** 面板级摘要 **D.** 访客的浏览器——过 **滤器E。** 访客操作系统——过 **滤器F。** 访客语——过滤器
 
-默认情况下，将显示最近七天的分析报告。 您可以查看最近15天、上个月等的报告，或指定日期范围。
+默认情况下，将显示最近七天的分析报告。 您可以视图最近15天、上个月等的报表，或指定日期范围。
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ AEM Forms显示表单的分析报告以及表单中每个面板的分析报告�
 * **草稿**:表单保存为草稿的次数
 * **提交**:提交表单的次数
 * **中止**:用户开始填写表单然后离开而不填写表单的次数
-* **唯一访客**:表单由唯一访客呈现的次数。 有关独特访客的详细信息，请参 [阅独特访客、访问和客户行为](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html)。
+* **独特访客**:表单由唯一访客呈现的次数。 有关独特访客的更多信息，请参 [阅独特访客、访问和客户行为](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html)。
 
 ![扩展的表单级摘要分析报告](assets/analytics-report.png)
 
@@ -105,7 +105,7 @@ AEM Forms显示表单的分析报告以及表单中每个面板的分析报告�
 
 #### 详细面板报告 {#detailed-panel-report}
 
-您还可以通过在面板报告中单击面板名称来查看每个面板的详细信息。
+您还可以通过单击“面板报告”中的面板名称来视图每个面板的详细信息。
 
 ![详细面板报告](assets/panel-report-detailed.png)
 
@@ -119,15 +119,15 @@ AEM Forms显示表单的分析报告以及表单中每个面板的分析报告�
 
 如果多个面板可用，则可以在这些面板之间导航。
 
-### 过滤器：浏览器、操作系统和语言 {#filters-browser-os-and-language}
+### 过滤器:浏览器、操作系统和语言 {#filters-browser-os-and-language}
 
-“浏览器分发”、“操作系统分发”和“语言分发”表按表单用户的浏览器、操作系统和语言显示再现、访客和提交内容。 默认情况下，这些表最多显示五个条目。 单击“显示更多”可显示更多条目，单击“显示更少”可返回到五个或更少的常规条目。
+“浏览器分发”、“操作系统分发”和“语言分发”表按表单用户的浏览器、操作系统和语言显示演绎版、访客和提交。 默认情况下，这些表最多显示五个条目。 单击“显示更多”可显示更多条目，单击“显示更少”可返回到五个或更少的常规条目。
 
 要进一步筛选分析数据，您可以单击任意表中的条目。 例如，如果单击“浏览器分发”表中的Google Chrome，则报表将再次呈现，其中包含与Google Chrome浏览器相关的数据，如下所示：
 
 ![应用于Analytics报告的过滤器- Google Chrome ](assets/filter-1.png)
 
-如果在应用过滤器后查看面板报告，则面板报告数据也会根据应用的过滤器显示。
+如果在应用过滤器后视图面板报告，则面板报告数据也会根据应用的过滤器显示。
 
 应用过滤器后：
 
