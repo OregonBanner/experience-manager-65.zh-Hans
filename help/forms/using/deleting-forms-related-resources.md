@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 如何删除表单 {#how-to-delete-a-form}
 
-1. 通过访问 `https://[hostname]:[portport]/aem/forms.html.`
+1. 通过访问 `https://[hostname]:'port'/aem/forms.html.`
 1. 导览至要删除的表单并选择它。 单击工 ![具栏中的删除aem6forms_delete2](assets/aem6forms_delete2.png) ，然后确认删除操作。
 
    >[!NOTE]
