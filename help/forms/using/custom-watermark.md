@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -19,19 +19,19 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
 ## 概述 {#overview}
 
-在“创建对应”UI中，代理用户预览最终形状的对应，在该形状中，对应被发送到后期处理，例如用于电子邮件或打印。
+在“创建对应”UI中，代理用户将对应预览为最终形状，在最终形状中，这些对应被发送到后期处理，例如用于电子邮件或打印。
 
-为了防止未授权使用此数据，组织可以在预览PDF上加上水印。 默认水印为“PREVIEW”，它显示在PDF中。
+为防止未授权使用此数据，组织可以在预览PDF上加上水印。 默认水印为“预览”，它显示在PDF中。
 
-要在预览PDF中启用水印，请在https:// **[!UICONTROL server]** : **[!UICONTROL portSystem/console/configMgr中选择“在]** Correponsement Configurations[（对应管理配置）”中的“Apply Watermark][]During Preview（预览时应用水印）”选项。
+要在预览PDF中启用水印，请在https://&#39; **[!UICONTROL server:]** port **[!UICONTROL &#39;]** /system/console/configMgr的“对应管理配置[][]”中选择“在预览期间应用水印”选项。
 
 ![default-watermark](assets/default-watermark.png)
 
 您可以使用以下步骤自定义水印的文本和外观：
 
-## 在“创建对应UI”的PDF预览中自定义水印 {#customizewatermark-}
+## 在“创建对应的UI”中自定义PDF预览中的水印 {#customizewatermark-}
 
-1. 转到并 `https://[server]:[port]/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
 1. 在apps文件夹中，创建一个名为 **[!UICONTROL previewwatermark的文件夹]** ，其路径／结构与libs文件夹中的previewwatermark文件夹类似：
 
    1. 右键单击以下路 **径的** previewwatermark文件夹，然后选择 **叠加节点**:
@@ -40,11 +40,11 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **** 路径：/libs/fd/cm/configFiles/previewwatermark
+      **路径：** /libs/fd/cm/configFiles/previewwatermark
 
-      **** 叠加位置：/apps/
+      **叠加位置：** /apps/
 
-      **** 匹配节点类型：已选中
+      **匹配节点类型：** 已选中
 
       >[!NOTE]
       >
@@ -79,7 +79,7 @@ source-git-commit: 5a586758da84f467e075adcc33cdcede2fbf09c7
    </DDX>
    ```
 
-   有关自定义水印外观、文本和对齐方式的信息，请参阅在 [Assembler service和DDX Reference文档中添加和删除水印和背景](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) 。
+   有关自定义水印外观、文本和对齐方式的信息，请参阅在 [Assembler Service和DDX Reference文档中添加和删除水印和背景](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) 。
 
    >[!NOTE]
    >
