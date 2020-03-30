@@ -10,7 +10,7 @@ topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 * 表单模板（XFA表单）
 * PDF表单
-* 文档（平面PDF文档）
+* 文档(简单PDF文档)
 
 您可以单独上传支持的资产类型，也可以上传为ZIP存档。 您只能在ZIP存档中的XFA表 `Resource`单旁边上传该类型的资产。
 
@@ -33,11 +33,11 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 ## 上传表单 {#uploading-forms}
 
-1. 通过访问，登录到AEM Forms用户界面 `https://[server]:[port]/aem/forms.html`。
+1. 通过访问，登录到AEM Forms用户界面 `https://'[server]:[port]'/aem/forms.html`。
 1. 导览至要上传表单的文件夹或包含表单的文件夹。
 1. 在操作工具栏中，点按创 **建>文件上传**。
 
-   ![“创建”下的“从本地存储创建文件”选项](assets/step.png)
+   ![“创建”下的“从本地存储文件”选项](assets/step.png)
 
 1. 通过“上传表单”或“包”对话框，您可以浏览并选择要上传的文件。 文件浏览器仅显示支持的文件格式（ZIP、XDP和PDF）。
 
@@ -45,7 +45,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
    >
    >文件名只能包含字母数字字符、连字符或下划线。
 
-1. 选择文件后单击“上传”以上传文件，或单击“取消”以取消上传。 弹出窗口会列出添加的资产以及在当前位置更新的资产。
+1. 选择文件后单击“上传”以上传文件，或单击“取消”以取消上传。 弹出窗口会列表添加的资产和在当前位置更新的资产。
 
    >[!NOTE]
    >
@@ -65,7 +65,7 @@ AEM Forms服务器允许您运行JavaScript代码。 恶意JavaScript代码可�
 
 默认情况下，保护模式处于打开状态。 如有必要，您可以禁用保护模式：
 
-1. 以管理员身份登录到AEM Web Console。 URL是https://[server]:[port]/system/console/configMgr
+1. 以管理员身份登录到AEM Web Console。 URL是https://&#39;[server]:[port]&#39;/system/console/configMgr
 1. 打开移动表单配置进行编辑。
 1. 取消选择“保护模式”选项，然后单击“ **保存**”。 保护模式被禁用。
 
