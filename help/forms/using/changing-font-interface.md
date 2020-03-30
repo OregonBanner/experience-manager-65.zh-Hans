@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 例如，要将顶部导航栏锚点文本的字体更改为Courier New，请执行以下步骤：
 
-1. 通过访问，登录到CRXDE Lite `https://[server]:[port]/lc/crx/de/index.jsp`。
+1. 通过访问，登录到CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 执行下列操作之一：
 
    1. 要更改现有样式的字体系列，请在/apps/ws/css的newStyle.css文件中添加以下内容。
