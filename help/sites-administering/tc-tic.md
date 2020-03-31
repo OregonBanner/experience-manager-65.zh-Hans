@@ -10,7 +10,7 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 98dd2d3e7445ceda6d96f0dd11b39d8361f1f402
 
 ---
 
@@ -30,6 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 创建将AEM连接到翻译服务提供商的云配置。 默认情况下，AEM包含连接到Microsoft Translator的功能。 对于其他翻译提供商，从“包共享”下载连 [接器包](/help/sites-administering/package-manager.md#package-share)。
 以下翻译供应商为翻译项目提供了新API的实施。 链接可了解有关集成的更多信息以及如何从包共享下载：
 
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) （Adobe Exchange Premier合作伙伴）
 * [Clay Tablet Technologies](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/clay-tablet-translation-connector-for-aem.html) （不在PackageShare上，请直接与供应商联系）
 * [Lionbridge](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lionbridge-for-adobe-experience-manager.html)
 * [云字](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/cloudwords-for-adobe-translations-connector.html)
@@ -37,7 +38,6 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * [林戈特克](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/lingotek-for-adobe-experience-manager.html)
 * Microsoft（Microsoft Translator已预安装在AEM中）
 * [智能化](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/smartling-connector-for-adobe-experience-manager.html)
-* [Translations.com](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/globallink-connect-for-adobe-experience-manager.html)
 * [SDL WorldServer](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdlworldserver-connector.html)
 * [SDL TMS](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/sdl-tms-translation-connector-for-adobe-experience-manager.html)
 * [Systran](https://marketing.adobe.com/resources/content/resources/en/exchange/marketplace/apps/systran-for-adobe-experience-manager.html)
@@ -45,7 +45,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->要查找人文和机器翻译提供商的最新列表，请查看以下页面：
+>要查找最新的人文和机器翻译提供商列表，请查看以下页面：
 >
 >
 >* [AEM Human Translation](https://www.adobe.com/go/aem-human-translation-connectors)
@@ -64,17 +64,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 创建翻译集成框架配置以指定如何翻译内容。 该配置包含以下信息：
 
-* 要使用哪个翻译服务提供商。
+* 使用哪个翻译服务提供商。
 * 无论是进行人类翻译还是机器翻译。
 * 是否翻译与页面或资产关联的其他内容，如标记。
 
 创建框架配置后，您会根据配置将云配置与要翻译的页面相关联。 当翻译过程启动时，翻译工作流会根据关联的框架配置进行。
 
-当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。 例如，多语言网站包含英语、西班牙语和日语副本。 站点所有者使用两个不同的翻译服务提供商进行西班牙语和日语翻译。 因此，配置了框架的两种配置。 每个配置都使用不同的翻译服务提供商。
+当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。 例如，多语言网站包含英语、西班牙语和日语副本。 站点所有者对西班牙语和日语的翻译使用两种不同的翻译服务提供商。 因此，配置了框架的两种配置。 每个配置都使用不同的翻译服务提供商。
 
 在配置翻译集成框架后，您可以将 [其与使用该框架的页面](/help/sites-administering/tc-prep.md) 关联。
 
-**** 注意：有关AEM中内容翻译功能的概述，请参阅多语 [言站点内容翻译](/help/sites-administering/translation.md)。
+**注意：** 有关AEM中内容翻译功能的概述，请参阅多语 [言站点内容翻译](/help/sites-administering/translation.md)。
 
 框架的单个配置控制如何翻译页面内容、社区内容和资产。
 ![chlimage_1-386](assets/chlimage_1-386.png)
@@ -100,11 +100,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>翻译提供商</td>
-   <td>选择要执行翻译的翻译提供者。 安装相应的连接器时，提供者会显示在列表中。</td>
+   <td>选择要执行翻译的翻译提供者。 安装相应的连接器后，列表中将显示提供者。</td>
   </tr>
   <tr>
    <td>内容目录</td>
-   <td>（仅限机器翻译）描述要翻译的内容的类别。 在翻译内容时，该类别会影响术语和短语的选择。</td>
+   <td>（仅限机器翻译）描述您正在翻译的内容的类别。 类别会影响翻译内容时的术语和措辞选择。</td>
   </tr>
   <tr>
    <td>翻译标记</td>
@@ -133,7 +133,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 | 属性 | 描述 |
 |---|---|
 | 翻译提供商 | 选择要执行翻译的翻译提供者。 创建云配置的提供程序显示在列表中。 |
-| 内容目录 | 描述要翻译的内容的类别。 在翻译内容时，该类别会影响术语和短语的选择。 |
+| 内容目录 | 描述要翻译的内容的类别。 类别会影响翻译内容时的术语和措辞选择。 |
 | 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，来自所有语言副本的帖子将显示在一个全局对话中。 根据惯例，为网站的基 [本语言](/help/communities/sites-console.md#translation) 选择区域设置。 选择“无公用商店”将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
 
 ### 资产配置属性 {#assets-configuration-properties}
@@ -157,11 +157,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>翻译提供商</td>
-   <td>选择要执行翻译的翻译提供者。 安装相应的连接器时，提供者会显示在列表中。</td>
+   <td>选择要执行翻译的翻译提供者。 安装相应的连接器后，列表中将显示提供者。</td>
   </tr>
   <tr>
    <td>内容目录</td>
-   <td>（仅限机器翻译）描述要翻译的内容的类别。 在翻译内容时，该类别会影响术语和短语的选择。</td>
+   <td>（仅限机器翻译）描述您正在翻译的内容的类别。 类别会影响翻译内容时的术语和措辞选择。</td>
   </tr>
   <tr>
    <td>翻译资产</td>
@@ -202,7 +202,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 将页面与云配置关联后，页面的后代将继承关联。 例如，如果将/content/geometrixx/cn/products页面与翻译集成框架关联，则“产品”页面及其下面的所有页面将根据框架进行翻译。
 
-如果需要，您可以覆盖子代页面上的关联。 例如，网站的内容大多与服装有关。 但是，页面的一个分支描述了公司。 站点的根页面与一个翻译集成框架相关联，该框架指定使用Clothing类别进行机器翻译。 描述公司的分支使用使用“常规”类别执行机器翻译的框架。
+如果需要，您可以覆盖子代页面上的关联。 例如，网站的内容大多与服装有关。 但是，页面的一个分支描述了公司。 站点的根页面与一个翻译集成框架相关联，该框架使用Clothing类别指定机器翻译。 描述公司的分支使用框架，该框架使用常规类别执行机器翻译。
 
 此外，对于页面上 [的任何社区](/help/communities/scf.md) SCF组件，用户生成的内容(UGC)将包括用户翻译内容的能力。 有关详细信息，请参 [阅翻译用户生成的内容](/help/communities/translate-ugc.md)。
 
@@ -210,7 +210,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 将页面与用于翻译页面和子代页面的翻译提供者相关联。
 
-1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
+1. 在站点控制台中，选择要配置的页面，然后单击或点按视图属性。
 1. 单击或点按编辑，然后单击或点按云服务选项卡。
 1. 单击或点按添加配置>翻译集成。
 1. 选择要使用的翻译提供者，然后单击或点按完成。
@@ -219,7 +219,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 将页面与翻译集成框架关联，该框架定义了如何执行页面和子页面的翻译。
 
-1. 在站点控制台中，选择要配置的页面，然后单击或点按查看属性。
+1. 在站点控制台中，选择要配置的页面，然后单击或点按视图属性。
 1. 单击或点按编辑，然后单击或点按云服务选项卡。
 1. 单击或点按添加配置>翻译集成。
 1. 选择要使用的翻译集成框架，然后单击或点按完成。
