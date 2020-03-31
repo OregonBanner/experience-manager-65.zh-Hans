@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc3cb8732e2c0b4a7275ec302517791a5babdd42
+source-git-commit: 34f5cfc692241da4b9f5330e5abc324998fadb23
 
 ---
 
@@ -32,7 +32,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * AEM资产现已通过Adobe I/O控制台配置了Brand Portal。
 
-* AEM Forms工作 [流现在可使用新的“生成可打印输出](../forms/using/aem-forms-workflow-step-reference.md) ”步骤。
+* AEM Forms工作流 [现在提供了新的“生成可打印输出](../forms/using/aem-forms-workflow-step-reference.md) ”步骤。
 
 * [自适应表单](../forms/using/resize-using-layout-mode.md) 、交互式通信的布局模式支持多列。
 
@@ -48,7 +48,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * SOAP输入或输出以及复杂的数据结构现在支持动态组替换。
 
-有关先前AEM 6.5 Service Pack中引入的功能、主要亮点和主要功能的完整列表，请参阅 [Adobe Experience Manager 6.5 Service Pack 4的新增功能](new-features-latest-service-pack.md)。
+有关完整列表之前AEM 6.5 Service Pack中引入的功能、主要亮点和主要功能的信息，请参阅 [Adobe Experience Manager 6.5 Service Pack 4的新增功能](new-features-latest-service-pack.md)。
 
 ### 站点 {#sites-fixes}
 
@@ -56,7 +56,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 当打开AEM站点页面进行编辑并复制组件时，粘贴操作对于某些占位符将保持不可用(NPR-32317)。
 
-* 打开“管理发布”向导后，链接到核心组件的体验片段不会显示在已发布引用的列表中(NPR-32233)。
+* 打开“管理发布”向导后，链接到核心组件的体验片段不会显示在发布引用的列表中(NPR-32233)。
 
 * Touch UI中的Live Copy概述比经典UI渲染要耗时得多(NPR-32149)。
 
@@ -84,13 +84,13 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 当用户单击“创建”按钮时，页面选项不可用(NPR-31756)。
 
-* 无法同步包含OOTB（现成）设计导入程序组件的Adobe系列活动(NPR-31728)。
+* 无法同步包含OOTB（现成）设计导入程序组件的Adobe活动中的活动(NPR-31728)。
 
-* 当您尝试将项目符号列表更改为编号列表时，仅更改列表的前两个项(NPR-31636)。
+* 当您尝试将项目符号列表更改为编号列表时，仅更改列表的前两个项目(NPR-31636)。
 
 * 当页面被取消创作且子节点被选中时，选择对话框仍显示初始节点。 创作页面并用户单击浏览时，页面将重定向到根节点而不是创作的节点(NPR-31618)。
 
-* 查看配置对话框对收件箱自定义工作流功能（NPR-32503和NPR-32492）无法正常工作。
+* “视图配置”对话框对收件箱自定义工作流功能（NPR-32503和NPR-32492）无法正常工作。
 
 * 使用收件箱查看工作流信息时显示错误消息(CQ-4282168)。
 
@@ -110,7 +110,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 打开“文件夹设置”以更改文件夹标题或缩略图图像，然后保存文件夹的原始权限(NPR-32292)。
 
-* 计划激活的日历图标不会显示在“状态”列（在DAM资产列表的经典UI中）中，以激活资产，激活时间安排在以后的日期和时间内(NPR-32291)。
+* 计划激活的日历图标不会显示在“状态”列（DAM资产列表的经典UI中）中，该激活的资产将安排在以后的日期和时间内(NPR-32291)。
 
 * 使用代码片断模板创建代码片断时，在代码片断创建过程中搜索集合时出错(NPR-32290)。
 
@@ -122,7 +122,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 使用Omnisearch彩块化进行文件和文件夹搜索会出现异常(NPR-31872)。
 
-* 即使在相应的元数据架构表单中设置依赖关系规则时，在元数据编辑器中选择必填字段时也不会删除字段突出显示功能(NPR-31834)。
+* 即使在相应的元数据模式表单中设置了依赖关系规则时，元数据编辑器中用于强制字段选择的字段突出显示也不会被删除(NPR-31834)。
 
 * 叶级标记的完整名称（来自标记层次结构）不显示在资产属性页面中(NPR-31820)。
 
@@ -194,11 +194,18 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 ### Brand Portal {#assets-brand-portal}
 
-* 元数据架构下拉值在资产属性中不可见(CQ-4283287)。
+* 在AEM 6.5.4上升级到Adobe I/O时，Brand Portal用户无法将贡献文件夹资产发布到AEM资产(CQDOC-15655)。
+
+   此问题将在下一个Service Pack AEM 6.5.5中得到修复。
+
+   对于AEM 6.5.4上的即时修复，建议下载 [修补程序](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，并在创作实例上安装。
+
+
+* 元数据模式下拉值在资产属性中不可见(CQ-4283287)。
 
 * 元数据子架构不显示基于资产属性中的mimetype的选项卡(CQ-4283288)。
 
-* 取消发布元数据架构会填充错误消息，尽管该架构已在后端删除。
+* 取消发布元数据模式会填充错误消息，但模式会在后端删除。
 
 * 预览图像不显示已发布的资产(CQ-4285886)。
 
@@ -212,11 +219,11 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * “创建成员”表单显示为空白页面(NPR-31997)。
 
-* 用户无法查看有关作者实例的分析报告(NPR-30913)。
+* 用户无法视图有关作者实例的Analytics报告(NPR-30913)。
 
 ### Oak-索引和查询 {#oak-indexing-6540}
 
-* 使用Tika分析器分析时，MS Word和MS Excel文档（包含JPEG图像）无法解析，并且发现类未找到错误(NPR-31952)。
+* 使用Tika分析器分析时，包含JPEG图像的MS Word和MS Excel文档无法解析，并且发现类未找到错误(NPR-31952)。
 
 ### Forms {#forms-6530}
 
@@ -224,9 +231,9 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 >
 >AEM Service Pack 不包含对 AEM Forms 的修复。它们是通过单独的 Forms 附加组件包交付的。此外，还会发布一个累积安装程序，其中包含对JEE上的AEM Forms的修复。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
 
-* 通信管理：提交到后期流程工作流后，字母会显示额外的字符(NPR-32626)。
+* 通信管理：在提交到后期处理工作流后，字母会显示额外的字符(NPR-32626)。
 
-* 通信管理：在提交到后期流程工作流程后，字母将显示一个下拉占位符作为文本组件(NPR-32539)。
+* 通信管理：在提交到后期处理工作流后，字母显示一个下拉占位符作为文本组件(NPR-32539)。
 
 * 通信管理：在字母模板中定义的默认值不会在预览模式下显示(NPR-32511)。
 
@@ -244,7 +251,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 * 工作台：使用“为PDF实用程序获取PDF属性”操作时，将显示一条错误消息(NPR-32150)。
 
-* 文档安全性：受保护的PDF文件无法脱机打开，DisableGlobalOfflineSynchronizationData选项设置为True(NPR-32078)。
+* 文档安全：受保护的PDF文件无法脱机打开，DisableGlobalOfflineSynchronizationData选项设置为True(NPR-32078)。
 
 * 设计人员：如果启用了标记选项，子表单边框将消失在生成的PDF输出中(NPR-32547、NPR-31983、NPR-31950)。
 
@@ -345,13 +352,13 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 
 ## 已弃用功能 {#removed-deprecated-features}
 
-本节列出AEM 6.5.4.0中已标记为已弃用的功能和特性。计划在将来版本中删除的功能将设置为先弃用，然后使用替代选项。
+本节列表了AEM 6.5.4.0中已标记为已弃用的特性和功能。计划在将来版本中删除的功能将设置为先弃用，然后使用替代选项。
 
 建议客户检查是否在当前部署中使用了该功能，并计划更改其实施以使用替代选项。
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | The **[!UICONTROL AEM Cloud Services Opt-In]** screen has been deprecated. 随着AEM 6.5中更新的AEM和Target集成以支持Target Standard API（通过Adobe IMS和I/O进行身份验证），以及Adobe Launch在指导AEM页面进行分析和个性化方面日益重要的角色，选择加入向导在功能上已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、Adobe IMS身份验证和Adobe I/O集成 |
+| 集成 | The **[!UICONTROL AEM Cloud Services Opt-In]** screen has been deprecated. 随着AEM 6.5中更新的AEM和目标集成以支持目标标准API（通过Adobe IMS和I/O使用身份验证），以及Adobe Launch在指导AEM页面进行分析和个性化方面日益重要的角色，选择加入向导在功能上已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、Adobe IMS身份验证和Adobe I/O集成 |
 
 ## 已知问题 {#known-issues}
 
@@ -359,7 +366,7 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 * 在安装AEM 6.5.x.x过程中，可能会显示以下错误和警告消息：
    * “在 AEN 中使用 Target Standard API（IMS 身份验证）配置 Target 集成，然后将“体验片段”导出到 Target 时，会导致创建错误的选件类型。而不是“体验片段”/源“Adobe Experience Manager”类型，Target 会创建若干个“HTML”/源“Adobe Target Classic”类型的选件。
    * com.adobe.granite.maintenance.impl.TaskScheduler：在 granite/operations/maintenance 中未发现维护窗口。
-   * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证将失败。 CQ-4274424
+   * 当使用SUM、MAX和MIN等聚合功能时，Adaptive Form服务器端验证将失败。 CQ-4274424
    * com.adobe.granite.maintenance.impl.TaskScheduler：在 granite/operations/maintenance 中未发现维护窗口。
    * 使用购物横幅查看器预览资产时，Dynamic Media 交互式图像中的热点不可见。
 
