@@ -1,14 +1,14 @@
 ---
 title: 资产支持的格式
-description: AEM资产支持的文件格式列表以及每种格式支持的功能。
+description: 列表AEM资产和Dynamic Media支持的文件格式以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d7d25c75c1023383e07c36252ece2e85425a95be
+source-git-commit: 84c6cc47d84656be587cc6a268b8ddc2e1e39635
 
 ---
 
 
-# Assets supported formats {#assets-supported-formats}
+# 支持的资产格式 {#assets-supported-formats}
 
 AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提供不同的支持。
 
@@ -22,9 +22,7 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 | * | 受支持，但需要附加功能 |
 | - | 不适用 |
 
-## Supported Raster image formats {#supported-raster-image-formats}
-
-资产管理功能支持的栅格图像格式如下：
+## AEM资产中支持的栅格图像格式 {#supported-raster-image-formats}
 
 | 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 交互式编辑 | 元数据写回 | 分析 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -44,7 +42,7 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 
 **¹合并后的图像从PSD文件中提取。** 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
-Dynamic Media功能支持的栅格图像格式如下：
+## Dynamic Media中支持的栅格图像格式(#supported-raster-image-formats-dynamic-media)
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -69,9 +67,25 @@ Dynamic Media功能支持的栅格图像格式如下：
 
 * 对于EPS文件，PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
 
+## Dynamic Media中不支持的栅格图像格式(#unsupported-image-formats-dynamic-media)
+
+下表介绍了Dynamic Media不支持的栅格图像格 *式* 的子类型。 该表还介绍了可用于检测此类文件的建议方法。
+
+| 格式 | 不支持什么？ | 建议的检测方法 |
+|---|---|---|
+| JPEG | 初始三个字节不正确的文件。 | 要识别JPEF文件，其初始三个字节必须 `ff d8 ff`为。 如果它们是其他任何内容，则不会将其分类为JPEG。<br>·没有可帮助解决此问题的软件工具。<br>·一个读取文件初始三个字节的小C++/java项目应能够检测这些类型的文件。<br>·最好跟踪此类文件的源并查看生成文件的工具。 |
+| PNG | IDAT区块大小大于100 MB的文件。 | 可以使用C++中的 [libpng](http://www.libpng.org/pub/png/libpng.html) 检测此问题。 |
+| PSB |  | 如果文件类型是PSB，则使用exiftool。<br>ExifTool日志：<br>1中的示例。 File type: `PSB` |
+| PSD | 不支持色彩空间不是CMYK、RGB、灰度或位图的文件。<br>不支持DuoTone、Lab和索引色彩空间。 | 如果“颜色”模式为双色调，则使用ExifTool。<br>ExifTool日志：<br>1中的示例。 颜色模式： `Duotone` |
+|  | 结尾突然的文件。 | Adobe无法检测到此情况。 此外，此类文件无法通过Adobe PhotoShop打开。 Adobe建议您检查用于创建此类文件的工具并在源位置进行疑难解答。 |
+|  | 位深度大于16的文件。 | 如果位深度大于16，则使用ExifTool。<br>ExifTool日志：<br>1中的示例。 位深度： `32` |
+|  | 具有Lab色彩空间的文件。 | 如果颜色模式为Lab，则使用exiftool。<br>ExifTool日志：<br>1中的示例。 颜色模式： `Lab` |
+| TIFF | 具有浮点数据的文件。 即，不支持深度为32位的TIFF文件。 | 如果MIME类型为且SampleFormat的 `image/tiff` 值为其值，则使 `Float` 用ExifTool。 ExifTool日志：<br>1中的示例。 MIME类型：示 `image/tiff`<br>例格式： `Float #`<br>2. MIME类型：示 `image/tiff`<br>例格式： `Float; Float; Float; Float` |
+|  | 具有Lab色彩空间的文件。 | 如果颜色模式为Lab，则使用ExifTool。<br>ExifTool日志：<br>1中的示例。 颜色模式： `Lab` |
+
 ## 支持的PDF栅格化器库 {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer库可为大型和内容密集型Adobe Illustrator和PDF文件生成高质量的缩览图和预览。 Adobe建议对以下内容使用PDF栅格化器库：
+Adobe PDF Rasterizer库为大型和内容密集型Adobe Illustrator和PDF文件生成高质量的缩览图和预览。 Adobe建议对以下内容使用PDF栅格化器库：
 
 * 需要大量处理的内容密集型AI/PDF文件。
 * AI/PDF文件，默认情况下不生成缩略图。
@@ -91,7 +105,7 @@ Adobe Imaging Tronding库是一款图像处理解决方案，可执行核心图�
 
 Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw support](camera-raw.md).
 
-## Supported document formats {#supported-document-formats}
+## 支持的资产文档格式 {#supported-document-formats}
 
 资产管理功能支持的文档格式如下：
 
@@ -116,7 +130,7 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-Dynamic Media功能支持的文档格式如下：
+## Dynamic Media中支持的文档格式(##supported-文档-formats-dynamic-media)
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -155,7 +169,7 @@ Dynamic Media功能支持的文档格式如下：
 | WMV | ✓ | ✓ |  | * | * |
 | SWF | ✓ | ✓ |  |  |  |
 
-## Supported input video formats for Dynamic Media Transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
+## Supported input video formats in Dynamic Media for transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | 视频文件扩展名 | 容器 | 推荐的视频编解码器 | 不支持的视频编解码器 |
 |---|---|---|---|
@@ -180,7 +194,7 @@ Dynamic Media功能支持的文档格式如下：
 
 下表介绍了支持的存档格式和常见DAM工作流的适用性。
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体交付 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | TGZ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
@@ -190,21 +204,21 @@ Dynamic Media功能支持的文档格式如下：
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件都支持通常的DAM功能，如存储、版本控制、ACL、工作流、发布和元数据管理（Dynamic Media Delivery除外）。
+下表介绍了几种其他文件格式的常见DAM工作流的适用性。 所有文件都支持通常的DAM功能，如存储、版本控制、ACL、工作流、发布和元数据管理(Dynamic Media投放除外)。
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体交付 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JavaScript（当配置有自己的交付域时） |  |  |  |  |  | ✓ |
+| JavaScript(当配置有自己的投放域时) |  |  |  |  |  | ✓ |
 
 ## Supported MIME types {#supported-mime-types}
 
 默认情况下，AEM会使用文件扩展名检测文件类型。 AEM可以从文件内容中检测到它。 对于后者，在AEM Web [!UICONTROL 控制台的Day CQ DAM Mime类型服务中] ，选 [!UICONTROL 择“从内容检测MIME] ”选项。
 
-在CRXDE Lite中，提供了支持的MIME类型列表 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
+在CRXDE Lite中，有一列表受支持的MIME类型 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
 请参 [阅配置基于MIME类型的上传作业参数支持](config-dynamic.md)。
 
