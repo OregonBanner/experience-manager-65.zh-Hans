@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6cf69dc86ce70a43e77b00d6b3986fa40ae0a4ec
+source-git-commit: b41060207a1fb522905259a0d33df690d606929d
 
 ---
 
@@ -35,7 +35,7 @@ source-git-commit: 6cf69dc86ce70a43e77b00d6b3986fa40ae0a4ec
 
 ### 建议的配置 {#recommendedconfigurations}
 
-Adobe建议配置这些配置，并作为标准软件维护协议的一部分提供完全或受限的支持：
+Adobe recommends these configurations and provides full or restricted support as part of the standard software maintenance agreement:
 
 <table>
  <tbody>
@@ -45,7 +45,7 @@ Adobe建议配置这些配置，并作为标准软件维护协议的一部分提
   </tr>
   <tr>
    <td>答：支持<br /> </td>
-   <td>Adobe为此配置提供全面支持和维护。 此配置由Adobe的质量保证流程涵盖。</td>
+   <td>Adobe为此配置提供全面支持和维护。 This configuration is covered by Adobe's quality assurance process.</td>
   </tr>
   <tr>
    <td>R:受限支持</td>
@@ -53,7 +53,7 @@ Adobe建议配置这些配置，并作为标准软件维护协议的一部分提
   </tr>
   <tr>
    <td>L:有限支持</td>
-   <td>在满足某些先决条件后，Adobe会为此配置提供全面支持和维护。 并非所有功能都在配置中可用。 联系Adobe企业支持部门以了解先决条件并提出支持请求。<br /> </td>
+   <td>在满足某些先决条件后，Adobe会为此配置提供全面支持和维护。 并非所有功能都在配置中可用。 联系Adobe企业支持部门，了解先决条件并提出支持请求。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -63,7 +63,7 @@ Adobe建议配置这些配置，并作为标准软件维护协议的一部分提
 | 支持级别 | 描述 |
 |---|---|
 | E:预期可用 | 预计该配置将起作用，而且没有相反的报告。 |
-| Z:不支持 | 不支持此配置。 Adobe不对配置是否有效发表任何声明，也不支持配置。 |
+| Z:不支持 | 不支持此配置。 Adobe does not make any statements about whether the configuration works, and does not support it. |
 
 >[!NOTE]
 >
@@ -74,7 +74,7 @@ Adobe建议配置这些配置，并作为标准软件维护协议的一部分提
 >· IBM DB2数据库
 >· IBM AIX和Sun Solaris操作系统
 >
->对于新安装，建议在可行的情况下在现代OSGi堆栈上部署AEM Forms，以利用与使用表单数据模型的移动、多渠道交互式通信和后端数据集成相关的响应式自适应表单相关的最新创新。
+>For new installations, where feasible it is recommended to deploy AEM Forms on the modern OSGi stack to leverage the latest innovations around responsive Adaptive Forms for mobile, multi-channel Interactive Communications, and backend data integrations using Form Data Model.
 >
 >我们识别现有用户需要继续在JEE堆栈上部署AEM表单。 在这些情况下，Adobe需要按照本文档中的说明在支持的基础架构上部署AEM Forms JEE。 如果您要升级到AEM 6.5 Forms并使用先前AEM Forms版本上不支持的平台，则可以联系Adobe支持部门以获取有关升级到受支持平台的帮助。
 
@@ -105,7 +105,7 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
    <td>次要版本和更新</td>
   </tr>
   <tr>
-   <td>IBM® J9 Virtual Machine（内部版本2.9、JRE 1.8.0）<br /> </td>
+   <td>IBM® J9 Virtual Machine (build 2.9, JRE 1.8.0)<br /> </td>
    <td>答：支持</td>
    <td>次要版本和更新</td>
   </tr>
@@ -141,16 +141,15 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
   </tr>
   <tr>
    <td><p>Oracle Database 12c版本1</p> </td>
-   <td><p>存储库微内核</p> </td>
+   <td><p>Repository Microkernel</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
    <td>Oracle Database 18c </td>
-   <td>存储库微内核</td>
+   <td>Repository Microkernel</td>
    <td>支持</td>
-  </tr>
-
-<tr>
+  </tr> 
+   <tr>
    <td>Oracle Database 19c </td>
    <td>存储库</td>
    <td>支持</td>
@@ -173,14 +172,14 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
  </tbody>
 </table>
 
-* IBM DB2不支持新安装。 仅升级到AEM 6.5 Forms的现有客户支持此功能。
-* MongoDB是第三方软件，不包含在AEM许可包中。 有关详细信息，请参 [阅MongoDB授权许可策略](https://www.mongodb.org/about/licensing/) 页。
-* 为了充分利用您的AEM部署，Adobe建议授权许可MongoDB Enterprise版本，以从专业支持中受益。
+* IBM DB2 is not supported for fresh installations. 仅升级到AEM 6.5 Forms的现有客户支持此功能。
+* MongoDB is third-party software and is not included in the AEM licensing package. 有关详细信息，请参 [阅MongoDB授权许可策略](https://www.mongodb.org/about/licensing/) 页。
+* In order to get the most of your AEM deployment, Adobe recommends licensing the MongoDB Enterprise version in order to benefit from professional support.
 * Adobe客户关怀将协助解决与在AEM中使用MongoDB相关的资格问题。 有关详细信息，请参 [阅MongoDB for Adobe Experience Manager页面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。
-* “文件系统”包括符合POSIX规范的块存储。 这包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响总体性能。 建议将测试AEM与网络／远程文件系统结合使用。
+* &#39;File System&#39; includes block storage that is POSIX compliant. 这包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响总体性能。 建议将测试AEM与网络／远程文件系统结合使用。
 * 仅支持MongoDB存储引擎WiredTiger。
 * AEM中不支持MongoDB共享。
-* JEE上的AEM Forms不支持MySQL for RDBMK持久性。
+* AEM Forms on JEE does not support MySQL for RDBMK persistence.
 * 文档安全模块不使用内容存储库。 这意味着，如果您仅使用文档安全性，并且不计划使用HTML Workspace、HTML5表单或自适应表单，那么请勿安装内容存储库。
 * JEE上的AEM Forms不支持使用MySQL对AEM存储库(CRX-Repository)进行持久保存。
 
@@ -442,7 +441,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的平台特�
 >* PDF Generator不支持Microsoft Office 365。
 >* 仅Windows和Linux支持OpenOffice的PDF Generator转换。
 >* 仅Windows支持OCR PDF、优化PDF和导出PDF功能。
->* Acrobat的某个版本与AEM Forms捆绑在一起，以启用PDF Generator功能。 在AEM Forms许可证的期限内，仅可通过AEM Forms以编程方式访问捆绑版本，以便与AEM Forms PDF Generator一起使用。 有关详细信息，请参阅AEM Forms产品说明([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+>* Acrobat的某个版本与AEM Forms捆绑在一起，以启用PDF Generator功能。 在AEM Forms许可证的期限内，仅可通过AEM Forms以编程方式访问捆绑版本，以便与AEM Forms PDF Generator一起使用。 有关详细信息，请参阅AEM Forms产品说明([按部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
    >
    >
 * PDF Generator服务不支持Microsoft Windows 10。
@@ -459,7 +458,7 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
 * 通信管理创作UI
 * 管理员UI（管理控制台UI）
 
-## JEE上的AEM Forms的系统要求 {#system-requirements-for-aem-forms-on-jee}
+## System Requirements for AEM Forms on JEE {#system-requirements-for-aem-forms-on-jee}
 
 ### 最低硬件要求 {#minimum-hardware-requirements}
 
@@ -482,10 +481,10 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
    <td>Intel Xeon E5-2670v2、1个vCPU、2.5 GHz处理器<br /> AWS m3.medium（3个ECU）<br /> RAM:6 GB（64位操作系统，带64位JVM）<br /> :6 GB临时空间，外加22 GB<br /> ，用于JEE上的AEM Forms<br /> </td>
   </tr>
   <tr>
-   <td>小型生产环境的硬件要求</td>
+   <td>Hardware requirements for a small production environment</td>
    <td>
     <ul>
-     <li><strong>以英特尔为后盾的环境</strong>:英特尔®至强® E5-2680,2.4 GHz或更高。 使用双核处理器将进一步增强性能</li>
+     <li><strong>Intel powered environment</strong>: Intel® Xeon® E5-2680, 2.4 GHz or greater. Using a dual core processor will further enhance performance</li>
      <li><strong>内存： </strong>4 GB <br /> </li>
     </ul> </td>
   </tr>
@@ -523,7 +522,7 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
 
 * 运行Workbench的内存：2 GB内存
 * 硬件要求：Intel® Pentium® 4或AMD等效处理器，1 GHz处理器
-* 1024 X 768像素或更高的显示器分辨率，16位颜色或更高
+* 最低1024 X 768像素或更高的显示器分辨率，16位颜色或更高
 * TCP/IPv4或TCP/IPv6网络连接到JEE服务器上的AEM Forms
 * 您必须具有“管理”权限才能在Windows上安装Workbench。 如果您使用非管理员帐户进行安装，安装程序将提示您输入相应帐户的凭据。
 
@@ -534,23 +533,23 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
 * Microsoft® Windows® 2016 Server、Microsoft Windows 10
 
    * 1 GHz或更快的处理器，支持PAE、NX和SSE2。
-   * 1 GB内存（32位）或2 GB内存（64位操作系统）
-   * 16 GB磁盘空间，用于32位或20 GB磁盘空间，用于64位操作系统
+   * 1 GB of RAM for 32-bit or 2 GB of RAM for 64-bit OS
+   * 16 GB disk space for 32-bit or 20 GB disk space for 64-bit OS
 
-* 图形内存- 128 MB GPU（建议使用256 MB）
-* 2.35 GB可用硬盘空间
+* Graphics memory - 128 MB of GPU (256 MB recommended)
+* 2.35 GB of available hard-disk space
 * DVD-ROM驱动器
 * Internet Explorer 10或11;Firefox 45.x
 * 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
 
-### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
+### Adobe Acrobat and Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
 <table>
  <tbody>
   <tr>
-   <th><p><strong>Acrobat和Adobe Reader（基础）</strong></p> </th>
+   <th><p><strong>Acrobat and Adobe Reader (Base)</strong></p> </th>
    <th><p><strong>支持的修补程序定义</strong></p> </th>
   </tr>
   <tr>
@@ -562,7 +561,7 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
 
 >[!NOTE]
 >
->Acrobat DC产品系列为Acrobat和Reader引入了两种途径，这两种途径本质上是不同的产品：“经典”和“连续”。有关详细信息以及这两个轨道的比较，请参 [阅https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
+>The Acrobat DC product family introduces two tracks for both Acrobat and Reader which are essentially different products: “Classic” and “Continuous.” For details and a comparison of the two tracks, see [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
 
 ### 浏览器 {#browsers}
 
@@ -597,7 +596,7 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
   </tr>
   <tr>
    <td>MAC OS X上的Google Chrome和Firefox</td>
-   <td>答：支持<br /><br /> </td>
+   <td>A: Supported<br /> <br /> </td>
    <td>所有更新</td>
   </tr>
   <tr>
