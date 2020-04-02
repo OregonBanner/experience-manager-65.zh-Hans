@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
+source-git-commit: 6a29cf13c89b71f851c67f85b01e8e648c0896b9
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 1b664d082f090814903b2802d8accd80eb6b9e5e
 
 您可以使用批处理API从模板生成多个交互式通信。 该模板是无任何数据的交互式通信。 Batch API将数据与模板相结合，以生成交互式通信。 该API在大规模制作交互式通信中很有用。 例如，电话单、多个客户的信用卡对帐单。
 
-Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成的交互式通信数量等于配置的表单数据模型中输入JSON文件中指定的记录。 您可以使用API生成打印和Web输出。 “打印”选项会生成PDF文档，而“WEB”选项会为每个记录生成JSON格式的数据。
+Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成的交互式通信数量等于配置的表单数据模型中输入JSON文件中指定的记录。 您可以使用API生成打印和Web输出。 “打印”选项会生成PDF文档，而“WEB”选项会为每个单独的记录生成JSON格式的数据。
 
 ## 使用Batch API {#using-the-batch-api}
 
@@ -78,7 +78,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
 
 1. 创建“ [监视”文件夹](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) ，并将其配置为使用Batch API:
    1. 登录到AEM Forms作者实例。
-   1. 导航到工 **[!UICONTROL 具]** >表 **[!UICONTROL 单]** >配 **[!UICONTROL 置监视文件夹]**。 点按 **[!UICONTROL 新建]**。
+   1. 导航到“工 **[!UICONTROL 具]** ”>“表 **[!UICONTROL 单]** ” **[!UICONTROL >“配]**&#x200B;置监视文件夹”。 点按 **[!UICONTROL 新建]**。
    1. 指定文 **[!UICONTROL 件夹的]** “名 **[!UICONTROL 称]** ”和“物理路径”。 For example, `c:\batchprocessing`.
    1. 在“进程 **[!UICONTROL 文件]** ”(Process File Using)字段中 **[!UICONTROL 选择“服务]** ”(Service)选项。
    1. 在“服 **[!UICONTROL 务名称”字段中选择com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]****[!UICONTROL 服务]** 。
@@ -99,7 +99,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
    1. 打开“监视文件夹”。 导航到输入文件夹。
    1. 在输入文件夹中创建一个文件夹，并将JSON文件放在新创建的文件夹中。
    1. 等待“监视文件夹”处理文件。 当处理开始时，包含该文件的输入文件和子文件夹将移至暂存文件夹。
-   1. 打开输出文件夹以查看输出：
+   1. 打开输出文件夹以视图输出：
       * 在“监视文件夹配置”中指定“打印”选项时，将生成交互式通信的PDF输出。
       * 在“监视文件夹配置”中指定“WEB”选项时，将为每个记录生成一个JSON文件。 您可以使用JSON文件 [预填充Web模板](#web-template)。
       * 指定“打印”和“网络”选项时，将生成PDF文档和每个记录的JSON文件。
@@ -115,7 +115,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
    1. 点按读取服务参数的铅笔图标，将参数绑定到“请求属性”并指定绑定值。 它将服务参数绑定到指定的绑定属性或文本值，该值作为参数传递给服务以从数据源获取与指定值关联的详细信息。
 
       <br>
-        在此示例中，id参数使用用户配置文件的id属性的值并将其作为参数传递给读取服务。 它将从员工数据模型对象中读取并返回指定ID的关联属性值。 因此，如果在表单的id字段中指定00250，则读取服务将读取员工id为00250的详细信息。
+        在此示例中，id参数使用用户用户档案的id属性的值并将其作为参数传递给读取服务。 它将从员工数据模型对象中读取并返回指定ID的关联属性值。 因此，如果在表单的id字段中指定00250，则读取服务将读取员工id为00250的详细信息。
         <br>
 
       ![配置请求属性](assets/request-attribute.png)
@@ -161,7 +161,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
    1. 打开“监视文件夹”。 导航到输入文件夹。
    1. 在输入文件夹中创建文件夹。 将在步骤2中创建的JSON文件放入新创建的文件夹中。
    1. 等待“监视文件夹”处理文件。 当处理开始时，包含该文件的输入文件和子文件夹将移至暂存文件夹。
-   1. 打开输出文件夹以查看输出：
+   1. 打开输出文件夹以视图输出：
       * 在“监视文件夹配置”中指定“打印”选项时，将生成交互式通信的PDF输出。
       * 在“监视文件夹配置”中指定“WEB”选项时，将为每个记录生成一个JSON文件。 您可以使用JSON文件 [预填充Web模板](#web-template)。
       * 指定“打印”和“网络”选项时，将生成PDF文档和每个记录的JSON文件。
@@ -174,7 +174,7 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
 
 1. 登录到AEM实例并创建交互式通信。 要使用下面给出的示例代码中提到的交互式通信，请单 [击此处](assets/SimpleMediumIC.zip)。
 1. [在AEM实例上使用Apache Maven](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) ，构建和部署AEM项目。
-1. 将 [AEM Forms Client SDK版本6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 或更高版本以及最新的 [AEM Uber Jar](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) 添加到AEM项目POm文件的依赖关系列表中。 例如，
+1. 在 [AEM项目的POm文件的依赖关系列表中添加AEM Forms Client SDK版本6.0.12](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 或更高版本以及最新的 [AEM Uber Jar](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#uber-jar) 。 例如，
 
    ```XML
        <dependency>
@@ -359,13 +359,13 @@ Batch API接受JSON格式和表单数据模型中的记录（数据）。 生成
 
 ### 预填Web模板 {#web-template}
 
-将batchType设置为呈现Web渠道时，API会为每个数据记录生成一个JSON文件。 您可以使用以下语法将JSON文件与相应的Web通道合并，以生成交互式通信：
+将batchType设置为呈现Web渠道时，API会为每个数据记录生成一个JSON文件。 您可以使用以下语法将JSON文件与相应的Web渠道合并，以生成交互式通信：
 
 **语法**`http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
 
 **示例**，如果您的JSON文件位于，并且您 `C:\batch\mergedJsonPath.json` 使用以下交互式通信模板： `http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
 
-然后，发布节点上的以下URL显示交互式通信的Web通道`http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
+然后，发布节点上的以下URL显示交互式通信的Web渠道`http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
 
 除了将数据保存到文件系统之外，您还可以将JSON文件存储在CRX存储库、文件系统、Web服务器中，或者可以通过OSGI预填服务访问数据。 使用各种协议合并数据的语法包括：
 
