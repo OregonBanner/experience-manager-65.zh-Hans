@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: ebb60e79aa7fb45e059e2d2451f6d549cd24b8b0
 
 ---
 
@@ -19,11 +19,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 使用可流动布局预填充表单 {#prepopulating-forms-with-flowable-layouts2}
 
-预填充表单可向呈现的表单中的用户显示数据。 例如，假定用户使用用户名和口令登录到网站。 如果身份验证成功，则客户端应用程序查询数据库以获取用户信息。 数据将合并到表单中，然后表单呈现给用户。 因此，用户能够查看表单中的个性化数据。
+预填充表单可向呈现的表单中的用户显示数据。 例如，假定用户使用用户名和口令登录到网站。 如果身份验证成功，则客户端应用程序将查询数据库以获取用户信息。 数据将合并到表单中，然后表单呈现给用户。 因此，用户能够在表单中视图个性化数据。
 
 预填充表单具有以下优点：
 
-* 允许用户查看表单中的自定义数据。
+* 使用户能够视图表单中的自定义数据。
 * 减少用户填写表单时的键入量。
 * 通过控制放置数据的位置来确保数据的完整性。
 
@@ -36,7 +36,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 预填充已包含数据的表单时，必须指定XML数据源中已显示的数据。 假定一个包含10个字段的表单在四个字段中包含数据。 接下来，假设您要预填充其余六个字段。 在这种情况下，必须在用于预填充表单的XML数据源中指定10个XML元素。 如果仅指定六个元素，则原始的四个字段为空。
 
-例如，您可以预填充表单，如示例确认表单。 (请参阅 [Rendering Interactive PDF Forms](/help/forms/developing/rendering-interactive-pdf-forms.md#rendering-interactive-pdf-forms)中的“确认表单”。)
+例如，您可以预填充表单，如示例确认表单。 (请参阅渲染交互式PDF表单 [中的“确认表单](/help/forms/developing/rendering-interactive-pdf-forms.md)”。)
 
 要预填充示例确认表单，您必须创建一个XML数据源，该数据源包含三个与表单中三个字段匹配的XML元素。 此表单包含以下三个字段： `FirstName`、 `LastName`和 `Amount`。 第一步是创建一个XML数据源，它包含与表单设计中的字段相匹配的XML元素。 下一步是为XML元素分配数据值，如以下XML代码所示。
 
@@ -48,7 +48,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
      </Untitled>
 ```
 
-在您用此XML数据源预填充确认表单并渲染表单后，将显示您分配给XML元素的数据值，如下图所示。
+在您用此XML数据源预填充确认表单，然后渲染表单后，将显示您分配给XML元素的数据值，如下图所示。
 
 ![pf_pf_confirmxml3](assets/pf_pf_confirmxml3.png)
 
@@ -192,7 +192,7 @@ XML数据源用于预填充具有固定布局和可流式布局的表单。 但�
 
 ### 步骤摘要 {#summary-of-steps}
 
-要使用可流式布局预填充表单，请执行以下任务：
+要使用可流式布局预填充表单，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建内存中的XML数据源。
@@ -209,7 +209,7 @@ XML数据源用于预填充具有固定布局和可流式布局的表单。 但�
 
 **创建内存中的XML数据源**
 
-您可以使用 `org.w3c.dom` 类创建内存中的XML数据源，以用可流式布局预填充表单。 必须将数据放入符合表单的XML数据源中。 有关具有可流动布局的表单与XML数据源之间关系的信息，请参阅了解数据子组 [](/help/forms/developing/rendering-forms-rendering-forms prepuling-forms-flowable-layouts-prepling-forms-flowable-layouts-prepling.md#understanding-data-subgroups)。
+您可以使用 `org.w3c.dom` 类创建内存中的XML数据源，以用可流式布局预填充表单。 必须将数据放入符合表单的XML数据源中。 有关具有可流式布局的表单与XML数据源之间关系的信息，请参阅了 [解数据子组](#understanding-data-subgroups)。
 
 **转换XML数据源**
 
@@ -225,15 +225,15 @@ XML数据源用于预填充具有固定布局和可流式布局的表单。 但�
 
 **另请参阅**
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API快速开始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [渲染交互式PDF表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[创建呈现表单的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
+[创建呈现表单的Web 应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 使用Java API预填充表单 {#prepopulating-forms-using-the-java-api}
 
@@ -241,7 +241,7 @@ XML数据源用于预填充具有固定布局和可流式布局的表单。 但�
 
 1. 包括项目文件
 
-   在Java项目的类路径中包含客户端JAR文件，如adobe-forms-client.jar。 有关这些文件的位置的信息，请参 [阅包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
+   在Java项目的类路径中包含客户端JAR文件，如adobe-forms-client.jar。 有关这些文件的位置的信息，请参 [阅包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
 1. 创建内存中的XML数据源
 
@@ -305,9 +305,9 @@ XML数据源用于预填充具有固定布局和可流式布局的表单。 但�
 
 **另请参阅**
 
-[快速入门（SOAP模式）:使用Java API使用可流动布局预填充表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API使用可流动布局预填充表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -381,7 +381,7 @@ XML数据源用于预填充具有固定布局和可流式布局的表单。 但�
    * 通过调用对象的方 `BLOB` 法获取对象的内容 `getContentType` 类型。
    * 通过调 `javax.servlet.http.HttpServletResponse` 用对象的方法并传递对象的 `setContentType` 内容类型来设置对象的内容 `BLOB` 类型。
    * 创建一 `javax.servlet.ServletOutputStream` 个对象，该对象通过调用该对象的方法将表单数据流写入客户端Web `javax.servlet.http.HttpServletResponse` 浏览器 `getOutputStream` 中。
-   * 创建一个字节数组，并通过调用对象的 `BLOB` 方法填充该 `getBinaryData` 数组。 此任务将对象的内 `FormsResult` 容分配给字节数组。
+   * 创建一个字节数组，并通过调用对象的 `BLOB` 方法填充该 `getBinaryData` 数组。 此任务将对象的内 `FormsResult` 容指定给字节数组。
    * 调用对 `javax.servlet.http.HttpServletResponse` 象的方 `write` 法，将表单数据流发送到客户端Web浏览器。 将字节数组传递给该 `write` 方法。
    >[!NOTE]
    >
