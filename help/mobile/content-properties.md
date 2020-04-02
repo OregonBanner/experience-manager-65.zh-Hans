@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 文章、横幅和集合在AEM中表示为cq:Pages。
 
-除了下面显示的代表Adobe Experience Manager(AEM)Mobile On-Demand services元数据和集成支持属性的其他几个属性外，这些属性还共享任何cq:Page中的相同公用属性。
+除了下面显示的代表Adobe Experience Manager(AEM)Mobile On-Demand Services元数据和集成支持属性的其他几个属性外，这些属性还共享任何cq:Page中的相同公用属性。
 
 下表描述了内容属性和节点。
 
@@ -31,10 +31,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 | **属性名称** | **类型** | **默认值或预期值** | **描述** |
 |---|---|---|---|
-| dps-id | 字符串 |  | AEM mobile分配的AEM，在上传到AEM mobile或从AEM mobile导入后由AEM存储 |
+| dps-id | 字符串 |  | AEM Mobile分配的AEM，在上传到AEM Mobile或从AEM Mobile导入后由AEM存储 |
 | dps-resourceType | 字符串 | dps:Article | dps:Banner | dps:Collection | 实体类型属性 |
 | dps-version | 字符串 |  | AEM Mobile实体的版本（也包含在完整的aemm-id中） |
-| dps-lastSynced | 日期 |  | 上次同步／从AEM mobile导入AEM的日期 |
+| dps-lastSynced | 日期 |  | 上次同步／从AEM Mobile导入AEM的日期 |
 | dps-lastUploaded | 日期 |  | 上次从AEM上传到AEM Mobile的日期 |
 | dps-lastUploadedBy | 字符串：userid |  | 执行从AEM到AEM Mobile的上次上传请求的ID用户 |
 
@@ -47,7 +47,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 | dps-abstract | 字符串 |  |
 | dps-shortAbstract | 字符串 |  |
 | dps-department | 字符串 |  |
-| dps-category | 字符串 |  |
+| dps-类别 | 字符串 |  |
 | dps-keywords | String[] |  |
 | dps-internalKeywords | String[] |  |
 | dps-imprositance | String[] | 重要性来自{&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;} |
@@ -88,7 +88,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 ### 常见节点 {#common-nodes}
 
 | 节点名称 | 类型 | 默认值或预期值 | 描述 |
---- |--- |--- |--- |
+|--- |--- |--- |--- |
 | 图像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### 实体 {#entities}
