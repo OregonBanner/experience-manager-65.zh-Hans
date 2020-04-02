@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: ba4e4908c0564af6e7f0759c5119a5c02f274dbd
 
 ---
 
@@ -414,6 +414,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms�
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
+
 1. 保存并关闭文件。
 
 ### 配置字体管理器服务 {#configuring-the-font-manager-service}
