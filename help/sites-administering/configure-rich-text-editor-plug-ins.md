@@ -8,7 +8,7 @@ discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
 mini-toc-levels: 1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 42c268396940144a217ff09f49fe3f6d6791a533
+source-git-commit: ac4c5ec920ed768002da1b4598590bfd9ca301f6
 
 ---
 
@@ -64,7 +64,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 |  | 启用所有功能 | 启用一些特定功能 | 禁用所有功能 |
 |---|---|---|---|
 | 名称 | 功能 | 功能 | 功能 |
-| 类型 | 字符串 | 字符串[] (多字符串；在CRXDE lite中，将“类型”设置为“字符串”并单击“多”) | 字符串 |
+| 类型 | 字符串 | 字符串[] (多字符串；在CRXDE Lite中，将“类型”设置为“字符串”并单击“多”) | 字符串 |
 | 值 | `*` （星号） | 设置为一个或多个功能值 | - |
 
 ## 了解findreplace插件 {#findreplace}
@@ -81,7 +81,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 * **纯文本模式**:将剪贴板内容粘贴为纯文本。 在AEM组件中插入之前，它将删除复制内容中的所有样式和格式元素。
 
-* **MS word模式**:从MS Word复制时，粘贴带有格式的文本（包括表）。 不支持从其他源（如网页或MS Excel）复制和粘贴文本，并仅保留部分格式。
+* **MS Word模式**:从MS Word复制时，粘贴带有格式的文本（包括表）。 不支持从其他源（如网页或MS Excel）复制和粘贴文本，并仅保留部分格式。
 
 ### 配置RTE工具栏上可用的粘贴选项 {#configure-paste-options-available-on-the-rte-toolbar}
 
@@ -91,7 +91,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 * **[!UICONTROL 粘贴为文本]**:提供纯文本模式功能。
 
-* **[!UICONTROL 从Word粘贴]**:提供MS word模式功能。
+* **[!UICONTROL 从Word粘贴]**:提供MS Word模式功能。
 
 要配置RTE以显示所需的图标，请执行以下步骤。
 
@@ -120,7 +120,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 ### 配置粘贴内容时允许的格式 {#pasteformats}
 
-可以进一步配置粘贴为Microsoft-Word(`paste-wordhtml`)模式，以便您能够明确定义在从其他程序（如Microsoft Word）在AEM中粘贴时允许使用的样式。
+可以进一步配置粘贴为Microsoft-Word(`paste-wordhtml`)模式，以便您能够明确定义在从其他项目（如Microsoft Word）在AEM中粘贴时允许使用的样式。
 
 例如，如果在AEM中粘贴时仅允许使用粗体格式和列表，则可以过滤掉其他格式。 这称为可配置的粘贴过滤，可针对以下两种情况执行此操作：
 
@@ -129,7 +129,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 对于链接，您还可以定义自动接受的协议。
 
-要配置将文本从其他程序粘贴到AEM时允许使用的格式，请执行以下操作：
+要配置将文本从其他项目粘贴到AEM时允许使用的格式，请执行以下操作：
 
 1. 在您的组件中，导航到该节点 `<rtePlugins-node>/edit`。 如果节点不存在，请创建这些节点。 有关详细信息，请 [参阅激活插件](#activateplugin)。
 1. 在节点下创建一个 `edit` 节点以保存HTML粘贴规则：
@@ -171,14 +171,14 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
     <ul>
      <li>标题(h1、h2、h3)</li>
      <li>第(p)款</li>
-     <li>列表(ol、ul)</li>
+     <li>列表语(ol, ul)</li>
      <li>表（表）</li>
     </ul> </td>
   </tr>
   <tr>
    <td>fallbackBlockTag</td>
    <td>字符串</td>
-   <td><p>定义块标签，该标签用于任何块，这些块具有未包含在allowBlockTags中的块标签。</p> <p> 在大多数情况下都足够。</p> </td>
+   <td><p>定义块标签，该标签用于任何块，这些块具有未包含在allowBlockTags中的块标签。</p> <p> 在大多数情况下就足够了。</p> </td>
   </tr>
   <tr>
    <td>表</td>
@@ -195,7 +195,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    <td><p>定义粘贴列表时的行为。<br /> </p> <p>必须具有属性 <code>allow</code> (类型 <code>Boolean</code>)才能定义是否允许粘贴列表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code><code>String</code>类型)以定义如何处理粘贴的任何列表内容。 有效的 <code>ignoreMode</code> 值为：</p>
     <ul>
      <li><code>remove</code>:删除列表内容。</li>
-     <li><code>paragraph</code>:将列表项目转换为段落。</li>
+     <li><code>paragraph</code>:将列表项转换为段落。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -235,7 +235,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 * 启用样式下拉选择器。
 * 指定样式表的位置。
-* 指定可从“样式”(Style)下拉列表中选择的各个样式。
+* 指定可从“样式”下拉列表中选择的各个样式。
 
 对于以后（重新）的配置，例如要添加更多样式，请仅按照说明引用新样式表并指定其他样式。
 
@@ -258,7 +258,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 >[!NOTE]
 >
->启用样式插件后，“样式”(Style)下拉列表将显示在编辑对话框中。 但是，该列表为空，因为未配置样式。
+>启用“样式”插件后，“样式”下拉列表将显示在编辑对话框中。 但是，列表为空，因为未配置样式。
 
 ### 指定样式表位置 {#locationofstylesheet}
 
@@ -280,25 +280,26 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 >
 >在对话框（经典UI）中使用RTE时，您可能希望指定为富文本编辑而优化的样式表。 由于技术限制，CSS上下文在编辑器中会丢失，因此您可能希望模拟此上下文以改进WYSIWYG体验。
 >
->富文本编辑器使用ID为的容器DOM元素，该元素可 `CQrte` 用于提供不同的样式以供查看和编辑：
+>富文本编辑器使用ID为的容器DOM元素，该元素 `CQrte` 可用于提供不同的样式以供查看和编辑：
 >
->```
+>
+```
 >#CQ td {
 > // defines the style for viewing
 > }
 >```
 >
->```
+>
+```
 >#CQrte td {
 > // defines the style for editing
 > }
 >```
->
 
-### 在弹出列表中指定可用的样式 {#stylesindropdown}
+### 在弹出式列表中指定可用的样式 {#stylesindropdown}
 
 1. 在组件定义中，导航到节点 `<rtePlugins-node>/styles`，如启用样式 [下拉选择器中所创建](#styleselectorlist)。
-1. 在该节 `styles`点下，创建一个新节点(也称为 `styles`)以保存要提供的列表：
+1. 在该节 `styles`点下，创建一个新节点(也称为 `styles`)以保留列表可用：
 
    * **名称** `styles`
    * **类型** `cq:WidgetCollection`
@@ -407,7 +408,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 段落格式可通过以下方式进行选择：
 
 1. 在组件定义中，导航到节点 `<rtePlugins-node>/paraformat`，如启用格 [式下拉选择器中所创建](#styleselectorlist)。
-1. 在节 `paraformat` 点下创建新节点，以保存格式列表：
+1. 在节 `paraformat` 点下创建新节点，以保存格式列表:
 
    * **名称** `formats`
    * **类型** `cq:WidgetCollection`
@@ -425,7 +426,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
       您无需输入分隔角括号。
 
-1. 对于同一节点，添加另一个属性，以便描述性文本显示在下拉列表中：
+1. 对于同一节点，添加另一个属性，以便说明性文本显示在下拉列表中：
 
    * **名称** `description`
    * **类型** `String`
@@ -463,7 +464,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    * **名称** `specialCharsConfig`
    * **类型** `nt:unstructured`
 
-1. 在“ `specialCharsConfig` 创建另一个节点”下，可保存字符列表：
+1. 在“ `specialCharsConfig` 创建另一个节点”下，可保存字符列表:
 
    * **名称** `chars`
    * **类型** `nt:unstructured`
@@ -567,7 +568,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
       * **名称** `text`
       * **类型** `String`
-      * **设置** “选择列表”中要显示的文本的值
+      * **为要在** “选择”列表中显示的文本设置值
 
 
 1. 保存所有更改。
@@ -585,7 +586,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 如果在代码中同时指定CSS和样式字符串，则CSS类优先于样式字符串，并可能覆盖样式字符串所做的任何配置更改。
 
-要帮助作者在预览模式下对隐藏的标题应用CSS，您可以在代码中包含以下参数：
+要帮助作者在预览模式中对隐藏的标题应用CSS，您可以在代码中包含以下参数：
 
 * `hiddenHeaderClassName`:指定在预览模式下应用于隐藏标题单元格的CSS类的名称。
 * `hiddenHeaderStyle`:指定在预览模式下应用于隐藏标题单元格的样式字符串。
@@ -689,7 +690,7 @@ RTE允许作者撤消或重做上次编辑的几次。 默认情况下，50个�
 * 要使用的CSS样式
 * 协议自动接受
 
-要配置如何从其他程序在AEM中添加链接，请定义HTML规则。
+要配置如何从其他项目在AEM中添加链接，请定义HTML规则。
 
 1. 使用CRXDE Lite，找到项目的文本组件。
 1. 在与以下节点相同的级别 `<rtePlugins-node>`创建新节点，即在以下节点的父节点下创建节点 `<rtePlugins-node>`:
@@ -733,7 +734,7 @@ RTE允许作者撤消或重做上次编辑的几次。 默认情况下，50个�
       * **名称** `defaultProtocol`
       * **类型** `String`
       * **值**（一个或多个）默认协议
-   * 如何处理链接的目标属性的定义。 创建新节点：
+   * 定义如何处理链接的目标属性。 创建新节点：
 
       * **名称** `targetConfig`
       * **类型** `nt:unstructured`
@@ -751,16 +752,16 @@ RTE允许作者撤消或重做上次编辑的几次。 默认情况下，50个�
 
             * `manual`:不适用于此上下文
             * `blank`:不适用于此上下文
-      * 内部链接的目标：
+      * 内部链接的目标:
 
          * **名称** `targetInternal`
          * **类型** `String`
          * **为内部链接** (仅在“”模式为时使用 `auto`)
-      * 外部链接的目标：
+      * 外部链接的目标:
 
          * **名称** `targetExternal`
          * **类型** `String`
-         * **为外部链接** （仅当模式为时使用）的目标值 `auto`。
+         * **为外部链接** （仅在模式为时使用）设置目标 `auto`值。
 
 
 
