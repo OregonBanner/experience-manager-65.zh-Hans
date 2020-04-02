@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: ab401a8007f6ea85c0e52169091ce7a38b3dbe5c
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 在客户端渲染表单 {#rendering-forms-at-the-client-inner}
 
-您可以使用Acrobat或Adobe reader的客户端渲染功能优化PDF内容的交付并改进Forms服务处理网络负载的能力。 此过程称为在客户端渲染表单。 要在客户端渲染表单，客户端设备（通常是Web浏览器）必须使用Acrobat 7.0或Adobe Reader 7.0或更高版本。
+您可以使用Acrobat或Adobe Reader的客户端渲染功能优化PDF内容的投放并改进Forms服务处理网络负载的能力。 此过程称为在客户端渲染表单。 要在客户端渲染表单，客户端设备（通常是Web浏览器）必须使用Acrobat 7.0或Adobe Reader 7.0或更高版本。
 
 服务器端脚本执行对表单所做的更改不会反映在客户端呈现的表单中，除非根子表单包含设置为的 `restoreState` 属性 `auto`。 有关此属性的详细信息，请参阅 [Forms Designer。](https://www.adobe.com/go/learn_aemforms_designer_63)
 
@@ -30,7 +30,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 步骤摘要 {#summary-of-steps}
 
-要在客户端渲染表单，请执行以下任务：
+要在客户端渲染表单，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建Forms Client API对象。
@@ -44,18 +44,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **创建Forms Client API对象**
 
-在以编程方式执行Forms服务客户端API操作之前，必须先创建Forms服务客户端。 如果您使用Java API，请创建一个对 `FormsServiceClient` 象。 如果您使用的是Forms web服务API，请创建一个对 `FormsService` 象。
+在以编程方式执行Forms服务客户端API操作之前，必须先创建Forms服务客户端。 如果您使用Java API，请创建一个对 `FormsServiceClient` 象。 如果您使用的是Forms Web服务API，请创建一个对 `FormsService` 象。
 
 **设置客户端渲染运行时选项**
 
 必须设置客户端渲染运行时选项，以通过将运行时选项设置为在客户端 `RenderAtClient` 渲染表单 `true`。 这会导致表单被传送到呈现表单的客户端设备。 如果 `RenderAtClient` 是( `auto` 默认值)，则表单设计将确定表单是否在客户端呈现。 表单设计必须是具有可流动布局的表单设计。
 
-可以设置的可选运行时选项是该选 `SeedPDF` 项。 该选 `SeedPDF` 项将PDF容器（种子PDF文档）与表单设计和XML数据相结合。 表单设计和XML数据都会交付到Acrobat或Adobe Reader，在Acrobat或Adobe Reader中渲染表单。 当客 `SeedPDF` 户端计算机没有表单中使用的字体时（例如，当最终用户未获得使用表单所有者有权使用的字体的许可时），可以使用此选项。
+可以设置的可选运行时选项是该选 `SeedPDF` 项。 该选 `SeedPDF` 项将PDF容器(种子PDF文档)与表单设计和XML数据相结合。 表单设计和XML数据都会交付到Acrobat或Adobe Reader，在Acrobat或Adobe Reader中渲染表单。 当客 `SeedPDF` 户端计算机没有表单中使用的字体时（例如，当最终用户未获得使用表单所有者有权使用的字体的许可时），可以使用此选项。
 
 您可以使用设计器创建简单的动态PDF文件，以用作种子PDF文件。 执行此任务需要执行以下步骤：
 
-1. 确定是否需要在种子PDF文件中嵌入任何字体。 种子PDF文件需要包含呈现的表单所需的其他字体。 在将字体嵌入到种子PDF文件中时，请确保您没有违反任何字体许可协议。 在Designer中，您可以确定是否可以合法嵌入字体。 在保存时，如果有字体无法嵌入到表单中，Designer会显示一条消息，列出您无法嵌入的字体。 对于静态PDF文档，此消息不在Designer中显示。
-1. 如果要在Designer中创建种子PDF文件，建议至少添加一个包含消息的文本字段。 邮件应针对Adobe reader早期版本的用户，指出他们需要Acrobat 7.0或更高版本或Adobe Reader 7.0或更高版本才能查看文档。
+1. 确定是否需要在种子PDF文件中嵌入任何字体。 种子PDF文件需要包含呈现的表单所需的其他字体。 在将字体嵌入到种子PDF文件中时，请确保您没有违反任何字体许可协议。 在Designer中，您可以确定是否可以合法嵌入字体。 在保存时，如果有字体无法嵌入到表单中，Designer会显示一条消息，列出您无法嵌入的字体。 对于静态PDF文档,Designer中不显示此消息。
+1. 如果要在Designer中创建种子PDF文件，建议至少添加一个包含消息的文本字段。 邮件应针对Adobe Reader早期版本的用户，指出他们需要Acrobat 7.0或更高版本，或者Adobe Reader 7.0或更高版本才能视图文档。
 1. 将种子PDF文件另存为带有PDF文件扩展名的动态PDF文件。
 
 >[!NOTE]
@@ -76,15 +76,15 @@ Forms服务会创建一个表单数据流，您必须将其写入客户端Web浏
 
 [使用Web服务API在客户端渲染表单](#render-a-form-at-the-client-using-the-web-service-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API快速开始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)
 
-[创建呈现表单的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
+[创建呈现表单的Web 应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ### 使用Java API在客户端渲染表单 {#render-a-form-at-the-client-using-the-java-api}
 
@@ -127,9 +127,9 @@ Forms服务会创建一个表单数据流，您必须将其写入客户端Web浏
 
 **另请参阅**
 
-[快速入门（SOAP模式）:使用Java API在客户端渲染表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API在客户端渲染表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -156,7 +156,7 @@ Forms服务会创建一个表单数据流，您必须将其写入客户端Web浏
    调用对 `FormsService` 象的方 `renderPDFForm` 法并传递以下值：
 
    * 一个字符串值，它指定表单设计名称，包括文件扩展名。 如果引用的表单设计是表单应用程序的一部分，请确保指定完整路径，如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 包含 `BLOB` 要与表单合并的数据的对象。 如果您不想合并数据，请传递 `null`。 (请参 [阅使用可流动布局](/help/forms/developing/rendering-forms-rendering-forms-prepluing-forms-frendering-forms prepluing-forms-ablouts-prepluing.md#preprepluing-forms-with-flable-layouts)预填充表单。)
+   * 包含 `BLOB` 要与表单合并的数据的对象。 如果您不想合并数据，请传递 `null`。 (请参阅 [使用可流式布局预填充表单](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
    * 存储 `PDFFormRenderSpec` 在客户端渲染表单所需的运行时选项的对象。
    * 包 `URLSpec` 含Forms服务所需的URI值的对象。
    * 存储 `java.util.HashMap` 文件附件的对象。 这是一个可选参数，您可 `null` 以指定是否不想将文件附加到表单。
@@ -173,7 +173,7 @@ Forms服务会创建一个表单数据流，您必须将其写入客户端Web浏
    * 通过调用对象的方 `BLOB` 法获取对象的内容 `getContentType` 类型。
    * 通过调 `javax.servlet.http.HttpServletResponse` 用对象的方法并传递对象的 `setContentType` 内容类型来设置对象的内容 `BLOB` 类型。
    * 创建一 `javax.servlet.ServletOutputStream` 个对象，该对象通过调用该对象的方法将表单数据流写入客户端Web `javax.servlet.http.HttpServletResponse` 浏览器 `getOutputStream` 中。
-   * 创建一个字节数组，并通过调用对象的 `BLOB` 方法填充该 `getBinaryData` 数组。 此任务将对象的内 `FormsResult` 容分配给字节数组。
+   * 创建一个字节数组，并通过调用对象的 `BLOB` 方法填充该 `getBinaryData` 数组。 此任务将对象的内 `FormsResult` 容指定给字节数组。
    * 调用对 `javax.servlet.http.HttpServletResponse` 象的方 `write` 法，将表单数据流发送到客户端Web浏览器。 将字节数组传递给该 `write` 方法。
 
 **另请参阅**
