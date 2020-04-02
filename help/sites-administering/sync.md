@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
+source-git-commit: c9edac158bc6a00637f8be5aac70a2a249e11d59
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 当部署是发 [布场时](/help/sites-deploying/recommended-deploys.md#tarmk-farm)，成员需要能够登录并查看其任何发布节点上的数据。
 
-创作环境中不需要在发布环境中创建的用户和用户组（用户数据）。
+在发布环境中创建的用户和用户组（用户数据）在创作环境中不需要。
 
 在创作环境中创建的大多数用户数据都打算保留在创作环境中，而不会被复制到发布实例中。
 
@@ -36,9 +36,9 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 与传统复制相比，使用Sling分发进行用户同步的好处有：
 
-* *用户*、用 *户配置文件* ，以 *及在发布时创建的用户组* ，不在创作时创建
+* *用户*、用 *户用户档案和在发* 布时创建的用户组 ** ，不会在创作时创建
 
-* Sling分发在jcr事件中设置属性，使得可以在发布端事件监听器中操作，而无需考虑无限的复制循环
+* Sling分发在jcr事件中设置属性，使得可以在发布端事件监听器中执行操作，而无需考虑无限的复制循环
 * Sling分发仅将用户数据发送到非源发布实例，从而消除不必要的流量
 * [在用户](/help/sites-administering/security.md) 节点中设置的ACL包含在同步中
 
@@ -62,7 +62,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 >
 >不应因启用用户同步而添加新配置。
 
-用户同步依赖于创作环境来管理用户数据分发，即使用户数据不是在创作时创建的。 许多（但并非全部）配置都在创作环境中进行，每个步骤都清楚地标识是在创作还是发布时执行。
+用户同步依赖于创作环境来管理用户数据分发，即使用户数据不是由作者创建的。 许多（但并非全部）配置都发生在创作环境中，每个步骤都清楚地标识是在创作还是发布时执行。
 
 以下是启用用户同步所必需的步骤，后面是“疑难解 [答](#troubleshooting) ”部分：
 
@@ -167,7 +167,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
    * 定位 `Apache Sling Distribution Transport Credentials - User Credentials based DistributionTransportSecretProvider`
    * 选择要打开进行编辑的现有配置（铅笔图标）验证 `property name`: **`socialpubsync-publishUser`**
 
-   * 在步骤2中将用户名和密码设置为在 [发布时创建](#createauthorizeduser) 的授权用户。
+   * 在步骤2中将用户名和密码设置为在 [发布时创建](#createauthuser) 的授权用户。
 
       * for example, `usersync-admin`
 
@@ -293,8 +293,8 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 ![](assets/chlimage_1-26.png)
 
-* **节点类**型这是要同步的节点类型列表。 除sling:Folder之外的任何节点类型都需要在此列出（sling:folder需要单独处理）。
-要同步的节点类型的默认列表：
+* **节点类**型这是要同步的节点类型的列表。 除sling:Folder之外的任何节点类型都需要在此列出（sling:folder需要单独处理）。
+要同步的节点类型的默认列表:
 
    * rep：用户
    * nt:unstructured
@@ -346,7 +346,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
       * 例如，在Windows系统上：
          `use windows explorer and search for *sling.id.file*`
 
-1. 启动发布实例
+1. 开始发布实例
 
    * 启动时，将为其分配一个新的Sling ID
 
@@ -387,17 +387,17 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 ## 当…… {#what-happens-when}
 
-### 用户在发布时自注册或编辑配置文件 {#user-self-registers-or-edits-profile-on-publish}
+### 用户在发布时自注册或编辑用户档案 {#user-self-registers-or-edits-profile-on-publish}
 
-根据设计，在发布环境中创建的用户和配置文件（自注册）不会显示在创作环境中。
+根据设计，在发布环境（自注册）中创建的用户和用户档案不会显示在创作环境中。
 
-当拓扑为发布群 [，且用户同步已正确配置时，*user *和用户配置文件将](/help/sites-deploying/recommended-deploys.md#tarmk-farm) 使用Sling分发在发布群中进行同步 ** 。
+当拓扑为发布群 [，且用户同步已正确配置时，*user *和](/help/sites-deploying/recommended-deploys.md#tarmk-farm)** user用户档案将使用Sling分发在发布群中同步。
 
 ### 用户或用户组是使用安全控制台创建的 {#users-or-user-groups-are-created-using-security-console}
 
-根据设计，在发布环境中创建的用户数据不会显示在创作环境中，反之亦然。
+根据设计，在发布环境中创建的用户数据不显示在创作环境中，反之亦然。
 
-在发布环 [](/help/sites-administering/security.md) 境中使用“用户管理”和“安全”控制台添加新用户时，用户同步会将新用户及其组成员关系同步到其他发布实例（如果需要）。 用户同步还将同步通过安全控制台创建的用户组。
+当使用 [](/help/sites-administering/security.md) 用户管理和安全控制台在发布环境中添加新用户时，用户同步会将新用户及其组成员关系与其他发布实例同步（如果需要）。 用户同步还将同步通过安全控制台创建的用户组。
 
 ## 疑难解答 {#troubleshooting}
 
@@ -428,7 +428,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
    * *取消选中* `Enabled` Apache [Sling Distribution Agent - Sync Agents Factory的复选框](#apache-sling-distribution-agent-sync-agents-factory)
 
-完成任务后，要重新启用用户同步，请执行以下操作：
+完成任务后，要重新启用用户同步：
 
 * 在作者
 
@@ -448,9 +448,9 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 #### 如何为发布者运行诊断 {#how-to-run-diagnostics-for-publishers}
 
-从创作环境运行诊断程序时，通过／失败结果将包括一个 [INFO] （信息）部分，其中显示已配置的发布实例列表以供确认。
+当从创作环境运行诊断程序时，通过／失败结果将包含一个 [INFO] （信息）部分，其中显示已配置发布实例的列表以进行确认。
 
-列表中包含每个发布实例的URL，该实例将为该实例运行诊断。 url参数 `syncUser` 将附加到诊断URL中，其值设置为在步骤2中创 *建的授权同步* 用户 [](/help/sites-administering/sync.md#2createauthorizeduser)。
+该列表包含每个发布实例的URL，该实例将为该实例运行诊断。 url参数 `syncUser` 将附加到诊断URL中，其值设置为在步骤2中创 *建的授权同步* 用户 [](#createauthuser)。
 
 **注意**:在启动URL之前，授权 *的同步用户* ，必须已登录到该发布实例。
 
@@ -460,7 +460,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 当用户同步失败时，最常见的问题是添加了其他配 *置*。 相反，应编辑*现有*默认配 *置*。
 
-以下是编辑后的默认配置在Web控制台中的显示方式。 如果出现多个实例，则应删除添加的配置。
+以下是已编辑的默认配置在Web控制台中的显示方式的视图。 如果出现多个实例，则应删除添加的配置。
 
 #### （作者）一个Apache Sling Distribution Agent - Sync Agents Factory {#author-one-apache-sling-distribution-agent-sync-agents-factory}
 
@@ -490,7 +490,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-然后验证第 [2节。 创建授权用户](/content/docs/en/aem/6-1/administer/security/security/sync.md#2. 创建授权用户)。
+然后验证第 [2节。 正确遵循了“创建授权用户](#createauthuser) ”。
 
 本节介绍如何创建在所有发布实例上存在的授权用户，并在创作的“机密提供者”OSGi配置中识别这些用户。 默认情况下，用户为 `admin`。
 
@@ -544,7 +544,7 @@ source-git-commit: 07ac9c0e0836fc7000062c27dbdeb70059997089
 
 当发布实例不可用时，如果它将来恢复联机状态，则不应删除它。 更改将排队等待发布者，一旦它重新联机，将处理更改。
 
-如果发布实例永远不会恢复联机状态（如果它永久处于脱机状态），则必须删除它，因为队列累积会导致创作环境中出现明显的磁盘空间使用情况。
+如果发布实例永远不会恢复联机状态（如果它永久处于脱机状态），则必须删除它，因为队列累积将导致作者环境中明显的磁盘空间使用。
 
 当发布者关闭时，创作日志将具有与以下内容类似的例外：
 
