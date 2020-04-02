@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 66bfd6870b4c09dc2ca1b66058e0b9e040a71507
 
 ---
 
@@ -66,7 +66,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->此部分和相应的快速入门引用现有XDP文件。
+>此部分和相应的快速开始引用现有XDP文件。
 
 **按值渲染表单**
 
@@ -86,15 +86,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 [使用Web服务API按值渲染表单](#render-a-form-by-value-using-the-web-service-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API快速开始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)
 
-[创建呈现表单的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
+[创建呈现表单的Web 应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## 使用Java API按值呈现表单 {#render-a-form-by-value-using-the-java-api}
 
@@ -138,11 +138,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **另请参阅**
 
-[Rendering Forms By Value](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)
+[按值呈现表单](/help/forms/developing/rendering-forms.md)
 
-[快速入门（SOAP模式）:使用Java API按值呈现](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API按值呈现](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -189,7 +189,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 通过调用对象的方 `BLOB` 法获取对象的内容 `getContentType` 类型。
    * 通过调 `javax.servlet.http.HttpServletResponse` 用对象的方法并传递对象的 `setContentType` 内容类型来设置对象的内容 `BLOB` 类型。
    * 创建一 `javax.servlet.ServletOutputStream` 个对象，该对象通过调用该对象的方法将表单数据流写入客户端Web `javax.servlet.http.HttpServletResponse` 浏览器 `getOutputStream` 中。
-   * 创建一个字节数组，并通过调用对象的 `BLOB` 方法填充该 `getBinaryData` 数组。 此任务将对象的内 `FormsResult` 容分配给字节数组。
+   * 创建一个字节数组，并通过调用对象的 `BLOB` 方法填充该 `getBinaryData` 数组。 此任务将对象的内 `FormsResult` 容指定给字节数组。
    * 调用对 `javax.servlet.http.HttpServletResponse` 象的方 `write` 法，将表单数据流发送到客户端Web浏览器。 将字节数组传递给该 `write` 方法。
 
 **另请参阅**
