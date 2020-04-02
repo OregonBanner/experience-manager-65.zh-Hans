@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ea6da2b75cce4052211fb8f0793f1f380eb85a20
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，其中大多数报告基于报告框架。
 
-使用该框架，您可以扩展这些标准报告，或开发您自己的全新报告。 报告框架与现有的CQ5概念和原则紧密集成，以便开发人员可以将他们现有的CQ5知识作为开发报告的跳板。
+使用该框架，您可以扩展这些标准报告，或开发您自己的全新报告。 该报告框架与现有的CQ5概念和原则紧密集成，以便开发人员能够将他们现有的CQ5知识用作开发报告的跳板。
 
 对于随AEM一起提供的标准报表：
 
@@ -68,12 +68,12 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
    >
    >
 * 缩进显示节点之间的层次依赖关系。
->* 以|表示可能的项目列表；例如，类型或名称：
+>* 以|表示列表可能的项目；例如，类型或名称：
 >
 >  
 例如 `String|String[]` ，表示该属性可以是String或String[]。
 >
->* `[]` 描述数组；例如[] ，字符串或查询定义中的节 [点数组](#query-definition)。
+>* `[]` 描述数组；如字符串[] ，或查询定义中的节点 [数组](#query-definition)。
 >
 >
 除非另有说明，否则默认类型为：
@@ -86,12 +86,12 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
 报告框架遵循以下原则：
 
-* 它完全基于由CQ5 queryBuilder执行的查询返回的结果集。
-* 结果集定义报告中显示的数据。 结果集中的每一行对应于报表表格视图中的一行。
+* 它完全基于由CQ5 QueryBuilder执行的查询返回的结果集。
+* 结果集定义报告中显示的数据。 结果集中的每一行对应于报表的表格视图中的一行。
 * 可在结果集上执行的操作类似于RDBMS概念；主要 *是分组**和聚合*。
 
 * 大多数数据检索和处理都是在服务器端完成的。
-* 客户单独负责显示预处理的数据。 客户端只执行次要处理任务（例如，在单元格内容中创建链接）。
+* 客户单独负责显示预处理的数据。 客户端仅执行次要处理任务（例如，在单元格内容中创建链接）。
 
 报告框架（由标准报告的结构说明）使用由处理队列提供的以下构件块：
 
@@ -108,7 +108,7 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
 该组 [ 件构成了任何报表的基础 `reportbase`](#report-base-component) :
 
-* 保留传送数 [据的](#the-query-and-data-retrieval) 、基础结果集的查询定义。
+* 保留提供基础 [数据](#the-query-and-data-retrieval) 结果集的查询的定义。
 
 * 是一个经过调整的段落系统，它将包含添加到报 `columnbase`表的所有列()。
 * 定义哪些图表类型可用以及哪些当前处于活动状态。
@@ -120,15 +120,15 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
 * 是段落，由各个报表的parsys( `reportbase`)使用。
 * 定义指向基础结 [果集的链接](#the-query-and-data-retrieval);例如，定义在此结果集中引用的特定数据以及处理它的方式。
-* 包含其他定义；例如，可用的聚合和过滤器，以及任何默认值。
+* 包含其他定义；如可用的聚合和过滤器以及任何默认值。
 
 ### 查询与数据检索 {#the-query-and-data-retrieval}
 
-查询：
+查询:
 
 * 定义为组件的一 [`reportbase`](#report-base) 部分。
-* 基于 [CQ queryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)。
-* 检索用作报告基础的数据。 结果集（表）的每行都绑定到查询返回的节点。 然后，从此 [数据集中提](#column-base-component) 取各列的特定信息。
+* 基于 [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)。
+* 检索用作报告基础的数据。 结果集（表）的每行都绑定到由查询返回的节点。 然后，从此 [数据集中提](#column-base-component) 取各列的特定信息。
 
 * 通常由以下组成：
 
@@ -142,13 +142,13 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
       这些是为了产生（初始）结果集；例如，这些限制包括对节点类型或属性约束的限制。
 
-**此处的关键点是查询结果集中返回的每个节点都用于在报表上生成单行（因此为1:1关系）。**
+**这里的关键点是，查询结果集中返回的每个节点都用于在报表上生成单行（因此为1:1关系）。**
 
-开发人员必须确保为报表定义的查询返回适合该报表的节点集。 但是，节点本身不需要保存所有必需的信息，这也可以从父节点和／或子节点派生。 例如，用于用户报告的查 [询会根据节点类型](/help/sites-administering/reporting.md#user-report) (在本例中为 `rep:user`)选择节点。 但是，此报告中的大多数列不会直接从这些节点获取其数据，而是从子节点获取 `profile`。
+开发人员必须确保为报表定义的查询返回适合该报表的节点集。 但是，节点本身不需要保存所有必需的信息，这也可以从父节点和／或子节点派生。 例如，用于“用户报告”的 [查询](/help/sites-administering/reporting.md#user-report) ，会根据节点类型选择节点(在本例中为 `rep:user`)。 但是，此报告中的大多数列不会直接从这些节点获取其数据，而是从子节点获取 `profile`。
 
 ### 处理队列 {#processing-queue}
 
-查 [询](#the-query-and-data-retrieval) ，返回要作为行显示在报表上的数据集。 在将结果集中的每一行传输到客户端以在报 [告上显示之前](#phases-of-the-processing-queue)，将在多个阶段中处理（服务器端）。
+该 [查询](#the-query-and-data-retrieval) ，返回要作为行显示在报表上的数据集。 在将结果集中的每一行传输到客户端以在报 [告上显示之前](#phases-of-the-processing-queue)，将在多个阶段中处理（服务器端）。
 
 这允许：
 
@@ -160,7 +160,7 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
    例如，路径可以映射到标题(如各个 *jcr:title属性中更易于阅读的内容* )。
 
-* 在不同点应用滤镜。
+* 在不同点应用过滤器。
 * 根据需要创建复合值。
 
    例如，由显示给用户的文本、用于排序的值和用于创建链接的其他URL（在客户端）组成。
@@ -175,9 +175,9 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
 其中包括以下详细步骤和元素：
 
-1. 使用值提取器将初始查 [询(reportbase)返回的结果转换](#query-definition) 到基本结果集中。
+1. 使用值提取器将初始 [查询（报表库）返回的结果转换](#query-definition) 到基本结果集中。
 
-   根据列类型自动选择值提 [取器](#column-specific-definitions)。 它们用于从基础JCR查询中读取值并从中创建结果集；之后，可以应用进一步的处理。 例如，对于类 `diff` 型，值提取器读取两个属性，计算随后添加到结果集的单个值。 无法配置值提取器。
+   根据列类型自动选择值提 [取器](#column-specific-definitions)。 它们用于从基础JCR查询读取值并从中创建结果集；之后，可以应用进一步的处理。 例如，对于类 `diff` 型，值提取器读取两个属性，计算随后添加到结果集的单个值。 无法配置值提取器。
 
 1. 对于包含原始数据的初始结果集，应 [用初始过滤](#column-specific-definitions) (*原始相位* )。
 
@@ -189,9 +189,9 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 1. [对已解析](#column-specific-definitions) 的值执行筛选( *分配给已解析* 的阶段)。
 
 1. 数据是分 [组和聚集的](#column-specific-definitions)。
-1. 通过将数组数据转换为（基于字符串的）列表来解析数组数据。
+1. 通过将数组数据转换为（基于字符串的）列表来解析它。
 
-   这是一个隐式步骤，它将多值结果转换为可显示的列表；它是基于多值JCR属性的（未聚集）单元格值所必需的。
+   这是一个隐式步骤，它将多值结果转换为可显示的列表;它是基于多值JCR属性的（未聚集）单元格值所必需的。
 
 1. 值再次被预 [处理](#processing-queue);为afterApply阶段 *定义* 。
 
@@ -200,7 +200,7 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
 >[!NOTE]
 >
->在组件上定义返回基本数据结果集的初始查询 `reportbase` 。
+>返回基本数据结果集的初始查询在组件上被定 `reportbase` 义。
 >
 >处理队列的其他元素在组件上被定 `columnbase` 义。
 
@@ -217,7 +217,7 @@ AEM提供了一系列标 [准报告](/help/sites-administering/reporting.md) ，
 
 ### 报表组件的位置 {#location-of-report-components}
 
-默认报告组件保留在下 `/libs/cq/reporting/components`。
+默认报告组件位于下方 `/libs/cq/reporting/components`。
 
 但是，强烈建议您不要更新这些节点，而是在或更合适的情况下创建自己 `/apps/cq/reporting/components` 的组件节点 `/apps/<yourProject>/reports/components`。
 
@@ -250,9 +250,9 @@ N:apps
 
 ## 报表基础组件 {#report-base-component}
 
-每个报告类型都需要从派生的容器组件 `/libs/cq/reporting/components/reportbase`。
+每个报告类型都需要一个派生自的容器组件 `/libs/cq/reporting/components/reportbase`。
 
-此组件用作整个报表的容器，并提供以下信息：
+此组件充当整个报告的容器，并提供以下信息：
 
 * 查询 [定义](#query-definition)。
 * 用于 [配置报表的(可选](#configuration-dialog) )对话框。
@@ -492,10 +492,10 @@ N:charting
 
 * 特定于 [列的查询配置](#column-specific-query) 。
 * 分辨率 [和预处理](#resolvers-and-preprocessing)。
-* 列特 [定定义](#column-specific-definitions) (如过滤器和聚合；子 `definitions` 节点)。
+* 列 [特定定义](#column-specific-definitions) (如过滤器和聚合;子 `definitions` 节点)。
 * [列默认值](#column-default-values)。
 * 客户 [端过滤器](#client-filter) ，用于从服务器返回的数据中提取要显示的信息。
-* 此外，列组件必须提供适当的实例 `cq:editConfig`。 定义所需的 [事件和操作](#events-and-actions) 。
+* 此外，列组件必须提供适当的实例 `cq:editConfig`。 定义所需 [的事件和操作](#events-and-actions) 。
 * 通用列的 [配置](#generic-columns)。
 
 ```
@@ -526,7 +526,7 @@ N:<columnname> [cq:Component]
 
 ### 列特定查询 {#column-specific-query}
 
-这定义了在单个列中使用的特 [定数据提取(从报告数据结果集](#the-query-and-data-retrieval))。
+这定义了在单个列中使用的特 [定数据提取(来自报表数据结果集](#the-query-and-data-retrieval))。
 
 ```xml
 N:definitions
@@ -554,13 +554,13 @@ N:definitions
 
 * `subPath`
 
-   如果结果不位于由查询返回的节点上，则定义 `subPath` 属性的实际位置。
+   如果结果不位于由查询返回的节点上，则定义 `subPath` 该属性的实际位置。
 
 * `secondaryProperty`
 
    定义另一个属性，该属性还必须用于计算实际单元格值；这将仅用于某些列类型（差异和可排序）。
 
-   例如，对于“工作流实例报告”，指定的属性用于存储开始时间和结束时间之间的时间差的实际值（以毫秒为单位）。
+   例如，对于“工作流实例报告”，指定的属性用于存储开始和结束时间之间的时间差的实际值（以毫秒为单位）。
 
 * `secondarySubPath`
 
@@ -763,11 +763,11 @@ N:data
 
    如果需要，可以为每个聚合提供单独的定义。
 
-   要指定聚合值的显式预处理，预处理定义必须驻留在相应的子 `aggregated` 节点( `apply/aggregated`, `applyAfter/aggregated`)上。 如果需要对不同的聚合进行显式预处理，则预处理定义位于子节点上，该子节点具有相应聚合的名称(例如， `apply/aggregated/min/max` 或其他聚合)。
+   要指定聚合值的显式预处理，预处理定义必须驻留在相应的子 `aggregated` 节点( `apply/aggregated`, `applyAfter/aggregated`)上。 如果需要对不同聚合进行显式预处理，则预处理定义位于具有相应聚合名称的子节点(例如，或其 `apply/aggregated/min/max` 他聚合)上。
 
 您可以指定以下任一选项以在预处理过程中使用：
 
-* [查找并替](#preprocessing-find-and-replace-patterns)换模式时，指定的模式（定义为正则表达式）被另一个模式替换；例如，这可用于提取原始文件的子字符串。
+* [查找并替](#preprocessing-find-and-replace-patterns)换模式发现后，指定的模式(定义为常规表达式)被另一个模式替换；例如，这可用于提取原始文件的子字符串。
 
 * [数据类型格式化程序](#preprocessing-data-type-formatters)
 
@@ -788,15 +788,15 @@ N:definitions
 
 #### 预处理——查找和替换图案 {#preprocessing-find-and-replace-patterns}
 
-对于预处理，您可以指 `pattern` 定一个(定义为正 [则表达式或正则表达式](https://en.wikipedia.org/wiki/Regular_expression) )，它位于并随后被模式替 `replace` 换：
+对于预处理，您可以指 `pattern` 定(定义为正则表达式 [或正则表达式](https://en.wikipedia.org/wiki/Regular_expression) )，然后用模式进行 `replace` 替换：
 
 * `pattern`
 
-   用于定位子字符串的正则表达式。
+   用于定位子字符串的常规表达式。
 
 * `replace`
 
-   将用作原始字符串的替换的字符串或字符串的表示形式。 通常，这表示由正则表达式定位的字符串的子字符串 `pattern`。
+   将用作原始字符串的替换的字符串或字符串的表示形式。 通常，这表示由常规表达式定位的字符串的子字符串 `pattern`。
 
 示例替换可分为：
 
@@ -824,7 +824,7 @@ N:definitions
 
 这些格式化程序将数字值转换为相对字符串。
 
-例如，这可用于允许、聚合和聚 `min`合 `avg` 的时 `max` 间列。 As `min`/ `avg`/ `max` Aggestates(As/Aggestates *)显示为时间差* (例如， `10 days ago`)，它们需要数据格式化程序。 为此，格 `datedelta` 式化器被应用于 `min`/ `avg`/聚 `max` 合值。 如果 `count` 聚合也可用，则不需要格式化程序，原始值也不需要。
+例如，这可用于允许和聚合的时 `min`间 `avg` 列 `max` 。 As `min`/ `avg`/ `max` 聚合显示为时 *间差* (例如， `10 days ago`)，它们需要数据格式化程序。 为此，格 `datedelta` 式化器被应用于 `min`/ `avg`/聚 `max` 合值。 如果 `count` 聚合也可用，则不需要格式设置程序，原始值也不需要。
 
 当前可用的数据类型格式化程序包括：
 
@@ -834,7 +834,7 @@ N:definitions
 
    * `duration`
 
-      持续时间是两个定义日期之间的时间跨度。 例如，工作流操作的开始和结束时间（从2/13/11 11 11:23h开始，到1小时后的2/13/11 12:23h结束）。
+      持续时间是两个定义日期之间的时间跨度。 例如，工作流操作的开始和结束，该操作耗时1小时，从2/13/11 11:23h开始，1小时后于2/13/11 12:23h结束。
 
       它将一个数值（解释为毫秒）转换为持续时间字符串；例如， `30000` 格式化为* `30s`.*
 
@@ -844,7 +844,7 @@ N:definitions
 
       它将数字值（解释为以天为单位的时差）转换为相对日期字符串。 例如，1的格式设置为1天前。
 
-以下示例定义 `datedelta` 了格式 `min` 和聚 `max` 合：
+以下示例定义 `datedelta` 了格式 `min` 和 `max` 聚合:
 
 ```xml
 N:definitions
@@ -925,7 +925,7 @@ N:definitions
 
    * `filterType`
 
-      可用的过滤器包括：
+      可用过滤器包括：
 
       * `string`
 
@@ -957,11 +957,11 @@ N:definitions
 
    * `text`
 
-      聚合的文本名称。 如 `text` 果未指定，则将采用聚合的默认描述；例如， `minimum` 将用于聚合 `min` 。
+      聚合的文本名称。 如 `text` 果未指定，则采用默认的聚合描述；例如， `minimum` 将用于该 `min` 聚合。
 
    * `type`
 
-      聚合类型。 可用的聚合包括：
+      聚合类型。 可用聚合包括：
 
       * `count`
 
@@ -1006,11 +1006,11 @@ N:defaults
 
 * `aggregate`
 
-   有 `aggregate` 效值与下的值相同 `type` (请参 `aggregates` 阅列特定定义(定 [义——过滤器／聚合)](#column-specific-definitions) )。
+   有 `aggregate` 效值与下的值相同 `type` ( `aggregates` 请参阅列特定定定 [义(定义-过滤器/聚合)](#column-specific-definitions) )。
 
 ### 事件和操作 {#events-and-actions}
 
-“编辑配置”定义了监听器检测的必需事件以及这些事件发生后要应用的操作。 有关背 [景信息，请参阅组件开发](/help/sites-developing/components.md) 的介绍。
+“编辑配置”定义监听器检测的必要事件以及这些事件发生后要应用的操作。 有关背景 [信息，请参阅组件开发](/help/sites-developing/components.md) 的介绍。
 
 必须定义以下值，以确保满足所有必需的操作：
 
@@ -1064,7 +1064,7 @@ N:cq:editConfig [cq:EditConfig]
 
    * `jcr:title` -列名称
    * `definitions/aggregates` -聚合
-   * `definitions/filters` -滤镜
+   * `definitions/filters` -过滤器
    * `definitions/type`-列的类型（必须在对话框中定义，使用选择器／组合框或隐藏字段）
    * `definitions/data/resolver` 和 `definitions/data/resolverConfig` (但不 `definitions/data/preprocessing` 是或 `.../clientFilter`)-解析程序和配置
    * `definitions/queryBuilder` -查询构建器配置
@@ -1079,7 +1079,7 @@ N:cq:editConfig [cq:EditConfig]
 
 强烈建议您为每个报告创建单独的设计。 这确保了完全的灵活性。 另请参阅 [定义新报表](#defining-your-new-report)。
 
-默认报告组件保留在下 `/etc/designs/reports`。
+默认报告组件位于下方 `/etc/designs/reports`。
 
 报告的位置取决于组件所在的位置：
 
@@ -1171,7 +1171,7 @@ N:cq:editConfig [cq:EditConfig]
 <!-- .. -->
 ```
 
-默认报告模板位于下 `/libs/cq/reporting/templates`。
+默认报告模板位于下方 `/libs/cq/reporting/templates`。
 
 但是，强烈建议您不要更新这些节点，而是在或更合适的情况下创建自己 `/apps/cq/reporting/templates` 的组件节点 `/apps/<yourProject>/reports/templates`。
 
@@ -1207,7 +1207,7 @@ N:apps
 1. 报表模板的根目录。
 1. 报表模板。
 
-为了说明这些步骤，以下示例定义了一个报告，其中列出了存储库中的所有OSGi配置；即节点的所有实 `sling:OsgiConfig` 例。
+为了说明这些步骤，以下示例定义了一个报告，该报告列表了存储库中的所有OSGi配置；即节点的所有实 `sling:OsgiConfig` 例。
 
 >[!NOTE]
 >
@@ -1273,7 +1273,7 @@ N:apps
    这定义了一个报表基本组件，它：
 
    * 搜索类型的所有节点 `sling:OsgiConfig`
-   * 显示两 `pie` 个图 `lineseries` 表
+   * 显示两 `pie` 者和图 `lineseries` 表
    * 为用户提供了配置报告的对话框
 
 1. 定义您的第一列（列库）组件。 例如， `bundlecol[cq:Component]` 在 `/apps/cq/reporting/components/osgireport`下。
@@ -1307,18 +1307,19 @@ N:apps
    这定义了列基组件，它：
 
    * 搜索并返回从服务器接收的值；在这种情况下，每个节 `jcr:path` 点的属 `sling:OsgiConfig` 性
-   * 提供聚 `count` 合
+   * 提供了 `count` 聚合
    * 不可分组
    * 具有标 `Bundle` 题（表中的列标题）
    * 在Sidekick组中 `OSGi Report`
-   * 在指定活动上刷新
+   * 在指定事件上刷新
    >[!NOTE]
    >
    >在此示例中，没有和的定 `N:data` 义 `P:clientFilter`。 这是因为从服务器收到的值是按1:1返回的——这是默认行为。
    >
    >这与定义相同：
    >
-   >```
+   >
+   ```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
@@ -1372,7 +1373,7 @@ N:apps
 
    * 为生成 `allowedPaths` 的报告定义——在上述情况下，位于 `/etc/reports`
    * 提供模板的标题和说明
-   * 提供可在模板列表中使用的缩略图图像（上面未列出此节点的完整定义——最容易从现有报表复制thumbnail.png实例）。
+   * 提供在模板列表中使用的缩略图图像（上面未列出此节点的完整定义——最容易从现有报表复制thumbnail.png实例）。
 
 ### 创建新报表的实例 {#creating-an-instance-of-your-new-report}
 
@@ -1381,21 +1382,21 @@ N:apps
 1. Open the **Tools** console.
 
 1. 在 **左侧窗格** 中选择“报告”。
-1. **然**&#x200B;后新……中。 定义标 **题和名** 称 **，从模板列表中选择新的报表类型(** OSGi报表模板 **)，然后单击创******&#x200B;建Adobe Create。
-1. 您的新报告实例将显示在列表中。 双击此图标可打开。
-1. 从Sidekick中拖动组件( **例如，** OSGi Report **组中的Bundle** )以创建第一列并启 [动报表定义](/help/sites-administering/reporting.md#the-basics-of-report-customization)。
+1. 然 **后新……** 中。 定义标 **题和名** 称 **，从模板列表中选择新的报表类型(** OSGi报表模板 **)，然后单击******&#x200B;创建。
+1. 您的新报告实例将显示在列表中。 多次-单击此图标可打开。
+1. 从Sidekick中拖动组件( **例如，** OSGi Report **组中的Bundle** )以创建第一列并 [开始报表定义](/help/sites-administering/reporting.md#the-basics-of-report-customization)。
 
    >[!NOTE]
    >
    >由于此示例没有任何可分组列，因此图表将不可用。 要查看图表，请将其 `groupable` 设置为 `true`:
    >
-   >```
+   >
+   ```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]
    > P:groupable [Boolean] = true
    >```
-   >
 
 ## 配置Report Framework Services {#configuring-the-report-framework-services}
 
@@ -1403,7 +1404,7 @@ N:apps
 
 可以使用Web控制台的“配置”菜单查看这些组件(例如，在 `http://localhost:4502/system/console/configMgr`)。 When working with AEM there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
 
-### 基本服务(Day CQ Reporting Configuration) {#basic-service-day-cq-reporting-configuration}
+### 基本服务(第CQ天报告配置) {#basic-service-day-cq-reporting-configuration}
 
 * **时区** 定义为其创建时区历史数据。 这是为了确保历史图表显示全球每个用户的相同数据。
 * **区域设置** ，定义要与历史数据的时区一起使 **用的区域设置** 。 区域设置用于确定某些特定于区域设置的日历设置（例如，一周的第一天是星期日还是星期一）。
@@ -1427,7 +1428,7 @@ N:apps
 
 * **强制使用快照用户**，如果启用，则所有快照都将与在“快照”用户下指定的用 *户一起拍摄*。 如果处理不当，这可能会造成严重的安全影响。
 
-### 缓存设置(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
+### 缓存设置(Day CQ报告缓存) {#cache-settings-day-cq-reporting-cache}
 
 * **启用** ，允许您启用或禁用报告数据的缓存。 启用报告缓存后，将在多个请求期间将报告数据保留在内存中。 这可能会提高性能，但会导致内存消耗增加，在极端情况下可能导致内存不足。
 * **TTL** 定义缓存报告数据的时间（以秒为单位）。 数量越大，性能越好，但如果数据在时间段内发生变化，则返回的数据可能也不准确。
