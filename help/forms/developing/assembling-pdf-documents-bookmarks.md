@@ -1,6 +1,6 @@
 ---
-title: 使用书签组合PDF文档
-seo-title: 使用书签组合PDF文档
+title: 将PDF文档与书签组合
+seo-title: 将PDF文档与书签组合
 description: 'null'
 seo-description: 'null'
 uuid: a306d2a6-0b12-4eb3-bff4-968a33417486
@@ -11,21 +11,21 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e3f700b52446505224fa4b4688d439750a66f471
 
 ---
 
 
-# 使用书签组合PDF文档 {#assembling-pdf-documents-with-bookmarks}
+# 将PDF文档与书签组合 {#assembling-pdf-documents-with-bookmarks}
 
 您可以组合包含书签的PDF文档。 例如，假定您的PDF文档不包含书签，并且您希望通过提供书签来修改它。 使用Assembler服务，您可以将不包含书签的PDF文档传递给它，然后返回包含书签的PDF文档。
 
 书签包含以下属性：
 
 * 屏幕上显示为文本的标题。
-* 一个操作，它指定用户单击书签时发生的情况。 书签的典型操作是移动到当前文档中的其他位置或打开另一个PDF文档，但可以指定其他操作。
+* 一个操作，它指定用户单击书签时发生的情况。 书签的典型操作是移到当前文档中的其他位置或打开另一个PDF文档，但可以指定其他操作。
 
-在本讨论中，请假定使用以下DDX文档。
+在本讨论中，假定使用以下DDX文档。
 
 ```as3
  <?xml version="1.0" encoding="UTF-8"?>
@@ -38,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </DDX>
 ```
 
-在此DDX文档中，请注意为源属性分配了值 `Loan.pdf`。 此DDX文档指定将单个PDF文档传递给Assembler服务。 将PDF文档与书签组合时，必须指定一个书签XML文档，用于描述结果文档中的书签。 要指定书签XML文档，请确保在DDX `Bookmarks` 文档中指定了元素。
+在此DDX文档中，请注意为源属性分配了值 `Loan.pdf`。 此DDX文档指定将单个PDF文档传递给Assembler服务。 在将PDF文档与书签组合时，必须指定书签XML文档，以在结果文档中描述书签。 要指定书签XML文档，请确保在DDX `Bookmarks` 文档中指定该元素。
 
 在此示例DDX文档中，元 `Bookmarks` 素指定 `doc2` 为值。 此值指示传递给Assembler服务的输入映射包含一个名为的键 `doc2`。 键的值是 `doc2` 表示书 `com.adobe.idp.Document` 签XML文档的值。 (请参阅汇编器服务和DDX [参考中的“书签语言”](https://www.adobe.com/go/learn_aemforms_ddx_63)。)
 
@@ -72,7 +72,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >有关支持的操作的完整详细信息，请参 `Action` 阅“汇编器服务”和“ [DDX参考”中的“元素”](https://www.adobe.com/go/learn_aemforms_ddx_63)。
 
-给定本节中指定的DDX文档并将XML文件加为书签作为输入，Assembler服务将组合一个包含以下书签的PDF文档。
+给定本节中指定的DDX文档，并将XML文件加为书签作为输入，Assembler服务将组合一个包含以下书签的PDF文档。
 
 ![aw_aw_bmark](assets/aw_aw_bmark.png)
 
@@ -80,7 +80,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->在阅读本节之前，建议您熟悉使用Assembler服务汇编PDF文档。 本节不讨论概念，如创建包含输入文档的集合对象，或了解如何从返回的集合对象中提取结果。 (请参 [阅以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
+>在阅读本节之前，建议您熟悉使用Assembler服务汇编PDF文档。 本节不讨论概念，如创建包含输入文档的集合对象或了解如何从返回的集合对象中提取结果。 (请参阅 [以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
 
 >[!NOTE]
 >
@@ -88,18 +88,18 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->有关DDX文档的详细信息，请参 [阅Assembler service和DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>有关DDX文档的详细信息，请参 [阅Assembler Service和DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)。
 
 ## 步骤摘要 {#summary-of-steps}
 
-要组合包含书签的PDF文档，请执行以下任务：
+要组合包含书签的PDF文档，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建PDF Assembler客户端。
 1. 引用现有DDX文档。
-1. 引用要添加书签的PDF文档。
+1. 引用添加书签的PDF文档。
 1. 引用书签XML文档。
-1. 将PDF文档和XML文档书签添加到地图集合。
+1. 将PDF文档和书签XML文档添加到Map集合。
 1. 设置运行时选项。
 1. 组合PDF文档。
 1. 保存包含书签的PDF文档。
@@ -124,11 +124,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **引用现有DDX文档**
 
-必须引用DDX文档才能组合PDF文档。 此DDX文档必须包含元 `Bookmarks` 素，元素指示Assembler服务组合包含书签的PDF。 （有关示例，请参阅本节前面显示的DDX文档。）
+必须引用DDX文档才能组合PDF文档。 此DDX文档必须包含元 `Bookmarks` 素，元素指示Assembler服务组合包含书签的PDF。 (有关示例，请参阅本节前面显示的DDX文档。)
 
 **引用添加书签的PDF文档**
 
-引用要添加书签的PDF文档。 引用的PDF文档是否已包含书签并不重要。 如果元 `Bookmarks` 素是PDF源元素的子元素，则书签将替换PDF源中已存在的子元素。 但是，如果要保留现有书签，请确保它 `Bookmarks` 是PDF源元素的同级。 例如，请考虑以下示例：
+引用添加书签的PDF文档。 引用的PDF文档是否已包含书签并不重要。 如果元 `Bookmarks` 素是PDF源元素的子元素，则书签将替换PDF源中已存在的子元素。 但是，如果要保留现有书签，请确保它 `Bookmarks` 是PDF源元素的同级。 例如，请考虑以下示例：
 
 ```as3
  <PDF result="foo">
@@ -139,15 +139,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **引用书签XML文档**
 
-要组合包含新书签的PDF，必须引用书签XML文档。 书签XML文档将传递到Map集合对象中的Assembler服务。 （有关示例，请参阅本节前面显示的书签XML文档。）
+要组合包含新书签的PDF，必须引用书签XML文档。 书签XML文档将传递给Map集合对象中的Assembler服务。 (有关示例，请参阅本节前面显示的书签XML文档。)
 
 >[!NOTE]
 >
 >请参阅汇编器服务和DDX参考 [中的“书签语言”](https://www.adobe.com/go/learn_aemforms_ddx_63)。
 
-**将PDF文档和XML文档书签添加到地图集合**
+**将PDF文档和书签XML文档添加到地图集合**
 
-您必须同时将添加书签的PDF文档和书签XML文档添加到地图集合。 因此，Map集合对象包含两个元素：PDF文档和XML文档书签。
+您必须将添加书签的PDF文档和书签XML文档添加到地图集合。 因此，Map集合对象包含两个元素：PDF文档和书签XML文档。
 
 **设置运行时选项**
 
@@ -155,15 +155,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **组合PDF文档**
 
-要组合包含新书签的PDF文档，请使用Assembler服务的操 `invokeDDX` 作。 您必须将该操作与其他Assembler服务操作( `invokeDDX` 如，Assembler服务)相对使用的原因 `invokeOneDocument` 是，Assembler服务需要在Map集合对象中传递的书签XML文档。 此对象是操作的一个参 `invokeDDX` 数。
+要组合包含新书签的PDF文档，请使用Assembler服务的操 `invokeDDX` 作。 您必须将该操作与其他Assembler服务操作( `invokeDDX` 如，Assembler服务)相对使用的原因 `invokeOneDocument` 是，Assembler服务需要在Map集合对象内传递的书签XML文档。 此对象是操作的一个参 `invokeDDX` 数。
 
 **保存包含书签的PDF文档**
 
-您必须从返回的映射对象中提取结果并保存相应的PDF文档。 (请参阅以编程方式组合PDF文档 [中的“提取结果](/help/forms/developing/programmatically-assembling-pdf-documents.md)”。)
+必须从返回的映射对象中提取结果并保存相应的PDF文档。 (请参阅以编程方式组合PDF文档 [中的“提取结果](/help/forms/developing/programmatically-assembling-pdf-documents.md)”。)
 
 **另请参阅**
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -171,7 +171,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 使用Java API将PDF文档与书签组合在一起 {#assemble-pdf-documents-with-bookmarks-using-the-java-api}
 
-使用Assembler Service API(Java)将PDF文档与书签组合在一起：
+使用Assembler Service API(Java)将PDF文档与书签组合起来：
 
 1. 包括项目文件。
 
@@ -184,29 +184,29 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 引用现有DDX文档。
 
-   * 使用 `java.io.FileInputStream` DDX文档的构造函数并传递一个指定DDX文件位置的字符串值，创建一个表示该文档的对象。
+   * 通过 `java.io.FileInputStream` 使用DDX文档的构造函数并传递一个指定DDX文件位置的字符串值，创建一个表示该DDX域的对象。
    * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对象来创建 `java.io.FileInputStream` 对象。
 
-1. 引用要添加书签的PDF文档。
+1. 引用添加书签的PDF文档。
 
-   * 使用 `java.io.FileInputStream` 对象的构造函数并传递PDF文档的位置来创建对象。
+   * 使用 `java.io.FileInputStream` 对象的构造函数并传递PDF文档的位置，创建对象。
    * 使用 `com.adobe.idp.Document` 其构造函数创建对象，并传递 `java.io.FileInputStream` 包含PDF文档的对象。
 
 1. 引用书签XML文档。
 
-   * 使用对 `java.io.FileInputStream` 象的构造函数并传递表示书签XML文档的XML文件的位置，从而创建一个对象。
+   * 通过使用 `java.io.FileInputStream` 其构造函数并传递表示书签XML文档的XML文件的位置，创建一个对象。
    * 创建一 `com.adobe.idp.Document` 个对象，并传递 `java.io.FileInputStream` 包含PDF文档的对象。
 
-1. 将PDF文档和XML文档书签添加到地图集合。
+1. 将PDF文档和书签XML文档添加到Map集合。
 
    * 创建 `java.util.Map` 一个对象，该对象用于存储输入PDF文档和书签XML文档。
-   * 通过调用对象的方法并传递 `java.util.Map` 以下参数来添 `put` 加输入的PDF文档：
+   * 通过调用对象的方法并传递以 `java.util.Map` 下参数来添 `put` 加输入PDF文档:
 
-      * 表示键名的字符串值。 此值必须与DDX文档中指定的PDF源元素的值匹配。
+      * 表示键名的字符串值。 此值必须与在DDX文档中指定的PDF源元素的值匹配。
       * 包 `com.adobe.idp.Document` 含输入PDF文档的对象。
-   * 通过调用对象的方法并传递以 `java.util.Map` 下参数来添 `put` 加书签XML文档：
+   * 通过调用对象的方法并传递以 `java.util.Map` 下参数来添 `put` 加书签XML文档:
 
-      * 表示键名的字符串值。 此值必须与DDX文档中指定的“书签”源元素的值匹配。
+      * 表示键名的字符串值。 此值必须与在DDX文档中指定的“书签”源元素的值匹配。
       * 包 `com.adobe.idp.Document` 含书签XML文档的对象。
 
 
@@ -229,20 +229,20 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    要获取新创建的PDF文档，请执行以下操作：
 
    * 调用 `AssemblerResult` 对象的方 `getDocuments` 法。 这将返回一个 `java.util.Map` 对象。
-   * 遍历对象， `java.util.Map` 直到找到生成的对 `com.adobe.idp.Document` 象。 （可以使用在DDX文档中指定的PDF结果元素获取文档。）
+   * 遍历对象， `java.util.Map` 直到找到生成的对 `com.adobe.idp.Document` 象。 (可以使用在DDX文档中指定的PDF结果元素获取文档。)
    * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法以提取PDF文档。
 
 **另请参阅**
 
-[快速入门（SOAP模式）:使用Java API将PDF文档与书签组合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API将PDF文档与书签组合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
 ## 使用Web服务API将PDF文档与书签组合在一起 {#assemble-pdf-documents-with-bookmarks-using-the-web-service-api}
 
-使用Assembler Service API（Web服务）将PDF文档与书签组合在一起：
+使用Assembler Service API（Web服务）将PDF文档与书签组合起来：
 
 1. 包括项目文件。
 
@@ -258,7 +258,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 使用构 `AssemblerServiceClient.Endpoint.Address` 造函数创建对 `System.ServiceModel.EndpointAddress` 象。 将指定WSDL的字符串值传递给AEM Forms服务(例如， `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您无需使用该属 `lc_version` 性。 在创建服务引用时，会使用此属性。
    * 通过 `System.ServiceModel.BasicHttpBinding` 获取字段的值创建对 `AssemblerServiceClient.Endpoint.Binding` 象。 将返回值转换为 `BasicHttpBinding`。
    * 将对 `System.ServiceModel.BasicHttpBinding` 象的字段 `MessageEncoding` 设置为 `WSMessageEncoding.Mtom`。 此值确保使用MTOM。
-   * 通过执行以下任务启用基本HTTP身份验证：
+   * 通过执行以下任务，启用基本HTTP身份验证：
 
       * 将AEM表单用户名分配给字段 `AssemblerServiceClient.ClientCredentials.UserName.UserName`。
       * 为字段分配相应的口令值 `AssemblerServiceClient.ClientCredentials.UserName.Password`。
@@ -273,7 +273,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 通过调用对象的方法并传递要读取的字 `System.IO.FileStream` 节数组、开始 `Read` 位置和流长度，用流数据填充字节数组。
    * 通过 `BLOB` 为对象的字段指定 `MTOM` 字节数组的内容来填充该对象。
 
-1. 引用要添加书签的PDF文档。
+1. 引用添加书签的PDF文档。
 
    * 使用对 `BLOB` 象的构造函数创建对象。 对 `BLOB` 象用于存储输入的PDF。
    * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个字符串值来创建对象，该字符串值表示输入PDF文档的文件位置以及打开文件的模式。
@@ -289,13 +289,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 通过调用对象的方法并传递要读取的字 `System.IO.FileStream` 节数组、开始 `Read` 位置和流长度，用流数据填充字节数组。
    * 通过 `BLOB` 为对象的字段指定 `MTOM` 字节数组的内容来填充该对象。
 
-1. 将PDF文档和XML文档书签添加到地图集合。
+1. 将PDF文档和书签XML文档添加到地图集合。
 
    * 创建对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 此集合对象用于存储输入的PDF文档和书签XML文档。
    * 对于每个输入的PDF文档和书签XML文档，创建一个对 `MyMapOf_xsd_string_To_xsd_anyType_Item` 象。
-   * 为对象的字段指定表示键名 `MyMapOf_xsd_string_To_xsd_anyType_Item` 的字符串 `key` 值。 此值必须与DDX文档中指定的PDF源元素的值匹配。
+   * 为对象的字段指定表示键名 `MyMapOf_xsd_string_To_xsd_anyType_Item` 的字符串 `key` 值。 此值必须与在DDX文档中指定的PDF源元素的值匹配。
    * 将存 `BLOB` 储PDF文档的对象指定到该对 `MyMapOf_xsd_string_To_xsd_anyType_Item` 象的字 `value` 段。
-   * 将对 `MyMapOf_xsd_string_To_xsd_anyType_Item` 象添加到对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 调用 `MyMapOf_xsd_string_To_xsd_anyType` 对象的方 `Add` 法并传递对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 （对每个输入的PDF文档和书签XML文档执行此任务。）
+   * 将对 `MyMapOf_xsd_string_To_xsd_anyType_Item` 象添加到对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 调用 `MyMapOf_xsd_string_To_xsd_anyType` 对象的方 `Add` 法并传递对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 (对每个输入PDF任务和书签XML文档执行此文档。)
 
 1. 设置运行时选项。
 
@@ -306,7 +306,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    调用对 `AssemblerServiceClient` 象的方 `invokeDDX` 法并传递以下值：
 
-   * 表示 `BLOB` DDX文档的对象
+   * 表 `BLOB` 示DDX文档的对象
    * 包 `MyMapOf_xsd_string_To_xsd_anyType` 含输入文档的数组
    * 指定 `AssemblerOptionSpec` 运行时选项的对象
    该方 `invokeDDX` 法返回一个对 `AssemblerResult` 象，该对象包含作业的结果以及可能发生的任何例外。
@@ -315,9 +315,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    要获取新创建的PDF文档，请执行以下操作：
 
-   * 访问对 `AssemblerResult` 象的字 `documents` 段，该字段是包含结果PDF `Map` 文档的对象。
+   * 访问对 `AssemblerResult` 象的字 `documents` 段，该字段是包含 `Map` 结果PDF文档的对象。
    * 遍历对 `Map` 象，直到找到与生成文档的名称匹配的键。 然后将该阵列成员转 `value` 换为 `BLOB`。
-   * 通过访问PDF文档对象字段提取表示该PDF文 `BLOB` 档的二进制数 `MTOM` 据。 这将返回可写入PDF文件的字节数组。
+   * 通过访问PDF文档对象的字段提取表示PDF `BLOB` 的二进制 `MTOM` 数据。 这将返回可写入PDF文件的字节数组。
 
 **另请参阅**
 
