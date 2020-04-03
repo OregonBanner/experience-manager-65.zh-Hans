@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: 列表AEM资产和Dynamic Media支持的文件格式以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 593c1e1954a1c8e0355ede9889caed05ff72f3f9
+source-git-commit: 15691a164913cf06bfbb77392ec563d8c364a1b8
 
 ---
 
@@ -67,21 +67,23 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 
 * 对于EPS文件，PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
 
-## Dynamic Media中不支持的栅格图像格式(#unsupported-image-formats-dynamic-media)
+<!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
+## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
 
-下表介绍了Dynamic Media不支持的栅格图像格 *式* 的子类型。 该表还介绍了可用于检测此类文件的建议方法。
+The following table describes the sub-types of raster image formats that are *not* supported in Dynamic Media. The table also describes suggested methods you can use to detect such files.
 
-| 格式 | 不支持什么？ | 建议的检测方法 |
+| Format | What is unsupported? | Suggested detection method |
 |---|---|---|
-| JPEG | 初始三个字节不正确的文件。 | 要识别JPEF文件，其初始三个字节必须 `ff d8 ff`为。 如果它们是其他任何内容，则不会将其分类为JPEG。<br>·没有可帮助解决此问题的软件工具。<br>·一个读取文件初始三个字节的小C++/java项目应能够检测这些类型的文件。<br>·最好跟踪此类文件的源并查看生成文件的工具。 |
-| PNG | IDAT区块大小大于100 MB的文件。 | 可以使用C++中的 [libpng](http://www.libpng.org/pub/png/libpng.html) 检测此问题。 |
-| PSB |  | 如果文件类型是PSB，则使用exiftool。<br>ExifTool日志：<br>1中的示例。 File type: `PSB` |
-| PSD | 不支持色彩空间不是CMYK、RGB、灰度或位图的文件。<br>不支持DuoTone、Lab和索引色彩空间。 | 如果“颜色”模式为双色调，则使用ExifTool。<br>ExifTool日志：<br>1中的示例。 颜色模式： `Duotone` |
-|  | 结尾突然的文件。 | Adobe无法检测到此情况。 此外，此类文件无法通过Adobe PhotoShop打开。 Adobe建议您检查用于创建此类文件的工具并在源位置进行疑难解答。 |
-|  | 位深度大于16的文件。 | 如果位深度大于16，则使用ExifTool。<br>ExifTool日志：<br>1中的示例。 位深度： `32` |
-|  | 具有Lab色彩空间的文件。 | 如果颜色模式为Lab，则使用exiftool。<br>ExifTool日志：<br>1中的示例。 颜色模式： `Lab` |
-| TIFF | 具有浮点数据的文件。 即，不支持深度为32位的TIFF文件。 | 如果MIME类型为且SampleFormat的 `image/tiff` 值为其值，则使 `Float` 用ExifTool。 ExifTool日志：<br>1中的示例。 MIME类型：示 `image/tiff`<br>例格式： `Float #`<br>2. MIME类型：示 `image/tiff`<br>例格式： `Float; Float; Float; Float` |
-|  | 具有Lab色彩空间的文件。 | 如果颜色模式为Lab，则使用ExifTool。<br>ExifTool日志：<br>1中的示例。 颜色模式： `Lab` |
+| JPEG  | Files where the initial three bytes is incorrect. | To identify a JPEF file, its initial three bytes must be `ff d8 ff`. If they are anything else, then it is not classified as a JPEG.<br>&bull; There is no software tool that can help with this issue.<br>&bull; A small C++/java program which reads the initial three bytes of a file should be able to detect these types of files.<br>&bull; It may be better to track the source of such files and look at the tool generating the file. |
+| PNG |  Files that have an IDAT chunk size greater than 100 MB. | You can detect this issue using [libpng](http://www.libpng.org/pub/png/libpng.html) in C++. |
+| PSB |  | Use exiftool if the file type is PSB.<br>Example in an ExifTool log:<br>1. File type: `PSB` |
+| PSD | Files with a color space other than CMYK, RGB, Grayscale, or Bitmap are not supported.<br>DuoTone, Lab, and Indexed color spaces are not supported. | Use ExifTool if Color mode is Duotone.<br>Example in an ExifTool log:<br>1. Color mode: `Duotone` |
+|  | Files with abrupt endings. | Adobe is unable to detect this condition. Also, such files cannot be opened with Adobe PhotoShop. Adobe suggests you examine the tool that was used to create such a file and troubleshoot at the source. |
+|  | Files that have a bit depth greater than 16. | Use ExifTool if the bit depth is greater than 16.<br>Example in an ExifTool log:<br>1. Bit depth: `32` |
+|  | File that have Lab color space. | Use exiftool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
+| TIFF | Files that have floating point data. That is, a TIFF file with 32-bit depth is not supported. | Use ExifTool if the MIME type is `image/tiff` and the SampleFormat has `Float` in its value. Example in an ExifTool log:<br>1. MIME type: `image/tiff`<br>Sample format: `Float #`<br>2. MIME type: `image/tiff`<br>Sample format: `Float; Float; Float; Float` |
+|  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
+-->
 
 ## 支持的PDF栅格化器库 {#supported-pdf-rasterizer-library}
 
