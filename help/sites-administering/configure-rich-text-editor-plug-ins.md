@@ -8,7 +8,7 @@ discoiquuid: 87dc79ad-0a71-43f6-af04-4d26c7472dc5
 mini-toc-levels: 1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ac4c5ec920ed768002da1b4598590bfd9ca301f6
+source-git-commit: 72cdeff04e18c13e4b31543bafcbd5ffa65a78a7
 
 ---
 
@@ -69,7 +69,9 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 ## 了解findreplace插件 {#findreplace}
 
-插 `findreplace` 件不需要任何配置。 它按预期工作，开箱即用。
+插 `findreplace` 件不需要任何配置。 它开箱即用。
+
+使用替换功能时，应在输入查找字符串的同时输入要替换的替换字符串。 但是，在替换字符串之前，您仍然可以单击“查找”以搜索该字符串。 如果在单击“查找”后输入替换字符串，则搜索将重置为文本的开头。
 
 单击查找时，查找和替换对话框变得透明，单击替换时，该对话框变得不透明。 这允许作者查看作者将替换的文本。 如果用户单击“全部替换”，则对话框将关闭并显示所做替换的数量。
 
@@ -178,7 +180,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
   <tr>
    <td>fallbackBlockTag</td>
    <td>字符串</td>
-   <td><p>定义块标签，该标签用于任何块，这些块具有未包含在allowBlockTags中的块标签。</p> <p> 在大多数情况下就足够了。</p> </td>
+   <td><p>定义块标签，该标签用于任何块，这些块具有未包含在allowBlockTags中的块标签。</p> <p> 在大多数情况下都足够。</p> </td>
   </tr>
   <tr>
    <td>表</td>
