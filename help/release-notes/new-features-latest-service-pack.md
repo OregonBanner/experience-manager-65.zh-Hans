@@ -4,16 +4,18 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5fc75e3dcb0ca107605c456d0f41be861dabc0eb
+source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
 
 ---
 
 
 # Adobe Experience Manager 6.5 Service Pack 4的新增功能 {#aem-whats-new-service-pack-4}
 
-Adobe Experience Manager(AEM)6.5通过每季度Service Pack提供功能并不断改进。 随着创新更易于采用，该方法会为您带来好处。
+Adobe Experience Manager(6.5)使您能通过Service Pack季度发行版获得新功能和持续改进。 使用这种方法，您可以轻松地采用创新。
 
-AEM Service Pack 4(6.5.4.0)于2020年3 **月5日发布**。 本文重点介绍了6.5 Service Pack优惠可让您的AEM旅程更加丰富的主要功能。
+Experience Manager Service Pack 4(6.5.4.0)于2020年3月5日发布。 这是一项重要更新，包括自2019年4月6.5版本通用发布以来发布的新功能、客户请求的重要增强功能以及性能、稳定性和安全性改进。 Experience Manager 6.5.4.0可安装在Adobe Experience Manager 6.5之上。
+
+本文重点介绍最新6.5 Service Pack中包含的功能、以 [前6.5 Service Pack中包含的主要功能](#key-features-previous-service-packs)，以及Experience Manager 6.5.3.0之后的一些 [主要版本](#key-features-sice-sp3)。
 
 ## AEM Sites {#aem-sites}
 
@@ -37,7 +39,7 @@ AEM Service Pack 4(6.5.4.0)于2020年3 **月5日发布**。 本文重点介绍�
 
 AEM资产与Brand Portal之间的授权渠道已更改。 以前，Brand Portal是通过旧版OAuth网关在经典UI中配置的，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租户购买IMS令牌以授权。
 
-根据AEM版本以及您是首次配置还是升级现有配置，配置带有Brand Portal的AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
+根据AEM版本以及您是首次配置还是升级现有配置，使用Brand Portal配置AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
 
 
 ### 已知问题 {#known-issues-bp}
@@ -94,7 +96,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * 自适应表单的每页现在包含一个标题和一个主要地标标签。
 
-## 以前的AEM 6.5 Service Pack中的主要功能
+## 以前的AEM 6.5 Service Pack中的主要功能 {#key-features-previous-service-packs}
 
 ### 动态媒体智能成像(6.5.3.0) {#smart-imaging}
 
@@ -117,7 +119,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 您可以使用批处理API从模板生成多个交互式通信。 该模板是无任何数据的交互式通信。 Batch API将数据与模板相结合，以生成交互式通信。 该API在大规模制作交互式通信中很有用。 例如，电话单、多个客户的信用卡对帐单。 请参 [阅使用Batch API生成多个交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-## 自AEM 6.5 SP3以来的主要发行版
+## 自AEM 6.5 SP3以来的主要发行版 {#key-features-sice-sp3}
 
 在2019年12月12日至2020年3月5日之间，Adobe发布了下列AEM可交付内容以外的功能：
 
