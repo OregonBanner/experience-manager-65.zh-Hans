@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -25,8 +25,8 @@ source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
 | 检查 | 注意事项 | 评论／操作 |
 |---|---|---|
 | 备份计划。 |  | 了解如何 [备份实例](/help/sites-deploying/monitoring-and-maintaining.md#backups)。 |
-| 灾难恢复计划。 | 贵公司的灾难恢复准则。 |  |
-| 错误跟踪系统可用于报告问题。 | 例如， [bugzilla](https://www.bugzilla.org/)、 [jira](https://www.atlassian.com/software/jira/)，或其他许多对象之一。 |  |
+| 灾难恢复计划。 | 您的公司的灾难恢复指南。 |  |
+| 错误跟踪系统可用于解决报告问题。 | 例如， [bugzilla](https://www.bugzilla.org/)、 [jira](https://www.atlassian.com/software/jira/)，或其他许多对象之一。 |  |
 | 正在监视文件系统。 | 如果可用磁盘空间不足，CRX存储库将“冻结”。 当空间可用时，它将恢复。 | 当可 `*ERROR* LowDiskSpaceBlocker`用空间变低时，日志文件中会显示“ ”消息。 |
 | [正在监视日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 。 |  |  |
 | 系统监控（持续）在后台运行。 | 包括CPU、内存、磁盘和网络使用。 例如，使用iostat / vmstat / perfmon。 | 记录的数据是可视化的，可用于跟踪性能问题。 还可以访问原始数据。 |
@@ -41,7 +41,7 @@ source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
 * 您的软件安装——在配置发生重大更改之前／之后
 * 存储库中保存的内容——定期
 
-您的公司可能需要遵循一个备份策略，并考虑备份内容以及备份时间：
+您的公司可能需要遵循一个备份策略，并考虑要备份的内容以及备份时间：
 
 * 系统和数据的重要性。
 * 对软件或数据进行更改的频率。
@@ -115,7 +115,7 @@ CRX文 [档的“备份和恢复](/help/sites-administering/backup-and-restore.m
 
 要清除网站的版本，请按照以下步骤继续：
 
-1. 导航到工 **[具控](/help/sites-administering/tools-consoles.md)**制台&#x200B;**，选择版本控制**，然后双&#x200B;**击清****除版本。**
+1. 导航到工具控 **[制台](/help/sites-administering/tools-consoles.md)**，选&#x200B;**择版本**，然后&#x200B;**多次单击清****除版本。**
 1. 设置要清除的内容的开始路径(例如， `/content/geometrixx-outdoors`)。
 
    * 如果只想清除路径定义的节点，请取消选择“递归 **”**。
@@ -125,7 +125,7 @@ CRX文 [档的“备份和恢复](/help/sites-administering/backup-and-restore.m
 
 1. 设置要保留的最大版本年龄（对于每个节点），以天为单位。 如果留空，则不使用此设置。
 
-1. 单 **击“练习** ”以预览清除过程的效果。
+1. 单 **击“练习** ”以预览清除过程的操作。
 1. 单击 **清除** ，以启动进程。
 
 >[!CAUTION]
@@ -133,7 +133,7 @@ CRX文 [档的“备份和恢复](/help/sites-administering/backup-and-restore.m
 
 ### 分析控制台 {#analyzing-the-console}
 
-“干 **运行** ”和“清 **** 除”进程列出所有已处理的节点。 在此过程中，节点可以具有以下状态之一：
+“干 **运行** ”和“清 **除** ”将列表所有已处理的节点。 在此过程中，节点可以具有以下状态之一：
 
 * `ignore (not versionnable)`:该节点不支持版本控制，在该过程中会被忽略。
 
@@ -162,7 +162,7 @@ CRX文 [档的“备份和恢复](/help/sites-administering/backup-and-restore.m
 
 ### 使用日志 {#working-with-logs}
 
-AEM WCM记录详细的日志。 打开包装并启动快速启动后，您可以找到登录：
+AEM WCM记录详细的日志。 解包并开始快速入门后，您可以找到登录：
 
 * `<cq-installation-dir>/crx-quickstart/logs/`
 
@@ -194,12 +194,12 @@ AEM WCM记录详细的日志。 打开包装并启动快速启动后，您可以
    * `error.log`
 此处会注册错误消息（严重性级别不同）。
 
-   * [ 仅 `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)在启用Dynamic media时才使用此日志。 它提供用于分析内部ImageServer进程行为的统计和分析信息。
+   * [ 仅 `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_image_server_log.html)在启用此日志时才 [!DNL Dynamic Media] 使用它。 它提供用于分析内部ImageServer进程行为的统计和分析信息。
 
    * `request.log`
 每个访问请求都在此处注册，并随响应一起注册。
 
-   * [ 仅 `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)在启用Dynamic media时才使用此日志。 s7access日志记录通过和向Dynamic media发出的每个 `/is/image` 请求 `/is/content`。
+   * [ 仅 `s7access-<yyyy>-<mm>-<dd>.log`](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_Access_Log.html)在启用此日志时才 [!DNL Dynamic Media] 使用它。 s7access日志记录对和发出的每 [!DNL Dynamic Media] 个请 `/is/image` 求 `/is/content`。
 
    * `stderr.log`
 保留在启动过程中生成的严重性级别不同的错误消息。 默认情况下，日志级别设置为 `Warning` ( `WARN`)
@@ -216,7 +216,7 @@ AEM WCM记录详细的日志。 打开包装并启动快速启动后，您可以
 修订日志信息。
 
 >[!NOTE]
-ImageServer和s7access日志不包含在从**system/console/status-Bundlelist **页生成的**Download Full **包中。 出于支持目的，如果您遇到Dynamic media问题，请在联系客户支持时附加ImageServer和s7access日志。
+ImageServer和s7access日志不包含在从**system/console/status-Bundlelist **页生成的**Download Full **包中。 出于支持目的，如果您有 [!DNL Dynamic Media] 问题，请在联系客户支持时附加ImageServer和s7access日志。
 
 ### 激活调试日志级别 {#activating-the-debug-log-level}
 
@@ -227,7 +227,7 @@ ImageServer和s7access日志不包含在从**system/console/status-Bundlelist **
 >[!CAUTION]
 不要将日志保留在调试日志级别上的时间比必需的时间长，因为它会生成大量日志条目，从而消耗资源。
 
-调试文件中的一行通常以DEBUG开头，然后提供日志级别、安装程序操作和日志消息。 例如：
+调试文件中的一行通常与DEBUG开始，然后提供日志级别、安装程序操作和日志消息。 例如：
 
 ```shell
 DEBUG 3 WebApp Panel: WebApp successfully deployed
@@ -255,7 +255,7 @@ When working with Adobe Experience Manager there are several methods of managing
 
       其中， `<*identifier*>` 将替换为您（必须）输入以标识实例的自由文本（您不能忽略此信息）。
 
-      For example, `org.apache.sling.commons.log.LogManager.factory.config-MINE`
+      例如，`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * 类型: `sling:OsgiConfig`
    >[!NOTE]
@@ -328,7 +328,7 @@ When working with Adobe Experience Manager there are several methods of managing
 
    * 名称：( `org.apache.sling.commons.log.LogManager.factory.writer-<*identifier*>` 作者为作者)
 
-      与记录器一样， `<*identifier*>` 将替换为您（必须）输入用来标识实例的自由文本（您不能忽略此信息）。 For example, `org.apache.sling.commons.log.LogManager.factory.writer-MINE`
+      与记录器一样， `<*identifier*>` 将替换为您（必须）输入用来标识实例的自由文本（您不能忽略此信息）。 例如，`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * 类型: `sling:OsgiConfig`
    >[!NOTE]
@@ -358,40 +358,33 @@ When working with Adobe Experience Manager there are several methods of managing
 
          值：根据大小／日期指定控制文件旋转的要求；例如， `'.'yyyy-MM-dd`
    >[!NOTE]
-   >
-   >`org.apache.sling.commons.log.file.size` 通过设置以下任一项来控制日志文件的旋转：
-   >
-   >* 最大文件大小
-   >* 时间／日期计划
-   >
-   >以指示何时创建新文件（以及根据名称模式重命名的现有文件）。
-   >
-   >* 可以用数字指定大小限制。 如果未提供大小指示符，则将其视为字节数，或者您可以添加大小指示符 `KB`- `MB`、 `GB` 或（忽略大小写）。
-   >* 时间／日期计划可以指定为模 `java.util.SimpleDateFormat` 式。 这定义了文件旋转的时间段；还有附加到旋转文件（用于标识）的后缀。
-   >
-   >默认为 &#39;.&#39;yyyy-MM-dd（用于日志旋转）。
-   >
-   >因此，例如，在2010年1月20日午夜（或者，当这之后的第一条日志消息准确无误时）,../logs/error.log将更名为../logs/error.log.2010-01-20。 1月21日的日志记录将输出到../logs/error.log（新的和空的），直到在下一天的更改时滚过。
-   >
-   >| `&#39;.&#39;yyyy-MM`|每月初的轮换|
-   >|---|---|
-   >| `&#39;.&#39;yyyy-ww`|每周第一天的旋转（取决于区域设置）。 |
-   >| `&#39;.&#39;yyyy-MM-dd`每天午夜时分旋转。 |
-   >| `&#39;.&#39;yyyy-MM-dd-a每天午夜和中午的轮换。 |
-   >| `&#39;.&#39;yyyy-MM-dd-HH`每小时的顶部旋转。 |
-   >| `&#39;.&#39;yyyy-MM-dd-HH-mm`每分钟开始时的旋转。 |
-   >
-   >注意：指定时间／日期时：
-   > 1. 您应该在单引号(&#39; &#39;)中“转义”文本；  这     是为了避免某些字符被解释为模式字母。
-   > 1. 在选项中的任意位置仅使用允许用于有效文件名的字符。
-
+   `org.apache.sling.commons.log.file.size` 通过设置以下任一项来控制日志文件的旋转：
+   * 最大文件大小
+   * 时间／日期计划
+   以指示何时创建新文件（以及根据名称模式重命名的现有文件）。
+   * 可以用数字指定大小限制。 如果未提供大小指示符，则将其视为字节数，或者您可以添加大小指示符 `KB`- `MB`、 `GB` 或（忽略大小写）。
+   * 时间／日期计划可以指定为模 `java.util.SimpleDateFormat` 式。 这定义了文件旋转的时间段；还有附加到旋转文件（用于标识）的后缀。
+   默认为 &#39;.&#39;yyyy-MM-dd（用于日志旋转）。
+   例如，在2010年1月20日午夜（或者，当这之后的第一条日志消息准确无误时）,../logs/error.log将更名为../logs/error.log.2010-01-20。 1月21日的日志记录将输出到../logs/error.log（新的和空的），直到在下一天的更改时滚过。
+       | `&#39;.&#39;yyyy-MM`|每月初的轮换|
+    |—|—|
+    |“”yyyy-ww`|每周第一天的旋转（取决于区域设置）。 |
+       | `&#39;.&#39;yyyy-MM-dd`每天午夜时分旋转。 |
+       | `&#39;.&#39;yyyy-MM-dd-a每天午夜和中午的轮换。 |
+       | `&#39;.&#39;yyyy-MM-dd-HH`每小时的顶部旋转。 |
+       | `&#39;.&#39;yyyy-MM-dd-HH-mm`每分钟开始时的旋转。 |
+ 注     
+    意：指定时间／日期时：
+      1. 您应该在单引号(&#39; &#39;)中“转义”文本；
+  这     是为了避免某些字符被解释为模式字母。
+       1. 在选项中的任意位置仅使用允许用于有效文件名的字符。
    
 
 1. 使用所选工具阅读新的日志文件。
 
    此示例创建的日志文件将为 `../crx-quickstart/logs/myLogFile.log`。
 
-Felix Console还提供有关Sling Log支持的信息，网址为 `../system/console/slinglog`:例如 `https://localhost:4502/system/console/slinglog`,
+Felix Console还提供有关Sling Log支持的信息，网址为 `../system/console/slinglog`;例如 `https://localhost:4502/system/console/slinglog`,
 
 ### 查找审计记录 {#finding-the-audit-records}
 
@@ -400,7 +393,7 @@ Felix Console还提供有关Sling Log支持的信息，网址为 `../system/cons
 #### AEM WCM页面创作时显示的审核记录 {#aem-wcm-audit-records-shown-when-page-authoring}
 
 1. 打开页面。
-1. 在Sidekick中，您可以选择带有锁定图标的选项卡，然后双击“审 **核日志……”**
+1. 在Sidekick中，您可以选择带有锁定图标的选项卡，然后多次单击审 **核日志……**
 1. 将打开一个新窗口，其中显示当前页面的审计记录列表。
 
    ![screen_shot_2012-02-02at43601pm](assets/screen_shot_2012-02-02at43601pm.png)
@@ -415,7 +408,7 @@ Felix Console还提供有关Sling Log支持的信息，网址为 `../system/cons
 
 #### 从Web控制台中的OSGi审核记录 {#osgi-audit-records-from-the-web-console}
 
-OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuration** Status”选项卡-> **Log Files **选项卡查看该记录：
+OSGi事件还会生成审核记录，该记录可从AEM Web控制台的“ **Configuration** Status”选项卡-> **Log Files **选项卡中查看：
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -433,9 +426,9 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
 
 1. 访问AEM中 **的** “工具”选项卡。
 1. 单击&#x200B;**复制**。
-1. 双击指向相应环境的代理的链接（左窗格或右窗格）;例如，作 **者上的代理**。
+1. 多次-单击相应环境的代理链接（左窗格或右窗格）;例如，作 **者上的代理**。
 
-   生成的窗口显示了创作环境中所有复制代理的概述，包括其目标和状态。
+   生成的窗口显示了创作环境的所有复制代理的概述，包括其目标和状态。
 
 1. 单击相应的代理名称（即链接）以显示该代理的详细信息：
 
@@ -444,32 +437,32 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
    在此对话框中，您可以：
 
    * 查看代理是否已启用。
-   * 查看所有复制的目标。
+   * 查看任何复制的目标。
    * 查看复制队列当前是否处于活动状态（已启用）。
    * 查看队列中是否有任何项目。
    * **刷新****或清除** ，更新队列条目的显示；这有助于您查看进入和离开队列的项目。
 
-   * **查看日志** ，以访问复制代理执行的任何操作的日志。
+   * **视图日志** ，用于访问复制代理执行的任何操作的日志。
    * **测试与目标实例的连接** 。
    * **如果需要** ，对任何队列项强制重试。
    >[!CAUTION]
    请勿将“测试连接”链接用于发布实例上的反向复制输出框。
    如果对发件箱队列执行复制测试，则所有早于测试复制的项目都将通过每个反向复制重新处理。
-   如果此类项目已存在于队列中，则可以使用以下XPath JCR查询找到它们，并应删除这些项目。
+   如果此类项目已存在于队列中，则可以使用以下XPath JCR查询找到它们，并应该删除它们。
    `/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
 同样，您可以开发一个解决方案来检测所有复制代理(位于 `/etc/replication/author` 或 `/etc/replication/publish`)，然后检查代理( `enabled`, `disabled`)和基础队列(、 `active`, `idle``blocked`)的状态。
 
 ## 监视性能 {#monitoring-performance}
 
-[性能优化](/help/sites-deploying/configuring-performance.md) (Performance Optimization)是一个交互式过程，在开发过程中会获得焦点。 部署后，通常在特定的间隔或事件后对其进行审阅。
+[性能优化](/help/sites-deploying/configuring-performance.md) (Performance Optimization)是一个交互式过程，在开发过程中会获得焦点。 部署后，通常会在特定的间隔或事件后对其进行审阅。
 
 在收集用于优化的信息时使用的方法也可用于进行持续监视。
 
 >[!NOTE]
 还可 [以检查可用于提高性能的](/help/sites-deploying/configuring-performance.md#configuring-for-performance) 特定配置。
 
-以下列出了所发生的常见性能问题，以及如何发现和抵消这些问题的建议。
+以下列表出现的常见性能问题，以及如何发现和消除这些问题的建议。
 
 | 区域 | 症状 | 要提高容量…… | 要减少音量…… |
 |---|---|---|---|
@@ -478,7 +471,7 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
 |  | 有些客户速度快，有些客户速度慢。 |  |  |
 | 服务器 |  |  |  |
 | 网络 | 服务器和客户端的CPU使用率都很低。 | 消除网络瓶颈。 | 改进／优化客户端缓存的配置。 |
-|  | （相对而言）在服务器上本地浏览速度较快。 | 增加网络带宽。 | 减少网页的“粗细”（例如，减少图像、优化的HTML）。 |
+|  | （相对而言）在服务器上本地浏览速度较快。 | 增加网络带宽。 | 减少网页的“权重”（例如，减少图像、优化的HTML）。 |
 | Web服务器 | Web服务器上的CPU使用率很高。 | 群集您的Web服务器。 | 减少每页的点击量（访问）。 |
 |  |  | 使用硬件负载平衡器。 |  |
 | 应用程序 | 服务器CPU使用率很高。 | 集群AEM实例。 | 搜索和消除CPU和内存存储（使用代码检查、定时输出等）。 |
@@ -489,7 +482,7 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
 
 性能问题可能源自与网站无关的许多原因，包括连接速度、CPU负载等方面的暂时性放缓。
 
-它也可能影响所有访客，或仅影响其中的子集。
+它也可能影响您的所有访客，或仅影响其中的子集。
 
 在优化常规性能或解决特定问题之前，需要获取、排序和分析所有这些信息。
 
@@ -535,17 +528,17 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
   <tr>
    <td>线程转储</td>
    <td>观察JVM线程。 识别竞争、锁和长跑者。</td>
-   <td><p><br /> 取决于操作系统：- Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）:Ctrl-Break<br /> </p> <p>还提供分析工具，如 <a href="https://java.net/projects/tda/">TDA</a>。<br /> </p> </td>
+   <td><p>取决于操作系统：<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）:Ctrl-Break<br /> </p> <p>分析工具也可用，如 <a href="https://java.net/projects/tda/">TDA</a>。<br /> </p> </td>
   </tr>
   <tr>
    <td>堆转储</td>
    <td>内存不足，导致性能降低。</td>
-   <td><p><br /> 添加：选项 <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 中，单击此图标。</p> <p>请参阅 <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">Java SE 6与热点虚拟机的疑难解答指南</a>。</p> </td>
+   <td><p>添加：<br /> 选项 <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 中，单击此图标。</p> <p>请参阅 <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">Java SE 6与热点虚拟机的疑难解答指南</a>。</p> </td>
   </tr>
   <tr>
    <td>系统调用</td>
    <td>确定时间问题。</td>
-   <td><p>调用或 <code>System.currentTimeMillis()</code> . <code>com.day.util</code>Timing可用于根据代码或通过 <a href="#html-comments">HTML-comments生成时间戳</a>。</p> <p><strong></strong> 注意：应实现这些功能，以便根据需要激活／取消激活它们；当系统运行顺利时，不需要收集统计信息的开销。</p> </td>
+   <td><p>调用或 <code>System.currentTimeMillis()</code> . <code>com.day.util</code>Timing可用于根据代码或通过 <a href="#html-comments">HTML-comments生成时间戳</a>。</p> <p><strong>注意：</strong> 应实现这些功能，以便根据需要激活／取消激活它们；当系统运行顺利时，不需要收集统计信息的开销。</p> </td>
   </tr>
   <tr>
    <td>Apache Bench</td>
@@ -555,7 +548,7 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
   <tr>
    <td>搜索分析</td>
    <td> </td>
-   <td>离线执行搜索查询，识别查询的响应时间，测试和确认结果集。<br /> </td>
+   <td>脱机执行搜索查询，识别查询响应时间，测试和确认结果集。<br /> </td>
   </tr>
   <tr>
    <td>JMeter</td>
@@ -570,12 +563,12 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
   <tr>
    <td>JConsole</td>
    <td>观察JVM度量和线程。</td>
-   <td><p>用法：jconsole</p> <p>请参 <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">阅使用</a> JConsole <a href="#monitoring-performance-using-jconsole">监视性能</a>。</p> <p><strong></strong> 注意：借助JDK 1.6,JConsole可通过插件进行扩展；例如，Top或TDA（线程转储分析器）。</p> </td>
+   <td><p>用法：jconsole</p> <p>请参 <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">阅使用</a> JConsole <a href="#monitoring-performance-using-jconsole">监视性能</a>。</p> <p><strong>注意：</strong> 借助JDK 1.6,JConsole可通过插件进行扩展；例如，Top或TDA（线程转储分析器）。</p> </td>
   </tr>
   <tr>
-   <td>Java visualVM</td>
+   <td>Java VisualVM</td>
    <td>观察JVM度量、线程、内存和概要分析。</td>
-   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>请参 <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">阅jvisualvm</a>、 <a href="https://visualvm.dev.java.net/">visualvm</a><a href="#monitoring-performance-using-j-visualvm">和使用(J)VisualVM监视性能</a>。</p> <p><strong></strong> 注意：借助JDK 1.6,VisualVM可通过插件进行扩展。</p> </td>
+   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>请参 <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">阅jvisualvm</a>、 <a href="https://visualvm.dev.java.net/">visualvm</a><a href="#monitoring-performance-using-j-visualvm">和使用(J)VisualVM监视性能</a>。</p> <p><strong>注意：</strong> 借助JDK 1.6,VisualVM可通过插件进行扩展。</p> </td>
   </tr>
   <tr>
    <td>桁架／地形，lsof</td>
@@ -604,7 +597,7 @@ OSGi事件还会生成审核记录，可从AEM web控制台的“ **Configuratio
 
 此文件注册有关向AEM发出的每个请求的基本信息。 从中可以得出有价值的结论。
 
-它 `request.log` 提供了一种内置方式，可查看请求需要多长时间。 出于开发目的，它有助于 `tail -f` 观看 `request.log` 响应速度缓慢的情况。 要分析更大的 `request.log` 问题，我们建 [议您 `rlog.jar` 使用它来排序和筛选响应时间](#using-rlog-jar-to-find-requests-with-long-duration-times)。
+优惠 `request.log` 使用内置方式查看请求需要多长时间。 出于开发目的，它有助于 `tail -f` 观看 `request.log` 响应速度缓慢的情况。 要分析更大的 `request.log` 问题，我们建 [议您 `rlog.jar` 使用它来排序和筛选响应时间](#using-rlog-jar-to-find-requests-with-long-duration-times)。
 
 我们建议将“慢”页面与页面隔离，然 `request.log`后单独调整这些页面以获得更好的性能。 这通常通过包括每个组件的性能指标或使用性能概要分析工具(如 ` [yourkit](https://www.yourkit.com/)`)来实现。
 
@@ -736,7 +729,7 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
 
 ### Apache Bench {#apache-bench}
 
-为了最大限度地减少特殊情况（如垃圾收集等）的影响，建议使用诸如 `apachebench` (例如， [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) ，获取更多文档)之类的工具来帮助识别内存泄漏并有选择地分析响应时间。
+为了最大限度地减少特殊情况（如垃圾收集等）的影响，建议使用诸如 `apachebench` (例如， [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) ，获取更多文档)这样的工具来帮助识别内存泄漏并有选择地分析响应时间。
 
 Apache Bench可通过以下方式使用：
 
@@ -799,7 +792,7 @@ Percentage of the requests served within a certain time (ms)
 100% 8106 (longest request)
 ```
 
-以上数字取自访问geometrixx公司页面的标准MAcBook pro笔记本电脑（2010年中），这包含在默认AEM安装中。 页面非常简单，但并未针对性能进行优化。
+以上数字取自访问geometrixx公司页面的标准MAcBook Pro笔记本电脑（2010年中），如默认AEM安装中所示。 页面非常简单，但并未针对性能进行优化。
 
 `apachebench` 还以平均方式显示每个请求的时间，即所有并发请求；请参 `Time per request: 54.595 [ms]` 阅（平均值，跨所有并发请求）。 您可以更改并发参数的值( `-c` 一次要执行的多个请求数)以查看任何效果。
 
@@ -807,7 +800,7 @@ Percentage of the requests served within a certain time (ms)
 
 有关请求流量（特定时间段内的请求数）的信息会指示实例的负载。 此信息可从 [request.log提取](#interpreting-the-request-log)，但使用计数器将自动收集数据，以便您查看：
 
-* 活动方面的显着差异（即“许多请求”和“低活动”之间的区别）
+* 在活动方面存在显着差异(即区分“许多请求”和“低活动”)
 * 当不使用实例时
 * 任何重新启动（计数器重置为0）
 
@@ -815,7 +808,7 @@ Percentage of the requests served within a certain time (ms)
 
 收集的信息可用于指示：
 
-* 活动的重大变动
+* 活动之重大变动
 * 冗余实例
 * 任何重新启动（计数器重置为0）
 
@@ -835,11 +828,11 @@ Percentage of the requests served within a certain time (ms)
 
 工具命令 `jconsole` 随JDK一起提供。
 
-1. 启动AEM实例。
+1. 开始AEM实例。
 1. 运行 `jconsole.`
 1. 选择您的AEM实例和 **Connect**。
 
-1. 从应用程 `Local` 序中双击 `com.day.crx.quickstart.Main`;概述将显示为默认值：
+1. 在应用程序 `Local` 中，多次单击 `com.day.crx.quickstart.Main`;概述将显示为默认值：
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -849,17 +842,17 @@ Percentage of the requests served within a certain time (ms)
 
 自JDK 1.6起，工具命令便 `jvisualvm` 可用。 安装JDK 1.6后，您可以：
 
-1. 启动AEM实例。
+1. 开始AEM实例。
 
    >[!NOTE]
-   如果使用Java 5，则可以将 `-Dcom.sun.management.jmxremote` 参数添加到启动JVM的java命令行。 默认情况下，JMX在Java 6中处于启用状态。
+   如果使用Java 5，则可以将参 `-Dcom.sun.management.jmxremote` 数添加到开始JVM的java命令行。 默认情况下，JMX在Java 6中处于启用状态。
 
 1. 运行以下任一操作：
 
    * `jvisualvm`:在JDK 1.6 bin文件夹中（测试版）
    * `visualvm`:可从VisualVM [](https://visualvm.dev.java.net/) （最低版本）下载
 
-1. 从应用程 `Local` 序中双击 `com.day.crx.quickstart.Main`;概述将显示为默认值：
+1. 在应用程序 `Local` 中，多次单击 `com.day.crx.quickstart.Main`;概述将显示为默认值：
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
@@ -876,7 +869,7 @@ Percentage of the requests served within a certain time (ms)
 以下信息可能很有用：
 
 * [有多少作者使用该系统？](#how-many-authors-are-working-with-the-system)
-* [每天平均激活页面的次数是多少？](#what-is-the-average-number-of-page-activations-per-day)
+* [每日平均页面激活数是多少？](#what-is-the-average-number-of-page-activations-per-day)
 * [您当前在此系统上维护多少页？](#how-many-pages-do-you-currently-maintain-on-this-system)
 * [如果使用MSM，则每月平均转出次数是多少？](#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month)
 * [每月Live Copy的平均数量是多少？](#what-is-the-average-number-of-live-copies-per-month)
@@ -902,9 +895,9 @@ cut -d " " -f 3 access.log | sort -u | wc -l
 grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 ```
 
-#### 每天平均激活页面的次数是多少？ {#what-is-the-average-number-of-page-activations-per-day}
+#### 每日平均页面激活数是多少？ {#what-is-the-average-number-of-page-activations-per-day}
 
-查看自服务器安装以来使用存储库查询的页面激活总数；通过CRXDE —— 工具——查询：
+查看自服务器安装以来使用存储库激活的页面查询总数；通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 
@@ -916,7 +909,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 您当前在此系统上维护多少页？ {#how-many-pages-do-you-currently-maintain-on-this-system}
 
-要查看服务器上当前的页数，请使用存储库查询；通过CRXDE —— 工具——查询：
+要查看服务器上当前的页数，请使用存储库查询;通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 
@@ -926,7 +919,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 如果使用MSM，则每月平均转出次数是多少？ {#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
 
-确定自安装以来使用存储库查询的转出总数；通过CRXDE —— 工具——查询：
+确定自安装以来使用存储库查询的转出总数；通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 
@@ -938,7 +931,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 每月Live Copy的平均数量是多少？ {#what-is-the-average-number-of-live-copies-per-month}
 
-确定自安装以来使用存储库查询创建的Live Copy总数；通过CRXDE —— 工具——查询：
+确定自安装以来创建的Live Copy总数，使用存储库查询;通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 
@@ -950,7 +943,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 如果您使用AEM资产，您当前在资产中维护的资产数量是多少？ {#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
 
-要查看当前维护的DAM资产数量，请使用存储库查询；通过CRXDE —— 工具——查询：
+要查看您当前维护的DAM资产数量，请使用存储库查询;通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 * **路径** `/`
@@ -973,7 +966,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 当前使用了多少个模板？ {#how-many-templates-are-currently-used}
 
-要查看服务器上当前的模板数，请使用存储库查询；通过CRXDE —— 工具——查询：
+要查看服务器上当前的模板数，请使用存储库查询;通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 * **路径** `/`
@@ -981,7 +974,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 #### 当前使用了多少个组件？ {#how-many-components-are-currently-used}
 
-要查看服务器上当前的组件数，请使用存储库查询；通过CRXDE —— 工具——查询：
+要查看服务器上当前的组件数，请使用存储库查询;通过CRXDE —— 工具-查询:
 
 * **类型** `XPath`
 * **路径** `/`
@@ -998,7 +991,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
    grep -R "\->" request.log | wc -l
    ```
 
-1. 要确定开始日期和结束日期，请执行以下操作：
+1. 要确定开始和结束日期，请执行以下操作：
 
    ```shell
    vim request.log
@@ -1013,7 +1006,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 ## 分析特定场景 {#analyzing-specific-scenarios}
 
-以下是关于在遇到某些性能问题时要检查的建议列表。 （不幸的是）这份清单并不全面。
+以下是一列表建议，说明在开始遇到某些性能问题时要检查什么。 列表（不幸的是）并不完全全面。
 
 >[!NOTE]
 另请参阅以下文章以了解更多信息：
@@ -1042,7 +1035,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 在这些情况下，请检查：
 
-* 用于启动AEM的JVM [设置](/help/sites-deploying/deploy.md#getting-started)
+* 用于 [开始AEM的JVM设置](/help/sites-deploying/deploy.md#getting-started)
 * 知识库：
 
    * [分析内存问题](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
