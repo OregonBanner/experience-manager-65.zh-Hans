@@ -2,7 +2,7 @@
 title: Adobe Experience Manager Assets发行说明
 description: Adobe Experience Manager 6.5 Assets 的新增功能和增强功能。
 translation-type: tm+mt
-source-git-commit: 92619acaa2eb820eda304355f8eaf79ec4a400e1
+source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
 
 ---
 
@@ -21,7 +21,7 @@ Read on to know the specific capabilities and integrations of [!DNL Experience M
 
 [!DNL Adobe Asset Link] 在内容创建过程中加强创意人员与营销人员之间的协作。 Creatives can access content stored in [!DNL Experience Manager Assets], without leaving the apps that they are most familiar with. Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
 
-[!DNL Adobe Asset Link] 是适用于企 [业的Creative Cloud产品的一部分](https://www.adobe.com/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] 是适用于企 [业的Creative Cloud产品的一部分](https://www.adobe.com/cn/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html).
 
 ![在Adobe Photoshop中搜索资源](assets/asset_search_photoshop.png)
 
@@ -65,7 +65,7 @@ For more info, see [Use [!DNL Adobe Stock] assets in Experience Manager Assets](
 
 [!DNL Dynamic Media] 提供增强的富媒体创作和投放, [!DNL Experience Manager Assets] 以推动令人痴迷和个性化的前沿体验。 通过上传单个高质量主资产并使用我们的高级云渲染和查看器，您可以实时传送任何再现组合以支持您组织的媒体战略。
 
-For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://marketing.adobe.com/resources/help/en_US/s7/release_notes/).
+For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### 360 视频支持 {#video-support}
 
@@ -77,7 +77,7 @@ Manage your 360-video files directly in [!DNL Experience Manager] using the cutt
 
 ### 辅助功能增强功能 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。 有关其他详细信息，请参阅 [Dynamic Media 查看器发行说明](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)。
+[!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。 有关其他详细信息，请参阅 [Dynamic Media 查看器发行说明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
 ## 搜索体验增强功能 {#search-experience-enhancement}
 
