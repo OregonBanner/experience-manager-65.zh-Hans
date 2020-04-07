@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a83def358e026b516add577f968dcc709357e458
+source-git-commit: fbe85c70ef993e4728bd76a327e1a27365cf1021
 
 ---
 
@@ -291,7 +291,7 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 
 答：将包放入……*/crx-quickstart/install* folder whice the server is available online. 包会自动进行安装。
 
-B. Use the [HTTP API from Package Manager](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html) - make sure that you use cmd=install&amp;recursive=true - so the nested packages  are  installed.
+B. Use the [HTTP API from Package Manager](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html) - make sure that you use cmd=install&amp;recursive=true - so the nested packages  are  installed.
 
 >[!NOTE]
 >
@@ -317,7 +317,7 @@ In order to see what platforms are certified to run with this release, please re
 >AEM 6.5.4.0 includes a new version of [AEM Forms Compatibility package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/AEM-FORMS-6.5.3.0-COMPAT). 如果您使用的是旧版AEM Forms兼容性包并更新到AEM 6.5.4.0，请在安装Forms Add-On包后安装最新版本的AEM Forms兼容性包。
 
 1. 确保您已安装了 AEM Service Pack。
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) for your operating system.
+1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) for your operating system.
 1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
 ### Install AEM Forms on JEE {#install-aem-forms-jee-installer}
@@ -326,7 +326,7 @@ In order to see what platforms are certified to run with this release, please re
 >
 >如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的AEM Forms中的修复通过单独的安装程序提供。
 
-For information about installing the cumulative installer for AEM Forms on JEE and post-deployment configuration, see the [release notes for patch 0011](https://helpx.adobe.com/aem-forms/quick-fixes/6-5/jee-patch-0011.html).
+For information about installing the cumulative installer for AEM Forms on JEE and post-deployment configuration, see the [release notes for patch 0011](https://helpx.adobe.com/cn/aem-forms/quick-fixes/6-5/jee-patch-0011.html).
 
 #### Workbench 安装程序
 
@@ -335,6 +335,8 @@ For information about installing the cumulative installer for AEM Forms on JEE a
 ### UberJar {#uber-jar}
 
 The UberJar for AEM 6.5.4.0 is available in the [Adobe Public Maven repository](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4/).
+
+包含 **com.fasterxml.jackson.core.async包的UberJar 6.5.4.0的更新版本可在** Adobe Public Maven存储库中找到 [](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.4-1.0/)。
 
 To use UberJar in a Maven project, refer to the article, [How to use UberJar](/help/sites-developing/ht-projects-maven.md) and include the following dependency in your project POM:
 
@@ -391,6 +393,6 @@ AEM 6.5.4.0 中包含的内容包列表
 >
 >* [AEM 6.5 发行说明](/help/release-notes/release-notes.md)
 >* [AEM 产品页面](https://www.adobe.com/solutions/web-experience-management.html)
->* [AEM 6.5 文档](https://helpx.adobe.com/support/experience-manager/6-5.html)
+>* [AEM 6.5 文档](https://helpx.adobe.com/cn/support/experience-manager/6-5.html)
 >* Subscribe to [Adobe priority product updates](https://www.adobe.com/subscription/priority-product-update.html)
 
