@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c25b04b043d6ec6289a561b630e3d0fad750629a
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -39,7 +39,7 @@ Experience Manager Service Pack 4(6.5.4.0)于2020年3月5日发布。 这是一�
 
 AEM资产与Brand Portal之间的授权渠道已更改。 以前，Brand Portal是通过旧版OAuth网关在经典UI中配置的，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 AEM资产现在通过Adobe I/O配置了Brand Portal，后者为Brand Portal租户购买IMS令牌以授权。
 
-根据AEM版本以及您是首次配置还是升级现有配置，使用Brand Portal配置AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
+根据AEM版本以及您是首次配置还是升级现有配置，配置带有Brand Portal的AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) 。
 
 
 ### 已知问题 {#known-issues-bp}
@@ -98,9 +98,13 @@ Experience Manager Forms包括以下辅助功能增强：
 
 ## 以前的AEM 6.5 Service Pack中的主要功能 {#key-features-previous-service-packs}
 
-### 动态媒体智能成像(6.5.3.0) {#smart-imaging}
+### 动态媒体智能成像 {#smart-imaging}
 
 智能成像使用每个用户的独特查看特性自动提供为其体验优化的正确图像，从而提高性能和参与度。 智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 请参阅 [智能成像](../assets/imaging-faq.md)。
+
+### Dynamic Media视频用户档案中的智能裁剪(6.5.3.0) {#smart-crop-video}
+
+视频智能裁剪是视频用户档案中的一项可选功能，它是一款工具，它使用Adobe Sensei中人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管大小。 请参 [阅关于在视频用户档案中使用智能裁剪](../assets/video-profiles.md)。
 
 ### AEM资产的可视搜索(6.5.2.0) {#visual-search}
 
@@ -151,7 +155,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 * AEM资产：桌面应用程序2.0.1.1
 
-   请参 [阅获取对资产的桌面访问](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)。
+   请参 [阅获取对资产的桌面访问](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html)。
 
 * AEM Screens:功能包202001
 
