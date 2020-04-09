@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -23,15 +23,15 @@ source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 | AEM版本 | AEM FORMS包版本 | 状态 |
 |---|---|---|
-| 6.4 | 5.0.86 | **受支持** |
-| 6.5 | 6.0.80 | **受支持** |
+| 6.4 | 5.0.86 | **支持** |
+| 6.5 | 6.0.80 | **支持** |
 
 此包中包含支持以下平台版本的云配置：
 
 | 云提供商 | 服务版本 | 状态 |
 |---|---|---|
-| Adobe Sign | v5 API | **受支持** |
-| Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **受支持** |
+| Adobe Sign | v5 API | **支持** |
+| Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **支持** |
 
 **包安装注意事项：**
 
@@ -40,18 +40,18 @@ source-git-commit: 33f73225fbb2c48353c1f34db3339c0bb79d4236
 
 ### 此包包含什么 {#what-does-this-package-include}
 
-AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个包，其中包括若干其他子包和服务。 该包包含以下模块：
+AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip**)是一个包，其中包含若干其他子包和服务。 该包包含以下模块：
 
-* **we-gov-forms.pkg.all-&lt;version>.zip** -*完整的演示包*
+* **we-gov-forms.pkg.all-&lt;version>.zip** —— 完整 *的演示包*
 
    * **we-gov-forms.ui.apps-&lt;version>.zip** *-包含所有组件、客户端库、示例用户、工作流模型等。*
 
-      * **we-gov-forms.core-&lt;version>.jar*** —— 包含所有OSGI服务、自定义工作流步骤实施等。*
+      * **we-gov-forms.core-&lt;version>.jar** —— 包 *含所有OSGI服务、自定义工作流步骤实现等。*
 
       * **core.wcm.components.all-2.0.4.zip** —— 示 *例WCM组件集合*
 
-      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *AEM Sites grid布局包的站点页面列控件*
-   * **we-gov-forms.ui.content-&lt;version>.zip*** —— 包含所有内容、页面、图像、*表单、交互式通信资源等。
+      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *AEM Sites Grid布局包的站点页面列控件*
+   * **we-gov-forms.ui.content-&lt;version>.zip** —— 包 *含所有内容、页面、图像、表单、交互式通信资源等。*
 
    * **we-gov-forms.config.public-&lt;version>.zip***—— 包含所有默认配置节点，包括占位符云配置，以帮助避免表单数据模型和服务绑定问题。*
 
@@ -60,10 +60,10 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 * 包含可编辑模板的AEM站点页面
 * AEM Forms自适应表单
-* AEM Forms Interactive Communications（打印和Web渠道）
+* AEM Forms Interactive Communications(印刷和Web渠道)
 * AEM Forms XDP记录文档
 * AEM Forms MS Dynamics Forms数据模型
-* Adobe sign集成
+* Adobe Sign集成
 * AEM Workflow模型
 * AEM Assets示例图像
 
@@ -142,22 +142,22 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 1. 单击菜单栏中的“保存并关闭”。
 1. 重复步骤2-7，方法是搜索“**analytics**”，选择“**Analytics Administrators**”组，并将“**We.Gov Form Users**”组添加为成员。
 1. 重复步骤2-7，方法是搜索“**forms users**”，选择“**forms-power-users**”组，并添加“**We.Gov Form Users**”组作为成员。
-1. 重复步骤2-7，方法是搜索“**forms users**”，选择“**forms-users**”组，这次将“** We.Gov Users**”组添加为成员。
+1. 重复步骤2-7，方法是搜索“**forms users**”，选择“**forms-users**”组，这次将“**We.Gov Users**”组添加为成员。
 
 ### 电子邮件服务器配置 {#email-server-configuration}
 
 1. 查看设置文档配 [置电子邮件通知](/help/sites-administering/notification.md)
 
 1. 导航 *到https://&lt;aemserver>:&lt;port>/system/console/configMgr*
-1. 找到并单击**Day CQ邮件服务**服务进行配置。
+1. 找到并单击要 **配置的Day CQ邮件服务** 。
 
-   ![配置Day CQ mail服务](assets/day_cq_mail_service.jpg)
+   ![配置Day CQ Mail服务](assets/day_cq_mail_service.jpg)
 
 1. 配置服务以连接到您选择的SMTP服务器：
 
    1. **SMTP服务器主机名**:例如(smtp.gmail.com)
    1. **服务器端口**:例如(465)，用于使用SSL的Gmail
-   1. **** SMTP用户：demo@ &lt;companyname>
+   1. **SMTP用户：** demo@ &lt;companyname>
    1. **“发件人”地址**:aemformsdemo@adobe.com
    ![配置SMTP](assets/configure_smtp.jpg)
 
@@ -188,7 +188,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 **引用:**
 
-1. [将Adobe sign与AEM Forms集成](adobe-sign-integration-adaptive-forms.md)
+1. [将Adobe Sign与AEM Forms集成](adobe-sign-integration-adaptive-forms.md)
 
 #### Cloud configuration {#cloud-configuration}
 
@@ -205,7 +205,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 1. 单击“属性”。
 1. 导航到“设置”选项卡。
 1. 输入身份验证URL，例如： [https://secure.na1.echosign.com/public/oauth](https://secure.na1.echosign.com/public/oauth)
-1. 从已配置的Adobe sign实例中提供已配置的客户端ID和客户端机密。
+1. 从已配置的Adobe Sign实例中提供已配置的客户端ID和客户端机密。
 1. 单击“连接到Adobe Sign”。
 1. 成功连接后，单击“保存并关闭”以完成集成。
 
@@ -229,16 +229,16 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 1. 选择“Microsoft Dynamics OData云服务”配置。
 1. 单击“属性”。
 
-   ![Microsoft OData Cloud service的属性](assets/properties_odata_cloud_service.jpg)
+   ![Microsoft OData Cloud Service的属性](assets/properties_odata_cloud_service.jpg)
 
 1. 导航到“身份验证设置”选项卡。
 1. 输入以下详细信息：
 
-   1. **** 服务根：例如https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/
-   1. **** 身份验证类型：OAuth 2.0
+   1. **服务根：** 例如https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/
+   1. **身份验证类型：** OAuth 2.0
    1. **身份验证设置** (要收 [集此信息，请参阅MS Dynamics云配置设置](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) ):
 
-      1. 客户端ID —— 也称为应用程序ID
+      1. 客户端ID —— 也称为应用程序 ID
       1. 客户端密钥
       1. OAuth URL —— 例如 [https://login.windows.net/common/oauth2/authorize](https://login.windows.net/common/oauth2/authorize)
       1. 刷新令牌URL —— 例如 [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
@@ -253,31 +253,31 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 #### MS Dynamics云配置设置 {#dynamicsconfig}
 
-本节中详细介绍的步骤旨在帮助您从MS Dynamics cloud实例中查找客户端ID、客户端机密和详细信息。
+本节中详细介绍的步骤旨在帮助您从MS Dynamics Cloud实例中查找客户端ID、客户端机密和详细信息。
 
 1. 导航到 [https://portal.azure.com/](https://portal.azure.com/) and login。
 1. 从左侧菜单中选择“所有服务”。
 1. 搜索或导航到“应用程序注册”。
 1. 创建或选择现有的应用程序注册。
-1. 复制 **要用作AEM云配置中OAuth** 客户端Id的应 **用程序ID**
+1. 复制 **应用程序 ID** ，以在AEM云配置中 **用作OAuth客户端Id**
 1. 单击“设置”或“清单”以配置回 **复URL。**
 
    1. 此URL必须与配置OData服务时用于访问AEM服务器的URL匹配。
 
-1. 在“设置”视图中，单击“密钥”以查看创建新密钥（在AEM中，此密钥用作客户端机密）。
+1. 在设置视图中，单击“密钥”以视图创建新密钥（在AEM中，此密钥用作客户端机密）。
 
-   1. 确保保留密钥的副本，因为您以后无法在Azure或AEM中查看它。
+   1. 确保保留密钥的副本，因为您以后无法在Azure或AEM中视图它。
 
-1. 要找到资源URL/服务根URL，请导航到MS Dynamics实例功能板。
+1. 要找到资源URL/服务根URL，请导航到MS Dynamics实例仪表板。
 1. 在顶部导航栏中，单击“销售”或您自己的实例类型和“选择设置”。
 1. 单击右下角附近的“自定义”和“开发人员资源”。
 1. 您将在此找到服务根URL:e.g
 
-* [https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
+   *[https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
 
 1. 有关刷新和访问令牌URL的详细信息，请访问：
 
-* [https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
+   *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
 #### 测试表单数据模型 {#testing-the-form-data-model}
 
@@ -312,7 +312,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 **引用:**
 
-* [与Adobe Analytics集成](../../sites-administering/adobeanalytics.md)
+* [与 Adobe Analytics 集成](../../sites-administering/adobeanalytics.md)
 
 * [连接到Adobe Analytics和创建框架](../../sites-administering/adobeanalytics-connect.md)
 
@@ -320,7 +320,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 * [配置分析和报告](configure-analytics-forms-documents.md)
 
-* [查看和了解AEM Forms分析报告](view-understand-aem-forms-analytics-reports.md)
+* [视图和了解AEM Forms分析报告](view-understand-aem-forms-analytics-reports.md)
 
 ### Adobe Analytics云服务配置 {#adobe-analytics-cloud-service-configuration}
 
@@ -340,24 +340,24 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 ### Adobe Analytics报告 {#adobe-analytics-reporting}
 
-#### 查看Adobe Analytics站点报告 {#view-adobe-analytics-sites-reporting}
+#### 视图Adobe Analytics站点报告 {#view-adobe-analytics-sites-reporting}
 
 1. 导航到 *https://&lt;aemserver>:&lt;port>/sites.html/content*
-1. 选择“AEM Forms We.Gov站点”以查看站点页面。
+1. 选择“AEM Forms We.Gov站点”以视图站点页面。
 1. 选择其中一个网站页面（例如“主页”），然后选择“分析和推荐”。
 
-   ![分析和建议](assets/analytics_recommendations.jpg)
+   ![分析与建议](assets/analytics_recommendations.jpg)
 
 1. 在此页上，您将看到从Adobe Analytics获取的与AEM站点页面相关的信息(注意：设计时，此信息会从Adobe Analytics中定期刷新，不会实时显示)。
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
-1. 返回页面视图页面（在步骤3.中访问），您还可以通过将显示设置更改为在“列表视图”中查看项目来查看页面视图信息。
+1. 返回页面视图页面（在步骤3.中访问），您还可以通过将显示设置更改为“列表视图”中的视图项来视图页面视图信息。
 1. 找到“视图”下拉菜单并选择“列表视图”。
 
    ![列表视图](assets/list_view.jpg)
 
-1. 从同一菜单中，选择“查看设置”，然后从“分析”部分选择要显示的列。
+1. 从同一菜单中，选择“视图设置”，然后从“分析”部分选择要显示的列。
 
    ![配置列](assets/configure_columns.jpg)
 
@@ -365,7 +365,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
    ![显示新列](assets/new_columns_display.jpg)
 
-#### 查看Adobe Analytics表单报告 {#view-adobe-analytics-forms-reporting}
+#### 视图Adobe Analytics表单报告 {#view-adobe-analytics-forms-reporting}
 
 1. 导航至
 
@@ -375,20 +375,20 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
    ![分析报告](assets/analytics_report.jpg)
 
-1. 等待页面加载，并查看分析报告数据。
+1. 等待页面加载，并视图分析报告数据。
 
-   ![查看分析报告数据](assets/analytics_report_data.jpg)
+   ![视图分析报告数据](assets/analytics_report_data.jpg)
 
-#### 查看Adobe Analytics报告 {#view-adobe-analytics-reporting}
+#### 视图Adobe Analytics报告 {#view-adobe-analytics-reporting}
 
 或者，您也可以直接导航到Adobe Analytics以查看分析数据。
 
 1. 导航到 [https://my.omniture.com/login/](https://my.omniture.com/login/)
 1. 使用凭据登录：
 
-   1. **** 公司：AEM Forms演示
-   1. **** 用户：&lt;请求提供>
-   1. **** 密码：&lt;请求提供>
+   1. **公司:** AEM Forms演示
+   1. **用户：** &lt;请求提供>
+   1. **密码：** &lt;请求提供>
 
 1. 从报表包中选择“We.Gov参考站点”。
 
@@ -404,10 +404,10 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 ### 启用AEM创作 {#enableauthoring}
 
-此演示包包含一个OSGI服务配置文件，它控制目标作者服务器上WCM过滤器服务的行为。 此配置使服务器在禁用的创作模式下运行（相当于？wcmmode=disabled），以便允许演示。 要更新此配置并启用创作，请执行以下步骤：
+此演示包包括OSGI服务配置文件，该文件控制WCM过滤器服务在目标作者服务器上的行为。 此配置使服务器在禁用的创作模式下运行（相当于？wcmmode=disabled），以便允许演示。 要更新此配置并启用创作，请执行以下步骤：
 
 1. 导航 *到https://&lt;aemserver>:&lt;port>/system/console/configMgr*
-1. 找到并单击要配置的**Day CQ WCM过滤器**服务服务。
+1. 找到并单击要 **配置的Day CQ WCM Filter** Service服务。
 
    ![Day CQ WCM过滤器](assets/day_cq_wcm_filter.jpg)
 
@@ -426,7 +426,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 #### Style system {#customizetemplates}
 
-此站点还提供客户端库，其中一个库导入Bootstrap 4( [https://getbootstrap.com/](https://getbootstrap.com/) )。 此客户端库位于
+此站点还提供客户端库，其中一个导入Bootstrap 4( [https://getbootstrap.com/](https://getbootstrap.com/) )。 此客户端库位于
 
 *https://&lt;aemserver>:&lt;port>/crx/de/index.jsp#/apps/we-gov/clientlibs/clientlib-base/css/bootstrap*
 
@@ -444,7 +444,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 *https://&lt;aemserver>:&lt;port>/assets.html/content/dam/we-gov*
 
-在编辑页面模板和表单模板时，您可以选择通过编辑导航和页脚组件来更新品牌徽标。 这些组件提供一个可配置的品牌和徽标对话框，可用于更新徽标：
+在编辑页面模板和表单模板时，您可以选择通过编辑导航和页脚组件来更新品牌徽标。 这些组件优惠可配置的品牌和徽标对话框，可用于更新徽标：
 
 ![模板徽标](assets/template_logos.jpg)
 
@@ -456,7 +456,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 所有站点页面均可从以下位置访问：https://&lt; *aemserver>:&lt;port>/sites.html/content/we-gov*
 
-这些站点页面还利用AEM grid包控制一些组件的布局。
+这些站点页面还利用AEM Grid包控制一些组件的布局。
 
 #### Style system {#style-system}
 
@@ -477,8 +477,8 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 **针对健康益处的注册申请：**
 
 * contact_id —— 用于在提交期间接收MS Dynamics联系人ID的隐藏字段
-* 提交——提交按钮逻辑需要自定义以支持回呼。 自定义有文档记录，但在通过表单数据模型向MS dynamics执行POST和GET操作时，需要一个大型脚本来提交表单。
-* 根面板——初始化事件用于以尽可能少的侵入方式将MS Dynamics按钮添加到AEM收件箱，因为所有AEM收件箱Granite UI组件都不可修改。
+* 提交——提交按钮逻辑需要自定义以支持回呼。 自定义有文档记录，但在通过表单数据模型向MS Dynamics执行POST和GET操作时，需要一个大型脚本来提交表单。
+* 根面板——初始化事件用于以尽可能少的侵入方式向AEM收件箱中添加MS Dynamics按钮，因为所有AEM收件箱Granite UI组件都不可修改。
 
 #### 自适应表单样式 {#adaptive-form-styling}
 
@@ -489,7 +489,7 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 
 ### 工作流自定义 {#workflow-customization}
 
-登记自适应表单提交到OSGI工作流以供处理。 此工作流程位于* https://&lt;aemserver>:&lt;port>/conf/we-gov/settings/models/we-gov-process.html*。
+登记自适应表单提交到OSGI工作流以供处理。 此工作流可在https://&lt;aemserver>:&lt; *port>/conf/we-gov/settings/models/we-gov-process.html中找到*。
 
 由于某些限制，此工作流包含多个脚本和自定义OSGI工作流进程步骤。 这些工作流步骤被创建为通用步骤，并且尚未使用配置对话框创建。 此时，工作流步骤的配置依赖于进程参数。
 
@@ -502,8 +502,8 @@ AEM Forms We.Gov演示包(**we-gov-forms.pkg.all-&lt;version>.zip **)是一个�
 ### 演示注意事项 {#demo-considerations}
 
 * 根据AGRS-159，确保在登记自适应表单中使用的联系人的姓名（第一名、中名和最后一名）是唯一的。
-* 注册自适应表单将向在表单的电子邮件字段中指定的电子邮件发送Adobe sign电子邮件。 该电子邮件地址不能与用于配置Adobe sign云配置的电子邮件地址相同。
-* 默认情况下，演示包包括若干OSGI服务配置，用于控制承载演示的目标服务器的整体行为。 这些配置包括WCM过滤器服务配置，默认情况下，该配置使服务器在禁用的 **创作模式下运行** （等同于？wcmmode=disabled）。 请参 [阅启用AEM创作](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) ，以允许页面创作。
+* 注册自适应表单将向在表单的电子邮件字段中指定的电子邮件发送Adobe Sign电子邮件。 该电子邮件地址不能与用于配置Adobe Sign云配置的电子邮件地址相同。
+* 默认情况下，演示包包括若干个OSGI服务配置，以控制承载演示的目标服务器的整体行为。 这些配置包括WCM过滤器服务配置，默认情况下，该配置使服务器在禁用的 **创作模式下运行** （等同于？wcmmode=disabled）。 请参 [阅启用AEM创作](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) ，以允许页面创作。
 
 ### 已知问题 {#known-issues}
 
