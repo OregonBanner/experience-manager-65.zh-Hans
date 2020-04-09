@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 3fe5f243c3e39029c1605a1a1977a48dba595d64
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -64,7 +64,9 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 * 要调用的AEM Forms服务。 客户端应用程序可以调用一个或多个服务。
 * 要调用AEM Forms服务的模式。 可以使用EJB或SOAP模式。 (请参阅 [设置连接属性](invoking-aem-forms-using-java.md#setting-connection-properties)。)
 
->[!NOTE] （仅限统包）用命令开始AEM Forms服务器，以 `standalone.bat -b <Server IP> -c lc_turnkey.xml` 指定EJB的服务器IP
+>[!NOTE]
+>
+>（仅限统包）用命令开始AEM Forms服务器，以 `standalone.bat -b <Server IP> -c lc_turnkey.xml` 指定EJB的服务器IP
 
 * 部署了AEM Forms的J2EE应用程序服务器。
 
@@ -190,12 +192,12 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
    <td>
     <ul>
      <li><p>adobe-rightsmanagement-client.jar</p></li>
-     <li><p>命名空间.jar</p></li>
+     <li><p>namespace.jar</p></li>
      <li><p>jaxb-api.jar</p></li>
      <li><p>jaxb-impl.jar</p></li>
      <li><p>jaxb-libs.jar</p></li>
      <li><p>jaxb-xjc.jar</p></li>
-     <li><p>lexangDatatype.jar</p></li>
+     <li><p>relaxngDatatype.jar</p></li>
      <li><p>xsdlib.jar</p></li>
     </ul></td>
    <td><p>调用Rights Management服务时需要。</p><p>如果AEM Forms部署在JBoss上，请包括所有这些文件。 </p></td>
@@ -235,7 +237,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
   <tr>
    <td>
     <ul>
-     <li><p>激活.jar</p> </li>
+     <li><p>activation.jar</p> </li>
      <li><p>axis.jar</p> </li>
      <li><p>commons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
@@ -343,7 +345,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
      <li><p>adobe-livecycle-client.jar</p> </li>
      <li><p>adobe-usermanager-client.jar</p> </li>
      <li><p>wlclient.jar</p> </li>
-     <li><p>激活.jar</p> </li>
+     <li><p>activation.jar</p> </li>
      <li><p>axis.jar</p> </li>
      <li><p>commons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
@@ -372,7 +374,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
      <li><p>adobe-livecycle-client.jar</p> </li>
      <li><p>adobe-usermanager-client.jar</p> </li>
      <li><p>wlclient.jar</p> </li>
-     <li><p>激活.jar</p> </li>
+     <li><p>activation.jar</p> </li>
      <li><p>axis.jar</p> </li>
      <li><p>commons-codec-1.3.jar</p> </li>
      <li><p>commons-collections-3.1.jar</p> </li>
@@ -703,7 +705,7 @@ AEM Forms服务不接受PDF文档作为其他数据类型，如对 `java.io.Inpu
 
 >[!NOTE]
 >
->为了在使用对象时防止WebLogic中的内存泄漏， `com.adobe.idp.Document` 请以2048字节或更少的块读取文档信息。 例如，以下代码读取2048字节的块中的文档信息：
+>为了在使用对象时防止WebLogic中的内存泄漏， `com.adobe.idp.Document` 请以2048字节或更少的块读取文档信息。 例如，以下代码以2048字节的块为单位读取文档信息：
 
 ```as3
         // Set up the chunk size to prevent a potential memory leak
