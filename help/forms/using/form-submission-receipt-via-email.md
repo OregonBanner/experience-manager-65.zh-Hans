@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
 
 ## 自适应表单数据提交 {#adaptive-form-data-submission}
 
-自适应表单提供了多种现成的提交操作工作流 [程](../../forms/using/configuring-submit-actions.md) ，用于将表单数据提交到不同的端点。
+自适应表单提供了多种现成的提交操作 [工作流](../../forms/using/configuring-submit-actions.md) ，用于将表单数据提交到不同的端点。
 
 例如，“电子邮 **件”操作** “提交”操作在自适应表单成功提交时发送电子邮件。 还可以将其配置为发送电子邮件中的表单数据和PDF。
 
@@ -31,23 +31,23 @@ source-git-commit: 94472fad34fe97740e4711d2cb35beb884db52ce
 
 ## Email action {#email-action}
 
-通过“电子邮件”动作，作者可以在自适应表单成功提交时自动向一个或多个收件人发送电子邮件。
+通过“电子邮件”操作，作者可以在自适应表单成功提交时自动向一个或多个收件人发送电子邮件。
 
 >[!NOTE]
 >
->要使用电子邮件操作，您需要配置AEM邮件服务，如配置邮 [件服务](/help/sites-administering/notification.md#configuring the mail service)中所述。
+>要使用电子邮件操作，您需要配置AEM邮件服务，如配置邮 [件服务中所述](/help/sites-administering/notification.md#configuring-the-mail-service)。
 
 ### 在自适应表单上启用“电子邮件”操作 {#enabling-email-action-on-an-adaptive-form}
 
 1. 在编辑模式下打开自适应表单。
 
-1. 单 **击** “自适应表单 **的开头”工具栏旁边的编辑** 。
+1. 单 **击“自适应** 表单”工 **具栏开始旁的“编辑** ”。
 
    此时将打开编辑组件对话框。
 
    ![自适应表单的编辑组件对话框](assets/start_of_adp_form.png)
 
-1. 选择“提 **交操作** ”选项卡，然后从“提 **交操作”下拉列表中选择** “电子邮件操作”。
+1. 选择“提 **交操作** ”选项卡，然后从“提 **交操作”下拉列表中选择“电子邮件操作** ”。
 
    该选项卡显示用于为当前表单配置电子邮件操作的选项。
 
