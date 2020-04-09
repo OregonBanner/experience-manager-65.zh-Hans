@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -93,7 +93,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
    对于按揭任务应用程序示例，将分配文档步骤配置为使用只读自适应表单并在任务完成后显示PDF。 此外，选择允许批准贷款请求的用户组。 在“操 **作** ”选项卡上，禁用“ **提交** ”选项。 创建String **数据类型的actionTaked** 变量，并将该变量指定为 **Route Variable**。 例如，actionTaked。 此外，添加批准和拒绝路由。 这些路由在AEM收件箱中显示为单独的操作（按钮）。 该工作流会根据用户点击的操作（按钮）选择分支。
 
-   您可以导入示例包，该示例包可在章节的开头下载，以获得为例按揭任务应用程序配置的分配分配分配步骤的所有字段的完整值集。
+   您可以导入示例包，该示例包可在章节的开头下载，以获取为例如按揭任务应用程序配置的分配分配分配步骤的所有字段的完整值集。
 
 1. 将OR拆分组件从步骤浏览器拖放到工作流模型。 “或拆分”(OR Split)在工作流中创建拆分，之后只有一个分支处于活动状态。 通过此步骤，您可以将条件处理路径引入工作流中。 您可以根据需要向每个分支添加工作流步骤。
 
@@ -101,7 +101,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
    使用表达式编辑器为Branch 1和Branch 2创建路由表达式。 这些路由表达式可帮助根据AEM收件箱中的用户操作选择分支。
 
-   **路由第1分支表达式**
+   **路由第2分支表达式**
 
    当用户在AEM收件箱中 **点击** “批准”时，将激活Branch 1。
 
@@ -271,4 +271,4 @@ AEM Forms应用程序与AEM Forms服务器同步，允许您对帐户中的表�
 
 ### 清除工作流实例 {#purge-workflow-instances}
 
-最大程度地减少工作流实例的数量会提高工作流引擎的性能，因此您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参 [阅定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular purging of Workflow instances)。
+最大程度地减少工作流实例的数量会提高工作流引擎的性能，因此您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参 [阅定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
