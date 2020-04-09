@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -72,7 +72,7 @@ AEM Forms提供AEM Forms应用程序的完整源代码。 源包含用于构建�
 1. 解压缩目录中的存 `[User_Home]/Projects/[your-project]`档。
 1. 导航到您 ` [User_Home]/Projects/ `[的项目目录]`/adobe-lc-mobileworkspace-src-[version]/ios` 。
 1. 在Xcode中 `AEM Forms.xcodeproj` 打开项目。
-1. 单击 **AEM Forms**，在“目标” **下**，选 **择“AEM Forms**”。 选择“**构建设置”**选项卡，找到“代码签 **名授权** ”部分，在“调试”和“发行”字段中执行下列操作之一：
+1. 单击 **AEM Forms**，在“目标” **下**，选 **择“AEM Forms**”。 选择“ **构建设置** ”选项卡，找到“代码签 **名授权** ”部分，在“调试”和“发行”字段中，执行下列操作之一：
 
    * 不指定字段以构建标准Mobile Workspace应用程序
    * 如构建适用于iOS的安全AEM Forms应用 [程序以构建安全AEM Forms应用程序中所述](/help/forms/using/building-secure-mobile-workspace-app.md) ，指定要构建的字段。
