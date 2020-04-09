@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -184,7 +184,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
      <li>此主题的用户定义的clientlib类别名称。</li>
      <li>如果某些其他现有主题已使用该名称，则显示错误。</li>
      <li>默认值——使用主题位置计算。</li>
-     <li>更改此值后，类别名称会在相应的clientlib节点上更新。 Updating Clientlib Category Name in the jsp files is not required because clientlib category name is used by reference.</li>
+     <li>更改此值后，类别名称会在相应的clientlib节点上更新。 在jsp文件中更新Clientlib类别名称不是必需的，因为引用使用了clientlib类别名称。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -198,7 +198,7 @@ AEM Forms随主题编辑器一起提供。 它是一个商业用户和Web设计�
 
 主题编辑器分为两个面板：
 
-* **Canvas** - Appears on the right side. 它显示了示例自适应表单或交互式通信，其中所有样式更改都可即时反映。 您还可以直接从画布中选择对象，以查找与其关联的样式，并编辑这些样式。 顶部的设备分辨率标尺将控制画布。 从标尺中选择分辨率断点可显示示例表单的预览或相应分辨率的交互式通信。 下面将详细介绍画 [布](../../forms/using/themes.md#using-canvas)。
+* **画布** -显示在右侧。 它显示了示例自适应表单或交互式通信，其中所有样式更改都可即时反映。 您还可以直接从画布中选择对象，以查找与其关联的样式，并编辑这些样式。 顶部的设备分辨率标尺将控制画布。 从标尺中选择分辨率断点可显示示例表单的预览或相应分辨率的交互式通信。 下面将详细介绍画 [布](../../forms/using/themes.md#using-canvas)。
 
 * **侧栏**-显示在左侧。 它包含以下项目：
 
@@ -209,9 +209,9 @@ AEM Forms随主题编辑器一起提供。 它是一个商业用户和Web设计�
 
       **样式特定组件**:特定组件会影响特定类别的对象。 设置主题中数字框组件的样式时，只有样式中的数字框对象继承该样式。
 
-      例如，文本框字段（如地址）的长度较长，数字框字段（如页面）的长度较短。 您可以选择一个数字框字段，缩短其长度并应用于表单。 Width of all numeric box fields is reduced in your form.
+      例如，文本框字段（如地址）的长度较长，数字框字段（如页面）的长度较短。 您可以选择一个数字框字段，缩短其长度并应用于表单。 表单中所有数字框字段的宽度都会减少。
 
-      当您使用特定的背景颜色自定义所有字段组件时，所有字段（如年龄、名称和地址）都将继承背景颜色。 When you select a numeric box, such as age, and reduce its width, width of all the numeric boxes such as age, number of people in a family is reduced. 文本框的宽度未更改。
+      当您使用特定的背景颜色自定义所有字段组件时，所有字段（如年龄、名称和地址）都将继承背景颜色。 当您选择数字框（如年龄）并减少其宽度时，所有数字框（如年龄）的宽度会减少，家庭中的人数也会减少。 文本框的宽度未更改。
 
    * **州：** 允许您自定义特定状态中对象的样式。 例如，您可以指定对象处于默认、焦点、禁用、悬停或错误状态时的外观。
    * **财产类别:** 样式属性分为多个类别。 例如，“尺寸和位置”、“文本”、“背景”、“边框”和“效果”。 在每个类别下，您提供样式信息。 例如，在“背景”下，可以提供“背景颜色”和“图像和渐变”。
@@ -225,19 +225,19 @@ AEM Forms随主题编辑器一起提供。 它是一个商业用户和Web设计�
 
 ### 样式组件 {#styling-components}
 
-You can use a theme in multiple adaptive forms and interactive communications, which imports the component formatting that you have specified in the theme. You can style various components such as titles, description, panels, fields, icons, and text boxes. Use widgets to configure component properties in a theme. Prior knowledge of CSS or LESS is not required but desired, though the CSS Overrides section lets you write CSS code or provide custom selectors. The CSS Overrides section appears when you select a component in the sidebar.
+您可以在多个自适应表单和交互式通信中使用主题，这将导入您在主题中指定的组件格式。 您可以设置各种组件的样式，如标题、说明、面板、字段、图标和文本框。 使用构件在主题中配置组件属性。 虽然CSS覆盖部分允许您编写CSS代码或提供自定义选择器，但并不要求您事先掌握CSS或LESS知识，而是需要掌握。 在提要栏中选择组件时，将显示“CSS覆盖”部分。
 
-![Stylable components in the sidebar](assets/stylable-components.png)
+![提要栏中的可设置样式的组件](assets/stylable-components.png)
 
-Options in sidebar that let you select and style different components.
+提要栏中的选项，允许您选择不同的组件并设置其样式。
 
-Clicking edit button against a component in the sidebar selects the component in Canvas, and lets you style the component using options in the sidebar.
+单击提要栏中某个组件的编辑按钮将选择画布中的组件，并允许您使用提要栏中的选项设置组件样式。
 
-Certain components like text box, numeric box, radio button, and check box are categorized under generic components like Field. For example, you want to customize styling of radio buttons. To select radio buttons for styling, select **Field > Widget > Radio Button**.
+某些组件（如文本框、数字框、单选按钮和复选框）按“字段”等通用组件分类。 例如，您希望自定义单选按钮的样式。 要选择用于样式的单选按钮，请选择“字 **段”>“构件”>“单选按钮**”。
 
-Click **EXPAND ALL** in the sidebar to view, select, and style categorized components that are not visible upfront.
+单 **击提要栏中的** “全部展开”以视图、选择未在前面可见的分类组件并设置其样式。
 
-### Styling panel layouts {#styling-panel-layouts-br}
+### 样式面板布局 {#styling-panel-layouts-br}
 
 AEM Forms中的主题支持在表单和交互式通信中的面板布局中设置元素样式。 支持在开箱即用的布局和自定义布局中设置元素样式。
 
@@ -257,63 +257,63 @@ AEM Forms中的主题支持在表单和交互式通信中的面板布局中设�
 从主题编辑器设置自定义布局的样式涉及：
 
 * 为可设置样式的布局定义组件，为唯一标识这些组件的CSS选择器
-* Defining the CSS properties that can be applied on these components
-* Define the styling for these components interactively from the user interface
+* 定义可应用于这些组件的CSS属性
+* 从用户界面以交互方式定义这些组件的样式
 
-### Different styles for different screen sizes {#different-styles-for-different-screen-sizes-br}
+### 不同屏幕大小的不同样式 {#different-styles-for-different-screen-sizes-br}
 
-Desktop and mobile layouts can have slightly or entirely different styles. For mobile devices, tablet and phone share similar layouts except for component sizes.
+桌面和移动布局的样式可能略有不同或完全不同。 对于移动设备，除了组件大小外，平板电脑和手机共享的布局相似。
 
-Use Theme Editor breakpoints to define alternate styling for different screen sizes. You can select a base device or resolution on which you start building the theme, and the styling variations for other resolutions are automatically generated. You can explicitly modify the styling for all the resolutions.
+使用主题编辑器断点可为不同的屏幕大小定义替代样式。 您可以选择开始构建主题的基本设备或分辨率，并自动生成其他分辨率的样式变化。 您可以显式修改所有分辨率的样式。
 
 >[!NOTE]
 >
->The theme is first created using a form or interactive communication, and then applied on different forms or interactive communications. The breakpoints used in theme creation can be different from the form or interactive communication on which the theme is applied. The CSS media queries are based on the form or interactive communication used in theme creation, and not the form or interactive communication on which the theme is applied.
+>该主题首先使用表单或交互式通信创建，然后应用于不同的表单或交互式通信。 在主题创建中使用的断点可以不同于应用主题的表单或交互式通信。 CSS媒体查询基于在主题创建中使用的表单或交互式通信，而不基于应用主题的表单或交互式通信。
 
-### Styling properties context changes in sidebar on selecting objects {#styling-properties-context-changes-in-sidebar-on-selecting-objects}
+### 在选择对象时，边栏中样式属性上下文的更改 {#styling-properties-context-changes-in-sidebar-on-selecting-objects}
 
 在画布中选择组件时，其样式属性将列在提要栏中。 选择对象类型及其状态，然后提供其样式。
 
 ### 主题编辑器中最近使用的样式 {#recently-used-styles-in-theme-editor}
 
-Theme editor caches upto 10 styles applied to a component. You can use the cached styles with other component of a theme. Recently-used styles are available right below the selected component in sidebar as a list box. 最初，最近使用的样式列表为空。
+主题编辑器可缓存多达10种应用于组件的样式。 可以将缓存的样式与主题的其他组件一起使用。 最近使用的样式在提要栏中选定组件的正下方作为列表框可用。 最初，最近使用的样式列表为空。
 
 ![资源库](assets/asset-library.png)
 
-As you style a component, the styles are cached and listed in the list box. In this example, the label of the text box is styled to change the font size and color. 您可以按照类似的步骤选择图像或更改颜色以设置组件样式。 Observe how the style is cached and listed in the list box when the field label styling is changed.
+设置组件样式时，样式将缓存并列在列表框中。 在此示例中，文本框的标签将设置样式以更改字体大小和颜色。 您可以按照类似的步骤选择图像或更改颜色以设置组件样式。 观察当字段标签样式发生更改时，样式如何缓存并列在列表框中。
 
-![Font style cached for a component available for another](assets/font-style-cached.png)
+![为其他组件可用的组件缓存的字体样式](assets/font-style-cached.png)
 
-In this example, style for the field label is changed, and when Responsive Panel Description is selected for style, a list entry is added in the asset library. The entry in the asset library can be used to change the style for Responsive Panel Description.
+在此示例中，字段标签的样式已更改，当为样式选择响应式面板描述时，资产库中会添加一个列表条目。 资源库中的条目可用于更改响应式面板描述的样式。
 
-When a style is added in the asset library, it is available for other themes and in the [style mode](../../forms/using/inline-style-adaptive-forms.md) of the form editor or interactive communication editor UI. Similarly, when you use the style mode of the form editor or interactive communication editor UI to style a component, the style is cached and is available in themes.
+当样式添加到资源库中时，其他主题可以使用该样式，并在表单编辑器或交 [互式通信编辑器](../../forms/using/inline-style-adaptive-forms.md) UI的样式模式下使用该样式。 同样，当您使用表单编辑器或交互式通信编辑器UI的样式模式来设置组件样式时，该样式也会缓存，并且可用于主题。
 
-通过资产库的加号按钮，您可以永久保存带有您提供的名称的样式。 The plus button saves the style even if you do not click the Save button in the sidebar to apply the style to a component. The plus button to save a style for later use is not available in the style mode.
+通过资产库的加号按钮，您可以永久保存带有您提供的名称的样式。 加号按钮会保存样式，即使您不单击提要栏中的“保存”按钮将样式应用于组件也是如此。 样式模式中不提供用于保存样式以供以后使用的加号按钮。
 
-![Providing a custom style name for asset libary](assets/custom-style-name.png)
+![为资源库提供自定义样式名称](assets/custom-style-name.png)
 
-When you provide a custom name for a style, the style is tied to a theme and is no longer available to other themes. 删除保存的样式：
+当您为样式提供自定义名称时，该样式将绑定到主题，并且不再对其他主题可用。 删除保存的样式：
 
 1. 在“画布”工具栏上，单击“ **主题选项** ” ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/theme-options.png) >“ **管理样式”**。
-1. In the Manage Styles dialog, select a saved style, click **Delete**.
+1. 在“管理样式”对话框中，选择保存的样式，然后单击“删 **除”**。
 
-   ![Delete the saved style](assets/manage-styles.png)
+   ![删除保存的样式](assets/manage-styles.png)
 
-### Live preview, save, and discard changes {#live-preview-save-and-discard-changes}
+### 实时预览、保存和放弃更改 {#live-preview-save-and-discard-changes}
 
-样式中所做的修改会立即反映在画布中加载的表单或交互式通信中。 Live preview lets you interactively define and see the impact of the styling. When you change the styling of a component, the **Done** button is enabled in the sidebar. To retain changes, use the **Done** button.
+样式中所做的修改会立即反映在画布中加载的表单或交互式通信中。 实时预览允许您交互定义和查看样式的影响。 更改组件的样式时，提要栏中 **会启用** “完成”按钮。 要保留更改，请使用“完 **成** ”按钮。
 
 >[!NOTE]
 >
->When an invalid character is entered in a field, the field boundary color changes to red and an error message is displayed at the top-left corner of the screen. For example, if you enter alphabets in a textbox which accepts numeric characters as inputs, the input box boundary color changed to red. You cannot save such a theme without resolving the error displayed on the top.
+>在字段中输入无效字符时，字段边界颜色将变为红色，并在屏幕的左上角显示一条错误消息。 例如，如果在接受数字字符作为输入的文本框中输入字母，则输入框的边界颜色将更改为红色。 要保存此类主题，必须解决顶部显示的错误。
 
 ### 具有其他自适应表单或交互式通信的主题 {#theme-with-another-adaptive-form-or-interactive-communication}
 
-When you create a theme, it is created with a form that is shipped with the Theme Editor. You provide styling for components in this form. Instead of the form that is shipped with the Theme Editor, you can select a form or interactive communication of your choice to provide styling and preview its results.
+创建主题时，会使用随主题编辑器一起提供的表单创建该主题。 您为此表单中的组件提供样式。 您可以选择表单或您选择的交互式通信，以提供样式并预览其结果，而不是随主题编辑器一起提供的表单。
 
-To replace the current form or interactive communication in Theme Editor Canvas:
+要替换主题编辑器画布中的当前表单或交互式通信，请执行以下操作：
 
-1. In the THEME EDITOR panel, click **Theme Options** ![theme-options](assets/theme-options.png) > **Configure**.
+1. 在“主题编辑器”面板中，单击“主 **题选项** ” ![“主题选项](assets/theme-options.png) ” **>“配**&#x200B;置”。
 
 1. 在“常规”选项卡中，浏览并选择“自适应表单/文档”字段的 **表单或交互式通信** 。
 
@@ -556,11 +556,11 @@ To replace the current form or interactive communication in Theme Editor Canvas:
 要将主题应用于交互式通信，请执行以下操作：
 
 1. 在编辑模式下打开您的交互式通信。 要在编辑模式下打开交互式通信，请选择一个表单，然后单击“打 **开”**。
-1. 在编辑模式中，选择一个组件，单击 ![字段级别](assets/field-level.png) >**文档容器**，然后单 ![击cmppr](assets/cmppr.png)。
+1. 在编辑模式中，选择一个组件，然后单击 ![字段级别](assets/field-level.png) >**文档容器**，然后单 ![击cmppr](assets/cmppr.png)。
 
    您可以在提要栏中编辑表单的属性。
 
-1. 在提要栏中，在**基本**下，从 **Theme** （主题）下拉菜单中选择您的主题，然后单击 **Done**![（完成）复选框](assets/check-button.png)
+1. 在提要栏的“基 **本**”下，从“主题”下拉菜单中选择您的主题 **，然后单击“完** 成 ****![”复选框按钮](assets/check-button.png)
 
 ### 在运行时更改表单的主题 {#change-theme-of-a-form-at-runtime}
 
