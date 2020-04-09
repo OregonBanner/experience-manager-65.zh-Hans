@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 ---
 
@@ -215,7 +215,7 @@ Sarah在电子邮件中单击“视图对帐单”以视图信用卡对帐单。
 
 ![信用卡对帐单的不同部分](assets/sara-rose-statement.png)
 
-Sarah无需访问门户或通过电子邮件搜索信用卡对帐单的PDF版本，即可脱机存档。 她只需单击“下载语句”即可下载该语句的PDF版本。
+Sarah无需访问门户或通过电子邮件搜索信用卡对帐单的PDF版本以便脱机存档。 她只需单击“下载语句”即可下载该语句的PDF版本。
 
 详细的语句列在响应式表中。 该声明还提供了从声明中支付部分或全部到期款项的选项。
 
@@ -298,9 +298,9 @@ We.Finance会不时检查其信用卡应用程序的性能，以检查客户可�
 1. 转到表单和文档UI，选择表单，单击“更 **多**”，然后选择 **开始A/B测试**。
 1. 现在，使用以下URL在Chrome浏览器中多次打开表单：
 
-   `https://&lt;*hostname*&gt;:&lt;*port*&gt;/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
 
-   >[!NOTE] 注意：在下次打开表单之前，从浏 **览器的** cookie持久性中删除名为mbox的cookie。 您将随机看到表单的体验A和B。
+   >[!NOTE] 在下次打开表单之前，从浏 **览器的** cookie持久性中删除名为mbox的cookie。 您将随机看到表单的体验A和B。
 
 1. 选择表单，单击“ **更多**”，然后单 **击“A/B测试报告”**。 由于您刚刚开始测试，因此报告中找不到太多数据。 现在，让我们提供一些种子数据，了解A/B测试报告的外观。
 1. 打开CRXDE Lite并备份以下文件：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
@@ -546,7 +546,7 @@ We.Finance会不时检查其抵押申请的表现，以检查客户可能面临�
 1. 根据需要修改表单，以创建不同于默认体验A的其他体验。
 1. 转到表单和文档UI，选择表单，单击“更 **多**”，然后选择 **开始A/B测试**。
 1. 现在，使用以下URL在Chrome浏览器中多次打开表单：
-   `https://&lt;hostname&gt;:&lt;port&gt;/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
+   `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
 
    >[!NOTE]
    > 在下次打开表单之前，从浏 **览器的** cookie持久性中删除名为mbox的cookie。 您将随机看到表单的体验A和B。
@@ -700,7 +700,7 @@ Sarah是We.Finance的现有客户。 她使用自己的We.Finance帐户凭据登
 
 建议查看表单以了解用于构建表单的模式、组件、规则、表单数据模型、表单工作流和提交操作。
 
-另外，请参阅以下文档以了解有关家庭保险应用程序自适应表单中使用的功能的更多信息：
+另外，请参阅以下文档，了解有关家庭保险应用程序自适应表单中使用的功能的更多信息：
 
 * [自适应表单创作简介](../../forms/using/introduction-forms-authoring.md)
 * [使用XML模式创建自适应表单](../../forms/using/adaptive-form-xml-schema-form-model.md)
