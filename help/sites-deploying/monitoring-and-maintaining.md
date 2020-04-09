@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e46f0d6b842ff1a295d411c770f36dd82001bcb2
+source-git-commit: 4244ebbe8ceb3bef8d47e1e32817edbd11db4d9a
 
 ---
 
@@ -151,8 +151,8 @@ CRX文 [档的“备份和恢复](/help/sites-administering/backup-and-restore.m
 
 在下一个示例中：
 
-* 衬 **衫版本会被清除** ，因为其版本年龄大于2天。
-* 汤加 **时尚队！** 版本会被清除，因为其版本数大于5。
+* 将 **[!DNL Shirts]** 清除这些版本，因为其版本年龄大于2天。
+* 将清 **[!DNL Tonga Fashions!]** 除这些版本，因为其版本数大于5。
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
 
