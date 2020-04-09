@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
+source-git-commit: e46f0d6b842ff1a295d411c770f36dd82001bcb2
 
 ---
 
@@ -366,19 +366,17 @@ When working with Adobe Experience Manager there are several methods of managing
    * 时间／日期计划可以指定为模 `java.util.SimpleDateFormat` 式。 这定义了文件旋转的时间段；还有附加到旋转文件（用于标识）的后缀。
    默认为 &#39;.&#39;yyyy-MM-dd（用于日志旋转）。
    例如，在2010年1月20日午夜（或者，当这之后的第一条日志消息准确无误时）,../logs/error.log将更名为../logs/error.log.2010-01-20。 1月21日的日志记录将输出到../logs/error.log（新的和空的），直到在下一天的更改时滚过。
-       | `&#39;.&#39;yyyy-MM`|每月初的轮换|
-    |—|—|
-    |“”yyyy-ww`|每周第一天的旋转（取决于区域设置）。 |
-       | `&#39;.&#39;yyyy-MM-dd`每天午夜时分旋转。 |
-       | `&#39;.&#39;yyyy-MM-dd-a每天午夜和中午的轮换。 |
-       | `&#39;.&#39;yyyy-MM-dd-HH`每小时的顶部旋转。 |
-       | `&#39;.&#39;yyyy-MM-dd-HH-mm`每分钟开始时的旋转。 |
- 注     
-    意：指定时间／日期时：
-      1. 您应该在单引号(&#39; &#39;)中“转义”文本；
-  这     是为了避免某些字符被解释为模式字母。
-       1. 在选项中的任意位置仅使用允许用于有效文件名的字符。
-   
+   | `'.'yyyy-MM` | 每月初的轮换 |
+   |---|---|
+   | `'.'yyyy-ww` | 每周第一天的旋转（取决于区域设置）。 |
+   | `'.'yyyy-MM-dd` | 每天午夜轮流。 |
+   | `'.'yyyy-MM-dd-a` | 每天午夜和中午轮流。 |
+   | `'.'yyyy-MM-dd-HH` | 每小时最上方的旋转。 |
+   | `'.'yyyy-MM-dd-HH-mm` | 每分钟开始时旋转。 |
+   注意：指定时间／日期时：
+   1. 您应该在单引号(&#39; &#39;)中“转义”文本；这是为了避免某些字符被解释为模式字母。
+   1. 在选项中的任意位置仅使用允许用于有效文件名的字符。
+
 
 1. 使用所选工具阅读新的日志文件。
 
