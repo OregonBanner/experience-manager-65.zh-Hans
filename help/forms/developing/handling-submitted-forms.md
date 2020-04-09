@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ---
 
@@ -20,9 +20,9 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 使用户能够填写交互式表单的基于Web的应用程序需要将数据提交回服务器。 使用Forms服务，您可以检索用户在交互式表单中输入的数据。 检索数据后，您可以处理数据以满足您的业务需求。 例如，您可以将数据存储在数据库中，将数据发送到另一个应用程序，将数据发送到另一个服务，将数据合并到表单设计中，在Web浏览器中显示数据，等等。
 
-表单数据将作为XML或PDF数据提交到Forms服务，这是在Designer中设置的选项。 作为XML提交的表单使您能够提取单个字段数据值。 即，您可以提取用户在表单中输入的每个表单字段的值。 作为PDF数据提交的表单是二进制数据，而不是XML数据。 您可以将表单另存为PDF文件，或将表单发送到其他服务。 如果要从作为XML提交的表单中提取数据，然后使用表单数据创建PDF文档，请调用其他AEM表单操作。 (请参阅 [使用提交的XML数据创建PDF文档](/help/forms/developing/creating-pdf-documents-submitted-xml.md))
+表单数据将作为XML或PDF数据提交到Forms服务，这是在Designer中设置的选项。 作为XML提交的表单使您能够提取单个字段数据值。 即，您可以提取用户在表单中输入的每个表单字段的值。 作为PDF数据提交的表单是二进制数据，而不是XML数据。 您可以将表单另存为PDF文件，或将表单发送到其他服务。 如果要从作为XML提交的表单中提取数据，然后使用表单数据创建PDF文档，请调用其他AEM表单操作。 (请参 [阅使用提交的XML数据创建PDF文档](/help/forms/developing/creating-pdf-documents-submitted-xml.md))
 
-下图显示了从Web浏览器中显示的交互式表 `HandleData` 单提交到名为Java servlet的数据。
+下图显示了从Web浏览器中显示的交互式表 `HandleData` 单提交到名为Java Servlet的数据。
 
 ![hs_hs_handlesubmit](assets/hs_hs_handlesubmit.png)
 
@@ -53,7 +53,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 ## 处理提交的XML数据 {#handling-submitted-xml-data}
 
-当表单数据以XML形式提交时，您可以检索表示已提交数据的XML数据。 所有表单字段都显示为XML架构中的节点。 节点值与用户填写的值相对应。 考虑一个贷款表单，其中表单中的每个字段在XML数据中显示为一个节点。 每个节点的值与用户填入的值相对应。 假定用户用以下表单中显示的数据填写贷款表单。
+当表单数据以XML形式提交时，您可以检索表示已提交数据的XML数据。 所有表单字段都显示为XML模式中的节点。 节点值与用户填写的值相对应。 考虑一个贷款表单，其中表单中的每个字段在XML数据中显示为一个节点。 每个节点的值与用户填入的值相对应。 假定用户用以下表单中显示的数据填写贷款表单。
 
 ![hs_hs_loanformdata](assets/hs_hs_loanformdata.png)
 
@@ -112,7 +112,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 ## 步骤摘要 {#summary-of-steps}
 
-要处理提交的表单，请执行以下任务：
+要处理提交的表单，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建Forms Client API对象。
@@ -126,7 +126,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 **创建Forms Client API对象**
 
-在以编程方式执行Forms服务客户端API操作之前，必须先创建Forms服务客户端。 如果您使用Java API，请创建一个对 `FormsServiceClient` 象。 如果您使用的是Forms web服务API，请创建一个对 `FormsService` 象。
+在以编程方式执行Forms服务客户端API操作之前，必须先创建Forms服务客户端。 如果您使用Java API，请创建一个对 `FormsServiceClient` 象。 如果您使用的是Forms Web服务API，请创建一个对 `FormsService` 象。
 
 **检索表单数据**
 
@@ -138,7 +138,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 * 将对 `RenderOptionsSpec` 象的值设 `PDFToXDP` 置为 `true`
 * 将对 `RenderOptionsSpec` 象的值设 `ExportDataFormat` 置为 `XMLData`
 
-调用方法时，可指定已提交表单的内容类 `processFormSubmission` 型。 以下列表指定了适用的内容类型值：
+调用方法时，可指定已提交表单的内容类 `processFormSubmission` 型。 以下列表指定适用的内容类型值：
 
 * **text/xml**:表示当PDF表单以XML形式提交表单数据时要使用的内容类型。
 * **application/x-www-form-urlencoded**:表示当HTML表单以XML形式提交数据时要使用的内容类型。
@@ -146,21 +146,21 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 >[!NOTE]
 >
->您会注意到，有三个与“处理提交的表单”部分关联的相应快速入门。 使用Java API快速入门处理作为PDF提交的PDF表单演示了如何处理提交的PDF数据。 此快速入门中指定的内容类型为 `application/pdf`。 使用Java API快速入门处理作为XML提交的PDF表单演示了如何处理从PDF表单提交的已提交XML数据。 此快速入门中指定的内容类型为 `text/xml`。 同样，使用Java API快速入门处理作为XML提交的HTML表单演示了如何处理从HTML表单提交的已提交XML数据。 此快速入门中指定的内容类型为application/x-www-form-urlencoded。
+>您会注意到，有三个相应的快速开始与“处理提交的表单”部分相关联。 使用Java API快速开始处理作为PDF提交的PDF表单演示了如何处理提交的PDF数据。 此快速开始中指定的内容类型为 `application/pdf`。 使用Java API快速开始处理作为XML提交的PDF表单演示了如何处理从PDF表单提交的已提交XML数据。 此快速开始中指定的内容类型为 `text/xml`。 同样，使用Java API快速开始处理作为XML提交的HTML表单演示了如何处理从HTML表单提交的已提交XML数据。 此快速开始中指定的内容类型为application/x-www-form-urlencoded。
 
 您可以检索发布到表单服务的表单数据并确定其处理状态。 即，当数据提交到Forms服务时，它不一定表示Forms服务已经完成了对数据的处理，并且数据已准备好进行处理。 例如，可以向Forms服务提交数据，以便执行计算。 计算完成后，表单将呈现回用户并显示计算结果。 在处理提交的数据之前，建议您确定Forms服务是否已完成处理数据。
 
 Forms服务返回以下值以指示它是否已完成数据处理：
 
-* **** 0（提交）:已提交的数据已准备好进行处理。
-* **** 1（计算）:Forms服务对数据执行了计算操作，结果必须呈现给用户。
-* **** 2（验证）:Forms服务验证的表单数据和结果必须呈现给用户。
-* **** 3（下一个）:当前页面已更改，结果必须写入客户端应用程序。
+* **0（提交）:** 已提交的数据已准备好进行处理。
+* **1（计算）:** Forms服务对数据执行了计算操作，结果必须呈现给用户。
+* **2（验证）:** Forms服务验证的表单数据和结果必须呈现给用户。
+* **3（下一个）:** 当前页面已更改，结果必须写入客户端应用程序。
 * **4(前**):当前页面已更改，结果必须写入客户端应用程序。
 
 >[!NOTE]
 >
->必须将计算和验证返回给用户。 (请参 [阅计算表单数据](/help/forms/developing/rendering-forms-rendering-forms calculating-form-form-form-colculating-form calculating-form-form-form-data-culculating-form.md#calculating-form-data)*。)*
+>必须将计算和验证返回给用户。 (请参阅 [计算表单数据](/help/forms/developing/calculating-form-data.md#calculating-form-data)。
 
 **确定表单提交是否包含文件附件**
 
@@ -178,15 +178,15 @@ Forms服务返回以下值以指示它是否已完成数据处理：
 
 **另请参阅**
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API快速开始](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)
 
-[创建呈现表单的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
+[创建呈现表单的Web 应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## 使用Java API处理提交的表单 {#handle-submitted-forms-using-the-java-api}
 
@@ -203,7 +203,7 @@ Forms服务返回以下值以指示它是否已完成数据处理：
 
 1. 检索表单数据
 
-   * 要检索发布到Java servlet的表单数据，请使用对象的构造函数 `com.adobe.idp.Document` ，并从构造函数中调用该对 `javax.servlet.http.HttpServletResponse` 象的 `getInputStream` 方法来创建对象。
+   * 要检索发布到Java Servlet的表单数据，请使用对象的构造函数 `com.adobe.idp.Document` ，并从构造函数中调用该对 `javax.servlet.http.HttpServletResponse` 象的 `getInputStream` 方法来创建对象。
    * 使用对 `RenderOptionsSpec` 象的构造函数创建对象。 通过调用对象的方法并传 `RenderOptionsSpec` 递指定区 `setLocale` 域设置值的字符串值来设置区域设置值。
    >[!NOTE]
    >
@@ -238,7 +238,7 @@ Forms服务返回以下值以指示它是否已完成数据处理：
       * 通过 `org.w3c.dom.DocumentBuilderFactory` 调用静态对象的方 `org.w3c.dom.DocumentBuilderFactory` 法创建对 `newInstance` 象。
       * 通过 `org.w3c.dom.DocumentBuilder` 调用对象的方 `org.w3c.dom.DocumentBuilderFactory` 法创建对 `newDocumentBuilder` 象。
       * 通过调 `org.w3c.dom.Document` 用对象的方 `org.w3c.dom.DocumentBuilder` 法并传递对 `parse` 象来创建对 `java.io.InputStream` 象。
-      * 检索XML文档中每个节点的值。 完成此任务的一种方法是创建一个接受两个参数的自定义方法：对象 `org.w3c.dom.Document` 以及要检索其值的节点的名称。 此方法返回表示节点值的字符串值。 在此过程后面的代码示例中，调用了此自定义方法 `getNodeText`。 本文给出了该方法的主体。
+      * 检索XML文档中每个节点的值。 实现此任务的一种方法是创建一个接受两个参数的自定义方法：对象 `org.w3c.dom.Document` 以及要检索其值的节点的名称。 此方法返回表示节点值的字符串值。 在此过程后面的代码示例中，调用了此自定义方法 `getNodeText`。 本文给出了该方法的主体。
    * 如果数据内容类型为，则 `application/pdf`创建应用程序逻辑以将提交的PDF数据另存为PDF文件。
 
       * 通过 `com.adobe.idp.Document` 调用对象的方 `FormsResult` 法创建对 `getOutputContent` 象。
@@ -248,13 +248,13 @@ Forms服务返回以下值以指示它是否已完成数据处理：
 
 **另请参阅**
 
-[快速入门（SOAP模式）:使用Java API处理作为XML提交的PDF表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理作为XML提交的PDF表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API处理作为XML提交的HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理作为XML提交的HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[快速入门（SOAP模式）:使用Java API处理作为PDF提交的PDF表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API处理作为PDF提交的PDF表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[包括AEM Forms java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -273,7 +273,7 @@ Forms服务返回以下值以指示它是否已完成数据处理：
 
 1. 检索表单数据
 
-   * 要检索发布到Java servlet的表单数据，请使用其构 `BLOB` 造函数创建一个对象。
+   * 要检索发布到Java Servlet的表单数据，请使用其构 `BLOB` 造函数创建一个对象。
    * 通过 `java.io.InputStream` 调用对象的方 `javax.servlet.http.HttpServletResponse` 法创建对 `getInputStream` 象。
    * 使用 `java.io.ByteArrayOutputStream` 对象的构造函数并传递对象的长 `java.io.InputStream` 度。
    * 将对象的内 `java.io.InputStream` 容复制到对 `java.io.ByteArrayOutputStream` 象中。
@@ -312,13 +312,13 @@ Forms服务返回以下值以指示它是否已完成数据处理：
       * 通过 `org.w3c.dom.DocumentBuilderFactory` 调用静态对象的方 `org.w3c.dom.DocumentBuilderFactory` 法创建对 `newInstance` 象。
       * 通过 `org.w3c.dom.DocumentBuilder` 调用对象的方 `org.w3c.dom.DocumentBuilderFactory` 法创建对 `newDocumentBuilder` 象。
       * 通过调 `org.w3c.dom.Document` 用对象的方 `org.w3c.dom.DocumentBuilder` 法并传递对 `parse` 象来创建对 `java.io.InputStream` 象。
-      * 检索XML文档中每个节点的值。 完成此任务的一种方法是创建一个接受两个参数的自定义方法：对象 `org.w3c.dom.Document` 以及要检索其值的节点的名称。 此方法返回表示节点值的字符串值。 在此过程后面的代码示例中，调用了此自定义方法 `getNodeText`。 本文给出了该方法的主体。
+      * 检索XML文档中每个节点的值。 实现此任务的一种方法是创建一个接受两个参数的自定义方法：对象 `org.w3c.dom.Document` 以及要检索其值的节点的名称。 此方法返回表示节点值的字符串值。 在此过程后面的代码示例中，调用了此自定义方法 `getNodeText`。 本文给出了该方法的主体。
    * 如果数据内容类型为，则 `application/pdf`创建应用程序逻辑以将提交的PDF数据另存为PDF文件。
 
       * 通过 `BLOB` 调用对象的方 `FormsResult` 法创建对 `getOutputContent` 象。
       * 通过调用对象的方法 `BLOB` 创建字节数 `getBinaryData` 组。
       * 使用对 `java.io.File` 象的公共构造函数创建对象。 请务必指定PDF作为文件扩展名。
-      * 使用对 `java.io.FileOutputStream` 象的构造函数并传递该对 `java.io.File` 象。
+      * 使用对 `java.io.FileOutputStream` 象的构造函数并传递该对象来创建 `java.io.File` 对象。
       * 通过调用对象的方法并 `java.io.FileOutputStream` 传递字节数 `write` 组来填充PDF文件。
 
 
