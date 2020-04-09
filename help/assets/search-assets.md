@@ -1,10 +1,10 @@
 ---
 title: 在AEM中搜索数字资产和图像
-description: 了解如何使用“筛选器”面板在AEM中查找所需的资产，以及如何使用在搜索中显示的资产。
+description: 了解如何使用过滤器面板在AEM中查找所需的资产，以及如何使用在搜索中显示的资产。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d29c86108fc4d856eefd9530f699d400445f2843
+source-git-commit: 25acffc6a0101be4ea6811b92c40bc76f554f5f0
 
 ---
 
@@ -24,13 +24,13 @@ AEM支持以下用例，本文介绍了这些用例的用法、概念、配置�
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
 | [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[AEM 桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic Media资产](#dynamicmedia)</li></ul> |  |  |
-| [资产选择器／选取器](#assetselector) |  |  |
+| [资产选取器](#assetselector) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [插图示例](#samples) |  |  |
 
-使用AEM Web界面顶部的Omnisearch字段搜索资产。 转到 **[!UICONTROL AEM中的“资]** 产 **** ” > “文件”，单击顶栏中的搜索图标，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键/（正斜杠）打开Omnisearch字段。 位置：资产已预先选中，可将搜索限制为DAM资产。 AEM在您开始键入搜索关键字时提供建议。
+使用AEM Web界面顶部的Omnisearch字段搜索资产。 转到 **[!UICONTROL AEM中的“资]** 产 **** ” > “文件”，单击顶栏中的搜索图标，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键/（正斜杠）打开Omnisearch字段。 位置：资产已预先选中，可将搜索限制为DAM资产。 AEM在您的开始键入搜索关键字时提供建议。
 
-使用“ **[!UICONTROL 筛选器]** ”面板，可根据各种选项（谓词）筛选搜索结果，从而缩小搜索范围，这些选项（谓词）包括文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock许可。 管理员可以自定义“筛选器”面板，并使用搜索彩块化添加或删除搜索谓词。 “滤 [!UICONTROL 镜] ”面板中的“文件类  型”滤镜具有混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
+使用 **[!UICONTROL 过滤器]** 面板，根据各种选项（谓词）筛选搜索结果以缩小搜索范围，这些选项（谓词）包括文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock许可。 您的管理员可以自定义过滤器面板并使用搜索彩块化添加或删除搜索谓词。 “ [!UICONTROL 过滤器] ”面板中的“文件类 [!UICONTROL 型”] (File Type)筛选器包含混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
 
 AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
 
@@ -42,7 +42,7 @@ AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜�
 
 *图：了解资产搜索结果界面的各个部分*
 
-**A.** 将搜索另存为智能收藏集。**B.** 过滤（谓词）以缩小搜索结果。**C.** 在搜索结果中显示文件和/或文件夹。**D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F.** 包含用户提供的搜索关键字的Omnisearch字段。 **G.** 选中此复选框可选择所有搜索结果。 **H.** 显示的搜索结果数（从总搜索结果中）。 **I.** 关闭搜索 **J。** 在卡片视图和列表视图之间切换。
+**A.** 将搜索另存为智能收藏集。**B.** 过滤（谓词）以缩小搜索结果。**C.** 在搜索结果中显示文件和/或文件夹。**D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F.** 包含用户提供的搜索关键字的Omnisearch字段。 **G.** 选中此复选框可选择所有搜索结果。 **H.** 显示的搜索结果数（从总搜索结果中）。 **I.** 关闭搜索 **J。** 在卡视图和列表视图之间切换。
 
 ### 动态搜索彩块化 {#dynamicfacets}
 
@@ -60,15 +60,15 @@ AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜�
 
 结果按相关性排序，以最接近的匹配项开始。 对于多个关键字，更具相关性的结果是在元数据中包含这两个术语的资产。 在元数据中，显示为智能标记的关键字的排名高于其他元数据字段中显示的关键字。 AEM允许为特定搜索词赋予更高的权重。 此外，还可以提高 [特定搜索词的](#searchrank) 少数目标资产的排名。
 
-为了快速找到相关资产，富界面提供了筛选、排序和选择机制。 您可以根据多个条件筛选结果，并查看为各种筛选器搜索的资产数量。 或者，您也可以通过在“Omnisearch”（搜索）字段中更改查询来重新运行搜索。 当您更改搜索词或筛选器时，其他筛选器仍会被应用，以保留搜索的上下文。
+为了快速找到相关资产，富界面提供了筛选、排序和选择机制。 您可以根据多个条件筛选结果，并查看针对各种过滤器搜索的资产数量。 或者，也可以通过在“Omnisearch”（全球搜索）字段中更改查询重新运行搜索。 当您更改搜索词或过滤器时，其他过滤器将保留搜索的上下文。
 
-当结果为多个资产时，AEM会在卡片视图中显示前100个，在列表视图中显示200个。 用户滚动时，会加载更多资产。 这是为了提高性能。
+当结果为多个资产时，AEM会在卡视图中显示前100个，在列表视图中显示200个。 用户滚动时，会加载更多资产。 这是为了提高性能。
 
 >[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
 
 有时，您可能会在搜索结果中看到一些意外的资产。 有关详细信息，请参阅 [意外的结果](#troubleshoot-unexpected-search-results-and-issues)。
 
-AEM可以搜索多种文件格式，并且可以自定义搜索筛选器以满足您的业务需求。 请联系您的管理员以了解为您的DAM存储库提供了哪些搜索选项以及您的帐户有哪些限制。
+AEM可以搜索多种文件格式，并且可以自定义搜索过滤器以满足您的业务需求。 请联系您的管理员以了解为您的DAM存储库提供了哪些搜索选项以及您的帐户有哪些限制。
 
 ### 包含和不包含增强的智能标记的结果 {#withsmarttags}
 
@@ -78,7 +78,7 @@ AEM可以搜索多种文件格式，并且可以自定义搜索筛选器以满�
 * `woman.running`
 * `woman-running`
 
-但是，该查询会返 `woman -running` 回资产，但不包含 `running` 其元数据。
+但是，该查询会 `woman -running` 返回元数据中 `running` 没有的资产。
 使用智能标记可添加一 `OR` 个额外的子句，以查找任何作为所应用智能标记的搜索词。 此类搜索查询中也 `woman` 会显 `running` 示使用或使用智能标记标记的资产。 搜索结果是，
 
 * 元数据中 `woman` 包含 `running` 关键字和关键字的资产（默认行为）。
@@ -87,7 +87,7 @@ AEM可以搜索多种文件格式，并且可以自定义搜索筛选器以满�
 
 ### Search suggestions as you type {#searchsuggestions}
 
-开始键入关键字时，AEM会建议可能的搜索关键字或短语。 建议基于现有资产的元数据。 AEM为所有元数据字段编制索引以帮助搜索。 为了提供搜索建议，系统使用以下几个元数据字段的值。 要提供搜索建议，请考虑使用适当的关键字填充以下字段：
+当您开始键入关键字时，AEM会建议可能的搜索关键字或短语。 建议基于现有资产的元数据。 AEM为所有元数据字段编制索引以帮助搜索。 为了提供搜索建议，系统使用以下几个元数据字段的值。 要提供搜索建议，请考虑使用适当的关键字填充以下字段：
 
 * 资产标记。 (映射到 `jcr:content/metadata/cq:tags`)
 * 资产标题。 (映射到 `jcr:content/metadata/dc:title`)
@@ -97,9 +97,9 @@ AEM可以搜索多种文件格式，并且可以自定义搜索筛选器以满�
 
 要接收多个搜索关键字的建议，请继续键入所有关键字，而不为单个关键字选择任何建议。
 
-![键入多个关键字以查看适合所有关键字的建议](assets/search_suggestionsmanykeywords.gif)
+![键入多个关键字以视图符合其全部要求的建议](assets/search_suggestionsmanykeywords.gif)
 
-*图：键入多个关键字以查看适合所有关键字的建议*
+*图：键入多个关键字以视图符合其全部要求的建议*
 
 ### 搜索排名和提升 {#searchrank}
 
@@ -123,27 +123,27 @@ AEM可以搜索多种文件格式，并且可以自定义搜索筛选器以满�
 
 ## Advanced search {#scope}
 
-AEM提供了各种方法，如应用于已搜索资产的筛选器，以帮助您更快地找到所需的资产。 下面介绍了一些常用的方法。 下面 [分享了一些图示](#samples) 。
+AEM提供了各种方法(如适用于搜索的资产的过滤器)，以帮助您更快地找到所需的资产。 下面介绍了一些常用的方法。 下面 [分享了一些图示](#samples) 。
 
-**搜索文件或文件夹**:在搜索结果中，可查看文件、文件夹或两者。 从“ **[!UICONTROL 滤镜]** ”面板中，可以选择相应的选项。 请参阅 [搜索界面](#searchui)。
+**搜索文件或文件夹**:在搜索结果中，可查看文件、文件夹或两者。 从 **[!UICONTROL 过滤器]** 面板中，可以选择相应的选项。 请参阅 [搜索界面](#searchui)。
 
-**在文件夹内搜索资产**:您可以将搜索限制为特定文件夹。 在“筛 **[!UICONTROL 选器]** ”面板中，添加文件夹的路径。 一次只能选择一个文件夹。
+**在文件夹内搜索资产**:您可以将搜索限制为特定文件夹。 在过滤器 **[!UICONTROL 面板中]** ，添加文件夹的路径。 一次只能选择一个文件夹。
 
-![通过在“筛选器”面板中添加文件夹路径，将搜索结果限制在文件夹中](assets/search_folder_select.gif)
+![通过在“过滤器”面板中添加文件夹路径，将搜索结果限制在文件夹中](assets/search_folder_select.gif)
 
-*图：通过在“筛选器”面板中添加文件夹路径，将搜索结果限制在文件夹中*
+*图：通过在“过滤器”面板中添加文件夹路径，将搜索结果限制在文件夹中*
 
 ### 查找类似图像 {#visualsearch}
 
 要查找与用户选择的图像视觉上相似的图像，请从图像的卡片视图或工具栏中单击&#x200B;**[!UICONTROL 查找类似]**&#x200B;选项。AEM 显示 DAM 存储库中与用户所选图像相似的智能标记图像。请参阅[如何配置相似性搜索](#configvisualsearch)。
 
-![使用卡片视图中的选项查找类似图像](assets/search_find_similar.png)
+![使用卡视图中的选项查找类似图像](assets/search_find_similar.png)
 
-*图：使用卡片视图中的选项查找类似图像*
+*图：使用卡视图中的选项查找类似图像*
 
 ### Adobe Stock图像 {#adobestock}
 
-在AEM用户界面中，用户可以搜索 [Adobe Stock资产](/help/assets/aem-assets-adobe-stock.md) ，并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch栏中。 您还可以使用“筛选器”面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。
+在AEM用户界面中，用户可以搜索 [Adobe Stock资产](/help/assets/aem-assets-adobe-stock.md) ，并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch栏中。 您还可以使用过滤器面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。
 
 ### Dynamic Media资产 {#dmassets}
 
@@ -193,7 +193,7 @@ AEM提供了各种方法，如应用于已搜索资产的筛选器，以帮助�
 
 ## 从其他AEM产品或界面搜索资产 {#beyondomnisearch}
 
-Adobe Experience Manager(AEM)将DAM存储库连接到各种其他AEM解决方案，以便更快地访问数字资产并简化创意工作流程。 任何资产搜索都以浏览或搜索开始。 搜索行为在不同的表面和解决方案上基本保持不变。 某些搜索方法会随目标受众、用例和用户界面的不同而改变，这些方法会因AEM解决方案而异。 下面的链接介绍了各个解决方案的具体方法。 本文介绍了普遍适用的提示和行为。
+Adobe Experience Manager(AEM)将DAM存储库连接到各种其他AEM解决方案，以便更快地访问数字资产并简化创作工作流。 任何具有浏览或搜索功能的资产发现开始。 搜索行为在不同的表面和解决方案上基本保持不变。 某些搜索方法会随着目标受众、用例和用户界面的不同而改变，这些搜索方法会因AEM解决方案而异。 下面的链接介绍了各个解决方案的具体方法。 本文介绍了普遍适用的提示和行为。
 
 ### 从Adobe Asset Link面板搜索资产 {#aal}
 
@@ -209,7 +209,7 @@ Adobe Experience Manager(AEM)将DAM存储库连接到各种其他AEM解决方案
 
 ### 搜索Adobe Stock图像 {#adobestock-1}
 
-从AEM用户界面中，用户可以搜索Adobe Stock资产并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch字段。 您还可以使用“ **[!UICONTROL 筛选器]** ”面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。 请参 [阅在AEM中管理Adobe Stock图像](/help/assets/aem-assets-adobe-stock.md#usemanage)。
+从AEM用户界面中，用户可以搜索Adobe Stock资产并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch字段。 您还可以使用 **[!UICONTROL 过滤器面板]** ，查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。 请参 [阅在AEM中管理Adobe Stock图像](/help/assets/aem-assets-adobe-stock.md#usemanage)。
 
 ### 搜索Dynamic Media资产 {#dynamicmedia}
 
@@ -223,24 +223,24 @@ Adobe Experience Manager(AEM)将DAM存储库连接到各种其他AEM解决方案
 
 AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
 
-## Asset selector {#assetselector}
+## 资产选取器 {#assetselector}
 
-资产选择器允许您以特殊方式搜索、筛选和浏览DAM资产。 资产选择器在上可用 `https://[aem-server]:[port]/aem/assetpicker.html`。 您可以使用资产选择器提取您选择的资产的元数据。 您可以使用支持的请求参数启动它，例如资产类型（图像、视频、文本）和选择模式（单选或多选）。 这些参数为特定搜索实例设置资产选择器的上下文，并在整个选择过程中保持不变。
+通过资产选取器，您可以以特殊方式搜索、筛选和浏览DAM资产。 资产选取器在上可用 `https://[aem-server]:[port]/aem/assetpicker.html`。 您可以使用此功能提取您选择的资产的元数据。 您可以使用支持的请求参数启动它，例如资产类型（图像、视频、文本）和选择模式（单选或多选）。 这些参数为特定搜索实例设置资产选取器的上下文，并在整个选择过程中保持不变。
 
-资产选择器使用HTML5 Window.postMessage消息将选定资产的数据发送给收件人。 资产选择器基于Granite的基础选取器词汇。 默认情况下，资产选择器在浏览模式下操作。
+资产选取器使用HTML5消 `Window.postMessage` 息将选定资产的数据发送到收件人。 资产选取器仅在浏览模式下工作，并且仅适用于Omnisearch结果页面。
 
-您可以在URL中传递以下请求参数，以在特定上下文中启动资产选择器：
+您可以在URL中传递以下请求参数，以在特定上下文中启动资产选取器：
 
 | 名称 | 值 | 示例 | 用途 |
 |---|---|---|---|
-| 资源后缀(B) | 作为URL中资源后缀的文件夹路径：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 要在选定特定文件夹的情况下启动资产选择器(例如，在选定 `/content/dam/we-retail/en/activities` 文件夹的情况下),URL应为以下格式： [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在启动资产选择器时需要选择某个特定文件夹，请将其作为资源后缀进行传递。 |
+| 资源后缀(B) | 作为URL中资源后缀的文件夹路径：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 要启动资产选取器并选择特定文件夹(例如，在选定文件夹 `/content/dam/we-retail/en/activities` 的情况下),URL应采用以下形式： [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在启动资产选择器时需要选择某个特定文件夹，请将其作为资源后缀进行传递。 |
 | 模式 | 单个，多个 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 在多个模式中，您可以使用资产选择器同时选择多个资产。 |
-| mimetype | 资产的mimetype(s)(`/jcr:content/metadata/dc:format`)（也支持通配符） | <ul><li>[https://localhost:4502/aem/assetpicker.html?mimetype=image/png](https://localhost:4502/aem/assetpicker.html?mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&mimetype=*png)</li></ul> | 使用它根据MIME类型筛选资产 |
+| mimetype | 资产的mimetype(s)(`/jcr:content/metadata/dc:format`)（也支持通配符） | <ul><li>[https://localhost:4502/aem/assetpicker.html?mimetype=image/png](https://localhost:4502/aem/assetpicker.html?mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它根据MIME类型筛选资产 |
 | 对话框 | true,false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框的形式打开资产选择器。 仅当您通过Granite路径字段启动资产选择器并将其配置为pickerSrc URL时，此选项才适用。 |
 | assettype(S) | 图像，文档，多媒体，存档 | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | 使用此选项可根据传递的值筛选资产类型。 |
-| 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities) | 使用此选项可指定资产选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接／间接）。 |
+| 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | 使用此选项可指定资产选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接／间接）。 |
 
-要访问资产选择器界面，请转到 `https://[aem_server]:[port]/aem/assetpicker`。 导航到所需的文件夹，然后选择一个或多个资产。 或者，从Omnisearch框中搜索所需的资产，根据需要应用筛选器，然后选择它。
+To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/assetpicker`. 导航到所需的文件夹，然后选择一个或多个资产。 或者，从Omnisearch框中搜索所需的资产，根据需要应用筛选器，然后选择它。
 
 ![在资产选取器中浏览并选择资产](assets/assetpicker.png)
 
@@ -250,11 +250,11 @@ AEM搜索功能支持搜索集合和搜索集合中的资产。 请参阅 [搜�
 
 AEM资产中的搜索功能有以下限制：
 
-* 请勿在搜索查询中输入前导空间，否则搜索不起作用。
+* 请勿在搜索查询中输入前导空间，否则搜索无效。
 * 在您从搜索的结果中选择资产的属性，然后取消搜索后，AEM可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 搜索文件夹或文件和文件夹时，无法对任何参数对搜索结果进行排序。
-* 如果按回车键时未在Omnisearch栏中键入任何内容，AEM将返回仅包含文件而非文件夹的列表。 如果您在不使用关键字的情况下专门搜索文件夹，则AEM不会返回任何结果。
-* 使用全 [!UICONTROL 选复选框] ，您只能在卡片视图中选择前100个搜索的资产，在列表视图中选择前200个搜索的资产。 如果您在用户界面中滚动并加载更多资产，则可以使用全选选项选 [!UICONTROL 择更多] 。
+* 如果按回车键时未在Omnisearch栏中键入任何内容，AEM将返回仅包含文件（而非文件夹）的列表。 如果您在不使用关键字的情况下专门搜索文件夹，则AEM不会返回任何结果。
+* 使用“全 [!UICONTROL 选] ”复选框，您只能选择卡视图中搜索的前100个资产和列表视图中搜索的前200个资产。 如果您在用户界面中滚动并加载更多资产，则可以使用全选选项选 [!UICONTROL 择更多] 。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -263,25 +263,25 @@ AEM资产中的搜索功能有以下限制：
 
 在以下情况下，搜索功能可能会有性能限制：
 
-* 与用于显示搜索结果的列表视图相比，卡片视图的加载时间更短。
+* 与显示搜索结果的视图视图相比，卡列表具有更快的加载时间。
 
 ## 搜索提示 {#tips}
 
 * 在监视资产的审核状态时，请使用相应的选项来查找已批准的资产或待批准的资产。
-* 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况数据按使用情况得分、印象、点击量和资产显示类别的媒体渠道进行分组。
-* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 它在卡片视图中选择前100个资产，在列表视图中选择前200个资产。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性或将选定的资产添加到收藏集。
+* 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况数据按使用情况得分、印象、点击量和显示资产的媒体渠道进行分组。
+* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 它选择卡视图中的前100个资源和列表视图中的前200个资源。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性或将选定的资产添加到收藏集。
 * 要搜索不包含强制元数据的资产，请参阅强制 [元数据](#mandatorymetadata)。
-* 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用双引号（非单引号）或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
-* 全文搜索支持-、^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在双引号中。 例如，使用“Notebook - Beauty”（笔记本——美容）而不是“Notebook - Beauty”（笔记本——美容）。
+* 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
+* 全文搜索支持-、^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用“Notebook - Beauty”（笔记本——美容）而不是“Notebook - Beauty”（笔记本——美容）。
 * 如果搜索结果过多，请将所 [需资产的搜索范围](#scope) 限制为零。 当您了解如何更好地查找所需的资产（例如，特定文件类型、特定位置、特定元数据等）时，它最适合使用。
 
-* **标记**:标记可帮助您对可以更高效地浏览和搜索的资产进行分类。 标记有助于将相应的分类传播到其他用户和工作流。 AEM提供了使用Adobe Sensei的人工智能服务自动标记资产的方法，这些方法通过使用和培训不断改进对资产的标记功能。 在搜索资产时，如果帐户中启用了该功能，则智能标记会被纳入其中。 它与AEM的内置搜索功能一起使用。 请参阅 [搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以提 [升几个选定资产的](#searchrank) 搜索排名。
+* **标记**:标记可帮助您对可以更高效地浏览和搜索的资产进行分类。 标记有助于将相应的分类传播到其他用户和工作流。 AEM优惠了使用Adobe Sensei的人工智能服务自动标记资产的方法，这些服务通过使用和培训不断改进为资产标记的功能。 在搜索资产时，如果帐户中启用了该功能，则智能标记会被纳入其中。 它与AEM的内置搜索功能一起使用。 请参阅 [搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以提 [升几个选定资产的](#searchrank) 搜索排名。
 
 * **索引**:搜索结果中只返回已索引的元数据和资产。 为获得更好的覆盖面和性能，请确保正确的索引并遵循最佳做法。 请参阅 [索引](#searchindex)。
 
 ## 说明搜索的一些示例 {#samples}
 
-在关键字周围使用双引号，以按用户指定的确切顺序查找包含确切短语的资产。
+使用关键字周围的多次语言可以查找包含用户指定的精确顺序的确切短语的资产。
 
 ![带引号和不带引号的搜索行为](assets/search_with_quotes.gif)
 
@@ -302,15 +302,15 @@ AEM资产中的搜索功能有以下限制：
 
 * `run???` 查询与任何资产均不匹配。
 
-* `run????` query将单词与后 `running` 面四个字符匹配 `run`。
+* `run????` 查询将单词与 `running` 后面四个字符匹配 `run`。
 
-* `??run` query匹配前面带 `rerun` 有两个字符的单词 `run`。
+* `??run` 查询匹配前面带 `rerun` 有两个字符的单词 `run`。
 
 ![通过示例说明在资产搜索中使用问号通配符的方法](assets/search_with_questionmark_run.gif)
 
 *图：通过示例说明在资产搜索中使用问号通配符的方法*
 
-**排除关键字**:使用虚线搜索不包含关键字的资产。 例如，查 `running -shoe` 询会返回包含但不 `running`包含的资产 `shoe`。 同样， `camp -night` 查询也会返回包含但不 `camp` 包含的资 `night`产。 请注意， `camp-night` 查询将返回同时包含和的 `camp` 资产 `night`。
+**排除关键字**:使用虚线搜索不包含关键字的资产。 例如， `running -shoe` 查询会返回包含但 `running`不包含的资产 `shoe`。 同样， `camp -night` 查询会返回包含但不 `camp` 包含的资 `night`产。 请注意， `camp-night` 查询会返回同时包含和的 `camp` 资产 `night`。
 
 ![使用虚线搜索不包含被排除关键字的资产](assets/search_dash_exclude_keyword.gif)
 
@@ -359,7 +359,7 @@ AEM资产中的搜索功能有以下限制：
 
 ### 修改搜索彩块化 {#searchfacets}
 
-为了提高搜索速度，AEM资产提供了搜索彩块化，您可以使用它筛选搜索结果。 默认情况下，“滤镜”面板包括一些标准彩块化。 管理员可以自定义“筛选器”面板，以使用内置谓词修改默认彩块化。 AEM提供了一组不错的内置谓词，以及一个用于自定义彩块化的编辑器。 请参阅 [搜索彩块化](/help/assets/search-facets.md)。
+为提高搜索速度，AEM资产会优惠搜索彩块化，您可以使用它筛选搜索结果。 默认情况下，过滤器面板包含一些标准彩块化。 管理员可以自定义过滤器面板，以使用内置谓词修改默认彩块化。 AEM提供了一组不错的内置谓词，以及一个用于自定义彩块化的编辑器。 请参阅 [搜索彩块化](/help/assets/search-facets.md)。
 
 ### 上传资产时提取文本 {#extracttextupload}
 
@@ -367,9 +367,9 @@ AEM资产中的搜索功能有以下限制：
 
 ### 用于筛选搜索结果的自定义谓词 {#custompredicates}
 
-谓词用于创建彩块化。 管理员可以使用预配置的谓词在“筛选器”面板中自定义搜索彩块化。 这些谓词可以使用叠加进行自定义。 请参阅 [创建自定义谓词](/help/assets/searchx.md)。
+谓词用于创建彩块化。 管理员可以使用预配置的谓词在“过滤器”面板中自定义搜索彩块化。 这些谓词可以使用叠加进行自定义。 请参阅 [创建自定义谓词](/help/assets/searchx.md)。
 
-您可以根据以下一个或多个属性搜索数字资产。 默认情况下，应用于这些属性中的某些属性的过滤器可用，并且可以自定义创建其他某些过滤器以应用于其他属性。
+您可以根据以下一个或多个属性搜索数字资产。 默认情况下，对这些属性中的某些属性应用的过滤器可用，并且可以自定义创建某些其他过滤器以应用于其他属性。
 
 | 搜索字段 | 搜索属性值 |
 |---|---|
@@ -390,9 +390,9 @@ AEM资产中的搜索功能有以下限制：
 
 ## 使用资产搜索结果 {#aftersearch}
 
-当您看到某些已搜索的资产符合您的条件时，您可以执行以下典型任务，或对这些搜索结果执行以下操作：
+当您看到一些已搜索的资产符合您的条件后，您可以对这些搜索结果执行以下典型任务或执行以下操作：
 
-* 查看元数据属性和其他信息。
+* 视图元数据属性和其他信息。
 * 下载一个或多个资源。
 * 使用“桌面操作”在桌面应用程序中打开这些资产。
 * 创建智能收藏集。
@@ -431,8 +431,8 @@ AEM资产中的搜索功能有以下限制：
 
 收藏集是一组有序的资产，可以包含来自不同位置的资产，因为收藏集只包含对这些资产的引用。 集合有以下两种类型：
 
-* 资产、文件夹和其他收藏集的静态引用列表。
-* 一个动态列表（智能收藏集），它根据搜索条件填充收藏集中的资产。
+* 资产、文件夹和其他集合的静态引用列表。
+* 动态列表（智能收藏集），它根据搜索条件填充收藏集中的资产。
 
 您可以根据搜索条件创建智能收藏集。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，选择&#x200B;**[!UICONTROL 文件]**，然后单击&#x200B;**[!UICONTROL 保存智能收藏集]**。请参阅[管理收藏集](/help/assets/managing-collections-touch-ui.md)。
 
@@ -443,12 +443,12 @@ AEM资产中的搜索功能有以下限制：
 | 搜索缺少元数据的资产时结果不正确 | 在搜索缺少必需元数据的资产时，AEM可能会显示一些具有有效元数据的资产。 结果基于索引元数据属性。 | 更新元数据后，需要重新构建索引以反映资产元数据的正确状态。 请参阅 [必填元数据](metadata-schemas.md#define-mandatory-metadata)。 |
 | 搜索结果过多 | 广泛的搜索参数。 | 考虑限制 [搜索范围](#scope)。 使用智能标记可能会为您提供比预期更多的搜索结果。 查看 [带有智能标记的搜索行为](#withsmarttags)。 |
 | 不相关或部分相关的搜索结果 | 搜索行为会随智能标记而改变。 | 了解 [搜索在智能标记后的变化情况](#withsmarttags)。 |
-| 没有资产的自动完成建议 | 尚未对新上传的资产编制索引。 当您开始在Omnisearch栏中键入搜索关键字时，元数据不会立即作为建议可用。 | AEM资产会等到超时期（默认为一小时）到期，然后运行后台作业为所有新上传或更新的资产的元数据编制索引，然后将元数据添加到建议列表。 |
+| 没有资产的自动完成建议 | 尚未对新上传的资产编制索引。 在Omnisearch栏中开始键入搜索关键字时，元数据不会立即作为建议可用。 | AEM资产会等到超时期（默认为一小时）到期，然后运行后台作业为所有新上传或更新的资产的元数据编制索引，然后将元数据添加到建议列表。 |
 | 无搜索结果 | <ul><li>不存在与您的查询匹配的资产。</li><li>您在搜索查询前添加了空白。</li><li>不支持的元数据字段包含您搜索的关键字。</li><li>为资产配置了开始时间和结束时间，搜索是在资产的结束时间进行的。</li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用（智能）标记来改进搜索结果。</li><li>这是已知 [的限制](#limitations)。</li><li>并非所有元数据字段都会用于搜索。 请参阅 [范围](#scope)。</li><li>稍后搜索或修改所需资产的开启和关闭时间。</li></ul> |
 | 搜索筛选器／谓词不可用 | <ul><li>未配置搜索筛选器。</li><li>登录名中不提供此选项。</li><li>（不太可能）搜索选项未在您使用的部署中自定义。</li></ul> | <ul><li>联系管理员以检查搜索自定义是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义的权限。</li><li>联系管理员并检查您所使用的AEM资产部署的可用自定义设置。</li></ul> |
 | 在搜索视觉上相似的图像时，缺少期望的图像 | <ul><li>图像在AEM中不可用。</li><li>未索引图像。 通常，在最近上传时。</li><li>图像未标记为智能。</li></ul> | <ul><li>将图像添加到AEM资产。</li><li>请与管理员联系以重新为存储库编制索引。 另外，请确保您使用的是相应的索引。</li><li>请联系您的管理员以智能标记相关资产。</li></ul> |
 | 搜索视觉上相似的图像时，将显示不相关的图像 | 视觉搜索行为。 | AEM会显示尽可能多的潜在相关资产。 相关性较差的图像（如果有）会添加到结果中，但搜索级别较低。 当您向下滚动搜索结果时，搜索资产的匹配质量和相关性会降低。 |
-| 在选择并操作搜索结果时，所有搜索的资产都不会在 | “全 [!UICONTROL 选] ”选项仅在卡片视图中选择前100个搜索结果，在列表视图中选择前200个搜索结果。 |  |
+| 在选择并操作搜索结果时，所有搜索的资产都不会在 | “全 [!UICONTROL 选] ”选项仅选择卡视图中的前100个搜索结果和列表视图中的前200个搜索结果。 |  |
 
 >[!MORELIKETHIS]
 >
