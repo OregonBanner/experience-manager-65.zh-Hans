@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: be619b71dd0bb1addc10f4dbdbd2f00bc86dd003
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 1. 在“标 **[!UICONTROL 题]** ”字段中，提供文件夹名称。 默认情况下，DAM使用您提供的标题作为文件夹名称。 创建文件夹后，您可以覆盖默认文件夹并指定其他文件夹名称。
 1. 单击&#x200B;**[!UICONTROL 创建]**。您的文件夹会显示在数字资产文件夹中。
 
-不支持以下（以空格分隔的）字符列表：
+不支持以下(以空格分隔的列表)字符：
 
 * 资产文件名中不能包含以下任意字符： `* / : [ \\ ] | # % { } ? &`
 * 资产文件夹名称不能包含以下任意字符： `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
@@ -45,9 +45,9 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >在Dynamic Media - Scene7模式中，您只能上传文件大小为2 GB或更小的资产。
 
-您可以选择将资产上传到文件夹，无论是否分配了处理配置文件。
+您可以选择在分配了或没有分配了处理用户档案的情况下将资产上传到文件夹。
 
-对于分配了处理配置文件的文件夹，配置文件名称会显示在卡片视图的缩略图上。 在列表视图中，配置文件名称显示在“处理配置 **文件** ”列中。 请参阅[处理配置文件](/help/assets/processing-profiles.md)。
+对于分配了处理用户档案的文件夹，用户档案名称显示在卡视图的缩略图上。 在列表视图中，用户档案名称显示在“处理 **用户档案** ”列中。 请参阅[处理配置文件](/help/assets/processing-profiles.md)。
 
 在上传资产之前，请确保其格式 [为](/help/assets/assets-formats.md) AEM资产支持的格式。
 
@@ -60,7 +60,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    要选择多个文件，请按Ctrl或Command键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
 
-   您可以暂停上传大资产（大于500 MB），稍后从同一页面继续它。 点按上 **[!UICONTROL 传开始时]** ，进度栏旁边显示的“暂停”图标。
+   您可以暂停上传大资产（大于500 MB），稍后从同一页面继续它。 点按上 **** 传开始时显示的进度栏旁边的“暂停”图标。
 
    ![chlimage_1-211](assets/chlimage_1-5.png)
 
@@ -76,7 +76,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    To cancel an ongoing upload, click close (`X`) next to the progress bar. 当您取消上传操作时，AEM资产会删除部分上传的资产。
 
-   在低带宽情况和网络故障中，恢复上传的功能尤为有用，因为上传大型资产需要很长时间。 您可以暂停上传操作，稍后在情况改善时继续。 继续时，上传从您暂停它的点开始。
+   在低带宽情况和网络故障中，恢复上传的功能尤为有用，因为上传大型资产需要很长时间。 您可以暂停上传操作，稍后在情况改善时继续。 在继续时，从您暂停开始的位置上传该内容。
 
    在上传操作过程中，AEM会将上传的资产部分另存为CRX存储库中的数据块。 上传完成后，AEM会将这些区块合并到存储库中的单个数据块中。
 
@@ -102,13 +102,13 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    ![chlimage_1-214](assets/chlimage_1-8.png)
 
-   要在AEM资产中保留重复的资产，请点按／单击 **[!UICONTROL 保留]**。 要删除您上传的重复资产，请点按／单击 **[!UICONTROL 删除]**。
+   要在AEM资产中保留重复资产，请点按／单击保 **[!UICONTROL 留]**。 要删除您上传的重复资产，请点按／单击删 **[!UICONTROL 除]**。
 
    AEM资产可阻止您上传文件名中包含禁止字符的资产。 如果您尝试上传的资产的文件名中包含不允许的字符或更多字符，则AEM资产会显示一条警告消息并停止上传，直到您删除这些字符或上传时使用允许的名称。
 
    为了适合您组织的特定文件命名约定，您可以在“上 [!UICONTROL 传资产] ”对话框中为上传的文件指定长名。
 
-   但是，不支持以下（以空格分隔的）字符列表：
+   但是，不支持以下(以空格分隔的列表)字符：
 
    * 资产文件名不得包含 `* / : [ \\ ] | # % { } ? &`
    * 资产文件夹名称不能包含 `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
@@ -138,7 +138,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果要上传大资
 
 >[!NOTE]
 >
->要在Dynamic Media - Scene7模式下通过FTP上传资产，请在AEM作者实例上安装功能包18912。 请联 [系Adobe客户关怀](https://helpx.adobe.com/contact/enterprise-support.ec.html) ，获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以批量迁移资产](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media - Scene7模式下通过FTP上传资产，请在AEM作者实例上安装功能包18912。 请联 [系Adobe客户关怀](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) ，获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以批量迁移资产](/help/assets/bulk-ingest-migrate.md)。
 >
 >如果您使用FTP上传资产，则会忽略在AEM中指定的上传设置。 而是使用Dynamic Media Classic中定义的文件处理规则。
 
@@ -160,23 +160,23 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果要上传大资
 1. 在“上传作业选项”对话框的右下角，点按保 **[!UICONTROL 存]**。
 1. 在上传页面的右下角，点按提交 **[!UICONTROL 上传]**。
 
-   要查看上传进度，请在全局导航栏上点按作 **[!UICONTROL 业]**。 “作业”页面显示上传的进度。 您可以继续在AEM中工作，并随时返回Dynamic Media Classic中的“作业”页面以查看进行中的作业。
+   要视图上传进度，请在全局导航栏上点按作 **[!UICONTROL 业]**。 “作业”页面显示上传的进度。 您可以继续在AEM中工作，并随时返回Dynamic Media Classic中的“作业”页面以查看进行中的作业。
 要取消正在进行的上载作业，请点按持 **[!UICONTROL 续时间旁]** 边的取消。
 
 #### 上传作业选项 {#upload-job-options}
 
 | 上传选项 | 子选项 | 描述 |
 |---|---|---|
-| 作业名称 |  | 在文本字段中预填充的默认名称包括用户输入的名称部分和日期和时间戳。 您可以使用默认名称或为此上传作业输入您自己创建的内容的名称。 <br>作业以及其他上传和发布作业将记录在“作业”页面上，您可以在该页面中检查作业的状态。 |
+| 作业名称 |  | 在文本字段中预填充的默认名称包括用户输入的名称部分和日期和时间戳。 您可以使用默认名称，或为此上传作业输入您自己创建的名称。 <br>作业以及其他上传和发布作业将记录在“作业”页面上，您可以在该页面中检查作业的状态。 |
 | 上传后发布 |  | 自动发布您上传的资产。 |
 | 在任意文件夹中覆盖相同的基本资产名称，而不考虑扩展名 |  | 如果希望上传的文件用相同的名称替换现有文件，请选择此选项。 此选项的名称可能不同，具体取决于“应用程序设置 **[!UICONTROL ”>“常规设置”]** >“上传到应用程序” **[!UICONTROL >“覆]**********&#x200B;盖图像”中的设置。 |
 | 上传时解压缩Zip或Tar文件 |  |  |
 | 作业选项 |  | 点按／单 **[!UICONTROL 击作业选项]** ，打开“上传作 [!UICONTROL 业选项”对话框] ，然后选择影响整个上传作业的选项。 这些选项对于所有文件类型都是相同的。<br>您可以从“应用程序常规设置”页面开始选择上传文件的默认选项。 要打开此页，请选择“设 **[!UICONTROL 置]** ”>“应 **[!UICONTROL 用程序设置”]**。 点按默 **[!UICONTROL 认上传选项]** ，打开上传作 [!UICONTROL 业选项对话框] 。 |
 |  | 当 | 选择“一次”或“重复”。 要设置重复作业，请选择“重复”选项（“每日”、“每周”、“每月”或“自定义”），以指定您希望FTP上传作业重复的时间。 然后根据需要指定计划选项。 |
 |  | 包含子文件夹 | 上传要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称将自动输入到AEM资产中。 |
-|  | 裁剪选项 | 要从图像的两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁切。 您还可以在“裁剪”菜单上选择“修剪”，然后选择以下选项：<br> **根据** <ul><li>**颜色** -选择颜色选项。 然后选择“角”菜单，并选择图像的角，其颜色最能代表要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅在像素透明时裁剪像素。 接近1的数字可以增加透明度。</li></ul><br>请注意，这些裁剪选项是无损的。 |
-|  | 颜色配置文件选项 | 在创建用于交付的优化文件时，选择颜色转换：<ul><li>默认颜色保留：只要图像包含色彩空间信息，就保留源图像颜色；没有颜色转换。 目前几乎所有图像都已嵌入相应的颜色配置文件。 但是，如果CMYK源图像不包含嵌入的颜色配置文件，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间：保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入的颜色配置文件的图像，使用“发布”设置中配置的默认颜色配置文件进行任何颜色转换。 颜色配置文件可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用“默认颜色保留”选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换为色彩空间”。 此高级选项将覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像都包含错误或缺少颜色配置文件数据时，请选择此选项。</li></ul> |
-|  | 图像编辑选项 | 您可以保留图像中的剪切蒙版，并选择颜色配置文件。<br> 请参阅 [在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
+|  | 裁剪选项 | 要从图像的两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁切。 您还可以在“裁剪”菜单上选择“修剪”，然后选择以下选项：<br> **根据** <ul><li>**颜色** -选择颜色选项。 然后选择“角”菜单，并选择图像的角，其颜色最能代表要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块可指定从0到1的容差。对于基于颜色的修剪，指定0可仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅在像素透明时裁剪像素。 接近1的数字可以增加透明度。</li></ul><br>请注意，这些裁剪选项是无损的。 |
+|  | 颜色用户档案选项 | 在创建用于投放的优化文件时，选择颜色转换：<ul><li>默认颜色保留：只要图像包含色彩空间信息，就保留源图像颜色；没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间：保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，使用“发布”设置中配置的默认颜色用户档案进行任何颜色转换。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用“默认颜色保留”选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换为色彩空间”。 此高级选项将覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像都包含错误或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
+|  | 图像编辑选项 | 您可以保留图像中的剪切蒙版，并选择颜色用户档案。<br> 请参阅 [在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
 |  | Postscript选项 | 您可以栅格化PostScript®文件、裁剪文件、保持透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | Photoshop选项 | 您可以从Adobe® Photoshop®文件创建模板、维护图层、指定如何命名图层、提取文本以及指定如何将图像定位到模板中。<br> 请注意，AEM中不支持模板。<br> 请参 [阅设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
 |  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成电子目录、设置分辨率和选择色彩空间。<br> 请注意，AEM中不支持eCatalog。 <br> 请参 [阅设置PDF上传选项](#setting-pdf-upload-options)。 |
@@ -190,7 +190,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果要上传大资
 
 * 从图像边缘裁切空白（请参阅上表中的说明）。
 * 从图像的两侧手动裁切（请参阅上表中的说明）。
-* 选择颜色配置文件（请参阅上表中的选项说明）。
+* 选择颜色用户档案（请参阅上表中的选项说明）。
 * 从剪切路径创建蒙版。
 * 使用USM锐化选项锐化图像
 * 挖空背景
@@ -231,7 +231,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 如果您使用PSD文件创建模板，Dynamic Media会使用图层从PSD文件创建多个图像；它为每个图层创建一个图像。
 
-使用上述 [!UICONTROL 的“裁剪选项] ”和“颜 [!UICONTROL 色配置文件选项”]，并包含Photoshop上传选项。
+使用上述 [!UICONTROL 的“裁剪选项] ”和“ [!UICONTROL 颜色用户档案选项”]，并配以Photoshop上传选项。
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 | 选项 | 子选项 | 描述 |
 |---|---|---|
-| 维护图层 |  | 将PSD中的图层（如果有）拆分到单个资源中。 资产图层仍与PSD关联。 可通过在“详细信息”视图中打开PSD文件并选择图层面板来查看它们。 |
+| 维护图层 |  | 将PSD中的图层（如果有）拆分到单个资源中。 资产图层仍与PSD关联。 可以通过在“细节”视图中打开PSD文件并选择图层面板来视图它们。 |
 | 创建模板 |  | 从PSD文件中的图层创建模板。 |
 | 提取文本 |  | 提取文本，以便用户可以在查看器中搜索文本。 |
 | 将图层扩展到背景大小 |  | 将已撕开的图像图层的大小扩展到背景图层的大小。 |
@@ -278,11 +278,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 | 选项 | 子选项 | 描述 |
 |---|---|---|
-| 自适应视频 |  | 单个编码预设，可与任何宽高比配合使用以创建视频并交付到移动设备、平板电脑和桌面。 使用此预设编码的已上载源视频设置为固定高度。 但是，宽度会自动缩放以保持视频的宽高比。 <br>最佳实践是使用自适应视频编码。 |
+| 自适应视频 |  | 一个编码预设，可与任何宽高比配合使用，用于创建视频以投放到移动设备、平板电脑和桌面。 使用此预设编码的已上载源视频设置为固定高度。 但是，宽度会自动缩放以保持视频的宽高比。 <br>最佳实践是使用自适应视频编码。 |
 | 单个编码预设 | 对编码预设进行排序 | 选择“名称”或“大小”，按名称或分辨率大小对在桌面、手机和平板电脑下列出的编码预设进行排序。 |
-|  | 桌面设备 | 创建MP4文件，以便向台式计算机提供流式或渐进式视频体验。选择一个或多个长宽比，其分辨率大小和目标数据速率满足您的需要。 |
-|  | 移动设备 | 创建MP4文件，以便在iPhone或Android移动设备上交付。选择一个或多个长宽比，其分辨率大小和目标数据速率为您所需的大小。 |
-|  | 平板电脑 | 创建MP4文件，以便在iPad或Android平板电脑设备上交付。选择一个或多个长宽比，其分辨率大小和目标数据速率为您所需的大小。 |
+|  | 桌面设备 | 创建MP4文件，以便向台式计算机提供流式或渐进式视频体验。选择一个或多个长宽比，其分辨率大小和目标数据速率符合您的要求。 |
+|  | 移动设备 | 创建MP4文件，以便在iPhone或Android移动设备上投放。选择一个或多个长宽比，其分辨率大小和目标数据速率为您所需。 |
+|  | 平板电脑 | 创建MP4文件，以便在iPad或Android平板电脑设备上投放。选择一个或多个长宽比，其分辨率大小和目标数据速率为您所需。 |
 
 #### 在上传时设置批集预设 {#setting-batch-set-presets-at-upload}
 
@@ -292,7 +292,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 ### 流式上传 {#streamed-uploads}
 
-如果您将许多资产上传到AEM，则对服务器的I/O请求会显着增加，这会降低上传效率，甚至会导致某些上传任务超时。 AEM资产支持流式上传资产。 流式上传可避免在将磁盘复制到存储库之前，在服务器上的临时文件夹中存储资产，从而减少了上传操作期间的磁盘I/O。 而是直接将数据传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，流式上传在AEM资产中处于启用状态。
+如果您将许多资产上传到AEM，则对服务器的I/O请求会显着增加，这会降低上传效率，甚至会导致某些上传任务超时。 AEM资产支持流式上传资产。 流式上传可避免在将磁盘复制到存储库之前，在服务器上的临时文件夹中存储资产，从而减少上传操作期间的磁盘I/O。 而是直接将数据传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，流式上传在AEM资产中处于启用状态。
 
 >[!NOTE]
 >
@@ -306,7 +306,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 提取完成后，AEM会在通知区域通知您。 在AEM提取ZIP时，您可以返回工作，而不会中断提取。
 
-![ZIP解压通知](assets/Zip-extraction-notification.png)
+![ZIP提取通知](assets/Zip-extraction-notification.png)
 
 该功能的一些限制是：
 
@@ -317,14 +317,14 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 ## 预览资产 {#previewing-assets}
 
-要预览资产，请按照以下步骤操作。
+要预览资产，请执行以下步骤。
 
 1. 在资产用户界面中，导航到要预览的资产所在的位置。
 1. 点按所需的资产以将其打开。
 
 1. 在预览模式中，缩放选项可用于支持的图 [像类型](/help/assets/assets-formats.md#supported-raster-image-formats) （通过交互式编辑）。
 
-   要放大资产，请点按／单 `+` 击（或点按／单击资产上的放大镜）。 要缩小，请点按／单击 `-`。 放大时，可以通过平移来仔细查看图像上的任意区域。重置缩放箭头可返回原始视图。
+   要放大资产，请点按／单 `+` 击（或点按／单击资产上的放大镜）。 要缩小，请点按／单击 `-`。 放大时，可以通过平移来仔细查看图像上的任意区域。重置缩放箭头将您带回到原始视图。
 
    ![上载图标](assets/uploadicon.png)
 
@@ -332,13 +332,13 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    ![chlimage_1-216](assets/chlimage_1-11.png)
 
-**仅使用键盘键预览资源**
+**预览仅使用键盘键的资源**
 
 要使用键盘预览资产，请执行以下步骤：
 
 1. 在资产用户界面中，使用和方向键导航到所需 `Tab` 的资产。
 
-1. 按所 `Enter` 需资产上的键以将其打开。 您可以在预览模式下缩放资产。
+1. 按所 `Enter` 需资产上的键以将其打开。 您可以在预览模式下放大资源。
 
 1. 要放大资产，请执行以下操作：
    1. 使 `Tab` 用键将焦点移动到放大图标。
@@ -355,7 +355,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. 导航到要编辑元数据的资产所在的位置。
 
-1. 选择资产，然后点按／单击工 **[!UICONTROL 具栏中]** 的属性以查看资产属性。 或者，选择资产 **[!UICONTROL 卡上的]** “属性”快速操作。
+1. 选择资产，然后点按／单击工 **[!UICONTROL 具栏中的]** “属性”以视图资产属性。 或者，选择资产 **[!UICONTROL 卡上的]** “属性”快速操作。
 
    ![properties_quickaction](assets/properties_quickaction.png)
 
@@ -363,19 +363,19 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
    >[!NOTE]
    >
-   >“属性”页面的布 [!UICONTROL 局] ，以及可用的元数据属性取决于基础元数据架构。 要了解如何修改“属性”页的布 [!UICONTROL 局] ，请参阅元 [数据架构](/help/assets/metadata-schemas.md)。
+   >属性页面的布 [!UICONTROL 局] ，以及可用的元数据属性取决于基础元数据模式。 要了解如何修改“属性”页面的布 [!UICONTROL 局] ，请参阅元 [数据模式](/help/assets/metadata-schemas.md)。
 
 1. 要计划资产激活的特定日期/时间，请使用&#x200B;**[!UICONTROL 开始时间]**&#x200B;字段旁边的日期选取器。
 
-   ![使用“开始时间”字段中的日期时间选取器或键盘键添加资产激活的日期和时间](assets/schedule-activation.png)
+   ![使用“开始时间”字段中的日期时间选取器或键盘键为资产激活添加日期和时间](assets/schedule-activation.png)
 
    *图：计划资产激活*
 
 1. 要在特定持续时间后取消激活资产，请从“结束时间”字段旁边的日期选取器中选择取消激 **[!UICONTROL 活日期]** /时间。 取消激活日期应晚于资产的激活日期。 结束 [!UICONTROL 时间后]，资产及其演绎版不能通过资产Web界面或通过HTTP API使用。
 
-   ![使用“结束时间”字段中的日期时间选取器或键盘键添加取消激活资产的日期和时间](assets/schedule-deactivation.png)
+   ![使用“结束时间”字段中的日期时间选取器或键盘键，为资产取消激活添加日期和时间](assets/schedule-deactivation.png)
 
-   *图：计划取消激活资产*
+   *图：计划资产取消激活*
 
 1. 在“标 **[!UICONTROL 记]** ”字段中，选择一个或多个标记。 要添加自定义标记，请在框中键入标记的名称，然后按Enter。 新标记将保存在AEM中。 YouTube需要标记才能发布。 See [publish videos to YouTube](video.md#publishing-videos-to-youtube).
 
@@ -389,17 +389,17 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
    您为资产分配的评级分数显示在您的评 **[!UICONTROL 级下]**。 对资产进行评级的用户收到的资产平均评级分数显示在“评 **[!UICONTROL 级”下]**。 此外，对平均评级得分有贡献的评级得分的分解显示在“评级细 **[!UICONTROL 分”下]**。 您可以根据平均评级分数搜索资产。
 
-1. 要查看资产的使用情况统计信息，请单击／点按 **[!UICONTROL 分析]** 选项卡。
+1. 要视图资产的使用情况统计信息，请单击／点按 **[!UICONTROL Insights]** 选项卡。
 
    使用情况统计信息包括：
 
    * 查看或下载资产的次数
-   * 使用资产的渠道／设备
+   * 渠道/设备，通过这些设备使用资产
    * 最近使用该资产的创意解决方案
    有关详细信息，请参阅 [资产分析](/help/assets/touch-ui-asset-insights.md)。
 
 1. 点按／单击保 **[!UICONTROL 存并关闭]**。
-1. 导航到资产用户界面。 编辑的元数据属性（包括标题、描述、评级等）显示在“卡片”视图的资产卡片上以及“列表”视图的相关列下。
+1. 导航到资产用户界面。 已编辑的元数据属性（包括标题、描述、评级等）显示在卡片视图中的资产卡片上以及列表视图中相关列下。
 
 ## 复制资产 {#copying-assets}
 
@@ -478,7 +478,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
    ![chlimage_1-220](assets/chlimage_1-15.png)
 
-1. 点按／单击GlobalNav图标，然后从列 **[!UICONTROL 表中选择]** “演绎版”。
+1. 点按／单击GlobalNav图标，然后从列表中 **[!UICONTROL 选择]** “演绎版”。
 
    ![renditions_menu](assets/renditions_menu.png)
 
@@ -578,7 +578,7 @@ See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 ## 取消发布资产 {#unpublishing-assets}
 
-1. 导航到要从发布环境中删除的资产／资产文件夹的位置（取消发布）。
+1. 导航到要从发布环境（取消发布）中删除的资产／资产文件夹的位置。
 
 1. 选择要取消发布的资产／文件夹，然后点按／单击工 **[!UICONTROL 具栏中的管理发布]** 图标。
 
@@ -594,7 +594,7 @@ See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 1. 在确认对话框中，点按／单击：
 
    * **[!UICONTROL 取消]** ，停止操作
-   * **[!UICONTROL 取消发布]** ，以确认在指定日期已取消发布资产（在发布环境中不再可用）。
+   * **[!UICONTROL 取消发布]** ，以确认在指定日期已取消发布资产(在发布环境中不再可用)。
    >[!NOTE]
    >
    >取消发布复杂资产时，仅取消发布该资产。请避免取消发布引用，因为可能其他已发布的资产也引用了这些内容。
@@ -636,21 +636,21 @@ CUG是限制对资产访问的额外方式。 您还可以为文件夹配置登�
 
 ### 导航并选择资产 {#navigating-and-selecting-assets}
 
-您可以使用选择选项查看、导航和选择具有任何可用视图（卡片、列和列表）的 **[!UICONTROL 资产]** 。
+您可以使用“选择”选项视图、导航和选择具有任何可用视图(卡片、列和列表)的 **[!UICONTROL 资产]** 。
 
-在列表视图和列视图中，将指 **[!UICONTROL 针悬停在资产缩略图上时]** ，将显示“选择”选项。
+在列表视图和列视图中，当您将指针悬停在资 **[!UICONTROL 产缩略图上时]** ，将显示选择选项。
 
 ![select_quick_in_listview](assets/select_quick_in_listview.png)
 
 ![select_quick_in_columnview](assets/select_quick_in_columnview.png)
 
-在卡片视图中，“选 **[!UICONTROL 择]** ”选项显示为快速操作。
+在卡视图中，“选 **[!UICONTROL 择]** ”选项显示为快速操作。
 
 ![select_quick_action](assets/select_quick_action.png)
 
-在浏览器中的“资产”用户界面中浏览文件夹或收藏集时，您可以使用右上角的“全选”选项选择所有显示或加载的资产  。 如果不在下方滚动，则卡片视图中仅加载100个资产，列表视图中加载200个资产。 选择全部选项将仅选择这些资产。
+在浏览器中的“资产”用户界面中浏览文件夹或收藏集时，您可以使用右上角的“全选”选项选择所有显示或加载的资产  。 如果不在下方滚动，则卡视图中仅加载100个资源，列表视图中加载200个资源。 选择全部选项将仅选择这些资产。
 
-有关详细信息，请参 [阅查看和选择资源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
+有关详细信息，请参阅 [视图和选择资源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 
 ## 编辑图像 {#editing-images}
 
@@ -708,7 +708,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 ## 时间轴 {#timeline}
 
-时间轴允许您查看选定项目的各种事件，如资产的活动工作流、注释／注释、活动日志和版本。
+时间轴允许您视图选定项目的各种事件，如资产的活动工作流、注释／注释、活动日志和版本。
 
 ![对资产的时间轴条目进行排序](assets/sort_timeline.gif)
 
@@ -716,7 +716,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 >[!NOTE]
 >
->在“收藏 [集”控制台中](/help/assets/managing-collections-touch-ui.md#navigating-the-collections-console),“显 **[!UICONTROL 示全部]** ”列表提供了仅查看注释和工作流的选项。 此外，时间轴仅对控制台中列出的顶级集合显示。 如果您在任何集合中导航，则不会显示该集合。
+>在“收 [藏集”控制台](/help/assets/managing-collections-touch-ui.md#navigating-the-collections-console),“显示全 **** 部”列表提供了仅用于视图注释和工作流的选项。 此外，时间轴仅对控制台中列出的顶级集合显示。 如果您在任何集合中导航，则不会显示该集合。
 
 >[!NOTE]
 >
@@ -743,7 +743,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![chlimage_1-234](assets/chlimage_1-30.png)
 
-1. 要向用户通知注释，请指定用户的电子邮件地址并添加评论。 例如，要向 Aaron MacDonald 发送有关注释的通知，请输入 @aa。此时会出现一个列表，其中显示了所有匹配用户的提示。从列表中选择Aaron的电子邮件地址，用注释标记她。 同样，您可以在注释内的任意位置或注释前后标记更多用户。
+1. 要向用户通知注释，请指定用户的电子邮件地址并添加评论。 例如，要向 Aaron MacDonald 发送有关注释的通知，请输入 @aa。此时会出现一个列表，其中显示了所有匹配用户的提示。从列表中选择Aaron的电子邮件地址，用评论标记她。 同样，您可以在注释内的任意位置或注释前后标记更多用户。
 
    >[!NOTE]
    >
@@ -766,9 +766,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    >
    >您也可以对视频资产添加注释。在对视频添加注释时，播放器会暂停，让您在帧上添加注释。 有关详细信息，请参 [阅管理视频资产](/help/assets/managing-video-assets.md)。
 
-1. 要选择不同的颜色以便您能够区分不同的用户，请单击／点按配置文件图标，然后单击／点按我的 **[!UICONTROL 首选项]**。
+1. 要选择不同的颜色以便您能够区分不同的用户，请单击／点按用户档案图标，然后单击／点按我的 **[!UICONTROL 首选项]**。
 
-   ![选择用户配置文件图标，然后选择我的首选项以打开用户首选项](assets/User-profile-preferences.png)
+   ![选择用户用户档案图标，然后选择我的首选项以打开用户首选项](assets/User-profile-preferences.png)
 
    在&#x200B;**[!UICONTROL 批注颜色]**&#x200B;框中指定所需颜色，然后单击/点按&#x200B;**[!UICONTROL 接受]**。
 
@@ -778,11 +778,11 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 >
 >您还可以向集合添加注释。 但是，如果集合包含子集合，则只能向父集合添加注释／注释。 “注释”选项对子集合不可用。
 
-### 查看保存的注释 {#viewing-saved-annotations}
+### 视图保存的注释 {#viewing-saved-annotations}
 
-1. 要查看已保存的资产注释，请导航到资产所在的位置，然后打开资产的资产页面。
+1. 要视图已保存的资产注释，请导航到资产所在的位置，然后打开资产的资产页面。
 
-1. 点按／单击GlobalNav图标，然后从列 **[!UICONTROL 表中选择]** “时间轴”。
+1. 点按／单击GlobalNav图标，然后从列表中 **[!UICONTROL 选择]** “时间轴”。
 
    ![chlimage_1-239](assets/chlimage_1-35.png)
 
@@ -790,7 +790,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![chlimage_1-240](assets/chlimage_1-36.png)
 
-   点按／单击“时间轴”面板中 **[!UICONTROL 的注释]** ，以查看图像上的相应注释。
+   点按／单击“时间轴”面板中 **[!UICONTROL 的注释]** ，以视图图像上的相应注释。
 
    ![chlimage_1-241](assets/chlimage_1-37.png)
 
@@ -804,7 +804,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 要打印注释和审阅状态，请点按／单击“打 **[!UICONTROL 印]** ”图标，然后按照向导中的说明操作。 仅当 **[!UICONTROL 资产至少分配了一个注释或审核状态时]** ,“打印”图标才会显示在工具栏中。
 
-1. 在资产UI中，打开资产的预览页面。
+1. 从资产UI中，打开资产的预览页面。
 1. 执行下列操作之一：
 
    * 要打印所有注释和审阅状态，请跳过步骤3并直接转到步骤4。
@@ -893,7 +893,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 通过版本控制功能，您可以执行以下操作：
 
 * 创建资产的版本。
-* 查看资产的当前版本。
+* 视图资产的当前版本。
 * 将资产恢复到先前版本。
 
 1. 导航到您要为其创建版本的资产所在的位置，然后点按／单击该资产以打开其资产页面。
@@ -902,7 +902,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![时间轴](assets/timeline.png)
 
-1. 点按／单击底 **[!UICONTROL 部的操作]** （箭头）图标，以查看可对资产执行的可用操作。
+1. 点按／单击底 **[!UICONTROL 部的操作]** （箭头）图标，以视图您可以对资产执行的可用操作。
 
    ![chlimage_1-249](assets/chlimage_1-45.png)
 
@@ -918,13 +918,13 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![versions_option](assets/versions_option.png)
 
-1. 为资产选择特定版本以进行预览，或启用该版本以在资产UI中显示。
+1. 为资产选择特定版本，以对其进行预览，或启用该版本使其显示在资产UI中。
 
    ![select_version](assets/select_version.png)
 
    >[!NOTE]
    >
-   >您还可以从列表视图或列视 [图中选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)[资产](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
+   >您还可以从列表视图或列 [视图中选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)[资产](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 
 1. 为版本添加标签和注释以在资产UI中还原到特定版本。
 
@@ -940,32 +940,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![compare_versions](assets/compare_versions.png)
 
-### 在资产上启动工作流 {#starting-a-workflow-on-an-asset}
+### 开始资产上的工作流 {#starting-a-workflow-on-an-asset}
 
-1. 导航到您要为其启动工作流的资产所在的位置，然后点按／单击资产以打开资产页面。
-1. 点按GlobalNav图标，然后从菜 **[!UICONTROL 单中选择]** “时间轴”以显示时间轴。
-
-   ![时间轴-1](assets/timeline.png)
-
-1. Tap the **[!UICONTROL Actions]** (arrow) icon at the bottom to open the list of actions available for the asset.
-
-   ![chlimage_1-252](assets/chlimage_1-45.png)
-
-1. 从列 **[!UICONTROL 表中点按启动]** “工作流”。
-
-   ![chlimage_1-253](assets/chlimage_1-49.png)
-
-1. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
-
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
-1. （可选）指定工作流的标题，该标题可用于引用工作流实例。
-
-   ![chlimage_1-255](assets/chlimage_1-51.png)
-
-1. Tap **[!UICONTROL Start]**, then tap **[!UICONTROL Proceed]** in the dialog to confirm. 工作流的每个步骤都会作为事件显示在时间轴中。
-
-   ![chlimage_1-256](assets/chlimage_1-52.png)
+要应用工作流来处理资产，请参阅 [开始资产工作流](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset)。
 
 ## 收藏集 {#collections}
 
