@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ![查看显示默认配置的HTML工作区待办事项选项卡](assets/html-todo-list.png)
 
-本文详细介绍了为ToDo列表中的每个任务添加要显示的信息的步骤。
+本文详细介绍了在ToDo列表中为每个任务添加要显示的信息的步骤。
 
 ## 可添加的内容 {#what-can-be-added}
 
@@ -29,10 +29,10 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 有关JSON对象描述的详细信息，请参阅 [此](/help/forms/using/html-workspace-json-object-description.md) 文章。
 
-## 显示任务信息 {#displaying-information-on-a-task}
+## 显示任务上的信息 {#displaying-information-on-a-task}
 
 1. 按照AEM Forms工 [作区自定义的常规步骤操作](../../forms/using/generic-steps-html-workspace-customization.md)。
-1. 要显示任务的附加信息，必须在的任务块中添加相应的键值对 `translation.json`。
+1. 要显示任务的附加信息，相应的键值对必须添加到任务块中 `translation.json`。
 
    例如，对英 `/apps/ws/locales/en-US/translation.json` 语的更改：
 
@@ -121,7 +121,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ## 为新属性定义CSS {#defining-css-for-the-new-property}
 
-1. 您可以将样式应用于添加到任务的信息（属性）。 为此，您需要为添加到的新属性添加样式信息 `/apps/ws/css/newStyle.css`。
+1. 您可以对添加到任务的信息（属性）应用样式。 为此，您需要为添加到的新属性添加样式信息 `/apps/ws/css/newStyle.css`。
 
    例如，添加：
 
@@ -135,7 +135,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ## 在HTML模板中添加条目 {#adding-entry-in-the-html-template}
 
-最后，您需要在开发包中包含要添加到任务的每个属性的条目。 要创建AEM表单，请参阅构建AEM Forms工作区代码。
+最后，您需要在开发包中为要添加到任务的每个属性加入一个条目。 要创建AEM表单，请参阅构建AEM Forms工作区代码。
 
 1. 复制 `task.html`:
 
@@ -149,5 +149,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    ```
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
