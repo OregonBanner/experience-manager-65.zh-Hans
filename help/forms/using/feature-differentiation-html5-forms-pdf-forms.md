@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -30,7 +30,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   <tr>
    <td>条码<br /> </td>
    <td>在用户界面级别不可用。 </td>
-   <td>受支持</td>
+   <td>支持</td>
   </tr>
   <tr>
    <td>签名字段<br /> </td>
@@ -39,8 +39,8 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   </tr>
   <tr>
    <td>数据合并</td>
-   <td>受支持</td>
-   <td>受支持</td>
+   <td>支持</td>
+   <td>支持</td>
   </tr>
   <tr>
    <td>图像</td>
@@ -49,13 +49,13 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   </tr>
   <tr>
    <td>分页<br /> </td>
-   <td><p>HTML5表单被分成多个面板和框，以使其具有与PDF表单相似的外观。 页面大小会动态计算。 如果HTML5表单中页面的所有内容被删除或标记为隐藏，则空白页面将被隐藏，空白页面上方和下方的页面之间不显示空白（空白）。</p> <p>如果数据合并或脚本向页面添加内容，则页面的长度会扩展以容纳新添加的内容。 表单中不会添加新页面以容纳新添加的内容。 </p> <p><strong></strong> 注意：当HTML5表单中页面的所有内容被删除或标记为隐藏时，空白页面（空白）在第1页和第2页之间保持可见，但在任何其他页面之间不可见。</p> </td>
+   <td><p>HTML5表单被分成多个面板和框，以使其具有与PDF表单相似的外观。 页面大小会动态计算。 如果HTML5表单中页面的所有内容被删除或标记为隐藏，则空白页面将被隐藏，空白页面上方和下方的页面之间不显示空白（空白）。</p> <p>如果数据合并或脚本向页面添加内容，则页面的长度会扩展以容纳新添加的内容。 表单中不会添加新页面以容纳新添加的内容。 </p> <p><strong>注意：</strong> 当HTML5表单中页面的所有内容被删除或标记为隐藏时，空白页面（空白）在第1页和第2页之间保持可见，但在任何其他页面之间不可见。</p> </td>
    <td>PDF中的分页取决于合并的数据内容或用户内容，并且页面数量会据此增加／减少。</td>
   </tr>
   <tr>
    <td>页眉／页脚 </td>
-   <td>受支持. <br /> 由 <br /> 于HTML5移动表单不支持分页，因此页眉和页脚只显示一次。 但是，您可以在布局中设置它们，使其显示在移动表单预览的多个位置。<br /> </td>
-   <td>受支持.</td>
+   <td>支持. <br /> 由 <br /> 于HTML5移动表单不支持分页，因此页眉和页脚只显示一次。 但是，您可以在布局中设置它们，使其显示在移动表单预览的多个位置。<br /> </td>
+   <td>支持.</td>
   </tr>
   <tr>
    <td>自定义构件</td>
@@ -74,12 +74,10 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
   </tr>
   <tr>
    <td>支持从右至左语言 </td>
-   <td>受支持</td>
-   <td>受支持</td>
+   <td>支持</td>
+   <td>支持</td>
   </tr>
  </tbody>
 </table>
 
 <!--Follow the best practices to enable a form template for HTML5 renditions and ensure that the behavior and appearance of HTML5 forms and XFA-based PDF is consistent. For detailed list of best practices, see [Best practices to design an HTML5 form.](/help/forms/using/best-practices-design-html5-forms.md)-->
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
