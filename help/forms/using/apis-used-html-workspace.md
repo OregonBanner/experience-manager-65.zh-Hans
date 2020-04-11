@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -42,13 +42,13 @@ AEM Forms工作区中使用了以下API。
    <td>prepareForSubmit</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>prepareForSubmit</td>
-   <td>在通过DocumentSubmitServlet提交表单之前，将调用该字段。 它在实际提交期间检索的会话变量中设置任务ID（以及到期时间）。</td>
+   <td>在通过DocumentSubmitServlet提交表单之前，将调用该字段。 它在实际提交期间检索的会话变量（以及到期时间）中设置任务ID。</td>
   </tr>
   <tr>
    <td>submitTask</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>提交</td>
-   <td>它提交与任务关联的文档对象（并依次提交进程）。</td>
+   <td>它提交与文档关联的任务对象（并依次提交进程）。</td>
   </tr>
   <tr>
    <td>getRootEndpointCategories</td>
@@ -60,7 +60,7 @@ AEM Forms工作区中使用了以下API。
    <td>getDirectChildCategories</td>
    <td>ProcessManagementStartpointService</td>
    <td>getDirectChildCategories2</td>
-   <td>它获取类别的所有直接子项。</td>
+   <td>它为类别获取所有直接子项。</td>
   </tr>
   <tr>
    <td>getAllStartpoints</td>
@@ -72,13 +72,13 @@ AEM Forms工作区中使用了以下API。
    <td>invokeStartpoint</td>
    <td>ProcessManagementStartpointService</td>
    <td>invokeStartpoint</td>
-   <td>这会调用起始点并创建与起始点对应的新任务</td>
+   <td>这将调用起始点并创建与起始点对应的新任务</td>
   </tr>
   <tr>
    <td>getAllTasks</td>
    <td>ProcessManagementTaskService</td>
    <td>getAllCopatableTasks</td>
-   <td>它会获取为登录用户创建和转发或咨询、保存、分配、分配和保存的所有任务。</td>
+   <td>它会获取所有为登录用户创建和转发或咨询、保存、分配、分配和保存的任务。</td>
   </tr>
   <tr>
    <td>getTask</td>
@@ -90,7 +90,7 @@ AEM Forms工作区中使用了以下API。
    <td>renderTask</td>
    <td>ProcessManagementTaskService</td>
    <td>渲染</td>
-   <td>它会呈现任务并返回呈现表单所需的信息，如表单url、表单类型、数据url（如果需要）等。</td>
+   <td>它呈现任务，并根据需要返回呈现表单所需的信息，如表单url、表单类型、数据url等。</td>
   </tr>
   <tr>
    <td>submitWithPriorData</td>
@@ -108,13 +108,13 @@ AEM Forms工作区中使用了以下API。
    <td>保存</td>
    <td>ProcessManagementTaskService</td>
    <td>保存</td>
-   <td>它将任务保存到服务器上。</td>
+   <td>它在服务器上保存了任务。</td>
   </tr>
   <tr>
    <td>完整</td>
    <td>ProcessManagementTaskService</td>
    <td>完整</td>
-   <td>它完成了一个任务，并根据流程设计将任务传递到下一步。</td>
+   <td>它完成了任务,任务将按照流程设计传递到下一步。</td>
   </tr>
   <tr>
    <td>getAttachment</td>
@@ -126,7 +126,7 @@ AEM Forms工作区中使用了以下API。
    <td>getAllAttachments</td>
    <td>ProcessManagementTaskService</td>
    <td>getAllCopactedAttachments</td>
-   <td>它会获取任务的所有附件和备注。</td>
+   <td>它可获取任务的所有附件和备注。</td>
   </tr>
   <tr>
    <td>股份</td>
@@ -144,31 +144,31 @@ AEM Forms工作区中使用了以下API。
    <td>consult</td>
    <td>ProcessManagementTaskService</td>
    <td>consult</td>
-   <td>它咨询其他用户的任务。</td>
+   <td>它会咨询其他用户的任务。</td>
   </tr>
   <tr>
    <td>索赔</td>
    <td>ProcessManagementTaskService</td>
    <td>索赔</td>
-   <td>它声明在共享队列中可用的任务。</td>
+   <td>它声明共享队列中有可用的任务。</td>
   </tr>
   <tr>
    <td>解锁</td>
    <td>ProcessManagementTaskService</td>
    <td>解锁</td>
-   <td>它可解锁任务。</td>
+   <td>它解开了任务。</td>
   </tr>
   <tr>
    <td>锁</td>
    <td>ProcessManagementTaskService</td>
    <td>锁</td>
-   <td>它锁定任务，如果共享，则其他用户无法声明该任务。</td>
+   <td>它锁定任务，如果共享，则其他用户无法声明任务。</td>
   </tr>
   <tr>
    <td>拒绝</td>
    <td>ProcessManagementTaskService</td>
    <td>拒绝</td>
-   <td>它将任务返回给任务的前一个所有者。</td>
+   <td>它将任务返回给任务的前所有者。</td>
   </tr>
   <tr>
    <td>放弃</td>
@@ -186,7 +186,7 @@ AEM Forms工作区中使用了以下API。
    <td>getUsers</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsers</td>
-   <td>用于搜索用户。 如果未指定名称，则返回所有用户，否则返回具有指定名称的用户。</td>
+   <td>用于搜索用户。 如果未指定名称，则返回所有用户；否则返回具有指定名称的用户。</td>
   </tr>
   <tr>
    <td>getUsersInGroup</td>
@@ -222,13 +222,13 @@ AEM Forms工作区中使用了以下API。
    <td>revokeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>revokeQueueAccess</td>
-   <td>它会从有权访问已登录用户队列的用户列表中删除用户。</td>
+   <td>它会从有权访问已登录用户队列的用户的列表中删除用户。</td>
   </tr>
   <tr>
    <td>removeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>removeQueueAccess</td>
-   <td>它会从登录用户可以访问其队列的用户列表中删除用户。</td>
+   <td>它会从登录用户可访问其队列的用户的列表中删除用户。</td>
   </tr>
   <tr>
    <td>getAllQueues<br /> </td>
@@ -258,7 +258,7 @@ AEM Forms工作区中使用了以下API。
    <td>getEpteritedProcesses</td>
    <td>ProcessManagementProcessService</td>
    <td>getEpteritedProcesses</td>
-   <td>它返回已登录用户参与的所有进程名称的列表。</td>
+   <td>它返回由登录用户参与的所有进程名称的列表。</td>
   </tr>
   <tr>
    <td>getProcessInstance<br /> </td>
@@ -300,13 +300,13 @@ AEM Forms工作区中使用了以下API。
    <td>findTasksJson<br /> </td>
    <td>ProcessManagementQueryService</td>
    <td>findTasksJson</td>
-   <td>它将搜索并返回满足搜索模板所有条件的所有任务。</td>
+   <td>它会搜索并返回满足搜索模板所有条件的所有任务。</td>
   </tr>
   <tr>
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>它获取任务的所有任务分配。 例如：-如果用户转发或咨询某个任务，则该任务是某个任务的分配。</td>
+   <td>它获取任务的所有任务。 例如：-如果用户转发或咨询其他用户的任务，则该任务是分配给其他用户的。</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>
@@ -324,7 +324,7 @@ AEM Forms工作区中使用了以下API。
    <td>getTasksForDirectReports</td>
    <td>ProcessManagementTeamTasksService</td>
    <td>getTasksForDirectReports</td>
-   <td>它返回已登录管理器的直接报告的所有任务。</td>
+   <td>它返回已登录管理器的所有任务直接报告。</td>
   </tr>
   <tr>
    <td>getTaskOfDirectReport<br /> </td>
@@ -378,19 +378,19 @@ AEM Forms工作区中使用了以下API。
    <td>getUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getUserImageUrl</td>
-   <td>它获取指定用户的用户图像url。</td>
+   <td>它获取指定用户的用户图像URL。</td>
   </tr>
   <tr>
    <td>uploadNote</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadNote</td>
-   <td>它为任务在服务器上上传注释。</td>
+   <td>它在服务器上上传注释以进行任务。</td>
   </tr>
   <tr>
    <td>uploadRMAToServer（也直接从html模板调用）<br /> </td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadAttachment</td>
-   <td>它为任务在服务器上上传一个附件。</td>
+   <td>它上传服务器上的附件用于任务。</td>
   </tr>
   <tr>
    <td>getImageURL（也直接从html模板调用）</td>
@@ -400,6 +400,3 @@ AEM Forms工作区中使用了以下API。
   </tr>
  </tbody>
 </table>
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
-
