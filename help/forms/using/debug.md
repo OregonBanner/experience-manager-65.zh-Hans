@@ -1,8 +1,8 @@
 ---
 title: 调试HTML5表单
 seo-title: 调试HTML5表单
-description: 文档列表中列出了对各种已知问题进行故障诊断的步骤。
-seo-description: 文档列表中列出了对各种已知问题进行故障诊断的步骤。
+description: 文档列表步骤，用于诊断各种已知问题。
+seo-description: 文档列表步骤，用于诊断各种已知问题。
 uuid: df1835aa-6033-4ecb-97c8-4c3b7b96b943
 contentOwner: robhagat
 content-type: reference
@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 调试HTML5表单 {#debugging-html-forms}
 
-本文档包括几个疑难解答方案。 对于每种情况，都会提供一些步骤来解决问题。 按照以下步骤操作，如果问题仍然存在，请配置记录器以获取并查看错误／警告日志。 有关HTML5表单日志记录的更多详细信息，请参 [阅为HTML5表单生成日志](/help/forms/using/enable-logs.md)。
+此文档包括多种疑难解答方案。 对于每种情况，都会提供一些步骤来解决问题。 按照以下步骤操作，如果问题仍然存在，请配置记录器以获取并查看错误／警告日志。 有关HTML5表单日志记录的更多详细信息，请参 [阅为HTML5表单生成日志](/help/forms/using/enable-logs.md)。
 
 ## 问题：呈现表单时，我会看到org.apache.sling.api.SlingException异常页 {#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page}
 
@@ -60,7 +60,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * adobe-lc-forms-content-pkg-&lt;version>.zip
    * adobe-lc-forms-runtime-pkg-&lt;version>.zip
 
-1. 登录到CQ web控制台(Felix Console)，网址为https://&lt;server>:&lt;port>/system/console/bundles。
+1. 登录到CQ Web控制台(Felix Console)，网址为https://&lt;server>:&lt;port>/system/console/bundles。
 
    确保以下捆绑包的状态为“活动”:
 
@@ -75,8 +75,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 问题：无样式的表单渲染 {#problem-form-renders-without-styles}
 
-1. 在您的浏览器中，打开“开 **发人员工具”**。 确保profile.css可用。
-1. 如果profile.css文件不可用，请登录https://&lt;server>:&lt;port>/crx/de的CRX DE。
+1. 在您的浏览器中，打开“开 **发人员工具”**。 确保用户档案.css可用。
+1. 如果用户档案.css文件不可用，请登录https://&lt;server>:&lt;port>/crx/de的CRX DE。
 1. 在左侧的文件夹层次结构中，导航到/etc/clientlibs/fd/xfaforms/。 打开文件夹中列出的css.txt文件。
 
    * 配置文件
@@ -100,7 +100,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 问题：遇到意外错误 {#problem-unexpected-error-encountered}
 
-1. 在表单URL中，添加查询参数debugClientLibs并将其值设置为true(例如：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
+1. 在表单URL中，添加一个查询参数debugClientLibs并将其值设置为true(例如：https://&lt;server>:&lt;port>/content/xfaforms/profiles/test.html?contentRoot=&lt;some path>&amp;template=&lt;name of xdp file>&amp;log=1-a9-b9-c9&amp;debugClientLibs=true)
 1. 在桌面浏览器（如Chrome）中，转到“开发人员工具”->“控制台”。
 1. 打开日志以标识错误类型。 有关日志的详细信息，请参 [阅HTML5表单的日志](/help/forms/using/enable-logs.md)。
 1. 转到“开发人员工具”->“控制台”。 使用堆栈跟踪查找导致错误的代码。 调试错误以解决问题。
@@ -178,5 +178,3 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 1. 在桌面浏览器中，转到“开发人员工具”->“资源”。
 
    如果显示该图像，请在“帧”中检查左侧。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
