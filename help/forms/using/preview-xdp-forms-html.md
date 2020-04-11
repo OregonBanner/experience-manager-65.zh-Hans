@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -116,5 +116,3 @@ Designer允许您使用范例XML数据预览和测试表单。 建议您经常�
 ## 预览存储库中的表单 {#html-preview-of-forms-in-forms-manager}
 
 在AEM Forms中，您可以预览存储库中的表单和文档。 预览有助于准确了解表单的外观和行为，就像最终用户使用表单一样。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
