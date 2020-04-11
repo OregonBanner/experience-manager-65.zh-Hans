@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -31,11 +31,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 MDM解决方案和移动应用程序管理允许您在企业中的移动设备上管理内部、公共和购买的应用程序。
 
-MDM管理员可以将ipa和apk文件上传到MDM服务器，并控制可以访问ipa或apk文件的用户。 管理员还可以控制与每个应用程序对应的配置文件设置。
+MDM管理员可以将ipa和apk文件上传到MDM服务器，并控制可以访问ipa或apk文件的用户。 管理员还可以控制与每个应用程序对应的用户档案设置。
 
-## 影响AEM Forms应用程序的配置文件设置 {#profile-settings-affecting-the-aem-forms-app-br}
+## 用户档案影响AEM Forms应用程序的设置 {#profile-settings-affecting-the-aem-forms-app-br}
 
-设备上的以下配置文件设置将影响设备上AEM Forms应用程序的功能：
+设备上的以下用户档案设置将影响设备上AEM Forms应用程序的功能：
 
 * **允许在“设备** ”功能部分 **中使用相机**
 
@@ -44,5 +44,3 @@ MDM管理员可以将ipa和apk文件上传到MDM服务器，并控制可以访�
 * **在“密码策略** ”部分要求设备上的密码
 
 要启用应 **用程序数据加密**，建议您在设备上启用 **密码** 。 如果未在设备上设置密码，则存储在设备上的应用程序数据不会加密。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
