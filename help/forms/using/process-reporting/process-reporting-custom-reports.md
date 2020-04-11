@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -658,4 +658,4 @@ response.setCharacterEncoding("utf-8");
 
 导入包 `sample-report-pkg-1.zip` 以将文章中讨论的自定义报告和UI集成到流程管理UI。
 
-[获取文件](assets/sample-report-pkg-1.zip)[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
+[获取文件](assets/sample-report-pkg-1.zip)
