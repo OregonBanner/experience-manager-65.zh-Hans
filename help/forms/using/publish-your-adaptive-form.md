@@ -9,7 +9,7 @@ topic-tags: introduction
 discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -47,7 +47,7 @@ source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
 
 AEM Forms允许表单开发人员将自适应表单无缝嵌入到AEM站点页面中。 嵌入式自适应表单功能齐全，用户无需离开页面即可填写和提交表单。 它帮助用户保持在网页上其他元素的上下文中并与表单同时交互。
 
-AEM Forms提供一个组件AEM Forms Container，用于将自适应表单嵌入到AEM站点页面。 默认情况下，该组件在AEM Sites容器中不可见。 执行以下步骤以启用AEM Forms Container组件并将自适应表单嵌入到AEM站点页面：
+AEM Forms提供一个组件AEM Forms容器，用于将自适应表单嵌入到AEM站点页面。 默认情况下，该组件在AEM站点容器中不可见。 执行以下步骤以启用AEM Forms容器组件并将自适应表单嵌入到AEM站点页面：
 
 1. 在We.Retail站点中创建并打开一个页面进行编辑。 例如， [https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html](https://localhost:4502/editor.html/content/we-retail/us/en/user/shipping-and-billing-address.html)。 自适应表单已嵌入到站点页面。
 
@@ -56,10 +56,10 @@ AEM Forms提供一个组件AEM Forms Container，用于将自适应表单嵌入�
    We.Retail站点随AEM提供。 如果尚未安装We.Retail站点，请参阅安装 [We.Retail Reference Implementation](https://helpx.adobe.com/experience-manager/6-3/help/sites-developing/we-retail.html) （We.Retail参考实施）。
 
 1. 点按 ![属性页](assets/properties.png) ，然后在新创建的We.Retail站点页 **面中选择** “编辑模板”选项。 页面的模板将在浏览器的新选项卡中打开。
-1. 在布局容器 **框内点按** ，然后点按 ![feedmanagement](assets/feedmanagement.png)。 在允 **许的组件** ，展开常规 **折叠面板，选择** AEM表单 **，然后点按**![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/AEM_6_3_Forms_save.PNG)。 此时会为页面启用AEM Forms Container组件。
+1. 在布局容器 **框中点按** ，然后点按 ![feedmanagement](assets/feedmanagement.png)。 在允 **许的组件** ，展开常规 **折叠面板，选择** AEM表单 **，然后点按**![](assets/save_icon.svg)。 此时会为页面启用AEM表单容器组件。
 
-1. 打开包含在步骤1中打开的AEM站点页面的浏览器选项卡。 点按将 **组件拖动到此处** ，然后点 **按+。** 在插入 **新组件框中** ，点按 **AEM表单。** AEM Forms Container **(** AEM表单容器)组件将添加到页面。
-1. 点按 **AEM Forms容器组件** ，然后点按 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/cmppr.png)。 此时会显示一个包含AEM Forms Container属性的对话框。 在“资 **产路径** ”字段中，浏览并选择shipping-add-update-form自适应表单。 点按 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/AEM_6_3_Forms_save.PNG). 自适应表单嵌入到页面中。
+1. 打开包含在步骤1中打开的AEM站点页面的浏览器选项卡。 点按将 **组件拖动到此处** ，然后点 **按+。** 在插入 **新组件框中** ，点按 **AEM表单。** AEM Forms容器组件 **** 即添加到页面。
+1. 点按 **AEM Forms容器组件** ，然后点按 ![](assets/configure-icon.svg)。 将显示一个包含AEM Forms容器属性的对话框。 在“资 **产路径** ”字段中，浏览并选择shipping-add-update-form自适应表单。 点按 ![](assets/save_icon.svg). 自适应表单嵌入到页面中。
 1. 发布自适应表单和站点页面。 以下是需要考虑的几点：
 
    * 如果您是第一次发布AEM站点页面，并且该页面包含嵌入式表单，请发布站点页面和嵌入式表单。
