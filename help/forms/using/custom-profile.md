@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -81,5 +81,3 @@ footer.jsp模块为空。 它允许您添加仅用于用户交互的脚本。
 1. 要验证是否已创建用户档案，请打开URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
 
 要验证表单，请将 [表单从本地文件系统导入](/help/forms/using/get-xdp-pdf-documents-aem.md) AEM Forms，然后在AEM服务器作 [者实例上预览表单](/help/forms/using/previewing-forms.md) 。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
