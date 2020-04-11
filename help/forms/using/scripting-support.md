@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -71,7 +71,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
   </tr>
   <tr>
    <td>关键</td>
-   <td>确定用户是否按箭头键进行选择。 此属性仅适用于列表框和下拉列表。</td>
+   <td>确定用户是否按箭头键进行选择。 此属性仅对列表框和下拉列表可用。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -114,7 +114,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
   <tr>
    <td><code>title</code></td>
    <td>指定文档的标题。 它仅对客户端应用程序可用。</td>
-   <td>它以表单形式返回HTML文档的标题，而不是像“PDF表单”那样返回表单元数据标题。</td>
+   <td>它以表单形式返回HTML文档的标题，而不是像PDF表单那样返回表单元数据标题。</td>
   </tr>
   <tr>
    <td><code>version</code></td>
@@ -315,12 +315,12 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
   </tr>
   <tr>
    <td>x</td>
-   <td>使用定位布局放置时，指定容器锚点相对于父容器的左上角的x坐标。</td>
+   <td>使用定位的布局放置时，指定容器锚点相对于父容器左上角的x坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>y</td>
-   <td>使用定位布局放置时，指定容器锚点相对于父容器的左上角的y坐标。</td>
+   <td>使用定位的布局放置时，指定容器的锚点相对于父容器左上角的y坐标。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -357,7 +357,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
 | 属性 | 描述 |
 |---|---|
 | `name` | 用于在脚本表达式中标识此元素的标识符。 |
-| `occur` | 描述对其封闭容器允许的实例数的限制。 |
+| `occur` | 描述对其封闭容器允许的实例数的约束。 |
 | `min` | 指定可实例化的最小实例数。 |
 | `max` | 指定可实例化的实例的最大数量。 |
 | `count` | 指定实例化的实例的当前数量。 |
@@ -373,9 +373,9 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
 |---|---|
 | `length` | 列表中的元素数。 |
 | `item` | 集合中从零开始的索引。 |
-| `append` | 在节点列表的末尾附加一个节点。 |
+| `append` | 将节点附加到节点列表的末尾。 |
 | `remove` | 从节点列表中删除节点。 |
-| `insert` | 在节点列表中特定节点之前插入节点。 |
+| `insert` | 在节点列表中的特定节点之前插入一个节点。 |
 
 ## 节点 {#node}
 
@@ -443,12 +443,12 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
   </tr>
   <tr>
    <td>x</td>
-   <td>使用定位布局放置时，指定容器锚点相对于父容器的左上角的x坐标。</td>
+   <td>使用定位的布局放置时，指定容器锚点相对于父容器左上角的x坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>y</td>
-   <td>使用定位布局放置时，指定容器锚点相对于父容器的左上角的y坐标。</td>
+   <td>使用定位的布局放置时，指定容器的锚点相对于父容器左上角的y坐标。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -811,7 +811,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
   </tr>
   <tr>
    <td>contentType</td>
-   <td>指定引用文档中的内容类型，以MIME类型表示。</td>
+   <td>在引用的文档中指定内容类型，表示为MIME类型。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -936,12 +936,12 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下：
   </tr>
   <tr>
    <td>x</td>
-   <td>使用定位布局放置时，指定容器锚点相对于父容器的左上角的x坐标。</td>
+   <td>使用定位的布局放置时，指定容器锚点相对于父容器左上角的x坐标。</td>
    <td>无</td>
   </tr>
   <tr>
    <td>y</td>
-   <td>使用定位布局放置时，指定容器锚点相对于父容器的左上角的y坐标。</td>
+   <td>使用定位的布局放置时，指定容器的锚点相对于父容器左上角的y坐标。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -1124,7 +1124,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
    <td><strong>样本 </strong></td>
   </tr>
   <tr>
-   <td>简单表达</td>
+   <td>简单表达式</td>
    <td>加、减、乘、除和括号</td>
    <td>(a+b)*3</td>
   </tr>
@@ -1140,10 +1140,10 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
      <li>逻辑（和／或）</li>
      <li>比较（大于／小于／等于）</li>
     </ul> </td>
-   <td>A或1<br /> 1 &lt;&gt;2<br /> A NE B<br /> a或1<br /> 1 &lt;&gt;2<br /> A NE B</td>
+   <td>A或1<br /> 1 &lt;&gt;2<br /> A NE B<br /> A或1<br /> 1 &lt;&gt;2<br /> A NE B</td>
   </tr>
   <tr>
-   <td>If表达式</td>
+   <td>如果表达式</td>
    <td><br type="_moz" /> </td>
    <td>if(a&gt;b)then 2 endif</td>
   </tr>
@@ -1213,7 +1213,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
    1. Ppmt()
    1. Pv()
    1. Rate()
-   1. Term()
+   1. 术语()
 
 1. **逻辑函数**
 
@@ -1304,7 +1304,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   </tr>
   <tr>
    <td>app.activeDocs</td>
-   <td>包含每个活动文档的Doc对象的数组。 如果没有活动的文档，activeDocs将不返回任何内容；即，它的行为与核心JavaScript中d = new Array(0)的行为相同。</td>
+   <td>包含每个活动文档的Doc对象的数组。 如果没有活动文档,activeDocs将不返回任何内容；即，它的行为与核心JavaScript中d = new Array(0)的行为相同。</td>
    <td>为HTMl5表单返回空数组。</td>
   </tr>
   <tr>
@@ -1337,7 +1337,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
 
 ## 支持的XFA事件 {#supported-xfa-events}
 
-支持以下客户端XFA事件：
+支持以下客户端XFA事件:
 
 * 初始化
 * 验证
@@ -1351,5 +1351,3 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
 >[!NOTE]
 >
 >HTML5表单在客户端（浏览器）上呈现。 建议使用客户端验 **证****和计** 算脚本，而不是服务器端脚本。
-
-**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
