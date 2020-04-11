@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -182,7 +182,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作�
    }
    ```
 
-1. 对于脚栏按钮跨度，从复合列 `.error-dialog` 表中 `.foot-bar` 分隔按钮和按钮跨度。 要进行此更改，请在newStyle.css文件中添加以下内容：
+1. 对于脚栏按钮跨度，将和按 `.error-dialog` 钮跨 `.foot-bar` 度与复合列表分开。 要进行此更改，请在newStyle.css文件中添加以下内容：
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -279,5 +279,3 @@ To
     padding-top: 15px;
 }
 ```
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
