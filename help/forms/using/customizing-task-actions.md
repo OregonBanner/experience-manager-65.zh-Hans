@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -118,7 +118,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 
 >[!NOTE]
 >
->为“任务”列表和“任务详细信息”操作添加单独的样式以显示不同分辨率的不同图像或图像。 例如，更改“锁定”操作：
+>为任务列表和任务详细信息操作添加单独的样式以显示不同分辨率的不同图像或图像。 例如，更改“锁定”操作：
 
 ```css
 #taskarea .taskActionsPopUp .lock{
@@ -262,7 +262,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 
 ### 任务详细信息任务操作弹出菜单 {#task-details-task-action-pop-up-menu}
 
-执行以下步骤以自定义“详细信息”任务操作弹出菜单：
+执行以下步骤以自定义“详细信息任务”操作弹出菜单：
 
 * 将/libs/ws/js/runtime/templates/taskdetails.html文件复制到以下文 `/apps/ws/js/runtime/templates/` 件夹：
 * 将图标标签封装在锚点标签中而不是文本中。 例如，下面列出 *的新代码* ，将图标标记封装在锚点标记中：
@@ -359,5 +359,3 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 * 打开/apps/ws/js/registry.js文件进行编辑。
 * 找到以下文本： `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
 * 将找到的文本替换为以下文本： `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
