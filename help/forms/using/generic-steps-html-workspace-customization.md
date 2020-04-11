@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -98,5 +98,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 单击 **[!UICONTROL 全部保存]**，清除缓存，然后刷新AEM Forms工作区。
 
    访问URL, `https://'[server]:[port]'/lc/ws` 然后使用管理员／密码凭据登录。 浏览器将重定向到 `https://'[server]:[port]'/lc/apps/ws/index.html`。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
