@@ -8,7 +8,7 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -46,22 +46,22 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 ## 第1步：将主题应用于自适应表单 {#step-apply-a-theme-to-your-adaptive-form}
 
-自适应表单编辑器提供多个现成主题。 如果您计划不为自适应表单使用自定义样式，则还可以发布具有现成主题的自适应表单。 主题与自适应表单无关。 您可以将同一主题应用于多个自适应表单。 要将主题应用于自适应表单，请执行以下操作：
+自适应表单编辑器提供多个现成主题。 如果您计划不为自适应表单使用自定义样式，则还可以发布具有现成主题的自适应表单。 主题独立于自适应表单。 您可以将同一主题应用于多个自适应表单。 要将主题应用于自适应表单，请执行以下操作：
 
 1. 打开自适应表单进行编辑。
 
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-1. 打开自适应表 **单容器的属性**。 在属性浏览器中，导航到“基 **本** ”>“自 **适应表单主题”**。 “自 **适应表单主题** ”字段列出所有现成主题和自定义主题。 默认情况下，将应用画布主题。
-1. 从自适应表单主题字 **段中选择一个主题** 。 例如， **Survey主题**。 点 ![按aem_6_3_forms_save](assets/aem_6_3_forms_save.png) ，以应用所选主题。
+1. 打开自适应表 **单容器的属性**。 在属性浏览器中，导航到“基 **本** ”>“自 **适应表单主题”**。 “自 **适应表单主题** ”字段列表所有现成的和自定义的主题。 默认情况下，将应用画布主题。
+1. 从自适应表单主题字 **段中选择一个主题** 。 例如， **调查主题**。 点 ![按aem_6_3_forms_save](assets/aem_6_3_forms_save.png) ，以应用所选主题。
 
 ![具有默认主题的自适应表单](assets/default-adaptive-form.png)
 
-**** 图：具有 *默认主题的自适应表单*
+**图：** 具有 *默认主题的自适应表单*
 
 ![具有调查主题的自适应表单](assets/adaptive-form-with-survey-theme.png)
 
-**** 图：具有 *调查主题的自适应表单*
+**图：** 具有 *调查主题的自适应表单*
 
 ## 第2步：更新自适应表单 {#step-update-your-adaptive-form}
 
@@ -74,7 +74,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
    1. 点按标题组件中的徽标图像，然后点按 ![cmppr](assets/cmppr.png) 属性。 在图像属性中，点按X以删除现有的徽标图像。
-   1. 点按上传，选择logo.png，然后点 ![按aem_6_3_forms_save](assets/aem_6_3_forms_save.png) ，以保存更改。 图像已下载到开始 [之前部分](/help/forms/using/style-your-adaptive-form.md#before-you-start) 。
+   1. 点按上传，选择logo.png，然后点 ![按aem_6_3_forms_save](assets/aem_6_3_forms_save.png) ，以保存更改。 图像已下载到“开始 [前”部分](/help/forms/using/style-your-adaptive-form.md#before-you-start) 。
    1. 点按标题文 `We.Retail`本，然后 ![点按aem_6_3_edit](assets/aem_6_3_edit.png) **edit**。 将标题文本更改为 `we retail`。 将粗体格式仅应用于 `we`中 `we retail`。
    ![we-retail-logo-text](assets/we-retail-logo-text.png)
 
@@ -92,35 +92,35 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 主题是与自适应表单类似的单独实体。 它包含自适应表单的组件和面板的样式(CSS)。 样式包括CSS属性，如背景颜色、状态颜色、透明度、对齐方式和大小。 应用主题时，指定的样式将应用于自适应表单的相应组件。
 
-在本教程中，您将设计页眉和页脚、文本和数字组件、附件组件和按钮的样式。 让我们从创建主题开始：
+在本教程中，您将设计页眉和页脚、文本和数字组件、附件组件和按钮的样式。 让我们开始创建主题：
 
 ### 创建主题 {#create-a-theme}
 
-1. 登录到AEM作者实例，然后导航到 **Adobe Experience Manager** > **Forms** > **Themes**。 默认URL为 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
+1. 登录到AEM作者实例，然后导航到 **Adobe Experience Manager** > **Forms** > **主题**。 默认URL为 [http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
 1. 点按 **[!UICONTROL 创建]** ，然后选择 **[!UICONTROL 主题]**。 此时将显示“创建主题”页，其中包含创建主题所需的字段。 “标题”和“名称”字段是必填字段：
 
-   * **** 标题：指定主题的标题。 例如，“全 **局主题”。** 标题可帮助您从主题列表中识别主题。
-   * **** 名称：指定主题的名称。 例如， **Global-Theme。** 将在存储库中创建具有指定名称的节点。 开始键入标题时，将自动生成名称字段的值。 您可以更改建议的值。 名称字段只能包含字母数字字符、连字符和下划线。 所有无效输入都替换为连字符。
+   * **标题：** 指定主题的标题。 例如，“全 **局主题”。** 标题可帮助您从主题的列表中识别主题。
+   * **名称：** 指定主题的名称。 例如， **Global-Theme。** 将在存储库中创建具有指定名称的节点。 在开始键入标题时，将自动生成名称字段的值。 您可以更改建议的值。 名称字段只能包含字母数字字符、连字符和下划线。 所有无效输入都替换为连字符。
 
 1. 点按&#x200B;**创建**。将创建一个主题，并显示一个用于打开表单进行编辑的对话框。 点按 **打开** ，在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM Forms附带的现成自适应表单。
 
    有关使用主题编辑器UI的信息，请参阅 [关于主题编辑器](/help/forms/using/themes.md#aboutthethemeeditor)。
 
-1. 点按 **主题选项**![“主题选项”](assets/theme-options.png) >“ **配置**”。 在“预 **览表单** ”字段中，选择送货地址- **add-update-form自适应表单** ，点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，点按 ****&#x200B;保存。 现在，主题编辑器已配置为使用您自己的自适应表单而不是默认的自适应表单。 点按 **取消** ，以返回主题编辑器。
+1. 点按 **主题选项**![“主题选项”](assets/theme-options.png) >“ **配置**”。 在“ **预览表单** ”字段中，选择送货地址- **add-update-form自适应表单** ，点按 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，点按 ****&#x200B;保存。 现在，主题编辑器已配置为使用您自己的自适应表单而不是默认的自适应表单。 点按 **取消** ，以返回主题编辑器。
 
    ![custom-theme](assets/custom-theme.png)
 
-   **** 图：带有 *shipping-add-update-form自适应表单的主题编辑器*
+   **图：** 带有 *shipping-add-update-form自适应表单的主题编辑器*
 
    ![create-a-theme](assets/create-a-theme.png)
 
-   **** 图：具有 *默认表单的自适应表单*
+   **图：** 具有 *默认表单的自适应表单*
 
 ### 样式页眉和页脚 {#style-header-and-footer}
 
 页眉和页脚为自适应表单提供了一致且独特的外观。 通常，页眉包含组织的徽标和名称，页脚包含版权信息，并且这些信息在组织的多种形式中保持相同。 要设置shipping-add-update-form自适应表单的页眉和页脚的样式，请执行以下操作：
 
-1. 导览“选 **择器** ”面板中的“ **标题** ”>“文本”选项。 “选择器”面板位于主题编辑器的左侧。 如果该面板不可见，请点按“切 ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/toggle-side-panel.png) 换侧面板”。
+1. 导览“选 **择器** ”面板中的“ **标题** ”>“文本”选项。 “选择器”面板位于主题编辑器的左侧。 如果该面板不可见，请点按“切 ![](assets/toggle-side-panel.png) 换侧面板”。
 
 1. 在 **Text** accordion中设置以下属性，然 ![后点按aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -137,7 +137,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
    | 属性 | 值 |
    |---|---|
-   | 图像 | 上传header-style.png。 图像已下载到开始 [之前部分](/help/forms/using/style-your-adaptive-form.md#before-you-start) 。 |
+   | 图像 | 上传header-style.png。 图像已下载到“开始 [前”部分](/help/forms/using/style-your-adaptive-form.md#before-you-start) 。 |
    | 位置 | 右下 |
    | 并排显示 | 不重复 |
 
@@ -156,7 +156,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
      <li>顶部：1.5rem</li> 
      <li>底部：-35px</li> 
      <li>左：1rem<strong><br /></strong></li> 
-    </ul> <p><strong></strong> 提示：点按链 <img src="assets/link.png"> 接图标，为每个字段提供不同的值。<br /> </p> </td> 
+    </ul> <p><strong>提示：</strong> 点按链 <img src="assets/link.png"> 接图标，为每个字段提供不同的值。<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>高度</td> 
@@ -303,7 +303,7 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
    | 浮点数 | 左 |
    | 宽度 | 10% |
 
-1. 点按政 **府批准的地址证明** ，然后点 ![按aem_6_3_](assets/aem_6_3_edit.png)editicon。 设置以下属性：
+1. 点按政 **府批准的地址验证** ，然后点 ![按aem_6_3_](assets/aem_6_3_edit.png)editicon。 设置以下属性：
 
 <table> 
  <tbody> 
@@ -440,9 +440,9 @@ Adobe Typekit是一种Web字体服务。 您可以配置服务并将其与自适
 
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) Typekit现在称为Adobe Fonts，包含在Creative cloud和其他订阅中。 [了解更多](https://fonts.adobe.com/).
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) Typekit现在称为Adobe Fonts，包含在Creative Cloud和其他订阅中。 [了解更多](https://fonts.adobe.com/).
 
-1. 创建 [Adobe Typekit帐户](https://typekit.com/) 、创建工具包、将字体Myriad pro添加到工具包、发布工具包并获取工具包ID。 需要在自适应表单中使用Adobe Typekit字体（Web字体）。
+1. 创建 [Adobe Typekit帐户](https://typekit.com/) 、创建工具包、将字体Myriad Pro添加到工具包、发布工具包并获取工具包ID。 需要在自适应表单中使用Adobe Typekit字体（Web字体）。
 1. 在AEM Forms服务器中，导航到 ![adobe Experience Manager](assets/adobeexperiencemanager.png) **Adobe Experience Manager** > **HammerDeploymentTools** > DeploymentServices ![](assets/hammer.png)********> Adobe Experience Manager DeploymentServices的解调工具。 在云服务页面上，导航到第 **三方服务** > **Typekit**，然后单击Typekit下的 **** 立即配置。 如果某个配置已可用，请单击+按钮以创建新实例。
 
    在“创建配置”对话框中，为配 **置指定标题** ，然后单击“ **创建”**。 您将被重定向到配置页面。 在出现的编辑组件对话框中，提供您的 **工具包ID** ，然后单 **击确定**。
