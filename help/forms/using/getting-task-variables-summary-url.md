@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -83,5 +83,3 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 在AEM Forms工作区中，打开任务时，摘要Url将访问CRX节点，HTML渲染器将显示摘要。
 
 可以更改摘要布局，而无需修改该过程。 HTML渲染器会相应地显示摘要。
-
-**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
