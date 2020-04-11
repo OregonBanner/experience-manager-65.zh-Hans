@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -190,5 +190,3 @@ AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需�
        $.datepicker.setDefaults($.datepicker.regional['']);
    }
    ```
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
