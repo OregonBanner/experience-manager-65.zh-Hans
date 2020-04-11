@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -206,5 +206,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
    >要在保存其他日志文件的同一目录中创建日志，请在“日志文件”属性中指定。./logs/&lt;filename>。
 
 1. 将Logger更 **改为** HTMLFormsPerfLogger **，然后单击“** 保存 ****”。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
