@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -192,5 +192,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 1. 在AEM Forms工作区中呈现HTML表单时，使用设计中的“流程属性”，在表单中显示“提交”按钮。
 
    在设计表单时，当您使用“流程属性”时，它会在表单内添加一个“提交”按钮。 当在AEM Forms工作区中呈现为PDF时，最终用户不会看到“提交”按钮。 但是，当在AEM Forms工作区中呈现为HTML表单时，最终用户可看到“提交”按钮。 单击表单中的此“提交”按钮不会启动任何操作。 单击AEM Forms工作区底部的“提交”按钮，在表单外部完成任务。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
