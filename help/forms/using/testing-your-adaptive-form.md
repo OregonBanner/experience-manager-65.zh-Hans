@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 709d8fe467f5449eb1e844a49126535a4a4a6e7a
 
 本教程是“创建您的第一个自 [适应表单”系列中的一个步骤](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) 。 建议按照时间顺序按照这一系列来了解、执行和演示完整的教程用例。
 
-在自适应表单准备就绪后，在将自适应表单推出给最终用户之前，务必先测试自适应表单。 您可以手动测试每个字段（功能测试）或自动测试自适应表单。 当您有多个自适应表单时，手动测试所有自适应表单的每个字段将是一项艰巨的任务。
+在自适应表单准备就绪后，在将自适应表单推出给最终用户之前，务必先测试自适应表单。 您可以手动测试每个字段（功能测试）或自动测试自适应表单。 当您有多个自适应表单时，手动测试所有自适应表单的每个字段将变得令人望而生畏的任务。
 
 AEM Forms提供了一个测试框架Calvin，可自动测试自适应表单。 使用框架，您可以直接在Web浏览器中编写和运行UI测试。 该框架提供用于创建测试的JavaScript API。 自动测试允许您测试自适应表单的预填体验、提交自适应表单的体验、表达式规则、验证、延迟加载和UI交互。 本教程将指导您逐步在自适应表单上创建和运行自动测试。 在本教程的结尾，您将能够：
 
@@ -210,22 +210,22 @@ AEM Forms提供了一个测试框架Calvin，可自动测试自适应表单。 �
 
 一个测试套件可以有多个测试用例。 您可以一次或单独运行测试套件中的所有测试用例。 运行测试时，图标会指示结果：
 
-* 复选标记图标表示通过的测试： ![](https://helpx.adobe.com/content/dam/help/icons/Checkmark.png)
-* “X”图标表示测试失败： ![](https://helpx.adobe.com/content/dam/help/icons/Cross.png)
+* 复选标记图标表示通过的测试： ![](assets/save_icon.svg)
+* “X”图标表示测试失败： ![](assets/close-icon.svg)
 
 1. 导航到AEM图标>工 **[!UICONTROL 具]**>操 **[!UICONTROL 作]**>测 **[!UICONTROL 试]**
 1. 要运行测试套件的所有测试，请执行以下操作：
 
-   1. 在“Tests（测试）”面板中， **[!UICONTROL 点按We retail - Tests(1)]**。 它此套件扩展为显示测试列表。
+   1. 在“Tests（测试）”面板中， **[!UICONTROL 点按We retail - Tests(1)]**。 它套件扩展为显示测试列表。
    1. 点按“ **[!UICONTROL Run tests]** （运行测试）”按钮。 测试执行时，屏幕右侧的空白区域将替换为自适应表单。
    ![run-all-test](assets/run-all-test.png)
 
 1. 要从测试套件运行单个测试，请执行以下操作：
 
-   1. 在“Tests（测试）”面板中， **[!UICONTROL 点按We retail - Tests(1)]**。 它此套件扩展为显示测试列表。
+   1. 在“Tests（测试）”面板中， **[!UICONTROL 点按We retail - Tests(1)]**。 它套件扩展为显示测试列表。
    1. 点按预填 **[!UICONTROL 测试]** ，然后点按 **[!UICONTROL 运行测试]** 。 测试执行时，屏幕右侧的空白区域将替换为自适应表单。
 
-1. 点按测试名称“预填测试”以查看测试用例的结果。 它打开“结果”面板。 在“结果”面板中点按测试用例的名称，查看测试的所有详细信息。
+1. 点按测试名称“预填测试”以查看测试用例的结果。 它打开“结果”面板。 点按“结果”面板中测试用例的名称，视图测试的所有详细信息。
 
    ![review-results](assets/review-results.png)
 
