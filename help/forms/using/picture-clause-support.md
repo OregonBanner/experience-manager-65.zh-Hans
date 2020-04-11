@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # HTML5表单的Picture子句支持 {#picture-clause-support-for-html-forms}
 
-HTML5表单支持XFA Picture子句（用于显示值）和格式化的日期、文本和数字符号值。 支持以下Picture子句表达式：
+HTML5表单支持XFA Picture子句（用于显示值）和格式化的日期、文本和数字符号值。 支持以下Picture子句表达式:
 
-* category(locale){picture-clause}| category(locale){picture-clause}| category(locale){picture-clause}
+* 类别(locale){picture-clause}|类别（区域设置）{picture-clause}|类别（区域设置）{picture-clause}
 * category.subcategory{}
 
 >[!NOTE]
@@ -28,7 +28,7 @@ HTML5表单支持XFA Picture子句（用于显示值）和格式化的日期、�
 
 ## 支持的日期字段符号 {#supported-date-field-symbols}
 
-支持Date Picture子句的表达式：
+支持日期图片子句的表达式:
 
 * date.long{}
 * date.short{}
@@ -96,7 +96,7 @@ HTML5表单支持数字图片符号。 但是，PDF表单和HTML表单在支持�
 
 在 **PDF表单中**，数字的格式与Picture子句中符号的数量无关
 
-在 **HTML Forms中**，仅当数字的数字小于Picture子句中符号的数字时，才设置数字格式。
+在 **HTML Forms**&#x200B;中，仅当数字的数字小于Picture子句中符号的数字时，才设置数字格式。
 
 **示例**:请考虑Picture条款：num{zzz,zzz,zz9}。
 
@@ -109,7 +109,7 @@ HTML5表单支持数字图片符号。 但是，PDF表单和HTML表单在支持�
 * num.integer{}
 * num.decimal{}
 * num.currency{}
-* num.%{}
+* num.percent{}
 * num{Numeric Picture Clause Symbols}
 
 <table>
@@ -160,7 +160,7 @@ HTML5表单支持数字图片符号。 但是，PDF表单和HTML表单在支持�
    <td><br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>.</td>
+   <td>。</td>
    <td>当前区域设置的十进制数。</td>
    <td><br type="_moz" /> </td>
   </tr>
@@ -199,7 +199,7 @@ HTML5表单支持数字图片符号。 但是，PDF表单和HTML表单在支持�
 
 ## 文本图片子句 {#text-picture-clause}
 
-HTML5表单支持以下文本图片子句表达式：
+HTML5表单支持以下文本图片子句表达式:
 
 * text{text Picture子句符号}
 
@@ -210,5 +210,3 @@ HTML5表单支持以下文本图片子句表达式：
 | O | 单个字母数字字符。 |
 | 0（零） | 单个字母数字字符。 |
 | 9 | 一位数。 |
-
-**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
