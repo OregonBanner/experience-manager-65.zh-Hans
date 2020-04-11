@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -29,7 +29,7 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 
 **要开始在工作台中定义的流程，请执行以下操作：**
 
-1. 要视图AEM Forms应用程序中可用的起点，请转到主 [屏幕](../../forms/using/home-screen.md)。
+1. 要视图AEM Forms应用程序中可用的起点，请转到“主 [页”屏幕](../../forms/using/home-screen.md)。
 1. 默认情 **[!UICONTROL 况下]** ，在“主页”屏幕上 **[!UICONTROL 显示“所有表单]** ”列表。
 
    起始点与表单关联。 点按列表中关联的起点表单以将其打开。
@@ -47,5 +47,3 @@ source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
 如果应用程序处于联机状态，则任务将与AEM Forms服务器同步，并分配给在进程中指定的用户。
 
 要在任务列表中使用任务，请参阅 [打开任务](/help/forms/using/open-task.md)。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
