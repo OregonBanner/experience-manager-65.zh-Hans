@@ -10,21 +10,21 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 创建新登录屏幕{#creating-a-new-login-screen}
 
-您可以修改使用AEM Forms登录屏幕的所有AEM Forms模块的登录屏幕。 例如，这些修改会影响Forms manager和AEM Forms工作区的登录屏幕。
+您可以修改使用AEM Forms登录屏幕的所有AEM Forms模块的登录屏幕。 例如，这些修改会影响Forms Manager和AEM Forms工作区的登录屏幕。
 
-## 入门项目 {#prerequisite}
+## 先决条件 {#prerequisite}
 
 1. 使用“管理员” `/lc/crx/de` 权限登录。
 1. 执行以下操作：
 
-   1. 复制分层结构：在 `/libs/livecycle/core/content` 的 `/apps/livecycle/core/content`。 维护相同的（节点／文件夹）属性和访问控制。
+   1. 复制分层结构：在 `/libs/livecycle/core/content` 的 `/apps/livecycle/core/content`。 保持相同的（节点／文件夹）属性和访问控制。
 
    1. 复制内容文件夹：从 `/libs/livecycle/core` 到 `/apps/livecycle/core`。
 
@@ -32,7 +32,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 1. 执行以下操作：
 
-   1. 复制分层结构：在 `/libs/livecycle/core/components/login` 的 `/apps/livecycle/core/components/login`。 维护相同的（节点／文件夹）属性和访问控制。
+   1. 复制分层结构：在 `/libs/livecycle/core/components/login` 的 `/apps/livecycle/core/components/login`。 保持相同的（节点／文件夹）属性和访问控制。
 
    1. 复制组件文件夹：从 `/libs/livecycle/core` 到 `/apps/livecycle/core`。
 
@@ -296,5 +296,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
    
    <div class="newLginContainerBkg">
    ```
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
