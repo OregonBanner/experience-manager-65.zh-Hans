@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
 translation-type: tm+mt
-source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -28,16 +28,14 @@ source-git-commit: 4a0f3f64095b4726f295a0c1857a1e999353f5f5
 
    单击&#x200B;**[!UICONTROL 完成]**。
 
-1. 导航到“供应”->“分发”，然后使用步骤3中配置的应用程序ID创建新配置文件。
-1. 下载供应配置文件并将其添加到Xcode和iPad。
+1. 导航到“供应”->“分发”，然后使用步骤3中配置的应用程序ID创建新用户档案。
+1. 下载供应用户档案并将其添加到Xcode和iPad。
 1. 登录到装有Xcode和iOS SDK的Mac计算机并进行配置。
 1. 在Xcode中 `AEM Forms.xcodeproj` 打开项目。
-1. 单击 **[!UICONTROL AEM Forms]**，在 **[!UICONTROL TARGETS下]**，选择 **[!UICONTROL AEM Forms]**。 选择“构 **[!UICONTROL 建设置]** ”选项卡，找到“代码签 **[!UICONTROL 名授权]** ”部分，在“授权”下拉列表中，选择 **** LC Enterprise选项。
-1. 在Xcode中找到并 `LC Enterprise.entitlements` 打开文件进行编辑。 在 **XCode授权下**，添加与供应配置文件中存在的相同键值对。
+1. 单击 **[!UICONTROL AEM Forms]**，在“目标” **[!UICONTROL 下]**，选 **[!UICONTROL 择“AEM Forms]**”。 选择“构 **[!UICONTROL 建设置]** ”选项卡，找到“代码签 **[!UICONTROL 名授权]** ”部分，在“授权”下拉列表中，选择 **** LC Enterprise选项。
+1. 在Xcode中找到并 `LC Enterprise.entitlements` 打开文件进行编辑。 在 **XCode授权下**，添加与供应用户档案中存在的相同键值对。
 1. 在“构建 **[!UICONTROL 设置]** ”选项卡中，单 **[!UICONTROL 击“全部]** ” **[!UICONTROL ，然后单击“]**&#x200B;组合”。
 1. 从“设置 **[!UICONTROL ”列表]** ，展开“代 **[!UICONTROL 码签名”]**。
 1. 对于“ **[!UICONTROL 代码签名标识]**”，请选择相应的签名。 确保为 **[!UICONTROL Debug]**、 **[!UICONTROL Release]**&#x200B;和 **[!UICONTROL Any iOS SDK选择同]**&#x200B;一签名。
 1. 在“ **[!UICONTROL 项目]**”下，选择“ **[!UICONTROL AEM Forms]** ”并确保为“ **[!UICONTROL Code Identity Identity]**”、“ **[!UICONTROL Debug Identity”、“RELEASE Signing And]********** Any iSDK”选择适当的签名。
 1. 构建和分发AEM Forms应用程序。 有关构建和分发AEM Forms应用程序的详细说明，请参 [阅构建AEM Forms应用程序的安装程序](/help/forms/using/setup-xcode-project-build-installer.md#main-pars-text-12)。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
