@@ -10,16 +10,16 @@ topic-tags: forms-app
 discoiquuid: fb2b7ff6-6b29-425b-a86e-d1f80faab9e0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 登录AEM Forms应用程序{#logging-in-to-aem-forms-app}
 
-启动AEM Forms应用程序时，您首先需要提供登录凭据和AEM Forms服务器URL。
+开始AEM Forms应用程序时，您首先需要提供登录凭据和AEM Forms服务器URL。
 
-## 启动应用程序 {#to-start-the-app}
+## 开始应用程序 {#to-start-the-app}
 
 1. 点按移动设备上的AEM Forms应用程序图标。
 1. 要登录应用程序，请输入用户名、密码和AEM Forms服务器URL。
@@ -37,5 +37,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 >[!NOTE]
 >
 >在脱机模式下，只有最后一个登录的用户才能登录到应用程序。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
