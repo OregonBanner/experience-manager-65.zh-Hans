@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -53,10 +53,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 类别组件 {#category-component}
 
-类别组件在左侧面板中显示各种类别的任务。 要更改其颜色，请在CSS文件的元 `.category` 素中定义背景颜色。
+类别组件在左面板中显示您的任务的各种类别。 要更改其颜色，请在CSS文件的元 `.category` 素中定义背景颜色。
 
 ## 任务组件 {#task-component}
 
-任务显示在称为TaskList组件的中间面板中。 要更改其颜色，请在样式表中修改与。task选择器关联的样式。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
+任务显示在称为TaskList组件的中间面板中。 要更改其颜色，请修改与样式表中的。任务选择器关联的样式。
