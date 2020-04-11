@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -74,7 +74,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
       }
       ```
 
-   1. 打开表单的预提交活动进行编辑。 将以下脚本添加到事件，以在编辑之前删除脚本的隐藏实例。 它可防止在提交时发送隐藏子表单的数据。
+   1. 打开表单的预提交事件进行编辑。 将以下脚本添加到事件，以在编辑之前删除脚本的隐藏实例。 它可防止在提交时发送隐藏子表单的数据。
 
       ```
       if(RepeatSubform.instanceManager.count == 1 && RepeatSubform.presence == "hidden") {
@@ -88,11 +88,11 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 1. 为什么某些文本会被截断或在HTML5中显示错误？
 
-   答案：如果“绘图”或“题注”文本元素没有获得足够的空间来显示内容，则文本在移动表单再现中会被截断。 此截断也会显示在AEM Forms Designer的“设计”视图中。 尽管此截断可在PDF中处理，但在HTML5表单中无法处理。 要避免此问题，请为“绘制文本”或“题注文本”提供足够的空间，以便它不会在AEM Forms Designer的设计模式中截断。
+   答案：如果“绘图”或“题注”文本元素没有获得足够的空间来显示内容，则文本在移动表单再现中会被截断。 此截断也会显示在AEM Forms Designer的设计视图中。 尽管此截断可在PDF中处理，但在HTML5表单中无法处理。 要避免此问题，请为“绘制文本”或“题注文本”提供足够的空间，以便它不会在AEM Forms Designer的设计模式中截断。
 
 1. 我正在观察与缺失内容或重叠内容相关的布局问题。 原因何在？
 
-   答案：如果在同一位置（如“矩形”）有一个“绘制文本”或“绘制图像”元素以及另一个重叠元素，则“绘制文本”内容在文档顺序后面出现时（在AEM Forms Designer的“层次结构”视图中）将不可见。 PDF支持透明图层，但HTML/浏览器不支持透明图层。
+   答案：如果在同一位置（如“矩形”）有一个“绘制文本”或“绘制图像”元素以及另一个重叠元素，则“绘制文本”内容在以后按文档顺序出现时(在AEM Forms Designer Hierarchy视图中)将不可见。 PDF支持透明图层，但HTML/浏览器不支持透明图层。
 
 1. 为什么HTML表单中显示的某些字体与设计表单时使用的字体不同？
 
@@ -100,11 +100,11 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 1. HTML表单中是否支持vAlign和hAlign属性？
 
-   是，支持vAlign和hAlign属性。 Internet explorer和多行字段中不支持vAlign属性。
+   是，支持vAlign和hAlign属性。 Internet Explorer和多行字段中不支持vAlign属性。
 
 1. HTML5表单是否支持希伯来语字符？
 
-   HTML5表单支持除Microsoft Internet explorer之外的所有浏览器中的希伯来语字符。
+   HTML5表单支持除Microsoft Internet Explorer之外的所有浏览器中的希伯来语字符。
 
 1. HTML5表单对数字字段是否有任何限制？
 
@@ -135,7 +135,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
    * 表的顶行或左列仅支持标题。 中间表元素不支持标题。 您可以将标题应用到多个行和列标题，前提是所有此类行和列都与表的最上行或最左列一起。
    * `Rowspan`不支 `colspan`持从表内的随机位置开始。
 
-   * 不能动态添加或删除包含行跨值大于1的元素的行实例。
+   * 不能动态添加或删除包含行范围值大于1的元素的行实例。
 
 1. 屏幕阅读器的工具提示和题注的阅读顺序是什么？
 
@@ -186,7 +186,7 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
 1. HTML5表单是否支持浮动字段？
 
-   是的，HTML5 Forms支持浮动字段。 要启用浮动字段，请向渲染配置文件添加以下属性：
+   是的，HTML5 Forms支持浮动字段。 要启用浮动字段，请向渲染用户档案添加以下属性：
 
    >[!NOTE]
    >
@@ -194,20 +194,18 @@ source-git-commit: 19299fb5fc764d0e71c0ea3a5ec2286183dd6861
 
    1. 打开CRXde lite并导航到该 `/content/xfaforms/profiles/default` 节点。
    1. 添加String类 `mfDataDependentFloatingField`型的属性，并将该属性的值设置为 `true`。
-   1. 单击“ **全部保存**”。 现在，使用更新的渲染配置文件为HTML表单启用浮动字段。
+   1. 单击“ **全部保存**”。 现在，使用更新的呈现用户档案为HTML表单启用浮动字段。
 
       >[!NOTE]
       >
-      >要为特定表单启用浮动字段而不更新呈现配置文件，请将mfDataDependentFloatingField=true属性作为URL参数传递。
+      >要为特定表单启用浮动字段而不更新呈现用户档案，请将mfDataDependentFloatingField=true属性作为URL参数传递。
 
-1. HTML5表单是否多次执行初始化脚本和表单就绪事件？
+1. HTML5表单是否多次执行初始化脚本和表单就绪事件?
 
-   是的，初始化脚本和表单就绪事件被多次执行，至少在服务器上执行一次，在客户端执行一次。 建议根据某些业务逻辑（表单或字段数据）编写诸如初始化或表单：ready事件之类的脚本，以便基于数据和幂等状态（如果数据相同）执行操作。
+   是的，初始化脚本和表单就绪事件在服务器上执行多次，至少一次在客户端执行。 建议基于某些业务逻辑（表单或字段数据）编写诸如初始化或表单：就绪事件之类的脚本，以便基于数据状态和幂等（如果数据相同）执行操作。
 
 ### 设计XDP {#designing-xdp}
 
 1. HTML5表单中是否有保留的关键字？
 
-   答案：所有HTML5表单API都是保留关键字。 对于自定义API/函数，请使用与 [HTML5表单API不相同的名称](/help/forms/using/scripting-support.md)。 除保留关键字外，如果您使用以下划线(_)开头的对象名称，建议在下划线后添加唯一前缀。 添加前缀有助于避免与HTML5表单内部API的任何可能冲突。 For example, `_fpField1`
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
+   答案：所有HTML5表单API都是保留关键字。 对于自定义API/函数，请使用与 [HTML5表单API不相同的名称](/help/forms/using/scripting-support.md)。 除保留关键字外，如果您使用以下划线(_)开头的对象名称，建议在下划线后添加唯一前缀。 添加前缀有助于避免与HTML5表单内部API的任何可能冲突。 例如，`_fpField1`
