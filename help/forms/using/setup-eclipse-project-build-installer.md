@@ -1,20 +1,20 @@
 ---
-title: 构建AEM Forms android应用程序
-seo-title: 构建AEM Forms android应用程序
-description: 设置Android studio项目并为适用于Android的AEM Forms应用程序构建。apk文件的步骤
-seo-description: 设置Android studio项目并为适用于Android的AEM Forms应用程序构建。apk文件的步骤
+title: 构建AEM Forms Android应用程序
+seo-title: 构建AEM Forms Android应用程序
+description: 设置Android Studio项目并为适用于Android的AEM Forms应用程序构建。apk文件的步骤
+seo-description: 设置Android Studio项目并为适用于Android的AEM Forms应用程序构建。apk文件的步骤
 uuid: 2e140aaf-5be5-4d5d-9941-9d1f4bf2debd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
-# 构建AEM Forms android应用程序 {#build-the-aem-forms-android-app}
+# 构建AEM Forms Android应用程序 {#build-the-aem-forms-android-app}
 
 按照建议的序列执行以下步骤，为AEM Forms构建Android应用程序。
 
@@ -42,23 +42,23 @@ AEM Forms应用程序源代码包引用存档 `adobe-lc-mobileworkspace-src-<ver
 
 在开始AEM Forms应用程序的构建过程之前，请设置以下环境变量：
 
-* 将JAVA_HOME环境变量设置为本地文件系统上JDK软件的位置。 例如，C:\Program Files\Java\jdk1.8.0_181
+* 将JAVA_HOME环境变量设置为本地文件系统中JDK软件的位置。 例如，C:\Program Files\Java\jdk1.8.0_181
 * 将系统 `ANDROID_SDK_ROOT` 环境变量设置为Android的SDK位置。 例如，C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk
-* 设置系 `Path` 统环境变量以包含Android的平台工具和工具文件夹位置。 例如，C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk\platform-tools and C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk\tools。
+* 设置系 `Path` 统环境变量，以包含Android的平台工具和工具文件夹位置。 例如，C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk\platform-tools and C:\Users\&amp;lt;username>\AppData\Local\Android\Sdk\tools。
 
 ## 构建标准AEM Forms应用程序 {#set-up-the-xcode-project}
 
-在本地文件系统上保存adobe-lc-mobileworkspace-src-&lt;version>.zip文件并设置环境变量后，请使用以下任意选项构建标准AEM Forms android应用程序：
+在本地文件系统上保存adobe-lc-mobileworkspace-src-&lt;version>.zip文件并设置环境变量后，请使用以下任意选项构建标准AEM Forms Android应用程序：
 
-* [使用Android studio构建AEM Forms应用程序](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-1347434739)
-* [使用Android studio生成。apk文件](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-0)
+* [使用Android Studio构建AEM Forms应用程序](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-1347434739)
+* [使用Android Studio生成。apk文件](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-0)
 
-### 使用Android studio构建AEM Forms应用程序 {#using-android-studio}
+### 使用Android Studio构建AEM Forms应用程序 {#using-android-studio}
 
-执行以下步骤以使用Android studio构建AEM Forms应用程序：
+执行以下步骤以使用Android Studio构建AEM Forms应用程序：
 
-1. 在您的计算机上启动Android studio应用程序。
-1. 单击 **打开现有Android studio项目**。 如果用于打开现有项目的对话框未自动显示，请选择“文件” **>“打** 开” ****。
+1. 在您的计算机上启动Android Studio应用程序。
+1. 单击 **打开现有Android Studio项目**。 如果用于打开现有项目的对话框未自动显示，请选择“文件” **>“打** 开” ****。
 1. 导览至 *本地文件系统上的adobe-lc-mobileworkspace-src-&lt;version>.zip/android* ，然后单击“确 **定”**。
 
    左 **窗格中** ，将显示Android选项。
@@ -75,12 +75,12 @@ AEM Forms应用程序源代码包引用存档 `adobe-lc-mobileworkspace-src-<ver
    * [手势自定义](/help/forms/using/gesture-customization.md)
    在将适当的自定义应用程序应用到应用程序后，您可以生成要分发的。apk文件。
 
-### 使用Android studio生成。apk文件 {#generate-apk-android-studio}
+### 使用Android Studio生成。apk文件 {#generate-apk-android-studio}
 
-执行以下步骤以使用Android studio生成。apk文件：
+执行以下步骤以使用Android Studio生成。apk文件：
 
-1. 在您的计算机上启动Android studio应用程序。
-1. 选择 **打开现有Android studio项目**。 如果用于打开现有项目的对话框未自动显示，请选择“文件” **>“打** 开” ****。
+1. 在您的计算机上启动Android Studio应用程序。
+1. 选择 **打开现有Android Studio项目**。 如果用于打开现有项目的对话框未自动显示，请选择“文件” **>“打** 开” ****。
 1. 导览至 *本地文件系统上的adobe-lc-mobileworkspace-src-&lt;version>.zip/android* ，然后单击“确 **定”**。
 
    android选项显示在左窗格中。
@@ -93,8 +93,6 @@ AEM Forms应用程序源代码包引用存档 `adobe-lc-mobileworkspace-src-<ver
 
 生成。apk文件后，请执行以下命令以使用 [Android Debug Bridge在Android设备上安装应用程序](https://developer.android.com/tools/help/adb.html)。
 
-**** Windows用户： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+**Windows用户：** `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
 
-**** MAC用户： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
-
-**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
+**MAC用户：** `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
