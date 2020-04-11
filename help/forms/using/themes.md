@@ -10,7 +10,7 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -294,7 +294,7 @@ AEM Forms中的主题支持在表单和交互式通信中的面板布局中设�
 
 当您为样式提供自定义名称时，该样式将绑定到主题，并且不再对其他主题可用。 删除保存的样式：
 
-1. 在“画布”工具栏上，单击“ **主题选项** ” ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/6-2/theme-options.png) >“ **管理样式”**。
+1. 在“画布”工具栏上，单击“ **主题选项** ” ![](assets/theme-options.png) >“ **管理样式”**。
 1. 在“管理样式”对话框中，选择保存的样式，然后单击“删 **除”**。
 
    ![删除保存的样式](assets/manage-styles.png)
@@ -465,7 +465,7 @@ AEM Forms中的主题支持在表单和交互式通信中的面板布局中设�
 
 在指定组件状态后自定义组件的样式时，仅针对指定状态显示组件的自定义。 例如，如果您在选择悬停状态时自定义组件的样式。 当您在已渲染的表单或应用主题的交互式通信中将指针移到组件上时，组件会显示自定义。
 
-要模拟除错误和成功之外的状态行为，请使用预览模式。 要使用预览模式，请在页面 **工具栏** 中单击预览。
+要模拟除错误和成功之外的状态行为，请使用预览模式。 要使用预览模式，请单击 **页面** 工具栏中的预览。
 
 ### 用于小型显示器的样式布局 {#styling-layouts-for-smaller-displays}
 
@@ -487,7 +487,7 @@ AEM Forms中的主题支持在表单和交互式通信中的面板布局中设�
 执行以下步骤在AEM中配置Typekit:
 
 1. 在创作实例中，单击 ![](assets/adobeexperiencemanager.png)adobeexperiencemanagerAdobe Experience Manager >工具锤 ![子](assets/hammer.png) >部署>云服务。
-1. 在“云服 **务** ”页面上，导航至“第 **三方服务”** >“Typekit **”，然后单击“Typekit”****** 下的“立即配置”。 如果某个配置已可用，请单击 **+按钮** 以创建新实例。
+1. 在“云服 **务** ”页面上，导航至“第 **三方服务”** >“Typekit **”，然后单击“Typekit”****** 下的“立即配置”。 如果某个配置已可用，请单击 **+按钮** ，以创建新实例。
 1. 在“创 **建配置** ”对话框中，指定配置的标题，然后单击“创 **建”**。
 
    您将被重定向到配置页面。
