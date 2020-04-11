@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 6a32d240-c6a6-4937-a31f-7a5ec3c60b1f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 ## 简介 {#introduction}
 
-在Workbench中，定义操作 `AssignTask` 时，请指定特定表单（XDP或PDF表单）。 此外，通过操作配置文件指定一组渲染和提交服务。
+在Workbench中，定义操作 `AssignTask` 时，请指定特定表单（XDP或PDF表单）。 此外，通过操作用户档案指定一组渲染和提交服务。
 
 XDP可以呈现为PDF表单或HTML表单。 新功能包括：
 
@@ -53,7 +53,7 @@ public String generateFormURL(TaskContext taskContext, String profileName);
 public Map<String, Object> renderHTMLForm (TaskContext taskContext, String profileName, Map<String,Object> runtimeMap);
 ```
 
-有关移动表单配置文件的更多信息，请参 [阅创建自定义配置文件](/help/forms/using/custom-profile.md)。
+有关移动表单用户档案的更多信息，请参 [阅创建自定义用户档案](/help/forms/using/custom-profile.md)。
 
 ## 新的HTML表单渲染和提交进程 {#new-html-form-render-amp-submit-processes}
 
@@ -87,7 +87,7 @@ newHTMLFormURL =调用API后返回的 `generateFormURL` URL。
 
 进程将从 `outputDocument`中检 `inputDocument`索到 `taskContext`。
 
-## 默认渲染或提交进程以及操作配置文件 {#default-render-or-submit-processes-and-action-profiles}
+## 默认渲染或提交进程和操作用户档案 {#default-render-or-submit-processes-and-action-profiles}
 
 默认的渲染和提交服务支持在桌面上渲染PDF，在移动设备(iPad)上渲染HTML。
 
@@ -114,19 +114,19 @@ newHTMLFormURL =调用API后返回的 `generateFormURL` URL。
 
 1. 选择要更改其移动表单渲染的应用程序，然后单击“确 **定”**。
 1. 打开要更改其渲染的进程。
-1. 打开目标起点／任务，导航到“演示文稿和数据”部分，然后单击“管理操 **作配置文件”**。
+1. 打开目标起点/任务，导航到“演示和数据”部分，然后单击“管 **理操作用户档案”**。
 
-   此时会显示“管理操作配置文件”对话框。
-1. 将默认渲染配置文件配置从PDF更改为HTML，然后单击“ **确定**”。
+   此时会显示“管理操作用户档案”对话框。
+1. 将“默认渲染用户档案配置”从PDF更改为HTML，然后单击“ **确定**”。
 1. 登记。
 1. 重复这些步骤以更改其他进程的呈现。
 1. 部署与您更改的进程相关的应用程序。
 
-### 默认操作配置文件 {#default-action-profile}
+### 默认操作用户档案 {#default-action-profile}
 
-默认的操作配置文件将XDP表单渲染为PDF。 此行为现已更改为使用默认渲染表单和默认提交表单进程。
+默认的操作用户档案将XDP表单渲染为PDF。 此行为现已更改为使用默认渲染表单和默认提交表单进程。
 
-有关操作配置文件的一些常见问题如下：
+有关操作用户档案的一些常见问题如下：
 
 ![gen_question_b_20](assets/gen_question_b_20.png) 什 **么渲染／提交进程将开箱即用？**
 
@@ -139,7 +139,7 @@ newHTMLFormURL =调用API后返回的 `generateFormURL` URL。
 
 同等的提交过程。
 
-![gen_question_b_20](assets/gen_question_b_20.png) 开 **箱即用有哪些操作配置文件？**
+![gen_question_b_20](assets/gen_question_b_20.png) 开 **箱即用有哪些操作用户档案?**
 
 对于XDP表单：
 
@@ -147,17 +147,17 @@ newHTMLFormURL =调用API后返回的 `generateFormURL` URL。
 
 ![gen_question_b_20](assets/gen_question_b_20.png)**流程设计人员需要做什么才能使表单在设备上以HTML和桌面上的PDF格式呈现？**
 
-没什么。 系统会自动选择默认的操作配置文件，渲染模式也会自动处理。
+没什么。 将自动选择默认的“操作用户档案”，渲染模式也会自动处理。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **What needs to be defost to enable the form to be rederined in HTML on a desktop?**
 
-用户必须为默认配置文件选择HTML单选按钮。
+用户必须为默认用户档案选择HTML单选按钮。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **Wither everthen changing the default action profile behavior?**
+![gen_question_b_20](assets/gen_question_b_20.png)**是否会对更改默认操作用户档案行为产生任何升级影响？**
 
-是的，因为与默认操作配置文件关联的先前渲染和提交服务不同，所以这些服务被视为现有表单的自定义。 单击“恢 **复默认值**”后，将设置默认的渲染和提交服务。
+是的，因为与默认操作用户档案关联的先前渲染和提交服务不同，所以这些服务被视为现有表单的自定义。 单击“恢 **复默认值**”后，将设置默认的渲染和提交服务。
 
-如果您修改了现有的“渲染”或“提交PDF表单”服务或创建了自定义服务（例如custom1），并且现在想对HTML再现使用相同的功能。 您需要复制新的渲染或提交服务（如custom2），并对这些服务应用类似的自定义。 现在，修改XDP的操作配置文件以开始使用custom2服务，而不是使用custom1进行渲染或提交。
+如果您修改了现有的“渲染”或“提交PDF表单”服务或创建了自定义服务（例如custom1），并且现在想对HTML再现使用相同的功能。 您需要复制新的渲染或提交服务（如custom2），并对这些服务应用类似的自定义。 现在，将XDP的操作用户档案修改为使用custom2服务开始，而不是使用custom1来渲染或提交。
 
 流程设计人员需要做什么才能使表单在设备上以HTML和桌面上的PDF格式呈现？
-流程设计人员需要做什么才能使表单在设备上以HTML和桌面上的PDF格式呈现？  [联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
+流程设计人员需要做什么才能使表单在设备上以HTML和桌面上的PDF格式呈现？
