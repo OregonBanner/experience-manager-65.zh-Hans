@@ -1,15 +1,15 @@
 ---
 title: 使用表单
 seo-title: 使用表单
-description: 在AEM Forms应用程序中查看和更新与任务或起点关联的表单
-seo-description: 在AEM Forms应用程序中查看和更新与任务或起点关联的表单
+description: 视图并更新与AEM Forms应用程序中的任务或起点关联的表单
+seo-description: 视图并更新与AEM Forms应用程序中的任务或起点关联的表单
 uuid: 7481ca5c-a2c0-4697-9008-1e51bce2012e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 要在AEM Forms应用程序中同步表单，请执行以下操作：
 
-1. 在创作实例中，选择一个表单，然后单击“查 **看属性”**。
+1. 在创作实例中，选择一个表单，然后单击“ **视图属性”**。
 1. 在属性页面中，单击高 **级。**
 1. 在“高级”下，启用选项：与 **AEM Forms应用程序同步**，然后点按 **保存**。
 
@@ -42,5 +42,3 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 1. 要打开表单，请点按主屏幕中的表单。
 1. 您可以更新表单的字段、添加附件、另存为草稿并提交它。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
