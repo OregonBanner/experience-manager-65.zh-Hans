@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -224,7 +224,7 @@ AEM Forms Designer支持表单中不同类型的字段，如NumericField、Decim
 
 ## 不同绘图元素的CSS类 {#css-classes-for-different-draw-elements}
 
-您可以使用AEM Forms Designer插入静态绘图元素，如文本和图像。 对于每个绘制元素，一个单独的CSS类与该元素相关联。 绘图元素的CSS类列表如下所示。 每个绘制元素都有一个与之关联的绘制类。
+您可以使用AEM Forms Designer插入静态绘图元素，如文本和图像。 对于每个绘制元素，一个单独的CSS类与该元素相关联。 下面列出了绘图元素的CSS类的列表。 每个绘制元素都有一个与之关联的绘制类。
 
 | **绘制类型** | **CSS 类** |
 |---|---|
@@ -248,5 +248,3 @@ AEM Forms Designer支持表单中不同类型的字段，如NumericField、Decim
 `Styling Fields with Validation Errors`
 
 当字段验证失败时，构件的样式会发生更改。 通过对构件组件应用CSS类 **widgetError** ，可完成此样式更改。 要修改默认样式，请覆盖 **widgetError类** 。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
