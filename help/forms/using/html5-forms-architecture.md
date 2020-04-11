@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -185,4 +185,3 @@ Sling包中包含与用户档案和用户档案渲染器相关的内容。
 
 HTML5表单允许开发人员创建用户档案和用户档案渲染器以自定义表单的外观。 例如，HTML表单允许开发人员将表单集成到现有HTML门户的面板或&lt;div>部分。
 有关创建自定义用户档案的更多详细信息，请 [参阅创建自定义用户档案](/help/forms/using/custom-profile.md)。
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
