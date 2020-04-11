@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
 # 自定义跟踪表{#customize-tracking-tables}
 
-AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程实例的详细信息。 要查看跟踪表，请首先在左侧窗格中选择进程名称，以在中间窗格中查看其实例列表。 选择一个进程实例，以在右侧窗格中查看由此实例生成的任务表。 默认情况下，表列显示以下任务属性（任务模型中的相应属性在括号中给出）:
+AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程实例的详细信息。 要视图跟踪表，请首先在左窗格中选择进程名称，以便在中间窗格中查看其实例的列表。 选择一个进程实例，以在右侧窗格中查看由此实例生成的任务表。 默认情况下，表列显示以下任务属性(任务模型中的相应属性在括号中给出):
 
 * ID ( `taskId`)
 * 名称 ( `stepName`)
@@ -26,7 +26,7 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
 * 完成时间( `completeTime`)
 * 所有者 ( `currentAssignment.queueOwner`)
 
-任务模型中可用于在任务表中显示的其余属性为：
+任务模型中剩余的可在任务表中显示的属性有：
 
 <table>
  <tbody>
@@ -175,7 +175,7 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
 
 1. 在中公 `TaskTableHeaderClick` 开该方法 `js/runtime/util/history.js`。
 
-   该方法从单击事件中查找任务属性，根据该属性对任务列表进行排序，并使用排序后的任务列表呈现任务表。
+   该方法从单击任务中查找事件属性，对该属性的任务列表进行排序，并使用排序的任务列表呈现任务表。
 
    通过提供比较器函数，使用任务列表集合上的骨干排序函数来进行排序。
 
@@ -210,5 +210,3 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
            render();
        };
    ```
-
-**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
