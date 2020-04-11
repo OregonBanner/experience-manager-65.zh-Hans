@@ -1,6 +1,6 @@
 ---
-title: 使用“管理者视图”管理组织层次结构中的任务
-seo-title: 使用“管理者视图”管理组织层次结构中的任务
+title: 使用Manager任务管理组织层次结构中的视图
+seo-title: 使用Manager任务管理组织层次结构中的视图
 description: 管理者和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报告的任务。
 seo-description: 管理者和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报告的任务。
 uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
@@ -11,24 +11,24 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
 
-# 使用“管理者视图”管理组织层次结构中的任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+# 使用Manager任务管理组织层次结构中的视图{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
-在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人的任务（直接或间接报告），并对其执行各种操作。 这些任务位于AEM Forms工作区的“待办事项”选项卡中。 对直接报告任务支持的操作包括：
+在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人（直接或间接报告）的任务，并对其执行各种操作。 这些任务位于AEM Forms工作区的“待办事项”选项卡中。 对一任务直接报告支持的操作包括：
 
 **转发** 将任务从直接报告转发给任何用户。
 
-**索赔** -申请直接报告的任务。
+**索赔** :任务直接报告。
 
-**Claim &amp; Open** Claim a task of a direct report and automatically open it in the To-do list of the manager.
+**Claim &amp; Open** Claim a任务直接报告，并在经理的To-do列表中自动打开它。
 
 **拒绝** “拒绝”其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接报告的任务。
 
-AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这样的检查可确保用户只能获取用户具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告以满足其需求。
+AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这样的检查可确保用户只能获取具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告以满足其需求。
 
 1. 创建DSC。 有关详细信息，请参阅使用AEM Forms编程指南中的“为AEM表单开发 [组件”主题](https://www.adobe.com/go/learn_aemforms_programming_63) 。
 1. 在DSC中，为层次管理定义新的SPI，以在AEM Forms用户中定义直接报告和层次。 以下是示例Java™代码片断。
@@ -113,10 +113,8 @@ AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这�
 1. 通过Workbench部署DSC。 重新启动 `ProcessManagementTeamTasksService` 服务。
 1. 您可能必须刷新浏览器或再次注销／登录用户。
 
-以下屏幕说明了如何访问直接报告的任务和可用的操作。
+以下屏幕说明了如何访问一任务直接报告和可用的操作。
 
-![cu_manager_view](assets/cu_manager_view.png)
+![cu_manager_视图](assets/cu_manager_view.png)
 
-访问直接报告的任务并处理任务
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
+访问直接报告的任务并采取相应任务
