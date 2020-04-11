@@ -11,7 +11,7 @@ topic-tags: forms-app
 discoiquuid: e6b01ade-7ea3-42a7-872d-cc35a3d2782a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -30,19 +30,17 @@ source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
 
 * 运行Mac OS X 10.9.5或更高版本的基于Intel的Apple Mac
 * iOS SDK 8.4或更高版本
-* Xcode版本：适用于OS x或更高版本的Xcode 6.4
-* iOS开发人员企业计划的会员资格
+* Xcode版本：适用于OS X或更高版本的Xcode 6.4
+* iOS开发人员企业项目的会员资格
 * 用于分发内部iOS应用程序的企业证书
 * 带有iOS 8.4或更高版本的Apple iPad
 
 ## 对于Android设备 {#for-android-devices}
 
 * Android Development Toolkit（ADT捆绑包），可从https://developer.android.com/sdk/index.html下载 [它](https://developer.android.com/sdk/index.html)
-* 如果在MAC系统上设置了该环境，则ADT应安装在“Applications”（应用程序）文件夹中。
-* 如果ADT安装在MAC上的任何其他位置，或者如果环境在Windows系统上设置，则需要在解压缩的源归档文件中的文件夹中更新ADT SDK路径 `local.properties` ，该文件位于文件中 `src\android``mobileworkspace-src.zip`。 在此文件中，将变量指 `sdk.dir` 向桌面上的ADT SDK位置。
+* 如果环境是在MAC系统上设置的，则ADT应安装在“Applications”（应用程序）文件夹中。
+* 如果ADT安装在MAC上的任何其他位置，或者环境在Windows系统上设置，则需要在解压缩的源归档文件中的文件夹中更新ADT SDK路径 `local.properties``src\android``mobileworkspace-src.zip`。 在此文件中，将变量指 `sdk.dir` 向桌面上的ADT SDK位置。
 
 >[!NOTE]
 >
 >adobe-lc-mobileworkspace-src.zip包含PhoneGap SDK 5.0。确保未预安装PhoneGap SDK。
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
