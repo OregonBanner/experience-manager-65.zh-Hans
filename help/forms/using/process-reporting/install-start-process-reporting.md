@@ -10,7 +10,7 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -160,7 +160,7 @@ ProcessDataStorageProvider服务从ProcessDataPublisher服务接收进程数据�
 
 ### ProcessDataPublisher服务 {#processdatapublisher-service}
 
-ProcessDataPublisher服务从AEM Forms数据库导入进程数据，并将数据发布到ProcessDataStorageProvider服务进行存储。
+ProcessDataPublisher服务从AEM Forms数据库导入进程数据，并将数据发布到ProcessDataStorageProvider服务以进行存储。
 
 #### 配置ProcessDataPublisher服务 {#to-configure-processdatapublisher-service-nbsp}
 
@@ -279,5 +279,3 @@ AEM Forms环境包含环境设置时的数据。
 * **[!UICONTROL 同步]**:将嵌入式进程报告存储库与AEM Forms数据库同步。
 * **[!UICONTROL 帮助]**:视图“流程报告”的帮助文档。
 * **[!UICONTROL 注销]**:注销进程报告
-
-[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)
