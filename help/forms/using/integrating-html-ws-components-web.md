@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ---
 
@@ -89,5 +89,3 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
        margin: 0 auto;
    }
    ```
-
-**[联系支持](https://www.adobe.com/account/sign-in.supportportal.html)**
