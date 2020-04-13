@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d1331c8c023a1e414e0231d082667d67c4adf17a
+source-git-commit: 24c72d79fe1ebd140d7746759d73cbaffdd1ea2d
 
 ---
 
@@ -389,7 +389,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
    您为资产分配的评级分数显示在您的评 **[!UICONTROL 级下]**。 对资产进行评级的用户收到的资产平均评级分数显示在“评 **[!UICONTROL 级”下]**。 此外，对平均评级得分有贡献的评级得分的分解显示在“评级细 **[!UICONTROL 分”下]**。 您可以根据平均评级分数搜索资产。
 
-1. 要视图资产的使用情况统计信息，请单击／点按“ **[!UICONTROL 分析]** ”选项卡。
+1. 要视图资产的使用情况统计信息，请单击／点按 **[!UICONTROL Insights]** 选项卡。
 
    使用情况统计信息包括：
 
@@ -880,7 +880,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 ## 创建、管理、预览和还原资产版本 {#asset-versioning}
 
-版本控制创建数字资产在某个特定时间点的快照。版本控制有助于在以后将资产恢复到以前的状态。 例如，如果要撤消对资产所做的更改，请恢复该资产的未编辑版本。
+版本控制创建数字资产在某个特定时间点的快照。版本控制有助于在以后将资产恢复到以前的状态。 例如，如果要撤消对资产所做的更改，请恢复该资产的未编辑版本。 在Experience Manager中，您可以创建一个版本，视图当前修订版本，视图两个图像版本之间的并排差异，并将资产恢复到先前版本。
 
 您可以在以下情况下在Experience Manager中创建版本：
 
@@ -891,17 +891,11 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 您还可以通过工作流启用自动版本控制。 为资产创建版本时，元数据和演绎版会与版本一起保存。 演绎版是相同图像的替代格式，例如，已上载JPEG文件的PNG演绎版。
 
-在Experience Manager中，您可以：
-
-* 创建资产的版本。
-* 视图资产的当前版本。
-* 将资产恢复到先前版本。
-
 1. 导航到您要为其创建版本的资产所在的位置，然后单击该资产以打开其预览。 从页面的左上角，打开菜单，然后选择时间 **[!UICONTROL 轴]**。
 
    ![从左侧导航菜单中，选择时间轴选项](assets/timeline.png)
 
-*图：从页面的左上角区域打开菜单，然后选择“时[!UICONTROL 间轴]”选项。*
+   *图：从页面的左上角区域打开菜单，然后选择“时[!UICONTROL 间轴]”选项。*
 
 1. 要创建资产版本，请执行以下操作：
 
@@ -910,6 +904,8 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    * 单击 **[!UICONTROL 创建]** ，以创建版本。
 
       ![chlimage_1-251](assets/create-new-version-from-timeline.png)
+
+      *图：从时间轴左侧提要栏中创建资[!UICONTROL 产的版]本。*
 
 1. 要视图某个版本的资产，请执行以下操作：
 
@@ -926,6 +922,8 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    * Click **[!UICONTROL Revert to this Version]**.
 
       ![select_version](assets/select_version.png)
+
+      *图：选择一个版本并恢复到它。 它成为DAM用户随后可用的当前版本。*
 
 1. 要比较某个图像的两个版本，请执行以下步骤：
    * 单击要与当前版本进行比较的版本。
