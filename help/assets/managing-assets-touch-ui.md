@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: be619b71dd0bb1addc10f4dbdbd2f00bc86dd003
+source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ---
 
@@ -902,9 +902,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![时间轴](assets/timeline.png)
 
-1. 点按／单击底 **[!UICONTROL 部的操作]** （箭头）图标，以视图您可以对资产执行的可用操作。
-
-   ![chlimage_1-249](assets/chlimage_1-45.png)
+1. 单击底 **[!UICONTROL 部的操作]** ，以视图可对资产执行的可用操作。
 
 1. Tap/click **[!UICONTROL Save as Version]** to create a version for the asset.
 
