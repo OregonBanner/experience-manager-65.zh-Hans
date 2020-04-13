@@ -8,7 +8,7 @@ discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: be4a8a78b8555149809b8026bfd059f4cc9e9401
+source-git-commit: 9daad219d885c1c6972ace0b247f3537dcdc38a9
 
 ---
 
@@ -177,6 +177,8 @@ AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
 * 启动库URL的生成仅基 `path` 于Launch API `library_name` 中的值和值，而不基于值( `library_path` NPR-31550)。
 
 * 处理LiveFyre相关项目时显示错误消息(FYR-12420)。
+
+* ReportSuitesServlet易受SSRF(NPR-32156)的攻击。
 
 ### WCM模板编辑器 {#wcm-template-editor-6540}
 
