@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -48,7 +48,7 @@ CRXDE Lite的默认URL为 `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 
 ## 对折叠的类别、队列和进程进行本地化 {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需要开发包来本地化这些标题。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](../../forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需要开发包来本地化这些标题。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 在以下步骤中，假定新的本地化图像文件是 *类别_nw.png*、 *Queue_nw.png*&#x200B;和 *Processes_nw.png*。 建议的图像宽度为19px。
 
@@ -107,7 +107,7 @@ AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需�
 
 ## 本地化日期选取器 {#localizing-date-picker}
 
-您需要开发包来本地化 *datepicker* API。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码](../../forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)。
+您需要开发包来本地化 *datepicker* API。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code)。
 
 1. 下载并解压 [缩jQuery UI包](https://jqueryui.com/download/all/)，导航到 *&lt;解压缩jquery UI包>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n。
 1. 将区域设置代码的jquery.ui.datepicker-nw.js文件复制到apps/ws/js/libs/jqueryui中，并对文件进行特定于区域设置的更改。
