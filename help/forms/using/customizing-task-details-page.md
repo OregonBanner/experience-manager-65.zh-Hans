@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -84,4 +84,4 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 >
 >要使用在AEM Forms工作区的任务流程选项卡中创建的任务自定义开始详细信息页面 **，请向其中添加新信息**`/apps/ws/js/runtime/templates/startprocess.html`。
 >
->要为在详细信息页面中添加的信息添加新样式，请使用工作区自定义中的“用户界面 *更改* ”部分修改 [CSS文件](/help/forms/using/changing-locale-user-interface.md#main-pars-header-3)。
+>要为在详细信息页面中添加的信息添加新样式，请使用工作区自定义中的“用户界面 *更改* ”部分修改 [CSS文件](changing-locale-user-interface.md)。
