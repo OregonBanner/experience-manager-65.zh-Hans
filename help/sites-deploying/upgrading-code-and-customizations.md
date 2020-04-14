@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -48,7 +48,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 ### 在版本控制中为6.5代码创建专用分支 {#create-a-dedicated-branch-for-6.5-code-in-version-control}
 
-AEM实施所需的所有代码和配置都应使用某种形式的版本控制进行管理。 应创建版本控制中的专用分支，以管理AEM目标版中代码库所需的任何更改。 将在此分支中管理针对AEM的目标版本对代码库进行的迭代测试和后续错误修复。
+AEM实施所需的所有代码和配置都应使用某种形式的版本控制进行管理。 应创建版本控制中的专用分支，以管理AEM目标版中代码库所需的任何更改。 将在此分支中管理针对AEM的目标版本对代码库的迭代测试和后续错误修复。
 
 ### 更新AEM Uber Jar版本 {#update-the-aem-uber-jar-version}
 
@@ -150,7 +150,7 @@ ContextHub配置受升级影响。 有关如何恢复现有ContextHub配置的�
 
 ### 工作流自定义 {#workflow-customizations}
 
-更新开箱即用的修改工作流以添加或删除不需要的功能是常见的做法。 DAM更新资产工作流是自定义的常见工作流。 自定义实施所需的所有工作流都应备份并存储在版本控制中，因为升级过程中可能会覆盖它们。
+更新开箱即用的修改工作流以添加或删除不需要的功能是常见的做法。 自定义的常见工作流是 [!UICONTROL DAM更新资产工作流] 。 自定义实施所需的所有工作流都应备份并存储在版本控制中，因为升级过程中可能会覆盖它们。
 
 ### 可编辑的模板 {#editable-templates}
 
