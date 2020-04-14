@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -49,7 +49,7 @@ AEM Forms工作区是AEM Forms的一部分。 Workspace除了便于再现PDF表�
 
 AEM Forms客户不支持Flex Workspace。 所有使用Flex Workspace的客户都应转到AEM Forms Workspace。
 
-在AEM Forms工作区中，与XDP表单关联的默认渲染和提交服务在默认操作用户档案中已更改，并且已引入新服务。 有关详细信息，请参 [阅新建渲染和提交服务](/help/forms/using/new-render-submit-service.md)。 要迁移使用XDP表单的现有流程，以利用这些服务，您可以执行以 [下步骤](/help/forms/using/new-render-submit-service.md#main-pars-faq)。
+在AEM Forms工作区中，与XDP表单关联的默认渲染和提交服务在默认操作用户档案中已更改，并且已引入新服务。 有关详细信息，请参 [阅新建渲染和提交服务](/help/forms/using/new-render-submit-service.md)。 要迁移使用XDP表单的现有流程，以利用这些服务，您可以执行以 [下步骤](new-render-submit-service.md)。
 
 **将Flex Workspace自定义与AEM Forms Workspace映射**
 
@@ -120,11 +120,11 @@ AEM Forms工作区支持各种自定义，以更新用户界面的布局、其�
 * 使用语义自定义的功能
 * 在其他Web应用程序中重用HTML组件
 
-自定 [义文章](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-0) 介绍了此类自定义的类型。
+自定 [义文章](introduction-customizing-html-workspace.md#types-of-customizations) 介绍了此类自定义的类型。
 
 ### Set up the developer environment {#set-up-the-developer-environment}
 
-AEM Forms工作区交付内容包括部署在CRX上的CRX包、包含完整源代码的SDK存档、第三方JavaScript库以及AEM Forms工作区的构建脚本。 使用这些设置设置开发人员环境以执行上述自定义。 有关详细信息，请参 [阅构建AEM Forms工作区代码](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)。
+AEM Forms工作区交付内容包括部署在CRX上的CRX包、包含完整源代码的SDK存档、第三方JavaScript库以及AEM Forms工作区的构建脚本。 使用这些设置设置开发人员环境以执行上述自定义。 有关详细信息，请参 [阅构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code)。
 
 您可以自定义界面和核心功能的主要部分，如字体、颜色方案、徽标、登录屏幕、错误对话框、与第三方应用程序的集成以及第三方应用程序中组件的重用。 您还可以增强“任务摘要”页面上显示的内容，显示用于任务路由操作的图像，甚至可以修改创建AEM Forms工作区应用程序的低级骨干模型和视图。
 
