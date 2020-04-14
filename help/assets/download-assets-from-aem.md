@@ -3,7 +3,7 @@ title: 从 AEM 下载资产
 description: 了解如何从AEM下载资产以及启用或禁用下载功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
+source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: e71b87b12d45bf12f29af917fddebeddedb18056
 
 >[!NOTE]
 >
->电子邮件的收件人必须是用户组的成 `dam-users` 员才能访问电子邮件中的ZIP下载链接。 要能够下载资产，成员必须具有启动触发资产下载的工作流的权限。
+>收件人的电子邮件必须是用户组的成 `dam-users` 员才能访问电子邮件中的ZIP下载链接。 要能够下载资产，成员必须具有启动触发资产下载的工作流的权限。
 
 要下载资产，请导航到资产，选择资产，然后点按工具 **[!UICONTROL 栏中]** 的下载。 在显示的对话框中，指定下载选项。
 
@@ -44,7 +44,7 @@ AEM中的默认servlet允许经过身份验证的用户发出任意大的并发�
 
 要允许从您的DAM下载资产，例如，在使用类似于Asset Share Commons或其他类似门户的实施时，请通过OSGi配置手动启用servlet。 Adobe建议尽可能低地设置允许的下载大小，而不影响日常下载要求。 高价值可能会影响性能。
 
-1. 创建一个以发布运行模式为目标的命名约定的文件夹，即 `config.publish`:
+1. 创建一个具有命名约定的文件夹，该命名约定目标发布运行模式，即 `config.publish`:
 
    `/apps/<your-app-name>/config.publish`
 
@@ -72,4 +72,5 @@ AEM中的默认servlet允许经过身份验证的用户发出任意大的并发�
 >
 >* [下载受DRM保护的资源](drm.md)
 >* [在Win或Mac桌面上使用AEM桌面应用程序下载资源](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
->* [从支持的Adobe Creative Cloud应用程序中使用Adobe Assets Link下载资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [从支持的Adobe Creative Cloud应用程序中使用Adobe Assets Link下载资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)
+
