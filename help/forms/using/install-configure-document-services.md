@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: ba4e4908c0564af6e7f0759c5119a5c02f274dbd
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -32,14 +32,14 @@ AEM Forms提供一组OSGi服务，用于完成不同的文档级别操作，例�
 
 使您能创建不同格式的文档，包括PDF、激光打印机格式和标签打印机格式。 激光打印机格式为PostScript和打印机控制语言(PCL)。 有关详细信息，请参阅 [输出服务](/help/forms/using/output-service.md)。
 
-PDF Generator服务提供API以将本机文件格式转换为PDF。 它还将PDF转换为其他文件格式并优化PDF文档的大小。 有关详细信息，请参 [阅PDF Generator Service](/help/forms/using/aem-document-services-programmatically.md#main-pars-header-27)。
+PDF Generator服务提供API以将本机文件格式转换为PDF。 它还将PDF转换为其他文件格式并优化PDF文档的大小。 有关详细信息，请参 [阅PDF Generator Service](aem-document-services-programmatically.md#pdfgeneratorservice)。
 
 通过扩展Adobe Reader的功能并授予其他使用权限，使您的组织能够轻松共享交互式PDF文档。 该服务激活在使用Adobe Reader打开PDF文档时不可用的功能，如向文档添加注释、填写表单和保存文档。 有关详细信息，请参 [阅Reader Extension Service](/help/forms/using/overview-aem-document-services.md#p-reader-extension-service-p)。
 
 允许您在AEM服务器上使用数字签名和文档。 例如，签名服务通常在以下情况下使用：
 
 * AEM服务器会在使用Acrobat或Adobe Reader将表单发送给用户以打开前对其进行认证。
-* AEM服务器使用Acrobat或Adobe Reader验证已添加到表单的签名。
+* AEM服务器会验证已使用Acrobat或Adobe Reader添加到表单的签名。
 * AEM服务器代表公证员签署表单。
 
 签名服务访问存储在信任存储中的证书和凭据。 有关详细信息，请参阅 [签名服务](/help/forms/using/aem-document-services-programmatically.md)。
@@ -68,7 +68,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 通常，您只需一�
    * **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。 内容准备就绪后，即会复制到发布实例。
    * **发布**:通过Internet或内部网络向公众提供已发布内容的AEM实例。
 
-* 满足内存要求。 AEM Forms加载项包需要：
+* 满足内存要求。 AEM Forms Add-on包需要：
 
    * 15 GB临时空间，用于基于Microsoft Windows的安装。
    * 6 GB临时空间，用于基于UNIX的安装。
@@ -386,11 +386,11 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该包包含AEM Forms�
 
 1. 在 [AEM包共享中](http://localhost:4502/crx/packageshare/login.html)，搜索 **[!UICONTROL AEM 6.4 Forms Add-on包]**，单击适用于您的操作系统的包，然后单击 **[!UICONTROL 下载]**。 阅读并接受许可协议，然后单击“确 **[!UICONTROL 定”]**。 下载开始。 下载后，包旁 **[!UICONTROL 会显示]** “已下载”一词。
 
-   您还可以使用版本号搜索加载项包。 有关最新包的版本号，请参阅 [AEM Forms发行文章](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 。
+   您还可以使用版本号搜索加载项包。 有关最新包的版本号，请参阅 [AEM Forms发行文章](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 。
 
 1. 下载完成后，单击“已下 **[!UICONTROL 载”]**。 您将被重定向到包管理器。 在包管理器中，搜索下载的包，然后单击“安 **[!UICONTROL 装”]**。
 
-   如果您通过 [AEM Forms发行文章中列出的直接链接手动下载包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，请登录到包管理器，单击“上传包” ****，选择下载的包，然后单击“上传”。 上传包后，单击包名称，然后单击“安 **[!UICONTROL 装”]**。
+   如果您通过 [AEM Forms发行文章中列出的直接链接手动下载包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) ，请登录到包管理器，单击“上传包” ****，选择下载的包，然后单击“上传”。 上传包后，单击包名称，然后单击“安 **[!UICONTROL 装”]**。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即停止服务器。** 在停止AEM Forms服务器之前，请等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止显示在 `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log文件中，且日志是稳定的。
 
