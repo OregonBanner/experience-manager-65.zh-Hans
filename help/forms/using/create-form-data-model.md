@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -84,7 +84,7 @@ AEM Forms数据集成模块允许您从不同的后端数据源(如AEM用户用�
 
 ## Step 2: Create form data model {#create-fdm}
 
-AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../forms/using/data-integration.md#main-pars-header-1524967585)据源创建表单数据模型。 您可以在表单数据模型中使用多个数据源。 对于我们的用例，我们将使用已配置的MySQL数据源。
+AEM Forms提供了一个直观的用户界面，用 [于从配置的数据源创建表单](data-integration.md) 数据模型。 您可以在表单数据模型中使用多个数据源。 对于我们的用例，我们将使用已配置的MySQL数据源。
 
 执行以下操作以创建表单数据模型：
 
@@ -127,7 +127,7 @@ AEM Forms提供了一个直观的用户界面，用 [于从配置的数](../../f
 
       * 获取
       * 更新
-   点按 **添加选定项** ，将选定的数据模型对象和服务添加到表单数据模型。
+   点按 **添加选定项** ，将选定数据模型对象和服务添加到表单数据模型。
 
    ![WeRetail模式](assets/weretail_schema_new.png)
 
