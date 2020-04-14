@@ -9,7 +9,7 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -24,7 +24,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 1. 在AEM登录页面上输入凭据。
 
-   登录后，在左上角，点按 **[!UICONTROL Adobe Experience Manager > Forms > Forms &amp;文档]**。
+   登录后，在左上角，点按 **[!UICONTROL Adobe Experience Manager >表单>表单和文档]**。
 
    >[!NOTE]
    >
@@ -145,7 +145,7 @@ XML和JSON模式表示组织中后端系统生成或使用数据的结构。 您
 
 >[!NOTE]
 >
->当您打开使用高级模板创建的自适应表单进行编辑时，将显示一条错误消息。 高级模板具有签名步骤组件，默认情况下为其启用Adobe Sign。 创建并选择 [Adobe Sign云配置](/help/forms/using/adobe-sign-integration-adaptive-forms.md) , [并配置签署方](/help/forms/using/working-with-adobe-sign.md#main-pars-header-1374317451) ，以解决错误。
+>当您打开使用高级模板创建的自适应表单进行编辑时，将显示一条错误消息。 高级模板具有签名步骤组件，默认情况下为其启用Adobe Sign。 创建并选择 [Adobe Sign云配置](/help/forms/using/adobe-sign-integration-adaptive-forms.md) , [并配置签署方](working-with-adobe-sign.md#addsignerstoanadaptiveform) ，以解决错误。
 
 ## 编辑自适应表单的表单模型属性 {#edit-form-model}
 
