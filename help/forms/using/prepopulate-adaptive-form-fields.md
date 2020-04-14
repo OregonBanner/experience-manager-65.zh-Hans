@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -339,7 +339,7 @@ prefill-page component.zip
 预填充服务是OSGi服务，并通过OSGi捆绑打包。 您可以创建OSGi捆绑包、上传它并将其安装到AEM Forms捆绑包。 在开始创建捆绑之前：
 
 * [下载AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)
-* [下载样板包](../../forms/using/prepopulate-adaptive-form-fields.md#main-pars-download-section-711716493)
+* 下载样板包
 
 * 将数据（预填数据）文件放入crx-repository中。 可以将文件放在crx-repository的\contents文件夹中的任意位置。
 
