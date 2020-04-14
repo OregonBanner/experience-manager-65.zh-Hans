@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 在“文件类型设置”页面上，您可以执行以下任务:
 
-* [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)
+* [创建或编辑文件类型设置](#create-or-edit-file-type-settings)
 * 指定默认使用的文件类型设置(请参 [阅导入和导出PDF生成器配置文件](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html))
 * [更改默认设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#change-the-default-settings)
 * [启用PDF/A支持](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
@@ -50,15 +50,15 @@ source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
    [导入和导出PDF Generator配置文件](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
 
-   [Adobe PDF导出设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-2)
+   [Adobe PDF导出设置（仅限Windows）](#adobe-pdf-export-settings-windows-only)
 
    [HTML到PDF设置](#html-to-pdf-settings)
 
-   [将视频快速转换为PDF设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-9)
+   [将视频快速转换为PDF设置](#flash-videos-to-pdf-settings)
 
-   [XPS到PDF设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-10)
+   [XPS到PDF设置](#xps-to-pdf-settings)
 
-   [PDF优化器设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-11)
+   [PDF优化器设置](#pdf-optimizer-settings)
 
    [Microsoft Excel设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings1.md#microsoft-excel-settings-windows-only)
 
@@ -399,7 +399,7 @@ PDF Generator支持减小PDF文件大小的功能。 使用所有这些设置还
 
 ## Microsoft Excel设置（仅限Windows） {#microsoft-excel-settings-windows-only}
 
-这些选项决定了如何转换Microsoft Excel文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+这些选项决定了如何转换Microsoft Excel文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings)。
 
 **尝试将OpenOffice用作备用转换器**:当选择此选项且使用Microsoft Excel的转换失败或达到指定的超时限制时，PDF Generator会使用OpenOffice尝试转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会向日志文件写入异常。
 
@@ -423,7 +423,7 @@ PDF Generator支持减小PDF文件大小的功能。 使用所有这些设置还
 
 **使用加标签的Adobe PDF启用辅助功能和重排**:在PDF文档中嵌入标签以启用辅助工具和重排。
 
-**列表Excel加载项**:默认情况下（出于安全原因），将Excel文件转换为PDF时不会运行Excel插件。 要允许某些Excel插件在转换过程中运行，请提供以逗号分隔的列表插件名称。
+**列表Excel加载项**:默认情况下（出于安全原因），当Excel文件转换为PDF时，不会运行Excel加载项。 要允许某些Excel插件在转换过程中运行，请提供以逗号分隔的列表插件名称。
 
 **列表要转换的工作表**:此框为空时，Excel电子表格中的所有工作表都将包含在生成的PDF中。 要选择性地转换工作表的子集，请提供以逗号分隔的工作表名称列表。
 
@@ -463,7 +463,7 @@ PDF Generator支持减小PDF文件大小的功能。 使用所有这些设置还
 
 ## Microsoft Project设置（仅限Windows） {#microsoft-project-settings-windows-only}
 
-这些选项决定了如何转换Microsoft Project文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+这些选项决定了如何转换Microsoft Project文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings)。
 
 1. **[!UICONTROL 文件扩展名：]** 指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `mpp`. 请勿在扩展之前或扩展之间加入句点。
 
@@ -474,7 +474,7 @@ PDF Generator支持减小PDF文件大小的功能。 使用所有这些设置还
 
 ## Microsoft Word设置（仅限Windows） {#microsoft-word-settings-windows-only}
 
-这些选项决定了如何转换Microsoft Word文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+这些选项决定了如何转换Microsoft Word文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings)。
 
 **[!UICONTROL 尝试将OpenOffice用作备用转换器]**:当选择此选项且使用Microsoft Word的转换失败或达到指定的超时限制时，PDF Generator会使用OpenOffice尝试转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会向日志文件写入异常。
 
@@ -534,7 +534,7 @@ styleName1=level1[,styleName2=level2...]
 
 ## Microsoft Publisher设置（仅限Windows） {#microsoft-publisher-settings-windows-only}
 
-这些选项决定了如何转换Microsoft Publisher文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings1.md#main-pars-heading-0)。
+这些选项决定了如何转换Microsoft Publisher文件。 有关访问这些选项的说明，请参阅 [创建或编辑文件类型设置](#create-or-edit-file-type-settings)。
 
 **[!UICONTROL 文件扩展名]**:指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `pub`. 请勿在扩展之前或扩展之间加入句点。
 
@@ -580,7 +580,7 @@ styleName1=level1[,styleName2=level2...]
 
 **文件扩展名**:指定此应用程序接受的文件类型的文件扩展名（以逗号分隔）。 默认为 `odt,odp,ods,odg,odf,sxw,sxi,sxd`. 请勿在扩展之前或扩展之间加入句点。
 
-**范围**:转换所有页面或指定特定页面或页面范围。 如果未定义页面范围，则转换所有页面。 要导出一系列页面，请使用3-6格式。 要导出单页，请使用格式7;9;11。 可以使用3-6;8;10;12等格式导出页面范围和单个页面的组合。
+**范围**:转换所有页面或指定特定页面或页面范围。 如果未定义页面范围，则转换所有页面。 要导出一系列页面，请使用3-6格式。 要导出单页，请使用格式7;9;11。 可使用3-6;8;10;12等格式导出页面范围和单个页面的组合。
 
 **页面方向**:仅对纯文本文件，为转换的PDF文档选择纵向或横向。
 
