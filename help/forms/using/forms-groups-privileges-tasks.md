@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
 
 您可以 [在AEM中](/help/sites-administering/user-group-ac-admin.md#group-administration) ，创建用 [户组](/help/sites-administering/user-group-ac-admin.md#user-administration) ，并将策略和用户分配到用户组。 这些策略控制属于组的用户的权限。
 
-安装 [AEM Forms Add-on包后](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提及的组（如forms-user和forms-power-user）将自动可用于分配。 下表列出了用户可根据组分配对OSGi上的AEM Forms执行的任务：
+安装 [AEM Forms Add-on包后](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提及的组（如forms-user和forms-power-user）将自动可用于分配。 下表列表了用户可以根据组分配对OSGi上的AEM Forms执行的任务:
 
 <table>
  <tbody>
@@ -29,7 +29,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
    <td>任务</td> 
   </tr>
   <tr>
-   <td>表单用户 <sup><a href="#main-pars-text">[1]</a></sup></td> 
+   <td>表单用户 <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>创建、预览、发布和提交自适应表单</li> 
@@ -59,7 +59,7 @@ source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup><a href="#main-pars-text">[2]</a></sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>创建和预览自适应表单或交互式通信模板</li> 
