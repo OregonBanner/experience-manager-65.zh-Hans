@@ -3,7 +3,7 @@ title: 使用PDF栅格化器生成再现
 description: 本文介绍如何使用Adobe PDF Rasterizer库生成高质量的缩览图和再现。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -12,13 +12,13 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 有时，当您将内容密集型的大型PDF或AI文件上传到Adobe Experience Manager(AEM)资产时，默认库可能无法生成准确的输出。 在这种情况下，Adobe的PDF栅格化器库可以生成比默认库的输出更可靠、更准确的输出。
 
-Adobe建议对以下项目使用PDF栅格化器库：
+Adobe建议对以下内容使用PDF栅格化器库：
 
 * 内容密集的大量AI/PDF文件
 * 未开箱即用生成缩略图的AI/PDF文件
 * 具有Pantone Matching System(PMS)颜色的AI文件
 
-与开箱即用输出相比，使用PDF栅格化器生成的缩览图和预览的质量更高，因此，可跨设备提供一致的查看体验。 Adobe PDF Rasterizer库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
+与开箱即用输出相比，使用PDF栅格化器生成的缩览图和预览的质量更高，因此，可以跨设备提供一致的查看体验。 Adobe PDF Rasterizer库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
 
 1. 从“包共享”在AEM实例上安装PDF栅格 [化器包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
@@ -26,19 +26,17 @@ Adobe建议对以下项目使用PDF栅格化器库：
    >
    >PDF栅格化器库仅可用于Windows和Linux。
 
-1. 访问AEM资产工作流控制台(位于 `https://[server]:[port]/workflow`)。
-
-   打开“DAM更新资产”工作流页。
+1. 访问AEM资产工作流控制台(位于 `https://[server]:[port]/workflow`)。 打开“ [!UICONTROL DAM更新资产”工作流] ”页。
 
 1. 要防止使用默认方法为PDF和AI文件生成缩览图和Web再现，请执行以下步骤：
 
    * 打开“流 **[!UICONTROL 程缩略图]** ”步骤，并根据需要在“缩略图”选项卡 `application/pdf` 下的“跳过 `application/postscript`******** MIME类型”字段中添加或添加。
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
-   * 在“启用 **[!UICONTROL Web的图像]** ”选项卡中，根据您的要求 `application/pdf` ，在“跳 `application/postscript` 过列表 **** ”下添加或添加。
+   * 在“启用 **[!UICONTROL Web的图像]** ”选项卡中，根据您的 `application/pdf` 要求在“跳 `application/postscript` 过列表 **** ”下添加或添加。
    ![用于跳过图像格式的缩略图处理的配置](assets/web_enabled_imageskiplist.png)
 
-1. 打开“ **[!UICONTROL 栅格化PDF/AI图像预览演绎版]** ”步骤，并删除要跳过默认生成预览图像演绎版的MIME类型。 例如，从“MIME类型” `application/pdf`列表 `application/postscript`中删 `application/illustrator` 除MIME类 **[!UICONTROL 型]** 、或。
+1. 打开“ **[!UICONTROL 栅格化PDF/AI图像预览再现]** ”步骤，并删除要跳过默认生成预览图像再现的MIME类型。 例如，从“MIME类型 `application/pdf`”列表 `application/postscript`中删 `application/illustrator` 除MIME类 **[!UICONTROL 型]** 、或。
 
    ![process_arguments](assets/process_arguments.png)
 
