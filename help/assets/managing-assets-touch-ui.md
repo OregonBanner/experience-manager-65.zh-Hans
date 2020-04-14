@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 24c72d79fe1ebd140d7746759d73cbaffdd1ea2d
+source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 24c72d79fe1ebd140d7746759d73cbaffdd1ea2d
 
 >[!NOTE]
 >
->* 共享到Marketing Cloud时，不 `sling:OrderedFolder`支持共享类型的“资产”文件夹。 如果要共享文件夹，请勿在创建文件夹 [!UICONTROL 时选择] “已排序”。
+>* 共享到Marketing Cloud时，不支 `sling:OrderedFolder` 持共享类型的资产文件夹。 如果要共享文件夹，请勿在创建文件夹 [!UICONTROL 时选择] “已排序”。
 >* Experience Manager不允许将单 `subassets` 词用作文件夹的名称。 它是为包含复合资产子资产的节点保留的关键字。
 
 
@@ -56,13 +56,13 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    * On the toolbar, tap the **[!UICONTROL Create]** icon. 然后，在菜单中，点按文 **[!UICONTROL 件]**。 如果需要，可以重命名显示的对话框中的文件。
    * 在支持HTML5的浏览器中，直接将资产拖动到“资产”用户界面上。 不显示要重命名文件的对话框。
-   ![在aem中创建选项](assets/create-options.png)
+   ![创建用于上传资产的选项](assets/create-options.png)
 
    要选择多个文件，请按Ctrl或Command键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
 
    您可以暂停上传大资产（大于500 MB），稍后从同一页面继续它。 点按上 **** 传开始时显示的进度栏旁边的“暂停”图标。
 
-   ![chlimage_1-211](assets/chlimage_1-5.png)
+   ![上传资产进度栏](assets/chlimage_1-5.png)
 
    可以配置资产大于其大小的资产。 例如，您可以配置系统以将大于1000 MB（而不是500 MB）的资产视为大资产。 在这种情况下，当 **[!UICONTROL 上传大于]** 1000 MB的资产时，进度栏上会显示“暂停”。
 
@@ -72,7 +72,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    单击“暂停” **[!UICONTROL 图标]** ，将切换为“播 **[!UICONTROL 放”图标]** 。 要继续上传，请单击“播 **[!UICONTROL 放]** ”图标。
 
-   ![chlimage_1-212](assets/chlimage_1-6.png)
+   ![使用播放图标恢复暂停的资产上传](assets/chlimage_1-6.png)
 
    To cancel an ongoing upload, click close (`X`) next to the progress bar. 当您取消上传操作时，AEM资产会删除部分上传的资产。
 
@@ -86,7 +86,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    您可以选择替换现有资产，创建另一个版本，或者重命名上传的新资产以同时保留两个资产。如果您替换现有资产，则资产的元数据以及您对现有资产所做的任何先前修改（例如注释或裁剪）都将被删除。 如果选择保留这两个资产，则新资产将重命名，并在其名称 `1` 中附加数字。
 
-   ![chlimage_1-213](assets/chlimage_1-7.png)
+   ![用于解决资产名称冲突的“名称冲突”对话框](assets/chlimage_1-7.png)
 
    >[!NOTE]
    >
@@ -100,7 +100,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
    >
    >The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
 
-   ![chlimage_1-214](assets/chlimage_1-8.png)
+   ![“检测到重复资产”对话框](assets/chlimage_1-8.png)
 
    要在AEM资产中保留重复资产，请点按／单击保 **[!UICONTROL 留]**。 要删除您上传的重复资产，请点按／单击删 **[!UICONTROL 除]**。
 
@@ -112,7 +112,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    * 资产文件名不得包含 `* / : [ \\ ] | # % { } ? &`
    * 资产文件夹名称不能包含 `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
-   ![chlimage_1-215](assets/chlimage_1-10.png)
+   ![“上传进度”对话框显示成功上传的文件和无法上传的文件的状态](assets/chlimage_1-10.png)
 
    此外，资产用户界面还会显示您上传的最近的资产或您首先创建的文件夹。
 
