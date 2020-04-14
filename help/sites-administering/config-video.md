@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -21,9 +21,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要进行正确转码，管理员必须 [单独安装FFmpeg和配置AEM](#install-ffmpeg) 。 它们还可以[配置视频配置文件](#configure-video-profiles)以便与 HTML5 元素结合使用。
 
-## 配置视频配置文件 {#configure-video-profiles}
+## 配置视频用户档案 {#configure-video-profiles}
 
-您可能希望定义视频配置文件以用于HTML5元素。 这里选择的按顺序使用。 要访问，请使用 [设计模式](/help/sites-authoring/default-components-designmode.md) （仅限经典UI），然后选择配置文 **[!UICONTROL 件选项卡]** :
+您可能希望定义用于HTML5元素的视频用户档案。 这里选择的按顺序使用。 要访问，请使 [用设计模式](/help/sites-authoring/default-components-designmode.md) （仅限经典UI）并选择 **[!UICONTROL 用户档案选项卡]** :
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
@@ -82,11 +82,11 @@ The Video Component relies on the third-party open-source product FFmpeg for pro
 
    >[!NOTE]
    >
-   >叠加和编辑整个配置文件节点，而不仅仅是需要修改的属性。 这些资源不会通过SlingResourceMerger解决。
+   >叠加和编辑整个用户档案节点，而不仅仅是需要修改的属性。 这些资源不会通过SlingResourceMerger解决。
 
 1. If you changed either of the properties, click **[!UICONTROL Save All]**.
 
 >[!NOTE]
 >
->升级AEM实例时，不会保留OOTB工作流模型。 Adobe建议您在编辑OOTB工作流模型之前先复制这些模型。 例如，在DAM更新资产模型中编辑FFmpeg转码步骤之前，请复制OOTB DAM更新资产模型，以挑选升级前已存在的视频配置文件名称。 然后，您可以叠加该节 `/apps` 点，让AEM检索对OOTB模型的自定义更改。
+>升级AEM实例时，不会保留OOTB工作流模型。 Adobe建议您在编辑OOTB工作流模型之前先复制它们。 例如，在编辑 [!UICONTROL DAM Update Asset] Model中的FFmpeg转码步骤之前，复制OOTB [!UICONTROL DAM Update Asset] Model，以挑选升级前已存在的视频用户档案名称。 然后，您可以叠加该节 `/apps` 点，让AEM检索对OOTB模型的自定义更改。
 
