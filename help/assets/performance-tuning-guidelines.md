@@ -4,7 +4,7 @@ description: 有关AEM配置、硬件、软件和网络组件更改以消除瓶�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Manager(AEM)资产设置包含许多硬件、软件和网络组
 
 AEM资产性能不佳可能会影响用户在交互性能、资产处理、下载速度等方面的体验。
 
-事实上，性能优化是您在为任何项目建立目标指标之前执行的一项基本任务。
+事实上，性能优化是您在为任何项目建立任务指标之前执行的基本目标。
 
 以下是某些关键重点领域，您可以围绕这些领域发现和修复性能问题，然后才会对用户产生影响。
 
@@ -74,9 +74,9 @@ Adobe建议在Java 8上部署AEM资产以获得最佳性能。
 
 ### 配置缓冲的图像缓存的最大大小 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-在将大量资产上传到Adobe Experience Manager时，为了允许意外的内存消耗高峰，并防止JVM在OutOfMemoryErrors中失败，请减小已缓冲映像缓存的已配置最大大小。 例如，您有一个系统，其最大堆(- `Xmx`param)为5 GB,Oak BlobCache设置为1 GB，文档缓存设置为2 GB。 在这种情况下，缓冲的缓存将最大需要1.25 GB内存，这将仅为意外尖峰保留0.75 GB内存。
+在将大量资产上传到Adobe Experience Manager时，为了允许意外的内存消耗高峰，并防止JVM在OutOfMemoryErrors中失败，请减小已缓冲映像缓存的已配置最大大小。 例如，您有一个系统，其最大堆(- `Xmx`param)为5 GB,Oak BlobCache设置为1 GB,文档缓存设置为2 GB。 在这种情况下，缓冲的缓存将最大需要1.25 GB内存，这将仅为意外尖峰保留0.75 GB内存。
 
-在OSGi web控制台中配置缓冲的缓存大小。 在 `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`，设置属性(以字 `cq.dam.image.cache.max.memory` 节为单位)。 例如，1073741824为1 GB(1024 x 1024 x 1024 = 1 GB)。
+在OSGi Web控制台中配置缓冲的缓存大小。 在 `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`，设置属性(以字 `cq.dam.image.cache.max.memory` 节为单位)。 例如，1073741824为1 GB(1024 x 1024 x 1024 = 1 GB)。
 
 从AEM 6.1 SP1中，如果您使用节点来配 `sling:osgiConfig` 置此属性，请确保将数据类型设置为“长”。 有关详细信息，请参 [阅CQBufferedImageCache在资产上传期间消耗堆](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)。
 
@@ -124,26 +124,26 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 ### 临时工作流 {#transient-workflows}
 
-尽可能将DAM更新资产工作流设置为“临时”。 该设置大大减少了处理工作流所需的开销，因为在这种情况下，工作流无需通过常规的跟踪和存档流程。
+尽可能将“ [!UICONTROL DAM更新资产”工作流设置为] “临时”。 该设置显着减少了处理工作流所需的开销，因为在这种情况下，工作流无需通过正常的跟踪和存档过程。
 
 >[!NOTE]
 >
->在AEM 6.3中，默认情况下，DAM更新资产工作流程设置为“临时”。在这种情况下，您可以跳过以下过程。
+>在AEM 6.3中，默认情况下， [!UICONTROL DAM更新资产工作流程设置为] “临时”。在这种情况下，您可以跳过以下过程。
 
 1. 导航到 `/miscadmin` 位于的AEM实例中 `https://[aem_server]:[port]/miscadmin`。
 1. 展开“ **[!UICONTROL 工具]** ”>“工 **[!UICONTROL 作流]** ” **[!UICONTROL >“模]** 型” **[!UICONTROL >“dam]**”。
 1. 打开 **[!UICONTROL DAM更新资产]**。 从浮动工具面板中，切换到“页 **[!UICONTROL 面]** ”选项卡，然后单击“页 **[!UICONTROL 面属性”]**。
-1. 选择“ **[!UICONTROL 临时工作流]** ”，然后单 **[!UICONTROL 击“确定”]**。
+1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
    >某些功能不支持临时工作流。 如果您的AEM资产部署需要这些功能，请勿配置临时工作流。
 
-如果无法使用临时工作流，请定期运行工作流清除以删除存档的DAM更新资产工作流，以确保系统性能不会降低。
+如果无法使用临时工作流，请定期运行工作流清除以删除存档的  DAM更新资产工作流，以确保系统性能不会降低。
 
 通常，每周执行清除工作流。 但是，在资源密集型场景中（例如在大规模资产摄取期间），您可以更频繁地执行它。
 
-要配置工作流清除，请通过OSGi控制台添加新的Adobe Granite工作流清除配置。 接下来，在每周维护窗口中配置并计划工作流。
+要配置工作流清除，请通过OSGi控制台添加新的Adobe Granite工作流清除配置。 接下来，在每周维护窗口中配置和计划工作流。
 
 如果清除时间过长，就会超时。 因此，您应确保清除作业完成，以避免由于工作流数量过多而无法完成清除工作流的情况。
 
@@ -151,25 +151,25 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 ### 最大并行作业数 {#maximum-parallel-jobs}
 
-默认情况下，AEM运行的最大并行作业数等于服务器上的处理器数。 此设置的问题是，在负载较重的期间，所有处理器都被DAM更新资产工作流占用，这会降低UI响应度并阻止AEM运行其他可保护服务器性能和稳定性的进程。 作为最佳实践，请通过执行以下步骤将此值设置为服务器上可用处理器的一半：
+默认情况下，AEM运行的最大并行作业数等于服务器上的处理器数。 此设置的问题是，在负载较重的期间，所有处理器都被  DAM更新资产工作流占用，这会降低UI响应速度并阻止AEM运行其他可保护服务器性能和稳定性的进程。 作为最佳实践，请通过执行以下步骤将此值设置为服务器上可用处理器的一半：
 
 1. 在AEM作者上，转到 `https://[aem_server]:[port]/system/console/slingevent`。
 1. 单击 **[!UICONTROL 与您的实施相关的每个工作流队列上的“编辑]** ”(Edit **[!UICONTROL )，例如]** Granite临时工作流队列。
 1. 更新“最大并行作 **[!UICONTROL 业数”的值]** ，然后单击“ **[!UICONTROL 保存”]**。
 
-将队列设置到一半的可用处理器是一个可行的解决方案。 但是，您可能必须增加或减少此数量，才能获得最大吞吐量并按环境调整它。 对于临时和非临时工作流以及其他进程（如外部工作流），有单独的队列。 如果将多个队列设置为50%的处理器同时处于活动状态，则系统可以快速过载。 大量使用的队列在用户实现中差别很大。 因此，您可能必须仔细配置它们以获得最高效率，同时不牺牲服务器稳定性。
+将队列设置到一半的可用处理器是与之开始的可行解决方案。 但是，您可能必须增加或减少此数量才能实现最大吞吐量并按环境调整它。 对于瞬态和非瞬态工作流以及诸如外部工作流等其他过程，存在单独的队列。 如果将多个队列设置为50%的处理器同时处于活动状态，则系统可以快速过载。 大量使用的队列在用户实现中差别很大。 因此，您可能必须仔细配置它们以获得最高效率，同时不牺牲服务器稳定性。
 
 ### DAM更新资产配置 {#dam-update-asset-configuration}
 
-DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign server集成）配置的完整步骤套件。 但是，大多数用户可能不需要执行以下几个步骤。 Adobe建议您创建DAM更新资产工作流模型的自定义副本，并删除任何不必要的步骤。 在这种情况下，请更新DAM更新资产的启动器，以指向新模型。
+ DAM更新资产工作流包含为任务配置的全套步骤，如Scene7 PTIFF生成和InDesign Server集成。 但是，大多数用户可能不需要执行以下几个步骤。 Adobe建议您创建 [!UICONTROL DAM更新资产工作流模型的自定义副本] ，并删除任何不必要的步骤。 在这种情况下，请更新 [!UICONTROL DAM更新资产的启动程序] ，以指向新模型。
 
-集中运行DAM更新资产工作流可以大幅增加文件数据存储的大小。 Adobe进行的试验表明，如果在8小时内执行约5500个工作流，则数据存储大小可以增加约400 GB。
+集中运 [!UICONTROL 行DAM更新资产工作流] ，可以大幅增加文件数据存储的大小。 Adobe进行的试验结果表明，如果在8小时内执行约5500次工作流，则数据存储大小可以增加约400 GB。
 
 这是临时增加，在您运行数据存储垃圾收集任务后，数据存储将恢复为其原始大小。
 
-通常，数据存储垃圾收集任务每周运行，并执行其他计划的维护任务。
+通常，数据存储垃圾收集任务与其他计划维护任务一起每周运行。
 
-如果磁盘空间有限，并集中运行DAM更新资产工作流，请考虑更频繁地安排垃圾收集任务。
+如果您的磁盘空间有限，并集中运行 [!UICONTROL DAM更新资产工作流] ，请考虑更频繁地安排垃圾收集任务。
 
 #### 运行时再现生成 {#runtime-rendition-generation}
 
@@ -181,7 +181,7 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 
 #### ImageMagick {#imagemagick}
 
-如果您自定义DAM更新资产工作流以使用ImageMagick生成再现，Adobe建议您在上修改 `policy.xml` 该文件 `/etc/ImageMagick/`。 默认情况下，ImageMagick使用操作系统卷上的整个可用磁盘空间和可用内存。 在的部分中进行以下配置更 `policymap` 改以 `policy.xml` 限制这些资源。
+如果您自定义 [!UICONTROL DAM更新资产工作流以使用ImageMagick生成再现] ，则Adobe建议您在上修改 `policy.xml` 该文件 `/etc/ImageMagick/`。 默认情况下，ImageMagick使用操作系统卷上的整个可用磁盘空间和可用内存。 在的部分中进行以下配置更 `policymap` 改以 `policy.xml` 限制这些资源。
 
 ```xml
 <policymap>
@@ -220,7 +220,7 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 
 * 资产本身已修改
 * 此时会创建资产的某个版本
-* DAM更新资产针对资产运行
+* [!UICONTROL DAM更新资产] ，会针对资产运行
 
 所列成果消耗了大量资源。 因此，如果不 [需要XMP写回](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html),Adobe建议禁用它。
 
@@ -244,7 +244,7 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 
 确保实施最新的服务包和与性能相关的修补程序，因为它们通常包括对系统索引的更新。 有关某些 [索引优化](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) ，请参阅性能调整提示。
 
-为经常运行的查询创建自定义索引。 有关详细信息，请参 [阅用于分析慢速查询和创建自定](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) 义索 [引的方法](/help/sites-deploying/queries-and-indexing.md)。 有关查询和索引最佳实践的更多洞察，请参 [阅查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
+为您经常运行的查询创建自定义索引。 有关详细信息，请参 [阅分析慢速查询和制作自定](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) 义索 [引的方法](/help/sites-deploying/queries-and-indexing.md)。 有关查询和索引最佳实践的更多洞察，请参 [阅查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
 ### Lucene索引配置 {#lucene-index-configurations}
 
@@ -285,9 +285,9 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 
 1. 单击“全部保存”
 
-禁用Lucene文本提取：
+禁用Lucene文本提取:
 
-如果用户无需搜索资产内容（例如，搜索PDF文档中包含的文本），则可以通过禁用此功能来提高索引性能。
+如果用户无需搜索资产内容(例如，搜索PDF文档中包含的文本)，则可以通过禁用此功能来提高索引性能。
 
 1. 转到AEM包管理器/crx/packmgr/index.jsp
 1. 上传并安装以下包
@@ -296,7 +296,7 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 
 ### 猜测总数 {#guess-total}
 
-创建生成大结果集的查询时，请使用该 `guessTotal` 参数以避免在运行这些查询时占用大量内存。
+创建生成大结果集的查询时，请使用该 `guessTotal` 参数以避免在运行这些结果集时占用大量内存。
 
 ## 已知问题 {#known-issues}
 
@@ -312,7 +312,7 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 
 ### 网络测试 {#network-testing}
 
-对于客户关心的所有网络性能问题，请执行以下任务：
+对于客户关心的所有网络性能问题，请执行以下任务:
 
 * 从客户网络中测试网络性能
 * 从Adobe网络中测试网络性能。 对于AMS客户，请与CSE协作，在Adobe网络中进行测试。
@@ -327,7 +327,7 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 * 对AEM实例运行加载测试
 * 监控上传性能和UI响应性
 
-## AEM Assets性能清单和资产管理任务的影响 {#checklist}
+## AEM Assets绩效核对清单和资产管理任务的影响 {#checklist}
 
 * 使HTTPS能够绕过任何企业HTTP流量侦听器
 * 使用有线连接上传大量资产
@@ -337,8 +337,8 @@ DAM更新资产工作流包含为任务（如Scene7 PTIFF生成和InDesign serve
 * 启用临时工作流
 * 调整Granite工作流队列以限制并发作业
 * 配置ImageMagick以限制资源消耗
-* 从DAM更新资产工作流中删除不必要的步骤
+* 从 [!UICONTROL DAM更新资产工作流中删除不必要的步骤]
 * 配置工作流和版本清除
 * 使用最新的服务包和修补程序优化索引。 请咨询Adobe支持部门，了解是否有其他可用的索引优化。
 * 使用guessTotal优化查询性能。
-* 如果将AEM配置为从文件内容中检测文件类型(通过在 **[!UICONTROL AEM Web Console中启用]** Day CQ DAM Mime Type Service ****)，则在非高峰时间批量上传许多文件，因为它占用大量资源。
+* 如果将 AEM 配置为从文件内容中检测文件类型（通过在 **[!UICONTROL AEM Web Console]** 中启用 **[!UICONTROL Day CQ DAM Mime Type Service]**），则在非高峰时间会批量上传许多文件，因为它占用大量资源。
