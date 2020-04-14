@@ -3,7 +3,7 @@ title: 在 Adobe Experience Manager Sites 创作工作流程中，使用连接�
 description: 在另一个 Experience Manager Site 部署中创建网页时，使用远程 Adobe Experience Manager Assets 部署中的可用资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
+source-git-commit: 04fef21d6027dcfcb6a67a1121e0d1570926db41
 
 ---
 
@@ -95,7 +95,7 @@ AEM 管理员可以创建此集成。创建后，使用该集成所需的权限�
 
    >[!NOTE]
    >
-   >在作者获取资产时，将会获取该资产在远程 AEM 部署中可用的所有演绎版。如果要为获取的资产创建更多演绎版，请跳过此配置步骤。触发 DAM 更新资产工作流并创建更多演绎版。这些演绎版仅在本地 Sites 部署中可用，在远程 DAM 部署中则不可用。
+   >在作者获取资产时，将会获取该资产在远程 AEM 部署中可用的所有演绎版。如果要为获取的资产创建更多演绎版，请跳过此配置步骤。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
 1. 在远程 AEM Assets 的 CORS 配置上，将 AEM Sites 实例添加为&#x200B;**[!UICONTROL 允许的源]**&#x200B;之一。
 
@@ -111,7 +111,7 @@ AEM 管理员可以创建此集成。创建后，使用该集成所需的权限�
 
 在一个网页中，作者既可以使用本地 DAM 上可用的资产，也可以使用远程 DAM 实例上可用的资产。使用内容查找器，可在搜索本地 DAM 与搜索远程 DAM 之间切换。
 
-只有那些在本地 Sites 实例上具有完全对应的标记的远程资产标记才会被获取，因为二者拥有相同的分类层次结构。任何其他标记都将被丢弃。因为 AEM 提供全文搜索功能，因此作者可以使用远程 AEM 部署中存在的所有标记来搜索远程资产。
+只会获取远程资产的那些标记，这些标记具有与同一分类层次结构完全相同的对应标记，该分类层次结构在本地Sites实例中可用。 任何其他标记都将被丢弃。因为 AEM 提供全文搜索功能，因此作者可以使用远程 AEM 部署中存在的所有标记来搜索远程资产。
 
 ### 使用说明演示 {#walk-through-of-usage}
 
@@ -163,7 +163,7 @@ AEM 管理员可以创建此集成。创建后，使用该集成所需的权限�
 * 所有 Sites 作者都拥有对获取的副本的读取权限，即便他们无权访问远程 DAM 部署。
 * 没有支持自定义集成的 API。
 * 该功能支持无缝搜索和使用远程资产。为了能够在本地部署中一次使用许多远程资产，请考虑批量迁移这些资产。请参阅 [Assets 迁移指南](assets-migration-guide.md)。
-* 无法在页面属性用户界面上将远程资产用作页 [!UICONTROL 面缩略图] 。 可以通过单击选择图像，在缩略图的“页 [!UICONTROL 面属性] ”用户界面中设 [!UICONTROL 置网页] 的缩略图 。
+* 无法在页面属性用户界面上将远程资产用作页 [!UICONTROL 面缩略图] 。 可以通过单击选择图像，在缩略图的“页 [!UICONTROL 面属性] ”用户界面中设 [!UICONTROL 置网页的缩] 略图 。
 
 **设置和许可**
 
