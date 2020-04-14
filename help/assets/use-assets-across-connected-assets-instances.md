@@ -3,14 +3,14 @@ title: 在 Adobe Experience Manager Sites 创作工作流程中，使用连接�
 description: 在另一个 Experience Manager Site 部署中创建网页时，使用远程 Adobe Experience Manager Assets 部署中的可用资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3c2c47b5d660fefd31470ce8d555c7bb949fa036
+source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 ---
 
 
 # 在 AEM Sites 中，使用连接的资产共享 DAM 资产 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和用于创建这些网站的数字资产可能驻留在不同的部署中。以下几个原因可能是地理上分散的现有部署，这些部署需要协同工作，或进行收购，从而导致父公司希望共同使用的异构基础结构。
+在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和用于创建这些网站的数字资产可能驻留在不同的部署中。部分原因可能是在地理上分散但需要相互协同工作的现有部署，或是因并购而导致的需要由父公司统一管理的异构基础架构。
 
 AEM Sites 提供了创建网页的功能，AEM Assets 是为网站提供所需资产的数字资产管理 (DAM) 系统。AEM 现在可通过集成 AEM Sites 和 AEM Assets 来支持上述用例。
 
@@ -37,7 +37,7 @@ AEM Sites 提供了创建网页的功能，AEM Assets 是为网站提供所需�
 
 作者可以在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索到的资产。文档可添加到 `Download` 组件中，图像可添加到 `Image` 组件中。此外，作者还可以在任何自定义 AEM 组件（对默认 `Download` 或 `Image` 组件的扩展）中添加远程资产。支持的格式的列表包括：
 
-* **图像格式**:连接的资产支持图像组 [件支持的图](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) 像格式。 不支持 Dynamic Media 图像。
+* **图像格式**:连接的资产支持图像组 [件支持的图](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html) 像格式。 不支持 Dynamic Media 图像。
 * **文档格式**：请参阅[连接的资产支持的文档格式](assets-formats.md#supported-document-formats)。
 
 ### 涉及的用户和组 {#users-and-groups-involved}
@@ -45,7 +45,7 @@ AEM Sites 提供了创建网页的功能，AEM Assets 是为网站提供所需�
 下面介绍了配置和使用该功能所涉及的各种角色，及其相应的用户组。对于作者创建的网页的用例，使用本地范围。对于托管所需资产的 DAM 部署，使用远程范围。Sites 作者会获取这些远程资产。
 
 | 角色 | 范围 | 用户组 | 演示中的用户名 | 要求 |
-|----------------------------------|--------|------------------------------------------------------------------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---|---|---|---|---|
 | AEM Sites 管理员 | 本地 | AEM 管理员 | `admin` | 设置 AEM，配置与远程 Assets 部署的集成。 |
 | DAM 用户 | 本地 | 作者 | `ksaner` | 用于查看和复制在 `/content/DAM/connectedassets/` 上获取的资产。 |
 | AEM Sites 作者 | 本地 | 作者（拥有对远程 DAM 的读取访问权限，以及对本地 Sites 的创作访问权限） | `ksaner` | 最终用户是使用此集成提高内容速度的 Sites 作者。作者搜索并浏览远程 DAM 中的资产有两种方式：使用内容查找器；使用本地网页中所需的图像。使用的 DAM 用户的 `ksaner` 凭据。 |
@@ -73,11 +73,9 @@ AEM 管理员可以创建此集成。创建后，使用该集成所需的权限�
    1. AEM Assets 位置为 `https://[assets_servername_ams]:[port]`。
    1. DAM 分发人员（技术用户）的凭据。
    1. 在&#x200B;**[!UICONTROL 装入点]**&#x200B;字段中，输入 AEM 获取资产的本地 AEM 路径。例如，`remoteassets` 文件夹。
-
    1. 根据您的网络，调整&#x200B;**[!UICONTROL 原始二进制传输优化阈值]**&#x200B;的值。大于此阈值的资产演绎版，将异步传输。
    1. 如果您使用数据存储来存储您的资产，且数据存储是两个 AEM 部署之间的公用存储，请选择&#x200B;**[!UICONTROL 与连接的资产共享数据存储]**。在这种情况下，阈值限制并不重要，因为实际的资产二进制文件驻留在数据存储上并且不会传输。
-   ![连接的资产的典型配置](assets/connected-assets-typical-config.png)
-
+      ![连接的资产的典型配置](assets/connected-assets-typical-config.png)
    *图：连接的资产的典型配置*
 
 1. 由于已经处理资产且已获取资产演绎版，因此请禁用工作流程启动器。在本地 (AEM Sites) 部署中调整启动器配置，以排除从其中获取远程资产的 `connectedassets` 文件夹。
