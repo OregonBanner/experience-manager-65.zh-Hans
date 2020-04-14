@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -43,7 +43,7 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
 
 [包括AEM Forms Java库文件](#including-aem-forms-java-library-files)
 
-[调用以人为中心的长寿命进程](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
+[调用以人为中心的长寿命进程](invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
 [使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md)
 
@@ -866,7 +866,7 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 1. 创建对 `java.io.File` 象。
 1. 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法并传递对 `java.io.File`象。
 
-下面的代码示例将对象的内容复 `com.adobe.idp.Document` 制到名为 *AnotherMap.pdf的文件*。
+以下代码示例将对象的内容复 `com.adobe.idp.Document` 制到名为 *AnotherMap.pdf的文件*。
 
 **将文档对象的内容复制到文件**
 
