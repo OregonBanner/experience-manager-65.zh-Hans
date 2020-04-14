@@ -10,7 +10,7 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: 4ccaf401d561087f864c95e2be4c594cf34a7cb7
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -19,20 +19,20 @@ source-git-commit: 4ccaf401d561087f864c95e2be4c594cf34a7cb7
 
 ## 简介 {#introduction}
 
-卸载在拓扑中分发大量Experience manager实例的处理任务。 通过卸载，您可以使用特定的Experience Manager实例执行特定类型的处理。 专用处理使您能够最大限度地利用可用的服务器资源。
+卸载在拓扑中分发大量Experience Manager实例的处理任务。 通过卸载，您可以使用特定的Experience Manager实例执行特定类型的处理。 专用处理使您能够最大限度地利用可用的服务器资源。
 
-卸载基于 [Apache Sling Discovery和Sling JobManager](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) 功能。 要使用卸载，可将Experience manager群集添加到拓扑中，并标识群集处理的作业主题。 群集由一个或多个Experience manager实例组成，因此单个实例被视为群集。
+卸载基于 [Apache Sling Discovery和Sling JobManager](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) 功能。 要使用卸载，可将Experience Manager群集添加到拓扑中，并标识群集处理的作业主题。 群集由一个或多个Experience Manager实例组成，因此单个实例被视为群集。
 
 有关将实例添加到拓扑的信息，请参阅管 [理拓扑](/help/sites-deploying/offloading.md#administering-topologies)。
 
 ### 作业分配 {#job-distribution}
 
-Sling jobManager和JobConsumer支持创建在拓扑中处理的作业：
+Sling JobManager和JobConsumer支持创建在拓扑中处理的作业：
 
 * JobManager:为特定主题创建作业的服务。
 * JobConsumer:执行一个或多个主题的作业的服务。 可以为同一主题注册多个JobConsumer服务。
 
-当JobManager创建作业时，卸载框架会在拓扑中选择Experience manager群集以执行该作业：
+当JobManager创建作业时，卸载框架会在拓扑中选择Experience Manager群集以执行该作业：
 
 * 群集必须包括一个或多个运行为作业主题注册的JobConsumer的实例。
 * 必须至少为群集中的一个实例启用主题。
@@ -51,9 +51,9 @@ Sling jobManager和JobConsumer支持创建在拓扑中处理的作业：
 
 ## 管理拓扑 {#administering-topologies}
 
-拓扑是松耦合的Experience manager群集，参与卸载。 群集由一个或多个Experience manager服务器实例（单个实例被视为群集）组成。
+拓扑是松耦合的Experience Manager群集，参与卸载。 群集由一个或多个Experience Manager服务器实例（单个实例被视为群集）组成。
 
-每个Experience manager实例都运行以下与卸载相关的服务：
+每个Experience Manager实例都运行以下与卸载相关的服务：
 
 * 发现服务：向拓扑连接器发送请求以加入拓扑。
 * 拓扑连接器：接收加入请求，并接受或拒绝每个请求。
@@ -66,9 +66,9 @@ Sling jobManager和JobConsumer支持创建在拓扑中处理的作业：
 
 ### 查看拓扑 {#viewing-the-topology}
 
-使用拓扑浏览器来探索Experience manager实例参与的拓扑状态。 拓扑浏览器显示拓扑的簇和实例。
+使用拓扑浏览器来探索Experience Manager实例参与的拓扑状态。 拓扑浏览器显示拓扑的簇和实例。
 
-对于每个群集，您会看到一个群集成员列表，其中指示每个成员加入群集的顺序以及哪个成员是“领导者”。 “当前”属性指示您当前管理的实例。
+对于每个群集，您会看到一个群集成员列表，它指示每个成员加入群集的顺序以及哪个成员是领导者。 “当前”属性指示您当前管理的实例。
 
 对于群集中的每个实例，您可以看到几个与拓扑相关的属性：
 
@@ -85,10 +85,10 @@ Sling jobManager和JobConsumer支持创建在拓扑中处理的作业：
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. 单击群集可查看群集中实例的列表及其ID、当前状态和“引线”状态。
+1. 单击群集可查看群集中实例及其ID、当前状态和“引线”状态的列表。
 1. 单击实例ID可查看更详细的属性。
 
-您还可以使用Web控制台查看拓扑信息。 该控制台提供了有关拓扑群集的更多信息：
+您还可以使用Web控制台来视图拓扑信息。 该控制台提供了有关拓扑群集的更多信息：
 
 * 哪个实例是本地实例。
 * 此实例用来连接到拓扑（传出）的拓扑连接器服务，以及连接到此实例（传入）的服务。
@@ -103,7 +103,7 @@ Sling jobManager和JobConsumer支持创建在拓扑中处理的作业：
 
 ### 配置拓扑成员关系 {#configuring-topology-membership}
 
-Apache Sling Resource-Based Discovery service在每个实例上运行，以控制Experience manager实例与拓扑交互的方式。
+Apache Sling Resource-Based Discovery Service在每个实例上运行，以控制Experience Manager实例与拓扑交互的方式。
 
 发现服务向拓扑连接器服务发送定期的POST请求（心跳），以建立和维护与拓扑的连接。 拓扑连接器服务保留允许加入拓扑的IP地址或主机名的白名单：
 
@@ -147,7 +147,7 @@ Apache Sling Resource-Based Discovery service在每个实例上运行，以控�
   <tr>
    <td>拓扑连接器白名单</td>
    <td>topologyConnectorWhitelist</td>
-   <td>本地拓扑连接器服务在拓扑中允许的IP地址或主机名列表。 </td>
+   <td>列表本地拓扑连接器服务在拓扑中允许的IP地址或主机名。 </td>
    <td><p>localhost</p> <p>127.0.0.1</p> </td>
   </tr>
   <tr>
@@ -175,7 +175,7 @@ Apache Sling Resource-Based Discovery service在每个实例上运行，以控�
 
 ## 配置主题消耗 {#configuring-topic-consumption}
 
-使用卸载浏览器为拓扑中的Experience manager实例配置主题使用。 对于每个实例，可指定它使用的主题。 例如，要配置拓扑以便只有一个实例使用特定类型的主题，请禁用除一个实例外的所有实例上的主题。
+使用卸载浏览器为拓扑中的Experience Manager实例配置主题使用。 对于每个实例，可指定它使用的主题。 例如，要配置拓扑以便只有一个实例使用特定类型的主题，请禁用除一个实例外的所有实例上的主题。
 
 作业是使用循环法逻辑启用关联主题的分配数量实例。
 
@@ -197,32 +197,32 @@ Apache Sling Resource-Based Discovery service在每个实例上运行，以控�
    * 已启用：此实例会消耗本主题的作业。
    * 禁用：此实例不会占用本主题的作业。
    * 独家：此实例仅会消耗本主题的作业。
-   **** 注意：当您为某个主题选择“排他”时，所有其他主题将自动设置为“禁用”。
+   **注意：** 当您为某个主题选择“排他”时，所有其他主题将自动设置为“禁用”。
 
 ### 已安装的作业使用者 {#installed-job-consumers}
 
-Experience manager中安装了多个JobConsumer实施。 注册这些JobConsumer的主题显示在卸载浏览器中。 显示的其他主题是自定义JobConsumers注册的主题。 下表介绍了默认的JobConsumer。
+Experience Manager中安装了多个JobConsumer实施。 注册这些JobConsumer的主题显示在卸载浏览器中。 显示的其他主题是自定义JobConsumers注册的主题。 下表介绍了默认的JobConsumer。
 
 | 作业主题 | 服务PID | 描述 |
 |---|---|---|
-| / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 随Apache Sling一起安装。 处理OSGi事件管理员生成的作业以实现向后兼容性。 |
-| com/day/cq/replication/job/&amp;ast; | com.day.cq.reapplication.impl.AgentManagerImpl | 复制作业负载的复制代理。 |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | 处理DAM Update Asset Offloader工作流生成的作业。 |
+| / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 随Apache Sling一起安装。 处理OSGi事件管理员生成的作业，以实现向后兼容性。 |
+| com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | 复制作业负载的复制代理。 |
+| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | 处理 [!UICONTROL DAM Update Asset Offloader工作流生成的作] 业。 |
 
 ### 实例的禁用和启用主题 {#disabling-and-enabling-topics-for-an-instance}
 
 Apache Sling Job Consumer Manager服务提供主题白名单和黑名单属性。 配置这些属性以启用或禁用对Experience Manager实例上特定主题的处理。
 
-**** 注意：如果实例属于拓扑，则还可以在拓扑中的任何计算机上使用卸载浏览器来启用或禁用主题。
+**注意：** 如果实例属于拓扑，则还可以在拓扑中的任何计算机上使用卸载浏览器来启用或禁用主题。
 
-创建已启用主题列表的逻辑首先允许白名单中的所有主题，然后删除黑名单中的主题。默认情况下，所有主题都处于启用状态(白名单值为 `*`)，并且不禁用任何主题（黑名单没有值）。
+创建已启用主题列表的逻辑首先允许白名单中的所有主题，然后删除黑名单中的主题。默认情况下，将启用所有主题(白名单值为 `*`)，并且不禁用任何主题（黑名单没有值）。
 
-使用Web控制台或 `sling:OsgiConfig` 节点配置以下属性。 对 `sling:OsgiConfig` 于节点，Job Consumer Manager服务的PID是org.apache.sling.event.impl.jobs.JobConsumerManager。
+使用Web控制台或 `sling:OsgiConfig` 节点配置以下属性。 对 `sling:OsgiConfig` 于节点，Job Consumer Manager服务的PID是org.apache.sling.事件.impl.jobs.JobConsumerManager。
 
 | Web控制台中的属性名称 | OSGi ID | 描述 |
 |---|---|---|
 | 主题白名单 | job.consumermanager.whitelist | 本地JobManager服务处理的主题列表。 &amp;ast；的默认值使所有主题都发送到注册的TopicConsumer服务。 |
-| 主题黑名单 | job.consupermanager.blacklist | 本地JobManager服务不处理的主题列表。 |
+| 主题黑名单 | job.consumermanager.blacklist | 本地JobManager服务不处理的主题列表。 |
 
 ## 创建用于卸载的复制代理 {#creating-replication-agents-for-offloading}
 
@@ -246,7 +246,7 @@ Apache Sling Job Consumer Manager服务提供主题白名单和黑名单属性�
 
 >[!NOTE]
 >
->卸载框架使用拓扑获取卸载实例的IP地址。 然后，该框架会根据这些IP地址自动创建复制代理。 如果卸载实例的IP地址稍后发生更改，则在实例重新启动后，该更改会自动在拓扑上传播。 但是，卸载框架不会自动更新复制代理以反映新的IP地址。 要避免这种情况，请对拓扑中的所有实例使用固定的IP地址。
+>卸载框架使用拓扑获取卸载实例的IP地址。 然后，框架会根据这些IP地址自动创建复制代理。 如果卸载实例的IP地址稍后发生更改，则在实例重新启动后，该更改会自动在拓扑上传播。 但是，卸载框架不会自动更新复制代理以反映新的IP地址。 要避免这种情况，请对拓扑中的所有实例使用固定的IP地址。
 
 ### 命名复制代理以进行卸载 {#naming-the-replication-agents-for-offloading}
 
@@ -317,31 +317,31 @@ Apache Sling Job Consumer Manager服务提供主题白名单和黑名单属性�
 
 配置拓扑实例，以便特定实例对在DAM中添加或更新的资产执行后台处理。
 
-默认情况下，当DAM资产发生更改或添加到DAM时，Experience manager会执行DAM更新资产工作流。 更改默认行为，以便Experience Manager改为执行DAM更新资产卸载程序工作流。 此工作流会生成一个主题为的JobManager作业 `com/adobe/granite/workflow/offloading`。 然后，配置拓扑，以便将作业卸载到专用Worker。
+默认情况下，当DAM资产发生更改或  将DAM添加到DAM时，Experience Manager会执行DAM更新资产工作流。 更改默认行为，以便Experience Manager改为执行 [!UICONTROL DAM更新资产卸载程序工作流] 。 此工作流会生成一个主题为的JobManager作业 `com/adobe/granite/workflow/offloading`。 然后，配置拓扑，以便将作业卸载到专用Worker。
 
 >[!CAUTION]
 >
->当与工作流卸载一起使用时，任何工作流都不应为临时工作流。 例如，DAM更新资产工作流在用于资产卸载时不得为临时工作流。 要在工作流中设置／取消设置临时标志，请参阅临时 [工作流](/help/assets/performance-tuning-guidelines.md#workflows)。
+>当与工作流卸载一起使用时，任何工作流都不应为临时工作流。 例如，  DAM更新资产工作流在用于资产卸载时不得为临时工作流。 要在工作流中设置／取消设置临时标志，请参阅临时 [工作流](/help/assets/performance-tuning-guidelines.md#workflows)。
 
 以下过程为卸载拓扑假设以下特征：
 
-* 一个或多个Experience manager实例正在创作用户与之交互以添加或更新DAM资产的实例。
-* 用户不能直接与处理DAM资产的一个或多个Experience manager实例交互。 这些实例专用于DAM资产的后台处理。
+* 一个或多个Experience Manager实例正在创作用户与之交互以添加或更新DAM资产的实例。
+* 用户不能直接与处理DAM资产的一个或多个Experience Manager实例交互。 这些实例专用于DAM资产的后台处理。
 
-1. 在每个Experience manager实例上，配置Discovery服务，使其指向根Tormiply Connector。 (请参阅 [配置拓扑成员关系](#title4)。)
+1. 在每个Experience Manager实例上，配置Discovery服务，使其指向根Tormiply Connector。 (请参阅 [配置拓扑成员关系](#title4)。)
 1. 配置根拓扑连接器，使连接实例位于白名单中。
 1. 打开卸载浏览器，并禁 `com/adobe/granite/workflow/offloading` 用用户与之交互以上传或更改DAM资产的实例上的主题。
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
-1. 在用户与之交互以上传或更改DAM资产的每个实例上，将工作流启动器配置为使用DAM更新资产分载工作流：
+1. 在用户与之交互以上传或更改DAM资产的每个实例上，将工作流启动器配置为使用 [!UICONTROL DAM更新资产分载工作流] :
 
    1. 打开“工作流”控制台。
    1. 单击“启动器”选项卡。
-   1. 找到执行DAM更新资产工作流的两个启动器配置。 一个启动器配置事件类型是“已创建节点”，另一个类型是“已修改节点”。
-   1. 更改这两种事件类型，以便它们执行DAM更新资产卸载工作流。 (有关启动器配置的信息，请参 [阅当节点更改时启动工作流](/help/sites-administering/workflows-starting.md)。)
+   1. 找到执行 [!UICONTROL DAM更新资产工作流的两个启动器配置] 。 一个启动程序配置事件类型是“已创建节点”，另一个类型是“已修改节点”。
+   1. 更改这两个事件类型，以便它们执行 [!UICONTROL DAM更新资产卸载工作流] 。 (有关启动器配置的信息，请参 [阅当节点更改时启动工作流](/help/sites-administering/workflows-starting.md)。)
 
-1. 在执行DAM资产后台处理的实例上，禁用执行DAM更新资产工作流的工作流启动程序。
+1. 在执行DAM资产后台处理的实例上，禁用执行 [!UICONTROL DAM更新资产工作流的工作流启动程序] 。
 
 ## 进一步阅读 {#further-reading}
 
