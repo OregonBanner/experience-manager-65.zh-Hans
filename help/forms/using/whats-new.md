@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -84,7 +84,7 @@ AEM Forms允许您将自 [适应表单](../../forms/using/embed-adaptive-form-ae
 
 #### 将自适应表单模板的可用性限制为特定路径 {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-自适应表单增加了对cq:allowedPaths属性的支持。 该属性将自 [适应表单模板的可用性限制为特定路径](../../forms/using/creating-adaptive-form.md#main-pars-text)。
+自适应表单增加了对cq:allowedPaths属性的支持。 该属性将自 [适应表单模板的可用性限制为特定路径](creating-adaptive-form.md#adaptive-form-templates)。
 
 #### 将复选框动态添加到自适应表单 {#add-check-boxes-to-the-adaptive-form-dynamically}
 
