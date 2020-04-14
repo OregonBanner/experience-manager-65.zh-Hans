@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e21714ad-d445-4aff-b0db-d577061e0907
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
 
 # 在Interactive Communications中使用图表{#using-charts-in-interactive-communications}
 
-图表或图表是数据的可视化表示形式。 它将大量信息浓缩为易于理解的可视格式，使交互式通信的接收方能够更好地可视化、解释和分析复杂数据。
+图表或图表是数据的可视化表示形式。 它将大量信息浓缩为易于理解的可视格式，使交互式通信的收件人能够更好地可视化、解释和分析复杂数据。
 
 在创建交互式通信时，您可以添加图表以可视方式表示来自交互式通信的表单数据模型的二维数据。 图表组件允许您添加和配置以下类型的图表：饼图、列图、圆环图、条形图、线图、线图和点图、点图、面积图和象限图。
 
@@ -28,8 +28,8 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 1. 从交 **互式通信** 的Sidekick点按组件。
 1. 将“图表”组 **件拖放到** 下列组件之一：
 
-   * 打印渠道：目标区域或图像字段
-   * Web渠道：面板或目标区域
+   * 打印渠道:目标区域或图像字段
+   * Web渠道:面板或目标区
 
 1. 点按交互式通信编辑器中的图表组件，并从“组 **[!UICONTROL 件”工具栏]** 中选 ![择“配置”(configure_icon](assets/configure_icon.png))。
 
@@ -43,18 +43,18 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
    Web渠道中线型图表的基本属性
 
-1. 根据渠 [道类型](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) ，配置图表属性。
-1. （仅打印渠道）在“代 **[!UICONTROL 理设置]**”中，指定代理是否必须使用此图表。 如果代 **[!UICONTROL 理必须使用此图表]****** ，则未选择此图表选项，代理可点按代理UI内容选项卡中图表的眼睛图标以显示或隐藏图表。
+1. 根据渠道 [类型配置图](../../forms/using/chart-component-interactive-communications.md#configure-chart-properties) 表属性。
+1. (仅打印渠道)在“代 **[!UICONTROL 理设置]**”中，指定代理是否必须使用此图表。 如果代 **[!UICONTROL 理必须使用此图表]****** ，则未选择此图表选项，代理可点按代理UI内容选项卡中图表的眼睛图标以显示或隐藏图表。
 
    ![chart_agentproperties](assets/chart_agentproperties.png)
 
 1. 点 ![按done_icon](assets/done_icon.png) 以保存图表属性。
 
-   点按 **[!UICONTROL 预览]** ，以查看与图表关联的外观和数据。 点按 **[!UICONTROL 编辑]** ，重新配置图表的属性。
+   点按 **[!UICONTROL 预览]** ，以视图与图表关联的外观和数据。 点按 **[!UICONTROL 编辑]** ，重新配置图表的属性。
 
 ## 配置图表属性 {#configure-chart-properties}
 
-在为打印和Web渠道创建图表时配置以下属性：
+在创建用于打印和Web渠道的图表时配置以下属性：
 
 <table>
  <tbody>
@@ -105,7 +105,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
   </tr>
   <tr>
    <td>Y轴&gt;数据模型对象</td>
-   <td><p>要在Y轴上绘制的表单数据模型收集项。 在“打印”通道中，Y轴的数据模型对象应为“编号”类型。</p> <p>选择同一父数据模型对象的两个集合／数组类型属性，这些属性相互有意义，以在图表的X轴和Y轴上绘制。 </p> </td>
+   <td><p>要在Y轴上绘制的表单数据模型收集项。 在“打印”渠道中，Y轴的数据模型对象应为“编号”类型。</p> <p>选择同一父数据模型对象的两个集合／数组类型属性，这些属性相互有意义，以在图表的X轴和Y轴上绘制。 </p> </td>
    <td>印刷和Web</td>
   </tr>
   <tr>
@@ -130,7 +130,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
   </tr>
   <tr>
    <td>宽度</td>
-   <td>图表的宽度（以像素为单位）。您可以使用样式层或通过应用主题来控制Web通道中图表的宽度。</td>
+   <td>图表的宽度（以像素为单位）。您可以使用样式层或通过应用主题来控制Web渠道中图表的宽度。</td>
    <td>打印</td>
   </tr>
   <tr>
@@ -150,7 +150,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
   </tr>
   <tr>
    <td>工具提示</td>
-   <td><p>工具提示显示在Web渠道中图表中数据点上的鼠标上的格式。 默认值是${x}(${y})。 根据图表类型，当您将鼠标指向图表中的点、条或切片时，变量${x}和${y}将动态替换为X轴和Y轴上的相应值，并显示在工具提示中。</p> <p>要禁用工具提示，请将“工具提 <span class="uicontrol">示</code> ”字段留空。 此选项不适用于线图和面积图。 例如，请参 <a href="../../forms/using/chart-component-interactive-communications.md#main-pars-header-e1f6">阅示例1:打印和Web中的图表输出</a>。</code></p> </td>
+   <td><p>Web渠道中图表数据点上的鼠标悬停时显示工具提示的格式。 默认值是${x}(${y})。 根据图表类型，当您将鼠标指向图表中的点、条或切片时，变量${x}和${y}将动态替换为X轴和Y轴上的相应值，并显示在工具提示中。</p> <p>要禁用工具提示，请将“工具提 <span class="uicontrol">示</code> ”字段留空。 此选项不适用于线图和面积图。 例如，请参 <a href="#chartoutputprintweb">阅示例1:打印和Web中的图表输出</a>。</code></p> </td>
    <td>Web</td>
   </tr>
   <tr>
@@ -164,13 +164,13 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
      <li><strong>点颜色</strong>:可用于点图和线图和点图以指定图表中点的颜色。<br /> </li>
      <li><strong>区域颜色</strong>:面积图可用于指定图表中线下区域的颜色。</li>
      <li><strong>“参照点”(Reference Point)&gt;“装订类型”(Binding Type):Quadrant </strong>图表可用于<strong></strong>指定参考点的绑定类型。 使用静态文本或数据模型对象属性为参考点定义值。</li>
-     <li><strong>“参照点”(Reference Point)&gt;“X轴”(X-axis):如 </strong>果从“绑定类型”( <span class="uicontrol">Binding Type</code> )下拉列表中选择“静态”(Static)，以指定参考点的X轴值，则此图表可用。</code></li>
-     <li><strong>“参照点”(Reference Point)&gt;“Y轴”(Y-axis):如 </strong>果从“绑定类型”( <span class="uicontrol">Binding Type</code> )下拉列表中选择“静态”(Static)来指定参考点的Y轴值，则此图表可用。</code></li>
-     <li><strong>“参考点”&gt;“序列的数据模型对象”:如 </strong>果从“绑定类型”(Binding Type)下拉列表中选 <span class="uicontrol">择“数据模型对象</code> ”(Data Model Object)，则可用于多个系列象限图表。 定义表单数据模型对象属性以确定参考点的系列. </code></li>
-     <li><strong>“参考点”&gt;“序列的数据模型对象值”:如 </strong>果从“绑定类型”(Binding Type)下拉列表中选 <span class="uicontrol">择“数据模型对象</code> ”(Data Model Object)，则可用于多个系列象限图表。 使用系列的表单数据模型对象属性和此字段中定义的值来标识参考点的系列。</code></li>
-     <li><strong>“参照点”(Reference Point)&gt;“参照点的数据模型对象”(Data Model Object):如 </strong>果从“绑定类型”下拉列 <span class="uicontrol">表中选择“数据模型对象</code> ”，则可用于象限图表。 定义表单数据模型对象属性，该属性是X轴和Y轴上绘制的属性的同级属性。 此外，对于多个系列，定义一个数据模型对象属性，该属性是为系列定义的数据模型对象属性的子实体。</code></li>
-     <li><strong>“参照点”(Reference Point)&gt;“数据模型对象值”(Data Model Object Value for Reference Point):如 </strong>果从“绑定类型”下拉列 <span class="uicontrol">表中选择“数据模型对象</code> ”，则可用于象限图表。 对参考点使用表单数据模型对象属性以及此字段中定义的值，以标识图表的参考点。<br /><strong> 象限 </strong>标签&gt;左上角：可用于象限图表以指定左上象限的名称。</code></li>
-     <li><strong></strong> 象限标签&gt;右上：可用于象限图表以指定右上象限的名称。</li>
+     <li><strong>“参照点”(Reference Point)&gt;“X轴”(X-axis):如 </strong>果从“绑定类型”下拉列表中选择 <span class="uicontrol">“静态</code> ”(Static)来指定参考点的X轴值，则可用于象限图表。</code></li>
+     <li><strong>“参照点”(Reference Point)&gt;“Y轴”(Y-axis):如 </strong>果从“绑定类型”( <span class="uicontrol">Binding Type</code> )下拉列表中选择“静态”(Static)，为参考点指定Y轴值，则此图表可用。</code></li>
+     <li><strong>“参考点”&gt;“序列的数据模型对象”:如 </strong>果从“绑定类型”下拉列表中选 <span class="uicontrol">择“数据模型对象</code> ”，则可用于多个系列象限图表。 定义表单数据模型对象属性以确定参考点的系列. </code></li>
+     <li><strong>“参考点”&gt;“序列的数据模型对象值”:如 </strong>果从“绑定类型”下拉列表中选 <span class="uicontrol">择“数据模型对象</code> ”，则可用于多个系列象限图表。 使用系列的表单数据模型对象属性和此字段中定义的值来标识参考点的系列。</code></li>
+     <li><strong>“参照点”(Reference Point)&gt;“参照点的数据模型对象”(Data Model Object):如 </strong>果从“绑定类型”下拉列表 <span class="uicontrol">中选择“数据模型对象</code> ”，则可用于象限图表。 定义表单数据模型对象属性，该属性是X轴和Y轴上绘制的属性的同级属性。 此外，对于多个系列，定义一个数据模型对象属性，该属性是为系列定义的数据模型对象属性的子实体。</code></li>
+     <li><strong>“参照点”(Reference Point)&gt;“数据模型对象值”(Data Model Object Value for Reference Point):如 </strong>果从“绑定类型”下拉列表 <span class="uicontrol">中选择“数据模型对象</code> ”，则可用于象限图表。 对参考点使用表单数据模型对象属性以及此字段中定义的值，以标识图表的参考点。<br /> 象限 <strong>标签&gt;左上角：</strong> 可用于象限图表以指定左上象限的名称。</code></li>
+     <li><strong>象限标签&gt;右上：</strong> 可用于象限图表以指定右上象限的名称。</li>
      <li><strong>象限标签&gt;右下：可 </strong>用于象限图表以指定右下象限的名称。</li>
      <li><strong>象限标签&gt;左下：可 </strong>用于象限图表以指定左下象限的名称。</li>
     </ul> </td>
@@ -185,7 +185,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 ![图表中的函数](assets/functions_charts_new.png)
 
-虽然“图表”组件包含一些内置函数，但您可以编写自定 [义函数](../../forms/using/chart-component-interactive-communications.md#main-pars-header-473010287) ，并使这些函数可用于Web渠道的图表配置中。
+虽然“图表”组件包含一些内置函数，但您可以编写自定 [义函数](#customfunctionsweb) ，并使这些函数可用于Web渠道的图表配置中。
 
 图表组件默认提供以下功能：
 
@@ -205,11 +205,11 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 **模式** ：返回在X轴或Y轴上出现次数最多的值，以表示在另一个轴上的给定值。
 
-有关详细信息，请参 [阅示例2:求和和和频率函数在折线图中的应用](../../forms/using/chart-component-interactive-communications.md#main-pars-header-ae38)。
+有关详细信息，请参 [阅示例2:求和和和频率函数在折线图中的应用](#applicationsumfrequency)。
 
-### Web渠道中的自定义功能 {#customfunctionsweb}
+### Web渠道中的自定义函数 {#customfunctionsweb}
 
-除了使用图表中的默认函数外，您还可以使用JavaScript™编写自定义函数，并在Web通道的“图表”组件的函数列表中使它们可用。
+除了使用图表中的默认函数外，您还可以使用JavaScript™编写自定义函数，并在“图表”组件中的函数列表中使其可用以进行Web渠道。
 
 函数将数组或值以及类别名称作为输入并返回值。 例如：
 
@@ -234,7 +234,7 @@ Multiply(valueArray, category) {
    * 将属性 `value` 添加到自定义JavaScript™函数的完全限定名称。 （必填），将其值设置为自定义函数的名称，如Multiply。
    * 添加 `jcr:description` 要显示为“函数”下拉列表中显示的自定义函数名称的值的属性。 例如， **Multiply**。
 
-   * 添加 `qtip` 将简短描述自定义函数的值的属性。 将指针悬停在“函数”( **Function** )下拉列表中的函数名称上时，它将显示为工具提示。
+   * 添加 `qtip` 将简短描述自定义函数的值的属性。 将指针悬停在“函数”下拉列表中的函数名称上时，它将 **显示为** “工具提示”。
 
 1. 单击 **全部保存** ，以保存配置。
 
@@ -255,23 +255,23 @@ Multiply(valueArray, category) {
 * **[!UICONTROL 标题]** -为X轴指定费用类型，为Y轴指定事务处理金额。
 * **[!UICONTROL 数据模型对象]** -选择数据模型对象属性，为X轴（费用类型）和Y轴（事务处理金额）创建数据绑定。
 
-![交互式通信的打印渠道中的柱状图](assets/sample_chart_print_column_new.png)
+![交互通信打印渠道中的柱状图](assets/sample_chart_print_column_new.png)
 
-交互式通信的打印渠道中的柱状图
+交互通信打印渠道中的柱状图
 
 ### Web圆环图 {#donutchartweb}
 
 要完成此操作，请指定以下属性：
 
 * **[!UICONTROL 名称]** -指定图表的名称。
-* **[!UICONTROL 图表类型]** -从下 **[!UICONTROL 拉列表中]** ，选择“圆环”。
+* **[!UICONTROL 图表类型]** -从下 **** 拉列表中选择“圆环”。
 * **[!UICONTROL 数据模型对象]** -选择数据模型对象属性，为X轴（费用类型）和Y轴（事务处理金额）创建数据绑定。
 * **[!UICONTROL 内半径]** -将“内半径”值指定为150，以指定图表中内圆的半径（以像素为单位）。
 * **[!UICONTROL 工具提示]** -使用${x}(${y})默认格式显示工具提示。 工具提示显示为：费用类型（事务处理金额）。 示例：比特币的借记(10000)。
 
-![交互式通信的Web渠道中的圆环图](assets/sample_chart_web_new.png)
+![交互式通信Web渠道中的圆环图](assets/sample_chart_web_new.png)
 
-交互式通信的Web渠道中的圆环图
+交互式通信Web渠道中的圆环图
 
 ## 示例2:和频函数在线图中的应用 {#applicationsumfrequency}
 
@@ -301,12 +301,12 @@ Frequency函数返回另一个轴上给定值的Y轴数。 在Y轴上应用“�
 
 要完成此操作，请指定以下属性：
 
-* **** 名称：指定图表的名称。
-* **** 图表类型：从下 **拉列表** 中选择象限。
+* **名称：** 指定图表的名称。
+* **图表类型：** 从 **下拉列表** 中选择象限。
 
 * 选中“多 **个系列** ”复选框。
 * **数据模型对象**:为系列指定数据模型对象属性。 库名称的数据模型对象属性是在X轴和Y轴中绘制的数据模型对象属性的父项。
-* **** 数据模型对象：选择数据模型对象属性，为X轴（事务日期）和Y轴（事务金额）创建数据绑定。
+* **数据模型对象：** 选择数据模型对象属性，为X轴（事务日期）和Y轴（事务金额）创建数据绑定。
 * 在“参 **照点** ”(Reference Point **)部分，选择“** Static”（静态）作为“绑定类型”(Binding Type)。
 
 * 指定X轴和Y轴参照点的值。
