@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
 
 ---
 
@@ -52,9 +52,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
  </tbody>
 </table>
 
-## 问题：无法渲染表单（显示错误消息） {#problem-unable-to-render-a-form-an-error-message-is-displayed}
+## 问题：无法渲染表单（显示错误消息） {#problem-unable-to-render-form}
 
-1. 确保指定的参数正确无误。 有关参数的详细信息，请参阅 [渲染参数](/help/forms/using/debug.md#main-pars-table)。
+1. 确保指定的参数正确无误。 有关参数的详细信息，请参阅 [渲染参数](#problem-when-rendering-the-form-i-see-org-apache-sling-api-slingexception-exception-page)。
 1. 登录到CRX包管理器(位于https://&lt;server>:&lt;port>/crx/packmgr/index.jsp)并检查以下包是否正确安装：
 
    * adobe-lc-forms-content-pkg-&lt;version>.zip
