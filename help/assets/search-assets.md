@@ -4,7 +4,7 @@ description: 了解如何使用过滤器面板在AEM中查找所需的资产，�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 25acffc6a0101be4ea6811b92c40bc76f554f5f0
+source-git-commit: fc4d8f98047fe727c11aa7a932ecc46a1a60d076
 
 ---
 
@@ -147,7 +147,7 @@ AEM提供了各种方法(如适用于搜索的资产的过滤器)，以帮助您
 
 ### Dynamic Media资产 {#dmassets}
 
-您可以通过选择&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中的 **[!UICONTROL Dynamic Media > 集]**&#x200B;来过滤 Dynamic Media 图像。该操作可过滤并显示图像集、轮播集、混合媒体集和旋转集等资产。
+您可以通过选择&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中的 **[!UICONTROL Dynamic Media]** > **[!UICONTROL 集]**&#x200B;来过滤 Dynamic Media 图像。该操作可过滤并显示图像集、轮播集、混合媒体集和旋转集等资产。
 
 ### 使用元数据字段中的特定值进行搜索 {#gqlsearch}
 
@@ -355,7 +355,7 @@ AEM资产中的搜索功能有以下限制：
 
 ### 强制元数据 {#mandatorymetadata}
 
-商业用户、管理员或DAM管理员可以将某些元数据定义为必须的元数据，这是业务流程工作所必需的。 由于各种原因，某些资产可能缺少此元数据，如批量迁移的旧版资产或资产。 会根据索引元数据属性检测和报告元数据缺失或无效的资产。 要进行配置，请参阅必 [需的元数据](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
+商业用户、管理员或DAM管理员可以将某些元数据定义为必须的元数据，这是业务流程工作所必需的。 由于各种原因，某些资产可能缺少此元数据，如批量迁移的旧资产或资产。 会根据索引元数据属性检测和报告元数据缺失或无效的资产。 要进行配置，请参阅必 [需的元数据](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
 
 ### 修改搜索彩块化 {#searchfacets}
 
