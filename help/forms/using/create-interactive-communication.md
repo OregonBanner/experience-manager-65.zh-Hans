@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -127,7 +127,7 @@ Interactive Communications集中管理个性化的交互式通信的创建、汇
  </tbody>
 </table>
 
-您还可以使用“资产”选项卡将新片段拖放到目标区域，以替换目标区域与文档片段之间 **的绑定** 。 拖动片段时目标区域的蓝色底纹表示文档片段可以拖放到目标区域。
+您还可以使用“资产”选项卡将新片段拖放到目标区域，以替换目标区域与文档片段之间 **[!UICONTROL 的绑定]** 。 拖动片段时目标区域的蓝色底纹表示文档片段可以拖放到目标区域。
 
 有关文档片段的详细信息，请参阅 [文档片段](/help/forms/using/document-fragments.md)。
 
@@ -178,11 +178,11 @@ Interactive Communications集中管理个性化的交互式通信的创建、汇
 
 1. 切换到 **[!UICONTROL Web渠道]**。 Web渠道显示在交互通信编辑器中。 首次从打印渠道切换到Web渠道时，会进行自动同步。 有关详细信息，请参 [阅从打印渠道同步Web渠道](../../forms/using/create-interactive-communication.md#synchronize)。
 
-   由于在本例中我们将“打印”用作Web的主页，因此“打印渠道”占位符、内容和数据绑定将同步到Web渠道。 但是，您可以在Web渠道中更改和自定义特定内容。 [取消继承](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) ，对于使用打印渠道生成的目标区域和变量，这些区域和变量可以自定义内容。
+   由于在本例中我们将“打印”用作Web的主页，因此“打印渠道”占位符、内容和数据绑定将同步到Web渠道。 但是，您可以在Web渠道中更改和自定义特定内容。 [取消继承](#cancelinheritance) ，对于使用打印渠道生成的目标区域和变量，这些区域和变量可以自定义内容。
 
    ![webchannelassets](assets/webchannelassets.png)
 
-   点按文档片段，点 ![按configure_icon](assets/configure_icon.png) (Configure)，然后从交互式通信的Sidekick中点 **[!UICONTROL 按属性]** 。 “变 **[!UICONTROL 量”和“数据模型对象]** ”部分列表变量，包括隐藏变量和文档片段中使用的数据模型对象。 使用每 ![个数据模型对象](assets/edit.svg) 或变量旁边的编辑（编辑）图标编辑属性。 此外，对于在Web文档中使用“打印渠道 [”自动生成的渠道片段，请使用每个数据模型对象和变量旁的“](../../forms/using/create-interactive-communication.md#main-pars-header-1213963149) （取消继承）”图标来取消继承 ![](assets/cancelinheritance.png)[](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) ，并能够编辑继承。
+   点按文档片段，点 ![按configure_icon](assets/configure_icon.png) (Configure)，然后从交互式通信的Sidekick中点 **[!UICONTROL 按属性]** 。 “变 **[!UICONTROL 量”和“数据模型对象]** ”部分列表变量，包括隐藏变量和文档片段中使用的数据模型对象。 使用每 ![个数据模型对象](assets/edit.svg) 或变量旁边的编辑（编辑）图标编辑属性。 此外，对于在Web文档中使用“打印渠道 [”自动生成的渠道片段，请使用每个数据模型对象和变量旁的“](#synchronize) （取消继承）”图标来取消继承 ![](assets/cancelinheritance.png)[](#cancelinheritance) ，并能够编辑继承。
 
 1. 要在Web渠道中添加其他组件，在选择Web渠道的情况下，点按组 **[!UICONTROL 件]**。 根据需要在交互通信的Web渠道中拖放组件，然后继续配置它们。
 
@@ -581,9 +581,9 @@ Interactive Communications集中管理个性化的交互式通信的创建、汇
 * **父项：** 选择组件的父项。
 * **视图SOM表达式:** 视图 [组件的SOM表达式](../../forms/using/using-som-expressions-adaptive-forms.md) 。
 
-* **在面板中对象分组：** 将组件组合到面板中，以便能够同时对这些组件执行操作。 有关详细信息，请参 **[阅在面板中分组对象](../../forms/using/create-interactive-communication.md#main-pars-header-1815149576)**。
+* **在面板中对象分组：** 将组件组合到面板中，以便能够同时对这些组件执行操作。 有关详细信息，请参 [阅在面板中分组对象](#groupobjectspanel)。
 
-* **取消继承：** 取 [消目标区](../../forms/using/create-interactive-communication.md#main-pars-header-103384010) 内组件的继承以对其进行编辑。
+* **取消继承：** 取 [消目标区](#cancelinheritance) 内组件的继承以对其进行编辑。
 
 ### Group objects in Panel {#groupobjectspanel}
 
