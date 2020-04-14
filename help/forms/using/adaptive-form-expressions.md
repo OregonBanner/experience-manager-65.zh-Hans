@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -45,16 +45,16 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 在自适应表单中，您可以编写表达式来添加动态显示／隐藏字段和面板等行为。 您还可以编写表达式来添加计算字段、使字段为只读、验证逻辑等。 自适应表单支持以下表达式:
 
-* **[访问表达式](../../forms/using/adaptive-form-expressions.md#main-pars-header-4)**:启用／禁用字段。
-* **[计算表达式](../../forms/using/adaptive-form-expressions.md#p-calculate-expression-p)**:自动计算字段的值。
-* **[单击表达式](../../forms/using/adaptive-form-expressions.md#p-click-expression-p)**:以处理按钮单击事件时的操作。
-* **[初始化脚本](../../forms/using/adaptive-form-expressions.md#p-initialization-script-p):**对字段的初始化执行操作。
-* **[选项表达式](../../forms/using/adaptive-form-expressions.md#p-options-expression-p)**:动态填充下拉列表。
+* **[访问表达式](#access-expression-enablement-expression)**:启用／禁用字段。
+* **[计算表达式](#calculate-expression)**:自动计算字段的值。
+* **[单击表达式](#click-expression)**:以处理按钮单击事件时的操作。
+* **[初始化脚本](#initialization-script):**对字段的初始化执行操作。
+* **[选项表达式](#options-expression)**:动态填充下拉列表。
 * **[摘要表达式](#summary)**:动态计算折叠面板的标题。
-* **[验证表达式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)**:来验证字段。
-* **[值提交脚本](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p):**更改字段值后表单的组件。
-* **[可见性表达式](../../forms/using/adaptive-form-expressions.md#p-visibility-expression-p)**:以控制字段和面板的可见性。
-* **[步骤完成表达式](../../forms/using/adaptive-form-expressions.md#p-step-completion-expression-p)**:以阻止用户进入向导的下一步。
+* **[验证表达式](#validate-expression)**:来验证字段。
+* **[值提交脚本](#value-commit-script):**更改字段值后表单的组件。
+* **[可见性表达式](#visibility-expression)**:以控制字段和面板的可见性。
+* **[步骤完成表达式](#step-completion-expression)**:以阻止用户进入向导的下一步。
 
 ### 访问表达式(启用表达式) {#access-expression-enablement-expression}
 
