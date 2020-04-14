@@ -10,14 +10,14 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
 
 # AEM Forms中的监视文件夹{#watched-folder-in-aem-forms}
 
-管理员可以配置网络文件夹（称为“监视文件夹”），这样，当用户将文件（如PDF文件）放在“监视文件夹”中时，将启动预配置的工作流、服务或脚本操作以处理添加的文件。 在服务执行指定操作后，它将结果文件保存在指定的输出文件夹中。 有关工作流、服务和脚本的详细信息，请参阅 [各种处理文件的方法](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-4)。
+管理员可以配置网络文件夹（称为“监视文件夹”），这样，当用户将文件（如PDF文件）放在“监视文件夹”中时，将启动预配置的工作流、服务或脚本操作以处理添加的文件。 在服务执行指定操作后，它将结果文件保存在指定的输出文件夹中。 有关工作流、服务和脚本的详细信息，请参阅 [各种处理文件的方法](#variousmethodsforprocessingfiles)。
 
 ## 创建监视文件夹 {#create-a-watched-folder}
 
@@ -25,7 +25,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
 * 配置“监视文件夹”配置节点的属性时，在folderPath属性中键入父目录的完整路径，并附加要创建的“监视文件夹”的名称，如下例所示：文 `C:/MyPDFs/MyWatchedFolder`件 `MyWatchedFolder`夹不存在，AEM Forms会尝试在指定路径下创建该文件夹。
 
-* 在配置“监视文件夹”端点之前，在文件系统上创建一个文件夹，然后在folderPath属性中提供完整路径。 有关folderPath属性的详细信息，请参阅 [监视文件夹属性](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
+* 在配置“监视文件夹”端点之前，在文件系统上创建一个文件夹，然后在folderPath属性中提供完整路径。 有关folderPath属性的详细信息，请参阅 [监视文件夹属性](#watchedfolderproperties)。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-   有关所支持属性的完整列表，请参阅 [监视文件夹属性](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
+   有关所支持属性的完整列表，请参阅 [监视文件夹属性](#watchedfolderproperties)。
 
 1. 单击“ **全部保存**”。 创建节点并保存属性后。 在属 `input`性中指 `result`定的路 `failure`径下创建、、、和文 `preserve``stage``folderPath` 件夹。
 
@@ -94,7 +94,7 @@ source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
 
    * 具有特定文件扩展名的文件；例如，*.dat、*.xml、.pdf、*。*
    * 具有特定名称的文件；例如，data*将排除名为data1、data2等的文件和文件夹。
-   * 名称和扩展名中具有复合表达式的文件，如以下示例所示：
+   * 名称和扩展名中具有复合表达式的文件，如下例所示：
 
       * Data[0-9][0-9][0-9]。[dD][aA]&#39;port&#39;
       * *.[dD][Aa]&#39;port&#39;
@@ -498,7 +498,7 @@ log.info("Exiting workflow script!")
 
 #### 节流的工作原理 {#how-throttling-works}
 
-“监视文件夹”在每个pollInterval扫描输入文件夹，选取“批量大小”中指定的文件数，并为每个文件调用目标服务。 例如，如果“批量大小”为4，则“监视文件夹”在每次扫描时会选取四个文件，创建四个调用请求并调用目标服务。 在完成这些请求之前，如果调用了“监视文件夹”，则无论前四个作业是否完成，它都会再次开始四个作业。
+“监视文件夹”在每个pollInterval扫描输入文件夹，选取“批量大小”中指定的文件数，并为每个文件调用目标服务。 例如，如果“批量大小”为4，则“监视文件夹”在每次扫描时会选取四个文件，创建四个调用请求并调用目标服务。 在完成这些请求之前，如果调用了“监视文件夹”，则再次开始四个作业，而不管之前的四个作业是否完成。
 
 限制功能可防止监视文件夹在以前的作业未完成时调用新作业。 “监视的文件夹”检测正在进行的作业，并根据批处理大小减去正在进行的作业处理新作业。 例如，在第二次调用中，如果完成的作业数仅为三个，并且一个作业仍在进行中，则“监视文件夹”仅再调用三个作业。
 
@@ -553,7 +553,7 @@ log.info("Exiting workflow script!")
 
 * 具有特定文件扩展名的文件；例如，*.dat、*.xml、.pdf、*。*
 * 具有特定名称的文件；例如，数据。*
-* 名称和扩展名中具有复合表达式的文件，如下例所示：
+* 名称和扩展名中具有复合表达式的文件，如以下示例所示：
 
    * Data[0-9][0-9][0-9]。[dD][aA]&#39;port&#39;
    * *.[dD][Aa]&#39;port&#39;
@@ -662,5 +662,5 @@ inputProcessorType（字符串）:要开始的进程类型。 在本教程中，
    * inputProcessorId（字符串）:inputProcessorId属性的行为基于为inputProcessorType属性指定的值。 在此示例中，inputProcessorType属性的值是workflow。 因此，对于inputProcessorId属性，指定PDFG工作流的以下路径：/etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern（字符串）:输出文件的模式。 可以指定文件夹或文件模式。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。
-   除了上述必选属性之外，“监视文件夹”还支持一些可选属性。 有关可选属性的完整列表和说明，请参阅 [监视文件夹属性](../../forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)。
+   除了上述必选属性之外，“监视文件夹”还支持一些可选属性。 有关可选属性的完整列表和说明，请参阅 [监视文件夹属性](#watchedfolderproperties)。
 
