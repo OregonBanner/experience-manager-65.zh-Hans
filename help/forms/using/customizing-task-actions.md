@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -135,7 +135,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 
 ### 任务列表任务操作弹出菜单 {#task-list-task-action-nbsp-pop-up-menu}
 
-1. 您需要开发包来自定义AEM Forms工作区任务列表任务操作弹出菜单的项目。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+1. 您需要开发包来自定义AEM Forms工作区任务列表任务操作弹出菜单的项目。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. 复制/libs/ws/js/runtime/templates/task.html以替 `/apps/ws/js/runtime/templates/task.html`换以下代码片断：
 
