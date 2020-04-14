@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -42,20 +42,20 @@ FFmpeg应安装在承载AEM作者实 *例* 的服务器上。
 
 ## 配置FFmpeg转码服务 {#configure-ffmpeg-transcoding-service}
 
-默认情况下，安装FFmpeg后，会根据DAM更新资产工作流定义配置多个再现（转码）。
+默认情况下，安装FFmpeg后，会根据 [!UICONTROL DAM更新资产工作流定义配置多个再现(转码] )。
 
-由于转码占用CPU大量资源，建议修改目标再现列表。 在大多数情况下，无需转码。
+由于转码占用CPU大量资源，建议修改目标再现的列表。 在大多数情况下，无需转码。
 
-要修改DAM更新资产工作流程，并在此示例中，请关闭转码：
+要修改 [!UICONTROL DAM更新资产工作流] ，并在此示例中，请关闭转码：
 
 * 使用管理权限登录到创作实例
 * 从全局导航：“工 **[!UICONTROL 具”>“工作流”>“模型”]**
 * 找到 **[!UICONTROL DAM更新资产]**
-* 双击以打开要在经典UI中编辑的工作流
+* 多次-单击以打开要在经典UI中编辑的工作流
 
    生成位置： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* 双击 **[!UICONTROL FFmpeg转码步骤]** ，访问“步骤属性”对话框
+* 多次-单击 **[!UICONTROL FFmpeg转码步骤]** ，以访问“步骤属性”对话框
 * 在“进程 **[!UICONTROL ”选项卡下]** :
 
    * **[!UICONTROL 文章]**:清除所有条目以禁用转码默认值： `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
