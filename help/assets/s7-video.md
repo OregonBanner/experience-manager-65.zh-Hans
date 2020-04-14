@@ -8,7 +8,7 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -31,7 +31,7 @@ Dynamic Media Classic视频集成将优化视频的范围扩展到所有屏幕�
 
 请注意，启用和配置Dynamic Media Classic集成不会自动从现成的DAM摄取工作流中删除或取消激活这两个工作流步骤。 如果您已经在 AEM 中使用基于 FFMPEG 的视频编码，则您很可能已经在创作环境中安装了 FFMPEG。在这种情况下，使用DAM摄取的新视频将进行两次编码：一次来自FFMPEG编码器，另一次来自Dynamic Media Classic集成。
 
-如果您在AEM中配置了基于FFMPEG的视频编码并安装了FFMPEG，则Adobe建议您从DAM摄取工作流中删除两个FFMPEG工作流。
+如果您在AEM中配置了基于FFMPEG的视频编码并安装了FFMPEG,Adobe建议您从DAM摄取工作流中删除两个FFMPEG工作流。
 
 ## 支持的格式 {#supported-formats}
 
@@ -97,7 +97,7 @@ Scene7 视频组件支持以下格式：
 ## Uploading your master video to Scene7 from Adobe DAM {#uploading-your-master-video}
 
 1. 导航到在其中为云配置设置了 Scene7 编码配置文件的 CQ DAM 目标文件夹。
-1. 单击&#x200B;**[!UICONTROL 上传]**&#x200B;以上传主视频。Video uploading and encoding is complete after the DAM Update Asset workflow is complete and **[!UICONTROL Publish to Scene7]** has a checkmark.
+1. 单击&#x200B;**[!UICONTROL 上传]**&#x200B;以上传主视频。Video uploading and encoding is complete after the [!UICONTROL DAM Update Asset] workflow is complete and **[!UICONTROL Publish to Scene7]** has a checkmark.
 
    >[!NOTE]
    >
@@ -147,7 +147,7 @@ Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 
 
 1. 在AEM中，点 **按[!UICONTROL工具>配置控制台**。
 1. In the **[!UICONTROL Configuration Console]** navigate to **[!UICONTROL Tools > DAM > Video Profiles]** in the navigation tree.
-1. 创建一个新的 S7 视频配置文件。**[!UICONTROL 在新]**&#x200B;增……菜单中，选 **[!UICONTROL 择创建页面]** ，然后选择Scene7视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
+1. 创建一个新的 S7 视频配置文件。In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
@@ -158,14 +158,14 @@ Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 
    | 属性 | 描述 |
    |---|---|
    | Scene7 云配置 | 用于编码预设的云配置。 |
-   | Scene7 编码预设 | 要将此视频配置文件映射到的编码预设。 |
+   | Scene7 编码预设 | 要映射此视频用户档案的编码预设。 |
    | HTML5 视频类型 | 此属性允许设置HTML5视频源元素的type属性的值。 此信息不是由 S7 编码预设提供，但却是使用 HTML5 视频元素正确渲染视频所必需的信息。提供了通用格式列表，但是通用格式可被其他格式覆盖。 |
 
    对要在视频组件中使用的云配置中选定的所有编码预设重复此步骤。
 
 #### Configuring design {#configuring-design}
 
-The **[!UICONTROL Foundation Video]** component must know about what video profiles to use in order to build the video sources list. 必须打开视频组件设计对话框并配置组件设计以使用新的视频配置文件。
+The **[!UICONTROL Foundation Video]** component must know about what video profiles to use in order to build the video sources list. 必须打开视频组件设计对话框并配置组件设计以使用新的视频用户档案。
 
 >[!NOTE]
 >
@@ -175,8 +175,8 @@ The **[!UICONTROL Foundation Video]** component must know about what video profi
 >
 >对设计所做的更改需要激活设计，才能在发布时生效。
 
-1. Open the **[!UICONTROL Foundation Video]** component&#39;s design dialog box and change to the **[!UICONTROL Profiles]** tab. 然后，删除现成配置文件并添加新的S7视频配置文件。 设计对话框中的配置文件列表的顺序定义了渲染时视频源元素的顺序。
-1. 对于不支持HTML5的浏览器，视频组件允许配置Flash回退。 Open the video components design dialog box and change to the **[!UICONTROL Flash]** tab. 配置Flash Player设置并为Flash Player分配备用配置文件。
+1. Open the **[!UICONTROL Foundation Video]** component&#39;s design dialog box and change to the **[!UICONTROL Profiles]** tab. 然后删除现成用户档案并添加新的S7视频用户档案。 设计对话框中的用户档案列表的顺序定义了渲染时视频源元素的顺序。
+1. 对于不支持HTML5的浏览器，视频组件允许配置Flash回退。 Open the video components design dialog box and change to the **[!UICONTROL Flash]** tab. 配置Flash Player设置并为Flash Player分配备用用户档案。
 
 #### 核对清单 {#checklist}
 
