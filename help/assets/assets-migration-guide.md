@@ -3,14 +3,14 @@ title: 将资产批量迁移到Adobe Experience Manager资产
 description: 介绍如何将资产引入AEM、应用元数据、生成演绎版并激活资产以发布实例。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
 
 # 如何批量迁移资产 {#assets-migration-guide}
 
-将资产迁移到AEM时，需要考虑几个步骤。 从其当前主页提取资产和元数据不在本文档的范围内，因为实施之间差异很大，但本文档介绍如何将这些资产引入AEM、应用其元数据、生成演绎版并激活它们以发布实例。
+将资产迁移到AEM时，需要考虑几个步骤。 从当前主页提取资产和元数据不在本文档的范围内，因为实施之间差异很大，但本文档介绍如何将这些资产引入AEM、应用其元数据、生成演绎版并激活它们以发布实例。
 
 ## 前提条件 {#prerequisites}
 
@@ -27,7 +27,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 >* 合成工作流
 >
 >
-本软件是开放源，受 [Apache v2许可证的保护](https://adobe-consulting-services.github.io/pages/license.html)。 要提出问题或报告问题，请访问ACS AEM Tools和 [ACS AEM Commons的GitHub问题](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)[相关信息](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
+本软件是开放源软件，受 [Apache v2 许可证](https://adobe-consulting-services.github.io/pages/license.html)的保护。要提出问题或报告问题，请访问[针对 ACS AEM 工具的 GitHub 问题](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)和 [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
 ## 迁移到AEM {#migrating-to-aem}
 
@@ -44,11 +44,11 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 ### 禁用工作流 {#disabling-workflows}
 
-在开始迁移之前，请禁用DAM更新资产工作流的启动程序。 最好将所有资产引入系统，然后批量运行工作流。 如果迁移期间您已经处于活动状态，则可以将这些活动安排在非工作时间运行。
+在开始迁移之前，请禁用 [!UICONTROL DAM更新资产工作流的启动程序] 。 最好将所有资产引入系统，然后批量运行工作流。 如果迁移期间您已经处于活动状态，则可以计划这些活动在非工作时间运行。
 
 ### 加载标记 {#loading-tags}
 
-您可能已经拥有了要应用于图像的标记分类。 虽然CSV资产导入程序和AEM对元数据配置文件的支持等工具可以自动将标记应用到资产的过程，但这些标记需要加载到系统中。 通过 [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具标记生成器）功能，您可以使用加载到系统中的Microsoft excel电子表格填充标记。
+您可能已经拥有了要应用于图像的标记分类。 虽然CSV资产导入程序和Experience Manager对元数据用户档案的支持等工具可以自动将标记应用到资产的过程，但这些标记需要加载到系统中。 通过 [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具标记生成器）功能，您可以使用加载到系统中的Microsoft Excel电子表格填充标记。
 
 ### 摄取资源 {#ingesting-assets}
 
@@ -58,7 +58,7 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 #### 通过HTTP发送 {#pushing-through-http}
 
-Adobe的Managed services团队使用一种称为Glutton的工具将数据加载到客户环境中。 Glutton是一个小的Java应用程序，它将所有资源从一个目录加载到AEM实例上的另一个目录中。 您还可以使用Perl脚本等工具将资源发布到存储库中，而不是Glutton。
+Adobe的Managed Services团队使用一个名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小的Java应用程序，它将所有资源从一个目录加载到AEM实例上的另一个目录中。 您还可以使用Perl脚本等工具将资源发布到存储库中，而不是Glutton。
 
 使用通过https的方法有两个主要的缺点：
 
@@ -75,7 +75,7 @@ Adobe的Managed services团队使用一种称为Glutton的工具将数据加载�
 
 ### 处理再现 {#processing-renditions}
 
-在将资产加载到系统中后，您需要通过DAM更新资产工作流处理这些资产，以提取元数据并生成演绎版。 在执行此步骤之前，您需要复制和修改DAM更新资产工作流以满足您的需求。 开箱即用的工作流程包含许多您可能不需要的步骤，如Scene7 PTIFF生成或InDesign服务器集成。
+在将资产加载到系统中后，您需要通过 [!UICONTROL DAM更新资产工作流处理这些资产] ，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复和修改 [!UICONTROL DAM更新资产工作流] ，以满足您的需求。 开箱即用的工作流程包含许多您可能不需要的步骤，如Scene7 PTIFF生成或InDesign服务器集成。
 
 根据需要配置工作流后，您有两个用于执行该工作流的选项：
 
@@ -84,11 +84,11 @@ Adobe的Managed services团队使用一种称为Glutton的工具将数据加载�
 
 ### 激活资产 {#activating-assets}
 
-对于具有发布层的部署，您需要将资产激活到发布场。 虽然Adobe建议运行多个发布实例，但最好将所有资源复制到单个发布实例，然后克隆该实例。 在激活大量资产时，在触发树激活后，您可能需要进行干预。 原因如下：在触发激活时，项目会添加到Sling作业／事件队列。 当此队列的大小开始超过约40,000个项目后，处理速度会显着降低。 当此队列的大小超过100,000项后，系统稳定性开始受到影响。
+对于具有发布层的部署，您需要将资产激活到发布场。 虽然Adobe建议运行多个发布实例，但最好将所有资源复制到单个发布实例，然后克隆该实例。 在激活大量资产时，在触发树状激活后，您可能需要进行干预。 原因如下：触发激活时，项目会添加到Sling作业/事件序列。 当此队列的大小开始超过约40,000个项目后，处理速度会显着降低。 当此队列的大小超过100,000项后，系统稳定性将受到开始。
 
 要解决此问题，您可以使用 [Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) （快速操作管理器）管理资产复制。 这可以在不使用Sling队列的情况下工作，从而降低开销，同时限制工作负载以防止服务器过载。 使用FAM管理复制的示例显示在该功能的文档页上。
 
-将资源转至发布农场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html)[或oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，作为Jackrabbit的一部分提供这些工具。 另一个选项是为AEM基础结构使用一个名为 [Grabbit的开放源工具](https://github.com/TWCable/grabbit)，该工具声称比vlt的性能更快。
+将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。另一个选项的目的是对 AEM 基础结构使用一个名为 [Grabbit](https://github.com/TWCable/grabbit) 的开放源工具，该工具声称比 vlt 的性能更快。
 
 对于任何这些方法，注意作者实例上的资产不显示为已激活。 要使用正确的激活状态标记这些资产，您还需要运行一个脚本以将资产标记为已激活。
 
@@ -102,15 +102,15 @@ Adobe的Managed services团队使用一种称为Glutton的工具将数据加载�
 
 1. 备份源实例和数据存储。
 1. 将实例和数据存储的备份恢复到目标位置。 以下步骤均引用此新实例。
-1. 在for下执行文件系 `crx-quickstart/launchpad/felix` 统搜 `sling.id`索。 删除此文件。
+1. Perform a filesystem search under `crx-quickstart/launchpad/felix` for `sling.id`. 删除此文件。
 1. 在数据存储的根路径下，找到并删除任何文 `repository-XXX` 件。
-1. 编 `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 辑并 `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` 指向新环境中数据存储的位置。
-1. 启动环境。
+1. 编 `crx-quickstart/install/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` 辑并 `crx-quickstart/launchpad/config/org/apache/jackrabbit/oak/plugins/blob/datastore/FileDataStore.config` 指向新环境上数据存储区的位置。
+1. 开始环境。
 1. 更新作者上任何复制代理的配置，以指向新实例上的正确发布实例或调度程序刷新代理，以指向新环境的正确调度程序。
 
 ### 启用工作流 {#enabling-workflows}
 
-完成迁移后，应重新启用DAM更新资产工作流的启动程序，以支持再现生成和元数据提取，以便持续使用日常系统。
+完成迁移后，应重新启用  DAM更新资产工作流的启动程序，以支持再现生成和元数据提取，以便持续使用日常系统。
 
 ## 跨AEM部署迁移 {#migrating-between-aem-instances}
 
@@ -118,9 +118,9 @@ Adobe的Managed services团队使用一种称为Glutton的工具将数据加载�
 
 在这种情况下，您的资产已填充元数据，并且已生成演绎版。 您只需将精力集中在将资产从一个实例移动到另一个实例上。 在AEM实例之间迁移时，您需要执行以下步骤：
 
-1. 禁用工作流：由于您正在迁移演绎版以及我们的资产，因此您希望禁用DAM更新资产的工作流启动器。
+1. 禁用工作流:由于您正在迁移演绎版以及我们的资产，因此您希望禁用 [!UICONTROL DAM更新资产工作流的工作流启动器] 。
 
-1. 迁移标记：由于已在源AEM实例中加载了标记，因此您可以在内容包中构建这些标记并将该包安装到目标实例上。
+1. 迁移标记：由于已在源AEM实例中加载了标记，因此您可以在内容包中构建这些标记并将该包安装在目标实例上。
 
 1. 迁移资产：建议使用两种工具将资产从一个AEM实例移至另一个AEM实例：
 
@@ -131,4 +131,4 @@ Adobe的Managed services团队使用一种称为Glutton的工具将数据加载�
 
 1. 克隆发布：与新迁移一样，加载单个发布实例并克隆它比激活两个节点上的内容更有效。 请参阅 [仿制发布。](#cloning-publish)
 
-1. 启用工作流：完成迁移后，请重新启用DAM更新资产工作流的启动程序，以支持再现生成和元数据提取，以便持续使用日常系统。
+1. 启用工作流:完成迁移后，请重新启用 [!UICONTROL DAM更新资产工作流的启动程序] ，以支持再现生成和元数据提取，以便持续使用日常系统。
