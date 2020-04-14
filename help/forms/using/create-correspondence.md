@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -83,7 +83,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    在“内容”或“数据”选项卡中，通过点按HTML字母预览左上角的“高亮显示选定的模块”( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，可以禁用或启用在字母预览中选择相关文本、段落或数据字段时转至内容／数据模块的功能。
 
-   有关“创建对应”用户界面中各个模块可用的操作的详细信息，请参阅“创建对应 [”用户界面中的“操作”和“信息”](../../forms/using/create-letter.md#main-pars-header-9)。
+   有关“创建对应”用户界面中各个模块可用的操作的详细信息，请参阅“创建对应 [”用户界面中的“操作”和“信息”](#actions-and-info-available-in-the-create-correspondence-content-tab)。
 
 1. 要定位内容模块，请使用“查找”字段。 输入内容模块的完整或部分名称或标题，以在相应模块中搜索它。
 1. 点按列表、文 ![本](assets/display.png)、条件或目标区域前面的显示图标（显示），以在字母中显示或隐藏它。
@@ -230,7 +230,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    通过点按内容中的高亮显示选定模块( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以禁用或启用功能，以在字母预览中点击相关文本、段落或数据字段时，高亮显示“内容”选项卡中的内容模块。
 
-   有关“创建对应”用户界面中各个模块可用的操作的详细信息，请参阅“创建对应 [”用户界面中的“操作”和“信息”](../../forms/using/create-letter.md#main-pars-header-9)。
+   有关“创建对应”用户界面中各个模块可用的操作的详细信息，请参阅“创建对应 [”用户界面中的“操作”和“信息”](#actions-and-info-available-in-the-create-correspondence-content-tab)。
 
 1. 要向字母中添加分页符，请点按要插入分页符的位置，然后选择“分页符修改前”或“分页符修改后”( ![分页符修改前](assets/pagebreakbeforeafter.png))。
 
@@ -246,7 +246,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   将出现“起草字母名称”对话框，其中带有字母实例id。 您可以（可选）编辑此ID。 记下字母Id，然后点按完 **成**。 您以后可以使用此ID重 [新加载草稿字母](../../forms/using/submit-letter-topostprocess.md#main-pars-header-1)。
+   将出现“起草字母名称”对话框，其中带有字母实例id。 您可以（可选）编辑此ID。 记下字母Id，然后点按完 **成**。 您以后可以使用此ID重 [新加载草稿字母](submit-letter-topostprocess.md#reloaddraft)。
 
 1. 要将字母预览为拼合的PDF，并在提交时使用精确的布局和分页符，请点按( ![预览](assets/preview.png))预览。
 
