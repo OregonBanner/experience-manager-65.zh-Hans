@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ---
 
@@ -26,14 +26,14 @@ Dynamic Media Classic视频集成将优化视频的范围扩展到所有屏幕�
 
 ## 关于FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
-默认的视频编码流程以使用基于 FFMPEG 的视频配置文件集成为基础。因此，现成的 DAM 更新资产工作流包含以下两个基于 FFMPEG 的工作流步骤：
+默认的视频编码流程以使用基于 FFMPEG 的视频配置文件集成为基础。Therefore, the out-of-the-box [!UICONTROL DAM Update Asset] workflow contains the following two ffmpeg-based workflow steps:
 
 * FFMPEG 缩略图
 * FFMPEG 编码
 
-请注意，启用和配置Dynamic Media Classic集成不会自动从现成的DAM更新资产获取工作流中删除或取消激活这两个工作流步骤。 如果您已经在 AEM 中使用基于 FFMPEG 的视频编码，则您很可能已经在创作环境中安装了 FFMPEG。在这种情况下，使用资产摄取的新视频将进行两次编码：一次来自FFMPEG编码器，另一次来自Dynamic Media Classic集成。
+Be aware that enabling and configuring the Dynamic Media Classic integration does not automatically remove or deactivate these two workflow steps from the out-of-the-box [!UICONTROL DAM Update Asset] ingestion workflow. 如果您已经在 AEM 中使用基于 FFMPEG 的视频编码，则您很可能已经在创作环境中安装了 FFMPEG。在这种情况下，使用资产摄取的新视频将进行两次编码：一次来自FFMPEG编码器，另一次来自Dynamic Media Classic集成。
 
-如果您已在 AEM 中配置基于 FFMPEG 的视频编码，且已安装 FFMPEG，则 Adobe 建议您从 DAM 更新资产工作流中删除上述两个 FFMPEG 工作流。
+If you have the FFMPEG-based video encoding in AEM configured and FFMPEG installed, Adobe recommends that you remove the two FFMPEG workflows from your [!UICONTROL DAM Update Asset] workflows.
 
 ### 支持的格式 {#supported-formats}
 
@@ -86,7 +86,7 @@ Dynamic Media Classic视频组件支持以下格式：
    >
    >Adobe 建议您在配置通用预设时选择两个自适应视频集，或选择&#x200B;**[!UICONTROL 自适应视频编码]**&#x200B;选项。
 
-1. 选定的编码配置文件将自动应用于上传到您为此Dynamic Media Classic云配置设置的CQ DAM目标文件夹的所有视频。 您可以使用不同的目标文件夹设置多个Dynamic Media Classic云配置，以根据需要应用不同的编码配置文件。
+1. 所选的编码用户档案将自动应用于上传到您为此Dynamic Media Classic云配置设置的CQ DAM目标文件夹的所有视频。 您可以使用不同的目标文件夹设置多个Dynamic Media Classic云配置，以根据需要应用不同的编码用户档案。
 
 ### 更新查看器和编码预设 {#updating-viewer-and-encoding-presets}
 
@@ -98,7 +98,7 @@ If you need to update the viewer and encoding presets for video in AEM because t
 
 要从Adobe DAM将主视频上传到Dynamic Media Classic，请执行以下操作：
 
-1. 导航到CQ DAM目标文件夹，您已在其中使用Dynamic Media Classic编码配置文件设置了云配置。
+1. 导航到CQ DAM目标文件夹，您已在该文件夹中使用Dynamic Media Classic编码用户档案设置了云配置。
 1. 单击&#x200B;**[!UICONTROL 上传]**&#x200B;以上传主视频。Video uploading and encoding is complete after the [!UICONTROL DAM Update Asset] workflow is complete and **[!UICONTROL Publish to Dynamic Media Classic]** has a checkmark.
 
    >[!NOTE]
@@ -119,14 +119,14 @@ If you need to update the viewer and encoding presets for video in AEM because t
 
 >[!NOTE]
 >
->开箱即用的Dynamic Media Classic视频组件使用通用视频配置文件。 但是，您可以获取供AEM使用的基于HTML5的视频播放器。 在Dynamic Media Classic中，复制现成HTML5视频播放器的嵌入代码，并将其放入AEM页面。
+>开箱即用的Dynamic Media Classic视频组件使用通用视频用户档案。 但是，您可以获取供AEM使用的基于HTML5的视频播放器。 在Dynamic Media Classic中，复制现成HTML5视频播放器的嵌入代码，并将其放入AEM页面。
 
 
 ## AEM 视频组件 {#aem-video-component}
 
 即使建议使用Dynamic Media Classic视频组件来查看Dynamic Media Classic视频，本节也会为了完整起见，在AEM中将Dynamic Media Classic视频与 [!UICONTROL Foundation Video Component] 一起使用进行说明。
 
-### AEM video和Dynamic Media Classic video比较 {#aem-video-and-scene-video-comparison}
+### AEM Video和Dynamic Media Classic Video比较 {#aem-video-and-scene-video-comparison}
 
 下表简单地比较了 AEM 基础视频组件与 Scene7 视频组件所支持的功能：
 
@@ -142,14 +142,14 @@ If you need to update the viewer and encoding presets for video in AEM because t
 
 #### 创建视频配置文件 {#creating-video-profiles}
 
-根据在Dynamic Media Classic云配置中选择的Dynamic Media Classic编码预设创建各种视频编码。 为了使基础视频组件能够使用它们，必须为选定的每个Dynamic Media Classic编码预设创建视频配置文件。 这会相应地允许视频组件选择 DAM 演绎版。
+根据在Dynamic Media Classic云配置中选择的Dynamic Media Classic编码预设创建各种视频编码。 为了使基础视频组件能够使用它们，必须为选定的每个Dynamic Media Classic编码预设创建视频用户档案。 这会相应地允许视频组件选择 DAM 演绎版。
 
 >[!NOTE]
 >
 >必须激活新的视频配置文件以及对其所做的更改，才能进行发布。
 
 1. 在 AEM 中，转到&#x200B;**[!UICONTROL 工具]**，然后选择&#x200B;**[!UICONTROL 配置控制台]**。In the Configuration Console navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** in the navigation tree.
-1. 创建新的Dynamic Media Classic视频配置文件。 **[!UICONTROL 在新]**&#x200B;增……菜单中，选 **[!UICONTROL 择创建页面]** ，然后选择Dynamic Media Classic视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
+1. 创建新的Dynamic Media Classic视频用户档案。 In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Dynamic Media Classic Video Profile template. 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -160,7 +160,7 @@ If you need to update the viewer and encoding presets for video in AEM because t
    | 属性 | 描述 |
    |---|---|
    | Dynamic Media Classic(Scene7)云配置 | 用于编码预设的云配置。 |
-   | Dynamic Media Classic(Scene7)编码预设 | 要将此视频配置文件映射到的编码预设。 |
+   | Dynamic Media Classic(Scene7)编码预设 | 要映射此视频用户档案的编码预设。 |
    | HTML5 视频类型 | 此属性允许设置HTML5视频源元素的type属性的值。 Dynamic Media Classic编码预设不提供此信息，但使用HTML5视频元素正确呈现视频时需要此信息。 提供了通用格式列表，但是通用格式可被其他格式覆盖。 |
 
    对要在视频组件中使用的云配置中选定的所有编码预设重复此步骤。
@@ -177,13 +177,13 @@ If you need to update the viewer and encoding presets for video in AEM because t
 >
 >对设计所做的更改需要激活设计，才能在发布时生效。
 
-1. 打开基础视频组件的设计对话框，并切换到&#x200B;**[!UICONTROL 配置文件]**&#x200B;选项卡。然后，删除现成配置文件，并添加新的Dynamic Media Classic视频配置文件。 设计对话框中的配置文件列表的顺序还定义了视频源元素在渲染时的顺序。
+1. 打开基础视频组件的设计对话框，并切换到&#x200B;**[!UICONTROL 配置文件]**&#x200B;选项卡。然后，删除现成用户档案，并添加新的Dynamic Media Classic视频用户档案。 设计对话框中的用户档案列表的顺序还定义了渲染时视频源元素的顺序。
 1. 对于不支持 HTML5 的浏览器，视频组件允许配置 Flash 回退方法。打开视频组件的设计对话框，并切换到 **[!UICONTROL Flash]** 选项卡。配置 Flash Player 设置，并指定 Flash Player 的回退配置文件。
 
 #### 核对清单 {#checklist}
 
 1. 创建Dynamic Media Classic(Scene7)云配置。 确保已设置视频编码预设，且导入程序正在运行。
-1. 为云配置中选定的每个视频编码预设创建Dynamic Media Classic视频配置文件。
+1. 为云配置中选定的每个视频编码预设创建Dynamic Media Classic视频用户档案。
 1. 必须激活视频配置文件。
 1. 配置页面上基础视频组件的设计。
 1. 完成对设计的更改后，激活设计。
