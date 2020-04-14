@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -61,11 +61,11 @@ AEM Forms工作区是一个基于Web的HTML应用程序，与屏幕阅读器兼�
 
 您可以在以下类别中设置各种AEM Forms工作区首选项：
 
-**办公室外：** 设置首选项，以控制在您离开办公室时如何将任务分配给其他人。 请参 [阅设置办公室外首选项](/help/forms/using/todo-lists.md#main-pars-heading-22)。
+**办公室外：** 设置首选项，以控制在您离开办公室时如何将任务分配给其他人。 请参 [阅设置办公室外首选项](todo-lists.md#setting-out-of-office-preferences)。
 
-**队列：** 设置与其他用户共享您的待办列表或请求访问其他用户的列表的首选项。 请参 [阅使用组和共享队列中的任务](/help/forms/using/todo-lists.md#main-pars-heading-19)。
+**队列：** 设置与其他用户共享您的待办列表或请求访问其他用户的列表的首选项。 请参 [阅使用组和共享队列中的任务](todo-lists.md#working-with-tasks-from-group-and-shared-queues)。
 
-**UI设置：** 设置与AEM Forms工作区交互的首选项。 请参阅 [设置用户界面首选项](/help/forms/using/getting-started-livecycle-html-workspace.md#main-pars-heading-5)。
+**UI设置：** 设置与AEM Forms工作区交互的首选项。 请参阅 [设置用户界面首选项](#set-user-interface-preferences)。
 
 ### 设置用户界面首选项 {#set-user-interface-preferences}
 
