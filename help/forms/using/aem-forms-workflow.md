@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 ---
 
@@ -121,7 +121,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
    对于为例如按揭任务应用程序配置的分配文档步骤、记录步骤的和签名文档步骤的所有字段的完整值集，请导入示例包，该示例包可在本节的开头进行下载。
 
-   工作流模型已准备就绪。 您可以通过各种方法启动工作流。 有关详细信息，请参 [阅在OSGi上启动以表单为中心的工作流](../../forms/using/aem-forms-workflow.md#main-pars-header)。
+   工作流模型已准备就绪。 您可以通过各种方法启动工作流。 有关详细信息，请参 [阅在OSGi上启动以表单为中心的工作流](#launch)。
 
    ![工作流——编辑器——按揭](assets/workflow-editor-mortgage.png)
 
@@ -251,7 +251,7 @@ AEM Forms应用程序与AEM Forms服务器同步，允许您对帐户中的表�
 
    | 字段 | 描述 |
    |---|---|
-   | 有效负荷映射器过滤器 | 创建监视文件夹时，它会在crx-repository中创建文件夹结构。 文件夹结构可用作工作流的有效负荷。 您可以编写脚本来映射AEM Workflow以接受监视文件夹结构中的输入。 开箱即用的实施可在“有效负荷映射器过滤器”中列出。 如果您没有自定义实现，请选择默认实现。 |
+   | 有效负荷映射器过滤器 | 创建监视文件夹时，它会在crx-repository中创建文件夹结构。 文件夹结构可用作工作流的有效负荷。 您可以编写脚本来映射AEM Workflow以接受监视文件夹结构中的输入。 现成的实施可用，并在“有效负荷映射器过滤器”中列出。 如果您没有自定义实现，请选择默认实现。 |
 
    高级选项卡包含更多字段。 这些字段中的大多数都包含默认值。 要了解所有字段，请参阅创建或 [配置监视的文件夹文章](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md) 。
 
