@@ -1,22 +1,22 @@
 ---
 title: AEM Forms键盘快捷键
 seo-title: AEM Forms键盘快捷键
-description: 本文列出了可用于Windows和Macintosh操作系统的自适应表单编辑器、主题编辑器、内容浏览器和对应管理的键盘快捷键。
-seo-description: 本文列出了可与自适应表单编辑器、主题编辑器、内容浏览器和对应管理一起使用的键盘快捷键。
+description: 本文列表了可用于Windows和Macintosh操作系统的自适应表单编辑器、主题编辑器、内容浏览器和对应管理的键盘快捷键。
+seo-description: 本文列表了可与自适应表单编辑器、主题编辑器、内容浏览器和对应管理一起使用的键盘快捷键。
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
 
 # AEM Forms键盘快捷键 {#aem-forms-keyboard-shortcuts}
 
-本文列出了可用于Windows和Macintosh操作系统的自适应表单编辑器、主题编辑器、内容浏览器和对应管理的键盘快捷键。
+本文列表了可用于Windows和Macintosh操作系统的自适应表单编辑器、主题编辑器、内容浏览器和对应管理的键盘快捷键。
 
 ## 自适应表单编辑器 {#adaptiveformeditor}
 
@@ -27,8 +27,8 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 | 在属性浏览器中保存选定自适应表单组件的更改 | Ctrl+S | Command+S |
 | 所选自适应表单组件的编辑规则 | Ctrl+Alt+Enter | Command+Alt+Return |
 | 在预览模式和当前选定的模式（例如，编辑、基架等）之间切换 | Ctrl+Shift+M | Ctrl+Shift+M&amp;ast; |
-| 撤消上次更改 | Ctrl+Z | Ctrl+Z&amp;ast; |
-| 重做上次更改 | Ctrl+Y | Ctrl+Y&amp;Amp;ast; |
+| 撤消最后一次更改 | Ctrl+Z | Ctrl+Z&amp;ast; |
+| 重做最后一次更改 | Ctrl+Y | Ctrl+Y&amp;Amp;ast; |
 | 选择多个组件 | Shift+单击 | Shift+单击 |
 | 复制选定组件 | Ctrl-C | Ctrl-C&amp;Amp;ast; |
 | 剪切选定的组件。 剪切组件在粘贴到新位置之前不会消失。 | Ctrl-X | Ctrl-X&amp;Amp;ast; |
@@ -36,7 +36,7 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 | 删除选定组件 | Ctrl+Del | Ctrl+Del&amp;ast; |
 | 删除选定组件 | Ctrl+Backspace | Ctrl+Backspace&amp;ast; |
 | 在预览模式下使用富文本编辑器组件时使文本变粗 | Ctrl+B | Ctrl+B&amp;Amp;ast; |
-| 在预览模式下使用富文本编辑器组件时将文本设置为斜体 | Ctrl+I | Ctrl+I&amp;Amp;ast; |
+| 在预览模式下使用富文本编辑器组件时，将文本设置为斜体 | Ctrl+I | Ctrl+I&amp;Amp;ast; |
 | 在预览模式下使用富文本编辑器组件时使文本变粗 | Ctrl+U | Ctrl+U&amp;Amp;ast; |
 
 >[!NOTE]
@@ -59,8 +59,8 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 |---|---|---|
 | 为主题中的选定组件打开属性浏览器 | Alt+Enter | Alt+Return |
 | 关闭主题中所选组件的属性浏览器 | Ctrl+Alt+W | Command+Alt+W |
-| 撤消上次更改 | Ctrl+Z | Ctrl+Z&amp;ast; |
-| 重做上次更改 | Ctrl+Y | Ctrl+Y&amp;Amp;ast; |
+| 撤消最后一次更改 | Ctrl+Z | Ctrl+Z&amp;ast; |
+| 重做最后一次更改 | Ctrl+Y | Ctrl+Y&amp;Amp;ast; |
 | 在主题中选定组件的“属性”浏览器中保存更改 | Ctrl+S | Ctrl+S&amp;ast; |
 
 >[!NOTE]
@@ -83,9 +83,9 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 
 ## 通信管理 {#correspondence-management}
 
-本节列出了各种键盘和辅助功能快捷键，您可以在“对应管理”文本编辑器中使用这些快捷键。 您可以在以下情况下使用这些快捷键：
+此部分列表了各种键盘和辅助功能快捷键，您可以在“对应管理”文本编辑器中使用这些快捷键。 您可以在以下情况下使用这些快捷键：
 
-* 创建或编辑文 [本资源](/help/forms/using/document-fragments.md#main-pars-header-0)
+* 创建或编辑文 [本资源](texts-interactive-communications.md)
 * 在创建通信时点击相关的编辑图标( ![edittextmodule](assets/edittextmodule.png))后编辑 [文本模块](/help/forms/using/create-correspondence.md)。
 
 ### 选择文本并移动光标 {#text-selection-and-moving-the-cursor-around}
@@ -178,7 +178,7 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
    <td>Fn+向下箭头键</td> 
   </tr>
   <tr>
-   <td><p>将光标移到页面开头</p> </td> 
+   <td><p>将光标移到页面开始</p> </td> 
    <td><p>Page Up</p> </td> 
    <td>Fn+向上箭头键</td> 
   </tr>
@@ -188,7 +188,7 @@ source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
    <td>Command+Shift+向下箭头<br /> </td> 
   </tr>
   <tr>
-   <td><p>从当前位置选择文本以开始（模块）</p> </td> 
+   <td><p>从当前位置选择文本到开始（模块的）</p> </td> 
    <td><p>Shift+Ctrl+Home</p> </td> 
    <td>Command+Shift+向上箭头键</td> 
   </tr>
