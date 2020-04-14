@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -18,9 +18,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 按照建议的序列执行以下步骤，为AEM Forms构建Android应用程序。
 
-1. [下载AEM Forms应用程序源代码包](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-277929160)
-1. [设置环境变量](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-111803610)
-1. [构建标准AEM Forms应用程序](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-heading-0)
+1. [下载AEM Forms应用程序源代码包](#download-android-zip)
+1. [设置环境变量](#set-environment-variable-android)
+1. [构建标准AEM Forms应用程序](#set-up-the-xcode-project)
 
 ## 下载AEM Forms应用程序源代码包 {#download-android-zip}
 
@@ -50,8 +50,8 @@ AEM Forms应用程序源代码包引用存档 `adobe-lc-mobileworkspace-src-<ver
 
 在本地文件系统上保存adobe-lc-mobileworkspace-src-&lt;version>.zip文件并设置环境变量后，请使用以下任意选项构建标准AEM Forms Android应用程序：
 
-* [使用Android Studio构建AEM Forms应用程序](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-1347434739)
-* [使用Android Studio生成。apk文件](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-0)
+* [使用Android Studio构建AEM Forms应用程序](#using-android-studio)
+* [使用Android Studio生成。apk文件](#generate-apk-android-studio)
 
 ### 使用Android Studio构建AEM Forms应用程序 {#using-android-studio}
 
