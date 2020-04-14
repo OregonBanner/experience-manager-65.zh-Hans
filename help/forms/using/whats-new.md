@@ -1,15 +1,15 @@
 ---
 title: 新增功能摘要| AEM 6.5表单
 seo-title: 新增功能摘要| AEM 6.5表单
-description: 世界上最先进的数字体验管理解决方案的最新功能和表单和文档改进。
-seo-description: 世界上最先进的数字体验管理解决方案的最新功能和表单和文档改进。
+description: 世界最先进的数字体验管理解决方案的最新功能和表单和文档改进。
+seo-description: 世界最先进的数字体验管理解决方案的最新功能和表单和文档改进。
 uuid: 179d372d-b7f6-4771-8349-fc6b7854efac
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
+source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
 
 ## 事务报表 {#transaction-reports}
 
-交易报表允许您捕获和跟踪已提交的表单、已处理文档和已渲染文档的数量。 跟踪这些交易的目标是对产品使用情况做出明智决策，并重新平衡硬件和软件投资。 一些交易示例包括：
+事务报表允许您捕获和跟踪提交的表单、已处理的文档和呈现的文档数。 跟踪这些交易的目标是对产品使用情况做出明智决策，并重新平衡硬件和软件投资。 一些交易示例包括：
 
 * 提交自适应表单、HTML5表单或表单集
 * 交互式通信的打印版或Web版的再现
@@ -32,7 +32,7 @@ source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
 
 **定义数据显示模式**
 
-交互通信作者现在可以为字 [段、变量和表单数据模型元素](../../forms/using/create-interactive-communication.md#main-pars-header-1162517146) 定义数据显示模式。 例如，日期、货币或电话格式。
+交互通信作者现在可以为字 [段、变量和表单数据模型元素](create-interactive-communication.md#datadisplaypatterns) 定义数据显示模式。 例如，日期、货币或电话格式。
 
 **使用新的图表类型**
 
@@ -44,7 +44,7 @@ source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
 
 **在Web渠道中使用新组件**
 
-您现在可以向Web渠道添加“按钮”和“分隔符”组件。 有关详细信息，请参 [阅将按钮组件添加到Web渠道中](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) , [以及Web渠道中的分隔符组件](../../forms/using/create-interactive-communication.md#separatorcomponent)。
+您现在可以将“按钮”和“分隔符”组件添加到Web渠道。 有关详细信息，请参 [阅将按钮组件添加到Web渠道中的Web](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) , [以及Web渠道中的Separator组件](../../forms/using/create-interactive-communication.md#separatorcomponent)。
 
 **用于调整组件大小的布局模式**
 
@@ -52,25 +52,25 @@ source-git-commit: eb6ecc224c4fdd8c1af6f7800dc30de419f5ef68
 
 **可用性改进**
 
-交互通信作者现在可以在创建通信时利用各种易于使用的操作。 操作列表包括：
+交互通信作者现在可以在创建通信时利用各种易于使用的操作。 运营列表包括：
 
-* [在打印和Web渠道中执行撤消——重做操作](../../forms/using/create-interactive-communication.md#undoredoactions)
+* [在印刷和Web渠道中执行撤消——重做操作](../../forms/using/create-interactive-communication.md#undoredoactions)
 * [使用@符号在文档片段中添加变量](../../forms/using/texts-interactive-communications.md#searchvariables)
 * [使用@符号在文档片段中添加数据模型元素](../../forms/using/texts-interactive-communications.md#searchdatamodelproperties)
-* [删除Web渠道或将其添加到现有交互式通信](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
+* [删除Web渠道或将其添加到现有交互通信](../../forms/using/create-interactive-communication.md#edit-interactive-communication-properties)
 * [使用拖放操作将数据源元素与字段和变量绑定](../../forms/using/create-interactive-communication.md#binddatasourceelements)
 * [在创作交互式通信时高亮显示未绑定的字段和变量](../../forms/using/create-interactive-communication.md#distinguishunboundfields)
 * [对Web渠道中继承的组件执行其他操作，如复制、组或更多](../../forms/using/create-interactive-communication.md#componenttoolbar)
 
 **同步过程的改进**
 
-在使用打印渠道自动生成的Web渠道布局中，有几项改进。
+在使用“打印渠道”自动生成的Web渠道布局中，有几项改进。
 
 ![交互通信图表](assets/interactive-communication-charts.png)
 
 ## 自适应表单 {#adaptive-forms}
 
-### 在自适应表单中使用Adobe sign基于云的数字签名 {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
+### 在自适应表单中使用Adobe Sign基于云的数字签名 {#use-adobe-sign-s-cloud-based-digital-signatures-in-adaptive-forms}
 
 [基于云的数字签名](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) ，或远程签名，是跨桌面、移动设备和Web工作的新一代数字签名。 并达到签署方身份验证的最高级别的合规性和保证。 您现在可以 [使用基于云的数字签名](../../forms/using/working-with-adobe-sign.md) ，对自适应表单进行签名。
 
@@ -100,7 +100,7 @@ AEM Forms允许您将自 [适应表单](../../forms/using/embed-adaptive-form-ae
 
 * 在整个工作流中动态存储、更新和使用存储在变量中的值，无需依赖自定义代码
 * 检索值并直接更新到已提交表单的表单数据模型和数据文件(XML/JSON)
-* 将完整文档存储在变量中以执行文档处理
+* 将完整的文档存储在变量中以执行文档处理
 
 “转到”步骤或“拆分”步骤以及所有AEM Forms工作流步骤都支持变量。 您可以使用MetaDataMap界面访问工作流步骤中不支持变量的变量。 有关详细信息，请参 [阅AEM工作流中的变量](../../forms/using/variable-in-aem-workflows.md)。
 
@@ -108,7 +108,7 @@ AEM Forms允许您将自 [适应表单](../../forms/using/embed-adaptive-form-ae
 
 #### 使用具有不同自适应表单的工作流 {#use-a-workflow-with-different-adaptive-forms}
 
-您可以 [在运行时为以表单为中心的工作流的分配任务和记录文档步骤指定自适应表单](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) 。 它允许工作流使用不同的自适应表单。 在设计工作流时，您可以决定选择自适应表单的方法。 自适应表单可以位于绝对路径中，作为有效负荷提交到工作流中，或者位于使用变量计算的路径中。
+您可以 [为运行时上以表单为中心的任务的分配工作流](../../forms/using/aem-forms-workflow-step-reference.md#assign-task-step) 、文档记录步骤指定自适应表单。 它允许工作流使用不同的自适应表单。 在设计工作流时，您可以决定选择自适应表单的方法。 自适应表单可以位于绝对路径中，作为有效负荷提交到工作流中，或者位于使用变量计算的路径中。
 
 #### 使用以表单为中心的工作流程步骤的增强记录功能 {#use-enhanced-logging-capabilities-of-forms-centric-workflow-steps}
 
@@ -184,7 +184,7 @@ AEM Forms允许您将自 [适应表单](../../forms/using/embed-adaptive-form-ae
     </ul> </td>
   </tr>
   <tr>
-   <td>AEM Forms应用程序<br /> </td>
+   <td>AEM Forms app<br /> </td>
    <td>
     <ul>
      <li>Windows 8.1支持</li>
@@ -204,7 +204,7 @@ AEM Forms允许您将自 [适应表单](../../forms/using/embed-adaptive-form-ae
 
 #### 新的基于HTML5的UI {#new-html-based-uis}
 
-根据Adobe Flash player的计划EOL以及将基于Flash的内容迁移到开放标准的总体方向，AEM 6.5表单已使用基于HTML5的UI取代了JEE管理控制台上AEM表单的基于Flash的UI、进程管理、Reader扩展和类别管理UI。
+根据Adobe Flash Player的计划EOL以及将基于Flash的内容迁移到开放标准的总体方向，AEM 6.5表单已使用基于HTML5的UI取代了JEE管理控制台上AEM表单的基于Flash的UI、进程管理、Reader扩展和类别管理UI。
 
 #### 安全性改进 {#security-improvements}
 
