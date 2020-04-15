@@ -3,18 +3,18 @@ title: 使用媒体处理程序和工作流处理资源
 description: 了解媒体处理程序以及如何使用工作流对数字资产执行任务。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: b600e5eaf7c61568f2559b3fb4915d433f5e13bf
 
 ---
 
 
 # 使用媒体处理程序和工作流处理资源 {#processing-assets-using-media-handlers-and-workflows}
 
-Adobe Experience Manager(AEM)资产附带一组用于处理资产的默认工作流程和媒体处理程序。 该工作流定义要对资产执行的常规任务，然后将特定任务委派给媒体处理程序，例如缩略图生成或元数据提取。
+Adobe Experience Manager(AEM)资产附带一组用于处理资产的默认工作流和媒体处理程序。 工作流定义要对资产执行的任务，然后将特定任务委派给媒体处理程序，例如缩略图生成或元数据提取。
 
-可以定义一个工作流，该工作流将在特定类型的资产上传到服务器时自动执行。 这些处理步骤是根据一系列AEM Assets媒体处理程序定义的。 AEM提供一些 [内置的处理函数](#default-media-handlers) ，其他处理函数可以是自定义 [开发的](#creating-a-new-media-handler) ，也可以通过将进程委派到命令行工具来 [定义](#command-line-based-media-handler)。
+可以将工作流配置为在上传特定MIME类型的资产时自动执行。 这些处理步骤是根据一系列AEM Assets媒体处理程序定义的。 AEM提供一些 [内置的处理函数](#default-media-handlers) ，其他处理函数可以是自定义 [开发的](#creating-a-new-media-handler) ，也可以通过将进程委派到命令行工具来 [定义](#command-line-based-media-handler)。
 
-媒体处理程序是AEM资产中对资产执行特定操作的服务。 例如，当MP3音频文件上传到AEM时，工作流会触发一个MP3处理程序，该处理程序提取元数据并生成缩略图。 媒体处理程序通常与工作流结合使用。 AEM中支持大多数常见的MIME类型。 可通过扩展／创建工作流、扩展／创建媒体处理函数或禁用／启用媒体处理函数，对资产执行特定任务。
+媒体处理程序是AEM资产中对资产执行特定操作的服务。 例如，当MP3音频文件上传到AEM时，工作流会触发一个MP3处理程序，该处理程序提取元数据并生成缩略图。 媒体处理程序通常与工作流结合使用。 AEM中支持大多数常见的MIME类型。 通过扩展／创建任务、扩展／创建媒体处理函数或禁用／启用媒体处理函数，可以对资产执行特定工作流。
 
 >[!NOTE]
 >
@@ -29,29 +29,29 @@ AEM资产中提供以下媒体处理函数，并处理最常见的MIME类型：
 
 | 处理程序名称 | 服务名称（在系统控制台中） | 支持的MIME类型 |
 |---|---|---|
-| [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
-| [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
-| [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg |
-| [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
-| [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
-| [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
-| [!UICONTROL MSOfficeHandler] | com.day.cq.dam.handler.standard.msoffice.MSOfficeHandler | application/msword |
-| [!UICONTROL MSPowerPointHandler] | com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler | application/vnd.ms-powerpoint |
-| [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
-| [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
-| [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | 回退，以防发现其他处理函数从资产中提取数据 |
+| [!UICONTROL TextHandler] | `com.day.cq.dam.core.impl.handler.TextHandler` | text/plain |
+| [!UICONTROL PdfHandler] | `com.day.cq.dam.handler.standard.pdf.PdfHandler` | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
+| [!UICONTROL JpegHandler] | `com.day.cq.dam.core.impl.handler.JpegHandler` | image/jpeg |
+| [!UICONTROL Mp3Handler] | `com.day.cq.dam.handler.standard.mp3.Mp3Handler` | audio/mpeg |
+| [!UICONTROL ZipHandler] | `com.day.cq.dam.handler.standard.zip.ZipHandler` | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
+| [!UICONTROL PictHandler] | `com.day.cq.dam.handler.standard.pict.PictHandler` | image/pict |
+| [!UICONTROL StandardImageHandler] | `com.day.cq.dam.core.impl.handler.StandardImageHandler` | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
+| [!UICONTROL MSOfficeHandler] | `com.day.cq.dam.handler.standard.msoffice.MSOfficeHandler` | application/msword |
+| [!UICONTROL MSPowerPointHandler] | `com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler` | application/vnd.ms-powerpoint |
+| [!UICONTROL OpenOfficeHandler] | `com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler` | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
+| [!UICONTROL EPubHandler] | `com.day.cq.dam.handler.standard.epub.EPubHandler` | application/epub+zip |
+| [!UICONTROL GenericAssetHandler] | `com.day.cq.dam.core.impl.handler.GenericAssetHandler` | 回退，以防发现其他处理函数从资产中提取数据 |
 
-所有处理函数都执行以下任务：
+所有处理函数都执行以下任务:
 
 * 从资产中提取所有可用元数据。
-* 从资产中创建缩略图。
+* 创建资产的缩略图。
 
-可以查看活动媒体处理程序：
+要视图活动媒体处理程序，请执行以下操作：
 
 1. In your browser, navigate to `http://localhost:4502/system/console/components`.
-1. 单击链接 `com.day.cq.dam.core.impl.store.AssetStoreImpl`。
-1. 将显示包含所有活动媒体处理程序的列表。 例如：
+1. 单击 `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
+1. 将显示包含所有活动媒体处理函数的列表。 例如：
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
@@ -59,15 +59,15 @@ AEM资产中提供以下媒体处理函数，并处理最常见的MIME类型：
 
 媒体处理程序是通常与工作流结合使用的服务。
 
-AEM具有一些用于处理资产的默认工作流。 要查看这些模型，请打开工作流控制台，然后单击“模 **[!UICONTROL 型]** ”选项卡：以AEM资产开头的工作流标题是特定于资产的标题。
+AEM具有一些用于处理资产的默认工作流。 要视图这些模型，请打开工作流控制台，然后单击“模 **[!UICONTROL 型]** ”选项卡：与AEM资产开始的工作流标题是特定于资产的标题。
 
-可以扩展现有工作流，并可以创建新工作流，以根据特定要求处理资产。
+现有工作流可以扩展，也可以创建新的，以根据特定要求处理资产。
 
-以下示例演示如何增强 **[!UICONTROL AEM资产同步工作流]** ，以便为除PDF文档之外的所有资产生成子资产。
+以下示例演示如何增强 **[!UICONTROL AEM Assets 同步工作流]**，以便为除 PDF 文档外的所有资产生成子资产。
 
 ### 禁用或启用媒体处理程序 {#disabling-enabling-a-media-handler}
 
-媒体处理程序可以通过Apache Felix web管理控制台禁用或启用。 禁用媒体处理程序后，不会对资产执行其任务。
+媒体处理程序可以通过Apache Felix Web管理控制台禁用或启用。 禁用媒体处理程序后，不会对资产执行其任务。
 
 要启用／禁用媒体处理程序，请执行以下操作：
 
@@ -82,7 +82,7 @@ AEM具有一些用于处理资产的默认工作流。 要查看这些模型，�
 
 #### 重要类和接口 {#important-classes-and-interfaces}
 
-开始实施的最佳方式是从提供的抽象实现继承，该实现能够处理大多数事务并提供合理的默认行为：课 `com.day.cq.dam.core.AbstractAssetHandler` 程。
+开始实现的最佳方法是继承所提供的抽象实现，该实现能够处理大多数事务并提供合理的默认行为：课 `com.day.cq.dam.core.AbstractAssetHandler` 程。
 
 该类已经提供抽象服务描述符。 因此，如果您从此类继承并使用maven-sling-plugin，请确保将inherit标志设置为 `true`。
 
@@ -94,15 +94,17 @@ AEM具有一些用于处理资产的默认工作流。 要查看这些模型，�
 
 以下是示例模板：
 
-`package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement the relevant parts } `
+```Java
+package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ public class MyMediaHandler extends com.day.cq.dam.core.AbstractAssetHandler { // implement the relevant parts }
+```
 
 接口和类包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 接口：此界面描述了添加对特定MIME类型的支持的服务。 添加新的mime类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
+* `com.day.cq.dam.api.handler.AssetHandler` 接口：此界面描述了添加对特定MIME类型的支持的服务。 添加新的mime类型需要实现此接口。 该界面包含导入和导出特定文档、创建缩略图和提取元数据的方法。
 * `com.day.cq.dam.core.AbstractAssetHandler` class:此类用作所有其他资产处理函数实现的基础，并提供常用功能。
-* `com.day.cq.dam.core.AbstractSubAssetHandler` 类:
+* `com.day.cq.dam.core.AbstractSubAssetHandler` class:
    * 该类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能以及常用功能。
-   * 开始实施的最佳方式是从提供的抽象实现继承，该实现能够处理大多数事务并提供合理的默认行为：com.day.cq.dam.core.AbstractAssetHandler类。
+   * 开始实现的最佳方法是继承所提供的抽象实现，该实现能够处理大多数事务并提供合理的默认行为：com.day.cq.dam.core.AbstractAssetHandler类。
    * 该类已经提供抽象服务描述符。 因此，如果您从此类继承并使用maven-sling-plugin，请确保将inherit标志设置为true。
 
 需要实现以下方法：
@@ -117,11 +119,11 @@ AEM具有一些用于处理资产的默认工作流。 要查看这些模型，�
 
 接口和类包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 接口：此界面描述了添加对特定MIME类型的支持的服务。 添加新的mime类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
+* `com.day.cq.dam.api.handler.AssetHandler` 接口：此界面描述了添加对特定MIME类型的支持的服务。 添加新的mime类型需要实现此接口。 该界面包含导入和导出特定文档、创建缩略图和提取元数据的方法。
 * `com.day.cq.dam.core.AbstractAssetHandler` class:此类用作所有其他资产处理函数实现的基础，并提供常用功能。
-* `com.day.cq.dam.core.AbstractSubAssetHandler` class:该类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能以及常用功能。
+* `com.day.cq.dam.core.AbstractSubAssetHandler` class:该类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能和常用功能。
 
-#### 示例：创建特定的文本处理程序 {#example-create-a-specific-text-handler}
+#### 示例：创建特定的文本处理函数 {#example-create-a-specific-text-handler}
 
 在本节中，您将创建一个特定的文本处理程序，该处理程序生成带有水印的缩略图。
 
@@ -134,7 +136,7 @@ AEM具有一些用于处理资产的默认工作流。 要查看这些模型，�
 1. 在Eclipse中，创建 `myBundle` Maven项目：
 
    1. 在菜单栏中，单击“文 **[!UICONTROL 件”>“新建”>“其他”]**。
-   1. 在对话框中，展开Maven文件夹，选择“Maven Project”，然后单击“下 **[!UICONTROL 一步”]**。
+   1. 在对话框中，展开Maven文件夹，选择Maven Project，然后单击“下 **[!UICONTROL 一步”]**。
    1. 选中创建简单项目框和使用默认工作区位置框，然后单击下 **[!UICONTROL 一步]**。
    1. 定义Maven项目：
 
@@ -153,10 +155,10 @@ AEM具有一些用于处理资产的默认工作流。 要查看这些模型，�
       * 编译器规范级别
       * 生成的。class文件兼容性
       * 源兼容性
-   1. 单击&#x200B;**[!UICONTROL 确定]**。在对话框窗口中，单击“是”。
+   1. 单击&#x200B;**[!UICONTROL 确定]**。在对话框窗口中，单击“ **[!UICONTROL 是”]**。
 
 
-1. 将pom.xml文件中的代码替换为以下代码：
+1. 将文件中的代 `pom.xml` 码替换为以下代码：
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
@@ -426,12 +428,12 @@ AEM具有一些用于处理资产的默认工作流。 要查看这些模型，�
 
 1. 编译Java类并创建包：
 
-   1. 右键单击myBundle项目，选择“运行 **[!UICONTROL 为”]**，然后选择“ **[!UICONTROL Maven安装”]**。
+   1. 右键单击项目， `myBundle` 选择“ **[!UICONTROL 运行为]**”，然后 **[!UICONTROL 选择“Maven Install]**”。
    1. 将在 `myBundle-0.0.1-SNAPSHOT.jar` 下创建包（包含编译类） `myBundle/target`。
 
 1. 在CRX资源管理器中，在下面创建一个新节点 `/apps/myApp`。 名称= `install`，类型= `nt:folder`。
 1. 复制捆绑包 `myBundle-0.0.1-SNAPSHOT.jar` 并将其存储在 `/apps/myApp/install` 下（例如，WebDAV）。 新文本处理函数现在在AEM中处于活动状态。
-1. 在您的浏览器中，打开Apache Felix web管理控制台。 选择“组件”选项卡并禁用默认文本处理函数 `com.day.cq.dam.core.impl.handler.TextHandler`。
+1. 在您的浏览器中，打开 [!UICONTROL Apache Felix Web管理控制台]。 选择“组 [!UICONTROL 件] ”选项卡并禁用默认文本处理函数 `com.day.cq.dam.core.impl.handler.TextHandler`。
 
 ## 基于命令行的媒体处理程序 {#command-line-based-media-handler}
 
@@ -439,10 +441,10 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 
 以下转换可以自动运行并存储在AEM资产中：
 
-* 使用ImageMagick和 [Ghostscript的EPS和AI](https://www.imagemagick.org/script/index.php) 转 [换](https://www.ghostscript.com/)
-* 使用FFmpeg的FLV视频转 [码](https://ffmpeg.org/)
-* 使用 [LAME进行MP3编码](http://lame.sourceforge.net/)
-* 使用 [SOX的音频处理](http://sox.sourceforge.net/)
+* 使用ImageMagick和 [Ghostscript的EPS](https://www.imagemagick.org/script/index.php) 和AI [转换](https://www.ghostscript.com/)。
+* 使用FFmpeg的FLV视 [频转码](https://ffmpeg.org/)。
+* 使用 [LAME进行MP3编码](http://lame.sourceforge.net/)。
+* 使用 [SOX处理音频](http://sox.sourceforge.net/)。
 
 >[!NOTE]
 >
@@ -450,7 +452,7 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 
 该流 `CommandLineProcess` 程按列出顺序执行以下操作：
 
-* 根据特定的mime类型（如果指定）筛选文件。
+* 过滤器文件，如果指定，则根据特定的mime类型。
 * 在承载AEM服务器的磁盘上创建一个临时目录。
 * 将原始文件流化到临时目录。
 * 执行由步骤的参数定义的命令。 该命令将在具有运行AEM的用户权限的临时目录中执行。
@@ -480,7 +482,7 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 
    翻转后的图像会添加到目录中。
 
-然后，将命令行流程步骤添加到 **[!UICONTROL DAM更新资产工作流]** :
+然后，将命令行流程步骤添加到 **[!UICONTROL DAM 更新资产]**&#x200B;工作流：
 
 1. 转到“工作 **[!UICONTROL 流]** ”控制台。
 1. 在“模 **[!UICONTROL 型]** ”选项卡中，编辑 **[!UICONTROL DAM更新资产模型]** 。
@@ -500,9 +502,9 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 
 #### 配置CommandLineProcess进程步骤 {#configuring-the-commandlineprocess-process-step}
 
-本节介绍如何设置 **CommandLineProcess的Process** Arguments **（进程参数）**。
+本节介绍如何设置 [!UICONTROL CommandLineProcess] 的[!UICONTROL 进程参数]。
 
-“进程参 **数** ”的值必须以逗号分隔，且不能以空格开头。
+使用逗号分隔“ [!UICONTROL 进程参数] ”的值，但不要将其开始为空格。
 
 | 参数格式 | 描述 |
 |---|---|
@@ -510,20 +512,25 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 | tn:&lt;width>:&lt;height> | 可选参数。 该过程创建一个缩略图，其尺寸在参数中定义。 <br>可以定义多个缩略图。 |
 | cmd:&lt;命令> | 定义将执行的命令。 语法取决于命令行工具。 只能定义一个命令。 <br>以下变量可用于创建命令：<br>`${filename}`:输入文件的名称，例如original.jpg <br> `${file}`:输入文件的完整路径名，例如/tmp/cqdam0816.tmp/original.jpg <br> `${directory}`:的目录，例如/tmp/cqdam0816.tmp <br>`${basename}`:不带扩展名的输入文件的名称，例如原始文件 <br>`${extension}`:输入文件的扩展名，例如jpg |
 
-例如，如果ImageMagick安装在承载AEM服务器的磁盘上，并且如果您使用 **CommandLineProcess** as Implementation创建进程步骤，并将以下值作为 **Process Arguments**:
+例如，如果ImageMagick安装在承载AEM服务器的磁盘上，并且如果您使用 [!UICONTROL CommandLineProcess] as Implementation创建进程步骤，并将以下值作为 [!UICONTROL Process Arguments]:
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
 然后，在工作流运行时，该步骤仅应用于具有image/gif或mime:image/tiff作为mime类型的资产，它将创建翻转后的原始图像，将其转换为。jpg并创建具有尺寸的三个缩略图：140x100、48x48和10x250。
 
-使用以下 **进程参数** ，使用ImageMagick创建三个标准缩略图：
+使用以下 [!UICONTROL 进程参数] ，使用ImageMagick创建三个标准缩略图：
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=319x319 -thumbnail "319x319>" -background transparent -gravity center -extent 319x319 -write png:cq5dam.thumbnail.319.319.png -thumbnail "140x100>" -background transparent -gravity center -extent 140x100 -write cq5dam.thumbnail.140.100.png -thumbnail "48x48>" -background transparent -gravity center -extent 48x48 cq5dam.thumbnail.48.48.png`
 
-使用以下 **进程参数** ，使用ImageMagick创建支持Web的再现：
+使用以下 [!UICONTROL 进程参数] ，使用ImageMagick创建支持Web的再现：
 
 `mime:image/tiff,mime:image/png,mime:image/bmp,mime:image/gif,mime:image/jpeg,cmd:convert ${filename} -define jpeg:size=1280x1280 -thumbnail "1280x1280>" cq5dam.web.1280.1280.jpeg`
 
 >[!NOTE]
 >
->CommandLineProcess **步骤仅适用于资产(类型的节**`dam:Asset`点)或资产的后代。
+>CommandLineProcess [!UICONTROL 步骤仅适用于资产(类型的节]`dam:Asset`点)或资产的后代。
+
+>[!MORELIKETHIS]
+>
+>* [处理资产](assets-workflow.md)
+
