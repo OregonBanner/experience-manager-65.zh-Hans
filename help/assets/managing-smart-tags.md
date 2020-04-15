@@ -3,7 +3,7 @@ title: 管理智能标记和搜索
 description: 更新或删除不准确的智能标记，以提高标记的相关性
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -20,17 +20,17 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 
 您还可以为标记指定更高的等级，以增加其与图像的相关性。 提升图像的标记可提高当基于特定标记执行搜索时在搜索结果中显示图像的可能性。
 
-1. 在OmniSearch框中，根据标记搜索资产。
+1. 在Omnisearch框中，根据标记搜索资产。
 1. 检查搜索结果以识别您找不到与搜索相关的图像。
-1. 选择图像，然后点按工具 **[!UICONTROL 栏中的]** “管理标记”。
-1. 从“管 **[!UICONTROL 理标记]** ”页面检查标记。 如果不希望根据特定标记搜索图像，请选择该标记，然后点按工具栏中的 **[!UICONTROL 删除]** 。 或者，单击／点 `X` 按标签旁边显示的符号。
-1. 要为标记指定更高的等级，请选择标记，然后点按工 **[!UICONTROL 具栏]** 中的提升。 您提升的标记将移到“标记 **[!UICONTROL ”部分]** 。
-1. 单击／点按 **[!UICONTROL 保存]**，然后单击／点按确 **[!UICONTROL 定]** ，关闭成功对话框。
+1. 选择图像，然后单击工 **[!UICONTROL 具栏中的]** “管理标记”。
+1. 从“管 **[!UICONTROL 理标记]** ”页面检查标记。 如果不希望根据特定标记搜索图像，请选择该标记，然后单击工具栏中的 **[!UICONTROL 删除]** 。 或者，单击 `X` 标签旁边显示的符号。
+1. 要为标记指定更高的等级，请选择该标记，然后单击工 **[!UICONTROL 具栏]** 中的提升。 您提升的标记将移到“标记 **[!UICONTROL ”部分]** 。
+1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
 1. 导航到图像的属性页面。 请注意，您提升的标记被分配了高相关性，因此在搜索结果中显示得更高。
 
 ## 使用智能标记了解AEM搜索结果 {#understandsearch}
 
-默认情况下，AEM搜索将搜索词与子句 `AND` 组合。 使用智能标记不会更改此默认行为。 使用智能标记可添加一 `OR` 个额外的子句来查找应用智能标记中的任何搜索词。 For example, consider searching for `woman running`. 默认情况下， `woman` 元数据中 `running` 仅包含关键字的资产不会显示在搜索结果中。 但是，此类搜索查询中会显 `woman` 示一个 `running` 标记为或使用智能标记的资产。 搜索结果是，
+默认情况下，AEM搜索将搜索词与子句 `AND` 组合。 使用智能标记不会更改此默认行为。 使用智能标记可添加一 `OR` 个额外的子句来查找应用智能标记中的任何搜索词。 For example, consider searching for `woman running`. 默认情况下， `woman` 元数据中 `running` 仅包含关键字的资产不会显示在搜索结果中。 但是，此类搜索查询中会显 `woman` 示用 `running` 或使用智能标记标记的资产。 搜索结果是，
 
 * 元数据中 `woman` 包含 `running` 和关键字的资产。
 
