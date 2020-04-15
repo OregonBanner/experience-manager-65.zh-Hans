@@ -1,24 +1,24 @@
 ---
-title: 扩展AEM资产的搜索功能
-description: 将AEM资产的搜索功能扩展到默认值之外。
+title: 扩展Adobe Experience Manager Assets的搜索功能
+description: 将Adobe Experience Manager资产的搜索功能扩展到默认值之外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
 # 扩展资产搜索 {#extending-assets-search}
 
-您可以扩展Adobe Experience Manager(AEM)资产搜索功能。 开箱即用，AEM资产会按字符串搜索资产。
+您可以扩展 [!DNL Adobe Experience Manager Assets] 搜索功能。 开箱即用，按字 [!DNL Experience Manager Assets] 符串搜索资产。
 
 搜索通过QueryBuilder界面完成，因此可以使用多个谓词自定义搜索。 您可以在以下目录中叠加默认的谓词集： `/apps/dam/content/search/searchpanel/facets`.
 
-您还可以向AEM资产管理面板添加其他选项卡。
+您还可以向管理员面板添加其他 [!DNL Assets] 选项卡。
 
 >[!CAUTION]
 >
->自AEM 6.4起，已弃用经典UI。 有关公告，请参 [阅已弃用和已删除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 我们鼓励您使用触屏优化UI。 有关自定义，请参阅 [搜索彩块化](/help/assets/search-facets.md)。
+>自6. [!DNL Experience Manager] 4起，已弃用经典UI。 有关公告，请参 [阅已弃用和已删除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建议使用触屏优化UI。 有关自定义，请参阅 [搜索彩块化](/help/assets/search-facets.md)。
 
 ## 叠加 {#overlaying}
 
@@ -29,7 +29,6 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 >[!NOTE]
 >
 >默认情况下，/下的目录结 `apps` 构不存在，需要创建。 确保节点类型与／下的节点类型匹配 `libs`。
-
 
 ## 添加选项卡 {#adding-tabs}
 
@@ -44,9 +43,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ## 创建自定义谓词 {#creating-custom-predicates}
 
-AEM资产附带一组预定义谓词，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+[!DNL Assets] 附带一组预定义谓词，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用预先存在的谓词，AEM开发人员还可以使用 [Query Builder API创建自己的谓词](/help/sites-developing/querybuilder-api.md)。
+除了使用预先存在的谓词，AEM开发人员还可以使用 [查询Builder API创建自己的谓词](/help/sites-developing/querybuilder-api.md)。
 
 创建自定义谓词需要有关构件框架的 [基本知识](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)。
 
@@ -136,10 +135,10 @@ AEM资产附带一组预定义谓词，可用于自定义资产共享页面。 �
    </script>
    ```
 
-1. 要使组件可用，您需要能够编辑它。 要使组件可编辑，请在CRXDE中添加主类型 **cq:editConfig** 的节点 **cq:EditConfig**。 为了删除段落，请添加一个单值 **DELETE的多值属性cq:actions******。
+1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
 1. 导航到浏览器，在示例页面(例如， **press.html**)上切换到设计模式，为谓词段落系统启用新组件(例如， **left**)。
 
-1. 在“ **编辑** ”模式中 **，新组件现在可在Sidekick中使用(在“搜索”组中** 找到)。 将组件插入谓 **词列** ，然后键入搜索词(例如， **Diamond** )，然后单击放大镜开始搜索。
+1. 在“ **编辑** ”模式中 **，新组件现在可在Sidekick中使用(在“搜索”组中** 找到)。 将组件插入谓 **词列** ，然后键入搜索词(例如， **Diamond** )，然后单击放大镜以开始搜索。
 
    >[!NOTE]
    >
@@ -240,7 +239,7 @@ AEM资产附带一组预定义谓词，可用于自定义资产共享页面。 �
        });
    ```
 
-1. 要使组件可用，您需要能够编辑它。 要使组件可编辑，请在CRXDE中添加主类型 **cq:editConfig** 的节点 **cq:EditConfig**。 为了删除段落，请添加一个单值 **DELETE的多值属性cq:actions******。
+1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
 1. 导航到浏览器，在示例页面(例如， **press.html**)上切换到设计模式，为谓词段落系统启用新组件(例如， **left**)。
 1. 在“ **编辑** ”模式中 **，新组件现在可在Sidekick中使用(在“搜索”组中** 找到)。 将组件插入谓 **词列** 。
 
@@ -253,7 +252,7 @@ AEM资产附带一组预定义谓词，可用于自定义资产共享页面。 �
 | 属性 | 类型 | 描述 |
 |---|---|---|
 | predicateName | 字符串 | 谓词的名称。 默认为 `fulltext` |
-| searchCallback | 函数 | 回调以触发事件搜索 `keyup`。 默认为 `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | 函数 | 回调以在事件上触发搜索 `keyup`。 默认为 `CQ.wcm.SiteAdmin.doSearch` |
 
 ### 属性谓词 {#propertypredicate}
 
@@ -284,7 +283,7 @@ AEM资产附带一组预定义谓词，可用于自定义资产共享页面。 �
 
 | 属性 | 类型 | 描述 |
 |---|---|---|
-| 职位 | 字符串 | 添加其他顶部标题 |
+| 页面 | 字符串 | 添加其他顶部标题 |
 | predicateName | 字符串 | 谓词的名称。 默认为 `daterange` |
 | propertyname | 字符串 | JCR属性的名称。 默认为 `jcr:content/metadata/cq:tags` |
 | 折叠 | 字符串 | 折叠级别。 默认为 `level1` |
