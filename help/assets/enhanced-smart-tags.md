@@ -3,7 +3,7 @@ title: 增强的智能标记
 description: 增强的智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -12,9 +12,9 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ## 增强的智能标记概述 {#overview-of-enhanced-smart-tags}
 
-处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 本质上，它包含员工、合作伙伴和客户通常用来引用和搜索特定类别的数字资产的关键字列表。 使用分类控制的词汇标记资产可确保通过基于标签的搜索轻松识别和检索资产。
+处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 本质上，它包含一列表关键字，员工、合作伙伴和客户通常使用这些关键字来引用和搜索特定类别的数字资产。 使用分类控制的词汇标记资产可确保通过基于标签的搜索轻松识别和检索资产。
 
-与自然语言词汇相比，基于业务分类标记数字资产有助于使其与公司业务保持一致，并确保最相关的资产出现在搜索中。
+与自然语言词汇相比，基于业务分类标记数字资产有助于使其与公司的业务保持一致，并确保最相关的资产出现在搜索中。
 
 例如，汽车制造商可以用型号名称标记汽车图像，以便在搜索各种型号的图像以设计促销活动时仅显示相关图像。
 
@@ -22,13 +22,13 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 一旦标记经过培训并准备就绪，该服务现在就可以通过标记工作流将这些标记应用于资产。
 
-在后台，智能内容服务使用Adobe Sensei的AI框架，根据您的标签结构和业务分类培训其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
+在后台，智能内容服务使用Adobe Sensei AI框架来根据您的标签结构和业务分类培训其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
 
-智能内容服务是在Adobe I/O上托管的云服务。要在Adobe Experience Manager(AEM)中使用它，系统管理员必须将您的AEM实例与Adobe IO集成。
+智能内容服务是在Adobe I/O上托管的云服务。要在Adobe Experience Manager中使用它，系统管理员必须将您的Experience Manager实例与Adobe I/O集成。
 
 总而言之，以下是使用智能内容服务的主要步骤：
 
-* 入职
+* 入门
 * 审核资产和标记（分类定义）
 * 培训智能内容服务
 * 自动标记
@@ -42,17 +42,17 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 * 具有组织管理员权限的Adobe ID帐户。
 * 您的组织启用了智能内容服务。
 
-## 入职 {#onboarding}
+## 入门 {#onboarding}
 
-智能内容服务可作为AEM的加载项购买。 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向Adobe IO的链接。
+智能内容服务可作为Experience Manager的附加组件购买。 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向Adobe IO的链接。
 
-管理员可以通过链接将智能内容服务与AEM集成。 要将服务与AEM资产集成，请参阅配 [置智能标记](config-smart-tagging.md)。
+管理员可以通过链接将智能内容服务与Experience Manager集成。 要将服务与Experience Manager资产集成，请参阅配 [置智能标记](config-smart-tagging.md)。
 
-管理员在AEM中配置服务并添加用户时，入门过程即完成。
+管理员在Experience Manager中配置服务并添加用户时，入门过程即完成。
 
 >[!NOTE]
 >
->如果您使用的是AEM 6.3或更早版本，并且需要为资产添加标签服务，请参阅智 [能标签](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智能标记不使用最新的AI功能，因此不如增强的智能标记服务准确。
+>如果您使用的是Experience Manager 6.3或更早版本，并且需要为资产提供标记服务，请参阅智 [能标记](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智能标记不使用最新的AI功能，因此不如增强的智能标记服务准确。
 
 ## 查看资产和标记 {#reviewing-assets-and-tags}
 
@@ -83,20 +83,20 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 ### 定期培训 {#periodic-training}
 
-您可以启用智能内容服务，以定期培训文件夹中的资产和关联的标记。 打开资产文件夹的属性页面，在详细信 **[!UICONTROL 息选项卡下选择]** “启用 **[!UICONTROL 智能标记]** ”，然后保存更改。
+您可以启用智能内容服务，以定期培训文件夹中的资产和关联的标记。 打开资 [!UICONTROL 产文件夹的] “属性”页，在“详细信息”选项卡 **[!UICONTROL 下选择]****** “启用智能标记”，然后保存更改。
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-为文件夹选择此选项后，AEM会自动运行培训工作流，以便对文件夹资产及其标记进行智能内容服务培训。 默认情况下，培训工作流程每周在星期六的凌晨12:30运行。
+为文件夹选择此选项后，Experience Manager会自动运行培训工作流，以便对文件夹资产及其标记进行智能内容服务培训。 默认情况下，培训工作流程每周在星期六的凌晨12:30运行。
 
 ### 按需培训 {#on-demand-training}
 
 您可以根据需要从工作流控制台中培训智能内容服务。
 
-1. 点按／单击AEM徽标，然后转到工具>工 **[!UICONTROL 作流>模型]**。
-1. 从“工 **[!UICONTROL 作流模型]** ”页面中，选择“智能标记培训”工作流，然后点按／单击工具栏中的“启 **[!UICONTROL 动工作流]****** ”。
+1. 在Experience Manager界面中，转到工具> **[!UICONTROL 工作流>模型]**。
+1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 1. 在“运 **[!UICONTROL 行工作流]** ”对话框中，浏览至有效负荷文件夹，其中包含用于培训服务的标记资产。
-1. 指定工作流的标题并添加评论。 然后，点按／单击 **[!UICONTROL 运行]**。 资产和标记将提交用于培训。
+1. 指定工作流的标题并添加评论。 然后，单击“ **[!UICONTROL 运行]**”。 资产和标记将提交用于培训。
 
    ![workflow_dialog](assets/workflow_dialog.png)
 
@@ -104,22 +104,22 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 >
 >在对文件夹中的资产进行培训后，仅在后续培训周期中处理修改后的资产。
 
-### 查看培训报告 {#viewing-training-reports}
+### 视图培训报告 {#viewing-training-reports}
 
 要检查智能内容服务是否在资产培训集中的标记上接受过培训，请从“报告”控制台中查看培训工作流报告。
 
-1. 点按／单击AEM徽标，然后转到工具> **[!UICONTROL 资产>报表]**。
-1. 在资产报 **[!UICONTROL 告页面中]** ，点按／单击 **[!UICONTROL 创建]**。
-1. 选择“ **[!UICONTROL 智能标记培训]** ”报表，然后点按／单击工 **[!UICONTROL 具栏中的]** “下一步”。
-1. 指定报表的标题和说明。 在“ **[!UICONTROL 计划报告]**”下，保 **[!UICONTROL 持选中]** “立即”选项。 如果要安排以后的报告，请选择“以后 **[!UICONTROL ”]** ，然后指定日期和时间。 然后，点按／单击工 **[!UICONTROL 具栏中]** 的创建。
-1. 在资产 **[!UICONTROL 报表页面中]** ，选择您生成的报表。 要查看报表，请点按工 **[!UICONTROL 具栏]** 中的视图。
+1. 在Experience Manager界面中，转到工具> **[!UICONTROL 资产>报表]**。
+1. In the **[!UICONTROL Asset Reports]** page, click **[!UICONTROL Create]**.
+1. Select the **[!UICONTROL Smart Tags Training]** report, and then click **[!UICONTROL Next]** from the toolbar.
+1. 指定报表的标题和描述。在&#x200B;**[!UICONTROL 计划报告]**&#x200B;下，保持选中&#x200B;**[!UICONTROL 立即]**&#x200B;选项。如果要安排以后的计划报告，请选择&#x200B;**[!UICONTROL 稍后]**，然后指定日期和时间。Then, click **[!UICONTROL Create]** from the toolbar.
+1. 在&#x200B;**[!UICONTROL 资产报表]**&#x200B;页面中，选择生成的报表。To view the report, click **[!UICONTROL View]** from the toolbar.
 1. 查看报告的详细信息。
 
-   报告显示您培训的标记的培训状态。 “培训状态”列中 **[!UICONTROL 的绿色]** ，表示已为标记培训智能内容服务。 黄色表示服务未针对特定标记进行完全培训。 在这种情况下，使用特定标签添加更多图像并运行培训工作流以完全在标签上培训服务。
+   报表显示您培训的标记的培训状态。**[!UICONTROL 培训状态]**&#x200B;列中的绿色表示已为标记培训“智能内容服务”。黄色表示服务未针对特定标记进行完整培训。在这种情况下，使用特定标记添加更多图像并运行培训工作流以在标签上完整地培训服务。
 
    如果在此报告中看不到标记，请再次运行这些标记的培训工作流。
 
-1. 要下载报告，请从列表中选择它，然后点按工 **[!UICONTROL 具栏]** 中的下载。 报告以Excel文件的形式下载。
+1. 要下载报告，请从列表中选择它，然后单击工 **[!UICONTROL 具栏中]** “下载”。 报告以Microsoft Excel电子表格的形式下载。
 
 ## 自动标记资源 {#tagging-assets-automatically}
 
@@ -150,13 +150,13 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 #### 从工作流控制台中标记资产 {#tagging-assets-from-the-workflow-console}
 
-1. 点按／单击AEM徽标，然后转到工具>工 **[!UICONTROL 作流>模型]**。
-1. 从“工 **[!UICONTROL 作流模型]** ”页面中，选择 **[!UICONTROL DAM智能标记资产工作流，然后点按／单击工]** 具栏中的启动工作流 **** 。
+1. 在Experience Manager界面中，转到工具> **[!UICONTROL 工作流>模型]**。
+1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
 1. 在“运 **[!UICONTROL 行工作流]** ”对话框中，浏览至包含要自动应用标记的资产的有效负荷文件夹。
-1. 指定工作流的标题和可选注释。 然后，点按／单击 **[!UICONTROL 运行]**。
+1. 指定工作流的标题和可选注释。 单击“ **[!UICONTROL 运行]**”。
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
@@ -165,18 +165,14 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 #### 从时间轴标记资产 {#tagging-assets-from-the-timeline}
 
 1. 从“资产”用户界面中，选择要应用智能标记的包含资产或特定资产的文件夹。
-1. 点按Experience manager徽标并打开时间轴。
-1. 点按底部的箭头，然后点按／单击“开始工 **[!UICONTROL 作流”]**。
+1. 从左上角打开时间 **[!UICONTROL 轴]**。
+1. 从左侧提要栏底部打开操作，然后单击“ **[!UICONTROL 开始工作流”]**。
 
-   ![start_workflow](assets/start_workflow.png)
+   ![开始工作流](assets/start_workflow.png)
 
 1. 选择 **[!UICONTROL DAM智能标记资产工作流]** ，然后为工作流指定标题。
-1. 点按／单击 **[!UICONTROL 开始]**。 该工作流会对资产应用您的标记。 导航到资产文件夹并检查标记，以验证智能内容服务是否正确标记了您的资产。 有关详细信息，请参 [阅管理智能标记](managing-smart-tags.md)。
+1. 单击 **[!UICONTROL 开始]**。 该工作流会对资产应用您的标记。 导航到资产文件夹并检查标记，以验证智能内容服务是否正确标记了您的资产。 有关详细信息，请参 [阅管理智能标记](managing-smart-tags.md)。
 
 >[!NOTE]
 >
->在随后的标记循环中，只有修改后的资产会再次用经过新培训的标记进行标记。
->
->但是，如果标记工作流的最后一个标记周期与当前标记周期之间的间隙超过24小时，则即使未更改的资产也会被标记。
->
->对于定期标记工作流，当间隙超过6个月时，将标记未更改的资产。
+>在随后的标记循环中，只有修改后的资产会再次用经过新培训的标记进行标记。但是，如果标记工作流的上次标记循环与当前标记循环之间的间隙超过24小时，则甚至未更改的资产也会被标记。 对于定期标记工作流，当时间间隔超过6个月时，将标记未更改的资产。
