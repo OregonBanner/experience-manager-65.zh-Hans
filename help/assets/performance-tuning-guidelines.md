@@ -4,12 +4,12 @@ description: 有关AEM配置、硬件、软件和网络组件更改以消除瓶�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
 
-<!-- TBD: Formatting using backticks. Add UICONTROL tag. Redundant info as reviewed by engineering. -->
+<!-- TBD: Get reviewed by engineering. -->
 
 # 资产性能调整指南 {#assets-performance-tuning-guide}
 
@@ -29,11 +29,11 @@ AEM资产性能不佳可能会影响用户在交互性能、资产处理、下�
 
 ### 临时文件夹 {#temp-folder}
 
-要缩短资产上传时间，请对Java临时目录使用高性能存储。 在Linux和Windows上，可以使用RAM驱动器或SSD。 在基于云的环境中，可以使用等效的高速存储类型。 例如，在Amazon EC2中， [“短暂的驱动器”](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) “驱动器”可用于临时文件夹。
+要缩短资产上传时间，请对Java临时目录使用高性能存储。 在Linux和Windows上，可以使用RAM驱动器或SSD。 在基于云的环境中，可以使用等效的高速存储类型。 例如，在Amazon EC2中，临时 [文件夹可以使用临时驱动器](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) 。
 
 假定服务器具有足够的内存，请配置RAM驱动器。 在Linux上，运行以下命令以创建一个8 GB内存驱动器：
 
-```
+```shell
 mkfs -q /dev/ram1 800000
  mkdir -p /mnt/aem-tmp
  mount /dev/ram1 /mnt/aem-tmp
@@ -58,7 +58,7 @@ Adobe建议在Java 8上部署AEM资产以获得最佳性能。
 
 ### JVM参数 {#jvm-parameters}
 
-应设置以下JVM参数：
+设置以下JVM参数：
 
 * `-XX:+UseConcMarkSweepGC`
 * `-Doak.queryLimitInMemory`=500000
@@ -88,7 +88,7 @@ Adobe建议在Java 8上部署AEM资产以获得最佳性能。
 
 以下S3数据存储配置( `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`)帮助Adobe从现有文件数据存储中提取12.8 TB的二进制大对象(BLOB)到客户站点的S3数据存储中：
 
-```
+```conf
 accessKey=<snip>
  secretKey=<snip>
  s3Bucket=<snip>
@@ -126,18 +126,17 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 尽可能将“ [!UICONTROL DAM更新资产”工作流设置为] “临时”。 该设置显着减少了处理工作流所需的开销，因为在这种情况下，工作流无需通过正常的跟踪和存档过程。
 
->[!NOTE]
->
->在AEM 6.3中，默认情况下， [!UICONTROL DAM更新资产工作流程设置为] “临时”。在这种情况下，您可以跳过以下过程。
-
 1. 导航到 `/miscadmin` 位于的AEM实例中 `https://[aem_server]:[port]/miscadmin`。
+
 1. 展开“ **[!UICONTROL 工具]** ”>“工 **[!UICONTROL 作流]** ” **[!UICONTROL >“模]** 型” **[!UICONTROL >“dam]**”。
+
 1. 打开 **[!UICONTROL DAM更新资产]**。 从浮动工具面板中，切换到“页 **[!UICONTROL 面]** ”选项卡，然后单击“页 **[!UICONTROL 面属性”]**。
+
 1. Select **[!UICONTROL Transient Workflow]** and click **[!UICONTROL OK]**.
 
    >[!NOTE]
    >
-   >某些功能不支持临时工作流。 如果您的AEM资产部署需要这些功能，请勿配置临时工作流。
+   >某些功能不支持临时工作流。 如果您的 [!DNL Assets] 部署需要这些功能，请不要配置临时工作流。
 
 如果无法使用临时工作流，请定期运行工作流清除以删除存档的  DAM更新资产工作流，以确保系统性能不会降低。
 
@@ -147,14 +146,16 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 如果清除时间过长，就会超时。 因此，您应确保清除作业完成，以避免由于工作流数量过多而无法完成清除工作流的情况。
 
-例如，在执行大量非临时工作流（创建工作流实例节点）后，您可以在临时基础上运行 [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) 。 它会立即删除冗余的已完成工作流实例，而不是等待Adobe Granite Workflow Purge调度程序运行。
+例如，在执行大量非临时工作流（创建工作流实例节点）后，您可以按点执行 [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) 。 它会立即删除冗余的已完成工作流实例，而不是等待Adobe Granite Workflow Purge调度程序运行。
 
 ### 最大并行作业数 {#maximum-parallel-jobs}
 
 默认情况下，AEM运行的最大并行作业数等于服务器上的处理器数。 此设置的问题是，在负载较重的期间，所有处理器都被  DAM更新资产工作流占用，这会降低UI响应速度并阻止AEM运行其他可保护服务器性能和稳定性的进程。 作为最佳实践，请通过执行以下步骤将此值设置为服务器上可用处理器的一半：
 
-1. 在AEM作者上，转到 `https://[aem_server]:[port]/system/console/slingevent`。
+1. 在Experience Manager作者中，转到 `https://[aem_server]:[port]/system/console/slingevent`。
+
 1. 单击 **[!UICONTROL 与您的实施相关的每个工作流队列上的“编辑]** ”(Edit **[!UICONTROL )，例如]** Granite临时工作流队列。
+
 1. 更新“最大并行作 **[!UICONTROL 业数”的值]** ，然后单击“ **[!UICONTROL 保存”]**。
 
 将队列设置到一半的可用处理器是与之开始的可行解决方案。 但是，您可能必须增加或减少此数量才能实现最大吞吐量并按环境调整它。 对于瞬态和非瞬态工作流以及诸如外部工作流等其他过程，存在单独的队列。 如果将多个队列设置为50%的处理器同时处于活动状态，则系统可以快速过载。 大量使用的队列在用户实现中差别很大。 因此，您可能必须仔细配置它们以获得最高效率，同时不牺牲服务器稳定性。
@@ -256,11 +257,15 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 1. 浏览至 `/oak:index/damAssetLucene`。 添加带 `String[]` 值 `includedPaths` 的属性 `/content/dam`。
 1. 保存.
 
-（仅限AEM6.1和6.2）更新ntBaseLucene索引以改进资产删除和移动性能：
+<!-- TBD: Review by engineering if required in 6.5 docs or not.
 
-1. 浏览到 `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-1. 添加两个nt:unstructured节点， `slingResource` 并在 `damResolvedPath` 下 `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
-1. 在节点上设置以下属性(其中 `ordered` 和 `propertyIndex` 属性的类型为 `Boolean`:
+(AEM6.1 and 6.2 only) Update the `ntBaseLucene` index to improve asset delete and move performance:
+
+1. Browse to `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
+
+1. Add two nt:unstructured nodes `slingResource` and `damResolvedPath` under `/oak:index/ntBaseLucene/indexRules/nt:base/properties`
+
+1. Set the properties below on the nodes (where `ordered` and `propertyIndex` properties are of type `Boolean`:
 
    ```
    slingResource
@@ -275,24 +280,24 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
    type="String"
    ```
 
-1. 在节 `/oak:index/ntBaseLucene` 点上，设置属性 `reindex=true`。 单击“ **[!UICONTROL 全部保存]**”。
-1. 监视error.log以查看何时完成索引：已为索引完成重新索引： [/oak:index/ntBaseLucene]
-1. 您还可以看到，通过刷新CRXDe中的/oak:index/ntBaseLucene节点完成索引，因为重新索引属性将返回false
-1. 完成索引后，返回CRXDe并将这两个索引上的“type”属性设置为disabled
+1. On the `/oak:index/ntBaseLucene` node, set the property `reindex=true`. Click **[!UICONTROL Save All]**.
+1. Monitor the error.log to see when indexing is completed:
+   Reindexing completed for indexes: [/oak:index/ntBaseLucene]
+1. You can also see that indexing is completed by refreshing the /oak:index/ntBaseLucene node in CRXDe as the reindex property would go back to false
+1. Once indexing is completed then go back to CRXDe and set the "type" property to disabled on these two indexes
 
-   * */oak:index/slingResource*
-   * */oak:index/damResolvedPath*
+    * */oak:index/slingResource*
+    * */oak:index/damResolvedPath*
 
-1. 单击“全部保存”
+1. Click "Save All"
+-->
 
 禁用Lucene文本提取:
 
-如果用户无需搜索资产内容(例如，搜索PDF文档中包含的文本)，则可以通过禁用此功能来提高索引性能。
+如果用户不需要对资产进行全文搜索(例如，在PDF文档中搜索文本)，则禁用它。 通过禁用全文索引来提高索引性能。
 
-1. 转到AEM包管理器/crx/packmgr/index.jsp
-1. 上传并安装以下包
-
-[获取文件](assets/disable_indexingbinarytextextraction-10.zip)
+1. 转到AEM包管理器 `/crx/packmgr/index.jsp`。
+1. 上传并安装位于 [disable_indexingbinarytexttraction-10.zip的可用包](assets/disable_indexingbinarytextextraction-10.zip)。
 
 ### 猜测总数 {#guess-total}
 
