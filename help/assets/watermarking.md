@@ -3,7 +3,7 @@ title: 向数字资产中添加水印。
 description: 了解如何使用“水印”功能向资产添加数字水印。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -19,7 +19,8 @@ Adobe Experience Manager(AEM)资产允许您向资产添加数字水印，以帮
 
 1. 从侧面板中，将添加水 **[!UICONTROL 印步骤拖动到]**[!UICONTROL DAM更新资产工作流] 。
 
-   ![拖动添加水印步骤并添加到DAM更新资产工作流](assets/add_watermark_step_aem_assets.png)
+   ![拖动“ [!UICONTROL 添加水印] ”步骤并添加到 [!UICONTROL DAM更新资产工作流]](assets/add_watermark_step_aem_assets.png)2
+   *图：拖动添[!UICONTROL 加水印]，并添加到[!UICONTROL DAM更新资产工作流]*
 
    >[!NOTE]
    >
@@ -30,5 +31,7 @@ Adobe Experience Manager(AEM)资产允许您向资产添加数字水印，以帮
 
    ![在资产的添加水印步骤中提供参数](assets/arguments_add_watermark_aem_assets.png)
 
-1. 使用水印 **[!UICONTROL 步骤保存DAM更新资产]** 。
+   *图：在资产的添加水印步骤中提供参数*
+
+1. Save the **[!UICONTROL DAM Update Asset]** workflow with the watermark step.
 1. 从资产用户界面中，上传示例资产。 在您在上述步骤中配置的位置，将显示带有字体大小、颜色等的水印。
