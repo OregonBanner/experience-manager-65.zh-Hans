@@ -3,7 +3,7 @@ title: 资产模板
 description: 了解AEM资产中的资产模板以及如何使用资产模板创建营销附属品。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ---
 
@@ -18,9 +18,9 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
 作为营销人员，您可以在AEM资产中存储和管理模板，并使用单个基本模板轻松创建多个个性化的打印体验。 您可以创建各种类型的营销宣传资料，包括小册子、传单、明信片、名片等，以便向客户清晰地传达您的营销信息。 您还可以从现有或新的打印输出组合多页打印输出。 最重要的是，您可以同时轻松提供数字和印刷体验，为用户提供一致、集成的体验。
 
-虽然资产模板大多为Adobe inDesign文件，但熟练掌握Adobe inDesign并不妨碍创建出众的人工作。 您无需将Adobe inDesign模板的字段与您在创建目录时需要的产品字段进行映射。 您可以直接在Web界面上以WYSIWYG模式编辑模板。 但是，要使Adobe inDesign处理您的编辑更改，您必须首先配置AEM资产以与Adobe inDesign服务器集成。
+虽然资产模板大多为Adobe InDesign文件，但熟练掌握Adobe InDesign并不妨碍创建出众的人工作。 您无需将Adobe InDesign模板的字段与您在创建目录时需要的产品字段进行映射。 您可以直接在Web界面上以WYSIWYG模式编辑模板。 但是，要使Adobe InDesign处理您的编辑更改，您必须首先配置AEM资产以与Adobe InDesign服务器集成。
 
-从Web界面编辑Adobe inDesign模板的能力有助于促进创意人员与营销人员之间更紧密的协作，同时缩短本地促销活动的上市时间。
+从Web界面编辑Adobe InDesign模板的能力有助于促进创意人员与营销人员之间更紧密的协作，同时缩短本地促销活动的上市时间。
 
 您可以使用资产模板执行以下操作：
 
@@ -42,19 +42,19 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
 ## 创建附属品 {#creating-a-collateral}
 
-考虑您希望为即将开展的营销活动创建数字可打印宣传资料（如小册子、广告传单和广告）并与全球直销店共享的场景。 基于模板创建附属品有助于跨渠道提供统一的客户体验。 设计人员可以使用InDesign等创意解决方案创建营销活动模板（单页或多页），并为您上传这些模板到AEM资产。 在创建宣传资料之前，请事先将一个或多个INDD模板上载到Experience Manager并在其中可用。
+请考虑您希望为即将到来的活动创建数字可打印宣传品（如小册子、广告传单和广告）并与全球直销店共享的场景。 基于模板创建附属品有助于跨渠道提供统一的客户体验。 设计人员可以使用InDesign等创意解决方案创建活动模板（单页或多页），并为您上传模板到AEM资产。 在创建宣传资料之前，请事先将一个或多个INDD模板上载到Experience Manager并在其中可用。
 
-1. 单击或点按AEM徽标，然后单击／点按资产。
+1. 在Experience Manager界面中，单击“ [!UICONTROL 资产”]。
 
 1. 从选项中，选择“模 **[!UICONTROL 板”]**。
 
    ![chlimage_1-101](assets/chlimage_1-306.png)
 
-1. 单击／点 **[!UICONTROL 按创建]**，然后从菜单中选择要创建的宣传品。 例如，选择“ **[!UICONTROL Brochure]**”。
+1. 单击 **[!UICONTROL 创建]**，然后从菜单中选择要创建的宣传品。 例如，选择“ **[!UICONTROL Brochure]**”。
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 提前将一个或多个INDD模板上传到Experience Manager并在其中可用。 为您的宣传册选择一个模板，然后单击／点按下 **[!UICONTROL 一步]**。
+1. 提前将一个或多个INDD模板上传到Experience Manager并在其中可用。 为您的宣传册选择模板，然后单击“下 **[!UICONTROL 一步”]**。
 
    ![chlimage_1-103](assets/chlimage_1-308.png)
 
@@ -62,15 +62,15 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
-1. （可选）点按 **[!UICONTROL 标记]** ，然后为小册子选择一个或多个标记。 点按 **[!UICONTROL 确认]** ，确认您的选择。
+1. （可选）单击“ **[!UICONTROL 标记]** ”，然后为小册子选择一个或多个标记。 单击 **[!UICONTROL 确认]** ，以确认您的选择。
 
    ![chlimage_1-105](assets/chlimage_1-310.png)
 
-1. 单击&#x200B;**[!UICONTROL 创建]**。对话框会确认已创建新手册。 单击／点按打 **[!UICONTROL 开]** ，以在编辑模式下打开宣传册。
+1. 单击&#x200B;**[!UICONTROL 创建]**。对话框会确认已创建新手册。 单击 **[!UICONTROL 打开]** ，以编辑模式打开宣传册。
 
    <!--![chlimage_1-106](assets/.png) -->
 
-   或者，关闭对话框并导航到您开始使用的“模板”页面中的文件夹，以查看您创建的小册子。 在卡片视图中，附属品的类型会显示在其缩略图上。 例如，在这种情况下，Brochure会显示在缩略图上。
+   或者，关闭对话框并导航到您开始使用的“模板”页面中的文件夹，以视图您创建的小册子。 附属品的类型显示在其缩略图上的卡片视图中。 例如，在这种情况下，Brochure会显示在缩略图上。
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
@@ -81,9 +81,9 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 1. 要打开要编辑的宣传资料，请执行下列操作之一：
 
    * 打开您在创建宣传资料步骤7中创建的宣传资料(本例中为 [宣传册)](/help/assets/asset-templates.md#creating-a-collateral)。
-   * 在“模板”页面中，导航到创建宣传品的文件夹，然后单击／点按宣传品缩略图上的编辑快速操作。
-   * 在附属品的资产页面中，点按工 **[!UICONTROL 具栏]** 中的编辑。
-   * 选择附属品，然后点按 **[!UICONTROL 工具栏]** 中的编辑。
+   * 在“模板”页面中，导航到您创建宣传品的文件夹，然后单击宣传品缩略图上的 [!UICONTROL Edit] quick action。
+   * 在附属品的资产页面中，单击工 **[!UICONTROL 具栏中]** 的编辑。
+   * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    资产查找器和文本编辑器显示在页面的左侧。 默认情况下，文本编辑器处于打开状态。
@@ -100,23 +100,23 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
    >[!NOTE]
    >
-   >确保您的AEM实例已与InDesign服务器集成，以使AEM资产能够从InDesign模板中提取数据并使其可供编辑。 有关详细信息，请 [参阅将AEM资产与InDesign server集成](/help/assets/indesign.md)。
+   >确保您的AEM实例已与InDesign服务器集成，以使AEM资产能够从InDesign模板中提取数据并使其可供编辑。 有关详细信息，请 [参阅将AEM资产与InDesign Server集成](/help/assets/indesign.md)。
 
-1. 要修改可编辑字段中的文本，请单击／点按可编辑字段列表中的文本字段，然后编辑该字段中的文本。
+1. 要修改可编辑字段中的文本，请单击可编辑字段列表中的文本字段，然后编辑该字段中的文本。
 
    ![chlimage_1-111](assets/chlimage_1-316.png)
 
    您可以编辑文本属性，例如字体样式、颜色和大小，使用提供的选项。
 
-1. 点按 **[!UICONTROL 预览]** ，以预览文本更改。
+1. 单击 **[!UICONTROL 预览]** ，以预览文本更改。
 
    ![chlimage_1-112](assets/chlimage_1-317.png)
 
-1. 要交换图像，请点按资产 **[!UICONTROL 查找器]**。
+1. 要交换图像，请单击资产 **[!UICONTROL 查找器]**。
 
    ![chlimage_1-113](assets/chlimage_1-318.png)
 
-1. 从可编辑字段列表中选择图像字段，然后将所需图像从资产选取器拖动到可编辑字段。
+1. 从可编辑字段的列表中选择图像字段，然后将所需图像从资产选取器拖动到可编辑字段。
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
@@ -124,7 +124,7 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
-1. 点按 **[!UICONTROL 预览]** ，以预览图像。
+1. 单击 **[!UICONTROL 预览]** ，以预览图像。
 
    ![chlimage_1-116](assets/chlimage_1-321.png)
 
@@ -132,11 +132,11 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
    ![chlimage_1-117](assets/chlimage_1-322.png)
 
-1. 点按 **[!UICONTROL 工具栏]** 上的“预览”以预览所有更改。 单击／点按 **[!UICONTROL 完成]** ，以保存对宣传品的编辑更改。
+1. 单击 **[!UICONTROL 工具栏上的预览]** ，以预览所有更改。 单击 **[!UICONTROL 完成]** ，以保存对宣传品的编辑更改。
 
    >[!NOTE]
    >
-   >只有在附属品中的可编辑图像字段没有任何缺少的图标时，才会启用“预览”和“完成”图标。 如果您的附属品中缺少图标，这是因为AEM无法解析InDesign模板中的图像。 通常，AEM在以下情况下无法解析图像：
+   >只有在附属品中的可编辑图像字段没有任何缺少的图标时，预览和完成图标才会启用。 如果您的附属品中缺少图标，这是因为AEM无法解析InDesign模板中的图像。 通常，AEM在以下情况下无法解析图像：
    >
    >    * 图像未嵌入底层InDesign模板中
    >    * 图像从本地文件系统链接
@@ -149,27 +149,29 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
    >有关使用InDesign文档的更多信息，请参 [阅在AEM中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
 1. 要为小册子生成PDF再现，请在对话框中选择Acrobat选项，然后单击“继 **[!UICONTROL 续”]**。
-1. 附属品会在您开始使用的文件夹中创建。 要查看演绎版，请打开附属品，然后从GlobalNav列 **[!UICONTROL 表中]** 选择演绎版。
+1. 附属品会在您开始使用的文件夹中创建。 要视图演绎版，请打开附属品，然后从GlobalNav列表 **[!UICONTROL 中选择]** “演绎版”。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
 
-1. 单击／点按演绎版列表中的PDF演绎版，以下载PDF文件。 打开PDF文件以查看附属品。
+1. 从演绎版列表中单击PDF演绎版以下载PDF文件。 打开PDF文件以查看附属品。
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
 ## 合并附属品 {#merge-collateral}
 
-1. 单击或点按AEM徽标，然后单击／点按导航页面上的资产。
+1. 在Experience Manager界面中，单击导 [!UICONTROL 航页面] 上的资产。
+
 1. 从选项中，选择“模 **[!UICONTROL 板”]**。
-1. 单击／点按 **[!UICONTROL 创建]** ，然后从菜 **[!UICONTROL 单中选]** 择合并。
+
+1. 单击 **[!UICONTROL 创建]** ，然后从菜 **[!UICONTROL 单中选]** 择“合并”。
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. 在“模 [!UICONTROL 板合并] ”页面，点 **[!UICONTROL 按合并]**。
+1. 在“模 [!UICONTROL 板合并] ”页面中，单 **[!UICONTROL 击合并]**。
 
    ![chlimage_1-121](assets/chlimage_1-326.png)
 
-1. 导航到要合并的宣传品所在的位置，单击／点按要合并的宣传品的缩略图以选择它们。
+1. 导航到要合并的附属品的位置，单击要合并的附属品的缩略图以选择它们。
 
    ![chlimage_1-122](assets/chlimage_1-327.png)
 
@@ -181,20 +183,20 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 
    ![chlimage_1-124](assets/chlimage_1-329.png)
 
-   您可以应用各种筛选器来搜索所需的模板。 例如，您可以根据文件类型或标记搜索模板。
+   您可以应用各种过滤器来搜索所需的模板。 例如，您可以根据文件类型或标记搜索模板。
 
    ![chlimage_1-125](assets/chlimage_1-330.png)
 
-1. 单击／点按工 **[!UICONTROL 具栏中]** 的下一步。
-1. 在“预 **[!UICONTROL 览和重新排序]** ”屏幕中，根据需要重新排列模板并预览要合并的模板选择。 然后，单击／点按工 **[!UICONTROL 具栏]** 中的下一步。
+1. 单击 **[!UICONTROL 工具栏]** 中的下一步。
+1. 在“预览 **[!UICONTROL 和重新排序]** ”屏幕中，根据需要重新排列模板，并预览要合并的模板选择。 然后，单击工 **[!UICONTROL 具栏]** 中的“下一步”。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. 在“配置模板”屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选择 **Acrobat(.PDF)选项** 。 默认情况下，辅助材料以JPG和InDesign格式导出。 要更改多页宣传资料的显示缩略图，请单击／点按更改 **[!UICONTROL 缩略图]**。
+1. 在“配 [!UICONTROL 置模板] ”屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选择 **[!UICONTROL Acrobat(.PDF)]**。 默认情况下，辅助材料以JPG和InDesign格式导出。 要更改多页宣传资料的显示缩略图，请单击“更 **[!UICONTROL 改缩略图”]**。
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
-1. 单击／点按 **[!UICONTROL 保存]** ，然后单击／点按对 **[!UICONTROL 话框中的确]** 定，以关闭对话框。 将在您开始使用的文件夹中创建多页宣传资料。
+1. 单击 **[!UICONTROL 保存]** ，然后在对话 **[!UICONTROL 框中单击确定]** ，以关闭对话框。 将在您开始使用的文件夹中创建多页宣传资料。
 
    >[!NOTE]
    >
