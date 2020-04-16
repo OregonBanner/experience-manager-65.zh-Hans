@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -28,15 +28,17 @@ Endpoint Registry服务提供了以编程方式管理端点的能力。 例如�
 * （AEM表单已弃用）远程处理
 * 任务经理
 
-   ***注意&#x200B;**:SOAP、EJB和（JEE上的AEM表单已弃用）为每个已激活的服务自动创建远程处理端点。 SOAP和EJB端点为所有服务操作启用SOAP和EJB。*
+>[!NOTE]
+>
+>SOAP、EJB和（JEE上的AEM表单已弃用）为每个已激活的服务自动创建远程处理端点。 SOAP和EJB端点为所有服务操作启用SOAP和EJB。
 
-   远程处理端点使Flex客户端能够调用将端点添加到的AEM Forms服务上的操作。 创建与端点同名的Flex目标，Flex客户端可以创建指向该目标的RemoteObjects，以调用相关服务上的操作。
+远程处理端点使Flex客户端能够调用将端点添加到的AEM Forms服务上的操作。 创建与端点同名的Flex目标，Flex客户端可以创建指向该目标的RemoteObjects，以调用相关服务上的操作。
 
-   电子邮件、任务管理器和监视文件夹端点仅显示服务的特定操作。 添加这些端点需要第二个配置步骤来选择调用、设置配置参数以及指定输入和输出参数映射的方法。
+电子邮件、任务管理器和监视文件夹端点仅显示服务的特定操作。 添加这些端点需要第二个配置步骤来选择调用、设置配置参数以及指定输入和输出参数映射的方法。
 
-   您可以将TaskManager端点组织到称为 *类别的组中*。 然后，这些类别会通过TaskManager向Workspace公开，最终用户在分类时会看到TaskManager端点。 在Workspace中，最终用户可以在导航窗格中看到这些类别。 每个类别中的端点在Workspace的“开始进程”页面上显示为进程卡。
+您可以将TaskManager端点组织到称为 *类别的组中*。 然后，这些类别会通过TaskManager向Workspace公开，最终用户在分类时会看到TaskManager端点。 在Workspace中，最终用户可以在导航窗格中看到这些类别。 每个类别中的端点在Workspace的“开始进程”页面上显示为进程卡。
 
-   您可以使用Endpoint Registry服务完成以下任务:
+您可以使用Endpoint Registry服务完成以下任务:
 
 * 添加EJB端点。 (请参阅 [添加EJB端点](programmatically-endpoints.md#adding-ejb-endpoints)。)
 * 添加SOAP端点。 (请参阅 [添加SOAP端点](programmatically-endpoints.md#adding-soap-endpoints)。)
