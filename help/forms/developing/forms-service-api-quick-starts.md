@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -51,9 +51,11 @@ Forms服务提供以下快速开始:
 
 使用Forms服务API的应用程序逻辑作为Java Servlet实现。 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
-* **注意**:使用v进行编程中的快速开始基于您正在使用其他操作系统（如Unix）的表单服务器，将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。)
+>[!NOTE]
+>
+>使用v进行编程中的快速开始基于您正在使用其他操作系统（如Unix）的表单服务器，将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-   **提示**:Adobe开发人员网站包含以下文章，其中讨论了如何创建调用Forms服务并呈现表单的ASP.NET应用程序。 请参 [阅创建表单渲染ASP.NET应用程序](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)。
+**提示**:Adobe开发人员网站包含以下文章，其中讨论了如何创建调用Forms服务并呈现表单的ASP.NET应用程序。 请参 [阅创建表单渲染ASP.NET应用程序](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)。
 
 ## 快速开始（SOAP模式）:使用Java API渲染交互式PDF表单 {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}
 
