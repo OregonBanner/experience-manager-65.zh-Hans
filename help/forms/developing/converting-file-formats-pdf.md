@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -25,17 +25,23 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 转换DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、PPTX、PPTX、VSD、MPP、MPPX、XPS和PUB的Microsoft Office 2003和2007（仅限Windows）
 
-   **注意**:需要Acrobat® 9.2或更高版本才能将Microsoft XPS格式转换为PDF。*
+>[!NOTE]
+>
+>需要Acrobat® 9.2或更高版本才能将Microsoft XPS格式转换为PDF。
 
 * Autodesk AutoCAD 2005、2006、2007、2008和2009可转换DWF、DWG和DXW（仅英文版）
 * 转换WPD、QPW、SHW的Corel WordPerfect 12和X4（仅英文版）
 * OpenOffice 2.0、2.4、3.0.1和3.1可转换ODT、ODS、ODP、ODG、ODF、SXW、SXI、SXC、SXD、DOC、DOCX、RTF、TXT、XLSX、 PPPSX、 PPPT、 PPPT、 PPP、 PPPtx、VSD、MPP、MPPX和PUB
 
-   ***注意&#x200B;**:“生成PDF”服务不支持64位版本的OpenOffice。*
+>[!NOTE]
+>
+>“生成PDF”服务不支持64位版本的OpenOffice。
 
 * 转换PSD的Adobe Photoshop® CS2（仅限Windows）
 
-   *注&#x200B;**意**:不支持Photoshop CS3和CS4，因为它们不支持Windows Server 2003或Windows Server 2008。*
+>[!NOTE]
+>
+>不支持Photoshop CS3和CS4，因为它们不支持Windows Server 2003或Windows Server 2008。
 
 * 转换FM的Adobe FrameMaker® 7.2和8（仅限Windows）
 * 用于转换PMD、PM6、P65和PM的Adobe PageMaker® 7.0（仅限Windows）
