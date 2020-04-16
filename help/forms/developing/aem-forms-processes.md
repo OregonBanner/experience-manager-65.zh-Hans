@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
 一个常见用例是针对一组AEM Forms服务在单个文档上操作。 您可以通过使用Workbench创建流程，将请求发送到服务容器。 流程代表您正在自动处理的业务流程。 有关创建进程的信息，请参 [阅使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
-一旦过程被激活，它就会成为服务，并且可以像其他服务一样被调用。 标准服务（如加密服务）和源自进程的服务之间的一个区别是后者有一个执行许多操作的操作。 相反，标准服务具有许多操作。 每个操作通常执行一个操作，如将策略应用到文档或加密文档。
+一旦过程被激活，它就会成为服务，并且可以像其他服务一样被调用。 标准服务（如加密服务）和源自进程的服务之间的一个区别是后者有一个执行许多操作的操作。 相反，标准服务具有许多操作。 每个操作通常执行一个操作，例如将策略应用于文档或加密文档。
 
 过程可以是短期的，也可以是长期的。 短时进程是同步执行的操作以及从中调用它的同一执行线程。 短期操作与大多数编程语言中的标准行为类似，在这些语言中，客户端应用程序调用方法并等待返回值。
 
@@ -31,9 +31,11 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
    这些类型的进程称为长期进程。 以异步方式执行长期进程，允许系统在资源允许的情况下进行交互，并允许跟踪和监视操作。 当调用长期进程时，AEM Forms会创建一个调用标识符值，作为跟踪长期进程状态的记录的一部分。 记录存储在AEM Forms数据库中。 您可以在不再需要长期流程记录时清除这些记录。
 
-   **注意**:在调用短时间进程时，AEM Forms不会创建记录。
+>[!NOTE]
+>
+>在调用短时间进程时，AEM Forms不会创建记录。
 
-   使用调用标识符值，您可以跟踪长寿命进程的状态。 例如，您可以使用进程调用标识符值来执行进程管理器操作，如终止正在运行的进程实例。
+使用调用标识符值，您可以跟踪长寿命进程的状态。 例如，您可以使用进程调用标识符值来执行进程管理器操作，如终止正在运行的进程实例。
 
 **短时过程示例**
 
@@ -46,8 +48,8 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 调用此短期进程时，它将执行以下操作：
 
 1. 获取作为输入值传递给流程的无担保PDF文档。
-1. 用密码加密PDF文档。 此过程的输入参数的名称是， `inDoc` 数据类型是文档。
-1. 将密码加密的PDF文档另存为PDF文件，保存到本地文件系统。 此过程将加密的PDF文档作为输出值返回。 此进程的输出参数的名称是， `outDoc` 数据类型是document。
+1. 使用密码加密PDF文档。 此进程的输入参数名称为， `inDoc` 数据类型为文档。
+1. 将密码加密的PDF文档另存为PDF文件到本地文件系统。 此过程将加密的PDF文档返回为输出值。 此进程的输出参数的名称是， `outDoc` 数据类型是文档。
 
    此进程在从中调用它的同一执行线程上同步完成。 这个短期过程的名称是， `MyApplication/EncryptDocument`其操作是 `invoke`。
 
@@ -57,7 +59,7 @@ source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
 
    *使用AEM格式进*&#x200B;行编程介绍了以下方法，通过这些方法，您可以有计划地调用此短期流程：
 
-   * [使用AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) （使用Flex应用程序）通过传递不安全的文档来调用短时过程
+   * [通过使用AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) （使用Flex应用程序）通过传递不安全的文档来调用短时过程
    * [使用调用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java调用API）调用短期进程
    * [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Web服务示例）
    * [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Web服务示例）
