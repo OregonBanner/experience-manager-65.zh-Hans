@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -444,7 +444,9 @@ Adobe开发人员网站包含以下文章，其中讨论如何使用Java API调�
    * 如果将此连接属性设 `WebLogic`置为， `java.naming.factory.initial` 则值将设置为 `weblogic.jndi.WLInitialContextFactory`。
    * 同样，如果将此连接属性设 `JBoss`置为， `java.naming.factory.initial` 则该值将设置为 `org.jnp.interfaces.NamingContextFactory`。
    * 如果您不 `java.naming.factory.initial` 想使用默认值，可以将属性设置为符合要求的值。
-   *注&#x200B;**意**:可以使用类的静态成员，而 `DSC_SERVER_TYPE` 不是使用字符串设置连接属 `ServiceClientFactoryProperties` 性。 可以使用以下值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
+   >[!NOTE]
+   >
+   >可以使用类的静态成员，而 `DSC_SERVER_TYPE` 不是使用字符串设置连接属 `ServiceClientFactoryProperties` 性。 可以使用以下值： `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、 `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`或 `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
 
 * **DSC_CREDENTIAL_USERNAME:** 指定AEM表单用户名。 要使用户成功调用AEM Forms服务，他们需要服务用户角色。 用户还可以具有包含服务调用权限的其他角色。 否则，当他们尝试调用服务时会引发异常。 如果禁用了服务安全性，则无需指定此连接属性。
 * **DSC_CREDENTIAL_PASSWORD:** 指定相应的口令值。 如果禁用了服务安全性，则无需指定此连接属性。
@@ -866,7 +868,7 @@ c:/temp/input.pdf文件必须位于客户端计算机（而非服务器计算机
 1. 创建对 `java.io.File` 象。
 1. 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法并传递对 `java.io.File`象。
 
-以下代码示例将对象的内容复 `com.adobe.idp.Document` 制到名为 *AnotherMap.pdf的文件*。
+下面的代码示例将对象的内容复 `com.adobe.idp.Document` 制到名为 *AnotherMap.pdf的文件*。
 
 **将文档对象的内容复制到文件**
 
