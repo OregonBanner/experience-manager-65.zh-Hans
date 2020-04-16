@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 ---
 
@@ -33,9 +33,11 @@ HTML5 Forms中表的默认实现使用HTML DIV元素来呈现表。 渲染涉及
 
 标记为complexTable的表遵循 *原生HTML再现* ，并为某些屏幕阅读器提供更好的辅助功能支持。  要创建行范围，请在同一列中选择表的连续单元格，右键单击所选内容，然后单击“合并单 **[!UICONTROL 元格”]**。
 
-*****注意：创建行跨仅适用于最左侧的单元格。*
+>[!NOTE]
+>
+>创建行跨仅适用于最左侧的单元格。
 
-要将行标记为行标题，请选择行中的所有单元格，右键单击选定内容，然后单击标 **[!UICONTROL 记标题]**。
+要将行标为行标题，请选择行中的所有单元格，右键单击选定内容，然后单击标 **[!UICONTROL 记标题]**。
 
 要将单元格标记为列标题，请选择列中的任意单元格，右键单击选定内容，然后单击“标 **[!UICONTROL 记标题”]**。
 
