@@ -7,14 +7,14 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
 
 ---
 
 
 # 已弃用和已删除的功能 {#deprecated-and-removed-features}
 
-Adobe不断评估产品功能，以不断地用更现代的替代方法来重新开发或替换旧功能，以提高整体客户价值，同时要谨慎考虑向后兼容性。
+Adobe 不断评估产品功能，以便随着时间的推移，使用更现代的替代方案重塑或替换旧功能，从而提高整体客户价值，此过程中将始终谨慎考虑功能的向后兼容性。
 
 为了传达即将删除/替换 AEM 功能，以下规则适用：
 
@@ -38,11 +38,11 @@ Adobe不断评估产品功能，以不断地用更现代的替代方法来重新
   </tr>
   <tr>
    <td>Creative Cloud 集成</td>
-   <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM 6.2中引入了“AEM到Creative cloud文件夹共享</a> ”功能，旨在让创意用户能够从AEM访问资产，以便在CC应用程序中打开资产并上传新文件或将更改保存到AEM。 Creative cloud应用程序中发布的一项新功能Adobe Asset Link，可提供更好的用户体验，并可直接从Photoshop、InDesign和Illustrator中更强大地访问AEM中的资源。</p> <p>Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。</p> </td>
-   <td>建议客户切换到新的Creative cloud集成功能，包括Adobe Asset Link或AEM桌面应用程序。 有关更多详细信息，请查看 <a href="/help/assets/aem-cc-integration-best-practices.md">AEM 和 Creative Cloud 集成最佳实践</a>。</td>
+   <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM 6.2中引入了“AEM到Creative Cloud文件夹共享</a> ”功能，旨在让创意用户能够从AEM访问资产，以便在CC应用程序中打开资产并上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。</p> <p>Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。</p> </td>
+   <td>建议客户切换到新的Creative Cloud集成功能，包括Adobe Asset Link或AEM桌面应用程序。 有关更多详细信息，请查看 <a href="/help/assets/aem-cc-integration-best-practices.md">AEM 和 Creative Cloud 集成最佳实践</a>。</td>
   </tr>
   <tr>
-   <td>Assets</td>
+   <td>资产</td>
    <td>
     <ol>
      <li>默认情况下，对发布实例禁用 AssetDownloadServlet。有关更多详细信息，请参阅 <a href="/help/sites-administering/security-checklist.md">AEM 安全核对清单</a>。</li>
@@ -76,8 +76,8 @@ Adobe不断评估产品功能，以不断地用更现代的替代方法来重新
   </tr>
   <tr>
    <td>商务</td>
-   <td><p><a href="https://github.com/adobe/commerce-cif-api" target="_blank">CIF REST</a> 2018年作为一组微型服务提供，用于实现AEM与商业引擎之间的集成。</p> <p>在Adobe于2018年年中收购Magento后，Adobe决定更改其方法，原因有二： </p> <p><strong>1.</strong> Magento有其自己的一组Commerce API（REST和GraphQL），维护两组API不是很好的做法 </p> <p><strong>2.</strong> 市场趋势表明，客户正在转向GraphQL，因为它是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，使用Magento的GraphQL API作为真相的来源。</p> <p>Adobe不打算在CIF REST中进一步投资。 强烈建议客户使用替换解决方案。</p> </td>
-   <td><p>对于AEM-Magento集成，切换到 <a href="https://github.com/adobe/aem-cif-project-archetype" target="_blank">AEM CIF Archetype</a>，和 <a href="https://github.com/adobe/aem-core-cif-components" target="_blank">AEM CIF Core Components</a></p> <p>有关详细信 <a href="https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md" target="_blank">息，请查看使用Commerce Integration Framework的AEM和Magento Integration</a> 。</p> <p>我们的产品路线图支持与新方法进行第三方（Magento除外）集成。</p> </td>
+   <td><p><a href="https://github.com/adobe/commerce-cif-api" target="_blank">CIF REST</a> 2018年作为一组微型服务提供，用于实现AEM与商务引擎之间的集成。</p> <p>在Adobe于2018年年中收购Magento后，Adobe决定更改其方法，原因有二： </p> <p><strong>1.</strong> Magento有其自己的一组Commerce API（REST和GraphQL），维护两组API不是很好的做法 </p> <p><strong>2.</strong> 市场趋势表明，客户正在转向GraphQL，因为它是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，使用Magento的GraphQL API作为真相的来源。</p> <p>Adobe不打算在CIF REST中进一步投资。 强烈建议客户使用更换解决方案。</p> </td>
+   <td><p>对于AEM-Magento集成，切换到 <a href="https://github.com/adobe/aem-cif-project-archetype" target="_blank">AEM CIF Archetype</a>，和 <a href="https://github.com/adobe/aem-core-cif-components" target="_blank">AEM CIF核心组件</a></p> <p>有关详细信 <a href="https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md" target="_blank">息，请查看使用Commerce Integration Framework的AEM和Magento Integration</a> 。</p> <p>我们的产品路线图支持与新方法进行第三方（Magento除外）集成。</p> </td>
   </tr>
   <tr>
    <td>组件 (AEM Sites)</td>
@@ -96,7 +96,7 @@ Adobe不断评估产品功能，以不断地用更现代的替代方法来重新
     <ul>
      <li>如果您已执行全新安装：
       <ul>
-       <li>在自适应表单的签名步骤中使用基于Adobe sign的签名体验。</li>
+       <li>在自适应表单的签名步骤中使用基于Adobe Sign的签名体验。</li>
        <li>在自适应表单、交互式通信和HTML5表单中使用独立的Scribble Signature组件。</li>
       </ul> </li>
      <li>如果您已从先前版本升级到AEM 6.5 Forms:<br />
@@ -151,21 +151,27 @@ Adobe不断评估产品功能，以不断地用更现代的替代方法来重新
    <td><p>CRXDE lite 中的 Classic UI Dialog Editor</p> <p>Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor</p> </td>
    <td> </td>
   </tr>
+  <tr>
+   <td>表单</td>
+   <td><p>已弃用AEM Forms与AEM Mobile集成&lt; </p> </td>
+   <td>无替换项 </td>
+  </tr>
  </tbody>
 </table>
 
 ## 已删除功能 {#removed-features}
 
-本节列出了已从AEM 6.5中删除的功能和特性。先前版本的这些功能标记为已弃用。
+本节列表了已从AEM 6.5中删除的特性和功能。先前版本的这些功能标记为已弃用。
 
 | 区域 | 功能 | 替换 |
 |--- |--- |--- |
-| 分析活动图 | AEM中包含的活动图版本。 | 由于 Adobe Analytics API 中的安全性更改，因此无法再使用 AEM 中包含的 Activity Map 版本。使用Adobe [Analytics提供的ActivityMap插件](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
+| 分析活动图 | AEM中包含的活动图版本。 | 由于 Adobe Analytics API 中的安全性更改，因此无法再使用 AEM 中包含的 Activity Map 版本。使用Adobe [Analytics提供的ActivityMap插件](https://docs.adobe.com/content/help/zh-Hans/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
 | 集成 | ExactTarget集成已从默认分发（快速启动）中删除，并且不再可用。 | 无替换项 |
 | 集成 | Salesforce Force API 集成已从默认分发版（快速入门）中删除，现在是一个额外的包，可从 PackageShare 安装。 | 功能仍然可用。 |
 | Forms | 由于不再支持 Adobe Central 产品，删除了对 Adobe Central Migration Bridge 服务的支持。 | 无替换项 |
-| Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项 |
-| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |
+| 表单 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项 |
+| 表单 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |
+| 表单 | 在JEE上从LiveCycle ES4 SP1到AEM 6.5 Forms的单跳升级不可用 | 请参 [阅AEM Forms升级文档](../forms/using/upgrade.md) 中的可用升级路径。 |
 | 开发人员 | Firebug Lite 已从默认分发版（快速入门）中删除 | 使用浏览器内置的开发人员控制台 |
 | 开发人员 | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 无替换项 |
 | 资产 | 在AEM 6.5中，资产卸载功能已被删除 | 无替换项 |
