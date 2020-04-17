@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
+source-git-commit: dea9bf9387cf4b69e7054e03c5906ecf25cb0d59
 
 ---
 
@@ -174,7 +174,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果要上传大资
 | 作业选项 |  | 点按／单 **[!UICONTROL 击作业选项]** ，打开“上传作 [!UICONTROL 业选项”对话框] ，然后选择影响整个上传作业的选项。 这些选项对于所有文件类型都是相同的。<br>您可以从“应用程序常规设置”页面开始选择上传文件的默认选项。 要打开此页，请选择“设 **[!UICONTROL 置]** ”>“应 **[!UICONTROL 用程序设置”]**。 点按默 **[!UICONTROL 认上传选项]** ，打开上传作 [!UICONTROL 业选项对话框] 。 |
 |  | 当 | 选择“一次”或“重复”。 要设置重复作业，请选择“重复”选项（“每日”、“每周”、“每月”或“自定义”），以指定您希望FTP上传作业重复的时间。 然后根据需要指定计划选项。 |
 |  | 包含子文件夹 | 上传要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称将自动输入到AEM资产中。 |
-|  | 裁剪选项 | 要从图像的两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁切。 您还可以在“裁剪”菜单上选择“修剪”，然后选择以下选项：<br> **根据** <ul><li>**颜色** -选择颜色选项。 然后选择“角”菜单，并选择图像的角，其颜色最能代表要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块可指定从0到1的容差。对于基于颜色的修剪，指定0可仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅在像素透明时裁剪像素。 接近1的数字可以增加透明度。</li></ul><br>请注意，这些裁剪选项是无损的。 |
+|  | 裁剪选项 | 要从图像的两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁切。 您还可以在“裁剪”菜单上选择“修剪”，然后选择以下选项：<br> **根据** <ul><li>**颜色** -选择颜色选项。 然后选择“角”菜单，并选择图像的角，其颜色最能代表要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅在像素透明时裁剪像素。 接近1的数字可以增加透明度。</li></ul><br>请注意，这些裁剪选项是无损的。 |
 |  | 颜色用户档案选项 | 在创建用于投放的优化文件时，选择颜色转换：<ul><li>默认颜色保留：只要图像包含色彩空间信息，就保留源图像颜色；没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间：保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，使用“发布”设置中配置的默认颜色用户档案进行任何颜色转换。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用“默认颜色保留”选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换为色彩空间”。 此高级选项将覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像都包含错误或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
 |  | 图像编辑选项 | 您可以保留图像中的剪切蒙版，并选择颜色用户档案。<br> 请参阅 [在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
 |  | Postscript选项 | 您可以栅格化PostScript®文件、裁剪文件、保持透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
@@ -306,7 +306,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 提取完成后，AEM会在通知区域通知您。 在AEM提取ZIP时，您可以返回工作，而不会中断提取。
 
-![ZIP提取通知](assets/Zip-extraction-notification.png)
+![ZIP文件提取通知](assets/Zip-extraction-notification.png)
 
 该功能的一些限制是：
 
@@ -326,11 +326,9 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    要放大资产，请点按／单 `+` 击（或点按／单击资产上的放大镜）。 要缩小，请点按／单击 `-`。 放大时，可以通过平移来仔细查看图像上的任意区域。重置缩放箭头将您带回到原始视图。
 
-   ![上载图标](assets/uploadicon.png)
-
    Tap **[!UICONTROL Reset]** to reset the view to the original size.
 
-   ![chlimage_1-216](assets/chlimage_1-11.png)
+   ![重置图标可让用户返回原始视图](assets/chlimage_1-11.png)
 
 **预览仅使用键盘键的资源**
 
@@ -353,11 +351,11 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 ## 编辑属性和元数据 {#editing-properties}
 
-1. 导航到要编辑元数据的资产所在的位置。
+1. 导航到资产所在的位置以编辑其元数据。
 
 1. 选择资产，然后点按／单击工 **[!UICONTROL 具栏中的]** “属性”以视图资产属性。 或者，选择资产 **[!UICONTROL 卡上的]** “属性”快速操作。
 
-   ![properties_quickaction](assets/properties_quickaction.png)
+   ![资产卡视图中的属性快速操作](assets/properties_quickaction.png)
 
 1. 在“属 [!UICONTROL 性] ”页中，编辑各个选项卡下的元数据属性。 例如，在“基 **[!UICONTROL 本]** ”选项卡下，编辑标题、说明等。
 
@@ -367,13 +365,13 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. 要计划资产激活的特定日期/时间，请使用&#x200B;**[!UICONTROL 开始时间]**&#x200B;字段旁边的日期选取器。
 
-   ![使用“开始时间”字段中的日期时间选取器或键盘键为资产激活添加日期和时间](assets/schedule-activation.png)
+   ![日期时间选取器或使用“开始时间”(On Time)字段中的键盘键为资产激活添加日期和时间](assets/schedule-activation.png)
 
    *图：计划资产激活*
 
 1. 要在特定持续时间后取消激活资产，请从“结束时间”字段旁边的日期选取器中选择取消激 **[!UICONTROL 活日期]** /时间。 取消激活日期应晚于资产的激活日期。 结束 [!UICONTROL 时间后]，资产及其演绎版不能通过资产Web界面或通过HTTP API使用。
 
-   ![使用“结束时间”字段中的日期时间选取器或键盘键，为资产取消激活添加日期和时间](assets/schedule-deactivation.png)
+   ![日期时间选取器或使用“结束时间”(Off Time)字段中的键盘键，为资产取消激活添加日期和时间](assets/schedule-deactivation.png)
 
    *图：计划资产取消激活*
 
@@ -385,7 +383,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. 要为资产提供评级，请点按／单击 **[!UICONTROL 高级]** 选项卡，然后点按／单击相应位置的星形以指定所需的评级。
 
-   ![评级](assets/ratings.png)
+   ![资产属性中用于分配评级的高级选项卡](assets/ratings.png)
 
    您为资产分配的评级分数显示在您的评 **[!UICONTROL 级下]**。 对资产进行评级的用户收到的资产平均评级分数显示在“评 **[!UICONTROL 级”下]**。 此外，对平均评级得分有贡献的评级得分的分解显示在“评级细 **[!UICONTROL 分”下]**。 您可以根据平均评级分数搜索资产。
 
@@ -414,7 +412,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 其他属性和元数据信息将被保留。 复制资产时不会创建部分副本。
 
 1. 从资产UI中，选择一个或多个资产，然后点按／单击工具栏中 **[!UICONTROL 的复制]** 图标。 或者，从资产 **[!UICONTROL 卡中选择]** “复制快速操作”。
-   ![copy_icon](assets/copy_icon.png)
+   ![资产UI工具栏中的复制图标](assets/copy_icon.png)
 
    >[!NOTE]
    >
@@ -428,7 +426,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 
 1. Click/ tap the **[!UICONTROL Paste]** asset icon from the toolbar.
 
-   ![chlimage_1-219资产](assets/chlimage_1-14.png)随后会复制到此位置。
+   ![资产UI工具栏中的粘贴图](assets/chlimage_1-14.png)标随后会将资产复制到此位置。
 
    >[!NOTE]
    >
@@ -439,7 +437,7 @@ See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
 1. 导航到要移动的资产所在的位置。
 
 1. 选择资产，然后点按／单击工 **[!UICONTROL 具栏中的]** “移动”图标。
-   ![move_icon](assets/move_icon.png)
+   ![资产UI工具栏中的移动图标](assets/move_icon.png)
 
 1. 在“移动资产”向导中，执行下列操作之一：
 
