@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 28354bd9785fa83939f9e3b051aac195d7706633
+source-git-commit: e5e918c0b971159bc99bdcf604c89439c2b08244
 
 ---
 
@@ -204,9 +204,9 @@ Adobe I/O集成生成API密钥、客户端机密和有效负荷(JWT)，这是设
 
 >[!CAUTION]
 >
->仅创建一个有效的IMS配置。
+>您只能有一个IMS配置。 请勿创建多个IMS配置。
 >
-> 确保配置正常。 如果配置不健康，请删除该配置并创建一个新的健康配置。
+>确保IMS配置通过运行状况检查。 如果配置未通过运行状况检查，则无效。 您必须删除它并创建一个新的有效配置。
 
 
 ### 配置云服务 {#configure-the-cloud-service}
