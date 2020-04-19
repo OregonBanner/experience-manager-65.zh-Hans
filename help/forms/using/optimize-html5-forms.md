@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -20,7 +20,9 @@ HTML5表单以HTML5格式呈现表单。 根据表单大小和表单中的图像
 
 本文介绍使用JBoss为Apache Web Server 2.0 32位启用压缩所需的步骤。
 
-*注意：以下说明不适用于除Apache Web Server 2.0 32位之外的服务器。*
+>[!NOTE]
+>
+>以下说明不适用于除Apache Web Server 2.0 32位之外的服务器。
 
 获取适用于您的操作系统的Apache Web服务器软件：
 
