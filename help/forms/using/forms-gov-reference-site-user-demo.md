@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f323b490c37effc3cbb36c793b62fa788eca9545
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -116,7 +116,9 @@ Aya回答了几个问题，通过在手机上填写一份简短的自适应表�
 
 1. 在每个下拉字段中进行选择。
 
-   1. 注意：如果用户年收入超过200,000美元，则他们没有资格。
+   >[!NOTE]
+   >
+   >如果用户年收入超过200,000美元，则他们没有资格。
 
 1. 单击“我&#x200B;**是否有资格？**” 按钮.
 1. 单击“立&#x200B;**即应用**”按钮以继续。
