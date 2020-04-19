@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -212,7 +212,12 @@ AEM Forms工作区具有以下三种类型的待办列表:
 
 * 使用任意选项卡中的可用操作
 * 使用表单本身中构建的操作
-* 从您的待办列表中，无需打开任务注意：在设计流程时，如 `isMustOpenToComplete` 果在工作台的步骤中未 `Assign Task` 选择字段，则此选项可用。
+* 从您的任务列表，无需打开任务
+
+>[!NOTE]
+>
+>在设计流程时，如 `isMustOpenToComplete` 果在工作台的步骤中未 `Assign Task` 选择字段，则此选项可用。
+
 * 通过电子邮件发送，如果您收到电子邮件通知
 
 完成任务时，根据任务的不同，可能会显示确认对话框，重申您的操作。 例如，您可能会看到一个对话框，提示您证明您提供的信息的有效性。
@@ -270,7 +275,9 @@ AEM Forms工作区具有以下三种类型的待办列表:
 
 电子邮件可能包含在AEM Forms工作区中打开任务的链接、用于任务的表单的附件或通过电子邮件完成任务的操作。 如果电子邮件中包含表单，则在表单中构建了用于完成任务的按钮时，您可以打开表单并完成任务。 如果完成任务的操作包含在电子邮件中，则可以通过单击电子邮件中的操作或回复电子邮件来完成任务，操作键入为电子邮件正文中的第一行。
 
-**注意**:要配置工作区以使用相应的电子邮件模板，请参阅 [AEM Forms JEE管理员指南](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/)。
+>[!NOTE]
+>
+>要配置工作区以使用相应的电子邮件模板，请参阅 [AEM Forms JEE管理员指南](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/)。
 
 当您通过电子邮件完成任务时，该任务将从AEM Forms工作区中的待办列表中删除。
 
