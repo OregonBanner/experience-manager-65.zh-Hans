@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 726163106ddb80600eaa7cc09b1a2e9b035a223e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -170,7 +170,9 @@ The Commentering Management Solution支持两种动态数据项（可变数据�
 
 **整个词：** 搜索只返回整词。
 
-**注意：** 如果在“查找”文本框中输入任何特殊字符，则“全字”选项将被禁用。
+>[!NOTE]
+>
+>如果在“查找”文本框中输入任何特殊字符，则“全字”选项将被禁用。
 
 **Reg ex:** 使用常规表达式进行搜索。 例如，以下常规表达式在文本模块中搜索电子邮件地址：
 
@@ -470,7 +472,7 @@ The Commentering Management Solution支持两种动态数据项（可变数据�
 
 许多字母模板都包含表。 表可以是静态的，如术语和条件表，其中每行表示一个条件，每个部分显示在单独的列中。 表也可以是动态的，如帐户信息，其中包含客户名称、帐户ID、事务编号和事务处理金额等信息。
 
-* **静态表**:表有时会使用列数不同的行创建，例如条款和条件表。 其中，每行表示一个条件，并且每个条件可以具有不同的子部分。 每个部分都显示在单独的列中。
+* **静态表**:表有时会使用列数不同的行创建，如条款和条件表。 其中，每行表示一个条件，并且每个条件可以具有不同的子部分。 每个部分都显示在单独的列中。
 * **动态表**:布局片段提供将动态表的字段绑定到集合DDE的功能。 在字母生成表行时，根据集合DDE的大小生成表行。
 
 DD有一个集合元素Ondimeed_details，它有一个包含三个基元元素的复合元素：Notified_name、Notified_address和Notified_geder。
