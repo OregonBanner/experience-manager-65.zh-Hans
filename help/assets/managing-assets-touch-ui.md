@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1453d70ee75768057403c5cc93f5c7bad8ed918
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -347,7 +347,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 使用箭头键在缩放后的图像周围移动。
 
-See also [Preview Dynamic Media Assets.](/help/assets/previewing-assets.md)
+>[!MORELIKETHIS]
+>
+>* [预览Dynamic Media资产](/help/assets/previewing-assets.md)。
+>* [视图子资产](managing-linked-subassets.md#viewing-subassets)。
+
 
 ## 编辑属性和元数据 {#editing-properties}
 
