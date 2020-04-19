@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -84,7 +84,8 @@ AEM Forms Data Integration允许您配置并连接到不同的数据源。 现�
 
 ## 为云服务配置文件夹 {#cloud-folder}
 
-**注意**:为RESTful、SOAP和OData服务配置云服务文件夹需要配置。
+>[!NOTE]
+为RESTful、SOAP和OData服务配置云服务文件夹需要配置。
 
 AEM中的所有云服务配置都整合在AEM存储库 `/conf` 的文件夹中。 默认情况下，该文 `conf` 件夹包含您可 `global` 以在其中创建云服务配置的文件夹。 但是，您需要为云配置手动启用它。 您还可以在中创建其他文件夹， `conf` 以创建和组织云服务配置。
 
