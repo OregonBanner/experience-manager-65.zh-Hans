@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: b4fdbf86-d8f3-4da5-9e4e-4d5492ae1632
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 72a582b7ac19322b81fd1a92de8fce34e55b9db1
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -306,7 +306,9 @@ We.Finance会不时检查其信用卡应用程序的性能，以检查客户可�
 1. 打开CRXDE Lite并备份以下文件：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 将上述文件中 `onReportLoadSuccess` 的函数定义替换为以下文件中的函数定义：/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：这些更改仅用于演示目的。 确保完成此过程后恢复文件内容。
+   >[!NOTE]
+   >
+   >这些更改仅用于演示目的。 确保完成此过程后恢复文件内容。
 
 1. 刷新您生成的报表，您将看到如下内容。 查看报告仪表板。
 
@@ -555,7 +557,9 @@ We.Finance会不时检查其抵押申请的表现，以检查客户可能面临�
 1. 打开CRXDE Lite并备份以下文件：/libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 将上述文件中 `onReportLoadSuccess` 的函数定义替换为以下文件中的函数定义：/apps/we-finance/demo-artifacts/targetreport.js
 
-   注意：这些更改仅用于演示目的。 确保完成此过程后恢复文件内容。
+   >[!NOTE]
+   >
+   >这些更改仅用于演示目的。 确保完成此过程后恢复文件内容。
 
 1. 刷新您生成的报表，您将看到如下内容。 查看报告仪表板。
 
