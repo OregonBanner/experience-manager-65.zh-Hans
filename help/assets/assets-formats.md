@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: 列表AEM资产和Dynamic Media支持的文件格式以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 15691a164913cf06bfbb77392ec563d8c364a1b8
+source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
 
 ---
 
@@ -222,10 +222,6 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 
 在CRXDE Lite中，有一列表受支持的MIME类型 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
-请参 [阅配置基于MIME类型的上传作业参数支持](config-dynamic.md)。
-
-另请参 [阅启用基于MIME类型的资产/Scene7上传作业参数支持](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
-
 | 文件扩展名 | MIME类型/Internet媒体类型 | 默认jobParam值 | 允许的jobParam值 |
 |---|---|---|---|
 | 图像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | 默认jobParam适用于所有图像mime类型资产。<ul><li>[knockoutBackgroundOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_knockout_background_options.html)</li><li>manualCropOptions</li><li>[autoColorCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_auto_color_crop_options)</li><li>[autoTransparentCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_auto_transparent_crop_options)</li><li>[colorManagementOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_color_management_options.html)</li><li>[autoSetCreationOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_auto_set_creation_options.html)</li><li>[emailSetting](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/string_constants/index.html?f=r_email_settings)</li><li>[xmpKeywords](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_xmp_keywords)</li><li>[usmarpMaskOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_unsharp_mask_options.html)</li></ul> |
@@ -286,5 +282,6 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 
 >[!MORELIKETHIS]
 >
->* [支持基于MIME类型的资产/Scene7上传作业参数](../sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [支持基于MIME类型的资产/Scene7上传作业参数](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [配置基于MIME类型的上传作业参数支持](config-dynamic.md)。
 
