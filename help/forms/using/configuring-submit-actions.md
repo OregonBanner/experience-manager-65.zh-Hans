@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 当用户单击自适应表单上的“提交”按钮时，将触发提交操作。 您可以在自适应表单上配置提交操作。 自适应表单提供了一些现成的提交操作。 您可以复制和扩展默认的提交操作，以创建您自己的提交操作。 但是，根据您的要求，您可以编写并注册自己的提交操作以处理提交表单中的数据。 提交操作可以使用同 [步或异步提交](../../forms/using/asynchronous-submissions-adaptive-forms.md)。
 
-您可以在提要栏中自适应表单容 **器属性** 的“提交”部分配置提交操作。
+您可以在提要栏中自适应表单 **容器属性** 的“提交”部分配置提交操作。
 
 ![配置提交操作](assets/thank-you-setting.png)
 
@@ -47,7 +47,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 >[!CAUTION]
 >
->如果预填表 [单模板](../../forms/using/prepopulate-adaptive-form-fields.md) 、表单数据模型或基于架构的自适应表单，并且XML或JSON数据会向一个架构（XML架构、JSON架构、表单模板或表单数据模型）投诉，该架构是数据不包含&lt;afData>、&lt;afBoundData>和&lt;/afUnboundData>标签，则无界字段的数据(UnboundedDatated有界字段是自适应表单的 [自适应表单字段，没有bindref](../../forms/using/prepopulate-adaptive-form-fields.md) 属性)。
+>如果预填表 [单模板](../../forms/using/prepopulate-adaptive-form-fields.md) 、表单数据模型或基于模式的自适应表单 [，并且XML或JSON数据会向数据不包含&lt;afData>、&lt;afBoundData>和&lt;/afUnboundData>标签的模式(XML模式、JSON模式、表单模板或表单数据模型)投诉，则无界数据自适应表单的字段(无界字段是没有bindref属](../../forms/using/prepopulate-adaptive-form-fields.md) 性的自适应表单字段)将丢失。
 
 您可以为自适应表单编写自定义提交操作以满足您的使用案例。 有关详细信息，请参 [阅编写自适应表单的自定义提交操作](../../forms/using/custom-submit-action-form.md)。
 
@@ -102,7 +102,8 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 “通 **过电子邮件发送PDF** ”提交操作会在成功提交表单时向一个或多个收件人发送一封包含表单数据的PDF的电子邮件。
 
-**** 注意：此提交操作适用于具有记录文档模板的基于XFA的自适应表单和基于XSD的自适应表单。
+>[!NOTE]
+此提交操作适用于具有“记录”模板文档的基于XFA的自适应表单和基于XSD的自适应表单。
 
 ## Invoke a forms workflow {#invoke-a-forms-workflow}
 
@@ -126,9 +127,9 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 ## Invoke an AEM Workflow {#invoke-an-aem-workflow}
 
-调用 **** AEM工作流提交操作将自适应表单与AEM工作流相关联。 提交表单后，关联的工作流会在处理节点上自动启动。 此外，它还会将数据文件、附件和记录文档（如果适用）放在工作流的有效负荷位置。
+调用 **** AEM工作流提交操作将自适应表单与AEM工作流相关联。 提交表单后，关联的工作流会自动开始到处理节点。 此外，它还会将数据文件、附件和记录文档（如果适用）放在工作流的有效负荷位置。
 
-在使用调 **用AEM Workflow提交操作之前** ，请 [配置AEM DS设置](../../forms/using/configuring-the-processing-server-url-.md)。 有关创建AEM工作流的信息，请参阅OSGi [上以表单为中心的工作流](../../forms/using/aem-forms-workflow.md)。
+在使用调 **用AEM Workflow提交操作之前** ，请 [配置AEM DS设置](../../forms/using/configuring-the-processing-server-url-.md)。 有关创建AEM工作流的信息，请参 [阅OSGi上以表单为中心的工作流](../../forms/using/aem-forms-workflow.md)。
 
 ## 自适应表单中的服务器端重新验证 {#server-side-revalidation-in-adaptive-form}
 
@@ -146,7 +147,7 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 ### 启用服务器端验证 {#enabling-server-side-validation-br}
 
-使用提要 **栏中自适应表单容器下的服务器上重新验证** ，以启用或禁用当前表单的服务器端验证。
+使用提要 **栏中自适应表单容器下的“在服务器上重新验证** ”，启用或禁用当前表单的服务器端验证。
 
 ![启用服务器端验证](assets/revalidate-on-server.png)
 
@@ -154,13 +155,13 @@ source-git-commit: 6bd09bca68ea1fcec2dca7694dd3d39dc5153bfc
 
 如果最终用户绕过了这些验证并提交了表单，服务器将再次执行验证。 如果验证在服务器端失败，则会停止提交事务。 最终用户再次呈现原始表单。 捕获的数据和提交的数据将作为错误呈现给用户。
 
-### 在验证表达式中支持自定义函数 {#supporting-custom-functions-in-validation-expressions-br}
+### 在验证表达式中支持自定义功能 {#supporting-custom-functions-in-validation-expressions-br}
 
-有时，如果存在复杂的验 **证规则**，则精确验证脚本驻留在自定义函数中，作者从字段验证表达式中调用这些自定义函数。 要在执行服务器端验证时使此自定义函数库为已知和可用，表单作者可以在自适应表单容器属性的“基本”选项卡下配置AEM客户端库的名称，如下所示。 ****
+有时，如果存在复杂的验 **证规则**，则精确验证脚本驻留在自定义函数中，作者从字段验证表达式调用这些自定义函数。 要在执行服务器端验证时使此自定义函数库为已知和可用，表单作者可以在自适应表单容器属性的“基本 **** ”选项卡下配置AEM客户端库的名称，如下所示。
 
-![在验证表达式中支持自定义函数](assets/clientlib-cat.png)
+![在验证表达式中支持自定义功能](assets/clientlib-cat.png)
 
-在验证表达式中支持自定义函数
+在验证表达式中支持自定义功能
 
 作者可以根据自适应表单配置自定义javascript库。 在库中，只保留可重用的函数，该函数依赖于jquery和endworker.js第三方库。
 
