@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: adbe8416-c8d7-4581-940b-df62eadf0e26
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -116,7 +116,9 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 **尝试回退转换器：** PDF Generator可以使用Java™或Acrobat将图像文件转换为PDF。 当选择此选项并且转换失败或达到指定的超时限制时，PDF生成器会使用替代方法尝试转换。 如果替代方法失败或达到指定的超时限制，则会向日志文件写入异常。
 
-***注意&#x200B;**:JPEG 2000文件只能使用Acrobat进行转换。*
+>[!NOTE]
+>
+>JPEG 2000文件只能使用Acrobat进行转换。
 
 **使用OCR:** 指定是否将OCR（光学字符识别）应用于PDF。 OCR软件使您能够搜索、更正和复制PDF中的文本。
 
@@ -391,7 +393,7 @@ PDF Generator支持减小PDF文件大小的功能。 使用所有这些设置还
 
 **优化PDF以实现快速Web视图**:重新构建PDF文档，以便从Web服务器进行逐页下载（字节服务）。
 
-**在使用LZW编码的流中，请改用Flate**:将Flate压缩应用于所有使用LZW编码的内容流和图像。
+**在使用LZW编码的流中，请改用Flate**:将Flate压缩应用于使用LZW编码的所有内容流和图像。
 
 **放弃无效链接**:删除跳转至无效目标的链接。
 
