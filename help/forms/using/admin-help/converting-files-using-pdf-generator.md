@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -42,11 +42,11 @@ source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
 
 ### 关于XMP文件 {#about-xmp-files}
 
-PDF Generator在Acrobat 5.0或更高版本中创建的PDF文档包含XML格式的文档元数据。 *元数据* 包括有关文档及其内容的信息，如作者姓名、关键字以及搜索实用程序可使用的版权信息。
+PDF Generator在Acrobat 5.0或更高版本中创建的PDF文档包含XML格式的文档元数据。 *元数据* 包括有关文档及其内容的信息，例如作者姓名、关键字以及搜索实用程序可以使用的版权信息。
 
 文档元数据包含（但不限于）也显示在Acrobat的“文档属性”对话框的“说明”选项卡上的信息。 在“描述”选项卡上所做的更改会反映在文档元数据中。 文档元数据可以使用第三方产品进行扩展和修改。
 
-Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用的XML框架，该框架实现了文档元数据在出版工作流程中的创建、处理和交换的标准化。 您可以保存并导入XMP格式的文档元数据XML源代码，从而轻松地在各种文档之间共享元数据。 有关XMP文件的详细信息，请参 [阅可扩展元数据平台(XMP)](https://www.adobe.com/products/xmp/)[和Adobe XMP开发人员中心](https://www.adobe.com/devnet/xmp.html)。
+Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用的XML框架，该框架实现了跨出版工作流的文档元数据创建、处理和交换的标准化。 您可以以XMP格式保存和导入文档元数据XML源代码，从而轻松地在各种文档之间共享元数据。 有关XMP文件的详细信息，请参 [阅可扩展元数据平台(XMP)](https://www.adobe.com/products/xmp/)[和Adobe XMP开发人员中心](https://www.adobe.com/devnet/xmp.html)。
 
 您可以在Acrobat中创建XMP文件。
 
@@ -68,24 +68,27 @@ Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用
 >要从本地文件系统上传文件，请使用HTML到PDF页面上的“上传文件”选项。
 
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“HTML到PDF”。
-1. 通过执行下列任务之一指定要转换的文件：
+1. 通过执行以下任一任务，指定要转换的文件：
 
    * 在“上传文件”中，键入HTML文件或ZIP文件的路径和文件名，或单击“浏览”找到并选择它。
    * 在“指定URL”框中，键入要转换的页面或网站的URL。
-
-      ***注意&#x200B;**:要转换的文件的文件扩展名必须为。html、.htm或。zip。*
+   >[!NOTE]
+   >
+   >要转换的文件的文件扩展名必须为。html、.htm或。zip。
 
 1. 指定配置设置：
 
    * 要使用自定义设置，请选择“使用自定义设置”，指定安全性和文件类型设置，然后指定超时值。 默认值是270秒。
-
-      **注意**:如果将“生成PDF”服务配置为使用Acrobat webCapture，则您在本页上选择的“文件类型设置”不会影响生成的PDF。 而是对服务器上安装的Acrobat版本进行相应的更改。
+   >[!NOTE]
+   >
+   >如果将“生成PDF”服务配置为使用Acrobat WebCapture，则您在本页上选择的“文件类型设置”不会影响生成的PDF。 而是对服务器上安装的Acrobat版本进行相应的更改。
 
    * 要使用现有设置文件，请选择“上传设置文件”，然后单击“浏览”以转到文件位置。
 
+
 1. 要上传XMP文件，请单击“浏览”并转到文件位置。 XMP文件可用于包含标准元数据信息。 (请参阅 [关于XMP文件](converting-files-using-pdf-generator.md#about-xmp-files)。)
 1. 单击创建。创建文件后，将显示指向PDF文件的链接。
-1. 单击链接以在Acrobat中查看PDF文档。
+1. 单击链接以在Acrobat中视图PDF文档。
 
 ## 将PDF文件导出为其他文件格式（仅限Windows） {#export-a-pdf-file-to-another-file-format-windows-only}
 
@@ -93,14 +96,14 @@ Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用
 
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“导出PDF”。
 1. 单击“浏览”以找到要导出的PDF文件。
-1. 在“将PDF文件导出到列表”中，选择将PDF文件导出到的格式。
+1. 在“将PDF文件导出到列表”中，选择要将PDF文件导出到的格式。
 1. 在“指定超时”框中，输入应用程序超时前等待的时间。 默认值是270秒。
 
    转换文件时显示的转换时间可能大于此处指定的值。 “转换时间”包括等待线程或进程所花费的时间、转换文件所花费的时间以及回退转换器所花费的时间（如果适用）。 次. 指定超时值只是转换文件所花费的时间。
 
-1. （可选）在“指定自定 **义印前检查配置文件** ”选项中，单击“浏览”，然后选择自定 [义印前检查配置文件](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)。 预检配置文件仅在将文档转换为PDF归档(PDF/A)格式时使用。
+1. （可选）在“指定自定 **义预检用户档案** ”选项中，单击“浏览”，然后选择自 [定义预检用户档案](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)。 预检用户档案仅在将文档转换为PDF归档(PDF/A)格式时使用。
 1. 单击“导出”。 转换完成后，将显示指向导出文件的链接。
-1. 单击链接以查看转换后的文件。
+1. 单击链接以视图转换的文件。
 
 ## 优化PDF（仅限Windows） {#optimize-a-pdf}
 
@@ -108,7 +111,7 @@ PDF Generator支持减小PDF文件的大小。
 
 >[!NOTE]
 >
->优化已数字签名的文档可删除数字签名并使其无效。
+>优化数字签名文档可删除数字签名并使其无效。
 
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“优化PDF”。
 1. 单击“浏览”以找到要优化的PDF文件。
