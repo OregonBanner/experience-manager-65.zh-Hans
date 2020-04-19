@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -23,19 +23,21 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->与AEM表单实施的任何其他方面一样，在生产中使用之前，必须在开发或分阶段环境中开发和测试备份和恢复策略，以确保整个解决方案能按预期方式工作而不丢失任何数据。
+>与AEM表单实施的任何其他方面一样，您的备份和恢复策略必须在开发或分阶段环境中开发并测试，然后才能用于生产，以确保整个解决方案能按预期方式工作，而不会造成数据丢失。
 
-Adobe Experience Manager(AEM)是AEM表单的一个组成部分。 因此，您需要备份AEM并与AEM表单备份同步，因为Correponsement Management Solution和服务（如表单管理器）基于AEM表单的AEM部分中存储的数据。要防止数据丢失，必须以某种方式备份AEM表单特定数据，以确保GDS和AEM（存储库）与数据库引用相关联。必须将GDS、AEM和内容存储根目录恢复到与原始DNS名称相同的计算机。
+Adobe Experience Manager(AEM)是AEM表单的一个组成部分。 因此，您需要备份AEM并与AEM表单备份同步，因为Correponsement Management Solution和服务（如表单管理器）基于AEM表单的AEM部分中存储的数据。要防止数据丢失，必须以某种方式备份AEM表单特定数据，以确保GDS和AEM（存储库）与数据库引用相关联。、GDS、AEM和内容存储根目录必须还原到与原始目录具有相同DNS名称的计算机。
 
 ## 备份类型 {#types-of-backups}
 
 AEM表单备份策略涉及两种备份类型：
 
-**** 系统映像：一个完整的系统备份，在硬盘或整个计算机停止工作时，您可以使用它恢复计算机内容。 系统映像备份仅在AEM表单的生产部署之前是必需的。 然后，公司内部策略规定系统映像备份的需要频率。
+**系统映像：** 一个完整的系统备份，在硬盘或整个计算机停止工作时，您可以使用它恢复计算机内容。 系统映像备份仅在AEM表单的生产部署之前是必需的。 然后，公司内部策略规定系统映像备份的需要频率。
 
-**** AEM表单特定数据：应用程序数据存在于数据库、全局文档存储(GDS)和AEM存储库中，并且必须实时备份。 GDS是一个目录，用于存储进程中使用的长期文件。 这些文件可能包括PDF、策略或表单模板。
+**AEM表单特定数据：** 应用程序数据存在于数据库、全局文档存储(GDS)和AEM存储库中，并且必须实时备份。 GDS是一个目录，用于存储进程中使用的长期文件。 这些文件可能包括PDF、策略或表单模板。
 
-***注意&#x200B;**:如果安装了Content Services(Deprecated)，则还要备份Content Storage Root目录。 (请参[阅内容存储根目录（仅限Content Services）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)。)*
+>[!NOTE]
+>
+>如果安装了Content Services(Deprecated)，则还要备份“内容存储根目录”。 请参 [阅内容存储根目录（仅限Content Services）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)。
 
 数据库用于存储表单对象、服务配置、进程状态和对GDS文件的数据库引用。 如果在数据库中启用了文档存储，则GDS中的永久数据和文档也会存储在数据库中。 可以使用以下方法备份和恢复数据库：
 
@@ -45,11 +47,13 @@ AEM表单备份策略涉及两种备份类型：
    * 使用LCBackupMode脚本(请参 [阅备份数据库、GDS和内容存储根目录](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories))。 要退出快照备份模式，请在script参数中，将该参 `continuousCoverage` 数设置为 `false` 或使用该 `leaveContinuousCoverage` 选项。
    * 使用提供的备份／恢复API。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
-* **滚动备份模式** ，表示系统始终处于备份模式，新备份模式会话在前一会话发布后立即启动。 没有超时与滚动备份模式相关联。 当调用LCBackupMode脚本或API以退出滚动备份模式时，将开始新的滚动备份模式会话。 此模式对于支持连续备份很有用，但仍允许从GDS目录中清除旧文档和不需要的文档。 “备份和恢复”页不支持滚动备份模式。 恢复方案后，仍然启用滚动备份模式。 可以通过使用带有选项的LCBackupMode脚本来离开连续备份模式(滚动备份模 `leaveContinuousCoverage` 式)。
+* **滚动备份模式** ，表示系统始终处于备份模式，新备份模式会话在前一会话发布后立即启动。 没有超时与滚动备份模式相关联。 当调用LCBackupMode脚本或API以退出滚动备份模式时，将开始新的滚动备份模式会话。 此模式对于支持连续备份很有用，但仍允许从GDS目录中清除旧的和不需要的文档。 “备份和恢复”页不支持滚动备份模式。 恢复方案后，仍然启用滚动备份模式。 可以通过使用带有选项的LCBackupMode脚本来离开连续备份模式(滚动备份模 `leaveContinuousCoverage` 式)。
 
-*注&#x200B;**意**:离开滚动备份模式会立即开始新的备份模式会话。 要完全禁用滚动备份模式，请使 `leaveContinuousCoverage` 用脚本中的选项，该选项覆盖现有滚动备份会话。 在快照备份模式下，您可以像通常那样离开备份模式。*
+>[!NOTE]
+>
+>离开滚动备份模式会立即开始新的备份模式会话。 要完全禁用滚动备份模式，请使 `leaveContinuousCoverage` 用脚本中的选项，该选项覆盖现有滚动备份会话。 在快照备份模式下，您可以像通常那样离开备份模式。
 
-要防止数据丢失，必须以一种方式备份AEM表单特定数据，以确保GDS和内容存储根目录文档与数据库引用相关联。
+要防止数据丢失，AEM表单特定数据的备份方式必须确保GDS和内容存储根目录文档与数据库引用相关联。
 
 >[!NOTE]
 >
@@ -73,8 +77,8 @@ AEM表单备份策略涉及两种备份类型：
 
 在恢复后重新启动表单服务器之前，请执行以下操作：
 
-1. 以维护模式启动系统。
-1. 执行以下操作，以确保在维护模式下Form manager与AEM Forms同步：
+1. 将系统开始到维护模式。
+1. 执行以下操作，以确保在维护模式下Form Manager与AEM Forms同步：
 
    1. 转到https://&lt;*server*>:&lt;*port*>/lc/fm，然后使用administrator/password凭据登录。
    1. 单击右上角的用户名称（本例中为“超级管理员”）。
@@ -82,7 +86,7 @@ AEM表单备份策略涉及两种备份类型：
    1. 单击 **开始** ，以同步存储库中的资产。
 
 1. 在群集环境中，主节点（相对于AEM）应位于从节点之前。
-1. 确保在验证系统正常操作之前，不会从内部或外部源（如Web、SOAP或EJB进程启动器）启动进程。
+1. 确保在验证系统正常操作之前，不会从内部或外部源（如Web、SOAP或EJB进程启动器）启动任何进程。
 
 如果移动或更改了主AEM表单数据库，请查看与应用程序服务器相关的安装指南，以了解有关更新AEM表单数据源IDP_DS和EDC_DS的数据库连接信息的信息。
 
@@ -96,10 +100,10 @@ AEM表单备份策略涉及两种备份类型：
 
 在群集环境中，在备份之前和恢复之后，存储库的文件系统路径配置应与所有群集节点的配置相同。
 
-在更改 `LCSetGDS`文件系统 `[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline` 路径后，使用文件夹中的脚本设置GDS路径。 有关详细 `ReadMe.txt` 信息，请参阅同一文件夹中的文件。 如果无法使用旧的GDS目录路径， `LCSetGDS` 则在启动AEM表单之前，必须使用脚本设置GDS的新路径。
+在更改 `LCSetGDS`文件系统 `[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline` 路径后，使用文件夹中的脚本设置GDS路径。 有关详细 `ReadMe.txt` 信息，请参阅同一文件夹中的文件。 如果无法使用旧的GDS目录路径， `LCSetGDS` 则在开始AEM表单之前，必须使用脚本设置GDS的新路径。
 
 >[!NOTE]
 >
 >这种情况是您唯一应使用此脚本更改GDS位置的情况。 要在AEM表单运行时更改GDS位置，请使用管理控制台。 (请参 [阅配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*。)*
 
-设置GDS路径后，在维护模式下启动表单服务器，然后使用管理控制台更新新节点的其余文件系统路径。 在验证是否更新了所有必需的配置后，请重新启动并测试AEM表单。
+设置GDS路径后，在维护模式下开始表单服务器，然后使用管理控制台更新新节点的其余文件系统路径。 在验证是否更新了所有必需的配置后，请重新启动并测试AEM表单。
