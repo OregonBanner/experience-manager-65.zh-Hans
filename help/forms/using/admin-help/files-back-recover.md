@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -115,7 +115,7 @@ DB2具有将数据库备份到Tivoli存储管理器的内置功能。 通过使�
 
 [Oracle备份和恢复：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) 更详细地介绍备份和恢复的概念以及使用Recovery Manager(RMAN)进行备份、恢复和报告的最常用技术，并提供有关如何规划备份和恢复战略的更多信息。
 
-[Oracle Database Backup and Recovery User&#39;s Guide:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) 提供有关RMAN体系结构、备份和恢复概念和机制、高级恢复技术（如时间点恢复和数据库闪回功能）以及备份和恢复性能调整的详细信息。 它还包括使用主机操作系统设备（而非RMAN）进行用户管理的备份和恢复。 此卷对于备份和恢复更复杂的数据库部署以及高级恢复场景至关重要。
+[Oracle Database Backup and Recovery User&#39;s Guide:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) 提供有关RMAN体系结构、备份和恢复概念和机制、高级恢复技术（如时间点恢复和数据库闪回功能）以及备份和恢复性能调整的详细信息。 它还包括使用主机操作系统设备而不是RMAN进行用户管理的备份和恢复。 此卷对于备份和恢复更复杂的数据库部署以及高级恢复场景至关重要。
 
 [Oracle数据库备份和恢复参考：](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) 提供有关所有RMAN命令的语法和语义的完整信息，并描述可用于报告备份和恢复活动的数据库视图。
 
@@ -134,8 +134,9 @@ SQL Server还提供两种备份和恢复工具：
 
 使用MySQLAdmin或在Windows中修改INI文件，将MySQL数据库配置为以二进制日志模式运行。 (请参阅 [MySQL二进制日志](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。)InnoBase软件中也提供了MySQL的热备份工具。 (请参 [阅Innobase热备份](https://www.innodb.com/hot-backup/features.md)。)
 
-**注意**:MySQL *的默认二进制记录模式是“语句”，它与Content Services使用的表（已弃用）不兼容。 在此默认模式下使用二进制日志记录会导致Content Services（已弃用）失败。 如果您的系统包含Content Services（已弃用），请使用“混合”日志记录模式。 要启用“混合”日志记录，请将以下参数添加到my.ini文件：*
-`binlog_format=mixed log-bin=logname`
+>[!NOTE]
+>
+>MySQL的默认二进制记录模式是“语句”，它与Content Services使用的表（已弃用）不兼容。 在此默认模式下使用二进制日志记录会导致Content Services（已弃用）失败。 如果您的系统包含Content Services（已弃用），请使用“混合”日志记录模式。 要启用“混合”日志记录，请将以下参数添加到my.ini file:*`binlog_format=mixed log-bin=logname`
 
 您可以使用mysqldump实用程序获取完整的数据库备份。 完全备份是必需的，但并不总是方便的。 它们生成大型备份文件并需要时间生成。 要执行增量备份，请确保使用——选项开始服 `log-bin` 务器，如上一节所述。 每次MySQL服务器重新启动时，它都停止写入当前的二进制日志，创建一个新的二进制日志，然后从此开始，新的二进制日志变成当前的二进制日志。 您可以使用命令手动强制切换 `FLUSH LOGS SQL` 器。 第一次完全备份后，将使用mysqladmin实用程序和命令（该命令创建下一个日志文件）执 `flush-logs` 行后续增量备份。
 
