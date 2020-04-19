@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 4的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -123,7 +123,7 @@ Experience Manager Forms包括以下辅助功能增强：
 
 您可以使用批处理API从模板生成多个交互式通信。 该模板是无任何数据的交互式通信。 Batch API将数据与模板相结合，以生成交互式通信。 该API在大规模制作交互式通信中很有用。 例如，电话单、多个客户的信用卡对帐单。 请参 [阅使用Batch API生成多个交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-## 自AEM 6.5 SP3以来的主要发行版 {#key-features-sice-sp3}
+## 自AEM 6.5 SP3以来的主要发行版 {#key-features-since-sp3}
 
 在2019年12月12日至2020年3月5日之间，Adobe发布了下列AEM可交付内容以外的功能：
 
