@@ -1,6 +1,6 @@
 ---
-title: Document Security|处理用户数据
-seo-title: Document Security|处理用户数据
+title: 文档安全|处理用户数据
+seo-title: 文档安全|处理用户数据
 description: 'null'
 seo-description: 'null'
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
@@ -8,20 +8,20 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 66a3db6cd50ae25849dc173e0714df7c140c1774
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
 
-# Document Security|处理用户数据 {#document-security-handling-user-data}
+# 文档安全|处理用户数据 {#document-security-handling-user-data}
 
-AEM Forms文档安全性允许您创建、存储预定义的安全性设置并将其应用到文档。 它确保只有授权用户才能使用文档。 您可以使用策略保护文档。 策略是包含安全性设置和授权用户列表的信息集合。 您可以将策略应用于一个或多个文档，并授权在AEM Forms JEE用户管理中添加的用户。
+AEM Forms文档安全性允许您创建、存储预定义的安全设置并将这些安全设置应用到文档。 它确保只有授权用户才能使用文档。 您可以使用策略保护文档。 策略是包含安全设置和授权用户列表的信息集合。 您可以将策略应用于一个或多个文档，并授权在AEM Forms JEE用户管理中添加的用户。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-文档安全性存储与受保护文档相关的策略和数据，包括数据库中的用户数据，如My Sql、Oracle、MS SQL server和IBM DB2。 此外，在用户管理中存储的策略中授权用户的数据。 有关存储在用户管理中的数据的信息，请参 [阅表单用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+文档安全性存储与受保护文档相关的策略和数据，包括数据库中的用户数据，如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用户管理中存储的策略中授权用户的数据。 有关存储在用户管理中的数据的信息，请参 [阅表单用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
 下表映射了文档安全性如何组织数据库表中的数据。
 
@@ -33,11 +33,11 @@ AEM Forms文档安全性允许您创建、存储预定义的安全性设置并�
   </tr>
   <tr>
    <td><code>EdcPrincipalKeyEntity</code></td>
-   <td>存储有关用户的主键的信息。 这些键用于脱机文档安全工作流程。</td>
+   <td>存储有关用户的主键的信息。 这些键用于脱机文档安全工作流。</td>
   </tr>
   <tr>
    <td><code>EdcAuditEntity</code></td>
-   <td>存储有关审核事件的信息，如用户事件、文档事件和策略事件。</td>
+   <td>存储有关审计事件的信息，如用户事件、文档事件和策略事件。</td>
   </tr>
   <tr>
    <td><p><code>EdcLicenseEntity</code></p> </td>
@@ -133,7 +133,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 执行以下操作，从数据库表中删除主体ID的文档安全数据。
 
 1. 关闭AEM Forms服务器。
-1. 运行以下数据库命令，从数据库表中删除主体ID的数据以确保文档安全。 在命 `Delete` 令中，替 `<principal_id>` 换为要删除其数据的用户的主ID。
+1. 运行以下数据库命令以从数据库表中删除主体ID的数据，以实现文档安全。 在命 `Delete` 令中，替 `<principal_id>` 换为要删除其数据的用户的主ID。
 
    ```sql
    Delete from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -192,17 +192,19 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    **使用管理控制台**
 
    1. 以管理员身份登录Forms JEE管理控制台，网址为https://[*server*]:[*port*]/adminui。
-   1. 导航到“ **[!UICONTROL 服务”>“Document Security”>“策略集”]**。
+   1. 导航到服 **[!UICONTROL 务>文档安全>策略集]**。
    1. 打开策略集，并从策略中删除用户。
    **使用文档安全网页**
 
-   具有创建个人策略权限的文档安全用户可以从其策略中删除用户数据。 为此，请执行以下操作：
+   文档具有创建个人策略权限的安全用户可以从其策略中删除用户数据。 为此，请执行以下操作：
 
    1. 拥有个人策略的用户登录其文档安全网页https://[*server*]:[*port*]/edc。
-   1. 导航到“服 **[!UICONTROL 务”>“Document Security”>“我的策略”]**。
+   1. 导航到“服 **[!UICONTROL 务”>“文档安全性”>“我的策略”]**。
    1. 打开策略，并从策略中删除用户。
-   **注意**:管理员可以使用管理控制台在“服务”>“Document Security”>“我的策略”中搜索、访问和删除其他用户的个 **[!UICONTROL 人策略中的用户数据]** 。
+   >[!NOTE]
+   >
+   >管理员可以使用管理控制台在“服务”>“文档安全”>“我的策略”中搜索、访问和删除其他用户的个 **[!UICONTROL 人策略中的用户数据]** 。
 
-1. 从用户管理数据库中删除主体ID的数据。 有关详细步骤，请参阅 [表单用户管理|处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
-1. 启动AEM Forms服务器。
+1. 从用户管理数据库中删除主体ID的数据。 有关详细步骤，请参阅表 [单用户管理|处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+1. 开始AEM Forms服务器。
 
