@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -27,7 +27,7 @@ EMC Documentum的Connector支持AEM表单与EMC Documentum之间的通信。 有
 
 ## 配置服务器连接 {#configuring-the-server-connection}
 
-本主题介绍了Connector for EMC Documentum的任务，您可以在“配置设置”页上执行这些任务。
+本主题介绍了Connector for EMC Documentum的任务，您可以在“配置设置”页上执行这些操作。
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ EMC Documentum的Connector支持AEM表单与EMC Documentum之间的通信。 有
 
 如果输入的用户名或密码不正确，您将获得以下结果，具体取决于服务当前是否正在运行：
 
-* 如果EMC Documentum Repository Provider服务和EMC Documentum Content Repository Connector服务都停止，则在保存服务配置信息时，不会显示错误。 但是，下次启动服务时，将引发异常，且服务将不启动。
+* 如果EMC Documentum Repository Provider服务和EMC Documentum Content Repository Connector服务都停止，则在保存服务配置信息时，不会显示错误。 但是，下次开始服务时，将引发异常，服务将不开始。
 * 如果启动了EMC Documentum存储库提供商服务或EMC Documentum Content Repository Connector服务，则保存服务配置信息时，该服务将尝试立即验证凭据信息。 在这种情况下，会发生错误，并且不会保存配置信息。
 
 1. 在管理控制台中，单击“服务”>“EMC Documentum的连接器”>“配置设置”。
@@ -59,16 +59,18 @@ EMC Documentum的Connector支持AEM表单与EMC Documentum之间的通信。 有
 
 您可以配置要与Documentum一起使用的存储库服务提供商。 存储库服务调用将委派给您配置的提供者。 以下选项可供选择：
 
-**** 当前存储库服务提供者名称：当前存储库服务提供商的名称
+**当前存储库服务提供商名称：** 当前存储库服务提供商的名称
 
-**** ECM Documentum存储库提供商：使Documentum存储库提供者成为存储库的提供者。 已弃用此选项
+**ECM Documentum存储库提供商：** 使Documentum存储库提供者成为存储库的提供者。 已弃用此选项
 
-**** 存储库提供者：使本机存储库提供者成为存储库的提供者
+**存储库提供者：** 使本机存储库提供者成为存储库的提供者
 
-***注意&#x200B;**:要选择除列出的存储库服务提供者之外的存储库服务提供者，请在“应用程序和服务”>“服务管理”中配置RepositoryService。<!-- Fix broken link (See Managing Services) -->*
+>[!NOTE]
+>
+>要选择除列出的存储库服务提供商之外的存储库，请在“应用程序和服务”>“服务管理”中配置RepositoryService。 <!-- Fix broken link (See Managing Services) -->.
 
 1. 在管理控制台中，单击“服务”>“EMC Documentum的连接器”>“配置设置”。
-1. 在“存储库服务提供者信息”区域中，选择替代存储库服务提供者。
+1. 在“存储库服务提供商信息”区域，选择替代存储库服务提供商。
 1. 单击保存。
 
 ## 配置存储库凭据 {#configuring-repository-credentials}
@@ -103,11 +105,11 @@ Documentum凭据信息用于AEM表单系统上下文。 存储库凭据特定于
 
 需要一些手动步骤，以确保Workspace中的“任务队列共享请求”功能与Connector for EMC Documentum一起正常工作。
 
-1. 部署AEM表单并安装Workbench后，登录到Workbench并打开“资源”视图。 您将从此视图确定QueueSharing.swf文件的位置。
-1. 将QueueSharing.swf文件从“资源视图”拖到Windows桌面或等效位置，具体取决于您的操作系统。
+1. 部署AEM表单并安装Workbench后，登录到Workbench并打开资源视图。 您将通过此视图确定QueueSharing.swf文件的位置。
+1. 将QueueSharing.swf文件从“资源”视图拖到Windows桌面或等效位置，具体取决于您的操作系统。
 1. 在管理控制台中，单击“服务”>“EMC Documentum的连接器”>“配置设置”。
-1. 在“存储库服务提供者信息”下，将配置的存储库提供者更改为“ EMC Documentum存储库提供者”。
-1. 启动Workbench，将QueueSharing.swf文件从您最初将其复制到的位置（例如，Windows桌面或其他位置）复制到EMC Documentum存储库内的现有目录中。
+1. 在“存储库服务提供商信息”下，将配置的存储库提供者更改为“ EMC Documentum存储库提供者”。
+1. 开始工作台，将QueueSharing.swf文件从您最初将其复制到的位置（例如，Windows桌面或其他位置）复制到EMC Documentum存储库内的现有目录中。
 1. 在“工作台进程”视图中，打开“队列共享”进程。
 1. 在“变量”视图中，打开“theForm”变量的属性，并更改URI以匹配在步骤5中放置QueueSharing.swf文件的路径。
 1. 保存进程。
