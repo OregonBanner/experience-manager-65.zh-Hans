@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cc8ba8fda8fa0e5fac6bb92d1d4fc4849492eb
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -45,8 +45,12 @@ Forms Portal允许您在表单列表中使用自定义元数据。 在为资产�
    * 链接组件：/libs/fd/fp/linkTemplate
    添加要在选择布局模板时显示的标题。
 
-   *注意：标题可以与sling:Folder的节点名称不同。*
-   *下图描述了Search &amp; Lister组件的配置。* 创 ![建sling:Folder](assets/1.png)
+   >[!NOTE]
+   >
+   >标题可以与sling:Folder的节点名称不同。
+
+   下图描述了Search &amp; Lister组件的配置。
+   ![创建sling:Folder](assets/1.png)
 
 1. 在此文件夹中创建一个文件template.html以用作自定义模板。
 1. 编写自定义模板并使用自定义元数据，如下所述。
@@ -81,7 +85,7 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 要包含可重复的条目，请将属性data-repeatable的 **值配置为****true**。
 
-*在讨论的示例中，自定义模板的顶部有两个Div元素。 第一个CSS类具有“__FP_boxes-container”，它用作所列表单的容器元素。 第二个包含“__FP_boxes”CSS类，是基本实体的模板，本例中为表单。 Div元&#x200B;**素中存在的**data-repeatable属性的值为&#x200B;**true**。*
+*在讨论的示例中，自定义模板的顶部有两个Div元素。 第一个CSS类具有“__FP_boxes-容器”，它用作所列表单的容器元素。 第二个包含“__FP_boxes”CSS类，是基本实体的模板，本例中为表单。 Div元&#x200B;**素中存在的**data-repeatable属性的值为&#x200B;**true**。*
 
 每个占位符都有一个专属的OOTB元数据集。 要在表单上的特定位置显示自定义元数据，请在该 **位置添加${metadata_prop}属性** 。
 
@@ -93,16 +97,18 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 ### 搜索和制表器组件 {#search-amp-lister-component}
 
-* **** 标题：表单的标题
+* **标题：** 表单的标题
 * **name**:表单的名称（大多数情况下与标题相同）
 * **description**:表单的说明
 * **formUrl**:用于将表单呈现为HTML的URL
 * **pdfUrl**:用于将表单呈现为PDF的URL
-* **assetType**:资产的类型。 有效值包括 **表单**、**PDF表单**、打 **印表单**&#x200B;和自 **适应表单**
+* **assetType**:资产的类型。 有效值包括 **表单**、**PDF表单**、打 **印表单**&#x200B;和 **自适应表单**
 
 * **htmlStyle**&#x200B;和 **pdfStyle**:显示分别用于渲染的HTML和PDF图标的样式。 有效值为“**__FP_display_none**”或空。
 
-   **** 注意：切记在自定义样式表中使用__FP_display_none类
+>[!NOTE]
+>
+>切记在自定义样式表中使用__FP_display_none类。
 
 * **downloadUrl**:用于下载资产的URL。
 
@@ -118,7 +124,7 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 ### 链接组件 {#link-component}
 
-* **** 标题：表单的标题
+* **标题：** 表单的标题
 * **formUrl**:用于将表单呈现为HTML的URL
 * **目标**:链接的目标属性。 有效值为“_blank”和“_self”。
 * **linkText**:链接题注
@@ -127,7 +133,7 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 * **路径**:草稿／提交元数据节点的路径。 将其与。HTML扩展名一起用作URL以打开草稿或提交。
 * **contextPath**:AEM实例的上下文路径
-* **firstLetter**:自适应表单标题的首字母（大写），保存为草稿或提交。
+* **firstLetter**:自适应表单标题的首字母（大写），保存为草稿或已提交。
 * **formName**:自适应表单的标题，保存为草稿或已提交。
 * **draftID**:列出的草稿的ID（仅在“草稿”部分的模板中使用）。
 * **submitID**:列出的提交的ID（仅在“提交”部分的模板中使用）。
@@ -149,15 +155,15 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 **A**. 容器元件
 
-**** B.具有固定层次结构的“路径”元数据，以获取为每个表单存储的缩略图。
+**B.** 具有固定层次结构的“路径”元数据，以获取为每个表单存储的缩略图。
 
 **C.** 用于每个表单的模板部分的可重复数据属性
 
-**** D.本地化“应用”字符串
+**D.** 本地化“应用”字符串
 
-**** E.使用配置属性pdfLinkText
+**E.** 使用配置属性pdfLinkText
 
-**** F.使用“pdfUrl”元数据
+**F.** 使用“pdfUrl”元数据
 
 ## 提示、技巧和已知问题 {#tips-tricks-and-known-issues}
 
@@ -170,7 +176,7 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 * [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
 * [创建表单门户页面](/help/forms/using/creating-form-portal-page.md)
-* [使用API在网页上列出表单](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [使用API在网页上列表表单](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
