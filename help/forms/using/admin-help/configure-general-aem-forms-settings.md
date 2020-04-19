@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_je
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bd648c38-731b-420e-973d-a4728b69868e
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -35,14 +35,18 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 **临时目录的位置** AEM表单将创建产品临时文件的目录路径。 如果此设置的值为空，则默认位置为系统临时目录。 确保临时目录是可写文件夹。
 
-***注意&#x200B;**:确保临时目录位于本地文件系统中。 AEM表单不支持远程位置的临时目录。*
+>[!NOTE]
+>
+>确保临时目录位于本地文件系统中。 AEM表单不支持远程位置的临时目录。
 
 **全局文档存储根目录** 全局文档存储(GDS)根目录用于以下用途：
 
 * 储存长寿文档。 长期文档没有到期时间，直到删除它们（例如，在工作流程中使用的PDF文件）后才会持续。 长期文档是整个系统状态的关键部分。 如果这些文档中的某些或全部丢失或损坏，表单服务器可能会变得不稳定。 因此，此目录存储在RAID设备上很重要。
 * 存储处理过程中需要的临时文档。
 
-   ***注意&#x200B;**:您还可以在AEM表单数据库中启用文档存储。 但是，当您使用GDS时，系统性能会更好。*
+>[!NOTE]
+>
+>您还可以在AEM表单数据库中启用文档存储。 但是，当您使用GDS时，系统性能会更好。
 
 * 在群集中的节点之间传输文档。 如果您在群集环境中运行AEM表单，则必须可以从群集中的所有节点访问此目录。
 * 从远程API调用接收传入参数。
@@ -53,9 +57,13 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 * `[WEBSPHERE_HOME]/installedApps/adobe/'server'/DocumentStorage`
 * `[WEBLOGIC_HOME]/user_projects/<domain>/'server'/adobe/AEMformsserver/DocumentStorage`
 
-***注意&#x200B;**:更改GDS根目录设置的值应特别小心。 GDS目录用于存储在进程中使用的长期文件以及关键AEM表单产品组件。 更改GDS目录的位置是一个主要的系统更改。 错误配置GDS目录的位置将导致AEM表单无法运行，并可能需要完整重新安装AEM表单。 如果为GDS目录指定了新位置，则需要关闭应用程序服务器并迁移数据，然后才能重新启动服务器。 系统管理员必须将所有文件从旧位置移动到新位置，但保留内部目录结构。*
+>[!NOTE]
+>
+>更改GDS根目录设置的值应特别小心。 GDS目录用于存储在进程中使用的长期文件以及关键AEM表单产品组件。 更改GDS目录的位置是一个主要的系统更改。 错误配置GDS目录的位置将导致AEM表单无法运行，并可能需要完整重新安装AEM表单。 如果为GDS目录指定了新位置，则需要关闭应用程序服务器并迁移数据，然后才能重新启动服务器。 系统管理员必须将所有文件从旧位置移动到新位置，但保留内部目录结构。
 
-***注意&#x200B;**:请勿为临时目录和GDS目录指定同一目录。*
+>[!NOTE]
+>
+>请勿为临时目录和GDS目录指定同一目录。
 
 有关GDS目录的其他信息，请参 [阅准备安装AEM表单（单台服务器）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)。
 
@@ -91,7 +99,9 @@ FIPS模式不支持在7.0之前的Adobe Acrobat®版本中使用的加密算法�
 
 通常，启用FIPS后，Assembler服务将不会对任何文档应用密码加密。 如果尝试这样做，将引发FIPSModeException，指示“在FIPS模式下不允许密码加密”。 此外，当基本文档经过密码加密时，FIPS模式下不支持文档描述XML(DDX)PDFsFromBookmarks元素。
 
-***注意&#x200B;**:AEM表单软件不验证代码以确保FIPS兼容性。 它提供FIPS操作模式，以便FIPS认可的算法用于FIPS认可的库(RSA)的加密服务。*
+>[!NOTE]
+>
+>AEM表单软件不验证代码以确保FIPS兼容性。 它提供FIPS操作模式，以便FIPS认可的算法用于FIPS认可的库(RSA)的加密服务。
 
 **启用WSDL** 选择此选项可为属于AEM表单的所有服务启用Web服务定义语言(WSDL)生成。
 
