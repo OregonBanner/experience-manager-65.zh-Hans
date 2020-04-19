@@ -10,7 +10,7 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
 
 ---
 
@@ -43,7 +43,7 @@ We.Finance参考站点利用真实案例与现有和潜在客户进行互动，�
 
 在设置参考站点之前，请确保您具有以下各项：
 
-* **AEM Essentials** AEM QuickStart、AEM Forms加载项包和参考站点包。 有关 [附加和参考站点包详细信息](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) ，请参阅AEM Forms版本。
+* **AEM Essentials** AEM QuickStart、AEM Forms加载项包和参考站点包。 有关 [附加和参考站点包详细信息](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) ，请参阅AEM Forms版本。
 
 * **SMTP服务**&#x200B;可以使用任何SMTP服务。
 
@@ -260,7 +260,7 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 在AEM Forms中配置OAuth云服务，以启用AEM Forms与Microsoft Dynamics之间的通信。 执行以下步骤以在AEM作者和发布实例上配置OAuth云服务：
 
-1. 在AEM作者实例中，转到工 **具** > **Cloud Services** > **Data Sources** > **** global Cloud Services。 点按 **刷新Dynamics集成图标** ，然后点按属性。
+1. 在AEM作者实例中，转到工 **具** > **Cloud Services** > **Data Sources** > **** globalChick。 点按 **刷新Dynamics集成图标** ，然后点按属性。
 1. 转到Microsoft Azure Active Directory帐户。 将复制的云服务配置URL添加到注册应 **用程序的“回复URL** ”设置中。 保存配置。
 1. 在“身份验证设置”选项卡中， **为Microsoft Dynamics实例指定服务根**、客户端Id **、**&#x200B;客户端机密 **和****** 资源URL。 单 **击重定向到** Microsoft Dynamics登录页面的“连接到OAuth”。
 1. 提供登录凭据。 登录后，您将被重定向到AEM Forms云服务配置页面。 单击 **保存并关闭**。 将保存云服务配置。
@@ -355,7 +355,10 @@ AEM Forms与Adobe Analytics集成，使您能够监视和分析客户与表单�
 要体验引用站点中的集成，请执行以下操作以在AEM中配置目标:
 
 1. 开始使用jvm参数的作者快速 `-Dabtesting.enabled=true` 启动以在服务器上启用A/B测试。
-   **注意**:如果AEM实例在JBoss上运行（从Turnkey安装以服务形式启动），请在文件中的 `-Dabtesting.enabled=true` 以下条目中添加 `jboss\bin\standalone.conf.bat` 参数：
+
+   >[!NOTE]
+   >
+   >如果AEM实例在JBoss上运行（从Turnkey安装以服务形式启动），请在文件中的 `-Dabtesting.enabled=true` 以下条目中添加 `jboss\bin\standalone.conf.bat` 参数：
    `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
 1. 访问 `https://<hostname>:<port>/libs/cq/core/content/tools/cloudservices.html`.
