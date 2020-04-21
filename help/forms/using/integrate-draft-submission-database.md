@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 070d4e105c94548dda1098bf47cab83e0847f24d
 
 ---
 
@@ -26,8 +26,7 @@ AEM Forms门户草稿和提交组件允许用户将其表单另存为草稿，�
 >
 >* 本文档中介绍的示例和配置符合MySQL 5.6.24的要求，您必须将它们相应地替换为数据库系统。
 >* 确保您已安装最新版AEM Forms加载项包。 有关可用包的列表，请参阅 [AEM Forms发布文章](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 。
->
-
+> * 示例包仅可用于自适应表单提交操作。
 
 
 ## 设置和配置示例 {#set-up-and-configure-the-sample}
