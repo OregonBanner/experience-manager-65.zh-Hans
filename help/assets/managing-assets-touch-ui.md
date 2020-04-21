@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: 6d26a708ac2073eb7ceff62e65c6aaafdb727639
 
 ---
 
@@ -167,14 +167,14 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果要上传大资
 
 | 上传选项 | 子选项 | 描述 |
 |---|---|---|
-| 作业名称 |  | 在文本字段中预填充的默认名称包括用户输入的名称部分和日期和时间戳。 您可以使用默认名称，或为此上传作业输入您自己创建的名称。 <br>作业以及其他上传和发布作业将记录在“作业”页面上，您可以在该页面中检查作业的状态。 |
+| 作业名称 |  | 在文本字段中预填充的默认名称包括用户输入的名称部分和日期和时间戳。 您可以使用默认名称或为此上传作业输入您自己创建的内容的名称。 <br>作业以及其他上传和发布作业将记录在“作业”页面上，您可以在该页面中检查作业的状态。 |
 | 上传后发布 |  | 自动发布您上传的资产。 |
 | 在任意文件夹中覆盖相同的基本资产名称，而不考虑扩展名 |  | 如果希望上传的文件用相同的名称替换现有文件，请选择此选项。 此选项的名称可能不同，具体取决于“应用程序设置 **[!UICONTROL ”>“常规设置”]** >“上传到应用程序” **[!UICONTROL >“覆]**********&#x200B;盖图像”中的设置。 |
 | 上传时解压缩Zip或Tar文件 |  |  |
 | 作业选项 |  | 点按／单 **[!UICONTROL 击作业选项]** ，打开“上传作 [!UICONTROL 业选项”对话框] ，然后选择影响整个上传作业的选项。 这些选项对于所有文件类型都是相同的。<br>您可以从“应用程序常规设置”页面开始选择上传文件的默认选项。 要打开此页，请选择“设 **[!UICONTROL 置]** ”>“应 **[!UICONTROL 用程序设置”]**。 点按默 **[!UICONTROL 认上传选项]** ，打开上传作 [!UICONTROL 业选项对话框] 。 |
 |  | 当 | 选择“一次”或“重复”。 要设置重复作业，请选择“重复”选项（“每日”、“每周”、“每月”或“自定义”），以指定您希望FTP上传作业重复的时间。 然后根据需要指定计划选项。 |
 |  | 包含子文件夹 | 上传要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称将自动输入到AEM资产中。 |
-|  | 裁剪选项 | 要从图像的两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁切。 您还可以在“裁剪”菜单上选择“修剪”，然后选择以下选项：<br> **根据** <ul><li>**颜色** -选择颜色选项。 然后选择“角”菜单，并选择图像的角，其颜色最能代表要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块可指定从0到1的容差。对于基于颜色的修剪，指定0可仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅在像素透明时裁剪像素。 接近1的数字可以增加透明度。</li></ul><br>请注意，这些裁剪选项是无损的。 |
+|  | 裁剪选项 | 要从图像的两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁切。 您还可以在“裁剪”菜单上选择“修剪”，然后选择以下选项：<br> **根据** <ul><li>**颜色** -选择颜色选项。 然后选择“角”菜单，并选择图像的角，其颜色最能代表要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅在像素透明时裁剪像素。 接近1的数字可以增加透明度。</li></ul><br>请注意，这些裁剪选项是无损的。 |
 |  | 颜色用户档案选项 | 在创建用于投放的优化文件时，选择颜色转换：<ul><li>默认颜色保留：只要图像包含色彩空间信息，就保留源图像颜色；没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间：保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，使用“发布”设置中配置的默认颜色用户档案进行任何颜色转换。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用“默认颜色保留”选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换为色彩空间”。 此高级选项将覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像都包含错误或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
 |  | 图像编辑选项 | 您可以保留图像中的剪切蒙版，并选择颜色用户档案。<br> 请参阅 [在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
 |  | Postscript选项 | 您可以栅格化PostScript®文件、裁剪文件、保持透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
@@ -478,15 +478,15 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 点按／单击资产以打开其资产页面。
 
-   ![chlimage_1-220](assets/chlimage_1-15.png)
+   ![用于管理演绎版的“资产详细信息”页面](assets/chlimage_1-15.png)
 
 1. 点按／单击GlobalNav图标，然后从列表中 **[!UICONTROL 选择]** “演绎版”。
 
-   ![renditions_menu](assets/renditions_menu.png)
+   ![用于打开菜单的左边栏，然后选择演绎版选项](assets/renditions_menu.png)
 
 1. 在&#x200B;**[!UICONTROL 演绎版]**&#x200B;面板中，查看为资产生成的演绎版列表。
 
-   ![renditions_panel](assets/renditions_panel.png)
+   ![“资产详细信息”页面上的演绎版面板](assets/renditions_panel.png)
 
    >[!NOTE]
    >
@@ -504,7 +504,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    导航到资产的资产详细信息页面，然后点按／单击工具栏中的 **[!UICONTROL 添加演绎版]** ，以上传资产的新演绎版。
 
-   ![chlimage_1-221](assets/chlimage_1-16.png)
+   ![添加演绎版图标以上传新演绎版](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
@@ -516,7 +516,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    同样，您也可以通过覆盖来自定义“注释”页面图像 `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`。
 
-   ![chlimage_1-222](assets/chlimage_1-17.png)
+   ![在CRXDE中叠加Renditionpicker节点以自定义注释页面图像](assets/chlimage_1-17.png)
 
    要为视频资产配置再现维度，请导航到CRX存储库中位于 `videopicker` 该位置的节点，覆盖该节点 `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`，然后编辑相应的属性。
 
@@ -536,7 +536,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 选择资产，然后点按／单击工 **[!UICONTROL 具栏中]** 的删除图标。
 
-   ![delete_icon](assets/delete_icon.png)
+   ![删除图标](assets/delete_icon.png)
 
 1. 在确认对话框中，单击：
 
@@ -584,11 +584,11 @@ See [Download assets from AEM](/help/assets/download-assets-from-aem.md).
 
 1. 选择要取消发布的资产／文件夹，然后点按／单击工 **[!UICONTROL 具栏中的管理发布]** 图标。
 
-   ![manage_publication](assets/manage_publication.png)
+   ![“管理发布”图标](assets/manage_publication.png)
 
 1. 从列表 **[!UICONTROL 中选择]** “取消发布”操作。
 
-   ![unpublish_action](assets/unpublish_action.png)
+   ![取消发布操作](assets/unpublish_action.png)
 
 1. To unpublish the asset later, select **[!UICONTROL Unpublish Later]**, and then select a date for unpublishing the asset.
 1. 计划一个资产在发布环境中不再可用的日期。
@@ -610,11 +610,11 @@ CUG是限制对资产访问的额外方式。 您还可以为文件夹配置登�
 1. 从资产UI中选择一个文件夹，然后点按／单击工具栏中的属性图标以显示属性页面。
 1. 从“权 **[!UICONTROL 限]** ”选项卡，在“已关闭的用户组”下添加 **[!UICONTROL 成员或组]**。
 
-   ![add_user](assets/add_user.png)
+   ![在已关闭的用户组中添加用户](assets/add_user.png)
 
 1. 要在用户访问文件夹时显示登录屏幕，请选择“启 **[!UICONTROL 用]** ”选项。 然后，在AEM中选择登录页面的路径，并保存更改。
 
-   ![login_page](assets/login_page.png)
+   ![启用并选择在用户访问文件夹时显示的登录页面](assets/login_page.png)
 
    >[!NOTE]
    >
@@ -642,13 +642,13 @@ CUG是限制对资产访问的额外方式。 您还可以为文件夹配置登�
 
 在列表视图和列视图中，当您将指针悬停在资 **[!UICONTROL 产缩略图上时]** ，将显示选择选项。
 
-![select_quick_in_listview](assets/select_quick_in_listview.png)
+![在列表视图中选择资产](assets/select_quick_in_listview.png)
 
-![select_quick_in_columnview](assets/select_quick_in_columnview.png)
+![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
 在卡视图中，“选 **[!UICONTROL 择]** ”选项显示为快速操作。
 
-![select_quick_action](assets/select_quick_action.png)
+![选择卡快速操作视图](assets/select_quick_action.png)
 
 在浏览器中的“资产”用户界面中浏览文件夹或收藏集时，您可以使用右上角的“全选”选项选择所有显示或加载的资产  。 最初，只有100个资产加载到卡视图中，200个资产加载到列表视图中。 滚动搜索结果页面时，将以视图方式加载更多资产。 全 [!UICONTROL 选选项] ，只选择加载的资产。
 
@@ -667,36 +667,36 @@ AEM资产界面中的编辑工具可让您对图像资产执行小型编辑作�
    * 选择资产，然后单击／点按工 **[!UICONTROL 具栏中]** 的编辑图标。
    * Tap/click the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
    * 在资产页面中，点按／单击工 **[!UICONTROL 具栏中]** 的编辑图标。
-   ![edit_icon](assets/edit_icon.png)
+   ![工具栏中的编辑图标](assets/edit_icon.png)
 
 1. To crop the image, tap/click the **Crop** icon.
 
-   ![chlimage_1-226](assets/chlimage_1-22.png)
+   ![裁剪图标](assets/chlimage_1-22.png)
 
 1. 从列表中选择所需的选项。图像上会根据您选择的选项显示裁剪区域。利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
 
-   ![chlimage_1-227](/help/assets/assets/chlimage_1-23.png)
+   ![裁剪选项](/help/assets/assets/chlimage_1-23.png)
 
 1. 选择要裁剪的区域，并在图像上调整其大小或位置。
 1. 使用“ **完成** ”图标（右上角）裁剪图像。 Clicking the **Finish** icon also triggers the regeneration of renditions.
 
-   ![chlimage_1-228](assets/chlimage_1-24.png)
+   ![完成图标](assets/chlimage_1-24.png)
 
 1. 使用右 **上角的** “撤消”和 **** “重做”图标分别恢复到未裁剪的图像或保留裁剪的图像。
 
-   ![chlimage_1-229](assets/chlimage_1-25.png)
+   ![撤消和重做图标](assets/chlimage_1-25.png)
 
 1. 点按／单击相应的旋转图标以顺时针或逆时针旋转图像。
 
-   ![chlimage_1-230](assets/chlimage_1-26.png)
+   ![顺时针和逆时针旋转图标](assets/chlimage_1-26.png)
 
 1. 点按／单击相应的翻转图标，以水平或垂直翻转图像。
 
-   ![chlimage_1-231](assets/chlimage_1-27.png)
+   ![用于水平或垂直翻转图像的图标](assets/chlimage_1-27.png)
 
 1. Tap/click the **Finish** icon to save the changes.
 
-   ![chlimage_1-232](assets/chlimage_1-28.png)
+   ![完成图标](assets/chlimage_1-28.png)
 
 >[!NOTE]
 >
@@ -739,11 +739,11 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    * [快速操作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在选择资产或导航到资产页面后，从工具栏中
-   ![chlimage_1-233](assets/chlimage_1-29.png)
+   ![注释图标](assets/chlimage_1-29.png)
 
 1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
 
-   ![chlimage_1-234](assets/chlimage_1-30.png)
+   ![“添加注释”对话框中的“注释”框](assets/chlimage_1-30.png)
 
 1. 要向用户通知注释，请指定用户的电子邮件地址并添加评论。 例如，要向 Aaron MacDonald 发送有关注释的通知，请输入 @aa。此时会出现一个列表，其中显示了所有匹配用户的提示。从列表中选择Aaron的电子邮件地址，用评论标记她。 同样，您可以在注释内的任意位置或注释前后标记更多用户。
 
@@ -751,11 +751,11 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    >
    >对于非管理员用户，仅当用户在Crx-de中具有“在 */home* ”的“读取”权限时，才显示建议。
 
-   ![chlimage_1-235](assets/chlimage_1-31.png)
+   ![指定用户的电子邮件地址并添加评论以通知用户](assets/chlimage_1-31.png)
 
 1. After adding the annotation, click **[!UICONTROL Add]** to save it. A notification for the annotation is sent to Aaron.
 
-   ![chlimage_1-236](assets/chlimage_1-32.png)
+   ![添加按钮以保存注释](assets/chlimage_1-32.png)
 
    >[!NOTE]
    >
@@ -786,15 +786,15 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 点按／单击GlobalNav图标，然后从列表中 **[!UICONTROL 选择]** “时间轴”。
 
-   ![chlimage_1-239](assets/chlimage_1-35.png)
+   ![GlobalNav图标上的可用选项](assets/chlimage_1-35.png)
 
 1. 从时间线的&#x200B;**[!UICONTROL 显示全部]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 注释]**&#x200B;以根据注释过滤结果。
 
-   ![chlimage_1-240](assets/chlimage_1-36.png)
+   ![在时间轴中显示所有列表](assets/chlimage_1-36.png)
 
    点按／单击“时间轴”面板中 **[!UICONTROL 的注释]** ，以视图图像上的相应注释。
 
-   ![chlimage_1-241](assets/chlimage_1-37.png)
+   ![用于在图像上视图注释的时间轴面板](assets/chlimage_1-37.png)
 
    点按／单击 **[!UICONTROL 删除]**，以删除特定注释。
 
@@ -814,15 +814,15 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 要打印特定注释，请从时间轴中选择注释。
 
-   ![chlimage_1-242](assets/chlimage_1-38.png)
+   ![从时间轴中选择注释以打印它](assets/chlimage_1-38.png)
 
    要仅打印审阅状态，请从时间轴中选择它。
 
-   ![chlimage_1-243](assets/chlimage_1-39.png)
+   ![要仅打印“注释”的审阅状态，请从时间轴中选择它](assets/chlimage_1-39.png)
 
 1. Tap/click the **[!UICONTROL Print]** icon from the toolbar.
 
-   ![chlimage_1-244](assets/chlimage_1-40.png)
+   ![工具栏中的打印图标](assets/chlimage_1-40.png)
 
 1. 从“打印”对话框中，选择您希望批注／审阅状态在PDF上显示的位置。 例如，如果希望在包含打印图像的页面的右上方打印注释／状态，请使用左 **上角设置** 。 默认情况下，它处于选中状态。
 
@@ -836,11 +836,11 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 点按/单击&#x200B;**[!UICONTROL 打印]**。根据您在步骤 2 中选择的选项，生成的 PDF 会在指定位置显示批注/状态。例如，如果您选择使用&#x200B;**左上角**&#x200B;设置打印批注和审阅状态，则生成的输出将类似于此处描述的 PDF 文件。
 
-   ![chlimage_1-246](assets/chlimage_1-42.png)
+   ![生成的PDF的注释和审阅状态](assets/chlimage_1-42.png)
 
 1. 使用右上角的选项下载或打印PDF。
 
-   ![chlimage_1-247](assets/chlimage_1-43.png)
+   ![PDF上的下载和打印选项](assets/chlimage_1-43.png)
 
    >[!NOTE]
    >
@@ -848,7 +848,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    要修改渲染后的PDF文件的外观（例如，注释和状态的字体颜色、大小和样式、背景颜色），请从“配置管理器”中打开“注释 **[!UICONTROL PDF]** ”配置，并修改所需的选项。 例如，要更改批准状态的显示颜色，请修改相应字段中的颜色代码。 有关更改注释的字体颜色的信息，请参阅 [注释](/help/assets/managing-assets-touch-ui.md#annotating)。
 
-   ![chlimage_1-248](assets/chlimage_1-44.png)
+   ![在PDF文档上打印资产批注的配置](assets/chlimage_1-44.png)
 
    返回渲染的PDF文件并刷新它。 刷新的PDF反映了您所做的更改。
 
@@ -905,7 +905,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    * Click **[!UICONTROL Save as Version]** to create a version for the asset. （可选）添加标签和注释。
    * 单击 **[!UICONTROL 创建]** ，以创建版本。
 
-      ![chlimage_1-251](assets/create-new-version-from-timeline.png)
+      ![从提要栏创建资产版本](assets/create-new-version-from-timeline.png)
 
       *图：从时间轴左侧提要栏中创建资[!UICONTROL 产的版]本。*
 
@@ -914,7 +914,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    * 单击“ **[!UICONTROL 在时间轴中]** 显示 [!UICONTROL 全部”]。
    * 单击“ **[!UICONTROL 版本]**”。 为资产创建的所有版本均列在左侧提要栏中。
 
-      ![versions_option](assets/versions_option.png)
+      ![ 从时间轴中选择版本选项](assets/versions_option.png)
 
    * 选择资产的特定版本，然后单击 **[!UICONTROL 预览版本]**。
 
@@ -923,7 +923,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    * 单击资产的某个版本。 （可选）添加标签和评论。
    * Click **[!UICONTROL Revert to this Version]**.
 
-      ![select_version](assets/select_version.png)
+      ![选择要还原到的版本](assets/select_version.png)
 
       *图：选择一个版本并恢复到它。 它成为DAM用户随后可用的当前版本。*
 
