@@ -8,7 +8,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 3e37ee6da263bb12eb0efea85213987e8286bc60
+source-git-commit: 7daf89f7e69d3e2e938780ff98fd2df46723e708
 
 ---
 
@@ -25,10 +25,10 @@ Smart Imaging还可以从与Adobe同类最出色的高级CDN服务完全集成�
 
 | Image<br>(URL) | 缩略图 | 大小<br> (JPEG) | 大小(WebP)<br> （带有智能成像） | %降低 |
 |---|---|---|---|---|
-| [图像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
-| [图像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
-| [图像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
-| [图像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
+| [图像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture1](/help/assets/assets-dm/picture1.png) | 73.75 KB | 45.92 KB | 38% |
+| [图像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture2](/help/assets/assets-dm/picture2.png) | 191 KB | 70.66 KB | 63% |
+| [图像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture3](/help/assets/assets-dm/picture3.png) | 96.64 KB | 39.44 KB | 59% |
+| [图像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
 |  |  |  |  | 平均= 51% |
 
 与上述内容类似，Adobe还通过来自实时客户站点的7009个URL运行测试，并且由于具备智能成像功能，平均可以对JPEG进行38%的文件大小进一步优化，对WebP格式的PNG进行31%的文件大小进一步优化。
@@ -72,25 +72,24 @@ Smart Imaging使用Adobe Sensei根据浏览器功能将图像自动转换为最�
 * JPEG
 * PNG
 
-对于URL中提及的任何其他格式，您应明确关闭智能成像。  在JPEG `bfc=off` 和PNG之外的文件格式的URL后面附加修饰符。 您可以使用以下任一方法来完成此操作：
+<!-- For any other format mentioned in a URL, you should explicity turn off Smart Imaging.  Append modifier `bfc=off` to the URL for file formats other than JPEG and PNG. You can accomplish this by using either one of the following methods:
 
-* 如果URL中提到修饰 `fmt` 符，则使用规则集。
-* 在相关预设的URL修饰符字段中附加。
+* Use a ruleset if the `fmt` modifier is mentioned in the URL. 
+* Append in URL modifiers field of the presets concerned.
 
-Adobe正在开发一个永久修复，它不要求您附加 `bfc=off` 或 `fmt !=JPEG` 附加 `fmt !=PNG`。 此主题将在修复提交后更新。
-
+Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
 ## 智能成像如何处理我们现有的已使用图像预设？ {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 Smart Imaging可与您现有的“图像预设”配合使用，并在所请求的文件格式为JPEG或PNG时观察所有图像设置，但质量(qlt)和格式(fmt)除外。 对于格式转换，我们会根据图像预设设置的定义保持完整的视觉保真度，但文件会更小。 如果原始图像大小小于“智能成像”生成的图像大小，则会提供原始图像。
 
-此外，如果图像预设用于返回或， `fmt !=JPEG` 请务 `fmt !=PNG`必在预设修饰符 `bfc=off` 字段后面附加以返回所请求的文件格式。
+<!-- In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
 ## 我是否必须更改任何URL、图像预设或在我的站点上部署任何用于智能成像的新代码？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
 否. Smart Imaging可与您的现有图像URL和图像预设无缝协作。 此外，智能成像不要求您在网站上添加任何代码来检测用户的浏览器。 所有这些都是自动处理的。
 
-如前所述，Smart Imaging仅支持JPEG和PNG图像格式。 对于其他格式，您需要将修饰 `bfc=off` 符追加到URL，如前所述。
+<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
 另外，请参 [阅我是否有资格使用智能成像？](#am-i-eligible-to-use-smart-imaging) 了解智能成像的先决条件。
 
