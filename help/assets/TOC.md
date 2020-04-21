@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5资产用户指南
 translation-type: tm+mt
-source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
+source-git-commit: b539ab0d6e777be08abb288b6f736f4e511755f1
 
 ---
 
@@ -34,6 +34,7 @@ source-git-commit: c400a3f1c1535a32e1e1209aa1760235a4841c5e
    + [配置Dynamic Media - Scene7模式](config-dms7.md)
    + [配置Dynamic Media —— 混合模式](config-dynamic.md)
    + [Dynamic Media - Scene7模式疑难解答](troubleshoot-dms7.md)
+   + [从Dynamic Media —— 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [管理 Dynamic Media 查看器预设](managing-viewer-presets.md)
