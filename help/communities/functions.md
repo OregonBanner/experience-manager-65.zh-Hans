@@ -11,26 +11,27 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 58a06c1a16c62bffad2893fbec0b32d2ce7267a7
 
 ---
 
 
 # 社区功能{#community-functions}
 
-社区体验中预期的功能类型众所周知。 社区功能可作为社区功能提供。 本质上，它们是预先连接的一个或多个页面，以实施社区功能，该功能不仅需要在创作模式下向页面添加组件。 它们是用于定义从中创建社区站点的 [社区站点模板](/help/communities/sites.md) ，结构的构 [建块](/help/communities/sites-console.md)。
+社区体验中预期的功能类型众所周知。 社区功能可作为社区功能提供。 本质上，它们是预先连接的一个或多个页面，以实施社区功能，该功能不仅需要在创作模式下将组件添加到页面。 它们是用于定义从中创建社区站点的 [社区站点模板](/help/communities/sites.md) ，结构的构 [建块](/help/communities/sites-console.md)。
 
 创建社区站点后，可以使用标准 [AEM创作模式将内容添加到生成的页面](/help/sites-authoring/editing-content.md)。 社区功能控制台中显示了各种社区功能。
 
 >[!NOTE]
 >
->社区站点的控制台、 [社区站点模板](/help/communities/sites-console.md)、社区组模板 [，以](/help/communities/sites.md)及社区功能的创建控制台仅在创作 [](/help/communities/tools-groups.md)[](/help/communities/functions.md) 环境中使用。
+>社区站点的控制台、 [社区站点模板](/help/communities/sites-console.md)、社区组模板 [,](/help/communities/sites.md)以及社区功能的创建控制台仅 [](/help/communities/tools-groups.md)[](/help/communities/functions.md) 在创作环境中使用。
+
 
 ## 社区功能控制台 {#community-functions-console}
 
-在创作环境中，要访问社区功能控制台
+在创作环境中，要访问社区功能控制台，请执行以下操作：
 
-* 从全局导航：工 **具、社区、社区功能**
+* 从全局导航：“工 **[!UICONTROL 具]** ”>“ **[!UICONTROL 社区]** ” **[!UICONTROL >“社]**&#x200B;区功能”。
 
 ![chlimage_1-106](assets/chlimage_1-106.png)
 
@@ -38,7 +39,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 以下是随AEM Communities提供的功能的简短说明。 每个功能都包括一个或多个AEM页面，其中包含连接到功能中的社区组件，该功能可轻松并入社 [区站点模板中](/help/communities/sites.md)。
 
-社区站点模板为社区站点提供结构，包括登录名、用户配置文件、通知、消息、站点菜单、搜索、主题和品牌功能。
+社区站点模板为社区站点提供了结构，包括登录名、用户用户档案、通知、消息、站点菜单、搜索、主题和品牌功能。
 
 ### 标题和URL设置 {#title-and-url-settings}
 
@@ -50,16 +51,20 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-* **标题**(*必需*)站点功能菜单中显示的文本
+* **标题**
 
-* **URL**(*必需*)用于生成URI的名称。 该名称必须符合AEM和JCR [实施的命](/help/sites-developing/naming-conventions.md) 名约定。
+   (必&#x200B;*需*)站点功能菜单中显示的文本
+
+* **URL**
+
+   (*必需*)用于生成URI的名称。 该名称必须符合AEM和JCR [实施的命](/help/sites-developing/naming-conventions.md) 名约定。
 
 例如，使用根据入门教程创建的 [站点](/help/communities/getting-started.md) ，如果
 
 * 标题=网页
 * URL =页
 
-然后该页面的URL是https://localhost:4503/content/sites/engage/en/**page**.html
+然后，页面的URL为https://localhost:4503/content/sites/engage/en/page.html
 
 页面的菜单链接显示为：
 
@@ -67,7 +72,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 活动流功能 {#activity-stream-function}
 
-活动流功能是具有“活动流”组件的页 [面](/help/communities/activities.md) ，该组件选择了所有视图（所有活动、用户活动和以下活动）。 另请参 [阅适用于开发人员的Activity Stream Essentials](/help/communities/essentials-activities.md) 。
+活动流函数是具有活动流组件的页面 [](/help/communities/activities.md) ，该组件选择了所有视图(所有活动、用户活动和以下内容)。 另请参 [阅活动Stream Essentials](/help/communities/essentials-activities.md) for developers。
 
 添加到模板时，将打开以下对话框：
 
@@ -76,17 +81,24 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **显示“我的活动”视图**&#x200B;如果选中此选项，“活动”页面将包含一个选项卡，该选项卡根据当前成员在社区中生成的活动过滤活动。 默认为选中状态。
 
-* **显示“所有活动”视图**&#x200B;如果选中此选项，则“活动”页面会包括一个选项卡，其中包括当前成员有权访问的社区中生成的所有活动。 默认为选中状态。
+* **显示“我的活动”视图**
 
-* **显示“新闻源”视图**&#x200B;如果选中此选项，“活动”页面将包含一个选项卡，该选项卡会根据当前成员正在跟踪的活动筛选活动。 默认为选中状态。
+   如果选择此选项，则活动页面将包含一个选项卡，该选项卡基于当前成员在社区中生成的活动。 默认为选中状态。
+
+* **显示“全部活动”视图**
+
+   如果选择此选项，则活动页面将包含一个选项卡，该选项卡包括当前成员有权访问的社区中生成的所有活动。 默认为选中状态。
+
+* **显示“新闻信息源”视图**
+
+   如果选择了此选项卡，则活动页面将包含一个选项卡，根据当前成员所遵循的过滤器活动将显示这些选项卡。 默认为选中状态。
 
 ### 指定任务功能 {#assignments-function}
 
 任务功能是定义社区站点以用于启 [用的基本功能](/help/communities/overview.md#enablement-community)。 它允许向社区成员分配启用资源。 另请参 [阅Assignments Essentials](/help/communities/essentials-assignments.md) for developers。
 
-此功能可作为Enablement Add-on的 [一个功能](/help/communities/enablement.md)。 Enablement Add-on需要额外的许可才能在生产环境中使用。
+此功能可作为Enablement Add-on的 [一个功能](/help/communities/enablement.md)。 Enablement Add-on需要额外的许可才能用于生产环境。
 
 添加到模板时，唯一的配置是标题 [和URL设置](#title-and-url-settings)。
 
@@ -99,13 +111,22 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **允许特权成**&#x200B;员如果选中此选项，则博客仅允许特权成员通过允许选择特权成员组来创建 [文章](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员进行创建。 取消选择默认值。
 
-* **允许文件上**&#x200B;传如果选择此选项，则博客中会包含成员上传文件的功能。 默认为选中状态。
+* **允许拥有权限的成员**
 
-* **允许线程**&#x200B;化回复如果未选择，博客将允许回复（评论）文章，但不允许回复评论。 默认为选中状态。
+   如果选中此选项，则博客仅允许特权成员通过允许选择特权成员组来 [创建文章](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员进行创建。 取消选择默认值。
 
-* **允许特色内**&#x200B;容如果选择，则博客将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
+* **允许文件上传**
+
+   如果选择此选项，则博客将允许成员上传文件。 默认为选中状态。
+
+* **允许主题回复**
+
+   如果未选择，博客将允许对文章的回复（评论），但不允许对评论的回复。 默认为选中状态。
+
+* **允许专题内容**
+
+   如果选择此选项，则博客将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
 
 ### 日历功能 {#calendar-function}
 
@@ -115,16 +136,27 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
-* 请参阅 [标题和URL设置](#title-and-url-settings)
-* **允许固**&#x200B;定如果选择，论坛允许将主题回复固定到评论列表的开头。 默认为选中状态。
+* [标题和URL设置](#title-and-url-settings)
 
-* **允许特权成**&#x200B;员如果选中此选项，则博客仅允许特权成员通过允许选择特权成员组来创建 [文章](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员进行创建。 取消选择默认值。
+* **允许固定**
 
-* **允许文件上**&#x200B;传如果选择此选项，则博客中会包含成员上传文件的功能。 默认为选中状态。
+   如果选择此选项，论坛将允许将主题回复固定到评论列表的开头。 默认为选中状态。
 
-* **允许线程**&#x200B;化回复如果未选择，博客将允许回复（评论）文章，但不允许回复评论。 默认为选中状态。
+* **允许拥有权限的成员**
 
-* **允许特色内**&#x200B;容如果选择，其内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
+   如果选中此选项，则博客仅允许特权成员通过允许选择特权成员组来 [创建文章](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员进行创建。 取消选择默认值。
+
+* **允许文件上传**
+
+   如果选择此选项，则博客将允许成员上传文件。 默认为选中状态。
+
+* **允许主题回复**
+
+   如果未选择，博客将允许对文章的回复（评论），但不允许对评论的回复。 默认为选中状态。
+
+* **允许专题内容**
+
+   如果选中，其内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
 
 ### 目录功能 {#catalog-function}
 
@@ -132,14 +164,17 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 如果社区站点的所有属性设置为true，则所有目录中都会显示社区站点的所有 ` [Show in Catalog](/help/communities/resources.md)`支持资源和学习路径。 要明确包含资源和学习路径，必须对目录应 [用预过滤](/help/communities/catalog-developer-essentials.md#pre-filters) 。
 
-添加到模板后，该配置允许指定用于配置向站点访问者显示的标记过滤器的标记命名空间：
+添加到模板时，该配置允许指定用于配置向站点命名空间显示的标记过滤器的标记访客:
 
 ![Catalog函数](assets/catalog-function.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **选择所有命名**空间所选标记命名空间定义哪些标记可供访客选择，以过滤目录中列出的启用资源列表。
-如果选中此选项，则社区站点允许的所有标记命名空间都可用。
-如果取消选择，则可以选择社区站点允许的一个或多个命名空间。
+
+* **选择所有命名空间**
+
+   选定的标记命名空间定义哪些标记可供访客选择，以过滤目录中列出的启用资源的列表。
+如果选择此选项，则允许为社区站点使用的所有标记命名空间均可用。
+如果取消选择，则可以选择社区站点所允许的一个或多个命名空间。
 默认为选中状态。
 
 ### 特色内容功能 {#featured-content-function}
@@ -167,15 +202,26 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **允许固**&#x200B;定如果选择，论坛允许将主题回复固定到评论列表的开头。 默认为选中状态。
 
-* **允许特权成**&#x200B;员如果选择此选项，则论坛仅允许特权成员通过允许选择特权成员组来发布 [主题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
+* **允许固定**
 
-* **允许文件上**&#x200B;传如果选择此选项，则论坛将允许成员上传文件。 默认为选中状态。
+   如果选择此选项，论坛将允许将主题回复固定到评论列表的开头。 默认为选中状态。
 
-* **允许线程**&#x200B;化回复如果未选择，论坛将允许对主题进行评论，但不允许对这些评论进行回复。 默认为选中状态。
+* **允许拥有权限的成员**
 
-* **允许特色内**&#x200B;容如果选择此选项，则组件的内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
+   如果选择该选项，则论坛仅允许特权成员通过允许选择特权成员组来发 [布主题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
+
+* **允许文件上传**
+
+   如果选择了此选项，则论坛将允许成员上传文件。 默认为选中状态。
+
+* **允许主题回复**
+
+   如果未选择，论坛将允许对主题进行评论，但不允许对这些评论进行回复。 默认为选中状态。
+
+* **允许专题内容**
+
+   如果选择此项，组件的内容将标识为特色 [内容](/help/communities/featured.md)。 默认为选中状态。
 
 ### 组函数 {#groups-function}
 
@@ -185,9 +231,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >必须首先包含并列出任何其 [他函数](#page-function)，如页面函数。
 
-组功能使社区成员能够在发布环境中在社区站点内创建子社区。
 
-根据 [设置](/help/communities/sites-console.md#groupmanagement) ，当“组”功能包含在社区站点模板中时 [](/help/communities/sites.md)，这些组可以是公共的或私有的，并且一个或多个社区组模板可以配置为在实际创建社区组时（例如，从发布环境中）提供模板选择。 社 [区组模板](/help/communities/tools-groups.md) ，指定为组页面（如论坛和日历）创建的社区功能。
+组功能使社区成员能够在发布环境的社区站点内创建子社区。
+
+根据 [设置](/help/communities/sites-console.md#groupmanagement) ，当“组”功能包含在社区站点模板中时 [](/help/communities/sites.md)，这些组可以是公共的或私有的，并且一个或多个社区组模板可以配置为在实际创建社区组时(例如，从发布环境)提供模板选择。 社 [区组模板](/help/communities/tools-groups.md) ，指定为组页面（如论坛和日历）创建的社区功能。
 
 创建社区组后，会为新组动态创建成员组，可向其分配或加入成员。 For more information, see [Managing Users and User Groups](/help/communities/users.md).
 
@@ -198,11 +245,18 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-113](assets/chlimage_1-113.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **选择组模板**&#x200B;一个下拉框，它允许选择一个或多个已启用的组模板，新社区组（在发布环境中）的将来创建者可以从中选择这些模板。
 
-* **允许特权成**&#x200B;员如果选择此选项，则论坛仅允许特权成员通过允许选择特权成员安全组来 [发布主题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
+* **选择组模板**
 
-* **允许创建发**布如果选择此选项，则授权的社区成员可以在发布环境中创建组。 如果取消选择，则只能在创作环境中从“社区站点的组”控制台创建新组（子社区）。
+   允许选择一个或多个已启用的组模板的下拉框，新社区组(在发布环境中)的未来创建者可从中进行选择。
+
+* **允许拥有权限的成员**
+
+   如果选择该选项，则论坛仅允许特权成员通过允许选择特权成员安 [全组发布主题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
+
+* **允许发布创建**
+
+   如果选择此选项，则授权社区成员可以在发布环境中创建组。 如果取消选择，则只能在创作环境中从“社区站点的组”控制台创建新组（子社区）。
 默认为选中状态。
 
 ### 构思功能 {#ideation-function}
@@ -214,13 +268,22 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-114](assets/chlimage_1-114.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **允许特权成**&#x200B;员如果选择此选项，则论坛仅允许特权成员通过允许选择特权成员安全组来 [发布主题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
 
-* **允许文件上**&#x200B;传如果选择此选项，则该想法包括允许成员上传文件的功能。 默认为选中状态。
+* **允许拥有权限的成员**
 
-* **允许线程**&#x200B;化回复如果未选择，则此想法允许对主题回复（评论），但不允许对评论进行回复。 默认为选中状态。
+   如果选择该选项，则论坛仅允许特权成员通过允许选择特权成员安 [全组发布主题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
 
-* **允许特色内**&#x200B;容如果选择，其内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
+* **允许文件上传**
+
+   如果选择此项，则该想法包括允许成员上传文件的功能。 默认为选中状态。
+
+* **允许主题回复**
+
+   如果未选择，则该构思允许对主题进行回复（评论），但不允许对评论进行回复。 默认为选中状态。
+
+* **允许专题内容**
+
+   如果选中，其内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
 
 ### 排行榜功能 {#leaderboard-function}
 
@@ -233,13 +296,20 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **显示徽章**如果选中此选项，则排行榜中会包含一个用于标记图标的列。
+
+* **显示徽章**
+
+   如果选中此选项，则排行榜中会包含标记图标的列。
 取消选择默认值。
 
-* **显示徽章名**称如果选中此选项，则该徽章名称的列将包括在排行榜中。
+* **显示徽章名称**
+
+   如果选中此选项，则会在排行榜中包含标记名称的列。
 取消选择默认值。
 
-* **显示头像**如果选择此选项，则会员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员配置文件。
+* **显示头像**
+
+   如果选择此项，则会员的头像图像将包含在排行榜中，位于其名称链接旁边，指向其成员用户档案。
 取消选择默认值。
 
 ### 页面功能 {#page-function}
@@ -257,15 +327,26 @@ QnA函数是一个页面，其中配置了 [QnA组件](/help/communities/working
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
 * [标题和URL设置](#title-and-url-settings)
-* **允许固**&#x200B;定如果选择，论坛允许将主题回复固定到评论列表的开头。 默认为选中状态。
 
-* **允许特权成**&#x200B;员如果选中此选项，问题与解答论坛仅允许特权成员通过选择特权成员组来发 [布问题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
+* **允许固定**
 
-* **允许文件上**&#x200B;传如果选择此选项，问题与解答论坛将允许成员上传文件。 默认为选中状态。
+   如果选择此选项，论坛将允许将主题回复固定到评论列表的开头。 默认为选中状态。
 
-* **允许线程化**&#x200B;回复如果未选择，问题与解答论坛允许对已发布的问题进行评论（答案），但不允许回复答案。 默认为选中状态。
+* **允许拥有权限的成员**
 
-* **允许特色内**&#x200B;容如果选择，其内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
+   如果选择了此选项，则问题与解答论坛仅允许特权成员通过选择特权成员组来发 [布问题](/help/communities/users.md#privileged-members-group)。 如果未选择，则允许所有社区成员发布。 取消选择默认值。
+
+* **允许文件上传**
+
+   如果选择了此选项，则问题与解答论坛将允许成员上传文件。 默认为选中状态。
+
+* **允许主题回复**
+
+   如果未选择，问题与解答论坛允许对已发布的问题进行评论（答案），但不允许回复答案。 默认为选中状态。
+
+* **允许专题内容**
+
+   如果选中，其内容将标识为特 [色内容](/help/communities/featured.md)。 默认为选中状态。
 
 ## 创建社区功能 {#create-community-function}
 
@@ -279,11 +360,17 @@ QnA函数是一个页面，其中配置了 [QnA组件](/help/communities/working
 
 在“社区功能名称”面板上，将配置名称、说明以及是否启用或禁用该功能：
 
-* **社区函数**&#x200B;用于显示和存储的函数名
+* **社区功能名称**
 
-* **社区功能说明**&#x200B;显示功能说明
+   用于显示和存储的函数名。
 
-* **禁用／启用**&#x200B;控制函数是否可引用的切换开关
+* **社区功能描述**
+
+   显示的函数描述。
+
+* **禁用／启用**
+
+   控制函数是否可引用的切换开关。
 
 ### AEM Blueprint {#aem-blueprint}
 
@@ -291,7 +378,7 @@ QnA函数是一个页面，其中配置了 [QnA组件](/help/communities/working
 
 在面 `AEM Blueprint` 板上，可以选择作为社区功能底层实现的蓝图。
 
-社区功能是一个微型网站，包括一个或多个页面，预先连接以包含在社区站点中，包括登录名、用户配置文件、通知、消息、站点菜单、搜索、主题和品牌功能。 创建该函数后，可以在创作编辑模 [式下打开该函数](#open-community-function) ，并自定义页面或组件设置。
+社区功能是一个微型网站，包括一个或多个页面，预先连接以包含在社区站点中，包括登录名、用户用户档案、通知、消息、站点菜单、搜索、主题和品牌功能。 创建该函数后，可以在创作编辑模 [式下打开该函数](#open-community-function) ，并自定义页面或组件设置。
 
 由于社区功能是作为Blueprint的 [Live](/help/sites-administering/msm.md#live-copies) [Copy实现的，因此可以转出对函数所做的更改，该函数影响从社区站点模板创建的所有社区站点页面或包含该函数](/help/sites-administering/msm-livecopy.md#creatingablueprint)[](/help/communities/sites.md)[](/help/communities/tools-groups.md) 的社区组模板创建的所有社区站点页面。 还可以将页面与其父蓝图取消关联，以进行页面级别修改。
 
