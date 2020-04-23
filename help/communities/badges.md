@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 在创作环境中，要访问标记控制台
 
-* 在全局导航中，导航到UIControl **[Tools > Communities > Badges]**
+* 在全局导航中，导航到工具> **[!UICONTROL 社区>标记]**
 
 此控制台显示当前可用的标记以及可以从中添加新标记。
 
@@ -42,7 +42,7 @@ source-git-commit: 272eedc1585dbdea315b49d010e4b1d78cedc360
 
 ## 创建徽章 {#create-badge}
 
-通过上传合适的小图像（72dpi，高度在26-32像素之间）并提供名称来创建标记。 徽章图像存储在位于的存储库中， `/etc/community/badging/images` 并会自动复制到发布环境中。
+通过上传合适的小图像（72dpi，高度在26-32像素之间）并提供名称来创建标记。 徽章图像存储在位于的存储库 `/etc/community/badging/images` 中，并会自动复制到发布环境。
 
 如果发布环境是发布者的农场，则必须配置用 [户同步](/help/communities/sync.md)。
 
