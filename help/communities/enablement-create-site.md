@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -27,7 +27,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 使用作 [者实例](https://localhost:4502/)
 
 * 以管理员权限登录
-* 导航到UIControl **[Communities >站点]**
+* 导航到“社 **[!UICONTROL 区”>“站点”]**
 
 * Select **Create**
 
@@ -84,8 +84,8 @@ Select **Next**
 
 确保取消选中“用户管理”的大 [多数复选框](/help/communities/sites-console.md#user-management) :
 
-* 不允许站点访问者自行注册
-* 不允许匿名网站访问者查看网站
+* 不允许站点访客自行注册
+* 不允许匿名网站访客视图网站
 * 是否允许社区成员之间的消息传递是可选的
 * 不允许使用Facebook登录
 * 不允许使用Twitter登录
@@ -94,7 +94,7 @@ Select **Next**
 
 #### TAGGING {#tagging}
 
-可以通过选择之前通过标记控制台定义的AEM命名空间(如教程命名空间 [](/help/sites-administering/tags.md#tagging-console) )来控制应用于社区内容 [的标记](/help/communities/enablement-setup.md#create-tutorial-tags)。
+可以通过选择之前通过标记控制台定义的AEM命名空间(如教程命名空间)来控制可应用于社 [区内容的标](/help/sites-administering/tags.md#tagging-console) 记 [](/help/communities/enablement-setup.md#create-tutorial-tags)。
 
 此外，为社区站点选择标记命名空间会限制在定义目录和启用资源时显示的选择。 有关重 [要信息，请参阅标记启用资源](/help/communities/tag-resources.md) 。
 
@@ -223,7 +223,7 @@ Select **Create.**
 
 与新社区站点一起，会创建新用户组，这些用户组具有针对各种管理功能设置的相应权限。 有关详细信息，请 [访问社区站点的用户组](/help/communities/users.md#usergroupsforcommunitysites)。
 
-对于此新社区站点，如果在步骤1中给定站点名称“enable”，则可以从“社区成员和组”控制台中查看发布环境中存在的 [新用户组](/help/communities/members.md#groups-console) :
+对于此新社区站点，如果在步骤1中给定站点名称“enable”，则可以从“社区成员和组”控制台中查看发布环境中存在的新 [用户组](/help/communities/members.md#groups-console) :
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -319,7 +319,7 @@ Select **Create.**
 
 #### 疑难解答：重定向失败 {#troubleshooting-fail-to-redirect}
 
-正则表达式&#x200B;**字符串结尾的“$**`sling:match``https://localhost:4503/` ”至关重要，因此只能精确映射，否则，重定向值会被置于URL中server:port之后可能存在的任何路径的前面。 因此，当AEM尝试重定向到登录页面时，它将失败。
+常规表达式字符&#x200B;**串结尾的“$**`sling:match``https://localhost:4503/` ”至关重要，因此只能精确映射，否则重定向值会被置于URL中server:port之后可能存在的任何路径的前面。 因此，当AEM尝试重定向到登录页面时，它将失败。
 
 ## 修改社区站点 {#modifying-the-community-site}
 
@@ -331,7 +331,7 @@ Select **Create.**
 
 >[!NOTE]
 >
->如果不熟悉AEM，请查看有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以及 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉AEM，请视图有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以 [及页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
 ### 添加目录 {#add-a-catalog}
 
