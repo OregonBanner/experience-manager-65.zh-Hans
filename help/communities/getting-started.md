@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 4a2ac67b-d2c9-4703-a1cb-d454786f9e6b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
 
-# AEM Communities 快速入门{#getting-started-with-aem-communities}
+# AEM Communities 快速入门 {#getting-started-with-aem-communities}
 
-AEM Communities使公司能够从站点模板库中创建专用的品牌社区体验。 可以将论坛、组、博客、文件共享、日历、活动源和扩展用户资料集成到您的网站中，以促进展望、客户和公司之间的交互。
+AEM Communities使公司能够从站点模板库中创建专用的品牌社区体验。 可以将论坛、组、博客、文件共享、日历、活动源和扩展用户用户档案集成到您的网站中，以促进展望、客户和公司之间的交互。
 
 以下是关于为演示或开发目的快速 [建立参与社区](/help/communities/overview.md#engagement-community) 的教程。
 
