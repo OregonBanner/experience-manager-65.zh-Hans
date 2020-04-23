@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
 
 ---
 
@@ -27,11 +27,12 @@ Handlebars Helpers（帮助器）是从Handlebars脚本调用的方法，以便�
 
 随AEM Communities一起提供的自定义SCF帮助器在客户端库 [中定义](../../help/sites-developing/clientlibs.md):
 
-* /etc/clientlibs/social/commons/scf/helpers.js
+* `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
 >请务必安装最 [新的Communities功能包](deploy-communities.md#latestfeaturepack)。
+
 
 ## 缩写 {#abbreviate}
 
@@ -89,7 +90,7 @@ Then abbreviate would return
 
 ## 内容加载更多 {#content-loadmore}
 
-一个帮助程序，用于在div下添加两个跨距，一个用于全文，另一个用于较少的文本，能够在两个视图之间切换。
+在div下添加两个跨距的助手，一个跨距表示全文，另一个跨距表示较少的文本，可在两个视图之间切换。
 
 ### 参数 {#parameters-1}
 
@@ -103,7 +104,7 @@ Then abbreviate would return
 
 * **moreText**:字符串
 
-   （可选）要显示的文本，指示要显示的文本更多。 默认为“更多”。
+   （可选）要显示的文本，指示要显示的文本数量更多。 默认为“更多”。
 
 * **椭圆文本**:字符串
 
@@ -135,7 +136,7 @@ Then content-loadmore would return
 
 * **上下文**:数字
 
-   （可选）从1970年1月1日（纪元）起的毫秒值偏移。 默认为当前日期。
+   （可选）1970年1月1日（纪元）起的毫秒值偏移量。 默认为当前日期。
 
 * **格式**:字符串
 
@@ -163,11 +164,11 @@ Then content-loadmore would return
 
 * **lvalue**:字符串
 
-   要比较的左侧值
+   要比较的左侧值。
 
 * **rvalue**:字符串
 
-   要比较的右侧值
+   要比较的右侧值。
 
 ### 示例 {#example-1}
 
@@ -181,7 +182,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-一个块帮助程序，它根据字符串分隔的 [模式列表测试](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) WCM模式的当前值。
+一个块助手，它根据字符串分隔的模 [式列表测试](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) WCM模式的当前值。
 
 ### 参数 {#parameters-4}
 
@@ -246,17 +247,17 @@ Then content-loadmore would return
 
    （可选，除非提供相对路径）
 
-   用 `this`于传递当前上下文
+   使用 `this` 传递当前上下文。
 
-   使用 `this.id` 在获取资源，以呈 `id` 现请求的resourceType
+   使用 `this.id` 在获取用于呈现所请 `id` 求的resourceType的资源。
 
 * **resourceType**:字符串
 
-   （可选）资源类型将默认为上下文中的资源类型
+   （可选）资源类型将默认为上下文中的资源类型。
 
 * **模板**:字符串
 
-   组件脚本路径
+   组件脚本的路径。
 
 * **路径**:字符串
 
@@ -272,7 +273,7 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-这将包括位于 `this.id` + /comments的新注释组件
+这将包括位于 `this.id` + /comments的新注释组件。
 
 ## IncludeClientLib {#includeclientlib}
 
@@ -284,19 +285,19 @@ Then content-loadmore would return
 
 * **类别**:字符串
 
-   （可选）以逗号分隔的客户端库类别列表。 这将包括给定类别的所有Javascript和CSS库。 主题名称从请求中提取。
+   （可选）以逗号分隔的客户端库列表类别。 这将包括给定类别的所有Javascript和CSS库。 主题名称从请求中提取。
 
 * **theme**:字符串
 
-   （可选）以逗号分隔的客户端库类别列表。 这将包括给定类别的所有主题相关库（CSS和JS）。 主题名称从请求中提取。
+   （可选）以逗号分隔的客户端库列表类别。 这将包括给定类别的所有与主题相关的库（CSS和JS）。 主题名称从请求中提取。
 
 * **js**:字符串
 
-   （可选）以逗号分隔的客户端库类别列表。 这将包括给定类别的所有Javascript库。
+   （可选）以逗号分隔的客户端库列表类别。 这将包括给定类别的所有Javascript库。
 
 * **css**:字符串
 
-   （可选）以逗号分隔的客户端库类别列表。 这将包括给定类别的所有CSS库。
+   （可选）以逗号分隔的客户端库列表类别。 这将包括给定类别的所有CSS库。
 
 ### 示例 {#examples-2}
 
@@ -383,7 +384,7 @@ Depending on how long in the past, may return
 
 * **上下文**:对象
 
-   要编码的HTML
+   要编码的HTML。
 
 ### 示例 {#example-6}
 
@@ -395,13 +396,13 @@ Depending on how long in the past, may return
 
 一种帮助程序，它编码源字符串以写入HTML属性值以帮助防止XSS。
 
-注意：这不是验证程序，不用于编写可操作属性（href、src、事件处理函数）。
+注意：这不是验证程序，不用于编写可操作属性(href、src、事件处理函数)。
 
 ### 参数 {#parameters-10}
 
 * **上下文**:对象
 
-   要编码的HTML
+   要编码的HTML。
 
 ### 示例 {#example-7}
 
@@ -419,7 +420,7 @@ Depending on how long in the past, may return
 
 * **上下文**:对象
 
-   要编码的HTML
+   要编码的HTML。
 
 ### 示例 {#example-8}
 
@@ -437,7 +438,7 @@ var input = {{xss-jsString topic-title}}
 
 * **上下文**:对象
 
-   要进行清理的URL
+   要清理的URL。
 
 ### 示例 {#example-9}
 
@@ -449,10 +450,10 @@ var input = {{xss-jsString topic-title}}
 
 从 [Handlebars.js文档快速概述帮助函数](https://handlebarsjs.com/expressions.html):
 
-* Handlebars帮助程序调用是一个简单的标识符（帮助程序的*name *），后跟零个或多个以空格分隔的参数。
+* Handlebars帮助程序调用是一个简单的标识符( *帮助程序的名称* )，后面跟有零个或多个以空格分隔的参数。
 * 参数可以是简单的字符串、数字、布尔值或JSON对象，也可以是键值对（散列参数）的可选序列作为最后一个参数。
 * 哈希参数中的键必须是简单标识符。
-* 散列参数中的值是Handlebars表达式：简单标识符、路径或字符串。
+* 散列参数中的值是Handlebars表达式:简单标识符、路径或字符串。
 * Handlebars帮手总 `this`能找到当前的环境。
 * 上下文可以是字符串、数字、布尔值或JSON数据对象。
 * 可以将嵌套在当前上下文中的对象作为上下文进行传递， `this.url` 如 `this.id` 或（请参阅以下简单和块帮助器示例）。
@@ -566,6 +567,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >组件将在登录用户的客户端重新呈现，如果找不到客户端帮助程序，则组件会消失。
 
+
 ### 客户端自定义帮助器 {#client-side-custom-helpers}
 
 客户端帮助者是通过调用注册的Handlebars脚本 `Handlebars.registerHelper()`。
@@ -589,9 +591,9 @@ function(Handlebars, SCF, $CQ) {
 必须将自定义客户端帮助器添加到自定义客户端库。
 clientlib必须：
 
-* 包含依赖关系 `cq.social.scf`
-* 加载Handlebars后加载
-* 包括在 [内](clientlibs.md)
+* 包含依赖项 `cq.social.scf`。
+* 加载Handlebar后加载。
+* 包 [括](clientlibs.md)。
 
 注意：SCF帮助的定义见 `/etc/clientlibs/social/commons/scf/helpers.js`。
 
