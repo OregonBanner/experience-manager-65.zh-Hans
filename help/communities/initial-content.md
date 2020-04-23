@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,11 +19,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在此部分中，您将创建以下全部使用页面模板 [的页面](initial-app.md#createthepagetemplate):
 
-* SCF沙箱站点，它将重定向到主页的英文版
+* SCF沙箱站点，它将重定向到英文版的主页。
 
-   * SCF沙箱——站点的英文版主页
+   * SCF沙箱——站点的英文版主页。
 
-      * SCF播放——要在其中播放的主页的子项
+      * SCF播放——要在其中播放的主页的子级。
 
 虽然本教程不深入 [研究语言副本](../../help/sites-administering/tc-prep.md)，但设计它是为了使根页面能够通过HTML标题实现对用户首选语言的检测，并重定向到相应的语言主页。 惯例是将双字母国家／地区代码用于页面的节点名称，例如，“en”表示英语，“fr”表示法语，等等。
 
@@ -45,7 +45,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    或者，也可以通过浏览到 [/siteadmin直接访问网站的经典UI。](http://localhost:4502/siteadmin)
 
-1. 在资源管理器窗格中，选择 **[!UICONTROL 网站]** ，然后在工具栏中选择 **[!UICONTROL 新建>新建页面]**。
+1. 在资源管理器窗格中，选 **[!UICONTROL 择网站]** ，然后在工具栏中选择“新建 **[!UICONTROL ”]** >“ **[!UICONTROL 新建页面”]**。
 
    在“创 **[!UICONTROL 建页面]** ”对话框中，输入以下内容：
 
@@ -55,14 +55,14 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * Click **[!UICONTROL Create]**
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
-1. 在资源管理器窗格中，选择刚刚创建的页面，然 `/Websites/SCF Sandbox Site`后单击“ **[!UICONTROL 新建”>“新建页面”]**:
+1. 在资源管理器窗格中，选择刚刚创建的页面， `/Websites/SCF Sandbox Site`然后单击“新 **[!UICONTROL 建]** >新 **[!UICONTROL 建页面]**”:
 
    * 标题: `SCF Sandbox`
    * 名称: `en`
    * 选择 **SCF沙箱播放模板&#x200B;**
    * Click **Create **
 
-1. 在资源管理器窗格中，选择刚刚创建的页面，然 `/Websites/SCF Sandbox Site/SCF Sandbox`后单击“ **[!UICONTROL 新建”>“新建页面”]**
+1. 在资源管理器窗格中，选择刚刚创建的页面，然 `/Websites/SCF Sandbox Site/SCF Sandbox`后单击“新 **[!UICONTROL 建]** >新 **[!UICONTROL 建页面”]**
 
    * 标题: `SCF Play`
    * 名称: `play`
@@ -73,7 +73,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    ![chlimage_1-39](assets/chlimage_1-39.png)
 
-   这是使用网站工具和模板创建的内容的存储库视图：
+   这是使用网站工具和模板创建内容的存储库视图:
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -105,4 +105,5 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >[!NOTE]
 >
 >cq:designPath的使用是可选的，与clientlibs的使用无关 [，这是SCF组件使用clientlibs管理其JS和CSS时必需的，](develop-app.md#includeclientlibsintemplate)因为Clientlibs [](client-customize.md#clientlibs-for-scf) 是必需的。
+
 
