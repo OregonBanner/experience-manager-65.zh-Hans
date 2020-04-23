@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
 
 ---
 
@@ -111,7 +111,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 
 使用Forms Designer创建XDP模板后，必须将其上传到AEM Forms服务器，以便该模板在创建交互通信时可用。
 
-1. 选择“ **表单** ”>“ **表单和文档”**。
+1. 选择“ **[!UICONTROL 表单]** ”>“ **[!UICONTROL 表单和文档”]**。
 1. 点按 **创建** > **文件上传**。
 
    导航并选择 **create_first_ic_print_template** template(XDP)，然后点按 **Open** ，将XDP模板导入AEM Forms服务器。
@@ -132,7 +132,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
    1. 选中“ **在表中包含标题行** ”复选框。
    1. 选项卡 **确定**。
 
-1. 点按 **+** (在表 **1旁边的左窗格中)，右键单击“Cell1** ”，然后在“Cell1”中选 **择Object** ，以重命名 ******** DateRename。
+1. 点按 **+** (在表 **1旁边的左窗格中)，右键单击“单元格** 1”，然后在“重命名日期”中选 ************&#x200B;择“对象”以重命名日期。
 
    同样，将 **Cell2**、 **Cell3**、Cell3 **、** Cell4和 **Cell Time重命名为TimeCell、Number、CellNumber、CellDember、CellCarges和****************** CellCarges5分别重命名为Cell4、TimellCellCellCellD。
 
