@@ -10,14 +10,14 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 341fef2b8f040848a59381b0d4996c29f352b929
 
 ---
 
 
 # AEM Communities for Enablement快速入门 {#getting-started-with-aem-communities-for-enablement}
 
-AEM Communities通过为员工和客户提供支持资源目录、分配的内容和动态推荐，帮助品牌跨数字渠道和亲临渠道创建一致的体验，这些内容均在社交社区中提供，以促进参与。
+AEM Communities通过为员工和客户提供支持资源目录、分配的内容和动态推荐，帮助品牌跨数字和亲临渠道创建一致的体验，所有这些内容均在社交社区中提供，以促进参与。
 
 以下是关于为演示或开发目的快速 [设置支持社区](overview.md#enablement-community) 的教程。
 
@@ -26,6 +26,7 @@ AEM Communities通过为员工和客户提供支持资源目录、分配的内�
 >[!NOTE]
 >
 >本教程假定安装 [Communities功能包1](deploy-communities.md#latestfeaturepack) 或更高版本。
+
 
 * [初始设置](enablement-setup.md)
 
