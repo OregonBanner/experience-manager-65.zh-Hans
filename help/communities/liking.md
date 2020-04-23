@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: e4456e80059479ca874681e20f8546f29ac92597
 
 ---
 
 
 # 使用喜欢 {#using-liking}
 
-该 `Liking`组件是一个有用的工具，它允许用户对特定内容（如论坛内的评论）发表意见。 使用组 `Liking`件，成员选择心形图标以指示积极意见。
+该 `Liking` 组件是一个有用的工具，它允许用户对特定内容（如论坛内的评论）发表意见。 使用组 `Liking` 件，成员选择心形图标以指示积极意见。
 
 ## 向页面添加喜欢 {#adding-liking-to-a-page}
 
-要在创作模 `Liking` 式下将组件添加到页面，请使用组件浏览器查找
+要在创作模 `Liking` 式下将组件添加到页面，请使用组件浏览器来查找：
 
 * `Communities / Liking`
 
@@ -43,13 +43,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL 正向响应标签]**(*必需*)正向响应的属性名称。
+* **[!UICONTROL 正面响应标签]**
 
-* **[!UICONTROL 负响应标签]**(*必需*)负响应的属性名称。
+   (必&#x200B;*需*)正向响应的属性名称。
 
-* **[!UICONTROL Tally Name]**(*必需*)此投票组件的实例的内部可识别属性名称。
+* **[!UICONTROL 负面响应标签]**
 
-## 网站访客体验 {#site-visitor-experience}
+   (必&#x200B;*需*)负响应的属性名称。
+
+* **[!UICONTROL 标签名称]**
+
+   (必&#x200B;*需*)此投票组件实例的内部可识别属性名称。
+
+## 站点访客体验 {#site-visitor-experience}
 
 ### 成员 {#members}
 
@@ -57,7 +63,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 匿名 {#anonymous}
 
-不支持匿名喜欢。 站点访问者必须注册（成为会员）并登录以参与喜欢。
+不支持匿名喜欢。 站点访客必须注册（成为会员）并登录以参与喜欢。
 
 ## 附加信息 {#additional-information}
 
