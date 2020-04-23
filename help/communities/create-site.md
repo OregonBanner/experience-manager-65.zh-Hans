@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -43,11 +43,11 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 * **社区站点描述**: `A site for engaging with the community.`
 * **社区站点根目录**:(默认根目录留空 `/content/sites`)
 * **云配置**:（如果未指定云配置，则留空）提供指向指定云配置的路径。
-* **社区站点基本语言**:(对于单种语言，请保持不变：英语)使用下拉列表从可用语言中选择一 *种或多种基本语言* -德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文（繁体中文）和简体中文。 将根据多语言站点翻译内容中所述的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将存 [在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个子页面，该子页面由所选语言之一的语言代码命名，如英语为“en”或法语为“fr”。
+* **社区站点基本语言**:(对于单种语言，请保持不变：英语)使用下拉列表从可用语言( *德语、意大利语* 、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文（繁体中文）和简体中文)中选择一种或多种基本语言。 将根据多语言站点翻译内容中所述的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将存 [在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个子页面，该子页面由所选语言之一的语言代码命名，如英语为“en”或法语为“fr”。
 
 * **社区站点名称**:参与
 
-   * 请仔细检查名称，因为创建站点后该名称不易更改
+   * 多次-检查名称，因为创建站点后该名称不易更改
    * 初始URL将显示在“社区站点名称”下方
    * 对于有效的URL，请附加基本语言代码+ &quot;。html&quot;
    * *例如*,https://localhost:4502/content/sites/ `engage/en.html`
@@ -82,11 +82,11 @@ Select **Next**
 
 选中用户管理的所 [有复选框](/help/communities/sites-console.md#user-management)
 
-* 允许网站访客自行注册
-* 允许站点访问者在不登录的情况下查看站点
+* 允许站点访客自行注册
+* 允许站点访客视图站点而不登录
 * 允许成员发送和接收来自其他社区成员的消息
-* 允许使用Facebook登录，而不是注册和创建配置文件
-* 允许使用Twitter登录，而不是注册和创建配置文件
+* 允许使用Facebook登录，而不是注册和创建用户档案
+* 允许使用Twitter登录，而不是注册和创建用户档案
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Select **Next**
 
 #### TAGGING {#tagging}
 
-可以通过选择之前通过标记控制台定义的AEM命名空间(如教程命名空间 [](/help/sites-administering/tags.md#tagging-console) )来控制应用于社区内容 [的标记](/help/communities/setup.md#create-tutorial-tags)。
+可以通过选择之前通过标记控制台定义的AEM命名空间(如教程命名空间)来控制可应用于社 [区内容的标](/help/sites-administering/tags.md#tagging-console) 记 [](/help/communities/setup.md#create-tutorial-tags)。
 
 使用预先键入搜索可轻松查找命名空间。 例如，
 
@@ -109,7 +109,7 @@ Select **Next**
 
 [社区成员角色](/help/communities/users.md) ，通过“角色”部分中的设置进行分配。
 
-要让社区成员（或成员组）以社区管理者的身份体验站点，请使用“预先键入”搜索并从下拉列表中的选项中选择成员或组名称。
+要让社区成员（或成员组）以社区管理者的身份体验站点，请使用“预先键入”搜索并从下拉框的选项中选择成员或用户组名称。
 
 例如，
 
@@ -200,7 +200,7 @@ Select **Create.**
 
 * **删除站点**
 
-   选择删除图标以从UIControl Communities >站点控制台中删 **[除社区站点]**。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
+   选择删除图标以从“社区”>“站点”控制台 **[!UICONTROL 中删除社区站点]**。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
 
 ![siteactions](assets/siteactions.png)
 
@@ -210,17 +210,17 @@ Select **Create.**
 >
 >在创作实例上，从主菜单：
 >
->1. 导航到 **[UIControl Tools > Operations > Replication]** menu。
->1. 选择作 **[者上的UIControl Agents]**。
->1. 选择 **[UIControl默认代理（发布）]**。
->1. 在“UIControl设 **[置”旁]**，选择“ **[UIControl编辑”]**。
->1. 在“代理设置”的弹出对话框中，选择“UIControl传输 **[”选项卡]** 。
+>1. 导航到工 **[!UICONTROL 具>操作>复制]** 菜单。
+>1. 选择作 **[!UICONTROL 者上的代理]**。
+>1. 选择 **[!UICONTROL 默认代理（发布）]**。
+>1. 在“设 **[!UICONTROL 置]**”旁，选 **[!UICONTROL 择编辑]**。
+>1. 在“代理设置”的弹出对话框中，选择“传 **[!UICONTROL 输]** ”选项卡。
 >1. 在URI中，将端口号4503更改为所需的端口号>
    >    * 例如，要使用端口6103:
       >      https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >
-1. 选择“ **[UIControl确定]**”。
-1. （可选）选择 **[UIControl Clear]** 或 **[UIControl Force Retry]** 以重置复制队列。
+1. 选择 **[!UICONTROL 确定]**。
+1. （可选）选择“清 **[!UICONTROL 除]** ”或“强 **[!UICONTROL 制重试]** ”以重置复制队列。
 
 
 
@@ -323,7 +323,7 @@ Select **Create.**
 
 #### 疑难解答：重定向失败 {#troubleshooting-fail-to-redirect}
 
-正则表达式字符&#x200B;**串结尾的“$**`sling:match``https://localhost:4503/` ”至关重要，因此只能精确映射，否则重定向值将前缀于URL中server:port之后可能存在的任何路径。 因此，当AEM尝试重定向到登录页面时，它将失败。
+常规表达式字符&#x200B;**串结尾的“$**`sling:match``https://localhost:4503/` ”至关重要，因此只能精确映射，否则重定向值将前缀于URL中server:port之后可能存在的任何路径。 因此，当AEM尝试重定向到登录页面时，它将失败。
 
 ### 修改站点 {#modify-the-site}
 
@@ -335,5 +335,5 @@ Select **Create.**
 
 >[!NOTE]
 >
->如果不熟悉AEM，请查看有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以及 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉AEM，请视图有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以 [及页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
