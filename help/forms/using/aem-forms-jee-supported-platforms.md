@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a6b4a32b320d53c41ebf9615895dbf17ab722f19
 
 ---
 
@@ -53,7 +53,7 @@ Adobe建议配置这些配置，并作为标准软件维护协议的一部分提
   </tr>
   <tr>
    <td>L:有限支持</td>
-   <td>在满足某些先决条件后，Adobe会为此配置提供全面支持和维护。 并非所有功能都在配置中可用。 联系Adobe企业支持部门以了解先决条件并提出支持请求。<br /> </td>
+   <td>在满足某些先决条件后，Adobe会为此配置提供全面支持和维护。 并非所有功能都在配置中可用。 联系Adobe企业支持部门，了解先决条件并提出支持请求。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -151,7 +151,7 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
   </tr> 
    <tr>
    <td>Oracle Database 19c </td>
-   <td>存储库</td>
+   <td>Repository Microkernal </td>
    <td>支持</td>
   </tr>
   <tr>
@@ -522,7 +522,7 @@ AEM Forms的以下子系统不符合 [508](https://www.section508.gov/) 规范�
 
 * 运行Workbench的内存：2 GB内存
 * 硬件要求：Intel® Pentium® 4或AMD等效处理器，1 GHz处理器
-* 最低1024 X 768像素或更高的显示器分辨率，16位颜色或更高
+* 1024 X 768像素或更高的显示器分辨率，16位颜色或更高
 * TCP/IPv4或TCP/IPv6网络连接到JEE服务器上的AEM Forms
 * 您必须具有“管理”权限才能在Windows上安装Workbench。 如果您使用非管理员帐户进行安装，安装程序将提示您输入相应帐户的凭据。
 
