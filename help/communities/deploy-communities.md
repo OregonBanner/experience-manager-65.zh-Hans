@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -84,7 +84,7 @@ source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
 
 
 
-## 最新版本 {#latest-releases}
+## Latest Releases {#latest-releases}
 
 AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 [Communities的更新](/help/release-notes/release-notes.md#experiencemanagercommunities)，请参 [阅AEM 6.5发行说明](/help/release-notes/release-notes.md#communities-release-notes.html)。
 
@@ -92,7 +92,7 @@ AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 [Communi
 
 从AEM 6.4开始，对Communities的更新将作为AEM累积修复包和服务包的一部分提供。
 
-有关AEM 6.5的最新更新，请参阅 [Adobe Experience Manager 6.4累积修复包和服务包](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。
+有关AEM 6.5的最新更新，请参阅 [Adobe Experience Manager 6.4累积修复包和服务包](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)。
 
 ### 版本历史 {#version-history}
 
@@ -114,12 +114,12 @@ AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 [Communi
    * 版本必须>= 5.1.38
 
 1. 从存档中提取mysql-connector-java-&lt;version>-bin.jar(bundle)
-1. 使用Web控制台安装并启动捆绑包：
+1. 使用Web控制台安装和开始捆绑包：
 
    * 例如，https://localhost:4502/system/console/bundles
    * 选择 **`Install/Update`**
    * 浏览……以选择从下载的ZIP存档中提取的包
-   * 检查 *Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驱动程序是否处于活动状态，如果未激活，则启动它（或检查日志）
+   * 检查 *Oracle Corporation的MySQLcom.mysql.jdbc* JDBC驱动程序是否处于活动状态，如果未激活，请开始它（或检查日志）
 
 1. 如果在配置JDBC后在现有部署上进行安装，则通过从Web控制台中重新保存JDBC配置，将JDBC重新绑定到新连接器：
 
@@ -147,7 +147,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 **安装SCORM包**
 
 1. 从包 [共享安装cq-social-scorm-package版本2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) 。
-1. 从cq `/libs/social/config/scorm/database_scormengine_data.sql` 实例下载并在mysql服务器中执行它以创建升级的scormEngineDB架构。
+1. 从cq `/libs/social/config/scorm/database_scormengine_data.sql` 实例下载并在mysql服务器中执行它以创建升级的scormEngineDB模式。
 1. 在发 `/content/communities/scorm/RecordResults` 布者上的CSRF过滤器的“排除的路径”属性 `https://<hostname>:<port>/system/console/configMgr` 中添加。
 
 
@@ -161,7 +161,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 ### AEM Advanced MLS {#aem-advanced-mls}
 
-为了支持高级多语言搜索(MLS)的SRP集合（MSRP或DSRP），除了自定义架构和Solr配置外，还需要新的Solr插件。 所有必需项都打包到一个可下载的zip文件中。
+为了支持高级多语言搜索(MLS)的SRP集合（MSRP或DSRP），除了自定义模式和Solr配置外，还需要新的Solr插件。 所有必需项都打包到一个可下载的zip文件中。
 
 高级MLS下载（也称为“phasetwo”）可从Adobe存储库下载：
 
@@ -195,9 +195,9 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 ## 建议的部署 {#recommended-deployments}
 
-在AEM Communities中，公用存储用于存储用户生成的内容(UGC)，通常称为存储资 [源提供商(SRP)](/help/communities/working-with-srp.md)。 建议的部署中心是为公用商店选择SRP选项。
+在AEM Communities中，公用存储用于存储用户生成的内容(UGC)，通常称为 [存储资源提供商(SRP)](/help/communities/working-with-srp.md)。 建议的部署中心是为公用商店选择SRP选项。
 
-公用存储支持发布环境中对UGC的协调和分析，同时不需要复 [制](/help/communities/sync.md) UGC。
+公共存储支持发布环境中UGC的协调和分析，同时消除了复制UGC [的需](/help/communities/sync.md) 求。
 
 * [社区内容商店](/help/communities/working-with-srp.md) :讨论AEM社区的SRP存储选项
 
@@ -213,7 +213,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 ### 主发布者 {#primary-publisher}
 
-当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为不应在所有实例(如依赖通知或 **`primary publisher`** Adobe Analytics的功能)上发生的活动 ********。
+如果选择的部署是 [发布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为不应出现在所有实例(如依赖通知或 **`primary publisher`** Adobe Analytics的功能)上的活动 ********。
 
 默认情况下， `AEM Communities Publisher Configuration` OSGi配置中选中了该复选 **`Primary Publisher`** 框，这样发布群中的所有发布实例都将自标识为主实例。
 
@@ -235,7 +235,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 ### 作者上的复制代理 {#replication-agents-on-author}
 
-复制用于在发布环境中创建的站点内容，如社区组，以及使用隧道服务从创作环境管理成员和成 [员组](#tunnel-service-on-author)。
+复制用于在发布环境中创建的站点内容（如社区组），以及使用隧道服务管理创作环境的成员和成 [员组](#tunnel-service-on-author)。
 
 对于主发布者，确保复 [](/help/sites-deploying/replication.md) 制代理配置正确标识发布服务器和授权用户。 默认的授权用 `admin,` 户已拥有相应权限(是的成员 `Communities Administrators`)。
 
@@ -245,7 +245,7 @@ AEM Communities SCORM引擎是启用功能的必 [需](/help/communities/overvie
 
 * 在创作时访问复制控制台
 
-   * 在全局导航中，导航到UIControl **[Tools > Deployment > Replication > Agent on Author]**
+   * 在全局导航中，导航到工 **[!UICONTROL 具>部署>复制>作者代理]**
 
 * 对于两个代理，请遵循相同的流程：
 
@@ -324,7 +324,7 @@ AEM Communities有两项功能，它们要求所有AEM服务器实例使用相�
 
 >[!CAUTION]
 >
->如果已经配置了基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 要获得帮助，请 [联系客户关怀](https://helpx.adobe.com/marketing-cloud/contact-support.html)。
+>如果已经配置了基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 要获得帮助，请 [联系客户关怀](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)。
 
 #### 存储库复制 {#repository-replication}
 
