@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -27,19 +27,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 协调UI {#moderation-ui}
 
-发布实例上向审查方显示的UI包含在用于发布和管理用户生成的内容(UGC)的对话框中。 UI的元素由站点访客的状态决定——无论他们是……
+发布实例上向审查方显示的UI包含在用于发布和管理用户生成的内容(UGC)的对话框中。 UI的元素由站点访客的状态决定——无论它们是……
 
-1. 发布内容的成员
-1. 受信任的会员审查方
-1. 管理员
-1. 已登录，但管理员、版主和内容作者均不登录
-1. 未登录
+1. 发布内容的成员。
+1. 受信任的会员审查方。
+1. 管理员。
+1. 已登录，但管理员、版主和内容作者均不登录。
+1. 未登录。
 
 ## 示例 {#example}
 
-使用在 [AEM Communities入门时创建的Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) Site [](getting-started.md)，可以快速在论坛中设置一个线程，在该论坛上可以体验发布环境中的各种协调活动，如下所示。
+使用在 [AEM Communities入门时创建的Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) Site [](getting-started.md)，可以快速在论坛中设置一个线程，在论坛中体验发布环境中的各种审核活动，如下所示。
 
-Aaron mcDonald(aaron.mcdonald@mailinator.com)在创建网站时将其添加到社区参与审查者组，从而被确定为值得信赖的社区成员。
+Aaron McDonald(aaron.mcdonald@mailinator.com)在创建网站时将其添加到社区参与审查者组，从而被确定为值得信赖的社区成员。
 
 Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台添加为社区参与成员组 [的成员](members.md)。
 
@@ -61,7 +61,7 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台�
    * 选择帖子
    * 选择注销
 
-* 以Aaron mcDonald的身份登录(aaron.mcdonald@mailinator.com)
+* 以Aaron McDonald的身份登录(aaron.mcdonald@mailinator.com)
 
    * 选择论坛
    * 对于Hummingbird主题，选择“阅读更多”
@@ -85,9 +85,9 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台�
 
 ### 匿名网站访客(#5) {#anonymous-site-visitor}
 
-以下是未登录(5)的站点访客所查看的论坛视图。
+以下是未登录(5)的站点访客所看到的论坛视图。
 
-匿名网站访客只能查看论坛，但我不发布任何内容，也不能执行任何审核操作。
+匿名网站访客只能视图论坛，但我不能发布任何内容或执行任何审核操作。
 
 ![chlimage_1](assets/chlimage_1.png)
 
@@ -95,13 +95,13 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台�
 
 在创作时，以管理员身份登录，然后使用“成员”控制台将Boyd Larsen(boyd.larsen@dodgit.com)添加为社区参与成员组的新 [成员](members.md)，然后再添加“注销”。
 
-在发布时，以Boyd Larsen身份登录，通过选择线程访 `Forum`问线程，然 `Read more` 后进入蜂鸟帖子。
+在发布时，以Boyd Larsen身份登录，通过选择 `Forum`线程访问，然 `Read more` 后进入蜂鸟帖子。
 
-通知
+通知:
 
-* 博伊德没有参加论坛
-* Boyd不能删除任何内容
-* Boyd已登录，可回复或标记内容
+* 博伊德没有参加论坛。
+* Boyd不能删除任何内容。
+* Boyd已登录，可回复或标记内容。
 
 让Boyd选择标记以标记Andrew发布的内容。
 
@@ -113,10 +113,10 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台�
 
 以管理员（管理员）身份登录，通过选择论坛，然后阅读帖子的更多内容来访问帖子。
 
-通知
+通知:
 
-* 管理员可以标记、删除、编辑、拒绝、剪切、关闭、固定、功能
-* 管理员可以选择“管理”以访问审核控制台
+* 管理员可以标记、删除、编辑、拒绝、剪切、关闭、固定、功能。
+* 管理员可以选择“管理”以访问审核控制台。
 
 ![社区管理论坛](assets/communityadmin-forum.png)
 
@@ -132,14 +132,14 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台�
 
 ### 社区审查方(#2) {#community-moderator}
 
-以社区主持人Aaron mcDonald(aaron.mcdonal@mailinator.com)的身份登录，通过选择“论坛”访问主题，然后为蜂鸟帖子阅读更多内容。
+以社区主持人Aaron McDonald(aaron.mcdonal@mailinator.com)的身份登录，通过选择“论坛”访问主题，然后为蜂鸟帖子阅读更多内容。
 
-通知
+通知:
 
-* Aaron可以回复、删除、编辑或拒绝自己的帖子
-* Aaron还可以标记／允许、回复、删除、编辑、拒绝其他内容
-* 亚伦·坎·库特将论坛话题转到他主持的另一个论坛
-* Aaron可以选择“管理”以访问协调控制台
+* Aaron可以回复、删除、编辑或拒绝自己的帖子。
+* Aaron还可以标记／允许、回复、删除、编辑、拒绝其他内容。
+* 亚伦可以剪掉论坛话题，将话题转移到他主持的另一个论坛。
+* Aaron可以选择“管理”以访问审核控制台。
 
 ![chlimage_1-2](assets/chlimage_1-2.png)
 
@@ -157,11 +157,11 @@ Rebekah Larsen(rebekah.larsen@trashymail.com)可以使用“成员”控制台�
 
 以Rebekah Larsen(rebekah.larsen@mailinator.com)的身份登录，他是社区成员，他启动了该主题，通过选择“论坛”访问该主题，然后为蜂鸟帖子阅读更多内容。
 
-通知
+通知:
 
-* Rebekah可以删除或编辑自己的帖子
-* Rebekah还可以回复或标记其他内容
-* Rebekah无法访问协调控制台
+* Rebekah可以删除或编辑自己的帖子。
+* Rebekah还可以回复或标记其他内容。
+* Rebekah无法访问协调控制台。
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
 
