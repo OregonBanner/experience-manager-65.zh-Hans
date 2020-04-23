@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
 
 ---
 
@@ -51,7 +51,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 生成的 `export.csv` 文件可以用 Excel 或任何其他兼容的应用程序打开。
 
-![]() ![etc-01](assets/etc-01.png)
+![etc-01](assets/etc-01.png)
 
 The create **CSV Report** option is available when browsing the **Sites** console (in List view): it is an option of the **Create** drop down menu:
 
@@ -60,7 +60,7 @@ The create **CSV Report** option is available when browsing the **Sites** consol
 要创建 CSV 导出，请执行以下操作：
 
 1. 必要时，打开&#x200B;**站点**&#x200B;控制台并导航到所需的位置。
-1. From the toolbar, select **Create** then **CSV Report** to open the wizard:
+1. 从工具栏中，选择&#x200B;**创建**，然后选择 **CSV 报表**，以打开向导：
 
    ![etc-03](assets/etc-03.png)
 
