@@ -9,7 +9,7 @@ topic-tags: publish
 discoiquuid: 89bcc76d-122f-4a3f-b857-16e5376e1624
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0a2d53aa3eab4eb4ec58fa9b28bef675715b1d09
+source-git-commit: 182043b43e9fdb2e7e6de982bceb87b43f36a3ba
 
 ---
 
@@ -79,12 +79,17 @@ source-git-commit: 0a2d53aa3eab4eb4ec58fa9b28bef675715b1d09
   </tr>
   <tr>
    <td>队列(共享的个人队列，来自队列的声明任务)</td>
-   <td>不支持</td>
+   <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
    <td>离职通知</td>
-   <td>不支持</td>
+   <td>支持</td>
+   <td>支持</td>
+  </tr>
+    <tr>
+   <td>自定义UI元素</td>
+   <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
@@ -303,6 +308,11 @@ OSGi和AEM Forms JEE工作流（JEE流程管理上的AEM Forms）上以表单为
   </tr>
   <tr>
    <td>网关，无等待 </td>
+   <td>支持</td>
+   <td>支持</td>
+  </tr>
+   <tr>
+   <td>用于存储数据的变量 </td>
    <td>支持</td>
    <td>支持</td>
   </tr>
