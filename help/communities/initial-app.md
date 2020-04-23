@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 ---
 
@@ -19,8 +19,8 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在本节中，您将创建以下内容：
 
-* 用 **[](#createthepagetemplate)**于在示例网站中创建内容页面的模板
-* 用 **[于呈现网站页面的组件](#create-the-template-s-rendering-component)**和脚本
+* 用 **[](#createthepagetemplate)**于在示例网站中创建内容页面的模板。
+* 用 **[于呈现网站页面的组件](#create-the-template-s-rendering-component)**和脚本。
 
 ## 创建内容模板 {#create-the-content-template}
 
@@ -28,10 +28,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在此练习中，所有页面都基于一个简单的模板。
 
-1. 在CRXDE Lite的资源管理器窗格中
+1. 在CRXDE Lite的资源管理器窗格中：
 
-   * select `/apps/an-scf-sandbox/templates`
-   * **[!UICONTROL “创建”>“创建模板”]**
+   * 选择 `/apps/an-scf-sandbox/templates`
+   * **[!UICONTROL “创建]** ”>“ **[!UICONTROL 创建模板”]**
 
 1. 在“创建模板”对话框中，键入以下值，然后单击“下 **[!UICONTROL 一步”]**:
 
@@ -44,7 +44,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    资源类型将作为属 `playpage`性显示在jcr:content节点上 `sling:resourceType`。 它标识在浏览器请求时呈现内容的组件（资源）。
 
-   在这种情况下，使用模板创建的所 `playpage`有页面都由组件呈 `an-scf-sandbox/components/playpage` 现。 根据惯例，组件的路径是相对的，允许Sling首先在文件夹中搜索资源，如果找不到， `/apps` 则在文件夹中搜索该资 `/libs` 源。
+   在这种情况下，使用模板创建的所 `playpage` 有页面都由组件呈 `an-scf-sandbox/components/playpage` 现。 根据惯例，组件的路径是相对的，允许Sling首先在文件夹中搜索资源，如果找不到， `/apps` 则在文件夹中搜索该资 `/libs` 源。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
@@ -56,11 +56,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    要添加路径，请单击加号按 `+` 钮并 `/content(/.&ast;)?` 在显示的文本框中键入。 如果使用复制／粘贴，请确保没有前导或尾部空格。
 
-   注意：允许的路径属性的值是正则 *表达式。* 具有与表达式匹配的路径的内容页面可以使用模板。 在这种情况下，正则表达式将匹配 **/content文件夹的路径** 及其所有子页面。
+   注意：允许的路径属性的值是常规 *表达式。* 具有与表达式匹配的路径的内容页面可以使用模板。 在这种情况下，常规表达式与 **/content文件夹的路径及其所有子页面相匹配** 。
 
-   当作者在下面创建页面 `/content`时，标 `playpage`题为“SCF沙箱页面模板”的模板将显示在可用模板列表中。
+   当作者在下面创建页面 `/content`时，标 `playpage` 题为“SCF沙箱页面模板”的模板将显示在可用模板的列表中以供使用。
 
-   从模板创建根页面后，可以通过修改属性将根路径包含在正则表达式中，即，将对模板的访问权限限制到此网站。
+   从模板创建根页面后，可以通过修改属性将根路径包含在常规表达式(即，
 
    `/content/an-scf-sandbox(/.&ast;)?`
 
@@ -74,7 +74,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    单击&#x200B;**[!UICONTROL 确定]**。
 
-1. 单击“确定”并完成模板的创建后，您会注意到新模板的“属性”选项卡值的角中显示了红色的三 `playpage`角形。 这些红色三角形指示尚未保存的编辑。
+1. 单击“确定”并完成模板的创建后，您会注意到新模板的“属性”选项卡值的角中显示了红色的三 `playpage` 角形。 这些红色三角形指示尚未保存的编辑。
 
    单击 **[!UICONTROL 全部保存]** ，将新模板保存到存储库。
 
@@ -100,7 +100,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * 组:
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. 单击 **[!UICONTROL “下一步]** ”，直 **[!UICONTROL 到显示对话框的“允许的子项]** ”面板
+1. 单击 **[!UICONTROL “下一步]** ”，直 **[!UICONTROL 到显示对话框的“允许的子项]** ”面板：
 
    * Click **[!UICONTROL OK]**
    * 单击“ **[!UICONTROL 全部保存”]**
