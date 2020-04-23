@@ -4,7 +4,7 @@ seo-title: AEM 6.5资产用户指南
 description: 本指南涵盖所有AEM资产任务，如如何创建、管理、交付和优化数字资产。
 seo-description: 涵盖所有AEM资产任务，如如何创建、管理、交付和优化数字资产。
 translation-type: tm+mt
-source-git-commit: 5ac60acb5869d261f8d25c69ce89a24384a1f699
+source-git-commit: e6c0ee967d1b01da18b538960520c206937599f6
 
 ---
 
@@ -25,17 +25,17 @@ source-git-commit: 5ac60acb5869d261f8d25c69ce89a24384a1f699
 | 用户指南 | 描述 |
 |--- |---|
 | [发行说明](/help/release-notes/home.md) | 提供有关AEM最新版本的重要信息，包括新增功能、受支持平台、已弃用和已删除功能以及已知问题 |
-| [[!DNL表单]用户指南](/help/forms/home.md) | 本指南介绍如何创建、管理、发布和更新数字表单。 |
-| [[!DNL Communities]用户指南](/help/communities/home.md) | 创建在线体验，如论坛、用户组、学习资源和其他社交功能。 |
+| [表[单用户指南]](/help/forms/home.md) | 本指南介绍如何创建、管理、发布和更新数字表单。 |
+| [社区用户指南](/help/communities/home.md) | 创建在线体验，如论坛、用户组、学习资源和其他社交功能。 |
 | [管理指南](/help/sites-administering/home.md) | 了解如何管理 AEM |
 | [创作指南](/help/sites-authoring/home.md) | 本指南介绍了在AEM中进行创作的概念。 |
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介绍了在经典用户界面的AEM中进行创作的概念。 |
-| [[!DNL屏幕]用户指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
+| [Screens用户指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [部署用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [开发用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [管理用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
 | [移动用户指南](/help/mobile/home.md) | 本指南介绍如何为移动应用程序创建和管理内容。 |
-| [AEM [!DNL Livefyre]](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | 本指南向您介绍如何与用户生成的内容共享 [!DNL Livefyre]。 |
+| [AEM Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | 本指南向您介绍如何与用户生成的内容共享 [!DNL Livefyre]。 |
 
 ## 关键AEM资源
 
@@ -46,4 +46,4 @@ source-git-commit: 5ac60acb5869d261f8d25c69ce89a24384a1f699
 * [《调度程序用户指南》](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-* [DNL Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
