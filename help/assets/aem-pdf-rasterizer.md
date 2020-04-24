@@ -3,7 +3,7 @@ title: 使用PDF栅格化器生成再现
 description: 本文介绍如何使用Adobe PDF Rasterizer库生成高质量的缩览图和再现。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -14,13 +14,13 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 Adobe建议对以下内容使用PDF栅格化器库：
 
-* 内容密集的大量AI/PDF文件
-* 未开箱即用生成缩略图的AI/PDF文件
-* 具有Pantone Matching System(PMS)颜色的AI文件
+* 内容密集的大量AI/PDF文件。
+* 未开箱即用生成缩览图的AI和PDF文件。
+* 具有Pantone Matching System(PMS)颜色的AI文件。
 
 与开箱即用输出相比，使用PDF栅格化器生成的缩览图和预览的质量更高，因此，可以跨设备提供一致的查看体验。 Adobe PDF Rasterizer库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
 
-1. 从“包共享”在AEM实例上安装PDF栅格 [化器包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
+1. 从包共享在AEM部署中安装PDF栅格化 [器包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
    >[!NOTE]
    >
