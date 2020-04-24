@@ -3,7 +3,7 @@ title: 使用媒体处理程序和工作流处理资源
 description: 了解媒体处理程序以及如何使用工作流对数字资产执行任务。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b600e5eaf7c61568f2559b3fb4915d433f5e13bf
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -496,7 +496,7 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 
 要测试修改后的工作流，请向中添加资产 `/content/dam`。
 
-1. 在文件系统中，获取您选择的。tiff图像。 将其重命名 `myImage.tiff` 为并复制到 `/content/dam`其中，例如使用WebDAV。
+1. 在文件系统中，获取您选择的TIFF图像。 将其重命名 `myImage.tiff` 为并复制到 `/content/dam`其中，例如使用WebDAV。
 1. 例如，转 **[!UICONTROL 到CQ5 DAM]** 控制台 `http://localhost:4502/libs/wcm/core/content/damadmin.html`。
 1. 打开资 **[!UICONTROL 源myImage.tiff]** ，并验证已翻转的图像和三个缩略图是否已创建。
 
@@ -516,7 +516,7 @@ AEM允许您在工作流中运行任何命令行工具来转换资产（如Image
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-然后，在工作流运行时，该步骤仅应用于具有image/gif或mime:image/tiff作为mime类型的资产，它将创建翻转后的原始图像，将其转换为。jpg并创建具有尺寸的三个缩略图：140x100、48x48和10x250。
+然后，当工作流运行时，该步骤仅应用于具有或作为的资 `image/gif` 产 `mime:image/tiff``mime-types`，它将创建原始图像的翻转图像，将其转换为JPG并创建具有尺寸的三个缩略图：140x100、48x48和10x250。
 
 使用以下 [!UICONTROL 进程参数] ，使用ImageMagick创建三个标准缩略图：
 
