@@ -1,14 +1,14 @@
 ---
-title: 资产HTTP API
-description: 了解Assets HTTP API的实施、数据模型和功能。 使用资产HTTP API可以围绕资产执行各种任务。
+title: 资产 HTTP API
+description: 了解Assets HTTP API的实施、数据模型和功能。 使用资产HTTP API可以对资产执行各种任务。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# 资产HTTP API {#assets-http-api}
+# 资产 HTTP API {#assets-http-api}
 
 ## 概述 {#overview}
 
@@ -16,16 +16,16 @@ source-git-commit: 0ff23556444fcb161b0adf744bb72fdc50322d92
 
 访问API:
 
-1. 打开位于的API服务文档 `https://[hostname]:[port]/api.json`。
-1. 请按照以下链接的“资产”服务链 `https://[hostname]:[server]/api/assets.json`接：
+1. 在打开API服务文档 `https://[hostname]:[port]/api.json`。
+1. 按照以下链接的“资产”服务进行操 `https://[hostname]:[server]/api/assets.json`作。
 
-API响应是某些MIME类型的JSON文件，是所有MIME类型的响应代码。 JSON响应是可选的，可能不可用，例如PDF文件。 依赖响应代码进行进一步分析或操作。
+API响应是某些MIME类型的JSON文件，是所有MIME类型的响应代码。 JSON响应是可选的，可能不可用，例如PDF文件。 依赖响应代码进行进一步的分析或操作。
 
 结束 [!UICONTROL 时间后]，资产及其演绎版不能通过资产Web界面或通过HTTP API使用。 如果开始时间是将来的， [!UICONTROL 或结束时间是过去的] ，则API会返回404 [!UICONTROL 错误消息] 。
 
 ## 内容片段 {#content-fragments}
 
-内 [容片段](/help/assets/content-fragments.md) ，是一种特殊类型的资产。 它可用于访问结构化数据，例如文本、数字、日期等。 由于资产(如图像或文 `standard` 档)存在若干差异，因此某些其他规则适用于处理内容片段。
+内 [容片段](/help/assets/content-fragments.md) ，是一种特殊类型的资产。 它可用于访问结构化数据，例如文本、数字、日期等。 由于资产(如图像或文档) `standard` 存在若干差异，因此某些其他规则适用于处理内容片段。
 
 有关详细信息， [请参阅AEM Assets HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md)。
 
@@ -118,9 +118,9 @@ GET /api/assets/myFolder.json
 
 包含实体的属性是每个实体的全部属性集的子集。 为了获得实体的完整表示形式，客户端应检索链接指向的URL的内容，其中 `rel` 包含 `self`:
 
-## 创建文件夹 {#create-a-folder}
+## Create a Folder {#create-a-folder}
 
-创建新 `sling`:在给 `OrderedFolder` 定路径。 如果给定*而不是节点名，则servlet将使用参数名作为节点名。 作为请求数据接受是新文件夹的Siren表示形式或一组名称——值对，编码为或 `application/www-form-urlencoded` / `multipart``form``data`- ，对于直接从HTML表单创建文件夹很有用。 此外，文件夹的属性可以指定为URL查询参数。
+创建新 `sling`:在给 `OrderedFolder` 定路径。 如果给定*而不是节点名，则servlet将参数名用作节点名。 作为请求数据接受是新文件夹的Siren表示形式或一组名称——值对，编码为或 `application/www-form-urlencoded` / `multipart``form``data`- ，对于直接从HTML表单创建文件夹很有用。 此外，文件夹的属性可以指定为URL查询参数。
 
 如果给定路径的父节 `500` 点不存在，则操作将失败并带有响应代码。 如果文件夹已存在，则 `409` 返回响应代码。
 
@@ -200,7 +200,7 @@ PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @
 
 ## 更新资产元数据 {#update-asset-metadata}
 
-更新资产元数据属性。 如果更新命名空间中的任 `dc:` 何属性，则API将更新命名空间中的同一属 `jcr` 性。 API不同步两个命名空间下的属性。
+更新资产元数据属性。 如果您更新命名空间中的任 `dc:``jcr` 何属性，API将更新命名空间中的同一属性。 API不同步两个命名空间下的属性。
 
 **请求**
 
