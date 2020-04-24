@@ -10,22 +10,23 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 ---
 
 
 # 创建节点 {#create-nodes}
 
-通过将最少数量的文件从/libs复制到/apps中并在/apps中修改，将注释系统与自定义版本叠加。
+通过将最少数量的文件从中复制到中并在中修改，将注释系统与自定 `/libs` 义版本 `/apps` 叠加在一起 `/apps`。
 
 >[!CAUTION]
 >
 >/libs文件夹的内容从不进行编辑，因为任何重新安装或升级都可能删除或替换/libs文件夹，而/apps文件夹的内容保持不变。
 
+
 在作 [者实例上使用CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) ，首先在/apps文件夹中创建一个路径，该路径与/libs文件夹中叠加的组件的路径相同。
 
-复制的路径为
+复制的路径为：
 
 * `/libs/social/commons/components/hbs/comments/comment`
 
@@ -37,7 +38,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * **[!UICONTROL “创建”>“文件夹……”]**
       * 输入姓名: `social`
 1. 选择节 `social` 点
-   * **[!UICONTROL “创建”>“文件夹……”]**
+   * **[!UICONTROL 创建]** >文 **[!UICONTROL 件夹……]**
       * 输入姓名: `commons`
 1. 选择节 `commons` 点
    * **[!UICONTROL “创建”>“文件夹……”]**
@@ -46,7 +47,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    * **[!UICONTROL “创建”>“文件夹。.]**.”
       * 输入姓名: `hbs`
 1. 选择节 `hbs` 点
-   * **[!UICONTROL 创建>创建组件……]**
+   * **[!UICONTROL 创建]** > **[!UICONTROL 创建组件……]**
       * 输入标签： `comments`
       * Enter Title: `Comments`
       * Enter Description: `List of comments without showing avatars`
@@ -74,7 +75,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->为了保留继承链，叠加组件的 `Super Type` (属性 `sling:resourceSuperType`)设置为与要覆盖的组件的 `Super Type` （属性）相同的值，在这种情况下
+>为了保留继承链，叠加组件的 `Super Type` (属性 `sling:resourceSuperType`)设置为与要覆盖的组件相同的值，在本例中 `Super Type` 为：
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
