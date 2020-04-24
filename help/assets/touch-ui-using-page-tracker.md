@@ -3,7 +3,7 @@ title: 使用页面跟踪器并在网页中嵌入代码
 description: 了解如何在网站代码中包含页面跟踪器和嵌入JavaScript代码，以使Adobe Analytics能够捕获资产周围的使用数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 以下示例代码显示包含页面跟踪器代码和嵌入代码的网页的外观：
 
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
