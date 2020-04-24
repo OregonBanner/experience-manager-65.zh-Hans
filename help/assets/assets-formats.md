@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: 列表AEM资产和Dynamic Media支持的文件格式以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 68fb4c08b8093ff50e74dc9e29011325cdf7e7d7
+source-git-commit: 5304d956161ee7edce2ad5c058eec3ac7e200abf
 
 ---
 
@@ -111,8 +111,33 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 
 资产管理功能支持的文档格式如下：
 
-| 格式 | 存储 | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [分析](touch-ui-asset-insights.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
+<!--
+DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migration.
+
+| Format | Storage | Metadata<br> management | Metadata<br> extraction | Thumbnail<br> generation | Interactive<br> editing | Metadata<br> writeback | [Insights](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | |
+| DOC | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
+| DOCX | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
+| ODT | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
+| HTML | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
+| RTF | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
+| TXT | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
+| XLS | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
+| XLSX | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
+| ODS | &#10003; | &#10003; | &#10003; | | | | | |
+| PPT | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; |
+| PPTX | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; |
+| ODP | &#10003; | &#10003; | &#10003; | | | | | |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | |
+| PS | &#10003; | &#10003; | | | | | | |
+| QXP | &#10003; | &#10003; | | | | | | |
+| EPUB | &#10003; | &#10003; | | &#10003; | &#10003; | | | |
+-->
+
+| 格式 | 存储 | [元数据管理](metadata.md) | 全文<br> 提取 | [元数据提取](metadata.md) | Thumbnail<br> generation | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
+|---|---|---|---|---|---|---|---|---|---|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
 | DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
@@ -283,5 +308,5 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 >[!MORELIKETHIS]
 >
 >* [支持基于MIME类型的资产/Scene7上传作业参数](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
->* [配置基于MIME类型的上传作业参数支持](config-dynamic.md)。
+>* [为上传作业参数支持配置基于MIME类型的MIME](config-dynamic.md)。
 
