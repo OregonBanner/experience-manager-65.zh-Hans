@@ -3,7 +3,7 @@ title: 使用智能内容服务配置资产标记
 description: 了解如何使用智能内容服务在AEM中配置智能标记和增强的智能标记。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -12,7 +12,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 您可以使用Adobe I/O将Adobe Experience Manager(AEM)与智能内容服务集成。使用此配置可从AEM中访问智能内容服务。
 
-文章详细介绍了配置智能内容服务所需的以下主要任务。 在后端，AEM服务器在将请求转发到智能内容服务之前，使用Adobe IO网关验证您的服务凭据。
+文章详细介绍了配置智能内容服务所需的以下主要任务。 在后端，AEM服务器使用Adobe I/O网关验证您的服务凭据，然后将请求转发到智能内容服务。
 
 * 在AEM中创建智能内容服务配置以生成公钥。 获取用于OAuth集成的公共证书。
 * 在Adobe I/O中创建集成并上传生成的公钥。
