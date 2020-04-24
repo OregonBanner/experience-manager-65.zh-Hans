@@ -3,7 +3,7 @@ title: 增强的智能标记
 description: 增强的智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -44,7 +44,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ## 入门 {#onboarding}
 
-智能内容服务可作为Experience Manager的附加组件购买。 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向Adobe IO的链接。
+智能内容服务可作为Experience Manager的附加组件购买。 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向Adobe I/O的链接。
 
 管理员可以通过链接将智能内容服务与Experience Manager集成。 要将服务与Experience Manager资产集成，请参阅配 [置智能标记](config-smart-tagging.md)。
 
