@@ -3,7 +3,7 @@ title: 通过DTM实现资产洞察
 description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -20,10 +20,10 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 Adobe Analy
 
 执行这些步骤以通过DTM启用资产分析。
 
-1. 点按／单击AEM徽标，然后转到工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** >分 **[!UICONTROL 析配置]**。
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
 1. [使用DTM云服务配置AEM实例](/help/sites-administering/dtm.md)
 
-   登录https://dtm.adobe.com并通过配置文件图标访问帐 [户设置](https://dtm.adobe.com/)**** 后，API令牌应可用。 从资产分析的角度来看，不需要执行此步骤，因为AEM Sites与资产分析的集成仍在进行中。
+   登录https://dtm.adobe.com并从用户档案图标访问帐户设 [置](https://dtm.adobe.com/)**** 后，API令牌应可用。 从资产分析的角度来看，不需要执行此步骤，因为AEM Sites与资产分析的集成仍在进行中。
 
 1. 登录https://dtm.adobe.com [](https://dtm.adobe.com/)，然后根据需要选择公司。
 1. 创建／打开现有Web属性
@@ -41,14 +41,14 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 Adobe Analy
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. 点按／单击AEM徽标，然后转到工具> **[!UICONTROL 资产]**。
+1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
 1. 点按／单击 **[!UICONTROL 分析页面跟踪器]**，复制跟踪器代码，然后将其粘贴到您在步骤6中打开的“脚本”对话框中。 保存更改。
 
    >[!NOTE]
    >
    > * `AppMeasurement.js` 中。 预计可通过DTM的Adobe Analytics工具获得。
    > * 将删 `assetAnalytics.dispatcher.init`除对()的调用。 在DTM的Adobe Analytics工具完成加载后，应调用该函数。
-   > * 根据资产分析页面跟踪器的托管位置（例如AEM、CDN等），脚本源的源可能需要更改。
+   > * 根据资产分析页面跟踪器的托管位置（例如AEM、CDN等），脚本源的来源可能需要更改。
    > * 对于AEM托管的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
 
 
@@ -104,9 +104,9 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 Adobe Analy
    })();
    ```
 
-   * DTM中的页面加载规则仅包括pagetracker.js代码。 任何 `assetAnalytics` 字段都被视为默认值的覆盖。 默认情况下，它们不是必需的。
-   * 在确保 `assetAnalytics.dispatcher.init`()已初始化并可 `_satellite.getToolsByType('sc')[0].getS`用后，代码调用 `assetAnalytics,dispatcher.init` ()。 因此，您可以跳过在步骤11中添加它。
-   * 如“分析页面跟踪器”代码(“工具”>“资产”>“分析页面跟踪器”****`AppMeasurement` )中的注释所示，当“页面跟踪器”不创建对象时，前三个参数（RSID、跟踪服务器和访客命名空间）将不相关。 而是传递空字符串以突出显示它。\
+   * DTM中的页面加载规则仅包含该 `pagetracker.js` 代码。 任何 `assetAnalytics` 字段都被视为默认值的覆盖。 默认情况下，它们不是必需的。
+   * 确保已初 `assetAnalytics.dispatcher.init()` 始化并可用后 `_satellite.getToolsByType('sc')[0].getS()` 将调用 `assetAnalytics,dispatcher.init` 代码。 因此，您可以跳过在步骤11中添加它。
+   * 如“分析页面跟踪器”代码(“工具”>“资产”>“分析页面跟踪器”**[!UICONTROL )中的注释所示，当“页面跟踪器”不创建对象时，前三个参数(]**`AppMeasurement` RSID、跟踪服务器和访客命名空间)将不相关。 而是传递空字符串以突出显示它。\
       其余参数与在“分析配置”页面(“工具”>“资产”>“分&#x200B;**[!UICONTROL 析配置”]**)中配置的参数相对应。
    * 通过查询所有可用的SiteCatalyst引擎，可 `satelliteLib` 以检索AppMeasurement对象。 如果配置了多个标记，请相应地更改数组选择器的索引。 数组中的条目按DTM界面中提供的SiteCatalyst工具进行排序。
 
