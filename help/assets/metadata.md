@@ -1,16 +1,16 @@
 ---
-title: 管理数字资产的元数据
-description: 了解元数据的类型以及AEM资产如何帮助管理资产的元数据，从而更轻松地对资产进行分类和组织。
+title: 在[!DNL Adobe Experience Manager]中管理数字资产的元数据。
+description: 了解元数据的类型以及[!DNL Adobe Experience Manager Assets]如何帮助管理资产的元数据，从而更轻松地对资产进行分类和组织。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
 # Manage metadata for digital assets {#managing-metadata-for-digital-assets}
 
-Adobe Experience Manager(AEM)资产可保留每个资产的元数据。 这使您可以更加方便地分类和组织资产，并且还有助于用户查找特定的资产。元数据管理能够从上传到AEM资产的文件中提取元数据，从而与创意工作流程相集成。 AEM资产能够保留和管理资产中的任意元数据，因此可以根据资产的元数据自动组织和处理资产。
+[!DNL Adobe Experience Manager Assets] 保留每个资产的元数据。 这使您可以更加方便地分类和组织资产，并且还有助于用户查找特定的资产。With the ability to extract metadata from files uploaded to [!DNL Experience Manager Assets], metadata management integrates with the creative workflow. With the ability to keep and manage arbitrary metadata with your assets, [!DNL Experience Manager Assets] makes it possible to automatically organize and process assets based on their metadata.
 
 * [XMP 元数据](xmp.md)
 * [如何编辑或添加元数据](meta-edit.md)
@@ -27,7 +27,7 @@ Adobe Experience Manager(AEM)资产可保留每个资产的元数据。 这使�
 * 图像在存储库中的存储大小
 * 资产所在的文件夹名称
 
-这些是AEM可以为资产管理的基本元数据属性，通过这些属性，用户可以查看所有资产（例如，按资产的上次修改日期排序）-在尝试发现最近添加到存储库的资产时非常有用。
+These are the basic metadata properties that [!DNL Experience Manager] can manage for assets, which allows users to see all assets, for example, ordered by their last modification date - useful when trying to discover what assets have recently been added to the repository.
 
 您可以向数字资产中添加更多高级别的数据，例如：
 
@@ -45,7 +45,7 @@ Adobe Experience Manager(AEM)资产可保留每个资产的元数据。 这使�
 * 更易于管理 - 您可以更轻松地查找具有相同属性集的资产，并对它们应用更改
 * 更复杂 - 向资产中添加的元数据越多，元数据管理就会变得越重要
 
-鉴于这些原因，AEM 资产为您提供了用于创建、管理和交换数字资产元数据的正确方法。
+For these reasons, [!DNL Assets] provides you with the right means of creating, managing, and exchanging metadata for your digital assets.
 
 ## 元数据基础知识 {#metadata-basics}
 
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)资产可保留每个资产的元数据。 这使�
 
 #### 技术性元数据 {#technical-metadata}
 
-技术性元数据对于处理数字资产的软件应用程序而言非常有用，因此不应该手动维护。技术性元数据可以由 AEM 资产和其他软件自动确定，并且可以在修改资产时进行更改。资产的可用技术性元数据主要取决于资产的文件类型。技术性元数据的示例如下：
+技术性元数据对于处理数字资产的软件应用程序而言非常有用，因此不应该手动维护。Technical metadata can be determined automatically by [!DNL Experience Manager Assets] and other software and may change when the asset is modified. 资产的可用技术性元数据主要取决于资产的文件类型。技术性元数据的示例如下：
 
 * 文件的大小
 * 图像的尺寸（高和宽）
@@ -75,7 +75,7 @@ Adobe Experience Manager(AEM)资产可保留每个资产的元数据。 这使�
 
 由于创建描述性元数据信息需要手动操作，人工成本较高，因此人们建立了相关标准，以便于在软件系统和组织之间交换元数据。
 
-AEM 资产支持元数据管理方面的所有相关标准。
+[!DNL Experience Manager Assets] 支持元数据管理的所有相关标准。
 
 鉴于元数据的重要性，以及创建元数据需要很大的手动工作量，人们建立了相关标准，以便于简化元数据交换。
 
@@ -83,14 +83,14 @@ AEM 资产支持元数据管理方面的所有相关标准。
 
 向文件中嵌入元数据的方法有很多种。支持一系列编码标准选项：
 
-* XMP：由 AEM 资产用来在存储库中存储提取的元数据。
+* XMP: used by [!DNL Assets] to store the extracted metadata within the repository.
 * ID3：适用于音频和视频文件。
 * EXIF：适用于图像文件。
 * 其他／旧版：Microsoft Word、PowerPoint、Excel等。
 
 #### XMP {#xmp}
 
-XMP是指可扩展元数据平台，是AEM资产用于所有元数据管理的元数据标准。除了提供可嵌入到所有文件格式的通用元数据编码外，XMP还提供丰富的内容模型，并且受Adobe和其他公司的支持，因此XMP用户与AEM Assets的结合具有强大的构建平台。
+XMP means Extensible Metadata Platform and is the metadata standard that is used by [!DNL Experience Manager Assets] for all metadata management. Besides offering universal metadata encoding that can be embedded into all file formats, XMP provides a rich content model and is supported by Adobe and other companies, so that users of XMP in combination with [!DNL Experience Manager Assets] have a powerful platform to build upon.
 
 #### ID3 {#id}
 
@@ -110,11 +110,11 @@ EXIF 是指可交换图像文件格式，它是数字摄影领域最常用的元
 
 EXIF 的主要局限性在于，其他一些常用的图像文件格式（例如，BMP、GIF 或 PNG）不支持这种编码标准。
 
-EXIF 将元数据存储为元数据名称和元数据值对。这些元数据名称-值对也称为标记，但切勿将其与 AEM 中的标记混淆。
+EXIF 将元数据存储为元数据名称和元数据值对。These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager].
 
 由于 EXIF 是由现代数码相机自动创建，并通过现代图形软件来支持，因此它在元数据管理中可被视为最不常用的标准。
 
-由 EXIF 定义的大多数元数据字段都具有很强的技术性，并且在描述性元数据管理方面的作用比较有限。For this reason, AEM Assets offers mapping of EXIF properties into [common metadata schemata](metadata-schemas.md) and into [XMP](xmp-writeback.md), the powerful metadata format AEM Assets uses for metadata management.
+由 EXIF 定义的大多数元数据字段都具有很强的技术性，并且在描述性元数据管理方面的作用比较有限。For this reason, [!DNL Assets] offers mapping of EXIF properties into [common metadata schemata](metadata-schemas.md) and into [XMP](xmp-writeback.md), the powerful metadata format [!DNL Assets] uses for metadata management.
 
 #### 其他元数据 {#other-metadata}
 
@@ -122,11 +122,11 @@ EXIF 将元数据存储为元数据名称和元数据值对。这些元数据名
 
 ## 元数据架构 {#metadata-schemata}
 
-元数据架构是预定义的元数据属性定义集，可用于各种应用程序。属性始终与资产关联，这意味着属性与资源相关。
+元数据模式是预定义的元数据属性定义集，可用于各种应用程序。属性始终与资产关联，这意味着属性与资源相关。
 
 如果不存在能满足您需求的元数据架构，您也可以自行设计元数据架构（但是，请注意避免创建与已有架构重复的内容）。在组织内部对架构予以划分，可简化各组织之间的元数据共享。
 
-AEM为您提供了最流行的元数据架构的现成列表，允许您快速启动元数据策略并从已定义的架构中选取所需的元数据属性。
+[!DNL Experience Manager] 为您提供了最流行的元数据架构的现成列表，允许您跳转开始元数据策略并从已定义的架构中选择所需的元数据属性。
 
 下一节列出了支持的元数据架构。
 
@@ -149,8 +149,8 @@ AEM为您提供了最流行的元数据架构的现成列表，允许您快速�
 
 * acdsee - metadata managed by the ACDSee program [www.acdsee.com/](https://www.acdsee.com/)
 * album - Adobe Photoshop Album
-* cq —— 由AEM资产使用
-* dam - 由 AEM 资产使用
+* cq - used by [!DNL Experience Manager Assets]
+* dam —— 使用者 [!DNL Experience Manager Assets]
 * dex - Optima SC Description Explorer
 * crs - Adobe Photoshop Camera Raw
 * lr - Adobe Lightroom
