@@ -4,7 +4,7 @@ description: 有关AEM配置、硬件、软件和网络组件更改以消除瓶�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -267,7 +267,7 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 1. Set the properties below on the nodes (where `ordered` and `propertyIndex` properties are of type `Boolean`:
 
-   ```
+   ```conf
    slingResource
    name="sling:resource"
    ordered=false
