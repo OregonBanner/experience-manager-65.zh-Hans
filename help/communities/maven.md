@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Communities文档的此部分除了以下功能之外：
 
-* [如何使用Apache Maven构建AEM项目](../../help/sites-developing/ht-projects-maven.md)
+* [使用Apache Maven构建AEM项目](../../help/sites-developing/ht-projects-maven.md)。
 
 现在有两件“优步”文物可替代个别文物：
 
@@ -44,18 +44,19 @@ AEM Communities文档的此部分除了以下功能之外：
 确保指定的版本与为AEM Communities安装的Communities包版本相对应。 要验证已安装的版本号，请执行以下操作：
 
 1. 以管理权限登录。
-2. 浏览至包 [管理器](../../help/sites-administering/package-manager.md)。 例如， [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+1. 浏览至包 [管理器](../../help/sites-administering/package-manager.md)。 例如， [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-3. 找到 *cq-socialcommunities-pkg-1.x.xxx包*
-4. 从包名称中提取版本
-   * AEM 6.3的第一个版本是版本1.11.170
-   * 功能包将为版本1.12.xxx
+1. 找到 *cq-socialcommunities-pkg-1.x.xxx包*
+1. 从包名称中提取版本：
+   * AEM 6.3的第一个版本是版本1.11.170。
+   * 功能包将为版本1.12.xxx。
 
 >[!NOTE]
 >
->建议您与最新的Communities版本保持同步。
+>建议使用最新的Communities版本保持最新。
 >
 >访问最 [新版本](deploy-communities.md#latest-releases) ，确定最新版本。
+
 
 ## Maven依赖关系示例 {#maven-dependency-example}
 
