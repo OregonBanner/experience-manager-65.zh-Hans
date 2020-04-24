@@ -1,16 +1,16 @@
 ---
-title: 从 AEM 下载资产
-description: 了解如何从AEM下载资产以及启用或禁用下载功能。
+title: 从[!DNL Adobe Experience Manager]下载数字资产。
+description: 了解如何从[!DNL Adobe Experience Manager]下载资产并启用或禁用下载功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
 
-# 从 AEM 下载资产 {#download-assets-from-aem}
+# Download assets from [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-您可以下载包括静态和动态演绎版在内的资产。 或者，您也可以直接从AEM资产发送包含指向资产链接的电子邮件。 下载的资产会打包在 ZIP 文件中。对于导出作业，压缩的 ZIP 文件大小最大为 1 GB。每个导出作业最多允许处理的资产总数为 500 个。
+您可以下载包括静态和动态演绎版在内的资产。 或者，您也可以发送电子邮件，其中直接包含指向资产的链 [!DNL Adobe Experience Manager Assets]接。 下载的资产会打包在 ZIP 文件中。对于导出作业，压缩的 ZIP 文件大小最大为 1 GB。每个导出作业最多允许处理的资产总数为 500 个。
 
 >[!NOTE]
 >
@@ -20,9 +20,9 @@ source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 无法下载图像集、旋转集、混合媒体集和传送集等资产类型。
 
-![从AEM资产下载资产时可用的选项](assets/asset_download_dialog.png)
+![从Experience Manager资产下载资产时可用的选项](assets/asset_download_dialog.png)
 
-*图：从AEM资产下载资产时可用的选项*
+*图：从下载资产时可用的选[!DNL Experience Manager Assets]项。*
 
 以下是“导出／下载”选项。 动态演绎版是Dynamic Media特有的，它允许您在动态生成演绎版的同时选择资产——只有在启用了Dynamic Media的情况下，此选项才可用。
 
@@ -40,7 +40,7 @@ source-git-commit: ccdafa89793e97f69294958d814cccf3554b496d
 
 ## 启用资产下载servlet {#enable-asset-download-servlet}
 
-AEM中的默认servlet允许经过身份验证的用户发出任意大的并发下载请求，以创建对他们可见的资产的ZIP文件，这些文件可能会使服务器和网络过载。 为了减轻由此功能引起的潜在DoS风险， `AssetDownloadServlet` OSGi组件在默认情况下对发布实例处于禁用状态。
+中的默认servlet允 [!DNL Experience Manager] 许经过身份验证的用户发出任意大的并发下载请求，以创建对他们可见的资产的ZIP文件，这些文件可能会使服务器和网络过载。 为了减轻由此功能引起的潜在DoS风险， `AssetDownloadServlet` OSGi组件在默认情况下对发布实例处于禁用状态。
 
 要允许从您的DAM下载资产，例如，在使用类似于Asset Share Commons或其他类似门户的实施时，请通过OSGi配置手动启用servlet。 Adobe建议尽可能低地设置允许的下载大小，而不影响日常下载要求。 高价值可能会影响性能。
 
@@ -53,14 +53,14 @@ AEM中的默认servlet允许经过身份验证的用户发出任意大的并发�
 1. 在config文件夹中，创建一个名为的新文 `nt:file` 件类型 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`。
 1. 填充 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` 以下内容。 将下载的最大大小（以字节为单位）设置为 `asset.download.prezip.maxcontentsize`。 以下示例将ZIP下载的最大大小配置为不超过100 kB。
 
-   ```
+   ```conf
    enabled=B"true"
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
 ## 禁用资产下载servlet {#disable-asset-download-servlet}
 
-可以 `Asset Download Servlet` 通过更新调度程序配置来阻止任何资产下载请求，在AEM发布实例上禁用该功能。 也可以直接通过OSGi控制台手动禁用Servlet。
+通过 `Asset Download Servlet` 更新调度程序配置以阻止任何资 [!DNL Experience Manager] 产下载请求，可以在Publish实例上禁用该功能。 也可以直接通过OSGi控制台手动禁用Servlet。
 
 1. 要通过调度程序配置阻止资产下载请求，请编辑 `dispatcher.any` 配置，并向过滤器部分添加新 [规则](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)。
 
@@ -71,6 +71,6 @@ AEM中的默认servlet允许经过身份验证的用户发出任意大的并发�
 >[!MORELIKETHIS]
 >
 >* [下载受DRM保护的资源](drm.md)
->* [在Win或Mac桌面上使用AEM桌面应用程序下载资源](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
+>* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资源](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)
 >* [从支持的Adobe Creative Cloud应用程序中使用Adobe Assets Link下载资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)
 
