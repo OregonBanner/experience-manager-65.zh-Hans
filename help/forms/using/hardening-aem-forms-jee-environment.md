@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: dee9f9c9d3dfb916d1feaa0d258c883686e1a1dc
 
 ---
 
@@ -38,7 +38,7 @@ JEE上的AEM Forms可高度自定义，并可以在许多不同的环境中使�
 
 **在Windows上安装和配置**
 
-如果您使用统包方法在JBoss上的JEE上安装AEM Forms，或者如果您正在安装PDF Generator，则您应以管理员身份在Windows上进行安装。 此外，在具有本机应用程序支持的Windows上安装PDF Generator时，必须以安装Microsoft Office的Windows用户的身份运行安装。 有关安装权限的详细信息，请参 **阅在JEE上安装和部署AEM Forms** （针对应用程序服务器）文档。
+如果您使用统包方法在JBoss上的JEE上安装AEM Forms，或者如果您正在安装PDF Generator，则您应以管理员身份在Windows上进行安装。 此外，在具有本机应用程序支持的Windows上安装PDF Generator时，必须以安装Microsoft Office的Windows用户的身份运行安装。 有关安装权限的详细信息，请参阅*在JEE上安装和部署AEM表单*文档（针对您的应用程序服务器）。
 
 ### 网络层安全 {#network-layer-security}
 
@@ -184,7 +184,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
    * 拒绝本地登录
    * 以服务身份登录（应已设置）
 
-1. 为新用户帐户授予JEE Web内容目录项上AEM Forms的“读取和执行”、“列表文件夹内容”和“读取”权限。
+1. 为新用户帐户授予“读取和执行”、“写入”、“修改”、“列表文件夹内容”和“读取”权限，以在JEE安装目录和全局文档存储(GDS)目录上完成AEM表单。 在AEM Forms安装过程中，将手动配置GDS目录的位置。 如果安装过程中位置设置保持为空，则位置默认为 [JBoss root]/server/[type]/svcnative/DocumentStorage下应用程序服务器安装下的目录。
 1. 开始应用程序服务器。
 
 **禁用配置管理器引导servlet**
@@ -258,7 +258,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
 1. 在Web浏览器中键入以下URL:
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
    默认端口号为以下任一端口号：
@@ -278,7 +278,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
 
 此外，建议通过执行以下步骤来更改CRX Administrator的默认密码：
 
-1. 使用默 `https://'[server]:[port]'/lc/libs/granite/security/content/useradmin.html` 认用户名／密码登录。
+1. 使用默 `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` 认用户名／密码登录。
 1. 在搜索字段中键入Administrator，然后单击“ **开始**”。
 1. 从搜 **索结果中** ，选择Administrator（管理员），然后单击 **用户界面右下角的Edit** （编辑）图标。
 1. 在“新密码”字 **段中指定新密码** ，在“密码”字段中指 **定旧密码** 。
@@ -291,7 +291,7 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 1. 在Web浏览器中键入以下URL:
 
    ```as3
-   https://[host name]:'port'/adminui
+   https://[host name]:[port]/adminui
    ```
 
 1. 单击 **设置>核心系统设置>配置**。
@@ -676,7 +676,7 @@ JEE上的AEM Forms提供了推荐人过滤器，用于指定允许访问服务�
 
 **管理允许的推荐人列表**
 
-您可以从“管理控制台”的“用户管理界面”中管理“允许的推荐人”列表。 用户管理界面为您提供了创建、编辑或删除列表的功能。 有关使用“允 *[许的推荐人](/help/forms/using/admin-help/preventing-csrf-attacks.md)*”列表的&#x200B;**更多信息，请参阅管理帮助中的“防止CSRF攻击”一节。
+您可以从“管理控制台”的“用户管理界面”中管理“允许的推荐人”列表。 用户管理界面为您提供了创建、编辑或删除列表的功能。 有关使用允许的 [推荐人列表的更](/help/forms/using/admin-help/preventing-csrf-attacks.md)多信息，请参阅管理帮助的* *防止CSRF攻击* *一节。
 
 **管理允许的推荐人异常和允许的URI列表**
 
@@ -691,7 +691,7 @@ JEE上的AEM Forms提供API来管理允许的推荐人例外列表和允许的UR
 * updateAllowedRefererExceptions
 * deleteAllowedRefererExceptions
 
-有关API的更 *多信息，请参阅JEE API上的AEM Forms* 。
+有关API的详细信息，请参阅* AEM Forms on JEE API参考*。
 
 对于全局级别的“允许的推荐人例外”，请使用 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 列表，即定义适用于所有应用程序的例外。 此列表仅包含具有绝对路径(例如， `/index.html`)或相对路径(例如 `/sample/`)。 您还可以在相对URI的末尾附加一个常规表达式，如 `/sample/(.)*`.
 
@@ -711,7 +711,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 **推荐人过滤自定义WAR文件**
 
-您可能已创建自定义WAR文件以在JEE上与AEM Forms一起使用，以满足您的业务要求。 要为自定义WAR文件启用推荐人过滤，请在WAR的类路径中包含 ***adobe-usermanager-client.jar*** ，并在 ** web.xml文件中包含一个包含以下参数的过滤器条目：
+您可能已创建自定义WAR文件以在JEE上与AEM Forms一起使用，以满足您的业务要求。 要为自定义WAR文件启用推荐人过滤，请在WAR的类路径中包含 ***adobe-usermanager-client.jar*** ，并在* web.xml*文件中包含一个包含以下参数的过滤器条目：
 
 **CSRF_CHECK_GETS** 控制GET请求的推荐人检查。 如果未定义此参数，则将默认值设置为false。 仅在要过滤GET请求时，才包含此参数。
 
@@ -970,10 +970,11 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 1. 在“本地安全设置”窗口的“用户权限分配”下，为表单服务器在下运行的用户帐户授予以下权限：
 
    * 通过终端服务拒绝登录
-   * 拒绝本地登录
+   * 本地xx上拒绝登录
    * 以服务身份登录（应已设置）
 
-1. 为JEE Web内容目录上的AEM Forms赋予新的用户帐户“读取和执行”、“列表文件夹内容”和“读取”权限。
+1. 为新用户帐户授予“读取和执行”、“写入”、“修改”、“列表文件夹内容”和“读取”权限，以在JEE安装目录和全局文档存储(GDS)目录上完成AEM表单。 在AEM Forms安装过程中，将手动配置GDS目录的位置。 如果安装过程中位置设置保持为空，则位置默认为 [JBoss root]/server/[type]/svcnative/DocumentStorage下应用程序服务器安装下的目录。
+
 1. 开始应用程序服务器服务。
 
 ### 文件系统安全性 {#file-system-security}
@@ -1038,4 +1039,3 @@ https://<servername>:8080/um/
 1. 取消选择“ **启用应用程序安全** ”和“ **使用Java 2安全性”**。
 1. 单击“ **确定** ”或“ **应用**”。
 1. 在“消 **息** ”框中，单 **击“直接保存到主配置”**。
-
