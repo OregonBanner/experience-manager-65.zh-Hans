@@ -11,31 +11,31 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: f7e5afe46100db7837647ac89aaf58cf101143b0
 
 ---
 
 
-# 审核控制台{#moderation-console}
+# 审核控制台 {#moderation-console}
 
-在AEM Communities中，管理员和社 [区版主](/help/communities/moderate-ugc.md) （分配为版主的受信任社区成员）可以在创作和发布环境中批量审核社区内容。
+在AEM Communities中，可以通 [过管理员和社区版主（分配为版主的受信任社区成员）的创作和发布环境对社区内容进行批量审核](/help/communities/moderate-ugc.md) 。
 
-管理员和社区版主还可以在 [发布环境中执行上下文](/help/communities/in-context.md) 、上下文审核。
+管理员和社区版主还可以在发 [布环境中执行上下文](/help/communities/in-context.md) 、上下文审核。
 
-所有社区站点的 [一个功能](/help/communities/sites-console.md) , `Administration`是一个菜单项，可供具有管理权限登录的用户使用。 该链 `Administration`接提供对审核控制台的访问。
+所有社区站点 [的功能](/help/communities/sites-console.md) , `Administration` 是一个菜单项，可供具有管理权限登录的用户使用。 该链 `Administration` 接提供对审核控制台的访问。
 
-从“审核”控制台中，管理员和社区审核者将有权访问其有权审核的所有用户生成的内容(UGC)。 如果允许审核多个站点，则可以查看所有站点中的帖子或按选定的社区站点进行筛选。
+从“审核”控制台中，管理员和社区审核者将有权访问其有权审核的所有用户生成的内容(UGC)。 如果允许审核多个站点，则可以跨所有站点视图帖子或按选定的社区站点进行筛选。
 
 有关更多详细信息，请 [访问管理用户和用户组](/help/communities/users.md)。
 
 审核控制台支持：
 
-* 批量执行协调任务
-* 搜索UGC
-* 查看UGC详细信息
-* 查看UGC作者详细信息
+* 批量执行审核任务。
+* 搜索UGC。
+* 查看UGC详细信息。
+* 查看UGC作者详细信息。
 
-只有以管理员或具有成员身份登录时，才可 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`以执行审核任务。
+只有以管理员或成员身份登录时，才可 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`以执行审核任务。
 
 ## 发布环境访问 {#publish-environment-access}
 
@@ -51,13 +51,14 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在创作环境中，要访问“审核”控制台
 
-* 从全局导航：导 **航、社区、协调**
+* 从全局导航中，选择“ **[!UICONTROL 社区]** ”>“ **[!UICONTROL 协调”]**。
 
-仅当以管理员或成员身份登录时，才可 ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`以执行审核任务。 显示的唯一社区内容是允许登录成员审核的社区内容。
+仅当以管理员或具有审查方权限的成员身份登 [录时](/help/communities/in-context.md#identifyingtrustedmembers)，才能执行审核任务。 显示的唯一社区内容是允许登录成员审核的社区内容。
 
 >[!NOTE]
 >
->只有在所选SRP实现公共存储时，发布环境中的UGC才在作者身上可见。 例如，默认情况下，存储是JSRP，它不是创作和发布的常用存储。 请参阅 [社区内容存储](/help/communities/working-with-srp.md)。
+>只有在所选SRP实现公共存储时，发布环境中的UGC才会在作者身上可见。 例如，默认情况下，存储是JSRP，它不是创作和发布的常用商店。 请参阅 [社区内容存储](/help/communities/working-with-srp.md)。
+
 
 ![版本控制台作者](assets/moderationconsoleauthor.png)
 
@@ -91,39 +92,41 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 内容区域包含已发布UGC的信息：
 
-* UGC发布
+* UGC已发布
 * 成员名称
 * 会员头像
-* 帖子的位置
-* 发布时间
-* 帖子的回复数
+* 帖子的位置。
+* 发布时。
+* 帖子的回复数。
 * [与帖子关联的情绪](/help/communities/moderate-ugc.md#sentiment) ,
-* 如果批准，则显示复选标记
-* 如果有附件，则显示回形针
+* 如果批准，则显示复选标记。
+* 如果有附件，则显示回形针。
 
 >[!NOTE]
->
+> 
 >内容区域具有 *无限滚动*，这意味着它允许您继续滚动直到内容结束。 即使在滚动时，工具栏仍保留在内容区域上方的固定可见位置。
+
 
 ### 滤镜边栏 {#ootbfilters}
 
 ![chlimage_1-212](assets/chlimage_1-212.png)
 
-侧面板图标可打开滤镜边栏。 显示在内容区域左侧的过滤器边栏提供不同的过滤器，每个过滤器对内容区域中显示的引用的UGC具有即时效果。
+侧面板图标可打开滤镜边栏。 显示在内容区域左侧的筛选器边栏提供不同的过滤器，每个边栏对内容区域中显示的引用UGC具有即时效果。
 
-每个类别中的过滤器 ****&#x200B;或者一起使用，不同类别中的过滤器 ****&#x200B;则一起使用。
+每个过滤器内的 **类别** OR **&#39;d是一起的，不同类别中的过滤器是** AND&#39;d的一起的。
 
-例如，选中“问题”和“答案 **”后** ，您会看到内容是“**问题”**或“答案”( **如果********&#x200B;选中)。
+例如，如果同时选中 **Question** 和 **Answer**，您将看到Question **或******** Answer的内容。
 
-但是，如果选 **中“问题** ”和“待定 **”**，您将只看到属于**问题**并且处于“待定” **内容**。
+但是，如果选中“ **问题** ”和“待定 **”**，您将只看到属于“问题 **”和“待定******”的内容。
 
 >[!NOTE]
 >
->社区审核者可以在审核控制台UI上为预定义的过滤器加书签。 当这些过滤器附加到URL的末尾（作为查询字符串参数）时，版主可以稍后返回到已添加书签的过滤器，并共享这些链接。
+>社区审核者可以在审核控制台UI上为预定义的过滤器加书签。 当这些过滤器附加到URL的末尾时(作为查询字符串参数)，版主可以稍后返回书签过滤器并共享这些链接。
+
 
 ![searchicon](assets/searchicon.png)
 
-当过滤器边栏打开时，“搜索”图标可切换侧面板关闭。 但是，要关闭筛选器边栏并仅查看用户生成的内容，请单击“搜索”图标，然后选择“仅内容”选项。
+当过滤器边栏打开时，“搜索”图标可切换侧面板关闭。 但是，要关闭筛选器边栏并仅视图用户生成的内容，请单击“搜索”图标，然后选择“仅内容”选项。
 
 #### 内容路径 {#content-path}
 
@@ -149,6 +152,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >当受信任的社区成员在发布时访问批量审核控制台时，只会显示对为授权其审核的社区站点创建的UGC的引用，并且可以使用站点过滤器进行过滤。
 
+
 #### 内容类型 {#content-type}
 
 “内容类型”将引用的UGC限制为显示给选定资源类型的帖子。 可以选择以下一种或多种类型。 如果未选择任何类型，则显示所有类型。
@@ -173,24 +177,24 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 要添加要筛选的其他资源，请执行以下操作：
 
-* 在创作实例上
-* 以管理员身份登录
-* 打开 [Web控制台](https://localhost:4502/system/console/configMgr)
-* 定位 `AEM Communities Moderation Dashboard Filters`
-* 选择要在编辑模式下打开的配置
-* 输入要筛选的组件的ResourceType
+* 以管理员身份登录到您的作者实例。
+* 打开 [Web控制台](https://localhost:4502/system/console/configMgr)。
+* 找到 `AEM Communities Moderation Dashboard Filters`。
+* 选择要在编辑模式下打开的配置。
+* 输入要筛选的组件的ResourceType:
 
    * 例如，要筛选包含的投票组件，请输入：
+
       `Voting=social/tally/components/hbs/voting`
 
 ![chlimage_1-215](assets/chlimage_1-215.png)
 
-* 选择保存
-* 刷新社区——审核控制台
+* 选择保存。
+* 刷新“社区——审核”控制台。
 
-结果是过滤器组下的新的可 `Voting`选过滤 `Content Type` 器。
+结果是过滤器组下的新的可 `Voting` 选过滤 `Content Type` 器。
 
-选择该过滤器后，功能板的内容将显示与输入的任何ResourceTypes匹配的UGC。
+选择该过滤器后，仪表板的内容将显示与输入的任何ResourceTypes匹配的UGC。
 
 #### 状态 {#status}
 
@@ -200,13 +204,14 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >如果仅选择“未回答”状态，则审查方将看到除已回答问题之外的所有内容（适用于所有内容类型）。 这是因为，在未回答的问题和其他内容（如论坛主题、博客文章或评论）的情况下，不存在对已回答问题负责的属性。
 
+
 ![状态](assets/statuses.png)
 
 #### 标记 {#flagging}
 
 标记将所引用的UGC限制为显示给已标记或隐藏的帖子。
 
-标记某个内容后，它会一直保持标记状态，直到您再次选择“标记”**“标记”**按钮取消标记该内容为止。 请注意，不存在标记级别，如重要或后续操作。
+标记某条内容后，它将保持标记状态，直到您再次选择“标记”按钮取消标记该 **条内容** 。 请注意，不存在标记级别，如重要或后续操作。
 
 ![chlimage_1-216](assets/chlimage_1-216.png)
 
@@ -230,11 +235,11 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## Custom Filters {#custom-filters}
 
-除了过滤器边栏中的现成过滤器 [外](/help/communities/moderation.md#ootbfilters)，还可以将元数据的其他自定义过滤器添加到协调UI。 开发人员可以使用Github中的示例代码扩展现有的协调UI筛选器。
+除了筛选边栏中的开箱即用过滤器 [外](/help/communities/moderation.md#ootbfilters)，还可以将元数据的其他自定义过滤器添加到仲裁UI中。 开发人员可以使用Github中的示例代码扩展现有的仲裁UI过滤器。
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) (Tag filter)实现了标记过滤器，以根据特定标记是否应用于用户生成的内容来过滤UGC列表。 您可以按照示例代码，为其他类似的UGC元数据字段构建类似的过滤器。
+Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) (Tag filter)实现了标记过滤器，以根据特定标记是否应用于用户生成的内容来过滤UGC列表。 您可以按照示例代码，为其他类似的UGC元数据字段构建类似过滤器。
 
 要安装“标记”过滤器的示例，请执行以下操作：
 
@@ -245,7 +250,7 @@ Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communi
 1. 转到AEM作者上的 **/apps/social/仲裁/facets** 节点([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/仲裁/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))和AEM发布([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/仲裁/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))实例。
 1. 添加具有权限 **的技术用户社区——实用程序** -阅 `jcr:read` 读器。
 
-要在现有社区站点上显示自定义过滤器，请执行以下操作：
+在现有社区站点上公开自定义过滤器:
 
 1. 编辑 `Clientlibs` 现有审核页面 `/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`
 
@@ -265,7 +270,7 @@ Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 要批量审核帖子，请在内容区域中单击帖子上的“选择”( ![selecticon](assets/selecticon.png))图标，将鼠标悬停在帖子上方时（桌面）或按住手指在帖子上（移动）会显示该图标。 通过执行此操作，您可以进入多选模式，现在只需单击这些帖子即可选择要批量审核的后续帖子。 使用工具栏上显示的按钮对选定的帖子执行审核操作。 所有操作都将提示进行确认。
 
-要审核内容区域中的单个帖子，请用鼠标（桌面）将鼠标悬停在该帖子上，或按住帖子（移动）上的手指，使帖子上显示按钮。 在单个内容详细信息上操作时，只有删除操作会提示您确认。
+要审核内容区域中的单个帖子，请用鼠标（桌面）将鼠标悬停在该帖子上，或按住帖子（移动）上的手指，使帖子上显示按钮。 当对单个内容详细信息执行操作时，只有删除操作会提示您确认。
 
 ### 审核多个帖子 {#moderating-multiple-posts}
 
@@ -287,24 +292,24 @@ Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ### 审核单个帖子 {#moderating-a-single-post}
 
-在单选模式下，可以
+在单选模式下，可以：
 
-* 通过选择用户名查看用户详细信息
-* 通过选择指向帖子的链接，查看帖子的上下文
+* 视图用户详细信息。
+* 视图帖子上下文，方法是选择指向帖子的链接。
 * [回复](#reply)
 * [允许](#allow)
 * [拒绝](#deny)
 * [删除](#delete)
 * [关闭](#close)
-* 查看 [审核历史](#moderation-history)
+* 视图 [审核历史](#moderation-history)
 * [查看详细信息](#viewdetails)
 
-审核操作图标上方的卡片视图中显示帖子文本，下方显示指示
+审核操作图标上方的卡片视图上显示的是帖子的文本，下面显示的数据表示：
 
-* 如果有回复，则在回复数前面加上
-* 如果已标记
-* 如果已批准
-* UGC发布时
+* 如果它有回复，则在回复数前面加上。
+* 如果已标记。
+* 如果已获得批准。
+* UGC发布时。
 
 ![单电模式](assets/singleselectmode.png)
 
@@ -324,7 +329,7 @@ Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ![chlimage_1-222](assets/chlimage_1-222.png)
 
-**拒绝**仲裁操作仅适用于已审核的内容，除非在多选模式下，否则不会显示在未审核的内容上。
+“拒 **绝** ”审核操作仅适用于已审核的内容，除非在多选模式下，否则不会显示在未审核的内容上。
 
 未审核的内容始终会得到批准。
 
@@ -336,7 +341,7 @@ Github上 [的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communi
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-在单个选择或批量模式下，您可以选择项目并删除它们。 删除操作会生成确认对话框。 删除后，这些项目会立即从内容区域中消失。 **删除UGC后，它将从存储库中永久删除，以后将无法检索。**
+在单个选择或批量模式下，您可以选择项目并删除它们。 删除操作会生成确认对话框。 删除后，这些项目会立即从内容区域中消失。 **删除UGC后，它将从存储库中永久删除，以后将无法检索**。
 
 #### 关闭 {#close}
 
