@@ -3,7 +3,7 @@ title: 资产代理开发
 description: 代理是使用代理Worker处理作业的AEM实例。 了解如何配置AEM代理、支持的操作、代理组件，以及如何开发自定义代理Worker。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
+source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ---
 
@@ -12,13 +12,13 @@ source-git-commit: a39ee0f435dc43d2c2830b2947e91ffdcf11c7f6
 
 Adobe Experience Manager(AEM)资产使用代理分发特定任务的处理。
 
-代理是特定（有时也是单独的）AEM实例，它使用代理Worker作为负责处理作业和创建结果的处理器。 代理Worker可用于各种任务。 对于AEM资产代理，此代理可用于加载资产以在AEM资产中呈现。 例如， [](indesign.md) IDS代理worker使用InDesign server处理文件以在AEM资产中使用。
+代理是特定（有时也是单独的）AEM实例，它使用代理Worker作为负责处理作业和创建结果的处理器。 代理工作器可用于各种任务。 对于AEM资产代理，此代理可用于加载资产以在AEM资产中呈现。 例如， [](indesign.md) IDS代理worker使用InDesign Server处理文件以在AEM资产中使用。
 
 当代理是单独的AEM实例时，这有助于减少AEM创作实例的负载。 默认情况下，AEM资产会在同一JVM（通过代理外部化）中执行资产处理任务，以减少AEM创作实例的负载。
 
 ## 代理（HTTP访问） {#proxy-http-access}
 
-将代理配置为在以下位置接受处理作业时，可通过HTTP servlet使用代理： `/libs/dam/cloud/proxy`. 此Servlet根据已发布的参数创建sling作业。 然后，此操作会添加到代理作业队列，并连接到相应的代理工作器。
+将代理配置为在以下位置接受处理作业时，可通过HTTP Servlet使用代理： `/libs/dam/cloud/proxy`. 此Servlet根据已发布的参数创建sling作业。 然后，此操作会添加到代理作业队列，并连接到相应的代理工作器。
 
 ### 支持的操作 {#supported-operations}
 
@@ -110,7 +110,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 >[!NOTE]
 >
->有关 [详细信息，请参阅Indesign Server Proxy worker配置](indesign.md#configuring-the-proxy-worker-for-indesign-server)[和云服务配置](../sites-developing/extending-cloud-config.md) 。
+>有关 [详细信息，请参阅Indesign Server Proxy Worker配置](indesign.md#configuring-the-proxy-worker-for-indesign-server)[和云服务配置](../sites-developing/extending-cloud-config.md) 。
 
 以下是API使用的示例：
 
@@ -138,7 +138,7 @@ IDS代 [](indesign.md) 理工作者是AEM Assets代理工作者的一个示例�
 * 设置和实施（使用Sling事件）:
 
    * 自定义作业主题
-   * 自定义作业事件处理函数
+   * 自定义作业事件处理程序
 
 * 然后，使用JobService API可以：
 
@@ -161,7 +161,7 @@ IDS代 [](indesign.md) 理工作者是AEM Assets代理工作者的一个示例�
 
 1. 外部步骤用于触发事件，然后等待完成；这是通过轮询id来完成的。 您必须自行制定实施新功能的步骤。
 
-   实施 `WorkflowExternalProcess`一个，然后使用JobService API和您的作业主题准备作业事件并将其调度到JobService（OSGi服务）。
+   实施 `WorkflowExternalProcess`，然后使用JobService API和您的作业主题准备作业事件并将其调度到JobService（OSGi服务）。
 
    例如，请参阅 `INDDMediaExtractProcess`IDS代理worker的。java。
 
