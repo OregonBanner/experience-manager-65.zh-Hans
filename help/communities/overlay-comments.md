@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 502c0916-6c54-440c-be8c-eae56001fa26
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
+source-git-commit: 48afa2146d0dcbab4beaa1044645c269b49fd7ff
 
 ---
 
@@ -36,7 +36,7 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 
 假定要自定义电子邮件通知的消息，可以通过在 [/libs](/help/communities/client-customize.md#overlays) /settings/community/templates/email/html中覆盖 **模板来实现**。
 
-例如，要修改提及电子邮件通知（针对创建ugc的特定社区组件），请在启用了@mentions支持的组件的模板中为动词提及添加一个 **** if **条件****** 。
+例如，要修改提及电子邮件通知（针对创建ugc的特定社区组件），请在启用了 **@mentions** 支持的组件的模板中为动词提及添加 **if****** 条件。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -44,4 +44,4 @@ source-git-commit: 70e6f2d8366456e5091b7b775dc40914948921ab
 {{/equals}}\
 ```
 
-要修改博客评论中@tuntice的电子邮件通知模板，请将开箱即用模板放在： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/cn**
+要修改博客评论中@tuntice的电子邮件通知模板，请将开箱即用模板放在： `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
