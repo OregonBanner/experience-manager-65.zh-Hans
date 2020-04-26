@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4be5286858b255a30983b5987ac54c4e71dd4f2f
+source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
 
 ---
 
@@ -39,7 +39,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
   <tr>
    <td>Creative Cloud 集成</td>
    <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM 6.2中引入了“AEM到Creative Cloud文件夹共享</a> ”功能，旨在让创意用户能够从AEM访问资产，以便在CC应用程序中打开资产并上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。</p> <p>Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。</p> </td>
-   <td>建议客户切换到新的Creative Cloud集成功能，包括Adobe Asset Link或AEM桌面应用程序。 有关更多详细信息，请查看 <a href="/help/assets/aem-cc-integration-best-practices.md">AEM 和 Creative Cloud 集成最佳实践</a>。</td>
+   <td>建议客户切换到新的Creative Cloud集成功能，包括Adobe Asset Link或AEM桌面应用程序。 Review <a href="/help/assets/aem-cc-integration-best-practices.md">AEM and Creative Cloud Integration Best Practices</a> for more details.</td>
   </tr>
   <tr>
    <td>资产</td>
@@ -97,12 +97,12 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
      <li>如果您已执行全新安装：
       <ul>
        <li>在自适应表单的签名步骤中使用基于Adobe Sign的签名体验。</li>
-       <li>在自适应表单、交互式通信和HTML5表单中使用独立的Scribble Signature组件。</li>
+       <li>在自适应表单、交互式通信和HTML5表单中使用独立的“涂写签名”组件。</li>
       </ul> </li>
      <li>如果您已从先前版本升级到AEM 6.5 Forms:<br />
       <ul>
        <li>在已使用该功能的表单中继续使用基于Scribble签名的签名步骤签名体验。<br /> </li>
-       <li>在创建新表单时，在签名步骤中使用独立的Scribble Signature组件或基于Adobe Sign的签名体验。 </li>
+       <li>在创建表单时，在签名步骤中使用独立的“涂鸦签名”组件或基于Adobe Sign的签名体验。 </li>
       </ul> </li>
     </ul> <p> </p> <p> </p> </td>
   </tr>
@@ -165,13 +165,14 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 替换 |
 |--- |--- |--- |
-| 分析活动图 | AEM中包含的活动图版本。 | 由于 Adobe Analytics API 中的安全性更改，因此无法再使用 AEM 中包含的 Activity Map 版本。使用Adobe [Analytics提供的ActivityMap插件](https://docs.adobe.com/content/help/zh-Hans/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
+| 分析活动图 | AEM中包含的活动图版本。 | 由于 Adobe Analytics API 中的安全性更改，因此无法再使用 AEM 中包含的 Activity Map 版本。使用 [Adobe Analytics提供的ActivityMap插件](https://docs.adobe.complugin /content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
 | 集成 | ExactTarget集成已从默认分发（快速启动）中删除，并且不再可用。 | 无替换项 |
 | 集成 | Salesforce Force API 集成已从默认分发版（快速入门）中删除，现在是一个额外的包，可从 PackageShare 安装。 | 功能仍然可用。 |
 | Forms | 由于不再支持 Adobe Central 产品，删除了对 Adobe Central Migration Bridge 服务的支持。 | 无替换项 |
 | 表单 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项 |
 | 表单 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |
 | 表单 | 在JEE上从LiveCycle ES4 SP1到AEM 6.5 Forms的单跳升级不可用 | 请参 [阅AEM Forms升级文档](../forms/using/upgrade.md) 中的可用升级路径。 |
+| 表单 | 从JEE上的AEM Forms中删除了基于UPD的群集支持 | 在JEE上的AEM Forms中，只能使用基于TCP的群集。 如果将UDP多播服务器从先前版本升级到JEE上的AEM 5.5 Forms，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请参 [阅升级到JEE上的AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |
 | 开发人员 | Firebug Lite 已从默认分发版（快速入门）中删除 | 使用浏览器内置的开发人员控制台 |
 | 开发人员 | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 无替换项 |
 | 资产 | 在AEM 6.5中，资产卸载功能已被删除 | 无替换项 |
