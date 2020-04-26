@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: 列表AEM资产和Dynamic Media支持的文件格式以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6ac091d413690bd44b171ed11415c154aa8f437c
+source-git-commit: 1d16716d5fcf5b05a741b2d06d333e5f80e0d290
 
 ---
 
@@ -24,7 +24,7 @@ AEM资产支持各种文件格式，并且每种功能都对不同MIME类型提�
 
 ## AEM资产中支持的栅格图像格式 {#supported-raster-image-formats}
 
-| 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 交互式编辑 | 元数据写回 | 分析 |
+| 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 编辑 | 元数据写回 | 分析 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
