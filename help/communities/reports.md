@@ -11,24 +11,32 @@ content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
-# 报告控制台{#reports-console}
+# 报告控制台 {#reports-console}
 
 ## 概述 {#overview}
 
 对于AEM Communities，可以通过多种方式从创作环境访问各种报告。
 
-一般来说，各种报告有：
+一般而言，各种报告包括：
 
-* [任务报告](#assignments-report) -对于启用 [社区](/help/communities/overview.md#enablement-community)，提供学员分配进度的概述，包括在实施SCORM标准时的关联得分
-* [查看报告](#views-report) -提供按社区成员和任何社区站点的站点访客查看内容的图表
-* [帖子报告](#posts-report) -提供社区成员向任何社区站点发布的各种类型帖子的图表
+* [指定报表](#assignments-report)
 
-启用 [Adobe Analytics后](/help/communities/sites-console.md#analytics)，报告将包括一段时间内每个支持资源的查看次数、播放次数、评论数和评级数
+   对于支 [持社区](/help/communities/overview.md#enablement-community)，提供学员分配进度的概述，包括在实施SCORM标准时的关联得分。
+
+* [查看次数报表](#views-report)
+
+   提供按社区成员和任何社区站点的站点视图的内容访客图表。
+
+* [发布报表](#posts-report)
+
+   按社区成员向任何社区站点提供各种类型的帖子图表。
+
+启用 [Adobe Analytics后](/help/communities/sites-console.md#analytics)，报告将包括一段时间内每个支持资源的视图数、播放数、评论数和评级数。
 
 表格式报告可以以。csv格式导出，以便后续处理。
 
@@ -36,46 +44,46 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 社区站点报告 {#reports-for-community-sites}
 
-* 从全局导航：导 **航**、社 **区、报告**
+* 从全局导航：导 **[!UICONTROL 航]** >社 **[!UICONTROL 区]** >报 **[!UICONTROL 告]**
 
-* 选择
+* 从以下选项中进行选择：
 
-   * **指定报表**
+   * **[!UICONTROL 指定报表]**
 
-      * 为选定的社区站点、用户或用户组以及分配生成报告
+      * 为选定的社区站点、用户或用户组以及分配生成报告。
+   * **[!UICONTROL 发布报表]**
 
-      * **发布报表**
+      * 为选定的社区站点、内容类型和时间段生成报告。
+   * **[!UICONTROL 查看次数报表]**
 
-         * 为选定的社区站点、内容类型和时间段生成报告
-      * **查看次数报表**
+      * 为选定的社区站点、内容类型和时间段生成报告。
 
-         * 为选定的社区站点、内容类型和时间段生成报告
 
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
 ### Enablement Resources和学习路径报告 {#reports-for-enablement-resources-and-learning-paths}
 
-* 从全局导航：导 **航**、 **社区、资源**
+* 从全局导航：“导 **[!UICONTROL 航]** ”>“社 **[!UICONTROL 区”]** >“资 **[!UICONTROL 源”]**
 
-* 选择现有的支持社区站点
+* 选择现有的支持社区站点：
 
-   * 选择**报告**图标以生成涵盖所有支持资源的报告
-   * 选择支持学习路径
-   * 选择**报告**图标以生成
+   * 选择 **报告图标** ，以生成涵盖所有启用资源的报告。
+   * 选择一个启用学习路径。
+   * 选择“ **报告** ”图标以生成以下报表：
 
-      * 包含的支持资源
-      * 分配给学习路径的学员
+      * 包含的支持资源。
+      * 分配给学习路径的学员数。
 
 * 这些报告提供：
 
-   * 表数据，可下载为CSV
+   * 可下载的表数据：
 
       * 识别学员
-      * 他们的身份
-      * 是否通过目录分配或访问
+      * 他们的状态
+      * 是分配还是通过目录访问
       * 评论数
-      * 星级给定
+      * 给定星级
 
 有关详细信息，请参 [阅资源控制台](/help/communities/resources.md#report) 的“报告”部分。
 
@@ -91,16 +99,16 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **站点**
 
-   选择支持社区站点
+   选择一个支持社区站点。
 
 * **用户或组**
-   * 选择用户以为一个学员生成报告
-   * 选择“组”以为学员组生成报告
-   隧道服务将从发布环境访问成员和成员组
+   * 选择“用户”，为一个学员生成报告。
+   * 选择“组”以为学员组生成报告。
+   通道服务将从发布环境访问成员和成员组。
 
 * **指定任务**
 
-   从分配给选定学员的启用资源中进行选择
+   从分配给选定学员的启用资源中进行选择。
 
 选择 **生成** ，以创建报表：
 
@@ -108,30 +116,30 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 查看次数报表 {#views-report}
 
-“查看”控制台允许在给定时间段内按社区功能在页面查看时生成报告。
+视图控制台允许在指定时间段内按社区功能在页面视图中生成报告。
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
 选择报表的条件：
 
-* **站点**
+* **[!UICONTROL 站点]**
 
-   选择社区站点
+   选择社区站点。
 
-* **内容类型**
+* **[!UICONTROL 内容类型]**
 
-   可以选择所有内容或选择站点上提供的功能之一
+   可以选择“所有内容”或选择站点上提供的功能之一。
 
-* 时间帧
+* **[!UICONTROL 时间范围]**
 
-   选择其中之一
+   选择以下选项之一：
 
    * 过去 7 天
    * 过去 30 天
    * 过去 90 天
    * 去年
 
-选择 **生成** ，以创建报表：
+选择 **[!UICONTROL 生成]** ，以创建报表。
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -143,24 +151,24 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 选择报表的条件：
 
-* **站点**
+* **[!UICONTROL 站点]**
 
-   选择社区站点
+   选择社区站点。
 
-* **内容类型**
+* **[!UICONTROL 内容类型]**
 
-   可以选择所有内容或选择站点上提供的功能之一
+   可以选择“所有内容”或选择站点上提供的功能之一。
 
-* 时间帧
+* **[!UICONTROL 时间范围]**
 
-   选择其中之一
+   选择以下选项之一：
 
    * 过去 7 天
    * 过去 30 天
    * 过去 90 天
    * 去年
 
-选择 **生成** ，以创建报表：
+选择 **[!UICONTROL 生成]** ，以创建报表。
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -172,6 +180,6 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 报告不显示在AEM作者实例中 {#reports-do-not-show-in-aem-author-instance}
 
-如果报告未显示在AEM作者实例中，请检查自定义，如发布实例上的URL映射。 如果仅对社区站点的AEM发布实例执行URL映射，请确保在**站点趋势报表社交组件工厂**配置中的AEM作者实例中已配置URL映射。
+如果报告未显示在AEM作者实例中，请检查自定义，如发布实例上的URL映射。 如果仅对社区站点的AEM发布实例执行URL映射，请确保在“站点趋势报告社交组件工厂”配置的AEM作者实例中已配置 **URL映射** 。
 
 ![AEM作者上的URL映射](assets/sitetrend.png)
