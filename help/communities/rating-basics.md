@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: b7318370c45f37a7faf5434b2de3f145b8d64bce
 
 ---
 
@@ -21,7 +21,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 允许在同一页面上放置多个投票组件实例；每个实例都必须配置一个唯一的 `tally name` 属性。
 
-不支持匿名发布评级。 站点访问者只能注册并登录一次才能参加评级。 已登录的访客（会员）可随时更改其评级。
+不支持匿名发布评级。 网站访客必须注册并登录才能参加评级一次。 已签署的访客（会员）可随时更改其评级。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -69,14 +69,14 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 UGC应使用一种标准的仲裁方法进行仲裁。
 请参阅 [审核用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对 [UGC使用公用商店](working-with-srp.md) ，包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1 Communities起，对UGC使用公 [用商店](working-with-srp.md) ，包括以编程方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -介绍和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) —— 编码准则访问UGC。
+* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
 
