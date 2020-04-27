@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
+source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 新创建的社区站点已发布，现在浏览至创建站点时显示的URL，但在发布服务器上，例如
 
-* A\uthor URL = https://localhost:4502/content/sites/engage/en.html
+* 作者URL = https://localhost:4502/content/sites/engage/en.html
 * 发布URL = https://localhost:4503/content/sites/engage/en.html
 
 为最大限度地减少在创作和发布时登录到哪个成员的混淆，建议为每个实例使用不同的浏览器。
@@ -37,14 +37,14 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 匿名站点访客在UI中可看到以下内容：
 
-* 站点的标题。 哪个入门教程
+* 站点的标题（入门教程）
 * 无用户档案链接
 * 无消息链接
 * 无通知链接
 * 搜索字段
 * 登录链接
 * 品牌横幅
-* 引用站点模板中包含的组件的菜单链接
+* 引用站点模板中包含的组件的菜单链接。
 
 如果选择各种链接，您会发现它们处于只读模式。
 
@@ -54,7 +54,7 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 要保护您的社区站点的内容免受匿名用户通过jcr内容和json访问，请执行以下步骤：
 
-1. 在AEM作者实例中，转到https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
+1. 在AEM作者实例上，转到https:// hostname:port/editor.html/content/site/sitename.html。
 
    >[!NOTE]
    >
@@ -64,19 +64,19 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
    ![站点身份验证](assets/site-authentication.png)
 
-1. 转至**高级**选项卡。
+1. 转到“高 **级** ”选项卡。
 
    ![page-properties](assets/page-properties.png)
 
 1. Enable **Authentication Requirement**.
-1. 添加登录页面的路径。 例如，**/content/....../GetStarted**。
+1. 添加登录页面的路径。 例如， **/content/....../GetStarted**。
 1. 发布页面。
 
 ## 受信任的社区会员 {#trusted-community-member}
 
 此体验假定 [Aaron McDonald](/help/communities/tutorials.md#demo-users) 被分配为社区经 [理和主持人的角色](/help/communities/create-site.md#roles)。 否则，返回作者环境修改站 [点设置](/help/communities/sites-console.md#modifying-site-properties) ，选择Aaron McDonald作为社区经理和版主。
 
-在右上角，选择并 `Log in`使用用户名“aaron.mcdonald@mailinator.com”和密码“password”进行签名。 注意使用Twitter或Facebook凭据登录的能力。
+在右上角，选择并 `Log in`使用用户名(aaron.mcdonald@mailinator.com)和密码（密码）进行签名。 注意使用Twitter或Facebook凭据登录的能力。
 
 ![chlimage_1-32](assets/chlimage_1-32.png)
 
@@ -85,21 +85,21 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 * **用户档案** 选项允许您视图和编辑用户档案。
 * [“消息](/help/communities/configure-messaging.md) ”选项将指导您进入“直接消息”部分，在该部分，您可以：
 
-1. 视图您收到的（收件箱）、已发送（已发送项目）和已删除（垃圾桶）的直接邮件。
-1. 编写新的直接消息以发送给个人和组。
+   1. 视图您收到的（收件箱）、已发送（已发送项目）和已删除（垃圾桶）的直接邮件。
+   1. 编写新的直接消息以发送给个人和组。
 
 * [通知](/help/communities/notifications.md) 选项会引导您进入通知部分，您可以在该部分视图所关注的事件并编辑通知设置。
 * [管理](/help/communities/published-site.md#moderationlink) （如果您拥有审核权限）会将您定向到AEM Communities审核页面。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-请注意，“日历”页面是主页，因为所选的“参考站点模板”首先包含“日历”功能，然后是“活动流”功能、“论坛”功能等。 此结构可在“站点模板”控 [制台中](/help/communities/sites.md#edit-site-template) ，或在创作环境中修改站点属性时显示：
+请注意，“日历”页面是主页，因为所选的“参考站点模板”首先包含“日历”功能，然后是“活动流”功能、“论坛”功能等。 此结构可在“站点模板”控 [制台中或在创作环境中修改站点属性时显示](/help/communities/sites.md#edit-site-template) :
 
 ![chlimage_1-34](assets/chlimage_1-34.png)
 
 >[!NOTE]
 >
->有关Communities组件和功能的更多信息，请访问
+>有关Communities组件和功能的更多信息，请访问：
 >
 >* [社区组件](/help/communities/author-communities.md) （针对作者）
 >* [组件、功能和功能基本工具](/help/communities/essentials.md) （针对开发人员）
@@ -123,19 +123,19 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 这是一个在发布环境中创建组的示例。
 
-用户组也可以在创作环境中创建，并在创作环境的社区站点(“社区组”控 [制台](/help/communities/groups.md))中进行管理。 本教程的下 [一步是创建作者组](/help/communities/nested-groups.md) 。
+用户组也可以在创作环境中创建，并在创作环境（“社区组”控制台）的社区站[点中进行管理](/help/communities/groups.md)。 本教程的下 [一步是创建作者组](/help/communities/nested-groups.md) 。
 
 ![chlimage_1-36](assets/chlimage_1-36.png)
 
 创建引用组：
 
-1. 选择 **新用户组**
+1. 选择 **新组**
 1. **设置选项卡**
 
    * 组名称 : `Sports`
-   * 描述 : `A parent group for various sporting groups`
+   * 描述 : `A parent group for various sporting groups`.
    * 组 URL 名称 : `sports`
-   * 选择 `Open Group` （允许任何社区成员通过加入来参加）
+   * 选择 `Open Group` （允许任何社区成员通过加入来参与）
 
 1. **模板选项卡**
 
@@ -149,25 +149,25 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
-第二组链接(从开始 `Blog`)属于当前选定的组，即 `Sports`组。 通过选择“体育” `Groups` 链接，可以将两个组嵌套在“体育”组中。
+第二组链接(从开始 `Blog`)属于当前选定的组，即 `Sports` 组。 通过选择“体育” `Groups` 链接，可以将两个组嵌套在“体育”组中。
 
-例如，添加两个 `ew groups.`
+例如，添加两个 `new groups`。
 
 * 一个 `Baseball`
 
-   * 将其设置为 `Open Group` （必需会员资格）
-   * 在“模板”选项卡上，选择 `Conversational Group`
+   * 将其设置为 `Open Group` （必需会员资格）。
+   * 在“模板”选项卡上，选择 `Conversational Group`。
 
 * 一个 `Gymnastics`
 
-   * 将其设置更改为 `Member Only Group` （受限会员资格）
-   * 在“模板”选项卡上，选择 `Conversational Group`
+   * 将其设置更改 `Member Only Group` 为（受限会员资格）。
+   * 在“模板”选项卡上，选择 `Conversational Group`。
 
-**通知 **:
+**通知**:
 
-* 在显示两个组之前，可能需要刷新页面
-* 此模板不*不包括组功能，因此不可能再嵌套组
-* 在创作时，“ [组”控制台提供第三种选择](/help/communities/groups.md) - `Public Group` a（可选会员资格）
+* 在显示两个组之前，可能需要刷新页面。
+* 此模板不 *包括* groups函数，因此不可能进一步嵌套组。
+* 在创作时，“ [组”控制台提供第](/help/communities/groups.md) 三个选择- `Public Group` （可选会员资格）。
 
 创建两个组后，选择“棒球”组（打开的组），并注意其链接：
 
@@ -179,16 +179,16 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 在创作时——具有管理权限，导航到“社 [区组”控制台](/help/communities/members.md) ，并将Weston McCall添加到 `Community Engage Gymnastics <uid> Members` 组。
 
-继续发布内容，以Aaron McDonald的身份注销，并以匿名网站访客的形式视图体育组中的组：
+继续发布内容，以Aaron McDonald的身份注销，并以匿名网站访客的形式视图体育组中的团体：
 
 * 来自主页
-* 选择链 `Groups`接
-* 选择链 `Sports`接
-* 选择体育链 `Groups`接
+* 选择链 `Groups` 接
+* 选择链 `Sports` 接
+* 选择体育链 `Groups` 接
 
 只有“棒球”组可见。
 
-以Weston McCall(weston.mccall@dodgit.com /密码)的身份登录，然后导航到同一位置。 注意，Weston能够访问打开 `Join` 的组 `Baseball` 和私有 `enter or Leave` 组之 `Gymnastics`一。
+以Weston McCall(weston.mccall@dodgit.com /密码)的身份登录，然后导航到同一位置。 注意，Weston能够访问打开 `Join` 的组 `Baseball` 和私有 `enter or Leave` 组之一 `Gymnastics` 。
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -196,7 +196,7 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 视图包含在站点中的基本网页，方法是选择网页链接。 标准AEM创作工具可用于在创作环境中向此页面添加内容。
 
-例如，转到作 **者实例** ，在“社区站点”控制台 `engage` 中打开文件夹 [，选择“打开站点](/help/communities/sites-console.md)**** ”图标以进入作者编辑模式。 然后选择预览模式以选择链 `Web Page`接，然后选择编辑模式以添加标题和文本组件。 最后，只发布页面或整个站点。
+例如，转到作 **者实例** ，在“社区站点”控制台 `engage` 中打开文件夹 [，选择“打开站点](/help/communities/sites-console.md)**** ”图标以进入作者编辑模式。 然后选择预览模式以选择链接， `Web Page` 然后选择编辑模式以添加标题和文本组件。 最后，只发布页面或整个站点。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -212,16 +212,16 @@ source-git-commit: 31a3ccc1f9f0940515ed64b1b18a535102bf7231
 
 注销后，可以创建新用户注册。
 
-* select `Log In`
-* select `Sign up for a new account`
+* 选择 `Log In`
+* 选择 `Sign up for a new account`
 
 ![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
 
 默认情况下，电子邮件地址为登录ID。 如果未选中，访客可以输入自己的登录ID（用户名）。 用户名在发布环境中必须是唯一的。
 
-在指定用户名、电子邮件和密码后，选择该 `Sign Up`选项将创建用户并允许其签名。
+指定用户名、电子邮件和密码后，选择该选项 `Sign Up` 将创建用户并允许他们签名。
 
-登录后，显示的第一页即为其页 `Profile`面，用户可以对其进行个性化设置。
+登录后，显示的第一个页面即为其页 `Profile` 面，他们可以对其进行个性化设置。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
