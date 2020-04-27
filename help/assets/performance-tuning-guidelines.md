@@ -4,7 +4,7 @@ description: 有关AEM配置、硬件、软件和网络组件更改以消除瓶�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -203,17 +203,13 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 >[!CAUTION]
 >
->如果ImageMagick使用了所有可用磁盘空间，则错误配置可能会使服务器不稳定。
->
->使用ImageMagick处理大型文件所需的策略更改可能会影响AEM性能。 有关详细信息，请参 [阅安装和配置ImageMagick](/help/assets/best-practices-for-imagemagick.md)。
+>如果ImageMagick使用了所有可用磁盘空间，则错误配置可能会使服务器不稳定。 使用ImageMagick处理大型文件所需的策略更改可能会影响AEM性能。 有关详细信息，请参 [阅安装和配置ImageMagick](/help/assets/best-practices-for-imagemagick.md)。
 
 >[!NOTE]
 >
 >ImageMagick和 `policy.xml` 文件可 `configure.xml` 从获得，而不 `/usr/lib64/ImageMagick-&#42;/config/` 是。有关配置文件的位置，请参 `/etc/ImageMagick/`阅 [ImageMagick文档](https://www.imagemagick.org/script/resources.php) 。
 
->[!TIP]
->
->如果您在Adobe Managed Services(AMS)上使用Experience Manager，则如果您计划处理大量大型PSD或PSB文件，请联系Adobe支持部门。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe专有格式选择最佳的工具和模型。
+如果您在Adobe Managed Services(AMS)上使用Experience Manager，请联系Adobe客户服务部门（如果您计划处理大量大型PSD或PSB文件）。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe专有格式选择最佳的工具和模型。 Experience Manager可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ### XMP writeback {#xmp-writeback}
 
