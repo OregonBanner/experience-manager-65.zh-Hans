@@ -10,18 +10,18 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 62f2a11491e427a13cecae75c225ed41a44783cd
 
 ---
 
 
 # 使用评级 {#using-ratings}
 
-该组 `Rating`件单独使用，或与其他Communities功能一起使用。 此组件允许已登录的社区成员通过对内容进行评级来表达其意见。
+该组 `Rating` 件单独使用，或与其他Communities功能一起使用。 此组件允许已登录的社区成员通过对内容进行评级来表达其意见。
 
 ## Adding a Rating to a Page {#adding-a-rating-to-a-page}
 
-要在创作模 `Rating``Communities / Rating` 式下将组件添加到页面，请找到该组件并将其拖动到页面上的位置，如相对于要评级的成员的功能的位置。
+要在创作模 `Rating``Communities / Rating` 式下将组件添加到页面，请找到该组件并将其拖动到页面上的相应位置，如相对于要评级的成员的功能的位置。
 
 有关必要的信息，请访 [问社区组件基础](basics.md)。
 
@@ -41,7 +41,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 **[!UICONTROL Tally Name]**(*Required*)唯一标识此实例的 `Rating`简单名称。 必须为存储库的有效节点名称。
 
-## 网站访客体验 {#site-visitor-experience}
+## 站点访客体验 {#site-visitor-experience}
 
 ### 成员 {#members}
 
@@ -49,7 +49,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 匿名 {#anonymous}
 
-不支持匿名发布评级。 站点访问者必须注册（成为会员）并登录才能参加。
+不支持匿名发布评级。 站点访客必须注册（成为会员）并登录以参与。
 
 ## 附加信息 {#additional-information}
 
