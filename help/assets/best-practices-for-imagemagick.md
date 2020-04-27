@@ -3,7 +3,7 @@ title: 安装和配置ImageMagick以与AEM Assets一起使用
 description: 了解ImageMagick软件、如何安装它、设置命令行处理步骤以及使用它编辑、合成和生成图像的缩略图。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 31234518537ca4a0b7ff36e8d52a3b7b1b8fe4f7
 
 ---
 
@@ -18,7 +18,7 @@ ImageMagick是用于创建、编辑、合成或转换位图图像的软件插件
 
 >[!NOTE]
 >
->如果您在Adobe Managed Services(AMS)上使用AEM，则如果您计划处理大量大型PSD或PSB文件，请联系Adobe支持部门。
+>如果您在Adobe Managed Services(AMS)上使用AEM，则如果您计划处理许多高分辨率PSD或PSB文件，请联系Adobe客户服务中心。 Experience Manager可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ## 安装ImageMagick {#installing-imagemagick}
 
