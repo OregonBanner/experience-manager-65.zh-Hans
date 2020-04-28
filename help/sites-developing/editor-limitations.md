@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 844d42ed50da153077423190684aa85265bce12f
 
 ---
 
@@ -27,7 +27,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 编辑 [页面时](/help/sites-authoring/editing-content.md)，链接不处于活动状态。
 
-* [切换到“ **预览** ”模式](/help/sites-authoring/editing-content.md#preview-mode) ，以使用内容中的链接进行导航。
+* [切换到 **预览** 模式](/help/sites-authoring/editing-content.md#preview-mode) ，以使用内容中的链接进行导航。
+
+### 结构页面 {#structure-pages}
+
+无法命名页面 `structure`。 命名的页面在页 `structure` 面编辑器中将不可编辑。
 
 ## CSS限制 {#css-limitations}
 
@@ -47,7 +51,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 由于固定背景图像嵌入iframe中，因此在滚动时，固定背景图像可能不显示为固定。
 
-* 在标 **题栏操作中选择** “将页面查看为已发布”可正确显示页面。
+* 在标 **题栏操作中选择视图页面** “已发布”后，将正确显示页面。
 
 ### 100% Height {#height}
 
