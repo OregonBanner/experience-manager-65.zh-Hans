@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -25,11 +25,11 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * 社区成员发布的内容
 
-   * 使用AEM Communities的UGC搜索API
+   * 使用AEM Communities的UGC搜索API。
 
 * 用户和用户组（用户数据）
 
-   * 使用AEM平台搜索功能
+   * 使用AEM平台搜索功能。
 
 文档的本节内容对创建创建或管理UGC的自定义组件的开发人员很有兴趣。
 
@@ -43,11 +43,11 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ## UGC搜索API {#ugc-search-api}
 
-该 [UGC公共存储由多种存储资源提供者](working-with-srp.md) (SRP)之一提供，每个存储资源提供者可能具有不同的本机查询语言。 因此，无论选择何种SRP，自定义代码都应使用 [UGC API包](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)中的方法，该方法将调用适用于所选SRP的查询语言。
+该 [UGC公共存储由多种存储资源提供者](working-with-srp.md) (SRP)之一提供，每个SRP可能具有不同的本机查询语言。 因此，无论选择何种SRP，自定义代码都应使用 [UGC API包](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)中的方法，该方法将调用适用于所选SRP的查询语言。
 
 ### ASRP搜索 {#asrp-searches}
 
-对于 [ASRP](asrp.md),UGC存储在Adobe云中。 虽然UGC在CRX中不可见，但 [仲裁在创作](moderate-ugc.md) 和发布环境中均可用。 使用 [UGC搜索API](#ugc-search-api) 与使用其他SRP一样适用于ASRP。
+对于 [ASRP](asrp.md),UGC存储在Adobe云中。 虽然UGC在CRX中不可见，但 [审核功能](moderate-ugc.md) 从创作和发布环境中均可用。 使用 [UGC搜索API](#ugc-search-api) 与使用其他SRP一样适用于ASRP。
 
 目前不存在用于管理ASRP搜索的工具。
 
@@ -55,13 +55,13 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### MSRP搜索 {#msrp-searches}
 
-对 [于MSRP](msrp.md),UGC存储在配置为使用Solr进行搜索的MongoDB中。 UGC在CRX中不可见，但 [仲裁](moderate-ugc.md) ，在创作和发布环境中均可用。
+对 [于MSRP](msrp.md),UGC存储在配置为使用Solr进行搜索的MongoDB中。 UGC在CRX中不可见，但 [仲裁](moderate-ugc.md) 可从作者和发布环境中获取。
 
 关于MSRP和Solr:
 
-* AEM平台的嵌入式解决程序不用于MSRP
-* 如果将远程Solr用于AEM平台，则可能会与MSRP共享它，但它们应使用不同的集合
-* Solr可配置为标准搜索或多语言搜索(MLS)
+* AEM平台的嵌入式Solr不用于MSRP。
+* 如果将远程Solr用于AEM平台，则可能会与MSRP共享它，但它们应使用不同的集合。
+* Solr可配置为标准搜索或多语言搜索(MLS)。
 * 有关配置详细信息，请参 [阅MSRP的Solr配置](msrp.md#solr-configuration) 。
 
 自定义搜索功能应使 [用UGC搜索API](#ugc-search-api)。
@@ -74,7 +74,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 由于UGC通常在发布环境中输入，对于多发布者生产系统，必须配置发布群集 [](topologies.md)，而不是发布群集，这样输入的内容在所有发布者中都可见。
 
-对于JSRP，在发布环境中输入的UGC在创作环境中永远不可见。 因此，所 [有协调任](moderate-ugc.md) 务都会在发布环境中进行。
+对于JSRP，在发布环境中输入的UGC在创作环境中永远不可见。 因此，所 [有协调任务](moderate-ugc.md) 都会在发布环境中进行。
 
 自定义搜索功能应使 [用UGC搜索API](#ugc-search-api)。
 
@@ -88,10 +88,10 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 Oak Index Manager [](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) ，可从ACS AEM Commons获得。 它提供：
 
-* 现有索引的视图
-* 启动重新索引的能力
+* 现有索引的视图。
+* 启动重新索引的能力。
 
-要查看 [CRXDE Lite中的现有Oak索引](../../help/sites-developing/developing-with-crxde-lite.md)，位置为：
+要视图 [CRXDE Lite中的现有Oak索引](../../help/sites-developing/developing-with-crxde-lite.md)，位置为：
 
 * `/oak:index/socialLucene`
 
@@ -135,14 +135,14 @@ Oak Index Manager [](https://adobe-consulting-services.github.io/acs-aem-commons
 
 ### 自定义属性的命名 {#naming-of-custom-properties}
 
-添加自定义属性时，为了使这些属性对使用 [UGC搜索API创建的排序和搜索可见](#ugc-search-api)，必须添加属性名称的后缀*必需*。
+添加自定义属性时，为了使这些属性对使用 [UGC搜索API创建的排序和搜索可见](#ugc-search-api)，必须 ** 为属性名添加后缀。
 
-后缀是使用架构的查询语言：
+后缀是使用查询的模式语：
 
-* 它将属性标识为可搜索
-* 它标识数据类型
+* 它将属性标识为可搜索。
+* 它标识数据类型。
 
-Solr是使用架构的查询语言的示例。
+Solr是使用查询语的模式语的示例。
 
 | **后缀** | **数据类型** |
 |---|---|
@@ -160,7 +160,7 @@ Solr是使用架构的查询语言的示例。
 * 对于多值类型，请向后缀添加“s”，例如：
 
    * `viewDate_dt`:单日期属性
-   * `viewDates_dts`:dates属性列表
+   * `viewDates_dts`:列表日期属性
 
 ## 筛选器 {#filters}
 
@@ -214,23 +214,23 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 ## 疑难解答 {#troubleshooting}
 
-### Solr查询 {#solr-query}
+### 索尔查询 {#solr-query}
 
-要帮助解决Solr查询问题，请为
+要帮助解决Solr查询的问题，请为
 
-`com.adobe.cq.social.srp.impl.SocialSolrConnector`.
+`com.adobe.cq.social.srp.impl.SocialSolrConnector`。
 
 实际的Solr查询将显示调试日志中编码的URL:
 
-对索尔的查询是： `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
+查询是： `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
 
-参数的值 `q` 是查询。 解码URL编码后，该查询可以传递到Solr Admin query工具以进一步调试。
+参数的值 `q` 是查询。 解码URL编码后，该查询可以传递到Solr Admin查询工具以进一步调试。
 
 ## 相关资源 {#related-resources}
 
-* [社区内容存储](working-with-srp.md) -讨论UGC公用存储的可用SRP选项
-* [存储资源提供者概述](srp.md) -简介和存储库使用概述
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码准则
-* [SocialUtils重构](socialutils.md) -用于替换SocialUtils的SRP的实用程序方法
-* [搜索和搜索结果组件](search.md) -将UGC搜索功能添加到模板
+* [社区内容存储](working-with-srp.md) -讨论UGC公用商店的可用SRP选项。
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [使用SRP](accessing-ugc-with-srp.md) —— 编码准则访问UGC。
+* [SocialUtils重构](socialutils.md) -用于替换SocialUtils的SRP的实用程序方法。
+* [搜索和搜索结果组件](search.md) -将UGC搜索功能添加到模板。
 
