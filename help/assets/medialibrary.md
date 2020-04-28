@@ -3,20 +3,20 @@ title: 比较AEM Assets和AEM Media Library产品
 description: 比较AEM Assets和AEM Media Library产品，了解差异。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 569c552686e6312ecae0d500147a8b65354c303d
+source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
 
 ---
 
 
 # AEM Assets与AEM Media Library {#aem-assets-vs-aem-medialibrary}
 
-Adobe Experience Manager(AEM)资产是AEM平台的一个组成部分。 这一顺畅集成被视为AEM的一个主要优势，它可确保内容管理的一致性以及内容作者的高工作效率。
+Adobe Experience Manager(AEM)资产是AEM平台的一个组成部分。 这一顺畅集成被视为AEM的一个主要优势，可确保内容作者的内容管理一致性和高工作效率。
 
-## Frequently asked questions {#frequently-asked-questions}
+## 常见问题 {#frequently-asked-questions}
 
 ### 什么是AEM资产？ {#what-is-aem-assets}
 
-AEM资产是AEM Platform上的一个应用程序，它允许我们的客户在基于Web的存储库中管理其数字资产（图像、视频、文档和音频剪辑）。 AEM资产包括元数据支持、演绎版、数字资产管理查找器和AEM资产管理UI。
+AEM资产是AEM Platform上的一个应用程序，它允许我们的客户在基于Web的存储库中管理其数字资产(图像、视频、文档和音频剪辑)。 AEM资产包括元数据支持、演绎版、数字资产管理查找器和AEM资产管理UI。
 
 ### 什么是AEM媒体库？ {#what-is-the-aem-media-library}
 
@@ -43,7 +43,7 @@ AEM媒体库是AEM WCM内容存储库中存储图像和其他共享资源的指�
 
 ### 我想在我的网站上使用类别谓词。 我是否需要AEM资产？ {#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
 
-是的，此类别谓词是AEM资产的一部分，并且需要AEM资产许可证。
+是的，类别谓词是AEM资产的一部分，并且需要AEM资产许可证。
 
 ### 我想在导入时自动调整图像大小。 我是否需要AEM资产？ {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
@@ -55,13 +55,13 @@ AEM媒体库是AEM WCM内容存储库中存储图像和其他共享资源的指�
 
 ### 如果我未获得AEM资产的许可，如何阻止我的用户使用AEM资产？ {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
 
-您可以从AEM中删除所有特定于AEM Assets的工作流、组件、分类、选项和AEM Assets管理员。 这样做可以防止用户意外使用您未授权的AEM资产功能。
+您可以从AEM中删除所有特定于AEM资产的工作流、组件、分类、选项和AEM资产管理员。 这样做可以防止用户意外使用您未授权的AEM资产功能。
 
 ### 我要向页面添加图像，并要裁切这些图像和调整其大小。 我是否需要AEM资产？ {#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
 
 在此用例中，无需购买AEM资产，即使使用媒体库也不需要在网站上使用图像，因为智能图像组件允许将图像直接上传到页面。
 
-### AEM资产与媒体库中可用功能的详细列表 {#listoffeatures}
+### 详细列表AEM资产与媒体库中的可用功能 {#listoffeatures}
 
 **AEM Assets**
 
@@ -70,7 +70,7 @@ AEM媒体库是AEM WCM内容存储库中存储图像和其他共享资源的指�
 * Adobe Asset Link（连接到适用于企业的Creative Cloud）
 * AEM 桌面应用程序
 * 处理配置文件
-* InDesign server集成
+* InDesign Server集成
 * 资产模板和目录制作者框架
 * Adobe Photoshop、Illustrator和InDesign链接资源
 * 多语言资产管理
@@ -78,11 +78,11 @@ AEM媒体库是AEM WCM内容存储库中存储图像和其他共享资源的指�
 * 权限管理
 * Camera RAW支持
 * 搜索彩块化管理和配置
-* 预建的DAM工作流程（例如，照片拍摄）
+* 预建的DAM工作流（例如，照片拍摄）
 * 资产报告和分析：资产分析
 * 3D资产管理
 * 连接的资产
-* 品牌门户
+* Brand Portal
 * 自助访问
 * 浏览、搜索和下载
 * 集合和文件夹共享
@@ -99,7 +99,7 @@ AEM媒体库是AEM WCM内容存储库中存储图像和其他共享资源的指�
 * 静态演绎版
 * 项目、任务、工作流创作
 * 活动流（时间轴）
-* Query Builder(API)
-* Marketing cloud集成
+* 查询构建器(API)
+* Marketing Cloud集成
 * UI自定义和扩展
 * 注释和注释
