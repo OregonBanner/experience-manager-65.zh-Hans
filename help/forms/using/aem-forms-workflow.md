@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 14a6e0c5f79ac7acb9f8bd06d3524473f1007485
 
 ---
 
@@ -65,7 +65,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
 [获取文件](assets/example-mortgage-loan-application.zip)
 
-1. 打开“工作流模型”控制台。 默认URL为https://&#39;[server]:[port]&#39;/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models
+1. 打开“工作流模型”控制台。 默认URL为 `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. Select **Create**, then **Create Model**. 此时会出现“添加工作流模型”(Add Workflow Model)对话框。
 1. 输入标 **题** 和 **名称** （可选）。 例如，抵押申请。 点按&#x200B;**完成**。
 1. 选择新创建的工作流模型，然后点按 **编辑**。 现在，您可以添加工作流步骤来构建业务逻辑。 首次创建工作流模型时，它包含：
@@ -75,7 +75,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
 1. 启用电子邮件通知。 您可以在OSGi上配置以表单为中心的工作流，以向用户或被分配者发送电子邮件通知。 执行以下配置以启用电子邮件通知：
 
-   1. 转到位于https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM配置管理器。
+   1. 转到位于的AEM配置管理器 `https://[server]:[port]/system/console/configMgr`。
    1. 打开 **[!UICONTROL Day CQ邮件服务配置]** 。 为 **[!UICONTROL SMTP服务器主机名]**、 **[!UICONTROL SMTP服务器端口和]****[!UICONTROL “]** 发件人”地址字段指定值。 单击&#x200B;**[!UICONTROL 保存]**。
    1. 打开 **[!UICONTROL Day CQ Link Externalizer配置]** 。 在“ **[!UICONTROL 域]** ”字段中，为本地、作者和发布实例指定实际的主机名/IP地址和端口号。 单击&#x200B;**[!UICONTROL 保存]**。
 
@@ -93,7 +93,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
    对于按揭任务应用程序示例，将分配文档步骤配置为使用只读自适应表单并在任务完成后显示PDF。 此外，选择允许批准贷款请求的用户组。 在“操 **作** ”选项卡上，禁用“ **提交** ”选项。 创建String **数据类型的actionTaked** 变量，并将该变量指定为 **Route Variable**。 例如，actionTaked。 此外，添加批准和拒绝路由。 这些路由在AEM收件箱中显示为单独的操作（按钮）。 该工作流会根据用户点击的操作（按钮）选择分支。
 
-   您可以导入示例包，该示例包可在章节的开头下载，以获取为例如按揭任务应用程序配置的分配分配分配步骤的所有字段的完整值集。
+   您可以导入示例包，该示例包可在章节的开头下载，以获得为例按揭任务应用程序配置的分配分配分配步骤的所有字段的完整值集。
 
 1. 将OR拆分组件从步骤浏览器拖放到工作流模型。 “或拆分”(OR Split)在工作流中创建拆分，之后只有一个分支处于活动状态。 通过此步骤，您可以将条件处理路径引入工作流中。 您可以根据需要向每个分支添加工作流步骤。
 
@@ -101,13 +101,13 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 
    使用表达式编辑器为Branch 1和Branch 2创建路由表达式。 这些路由表达式可帮助根据AEM收件箱中的用户操作选择分支。
 
-   **路由第2分支表达式**
+   **路由第1分支表达式**
 
    当用户在AEM收件箱中 **点击** “批准”时，将激活Branch 1。
 
    ![OR拆分示例](assets/orsplit_branch1_active_new.png)
 
-   **路由第2分支表达式**
+   **路由第1分支表达式**
 
    当用户在AEM收件箱 **中点击** “拒绝”时，Branch 2即被激活。
 
@@ -251,7 +251,7 @@ AEM Forms应用程序与AEM Forms服务器同步，允许您对帐户中的表�
 
    | 字段 | 描述 |
    |---|---|
-   | 有效负荷映射器过滤器 | 创建监视文件夹时，它会在crx-repository中创建文件夹结构。 文件夹结构可用作工作流的有效负荷。 您可以编写脚本来映射AEM Workflow以接受监视文件夹结构中的输入。 现成的实施可用，并在“有效负荷映射器过滤器”中列出。 如果您没有自定义实现，请选择默认实现。 |
+   | 有效负荷映射器过滤器 | 创建监视文件夹时，它会在crx-repository中创建文件夹结构。 文件夹结构可用作工作流的有效负荷。 您可以编写脚本来映射AEM Workflow以接受监视文件夹结构中的输入。 开箱即用的实施可在“有效负荷映射器过滤器”中列出。 如果您没有自定义实现，请选择默认实现。 |
 
    高级选项卡包含更多字段。 这些字段中的大多数都包含默认值。 要了解所有字段，请参阅创建或 [配置监视的文件夹文章](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md) 。
 
@@ -265,10 +265,10 @@ AEM Forms应用程序与AEM Forms服务器同步，允许您对帐户中的表�
 
 您可以使用AEM任务的分配工作流和发送电子邮件步骤来发送电子邮件。 执行以下步骤以指定电子邮件服务器和发送电子邮件所需的其他配置：
 
-1. 转到位于https://&#39;[server]:[port]&#39;/system/console/configMgr的AEM配置管理器。
+1. 转到位于的AEM配置管理器 `https://[server]:[port]/system/console/configMgr`。
 1. 打开 **[!UICONTROL Day CQ邮件服务配置]** 。 为 **[!UICONTROL SMTP服务器主机名]**、 **[!UICONTROL SMTP服务器端口和]****[!UICONTROL “]** 发件人”地址字段指定值。 单击&#x200B;**[!UICONTROL 保存]**。
 1. 打开 **[!UICONTROL Day CQ Link Externalizer配置]** 。 在“ **[!UICONTROL 域]** ”字段中，为本地、作者和发布实例指定实际的主机名/IP地址和端口号。 单击&#x200B;**[!UICONTROL 保存]**。
 
 ### 清除工作流实例 {#purge-workflow-instances}
 
-最大程度地减少工作流实例的数量会提高工作流引擎的性能，因此您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参 [阅定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
+最大程度地减少工作流实例的数量会提高工作流引擎的性能，因此您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参 [阅定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular) ，清除工作流实例
