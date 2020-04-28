@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -21,12 +21,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 该框架的优势：
 
-* **功能**:80%的用例无需自定义即可实现集成
-* **可设计外观**:一致地使用HTML属性进行CSS样式
-* **可扩展**:组件实现是面向对象的，并且业务逻辑简单——易于在服务器上添加增量式业务登录
-* **灵活**:轻松覆盖和自定义的简单无逻辑Javascript模板
-* **可访问**:HTTP API支持从任何客户端发布内容，包括移动应用程序
-* **便携**:集成／嵌入任何基于任何技术构建的网页
+* **功能**:80%的用例只需进行少量或无自定义，即可轻松实现集成。
+* **可设计外观**:一致地使用HTML属性进行CSS样式设置。
+* **可扩展**:组件实现是面向对象的，并且业务逻辑简单——易于在服务器上添加增量式业务登录。
+* **灵活**:轻松覆盖和自定义的简单无逻辑Javascript模板。
+* **可访问**:HTTP API支持从任何客户端发布内容，包括移动应用程序。
+* **便携**:集成／嵌入任何基于任何技术构建的网页。
 
 使用交互式社区组件指南浏览创作或发 [布实例](components-guide.md)。
 
@@ -34,11 +34,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在SCF中，组件由SocialComponent POJO、Handlebars JS模板（用于渲染组件）和CSS（用于设计组件样式）组成。
 
-Handlebars JS模板可扩展模型／视图JS组件，以处理用户与客户端组件的交互。
+Handlebars JS模板可扩展模型/视图JS组件，以处理用户与客户端组件的交互。
 
 如果某个组件需要支持修改数据，则可以编写SocialComponent API的实现以支持编辑／保存与传统Web应用程序中的模型／数据对象相似的数据。 此外，可以添加操作（控制器）和操作服务以处理操作请求，执行业务逻辑，以及调用模型／数据对象上的API。
 
-SocialComponent API可以扩展，以提供客户端为视图层或HTTP客户端所需的数据。
+SocialComponent API可以扩展以提供客户端对视图层或HTTP客户端所需的数据。
 
 ### 如何为客户呈现页面 {#how-pages-are-rendered-for-client}
 
@@ -48,20 +48,20 @@ SocialComponent API可以扩展，以提供客户端为视图层或HTTP客户端
 
 要自定义或扩展组件，您只需将叠加和扩展写入/apps目录，这样可简化升级到未来版本的过程。
 
-* 对于外观
-   * 只有 [CSS需要编辑](client-customize.md#skinning-css)
-* 外观
-   * 更改JS模板和CSS
-* 外观和UX
-   * 更改JS模板、CSS和扩 [展／覆盖Javascript](client-customize.md#extending-javascript)
-* 修改JS模板或GET端点的可用信息
-   * 扩展 [SocialComponent](server-customize.md#socialcomponent-interface)
-* 在操作过程中添加自定义处理
-   * 编写 [OperationExtension](server-customize.md#operationextension-class)
-* 添加新的自定义操作
-   * 创建新的 [Sling Post操作](server-customize.md#postoperation-class)
-   * 根据需要 [使用现有](server-customize.md#operationservice-class) OperationServices
-   * 根据需要添加Javascript代码以从客户端调用您的操作
+* 对于外观：
+   * 只有 [CSS需要编辑](client-customize.md#skinning-css)。
+* 外观：
+   * 更改JS模板和CSS。
+* 对于外观、感觉和UX:
+   * 更改JS模板、CSS和扩 [展／覆盖Javascript](client-customize.md#extending-javascript)。
+* 要修改JS模板或GET端点的可用信息，请执行以下操作：
+   * 扩展 [SocialComponent](server-customize.md#socialcomponent-interface)。
+* 要在操作过程中添加自定义处理，请执行以下操作：
+   * 编写一 [个OperationExtension](server-customize.md#operationextension-class)。
+* 添加新的自定义操作：
+   * 创建新的 [Sling Post操作](server-customize.md#postoperation-class)。
+   * 根据需 [要使用现有](server-customize.md#operationservice-class) OperationServices。
+   * 根据需要，添加Javascript代码以从客户端调用您的操作。
 
 ## 服务器端框架 {#server-side-framework}
 
@@ -73,7 +73,7 @@ Java API提供易于继承或子类的抽象类和接口。
 
 主类在服务器端自定 [义页面上有介绍](server-customize.md) 。
 
-访 [问存储资源提供商概述](srp.md) ，了解如何使用UGC。
+访问 [存储资源提供商概述](srp.md) ，了解如何使用UGC。
 
 ### HTTP API {#http-api}
 
@@ -83,11 +83,11 @@ HTTP API支持PhoneGap应用程序、本机应用程序以及其他集成和混�
 
 对于每个SocialComponent，该框架都提供一个基于HTTP的API端点。 通过向资源发送GET请求并使用“.social.json”选择器+扩展名来访问端点。 使用Sling，请求将递交给 `DefaultSocialGetServlet`。
 
-The `DefaultSocialGetServlet`
+**`DefaultSocialGetServlet`**
 
-1. 将资源(resourceType)传递到 `SocialComponentFactoryManager`并接收能够选择表示资源 `SocialComponent`的SocialComponentFactory。
+1. 将资源(resourceType)传递给 `SocialComponentFactoryManager` 并接收能够选择表示资源的 `SocialComponent` SocialComponentFactory。
 
-1. 调用工厂并接收能 `SocialComponent`够处理资源和请求的设备。
+1. 调用工厂并接收能 `SocialComponent` 够处理资源和请求的设备。
 1. 调用 `SocialComponent`该函数，它处理请求并返回结果的JSON表示形式。
 1. 将JSON响应返回给客户端。
 
@@ -109,13 +109,13 @@ The `DefaultSocialGetServlet`
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-### 存储资源提供者(SRP) {#storage-resource-provider-srp}
+### 存储资源提供商(SRP) {#storage-resource-provider-srp}
 
-要了解如何处理存储在社区内容存储 [中的UGC](working-with-srp.md)，请参阅
+要了解如何处理存储在社区内容 [存储中的UGC](working-with-srp.md)，请参阅：
 
-* [存储资源提供者概述](srp.md) -简介和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码准则
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP API实用程序方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) —— 编码准则访问UGC。
 
 ### 服务器端自定义 {#server-side-customizations}
 
@@ -181,17 +181,18 @@ Handlebars(HBS)模板文件(.hbs)与。jsp和。html模板文件类似，不同�
 >
 >要将组件动态添加到页面，而不是在模板中添加组件或将其包含在模板中，请参阅 [组件侧传](sideloading.md)。
 
+
 ### Handlebars Helpers {#handlebars-helpers}
 
-请参 [阅SCF Handlebars Helpers](handlebars-helpers.md) ，获取SCF中提供的定制帮助器的列表和说明。
+请参 [阅SCF Handlebars Helpers](handlebars-helpers.md) ，了解SCF中可用的定制帮助器的列表和说明。
 
 ## 客户端框架 {#client-side-framework}
 
-### 模型——查看Javascript框架 {#model-view-javascript-framework}
+### 模型视图Javascript框架 {#model-view-javascript-framework}
 
-该框架包括 [Backbone.js的扩展](https://www.backbonejs.org/)（模型视图JavaScript框架），以便于开发丰富的交互式组件。 面向对象的性质支持可扩展／可重用的框架。 通过HTTP API简化了客户端与服务器之间的通信。
+该框架包括 [Backbone.js的扩展](https://www.backbonejs.org/)，这是一个模型视图的JavaScript框架，用于促进丰富的交互式组件的开发。 面向对象的性质支持可扩展／可重用的框架。 通过HTTP API简化了客户端与服务器之间的通信。
 
-该框架利用服务器端的Handlebars模板为客户端渲染组件。 这些模型基于HTTP API生成的JSON响应。 视图将自己绑定到由Handlebars模板生成的HTML并提供交互性。
+该框架利用服务器端的Handlebars模板为客户端渲染组件。 这些模型基于HTTP API生成的JSON响应。 这些视图将自己绑定到由Handlebars模板生成的HTML并提供交互性。
 
 ### CSS惯例 {#css-conventions}
 
@@ -199,7 +200,7 @@ Handlebars(HBS)模板文件(.hbs)与。jsp和。html模板文件类似，不同�
 
 * 使用名称清晰的CSS类选择器名称并避免使用“标题”、“图像”等通用名称。
 * 定义特定类选择器样式，使CSS样式表能与页面上的其他元素和样式很好地配合使用。 例如：`.social-forum .topic-list .li { color: blue; }`
-* 使用JavaScript驱动的UX的样式设计CSS类与CSS类分开
+* 使用JavaScript驱动的UX的样式设计CSS类与CSS类分开。
 
 ### 客户端自定义 {#client-side-customizations}
 
@@ -220,5 +221,5 @@ Handlebars(HBS)模板文件(.hbs)与。jsp和。html模板文件类似，不同�
 
 ## 疑难解答 {#troubleshooting}
 
-疑难解答部分介绍了常见问题和已知 [问题](troubleshooting.md) 。
+疑难解答部分介绍了常见问题和已 [知问题](troubleshooting.md) 。
 
