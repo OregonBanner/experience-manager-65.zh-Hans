@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 68cd1c13fff94ac485865e50bc955548cd285b14
 
 ---
 
@@ -61,11 +61,22 @@ Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用
 
 >[!NOTE]
 >
->“HTML到PDF”功能要求系统字体目录中的某些字体。 在Linux、Solaris和AIX系统上，系统字体目录必须包含Courier字体。 在Windows系统上，系统字体目录必须包含Times New Roman。
+>* “HTML到PDF”功能要求系统字体目录中的某些字体。 在Linux、Solaris和AIX系统上，系统字体目录必须包含Courier字体。 在Windows系统上，系统字体目录必须包含Times New Roman。
+   >
+   > 
+* 以下是Linux上AEM Forms中的默认日文字体。 至少应有超过一种字体可用于在>系统中转换日文字体。
+   >
+   >   
+   * &quot;Sazanami Gothic&quot;
+   >   * &quot;Kozuka Gothic Pro-VI&quot;
+   >   * &quot;Kozuka Mincho Pro-VI&quot;
+   >   * &quot;Sazanami Gothic&quot;
+   >   * 《Kozuka Mincho Pr6N》
+   >   * 《萨扎纳米之丘》
+   >   * “Adobe Heiti Std”
+   >   * “Adobe Song Std”
+>* 要从本地文件系统上传文件，请使用HTML到PDF页面上的“上传文件”选项。
 
->[!NOTE]
->
->要从本地文件系统上传文件，请使用HTML到PDF页面上的“上传文件”选项。
 
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“HTML到PDF”。
 1. 通过执行以下任一任务，指定要转换的文件：
