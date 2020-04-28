@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -19,13 +19,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 搜索功能可与各种其他功能（如论坛）配合使用，以提供搜索内容的功能。
 
-添加搜索社区成员输入的帖子(称为用户生成的内容(UGC))的功能时，有两个组件： [ 以 `Search`](#search) 及 [`Search Results`](#search-results)。
+添加搜索社区成员输入的帖子(称为用户生成的内容(UGC))的功能时，有两个组件：搜索 [和](#search) 搜索结果 [](#search-results)。
 
 包含该组件的页 `Search Results` 面支持搜索和结果显示。
 
-包含该组件的页 `Search`面提供了启动搜索的位置，搜索结果显示在页 `Search Results` 面上。
+包含组件的页面 `Search` 提供了启动搜索的位置，搜索结果显示在页 `Search Results` 面上。
 
-该搜索功能可以与允许站点访问者和成员查看内容的任何其他功能一起使用。
+该搜索功能可以与允许站点访客和成员视图内容的任何其他功能一起使用。
 
 ## 搜索 {#search-features}
 
@@ -79,13 +79,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-377](assets/chlimage_1-377.png)
 
-在“搜 **[!UICONTROL 索结果设置]** ”选项卡下，可以指定访客输入查询时搜索中包含的路径。
+在“搜 **[!UICONTROL 索结果设置]** ”选项卡下，可以指定当访客输入了查询时，搜索中包含的路径。
 
 ![chlimage_1-378](assets/chlimage_1-378.png)
 
-* **[!UICONTROL 每页搜索结果]**&#x200B;定义每页显示的主题／帖子数。 默认值为10。
+* **[!UICONTROL 每页的搜索结果数]**
 
-* **[!UICONTROL 搜索路径]**&#x200B;通过使用“添加项目”按钮添加搜索路径，内容搜索受到限制。
+   定义每页显示的主题／帖子数。 默认值为10。
+
+* **[!UICONTROL 搜索路径]**
+
+   通过使用“添加项目”按钮添加搜索路径，内容搜索受到限制。
 
 ## 附加信息 {#additional-information}
 
