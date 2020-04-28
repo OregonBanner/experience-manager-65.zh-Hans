@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
+source-git-commit: 6d425dcec4fab19243be9acb41c25b531a84ea74
 
 ---
 
@@ -20,13 +20,16 @@ source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 要设置网站，以下说明将说明要在以下位置创建的文件夹：
 
 * `/apps/an-scf-sandbox`
-这是自定义应用程序和模板所在的位置
+
+   这是自定义应用程序和模板所在的位置。
 
 * `/etc/designs/an-scf-sandbox`
-这是可下载的设计元素所在的位置
+
+   这是可下载的设计元素所在的位置。
 
 * `/content/an-scf-sandbox`
-这是可下载网页所在的位置
+
+   这是可下载网页所在的位置。
 
 本教程中的代码将依赖于应用程序、设计和内容的主文件夹名称相同。 如果您为网站选择了其他名称，则始终用您 `an-scf-sandbox` 选择的名称替换。
 
@@ -34,12 +37,13 @@ source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 >
 >关于名称：
 >
->* 在CRXDE中看到的名称是构成可寻址内容路径的节点名称
->* 节点名称可能包含空格，但在URI中使用时，必须将空格编码为“%20”或“+”
+>* 在CRXDE中看到的名称是节点名称，它们构成可寻址内容的路径。
+>* 节点名称可能包含空格，但在URI中使用时，必须将空格编码为“%20”或“+”。
 >* 节点名称可能包含连字符和下划线，但是当在Java文件中作为包名称引用时，必须对它们进行编码。 连字符和下划线都以下划线转义，后跟它们的Unicode值：
->
->   * 连字符变为&#39;_002d&#39;
->   * 下划线变为&#39;_005f&#39;
+   >
+   >   
+   * 连字符变为&#39;_002d&#39;
+   >   * 下划线变为&#39;_005f&#39;
 
 
 ## 设置应用程序目录(/apps) {#setup-the-application-directory-apps}
@@ -52,27 +56,27 @@ source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 
    使用 **[!UICONTROL CRXDE Lite]**，在资源管理器窗格中
 
-   1. 选择文件 `/apps` 夹
-   1. **[!UICONTROL 右键单击]**&#x200B;创建&#x200B;**[!UICONTROL ...或下拉“创]**&#x200B;建……”菜单
-   1. **[!UICONTROL 选择]**&#x200B;创建文件夹…….
-   1. 在“创建 **[!UICONTROL 文件夹]** ”对话框中，输入 `an-scf-sandbox`
-   1. Click **[!UICONTROL OK]**
+   1. 选择文 `/apps` 件夹。
+   1. 右键单击 **[!UICONTROL 创建]**...或下拉“创 **[!UICONTROL 建……”]** 菜单。
+   1. 选择 **[!UICONTROL 创建文件夹……]**.
+   1. 在“创 **[!UICONTROL 建文件夹]** ”对话框中，输入 `an-scf-sandbox`。
+   1. 单击&#x200B;**[!UICONTROL 确定]**。
 
 1. 创建 **[!UICONTROL 组件]** 子文件夹。
 
-   1. 选择文件 `/apps/an-scf-sandbox` 夹
-   1. 单击“ **[!UICONTROL 创建”>“创建文件夹”]**
-   1. 在创建文 **[!UICONTROL 件夹对话框]** ，输入组 **[!UICONTROL 件]**
-   1. Click **[!UICONTROL OK]**
+   1. 选择文 `/apps/an-scf-sandbox` 件夹。
+   1. 单击“ **[!UICONTROL 创建”>“创建文件夹]**”。
+   1. 在创建文 **[!UICONTROL 件夹对话框]** ，输入 **[!UICONTROL 组件]**。
+   1. 单击&#x200B;**[!UICONTROL 确定]**。
 
-1. 创建 **模板&#x200B;**子文件夹。
+1. 创建 **[!UICONTROL 模板]** 子文件夹。
 
-   1. 选择文件 `/apps/an-scf-sandbox` 夹
-   1. 单击“ **[!UICONTROL 创建”>“创建文件夹”]**
-   1. 在“创建 **[!UICONTROL 文件夹]** ”对话框中，输 **[!UICONTROL 入模板]**
-   1. Click **[!UICONTROL OK]**
-   1. 重新选择 `/apps/an-scf-sandbox`
-   1. 选择 **[!UICONTROL 全部保存]**
+   1. 选择文 `/apps/an-scf-sandbox` 件夹。
+   1. 单击“ **[!UICONTROL 创建”>“创建文件夹]**”。
+   1. 在“创建 **[!UICONTROL 文件夹]** ”对话框中，输 **[!UICONTROL 入模板]**。
+   1. 单击&#x200B;**[!UICONTROL 确定]**。
+   1. 重新选择 `/apps/an-scf-sandbox`。
+   1. 选择 **[!UICONTROL 全部保存]**。
    与任何编辑过程一样，经常进行保存。 如果您在输入数据时遇到问题，可能是因为登录超时，或者您需要保存以前所做的编辑。
 
 1. CRXDE Lite的资源管理器窗格中的结构现在应类似于：
@@ -85,16 +89,16 @@ source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 
 1. 要在经典UI中使用设计器工具，请浏 [览至https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin)。
 
-   注意：如果使用CRXDE lite创建类型为“节点”的节点， `cq:Page`则“访问控制”和“复制”不会设置为页面的默认设置。
+   注意：如果使用CRXDE Lite创建类型为“节点”的 `cq:Page`访问控制和复制不会设置为页面的默认设置。
 
-1. 在资源管理器窗格中，选择“ **[!UICONTROL Designs]** ”文件夹，然后单 **[!UICONTROL 击“New”（新建）> “New Page]**”（新建页面）。
+1. 在资源管理器窗格中，选择 **[!UICONTROL Designs]** 文件夹，然后单击 **[!UICONTROL New]** > **[!UICONTROL New Page]**。
 
    输入：
 
-   * 标题：SCF **沙箱**
-   * 名称： **an-scf沙箱**
-   * 选择 **设计页面模板**
-   Click **[!UICONTROL Create]**
+   * 标题：SCF **[!UICONTROL 沙箱]**
+   * 名称： **[!UICONTROL an-scf沙箱]**
+   * 选择 **[!UICONTROL 设计页面模板]**
+   单击&#x200B;**[!UICONTROL 创建]**。
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -102,7 +106,7 @@ source-git-commit: 4f4f2897000a0afe26a0dbcc4514e20befdb4114
 
 1. 返回CRXDE Lite(http:// localhost:4502/crx/de)并展开/etc/designs以查看名为“an-scf-sandbox”的节点。
 
-   在CRXDE的右侧下方窗格中，您可以查看“属性”选项卡、“访问控制”选项卡和“复制”选项卡，以查看使用“设计页面模板”定义的内容。
+   在CRXDE的右下窗格中，您可以视图“属性”选项卡、“访问控制”选项卡和“复制”选项卡，以查看使用“设计页面模板”定义的内容。
 
    ![chlimage_1-46](assets/chlimage_1-46.png)
 
