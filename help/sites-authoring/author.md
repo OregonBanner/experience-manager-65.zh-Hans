@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
+source-git-commit: b9cc4df476ab95707284c4255f9cf35f257a1258
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 44eb94b917fe88b7c90c29ec7da553e15be391db
 
 AEM 提供了两种环境：
 
-* 创作
+* 作者
 * 发布
 
 通过这些交互可以将内容放到您的网站上，以便您的访客可以阅读该内容。
@@ -38,13 +38,11 @@ AEM 提供了两种环境：
 
 >[!NOTE]
 >
->AEM 本身被用于创作 AEM 文档。
->
->还可以与调度程序一起用于发布。
+>AEM和调度程序用于发布此AEM文档。
 
 ### 创作环境 {#author-environment}
 
-The author works in what is known as the **author environment**. This provides an easy to use interface (graphical user interface (GUI or UI)) for creating the content. It is usually located behind a company&#39;s firewall that provides full protection and requires the author to login, using an account that has been assigned the appropriate access rights.
+作者在称为&#x200B;**创作环境**&#x200B;的环境中工作。这为创建内容提供了易于使用的界面（图形用户界面（GUI 或 UI））。它通常位于公司防火墙之后，防火墙能够提供全方位保护，并且要求作者使用分配了相应访问权限的帐户登录。
 
 >[!NOTE]
 >
@@ -72,30 +70,30 @@ The author works in what is known as the **author environment**. This provides a
 
 #### 发布环境 {#publish-environment}
 
-When ready, the AEM site&#39;s content is published to the **publish environment**. 此处，根据设计界面的外观和风格，网站页面可供目标受众使用。
+When ready, the AEM site&#39;s content is published to the **publish environment**. 在该环境中，根据设计界面的具体观感，目标受众可以使用网站页面。
 
 通常，发布环境位于内网与外网的“隔离区”中；换句话说，可用于 Internet，但不再处于内部网络的完全保护之下。
 
-如果 AEM 站点是一个[社区站点](/help/communities/overview.md)或包含[社区组件](/help/communities/author-communities.md)，则已登录的网站访客（成员）可以与社区功能交互。例如，他们可以发布到论坛、发布评论或关注其他成员。 可授予会员执行通常仅限于创作环境的活动的权限，例如创建新页面（社区组）、博客文章和审核其他会员的帖子。
+如果 AEM 站点是一个[社区站点](/help/communities/overview.md)或包含[社区组件](/help/communities/author-communities.md)，则已登录的网站访客（成员）可以与社区功能交互。例如，他们可以发布到论坛、发布评论或关注其他成员。 可授予会员执行通常仅限于作者环境的活动的权限，例如创建新页面（社区组）、博客文章和审核其他会员的帖子。
 
 >[!NOTE]
 >
 >很遗憾，使用的术语有时存在重叠。以下术语可能存在这种情况：
 >
 >* **发布/取消发布**
-   >  这些是使内容在发布环境中公开可用（或不公开）的主要操作条款。
+   >  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
    >
    >
 * **激活／取消激活**
-   >  这些术语与发布／取消发布同义。
+   >  这两个术语与发布/取消发布同义。
    >
    >
 * **复制**
-   >  这些是用于指示数据（例如，页面内容、文件、代码、用户评论）从一个环境移动到另一个环境的技术术语；例如，在发布或反向复制用户注释时。
+   >  这些是用于指示数据（例如，页面内容、文件、代码、用户评论）从一个环境到另一个的移动的技术术语；例如，在发布或反向复制用户注释时。
 >
 
 
 
 #### Dispatcher {#dispatcher}
 
-To optimize performance for visitors to your website, the **[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)**implements load balancing and caching.
+为优化网站访问性能，**[调度程序](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)实施了负载平衡和缓存。**
