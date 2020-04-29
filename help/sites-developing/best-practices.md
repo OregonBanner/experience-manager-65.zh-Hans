@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: e562939f1c64d8345b4c2a28e4b882200d9e4c07
 
 ---
 
@@ -30,12 +30,13 @@ Adobe工程和咨询团队为AEM开发人员开发了一整套最佳做法。 Ad
 * [代码缺陷](/help/sites-developing/code-pitfalls.md)
 * [JCR交互](/help/sites-developing/jcr-integration.md)
 * [OSGi捆绑套件](/help/sites-developing/osgi-bundles.md)
+* [Java API最佳实践](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### 其他最佳实践信息 {#additional-best-practices-information}
 
 以下区域提供了专门用于制定最佳实践的文档：
 
-* [Sites](#sites)
+* [站点](#sites)
 * [社区](/help/sites-developing/best-practices.md#communities)
 * [工具/HTL](/help/sites-developing/best-practices.md#tooling-htl)
 
@@ -61,7 +62,7 @@ Adobe工程和咨询团队为AEM开发人员开发了一整套最佳做法。 Ad
   <tr>
    <td>触屏优化UI:自定义控制台 </td>
    <td><a href="/help/sites-developing/customizing-consoles-touch.md">自定义触屏优化UI控制台</a></td>
-   <td>本文档介绍了扩展触屏优化UI控制台的最佳方式。</td>
+   <td>此文档描述了扩展触屏优化UI控制台的最佳方式。</td>
   </tr>
   <tr>
    <td>触屏优化UI:自定义页面创作</td>
@@ -71,7 +72,7 @@ Adobe工程和咨询团队为AEM开发人员开发了一整套最佳做法。 Ad
   <tr>
    <td>工作流</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">开发和扩展工作流</a></td>
-   <td><p>工作流使您能够自动执行Adobe Experience Manager(AEM)活动，并可以代表在AEM环境中发生的大量处理，因此强烈建议仔细计划您的工作流实施。</p> </td>
+   <td><p>工作流使您能够自动化Adobe Experience Manager(AEM)活动，并可以代表AEM环境中发生的大量处理，因此强烈建议仔细计划您的工作流实施。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -93,11 +94,11 @@ HTML模板语言(HTL)是AEM 6.0中引入的一个新的HTML模板系统。它取
 
 |  |  |  |
 |---|---|---|
-| HTL概述 | [HTL概述和语法](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) | 本文档描述什么是HTL，如何移到HTL，示例项目、语法、表达式和语句 |
+| HTL概述 | [HTL概述和语法](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) | 本文档介绍HTL是什么，如何移到HTL，示例项目、语法、表达式和语句 |
 | 在Java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API使HTL文件能够访问自定义Java类中的帮助程序方法。 |
 
 >[!NOTE]
 >
 >下面的多部分教程可能是设置新AEM项目的最佳实践（详细介绍核心组件、可编辑模板、客户端库和组件开发）的最佳方法：
->[AEM Sites入门- WKND教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[Getting Started with AEM Sites - WKND Tutorial](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
