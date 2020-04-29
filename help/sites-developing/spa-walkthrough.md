@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+source-git-commit: 3d9bcc706a1fa7a15d0ce8729f7b85c4226b394f
 
 ---
 
 
 # SPA简介和演练{#spa-introduction-and-walkthrough}
 
-单页应用程序(SPA)可以为网站用户提供引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，而作者希望在AEM中为使用此框架构建的站点无缝编辑内容。
+单页应用程序(SPA)可以为网站用户优惠引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，而作者希望在AEM中为使用此框架构建的站点无缝编辑内容。
 
-SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本文将逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与基础AEM SPA editor的关系。
+SPA Editor优惠了一个全面的解决方案，用于在AEM中支持SPA。 本文将逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与基础AEM SPA Editor的关系。
 
 >[!NOTE]
 >
@@ -34,11 +34,11 @@ SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本文将逐�
 
 此介绍和演练的目标是向AEM开发人员演示SPA的相关性、它们的一般工作方式、AEM SPA编辑器如何处理SPA以及它与标准AEM应用程序有何不同。
 
-该演练基于标准AEM功能和示例We.Retail Journal应用程序。 必须满足以下要求：
+该演练基于标准AEM功能和示例We.Retail日志应用程序。 必须满足以下要求：
 
 * [AEM 6.4版（带有Service Pack 2或更高版本）
    ](/help/release-notes/sp-release-notes.md)
-* [安装GitHub上提供的We.Retail Journal范例应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+* [在此处安装GitHub上提供的示例We.Retail日志应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 ### 什么是SPA? {#what-is-a-spa}
 
@@ -50,18 +50,18 @@ AEM SPA Editor允许前端开发人员创建可集成到AEM站点中的SPA，使
 
 ### 为什么选择SPA? {#why-a-spa}
 
-SPA更快、更流畅，更像本机应用程序，因此它不仅对网页的访问者具有吸引力，而且对于营销人员和开发人员也具有吸引力，因为SPA的工作方式。
+SPA更快、更流畅，更像本机应用程序，因此它不仅对网页的访客非常有吸引力，而且对于营销人员和开发人员也非常有吸引力，因为SPA的工作方式。
 
 ![screen_shot_2018-08-20at135550](assets/screen_shot_2018-08-20at135550.png)
 
 **访客数**
 
-* 访客在与内容交互时需要类似于原生的体验。
+* 访客希望在与内容交互时获得类似于本机的体验。
 * 有明确的数据显示，页面越快，转化的可能性就越大。
 
 **营销人员**
 
-* 营销人员希望提供类似于原生的丰富体验，以吸引访客充分参与内容。
+* 营销人员希望优惠丰富的类似本机的体验，以吸引访客充分参与内容。
 * 个性化可让这些体验更加引人注目。
 
 **开发人员**
@@ -73,13 +73,13 @@ SPA更快、更流畅，更像本机应用程序，因此它不仅对网页的�
 
 SPA的主要思想是减少对服务器的调用和依赖，以最小化由服务器调用引起的延迟，从而使SPA接近本机应用程序的响应性。
 
-在传统的连续网页中，只加载立即页面所需的数据。 这意味着当访客移动到其他页面时，将调用服务器获取其他资源。 当访客与页面上的元素交互时，可能需要进行其他调用。 由于页面必须跟上访客的请求，因此这些多次调用可能会产生延迟或延迟的感觉。
+在传统的连续网页中，只加载立即页面所需的数据。 这意味着当访客移动到其他页面时，将调用服务器获取其他资源。 当访客与页面上的元素交互时，可能需要进行其他调用。 由于页面必须跟上访客的请求，这些多次调用可能会产生延迟或延迟的感觉。
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
-为了获得更流畅的体验，即访问者期望从移动本机应用程序获得的体验，SPA会在第一次加载时为访客加载所有必需的数据。 尽管这一过程一开始可能需要稍长一些时间，但随后它就不再需要额外的服务器调用。
+为了获得更流畅的体验，SPA将在第一次加载时加载访客所需的所有必要数据，从而接近访客从移动本机应用程序中期望的体验。 尽管这一过程一开始可能需要稍长一些时间，但随后它就不再需要额外的服务器调用。
 
-通过在客户端进行渲染，页面元素的反应更快，访客与页面的交互也会立即生效。 可能需要的任何其他数据都将异步调用以最大化页面速度。
+通过在客户端进行渲染，页面元素的反应会更快，并且访客与页面的交互会立即生效。 可能需要的任何其他数据都将异步调用以最大化页面速度。
 
 >[!NOTE]
 >
@@ -93,15 +93,15 @@ SPA的主要思想是减少对服务器的调用和依赖，以最小化由服�
 
 >[!NOTE]
 >
->该演练基于标准AEM功能和示例We.Retail Journal应用程序。 必须满足以下要求：
+>该演练基于标准AEM功能和示例We.Retail日志应用程序。 必须满足以下要求：
 >
 >* [AEM 6.4版（带Service Pack 2）](/help/release-notes/sp-release-notes.md)
->* [安装GitHub上提供的We.Retail Journal范例应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+>* [在此处安装GitHub上提供的示例We.Retail日志应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 >
 
 
 
-1. 在AEM中编辑We.Retail Journal应用程序。
+1. 在AEM中编辑We.Retail日志应用程序。
 
    `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
 
@@ -114,6 +114,9 @@ SPA的主要思想是减少对服务器的调用和依赖，以最小化由服�
 1. 在AEM中按正常方式编辑内容，并注意更改会持续保留。
 
    ![screen_shot_2018-06-07at143419](assets/screen_shot_2018-06-07at143419.png)
+
+   >[!NOTE]
+   >有关就 [地文本编辑器和SPA的更多信息](spa-overview.md#requirements-limitations) ，请参阅SPA编辑器概述。
 
 1. 使用资产浏览器将新图像拖放到图像组件中。
 
@@ -137,7 +140,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最小化由服�
 
 ### 使用SPA应用程序 {#using-an-spa-application}
 
-1. 在发布服务器上或使用页面编辑器中的“页面信息”菜单中的“查看为已发布 ******** ”选项加载We.Retail Journal应用程序。
+1. 在发布服务器上或使用页面编辑器中的“页面信息”菜单中的“已发布 **视图”选项** ，加 **** 载We.Retail日志应用程序。
 
    `/content/we-retail-journal/react.html`
 
@@ -163,13 +166,13 @@ SPA的主要思想是减少对服务器的调用和依赖，以最小化由服�
 
 ### 加载SPA应用程序 {#loading-an-spa-application}
 
-1. 如果尚未加载，请在发布服务器上或使用页面编辑器中的“页面信息”菜单中的“查看为已发布 ******** ”选项加载We.Retail Journal应用程序。
+1. 如果尚未加载，请在发布服务器上加载We.Retail日志应用程序，或从页面编辑器的“页面信息”菜单中使用“ **视图为已发** 布”选项 **** 。
 
    `/content/we-retail-journal/react.html`
 
    ![screen_shot_2018-06-07at144736](assets/screen_shot_2018-06-07at144736.png)
 
-1. 使用浏览器的内置工具查看页面源。
+1. 使用浏览器的内置工具视图页面源。
 1. 请注意，源的内容非常有限。
 
    ```
@@ -216,21 +219,21 @@ SPA的主要思想是减少对服务器的调用和依赖，以最小化由服�
 
    ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
 
-   AEM SPA editor利用 [AEM Content Services](/help/assets/content-fragments.md) ，以JSON模型的形式提供页面的整个内容。
+   AEM SPA Editor利用 [AEM Content Services](/help/assets/content-fragments.md) ，以JSON模型的形式提供页面的整个内容。
 
-   通过实施特定界面，Sling Models为SPA提供必要的信息。 JSON数据的交付将向下委派给每个组件（从页面、段落到组件等）。
+   通过实施特定界面，Sling Models为SPA提供必要的信息。 JSON数据的投放会向下委派给每个组件（从页面、段落、组件等）。
 
    每个组件都选择它公开的内容以及呈现方式（服务器端使用HTL，客户端使用React）。 当然，本文侧重于使用React进行客户端渲染。
 
 1. 该模型还可以将页面组合在一起，以便同步加载页面，从而减少所需的页面重新加载次数。
 
-   在We.Retail Journal的示例中，页面和页 `home`面会同 `blog`步加 `aboutus` 载，因为访客通常访问所有这些页面。 但是， `weather` 页面是异步加载的，因为访客不太可能访问它。
+   在We.Retail日志的示例中，将同 `home`步加载 `blog`、 `aboutus` 和页面，因为访客通常访问所有这些页面。 但是， `weather` 页面是异步加载的，因为访客不太可能访问它。
 
    此行为不是强制的，并且完全可定义。
 
    ![screen_shot_2018-06-07at153945](assets/screen_shot_2018-06-07at153945.png)
 
-1. 要查看行为上的差异，请重新加载页面并清除检查器的网络活动。 导航到博客以及页面菜单中关于我们的页面，并查看没有报告网络活动。
+1. 要视图此行为差异，请重新加载页面并清除检查器的网络活动。 导航到博客以及页面菜单中关于我们的页面，并查看未报告网络活动。
 
    导航到天气页面，看看该页面 `weather.model.json` 是异步调用的。
 
@@ -238,17 +241,17 @@ SPA的主要思想是减少对服务器的调用和依赖，以最小化由服�
 
 ### 与SPA编辑器交互 {#interaction-with-the-spa-editor}
 
-使用We.Retail Journal应用程序示例，可以清楚地了解应用程序的行为和在发布时加载的方式，从而利用内容服务交付JSON内容以及异步加载资源。
+使用We.Retail日志应用程序示例，可以清楚地了解应用程序的行为和在发布时加载的方式，从而利用内容服务进行JSON内容投放以及异步加载资源。
 
 此外，对于内容作者，使用SPA编辑器创建内容在AEM中是无缝的。
 
 在以下部分中，我们将探索一份合同，该合同允许SPA编辑器将SPA中的组件与AEM组件关联，并实现无缝编辑体验。
 
-1. 在编辑器中加载We.Retail Journal应用程序并切换到“预 **览** ”模式。
+1. 在编辑器中加载We.Retail日志应用程序并切换到 **预览模式** 。
 
    `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
 
-1. 使用浏览器的内置开发人员工具检查页面内容。 使用选择工具，在页面上选择一个可编辑的组件并查看元素详细信息。
+1. 使用浏览器的内置开发人员工具检查页面内容。 使用选择工具，在页面上选择一个可编辑的组件，然后视图元素详细信息。
 
    请注意，该组件具有新的数据属性 `data-cq-data-path`。
 
