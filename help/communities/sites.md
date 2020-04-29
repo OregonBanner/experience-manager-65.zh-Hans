@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -23,9 +23,10 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >用于创建社区站点的控 [制台](sites-console.md)、社区站点 [模板](sites.md)、社区组模板 [](tools-groups.md)[](functions.md) 和社区功能的控制台仅在创作环境中使用。
 
+
 ## 站点模板控制台 {#site-templates-console}
 
-在创作环境中，要访问社区站点控制台
+在创作环境中，要访问社区站点控制台，请执行以下操作：
 
 * 从全局导航：“工 **[!UICONTROL 具”>“社区”>“站点模板”]**
 
@@ -45,11 +46,17 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在“基本信息”面板上，将配置名称、说明以及是否启用或禁用模板：
 
-* **[!UICONTROL 社区站点模板名称]**&#x200B;模板名称id
+* **[!UICONTROL 社区站点模板名称]**
 
-* **[!UICONTROL 社区站点模板说明]**&#x200B;模板说明
+   模板名称id。
 
-* **[!UICONTROL 禁用／启用]**&#x200B;控制模板是否可引用的切换开关
+* **[!UICONTROL 社区站点模板描述]**
+
+   模板描述。
+
+* **[!UICONTROL 禁用／启用]**
+
+   控制模板是否可引用的切换开关。
 
 ### 缩略图 {#thumbnail}
 
@@ -63,7 +70,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 要添加社区功能，请按站点菜单链接的显示顺序从右侧向左拖动。 样式将在创建站点期间应用于模板。
 
-例如，如果您想要主页，请将页面功能从库中拖放到模板生成器下。 这将导致打开页面配置对话框。 有关配置 [对话框的信息](functions.md) ，请参阅函数控制台。
+例如，如果需要主页，请将页面功能从库中拖放到模板生成器下。 这将导致打开页面配置对话框。 有关配置 [对话框的信息](functions.md) ，请参阅函数控制台。
 
 继续拖放基于此模板的社区站点所需的任何其他社区功能。
 
@@ -75,6 +82,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >必须首先包含并列出任何其 [他函数](functions.md#page-function)，如页面函数。
 
+
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
 ### “用户组模板”功能 {#group-templates-for-groups-function}
@@ -84,6 +92,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >[!CAUTION]
 >
 >“组”功能不 *能是**站点结构中的第一个* ，也不能是唯一的功能。
+
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
