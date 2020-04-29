@@ -3,7 +3,7 @@ title: 配置富文本编辑器，以在Adobe Experience Manager中创作内容�
 description: 了解如何配置Adobe Experience Manager富文本编辑器以在Adobe Experience Manager中创作内容。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29b1520c59f555776f089b20614bf503492f7411
+source-git-commit: 430994c8e9951500378e0a4d56c8004e7e81c24f
 
 ---
 
@@ -160,6 +160,15 @@ RTE的基本功能是通过特定于相应插件的节点上的 `features` 属�
 * `rte-start`:在RTE事件编辑RTE `contenteditable-div` 时触发此开始。 仅当设置为 `customStart` true时，此选项才有效。
 
 在触屏启用对话框中使用RTE时，必须将属性设 `useFixedInlineToolbar` 置为true以避免出现问题。
+
+## 就地自定义编辑 {#customizing-in-place-editing}
+
+您可以通过配置以下属性来定义文本编辑器开始的HTML选择器：
+
+* **`editElementQuery`** -在上定 `cq:InplaceEditingConfig`义，此属性用于指定HTML元素的选择器，在该选择器上将启动文本组件的内联编辑。 如果未指定，则直接在文本组件HTML上启动内联编辑。
+* **`textPropertyName`** -在上定 `cq:InplaceEditingConfig`义，此属性用于指定将保存在内容节点上的属性名称，在内联编辑后，文本组件的HTML值将保留在该节点上。
+
+对话框模式的相应属性为 `name`。
 
 ## 通过激活插件启用RTE功能 {#enable-rte-functionalities-by-activating-plug-ins}
 
