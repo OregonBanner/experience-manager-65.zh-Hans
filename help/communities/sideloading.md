@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ---
 
@@ -19,9 +19,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 概述 {#overview}
 
-将网页设计为一个简单的单页应用程序时，社区组件侧传非常有用，该应用程序会根据站点访客选择的内容动态更改显示的内容。
+将网页设计为一个简单的单页应用程序时，Communities组件侧传非常有用，该应用程序会根据站点访客选择的内容动态更改显示的内容。
 
-当页面模板中不存在Communities组件，而是在站点访客选择后动态添加组件时，即可完成此操作。
+当页面模板中不存在Communities组件，而是在站点访客选择后动态添加时，即可实现此操作。
 
 由于社交组件框架(SCF)具有轻量级存在，因此只注册初始页面加载时存在的SCF组件。 对于动态添加的SCF组件，必须在页面加载后注册，必须调用SCF以“侧传”该组件。
 
@@ -42,6 +42,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >不支持 [对非现有资源进行侧传](scf.md#add-or-include-a-communities-component) 。
 
+
 ## 将组件动态添加到DOM {#dynamically-add-component-to-dom}
 
 无论组件是动态包含的还是动态加载的，都必须首先将其添加到DOM中。
@@ -50,9 +51,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 无论使用什么标签，元素至少必须包含以下两个属性，以符合标准SCF根元素模式：
 
-* **data-component-id已添**&#x200B;加组件的有效路径
+* **data-component-id**
 
-* **data-scf-component**&#x200B;组件的resourceType
+   添加的组件的有效路径。
+
+* **数据-SCF组件**
+
+   组件的resourceType。
 
 以下是添加的注释组件的一个示例：
 
@@ -71,9 +76,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 动态包含使用引导请求，这会导致SCF检查DOM并引导页面上找到的所有SCF组件。
 
-要在页面加载后随时初始化SCF组件，只需触发如下JQuery事件：
+要在页面加载后随时初始化SCF组件，只需触发JQuery事件，如下所示：
 
-$(document)。trigger(SCF.events.BOOTSTRAP_REQUEST);
+`$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
 ### 动态加载 {#dynamic-loading}
 
@@ -81,6 +86,6 @@ $(document)。trigger(SCF.events.BOOTSTRAP_REQUEST);
 
 可以使用以下JavaScript方法指定要加载的特定SCF组件，而不是引导DOM中的所有SCF组件：
 
-SCF.addComponent(document.getElementById(*someId*));
+`SCF.addComponent(document.getElementById(*someId*));`
 
-其中 *someId* 是data-component-id **属性的值** 。
+其 `someId` 中是属性的 `data-component-id` 值。
