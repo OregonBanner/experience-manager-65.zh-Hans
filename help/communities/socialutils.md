@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3296db289b2e2f4ca0d1981597ada6ca1310bd46
 
 ---
 
@@ -19,9 +19,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 已弃用SocialUtils包 {#socialutils-package-deprecated}
 
-com.adobe.cq.social. **ugcbase.SocialUtils包在AEM 6.1中已弃用** 。
+AEM 6. `com.adobe.cq.social.ugcbase.SocialUtils` 1中已弃用该包。
 
-下表列出了用于代替SocialUtils方法的方法。
+下表列表了用于代替SocialUtils方法的方法。
 
 ## SocialResourceUtilities包 {#socialresourceutilities-package}
 
@@ -31,7 +31,7 @@ com.adobe.cq.social. **ugcbase.SocialUtils包在AEM 6.1中已弃用** 。
 | SocialResourceProvider getSocialResourceProvider（资源资源） |  |
 | SocialResourceConfiguration getStorageConfig（资源资源） |  |
 | 资源getUGCResource（资源用户资源） |  |
-| 资源getUGCResource(Resource userResource, resourceResolverFactory rrf) | 新版 |
+| 资源getUGCResource(Resource userResource, ResourceResolverFactory rrf) | 新版 |
 | 资源getUGCResource(Resource userResource、ResourceResolverFactory rrf、String resourceTypeHint) | 新版 |
 | 资源getUGCResource(Resource userResource, String resourceTypeHint) |  |
 | boolean hasMeadePermissions（资源资源） |  |
@@ -39,7 +39,7 @@ com.adobe.cq.social. **ugcbase.SocialUtils包在AEM 6.1中已弃用** 。
 | 字符串resourceToUGCStoragePath（资源资源） | 替换字符串resourceToUGCPath（资源资源） |
 | 字符串UGCToResourcePath（资源资源） |  |
 | 字符串UGCToResourcePath（字符串ugcPath） | 更改了签名 |
-| 字符串UGCToResourcePath（字符串ugcPath, resourceResolver） | 新版 |
+| 字符串UGCToResourcePath（字符串ugcPath, ResourceResolver） | 新版 |
 
 | utilities.resource.api. `com.adobe.cq.social.`SocialResourceUtilities中的方法 |
 |---|
@@ -54,7 +54,7 @@ com.adobe.cq.social. **ugcbase.SocialUtils包在AEM 6.1中已弃用** 。
 | 字符串getAvatar(UserProperties userProperties, String absoluteDefaultAvatar) |
 | 字符串getAvatar(UserProperties userProperties, String absoluteDefaultAvatar, SocialUtils.AVATAR_SIZE) |
 | 页面getContainingPage（资源） |
-| 字符串getSocialProfileURL（字符串用户名， resourceResolver，页面） |
+| 字符串getSocialProfileURL（字符串用户名， ResourceResolver，页面） |
 | UserProperties getUserProperties(ResourceResolver, String userId) |
 
 ## For Internal Use Only {#for-internal-use-only}
