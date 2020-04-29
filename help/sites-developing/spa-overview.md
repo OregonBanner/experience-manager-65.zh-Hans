@@ -1,8 +1,8 @@
 ---
 title: SPA编辑器概述
 seo-title: SPA编辑器概述
-description: 本文全面概述了SPA编辑器及其工作方式，包括AEM中SPA编辑器交互的详细工作流程。
-seo-description: 本文全面概述了SPA编辑器及其工作方式，包括AEM中SPA编辑器交互的详细工作流程。
+description: 本文全面概述了SPA编辑器及其工作方式，包括AEM中SPA编辑器交互的详细工作流。
+seo-description: 本文全面概述了SPA编辑器及其工作方式，包括AEM中SPA编辑器交互的详细工作流。
 uuid: c283abab-f5bc-414a-bc81-bf3bdce38534
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+source-git-commit: 3d9bcc706a1fa7a15d0ce8729f7b85c4226b394f
 
 ---
 
 
 # SPA编辑器概述{#spa-editor-overview}
 
-单页应用程序(SPA)可以为网站用户提供引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，而作者希望在AEM中为使用此框架构建的站点无缝编辑内容。
+单页应用程序(SPA)可以为网站用户优惠引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，而作者希望在AEM中为使用此框架构建的站点无缝编辑内容。
 
-SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本页概述了SPA支持在AEM中的结构、SPA编辑器的工作方式以及SPA框架和AEM保持同步的方式。
+SPA Editor优惠了一个全面的解决方案，用于在AEM中支持SPA。 本页概述了SPA支持在AEM中的结构、SPA编辑器的工作方式以及SPA框架和AEM保持同步的方式。
 
 >[!NOTE]
 >
@@ -32,9 +32,9 @@ SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本页概述�
 
 要在AEM中编辑SPA，需要SPA的JSON输出与AEM存储库中的内容模型之间的映射，以保存对内容所做的更改。
 
-AEM中的SPA支持引入了一个精简JS层，当该层加载到页面编辑器中时，可通过该层发送事件并激活编辑控件的位置以允许进行上下文内编辑。 此功能基于Content Services API端点概念，因为SPA中的内容需要通过Content services加载。
+AEM中的SPA支持引入了一个精简JS层，当该层加载到页面编辑器中时，可通过该层发送事件，并激活编辑控件的位置以允许进行上下文内编辑。 此功能基于Content Services API端点概念，因为SPA中的内容需要通过Content Services加载。
 
-有关AEM中SPA的更多详细信息，请参阅以下文档：
+有关AEM中SPA的更多详细信息，请参阅以下文档:
 
 * [SPA Blueprint](/help/sites-developing/spa-blueprint.md) ，用于满足SPA的技术要求
 * [AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md) ，快速浏览简单的SPA
@@ -47,21 +47,21 @@ SPA的页面组件不通过JSP或HTL文件提供其子组件的HTML元素。 此
 
 页面模型的解析和管理被委托给提供的库 `PageModel` 。 SPA必须使用页面模型库才能进行初始化并由SPA编辑器创作。 通过npm间接提供给AEM页面组件的页面模型 `cq-react-editable-components` 库。 页面模型是AEM和SPA之间的解释器，因此必须始终存在。 创作页面时，必须添加一 `cq.authoring.pagemodel.messaging` 个额外的库才能启用与页面编辑器的通信。
 
-如果SPA页面组件从页面核心组件继承，则有两个选项可以使客户端库类 `cq.authoring.pagemodel.messaging` 别可用：
+如果SPA页面组件从页面核心组件继承，则有两个选项可使客户端库 `cq.authoring.pagemodel.messaging` 类别可用：
 
 * 如果模板是可编辑的，请将其添加到页面策略。
 * 或使用添加类别 `customfooterlibs.html`。
 
-对于导出模型中的每个资源，SPA将映射一个实际的组件，以执行渲染。 然后，使用容器中的组件映射来呈现表示为JSON的模型。
+对于导出模型中的每个资源，SPA将映射一个实际的组件，以执行渲染。 然后，使用容器中的组件映射呈现表示为JSON的模型。
 ![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
 
 >[!CAUTION]
 >
->列入该类 `cq.authoring.pagemodel.messaging` 别应仅限于SPA编辑器的上下文。
+>列入类别应 `cq.authoring.pagemodel.messaging` 仅限于SPA编辑器的上下文。
 
 ### 通信数据类型 {#communication-data-type}
 
-将类 `cq.authoring.pagemodel.messaging` 别添加到页面时，它将向页面编辑器发送消息以建立JSON通信数据类型。 当通信数据类型设置为JSON时，GET请求将与组件的Sling model端点通信。 在页面编辑器中进行更新后，更新组件的JSON表示形式将发送到页面模型库。 页面模型库随后会通知SPA更新。
+在将 `cq.authoring.pagemodel.messaging` 类别添加到页面时，它将向页面编辑器发送消息以建立JSON通信数据类型。 当通信数据类型设置为JSON时，GET请求将与组件的Sling Model端点通信。 在页面编辑器中进行更新后，更新组件的JSON表示形式将发送到页面模型库。 页面模型库随后会通知SPA更新。
 
 ![screen_shot_2018-08-20at143628](assets/screen_shot_2018-08-20at143628.png)
 
@@ -88,7 +88,7 @@ SPA的页面组件不通过JSP或HTL文件提供其子组件的HTML元素。 此
 1. SPA编辑器可检测渲染的组件并生成叠加。
 1. 创作者单击叠加，显示组件的编辑工具栏。
 1. SPA编辑器通过向服务器发出POST请求来继续进行编辑。
-1. SPA编辑器向SPA编辑器请求更新的JSON,SPA编辑器将通过DOM事件发送到SPA。
+1. SPA编辑器向SPA编辑器请求更新的JSON，该编辑器将通过DOM事件发送到SPA。
 1. SPA会重新呈现相关组件，并更新其DOM。
 
 >[!NOTE]
@@ -146,7 +146,7 @@ SPA的页面组件不通过JSP或HTL文件提供其子组件的HTML元素。 此
 1. **2a页面模型** 为编辑者提供了创作所需的数据。
 
    **2b** ，当收到通知时，component orchestrator会更新页面的内容结构。
-1. 组件Orchestrator查询AEM资源类型与SPA组件之间的映射。
+1. 组件查询器可以管理AEM资源类型与SPA组件之间的映射。
 1. 组件管理器基于页面模型和组件映射动态地实例化SPA组件。
 1. 页面编辑器会更新页面模型。
 1. **6a页面模型** 为页面编辑器提供了更新的创作数据。
@@ -171,7 +171,18 @@ SPA Editor SDK支持以下最低版本：
 
 ### 其他框架 {#additional-frameworks}
 
-可以实施其他SPA框架以与AEM SPA Editor SDK一起使用。 请参阅 [](/help/sites-developing/spa-blueprint.md) SPA Blueprint文档，了解框架创建框架特定层时必须满足的要求，该层由模块、组件和服务组成，以便与AEM SPA Editor一起使用。
+可以实施其他SPA框架以与AEM SPA Editor SDK一起使用。 请参阅 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 文档，了解框架创建框架特定层时必须满足的要求，该层由模块、组件和服务组成以与AEM SPA Editor一起使用。
+
+### 文本编辑器要求 {#text-editor-requirements}
+
+如果要使用在SPA中创建的文本组件的就地编辑器，则需要其他配置。
+
+1. 在包含文本HTML的容器包装器元素上设置属性（可以是任何属性）。 对于WKND日志范例内容，它是一个元 `<div>` 素，并且已使用的选择器 `data-rte-editelement`。
+1. 在相应的AEM `editElementQuery` 文本组件上设置指向该选 `cq:InplaceEditingConfig` 择器的配置，例如 `data-rte-editelement`. 这样，编辑者就能知道HTML文本的包装是哪个HTML元素。
+
+有关如何实现此操作的示例，请参阅 [WKND日志范例内容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+
+有关富文本编辑 `editElementQuery` 器的属性和配置的其他信息，请参 [阅配置富文本编辑器。](/help/sites-administering/rich-text-editor.md)
 
 ### 限制 {#limitations}
 
