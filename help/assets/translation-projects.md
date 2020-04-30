@@ -1,16 +1,16 @@
 ---
 title: 创建翻译项目
-description: 了解如何在AEM中创建翻译项目。
+description: 了解如何在[!DNL Adobe Experience Manager]中创建翻译项目。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 创建翻译项目 {#creating-translation-projects}
 
-要创建语言副本，请触发AEM用户界面中“引用”边栏下提供的以下语言副本工作流之一。
+要创建语言副本，请触发用户界面中“引用”边栏下提供的以下语言副本工作流之 [!DNL Experience Manager] 一。
 
 * **创建和翻译**:在此工作流中，要翻译的资产会被复制到您要翻译的语言的语言的语言根目录中。 此外，根据您选择的选项，系统会在“项目”控制台中为资产创建一个转换项目。 根据设置，可以手动启动翻译项目，也可以允许翻译项目在创建后立即自动运行。
 
@@ -18,7 +18,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 >[!NOTE]
 >
->仅当翻译服务提供商支持二进制的翻译时，资产二进制才被翻译。
+>仅当翻译服务提供商支持二进制的翻译时，资产二进制才进行翻译。
 
 >[!NOTE]
 >
@@ -28,15 +28,15 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 您首次使用创建和翻译工作流为特定语言生成语言副本。 该工作流提供以下选项：
 
-* 只创建结构
-* 创建新翻译项目
-* 添加到现有翻译项目
+* 只创建结构.
+* 创建新翻译项目.
+* 添加到现有翻译项目.
 
 ### 只创建结构 {#create-structure-only}
 
 使用“ **[!UICONTROL 仅创建结构]** ”选项可在目标语言根目录中创建目标文件夹层次结构，以匹配源语言根目录中源文件夹的层次结构。 在这种情况下，源资产会复制到目标文件夹。 但是，不会生成翻译项目。
 
-1. 在资产UI中，选择要在目标语言根目录中创建其结构的源文件夹。
+1. 在界 [!DNL Assets] 面中，选择要在目标语言根目录中创建结构的源文件夹。
 1. 打开&#x200B;**[!UICONTROL 引用]**&#x200B;窗格，然后单击/点按&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
@@ -53,11 +53,11 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
-1. 单击/点按&#x200B;**[!UICONTROL 创建]**。目标语言的新结构列在“语言副本” **[!UICONTROL 下]**。
+1. 单击/点按&#x200B;**[!UICONTROL 创建]**。目标语的新结构列在“语言副本” **[!UICONTROL 下]**。
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
-1. 单击／点按列表中的结构，然后单击／点按资产中 **[!UICONTROL 的显示]** ，以导航到目标语言中的文件夹结构。
+1. 单击／点按列表中的结构，然后单击／点按资产中的 **[!UICONTROL 显示]** ，以导航到目标语言中的文件夹结构。
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -78,7 +78,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 从“项 **[!UICONTROL 目]** ”列表中，选 **[!UICONTROL 择“创建新翻译项目”]**。
+1. 在“项 **[!UICONTROL 目]** ”列表中 **[!UICONTROL ，选择]**“创建新翻译项目”。
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -86,7 +86,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. 单击/点按&#x200B;**[!UICONTROL 创建]**。源文件夹中的资产将复制到您在步骤4中选择的区域设置的目标文件夹。
+1. 单击/点按&#x200B;**[!UICONTROL 创建]**。源文件夹中的资产将复制到步骤4中所选区域设置的目标文件夹。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
@@ -98,7 +98,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-70](assets/chlimage_1-70.png)
 
-1. 打开文件夹以查看翻译项目。
+1. 打开文件夹以视图翻译项目。
 
    ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -106,17 +106,17 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. 要查看翻译作业的状态，请单击“翻译作业”拼贴底部的省略 **[!UICONTROL 号]** 。
+1. 要视图翻译作业的状态，请单击“翻译作业”拼贴底部的省略 **[!UICONTROL 号]** 。
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
    有关作业状态的更多详细信息，请 [参阅监视翻译作业的状态](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以查看已翻译的元数据。
+1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
 
-   ![在“资产属性”页中查看已翻译的元数据](assets/translated-metadata-asset-properties.png)
+   ![视图“资产属性”页中的已翻译元数据](assets/translated-metadata-asset-properties.png)
 
-   *图：资产属性页面中的已翻译元数据*
+   *图：资产属性页面中的已翻译元数据。*
 
 
    >[!NOTE]
@@ -125,7 +125,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project}
 
-如果您使用此选项，则在运行以前的翻译工作流之后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含先前已翻译资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
+如果您使用此选项，则在运行以前的翻译工作流之后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含先前已翻译资产的目标文件夹。 在这种情况下，不会创建新的翻译项目。
 
 1. 在资产UI中，导航到包含未翻译资产的源文件夹。
 1. 选择要翻译的资产，然后打开&#x200B;**[!UICONTROL “引用”窗格]**。**[!UICONTROL 语言副本]**&#x200B;部分显示当前可用的翻译副本数。
@@ -155,7 +155,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
 1. 导航到项目控制台，然后打开您添加到的现有翻译项目。
-1. 单击／点按转换项目视图中的项目详细信息页面。
+1. 单击／点按项目详细信息页面视图的翻译项目。
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
@@ -173,7 +173,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
    >
    >如果您添加到翻译作业的资产包含子资产，请选择子资产并删除这些子资产，以便翻译继续，而不会出现任何故障。
 
-1. 要开始资产的转换，请单击／点按转换作业拼贴上的箭 **[!UICONTROL 头]** ，然后从列 **[!UICONTROL 表中选择开始]** 。
+1. 要开始资产的翻译，请单击／点按翻译作业拼贴上的箭头 **[!UICONTROL ，然后从列表]** 中选择 **[!UICONTROL 开始]** 。
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
@@ -181,13 +181,13 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 
-1. 要查看翻译作业的状态，请单击／点按翻译作业拼贴底部的省略 **[!UICONTROL 号]** 。
+1. 要视图翻译作业的状态，请单击／点按翻译作业拼贴底部的 **[!UICONTROL 省略号]** 。
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
    有关详细信息，请 [参阅监视翻译作业的状态](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 翻译完成后，状态将变为“准备审阅”。 导航到资产UI，然后打开每个已翻译资产的“属性”页面以查看已翻译的元数据。
+1. 翻译完成后，状态将变为“准备审阅”。 导航到资产UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
 
 ## 更新语言副本 {#update-language-copies}
 
@@ -223,7 +223,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. 打开文件夹以查看翻译项目。
+1. 打开文件夹以视图翻译项目。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
@@ -231,7 +231,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. 要开始资产的翻译，请单击翻译作业拼贴上的箭 **[!UICONTROL 头]** ，然后从列 **[!UICONTROL 表中选择开始]** 。
+1. 要开始资产的翻译，请单击“翻译作业”拼贴上的 **[!UICONTROL 箭头]** ，然后从列表 **[!UICONTROL 中选择]** 开始。
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
@@ -239,13 +239,13 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. 要查看翻译作业的状态，请单击／点按翻译作业拼贴底部的省略 **[!UICONTROL 号]** 。
+1. 要视图翻译作业的状态，请单击／点按翻译作业拼贴底部的 **[!UICONTROL 省略号]** 。
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
    有关作业状态的更多详细信息，请 [参阅监视翻译作业的状态](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以查看已翻译的元数据。
+1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project-1}
 
@@ -264,7 +264,7 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
-1. 从“项 **[!UICONTROL 目]** ”列表中，选 **[!UICONTROL 择“添加到现有翻译项目”]**。
+1. 从“项 **[!UICONTROL 目]** ”列表中 **[!UICONTROL ，选择“]**&#x200B;添加到现有翻译项目”。
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
@@ -277,16 +277,16 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
 ## 创建临时语言副本 {#creating-temporary-language-copies}
 
-运行翻译工作流以使用已编辑版本的原始资产更新语言副本时，将保留现有语言副本，直到您批准已翻译的资产。 AEM资产会将新翻译的资产存储在临时位置，并在您明确批准资产后更新现有语言副本。 如果您拒绝资产，则语言副本将保持不变。
+运行翻译工作流以使用已编辑版本的原始资产更新语言副本时，将保留现有语言副本，直到您批准已翻译的资产。 [!DNL Adobe Experience Manager Assets] 在您明确批准资产后，将新翻译的资产存储在临时位置并更新现有语言副本。 如果您拒绝资产，则语言副本将保持不变。
 
-1. 单击／点按您已为其创建语言副本的 **[!UICONTROL 语言副本下的源根文件夹]** ，然后单击／点按资产中的 **[!UICONTROL 显示]** ，以在AEM资产中打开该文件夹。
+1. Click/tap the source root folder under **[!UICONTROL Language Copies]** for which you already created a language copy, and then click/tap **[!UICONTROL Reveal in Assets]** to open the folder in [!DNL Experience Manager Assets].
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. 在资产UI中，选择已翻译的资产，然后单击／点按工具栏中的编辑 **[!UICONTROL 图标]** ，以在编辑模式下打开资产。
+1. 在界面 [!DNL Assets] 中，选择已翻译的资产，然后单击／点按工具栏中的编辑图 **[!UICONTROL 标]** ，以在编辑模式下打开资产。
 1. 编辑资产，然后保存更改。
 1. 执行添加到现有翻译项目 [过程的步骤](#add-to-existing-translation-project) 2-14以更新语言副本。
-1. 单击／点按翻译作业拼贴底部的 **[!UICONTROL 省略号]** 。 从“翻译作业”页面的 **[!UICONTROL 资产列表中]** ，您可以清楚地查看存储资产翻译版本的临时位置。
+1. 单击／点按翻译作业拼贴底部的 **[!UICONTROL 省略号]** 。 从“转换作业”页面中的 **[!UICONTROL 资产列表]** ，您可以清楚地视图存储资产翻译版本的临时位置。
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
@@ -303,6 +303,9 @@ source-git-commit: d15273e9308926ca4745fc1045e2da9fe8ed91d4
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
-1. 导航到资产控制台，然后打开每个已翻译资产的“属性”页面以查看已翻译的元数据。
+1. 要视图已翻译的元数据，请导航到控 [!DNL Assets] 制台，然后打开每个已 [!UICONTROL 翻译资产的] “属性”页面。
 
-有关有效翻译资产元数据的提示，请参 [阅有效翻译元数据的5个步骤](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)。
+>[!MORELIKETHIS]
+>
+>* [高效翻译元数据的提示](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)。
+
