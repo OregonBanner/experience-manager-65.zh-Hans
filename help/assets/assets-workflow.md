@@ -3,7 +3,7 @@ title: 处理资产以完成业务流程、进行审核、实现法规遵从性�
 description: 资产处理功能，可转换格式、创建演绎版、管理资产、验证资产和运行工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ## 了解工作流 {#understand-workflows}
 
-对于资产处理，请 [!DNL Experience Manager] 使用工作流。 工作流帮助实现业务逻辑或活动的自动化。 默认情况下，提供完成特定任务的精细步骤，开发人员可以创建自己的自定义步骤。 这些步骤可以按逻辑顺序组合，以创建工作流。 例如，工作流可以根据特定条件对上传的图像应用水印，如上传到的文件夹、图像的分辨率等。 另一个示例是配置为水印和同时添加元数据、创建再现、添加智能标记和发布到数据存储的工作流。
+对于资产处理，请 [!DNL Experience Manager] 使用工作流。 工作流有助于实现业务逻辑或活动的自动化。 默认情况下，提供完成特定任务的精细步骤，开发人员可以创建自己的自定义步骤。 这些步骤可以按逻辑顺序组合，以创建工作流。 例如，工作流可以根据特定条件对上传的图像应用水印，如上传到的文件夹、图像的分辨率等。 另一个示例是配置为水印和同时添加元数据、创建再现、添加智能标记和发布到数据存储的工作流。
 
 ## 默认工作流 [!DNL Experience Manager]{#default-workflows}
 
@@ -24,7 +24,7 @@ source-git-commit: 82ed39dac05591b9bdc9fda101ed450c2096dc60
 
 ![部分默认工作流](assets/aem-default-workflows.png)
 
-*图：在Adobe Cloud中，[!DNL Experience Manager]*
+*图：中提供的一些默认工作流[!DNL Experience Manager]。*
 
 ## 将工作流应用于处理资产 {#applying-workflows-to-assets}
 
