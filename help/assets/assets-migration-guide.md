@@ -1,16 +1,16 @@
 ---
-title: 将资产批量迁移到Adobe Experience Manager资产
-description: 介绍如何将资产引入AEM、应用元数据、生成演绎版并激活资产以发布实例。
+title: 将资产批量迁移到[!DNL Adobe Experience Manager资产]。
+description: 介绍如何将资产引入[!DNL Adobe Experience Manager]、应用元数据、生成演绎版并激活资产以发布实例。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 如何批量迁移资产 {#assets-migration-guide}
 
-将资产迁移到AEM时，需要考虑几个步骤。 从当前主页提取资产和元数据不在本文档的范围内，因为实施之间差异很大，但本文档介绍如何将这些资产引入AEM、应用其元数据、生成演绎版并激活它们以发布实例。
+将资产迁移到 [!DNL Adobe Experience Manager]中时，需要考虑几个步骤。 从其当前主页提取资产和元数据不在本文档的范围内，因为实施之间的差异很大，但本文档介绍如何将这些资产引入、应用其元数据、生成演绎版并激活它们以发布实例。 [!DNL Experience Manager]
 
 ## 前提条件 {#prerequisites}
 
@@ -18,7 +18,7 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 >[!NOTE]
 >
->以下资产迁移工具不是AEM的一部分，Adobe不支持这些工具：
+>以下资产迁移工具不是Adobe的一 [!DNL Experience Manager] 部分，并且不受Adobe支持：
 >
 >* ACS AEM Tools Tag Maker
 >* ACS AEM工具CSV资产导入程序
@@ -29,9 +29,9 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 >
 本软件是开放源软件，受 [Apache v2 许可证](https://adobe-consulting-services.github.io/pages/license.html)的保护。要提出问题或报告问题，请访问[针对 ACS AEM 工具的 GitHub 问题](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)和 [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
 
-## 迁移到AEM {#migrating-to-aem}
+## 迁移到 [!DNL Experience Manager]{#migrating-to-aem}
 
-将资产迁移到AEM需要多个步骤，并应将其视为一个分阶段的过程。 迁移的阶段如下：
+将资产迁移 [!DNL Experience Manager] 至需要多个步骤，应将其视为一个分阶段的过程。 迁移的阶段如下：
 
 1. 禁用工作流。
 1. 加载标记。
@@ -48,7 +48,7 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 ### 加载标记 {#loading-tags}
 
-您可能已经拥有了要应用于图像的标记分类。 虽然CSV资产导入程序和Experience Manager对元数据用户档案的支持等工具可以自动将标记应用到资产的过程，但这些标记需要加载到系统中。 通过 [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具标记生成器）功能，您可以使用加载到系统中的Microsoft Excel电子表格填充标记。
+您可能已经拥有了要应用于图像的标记分类。 虽然CSV资产导入程序和元数据用户档案支持等工具可以自动将标记应用到资产的过程，但需要将标记加载到系统中。 [!DNL Experience Manager] 通过 [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具标记生成器）功能，您可以使用加载到系统中的Microsoft Excel电子表格填充标记。
 
 ### 摄取资源 {#ingesting-assets}
 
@@ -58,7 +58,7 @@ source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
 
 #### 通过HTTP发送 {#pushing-through-http}
 
-Adobe的Managed Services团队使用一个名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小的Java应用程序，它将所有资源从一个目录加载到AEM实例上的另一个目录中。 您还可以使用Perl脚本等工具将资源发布到存储库中，而不是Glutton。
+Adobe的Managed Services团队使用一个名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小的Java应用程序，它将所有资源从一个目录加载到实例上的另一个目 [!DNL Experience Manager] 录中。 您还可以使用Perl脚本等工具将资源发布到存储库中，而不是Glutton。
 
 使用通过https的方法有两个主要的缺点：
 
@@ -75,12 +75,12 @@ Adobe的Managed Services团队使用一个名为Glutton的工具将数据加载�
 
 ### 处理再现 {#processing-renditions}
 
-在将资产加载到系统中后，您需要通过 [!UICONTROL DAM更新资产工作流处理这些资产] ，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复和修改 [!UICONTROL DAM更新资产工作流] ，以满足您的需求。 开箱即用的工作流程包含许多您可能不需要的步骤，如Scene7 PTIFF生成或InDesign服务器集成。
+在将资产加载到系统中后，您需要通过 [!UICONTROL DAM更新资产工作流处理这些资产] ，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复和修改 [!UICONTROL DAM更新资产工作流] ，以满足您的需求。 开箱即用的工作流程包含许多您可能不需要的步骤，如Scene7 PTIFF生成或集 [!DNL InDesign Server] 成。
 
 根据需要配置工作流后，您有两个用于执行该工作流的选项：
 
 1. 最简单的方法是 [ACS Commons的Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 此工具允许您执行查询并通过工作流处理查询结果。 还有用于设置批大小的选项。
-1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 虽然此方法涉及的范围更广，但它允许您在优化服务器资源的使用时删除AEM工作流引擎的开销。 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
+1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 While this approach is much more involved, it lets you remove the overhead of the [!DNL Experience Manager] workflow engine while optimizing the use of server resources. 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
 
 ### 激活资产 {#activating-assets}
 
@@ -88,7 +88,7 @@ Adobe的Managed Services团队使用一个名为Glutton的工具将数据加载�
 
 要解决此问题，您可以使用 [Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) （快速操作管理器）管理资产复制。 这可以在不使用Sling队列的情况下工作，从而降低开销，同时限制工作负载以防止服务器过载。 使用FAM管理复制的示例显示在该功能的文档页上。
 
-将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。另一个选项的目的是对 AEM 基础结构使用一个名为 [Grabbit](https://github.com/TWCable/grabbit) 的开放源工具，该工具声称比 vlt 的性能更快。
+将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。Another option is to use an open-sourced tool for your [!DNL Experience Manager] infrastructure called [Grabbit](https://github.com/TWCable/grabbit), which claims to have faster performance than vlt.
 
 对于任何这些方法，注意作者实例上的资产不显示为已激活。 要使用正确的激活状态标记这些资产，您还需要运行一个脚本以将资产标记为已激活。
 
@@ -112,22 +112,22 @@ Adobe的Managed Services团队使用一个名为Glutton的工具将数据加载�
 
 完成迁移后，应重新启用  DAM更新资产工作流的启动程序，以支持再现生成和元数据提取，以便持续使用日常系统。
 
-## 跨AEM部署迁移 {#migrating-between-aem-instances}
+## 跨部署迁 [!DNL Experience Manager] 移 {#migrating-between-aem-instances}
 
-虽然不像以前那样常见，但有时您需要将大量数据从一个AEM实例迁移到另一个实例；例如，当您执行AEM升级、升级硬件或迁移到新数据中心时，例如AMS迁移。
+虽然不像以前那样常见，但有时您需要将大量数据从一个实例迁移到另 [!DNL Experience Manager] 一个实例；例如，当您执行升级、 [!DNL Experience Manager] 升级硬件或迁移到新数据中心时，例如AMS迁移。
 
-在这种情况下，您的资产已填充元数据，并且已生成演绎版。 您只需将精力集中在将资产从一个实例移动到另一个实例上。 在AEM实例之间迁移时，您需要执行以下步骤：
+在这种情况下，您的资产已填充元数据，并且已生成演绎版。 您只需将精力集中在将资产从一个实例移动到另一个实例上。 在实例之间 [!DNL Experience Manager] 迁移时，您需要执行以下步骤：
 
 1. 禁用工作流:由于您正在迁移演绎版以及我们的资产，因此您希望禁用 [!UICONTROL DAM更新资产工作流的工作流启动器] 。
 
-1. 迁移标记：由于已在源AEM实例中加载了标记，因此您可以在内容包中构建这些标记并将该包安装在目标实例上。
+1. 迁移标记：由于已在源实例中加载了标记， [!DNL Experience Manager] 因此可以在内容包中构建这些标记，并将该包安装在目标实例上。
 
-1. 迁移资产：建议使用两种工具将资产从一个AEM实例移至另一个AEM实例：
+1. 迁移资产：建议使用两种工具将资产从一个实例移动到另 [!DNL Experience Manager] 一个实例：
 
    * **Vault Remote Copy** 或vlt rcp允许您跨网络使用vlt。 您可以指定源目录和目标目录，vlt从一个实例下载所有存储库数据并将其加载到另一个实例中。 Vlt rcp在https://jackrabbit.apache.org/filevault/rcp.html上有相关 [文档](https://jackrabbit.apache.org/filevault/rcp.html)
-   * **Grabbit** 是Time Warner Cable为其AEM实施开发的一个开源内容同步工具。 由于它使用连续的数据流，与vlt rcp相比，它具有更低的延迟，并声称速度比vlt rcp快2到10倍。 Grabbit还支持仅同步Delta内容，这允许它在初始迁移通过完成后同步更改。
+   * **Grabbit** 是Time Warner Cable开发的一款开放源码内容同步工具，用于实现这些 [!DNL Experience Manager] 工具。 由于它使用连续的数据流，与vlt rcp相比，它具有更低的延迟，并声称速度比vlt rcp快2到10倍。 Grabbit还支持仅同步Delta内容，这允许它在初始迁移通过完成后同步更改。
 
-1. 激活资产：按照说明激活 [记录到](#activating-assets) AEM的初始迁移资产。
+1. 激活资产：按照说明激活 [为初始迁移](#activating-assets) 、记录的资产 [!DNL Experience Manager]。
 
 1. 克隆发布：与新迁移一样，加载单个发布实例并克隆它比激活两个节点上的内容更有效。 请参阅 [仿制发布。](#cloning-publish)
 
