@@ -1,18 +1,18 @@
 ---
-title: 在Adobe Experience Manager中使用引用和多页资产管理复合资产。
-description: 了解如何从Adobe InDesign、Adobe Illustrator和Adobe Photoshop中创建数字资源参考。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
+title: 在[!DNL Adobe Experience Manager]中使用引用和多页资产管理复合资产。
+description: 了解如何从[!DNL Adobe InDesign]、[!DNL Adobe Illustrator]和[!DNL Adobe Photoshop]中创建对数字资源的引用。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 790efeaff6c8cf7e60104601e08955180dbb9600
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
 
 # 管理复合和多页资产 {#managing-compound-assets}
 
-[!DNL Adobe Experience Manager Assets] 可以标识已上载文件是否包含对存储库中已存在资产的引用。 此功能仅对支持的文件格式可用。 如果上传的资产包含对Experience Manager资产的任何引用，则会在上传的资产和引用的资产之间创建双向链接。
+[!DNL Adobe Experience Manager Assets] 可以标识已上载文件是否包含对存储库中已存在资产的引用。 此功能仅对支持的文件格式可用。 如果上传的资产包含对资产的任何引 [!DNL Experience Manager] 用，则上传的资产和引用的资产之间会创建双向链接。
 
-除了消除冗余外，在Adobe Creative Cloud应用程序中引用资产还可增强协作并提高用户的效率和工作效率。
+Besides eliminating redundancy, referencing the assets in [!DNL Adobe Creative Cloud] applications enhances collaboration and increases the efficiency and productivity of users.
 
 [!DNL Experience Manager Assets] 支持双向引用。 您可以在已上传文件的资产详细信息页面中查找引用的资产。 此外，您还可以视图引用资产详细信息页面中的引用文件。
 
@@ -25,7 +25,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 1. 使用 [Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，在本地文件系统上提取数字资产。 导航到要引用的资产的文件系统位置。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
-1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the Experience Manager repository.
+1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
 
 1. 工作流完成后，转到资产的资产详细信息页面。 对现有数字资产的引用列在“引用” **[!UICONTROL 列的]** “依赖项 **[!UICONTROL ”下]** 。
 
@@ -39,7 +39,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
    ![视图资产详细信息中“引用”列中Experience Manager资产的引用](assets/asset-references.png)
 
-   *图：资产详细信息中的资产引用*
+   *图：资产详细信息中的资产引用。*
 
 ## 将数字资产作为引用添加到 [!DNL Adobe InDesign]{#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -86,7 +86,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 默认情况下，子资产生成处于禁用状态。 要启用子资产生成，请执行以下步骤：
 
-1. 以管理员身份登录到Experience Manager。 访问 **[!UICONTROL 工具>工作流>模型]**。
+1. 以管理 [!DNL Experience Manager] 员身份登录。 访问 **[!UICONTROL 工具>工作流>模型]**。
 1. 选择 **[!UICONTROL DAM更新资产工作流]** ，然后单击 **[!UICONTROL 编辑]**。
 1. 单击 **[!UICONTROL 切换侧面板]** ，然后找到创 **[!UICONTROL 建子资产步骤]** 。 将步骤添加到工作流。 单击 **[!UICONTROL 同步]**。
 
