@@ -4,7 +4,7 @@ description: 了解如何使用“过滤器”面板在Adobe Experience Manager�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -40,7 +40,7 @@ Experience Manager搜索功能支持搜索集合和搜索集合中的资产。 �
 
 ![了解Experience Manager资产的搜索结果界面](assets/aem_search_results.png)
 
-*图：了解Experience Manager资产的搜索结果界面*
+*图：了解Experience Manager资产的搜索结果界面。*
 
 **答：** 将搜索另存为智能收藏集。 **B.** 过滤器或谓词以缩小搜索结果。 **C.显示文件** 、文件夹或两者。 **D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F.** 包含用户提供的搜索关键字的Omnisearch字段。 **G.** 选择加载的搜索结果。 **H.** 显示的搜索结果数（从总搜索结果中）。 **我。** 关闭搜 **索J。** 在卡视图和列表视图之间切换。
 
@@ -50,7 +50,7 @@ Experience Manager搜索功能支持搜索集合和搜索集合中的资产。 �
 
 ![无需筛选搜索彩块化中的搜索结果，即可查看资产的大致数量。](assets/asset_search_results_in_facets_filters.png)
 
-*图：在搜索彩块化中查看资产的大致数量，无需筛选搜索结果*
+*图：无需筛选搜索彩块化中的搜索结果，即可查看资产的大致数量。*
 
 ## 了解搜索结果和行为 {#searchbehavior}
 
@@ -99,7 +99,7 @@ Experience Manager可以搜索多种文件格式，并且可以自定义搜索�
 
 ![键入多个关键字以视图符合其全部要求的建议](assets/search_suggestionsmanykeywords.gif)
 
-*图：键入多个关键字以视图符合其全部要求的建议*
+*图：键入多个关键字以视图符合所有关键字的建议。*
 
 ### 搜索排名和提升 {#searchrank}
 
@@ -131,7 +131,7 @@ Experience Manager提供了各种方法(如适用于搜索的资产的过滤器)
 
 ![通过在“过滤器”面板中添加文件夹路径，将搜索结果限制在文件夹中](assets/search_folder_select.gif)
 
-*图：通过在“过滤器”面板中添加文件夹路径，将搜索结果限制在文件夹中*
+*图：通过在“过滤器”面板中添加文件夹路径，将搜索结果限制为文件夹。*
 
 ### 查找类似图像 {#visualsearch}
 
@@ -139,7 +139,7 @@ Experience Manager提供了各种方法(如适用于搜索的资产的过滤器)
 
 ![使用卡视图中的选项查找类似图像](assets/search_find_similar.png)
 
-*图：使用卡视图中的选项查找类似图像*
+*图：使用卡视图中的选项查找类似图像。*
 
 ### Adobe Stock图像 {#adobestock}
 
@@ -197,7 +197,7 @@ Adobe Experience Manager将DAM存储库连接到各种其他Experience Manager�
 
 ### 从Adobe Asset Link面板搜索资产 {#aal}
 
-使用Adobe Asset Link，创意专业人士现在可以访问存储在Experience Manager Assets中的内容，而无需离开受支持的Adobe Creative Cloud应用程序。 创意人员可以使用Creative Cloud应用程序中的应用程序内面板无缝地浏览、搜索、注销和登记资产：Photoshop、Illustrator和InDesign。 资产链接还允许用户搜索视觉效果相似的结果。 视觉搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户查找美学上相似的图像。 请参 [阅使用Adobe资产链接搜索](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) 和浏览资产。
+使用Adobe Asset Link，创意专业人士现在可以访问存储在Experience Manager Assets中的内容，而无需离开受支持的Adobe Creative Cloud应用程序。 创意人员可以使用Creative Cloud应用程序中的应用程序内面板无缝地浏览、搜索、注销和登记资产：Photoshop、Illustrator和InDesign。 资产链接还允许用户搜索视觉效果相似的结果。 视觉搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户查找美学上相似的图像。 请参 [阅使用Adobe资产链接搜索](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) 和浏览资产。
 
 ### 在Experience Manager桌面应用程序中搜索资产 {#desktopapp}
 
@@ -244,7 +244,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ![在资产选取器中浏览并选择资产](assets/assetpicker.png)
 
-*图：在资产选取器中浏览并选择资产*
+*图：在资产选取器中浏览并选择资产。*
 
 ## 限制 {#limitations}
 
@@ -285,7 +285,7 @@ Experience Manager资产中的搜索功能有以下限制：
 
 ![带引号和不带引号的搜索行为](assets/search_with_quotes.gif)
 
-*图：带引号和不带引号的搜索行为*
+*图：带引号和不带引号的搜索行为。*
 
 **使用星号通配符搜索**:要扩大搜索范围，请在搜索单词前后使用星号来匹配任意数量的字符。 例如，搜索不带星号的运行不会返回包含该单词任何变体（包括在元数据中）的资产。 星号可替代任意数量的字符。 例如，
 
@@ -296,7 +296,7 @@ Experience Manager资产中的搜索功能有以下限制：
 
 ![使用示例说明在资产搜索中使用星号通配符](assets/search_with_asterisk_run.gif)
 
-*图：使用示例说明在资产搜索中使用星号通配符*
+*图：举例说明在资产搜索中使用星号通配符。*
 
 **使用问号通配符搜索**:要扩大搜索范围，请使用一个或多个“?” 字符以匹配字符数。 例如，在下图中，
 
@@ -308,13 +308,13 @@ Experience Manager资产中的搜索功能有以下限制：
 
 ![通过示例说明在资产搜索中使用问号通配符的方法](assets/search_with_questionmark_run.gif)
 
-*图：通过示例说明在资产搜索中使用问号通配符的方法*
+*图：通过示例说明在资产搜索中使用问号通配符的方法。*
 
 **排除关键字**:使用虚线搜索不包含关键字的资产。 例如， `running -shoe` 查询会返回包含但 `running`不包含的资产 `shoe`。 同样， `camp -night` 查询会返回包含但不 `camp` 包含的资 `night`产。 请注意， `camp-night` 查询会返回同时包含和的 `camp` 资产 `night`。
 
 ![使用虚线搜索不包含被排除关键字的资产](assets/search_dash_exclude_keyword.gif)
 
-*图：使用虚线搜索不包含被排除关键字的资产*
+*图：使用虚线搜索不包含被排除关键字的资产。*
 
 ## 与搜索功能相关的配置和管理任务 {#configadmin}
 
@@ -355,7 +355,7 @@ Experience Manager资产中的搜索功能有以下限制：
 
 ### 强制元数据 {#mandatorymetadata}
 
-商业用户、管理员或DAM管理员可以将某些元数据定义为必须的元数据，这是业务流程工作所必需的。 由于各种原因，某些资产可能缺少此元数据，如批量迁移的旧资产或资产。 会根据索引元数据属性检测和报告元数据缺失或无效的资产。 要进行配置，请参阅必 [需的元数据](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
+商业用户、管理员或DAM管理员可以将某些元数据定义为必须的元数据，这是业务流程工作所必需的。 由于各种原因，某些资产可能缺少此元数据，如批量迁移的旧版资产或资产。 会根据索引元数据属性检测和报告元数据缺失或无效的资产。 要进行配置，请参阅必 [需的元数据](/help/assets/metadata-schemas.md#define-mandatory-metadata)。
 
 ### 修改搜索彩块化 {#searchfacets}
 
@@ -415,7 +415,7 @@ Experience Manager资产中的搜索功能有以下限制：
 
 ![对搜索资产的时间轴条目进行排序](assets/sort_timeline_search_results.gif)
 
-*图：对搜索资产的时间轴条目进行排序*
+*图：对搜索资产的时间轴条目进行排序。*
 
 ### 下载搜索的资源 {#download}
 
