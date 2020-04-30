@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
@@ -39,13 +39,19 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
-* **[!UICONTROL 正向响应标签]**(*必需*)正向响应的内部属性名称。
+* **[!UICONTROL 正面响应标签]**
 
-* **[!UICONTROL 负响应标签]**(*必需*)负响应的内部属性名称。
+   (必&#x200B;*需*)正面响应的内部属性名称。
 
-* **[!UICONTROL Tally Name]**(*必需*)此投票组件的实例的内部可识别属性名称。
+* **[!UICONTROL 负面响应标签]**
 
-## 网站访客体验 {#site-visitor-experience}
+   (必&#x200B;*需*)负响应的内部属性名称。
+
+* **[!UICONTROL 标签名称]**
+
+   (必&#x200B;*需*)此投票组件实例的内部可识别属性名称。
+
+## 站点访客体验 {#site-visitor-experience}
 
 ### 成员 {#members}
 
@@ -53,7 +59,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 匿名 {#anonymous}
 
-不支持匿名投票。 站点访问者必须注册（成为会员）并登录以参加投票一次。
+不支持匿名投票。 网站访客必须注册（成为会员）并登录一次以参加投票。
 
 ## 附加信息 {#additional-information}
 
