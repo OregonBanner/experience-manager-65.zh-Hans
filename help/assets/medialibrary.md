@@ -3,7 +3,7 @@ title: 比较AEM Assets和AEM Media Library产品
 description: 比较AEM Assets和AEM Media Library产品，了解差异。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 476a8acbca2f498472225fe1df220f63eafe61e5
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -72,32 +72,31 @@ AEM媒体库是AEM WCM内容存储库中存储图像和其他共享资源的指�
 * 处理配置文件
 * InDesign Server集成
 * 资产模板和目录制作者框架
-* Adobe Photoshop、Illustrator和InDesign链接资源
+* Adobe Photoshop、Adobe Illustrator和Adobe InDesign集成
 * 多语言资产管理
 * PIM集成
 * 权限管理
 * Camera RAW支持
 * 搜索彩块化管理和配置
 * 预建的DAM工作流（例如，照片拍摄）
-* 资产报告和分析：资产分析
-* 3D资产管理
+* 称为“洞察”的资产报告和分析
+* 3D资源管理
 * 连接的资产
 * Brand Portal
 * 自助访问
 * 浏览、搜索和下载
 * 集合和文件夹共享
-* 管理工具
+* 管理工具和界面
 * 智能标记
 * 视觉搜索
-* 资产管理员UI
 
 **媒体库**
 
 * 基本元数据属性
-* 标记管理
+* 标签管理
 * 版本控制
 * 静态演绎版
-* 项目、任务、工作流创作
+* 项目，任务，工作流创作
 * 活动流（时间轴）
 * 查询构建器(API)
 * Marketing Cloud集成
