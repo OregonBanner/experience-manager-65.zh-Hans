@@ -1,9 +1,9 @@
 ---
 title: 资产模板
-description: 了解AEM资产中的资产模板以及如何使用资产模板创建营销附属品。
+description: 了解[!DNL Adobe Experience Manager Assets]中的资产模板以及如何使用资产模板创建营销附属品。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -16,11 +16,11 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 在保护全局标牌的同时灵活进行有限的编辑使得资产模板成为快速调整内容和分发内容的理想构件块，并将其作为各种功能的内容伪像进行分发。 内容重用有助于降低管理印刷和数字渠道的成本，并跨这些渠道提供整体一致的体验。
 
-作为营销人员，您可以在AEM资产中存储和管理模板，并使用单个基本模板轻松创建多个个性化的打印体验。 您可以创建各种类型的营销宣传资料，包括小册子、传单、明信片、名片等，以便向客户清晰地传达您的营销信息。 您还可以从现有或新的打印输出组合多页打印输出。 最重要的是，您可以同时轻松提供数字和印刷体验，为用户提供一致、集成的体验。
+作为营销人员，您可以在内部存储和管理模板， [!DNL Experience Manager Assets] 并使用单个基本模板轻松创建多个个性化的打印体验。 您可以创建各种类型的营销宣传资料，包括小册子、传单、明信片、名片等，以便向客户清晰地传达您的营销信息。 您还可以从现有或新的打印输出组合多页打印输出。 最重要的是，您可以同时轻松提供数字和印刷体验，为用户提供一致、集成的体验。
 
-虽然资产模板大多为Adobe InDesign文件，但熟练掌握Adobe InDesign并不妨碍创建出众的人工作。 您无需将Adobe InDesign模板的字段与您在创建目录时需要的产品字段进行映射。 您可以直接在Web界面上以WYSIWYG模式编辑模板。 但是，要使Adobe InDesign处理您的编辑更改，您必须首先配置AEM资产以与Adobe InDesign服务器集成。
+虽然资产模板大多是 [!DNL Adobe InDesign] 文件，但熟练掌握资 [!DNL Adobe InDesign] 产并不妨碍创建明星人工物。 您无需将模板的字段与您的产 [!DNL Adobe InDesign] 品字段进行映射，否则，创建目录时需要这些字段。 您可以直接在Web界面上以WYSIWYG模式编辑模板。 但是，要 [!DNL Adobe InDesign] 处理编辑更改，您必须首先配置以 [!DNL Experience Manager Assets] 与集成 [!DNL Adobe InDesign Server]。
 
-从Web界面编辑Adobe InDesign模板的能力有助于促进创意人员与营销人员之间更紧密的协作，同时缩短本地促销活动的上市时间。
+从Web界面编辑模 [!DNL Adobe InDesign] 板的能力有助于促进创意人员与营销人员之间更紧密的协作，同时缩短本地促销活动的上市时间。
 
 您可以使用资产模板执行以下操作：
 
@@ -30,7 +30,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 * 预览模板编辑
 * 合并多个模板文件以创建多页对象
 
-在您为宣传品选择模板时，AEM资产会创建可编辑的模板副本。 保留原始模板，这可确保您的全局标牌保持不变，并可以重复使用以实现品牌一致性。
+为宣传品选择模板时，将 [!DNL Experience Manager Assets] 创建可编辑的模板副本。 保留原始模板，这可确保您的全局标牌保持不变，并可以重复使用以实现品牌一致性。
 
 可以采用以下格式导出父文件夹内的更新文件：
 
@@ -42,9 +42,9 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ## 创建附属品 {#creating-a-collateral}
 
-请考虑您希望为即将到来的活动创建数字可打印宣传品（如小册子、广告传单和广告）并与全球直销店共享的场景。 基于模板创建附属品有助于跨渠道提供统一的客户体验。 设计人员可以使用InDesign等创意解决方案创建活动模板（单页或多页），并为您上传模板到AEM资产。 在创建宣传资料之前，请事先将一个或多个INDD模板上载到Experience Manager并在其中可用。
+请考虑您希望为即将到来的活动创建数字可打印宣传品（如小册子、广告传单和广告）并与全球直销店共享的场景。 基于模板创建附属品有助于跨渠道提供统一的客户体验。 设计人员可以使用创意解决方案（如单页或多页）创建活动模板，并 [!DNL InDesign] 为您上传模 [!DNL Experience Manager Assets] 板。 在创建宣传品之前，请事先将一个或多个INDD模板上传到并 [!DNL Experience Manager] 可用。
 
-1. 在Experience Manager界面中，单击“ [!UICONTROL 资产”]。
+1. 在界 [!DNL Experience Manager] 面中，单击 [!UICONTROL 资产]。
 
 1. 从选项中，选择“模 **[!UICONTROL 板”]**。
 
@@ -54,7 +54,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 提前将一个或多个INDD模板上传到Experience Manager并在其中可用。 为您的宣传册选择模板，然后单击“下 **[!UICONTROL 一步”]**。
+1. 预先将一个或多个INDD模板上载到并 [!DNL Experience Manager] 可用。 为您的宣传册选择模板，然后单击“下 **[!UICONTROL 一步”]**。
 
    ![chlimage_1-103](assets/chlimage_1-308.png)
 
@@ -90,17 +90,17 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    您可以使用文本编辑器修改要在文本字段中显示的文本。 您可以在标记级别修改字体大小、样式、颜色和类型。
 
-   使用资产查找器，您可以浏览或搜索AEM资产中的图像，并将模板中的可编辑图像替换为您选择的图像。
+   使用资产查找器，您可以浏览或搜索模板中的图像， [!DNL Experience Manager Assets] 并将模板中的可编辑图像替换为您选择的图像。
 
    ![chlimage_1-109](assets/chlimage_1-314.png)
 
-   可编辑内容显示在右侧。 要在AEM资产中编辑字段，必须在InDesign中标记模板中的相应字段。 换句话说，它们应在InDesign中标记为可编辑。
+   可编辑内容显示在右侧。 要在中编辑字段，模 [!DNL Experience Manager Assets]板中的相应字段必须在中标记 [!DNL InDesign]。 换句话说，它们应在中标记为可编辑 [!DNL InDesign]。
 
    ![chlimage_1-110](assets/chlimage_1-315.png)
 
    >[!NOTE]
    >
-   >确保您的AEM实例已与InDesign服务器集成，以使AEM资产能够从InDesign模板中提取数据并使其可供编辑。 有关详细信息，请 [参阅将AEM资产与InDesign Server集成](/help/assets/indesign.md)。
+   >确保实例 [!DNL Experience Manager] 与集成，以启 [!DNL InDesign Server] 用从InDesign [!DNL Experience Manager Assets] 模板提取数据并使其可供编辑。 有关详细信息，请 [参阅将Experience Manager资产与InDesign Server集成](/help/assets/indesign.md)。
 
 1. 要修改可编辑字段中的文本，请单击可编辑字段列表中的文本字段，然后编辑该字段中的文本。
 
@@ -120,7 +120,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-114](assets/chlimage_1-319.png)
 
-   您还可以使用关键字、标记并根据图像的发布状态搜索图像。 您可以浏览AEM资产存储库，然后导航到所需图像的位置。
+   您还可以使用关键字、标记并根据图像的发布状态搜索图像。 您可以浏览整个存 [!DNL Experience Manager Assets] 储库，然后导航到所需图像的位置。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
@@ -136,17 +136,17 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    >[!NOTE]
    >
-   >只有在附属品中的可编辑图像字段没有任何缺少的图标时，预览和完成图标才会启用。 如果您的附属品中缺少图标，这是因为AEM无法解析InDesign模板中的图像。 通常，AEM在以下情况下无法解析图像：
+   >只有在附属品中的可编辑图像字段没有任何缺少的图标时，预览和完成图标才会启用。 如果您的附属品中缺少图标，则是因 [!DNL Experience Manager] 为无法解析模板中的图 [!DNL InDesign] 像。 通常， [!DNL Experience Manager] 在以下情况下无法解析图像：
    >
-   >    * 图像未嵌入底层InDesign模板中
-   >    * 图像从本地文件系统链接
+   >    * 图像未嵌入到基础模 [!DNL InDesign] 板中。
+   >    * 图像从本地文件系统链接。
    >
-   >要启用AEM解析图像，请执行以下操作：
+   >要启用 [!DNL Experience Manager] 解析图像，请执行以下操作：
    >
-   >    * 在创建InDesign模板时嵌入图像(请参 [阅关于链接和嵌入图形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
-   >    * 将AEM装载到本地文件系统，然后将缺少的图标与现有AEM资产映射。
+   >    * 在创建模板时嵌入 [!DNL InDesign] 图像(请参阅 [关于链接和嵌入图形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
+   >    * 装载 [!DNL Experience Manager] 到本地文件系统，然后将缺少的图标与中的现有资源映射在一起 [!DNL Experience Manager]。
    >
-   >有关使用InDesign文档的更多信息，请参 [阅在AEM中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
+   >有关使用文档的更多信 [!DNL InDesign] 息，请参 [阅在Experience Manager中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
 1. 要为小册子生成PDF再现，请在对话框中选择Acrobat选项，然后单击“继 **[!UICONTROL 续”]**。
 1. 附属品会在您开始使用的文件夹中创建。 要视图演绎版，请打开附属品，然后从GlobalNav列表 **[!UICONTROL 中选择]** “演绎版”。
@@ -159,7 +159,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 ## 合并附属品 {#merge-collateral}
 
-1. 在Experience Manager界面中，单击导 [!UICONTROL 航页面] 上的资产。
+1. 在界面 [!DNL Experience Manager] 中，单击 [!UICONTROL 导航页面上的] “资产”。
 
 1. 从选项中，选择“模 **[!UICONTROL 板”]**。
 
@@ -179,7 +179,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-123](assets/chlimage_1-328.png)
 
-   您可以浏览AEM资产存储库或收藏集，然后导航到所需模板的位置，然后选择它们进行合并。
+   您可以浏览存储库 [!DNL Experience Manager Assets] 或集合，导航到所需模板的位置，然后选择它们进行合并。
 
    ![chlimage_1-124](assets/chlimage_1-329.png)
 
@@ -192,7 +192,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
 
-1. 在“配 [!UICONTROL 置模板] ”屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选择 **[!UICONTROL Acrobat(.PDF)]**。 默认情况下，辅助材料以JPG和InDesign格式导出。 要更改多页宣传资料的显示缩略图，请单击“更 **[!UICONTROL 改缩略图”]**。
+1. 在“配 [!UICONTROL 置模板] ”屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选择 **[!UICONTROL Acrobat(.PDF)]**。 默认情况下，附属品以JPG和格式导 [!DNL InDesign] 出。 要更改多页宣传资料的显示缩略图，请单击“更 **[!UICONTROL 改缩略图”]**。
 
    ![chlimage_1-127](assets/chlimage_1-332.png)
 
