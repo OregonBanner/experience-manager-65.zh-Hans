@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -19,15 +19,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 AEM Communities的翻译功能将页面内容翻译的概念扩展 [到使用社交组件框架(SCF)组件发布到社区站点的用](../../help/sites-administering/translation.md) 户生成的内容(UGC) [](scf.md)。
 
-UGC的翻译通过消除语言障碍使网站访问者和会员能够体验到一个全球社区。
+UGC的翻译使网站访客和会员能通过消除语言障碍体验到全球社区。
 
-例如，假设，
+例如，假设：
 
-* 一位来自法国的成员在一家跨国烹饪网站的社区论坛上张贴了一份法语菜谱
-* 另一位来自日本的会员使用翻译功能触发从法语翻译成日语的菜谱
-* 读完日文菜谱后，这位来自日本的会员随后用日文发表评论
-* 来自法国的成员使用翻译功能将日语评论翻译成法语
-* 全球通信！
+* 一位来自法国的成员用法语向一个跨国烹饪网站的社区论坛张贴了一个菜谱。
+* 另一位来自日本的会员使用翻译功能触发将菜谱从法语翻译成日语。
+* 读完日文菜谱后，这位来自日本的会员用日文发表评论。
+* 来自法国的成员使用翻译功能将日语评论翻译成法语。
+* 全球通信。
 
 ## 概述 {#overview}
 
@@ -35,7 +35,7 @@ UGC的翻译通过消除语言障碍使网站访问者和会员能够体验到�
 
 当翻译服务提供商与站点相关联时，站点的每个语言副本将维护其自己通过SCF组件（如注释）发布的UGC线程。
 
-当除了翻译服务提供商之外配置翻译集成框架时，站点的每个语言副本可以共享单个UGC线程，从而提供跨语言副本的全局通信。 所配置的全局共享存储使整个线程能够可见，而不管 [从哪个语言副本查看它](#global-translation-of-ugc) ，都不是按语言分隔的讨论线程。 此外，可以配置多个翻译集成配置以指定不同的全局共享存储，用于全局参与者的逻辑分组，例如按区域。
+当在翻译服务提供商之外配置翻译集成框架时，站点的每个语言副本都可能共享单个UGC线程，从而提供跨语言副本的全局通信。 所配置的全局共享存储使整个线程能够可见，而不管 [从哪个语言副本查看它](#global-translation-of-ugc) ，都不是按语言分隔的讨论线程。 此外，可以配置多个翻译集成配置以指定不同的全局共享存储，用于全局参与者的逻辑分组，例如按区域。
 
 ## 默认翻译服务 {#the-default-translation-service}
 
@@ -48,6 +48,7 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 >默认翻译服务仅用于演示。
 >
 >对于生产系统，需要获得许可的翻译服务。 如果未获得许可，则应关闭默认翻译 [服务](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)。
+
 
 ## UGC的全球翻译 {#global-translation-of-ugc}
 
@@ -67,6 +68,7 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 >
 >没有用于将特定语言的内容移动或合并到全局共享存储的迁移工具。
 
+
 ### 翻译集成配置 {#translation-integration-configuration}
 
 要创建新的翻译集成，它将翻译服务连接器与创作实例上的网站相集成：
@@ -79,11 +81,11 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 * 选择 **[!UICONTROL 云服务]**
 * 向下滚动到翻译 **[!UICONTROL 集成]**
 
-![chlimage_1-65](assets/chlimage_1-65.png)
+   ![chlimage_1-65](assets/chlimage_1-65.png)
 
 * 选择显 **[!UICONTROL 示配置]**
 
-![chlimage_1-66](assets/chlimage_1-66.png)
+   ![chlimage_1-66](assets/chlimage_1-66.png)
 
 * 选择“ `[+]` 可用配置” **[!UICONTROL 旁边的图标]** ，以创建新配置
 
@@ -91,11 +93,17 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-* **[!UICONTROL 父配置]**（必需）通常保留为默认值。 Default is `/etc/cloudservices/translation`.
+* **[!UICONTROL 父配置]**
 
-* **[!UICONTROL 标题]**（必需）输入您选择的显示标题。 无默认值。
+   （必需）通常保留为默认值。 Default is `/etc/cloudservices/translation`.
 
-* **[!UICONTROL 名称]**（可选）输入配置的名称。 默认为基于标题的节点名称。
+* **[!UICONTROL 标题]**
+
+   （必需）输入您选择的显示标题。 无默认值。
+
+* **[!UICONTROL 名称]**
+
+   （可选）输入配置的名称。 默认为基于标题的节点名称。
 
 * Select **[!UICONTROL Create]**
 
@@ -105,20 +113,21 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 
 有关详细说明，请 [访问创建翻译集成配置](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration)
 
-* **[!UICONTROL “站点]** ”选项卡：可以保留为默认值
+* **[!UICONTROL “站点]** ”选项卡：可以保留为默认值。
+
 * **[!UICONTROL “社区]** ”选项卡：
    * **[!UICONTROL 翻译提供]**&#x200B;者从下拉列表中选择翻译提供者。 默认为 `microsoft`试用服务。
 
-   * **[!UICONTROL 内容类]**&#x200B;别选择描述要翻译的内容的类别。 Default is `General.`
+   * **[!UICONTROL 内容类别]**&#x200B;选择描述要翻译的内容的类别。 Default is `General.`
 
-   * ****&#x200B;选择区域设置……（可选）通过选择存储UGC的区域设置，来自所有语言副本的帖子将显示在一个全局对话中。 根据惯例，为网站的基 [本语言](sites-console.md#translation) 选择区域设置。 选择 `No Common Store` 将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。
+   * **[!UICONTROL 选择区域设置……]**（可选）通过选择存储UGC的区域设置，来自所有语言副本的帖子将显示在一个全局对话中。 根据惯例，为网站的基 [本语言](sites-console.md#translation) 选择区域设置。 选择 `No Common Store` 将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。
 
-* **[!UICONTROL “资产]** ”选项卡：可以保留为默认值
+* **[!UICONTROL “资产]** ”选项卡：可以保留为默认值。
 * 选择确 **[!UICONTROL 定]**
 
 #### 激活 {#activation}
 
-新的翻译集成云服务需要激活到发布环境。 当与网站关联时，如果尚未激活，则激活工作流会在与之关联的页面发布时提示发布此云服务配置。
+新的翻译集成云服务需要激活到发布环境。 当与网站关联时，如果尚未激活，则激活工作流会在与其关联的页面发布时提示发布此云服务配置。
 
 ## 管理翻译设置 {#managing-translation-settings}
 
@@ -128,15 +137,16 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 >
 >为了检测帖子是否使用不同于首选语言的语言，必须建立网站访客的首选语言。
 >
->首选语言是在站点访问者登录并指定了语言首选项时，用户配置文件中设置的语言首选项。
+>首选语言是用户用户档案中设置的语言首选项，当站点访客登录并指定了语言首选项时。
 >
->当站点访问者为匿名者或在其个人资料中未指定语言首选项时，首选语言是页面模板的基本语言。
+>当站点访客为匿名内容或在其用户档案中未指定语言首选项时，首选语言是页面模板的基本语言。
+
 
 ### 用户首选项 {#user-preference}
 
 #### 用户个人资料 {#user-profile}
 
-所有社区站点都提供一个用户配置文件，登录会员可以进行编辑，以便向社区标识自己并设置其首选项。
+所有社区站点都提供了用户用户档案，登录会员可以编辑该用户区域，以便向社区标识自己并设置其首选项。
 
 一种设置是是否始终以其首选语言显示社区内容。 默认情况下，设置未设置，将默认为系统设置。 用户可以将设置更改为“开”或“关”，从而覆盖系统设置。
 
@@ -146,4 +156,4 @@ AEM Communities附带针对为多种语 [言启用的](../../help/sites-administ
 
 ### 社区站点设置 {#community-site-setting}
 
-创建社区站点后，可以启用和配置翻译选项。 翻译设置对匿名站点访问者可能查看的内容有效，但会被用户的配置文件设置覆盖。
+创建社区站点后，可以启用和配置翻译选项。 翻译设置对于匿名网站访客可能视图的内容有效，但由用户的用户档案设置覆盖。
