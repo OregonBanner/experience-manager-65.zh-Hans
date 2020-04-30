@@ -3,7 +3,7 @@ title: 在[!DNL Adobe Experience Manager]中管理数字资产的元数据。
 description: 了解元数据的类型以及[!DNL Adobe Experience Manager Assets]如何帮助管理资产的元数据，从而更轻松地对资产进行分类和组织。 [!DNL Experience Manager]允许根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9bf48a6057e08e9feafc0e18d6fa9d0145768cf2
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -74,11 +74,11 @@ For these reasons, [!DNL Assets] provides you with the right means of creating, 
 * XMP: used by [!DNL Assets] to store the extracted metadata within the repository.
 * ID3：适用于音频和视频文件。
 * Exif:图标。
-* 其他／旧版：从Microsoft Word、PowerPoint、Excel等中。
+* 其他／旧版：从 [!DNL Microsoft Word]、 [!DNL PowerPoint][!DNL Excel]、等等。
 
 ### XMP {#xmp}
 
-可扩展元数据平台(XMP)是一个开放标准，用于所 [!DNL Experience Manager Assets] 有元数据管理。 标准优惠可嵌入到所有文件格式的通用元数据编码。 Adobe和其他公司支持XMP标准，因为它提供了丰富的内容模型。 XMP标准和的用户拥 [!DNL Experience Manager Assets] 有强大的平台可以构建。 有关详细信息，请参 [阅XMP](https://www.adobe.com/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)是一个开放标准，用于所 [!DNL Experience Manager Assets] 有元数据管理。 标准优惠可嵌入到所有文件格式的通用元数据编码。 Adobe和其他公司支持XMP标准，因为它提供了丰富的内容模型。 XMP标准和的用户拥 [!DNL Experience Manager Assets] 有强大的平台可以构建。 有关详细信息，请参 [阅XMP](https://www.adobe.com/products/xmp.html)。
 
 ### ID3 {#id}
 
@@ -114,62 +114,62 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 
 ### Standard metadata {#standard-metadata}
 
-* dc - 都柏林核心 - 最重要、应用最广泛的元数据集.
+* dc - [!DNL Dublin Core] is the most important and widely used set of metadata.
 * DICOM - 医学数字成像和通信.
-* Iptc4xmpCore和iptc4xmpExt - International Press Communications Standard —— 许多特定于主题的元数据。
+* Iptc4xmpCore和iptc4xmpExt - International Press Communications Standard包含许多特定于主题的元数据。
 * rdf - 资源描述框架 - 适用于通用语义 Web 元数据.
-* xmp - 可扩展元数据平台.
+* xmp - [!DNL Extensible Metadata Platform].
 * xmpBJ - 基本工单.
 
 ### Application-specific metadata {#application-specific-metadata}
 
 特定于应用程序的元数据包括技术和描述性元数据。 如果您使用这类元数据，其他应用程序将无法使用这些元数据。For example, if you have an asset with [!DNL Adobe Photoshop] metadata and another image-rendering application tries to access the metadata, it may not be able to access the metadata. 如果您发现资产中有许多特定于应用程序的元数据，则可以创建一个将特定于应用程序的属性更改为标准属性的工作流步骤。
 
-* acdsee - metadata managed by the ACDSee program [www.acdsee.com/](https://www.acdsee.com/).
-* album - Adobe Photoshop Album.
-* cq - used by [!DNL Experience Manager Assets].
+* ACDSee —— 由项目管理的元数 [!DNL ACDSee] 据。 请参 [阅www.acdsee.com/](https://www.acdsee.com/)。
+* album - [!DNL Adobe Photoshop Album]。
+* cq - Used by [!DNL Experience Manager Assets].
 * dam —— 使用者 [!DNL Experience Manager Assets]。
 * dex - Optima SC Description Explorer.
 * crs - Adobe Photoshop Camera Raw.
-* lr - Adobe Lightroom.
+* lr - [!DNL Adobe Lightroom]。
 * mediapro - IView MediaPro.
 * MicrosoftPhoto 和 MP - Microsoft Photo.
 * pdf 和 pdfx.
-* photoshop 和 psAux - Adobe Photoshop.
+* photoshop和psAux - [!DNL Adobe Photoshop]。
 
 ### Digital Rights Management metadata {#digital-rights-management-metadata}
 
-* cc - Creative Commons
-* xmpRights
-* plus —— 图片授权通用系统- https://www.useplus.com/
-* prism - https://www.idealliance.org/prism-metadata行业标准元数据的发布要求
-* prl - Prism 权限语言
-* pur - Prism 使用权限
-* xmpPlus - PLUS 与 XMP 的集成
+* CC - [!DNL Creative Commons].
+* [!DNL XMPRights]。
+* plus - [Picture Licensing Universal System](https://www.useplus.com).
+* prism - https://www.idealliance.org/prism-metadata行业标准元数据的发布要求。
+* PRL - PRISM权限语言。
+* PUR - PRISM使用权。
+* xmpPlus - PLUS与XMP集成。
 
 ### Photography-specific metadata {#photography-specific-metadata}
 
-* exif - 照相机中的大量技术性信息，包括 GPS 定位
-* crs - Photoshop Camera Raw
-* Iptc4xmpCore和iptc4xmpExt
-* TIFF - 图像元数据（并非只适用于 TIFF 图像）
+* Exif —— 相机中的技术信息，包括GPS位置。
+* CRS - [!DNL Camera Raw] 模式。
+* Iptc4xmpCore和iptc4xmpExt.
+* TIFF —— 图像元数据（不仅适用于TIFF图像）。
 
 ### Print-specific metadata {#print-specific-metadata}
 
-* pdf和pdfx - Adobe PDF和第三方应用程序
-* prism - [www.prismstandard.org](https://www.prismstandard.org) Publishing Requirements for Industry Standard Metadata
-* xmp
-* xmpPG - 适用于分页文本的 xmp
+* pdf和pdfx - Adobe PDF和第三方应用程序。
+* prism - [www.prismstandard.org](https://www.prismstandard.org) Publishing Requirements for Industry Standard Metadata.
+* xmp.
+* xmpPG —— 分页文本的XMP元数据。
 
 ### Multimedia-specific metadata {#multimedia-specific-metadata}
 
-* xmpDM - Dynamic Media
-* xmpMM - 媒体管理
+* xmpDM - [!DNL Dynamic Media].
+* xmpMM - 媒体管理.
 
 ## Metadata-driven workflows {#metadata-driven-workflows}
 
 创建元数据驱动的工作流可帮助您实现某些流程的自动化，从而提高效率。 在元数据驱动的工作流中，工作流管理系统会读取该工作流，然后相应地执行某些预定义操作。例如，以下是可以利用元数据驱动的工作流实现的功能：
 
-* 该工作流可以检查图像是否含有标题。如果图像没有标题，系统会通知特定用户添加标题。
-* 该工作流可以检查资产上的版权声明是否允许分发。如果允许分发，系统会将资产发送到某台服务器。如果不允许分发，系统会将资产发送到另一台服务器。
-* 工作流可以检查资产，而无需预定义的强制元数据，也可以检查元数据 *无效* 。
+* 该工作流可以检查图像是否具有标题。 如果没有，系统会通知添加标题。
+* 该工作流可以检查资产上的版权声明是否允许分发。 因此，系统将资产发送到一台或另一台服务器。
+* 工作流可以检查没有预定义的强制元数据的资产，或具有无效元数据的 *资产* 。
