@@ -1,9 +1,9 @@
 ---
-title: 层叠元数据
+title: '[!DNL Adobe Experience Manager资产]中的层叠元数据。'
 description: 本文介绍如何为资产定义级联元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 * 根据在另一个字段中指定的值更改为特定字段显示的选项。
 * 根据在其他字段中指定的值，在特定字段中设置默认元数据值。
 
-## 在AEM中配置级联元数据 {#configure-cascading-metadata-in-aem}
+## 在 [!DNL Experience Manager]{#configure-cascading-metadata-in-aem}
 
 请考虑要根据所选资产类型显示级联元数据的方案。 一些示例
 
@@ -32,7 +32,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
 无论选择的资产类型如何，都可以将版权信息显示为必填字段。
 
-1. 在Experience Manager界面中，转到工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** >元 **[!UICONTROL 数据模式]**。
+1. 在界 [!DNL Experience Manager] 面中，转到工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** >元数 **[!UICONTROL 据模式]**。
 1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
 
    ![select_form](assets/select_form.png)
@@ -51,7 +51,7 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    * 要手动指定值，请选择“手 **[!UICONTROL 动添加]**”，然后单击“ **[!UICONTROL 添加选择]** ”并指定选项文本和值。 例如，指定视频、PDF、Word和图像资产类型。
 
-   * 要从JSON文件动态获取值，请选择“ **[!UICONTROL 通过JSON路径添加]** ”并提供JSON文件的路径。 AEM在向用户显示表单时实时获取键值对。
+   * 要从JSON文件动态获取值，请选择“ **[!UICONTROL 通过JSON路径添加]** ”并提供JSON文件的路径。 [!DNL Experience Manager] 当向用户显示表单时，实时获取键值对。
    两个选项互斥。 无法从JSON文件导入选项并手动编辑。
 
    ![add_choice](assets/add_choice.png)
@@ -105,8 +105,8 @@ source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
 
    ![视频资产的级联元数据](assets/video_asset.png)
 
-   *图：视频的级联元数据*
+   *图：视频的级联元数据。*
 
    ![文档资产的级联元数据](assets/doc_type_fields.png)
 
-   *图：文档的级联元数据*
+   *图：文档的级联元数据。*
