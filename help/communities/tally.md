@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
-source-git-commit: 01f14c203e45b85c9d7733d88437bd56e3c27c8e
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
 # Tally Essentials {#tally-essentials}
 
-Tally是一个抽象类，它提供了从成员那里收集反馈的标准方法，这些反馈是关于他们如何评价特定产品和服务。 不支持匿名反馈。 网站访问者必须注册并登录才能参加和登录以更改其反馈。 登录要求有助于协调，并通过阻止多个帖子来提高反馈的价值。
+Tally是一个抽象类，它提供了从成员那里收集反馈的标准方法，这些反馈是关于他们如何评价特定产品和服务。 不支持匿名反馈。 站点访客必须注册并登录才能参加和登录以更改其反馈。 登录要求有助于协调，并通过阻止多个帖子来提高反馈的价值。
 
 可通过扩展抽象计数类来创建自定义计数组件。
 
@@ -48,14 +48,14 @@ Tally是一个抽象类，它提供了从成员那里收集反馈的标准方法
 UGC应使用一种标准的仲裁方法进行仲裁。
 请参阅 [审核用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对 [UGC使用公用商店](working-with-srp.md) ，包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1 Communities起，对UGC使用公 [用商店](working-with-srp.md) ，包括以编程方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -介绍和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP](accessing-ugc-with-srp.md) —— 编码准则访问UGC。
+* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
 
