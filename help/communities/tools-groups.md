@@ -11,12 +11,12 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# 组模板{#group-templates}
+# 组模板 {#group-templates}
 
 “组模板”控制台与“站点模板”控 [制台类似](/help/communities/sites.md) 。 两者都是构成社区站点的一系列预连接页面和功能的蓝图。 区别在于，站点模板适用于主社区，而组模板适用于社区组，即嵌套在主社区中的子社区。
 
@@ -30,9 +30,10 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >用于创建社区站点的控 [制台](/help/communities/sites-console.md)、社区站点 [模板](/help/communities/sites.md)、社区组模板 [](/help/communities/tools-groups.md)[](/help/communities/functions.md) 和社区功能的控制台仅在创作环境中使用。
 
+
 ## 组模板控制台 {#group-templates-console}
 
-要在AEM创作环境中访问组模板控制台，请执行以下操作：
+要访问AEM作者环境中的组模板控制台，请执行以下操作：
 
 * 选择工 **具|社区|组模板** ，从全局导航中。
 
@@ -42,7 +43,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ## 创建组模板 {#create-group-template}
 
-要开始创建新用户组模板，请选择 `Create`
+要开始创建新用户组模板，请选择 `Create`。
 
 这将显示包含3个子面板的“站点编辑器”面板：
 
@@ -52,15 +53,17 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 在“基本信息”面板上，将配置名称、说明以及是否启用或禁用模板：
 
-* **新组模板名称**&#x200B;模板名称id
+* **新组模板名称**
+
+   模板名称id。
 
 * **描述**
 
-   模板说明
+   模板描述。
 
 * **禁用／启用**
 
-   控制模板是否可引用的切换开关
+   控制模板是否可引用的切换开关。
 
 #### 缩略图 {#thumbnail}
 
@@ -78,6 +81,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 >
 >仍不允许将“组”功能添加为模板中的第一个或唯一的函数。
 
+
 ![组模板编辑器](assets/template-editor.png)
 
 要添加社区功能，请按站点菜单链接的显示顺序从右侧向左拖动。 样式将在创建站点期间应用于模板。
@@ -88,7 +92,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![拖动函数](assets/dragfunctions.png)
 
-将所有所需的功能放入模板生成器区域并进行配置后，选择右上角的**保存**。
+将所有所需的功能放入模板生成器区域并进行配置后，选择 **右上角的** “保存”。
 
 ## 编辑组模板{#edit-group-template}
 
