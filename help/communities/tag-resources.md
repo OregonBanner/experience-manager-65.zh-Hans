@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
-source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -51,7 +51,7 @@ source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
 
 在创建或编辑社区站点时，“ [Tagging](sites-console.md#tagging) ”设置通过选择现有标记命名空间的子集来设置可用于站点功能的标记的范围。
 
-虽然可以随时创建标记并将其添加到社区站点，但建议事先设计分类，这与设计数据库类似。 请参阅 [使用标记](../../help/sites-authoring/tags.md)。
+虽然可以随时创建标记并将其添加到社区站点，但建议事先设计分类，与设计数据库类似。 请参阅 [使用标记](../../help/sites-authoring/tags.md)。
 
 以后向现有社区站点添加标记时，必须先保存编辑，然后才能将新标记添加到站点结构中的目录功能。
 
@@ -81,7 +81,7 @@ source-git-commit: fa01c9fad82adb021220631a0536ab77ceb01e31
 
 例如，如果创建了 `ski-catalog` 命名空间并在名为的目录上进行了设置 `Ski Catalog`，则它可能有两个子标记： `lesson-1` 和 `lesson-2`。
 
-因此，使用以下任一项标记的任何支持资源
+因此，使用以下任一选项标记任何支持资源：
 
 * ski-catalog:lesson-1
 * ski-catalog:lesson-2
