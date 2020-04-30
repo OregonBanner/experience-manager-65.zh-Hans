@@ -11,12 +11,12 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 2bcd098ae901070d5e50cd89d06c854884b4e461
 
 ---
 
 
-# 升级到 AEM 6.5 Communities{#upgrading-to-aem-communities}
+# 升级到 AEM 6.5 Communities {#upgrading-to-aem-communities}
 
 根据每个站点的拓扑和功能，在升级到AEM Communities 6.5或安装最新功能包时，可能需要执行以下操作。
 
@@ -26,50 +26,50 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ### 重新索引Solr {#reindex-solr}
 
-在配置了MSRP的部署中安装新的Communities功能包时，必须
+在配置了MSRP的部署中安装新的Communities功能包时，必须：
 
-1. 安装最 [新功能包](/help/communities/deploy-communities.md#latestfeaturepack)
-1. 安装最 [新的Solr配置文件](/help/communities/msrp.md#upgrading)
-1. 重新索引MSRP请参阅“ [MSRP重新索引工具”一节](/help/communities/msrp.md#msrp-reindex-tool)
+1. 安装最 [新的功能包](/help/communities/deploy-communities.md#latestfeaturepack)。
+1. 安装最 [新的Solr配置文件](/help/communities/msrp.md#upgrading)。
+1. 重新索引MSRP请参阅“ [MSRP重新索引工具”一节](/help/communities/msrp.md#msrp-reindex-tool)。
 
 ### Enablement 2.0 {#enablement}
 
 自AEM 6.3起，启用功能不再在MySQL中存储报告信息。 MySQL依赖关系仅用于跟踪SCORM内容。
 
-请联系客 [户关怀团队](https://helpx.adobe.com/marketing-cloud/contact-support.html) ，以获取从Enablement 1.0迁移内容的帮助。
+请联系客 [户关怀团队](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html) ，以获取从Enablement 1.0迁移内容的帮助。
 
 ## 从AEM 6.0升级 {#upgrading-from-aem}
 
 如果需要保留预先存在的UGC，则执行此操作的方法取决于部署是预先存储 [UGC](#on-premise-storage) ，还是 [Adobe云](#adobe-cloud-storage)。
 
-### Adobe云存储 {#adobe-cloud-storage}
+### Adobe Cloud存储 {#adobe-cloud-storage}
 
 如果已升级的站点配置为使用Adobe云存储，则可能会（错误地）显示该站点，好像所有UGC都已丢失，因为SRP方法将无法在旧位置找到预先存在的UGC。
 
 因此，能够指示ASRP使用访问 `AEM 6.0 compatability-mode` UGC。
 
-对于所有AEM 6.3作者和发布实例
+对于所有AEM 6.3作者和发布实例：
 
-* 使用管理员权限登录
-* 配置 [ASRP](/help/communities/asrp.md)
+* 使用管理员权限登录。
+* 配置 [ASRP](/help/communities/asrp.md)。
 * 按照以下步骤使预先存在的UGC可见：
 
-   * 浏览到Web控制台
+   * 浏览到Web控制台：
 
       * 例如， [https://&lt;host>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 找到 **AEM Communities实用程序配置** 。
-   * 选择展开配置面板
 
-      * *取消选中***`Cloud Storage`**
+      * 找到 **AEM Communities实用程序配置** 。
+      * 选择以展开配置面板：
 
-      * select **Save**
+         * *取消选中*`Cloud Storage`
 
+         * Select **Save**
+      ![chlimage_1-176](assets/chlimage_1-176.png)
 
-![chlimage_1-176](assets/chlimage_1-176.png)
 
 ### 预置存储 {#on-premise-storage}
 
-如果升级的站点未使用云存储，则必须将任何预先存在的UGC转换为符合AEM 6.1 Communities中引入的新结构，以支持公用存储。
+如果升级的站点未使用云存储，则任何预先存在的UGC必须转换为符合AEM 6.1 Communities中引入的新结构，以支持公用商店。
 
 为此，GitHub上提供了开放源代码迁移工具：[AEM Communities UGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
@@ -85,7 +85,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 社 [交组件框架](/help/communities/scf.md) (SCF)使用 [HandlebarsJS](https://www.handlebarsjs.com/) (HBS)模板语言代替AEM 6.0之前使用的Java服务器页面(JSP)。
 
-在AEM 6.0中，JSP组件将保留在新的HBS框架组件旁边，并位于同一位置，HBS组件通常位于名为“hbs”的子文件夹中。
+在AEM 6.0中，JSP组件将保留在新HBS框架组件旁边的同一位置，HBS组件通常位于名为“hbs”的子文件夹中。
 
 自AEM 6.1起，JSP组件已完全删除。 对于Communities，建议将JSP组件的所有使用替换为SCF组件。
 
@@ -99,8 +99,8 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 从概念上讲，有三代社区组件：
 
-**第1代** :大约CQ 5.4到AEM 5.6.0 —这些是 **collab** 组件，它们将UGC存储在本地存储库中，将复制用作跨平台同步UGC的手段。 其他差异包括使用Java服务器页面(JSP)的实现，以及仅在创作环境中进行创作的博客功能。
+**第1代**:大约是CQ 5.4到AEM 5.6.0，这些组件是 **collab** 组件，它们将UGC存储在本地存储库中，并将复制用作跨平台同步UGC的手段。 其他差异包括使用Java服务器页面(JSP)的实现以及仅在创作环境中进行创作的博客功能。
 
-**第2代** :从AEM 5.6.1到AEM 6.1 —— 这是协作和社交组 **件****的组合** 。 AEM 6.0引入了新的社 [交组件框架](/help/communities/scf.md) (SCF),AEM 6.2引入了一个通用的UGC存储 [，在该存储中可使用存储资源提供](/help/communities/working-with-srp.md) 程序 [](/help/communities/srp.md) (SRP)访问UGC。
+**第2代**:从AEM 5.6.1到AEM 6.1，这是协作和社交组 **件****的组合** 。 AEM 6.0引入了新的社 [交组件框架](/help/communities/scf.md) (SCF),AEM 6.2引入了一个通用的UGC store [，在该商店中，可以使用](/help/communities/working-with-srp.md) 存储资源提供者 [](/help/communities/srp.md) (SRP)访问UGC。
 
-**第3代** :从AEM 6.2 forward中，只有社交组件在SCF中实现为Handlebars(HBS)组件，这要求为UGC选择SRP。 ****
+**第3代**:从AEM 6.2向前，只有社交组件在SCF中实现为Handlebars(HBS)组件，这要求为UGC选择SRP。 ****
