@@ -3,7 +3,7 @@ title: 元数据架构
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -26,7 +26,7 @@ source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
    ![资产属性的基本选项卡，其中无法更改资产类型](assets/asset-properties-basic-tab.png)
 
-   *图：资产属性上的“基本”选项卡*
+   *图：资产属性上的“基本”选项卡。*
 
    要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 有关更 [多信息，请参阅编辑元数据模式表](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) 单。 如果您修改了某些MIME类型的元数据模式，则将修改当前MIME类型和所有资产子类型的资产的属性页面布局。 例如，修改jpeg模式时，只 `default/image` 会修改MIME类型资产的元数据布局（资产属性） `image/jpeg`。 但是，如果您编辑默认模式，则所做的更改将修改所有类型资产的元数据布局。
 
@@ -86,9 +86,9 @@ source-git-commit: f737122575c9fd0af82a8b86d259db61753f2f97
 
    ![用于自定义资产属性页面的元数据模式编辑器](assets/metadata-schema-editor.png)
 
-   *图：元数据模式编辑器的“基本”选项卡*
+   *图：元数[!UICONTROL 据模式]编辑器的“[!UICONTROL 基本”选项卡]。*
 
-1. To configure a component, select it and modify its properties in the **Settings** tab.
+1. To configure a component, select it and modify its properties in the **[!UICONTROL Settings]** tab.
 
 ### “构建表单”选项卡内的组件{#components-within-the-build-form-tab}
 
@@ -127,29 +127,21 @@ To edit the properties of a metadata component on the form, click the component 
 
 要确保在元数据模式表单中正确显示组件，属性路径不应包括任何空格。
 
-**占位符**:使用此属性可指定与元数据属性相关的占位符文本。
-
-**必需**:使用此属性可在属性页面上将元数据属性标记为必填。
-
-**禁用编辑**:使用此属性可使元数据属性在属性页面上不可编辑。
-
-**在只读模式下显示空字段**:标记此属性可在属性页面上显示元数据属性，即使它没有值也是如此。默认情况下，当元数据属性没有值时，不会在属性页面上列出该属性。
-
-**显示已订购的列表**:使用此属性可显示选项的有序列表
-
-**选择**:使用此属性指定列表中的选项
-
-**描述**：使用此属性可添加对元数据组件的简短描述。
-
-**类**:属性关联的对象类。
-
-**删除**:单击此图标可从模式表单中删除组件。
+* **占位符**:使用此属性可指定与元数据属性相关的占位符文本。
+* **必需**:使用此属性可在属性页面上将元数据属性标记为必填。
+* **禁用编辑**:使用此属性可使元数据属性在属性页面上不可编辑。
+* **在只读模式下显示空字段**:标记此属性可在属性页面上显示元数据属性，即使它没有值也是如此。默认情况下，当元数据属性没有值时，不会在属性页面上列出该属性。
+* **显示已订购的列表**:使用此属性可显示选项的有序列表
+* **选择**:使用此属性指定列表中的选项
+* **描述**：使用此属性可添加对元数据组件的简短描述。
+* **类**:属性关联的对象类。
+* **删除**:单击此图标可从模式表单中删除组件。
 
 ![元数据模式表单上的删除图标](assets/chlimage_1-177.png)
 
 >[!NOTE]
 >
->隐藏字段组件不包括这些属性。 而是包括属性，如名称、值、字段标签和说明。 无论何时保存资产，都会将“隐藏字段”组件的值作为 POST 参数进行发送。该组件的值不会作为资产的元数据进行保存。
+>隐 [!UICONTROL 藏字段] (Hidden Field)组件不包括这些属性。 而是包括属性，如名称、值、字段标签和说明。 无论何时保存资产，都会将“隐藏字段”组件的值作为 POST 参数进行发送。该组件的值不会作为资产的元数据进行保存。
 
 如果选择&#x200B;**[!UICONTROL 必需]**&#x200B;选项，则可以搜索缺少必需元数据的资产。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，展开&#x200B;**[!UICONTROL 元数据验证]**&#x200B;谓词，然后选择&#x200B;**[!UICONTROL 无效]**&#x200B;选项。搜索结果中显示的资产缺少您通过架构表单配置的必需元数据。
 
@@ -163,7 +155,7 @@ To edit the properties of a metadata component on the form, click the component 
 
 ![在上下文元数据列表中选择的选项卡将显示在资产属性页面上](assets/contextual-metadata-asset-properties.png)
 
-*图：资产属性页面中的上下文元数据*
+*图：资产属性页面中的上下文元数据。*
 
 ### 在JSON文件中指定属性 {#specify-properties-in-json-file}
 
@@ -263,7 +255,7 @@ AEM资产允许您定义元数据模式的变体，并将其应用到特定文�
 
    ![添加到元数据模式表单编辑器的文本字段](assets/text-field-metadata-schema-editor.png)
 
-   *图：向元数据模式表单编辑器添加的文本字段*
+   *图：文本字段已添加到元数据模式表单编辑器。*
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据模式表 **[!UICONTROL 单页面中]** 。
 1. 单击／点 **[!UICONTROL 按工具栏中的应用到文件夹]** ，以将自定义元数据应用到文件夹。
@@ -295,7 +287,7 @@ AEM资产允许您定义元数据模式的变体，并将其应用到特定文�
 
    ![在元数据模式表单编辑器的“规则”选项卡中选择“必需”，将必填字段添加到元数据表单](assets/mandatory-field-metadata-schema-editor.png)
 
-   *图：元数据模式表单编辑器中的必填字段*
+   *图：元数据模式表单编辑器中的必填字段。*
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据模式表 **[!UICONTROL 单页面中]** 。 选择表单，然后单击或点按工 **[!UICONTROL 具栏中的应用到文件夹]** ，以将自定义元数据应用到文件夹。
 
