@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
@@ -21,7 +21,9 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 客户端自定义 {#client-side-customization}
 
-另请参阅 [SCF客户端自定义](client-customize.md)。
+另请参阅：
+
+* [SCF客户端自定义](client-customize.md)
 
 * [社区组件指南](components-guide.md)
 
@@ -45,7 +47,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVC演示如何从头开发SCF+SRP组件
+   ToDo MVC演示如何从头开发SCF+SRP组件。
 
 * [AEM Communities 快速入门](getting-started.md)
 
@@ -57,13 +59,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## 演示用户 {#demo-users}
 
-Geometrixx范例包中包括演示用户。 通常，作为访客（未登录）或成员（已登录）与只要Geometrixx示例包保持安装，您在使用“社区组件”指南进行探索时可以使用这些用户模拟已登录状态之间存在差异 [](components-guide.md)。
+Geometrixx范例包中包括演示用户。 通常，身为访客（未登录）或成员（已登录）与只要Geometrixx示例包保持安装，您在使用社区组件指南进行探索时可以使用这些用户模拟已登录状态之间存在差异 [](components-guide.md)。
 
-有关演示用户的完整列表，请使用边栏导航到工具>操 **[!UICONTROL 作>安全>用户]**。 或者使用经典UI安 [全控制台](http://localhost:4502/useradmin) ，管理用户和用户组。
+要获得演示用户的完整列表，请使用边栏导航到工具 **** >操作 **[!UICONTROL >安]** 全>用户 ****。 或者使用经典UI安 [全控制台](http://localhost:4502/useradmin) ，管理用户和用户组。
 
 如果已 [创建社区站点](getting-started.md)，则可以将演示用户分配到其社 [区用户组](users.md)。
 
-***用户ID */*密码：***
+***用户ID */*密码***:
 
 * aaron.mcdonald@mailinator.com
 * emily.andrews@mailinator.com
