@@ -11,22 +11,22 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
 
 ---
 
 
-# 活动趋势{#activity-trends}
+# 活动趋势 {#activity-trends}
 
 ## 简介 {#introduction}
 
-该组 `Community Activity List` 件能够添加关于成员的帖子和视图以及帖子和内容视图的趋势信息。
+该 `Community Activity List` 组件能够添加关于成员的帖子和视图以及帖子和视图内容的趋势信息。
 
 文档描述：
 
-* 将组件 `Community Activity List` 添加到社 [区站点](/help/communities/overview.md#community-sites)
+* 将组件 `Community Activity List` 添加到社 [区站点](/help/communities/overview.md#community-sites)。
 
-* 组件的配置设 `Community Activity List` 置
+* 组件的配置 `Community Activity List` 设置。
 
 ### 要求 {#requirement}
 
@@ -54,7 +54,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-在“**注释**”选项卡下，指定是否显示已上载文件的注释以及如何显示已上载文件的注释：
+在“注 **释** ”选项卡下，指定是否显示已上载文件的注释以及如何显示这些注释：
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -62,7 +62,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
    指定是显示社区成员的数据还是用户生成的内容(UGC)。
 
-   从
+   选择自：
 
    * `Members`
    * `Content`
@@ -75,12 +75,12 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **显示数量**
 
-   要列出的项目数。
+   要列表的项目数。
 默认值为10。
 
 * **活动类型**
 
-   选择其中一个
+   选择以下选项之一：
 
    * `Views`（页面访问）
    * `Posts`（创建UGC）
@@ -90,7 +90,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **时间段**
 
-   选择其中一个
+   选择以下选项之一：
 
    * `Last 24 hours`
    * `Last 7 days`
@@ -107,16 +107,16 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 * **成员数量整合**
 
-   取消选择（关闭）后，只计数顶级帖子。 例如，如果上下文是根页面（默认），则 `Activity Type`其 `Posts`中的某个将不会显示任何活动，因为无法将内容发布到根页面。 选中后，将包括所有子页面上的计数。
+   取消选择（关闭）后，只计数顶级帖子。 例如，如果上下文是根页面（默认），则 `Activity Type` 其中 `Posts` 的一个将不显示任何活动，因为无法将内容发布到根页面。 选中后，将包括所有子页面上的计数。
 选中默认值。
 
 ### 包含4个组件的示例页面 {#example-page-with-components}
 
-**热门访客配置** :类型=成员，活动类型=视图
+**主要访客** 配置：类型=成员，活动类型=视图
 
 **顶级参与者** :类型=成员，活动类型=帖子
 
-**主要内容配置** :类型=内容，活动类型=视图，
+**主要内容配置** :类型=内容，活动类型=视图,
 
 **趋势内容配置** :类型=内容，活动类型=帖子
 
