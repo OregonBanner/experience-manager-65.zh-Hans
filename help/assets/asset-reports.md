@@ -3,7 +3,7 @@ title: 有关数字资产的报告
 description: 了解AEM资产中有关资产的报告，帮助您了解数字资产的使用、活动和共享情况。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7d0bcbf39adfc7dfd01742651589efb72959603
+source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
 
 ---
 
@@ -38,12 +38,12 @@ AEM管理员可以轻松生成和自定义这些报告以用于您的实施。 �
 
 1. 在Experience Manager界面中，单击工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 报表]**。
 
-![“工具”页面以导航资产报表](assets/AssetsReportNavigation.png)
+![](assets/AssetsReportNavigation.png)
 
 1. 在资产报 [!UICONTROL 表页面] ，单击工 **[!UICONTROL 具栏中的]** 创建。
 1. 从创 **[!UICONTROL 建报表页面]** ，选择要创建的报表，然后单击下 **[!UICONTROL 一步]**。
 
-   ![选择报告类型](assets/choose_report.png)
+   ![](assets/choose_report.png)
 
    >[!NOTE]
    >
@@ -55,7 +55,7 @@ AEM管理员可以轻松生成和自定义这些报告以用于您的实施。 �
 
 1. 在存储报告的CRX存储库中配置报告详细信息，如标题、说明、缩略图和文件夹路径。 默认情况下，文件夹路径为 `/content/dam`。 您可以指定其他路径。
 
-   ![要添加报告详细信息的页面](assets/report_configuration.png)
+   ![](assets/report_configuration.png)
 
    选择报表的日期范围。
 
@@ -71,32 +71,32 @@ AEM管理员可以轻松生成和自定义这些报告以用于您的实施。 �
    >
    >**[!UICONTROL 磁盘使用情况]**&#x200B;报表不包含日期范围字段，因为它仅指示当前磁盘空间使用情况。
 
-   ![“ Disk Usage”报告的“Details”（详细信息）页](assets/disk_usage_configuration.png)
+   ![](assets/disk_usage_configuration.png)
 
    在创建“文 **[!UICONTROL 件]** ”报告时，可以包含／排除子文件夹。 但是，您不能为此报表包含资产演绎版。
 
-   ![“文件”报告的“详细信息”页](assets/files_report.png)
+   ![](assets/files_report.png)
 
    **[!UICONTROL 链接共享]**&#x200B;报表显示 AEM Assets 中与外部用户共享的资产的 URL。其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和到期日期。列不可自定义。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
-   ![“链接共享”报告的详细信息页面](assets/link_share.png)
+   ![](assets/link_share.png)
 
 1. 单击 **[!UICONTROL 工具栏]** 中的下一步。
 
 1. 在“配 **[!UICONTROL 置列]** ”页中，某些列在默认情况下处于选中状态以显示在报告中。 您可以选择更多列。 取消选择选定的列，以在报告中将其排除。
 
-   ![选择或取消选择报告列](assets/configure_columns.png)
+   ![](assets/configure_columns.png)
 
    要显示自定义列名或属性路径，请在CRX的jcr:content节点下配置资产二进制的属性。 或者，通过属性路径选取器添加它。
 
-   ![选择或取消选择报告列](assets/custom_columns.png)
+   ![](assets/custom_columns.png)
 
 1. 单击 **[!UICONTROL 工具栏]** 中的创建。 系统会显示一条消息，通知已开始生成报告。
 1. 在“资产报表”页面中，报表生成状态基于报表作业的当前状态，例如成功、失败、已排队或已计划。 通知收件箱中显示相同的状态。要视图报告页面，请单击报告链接。 或者，选择报告，然后单击工 **[!UICONTROL 具栏中的视图]** 。
 
-   ![生成的报告](assets/report_page.png)
+   ![](assets/report_page.png)
 
    单击 **[!UICONTROL 工具栏中]** “下载”以下载CSV格式的报告。
 
@@ -120,11 +120,11 @@ AEM管理员可以轻松生成和自定义这些报告以用于您的实施。 �
 
 1. 要显示自定义列，请在&#x200B;**[!UICONTROL 自定义列]**&#x200B;下指定列的名称。
 
-   ![指定报告的自定义列的名称](assets/custom_columns-1.png)
+   ![](assets/custom_columns-1.png)
 
 1. 使用属性路径选取器在CRXDE `jcr:content` 中的节点下添加属性路径。 或者，在属性路径字段中键入路径。
 
-   ![从jcr:content中的路径映射属性路径](assets/property_picker.png)
+   ![](assets/property_picker.png)
 
    要添加更多自定义列，请单 **[!UICONTROL 击]** “添加”，然后重复步骤5和6。
 
