@@ -3,7 +3,7 @@ title: 资产支持的格式
 description: AEM资产和Dynamic Media支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 134530e6e4cabc31342fc3136ec3218ba5acea4a
+source-git-commit: 2b30ab18aa22352d7ece4617d22391759592fd19
 
 ---
 
@@ -42,7 +42,7 @@ AEM资产支持各种文件格式，每种功能都对不同MIME类型提供不�
 
 ‡合并的图像从PSD文件中提取。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
-## Dynamic Media中支持的栅格图像格式(#supported-raster-image-formats-dynamic-media)
+## Dynamic Media中支持的栅格图像格式 {#supported-raster-image-formats-dynamic-media}
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -67,7 +67,7 @@ AEM资产支持各种文件格式，每种功能都对不同MIME类型提供不�
 
 * 对于EPS文件，PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
 
-## Dynamic Media中不支持的栅格图像格式(#unsupported-image-formats-dynamic-media)
+## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
 以下列表描述了Dynamic Media不支持的栅格图像文件 *格式* 的子类型。
 
@@ -168,7 +168,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## Dynamic Media中支持的文档格式(#supported-文档-formats-dynamic-media)
+## Dynamic Media支持的文档格式 {#supported-document-formats-dynamic-media}
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
