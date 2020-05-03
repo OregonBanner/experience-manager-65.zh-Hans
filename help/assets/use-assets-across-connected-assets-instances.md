@@ -1,9 +1,9 @@
 ---
-title: 使用“已连接资产”在[!DNL Adobe Experience Manager Sites]创作工作流程中共享DAM资产。
-description: 在另一个Experience Manager Site部署中创建网页时，使用远程[!DNL Adobe Experience Manager Assets]部署中可用的资产。
+title: 使用连接的资产在[!DNL Adobe Experience Manager Sites]创作工作流程中共享DAM资产。
+description: 在另一个Experience Manager Site Deployment上创建网页时，使用远程[!DNL Adobe Experience Manager Assets]部署上的可用资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 2cdcea028814b40fb178e63f583939df27a46cad
 
 ---
 
@@ -25,19 +25,19 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 在使用或配置此功能之前，请确保：
 
 * 用户是每个部署中相应用户组的一部分。
-* 对于 Adobe Experience Manager 部署类型，需要满足如下所示的支持标准。[!DNL Experience Manager] 6.5可 [!DNL Assets] 以作为 [!DNL Experience Manager] 云服务使用。 有关详细信息，请参 [阅Experience Manager中作为云服务的“连接资产”功能](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* 对于 Adobe Experience Manager 部署类型，需要满足如下所示的支持标准。[!DNL Experience Manager] 6.5可 [!DNL Assets] 作为 [!DNL Experience Manager] 云服务使用。 有关详细信息，请参 [阅Experience Manager中作为云服务的“连接资产”功能](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | [!DNL Experience Manager Sites] 作为云服务 | AMS上的Experience Manager 6.5 [!DNL Sites] | Experience Manager 6.5内 [!DNL Sites] 部部署 |
+   |  | [!DNL Experience Manager Sites] 作为云服务 | AMS上的Experience [!DNL Sites] Manager 6.5 | Experience Manager 6.5 [!DNL Sites] 内部部署 |
    |---|---|---|---|
    | **[!DNL Experience Manager Assets]作为云服务&#x200B;** | 支持 | 支持 | 支持 |
-   | **AMS上的Experience Manager 6.5[!DNL Assets]** | 支持 | 支持 | 支持 |
-   | **Experience Manager 6.5内[!DNL Assets]部部署** | 不支持 | 不支持 | 不支持 |
+   | **AMS上的Experience[!DNL Assets]Manager 6.5** | 支持 | 支持 | 支持 |
+   | **Experience Manager 6.5[!DNL Assets]内部部署** | 不支持 | 不支持 | 不支持 |
 
 ### 支持的文件格式 {#mimetypes}
 
-作者可以在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索到的资产。文档可添加到 `Download` 组件中，图像可添加到 `Image` 组件中。Authors can also add the remote assets in any custom Experience Manager component that extends the default `Download` or `Image` components. 支持的格式的列表包括：
+作者可以在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索到的资产。文档可添加到 `Download` 组件中，图像可添加到 `Image` 组件中。Authors can also add the remote assets in any custom Experience Manager component that extends the default `Download` or `Image` components. 支持的格式列表为：
 
-* **图像格式**:连接的资产支持图像组 [件支持的图](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html) 像格式。 [!DNL Dynamic Media] 不支持图像。
+* **图像格式**: 连接的资产支持图像 [组件支](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html) 持的图像格式。 [!DNL Dynamic Media] 不支持图像。
 * **文档格式**：请参阅[连接的资产支持的文档格式](assets-formats.md#supported-document-formats)。
 
 ### 涉及的用户和组 {#users-and-groups-involved}
@@ -46,12 +46,12 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 | 角色 | 范围 | 用户组 | 演示中的用户名 | 要求 |
 |---|---|---|---|---|
-| [!DNL Sites] 管理员 | 本地 | Experience Manager管理员 | `admin` | Set up Experience Manager, configure integration with the remote [!DNL Assets] deployment. |
-| DAM 用户 | 本地 | 作者 | `ksaner` | 用于查看和复制在 `/content/DAM/connectedassets/` 上获取的资产。 |
-| [!DNL Sites] 作者 | 本地 | Author (with read access on the remote DAM and author access on local [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. 作者搜索并浏览远程 DAM 中的资产有两种方式：使用内容查找器；使用本地网页中所需的图像。使用的 DAM 用户的 `ksaner` 凭据。 |
-| [!DNL Assets] 管理员 | 远程 | Experience Manager管理员 | `admin` 在远程Experience Manager上 | 配置跨源资源共享 (CORS)。 |
-| DAM 用户 | 远程 | 作者 | `ksaner` 在远程Experience Manager上 | 在远程Experience Manager部署上的创作角色。 使用内容查找器搜索并浏览“连接的资产”中的资产。 |
-| DAM 分发人员（技术用户） | 远程 | 软件包生成器与 Sites 作者 | `ksaner` 在远程Experience Manager上 | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. 此角色与上述两个 `ksaner` 角色不同，它属于另一个不同的用户组。 |
+| [!DNL Sites] 管理员 | 本地 | Experience Manager `administrators` | `admin` | Set up Experience Manager, configure integration with the remote [!DNL Assets] deployment. |
+| DAM 用户 | 本地 | `Authors` | `ksaner` | 用于查看和复制在 `/content/DAM/connectedassets/` 上获取的资产。 |
+| [!DNL Sites] 作者 | 本地 | `Authors` (在远程DAM上具有读访问权，在本地具有作者访问权 [!DNL Sites]) | `ksaner` | End user are [!DNL Sites] authors who use this integration to improve their content velocity. 作者搜索并浏览远程 DAM 中的资产有两种方式：使用内容查找器；使用本地网页中所需的图像。使用的 DAM 用户的 `ksaner` 凭据。 |
+| [!DNL Assets] 管理员 | 远程 | Experience Manager `administrators` | `admin` 在远程Experience Manager上 | 配置跨源资源共享 (CORS)。 |
+| DAM 用户 | 远程 | `Authors` | `ksaner` 在远程Experience Manager上 | 在远程Experience Manager部署中担任作者角色。 使用内容查找器搜索并浏览“连接的资产”中的资产。 |
+| DAM 分发人员（技术用户） | 远程 | `Authors` | `ksaner` 在远程Experience Manager上 | This user present on the remote deployment is used by Experience Manager local server (not the Site author role) to fetch the remote assets, on behalf of [!DNL Sites] author. 此角色与上述两个 `ksaner` 角色不同，它属于另一个不同的用户组。 |
 
 ## Configure a connection between [!DNL Sites] and [!DNL Assets] deployments {#configure-a-connection-between-sites-and-assets-deployments}
 
@@ -70,7 +70,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 1. Access the local [!DNL Experience Manager Sites] deployment at `https://[local_sites]:4502`. 单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 连接的资产配置]**，并提供以下值：
 
-   1. [!DNL Experience Manager Assets] 位置 `https://[assets_servername_ams]:[port]`。
+   1. [!DNL Experience Manager Assets] 位置为 `https://[assets_servername_ams]:[port]`。
    1. DAM 分发人员（技术用户）的凭据。
    1. In **[!UICONTROL Mount Point]** field, enter the local Experience Manager path where Experience Manager fetches the assets. 例如，`remoteassets` 文件夹。
    1. 根据您的网络，调整&#x200B;**[!UICONTROL 原始二进制传输优化阈值]**&#x200B;的值。大于此阈值的资产演绎版，将异步传输。
@@ -95,7 +95,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
    >[!NOTE]
    >
-   >当作者提取资产时，将获取远程Experience Manager部署中可用的所有再现。 如果要为获取的资产创建更多演绎版，请跳过此配置步骤。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
+   >作者提取资产时，将获取远程Experience Manager部署中可用的所有演绎版。 如果要为获取的资产创建更多演绎版，请跳过此配置步骤。The [!UICONTROL DAM Update Asset] workflow gets triggered and creates more renditions. These renditions are available only on the local [!DNL Sites] deployment and not on the remote DAM deployment.
 
 1. Add the [!DNL Experience Manager Sites] instance as one of the **[!UICONTROL Allowed Origins]** on the remote [!DNL Experience Manager Assets] CORS configuration.
 
@@ -163,7 +163,7 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 * All [!DNL Sites] authors have read permissions on the fetched copies, even if they do not have access to the remote DAM deployment.
 * 没有支持自定义集成的 API。
 * 该功能支持无缝搜索和使用远程资产。为了能够在本地部署中一次使用许多远程资产，请考虑批量迁移这些资产。请参阅 [Assets 迁移指南](assets-migration-guide.md)。
-* 无法在页面属性用户界面上将远程资产用作页 [!UICONTROL 面缩略图] 。 可以通过单击选择图像，在缩略图的“页 [!UICONTROL 面属性] ”用户界面中设 [!UICONTROL 置网页] 的缩略图 。
+* 无法在页面属性用户界面上将远程资产用作 [!UICONTROL 页面缩略图] 。 您可以通过单击选择图像，在缩略图的 [!UICONTROL 页面属性] 用户界面 [!UICONTROL 中设] 置网页的 [!UICONTROL 缩]略图。
 
 **设置和许可**
 
