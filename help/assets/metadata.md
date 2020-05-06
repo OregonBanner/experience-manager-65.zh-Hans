@@ -1,9 +1,12 @@
 ---
-title: 在[!DNL Adobe Experience Manager]中管理数字资产的元数据。
-description: 了解元数据的类型以及[!DNL Adobe Experience Manager资产]如何帮助管理资产的元数据，从而更轻松地对资产进行分类和组织。 [!DNL Experience Manager]允许根据资产的元数据自动组织和处理资产。
+title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
+description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1395'
+ht-degree: 15%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: c32e64d4921d7239d07f57ab9e12c744758faa0a
 * 其所包含的文件夹的名称。
 * 相关资产或已应用的标记。
 
-以上是Experience Manager可以为资产管理的基本元数据属性，通过这些属性，用户可以查看所有资产。 例如，在尝试发现最近添加的资产时，按上次修改日期对资产进行排序会很有用。
+以上是可以为资产管理的基 [!DNL Experience Manager] 本元数据属性，用户可通过这些属性查看所有资产。 例如，在尝试发现最近添加的资产时，按上次修改日期对资产进行排序会很有用。
 
 您可以向数字资产中添加更多高级别的数据，例如：
 
@@ -90,7 +93,7 @@ ID3 标记是专为 MP3 文件格式而设计。有关各种格式的其他信�
 
 ### Exif {#exif}
 
-可交换图像文件格式(Exif)是数字摄影中最常用的元数据格式。 它提供了一种在多种文件格式（如JPEG、TIFF、RIFF和WAV）中嵌入固定的元数据属性词汇的方法。 Exif stores metadata as pairs of a metadata name and a metadata value. These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager].  现代数码相机创建Exif元数据，现代图形软件支持它。 Exif格式是元数据管理的最小公分母，对于图像尤为如此。
+可交换图像文件格式(Exif)是数字摄影中最常用的元数据格式。 它提供了一种在多种文件格式（如JPEG、TIFF、RIFF和WAV）中嵌入固定的元数据属性词汇的方法。 Exif stores metadata as pairs of a metadata name and a metadata value. These metadata name-value-pairs are also called tags, not to be confused with the tagging in [!DNL Experience Manager]. 现代数码相机创建Exif元数据，现代图形软件支持它。 Exif格式是元数据管理的最小公分母，对于图像尤为如此。
 
 Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或PNG）不支持它。
 
@@ -98,7 +101,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 
 ### Other metadata {#other-metadata}
 
-可以从文件中嵌入的其他元数据包括Microsoft Word、PowerPoint、Excel等。
+可以从文件中嵌入的其他元 [!DNL Microsoft Word]数据 [!DNL PowerPoint]包括 [!DNL Excel]、、等等。
 
 ## Metadata schemata {#metadata-schemata}
 
