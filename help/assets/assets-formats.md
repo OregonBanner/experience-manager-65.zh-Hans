@@ -3,7 +3,10 @@ title: 资产支持的格式
 description: AEM资产和Dynamic Media支持的文件格式列表以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2b30ab18aa22352d7ece4617d22391759592fd19
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1770'
+ht-degree: 20%
 
 ---
 
@@ -186,7 +189,7 @@ DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migra
 
 ## 支持的多媒体格式 {#supported-multimedia-formats}
 
-|  | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | FFMPEG转码 |
+|  | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | FFmpeg转码 |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | AAC | ✓ | ✓ |  | − | * |
 | MIDI | ✓ | ✓ |  | − | * |
