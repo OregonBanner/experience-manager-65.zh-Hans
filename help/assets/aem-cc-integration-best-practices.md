@@ -1,17 +1,17 @@
 ---
-title: Adobe Creative Cloud和[!DNL Adobe Experience Manager]集成最佳实践。
-description: 将[!DNL Adobe Experience Manager]与[!DNL Adobe Creative Cloud]集成以简化资产传输工作流并实现高内容速度的最佳实践。
+title: Adobe Creative Cloud和集 [!DNL Adobe Experience Manager] 成最佳实践。
+description: 整合的最佳 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 实践，可简化资产转让工作流并实现高内容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '3253'
+ht-degree: 16%
 
 ---
 
 
 # [!DNL Adobe Experience Manager] 和集 [!DNL Creative Cloud] 成最佳实践 {#aem-and-creative-cloud-integration-best-practices}
-
-<!-- TBD: Reconcile with 6.4 article that's behind this article in terms of content streamlining and structuring.
--->
 
 [!DNL Adobe Experience Manager Assets] 是一款数字资产管理(DAM)解决方案，可与 [!DNL Adobe Creative Cloud] 集成以帮助DAM用户与创意团队协作，从而简化内容创建过程中的协作。
 
@@ -47,19 +47,19 @@ source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
 
 | 用例 | [!DNL Adobe Asset Link] | [!DNL Experience Manager] 桌面应用程序 | 备注／其他解决方案 |
 |---|---|---|---|
-| 发现——浏览DAM文件夹 | 是 | [!DNL Experience Manager] Web UI +桌面操作 | 浏览网络共享时，关闭缩略图以避免下载资源的二进制文件。 |
-| 发现——访问DAM集合 | 是 | [!DNL Experience Manager] Web UI +桌面操作 |  |
-| 发现——从DAM搜索资产 | 是 | [!DNL Experience Manager] Web UI +桌面操作 |  |
-| 使用——打开资产 | 是 | 是 -适用于任何应用程序 | [从Web界面或Finder](managing-assets-touch-ui.md#previewing-assets) 打开 |
+| 发现——浏览DAM文件夹 | 是 | [!DNL Experience Manager] Web界面和桌面操作 |  |
+| 发现——访问DAM集合 | 是 | [!DNL Experience Manager] Web界面和桌面操作 |  |
+| 发现——从DAM搜索资产 | 是 | [!DNL Experience Manager] Web界面和桌面操作 |  |
+| 使用——打开资产 | 是 | 是 | [从Web界面或Finder](managing-assets-touch-ui.md#previewing-assets) 打开 |
 | 使用——将资产从DAM放入文档 | 是——嵌入 | 是——链接或嵌入 | [!DNL Experience Manager] 桌面应用程序允许以文件形式访问本地文件系统上的资源。 本机应用程序中的这些链接由本地路径表示。 |
 | 编辑——打开进行编辑 | 是——结帐操作 | 是——打开操作（在网络共享中） | [默认情况下](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html) ,AAL中的注销会将资产保存到用户的Creative Cloud存储帐户（由Creative Cloud应用程序同步）。 |
 | 编辑——在DAM外进行的工作 | 是——用户的Creative Cloud存储帐户中的可用资产已同步到桌面。 | 是 |  |
 | 编辑——上传更改 | 是- [带可选注释的签入](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html) 操作 | 是 |  |
 | 上传——单个文件 | 是——上载当前活动文档 | 是 | [通过Web界面上传](managing-assets-touch-ui.md#uploading-assets) |
-| 上传——多个文件／分层文件夹结构 | 否 | 是 | [通过Web界面上传](managing-assets-touch-ui.md#uploading-assets)；自<br>定义脚本或工具 |
-| 杂项——用户和登录名 | 登录到Creative Cloud桌面应用程序的Creative Cloud用户可被识别(SSO) | [!DNL Experience Manager] 用户／登录 | 两种解决方案的用户均计入 [!DNL Experience Manager] 用户配额。 |
-| 杂项——网络和访问 | 需要从用户桌面访问以通过网 [!DNL Experience Manager] 络进行部署 | 需要从用户桌面访问以通过网 [!DNL Experience Manager] 络进行部署 | Adobe Asset Link不共享网络代理环境。 |
-| 杂项——迁移大量资产 | 否 | 否 | [迁移指南](assets-migration-guide.md) |
+| 上传——多个文件／分层文件夹结构 | 否 | 是 | [通过Web界面](managing-assets-touch-ui.md#uploading-assets) ，或通过自定义脚本或工具上传。 |
+| 杂项——用户和登录名 | 登录到Creative Cloud桌面应用程序的Creative Cloud用户可被识别(SSO) | [!DNL Experience Manager] 用户和凭据 | 两种解决方案的用户都计入 [!DNL Experience Manager] 用户配额。 |
+| 杂项——网络和访问 | 需要从用户桌面访问以通过网 [!DNL Experience Manager] 络进行部署 | 需要从用户桌面访问以通过网 [!DNL Experience Manager] 络进行部署 | [!DNL Adobe Asset Link] 不共享网络代理环境。 |
+| 杂项——迁移大量资产 | 否 | 否 | [资产迁移指南](assets-migration-guide.md) |
 
 要支持资产分发使用案例，应考虑其他解决方案：
 
