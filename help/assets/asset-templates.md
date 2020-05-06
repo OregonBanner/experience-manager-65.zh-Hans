@@ -1,9 +1,12 @@
 ---
-title: '[!DNL Adobe Experience Manager资产]中的资产模板。'
-description: 了解[!DNL Adobe Experience Manager Assets]中的资产模板以及如何使用资产模板创建营销宣传资料。
+title: 中的资产模板 [!DNL Adobe Experience Manager Assets]。
+description: 了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
+source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+workflow-type: tm+mt
+source-wordcount: '1553'
+ht-degree: 0%
 
 ---
 
@@ -196,4 +199,4 @@ source-git-commit: c8c35eedcce4a743e414b3a8e5bb6ef4b25ff3ee
 
 ## 最佳实践和限制 {#best-practices-limitations-tips}
 
-* AEM InDesign编辑器在标记级别工作，单个标记下的所有文本均视为单个实体。 要在编辑时保留文本格式和样式，请分别标记每个段落（或具有不同样式的文本）。
+* 编辑 [!DNL InDesign] 器在标 [!DNL Experience Manager] 记级别工作，单个标记下的所有文本都被视为单个实体。 要在编辑时保留文本格式和样式，请分别标记每个段落（或具有不同样式的文本）。
