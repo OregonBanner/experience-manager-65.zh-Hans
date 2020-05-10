@@ -3,10 +3,10 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 93731c44ae6b2d8617fedea87bce10495384fc52
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 21%
+source-wordcount: '1765'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,9 @@ ht-degree: 21%
 | * | 受支持，但需要附加功能 |
 | − | 不适用 |
 
-## Supported raster image formats in [!DNL Assets] {#supported-raster-image-formats}
+## Supported raster image formats in [!DNL Experience Manager] {#supported-raster-image-formats}
+
+支持的栅格图像格式 [!DNL Assets] 包括：
 
 | 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 编辑 | 元数据写回 | 分析 |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
@@ -43,7 +45,7 @@ ht-degree: 21%
 
 ‡合并的图像从PSD文件中提取。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
-## Supported raster image formats in [!DNL Dynamic Media] {#supported-raster-image-formats-dynamic-media}
+支持的栅格图像格式 [!DNL Dynamic Media] 包括：
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -52,11 +54,11 @@ ht-degree: 21%
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ |  |  |  |  |
-| PSD **‡** | ✓ |  |  |  |  |
+| PSD ‡ | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 
-**‡** 合并的图像是从PSD文件中提取的。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
+‡合并的图像从PSD文件中提取。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
 除上述信息外，请考虑以下事项：
 
@@ -122,31 +124,6 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 ## 支持的资产文档格式 {#supported-document-formats}
 
 资产管理功能支持的文档格式如下：
-
-<!--
-DO NOT PUBLISH THIS TABLE -- Removing it as it got malformed during GitHub migration.
-
-| Format | Storage | Metadata management | Metadata extraction | Thumbnail generation | Interactive editing | Metadata writeback | [Insights](touch-ui-asset-insights.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | |
-| DOC | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
-| DOCX | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
-| ODT | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; |
-| HTML | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| RTF | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| TXT | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| XLS | &#10003; | &#10003; | &#10003; | | | | | &#10003; |
-| XLSX | &#10003; | &#10003; | &#10003; | &#10003; | | | | &#10003; |
-| ODS | &#10003; | &#10003; | &#10003; | | | | | |
-| PPT | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; |
-| PPTX | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | &#10003; | | &#10003; |
-| ODP | &#10003; | &#10003; | &#10003; | | | | | |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | &#10003; | &#10003; | | &#10003; | &#10003; | &#10003; | &#10003; | |
-| PS | &#10003; | &#10003; | | | | | | |
-| QXP | &#10003; | &#10003; | | | | | | |
-| EPUB | &#10003; | &#10003; | | &#10003; | &#10003; | | | |
--->
 
 | 格式 | 存储 | [元数据管理](metadata.md) | 全文<br> 提取 | [元数据提取](metadata.md) | Thumbnail<br> generation | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
