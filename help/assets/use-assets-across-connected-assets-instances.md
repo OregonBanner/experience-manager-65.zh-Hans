@@ -3,10 +3,10 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3d2f9bf9f8e83a088769507da8a46f1c9ef4e74e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
 workflow-type: tm+mt
-source-wordcount: '2071'
-ht-degree: 53%
+source-wordcount: '2081'
+ht-degree: 51%
 
 ---
 
@@ -41,7 +41,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 作者可以在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索到的资产。文档可添加到 `Download` 组件中，图像可添加到 `Image` 组件中。Authors can also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. 支持的格式有：
 
 * **图像格式**: 图像组件支 [持的格式](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html) 。 [!DNL Dynamic Media] 不支持图像。
-* **文档格式**：请参阅[连接的资产支持的文档格式](assets-formats.md#supported-document-formats)。
+* **文档格式**: 请参 [阅连接资产支持的文档格式](assets-formats.md#supported-document-formats)。
 
 ### 涉及的用户和组 {#users-and-groups-involved}
 
@@ -185,5 +185,5 @@ Only those tags of remote assets are fetched that have an exact corresponding ta
 
 对于常见错误情景，请按照以下步骤进行故障诊断：
 
-* If you cannot search for remote assets from the [!UICONTROL Content Finder], recheck and ensure that the required roles and permissions are in place.
-* 从远程 DAM 获取的资产，可能会因为以下原因无法发布到网页上：该资产不存在于远程 DAM 上；缺乏相应的获取该资产的权限；网络故障。确保资产未从远程DAM中删除或权限未更改。 确保满足适当的先决条件。 重试将资产添加到页面并重新发布。 检查[异步作业列表](/help/assets/asynchronous-jobs.md)，查看是否发生了资产获取错误。
+* If you cannot search for remote assets from the [!UICONTROL Content Finder] then ensure that the required roles and permissions are in place.
+* 由于一个或多个原因，从远程dam获取的资产可能无法发布到网页上。 它在远程服务器上不存在，缺少相应的权限来获取它，或者网络故障可能是原因。 确保资产未从远程DAM中删除。 确保拥有适当的权限，并满足先决条件。 重试将资产添加到页面并重新发布。 检查[异步作业列表](/help/assets/asynchronous-jobs.md)，查看是否发生了资产获取错误。
