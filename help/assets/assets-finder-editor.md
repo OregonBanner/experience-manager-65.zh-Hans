@@ -3,7 +3,10 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
+source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+workflow-type: tm+mt
+source-wordcount: '2147'
+ht-degree: 1%
 
 ---
 
@@ -13,195 +16,195 @@ source-git-commit: 70a88085a0fd6e949974aa7f1f92fdc3def3d98e
 本文档将介绍以下内容：
 
 * 创建自定义资产编辑器页面的原因。
-* 如何创建和自定义资产编辑器页面，这些页面是WCM页面，可让您查看和编辑元数据以及对资产执行操作。
+* 如何创建和自定义资产编辑器页面，这些页面是WCM页面，您可以通过它们视图和编辑元数据，以及对资产执行操作。
 * 如何同时编辑多个资产。
 
-<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 OOTB samples. -->
+<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
 
 >[!NOTE]
 >
->资产共享可用作开放源代码引用实施。 请参 [阅资产共享公域](https://adobe-marketing-cloud.github.io/asset-share-commons/)。 它不受官方支持。
+>资产共享可用作开放源代码引用实施。 请参 [阅资产共享共享](https://adobe-marketing-cloud.github.io/asset-share-commons/)。 官方不支持。
 
 ## 为何要创建和配置资产编辑器页面？ {#why-create-and-configure-asset-editor-pages}
 
-数字资产管理正在越来越多的场景中使用。 当从面向由专业培训用户组成的小型用户组（例如摄影师或分类学者）的小型解决方案转向面向商业用户、WCM作者、记者等更多样化的用户组时，面向专业用户的Adobe Experience Manager(AEM)资产的强大用户界面可能会提供太多信息，并且利益相关方开始请求特定用户界面或应用程序访问与他们相关的数字资产。.
+数字资产管理正在越来越多的场景中使用。 当从面向受过专业培训的小用户群（例如摄影师或分类学者）的小规模解决方案转变为面向业务用户、WCM作者、记者等的更大、更多样化的用户群时，面向专业用户的Adobe Experience Manager(AEM)资产的强大用户界面会提供太多信息和利益相关方开始，无法请求特定用户界面或应用程序访问与相关的数字资产他们。
 
-这些以资产为中心的应用程序可以是内部网中的简单照片画廊，员工可以从展会访问或面向公众的网站的新闻中心上传照片，如随Geometrixx提供的示例。 以资产为中心的应用程序还可以扩展到包括购物车、结帐和验证过程在内的完整解决方案。
+这些以资产为中心的应用程序可以是企业内部网中的简单照片库，员工可以从贸易展访问或面向公众的网站的新闻中心上传照片。 以资产为中心的应用程序还可以扩展到包括购物车、结帐和验证流程在内的完整解决方案。
 
-创建以资产为中心的应用程序在很大程度上变成了一个无需编码的配置过程，只需了解用户组及其需求以及所使用元数据的知识即可。 使用AEM资产创建的以资产为中心的应用程序具有可扩展性：通过适度的编码工作量，可以创建用于搜索、查看和修改资产的可重用组件。
+创建以资产为中心的应用程序在很大程度上成为一个无需编码的配置过程，只需了解用户组及其需求以及所使用元数据的知识。 使用AEM资产创建的以资产为中心的应用程序具有可扩展性： 借助适当的编码工作量，可以创建用于搜索、查看和修改资产的可重用组件。
 
 AEM中以资产为中心的应用程序由资产编辑器页面组成，该页面可用于获取特定资产的详细视图。 资产编辑器页面还允许编辑元数据，前提是访问资产的用户具有必要的权限。
 
-## 创建和配置“资源共享”页面 {#creating-and-configuring-an-asset-share-page}
+<!--
+## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
 
-您可以自定义DAM finder功能并创建具有您所需的所有功能的页面，这些页面称为“资产共享”页面。 要创建新的“资产共享”页面，您可以使用Geometrixx资产共享模板添加该页面，然后自定义用户可以对该页面执行的操作，确定查看者查看资产的方式，并决定用户如何构建查询。
+You customize the DAM Finder functionality and create pages that have all the functionality you require, which are called Asset Share pages. To create a new Asset Share page, you add the page using the Geometrixx Asset Share template and then you customize the actions users can perform on that page, determine how viewers see the assets, and decide how users can build their queries.
 
-以下是创建自定义资产共享页面的一些用例：
+Here are some use cases for creating a customized Asset Share page:
 
-* 新闻中心
-* 适用于内部业务用户的图像搜索引擎
-* 面向网站用户的图像数据库
-* 元数据编辑器的媒体标记界面
+* Press Center for Journalists.
+* Image Search Engine for internal business users.
+* Image Database for website users.
+* Media Tagging Interface for metadata editors.
 
-### 创建资产共享页面 {#creating-an-asset-share-page}
+### Create an Asset Share page {#creating-an-asset-share-page}
 
-要创建新的资产共享页面，您可以在处理网站时或通过数字资产管理器创建该页面。
+To create a new Asset Share page, you can either create it when you are working on web sites or from the digital asset manager.
 
 >[!NOTE]
 >
->默认情况下，当您从数字资产管理器中的 **New** （新建）创建“资产共享”页面时，系统会自动为您创建资产查看器和资产编辑器。
+>By default, when you create an Asset Share page from **New** in the digital asset manager, an Asset viewer and Asset editor are automatically created for you.
 
-要在“网站”控制台中创建新的“资产共 **享”页** :
+To create an new Asset Share page in the **Websites** console:
 
-1. 在“网 **站** ”选项卡中，导航到要创建资产共享页面的位置，然后单击“新 **建”**。
+1. In the **Websites** tab, navigate to the place where you want to create an asset share page and click **New**.
 
-1. 选择“资 **产共享** ”页面，然后单 **击创建**。 此时将创建新页面，资产共享页面将列在“网站”选 **项卡中** 。
+1. Select the **Asset Share** page and click **Create**. The new page is created and the asset share page is listed in the **Websites** tab.
 
 ![dam8](assets/dam8.png)
 
-使用Geometrixx DAM资产共享模板创建的基本页面如下所示：
+The basic page created using the Geometrixx DAM Asset Share template looks as follows:
 
 ![screen_shot_2012-04-18at115456am](assets/screen_shot_2012-04-18at115456am.png)
 
-要自定义“资产共享”页面，您可以使用Sidekick中的元素，还可以编辑查询构建器属性。 页面 **Geometrixx新闻中心** 是基于此模板的页面的自定义版本：
+To customize your Asset Share page, you use elements from the sidekick and you also edit query builder properties. The page **Geometrixx Press Center** is a customized version of a page based on this template:
 
 ![screen_shot_2012-04-19at123048pm](assets/screen_shot_2012-04-19at123048pm.png)
 
-要通过数字资产管理器创建新的资产共享页面，请执行以下操作：
+To create a new asset share page via the digital asset manager:
 
-1. 在数字资产管理器的“新建 **”中**，选择“ **新建资产共享”**。
-1. 在标 **题中**，输入资产共享页面的名称。 如果需要，请输入URL的名称。
+1. In the digital asset manager, in **New**, select **New Asset Share**.
+1. In the **Title**, enter the name of the asset share page. If desired, enter a name for the URL.
 
    ![screen_shot_2012-04-19at23626pm](assets/screen_shot_2012-04-19at23626pm.png)
 
-1. 双击资产共享页面以将其打开并配置页面。
+1. Double-click the asset share page to open it and configure the page.
 
    ![screen_shot_2012-04-19at24114pm](assets/screen_shot_2012-04-19at24114pm.png)
 
-   默认情况下，当您从“新建”创建“资产共享”页 **面时**，系统会自动为您创建资产查看器和资产编辑器。
+   By default, when you create an Asset Share page from **New**, an Asset viewer and Asset editor are automatically created for you.
 
-#### 自定义操作 {#customizing-actions}
+#### Customize actions {#customizing-actions}
 
-您可以通过一系列预定义操作来确定用户可以对选定数字资产执行哪些操作。
+You can determine what actions users can perform on selected digital assets from a selection of predefined actions.
 
-要向“资产共享”页面添加操作，请执行以下操作：
+To add actions to the Asset Share page:
 
-1. 在要自定义的“资产共享”页面中，单击 **Sidekick中的** “操作”。
+1. In the Asset Share page that you want to customize, click **Actions** in the sidekick.
 
-可以执行以下操作：
+The following actions are available:
 
-![assetshare2](assets/assetshare2.bmp)
+ | Action | Description |
+ |---|---|
+ | [!UICONTROL Delete Action] | Users can delete the selected assets. |
+ | [!UICONTROL Download Action] | Lets users download selected assets to their computers. |
+ | [!UICONTROL Lightbox Action] | Saves assets to a "lightbox"   where you can perform other actions on them. This comes in handy when working   with assets across multiple pages. The lightbox can also be used as a   shopping cart for assets. |
+ | [!UICONTROL Move Action] | Users can move the asset to another   location |
+ | [!UICONTROL Tags Action] | Lets users add tags to selected assets |
+ | [!UICONTROL View Asset Action] | Opens the asset in the Asset editor for   user manipulation. |
 
-| 操作 | 描述 |
-|---|---|
-| [!UICONTROL 删除操作] | 用户可以删除选定的资产。 |
-| [!UICONTROL 下载操作] | 允许用户将选定资产下载到其计算机。 |
-| [!UICONTROL Lightbox 操作] | 将资产保存到“Lightbox”中，您可以在其中对其执行其他操作。 在跨多个页面处理资产时，此功能非常方便。 Lightbox还可用作资产的购物车。 |
-| [!UICONTROL 移动操作] | 用户可以将资产移到其他位置 |
-| [!UICONTROL 标记操作] | 允许用户向选定资产添加标记 |
-| [!UICONTROL 查看资产操作] | 在资产编辑器中打开资产以便用户操作。 |
-
-1. 将相应的操作拖至页 **面上的** “操作”区域。 这样做会创建用于执行该操作的按钮。
+1. Drag the appropriate action to the **Actions** area on the page. Doing so creates a button that is used to execute that action.
 
 ![chlimage_1-159](assets/chlimage_1-387.png)
 
-#### 确定如何显示搜索结果 {#determining-how-search-results-are-presented}
+#### Determine how search results are presented {#determining-how-search-results-are-presented}
 
-您从预定义的镜头列表确定结果的显示方式。
+You determine how results are displayed from a predefined list of lenses.
 
-要更改查看搜索结果的方式：
+To change how search results are viewed:
 
-1. 在要自定义的资产共享页面中，单击搜索。
+1. In the Asset Share page that you want to customize, click Search.
 
 ![chlimage_1](assets/assetshare3.png)
 
-1. 将相应的镜头拖动到页面的顶部中心。 在新闻中心中，已有可用的镜头。 用户按相应的镜头图标以根据需要显示搜索结果。
+1. Drag the appropriate lens to the top center of the page. In the Press Center, the lenses are already available. Users press the appropriate lens icon to display search results as desired.
 
-有以下镜头可用：
+The following lenses are available:
 
-| 镜头 | 描述 |
+| Lens | Description |
 |---|---|
-| **[!UICONTROL 列出镜头]** | 以列表方式显示资产及详细信息。 |
-| **[!UICONTROL 马赛克镜头]** | 以马赛克形式展示资源。 |
+| **[!UICONTROL List Lens]** |Presents the assets in a list fashion with details. |
+| **[!UICONTROL Mosaic Lens]** |Presents assets in a mosaic fashion. |
 
-#### 马赛克镜头 {#mosaic-lens}
+#### Mosaic Lens {#mosaic-lens}
 
 ![chlimage_1-160](assets/chlimage_1-388.png)
 
-#### 列出镜头 {#list-lens}
+#### List Lens {#list-lens}
 
 ![chlimage_1-161](assets/chlimage_1-389.png)
 
-#### 自定义Query Builder {#customizing-the-query-builder}
+#### Customize the Query Builder {#customizing-the-query-builder}
 
-通过查询生成器，您可以输入搜索词并为“资产共享”页面创建内容。 编辑查询构建器时，您还可以确定每页显示的搜索结果数，双击资产时打开的资产编辑器，查询搜索的路径，以及自定义节点类型。
+The query builder lets you enter search terms and create content for the Asset Share page. When you edit the query builder, you also get to determine how many search results are displayed per page, which asset editor opens when you double-click an asset, the path the query searches, and customizes nodetypes.
 
-要自定义查询构建器，请执行以下操作：
+To customize the query builder:
 
-1. 在要自定义的“资产共享”页面中，单击Query **Builder中** 的“编辑”。 默认情况下，将打 **开“常规** ”选项卡。
-1. 选择每页的结果数、资产编辑器的路径（如果您有自定义的资产编辑器）和操作标题。
+1. In the Asset Share page that you want to customize, click **Edit** in the Query Builder. By default, the **General** tab opens.
+1. Select the number of results per page, the path of the asset editor (if you have a customized asset editor) and the Actions title.
 
 ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
-1. Click the **Paths** tab. 输入要运行的一个或多个路径。 如果用户使用“路径”谓词，则这些路径将被覆盖。
+1. Click the **Paths** tab. Enter a path or multiple paths that the search will run. These paths are overwritten if the user uses the Paths predicate.
 
 ![screen_shot_2012-04-23at15150pm](assets/screen_shot_2012-04-23at15150pm.png)
 
-1. 根据需要输入其他节点类型。
+1. Enter another node type, if desired.
 
-1. 在 **Query Builder URL字段中** ，您可以覆盖或绕排查询构建器，并使用现有的query Builder组件输入新的servlet URL。 在源 **URL字段中** ，您也可以覆盖源URL。
+1. In the **Query Builder URL** field, you can override or wrap the query builder and enter the new servlet URLs with the existing query builder component. In the **Feed URL** field, you can override the Feed URL as well.
 
 ![screen_shot_2012-04-23at15313pm](assets/screen_shot_2012-04-23at15313pm.png)
 
-1. 在“文 **本** ”字段中，输入要显示的结果文本和结果的页码。 完成 **更改后** ，单击“确定”。
+1. In the **Text** field, enter the text you want to appear for results and page numbers of results. Click **OK** when finished making changes.
 
 ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### 添加谓词 {#adding-predicates}
+#### Add predicates {#adding-predicates}
 
-AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选项可让用户进一步缩小搜索范围。 在某些情况下，它们可能会覆盖查询构建器参数（例如，路径参数）。
+AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
-要添加谓词，请执行以下操作：
+To add predicates:
 
-1. 在要自定义的资产共享页面中，单击搜 **索**。
+1. In the Asset Share page that you want to customize, click **Search**.
 
 ![assetshare3](assets/assetshare3.png)
 
-1. 将相应的谓词拖动到查询构建器下的“资产共享”页面。 这样做会创建相应的字段。
+1. Drag the appropriate predicates to the Asset Share page underneath the query builder. Doing so creates the appropriate fields.
 
 ![assetshare4](assets/assetshare4.bmp)
 
-以下谓词可用：
+The following predicates are available:
 
-| 谓词 | 描述 |
+| Predicate | Description |
 |---|---|
-| **[!UICONTROL 日期谓词]** | 允许用户搜索在特定日期之前和之后修改的资产。 |
-| **[!UICONTROL 选项谓词]** | 站点所有者可以指定要搜索的属性（如属性谓词中的属性，例如cq:tags）和要从中填充选项的内容树（例如，标记树）。 这样做会生成选项列表，用户可以从中选择所选属性（标记属性）应具有的值（标记）。 此谓词允许您构建列表控件，如标记列表、文件类型、图像方向等。 它适用于一组固定选项。 |
-| **[!UICONTROL 路径谓词]** | 允许用户根据需要定义路径和子文件夹。 |
-| **[!UICONTROL 属性谓词]** | 站点所有者指定要搜索的属性，例如tiff:ImageLength，然后用户可以输入一个值，如800。这将返回所有高度为800像素的图像。 如果您的属性可以具有任意值，则此谓词很有用。 |
+| **[!UICONTROL Date Predicate]** |Lets users search for assets that were modified before and after certain dates. |
+| **[!UICONTROL Options Predicate]** |The site owner can specify a property to search for (as in the property predicate, for example cq:tags) and a content tree to populate the options from (for example the tag tree). Doing so generates a list of options where the users can select the values (tags) that the selected property (tag property) should have. This predicate lets you build list controls like the list of tags, file types, image orientations, and so on. It is great for a fixed set of options. |
+| **[!UICONTROL Path Predicate]** |Lets users define the path and subfolders, if desired. |
+| **[!UICONTROL Property Predicate]** |The site owner specifies a property to search for, e.g. tiff:ImageLength and the user can then enter a value, e.g. 800. This returns all images that are 800 pixels high. Useful predicate if your property can have arbitrary values. |
 
-有关详细信息，请参阅谓 [词Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html)。
+For more information, see the [predicate Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html).
 
-1. 要进一步配置谓词，请双击它。 例如，打开“路径谓词”时，需要分配根路径。
+1. To configure the predicate further, double-click it. For example, when you open the Path Predicate, you need to assign the root path.
 
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
+-->
 
-## 创建和配置“资产编辑器”页面 {#creating-and-configuring-an-asset-editor-page}
+## 创建和配置资产编辑器页面 {#creating-and-configuring-an-asset-editor-page}
 
-您可以自定义资产编辑器，以确定用户如何查看和编辑数字资产。 为此，您需要创建一个新的“资产编辑器”页面，然后自定义视图以及用户可以对该页面执行的操作。
+您可以自定义资产编辑器，以确定用户如何视图和编辑数字资产。 为此，您需要创建一个新的“资产编辑器”页面，然后自定义视图以及用户可以对该页面执行的操作。
 
 >[!NOTE]
 >
->如果要向DAM资产编辑器添加自定义字段，请向 `/apps/dam/content/asseteditors.`
+>如果要向DAM资产编辑器添加自定义字段，请向 `cq:Widget` `/apps/dam/content/asseteditors.`
 
-### 创建“资产编辑器”页面 {#creating-the-asset-editor-page}
+### 创建资产编辑器页面 {#creating-the-asset-editor-page}
 
-创建“资产编辑器”页面时，最好在“资产共享”页面的正下方创建该页面。
+创建资产编辑器页面时，最好在资源共享页面的正下方创建该页面。
 
 要创建资产编辑器页面，请执行以下操作：
 
 1. 在“网 **站** ”选项卡中，导航到要创建资产编辑器页面的位置，然后单击“新 **建”**。
-1. 选择 **Geometrixx资产编辑器** ，然后单击 **创建**。 将创建新页面，并在“网站”选项卡中列 **出该页** 。
+1. 选择 **Geometrixx资产编辑器** ，然后单 **击创建**。 将创建新页面，并且该页面会列在“网 **站** ”选项卡。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
@@ -209,79 +212,79 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
 ![assetshare5](assets/assetshare5.bmp)
 
-要自定义资产编辑器页面，请使用Sidekick中的元素。 从 **Geometrixx新闻中心访问的资产编辑器页面是基于此模板的页面的自定义版本** :
+要自定义资产编辑器页面，请使用Sidekick中的元素。 从Geometrixx新闻中心访问的“资 **产编辑器** ”页面是基于此模板的自定义页面版本：
 
 ![assetshare6](assets/assetshare6.bmp)
 
-#### 将资产编辑器设置为从资产共享页面打开 {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### 设置要从资产共享页面打开的资产编辑器 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
-在创建自定义的“资产编辑器”页面后，您需要确保在双击您创建的自定义资产共享时，会在自定义的“编辑器”页面中打开资产。
+在创建自定义资产编辑器页面后，您需要确保在多次单击您创建的自定义资产共享的资产时，会在自定义编辑器页面中打开资产。
 
 要设置“资产编辑器”页面，请执行以下操作：
 
-1. 在“资产共享”页面中，单击 **Query** Builder旁边的编辑。
+1. 在“资产共享”页面中，单 **击查询** 构建器旁边的“编辑”。
 
 ![screen_shot_2012-04-23at20123pm](assets/screen_shot_2012-04-23at20123pm.png)
 
-1. 如果尚未 **选择** ，请单击“常规”选项卡。
+1. 如果尚 **未选** 定，请单击“常规”选项卡。
 
-1. 在资产 **编辑器的路径字段中** ，输入您希望资产共享页面在中打开资产的资产编辑器的路径，然后单击确 **定**。
+1. 在资产 **编辑器的路径** ，输入您希望资产共享页面在中打开资产的资产编辑器的路径，然后单击确 **定**。
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
 #### 添加资产编辑器组件 {#adding-asset-editor-components}
 
-您可以通过向页面添加组件来确定资产编辑器具有的功能。
+您可以通过向页面添加组件来确定资产编辑器具有哪些功能。
 
 要添加资产编辑器组件，请执行以下操作：
 
-1. 在要自定义的“资产编辑器”页面中，选择Sidekick中 **的“资产编辑器** ”。 将显示所有可用的资产编辑器组件。
+1. 在要自定义的“资产编辑器”页面中，选择 **Sidekick中的** “资产编辑器”。 将显示所有可用的资产编辑器组件。
 
 >[!NOTE]
 >
->您可以自定义什么取决于可用的组件。 要启用组件，请转到“设计”模式，然后选择需要启用的组件。
+>您可以自定义的内容取决于可用的组件。 要启用组件，请转至“设计”模式，然后选择需要启用的组件。
 
-1. 将组件从Sidekick拖动到资产编辑器中，并在组件对话框中进行任何修改。 下表介绍了这些组件，并在随后的详细说明中进行了说明。
+1. 将组件从Sidekick拖动到资产编辑器，并在组件对话框中进行任何修改。 下表对这些组件进行了说明，并在随后的详细说明中进行了说明。
 
 >[!NOTE]
 >
->在设计资产编辑器页面时，您可以创建只读或可编辑的组件。 用户知道，如果某个铅笔的图像出现在该组件中，则可以编辑该字段。 默认情况下，大多数组件都设置为只读。
+>在设计资产编辑器页面时，您可以创建只读或可编辑的组件。 用户知道，如果铅笔的图像出现在该组件中，则可以编辑该字段。 默认情况下，大多数组件都设置为只读。
 
 | 组件 | 描述 |
 |---|---|
 | **[!UICONTROL 元数据表单]和元[!UICONTROL 数据文本字段]** | 允许您向资产添加其他元数据，并对该资产执行操作（如提交）。 |
 | **[!UICONTROL 子资产]** | 允许您自定义子资产。 |
 | **标记** | 允许用户选择标记并将其添加到资产。 |
-| **[!UICONTROL 缩略图]** | 显示资产的缩略图及其文件名，并允许您添加替代文本。 您也可以在此处添加资产编辑器操作。 |
+| **[!UICONTROL 缩略图]** | 显示资产的缩略图及其文件名，并允许您添加替代文本。 您还可以在此处添加资产编辑器操作。 |
 | **[!UICONTROL 标题]** | 显示可自定义的资产标题。 |
 
 ![screen_shot_2012-04-23at22743pm](assets/screen_shot_2012-04-23at22743pm.png)
 
-#### 元数据表单和文本字段——配置“查看元数据”组件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
+#### 元数据表单和文本字段——配置视图元数据组件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-元数据表单是包含开始和结束操作的表单。 在中间输入文 **本字段** 。 有关使 [用表单的更多信息](/help/sites-authoring/default-components-foundation.md#form-component) ，请参阅表单。
+元数据表单是包含开始和结束操作的表单。 在中间输入文 **本** 字段。 有关 [使用表](/help/sites-authoring/default-components-foundation.md#form-component) 单的更多信息，请参阅表单。
 
-1. 通过单击表单的“开始”区 **域中的** “编辑”，创建开始操作。 如果需要，您可以输入“框”标题。 默认情况下，“框”标题为“元 **数据”**。 如果希望生成用于验证的java脚本客户端代码，请选中“客户端验证”复选框。
+1. 通过单击表单的开始区 **域** 中的编辑，创建开始操作。 如果需要，可以输入Box标题。 默认情况下，“框”标题为 **元数据**。 如果希望生成验证的java脚本客户端代码，请选中“客户端验证”复选框。
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. 通过单击表单的“结束”区 **域中的** “编辑”，创建“结束”操作。 例如，您可能希望创建“提交” **按钮** ，以允许用户提交其元数据更改。 或者，您也可以添加将元 **数据重置** 到其原始状态的“重置”按钮。
+1. 通过单击表单的“结束 **”区** 域中的“编辑”创建“结束”操作。 例如，您可能希望创建“提 **交** ”按钮，以允许用户提交其元数据更改。 或者，您可以添加将元 **数据** 重置为其原始状态的“重置”按钮。
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. 在“表单开 **始”和** “表单结 **束”之间**，将元数据文本字段拖动到表单中。 用户将元数据填充到这些文本字段中，他们可以提交或完成其他操作。
+1. 在表单 **开始** 和表 **单结尾之**&#x200B;间，将元数据文本字段拖动到表单中。 用户将元数据填充到这些文本字段中，他们可以提交或完成其他操作。
 
-1. 双击字段名称，例如 **Title** ，打开元数据字段并进行更改。 在“编 **辑组件** ”窗口的“常规 **”选项卡中，定义命名空间和字段标签以及类型，例如**`dc:title`。
+1. 多次单击字段名称，例如 **标题** ，打开元数据字段并进行更改。 在“编 **辑组** 件 **”窗口的“常规** ”选项卡中，定义命名空间、字段标签以及类型，例如 `dc:title`。
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-有关修 [](/help/assets/extending-assets.md) 改元数据表单中可用的命名空间的信息，请参阅自定义和扩展AEM资产。
+有关 [修改元数据表单中可用命名空间](/help/assets/extending-assets.md) ，请参阅自定义和扩展AEM资产。
 
-1. Click the **Constraints** tab. 您可以在此处选择字段是否为必填字段，并根据需要添加任何约束。
+1. Click the **Constraints** tab. 您可以在此选择字段是否为必填字段，并根据需要添加任何约束。
 
 ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. Click the **Display** tab. 在此，您可以为元数据字段输入新的宽度和行数。 选中字 **段为只读复选框** ，以允许用户编辑元数据。
+1. Click the **Display** tab. 在此，您可以为元数据字段输入新的宽度和行数。 选中字 **段为只读复选框** ，允许用户编辑元数据。
 
 ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -293,11 +296,11 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
 #### 子资产 {#sub-assets}
 
-您可以在子资产组件中查看和选择子资产。 您可以确定主资产和子资产 [下显示](/help/assets/assets.md#what-are-digital-assets) 的名称。
+子资产组件是您可以视图和选择子资产的位置。 您可以确定主资产和子资 [产下](/help/assets/assets.md#what-are-digital-assets) 显示的名称。
 
 ![screen_shot_2012-04-23at24025pm](assets/screen_shot_2012-04-23at24025pm.png)
 
-双击子资产组件以打开子资产对话框，您可以在该对话框中更改主资产和任何子资产的标题。 默认值显示在相应字段的下方。
+多次-单击子资产组件以打开子资产对话框，您可以在该对话框中更改主资产和任何子资产的标题。 默认值显示在相应字段的下方。
 
 ![screen_shot_2012-04-23at23907pm](assets/screen_shot_2012-04-23at23907pm.png)
 
@@ -305,17 +308,17 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
 ![screen_shot_2012-04-23at24442pm](assets/screen_shot_2012-04-23at24442pm.png)
 
-例如，如果您选择子资产，请注意组件如何显示相应的页面以及框标题从子资产更改为同级。
+例如，如果您选择了子资产，请注意组件如何显示相应的页面以及框标题从子资产更改为同级。
 
 ![screen_shot_2012-04-23at24552pm](assets/screen_shot_2012-04-23at24552pm.png)
 
 #### 标记 {#tags}
 
-标记组件是一个组件，用户可以在该组件中将现有标记分配给资产，这有助于以后进行组织和检索。 您可以使此组件为只读，因此用户无法添加标记，但只能查看它们。
+标记组件是一个组件，用户可以在该组件中为资产分配现有标记，这有助于以后的组织和检索。 您可以使此组件为只读，因此用户无法添加标记，而只能视图标记。
 
 ![screen_shot_2012-04-23at25031pm](assets/screen_shot_2012-04-23at25031pm.png)
 
-双击标记组件以打开标记对话框，您可以在该对话框中根据需要从标记中更改标题，还可以在该对话框中选择已分配的命名空间。 要使此字段可编辑，请清除“隐 **[!UICONTROL 藏编辑]** ”复选框。 默认情况下，标记是可编辑的。
+多次-单击标记组件以打开标记对话框，您可以根据需要从标记中更改标题，也可以选择已分配的命名空间。 要使此字段可编辑，请清除“隐 **[!UICONTROL 藏编辑]** ”复选框。 默认情况下，标记是可编辑的。
 
 ![screen_shot_2012-04-23at24731pm](assets/screen_shot_2012-04-23at24731pm.png)
 
@@ -329,11 +332,11 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
 #### 缩略图 {#thumbnail}
 
-缩略图组件是资产显示选定缩略图的位置（对于许多格式，缩略图会自动提取）。 此外，该组件还显示文件名以及可 [以修改的操作](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)。
+缩略图组件是资产显示选定缩略图的位置（对于许多格式，缩略图会自动提取）。 此外，该组件还显示文件名以 [及您可以修改的操作](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)。
 
 ![screen_shot_2012-04-23at25452pm](assets/screen_shot_2012-04-23at25452pm.png)
 
-双击缩略图组件以打开缩略图对话框，您可以在其中更改替代文本。 默认情况下，缩略图替代文本默认为 **单击以下载资** 产。
+多次-单击缩略图组件以打开缩略图对话框，在该对话框中可以更改替代文本。 默认情况下，缩略图替代文本默认为 **单击以下载资** 产。
 
 ![screen_shot_2012-04-23at25604pm](assets/screen_shot_2012-04-23at25604pm.png)
 
@@ -347,13 +350,13 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
 ![chlimage_1-163](assets/chlimage_1-391.png)
 
-默认情况下，它处于只读模式，因此用户无法编辑它。 要使其可编辑，请双击组件并清除“隐藏编 **辑”按钮复选框** 。 此外，为多个资产输入标题。
+默认情况下，它处于只读模式，因此用户无法编辑它。 要使其可编辑，请多次单击组件并清除“隐 **藏编辑”按钮** 。 此外，为多个资产输入标题。
 
 ![screen_shot_2012-04-23at35100pm](assets/screen_shot_2012-04-23at35100pm.png)
 
 如果可以编辑标题，则可以通过单击铅笔打开资产属性窗口来添加标题 **和说明** 。 此外，您还可以通过选择日期和时间来打开和关闭资产。
 
-当用户通过单击铅笔图标编辑标题时，他们可以更改标题、 **说明**，然后输入 **On** and ******** Off Times以打开和关闭资产。
+当用户通过单击铅笔图标编辑标题时，他们可以更 **改标题**、 **说明**，并输 **入On** 和 **** Off Times以打开和关闭资产。
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -363,11 +366,11 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
 #### 添加资产编辑器操作 {#adding-asset-editor-actions}
 
-您可以通过一系列预定义操作来确定用户可以对选定数字资产执行哪些操作。
+您可以通过一系列预定义操作来确定用户可以对选定数字资产执行的操作。
 
 要向“资产编辑器”页面添加操作，请执行以下操作：
 
-1. 在要自定义的“资产编辑器”页面中，单击Sidekick中 **的“资产编辑器** ”。
+1. 在要自定义的“资产编辑器”页面中，单击 **Sidekick中的** “资产编辑器”。
 
 ![screen_shot_2012-04-23at35515pm](assets/screen_shot_2012-04-23at35515pm.png)
 
@@ -377,51 +380,51 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 |---|---|
 | [!UICONTROL 下载] | 允许用户将选定资产下载到其计算机。 |
 | [!UICONTROL 编辑者] | 允许用户编辑图像（交互式编辑） |
-| [!UICONTROL Lightbox] | 将资产保存到“Lightbox”中，您可以在其中对其执行其他操作。 在跨多个页面处理资产时，此功能非常方便。 |
-| [!UICONTROL 锁定] | 允许用户锁定资产。 默认情况下，此功能未启用，并且需要在组件列表中启用。 |
+| [!UICONTROL Lightbox] | 将资产保存到“Lightbox”中，您可以在其中对其执行其他操作。 在跨多个页面处理资产时，此功能非常便于使用。 |
+| [!UICONTROL 锁定] | 允许用户锁定资产。 默认情况下，此功能未启用，需要在组件列表中启用。 |
 | [!UICONTROL 引用] | 单击此图标可显示资产正在使用的页面。 |
 | [!UICONTROL 版本控制] | 允许您创建和恢复资产的版本。 |
 
-1. 将相应的操作拖至页 **面上的** “操作”区域。 这样做会创建用于执行该操作的按钮。
+1. 将相应的操作拖至页 **面上** 的“操作”区域。 这样做会创建用于执行该操作的按钮。
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
 ## 使用“资产编辑器”页面对资产进行多次编辑 {#multi-editing-assets-with-the-asset-editor-page}
 
-使用AEM资产，您可以一次对多个资产进行更改。 在选定资产后，您可以同时更改其：
+通过AEM资产，您可以一次对多个资产进行更改。 在选定资产后，您可以同时更改其：
 
 * 标记
 * 元数据
 
 要使用“资产编辑器”页面对资产进行多次编辑，请执行以下操作：
 
-1. 打开Geometrixx **Press Center** （Geometrixx新闻中心）页面：
+1. 打开Geometrixx **新闻中心** 页：
    `https://localhost:4502/content/geometrixx/en/company/press.html`
 
 1. 选择资产：
 
-   * 在Windows上：每 `Ctrl + click` 个资产。
-   * 在Mac上：每 `Cmd + click` 个资产。
-   要选择资产范围，请执行以下操作：单击第一个资产，然后单 `Shift + click` 击最后一个资产。
+   * 在Windows上： `Ctrl + click` 每个资产。
+   * 在Mac上： `Cmd + click` 每个资产。
+   要选择资产范围，请执行以下操作： 单击第一个资产，然后 `Shift + click` 单击最后一个资产。
 
-1. 单击 **“操作** ”字段( **** 页面左侧部分)中的“编辑元数据”。
-1. Geometrixx新闻中 **心资产编辑器页面** ，将在新选项卡中打开。 资产的元数据显示如下：
+1. 在“ **操作** ”字段( **页面左侧部分** )中单击“编辑元数据”。
+1. Geometrixx Press **Center资产编辑器页** 面在新选项卡中打开。 资产的元数据会按如下方式显示：
 
-   * 标记（不适用于所有资产，但仅适用于少数几个资产）以斜体显示。
+   * 标记不适用于所有资产，但仅适用于少数几个资产，以斜体显示。
    * 应用于所有资产的标记会以普通字体显示。
-   * 除标记之外的元数据：只有在所有选定资产的值相同时，才会显示字段的值。
+   * 除标记之外的元数据： 仅当所有选定资产的值相同时，才会显示字段的值。
 
 1. 单击 **下载** ，以下载包含资产原始演绎版的zip文件。
-1. 单击“标记”字段旁 **边的铅笔** 图标以编辑标记：
+1. 单击“标记”字段旁 **边的** “铅笔”图标以编辑标记：
 
-   * 并不适用于所有资产，但只适用于少数几个资产的标记具有灰色背景。
-   * 应用于所有资产的标记具有白色背景。
+   * 并不适用于所有资产，但只适用于少数资产的标记具有灰色背景。
+   * 应用于所有资源的标记具有白色背景。
    您可以：
 
-   * 单击 **x图标** ，以删除所有资产的标记。
+   * 单击 **x** 图标以删除所有资产的标记。
    * 单击 **+图标** ，将标记添加到所有资产。
    * 单击箭 **头** ，然后选择一个标记以向所有资产添加新标记。
-   单击 **确定** ，将更改写入表单。 “标记”字段旁 **边的框** 将自动选中。
+   单 **击** “确定”将更改写入表单。 “标记”字段旁 **边的框** 将自动被选中。
 
 1. 编辑“说明”字段。 例如，将其设置为：
 
@@ -429,8 +432,8 @@ AEM资产包含许多可添加到“资产共享”页面的谓词。 这些选�
 
    编辑字段时，其值会在提交表单时覆盖选定资产的现有值。
 
-   注意：编辑字段时，该字段旁边的框将自动选中。
+   注意： 编辑字段时，将自动选中该字段旁边的框。
 
 1. 单击 **更新元数据** ，以提交表单并保存所有资产的更改。
 
-   注意：仅修改选定的元数据。
+   注意： 只修改选中的元数据。
