@@ -4,14 +4,17 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5资产用户指南
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+workflow-type: tm+mt
+source-wordcount: '633'
+ht-degree: 42%
 
 ---
 
 
 # AEM 6.5 Assets User Guide {#assets}
 
-+ [[!DNL资产]用户指南](home.md)
++ [[!DNL Assets] 用户指南](home.md)
 + [AEM 6.5 Assets发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [关于DAM](assets.md)
 + [资产的最佳实践](best-practices-for-assets.md)
@@ -19,7 +22,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [AEM Assets主页体验](assets-home-page.md)
    + [在AEM中搜索资产](search-assets.md)
    + [多语言资源](multilingual-assets.md)
-   + [在AEM资产中使用[!DNL Adobe Stock]资产](aem-assets-adobe-stock.md)
+   + [AEM [!DNL Adobe Stock] 资产中的使用资产](aem-assets-adobe-stock.md)
    + [预览3D资产](previewing-3d-assets.md)
    + [审核文件夹资产和收藏集](bulk-approval.md)
    + [时间轴中的活动流](activity-stream.md)
@@ -45,7 +48,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [Dynamic Media 图像配置文件](image-profiles.md)
    + [智能图像处理](imaging-faq.md)
    + [视频](s7-video.md)
-   + [将Scene7功能添加到页面](scene7.md)
+   + [将Scene7功能添加到您的页面](scene7.md)
    + [HTTP2 内容交付](http2.md)
    + [传送 Dynamic Media 资产](delivering-dynamic-media-assets.md)
    + [在 Dynamic Media 中激活热链接保护](hotlink-protection.md)
@@ -53,7 +56,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [全景图像](panoramic-images.md)
    + [混合媒体集](mixed-media-sets.md)
    + [旋转集](spin-sets.md)
-   + [视频](video.md)
+   + [Dynamic Media中的视频](video.md)
    + [传送横幅](carousel-banners.md)
    + [交互式图像](interactive-images.md)
    + [交互式视频](interactive-videos.md)
@@ -68,13 +71,13 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [使用规则集转换 URL](using-rulesets-to-transform-urls.md)
    + [发布 Dynamic Media 资产](publishing-dynamicmedia-assets.md)
    + [使 CDN 缓存内容无效](invalidate-cdn-cached-content.md)
-   + [安装Feature Pack 18912以批量迁移资产](bulk-ingest-migrate.md)
+   + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产 {#extending}
    + [自定义和扩展AEM资产](extending-assets.md)
    + [使用媒体处理程序和工作流处理资源](media-handlers.md)
    + [扩展搜索功能](searchx.md)
-   + [安装并配置[!DNL ImageMagick]以与AEM资产结合使用](best-practices-for-imagemagick.md)
+   + [安装并 [!DNL ImageMagick] 配置以与AEM资产配合使用](best-practices-for-imagemagick.md)
    + [将资源与活动流集成](extending-activity-stream.md)
    + [扩展资产编辑器](asseteditorx.md)
    + [资产 HTTP API](mac-api-assets.md)
@@ -100,22 +103,22 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [XMP 元数据](xmp.md)
    + [资产网络注意事项](assets-network-considerations.md)
    + [AEM Assets和AEM MediaLibrary](medialibrary.md)
-   + [使用PDF栅格化器](aem-pdf-rasterizer.md)
+   + [使用PDF光栅器](aem-pdf-rasterizer.md)
    + [配置上传限制](configuring-asset-upload-restrictions.md)
-   + [AEM与Creative Cloud集成的最佳实践](aem-cc-integration-best-practices.md)
+   + [AEM和Creative Cloud集成最佳实践](aem-cc-integration-best-practices.md)
    + [与InDesign Server集成](indesign.md)
    + [元数据配置文件](metadata-profiles.md)
    + [资产中的数字版权管理](drm.md)
-   + [使用演示包进行资产分析](touch-ui-using-demo-package-for-asset-insights.md)
+   + [使用演示包获得资产洞察](touch-ui-using-demo-package-for-asset-insights.md)
    + [资产文件格式最佳实践](assets-file-format-best-practices.md)
-   + [监控资产的最佳实践](assets-monitoring-best-practices.md)
+   + [监视资产的最佳实践](assets-monitoring-best-practices.md)
    + [Camera Raw支持](camera-raw.md)
-   + [使用Apache Tika检测资产的MIME类型](detect-asset-mime-type-with-tika.md)
+   + [使用Apache Tika检测MIME类型的资产](detect-asset-mime-type-with-tika.md)
    + [图像转码库](imaging-transcoding-library.md)
    + [支持IPTC元数据](iptc-support.md)
    + [元数据架构](metadata-schemas.md)
-   + [集合、片段和片段模板的多租约](multi-tenancy.md)
-   + [为资产加水印](watermarking.md)
+   + [集合、片段和片段模板的多租户](multi-tenancy.md)
+   + [为资产设置水印](watermarking.md)
    + [批量元数据导入和导出](metadata-import-export.md)
    + [资产模板](asset-templates.md)
    + [与Creative Cloud共享文件夹的最佳实践](aem-cc-folder-sharing-best-practices.md)
@@ -155,7 +158,7 @@ source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
    + [登记和注销资产](check-out-and-submit-assets.md)
    + [将翻译云服务应用到文件夹](transition-cloud-services.md)
    + [使用页面跟踪器并在网页中嵌入代码](touch-ui-using-page-tracker.md)
-   + [管理复合资源](managing-linked-subassets.md)
+   + [管理复合资产](managing-linked-subassets.md)
    + [相关资产](related-assets.md)
    + [专用文件夹共享](private-folder.md)
    + [智能内容服务的培训指南](smart-tags-training-guidelines.md)
