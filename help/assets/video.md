@@ -1,5 +1,5 @@
 ---
-title: 视频
+title: Dynamic Media中的视频
 description: 了解如何在Dynamic Media中处理视频
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
@@ -9,12 +9,15 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+workflow-type: tm+mt
+source-wordcount: '11868'
+ht-degree: 26%
 
 ---
 
 
-# 视频 {#video}
+# Dynamic Media中的视频 {#video}
 
 本节介绍如何在 Dynamic Media 中处理视频。
 
@@ -877,7 +880,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-435](assets/chlimage_1-435.png)
 
@@ -908,7 +911,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+>您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
 如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
 
