@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1eb8a0335d3e4697c3cfd5a1e7048dda06bbdaf8
+source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
 workflow-type: tm+mt
-source-wordcount: '5750'
+source-wordcount: '5753'
 ht-degree: 7%
 
 ---
@@ -480,7 +480,7 @@ spin-01-01
 
 ### （可选）调整Dynamic Media - Scene7模式的性能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-上传文件时，您可以调整作业参数以加快处理速度。 例如，如果您上传的是PSD文件，但不想将它们作为模板进行处理，则可以将图层提取设置为false（关闭）。 调整的作业参数将显示为 `process=none&createTemplate=false`。
+上传文件时，您可以调整作业参数以加快处理速度。 例如，如果您上传的是PSD文件，但不想将它们作为模板进行处理，则可以将图层提取设置为false（关闭）。 在这种情况下，调整的作业参数将显示为 `process=none&createTemplate=false`。
 
 Adobe建议对PSD、PDF和Postscript文件使用以下“调整”作业参数：
 
