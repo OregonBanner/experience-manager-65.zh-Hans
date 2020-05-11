@@ -3,9 +3,9 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 93731c44ae6b2d8617fedea87bce10495384fc52
+source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1779'
 ht-degree: 20%
 
 ---
@@ -73,6 +73,8 @@ ht-degree: 20%
 ## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
 以下列表描述了Dynamic Media不支持的栅格图像文件 *格式* 的子类型。
+
+另请参 [阅检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
 
 * IDAT区块大小大于100 MB的PNG文件。
 * PSB文件。
