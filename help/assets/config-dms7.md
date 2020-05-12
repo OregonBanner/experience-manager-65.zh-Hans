@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
+source-git-commit: d77296df73861c33720c16c14534c1b448d35d06
 workflow-type: tm+mt
-source-wordcount: '5759'
+source-wordcount: '5763'
 ht-degree: 7%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Dynamic Media - Scene7模式仅适用于AEM作者实例。 因此，您必须在AEM `runmode=dynamicmedia_scene7` 作者实例上进行配置， *而不是* 在AEM发布实例上进行配置。
+>Dynamic Media - Scene7模式仅适用于AEM作者实例。 因此，您必须在AEM `runmode=dynamicmedia_scene7` 作者实例上进行配置， *而不是* AEM发布实例。
 
 要启用Dynamic Media，您必须在终端窗口 `dynamicmedia_scene7` 中输入以下内容（使用的示例端口为4502），从命令行使用运行模式启动AEM:
 
@@ -524,11 +524,11 @@ Granite传输工作流队列用于DAM更 **[!UICONTROL 新资产工作流]** 。
 
 1. 点按&#x200B;**[!UICONTROL 保存]**。
 
-#### 更新Granite Workflow队列 {#updating-the-granite-workflow-queue}
+#### 更新Granite工作流队列 {#updating-the-granite-workflow-queue}
 
 Granite工作流队列用于非临时工作流。 在Dynamic Media中，它用于使用Dynamic Media编码视频工 **[!UICONTROL 作流处理视频]** 。
 
-**更新Granite Workflow队列**
+**更新Granite工作流队列**
 
 1. 导航到 `https://<server>/system/console/configMgr` 并搜索队 **列： Granite工作流队列**。
 
@@ -546,11 +546,11 @@ Granite工作流队列用于非临时工作流。 在Dynamic Media中，它用�
 
 1. 点按&#x200B;**[!UICONTROL 保存]**。
 
-#### 更新Scene7上传连接 {#updating-the-scene-upload-connection}
+#### 更新Dynamic Media Classic上传连接 {#updating-the-scene-upload-connection}
 
 Scene7上传连接设置将AEM资产同步到Dynamic Media Classic服务器。
 
-**更新Scene7上传连接**
+**更新Dynamic Media Classic上传连接**
 
 1. 导航至 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. 在连接 **[!UICONTROL 数字字段]** 和／或活动作 **[!UICONTROL 业超时字段中]** ，根据需要更改该数字。
