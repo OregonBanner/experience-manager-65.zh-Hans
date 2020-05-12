@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: d948ea6e6f6983ba0ecfe05710ffa7dedb772075
 workflow-type: tm+mt
-source-wordcount: '5753'
+source-wordcount: '5759'
 ht-degree: 7%
 
 ---
@@ -374,7 +374,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
    请注 **[!UICONTROL 意]**,视图表单（如“详细信息”页面右上角所设置）是默认视图。
 
-1. 在预设列表面板中，点 **[!UICONTROL 按添]** 加以激活屏幕右侧“详细信息”面板中的定义字段。
+1. 在预设列表面板中，点 **[!UICONTROL 按]** “添加”以激活屏幕右侧“详细信息”面板中的定义字段。
 1. 在“详细信息”面板的“预设名称”字段中，键入预设的名称。
 1. 在批集类型下拉菜单中，选择预设类型。
 1. 执行下列操作之一：
@@ -480,7 +480,9 @@ spin-01-01
 
 ### （可选）调整Dynamic Media - Scene7模式的性能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-上传文件时，您可以调整作业参数以加快处理速度。 例如，如果您上传的是PSD文件，但不想将它们作为模板进行处理，则可以将图层提取设置为false（关闭）。 在这种情况下，调整的作业参数将显示为 `process=none&createTemplate=false`。
+**优化作业参数**
+
+上传文件时，您可以调整作业参数以加快处理速度。 例如，如果您上传的是PSD文件，但不想将它们作为模板进行处理，则可以将图层提取设置为false（关闭）。 在这种情况下，调整的作业参数将显示为 `process=None&createTemplate=false`。
 
 Adobe建议对PSD、PDF和Postscript文件使用以下“调整”作业参数：
 
@@ -492,7 +494,9 @@ Adobe建议对PSD、PDF和Postscript文件使用以下“调整”作业参数�
 
 要更新任何这些参数，请按照启用基 [于MIME类型的资产/Dynamic Media Classic上传作业参数支持中的步骤操作](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
 
-此外，为了保持Dynamic Media - Scene7模式平稳运行，Adobe建议使用以下同步性能／可伸缩性微调提示：
+**同步性能／可伸缩性微调提示**
+
+为了使Dynamic Media - Scene7模式平稳运行，Adobe建议使用以下同步性能／可伸缩性微调提示：
 
 * 更新预定义的Granite工作流（视频资产）队列工作线程。
 * 更新预定义的Granite临时工作流（图像和非视频资产）队列工作线程。
