@@ -3,10 +3,10 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 739f1c6fcc910ed134849c27a44a6feccd1684c9
+source-git-commit: 530a720a5fbad906e7015aa41a650b31f09fe2c4
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 17%
+source-wordcount: '2708'
+ht-degree: 18%
 
 ---
 
@@ -22,10 +22,6 @@ ht-degree: 17%
 1. 单击或点按卡 **[!UICONTROL 片视图中]** 资产拼贴上快速操作中的视图属性图标。
 
    ![对资产拼贴快速执行操作](assets/chlimage_1-170.png)
-
-1. 编辑各个选项卡下的各种元数据属性。 但是，您无法在属性页面中修改资 [!UICONTROL 产类] 型。
-
-   ![资产属性的“基本”选项卡，其中无法更改资产类型](assets/asset-properties-basic-tab.png)
 
 1. 您可以在可用选项卡下编辑各种元数据属性。 但是，您无法在属性页 [!UICONTROL 面的] “基本 [!UICONTROL ”选项] 卡中修改资产类型。
 
@@ -251,7 +247,7 @@ In this case, create a new node at `/etc/dam/metadataeditor/mimetypemappings` in
 
 ## 定义必填元数据 {#define-mandatory-metadata}
 
-您可以在文件夹级别定义必填字段，这将强制执行于上传到该文件夹的资产。 如果您上传的资产上传之前定义的必填字段缺少元数据，则卡视图的资产上会显示缺少元数据的可视指示。
+您可以在文件夹级别定义必填字段，该字段将强制应用于上传到该文件夹的资产。 如果您上传的资产上传之前定义的必填字段缺少元数据，则卡视图的资产上会显示缺少元数据的可视指示。
 
 >[!NOTE]
 >
