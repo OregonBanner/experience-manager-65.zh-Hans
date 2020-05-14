@@ -3,9 +3,9 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 39066500057d364ccee57f01f045c11d634b2d0e
+source-git-commit: 2366abc3be015fa637621f235edb8e8d79e51372
 workflow-type: tm+mt
-source-wordcount: '2723'
+source-wordcount: '2725'
 ht-degree: 18%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 18%
 
    或者，选择资产，然后单击或点按工 [!UICONTROL 具栏中] 的属性图标。
 
-1. 您可以在可用选项卡下编辑各种元数据属性。 但是，您无法在属性页 [!UICONTROL 面的] “基本 [!UICONTROL ”选项] 卡中修改资产类型。
+1. 您可以编辑可用选项卡下的各种可编辑元数据属性。 但是，您无法在属性页 [!UICONTROL 面的] “基本 [!UICONTROL ”选项] 卡中修改资产类型。
 
    ![资产属性的“基本”选项卡，其中无法更改资产类型](assets/asset-properties-basic-tab.png)
 
