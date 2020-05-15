@@ -3,7 +3,7 @@ title: 中的资源HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 34167cd9c03c9bc26aa24e6837dbd144af8bf9bd
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 1%
@@ -95,9 +95,9 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 **前提条件**
 
-* 转到 `https://[aem_server]:[port]/system/console/configMgr`.
-* 导航到 **Adobe Granite CSRF滤镜**。
-* 确保属性筛选 **器方法** 包括： 发布、放置、删除。
+1. 转到 `https://[aem_server]:[port]/system/console/configMgr`.
+1. 导航到 **Adobe Granite CSRF滤镜**。
+1. 确保属性筛选 **器方法** 包括： 发布、放置、删除。
 
 ## 检索文件夹列表 {#retrieve-a-folder-listing}
 
@@ -204,7 +204,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码** ：响应代码为：
 
 * 200 —— 确定——如果再现已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
