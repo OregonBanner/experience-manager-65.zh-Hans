@@ -3,9 +3,9 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2366abc3be015fa637621f235edb8e8d79e51372
+source-git-commit: 69506287c1c8e45d99c3229d701604387bd57ca9
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2713'
 ht-degree: 18%
 
 ---
@@ -43,9 +43,9 @@ ht-degree: 18%
 |---|---|---|
 | [!UICONTROL 默认] |  | 资产的基本元数据模式表单。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | <ul><li> [!UICONTROL 图像]</li></ul> | 模式表单，用于MIME类型为“image”（例如image/jpeg、image/png等）的资产。 <br> 图 [!UICONTROL 像表单] 具有以下子表单模板： <ul><li> [!UICONTROL jpeg]: 模式子类型为jpeg的资产 [!UICONTROL 表单]。</li> <li>[!UICONTROL tiff]: 模式子类型为tiff的资产的 [!UICONTROL 表单]。</li></ul> |
-|  | <ul><li> [!UICONTROL 应用]</li></ul> | 模式表单，用于MIME类型为“application”（例如application/pdf、application/zip等）的资产。 <br>[!UICONTROL pdf]: 模式子类型为pdf的资产的表单。 |
-|  | <ul><li>[!UICONTROL 视频]</li></ul> | 模式表单，用于MIME类型为“”（如video/avi、video/mp4等）的资产。 |
+|  | <ul><li> [!UICONTROL 图像]</li></ul> | Schema form for assets with the MIME type &quot;image&quot;, for example, `image/jpeg`, `image/png`, and so on. <br> 图 [!UICONTROL 像表单] 具有以下子表单模板： <ul><li> [!UICONTROL jpeg]: 模式子类型为jpeg的资产 [!UICONTROL 表单]。</li> <li>[!UICONTROL tiff]: 模式子类型为tiff的资产的 [!UICONTROL 表单]。</li></ul> |
+|  | <ul><li> [!UICONTROL 应用]</li></ul> | Schema form for assets with MIME type &quot;application&quot;, for example  `application/pdf`,  `application/zip`, and so on. <br>[!UICONTROL pdf]: 模式子类型为pdf的资产的表单。 |
+|  | <ul><li>[!UICONTROL 视频]</li></ul> | Schema form for assets with MIME type &quot;video&quot;, such as `video/avi`, `video/mp4` and so on. |
 | [!UICONTROL 收藏集] |  | 集合的模式表单。 |
 | [!UICONTROL contentfragment] |  | 模式内容片段表单。 |
 | [!UICONTROL 表单] |  | This schema form relates to [Adobe Experience Manager Forms](/help/forms/home.md). |
