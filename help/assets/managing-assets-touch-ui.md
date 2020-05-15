@@ -1,10 +1,13 @@
 ---
-title: 在[!DNL Adobe Experience Manager资产]中管理您的数字资产。
+title: 在中管理您的数字资产 [!DNL Adobe Experience Manager Assets]。
 description: 了解资产管理任务，如上传、下载、编辑、搜索、删除、批注以及对数字资产进行版本管理。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1321aa3421455d78fd4562d6cb524aa232ee2ce1
+source-git-commit: 94f7f2cde3c87ed4693b9e2004f80fc5f0cd9855
+workflow-type: tm+mt
+source-wordcount: '9347'
+ht-degree: 9%
 
 ---
 
@@ -503,7 +506,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    **删除演绎版**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then tap/click the **[!UICONTROL Delete Rendition]** icon from the toolbar.
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then tap/click the **[!UICONTROL Delete Rendition]** icon from the toolbar. 资产处理完成后，无法批量删除演绎版。 对于单个资产，您可以从用户界面手动删除演绎版。 对于多个资产，您可以自定义Experience Manager以删除特定演绎版或删除资产，然后重新上传已删除的资产。
 
    ![删除演绎版的选项](assets/delete_renditionicon.png)
 
