@@ -4,9 +4,9 @@ description: 了解管理资产集合的任务，如创建、视图、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
-source-wordcount: '2229'
+source-wordcount: '2216'
 ht-degree: 19%
 
 ---
@@ -149,31 +149,31 @@ Smart collections are built by saving a search so you can alter their content by
 
 收藏集元数据由与收藏集相关的数据组成，其中包括添加的任何标记。
 
-1. From the Collections console, select a collection and Click the **[!UICONTROL Properties]** icon from the toolbar.
+1. 从收藏集 [!UICONTROL 控制台] ，选择一个收藏集，然后单 **[!UICONTROL 击工]** 具栏中的属性。
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，从&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中查看收藏集元数据。
-1. 根据需要修改元数据，然后单击工 **[!UICONTROL 具栏中的]** “保存并关闭”以保存更改。
+1. 根据需要修改元数据。 要保存更改，请单 **[!UICONTROL 击工具栏中]** 的保存并关闭。
 
 ## 批量编辑多个集合的元数据 {#editing-collection-metadata-in-bulk}
 
 您可以同时编辑多个集合的元数据。 此功能可帮助您快速复制多个集合中的常见元数据。
 
-1. 在“收藏集”控制台中，选择要编辑其元数据的两个或多个收藏集。
+1. 在“收藏集”控制台中，选择两个或更多收藏集。
 1. From the toolbar, click the **[!UICONTROL Properties]** icon.
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，根据需要编辑&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡下的元数据。
 1. 要视图特定集合的元数据属性，请在集合列表中取消选择其余的集合。 元数据编辑器字段会填充特定集合的元数据。
 
    >[!NOTE]
    >
-   >* 在集合属性页面中，您可以通过取消选择集合来从集合列表中删除集合。 收藏集列表默认选中所有收藏集。 您删除的集合的元数据不会更新。
+   >* 在“属 [!UICONTROL 性] ”页面中，您可以通过取消选择集合从集合列表中删除集合。 收藏集列表默认选中所有收藏集。 Experience Manager不会更新您删除的集合的元数据。
    >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
 
 
-1. 单击 **[!UICONTROL 工具栏中的]** “保存并关闭”，然后关闭确认对话框以完成该过程。
+1. 单击 **[!UICONTROL 工具栏中的]** “保存并关闭”，然后关闭确认对话框。
 1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. 如果不选中此选项，则新元数据将替换字段中的现有元数据。单击 **[!UICONTROL 提交]**。
 
    >[!NOTE]
    >
-   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式向可包含多个值的字段中的现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
+   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式在可包含多个值的字段中向现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
 
 要自定义元数据 [!UICONTROL 属性] 页面，包括添加、修改和删除元数据属性，请使用模式编辑器。
 
