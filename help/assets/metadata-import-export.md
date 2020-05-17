@@ -3,7 +3,10 @@ title: 批量导入和导出资产元数据。
 description: 批量导入和导出数字资产的元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
+source-git-commit: 42532bfe73c44ad04b67afa973eef526f47588cf
+workflow-type: tm+mt
+source-wordcount: '786'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 1. 导航到用 [!DNL Assets] 户界面，然后单 **[!UICONTROL 击工]** 具栏中的创建。
 1. 从菜单中，选择元 **[!UICONTROL 数据]**。
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. 选择包含元数据的 CSV 文件。
-1. 指定以下参数：
+1. 指定以下参数。 请参阅metadata-import- [sample-file.csv上的示例CSV文件](assets/metadata-import-sample-file.csv)。
 
    | 元数据导入参数 | 描述 |
    |:---|:---|
@@ -33,7 +36,9 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
    | [!UICONTROL 启动工作流] | 默认为False。 当设置为 `true` 且默认的启动器设置对DAM元数 [!UICONTROL 据回写工作流(将元数据写入二进制XMP数据] )有效时。 启用启动工作流会减慢系统速度。 |
    | [!UICONTROL 资产路径列名称] | 定义包含资产的CSV文件的列名。 |
 
-1. 点按／单 **[!UICONTROL 击工]** 具栏中的导入。 导入元数据后，通知会发送到您的通知收 [!UICONTROL 件箱] 。 导航到资产属性页，并验证是否为资产正确导入了元数据值。
+1. 点按／单 **[!UICONTROL 击工]** 具栏中的导入。 导入元数据后，通知会显示在“通知”收 [!UICONTROL 件箱] 中。
+
+1. 要验证导入是否正确，请导航到资产的“ [!UICONTROL 属性] ”页面，然后验证字段中的值。
 
 要在导入元数据时添加日期和时间戳，请 `YYYY-MM-DDThh:mm:ss.fff-00:00` 使用日期和时间格式。 日期和时间以24小时 `T`格 `hh` 式的小时数分隔，以纳秒 `fff` 为单位，以及时 `-00:00` 区偏移。 例如， `2020-03-26T11:26:00.000-07:00` 2020年3月26日太平洋标准时间上午11点26分00秒。
 
@@ -41,7 +46,7 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 >
 >如果日期格式不匹配， `YYYY-MM-DDThh:mm:ss.fff-00:00`则不设置日期值。 导出的元数据CSV文件的日期格式为 `YYYY-MM-DDThh:mm:ss-00:00`。 如果要导入它，请通过添加由表示的纳秒值将其转换为可接受的格式 `fff`。
 
-## 导出元数据 {#export-metadata}
+## Export metadata {#export-metadata}
 
 您可以以CSV格式导出多个资产的元数据。 元数据以异步方式导出，不会影响系统性能。 要导出元数据 [!DNL Experience Manager] ，请遍历资产节点及其子节点的 `jcr:content/metadata` 属性，并在CSV文件中导出元数据属性。
 
@@ -50,7 +55,7 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
 * 迁移资产时，将元数据导入第三方系统。
 * 与更广泛的项目团队共享资产元数据。
 * 测试或审核元数据以确保合规性。
-* 将元数据外置以实现单独的本地化。
+* 将元数据外部化，以单独进行本地化。
 
 1. 选择包含要导出元数据的资产的资产文件夹。 从工具栏中，选择导 **[!UICONTROL 出元数据]**。
 
@@ -69,6 +74,12 @@ source-git-commit: 2fd9a32396152eaf46e69c3141cbe1b6a69a3891
    ![用于下载包含批量导出的元数据的CSV文件的对话框](assets/csv_download.png)
 
    *图： 用于下载包含批量导出的元数据的CSV文件的对话框。*
+
+## 最佳实践、限制和提示 {#best-practices-limitations-tips}
+
+* 用于导入资产元数据的CSV文件采用非常特定的格式。 要节省工作和时间并避免出现意外错误，您可以开始使用导出的CSV文件格式创建CSV。
+* 使用CSV文件导入元数据时，所需的日期格式为日 `YYYY-MM-DDThh:mm:ss.fff-00:00`期。 如果使用了任何其他格式，则不设置日期值。 导出的元数据CSV文件的日期格式为 `YYYY-MM-DDThh:mm:ss-00:00`。 如果要导入它，请通过添加由表示的纳秒值将其转换为可接受的格式 `fff`。
+* 要在自定义命名空间上导入元数据，请首先注册命名空间。
 
 >[!MORELIKETHIS]
 >
