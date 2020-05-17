@@ -3,7 +3,7 @@ title: 使用PDF栅格化器生成PDF文件的再现。
 description: 使用中的Adobe PDF Rasterizer库生成高质量的缩略图和再现 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 0%
@@ -63,6 +63,7 @@ ht-degree: 0%
 
 
 1. 要删除中间演绎版，请选择“删 **[!UICONTROL 除生成的演绎版]**”。
+
 1. 要让PDF栅格化器生成Web演绎版，请选择“ **[!UICONTROL 生成Web演绎版]**”。
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
@@ -72,8 +73,11 @@ ht-degree: 0%
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. 保存工作流。
-1. 要启用PDF栅格化器以处理带有PDF库的PDF页面，请从“工 **[!UICONTROL 作流”控制台打开]** “DAM流程子资产”模型。
+
+1. 要启用PDF栅格化器以处理带有PDF库的PDF页面，请从“工 **[!UICONTROL 作流”控制台打开]** “DAM流程子 [!UICONTROL 资产”模] 型。
+
 1. 从侧面板中，将“PDF栅格化处理程序”步骤拖至“创 **[!UICONTROL 建支持Web的图像演绎版]** ”步骤下。
+
 1. 为PDF光栅处理程序步 **[!UICONTROL 骤配置以下参数]** :
 
    * MIME类型： `application/pdf` 或 `application/postscript`
