@@ -3,9 +3,9 @@ title: 中的资源HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1568'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 有关内容片段中元素的信息，请 [参阅Experience Manager Assets HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md#content-fragments)。
 
-在Experience Manager中，文件夹包含以下组件：
+在文 [!DNL Experience Manager] 件夹中，具有以下组件：
 
 * 实体： 资产的子项是其演绎版。
 * 属性.
@@ -95,9 +95,9 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 **前提条件**
 
-1. 转到 `https://[aem_server]:[port]/system/console/configMgr`.
-1. 导航到 **Adobe Granite CSRF滤镜**。
-1. 确保属性筛选 **器方法** 包括： 发布、放置、删除。
+* 访问 `https://[aem_server]:[port]/system/console/configMgr`.
+* 导航到 **[!UICONTROL Adobe Granite CSRF滤镜]**。
+* 确保属性筛选 **[!UICONTROL 器方法]** 包括： `POST`, `PUT`, `DELETE`
 
 ## 检索文件夹列表 {#retrieve-a-folder-listing}
 
@@ -160,7 +160,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 200 —— 确定——如果资产已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
@@ -173,7 +173,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 200 —— 确定——如果资产已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
@@ -181,14 +181,14 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 为资产创建新资产演绎版。 如果未提供请求参数名称，则文件名将用作再现名称。
 
-**参数** 参数用 `name` 于再现的名称，并 `file` 作为文件引用。
+**参数**: 这些参数 `name` 用于再现的名称 `file` 和文件引用。
 
 **请求**
 
 * `POST /api/assets/myfolder/myasset.png/renditions/web-rendition -H"Content-Type: image/png" --data-binary "@myRendition.png"`
 * `POST /api/assets/myfolder/myasset.png/renditions/* -F"name=web-rendition" -F"file=@myRendition.png"`
 
-**响应代码**
+**响应代码**: 响应代码为：
 
 * 201 —— 已创建——如果再现已成功创建。
 * 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
@@ -201,10 +201,10 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 **请求**: `PUT /api/assets/myfolder/myasset.png/renditions/myRendition.png -H"Content-Type: image/png" --data-binary @myRendition.png`
 
-**响应代码** ：响应代码为：
+**响应代码**: 响应代码为：
 
 * 200 —— 确定——如果再现已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
@@ -219,7 +219,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 201 —— 已创建——如果注释已成功创建。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
