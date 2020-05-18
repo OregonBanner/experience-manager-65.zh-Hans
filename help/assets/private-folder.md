@@ -3,9 +3,9 @@ title: 在AEM中创建和共享专用文件夹
 description: 了解如何在Adobe Experience Manager(AEM)资产中创建专用文件夹并与其他用户共享该文件夹，以及为其分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 979d5074fcf94ca999fd941c77038ab6305cc67d
+source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '513'
 ht-degree: 19%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
-> 专用文件夹始终至少有一个具有所有者角色的成员。
+> 专用文件夹至少有一个具有所有者角色的成员。
 
 
 1. 在“资产”控制台中，点按／单 **[!UICONTROL 击工]** 具栏中的创建，然后 **[!UICONTROL 从菜单中]** 选择“文件夹”。
@@ -50,7 +50,7 @@ ht-degree: 19%
 
    >[!NOTE]
    >
-   > 专用文件夹始终至少有一个具有所有者角色的成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹管理员中删除现有所有者，必须将其他用户添加为所有者。
+   > 专用文件夹至少有一个具有所有者角色的成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。根据您分配的角色，用户在登录 AEM 资产时便会被分配一组针对您的专用文件夹所拥有的权限。
 1. 单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭确认消息。
