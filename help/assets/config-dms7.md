@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f96a8fc51ffeef68b2e4c668bc1b2bae4e89133a
+source-git-commit: 06301db70f763eedebeca293dd288d22248cfbf6
 workflow-type: tm+mt
-source-wordcount: '5782'
+source-wordcount: '5777'
 ht-degree: 7%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Dynamic Media - Scene7模式仅适用于AEM作者实例。 因此，您必须在AEM `runmode=dynamicmedia_scene7` 作者实例上进行配置， *而不是* AEM发布实例。
+>Dynamic Media - Scene7模式仅适用于AEM作者实例。 因此，您必须在AEM `runmode=dynamicmedia_scene7` 作者实例上进行配置， *而不是* 在AEM发布实例上进行配置。
 
 要启用Dynamic Media，您必须在终端窗口 `dynamicmedia_scene7` 中输入以下内容（使用的示例端口为4502），从命令行使用运行模式启动AEM:
 
@@ -374,7 +374,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
    请注 **[!UICONTROL 意]**,视图表单（如“详细信息”页面右上角所设置）是默认视图。
 
-1. 在预设列表面板中，点 **[!UICONTROL 按]** “添加”以激活屏幕右侧“详细信息”面板中的定义字段。
+1. 在预设列表面板中，点 **[!UICONTROL 按添]** 加以激活屏幕右侧“详细信息”面板中的定义字段。
 1. 在“详细信息”面板的“预设名称”字段中，键入预设的名称。
 1. 在批集类型下拉菜单中，选择预设类型。
 1. 执行下列操作之一：
@@ -479,8 +479,6 @@ spin-01-01
    激活预设可确保在您将资产上传到Dynamic Media时，会应用批集预设来生成该集。
 
 ### （可选）调整Dynamic Media - Scene7模式的性能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
-
-**同步性能／可伸缩性微调提示**
 
 为了使Dynamic Media - Scene7模式平稳运行，Adobe建议使用以下同步性能／可伸缩性微调提示：
 
