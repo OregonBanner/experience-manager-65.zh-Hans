@@ -3,10 +3,10 @@ title: 在AEM中创建和共享专用文件夹
 description: 了解如何在Adobe Experience Manager(AEM)资产中创建专用文件夹并与其他用户共享该文件夹，以及为其分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 02bd337271f0039b354ada2899198f5654f9e8bf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 19%
+source-wordcount: '508'
+ht-degree: 14%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 19%
 > 专用文件夹至少有一个具有所有者角色的成员。
 
 
-1. 在“资产”控制台中，点按／单 **[!UICONTROL 击工]** 具栏中的创建，然后 **[!UICONTROL 从菜单中]** 选择“文件夹”。
+1. 在“资产”控制台中，单 **[!UICONTROL 击工]** 具栏中的创建，然后从 **[!UICONTROL 菜单中选]** 择“文件夹”。
 
    ![创建资产文件夹](assets/Create-folder.png)
 
@@ -28,11 +28,11 @@ ht-degree: 19%
 
    ![选中“专用”复选框，将文件夹设为专用](assets/private-folder.png)
 
-1. 点按/单击&#x200B;**[!UICONTROL 创建]**。将在UI中创建专用文件夹。
+1. 单击&#x200B;**[!UICONTROL 创建]**。将在UI中创建专用文件夹。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. 要与其他用户共享文件夹并为用户分配权限，请选择文件夹，然后单击/点按工具栏中的&#x200B;**[!UICONTROL 属性]**&#x200B;图标。
+1. To share the folder with other users and the assign privileges to them, select the folder, and click the **[!UICONTROL Properties]** icon from the toolbar.
 
    ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -58,11 +58,11 @@ ht-degree: 19%
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 点按／单击通知图标以打开通知列表。
+1. 单击通知图标以打开通知列表。
 
    ![通知列表](assets/Assets-Notification.png)
 
-1. 单击／点按管理员共享的专用文件夹的条目以打开该文件夹。
+1. 单击管理员共享的专用文件夹条目以打开该文件夹。
 
 >[!NOTE]
 >
