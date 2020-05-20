@@ -3,7 +3,10 @@ title: 元数据用户档案可自定义资产的元数据要求
 description: 了解资产的元数据用户档案。 了解如何创建元数据用户档案并将其应用到文件夹资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '1410'
+ht-degree: 36%
 
 ---
 
@@ -14,8 +17,8 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ## 添加元数据用户档案 {#adding-a-metadata-profile}
 
-1. 导航到工 **[!UICONTROL 具>资产>元数据用户档案]** ，然后点 **[!UICONTROL 按创建]**。
-1. 为元数据用户档案（例如，示例元数据）输入标题，然后点按 **[!UICONTROL 创建]**。 The [!UICONTROL Edit Form] for the metadata profile is displayed.
+1. 导航到工 **[!UICONTROL 具>资产>元数据用户档案]** ，然后单 **[!UICONTROL 击创建]**。
+1. 输入元数据用户档案的标题（例如示例元数据），然后单击 **[!UICONTROL 创建]**。 The [!UICONTROL Edit Form] for the metadata profile is displayed.
 
    ![chlimage_1-197](assets/chlimage_1-480.png)
 
@@ -42,7 +45,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 1. （可选）从“构建表单”选项卡中向“编辑表单”添 **[!UICONTROL 加更多组件]** ，然后在“设置”选项卡中配置 **[!UICONTROL 其属性]** 。 “构建表单”选项卡中提供 **[!UICONTROL 以下属性]** :
 
 | 组件 | 属性 |
-|---|---|
+| ----------------------------- | ----------------------------------------------------------------------- |
 | [!UICONTROL 章节标题] | 字段标签，说 <br> 明 |
 | [!UICONTROL 单行文本] | 字段标签 <br> 、映射到属性、 <br> 默认值 |
 | [!UICONTROL 多值文本] | 字段标签 <br> 、映射到属性、 <br> 默认值 |
@@ -52,7 +55,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ![chlimage_1-201](assets/chlimage_1-484.png)
 
-1. 点按／单击 **[!UICONTROL 完成]**。 The Metadata Profile is added to the list of profiles in the **[!UICONTROL Metadata Profiles]** page.<br>
+1. 单击&#x200B;**[!UICONTROL 完成]**。The Metadata Profile is added to the list of profiles in the **[!UICONTROL Metadata Profiles]** page.<br>
 
    ![元数据用户档案添加到元数据用户档案页](assets/MetadataProfiles-page.png)
 
@@ -62,9 +65,9 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
    ![chlimage_1-203](assets/chlimage_1-486.png)
 
-1. 从工 **[!UICONTROL 具栏]** 中点按复制。
+1. 单击 **[!UICONTROL 工具栏]** 中的复制。
 1. 在&#x200B;**[!UICONTROL 复制元数据配置文件]**&#x200B;对话框中，为元数据配置文件的新副本输入标题。
-1. 点按&#x200B;**[!UICONTROL 复制]**。元数据配置文件的副本将显示在&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;页面的配置文件列表中。
+1. 单击&#x200B;**[!UICONTROL 复制]**。元数据配置文件的副本将显示在&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;页面的配置文件列表中。
 
    ![在“元数据用户档案”页面中添加的元数据用户档案的副本](assets/copy-metadata-profile.png)
 
@@ -103,19 +106,19 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 请按照以下步骤应用元数据用户档案:
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. 选择您要应用到一个或多个文件夹的元数据配置文件。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
 
-1. Tap **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap **[!UICONTROL Done]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
 #### 从“属性”将元数据用户档案应用到文件夹 {#applying-metadata-profiles-to-folders-from-properties}
 
-1. In the left rail, tap **[!UICONTROL Assets]** then navigate to the folder that you want to apply a metadata profile to.
-1. 在文件夹中，点按或单击复选标记以将其选中，然后点按或单击 **[!UICONTROL 属性]**。
+1. In the left rail, click **[!UICONTROL Assets]** then navigate to the folder that you want to apply a metadata profile to.
+1. 在文件夹中，单击复选标记以将其选中，然后单击“属 **[!UICONTROL 性”]**。
 
-1. Select the **[!UICONTROL Metadata Profiles]** tab and select the profile from the drop-down menu and tap **[!UICONTROL Save]**.
+1. 选择&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;选项卡，从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存]**。
 
    ![chlimage_1-208](assets/chlimage_1-491.png)
 
@@ -129,7 +132,7 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 要全局应用元数据用户档案，请执行以下步骤：
 
-* 导航到 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 并应用相应的用户档案，然后点 **[!UICONTROL 按保存]**。
+* 导航到 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 并应用相应的用户档案，然后单 **[!UICONTROL 击保存]**。
 
    ![chlimage_1-209](assets/chlimage_1-492.png)
 
@@ -145,16 +148,16 @@ source-git-commit: 95ac9d4c8b171c01b9adc056f5dc3a9d776c0465
 
 ### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. 点按或单击AEM徽标，然后导航到 **[!UICONTROL 工具>资产>元数据用户档案]**。
+1. Click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 1. 选择您要从一个或多个文件夹删除的元数据配置文件。
-1. 点按&#x200B;**[!UICONTROL 从文件夹删除元数据配置文件]**，然后选择一个或多个要从中删除配置文件的文件夹，然后点按&#x200B;**[!UICONTROL 完成]**。
+1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
    您可以确认元数据用户档案不再应用于文件夹，因为该名称不再显示在文件夹名称的下方。
 
 ### 通过“属性”将元数据用户档案从文件夹删除 {#removing-metadata-profiles-from-folders-via-properties}
 
-1. 点按AEM徽标，导 **[!UICONTROL 航资产]** ，然后导航到您要从中删除元数据用户档案的文件夹。
-1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性]**。
+1. 单击AEM徽标，导 **[!UICONTROL 航]** “资产”，然后导航到要从中删除元数据用户档案的文件夹。
+1. 在文件夹中，单击复选标记以将其选中，然后单击“属 **[!UICONTROL 性”]**。
 1. 选择&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;选项卡，并从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
 ## 限制和最佳实践 {#limitations-best-practices-tips}
