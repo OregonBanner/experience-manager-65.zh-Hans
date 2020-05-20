@@ -3,9 +3,9 @@ title: 在Adobe Enterprise Manager中管理许多资产和集合的元数据。
 description: 同时编辑许多资产和收藏集的元数据，以快速传播常见的元数据更改。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '499'
 ht-degree: 16%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 16%
 
 1. 在资产用户界面中，导航到要编辑的资产所在的位置。
 1. 选择要编辑其通用属性的资产。
-1. 在工具栏中，点按／单 **[!UICONTROL 击属]** 性图标以打开选定资产的属性页面。
+1. 在工具栏中，单击 **[!UICONTROL 属性]** 图标以打开选定资产的属性页面。
 
    >[!NOTE]
    >
@@ -45,9 +45,9 @@ ht-degree: 16%
    >* At the top of assets list, select the check box near **[!UICONTROL Title]** to toggle between selecting the assets and clearing the list.
 
 
-1. 要为资产选择其他元数据模式，请点按／单击工 **[!UICONTROL 具栏]** 中的设置图标，然后选择所需的模式。
+1. 要为资产选择其他元数据模式，请单 **[!UICONTROL 击工]** 具栏中的设置图标，然后选择所需的模式。
 1. 保存更改。
-1. 要将新元数据与现有元数据追加到包含多个值的字段中，请选择&#x200B;**[!UICONTROL 追加模式]**。如果不选中此选项，则新元数据将替换字段中的现有元数据。点按／单击 **[!UICONTROL 提交]**。
+1. 要将新元数据与现有元数据追加到包含多个值的字段中，请选择&#x200B;**[!UICONTROL 追加模式]**。如果不选中此选项，则新元数据将替换字段中的现有元数据。单击 **[!UICONTROL 提交]**。
 
    >[!CAUTION]
    >
