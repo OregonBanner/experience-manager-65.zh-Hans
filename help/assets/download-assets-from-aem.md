@@ -3,7 +3,7 @@ title: 从下载数字资产 [!DNL Adobe Experience Manager]。
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 6%
@@ -19,7 +19,7 @@ ht-degree: 6%
 >
 >收件人电子邮件必须是组的成 `dam-users` 员才能访问电子邮件中的ZIP下载链接。 要能够下载资产，成员必须具有启动触发资产下载的工作流的权限。
 
-要下载资产，请导航到资产，选择资产，然后点按工 **[!UICONTROL 具栏]** 中的下载。 在显示的对话框中，指定下载选项。
+要下载资产，请导航到资产，选择资产，然后单击工 **[!UICONTROL 具栏]** 中的下载。 在显示的对话框中，指定下载选项。
 
 无法下载图像集、旋转集、混合媒体集和传送集等资产类型。
 
