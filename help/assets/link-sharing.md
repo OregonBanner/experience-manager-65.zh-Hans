@@ -1,65 +1,68 @@
 ---
 title: 生成共享资产的URL
-description: 本文介绍如何在AEM资产中将资产、文件夹和收藏集共享为外部方的URL。
+description: 本文介绍如何在AEM资产中以URL的形式共享资产、文件夹和收藏集，以供外部各方使用。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 90f9c0b60d4b0878f56eefea838154bb7627066d
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+workflow-type: tm+mt
+source-wordcount: '1221'
+ht-degree: 10%
 
 ---
 
 
 # 通过链接共享资产 {#asset-link-sharing}
 
-Adobe Experience Manager(AEM)资产允许您将资产、文件夹和收藏集作为URL与组织成员和外部实体（包括合作伙伴和供应商）共享。 通过链接共享资产是一种方便的方式，使外部方无需先登录AEM资产即可获得资源。
+通过Adobe Experience Manager(AEM)资产，您可以以URL的形式与组织成员和外部实体（包括合作伙伴和供应商）共享资产、文件夹和收藏集。 通过链接共享资产是一种方便的方式，使外部方无需先登录AEM资产即可获得资源。
 
 >[!NOTE]
 >
->您需要对要作为链接共享的文件夹或资产具有编辑ACL权限。
+>您需要对要作为链接共享的文件夹或资产具有“编辑ACL”权限。
 
 ## 共享资产 {#sharelink}
 
-要为要与用户共享的资产生成URL，请使用“链接共享”对话框。 具有管理员权限或在位置具有读取权 `/var/dam/share` 限的用户可以视图与他们共享的链接。
+要为要与用户共享的资产生成URL，请使用“链接共享”对话框。 具有管理员权限或在位置具有读取权 `/var/dam/share` 限的用户能够视图与他们共享的链接。
 
 >[!NOTE]
 >
->在与用户共享链接之前，请确保已配置Day CQ Mail服务。 如果尝试共享链接而未首先配置Day CQ邮件服 [务，则会出现错误](/help/assets/link-sharing.md#configmailservice)。
+>在与用户共享链接之前，请确保已配置Day CQ邮件服务。 如果尝试共享链接时未首先配置Day CQ邮 [件服务，则会出错](/help/assets/link-sharing.md#configmailservice)。
 
 1. 在“资产”用户界面中，选择要作为链接共享的资产。
-1. 在工具栏中，单击／点按共 **[!UICONTROL 享链接]**![assets_share](assets/assets_share.png)。
+1. 在工具栏中，单 **[!UICONTROL 击共享链]**![接assets_share](assets/assets_share.png)。
 
    资产链接会在共享链接字段中 **[!UICONTROL 自动创建]** 。 复制此链接并与用户共享。 链接的默认过期时间为一天。
 
    ![与链接共享对话框](assets/Link-sharing-dialog-box.png)
 
-   *图：将资产共享为链接的对话框。*
+   *图： 将资产共享为链接的对话框。*
 
    或者，也可以继续执行此操作过程的第 3-7 步，以添加电子邮件收件人、配置链接的有效时间，以及从对话框中发送电子邮件。
 
    >[!NOTE]
    >
-   >如果要将AEM作者实例中的链接共享到外部实体，请确保仅对请求提供以下URL（用于链接共享） `GET` 。 阻止其他URL以确保AEM作者的安全性。
+   >如果要将AEM作者实例中的链接共享给外部实体，请确保仅对请求提供以下URL（用于链接共享） `GET` 。 阻止其他URL以确保AEM作者的安全。
    >
-   >* http://&lt;aem_server>:&lt;port>/linkshare.html
-   * http://&lt;aem_server>:&lt;port>/linksharepreview.html
-   * http://&lt;aem_server>:&lt;port>/linkexpired.html
+   >* http://&lt;aem server>:&lt;port>/linkshare.html
+   * http://&lt;aem server>:&lt;port>/linksharepreview.html
+   * http://&lt;aem server>:&lt;port>/linkexpired.html
 
 
    >[!NOTE]
-   如果共享资产被移到其他位置，其链接将停止工作。 重新创建链接并与用户重新共享。
+   如果共享资产被移动到其他位置，其链接将停止工作。 重新创建链接并与用户重新共享。
 
 1. In AEM interface, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against `local`, `author`, and `publish`. 对于和 `local` 属 `author` 性，请分别提供本地实例和作者实例的URL。 如果 `local` 运行 `author` 单个Experience Manager作者实例，则这两个属性的值相同。 对于 `publish`，请提供Experience Manager发布实例的URL。
+1. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration and modify the following properties in the **[!UICONTROL Domains]** field with the values mentioned against `local`, `author`, and `publish`. 对于 `local` 和属 `author` 性，请分别提供本地实例和作者实例的URL。 如果 `local` 运行 `author` 单个Experience Manager作者实例，则这两个实例的值相同。 对 `publish`于，提供Experience Manager发布实例的URL。
 
 1. 在&#x200B;**[!UICONTROL 链接共享]**&#x200B;对话框的电子邮件地址框中，键入要与其共享链接的用户的电子邮件 ID。您还可以与多个用户共享该链接。
 
-   如果用户是您组织的成员，请从键入区域下方的列表中显示的建议电子邮件ID中选择用户的电子邮件ID。对于外部用户，键入完整的电子邮件ID，然后从列表中选择它。
+   如果用户是您组织的成员，请从键入区域下方的列表显示的建议电子邮件ID中选择用户的电子邮件ID。 对于外部用户，请键入完整的电子邮件ID，然后从列表中选择它。
 
-   要向用户发送电子邮件，请在 [Day CQ Mail Service中配置SMTP服务器详细信息](#configmailservice)。
+   要向用户发出电子邮件，请在Day CQ邮件服务中配置SMTP服 [务器详细信息](#configmailservice)。
 
    ![直接从“链接共享”对话框共享指向资产的链接](assets/Asset-Sharing-LinkShareDialog.png)
 
-   *图：直接从“链接共享”对话框共享[!UICONTROL 指向资产的链]接。*
+   *图： 直接从“链接共享”对话框共享[!UICONTROL 指向资产的]链接。*
 
    >[!NOTE]
    If you enter an email ID of a user that is not a member of your organization, the words [!UICONTROL External User] are prefixed with the email ID of the user.
@@ -72,52 +75,52 @@ Adobe Experience Manager(AEM)资产允许您将资产、文件夹和收藏集作
 
    ![设置共享链接的到期日期](assets/Set-shared-link-expiration.png)
 
-1. 要允许用户下载原始图像和再现，请选择“允 **[!UICONTROL 许下载原始文件”]**。
+1. 要允许用户下载原始图像和演绎版，请选择“允 **[!UICONTROL 许下载原始文件”]**。
 
    >[!NOTE]
    默认情况下，用户只能下载您共享为链接的资产的演绎版。
 
-1. 单击&#x200B;**[!UICONTROL 共享]**。系统会显示一条消息，确认已通过电子邮件与用户共享该链接。
-1. 要视图共享资产，请单击／点按发送给用户的电子邮件中的链接。 共享的资产会显示在 **[!UICONTROL Adobe Marketing Cloud页面]** 。
+1. 单击&#x200B;**[!UICONTROL 共享]**。系统会显示一条消息，确认已通过电子邮件与用户共享链接。
+1. 要视图共享的资产，请单击发送给用户的电子邮件中的链接。 共享的资产会显示在 **[!UICONTROL Adobe Marketing Cloud页面]** 。
 
    ![chlimage_1-260](assets/chlimage_1-545.png)
 
-   要切换到列表视图，请单击／点按工具栏中的布局选项。
+   要切换到列表视图，请单击工具栏中的布局选项。
 
-1. 要生成资产预览，请单击/点按共享资产。要关闭预览并返回至 **[!UICONTROL Marketing Cloud]** 页面，请单击/点按工具栏中的&#x200B;**[!UICONTROL 返回]**。如果已共享文件夹，请单击/点按&#x200B;**[!UICONTROL 父文件夹]**，以返回到父文件夹。
+1. 要生成资产的预览，请单击共享的资产。 To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, click **[!UICONTROL Back]** in the toolbar. If you have shared a folder, click **[!UICONTROL Parent Folder]** to return to the parent folder.
 
    ![chlimage_1-261](assets/chlimage_1-546.png)
 
    >[!NOTE]
-   AEM支持生成以下MIME类型资产的预览:JPG、PNG、GIF、BMP、INDD、PDF和PPT。 您只能下载其他MIME类型的资产。
+   AEM支持生成以下MIME类型的资产的预览: JPG、PNG、GIF、BMP、INDD、PDF和PPT。 您只能下载其他MIME类型的资产。
 
-1. 要下载共享的资产，请点按工 **[!UICONTROL 具栏中的]** “选择”，单击／点按资产，然后单击／点按工具栏中的 **[!UICONTROL 下载]** 。
+1. 要下载共享的资产，请单 **[!UICONTROL 击工]** 具栏中的选择 **[!UICONTROL ，单击资产，然后单击工具]** 栏中的下载。
 
    ![chlimage_1-262](assets/chlimage_1-547.png)
 
-1. 要视图您作为链接共享的资产，请转到资产UI，然后点按Experience Manager徽标。 从列表 **[!UICONTROL 中选择]** “导航”以显示“导航”窗格。
+1. 要视图您作为链接共享的资产，请转到资产UI，然后单击Experience Manager徽标。 从列表 **[!UICONTROL 中选择]** “导航”以显示“导航”窗格。
 1. 从“导航”窗格中，选择&#x200B;**[!UICONTROL 共享链接]**，以显示共享资产列表。
-1. 要取消共享资产，请选择该资产，然后点按／单击工 **[!UICONTROL 具栏中]** 的取消共享。 随后将显示确认消息。 资产条目将从列表中删除。
+1. 要取消共享资产，请选择该资产，然后单 **[!UICONTROL 击工]** 具栏中的取消共享。 随后将显示确认消息。 资产的条目会从列表中删除。
 
-## 配置Day CQ Mail服务 {#configmailservice}
+## 配置Day CQ邮件服务 {#configmailservice}
 
-1. 在Experience Manager主页中，导航到工 **[!UICONTROL 具]** >操 **[!UICONTROL 作]** > **[!UICONTROL Web控制台]**。
+1. 在Experience Manager主页中，导航到 **[!UICONTROL 工具]** >操 **[!UICONTROL 作]** > **[!UICONTROL Web控制台]**。
 1. 在服务列表中，找到 **[!UICONTROL Day CQ Mail Service]**。
-1. Tap **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
+1. Click **[!UICONTROL Edit]** beside the service, and configure the following parameters for **[!UICONTROL Day CQ Mail Service]** with the details mentioned against their names:
 
-   * SMTP服务器主机名：电子邮件服务器主机名
-   * SMTP服务器端口：电子邮件服务器端口
-   * SMTP用户：电子邮件服务器用户名
-   * SMTP密码：电子邮件服务器口令
+   * SMTP服务器主机名： 电子邮件服务器主机名
+   * SMTP服务器端口： 电子邮件服务器端口
+   * SMTP用户： 电子邮件服务器用户名
+   * SMTP密码： 电子邮件服务器密码
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
-1. Click/tap **[!UICONTROL Save]**.
+1. 单击&#x200B;**[!UICONTROL 保存]**。
 
 ## 配置最大数据大小 {#maxdatasize}
 
-当您使用“链接共享”功能从共享的链接下载资产时，AEM会从存储库压缩资产层次结构，然后以ZIP文件格式返回资产。 但是，在ZIP文件中压缩的数据量没有限制的情况下，大量数据会受到压缩，这会导致JVM中内存不足错误。 要防止由于这种情况而导致系统受到潜在拒绝服务攻击，请使用配置管理器中的 **[!UICONTROL Max Content Size(uncompressed)]** ( [!UICONTROL Max Content Size(uncompressed)参数)来配置] Day CQ DAM Adhoc Asset Share Proxy Servlet。 如果资产的未压缩大小超出配置值，则会拒绝资产下载请求。 默认值为100 MB。
+当您使用链接共享功能从共享的链接下载资产时，AEM会从存储库中压缩资产层次结构，然后以ZIP文件形式返回资产。 但是，在ZIP文件中压缩的数据量没有限制的情况下，大量数据会受到压缩，这会导致JVM中内存不足错误。 要保护系统免受由于这种情况而可能发生的拒绝服务攻击，请使用配置管理器中Day CQ DAM Adhoc Asset Share Proxy Servlet的 **[!UICONTROL Max Content Size（未压缩）]**[!UICONTROL 参数配置] 最大大小。 如果资产的未压缩大小超出配置值，则会拒绝资产下载请求。 默认值为100 MB。
 
-1. 单击/点按 AEM 徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web Console]**。
+1. Click the AEM logo and then go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. 从Web控制台中，找到 **[!UICONTROL Day CQ DAM临时资产共享代理Servlet配置]** 。
 1. 在编辑模式下打开 **[!UICONTROL Day CQ DAM 临时资产共享代理 Servlet]** 配置，并修改&#x200B;**[!UICONTROL 最大内容大小（未压缩）]**&#x200B;参数的值。
 
@@ -127,7 +130,7 @@ Adobe Experience Manager(AEM)资产允许您将资产、文件夹和收藏集作
 
 ## Best practices and troubleshooting {#bestpractices}
 
-* 资产文件夹或在其名称中包含空白的收藏集可能无法共享。
-* 如果用户无法下载共享资产，请向AEM管理员检查下载限 [制](#maxdatasize) 。
-* 如果您无法发送包含共享资产链接的电子邮件，或如果其他用户无法收到您的电子邮件，请咨询您的AEM管理员(如果电子邮件服务 [已配置](#configmailservice) ，或未配置)。
-* 如果您无法使用链接共享功能共享资产，请确保您拥有相应的权限。 请参阅 [共享资产](#sharelink)。
+* 名称中包含空白的资产文件夹或收藏集可能无法共享。
+* 如果用户无法下载共享资产，请向AEM管理员咨询下载限 [制](#maxdatasize) 。
+* 如果您无法发送包含共享资产链接的电子邮件，或者如果其他用户无法收到您的电子邮件，请咨询您的AEM管理员( [如果电子邮件](#configmailservice) 服务已配置或未配置)。
+* 如果您无法使用链接共享功能共享资产，请确保您具有相应的权限。 请参阅 [共享资产](#sharelink)。
