@@ -3,9 +3,9 @@ title: 批量导入和导出资产元数据。
 description: 批量导入和导出数字资产的元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 42532bfe73c44ad04b67afa973eef526f47588cf
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '785'
 ht-degree: 5%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 5%
    | [!UICONTROL 启动工作流] | 默认为False。 当设置为 `true` 且默认的启动器设置对DAM元数 [!UICONTROL 据回写工作流(将元数据写入二进制XMP数据] )有效时。 启用启动工作流会减慢系统速度。 |
    | [!UICONTROL 资产路径列名称] | 定义包含资产的CSV文件的列名。 |
 
-1. 点按／单 **[!UICONTROL 击工]** 具栏中的导入。 导入元数据后，通知会显示在“通知”收 [!UICONTROL 件箱] 中。
+1. 单击 **[!UICONTROL 工具栏]** 中的“导入”。 导入元数据后，通知会显示在“通知”收 [!UICONTROL 件箱] 中。
 
 1. 要验证导入是否正确，请导航到资产的“ [!UICONTROL 属性] ”页面，然后验证字段中的值。
 
