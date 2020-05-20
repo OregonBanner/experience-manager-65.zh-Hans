@@ -3,7 +3,7 @@ title: 集 [!DNL Adobe Experience Manager Assets] 成 [!DNL Adobe InDesign Serve
 description: 了解如何 [!DNL Adobe Experience Manager Assets] 集成 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 4%
@@ -166,7 +166,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 如果在 [!DNL InDesign Server] 不同 [!DNL Experience Manager] 主机上运行，或者上述两种应用程序都未在默认端口上运行，请配置 [!UICONTROL Day CQ Link Externalizer] ，为主机设置主机名、端口和内容路径 [!DNL InDesign Server]。
 
 1. 访问Web控制台(位 `https://[aem_server]:[port]/system/console/configMgr`于)。
-1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and tap **[!UICONTROL Edit]** to open it.
+1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click **[!UICONTROL Edit]** to open it.
 1. 指定主机名和上下文路径，然 [!DNL Indesign Server] 后单击“ **保存**”。
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
