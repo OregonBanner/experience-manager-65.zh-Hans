@@ -2,7 +2,7 @@
 title: AEM 6.5先前的Service Pack发行说明
 description: 特定于Adobe Experience Manager 6.5 Service Pack 3及更早版本的发行说明。
 translation-type: tm+mt
-source-git-commit: af21ed3cb8b755402ab03a7b624fa1ea99f2035f
+source-git-commit: 321710219053ab43fe5a223665bc20987e1afb31
 workflow-type: tm+mt
 source-wordcount: '6277'
 ht-degree: 44%
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 # 以前 Service Pack 中包含的修补程序和功能包 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.3.0 {#aem-6530}
+## Adobe Experience Manager 6.5.3.0 {#aem-6530-rn}
 
 [!DNL Adobe Experience Manager] 6.5.3.0是一个重要版本，包含自2019年4月6.5版本正式发布以来发布的性能、稳定性、安全性以及重要客户修复和 **增强功能**。 它可安装在6. [!DNL Adobe Experience Manager] 5之上。
 
@@ -288,7 +288,7 @@ ht-degree: 44%
 
 ## Adobe Experience Manager 6.5.2.0
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
