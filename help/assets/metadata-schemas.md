@@ -3,9 +3,9 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 265fc8fa6b4d835241b1213d95beaa17db5798ac
+source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '2661'
 ht-degree: 13%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 13%
 
 要视图和编辑资产的属性页面，请执行以下步骤：
 
-1. 单击或点按卡 **[!UICONTROL 视图中]** ，资产拼贴上快速操作中的视图属性图标。
+1. 在卡片 **[!UICONTROL 视图中]** ，单击资产拼贴上快速操作中的视图属性图标。
 
    ![对资产拼贴快速执行操作](assets/chlimage_1-170.png)
 
-   或者，选择资产，然后单击或点按工 [!UICONTROL 具栏中] 的属性图标。
+   或者，选择资产，然后单击工 [!UICONTROL 具栏] 中的属性图标。
 
 1. 您可以编辑可用选项卡下的各种可编辑元数据属性。 但是，您无法在属性页 [!UICONTROL 面的] “基本 [!UICONTROL ”选项] 卡中修改资产类型。
 
@@ -175,7 +175,7 @@ Click `X` to delete a tab.
 
 >[!NOTE]
 >
->* 在删除对默认表单的自定义更改后，在元数据模式界面上的表单前面会重新显示锁图标。 它表示表单已恢复为默认状态。
+>* 删除对默认表单的自定义更改后，在元数据模式界面上的表单前面将重新显示锁图标。 它表示表单已恢复为默认状态。
 >* 无法删除中的默认元数据模式表 [!DNL Assets]单。
 
 
@@ -254,7 +254,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
 ## 定义必填元数据 {#define-mandatory-metadata}
 
-您可以在文件夹级别定义必填字段，这将强制执行于上传到该文件夹的资产。 如果您上传的资产上传之前定义的必填字段缺少元数据，则卡视图的资产上会显示缺少元数据的可视指示。
+您可以在文件夹级别定义必填字段，该字段将强制应用于上传到该文件夹的资产。 如果您上传的资产上传之前定义的必填字段缺少元数据，则卡视图的资产上会显示缺少元数据的可视指示。
 
 >[!NOTE]
 >
