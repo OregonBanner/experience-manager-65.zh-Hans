@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cef5251d6bd72a6fd352f18e31d3f9d787e4320e
+source-git-commit: 4c4a0b1a76f44dcf1084a4651194e60735bc5aea
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -258,6 +258,10 @@ AEM中包含的节点类型的基本定义如下：
 * 要在标记被移动或合并后发布更改，必须 `cq:Tag` 复制节点及其所有反向链接： 在标记管理控制台中激活标记时，会自动执行此操作。
 
 * 稍后对页面属性的更 `cq:tags` 新会自动清除“旧”引用。 这是由于通过API解析移动的标记会返回目标标记，从而提供目标标记ID而触发的。
+
+> [!NOTE]
+>
+> 标记的移动不同于标记的迁移。
 
 ## 标记迁移 {#tags-migration}
 
