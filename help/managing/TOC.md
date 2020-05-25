@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Managing User Guide
+user-guide-title: AEM 6.5管理用户指南
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: cb7df7301364eb1ce3a1ca376256d2cd5afcb2c8
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 41%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 # AEM 6.5 Managing User Guide {#managing}
 
 + [管理用户指南](home.md)
-+ 管理——最佳实践清单 {#managing-best-practices-checklist}
-   + [管理项目——最佳实践清单](best-practices.md)
++ 管理——最佳实践核对清单 {#managing-best-practices-checklist}
+   + [管理项目——最佳实践核对清单](best-practices.md)
    + [清单](best-practices-checklist.md)
    + [术语表](best-practices-glossary.md)
    + [清单——进一步参考](best-practices-further-reference.md)
@@ -23,6 +26,6 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [SEO 和 URL 管理最佳实践](seo-and-url-management.md)
 + 辅助功能 {#accessibility}
    + [AEM 和 Web 辅助功能规范](web-accessibility.md)
-   + [WCAG 2.0快速指南](qg-wcag.md)
+   + [WCAG 2.1快速指南](qg-wcag.md)
 + 数据保护 {#data-protection}
-   + [AEM数据保护和数据隐私法规的就绪性](data-protection-and-privacy.md)
+   + [用于数据保护和数据隐私法规的 AEM 已准备就绪](data-protection-and-privacy.md)
