@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 69e9b7499c1babcf7a6da62b8728bba7f127b4f9
+source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+workflow-type: tm+mt
+source-wordcount: '3010'
+ht-degree: 92%
 
 ---
 
@@ -55,7 +58,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 ![bh-02](assets/bh-02.png)
 
-单击或点按&#x200B;**下一步**&#x200B;以前进至概述的下一个页面。Click or tap **Close** or click or tap outside of the overview dialog to close.
+单击或点按&#x200B;**下一步**&#x200B;以前进至概述的下一个页面。单击或点按&#x200B;**关闭**，或者单击或点按概述对话框外部可将其关闭。
 
 该概述将在您下次访问控制台时重新启动，除非您查看所有幻灯片或者选中&#x200B;**不再显示此对话框**&#x200B;选项。
 
@@ -63,7 +66,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 您可以使用全局导航面板在控制台之间导航。单击或点按屏幕左上角的 Adobe Experience Manager 链接，将显示一个全屏下拉菜单以供全局导航。
 
-You can close the global navigation panel by clicking or tapping **Close** to return to your previous location.
+通过单击或点按&#x200B;**关闭**&#x200B;可关闭全局导航面板，以返回到您之前所在的位置。
 
 ![bh-03](assets/bh-03.png)
 
@@ -73,18 +76,24 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
 全局导航有两个面板，它们由屏幕左侧的图标来表示：
 
-* **[导航](/help/sites-authoring/basic-handling.md#navigation-panel)**- 由一个指南针图标来表示
+* **[导航](/help/sites-authoring/basic-handling.md#navigation-panel)**- 登录到 AEM 时由一个指南针图标
 * **[工具](/help/sites-authoring/basic-handling.md#tools-panel)**- 由一个锤子图标来表示
 
 这些面板中的可用选项如下所述。
 
 ### “导航”面板 {#navigation-panel}
 
-“导航”面板：
+导航面板提供对AEM控制台的访问：
 
 ![bh-01](assets/bh-01.png)
 
-在导航中，可用的控制台包括：
+浏览器选项卡的标题将更新，以反映您在控制台和内容中导航时的位置。
+
+>[!NOTE]
+>
+>选项卡标题反映了从 [AEM 6.5 Service Pack 5开始的位置](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
+
+在“导航”中，可用的控制台有：
 
 <table>
  <tbody>
@@ -131,7 +140,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
  </tbody>
 </table>
 
-### “工具”面板 {#tools-panel}
+### “工具”面板{#tools-panel}
 
 在“工具”面板中，侧面板内的每个选项均包含一组子菜单。这里提供的[“工具”控制台](/help/sites-administering/tools-consoles.md)让您可以访问一些专用工具和控制台，帮助您管理网站、数字资产及内容存储库的其他方面。
 
@@ -145,7 +154,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
 * [全局导航](#navigatingconsolesandtools)
 
-   Select the **Adobe Experience Manager** link to navigate between consoles.
+   选择 **Adobe Experience Manager** 链接可在各控制台之间进行导航。
 
    ![screen_shot_2018-03-23at103615](assets/screen_shot_2018-03-23at103615.png)
 
@@ -153,9 +162,9 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    ![](do-not-localize/screen_shot_2018-03-23at103542.png)
 
-   You can also use the [shortcut key](/help/sites-authoring/keyboard-shortcuts.md) `/` (forward slash) to invoke search from any console.
+   您还可以使用[快捷键](/help/sites-authoring/keyboard-shortcuts.md) `/`（正斜杠）从任何控制台中调用搜索。
 
-* [解决方案](https://www.adobe.com/experience-cloud.html)
+* [解决方案](https://www.adobe.com/cn/experience-cloud.html)
 
    ![](do-not-localize/screen_shot_2018-03-23at103552.png)
 
@@ -189,7 +198,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    ![bh-05](assets/bh-05.png)
 
-   痕迹导航位于边栏中间，且始终显示当前选定项的描述，它允许您在特定控制台内导航。在“站点”控制台中，您可以在网站的各个级别中导航。
+   痕迹导航位于边栏中间，且始终显示当前选定项的描述，它允许您在特定控制台内导航。在站点控制台中，您可以导航浏览网站的各个级别。
 
    只需单击痕迹导航文本，即会显示一个下拉列表，其中列出了当前选定项的结构层级。单击某个条目可跳转到该位置。
 
@@ -201,7 +210,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    仅在列表视图中可用。See [list view](#list-view) for more information.
 
-* **“创建** ”按钮
+* **创建**&#x200B;按钮
 
    ![screen_shot_2018-03-23at104301](assets/screen_shot_2018-03-23at104301.png)
 
@@ -216,6 +225,18 @@ You can close the global navigation panel by clicking or tapping **Close** to re
    您可以在列视图、卡片视图和列表视图之间切换；在列表视图中，还会显示视图设置。
 
    ![bh-09](assets/bh-09.png)
+
+* 键盘导航
+
+   只能使用键盘导航网站。 它使用TAB键(或OPT+ **TAB** )的标准浏 **览器功能在可聚焦的页面上的元素之间**&#x200B;移动 **。
+
+   在“站 **点** ”控制台中，添加了跳到 **主内容的选项**。 当您在标题选项 *中选* 项卡时，它会变得可见，并且允许您跳过（产品）工具栏中的标准元素并直接转到主内容，从而加快导航速度。
+
+   ![bh-30](assets/bh-30.png)
+
+   >[!NOTE]
+   >
+   >从 **AEM 6.5 Service** Pack 5 [开始，可以跳到主内容](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 ## 访问帮助 {#accessing-help}
 
@@ -252,7 +273,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 开发人员资源和下载
    >[!NOTE]
    >
-   >在控制台中时，您可以随时使用热键(问 `?` 号)访问可用快捷键的概述。
+   >在控制台中，您可以随时使用热键 `?`（问号)访问提供的快捷键概述。
    >
    >有关所有键盘快捷键的概述，请参阅以下文档：
    >
@@ -264,13 +285,13 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
 每当选择资源（例如一个页面或资产）时，工具栏中都会显示一些包含说明性文本的图标以指示各种操作。这些操作取决于以下要素：
 
-* 当前控制台。
-* 当前上下文。
-* 是否处于[选择模式](#navigatingandselectionmode)。
+* 当前控制台.
+* 当前上下文.
+* 是否处于[选择模式](#navigatingandselectionmode).
 
 工具栏中可用的操作会发生更改，以反映您可对特定的选定项目执行的操作。
 
-How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) depends on the view.
+[选择资源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)的方式依视图而定。
 
 由于某些窗口存在空间限制，因此工具栏的长度可能很快就会超过可用空间。如果发生此情况，将会显示额外的选项。单击或点按省略号（三个点或 **...**）会打开一个下拉选择器，其中包含所有其余的操作。例如，在&#x200B;**站点**&#x200B;控制台中选择了一个页面之后：
 
@@ -331,13 +352,13 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
    <td>卡片视图<br /> </td>
    <td>
     <ul>
-     <li><br /> 桌面：鼠标悬停，然后使用复选标记快速操作</li>
+     <li>Desktop:<br /> Mouseover, then use the checkmark quick action</li>
      <li>移动设备：<br />按住卡片不动</li>
     </ul> </td>
    <td>
     <ul>
-     <li><br /> 桌面：单击卡</li>
-     <li><br /> 移动设备：点击卡</li>
+     <li>Desktop:<br /> Click the card</li>
+     <li>Mobile device:<br /> Tap the card</li>
     </ul> </td>
   </tr>
   <tr>
@@ -388,7 +409,7 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
 
 1. 在选择了某个资源后，顶部标题被[操作工具栏](#actionstoolbar)覆盖，通过该工具栏可访问当前适用于选定资源的操作。
 
-   To exit selection mode select the **X** to the top-right, or use **escape**.
+   要退出选择模式，请选择右上角的 **X**，或者使用 **Esc** 键。
 
 ### 列视图 {#column-view}
 
@@ -430,11 +451,11 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
 
 * 卡片视图显示各个项目在当前级别的信息卡片。它们提供如下信息：
 
-   * 页面内容的可视表示形式。
-   * 页面标题。
+   * 页面内容的可视表示形式.
+   * 页面标题.
    * 重要日期（如上次编辑时间、上次发布时间）。
-   * 该页面是否被锁定、隐藏或是 LiveCopy 的一部分。
-   * （在适当时）您何时需要在工作流中采取相应的操作。
+   * 该页面是否被锁定、隐藏或是 Live Copy 的一部分.
+   * （在适当时）您何时需要在工作流中采取相应的操作.
 
       * 指示必需操作的标记可能与您的[收件箱](/help/sites-authoring/inbox.md)中的条目相关。
 
@@ -477,13 +498,13 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
    * **页面停留时间**
    ![bh-21](assets/bh-21.png)
 
-   By default the **Name** column is shown, which makes up part of the URL for the page. 在某些情况下，作者可能需要访问采用不同语言的页面，在作者不知道页面语言的情况下，查看页面的名称（通常不会更改）会非常有用。
+   默认将显示&#x200B;**名称**&#x200B;列，它构成了页面 URL 的一部分。在某些情况下，作者可能需要访问采用不同语言的页面，在作者不知道页面语言的情况下，查看页面的名称（通常不会更改）会非常有用。
 
 * 可使用列表中每个项目最右侧的点状垂直栏更改项目的顺序。
 
    >[!NOTE]
    >
-   >Changing the order works only within an ordered folder that has `jcr:primaryType` value as `sling:OrderedFolder`.
+   >只有在 `jcr:primaryType` 值为 `sling:OrderedFolder` 的已排序文件夹内才能更改顺序。
 
    ![bh-22](assets/bh-22.png)
 
@@ -499,11 +520,11 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
 
 ## 边栏选择器 {#rail-selector}
 
-The **Rail Selector** is available at the top-left of the window and displays options depending on your current consoles.
+**边栏选择器**&#x200B;位于窗口的左上角，会根据您当前的控制台显示相应的选项。
 
 ![bh-25](assets/bh-25.png)
 
-例如，在“站点”中，您可以选择“仅限内容”（默认）、“内容树”、“时间轴”、“引用”或“筛选器”侧面板。
+例如，在站点中，您可以选择“仅限内容”（默认）、“内容树”、“时间轴”、“引用”或“筛选器”侧面板。
 
 如果选择“仅限内容”，则只会显示边栏图标。如果选择其他任何选项，则边栏图标旁边会显示选项名称。
 
@@ -546,14 +567,14 @@ The **Rail Selector** is available at the top-left of the window and displays op
       * 以及“显示全部”
 
 
-* [添加/查看](#timelineaddingandviewingcomments)有关选定项目的评论。**评论**&#x200B;框显示在事件列表的底部。键入评论后按回车键将记录该评论。在选择&#x200B;**评论**&#x200B;或&#x200B;**显示全部**&#x200B;时，将显示该评论。
+* [添加/查看有关选定项目的评论。](#timelineaddingandviewingcomments)**评论**&#x200B;框显示在事件列表的底部。键入评论后按回车键将记录该评论。在选择&#x200B;**评论**&#x200B;或&#x200B;**显示全部**&#x200B;时，将显示该评论。
 
 * 特定的控制台还具有其他一些功能。例如，在“站点”控制台中，您可以：
 
    * [保存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)。
-   * [启动工作流](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail)。
+   * [建立工作流](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail).
 
-These options accessible via the chevron next to the **Comment** field.
+这些选项可通过&#x200B;**评论**&#x200B;字段旁边的 V 形标记访问。
 
 ![bh-27](assets/bh-27.png)
 
