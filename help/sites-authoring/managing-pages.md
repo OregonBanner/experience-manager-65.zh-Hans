@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13e34a6df8a513a1654bc5277539b924c809ab8a
+source-git-commit: 49874dc723c3659550d891e786ddc178b30834ec
 workflow-type: tm+mt
-source-wordcount: '2349'
+source-wordcount: '2350'
 ht-degree: 93%
 
 ---
@@ -283,7 +283,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 选择&#x200B;**粘贴**&#x200B;页面图标本身：将在此位置创建原始页面和任何子页面的副本。
    * 选择下拉箭头以显示&#x200B;**粘贴（不含子项）**&#x200B;选项。将在此位置创建原始页面的副本；不会复制子页面。
    >[!NOTE]
-   AEM **6.5 Service** Pack 5中 [提供“粘贴而不包含子项”选项](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)。
+   从 **AEM 6.5 Service Pack** 5开始，可 [以使用“粘贴而不带子项](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) ”选项。
 
    >[!NOTE]
    如果您将页面复制到某个位置，而该位置已经存在名称与原始名称相同的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在，则 `winter` 将变为 `winter1`。
