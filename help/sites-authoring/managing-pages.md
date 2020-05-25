@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 13e34a6df8a513a1654bc5277539b924c809ab8a
+workflow-type: tm+mt
+source-wordcount: '2349'
+ht-degree: 93%
 
 ---
 
@@ -77,7 +80,7 @@ Depending on the configuration of your instance, use of `/content` might be opti
  /...
 ```
 
-This structure can be viewed From the **Sites** console, where you can [navigate through the pages of your website](/help/sites-authoring/basic-handling.md#navigating) and perform actions on the pages. 您还可以创建新站点和[新页面](#creating-a-new-page)。
+此结构可以从&#x200B;**站点**&#x200B;控制台中查看，您可以在此控制台中[导航浏览网站的各个页面](/help/sites-authoring/basic-handling.md#navigating)，并对页面执行一些操作。您还可以创建新站点和[新页面](#creating-a-new-page)。
 
 无论在什么位置，您都可以在标题栏的痕迹导航中看到上级分支：
 
@@ -87,7 +90,7 @@ This structure can be viewed From the **Sites** console, where you can [navigate
 
 在创建新页面时，需填写以下两个关键字段：
 
-* **[标题](#title)**:
+* **[标题](#title)**：
 
    * 它会在控制台中向用户显示并在编辑中的页面内容顶部显示。
    * 此字段为必填字段。
@@ -107,7 +110,7 @@ This structure can be viewed From the **Sites** console, where you can [navigate
 
 >[!NOTE]
 >
->在定义页面名称时，一个好的经验法则是保持页面名称简短，但尽可能表达到位且容易记忆，使读者容易理解。See the [W3C style guide](https://www.w3.org/Provider/Style/TITLE.html) for the `title` element for more information.
+>在定义页面名称时，一个好的经验法则是保持页面名称简短，但尽可能表达到位且容易记忆，使读者容易理解。请参阅针对 `title` 元素的 [W3C 风格指南](https://www.w3.org/Provider/Style/TITLE.html)，以获取更多信息。
 
 >另请注意，某些浏览器（例如旧版本的 IE）只能接受一定长度的 URL，因此还有技术原因需缩短页面名称。
 >
@@ -118,8 +121,8 @@ This structure can be viewed From the **Sites** console, where you can [navigate
 * 从“a”到“z”
 * 从“A”到“Z”
 * 从“0”到“9”
-* `_` （下划线）
-* `-` （连字符／减号）
+* `_`（下划线）
+* `-`（连字符/减号）
 
 有关允许使用的所有字符的完整详细信息可以在[命名惯例](/help/sites-developing/naming-conventions.md)中找到。
 
@@ -128,7 +131,7 @@ This structure can be viewed From the **Sites** console, where you can [navigate
 
 #### 标题 {#title}
 
-如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**，并依据 AEM 和 JCR 实行的惯例[验证此名称](/help/sites-developing/naming-conventions.md)。A **Title** field containing invalid characters will be accepted, but the name derived will have the invalid characters subsituted. 例如：
+如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**[，并依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)A **Title** field containing invalid characters will be accepted, but the name derived will have the invalid characters subsituted. 例如：
 
 | 标题 | 派生的名称 |
 |---|---|
@@ -137,7 +140,7 @@ This structure can be viewed From the **Sites** console, where you can [navigate
 
 #### 名称 {#name}
 
-如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将依据 AEM 和 JCR 实行的惯例[验证此名称](/help/sites-developing/naming-conventions.md)。您在&#x200B;**名称**&#x200B;字段中无法提交无效的字符。AEM 检测到无效字符时，该字段将突出显示，并提供有说明性消息。
+如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。[](/help/sites-developing/naming-conventions.md)您在&#x200B;**名称**&#x200B;字段中无法提交无效的字符。AEM 检测到无效字符时，该字段将突出显示，并提供有说明性消息。
 
 ![caop-02](assets/caop-02.png)
 
@@ -194,7 +197,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
 1. 在向导的第一步中，您可以执行以下操作之一：
 
-   * 选择要用于创建新页面的模板，然后单击/点按“**下一步**”以继续。
+   * 选择要用于创建新页面的模板，然后单击/点按&#x200B;**下一步**&#x200B;以继续。
 
    * 单击/点按&#x200B;**取消**&#x200B;可中止该过程。
    ![caop-04](assets/caop-04.png)
@@ -206,7 +209,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 使用&#x200B;**返回**&#x200B;以返回到模板选择步骤。
    关键字段为：
 
-   * **标题**:
+   * **标题**：
 
       * 此字段将显示给用户，是必填字段。
    * **名称**：
@@ -246,7 +249,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
-   And then select the **Edit** icon:
+   然后，选择&#x200B;**编辑**&#x200B;图标：
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
 
@@ -272,14 +275,18 @@ Components are the elements provided by AEM so that you can add specific types o
    如果您处于选择模式，那么复制完页面后将自动退出。
 
 1. 导航到页面的新副本所在的位置。
-1. 使用&#x200B;**粘贴**&#x200B;页面图标：
+1. 通过正右侧的下拉箭头可显示&#x200B;**粘贴**&#x200B;图标：
 
-   ![screen_shot_2018-03-22at105510](assets/screen_shot_2018-03-22at105510.png)
+   ![粘贴](assets/paste-without-children.png)
 
-   将在此位置创建原始页面及其所有子页面的副本。
+   您可以：
+   * 选择&#x200B;**粘贴**&#x200B;页面图标本身：将在此位置创建原始页面和任何子页面的副本。
+   * 选择下拉箭头以显示&#x200B;**粘贴（不含子项）**&#x200B;选项。将在此位置创建原始页面的副本；不会复制子页面。
+   >[!NOTE]
+   AEM **6.5 Service** Pack 5中 [提供“粘贴而不包含子项”选项](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)。
 
    >[!NOTE]
-   如果您将页面复制到某个位置，而该位置已经存在名称与原始名称相同的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在， `winter` 则将变为 `winter1`。
+   如果您将页面复制到某个位置，而该位置已经存在名称与原始名称相同的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在，则 `winter` 将变为 `winter1`。
 
 ### 移动或重命名页面 {#moving-or-renaming-a-page}
 
@@ -291,9 +298,9 @@ Components are the elements provided by AEM so that you can add specific types o
 
 移动或重命名页面的过程基本相同，都由同一个向导来处理。通过此向导，您可以：
 
-* 重命名页面而不移动页面。
-* 移动页面而不重命名页面。
-* 同时移动和重命名页面。
+* 重命名页面而不移动页面.
+* 移动页面而不重命名页面.
+* 同时移动和重命名页面.
 
 AEM 还有一项功能是允许您对引用被重命名页面或被移动页面的所有内部链接进行更新。此操作非常灵活，可以一个页面一个页面地执行。
 
@@ -310,7 +317,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 1. 在向导的&#x200B;**重命名**&#x200B;阶段，您可以执行以下任一操作：
 
-   * 指定移动页面后您希望页面使用的名称，然后单击/点按“**下一步**”以继续。
+   * 指定移动页面后您希望页面使用的名称，然后单击/点按&#x200B;**下一步**&#x200B;以继续。
 
    * 单击/点按&#x200B;**取消**&#x200B;可中止该过程。
    ![caop-07](assets/caop-07.png)
@@ -318,7 +325,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
    如果仅移动页面，则页面名称可以保持不变。
 
    >[!NOTE]
-   如果您将页面移动到某个位置，而该位置已经存在具有相同名称的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在， `winter` 则将变为 `winter1`。
+   如果您将页面移动到某个位置，而该位置已经存在具有相同名称的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在，则 `winter` 将变为 `winter1`。
 
 1. 在向导的&#x200B;**选择目标**&#x200B;阶段，您可以执行以下任一操作：
 
@@ -333,7 +340,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
    ![caop-08](assets/caop-08.png)
 
    >[!NOTE]
-   如果您将页面移动到某个位置，而该位置已经存在具有相同名称的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在， `winter` 则将变为 `winter1`。
+   如果您将页面移动到某个位置，而该位置已经存在具有相同名称的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在，则 `winter` 将变为 `winter1`。
 
 1. 如果页面已链接、已引用或者已发布，则详细信息将列出在&#x200B;**调整/重新发布**&#x200B;步骤中。
 
@@ -347,7 +354,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 1. 选择&#x200B;**移动**&#x200B;将完成此过程并相应地移动/重命名页面。
 
 >[!NOTE]
-如果页面已经发布，则移动页面会自动将其取消发布。默认情况下，页面将在移动完成后重新发布，但通过取消选中&#x200B;**调整/重新发布**&#x200B;步骤中的&#x200B;**重新发布**&#x200B;字段，可以更改这一行为。
+如果页面已发布，则移动页面将自动取消发布。 默认情况下，页面将在移动完成后重新发布，但通过取消选中&#x200B;**调整/重新发布**&#x200B;步骤中的&#x200B;**重新发布**&#x200B;字段，可以更改这一行为。
 
 >[!NOTE]
 如果页面未经任何引用，则会跳过&#x200B;**调整/重新发布**&#x200B;步骤。
@@ -377,7 +384,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 您可以在控制台中或者在编辑单个页面时[锁定/解锁页面](/help/sites-authoring/editing-content.md#locking-a-page)。关于页面是否已被锁定的信息也会显示在这两个位置。
 
-![screen_shot_2018-03-22at105713](assets/screen_shot_2018-03-22at105713.png) ![screen_shot_2018-03-22at105720](assets/screen_shot_2018-03-22at105720.png)
+![screen_shot_2018-03-22at105713](assets/screen_shot_2018-03-22at105713.png)![screen_shot_2018-03-22at105720](assets/screen_shot_2018-03-22at105720.png)
 
 ### 创建新文件夹 {#creating-a-new-folder}
 
@@ -388,7 +395,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 >[!CAUTION]
 * 只有在&#x200B;**站点**&#x200B;下或其他文件夹下才能直接创建文件夹。不能在页面下创建文件夹。
-* 可以对文件夹执行移动、复制、粘贴、删除、发布、取消发布和查看／编辑属性的标准操作。
+* 可以对文件夹执行移动、复制、粘贴、删除、发布、取消发布和查看/编辑属性等标准操作。
 * 无法在 Live Copy 中选择文件夹。
 
 
