@@ -4,7 +4,10 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5创作用户指南
 translation-type: tm+mt
-source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
+source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 89%
 
 ---
 
@@ -48,7 +51,7 @@ source-git-commit: 187421434882cf61ad17aea9f75920a5d5a76ed1
    + [组件控制台](default-components-console.md)
    + [响应式布局](responsive-layout.md)
    + [内容分析](content-insights.md)
-   + [创建辅助内容（WCAG 2.0 符合性）](creating-accessible-content.md)
+   + [创建辅助内容（WCAG 2.1 符合性）](creating-accessible-content.md)
    + [基架](scaffolding.md)
    + [在设计模式中配置组件](default-components-designmode.md)
    + [基础组件](default-components-foundation.md)
