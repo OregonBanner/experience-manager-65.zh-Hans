@@ -1,21 +1,19 @@
 ---
 title: 搜索彩块化
-description: 本文介绍如何在AEM中创建、修改和使用搜索彩块化。
+description: 本文介绍如何在Adobe Experience Manager中创建、修改和使用搜索彩块化。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2522'
-ht-degree: 32%
+source-wordcount: '2517'
+ht-degree: 30%
 
 ---
 
 
 # 搜索彩块化 {#search-facets}
 
-了解如何在AEM中创建、修改和使用搜索彩块化。
-
-Adobe Experience Manager(AEM)资产在企业范围内进行部署，能够存储许多资产。 有时，如果您仅使用AEM的通用搜索功能，则查找正确的资产可能既困难又耗时。
+Adobe Experience Manager资产在企业范围内进行部署，能够存储许多资产。 有时，如果您仅使用Experience Manager的通用搜索功能，则查找正确的资产可能既困难又耗时。
 
 使用“过滤器”面板中的搜索彩块化，为您的搜索体验添加更多粒度，并使搜索功能更高效、用途更广。 搜索彩块化可添加多个维度（谓词），使您能够执行更复杂的搜索。 过滤器面板包括一些标准彩块化。 您还可以添加自定义搜索彩块化。
 
@@ -29,7 +27,7 @@ Adobe Experience Manager(AEM)资产在企业范围内进行部署，能够存储
 
 对于全文搜索，请向表单中添加“全文”谓词。 使用属性谓词可搜索与您指定的单个属性匹配的资产。 使用“选项”谓词，可搜索与特定属性的一个或多个值匹配的资产。 添加日期范围谓词，以搜索在指定日期范围内创建的资产。
 
-1. 单击 AEM 徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索表单]**。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 在“搜索表单”页面中，选 **[!UICONTROL 择资产管理员搜索边栏]**，然后单 **击** 编 ![辑aemassets_edit](assets/aemassets_edit.png)。
 
    ![找到并选择资产管理搜索边栏](assets/assets_admin_searchrail.png)
@@ -38,7 +36,7 @@ Adobe Experience Manager(AEM)资产在企业范围内进行部署，能够存储
 
    >[!NOTE]
    >
-   >要在早期AEM版本的预配置资产管理搜索边 **栏中使用文件夹搜索功能** ，请执行以下步骤：
+   >要从先前版本的预配置资产管理搜索边 **栏中使用文件夹搜索功能** ，请执行以下步骤：
    >
    >1. 导航到 *CRXDE中的/conf/global/settings/dam/search/facets/assets/jcr:content* /items。
    >1. 删除类 **型节** 点。
@@ -116,7 +114,7 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 >
 >“选项”谓词是一个自定义包装器，其中包含用于演示所描述行为的属性谓词。 目前，没有 REST 端点可在本机支持该功能。
 
-1. 单击 AEM 徽标，然后转到&#x200B;**[!UICONTROL 工具 > 常规 > 搜索表单]**。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
 1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
 1. 在“编 **[!UICONTROL 辑搜索表单]** ”页中，将“选 **[!UICONTROL 项谓词]** ”从“选 **** 择谓词”选项卡拖至主窗格。
 1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入属性的标签和名称。例如，要根据资产的格式搜索资产，请为标签指定用户友好名称，例如&#x200B;**[!UICONTROL 文件类型]**。在属性字段中指定执行搜索时所依据的属性，例如 `jcr:content/metadata/dc:format.`
@@ -136,9 +134,9 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
 ## 添加多值属性谓词 {#adding-a-multi-value-property-predicate}
 
-通过“多值属性”谓词，您可以搜索多个值的资产。 请考虑在AEM资产中有多个产品的图像，并且每个图像的元数据包括与产品关联的SKU编号的情况。 您可以使用此谓词根据多个SKU编号搜索产品图像。
+通过“多值属性”谓词，您可以搜索多个值的资产。 请考虑在资产中包含多个产品的图像，并且每个图像的元数据包括与产品关联的SKU编号的情况。 您可以使用此谓词根据多个SKU编号搜索产品图像。
 
-1. 单击 AEM 徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索表单]**。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 在“搜索表单”页面上，选 **[!UICONTROL 择“资产管理员]**”搜索边栏， **[!UICONTROL 然后单]** 击“编 ![辑](assets/aemassets_edit.png)Aemassets_edit”。
 1. 在“编辑搜索表单”页中，将&#x200B;**[!UICONTROL 多值属性谓词]**&#x200B;从&#x200B;**[!UICONTROL 选择谓词]**&#x200B;选项卡拖到主窗格。
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 您还可以使用选择对话框选择节点。
@@ -149,9 +147,9 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
 ## 添加“标记”谓词 {#adding-a-tags-predicate}
 
-标记谓词允许您对资产执行基于标记的搜索。 默认情况下，AEM资产会根据您指定的标记搜索资产中一个或多个标记匹配项。 换言之，搜索查询使用指定标记执行OR操作。 但是，您可以使用“匹配所有标记”选项来搜索包含您指定的所有标记的资产。
+标记谓词允许您对资产执行基于标记的搜索。 默认情况下，资产会根据您指定的标记搜索资产中的一个或多个标记匹配项。 换言之，搜索查询使用指定标记执行OR操作。 但是，您可以使用“匹配所有标记”选项来搜索包含您指定的所有标记的资产。
 
-1. 单击 AEM 徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索表单]**。
+1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. 在“搜索表单”页面中，选 **[!UICONTROL 择资产管理搜索边栏]** ，然后单 **[!UICONTROL 击]** 编 ![辑aemassets_edit](assets/aemassets_edit.png)。
 1. In the Edit Search Form page, drag **[!UICONTROL Tags Predicate]** from the Select Predicate tab to the main pane.
 1. 在设置选项卡中，输入谓词的占位符文本。 Specify the property name based on which the search is to be performed in the property field, for example *jcr:content/metadata/cq:tags*. 或者，也可以从选择对话框中选择CRXDE中的节点。
@@ -166,9 +164,9 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 1. 导航到“搜索”面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定要根据其搜索资产或从建议列表中进行选择的标记。
 
-   ![键入标记名称时AEM提供的建议](assets/chlimage_1-419.png)
+   ![在键入标记名称时，Experience Manager提供的建议](assets/chlimage_1-419.png)
 
-   键入标记名称时AEM提供的建议
+   *图： 键入标记名称时，Experience Manager提供的建议。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
