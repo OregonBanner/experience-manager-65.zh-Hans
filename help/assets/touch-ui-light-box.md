@@ -1,11 +1,11 @@
 ---
-title: 在AEM资产中将Lightbox作为您的个人图像库
-description: 了解Lightbox如何作为AEM资产中的个人图像库。
+title: 在Adobe Experience Manager资产中将Lightbox作为您的个人图像库。
+description: 了解Lightbox作为Adobe Experience Manager资产中的个人图像库的信息。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '259'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 Lightbox 是一种特殊类型的收藏集，使用它可以轻松访问资产。您可以快速访问 Lightbox 以添加或删除资产。它用作您的个人图像库。
 
-如果您是Adobe Experience Manager(AEM)资产用户，则首次登录应用程序时会自动创建Lightbox。 仅供您登录。 其他用户无法访问您的Lightbox。
+如果您是Adobe Experience Manager资产用户，则当您首次登录应用程序时，Lightbox将自动创建。 仅供您登录。 其他用户无法访问您的Lightbox。
 
 ## 将资产添加到Lightbox {#adding-assets-to-lightbox}
 
