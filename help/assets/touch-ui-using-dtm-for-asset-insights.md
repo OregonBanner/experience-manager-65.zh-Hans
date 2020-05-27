@@ -3,9 +3,9 @@ title: 通过DTM实现资产洞察
 description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 Adobe Analy
 
 执行这些步骤，通过DTM启用资产分析。
 
-1. Click the AEM logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Insights Configuration]**.
-1. [使用DTM云服务配置AEM实例](/help/sites-administering/dtm.md)
+1. 单击Experience Manager徽标，然后转至工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 分析配置]**。
+1. [使用DTM云服务配置Experience Manager实例](/help/sites-administering/dtm.md)
 
-   登录https://dtm.adobe.com并从用户档案图标访问帐 [户](https://dtm.adobe.com/) 设 **[!UICONTROL 置后，API令牌]** 应可用。 从资产分析的角度来看，不需要执行此步骤，因为AEM Sites与资产分析的集成仍在进行中。
+   登录https://dtm.adobe.com并从用户档案图标访问帐 [户](https://dtm.adobe.com/) 设 **[!UICONTROL 置后，API令牌]** 应可用。 从资产分析的角度来看，不需要执行此步骤，因为Experience Manager Sites与资产分析的集成仍在进行中。
 
 1. 登录到https://dtm.adobe.com [](https://dtm.adobe.com/)，然后根据需要选择公司。
 1. 创建／打开现有Web属性
@@ -44,15 +44,15 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 Adobe Analy
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. Click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
+1. 单击Experience Manager徽标，然后转到工具 **[!UICONTROL >资产]**。
 1. 单击 **[!UICONTROL “洞察页面跟踪器]**”，复制跟踪器代码，然后将其粘贴到您在步骤6中打开的“脚本”对话框中。 保存更改。
 
    >[!NOTE]
    >
    > * `AppMeasurement.js` 。 它预计可通过DTM的Adobe Analytics工具获得。
    > * 将删除 `assetAnalytics.dispatcher.init`对()的调用。 在DTM的Adobe Analytics工具完成加载后，应调用该函数。
-   > * 根据资产分析页面跟踪器的托管位置（例如AEM、CDN等），脚本源的来源可能需要更改。
-   > * 对于AEM托管的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
+   > * 根据资产分析页面跟踪器的托管位置（例如Experience Manager、CDN等），脚本源的来源可能需要更改。
+   > * 对于Experience Manager托管的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
 
 
 1. 访问 `https://dtm.adobe.com`. 单击 **[!UICONTROL Web属性]** 中的“概述”，然后 **[!UICONTROL 单击“添加工]** 具”或打开现有Adobe Analytics工具。 创建工具时，可将“配置方 **[!UICONTROL 法”设置为]** “自 **[!UICONTROL 动”]**。
