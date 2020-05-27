@@ -3,7 +3,7 @@ title: 集 [!DNL Adobe Experience Manager Assets] 成 [!DNL Adobe InDesign Serve
 description: 了解如何 [!DNL Adobe Experience Manager Assets] 集成 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 4%
@@ -58,7 +58,7 @@ ht-degree: 4%
    * 提取的文本和文件存储在中 [!DNL Experience Manager Assets]。
    * 所有演绎版都存储 [!DNL Experience Manager Assets]在资产本身中。
 
-## 与AEM [!DNL InDesign Server] 集成 {#integrating-the-indesign-server-with-aem}
+## 与Experience [!DNL InDesign Server] Manager集成 {#integrating-the-indesign-server-with-aem}
 
 要集成以 [!DNL InDesign Server] 在配置代 [!DNL Experience Manager Assets] 理后与之一起使用，您需要：
 
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 * **扩展脚本**: 您可以在此处指定不同的脚本组合。 如果希望在上执行您自己的脚本， [!DNL InDesign Server]请将脚本保存在 `/apps/settings/dam/indesign/scripts`。
 
-有关InDesign脚本的信息，请参阅InDesign [开发人员文档](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
+有关脚本的 [!DNL Adobe InDesign] 信息，请参 [阅InDesign开发人员文档](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
@@ -167,7 +167,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 1. 访问Web控制台(位 `https://[aem_server]:[port]/system/console/configMgr`于)。
 1. Locate the configuration **[!UICONTROL Day CQ Link Externalizer]**, and click **[!UICONTROL Edit]** to open it.
-1. 指定主机名和上下文路径，然 [!DNL Indesign Server] 后单击“ **保存**”。
+1. 指定主机名和上下文路径，然 [!DNL Adobe InDesign Server] 后单击“ **保存**”。
 
    ![chlimage_1-97](assets/chlimage_1-290.png)
 
@@ -218,7 +218,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 >[!NOTE]
 >
->要 [!DNL InDesign Server] 与集 [!DNL Experience Manager Assets]成，请使用多核处理器，因为单核系统不支持集成所需的会话支持功能。
+>要 [!DNL InDesign Server] 与集 [!DNL Experience Manager Assets]成，请使用多核处理器，因为单核系统不支持集成所必需的会话支持功能。
 
 ## 配置凭 [!DNL Experience Manager] 据 {#configure-aem-credentials}
 
