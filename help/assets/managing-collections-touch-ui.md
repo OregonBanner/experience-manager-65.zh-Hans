@@ -4,9 +4,9 @@ description: 了解管理资产集合的任务，如创建、视图、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: '2215'
 ht-degree: 19%
 
 ---
@@ -173,7 +173,7 @@ Smart collections are built by saving a search so you can alter their content by
 
    >[!NOTE]
    >
-   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式在可包含多个值的字段中向现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
+   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式向可包含多个值的字段中的现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
 
 要自定义元数据 [!UICONTROL 属性] 页面，包括添加、修改和删除元数据属性，请使用模式编辑器。
 
@@ -183,7 +183,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 ## 搜索集合 {#searching-collections}
 
-您可以从“收藏集”控制台中搜索收藏集。当您在“搜索组件”框中使用关键字进行搜索时，AEM资产会搜索集合名称、元数据以及添加到集合的标记。
+您可以从“收藏集”控制台中搜索收藏集。当您在“搜索”框中使用关键字进行搜索时，资产会搜索收藏集名称、元数据以及添加到收藏集的标记。
 
 如果您从顶级搜索集合，则搜索结果中只返回单个集合。 收藏集中的资产或文件夹将被排除。 在所有其他情况下（例如，在单个收藏集或文件夹层次结构中），都会返回所有相关资产、文件夹和收藏集。
 
@@ -191,7 +191,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 在收藏集控制台中，单击某个收藏集以将其打开。
 
-在收藏集中，AEM资产搜索仅限于您正在查看的收藏集中的资产（及其标记和元数据）。 当您在某个文件夹内进行搜索时，将返回当前文件夹中所有匹配的资产和子文件夹。 当您在收藏集中进行搜索时，只会返回与收藏集直接成员匹配的资产、文件夹和其他收藏集。
+在集合中，Experience Manager搜索仅限于您正在查看的集合中的资产（及其标记和元数据）。 当您在某个文件夹内进行搜索时，将返回当前文件夹中所有匹配的资产和子文件夹。 当您在收藏集中进行搜索时，只会返回与收藏集直接成员匹配的资产、文件夹和其他收藏集。
 
 ## 编辑集合设置 {#editing-collection-settings}
 
