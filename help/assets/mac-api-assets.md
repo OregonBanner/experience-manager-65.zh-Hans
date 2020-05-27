@@ -3,9 +3,9 @@ title: 中的资源HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f41de531d0e1784245c79ab2ace3586fc7dd469
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1566'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 在Experience Manager中，资产包含以下元素：
 
 * 资产的属性和元数据。
-* 多个演绎版，如原始演绎版（最初上传的资产）、缩略图和各种其他演绎版。 其他再现可能是不同大小的图像、不同的视频编码，或从PDF或Adobe InDesign文件提取的页面。
+* 多个演绎版，如原始演绎版（最初上传的资产）、缩略图和各种其他演绎版。 其他再现可能是不同大小、不同视频编码或从PDF或文件提取页面的 [!DNL Adobe InDesign] 图像。
 * 可选注释。
 
 有关内容片段中元素的信息，请 [参阅Experience Manager Assets HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md#content-fragments)。
@@ -191,7 +191,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 201 —— 已创建——如果再现已成功创建。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
@@ -204,7 +204,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 200 —— 确定——如果再现已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
