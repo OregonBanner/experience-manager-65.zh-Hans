@@ -3,7 +3,7 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 138c8d960ad8c1de20212b7aeebbda0a486832ee
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '1779'
 ht-degree: 20%
@@ -103,7 +103,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## 支持的PDF光栅器库 {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer库为大型和内容密集型Adobe Illustrator和PDF文件生成高质量的缩览图和预览。 Adobe建议对以下对象使用PDF光栅器库：
+Adobe PDF Rasterizer库为大型和内容密集型和PDF文件生成高质量的缩览图 [!DNL Adobe Illustrator] 和预览。 Adobe建议对以下对象使用PDF光栅器库：
 
 * 需要大量处理的资源的内容密集型AI/PDF文件。
 * AI/PDF文件，默认情况下不生成缩略图。
@@ -121,7 +121,7 @@ Adobe Imaging Transcoding库是一款图像处理解决方案，可执行核心�
 
 ## 支持的相机原始数据 {#supported-camera-raw}
 
-Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw support](camera-raw.md).
+Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](camera-raw.md).
 
 ## 支持的资产文档格式 {#supported-document-formats}
 
@@ -234,7 +234,7 @@ Adobe Camera Raw库使AEM资产能够摄取原始图像。 See [Camera Raw suppo
 
 ## Supported MIME types {#supported-mime-types}
 
-默认情况下，AEM会使用文件扩展名检测文件类型。 AEM可以从文件内容中检测到它。 对于后者，在 [!UICONTROL AEM Web Console] 的Day CQ DAM [!UICONTROL MIME类型服务中选择“从内容检测MIME] ”选项。
+默认情况下，Experience Manager会使用文件扩展名检测文件类型。 Experience Manager可以从文件内容中检测到它。 对于后者，在 [!UICONTROL Experience Manager Web] Console [!UICONTROL 的Day CQ DAM Mime类型服务中选择] “从内容检测MIME”选项。
 
 在CRXDE Lite中，有一列表支持的MIME类型 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
