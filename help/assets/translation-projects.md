@@ -3,9 +3,9 @@ title: 创建翻译项目
 description: 了解如何在中创建翻译项目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1897'
 ht-degree: 16%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->如果您为复杂资产（如PDF和InDesign文件）启动翻译工作流程，则不会提交其子资产或演绎版（如果有）以进行翻译。
+>如果您为复杂资产（如PDF和文件）启动了翻 [!DNL Adobe InDesign] 译工作流，则不会提交其子资产或演绎版（如果有）进行翻译。
 
 ## 创建和翻译工作流 {#create-and-translate-workflow}
 
@@ -128,7 +128,7 @@ ht-degree: 16%
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project}
 
-如果您使用此选项，则在运行以前的翻译工作流后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含以前翻译过的资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
+如果您使用此选项，则在运行以前的翻译工作流后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含以前已翻译资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
 
 1. 在资产UI中，导航到包含未翻译资产的源文件夹。
 1. 选择要翻译的资产，然后打开&#x200B;**[!UICONTROL “引用”窗格]**。**[!UICONTROL 语言副本]**&#x200B;部分显示当前可用的翻译副本数。
@@ -151,7 +151,7 @@ ht-degree: 16%
 
 1. 从“现 **[!UICONTROL 有翻译项目]** ”列表中，选择要添加要翻译的资产的项目。
 
-   ![chlimage_1-78](assets/chlimage_1-78.png)
+   ![chlimage_1-70](assets/chlimage_1-78.png)
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。要翻译的资产将添加到目标文件夹。更新的文件夹列在&#x200B;**[!UICONTROL 语言副本]**&#x200B;部分下。
 
@@ -291,7 +291,7 @@ ht-degree: 16%
 1. 执行添加到现有翻译 [项目过程的步骤](#add-to-existing-translation-project) 2-14以更新语言副本。
 1. 单击“翻译作业”拼贴底 **[!UICONTROL 部的省略]** 。 从“转换作业”页 **[!UICONTROL 面中的资产列表]** ，您可以清楚地视图存储资产翻译版本的临时位置。
 
-   ![chlimage_1-181](assets/chlimage_1-101.png)
+   ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 选中“标题”旁的复 **[!UICONTROL 选框]**。
 1. From the toolbar, click **[!UICONTROL Accept Translation]** and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
