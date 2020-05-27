@@ -3,9 +3,9 @@ title: Adobe Creative Cloud和集 [!DNL Adobe Experience Manager] 成最佳实�
 description: 整合的最佳 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 实践，可简化资产转让工作流并实现高内容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '3253'
+source-wordcount: '3247'
 ht-degree: 16%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 16%
 
 | 相关角色的价值主张 | Adobe产品 | 涉及的表面 |
 |---|---|---|
-| 创意用户无需离开 [!DNL Experience Manager]应用程序即可从中发现资源、打开和使用资 [!DNL Experience Manager]源、编辑更改并将其上传到，以 [!DNL Experience Manager]及将新文件上传 [!DNL Creative Cloud] 到中。 | [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) | Photoshop、Illustrator和InDesign |
+| 创意用户无需离开 [!DNL Experience Manager]应用程序即可从中发现资源、打开和使用资 [!DNL Experience Manager]源、编辑更改并将其上传到，以 [!DNL Experience Manager]及将新文件上传 [!DNL Creative Cloud] 到中。 | [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
 | 商业用户简化了资产的打开和使用，编辑更改并将其上 [!DNL Experience Manager]传到桌面环境，以及将新 [!DNL Experience Manager] 文件上传到桌面。 他们使用通用集成在本机桌面应用程序中打开任何资产类型，包括非Adobe资产类型。 | [Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac桌面上的桌面应用程序 |
 | 营销人员和商业用户可从内部发现、预览、许可、保存 [!DNL Adobe Stock] 和管理资产 [!DNL Experience Manager]。 授权和保存的资产提供精选元 [!DNL Adobe Stock] 数据以更好地进行管理。 | [Experience Manager与Adobe Stock集成](aem-assets-adobe-stock.md) | [!DNL Experience Manager] web界面 |
 
@@ -181,7 +181,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 Adobe Asset Link优惠对此用例提供良好支持：
 
-* 当Photoshop、InDesign或Illustrator中的用户想要编辑文件时，他们会对给定资源执行签出操作
+* 当用户 [!DNL Photoshop]在 [!DNL InDesign]、或 [!DNL Illustrator] 有意编辑文件时，他们会对给定资产执行签出操作
 * 资产后台下载，通过Creative Cloud桌面应用程序将其同步到磁盘的Creative Cloud帐户放入用户中，并且资产上的注销标志已切换 [!DNL Experience Manager] ，以最大限度地减少编辑冲突
 * 从此，用户在同步位置本地存储的文件中工作，并可以继续工作并以任何所需频率保存必要的更改
 * 此外，由于资产位于Creative Cloud帐户中，因此也可在用户可能拥有的其他设备上使用（例如，可在专用的Creative Cloud移动应用程序中打开或编辑），并可与其他Creative Cloud用户共享以进行协作。
