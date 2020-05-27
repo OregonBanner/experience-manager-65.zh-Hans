@@ -3,9 +3,9 @@ title: 图像转码库
 description: 了解如何配置和使用Adobe的图像转码库，它是一款可以执行核心图像处理功能的图像处理解决方案，包括编码、转码、图像重新取样和图像大小调整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -55,10 +55,10 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 您可以为参数配置以下 `-resize` 选项：
 
-* `X`: `Works similar to AEM. For example -resize 319.`
-* `WxH`: `Aspect Ratio will not be maintained, For example -resize 319X319.`
-* `Wx`: `Fixes the width and calculates the height maintaining the aspect ratio. For example -resize 319x.`
-* `xH`: `Fixes the height and calculates the width maintaining the aspect ratio. For example -resize x319.`
+* `X`: 工作方式与Experience Manager类似。 例如-resize 319。
+* `WxH`: 例如，长宽比不被保留 `-resize 319x319`。
+* `Wx`: 修复宽度并计算保持宽高比的高度。 For example `-resize 319x`.
+* `xH`: 固定高度并计算保持宽高比的宽度。 For example `-resize x319`.
 
 ```shell
  -AllowUpsampling (Resizes smaller images)
@@ -74,7 +74,7 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 要配置库，请创建一个。conf文件，使用以下步骤指示库。 您需要管理员或根权限。
 
-1. 下载 [Imaging Transcoding Library包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，并使用包管理器进行安装。 该包与AEM 6.5兼容。
+1. 下载 [Imaging Transcoding Library包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，并使用包管理器进行安装。 该包与Experience Manager 6.5兼容。
 
 1. 要了解捆绑ID，请 `com.day.cq.dam.cq-dam-switchengine`登录到Web控制台，然后单击“OSGi **[!UICONTROL >捆绑”]**。 或者，要打开捆绑包控制台，请访 `https://[aem_server:[port]/system/console/bundles/` 问URL。 找到 `com.day.cq.dam.cq-dam-switchengine` 捆绑包及其ID。
 
@@ -92,7 +92,7 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 1. 执行 `ldconfig` 命令以创建必要的链接和缓存。
 
-1. 在用于开始AEM的帐户中，编辑文 `.bash_profile` 件。 添 `LD_LIBRARY_PATH` 加以下内容。
+1. 在用于开始Experience Manager的帐户中，编辑文 `.bash_profile` 件。 添 `LD_LIBRARY_PATH` 加以下内容。
 
    ```shell
    LD_LIBRARY_PATH=.
@@ -136,8 +136,9 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 1. 同步更新的 [!UICONTROL DAM更新资产工作流] 模型。 保存工作流。
 
-验证配置、上传TIFF图像并监视error.log文件。 您会注意到 `INFO` 提到的消息 `SwitchEngineHandlingProcess execute: executing command line`。 日志中提到生成的演绎版。 工作流完成后，您可以在AEM中视图新演绎版。
+验证配置、上传TIFF图像并监视error.log文件。 您会注意到 `INFO` 提到的消息 `SwitchEngineHandlingProcess execute: executing command line`。 日志中提到生成的演绎版。 工作流完成后，您可以在Experience Manager中视图新演绎版。
 
 >[!MORELIKETHIS]
 >
 >* [支持的MIME类型文章](assets-formats.md#supported-image-transcoding-library)
+
