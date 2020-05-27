@@ -1,11 +1,11 @@
 ---
 title: 有关数字资产的报告
-description: 了解AEM资产中有关资产的报告，帮助您了解数字资产的使用、活动和共享情况。
+description: 了解Adobe Experience Manager资产中有关资产的报告，帮助您了解数字资产的使用、活动和共享情况。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f66be5de3bbd0051cd677430d5187ace9337b98d
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '976'
 ht-degree: 15%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 15%
 
 # 资产报表 {#asset-reports}
 
-资产报告是评估Adobe Experience Manager(AEM)资产部署的实用程序的重要工具。 通过AEM资产，您可以为数字资产生成各种报表。 这些报告提供有关系统使用情况、用户如何与资产交互以及下载和共享哪些资产的有用信息。
+资产报告是评估Adobe Experience Manager资产部署的效用的重要工具。 通过资产，您可以为数字资产生成各种报表。 这些报告提供有关系统使用情况、用户如何与资产交互以及下载和共享哪些资产的有用信息。
 
-使用报告中的信息得出关键成功指标，以衡量企业内部和客户对AEM资产的采用情况。
+使用报告中的信息得出关键成功指标，以衡量企业内部和客户对资产的采用情况。
 
-AEM资产报告框架使用Sling作业以有序方式异步处理报表请求。 它可用于大型存储库。 异步报表处理提高了报表生成的效率和速度。
+资产报告框架使用Sling作业以有序方式异步处理报表请求。 它可用于大型存储库。 异步报表处理提高了报表生成的效率和速度。
 
 报表管理界面直观，包括用于访问归档报表和视图报表运行状态（成功、失败和排队）的细粒度选项和控件。
 
@@ -25,7 +25,7 @@ AEM资产报告框架使用Sling作业以有序方式异步处理报表请求。
 
 ## 生成报告 {#generate-reports}
 
-AEM资产会为您生成以下标准报表：
+Experience Manager资产会为您生成以下标准报表：
 
 * 上传
 * 下载
@@ -37,7 +37,7 @@ AEM资产会为您生成以下标准报表：
 * 文件
 * 链接共享
 
-AEM管理员可以轻松生成和自定义这些报告以用于您的实施。 管理员可以按照以下步骤生成报告：
+Experience Manager管理员可以轻松生成和自定义这些报告，以用于您的实施。 管理员可以按照以下步骤生成报告：
 
 1. 在Experience Manager界面中，单击 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报]**告。
    ![](assets/AssetsReportNavigation.png)
@@ -79,7 +79,7 @@ AEM管理员可以轻松生成和自定义这些报告以用于您的实施。 �
 
    ![](assets/files_report.png)
 
-   **[!UICONTROL 链接共享]**&#x200B;报表显示 AEM Assets 中与外部用户共享的资产的 URL。其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和到期日期。列不可自定义。
+   **[!UICONTROL 链接共享]**&#x200B;报表显示 Assets 中与外部用户共享的资产的 URL。其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和到期日期。列不可自定义。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
