@@ -1,18 +1,21 @@
 ---
 title: 使用页面跟踪器并在网页中嵌入代码
-description: 了解如何在网站代码中包含页面跟踪器和嵌入JavaScript代码，以使Adobe Analytics能够捕获资产周围的使用数据。
+description: 了解如何在网站代码中包含页面跟踪器和嵌入JavaScript代码，以使Adobe Analytics能够捕获围绕资产的使用数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
 # 使用页面跟踪器并在网页中嵌入代码 {#using-page-tracker-and-embed-code-in-web-pages}
 
-页面跟踪器是一段JavaScript代码，您可以在第三方网站的代码中包含该代码，以使Adobe Analytics能够捕获这些网站上Adobe Experience Manager(AEM)资产的使用数据。
+页面跟踪器是一段JavaScript代码，包含在第三方网站的代码中，使Adobe Analytics能够捕获这些网站上Adobe Experience Manager资产的使用数据。
 
-要捕获特定于资产的事件（如单击等），您还可以在第三方网站的代码中包含嵌入代码。
+要捕获特定于资产的事件（如单击等），您还应在第三方网站的代码中包含嵌入代码。
 
 以下示例代码显示包含页面跟踪器代码和嵌入代码的网页的外观：
 
@@ -58,7 +61,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ## 添加页面跟踪器代码 {#adding-page-tracker-code}
 
-可在网站代码的标题部分中添加页面跟踪器代码。 以下代码片断显示示例网页中包含的页面跟踪器代码：
+在网站代码的标题部分中添加页面跟踪器代码。 以下代码片断显示示例网页中包含的页面跟踪器代码：
 
 ```xml
  <head>
@@ -78,7 +81,7 @@ source-git-commit: abc4821ec3720969bf1c2fb068744c07477aca46
 
 ## 添加嵌入代码 {#add-embed-code}
 
-您可以在网站代码的正文中添加嵌入代码。 以下代码片断显示示例网页中包含的嵌入代码：
+可在网站代码正文中添加嵌入代码。 以下代码片断显示示例网页中包含的嵌入代码：
 
 ```xml
 <body>
