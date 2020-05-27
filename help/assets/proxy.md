@@ -1,11 +1,11 @@
 ---
 title: 资产代理开发
-description: 代理是一个AEM实例，它使用代理Worker处理作业。 了解如何配置AEM代理、支持的操作、代理组件，以及如何开发自定义代理工作器。
+description: 代理是使用代理Worker处理作业的Experience Manager实例。 了解如何配置Experience Manager代理、支持的操作、代理组件，以及如何开发自定义代理工作器。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5cea9ed3be322cb8dedfbc6cb38abbdb72d0b7b7
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # 资产代理开发 {#assets-proxy-development}
 
-Adobe Experience Manager(AEM)资产使用代理分发特定任务的处理。
+Adobe Experience Manager资产使用代理为特定任务分发处理。
 
-代理是特定（有时也是单独的）AEM实例，它使用代理Worker作为处理器，负责处理作业和创建结果。 代理工作器可用于各种任务。 对于AEM资产代理，此代理可用于加载资产以在AEM资产中呈现。 例如，IDS代理 [工作者使用](indesign.md) InDesign Server处理文件以在AEM资产中使用。
+代理是特定（有时也是单独的）Experience Manager实例，它使用代理Worker作为处理器，负责处理作业并创建结果。 代理工作器可用于各种任务。 对于资产代理，此代理可用于加载资产以在资产中呈现。 例如，IDS代理 [工作者使用](indesign.md) Server [!DNL Adobe InDesign] 处理要在资产中使用的文件。
 
-当代理是单独的AEM实例时，这有助于减少AEM创作实例的负载。 默认情况下，AEM资产会在同一JVM（通过代理外部化）中执行资产处理任务，以减轻AEM创作实例的负载。
+当代理是单独的Experience Manager实例时，这有助于减少Experience Manager创作实例的负载。 默认情况下，资产会在同一JVM（通过代理外部化）中执行资产处理任务，以减轻Experience Manager创作实例的负载。
 
 ## 代理（HTTP访问） {#proxy-http-access}
 
@@ -109,11 +109,11 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >
 >有关代理API的参考文档，请访问 [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html)。
 
-代理和代理工作器配置均可通过云服务配置使用，您可以从AEM资产工具控制台或 **下方** 访问这些配置 `/etc/cloudservices/proxy`。 每个代理工作器都应添加一个节点，用 `/etc/cloudservices/proxy` 于工作器特定配置详细信息( `/etc/cloudservices/proxy/workername`例如)。
+代理和代理工作器配置均可通过云服务配置使用，并可从“资产工具”控制台或 **下方** 访问这些配置 `/etc/cloudservices/proxy`。 每个代理工作器都应添加一个节点，用 `/etc/cloudservices/proxy` 于工作器特定配置详细信息( `/etc/cloudservices/proxy/workername`例如)。
 
 >[!NOTE]
 >
->有关 [详细信息，请参阅Indesign](indesign.md#configuring-the-proxy-worker-for-indesign-server) Server [代理工作器配置和](../sites-developing/extending-cloud-config.md) 云服务配置。
+>有关 [详细信息，请参阅InDesign](indesign.md#configuring-the-proxy-worker-for-indesign-server) Server代 [理工作器配置和](../sites-developing/extending-cloud-config.md) 云服务配置。
 
 以下是API使用的示例：
 
@@ -132,9 +132,9 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### 开发自定义代理工作器 {#developing-a-customized-proxy-worker}
 
-IDS [代理工作者](indesign.md) 是AEM资产代理工作者的一个示例，该代理工作者已经开箱即用，可以将Indesign资产的处理外包。
+IDS [代理工作者](indesign.md) 是已经提供现成功能来外包InDesign资产处理的资产代理工作者的示例。
 
-您还可以开发和配置自己的AEM Assets代理工作人员，以创建专门的工作人员来调度和外包您的AEM Assets处理任务。
+您还可以开发和配置自己的资产代理工作人员，以创建专门的工作人员来调度和外包资产处理任务。
 
 设置您自己的自定义代理工作者需要您：
 
@@ -156,7 +156,7 @@ IDS [代理工作者](indesign.md) 是AEM资产代理工作者的一个示例，
 
 >[!NOTE]
 >
->在以下步骤中，Indesign等效项指示为参考示例。
+>在以下步骤中，InDesign等效项指示为参考示例。
 
 1. Sling [作业被使用](https://sling.apache.org/site/eventing-and-jobs.html) ，因此您需要为您的使用案例定义作业主题。
 
@@ -176,12 +176,12 @@ IDS [代理工作者](indesign.md) 是AEM资产代理工作者的一个示例，
 
 >[!NOTE]
 >
->AEM资产代理框架不提供现成的池机制。
+>资产代理框架不提供现成的池机制。
 >
->InDesign集成允许访问indesign服务器池(IDSPool)。 此池特定于Indesign集成，而不是AEM资产代理框架的一部分。
+>集 [!DNL InDesign] 成允许访问服务器池( [!DNL InDesign] IDSPool)。 此池特定于集 [!DNL InDesign] 成，而不是代理框架 [!DNL Assets] 的一部分。
 
 >[!NOTE]
 >
 >结果同步：
 >
->如果n个实例使用同一代理，则处理结果与代理保持一致。 客户端（AEM作者）的作业使用与创建作业时给客户端的相同唯一作业ID请求结果。 代理只需完成作业，并将结果保持为可请求。
+>如果n个实例使用同一代理，则处理结果与代理保持一致。 客户端（Experience Manager作者）的作业使用与创建作业时给客户端的相同唯一作业ID请求结果。 代理只需完成作业，并将结果保持为可请求。
