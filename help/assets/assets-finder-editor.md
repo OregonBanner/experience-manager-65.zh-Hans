@@ -3,9 +3,9 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f3af7041029a1b4dd1cbb4c65bd488b62c7e10c
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
-source-wordcount: '2147'
+source-wordcount: '2146'
 ht-degree: 1%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 1%
 
 ## 为何要创建和配置资产编辑器页面？ {#why-create-and-configure-asset-editor-pages}
 
-数字资产管理正在越来越多的场景中使用。 当从面向受过专业培训的小用户群（例如摄影师或分类学者）的小规模解决方案转变为面向业务用户、WCM作者、记者等的更大、更多样化的用户群时，面向专业用户的Adobe Experience Manager(AEM)资产的强大用户界面会提供太多信息和利益相关方开始，无法请求特定用户界面或应用程序访问与相关的数字资产他们。
+数字资产管理正在越来越多的场景中使用。 当从面向专业培训用户的小型解决方案（例如摄影师或分类学者）转变为面向业务用户、WCM作者、记者等更多元化用户群时，面向专业用户的Adobe Experience Manager资产的强大用户界面会提供太多信息和利益相关方开始，要求特定用户界面或应用程序访问与其相关的数字资产。
 
 这些以资产为中心的应用程序可以是企业内部网中的简单照片库，员工可以从贸易展访问或面向公众的网站的新闻中心上传照片。 以资产为中心的应用程序还可以扩展到包括购物车、结帐和验证流程在内的完整解决方案。
 
-创建以资产为中心的应用程序在很大程度上成为一个无需编码的配置过程，只需了解用户组及其需求以及所使用元数据的知识。 使用AEM资产创建的以资产为中心的应用程序具有可扩展性： 借助适当的编码工作量，可以创建用于搜索、查看和修改资产的可重用组件。
+创建以资产为中心的应用程序在很大程度上成为一个无需编码的配置过程，只需了解用户组及其需求以及所使用元数据的知识。 使用Assets创建的以资源为中心的应用程序具有可扩展性： 借助适当的编码工作量，可以创建用于搜索、查看和修改资产的可重用组件。
 
-AEM中以资产为中心的应用程序由资产编辑器页面组成，该页面可用于获取特定资产的详细视图。 资产编辑器页面还允许编辑元数据，前提是访问资产的用户具有必要的权限。
+Experience Manager中以资产为中心的应用程序由资产编辑器页面组成，该页面可用于获取特定资产的详细视图。 资产编辑器页面还允许编辑元数据，前提是访问资产的用户具有必要的权限。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -161,7 +161,7 @@ To customize the query builder:
 
 #### Add predicates {#adding-predicates}
 
-AEM Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
+Experience Manager Assets includes a number of predicates that you can add to the Asset Share page. These let your users further narrow searches. In some cases, they may override a query builder parameter (for example, the Path parameter).
 
 To add predicates:
 
@@ -278,7 +278,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-有关 [修改元数据表单中可用命名空间](/help/assets/extending-assets.md) ，请参阅自定义和扩展AEM资产。
+有关 [修改元数据表单中可用命名空间](/help/assets/extending-assets.md) ，请参阅自定义和扩展资产。
 
 1. Click the **Constraints** tab. 您可以在此选择字段是否为必填字段，并根据需要添加任何约束。
 
@@ -391,7 +391,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ## 使用“资产编辑器”页面对资产进行多次编辑 {#multi-editing-assets-with-the-asset-editor-page}
 
-通过AEM资产，您可以一次对多个资产进行更改。 在选定资产后，您可以同时更改其：
+通过Experience Manager Assets，您可以一次更改多个资产。 在选定资产后，您可以同时更改其：
 
 * 标记
 * 元数据
@@ -424,7 +424,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
    * 单击 **x** 图标以删除所有资产的标记。
    * 单击 **+图标** ，将标记添加到所有资产。
    * 单击箭 **头** ，然后选择一个标记以向所有资产添加新标记。
-   单 **击** “确定”将更改写入表单。 “标记”字段旁 **边的框** 将自动被选中。
+   单 **击** “确定”将更改写入表单。 将自动选中 **“标记** ”字段旁边的框。
 
 1. 编辑“说明”字段。 例如，将其设置为：
 
