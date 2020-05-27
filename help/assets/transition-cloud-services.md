@@ -3,7 +3,7 @@ title: 将翻译云服务应用到文件夹
 description: 将翻译云服务应用到文件夹
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 43%
@@ -13,7 +13,7 @@ ht-degree: 43%
 
 # 将翻译云服务应用到文件夹 {#applying-translation-cloud-services-to-folders}
 
-Adobe Experience Manager(AEM)允许您从您选择的翻译提供商那里获得基于云的翻译服务，以确保根据您的要求对您的资产进行翻译。
+Adobe Experience Manager允许您从您选择的翻译提供商那里获得基于云的翻译服务，确保根据您的要求对资产进行翻译。
 
 您可以将翻译云服务直接应用到您的资产文件夹，以便在翻译工作流中使用。
 
@@ -42,7 +42,7 @@ Adobe Experience Manager(AEM)允许您从您选择的翻译提供商那里获得
 如果要为要在翻译工作流程中使用的翻译服务应用自定义连接器。要应用自定义连接器，请首先从“包管理器”安装连接器。然后，从云服务控制台配置连接器。配置连接器后，该连接器会显示在[应用翻译服务](transition-cloud-services.md#applying-the-translation-services)中所述的“云服务”选项卡的连接器列表中。应用自定义连接器并运行翻译工作流后，翻译项目的&#x200B;**[!UICONTROL 翻译摘要]**&#x200B;拼贴会在&#x200B;**[!UICONTROL 提供程序]**&#x200B;和&#x200B;**[!UICONTROL 方法]**&#x200B;标题下显示连接器详细信息。
 
 1. 从包管理器安装连接器。
-1. 单击AEM徽标，然后导航到工 **[!UICONTROL 具>部署>云服务]**。
+1. 单击Experience Manager徽标，然后导航到 **[!UICONTROL 工具>部署>云服务]**。
 1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面的&#x200B;**[!UICONTROL 第三方服务]**&#x200B;下找到安装的连接器。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
