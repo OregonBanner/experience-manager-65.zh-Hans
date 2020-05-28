@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: e8e2e01b-0117-48c3-86d8-609d29a147be
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 33fab976729baa09fdfd3725542f9e6bc7f37eeb
+source-git-commit: 49209cb64c829fde396e87ca4b2e326ecf1dd941
+workflow-type: tm+mt
+source-wordcount: '1634'
+ht-degree: 58%
 
 ---
 
@@ -18,7 +21,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 为了传达即将删除/替换 AEM 功能，以下规则适用：
 
-1. 首先宣布弃用。虽然已弃用，但功能仍然可用，但不会进一步增强。
+1. 首先宣布弃用。虽然已弃用，但功能仍可用，但不会进一步增强。
 1. 最早将在以下主要发行版中删除已弃用的功能。将宣布实际删除目标的日期。
 
 在实际删除之前，此过程将为客户提供至少一个发行周期时间，使其实施适应已弃用功能的新版本或后续版本。
@@ -37,8 +40,8 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
    <td><b>替换</b></td>
   </tr>
   <tr>
-   <td>Creative Cloud 集成</td>
-   <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM 6.2中引入了“AEM到Creative Cloud文件夹共享</a> ”功能，旨在让创意用户能够从AEM访问资产，以便在CC应用程序中打开资产并上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。</p> <p>Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。</p> </td>
+   <td>Creative Cloud集成</td>
+   <td><p><a href="/help/assets/aem-cc-folder-sharing-best-practices.md">AEM 6.2中引入了</a> “AEM到Creative Cloud文件夹共享”功能，可让创意用户访问AEM中的资产，以便在CC应用程序中打开这些资产并上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。</p> <p>Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。</p> </td>
    <td>建议客户切换到新的Creative Cloud集成功能，包括Adobe Asset Link或AEM桌面应用程序。 Review <a href="/help/assets/aem-cc-integration-best-practices.md">AEM and Creative Cloud Integration Best Practices</a> for more details.</td>
   </tr>
   <tr>
@@ -76,12 +79,12 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
   </tr>
   <tr>
    <td>商务</td>
-   <td><p><a href="https://github.com/adobe/commerce-cif-api" target="_blank">CIF REST</a> 2018年作为一组微型服务提供，用于实现AEM与商务引擎之间的集成。</p> <p>在Adobe于2018年年中收购Magento后，Adobe决定更改其方法，原因有二： </p> <p><strong>1.</strong> Magento有其自己的一组Commerce API（REST和GraphQL），维护两组API不是很好的做法 </p> <p><strong>2.</strong> 市场趋势表明，客户正在转向GraphQL，因为它是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，使用Magento的GraphQL API作为真相的来源。</p> <p>Adobe不打算在CIF REST中进一步投资。 强烈建议客户使用更换解决方案。</p> </td>
-   <td><p>对于AEM-Magento集成，切换到 <a href="https://github.com/adobe/aem-cif-project-archetype" target="_blank">AEM CIF Archetype</a>，和 <a href="https://github.com/adobe/aem-core-cif-components" target="_blank">AEM CIF核心组件</a></p> <p>有关详细信 <a href="https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md" target="_blank">息，请查看使用Commerce Integration Framework的AEM和Magento Integration</a> 。</p> <p>我们的产品路线图支持与新方法进行第三方（Magento除外）集成。</p> </td>
+   <td><p><a href="https://github.com/adobe/commerce-cif-api" target="_blank">CIF REST</a> 于2018年作为一组微服务提供，用于实现AEM和商务引擎之间的集成。</p> <p>2018年年中Adobe收购Magento后，Adobe决定更改其方法，原因有二： </p> <p><strong>1.</strong> Magento有其自己的一组Commerce API（REST和GraphQL），维护两组API不是好做法 </p> <p><strong>2.</strong> 市场趋势表明客户正转向GraphQL，因为它是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，它使用Magento的GraphQL API作为真相的来源。</p> <p>Adobe不打算在CIF REST中进一步投资。 强烈建议客户使用替换解决方案。</p> </td>
+   <td><p>对于AEM-Magento集成，切换 <a href="https://github.com/adobe/aem-cif-project-archetype" target="_blank">到AEM CIF原型</a>和 <a href="https://github.com/adobe/aem-core-cif-components" target="_blank">AEM CIF核心组件</a></p> <p>有关详细信 <a href="https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md" target="_blank">息，请查看AEM和Magento Integration using Commerce Integration</a> Framework。</p> <p>我们的路线图支持第三方（Magento除外）与新方法集成。</p> </td>
   </tr>
   <tr>
    <td>组件 (AEM Sites)</td>
-   <td><p>Adobe 计划不再进一步提升 /libs/foundation/components 中存储的大多数基础组件的功能。</p> <p>在组件文件夹中查找 <strong>cq:deprecated</strong> 和 <strong>cq:deprecatedReason</strong> 属性。</p> <p>AEM 6.5包含基础组件，从早期版本升级的客户可以按原样继续使用它们。 此外，在弃用时，基础组件仍完全受支持。 </p> </td>
+   <td><p>Adobe 计划不再进一步提升 /libs/foundation/components 中存储的大多数基础组件的功能。</p> <p>在组件文件夹中查找 <strong>cq:deprecated</strong> 和 <strong>cq:deprecatedReason</strong> 属性。</p> <p>AEM 6.5包含基础组件，从早期版本升级的客户可以继续按原样使用它们。 此外，在弃用时，基础组件仍完全受支持。 </p> </td>
    <td>建议客户在未来的项目中使用核心组件。Existing sites can remain as is or use the <a href="https://github.com/adobe/aem-modernize-tools">AEM Modernize Tools Suite</a> to refactor the site to use Core Components.</td>
   </tr>
   <tr>
@@ -90,41 +93,24 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
    <td>Adobe 计划在未来的发行版本中提供替代的用例实施。</td>
   </tr>
   <tr>
-   <td>组件 (AEM Forms)</td>
-   <td><p>签名步骤允许用户验证和签署自适应表单。 在以前的版本中，签名步骤可以将Adobe Sign和Scribble Signature组件用作签名字段。 在AEM 6.5表单中，已弃用“签名步骤”的基于Scribble Signature的签名体验。</p> </td>
-   <td>
-    <ul>
-     <li>如果您已执行全新安装：
-      <ul>
-       <li>在自适应表单的签名步骤中使用基于Adobe Sign的签名体验。</li>
-       <li>在自适应表单、交互式通信和HTML5表单中使用独立的“涂写签名”组件。</li>
-      </ul> </li>
-     <li>如果您已从先前版本升级到AEM 6.5 Forms:<br />
-      <ul>
-       <li>在已使用该功能的表单中继续使用基于Scribble签名的签名步骤签名体验。<br /> </li>
-       <li>在创建表单时，在签名步骤中使用独立的“涂鸦签名”组件或基于Adobe Sign的签名体验。 </li>
-      </ul> </li>
-    </ul> <p> </p> <p> </p> </td>
-  </tr>
-  <tr>
    <td>Foundation</td>
    <td><p>Granite 卸载框架</p> <p>Adobe 不打算进一步增强 5.6.1 中引入的用于外部化资产处理的卸载框架。 </p> </td>
    <td>Adobe 正在开发下一代云本机卸载框架。</td>
   </tr>
   <tr>
    <td>开发人员</td>
-   <td><p>Hobbes.js</p> <p>Adobe不计划对hobbes.js用户界面测试框架进行进一步增强。</p> </td>
+   <td><p>Hobbes.js</p> <p>Adobe不打算进一步增强hobbes.js用户界面测试框架。</p> </td>
    <td>Adobe建议客户使用Selenium自动化。</td>
   </tr>
   <tr>
    <td>开发人员</td>
    <td><p>jQuery UI 客户端库</p> <p>Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 jQuery UI 客户端库</p> </td>
-   <td>Adobe建议仍需jQuery UI才能生成代码的客户将其添加到其项目代码库中。</td>
+   <td>Adobe建议仍需jQuery UI才能使用其代码的客户将其添加到其项目代码库中。</td>
   </tr>
   <tr>
    <td>开发人员</td>
    <td><p>jQuery Animation客户端库(granite.jquery.animation)</p> <p>Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 jQuery Animation 客户端库</p> </td>
-   <td>Adobe建议仍需jQuery Animations作为其代码的客户将其添加到项目代码库中。</td>
+   <td>Adobe建议仍需jQuery Animations作为代码的客户将其添加到其项目代码库中。</td>
   </tr>
   <tr>
    <td>开发人员</td>
@@ -134,7 +120,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
   <tr>
    <td>开发人员</td>
    <td><p>Lawnchair 客户端库</p> <p>Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 Lawnchair 客户端库</p> </td>
-   <td>Adobe建议仍需Lawnchair编写代码的客户将其添加到其项目代码库中。</td>
+   <td>Adobe建议仍需要Lawnchair编写代码的客户将其添加到其项目代码库中。</td>
   </tr>
   <tr>
    <td>开发人员</td>
@@ -161,27 +147,27 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 ## 已删除功能 {#removed-features}
 
-本节列表了已从AEM 6.5中删除的特性和功能。先前版本的这些功能标记为已弃用。
+本节列表了已从AEM 6.5中删除的功能和特性。以前的发行版中已将这些功能标记为已弃用。
 
 | 区域 | 功能 | 替换 |
 |--- |--- |--- |
-| 分析活动图 | AEM中包含的活动图版本。 | 由于 Adobe Analytics API 中的安全性更改，因此无法再使用 AEM 中包含的 Activity Map 版本。使用 [Adobe Analytics提供的ActivityMap插件](https://docs.adobe.complugin /content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
-| 集成 | ExactTarget集成已从默认分发（快速启动）中删除，并且不再可用。 | 无替换项 |
+| Analytics Activity Map | AEM 中包含的 Activity Map 的版本。 | 由于 Adobe Analytics API 中的安全性更改，因此无法再使用 AEM 中包含的 Activity Map 版本。使用 [Adobe Analytics提供的ActivityMap插件](https://docs.adobe.complugin /content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)。 |
+| 集成 | ExactTarget集成已从默认分发（快速启动）中删除，但不再可用。 | 无替换项 |
 | 集成 | Salesforce Force API 集成已从默认分发版（快速入门）中删除，现在是一个额外的包，可从 PackageShare 安装。 | 功能仍然可用。 |
 | Forms | 由于不再支持 Adobe Central 产品，删除了对 Adobe Central Migration Bridge 服务的支持。 | 无替换项 |
 | 表单 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项 |
 | 表单 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |
-| 表单 | 在JEE上从LiveCycle ES4 SP1到AEM 6.5 Forms的单跳升级不可用 | 请参 [阅AEM Forms升级文档](../forms/using/upgrade.md) 中的可用升级路径。 |
-| 表单 | 从JEE上的AEM Forms中删除了基于UPD的群集支持 | 在JEE上的AEM Forms中，只能使用基于TCP的群集。 如果将UDP多播服务器从先前版本升级到JEE上的AEM 5.5 Forms，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请参 [阅升级到JEE上的AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |
+| 表单 | 无法在JEE上从LiveCycle ES4 SP1单跳升级到AEM 6.5 Forms | 请参 [阅AEM Forms升级文](../forms/using/upgrade.md) 档中的可用升级路径。 |
+| 表单 | 从JEE上的AEM Forms中删除了基于UPD的群集支持 | 在JEE上的AEM Forms中，只能使用基于TCP的群集。 如果将UDP多播服务器从先前版本升级到AEM 5.5 Forms on JEE，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请 [参阅JEE上的升级到AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |
 | 开发人员 | Firebug Lite 已从默认分发版（快速入门）中删除 | 使用浏览器内置的开发人员控制台 |
 | 开发人员 | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 无替换项 |
-| 资产 | 在AEM 6.5中，资产卸载功能已被删除 | 无替换项 |
-| 缓存 | `system/console/slingjsp` is removed is no lenable in AEM 6.5. | 类和轻缓存存储在Apache Sling Commons FileSystem ClassLoader包下。 您可以在AEM Web Console中检查捆绑编号，并直接从文件系统(`crx-quickstart/launchpad/felix/bundle<ID>`)中删除缓存文件夹。 |
+| 资产 | AEM 6.5中已删除“资产卸载”功能 | 无替换项 |
+| 缓存 | `system/console/slingjsp` is removed is no loner available in AEM 6.5. | 类和轻缓存存储在Apache Sling Commons FileSystem ClassLoader捆绑包下。 您可以在AEM Web Console中检查捆绑编号，并直接从文件系统()中删除缓存文`crx-quickstart/launchpad/felix/bundle<ID>`件夹。 |
 
 ## 针对下一个发行版的预先宣布 {#pre-announcement-for-next-release}
 
 此部分用于预先宣布未来发行版中的更改，这些更改未弃用，但会影响客户。以下内容为规划目的而提供。
 
-| 区域 | 功能 | 公告 |
+| 区域 | 功能 | 发布 |
 |--- |--- |--- |
 | Foundation | UI 框架 | Adobe 计划在 2019 年弃用 Coral UI 2 组件。Coral UI 3 是随 AEM 6.2 引入的，而 AEM 6.5 完全基于 Coral 3。Adobe 建议使用 Coral 2 构建自定义 UI 的客户和合作伙伴将它们重构为使用 Coral 3。Adobe 将提供将 Coral 2 对话框转换为 Coral 3 的工具 - [阅读更多](/help/sites-developing/dialog-conversion.md)。 |
