@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 translation-type: tm+mt
-source-git-commit: da233b2d58e13bf86c88115a78f2fecf1be12ba9
+source-git-commit: 4db76ca1de97d8353ac88a6e66e14f41fb0b87db
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 0%
@@ -135,7 +135,7 @@ Web客户端必须具有访问节点的 `cq:ClientLibraryFolder` 权限。 您�
 
 >[!NOTE]
 >
->客户端库文件夹下的静态资源必须位于名为resources的文 *件夹中*。 如果文件夹资源下没有静态资源（如图像），则 *不能*&#x200B;在发布实例上引用它。 以下是一个示例： https://localhost:4503/etc.clientlibs/geometrixx/components/clinetlibs/resources/example.gif
+>客户端库文件夹下的静态资源必须位于名为resources的文 *件夹中*。 如果文件夹资源下没有静态资源（如图像），则 *不能*&#x200B;在发布实例上引用它。 以下是一个示例： https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
 
 >[!NOTE]
 >
@@ -193,7 +193,7 @@ Web客户端必须具有访问节点的 `cq:ClientLibraryFolder` 权限。 您�
 
    `#base=.`
 
-   下面的代码将根设置为节点下名为mobile的文 `cq:ClientLibraryFolder` 件夹：
+   以下代码将根设置为节点下名为mobile的文 `cq:ClientLibraryFolder` 件夹：
 
    `#base=mobile`
 
