@@ -10,14 +10,17 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: b11f0e4c-4dec-4b66-9f54-a0aa13ac77b9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+workflow-type: tm+mt
+source-wordcount: '269'
+ht-degree: 93%
 
 ---
 
 
 # 使用工作流{#working-with-workflows}
 
-通过 AEM 工作流，您可以自动完成对页面或资产执行的一系列步骤。例如，在发布时，编辑者必须在站点管理员激活页面之前审查内容。自动完成此示例的工作流会通知每位参与者何时需要执行其必需完成的工作：
+通过 AEM 工作流，您可以自动完成对页面或资产执行的一系列步骤。例如，在发布时，编辑者必须在站点管理员激活页面之前审查内容。自动完成此示例的工作流会通知每个参加者何时需要执行其所需的工作：
 
 1. 作者将工作流应用于页面。
 1. 编辑者收到一个工作项，指示他们需要审查页面内容。完成后，他们指示自己的工作项已完成。
