@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 876589d26f17dc088531c3f34deea0fab4c7726a
+source-git-commit: b6a7648699bc8e8e041749fb03998f86a27292ce
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3129'
 ht-degree: 32%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 32%
 
 ## Adding a Dynamic Media component to a page {#adding-a-dynamic-media-component-to-a-page}
 
-向页面添加Dynamic Media、交互式媒体、全景媒体或视频360媒体组件与向任何页面添加组件相同。 以下部分介绍了Dynamic Media组件。
+向页面添加3D媒体、动态媒体、交互式媒体、全景媒体、智能裁剪视频或视频360媒体组件与向任何页面添加组件相同。 以下部分介绍了Dynamic Media组件。
 
 1. 在 AEM 中，打开您要添加 Dynamic Media 组件的页面。
 1. 在页面左侧的面板中（可能需要切换侧面板的显示），单击组件 **[!UICONTROL 图标]** 。
@@ -40,10 +40,6 @@ ht-degree: 32%
    ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
 
 1. 拖 **[!UICONTROL 动要使用]** 的Dynamic Media组件，并将其放到页面上的所需位置。
-
-   在以下示例中， **[!UICONTROL 正在使用Video]** 360 Media组件。
-
-   ![6_5_360video_wcmcomponent拖动](assets/6_5_360video_wcmcomponentdrag.png)
 
 1. 将鼠标指针直接悬停在组件上。 当组件被蓝色框包围时，点按一次以显示组件的工具栏。 点按配 **[!UICONTROL 置（扳手）图]** 标。
 
@@ -57,7 +53,7 @@ ht-degree: 32%
 
    Dynamic Media Video 360媒体组件。
 
-1. 完成后，在对话框的右上角附近，点按复选标记以保存更改。
+1. 完成后，在对话框的右上角，点按复选标记以保存更改。
 
 ### 启用Dynamic Media组件 {#enabling-dynamic-media-components}
 
@@ -267,7 +263,7 @@ You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit
 >
 >但是，您可以对页面中使用相同类型资产的所有交互式媒体组件使用相同的查看器预设。
 
-![chlimage_1-175](assets/chlimage_1-541.png)
+![chlimage_1-174](assets/chlimage_1-541.png)
 
 You can edit the following **[!UICONTROL General]** settings by tapping **[!UICONTROL Edit]** in the component.
 
