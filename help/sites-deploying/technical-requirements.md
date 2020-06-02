@@ -11,7 +11,7 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f16c25468418b6f228132e9d06017d32466cf43a
+source-git-commit: a299e26668b1f1f08cca8d4a8085da185522ec96
 workflow-type: tm+mt
 source-wordcount: '3118'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Adobe Experience Manager可运行以下版本的Java虚拟机：
  <tbody>
   <tr>
    <td>平台</td>
-   <td>支持级别<br /> </td>
+   <td>支持级别</td>
   </tr>
   <tr>
    <td>Oracle Java SE 12 JDK [1]</td>
@@ -144,15 +144,15 @@ Adobe Experience Manager可运行以下版本的Java虚拟机：
 
 | **平台** | **描述** | **支持级别** |
 |---|---|---|
-| **具有TAR文件1的文件[系统&#x200B;]** | 存储库 | 答： 支持 |
-| **带有Datastore 1的文件[系统&#x200B;]** | 二进制文件 | 答： 支持 |
-| 在文件系统1的TAR文件中存储二进制文 [件] | 二进制文件 | Z: 不支持生产 |
+| **带有TAR文件的文件系统** `[1]` | 存储库 | 答： 支持 |
+| **带有数据存储的文件系统** `[1]` | 二进制文件 | 答： 支持 |
+| 将二进制文件存储在文件系统的TAR文件中 `[1]` | 二进制文件 | Z: 不支持生产 |
 | Amazon S3 | 二进制文件 | 答： 支持 |
 | Microsoft Azure Blob存储 | 二进制文件 | 答： 支持 |
-| MongoDB Enterprise 4.0 | 存储库 | 答： 支 [持2、3] |
+| MongoDB Enterprise 4.0 | 存储库 | 答： 支持 `[2, 3]` |
 | MongoDB Enterprise 3.6 | 存储库 | Z: 不支持 |
 | MongoDB Enterprise 3.4 | 存储库 | Z: 不支持 |
-| IBM DB2 10.5 | 存储库和表单数据库 | R: 受限支持 [4] |
+| IBM DB2 10.5 | 存储库和表单数据库 | R: 受限支持 `[4]` |
 | Oracle Database 12c(12.1.x) | 存储库和表单数据库 | R: 受限支持 |
 | Microsoft SQL Server 2016 | 表单数据库 | 答： 支持 |
 | **Apache Lucene（Quickstart内置）** | 搜索服务 | 答： 支持 |
@@ -199,11 +199,11 @@ Servlet 3.1要求的最低Servlet API版本
 |---|---|
 | **快速启动内置Servlet引擎(Jetty 9.4)** | 答： 支持 |
 | Oracle WebLogic Server 12.2(12cR2) | Z: 不支持 |
-| IBM WebSphere Application Server Continuous投放(LibertyProfile)，带Web用户档案7.0和IBM JRE 1.8 | R: 对新合同的限制支 [持2] |
-| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R: 对新合同的限制支 [持] 1 [2] |
-| Apache Tomcat 8.5.x | R: 对新合同的限制支 [持2] |
+| IBM WebSphere Application Server Continuous投放(LibertyProfile)，带Web用户档案7.0和IBM JRE 1.8 | R: 对新合同的限制支持 `[2]` |
+| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R: 对新合同的限制支持 `[1]` `[2]` |
+| Apache Tomcat 8.5.x | R: 对新合同的限制支持 `[2]` |
 | JBoss EAP 7.2.x（带JBoss应用程序服务器） | Z: 不支持 |
-| JBoss EAP 7.1.4（带JBoss应用程序服务器） | R: 对新合同的限制支 [持] 1 [2] |
+| JBoss EAP 7.1.4（带JBoss应用程序服务器） | R: 对新合同的限制支持 `[1]` `[2]` |
 | JBoss EAP 7.0.x（带JBoss应用程序服务器） | Z: 不支持 |
 
 1. 建议用于AEM Forms部署。
@@ -215,11 +215,11 @@ Adobe Experience Manager可与以下针对生产环境的服务器平台结合�
 
 | **平台** | **支持级别** |
 |---|---|
-| **Linux，基于Red Hat分发** | 答： 支 [持][1 3] |
-| Linux，基于Debian分发，包括 乌本图 | 答： 支持的 [2] |
+| **Linux，基于Red Hat分发** | 答： 支持 `[1]` `[3]` |
+| Linux，基于Debian分发，包括 乌本图 | 答： 支持 `[2]` |
 | Linux，基于SUSE分发 | 答： 支持 |
-| Microsoft Windows Server 2019 [4] | R: 对新合同的限制支持 |
-| Microsoft Windows Server 2016 [4] | R: 对新合同的限制支 [持5] |
+| Microsoft Windows Server 2019 `[4]` | R: 对新合同的限制支持 |
+| Microsoft Windows Server 2016 `[4]` | R: 对新合同的限制支持 `[5]` |
 | Microsoft Windows Server 2012 R2 | Z: 不支持 |
 | Oracle Solaris 11 | Z: 不支持 |
 | IBM AIX 7.2 | Z: 不支持 |
@@ -248,7 +248,7 @@ Adobe建议使用Adobe Managed Services在Azure或AWS上部署AEM。 Adobe Manag
 
 | 平台 | 支持级别 |
 |---|---|
-| **Apache httpd 2.4.x** [1,2] | 答： 支持 |
+| **Apache httpd 2.4.x** `[1,2]` | 答： 支持 |
 | Microsoft IIS 10(Internet Information Server) | 答： 支持 |
 | Microsoft IIS 8.5(Internet Information Server) | Z: 不支持 |
 
