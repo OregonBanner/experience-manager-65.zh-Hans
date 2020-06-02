@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cdcea49a25807e125ea15e7132ac9f188d3525bc
+source-git-commit: 9a27aabef07d5b5104c08c414138fbb22e284a68
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 13%
@@ -24,7 +24,7 @@ Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品�
 
 >[!NOTE]
 >
->AEM 6.5.4.0及更高版本支持通过Adobe I/O在品牌门户中配置AEM资产。
+>AEM 6.5.4.0及更高版本支持通过Adobe开发人员控制台在品牌门户中配置AEM资产。
 >
 >以前，品牌门户通过旧版OAuth网关在经典UI中配置，该网关使用JWT令牌交换获得IMS访问令牌进行授权。
 >
@@ -35,13 +35,13 @@ Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品�
 >
 >***仅限现有客户***
 >
->建议继续使用现有的旧版OAuth网关配置。 如果您在旧版OAuth网关配置中遇到问题，请删除现有配置并通过Adobe I/O创建新配置。
+>建议继续使用现有的旧版OAuth网关配置。 如果您在旧版OAuth网关配置中遇到问题，请删除现有配置并通过Adobe开发人员控制台创建新配置。
 
 
 
 本帮助描述以下两个用例：
-* [新配置](#configure-new-integration-65): 如果您是新的Brand Portal用户，并且希望在Brand Portal中配置AEM资产作者实例，则可以在Adobe I/O上创建新配置。
-* [升级配置](#upgrade-integration-65): 如果您是现有Brand Portal用户，且AEM Assets作者实例在旧版OAuth Gateway上配置了Brand Portal，建议您删除现有配置并在Adobe I/O上创建新配置。
+* [新配置](#configure-new-integration-65): 如果您是新的Brand Portal用户，并且希望使用Brand Portal配置AEM资产作者实例，则可以在Adobe开发人员控制台上创建新配置。
+* [升级配置](#upgrade-integration-65): 如果您是现有Brand Portal用户，且AEM Assets作者实例在旧版OAuth Gateway上配置了Brand Portal，则建议您删除现有配置并在Adobe开发人员控制台上创建新配置。
 
 提供的信息基于以下假设：阅读本帮助的任何人都熟悉以下技术：
 
