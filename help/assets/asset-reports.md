@@ -3,9 +3,9 @@ title: 有关数字资产的报告
 description: 了解Adobe Experience Manager资产中有关资产的报告，帮助您了解数字资产的使用、活动和共享情况。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 3e43e46b37ea5a9449da4a98d94fdc22f6c4ee8c
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '974'
 ht-degree: 15%
 
 ---
@@ -37,10 +37,11 @@ Experience Manager资产会为您生成以下标准报表：
 * 文件
 * 链接共享
 
-Experience Manager管理员可以轻松生成和自定义这些报告，以用于您的实施。 管理员可以按照以下步骤生成报告：
+[!DNL Adobe Experience Manager] 管理员可以轻松地为您的实施生成和自定义这些报告。 管理员可以按照以下步骤生成报告：
 
-1. 在Experience Manager界面中，单击 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报]**告。
-   ![](assets/AssetsReportNavigation.png)
+1. 在Experience Manager界面中，单击 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报]**&#x200B;告。
+
+![](assets/AssetsReportNavigation.png)
 
 1. 在资产 [!UICONTROL 报表页] ，单击工 **[!UICONTROL 具栏]** 中的创建。
 1. 从创 **[!UICONTROL 建报表]** ，选择要创建的报表，然后单击下 **[!UICONTROL 一步]**。
