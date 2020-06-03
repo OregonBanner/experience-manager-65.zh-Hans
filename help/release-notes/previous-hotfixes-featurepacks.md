@@ -1,18 +1,257 @@
 ---
 title: AEM 6.5先前的Service Pack发行说明
 description: 特定于Adobe Experience Manager 6.5 Service Pack 3及更早版本的发行说明。
+uuid: c7bc3705-3d92-4e22-ad84-dc6002f6fa6c
+contentOwner: User
+products: SG_EXPERIENCEMANAGER/6.5
+discoiquuid: 25542769-84d1-459c-b33f-eabd8a535462
+docset: aem65
 translation-type: tm+mt
-source-git-commit: 321710219053ab43fe5a223665bc20987e1afb31
+source-git-commit: c80cb65b42d8e132ba83c25f1decdcf0a0a6fc51
 workflow-type: tm+mt
-source-wordcount: '6277'
-ht-degree: 44%
+source-wordcount: '8093'
+ht-degree: 35%
 
 ---
 
 
 # 以前 Service Pack 中包含的修补程序和功能包 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.3.0 {#aem-6530-rn}
+## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
+
+Adobe Experience Manager 6.5.4.0是一项重要更新，包含自2019年4月6.5版正式发布以来发布的新功能、关键客户请求的增强功能以及性能、稳定性、安 **全性改进**。 它可以安装在Adobe Experience Manager(AEM)6.5的顶部。
+
+AEM 6.5.4.0中引入的一些主要功能和增强功能包括：
+
+* AEM资产现已通过Adobe I/O控制台通过Brand Portal进行配置。
+
+* AEM Forms工作流 [现在可使用](../forms/using/aem-forms-workflow-step-reference.md) 新的“生成可打印输出”步骤。
+
+* [自适应表单](../forms/using/resize-using-layout-mode.md) 、交互式通信的布局模式支持多列。
+
+* 支持 [HTML5表单](../forms/using/designing-form-template.md) 中的富文本。
+
+* [Experience Manager](new-features-latest-service-pack.md#accessibility-enhancements) Assets中的辅助功能增强。
+
+* 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.8。
+
+* 您现在可以将选择性内容子树同 *步到Dynamic Media - Scene7模式* ，而不是所有可在 `content/dam`。
+
+* 与SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
+
+* SOAP输入或输出以及复杂的数据结构现在支持动态组替换。
+
+有关之前AEM 6.5 Service Pack中引入的功能、主要重点和主要功能的完整列表, [请参阅Adobe Experience Manager 6.5 Service Pack 4的新增功能](new-features-latest-service-pack.md)。
+
+### 站点 {#sites-fixes}
+
+* 当AEM站点页面的URL包含冒号(: )或百分比符号(%)，基础浏览器停止响应，CPU周期显示尖峰(NPR-32369、NPR-31918)。
+
+* 当打开AEM站点页面进行编辑并复制组件时，粘贴操作对于某些占位符仍然不可用(NPR-32317)。
+
+* 打开“管理发布”向导后，链接到核心组件的体验片段不会显示在发布引用的列表中(NPR-32233)。
+
+* 触屏UI中的Live Copy概述渲染比经典UI花费的时间要长得多(NPR-32149)。
+
+* 当服务器时间和计算机时间位于不同时区时，计划发布时间在触屏UI中显示服务器时间，而在经典UI中显示计算机时间(NPR-32077)。
+
+* AEM Sites无法打开URL中含后缀的页面(NPR-32072)。
+
+* 当用户编辑内容片段时，内容片段的已删除变体会被恢复(NPR-32062)。
+
+* 允许用户保存内容片段，而无需在必填字段中提供任何信息(NPR-31988)。
+
+* kernel.js和ui.js未预先编译或缓存。 这会导致在渲染页面中增加时间(NPR-31891)。
+
+* 启用PageEventAuditListener时，提交队列的长度会增加。 它影响许多操作的性能，如批量发布、导航、批量资产移动(NPR-31890)。
+
+* 拖动体验片段时，会观察到较长的响应时间(NPR-31878)。
+
+* 当您在响应式网格的占位符中选择“将组件拖动到此处”选项时，会发送GET请求，并且该请求会导致HTTP 403错误(NPR-31845)。
+
+* 在同一文件夹内移动内容时，会禁用页面移动选项(NPR-31840)。
+
+* 在可编辑的模板结构模式下，布局列表中允许的组件显示不正确的结果。 布局容器中只显示具有设计对话框的组件(NPR-31816)。
+
+* 当页面对用户具有只读权限时，“打开属性”选项在sites.html中可见，但在editor.html中则不可见(NPR-31770)。
+
+* 当用户单击“创建”按钮时，页面选项不可用(NPR-31756)。
+
+* 无法同步包含OOTB（现成）设计导入程序组件的Adobe活动中的活动(NPR-31728)。
+
+* 当您尝试将项目符号列表更改为编号列表时，只更改列表的前两个项(NPR-31636)。
+
+* 当页面被取消创作且选择了子节点时，选择对话框仍显示初始节点。 创作页面并用户单击浏览时，页面会重定向到根节点，而不是创作的节点(NPR-31618)。
+
+* “视图配置”对话框对收件箱自定义工作流功能（NPR-32503和NPR-32492）无法正常工作。
+
+* 使用收件箱查看工作流信息时显示错误消息(CQ-4282168)。
+
+### 资产 {#assets-6540-enhancements}
+
+* 在资产收集页面上触发工作流的按钮被禁用(NPR-32471)。
+
+* 在使用Dynamic Media Scene7配置的Experience Manager中，将资产从一个文件夹移到另一个文件夹时，将在SPS(Scene7 Publishing System)中创建一个无名称的文件夹(NPR-32440)。
+
+* 将所有资产（使用全选，然后移动）移动到包含已发布资产的文件夹的操作会失败，并显示错误(NPR-32366)。
+
+* 为${extension}的资产生成再现失败(NPR-32294)。
+
+* 版本历史记录URL显示在资产属性页面的“引用者”字段下(NPR-31889)。
+
+* 无法使用WinZip打开从DAM下载的ZIP文件(NPR-32293)。
+
+* 打开“文件夹设置”以更改文件夹标题或缩略图图像，然后保存文件夹的原始权限(NPR-32292)。
+
+* 计划激活的日历图标不会显示在“状态”列（DAM资产列表的经典UI中）中，该激活计划在以后的日期和时间显示(NPR-32291)。
+
+* 使用代码片段模板创建代码片段时，在代码片段创建过程中搜索集合时出错(NPR-32290)。
+
+* 当从搜索筛选器中选择多个标记时，将触发多个搜索查询(NPR-32143)。
+
+* 当上传文件名超过50个字符的资产时，Experience Manager资产用户界面会显示截断的文件名(NPR-32054)。
+
+* 当选中Adobe Stock中复选框树的第二级复选框时，“滤镜”面板中的所有复选框都会在第一个和第二个复选框被清除时被清除(NPR-31919)。
+
+* 使用Omnisearch彩块化的文件和文件夹搜索会出现异常(NPR-31872)。
+
+* 即使在相应的元数据模式表单中设置依赖性规则时，也不会删除元数据编辑器中用于强制字段选择的字段突出显示(NPR-31834)。
+
+* 叶级标记的完整名称（来自标记层次结构）不会显示在资产属性页面中(NPR-31820)。
+
+* 在Safari浏览器上使用资源属性页面中的返回命令时出错(NPR-31753)。
+
+* 触屏UI搜索（通过Omnisearch完成）结果页自动向上滚动并丢失用户的滚动位置(NPR-31307)。
+
+* PDF资产的资产详细信息页面不显示操作按钮，但在Dynamic Media Scene7运行模式(CQ-4286705)上运行的Experience Manager中的“收藏”和“添加演绎版”按钮除外。
+
+* 通过Scene7的批量上传过程处理资产需要太长的时间(CQ-4286445)。
+
+* 当用户未在Dynamic Media Client中的“设置编辑器”中进行任何更改时，“保存”按钮不会导入“远程设置”(CQ-4285690)。
+
+* 当支持的3D模型被引入AEM中时，3D资产缩略图不会提供相关信息(CQ-4283701)。
+
+* 智能裁剪视频查看器预设的未处理状态会在横幅文本中预设名称旁显示两次(CQ-4283517)。
+
+* 资产的详细信息页面上会观察到在3D查看器中预览的已上传3D模型的容器高度不正确(CQ-4283309)。
+
+* 在IE 11中，Experience Manager Dynamic Media混合模式(CQ-4255590)下不打开传送编辑器。
+
+* 键盘焦点卡在Chrome和Safari浏览器的“下载”对话框的“电子邮件”下拉菜单中(NPR-32067)。
+
+* 尝试在AEM上添加DM云配置时，默认情况下未启用“同步所有内容”复选框(CQ-4288533)。
+
+### 基础UI {#foundation-ui-6540}
+
+* 使用“筛选器”面板搜索资产时，鼠标控件会切换到上一个筛选器字段，而不是停留在现有筛选器字段中(NPR-32538)。
+
+* 平台标记： 通过在标记字段中键入内容搜索标记会显示根边界外的标记，并且不 `rootPath` 尊重标记字段的属性(NPR-31895)。
+
+* 平台UI: 如果在文本字段中添加了无效的路径，则路径浏览器将断开(NPR-31884)。
+
+* 在选择页面时，通知会隐藏在粘滞菜单后面(NPR-31628)。
+
+### 平台 {#platform-sling-6540}
+
+* (HTL)下划线替换URL路径部分的冒号(NPR-32231)。
+
+### 项目 {#projects-6540}
+
+* 即使用户具有在子文件夹中创建项目的权限，用户也看不到“创建”按钮(NPR-31832)。
+
+### 项目翻译 {#projects-translation-6540}
+
+* 在中激活“裁切空格”选项时，创建翻译项目 `Apache Sling JSP Script Handler` 会中断UI(NPR-32154)。
+
+* 将任何要翻译的标记添加到翻译项目时，在UI中出现错误，错误日志中出现空点异常(NPR-31896)。
+
+### 集成 {#integrations-6540}
+
+* 启动库URL生成仅基 `path` 于 `library_name` Launch API中的值，而不基于值 `library_path` (NPR-31550)。
+
+* 处理LiveFyre相关项目时显示错误消息(FYR-12420)。
+
+* ReportSuitesServlet易受SSRF(NPR-32156)的攻击。
+
+### WCM模板编辑器 {#wcm-template-editor-6540}
+
+* 在可编辑的模板结构模式下，布局列表中允许的组件不显示链接按钮组件(CQ-4282099)。
+
+### WCM Page Editor {#wcm-page-editor-6540}
+
+* 选择叠加，然后选择响应式网格将组件拖动到此处时会出现错误(CQ-4283342)。
+
+### Campaign Targeting {#campaign-targeting-6540}
+
+* 目标云配置失败，错误get mbox请求失败(CQ-4279880)。
+
+### Brand Portal {#assets-brand-portal-6540}
+
+* 在AEM 6.5.4上升级到Adobe I/O时，Brand Portal用户无法将贡献文件夹资产发布到AEM资产(CQDOC-15655)。
+
+   此问题将在下一个Service Pack AEM 6.5.5中修复。
+
+   要立即修复AEM 6.5.4，建议下载 [修补程序](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，并在创作实例上安装。
+
+* 元数据模式下拉列表值在资产属性中不可见(CQ-4283287)。
+
+* 元数据子架构不显示基于资产属性中的mimetype的选项卡(CQ-4283288)。
+
+* 取消发布元数据模式会填充错误消息，尽管在后端删除了模式。
+
+* 预览图像不显示已发布的资产(CQ-4285886)。
+
+* 用户无法发布或取消发布名称中包含单报价的资产(CQ-4272686)。
+
+* 下载多个资产时不显示条款和条件(CQ-4281224)。
+
+* 已解决次要安全漏洞。
+
+### 社区 {#communities-6540}
+
+* “创建成员”表单显示为空白页面(NPR-31997)。
+
+* 用户无法视图创作实例的Analytics报告(NPR-30913)。
+
+### Oak-索引和查询 {#oak-indexing-6540}
+
+* 使用Tika分析器分析时，MS Word和MS Excel文档包含JPEG图像，无法分析，并且发现类未找到错误(NPR-31952)。
+
+### 表单 {#forms-6540}
+
+>[!NOTE]
+>
+>AEM Service Pack 不包含对 AEM Forms 的修复。它们是通过单独的 Forms 附加组件包交付的。此外，还会发布一个包含AEM Forms在JEE上的修复的累积安装程序。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+
+* 通信管理： 提交到后处理工作流后，字母会显示额外字符(NPR-32626)。
+
+* 通信管理： 在提交到后处理工作流后，字母将显示一个下拉占位符作为文本组件(NPR-32539)。
+
+* 通信管理： 在字母模板中定义的默认值不会在预览模式下显示(NPR-32511)。
+
+* 移动表单： 以HTML版本呈现XDP表单时，提交按钮显示为扩展大小(NPR-32514)。
+
+* 文档服务： 应用Service Pack 2后，Letter和某些其他页面的URL访问问题(NPR-32508、NPR-32509)。
+
+* 文档服务： 如果服务器上的事务数超过特定限制，则HTML到PDF的转换将失败，并且文件类型设置将从AEM Forms服务器中删除(NPR-32204)。
+
+* 自适应表单： 浏览器辅助工具工具根据WCAG2 Level AA准则报告自适应表单中的故障(NPR-32312、NPR-32309、CQ-4285439)。
+
+* 自适应表单： Chrome浏览器辅助工具工具报告最佳实践失败(NPR-32310)。
+
+* 自适应表单： 配置嵌入在AEM站点页面中的自适应表单时的转换问题(NPR-32168)。
+
+* 工作台： 使用“为PDF实用程序获取PDF属性”操作服务时显示错误消息(NPR-32150)。
+
+* 文档安全： 如果将DisableGlobalOfflineSynchronizationData选项设置为True，则受保护的PDF文件无法脱机打开(NPR-32078)。
+
+* 设计人员： 如果启用标记选项，子表单边框将消失在生成的PDF输出中(NPR-32547、NPR-31983、NPR-31950)。
+
+* 设计人员： 如果表中存在合并的单元格，则使用输出服务从XDP表单转换的输出PDF文件的辅助功能测试将失败(CQ-4285372)。
+
+* JEE基金会： 如果AEM Forms服务器与群集断开连接，缓存问题会阻止它重新连接到服务器(NPR-32412)。
+
+## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
 [!DNL Adobe Experience Manager] 6.5.3.0是一个重要版本，包含自2019年4月6.5版本正式发布以来发布的性能、稳定性、安全性以及重要客户修复和 **增强功能**。 它可安装在6. [!DNL Adobe Experience Manager] 5之上。
 
@@ -22,9 +261,9 @@ ht-degree: 44%
 
 * [!DNL Experience Manager Assets] 现在支持使用Deflate64算法创建的ZIP存档。
 
-* 在DAM中查看资产时，在列表视图中和搜索结果中显示资产创建日期的新列可用。 对列进行排序，以按时间顺序或相反的时间顺序排列资产。
+* 已在DAM列表视图中添加可排序的创建日期的新列，并在列表视图中添加资产搜索结果。
 
-* 您现在可以在列表视图中根 `Name` 据列对资产进行排序。
+* 已在列表视图中启用基于名称列的资产排序。
 
 * [!DNL Dynamic Media] 现在支持智能裁剪视频资产。 Smart Crop是一项机器学习驱动的功能，它可以在移动帧以跟随场景焦点的同时重新裁剪视频。
 
@@ -44,9 +283,9 @@ ht-degree: 44%
 
 * [!DNL Experience Manager Assets] 现在支持使用Deflate64算法创建的ZIP存档(NPR-27573)。
 
-* 在DAM中查看资产时，在列表视图中和搜索结果中显示资产创建日期的新列可用。 对列进行排序，按时间顺序或相反的时间顺序排列资源(NPR-31312)。
+* 已在DAM列表视图中添加新列（可排序），在列表视图中添加资产搜索结果(NPR-31312)。
 
-* 您现在可以根据列表视图 `Name` 中的列对资产进行排序(NPR-31299)。
+* 已允许在列表视图中基于名称列的资产排序(NPR-31299)。
 
 * GLB、GLTF、OBJ和STL资产文件支持在DAM的“资产详细信息”页面中预览资产(CQ-4282277)。
 
@@ -59,8 +298,6 @@ ht-degree: 44%
 * 如果在请求中传递视图参数，则搜索／浏览查询在Foundation选取器中已设置为默认视图(NPR-31601)。
 
 **修复**
-
-* 使用Adobe Asset Link时，OAuth IMS提供程序无法通过代理服务器进行连接(NPR-30949)。
 
 * 某些PDF文档的元数据在修改其标题时不会更新并保存到PDF中(NPR-31629)。
 
@@ -82,19 +319,19 @@ ht-degree: 44%
 
 * 无法删除文件名中带有加号“+”的资源(NPR-31162)。
 
-* 用于创建新资产或文件夹的选项在资产用户界面中以弹出菜单的形式提供。 选择文件夹后，Experience Manager不会在弹出 [!UICONTROL 菜单] (NPR-30877)中将文件夹显示为选项之一。
+* 创建下拉菜单（在选择文件夹时显示在顶部菜单中）不显示“文件夹”作为创建选项(NPR-30877)。
 
-* 对用户应用拒绝ACL和路径上的ACL时， `jcr:removeChildNodes` 缺少 `jcr:removeNode` “创建”>“文件上传”操作项(NPR-30840)。
+* 当对用户应用拒绝jcr:removeChildNodes和jcr:removeNode路径的ACL时，缺少文件夹选择“创建”>“文件上传”操作项(NPR-30840)。
 
-* 上传某些MP4资源时，DAM工作流会进入陈旧状态，导致所有其余工作流都进入陈旧状态(NPR-30662)。
+* 上传某些mp4资源时，DAM工作流会进入陈旧状态，导致所有其余工作流都进入陈旧状态(NPR-30662)。
 
-* 当将几GB的大型PDF文件上传到DAM并处理其子资源时，会出现内存不足错误(NPR-30614)。
+* 将大型PDF文件（几GB）上传到DAM并处理其子资源时，会出现内存不足错误(NPR-30614)。
 
-* 资产的批量移动会失败并显示一条警告消息(NPR-30610)。
+* 资产的批量移动失败并显示警告消息(NPR-30610)。
 
-* 在使用Scene7模式时，当将资产从一个文件夹移到另一个文件夹时，资产名称 [!DNL Dynamic Media]将更改为小写(NPR-31630)。
+* 在-Scene7模式下，当将资产从一个文件夹移到另一个文件夹时，资产名称 [!DNL Experience Manager] 将更改 [!DNL Dynamic Media]为小写字母(NPR-31630)。
 
-* 编辑远程图像集时，对于与Scene7公司名称相同的文件夹中的图像，会出现错误(NPR-31340)。
+* 编辑远程图像集时，对于与Scene 7公司名称相同的文件夹中的图像，会出现错误(NPR-31340)。
 
 * [!DNL Dynamic Media] 包含引用的资产将不会被发布(NPR-31180)。
 
@@ -203,7 +440,7 @@ ht-degree: 44%
 
 * 切换日历视图不起作用(NPR-31271)。
 
-### Brand Portal {#assets-brand-portal}
+### Brand Portal {#assets-brand-portal-6530}
 
 **产品增强功能**
 
@@ -217,7 +454,7 @@ ht-degree: 44%
 * 禁止在“贡献”文件夹（嵌套文件夹）内创建“贡献”文件夹，以避免复杂性(CQ-4278391)。
 * 上传从Admin Console导入的 [!DNL Brand Portal] 用户列表（.csv文件）时，系统 [!DNL Experience Manager] 引发异常。 只有。csv文件中的“电子邮件”、“名字”和“姓氏”字段是必填字段(CQ-4278390)。
 
-### 社区 {#communities}
+### 社区 {#communities-6530}
 
 **修复**
 
@@ -286,9 +523,9 @@ ht-degree: 44%
 
 * [!DNL Experience Manager] 对Oracle 18c的表单支持(NPR-29155)。
 
-## Adobe Experience Manager 6.5.2.0
+## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
@@ -418,7 +655,7 @@ ht-degree: 44%
 * 重新启动实例之前，发布实例上显示的自定义内容错误。NPR-30377：适用于 CQ-4273706 的修补程序
 * 在网站中配置 Launch 时，库地址前面带有斜线 (\)，导致每次需要手动干预。NPR-30694：适用于 CQ-4275501 的修补程序
 
-### Forms {#forms-6520}
+### 表单 {#forms-6520}
 
 >[!NOTE]
 >
@@ -487,7 +724,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
 * Added &#39;Auto&#39; setting to `RenderAtClient` in `PDFFormRenderOptions` API for [!DNL Experience Manager Forms] OSGi. NPR-30759：适用于 CQ-4278193 的修补程序
 
-## Adobe Experience Manager 6.5.1.0 {#release-6510}
+## Adobe Experience Manager 6.5.1.0 {#experience-manager-6510}
 
 [!DNL Adobe Experience Manager] 6.5.1.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全 [!DNL Adobe Experience Manager] 性以及重要客户修 *复和增强。* 它可安装在6. [!DNL Experience Manager] 5之上。
 
@@ -598,7 +835,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
 * 使用Java11时，内存使用情况详细信息不会显示在系统控制台中。 NPR-29669
 
-### Forms
+### 表单
 
 The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
