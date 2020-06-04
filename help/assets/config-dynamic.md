@@ -10,7 +10,7 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: 5eb05c69b2236d92504305ca076734bf7fac21e2
 workflow-type: tm+mt
 source-wordcount: '8030'
 ht-degree: 1%
@@ -40,6 +40,7 @@ ht-degree: 1%
 >
 >* `s7access.log`
 >* `ImageServing.log`
+
 >
 >
 它们在监视 [和维护AEM实例中有说明](/help/sites-deploying/monitoring-and-maintaining.md)。
@@ -176,8 +177,10 @@ AEM发布节点将继续提供Dynamic Media查看器、站点页面和静态内�
    >要对Dynamic Media的问题进行疑难解答，请参阅目录中的以下 `crx-quickstart/logs/` 日志：
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日志提供用于分析内部ImageServer进程行为的统计信息和分析信息。
+
    图像服务器日志文件名的示例： `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access日志记录通过和向Dynamic Media发出的每个 `/is/image` 请求 `/is/content`。
+
    这些日志仅在启用Dynamic Media时才使用。 它们不包含在从页 **面生成** 的下载完整 `system/console/status-Bundlelist` 包中； 如果您遇到Dynamic Media问题，请致电客户支持，将这两个日志附加到该问题。
 
 ### 如果将AEM安装到其他端口或上下文路径…… {#if-you-installed-aem-to-a-different-port-or-context-path}
@@ -224,7 +227,7 @@ AEM发布节点将继续提供Dynamic Media查看器、站点页面和静态内�
 
 如果您要将AEM Dynamic Media从6.3升级到6.5（现在包括零停机时间部署功能），您需要运行以下curl命令，以将所有预设和配置从CRXDE Lite迁 `/etc` 移到 `/conf` CRXDE Lite。
 
-**注意**: 如果在兼容模式下运行AEM实例（即已安装兼容性打包），则无需运行这些命令。
+**注意**: 如果您在兼容模式下运行AEM实例（即，您已安装兼容包），则无需运行这些命令。
 
 对于所有具有或没有兼容性包的升级，您都可以通过运行以下Linux curl命令复制Dynamic Media最初附带的现成默认查看器预设：
 
@@ -283,6 +286,7 @@ Dynamic Media图像投放的工作方式是从AEM作者发布图像资产（包�
    * 在“KeyStore **[!UICONTROL 文件口令]** ”字段中，输入KeyStore文件口令。 这不是 **您在步骤** 5中创建的KeyStore密码，而是Adobe在配置过程中向您发送的欢迎电子邮件中提供的KeyStore文件密码。 如果您未收到KeyStore文件密码，请与Adobe客户服务部门联系。
    * 在“ **[!UICONTROL 私钥密码]** ”字段中，输入私钥密码（可能与上一步中提供的私钥密码相同）。 在设置过程中，Adobe会在向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请与Adobe客户服务联系。
    * 在私钥 **[!UICONTROL 别名字段中]** ，输入私钥别名。 For example, `*companyname*-alias`. 在设置过程中，Adobe在向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请与Adobe客户服务联系。
+
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
 1. 点按 **[!UICONTROL 保存并关闭]** ，以保存对此用户所做的更改。
@@ -301,6 +305,7 @@ Dynamic Media图像投放的工作方式是从AEM作者发布图像资产（包�
    * **[!UICONTROL 租户ID]** —— 此值是发布到复制服务的公司/租户的名称。 此值是Adobe在设置过程中在向您发送的欢迎电子邮件中提供的租户ID。 如果您未收到此信息，请与Adobe客户服务部门联系。
    * **[!UICONTROL 密钥存储别名]** -此值与在设置身份验证中生成密钥时设置的**新别名** [值相同](#setting-up-authentication); 例如 `replication`, (请参阅设置身 [份验证中的步骤](#setting-up-authentication)7。)
    * **[!UICONTROL 密钥存储密码]** -这是您在点击创建密钥存储时创建的 **[!UICONTROL KeyStore密码]**。 Adobe不提供此密码。 请参阅设置身 [份验证的第5步](#setting-up-authentication)。
+
    下图显示了具有示例数据的复制代理：
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
@@ -965,7 +970,7 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
 * `iccEmbed` - [https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html)
 
 >[!NOTE]
-只有在安装了来自包共享的功能包12445或来自 [软件分发的功能包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 12445时， [才能使用标准的Adobe颜色用户档案集](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 。 所有功能包和服务包均可通过包 [共享和软件](https://www.adobeaemcloud.com/content/packageshare.html)[分发获得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能包12445提供Adobe颜色用户档案。
+只有在安装了“包共享”中的功 [能包12445或“软件分发](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) ”中 [的功能包12445时，Adobe颜色用户档案](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 标准集才可用。 所有功能包和服务包均可通过包 [共享和软件](https://www.adobeaemcloud.com/content/packageshare.html)[分发获得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能包12445提供Adobe颜色用户档案。
 
 ### 安装功能包12445 {#installing-feature-pack}
 
