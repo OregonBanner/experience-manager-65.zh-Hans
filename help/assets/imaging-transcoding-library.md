@@ -3,9 +3,9 @@ title: 图像转码库
 description: 了解如何配置和使用Adobe的图像转码库，它是一款可以执行核心图像处理功能的图像处理解决方案，包括编码、转码、图像重新取样和图像大小调整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 要配置库，请创建一个。conf文件，使用以下步骤指示库。 您需要管理员或根权限。
 
-1. 下载 [Imaging Transcoding Library包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，并使用包管理器进行安装。 该包与Experience Manager 6.5兼容。
+1. 从“包 [共享”或“软件分发](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ”下 [载图像转码库包，并使](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) 用包管理器安装它。 该包与Experience Manager 6.5兼容。
 
 1. 要了解捆绑ID，请 `com.day.cq.dam.cq-dam-switchengine`登录到Web控制台，然后单击“OSGi **[!UICONTROL >捆绑”]**。 或者，要打开捆绑包控制台，请访 `https://[aem_server:[port]/system/console/bundles/` 问URL。 找到 `com.day.cq.dam.cq-dam-switchengine` 捆绑包及其ID。
 
