@@ -11,7 +11,10 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: eb9a4792f4d64f98805919f00bb62193a6a7dafc
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 99%
 
 ---
 
@@ -24,9 +27,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 通过页面差异功能，可以方便地将两个页面并排比较，并突出显示它们的差异。
 
->[!CAUTION]
->
->The user must have the **Modify/Create/Delete** permission on the node `/content/versionhistory` in order to use the feature.
+>[!TIP]
 >
 >请参阅[开发和页面差异](/help/sites-developing/pagediff.md#operation-details)，以了解有关此功能的更多技术详细信息。
 
@@ -34,10 +35,10 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 可以并排比较以下内容：
 
-* [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) -页面的早期版本及其当前状态
-* [Live Copy](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live copy及其Blueprint
-* [启动项](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) -启动项及其源
-* [语言副本](/help/sites-administering/tc-manage.md#comparing-language-copies) -翻译前后（重新翻译）的页面
+* [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - 将页面的以前版本与其当前状态进行比较
+* [](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)Live Copy - 将 Live Copy 与其 Blueprint 进行比较
+* [启动项](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - 将启动项与其源进行比较
+* [](/help/sites-administering/tc-manage.md#comparing-language-copies)语言副本 - 将翻译之前和翻译之后（重新翻译）的页面进行比较
 
 请参阅有关如何在这些情况下启动差异比较的相关主题。
 
@@ -68,7 +69,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 **HTML 更改**
 
 * 深绿色 - 添加了 HTML
-* 红色——删除了HTML
+* 红色 - 删除了 HTML
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 * 在比较版本和启动项时，差异不会考虑动态组件，如痕迹导航、菜单、产品列表或徽标（依赖站点结构呈现其内容的组件）。
 * 对于版本，差异不会重新创建访问控制策略和 Live Copy 关系。
-* 如果对图像进行了任何更改（如修改alt、title或src属性），则更改后的图像将以蓝色突出显示。 但是，在某些情况下，图像的src属性为Base64表示形式，即使两个图像看起来相同，它们也会因src属性不同而被差异标记为不同。
+* 如果对图像进行了任何更改（如修改 alt、title 或 src 属性），则所做的更改将以蓝色突出显示。但是在某些情况下，图像的 src 属性采用 Base64 表示形式，即使两个图像看起来相同，它们也会因为 src 属性发生更改而被标记为不同。
 * 差异无法检测图像旋转。
 * 如果页面发生移动，将无法再使用移动前制作的任何版本执行差异。
 
@@ -104,7 +105,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 >[!NOTE]
 >
->各版本之间不能相互进行比较。只能将当前版本与页面的其他版本进行比较。 当前版本始终是突出显示更改的版本。
+>各版本之间不能相互进行比较。只能将页面的当前版本与其他版本进行比较。当前版本始终是突出显示更改的版本。
 
 >[!NOTE]
 >
