@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e637ba54-7ce1-414f-9558-1d758d05877a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 49874dc723c3659550d891e786ddc178b30834ec
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '2350'
-ht-degree: 93%
+source-wordcount: '2334'
+ht-degree: 94%
 
 ---
 
@@ -200,6 +200,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 选择要用于创建新页面的模板，然后单击/点按&#x200B;**下一步**&#x200B;以继续。
 
    * 单击/点按&#x200B;**取消**&#x200B;可中止该过程。
+
    ![caop-04](assets/caop-04.png)
 
 1. 在向导的最后一步中，您可以执行以下操作之一：
@@ -207,6 +208,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 使用三个选项卡输入您希望对新页面指定的[页面属性](/help/sites-authoring/editing-page-properties.md)，然后单击/点按&#x200B;**创建**&#x200B;以实际创建页面。
 
    * 使用&#x200B;**返回**&#x200B;以返回到模板选择步骤。
+
    关键字段为：
 
    * **标题**：
@@ -249,6 +251,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
+
    然后，选择&#x200B;**编辑**&#x200B;图标：
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
@@ -267,6 +270,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
+
    然后，选择&#x200B;**复制**&#x200B;页面图标：
 
    ![screen_shot_2018-03-22at105425](assets/screen_shot_2018-03-22at105425.png)
@@ -282,8 +286,6 @@ Components are the elements provided by AEM so that you can add specific types o
    您可以：
    * 选择&#x200B;**粘贴**&#x200B;页面图标本身：将在此位置创建原始页面和任何子页面的副本。
    * 选择下拉箭头以显示&#x200B;**粘贴（不含子项）**&#x200B;选项。将在此位置创建原始页面的副本；不会复制子页面。
-   >[!NOTE]
-   从 **AEM 6.5 Service Pack** 5开始，可 [以使用“粘贴而不带子项](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) ”选项。
 
    >[!NOTE]
    如果您将页面复制到某个位置，而该位置已经存在名称与原始名称相同的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在，则 `winter` 将变为 `winter1`。
@@ -309,6 +311,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
+
    然后，选择&#x200B;**移动**&#x200B;页面图标：
 
    ![screen_shot_2018-03-22at105534](assets/screen_shot_2018-03-22at105534.png)
@@ -320,6 +323,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
    * 指定移动页面后您希望页面使用的名称，然后单击/点按&#x200B;**下一步**&#x200B;以继续。
 
    * 单击/点按&#x200B;**取消**&#x200B;可中止该过程。
+
    ![caop-07](assets/caop-07.png)
 
    如果仅移动页面，则页面名称可以保持不变。
@@ -334,6 +338,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
       * 通过单击目标的缩略图选择目标。
       * 单击&#x200B;**下一步**&#x200B;以继续。
    * 使用&#x200B;**返回**&#x200B;以返回到页面名称指定步骤。
+
    >[!NOTE]
    默认情况下，将选择您正在移动/重命名的页面的父页面作为目标。
 
