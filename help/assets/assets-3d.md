@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 2f0e626aa16a62203755e29800a5935b350ffe79
+source-git-commit: d17500ea7b95c90069d9c51fac5d4f3706ee4c71
 workflow-type: tm+mt
-source-wordcount: '2162'
+source-wordcount: '2144'
 ht-degree: 4%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 4%
 
 Dynamic Media可让您将3D资产作为沉浸式体验进行上传、管理、视图和交付。
 
-* 单击发布(使用工 **[!UICONTROL 具栏上的]** “快速发布”)3D图像以生成其URL。
-* 借助以Adobe Dimension为后盾的高质量交互式维查看器预设，优化了对查看3D资产的支持。 查看器预设包括一组交互式相机控件，这些控件可让您绕行、缩放和平移。
+* 单击发布(使 **[!UICONTROL 用工具栏]** 上的快速发布)3D资产以生成URL。
+* 借助以Adobe Dimension为后盾的高质量交互式维查看器预设，优化了对查看3D资产的支持。
 * 通过3D Media WCM组件，您可以轻松地将3D资产添加到AEM Sites页面。
 
-在Dynamic Media中不安装或配置任何类型的3D资产。
+在Dynamic Media中使用3D资产不需要任何其他配置。
 
 ![3d鞋](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
@@ -36,10 +36,10 @@ Dynamic Media支持以下3D文件格式：
 
 | 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
 |---|---|---|---|
-| GLB | 二进制GL传输 | 模型/gltf二进制 | 将纹理与资产一起包含，而不是将它们作为外部图像引用。 |
+| GLB | 二进制GL传输 | 模型/gltf二进制 | 将材料和纹理作为单个资源提供。 |
 | OBJ | WaveFront 3D对象文件 | application/x-tgif |  |
 | STL | 光固化成形 | application/vnd.ms-pki.stl |  |
-| USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | *仅支持摄取； 不提供查看或交互。* USDZ是Apple的专有3D格式，只能由Safari或iOS视图。 |
+| USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | *仅支持摄取； 不提供查看或交互。* USDZ是一种专有的3D格式，Safari和iOS设备可以本机查看。 |
 
 ## 快速开始: Dynamic Media中的3D资产 {#quick-start-three-d}
 
@@ -149,7 +149,8 @@ Dynamic Media支持以下3D文件格式：
 
    * 在页面的右上角附近，单击 **[!UICONTROL 预览]** ，进 **[!UICONTROL 入预览模式]** 。
    * 从浏 `/editor.html` 览器中的页面URL中删除。
-   ![3D资产显示在3D媒体组件内部](/help/assets/assets-dm/3d-asset-in-3d-media.png)在预览模式下显示的完全交互 **[!UICONTROL 式3D资]** 产。
+
+完全交互的3D资产，如    ![3D资产显示在3D媒体组件内部](/help/assets/assets-dm/3d-asset-in-3d-media.png)在预览模式下显示的完全交互 **[!UICONTROL 式3D资]** 产。
 
 1. 在预览 **[!UICONTROL 模式下]** ，请执行下列任一操作：
 
@@ -280,6 +281,7 @@ See also [Publishing Dynamic Media assets](publishing-dynamicmedia-assets.md).
    * 3D资产是受支持的格式（GLB、OBJ、STL和USDZ）。
    * 3D资源已被引入Dynamic Media图像生产系统(IPS)。
    * 将发布3D资产。
+
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
 1. 点 **[!UICONTROL 按]** URL以显示3D资产的生产URL。
