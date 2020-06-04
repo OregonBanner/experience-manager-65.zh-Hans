@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 206f4cdf76df2b0be97426993818935a19bb9e63
+source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
-source-wordcount: '3010'
-ht-degree: 92%
+source-wordcount: '2979'
+ht-degree: 93%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 92%
    >
 * 某些功能并不是在所有控制台中均可用，而且某些控制台可能会提供额外的功能。其他页面中会更详细地介绍有关具体控制台及其相关功能的特定信息。
 >* 用户在整个 AEM 环境中都可以使用各种键盘快捷键，尤其是在[使用控制台](/help/sites-authoring/keyboard-shortcuts.md)和[编辑页面](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)时。
+
 >
 
 
@@ -88,10 +89,6 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 ![bh-01](assets/bh-01.png)
 
 浏览器选项卡的标题将更新，以反映您在控制台和内容中导航时的位置。
-
->[!NOTE]
->
->选项卡标题反映了从 [AEM 6.5 Service Pack 5开始的位置](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 在“导航”中，可用的控制台有：
 
@@ -233,10 +230,6 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
    在“站 **点** ”控制台中，添加了跳到 **主内容的选项**。 当您在标题选项 *中选* 项卡时，它会变得可见，并且允许您跳过（产品）工具栏中的标准元素并直接转到主内容，从而加快导航速度。
 
    ![bh-30](assets/bh-30.png)
-
-   >[!NOTE]
-   >
-   >从 **AEM 6.5 Service** Pack 5 [开始，可以跳到主内容](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html) 。
 
 ## 访问帮助 {#accessing-help}
 
@@ -422,6 +415,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 * 点按或单击资源名称或资源名称右侧的 V 形标记，可以在树中向上和向下导航。
 
    * 资源名称和 V 形标记在被点按或单击时将会突出显示。
+
    ![bh-17](assets/bh-17.png)
 
    * 单击/点按的资源的子资源将在其右侧的列中显示。
@@ -433,6 +427,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
    * 选择后，缩略图上将叠加一个勾号，并且资源名称也会突出显示。
    * 最后的列中将显示选定资源的详细信息。
    * 操作工具栏将变得可用。
+
    ![bh-18](assets/bh-18.png)
 
    在列视图中选择页面后，选定的页面将与以下详细信息一起显示在最后的列中：
@@ -496,6 +491,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
    * **页面分析**
    * **独特访客**
    * **页面停留时间**
+
    ![bh-21](assets/bh-21.png)
 
    默认将显示&#x200B;**名称**&#x200B;列，它构成了页面 URL 的一部分。在某些情况下，作者可能需要访问采用不同语言的页面，在作者不知道页面语言的情况下，查看页面的名称（通常不会更改）会非常有用。
