@@ -3,7 +3,7 @@ title: 使用PDF栅格化器生成PDF文件的再现。
 description: 使用中的Adobe PDF Rasterizer库生成高质量的缩略图和再现 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
+source-git-commit: 21f30cf67b73d26afc3f0413ca997a0b6e46e3d3
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 与开箱即用输出相比，使用PDF光栅器生成的缩略图和预览的质量更高，因此，可以跨设备提供一致的查看体验。 Adobe PDF Rasterizer库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
 
-1. 在从包共享或软件分发进行 [!DNL Experience Manager] 部署时 [安装](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) PDF栅 [格器包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)
+1. 从“包共享”或“软件分发”在 [!DNL Experience Manager] 部署时 [安装PDF](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) 栅 [格器包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
    >[!NOTE]
    >
@@ -32,9 +32,11 @@ ht-degree: 0%
 1. 要防止使用默认方法为PDF文件和AI文件生成缩览图和Web再现，请执行以下步骤：
 
    * 打开“ **[!UICONTROL 流程缩略图]** ”步骤，根据 `application/pdf` 需要 `application/postscript` ，在“缩略图 **[!UICONTROL ”选项卡下添加或添]** 加“跳过MIME类型” **** 字段。
+
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
    * 在“启 **[!UICONTROL 用Web的图像]** ”选项卡中，根 `application/pdf` 据您的要 `application/postscript` 求在“跳 **[!UICONTROL 过列表]** ”下添加或添加。
+
    ![用于跳过图像格式的缩略图处理的配置](assets/web_enabled_imageskiplist.png)
 
 1. 打开“ **[!UICONTROL 栅格化PDF/AI图像预览再现]** ”步骤，并删除要跳过默认生成预览图像再现的MIME类型。 例如，从MIME类型 `application/pdf`列表 `application/postscript`中 `application/illustrator` 删除MIME **[!UICONTROL 类型]** 。
@@ -47,6 +49,7 @@ ht-degree: 0%
    * MIME类型： `application/pdf` 或 `application/postscript`
    * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 添加缩略图大小： 319:319, 140:100, 48:48。 根据需要添加自定义缩略图配置。
+
    该命令的命令行参 `PDFRasterizer` 数可以包括以下参数：
 
    * `-d`: 标记可实现文本、矢量图稿和图像的平滑渲染。 创建更优质的图像。 但是，包含此参数会导致命令运行缓慢并增加图像大小。
@@ -84,6 +87,7 @@ ht-degree: 0%
 
    * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 添加缩略图大小： `319:319`, `140:100`, `48:48`根据需要添加自定义缩略图配置。
+
    该命令的命令行参 `PDFRasterizer` 数可以包括以下参数：
 
    * `-d`: 标记可实现文本、矢量图稿和图像的平滑渲染。 创建更优质的图像。 但是，包含此参数会导致命令运行缓慢并增加图像大小。
