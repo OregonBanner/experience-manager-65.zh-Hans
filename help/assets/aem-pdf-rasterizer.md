@@ -3,9 +3,9 @@ title: 使用PDF栅格化器生成PDF文件的再现。
 description: 使用中的Adobe PDF Rasterizer库生成高质量的缩略图和再现 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 与开箱即用输出相比，使用PDF光栅器生成的缩略图和预览的质量更高，因此，可以跨设备提供一致的查看体验。 Adobe PDF Rasterizer库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
 
-1. 从“包共享”在部署时安 [!DNL Experience Manager] 装PDF栅 [格器包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
+1. 在从包共享或软件分发进行 [!DNL Experience Manager] 部署时 [安装](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) PDF栅 [格器包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)
 
    >[!NOTE]
    >
