@@ -3,9 +3,9 @@ title: '[!DNL Adobe Camera Raw]支持。'
 description: 了解如何在 [!DNL Adobe Camera Raw] 中启用支持 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b2628d37c3ad158913c28ecd890aee9fd0106de4
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 要在中启 [!DNL Camera Raw] 用支 [!DNL Experience Manager Assets]持，请执行以下步骤：
 
-1. 从包 [共享下载](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) Camera Raw包。
+1. 从“包 [共享](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ”或“软件分发”下 [载Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem620/product/assets/aem-assets-cameraraw-pkg)。
 1. 访问 `https://[aem_server]:[port]/workflow`. 打开DAM **[!UICONTROL 更新资产工作流]** 。
 1. 打开“流 **[!UICONTROL 程缩略图]** ”步骤。
 1. 在“缩略图”选项卡中提 **[!UICONTROL 供以]** 下配置：
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 1. 在“启 **[!UICONTROL 用Web的图像]** ”选项卡中， **[!UICONTROL 在“跳过列表]** ”字段中指 `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`定。
 
-   ![chlimage_1-127](assets/chlimage_1-335.png)
+   ![chlimage_1-129](assets/chlimage_1-335.png)
 
 1. 从侧面板中，在“缩览 **[!UICONTROL 图创建”步骤下添加Camera Raw]** /DNG处 **[!UICONTROL 理程序步骤]** 。
 1. 在Camera Raw/ **[!UICONTROL DNG处理程序步骤中]** ，在“参数”选项卡中添加以 **[!UICONTROL 下配置]** :
