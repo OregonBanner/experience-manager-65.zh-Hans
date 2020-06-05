@@ -4,9 +4,9 @@ description: 以下发行说明特定于 Adobe Experience Manager 6.5 Service Pa
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d51577195e969ff8af31be49159ff575e3654cc9
+source-git-commit: 46f28926af6cbf3999a4c81cb1f1297b09c07f9f
 workflow-type: tm+mt
-source-wordcount: '4476'
+source-wordcount: '4486'
 ht-degree: 11%
 
 ---
@@ -252,7 +252,7 @@ AEM 6.5.5.0中引入的一些主要功能和增强功能包括：
 
 * 多字段中不保留单选按钮选择(NPR-33309)。
 * 延迟加载限制对列表视图无效(NPR-33124)。
-* 如果没有匹配项，搜索结果页面不显示消息(NPR-32974)。
+* 如果没有匹配项，则搜索结果页面不显示消息(NPR-32974)。
 * Omnisearch过滤器将忽略所 `/content` 选位置(NPR-32849)返回节点下的所有匹配项。
 
 ### 集成 {#integrations-6550}
@@ -423,7 +423,7 @@ To use UberJar in a Maven project, refer to the article, [How to use UberJar](/h
 
 * 如果层次结构中的文件夹已重 [!DNL Experience Manager Assets] 命名，且包含资产的嵌套文件夹已发布到 [!DNL Brand Portal]，则只有在根文件夹再次发布后，才会更新 [!DNL Brand Portal] 该文件夹的标题。
 
-* 更新版 [!DNL chrome] 本83导致在构建包时出现问题。 使用其他可用的浏览器(如 [!DNL Internet Explorer] 和 [!DNL Firefox]或其他AEM标准包安装选项)来解决此问题。
+* 安装AEM 6.5.5.0时，更新版 [!DNL Chrome] 本83会导致在构建包时出现问题。 使用其他可用的浏览器(如 [!DNL Internet Explorer] 和 [!DNL Firefox]或其他AEM标准包安装选项)来解决此问题。 安装AEM 6.5.5.0后，问题即可解决。
 
 * 无法使用AEM默认邮件发送器将电子邮件发送到远程SMTP服务器，因为它仅允许使用TLS v1.2进行通信。请从 `javax.mail:mail:1.5.0-b01` 包 `system/console` 中删除包并刷新包以解决此问题。
 
