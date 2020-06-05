@@ -3,9 +3,9 @@ title: 中的数字版权管理 [!DNL Adobe Experience Manager Assets]。
 description: 了解如何在中管理授权资产的资产到期状态和信息 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 20f337ea2e4f369eb6eb760d312199fa39556513
+source-git-commit: ee54a3fa395e2c1ab4a5895a0bb8fc251d24a35a
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1420'
 ht-degree: 6%
 
 ---
@@ -96,9 +96,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
    >
    >只有资产创建者(将特定资产上传到的人 [!DNL Assets]员)会在资产过期时收到电子邮件。 有关 [在整体级别配置电子邮件通知](/help/sites-administering/notification.md) ，请参阅如何配置电子邮件通知以了解更多 [!DNL Experience Manager] 详细信息。
 
-1. 在先 **[!UICONTROL 前通知(秒]** )字段中，指定资产在您希望收到有关到期的通知时在过期时间之前的秒数。 如果您是管理员或资产创建者，您会在资产到期前收到一条消息，通知您资产将在指定时间后过期。
-
-   资产到期后，您会收到另一则通知，确认到期。 此外，过期的资产也会停用。
+1. 在先 **[!UICONTROL 前通知(秒]** )字段中，指定资产在您希望收到有关到期的通知时在过期时间之前的秒数。 资产创建者在资产到期前会收到一条消息，通知您资产将在指定时间后过期。 资产到期后，您会收到另一则通知，确认到期。 此外，过期的资产也会停用。
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。
 
