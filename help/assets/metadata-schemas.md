@@ -3,9 +3,9 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8490b81242ee284208d0f7fd90797f411e2b99b2
+source-git-commit: 505ee267534b7b3de1f85fb6782b855dbf3c371d
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2648'
 ht-degree: 13%
 
 ---
@@ -119,7 +119,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 * `./jcr:content/metadata/dc:title`：将该值作为属性 `dc:title` 存储在资产的元数据节点中。
 
-* `./jcr:created`: 在资产的节点显示JCR属性。 如果配置这些属性，Adobe建议您将它们标记为“禁用编辑”，并且不要将任何日期字段绑定到 `./jcr:created`。 它是受保护的属性。 当DAM用户尝试更新资产时，会导致 [!UICONTROL 错误资产无法修改]。 如果您决定将日期字段映射到此JCR属性，请使用默认模式。 复制Adobe提供的默认元数据模式并修改它，因为默认模式中的日期字段将映射到该 `./jcr:created`。
+* `./jcr:created`: 存储资产的创建日期和时间。 它是受保护的属性。 如果配置这些属性，Adobe建议您将其标记为“禁用编辑”。
 
 要确保在元数据模式表单中正确显示组件，属性路径不应包含任何空格。
 
@@ -175,7 +175,7 @@ Click `X` to delete a tab.
 
 >[!NOTE]
 >
->* 在删除对默认表单的自定义更改后，在元数据模式界面上的表单前面会重新显示锁图标。 它表示表单已恢复为默认状态。
+>* 删除对默认表单的自定义更改后，在元数据模式界面上的表单前面将重新显示锁图标。 它表示表单已恢复为默认状态。
 >* 无法删除中的默认元数据模式表 [!DNL Assets]单。
 
 
