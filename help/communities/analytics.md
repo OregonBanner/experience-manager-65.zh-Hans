@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+workflow-type: tm+mt
+source-wordcount: '2765'
+ht-degree: 3%
 
 ---
 
@@ -22,21 +25,21 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解决方案。
 
-可以为AEM Communities配置Adobe Analytics，这样，当成员与支持的Communities功能交互时，事件会发送到生成报告的Adobe Analytics。
+可以为AEM Communities配置Adobe Analytics，以便成员与支持的Communities功能交互时，事件会发送到生成报告的Adobe Analytics。
 
-例如，当启用社区站点的成员视图分配给他们的视频资源时，资源播放器会将事件发送到Analytics，包括视频心跳数据。 从社区站点中，管理员可以查看有关视频播放的各种报告。
+例如，当启用社区站点的成员视图分配给他们的视频资源时，资源播放器会将事件发送到Analytics，包括视频心跳数据。 在社区站点中，管理员可以查看有关视频播放的各种报告。
 
-此外，对于以下情况，分析是必要的：
+此外，对于以下情况，分析是必需的：
 
 * 在发布环境中：
 
    * 报告社区趋 [势](/help/communities/trends.md)
-   * 允许网站访客按“查看次数最多”、“最活跃”、“最喜欢”排序
+   * 允许网站访客按“查看次数最多”、“最活跃”、“最喜欢”进行排序
    * 视图计入UGC列表
 
 * 在作者环境中：
 
-   * 在成员管理控制台中显 [示参与数据](/help/communities/members.md) (视图、帖子、关注、赞)
+   * 在成员管理控制台中显 [示参与数据](/help/communities/members.md) (视图、帖子、关注、喜欢)
    * 用于启用资源报告的趋势摘要、视频心跳和视频设 [备](/help/communities/reports.md)
 
 支持的社区功能包括：
@@ -48,21 +51,21 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 * [文件库](/help/communities/file-library.md)
 * [日历](/help/communities/calendar.md)
 
-本文档的此部分介绍如何将Analytics报告套件与Communities功能相连。 基本步骤是：
+本文档的本节介绍如何将Analytics报表包与社区功能相连。 基本步骤为：
 
 1. [复制加密密钥](#replicate-the-crypto-key) ，以确保在所有AEM实例上正确进行加密／解密
 1. 准备Adobe Analytics报 [告套件](#adobe-analytics-report-suite-for-video-reporting)
 1. 创建AEM Analytics云服 [务和框](#aem-analytics-cloud-service-configuration) 架 [。](#aem-analytics-framework-configuration)
 
-1. [为社区站点启用Analytics](#enable-analytics-for-a-community-site)
+1. [为社区](#enable-analytics-for-a-community-site) 站点启用Analytics
 1. [**验证&#x200B;**](#verify-analytics-to-aem-variable-mapping)Analytics到AEM变量映射
-1. 识别主 [要发布者](#primary-publisher)
-1. [发布社区站点](#publish-community-site-and-analytics-cloud-service) (Publish the community site)
-1. 配置 [将报告数据从Adobe](#obtaining-reports-from-analytics) Analytics导入社区站点
+1. 识别主 [发行商](#primary-publisher)
+1. [发布](#publish-community-site-and-analytics-cloud-service) 社区站点
+1. 配 [置将报告数据从Adobe](#obtaining-reports-from-analytics) Analytics导入社区站点
 
 ## 前提条件 {#prerequisites}
 
-要配置Analytics for Communities功能，必须与您的帐户代表一起设置Adobe Analytics帐户和报 [告包](#adobe-analytics-report-suite-for-video-reporting)。 建立后，应提供以下信息：
+要配置Analytics for Communities功能，必须与您的帐户代表合作来设置Adobe Analytics帐户和报 [告包](#adobe-analytics-report-suite-for-video-reporting)。 建立后，应提供以下信息：
 
 * **公司名称**
 
@@ -78,7 +81,7 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 
 * **Analytics数据中心**
 
-   帐户的Analytics数据中心URL。
+   帐户的Analytics数据中心的URL。
 
 * **报表包**
 
@@ -86,24 +89,24 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 
 ## Adobe Analytics Report Suite for Video报告 {#adobe-analytics-report-suite-for-video-reporting}
 
-使用Adobe Marketing Cloud的 [Report Suite Manager](https://marketing.adobe.com/resources/help/en_US/reference/new_report_suite.html)，可以配置Analytics报表包，以便允许社区站点提供社区功能的报表。
+使用Adobe Marketing Cloud的报 [告包管理器](https://marketing.adobe.com/resources/help/en_US/reference/new_report_suite.html)，可以配置Analytics报告包，以便社区站点能够提供社区功能的报告。
 
-通过使用 [公司名和用户名登录](https://marketing.adobe.com/resources/help/en_US/analytics/getting-started/analytics-navigation.html)[Adobe Marketing Cloud](/help/communities/analytics.md#prerequisites)，可以将新的或现有的报表包配置为：
+通过使用 [公司名](https://marketing.adobe.com/resources/help/en_US/analytics/getting-started/analytics-navigation.html)[和用户名登录Adobe Marketing Cloud](/help/communities/analytics.md#prerequisites)，可以配置新的或现有的报表包：
 
 * [11转换变量](https://marketing.adobe.com/resources/help/en_US/reference/conversion_var_admin.html) (eVar)
 
-   * **`evar1`** 通过启用 **`evar11`**
+   * **`evar1`** 启用 **`evar11`**
 
    * 可以重用（重命名）现有eVar或创建新eVar以用于Communities功能
 
 * [7成功事件](https://marketing.adobe.com/resources/help/en_US/reference/success_event.html) (事件)
 
-   * **`event1`** 通过启用 **`event7`**
+   * **`event1`** 启用 **`event7`**
 
    * 类型 **`Counter`**
 
       * 否 **`Counter (no subrelations)`**
-   * 可以重用（重命名）现有事件，或创建新的社区功能
+   * 可以重用（重命名）现有事件或创建新的社区功能
 
 
 * [视频管理](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html)
@@ -118,9 +121,9 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
       * 选择保存
 
 
-如果使用新 **的报表包**，请注意，新的报表包可能只有4个evar和6个事件变量，而社区需要11个evar和7个事件变量。
+如果使用 **新的报表包**，请注意，新的报表包可能只有4个evar和6个事件变量，而社区需要11个evar和7个事件变量。
 
-如果使用 **现有报表包**，则可能需要修改变 [](#modifying-analytics-variable-mapping) 量映射，然后才能激活社区站点的Analytics框架。 有关专用于社区的变量的任何疑虑，请与您的客户代表联系。
+如果使用 **现有报表包**，则可能需要在 [为社区站点激活Analytics框架之前修](#modifying-analytics-variable-mapping) 改变量映射。 有关专用于社区的变量的任何疑虑，请与您的客户代表联系。
 
 >[!CAUTION]
 >
@@ -132,37 +135,37 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 * **`event1`** 至 **`event7`**
 >
 >
-**然后，在发布社区站点之前，** 请务必通过移动在为社区站点启用Analytics时自动映射到Analytics变量的AEM变量来恢复预先存在的映射。
+**然后，在发布社区站点之前** ，务必通过移动在为社区站点启用Analytics时自动映射到Analytics变量的AEM变量来恢复预先存在的映射。
 >
->要恢复先前存在的映射并将AEM变量移至其他Analytics变量，请参阅修改分析变 [量映射一节](#modifying-analytics-variable-mapping)。
+>要恢复先前存在的映射并将AEM变量移动到其他Analytics变量，请参阅修改分析变 [量映射一节](#modifying-analytics-variable-mapping)。
 >
 >否则可能导致无法恢复的数据丢失。
 
-### 视频心率分析 {#video-heartbeat-analytics}
+### 视频心跳分析 {#video-heartbeat-analytics}
 
-当视频心率分析获得许可时，将 `Marketing Cloud Org Id` 分配一个。
+获得视频心跳分析许可后，将 `Marketing Cloud Org Id` 分配一个。
 
-要在配置Analytics报表包以进行视 [频报告后启用视频心率报告，请执行以下操作](#adobe-analytics-report-suite-for-video-reporting):
+要在为视频报告配置 [Analytics报表包后启用视频心跳报告](#adobe-analytics-report-suite-for-video-reporting):
 
-* 创建 [Analytics云服务](#aem-analytics-cloud-service-configuration)
-* 为社 [区站点启用Analytics](#enable-analytics-for-a-community-site)
-* 将社区 `Marketing Cloud Org Id` 站点关联起来
+* 创建Analytics [云服务](#aem-analytics-cloud-service-configuration)
+* 为社 [区站点启用分析](#enable-analytics-for-a-community-site)
+* 将社区 `Marketing Cloud Org Id` 站点关联
 
-可 `Marketing Cloud Org Id` 以在创建社区站点时或更 [高版本时](/help/communities/sites-console.md#enablement) ，通过修 [改社区站点属性](/help/communities/sites-console.md#modifying-site-properties) 来输入。 [](#aem-analytics-cloud-service-configuration)
+可 `Marketing Cloud Org Id` 以在创建社区站点时输入 [该内容](/help/communities/sites-console.md#enablement) ，也可以在更 [晚时修改社](/help/communities/sites-console.md#modifying-site-properties) 区站点属性。 [](#aem-analytics-cloud-service-configuration)
 
 ![chlimage_1-177](assets/chlimage_1-177.png)
 
-启用视频心率分析后，视频播放器的JavaScript(JS)代码将实例化视频心率库代码（也包含在JS中），该代码每10秒（不可配置）处理向Analytics视频跟踪服务器发送视频状态更新的所有逻辑，并最终将视频会话的累积报告发送到主Analytics服务器。
+启用视频心跳分析后，视频播放器的JavaScript(JS)代码将实例化视频心跳库代码（也以JS为单位），该代码每10秒（不可配置）处理向Analytics视频跟踪服务器发送视频状态更新的所有逻辑，并最终向主Analytics服务器发送视频会话的累积报告。
 
-如果未启用，则视频心跳代码永远不会被实例化，只有视频进度和恢复位置跟踪会保留到SRP以进行报告。
+如果未启用，则视频心跳代码从不被实例化，只有视频进度和恢复位置跟踪被保留到SRP以进行报告。
 
 ## AEM Analytics云服务配置 {#aem-analytics-cloud-service-configuration}
 
-要创建新的Analytics集成，它使用创作实例上的标准UI将Adobe Analytics与AEM社区站点集成：
+要创建新的Analytics集成（将Adobe Analytics与AEM社区站点集成），请使用创作实例上的标准UI:
 
-* 从全局导航：“工 **[!UICONTROL 具”>“部署”>“云服务”]**
+* 从全局导航： **[!UICONTROL “工具”>“部署”>“云服务”]**
 * 向下滚动到 **[!UICONTROL Adobe Analytics]**
-* 选择“ **[!UICONTROL 立即配置]** ”或“显 **[!UICONTROL 示配置”]**
+* 选择 **[!UICONTROL 立即配置]** 或显 **[!UICONTROL 示配置]**
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -194,7 +197,7 @@ For example, enter *communities*
 
 ### 分析设置对话框 {#analytics-settings-dialog}
 
-初始创建新的Analytics配置时，将显示配置，并显示一个新对话框以输入“Analytics设置”。 此对话框要求从 [帐户代表处获得](#prerequisites) 入门项目帐户信息。
+初始创建新的Analytics配置会显示配置，并显示新对话框以输入Analytics设置。 此对话框要求从 [帐户代表处获](#prerequisites) 取必备帐户信息。
 
 ![chlimage_1-180](assets/chlimage_1-180.png)
 
@@ -226,27 +229,27 @@ For example, enter *communities*
 
    保留为默认值（取消选择）
 
-* **不要在夜间导入页面展示次数（发布），请**&#x200B;将其保留为默认值（取消选择）
+* **不要在夜间导入页面展示次数（发布）**&#x200B;保留为默认（取消选择）
 
 保存设置：
 
 * 选择 **连接到分析**
 
-   * 如果失败，
+   * 如果不成功，
 
-      * 验证条目中不包含前导空格
-      * 尝试使用其他数据中心
+      * 验证条目不包含前导空格
+      * 尝试其他数据中心
       * 联系您的客户代表
 
 * 选择确 **定**
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+![chlimage_1-101](assets/chlimage_1-181.png)
 
 ### 创建框架 {#create-framework}
 
-成功配置与Adobe Analytics的基本连接后，必须为社区站点创建或编辑框架。 该框架的用途是将社区功能(AEM)变量映射到分析（报表包）变量。
+成功配置与Adobe Analytics的基本连接后，必须为社区站点创建或编辑框架。 该框架的用途是将社区功能(AEM)变量映射到Analytics（报表包）变量。
 
-* 选择 `[+]` 可用框架旁 **[!UICONTROL 的图标]** ，以创建新框架
+* 选择 `[+]` 可用框架 **[!UICONTROL 旁边的图标]** ，以创建新框架
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -265,11 +268,11 @@ For example, enter *communities*
 
 * Select **Create**
 
-创建Analytics Framework可打开配置框架。
+创建Analytics Framework会打开要配置的框架。
 
 ## AEM Analytics Framework配置 {#aem-analytics-framework-configuration}
 
-该框架的目的是将AEM变量映射到Analytics变量(eVar和事件)。 可用于映射的Analytics变量在报 [表包中定义](#adobe-analytics-report-suite-for-video-reporting)。
+该框架的目的是将AEM变量映射到Analytics变量(eVar和事件)。 可用于映射的Analytics变量 [在报表包中定义](#adobe-analytics-report-suite-for-video-reporting)。
 
 ![chlimage_1-183](assets/chlimage_1-183.png)
 
@@ -277,11 +280,12 @@ For example, enter *communities*
 
 选择已设置用于视频报告的报表包。
 
-如果尚未创建或未正确设置报表包，请参阅上一节：[Adobe Analytics Report Suite for Video报告](#adobe-analytics-report-suite-for-video-reporting)
+如果尚未创建或未正确设置报表包，请参阅上一节：
+[Adobe Analytics Report Suite for Video报告](#adobe-analytics-report-suite-for-video-reporting)
 
-Sidekick不需要并且可以最小化，以便它不会妨碍对“报告包”设置的访问。
+Sidekick不需要，并且可以最小化，以便它不会妨碍对报告包设置的访问。
 
-#### 选择“添加项目”之前和之后的“报表包”对话框 {#report-suites-dialog-before-and-after-selecting-add-item}
+#### 选择“添加项目”前后的“报表包”对话框 {#report-suites-dialog-before-and-after-selecting-add-item}
 
 ![chlimage_1-184](assets/chlimage_1-184.png)
 
@@ -291,9 +295,9 @@ Sidekick不需要并且可以最小化，以便它不会妨碍对“报告包”
 
 1. 选择 `Report suite.`
 
-   可以选择与公司帐户关联的报表包。
+   与公司帐户关联的报表包可供选择。
 
-1. 在打 **开的对话框** 中选择“是”:
+1. 在打 **开的对** 话框中选择“是”:
 
    ```
    Load default server settings?
@@ -304,38 +308,38 @@ Sidekick不需要并且可以最小化，以便它不会妨碍对“报告包”
 
 1. Select **Publish**
 
-![chlimage_1-185](assets/chlimage_1-185.png)
+![chlimage_1-186](assets/chlimage_1-185.png)
 
-Analytics云服务和框架现已完成。 在启用此Analytics服务的情况下创建社区站点后，将定义映射。
+Analytic Cloud服务和框架现已完成。 在启用此Analytics服务的情况下创建社区站点后，将定义映射。
 
 ## 为社区站点启用分析 {#enable-analytics-for-a-community-site}
 
 ### 为新社区站点启用 {#enable-for-new-community-site}
 
-在创建新社区站点时添 [加Analytics云服务](/help/communities/sites-console.md):
+要在创建新社区站点时添 [加Analytics云服务](/help/communities/sites-console.md):
 
-* 在步骤3中，在“ [ANALYTICS”（分析）选项卡下](/help/communities/sites-console.md#analytics):
-   * 选中“ **启用分析** ”复选框。
+* 在步骤3的“ANALYTICS”（分析） [选项卡下](/help/communities/sites-console.md#analytics):
+   * 选中启 **用分析** 复选框。
    * 从下拉框中选择框架。
 
-* （可选）返回Analytics框架配置以调整变量映射。
+* （可选）返回到Analytics框架配置以调整变量映射。
 
 ### 为现有社区站点启用 {#enable-for-existing-community-site}
 
-要将Analytics云服务添加到现有社区站 [点，请执行以下操作](/help/communities/sites-console.md#modifying-site-properties):
+要将Analytics云服务添加到现有社 [区站点](/help/communities/sites-console.md#modifying-site-properties):
 
 * 导航到“社 **区”>“站点** ”控制台。
 * 选择社区站点的“编辑站点”图标。
 * 选择设置。
-* 在“分析”部分中：
-   * 选中“ **启用分析** ”复选框。
+* 在“分析”部分：
+   * 选中启 **用分析** 复选框。
    * 从下拉框中选择框架。
 
-* （可选）返回Analytics框架配置以调整变量映射。
+* （可选）返回到Analytics框架配置以调整变量映射。
 
 ### 为自定义站点启用 {#enable-for-customized-sites}
 
-为了使Analytics跟踪和导入能够正常地用于社区站点，必须存在具有类和href属 `scf-js-site-title` 性的页面元素。 页面上只应存在一个此类元素，如社区站点的未修改脚 `sitepage.hbs` 本中的元素。 该值会被提 `siteUrl` 取并作为站点路径发送 *到Adobe Analytics*。
+要使Analytics跟踪和导入能够对社区站点正常工作，必须存在具有类和href属 `scf-js-site-title` 性的页面元素。 页面上只应存在一个此类元素，如社区站点的未修改 `sitepage.hbs` 脚本中的元素。 该值被提 `siteUrl` 取并作为站点路径发送 *到Adobe Analytics*。
 
 ```xml
 # present in default sitepage.hbs
@@ -349,9 +353,9 @@ Analytics云服务和框架现已完成。 在启用此Analytics服务的情况�
 </div>
 ```
 
-对于叠加 **脚本的自定义社区站点** ，请确 `sitepage.hbs` 保该元素存在。 在服 `siteUrl`务到客户端之前，在服务器上呈现变量时，将设置该变量。
+对于叠 **加脚本的自定** 义社区站 `sitepage.hbs` 点，请确保元素存在。 当在 `siteUrl`服务器上呈现变量后，将设置该变量，然后再提供给客户端。
 
-对于包 **含Communities组件的通用AEM站点** ，但不是使用站点创建向导 [创建的](/help/communities/sites-console.md)，必须添加元素。 href的值应为站点路径。 例如，如果站点路径为，则 `/content/my/company/en`使用：
+对于包 **含Communities组件** 、但不是使用站点创建向导创 [建的通用AEM站点](/help/communities/sites-console.md)，必须添加元素。 href值应为站点的路径。 例如，如果站点路径为， `/content/my/company/en`则使用：
 
 ```xml
 <div
@@ -362,13 +366,13 @@ Analytics云服务和框架现已完成。 在启用此Analytics服务的情况�
 </div>
 ```
 
-## 针对社区的分析功能 {#analytics-for-communities-features}
+## 社区分析功能 {#analytics-for-communities-features}
 
 Analytics可自动用于多个Communities功能。
 
-作者环境 [的OSGi配置](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Component Configuration`提供了已为Analytics分析所处理的组件的列表。 变量的自动映射由列出的组件决定。
+作者环境 [的OSGi配](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Component Configuration`置提供了已用于Analytics分析的组件列表。 变量的自动映射由列出的组件决定。
 
-如果创建了用于Analytics的新自定义组件，则应将这些组件添加到此列表的已配置组件。
+如果创建了用于Analytics的新自定义组件，则应将这些组件添加到已配置组件的此列表。
 
 ### 组件配置 {#component-configuration}
 
@@ -380,11 +384,11 @@ Analytics可自动用于多个Communities功能。
 
 ### 将分析映射到AEM变量 {#mapped-analytics-to-aem-variables}
 
-在启用Analytics并选择云配置框架的情况下保存社区站点后，AEM变量将自动映射到分别从evar1和事件1开始的Analytics eVar和事件，并增加1。
+在启用Analytics并选择云配置框架的情况下保存社区站点后，AEM变量将自动映射到以evar1和事件1开头的Analytics eVar和事件，并增加1。
 
-如果使用现有的报表包将evar1至evar11中的任何变量以及事件1至事件7中的任何变量进行映射，则需要重新映射 [AEM变量](#modifying-analytics-variable-mapping) ，并恢复原始映射。
+如果使用现有报表包映射evar1至evar11以及事件1至事件7中的任何变量，则需要重 [新映射AEM变量](#modifying-analytics-variable-mapping) ，并恢复原始映射。
 
-下面是继入门教程之后默认映 [射的示例](/help/communities/getting-started-enablement.md):
+下面是在学习入门教程之后默认 [映射的示例](/help/communities/getting-started-enablement.md):
 
 ![chlimage_1-187](assets/chlimage_1-187.png)
 
@@ -395,14 +399,14 @@ Analytics可自动用于多个Communities功能。
   <tr>
    <td><strong> </strong></td>
    <td><strong>Enablement<br /> Resource<br /> Type</strong></td>
-   <td><strong>站点<br /> Title</strong></td>
-   <td><strong>函数类型<br /></strong></td>
+   <td><strong>站点标<br /> 题</strong></td>
+   <td><strong>函数类<br /> 型</strong></td>
    <td><strong>组标题<br /></strong></td>
    <td><strong>Group<br /> Path</strong></td>
-   <td><strong>UGC<br /> Type</strong></td>
+   <td><strong>UGC类<br /> 型</strong></td>
    <td><strong>UGC<br /> Title</strong></td>
    <td><strong>用户<br /> （会员）</strong></td>
-   <td><strong>UGC<br /> Path</strong></td>
+   <td><strong>UGC路径<br /></strong></td>
    <td><strong>站点路径<br /> (Site Path)</strong></td>
   </tr>
   <tr>
@@ -432,7 +436,7 @@ Analytics可自动用于多个Communities功能。
    <td><em>-</em></td>
   </tr>
   <tr>
-   <td><strong>事件2<br /> SCFView</strong></td>
+   <td><strong>事件<br /> 2 SCFView</strong></td>
    <td><em>(a)</em></td>
    <td><em>(b)</em></td>
    <td><em>(c)</em></td>
@@ -445,7 +449,7 @@ Analytics可自动用于多个Communities功能。
    <td><em>(j)</em></td>
   </tr>
   <tr>
-   <td><strong>事件3<br /> SCFCreate（发布）</strong></td>
+   <td><strong>事件<br /> 3 SCFCreate（发布）</strong></td>
    <td><em>-</em></td>
    <td><em>(b)</em></td>
    <td><em>(c)</em></td>
@@ -458,7 +462,7 @@ Analytics可自动用于多个Communities功能。
    <td><em>(j)</em></td>
   </tr>
   <tr>
-   <td><strong>事件4<br /> SCFFollow</strong></td>
+   <td><strong>事件<br /> 4 SCFFollow</strong></td>
    <td><em>-</em></td>
    <td><em>(b)</em></td>
    <td><em>(c)</em></td>
@@ -471,7 +475,7 @@ Analytics可自动用于多个Communities功能。
    <td><em>(j)</em></td>
   </tr>
   <tr>
-   <td><strong>事件5<br /> SCFVoteUp</strong></td>
+   <td><strong>事件<br /> 5 SCFVoteUp</strong></td>
    <td><em>-</em></td>
    <td><em>(b)</em></td>
    <td><em>(c)</em></td>
@@ -497,7 +501,7 @@ Analytics可自动用于多个Communities功能。
    <td><em>(j)</em></td>
   </tr>
   <tr>
-   <td><strong>事件7<br /> SCFRate</strong></td>
+   <td><strong>事件<br /> 7 SCFRate</strong></td>
    <td><em>-</em></td>
    <td><em>(b)</em></td>
    <td><em>(c)</em></td>
@@ -514,149 +518,150 @@ Analytics可自动用于多个Communities功能。
 
 **eVar值示例：**
 
-* *[MIME类型](https://www.iana.org/assignments/media-types)*:video/mp4
-* *[社区站点标题](/help/communities/sites-console.md#step13asitetemplate)*:Geometrixx Communities
-* *[社区函数名称](/help/communities/functions.md)*:论坛
-* *[社区组名称](/help/communities/creating-groups.md#creating-a-new-group)*:徒步旅行
-* *社区组内容的路径*: `/content/sites/communities/en/groups/hiking`
-* *[UGC组件resourceType](/help/communities/essentials.md)*:`social/forum/components/hbs/topic`
-* *UGC组件标题*:徒步旅行主题
+* *[MIME类型](https://www.iana.org/assignments/media-types)*: video/mp4
+* *[社区站点标题](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
+* *[社区函数名称](/help/communities/functions.md)*: 论坛
+* *[社区组名称](/help/communities/creating-groups.md#creating-a-new-group)*: 远足
+* *社区组内容的路径*: `/content/sites/<site name>/en/groups/hiking`
+* *[UGC组件资源类型](/help/communities/essentials.md)*:`social/forum/components/hbs/topic`
+* *UGC组件标题*: 远足主题
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
-* *UGC的SRP路径*:或 `/content/usergenerated/asi/.../forum/jmtz-topic3`要 *遵循的组件路径*: `/content/sites/communities/en/jcr:content/content/primary/forum`
+* *UGC的SRP路径*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
+或 **`/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* *社区站点内容的路径*: `/content/sites/community/en`
+* *要遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-### 修改分析变量映射 {#modifying-analytics-variable-mapping}
+### *社区站点内容的路径*: `/content/sites/<site name>/en`
+
+修改分析变量映射 {#modifying-analytics-variable-mapping}
 
 在为社区站点启用Analytics后，Analytics eVar和事件到AEM变量的映射可从框架配置中看到。
 
-启用Analytics后，在社区站点发布之前，可通过将所需的Analytics evar或事件从左边栏拖放到映射表中的相关行，在框架中更改映射。
+启用Analytics后，在发布社区站点之前，可以通过将所需的Analyticsevar或事件从左边栏拖放到映射表中的相关行，在框架中更改映射。
 
-要避免重复映射，请务必将替换的Analytics evar或事件从行中删除，方法是将鼠标悬停在该行上，然后选择Analytics变量元素右侧显示的“X”。
+要避免重复映射，请务必将替换的Analyticsevar或事件从行中删除，方法是将指针悬停在该行上，然后选择显示在Analytics变量元素右侧的“X”。
 
-如果Communities eVar和事件覆盖了报表包中预先存在的映射，则为避免数据丢失，请将Communities功能的AEM变量分配给其他Analytics eVar或事件，并恢复原始映射。
-
->[!CAUTION]
+>[!CAUTION]如果Communities eVar和事件覆盖了报表包中先前存在的映射，则为避免数据丢失，请将Communities功能的AEM变量分配给其他Analytics eVar或事件，并恢复原始映射。
 >
->在启用Analytics的情况下发布社区站点之前重新映射 [很重要](#publishing-the-community-site) ，否则会有数据丢失的风险。
+>[!CAUTION]](#publishing-the-community-site)
 
-#### 示例步骤1:将Analytics evar14拖入映射表 {#example-step-dragging-analytics-evar-into-mapping-table}
+#### 在启用Analytics的情况下发布社区站点之前重 [新映射](#publishing-the-community-site) ，这一点很重要，否则可能会丢失数据。
 
-![chlimage_1-188](assets/chlimage_1-188.png)
+示例步骤1: 将Analytics evar14拖入映射表 {#example-step-dragging-analytics-evar-into-mapping-table}](assets/chlimage_1-188.png)
 
-#### 示例步骤2:选择“x”以删除已替换的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
+#### ![chlimage_1-188](assets/chlimage_1-188.png)
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+示例步骤2: 选择“x”以删除已替换的evar11 {#example-step-selecting-x-to-remove-replaced-evar}](assets/chlimage_1-189.png)
 
-#### 示例步骤3:AEM var eventdata.siteId已重新映射到Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
+#### ![chlimage_1-189](assets/chlimage_1-189.png)
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+示例步骤3: AEM var eventdata.siteId已重新映射到Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}](assets/chlimage_1-190.png)
 
-## 发布社区站点 {#publishing-the-community-site}
+## ![chlimage_1-190](assets/chlimage_1-190.png)
 
-### 验证分析到AEM变量映射 {#verify-analytics-to-aem-variable-mapping}
+### 发布社区站点 {#publishing-the-community-site}
 
-最好在发布社区站点之前验证变量映射，该站点也会发布Analytics云服务和框架。
+验证分析到AEM变量映射 {#verify-analytics-to-aem-variable-mapping}
 
-请参阅以下部分：
+在发布社区站点之前验证变量映射是明智的，该站点也会发布Analytics云服务和框架。
 
+* [请参阅以下部分：](#mapped-analytics-to-aem-variables)
 * [将分析映射到AEM变量](#mapped-analytics-to-aem-variables)
-* [修改分析变量映射](#modifying-analytics-variable-mapping)
 
->[!CAUTION]
+>[修改分析变量映射](#modifying-analytics-variable-mapping)
 >
->**如果使用的现有报表包已经在**
+>[!CAUTION]**
 >
->* **`evar1`** 至 **`evar11`**
+>* **如果使用的现有报表包已经在****`evar11`**
    >
    >
-* **`event1`** 至 **`event7`**
+* **`evar1`** 至 **`evar11`**
 >
 >
-**然后，在发布社区站点之前，请务必恢复** “预先存在”的映射，并将自动映射的Communities AEM变量（在为社区站点启用Analytics时）移至其他Analytics变量。 此重新映射应在所有社区组件之间保持一致。
+**`event1`** 至 **`event7`****
 >
->否则可能导致无法恢复的数据丢失。
+>**然后，在发布社区站点之前** ，务必恢复预先存在的映射并将自动映射的社区AEM变量（在为社区站点启用Analytics时）移动到其他Analytics变量。 此重新映射应在所有社区组件之间保持一致。
 
-### 主发布者 {#primary-publisher}
+### 否则可能导致无法恢复的数据丢失。{#primary-publisher}
 
-当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为主发布者，以便轮询Adobe Analytics以向 [SRP写入报告数据](/help/communities/working-with-srp.md)。
+主发布者 {#primary-publisher}](/help/communities/topologies.md#tarmk-publish-farm)[](/help/communities/working-with-srp.md)
 
-默认情况下， `AEM Communities Publisher Configuration` OSGi配置将其发布实例标识为主发布者，这样发布农场中的所有发布实例都将自标识为主发布者。
+当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为主发布者，以轮询Adobe Analytics以向SRP写入报告 [数据](/help/communities/working-with-srp.md)。
+
+默认情况下， `AEM Communities Publisher Configuration` OSGi配置将其发布实例标识为主发布者，这样发布场中的所有发布实例都将自标识为主发布者。**
 
 因此，必须编辑所有辅助发布实例上的配置以取消选中“主发 **布者** ”复选框。
 
-有关具体说明，请参阅部署社区的主要发布 [者部分](/help/communities/deploy-communities.md#primary-publisher)。
-
->[!CAUTION]
+>有关具体说明，请参阅部署社区的主要发 [布者部分](/help/communities/deploy-communities.md#primary-publisher)。
 >
->配置主发布者以阻止从多个发布实例进行轮询很重要。
+>[!CAUTION]
 
-### 复制加密密钥 {#replicate-the-crypto-key}
+### 配置主发布者以阻止多个发布实例进行轮询很重要。{#replicate-the-crypto-key}
 
-Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或传输加密分析凭据，所有AEM实例必须共享相同的主加密密钥。
+复制加密密钥 {#replicate-the-crypto-key}
 
-为此，请按照复制加密密钥 [中的说明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
+Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或传输加密分析凭据，所有AEM实例必须共享相同的主加密密钥。[](/help/communities/deploy-communities.md#replicate-the-crypto-key)
 
-### 发布社区站点和Analytics云服务 {#publish-community-site-and-analytics-cloud-service}
+### 为此，请按照复制加密密钥 [中的说明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
 
-为社区站点启用Analytics云服务后，如果需要， [Analytics到AEM变量的映射也已调整](#mapped-analytics-to-aem-variables),则必须通过（重新）发布社区站点来将配置复制到发布环境 [](/help/communities/sites-console.md#publishing-the-site)。
+发布社区站点和Analytics云服务 {#publish-community-site-and-analytics-cloud-service}](#mapped-analytics-to-aem-variables)[](/help/communities/sites-console.md#publishing-the-site)
 
-## 从Analytics获取报告 {#obtaining-reports-from-analytics}
+## 为社区站点启用Analytics云服务后，并在必要时调整 [了Analytics到AEM变量的映射](#mapped-analytics-to-aem-variables)，有必要通过（重新）发布社区站点将配 [置复制到发布环境](/help/communities/sites-console.md#publishing-the-site)。
 
-### 报告管理 {#report-management}
+### 从Analytics获取报告 {#obtaining-reports-from-analytics}
 
-作者和主出版商的 [OSGi配置](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Management`用于查询Analytics。
+报表管理 {#report-management}](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`
 
-作者可查询实时报告。
+作者和主发布者的 [OSGi配置](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`，用于查询分析。
 
-在主发布者上，查询用于提供准备报告导入程序的分析数据导入的信息。
+作者可以查询实时报告。
 
-查询间隔默认为10秒。
+在主发布者上，查询用于提供准备报表导入程序的分析数据导入的信息。
 
-### 报告导入程序 {#report-importer}
+### 查询间隔默认为10秒。{#report-importer}
 
-在发布启用了Analytics的社区站点后，可以将主发行商的 [](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`OSGi配置配置为为那些未在CRXDE中单独配置的配置设置默认轮询间隔。
+报表导入程序 {#report-importer}](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`
 
-轮询间隔控制向Adobe Analytics请求要提取并保存到 [SRP中的数据的频率](/help/communities/working-with-srp.md)。
+一旦发布了启用Analytics的社区站点，主发布者的 [OSGi配置](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`就可以配置为为那些未在CRXDE中单独配置的配置设置默认轮询间隔。
 
-当数据可能被分类为“大数据”时，更频繁的民意测验可能会给社区站点带来很大的负担。
+轮询间隔控制向Adobe Analytics请求要提取并保存到SRP中的数据的 [频率](/help/communities/working-with-srp.md)。
 
-默认的轮询 **导入间隔** ，设置为12小时。
+当数据可能被归类为“大数据”时，更频繁的民意测验可能会给社区站点带来很大负担。****
 
-![chlimage_1-191](assets/chlimage_1-191.png)
+默认轮询 **导入间隔** 设置为12小时。
 
-### 组件报告自定义 {#component-report-customization}
+### ![chlimage_1-191](assets/chlimage_1-191.png)
 
-目前，为了自定义要跟踪的度量，在存储库中创建节点，该节点定义了要为其生成该度量报告的时间段。
+组件报表自定义 {#component-report-customization}
 
-论坛主题目前是此自定义的唯一示例：
+目前，为了自定义要跟踪的度量，在存储库中创建节点，该节点定义要为该度量生成报告的时间段。
 
-* 在主发行商上，使用管理权限登录。
-* 导航到 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de)。
+* 论坛主题目前是此自定义的唯一示例：
+* 在主发行商上，以管理权限登录。[](/help/sites-developing/developing-with-crxde-lite.md)[-ERR:REF-NOT-FOUND-
 
-* 在语言根目录的jcr:content节点下(例如，导 `/content/sites/engage/en/jcr:content),`航到为Analytics报告配置的组件。
+* 
+
+* 在语言根的jcr:content节点下(例如，导 `/content/sites/engage/en/jcr:content),`航到为Analytics报告配置的组件。
 例如，**`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
-* 注意创建的时间段：
-
+   * `last30Days`注意创建的时间段：
    * `last30Days`
    * `last90Days`
-   * `thisYear`
 
-* 注意节 `total`点。
+* `thisYear`
 
-   * 修改属 **`interval`** 性将覆盖“报表导入程序”间隔。
-   * 该值以秒为单位，并设置为4小时（14400秒）。
+   * 注意节 `total`点。
+   * 修改属 **`interval`** 性将覆盖报表导入程序间隔。
 
-![chlimage_1-192](assets/chlimage_1-192.png)
+![该值以秒为单位，并设置为4小时（14400秒）。](assets/chlimage_1-192.png)
 
-## 在Analytics中管理用户数据 {#manage-user-data-in-analytics}
+## ![chlimage_1-192](assets/chlimage_1-192.png)
 
-Adobe Analytics提供的API允许您访问、导出和删除用户数据。 有关详细信息，请参 [阅提交访问和删除请求](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/gdpr_submit_access_delete.html)。
+在Analytics中管理用户数据 {#manage-user-data-in-analytics}-ERR:REF-NOT-FOUND-
 
-## 资源 {#resources}
+## 
 
-* Adobe Marketing Cloud:分 [析帮助和参考](https://marketing.adobe.com/resources/help/en_US/reference/)
+* 资源 {#resources}-ERR:REF-NOT-FOUND-
+* 
 * AEM: [Integrating with Adobe Analytics](/help/sites-administering/adobeanalytics.md)
-* AEM:使用外 [部提供商进行分析](/help/sites-administering/external-providers.md)
 
