@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bc49aaad1f55b8c70228d3c800f1e5abf8a2519c
+source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -157,13 +157,13 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
    * 添加评分和徽章属性
 
    ```
-   scoringRules = [/etc/community/scoring/rules/comments-scoring,
-   /etc/community/scoring/rules/forums-scoring]
+   scoringRules = [/libs/settings/community/scoring/rules/comments-scoring,
+   /libs/settings/community/scoring/rules/forums-scoring]
    ```
 
    ```
-   badgingRules =[/etc/community/badging/rules/comments-scoring,
-   /etc/community/badging/rules/forums-scoring]
+   badgingRules =[/libs/settings/community/badging/rules/comments-scoring,
+   /libs/settings/community/badging/rules/forums-scoring]
    ```
 
    * 找到论坛组件节点
@@ -189,7 +189,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
    ```
    scoringRules = [/libs/settings/community/scoring/rules/comments-scoring,
-   /etc/community/scoring/rules/forums-scoring]
+   /libs/settings/community/scoring/rules/forums-scoring]
    ```
 
    ```
@@ -212,7 +212,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 1. 用户使用cURL获得一个审查方徽章：
 
    ```shell
-   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
+   curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
    ```
 
    由于用户已获得两个铜牌徽章，并且已获得版主徽章，因此用户在论坛条目中的显示方式是这样的。
@@ -225,8 +225,8 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 >
 >* 评分规则名称应全局唯一； 他们不应以同一个名字结尾。
    >  不要执行 *的* 示例：
-   >  /etc/community/scorning/rules/site1/forums-scorning
-   >  /etc/community/scorning/rules/site2/forums-scorning
+   >  /libs/settings/community/scommunity/scorning/rules/site1/forums-scorning
+   >  /libs/settings/community/scorning/rules/site2/forums-scorning
    >
    >
 * 为不同的AEM站点创建唯一的徽章图像
