@@ -308,7 +308,7 @@ Sidekick不需要，并且可以最小化，以便它不会妨碍对报告包设
 
 1. Select **Publish**
 
-![chlimage_1-186](assets/chlimage_1-185.png)
+![chlimage_1-185](assets/chlimage_1-185.png)
 
 Analytic Cloud服务和框架现已完成。 在启用此Analytics服务的情况下创建社区站点后，将定义映射。
 
@@ -527,90 +527,89 @@ Analytics可自动用于多个Communities功能。
 * *UGC组件标题*: 远足主题
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
 * *UGC的SRP路径*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
-或 **`/content/sites/<site name>/en/jcr:content/content/primary/forum`
+或 
+*要遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* *要遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
+* *社区站点内容的路径*: `/content/sites/<site name>/en`
 
-### *社区站点内容的路径*: `/content/sites/<site name>/en`
+### 修改分析变量映射 {#modifying-analytics-variable-mapping}
 
-修改分析变量映射 {#modifying-analytics-variable-mapping}
-
-在为社区站点启用Analytics后，Analytics eVar和事件到AEM变量的映射可从框架配置中看到。
+为社区站点启用Analytics后，Analytics eVar和事件到AEM变量的映射将从框架配置中可见。
 
 启用Analytics后，在发布社区站点之前，可以通过将所需的Analyticsevar或事件从左边栏拖放到映射表中的相关行，在框架中更改映射。
 
 要避免重复映射，请务必将替换的Analyticsevar或事件从行中删除，方法是将指针悬停在该行上，然后选择显示在Analytics变量元素右侧的“X”。
 
->[!CAUTION]如果Communities eVar和事件覆盖了报表包中先前存在的映射，则为避免数据丢失，请将Communities功能的AEM变量分配给其他Analytics eVar或事件，并恢复原始映射。
+如果Communities eVar和事件覆盖了报表包中先前存在的映射，则为避免数据丢失，请将Communities功能的AEM变量分配给其他Analytics eVar或事件，并恢复原始映射。
+
+>[!CAUTION]
 >
->[!CAUTION]](#publishing-the-community-site)
+>在启用Analytics的情况下发布社区站点之前重 [新映射](#publishing-the-community-site) ，这一点很重要，否则可能会丢失数据。
 
-#### 在启用Analytics的情况下发布社区站点之前重 [新映射](#publishing-the-community-site) ，这一点很重要，否则可能会丢失数据。
+#### 示例步骤1: 将Analytics evar14拖入映射表 {#example-step-dragging-analytics-evar-into-mapping-table}
 
-示例步骤1: 将Analytics evar14拖入映射表 {#example-step-dragging-analytics-evar-into-mapping-table}](assets/chlimage_1-188.png)
+![chlimage_1-188](assets/chlimage_1-188.png)
 
-#### ![chlimage_1-188](assets/chlimage_1-188.png)
+#### 示例步骤2: 选择“x”以删除已替换的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
-示例步骤2: 选择“x”以删除已替换的evar11 {#example-step-selecting-x-to-remove-replaced-evar}](assets/chlimage_1-189.png)
+![chlimage_1-189](assets/chlimage_1-189.png)
 
-#### ![chlimage_1-189](assets/chlimage_1-189.png)
+#### 示例步骤3: AEM var eventdata.siteId已重新映射到Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
 
-示例步骤3: AEM var eventdata.siteId已重新映射到Analytics evar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}](assets/chlimage_1-190.png)
+![chlimage_1-190](assets/chlimage_1-190.png)
 
-## ![chlimage_1-190](assets/chlimage_1-190.png)
+## 发布社区站点 {#publishing-the-community-site}
 
-### 发布社区站点 {#publishing-the-community-site}
-
-验证分析到AEM变量映射 {#verify-analytics-to-aem-variable-mapping}
+### 验证分析到AEM变量映射 {#verify-analytics-to-aem-variable-mapping}
 
 在发布社区站点之前验证变量映射是明智的，该站点也会发布Analytics云服务和框架。
 
-* [请参阅以下部分：](#mapped-analytics-to-aem-variables)
+请参阅以下部分：
+
 * [将分析映射到AEM变量](#mapped-analytics-to-aem-variables)
+* [修改分析变量映射](#modifying-analytics-variable-mapping)
 
->[修改分析变量映射](#modifying-analytics-variable-mapping)
+>[!CAUTION]
 >
->[!CAUTION]**
+>**如果使用的现有报表包已经在**
 >
->* **如果使用的现有报表包已经在****`evar11`**
+>* **`evar1`** 至 **`evar11`**
    >
    >
-* **`evar1`** 至 **`evar11`**
+* **`event1`** 至 **`event7`**
 >
 >
-**`event1`** 至 **`event7`****
+**然后，在发布社区站点之前** ，务必恢复预先存在的映射并将自动映射的社区AEM变量（在为社区站点启用Analytics时）移动到其他Analytics变量。 此重新映射应在所有社区组件之间保持一致。
 >
->**然后，在发布社区站点之前** ，务必恢复预先存在的映射并将自动映射的社区AEM变量（在为社区站点启用Analytics时）移动到其他Analytics变量。 此重新映射应在所有社区组件之间保持一致。
+>否则可能导致无法恢复的数据丢失。
 
-### 否则可能导致无法恢复的数据丢失。{#primary-publisher}
-
-主发布者 {#primary-publisher}](/help/communities/topologies.md#tarmk-publish-farm)[](/help/communities/working-with-srp.md)
+### 主发布者 {#primary-publisher}
 
 当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为主发布者，以轮询Adobe Analytics以向SRP写入报告 [数据](/help/communities/working-with-srp.md)。
 
-默认情况下， `AEM Communities Publisher Configuration` OSGi配置将其发布实例标识为主发布者，这样发布场中的所有发布实例都将自标识为主发布者。**
+默认情况下， `AEM Communities Publisher Configuration` OSGi配置将其发布实例标识为主发布者，这样发布场中的所有发布实例都将自标识为主发布者。
 
 因此，必须编辑所有辅助发布实例上的配置以取消选中“主发 **布者** ”复选框。
 
->有关具体说明，请参阅部署社区的主要发 [布者部分](/help/communities/deploy-communities.md#primary-publisher)。
->
+有关具体说明，请参阅部署社区的主要发 [布者部分](/help/communities/deploy-communities.md#primary-publisher)。
+
 >[!CAUTION]
+>
+>配置主发布者以阻止多个发布实例进行轮询很重要。
 
-### 配置主发布者以阻止多个发布实例进行轮询很重要。{#replicate-the-crypto-key}
+### 复制加密密钥 {#replicate-the-crypto-key}
 
-复制加密密钥 {#replicate-the-crypto-key}
+Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或传输加密分析凭据，所有AEM实例必须共享相同的主加密密钥。
 
-Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或传输加密分析凭据，所有AEM实例必须共享相同的主加密密钥。[](/help/communities/deploy-communities.md#replicate-the-crypto-key)
+为此，请按照复制加密密钥 [中的说明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
 
-### 为此，请按照复制加密密钥 [中的说明操作](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
+### 发布社区站点和Analytics云服务 {#publish-community-site-and-analytics-cloud-service}
 
-发布社区站点和Analytics云服务 {#publish-community-site-and-analytics-cloud-service}](#mapped-analytics-to-aem-variables)[](/help/communities/sites-console.md#publishing-the-site)
+为社区站点启用Analytics云服务后，并在必要时调整 [了Analytics到AEM变量的映射](#mapped-analytics-to-aem-variables)，有必要通过（重新）发布社区站点将配 [置复制到发布环境](/help/communities/sites-console.md#publishing-the-site)。
 
-## 为社区站点启用Analytics云服务后，并在必要时调整 [了Analytics到AEM变量的映射](#mapped-analytics-to-aem-variables)，有必要通过（重新）发布社区站点将配 [置复制到发布环境](/help/communities/sites-console.md#publishing-the-site)。
+## 从Analytics获取报告 {#obtaining-reports-from-analytics}
 
-### 从Analytics获取报告 {#obtaining-reports-from-analytics}
-
-报表管理 {#report-management}](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`
+### 报表管理 {#report-management}
 
 作者和主发布者的 [OSGi配置](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Management`，用于查询分析。
 
@@ -618,50 +617,52 @@ Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或�
 
 在主发布者上，查询用于提供准备报表导入程序的分析数据导入的信息。
 
-### 查询间隔默认为10秒。{#report-importer}
+查询间隔默认为10秒。
 
-报表导入程序 {#report-importer}](/help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`
+### 报表导入程序 {#report-importer}
 
 一旦发布了启用Analytics的社区站点，主发布者的 [OSGi配置](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`就可以配置为为那些未在CRXDE中单独配置的配置设置默认轮询间隔。
 
 轮询间隔控制向Adobe Analytics请求要提取并保存到SRP中的数据的 [频率](/help/communities/working-with-srp.md)。
 
-当数据可能被归类为“大数据”时，更频繁的民意测验可能会给社区站点带来很大负担。****
+当数据可能被归类为“大数据”时，更频繁的民意测验可能会给社区站点带来很大负担。
 
 默认轮询 **导入间隔** 设置为12小时。
 
-### ![chlimage_1-191](assets/chlimage_1-191.png)
+![chlimage_1-191](assets/chlimage_1-191.png)
 
-组件报表自定义 {#component-report-customization}
+### 组件报表自定义 {#component-report-customization}
 
 目前，为了自定义要跟踪的度量，在存储库中创建节点，该节点定义要为该度量生成报告的时间段。
 
-* 论坛主题目前是此自定义的唯一示例：
-* 在主发行商上，以管理权限登录。[](/help/sites-developing/developing-with-crxde-lite.md)[-ERR:REF-NOT-FOUND-
+论坛主题目前是此自定义的唯一示例：
 
-* 
+* 在主发行商上，以管理权限登录。
+* 导航到 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de)。
 
 * 在语言根的jcr:content节点下(例如，导 `/content/sites/engage/en/jcr:content),`航到为Analytics报告配置的组件。
 例如，**`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
-   * `last30Days`注意创建的时间段：
+* 注意创建的时间段：
+
    * `last30Days`
    * `last90Days`
+   * `thisYear`
 
-* `thisYear`
+* 注意节 `total`点。
 
-   * 注意节 `total`点。
    * 修改属 **`interval`** 性将覆盖报表导入程序间隔。
+   * 该值以秒为单位，并设置为4小时（14400秒）。
 
-![该值以秒为单位，并设置为4小时（14400秒）。](assets/chlimage_1-192.png)
+![chlimage_1-192](assets/chlimage_1-192.png)
 
-## ![chlimage_1-192](assets/chlimage_1-192.png)
+## 在Analytics中管理用户数据 {#manage-user-data-in-analytics}
 
-在Analytics中管理用户数据 {#manage-user-data-in-analytics}-ERR:REF-NOT-FOUND-
+Adobe Analytics提供的API允许您访问、导出和删除用户数据。 有关详细信息，请参 [阅提交访问和删除请求](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/gdpr_submit_access_delete.html)。
 
-## 
+## 资源 {#resources}
 
-* 资源 {#resources}-ERR:REF-NOT-FOUND-
-* 
+* Adobe Marketing Cloud: [分析帮助与参考](https://marketing.adobe.com/resources/help/en_US/reference/)
 * AEM: [Integrating with Adobe Analytics](/help/sites-administering/adobeanalytics.md)
+* AEM: [外部提供商的分析](/help/sites-administering/external-providers.md)
 
