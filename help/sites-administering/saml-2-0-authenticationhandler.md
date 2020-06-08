@@ -10,97 +10,101 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 translation-type: tm+mt
-source-git-commit: a44d655871308dac34671f0af2c4a0017eba5793
+source-git-commit: d559a15e3c1c65c39e38935691835146f54a356e
+workflow-type: tm+mt
+source-wordcount: '853'
+ht-degree: 0%
 
 ---
 
 
 # SAML 2.0身份验证处理程序{#saml-authentication-handler}
 
-AEM随SAML身份验证处 [理程序一起](http://saml.xml.org/saml-specifications) 提供。 此处理函数支持使用 [绑定的SAML](http://saml.xml.org/saml-specifications) 2.0身份验证请求协议（Web-SSO配置文件） `HTTP POST` 。
+AEM随SAML身份验 [证处理](http://saml.xml.org/saml-specifications) 程序一起提供。 此处理函数支持 [使用](http://saml.xml.org/saml-specifications) 绑定的SAML 2.0身份验证请求协议(Web-SSO `HTTP POST` 用户档案)。
 
 它支持：
 
-* 消息的签名和加密
+* 消息签名和加密
 * 自动创建用户
 * 将组同步到AEM中的现有组
 * 服务提供商和标识提供者启动的身份验证
 
-此处理函数将加密的SAML响应消息存储在用户节点( `usernode/samlResponse`)中，以便与第三方服务提供商进行通信。
+此处理函数将加密的SAML响应消息存储在用户节点() `usernode/samlResponse`中，以便与第三方服务提供商进行通信。
 
 >[!NOTE]
 >
->请参 [阅AEM和SAML集成的演示](https://helpx.adobe.com/cq/kb/saml-demo.html)。
+>查 [看AEM和SAML集成的演示](https://helpx.adobe.com/experience-manager/kb/simple-saml-demo.html)。
 >
->要阅读端到端社区文章，请单击：将 [SAML与Adobe Experience Manager集成](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)。
+>要阅读端到端社区文章，请单击： [将SAML与Adobe Experience Manager集成](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)。
 
 ## 配置SAML 2.0身份验证处理程序 {#configuring-the-saml-authentication-handler}
 
-通过 [Web控制台](/help/sites-deploying/configuring-osgi.md) ，可以访问称为 [Adobe Granite SAML 2.0身份验证处理程序配置的SAML](http://saml.xml.org/saml-specifications) 2.0身份验证处理程序 ****。 可以设置以下属性。
+Web控 [制台](/help/sites-deploying/configuring-osgi.md) ，提供对称为Adobe Granite SAML 2.0身份验证处理程 [序配置的访问权](http://saml.xml.org/saml-specifications)****。 可以设置以下属性。
 
 >[!NOTE]
 >
->SAML 2.0身份验证处理程序默认处于禁用状态。 要启用该处理函数，必须至少设置以下属性之一：
+>默认情况下，SAML 2.0身份验证处理程序处于禁用状态。 要启用该处理函数，必须至少设置以下属性之一：
 >
 >* 标识提供者POST URL。
 >* 服务提供商实体ID。
+
 >
 
 
 
 >[!NOTE]
 >
->SAML声明已签名，并可以选择加密。 为了使此功能正常工作，您必须在TrustStore中至少提供身份提供者的公共证书。 有关 [详细信息，请参阅将IdP证书添加到TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) 。
+>SAML声明已签名，并可以选择进行加密。 为使此工作正常，您必须至少在TrustStore中提供身份提供者的公共证书。 有关 [详细信息，请参阅将IdP证书添加到](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) TrustStore部分。
 
-**路径** Sling应使用此身份验证处理函数的存储库路径。 如果此值为空，则将禁用身份验证处理程序。
+**路径** Sling应使用此身份验证处理程序的存储库路径。 如果此为空，则将禁用身份验证处理程序。
 
-**服务排名** OSGi Framework服务排名值，用于指示调用此服务的顺序。 这是一个整数值，其中值越高，则表示优先级越高。
+**服务排名** OSGi框架服务排名值用于指示调用此服务的顺序。 这是一个整数值，其中值越高，表示优先级越高。
 
-**IDP证书别名** ：全局信任存储区中IdP证书的别名。 如果此属性为空，则禁用身份验证处理程序。 有关如何设置IdP证书，请参阅下面的“将IdP证书添加到AEM trustStore”一章。
+**IDP证书别名** 全局信任存储中IdP证书的别名。 如果此属性为空，则会禁用身份验证处理程序。 有关如何设置IdP证书，请参阅下面的“将IdP证书添加到AEM TrustStore”一章。
 
-**IDP的标识提供者URL** URL,IDP的SAML身份验证请求应发送到该IDP。 如果此属性为空，则禁用身份验证处理程序。
+**SAML身份验证** 请求应发送到的IDP的标识提供者URL。 如果此属性为空，则会禁用身份验证处理程序。
 
 >[!CAUTION]
 >
->必须将标识提供者主机名添加到 **Apache Sling Referrer Filter** OSGi配置。 有关详细 [信息，请参阅](/help/sites-deploying/configuring-osgi.md) “Web控制台”部分。
+>必须将标识提供者主机名添加 **到Apache Sling推荐人过滤器** OSGi配置。 有关详细 [信息，请参](/help/sites-deploying/configuring-osgi.md) 阅Web控制台部分。
 
-**服务提供者实体ID** ID，它通过标识提供者唯一标识此服务提供商。 如果此属性为空，则禁用身份验证处理程序。
+**服务提供商实体** ID，它通过标识提供者唯一标识此服务提供商。 如果此属性为空，则会禁用身份验证处理程序。
 
 **默认重定向** ：成功验证后要重定向到的默认位置。
 
 >[!NOTE]
 >
->此位置仅在未设置 `request-path` cookie时使用。 如果您请求配置路径下的任何页面时没有有效的登录令牌，则请求的路径将存储在cookie中
+>此位置仅在未设置 `request-path` Cookie时使用。 如果您请求配置路径下的任何页面时没有有效的登录令牌，则请求的路径将存储在cookie中
 >并且，成功验证后，浏览器将再次重定向到此位置。
 
-**User-ID属性** ，包含用于在CRX存储库中验证和创建用户的用户ID的属性的名称。
+**User-ID Attribute** 包含用于在CRX存储库中验证和创建用户的用户ID的属性的名称。
 
 >[!NOTE]
 >
 >用户ID不会从SAML断言的节 `saml:Subject` 点中获取，而是从中获取 `saml:Attribute`。
 
-**使用加密** 。无论此身份验证处理程序是否需要加密的SAML声明。
+**使用加密** 无论此身份验证处理程序是否需要加密的SAML声明。
 
-**自动创建CRX用户** -是否在身份验证成功后自动在存储库中创建非现有用户。
+**自动创建CRX用户** 成功验证后是否自动在存储库中创建非现有用户。
 
 >[!CAUTION]
 >
 >如果禁用了CRX用户的自动创建，则用户必须手动创建。
 
-**添加到组** ：用户是否应在身份验证成功后自动添加到CRX组。
+**添加到组** 成功验证后是否应将用户自动添加到CRX组。
 
-**用户组成员** ：包含此用户应添加到的CRX用户组列表的saml：属性的名称。
+**组成员** ：包含此用户应添加到的CRX组列表的saml：属性的名称。
 
-## 将IdP证书添加到AEM trustStore {#add-the-idp-certificate-to-the-aem-truststore}
+## 将IdP证书添加到AEM TrustStore {#add-the-idp-certificate-to-the-aem-truststore}
 
-SAML声明已签名，并可以选择加密。 为了使其正常工作，您必须至少在存储库中提供IdP的公共证书。 为此，您需要：
+SAML声明已签名，并可以选择进行加密。 要使此功能正常工作，您必须至少在存储库中提供IdP的公共证书。 为此，您需要：
 
-1. 请访问 *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
+1. 转到 *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
 1. 按“创建 **[!UICONTROL TrustStore”链接]**
-1. 输入TrustStore的口令，然后按 **[!UICONTROL 保存]**。
-1. 单击“管 **[!UICONTROL 理信任商店”]**。
+1. 输入TrustStore的口令，然后按“保 **[!UICONTROL 存”]**。
+1. 单击“管 **[!UICONTROL 理信任商店]**”。
 1. 上传IdP证书。
-1. 记下证书别名。 别名为 **[!UICONTROL admin#1436172864930]** ，在以下示例中。
+1. 记下证书别名。 别名 **[!UICONTROL 为admin#1436172864930]** ，如下例所示。
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
@@ -112,27 +116,27 @@ SAML声明已签名，并可以选择加密。 为了使其正常工作，您必
 
 1. 转到： [http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)
 1. 编辑用 `authentication-service` 户。
-1. 单击“帐户设置”下 **的“创建KeyStore** ” **创建KeyStore**。
+1. 单击“帐户设置” **下的“创建** KeyStore **”**&#x200B;创建KeyStore。
 
 >[!NOTE]
 >
->仅当处理程序应能对消息进行签名或解密时，才需要执行以下步骤。
+>仅当处理程序应能对消息进行签名或解密时，才需要以下步骤。
 
-1. 通过单击“选择私钥文件”来上 **传私钥文件**。 关键代表采用PKCS#8格式并采用DER编码。
-1. 单击“选择证书链文件”, **上传证书文件**。
+1. 通过单击“选择私钥文件”, **上传私钥文件**。 PKCS#8格式的密钥需要DER编码。
+1. 单击“选择证书链文 **件”上载证书文件**。
 1. 分配别名，如下所示：
 
    ![chlimage_1-373](assets/chlimage_1-373.png)
 
 ## 为SAML配置记录器 {#configure-a-logger-for-saml}
 
-您可以设置记录器以调试因错误配置SAML而可能引起的任何问题。 您可以通过以下方式执行此操作：
+您可以设置记录器以调试因错误配置SAML而可能出现的任何问题。 可通过以下方式执行此操作：
 
 1. 转到Web控制台，网址为 *http://localhost:4502/system/console/configMgr*
-1. 搜索并单击名为“ **Apache Sling Logging Logger Configuration”的条目**
+1. 搜索并单击名为Apache Sling日志记录 **器配置的条目**
 1. 使用以下配置创建记录器：
 
-   * **** 日志级别：调试
-   * **** 日志文件：logs/saml.log
-   * **** 记录器：com.adobe.granite.auth.saml
+   * **日志级别：** 调试
+   * **日志文件：** logs/saml.log
+   * **记录器：** com.adobe.granite.auth.saml
 
