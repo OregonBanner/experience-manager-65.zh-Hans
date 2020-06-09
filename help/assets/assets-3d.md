@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 translation-type: tm+mt
-source-git-commit: d17500ea7b95c90069d9c51fac5d4f3706ee4c71
+source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
 workflow-type: tm+mt
-source-wordcount: '2144'
-ht-degree: 4%
+source-wordcount: '2295'
+ht-degree: 5%
 
 ---
 
@@ -248,22 +248,19 @@ See also [Adding Dynamic Media assets to pages](/help/assets/adding-dynamic-medi
 >
 >当网页处于AEM Sites编辑模 **[!UICONTROL 式]** 时，3D Media组件会显示3D资产，但无法与资产交互。 要使资产具有交互性，您可以 **[!UICONTROL 使用预览]** 功能在页面编辑器中视图网页，并完全访问3D媒体组件的功能。
 
-## Publishing Dynamic Media 3D assets {#publishing-three-d-assets}
+## 发布静态Dynamic Media 3D资源 {#publishing-three-d-assets}
 
 Dynamic Media接受Dynamic Media中支持的各种3D文件格 *式作为静* 态内容。 静态内容意味着您可以上传和发布3D资产，但不支持与 *3D资产* 相关的动态成像或图像重新编排。 原因是Dynamic Media Imaging Server无法识别3D格式。 因此，在Dynamic Media中发布3D资产后，您可以复制一个即时URL。 3D资产的URL遵循通常的Dynamic Media URL结构。 但是，与Dynamic Media中的传统图像资产不同，您无法编辑资产URL中的任何参数。
 
+另请参 [阅获取静态资产的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)。
+
 在卡 **[!UICONTROL 片视图]**&#x200B;中，资产名称的正下方以及日期和时间的左侧会显示一个小地球图标，以指示资产已发布。 在&#x200B;**[!UICONTROL 列表视图]**&#x200B;中，**[!UICONTROL 已发布]**&#x200B;列显示已发布的资产和未发布的资产。
+
+如果您正在将AEM用作WCM，请使用此发布方法直接将Dynamic Media 3D资产添加到网页。
 
 See also [Publishing Dynamic Media assets](publishing-dynamicmedia-assets.md).
 
 另请参阅 [发布页面](/help/sites-authoring/publishing-pages.md)。
-
->[!MORELIKETHIS]
->
->如果您使用的是第三方Web内容管理系统，则可以将3D资产链接或嵌入到您的网页。
->
->请参阅[将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md)。
-
 
 **要发布Dynamic Media 3D资产，请执行以下操作：**
 
@@ -277,11 +274,23 @@ See also [Publishing Dynamic Media assets](publishing-dynamicmedia-assets.md).
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
-1. 点按 **[!UICONTROL 原始]**。 发布（或“激活”）3D资产后，如果满足以下所有3D资产条件，则URL按钮将出现在页面左下角附近：
+1. 点按 **[!UICONTROL 原始]**。 发布（或“激活”）3D资产后，如 **[!UICONTROL 果]** 满足以下所有3D资产条件，则URL按钮将显示在页面左下角附近：
    * 3D资产是受支持的格式（GLB、OBJ、STL和USDZ）。
    * 3D资源已被引入Dynamic Media图像生产系统(IPS)。
    * 将发布3D资产。
 
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
-1. 点 **[!UICONTROL 按]** URL以显示3D资产的生产URL。
+1. 点 **[!UICONTROL 按]** URL以显示3D资产的直接生产URL，您可以复制并在网页上使用它。
+
+### 使用维查看器发布Dynamic Media 3D资产的替代方法 {#alternate-publish-methods}
+
+如果您不使用AEM作为WCM，请使用以下两 *种方* 法发布Dynamic Media 3D资产。
+
+* **[!UICONTROL URL]** —— 如 **[!UICONTROL 果您使用第]** 三方Web内容管理系统，并且希望使用维查看器将Dynamic Media 3D资产链接到您的网页，请使用URL。
+
+   请参阅[将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)。
+
+* **[!UICONTROL 嵌入]** -当 **[!UICONTROL 您希望使用]** “维”查看器视图嵌入到网页中的Dynamic Media 3D资产时，请使用“嵌入”。 将嵌入代码复制到剪贴板，以便将其粘贴到网页中。 Editing of the code is not permitted in the **[!UICONTROL Embed]** dialog box.
+
+   请参 [阅在网页上嵌入Dynamic Media视频、图像查看器或维查看器](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page)。
