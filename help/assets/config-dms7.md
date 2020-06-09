@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 06301db70f763eedebeca293dd288d22248cfbf6
+source-git-commit: f671e00ad94555346190ecb98c905441ad111e18
 workflow-type: tm+mt
 source-wordcount: '5777'
 ht-degree: 7%
@@ -110,6 +110,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
          * **[!UICONTROL 继承]** -文件夹上没有显式同步值； 相反，文件夹会从其上级文件夹之一或云配置中的默认模式继承同步值。 通过工具提示显示继承的详细状态。
          * **[!UICONTROL 为子文件夹启用]** -在此子树中包含所有内容，以便同步到Dynamic Media。 特定于文件夹的设置将覆盖云配置中的默认模式。
          * **[!UICONTROL 对子文件夹禁用]** -排除此子树中的所有内容，使其无法同步到Dynamic Media。
+
    >[!NOTE]
    >
    >DMS7中不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
@@ -118,7 +119,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    >激活资产后，所有更新都将立即实时发布到S7投放。
 
 1. 点按&#x200B;**[!UICONTROL 保存]**。
-1. 要在发布Dynamic Media内容之前安全地预览它，您需要将AEM作者实例“列入白名单”才能连接到Dynamic Media:
+1. 要在发布Dynamic Media内容之前安全地预览它，您需要“允许列出”AEM作者实例才能连接到Dynamic Media:
 
    * 登录您的Dynamic Media Classic帐户： [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)。 您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
    * 在页面右上方的导航栏上，单击“设置”>“应 **[!UICONTROL 用程序设置”>“发布设置”>“图像服务器]**”。
@@ -374,7 +375,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
    请注 **[!UICONTROL 意]**,视图表单（如“详细信息”页面右上角所设置）是默认视图。
 
-1. 在预设列表面板中，点 **[!UICONTROL 按添]** 加以激活屏幕右侧“详细信息”面板中的定义字段。
+1. 在预设列表面板中，点 **[!UICONTROL 按]** “添加”以激活屏幕右侧“详细信息”面板中的定义字段。
 1. 在“详细信息”面板的“预设名称”字段中，键入预设的名称。
 1. 在批集类型下拉菜单中，选择预设类型。
 1. 执行下列操作之一：
@@ -626,7 +627,7 @@ Scene7上传连接设置将AEM资产同步到Dynamic Media Classic服务器。
 
    请注意， `dc:format` 资产的 `Fiji Red.jpg` 属性 `image/jpeg`是
 
-   要使此滤镜应用于所有图像（无论其格式如何），请将值设 `image/*` 置 `*` 为应用于任何格式的所有图像的常规表达式。
+   要使此滤镜应用于所有图像（无论其格式如何），请将值设 `image/*` 置为 `*` 应用于任何格式的所有图像的常规表达式。
 
    要使滤镜仅应用于JPEG类型的图像，请输入值 `image/jpeg`。
 
