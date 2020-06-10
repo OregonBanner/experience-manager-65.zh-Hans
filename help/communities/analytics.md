@@ -243,7 +243,7 @@ For example, enter *communities*
 
 * 选择确 **定**
 
-![chlimage_1-101](assets/chlimage_1-181.png)
+![chlimage_1-181](assets/chlimage_1-181.png)
 
 ### 创建框架 {#create-framework}
 
@@ -376,7 +376,7 @@ Analytics可自动用于多个Communities功能。
 
 ### 组件配置 {#component-configuration}
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![chlimage_1-185](assets/chlimage_1-186.png)
 
 >[!NOTE]
 >
