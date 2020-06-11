@@ -4,99 +4,97 @@ description: Adobe Experience Manager 6.5 Service Pack 5的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc423a199e860429e85895690f6c1a81c20d1a19
+source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
 workflow-type: tm+mt
-source-wordcount: '1853'
-ht-degree: 4%
+source-wordcount: '1849'
+ht-degree: 2%
 
 ---
 
 
-# AEM 6.5 Service Pack 5的新增功能 {#aem-whats-new-service-pack-5}
+# Adobe Experience Manager 6.5 Service Pack 5的新增功能 {#aem-whats-new-service-pack-5}
 
-Adobe Experience Manager 6.5服务包每季度向您提供新功能、客户请求的增强功能、性能和稳定性相关改进。 季度投放模型使得访问和采用新功能和创新变得更加容易。
+Adobe Experience Manager 6.5服务包每季度提供新功能、客户要求的增强功能以及性能、稳定性和安全性改进。 每季度上市使访问和采用新功能和创新变得很容易。
 
-本文重点介绍最新6.5 Service Pack包含的功 [能、先前6.5 Service Pack包含的主要功能](#key-features-previous-service-packs)，以及 [Experience Manager 6.5.4.0发布后的部分主要版本](#key-features-sice-sp3) 。
+本文重点介绍最新6.5 Service Pack包含的功 [能、先前6.5 Service Pack包含的主要功能](#key-features-previous-service-packs)，以及 [Experience Manager 6.5.4.0发布后的部分主要版本](#key-releases-since-last-sp) 。
 
-## AEM Sites {#aem-sites}
+## Adobe Experience Manager Sites {#aem-sites}
 
 ### 辅助功能改进 {#accessibility-sites}
 
-* 通过添加文本信息改进错误报告
+* 通过添加文本信息改进了错误报告。
 
-* 改进了键盘导航期间的UI焦点
+* 改进了键盘导航期间的用户界面焦点。
 
-* 改进的文本对比度（光度比）
+* 改进了各种用户界面元素的对比度。
 
-* 改进了页面图像的替代属性的一致性
+* 改进了页面图像的替代属性的一致性。
 
-* 改进了可访问的富Internet应用程序(ARIA)标签的一致性
+* 改进了可访问的富Internet应用程序(ARIA)标签的一致性。
 
-* 改进的非可视桌面访问(NVDA)功能
+* 改进了非可视桌面访问(NVDA)功能。
 
-* 改进的屏幕阅读器支持
+* 改进了屏幕阅读器支持。
 
 ### 其他重要增强功能 {#other-enhancements-sites}
 
 * 现在，在复制或粘贴页面树时，您可以选择粘贴根页面或将根页面与树的子页面一起粘贴。
 
-* AEM Experience Fragments exported to Adobe Target workspaces now appear as unique offer types and offer sources in [!DNL Target].
+* [!DNL Adobe Experience Manager Experience Fragments] 导出到工 [!DNL Adobe Target] 作区时，现在在中显示为唯一的优惠类型和优惠源 [!DNL Target]。
 
-* 多站点管理器——如果组件从源页面中删除，则发布触发器现在可成功从已发布页面中删除组件。
+* 多站点管理器——如果某个组件从源页面中删除，则发布触发器现在会从已发布页面中删除该组件。
 
-* 多站点管理器——当LiveCopy中的本地组件名称与蓝图中的组件名称相同且从蓝图中转出组件时，_msm_moved术语现已成功添加到本地组件的名称中。
+* 多站点管理器——当Live Copy中的本地组件的名 [!UICONTROL 称与] Blueprint中的组件的名称相同且组件从Blueprint中转出时，该术语现 `_msm_moved` 在会添加到本地组件的名称中。
 
-## AEM Assets {#aem-assets}
+## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-### 资源中的辅助功能增强 {#assets-accessibility}
+### 中的辅助功能增强 [!DNL Assets] {#assets-accessibility}
 
-[!DNL Adobe Experience Manager] 资源功能现在符合Web内容可访问性准则(WCAG)更易于访问。 辅助功能在以下方面有所改进：
+[!DNL Experience Manager Assets] 现在可根据Web内容辅助功能准则(WCAG)更方便地访问。 辅助功能因以下增强而得到改进：
 
-* 用户界面元素、控件、页面和对话框对屏幕阅读器友好。
+* 许多用户界面元素、控件、页面和对话框都是屏幕阅读器友好的。
 
-* 用户界面元素、控件和输入表单字段可使用键盘访问。
+* 许多用户界面元素、控件和输入表单字段都可使用键盘进行访问。
 
-* 某些图形的颜色和对比度的更改可由视觉有限且无颜色感知的用户区分。 例如，星级图标的颜色(如资产属性 [!UICONTROL 中] “高级”选 [!UICONTROL 项卡的] “评级 [!UICONTROL ”部分或] 卡视图中)会更改为适当的对比度。
+* 更新某些用户界面元素的颜色和对比度，以便视觉受限的用户或没有颜色感知的用户能够区分这些用户界面元素。 例如，星级图标的颜色(如资产属性 [!UICONTROL 中] “高级”选 [!UICONTROL 项卡的] “评级 [!UICONTROL ”部分或] 卡视图中)会更改为适当的对比度。
 
-![星级图标的颜色已更改以提高对比度](assets/star-rating-icons.png)
+   ![对比度提高的等级图标](assets/star-rating-icons.png)
 
 ### 增强的异常处理 {#exception-handling}
 
-资产用户界面流具有更好的异常处理。 早前，如果资产的维度没有正确类型，则会发现异常，该异常以静默方式捕获，日志中没有跟踪。 此行为已更改，所有异常都捕获在日志中。
+[!DNL Assets] 用户界面流具有更好的异常处理。 如果资产的维度没有类型，则在日志文件中记录观察到的异常。
 
-## [!DNL Dynamic Media] {#dynamic-media}
+### 支持 [!DNL Dynamic Media] {#support-for-3d}
 
-### 3D支持 [!DNL Dynamic Media] {#support-for-3d}
+中的3D图像支 [!DNL Dynamic Media] 持使客户能够发布3D内容并将其添加到网页和应用程序。 支持包括：
 
-现在，中的3D [!DNL Dynamic Media] 支持使客户能够发布3D内容并将3D内容添加到网页和应用程序。 它包括：
+* 发布常见的3D资产格式，并生成可在网页和其他应用程序中使用的资产URL。
 
-* 发布常用3D资产格式以生成资产URL。
+* 3D Web查看器，以交互 [!DNL Adobe Dimension]方式视图已发布的3D资源。
 
-* 使用查看器库（由Adobe Dimension提供支持）中提供的新3D Web查看器， [!DNL Dynamic Media] 交互式查看已发布的3D资产。
+* 使用WCM组件在页面上发 [!DNL Experience Manager Sites] 布和视图常 [!DNL Sites] 用3D资产。
 
-* 使用WCM组件在页 [!DNL Experience Manager Sites] 面上进行 [!DNL Sites] 3D发布和查看。
+## Adobe Experience Manager Forms {#aem-forms}
 
-## AEM Forms {#aem-forms}
+### 自定义Adobe Experience Manager收件箱列 {#customize-aem-inbox-columns}
 
-### 自定义AEM收件箱列 {#customize-aem-inbox-columns}
+您可以自定义收 [!DNL Experience Manager] 件箱以更改列的默认标题，对列的位置重新排序，并根据工作流的数据显示其他列。 列或组 `administrators` 的 `workflow-administrators` 成员可以自定义列。
 
-您可以自定义AEM收件箱，以更改列的默认标题、对列的位置重新排序，以及根据工作流的数据显示其他列。 您应是列的成 `administrators` 员或 `workflow-administrators` 组成员以自定义列。
-
-![自定义AEM收件箱列](assets/customize-columns.gif)
+![自定义Experience Manager收件箱列](assets/customize-columns.gif)
 
 ### 将交互通信另存为草稿 {#save-as-draft}
 
-您可以使用代理UI为每个交互式通信保存一个或多个草稿，稍后检索草稿以继续处理它。 您可以为每个草稿指定不同的名称，以便更容易识别。
+您可以使用代理UI为每个交互式通信保存一个或多个草稿，稍后检索草稿以继续处理它。 您可以为每个草稿指定一个不同的名称以标识它。
 
 ![另存为草稿](assets/save-as-draft.gif)
 
 ### [!DNL Oracle WebLogic] 应用服务器支持 {#weblogic-support}
 
-AEM Forms已添加对JEE [!DNL Oracle WebLogic 12] 上的AEM Forms的支持。 您可以从先前版本升级，或在12.2.1.4及更高版本的JEE服务器上 [!DNL Oracle WebLogic] 设置新的AEM 6.5 Forms。 稍后的版本更改与次要版本更改相对应，其中12.2.1.x中的x替换为版本号。
+Adobe Experience Manager Forms已在JEE上增 [!DNL Oracle WebLogic 12] 加了对Adobe Experience Manager Forms的支持。 您可以从先前版本升级，或在JEE服务器上的12.2.1.4及更高版本 [!DNL Oracle WebLogic] 设置新的Experience Manager 6.5 Forms。 稍后的版本更改与次要版本更改相对应，其中12.2.1.x中的x替换为版本号。
 
 ### 辅助功能改进 {#accessibility-improvements}
 
-AEM Forms包含以下辅助功能增强：
+Adobe Experience Manager Forms包含以下辅助功能增强功能：
 
 * 当用户将自适应表单预览为HTML表单时，“涂 [!UICONTROL 抹签名] ”字段将保留选项卡焦点。
 
@@ -110,13 +108,13 @@ AEM Forms包含以下辅助功能增强：
 
 ### 其他主要改进 {#other-improvements}
 
-* JEE文档安全上的AEM 6.5表单现在基于 [!DNL Apache Struts 2]。
+* JEE文档安全上的Experience Manager 6.5表单现在基于 [!DNL Apache Struts 2]。
 
 * 增加了对的 [!DNL Oracle Real Applications Cluster (RAC) 19c]支持。
 
-## 先前AEM 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
+## 以前的Experience Manager 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
-### AEM Sites {#aem-sites-previous-service-packs}
+### Experience Manager Sites {#aem-sites-previous-service-packs}
 
 #### 样式系统增强(6.5.4.0) {#style-system-enhancements}
 
@@ -126,37 +124,35 @@ AEM Forms包含以下辅助功能增强：
 
 * 缩短了在站点()中加载和初始化ContextHub的`contexthub.kernel.js`时间。 这样，在网站访问过程中页面加载速度会更快。
 
-* 将体验片段拖动到站点页面编辑器后，可缩短刷新页面的时间。
+* 缩短了拖动到页面编辑器后刷新 [!DNL Experience Fragments] 页面 [!DNL Sites] 的时间。
 
-* 缩短了“站点”页面上包含200个以上Live Copy概述的条目 **[!UICONTROL 的加载时间]**。
+* 缩短了Live Copy概述中包含 [!DNL Sites] 超过200个Live Copy的页面上条目 **[!UICONTROL 的加载时间]**。
 
 * 改进了对不完整或无效URL的处理。 此类URL会减慢模板编辑器的速度。
 
-### AEM Assets {#aem-assets-previous-service-packs}
+### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
 
-#### Configure AEM Assets with Brand Portal (6.5.4.0) {#configure-assets-bp}
+#### 配 [!DNL Experience Manager Assets] 置 [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-AEM资产与Brand Portal之间的授权渠道已更改。 以前，品牌门户通过旧版OAuth网关在经典UI中配置，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 AEM资产现在通过Adobe I/O配置了Brand Portal,Adobe I/O为您的Brand Portal租户购买IMS令牌以授权。
+和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过Adobe [!DNL Brand Portal] I/O进行配置，Adobe I/O为租户提供IMS令牌以进行授 [!DNL Brand Portal] 权。
 
-根据AEM版本以及您是首次配置还是升级现有配置，使用Brand Portal配置AEM资产的步骤会有所不同。 有关详 [细信息，请参阅配置AEM资产与Brand](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) Portal。
+使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产与Brand](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) Portal。
 
 #### Accessibility enhancements (6.5.4.0) {#accessibility-enhancements}
 
-Experience Manager Assets包括以下辅助功能增强功能：
+[!DNL Experience Manager Assets] 包括以下辅助功能增强：
 
 * 键盘上的箭头键可用于移动和平移缩放图像中的区域。 有关详细信息，请参阅 [仅使用键盘键预览资源](../assets/managing-assets-touch-ui.md#previewing-assets)。
 
 * 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
-* 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
+* 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。 For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
 
-   For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
+* 屏幕阅读器会 `X` 通知删除选定标记和选定标记数的符号。
 
-* 用 `X` 于删除当前选定标记的按钮上的符号现在由屏幕阅读器和选定标记的数量一起宣布。
+#### 可视 [!DNL Adobe Experience Manager Assets] 搜索(6.5.2.0) {#visual-search}
 
-#### AEM资产的可视搜索(6.5.2.0) {#visual-search}
-
-资产用户可以直观地搜索相似图像。AEM 显示 DAM 存储库中与用户所选图像相似的智能标记图像。See [Visual search](../assets/search-assets.md).
+[!DNL Assets] 用户可以搜索视觉上相似的图像。 Experience Manager显示来自DAM存储库的与用户选择的图像类似的标记智能图像。 See [Visual search](../assets/search-assets.md).
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
@@ -168,9 +164,9 @@ Experience Manager Assets包括以下辅助功能增强功能：
 
 视频智能裁剪是视频用户档案中的一项可选功能，它是一款工具，可利用Adobe Sensei中人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。 请参 [阅关于在视频用户档案中使用智能裁剪](../assets/video-profiles.md)。
 
-### AEM Forms {#aem-forms-previous-service-packs}
+### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### 在AEM Forms工作流(6.5.4.0)中生成可打印输出 {#generate-printable-output}
+#### 在Experience Manager Forms工作流(6.5.4.0)中生成可打印输出 {#generate-printable-output}
 
 使用“生成可打印输出”工作流步骤，您可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流程——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
 
@@ -182,15 +178,15 @@ Experience Manager Assets包括以下辅助功能增强功能：
 
 ![多列布局](assets/multi-column-layout.gif)
 
-#### AEM收件箱自定义(6.5.4.0) {#aem-inbox}
+#### Experience Manager收件箱自定义(6.5.4.0) {#aem-inbox}
 
 新的“管理控制”选项使管理员能够：
 
-* 自定义标题文本和徽标
+* 自定义标题文本和徽标。
 
-* 控制标题中可用导航链接的显示
+* 控制标题中可用导航链接的显示。
 
-“管理员控制”选项仅对管理员或工作流管理员组的成员可见。 有关此功能的详细信息，请参 [阅您的收件箱](../sites-authoring/inbox.md)。
+“管理控制”选项仅对或组的成员 `administrators` 可 `workflow-administrators` 见。 有关此功能的详细信息，请参 [阅您的收件箱](../sites-authoring/inbox.md)。
 
 #### HTML5表单中的富文本支持(6.5.4.0) {#rich-text-support}
 
@@ -204,33 +200,34 @@ Experience Manager Forms包括以下辅助功能增强功能：
 
 * 自适应表单的每页现在包含一个标题和一个主要地标标签。
 
-#### 共享和请求对AEM Forms用户收件箱项目的访问权限(6.5.3.0) {#share-request-access}
+#### 共享并请求访问Experience Manager Forms用户(6.5.3.0)的收件箱项目 {#share-request-access}
 
 您可以与其他用户共享您的收件箱项目。 当其他用户获得对您的收件箱项目的访问权限后，用户可以声明共享项目并采取相应操作。 同样，您也可以请求其他用户访问收件箱项目。 请参 [阅共享和请求对用户收件箱项目的访问权限](../forms/using/configure-shared-queues-osgi.md)。
 
 #### 为AEM Forms用户(6.5.3.0)的收件箱项目配置办公室外设置 {#configure-out-of-office}
 
-如果您计划离开办公室，您可以指定对分配给您的该期间的项目会发生什么情况。
+如果您计划不在办公室，您可以指定对分配给您的该期间项目会发生什么情况。
 您可以选择指定开始日期、时间以及结束日期和时间，以使您的离职设置生效。 您可以设置将所有项目发送给的默认人员。 请参 [阅配置外出设置](../forms/using/configure-out-of-office-settings.md)。
 
 #### 使用AEM Forms的Batch API(6.5.3.0)生成多个交互式通信 {#generate-multiple-ic}
 
 您可以使用批处理API从模板生成多个交互式通信。 模板是无任何数据的交互式通信。 批处理API将数据与模板相结合以生成交互式通信。 API在大规模制作交互式通信中非常有用。 例如，电话单、多个客户的信用卡对帐单。 请参 [阅使用Batch API生成多个交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-## AEM 6.5 SP4后的主要发行版 {#key-releases-since-last-sp}
+## Adobe Experience Manager 6.5 SP4后的主要版本 {#key-releases-since-last-sp}
 
-在2020年3月5日至2020年6月4日之间，Adobe发布了下列AEM可交付内容之外的功能：
+在2020年3月5日至2020年6月04日之间，Adobe除了发布服务包和累积修复包外，还发布了以下软件：
 
-* AEM Cloud Manager [2020.3](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-3-0.html).0 [、2020.4](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-4-0.html).0 [和2020.5.0](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)
+* [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 可用于下载Experience Manager服务包、累积修复包、热修复和功能包。
 
-* [AEM资产： 桌面应用程序2.0.2.0](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html)
+* [!DNL Adobe Experience Manager Cloud Manager] [2020.3.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-3-0.html)、 [2020.4.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-4-0.html)和 [2020.5.0](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)。
 
-* [AEM Screens: 功能包202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)
+* [Experience Manager桌面应用程序2.0.2.0](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html)。
 
-## 有用资源
+* [Experience Manager屏幕： 功能包202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)。
 
-* [AEM 6.5用户指南](../user-guide/home.md)
+>[!MORELIKETHIS]
+>
+>* [Adobe Experience Manager 6.5文档](../user-guide/home.md)
+>* [Adobe Experience Manager 6.5的一般发行说明](release-notes.md)
+>* [Adobe Experience Manager 6.5的Service Pack发行说明](sp-release-notes.md)
 
-* [Adobe Experience Manager 6.5 的一般发行说明](release-notes.md)
-
-* [Adobe Experience Manager 6.5的Service Pack发行说明](sp-release-notes.md)
