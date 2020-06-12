@@ -3,9 +3,9 @@ title: 集 [!DNL Adobe Experience Manager Assets] 成 [!DNL Adobe InDesign Serve
 description: 了解如何 [!DNL Adobe Experience Manager Assets] 集成 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1560'
 ht-degree: 4%
 
 ---
@@ -195,18 +195,19 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
    如果有多台计算机正在运行， [!DNL InDesign Server]请为每台计算机添加SOAP端点（每台计算机的处理器数-1）。
 
-   >[!NOTE]
-   >
-   >您可以选择在处理IDS工作人员池时启用黑名单。
-   >
-   >
-   >要执行此操作，请 **[!UICONTROL 在配置下启用]** enable.retry.name复 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 选框，该配置启用IDS作业检索。
-   >
-   >
-   >此外，在配 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 置下，为参数设置一个正值，该 `max.errors.to.blacklist` 参数在禁止IDS进入作业处理程序列表之前确定作业检索的数量。
-   >
-   >
-   >默认情况下，在以分钟为单位的可配置(retry.interval.to.whitelist.name)时间后，IDS工作者将重新验证。 如果在线找到该工作者，则从黑名单中删除该工作者。
+<!-- 
+TBD: Make updates to configurations for allow and block list after product updates are done.
+-->
+
+>[!NOTE]
+>
+>使用Worker池时，可以启用IDS Worker的被阻止列表。
+>
+>要执行此操作，请 **[!UICONTROL 在配置下启用]** enable.retry.name复 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 选框，该配置启用IDS作业检索。
+>
+>此外，在配 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 置下，为参数设置一个正值，该 `max.errors.to.blacklist` 参数在禁止IDS进入作业处理程序列表之前确定作业检索的数量。
+>
+>默认情况下，在IDS工作`retry.interval.to.whitelist.name`器经过可配置（分钟）时间重新验证后。 如果在线找到该工作者，则从被阻止的列表中删除该工作者。
 
 ## 支持10. [!DNL InDesign Server] 0或更高版本 {#enabling-support-for-indesign-server-or-later}
 
