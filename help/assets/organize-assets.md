@@ -3,7 +3,7 @@ title: 组织您的数字资产
 description: 使用Experience Manager整理您的数字资产、图像、文件、文件夹等。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 1%
