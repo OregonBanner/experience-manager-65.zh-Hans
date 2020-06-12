@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 85a93dfa3bcacfb0820029642c03b2d35552121f
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '9304'
+source-wordcount: '9303'
 ht-degree: 8%
 
 ---
@@ -63,6 +63,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    * 在工具栏中，单击创 **[!UICONTROL 建]** 图标。 然后，在菜单中，单击“ **[!UICONTROL 文件]**”。 如果需要，可以重命名显示的对话框中的文件。
    * 在支持HTML5的浏览器中，直接将资源拖动到用户 [!DNL Assets] 界面上。 不显示要重命名文件的对话框。
+
    ![创建选项以上传资产](assets/create-options.png)
 
    要选择多个文件，请按Ctrl或Command键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
@@ -119,6 +120,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    * 资产文件名不能包含 `* / : [ \\ ] | # % { } ? &`
    * 资产文件夹名称不能包含 `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
    不要在资源文件名的扩展名中包含特殊字符。
 
    ![上传进度对话框显示成功上传的文件和无法上传的文件的状态](assets/chlimage_1-10.png)
@@ -197,7 +199,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 上传图像文件（包括AI、EPS和PSD文件）时，可以在“上传作业选项”对话框中执 [!UICONTROL 行以下编辑] 操作：
 
-* 从图像边缘裁切空白（请参阅上表中的说明）。
+* 从图像边缘裁切空格（请参阅上表中的说明）。
 * 从图像两侧手动裁切（请参阅上表中的说明）。
 * 选择颜色用户档案（请参阅上表中的选项说明）。
 * 从剪切路径创建蒙版。
@@ -350,6 +352,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 1. 要放大资产，请执行以下操作：
    1. 使 `Tab` 用键移动焦点以放大图标。
    1. 使 `Enter` 用键放大图像。
+
    要缩小，请 `Tab` 使用键将焦点移到缩小图标，然后按 `Enter`。
 
 1. 使用 `Shift` + `Tab` 键将焦点移回图像上。
@@ -407,6 +410,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * 资产的查看或下载次数
    * 渠道/设备，资产通过这些设备
    * 最近使用该资产的创意解决方案
+
    有关详细信息，请参阅 [资产分析](/help/assets/touch-ui-asset-insights.md)。
 
 1. Click **[!UICONTROL Save &amp; Close]**.
@@ -480,6 +484,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** screen.
 
    * 单击 **[!UICONTROL 取消]** ，以停止移动操作。
+
    如果您不更新引用，则它们会继续指向资产的上一路径。 如果您调整引用，它们将更新为新的资产路径。
 
 ## 管理再现 {#managing-renditions}
@@ -555,6 +560,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
       * 如果资产没有引用，则资产会被删除。
       * 如果资产具有引用，则会出现一条错误消息，通知您&#x200B;**一个或多个资产被引用**。您可以选择&#x200B;**[!UICONTROL 强制删除]**&#x200B;或&#x200B;**[!UICONTROL 取消]**。
+
    >[!NOTE]
    >
    >要删除资产，用户需要具有的删除权限 `dam/asset`。 如果您只具有修改权限，则只能编辑资产元数据并向资产添加注释。 但是，您无法删除资产或其元数据。
@@ -607,6 +613,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    * **[!UICONTROL 取消]** ，停止操作
    * **[!UICONTROL 取消发布]** ，以确认在指定日期已取消发布资产(在发布环境中不再可用)。
+
    >[!NOTE]
    >
    >取消发布复杂资产时，仅取消发布该资产。请避免取消发布引用，因为可能其他已发布的资产也引用了这些内容。
@@ -650,7 +657,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 您可以使用选择选项视图、导航和选择具有任何可用视图(卡片、列和列表)的 **[!UICONTROL 资产]** 。
 
-在列表视图和列视图中，当 **[!UICONTROL 将指针]** 悬停在资产缩略图上时，将显示选择选项。
+在列表视图和列视图中，当您将指 **[!UICONTROL 针悬停在]** 资产缩略图上时，将显示选择选项。
 
 ![在列表视图中选择资产](assets/select_quick_in_listview.png)
 
@@ -677,6 +684,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
    * 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的编辑图标。
    * Click the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
    * 在资产页面中，单击工 **[!UICONTROL 具栏]** 中的编辑图标。
+
    ![工具栏中的编辑图标](assets/edit_icon.png)
 
 1. To crop the image, click the **Crop** icon.
@@ -749,6 +757,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    * [快速操作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在选择资产或导航到资产页面后，从工具栏中
+
    ![注释图标](assets/chlimage_1-29.png)
 
 1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
@@ -794,7 +803,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 要视图已保存的资产注释，请导航到资产所在的位置，然后打开资产页面。
 
-1. 单击GlobalNav图标，然后从 **[!UICONTROL 列表]** 中选择“时间轴”。
+1. 单击GlobalNav图标，然后从 **[!UICONTROL 列表]** 中选择时间轴。
 
    ![GlobalNav图标上的可用选项](assets/chlimage_1-35.png)
 
@@ -940,6 +949,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 1. 要比较图像的两个版本，请执行以下步骤：
    * 单击要与当前版本进行比较的版本。
    * 向左拖动滑块，将此版本叠加到当前版本上并进行比较。
+
    ![使用滑块将资产的选定版本与当前版本进行比较](assets/version-slider.gif)
 
    *图： 使用滑块可轻松将资产的选定版本与当前版本进行比较。*
