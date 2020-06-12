@@ -3,7 +3,7 @@ title: 准备要翻译的资产
 description: 创建语言根文件夹以准备资产进行翻译以支持多语言资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 每个语言文件夹都称为语言副本。 语言副本的根文件夹（称为语言根）标识语言副本中内容的语言。 例如， */content/dam/it* 是意大利语语言副本的意大利语根。 语言副本必须使用 [正确配置的语言根](preparing-assets-for-translation.md#creating-a-language-root) ，以在执行源资产翻译时锁定正确的语言。
 
-您最初为其添加资产的语言副本是语言母版。 语言母版是翻译成其他语言的源。 示例文件夹层次结构包括几个语言根：
+您最初为其添加资产的语言副本是主要语言。 主语言是翻译成其他语言的源。 示例文件夹层次结构包括几个语言根：
 
 ```
  /content
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 请执行以下步骤来准备要翻译的资产：
 
-1. 创建语言母版的语言根。 例如，示例文件夹层次结构中英语副本的语言根目录为 `/content/dam/en`。 确保根据“创建语言根”中的信息正确 [配置语言根](preparing-assets-for-translation.md#creating-a-language-root)。
+1. 创建主语言的语言根。 例如，示例文件夹层次结构中英语副本的语言根目录为 `/content/dam/en`。 确保根据“创建语言根”中的信息正确 [配置语言根](preparing-assets-for-translation.md#creating-a-language-root)。
 
-1. 将资源添加到语言母版。
+1. 将资产添加到主语言。
 1. 创建您需要语言副本的每种目标语言的语言根。
 
 ## 创建语言根 {#creating-a-language-root}
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 Experience Manager界面提供 **[!UICONTROL 一个]** “引用”面板，其中显示在资产中创建的语言根列表。
 
-1. 在“资产”控制台中，选择要为其创建语言副本的语言母版。
+1. 在“资产”控制台中，选择要为其创建语言副本的语言主要版本。
 1. 单击GlobalNav图标，然后选择“ **[!UICONTROL 引用]** ”以打开“ [!UICONTROL 引用] ”窗格。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
