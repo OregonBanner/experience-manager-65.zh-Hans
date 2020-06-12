@@ -3,9 +3,9 @@ title: Adobe Creative Cloud和集 [!DNL Adobe Experience Manager] 成最佳实�
 description: 整合的最佳 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 实践，可简化资产转让工作流并实现高内容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3249'
 ht-degree: 16%
 
 ---
@@ -160,7 +160,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 #### 直接访问DAM的创意用户 {#creative-users-with-direct-access-to-dam}
 
-通常，内部创意团队或已加入内部网络的代理／创意专业人士有权访问DAM实例，包括登 [!DNL Experience Manager] 录。 [!DNL Experience Manager] 网络基础架构可以设置为允许直接访问外部方，例如通过VPN或IP白名单等网络访问。外部方通常是受信任的组织， [!DNL Experience Manager] 如为客户工作的机构。
+通常，内部创意团队或已加入内部网络的代理／创意专业人士有权访问DAM实例，包括登 [!DNL Experience Manager] 录。 [!DNL Experience Manager] 网络基础架构可以设置为允许直接访问外部方——通常是受信任的组织，如为客户工作的代理——通过网络 [!DNL Experience Manager] 访问，例如通过VPN或IP允许的列表。
 
 在这种情况下，Adobe Asset Link或桌面 [!DNL Experience Manager] 应用程序可帮助您轻松访问最终／批准的资产，并可将创意就绪资产保存到DAM。
 
@@ -173,7 +173,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 * 如果资产链接不起作用，请使用桌面应用程序。
 * 使用 [Experience Manager Assets Brand Portal](https://helpx.adobe.com/cn/experience-manager/brand-portal/user-guide.html) ，将资产安全地分发给外部合作伙伴
 * 使用基于资源共享的分发和采购门户的自 [定义实现](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* 使用在必要的网 [!DNL Experience Manager] 络基础架构（例如，VPN和IP白名单）中设置的访问控制，使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
+* 使用在必要的网 [!DNL Experience Manager] 络基础架构中设置的访问控制(例如，VPN和IP允许列表)，使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
 
 #### 正在处理的资产 [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
