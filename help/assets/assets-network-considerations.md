@@ -3,9 +3,9 @@ title: 资产网络注意事项和要求
 description: 在设计Adobe Experience Manager资产部署时讨论网络注意事项。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 首先绘制单个客户端设备与公司网络之间的连接图。 在此阶段，识别共享资源，如WiFi连接，其中多个用户访问同一点或以太网交换机以上传和下载资源。
 
-![chlimage_1-353](assets/chlimage_1-353.png)
+![chlimage_1-355](assets/chlimage_1-353.png)
 
 客户端设备以各种方式连接到公司网络，如共享WiFi、以太网到共享交换机和VPN。 识别和了解此网络上的关键点对于资产规划和修改网络非常重要。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ## 公司网络的拓扑 {#topology-of-the-corporate-network}
 
-![chlimage_1-356](assets/chlimage_1-354.png)
+![chlimage_1-354](assets/chlimage_1-354.png)
 
 该图表显示公司网络内的上行链路速度高于通常使用的速度。 这些管道是共享资源。 如果共享交换机应处理50个客户端，它可能是一个瓶颈。 在初始图中，只有两台计算机共享特定连接。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 在此示例中，企业有10 Gbps上行链路。 它应该足够大，可用于多个客户端。 此外，防火墙规定主机速率限制为10 Mbps。 此限制可能会将到单台主机的流量限制为10 Mbps，即使到Internet的上行链路为10 Gbps。
 
-这是最小的、面向客户端的瓶颈。 但是，您可以评估是否有更改或白名单，由负责此防火墙的网络操作组进行。
+这是最小的、面向客户端的瓶颈。 但是，您可以评估是否对此防火墙的网络操作组进行了更改或配置允许的列表。
 
 从示例图中，您可以得出六个设备共享概念性的10Mbps渠道。 这可能不足以满足用户的期望，具体取决于利用的资产的规模。
 
