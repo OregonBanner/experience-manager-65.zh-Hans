@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.5 Service Pack 5的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 2%
@@ -56,9 +56,9 @@ Adobe Experience Manager 6.5服务包每季度提供新功能、客户要求的�
 
 * 许多用户界面元素、控件和输入表单字段都可使用键盘进行访问。
 
-* 更新某些用户界面元素的颜色和对比度，以便视觉受限的用户或没有颜色感知的用户能够区分这些用户界面元素。 例如，星级图标的颜色(如资产属性 [!UICONTROL 中] “高级”选 [!UICONTROL 项卡的] “评级 [!UICONTROL ”部分或] 卡视图中)会更改为适当的对比度。
+* 某些用户界面元素的颜色和对比度被更新，以便视觉受限的用户或没有颜色感知的用户能够区分这些用户界面元素。 例如，星级图标的颜色(如资产属性 [!UICONTROL 中] “高级”选 [!UICONTROL 项卡的] “评级 [!UICONTROL ”部分或] 卡视图中)会更改为适当的对比度。
 
-   ![对比度提高的等级图标](assets/star-rating-icons.png)
+   ![对比度得到改善的等级图标](assets/star-rating-icons.png)
 
 ### 增强的异常处理 {#exception-handling}
 
@@ -146,9 +146,10 @@ Adobe Experience Manager Forms包含以下辅助功能增强功能：
 
 * 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
-* 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。 For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
+* 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
+For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
 
-* 屏幕阅读器会 `X` 通知删除选定标记和选定标记数的符号。
+* 屏幕阅读器现在 `X` 会宣布删除选定标记的符号以及选定标记的数量。
 
 #### 可视 [!DNL Adobe Experience Manager Assets] 搜索(6.5.2.0) {#visual-search}
 
