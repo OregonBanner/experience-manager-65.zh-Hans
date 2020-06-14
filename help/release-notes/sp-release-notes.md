@@ -4,9 +4,9 @@ description: 以下发行说明特定于 Adobe Experience Manager 6.5 Service Pa
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cb48bba01b78a0724f3a07875f601367520b2a8e
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
-source-wordcount: '4508'
+source-wordcount: '4510'
 ht-degree: 7%
 
 ---
@@ -93,7 +93,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 可单击的元素（如注释卡、版本更新、组合框和菜单的V形图标）现在可以使用键盘进行集中处理并与之交互(NPR-33514)。
 
-* 屏幕阅读器现在可以正确地宣布Insights视图上的洞察图标( [!UICONTROL 用于使用] 、展示和点击)的功能（或操作目的）(NPR-33513)。
+* 屏幕阅读器现在可以正确地宣布“洞察”视图上 [!UICONTROL 的洞察图标] （用于使用、展示和点击）的功能（或操作目的）(NPR-33513)。
 
 * 只读表单字段(例如，资产属性 [!UICONTROL “基本] ”选项卡 [!UICONTROL 上禁用的字段])现在可使用键盘(NPR-33493、CQ-4273031)进行聚焦。
 
@@ -173,7 +173,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * [!UICONTROL 元数据模式] “编辑器”页面及其元素现在可使用键盘访问，并且屏幕阅读器友好(CQ-4290962、CQ-4272953)。
 
-* 用 `X` 于删除选定标记的符号现在由屏幕阅读器和选定标记的数量一起宣布(CQ-4273017)。
+* 现在，屏 `X` 幕阅读器会宣布符号删除选定标记的目的以及选定标记的数量(CQ-4273017)。
 
 * 为避免使用屏幕阅读器的失明用户产生混淆，屏幕阅读器现在忽略装饰性图标和图像(CQ-4272944)。
 
@@ -252,18 +252,18 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 多字段中不保留单选按钮选择(NPR-33309)。
 * 延迟加载限制对列表视图无效(NPR-33124)。
-* 如果没有匹配项，则搜索结果页面不显示消息(NPR-32974)。
+* 如果没有匹配项，搜索结果页面不显示消息(NPR-32974)。
 * Omnisearch过滤器将忽略所 `/content` 选位置(NPR-32849)返回节点下的所有匹配项。
 
 ### 集成 {#integrations-6550}
 
-* 当发布包含Adobe目标组件的页面时，会清除内部缓存(NPR-33162)。
-* 与Adobe目标的集成在11上 [!DNL Windows Internet Explorer] 不起作用(NPR-33111)。
-* 配置Adobe目标时， [!UICONTROL 公司] 和报告  包字段在选择报告源时不显示(NPR-32502)。
-* 使用 [!DNL Experience Fragments] Adobe I/O导出时，源产品等元数据不会导出到Adobe目标(NPR-32159)。
+* 当发布包含Adobe Target组件的页面时，将清除内部缓存(NPR-33162)。
+* 与Adobe Target的集成在11上 [!DNL Windows Internet Explorer] 不起作用(NPR-33111)。
+* 配置Adobe Target时， [!UICONTROL 选择公司][!UICONTROL 源时不显] 示“报告”和“报告包”字段(NPR-32502)。
+* 使用 [!DNL Experience Fragments] Adobe I/O导出时，源产品等元数据不会导出到Adobe Target(NPR-32159)。
 * 本地Experience Manager管理组中的授权IMS用户无法创建或修改IMS配置(NPR-33045)。
 * Adobe Launch配置页面不显示所有记录(NPR-33011)。
-* 由于JavaScript错误(NPR-32996)，内容作者组中的用户无法编辑Adobe目标组件的属性。
+* 由于JavaScript错误，内容作者组中的用户无法编辑Adobe Target组件的属性(NPR-32996)。
 
 ### 翻译项目 {#translation-6550}
 
@@ -414,11 +414,11 @@ UberJar for Experience Manager 6.5.5.0可在Adobe Public Maven [存储库中获�
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | 已 **[!UICONTROL 弃用AEM云服务选择]** -加入屏幕。 随着AEM 6.5中更新的AEM和目标集成以支持目标标准API（它使用通过Adobe IMS和I/O进行身份验证）以及Adobe Launch在指导AEM页面进行分析和个性化方面的作用日益增强，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、Adobe IMS身份验证和Adobe I/O集成。 |
+| 集成 | 已 **[!UICONTROL 弃用AEM云服务选择]** -加入屏幕。 随着AEM 6.5中更新的AEM和目标集成以支持Target Standard API（它使用通过Adobe IMS和I/O进行身份验证）以及Adobe Launch在检测AEM页面以进行分析和个性化方面日益重要的作用，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、Adobe IMS身份验证和Adobe I/O集成。 |
 
 ## 已知问题 {#known-issues}
 
-* 如果您正在安 [!DNL Experience Manager] 装带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
+* 如果安装的 [!DNL Experience Manager] 是带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
 
 * 如果层次结构中的文件夹已重 [!DNL Experience Manager Assets] 命名，且包含资产的嵌套文件夹已发布到 [!DNL Brand Portal]，则只有在根文件夹再次发布后，才会更新 [!DNL Brand Portal] 该文件夹的标题。
 
