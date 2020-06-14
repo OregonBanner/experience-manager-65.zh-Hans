@@ -3,9 +3,9 @@ title: Adobe Experience Manager 6.5先前的Service Pack发行说明
 description: 特定于Adobe Experience Manager 6.5 Service Pack 3及更早版本的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: b2b8178f96d1e0a551a58ba649443aa03f0608ac
+source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
 workflow-type: tm+mt
-source-wordcount: '8094'
+source-wordcount: '8093'
 ht-degree: 35%
 
 ---
@@ -295,10 +295,7 @@ Adobe Experience Manager 6.5.4.0中引入的一些主要功能和增强功能包
 
 * 对于文件名中带有加号()的资`+`产(NPR-31547)，资源共享不起作用。
 
-* 默认搜索表单资产管理员*搜索边栏中的编辑无法按预期方式工作(NPR-31502)。
-
-<!-- Review: Check if this seemingly stray asterisk is needed there or not.
--->
+* 默认搜索表单资产管理员搜索边栏中的编辑操作不按预期方式进行(NPR-31502)。
 
 * 在对资产使用Omnisearch视图搜索资产时，不会显示建议(NPR-31496)。
 
@@ -312,7 +309,7 @@ Adobe Experience Manager 6.5.4.0中引入的一些主要功能和增强功能包
 
 * 不能从文件夹的“成员”部分删除所有成员（用户／用户组）; 在尝试删除所有用户时，已登录用户将添加到列表(NPR-31171)。
 
-* 无法删除文件名中`+`带有加号()的资源(NPR-31162)。
+* 无法删除文件名`+`中包含加号()的资源(NPR-31162)。
 
 * 创建下拉菜单（在选择文件夹时显示在顶部菜单中）不显示“文件夹”作为创建选项(NPR-30877)。
 
@@ -525,7 +522,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全 [!DNL Adobe Experience Manager] 性以及重要客户修 **复和增强**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
