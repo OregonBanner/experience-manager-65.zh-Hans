@@ -4,9 +4,9 @@ description: 有关配置、 [!DNL Experience Manager] 对硬件、软件和网�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: da2e435f33e8527793e009700c30e60868d196be
 workflow-type: tm+mt
-source-wordcount: '2723'
+source-wordcount: '2776'
 ht-degree: 0%
 
 ---
@@ -300,6 +300,7 @@ DAM [!UICONTROL 更新资产工作流] ，包含为任务配置的完整步骤�
 * 在Java 8上部署。
 * 设置最佳JVM参数。
 * 配置文件系统数据存储或S3数据存储。
+* 禁用子资产生成。 如果启用此功能，AEM的工作流会为多页资产中的每个页面创建单独的资产。 这些页中的每个页都是一个单独的资产，它占用额外的磁盘空间，需要版本控制，以及额外的工作流处理。 如果不需要单独的页面，请禁用子资产生成和页面提取活动。
 * 启用临时工作流。
 * 调整Granite工作流队列以限制并发作业。
 * 配置 [!DNL ImageMagick] 以限制资源消耗。
