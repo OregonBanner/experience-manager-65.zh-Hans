@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: fe81a72a6269060a7ec1283f817920618ba715ef
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 >* SPA总是负责其展示。
 >* SPA编辑器与SPA本身隔离。
 >* 在生产（发布）中，从不加载SPA编辑器。
+
 >
 
 
@@ -167,8 +168,8 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 
 SPA编辑器SDK支持以下最低版本：
 
-* 反应16.3
-* 角度6.x
+* 响应16.x及更高
+* 角度6.x和向上
 
 这些框架的先前版本可能与AEM SPA Editor SDK一起使用，但不支持。
 
