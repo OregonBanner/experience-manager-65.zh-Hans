@@ -3,9 +3,9 @@ title: 批量导入和导出资产元数据。
 description: 批量导入和导出数字资产的元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 9d6f9b8f8d49ae3322a6f5f677292afbd48beeda
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '808'
 ht-degree: 5%
 
 ---
@@ -80,6 +80,7 @@ ht-degree: 5%
 * 用于导入资产元数据的CSV文件采用非常特定的格式。 要节省工作和时间并避免出现意外错误，您可以开始使用导出的CSV文件格式创建CSV。
 * 使用CSV文件导入元数据时，所需的日期格式为日 `YYYY-MM-DDThh:mm:ss.fff-00:00`期。 如果使用了任何其他格式，则不设置日期值。 导出的元数据CSV文件的日期格式为 `YYYY-MM-DDThh:mm:ss-00:00`。 如果要导入它，请通过添加由表示的纳秒值将其转换为可接受的格式 `fff`。
 * 要在自定义命名空间上导入元数据，请首先注册命名空间。
+* 属性选取器显示用于模式编辑器和搜索表单的属性。 属性选取器不会从资产中选取元数据属性。
 
 >[!MORELIKETHIS]
 >
