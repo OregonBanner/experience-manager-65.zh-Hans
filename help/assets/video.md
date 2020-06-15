@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media中的视频
-description: 了解如何在Dynamic Media中处理视频
+title: Dynamic Media视频
+description: 了解如何在Dynamic Media中使用视频
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,15 +9,15 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4f580a9e1a43ef59a4991df6bc4a96cfffe5173e
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '11868'
-ht-degree: 26%
+source-wordcount: '11877'
+ht-degree: 25%
 
 ---
 
 
-# Dynamic Media中的视频 {#video}
+# Dynamic Media视频 {#video}
 
 本节介绍如何在 Dynamic Media 中处理视频。
 
@@ -27,12 +27,13 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media - Scene7模式或Dynamic Media —— 混合模式中启用并配置Dynamic Media Cloud服务。
+>在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media- Scene7模式或Dynamic Media-混合模式中启用并配置Dynamic MediaCloud Service。
 >
->* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) - Scene7模式和Dynamic Media - Scene7模 [式疑难解答中的配置Dynamic Media Cloud Services。](/help/assets/troubleshoot-dms7.md)
+>* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) - Scene7模式和故障排 [除Dynamic Media- Scene7模式中的配置Cloud Service。](/help/assets/troubleshoot-dms7.md)
    >
    >
-* 请参 [阅配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) —— 混合模式中的配置Dynamic Media Cloud Services。
+* 请参 [阅配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) -混合模式中的配置Dynamic Media。
+
 >
 
 
@@ -43,12 +44,12 @@ ht-degree: 26%
 
       * [创建视频编码用户档案](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
       * Learn more about [Best practices for video encoding](#best-practices-for-encoding-videos).
-   * 将视频处理用户档案关联到要上传主视频的一个或多个文件夹。
+   * 将视频处理用户档案关联到要上传主源视频的一个或多个文件夹。
 
       * [将视频用户档案应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
       * 了解有关[组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md)的更多信息。
       * 了解有关[组织数字资产](/help/assets/organize-assets.md)的更多信息。
-   * 将主视频上传到文件夹。 您可以上传每个高达15 GB的视频文件。 向文件夹添加视频时，会根据您为文件夹分配的视频处理用户档案对视频进行编码。
+   * 将主源视频上传到文件夹。 您可以上传每个高达15 GB的视频文件。 向文件夹添加视频时，会根据您为文件夹分配的视频处理用户档案对视频进行编码。
 
       * [上传视频](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
       * Learn more about [Supported input file formats](/help/assets/assets-formats.md#supported-multimedia-formats).
@@ -99,7 +100,7 @@ ht-degree: 26%
 
 1. 通过执行以下任一操作，**发布 Dynamic Media 视频**：
 
-   * 如果您使用Adobe Experience Manager作为Web内容管理系统，则可以直接将视频添加到网页。
+   * 如果您使用Adobe Experience Manager作为Web内容管理系统，则可以将视频直接添加到网页。
 
       * [将视频添加到网页](adding-dynamic-media-assets-to-pages.md)。
    * 如果您使用的是第三方Web内容管理系统，则可以将视频链接或嵌入到您的网页。
@@ -118,11 +119,11 @@ ht-degree: 26%
 
 ## Working with video in Dynamic Media {#working-with-video-in-dynamic-media}
 
-Dynamic Media中的视频是一款端到端解决方案，它可轻松发布高质量自适应视频以跨多个屏幕（包括桌面、iOS、Android、Blackberry和Windows移动设备）进行流化。 自适应视频集为同一视频的不同版本编码，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。 桌面计算机或移动设备会检测可用带宽。
+Dynamic Media中的视频是一种端到端的解决方案，它使得发布高质量自适应视频以跨多个屏幕（包括桌面、iOS、Android、Blackberry和Windows移动设备）进行流化变得很容易。 自适应视频集为同一视频的不同版本编码，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。 桌面计算机或移动设备会检测可用带宽。
 
 例如，在 iOS 移动设备上，设备检测到 3G、4G 或 Wi-Fi 等带宽。设备会随之自动从自适应视频集内的各种视频比特率中选择正确的编码视频。然后，视频会在桌面设备、移动设备或平板电脑上进行流播放。
 
-此外，如果桌面或移动设备上的网络条件发生变化，设备会自动动态地切换视频质量。同时，如果客户在桌面上进入全屏模式，自适应视频集也会做出响应来使用较好的分辨率，从而改善客户的观看体验。使用自适应视频集可为在多个屏幕和设备上播放Dynamic Media视频的客户提供最佳播放方式。
+此外，如果桌面或移动设备上的网络条件发生变化，设备会自动动态地切换视频质量。同时，如果客户在桌面上进入全屏模式，自适应视频集也会做出响应来使用较好的分辨率，从而改善客户的观看体验。使用自适应视频集，为在多个屏幕和设备上播放Dynamic Media视频的客户提供最佳播放方式。
 
 视频播放器用来确定在播放期间要播放或要选择的编码视频的逻辑基于以下算法：
 
@@ -165,7 +166,7 @@ See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoReta
 
 ## Best practice: Using the HTML5 video viewer {#best-practice-using-the-html-video-viewer}
 
-Dynamic Media HTML5视频查看器预设是强大的视频播放器。 您可以使用它们避免许多与HTML5视频播放相关的常见问题以及与移动设备相关的问题，如缺少自适应流投放和桌面浏览器访问能力有限。
+Dynamic MediaHTML5视频查看器预设是功能强大的视频播放器。 您可以使用它们避免许多与HTML5视频播放相关的常见问题以及与移动设备相关的问题，如缺少自适应流投放和桌面浏览器访问能力有限。
 
 在播放器的设计方面，您可以使用标准的 Web 开发工具设计视频播放器的所有功能。例如，您可以使用 HTML5 和 CSS 设计按钮、控件和自定义标识图像背景，从而帮助您向客户展示自定义的外观。
 
@@ -264,7 +265,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 ## Architecture of Dynamic Media video solution {#architecture-of-dynamic-media-video-solution}
 
-下图显示了通过DMGateway（在Dynamic Media Hybrid模式下）上传和编码并供公众使用的视频的整体创作工作流程。
+下图显示了通过DMGateway(在Dynamic Media混合模式下)上传和编码并供公众观看的视频的整体创作工作流程。
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
@@ -305,7 +306,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 ### 宽高比 {#aspect-ratio}
 
-在为主视频文件选择或创建视频编码预设时，请确保预设的宽高比与主视频文件的宽高比相同。宽高比是视频的宽度与高度的比率。
+在为主源视频文件选择或创建视频编码预设时，请确保该预设的宽高比与主源视频文件的宽高比相同。 宽高比是视频的宽度与高度的比率。
 
 要确定视频文件的长宽比，请获取该文件的元数据并记录该文件的宽度和高度（请参阅上面的“获取文件的元数据”）。 然后，使用此公式确定宽高比：
 
@@ -372,7 +373,7 @@ VBR编码时间较长，但生成的结果最为有利； 媒体文件的质量�
 * 选择一个数据率，然后使用在选定数据率下看起来效果不错的最高分辨率进行编码。
 * 选择一个分辨率，然后使用在选定分辨率下获得高质量视频所需的数据率进行编码。
 
-在为主视频文件选择（或创建）视频编码预设时，请使用此表来确定正确的分辨率：
+当您为主源视频文件选择（或创建）视频编码预设时，请使用此表来目标正确的分辨率：
 
 | 分辨率 | 高度（像素） | 屏幕大小 |
 |--- |--- |--- |
@@ -387,7 +388,7 @@ VBR编码时间较长，但生成的结果最为有利； 媒体文件的质量�
 
 在美国和日本，大多数视频以 29.97 帧/秒 (fps) 的速率拍摄；在欧洲，大多数视频以 25 fps 的速率拍摄。电影是以 24 fps 的速率拍摄。
 
-选择的视频编码预设应与主视频文件的 fps 速率相匹配。例如，如果您的主视频采用 25 fps，则应选择 25 fps 的编码预设。默认情况下，所有自定义编码均采用主视频文件的 fps。鉴于这一原因，您在创建视频编码预设时不需要明确指定 fps 设置。
+选择与主源视频文件的fps速率匹配的视频编码预设。 例如，如果主源视频的帧数为25 fps，请选择帧数为25 fps的编码预设。 默认情况下，所有自定义编码都使用主源视频文件的fps。 鉴于这一原因，您在创建视频编码预设时不需要明确指定 fps 设置。
 
 ### 视频编码尺寸 {#video-encoding-dimensions}
 
@@ -414,11 +415,11 @@ Dynamic Media 建议使用 MP4 H.264 视频编码预设。由于 MP4 文件使�
 
 您可以将内部部署AEM视频资产直接发布到您之前创建的YouTube渠道。
 
-要将视频资产发布到YouTube，您需要使用标记设置AEM资产。 将这些标记与YouTube渠道关联。 如果视频资产的标签与YouTube渠道的标签匹配，则视频将发布到YouTube。 只要使用关联标记，发布到YouTube就会与视频的正常发布一起发生。
+要将视频资产发布到YouTube，您需要设置带有标记的AEM Assets。 将这些标记与YouTube渠道关联。 如果视频资产的标签与YouTube渠道的标签匹配，则视频将发布到YouTube。 只要使用关联标记，发布到YouTube就会与视频的正常发布一起发生。
 
-YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media编码创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但在回放时需要查看器预设时，视频会处理。
+YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media已创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但在回放时需要查看器预设时，视频会这样处理。
 
-当您绕过视频处理用户档案并直接发布到YouTube时，这仅意味着您的AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您以动态媒体或dynamicmedia_scene7运行模式运行，则未编码的视频将不能用于任何Dynamic Media资产类型。
+当您绕过视频处理用户档案并直接发布到YouTube时，这仅意味着您的AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您以dynamicmedia或dynamicmedia_scene7运行模式运行，则未编码的视频将不能用于任何Dynamic Media资产类型。
 
 将视频资产发布到YouTube服务器需要完成以下任务，以确保使用YouTube进行安全、安全的服务器到服务器身份验证：
 
@@ -458,7 +459,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    如有必要，您可能需要使 **[!UICONTROL 用Google]** 帐户凭据登录 **[!UICONTROL ，才能看到控制台]** 选项。
 
-1. 在仪表板页面的Google Cloud Platform右 **[!UICONTROL 侧]**，单击项目下拉列表以打开选择项目对话框。
+1. 在仪表板页面的Google Cloud **[!UICONTROL Platform右侧]**，单击项目下拉列表以打开选择项目对话框。
 1. 在选择项目对话框中，点按新 **[!UICONTROL 建项目]**。
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
@@ -473,6 +474,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    * 在项目仪表板的入门卡中，点按浏览 **[!UICONTROL 并启用API]**。
    * 在项目仪表板的API卡中，点按转 **[!UICONTROL 到API概述]**。
+
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. 在“API和服务”页面顶部附近，点 **[!UICONTROL 按启用API和服务]**。
@@ -492,6 +494,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    * 从 **[!UICONTROL Where will the API?]** 下拉列表，选 **[!UICONTROL 择Web服务器（例如node.js、Tomcat）]**
 
    * From the **[!UICONTROL What data will you be accessing?]** 下拉列表，点 **[!UICONTROL 按用户]**。
+
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. 点击 **[!UICONTROL 我需要哪些凭据？]**
@@ -530,7 +533,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 保存文 `client_id.json` 件。
 
-   稍后在Adobe Experience Manager中设置YouTube时，您将需要此下载的json文件。
+   以后在Adobe Experience Manager中设置YouTube时，您需要此下载的json文件。
 
 1. 单击&#x200B;**[!UICONTROL 完成]**。
 
@@ -585,7 +588,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 #### 在AEM 6.4及更高版本中设置YouTube {#setting-up-youtube-in-aem-and-later}
 
-1. 请确保以管理员身份登录到Dynamic Media实例。
+1. 请确保以管理员身份登录Dynamic Media实例。
 1. 点按 AEM 左上角的 AEM 徽标，然后点按左边栏中的&#x200B;**[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL 云服务]** > **[!UICONTROL YouTube 发布配置]**。
 1. 点 **[!UICONTROL 按全局]** （请勿选择它）。
 
@@ -620,7 +623,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    您现在将设置用于发布的标记。
 
-1. **[!UICONTROL 设置要发布的标记]** -在“云服务”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记列表。
+1. **[!UICONTROL 设置要发布的标记]** -在“Cloud Service”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记的列表。
 1. 点按下拉列表图标（倒转插入符号）以显示AEM中可用标记的列表。
 1. 点击一个或多个标记以添加它们。
 
@@ -632,7 +635,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 #### 在6.4之前的AEM中设置YouTube {#setting-up-youtube-in-aem-before}
 
-1. 请确保以管理员身份登录到Dynamic Media实例。
+1. 请确保以管理员身份登录Dynamic Media实例。
 
 1. 点按 AEM 左上角的 AEM 徽标，然后点按左边栏中的&#x200B;**[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL 部署]** > **[!UICONTROL 云服务]**。
 1. 在“第三方服务”标题下的YouTube下，点按 **[!UICONTROL 立即配置]**。
@@ -666,7 +669,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    您现在将设置用于发布的标记。
 
-1. **[!UICONTROL 设置要发布的标记]** -在“云服务”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记列表。
+1. **[!UICONTROL 设置要发布的标记]** -在“Cloud Service”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记的列表。
 1. 点按下拉列表图标（倒转插入符号）以显示AEM中可用标记的列表。
 1. 点击一个或多个标记以添加它们。
 
@@ -745,9 +748,9 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation]**.
+>在Dynamic Media- Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation]**.
 >
->**[!UICONTROL 立即发布]** ，意味着上传的资产在与IPS同步后会自动发布到投放系统。 虽然Dynamic Media是如此，但YouTube则并非如此。 要发布到YouTube，您必须通过AEM作者进行发布。
+>**[!UICONTROL 立即发布]** ，意味着上传的资产在与IPS同步后会自动发布到投放系统。 尽管这对Dynamic Media来说是正确的，但对YouTube来说则并非如此。 要发布到YouTube，您必须通过AEM Author进行发布。
 
 >[!NOTE]
 >
@@ -781,13 +784,13 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
-发布视频所需的时间可能会因诸多因素而有很大不同，这些因素包括主视频的格式、文件大小和上传流量。发布过程所需的时间少则几分钟，多则几小时，这些情况都有可能出现。另请注意，分辨率较高的格式渲染起来会慢很多。例如，分辨率分别为 720p 和 1080p 的视频在渲染时所需的时间会比 480p 的视频显著更长。
+发布时间可能会因诸多因素而有很大不同，这些因素包括主源视频的格式、文件大小和上传流量。 发布过程所需的时间少则几分钟，多则几小时，这些情况都有可能出现。另请注意，分辨率较高的格式渲染起来会慢很多。例如，分辨率分别为 720p 和 1080p 的视频在渲染时所需的时间会比 480p 的视频显著更长。
 
 如果在八小时后，状态消息仍然显示&#x200B;**[!UICONTROL 已上传（正在处理，请稍候）]**，请尝试从我们的站点中删除视频，然后重新上传。
 
 ### 将 YouTube URL 关联到您的 Web 应用程序 {#linking-youtube-urls-to-your-web-application}
 
-您可以在发布视频后获取Dynamic Media生成的YouTube URL字符串。 在复制该 YouTube URL 时，它会进入“剪贴板”，以便您能够视需要将其粘贴到网站或应用程序中的页面。
+您可以在发布视频后获得由Dynamic Media生成的YouTube URL字符串。 在复制该 YouTube URL 时，它会进入“剪贴板”，以便您能够视需要将其粘贴到网站或应用程序中的页面。
 
 >[!NOTE]
 >
@@ -837,9 +840,11 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 视图资产文件夹中的视频编码进度：
 
    * 在卡视图中，视频编码进度按百分比显示在资产上。 如果出现错误，此信息也会显示在资产上。
+
    ![chlimage_1-429](assets/chlimage_1-429.png)
 
    * In list view, video encoding progress displays in the **[!UICONTROL Processing Status]** column. 如果出现错误，则同一列中将显示此消息。
+
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
    默认情况下，此列不显示。要启用该列，请从视图下拉菜单中选择&#x200B;**[!UICONTROL 查看设置]**，然后添加&#x200B;**[!UICONTROL 处理状态]**&#x200B;列，然后点按或单击&#x200B;**[!UICONTROL 更新]**。
@@ -859,6 +864,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    >    * Apache Sling作业队列配置
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite工作流超时队列
+
    >
    >在这些配置中 **[!UICONTROL ，您可以调]**&#x200B;整重试 **[!UICONTROL 、]**&#x200B;重试延迟 **[!UICONTROL ,]** 以及超时。
 
@@ -893,6 +899,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    >    * Apache Sling作业队列配置
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite工作流超时队列
+
    >
    >
    >在这些配置中 **[!UICONTROL ，您可以调]**&#x200B;整重试 **[!UICONTROL 、]**&#x200B;重试延迟 **[!UICONTROL ,]** 以及超时。
@@ -901,7 +908,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
@@ -911,7 +918,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
+>您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
 
 如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
 
@@ -939,6 +946,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    * 发布开始
    * 发布失败
    * 发布完成——包括有关渠道和URL的信息
+
    清除复选框意味着您不会从YouTube发布工作流接收指定的电子邮件通知。
 
    >[!NOTE]
@@ -952,7 +960,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->视频报告仅在运行Dynamic Media —— 混合模式时可用。
+>视频报表仅在运行Dynamic Media-混合模式时可用。
 
 视频报表显示指定时间段内的多个聚合量度，帮助您监控*已发布*单个和聚合视频是否按预期效果呈现。 以下顶级指标数据是整个网站中所有已发布视频的汇总数据：
 
@@ -968,7 +976,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 如果视频是在 Adobe Experience Manager Dynamic Media 外部编码的，就不会提供受众保留（流失）图表和表中的播放比例数据。
 
-另请参 [阅配置Dynamic Media Cloud服务](/help/assets/config-dynamic.md)。
+另请参阅 [配置Dynamic MediaCloud Service](/help/assets/config-dynamic.md)。
 
 >[!NOTE]
 >
@@ -988,13 +996,14 @@ For video reports to work correctly, a Report Suite ID is automatically created 
 
    * Near the upper-right corner, tap the **Date Picker **icon.
 Specify the beginning and end date range for which you want video data, and then tap **[!UICONTROL Run Report]**.
+
    “顶级指标”组框标识您网站上所有*已发布*视频的各种聚合指标。
 
 1. 在列出顶级已发布视频的表中，点按视频名称以播放视频，还可以查看该视频的受众保留（流失）报表。
 
 ### 查看基于使用 Scene7 HMTL5 查看器 SDK 创建的视频查看器的视频报表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-如果您使用的是Dynamic Media提供的现成视频查看器，或者您基于现成视频查看器创建了自定义查看器预设，则无需执行任何其他步骤即可视图视频报告。 但是，如果您基于Scene7 HTML5查看器SDK创建了自己的视频查看器，请使用以下步骤确保视频查看器将跟踪事件发送到Dynamic Media视频报表。
+如果您使用由Dynamic Media提供的现成视频查看器，或者您基于现成视频查看器创建了自定义查看器预设，则无需执行任何其他步骤即可视图视频报告。 但是，如果您基于Scene7 HTML5查看器SDK创建了自己的视频查看器，请使用以下步骤确保视频查看器将跟踪事件发送给Dynamic Media视频报表。
 
 使用 Scene7 查看器参考和 Scene7 HTML5 查看器 SDK 创建您自己的视频查看器。
 
@@ -1013,7 +1022,7 @@ Specify the beginning and end date range for which you want video data, and then
 
    `videoViewer.setParam("config2", "<value>");`
 
-   The `config2` parameter enables tracking in HTML5 Viewers. 它还是一个特定于公司的预设，其中包含视频报告和特定于客户的Adobe Analytics配置的配置信息。
+   The `config2` parameter enables tracking in HTML5 Viewers. 它还是一个特定于公司的预设，其中包含视频报告的配置信息以及特定于客户的AdobeAnalytics配置。
 
    在**嵌入代码**和副本**URL **函数中都可以找到config2参数的正确值。 在复制**URL **命令的URL中，要查找的参数为 `&config2=<value>` 。 该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
 
@@ -1063,7 +1072,7 @@ If `config2` is anything else, set the preset parameter the same as the `config2
 >
 >您使用的视频播放器必须支持字幕的显示。
 
-Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
+Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
 
 有 [关在URL中使用JSON函](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_serving_static_nonimage_contents.html) 数的更多信息，请参 ** 阅Scene7图像服务API帮助中的Serving static（非图像）内容。
 
@@ -1075,7 +1084,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
 
    请参 [阅WebVTT: Web视频文本跟踪格式](https://dev.w3.org/html5/webvtt/)。
 
-   您可以使用免费和高级工具及服务在Dynamic Media外创作字幕／子标题文件。 例如，要创建不带样式的简单视频题注文件，您可以使用以下免费的在线题注创作和编辑工具：
+   您可以使用免费和高级工具及服务在Dynamic Media之外创作字幕／子标题文件。 例如，要创建不带样式的简单视频题注文件，您可以使用以下免费的在线题注创作和编辑工具：
 
    [WebVTT字幕制作器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -1118,7 +1127,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
 
 >[!NOTE]
 >
->使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器确实支持章节标记，但使用第三方视频播放器可能不支持。
+>使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器确实支持章节标记，但使用第三方视频播放器则不支持。
 
 如果需要，您可以使用章节而不是使用视频查看器预设创建自定义视频查看器并为其添加品牌。 有关使用章节导航创建您自己的HTML5查看器的说明，请参阅Adobe Scene7 Viewer SDK for HTML5指南中的类和下方的标题“使用修饰符自定义行为” `s7sdk.video.VideoPlayer` 和 `s7sdk.video.VideoScrubber`。 Adobe Scene7 Viewer SDK可从Adobe Developer Connection下 [载](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)。
 
@@ -1190,7 +1199,7 @@ Cost-efficient access to rapidly evolving technology.
      </tbody>
    </table>
 
-## 关于Dynamic Media - Scene7模式中的视频缩略图 {#about-video-thumbnails-in-dynamic-media-scene-mode}
+## 关于Dynamic Media中的视频缩略图- Scene7模式 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
 视频缩略图是视频帧或向客户展示视频的图像资产的缩小版本。 缩略图应用于鼓励客户点击视频。
 
@@ -1202,7 +1211,7 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
 
 只有在将视频用户档案应用到视频所在的文件夹后，才能自定义视频缩略图。
 
-另请参 [阅关于Dynamic Media —— 混合模式中的视频缩略图](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
+另请参阅 [关于Dynamic Media中的视频缩略图——混合模式](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
 
 ### 添加自定义视频缩略图 {#adding-a-custom-video-thumbnail}
 
@@ -1240,15 +1249,15 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
 
 ## 关于Dynamic Media中的视频缩略图——混合模式 {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-您可以从Dynamic Media自动生成的十张缩略图中选择一张，以将其添加到视频中。 在AEM Sites、AEM Mobile或AEM Screens的创作环境中，当视频资产与Dynamic Media组件一起使用时，视频播放器会显示您选择的缩略图。 缩略图用作最能代表整个视频内容的静态图片，并进一步鼓励用户单击“播放”按钮。
+您可以从Dynamic Media自动生成的十张缩略图中选择一张，以将其添加到视频。 在Dynamic Media、AEM Mobile或AEM Screens的创作环境中，当视频资产与AEM Sites组件一起使用时，视频播放器会显示您选择的缩略图。 缩略图用作最能代表整个视频内容的静态图片，并进一步鼓励用户单击“播放”按钮。
 
-根据视频的总时间，Dynamic Media将以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例捕获十张（默认）缩略图图像。 十个缩览图将保留，这意味着如果您稍后决定选择其他缩略图，则无需重新生成该系列。 您预览十个缩略图图像，然后选择要用于视频的图像。 如果要更改为默认值，可以使用CRXDE Lite配置生成缩略图的时间间隔。 例如，如果您只想从视频中生成一系列四张均匀间隔的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
+根据视频的总时间，Dynamic Media在视频中以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例捕获十张（默认）缩略图。 十个缩览图将保留，这意味着如果您稍后决定选择其他缩略图，则无需重新生成该系列。 您预览十个缩略图图像，然后选择要用于视频的图像。 如果要更改为默认值，可以使用CRXDE Lite配置生成缩略图的时间间隔。 例如，如果您只想从视频中生成一系列四张均匀间隔的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
 
 理想情况下，在上传视频后但在网站上发布视频之前，您可以随时添加视频缩略图。
 
 如果您愿意，您可以选择上传自定义缩略图来代表您的视频，而不是使用Dynamic Media生成的缩略图。 例如，您可以创建自定义缩略图图像，该图像具有视频的标题、引人注目的开始图像或从视频捕获的非常特定的图像。 您上传的自定义视频缩略图图像的最大分辨率应为1280 x 720像素（最小宽度为640像素）且不应大于2MB。
 
-另请参 [阅关于Dynamic Media - Scene7模式中的视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
+另请参阅 [关于Dynamic Media中的视频缩略图- Scene7模式](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
 ### 添加视频缩略图 {#adding-a-video-thumbnail}
 
@@ -1269,7 +1278,7 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
 
    视频的缩略图图像将更新为使用您选择的缩略图。 如果您稍后决定更改缩略图图像，则可返回“更改 **[!UICONTROL 缩略图]** ”页面并选择新缩略图。
 
-   如果您配置了新的默认时间间隔，或者上传了新视频以替换现有视频，则需要Dynamic Media重新生成缩略图。
+   如果您配置了新的默认时间间隔，或者上传了新视频以替换现有视频，则需要让Dynamic Media重新生成缩略图。
 
    请参 [阅配置生成视频缩略图的默认时间间隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)。
 
