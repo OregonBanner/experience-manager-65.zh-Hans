@@ -1,6 +1,6 @@
 ---
 title: 视频
-description: 了解集中式视频资产管理AEM资产，您可以在其中将视频上传到Dynamic Media Classic，以便自动编码，并直接从AEM资产访问Dynamic Media Classic视频。 Dynamic Media Classic视频集成将优化视频的范围扩展到所有屏幕。
+description: 了解集中式视频资产管理AEM Assets，您可以将视频上传到Dynamic Media经典，并直接从AEM Assets访问Dynamic Media经典视频。 Dynamic Media经典视频集成将优化视频的触及范围扩展到所有屏幕。
 uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,28 +8,31 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+workflow-type: tm+mt
+source-wordcount: '1628'
+ht-degree: 56%
 
 ---
 
 
 # 视频 {#video}
 
-资产提供了集中的视频资产管理功能，您可以将视频直接上传到资产，以便自动编码到Dynamic Media Classic(Scene7)，并直接从资产中访问Dynamic Media Classic视频以进行页面创作。
+资产提供了集中式视频资产管理功能，您可以将视频直接上传到资产，以便自动编码到Dynamic Media经典(Scene7)，并直接从资产中访问Dynamic Media经典视频以进行页面创作。
 
-Dynamic Media Classic视频集成将优化视频的范围扩展到所有屏幕（自动设备和带宽检测）。
+Dynamic Media经典视频集成将优化视频的范围扩展到所有屏幕（自动设备和带宽检测）。
 
-* **[!UICONTROL Scene7视频组件可自动执行设备和带宽检测]** ，以跨桌面、平板电脑和移动设备播放正确的格式和质量的视频。
+* The **[!UICONTROL Scene7 Video]** component automatically performs device and bandwidth detection to play the right format and right quality video across desktop, tablets and mobile.
 * Assets - 您可以包含自适应视频集，而不只是单个视频资产。自适应视频集是一个容器，其中包含在多种屏幕上无缝播放视频所需的所有视频演绎版。自适应视频集是同一个视频的一组版本，这些版本以不同的比特率和格式进行编码，例如 400 kbps、800 kbps 和 1000 kbps。使用自适应视频集以及 S7 视频组件，可在多种屏幕（包括台式机、iOS、Android、Blackberry 和 Windows 移动设备）上实现自适应视频流式传输。请参阅[有关自适应视频集的 Scene7 文档以了解更多信息](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)。
 
-## 关于FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
+## 关于FFMPEG和Dynamic Media经典 {#about-ffmpeg-and-scene}
 
 默认的视频编码流程以使用基于 FFMPEG 的视频配置文件集成为基础。因此，现成的DAM摄取工作流包含以下两个基于ffmpeg的工作流步骤：
 
 * FFMPEG 缩略图
 * FFMPEG 编码
 
-请注意，启用和配置Dynamic Media Classic集成不会自动从现成的DAM摄取工作流中删除或取消激活这两个工作流步骤。 如果您已经在 AEM 中使用基于 FFMPEG 的视频编码，则您很可能已经在创作环境中安装了 FFMPEG。在这种情况下，使用DAM摄取的新视频将进行两次编码：一次来自FFMPEG编码器，另一次来自Dynamic Media Classic集成。
+请注意，启用和配置Dynamic Media经典集成不会自动从现成的DAM摄取工作流中删除或取消激活这两个工作流步骤。 如果您已经在 AEM 中使用基于 FFMPEG 的视频编码，则您很可能已经在创作环境中安装了 FFMPEG。在这种情况下，使用DAM摄取的新视频将进行两次编码： 一次来自FFMPEG编码器，另一次来自Dynamic Media经典集成。
 
 如果您在AEM中配置了基于FFMPEG的视频编码并安装了FFMPEG,Adobe建议您从DAM摄取工作流中删除两个FFMPEG工作流。
 
@@ -47,13 +50,13 @@ Scene7 视频组件支持以下格式：
 * 您是否需要对视频资产使用工作流？
 * 您是否需要对视频资产进行版本控制？
 
-如果上述任一问题的答案为“是”或两个问题的答案都为“是”，请将您的视频直接上传到 Adobe DAM。如果两个问题的答案都是“否”，则直接将视频上传到Dynamic Media Classic。 以下部分介绍了针对每种情景的工作流。
+如果上述任一问题的答案为“是”或两个问题的答案都为“是”，请将您的视频直接上传到 Adobe DAM。如果两个问题的答案都是“否”，则直接将视频上传到Dynamic Media经典。 以下部分介绍了针对每种情景的工作流。
 
 ### If you are uploading your video directly to Adobe DAM {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
-如果您需要资产的工作流或版本控制，应首先上传到Adobe DAM。 下面是建议的工作流：
+如果您需要资产的工作流或版本控制，您应先上传到Adobe DAM。 下面是建议的工作流：
 
-1. 将视频资产上传到Adobe DAM，然后自动编码并发布到Dynamic Media Classic。
+1. 将视频资产上传到Adobe DAM，并自动编码并发布到Dynamic Media经典。
 1. 在 AEM 中，从内容查找器的&#x200B;**[!UICONTROL 电影]**&#x200B;选项卡的 WCM 中访问视频资产。
 1. Author with **[!UICONTROL Scene7 Video]** or **[!UICONTROL Foundation Video]** component.
 
@@ -94,16 +97,16 @@ Scene7 视频组件支持以下格式：
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## Uploading your master video to Scene7 from Adobe DAM {#uploading-your-master-video}
+## 将主源视频从Adobe DAM上传到Scene7 {#uploading-your-master-video}
 
 1. 导航到在其中为云配置设置了 Scene7 编码配置文件的 CQ DAM 目标文件夹。
-1. 单击&#x200B;**[!UICONTROL 上传]**&#x200B;以上传主视频。Video uploading and encoding is complete after the [!UICONTROL DAM Update Asset] workflow is complete and **[!UICONTROL Publish to Scene7]** has a checkmark.
+1. 单击 **[!UICONTROL 上传]** ，以上传主源视频。 Video uploading and encoding is complete after the [!UICONTROL DAM Update Asset] workflow is complete and **[!UICONTROL Publish to Scene7]** has a checkmark.
 
    >[!NOTE]
    >
    >可能需要一些时间才能生成视频缩略图。
 
-   将 DAM 主视频拖放到视频组件，可访问所有 *Scene7* 编码的代理演绎版以进行交付。
+   Dragging the DAM primary source video on to the video component accesses *all* of the Scene7 encoded proxy renditions for delivery.
 
 ## 基础视频组件与 Scene7 视频组件 {#foundation-video-component-versus-scene-video-component}
 
@@ -117,7 +120,7 @@ Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 
 
 >[!NOTE]
 >
->S7 视频组件使用现成的通用视频配置文件。但是，您可以在Scene7中执行下列操作之一，获取供AEM使用的基于HTML5的视频播放器：复制现成HTML5视频播放器的嵌入代码，并将其放入AEM页面。
+>S7 视频组件使用现成的通用视频配置文件。但是，通过在Scene7中执行下列操作之一，您可以获得供AEM使用的基于HTML5的视频播放器： 复制现成HTML5视频播放器的嵌入代码，并将其放入AEM页面。
 
 ## AEM 视频组件 {#aem-video-component}
 
@@ -175,8 +178,8 @@ The **[!UICONTROL Foundation Video]** component must know about what video profi
 >
 >对设计所做的更改需要激活设计，才能在发布时生效。
 
-1. Open the **[!UICONTROL Foundation Video]** component&#39;s design dialog box and change to the **[!UICONTROL Profiles]** tab. 然后删除现成用户档案并添加新的S7视频用户档案。 设计对话框中的用户档案列表的顺序定义了渲染时视频源元素的顺序。
-1. 对于不支持HTML5的浏览器，视频组件允许配置Flash回退。 Open the video components design dialog box and change to the **[!UICONTROL Flash]** tab. 配置Flash Player设置并为Flash Player分配备用用户档案。
+1. Open the **[!UICONTROL Foundation Video]** component&#39;s design dialog box and change to the **[!UICONTROL Profiles]** tab. 然后删除现成用户档案并添加新的S7视频用户档案。 设计对话框中的用户档案列表顺序定义渲染时视频源元素的顺序。
+1. 对于不支持HTML5的浏览器，视频组件允许配置Flash回退。 Open the video components design dialog box and change to the **[!UICONTROL Flash]** tab. 配置Flash player设置并为flash player分配备用用户档案。
 
 #### 核对清单 {#checklist}
 
