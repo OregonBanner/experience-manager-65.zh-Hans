@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c6655342256922473ec51dc1a58b2d08034b65b
+source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2079'
 ht-degree: 50%
 
 ---
@@ -39,9 +39,9 @@ ht-degree: 50%
 
 要快速设置并运行图像集，请执行以下操作：
 
-1. [为多个视图上传您的主图像。](#uploading-assets-in-image-sets)
+1. [为多个视图上传主源图像。](#uploading-assets-in-image-sets)
 
-   首先为图像集上传图像。由于用户可以在图像集查看器中缩放图像，因此在选择图像时，请考虑缩放因素。确保图像的最大尺寸至少有2000像素，以实现最佳缩放细节。 Dynamic Media可以渲染每幅高达2500万像素的图像。 例如，您可以使用5000 x 5000万像素的图像或任何其他大小的组合，最高可达2500万像素。
+   首先为图像集上传图像。由于用户可以在图像集查看器中缩放图像，因此在选择图像时，请考虑缩放因素。确保图像的最大尺寸至少有2000像素，以实现最佳缩放细节。 Dynamic Media每幅图像渲染速度高达2500万像素。 例如，您可以使用5000 x 5000万像素的图像或任何其他大小的组合，最高可达2500万像素。
 
    AEM 资产支持很多种图像文件格式，但建议使用无损的 TIFF、PNG 和 EPS 图像。
 
@@ -54,7 +54,7 @@ ht-degree: 50%
    You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md).
    >[!IMPORTANT]
    >
-   >批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media - Scene7模式下可用。
+   >批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media- Scene7模式下可用。
 
    See [Preparing Image Set assets for upload and Uploading your files](#uploading-assets-in-image-sets).
 
@@ -85,7 +85,7 @@ ht-degree: 50%
 
 要编辑图像集，请参阅编 [辑图像集。](#editing-image-sets) 此外，您还可以视图和编 [辑图像集属性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
 
-如果您在创建集时遇到问题，请参阅Dynamic Media - Scene7模 [式疑难解答中的图像和集](/help/assets/troubleshoot-dms7.md#images-and-sets)。
+如果您在创建集时遇到问题，请参阅排除Dynamic Media中 [的图像和集- Scene7模式](/help/assets/troubleshoot-dms7.md#images-and-sets)。
 
 ## 上传图像集中的资产 {#uploading-assets-in-image-sets}
 
@@ -118,7 +118,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 >[!NOTE]
 >
 >You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets).
->**重要：**批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media - Scene7模式下可用。
+>**重要：**批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media- Scene7模式下可用。
 
 将资产添加到资产集时，资产会按字母数字顺序自动添加。 在添加资产后，您可以手动对资产重新排序或排序。
 
@@ -176,7 +176,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
 >[!IMPORTANT]
 >
->批集由IPS图像生产系 [统创建] ，作为资产摄取的一部分，并且仅在Dynamic Media - Scene7模式下可用。)
+>批集由IPS图像生产系 [统创建] ，作为资产摄取的一部分，并且仅在Dynamic Media- Scene7模式下可用。)
 
 但是，使用批集预设创建的集 *不会* 显示在用户界面中。 您可以通过三种不同的方式视图这些集。 （即使您在用户界面中创建了图像集，这些方法也可用。）
 
@@ -221,6 +221,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
    * 要对资产重新排序，请将图像拖动到新位置（选择重新排序图标以移动项目）。
    * 要按升序或降序对项目排序，请单击列标题。
    * To add an asset or update an existing asset, click the **[!UICONTROL Add Asset]**. 导航到资产，选择它，然 **[!UICONTROL 后点]** 按页面右上角附近的选择。
+
       >[!NOTE]
       >
       >如果通过将AEM用作缩略图的图像替换为其他图像来删除该图像，则仍会显示原始资产。
@@ -228,6 +229,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a viewer preset.
    * 要添加或更改缩略图，请选择资产右侧的缩略图图标。 导航到新的缩略图或样本资产，将其选中，然后点按 **[!UICONTROL 选择]**。
    * To delete an entire Image Set, navigate to the Image Set, select it, and tap **[!UICONTROL Delete]**.
+
    >[!NOTE]
    >
    >您可以导航到图像组，点按左边栏中的&#x200B;**[!UICONTROL 设置成员]**，然后点按单个资产上的“铅笔”图标以打开编辑窗口，来编辑图像。
