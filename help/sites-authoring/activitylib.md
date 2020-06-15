@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d53e72b198db91d368ddddac768d19b88ee29050
+source-git-commit: f62d2d639499c128fd4cafa5f9c39307ae9a607d
+workflow-type: tm+mt
+source-wordcount: '2022'
+ht-degree: 85%
 
 ---
 
@@ -48,7 +51,7 @@ Activities are available in Targeting mode for [authoring targeted content](/hel
    >
 * 如果&#x200B;**未**&#x200B;对 Adobe Target 租户 (clientcode) 启用 **xt_only** 选项，则可以在 AEM 中创建 XT 活动&#x200B;**和** A/B 活动。
 
-**另请注意：****xt_only** 选项是对特定 Target 租户 (clientcode) 应用的设置，只能直接在 Adobe Target 中进行修改。无法在 AEM 中启用或禁用此选项。
+**另请注意：****xt_only** 选项是对特定 Target 租户 (clientcode) 应用的设置，只能直接在 Adobe Target 中进行修改。您无法在 AEM 中启用或禁用此选项。
 
 >[!CAUTION]
 You must secure the activity settings node **cq:ActivitySettings** on the publish instance so that it is inaccessible to normal users. 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
@@ -76,17 +79,17 @@ When you create a brand using the Activities console, it also appears in the [Of
 * **名称：**&#x200B;活动的名称。
 * **定位引擎：**&#x200B;将 [AEM](/help/sites-authoring/personalization.md#aem) 或 [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) 作为目标内容的引擎。
 
-* **选择 Target 配置：**（仅限 Adobe Target）活动应用来连接到 Adobe Target 的云配置。仅当选择 Adobe Target 作为定位引擎时，才会显示此选项。
-* **活动类型：**活动类型- A/B测试或体验定位
-* **目标：**（可选）活动的描述。
-* **体验：**&#x200B;受众名称与您定位的营销区段之间的映射。
-* **** 流量百分比：如果选择A/B测试，则可以更改每个体验的流量（百分比）。
-* **持续时间：**&#x200B;应用活动的时间期限。
-* **优先级：**&#x200B;活动的相对优先级。多个活动为同一用户区段提供内容时，具有较高优先级的活动会取得优先权。
-* **** 目标指标：如果选择Adobe target作为定位引擎，则可向活动添加成功量度。 需要添加一个成功量度。
+* **选择 Target 配置：**（仅限 Adobe Target）此活动连接到 Adobe Target 的云配置。只有为定位引擎选择了 Adobe Target 时，才会显示此选项。
+* **活动类型： **活动类型- A/B测试或体验定位
+* **目标：**（可选）活动描述。
+* **体验：**&#x200B;受众名称和您定位的营销区段之间的映射。
+* **流量百分比：**&#x200B;如果选择 A/B 测试，则可以更改每个体验的流量（百分比）。
+* **持续时间：**&#x200B;应用活动的时间段。
+* **优先级：**&#x200B;活动的相对优先级。当活动为相同的用户区段提供内容时，具有较高优先级的活动优先。
+* **目标量度：**&#x200B;如果选择 Adobe Target 作为定位引擎，则可向活动添加成功量度。需要一个成功量度。
 
 >[!NOTE]
-新的 Adobe Target 活动需要在目标内容编辑器中&#x200B;***创建***，而不是在&#x200B;**活动**&#x200B;控制台中创建，因为如果在该控制台中创建，活动将无法同步到 Adobe Target。
+新的Adobe Target活动需要在目标内 ***容编辑器中*** （而不是在“活动”控制台中）创建 **** ，因为与Adobe Target的同步将失败。
 不过，您可以在该控制台中编辑现有的 Adobe Target 活动。
 
 要添加活动，请执行以下操作：
@@ -100,10 +103,10 @@ When you create a brand using the Activities console, it also appears in the [Of
    * （可选）活动的目标或描述。
    * 选择活动类型。
 
-1. 将一个或多个体验添加到活动。单击或点按&#x200B;**添加体验**。
+1. 向活动添加一个或多个体验。 单击或点按 **添加体验**。
 1. 如果您使用的是 AEM 定位或 Adobe Target 体验定位，请执行以下操作：
 
-   1. 单击或点按**选择受众**，然后选择您的体验所定位的区段。
+   1. 单击或点按**选择受众**，然后选择您的体验目标的区段。
    1. 单击或点按&#x200B;**添加体验**，键入名称，然后单击或点按&#x200B;**确定**。
 
    1. 单击或点按&#x200B;**下一步**。
@@ -119,7 +122,7 @@ When you create a brand using the Activities console, it also appears in the [Of
 1. 要指定活动的开始时间，请使用&#x200B;**开始**&#x200B;下拉菜单选择以下某个值：
 
    * **激活时：**&#x200B;活动在包含目标内容的页面被激活时开始。
-   * **指定的日期和时间：**&#x200B;特定的时间。选择此选项时，请单击或点按日历图标，选择一个日期，然后指定开始活动的时间。
+   * **指定的日期和时间：**&#x200B;特定的时间。选择此选项时，单击或点按日历图标，选择日期，然后指定活动开始的时间。
 
 1. 要指定活动的结束时间，请使用“结束”下拉菜单选择以下某个值：
 
@@ -138,7 +141,7 @@ When you create a brand using the Activities console, it also appears in the [Of
 您需要发布活动以使其可用。反之，您也可能希望取消发布活动，以使其不可用。
 
 >[!NOTE]
-取消发布活动时，
+取消发布活动时，除非刷新页面，否则活动的状态不会更改。
 
 要发布或取消发布活动，请执行以下操作：
 
@@ -160,11 +163,11 @@ When you create a brand using the Activities console, it also appears in the [Of
 
 您可以查看任何 Adobe Target 活动（XT 或 A/B）的业绩。如果您使用的是 A/B 测试，则还可以转换入选体验，入选体验随后会成为默认体验。
 
-要查看活动效果并转换成功体验，请执行以下操作：
+要视图活动性能并转换成功体验，请执行以下操作：
 
 1. In **Personalization**, click or tap **Activities** to navigate to the **Activities** console.
 1. 单击或点按要查看其活动的品牌。
-1. Select the activity and click or tap **View Properties** and click the **Reports** tab and select the activity that you want to view performance for/convert winning experiences for. 随即会显示业绩数据。
+1. Select the activity and click or tap **View Properties** and click the **Reports** tab and select the activity that you want to view performance for/convert winning experiences for. 显示性能数据。
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -172,7 +175,7 @@ When you create a brand using the Activities console, it also appears in the [Of
 
    如果转换入选方，则会：
 
-   * 它禁用当前活动
+   * 禁用当前活动
    * 修改所有页面，并将目标内容替换为入选体验的实际内容。The content of the winning experience becomes part of the normal page **without** targeting.
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -218,7 +221,7 @@ When AEM synchronizes an activity with Adobe Target, AEM includes a property of 
 要避免出现同步问题，请始终使用唯一的活动名称。如果活动同步失败，您可以删除 Adobe Target 中具有相同名称的营销活动，但前提是该营销活动未在使用中。
 
 >[!NOTE]
-When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. 在 Adobe Target 中删除营销活动时，不会删除 `thirdPartyId`。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。为避免出现此问题，请为每个营销活动命名一个唯一的名称；因此，不能在不同的营销活动类型中重复使用营销活动名称。
+When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. 在 Adobe Target 中删除营销活动时，不会删除 `thirdPartyId`。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免此问题，请为每个活动命名一个唯一的名称； 因此，活动名称不能在不同的活动类型中重新使用。
 如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
 如果在同步时遇到错误“请求失败。`thirdPartyId` 已存在”，请更改营销活动的名称，然后重新进行同步。
 
