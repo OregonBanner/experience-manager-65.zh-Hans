@@ -1,45 +1,54 @@
 ---
-title: 有关数字资产的报告
-description: 了解Adobe Experience Manager资产中有关资产的报告，帮助您了解数字资产的使用、活动和共享情况。
+title: 有关数字资产使用情况和共享的报告。
+description: 有关您的资产的 [!DNL Adobe Experience Manager Assets] 报告，有助于您了解数字资产的使用、活动和共享。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2faf210d4177d6b2e29795b5668f8199816097eb
+source-git-commit: bc08b0039f8be92a7638245b1770c2ad21503f63
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 14%
+source-wordcount: '1013'
+ht-degree: 8%
 
 ---
 
 
 # 资产报表 {#asset-reports}
 
-资产报告是评估Adobe Experience Manager资产部署的效用的重要工具。 通过资产，您可以为数字资产生成各种报表。 这些报告提供有关系统使用情况、用户如何与资产交互以及下载和共享哪些资产的有用信息。
+资产报告允许您评估部署的实 [!DNL Adobe Experience Manager Assets] 用性。 您 [!DNL Assets]可以为数字资产生成各种报告。 这些报告提供有关系统使用情况、用户如何与资产交互以及下载和共享哪些资产的有用信息。
 
-使用报告中的信息得出关键成功指标，以衡量企业内部和客户对资产的采用情况。
+使用报告中的信息得出关键成功指标，以衡量企业内 [!DNL Assets] 部和客户的采用情况。
 
-资产报告框架使用Sling作业以有序方式异步处理报表请求。 它可用于大型存储库。 异步报表处理提高了报表生成的效率和速度。
+报告 [!DNL Assets] 框架使用作 [!DNL Sling] 业以有序方式异步处理报表请求。 它可用于大型存储库。 异步报表处理提高了报表生成的效率和速度。
 
 报表管理界面直观，包括用于访问归档报表和视图报表运行状态（成功、失败和排队）的细粒度选项和控件。
 
 生成报告后，系统会通过电子邮件（可选）和收件箱通知通知您。 您可以从报告列表页面视图、下载或删除报告，其中显示所有以前生成的报告。
 
+## 先决条件 {#prerequisite-for-reporting}
+
+要生成报告，请确保：
+
+* 从“ [!UICONTROL 工具”>“操作] ”>“Web控 **[!UICONTROL 制台]** ”启用Day **[!UICONTROL CQ DAM事件]** Recorder **** service。
+* 选择要活动的事件。 例如，要生成有关已下载资产的报告，请选 [!UICONTROL 择已下载资产(DOWNLOADED)]。
+
+![在Web控制台中启用资产报告](assets/reports-config-day-cq-dam-event-recorder.png)
+
 ## 生成报告 {#generate-reports}
 
-Experience Manager资产会为您生成以下标准报表：
+[!DNL Experience Manager Assets] 为您生成以下标准报表：
 
 * 上传
 * 下载
 * 到期时间
 * 修改
 * 发布
-* 品牌门户发布
+* [!DNL Brand Portal] 发布
 * 磁盘使用情况
 * 文件
 * 链接共享
 
 [!DNL Adobe Experience Manager] 管理员可以轻松地为您的实施生成和自定义这些报告。 管理员可以按照以下步骤生成报告：
 
-1. 在Experience Manager界面中，单击 **[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报]**&#x200B;告。
+1. 在界 [!DNL Experience Manager] 面中，单击 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 报]**&#x200B;告。
 
 ![“工具”页面以导航资产报表](assets/AssetsReportNavigation.png)
 
@@ -47,10 +56,6 @@ Experience Manager资产会为您生成以下标准报表：
 1. 从创 **[!UICONTROL 建报表]** ，选择要创建的报表，然后单击下 **[!UICONTROL 一步]**。
 
    ![选择报告类型](assets/choose_report.png)
-
-   >[!NOTE]
-   >
-   >在生成&#x200B;**[!UICONTROL 已下载资产]**&#x200B;报表之前，请确保已启用“资产下载”服务。从 Web 控制台 (`https://[aem_server]:[port]/system/console/configMgr`) 中打开 **[!UICONTROL Day CQ DAM 事件记录器]**&#x200B;配置，并在“事件类型”中选择&#x200B;**[!UICONTROL 已下载资产]**&#x200B;选项（如果尚未选择）。
 
    >[!NOTE]
    >
@@ -80,7 +85,7 @@ Experience Manager资产会为您生成以下标准报表：
 
    ![“文件”报告的详细信息页面](assets/files_report.png)
 
-   **[!UICONTROL 链接共享]**&#x200B;报表显示 Assets 中与外部用户共享的资产的 URL。其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和到期日期。列不可自定义。
+   The **[!UICONTROL Link Share]** report displays URLs to assets that are shared with external users from within [!DNL Assets]. 其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和到期日期。列不可自定义。
 
    The **[!UICONTROL Link Share]** report, does not include options for sub-folders and renditions because it merely publishes the shared URLs that appear under `/var/dam/share`.
 
@@ -92,12 +97,12 @@ Experience Manager资产会为您生成以下标准报表：
 
    ![选择或取消选择报告列](assets/configure_columns.png)
 
-   要显示自定义列名或属性路径，请在CRX的jcr:content节点下配置资产二进制的属性。 或者，通过属性路径选取器添加它。
+   要显示自定义列名或属性路径，请在CRX的节点下配置资产二进制 `jcr:content` 文件的属性。 或者，通过属性路径选取器添加它。
 
    ![选择或取消选择报告列](assets/custom_columns.png)
 
 1. 单击 **[!UICONTROL 工具栏]** 中的创建。 系统会显示一条消息，通知已开始生成报告。
-1. 在资产报表页面中，报表生成状态基于报表作业的当前状态，例如成功、失败、已排队或已计划。 通知收件箱中显示相同的状态。要视图报告页面，请单击报告链接。 或者，选择报表，然后单击工 **[!UICONTROL 具栏]** 中的视图。
+1. 在“资 [!UICONTROL 产报表] ”页上，报表生成状态基于报表作业的当前状态，例如， [!UICONTROL 成功]、 [!UICONTROL 失败]、排队 [!UICONTROL 队列、或计]划。 通知收件箱中显示相同的状态。要视图报告页面，请单击报告链接。 或者，选择报表，然后单击工 **[!UICONTROL 具栏]** 中的视图。
 
    ![生成的报告](assets/report_page.png)
 
@@ -112,12 +117,12 @@ Experience Manager资产会为您生成以下标准报表：
 * 到期时间
 * 修改
 * 发布
-* 品牌门户发布
+* [!DNL Brand Portal] 发布
 * 文件
 
 要向这些报表添加自定义列，请执行以下步骤：
 
-1. 在Experience Manager界面中，单击工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 报]**&#x200B;告。
+1. 在中，单 [!DNL Manager interface]击工 **[!UICONTROL 具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 报]**&#x200B;告。
 1. 在资产 [!UICONTROL 报表页] ，单击工 **[!UICONTROL 具栏]** 中的创建。
 
 1. 从创 **[!UICONTROL 建报表]** ，选择要创建的报表，然后单击下 **[!UICONTROL 一步]**。
