@@ -12,9 +12,9 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2897'
 ht-degree: 2%
 
 ---
@@ -338,7 +338,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 >最佳实践： 创建每个AEM站点特有的徽章图像。
 
 
-![chlimage_1-181](assets/chlimage_1-101.png)
+![chlimage_1-101](assets/chlimage_1-101.png)
 
 <table>
  <tbody>
@@ -355,7 +355,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
      <li>数字=分数</li>
      <li>| =垂直线字符(U+007C)</li>
      <li>path =徽章图像资源的完整路径</li>
-    </ul> 必须对字符串进行排序，以使数字在值中增加，并且数字和路径之间不应显示空格。<br /> 示例条目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
+    </ul> 必须对字符串进行排序，以使数字在值中增加，并且数字和路径之间不应显示空白。<br /> 示例条目：<br /> <code>80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png</code></td>
   </tr>
   <tr>
    <td>badgingType</td>
