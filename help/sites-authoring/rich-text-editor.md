@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d3dbf4cf522441561d6ac6eeeff0e63e7bbb5e38
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 70%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: d3dbf4cf522441561d6ac6eeeff0e63e7bbb5e38
 
 ## 就地编辑 {#in-place-editing}
 
-Selecting a text-based component with a single tap or click will reveal the [component toolbar](/help/sites-authoring/editing-content.md#editmovecopypastedeletetouchoptimizedui) as with any component.
+通过点按或单击选择基于文本的组件，将像任何其他组件一样显示[组件工具栏](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -34,8 +37,8 @@ Selecting a text-based component with a single tap or click will reveal the [com
 
 此工具栏提供了以下选项：
 
-* **格式**:这允许您设置粗体、斜体和下划线。
-* **列表**:通过此操作，您可以创建项目符号或编号列表，或设置缩进。
+* **格式**：允许您设置粗体、斜体和下划线。
+* **列表**：创建项目符号或编号列表，或者设置缩进。
 * **超链接**
 * **取消链接**
 * **全屏**
@@ -44,15 +47,15 @@ Selecting a text-based component with a single tap or click will reveal the [com
 
 ## 全屏编辑 {#full-screen-editing}
 
-For text-based components, tapping the full screen mode from the [toolbar](#componenttoolbar) ![](do-not-localize/screen_shot_2018-03-21at163236.png) opens the rich text editor and hides the rest of the page content.
+For text-based components, tapping the full-screen mode from the toolbar ![](do-not-localize/screen_shot_2018-03-21at163236.png) opens the rich text editor and hides the rest of the page content.
 
-全屏模式显示可用于创作的所有已配置选项。 可用性取决于 [配置](/help/sites-administering/rich-text-editor.md)。
+全屏模式显示所有可用于创作的已配置选项。 The availability is options [depends on the configuration](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
 其他富文本编辑器选项包括：
 
-* **锚点**:在文本中创建一个锚点，以后可以链接到／引用该锚点。
+* **锚点**：在文本中创建一个可在以后链接或引用的锚点。
 * **左对齐文本**
 * **居中对齐文本**
 * **右对齐文本**
