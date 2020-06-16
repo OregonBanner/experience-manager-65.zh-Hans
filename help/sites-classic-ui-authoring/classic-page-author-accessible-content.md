@@ -11,7 +11,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 translation-type: tm+mt
-source-git-commit: af27ed32c21a338600201e05871c1b18548ecba6
+source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
 source-wordcount: '9241'
 ht-degree: 94%
@@ -29,7 +29,7 @@ ht-degree: 94%
 >
 >* [AEM 和 Web 辅助功能规范](/help/managing/web-accessibility.md)
 >* [WCAG 2.1 快速指南](/help/managing/qg-wcag.md)
->* [创建辅助内容（WCAG 2.1 符合性）](/help/sites-authoring/creating-accessible-content.md)
+>* [创建无障碍内容（WCAG 2.1 合规性）](/help/sites-authoring/creating-accessible-content.md)
 
 
 WCAG 2.0 包含一系列非技术层面的准则及成功标准，旨在确保残障人士能够访问并使用 Web 内容。
@@ -40,15 +40,16 @@ WCAG 2.0 包含一系列非技术层面的准则及成功标准，旨在确保�
 >
 >* 我们的 [WCAG 2.0 快速指南](/help/managing/qg-wcag.md)，以进一步了解详细信息
 >* [配置富文本编辑器以创建辅助内容](/help/sites-administering/rte-accessible-content.md)
+
 >
 
 
 
 Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA 级以及 AAA 级（最高）。以下是各个级别的简要定义：
 
-* **级别 A：**&#x200B;您的站点符合基本的、最低级别的辅助功能。要达到此级别，需满足所有级别 A 成功标准。
-* **AA 级：**&#x200B;这是一个理想的辅助功能等级目标，站点达到这一等级即意味着提供了更高级别的辅助功能，以便大部分人在大多数情况下均可使用大部分技术访问站点内容。要达到这一等级，站点必须满足所有 A 级和 AA 级成功标准。
-* **级别 AAA：**&#x200B;您的站点在辅助功能方面达到了非常高的级别。要达到此级别，需满足所有级别 A、级别 AA 和级别 AAA 成功标准。
+* **级别 A：**&#x200B;您的站点满足基本的、最低级别的无障碍性。要达到此级别，需满足所有级别 A 成功标准。
+* **AA 级：**&#x200B;这是一个理想的无障碍等级目标，站点达到这一等级即意味着达到了更高级别的无障碍性，大部分人在大多数情况下均可使用大部分技术访问站点内容。要达到这一等级，站点必须满足所有 A 级和 AA 级成功标准。
+* **级别 AAA：**&#x200B;您的站点在无障碍方面达到了非常高的级别。要达到此级别，需满足所有级别 A、级别 AA 和级别 AAA 成功标准。
 
 在创建站点时，您应该大体上确定希望自己的站点符合哪个等级。
 
@@ -64,6 +65,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 >
 >* [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)的简称。
 >* [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)中使用的编号，以便与 WCAG 网站进行交叉引用。
+
 >
 
 
@@ -94,7 +96,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 >[!NOTE]
 >
->一些现成的组件（如&#x200B;**轮播**&#x200B;和&#x200B;**幻灯片**&#x200B;放映）不提供向图像添加替代文本描述的方法。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>一些现成的组件（如&#x200B;**轮播**&#x200B;和&#x200B;**幻灯片**&#x200B;放映）不提供向图像添加替代文本描述的方法。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 **替换文本**&#x200B;字段显示在&#x200B;**图像**&#x200B;组件对话框的&#x200B;**高级**&#x200B;图像属性选项卡中：
 
@@ -167,7 +169,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 地图、图表、流程图：
 
-   对于提供空间数据的图形(例如， 要支持描述对象或进程之间的关系)，请确保以文本格式提供关键消息。对于映射，提供等效完整文本可能不太现实，但如果提供映射来作为帮助相关人员找到特定位置的一种方法，则映射图像的替代文本可以简短地指示为 *X 映射*，然后在页面其他位置的文本中或者通过&#x200B;**图像**&#x200B;组件&#x200B;**高级**&#x200B;选项卡中的&#x200B;**描述**&#x200B;字段提供该特定位置的说明。
+   对于提供空间数据的图形(例如， 要支持描述对象或进程之间的关系)，请确保以文本格式提供关键消息。对于映射，提供等效完整文本可能不太现实，但如果提供映射来作为帮助相关人员找到特定位置的一种方法，则映射图像的替代文本可以简短地指示为“X 映射”**，然后在页面其他位置的文本中或者通过&#x200B;**图像**&#x200B;组件&#x200B;**高级**&#x200B;选项卡中的&#x200B;**描述**&#x200B;字段提供该特定位置的说明。
 
 * CAPTCHA:
 
@@ -214,7 +216,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 #### 用途 - 纯音频和纯视频（预先录制）(1.2.1) {#purpose-audio-only-and-video-only-pre-recorded}
 
-以下用户可能会遇到音频和视频的辅助功能问题：
+以下用户可能会遇到音频和视频的无障碍问题：
 
 * 患有视觉障碍的用户在没有音轨，或者音轨提供的信息不足以告知他们视频或动画中正在播放的内容时；
 * 因患有听觉障碍或耳聋而无法听到音轨的用户；
@@ -271,7 +273,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 字幕有以下两种形式：
 
-* 开放式：字幕在视频播放过程中始终可见
+* 开放式：字幕在视频播放过程中始终可见）
 * 隐藏式：字幕可以由用户打开或关闭 
 
 尽量使用隐藏式字幕，因为这样用户可以选择是否观看字幕。
@@ -329,7 +331,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 #### 用途 - 字幕（实时）(1.2.4) {#purpose-captions-live}
 
-该成功标准与[字幕（预先录制）](#captions-pre-recorded)的标准完全相同，因为其用途在于解决耳聋或听力欠佳的用户遇到的辅助功能问题，两者的不同之处在于该成功标准需要处理网络直播等实时演示。
+该成功标准与[字幕（预先录制）](#captions-pre-recorded)的标准完全相同，因为其用途在于解决耳聋或听力欠佳的用户遇到的无障碍问题，两者的不同之处在于该成功标准需要处理网络直播等实时演示。
 
 #### 如何达到标准 - 字幕（实时）(1.2.4) {#how-to-meet-captions-live}
 
@@ -410,12 +412,14 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
    * 突出显示要强调的文本；
    * Click on the **B** icon (for &lt;strong>) or the **I** icon (for &lt;em>) shown within the **Properties** panel (make sure that HTML is selected).
+
    >[!NOTE]
    >
    >标准 AEM 安装中的 RTE（富文本编辑器）设置为：
    >
    >* 使用 &lt;b> 表示 &lt;strong>
    * 使用 &lt;i> 表示 &lt;em>
+
    尽管两种形式效果相同，但是最好使用 &lt;strong> 和 &lt;em>，因为从语义上来讲，它们才是正确的 HTML 标记。开发团队在开发项目实例时，可以将 RTE 配置为使用 &lt;strong> 和 &lt;em>（而非 &lt;b> 和 &lt;i>）。
 
 * **使用列表**：可以使用 HTML 指定三种不同类型的列表：
@@ -442,6 +446,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
    * 每个表行均使用 `<tr>` 元素进行标识
    * 每个行标题和列标题均使用 `<th>` 元素进行标识
    * 每个数据单元格均使用 `<td>` 元素进行标识
+
    >[!NOTE]
    应该使用&#x200B;**表**&#x200B;组件创建表。尽管在文本组件中可以创建表，但并不建议这样做。
 
@@ -450,13 +455,15 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
    * `<caption>` 元素用于为表提供可视描述。默认情况下，描述显示在表上方居中的位置，但是可以使用 CSS 相应地调整位置。描述采用编程方式与表相关联，因此这是一种提供内容简介的有用方法。
    * `<h3 class="summary">` 元素通过总结视力正常的用户可以看到的内容，帮助失明的用户更加轻松地了解表中提供的信息。当使用了复杂或非常规的表布局时，这种方法尤其有用（该属性不会显示在浏览器中，只会由辅助型技术读取）。
    * `<th>` 元素的 `scope` 属性用于指示某个单元格表示特定行的标题，还是特定列的标题。在复杂的表中，即数据单元格可能与一个或多个标题相关联的情况下，类似的方法是使用标题和 id 属性。
+
    >[!NOTE]
-   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
    添加&#x200B;**表**&#x200B;时，可以使用对话框配置&#x200B;**表属性**。
 
    * 相应的&#x200B;**描述**。
    * 理想情况下，请删除 **Width**、 **Height**、Border **、** Border Border Sell PaddingSpacing **、****** Cell Spacing的默认值。 因为这些属性可以在全局样式表中设置。
+
    ![“表属性”对话框。](assets/chlimage_1-20a.png)
 
    You can then use the **Cell properties** to choose whether the cell is a data or header cell and, if a header cell, whether it relates to a row or column or both:
@@ -520,7 +527,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 设计者往往关注可视设计特征，如颜色、形状、文本样式，或者内容在展示信息时所在的绝对或相对位置。这些是在传递信息时采用的非常有效的设计技术，但是对于失明或患有视觉障碍的用户而言，可能无法获取此类信息，因为用户必须以可视方式来识别位置、颜色或形状等属性。
 
-同样，如果用户在获取信息时必须辨认不同的声音（例如，男性或女性讲话的内容），而且音频内容没有反映在任何替换文本中，则患有听觉障碍的用户就会遇到辅助功能问题。
+同样，如果用户在获取信息时必须辨认不同的声音（例如，男性或女性讲话的内容），而且音频内容没有反映在任何替换文本中，则患有听觉障碍的用户就会遇到无障碍问题。
 
 >[!NOTE]
 有关颜色替代内容的要求，请参阅[使用颜色](#use-of-color)。
@@ -608,7 +615,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 #### 用途 - 对比度（最小）(1.4.3) {#purpose-contrast-minimum}
 
-患有某种视觉障碍的用户可能无法辨认某些对比度低的颜色对。如果出现以下任一情况，此类用户便可能遇到辅助功能问题：
+患有某种视觉障碍的用户可能无法辨认某些对比度低的颜色对。如果出现以下任一情况，此类用户便可能遇到无障碍问题：
 
 * 文本与其背景颜色之间的对比度极低。
 * 文本的颜色编码（例如链接文本和非链接文本）在辨认信息时起到重要作用。
@@ -891,7 +898,7 @@ John Smith’s publications
 >[!NOTE]
 如果包含使用不同语言的人名或城市，或者使用默认语言中常用的外来词或短语（如英语中的 *schadenfreude*），则不必遵循此成功标准。
 
-要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### 更多信息 - 局部语言 (3.1.2) {#more-information-language-of-parts}
 
@@ -932,7 +939,7 @@ John Smith’s publications
 
 ![向单选按钮组添加项目。组标题是“我的联系方式”- 在“标题”字段中定义。](assets/chlimage_1-24a.png)
 
-但是，组标题和单选按钮本身之间并没有编程关联。模板编辑器需要将标题包装在必需的 `fieldset` 和 `legend` 标记中，以便创建此关联，而且该操作只能通过编辑页面源代码来完成。或者，系统管理员也可以添加对这些元素的支持，以使它们显示在&#x200B;**字段属性**&#x200B;对话框中（请参阅[添加对其他 HTML 元素和属性的支持](/help/sites-administering/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)）。
+但是，组标题和单选按钮本身之间并没有编程关联。模板编辑器需要将标题包装在必需的 `fieldset` 和 `legend` 标记中，以便创建此关联，而且该操作只能通过编辑页面源代码来完成。或者，系统管理员也可以添加对这些元素的支持，以使它们显示在&#x200B;**字段属性**&#x200B;对话框中（请参阅[添加对其他 HTML 元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 #### 有关表单的其他考虑事项 {#additional-considerations-for-forms}
 
