@@ -3,9 +3,9 @@ title: 从下载数字资产 [!DNL Adobe Experience Manager]。
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 527b2f50efac606a0a696c8f56b0d725f79cd692
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '796'
 ht-degree: 6%
 
 ---
@@ -19,27 +19,32 @@ ht-degree: 6%
 >
 >收件人电子邮件必须是组的成 `dam-users` 员才能访问电子邮件中的ZIP下载链接。 要能够下载资产，成员必须具有启动触发资产下载的工作流的权限。
 
-要下载资产，请导航到资产，选择资产，然后单击工 **[!UICONTROL 具栏]** 中的下载。 在显示的对话框中，指定下载选项。
-
 无法下载图像集、旋转集、混合媒体集和传送集等资产类型。
 
-![从Experience Manager资产下载资产时可用的选项](assets/asset_download_dialog.png)
+**要下载资源，**
 
-*图： 从下载资产时可用的选[!DNL Experience Manager Assets]项。*
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
+1. 在导航页面上，点按资 **[!UICONTROL 产>文件]**。
+1. 导航到包含要下载的资产的文件夹。
+1. 选择文件夹，或在文件夹中选择一个或多个资产。
+1. On the toolbar, tap **[!UICONTROL Download]**.
 
-以下是可用的导出或下载选项。 动态演绎版是产品特有的 [!DNL Dynamic Media] 选项。 通过此选项，您可以实时生成新的演绎版，同时生成您选择的资产。 此选项仅在您已启用的情况下才 [!DNL Dynamic Media] 可用。
+   ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download.png)
 
-| 导出或下载选项 | 描述 |
-|---|---|
-| [!UICONTROL 资产] | 选择此选项以下载资产的原始形式，而不下载任何演绎版。 |
-| [!UICONTROL 演绎版] | 演绎版是资产的二进制表示形式。资产具有主要表示形式——即已上传文件的表示形式。 它们可以有任意数量的表示。 <br> 通过此选项，您可以选择要下载的演绎版。 可用的演绎版取决于您选择的资产。 |
-| [!UICONTROL 动态演绎版] | 动态演绎版可实时生成其他演绎版。 When you select this option, you also select the renditions you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>此外，您还可以选择大小和度量单位、格式、色彩空间、分辨率以及任何图像修饰符（例如反转图像） |
-| [!UICONTROL 电子邮件] | 将向用户发送电子邮件通知。 标准电子邮件模板可在以下位置使用：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> 在部署过程中自定义的模板应位于以下位置： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>您可以在以下位置存储特定于租户的自定义模板：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
-| [!UICONTROL 为每个资产创建单独的文件夹] | 选择此选项可在下载资产时保留文件夹层次结构。 默认情况下，文件夹层次结构会被忽略，所有资产都下载到本地文件系统的一个文件夹中。 |
+   *下载对话框选项。*
 
-如果资产具有任何演绎版，则演绎版选项可用。 如果原始资产具有子资产，则子资产选项可用。
+1. 在“下载”对话框中，选择所需的下载选项。
 
-当您选择要下载的文件夹时，将下载该文件夹下的完整资产层次结构。 要将您下载的每个资产（包括嵌套在父文件夹下的子文件夹中的资产）包含在单个文件夹中，请选 **[!UICONTROL 择为每个资产创建单独的文件夹]**。
+   | 下载选项 | 描述 |
+   |---|---|
+   | **[!UICONTROL 为每个资产创建单独的文件夹]** | 选择此选项可将您下载的每个资产包括嵌套在资产父文件夹下的子文件夹中的资产，并包含到本地计算机上的一个文件夹中。 如果不选择此选项 ** ，则默认情况下，将忽略文件夹层次结构，并将所有资产下载到本地计算机上的一个文件夹中。 |
+   | **[!UICONTROL 电子邮件]** | 选择此选项可向收件人发送电子邮件通知。 标准电子邮件模板可在以下位置使用：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> 在部署过程中自定义的模板可在以下位置使用： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>您可以在以下位置存储特定于租户的自定义模板：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
+   | **[!UICONTROL 资产]** | 选择此选项可以下载资产的原始形式，而无需任何演绎版。<br>如果原始资产具有子资产，则子资产选项可用。 |
+   | **[!UICONTROL 演绎版]** | 演绎版是资产的二进制表示形式。资产具有主要表示形式——即已上传文件的表示形式。 它们可以有任意数量的表示。 <br> 通过此选项，您可以选择要下载的演绎版。 可用的演绎版取决于您选择的资产。 |
+   | **[!UICONTROL 智能裁剪]** | 选择此选项可从AEM中下载选定资产的所有智能裁剪演绎版。 系统会创建包含智能裁剪演绎版的zip文件，并将其下载到您的本地计算机。 |
+   | **[!UICONTROL 动态演绎版]** | 选择此选项可实时生成一系列替代再现。 When you select this option, you also select the renditions that you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>此外，您还可以选择大小和度量单位、格式、色彩空间、分辨率以及任何可选的图像修饰符（如反转图像）。 此选项仅在您已启用的情况下才 [!DNL Dynamic Media] 可用。 |
+
+1. 在对话框中，点按下 **[!UICONTROL 载]**。
 
 ## 启用资产下载servlet {#enable-asset-download-servlet}
 
