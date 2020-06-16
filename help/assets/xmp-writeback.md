@@ -3,7 +3,7 @@ title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有或特定演绎版。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 711cd438cc8962d310bb2bfbb14f079161aacce0
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 8%
@@ -43,7 +43,7 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 
 要使XMP写回功能将元数据传播到再现缩略图140.100.png和319.319.png，请执行这些步骤。
 
-1. 在Experience Manager界面中，导航到工 **[!UICONTROL 具]** >工 **[!UICONTROL 作流]** > **[!UICONTROL 模型]**。
+1. 在Experience Manager界面中，导航到 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流]** > **[!UICONTROL 模型]**。
 1. 在“模型”页中，打开DAM元 **[!UICONTROL 数据写回工作流]** 模型。
 1. 在“ **[!UICONTROL DAM元数据写回]** ”属性页中，打开“ **[!UICONTROL XMP写回进程”步骤]** 。
 1. In the [!UICONTROL Step Properties] dialog box, click the **[!UICONTROL Process]** tab.
@@ -68,11 +68,11 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 
 ## 筛选XMP元数据 {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] 支持阻止列表和允许列表过滤XMP元数据的属性／节点，该元数据从资产二进制文件读取并在摄取资产时存储在JCR中。
+[!DNL Experience Manager Assets] 支持从资产二进制文件读取并在摄取资产时存储在JCR中的XMP元数据的属性／节点的阻止列表和允许的列表筛选。
 
-使用阻止的列表进行筛选可导入除为排除指定的属性外的所有XMP元数据属性。 但是，对于具有大量XMP元数据（例如，1000个节点具有10,000个属性）的资产类型（如INDD文件），要筛选的节点名称并不总是预先知道的。 如果使用阻止的列表进行筛选允许导入大量具有大量XMP元数据的资产，则AEM实例／群集可能会遇到稳定性问题，例如阻塞的观察队列。
+使用阻止的列表进行过滤可导入除为排除指定的属性外的所有XMP元数据属性。 但是，对于具有大量XMP元数据（例如，1000个节点具有10,000个属性）的资产类型（如INDD文件），要筛选的节点名称并不总是预先知道的。 如果使用阻止的列表进行过滤允许导入大量具有大量XMP元数据的资产，则AEM实例／群集可能会遇到稳定性问题，例如阻塞的观察队列。
 
-通过允许的列表筛选XMP元数据可通过允许您定义要导入的XMP属性来解决此问题。 这样，将忽略任何其他或未知的XMP属性。 为了向后兼容，您可以向使用被阻止列表的过滤器添加一些这些属性。
+通过允许的列表过滤XMP元数据可通过允许您定义要导入的XMP属性来解决此问题。 这样，将忽略任何其他或未知的XMP属性。 为了向后兼容，您可以将其中一些属性添加到使用阻止列表的筛选器。
 
 >[!NOTE]
 >
@@ -90,14 +90,14 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 1. 要打开Configuration Manager，请访 `https://[aem_server]:[port]/system/console/configMgr`问。
 1. 打开 **[!UICONTROL Adobe CQ DAM XmpFilter配置]** 。
-1. To apply filtering via an allowed list, select **[!UICONTROL Apply Whitelist to XMP Properties]**, and specify the properties to be imported in the **[!UICONTROL Whitelisted XML Names for XMP filtering]** box.
+1. To apply filtering via an allowed list, select **[!UICONTROL Apply Allowlist to XMP Properties]**, and specify the properties to be imported in the **[!UICONTROL Allowed XML Names for XMP filtering]** box.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. To filter out blocked XMP properties after applying filtering via allowed list, specify those in the **[!UICONTROL Blacklisted XML Names for XMP filtering]** box.
+1. 要在通过允许的列表应用过滤后过滤掉已阻止的XMP属性，请在“XMP过 **[!UICONTROL 滤的已阻止的XML名称]** ”框中指定这些属性。
 
    >[!NOTE]
    >
-   >默认 **[!UICONTROL 情况下，将黑名单应用]** 到XMP属性选项处于选中状态。 换言之，默认情况下启用使用阻止的列表进行筛选。 要禁用此类过滤，请取消选 **[!UICONTROL 择“将黑名单应用到XMP属性]** ”选项。
+   >默认 **[!UICONTROL 情况下，将块列表应用]** 到XMP属性选项处于选中状态。 换言之，默认情况下启用使用阻止列表进行过滤。 要禁用此类过滤，请取消选 **[!UICONTROL 择“将块列表应用到XMP属性]** ”选项。
 
 1. 保存更改。
