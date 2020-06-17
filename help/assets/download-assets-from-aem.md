@@ -3,7 +3,7 @@ title: 从下载数字资产 [!DNL Adobe Experience Manager]。
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 527b2f50efac606a0a696c8f56b0d725f79cd692
+source-git-commit: 64c09e454960a40632059a85f0861deed1899b86
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 6%
@@ -29,7 +29,7 @@ ht-degree: 6%
 1. 选择文件夹，或在文件夹中选择一个或多个资产。
 1. On the toolbar, tap **[!UICONTROL Download]**.
 
-   ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download.png)
+   ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download1.png)
 
    *下载对话框选项。*
 
