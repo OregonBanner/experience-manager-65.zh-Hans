@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager 6.5 Service Pack发行说明
+title: Adobe Experience Manager6.5 Service Pack发行说明
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 Service Pack 5。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
 workflow-type: tm+mt
-source-wordcount: '4510'
+source-wordcount: '4512'
 ht-degree: 7%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Service Pack发行说明 {#aem-service-pack-release-notes}
+# Adobe Experience Manager6.5 Service Pack发行说明 {#aem-service-pack-release-notes}
 
 ## 发行信息 {#release-information}
 
@@ -23,23 +23,23 @@ ht-degree: 7%
 | 日期 | 2020年6月4日 |
 | 下载 URL | [包共享](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)，软 [件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
-## Adobe Experience Manager 6.5.5.0包含的功能 {#what-s-included-in-aem}
+## Adobe Experience Manager6.5.5.0包含的内容 {#what-s-included-in-aem}
 
-Adobe Experience Manager 6.5.5.0是一项重要更新，包含新功能、关键客户请求的增强功能以及性能、稳定性和安全性改进，自2019年4月6.5版本正式发布 **以来**。 它可以安装在Adobe Experience Manager 6.5的顶部。
+Adobe Experience Manager6.5.5.0是一项重要更新，包括自2019年4月发布6.5版本以来发布的新功能、关键客户请求的增强功能以及性能、稳定性和安全 **性改进**。 它可安装在Adobe Experience Manager6.5上。
 
-Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包括：
+Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包括：
 
-* 自定义Adobe Experience Manager收件箱中显示的列名。
+* 自定义在Adobe Experience Manager收件箱中显示的列名。
 
-* 改进了Experience Manager Web内容管理(WCM)中各个区域（如页面编辑器、核心组件、RTE和管理员用户界面）的辅助功能。
+* 改进了Experience ManagerWeb内容管理(WCM)中各个区域（如页面编辑器、核心组件、RTE和管理员用户界面）的辅助功能。
 
 * 另存为 [!DNL Interactive Communication] 草稿。
 
-* 在JEE [!DNL Oracle WebLogic 12] 上支持Experience Manager Forms。
+* 支持 [!DNL Oracle WebLogic 12] JEE上的Experience Manager表单。
 
 * 改进了用户界面流 [!DNL Adobe Experience Manager Assets] 中的异常处理。
 
-* 要获取Dynamic Media Scene7的发布URL，会向界面 `getRemoteAssetPublishURL` 添加新的 `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` 方法。
+* 要获取Dynamic MediaScene7的发布URL，将向界面 `getRemoteAssetPublishURL` 添加新的 `com.day.cq.dam.api.s7dam.scene7.ImageUrlApi` 方法。
 
 * [符合Web内容](#assets-6550)[!DNL Adobe Experience Manager Assets] 辅助功能指导原则(WCAG)的辅助功能增强。
 
@@ -47,23 +47,23 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.22.3。
 
-有关Experience Manager 6.5 Service Pack 5中引入的功能、主要重点和主要功能的完整列表，请 [参阅Adobe Experience Manager 6.5 Service Pack 5的新增功能](new-features-latest-service-pack.md) 。
+有关列表6.5 Service Pack 5中引入的功能、主要亮点和主要功能的完整Experience Manager，请 [参阅Adobe Experience Manager6.5 Service Pack 5中的新增功能](new-features-latest-service-pack.md) 。
 
 以下是6.5.5.0版中提 [!DNL Experience Manager] 供的修复列表。
 
 ### [!DNL Sites] {#sites-6550}
 
-* Experience Manager Sites提供了一个选项，用于发布或取消发布别名中的页面。 此选项无效(NPR-33415)。
+* Experience Manager站点提供了一个选项，用于发布或取消发布别名中的页面。 此选项无效(NPR-33415)。
 * 从包含多个模板的模板中删除布局容器时，该模板无法正确呈现(NPR-33347)。
-* 当Experience Manager Sites页面是包含多个Live Copy的大型内容集的一部分时，无法加载页面版本历史预览(NPR-33311)。
-* 使用“移动”命令重命名Experience Manager Sites页面时，页面标题不会更新(NPR-33264)。
+* 当“Experience Manager站点”页面是包含多个Live Copy的大型内容集的一部分时，页面版本历史预览无法加载(NPR-33311)。
+* 使用“移动”命令重命名Experience Manager站点页面时，页面标题不会更新(NPR-33264)。
 * 在列视图中移动页面时，列会消失(NPR-33216)。
 * 当语言副本中的本地组件名称与蓝图中某个组件的名称相同并且从蓝图中转出该组件时，术语不会添加 `_msm_moved` 到本地组件的名称中(NPR-33208)。
-* 页面重定向servlet将。html附加到Experience Manager站点URL中，其中ResourceType `cq:Page` 不为(NPR-33176)。
+* 页面重定向servlet将。html附加到ResourceType不为的Experience Manager站点URL `cq:Page` (NPR-33176)。
 * 粘贴子树时，没有选项可决定是否粘贴相应的子页面(NPR-33149)。
 * 组件在实时使用中的结果数限于数字49(NPR-33058)。
 * 当您将内容片段基于模式并且它包含强制文本区域或路径字段时，内容片段无法保存(NPR-33007)。
-* 当您使用默认的Experience Fragment组件创建自定义组件并在Experience Manager Sites页面中使用它时，Experience Manager不显示自定义组件的引用（用法）(NPR-32852)。
+* 当您使用默认的体验片段组件创建自定义组件并在Experience Manager站点页面中使用它时，Experience Manager不显示自定义组件的引用（用法）(NPR-32852)。
 * 重命名具有大量引用的文件夹时，不会更新对该文件夹的许多引用(NPR-32765)。
 * 启用源代码编辑选项后，该选项对内联全屏选项可用，但富文本编辑器的编辑对话框和全屏选项仍缺失(NPR-32763)。
 * 如果您有多个字段，并且它在蓝图的页面属性中包含必填字段（如下拉列表或路径字段），则当转出包含此多字段的页面时，不会保存Live Copy的页面属性(NPR-32751)。
@@ -72,16 +72,16 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 * 撤消读取、修改、创建和删除Live Copy的创作权限。 每个作者都必须明确提供读取和修改权限才能在Blueprint中移动页面(NPR-32550)。
 * 内容作者无法为与Adobe Analytics集成的页面创建Launch(NPR-32548)。
 * 当用户通过同步恢复继承时，父页面的Live Copy不会与Blueprint同步，并显示不正确的状态(NPR-32500)。
-* 加载Experience Manager Sites编辑器页面需要15秒以上的时间(NPR-32413)。
+* Experience Manager站点编辑器页面加载需要15秒以上的时间(NPR-32413)。
 * 某些字段不显示“取消继承”选项(NPR-32362)。
 * 当您为体验片段组件选择路径并选中打开选择对话框复选框时，您不会导航到路径浏览器中的选定路径(NPR-32308)。
-* 从Experience Manager 6.2升级到Experience Manager 6.5后，静态模板的Parsys组件无法正确显示。 Parsys组件的高度设置为0，并且其中的组件不可见(NPR-33663)。
+* 从Experience Manager6.2升级到Experience Manager6.5时，静态模板的Parsys组件无法正确显示。 Parsys组件的高度设置为0，并且其中的组件不可见(NPR-33663)。
 * 当用户复制并粘贴同一页面上的布局容器时，布局容器中的组件不会显示(NPR-33648)。
-* 调度程序运行状况 `Invalid cookie header` 检查在日志文件中显示警告消息(NPR-33629)。
+* Dispatcher运行状况 `Invalid cookie header` 检查在日志文件中显示警告消息(NPR-33629)。
 
 ### [!DNL Assets] {#assets-6550}
 
-**Experience Manager Assets中的辅助功能增强**
+**Experience Manager资源中的辅助功能增强**
 
 * 现在，可以将键盘焦点放在“注 [!UICONTROL 释] ”列表上，并可单击选项 [!UICONTROL 在“时间轴Npr资产”面板中“] 创建新版本”下 [!UICONTROL 创建版本注释(] NPR-33424)。
 
@@ -125,7 +125,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 各种组合框元素（如“路径”字段以及在资产属性的“基本”选项卡中打开“选择”对话框的选项）的用途现在由屏幕阅读器正确宣布(NPR-33235)。
 
-* 现在，当列表视图表中的行处于键盘焦点时，会向屏幕阅读器用户传达这些行可选择的信息。 当鼠标悬停在行上时，会宣布此信息(NPR-33234)。
+* 现在，当列表视图表中的行处于键盘焦点时，会向屏幕阅读器用户传达这些行可选择的信息。 当指针悬停在行上时，屏幕阅读器会宣布该信息(NPR-33234)。
 
 * 现在，屏幕 [!UICONTROL 阅读器](NPR-33206)可以访问 [!UICONTROL 用于删除Properties] Basic( [!UICONTROL 属性)选项卡中Tags（标记）] 字段下各个选定标记的选项(  含x)。
 
@@ -185,7 +185,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 在元数据模式中使用级联弹出窗口时，选择并保存包含撇号的下拉选项（从子项下拉框中）时，在重新打开资产属性后，选定的撇号 [!UICONTROL 选项] 会消失(NPR-32649)。
 
-* [!UICONTROL 如果Asset Insights Sync] Job遇到无效条目（在Analytics端）而不是转到下一个条目(NPR-32674)，则停止并失败。
+* [!UICONTROL 如果遇到无效条目] (在Analytics一侧)而不是转到下一个条目(NPR-32674)，资产分析同步作业将停止并失败。
 
 * 陀螺仪无法正常工作，因为在全景查看器中，默认情况下在移动浏览器上禁用运动传感器(CQ-4272937)。
 
@@ -199,7 +199,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 在打开包含超过10,000个资源的智能集合时，会在日志中观察到遍历警告(NPR-32980)。
 
-* 使用Dynamic Media Scene7运行模式时，将资产从一个文件夹移 [!DNL Adobe Experience Manager] 动到另一个文件夹时，资产名称将更改为小写(NPR-32995)。
+* 在使用Dynamic MediaScene7运行模式时，当将资产从一个文件夹移到另一个文件夹时， [!DNL Adobe Experience Manager] 资产名称将更改为小写(NPR-32995)。
 
 * 在从搜索结果导航到其属性，然后返回搜索结果删除该资产后，无法删除已搜索的资产(NPR-32998)。
 
@@ -213,11 +213,11 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 * 在具有智能裁剪用户档案的文件夹下打开PDF的演绎版边栏的日志中会出现异常(CQ-4294201)。
 
-* 如果Experience Manager在Dynamic Media Scene7 [!UICONTROL 运行模式下] ，默认情况下禁用了Dynamic Media同步模式，则不发布图像预设(CQ-4294200)。
+* 如果在与Dynamic MediaScene7运行模 [!UICONTROL 式(CQ] -4294200)进行Experience Manager时默认禁用了Dynamic Media同步模式，则不发布图像预设。
 
 * 批量上传时的资产处理会卡住，而工作流实例会显示DAM更新资产的卡住实例(CQ-4293916)。
 
-* 在Experience Manager上创建Dynamic Media配置是有效的，但在用户界面上，选择保存时不会发生任何情况(CQ-4292442)。
+* 在Experience Manager上创建Dynamic Media配置是有效的，但在用户界面上，选择“保存”时不会发生任何情况(CQ-4292442)。
 
 * F4V视频资源的预览在Safari/Mac上的渐进式播放中不工作(CQ-4289844)。
 
@@ -231,22 +231,22 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
    * 将大型二进制文件上传到Dynamic Media图像处理服务器需要太长的时间。
 
-   * Experience Manager的缩略图生成时间因Dynamic Media Scene7架构而缩短。
+   * Experience Manager的缩略图生成时间因Dynamic MediaScene7架构而增加。
 
-* 对于拥有大量资产的客户，Dynamic Media Scene7迁移问题失败(CQ-4279206)。
+* Dynamic Media的Scene7迁移问题对于资产数量较大的客户失败(CQ-4279206)。
 
 * 如果使用视频360查看器， `setVideo` 则其布局会被破坏，并且视频在使用 `video= modifier` 时会下移(CQ-4263201)。
 
-* 安装Experience Manager SDL软件包时显示错误消息(NPR-33175)。
+* 安装Experience ManagerSDL包时显示错误消息(NPR-33175)。
 
 ### 平台 {#platform-6550}
 
 * 如果 [!DNL Sling] 在(NPR-33362)下 `sling:match` 创建了映射条目， `/etc/maps` 则不调用该过滤器。
-* Experience Manager因分段错误而崩溃( [!DNL Apache Lucene] NPR-32988)。
-* [!DNL Jackson] Experience Manager uberjar文件中缺少核心包(NPR-32848)。
+* Experience Manager因分段故障而 [!DNL Apache Lucene] 崩溃(NPR-32988)。
+* [!DNL Jackson] Experience Manageruberjar文件中缺少核心包(NPR-32848)。
 * CRXDE Lite在没有节点属性读取权限的情况下不 `jcr:primaryType` 为用户加载内容(NPR-32611)。
-* [!DNL Granite] 维护任务调度程序在Experience Manager部署期间重新初始化的频率过高(CQ-4294627)。
-* 当SQL查询长时间执行（例如7小时）时，Experience Manager停止响应(NPR-33044)。
+* [!DNL Granite] 维护任务调度程序在Experience Manager部署期间重新初始化过频繁(CQ-4294627)。
+* 当SQL查询执行长时（例如7小时）,Experience Manager停止响应(NPR-33044)。
 
 ### 用户界面 {#ui-6550}
 
@@ -257,17 +257,17 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 ### 集成 {#integrations-6550}
 
-* 当发布包含Adobe Target组件的页面时，将清除内部缓存(NPR-33162)。
+* 当发布具有Adobe Target组件的页面时，将清除内部缓存(NPR-33162)。
 * 与Adobe Target的集成在11上 [!DNL Windows Internet Explorer] 不起作用(NPR-33111)。
-* 配置Adobe Target时， [!UICONTROL 选择公司][!UICONTROL 源时不显] 示“报告”和“报告包”字段(NPR-32502)。
+* 配置Adobe Target时 [!UICONTROL ，选] 择报告  源时，公司和报告包字段不显示(NPR-32502)。
 * 使用 [!DNL Experience Fragments] Adobe I/O导出时，源产品等元数据不会导出到Adobe Target(NPR-32159)。
 * 本地Experience Manager管理组中的授权IMS用户无法创建或修改IMS配置(NPR-33045)。
 * Adobe Launch配置页面不显示所有记录(NPR-33011)。
-* 由于JavaScript错误，内容作者组中的用户无法编辑Adobe Target组件的属性(NPR-32996)。
+* 由于JavaScript错误(NPR-32996)，内容作者组中的用户无法编辑Adobe Target组件的属性。
 
 ### 翻译项目 {#translation-6550}
 
-* 翻译的标记不会从第三方翻译服务(NPR-33154)导入到Experience Manager。
+* 译文标记不会从第三方翻译服务导入Experience Manager(NPR-33154)。
 * 翻译配置页面显示的翻译提供程序与用于翻译的翻译提供程序不同(NPR-32971)。
 * 将体验片段文件夹添加到现有翻译项目会创建新项目(NPR-32843)。
 * 运 `NullPointerException` 行转换作业的日志中显示错误(NPR-32628)。
@@ -290,7 +290,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 * 访问活动流页 [!UICONTROL 面时出错] (NPR-33146)。
 * 在作者实例上删除的组不会从所有发布实例中删除(NPR-33199)。
 * 创建新组后，作者不会被重定向到 [!UICONTROL 第11号] “社区 [!DNL Internet Explorer] 组”部分(NPR-33205)。
-* 在Experience Manager收件箱中访问邮件不会将邮件的状态更改为“已读”(NPR-32764)。
+* 访问Experience Manager收件箱中的邮件不会将邮件的状态更改为“已读”(NPR-32764)。
 * 编辑 [!DNL Communities] 组和更改缩略图图像不会更新组缩略图图像(NPR-32599)。
 * 用户无法向社区中的其他用户发送电子邮件(NPR-32598)。
 * 提交的博客在用户刷新页面之前不会显示(NPR-32391)。
@@ -305,7 +305,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 >[!NOTE]
 >
->Experience Manager Service Pack不包含修复 [!DNL Forms]。 它们是通过单独的 Forms 附加组件包交付的。此外，还会发布一个包含AEM Forms在JEE上的修复的累积安装程序。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+>Experience ManagerService Pack不包含修复 [!DNL Forms]。 它们是通过单独的 Forms 附加组件包交付的。此外，还发布了一个累积安装程序，其中包含针对JEEAEM Forms的修复。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
 
 * 通信管理： 在目标区的资产顺序在提交信件(NPR-33359、NPR-33153)后混乱。
 * 自适应表单： 当用户编辑自适应表单时，“页 [!UICONTROL 面信息] ”菜单中可 [!UICONTROL 用的“开始工] 作流”选项将不起作用(NPR-33004)。
@@ -334,11 +334,11 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 >[!NOTE]
 >
->Adobe不建议删除或卸载Adobe Experience Manager 6.5.5.0包。
+>Adobe不建议删除或卸载Adobe Experience Manager6.5.5.0包。
 
 ### 安装Service Pack {#install-service-pack}
 
-请执行以下步骤在现有Adobe Experience Manager 6.5实例上安装Service Pack:
+请执行以下步骤在现有Adobe Experience Manager6.5实例上安装Service Pack:
 
 1. 从“包共享”或“ [软件分发](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0) ”下 [载服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
 
@@ -352,7 +352,7 @@ Adobe Experience Manager 6.5.5.0中引入的一些主要功能和增强功能包
 
 **自动安装**
 
-有两种方法可自动在工作实例上安装Adobe Experience Manager 6.5.5.0:
+有两种方法可自动在工作实例上安装Adobe Experience Manager6.5.5.0:
 
 答：当服务器联机 `../crx-quickstart/install` 可用时，将包放入文件夹。 软件包会自动安装。
 
@@ -360,7 +360,7 @@ B.使用包 [管理器中的HTTP API](https://helpx.adobe.com/cn/experience-mana
 
 >[!NOTE]
 >
->Adobe Experience Manager 6.5.5.0不支持Bootstrap安装。
+>Adobe Experience Manager6.5.5.0不支持Bootstrap安装。
 
 **验证安装**
 
@@ -372,27 +372,27 @@ B.使用包 [管理器中的HTTP API](https://helpx.adobe.com/cn/experience-mana
 
 要了解经认证可与此版本一起使用的平台，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
 
-### 安装Adobe Experience Manager Forms加载项包 {#install-aem-forms-add-on-package}
+### 安装Adobe Experience Manager表单加载项包 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->如果您未使用 AEM Forms，请跳过。Adobe Experience Manager Forms中的修复通过单独的附加包提供。
+>如果您未使用 AEM Forms，请跳过。Adobe Experience Manager表单中的修复通过单独的附加包提供。
 
-1. 确保您已安装Adobe Experience Manager Service Pack。
+1. 确保已安装Adobe Experience Manager服务包。
 1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) for your operating system.
 1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
-### 在JEE上安装Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
+### 在JEE上安装Adobe Experience Manager表单 {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的Adobe Experience Manager Forms中的修复通过单独的安装程序提供。
+>如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的Adobe Experience Manager表单修复通过单独的安装程序提供。
 
 For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes for patch 0014](https://helpx.adobe.com/cn/aem-forms/quick-fixes/6-5/jee-patch-0014.html).
 
 ### UberJar {#uber-jar}
 
-UberJar for Experience Manager 6.5.5.0可在Adobe Public Maven [存储库中获得](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
+Adobe Public Maven存储库中提供UberJar for [6.5.5.0Experience Manager](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
 
 要在Maven项目中使用UberJar，请 [了解如何使用UberJar](/help/sites-developing/ht-projects-maven.md) ，并在项目POM中包含以下依赖项：
 
@@ -414,11 +414,11 @@ UberJar for Experience Manager 6.5.5.0可在Adobe Public Maven [存储库中获�
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | 已 **[!UICONTROL 弃用AEM云服务选择]** -加入屏幕。 随着AEM 6.5中更新的AEM和目标集成以支持Target Standard API（它使用通过Adobe IMS和I/O进行身份验证）以及Adobe Launch在检测AEM页面以进行分析和个性化方面日益重要的作用，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、Adobe IMS身份验证和Adobe I/O集成。 |
+| 集成 | 已 **[!UICONTROL 弃用AEM cloud services]** “选择加入”屏幕。 随着AEM 6.5中更新的AEM和Target集成以支持Target StandardAPI（它使用通过Adobe IMS和I/O进行身份验证）以及Adobe Launch在检测AEM页面以进行分析和个性化方面日益重要的作用，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM cloud services配置系统连接、Adobe IMS身份验证和Adobe I/O集成。 |
 
 ## 已知问题 {#known-issues}
 
-* 如果安装的 [!DNL Experience Manager] 是带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
+* 如果您正在安 [!DNL Experience Manager] 装带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
 
 * 如果层次结构中的文件夹已重 [!DNL Experience Manager Assets] 命名，且包含资产的嵌套文件夹已发布到 [!DNL Brand Portal]，则只有在根文件夹再次发布后，才会更新 [!DNL Brand Portal] 该文件夹的标题。
 
@@ -435,7 +435,7 @@ UberJar for Experience Manager 6.5.5.0可在Adobe Public Maven [存储库中获�
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证将失败。 CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
-   * 通过购物横幅查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
+   * 通过Shoppable Banner查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
 
 ## OSGi bundles and content packages included {#osgi-bundles-and-content-packages-included}
 
