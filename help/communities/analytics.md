@@ -376,7 +376,7 @@ Analytics自动用于多个社区功能。
 
 ### 组件配置 {#component-configuration}
 
-![chlimage_1-186](assets/chlimage_1-186.png)
+![chlimage_1-185](assets/chlimage_1-186.png)
 
 >[!NOTE]
 >
