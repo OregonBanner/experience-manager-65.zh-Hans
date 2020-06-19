@@ -3,7 +3,7 @@ title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有或特定演绎版。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 711cd438cc8962d310bb2bfbb14f079161aacce0
+source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 8%
@@ -77,16 +77,6 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 >[!NOTE]
 >
 >筛选仅适用于资产二进制文件中从XMP源派生的属性。 对于从非XMP源（如EXIF和IPTC格式）派生的属性，过滤不起作用。 例如，资产创建日期存储在以EXIF TIFF命名 `CreateDate` 的属性中。 Experience Manager将此值存储在名为的元数据字段中 `exif:DateTimeOriginal`。 由于源是非XMP源，因此过滤不适用于此属性。
-
-<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
-in Config Manager. And the settings are,
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
- 
-TBD: Make updates to configurations for allow and block list after product updates are done.
--->
 
 1. 要打开Configuration Manager，请访 `https://[aem_server]:[port]/system/console/configMgr`问。
 1. 打开 **[!UICONTROL Adobe CQ DAM XmpFilter配置]** 。
