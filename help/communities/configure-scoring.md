@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -83,7 +83,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
 要快速设置幻灯片文件：
 
-1. 访问 **Adobe Experience Manager Web Console日志支持**，例如
+1. 访问 **Adobe Experience ManagerWeb控制台日志支持**，例如
 
    * https://localhost:4502/system/console/slinglog
 
@@ -102,7 +102,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
 
 
-![chlimage_1-193](assets/chlimage_1-193.png)
+![chlimage_1-248](assets/chlimage_1-248.png)
 
 要查看日志条目：
 
@@ -118,7 +118,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
    * 例如，`.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-194](assets/chlimage_1-194.png)
+![chlimage_1-249](assets/chlimage_1-249.png)
 
 ## 用于评分和徽章的UGC {#ugc-for-scoring-and-badging}
 
@@ -217,7 +217,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
    由于用户已获得两个铜牌徽章，并且已获得版主徽章，因此用户在论坛条目中的显示方式是这样的。
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![chlimage_1-250](assets/chlimage_1-250.png)
 
 >[!NOTE]
 >
@@ -255,7 +255,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 得分存储在属性中， `scoreValue_tl` 该属性可能仅直接包含值或间接引用atomicCounter。
 
-![chlimage_1-196](assets/chlimage_1-196.png)
+![chlimage_1-251](assets/chlimage_1-251.png)
 
 ### 访问标记UGC {#access-badging-ugc}
 
@@ -271,11 +271,11 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 #### 奖章 {#awarded-badge}
 
-![chlimage_1-197](assets/chlimage_1-197.png)
+![chlimage_1-252](assets/chlimage_1-252.png)
 
 #### 分配的徽章 {#assigned-badge}
 
-![chlimage_1-198](assets/chlimage_1-198.png)
+![chlimage_1-253](assets/chlimage_1-253.png)
 
 ## 附加信息 {#additional-information}
 
