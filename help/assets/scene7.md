@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2873'
 ht-degree: 25%
@@ -87,7 +87,7 @@ After they are made available in **[!UICONTROL Design]** mode, you can add the c
 
 1. 在AEM中，打开要添加Dynamic Media经典(Scene7)组件的页面。
 
-1. 如果没有Dynamic Media经典组件可用，请单 **[!UICONTROL 击]** “设计”模式，点按带有蓝色边框的任何组件，点按父项 **[!UICONTROL 图标]** ，然后点按 **[!UICONTROL 配置图标]** 。 在 **[!UICONTROL Parsys(Design)中]**，选择所有Dynamic Media经典组件以使其可用，然后单击 **[!UICONTROL 确定]**。
+1. 如果没有Dynamic Media经典组件可用，请单 **[!UICONTROL 击]** “设计”模式，点按带有蓝色边框的任何组件，点按父项 **[!UICONTROL 图标]** ，然后点按 **[!UICONTROL 配置图标]** 。 在 **[!UICONTROL Parsys(Design)中]**，选择所有Dynamic Media经典组件以使其可用，然后单击 **[!UICONTROL 确定。]**
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -210,7 +210,7 @@ Tap **[!UICONTROL Edit]** to configure the component. You can configure [setting
 
 #### 动态更改文本 {#changing-text-dynamically}
 
-要动态更改文本，请在字段中输入新文本，然后单击&#x200B;**[!UICONTROL 确定]**。在此示例中，**[!UICONTROL 价格]**&#x200B;现在为 50 美元，运费为 99 美分。
+要动态更改文本，请在字段中输入新文本，然后单击&#x200B;**[!UICONTROL 确定。]**&#x200B;在此示例中，**[!UICONTROL 价格]**&#x200B;现在为 50 美元，运费为 99 美分。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -220,7 +220,7 @@ Tap **[!UICONTROL Edit]** to configure the component. You can configure [setting
 
 #### 更改文本以反映 Client Context 值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-To link a field to a client context value, tap **[!UICONTROL Select]** to open the client-context menu, select the client context, and tap **[!UICONTROL OK]**. 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
+To link a field to a client context value, tap **[!UICONTROL Select]** to open the client-context menu, select the client context, and tap **[!UICONTROL OK.]**&#x200B;在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -230,12 +230,12 @@ To link a field to a client context value, tap **[!UICONTROL Select]** to open t
 
 #### 使Dynamic Media经典图像模板成为链接 {#making-the-scene-image-template-a-link}
 
-1. 在具有Dynamic Media经典图像模板 **[!UICONTROL 组件的页]** 面上，点 **[!UICONTROL 按编辑]**。
+1. 在具有Dynamic Media经典图像模板 **[!UICONTROL 组件的页面]** ，点按 **[!UICONTROL 编辑。]**
 1. In the **[!UICONTROL URL]** field, enter the URL that users go to when the image is tapped. In the **[!UICONTROL Open in]** field, select whether you want the target to open (a new window or same window).
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 点按 **[!UICONTROL 确定]**。
+1. 点按 **[!UICONTROL 确定。]**
 
 ### 视频组件 {#video-component}
 
@@ -343,7 +343,7 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 
 
-**[!UICONTROL 发布状态]** -您可以根据发布状态筛选资产： **[!UICONTROL 已取消发布]** 或已 **[!UICONTROL 发布]**。 If you do not select any **[!UICONTROL Publish Status]**, AEM by default searches all publish statuses.
+**[!UICONTROL 发布状态]** -您可以根据发布状态筛选资产： **[!UICONTROL 已取消发布]** 或已 **[!UICONTROL 发布。]** 如果未选择任何发布 **[!UICONTROL 状态]**，则默认情况下，AEM会搜索所有发布状态。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
 
