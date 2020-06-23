@@ -1,6 +1,6 @@
 ---
-title: 应用Dynamic media查看器预设
-description: 了解如何在Dynamic media中应用查看器预设
+title: 应用Dynamic Media查看器预设
+description: 了解如何在Dynamic Media中应用查看器预设
 uuid: cebad000-2bda-4e62-a0d1-7155151daf6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,32 +8,35 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 40%
 
 ---
 
 
-# 应用Dynamic media查看器预设 {#applying-viewer-presets}
+# Applying Dynamic Media viewer presets {#applying-viewer-presets}
 
-查看器预设是一组设置，用于确定用户在计算机屏幕和移动设备上查看富媒体资产的方式。您可以将管理员创建的任何查看器预设应用到资产。
+查看器预设是一组设置，用于确定用户如何在其计算机屏幕和移动设备上视图富媒体资产。 您可以将管理员创建的任何查看器预设应用到资产。
 
 如果您是管理员，并且需要管理、创建、排序或删除查看器预设，请参阅[管理查看器预设](managing-viewer-presets.md)。
 
 See also [Publishing Viewer Presets](managing-viewer-presets.md#publishing-viewer-presets).
 
 根据您使用的发布模式，您可能不需要发布查看器预设。
-查看器预设有任何问题，请参 [阅Dynamic Media - Scene7疑难解答](troubleshoot-dms7.md#viewers)。
+查看器预设有任何问题，请参 [阅Dynamic Media疑难解答- Scene7](troubleshoot-dms7.md#viewers)。
 
 ## Applying a Dynamic Media viewer preset to an asset {#applying-a-viewer-preset-to-an-asset}
 
-1. 打开资产并在左边栏中，然后点按查看 **[!UICONTROL 器]**。
+1. Open the asset and in the left rail, and tap **[!UICONTROL Viewers.]**
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-   * The **[!UICONTROL URL]** and **[!UICONTROL Embed]** buttons appear after you select a viewer preset.
-   * 当您在资产的详细信息视图中选择查看器时，系统会显示大量 **[!UICONTROL 查看器预设]**。 您可以增加已查看的预设数。 请参 [阅增加显示的查看器预设数](managing-viewer-presets.md)。
+   * 选择查看器预设后，将显示 **[!UICONTROL URL]** 和&#x200B;**[!UICONTROL 嵌入]**&#x200B;按钮。
+   * 当您在资产的&#x200B;**[!UICONTROL 详细信息视图中选择查看器时，系统会显示大量查看器预设。]**&#x200B;您可以增加可查看的预设数。请参阅[增加显示的查看器预设数量](managing-viewer-presets.md)。
 
-1. 从左侧窗格中选择一个查看器，以将其应用到资产，如右侧窗格中所示。 您还可以[复制 URL 以共享](linking-urls-to-yourwebapplication.md)给其他用户。
+1. 从左窗格中选择一个查看器，将其应用到资产，如右窗格中所示。 您还可以[复制 URL 以共享](linking-urls-to-yourwebapplication.md)给其他用户。
 
 ## Obtaining viewer preset URLs {#obtaining-viewer-preset-urls}
 
