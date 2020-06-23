@@ -3,7 +3,7 @@ title: 从下载数字资产 [!DNL Adobe Experience Manager]。
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 64c09e454960a40632059a85f0861deed1899b86
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 6%
@@ -24,10 +24,10 @@ ht-degree: 6%
 **要下载资源，**
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Navigation]** (Compass icon).
-1. 在导航页面上，点按资 **[!UICONTROL 产>文件]**。
+1. 在导航页面上，点按资 **[!UICONTROL 产>文件。]**
 1. 导航到包含要下载的资产的文件夹。
 1. 选择文件夹，或在文件夹中选择一个或多个资产。
-1. On the toolbar, tap **[!UICONTROL Download]**.
+1. On the toolbar, tap **[!UICONTROL Download.]**
 
    ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download1.png)
 
@@ -44,7 +44,7 @@ ht-degree: 6%
    | **[!UICONTROL 智能裁剪]** | 选择此选项可从AEM中下载选定资产的所有智能裁剪演绎版。 系统会创建包含智能裁剪演绎版的zip文件，并将其下载到您的本地计算机。 |
    | **[!UICONTROL 动态演绎版]** | 选择此选项可实时生成一系列替代再现。 When you select this option, you also select the renditions that you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>此外，您还可以选择大小和度量单位、格式、色彩空间、分辨率以及任何可选的图像修饰符（如反转图像）。 此选项仅在您已启用的情况下才 [!DNL Dynamic Media] 可用。 |
 
-1. 在对话框中，点按下 **[!UICONTROL 载]**。
+1. 在对话框中，点按下 **[!UICONTROL 载。]**.
 
 ## 启用资产下载servlet {#enable-asset-download-servlet}
 
