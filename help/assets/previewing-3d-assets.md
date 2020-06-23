@@ -4,7 +4,7 @@ description: 了解如何预览3D资源
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cabc87dc58a4dbcac64a2797a3b1e0cca995d63
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 15%
@@ -51,7 +51,7 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
 **在AEM中预览3D资产**
 
 1. 确保您已将 3D 资产上传到 AEM。See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
-1. 从AEM的导航页 **[!UICONTROL 面]** ，点按 **[!UICONTROL 资产>文件]**。
+1. 从AEM的导航页 **[!UICONTROL 面]** ，点按 **[!UICONTROL 资产>文件。]**
 
    ![导航页](/help/assets/assets-dm/navigation-assets.png)
 
@@ -80,4 +80,4 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
    * **重置**-在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。 重置还会使相机更近或更远地移动，以便以合理的查看大小完整显示资产。
    * **全屏模式**-要进入全屏模式，请点按页面右下角的全屏图标。
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close]**.
+1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
