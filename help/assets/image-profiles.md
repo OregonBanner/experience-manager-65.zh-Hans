@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: a71507e3c6030ebc3f4abbd7064318d653d326bd
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2755'
-ht-degree: 22%
+ht-degree: 21%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->智能裁剪仅在Dynamic Media - Scene7模式下可用。
+>智能裁剪仅在Dynamic Media- Scene7模式下可用。
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ ht-degree: 22%
   <tr>
    <td>颜色和图像样本</td>
    <td>批量为每个图像生成一个图像样本。</td>
-   <td><p><strong>注意</strong>: Dynamic Media Classic不支持智能色板。</p> <p>从显示颜色或纹理的产品图像自动定位和生成高质量样本。</p> <p>要使用颜色和图像色板， <strong>请从</strong> “裁剪选项”下拉列表中选择“智能裁剪”，然后在“颜色和图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。</p> <p>虽然所有图像裁剪都可从演绎版边栏中使用，但只能通过复制URL功能使用色板。 请注意，必须使用您自己的查看组件在站点上呈现色板。 (这种情况的例外是传送横幅。 Dynamic Media为传送横幅中使用的色板提供查看组件。)</p> <p><strong>使用图像色板</strong></p> <p>图像样本的URL非常简单。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中， <code>:Swatch</code> 资产请求会附加到该资产请求。</p> <p><strong>使用色板</strong></p> <p>要使用色板，您需要 <code>req=userdata</code> 使用以下项：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media Classic(Scene7)中的样本资产：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>下面是样本资产的相应 <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>答 <code>req=userdata</code> 复如下：</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>注意</strong>: Dynamic Media经典中不支持智能色板。</p> <p>从显示颜色或纹理的产品图像自动定位和生成高质量样本。</p> <p>要使用颜色和图像色板， <strong>请从</strong> “裁剪选项”下拉列表中选择“智能裁剪”，然后在“颜色和图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。</p> <p>虽然所有图像裁剪都可从演绎版边栏中使用，但只能通过复制URL功能使用色板。 请注意，必须使用您自己的查看组件在站点上呈现色板。 (这种情况的例外是传送横幅。 Dynamic Media为传送横幅中使用的色板提供查看组件。)</p> <p><strong>使用图像色板</strong></p> <p>图像样本的URL非常简单。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中， <code>:Swatch</code> 资产请求会附加到该资产请求。</p> <p><strong>使用色板</strong></p> <p>要使用色板，您需要 <code>req=userdata</code> 使用以下项：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media经典(Scene7)中的样本资产：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>下面是样本资产的相应 <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>答 <code>req=userdata</code> 复如下：</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -115,7 +115,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 **创建Dynamic Media图像用户档案**
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 点按 **[!UICONTROL 创建]** ，以添加新的图像用户档案。
 1. 输入用户档案名和／或USM锐化、裁剪或色板值。
 
@@ -125,12 +125,12 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
    ![作物](assets/crop.png)
 
-1. 点按&#x200B;**[!UICONTROL 保存]**。此时新创建的配置文件会显示在可用配置文件列表中。
+1. 点按&#x200B;**[!UICONTROL 保存。]**&#x200B;此时新创建的配置文件会显示在可用配置文件列表中。
 
 ## 编辑或删除Dynamic Media图像用户档案 {#editing-or-deleting-image-profiles}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
-1. 选择要编辑或删除的图像配置文件。要编辑图像配置文件，请选择&#x200B;**[!UICONTROL 编辑图像处理配置文件]**。To remove it, select **[!UICONTROL Delete Image Processing Profile]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
+1. 选择要编辑或删除的图像用户档案。 要编辑图像，请选择“ **[!UICONTROL 编辑图像处理用户档案”。]** 要删除图像，请选 **[!UICONTROL 择删除图像处理用户档案。]**
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
@@ -152,7 +152,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 ### 将Dynamic Media图像用户档案应用到特定文件夹 {#applying-image-profiles-to-specific-folders}
 
-您可以从“工具”菜单中将图像配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”]**。 本节将介绍这两种将图像配置文件应用到文件夹的方法。
+您可以从“工具”菜单中将图像配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”。]**&#x200B;本节将介绍这两种将图像配置文件应用到文件夹的方法。
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
@@ -160,18 +160,18 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 #### Applying Dynamic Media image profiles to folders from Profiles user interface {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 选择您要应用到一个或多个文件夹的图像配置文件。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply.]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-#### 从属性将Dynamic Media图像用户档案应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
+#### 从“属性”将Dynamic Media图像用户档案应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
 
 1. 点按AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到要应用图像用户档案的文件夹。
-1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性]**。
-1. 点按&#x200B;**[!UICONTROL 图像配置文件]**&#x200B;选项卡。从&#x200B;**[!UICONTROL 配置文件名称]**&#x200B;下拉列表中，选择配置文件，然后点按&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性。]**
+1. 点按&#x200B;**[!UICONTROL 图像配置文件]**&#x200B;选项卡。从&#x200B;**[!UICONTROL 配置文件名称]**&#x200B;下拉列表中，选择配置文件，然后点按&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -185,13 +185,13 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 1. 执行下列操作之一：
 
-   * 导航到 `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 并应用相应的用户档案，然后点 **[!UICONTROL 按保存]**。
+   * 导航到 `https://&lt;AEM server&gt;/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 并应用相应的用户档案，然后点按 **[!UICONTROL 保存。]**
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
    * 导航到CRXDE Lite到以下节点： `/content/dam/jcr:content`.
 
-      添加属性， `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 然后点 **[!UICONTROL 按全部保存]**。
+      添加属性并 `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` 点按全 **[!UICONTROL 部保存。]**
 
       ![configure_image_用户档案](assets/configure_image_profiles.png)
 
@@ -199,7 +199,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 >[!NOTE]
 >
->智能裁剪仅在Dynamic Media - Scene7模式下可用。
+>智能裁剪仅在Dynamic Media- Scene7模式下可用。
 
 您可以手动重新对齐图像的智能裁剪窗口或调整其大小以进一步调整其焦点。
 
@@ -215,7 +215,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 1. 点按文件夹以打开其内容。
 1. 点按要调整其智能裁剪或智能色板的图像。
-1. 在工具栏中，点按 **[!UICONTROL 智能裁剪]**。
+1. 在工具栏中，点按 **[!UICONTROL 智能裁剪。]**
 
 1. 执行以下操作之一：
 
@@ -237,7 +237,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 **要编辑多个图像的智能裁剪或智能色板，请执行以下操作**:
 
 1. 点按AEM徽标并导航到 **[!UICONTROL 资产]**，然后导航到应用了智能裁剪或智能色板图像用户档案的文件夹。
-1. 在文件夹中，点按 **[!UICONTROL 更多操作]** (...)图标，然后点按 **[!UICONTROL 智能裁剪]**。
+1. 在文件夹中，点按 **[!UICONTROL 更多操作]** (...)图标，然后点按 **[!UICONTROL 智能裁剪。]**
 
 1. 在“编 **[!UICONTROL 辑智能裁切]** ”页面上，执行下列任一操作：
 
@@ -257,12 +257,14 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
       * 如果图像仅包含智能裁剪或智能色板，请在图像上拖动裁剪框的角手柄以调整裁剪的可查看区域的大小。
       * 如果图像同时具有智能裁剪和智能色板，请在图像上拖动裁剪框的角手柄以调整裁剪的可查看区域的大小。 或者，点按或单击图像下方的智能色板（色板为静态），然后拖动裁剪框的角手柄以调整色板可查看区域的大小。
+
       ![调整图像的智能裁剪大小。](assets/edit_smart_crops-resize.png)
 
    * 移动智能裁剪框。 执行下列任一操作：
 
       * 如果图像仅具有智能裁剪或智能色板，则在图像上将裁剪框拖到新位置。
       * 如果图像同时具有智能裁剪和智能色板，请在图像上将智能裁剪框拖到新位置。 或者，点按或单击图像下方的智能色板（色板为静态），然后将智能色板裁剪框拖到新位置。
+
       ![edit_smart_crobs_move](assets/edit_smart_crops-move.png)
 
    * 撤消所有编辑并恢复原始智能裁剪或智能色板（仅适用于当前编辑会话）。
@@ -273,27 +275,27 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 
 
-1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL 保存]**。然后点 **[!UICONTROL 按关]** 闭以返回资产文件夹。
+1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL 保存。]** 然后点 **[!UICONTROL 按关]** 闭以返回资产文件夹。
 
 ## Removing an image profile from folders {#removing-an-image-profile-from-folders}
 
 当您将图像配置文件从文件夹删除之后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。但是，此前对文件夹中的文件所做的处理均予以保留。
 
-您可以从“工具”菜单中的文件夹删除图像配置文件；如果您在 **[!UICONTROL 文件夹中]** ，也可以从“属性”中 **[!UICONTROL 删除]**。 本节将介绍这两种将图像配置文件从文件夹删除的方法。
+您可以从“工具”菜单中的文件夹删除图像配置文件；如果您在 **[!UICONTROL 文件夹中]** ，也可以从“属性”中 **[!UICONTROL 删除。]**&#x200B;本节将介绍这两种将图像配置文件从文件夹删除的方法。
 
-### 通过用户档案用户界面将Dynamic Media图像用户档案从文件夹删除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### 通过Dynamic Media用户界面将用户档案图像用户档案从文件夹删除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles]**.
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 选择您要从一个或多个文件夹删除的图像配置文件。
-1. 点按&#x200B;**[!UICONTROL 从文件夹删除处理配置文件]**，然后选择一个或多个要从中删除配置文件的文件夹，然后点按&#x200B;**[!UICONTROL 删除]**。
+1. Tap **[!UICONTROL Remove Processing Profile from Folder(s)]** and select the folder or multiple folders you want use to remove the profile from and tap **[!UICONTROL Remove.]**
 
    您可以确认图像用户档案不再应用于文件夹，因为该名称不再显示在文件夹名称的下方。
 
 ### 通过属性将Dynamic Media图像用户档案从文件夹删除 {#removing-image-profiles-from-folders-via-properties}
 
 1. 点按AEM徽标，导 **[!UICONTROL 航资]** 产，然后导航到您要从中删除图像用户档案的文件夹。
-1. 在文件夹中，点按复选标记以选择它，然后点按 **[!UICONTROL 属性]**。
+1. 在文件夹中，点按复选标记以选择它，然后点按 **[!UICONTROL 属性。]**
 1. Select the **[!UICONTROL Image Profiles]** tab.
-1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close]**.
+1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close.]**
 
    如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
