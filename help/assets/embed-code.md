@@ -1,5 +1,5 @@
 ---
-title: 在网页上嵌入Dynamic Media视频查看器或图像查看器
+title: 将Dynamic Media视频查看器或图像查看器嵌入网页
 description: 了解如何将Dynamic Media视频或图像嵌入网页
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
@@ -8,15 +8,15 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 translation-type: tm+mt
-source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 30%
+ht-degree: 29%
 
 ---
 
 
-# 在网页上嵌入Dynamic Media视频、图像查看器或维查看器 {#embedding-the-video-or-image-viewer-on-a-web-page}
+# 将Dynamic Media视频、图像查看器或维查看器嵌入网页 {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 当您想 **[!UICONTROL 要播放视频或查看嵌入到网页中的资产时]** ，请使用嵌入代码功能。 将嵌入代码复制到剪贴板，以便将其粘贴到网页中。 不允许在“嵌入代码”对 **[!UICONTROL 话框中编辑代码]** 。
 
@@ -36,7 +36,7 @@ See [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 >
 >See [Publishing Image Presets](managing-image-presets.md#publishing-image-presets).
 
-**在网页上嵌入Dynamic Media视频查看器或图像查看器**
+**将Dynamic Media视频查看器或图像查看器嵌入网页**
 
 1. Navigate to the *published* video or image asset whose embed code you want to copy.
 
@@ -48,14 +48,14 @@ See [Delivering Optimized Images for a Responsive Site.](responsive-site.md)
 
    See [Publishing Image Presets](managing-image-presets.md#publishing-image-presets).
 
-1. 在左边栏中，选择下拉菜单并点按查 **[!UICONTROL 看器]**。
+1. 在左边栏中，选择下拉菜单并点按查 **[!UICONTROL 看器。]**
 1. 在左边栏中，点按查看器预设名称。查看器预设会应用于资产。
-1. 点按&#x200B;**[!UICONTROL 嵌入]**。
-1. In the **[!UICONTROL Embed Code]** dialog box, copy the entire code to the clipboard, and then tap **[!UICONTROL Close]**.
+1. Tap **[!UICONTROL Embed.]**
+1. In the **[!UICONTROL Embed Code]** dialog box, copy the entire code to the clipboard, and then tap **[!UICONTROL Close.]**
 1. 将嵌入代码粘贴到网页中。
 
-## 使用HTTP/2交付Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2传送Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 Dynamic Media资产的投放现在可以通过HTTP/2，从而提供更好的响应和加载时间。
+HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 投放Dynamic Media资源现在可以通过HTTP/2，从而提供更好的响应和加载时间。
 
-有 [关使用Dynamic Media帐户](http2.md) HTTP/2入门的完整详细信息，请参阅内容的HTTP2投放。
+有 [关通过Dynamic Media](http2.md) 帐户开始使用HTTP/2的完整详细信息，请参阅内容的HTTP2投放。
