@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1741'
-ht-degree: 44%
+ht-degree: 43%
 
 ---
 
@@ -74,7 +74,7 @@ Dynamic Media经典视频组件支持以下格式：
 
 **要配置通用预设，请执行以下操作**:
 
-1. In **[!UICONTROL Cloud Services]**, navigate to your **[!UICONTROL Dynamic Media Classic]** configuration and click **[!UICONTROL Edit]**.
+1. In **[!UICONTROL Cloud Services]**, navigate to your **[!UICONTROL Dynamic Media Classic]** configuration and click **[!UICONTROL Edit.]**
 1. 选择&#x200B;**[!UICONTROL 视频]**&#x200B;选项卡。
 
    >[!NOTE]
@@ -151,8 +151,8 @@ Dynamic Media经典视频组件仅适用于Dynamic Media经典视频。 基础�
 >
 >必须激活新的视频配置文件以及对其所做的更改，才能进行发布。
 
-1. 在 AEM 中，转到&#x200B;**[!UICONTROL 工具]**，然后选择&#x200B;**[!UICONTROL 配置控制台]**。In the Configuration Console navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** in the navigation tree.
-1. 创建新的Dynamic Media经典视频用户档案。 In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Dynamic Media Classic Video Profile template. 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
+1. 在 AEM 中，转到&#x200B;**[!UICONTROL 工具]**，然后选择&#x200B;**[!UICONTROL 配置控制台。]** 在配置控制台中，导 **[!UICONTROL 航到导航]** 树中 **** 的工具 **[!UICONTROL >]** Assets > Video用户档案。
+1. 创建新的Dynamic Media经典视频用户档案。 In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Dynamic Media Classic Video Profile template. Give the new video profile page a name and click **[!UICONTROL Create.]**
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
