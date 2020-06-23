@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -74,7 +74,7 @@ ht-degree: 0%
    >
    >叠加和编辑整个用户档案节点，而不仅仅是需要修改的属性。 这些资源不会通过SlingResourceMergare解决。
 
-4. If you changed either of the properties, click **[!UICONTROL Save All]**.
+4. If you changed either of the properties, click **[!UICONTROL Save All.]**
 
 >[!NOTE]
 >
