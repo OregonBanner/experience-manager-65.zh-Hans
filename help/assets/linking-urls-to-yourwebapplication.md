@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 translation-type: tm+mt
-source-git-commit: 572b856fbdd1ef916f8f897ba86ddefafee324fc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1275'
-ht-degree: 28%
+ht-degree: 24%
 
 ---
 
@@ -66,25 +66,25 @@ See also [Uploading Assets.](managing-assets-touch-ui.md#uploading-assets)
 
 1. 根据您选择的资产，执行以下操作之一：
 
-   * 如果您选择了图像，请点按下拉菜单中的演 **[!UICONTROL 绎版]**。
+   * 如果您选择了图像，请点按下拉菜单中的演绎 **[!UICONTROL 版。]**
 
       Under the **[!UICONTROL Dynamic]** heading, tap a preset name to view its rendition in the right frame. 您可能需要滚动演绎版列表才能看到动态标题。
 
-      在左边栏的底部，点按 **[!UICONTROL URL]**。
+      At the bottom of the left rail, tap **[!UICONTROL URL.]**
 
       ![chlimage_1-270](assets/chlimage_1-270.png)
 
-   * 如果您在下拉菜单中选择了旋转集、图像集、旋转集或视频，请点按查 **[!UICONTROL 看器]**。
+   * 如果您在下拉菜单中选择了旋转集、图像集、旋转集或视频，请点按查 **[!UICONTROL 看器。]**
 
       在左边栏中，点按查看器预设名称。预览集或视频将在单独的页面中打开。
 
-      In the left rail, at the bottom, tap **[!UICONTROL URL]**.
+      In the left rail, at the bottom, tap **[!UICONTROL URL.]**
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. 选择相应的文本并将其复制到 Web 浏览器中，以预览资产或将其添加到您的 Web 内容页面。
 
-   要退出URL窗口，请点按 **[!UICONTROL X]** 或点按 **[!UICONTROL 关闭]**。
+   要退出URL窗口，请点按 **[!UICONTROL X]** 或点按 **[!UICONTROL 关闭。]**
 
 ## 获取静态资产的URL {#obtaining-a-url-for-a-static-asset}
 
@@ -122,11 +122,11 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
 ## 获取已发布视频演绎版的视频URL {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>云服务]**。
-1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
+1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>Cloud Service。]**
+1. On the **[!UICONTROL Cloud Services]** page, scroll down to the **[!UICONTROL Dynamic Media Cloud Services]** heading, then tap **[!UICONTROL Show Configurations.]**
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
 
-1. 在Dynamic Media **[!UICONTROL Cloud设置页]** 面的视频 **[!UICONTROL 服务URL下]**，向下复制整个URL路径。 您稍后将需要复制的URL路径。
+1. 在“ **[!UICONTROL Dynamic Media云设置]** ”页面 **[!UICONTROL 的“视频服务URL]**”下，复制整个URL路径。 您稍后将需要复制的URL路径。
 
    例如，URL路径可能与以下内容类似：
 
@@ -138,7 +138,7 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
    例如，如果注册ID为 `87654321|MyCompany`，则客户名称为 `MyCompany`。
 
-1. 在页面的左上角附近，点 **按[!UICONTROL Cloud Services**，然后点按Experience Manager徽标，并导航到 **[!UICONTROL “常规”>“CRXDE Lite]**”。
+1. 在页面的左上角附近，点按 **[!UICONTROLCloud Service**，然后点按Experience Manager标志并导航 **[!UICONTROL 到“常规”>“CRXDE Lite”。]**
 1. 从JCR（Java内容存储库）中向下复制整个视频再现路径。
 
    例如，视频的再现路径可能与以下内容类似：
@@ -159,10 +159,10 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
 ## 获取自适应流播放(HLS)的视频URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>云服务]**。
-1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
+1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>Cloud Service。]**
+1. On the **[!UICONTROL Cloud Services]** page, scroll down to the **[!UICONTROL Dynamic Media Cloud Services]** heading, then tap **[!UICONTROL Show Configurations.]**
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
-1. 在Dynamic Media **[!UICONTROL Cloud服务设置页]** ，执行以下操作：
+1. 在“Dynamic Media **[!UICONTROL Cloud Service设置]** ”页面上，执行以下操作：
 
    * 在“ **[!UICONTROL 视频服务]** URL”下，复制整个URL路径。 在这些步骤之后，您将需要复制的URL路径。 例如，URL路径可能与以下内容类似：
 
@@ -182,7 +182,7 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
    | HTTP <br> 如果您使用HTTP(非安全视频投放)，请确保在您之前复制的视频服务URL值中将https更改为http。 | `public/` |
    | HTTPS | `public-ssl/` |
 
-1. 在AEM中复制Dynamic Media处理的完整视频资产路径。 在这些步骤的稍后部分，您将需要此复制的视频资产路径。
+1. 复制AEM中由Dynamic Media处理的完整视频资产路径。 在这些步骤的稍后部分，您将需要此复制的视频资产路径。
 
    例如：
 
@@ -200,8 +200,8 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## 使用HTTP/2交付Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2传送Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 Dynamic Media资产的投放现在可以通过HTTP/2，从而提供更好的响应和加载时间。
+HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 投放Dynamic Media资源现在可以通过HTTP/2，从而提供更好的响应和加载时间。
 
-有 [关使用Dynamic Media帐户](http2.md) HTTP/2入门的完整详细信息，请参阅内容的HTTP2投放。
+有 [关通过Dynamic Media](http2.md) 帐户开始使用HTTP/2的完整详细信息，请参阅内容的HTTP2投放。
