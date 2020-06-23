@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '2079'
-ht-degree: 50%
+ht-degree: 46%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 50%
 
    在图像集中，用户在图像集查看器中单击缩略图。
 
-   要在资产中创建图像集，请点按或单 **[!UICONTROL 击创建>图像集]**。 然后，添加图像并单击&#x200B;**[!UICONTROL 保存]**。
+   要在资产中创建图像集，请点按或单击创 **[!UICONTROL 建>图像集。]** 然后，添加图像，并单击“ **[!UICONTROL 保存”。]**
 
    You can also create image sets automatically through [batch set presets](/help/assets/config-dms7.md).
    >[!IMPORTANT]
@@ -62,7 +62,7 @@ ht-degree: 50%
 
 1. Add [Image Set Viewer presets](/help/assets/managing-viewer-presets.md), as needed.
 
-   管理员可以创建或修改图像集查看器预设。To see your image set with a viewer preset, select the image set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers]**.
+   管理员可以创建或修改图像集查看器预设。To see your image set with a viewer preset, select the image set, and in the left-rail drop-down menu, select **[!UICONTROL Viewers.]**
 
    See **[!UICONTROL Tools > Assets > Viewer Presets]** to create or edit viewer presets.
 
@@ -79,7 +79,7 @@ ht-degree: 50%
 
    在发布图像集后，AEM 资产会为该图像集创建 URL 调用并将其激活。预览资产时，您可以复制这些 URL。或者，也可以将它们嵌入到您的网站上。
 
-   选择图像集，然后在左边栏下拉菜单中选择&#x200B;**[!UICONTROL 查看器]**。
+   Select the Image Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
 
    请参 [阅将图像集链接到网页和嵌入视](/help/assets/linking-urls-to-yourwebapplication.md) 频查看器或图像查看器 [](/help/assets/embed-code.md)。
 
@@ -128,7 +128,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
 **创建图像集**
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按导航 **[!UICONTROL >资产]**。 导航到要创建图像集的位置，然后点按创建 **[!UICONTROL >图像集]** ，以打开“图像集编辑器”页。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按导航 **[!UICONTROL >资产。]**&#x200B;导航到要创建图像集的位置，然后点按创建 **[!UICONTROL >图像集]** ，以打开“图像集编辑器”页。
 
    您还可以从包含资产的文件夹中创建旋转集。
 
@@ -140,12 +140,12 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
 1. 执行以下操作之一：
 
-   * 在“图像集编辑器”页面的左上角附近，点按添 **[!UICONTROL 加资产]**。
+   * 在“图像集编辑器”页面的左上角附近，点按添 **[!UICONTROL 加资产。]**
 
-   * 在“图像集编辑器”页面的中间附近，点按 **[!UICONTROL 以打开资产选择器]**。
-   点按以选择要包含在图像集中的资产。 选定资产上有一个复选标记图标。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
+   * 在“图像集编辑器”页面的中间附近，点按 **[!UICONTROL 以打开资产选择器。]**
+   点按以选择要包含在图像集中的资产。 选定资产上有一个复选标记图标。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select.]**
 
-   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后点按工具栏上的&#x200B;**[!UICONTROL 过滤器]**&#x200B;图标。点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
+   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回来搜索资产。]**&#x200B;您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后点按工具栏上的&#x200B;**[!UICONTROL 过滤器]**&#x200B;图标。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
 
    See [Working with Selectors.](/help/assets/working-with-selectors.md)
 
@@ -157,18 +157,18 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
    ![6_5_imageset-reorderassets](assets/6_5_imageset-reorderassets.png)
 
-   如果要更改缩略图或色板，请单击图像旁的 **+** **缩略图**&#x200B;图标，然后导航到所需的缩略图或色板。选择完所有图像后，单击&#x200B;**[!UICONTROL 保存]**。
+   如果要更改缩略图或色板，请单击图像旁的 **+** **缩略图**&#x200B;图标，然后导航到所需的缩略图或色板。When done selecting all the images click **[!UICONTROL Save.]**
 
 1. （可选）执行以下操作之一：
 
-   * 要删除图像，请选择该图像，然后点按删 **[!UICONTROL 除资产]**。
+   * 要删除图像，请选择该图像，然后点按删 **[!UICONTROL 除资产。]**
 
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a preset to apply to all the assets at once.
    >[!NOTE]
    >
-   >创建图像集时，您可以更改图像集缩略图，或允许 AEM 根据图像集中的资产自动选择缩略图。要选择缩略图，请点按“图像集编辑器”页面中“标题”字段上方的&#x200B;**[!UICONTROL 更改缩略图]**，然后选择任意图像（您也可以导航到其他文件夹以查找图像）。如果您选择了缩略图，然后决定让 AEM 从图像集生成缩略图，请选择&#x200B;**[!UICONTROL 切换到]****[!UICONTROL 自动缩略图]**。
+   >创建图像集时，您可以更改图像集缩略图，或允许 AEM 根据图像集中的资产自动选择缩略图。要选择缩略图，请点按“图像集编辑器”页面中“标题”字段上方的&#x200B;**[!UICONTROL 更改缩略图]**，然后选择任意图像（您也可以导航到其他文件夹以查找图像）。If you have selected a thumbnail and then decide that you want AEM to generate one from the image set, select **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail.]**
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。您新创建的图像集会显示在创建时所用的文件夹中。
+1. 单击&#x200B;**[!UICONTROL 保存。]**&#x200B;您新创建的图像集会显示在创建时所用的文件夹中。
 
 ## 查看图像集 {#viewing-image-sets}
 
@@ -188,7 +188,7 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
    ![6_5_imageset_setspuldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
-* 从搜索中，您可以选 **择[!UICONTROL过滤器**，然后展开 **[!UICONTROL Dynamic Media** ，并选择 **[!UICONTROL 集]**。
+* From search, you can select **[!UICONTROL Filter**, then expand **[!UICONTROL Dynamic Media** and select **[!UICONTROL Sets.]**
 
    搜索会返回在UI中手动创建或通过批集预设自动创建的匹配集。 对于自动化集，搜索查询使用与AEM搜索不同的“具有开始”搜索标准（基于使用“包含”搜索标准）进行。 将过滤器设置 **[!UICONTROL 为]** “集”是搜索自动集的唯一方式。
 
@@ -220,16 +220,14 @@ You can upload images for Image Sets as you would [upload any other asset in Ass
 
    * 要对资产重新排序，请将图像拖动到新位置（选择重新排序图标以移动项目）。
    * 要按升序或降序对项目排序，请单击列标题。
-   * To add an asset or update an existing asset, click the **[!UICONTROL Add Asset]**. 导航到资产，选择它，然 **[!UICONTROL 后点]** 按页面右上角附近的选择。
-
+   * To add an asset or update an existing asset, click the **[!UICONTROL Add Asset.]** 导航到资产，选择它，然 **[!UICONTROL 后点]** 按页面右上角附近的选择。
       >[!NOTE]
       >
       >如果通过将AEM用作缩略图的图像替换为其他图像来删除该图像，则仍会显示原始资产。
-   * 要删除资产，请选择该资产，然后点按或单 **[!UICONTROL 击删除资产]**。
+   * 要删除资产，请选择该资产，然后点按或单 **[!UICONTROL 击删除资产。]**
    * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a viewer preset.
-   * 要添加或更改缩略图，请选择资产右侧的缩略图图标。 导航到新的缩略图或样本资产，将其选中，然后点按 **[!UICONTROL 选择]**。
-   * To delete an entire Image Set, navigate to the Image Set, select it, and tap **[!UICONTROL Delete]**.
-
+   * 要添加或更改缩略图，请选择资产右侧的缩略图图标。 导航到新的缩略图或样本资产，将其选中，然后点按 **[!UICONTROL 选择。]**
+   * To delete an entire Image Set, navigate to the Image Set, select it, and tap **[!UICONTROL Delete.]**
    >[!NOTE]
    >
    >您可以导航到图像组，点按左边栏中的&#x200B;**[!UICONTROL 设置成员]**，然后点按单个资产上的“铅笔”图标以打开编辑窗口，来编辑图像。
