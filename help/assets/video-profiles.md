@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '3707'
-ht-degree: 36%
+ht-degree: 33%
 
 ---
 
@@ -157,11 +157,11 @@ Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对
 
 **要创建自适应流播放的视频用户档案**,
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 单击或点按 **[!UICONTROL 创建]** ，以添加新视频用户档案。
 
 1. 输入配置文件的名称和描述。
-1. 在“创建／编辑视频编码预设”页面，点按添 **[!UICONTROL 加视频编码预设]**。
+1. 在“创建／编辑视频编码预设”页面，点按添 **[!UICONTROL 加视频编码预设。]**
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
 点按每个选项旁边的信息图标，以根据选定的视频格式编解码器获得更多说明或推荐的设置。
 1. Under the Video Size heading, ensure that **[!UICONTROL Keep aspect ratio]** is checked.
@@ -169,7 +169,7 @@ Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对
 
 1. 执行下列操作之一：
 
-   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto]**. In the **[!UICONTROL Height]** field, enter a value in pixels.
+   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto.]** 在“高 **[!UICONTROL 度]** ”字段中，输入以像素为单位的值。
 
    * 要帮助您可视化视频的大小，请点按高度右侧的信息图标(i) **[!UICONTROL 以打]** 开“大小计算器”页面。 使 **[!UICONTROL 用大小计]** 算器来设置所需的视频尺寸（由蓝色框表示）。 完成后，点按右上角的 **[!UICONTROL X]**。
 
@@ -180,7 +180,7 @@ Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对
    * 继续下一步。
 
 1. （可选）要向将应用此用户档案的视频添加视频智能裁剪，请执行以下操作：
-   * 在“编辑视频”用户档案页面的“智能裁剪比率”标题的右侧，点按添 **[!UICONTROL 加新增]**。
+   * 在“编辑视频”用户档案页面的“智能裁剪比率”标题的右侧，点按添 **[!UICONTROL 加新增。]**
    * 在“名称”字段中，键入裁剪比率的名称，以帮助您轻松识别它。
    * 从“裁 **[!UICONTROL 剪比率]** ”下拉列表中，选择要使用的比率。
 
@@ -210,17 +210,17 @@ Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对
 
 **要为渐进式流播放创建视频用户档案，请执行以下操作：**
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 点按 **[!UICONTROL 创建]** ，以添加新视频用户档案。
 1. 输入配置文件的名称和描述。
-1. 在“创建／编辑视频编码预设”页面，点按添 **[!UICONTROL 加视频编码预设]**。
+1. 在“创建／编辑视频编码预设”页面，点按添 **[!UICONTROL 加视频编码预设。]**
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
 点按每个选项旁边的信息图标，以根据选定的视频格式编解码器获得更多说明或推荐的设置。
-1. （可选）在“视频大小”标题下，取消选中“保 **[!UICONTROL 持宽高比”]**。
+1. （可选）在“视频大小”标题下，取消选中“保 **[!UICONTROL 持长宽比”。]**
 1. 执行以下操作：
-   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto]**.
+   * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto.]**
    * In the **[!UICONTROL Height]** field, enter a value in pixels.
-To help you visualize the size of the video, tap the Height&#39;s information icon to open the **[!UICONTROL Size Calculator]** page. Use the **[!UICONTROL Size Calculator]** page to further set the video dimension (blue box) how you want. When you are done, in the upper-right corner of the dialog box, tap **[!UICONTROL X]**.
+To help you visualize the size of the video, tap the Height&#39;s information icon to open the **[!UICONTROL Size Calculator]** page. Use the **[!UICONTROL Size Calculator]** page to further set the video dimension (blue box) how you want. When you are done, in the upper-right corner of the dialog box, tap **[!UICONTROL X.]**
 1. （可选）执行以下操作之一：
 
    * 点按高 **[!UICONTROL 级]** 选项卡，并确保选中 **[!UICONTROL 使用默认值]** （建议）复选框。
@@ -236,7 +236,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 1. （可选）要向将应用此用户档案的视频添加视频智能裁剪，请执行以下操作：
 
-   * 在“编辑视频”用户档案页面的“智能裁剪比率”标题的右侧，点按添 **[!UICONTROL 加新增]**。
+   * 在“编辑视频”用户档案页面的“智能裁剪比率”标题的右侧，点按添 **[!UICONTROL 加新增。]**
    * 在“名称”字段中，键入裁剪比率的名称，以帮助您轻松识别它。
    * 从“裁 **[!UICONTROL 剪比率]** ”下拉列表中，选择要使用的比率。
 
@@ -255,7 +255,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 **要使用自定义添加的视频编码参数**:
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+1. Tap the AEM logo, then navigate to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite.]**
 1. 在CRXDE Lite页面左侧的“资源管理器”面板中，导航到以下内容：
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
@@ -307,11 +307,11 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 
 ![chlimage_1-516](assets/chlimage_1-516.png)
 
-1. Near the lower-right corner of the page, tap **[!UICONTROL Add]**.
+1. Near the lower-right corner of the page, tap **[!UICONTROL Add.]**
 1. 执行下列操作之一：
 
    * 重复第3步和第4步，向视频编码用户档案添加其他参数。
-   * Near the upper-left corner of the page, tap **[!UICONTROL Save All]**.
+   * Near the upper-left corner of the page, tap **[!UICONTROL Save All.]**
 
 1. 在CRXDE Lite页面的左上角，点按“返 **[!UICONTROL 回主页]** ”图标以返回AEM。
 
@@ -327,22 +327,22 @@ By default, you cannot edit the predefined, out-of-the-box **[!UICONTROL Adaptiv
 
 **编辑视频用户档案**:
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL 编辑]**。
+1. On the toolbar, tap **[!UICONTROL Edit.]**
 1. 在“视频编码配置文件”页面上，根据需要编辑名称和描述。
 1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。点按信息图标以获取自适应流播放的说明。 (如果您正在编辑渐进式视频用户档案，请勿选中此复选框。)
 1. 在“视频编码预设”标题下，添加、编辑或删除构成该配置文件的视频编码预设。
 
    点按“基本”和“高级”选项卡上每个选项旁 **[!UICONTROL 边的信息图标]****** ，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 
-1. 在页面的右上角，点按保 **[!UICONTROL 存]**。
+1. 在页面的右上角，点按保 **[!UICONTROL 存。]**
 
 ### 复制视频用户档案 {#copying-a-video-encoding-profile}
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
-1. On the toolbar, tap **[!UICONTROL Copy]**.
+1. On the toolbar, tap **[!UICONTROL Copy.]**
 1. 在“视频编码用户档案”页面上，输入用户档案的新名称。
 1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 点按信息图标以获取自适应流播放的说明。 （如果要复制渐进式视频配置文件，请勿选中此复选框。）
 
@@ -351,14 +351,14 @@ By default, you cannot edit the predefined, out-of-the-box **[!UICONTROL Adaptiv
 
    点按“基本”和“高级”选项卡上每个选项旁边的信息图标，查看推荐的设置和说明。
 
-1. 在页面的右上角，点按保 **[!UICONTROL 存]**。
+1. 在页面的右上角，点按保 **[!UICONTROL 存。]**
 
 ### Deleting a video profile {#deleting-a-video-encoding-profile}
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 在“视频配置文件”页面上，选中一个或多个视频配置文件名称。
-1. 在工具栏中，点按 **[!UICONTROL 删除]**。
-1. 点按 **[!UICONTROL 确定]**。
+1. 在工具栏中，点按 **[!UICONTROL 删除。]**
+1. 点按 **[!UICONTROL 确定。]**
 
 ## Applying a video profile to folders {#applying-a-video-profile-to-folders}
 
@@ -376,7 +376,7 @@ By default, you cannot edit the predefined, out-of-the-box **[!UICONTROL Adaptiv
 
 ### Applying a video profile to specific folders {#applying-video-profiles-to-specific-folders}
 
-您可以从“工具”菜单中将视频配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”]**。 本节将介绍这两种将视频配置文件应用到文件夹的方法。
+您可以从“工具”菜单中将视频配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”。]**&#x200B;本节将介绍这两种将视频配置文件应用到文件夹的方法。
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
@@ -384,15 +384,16 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 #### 通过用户档案用户界面将视频用户档案应用到文件夹 {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 选择您要应用到一个或多个文件夹的视频配置文件。
-1. 点按&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按&#x200B;**[!UICONTROL 应用]**。在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。您可以 [监视视频用户档案处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
+1. 点按&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按&#x200B;**[!UICONTROL 应用。]**&#x200B;在&#x200B;**[!UICONTROL 卡片视图中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。]**
+您可以 [监视视频用户档案处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
 #### 从“属性”将视频用户档案应用到文件夹 {#applying-video-profiles-to-folders-from-properties}
 
 1. 点按或单击AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到您要对其应用视频用户档案的文件夹。
-1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性]**。
-1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性。]**
+1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)您可 [以监视视频用户档案处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
@@ -404,7 +405,7 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 **要全局应用视频用户档案**,
 
-* 导航到CRXDE Lite到以下节点： `/content/dam/jcr:content`. 添加属性， `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` 然后点 **[!UICONTROL 按全部保存]**。
+* 导航到CRXDE Lite到以下节点： `/content/dam/jcr:content`. 添加属性并 `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` 点按全 **[!UICONTROL 部保存。]**
 
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * 您可以 [监视视频用户档案处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
@@ -419,19 +420,19 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 当您将视频配置文件从文件夹删除之后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。但是，此前对文件夹中的文件所做的处理均予以保留。
 
-您可以从“工具”菜单中将视频配置文件从文件夹删除 **** ，如果您在文件夹中，也可以从“文件夹设 **[!UICONTROL 置”中删除]**。 本节将介绍这两种将视频配置文件从文件夹删除的方法。
+您可以从“工具”菜单中将视频配置文件从文件夹删除 **** ，如果您在文件夹中，也可以从“文件夹设 **[!UICONTROL 置”中删除。]**&#x200B;本节将介绍这两种将视频配置文件从文件夹删除的方法。
 
 ### 通过用户档案用户界面将视频用户档案从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
-1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. Tap the AEM logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles.]**
 1. 选择您要从一个或多个文件夹删除的视频配置文件。
-1. 点按&#x200B;**[!UICONTROL 从文件夹删除配置文件]**，并选择一个或多个要从中删除配置文件的文件夹，然后点按&#x200B;**[!UICONTROL 删除]**。
+1. Tap **[!UICONTROL Remove Profile from Folders]** and select the folder or multiple folders you want use to remove the profile from and tap **[!UICONTROL Remove.]**
 
    您可以确认视频用户档案不再应用于文件夹，因为该名称不再显示在文件夹名称的下方。
 
 ### 通过属性将视频用户档案从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. 点按或单击AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到您要从中删除视频用户档案的文件夹。
-1. 在文件夹中，点按或单击复选标记以将其选中，然后点按或单击 **属性]**。
-1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 在文件夹中，点按或单击复选标记以将其选中，然后点按或单 **击属性。]**
+1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
