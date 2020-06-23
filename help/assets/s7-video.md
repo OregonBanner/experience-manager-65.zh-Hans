@@ -8,10 +8,10 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1628'
-ht-degree: 56%
+ht-degree: 52%
 
 ---
 
@@ -72,7 +72,7 @@ Scene7 视频组件支持以下格式：
 
 要配置通用预设，请执行以下操作：
 
-1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;中，导航到 **[!UICONTROL Scene7]** 配置，然后单击&#x200B;**[!UICONTROL 编辑]**。
+1. In **[!UICONTROL Cloud Services]**, navigate to your **[!UICONTROL Scene7]** configuration and click **[!UICONTROL Edit.]**
 1. 选择&#x200B;**[!UICONTROL 视频]**&#x200B;选项卡。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -93,7 +93,7 @@ Scene7 视频组件支持以下格式：
 
 ## 更新查看器和编码预设 {#updating-viewer-and-encoding-presets}
 
-如果由于 Scene7 中的预设进行了更新，您需要在 AEM 中更新视频的查看器和编码预设，请导航到云配置中的 Scene7 配置，然后单击&#x200B;**[!UICONTROL 更新查看器和编码预设]**。
+If you need to update the viewer and encoding presets for video in AEM because the presets have been updated in Scene7, navigate to the Scene7 configuration in the cloud configuration and click **[!UICONTROL Update the viewer and encoding presets.]**
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -150,7 +150,7 @@ Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 
 
 1. 在AEM中，点 **按[!UICONTROL工具>配置控制台**。
 1. In the **[!UICONTROL Configuration Console]** navigate to **[!UICONTROL Tools > DAM > Video Profiles]** in the navigation tree.
-1. 创建一个新的 S7 视频配置文件。In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
+1. 创建一个新的 S7 视频配置文件。In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. Give the new video profile page a name and click **[!UICONTROL Create.]**
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
