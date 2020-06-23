@@ -8,10 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 8fa26e1d763950f370ba0adbc048efba612e8afc
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '1720'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -47,15 +47,15 @@ Smart Imaging还可以与Adobe一流的高级CDN服务完全集成，从而增�
 * 使用“bfc”URL参数可以关闭智能成像。
 * TTL（生存时间）独立。 以前，智能成像的最低TTL为12小时是工作必备条件。
 * 以前，原始图像和衍生图像都被缓存，而使缓存失效的过程是2步。 在最新的智能成像中，只缓存衍生项，从而允许单步缓存失效过程。
-* 使用其规则集中的自定义标头(例如，向图像响应添加自定义标头值|Dynamic [Media Classic中建议的“定时允许来源”、“X-Robot”](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html))的客户将从最新的智能成像中受益，因为这些标头不会被阻止，这与以前版本的智能成像不同。
+* 使用其规则集中的自定义标头(例如，向图像响应添加自定义标头值|来源经典中建议的“定时允许Dynamic Media”、“X-Robot” [](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html))的客户将从最新的智能成像中受益，因为这些标头不会被阻止，这与以前版本的智能成像不同。
 
 ## 是否存在与智能成像相关的许可成本？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-否. 您的现有Dynamic Media Classic(Scene7)或AEM Dynamic Media（在Prem、AMS和AEM上，作为云服务）许可包含智能成像。
+否. 您的现有Dynamic Media经典(Scene7)或AEMDynamic Media(作为Cloud Service，在Prem、AMS和AEM上)许可包含智能成像。
 
 >[!NOTE]
 >
->Dynamic Media - Hybrid客户不可使用智能成像。
+>Dynamic Media无法使用智能成像——混合型客户。
 
 
 ## 智能成像的工作原理是什么？ {#how-does-smart-imaging-work}
@@ -102,16 +102,16 @@ Smart Imaging可与您现有的“图像预设”配合使用，如果请求的�
 
 ## 我是否有资格使用智能成像？ {#am-i-eligible-to-use-smart-imaging}
 
-要使用智能成像，您的公司在AEM帐户上的Dynamic Media Classic或Dynamic Media必须满足以下要求：
+要使用智能成像，公司的Dynamic Media经典或AEM帐户的Dynamic Media必须满足以下要求：
 
 * 将Adobe捆绑的CDN(内容投放网络)作为许可的一部分。
 * 使用专用域(例如， `images.company.com` 或 `mycompany.scene7.com`)，而不是通用域(例如， `s7d1.scene7.com`、 `s7d2.scene7.com`或 `s7d13.scene7.com`)。
 
 要查找您的域，请登录到您的公司帐户或帐户。
 
-Tap **[!UICONTROL Setup > Application Setup > General Settings]**. 查找标有“已发布服 **[!UICONTROL 务器名称”的字段]**。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求移至您自己的自定义域作为本过渡的一部分。
+Tap **[!UICONTROL Setup > Application Setup > General Settings.]** 查找标有“已发布服 **[!UICONTROL 务器名称”的字段。]** 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求移至您自己的自定义域作为本过渡的一部分。
 
-Dynamic Media许可证不需要支付任何额外费用。
+您的第一个自定义域无需支付任何额外费用即可获得Dynamic Media许可证。
 
 ## 为我的帐户启用智能成像的过程是什么？ {#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
@@ -125,17 +125,17 @@ Dynamic Media许可证不需要支付任何额外费用。
 
       要查找您的域，请登录您的公司帐户或帐户。
 
-      单击&#x200B;**[!UICONTROL 设置 > 应用程序设置 > 常规设置]**。
+      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
 
-      查找标有“已发布服 **[!UICONTROL 务器名称”的字段]**。
+      查找标有“已发布服 **[!UICONTROL 务器名称”的字段。]**
    1. 验证您是否正通过Adobe使用CDN，而不是通过直接关系进行管理。
    1. 验证您使用的是专用域(如 `images.company.com` 或 `mycompany.scene7.com`)，而不是通用域(如 `s7d1.scene7.com`、 `s7d2.scene7.com``s7d13.scene7.com`)。
 
       要查找您的域，请登录您的公司帐户或帐户。
 
-      单击&#x200B;**[!UICONTROL 设置 > 应用程序设置 > 常规设置]**。
+      Click **[!UICONTROL Setup > Application Setup > General Settings.]**
 
-      查找标有“已发布服 **[!UICONTROL 务器名称”的字段]**。 如果您当前使用的是通用的Dynamic Media Classic域，则可以请求移至您自己的自定义域作为此过渡的一部分。
+      查找标有“已发布服 **[!UICONTROL 务器名称”的字段。]** 如果您当前使用的是通用Dynamic Media经典域，则可以请求移至您自己的自定义域作为此过渡的一部分。
    1. 指示您是否也需要它才能通过HTTP/2使用。
 
 1. 技术支持将根据请求的提交顺序将您添加到智能图像处理客户等待列表。
@@ -144,8 +144,8 @@ Dynamic Media许可证不需要支付任何额外费用。
 1. 完成后，支持会通知您。
 1. 为最大限度地提高智能成像的性能，Adobe建议将生存时间(TTL)设置为24小时或更长。 TTL定义CDN缓存资源的时长。 要更改此设置：
 
-   1. 如果您使用Dynamic Media Classic，请单击“设 **[!UICONTROL 置”>“应用程序设置”>“发布设置”>“图像服务器]**”。 将“默 **[!UICONTROL 认客户端缓存时间”设置为]** “实时”值24或更长。
-   1. 如果您使用Dynamic Media，请按照 [以下说明](config-dynamic.md)。 将“过 **[!UICONTROL 期]** ”值设置为24小时或更长。
+   1. 如果您使用Dynamic Media经典，请单 **[!UICONTROL 击“设置”>“应用程序设置”>“发布设置”>“图像服务器”。]** 将“默 **[!UICONTROL 认客户端缓存时间”设置为]** “实时”值24或更长。
+   1. 如果您使用Dynamic Media，请按 [照以下说明](config-dynamic.md)。 将“过 **[!UICONTROL 期]** ”值设置为24小时或更长。
 
 ## 我希望何时启用智能映像？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
@@ -156,13 +156,13 @@ Dynamic Media许可证不需要支付任何额外费用。
 
 ## 改用智能成像有哪些风险？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
-客户网页不存在风险。 但是，您应该注意，智能成像过渡会清除CDN中的缓存，因为它涉及在AEM上切换到Dynamic Media Classic或Dynamic Media的新配置。
+客户网页不存在风险。 但是，您应该注意到，智能成像过渡会清除CDN中的缓存，因为它涉及到在AEM上切换到Dynamic Media经典或Dynamic Media的新配置。
 
 在初始过渡期间，非缓存图像会直接点击Adobe的来源服务器，直到重新构建缓存。 因此，Adobe计划一次处理几个客户过渡，以便在从我们的来源处理请求时保持可接受的性能。 对于大多数客户，在1到2天内在CDN重新完全建立缓存。
 
 ## 如何验证智能成像是否按预期工作？  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. 在您的帐户配置了智能成像后，请在浏览器上加载Dynamic Media Classic(Scene7)/Dynamic Media图像URL。
+1. 在您的帐户配置了智能图像后，请在浏览器上加载Dynamic Media经典(Scene7)/Dynamic Media图像URL。
 1. 在浏览器中单击“视图”>“开 **[!UICONTROL 发人员”>“开发人员工具]** ”，打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
 
 1. 确保在开发人员工具打开时禁用缓存。
