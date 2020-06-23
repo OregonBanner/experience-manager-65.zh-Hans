@@ -10,7 +10,7 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '8031'
 ht-degree: 1%
@@ -40,7 +40,6 @@ Dynamic Media-混合需要启用并配置以供使用。 根据您的用例，Dy
 >
 >* `s7access.log`
 >* `ImageServing.log`
-
 >
 >
 它们在监视 [和维护AEM实例中有说明](/help/sites-deploying/monitoring-and-maintaining.md)。
@@ -144,7 +143,7 @@ AEM发布节点将继续提供Dynamic Media查看器、站点页面和静态内�
 
 >[!NOTE]
 >
->通过运行模式启用Dynamic Media将替换AEM 6.1和AEM 6.0中的功能，您可以通过将标志设置为true来启 `dynamicMediaEnabled` 用Dynamic **[!UICONTROL Media]**。 此标志在AEM 6.2和更高版本中没有功能。 此外，您无需重新启动快速启动即可启用Dynamic Media。
+>通过运行模式启用Dynamic Media将替换AEM 6.1和AEM 6.0中的功能，您可以通过将标志设置为true来启用 `dynamicMediaEnabled` Dynamic Media **[!UICONTROL 的功能。]** 此标志在AEM 6.2和更高版本中没有功能。 此外，您无需重新启动快速启动即可启用Dynamic Media。
 
 通过启用Dynamic Media,Dynamic Media功能将在UI中可用，并且每个上传的图像资产都会收到 *cqdam.pyramid.tiff* 再现，该再现用于动态图像再现的快速投放。 这些PTIFF具有显着优势，包括(1)仅管理单个主源图像并动态生成无限再现而无需任何附加存储，以及(2)使用交互式可视化（如缩放、平移、旋转等）的能力。
 
@@ -177,10 +176,8 @@ AEM发布节点将继续提供Dynamic Media查看器、站点页面和静态内�
    >要对Dynamic Media问题进行疑难解答，请参阅目录中的以下 `crx-quickstart/logs/` 日志：
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日志提供用于分析内部ImageServer进程行为的统计和分析信息。
-
    图像服务器日志文件名的示例： `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access日志记录通过和向Dynamic Media发出的每个 `/is/image` 请求 `/is/content`。
-
    仅当启用Dynamic Media时，才使用这些日志。 它们不包含在从页 **面生成** 的下载完整 `system/console/status-Bundlelist` 包中； 如果您遇到Dynamic Media问题，请在致电客户支持时，将这两个日志附加到该问题。
 
 ### 如果将AEM安装到其他端口或上下文路径…… {#if-you-installed-aem-to-a-different-port-or-context-path}
@@ -263,12 +260,12 @@ Dynamic Media图像投放的工作方式是：将图像资产（包括视频缩�
 **设置身份验证**
 
 1. 如果您尚未提供KeyStore文件和密码，请与客户服务部联系。 这是配置的一部分，它将密钥关联到您的帐户。
-1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Security > Users]**.
+1. In AEM, tap the AEM logo to access the global navigation console, then tap **[!UICONTROL Tools > Security > Users.]**
 1. 在“用户管理”页上，导航到 **[!UICONTROL dynamic-media-replication用户]** ，然后点按以打开。
 
    ![dm复制](assets/dm-replication.png)
 
-1. 在“Edit User Settings For dynamic-media-replication”页中，点按“ **[!UICONTROL Keystore]** ”选项卡，然后单 **[!UICONTROL 击“Create KeyStore]**”。
+1. 在“Edit User Settings For dynamic-media-replication”（编辑动态媒体复制的用户设置）页中，点 **[!UICONTROL 击Keystore]** （密钥库）选项卡，然 **[!UICONTROL 后单击Create KeyStore。]**
 
    ![dm复制密钥库](assets/dm-replication-keystore.png)
 
@@ -282,11 +279,10 @@ Dynamic Media图像投放的工作方式是：将图像资产（包括视频缩�
 1. 在“编 **[!UICONTROL 辑User Settings For dynamic-media]** -replication”页面上 **，展开“从KeyStore** 添加私钥”文件区域，并添加以下内容（请参阅下面的图像）:
 
    * 在“ **[!UICONTROL 新别名]** ”字段中，输入稍后在复制配置中使用的别名名称； 例如 `replication`,
-   * 点按 **[!UICONTROL 密钥存储文件]**。 导航到Adobe提供给您的KeyStore文件，将其选中，然后点按打 **[!UICONTROL 开]**。
+   * 点按 **[!UICONTROL 密钥存储文件。]** 导航到Adobe提供给您的KeyStore文件，将其选中，然后点按打 **[!UICONTROL 开。]**
    * 在“KeyStore **[!UICONTROL 文件口令]** ”字段中，输入KeyStore文件口令。 这不是 **您在步骤** 5中创建的KeyStore密码，而是Adobe在配置过程中向您发送的欢迎电子邮件中提供的KeyStore文件密码。 如果您未收到KeyStore文件密码，请与Adobe客户服务部门联系。
    * 在“ **[!UICONTROL 私钥密码]** ”字段中，输入私钥密码（可能与上一步中提供的私钥密码相同）。 在设置过程中，Adobe会在向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请与Adobe客户服务联系。
    * 在私钥 **[!UICONTROL 别名字段中]** ，输入私钥别名。 For example, `*companyname*-alias`. 在设置过程中，Adobe在向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请与Adobe客户服务联系。
-
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
 1. 点按 **[!UICONTROL 保存并关闭]** ，以保存对此用户所做的更改。
@@ -295,28 +291,27 @@ Dynamic Media图像投放的工作方式是：将图像资产（包括视频缩�
 
 ### 配置复制代理 {#configuring-the-replication-agent}
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工 **[!UICONTROL 具>部署>复制>创作代理]**。
-1. 在创作页面上的代理中，点 **[!UICONTROL 按Dynamic Media混合图像复制(s7投放)]**。
-1. 点按 **[!UICONTROL 编辑]**。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工 **[!UICONTROL 具>部署>复制>创作代理。]**
+1. 在创作页面上的代理中，点 **[!UICONTROL 按Dynamic Media混合图像复制(s7投放)。]**
+1. 点按 **[!UICONTROL 编辑。]**
 1. 点按设 **[!UICONTROL 置]** 选项卡，然后输入以下内容：
 
    * **[!UICONTROL 启用]** -选中此复选框可启用复制代理。
    * **[!UICONTROL 区域]** -设置为相应的区域： 北美、欧洲或亚洲
    * **[!UICONTROL 租户ID]** —— 此值是发布到复制服务的公司/租户的名称。 此值是Adobe在设置过程中在向您发送的欢迎电子邮件中提供的租户ID。 如果您未收到此信息，请与Adobe客户服务部门联系。
    * **[!UICONTROL 密钥存储别名]** -此值与在设置身份验证中生成密钥时设置的**新别名** [值相同](#setting-up-authentication); 例如 `replication`, (请参阅设置身 [份验证中的步骤](#setting-up-authentication)7。)
-   * **[!UICONTROL 密钥存储密码]** -这是您在点击创建密钥存储时创建的 **[!UICONTROL KeyStore密码]**。 Adobe不提供此密码。 请参阅设置身 [份验证的第5步](#setting-up-authentication)。
-
+   * **[!UICONTROL 密钥存储密码]** -这是您在点击创建密钥存储时创建的 **[!UICONTROL KeyStore密码。]** Adobe不提供此密码。 请参阅设置身 [份验证的第5步](#setting-up-authentication)。
    下图显示了具有示例数据的复制代理：
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
 
-1. 点按 **[!UICONTROL 确定]**。
+1. 点按 **[!UICONTROL 确定。]**
 
 ### 验证Dynamic Media的复制代理 {#validating-the-replication-agent-for-dynamic-media}
 
 要验证Dynamic Media的复制代理，请执行以下操作：
 
-点按 **[!UICONTROL 测试连接]**。 输出示例如下：
+点按 **[!UICONTROL 测试连接。]** 输出示例如下：
 
 ```shell
 11.03.2016 10:57:55 - Transferring content for ReplicationAction{type=TEST, path[0]='/content/dam', time=1457722675402, userId='admin', revision='null'}
@@ -451,7 +446,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **解决方案：**
 
-1. In AEM, click **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. In AEM, click **[!UICONTROL Tools > General > CRXDE Lite.]**
 
    `localhost:4502/crx/de/index.jsp`
 
@@ -462,7 +457,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
    `enableOauth=true`
 
-1. Near the upper-left corner of the page, tap **[!UICONTROL Save All]**.
+1. Near the upper-left corner of the page, tap **[!UICONTROL Save All.]**
 
 ### 测试配置 {#testing-your-configuration}
 
@@ -477,8 +472,8 @@ Adobe建议您对配置执行端对端测试。
 
 1. 上传图像资产。 (在资产中，点按 **[!UICONTROL 创建>文件]** ，然后选择文件。)
 1. 等待工作流完成。
-1. 发布图像资产。 (选择资产，然后点 **[!UICONTROL 按快速发布]**。)
-1. 通过打开图像并点按演绎版，导航到该图像的演 **[!UICONTROL 绎版]**。
+1. 发布图像资产。 (选择资产，然后点 **[!UICONTROL 按快速发布。]**)
+1. 通过打开图像并点按演绎版，导航到该图像的演绎 **[!UICONTROL 版。]**
 
    ![chlimage_1-510](assets/chlimage_1-510.png)
 
@@ -499,8 +494,8 @@ Dynamic Media云服务提供云服务支持，例如混合发布和图像和视�
 
 要配置Dynamic Media云服务，请执行以下操作：
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点 **[!UICONTROL 按工具>Cloud Service>Dynamic Media配置（6.3之前版本）]**。
-1. 在“Dynamic Media配置浏览器”页面的左窗格中，选择全 **[!UICONTROL 局]**，然后点 **[!UICONTROL 按创建]**。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点 **[!UICONTROL 按工具>Cloud Service>Dynamic Media配置（6.3之前版本）。]**
+1. 在“Dynamic Media配置浏览器”页面的左窗格中，选择全 **[!UICONTROL 局]**，然后点按 **[!UICONTROL 创建。]**
 1. 在“创 **[!UICONTROL 建Dynamic Media配置]** ”对话框的“标题”字段中，键入标题。
 1. 如果要为视频配置Dynamic Media,
 
@@ -625,7 +620,7 @@ AEM 6.4及更高版本将此预设保存在 `/conf/global/settings/dam/dm/preset
    `https://<*server*>:<*port*>/crx/de/index.jsp#/conf/global/settings/dam/dm/imageserver/`
 
 1. Tap the **[!UICONTROL Replication]** tab.
-1. 点按 **[!UICONTROL 复制]**。
+1. 点按 **[!UICONTROL 复制。]**
 
 ## 复制查看器预设 {#replicating-viewer-presets}
 
@@ -701,16 +696,16 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
 
 如果您正在将Dynamic Media用于仅视频，请按照以下步骤设置要复制的资产过滤器:
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工 **[!UICONTROL 具>部署>复制>创作代理]**。
-1. 在创作页面上，点按默 **[!UICONTROL 认代理（发布）]**。
-1. 点按 **[!UICONTROL 编辑]**。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工 **[!UICONTROL 具>部署>复制>创作代理。]**
+1. 在作者页面上的代理中，点 **[!UICONTROL 按默认代理（发布）。]**
+1. 点按 **[!UICONTROL 编辑。]**
 1. 在“代 **[!UICONTROL 理设置]** ”对话框的“设 **[!UICONTROL 置]** ”选项卡中，选 **[!UICONTROL 中“启用]** ”以打开代理。
-1. 点按 **[!UICONTROL 确定]**。
-1. 在 AEM 中，点按&#x200B;**[!UICONTROL 工具 > 常规 > CRXDE Lite]**。
+1. 点按 **[!UICONTROL 确定。]**
+1. In AEM, tap **[!UICONTROL Tools > General > CRXDE Lite.]**
 1. 在左侧文件夹树中，导航到 `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
-1. 找到 **[!UICONTROL filter-video]**，右键单击它并选择 **[!UICONTROL 复制]**。
+1. 找到 **[!UICONTROL filter-video]**，右键单击它并选择“复 **[!UICONTROL 制”。]**
 1. 在左侧文件夹树中，导航到 `/etc/replication/agents.author/publish`
-1. 找到 **[!UICONTROL jcr:content]**，右键单击它并选择“粘 **[!UICONTROL 贴”]**。
+1. 找到 **[!UICONTROL jcr:content]**，右键单击它并选择“粘 **[!UICONTROL 贴”。]**
 
 这将设置AEM发布实例以传送视频海报图像以及回放所需的视频元数据，而视频本身则由Dynamic Media云服务传送。 过滤器还将从复制中排除原始视频和静态缩略图再现，这在发布实例中是不需要的。
 
@@ -718,20 +713,20 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
 
 如果您在非生产部署中使用映像Dynamic Media，请按照以下步骤设置要复制的资产过滤器:
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工 **[!UICONTROL 具>部署>复制>创作代理]**。
-1. 在创作页面上，点按默 **[!UICONTROL 认代理（发布）]**。
-1. 点按 **[!UICONTROL 编辑]**。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工 **[!UICONTROL 具>部署>复制>创作代理。]**
+1. 在作者页面上的代理中，点 **[!UICONTROL 按默认代理（发布）。]**
+1. 点按 **[!UICONTROL 编辑。]**
 1. 在“代 **[!UICONTROL 理设置]** ”对话框的“设 **[!UICONTROL 置]** ”选项卡中，选 **[!UICONTROL 中“启用]** ”以打开代理。
-1. 点按 **[!UICONTROL 确定]**。
-1. 在 AEM 中，点按&#x200B;**[!UICONTROL 工具 > 常规 > CRXDE Lite]**。
+1. 点按 **[!UICONTROL 确定。]**
+1. In AEM, tap **[!UICONTROL Tools > General > CRXDE Lite.]**
 1. 在左侧文件夹树中，导航到 `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
 
    ![image-2018-01-16-10-22-40-410](assets/image-2018-01-16-10-22-40-410.png)
 
-1. 找 **[!UICONTROL 到滤镜图像]**，右键单击它并选择 **[!UICONTROL 复制]**。
+1. 找 **[!UICONTROL 到滤镜图像]**，右键单击它并选择“复 **[!UICONTROL 制”。]**
 1. 在左侧文件夹树中，导航到 `/etc/replication/agents.author/publish`
-1. 找到 **[!UICONTROL jcr:content]**，右键单击它并选择“创建” **[!UICONTROL >“创建节点”]**。 输入类 `damRenditionFilters` 型名 `nt:unstructured`称。
-1. 找到 `damRenditionFilters`它，右键单击它并选择“ **[!UICONTROL 粘贴”]**。
+1. 找 **[!UICONTROL 到jcr:content]**，右键单击它并选择“创建” **[!UICONTROL >“创建节点”。]** 输入类 `damRenditionFilters` 型名 `nt:unstructured`称。
+1. 找到 `damRenditionFilters`它，右键单击它并选择“粘 **[!UICONTROL 贴”。]**
 
 这将设置AEM发布实例，以将图像传送到非生产环境。 过滤器还将从复制中排除原始图像和静态演绎版，这是发布实例不需要的。
 
@@ -745,14 +740,14 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
 
 （可选）要自定义资产过滤器以进行复制，请执行以下操作：
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点 **[!UICONTROL 按工具>常规> CRXDE Lite]**。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点 **[!UICONTROL 按工具>常规> CRXDE Lite。]**
 1. 在左侧文件夹树中，导 `/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters` 航以查看过滤器。
 
    ![chlimage_1-511](assets/chlimage_1-511.png)
 
 1. 要定义筛选器的MIME类型，可以按如下方式查找Mime类型：
 
-   在左边栏中，展 `content > dam > <locate_your_asset> >  jcr:content > metadata` 开，然后在表中找到 **[!UICONTROL dc:format]**。
+   在左边栏中，展 `content > dam > <locate_your_asset> >  jcr:content > metadata` 开，然后在表中找到 **[!UICONTROL dc:format。]**
 
    下图是资产到dc:format的路径示例。
 
@@ -810,7 +805,7 @@ Dynamic Media在启用后即 [可使用](#enabling-dynamic-media)。 但是，�
 
 要配置Dynamic Media图像服务器设置，请执行以下操作：
 
-1. 在AEM的左上角，点按 **[!UICONTROL Adobe Experience Manager]** 以访问全局导航控制台，然后点 **[!UICONTROL 按工具>操作> Web Console]**。
+1. 在AEM的左上角，点按 **[!UICONTROL Adobe Experience Manager]** 以访问全局导航控制台，然后点 **[!UICONTROL 按工具>操作> Web Console。]**
 1. 在“Adobe Experience ManagerWeb控制台配置”页上，点 **[!UICONTROL 按OSGi > Configuration]** ，以列表AEM中当前运行的所有捆绑包。
 
    Dynamic Media投放服务器位于列表中的以下名称下：
@@ -864,7 +859,7 @@ Dynamic Media在启用后即 [可使用](#enabling-dynamic-media)。 但是，�
  </tbody>
 </table>
 
-1. 点按&#x200B;**[!UICONTROL 保存]**。
+1. Tap **[!UICONTROL Save.]**
 1. 在捆绑包的列表中，点按Adobe CQ Scene7 PlatformServer右侧的编辑 **[!UICONTROL 图标]** 。
 1. 在Adobe CQ Scene7 PlatformServer对话框中，设置以下默认值选项：
 
@@ -890,7 +885,7 @@ Dynamic Media在启用后即 [可使用](#enabling-dynamic-media)。 但是，�
 
 您可以通过输入新值来更改属性的值，如下表中所述。
 
-完成对默认清单的更改后，点按页面左上角的全 **[!UICONTROL 部保存]**。
+完成对默认清单的更改后，点按页面左上角的全 **[!UICONTROL 部保存。]**
 
 请确保点按 **[!UICONTROL 访问控制]** 选项卡（“属性”选项卡右侧），然后为所有人和动态媒体 `jcr:read` 复制用户设置访问控制权限。
 
@@ -998,7 +993,7 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
 
    颜色校正属性在颜色校 **正属性表中进行** 说明。 可指定给颜色校正属性的值在“颜色 **用户档案** ”表中。
 
-   例如，在“名 **[!UICONTROL 称]**”中 `iccprofilecmyk`，添加 **[!UICONTROL ，选择]** 类型 `String`，然 `WebCoated` 后添加 ****&#x200B;值。 然后点按 **[!UICONTROL 添加]** ，然后 **[!UICONTROL 点按全]** 部保存，以保存您的值。
+   例如，在“名 **[!UICONTROL 称]**”中， `iccprofilecmyk`添加 **[!UICONTROL ，选择]** 类型 `String`，然 `WebCoated` 后添加 **[!UICONTROL 为值。]** 然后点按 **[!UICONTROL 添加]** ，然后 **[!UICONTROL 点按全]** 部保存，以保存您的值。
 
    ![chlimage_1-515](assets/chlimage_1-515.png)
 
@@ -1246,9 +1241,9 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
  </tbody>
 </table>
 
-1. 点按 **[!UICONTROL 全部保存]**。
+1. 点按 **[!UICONTROL 全部保存。]**
 
-例如，可以将iccprofilergb设 **[!UICONTROL 置为]** ，将iccprofile `sRGB`cmyk设 **[!UICONTROL 置为]** WebCoated ****。
+例如，可以将iccprofilergb设 **[!UICONTROL 置为]** ，将iccprofile `sRGB`cmyk设 **[!UICONTROL 置为WebCoated]****[!UICONTROL 。]**
 
 这样做将执行以下操作：
 
