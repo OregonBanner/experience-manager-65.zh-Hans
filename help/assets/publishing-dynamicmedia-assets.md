@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: b8fe3267a808f1a64b78620156826e0b6e3a5676
+source-git-commit: e916f70549197ac9f95443e972401a78735b0560
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 13%
@@ -18,9 +18,9 @@ ht-degree: 13%
 
 # 发布 Dynamic Media 资产 {#publishing-dynamic-media-assets}
 
-通过选择已上传的资产并点按发布或快速发布，可 **[!UICONTROL 以发]** 布 **[!UICONTROL Dynamic Media资产]**。 在发布Dynamic Media资产后，您可以通过URL或通过在页面上嵌入代码，将资产包含在网页中。
+您可以通过选择已上传的资产并点按发布或快速发 **[!UICONTROL 布来]** 发布 **[!UICONTROL Dynamic Media资产。]** 在发布Dynamic Media资产后，您可以通过URL或通过在页面上嵌入代码，将资产包含在网页中。
 
-您还可以立即发布上传的资产，无需任何用户干预。 请参 [阅配置Dynamic Media - Scene7模式](config-dms7.md)。
+您还可以立即发布上传的资产，无需任何用户干预。 请参 [阅配置Dynamic Media- Scene7模式](config-dms7.md)。
 
 在卡 **[!UICONTROL 片视图]**&#x200B;中，资产名称的正下方以及日期和时间的左侧会显示一个小地球图标，以指示资产已发布。 在&#x200B;**[!UICONTROL 列表视图]**&#x200B;中，**[!UICONTROL 已发布]**&#x200B;列显示已发布的资产和未发布的资产。
 
@@ -38,13 +38,14 @@ See also [Embedding the Dynamic Media Video or Image viewer on a web page](embed
 >
 >* 要使用 URL，必须先发布资产。如果资产未发布，您便无法将 URL 复制并粘贴到 Web 浏览器。
 >* 必须为实时投放激活和发布图像预设和查看器预设。
+
 >
 
 
 
 有关发布集或资产的详细信息，请参阅发 [布资产。](managing-assets-touch-ui.md)
 
-## HTTP/2投放Dynamic Media资产 {#http-delivery-of-dynamic-media-assets}
+## HTTP/2投放Dynamic Media资源 {#http-delivery-of-dynamic-media-assets}
 
 AEM现在支持通过HTTP/2投放所有Dynamic Media内容（图像和视频）。 即，图像或视频的已发布URL或嵌入代码可与接受托管资产的任何应用程序集成。 随后，将通过HTTP/2协议传送已发布的资产。 此投放方法改进了浏览器和服务器通信的方式，使所有Dynamic Media资源的响应和加载时间都更好。
 
