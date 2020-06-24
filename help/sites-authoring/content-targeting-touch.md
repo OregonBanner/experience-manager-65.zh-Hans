@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '5374'
+ht-degree: 77%
 
 ---
 
@@ -40,7 +43,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 >[!NOTE]
 >
->在 Adobe Target 中创建营销活动时，会为每个营销活动分配名为 `thirdPartyId` 的属性。在 Adobe Target 中删除营销活动时，不会删除 thirdPartyId。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。为避免出现此问题，请为每个营销活动命名一个唯一的名称；因此，不能在不同的营销活动类型中重复使用营销活动名称。
+>在 Adobe Target 中创建营销活动时，会为每个营销活动分配名为 `thirdPartyId` 的属性。在 Adobe Target 中删除营销活动时，不会删除 thirdPartyId。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免此问题，请为每个活动命名一个唯一的名称； 因此，活动名称不能在不同的活动类型中重新使用。
 >
 >如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
 >
@@ -57,7 +60,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 要切换到定位模式，请执行以下操作：
 
 1. 打开要在其中创作目标内容的页面。
-1. 在页面顶部的工具栏中，单击或点按模式下拉菜单以显示可用的模式类型。
+1. 在页面顶部的工具栏上，单击或点按模式下拉菜单以显示可用的模式类型。
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
@@ -118,7 +121,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 >[!NOTE]
 >
->要使用定位过程，您必须是目标活动作者用户组的成员。
+>要使用定位流程，您必须是Target活动作者用户组的成员。
 
 要添加活动，请执行以下操作：
 
@@ -142,13 +145,13 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 >[!CAUTION]
 >
->在对创作实例中已定位的组件禁用定位时务必小心。相应的活动也将从发布实例中自动删除。
+>在对创作实例中已定位的组件禁用定位时务必小心。相应的活动也将自动从发布实例中删除。
 
 >[!NOTE]
 >
 >选件是目标组件的内容。
 
-体验显示在“受众”窗格中。In the following example, experiences include **Default**, **Female**, **Female over 30**, and **Female under 30**. This example shows the Default offer of a targeted **Image** component.
+体验显示在“受众”窗格中。 在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和****** Female 30以下的体验。 此示例显示了目标图像组件的默认 **选件** 。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -156,7 +159,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
-如果选择了某个体验，但目标组件不包含该体验的选件，则组件会在半透明的默认选件上叠加显示&#x200B;**添加选件**。如果没有为体验创建任何选件，则会为映射到该体验的区段显示&#x200B;**默认**&#x200B;选件。
+选择某个体验且目标组件不包含该体验的选件时，该组件会在半透明的默认选件上叠加显示 **添加选件** 。 尚未为体验创建选件时，系统会为映射 **到该体验的区段显示** “默认选件”。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
@@ -290,7 +293,7 @@ See [Configuring Target component options](/help/sites-authoring/content-targeti
 
    >[!NOTE]
    >
-   >如果管理员设置了该位置，则可能需要显式设置该位置。
+   >如果管理员设置了此位置，则可能需要明确设置此位置。
    >
    >
    >Administrators can decide whether setting this configuration is required at **https://&lt;host>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
@@ -299,7 +302,7 @@ See [Configuring Target component options](/help/sites-authoring/content-targeti
 1. 选择要为其创建选件的体验。
 1. 创建选件：
 
-   * 对于默认体验，将组件拖动到目标拖放区域，并像往常一样编辑组件属性以创建选件的内容。
+   * 对于默认体验，将组件拖动到目标拖放区域，并照常编辑组件属性以创建优惠的内容。
    * 对于默认体验之外的其他体验，请[添加自定义选件](#adding-a-custom-offer)或[添加库选件](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library)。
 
 #### 添加自定义选件 {#adding-a-custom-offer}
@@ -325,7 +328,7 @@ If you decide that the offer can be used for other experiences, you can create a
 
 #### 添加选件库中的选件 {#adding-an-offer-from-an-offer-library}
 
-Add an offer from the [offer library](/help/sites-authoring/offerlib.md) to an experience. 您可以从当前定位的品牌库中添加任何选件。
+Add an offer from the [offer library](/help/sites-authoring/offerlib.md) to an experience. 您可以从您当前定位的品牌的库中添加任何优惠。
 
 您不能将库选件添加到默认体验。
 
@@ -345,12 +348,15 @@ Add an offer from the [offer library](/help/sites-authoring/offerlib.md) to an e
    您可以使用选件选取器浏览或筛选选件。浏览或筛选选件时，您可能还希望对选件进行排序，并更改查看选件的方式。右上方的数字指示当前选件库中可用的选件数量。
 
    * Click or tap **Browse** to navigate to another folder. 导航窗格随即会打开，单击箭头可向下浏览文件夹。Click or tap **Browse** again to close the navigation pane.
+
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
    * 单击或点按&#x200B;**筛选器**&#x200B;可按关键字或标记筛选选件。可输入关键字，并从下拉菜单中选择标记。再次单击或点按&#x200B;**筛选器**&#x200B;可关闭筛选窗格。
+
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
-   * 单击或点按&#x200B;**最新到最旧**&#x200B;旁边的箭头可更改选件排序方式。选件可以按从最新到最旧或从最旧到最新的顺序排序。
+   * 单击或点按&#x200B;**最新到最旧**&#x200B;旁边的箭头可更改选件排序方式。优惠可以按从最新到最旧或从最早到最新进行排序。
+
    ![chlimage_1-26](assets/chlimage_1-26.png)
 
    单击或点按&#x200B;**查看方式**&#x200B;旁边的图标可采用拼贴或列表方式查看选件。
@@ -447,7 +453,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 
 ![chlimage_1-31](assets/chlimage_1-31.png)
 
-如果使用 Adobe Target 作为定位引擎，并且已为帐户配置 A4T 分析，则会显示额外的&#x200B;**报表源**&#x200B;下拉菜单：
+如果使用Adobe target作为定位引擎，并且您为帐户配置了A4T分析，则您还有一个额外的“ **Reporting Source** ”下拉菜单：
 
 ![chlimage_1-32](assets/chlimage_1-32.png)
 
@@ -457,9 +463,9 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
  <tbody>
   <tr>
    <td><strong>转换</strong></td>
-   <td><p>点击了所测试体验任何部分的访客百分比。 转换可以按每个访客计数一次，也可以在每次访客完成转换时计数一次。转换量度设置为以下任一值：</p>
+   <td><p>单击了所测试体验任何部分的访客百分比。 转换可以按每个访客计数一次，也可以在每次访客完成转换时计数一次。转换量度设置为以下任一值：</p>
     <ul>
-     <li><strong>已查看页面</strong> -您可以定义受众查看的页面，方法是选择 <strong>URL，然后定义URL或多个URL，或选择</strong> URL包含 <strong></strong> ，然后添加路径或关键字。</li>
+     <li><strong>已查看页面</strong> -您可以定义受众查看的页面，方法是选择URL <strong>为</strong> ，然后定义URL或多个URL，或选择URL <strong>包含</strong> ，然后添加路径或关键字。</li>
      <li><strong>已查看mbox</strong> —— 您可以通过输入mbox的名称来定义受众查看的mbox。 You can enter multiple mboxes by clicking <strong>Add an Mbox</strong>.</li>
     </ul> </td>
   </tr>
@@ -471,7 +477,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
      <li>平均订单值 (AOV)</li>
      <li>销售总额 </li>
      <li>订单</li>
-    </ul> <p>对于这些选项中的任意一个，是否查看了mbox表示已达到目标。 您可以定义一个或多个 mbox。</p> </td>
+    </ul> <p>对于这些选项中的任何一个，是否查看了mbox表示已达到目标。 您可以定义一个或多个 mbox。</p> </td>
   </tr>
   <tr>
    <td><strong>参与度</strong></td>
@@ -492,7 +498,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 <table>
  <tbody>
   <tr>
-   <td><strong>用户遇到此目标量度后……</strong></td>
+   <td><strong>当用户遇到此目标量度时……</strong></td>
    <td><strong>您选择要进行的以下操作……</strong></td>
   </tr>
   <tr>
@@ -500,22 +506,22 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
    <td>指定计数递增的方式：
     <ul>
      <li>每个参加者一次</li>
-     <li>在每次印象中排除页面刷新</li>
-     <li>在每个印象中</li>
+     <li>每次印象中，不包括页面刷新</li>
+     <li>每个印象</li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>增量计数、释放用户并允许再次进入</strong></td>
-   <td>选择访客在重新进入活动时看到的体验：
+   <td>选择访客是否重新进入活动时看到的体验：
     <ul>
-     <li>相同的体验</li>
+     <li>相同体验</li>
      <li>随机体验</li>
      <li>看不见的体验</li>
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>增量计数、释放用户和重新进入栏</strong></td>
-   <td>确定用户看到的内容而不是活动内容：
+   <td><strong>增量计数、释放用户和重入条</strong></td>
+   <td>确定用户看到的内容，而不是活动内容：
     <ul>
      <li>相同的体验，无需跟踪</li>
      <li>默认内容或其他活动内容</li>
@@ -524,7 +530,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
  </tbody>
 </table>
 
-有关成功量度的更多信息，请参阅 [Adobe Target 文档](https://marketing.adobe.com/resources/help/en_US/target/target/r_success_metrics.html)。
+有关成功量度的更多信息，请参阅 [Adobe Target 文档](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)。
 
 ### 配置设置（AEM 定位） {#configuring-settings-aem-targeting}
 
@@ -533,7 +539,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 1. 要指定活动的开始时间，请使用&#x200B;**开始**&#x200B;下拉菜单选择以下某个值：
 
    * **激活时**：活动在包含目标内容的页面被激活时开始。
-   * **指定的日期和时间**：特定的时间。选择此选项时，请单击或点按日历图标，选择一个日期，然后指定开始活动的时间。
+   * **指定的日期和时间**：特定的时间。选择此选项时，单击或点按日历图标，选择日期，然后指定活动开始的时间。
 
 1. 要指定活动的结束时间，请使用&#x200B;**结束**&#x200B;下拉菜单选择以下某个值：
 
@@ -549,7 +555,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 1. 要指定活动的开始时间，请使用&#x200B;**开始**&#x200B;下拉菜单选择以下某个值：
 
    * **激活时**：活动在包含目标内容的页面被激活时开始。
-   * **指定的日期和时间**：特定的时间。选择此选项时，请单击或点按日历图标，选择一个日期，然后指定开始活动的时间。
+   * **指定的日期和时间**：特定的时间。选择此选项时，单击或点按日历图标，选择日期，然后指定活动开始的时间。
 
 1. 要指定活动的结束时间，请使用&#x200B;**结束**&#x200B;下拉菜单选择以下某个值：
 
@@ -557,19 +563,19 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
    * **指定的日期和时间**：特定的时间。选择此选项时，请单击或点按日历图标，选择一个日期，然后指定结束活动的时间。
 
 1. 要指定活动的优先级，请使用滑块选择&#x200B;**低**、**标准**&#x200B;或&#x200B;**高**。
-1. 如果您已为 Adobe Target 帐户配置 Adobe Anaytics，则可以看到&#x200B;**报表源**&#x200B;下拉菜单。选择 **Adobe Target** 或 **Adobe Analytics** 作为报表源。
+1. 如果您已为 Adobe Target 帐户配置 Adobe Anaytics，则可以看到&#x200B;**报表源**&#x200B;下拉菜单。选 **择Adobe Target****或Adobe Analytics** 作为源。
 
    如果选择 **Adobe Analytics**，请选择公司和报表包。如果选择 **Adobe Target**，则不需要执行任何操作。
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在&#x200B;**目标量度**&#x200B;区域中的&#x200B;**我的主要目标**&#x200B;下方，选择要跟踪的成功量度（转换、收入、参与度），然后输入衡量该量度的方式（或受众采取什么操作即指示已达到目标）。请参阅前面表格中的目标量度定义；有关成功量度的信息，请参阅 [Adobe Target 文档](https://marketing.adobe.com/resources/help/en_US/target/target/r_success_metrics.html)。
+1. 在“目 **标量度** ”区域的“我的主要目标 **** ”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。 请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html) 。
 
-   You can rename the goal by clicking the three dots in the upper right corner and selecting **Rename**.
+   您可以通过单击右上角的三个圆点，然后选择&#x200B;**重命名**&#x200B;来重命名目标。
 
-   如果需要清除所有字段，请单击右上角的三个圆点，然后选择&#x200B;**清除所有字段**。
+   如果需要清除所有字段，请单击右上角的三个圆点，然后选择“清除所 **有字段”**。
 
-   您还可以定义所有量度的高级设置。选择&#x200B;**高级设置**&#x200B;可访问这些设置。See definition of how success metrics are counted in previous table and see [Adobe Target documentation](https://marketing.adobe.com/resources/help/en_US/target/target/r_success_metrics.html).
+   您还可以定义所有量度的高级设置。选择&#x200B;**高级设置**&#x200B;可访问这些设置。See definition of how success metrics are counted in previous table and see [Adobe Target documentation](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
    您必须至少定义一个目标。
@@ -651,16 +657,16 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 <table>
  <tbody>
   <tr>
-   <td><strong>Option</strong></td>
+   <td><strong>选项</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
    <td><strong>位置</strong></td>
-   <td><p>该位置是一个字符串，它为目标内容位置提供一个名称，并将选件与页面上应放置这些选件的位置（或位置或组件）连接。</p> <p>此字段是通用值。</p> <p>如果将选件放入组件中，选件会记住位置ID。 执行页面时，引擎会对用户区段进行评估，并据此解析应显示的活跃营销活动中的体验。然后，引擎会检查页面上的位置 ID，并尝试将选件与其对应的位置 ID 进行匹配。</p> </td>
+   <td><p>该位置是一个字符串，它为目标内容位置提供一个名称并将优惠与页面上应放置这些优惠的位置（或位置或组件）连接。</p> <p>此字段是通用值。</p> <p>如果将优惠放入组件，优惠会记住位置ID。 执行页面时，引擎会对用户区段进行评估，并据此解析应显示的活跃营销活动中的体验。然后，引擎会检查页面上的位置 ID，并尝试将选件与其对应的位置 ID 进行匹配。</p> </td>
   </tr>
   <tr>
    <td><strong>引擎</strong></td>
-   <td>根据您 <strong>要使用的引擎，在客户端规则（无跟踪）、Adobe Target </strong><strong> 、ContextHub和Adobe Campaign </strong>之间进行选择。</td>
+   <td>根据 <strong>要使用的引擎，在客户端规则 </strong>(无<strong> 跟踪)、Adobe Target、ContextHub和 </strong>Adobe Campaign之间进行选择。</td>
   </tr>
  </tbody>
 </table>
@@ -672,28 +678,28 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 <table>
  <tbody>
   <tr>
-   <td><strong>Option</strong></td>
+   <td><strong>选项</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
    <td><strong>准确定位</strong></td>
-   <td><p>启用准确定位会告知组件在将请求发送到Adobe Target之前等待Client Context或Context Hub数据可用。 这可能会增加加载时间。在创作时，“准确定位”始终处于启用状态。</p> <p>If you select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxDefine</code> first and an <code>mboxUpdate</code> later resulting in an Ajax request once the data is available.</p> <p>If you do not select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxCreate</code> resulting in a synchronous request right away (in this case, not all context data may be available yet).</p> <p><strong></strong> 注意：对特定组件启用或禁用精确定位不会影响您已全局设置的设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
+   <td><p>启用准确定位会告知组件在向Adobe Target发送请求之前等待Client Context或Context Hub数据可用。 这可能会增加加载时间。在创作时，“准确定位”始终处于启用状态。</p> <p>If you select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxDefine</code> first and an <code>mboxUpdate</code> later resulting in an Ajax request once the data is available.</p> <p>If you do not select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxCreate</code> resulting in a synchronous request right away (in this case, not all context data may be available yet).</p> <p><strong>注意：</strong> 对特定组件启用或禁用精确定位不会影响您已全局设置的设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
   </tr>
   <tr>
    <td><strong>包含已解析的区段</strong></td>
-   <td><p>选中此复选框后，mbox调用中的所有已解析区段以及页面和框架中配置的任何参数。</p> <p>这仅适用于同步AEM区段的XML API的情况。 如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项允许您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
+   <td><p>选中此复选框后，mbox调用中的所有已解析段以及页面和框架中配置的任何参数。</p> <p>这仅适用于同步AEM区段的XML API的情况。 如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项允许您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
   </tr>
   <tr>
    <td><strong>继承的上下文参数</strong></td>
-   <td>列出从Adobe Target框架继承的与选定页面关联的上下文参数（如果有）。</td>
+   <td>列表从Adobe Target框架继承的上下文参数（如果有），与所选页面关联。</td>
   </tr>
   <tr>
    <td><strong>上下文参数</strong></td>
-   <td>单击或点按 <strong>添加字段</strong> ，以配置其他上下文参数（与Target框架中提供的内容相同）。 Context parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added context parameters directly to the framework.</td>
+   <td>单击或点按 <strong>添加字段</strong> ，以配置其他上下文参数(与Target框架中提供的内容相同)。 Context parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added context parameters directly to the framework.</td>
   </tr>
   <tr>
    <td><strong>静态参数</strong></td>
-   <td>单击或点按 <strong>添加字段</strong> ，以配置其他静态参数（与Target框架中提供的功能相同）。 Static parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added static parameters directly to the framework. 静态参数不是来自于上下文（Client Context 或 Context Hub）。</td>
+   <td>单击或点按 <strong>添加字段</strong> ，以配置其他静态参数(与Target框架中提供的参数相同)。 Static parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added static parameters directly to the framework. 静态参数不是来自于上下文（Client Context 或 Context Hub）。</td>
   </tr>
  </tbody>
 </table>
@@ -708,16 +714,16 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 <table>
  <tbody>
   <tr>
-   <td><strong>Option</strong></td>
+   <td><strong>选项</strong></td>
    <td><strong>描述</strong></td>
   </tr>
   <tr>
    <td><strong>客户端选项——策略</strong></td>
    <td><p>从以下任一选项中进行选择：</p>
     <ul>
-     <li><strong>第一</strong>:列表中按营销活动中的排序排列的最高体验。</li>
-     <li><strong>随机</strong>:使用任何体验。</li>
-     <li><strong>Clickstream得分</strong>:使用在Client Context中跟踪的标记和相关标记点击。 将比较 Teaser 页面上定义的标记的点击率。</li>
+     <li><strong>第一</strong>: 列表中按活动排序的最高体验。</li>
+     <li><strong>随机</strong>: 使用任何体验。</li>
+     <li><strong>Clickstream得分</strong>: 使用在Client Context中跟踪的标记和相关标记点击。 将比较 Teaser 页面上定义的标记的点击率。</li>
     </ul> </td>
   </tr>
  </tbody>
