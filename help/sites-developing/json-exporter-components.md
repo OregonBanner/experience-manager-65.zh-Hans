@@ -10,7 +10,7 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 3%
@@ -96,7 +96,7 @@ GITHUB上的代码
 
 * 资产 [用户指南中的内容片段主题](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
-* [内容片段模型](/help/assets/content-fragments-models.md)
+* [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用内容片段进行创作](/help/sites-authoring/content-fragments.md)
 * [内容服务的JSON导出程序](/help/sites-developing/json-exporter.md)
 * [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 和内容 [片段组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
