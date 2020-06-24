@@ -1,8 +1,8 @@
 ---
 title: AEM Assets HTTP API 中的内容片段支持
 seo-title: AEM Assets HTTP API 中的内容片段支持
-description: 了解AEM Assets HTTP API中的内容片段支持。
-seo-description: 了解AEM Assets HTTP API中的内容片段支持。
+description: 了解AEM AssetsHTTP API中的内容片段支持。
+seo-description: 了解AEM AssetsHTTP API中的内容片段支持。
 uuid: c500d71e-ceee-493a-9e4d-7016745c544c
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,7 +11,7 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 13cf9930876af3dd27b2fcb3e1059dae61769803
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 3%
@@ -29,11 +29,12 @@ ht-degree: 3%
 >
 >* 资产REST API
 >* 包括对内容片段的支持
->
->
-AEM Assets HTTP API的当前实施为REST。
 
-Adobe Experience Manager(AEM)Assets [REST API](/help/assets/mac-api-assets.md) ，允许开发人员通过CRUD操作（创建、读取、更新、删除）直接通过HTTP API访问内容（存储在AEM中）。
+>
+>
+AEM AssetsHTTP API的当前实现是REST。
+
+Adobe Experience Manager(AEM) [资产REST API](/help/assets/mac-api-assets.md) ，允许开发人员通过HTTP API直接访问内容（存储在AEM中），方法是通过CRUD操作（创建、读取、更新、删除）。
 
 API允许您通过向JavaScript前端应用程序提供内容服务，将AEM作为无外设CMS(内容管理系统)进行操作。 或可以执行HTTP请求和处理JSON响应的任何其他应用程序。
 
@@ -62,7 +63,7 @@ HTTP方法确定要执行的操作：
 * **GET** —— 检索资产或文件夹的JSON表示法
 * **POST** —— 创建新资产或文件夹
 * **PUT** —— 更新资产或文件夹的属性
-* **删除** -删除资产或文件夹
+* **DELETE** -删除资产或文件夹
 
 >[!NOTE]
 >
@@ -129,6 +130,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 >
 >* [CORS/AEM已说明](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 >* [视频——使用AEM为CORS进行开发](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+
 >
 
 
@@ -137,7 +139,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 
 ## 可用功能 {#available-features}
 
-内容片段是特定类型的资产，请参 [阅使用内容片段](/help/assets/content-fragments.md)。
+内容片段是特定类型的资产，请参 [阅使用内容片段](/help/assets/content-fragments/content-fragments.md)。
 
 有关通过API提供的功能的更多信息，请参阅：
 
@@ -197,7 +199,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 
 ### 内容片段 {#content-fragments}
 
-内 [容片段](/help/assets/content-fragments.md) 是一种特殊类型的资产。 它们可用于访问结构化数据，如文本、数字、日期等。
+内 [容片段](/help/assets/content-fragments/content-fragments.md) 是一种特殊类型的资产。 它们可用于访问结构化数据，如文本、数字、日期等。
 
 由于标准资产(如图 *像* 或音频)存在若干差异，因此处理这些资产时会应用一些其他规则。
 
@@ -227,7 +229,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 * 创建严格绑定到作者实[例(目前没有方法使用此API复制要发布的片段](/help/assets/assets-api-content-fragments.md#limitations))。
 * 投放可以同时从两者进行，因为AEM仅以JSON格式提供请求的内容。
 
-   * AEM作者实例的存储和投放应足以用于防火墙后的媒体库应用程序。
+   * 来自AEM作者实例的存储和投放应足以用于防火墙后的媒体库应用程序。
    * 对于实时Web投放，建议使用AEM发布实例。
 
 >[!CAUTION]
@@ -236,7 +238,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 
 >[!NOTE]
 >
->有关详细信息，请参 [阅API参考](/help/assets/assets-api-content-fragments.md#api-reference)。 特别是Adobe [Experience Manager Assets API —— 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
+>有关详细信息，请参 [阅API参考](/help/assets/assets-api-content-fragments.md#api-reference)。 特别是 [Adobe Experience Manager资产API —— 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
 
 ### 读取/投放 {#read-delivery}
 
@@ -345,6 +347,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 
       * `Could not update content element`
       * `Could not update fragment data of element`
+
    详细的错误消息通常按以下方式返回：
 
    ```xml
@@ -364,7 +367,7 @@ API参考文档中定义了支持请求的 [确切格式](/help/assets/assets-ap
 
 有关详细的API参考，请参阅此处：
 
-* [Adobe Experience Manager Assets API —— 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager资产API —— 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [资产 HTTP API](/help/assets/mac-api-assets.md)
 
    * [可用功能](/help/assets/mac-api-assets.md#available-features)
