@@ -1,10 +1,13 @@
 ---
 title: AEM 6.5功能用户指南
 seo-title: AEM 6.5功能用户指南
-description: AEM 6.5基本功能的概述
-seo-description: AEM 6.5基本功能的概述
+description: AEM 6.5基本功能概述
+seo-description: AEM 6.5基本功能概述
 translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 9%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 
 ## AEM Foundation {#aem-foundation}
 
-[了解有关安装、部署Adobe Experience Manager 6.5及其架构的更多信息](/help/sites-deploying/home.md)，包括我们的Adobe Managed services云部署。
+[进一步了解Adobe Experience Manager6.5的安装、部署和架构](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
 
 [了解如何管理AEM项目](/help/managing/home.md)。
 
@@ -41,7 +44,7 @@ source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 
 ## AEM Livefyre {#aem-livefyre}
 
-[与AEM Livefyre共享用户生成的内容。](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html)
+[与AEM Livefyre共享用户生成的内容。](https://docs.adobe.com/content/help/en/livefyre/using/home.html)
 
 ## AEM Mobile {#aem-mobile}
 
