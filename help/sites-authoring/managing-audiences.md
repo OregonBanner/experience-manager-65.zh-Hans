@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+workflow-type: tm+mt
+source-wordcount: '1016'
+ht-degree: 66%
 
 ---
 
@@ -50,7 +53,7 @@ Audiences are available in Targeting mode for [authoring targeted content](/help
 
    >[!NOTE]
    >
-   >You can sort the modified list by tapping or clicking **Modified** to sort by descending order to see any newly created audiences.
+   >您可以通过点按或单击“已修改”来对修改列 **表进行排序** ，按降序排序，以查看任何新创建的受众。
 
 有关使用 ContextHub 创建区段的更多详细信息，请参阅[使用 ContextHub 配置分段](/help/sites-administering/segmentation.md)文档。
 
@@ -78,7 +81,7 @@ Audiences are available in Targeting mode for [authoring targeted content](/help
 
 1. 在 **Adobe Target 配置**&#x200B;对话框中，选择目标配置，然后单击或点按&#x200B;**确定**。
 1. 在“规则#1”区域中，单击或点按属性类型并在可用字段中输入任何属性信息。完成后，选中该属性右侧的复选标记以保存该属性。有关所有属性的信息，请参阅[属性及其选项](#attributes-and-their-options)。
-1. 单击&#x200B;**添加规则**&#x200B;以添加其他规则。输入所需数量的规则。这些规则会通过布尔运算符 AND 进行组合，这意味着受众必须满足每个规则的所有要求才有资格包含在活动中。
+1. 单击 **添加规则** ，以添加其他规则。 根据需要输入任意数量的规则。 规则与布尔运算符AND相结合，这意味着受众必须满足每个规则的所有要求才能符合活动条件。
 1. 单击或点按&#x200B;**下一步**。
 1. 为受众输入一个名称，然后单击或点按&#x200B;**保存**。
 1. Tap or click **Save**. 受众随即会列在“受众”列表中。
@@ -89,13 +92,13 @@ Audiences are available in Targeting mode for [authoring targeted content](/help
 
 | **属性** | **描述** | **有关更多信息** |
 |---|---|---|
-| **移动设备** | 根据移动设备、设备类型、设备供应商、屏幕尺寸（按像素）等参数定位移动设备。 | 请参 [阅Adobe Target的](https://marketing.adobe.com/resources/help/en_US/target/target/c_mobile.html) Mobile文档。 |
-| **自定义** | 自定义参数是mbox参数。 如果您将任何 mbox 参数传递给 mbox，或者使用 targetPageParams 函数，这些参数将会显示在此处以供在受众中使用。 | 请参 [阅Adobe Target的自定义参数](https://marketing.adobe.com/resources/help/en_US/target/target/c_custom_parameters.html) 文档。 |
-| **操作系统** | 您可以定位使用特定操作系统的访客。 | 定位使用Linux、Macintosh或Windows的用户。 |
-| **站点页面** | 定位位于特定页面或具有特定mbox参数的访客。 | 请参 [阅Adobe Target的网站页](https://marketing.adobe.com/resources/help/en_US/target/target/c_site_pages.html) 。 |
-| **浏览器** | 您可以定位在用户访问页面时使用特定浏览器或特定浏览器选项的用户。 | 请参 [阅Adobe Target的](https://marketing.adobe.com/resources/help/en_US/target/target/c_browser_options.html)浏览器选项文档。 |
-| **访客配置文件** | 定位满足特定配置文件参数的访客。 | 请参 [阅Adobe Target的访客资料](https://marketing.adobe.com/resources/help/en_US/target/target/c_visitor_profile.html) 文档。 |
-| **流量源** | 根据搜索引擎或将访客引用到您网站的登录页面定位访客。 | 请参 [阅Adobe Target的](https://marketing.adobe.com/resources/help/en_US/target/target/c_traffic_sources.html) Traffic Sources文档。 |
+| **移动设备** | 根据移动设备、设备类型、设备供应商、屏幕尺寸（按像素）等参数Target移动设备。 | 请参 [阅移动文档](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/mobile.html) (Adobe Target)。 |
+| **自定义** | 自定义参数是mbox参数。 如果您将任何 mbox 参数传递给 mbox，或者使用 targetPageParams 函数，这些参数将会显示在此处以供在受众中使用。 | 请参 [阅自定义参数](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) (Adobe Target)。 |
+| **操作系统** | 您可以目标使用特定操作系统的访客。 | Target使用Linux、Macintosh或Windows的用户。 |
+| **站点页面** | Target访客，他们位于特定页面或具有特定mbox参数。 | 请参 [阅站点页面文档](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/site-pages.html) (Adobe Target)。 |
+| **浏览器** | 您可以目标在用户访问您的页面时使用特定浏览器或特定浏览器选项的用户。 | 请参阅 [浏览器选](https://docs.adobe.com/help/en/target/using/audiences/create-audiences/categories-audiences/browser.html)项文档(Adobe Target)。 |
+| **访客配置文件** | Target访客符合特定用户档案参数。 | 请参阅 [访客用户档案文档](https://docs.adobe.com/content/help/en/target/using/audiences/visitor-profiles/visitor-profile.html) (位于Adobe Target)。 |
+| **流量源** | Target访客基于搜索引擎或将其引用到您网站的登陆页。 | 请参 [阅Adobe Target的](https://docs.adobe.com/content/help/en/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) “流量源”文档。 |
 
 ## 在“受众”控制台中修改受众 {#modifying-an-audience-in-the-audiences-console}
 
