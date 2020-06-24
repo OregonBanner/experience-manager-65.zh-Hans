@@ -8,7 +8,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
 source-wordcount: '2755'
 ht-degree: 21%
