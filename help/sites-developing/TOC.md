@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Developing User Guide
+user-guide-title: AEM 6.5开发用户指南
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 62be4d88f6ed3df68a77a4b61f7e113bdf03002d
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 10%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 
 + [开发用户指南概述](home.md)
 + 开发人员简介{#introduction}
-   + [AEM站点开发入门- WKND教程](getting-started.md)
+   + [AEM Sites 开发入门- WKND 教程](getting-started.md)
    + [AEM Core Concepts](the-basics.md)
    + [AEM触屏优化UI的结构](touch-ui-structure.md)
    + [AEM触屏优化UI的概念](touch-ui-concepts.md)
@@ -27,12 +30,12 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [安全](security.md)
    + [参考材料](reference-materials.md)
    + [创建功能齐备的网站（经典UI）](website.md)
-   + [设计与设计人员（经典UI）](designer.md)
+   + [设计和设计人员（经典UI）](designer.md)
    + [迁移到触屏UI](/help/sites-developing/touch-ui-migration.md)
 + 平台{#platform}
    + [Sling Cheatsheet](sling-cheatsheet.md)
    + [使用Sling适配器](sling-adapters.md)
-   + [标签库](taglib.md)
+   + [标记库](taglib.md)
    + 模板{#templates}
       + [模板](templates.md)
       + [页面模板——可编辑 ](page-templates-editable.md)
@@ -44,19 +47,19 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [命名约定](naming-conventions.md)
    + [创建新的Granite UI字段组件](granite-ui-component.md)
    + 查询生成器{#query-builder}
-      + [为Query builder实施自定义谓词计算器](implementing-custom-predicate-evaluator.md)
-      + [Query builder谓词引用](querybuilder-predicate-reference.md)
-      + [Query Builder API](querybuilder-api.md)
+      + [为查询生成器实施自定义谓词计算器](implementing-custom-predicate-evaluator.md)
+      + [查询生成器谓词引用](querybuilder-predicate-reference.md)
+      + [查询生成器API](querybuilder-api.md)
    + 标记{#tagging}
       + [标记](tags.md)
       + [AEM Tagging Framework](framework.md)
-      + [将标记构建到AEM应用程序中](building.md)
+      + [在AEM应用程序中构建标记](building.md)
    + [自定义错误处理程序显示的页面](customizing-errorhandler-pages.md)
    + [自定义节点类型](custom-nodetypes.md)
    + [为图形渲染添加字体](adding-fonts.md)
    + [连接到SQL数据库](jdbc.md)
-   + [将URL外置](externalizer.md)
-   + [创建和使用卸载作业](dev-offloading.md)
+   + [外部化URL](externalizer.md)
+   + [为卸载创建和使用作业](dev-offloading.md)
    + [配置Cookie使用情况](cookie-optout.md)
    + [如何以编程方式访问AEM JCR](access-jcr.md)
    + [将服务与JMX控制台集成](jmx-integration.md)
@@ -65,15 +68,15 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + 电子商务{#ecommerce}
       + [电子商务](ecommerce.md)
       + [开发（通用）](generic.md)
-      + [使用SAP Commerce cloud进行开发](sap-commerce-cloud.md)
+      + [使用SAP Commerce Cloud进行开发](sap-commerce-cloud.md)
 + 组件{#components}
-   + [核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+   + [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
    + [样式系统](/help/sites-authoring/style-system.md)
    + [组件概述](components.md)
    + [AEM组件——基础知识](components-basics.md)
    + [开发AEM组件](developing-components.md)
    + [开发AEM组件——代码示例](developing-components-samples.md)
-   + [针对内容服务的JSON导出器](json-exporter.md)
+   + [内容服务的JSON导出程序](json-exporter.md)
    + [为组件启用JSON导出](json-exporter-components.md)
    + [图像编辑器](image-editor.md)
    + [装饰标签](decoration-tag.md)
@@ -84,9 +87,9 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [内容片段的组件](components-content-fragments.md)
    + [以JSON格式获取页面信息](pageinfo.md)
    + 国际化{#internationalization}
-      + [国际化组件](i18n.md)
+      + [组件国际化](i18n.md)
       + [国际化UI字符串](i18n-dev.md)
-      + [使用翻译器管理词典](i18n-translator.md)
+      + [使用翻译器管理字典](i18n-translator.md)
       + [提取字符串以进行翻译](i18n-extract.md)
    + 经典UI组件{#classic-ui-components}
       + [开发AEM组件（经典UI）](developing-components-classic.md)
@@ -94,7 +97,7 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [使用xtypes（经典UI）](xtypes.md)
       + [开发表单（经典UI）](developing-forms.md)
 + 无外设体验管理{#headless}
-   + [使用AEM的无外设和混合](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [与AEM结合使用的无外设和混合](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [为组件启用JSON导出](json-exporter-components.md)
    + 单页应用程序{#spas}
       + [SPA简介和演练](spa-walkthrough.md)
@@ -102,23 +105,23 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [AEM中SPA快速入门——反应](spa-getting-started-react.md)
       + [AEM中SPA快速入门——角度](spa-getting-started-angular.md)
       + [为SPA实施React组件](spa-implementing-react-component.md)
-      + [SPA深潜](spa-deep-dives.md)
+      + [SPA深海潜水](spa-deep-dives.md)
       + [SPA编辑器概述](spa-overview.md)
       + [为AEM开发SPA](spa-architecture.md)
       + [SPA Blueprint](spa-blueprint.md)
       + [SPA页面组件](spa-page-component.md)
       + [SPA的动态模型到组件映射](spa-dynamic-model-to-component-mapping.md)
       + [SPA模型路由](spa-routing.md)
-      + [SPA与Adobe Experience Platform Launch集成](spa-launch.md)
+      + [SPA和Adobe Experience Platform启动集成](spa-launch.md)
       + [SPA和服务器端渲染](spa-ssr.md)
       + [SPA Javascript API参考](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
-   + [内容片段](/help/assets/content-fragments.md)
+   + [内容片段](/help/assets/content-fragments/content-fragments.md)
    + [体验片段](/help/sites-authoring/experience-fragments.md)
    + [了解AEM中的内容片段和内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 开发工具{#devtools}
    + [开发工具](dev-tools.md)
-   + [AEM Medurization Tools](modernization-tools.md)
+   + [AEM Moderization Tools](modernization-tools.md)
    + [对话框编辑器](dialog-editor.md)
    + [对话框转换工具](dialog-conversion.md)
    + [使用CRXDE Lite进行开发](developing-with-crxde-lite.md)
@@ -127,10 +130,10 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
    + [如何使用Apache Maven构建AEM项目](ht-projects-maven.md)
    + [如何使用IntelliJ IDEA开发AEM项目](ht-intellij.md)
    + [如何使用VLT工具](ht-vlttool.md)
-   + [如何使用Proxy Server Tool](ht-proxy-server.md)
+   + [如何使用代理服务器工具](ht-proxy-server.md)
    + [AEM Brackets扩展](aem-brackets.md)
    + [AEM Developer Tools for Eclipse](aem-eclipse.md)
-   + [AEM Repo Tool](aem-repo-tool.md)
+   + [AEM Repo工具](aem-repo-tool.md)
 + 个性化{#personlization}
    + [ContextHub](contexthub.md)
    + [ContextHub Javascript API参考](contexthub-api.md)
@@ -146,10 +149,10 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 + 扩展AEM{#extending-aem}
    + [自定义页面创作](customizing-page-authoring-touch.md)
    + [自定义控制台](customizing-consoles-touch.md)
-   + [自定义页面属性的视图](page-properties-views.md)
+   + [自定义视图页面属性](page-properties-views.md)
    + [配置页面以批量编辑页面属性](bulk-editing.md)
    + [自定义和扩展内容片段](customizing-content-fragments.md)
-   + [内容片段配置要渲染的组件](content-fragments-config-components-rendering.md)
+   + [内容片段配置用于渲染的组件](content-fragments-config-components-rendering.md)
    + [体验片段](experience-fragments.md)
    + 扩展工作流{#extending-workflows}
       + [开发和扩展工作流](workflows.md)
@@ -161,16 +164,16 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [工作流进程参考](workflows-process-ref.md)
       + [AEM工作流中的变量](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [扩展多站点管理器](extending-msm.md)
-   + 跟踪和分析{#extending-analytics}
+   + 跟踪和Analytics{#extending-analytics}
       + [扩展事件跟踪](extending-analytics.md)
-      + [将Adobe Analytics跟踪添加到组件](extending-analytics-components.md)
-      + [自定义Adobe Analytics Framework](extending-analytics-framework.md)
+      + [将AdobeAnalytics跟踪添加到组件](extending-analytics-components.md)
+      + [自定义AdobeAnalytics框架](extending-analytics-framework.md)
       + [为Analytics实施服务器端页面命名](extending-analytics-pa-naming.md)
    + 云服务{#extending-cloud-services}
       + [云服务配置](extending-cloud-config.md)
-      + [创建自定义云服务](extending-cloud-config-custom-cloud.md)
+      + [创建自定义Cloud Service](extending-cloud-config-custom-cloud.md)
    + [创建自定义扩展](extending-campaign-extensions.md)
-   + Forms{#extending-forms}
+   + 表单{#extending-forms}
       + [创建自定义表单映射](extending-campaign-form-mapping.md)
       + [使用Adobe Campaign表单组件创建自定义AEM页面模板](extending-campaign-custom-template.md)
       + [请求分析脚本](analyze-request.md)
@@ -182,20 +185,20 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [开发报告](dev-reports.md)
 + 测试{#testing}
    + [规划](planning.md)
-   + [需要哪些测试环境？](test-environments.md)
+   + [需要哪些测试环境?](test-environments.md)
    + [定义测试用例](test-cases.md)
-   + [测试——何时、与谁一起？](when-who.md)
+   + [测试——何时和与谁一起？](when-who.md)
    + [编译测试计划](test-plan.md)
    + [跟踪结果并提供反馈](results-and-feedback.md)
    + [测试和跟踪工具](tools.md)
    + [接受和签署](acceptance-signoff.md)
    + [下一个版本……](the-next-release.md)
-   + [核对清单](checklists.md)
-   + [艰难的一天](tough-day.md)
+   + [检查列表](checklists.md)
+   + [苦日](tough-day.md)
    + [测试UI](hobbes.md)
 + 最佳实践{#bestpractices}
    + [最佳实践概述](best-practices.md)
-   + [AEM开发准则和最佳实践](dev-guidelines-bestpractices.md)
+   + [AEM开发指南和最佳实践](dev-guidelines-bestpractices.md)
    + [开发最佳实践](development-practices.md)
    + [内容架构](content-architecture.md)
    + [软件架构](software-architecture.md)
@@ -208,8 +211,8 @@ source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
       + [试论We.Retail中的全球化网站结构](we-retail-globalized-site-structure.md)
       + [在We.Retail中试用体验片段](we-retail-experience-fragments.md)
    + [编码提示](coding-tips.md)
-   + [代码缺陷](code-pitfalls.md)
-   + [OSGI捆绑套件](osgi-bundles.md)
+   + [代码陷阱](code-pitfalls.md)
+   + [OSGI捆绑](osgi-bundles.md)
    + [JCR集成](jcr-integration.md)
    + [代码样本](code-samples.md)
    + [慢速查询疑难解答](troubleshooting-slow-queries.md)
