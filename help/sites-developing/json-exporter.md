@@ -10,7 +10,7 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 translation-type: tm+mt
-source-git-commit: 10072609bc371b5f2dce425e90e583f14f96e371
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 4%
@@ -100,7 +100,7 @@ AEM Content Services旨在将AEM中／来自内容的描述和投放概括到网
 
 * 资产 [用户指南中的内容片段主题](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
-* [内容片段模型](/help/assets/content-fragments-models.md)
+* [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用内容片段进行创作](/help/sites-authoring/content-fragments.md)
 * [为组件启用JSON导出](/help/sites-developing/json-exporter-components.md)
 
