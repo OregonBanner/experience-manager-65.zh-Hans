@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3095'
 ht-degree: 31%
 
 ---
@@ -123,6 +123,7 @@ Dynamic Media组件是智能的。 根据您添加的是图像还是视频，您
 >
 >* 在同一页面上使用的Dynamic Media组件的多个实例。
 >* 每个实例都使用相同的资产类型。
+
 >
 >
 请注意，不支持为该页面上的每个Dynamic Media组件分配不同的查看器预设。
@@ -201,8 +202,9 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
    例如，通过查看器修饰符，可以执行以下操作：
 
-   * 将题注文件与视频关联： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_caption.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_caption.html)
-   * 将导航文件与视频关联： [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_navigation.html](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_navigation.html)
+   * 将题注文件与视频关联： [字幕](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * 将导航文件与视频关联： [导航](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+
    You can edit the following Advanced Settings by clicking **[!UICONTROL Edit]** in the component.
 
 * **[!UICONTROL Title**—— 更改视频的标题。
@@ -257,6 +259,7 @@ You must edit the following Dynamic Media Setting by clicking **[!UICONTROL Edit
 >
 >* 在同一页面上使用的交互式媒体组件的多个实例。
 >* 每个实例都使用相同的资产类型。
+
 >
 >
 请注意，不支持为该页面上的每个交互式媒体组件分配不同的查看器预设。
@@ -298,6 +301,7 @@ You can edit the following **[!UICONTROL General]** settings by tapping **[!UICO
 >
 >* 在同一页 **[!UICONTROL 面上使用]** Panoramic Media组件的多个实例。
 >* 每个实例都使用相同的资产类型。
+
 >
 >
 请注意，不支持为该页面上的每个&#x200B;**[!UICONTROL 全景媒体]**&#x200B;组件分配不同的查看器预设。
