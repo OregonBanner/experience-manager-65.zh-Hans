@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '5474'
+source-wordcount: '5473'
 ht-degree: 1%
 
 ---
@@ -208,7 +208,7 @@ Adobe建议您通过让根文件夹仅指向子文件夹而非整个公司来测
 
 ## 配置Dynamic Media经典集成 {#configuring-scene-integration}
 
-您可以配置AEM以将资产上传到Dynamic Media经典。 可以从CQ目标文件夹将资产（自动或手动）从AEM上传到Dynamic Media经典公司帐户。
+您可以配置AEM以将资产上传到Dynamic Media经典。 可以从CQ目标文件夹中将资产（自动或手动）从AEM上传到Dynamic Media经典公司帐户。
 
 >[!NOTE]
 >
@@ -458,7 +458,7 @@ Dynamic Media经典资产仍可通过安全预览使用。 仅当资产在AEM中
 
    有关在 [公开资产前测试资产](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html) ，请参阅Dynamic Media经典文档。
 
-   ![chlimage_1-382](assets/chlimage_1-302.png)
+   ![chlimage_1-302](assets/chlimage_1-302.png)
 
 1. 点按 **[!UICONTROL 确定。]**
 
@@ -571,7 +571,7 @@ Dynamic Media经典资产仍可通过安全预览使用。 仅当资产在AEM中
 
    For example, `psprocess="rasterize"&psresolution=120` .
 
-   有关可 [以使用的其他上传作业参数](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/) ，请参阅AdobeDynamic Media经典图像生产系统API。
+   有关可 [以使用的其他上传作业参数](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-production-api/c-overview.html) ，请参阅AdobeDynamic Media经典图像生产系统API。
 
    >[!NOTE]
    >
