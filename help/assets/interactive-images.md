@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
+source-git-commit: 2014e4f28c63f6268606d46b5019d654bbe4aa08
 workflow-type: tm+mt
-source-wordcount: '4345'
+source-wordcount: '4334'
 ht-degree: 23%
 
 ---
@@ -376,9 +376,9 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 
 要面向交互式环境对购物交互式图像进行“裁剪”，您可以将交互式图像配置属性 `ZoomView.iscommand` 添加到路径中 － 其中 `ZoomView` 是要调用的组件，而 `iscommand` 是您所应用的“裁剪”图像服务命令。
 
-请参阅 [ZoomView.iscommand](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_aem_interactive_image_config_attrib_zoomview_iscommand.html) 配置属性。
+请参阅 [ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 配置属性。
 
-请参阅[裁剪](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_crop.html)图像服务命令。
+请参阅[裁剪](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html)图像服务命令。
 
 您现在可以将交互式图像与网站上的现有概览相集成。
 
