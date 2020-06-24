@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '4400'
-ht-degree: 24%
+source-wordcount: '4361'
+ht-degree: 23%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 24%
 路径: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
 例如，3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
 
-See also the [Adobe Viewers Reference Guide](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/).
+See also the [Adobe Viewers Reference Guide](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
 本节介绍如何创建、编辑和管理查看器预设。 无论您何时对资产进行预览，您都可以将查看器预设应用到资产。 See [Applying Viewer Presets](#applying-a-viewer-preset-to-an-asset).
 
@@ -39,7 +39,7 @@ See also the [Adobe Viewers Reference Guide](https://marketing.adobe.com/resourc
 
 所有现成查看器都支持键盘辅助功能。
 
-另请参阅 [键盘辅助功能和导航](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_keyboard_accessibility.html)。
+另请参阅 [键盘辅助功能和导航](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
 ## 管理查看器预设 {#managing-viewer-presets-1}
 
@@ -55,7 +55,7 @@ You can add, edit, delete, publish, unpublish, and preview viewer presets in AEM
 
 不同的网页有不同的需求。 例如，有时您希望网页提供链接，在单独的浏览器窗口中打开HTML5查看器。 在其他情况下，可能需要将HTML5查看器直接嵌入到托管页面。 在后一种情况下，网页可能具有静态布局。 或者，它可能是“响应式”的，并在不同设备或不同浏览器窗口大小下以不同方式显示。 为了满足这些需求，Dynamic Media附带的所有预定义现成HTML5查看器都支持静态网页和响应式设计网页。
 
-有关 [如何将响应](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_about_responsive_static_image_library.html) 式查看器嵌 ** 入到网页上的详细信息，请参阅Scene7图像服务API帮助中的响应式图像库。
+有关 [如何将响应](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) 式查看器嵌 ** 入到网页上的详细信息，请参阅Scene7图像服务API帮助中的响应式图像库。
 
 >[!NOTE]
 >
@@ -154,11 +154,11 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
 
 下表列出了Dynamic Media附带的所有预定义现成查看器预设。
 
-另请参阅[查看器参考库示例](https://marketing.adobe.com/resources/help/zh_CN/s7/vlist/vlist.html)和[实时演示](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)。
+另请参阅 <!-- KEEP THIS REFERENCE FOR NOW [Viewers Reference Library Examples](https://marketing.adobe.com/resources/help/en_US/s7/vlist/vlist.html) --> [实时演示](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)。
 
-有关查看器支持的Web浏览器和操作系统版本的信息，可以查看查看器发行说明。
+有关查看器支持的Web浏览器和操作系统版本的信息，您可以查看查看器发行说明。
 
-请参阅《查看器参考指南》的目录中的“查看器发 [行说明”](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/)。
+请参阅《查看器参考指南》的目录中的“查看器发 [行说明”](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
 >[!NOTE]
 >
@@ -438,13 +438,13 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
 
       通过可视编辑器，您可以查看特定属性对样式的影响。 只需设置或调整任何属性，即可使用编辑器左侧的范例即时查看它对查看器有何影响。
 
-      查看器参考指南中的任何“自定义查看器”帮助主题中 *`<viewer name>`* 介绍了每种类型的查看器预 [设的CSS样式属性](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/)。 例如，如果要创建类型的查看器预设，请参 `Mixed_Media`阅自定 [义混合媒体查看器](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_mixedmedia_viewer_customizingviewer.html) ，了解列表和每个属性的说明。
+      查看器参考指南中的任何“自定义查看器”帮助主题中 *`<viewer name>`* 介绍了每种类型的查看器预 [设的CSS样式属性](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。 例如，如果要创建类型的查看器预设，请参 `Mixed_Media`阅自定 [义混合媒体查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) ，了解列表和每个属性的说明。
 
    * 如果您在单独的CSS文件中定义了样式设置，则可以将CSS文件上传到AEM Assets。 Tap **[!UICONTROL Import CSS]** below the **[!UICONTROL Selected Type]** pull-down menu (you may need to scroll the visual editor up to see it) to find the uploaded CSS file and associate it with the viewer preset.
 
       导入CSS文件时，可视编辑器会检查CSS是否使用正确的查看器标记。 例如，如果要创建缩放查看器，则必须使用父查看器元素上定义的查看器类名称来定义您导 `.s7mixedmediaviewer` 入的所有CSS规则。
 
-      只要正确定义给定查看器的CSS标记，就可以导入任意手工CSS。 (CSS标记在《查看器参考指南》的任 *何“自定义&lt;查看器* 名称>查看器”帮助 [主题中均有介绍](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/)。 例如，如果要阅读有关缩放查看器的CSS标记，请参阅自 [定义缩放查看器](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_20_zoom_viewer_customizingviewer.html)。) 但是，可视编辑器可能不理解某些CSS值。 在这种情况下，可视编辑器会尝试覆盖错误，以便CSS仍可正常工作。
+      只要正确定义给定查看器的CSS标记，就可以导入任意手工CSS。 (CSS标记在《查看器参考指南》的任 *何“自定义&lt;查看器* 名称>查看器”帮助 [主题中均有介绍](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。 例如，如果要阅读有关缩放查看器的CSS标记，请参阅自 [定义缩放查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。) 但是，可视编辑器可能不理解某些CSS值。 在这种情况下，可视编辑器会尝试覆盖错误，以便CSS仍可正常工作。
    >[!NOTE]
    >
    >如果您希望直接在其原始表单中编辑 CSS，请点按“选定类型”下拉菜单下的&#x200B;**[!UICONTROL 显示/隐藏 CSS]**（您可能需要向上滚动可视编辑器才能看到此选项）。
@@ -460,7 +460,7 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
 
    可视编辑器中的许多组件都有与其关联的详细说明。 当您展开组件以显示其关联的参数时，这些说明会显示在蓝色框中。
 
-   有些“查看器类型”具有的组件允许您在 **[!UICONTROL IS 命令]**&#x200B;文本字段中指定“图像提供”命令。有关可使用的命令列表，请参阅[图像提供 API 参考](https://marketing.adobe.com/resources/help/zh_CN/s7/is_ir_api/image_serving_api_ref.html)。
+   有些“查看器类型”具有的组件允许您在 **[!UICONTROL IS 命令]**&#x200B;文本字段中指定“图像提供”命令。有关可使用的命令列表，请参阅[图像提供 API 参考](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)。
 
    >[!NOTE]
    >
