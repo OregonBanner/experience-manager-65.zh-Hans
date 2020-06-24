@@ -3,7 +3,7 @@ title: 中的资源HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 1%
@@ -28,9 +28,9 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 ## 内容片段 {#content-fragments}
 
-内 [容片段](/help/assets/content-fragments.md) 是一种特殊类型的资产。 它可用于访问结构化数据，如文本、数字、日期等。 由于资产(如图像或文档 `standard` )存在多种差异，因此一些其他规则适用于处理内容片段。
+内 [容片段](/help/assets/content-fragments/content-fragments.md) 是一种特殊类型的资产。 它可用于访问结构化数据，如文本、数字、日期等。 由于资产(如图像或文档 `standard` )存在多种差异，因此一些其他规则适用于处理内容片段。
 
-有关详细信息， [请参阅Experience Manager Assets HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md)。
+有关详细信息， [请参阅Experience Manager资产HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md)。
 
 ## Data model {#data-model}
 
@@ -67,7 +67,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 * 多个演绎版，如原始演绎版（最初上传的资产）、缩略图和各种其他演绎版。 其他再现可能是不同大小、不同视频编码或从PDF或文件提取页面的 [!DNL Adobe InDesign] 图像。
 * 可选注释。
 
-有关内容片段中元素的信息，请 [参阅Experience Manager Assets HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md#content-fragments)。
+有关内容片段中元素的信息，请参 [阅Experience Manager资产HTTP API中的内容片段支持](/help/assets/assets-api-content-fragments.md#content-fragments)。
 
 在文 [!DNL Experience Manager] 件夹中，具有以下组件：
 
