@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Experience Manager 6.5资产用户指南
+user-guide-title: Experience Manager6.5资产用户指南
 translation-type: tm+mt
-source-git-commit: db60a7297defa2ed8e7f30f148d0f74a73a49893
+source-git-commit: d870e80e33c5ba36a43ff45ba2dc82551491bb18
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 41%
@@ -12,17 +12,17 @@ ht-degree: 41%
 ---
 
 
-# Experience Manager 6.5资产用户指南 {#assets}
+# Experience Manager6.5资产用户指南 {#assets}
 
 + [[!DNL Assets] 用户指南](home.md)
 + [AEM 6.5 Assets发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [关于DAM](assets.md)
 + [资产的最佳实践](best-practices-for-assets.md)
-+ 使用AEM资产 {#using}
++ 使用AEM Assets {#using}
    + [AEM Assets主页体验](assets-home-page.md)
    + [在AEM中搜索资产](search-assets.md)
    + [多语言资源](multilingual-assets.md)
-   + [AEM [!DNL Adobe Stock] 资产中的使用资产](aem-assets-adobe-stock.md)
+   + [在AEM Assets [!DNL Adobe Stock] 中使用资产](aem-assets-adobe-stock.md)
    + [预览3D资产](previewing-3d-assets.md)
    + [审核文件夹资产和收藏集](bulk-approval.md)
    + [时间轴中的活动流](activity-stream.md)
@@ -34,10 +34,10 @@ ht-degree: 41%
    + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
    + [设置 Dynamic Media](administering-dynamic-media.md)
    + [使用 Dynamic Media](dynamic-media.md)
-   + [配置Dynamic Media - Scene7模式](config-dms7.md)
-   + [配置Dynamic Media —— 混合模式](config-dynamic.md)
-   + [Dynamic Media - Scene7模式疑难解答](troubleshoot-dms7.md)
-   + [从Dynamic Media —— 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
+   + [配置Dynamic Media- Scene7模式](config-dms7.md)
+   + [配置Dynamic Media-混合模式](config-dynamic.md)
+   + [Dynamic Media疑难解答- Scene7模式](troubleshoot-dms7.md)
+   + [从Dynamic Media迁移——混合模式到Dynamic Media- S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [管理 Dynamic Media 查看器预设](managing-viewer-presets.md)
@@ -57,7 +57,7 @@ ht-degree: 41%
    + [全景图像](panoramic-images.md)
    + [混合媒体集](mixed-media-sets.md)
    + [旋转集](spin-sets.md)
-   + [Dynamic Media中的视频](video.md)
+   + [Dynamic Media视频](video.md)
    + [传送横幅](carousel-banners.md)
    + [交互式图像](interactive-images.md)
    + [交互式视频](interactive-videos.md)
@@ -75,14 +75,14 @@ ht-degree: 41%
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产 {#extending}
-   + [自定义和扩展AEM资产](extending-assets.md)
+   + [自定义和扩展AEM Assets](extending-assets.md)
    + [使用媒体处理程序和工作流处理资源](media-handlers.md)
    + [扩展搜索功能](searchx.md)
-   + [安装并 [!DNL ImageMagick] 配置以与AEM资产配合使用](best-practices-for-imagemagick.md)
+   + [安装并配 [!DNL ImageMagick] 置以与AEM Assets配合使用](best-practices-for-imagemagick.md)
    + [将资源与活动流集成](extending-activity-stream.md)
    + [扩展资产编辑器](asseteditorx.md)
    + [资产 HTTP API](mac-api-assets.md)
-   + [AEM Assets HTTP API中的内容片段支持](assets-api-content-fragments.md)
+   + [AEM AssetsHTTP API中的内容片段支持](assets-api-content-fragments.md)
    + [资产代理开发](proxy.md)
 + 管理资产 {#administer}
    + [支持的文件格式](assets-formats.md)
@@ -131,14 +131,14 @@ ht-degree: 41%
    + [将文件夹发布到 Brand Portal](brand-portal-publish-folder.md)
    + [将收藏集发布到 Brand Portal](brand-portal-publish-collection.md)
 + 内容片段 {#fragments}
-   + [使用内容片段](content-fragments.md)
-   + [管理内容片段](content-fragments-managing.md)
-   + [内容片段模型](content-fragments-models.md)
-   + [变量 - 创作片段内容](content-fragments-variations.md)
-   + [内容片段关联内容](content-fragments-assoc-content.md)
-   + [元数据 - 片段属性](content-fragments-metadata.md)
-   + [内容片段 - 删除注意事项](content-fragments-delete.md)
-   + [内容片段——标记](content-fragments-markdown.md)
+   + [使用内容片段](content-fragments/content-fragments.md)
+   + [管理内容片段](content-fragments/content-fragments-managing.md)
+   + [内容片段模型](content-fragments/content-fragments-models.md)
+   + [变量 - 创作片段内容](content-fragments/content-fragments-variations.md)
+   + [内容片段关联内容](content-fragments/content-fragments-assoc-content.md)
+   + [元数据 - 片段属性](content-fragments/content-fragments-metadata.md)
+   + [内容片段 - 删除注意事项](content-fragments/content-fragments-delete.md)
+   + [内容片段——标记](content-fragments/content-fragments-markdown.md)
    + [为内容片段创建翻译项目](creating-translation-projects-for-content-fragments.md)
 + Manage Assets {#managing}
    + [管理数字资产](managing-assets-touch-ui.md)
