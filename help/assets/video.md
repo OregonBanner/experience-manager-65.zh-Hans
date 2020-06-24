@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '11877'
-ht-degree: 23%
+source-wordcount: '11829'
+ht-degree: 22%
 
 ---
 
@@ -33,6 +33,7 @@ ht-degree: 23%
    >
    >
 * 请参 [阅配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) -混合模式中的配置Dynamic Media。
+
 >
 
 
@@ -145,7 +146,7 @@ Dynamic Media中的视频是一种端到端的解决方案，它使得发布高�
 * 组织、浏览和搜索具有全面元数据支持的视频，以实现高效的视频资产管理。
 * 将自适应视频集交付到Web、桌面和移动设备，包括iPhone、iPad、Android、Blackberry和Windows手机。
 
-自适应视频流播放在多种 iOS 平台上受支持。请参阅《[Scene7 查看器参考指南](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_video_reference.html)》。
+自适应视频流播放在多种 iOS 平台上受支持。请参阅《[Scene7 查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html)》。
 
 Dynamic Media supports mobile video playback for MP4 H.264 video. You can find Blackberry devices that support this video format at the following: [Supported video formats on Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
@@ -161,7 +162,7 @@ Dynamic Media supports mobile video playback for MP4 H.264 video. You can find B
 
 See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480) sample.
 
-另请参 [阅《Adobe Scene7](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_s7_aem_asset_viewers.html) 查看器参考指南》 [,](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_aem_asset_viewers.html) 查看器可用于AEM和Scene7，查看器可用于AEM资产。
+另请参 [阅《Adobe Scene7](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) 查看器参考指南》中的AEM Assets [、Dynamic Media](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 经典查看器和AEM资产的查看器。
 
 ## Best practice: Using the HTML5 video viewer {#best-practice-using-the-html-video-viewer}
 
@@ -173,7 +174,7 @@ Dynamic MediaHTML5视频查看器预设是功能强大的视频播放器。 您�
 
 通过将使用 HTML5 和 CSS 设计播放组件的功能、支持嵌入式播放的功能，以及根据浏览器的容量使用自适应和渐进式流播放的功能整合到单一播放器中，您可以扩大富媒体内容可以传送到的桌面和移动用户的范围，并确保简化视频体验。
 
-另请参阅《Scene7 查看器参考指南》中的“[关于 HTML5 查看器](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/c_html5_viewers_about.html)”。
+另请参阅《Scene7 查看器参考指南》中的“[关于 HTML5 查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)”。
 
 ### 使用HTML5视频查看器在桌面计算机和移动设备上播放视频 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -473,6 +474,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    * 在项目仪表板的入门卡中，点按浏览 **[!UICONTROL 并启用API。]**
    * 在项目仪表板的API卡中，点按转 **[!UICONTROL 到API概述。]**
+
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. 在“API和服务”页面顶部附近，点 **[!UICONTROL 按启用API和服务。]**
@@ -492,6 +494,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    * 从 **[!UICONTROL Where will the API?]** 下拉列表，选 **[!UICONTROL 择Web服务器（例如node.js、Tomcat）]**
 
    * From the **[!UICONTROL What data will you be accessing?]** 下拉列表，点按 **[!UICONTROL 用户数据。]**
+
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. 点击 **[!UICONTROL 我需要哪些凭据？]**
@@ -837,9 +840,11 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 视图资产文件夹中的视频编码进度：
 
    * 在卡视图中，视频编码进度按百分比显示在资产上。 如果出现错误，此信息也会显示在资产上。
+
    ![chlimage_1-429](assets/chlimage_1-429.png)
 
    * In list view, video encoding progress displays in the **[!UICONTROL Processing Status]** column. 如果出现错误，则同一列中将显示此消息。
+
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
    默认情况下，此列不显示。To enable the column, select **[!UICONTROL View Settings]** from the views drop-down menu, and add the **[!UICONTROL Processing Status]** column and tap or click **[!UICONTROL Update.]**
@@ -859,6 +864,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    >    * Apache Sling作业队列配置
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite工作流超时队列
+
    >
    >在这些配置中 **[!UICONTROL ，您可以调]**&#x200B;整重试 **[!UICONTROL 、]**&#x200B;重试延迟 **[!UICONTROL ,]** 以及超时。
 
@@ -866,7 +872,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
@@ -880,7 +886,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
+   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
 
    ![chlimage_1-435](assets/chlimage_1-435.png)
 
@@ -893,6 +899,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    >    * Apache Sling作业队列配置
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite工作流超时队列
+
    >
    >
    >在这些配置中 **[!UICONTROL ，您可以调]**&#x200B;整重试 **[!UICONTROL 、]**&#x200B;重试延迟 **[!UICONTROL ,]** 以及超时。
@@ -901,7 +908,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
@@ -911,7 +918,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+>您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
 如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
 
@@ -939,6 +946,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    * 发布开始
    * 发布失败
    * 发布完成——包括有关渠道和URL的信息
+
    清除复选框意味着您不会从YouTube发布工作流接收指定的电子邮件通知。
 
    >[!NOTE]
@@ -988,6 +996,7 @@ For video reports to work correctly, a Report Suite ID is automatically created 
 
    * Near the upper-right corner, tap the **Date Picker **icon.
 Specify the beginning and end date range for which you want video data, and then tap **[!UICONTROL Run Report.]**
+
    “顶级指标”组框标识您网站上所有*已发布*视频的各种聚合指标。
 
 1. 在列出顶级已发布视频的表中，点按视频名称以播放视频，还可以查看该视频的受众保留（流失）报表。
@@ -998,11 +1007,11 @@ Specify the beginning and end date range for which you want video data, and then
 
 使用 Scene7 查看器参考和 Scene7 HTML5 查看器 SDK 创建您自己的视频查看器。
 
-请参阅《[Scene7 查看器参考指南](https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/index.html)》。
+请参阅《[Scene7 查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)》。
 
-从 Adobe Developer Connection 下载 Scene7 HTML 查看器 SDK。
+<!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
-请参阅 [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)。
+See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 要查看基于使用 Scene7 HMTL5 查看器 SDK 创建的视频查看器的视频报表，请执行以下操作：
 
@@ -1065,7 +1074,7 @@ If `config2` is anything else, set the preset parameter the same as the `config2
 
 Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
 
-有 [关在URL中使用JSON函](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/c_serving_static_nonimage_contents.html) 数的更多信息，请参 ** 阅Scene7图像服务API帮助中的Serving static（非图像）内容。
+有 [关在URL中使用JSON函](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html) 数的更多信息，请参 ** 阅Scene7图像服务API帮助中的Serving static（非图像）内容。
 
 要向视频添加字幕或字幕，请执行以下操作：
 
