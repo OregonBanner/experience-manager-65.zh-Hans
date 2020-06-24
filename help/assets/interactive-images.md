@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
 workflow-type: tm+mt
 source-wordcount: '4345'
 ht-degree: 23%
@@ -47,7 +47,7 @@ Watch a 10 minute and 33 second walkthrough on [how interactive image banners ar
 
 1. **（可选）识别热点变量** -如果您使用独立的AEM Assets和Dynamic Media，可以通过识别现有Quickview实施中使用的动态变量来开始，以便您在创建交互式图像时输入热点数据。 See [(Optional) Identifying hotspot variables](#optional-identifying-hotspot-variables).
 但是，如果您使用AEM Sites、AEM eCommerce或二者，则不必执行此步骤。
-请参 [阅AEM Assets中的电子商务概念](/help/sites-administering/concepts.md)。
+请参阅 [AEM Assets中的电子商务概念](/help/sites-administering/concepts.md)。
 
 1. **（可选）创建交互式图像查看器预设** -自定义用于表示热点的图形图像。 如果您打算使用现成的名为的交互式图像查看器预设，则无需创建您自己的交互式图像查看器预 `Shoppable_Banner` 设。
 See [(Optional) Creating an Interactive Image viewer preset](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset).
@@ -56,9 +56,11 @@ See [(Optional) Creating an Interactive Image viewer preset](/help/assets/managi
 请参 [阅上传图像横幅](#uploading-an-image-banner)。
 
 1. **将热点添加到图像横幅** -将一个或多个热点添加到图像横幅，并将每个热点与操作（如超链接、概览或体验片段）关联。 添加热点后，您将通过发布交互式图像来完成此任务。
-See [Adding hotspots to an image banner](#adding-hotspots-to-an-image-banner).
-请参 [阅预览交互式图](#optional-previewing-interactive-images) 像——可选。 如果需要，您可以查看购物横幅的呈现形式并测试其交互性。
-See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for details on how to publish interactive image assets.
+
+   * See [Adding hotspots to an image banner](#adding-hotspots-to-an-image-banner).
+   * 请参 [阅预览交互式图](#optional-previewing-interactive-images) 像——可选。 如果需要，您可以查看购物横幅的呈现形式并测试其交互性。
+
+   * See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for details on how to publish interactive image assets.
 
 1. **在AEM中向网站或网站添加交互式图像**&#x200B;如果您使用AEM Sites、AEM电子商务或两者，则可以通过将交互式媒体组件拖动到页面上，将交互式图像直接添加到AEM的网页。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 如果您使用独立AEM Assets和Dynamic Media，则必须在您的网站上复制嵌入代码，然后将其与现有Quickview集成。 See [Integrating an interactive image with your website](#integrating-an-interactive-image-with-your-website).
