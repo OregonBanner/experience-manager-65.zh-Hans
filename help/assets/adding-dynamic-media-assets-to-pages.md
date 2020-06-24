@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5015a55b79d363a8b7364f154921e956a818ce19
+source-git-commit: 2014e4f28c63f6268606d46b5019d654bbe4aa08
 workflow-type: tm+mt
 source-wordcount: '3095'
 ht-degree: 31%
@@ -37,13 +37,13 @@ ht-degree: 31%
 
    如果没有列表Dynamic Media组件可用，您可能需要启用要使用的Dynamic Media组件。 See [Enabling Dynamic Media components](#enabling-dynamic-media-components).
 
-   ![6_5_360video_wcmcomponent](assets/6_5_360video_wcmcomponent.png)
+   ![6_5_360video_wcmcomponent](/help/assets/assets/6_5_360video_wcmcomponent.png)
 
 1. 拖 **[!UICONTROL 动要使]** 用的Dynamic Media组件，并将其放到页面上的所需位置。
 
 1. 将鼠标指针直接悬停在组件上。 当组件被蓝色框包围时，点按一次以显示组件的工具栏。 点按配 **[!UICONTROL 置（扳手）图]** 标。
 
-   ![6_5_360video_wcmcomponentconfigure](assets/6_5_360video_wcmcomponentconfigure.png)
+   ![6_5_360video_wcmcomponentconfigure](/help/assets/assets/6_5_360video_wcmcomponentconfigure.png)
 
 1. 根据您放到页面上的Dynamic Media组件，将打开一个配置对话框。 [根据需要设置组件的选项](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components) 。
 
@@ -202,8 +202,8 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
    例如，通过查看器修饰符，可以执行以下操作：
 
-   * 将题注文件与视频关联： [字幕](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * 将导航文件与视频关联： [导航](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * 将题注文件与视频关联： [题][https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html]注(https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * 将导航文件与视频关联： [导航][https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
    You can edit the following Advanced Settings by clicking **[!UICONTROL Edit]** in the component.
 
