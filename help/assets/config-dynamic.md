@@ -10,9 +10,9 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
 workflow-type: tm+mt
-source-wordcount: '8031'
+source-wordcount: '7951'
 ht-degree: 1%
 
 ---
@@ -40,6 +40,7 @@ Dynamic Media-混合需要启用并配置以供使用。 根据您的用例，Dy
 >
 >* `s7access.log`
 >* `ImageServing.log`
+
 >
 >
 它们在监视 [和维护AEM实例中有说明](/help/sites-deploying/monitoring-and-maintaining.md)。
@@ -176,8 +177,10 @@ AEM发布节点将继续提供Dynamic Media查看器、站点页面和静态内�
    >要对Dynamic Media问题进行疑难解答，请参阅目录中的以下 `crx-quickstart/logs/` 日志：
    >
    >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日志提供用于分析内部ImageServer进程行为的统计和分析信息。
+
    图像服务器日志文件名的示例： `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access日志记录通过和向Dynamic Media发出的每个 `/is/image` 请求 `/is/content`。
+
    仅当启用Dynamic Media时，才使用这些日志。 它们不包含在从页 **面生成** 的下载完整 `system/console/status-Bundlelist` 包中； 如果您遇到Dynamic Media问题，请在致电客户支持时，将这两个日志附加到该问题。
 
 ### 如果将AEM安装到其他端口或上下文路径…… {#if-you-installed-aem-to-a-different-port-or-context-path}
@@ -283,6 +286,7 @@ Dynamic Media图像投放的工作方式是：将图像资产（包括视频缩�
    * 在“KeyStore **[!UICONTROL 文件口令]** ”字段中，输入KeyStore文件口令。 这不是 **您在步骤** 5中创建的KeyStore密码，而是Adobe在配置过程中向您发送的欢迎电子邮件中提供的KeyStore文件密码。 如果您未收到KeyStore文件密码，请与Adobe客户服务部门联系。
    * 在“ **[!UICONTROL 私钥密码]** ”字段中，输入私钥密码（可能与上一步中提供的私钥密码相同）。 在设置过程中，Adobe会在向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请与Adobe客户服务联系。
    * 在私钥 **[!UICONTROL 别名字段中]** ，输入私钥别名。 For example, `*companyname*-alias`. 在设置过程中，Adobe在向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请与Adobe客户服务联系。
+
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
 1. 点按 **[!UICONTROL 保存并关闭]** ，以保存对此用户所做的更改。
@@ -301,6 +305,7 @@ Dynamic Media图像投放的工作方式是：将图像资产（包括视频缩�
    * **[!UICONTROL 租户ID]** —— 此值是发布到复制服务的公司/租户的名称。 此值是Adobe在设置过程中在向您发送的欢迎电子邮件中提供的租户ID。 如果您未收到此信息，请与Adobe客户服务部门联系。
    * **[!UICONTROL 密钥存储别名]** -此值与在设置身份验证中生成密钥时设置的**新别名** [值相同](#setting-up-authentication); 例如 `replication`, (请参阅设置身 [份验证中的步骤](#setting-up-authentication)7。)
    * **[!UICONTROL 密钥存储密码]** -这是您在点击创建密钥存储时创建的 **[!UICONTROL KeyStore密码。]** Adobe不提供此密码。 请参阅设置身 [份验证的第5步](#setting-up-authentication)。
+
    下图显示了具有示例数据的复制代理：
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
@@ -918,7 +923,7 @@ Dynamic Media在启用后即 [可使用](#enabling-dynamic-media)。 但是，�
   <tr>
    <td>过期</td>
    <td>36000000</td>
-   <td><p>默认客户端的存储时间。 提供默认的过期时间间隔，以防特定目录记录不包含有效的目录：:Expiration值。</p> <p>实数，0或更大。 自生成回复数据后，到期的毫秒数。 设置为0以始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像离开用户缓存需要10小时。 如果您需要更早清除缓存，请与客户关怀联系。</p> <p>另请参 <a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_expiration.html">阅</a> “图像服务API”中的“过期”。</p> </td>
+   <td><p>默认客户端的存储时间。 提供默认的过期时间间隔，以防特定目录记录不包含有效的目录：:Expiration值。</p> <p>实数，0或更大。 自生成回复数据后，到期的毫秒数。 设置为0以始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像离开用户缓存需要10小时。 如果您需要更早清除缓存，请与客户关怀联系。</p> <p>另请参 <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html">阅</a> “图像服务API”中的“过期”。</p> </td>
   </tr>
   <tr>
    <td>jpegquality</td>
@@ -960,9 +965,9 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
 
 高级用例可使用手动配置修 `icc=` 饰符显式选择输出颜色用户档案:
 
-* `icc` - [https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_icc.html](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_icc.html)
+* `icc` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html)
 
-* `iccEmbed` - [https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html](https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/http_ref/r_iccembed.html)
+* `iccEmbed` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
 只有在安装了“包共享”中的功 [能包12445或“软件分发](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) ”中 [的功能包12445时，Adobe颜色用户档案](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 标准集才可用。 所有功能包和服务包均可通过包 [共享和软件](https://www.adobeaemcloud.com/content/packageshare.html)[分发获得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能包12445提供Adobe颜色用户档案。
@@ -1008,55 +1013,55 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
    <td><strong>描述</strong></td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccprofilergb.html">iccprofilergb</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html">iccprofilergb</a></td>
    <td>字符串</td>
    <td>&lt;empty&gt;</td>
    <td>默认RGB颜色用户档案的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccprofilecmyk.html">iccprofilemyk</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html">iccprofilemyk</a></td>
    <td>字符串</td>
    <td>&lt;empty&gt;</td>
    <td>默认CMYK颜色用户档案的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccprofilegray.html">iccprofilegray</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html">iccprofilegray</a></td>
    <td>字符串</td>
    <td>&lt;empty&gt;</td>
    <td>默认灰色用户档案的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccprofilesrcrgb.html">iccprofireservercrgb</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html">iccprofireservercrgb</a></td>
    <td>字符串</td>
    <td>&lt;empty&gt;</td>
    <td>用于未嵌入颜色用户档案的RGB图像的默认RGB颜色用户档案的名称</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccprofilesrccmyk.html">iccprofilesrcmyk</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html">iccprofilesrcmyk</a></td>
    <td>字符串</td>
    <td>&lt;empty&gt;</td>
    <td>用于未嵌入颜色用户档案的CMYK图像的默认CMYK颜色用户档案的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccprofilesrcgray.html">iccprofilesrcgray</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html">iccprofilesrcgray</a></td>
    <td>字符串</td>
    <td>&lt;empty&gt;</td>
    <td>用于未嵌入颜色用户档案的CMYK图像的默认灰色用户档案的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccblackpointcompensation.html">iccblackpoint补偿</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html">iccblackpoint补偿</a></td>
    <td>布尔型</td>
    <td>True</td>
    <td>指定是否应在颜色校正期间执行黑点补偿。 Adobe建议启用此选项。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccdither.html">icdhiter</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html">icdhiter</a></td>
    <td>布尔型</td>
    <td>False</td>
    <td>指定是否应在颜色校正期间进行仿色。</td>
   </tr>
   <tr>
-   <td><a href="https://marketing.adobe.com/resources/help/en_US/s7/is_ir_api/is_api/image_catalog/r_iccrenderintent.html">iccrenderintent</a></td>
+   <td><a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html">iccrenderintent</a></td>
    <td>字符串</td>
    <td>相对</td>
    <td><p>指定渲染方法。 可接受的值为： <strong>感知、相对、饱和度、绝对。 </strong><i></i>Adobe建议 <strong>将 </strong><i></i>相对值作为默认值。</p> </td>
