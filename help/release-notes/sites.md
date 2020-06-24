@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
+source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+workflow-type: tm+mt
+source-wordcount: '856'
+ht-degree: 63%
 
 ---
 
@@ -33,10 +36,10 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
    * 具有数据密集的变量声明：
       `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
-   * 列出和重复控制参数：开始、步骤、结束：
+   * 列表和重复控制参数： 开始、步骤、结束：
       `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
-   * 数据秘密解包的标识符：
+   * 数据解密的标识符：
 
       ```
       <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
@@ -48,7 +51,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 * Core Components 2.3.2+，请参阅 [Github 以查看发行说明](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 * 布局容器的网格系统，请参阅 [Github](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid)。
-* Clientlib Manager:使Google Closure Compiler默认为JavaScript clientlibs（旧默认为Yahoo YUI）的缩小，并将Google Closure Compiler更新为v20190121版
+* Clientlib Manager: 使Google Closure Compiler默认为JavaScript客户端的微型化（旧默认为Yahoo YUI），并将Google Closure Compiler更新为v20190121版
 * 模板编辑器和策略
 
    * 为使用JS SDK的单页应用程序创建和编辑模板（也称为SPA编辑器）
@@ -58,7 +61,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 >[!CAUTION]
 >
->AEM包括jQuery库的版本1.12.4，以提供与现有自定义代码的最大兼容性。 Adobe 已对其进行了修改以解决已知的安全问题。
+>AEM包含jQuery库的版本1.12.4，可提供与现有自定义代码的最大兼容性。 Adobe 已对其进行了修改以解决已知的安全问题。
 
 ## 站点管理 {#site-administration}
 
@@ -73,10 +76,10 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 
 ## 内容片段和编辑器 {#content-fragments-amp-editor}
 
-* 在内容片段编辑器中新增了[注释](/help/assets/content-fragments-variations.md#viewing-editing-deleting-annotations)边栏，用于发表常规评论和查看文本中的评论（也显示在“时间轴”边栏中）
-* Ability to set the default content type of a multi-line text element in a [Content Fragment model](/help/assets/content-fragments-models.md) to simple text, rich text or markdown
-* 可通过选择 RTE 中的文本（全屏视图）添加[评论/注释](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)
-* 可通过“引用”边栏并排[比较各个版本的内容片段](/help/assets/content-fragments-managing.md#comparing-fragment-versions)
+* 在内容片段编辑器中新增了[注释](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations)边栏，用于发表常规评论和查看文本中的评论（也显示在“时间轴”边栏中）
+* Ability to set the default content type of a multi-line text element in a [Content Fragment model](/help/assets/content-fragments/content-fragments-models.md) to simple text, rich text or markdown
+* 可通过选择 RTE 中的文本（全屏视图）添加[评论/注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* 可通过“引用”边栏并排[比较各个版本的内容片段](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)
 * 资产“下载报表”现在会相应地显示内容片段
 * 可通过 /api.json 将[内容片段支持添加到资产 HTTP API](/help/assets/assets-api-content-fragments.md)。提供了用于创建、更新、读取和删除内容片段的 API。
 
@@ -88,7 +91,7 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 ## 翻译 {#translation}
 
 * 使用项目母版简化了翻译项目创建过程
-* 默认情况下，通过将翻译作业设置为批准状态，简化翻译项目的执行
+* 默认情况下，将翻译作业设置为批准状态，从而简化翻译项目的执行
 * 允许使用第三方翻译记忆库中的更改更新翻译页面
 * 允许以 JSON 格式导出翻译作业
 * 更新Microsoft Translation集成以使用V3 API
@@ -114,11 +117,11 @@ source-git-commit: e3f32b526d8a619b8bacfc85e7dce4a7bf5d23a7
 >
 >在 AEM 6.5 发布时，AEM 不支持 at.js 2.x。请使用最新版本的 at.js 1.x。
 
-* Adobe Target 集成现在可以使用 Target Standard API。早期版本的AEM使用Target Classic HTTP API，该API现已弃用。
+* Adobe Target 集成现在可以使用 Target Standard API。早期版本的AEM使用Target经典HTTP API，现已弃用。
 * Adobe Target `mbox.js` version 63 is included. Adobe strongly recommends to switch implementation to `at.js` v1.x.
 * `at.js` 版本1.5.0现已包含在内。 Adobe recommends that you use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision `at.js` v1.x into the site.
 
-## AEM和Adobe Analytics {#aem-amp-adobe-analytics}
+## AEM和AdobeAnalytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` 包含H.27.5。 Adobe建议您将实施切换到 `AppMeasurement.js`
 * `AppMeasurement.js` 包含v1.8.0。 Adobe recommends to use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision AppMeasurement.js into the site.
@@ -133,7 +136,7 @@ Improvements to the Commerce Integration Framework are on a faster release cycle
 
 ## Screens 加载项 {#screens-add-on}
 
-* 使用启动项计划标牌内容的未来内容更改
+* 使用启动项规划标牌内容的未来内容更改
 * 序列渠道中按流量计费的播放
 * 使用源文件（例如 Excel 表格）自动创建项目结构
 
