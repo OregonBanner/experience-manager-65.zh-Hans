@@ -3,9 +3,9 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1774'
 ht-degree: 20%
 
 ---
@@ -72,9 +72,9 @@ ht-degree: 20%
 
 ## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
-以下列表描述了Dynamic Media不支持的栅格图像文件 *格式* 的子类型。
+以下列表描述了Dynamic Media不支持的栅格图像文件格式 *的子* 类型。
 
-另请参 [阅检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
+另请参阅 [检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
 
 * IDAT区块大小大于100 MB的PNG文件。
 * PSB文件。
@@ -148,7 +148,7 @@ Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](ca
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## Dynamic Media支持的文档格式 {#supported-document-formats-dynamic-media}
+## 支持文档格式的Dynamic Media {#supported-document-formats-dynamic-media}
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -158,9 +158,9 @@ Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](ca
 
 除了上述功能之外，还要考虑以下事项：
 
-* 要使用Dynamic Media为PDF文件生成动态演绎版，请 [参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media为PDF文件生成动态再 [现，请参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic Media预览AI文件并生成动态演绎版，请参 [阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media预览AI文件并生成动态演绎版，请 [参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 要使用Dynamic Media为INDD文件生成动态演绎版，请参 [阅InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
@@ -222,7 +222,7 @@ Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](ca
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持存储、版本控制、ACL、工作流、发布和元数据管理等常用DAM功能(Dynamic Media投放除外)。
+下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件都支持存储、版本控制、ACL、工作流、发布和元数据管理等常用DAM功能，Dynamic Media投放除外。
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -234,13 +234,13 @@ Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](ca
 
 ## Supported MIME types {#supported-mime-types}
 
-默认情况下，Experience Manager会使用文件扩展名检测文件类型。 Experience Manager可以从文件内容中检测到它。 对于后者，在 [!UICONTROL Experience Manager Web] Console [!UICONTROL 的Day CQ DAM Mime类型服务中选择] “从内容检测MIME”选项。
+默认情况下，Experience Manager使用文件扩展名检测文件类型。 Experience Manager可以从文件内容中检测到它。 对于后者，在 [!UICONTROL Experience ManagerWeb控制台][!UICONTROL 的Day CQ DAM Mime类型服务中选择“从内容检测MIME] ”选项。
 
 在CRXDE Lite中，有一列表支持的MIME类型 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
 | 文件扩展名 | MIME类型/ Internet媒体类型 | 默认jobParam值 | 允许的jobParam值 |
 |---|---|---|---|
-| 图像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | 默认jobParam适用于所有图像MIME类型资产。<ul><li>[knockoutBackgroundOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_knockout_background_options.html)</li><li>manualCropOptions</li><li>[autoColorCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_auto_color_crop_options)</li><li>[autoTransparentCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_auto_transparent_crop_options)</li><li>[colorManagementOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_color_management_options.html)</li><li>[autoSetCreationOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_auto_set_creation_options.html)</li><li>[emailSetting](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/string_constants/index.html?f=r_email_settings)</li><li>[xmpKeywords](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_xmp_keywords)</li><li>[usmsharpMaskOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_unsharp_mask_options.html)</li></ul> |
+| 图像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | 默认jobParam适用于所有图像MIME类型资产。<ul><li>[knockoutBackgroundOptions](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-production-api/data-types/r-knockout-background-options.html)</li><li>manualCropOptions</li><li>[autoColorCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_auto_color_crop_options)</li><li>[autoTransparentCropOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_auto_transparent_crop_options)</li><li>[colorManagementOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_color_management_options.html)</li><li>[autoSetCreationOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_auto_set_creation_options.html)</li><li>[emailSetting](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/string_constants/index.html?f=r_email_settings)</li><li>[xmpKeywords](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/index.html?f=r_xmp_keywords)</li><li>[usmsharpMaskOptions](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_unsharp_mask_options.html)</li></ul> |
 | 3G2 | video/3gpp2 |  | [ExcludeMasterVideoFromAVS](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/types/r_exclude_master_video_from_avs.html) |
 | 3GP | video/3gpp |  | [ExcludeMasterVideoFromAVS](https://marketing.adobe.com/resources/help/en_US/s7/ips_api/?f=r_exclude_master_video_from_avs) |
 | AAC | audio/x-aac |  |  |
