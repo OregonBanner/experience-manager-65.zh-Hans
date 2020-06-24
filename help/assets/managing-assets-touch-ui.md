@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
 workflow-type: tm+mt
 source-wordcount: '9303'
 ht-degree: 8%
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 在此 [!DNL Adobe Experience Manager Assets] 中，您可以执行的不仅仅是存储和管理资产。 [!DNL Experience Manager] 优惠企业级资产管理功能。 您可以编辑和共享资产、运行高级搜索、创建数十种受支持文件格式的多个再现、管理版本和数字权限、自动处理资产、管理和管理元数据、使用批注进行协作等。
 
-本文描述基本的资产管理任务，如创建或上传； 元数据更新； 复制、移动和删除； 发布、取消发布和搜索资产。 要了解用户界面，请参 [阅资产用户界面快速入门](/help/sites-authoring/basic-handling.md)。 要管理内容片段，请参 [阅管理内容片段](content-fragments-managing.md) 资产。
+本文描述基本的资产管理任务，如创建或上传； 元数据更新； 复制、移动和删除； 发布、取消发布和搜索资产。 要了解用户界面，请参 [阅资产用户界面快速入门](/help/sites-authoring/basic-handling.md)。 要管理内容片段，请参 [阅管理内容片段](/help/assets/content-fragments/content-fragments-managing.md) 资产。
 
 ## 创建文件夹 {#creating-folders}
 
@@ -50,7 +50,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
+>在Dynamic Media- Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
 
 您可以选择将资产上传到文件夹，无论是否分配了处理用户档案。
 
@@ -100,7 +100,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
    >
    >在名称冲 **[!UICONTROL 突]** 对话框 [!UICONTROL 中选择替] 换时，将为新资产重新生成资产ID。 此ID与上一个资产的ID不同。
    >
-   >如果启用资产分析功能来跟踪Adobe Analytics的展示次数／点击次数，则重新生成的资产ID将使在Analytics上为资产捕获的数据失效。
+   >如果启用“资产分析”以通过AdobeAnalytics跟踪展示次数／点击次数，则重新生成的资产ID将使Analytics上为资产捕获的数据无效。
 
    If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. 仅当现有资产的二进制文 `SHA 1` 件的校验和值与您上传的资产的校验和值匹配时，才会显示该对话框。 在这种情况下，资产名称无关紧要。
 
@@ -145,18 +145,18 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 >[!NOTE]
 >
->在Dynamic Media - Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
+>在Dynamic Media- Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
 
 >[!NOTE]
 >
->要在Dynamic Media - Scene7模式下通过FTP上传资产，请在创作实例上安装功能 [!DNL Experience Manager] 包18912。 联 [系Adobe客户关](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 怀部，获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以实现批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media- Scene7模式下通过FTP上传资产，请在创作实例上安装功 [!DNL Experience Manager] 能包18912。 联 [系Adobe客户关](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 怀部，获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以实现批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
 >
->如果您使用FTP上传资产，则中指定的上传设 [!DNL Experience Manager] 置将被忽略。 而是使用在Dynamic Media Classic中定义的文件处理规则。
+>如果您使用FTP上传资产，则中指定的上传设 [!DNL Experience Manager] 置将被忽略。 而是使用在Dynamic Media经典中定义的文件处理规则。
 
 **使用FTP上传资产**
 
 1. 使用您选择的FTP客户端，使用您从供应电子邮件收到的FTP用户名和密码登录到FTP服务器。 在FTP客户端中，将文件或文件夹上传到FTP服务器。
-1. [使用从供应电子邮件收到的凭据](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) ，登录到Dynamic Media Classic。 在全局导航栏上，单击“ **[!UICONTROL 上传]**”。
+1. [使用从供应电子邮件收](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 到的凭据登录到Dynamic Media经典。 在全局导航栏上，单击“ **[!UICONTROL 上传]**”。
 
 1. 在上传页面左上角附近，单击通过FTP **[!UICONTROL 选项卡]** 。
 1. 在页面左侧，选择要从中上传文件的FTP文件夹； 在页面的右侧，选择目标文件夹。
@@ -166,12 +166,12 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
    >[!NOTE]
    >
-   >当您通过FTP上传资产时，您在Dynamic Media Classic(S7)中设置的上传作业选项优先于在中设置的资产处理参数 [!DNL Experience Manager]。
+   >当您通过FTP上传资产时，您在Dynamic Media经典(S7)中设置的上传作业选项优先于在中设置的资产处理参数 [!DNL Experience Manager]。
 
 1. 在“上传作业选项”对话框的右下角，单击“保 **[!UICONTROL 存”]**。
 1. 在上传页面的右下角，单击“提交 **[!UICONTROL 上传”]**。
 
-   要视图上传进度，请在全局导航栏上单击“作 **[!UICONTROL 业”]**。 “作业”页面显示上传的进度。 您可以随时继 [!DNL Experience Manager] 续在Dynamic Media Classic中工作并返回“作业”页面，以查看进行中的作业。
+   要视图上传进度，请在全局导航栏上单击“作 **[!UICONTROL 业”]**。 “作业”页面显示上传的进度。 您可以随 [!DNL Experience Manager] 时在Dynamic Media经典中继续工作并返回“作业”页面，以查看进行中的作业。
 要取消正在进行的上载作业，请单击“持 **[!UICONTROL 续时间]** ”旁边的“取消”。
 
 #### 上传作业选项 {#upload-job-options}
@@ -193,7 +193,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 |  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成电子目录、设置分辨率和选择色彩空间。<br> 请注意，中不支持eCatalog [!DNL Experience Manager]。 <br> 请参 [阅设置PDF上传选项](#setting-pdf-upload-options)。 |
 |  | Illustrator选项 | 您可以栅格化Adobe Illustrator®文件、维护透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | EVideo选项 | 您可以通过选择视频预设对视频文件进行转码。<br> 请参 [阅设置eVideo上传选项](#setting-evideo-upload-options)。 |
-|  | 批集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置／批集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
+|  | 批集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media经典的“应用程序设置／批集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
 
 #### 在上传时设置图像编辑选项 {#setting-image-editing-options-at-upload}
 
@@ -240,7 +240,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时，可以自动从文件创建图像模板(在“上传”屏 [!UICONTROL 幕上选择] “创建模板”选项)。
 
-如果您使用PSD文件创建模板，Dynamic Media会使用图层从PSD文件创建多个图像； 它为每个图层创建一个图像。
+Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多幅图像； 它为每个图层创建一个图像。
 
 使用上 [!UICONTROL 述裁剪][!UICONTROL 选项和颜]色用户档案选项，以及Photoshop上传选项。
 
@@ -303,11 +303,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 ### 流式上传 {#streamed-uploads}
 
-如果您将许多资产上传到Adobe Experience Manager，则对服务器的I/O请求会显着增加，这会降低上传效率，甚至会导致某些上传任务超时。 [!DNL Experience Manager Assets] 支持流式上传资产。 流式上传通过在将磁盘复制到存储库之前避免在服务器上的临时文件夹中存储资产，减少了上传操作期间的磁盘I/O。 而是直接将数据传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，在中启用流式上传 [!DNL Assets]。
+如果将许多资产上传到Adobe Experience Manager，则对服务器的I/O请求会显着增加，这会降低上传效率，甚至会导致某些上传任务超时。 [!DNL Experience Manager Assets] 支持流式上传资产。 流式上传通过在将磁盘复制到存储库之前避免在服务器上的临时文件夹中存储资产，减少了上传操作期间的磁盘I/O。 而是直接将数据传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，在中启用流式上传 [!DNL Assets]。
 
 >[!NOTE]
 >
->对于在JEE服务器上运行的Adobe Experience Manager，其servlet-api版本低于3.1，将禁用流上传。
+>对于在JEE服务器上运行的Adobe Experience Manager，其servlet-api版本低于3.1，流上传被禁用。
 
 ### 提取包含资产的ZIP存档 {#extractzip}
 
@@ -577,7 +577,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 >[!NOTE]
 >
->有关Dynamic Media的详细信息，请参阅发 [布Dynamic Media资产。](/help/assets/publishing-dynamicmedia-assets.md)
+>有关特定于Dynamic Media的更多信息，请参 [阅发布Dynamic Media资产。](/help/assets/publishing-dynamicmedia-assets.md)
 
 1. 导航到要发布的资产／文件夹所在的位置。
 
@@ -644,7 +644,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 搜索资产对于数字资产管理系统的使用至关重要——无论是供创意人员进一步使用、供业务用户和营销人员对资产进行可靠管理，还是供DAM管理员管理。
 
-要进行简单、高级和自定义搜索以发现和使用最合适的资产，请参 [阅在Experience Manager中搜索资产](search-assets.md)。
+要进行简单、高级和自定义搜索以发现和使用最合适的资产，请参 [阅以Experience Manager搜索资产](search-assets.md)。
 
 ## 快速操作 {#quick-actions}
 
@@ -657,13 +657,13 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 您可以使用选择选项视图、导航和选择具有任何可用视图(卡片、列和列表)的 **[!UICONTROL 资产]** 。
 
-在列表视图和列视图中，当您将指 **[!UICONTROL 针悬停在]** 资产缩略图上时，将显示选择选项。
+在列表视图和列视图中，当 **[!UICONTROL 将指针]** 悬停在资产缩略图上时，将显示选择选项。
 
 ![在列表视图中选择资产](assets/select_quick_in_listview.png)
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
@@ -740,7 +740,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 >[!NOTE]
 >
->时间轴包含特 [定于内容片段的多个选项](/help/assets/content-fragments-managing.md#timeline-for-content-fragments)。
+>时间轴包含特 [定于内容片段的多个选项](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)。
 
 ## 注释资产 {#annotating}
 
@@ -750,7 +750,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 >[!NOTE]
 >
->对于内容片段， [将在片段编辑器中创建注释](/help/assets/content-fragments-variations.md#annotating-a-content-fragment)。
+>对于内容片段， [将在片段编辑器中创建注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)。
 
 1. 导航到要添加注释的资产所在的位置。
 1. 单击以 **[!UICONTROL 下任]** 一选项中的“注释”图标：
