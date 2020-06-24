@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
 workflow-type: tm+mt
-source-wordcount: '7445'
+source-wordcount: '7603'
 ht-degree: 0%
 
 ---
@@ -173,7 +173,6 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
 
    * 选择 **用户无法更改密码**。
    * 在“成 **员** ”选项卡上，确保列 **出“** 用户”组。
-
    >[!NOTE]
    >
    >无法更改PDF生成器的此设置。
@@ -188,7 +187,25 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
    * 拒绝本地登录
    * 以服务身份登录（应已设置）
 
-1. 赋予新用户帐户“读取和执行”、“写入”、“修改”、“列表文件夹内容”和“读取”权限，以完成JEE安装目录和全局文档存储(GDS)目录上的AEM Forms。 在AEM Forms安装过程中，将手动配置GDS目录的位置。 如果位置设置在安装过程中保持为空，则位置默认为应用程序服务器安 [装下JBoss root]/server/[type]/svcnative/DocumentStorage的目录。
+1. 为以下目录赋予新用户帐户修改权限：
+   * **全局文档存储(GDS)目录**: 在AEM Forms安装过程中，将手动配置GDS目录的位置。 如果安装过程中位置设置保持为空，则位置默认为应用程序服务器安装位置下的目录 `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repository目录**: 默认位置为 `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms临时目录**:
+      * (Windows)环境变量中设置的TMP或TEMP路径
+      * （AIX、Linux或Solaris）登录用户的主目录在基于UNIX的系统上，非根用户可以使用以下目录作为临时目录：
+      * (Linux)/var/tmp或/usr/tmp
+      * (AIX)/tmp或/usr/tmp
+      * (Solaris)/var/tmp或/usr/tmp
+1. 为以下目录赋予新用户帐户写入权限：
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > JBoss Application Server的默认安装位置：
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/
+
 1. 开始应用程序服务器。
 
 **禁用Configuration Manager引导servlet**
@@ -977,7 +994,25 @@ JEE统包安装的AEM Forms默认使用本地系统帐户设置服务帐户。 �
    * 拒绝本地xx登录
    * 以服务身份登录（应已设置）
 
-1. 赋予新用户帐户“读取和执行”、“写入”、“修改”、“列表文件夹内容”和“读取”权限，以完成JEE安装目录和全局文档存储(GDS)目录上的AEM Forms。 在AEM Forms安装过程中，将手动配置GDS目录的位置。 如果位置设置在安装过程中保持为空，则位置默认为应用程序服务器安 [装下JBoss root]/server/[type]/svcnative/DocumentStorage的目录。
+1. 为以下目录赋予新用户帐户修改权限：
+   * **全局文档存储(GDS)目录**: 在AEM Forms安装过程中，将手动配置GDS目录的位置。 如果安装过程中位置设置保持为空，则位置默认为应用程序服务器安装位置下的目录 `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repository目录**: 默认位置为 `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms临时目录**:
+      * (Windows)环境变量中设置的TMP或TEMP路径
+      * （AIX、Linux或Solaris）登录用户的主目录在基于UNIX的系统上，非根用户可以使用以下目录作为临时目录：
+      * (Linux)/var/tmp或/usr/tmp
+      * (AIX)/tmp或/usr/tmp
+      * (Solaris)/var/tmp或/usr/tmp
+1. 为以下目录赋予新用户帐户写入权限：
+   * [JBoss-directory]\standalone\deployment
+   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\bin\
+   >[!NOTE]
+   >
+   > JBoss Application Server的默认安装位置：
+   > * Windows: C:\Adobe\Adobe_Experience_Manager_Forms\jboss
+   > * Linux: /opt/jboss/。
+
 
 1. 开始应用程序服务器服务。
 
