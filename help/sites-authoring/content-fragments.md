@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4d47310ebf9d450de52c925642978ba92ef9c1d4
+source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+workflow-type: tm+mt
+source-wordcount: '1158'
+ht-degree: 99%
 
 ---
 
 
 # 通过内容片段进行页面创作{#page-authoring-with-content-fragments}
 
-Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来创建和管理的](/help/assets/content-fragments.md)。
+Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创建和管理](/help/assets/content-fragments/content-fragments.md)。
 
 这允许您创建渠道中性内容，以及各种（特定于渠道的）变量。您随后可以在创作内容页面时使用这些片段及其变量。
 
@@ -36,7 +39,7 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 >[!CAUTION]
 >
->This page must be read in conjunction with [Working with Content Fragments](/help/assets/content-fragments.md) (and related pages) as it introduces basic terminology and concepts, together with creating and managing fragments.
+>本页必须结合[使用内容片段](/help/assets/content-fragments/content-fragments.md)（及相关页面）一起阅读，因为它不仅介绍了基本术语和概念，还介绍了如何创建和管理片段。
 
 内容片段允许：
 
@@ -72,14 +75,14 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 1. 您可以：
 
-   * Open the **Assets** browser and filter for **Content Fragments** (the default is Images). 然后，将所需的片段拖到组件实例上。
+   * 打开&#x200B;**资产**&#x200B;浏览器并筛选&#x200B;**内容片段**（默认为图像）。然后，将所需的片段拖到组件实例上。
 
    * 选择内容片段组件，然后从工具栏中选择&#x200B;**配置**。在对话框中，您可以打开选择对话框以浏览并选择所需的&#x200B;**内容片段**。
    >[!NOTE]
    >
    >备选方法是将特定的内容片段直接拖到页面上。这将自动创建关联的组件（内容片段）。
 
-1. Initially the content from the **Main** Element and **Master** (variation) will be shown. 您可以根据需要[选择其他元素和/或变量](#selecting-the-element-or-variation)。
+1. 最初，将显示&#x200B;**主**&#x200B;元素和&#x200B;**母版**（变量）中的内容。您可以根据需要[选择其他元素和/或变量](#selecting-the-element-or-variation)。
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -119,13 +122,13 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 * **变量**
 
-   * 默认的&#x200B;**主变量**&#x200B;将始终可用。
+   * 默认主 **视图** 将始终可用。
    * 如果变量是为片段而创建的，将有可选择的变量可用。
 
 * **段落**：指定要包含的段落范围：
 
    * **全部**
-   * **范围**:例如， `1`, `3-5``9-*`
+   * **范围**：例如 `1`、`3-5`、`9-*`
 
       * **将标题处理为它们自己的段落**
 
@@ -133,7 +136,7 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 ### 到片段编辑器的快速连接 {#quick-connection-to-fragment-editor}
 
-您可以打开片段源，以使用组件工具栏中的&#x200B;**编辑**&#x200B;图标编辑（资产）。这将允许您[编辑和管理内容片段](/help/assets/content-fragments.md)。
+您可以打开片段源，以使用组件工具栏中的&#x200B;**编辑**&#x200B;图标编辑（资产）。这将允许您[编辑和管理内容片段](/help/assets/content-fragments/content-fragments.md)。
 
 >[!CAUTION]
 >
@@ -143,13 +146,13 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 当指定的内容片段被添加到页面时，在片段的每个 HTML 段落之间（和顶部/底部）会有一个&#x200B;**将组件拖动到此处**&#x200B;占位符。
 
-这允许您在片段内容[中间](/help/assets/content-fragments.md#inbetweencontent)的任何可用位置添加额外内容（即中间内容），而无需更改根片段。
+这允许您在片段内容[中间](/help/assets/content-fragments/content-fragments.md#inbetweencontent)的任何可用位置添加额外内容（即中间内容），而无需更改根片段。
 
 对于中间内容，您可以：
 
 * 从[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)添加组件。
 * 从[资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)添加资产。
-* Use [Associated Content](#using-associated-content) as a source for in-between content.
+* 使用[关联内容](#using-associated-content)作为中间内容的源。
 
 >[!CAUTION]
 >
@@ -159,7 +162,7 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 >[!NOTE]
 >
->您还可以[在片段本身中插入可视资产（图像）](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)。
+>您还可以[在片段本身中插入可视资产（图像）](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
 >
 >在片段本身中插入的可视资产会附加到片段中的前一段落后面。这意味着无法在可视资产与前一段落之间放置中间内容。
 
@@ -167,10 +170,10 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 >
 >在将中间内容添加到页面上的内容片段之后，更改基础内容片段的结构（例如在内容片段编辑器中）可能会导致错误/意外的结果。
 >
->发生这种情况时，中间内容会按原样保留：
+>在发生此问题时，中间内容会按原样保留：
 >
 >* 中间组件在片段流的组件序列中具有一个绝对位置。即使片段中段落的内容发生更改，此位置也不会变化。
-   >  这可能使其看起来好像相对位置已更改，因为中间段落与它们旁边的（片段）段落没有上下文关系。
+   >  这可能使其看起来像是相对位置发生了更改一样，因为中间段落与它们旁边的（片段）段落之间没有上下文关系。
 >* 除非两个段落结构产生冲突；在这种情况下，将不会显示中间内容（尽管它在内部依然存在）。
 >
 
@@ -178,11 +181,11 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 ### 使用关联内容 {#using-associated-content}
 
-如果[内容片段](/help/assets/content-fragments.md)具有[关联内容](/help/assets/content-fragments-assoc-content.md)，那么可以从侧面板中使用这些资产（在您将片段置于内容页面中之后）。对于[中间内容](#adding-in-between-content)，关联内容实际上是一个特殊的内容源。
+如果您有与 [内容片段关联的](/help/assets/content-fragments/content-fragments-assoc-content.md)[内容](/help/assets/content-fragments/content-fragments.md) ，则这些资产将从侧面板（在将片段放置到内容页面后）中可用。 关联内容实际上是中间内容的 [特殊内容源](#adding-in-between-content)。
 
 >[!NOTE]
 >
->可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments.md#fragments-with-visual-assets)。
+>可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
 
 >[!NOTE]
 >
@@ -196,9 +199,9 @@ Adobe Experience Manager (AEM) 内容片段是[作为独立于页面的资产来
 
 ### 插入到片段中的资产 {#assets-inserted-into-the-fragment}
 
-If assets (e.g. images) have been inserted into the fragment itself, then the options for editing these assets in the page editor is limited. <!-- Removed link as it was a 404 on helpx -->
+如果已在片段本身中插入资产（例如图像），则页面编辑器中用于编辑这些资产的选项会受到限制。 <!-- Removed link as it was a 404 on helpx -->
 
-例如，对于图像，您可以
+例如，您可以对图像执行以下操作
 
 * 裁剪、旋转或翻转图像。
 * 添加标题或替换文本。
@@ -211,6 +214,6 @@ If assets (e.g. images) have been inserted into the fragment itself, then the op
 
 片段需要发布，才能在您已发布的网页中使用。
 
-* 可于[在资产控制台中创建片段](/help/assets/content-fragments.md#publishingandreferencingafragment)之后发布的片段。
+* 可于[在资产控制台中创建片段](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment)之后发布的片段。
 * 如果在当前发布的页面中使用了&#x200B;*未发布的片段*，那么也可以在这一时候发布该片段。
 
