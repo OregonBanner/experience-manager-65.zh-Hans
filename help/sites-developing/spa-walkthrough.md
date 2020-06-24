@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
+source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+workflow-type: tm+mt
+source-wordcount: '2000'
+ht-degree: 0%
 
 ---
 
@@ -103,6 +106,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 >
 >* [AEM 6.4版（带Service Pack 2）](/help/release-notes/sp-release-notes.md)
 >* [在GitHub上安装We.Retail日志应用程序示例。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+
 >
 
 
@@ -225,7 +229,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
    ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
 
-   AEM SPA编辑器利 [用AEM Content](/help/assets/content-fragments.md) Services将页面的整个内容作为JSON模型提供。
+   AEM SPA编辑器利 [用AEM Content](/help/assets/content-fragments/content-fragments.md) Services将页面的整个内容作为JSON模型提供。
 
    通过实现特定界面，Sling Models为SPA提供必要的信息。 JSON投放的会向下委派给每个组件（从页面、段落、组件等）。
 
@@ -247,7 +251,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
 ### 与SPA编辑器交互 {#interaction-with-the-spa-editor}
 
-使用示例We.Retail日志应用程序，您可以清楚地了解应用程序的行为和发布时的加载方式，为JSON内容投放提供内容服务以及异步加载资源。
+使用示例We.Retail日志应用程序，您可以清楚地了解应用程序的行为和发布时的加载方式，为JSON内容投放提供内容服务，并异步加载资源。
 
 此外，对于内容作者而言，使用SPA编辑器创建内容在AEM中是无缝的。
 
