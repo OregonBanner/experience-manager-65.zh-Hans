@@ -3,9 +3,9 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: f47f5e45c64e3cbbe0b68d449a5ef8d4b7dd7f38
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1646'
 ht-degree: 22%
 
 ---
@@ -69,6 +69,21 @@ ht-degree: 22%
 * 要用 [!DNL Dynamic Media] 于预览和生成EPS文件的动态再 [现，请参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 对于EPS文件，PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
+
+## 支持的3D格式 {#support-3d-formats}
+
+支持以下3D格式列表。
+
+请参 [阅在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
+
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | Dynamic Media投放 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |  |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 
 ## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
