@@ -3,9 +3,9 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f47f5e45c64e3cbbe0b68d449a5ef8d4b7dd7f38
+source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1647'
 ht-degree: 22%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 22%
 
 支持以下3D格式列表。
 
-请参 [阅在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
+另请参阅 [在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | Dynamic Media投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
