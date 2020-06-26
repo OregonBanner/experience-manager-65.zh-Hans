@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 18%
+source-wordcount: '1744'
+ht-degree: 16%
 
 ---
 
@@ -193,12 +193,13 @@ ht-degree: 18%
 >
 >现成提供英语。
 >
->其他语言可以作为包共享或软件分发中的语言模型包提供：
+>其他语言可作为软件分发中的语言模型包提供：
 >
->* [包共享的法语(fr)](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr) , [软件分发的法语(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [包共享的德语(de)或](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)[软件分发的德语(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [包共享的意大利语(it)或](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)[软件分发的意大利语(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [包共享的西班牙语](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es) ( [es)或软件分发的西班牙语(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [软件分发的法语(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [德语(de)来自软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [来自软件分发的意大利语(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [来自软件分发的西班牙语](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+
 >
 
 
@@ -216,6 +217,7 @@ ht-degree: 18%
    * 任何要删除的句子都以红色突出显示，并带有删除。
    * 单击任何高亮显示的句子，将其保留在摘要内容中。
    * 单击任何未加亮显示的句子以将其删除。
+
    ![cfm-6420-23](assets/cfm-6420-23.png)
 
 1. 选择 **摘要** ，以确认更改。
@@ -277,6 +279,7 @@ ht-degree: 18%
 
    * 在DAM中导航到所需的资产
    * 在DAM中搜索资产
+
    找到后，单击缩略图以选择所需的资产。
 
 1. 使用&#x200B;**选择**&#x200B;将资产添加到当前位置的内容片段的段落系统中。
@@ -373,6 +376,7 @@ ht-degree: 18%
 
    * 绿色表示已添加（到变量）的内容
    * 红色表示内容已删除（从变量中）
+
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
 1. 选择 **同步**，变体将更新并显示。
