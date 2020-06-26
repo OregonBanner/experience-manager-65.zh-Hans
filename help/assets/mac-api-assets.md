@@ -3,7 +3,7 @@ title: 中的资源HTTP API [!DNL Adobe Experience Manager]。
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: f64df3a706762cdef631e18ad1a6fdd7044a551f
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 1%
@@ -77,17 +77,17 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 资产HTTP API包括以下功能：
 
-* 检索文件夹列表。
-* 创建文件夹。
-* 创建资产。
-* 更新资产二进制。
-* 更新资产元数据。
-* 创建资产演绎版。
-* 更新资产演绎版。
-* 创建资产评论。
-* 复制文件夹或资产。
-* 移动文件夹或资产。
-* 删除文件夹、资产或演绎版。
+* [检索文件夹列表](#retrieve-a-folder-listing)。
+* [创建文件夹](#create-a-folder)。
+* [创建资产](#create-an-asset)。
+* [更新资产二进制](#update-asset-binary)。
+* [更新资产元数据](#update-asset-metadata)。
+* [创建资产演绎版](#create-an-asset-rendition)。
+* [更新资产演绎版](#update-an-asset-rendition)。
+* [创建资产评论](#create-an-asset-comment)。
+* [复制文件夹或资产](#copy-a-folder-or-asset)。
+* [移动文件夹或资产](#move-a-folder-or-asset)。
+* [删除文件夹、资产或演绎版](#delete-a-folder-asset-or-rendition)。
 
 >[!NOTE]
 >
@@ -204,7 +204,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 200 —— 确定——如果再现已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
