@@ -10,15 +10,15 @@ discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '7951'
+source-wordcount: '7912'
 ht-degree: 1%
 
 ---
 
 
-# 配置Dynamic Media-混合模式{#configuring-dynamic-media-hybrid-mode}
+# 配置Dynamic Media-混合模式 {#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media-混合需要启用并配置以供使用。 根据您的用例，Dynamic Media具有多种受 [支持的配置](#supported-dynamic-media-configurations)。
 
@@ -176,7 +176,7 @@ AEM发布节点将继续提供Dynamic Media查看器、站点页面和静态内�
    >
    >要对Dynamic Media问题进行疑难解答，请参阅目录中的以下 `crx-quickstart/logs/` 日志：
    >
-   >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日志提供用于分析内部ImageServer进程行为的统计和分析信息。
+   >* ImageServer-&lt;PortId>-&lt;yyyy>&lt;mm>&lt;dd>.log - ImageServer日志提供用于分析内部ImageServer进程行为的统计信息和分析信息。
 
    图像服务器日志文件名的示例： `ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access日志记录通过和向Dynamic Media发出的每个 `/is/image` 请求 `/is/content`。
@@ -687,7 +687,7 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
    <td><p>开始 <strong>/图像</strong></p> <p>包 <strong>含应用</strong> 程序／以 <strong>集结尾</strong>。</p> <p>开始 <strong>视频/</strong></p> </td>
    <td><p>您配置传输URI以指向您的AEM发布服务器，而不是AdobeDynamic Media云复制服务URL。 设置此过滤器将允许Dynamic Media经典传送资产，而不是AEM发布实例。</p> <p>现成的“filter-images”、“filter-sets”和“filter-video”将：</p>
     <ul>
-     <li>包括PTIFF图像、代理视频演绎版和用于复制的元数据。 但是，由于JCR中不存在这些AEM -Dynamic Media经典集成，因此JCR有效无效。</li>
+     <li>包括PTIFF图像、代理视频演绎版和用于复制的元数据。 但是，由于JCR中不存在这些AEM -Dynamic Media经典集成，因此它们无效。</li>
      <li>从复制中排除原始图像、静态图像演绎版、原始视频和静态缩略图演绎版。 相反，Dynamic Media经典将提供图像和视频资产。</li>
     </ul> </td>
   </tr>
@@ -760,7 +760,7 @@ By default, the system shows a variety of renditions when you select **[!UICONTR
 
    请注意， `dc:format` 资产的 `Fiji Red.jpg` 属性 `image/jpeg`是
 
-   要使此滤镜应用于所有图像（无论其格式如何），请将值设 `image/*` 置 `*` 为应用于任何格式的所有图像的常规表达式。
+   要使此滤镜应用于所有图像（无论其格式如何），请将值设 `image/*` 置为 `*` 应用于任何格式的所有图像的常规表达式。
 
    要使滤镜仅应用于JPEG类型的图像，请输入值 `image/jpeg`。
 
@@ -970,7 +970,7 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
 * `iccEmbed` - [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-只有在安装了“包共享”中的功 [能包12445或“软件分发](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) ”中 [的功能包12445时，Adobe颜色用户档案](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 标准集才可用。 所有功能包和服务包均可通过包 [共享和软件](https://www.adobeaemcloud.com/content/packageshare.html)[分发获得](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能包12445提供Adobe颜色用户档案。
+仅当您安装了“软件分发”的功能包12445时， [才可使用标准的Adobe颜色用户档案](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) 集。 所有功能包和服务包均可在软件分 [发中找到](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。 功能包12445提供Adobe颜色用户档案。
 
 ### 安装功能包12445 {#installing-feature-pack}
 
@@ -978,9 +978,9 @@ Adobe颜色管理使用ICC用户档案，这是国际颜色协会(ICC)定义的�
 
 **安装功能包12445**
 
-1. 导航到“ [包共享](https://www.adobeaemcloud.com/content/packageshare.html) ”或“ [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) ”，然后下载 `cq-6.3.0-featurepack-12445`。
+1. 导航到“ [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) ”并下载其中一 `cq-6.3.0-featurepack-12445`项。
 
-   有关 [在AEM中使用包共享](/help/sites-administering/package-manager.md) 和包的更多信息，请参阅如何使用包。
+   有关 [使用包的更多信息](/help/sites-administering/package-manager.md) ，请参阅如何使用包 [!DNL Adobe Experience Manager]。
 
 1. 安装功能包。
 
