@@ -3,9 +3,9 @@ title: '[!DNL Adobe Camera Raw]支持。'
 description: 了解如何在 [!DNL Adobe Camera Raw] 中启用支持 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bf840b0e13e58f961c32b0231e4b691cb47b947a
+source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 使用Camera Raw处理图像 {#camera-raw-support}
 
-您可以启用 [!DNL Adobe Camera Raw] 支持以处理原始文件格式（如CR2、NEF和RAF）并以JPEG格式渲染图像。 使用通过包共享或 [!DNL Adobe Experience Manager Assets] 从软 [件分发提供的](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) Camera Raw包时支 [持此功能](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
+您可以启用 [!DNL Adobe Camera Raw] 支持以处理原始文件格式（如CR2、NEF和RAF）并以JPEG格式渲染图像。 使用“软件分发”中 [!DNL Adobe Experience Manager Assets] 提供 [的Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ，支持此功能。
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 要在中启 [!DNL Camera Raw] 用支 [!DNL Experience Manager Assets]持，请执行以下步骤：
 
-1. 从“包 [共享](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ”或“软件分发”下 [载Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
+1. 从“软件 [分发”下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) “Camera Raw”包。
 1. 访问 `https://[aem_server]:[port]/workflow`. 打开DAM **[!UICONTROL 更新资产工作流]** 。
 1. 打开“流 **[!UICONTROL 程缩略图]** ”步骤。
 1. 在“缩略图”选项卡中提 **[!UICONTROL 供以]** 下配置：
