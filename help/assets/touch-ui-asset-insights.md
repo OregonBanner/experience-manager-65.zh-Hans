@@ -3,9 +3,9 @@ title: 资产分析
 description: 了解资产分析功能如何让您跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用情况统计。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '735'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 要使用资产分析从网站捕获图像的使用情况统计信息，您必须在网站代码中包含图像的嵌入代码。
 
-要让资产分析显示资产的使用情况统计信息，请首先配置该功能，以从Adobe Analytics获取报告数据。 有关详细信息，请 [参阅配置资产分析](/help/assets/touch-ui-configuring-asset-insights.md)。
+要让资产分析显示资产的使用情况统计信息，请首先配置该功能以从AdobeAnalytics获取报告数据。 有关详细信息，请 [参阅配置资产分析](/help/assets/touch-ui-configuring-asset-insights.md)。
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ ht-degree: 8%
 
    >[!NOTE]
    >
-   >由于资产分析功能通常会定期从Adobe Analytics中获取解决方案数据，因此解决方案部分可能不会显示最新数据。 显示数据的时间段取决于资产分析运行以检索Analytics数据的提取操作的计划。
+   >由于资产分析功能通常会定期从AdobeAnalytics获取解决方案数据，因此解决方案部分可能不会显示最新数据。 显示数据的时间段取决于资产分析运行以检索Analytics数据的提取操作的计划。
 
 1. 要以图形方式查看一段时间内资产的性能统计信息，请在&#x200B;**[!UICONTROL 性能统计信息]**&#x200B;部分中选择时间段。包括点击次数和印象在内的详细信息将显示为图形的趋势线。
 
@@ -66,12 +66,12 @@ ht-degree: 8%
 您可以使用&#x200B;**[!UICONTROL 分析视图]**&#x200B;同时查看文件夹中所有资产的分数。
 
 1. 在资产用户界面中，导航至包含要视图洞察的资产的文件夹。
-1. 单击工具栏中的布局图标，然后选择 **[!UICONTROL 分析视图]**。
+1. 单击工具栏中的布局，然后选择 **[!UICONTROL 分析视图]**。
 1. 该页面显示资产的使用分数。 比较各个资产的评级并进行分析。
 
 ## 计划背景作业 {#scheduling-background-job}
 
-资产分析会定期从Adobe Analytics报表包获取资产的使用数据。 默认情况下，资产分析每24小时在凌晨2点运行一次后台作业以获取数据。 但是，您可以通过从Web控制台配置Adobe CQ DAM资产性能 **[!UICONTROL 报表同步作业服务来修改频率]** 和时间。
+资产分析可定期从AdobeAnalytics报表包获取资产的使用数据。 默认情况下，资产分析每24小时在凌晨2点运行一次后台作业以获取数据。 但是，您可以通过从Web控制台配置Adobe CQ DAM资产性能 **[!UICONTROL 报表同步作业服务来修改频率]** 和时间。
 
 1. Click the Experience Manager logo, and go to **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 1. 打开 **[!UICONTROL Adobe CQ DAM资产性能报表同步作业服务配置]** 。
