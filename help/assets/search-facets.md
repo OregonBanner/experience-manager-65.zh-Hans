@@ -3,17 +3,17 @@ title: 搜索彩块化
 description: 本文介绍如何在Adobe Experience Manager中创建、修改和使用搜索彩块化。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2517'
-ht-degree: 30%
+source-wordcount: '2523'
+ht-degree: 29%
 
 ---
 
 
 # 搜索彩块化 {#search-facets}
 
-Adobe Experience Manager资产在企业范围内进行部署，能够存储许多资产。 有时，如果您仅使用Experience Manager的通用搜索功能，则查找正确的资产可能既困难又耗时。
+企业范围的Adobe Experience Manager资产部署能够存储许多资产。 有时，如果您仅使用Experience Manager的通用搜索功能，则查找正确的资产可能既费时又费力。
 
 使用“过滤器”面板中的搜索彩块化，为您的搜索体验添加更多粒度，并使搜索功能更高效、用途更广。 搜索彩块化可添加多个维度（谓词），使您能够执行更复杂的搜索。 过滤器面板包括一些标准彩块化。 您还可以添加自定义搜索彩块化。
 
@@ -115,7 +115,7 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 >“选项”谓词是一个自定义包装器，其中包含用于演示所描述行为的属性谓词。 目前，没有 REST 端点可在本机支持该功能。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools > General > Search Forms]**.
-1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click the Edit icon.
+1. From the **[!UICONTROL Search Forms]** page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]**.
 1. 在“编 **[!UICONTROL 辑搜索表单]** ”页中，将“选 **[!UICONTROL 项谓词]** ”从“选 **** 择谓词”选项卡拖至主窗格。
 1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入属性的标签和名称。例如，要根据资产的格式搜索资产，请为标签指定用户友好名称，例如&#x200B;**[!UICONTROL 文件类型]**。在属性字段中指定执行搜索时所依据的属性，例如 `jcr:content/metadata/dc:format.`
 1. 执行下列操作之一：
@@ -164,9 +164,9 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 1. 导航到“搜索”面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定要根据其搜索资产或从建议列表中进行选择的标记。
 
-   ![在键入标记名称时，Experience Manager提供的建议](assets/chlimage_1-419.png)
+   ![Experience Manager在键入标记名称时提供的建议](assets/chlimage_1-419.png)
 
-   *图： 键入标记名称时，Experience Manager提供的建议。*
+   *图： Experience Manager在键入标记名称时提供的建议。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
@@ -193,20 +193,17 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
 ## 恢复默认搜索彩块化 {#restoring-default-search-facets}
 
-默认情况下，“搜索表单”页面的“资 **[!UICONTROL 产管理员搜索边栏]** ”前会 **[!UICONTROL 显示一个锁图标]** 。 如果您向该表单中添加搜索彩块化，该锁图标便会消失，以指示默认表单已被修改。
+默认情况下，在“搜索表单” ![页面的“资产](assets/do-not-localize/lock_closed_icon.svg)**[!UICONTROL 管理员搜索边栏”]****[!UICONTROL 前，会显示一个锁]** 定图标锁定关闭的图标。 “搜索表单”页面上某个选项的锁图标表示默认设置保持不变且未进行自定义。 The icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) disappears if you add search facets to the form indicating that the default form has been modified.
 
 ![“搜索表单”页面上某个选项的锁图标表示默认设置保持不变且未进行自定义。](assets/locked_admin_rail.png)
-
-“搜索表单”页面上某个选项的锁图标表示默认设置保持不变且未进行自定义。
 
 要恢复默认搜索彩块化，请执行以下步骤：
 
 1. 在“搜 **[!UICONTROL 索表单”页面中]** ，选择 **[!UICONTROL “资产管理员]** ”。
-1. 单击 **[!UICONTROL 工具栏]** 中的删除。
-   ![删除大纲](assets/deleteoutline.png)
+1. 单击 **[!UICONTROL 工具]** 栏中 ![](assets/deleteoutline.png) 的“删除大纲”。
 1. In the confirmation dialog, click **[!UICONTROL Delete]** to remove the custom changes.
 
-   在删除对搜索彩块化的自定义更改后，“搜索表单”页面中的“资 **[!UICONTROL 产管理员搜索边栏]** ”前会重 **[!UICONTROL 新显示锁图标]** 。
+   After you delete the custom changes to search facets, the lock icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) reappears before **[!UICONTROL Assets Admin Search Rail]** in the **[!UICONTROL Search Forms]** page.
 
 ## 用户权限 {#user-permissions}
 
