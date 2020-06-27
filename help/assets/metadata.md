@@ -3,7 +3,7 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 15%
@@ -50,7 +50,7 @@ To customize the metadata properties page, including adding, modifying, deleting
 
 1. In the Assets user interface, navigate to the location of the assets you want to edit.
 1. Select the assets for which you want to edit common properties.
-1. From the toolbar, click the **[!UICONTROL Properties]** icon to open the properties page for the selected assets.
+1. From the toolbar, click **[!UICONTROL Properties]** to open the properties page for the selected assets.
 
    >[!NOTE]
    >
@@ -64,7 +64,7 @@ To customize the metadata properties page, including adding, modifying, deleting
    >* In the properties page, you can remove assets from the asset list by deselecting them. The asset list has all the assets selected by default. The metadata for assets that you remove from the list is not updated.
    >* At the top of assets list, select the check box near **[!UICONTROL Title]** to toggle between selecting the assets and clearing the list.
 
-1. To select a different metadata schema for the assets, click the **[!UICONTROL Settings]** icon from the toolbar, and select the desired schema.
+1. To select a different metadata schema for the assets, click **[!UICONTROL Settings]** from the toolbar, and select the desired schema.
 1. Save the changes.
 1. To append the new metadata with the existing metadata in fields that contain multiple values, select **[!UICONTROL Append mode]**. If you do not select this option, the new metadata replaces the existing metadata in the fields. click **[!UICONTROL Submit]**.
 
@@ -164,7 +164,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 
 ### Other metadata {#other-metadata}
 
-可以从文件中嵌入的其他元 [!DNL Microsoft Word]数据 [!DNL PowerPoint]包括 [!DNL Excel]、、等等。
+可以从文件中嵌入的其 [!DNL Microsoft Word]他元 [!DNL PowerPoint]数据 [!DNL Excel]包括、等等。
 
 ## Metadata schemata {#metadata-schemata}
 
