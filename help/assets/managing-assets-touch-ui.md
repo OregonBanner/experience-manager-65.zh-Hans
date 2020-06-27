@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '9303'
+source-wordcount: '9250'
 ht-degree: 8%
 
 ---
@@ -61,14 +61,14 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 1. In the [!DNL Assets] user interface, navigate to the location where you want to add digital assets.
 1. 要上传资产，请执行以下操作之一：
 
-   * 在工具栏中，单击创 **[!UICONTROL 建]** 图标。 然后，在菜单中，单击“ **[!UICONTROL 文件]**”。 如果需要，可以重命名显示的对话框中的文件。
+   * 在工具栏中，单击“ **[!UICONTROL 创建]**”。 然后，在菜单中，单击“ **[!UICONTROL 文件]**”。 如果需要，可以重命名显示的对话框中的文件。
    * 在支持HTML5的浏览器中，直接将资源拖动到用户 [!DNL Assets] 界面上。 不显示要重命名文件的对话框。
 
    ![创建选项以上传资产](assets/create-options.png)
 
    要选择多个文件，请按Ctrl或Command键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
 
-   您可以暂停上传大型资产（大于500 MB），稍后从同一页面继续上传。 单击上 **[!UICONTROL 传开始]** 时显示的进度栏旁边的“暂停”图标。
+   您可以暂停上传大型资产（大于500 MB），稍后从同一页面继续上传。 单击 **[!UICONTROL 上传开始]** 时显示的进度栏旁边的“暂停”。
 
    ![上传资产进度栏](assets/chlimage_1-5.png)
 
@@ -78,9 +78,9 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    要修改大小限制，请在CRX `chunkUploadMinFileSize` 存储库中 `fileupload`配置节点的属性。
 
-   单击“暂停” **[!UICONTROL 图标]** ，它将切换为“播 **[!UICONTROL 放]** ”图标。 要继续上传，请单击“播 **[!UICONTROL 放]** ”图标。
+   单击“暂 **[!UICONTROL 停]**”时，它切换到“播 **[!UICONTROL 放]** ”选项。 要继续上传，请单击“ **[!UICONTROL 播放]**”。
 
-   ![使用播放图标恢复暂停的资产上传](assets/chlimage_1-6.png)
+   ![恢复暂停的资产上传](assets/chlimage_1-6.png)
 
    To cancel an ongoing upload, click close (`X`) next to the progress bar. 取消上传操作时，将删 [!DNL Assets] 除资产部分上传的部分。
 
@@ -339,7 +339,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
    Click **[!UICONTROL Reset]** to reset the view to the original size.
 
-   ![重置图标以使用户返回原始视图](assets/chlimage_1-11.png)
+   ![重置以使用户恢复到原始视图](assets/chlimage_1-11.png)
 
 **预览仅使用键盘键**
 
@@ -350,10 +350,10 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 1. 按 `Enter` 所需资产上的键打开它。 您可以在预览模式下缩放资源。
 
 1. 要放大资产，请执行以下操作：
-   1. 使 `Tab` 用键移动焦点以放大图标。
+   1. 使 `Tab` 用键移动焦点以放大选项。
    1. 使 `Enter` 用键放大图像。
 
-   要缩小，请 `Tab` 使用键将焦点移到缩小图标，然后按 `Enter`。
+   要缩小， `Tab` 请使用键将焦点移到缩小选项并按 `Enter`。
 
 1. 使用 `Shift` + `Tab` 键将焦点移回图像上。
 
@@ -428,8 +428,8 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 其他属性和元数据信息将被保留。 复制资产时不会创建部分副本。
 
-1. 在界 [!DNL Assets] 面中，选择一个或多个资产，然后单 **[!UICONTROL 击工具]** 栏中的复制图标。 或者，从资 **[!UICONTROL 产卡]** 中选择复制快速操作。
-   ![资产UI工具栏中的复制图标](assets/copy_icon.png)
+1. 在界 [!DNL Assets] 面中，选择一个或多个资产，然后 **[!UICONTROL 单击工]** 具栏中的复制。 或者，从资 **[!UICONTROL 产卡]** 中选择复制快速操作。
+   ![资产界面工具栏中的复制选项](assets/copy_icon.png)
 
    >[!NOTE]
    >
@@ -441,21 +441,21 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
    >
    >If you copy an asset at the same location, [!DNL Experience Manager] automatically generates a variation of the name. For example, if you copy an asset titled `Square`, [!DNL Experience Manager] automatically generates the title for its copy as `Square1`.
 
-1. Click the **[!UICONTROL Paste]** asset icon from the toolbar.
+1. Click the **[!UICONTROL Paste]** asset option from the toolbar.
 
-   ![资产UI工具栏中的粘贴图标](assets/chlimage_1-14.png)
+   ![资产工具栏中的粘贴选项](assets/chlimage_1-14.png)
    [!DNL Assets] 然后复制到此位置。
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Paste]** icon is available in the toolbar until the paste operation is completed.
+   >The **[!UICONTROL Paste]** option is available in the toolbar until the paste operation is completed.
 
 ### 移动或重命名资产 {#moving-or-renaming-assets}
 
 1. 导航到要移动的资产所在的位置。
 
-1. Select the asset, and click the **[!UICONTROL Move]** icon from the toolbar.
-   ![资产UI工具栏中的移动图标](assets/move_icon.png)
+1. 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的移动选项。
+   ![“资产”工具栏中的“移动”选项](assets/move_icon.png)
 
 1. In the [!UICONTROL Move Assets] wizard, do one of the following:
 
@@ -495,7 +495,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
    ![用于管理演绎版的“资产详细信息”页面](assets/chlimage_1-15.png)
 
-1. 单击GlobalNav图标，然后从 **[!UICONTROL 列表]** 中选择演绎版。
+1. 在Experience Manager界面中，从 **[!UICONTROL 列表中]** 选择演绎版。
 
    ![左边栏以打开菜单并选择演绎版选项](assets/renditions_menu.png)
 
@@ -511,19 +511,19 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
    **删除演绎版**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** icon from the toolbar. 资产处理完成后，无法批量删除演绎版。 对于单个资产，您可以从用户界面手动删除演绎版。 对于多个资产，您可以自定义Experience Manager以删除特定演绎版或删除资产，然后重新上传已删除的资产。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then click the **[!UICONTROL Delete Rendition]** option from the toolbar. 资产处理完成后，无法批量删除演绎版。 对于单个资产，您可以从用户界面手动删除演绎版。 对于多个资产，您可以自定义Experience Manager以删除特定演绎版或删除资产，然后重新上传已删除的资产。
 
    ![删除演绎版的选项](assets/delete_renditionicon.png)
 
    **上传新再现**
 
-   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** icon in the toolbar to upload a new rendition for the asset.
+   Navigate to the asset details page for the asset, and click the **[!UICONTROL Add Rendition]** option in the toolbar to upload a new rendition for the asset.
 
-   ![添加演绎版图标以上传新演绎版](assets/chlimage_1-16.png)
+   ![添加演绎版选项以上传新演绎版](assets/chlimage_1-16.png)
 
    >[!NOTE]
    >
-   >如果您从演绎版面板中选 **[!UICONTROL 择了演绎版]** ，工具栏会更改上下文并仅显示与演绎版相关的那些操作。 不显示“上传演绎版”图标等选项。 要在工具栏中查看这些选项，请导航到资产的详细信息页面。
+   >如果您从演绎版面板中选 **[!UICONTROL 择了演绎版]** ，工具栏会更改上下文并仅显示与演绎版相关的那些操作。 Options, such as the [!UICONTROL Upload Rendition] option is not displayed. 要在工具栏中查看这些选项，请导航到资产的详细信息页面。
 
    您可以配置要在图像或视频资产的详细信息页面中显示的演绎版的尺寸。 根据您指定的尺寸，显 [!DNL Assets] 示具有精确或最接近尺寸的再现。
 
@@ -549,9 +549,9 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 1. 导航至要删除的资产所在的位置。
 
-1. Select the asset, and click the **[!UICONTROL Delete]** icon from the toolbar.
+1. Select the asset, and click **[!UICONTROL Delete]** from the toolbar.
 
-   ![删除图标](assets/delete_icon.png)
+   ![删除选项](assets/delete_icon.png)
 
 1. 在确认对话框中，单击：
 
@@ -581,7 +581,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 1. 导航到要发布的资产／文件夹所在的位置。
 
-1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** icon from the toolbar.
+1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and click the **[!UICONTROL Quick Publish]** option from the toolbar.
 1. 如果资产引用了其他资产，向导中便会列出这些引用。仅显示自上次发布／取消发布后未发布或已修改的引用。 选择要发布的引用。
 
    >[!NOTE]
@@ -598,9 +598,9 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 1. 导航到要从发布环境（取消发布）中删除的资产／资产文件夹的位置。
 
-1. Select the asset/folder to unpublish, and click the **[!UICONTROL Manage Publication]** icon from the toolbar.
+1. 选择要取消发布的资产／文件夹，然后单 **[!UICONTROL 击工具栏中]** 的管理发布选项。
 
-   ![管理发布图标](assets/manage_publication.png)
+   ![管理发布选项](assets/manage_publication.png)
 
 1. 从列表 **[!UICONTROL 中选择]** “取消发布”操作。
 
@@ -624,7 +624,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置登录页面。
 
-1. 从界面中选择一 [!DNL Assets] 个文件夹，然后单 [!UICONTROL 击工具] 栏中的属性图标以显示属性页。
+1. 从界面中选择一 [!DNL Assets] 个文件夹，然后单 [!UICONTROL 击工具] 栏中的属性选项以显示属性页。
 1. 在“权 **[!UICONTROL 限]** ”选项卡中，在“已关闭的用户组” **[!UICONTROL 下添加成员或组]**。
 
    ![在已关闭的用户组中添加用户](assets/add_user.png)
@@ -657,13 +657,13 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 您可以使用选择选项视图、导航和选择具有任何可用视图(卡片、列和列表)的 **[!UICONTROL 资产]** 。
 
-在列表视图和列视图中，当 **[!UICONTROL 将指针]** 悬停在资产缩略图上时，将显示选择选项。
+在列表视图和列视图中，当您将指 **[!UICONTROL 针悬停在]** 资产缩略图上时，将显示选择选项。
 
 ![在列表视图中选择资产](assets/select_quick_in_listview.png)
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
@@ -681,40 +681,33 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 1. 执行以下操作之一以在编辑模式下打开资产：
 
-   * 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的编辑图标。
-   * Click the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
-   * 在资产页面中，单击工 **[!UICONTROL 具栏]** 中的编辑图标。
+   * 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的编辑。
+   * 单击 **[!UICONTROL 卡视图]** 中资产上显示的编辑选项。
+   * 单击工 **[!UICONTROL 具栏]** 中的编辑。
 
-   ![工具栏中的编辑图标](assets/edit_icon.png)
+   ![工具栏中的编辑选项](assets/edit_icon.png)
 
-1. To crop the image, click the **Crop** icon.
-
-   ![裁剪图标](assets/chlimage_1-22.png)
+1. 要裁剪图像，请单 **[!UICONTROL 击]**![裁剪选项以裁剪图像](assets/chlimage_1-22.png)。
 
 1. 从列表中选择所需的选项。图像上会根据您选择的选项显示裁剪区域。利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
 
-   ![裁剪选项](/help/assets/assets/chlimage_1-23.png)
+   ![裁剪选项](assets/chlimage_1-23.png)
 
 1. 选择要裁剪的区域，并在图像上调整其大小或位置。
-1. 使用 **“完** 成”图标（右上角）裁剪图像。 Clicking the **Finish** icon also triggers the regeneration of renditions.
 
-   ![完成图标](assets/chlimage_1-24.png)
+1. Use the **Undo** and **Redo** options to revert to the uncropped image or retain the cropped image, respectively.
 
-1. 使用右 **上角的** “撤消”和 **** “重做”图标分别恢复到未裁剪的图像或保留裁剪的图像。
+   ![撤消和重做选项](assets/chlimage_1-25.png)
 
-   ![撤消和重做图标](assets/chlimage_1-25.png)
+1. 单击相应 **的“旋** 转”选项可顺时针或逆时针旋转图像。
 
-1. 单击相应的旋转图标以顺时针或逆时针旋转图像。
+   ![顺时针和逆时针旋转选项](assets/chlimage_1-26.png)
 
-   ![顺时针和逆时针旋转图标](assets/chlimage_1-26.png)
+1. 单击相应的“ **翻转** ”选项，水平或垂直翻转图像。
 
-1. 单击相应的翻转图标以水平或垂直翻转图像。
+   ![用于水平或垂直翻转图像的选项](assets/chlimage_1-27.png)
 
-   ![水平或垂直翻转图像的图标](assets/chlimage_1-27.png)
-
-1. Click the **Finish** icon to save the changes.
-
-   ![完成图标](assets/chlimage_1-28.png)
+1. 单击 **“完** 成 ![”选项](assets/chlimage_1-24.png) ，以完成图像编辑。 单击 **完成** ，还会开始再现的再生。
 
 >[!NOTE]
 >
@@ -753,12 +746,12 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 >对于内容片段， [将在片段编辑器中创建注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)。
 
 1. 导航到要添加注释的资产所在的位置。
-1. 单击以 **[!UICONTROL 下任]** 一选项中的“注释”图标：
+1. 单击以 **[!UICONTROL 下任]** 一选项中的“注释”(Annotate)选项：
 
    * [快速操作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在选择资产或导航到资产页面后，从工具栏中
 
-   ![注释图标](assets/chlimage_1-29.png)
+   ![注释选项](assets/chlimage_1-29.png)
 
 1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
 
@@ -781,15 +774,15 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    >在保存注释之前，可以添加多个注释。
 
 1. Click **[!UICONTROL Close]** to exit from the Annotation mode.
-1. To view the notification, log in to [!DNL Assets] with Aaron MacDonald&#39;s credentials and click the **[!UICONTROL Notifications]** icon to view the notification.
+1. To view the notification, log in to [!DNL Assets] with Aaron MacDonald&#39;s credentials and click the **[!UICONTROL Notifications]** option to view the notification.
 
    >[!NOTE]
    >
    >您也可以对视频资产添加注释。在对视频添加注释时，播放器会暂停，让您对帧添加注释。 有关详细信息，请参 [阅管理视频资产](/help/assets/managing-video-assets.md)。
 
-1. 要选择不同的颜色，以便您能够区分不同的用户，请单击用户档案图标，然后单击“我的 **[!UICONTROL 首选项”]**。
+1. 要选择不同的颜色，以便您能够区分不同的用户，请单击用户档案选项，然后单击“我的 **[!UICONTROL 首选项”]**。
 
-   ![选择用户用户档案图标，然后选择我的首选项以打开用户首选项](assets/User-profile-preferences.png)
+   ![选择用户用户档案选项，然后选择我的首选项以打开用户首选项](assets/User-profile-preferences.png)
 
    Specify the desired color in the **[!UICONTROL Annotation Color]** box and then click **[!UICONTROL Accept]**.
 
@@ -803,9 +796,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 要视图已保存的资产注释，请导航到资产所在的位置，然后打开资产页面。
 
-1. 单击GlobalNav图标，然后从 **[!UICONTROL 列表]** 中选择时间轴。
+1. 在Experience Manager界面中，选择时 **[!UICONTROL 间轴]**。
 
-   ![GlobalNav图标上的可用选项](assets/chlimage_1-35.png)
+   ![Experience Manager](assets/chlimage_1-35.png)
 
 1. 从时间线的&#x200B;**[!UICONTROL 显示全部]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 注释]**&#x200B;以根据注释过滤结果。
 
@@ -823,7 +816,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 您还可以选择仅打印注释或审阅状态。
 
-要打印批注和审阅状态，请单击“ **[!UICONTROL 打印]** ”图标，然后按照向导中的说明操作。 仅当 **[!UICONTROL 资产至]** 少分配了一个注释或审核状态时，工具栏中才会显示打印图标。
+要打印批注和审阅状态，请单 **[!UICONTROL 击]** “打印”，然后按照向导中的说明操作。 仅当 **[!UICONTROL 资产至]** 少分配了一个注释或审核状态时，才会在工具栏中显示打印选项。
 
 1. 在界面 [!DNL Assets] 中，打开资产的预览页面。
 1. 执行下列操作之一：
@@ -839,9 +832,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![要仅打印注释的审阅状态，请从时间轴中选择该状态](assets/chlimage_1-39.png)
 
-1. Click the **[!UICONTROL Print]** icon from the toolbar.
+1. 单击工 **[!UICONTROL 具栏]** 中的“打印”。
 
-   ![工具栏中的打印图标](assets/chlimage_1-40.png)
+   ![工具栏中的打印选项](assets/chlimage_1-40.png)
 
 1. 从“打印”对话框中，选择您希望批注／审阅状态在PDF上显示的位置。 例如，如果希望在包含打印图像的页面的右上方打印注释／状态，请使用左 **上方的** 设置。 默认情况下为选中状态。
 
