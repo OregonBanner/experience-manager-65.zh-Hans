@@ -4,10 +4,10 @@ description: 跨从父资产派生并链接到父资产的多个页面／文件�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 11%
+source-wordcount: '3368'
+ht-degree: 10%
 
 ---
 
@@ -242,7 +242,7 @@ Select the source asset or folder, open the left rail, and click **[!UICONTROL R
 
 Live Copy是创建时原始源的副本。 Live Copy的元数据值是从源继承的。 元数据字段单独维护与源资产各个字段的继承。
 
-但是，您可以灵活地对Live Copy进行本地修改，以更改一些选定的属性。 要进行本地修改，请取消所需属性的继承。 取消一个或多个元数据字段的继承后，资产的实时关系和其他元数据字段的继承将保留。 任何同步或转出不会覆盖本地修改。 为此，请打开Live copy资 **[!UICONTROL 产的“属性]** ”页面，单击元数 **[!UICONTROL 据字段旁的“取消继承]** ”图标。
+但是，您可以灵活地对Live Copy进行本地修改，以更改一些选定的属性。 要进行本地修改，请取消所需属性的继承。 取消一个或多个元数据字段的继承后，资产的实时关系和其他元数据字段的继承将保留。 任何同步或转出不会覆盖本地修改。 To do so, open **[!UICONTROL Properties]** page of a live copy asset, click the **[!UICONTROL cancel inheritance]** option next to a metadata field.
 
 您可以撤消所有本地修改并将资产还原到其源的状态。 不可撤消且即时地重置操作会覆盖所有本地修改，并在所有元数据字段上重新建立继承。 要还原，请从Live **[!UICONTROL Copy资产]** 的“属性”页面，单 **[!UICONTROL 击工]** 具栏中的重置。
 
@@ -252,7 +252,7 @@ Live Copy是创建时原始源的副本。 Live Copy的元数据值是从源继�
 
 ## 删除实时关系 {#detach}
 
-您可以使用分离操作完全删除源与Live Copy之间的关系。 Live Copy分离后将成为独立的资产或文件夹。 它在分离后立即在界面中 [!DNL Experience Manager] 显示为新资产。 要从Live Copy的源中分离Live Copy，请执行以下步骤。
+您可以使用分离操作完全删除源与Live Copy之间的关系。 Live Copy分离后将成为独立的资产或文件夹。 它在分离后立即在界面中 [!DNL Experience Manager] 显示为新资产。 要从Live Copy的源中分离Live Copy，请按照以下步骤操作。
 
 1. 选择Live Copy资产或文件夹。 Click **[!UICONTROL Properties]** from the toolbar. 或者，使用键盘快捷键 `p`。
 
