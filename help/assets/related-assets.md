@@ -3,9 +3,9 @@ title: 相关资产
 description: 了解如何关联共享一些常见属性的数字资产。 还可在数字资产之间创建源源关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Relate assets {#relating-assets}
 
-1. 从Experience Manager界面中，打 **[!UICONTROL 开要]** 关联的资产的“属性”页面。
+1. 从Experience Manager界面中，打 **[!UICONTROL 开要]** 关联的资产的属性页面。
 
    ![打开资产的“属性”页面以关联资产](assets/asset-properties-relate-assets.png)
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 要将其他资产与您选择的资产关联，请单击工 **[!UICONTROL 具栏]** 中的关联图标。
+1. 要将其他资产与您选择的资产关联，请单击工 **[!UICONTROL 具栏]** 中的关联。
 
    ![chlimage_1-275](assets/chlimage_1-275.png)
 
@@ -45,13 +45,14 @@ ht-degree: 0%
    * 要关联资产的源文件，请从 **[!UICONTROL 列表]** 中选择源。
    * 要关联派生文件，请从 **[!UICONTROL 列表]** 中选择“派生”。
    * 要在资产之间创建双向关系，请从列表 **[!UICONTROL 中选]** 择其他。
+
    ![chlimage_1-276](assets/chlimage_1-276.png)
 
 1. 从选 **[!UICONTROL 择资产]** ，导航到要关联的资产所在的位置，然后选择它。
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
-1. Click the **[!UICONTROL Confirm]** icon.
+1. 单击 **[!UICONTROL 确认]**。
 1. Click **[!UICONTROL OK]** to close the dialog. 根据您在步骤3中对关系的选择，相关资产会列在“相关”部分的相应类别 **[!UICONTROL 下]** 。 例如，如果您相关的资产是当前资产的源文件，则该资产会列在“源” **[!UICONTROL 下]**。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
