@@ -1,11 +1,11 @@
 ---
 title: 在Adobe Experience Manager中创建和共享专用文件夹。
-description: 了解如何在Adobe Experience Manager资产中创建专用文件夹并与其他用户共享该文件夹，以及为其分配各种权限。
+description: 了解如何在Adobe Experience Manager资产中创建专用文件夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '503'
 ht-degree: 14%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 14%
 >
 > 专用文件夹至少有一个具有所有者角色的成员。
 
-
 1. 在“资产”控制台中，单 **[!UICONTROL 击工]** 具栏中的创建，然后从 **[!UICONTROL 菜单中选]** 择“文件夹”。
 
    ![创建资产文件夹](assets/Create-folder.png)
@@ -32,7 +31,7 @@ ht-degree: 14%
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
-1. To share the folder with other users and the assign privileges to them, select the folder, and click the **[!UICONTROL Properties]** icon from the toolbar.
+1. To share the folder with other users and the assign privileges to them, select the folder, and click **[!UICONTROL Properties]** from the toolbar.
 
    ![chlimage_1-414](assets/chlimage_1-414.png)
 
@@ -58,7 +57,7 @@ ht-degree: 14%
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 单击通知图标以打开通知列表。
+1. 单击“通知”以打开通知列表。
 
    ![通知列表](assets/Assets-Notification.png)
 
