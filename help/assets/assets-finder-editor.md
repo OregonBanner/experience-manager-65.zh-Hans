@@ -3,9 +3,9 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2135'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 为何要创建和配置资产编辑器页面？ {#why-create-and-configure-asset-editor-pages}
 
-数字资产管理正在越来越多的场景中使用。 当从面向专业培训用户的小型解决方案（例如摄影师或分类学者）转变为面向业务用户、WCM作者、记者等更多元化用户群时，面向专业用户的Adobe Experience Manager资产的强大用户界面会提供太多信息和利益相关方开始，要求特定用户界面或应用程序访问与其相关的数字资产。
+数字资产管理正在越来越多的场景中使用。 当从面向受过专业培训的小用户群（如摄影师或分类学者）的小规模解决方案转向更大、更多样化的用户群（如企业用户、WCM作者、记者等）时，面向专业用户的Adobe Experience Manager资产强大的用户界面可能提供太多信息和利益相关方开始，要求特定用户界面或应用程序访问与其相关的数字资产。
 
 这些以资产为中心的应用程序可以是企业内部网中的简单照片库，员工可以从贸易展访问或面向公众的网站的新闻中心上传照片。 以资产为中心的应用程序还可以扩展到包括购物车、结帐和验证流程在内的完整解决方案。
 
@@ -203,7 +203,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 要创建资产编辑器页面，请执行以下操作：
 
-1. 在“网 **站** ”选项卡中，导航到要创建资产编辑器页面的位置，然后单击“新 **建”**。
+1. 在“网 **[!UICONTROL 站]** ”选项卡中，导航到要创建资产编辑器页面的位置，然后单击“新 **建”**。
 1. 选择 **Geometrixx资产编辑器** ，然后单 **击创建**。 将创建新页面，并且该页面会列在“网 **站** ”选项卡。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
@@ -356,7 +356,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 如果可以编辑标题，则可以通过单击铅笔打开资产属性窗口来添加标题 **和说明** 。 此外，您还可以通过选择日期和时间来打开和关闭资产。
 
-当用户通过单击铅笔图标编辑标题时，他们可以更 **改标题**、 **说明**，并输 **入On** 和 **** Off Times以打开和关闭资产。
+在编辑标题时 ，用户可以更改标题 **、说**&#x200B;明、在标题和 **关闭时间中输入，********** 以打开和关闭资产。
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -391,7 +391,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ## 使用“资产编辑器”页面对资产进行多次编辑 {#multi-editing-assets-with-the-asset-editor-page}
 
-通过Experience Manager Assets，您可以一次更改多个资产。 在选定资产后，您可以同时更改其：
+利用Experience Manager资产，您可以一次更改多个资产。 在选定资产后，您可以同时更改其：
 
 * 标记
 * 元数据
@@ -405,6 +405,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
    * 在Windows上： `Ctrl + click` 每个资产。
    * 在Mac上： `Cmd + click` 每个资产。
+
    要选择资产范围，请执行以下操作： 单击第一个资产，然后 `Shift + click` 单击最后一个资产。
 
 1. 在“ **操作** ”字段( **页面左侧部分** )中单击“编辑元数据”。
@@ -414,17 +415,19 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
    * 应用于所有资产的标记会以普通字体显示。
    * 除标记之外的元数据： 仅当所有选定资产的值相同时，才会显示字段的值。
 
-1. 单击 **下载** ，以下载包含资产原始演绎版的zip文件。
-1. 单击“标记”字段旁 **边的** “铅笔”图标以编辑标记：
+1. 单击 **下载** ，以下载包含资产原始演绎版的ZIP文件。
+1. 单击“标记”字段旁边的标记 **选项** 。
 
    * 并不适用于所有资产，但只适用于少数资产的标记具有灰色背景。
    * 应用于所有资源的标记具有白色背景。
+
    您可以：
 
-   * 单击 **x** 图标以删除所有资产的标记。
-   * 单击 **+图标** ，将标记添加到所有资产。
+   * 单 `x` 击可删除所有资产的标记。
+   * 单 `+` 击可向所有资产添加标记。
    * 单击箭 **头** ，然后选择一个标记以向所有资产添加新标记。
-   单 **击** “确定”将更改写入表单。 将自动选中 **“标记** ”字段旁边的框。
+
+   单 **击** “确定”将更改写入表单。 “标记”字段旁 **边的框** 将自动被选中。
 
 1. 编辑“说明”字段。 例如，将其设置为：
 
