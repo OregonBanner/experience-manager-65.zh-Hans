@@ -3,9 +3,9 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 505ee267534b7b3de1f85fb6782b855dbf3c371d
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2648'
+source-wordcount: '2644'
 ht-degree: 13%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 13%
 
 要视图和编辑资产的属性页面，请执行以下步骤：
 
-1. 在卡片 **[!UICONTROL 视图中]** ，单击资产拼贴上快速操作中的视图属性图标。
+1. 在卡片 **[!UICONTROL 视图中]** ，单击资产拼贴上快速操作中的“视图属性”选项。
 
    ![对资产拼贴快速执行操作](assets/chlimage_1-170.png)
 
-   或者，选择资产，然后单击工 [!UICONTROL 具栏] 中的属性图标。
+   或者，选择资产，然后单击工 **[!UICONTROL 具栏]** 中的属性。
 
 1. 您可以编辑可用选项卡下的各种可编辑元数据属性。 但是，您无法在属性页 [!UICONTROL 面的] “基本 [!UICONTROL ”选项] 卡中修改资产类型。
 
@@ -68,7 +68,7 @@ application doesn't contain the sub type zip OOTB.
 
    >[!NOTE]
    >
-   >将显示一个锁图标，其中包含未编辑的模板。 如果自定义模板，则不显示锁图标。
+   >随未编辑的模板一起显示锁符号。 如果自定义模板，则不会锁定锁 ![定关闭](assets/do-not-localize/lock_closed_icon.svg)。
 
 1. 在对话框中，提供模式表单的标题，然后单 **[!UICONTROL 击创建]** ，以完成表单创建过程。
 
@@ -175,7 +175,7 @@ Click `X` to delete a tab.
 
 >[!NOTE]
 >
->* 删除对默认表单的自定义更改后，在元数据模式界面上的表单前面将重新显示锁图标。 它表示表单已恢复为默认状态。
+>* 删除对默认表单的自定义更改后，关闭的锁 ![定功能](assets/do-not-localize/lock_closed_icon.svg) 将重新出现在表单前面。 它表示表单已恢复为默认状态。
 >* 无法删除中的默认元数据模式表 [!DNL Assets]单。
 
 
