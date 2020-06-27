@@ -1,12 +1,12 @@
 ---
-title: 关于Adobe Experience Manager Assets
-description: 了解什么是数字资产管理、其使用案例以及Adobe的Experience Manager Asset产品
+title: 关于Adobe Experience Manager资产
+description: 了解什么是数字资产管理、其使用案例以及Adobe的Experience Manager资产产品
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 47%
+source-wordcount: '879'
+ht-degree: 48%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 Assets 允许在整个企业范围内共享和分发某组织的关键数字资产。整个组织的用户可以通过Web界面（或CIFS或WebDAV文件夹）存储、管理和访问数字资产，如图像、图形、音频、视频和文档。
 
-Assets功能集成到Experience Manager中，允许您执行以下操作：
+Assets功能集成到Experience Manager中，您可以执行以下操作：
 
 * 添加和共享多种文件格式的图像、文档、音频文件和视频文件。
 * 通过按标记、Lightbox或星形（您的收藏夹）对资产进行分组来管理资产。 可以在资产中添加批注。
@@ -28,9 +28,9 @@ Assets功能集成到Experience Manager中，允许您执行以下操作：
 * 执行图像编辑功能，例如缩放和添加图像筛选器。使用 WebDAV 或 CIFS 文件夹同时导入和导出多个数字资产。
 * 使用工作流和通知联合处理和下载任意资产集并管理资产的访问权限。
 
-### Experience Manager Assets与Experience Manager Sites集成 {#aem-assets-fully-integrated-in-cq-wcm}
+### Experience Manager资产与Experience Manager站点集成 {#aem-assets-fully-integrated-in-cq-wcm}
 
-资产与站点完全集成，并且功能可通过DAM图标使用。 然后，在创作网页时，可以通过内容查找器访问在资产存储库中管理的数字资产。
+资产与站点完全集成，所有功能均无缝可用。 然后，在创作网页时，可以通过内容查找器访问在资产存储库中管理的数字资产。
 
 基本的用户界面与站点的用户界面相同。 有关 [完整详细信息](/help/sites-authoring/page-authoring.md) ，请参阅站点概述。
 
@@ -51,7 +51,7 @@ Assets功能集成到Experience Manager中，允许您执行以下操作：
 >
 >上传和／或编辑大量资产（尤其是图像）会影响Experience Manager实例的性能。
 
-### Experience Manager Assets术语 {#aem-assets-terminology}
+### Experience Manager资产术语 {#aem-assets-terminology}
 
 在Experience Manager中处理数字资产时，您需要了解以下术语：
 
@@ -84,6 +84,6 @@ Assets功能集成到Experience Manager中，允许您执行以下操作：
 
 当然，您也可以手动应用工作流。请参阅 [ Assets 媒体处理程序](/help/assets/media-handlers.md)，以获取默认工作流的列表。
 
-## Experience Manager Assets和MediaLibrary {#cq-dam-vs-cq-medialibrary}
+## Experience Manager资源和媒体库 {#cq-dam-vs-cq-medialibrary}
 
 有关 [差异的信息](/help/assets/medialibrary.md) ，请参阅资产和媒体库。
