@@ -3,9 +3,9 @@ title: 使用中的引用和多页资产管理复合资产 [!DNL Adobe Experienc
 description: 了解如何从中创建数字资产引用 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d90a95195a97a1840e1defb49d2a09ffbd3c8650
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Besides eliminating redundancy, referencing the assets in [!DNL Adobe Creative C
 
 You can reference existing digital assets from within an [!DNL Adobe Illustrator] file.
 
-1. 使用 [Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，在本地文件系统上提取数字资产。 导航到要引用的资产的文件系统位置。
+1. 使用 [Experience Manager桌面应用](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，在本地文件系统上获取数字资产。 导航到要引用的资产的文件系统位置。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
 1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
@@ -40,7 +40,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
 1. 单击 **[!UICONTROL 工具栏中]** 的视图属性。 在“属 [!UICONTROL 性] ”页中，引用当前资产的文件列表显示在“基本”选项 **[!UICONTROL 卡的]** “引用 **** ”列下方。
 
-   ![视图资产详细信息中“引用”列中Experience Manager资产的引用](assets/asset-references.png)
+   ![视图资产详细信息中引用列中Experience Manager资产的引用](assets/asset-references.png)
 
    *图： 资产详细信息中的资产引用。*
 
@@ -99,13 +99,13 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 * 现有多页资产： 按照以下任 [!UICONTROL 一步骤手动执行] DAM更新资产工作流：
 
    * 选择一个资产，然 [!UICONTROL 后单击] “时间轴”以打开左侧面板。 或者，使用键盘快捷键 `alt + 3`。 单击 [!UICONTROL 开始工]作流，选 [!UICONTROL 择DAM更新资产]，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继]续。
-   * 选择资产，然后单击工 [!UICONTROL 具栏中的创建] >工作流。 从弹出对话框中，选 [!UICONTROL 择DAM更新资产] ，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继续]。
+   * 选择资产，然后单击工 [!UICONTROL 具栏中的创建] >工作流。 从弹出对话框中，选 [!UICONTROL 择DAM更新资产工作] 流，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继续]。
 
 特别是对于Microsoft Word文档，请执 **[!UICONTROL 行DAM分析Word文档工作流]** 。 它从Microsoft `cq:Page` Word文档的内容生成一个组件。 从文档提取的图像从组件中引 `cq:Page` 用。 即使禁用了子资产生成，也会提取这些图像。
 
 ## View subassets {#viewing-subassets}
 
-仅当生成子资产并且这些子资产可用于选定的多页资产时，才会显示子资产。 要视图生成的子资产，请打开多页资产。 在页面的左上角，单击左边栏图 ![标，然后](assets/do-not-localize/aem_leftrail_contentonly.png) 单 **[!UICONTROL 击列表中的]** 子资产。 当您从列表 **[!UICONTROL 中选择]** “子资产”时。 或者，使用键盘快捷键 `alt + 5`。
+仅当生成子资产并且这些子资产可用于选定的多页资产时，才会显示子资产。 要视图生成的子资产，请打开多页资产。 在页面的左上角，单击选项以打 ![开左边栏](assets/do-not-localize/aem_leftrail_contentonly.png) ，然 **[!UICONTROL 后单击列表]** 中的子资产。 当您从列表 **[!UICONTROL 中选择]** “子资产”时。 或者，使用键盘快捷键 `alt + 5`。
 
 ![视图多页资产的子资产](assets/view_subassets_simulation.gif)
 
@@ -127,11 +127,11 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 * **[!UICONTROL “页面概述]** ”选项同时显示所有子资产。
 
-* **[!UICONTROL 单击]** 左边栏图标后，左边栏 ![中的时间轴选项](assets/do-not-localize/aem_leftrail_contentonly.png) ，显示文件的活动流。
+* **[!UICONTROL 单击]** “选项”打开左边栏后，左边 ![栏中的时间轴选项](assets/do-not-localize/aem_leftrail_contentonly.png) ，显示文件的活动流。
 
 ## 最佳实践和限制 {#best-practice-limitation-tips}
 
-* 子资产生成会占用任何Experience Manager部署的大量资源。 如果您是在上传复杂资产时生成子资产，请在DAM更新资产工作流中添加该步骤。 如果要按需生成子资产，请创建单独的工作流以生成子资产。 专用工作流允许您跳过DAM更新资产工作流中的其他步骤并保存计算资源。
+* 子资产生成会占用大量资源用于任何Experience Manager部署。 如果您是在上传复杂资产时生成子资产，请在DAM更新资产工作流中添加该步骤。 如果要按需生成子资产，请创建单独的工作流以生成子资产。 专用工作流允许您跳过DAM更新资产工作流中的其他步骤并保存计算资源。
 
 >[!MORELIKETHIS]
 >
@@ -139,3 +139,4 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 >* [在Adobe Experience Manager中配置桌面操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [在Adobe Photoshop中创建链接的智能对象](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [将图形置入Adobe InDesign中](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+
