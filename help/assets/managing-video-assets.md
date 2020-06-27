@@ -3,9 +3,9 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 46568322e75669532734dddda91a781f45a398d4
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 10%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 10%
 
    您只能在卡视图中暂停或播放视频。 “播 [!UICONTROL 放] ”和“ [!UICONTROL 暂停] ”按钮在列表视图中不可用。
 
-1. 要预览资产详细信息页面中的视频，请单 **[!UICONTROL 击]** 卡上的编辑图标。
+1. 要预览资产详细信息页面中的视频，请单 **[!UICONTROL 击]** 卡上的编辑。
 
    视频会在浏览器自带的视频播放器中播放。您可以播放视频，暂停视频，控制视频音量，以及将视频放大到全屏。
 
