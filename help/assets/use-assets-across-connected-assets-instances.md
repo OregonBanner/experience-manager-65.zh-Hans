@@ -3,9 +3,9 @@ title: Use Connected Assets to share DAM assets in [!DNL Adobe Experience Manage
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3e43e46b37ea5a9449da4a98d94fdc22f6c4ee8c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2082'
 ht-degree: 51%
 
 ---
@@ -21,18 +21,18 @@ ht-degree: 51%
 
 When editing pages in [!UICONTROL Page Editor], the authors can seamlessly search, browse, and embed assets from a different [!DNL Assets] deployment. 管理员创建部署的一次性集成，其 [!DNL Sites] 他（远程）部署为 [!DNL Assets]。
 
-For the [!DNL Sites] authors, the remote assets are available as read-only local assets. 该功能可支持一次无缝搜索和使用多个远程资产。To make many remote assets available on a [!DNL Sites] deployment in one-go, consider migrating the assets in bulk. 请参 [阅Experience Manager资产迁移指南](/help/assets/assets-migration-guide.md)。
+For the [!DNL Sites] authors, the remote assets are available as read-only local assets. 该功能可支持一次无缝搜索和使用多个远程资产。To make many remote assets available on a [!DNL Sites] deployment in one-go, consider migrating the assets in bulk. 请参阅 [Experience Manager资产迁移指南](/help/assets/assets-migration-guide.md)。
 
 ### 先决条件与支持的部署 {#prerequisites}
 
 在使用或配置此功能之前，请确保：
 
 * 用户是每个部署中相应用户组的一部分。
-* 对于Adobe Experience Manager部署类型，符合支持的标准之一。 [!DNL Experience Manager] 6.5可 [!DNL Assets] 作为 [!DNL Experience Manager] 云服务使用。 有关详细信息，请参 [阅Experience Manager中作为云服务的“连接资产”功能](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* 对于Adobe Experience Manager部署类型，将满足支持的标准之一。 [!DNL Experience Manager] 6.5与 [!DNL Assets] Cloud Service [!DNL Experience Manager] 一起使用。 有关详细信息，请参 [阅将Experience Manager作为Cloud Service的连接资产功能](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
-   |  | [!DNL Sites] 作为云服务 | [!DNL Experience Manager] 6.5 [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5内 [!DNL Sites] 部部署 |
+   |  | [!DNL Sites] 作为Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5内 [!DNL Sites] 部部署 |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]作为云服务&#x200B;** | 支持 | 支持 | 支持 |
+   | **[!DNL Experience Manager Assets]作为Cloud Service ** | 支持 | 支持 | 支持 |
    | **[!DNL Experience Manager]6.5[!DNL Assets]on AMS.** | 支持 | 支持 | 支持 |
    | **[!DNL Experience Manager]6.5内[!DNL Assets]部部署&#x200B;** | 不支持 | 不支持 | 不支持 |
 
@@ -78,6 +78,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    1. 在&#x200B;**[!UICONTROL 装入点]**&#x200B;字段中，输入 获取资产的本地 路径。[!DNL Experience Manager][!DNL Experience Manager]例如，`remoteassets` 文件夹。
    1. 根据您的网络，调整&#x200B;**[!UICONTROL 原始二进制传输优化阈值]**&#x200B;的值。大于此阈值的资产演绎版，将异步传输。
    1. 如果您使用数据存储来存储您的资产，且数据存储是两个 部署之间的公用存储，请选择&#x200B;**[!UICONTROL 与连接的资产共享数据存储]**。在这种情况下，阈值限制并不重要，因为实际的资产二进制文件驻留在数据存储上并且不会传输。
+
    ![连接的资产的典型配置](assets/connected-assets-typical-config.png)
 
    *图：连接的资产的典型配置.*
@@ -91,6 +92,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
    1. 选择工作流启动器，然后单击操作栏上的&#x200B;**[!UICONTROL 属性]**。
 
    1. In the [!UICONTROL Properties] wizard, change the **[!UICONTROL Path]** fields as the following mappings to update their regular expressions to exclude the mount point **[!UICONTROL connectedassets]**.
+
    | 之前 | 之后 |
    |---|---|
    | `/content/dam(/((?!/subassets).)*/)renditions/original` | `/content/dam(/((?!/subassets)(?!connectedassets).)*/)renditions/original` |
@@ -105,7 +107,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
    1. 使用管理员凭据登录。 搜索 `Cross-Origin`. 访问&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 运营]** > **[!UICONTROL Web 控制台]**。
 
-   1. To create a CORS configuration for [!DNL Sites] instance, click ![aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) icon next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
+   1. To create a CORS configuration for [!DNL Sites] instance, click add option ![aem_assets_add_icon](assets/do-not-localize/aem_assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. 保存配置。
 
