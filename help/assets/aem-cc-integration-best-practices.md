@@ -3,9 +3,9 @@ title: Adobe Creative Cloud和集 [!DNL Adobe Experience Manager] 成最佳实�
 description: 整合的最佳 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 实践，可简化资产转让工作流并实现高内容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
 workflow-type: tm+mt
-source-wordcount: '3249'
+source-wordcount: '3250'
 ht-degree: 16%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->[!DNL Experience Manager] 目 [!DNL Creative Cloud] 标文件夹共享已弃用，本指南不再涵盖。 Adobe建议使用Adobe Asset Link或Experience Manager [等较新的](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)[桌面应用程序为创意用户提](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/introduction.html) 供对中管理的资产的访问权限 [!DNL Experience Manager]。
+>[!DNL Experience Manager] 目 [!DNL Creative Cloud] 标文件夹共享已弃用，本指南不再涵盖。 Adobe建议使用Adobe Asset Link或 [Experience Manager桌面](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)[应用程序等较新功能](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/introduction.html) ，为创意用户提供对中管理的资产的访问权限 [!DNL Experience Manager]。
 
 ## 创意人员、营销人员和DAM用户的协作需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
@@ -41,7 +41,7 @@ ht-degree: 16%
 
 本文主要介绍协作需求的前两个方面。作为一个用例，简要提及了资产的大规模分发和采购。对于此类需求解决方案，请考虑 Adobe Brand Portal 或 Asset Share Commons。Alternate solutions such as [Brand Portal](https://helpx.adobe.com/cn/experience-manager/brand-portal/user-guide.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/managing-assets-touch-ui.md) should be reviewed based on specific requirement.
 
-![Experience Manager的Creative Cloud连接，决定使用哪些功能](assets/creative-connections-aem.png)
+![Creative CloudExperience Manager连接，决定使用哪些功能](assets/creative-connections-aem.png)
 
 ### 用例映射和Adobe解决方案 {#mapping-of-use-cases-and-adobe-solutions}
 
@@ -66,7 +66,7 @@ ht-degree: 16%
 * [Brand Portal](https://helpx.adobe.com/cn/experience-manager/brand-portal/user-guide.html) ，用于通过可配置的SaaS加载项 [!DNL Experience Manager Assets] 发布资产。
 * 自定义解决方案是基于资 [产共享共享共享](https://adobe-marketing-cloud.github.io/asset-share-commons/) 共享代码库创建的。
 * [!DNL Experience Manager] [链接共享](/help/assets/link-sharing.md) ，以便使用链接临时共享资产。
-* [Experience Manager Assets Web界面](/help/assets/managing-assets-touch-ui.md) ，可为外部用户提供由访问控制设置 [!DNL Experience Manager] 保护的区域，并进行必要的IT/网络配置调整，使这些外部用户能够访问 [!DNL Experience Manager]。
+* [Experience Manager资产Web界面](/help/assets/managing-assets-touch-ui.md) ，具有由访问控制设置保护的外部用户 [!DNL Experience Manager] 区域，以及必要的IT/网络配置调整，使这些外部用户能够访问 [!DNL Experience Manager]。
 
 ## 主要概念和用例 {#key-concepts-and-use-cases}
 
@@ -99,18 +99,18 @@ ht-degree: 16%
 
 ### 从以下位 [!DNL Adobe Stock] 置访问资产 [!DNL Assets] {#access-to-adobe-stock-assets-from-aem-assets}
 
-[Experience Manager和Adobe Stock集成](/help/assets/aem-assets-adobe-stock.md)[!DNL Experience Manager] 使用户能够从中搜索、预览、许可和保存资 [!DNL Adobe Stock][!DNL Experience Manager]产。 已授权和保 [!DNL Stock] 存的资产已选 [!DNL Stock] 择元数据，这些元数据可用于通过额外的过滤器搜索资产。
+[Experience Manager和Adobe](/help/assets/aem-assets-adobe-stock.md) Stock [!DNL Experience Manager] 集成使用户能够从中搜索、预览、许可和保存资 [!DNL Adobe Stock] 源 [!DNL Experience Manager]。 已授权和保 [!DNL Stock] 存的资产已选 [!DNL Stock] 择元数据，这些元数据可用于通过额外的过滤器搜索资产。
 
 有关此集成的几个要点：
 
 * 将Adobe Stock中的资源保存到时， [!DNL Experience Manager]它们将变为常规资源， [!DNL Assets]并将二进制文件保存到存储 [!DNL Experience Manager] 库中。 某些与相关的元数 [!DNL Adobe Stock] 据将保存在中， [!DNL Experience Manager]否则，摄取过程的外观与任何其他文件一样。 例如，如果智能标记处于活动状态，则在保存这些资产时会向其添加标记。
 * 保存到的资 [!DNL Experience Manager] 产是副本，而不是返回到的链接 [!DNL Adobe Stock]。
 
-**处理从中保存[!DNL Adobe Stock]到[!DNL Experience Manager]的资[!DNL Creative Cloud]**源。 此集成独立于[!DNL Adobe Asset Link]，但[!DNL Adobe Asset Link]可以识别以这种方式保存的这些资产，并在扩展UI中、、或[!DNL Stock]中在这些资产上显示其[!DNL Stock]他元数据和[!DNL Adobe Asset Link]图标。扩展UI[!DNL Photoshop]中[!DNL Illustrator][!DNL InDesign]包括： 这些文件可供浏览、打开等——因为它们是保存到时的常规资源[!DNL Experience Manager]。
+**处理从中保存[!DNL Adobe Stock]到[!DNL Experience Manager]的资[!DNL Creative Cloud]**源。 此集成独立于[!DNL Adobe Asset Link]，但[!DNL Adobe Asset Link]可以识别以这种方式保存的[!DNL Stock]这些资产，并在扩展UI中、、或中在这些资[!DNL Adobe Stock]产上显示其他元数[!DNL Adobe Asset Link]据和一个[!DNL Photoshop]标志[!DNL Illustrator][!DNL InDesign]。 这些文件可供浏览、打开等——因为它们是保存到时的常规资源[!DNL Experience Manager]。
 在具有扩展[!DNL Creative Cloud]功能的[!DNL Adobe Asset Link]应用程序中工作的创意用户除了能够从中访问已授权的资源[!DNL Adobe Stock]外，还[!DNL Experience Manager]可以使用“库”[!DNL Creative Cloud]面板搜索、预览和许可资[!DNL Adobe Stock]源。[!DNL Assets]从许[!DNL Adobe Stock]可和保存到中[!DNL Experience Manager]的资源可供更多团队访问[!DNL Experience Manager Assets]部署，而通过“库”面板授权[!DNL Adobe Stock]的创意[!DNL Creative Cloud]人员仅可在其帐户中默认自行[!DNL Creative Cloud]使用。
 
 <!-- 
-TBD: A condensed version of the below content is better placed in the Adobe DAM article.
+TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.
 -->
 
 ## 关于在DAM中存储资产 {#about-storing-assets-in-a-dam}
@@ -121,7 +121,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 将资产存储在DAM中，使资产易于访问和查找。 它确保整个组织或生态系统（包括合作伙伴、客户等）中的大量用户都能利用资产。
 
-大多数组织选择只存储与下游营销/LOB流程相关的资产(通过Adobe Experience Cloud [!DNL Experience Manager Sites] - Marketing Cloud、Advertising Cloud提供的渠道或其他渠道发布到Web渠道等，并通过Analytics Cloud进行衡量，向用户／合作伙伴提供信息等)。 此外，组织会存储在DAM中可能要经过审核／批准流程的资产。 这样，DAM存储的资产大多具有很高的杠杆利用机会，并避免存储闲置资产。
+大多数组织选择只存储与下游营销/LOB流程相关的资产(通过Adobe Experience Cloud - Marketing Cloud、 [!DNL Experience Manager Sites] Advertising Cloud和Analytics云衡量的渠道(通过Web渠道等渠道发布到Adobe Experience Cloud、和向用户／合作伙伴提供信息等)。 此外，组织会存储在DAM中可能要经过审核／批准流程的资产。 这样，DAM存储的资产大多具有很高的杠杆利用机会，并避免存储闲置资产。
 
 存储资产还需要考虑技术和资源利用方面的考虑因素。 DAM围绕存储的资产提供其他服务，包括提取元数据、版本控制、生成预览/转码、管理引用和添加访问控制信息。 这些服务会消耗更多的时间和基础架构资源。
 
@@ -160,7 +160,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 #### 直接访问DAM的创意用户 {#creative-users-with-direct-access-to-dam}
 
-通常，内部创意团队或已加入内部网络的代理／创意专业人士有权访问DAM实例，包括登 [!DNL Experience Manager] 录。 [!DNL Experience Manager] 网络基础架构可以设置为允许直接访问外部方——通常是受信任的组织，如为客户工作的代理——通过网络 [!DNL Experience Manager] 访问，例如通过VPN或IP允许的列表。
+通常，内部创意团队或已加入内部网络的代理／创意专业人士有权访问DAM实例，包括登 [!DNL Experience Manager] 录。 [!DNL Experience Manager] 网络基础架构可以设置为允许直接访问外部方，例如通过VPN或IP允许列表，通过网络访 [!DNL Experience Manager] 问外部方，通常是受信任的组织，如为客户工作的代理。
 
 在这种情况下，Adobe Asset Link或桌面 [!DNL Experience Manager] 应用程序可帮助您轻松访问最终／批准的资产，并可将创意就绪资产保存到DAM。
 
@@ -171,9 +171,9 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 使用以下策略提供对最终／批准资产的访问：
 
 * 如果资产链接不起作用，请使用桌面应用程序。
-* 使用 [Experience Manager Assets Brand Portal](https://helpx.adobe.com/cn/experience-manager/brand-portal/user-guide.html) ，将资产安全地分发给外部合作伙伴
+* 使用 [Experience Manager资产品牌门户](https://helpx.adobe.com/cn/experience-manager/brand-portal/user-guide.html) ，将资产安全地分发给外部合作伙伴
 * 使用基于资源共享的分发和采购门户的自 [定义实现](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* 使用在必要的网 [!DNL Experience Manager] 络基础架构中设置的访问控制(例如，VPN和IP允许列表)，使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
+* 使用在必要的网 [!DNL Experience Manager] 络基础架构中设置的访问控制（例如，VPN和IP允许列表），使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
 
 #### 正在处理的资产 [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
@@ -221,6 +221,6 @@ Adobe Asset Link优惠对此用例提供良好支持：
 >
 >* [Adobe Asset Link](https://helpx.adobe.com/in/enterprise/using/adobe-asset-link.html)
 >* [Experience Manager桌面应用程序最佳实践](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
->* [Experience Manager Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
+>* [Experience Manager品牌门户](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Experience Manager与Adobe Stock集成](aem-assets-adobe-stock.md)
 
