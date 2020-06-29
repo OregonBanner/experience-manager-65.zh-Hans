@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 4%
 
 ---
@@ -35,9 +35,9 @@ ht-degree: 4%
 * [排行榜](/help/communities/enabling-leaderboard.md)
 * [构思](/help/communities/ideation-feature.md)
 
-在创作环境中，要访问标记控制台
+在创作环境中，导航到标记控制台：
 
-* 在全局导航中，导航到工 **[!UICONTROL 具>社区>标记]**
+* 从全局导航： **[!UICONTROL “工具]** ”>“ **[!UICONTROL 社区]** ”>“徽 **[!UICONTROL 章”]**
 
 此控制台显示当前可用的标记，以及可从中添加新标记。
 
