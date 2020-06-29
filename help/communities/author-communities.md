@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 44%
 
 ---
 
@@ -26,21 +29,22 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 * [AEM Communities概述](/help/communities/overview.md)
 * [AEM Communities 快速入门](/help/communities/getting-started.md)
-* [AEM Communities for Enablement快速入门](/help/communities/getting-started-enablement.md)
+* [AEM Communities支持入门](/help/communities/getting-started-enablement.md)
 
 >[!NOTE]
 >
->如果不熟悉创作环境，请查看有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以及 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉创作环境，请视图有关基本操 [作的文档](/help/sites-authoring/basic-handling.md) ，以 [及页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+
 
 ## 可用社区组件 {#available-communities-components}
 
-下表列出了在组件浏览器(Sidekick)中启用时作者可见的社区组件。
+下表列表了在组件浏览器(Sidekick)中启用时作者可见的社区组件。
 
 另请参阅交互式社 [区组件指南](/help/communities/components-guide.md)。
 
 >[!NOTE]
 >
->阅读社 [区组件基础知识](/help/communities/basics.md) ，因为它包含使用社区组件进行创作所需的信息。
+>阅读 [社区组件基础](/help/communities/basics.md) ，因为它包含使用社区组件进行创作所需的信息。
 
 | **组件标题** | **功能** |
 |---|---|
@@ -77,13 +81,14 @@ source-git-commit: 974d58efa560b90234d5121a11bdb445c7bf94cf
 
 >[!NOTE]
 >
->投票组件不再可用，并且在Experience Manager Communities中受支持。
+>投票组件不再可用，并且在Experience Manager社区中受支持。
+
 
 ## 相关社区文档 {#related-communities-documentation}
 
-* 访问 [部署社区](/help/communities/deploy-communities.md) ，了解推荐的部署。
+* 访问 [部署社区](/help/communities/deploy-communities.md) ，了解建议的部署。
 
 * 访问 [管理社区站点](/help/communities/administer-landing.md) ，了解如何创建社区站点、配置社区站点模板、协调社区内容、管理成员和配置消息。
 
-* 访问 [开发社区](/help/communities/communities.md) ，了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访 [问开发社区](/help/communities/communities.md) ，了解社交组件框架(SCF)和自定义社区组件和功能。
 
