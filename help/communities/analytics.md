@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 3%
@@ -107,7 +107,6 @@ AdobeAnalytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud解决�
 
       * 否 **`Counter (no subrelations)`**
    * 可以重用（重命名）现有事件或创建新的社区功能
-
    <!--
     NOTE TO WRITER: The following link was broken, so I replaced it. Check for accuracy https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html 
     -->
@@ -156,7 +155,7 @@ AdobeAnalytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud解决�
 
 可 `Marketing Cloud Org Id` 以在创建社区站点时输入 [该内容](/help/communities/sites-console.md#enablement) ，也可以在更 [晚时修改社](/help/communities/sites-console.md#modifying-site-properties) 区站点属性。 [](#aem-analytics-cloud-service-configuration)
 
-![chlimage_1-177](assets/chlimage_1-177.png)
+![chlimage_1-264](assets/chlimage_1-264.png)
 
 启用视频心跳Analytics时，视频播放器的JavaScript(JS)代码将实例化视频心跳库代码（也以JS为单位），该代码每10秒（不可配置）处理向Analytics视频跟踪服务器发送视频状态更新的所有逻辑，并最终将视频会话的累积报告发送到Analytics主服务器。
 
@@ -170,7 +169,7 @@ AdobeAnalytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud解决�
 * 向下滚动到 **[!UICONTROL AdobeAnalytics]**
 * 选择 **[!UICONTROL 立即配置]** 或显 **[!UICONTROL 示配置]**
 
-![chlimage_1-178](assets/chlimage_1-178.png)
+![chlimage_1-265](assets/chlimage_1-265.png)
 
 ### 创建配置对话框 {#create-configuration-dialog}
 
@@ -178,7 +177,7 @@ AdobeAnalytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud解决�
 
 在“创建配置”对话框中，要输入的值标识配置。
 
-![chlimage_1-179](assets/chlimage_1-179.png)
+![chlimage_1-266](assets/chlimage_1-266.png)
 
 * **标题**
 
@@ -202,37 +201,39 @@ For example, enter *communities*
 
 初始创建新的Analytics配置会显示配置和新对话框以输入Analytics设置。 此对话框要求从 [帐户代表处获](#prerequisites) 取必备帐户信息。
 
-![chlimage_1-180](assets/chlimage_1-180.png)
+![chlimage_1-267](assets/chlimage_1-267.png)
 
 * **公司**
 
-   与AdobeAnalytics帐户关联的公司
+   与AdobeAnalytics帐户关联的公司。
 
 * **用户名**
 
-   有权管理Analytics帐户的用户的登录用户名
+   有权管理Analytics帐户的用户的登录用户名。
 
 * **密码**
 
-   授权用户的登录密码
+   授权用户的登录密码。
 
 * **数据中心**
 
-   选择承载报告套件的Analytics数据中心
+   选择承载报告套件的Analytics数据中心。
 
 * **不将跟踪标记添加到页面**
 
-   保留为默认值（取消选择）
+   保留为默认值（取消选择）。
 
 * **使用 AppMeasurement**
 
-   保留为默认值（取消选择）
+   保留为默认值（取消选择）。
 
 * **夜间不导入页面展示（创作）**
 
-   保留为默认值（取消选择）
+   保留为默认值（取消选择）。
 
-* **不要在夜间导入页面展示次数（发布）**&#x200B;保留为默认（取消选择）
+* **夜间不导入页面展示（发布）**
+
+   保留为默认值（取消选择）。
 
 保存设置：
 
@@ -240,13 +241,13 @@ For example, enter *communities*
 
    * 如果不成功，
 
-      * 验证条目不包含前导空格
-      * 尝试其他数据中心
-      * 联系您的客户代表
+      * 验证条目不包含前导空格。
+      * 尝试其他数据中心。
+      * 联系您的客户代表。
 
-* 选择确 **定**
+* 选择 **确定**。
 
-![chlimage_1-181](assets/chlimage_1-181.png)
+   ![chlimage_1-268](assets/chlimage_1-268.png)
 
 ### 创建框架 {#create-framework}
 
@@ -254,22 +255,22 @@ For example, enter *communities*
 
 * 选择 `[+]` 可用框架 **[!UICONTROL 旁边的图标]** ，以创建新框架
 
-![chlimage_1-182](assets/chlimage_1-182.png)
+   ![chlimage_1-269](assets/chlimage_1-269.png)
 
 * **标题**
 
-   （必需）框架的显示标题例如，输入 *Enablement Community Framework*
+   （必需）框架的显示标题例如，输入 *Enablement Community Framework*。
 
 * **名称**
 
    （可选）如果未指定，则名称将默认为从标题派生的有效节点名称。
-For example, enter *communities*
+For example, enter *communities*.
 
 * *模板*
 
-   选择 `Adobe Analytics Framework`
+   选择 `Adobe Analytics Framework`.
 
-* Select **Create**
+* 选择&#x200B;**创建**。
 
 创建Analytics框架可打开配置框架。
 
@@ -277,7 +278,7 @@ For example, enter *communities*
 
 该框架的用途是将AEM变量映射到Analytics变量(eVar和事件)。 可用于映射的Analytics变 [量在报表包中定义](#adobe-analytics-report-suite-for-video-reporting)。
 
-![chlimage_1-183](assets/chlimage_1-183.png)
+![chlimage_1-270](assets/chlimage_1-270.png)
 
 ### 选择报表包 {#select-report-suite}
 
@@ -290,9 +291,9 @@ Sidekick不需要，并且可以最小化，以便它不会妨碍对报告包设
 
 #### 选择“添加项目”前后的“报表包”对话框 {#report-suites-dialog-before-and-after-selecting-add-item}
 
-![chlimage_1-184](assets/chlimage_1-184.png)
+![chlimage_1-271](assets/chlimage_1-271.png)
 
-1. 选择 **添加项目+**
+1. 选择 **添加项目+**。
 
    出现两个下拉框。
 
@@ -307,11 +308,11 @@ Sidekick不需要，并且可以最小化，以便它不会妨碍对报告包设
     Do you want to load the default server settings and overwrite current values in the Server section?
    ```
 
-1. 选择 `Run Mode`
+1. 选择 `Run Mode`。
 
-1. Select **Publish**
+1. 选择“**发布**”。
 
-![chlimage_1-186](assets/chlimage_1-185.png)
+![chlimage_1-272](assets/chlimage_1-272.png)
 
 Analytic Cloud服务和框架现已完成。 在启用此Analytics服务后创建社区站点后，将定义映射。
 
@@ -356,7 +357,7 @@ Analytic Cloud服务和框架现已完成。 在启用此Analytics服务后创�
 </div>
 ```
 
-对于叠 **加脚本的自定** 义社区站 `sitepage.hbs` 点，请确保元素存在。 当在 `siteUrl`服务器上呈现变量后，将设置该变量，然后再提供给客户端。
+对于叠 **加脚本的自定** 义社区站 `sitepage.hbs` 点，请确保元素存在。 当在 `siteUrl` 服务器上呈现变量后，将设置变量，然后再提供给客户端。
 
 对于包 **含Communities组件** 、但不是使用站点创建向导创 [建的通用AEM站点](/help/communities/sites-console.md)，必须添加元素。 href值应为站点的路径。 例如，如果站点路径为， `/content/my/company/en`则使用：
 
@@ -379,11 +380,12 @@ Analytics自动用于多个社区功能。
 
 ### 组件配置 {#component-configuration}
 
-![chlimage_1-185](assets/chlimage_1-186.png)
+![chlimage_1-273](assets/chlimage_1-273.png)
 
 >[!NOTE]
 >
 >日志组件用于实现博客功能。
+
 
 ### 将Analytics映射到AEM变量 {#mapped-analytics-to-aem-variables}
 
@@ -393,7 +395,7 @@ Analytics自动用于多个社区功能。
 
 下面是在学习入门教程之后默认 [映射的示例](/help/communities/getting-started-enablement.md):
 
-![chlimage_1-187](assets/chlimage_1-187.png)
+![chlimage_1-274](assets/chlimage_1-274.png)
 
 #### 随每个事件发送的eVar映射 {#map-of-evars-sent-with-each-event}
 
@@ -530,8 +532,7 @@ Analytics自动用于多个社区功能。
 * *UGC组件标题*: 远足主题
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
 * *UGC的SRP路径*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
-或 
-*要遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
+或要 *遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
 * *社区站点内容的路径*: `/content/sites/<site name>/en`
 
@@ -551,15 +552,15 @@ Analytics自动用于多个社区功能。
 
 #### 示例步骤1: 将Analyticsevar14拖入映射表 {#example-step-dragging-analytics-evar-into-mapping-table}
 
-![chlimage_1-188](assets/chlimage_1-188.png)
+![chlimage_1-275](assets/chlimage_1-275.png)
 
 #### 示例步骤2: 选择“x”以删除已替换的evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+![chlimage_1-276](assets/chlimage_1-276.png)
 
 #### 示例步骤3: AEM var eventdata.siteId已重新映射到Analyticsevar14 {#example-step-aem-var-eventdata-siteid-remapped-to-analytics-evar}
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+![chlimage_1-277](assets/chlimage_1-277.png)
 
 ## 发布社区站点 {#publishing-the-community-site}
 
@@ -632,7 +633,7 @@ AdobeAnalytics凭据已加密。 为了便于作者和发布者之间复制或�
 
 默认轮询 **导入间隔** 设置为12小时。
 
-![chlimage_1-191](assets/chlimage_1-191.png)
+![chlimage_1-278](assets/chlimage_1-278.png)
 
 ### 组件报表自定义 {#component-report-customization}
 
@@ -657,7 +658,7 @@ AdobeAnalytics凭据已加密。 为了便于作者和发布者之间复制或�
    * 修改属 **`interval`** 性将覆盖报表导入程序间隔。
    * 该值以秒为单位，并设置为4小时（14400秒）。
 
-![chlimage_1-192](assets/chlimage_1-192.png)
+![chlimage_1-279](assets/chlimage_1-279.png)
 
 ## 管理Analytics的用户数据 {#manage-user-data-in-analytics}
 
