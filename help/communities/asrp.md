@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 * 在全局导航中，导航到 **[!UICONTROL 工具>社区>存储配置]** ，然后 **[!UICONTROL 选择Adobe存储资源提供商(ASRP)]**。
 
-![chlimage_1-30](assets/chlimage_1-30.png)
+![asrp-default](assets/asrp-default.png)
 
 以下信息来自供应过程：
 
