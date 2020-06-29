@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -33,11 +33,11 @@ ht-degree: 1%
 
 设置高级评分与基本评分基本相同：
 
-* 基本和高级评分和徽章规 [则以相同方式](/help/communities/implementing-scoring.md#apply-rules-to-content) 应用于内容
+* 基本和高级评分和徽章规则 [以相同方式应](/help/communities/implementing-scoring.md#apply-rules-to-content) 用于内容。
 
-   * 基本和高级评分和徽章规则可应用于相同内容
+   * 基本和高级评分和徽章规则可应用于相同内容。
 
-* [为组件启用标记](/help/communities/implementing-scoring.md#enable-badges-for-component) 是通用的
+* [为组件启用标记](/help/communities/implementing-scoring.md#enable-badges-for-component) 是通用的。
 
 设置评分和徽章规则的区别是：
 
@@ -45,23 +45,24 @@ ht-degree: 1%
 * 高级评分规则：
 
    * `scoringType` 设置为 `advanced`
-   * requires `stopwords`
+   * 需要 `stopwords`
 
 * 高级标记规则：
 
    * `badgingType` 设置为 `advanced`
    * `badgingLevels` 设置为 **要授予的专家级别数**
-   * 需要 `badgingPaths` 标记阵列而不是阈值阵列映射点到标记
+   * 需要 `badgingPaths` 标记阵列，而不是阈值阵列映射点到标记。
 
 >[!NOTE]
 >
 >要使用高级评分和徽章功能，请安 [装专家识别包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
 
+
 ## 可配置的评分引擎 {#configurable-scoring-engine}
 
 高级评分引擎提供OSGi配置，其参数影响高级评分算法。
 
-![chlimage_1-139](assets/chlimage_1-139.png)
+![chlimage_1-260](assets/chlimage_1-260.png)
 
 * **评分权重**
 
@@ -102,7 +103,7 @@ ht-degree: 1%
 
 请参 [阅评分子规则](/help/communities/implementing-scoring.md#scoring-sub-rules)。
 
-![chlimage_1-140](assets/chlimage_1-140.png)
+![chlimage_1-261](assets/chlimage_1-261.png)
 
 ### 秒词 {#stopwords}
 
@@ -122,7 +123,7 @@ ht-degree: 1%
 
 除了将点与徽章图像关联之外，只需确定允许的专家数量和要授予的徽章图像。
 
-![chlimage_1-141](assets/chlimage_1-141.png)
+![chlimage_1-262](assets/chlimage_1-262.png)
 
 <table>
  <tbody>
@@ -164,7 +165,7 @@ ht-degree: 1%
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-142](assets/chlimage_1-142.png)
+![chlimage_1-263](assets/chlimage_1-263.png)
 
 要让专家徽章显示为活动奖励，请确保：
 
@@ -197,15 +198,15 @@ ht-degree: 1%
 
 **注释:**
 
-* 节 `rules`点和 `sub-rules` 节点都属于类型 `cq:Page`
+* 节 `rules` 点和 `sub-rules` 节点都属于类型 `cq:Page`。
 
-* `subRules`是规则节点上[] “字符串”类型的属 `jcr:content` 性
+* `subRules` 是规则节点上[] “字符串”类型的属 `jcr:content` 性。
 
-* `sub-rules` 可能在各种评分规则之间共享
+* `sub-rules` 可以在各种评分规则之间共享。
 
-* `rules`应该位于具有读取权限的存储库位置，供所有人使用
+* `rules` 应该位于具有所有人读取权限的存储库位置。
 
-   * 规则名称必须唯一，无论位置如何
+* 规则名称必须唯一，无论位置如何。
 
 ### 包含徽章规则 {#included-badging-rules}
 
@@ -216,8 +217,7 @@ ht-degree: 1%
 
 **注释:**
 
-* `rules` 节点的类型为cq:Page
-* `rules` 应该位于具有读取权限的存储库位置，供所有人使用
-
-   * 规则名称必须唯一，无论位置如何
+* `rules` 节点的类型为cq:Page。
+* `rules` 应该位于具有所有人读取权限的存储库位置。
+* 规则名称必须唯一，无论位置如何。
 
