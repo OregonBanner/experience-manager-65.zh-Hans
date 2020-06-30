@@ -10,20 +10,23 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 2%
 
 ---
 
 
 # Catalog Essentials {#catalog-essentials}
 
-本页提供了有关使用Enablement Community站点的目录功能的基本信息。
+本页提供使用Enablement Community站点的目录功能的基本信息。
 
-目录功能（当包含在社区站点中时）允许社区成员浏览并选择目录中列出的启用资源。
+当包含在社区站点中时，目录功能允许社区成员浏览并选择目录中列出的支持资源。
 
-该组 [ 件允许社区成员访问 `enablement catalog` 启用资源目录](catalog.md)[](resources.md)。 使用AEM标记是管理目录中启用资源外观的重要部分。
+该组 [ 件 `enablement catalog` 允许社区成员访问](catalog.md) 启用资源目录 [](resources.md)。 使用AEM标记是管理目录中启用资源外观的重要部分。
 
-请参阅 [标记启用资源](tag-resources.md)。
+请参 [阅标记启用资源](tag-resources.md)。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -60,11 +63,11 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 目录功能 {#catalog-function}
 
-包含“目录”功能的社区站 [点结构](functions.md#catalog-function)，包括已配置的 `enablement catalog` 组件。
+包含目录功能的社区站 [点结构](functions.md#catalog-function)，包括已配置的 `enablement catalog` 组件。
 
 ### 预过滤器 {#pre-filters}
 
-将目录功能添加到社区站点后，可以通过指定预过滤器来限制目录中显示的启用资源和学习路径。 这是通过为站点设置目录资源实例的属性来完成的。
+将目录功能添加到社区站点后，可以通过指定预过滤器来限制显示在目录中的启用资源和学习路径。 这是通过为站点设置目录资源实例的属性来完成的。
 
 使用Enablement Tutorial的 [示例](getting-started-enablement.md):
 
@@ -73,9 +76,9 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
    * 例如 [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 
-* 导览至目录页面上的目录资源
+* 导航到目录页上的目录资源
 
-   * For example, `/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
+   * 例如，`/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
 * 添加子过滤器节点
 
@@ -84,8 +87,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
       * 名称: `filters`
       * 类型: `nt:unstructured`
-   * 选择 **[!UICONTROL 全部保存]**
-
+      * 选择 **[!UICONTROL 全部保存]**
 
 * 向节 `se_resource-tags` 点添加属 `filters` 性
 
@@ -93,12 +95,12 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
    * 添加多属性
 
       * 名称: `se_resource-tags`
-      * 类型：字符串
+      * 类型： 字符串
       * 值： *&lt;输入[TagID](#pre-filter-tagids)>*
-      * 选择多 **[!UICONTROL 个]**
-      * 选择添 **[!UICONTROL 加]**
+         * 选择多 **[!UICONTROL 个]**
+         * 选择添 **[!UICONTROL 加]**
 
-         * 在弹出对话框中，选 `+` 择以添加其他预过滤TagID
+            * 在弹出对话框中，选 `+` 择以添加其他预过滤器TagID
 
 * 重新发布社区站点
 
@@ -106,7 +108,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 #### 预过滤标记ID {#pre-filter-tagids}
 
-预过滤器 [TagID必须与应用于](../../help/sites-developing/framework.md#tagid) enablement资源的标记完全匹配。 这些属性在站 `resources` 点的文件夹中显示为属性值 `se_resource-tags`。
+预过滤器 [TagID必须](../../help/sites-developing/framework.md#tagid) 与应用到启用资源的标记完全匹配。 这些属性在站 `resources` 点的文件夹中显示为属性值 `se_resource-tags`。
 
 ![chlimage_1-190](assets/chlimage_1-190.png)
 
@@ -116,5 +118,5 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 * [报告API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
 
-* [Reporting Analytics API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
+* [报告AnalyticsAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
 
