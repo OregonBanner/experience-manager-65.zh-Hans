@@ -1,12 +1,12 @@
 ---
 title: 使用智能内容服务配置资产标记。
-description: 了解如何使用智能内容服务在Adobe Experience Manager中配置智能标记和增强的智能标记。
+description: 了解如何使用智能内容服务在中配置智能标记 [!DNL Adobe Experience Manager]，以及增强智能标记功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f3d699f35c7b1ef832a0857fa2fa41aed1fe5a4e
+source-git-commit: dfac819018e85e0e8221bfcc57bc1eaf43b7ff25
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 15%
+source-wordcount: '1118'
+ht-degree: 14%
 
 ---
 
@@ -17,10 +17,11 @@ ht-degree: 15%
 
 文章详细列出了配置智能内容服务所需的以下主要任务。 在后端，服务器在将 [!DNL Experience Manager] 您的请求转发到智能内容服务之前，使用Adobe开发人员控制台网关验证您的服务凭据。
 
-* 在中创建智能内容服 [!DNL Experience Manager] 务配置以生成公钥。 获取用于OAuth集成的公共证书。
-* 在Adobe开发人员控制台中创建集成并上传生成的公钥。
-* 使用Adobe [!DNL Experience Manager] 开发人员控制台中的API密钥和其他凭据配置您的实例。
-* （可选）在资产上传时启用自动标记。
+1. 在中创建智能内容服 [!DNL Experience Manager] 务配置以生成公钥。 [获取用于OAuth集成](#obtain-public-certificate) 的公共证书。
+1. [在Adobe Developer Console中创建集成](#create-adobe-i-o-integration) ，并上传生成的公钥。
+1. [使用Adobe](#configure-smart-content-service) Developer Console中的API密钥和其他凭据配置您的部署。
+1. [测试配置](#validate-the-configuration)。
+1. （可选） [在资产上传时启用自动标记](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
 ## 前提条件 {#prerequisites}
 
@@ -29,11 +30,13 @@ ht-degree: 15%
 * 具有组织管理员权限的Adobe ID帐户。
 * 您的组织已启用智能内容服务。
 
+除了上述功能之外，要启用增强的智能标记，还请安装最 [新的AEM服务包](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)。
+
 ## 获取公共证书 {#obtain-public-certificate}
 
 公共证书允许您在Adobe开发人员控制台上验证用户档案。
 
-1. 在用户 [!DNL Experience Manager] 界面中，访问 **[!UICONTROL 工具>Cloud Service]**>旧 **[!UICONTROL 版Cloud Service]**。
+1. 在用户 [!DNL Experience Manager] 界面中，访问 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL 旧]**&#x200B;版Cloud Service。
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 1. 在创 **[!UICONTROL 建配置]** 对话框中，指定智能标记配置的标题和名称。 单击&#x200B;**[!UICONTROL 创建]**。
@@ -46,6 +49,10 @@ ht-degree: 15%
    现在将其他字段留空（稍后提供）。 单击&#x200B;**[!UICONTROL 确定]**。
 
    ![Experience Manager智能内容服务对话框，用于提供内容服务URL](assets/aem_scs.png)
+
+   >[!NOTE]
+   >
+   >作为服务 [!UICONTROL URL提供的] URL无法通过浏览器访问，并生成404错误。 配置与服务URL参数的值相同， [!UICONTROL 可以正常] 。 有关整体服务状态和维护计划，请参 [阅https://status.adobe.com](https://status.adobe.com)。
 
 1. 单击 **[!UICONTROL “下载用于OAuth集成的公共证书]**”，然后下载公共证书文件 `AEM-SmartTags.crt`。
 
@@ -84,7 +91,7 @@ ht-degree: 15%
 
 ## 配置智能内容服务 {#configure-smart-content-service}
 
-要配置集成，请使用Adobe开发人员控制台集成中的技术帐户ID、组织ID、客户端机密、授权服务器和API密钥字段的值。 创建智能标记云配置允许验证来自实例的API [!DNL Experience Manager] 请求。
+要配置集成，请使用Adobe开发人员控制台集成中的技术帐户ID、组织ID、客户端机密、授权服务器和API密钥字段的值。 创建智能标记云配置允许对部署中的API请求进行 [!DNL Experience Manager] 身份验证。
 
 1. 在中 [!DNL Experience Manager]，导航到 **[!UICONTROL 工具>Cloud Service>旧Cloud Service]** ，以打开 [!UICONTROL Cloud Service控] 制台。
 1. 在资产 **[!UICONTROL 智能标记下]**，打开以上创建的配置。 在服务设置页面上，单击 **[!UICONTROL 编辑]**。
@@ -96,12 +103,11 @@ ht-degree: 15%
 完成配置后，可使用JMX MBean验证配置。 要验证，请按照以下步骤操作。
 
 1. 访问您 [!DNL Experience Manager] 的服务器 `https://[aem_server]:[port]`。
-
 1. 转到“ **[!UICONTROL 工具”>“操作”>“Web控制台]** ”以打开OSGi控制台。 单击 **[!UICONTROL “主> JMX]**”。
 1. 单 **[!UICONTROL 击com.day.cq.dam.similaritysearch.internal.impl]**。 它打开“相似 **[!UICONTROL 性搜索”杂项任务]**。
 1. 单 **[!UICONTROL 击validateConfigs()]**。 在验证 **[!UICONTROL 配置对话框中]** ，单击调 **[!UICONTROL 用]**。
 
-   验证结果显示在同一对话框中。
+   验证结果将显示在同一对话框中。
 
 ## 在DAM更新资产工作流中启用智能标记（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
@@ -110,7 +116,7 @@ ht-degree: 15%
 1. 单击工 **[!UICONTROL 具栏]** 中的编辑。
 1. 展开侧面板以显示步骤。拖动 DAM 工作流部分中可用的&#x200B;**[!UICONTROL 智能标记资产]**&#x200B;步骤，并将其放在&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤之后。
 
-   ![在DAM更新资产工作流中的流程缩略图步骤之后添加 [!UICONTROL 智能标记资产步] 骤](assets/smart-tag-in-dam-update-asset-workflow.png)
+   ![在DAM更新资产工作流中的流程缩略图步骤之后添加智能标记资产步骤](assets/smart-tag-in-dam-update-asset-workflow.png)
 
    *图： 在DAM更新资产工作流中的流程缩略图步骤之[!UICONTROL 后添加智能标记资产]步骤。*
 
