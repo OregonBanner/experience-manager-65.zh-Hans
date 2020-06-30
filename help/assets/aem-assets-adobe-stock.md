@@ -3,10 +3,10 @@ title: 在 [!DNL Adobe Stock] 中管理资产 [!DNL Adobe Experience Manager Ass
 description: 从内部搜索、提取、许 [!DNL Adobe Stock] 可和管理资产 [!DNL Adobe Experience Manager]。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 97e17df1f79450b5aed5867633c129a1c21a17ac
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 15%
+source-wordcount: '1113'
+ht-degree: 13%
 
 ---
 
@@ -34,8 +34,10 @@ ht-degree: 15%
 1. Click on [!DNL Experience Manager] logo. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL Adobe IMS 配置]**。单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 云解决方案]** > **[!UICONTROL Adobe Stock]**。
 1. 重用现有证书或选择“ **[!UICONTROL 创建新证书”]**。
 1. 单击&#x200B;**[!UICONTROL 创建证书]**。创建后，下载公钥。 单击&#x200B;**[!UICONTROL 下一步]**。
-1. 在标题为&#x200B;**[!UICONTROL 标题]**、**[!UICONTROL 授权服务器]**、**[!UICONTROL API 密钥]**、**[!UICONTROL 客户端密钥]**&#x200B;和&#x200B;**[!UICONTROL 负载]**&#x200B;的字段中提供相应的值。See [JWT authentication quick start](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md), for detailed information to fetch these values from [!DNL Adobe I/O].
-1. 将下载的公钥添加到您的服 [!DNL Adobe I/O] 务帐户。
+1. 将下载的公钥添加到您的服 [!DNL Adobe Developer Console] 务帐户。 单击&#x200B;**[!UICONTROL 下一步]**。使Adobe IMS [!UICONTROL 技术帐户配置屏幕保持打开] ，以便很快提供这些值。
+1. 访 [问Adobe Developer Console](https://console.adobe.io)。 确保您的帐户对需要集成的组织具有管理员权限。
+1. 单击 **[!UICONTROL 创建新项目]** ，然后单 **[!UICONTROL 击添加API]**。 从 **[!UICONTROL 您可]** 用的API列表 [!UICONTROL 中选择Adobe Stock]。 选 [!UICONTROL 择OAUTH 2.0 Web]。 配置并复制显示的各种值。
+1. In [!DNL Experience Manager] provide the values in the fields titled **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]**, and **[!UICONTROL Payload]**. 有关 [这些值的详细信息](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)，请参阅JWT身份验证快速开始。
 
 <!-- TBD: Update the URL when the new URL is available. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
@@ -50,7 +52,7 @@ ht-degree: 15%
 
 >[!NOTE]
 >
->如果有多个 [!DNL Adobe Stock] 配置，请单击用户界 [!UICONTROL 面右上角的] “用户 *”徽标，在“用户首选项* ”面板中选择所需 [!DNL Experience Manager] 的配置。
+>如果有多个配 [!DNL Adobe Stock] 置，请在“用户首选项”面 [!UICONTROL 板中选择所] 需配置。 单击 *用户* 界面右上角的“用户 [!DNL Experience Manager] ”徽标。
 
 ## 在以下位置使 [!DNL Adobe Stock] 用和管理资产 [!DNL Experience Manager] {#usemanage}
 
