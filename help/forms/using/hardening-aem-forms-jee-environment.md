@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 6cb05cab9ecbb9fc88e16cc1ab24cafccf7d0b16
+source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
 workflow-type: tm+mt
-source-wordcount: '7603'
+source-wordcount: '7665'
 ht-degree: 0%
 
 ---
@@ -173,6 +173,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
 
    * 选择 **用户无法更改密码**。
    * 在“成 **员** ”选项卡上，确保列 **出“** 用户”组。
+
    >[!NOTE]
    >
    >无法更改PDF生成器的此设置。
@@ -200,6 +201,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
    * [JBoss-directory]\standalone\deployment
    * [JBoss-directory]\standalone\
    * [JBoss-directory]\bin\
+
    >[!NOTE]
    >
    > JBoss Application Server的默认安装位置：
@@ -373,9 +375,9 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 
 1. 在“更改中心”下，单 **击“锁定并编辑”**。
 1. 在“域结构”下，单 *[击“基域]* ” > **Services** > **JDBC** > **Data Sources** ，并在右侧窗 ****&#x200B;格中单击IDP ，再单击IDP。
-1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性** ”框中键入 `integratedSecurity=true`。
+1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性”框中** ，键入 `integratedSecurity=true`。
 1. 在“域结构”下，单 **[击“基域]** ” > **Services** > **JDBC** > **Data Sources** ，然后在右 ****&#x200B;窗格中单击DS RM。
-1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性** ”框中键入 `integratedSecurity=true`。
+1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性”框中** ，键入 `integratedSecurity=true`。
 1. 将sqljdbc_auth.dll文件添加到运行应用程序服务器的计算机上的Windows系统路径。 sqljdbc_auth.dll文件位于Microsoft SQL JDBC 6.2.1.0驱动程序安装中。
 1. 将SQL Server的安全性从混 **合模式** 设置 **为仅Windows身份验证**。
 
@@ -455,6 +457,16 @@ AEM Forms模式库包含有关系统配置和业务流程的敏感信息，应�
   </tr> 
  </tbody> 
 </table>
+
+### 使非管理员用户能运行PDF生成器
+
+您可以允许非管理员用户使用PDF生成器。 通常，只有具有管理权限的用户才能使用PDF生成器。 执行以下步骤，使非管理员用户能运行PDF生成器：
+
+1. 创建环境变量名PDFG_NON_ADMIN_ENABLED。
+
+1. 将变量的值设置为TRUE。
+
+1. 重新启动AEM表单实例。
 
 ## 在JEE上配置AEM Forms，以便在企业之外进行访问 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
@@ -674,10 +686,10 @@ JEE上的AEM Forms使用推荐人过滤器功能来阻止CSRF攻击。 本节中
    1. 如果是POST，表单服务器将执行推荐人头检查。
    1. 如果它为GET，则表单服务器将绕过推荐人检查，除非 *将CSRF_CHECK_GETS* 设置为true，在这种情况下，它将执行推荐人头检查。 *CSRF_CHECK_GETS在* web.xml文 *件中为应用程* 序指定。
 
-1. 表单服务器检查请求的URI是否在allowlist中：
+1. 表单服务器检查请求的URI是否存在于允许列表中：
 
-   1. 如果允许列出URI，则服务器接受该请求。
-   1. 如果未允许列出请求的URI，则服务器检索请求的推荐人。
+   1. 如果已列入允许列表URI，则服务器接受该请求。
+   1. 如果未已列入允许列表请求的URI，则服务器检索请求的推荐人。
 
 1. 如果请求中有推荐人，服务器将检查它是否为允许推荐人。 如果允许，服务器将检查推荐人异常：
 
@@ -693,7 +705,7 @@ JEE上的AEM Forms使用推荐人过滤器功能来阻止CSRF攻击。 本节中
 
 JEE上的AEM Forms提供推荐人过滤器以指定允许访问服务器资源的推荐人。 默认情况下，推荐人过滤器不过滤使用安全HTTP方法（如GET）的请求，除非 *将CSRF_CHECK_GETS* 设置为true。 如果允许的推荐人项的端口号设置为0，则JEE上的AEM Forms将允许来自该主机的所有具有推荐人的请求，而不管端口号。 如果未指定端口号，则仅允许来自默认端口80(HTTP)或端口443(HTTPS)的请求。 如果“允许的推荐人”列表中的所有条目都被删除，则“推荐人过滤”将被禁用。
 
-首次安装文档服务时，允许的推荐人列表将更新为安装文档服务的服务器的地址。 服务器的条目包括服务器名称、IPv4地址、启用IPv6时的IPv6地址、环回地址和localhost条目。 添加到允许的推荐人列表的名称由主机操作系统返回。 例如，IP地址为10.40.54.187的服务器将包括以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 对于由主机操作系统重新调整的任何非限定名称（没有IPv4地址、IPv6地址或限定域名的名称），不更新allowlist。 修改允许的推荐人列表以适合您的业务环境。 请勿在生产环境中使用默认的允许推荐人列表部署表单服务器。 修改任何允许的推荐人、推荐人例外或URI后，请确保重新启动服务器以使更改生效。
+首次安装文档服务时，允许的推荐人列表将更新为安装文档服务的服务器的地址。 服务器的条目包括服务器名称、IPv4地址、启用IPv6时的IPv6地址、环回地址和localhost条目。 添加到允许的推荐人列表的名称由主机操作系统返回。 例如，IP地址为10.40.54.187的服务器将包括以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 对于由主机操作系统重新调整的任何非限定名称（没有IPv4地址、IPv6地址或限定域名的名称）允许列表将不更新。 修改允许的推荐人列表以适合您的业务环境。 请勿在生产环境中使用默认的允许推荐人列表部署表单服务器。 修改任何允许的推荐人、推荐人例外或URI后，请确保重新启动服务器以使更改生效。
 
 **管理允许的推荐人列表**
 
@@ -1007,6 +1019,7 @@ JEE统包安装的AEM Forms默认使用本地系统帐户设置服务帐户。 �
    * [JBoss-directory]\standalone\deployment
    * [JBoss-directory]\standalone\
    * [JBoss-directory]\bin\
+
    >[!NOTE]
    >
    > JBoss Application Server的默认安装位置：
@@ -1077,4 +1090,4 @@ https://<servername>:8080/um/
 1. 选择 **启用管理安全**。
 1. 取消选择“ **启用应用程序安** 全 **性”和“使用Java 2安全性”**。
 1. 单击 **确定** 或 **应用**。
-1. 在“消 **息** ”框中，单 **击“直接保存到主配置”**。
+1. 在“消 **息** ”框中，单 **击“直接保存至主控配置”**。
