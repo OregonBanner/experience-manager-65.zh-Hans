@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4170c7fe48a740e0574a32c7823841dc311fd565
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -230,7 +230,6 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
    >
    >
 * 为不同的AEM站点创建唯一的徽章图像
-
 >
 
 
@@ -265,7 +264,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 * `/content/usergenerated/asi/jcr`
 
-后跟用户用户档案的路径，以标记文件夹结尾，如
+后跟用户用户档案的路径，以标记文件夹结尾，如：
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
@@ -279,7 +278,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 ## 附加信息 {#additional-information}
 
-要根据点显示成员的排序列表，请执行以下操作：
+要根据点显示成员的排序列表:
 
 * [用于包含在](/help/communities/functions.md#leaderboard-function) 社区站点或组模板中的排行榜功能。
 * [通栏组件](/help/communities/enabling-leaderboard.md)，通栏功能的特色组件，用于页面创作。
