@@ -10,47 +10,51 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
-source-git-commit: 5b8b1544645465d10e7c2018364b6a74f1ad9a8e
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 6%
 
 ---
 
 
-# 开发社区 {#developing-communities}
+# 开发社区  {#developing-communities}
 
 ## 概述 {#overview}
 
-AEM Communities简化了社区功能的创建和自定义，如论坛、用户组、博客、问题与答案、日历、评论、评论、投票、评级和任务。 这些功能导致用户生成的内容(UGC)被输入到发布环境中。
+AEM Communities简化了社区功能的创建和自定义，如论坛、用户组、博客、问题与答案、日历、评论、评论、投票、评分和任务。 这些功能导致用户生成的内容(UGC)被输入到发布环境。
 
-社区站点的 [基础是](overview.md#communitiessites)[社会构成框架](scf.md) (SCF)。 创建社区站点始于选择由社区功能 [组成的社区站点](sites-console.md) ，该模 [板是](functions.md)。
+社区站点的 [基础](overview.md#communitiessites) 是社 [会构成框](scf.md) 架(SCF)。 创建社区站点从选择由社区功能组 [成的社区](sites-console.md) 站点模 [板开始](functions.md)。
 
 有关概述和快速入门教程，请访问：
 
 * [AEM Communities概述](overview.md)
 * [AEM Communities 快速入门](getting-started.md)
-* [AEM Communities for Enablement快速入门](getting-started-enablement.md)
+* [AEM Communities支持入门](getting-started-enablement.md)
 
 >[!NOTE]
->
+> 
 >强烈建议保持最新版 [本](deploy-communities.md#latest-releases)。
+
 
 ## 建议的部署 {#recommended-deployments}
 
-* [社区内容存储](working-with-srp.md):讨论UGC公用商店的可用SRP选项
-* [推荐的社区拓扑](topologies.md):讨论基于用例的拓扑和SRP选择
+* [社区内容存储](working-with-srp.md): 讨论UGC公用商店的可用SRP选项
+* [推荐的社区拓扑](topologies.md): 讨论基于用例的拓扑和SRP选择
 
 ## 社交组件框架 {#social-component-framework}
 
-* [社交组件框架](scf.md):框架和API概述
-* [SCF Handlebars Helpers](handlebars-helpers.md):默认的帮佣人，以及如何编写自定义的帮助人
-* [客户端自定义](client-customize.md):自定义在浏览器中运行的代码
-* [服务器端自定义](server-customize.md):自定义在服务器上运行的代码
-* [存储资源提供商(SRP)](srp.md):社区内容存储概述
-* [编码准则](code-guide.md):准则、提示与技巧
-* [社区组件指南](components-guide.md):交互式开发工具
+* [社交组件框架](scf.md): 框架和API概述。
+* [SCF Handlebers Helpers](handlebars-helpers.md): 如何编写定制帮助程序。
+* [客户端自定义](client-customize.md): 自定义在浏览器中运行的代码。
+* [服务器端自定义](server-customize.md): 自定义在服务器上运行的代码。
+* [存储资源提供程序(SRP)](srp.md): 社区内容存储概述
+* [编码准则](code-guide.md): 指南、提示与技巧。
+* [社区组件指南](components-guide.md): 交互式开发工具。
 
 ## 组件、功能和功能要件 {#component-function-and-feature-essentials}
 
-AEM Communities组件、功能和功能为社区站点提供了构 [件块](sites-console.md)。
+AEM Communities组件、功能和功能为社区站点提 [供构件](sites-console.md)。
 
 * [组件、功能和功能要件](essentials.md)
 * [Clientlibs for Communities组件](clientlibs.md)
@@ -65,9 +69,9 @@ AEM Communities组件、功能和功能为社区站点提供了构 [件块](site
 
 ## 社区组 {#community-groups}
 
-[社区组](overview.md#communitygroups) ，是允许社区成员在社区站点内组成子社区的概念。 在发布或创作环境中可能会创建社区组。
+[社区组](overview.md#communitygroups) 是允许社区成员在社区站点内组成子社区的概念。 在发布或创作环境中可能会创建社区组。
 
-* [Community Group Essentials](essentials-groups.md)
+* [社区组基本工具](essentials-groups.md)
 * [组函数](functions.md#groups-function)
 * [社区组模板](tools-groups.md)
 * [管理用户和用户组](users.md)
