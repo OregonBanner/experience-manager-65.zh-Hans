@@ -1,6 +1,6 @@
 ---
-title: JEE上AEM Forms支持的Platform
-seo-title: JEE上AEM Forms支持的Platform
+title: JEEAEM Forms支持的平台
+seo-title: JEEAEM Forms支持的平台
 description: 列表在JEE上安装AEM Forms所需和支持的基础架构组件
 seo-description: 列表在JEE上安装AEM Forms所需和支持的基础架构组件
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
@@ -10,15 +10,15 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5e932c127c74d13f6f46003b20a3ba5f68606c29
+source-git-commit: d1584bc5034e7d4a549a5f824a89e8cf0c06ac3c
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3217'
 ht-degree: 1%
 
 ---
 
 
-# JEE上AEM Forms支持的Platform{#supported-platforms-for-aem-forms-on-jee}
+# JEEAEM Forms支持的平台{#supported-platforms-for-aem-forms-on-jee}
 
 ## 支持的平台 {#supported-platforms}
 
@@ -144,6 +144,11 @@ Adobe Experience Manager表单需要运行Java虚拟机，该虚拟机由Java开
    <td><p>存储库微内核</p> </td>
    <td><p>支持</p> </td>
   </tr>
+   <tr>
+   <td><p>Oracle Database 12c Release 2(12.2.0.1.0)</p> </td>
+   <td><p>存储库微内核</p> </td>
+   <td><p>支持</p> </td>
+  </tr>
   <tr>
    <td>Oracle Database 18c </td>
    <td>存储库微内核</td>
@@ -231,7 +236,7 @@ Adobe Experience Manager表单需要运行Java虚拟机，该虚拟机由Java开
    <td>服务包和关键更新</td>
   </tr>
   <tr>
-   <td><p>JBoss®企业应用程序Platform(EAP)7.1.4 <sup>[2] [3] [7]</sup></p> </td>
+   <td><p>JBoss®企业应用程序平台(EAP)7.1.4 <sup>[2] [3] [7]</sup></p> </td>
    <td><p>答： 支持</p> </td>
    <td><p>支持的EAP版本的修补程序和累积修补程序</p> </td>
   </tr>
@@ -290,7 +295,7 @@ Adobe Experience Manager表单需要运行Java虚拟机，该虚拟机由Java开
 <table>
  <tbody>
   <tr>
-   <th><p><strong>Platform（基本版本）</strong></p> </th>
+   <th><p><strong>平台（基本版本）</strong></p> </th>
    <th>支持级别</th>
    <th><p><strong>支持的修补程序定义</strong></p> </th>
   </tr>
