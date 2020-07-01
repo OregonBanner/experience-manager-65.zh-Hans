@@ -10,18 +10,21 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
+source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+workflow-type: tm+mt
+source-wordcount: '1203'
+ht-degree: 2%
 
 ---
 
 
 # 社区组件指南  {#community-components-guide}
 
-“社区组件”指南是用于社交组件框架( [SCF)的交互式开发工具](scf.md)。 它提供了可用AEM Communities组件列表或由多个组件构建的更复杂的功能。
+“社区组件”指南是用于社交组件框 [架(SCF)的交互式开发工具](scf.md)。 它提供了可用AEM Communities组件的列表或由多个组件构建的更复杂的功能。
 
-除了每个组件的基本信息，该指南还允许对SCF组件／功能的工作方式以及如何配置或自定义它们进行试验。
+除了每个组件的基本信息，该指南还允许对SCF组件／功能的工作方式以及配置或自定义它们的方式进行试验。
 
-有关每个组件相关的开发要点的信息，请参 [阅功能和组件要点](essentials.md)。
+有关每个组件相关的开发必备工具的信息，请 [参阅功能和组件必备工具](essentials.md)。
 
 ## 入门 {#getting-started}
 
@@ -31,14 +34,14 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 * [https://&lt;server>:&lt;port>/content/community-components/en.html](http://localhost:4502/content/community-components/en.html)
 
-与Communities组件的交互因以下情况而异：
+与社区组件的交互将因以下各项而异：
 
-* 服务器（作者或发布）
-* 网站访客是否已登录
-* 如果已登录，则分配给成员的权限
-* 是否使用默认SRP( [JSRP](jsrp.md))
+* 服务器（作者或发布）。
+* 站点访客是否已登录。
+* 如果已登录，则指定给成员的权限。
+* 是否使用默认 [SRP](jsrp.md)(JSRP)。
 
-在创作时，要进入编辑模式，请在服 `editor.html` 务器名 `cf#` 后插入或作为第一个路径段：
+在创作时，要进入编辑模式，请在服 `editor.html` 务器 `cf#` 名称后插入或作为第一个路径段：
 
 * 标准 UI:
 
@@ -56,13 +59,14 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 >
 >在浏览器中显示组件页面时，返回编辑模式以打开组件的编辑对话框。
 >
->有关常规创作信息，请查 [看页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
+>有关一般创作信息，请视图 [页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 >
->如果不熟悉AEM，请查看有关基本操作 [的文档](../../help/sites-authoring/basic-handling.md)。
+>如果不熟悉AEM，请视图有关基本操 [作的文档](../../help/sites-authoring/basic-handling.md)。
+
 
 ### 主页 {#home-page}
 
-本指南提供了一系列SCF组件，可在页面左侧进行预览和创建原型。
+本指南提供了一系列SCF组件，可用于预览和沿页面左侧进行原型设计。
 
 组件指南，如在编辑模式下在作者实例上查看：
 
@@ -70,71 +74,73 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 ## 组件页面 {#component-pages}
 
-从页面左侧的列表中选择一个组件。
+从页面左侧的列表中选择组件。
 
 ![chlimage_1-405](assets/chlimage_1-405.png)
 
-此时将显示指南的主体：
+向导的主体显示：
 
-1. 标题：所选组件的名称
-1. [客户端库](#client-side-libraries):一个或多个必需类别的列表
-1. [包括](scf.md#add-or-include-a-communities-component):如果组件可能动态包含在内，则状态可以在创作编辑模式下切换：
+1. 标题： 所选组件的名称
+1. [客户端库](#client-side-libraries): 列表一个或多个必需类别
+1. [包括](scf.md#add-or-include-a-communities-component): 如果组件可以动态包含，则可以在作者编辑模式下切换状态：
 
-   * 如果添加了该属性，则显示的文本为：“此组件通过其par节点包含。”
-   * 如果包括，则显示的文本为：“此组件是动态包含的。”
+   * 如果添加，则显示的文本为： “此组件通过其par节点提供。”
+   * 如果包括，则显示的文本为： “此组件是动态包含的。”
    * 如果不包括，则不显示任何文本
 
-1. 示例组件或功能：组件或功能的活动实例。 如果某个组件，则可能会更改它，同时更改选项卡部分中提供的模板、CSS和数据。
+1. 示例组件或功能： 组件或功能的活动实例。 如果某个组件，则可能会随着对选项卡部分中提供的模板、CSS和数据所做的更改而改变它。
 
 >[!NOTE]
 >
->从左侧进行选择后，当浏览器窗口过窄时，组件将显示在组件列表的下面而不是旁边。
+>从左侧进行选择后，当浏览器窗口过窄时，组件将显示在组件列表的下方而不是旁边。
 
 ### 创作交互 {#author-interactions}
 
-在创作实例上使用指南时，可以通过打开组件对话框来体验配置组件的过程。 开发人员的信息在文档的“组 [件和功能要件](essentials.md) ”部分提供，而创作的“社区组件”部分介绍了对话 [](author-communities.md) 框设置。
+在创作实例上使用指南时，可以通过打开组件对话框来体验配置组件的过程。 开发人员的信息在文档的“组 [件和功能要件](essentials.md) ”部分提供，而创作的“社区组件”部分则介 [绍对话框设](author-communities.md) 置。
 
-对于“社区组件”指南，某些组件对话框设置会与“包含”切 [换状态](scf.md#add-or-include-a-communities-component) 叠加。 要在使用现有资源或动态包含的资源之间进行切换，请在编辑模式中选择组件和可包含文本，然后双击以打开编辑对话框：
+对于“社区组件”指南，某些组件对话框设置会与“包含” [切换](scf.md#add-or-include-a-communities-component) 状态一起覆盖。 要在使用现有资源或动态包含的资源之间进行切换，请在编辑模式下同时选择组件和可包含文本，并单击多次以打开编辑对话框：
 
 ![chlimage_1-406](assets/chlimage_1-406.png)
 
-在“模 **板** ”选项卡下：
+在“模板 **”选项卡** 下：
 
 ![chlimage_1-407](assets/chlimage_1-407.png)
 
 * **通过 sling:include 包含子组件**
 
-   如果未选中，组件指南将使用存储库中的现有资源（jcr节点，它是par节点的子节点）。
+   如果未选中，组件指南将使用存储库（jcr节点，它是par节点的子节点）中的现有资源。
 
-   * 显示的文本为：“此组件通过其par节点包含。”
+   * 显示的文本： “此组件通过其par节点提供。”
+
    如果选中此项，组件指南将使用sling动态包含子节点的resourceType（非现有资源）的组件。
 
-   * 显示的文本为：“此组件是动态包含的。”
+   * 显示的文本： “此组件是动态包含的。”
+
    默认为未选中。
 
 ### 发布交互 {#publish-interactions}
 
-在发布实例上使用指南时，可以作为站点访问者（未登录）以及登录时具有各种权限的成员体验组件和功能。
+在发布实例上使用指南时，可以将组件和功能作为站点访客（未登录）以及登录时具有各种权限的成员进行体验。
 
 >[!NOTE]
 >
->请注意，如果SRP默认为 [JSRP](jsrp.md)，则在发布实例上输入的UGC将仅在发布时可见，并且在创作实例的审核控制台中 *不可见*[](moderate-ugc.md) 。
+>请注意，如果SRP默认为 [JSRP](jsrp.md)，则在发布实例上输入的UGC将仅在发布时可见，并且 *从创作实例*[](moderate-ugc.md) 的审核控制台中不可见。
 
 ## 客户端库 {#client-side-libraries}
 
-每个组件列出的客户端库(clientlibs)是将组件放 *置到页面* 时需要引用的库。 clientlibs提供了一种管理和优化Javascript和CSS下载的方法，这些下载用于在浏览器中呈现组件。
+每个组件所列的客户端库(clientlibs)是将组件 *放置到页* 面时需要引用的那些库。 客户端库提供了管理和优化在浏览器中呈现组件时使用的Javascript和CSS下载的方法。
 
 有关详细信息，请访 [问Clientlibs for Communities组件](clientlibs.md)。
 
 ## 模拟 {#impersonation}
 
-在作者实例中，一个用户通常以管理员或开发人员身份登录，为了体验以其他用户身份登录的组件，请使用“模拟”按钮左侧的文本框键入用户名或从下拉列表中进行选择，然后单击按钮。 **** 单击“还原”以注销并结束模拟。
+在作者实例中，一个用户通常以管理员或开发人员身份登录，为了体验以其他用户身份登录的组件，请使用“模拟 **** ”按钮左侧的文本框键入用户名或从下拉列表中进行选择，然后单击按钮。 单击“还原”以注销并结束模拟。
 
 发布实例无需模拟。 只需使用“登录／注销”链接模拟各种用户，如演 [示用户](tutorials.md#demo-users)。
 
 ## 自定义 {#customization}
 
-启用后，每个SCF组件都可以通过临时修改组件的模板、CSS和数据，为可能的自定义创建原型。
+启用后，每个SCF组件都可通过临时修改组件的模板、CSS和数据来为可能的自定义创建原型。
 
 ### 启用自定义 {#enabling-customization}
 
@@ -142,7 +148,7 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 >
 >**此工具为只读**。 对模板、CSS或数据所做的任何编辑都不会保存到存储库中。
 
-要快速试验自定义，必 `scg:showIde`须将属性添加到组件页面的内容JCR节点并设置为true。
+要快速试验自定义项， `scg:showIde`必须将属性添加到组件页面的内容JCR节点并设置为true。
 
 以注释组件为例，在作者实例或发布实例上，使用管理员权限登录：
 
@@ -158,14 +164,14 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
    * **名称** `scg:showIde`
    * **类型** `String`
-   * **值**`true`
+   * **值** `true`
 
 1. 选择 **[!UICONTROL 全部保存]**
-1. 在指南中重新加载“注释”页面
+1. 重新加载指南中的“注释”页
 
    [http://localhost:4503/content/community-components/en/comments.html](http://localhost:4503/content/community-components/en/comments.html)
 
-1. 注意，现在有3个用于模板、CSS和数据的选项卡。
+1. 请注意，现在有3个用于模板、CSS和数据的选项卡。
 
 ![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
 
@@ -175,20 +181,20 @@ source-git-commit: e8d8bf89971d3d9d5ec150308dda247aa53c77bb
 
 模板编辑器允许编译本地编辑并将其应用于页面顶部的示例组件实例，而不会影响存储库中的组件。
 
-在本地编辑时运行编译将突出显示所有错误，方法是在装订线中放置一个圆点并将文本标记为红色。
+在本地编辑时运行编译将突出显示所有错误，方法是在装订线中放置一个点并将文本标记为红色。
 
 ### CSS选项卡 {#css-tab}
 
-选择“CSS”选项卡可查看与组件关联的CSS。
+选择CSS选项卡以查看与组件关联的CSS。
 
 如果组件是多个组件的组合，则某些CSS可能列在其中一个组件下。
 
 CSS编辑器允许修改CSS并将其应用于页面顶部的示例组件实例。
 
-可以通过单击装订线中规则旁边的规则来选择规则，以使用该规则突出显示DOM的各个部分。
+可以选择一条规则，通过单击装订线中规则旁边，使用该规则突出显示DOM的各个部分。
 
 ### 数据选项卡 {#data-tab}
 
 选择“数据”选项卡以显示。social.json端点数据。 此数据是可编辑的，并应用于示例组件实例。
 
-可能会在装订线中标记语法错误，也可能在编辑器中高亮显示。
+语法错误可在装订线中标记，也可在编辑器中突出显示。
