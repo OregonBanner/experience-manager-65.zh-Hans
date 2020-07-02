@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 translation-type: tm+mt
-source-git-commit: 2d04b33258a3727a088461055649c28d57a271c5
+source-git-commit: 530b1c3c1922eb10622888804a603cc82b3eb3aa
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 83%
+source-wordcount: '1148'
+ht-degree: 76%
 
 ---
 
@@ -137,17 +137,24 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
 通过“管理控制”选项，管理员可以：
 
+* 自定义AEM收件箱列
+
 * 自定义标题文本和徽标
 
 * 控制标题中可用导航链接的显示
 
-“管理员控制”选项仅对管理员或工作流管理员组的成员可见。
+“管理控制”选项仅对或组的成员 `administrators` 可 `workflow-administrators` 见。
 
-![管理控制](assets/admin-control.png)
+* **列自定义**: 自定义AEM收件箱以更改列的默认标题、对列的位置重新排序并根据工作流的数据显示其他列。
+   * **添加列**: 选择要添加到AEM收件箱中的列。
+   * **编辑列**: 将鼠标悬停在列标题上并点按 ![编辑](assets/edit.svg) 图标以输入列显示名称。
+   * **删除列**: 点按删 ![除图](assets/delete_updated.svg) 标，以从AEM收件箱中删除列。
+   * **移动列**: 拖动 ![移动](assets/move_updated.svg) 图标，将列移到AEM收件箱中的新位置。
+   ![管理控制](assets/admin-control-column-customize.png)
 
 * **品牌化自定义**
 
-   * **自定义标题文本：** 指定要在标题中显示的文本以替换默认 **的Adobe Experience Manager** 文本。
+   * **自定义标题文本：** 指定要在标题中显示的文本以替换默认的 **Adobe Experience Manager** 文本。
 
    * **自定义徽标：** 指定要在标题中以徽标形式显示的图像。 在数字资产管理(DAM)中上传图像，并在字段中引用该图像。
 
