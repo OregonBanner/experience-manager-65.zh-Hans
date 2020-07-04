@@ -3,9 +3,9 @@ title: 翻译资产的最佳实践
 description: 有效管理资产的最佳实践，可同步各种翻译版本并简化翻译工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '421'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 翻译资产的最佳实践 {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager Assets支持多语言工作流，将数字资产的二进制文件、元数据和标记翻译为多种语言，并管理已翻译的资产。 有关详细信息，请参 [阅多语言资产](multilingual-assets.md)。
+Adobe Experience Manager资产支持多语言工作流，将数字资产的二进制文件、元数据和标记翻译为多个语言环境并管理已翻译的资产。 有关详细信息，请参 [阅多语言资产](multilingual-assets.md)。
 
 为了有效管理资产以确保不同的翻译版本保持同步，请在运行 [翻译工作流](preparing-assets-for-translation.md) 之前创建资产的语言副本。
 
@@ -32,13 +32,15 @@ Adobe Experience Manager Assets支持多语言工作流，将数字资产的二�
    * [设置文件数据存储](/help/sites-deploying/data-store-config.md)
    * [设置Amazon S3数据存储](/help/sites-deploying/data-store-config.md)
 
-1. 禁用 [DAM元数据回写工作流](/help/sites-administering/workflow-offloader.md#disable-offloading) 。
+<!--
+1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
 
-   如名称所示，DAM元数 [!UICONTROL 据写回工作流] 会将元数据重写到二进制文件。 由于元数据在翻译后会发生更改，因此将其写回二进制文件会为语言副本生成不同的二进制文件。
+   As the name suggests, the [!UICONTROL DAM Metadata Writeback] workflow rewrites the metadata to the binary file. Because the metadata changes after translation, writing it back to the binary file generates a different binary for a language copy.
 
    >[!NOTE]
    >
-   >禁用DAM [!UICONTROL 元数据写回] 工作流会关闭资产二进制文件上的XMP元数据写回。 因此，将来的元数据更改不再保存在资产中。 在禁用此工作流之前，评估后果。
+   >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
+-->
 
 1. 启用“设 [!UICONTROL 置上次修改日期] ”工作流。
 
