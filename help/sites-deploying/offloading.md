@@ -10,9 +10,9 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: c3e4b68c10496cac8f75d009fdd9ebd777826850
+source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
 workflow-type: tm+mt
-source-wordcount: '2771'
+source-wordcount: '2403'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ Sling JobManager和JobConsumer支持创建在拓扑中处理的作业：
 
 对于群集中的每个实例，您可以看到几个与拓扑相关的属性：
 
-* 实例的作业使用者的允许主题列表。
+* 实例的作业使用者的允许列表主题。
 * 用于连接拓扑的端点。
 * 已注册实例以卸载的作业主题。
 * 实例处理的作业主题。
@@ -108,10 +108,10 @@ Sling JobManager和JobConsumer支持创建在拓扑中处理的作业：
 
 Apache Sling Resource-Based Discovery Service在每个实例上运行，以控制Experience Manager实例与拓扑交互的方式。
 
-发现服务向拓扑连接器服务发送定期的POST请求（心跳），以建立和维护与拓扑的连接。 拓扑连接器服务保留允许加入拓扑的IP地址或主机名列表：
+发现服务向拓扑连接器服务发送定期的POST请求（心跳），以建立和维护与拓扑的连接。 拓扑连接器服务保留允许加入拓扑的IP地址或主机名允许列表:
 
 * 要将实例连接到拓扑，请指定根成员的拓扑连接器服务的URL。
-* 要启用实例加入拓扑，请将该实例添加到根成员的拓扑连接器服务的允许列表中。
+* 要使实例能够加入拓扑，请将该实例添加到根成员的拓扑连接器服务的允许列表。
 
 使用Web控制台或sling:OsgiConfig节点配置org.apache.sling.discovery.impt.Config服务的以下属性：
 
@@ -174,7 +174,7 @@ Apache Sling Resource-Based Discovery Service在每个实例上运行，以控�
 1. 在浏览器中打开Web控制台。 ([http://localhost:4502/system/console](http://localhost:4502/system/console))
 1. 单击“主”>“拓扑管理”。
 1. 单击“配置发现服务”。
-1. 对于拓扑的每个成员，向拓扑连接器允许列表属性添加一个项，并指定拓扑成员的主机名或IP地址。
+1. 对于拓扑的每个成员，向“拓扑连接器允许列表”属性添加一个项，并指定拓扑成员的主机名或IP地址。
 
 ## 配置主题消耗 {#configuring-topic-consumption}
 
@@ -210,7 +210,10 @@ Apache Sling Resource-Based Discovery Service在每个实例上运行，以控�
 |---|---|---|
 | / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 已与Apache Sling一起安装。 处理OSGi事件管理员生成的作业，以实现向后兼容性。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | 复制作业负载的复制代理。 |
-| com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | 处理DAM更新资产卸载程序工作流生成的作业。 |
+
+<!--
+| com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
+-->
 
 ### 为实例禁用和启用主题 {#disabling-and-enabling-topics-for-an-instance}
 
@@ -218,14 +221,14 @@ Apache Sling Job Consumer Manager服务提供主题允许列表和阻止列表�
 
 **注意：** 如果实例属于拓扑，您还可以在拓扑中的任何计算机上使用卸载浏览器来启用或禁用主题。
 
-创建已启用主题列表的逻辑首先允许列表中的所有主题，然后删除块列表中的主题。 默认情况下，所有主题均处于启用状态(允许列 `*`表值为)且不禁用任何主题（块列表没有值）。
+创建已启用主题列表的逻辑首先允许允许列表中的所有主题，然后删除阻止列表中的主题。 默认情况下，所有主题都处于启用状态(允许列表 `*`值为)，并且不禁用任何主题(阻止列表没有值)。
 
 使用Web控制台或 `sling:OsgiConfig` 节点配置以下属性。 对 `sling:OsgiConfig` 于节点，作业消费者管理器服务的PID为org.apache.sling.事件.impl.jobs.JobConsumerManager。
 
 | Web控制台中的属性名称 | OSGi ID | 描述 |
 |---|---|---|
 | 主题允许列表 | job.consumermanager.whitelist | 本地JobManager服务处理的主题列表。 &amp;ast；的默认值 使所有主题都发送到注册的TopicConsumer服务。 |
-| 主题块列表 | job.consumermanager.blacklist | 本地JobManager服务未处理的主题列表。 |
+| 主题阻止列表 | job.consumermanager.blacklist | 本地JobManager服务未处理的主题列表。 |
 
 ## 创建用于卸载的复制代理 {#creating-replication-agents-for-offloading}
 
@@ -316,35 +319,37 @@ Apache Sling Job Consumer Manager服务提供主题允许列表和阻止列表�
 * 打开Web控制台，在Sling设置中找到Sling ID属性的值([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings))。 如果实例尚不是拓扑的一部分，则此方法很有用。
 * 如果实例已是拓扑的一部分，请使用拓扑浏览器。
 
-## 卸载DAM资产的处理 {#offloading-the-processing-of-dam-assets}
+<!--
+## Offloading the Processing of DAM Assets {#offloading-the-processing-of-dam-assets}
 
-配置拓扑实例，以便特定实例对在DAM中添加或更新的资产执行后台处理。
+Configure the instances of a topology so that specific instances perform the background processing of assets that are added or updated in DAM.
 
-默认情况下，Experience Manager在 [!UICONTROL DAM资产发生更改] 或将一个资产添加到DAM时执行DAM更新资产工作流。 更改默认行为，以便Experience Manager改为执 [!UICONTROL 行DAM更新资产卸载程序] 。 此工作流会生成一个具有主题的JobManager作业 `com/adobe/granite/workflow/offloading`。 然后，配置拓扑，以将作业卸载到专用工作器。
+By default, Experience Manager executes the [!UICONTROL DAM Update Asset] workflow when a DAM asset changes or one is added to DAM. Change the default behavior so that Experience Manager instead executes the [!UICONTROL DAM Update Asset Offloader] workflow. This workflow generates a JobManager job that has a topic of `com/adobe/granite/workflow/offloading`. Then, configure the topology so that the job is offloaded to a dedicated worker.
 
 >[!CAUTION]
 >
->当与工作流卸载一起使用时，任何工作流都不应为临时工作流。 例如，在用于 [!UICONTROL 资产卸载时] ,DAM更新资产工作流不得为临时工作流。 要在工作流中设置／取消设置临时标志，请参 [阅临时工作流](/help/assets/performance-tuning-guidelines.md#workflows)。
+>No workflow should be transient when used with workflow offloading. For example, the [!UICONTROL DAM Update Asset] workflow must not be transient when used for asset offloading. To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
 
-以下过程假定卸载拓扑具有以下特征：
+The following procedure assumes the following characteristics for the offloading topology:
 
-* 一个或多个Experience Manager实例正在创作用户与之交互以添加或更新DAM资产的实例。
-* 用户不直接与处理DAM资产的一个或多个Experience Manager实例交互。 这些实例专用于DAM资产的后台处理。
+* One or more Experience Manager instance are authoring instances that users interact with for adding or updating DAM assets.
+* Users to do not directly interact with one or more Experience Manager instances that process the DAM assets. These instances are dedicated to the background processing of DAM assets.
 
-1. 在每个Experience Manager实例上，配置发现服务，使其指向根地形连接器。 (请参 [阅配置拓扑成员](#title4)。)
-1. 配置根拓扑连接器，使连接实例位于允许列表中。
-1. 打开卸载浏览器并禁 `com/adobe/granite/workflow/offloading` 用用户与之交互以上传或更改DAM资产的实例中的主题。
+1. On each Experience Manager instance, configure the Discovery Service so that it points to the root Topography Connector. (See [Configuring Topology Membership](#title4).)
+1. Configure the root Topography Connector so that the connecting instances are on the allow list.
+1. Open Offloading Browser and disable the `com/adobe/granite/workflow/offloading` topic on the instances with which users interact to upload or change DAM assets.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
-1. 在用户与之交互以上传或更改DAM资产的每个实例上，将工作流启动器配置为使用 [!UICONTROL DAM更新资产卸载工作流] :
+1. On each instance that users interact with to upload or change DAM assets, configure workflow launchers to use the [!UICONTROL DAM Update Asset Offloading] workflow:
 
-   1. 打开工作流控制台。
-   1. 单击“启动器”选项卡。
-   1. 找到执行DAM更新资产工作流的 [!UICONTROL 两个启动程序配] 置。 一个启动器配置事件类型为“已创建节点”，另一个类型为“已修改节点”。
-   1. 更改这两个事件类型，以便它们执 [!UICONTROL 行DAM更新资产卸载工作流] 。 (有关启动器配置的信息，请参 [阅在节点发生变化时启动工作流](/help/sites-administering/workflows-starting.md)。)
+    1. Open the Workflow console.
+    1. Click the Launcher tab.
+    1. Locate the two Launcher configurations that execute the [!UICONTROL DAM Update Asset] workflow. One launcher configuration event type is Node Created, and the other type is Node Modified.
+    1. Change both event types so that they execute the [!UICONTROL DAM Update Asset Offloading] workflow. (For information about launcher configurations, see [Starting Workflows When Nodes Change](/help/sites-administering/workflows-starting.md).)
 
-1. 在执行DAM资产后台处理的实例上，禁用执行DAM更新资产工作流的 [!UICONTROL 工作流启动程序] 。
+1. On the instances that perform the background processing of DAM assets, disable the workflow launchers that execute the [!UICONTROL DAM Update Asset] workflow.
+-->
 
 ## 进一步阅读 {#further-reading}
 
