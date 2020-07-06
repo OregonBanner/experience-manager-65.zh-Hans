@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 85d4cdf0e2cfcb8b5e70387ce2dc556df9033257
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1899'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-* [AEM 6.5Platform](/help/sites-deploying/deploy.md)
+* [AEM 6.5平台](/help/sites-deploying/deploy.md)
 
 * AEM Communities许可
 
-* 针对以下对象的可选许可证：
+* 适用于以下用户的可选许可证：
 
    * [AdobeAnalytics社区版功能](/help/communities/analytics.md)
    * [用于MSRP的MongoDB](/help/communities/msrp.md)
@@ -74,15 +74,14 @@ ht-degree: 1%
 
          * UGC从未复制
          * UGC仅在输入AEM实例或群集中可见
-      * 默认为JSRP
 
+         * 默认为JSRP
    针对启 **[用功能](/help/communities/overview.md#enablement-community)**
 
    * [安装和配置FFmpeg](/help/communities/ffmpeg.md)
    * [安装MySQL的JDBC驱动程序](#jdbc-driver-for-mysql)
    * [安装AEM CommunitiesSCORM-Engine](#scorm-package)
    * [安装和配置MySQL以启用](/help/communities/mysql.md)
-
 
 
 
@@ -106,8 +105,8 @@ AEM 6.5 Communities GA随社区包一起提供。 要了解AEM 6.5 Communities�
 
 两个Communities功能使用MySQL数据库：
 
-* 针对 [启用](/help/communities/enablement.md) : 记录SCORM活动和学员
-* 对于 [DSRP](/help/communities/dsrp.md) : 存储用户生成的内容(UGC)
+* 针对 [启用](/help/communities/enablement.md): 记录SCORM活动和学员
+* 对于 [DSRP](/help/communities/dsrp.md): 存储用户生成的内容(UGC)
 
 必须单独获取和安装MySQL连接器。
 
@@ -126,7 +125,6 @@ AEM 6.5 Communities GA随社区包一起提供。 要了解AEM 6.5 Communities�
    * 检查Oracle *Corporation的MySQLcom.mysql.jdbc的JDBC驱动程序是否处于活动状态* ，如果未激活，请开始它（或检查日志）
 
 1. 如果在配置JDBC后在现有部署上进行安装，则通过从Web控制台重新保存JDBC配置，将JDBC重新绑定到新连接器：
-
    * 例如，https://localhost:4502/system/console/configMgr
    * 查找配 `Day Commons JDBC Connections Pool` 置
    * 选择以打开
@@ -138,7 +136,7 @@ AEM 6.5 Communities GA随社区包一起提供。 要了解AEM 6.5 Communities�
 
 #### 示例： 已安装的MySQL连接器包 {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![chlimage-bundles](assets/chlimage-bundles.png)
 
 ### SCORM包 {#scorm-package}
 
@@ -157,7 +155,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 #### SCORM日志记录 {#scorm-logging}
 
-安装后，所有启用活动都将直接记录到系统控制台。
+安装后，所有启用活动都会直接记录到系统控制台。
 
 如果需要，可以将包的日志级别设置为“警 `RusticiSoftware.*` 告”。
 
@@ -223,7 +221,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 因此，必须编辑所 **有辅助发布实例的配置** ，以取消选中 **`Primary Publisher`** 复选框。
 
-![](/help/communities/assets/chlimage_1-126.png)
+![chlimage_1-411](assets/chlimage_1-411.png)
 
 对于发布场中的所有其他（辅助）发布实例：
 
@@ -249,7 +247,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 * 在作者上访问复制控制台
 
-   * 在全局导航中，导航到工 **[!UICONTROL 具>部署>复制>作者代理]**
+   * 在全局导航中，导航到工 **[!UICONTROL 具]** > **[!UICONTROL 部署]** >复 **[!UICONTROL 制]** >作 **[!UICONTROL 者上的代理]**
 
 * 对于两种代理，请遵循相同的流程：
 
@@ -263,15 +261,15 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
       1. 如果不是用 `admin`户，请编 **辑** “用 **户”和** “口令”以指定 `administrators` 用户组的成员
 
-下图显示了将端口从4503更改为6103的结果：
+下图显示将端口从4503更改为6103的结果：
 
 #### 默认代理（发布） {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![chlimage_1-412](assets/chlimage_1-412.png)
 
 #### 反向复制代理（发布反向） {#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![chlimage_1-413](assets/chlimage_1-413.png)
 
 ### 作者上的隧道服务 {#tunnel-service-on-author}
 
@@ -281,8 +279,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 要启用隧道服务，请执行以下操作：
 
-* 论作 **者**
-* 以管理权限登录
+* 以管理权限登录您的创作实例。
 * 如果发布者不是localhost:4503或传输用户不是， `admin`则 [配置复制代理](#replication-agents-on-author)
 
 * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
@@ -294,7 +291,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 * 选中“启 **用** ”框
 * Select **Save**
 
-![](/help/communities/assets/chlimage_1-129.png)
+   ![chlimage_1-414](assets/chlimage_1-414.png)
 
 ### 复制加密密钥 {#replicate-the-crypto-key}
 
@@ -313,8 +310,8 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
    * 导航到数据文件夹，例如，
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
-   * 复制hmac和主节点文件
 
+      * 复制hmac和主节点文件
 
 
 * 对于每个目标AEM实例
@@ -330,6 +327,7 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
 >
 >如果已配置基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 要获得帮助， [请联系客户关怀](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)。
 
+
 #### 存储库复制 {#repository-replication}
 
 将关键材料存储在存储库中（与AEM 6.2及更早版本一样），可通过在每个AEM实例的首次启动时指定以下系统属性（创建初始存储库）来保留：
@@ -340,9 +338,10 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
 >
 >验证作者上的复制代 [理是否正确配置](#replication-agents-on-author) ，这一点很重要。
 
+
 密钥材料存储在存储库中，将加密密钥从作者复制到其他实例的方式如下：
 
-使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
+使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 * 浏览 [到https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
 * 选择 `/etc/key`
@@ -351,7 +350,7 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
 
 * [刷新Granite加密捆绑](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+   ![chlimage_1-415](assets/chlimage_1-415.png)
 
 #### 刷新Granite加密捆绑 {#refresh-the-granite-crypto-bundle}
 
@@ -362,7 +361,7 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
 * 找 `Adobe Granite Crypto Support` 到捆绑包(com.adobe.granite.crypto)
 * 选择刷 **新**
 
-![](/help/communities/assets/chlimage_1-131.png)
+   ![chlimage_1-416](assets/chlimage_1-416.png)
 
 * 稍后，应显示“ **成功** ”对话框：
    `Operation completed successfully.`
