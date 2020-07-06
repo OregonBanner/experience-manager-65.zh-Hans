@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 43663703a79b95ccdb83eb9b5730143bde101305
+source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 1%
@@ -165,7 +165,7 @@ ht-degree: 1%
 
    注意： 虽然作者在asipath下有JCR *节点* ，但这些节点是用于SCF框架的。 实际UGC不在JCR中，而在MongoDB中。
 
-1. 视图蒙古社区中的 **[!UICONTROL UGC >集合>内容]**
+1. 视图mongodb Communities中的 **[!UICONTROL UGC]** > **[!UICONTROL 集合]** >内 **[!UICONTROL 容]**
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
@@ -175,7 +175,6 @@ ht-degree: 1%
    * 要选 `core selector` 择的用户 `collection1`
    * 选择 `Query`
    * 选择 `Execute Query`
-
    ![chlimage_1-194](assets/chlimage_1-194.png)
 
 ## 疑难解答 {#troubleshooting}
@@ -187,7 +186,6 @@ ht-degree: 1%
 1. 确保MSRP已配置为默认提供程序：
 
    * 在所有作者和发布AEM实例上，重新访问 [存储配置控制台](srp-config.md)
-
    或检查AEM存储库：
 
    * 在JCR中， [if/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
