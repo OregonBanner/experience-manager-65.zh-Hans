@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: 2b04724138f28cd7f357d155b88daf964632f3bc
+source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '616'
 ht-degree: 3%
 
 ---
@@ -32,13 +32,17 @@ ht-degree: 3%
 
 使用CRXDE Lite:
 
-<!--Resolve steps below-->
-    名称： `sling:resourceSuperType&#39;
-    Type: “字符串”
-    值： `foundation/components/page`
+1. 选择节 `/apps/an-scf-sandbox/components/playpage`点。
+1. 在“属性”选项卡中，输入具有以下值的新属性：
 
-1. 单击绿色 **[!UICONTROL [+添]加]**
-1. 单击“ **[!UICONTROL 全部保存”]**
+   名称: `sling:resourceSuperType`
+
+   类型: `String`
+
+   值: `foundation/components/page`
+
+1. 单击绿色 **[!UICONTROL +添加]** 按钮。
+1. 单击“ **[!UICONTROL 全部保存]**”。
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -89,12 +93,12 @@ ht-degree: 3%
 
    要设置创作，请使 `body.jsp` 用本地脚本叠加并在正文中包含段落系统(parsys):
 
-   1. 导航至 `/apps/an-scf-sandbox/components`
-   1. 选择节 `playpage`点
+   1. 导航至 `/apps/an-scf-sandbox/components`.
+   1. 选择节 `playpage` 点。
    1. 右键单击并选择 `Create > Create File...`
 
       * 名称： **body.jsp**
-   1. 单击“ **[!UICONTROL 全部保存”]**
+   1. 单击“ **[!UICONTROL 全部保存]**”。
 
    在以 `/apps/an-scf-sandbox/components/playpage/body.jsp` 下文本中打开并粘贴：
 
@@ -114,7 +118,7 @@ ht-degree: 3%
    </body>
    ```
 
-1. 单击“ **[!UICONTROL 全部保存”]**
+1. 单击“ **[!UICONTROL 全部保存]**”。
 
 **在编辑模式下视图浏览器中的页面：**
 
