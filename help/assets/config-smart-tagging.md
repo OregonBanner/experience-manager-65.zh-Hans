@@ -3,9 +3,9 @@ title: 使用智能内容服务配置资产标记。
 description: 了解如何使用智能内容服务在中配置智能标记 [!DNL Adobe Experience Manager]，以及增强智能标记功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: dfac819018e85e0e8221bfcc57bc1eaf43b7ff25
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1116'
 ht-degree: 14%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 14%
 
 要配置集成，请使用Adobe开发人员控制台集成中的技术帐户ID、组织ID、客户端机密、授权服务器和API密钥字段的值。 创建智能标记云配置允许对部署中的API请求进行 [!DNL Experience Manager] 身份验证。
 
-1. 在中 [!DNL Experience Manager]，导航到 **[!UICONTROL 工具>Cloud Service>旧Cloud Service]** ，以打开 [!UICONTROL Cloud Service控] 制台。
+1. 在中， [!DNL Experience Manager]导航到 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Service]** > **[!UICONTROL LegacyCloud Service，以]** 便打开控制台  ，从而打开旧式Cloud Service控制台。
 1. 在资产 **[!UICONTROL 智能标记下]**，打开以上创建的配置。 在服务设置页面上，单击 **[!UICONTROL 编辑]**。
 1. 在 **[!UICONTROL AEM 智能内容服务]**&#x200B;对话框中，为&#x200B;**[!UICONTROL 服务 URL]** 和&#x200B;**[!UICONTROL 授权服务器]**&#x200B;字段使用预填充的值。
 1. 对于字段 **[!UICONTROL API 密钥]**、**[!UICONTROL 技术帐户 ID]**、**[!UICONTROL 组织 ID]** 和&#x200B;**[!UICONTROL 客户端密钥]**，请使用上面生成的值。
@@ -103,15 +103,13 @@ ht-degree: 14%
 完成配置后，可使用JMX MBean验证配置。 要验证，请按照以下步骤操作。
 
 1. 访问您 [!DNL Experience Manager] 的服务器 `https://[aem_server]:[port]`。
-1. 转到“ **[!UICONTROL 工具”>“操作”>“Web控制台]** ”以打开OSGi控制台。 单击 **[!UICONTROL “主> JMX]**”。
-1. 单 **[!UICONTROL 击com.day.cq.dam.similaritysearch.internal.impl]**。 它打开“相似 **[!UICONTROL 性搜索”杂项任务]**。
-1. 单 **[!UICONTROL 击validateConfigs()]**。 在验证 **[!UICONTROL 配置对话框中]** ，单击调 **[!UICONTROL 用]**。
+1. 转到 **[!UICONTROL 工具]** >操 **[!UICONTROL 作]** > **[!UICONTROL Web控制台]** ，打开OSGi控制台。 单击 **[!UICONTROL “主]>[!UICONTROL JMX]**”。
+1. 单击 `com.day.cq.dam.similaritysearch.internal.impl`. 它打开“相似 **[!UICONTROL 性搜索”杂项任务]**。
+1. 单击 `validateConfigs()`. 在验证 **[!UICONTROL 配置对话框中]** ，单击调 **[!UICONTROL 用]**。 验证结果将显示在同一对话框中。
 
-   验证结果将显示在同一对话框中。
+## 在DAM更新资产工作流 [!UICONTROL 程中启用智能标] 记（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-## 在DAM更新资产工作流中启用智能标记（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
-
-1. 在中， [!DNL Experience Manager]转到“工 **[!UICONTROL 具”>“工作流”>“模型”]**。
+1. 在中 [!DNL Experience Manager]，转到“工 **[!UICONTROL 具]** ”>“工 **[!UICONTROL 作流]** ” **[!UICONTROL >“]**&#x200B;模型”。
 1. 在&#x200B;**[!UICONTROL 工作流模型]**&#x200B;页面上，选择 **[!UICONTROL DAM 更新资产]**&#x200B;工作流模式。
 1. 单击工 **[!UICONTROL 具栏]** 中的编辑。
 1. 展开侧面板以显示步骤。拖动 DAM 工作流部分中可用的&#x200B;**[!UICONTROL 智能标记资产]**&#x200B;步骤，并将其放在&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤之后。
