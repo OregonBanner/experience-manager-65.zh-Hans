@@ -4,9 +4,9 @@ description: 有关配置、 [!DNL Experience Manager] 对硬件、软件和网�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: da2e435f33e8527793e009700c30e60868d196be
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '2776'
+source-wordcount: '2767'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,8 @@ mkfs -q /dev/ram1 800000
 
 Adobe建议在Java [!DNL Experience Manager Assets] 8上部署以获得最佳性能。
 
->[!NOTE]
->
->自2015年4月起，Oracle已停止发布Java 7的更新。
+<!-- TBD: Link to the latest official word around Java.
+-->
 
 ### JVM参数 {#jvm-parameters}
 
@@ -77,11 +76,11 @@ Adobe建议在Java [!DNL Experience Manager Assets] 8上部署以获得最佳性
 
 ### 配置缓冲的图像缓存的最大大小 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-在将大量资产上传到Adobe Experience [!DNLAManager时]，为了允许意外的内存消耗高峰并防止JVM因OutOfMemoryError而失败，请减小已缓冲映像缓存的已配置最大大小。 例如，您有一个系统，其最大堆(- `Xmx`参数)为5 GB,Oak BlobCache设置为1 GB,文档缓存设置为2 GB。 在这种情况下，缓冲的缓存将最大占用1.25 GB内存，这将仅保留0.75 GB内存，以防意外的峰值。
+在将大量资产上传到Adobe [!DNLAExperience Manager]时，为了允许意外的内存消耗高峰并防止JVM因OutOfMemoryError而失败，请减小已缓冲映像缓存的已配置最大大小。 例如，您有一个系统，其最大堆(- `Xmx`参数)为5 GB,Oak BlobCache设置为1 GB,文档缓存设置为2 GB。 在这种情况下，缓冲的缓存将最大占用1.25 GB内存，这将仅保留0.75 GB内存，以防意外的峰值。
 
 在OSGi Web控制台中配置缓冲的缓存大小。 在 `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`，以字节为单 `cq.dam.image.cache.max.memory` 位设置属性。 例如，1073741824为1 GB(1024 x 1024 x 1024 = 1 GB)。
 
-从Experience Manager 6.1 SP1中，如果您使用节点 `sling:osgiConfig` 来配置此属性，请确保将数据类型设置为长。 有关详细信息，请参 [阅CQBufferedImageCache在资产上传过程中消耗堆](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)。
+从Experience Manager6.1 SP1中，如果您使用节点 `sling:osgiConfig` 配置此属性，请确保将数据类型设置为长。 有关详细信息，请参 [阅CQBufferedImageCache在资产上传过程中消耗堆](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)。
 
 ### 共享数据存储 {#shared-data-stores}
 
@@ -118,7 +117,7 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 主要而言，您的网络优化策略取决于可用带宽量以及Experience Manager实例 [!DNLE的负载] 。 包括防火墙或代理在内的常见配置选项有助于提高网络性能。 以下是需要牢记的一些要点：
 
-* 根据您的实例类型（小、中、大），确保您有足够的网络带宽用于Experience Manager实例。 如果Experience Manager托管在AWS上，则 [!DNLE适当的带宽分] 配尤为重要。
+* 根据您的实例类型（小、中、大），确保您的Experience Manager实例具有足够的网络带宽。 如果Experience Manager托管在AWS上，则 [!DNLE适当的带宽分] 配尤为重要。
 * 如果您 [!DNLE的Experience Manager] 实例托管在AWS上，您可以通过采用通用的扩展策略受益。 如果用户期望负载较高，请升级实例。 缩小它以适中／低负载。
 * HTTPS: 大多数用户都有防火墙来嗅探HTTP通信，这可能会对上载文件或在上载操作期间损坏文件产生不利影响。
 * 大文件上传： 确保用户有有线网络连接到网络（WiFi连接快速饱和）。
@@ -212,7 +211,7 @@ DAM [!UICONTROL 更新资产工作流] ，包含为任务配置的完整步骤�
 >
 >ImageMagick和 `policy.xml` 文件 `configure.xml` 可从中获取， `/usr/lib64/ImageMagick-&#42;/config/` 而不 `/etc/ImageMagick/`是。有关配置文 [件的位置，请](https://www.imagemagick.org/script/resources.php) 参阅ImageMagick文档。
 
-如果您使 [!DNL Experience Manager] 用的是Adobe Managed Services(AMS)，如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户服务中心。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe专有格式选择最佳的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
+如果您正在 [!DNL Experience Manager] 使用Adobe Managed Services(AMS)，请联系Adobe客户服务中心（如果您计划处理大量大型PSD或PSB文件）。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe专有格式选择最佳的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ### XMP writeback {#xmp-writeback}
 
@@ -228,7 +227,7 @@ DAM [!UICONTROL 更新资产工作流] ，包含为任务配置的完整步骤�
 
 ## 复制 {#replication}
 
-在将资产复制到大量发布实例（例如在Sites实施中）时，Adobe建议您使用链复制。 在这种情况下，作者实例复制到单个发布实例，而该实例又复制到其他发布实例，从而释放了作者实例。
+在将资源复制到大量发布实例（例如，在Sites实施中）时，Adobe建议您使用链复制。 在这种情况下，作者实例复制到单个发布实例，而该实例又复制到其他发布实例，从而释放了作者实例。
 
 ### 配置链复制 {#configure-chain-replication}
 
