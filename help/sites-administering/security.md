@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 86d3f14ec9e99297ede0aa1c027884d7f73665bc
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 2%
@@ -104,7 +104,7 @@ AEM WCM会安装许多用户和用户组。 安装后首次访问安全控制台
   <tr>
    <td>dam用户</td>
    <td>组</td>
-   <td>典型AEM资产用户的现成参考组。 此组的成员具有相应的权限，可启用资产和集合的上传／共享。</td>
+   <td>典型AEM Assets用户的现成参考组。 此组的成员具有相应的权限，可启用资产和集合的上传／共享。</td>
    <td> </td>
   </tr>
   <tr>
@@ -205,7 +205,7 @@ AEM使用ACL确定用户或用户组可以执行哪些操作以及在何处可�
 
 >[!NOTE]
 >
->AEM会自动为集合中的角色分配（所有者、编辑者、查看器）生成用 [户组](/help/assets/managing-collections-touch-ui.md)。 但是，手动添加此类组的ACL可能会在AEM中引入安全漏洞。 Adobe建议您避免手动添加ACL。
+>AEM会自动为集合中的角色分配（所有者、编辑者、查看器）生成 [用户组](/help/assets/managing-collections-touch-ui.md)。 但是，手动添加此类组的ACL可能会在AEM中引入安全漏洞。 Adobe建议您避免手动添加ACL。
 
 ### 访问控制列表及其评估方式 {#access-control-lists-and-how-they-are-evaluated}
 
@@ -457,9 +457,11 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 1. 根据您是创建用户还是用户组，输入所需的详细信息。
 
    * 如果选择 **创建用户** ，则输入登录ID、名字和姓氏、电子邮件地址和密码。 默认情况下，AEM会根据姓氏的第一个字母创建一个路径，但您可以选择其他路径。
+
    ![createuserdial](assets/createuserdialog.png)
 
    * 如果选择 **创建组**，则输入组ID和可选说明。
+
    ![creategroupdialog](assets/creategroupdialog.png)
 
 1. 单击&#x200B;**创建**。您创建的用户或用户组显示在树列表中。
@@ -493,11 +495,11 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 >[!NOTE]
 >
 >无法使用安全控制台更改管理员密码。 要更改管理员帐户的口令，请使用Granite Operations [提供的](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) “用户”控制台。
-> 如果您在JEE上使用AEM Forms，请不要使用下面的说明更改密码，而是使用JEE管理控制台(/adminui)上的AEM Forms更改密码。
+>
+>如果您在JEE上使用AEM Forms，请勿使用下面的说明更改口令，而是使用JEE管理控制台(/adminui)上的AEM Forms更改口令。
 
 1. 在“安 **全** ”控制台中，多次单击要更改密码的用户名。
 1. 单击“ **属性** ”选项卡（如果尚未激活）。
-
 1. 单击“ **设置密码**”。 “Set Password（设置密码）”窗口将打开，您可以在其中更改密码。
 
    ![cqsecurityuserpassword](assets/cqsecurityuserpassword.png)
@@ -638,6 +640,7 @@ AEM优惠了三种从用户组中删除用户或用户组的不同方法：
 >* 对组应用的任何复制权限均适用于该组中的所有用户。
 >* 用户的复制权限将取代组的复制权限。
 >* 允许复制权限的优先级高于拒绝复制权限。 请参 [阅AEM中的权限](#permissions-in-aem) ，以了解更多信息。
+
 >
 
 
@@ -687,7 +690,7 @@ AEM优惠了三种从用户组中删除用户或用户组的不同方法：
 
 使用此函数时要小心，因为它可能允许用户执行其自己的用户无法执行的操作。 模拟用户时，系统会通知用户他们没有以自己的身份登录。
 
-您可能希望使用此功能时会出现各种情况，包括：
+您可能希望使用此功能的情况有多种，包括：
 
 * 如果您不在办公室，您可以在您不在的时候让其他人假冒您。 通过使用此功能，您可以确保某人具有您的访问权限，而您无需修改用户用户档案或提供您的密码。
 * 您可以将其用于调试目的。 例如，查看网站如何查找具有受限访问权限的用户。 此外，如果用户抱怨技术问题，您可以模拟该用户来诊断和修复问题。
