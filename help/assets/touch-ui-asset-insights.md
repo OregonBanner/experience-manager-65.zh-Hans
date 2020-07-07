@@ -3,7 +3,7 @@ title: 资产分析
 description: 了解资产分析功能如何让您跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用情况统计。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 8%
@@ -43,6 +43,7 @@ ht-degree: 8%
    * **Web和移动**: 资产加入网站和应用程序的次数
    * **社交**: 资产在解决方案(如Adobe Social和Adobe Campaign)中的使用次数
    * **电子邮件**: 资产在电子邮件活动中的使用次数
+
    ![usage_statistics](assets/usage_statistics.png)
 
    >[!NOTE]
