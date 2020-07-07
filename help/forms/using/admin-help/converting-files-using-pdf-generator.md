@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: 68ea2335a8466c3c23b766efb1a04b6a38d7f670
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 0%
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 PDF Generator在Acrobat 5.0或更高版本中创建的PDF文档包含XML格式的文档元数据。 *元数据* 包括有关文档及其内容的信息，如作者姓名、关键字以及搜索实用程序可以使用的版权信息。
 
-文档元数据包含（但不限于）也显示在Acrobat的“文档属性”对话框的“描述”选项卡上的信息。 在“描述”选项卡上所做的更改会反映在文档元数据中。 文档元数据可以通过使用第三方产品进行扩展和修改。
+文档元数据包含（但不限于）也显示在Acrobat的“文档属性”对话框的“描述”选项卡上的信息。 “描述”选项卡上所做的更改会反映在文档元数据中。 文档元数据可以通过使用第三方产品进行扩展和修改。
 
 Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用的XML框架，该框架实现了文档元数据在出版工作流的创建、处理和交换的标准化。 您可以以XMP格式保存和导入文档元数据XML源代码，从而在各种文档之间轻松共享元数据。 有关XMP文件的详细信息，请参 [阅可扩展元数据平台(XMP)](https://www.adobe.com/products/xmp/)[和Adobe XMP开发人员中心](https://www.adobe.com/devnet/xmp.html)。
 
@@ -66,19 +66,22 @@ Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用
 >
 >* HTML到PDF功能需要系统字体目录中的某些字体。 在Linux、Solaris和AIX系统上，系统字体目录必须包含Courier字体。 在Windows系统上，系统字体目录必须包含Times New Roman。
    >
-   > 
+   >
 * （仅限基于UNIX的系统）AEM Forms服务器上应提供以下日文字体之一，以将带有日文字体的网页转换为PDF文档。
    >
-   >   
-   * 《萨扎纳米哥特》
-   >   * &quot;Kozuka Gothic Pro-VI&quot;
-   >   * &quot;Kozuka Mincho Pro-VI&quot;
-   >   * 《萨扎纳米哥特》
-   >   * 《Kozuka Mincho Pr6N》
-   >   * 《萨萨纳米明草》
-   >   * “Adobe Heiti Std”
-   >   * “Adobe Song Std”
->* 要从本地文件系统上传文件，请使用HTML至PDF页面上的“上传文件”选项。
+   >  
+* 《萨扎纳米哥特》
+>  * &quot;Kozuka Gothic Pro-VI&quot;
+>  * &quot;Kozuka Mincho Pro-VI&quot;
+>  * 《萨扎纳米哥特》
+>  * 《Kozuka Mincho Pr6N》
+>  * 《萨萨纳米明草》
+>  * “Adobe Heiti Std”
+>  * “Adobe Song Std”
+
+   >
+   >
+* 要从本地文件系统上传文件，请使用HTML至PDF页面上的“上传文件”选项。
 
 
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“HTML到PDF”。
@@ -86,6 +89,7 @@ Adobe Extensible Metadata Platform(XMP)为Adobe应用程序提供了一个通用
 
    * 在“上传文件”中，键入HTML文件或ZIP文件的路径和文件名，或单击“浏览”找到并选择它。
    * 在“指定URL”框中，键入要转换的页面或网站的URL。
+
    >[!NOTE]
    >
    >要转换的文件的文件扩展名必须为。html、.htm或。zip。
