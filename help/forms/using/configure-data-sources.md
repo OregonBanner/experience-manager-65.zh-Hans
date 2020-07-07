@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9df949b0069dad7fc1627977097cec5546cd845f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ AEM Forms数据集成允许您配置和连接到不同的数据源。 现成支�
    * JDBC连接URI
    * 用于与JDBC驱动程序建立连接的用户名和密码
 
-   >[!NOTE] {graybox=&quot;true&quot;
+   >[!NOTE]
    >
    >请确保在配置数据源之前加密敏感信息，如口令。 要加密：
    >
@@ -82,7 +82,7 @@ AEM Forms数据集成允许您配置和连接到不同的数据源。 现成支�
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
 
-   >[!NOTE] {graybox=&quot;true&quot;
+   >[!NOTE]
    >
    >上例 **中的** *表示CRXDE结构中AEM用户用户档案 `profile/empLocation/` 中节点下的所有节点。 表单数据模型可以访问节点下 `city` 任何节点 `string` 中的类型属 `profile/empLocation/` 性。 但是，包含指定属性的节点必须采用一致的结构。
 
