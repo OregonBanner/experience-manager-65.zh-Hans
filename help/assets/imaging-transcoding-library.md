@@ -3,7 +3,7 @@ title: 图像转码库
 description: 了解如何配置和使用Adobe的图像转码库，它是一款可以执行核心图像处理功能的图像处理解决方案，包括编码、转码、图像重新取样和图像大小调整。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 1. 从“软件 [分发”下载Imaging Cronding Library包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) ，然后使用包管理器安装它。 该软件包兼容Experience Manager6.5。
 
-1. 要了解捆绑ID，请 `com.day.cq.dam.cq-dam-switchengine`登录到Web控制台，然后单击“OSGi **[!UICONTROL >捆绑”]**。 或者，要打开捆绑包控制台，请访 `https://[aem_server:[port]/system/console/bundles/` 问URL。 找到 `com.day.cq.dam.cq-dam-switchengine` 捆绑包及其ID。
+1. 要了解捆绑ID，请 `com.day.cq.dam.cq-dam-switchengine`登录到Web控制台，然后单击“OSGi **** ”>“ **[!UICONTROL 捆绑”]**。 或者，要打开捆绑包控制台，请访 `https://[aem_server:[port]/system/console/bundles/` 问URL。 找到 `com.day.cq.dam.cq-dam-switchengine` 捆绑包及其ID。
 
 1. 通过使用命令检查文件夹，确保提取所 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`有所需的库，其中文件夹名称是使用捆绑ID构建的。 例如，该命令是 `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` 如果bundle id为 `588`。
 
@@ -105,7 +105,7 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
 
 更新DAM [!UICONTROL 更新资产工作流] ，以使用库处理图像。
 
-1. 在Experience Manager用户界面中，选择“ **[!UICONTROL 工具”>“工作流”>“模型]**”。
+1. 在Experience Manager用户界面中，选 **[!UICONTROL 择“工具]** ”>“ **[!UICONTROL 工作流]** ” **[!UICONTROL >“]**&#x200B;模型”。
 
 1. 在“工作 **[!UICONTROL 流模型]** ”页面中，在编 **[!UICONTROL 辑模式下打开DAM]** 更新资产工作流模型。
 
@@ -126,7 +126,6 @@ Adobe的成像转码库是一种专有的图像处理解决方案，可以执行
    * `SWitchEngine -input ${file} -destMime PNG -resize 140x100 -output ${directory}cq5dam.thumbnail.140.100.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 319 -output ${directory}cq5dam.thumbnail.319.319.png`
    * `SWitchEngine -input ${file} -destMime JPEG -resize 1280 -preserveCMYK -output ${directory}cq5dam.web.1280.1280.jpeg`
-
    ![石](assets/chlimage_1-199.png)
 
 1. （可选）使用单个命令从中间再现生成缩略图。 中间再现用作源，以生成静态和Web再现。 这种方法比以前的方法快。 但是，不能使用此方法将自定义参数应用于缩略图。
