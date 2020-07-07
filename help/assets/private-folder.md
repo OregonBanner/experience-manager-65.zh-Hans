@@ -3,9 +3,9 @@ title: 在Adobe Experience Manager中创建和共享专用文件夹。
 description: 了解如何在Adobe Experience Manager资产中创建专用文件夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '504'
 ht-degree: 14%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 14%
 
    >[!NOTE]
    >
-   > 专用文件夹至少有一个具有所有者角色的成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
+   >专用文件夹至少有一个具有所有者角色的成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。根据您分配的角色，用户在登录 资产时便会被分配一组针对您的专用文件夹所拥有的权限。
 1. 单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭确认消息。
