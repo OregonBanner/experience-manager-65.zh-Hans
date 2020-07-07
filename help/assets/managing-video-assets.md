@@ -3,7 +3,7 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 10%
