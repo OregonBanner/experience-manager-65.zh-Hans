@@ -3,7 +3,7 @@ title: 相关资产
 description: 了解如何关联共享一些常见属性的数字资产。 还可在数字资产之间创建源源关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
@@ -17,8 +17,9 @@ ht-degree: 0%
 
 使用此功能，您可以灵活地与供应商或代理共享低分辨率PDF文件或JPG文件，并且仅可应要求提供高分辨率INDD文件。
 
->[!NOTE] 只有对资产具有编辑权限的用户才能与资产建立关系并取消资产的关联。
+>[!NOTE]
 >
+>只有对资产具有编辑权限的用户才能与资产建立关系并取消资产的关联。
 
 ## Relate assets {#relating-assets}
 
