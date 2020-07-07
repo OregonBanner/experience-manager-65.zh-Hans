@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9eb8f3921e7d485ca4eb035cd04a9d8731dd6b06
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '6229'
 ht-degree: 2%
@@ -589,7 +589,7 @@ UI可用于通过在屏幕左上角的搜索框中键入筛选条件来筛选表
 
 >[!NOTE]
 >
-> 有关工作流维护的详细信息，请参 [阅此页](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
+>有关工作流维护的详细信息，请参 [阅此页](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)。
 
 ### 审核日志维护 {#audit-log-maintenance}
 
@@ -668,7 +668,7 @@ UI可用于通过在屏幕左上角的搜索框中键入筛选条件来筛选表
 
 除了上述服务属性外， `process()` 还需要 `JobConsumer` 通过添加应为维护任务执行的代码来实现接口的方法。 提供的 `JobExecutionContext` 状态信息可用于输出状态信息，检查用户是否停止了作业并创建结果（成功或失败）。
 
-如果维护任务不应在所有安装上运行（例如，仅在发布实例上运行），则可以通过添加使服务需要配置才能处于活动状态 `@Component(policy=ConfigurationPolicy.REQUIRE)`。 然后，您可以根据配置将其标记为运行模式（取决于存储库中的模式）。 有关详细信息，请参 [阅配置OSGi](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)。
+如果维护任务不应在所有安装上运行（例如，仅在发布实例上运行），则可以通过添加使服务需要配置才能处于活动状态 `@Component(policy=ConfigurationPolicy.REQUIRE)`。 然后，您可以根据配置将其标记为运行模式（取决于存储库中）。 有关详细信息，请参 [阅配置OSGi](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)。
 
 下面是一个自定义维护任务的示例，该自定义维护操作从可配置的临时目录中删除文件，这些临时目录在过去24小时内已被修改：
 
