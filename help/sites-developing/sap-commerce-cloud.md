@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 0%
@@ -64,7 +64,7 @@ ht-degree: 0%
 
    * 例如， `cq:commerceProvider` a property with the `hybris` value will correate to the OSGi configuration for **Day CQ Commerce Factory for Hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory)- where the parameter asse value `commerceProvider``hybris`.
 
-   * 此处可以配置目录版 **本等其** 他属性（如果适用并可用）。
+   * 此处可以配置目录版 **本等其** 他属性（如果适用且可用）。
 
 请参阅以下示例：
 
@@ -227,11 +227,9 @@ The product/variant resource does not always hold the actual product dataIt migh
    >
    >
 1. 再加一个
-   >   通过产品引用的属性选 `variationAxis` 择此附加变体(通常适 `color` 用于Geometrixx Outdoors)。
-
 >
-
-
+>   
+通过产品引用的属性选 `variationAxis` 择此附加变体(通常适 `color` 用于Geometrixx Outdoors)。
 
 #### 产品引用和产品数据 {#product-references-and-product-data}
 
@@ -498,7 +496,7 @@ public class AxisFilter implements VariantFilter {
 
 >[!NOTE]
 >
->您可以实施送货选择器； 例如：
+>您可以实施运输选择器； 例如：
 >
 >`yourProject/commerce/components/shippingpicker`:
 >
@@ -512,7 +510,7 @@ public class AxisFilter implements VariantFilter {
 
 **付款处理**
 
-* 付款 `CommerceSession` 处理连接也归该用户所有。
+* 支付 `CommerceSession` 处理连接也归该用户所有。
 * 实施者需要向实施添加特定呼叫(到他们选择的付款处理服务 `CommerceSession` )。
 
 **订单履行**
@@ -562,7 +560,7 @@ AEM与各种电子商务系统之间提供集成。 这需要一种在不同系�
 
 * Accounts in Hybris
 
-   AEM creates a ecompoced(subordiance)account in hybris for each shopper. 此帐户的用户名与AEM用户名相同。 密码随机密码是自动生成并存储在AEM中（已加密）的。
+   AEM creates a ecompoged(下属)account in hybris for each shopper. 此帐户的用户名与AEM用户名相同。 密码随机密码是自动生成并存储在AEM中（已加密）的。
 
 #### 预先存在的用户 {#pre-existing-users}
 
