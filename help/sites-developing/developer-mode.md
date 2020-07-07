@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +39,9 @@ source-git-commit: 2b0ef111f2f393fac2da1eef76c2ec79a471ff3f
 >
 >* 仅在触屏优化UI中可用（编辑页面时）。
 >* 在移动设备或桌面上的小窗口上不可用（由于空间限制）。
-   >   * 当宽度小于1024px时，会发生这种情况。
+   >
+   >   
+   * 当宽度小于1024px时，会发生这种情况。
 >* 仅适用于组成员的用 `administrators` 户。
 
 
