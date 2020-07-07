@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '9250'
 ht-degree: 8%
@@ -141,7 +141,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 使用FTP上传资产 {#uploading-assets-using-ftp}
 
-Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大型资产(> 1 GB)或上传整个文件夹和子文件夹，您应使用FTP。 您甚至可以设置FTP上传，以定期进行。
+Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大型资产(>1 GB)或上传整个文件夹和子文件夹，您应使用FTP。 您甚至可以设置FTP上传，以定期进行。
 
 >[!NOTE]
 >
@@ -663,7 +663,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
