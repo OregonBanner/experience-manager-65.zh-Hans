@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: 5a97dd9a34d42bfbf3e2185763e4040e1190f297
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ### 将Batch API用于监视文件夹 {#using-the-batch-api-watched-folders}
 
-为了轻松体验API,AEM Forms提供了一个已配置为使用批处理API的监视文件夹服务。 您可以通过AEM Forms UI访问该服务，以生成多个交互式通信。 您还可以根据需要创建自定义服务。 您可以使用下面列出的方法将Batch API用于监视文件夹：
+为了方便地体验API,AEM Forms提供已配置为使用批处理API的监视文件夹服务。 您可以通过AEM FormsUI访问服务以生成多个交互式通信。 您还可以根据需要创建自定义服务。 您可以使用下面列出的方法将Batch API用于监视文件夹：
 
 * 以JSON文件格式指定输入数据（记录）以生成交互式通信
 * 使用保存在外部数据源中并通过表单数据模型访问的输入数据（记录）产生交互式通信
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 1. 登录到AEM实例并创建交互式通信。 要使用下面给出的示例代码中提到的交互式通信，请单 [击此处](assets/SimpleMediumIC.zip)。
 1. [在AEM实例上使用Apache Maven构建和部署](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) AEM项目。
-1. 在 [AEM项目的POM文件的依赖项列表中添加](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) AEM Forms Client SDK版本6.0.12或更高版本。 例如，
+1. 在 [AEM项目的POM文件的依赖项列表中](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 添加AEM Forms客户端SDK版本6.0.12或更高版本。 例如，
 
    ```XML
        <dependency>
@@ -345,12 +345,15 @@ ht-degree: 0%
 除了在文件系统上保存数据外，您还可以将JSON文件存储在CRX-repository、文件系统、Web服务器中，或者可以通过OSGI预填服务访问数据。 使用各种协议合并数据的语法有：
 
 * **CRX协议**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
 
 * **文件协议**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/Users/af/mergedJsonData.json`
 
 * **预填服务协议**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
 
    SERVICE_NAME指OSGI预填服务的名称。 请参阅创建并运行预填服务。
@@ -358,7 +361,9 @@ ht-degree: 0%
    标识符指OSGI预填服务获取预填数据所需的任何元数据。 登录用户的标识符是可以使用的元数据示例。
 
 * **HTTP协议**
+
    `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
 
 >[!NOTE]
-> 默认情况下，仅启用CRX协议。 要启用其他受支持的协议，请参 [阅使用Configuration Manager配置预填服务](https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#ConfiguringprefillserviceusingConfigurationManager)。
+>
+>默认情况下，仅启用CRX协议。 要启用其他受支持的协议，请参 [阅使用Configuration Manager配置预填服务](https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#ConfiguringprefillserviceusingConfigurationManager)。
