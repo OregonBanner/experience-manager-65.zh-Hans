@@ -3,7 +3,7 @@ title: 通过DTM实现资产洞察
 description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -34,7 +34,6 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 它免费�
    * 选择“ **[!UICONTROL Web属性]** ”选项卡，然后单 **[!UICONTROL 击“添加属性”]**。
 
    * 根据需要更新字段，然后单击“创 **[!UICONTROL 建属性”]**。 请参阅 [文档](https://helpx.adobe.com/experience-manager/using/dtm.html)。
-
    ![创建编辑Web属性](assets/Create-edit-web-property.png)
 
 1. 在“规 **[!UICONTROL 则]** ”选项卡中，从导 **[!UICONTROL 航窗格中选择“页面加载规则]** ”，然后单击“ **[!UICONTROL 创建新规则”]**。
@@ -45,15 +44,15 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 它免费�
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. 单击Experience Manager徽标，然后转到工具 **[!UICONTROL >资产]**。
+1. 单击Experience Manager徽标，然后转至 **[!UICONTROL 工具]** > **[!UICONTROL 资产]**。
 1. 单击 **[!UICONTROL “洞察页面跟踪器]**”，复制跟踪器代码，然后将其粘贴到您在步骤6中打开的“脚本”对话框中。 保存更改。
 
    >[!NOTE]
    >
-   > * `AppMeasurement.js` 。 它预计可通过DTM的AdobeAnalytics工具获得。
-   > * 将删除 `assetAnalytics.dispatcher.init`对()的调用。 DTM的AdobeAnalytics工具完成加载后，应调用该函数。
-   > * 根据资产分析页面跟踪器的托管位置(例如Experience Manager、CDN等)，脚本源的来源可能需要更改。
-   > * 对于托管Experience Manager的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
+   >* `AppMeasurement.js` 。 它预计可通过DTM的AdobeAnalytics工具获得。
+   >* 将删除对 `assetAnalytics.dispatcher.init()` 的呼叫。 DTM的AdobeAnalytics工具完成加载后，应调用该函数。
+   >* 根据资产分析页面跟踪器的托管位置(例如Experience Manager、CDN等)，脚本源的来源可能需要更改。
+   >* 对于托管Experience Manager的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
 
 
 1. 访问 `https://dtm.adobe.com`. 单击 **[!UICONTROL Web属性]** 中的“概述”，然后单 **[!UICONTROL 击“添加工]** 具”或打开现有的Adobe Analytics工具。 创建工具时，可将“配置方 **[!UICONTROL 法”设置为]** “自 **[!UICONTROL 动”]**。
