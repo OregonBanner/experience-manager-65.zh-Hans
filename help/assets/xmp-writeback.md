@@ -3,9 +3,9 @@ title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有或特定演绎版。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1c845a479fcf04db1b2da8bcb9cf765fedd58b6
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '793'
 ht-degree: 8%
 
 ---
@@ -64,15 +64,15 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 >
 >有关64位Linux中的XMP写回问题，请 [参阅如何在64位RedHat Linux上启用XMP写回](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)。
 >
->有关受支持平台的详细信息，请参 [阅XMP元数据回写的先决条件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
+>有关支持的平台，请参 [阅XMP元数据回写先决条件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
 
 ## 筛选XMP元数据 {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] 支持从资产二进制文件读取并在摄取资产时存储在JCR中的XMP元数据的属性／节点的阻止列表和允许的列表筛选。
+[!DNL Experience Manager Assets] 支持阻止列表和允许列表过滤XMP元数据的属性／节点，该元数据从资产二进制文件读取并在摄取资产时存储在JCR中。
 
-使用阻止的列表进行过滤可导入除为排除指定的属性外的所有XMP元数据属性。 但是，对于具有大量XMP元数据（例如，1000个节点具有10,000个属性）的资产类型（如INDD文件），要筛选的节点名称并不总是预先知道的。 如果使用阻止的列表进行过滤允许导入大量具有大量XMP元数据的资产，则AEM实例／群集可能会遇到稳定性问题，例如阻塞的观察队列。
+使用阻止列表进行筛选可导入除为排除指定的属性外的所有XMP元数据属性。 但是，对于具有大量XMP元数据（例如，1000个节点具有10,000个属性）的资产类型（如INDD文件），要筛选的节点名称并不总是预先知道的。 如果使用阻止列表进行筛选允许导入大量具有大量XMP元数据的资产，则AEM实例／群集可能会遇到稳定性问题，例如阻塞的观察队列。
 
-通过允许的列表过滤XMP元数据可通过允许您定义要导入的XMP属性来解决此问题。 这样，将忽略任何其他或未知的XMP属性。 为了向后兼容，您可以将其中一些属性添加到使用阻止列表的筛选器。
+通过允许列表筛选XMP元数据可通过允许您定义要导入的XMP属性来解决此问题。 这样，将忽略任何其他或未知的XMP属性。 为了向后兼容，您可以向使用阻止列表的筛选器中添加一些这些属性。
 
 >[!NOTE]
 >
@@ -84,10 +84,10 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. 要在通过允许的列表应用过滤后过滤掉已阻止的XMP属性，请在“XMP过 **[!UICONTROL 滤的已阻止的XML名称]** ”框中指定这些属性。
+1. 要在通过允许列表应用过滤后过滤掉被阻止的XMP属性，请在“XMP过 **[!UICONTROL 滤的被阻止的XML名称]** ”框中指定这些属性。
 
    >[!NOTE]
    >
-   >默认 **[!UICONTROL 情况下，将块列表应用]** 到XMP属性选项处于选中状态。 换言之，默认情况下启用使用阻止列表进行过滤。 要禁用此类过滤，请取消选 **[!UICONTROL 择“将块列表应用到XMP属性]** ”选项。
+   >默 **[!UICONTROL 认情阻止列表况下，“应用到XMP]** 属性”选项处于选中状态。 换言之，默认情况下启用使用阻止列表进行筛选。 要禁用此类过滤，请取消选 **[!UICONTROL 择“应阻止列表用到XMP属性]** ”选项。
 
 1. 保存更改。
