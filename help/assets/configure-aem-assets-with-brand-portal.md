@@ -1,8 +1,8 @@
 ---
 title: 使用 Brand Portal 配置 AEM Assets
 seo-title: 使用 Brand Portal 配置 AEM Assets
-description: 了解如何通过Brand Portal配置AEM资产，以将资产和集合发布到Brand Portal。
-seo-description: 了解如何通过Brand Portal配置AEM资产，以将资产和集合发布到Brand Portal。
+description: 了解如何使用Brand Portal配置AEM Assets，以将资产和集合发布到Brand Portal。
+seo-description: 了解如何使用Brand Portal配置AEM Assets，以将资产和集合发布到Brand Portal。
 uuid: b95c046e-9988-444c-b50e-ff5ec8cafe14
 topic-tags: brand-portal
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9a27aabef07d5b5104c08c414138fbb22e284a68
+source-git-commit: d7e2d33b81847b15d1e33b3aa406e5e91d44a5f8
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2045'
 ht-degree: 13%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 13%
 
 # 使用 Brand Portal 配置 AEM Assets {#configure-integration-65}
 
-Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品牌门户，该控制台为品牌门户租户购买IMS令牌以进行授权。
+Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品牌门户，该控制台为您的品牌门户租户购买IMS令牌以进行授权。
 
 >[!NOTE]
 >
->AEM 6.5.4.0及更高版本支持通过Adobe开发人员控制台在品牌门户中配置AEM资产。
+>AEM 6.5.4.0及更高版本支持通过Adobe开发人员控制台使用品牌门户配置AEM Assets。
 >
 >以前，品牌门户通过旧版OAuth网关在经典UI中配置，该网关使用JWT令牌交换获得IMS访问令牌进行授权。
 >
@@ -40,14 +40,14 @@ Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品�
 
 
 本帮助描述以下两个用例：
-* [新配置](#configure-new-integration-65): 如果您是新的Brand Portal用户，并且希望使用Brand Portal配置AEM资产作者实例，则可以在Adobe开发人员控制台上创建新配置。
-* [升级配置](#upgrade-integration-65): 如果您是现有Brand Portal用户，且AEM Assets作者实例在旧版OAuth Gateway上配置了Brand Portal，则建议您删除现有配置并在Adobe开发人员控制台上创建新配置。
+* [新配置](#configure-new-integration-65): 如果您是新的Brand Portal用户，并且希望使用Brand Portal配置AEM Assets作者实例，则可以在Adobe开发人员控制台上创建新配置。
+* [升级配置](#upgrade-integration-65): 如果您是现有Brand Portal用户，且AEM Assets作者实例在旧版OAuth Gateway上配置了Brand Portal，建议您删除现有配置并在Adobe开发人员控制台上创建新配置。
 
 提供的信息基于以下假设：阅读本帮助的任何人都熟悉以下技术：
 
-* 安装、配置和管理Adobe Experience Manager和AEM包
+* 安装、配置和管理Adobe Experience Manager和AEM包。
 
-* 使用Linux和Microsoft Windows操作系统
+* 使用Linux和Microsoft Windows操作系统。
 
 ## 前提条件 {#prerequisites}
 
@@ -82,9 +82,9 @@ Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品�
 
 ## 创建配置 {#configure-new-integration-65}
 
-使用Brand Portal配置AEM资产需要在AEM资产作者实例和Adobe开发人员控制台中进行配置。
+使用Brand Portal配置AEM Assets需要在AEM Assets作者实例和Adobe开发人员控制台中进行配置。
 
-1. 在AEM Assets作者实例中，创建IMS帐户并生成公共证书（公钥）。
+1. 在AEM Assets创作实例中，创建IMS帐户并生成公共证书（公钥）。
 
 1. 在Adobe开发人员控制台中，为您的Brand Portal租户（组织）创建一个项目。
 
@@ -96,18 +96,18 @@ Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品�
 
 1. 在AEM Assets作者实例中，使用IMS帐户和Brand Portal端点（组织URL）配置Brand Portal云服务。
 
-1. 通过将资产从AEM资产作者实例发布到Brand Portal来测试配置。
+1. 通过将资产从AEM Assets作者实例发布到Brand Portal来测试配置。
 
 
 >[!NOTE]
 >
 >Brand Portal租户只应配置一个AEM Assets作者实例。
 >
->请勿配置具有多个AEM资产作者实例的Brand Portal租户。
+>请勿配置具有多个AEM Assets作者实例的Brand Portal租户。
 
 
 
-如果您是首次使用Brand Portal配置AEM资产，请在列出的序列中执行以下步骤：
+如果您是首次使用Brand Portal配置AEM Assets，请在列出的序列中执行以下步骤：
 1. [获取公共证书](#public-certificate)
 1. [创建服务帐户(JWT)连接](#createnewintegration)
 1. [配置IMS帐户](#create-ims-account-configuration)
@@ -127,7 +127,7 @@ IMS 配置包括两个步骤：
 
 公共证书允许您在Adobe开发人员控制台上验证用户档案。
 
-1. 登录到AEM Assets作者实例。 默认URL为
+1. 登录到您的AEM Assets作者实例。 默认URL为
    `http:// localhost:4502/aem/start.html`
 1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
@@ -159,7 +159,7 @@ IMS 配置包括两个步骤：
 
 ### 创建服务帐户(JWT)连接 {#createnewintegration}
 
-在Adobe开发人员控制台中，项目和API在组织（Brand Portal租户）级别进行配置。 配置API可在Adobe开发人员控制台中创建服务帐户(JWT)连接。 可通过生成密钥对（私钥和公钥）或上传公钥来配置API的方法有两种。 要在Brand Portal中配置AEM Assets作者实例，您必须在AEM Assets作者实例中生成公共证书（公钥），并通过上传公钥在Adobe Developer Console中创建凭据。 此公钥用于为所选Brand Portal组织配置API，并为服务帐户生成凭据和JWT有效负荷。 这些凭据还用于在AEM Assets作者实例中配置IMS帐户。 配置IMS帐户后，您可以在AEM资产作者实例中配置Brand Portal云服务。
+在Adobe开发人员控制台中，项目和API在组织（Brand Portal租户）级别进行配置。 配置API可在Adobe开发人员控制台中创建服务帐户(JWT)连接。 可通过生成密钥对（私钥和公钥）或上传公钥来配置API的方法有两种。 要在Brand Portal中配置AEM Assets作者实例，您必须在AEM Assets作者实例中生成公共证书（公钥），并通过上传公共密钥在Adobe开发人员控制台中创建凭据。 此公钥用于为所选Brand Portal组织配置API，并为服务帐户生成凭据和JWT有效负荷。 这些凭据还用于在AEM Assets作者实例中配置IMS帐户。 配置IMS帐户后，您可以在AEM Assets作者实例中配置Brand Portal云服务。
 
 执行以下步骤以生成服务帐户凭据和JWT有效负荷：
 
@@ -212,7 +212,7 @@ IMS 配置包括两个步骤：
 
 1. Navigate to the **[!UICONTROL Generate JWT]** tab and copy the **[!UICONTROL JWT Payload]**.
 
-您现在可以使用客户端ID（API密钥）、客户端机密和JWT负载 [在AEM资产云实例中](#create-ims-account-configuration) 配置IMS帐户。
+您现在可以使用客户端ID（API密钥）、客户端机密和JWT负载 [在AEM Assets云实例中配置](#create-ims-account-configuration) IMS帐户。
 
 <!--
 ### Create Adobe I/O integration {#createnewintegration}
@@ -300,7 +300,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 请执行以下步骤以创建Brand Portal云服务：
 
-1. 登录到AEM Assets作者实例。
+1. 登录到您的AEM Assets作者实例。
 
 1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
@@ -314,13 +314,13 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![](assets/create-cloud-service.png)
 
-1. 选择&#x200B;**[!UICONTROL 保存并关闭]**。将创建云配置。您的AEM资产作者实例现在已配置Brand Portal租户。
+1. 选择&#x200B;**[!UICONTROL 保存并关闭]**。将创建云配置。您的AEM Assets作者实例现已配置为Brand Portal租户。
 
 ### 测试配置{#test-integration}
 
 请执行以下步骤以验证配置：
 
-1. 登录AEM Assets云实例。
+1. 登录您的AEM Assets云实例。
 
 1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
@@ -357,14 +357,14 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    >[!NOTE]
    >
-   >请避免禁用任何复制代理，因为这可能会导致某些资产的复制失败。
+   >避免禁用任何复制代理。 它可能导致某些资产的复制失败。
 
-您的AEM资产作者实例已通过Brand Portal成功配置，您现在可以：
+您的AEM Assets作者实例已通过Brand Portal成功配置，您现在可以：
 
 * [将资产从 AEM Assets 发布到 Brand Portal](../assets/brand-portal-publish-assets.md)
 * [将文件夹从 AEM Assets 发布到 Brand Portal](../assets/brand-portal-publish-folder.md)
 * [将收藏集从 AEM Assets 发布到 Brand Portal](../assets/brand-portal-publish-collection.md)
-* [配置资产来源](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) ，使Brand Portal用户能够将资产贡献和发布到AEM资产。
+* [配置资产来源](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) ，使Brand Portal用户能够向AEM Assets投稿和发布资产。
 
 ## 升级配置 {#upgrade-integration-65}
 
@@ -375,9 +375,9 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 ### 验证正在运行的作业 {#verify-jobs}
 
-在进行任何修改之前，请确保AEM资产作者实例上未运行发布作业。 对于此，您可以验证所有四个复制代理，并确保队列是理想／空的。
+在进行任何修改之前，请确保AEM Assets作者实例上没有运行发布作业。 为此，您可以验证所有四个复制代理，并确保队列为空。
 
-1. 登录到AEM Assets作者实例。
+1. 登录到您的AEM Assets作者实例。
 
 1. 从“工 **具**![”面](assets/tools.png) 板，导航至“部 **[!UICONTROL 署]** ”>“ ****&#x200B;部署复制”。
 
@@ -387,7 +387,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 找到Brand Portal租户的复制代理。
 
-   确保所有 **复制代理的队列** “空闲”，未激活任何发布作业。
+   确保所有 **复制代理的队列** “空闲”，没有发布作业处于活动状态。
 
    ![](assets/test-integration3.png)
 
@@ -398,7 +398,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 * 删除云服务
 * 删除MAC用户
 
-1. 登录AEM Assets作者实例，以管理员身份打开CRX Lite。 默认URL为
+1. 登录到您的AEM Assets作者实例，以管理员身份打开CRX Lite。 默认URL为
 
    `http:// localhost:4502/crx/de/index.jsp`
 
@@ -406,7 +406,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![](assets/delete-replication-agent.png)
 
-1. 导航到 `/etc/cloudservices/mediaportal` 并删除云 **服务配置**。
+1. 导航到 `/etc/cloudservices/mediaportal` 并删除 **Cloud Service配置**。
 
    ![](assets/delete-cloud-service.png)
 
@@ -415,7 +415,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    ![](assets/delete-mac-user.png)
 
 
-您现在可 [以在AEM](#configure-new-integration-65) 6.5创作实例上创建配置。
+您现在可 [以在AEM](#configure-new-integration-65) 6.5创作实例上通过Adobe Developer Console创建配置。
 
 
 
@@ -431,8 +431,4 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    <li>Step text</li>
    -->
 
-复制成功后，您可以将资产、文件夹和集合发布到Brand Portal。 有关详细信息，请参阅：
 
-* [将资产发布到 Brand Portal](/help/assets/brand-portal-publish-assets.md)
-* [将文件夹发布到 Brand Portal](/help/assets/brand-portal-publish-folder.md)
-* [将集合发布到品牌门户](/help/assets/brand-portal-publish-collection.md)
