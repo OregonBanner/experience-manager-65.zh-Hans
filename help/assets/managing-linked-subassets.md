@@ -3,7 +3,7 @@ title: 使用中的引用和多页资产管理复合资产 [!DNL Adobe Experienc
 description: 了解如何从中创建数字资产引用 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -52,7 +52,7 @@ To reference digital assets from within an [!DNL InDesign] file, either drag ass
 
 >[!NOTE]
 >
->如果代 [!DNL InDesign Server] 理，则 [!DNL InDesign] 文件的预览将嵌入到其XMP元数据中。 在这种情况下，不显式需要缩略图提取。 但是，如果未 [!DNL InDesign Server] 代理，则必须显式提取文件的缩 [!DNL InDesign] 略图。
+>如果代 [!DNL InDesign Server] 理，则 [!DNL InDesign] 文件的预览将嵌入到其XMP元数据中。 在这种情况下，缩略图提取不是明确必需的。 但是，如果未 [!DNL InDesign Server] 代理，则必须显式提取文件的缩 [!DNL InDesign] 略图。
 
 ### 通过拖动资产创建引用 {#create-references-by-dragging-aem-assets}
 
@@ -89,7 +89,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 默认情况下，子资产生成处于禁用状态。 要启用子资产生成，请执行以下步骤：
 
-1. 以管理 [!DNL Experience Manager] 员身份登录。 访问 **[!UICONTROL 工具>工作流>模型]**。
+1. 以管理 [!DNL Experience Manager] 员身份登录。 访问 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流]** > **[!UICONTROL 模型]**。
 1. 选择 **[!UICONTROL DAM更新资产工作流]** ，然后单击 **[!UICONTROL 编辑]**。
 1. 单击 **[!UICONTROL 切换侧面板]** ，然后找到 **[!UICONTROL 创建子资产步骤]** 。 将步骤添加到工作流。 单击 **[!UICONTROL 同步]**。
 
@@ -99,7 +99,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 * 现有多页资产： 按照以下任 [!UICONTROL 一步骤手动执行] DAM更新资产工作流：
 
    * 选择一个资产，然 [!UICONTROL 后单击] “时间轴”以打开左侧面板。 或者，使用键盘快捷键 `alt + 3`。 单击 [!UICONTROL 开始工]作流，选 [!UICONTROL 择DAM更新资产]，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继]续。
-   * 选择资产，然后单击工 [!UICONTROL 具栏中的创建] >工作流。 从弹出对话框中，选 [!UICONTROL 择DAM更新资产工作] 流，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继续]。
+   * 选择资产，然后从工 [!UICONTROL 具栏中] ，单 [!UICONTROL 击创] 建>工作流。 从弹出对话框中，选 [!UICONTROL 择DAM更新资产工作] 流，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继续]。
 
 特别是对于Microsoft Word文档，请执 **[!UICONTROL 行DAM分析Word文档工作流]** 。 它从Microsoft `cq:Page` Word文档的内容生成一个组件。 从文档提取的图像从组件中引 `cq:Page` 用。 即使禁用了子资产生成，也会提取这些图像。
 
