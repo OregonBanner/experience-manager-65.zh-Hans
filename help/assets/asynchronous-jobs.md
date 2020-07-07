@@ -3,7 +3,7 @@ title: 在中配置异步操作 [!DNL Adobe Experience Manager]。
 description: 异步完成一些资源密集型任务以优化性能 [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 18b81ba3fcf15838ac9bebd451f4ad8b0b6e3bbb
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 * 删除许多资产。
 * 移动包含许多引用的许多资产或资产。
 * 批量导出和导入资产元数据。
-* 从远程部署中提 [!DNL Experience Manager] 取资产，超过设置的阈值限制。 此限制取决于资产数量。
+* 从远程部署中提 [!DNL Experience Manager] 取资产，超过设置的阈值限制。 此限制取决于资产的数量。
 
 您可以从“异步作业状态”页视图异 **[!UICONTROL 步任务的状]** 态。
 
