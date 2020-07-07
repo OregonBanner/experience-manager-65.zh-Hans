@@ -3,7 +3,7 @@ title: 文件夹元数据架构
 description: 了解如何在Adobe Experience Manager资产中为资产文件夹创建元数据模式
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 9%
@@ -47,7 +47,7 @@ Adobe Experience Manager资产允许您为资产文件夹创建元数据模式�
 
 1. To configure a component, select it and modify its properties in the **[!UICONTROL Settings]** tab.
 
-   如果需要，请从“设置”选项卡中 **[!UICONTROL 删除]** 组件。
+   如果需要，请从“设置”选项卡中 **[!UICONTROL 删除组]** 件。
 
    ![configure_properties](assets/configure_properties.png)
 
@@ -108,7 +108,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your folder
 
 ### 从“文件夹元数据”模式页面分配给模式 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** >资 **[!UICONTROL 产]**>文 **[!UICONTROL 件]**&#x200B;夹元数据模式。
+1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** >资 **[!UICONTROL 产]** >文 **[!UICONTROL 件夹元数据模式]**。
 1. 从“文件夹元数据模式表单”页面中，选择要应用于文件夹的模式表单。
 1. 在工具栏中，单 **[!UICONTROL 击“应用到文件夹”]**。
 
