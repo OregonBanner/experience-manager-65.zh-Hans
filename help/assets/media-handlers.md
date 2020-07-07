@@ -3,9 +3,9 @@ title: 使用中的媒体处理程序和工作流处理资源 [!DNL Adobe Experi
 description: 了解媒体处理程序以及如何使用工作流对您的数字资产执行任务。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -21,15 +21,13 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->请参阅资 [产支持的格式](assets-formats.md) (Assets supported formats)页面，了解各种格式 [!DNL Assets] 支持的所有格式以及各种功能的说明。
+>有关各 [种格式支持的](assets-formats.md) 所有格式以及各种格式支持的 [!DNL Assets] 功能的说明，请参阅资产支持的格式页。
 
 ## 默认媒体处理函数 {#default-media-handlers}
 
 以下媒体处理函数在中可 [!DNL Assets] 用，并处理最常见的MIME类型：
 
-<!-- TBD: 
-* Apply correct formatting once table is moved to MD.
-* Java versions shouldn't be set to 1.5. Must be updated.
+<!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
 
 | 处理程序名称 | 服务名称（在系统控制台中） | 支持的MIME类型 |
@@ -140,7 +138,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 1. 在Eclipse中，创建 `myBundle`[!DNL Maven] 项目：
 
-   1. 在菜单栏中，单击“文 **[!UICONTROL 件”>“新建”>“其他]**”。
+   1. 在菜单栏中，单击“文 **[!UICONTROL 件]** ”>“ **[!UICONTROL 新建]** ” **[!UICONTROL >“]**&#x200B;其他”。
    1. 在对话框中，展开文 [!DNL Maven] 件夹，选 [!DNL Maven] 择项目并单 **[!UICONTROL 击下一步]**。
    1. 选中创建简单项目框和使用默认工作区位置框，然后单击下 **[!UICONTROL 一步]**。
    1. 定义项 [!DNL Maven] 目：
@@ -504,8 +502,8 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 | 参数格式 | 描述 |
 |---|---|
 | mime:&lt;mime类型> | 可选参数。 如果资产的MIME类型与其中一个参数相同，则应用该过程。 <br>可以定义多个MIME类型。 |
-| tn:&lt;width>:&lt;height> | 可选参数。 该过程创建一个缩略图，其尺寸在参数中定义。 <br>可以定义多个缩略图。 |
-| cmd: &lt;命令> | 定义将执行的命令。 语法取决于命令行工具。 只能定义一个命令。 <br>以下变量可用于创建命令：<br>`${filename}`: 输入文件的名称，例如original.jpg <br> `${file}`: 输入文件的完整路径名，例如/tmp/cqdam0816.tmp/original.jpg <br> `${directory}`: 输入文件的目录，例如/tmp/cqdam0816.tmp <br>`${basename}`: 不带扩展名的输入文件的名称，例如原始文 <br>`${extension}`件： 扩展名，例如JPG。 |
+| tn:&lt;width>:&lt;height> | 可选参数。 该过程会创建缩略图，其尺寸在参数中定义。 <br>可以定义多个缩略图。 |
+| cmd: &lt;命令> | 定义执行的命令。 语法取决于命令行工具。 只能定义一个命令。 <br>以下变量可用于创建命令：<br>`${filename}`: 输入文件的名称，例如original.jpg <br> `${file}`: 输入文件的完整路径名，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: 输入文件的目录，例如 `/tmp/cqdam0816.tmp`<br>`${basename}`: 不带扩展名的输入文件的名称，例如原始文 <br>`${extension}`件： 扩展名，例如JPG。 |
 
 例如，如果安 [!DNL ImageMagick] 装在承载服务器的磁盘 [!DNL Experience Manager] 上，并且您使用CommandLineProcess作为实现创建了进程步 [!UICONTROL 骤，以及以下值作] 为进程参数 :
 
