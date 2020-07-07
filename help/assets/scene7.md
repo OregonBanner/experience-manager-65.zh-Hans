@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
 source-wordcount: '2862'
 ht-degree: 25%
@@ -46,7 +46,7 @@ For more information on using video components with AEM, see [Video](video.md).
 
 * [在经典用户界面中，从“资产”控制台访问](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-from-the-assets-console)
 * [在资产的经典用户界面中](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-from-an-asset)
-* [在经典用户界面中，从外部CQTarget文件夹](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-assets-from-outside-the-cq-target-folder)
+* [在经典用户界面中，从外部CQ目标文件夹](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-assets-from-outside-the-cq-target-folder)
 
 >[!NOTE]
 >
@@ -268,7 +268,10 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 >* 启用 [安全预览后](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene),Dynamic Media经典上已发布和取消发布的资产都会显示在Dynamic Media经典内容浏览器中。
 >* If you do not see **[!UICONTROL Dynamic Media Classic]** or the **[!UICONTROL S7]** icon as an option in the content browser, you need to [configure Dynamic Media Classic to work with AEM](/help/sites-administering/scene7.md).
 >* 对于视频，Dynamic Media经典内容浏览器支持：
-   >   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
+
+   >
+   >   
+   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
    >   * 单个MP4视频
    >   * 单个F4V视频
 
