@@ -1,11 +1,11 @@
 ---
 title: 扩展Adobe Experience Manager资产的搜索功能
-description: 将Adobe Experience Manager资产的搜索功能扩展到默认值之外。
+description: 将Adobe Experience Manager资产的搜索功能扩展至默认值之外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '857'
 ht-degree: 18%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->默认情况下，/下的目 `apps` 录结构不存在，需要创建。 确保节点类型与／下的节点类型相匹配 `libs`。
+>默认情况下，下面的目录 `/apps` 结构不存在，因此请创建它。 确保节点类型与下的节点类型匹配 `/libs`。
 
 ## 添加选项卡 {#adding-tabs}
 
@@ -48,7 +48,7 @@ ht-degree: 18%
 
 [!DNL Assets] 附带一组预定义谓词，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用预先存在的谓词，Experience Manager开发人员还可以使用查询生成器API创建 [自己的谓词](/help/sites-developing/querybuilder-api.md)。
+除了使用预存在的谓词外，Experience Manager开发人员还可以使用查询生成器API创 [建自己的谓词](/help/sites-developing/querybuilder-api.md)。
 
 创建自定义谓词需要有关构件框架的 [基本知识](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)。
 
@@ -296,6 +296,6 @@ ht-degree: 18%
 
 ## 自定义搜索结果 {#customizing-search-results}
 
-在“资产共享”页面上显示搜索结果受所选镜头的约束。 Experience Manager资产附带一组预定义的镜头，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+在“资产共享”页面上显示搜索结果受所选镜头的约束。 Experience Manager资产附带一组预定义的镜头，这些镜头可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用现有镜头外，Experience Manager开发人员还可以创建自己的镜头。
+除了使用现有镜头外，Experience Manager开发者还可以制作自己的镜头。
