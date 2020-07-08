@@ -3,7 +3,7 @@ title: 中的资产模板 [!DNL Adobe Experience Manager Assets]。
 description: 了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 为宣传品选择模板时， [!DNL Experience Manager Assets] 会创建可编辑的模板副本。 原始模板将保留，这可确保您的全球标牌保持不变，并可以重复使用，以实现品牌一致性。
 
-可以以INDD、PDF或JPG格式导出父文件夹内的更新文件。 您还可以将这些格式的输出下载到本地文件系统。
+可以以INDD、PDF或JPG格式导出父文件夹中的更新文件。 您还可以将这些格式的输出下载到本地文件系统。
 
 ## 创建宣传品 {#creating-a-collateral}
 
@@ -79,6 +79,7 @@ ht-degree: 0%
    * 在“模板”页面中，导航到您创建宣传品的文件夹，然后单击宣传 [!UICONTROL 品缩略图] 上的“编辑”快速操作。
    * 在宣传品的资产页面中，单击工 **[!UICONTROL 具栏]** 中的编辑。
    * Select the collateral and click **[!UICONTROL Edit]** from the toolbar.
+
    <!--![chlimage_1-108](assets/chlimage_1-313.png) -->
 
    资产查找器和文本编辑器显示在页面左侧。 默认情况下，文本编辑器处于打开状态。
@@ -95,7 +96,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >确保实例 [!DNL Experience Manager] 与集成，以 [!DNL InDesign Server] 便从模 [!DNL Experience Manager Assets] 板中提取数据并 [!DNL InDesign] 使其可供编辑。 有关详细信息，请 [参阅将Experience Manager资源与InDesign Server集成](/help/assets/indesign.md)。
+   >确保您的 [!DNL Experience Manager] 部署与集成， [!DNL InDesign Server] 以启用 [!DNL Experience Manager Assets] 从模板提取数据并 [!DNL InDesign] 使其可供编辑。 有关详细信息，请 [参阅将Experience Manager资源与InDesign Server集成](/help/assets/indesign.md)。
 
 1. 要修改可编辑字段中的文本，请单击可编辑字段列表中的文本字段，然后编辑该字段中的文本。
 
@@ -135,11 +136,13 @@ ht-degree: 0%
    >
    >* 图像未嵌入到基础模 [!DNL InDesign] 板中。
    >* 图像从本地文件系统链接。
+
    >
    >要启用 [!DNL Experience Manager] 解析图像，请执行以下操作：
    >
    >* 在创建模板时嵌 [!DNL InDesign] 入图像(请 [参阅关于链接和嵌入图形](https://helpx.adobe.com/indesign/using/graphics-links.html))。
    >* 装载 [!DNL Experience Manager] 到本地文件系统，然后将缺少的图标与中的现有资源映射 [!DNL Experience Manager]。
+
    >
    >有关使用文档的更多 [!DNL InDesign] 信息，请 [参阅Experience Manager中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
