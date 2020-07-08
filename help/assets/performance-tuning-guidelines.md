@@ -4,7 +4,7 @@ description: 有关配置、 [!DNL Experience Manager] 对硬件、软件和网�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '2767'
 ht-degree: 0%
@@ -128,7 +128,7 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 尽可能将DAM更新资产 [!UICONTROL 工作流设置为] “临时”。 该设置显着减少了处理工作流所需的开销，因为在这种情况下，工作流无需通过正常的跟踪和存档过程。
 
-1. 导航到 `/miscadmin` Experience Manager [!DNLE实例] （位于） `https://[aem_server]:[port]/miscadmin`。
+1. 导航到 `/miscadmin` Experience Manager [!DNLE部署] （位于） `https://[aem_server]:[port]/miscadmin`。
 
 1. 展开 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流]** > **[!UICONTROL 模型]** > **[!UICONTROL dam]**。
 
@@ -285,11 +285,11 @@ DAM [!UICONTROL 更新资产工作流] ，包含为任务配置的完整步骤�
 * 使用网络基准工具
 * 针对调度程序进行测试
 
-### [!DNL Experience Manager] 实例测试 {#aem-instance-testing}
+### [!DNL Experience Manager] 部署测试 {#aem-deployment-testing}
 
-要通过高效的CPU利用率和负载共享将延迟降至最低并实现高吞吐量，请定期监视实例 [!DNL Experience Manager] 的性能。 特别是：
+要通过高效的CPU利用率和负载共享将延迟降至最低并实现高吞吐量，请定期监控部署 [!DNL Experience Manager] 的性能。 特别是：
 
-* 对实例运行负载 [!DNL Experience Manager] 测试。
+* 对部署运行负载 [!DNL Experience Manager] 测试。
 * 监控上传性能和UI响应。
 
 ## [!DNL Experience Manager Assets] 绩效清单和资产管理任务 {#checklist}
