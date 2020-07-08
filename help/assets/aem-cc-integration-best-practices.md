@@ -3,9 +3,9 @@ title: Adobe Creative Cloud和集 [!DNL Adobe Experience Manager] 成最佳实�
 description: 整合的最佳 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 实践，可简化资产转让工作流并实现高内容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '3250'
+source-wordcount: '3251'
 ht-degree: 16%
 
 ---
@@ -45,6 +45,9 @@ ht-degree: 16%
 
 ### 用例映射和Adobe解决方案 {#mapping-of-use-cases-and-adobe-solutions}
 
+<!-- TBD: Add some info about XD integration and possibly info about DA v2.0.
+-->
+
 | 用例 | [!DNL Adobe Asset Link] | [!DNL Experience Manager] 桌面应用程序 | 备注／其他解决方案 |
 |---|---|---|---|
 | 发现——浏览DAM文件夹 | 是 | [!DNL Experience Manager] Web界面和桌面操作 |  |
@@ -73,7 +76,7 @@ ht-degree: 16%
 ### 常用术语表 {#glossary-of-common-terms}
 
 * **正在进行的工作或正在进行的创意工作 (WIP)：**&#x200B;资产生命周期中的一个阶段，在此阶段中，资产会经历多次更改，通常尚未准备好与更广的团队共享。
-* **创意就绪型资源：** [!DNL Assets] 已准备好与更广的团队共享，或已经由创意团队选择／批准与营销或LOB团队共享。
+* **创意就绪型资源：** [!DNL Assets] 已准备好与更广阔的团队共享，或者已经由创意团队选定或批准，以便与营销或LOB团队共享。
 * **资产批准：**&#x200B;为已上传到 DAM 的资产运行的批准流程，通常包括品牌批准、法律批准等。
 * **最终资产：**&#x200B;已完成所有批准/元数据标记并可供更广的团队使用的资产。此类资产存储在 DAM 中，可供所有（或所有感兴趣的）用户使用。它可用于营销渠道或由创意团队用来创建设计。
 * **次要资产更新/更改：**&#x200B;对数字资产进行快速、微小的更改。它通常是响应润饰或次要编辑请求、资产审阅或批准（例如，重新定位、更改文本大小、调整饱和度/亮度、颜色等）而生成的。
@@ -160,20 +163,20 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 #### 直接访问DAM的创意用户 {#creative-users-with-direct-access-to-dam}
 
-通常，内部创意团队或已加入内部网络的代理／创意专业人士有权访问DAM实例，包括登 [!DNL Experience Manager] 录。 [!DNL Experience Manager] 网络基础架构可以设置为允许直接访问外部方，例如通过VPN或IP允许列表，通过网络访 [!DNL Experience Manager] 问外部方，通常是受信任的组织，如为客户工作的代理。
+通常，内部创意团队或已加入内部网络的代理／创意专业人士可以访问DAM部署，包括登 [!DNL Experience Manager] 录。 [!DNL Experience Manager] 网络基础架构可以设置为允许直接访问外部方——通常是受信任的组织，如为客户工作的代理——通过网 [!DNL Experience Manager] 络访问，例如通过VPN或IP允许列表。
 
 在这种情况下，Adobe Asset Link或桌面 [!DNL Experience Manager] 应用程序可帮助您轻松访问最终／批准的资产，并可将创意就绪资产保存到DAM。
 
 #### 无权访问DAM的创意用户 {#creative-users-without-access-to-dam}
 
-没有直接访问DAM实例的外部机构和自由职业者可能需要访问已批准的资产或希望将其新设计添加到DAM。
+没有直接访问DAM部署的外部机构和自由职业者可能需要访问已批准的资产或希望将其新设计添加到DAM。
 
 使用以下策略提供对最终／批准资产的访问：
 
 * 如果资产链接不起作用，请使用桌面应用程序。
 * 使用 [Experience Manager资产品牌门户](https://helpx.adobe.com/cn/experience-manager/brand-portal/user-guide.html) ，将资产安全地分发给外部合作伙伴
 * 使用基于资源共享的分发和采购门户的自 [定义实现](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* 使用在必要的网 [!DNL Experience Manager] 络基础架构中设置的访问控制（例如，VPN和IP允许列表），使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
+* 使用在必要的网 [!DNL Experience Manager] 络基础架构中设置的访问控制(例如，VPN和IP允许列表)，使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
 
 #### 正在处理的资产 [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
