@@ -1,18 +1,18 @@
 ---
-title: 异步操作
+title: 异步作业
 description: Adobe Experience Manager通过异步完成某些资源密集型任务来优化性能。
 translation-type: tm+mt
-source-git-commit: 69b90432ac6028a64f36300819e1bead1ae8d671
+source-git-commit: 198593fa456780816216a63790fea8cca469f8c7
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 2%
+source-wordcount: '892'
+ht-degree: 3%
 
 ---
 
 
 # 异步操作 {#asynchronous-operations}
 
-为了减少对性能的负面影响，Adobe Experience Manager异步处理某些长时间运行且资源密集型操作。
+为了减少对性能的负面影响，Adobe Experience Manager异步处理某些长时间运行且资源密集型操作。 异步处理包括入队多个作业并以串行方式运行它们，但需考虑系统资源的可用性。
 
 这些操作包括：
 
@@ -22,8 +22,6 @@ ht-degree: 2%
 * 从远程Experience Manager部署获取超过阈值限制设置的资产
 * 移动页面
 * 转出Live Copy
-
-异步处理包括入队多个作业并以串行方式运行它们，但需考虑系统资源的可用性。
 
 您可以从Async Job Status **** 仪表板的Global Navigation **->** Tools **-> Operations** ********&#x200B;中视图异步作业的状态。
 
@@ -35,7 +33,7 @@ ht-degree: 2%
 
 ## 监视异步操作的状态 {#monitor-the-status-of-asynchronous-operations}
 
-每当AEM异步处理操作时，您都会在收件箱中和通过电子邮件（如果启用）收到通知。
+每当AEM异步处理操作时，您都会在收件箱中和通过电子邮件 [(如](/help/sites-authoring/inbox.md) 果已启用)收到通知。
 
 要详细视图异步操作的状态，请导航到“异步作 **[!UICONTROL 业状态”页]** 。
 
@@ -85,6 +83,7 @@ AEM每天01:00运行清除作业，以删除已完成的已超过一天的异步
    * 删除完成作业后的阈值天数。
    * 历史记录中保留详细信息的最大作业数。
    * 应运行清除时的cron表达式。
+
    ![配置以计划异步作业的清除](assets/async-purge-job.png)
 
 1. 保存更改。
@@ -141,3 +140,12 @@ AEM每天01:00运行清除作业，以删除已完成的已超过一天的异步
    ![MSM配置](assets/async-msm.png)
 
 1. 保存更改。
+
+>[!MORELIKETHIS]
+>
+>* [创建和组织页面](/help/sites-authoring/managing-pages.md)
+>* [创建和同步Live Copy](/help/sites-administering/msm-livecopy.md)
+>* [在Experience Manager中配置电子邮件](/help/sites-administering/notification.md)。
+>* [批量导入和导出资产元数据](/help/assets/metadata-import-export.md)。
+>* [使用连接资产共享远程部署中的DAM资产](/help/assets/use-assets-across-connected-assets-instances.md)。
+
