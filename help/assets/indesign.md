@@ -3,9 +3,9 @@ title: 集 [!DNL Adobe Experience Manager Assets] 成 [!DNL Adobe InDesign Serve
 description: 了解如何 [!DNL Adobe Experience Manager Assets] 集成 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 17fa61fd0aff066bd59f4b6384d2d91bb97b749c
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1559'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 * 用于定义和管理特定任务的代理工作器。
 这些任务可以涵盖多种领域； 例如，使用 [!DNL InDesign Server] 处理文件。
 
-将文件完全上 [!DNL Experience Manager Assets] 传到您使用代理 [!DNL Adobe InDesign] 创建的文件。 它使用代理工作器与进行通信， [!DNL Adobe InDesign Server]在该 [工作器中](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，运行脚本以提取元数据并生成各种再现 [!DNL Experience Manager Assets]。 代理工作程序在云配置中启 [!DNL InDesign Server] 用与 [!DNL Experience Manager] 实例之间的双向通信。
+将文件完全上 [!DNL Experience Manager Assets] 传到您使用代理 [!DNL Adobe InDesign] 创建的文件。 它使用代理工作器与进行通信， [!DNL Adobe InDesign Server]在该 [工作器中](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，运行脚本以提取元数据并生成各种再现 [!DNL Experience Manager Assets]。 代理工作器在云配置中启用与实 [!DNL InDesign Server] 例之 [!DNL Experience Manager] 间的双向通信。
 
 >[!NOTE]
 >
@@ -44,6 +44,7 @@ ht-degree: 4%
       * 将生成PDF和JPG再现。
       * 将生成HTML和IDML再现。
    * 将生成的文件发布回 [!DNL Experience Manager Assets]。
+
    >[!NOTE]
    >
    >IDML是一种基于XML的格式，可呈现文件的所有 [!DNL InDesign] 内容。 它使用ZIP压缩存储为压 [缩包](https://www.techterms.com/definition/zip) 。 有关详细信息，请 [参阅InDesign交换格式INX和IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
@@ -58,18 +59,18 @@ ht-degree: 4%
    * 提取的文本和文件存储在中 [!DNL Experience Manager Assets]。
    * 所有演绎版都存储 [!DNL Experience Manager Assets]在资产本身中。
 
-## 与Experience [!DNL InDesign Server] Manager集成 {#integrating-the-indesign-server-with-aem}
+## 与Experience Manager [!DNL InDesign Server] 集成 {#integrating-the-indesign-server-with-aem}
 
 要集成以 [!DNL InDesign Server] 在配置代 [!DNL Experience Manager Assets] 理后与之一起使用，您需要：
 
 1. [安装InDesign Server](#installing-the-indesign-server)。
-1. 如果需要， [请配置Experience Manager资产工作流](#configuring-the-aem-assets-workflow)。
+1. 根据需要， [配置Experience Manager资产工作流](#configuring-the-aem-assets-workflow)。
 仅当默认值不适用于您的实例时，才需要这样做。
 1. 为InDesign [Server配置代理工作器](#configuring-the-proxy-worker-for-indesign-server)。
 
 ### 安装 [!DNL InDesign Server] {#installing-the-indesign-server}
 
-安装和开始 [!DNL InDesign Server] 以与以下对象一起使 [!DNL Experience Manager]用：
+安装和开始 [!DNL InDesign Server] 以与 [!DNL Experience Manager]:
 
 1. 下载并安装 [!DNL InDesign Server]。
 
@@ -149,7 +150,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 >
 >该工作器驻留在代理实例上。
 
-1. 在工具控制台中，展 **[!UICONTROL 开左窗格中的]** “云服务配置”。 然后展开 **[!UICONTROL 云代理配置]**。
+1. 在“工具”控制台中，展 **[!UICONTROL 开左窗格中]** 的“Cloud Service配置”。 然后展开 **[!UICONTROL 云代理配置]**。
 
 1. 双击 **[!UICONTROL IDS worker]** 以打开进行配置。
 
@@ -201,13 +202,13 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!NOTE]
 >
->使用Worker池时，可以启用IDS Worker的被阻止列表。
+>使用工作池时，您可以启用IDS工作者的阻止列表。
 >
 >要执行此操作，请 **[!UICONTROL 在配置下启用]** enable.retry.name复 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 选框，该配置启用IDS作业检索。
 >
 >此外，在配 `com.day.cq.dam.ids.impl.IDSPoolImpl.name` 置下，为参数设置一个正值，该 `max.errors.to.blacklist` 参数在禁止IDS进入作业处理程序列表之前确定作业检索的数量。
 >
->默认情况下，在IDS工作`retry.interval.to.whitelist.name`器经过可配置（分钟）时间重新验证后。 如果在线找到该工作者，则从被阻止的列表中删除该工作者。
+>默认情况下，在IDS工作`retry.interval.to.whitelist.name`器经过可配置（分钟）时间重新验证后。 如果在线找到该工作者，则从阻止列表中删除该工作者。
 
 ## 支持10. [!DNL InDesign Server] 0或更高版本 {#enabling-support-for-indesign-server-or-later}
 
@@ -223,7 +224,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 ## 配置凭 [!DNL Experience Manager] 据 {#configure-aem-credentials}
 
-您可以更改从实例访问的默认管理员凭据(用户名和 [!DNL InDesign Server] 口令), [!DNL Experience Manager] 而不中断与的集成 [!DNL InDesign Server]。
+您可以更改从部署访问的默认管理员凭据(用户 [!DNL InDesign Server] 名和密 [!DNL Experience Manager] 码)，而不中断与的集成 [!DNL InDesign Server]。
 
 1. 转到 `/etc/cloudservices/proxy.html`.
 1. 在对话框中，指定新的用户名和密码。
