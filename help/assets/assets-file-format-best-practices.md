@@ -1,9 +1,12 @@
 ---
-title: 使用[!DNL Adobe Experience Manager Assets]处理各种受支持文件格式的最佳实践。
-description: 使用[!DNL Experience Manager Assets]处理各种受支持文件类型的最佳实践。
+title: 使用处理各种支持的文件格式的最佳实践 [!DNL Adobe Experience Manager Assets]。
+description: 使用处理各种受支持文件类型的最佳实践 [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5f67b4e5ccd5d7e982732e449050123e917c9914
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+workflow-type: tm+mt
+source-wordcount: '467'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ For the supported file formats, see [Assets supported formats](/help/assets/asse
 
 >[!TIP]
 >
->如果您使 [!DNL Experience Manager] 用的是Adobe Managed Services(AMS)，如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户服务中心。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe专有格式选择最佳的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
+>如果您正在 [!DNL Experience Manager] 使用Adobe Managed Services(AMS)，请联系Adobe客户服务中心（如果您计划处理大量大型PSD或PSB文件）。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe专有格式选择最佳的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ## [!DNL Adobe Camera Raw] 库 {#adobe-camera-raw-library}
 
@@ -38,11 +41,11 @@ For the supported file formats, see [Assets supported formats](/help/assets/asse
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-Adobe建议您使 [!DNL Adobe InDesign Server] 用提 [!DNL Adobe InDesign]取特定再现，如IDML和HTML。 有关详细信息，请 [参阅在Adobe InDesign中将Experience Manager资产添加为引用](/help/assets/managing-linked-subassets.md#refai)。
+Adobe建议您使 [!DNL Adobe InDesign Server] 用提 [!DNL Adobe InDesign]取特定再现，如IDML和HTML。 有关详细信息，请参 [阅在Adobe InDesign中将Experience Manager资产添加为引用](/help/assets/managing-linked-subassets.md#refai)。
 
-## [!DNL Dynamic Media]  {#dynamic-media}
+## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] 通过其全球、可扩展和性能优化的网络实时生成和交付多种形式的丰富内容。 它提供交互式查看体验并简化数字活动管理流程。 有关启用的详细信息， [!DNL Dynamic Media]请参 [阅配置Dynamic Media](/help/assets/config-dynamic.md)。
+[!DNL Dynamic Media] 通过其全球、可扩展和性能优化的网络实时生成和交付多种形式的丰富内容。 它提供交互式查看体验并简化数字活动管理流程。 有关启用的详细信息， [!DNL Dynamic Media]请参阅 [配置Dynamic Media](/help/assets/config-dynamic.md)。
 
 目前， [!DNL Dynamic Media] 每个文件最多可支持15 GB内容的视频。
 
