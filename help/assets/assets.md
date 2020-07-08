@@ -3,7 +3,7 @@ title: Introduction to [!DNL Adobe Experience Manager Assets].
 description: 了解数字资产管理、其使用案例和 [!DNL Adobe Experience Manager Asset] 分支。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d5b3a442756e95c15cb01c4117a83b761dc8367
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 33%
@@ -49,7 +49,7 @@ ht-degree: 33%
 
 >[!CAUTION]
 >
->Uploading and/or editing a large volume of assets (particularly images) can impact the performance of your [!DNL Experience Manager] instance.
+>Uploading and/or editing a large volume of assets (particularly images) can impact the performance of your [!DNL Experience Manager] deployment.
 
 ### [!DNL Experience Manager Assets] 术语 {#aem-assets-terminology}
 
