@@ -3,7 +3,7 @@ title: Adobe Experience Manager到Adobe Creative Cloud文件夹，共享最佳�
 description: 配置Adobe Experience Manager，允许Experience Manager资产中的用户与Adobe Creative Cloud(CC)用户交换文件夹。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >已弃用Experience Manager到Creative Cloud文件夹共享功能。 Adobe强烈建议使用Adobe Asset Link或 [Experience Manager桌面应用](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)[程序等新功能](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。 了解有关Experience Manager [和Creative Cloud集成最佳实践的更多信息](/help/assets/aem-cc-integration-best-practices.md)。
 
-Adobe Experience Manager可以配置为允许资产中的用户与Adobe Creative Cloud应用程序的用户共享文件夹，这样，在Adobe Creative Cloud Assets服务中，这些用户便可以作为共享文件夹。 该功能可用于在创意团队和资产用户之间交换文件，尤其是当创意用户无权访问资产实例（他们不在企业网络上）时。
+Adobe Experience Manager可以配置为允许资产中的用户与Adobe Creative Cloud应用程序的用户共享文件夹，这样，在Adobe Creative Cloud Assets服务中，这些用户便可以作为共享文件夹。 该功能可用于在创意团队和资产用户之间交换文件，尤其是当创意用户无权访问资产部署时（他们不在企业网络上）。
 
 此类集成可用于以下用例，尤其是与没有直接访问资产权限的用户合作时：
 
@@ -39,7 +39,7 @@ Experience Manager到Creative Cloud文件夹共享依赖于资产和Creative Clo
 集成包括以下元素：
 
 * **Experience Manager资产** （托管服务或内部部署）在企业网络中部署的服务器： 此处启动文件夹共享。
-* **Adobe Marketing Cloud资产核心服务**: 充当Experience Manager和Creative Cloud存储服务之间的中介。 使用集成的公司的管理员需要在Marketing Cloud组织与资产实例之间建立信任关系。 它们还定 [义了经过批准的Creative Cloud协作者的列表](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)，资产用户也可以共享文件夹以提高安全性。
+* **Adobe Marketing Cloud资产核心服务**: 充当Experience Manager和Creative Cloud存储服务之间的中介。 使用集成的公司管理员需要在Marketing Cloud组织和资产部署之间建立信任关系。 它们还定 [义了经过批准的Creative Cloud协作者的列表](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)，资产用户也可以共享文件夹以提高安全性。
 
 * **Creative Cloud Assets Web服务** (存储和Creative Cloud文件Web UI): 在这里，已与其共享Assets文件夹的特定Creative Cloud应用程序用户可以接受邀请并在其Creative Cloud帐户存储中查看该文件夹。
 * **Creative Cloud桌面应用程序**: （可选）允许通过与Creative Cloud资产存储同步，从创意用户的桌面直接访问共享文件夹／文件。
