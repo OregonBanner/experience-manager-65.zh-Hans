@@ -3,7 +3,7 @@ title: 批量迁 [!DNL Adobe Experience Manager Assets] 移资产。
 description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版并将其激活以发布实例。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1800'
 ht-degree: 8%
@@ -28,6 +28,7 @@ ht-degree: 8%
 >* ACS Commons Bulk Workflow Manager
 >* ACS Commons Fast Action Manager
 >* 合成工作流
+
 >
 >
 本软件是开放源软件，受 [Apache v2 许可证](https://adobe-consulting-services.github.io/pages/license.html)的保护。要提出问题或报告问题，请访问[针对 ACS AEM 工具的 GitHub 问题](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)和 [ACS AEM Commons](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)。
@@ -61,7 +62,7 @@ ht-degree: 8%
 
 #### 通过HTTP发送 {#pushing-through-http}
 
-Adobe的Managed Services团队使用一种名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小型Java应用程序，它将所有资源从一个目录加载到实例上的另一个 [!DNL Experience Manager] 目录。 您还可以使用Perl脚本等工具将资源发布到存储库中，而不是使用Glutton。
+Adobe的Managed Services团队使用一种名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小型Java应用程序，它将所有资源从一个目录加载到部署时的另一个 [!DNL Experience Manager] 目录。 您还可以使用Perl脚本等工具将资源发布到存储库中，而不是使用Glutton。
 
 使用通过https的方式有两个主要的缺点：
 
@@ -72,7 +73,7 @@ Adobe的Managed Services团队使用一种名为Glutton的工具将数据加载�
 
 #### 从本地文件系统读取 {#pulling-from-the-local-filesystem}
 
-ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，会从文件系统中提取资产，从CSV文件中提取资产元数据，以便进行资产导入。 Experience Manager Asset Manager API用于将资产导入系统并应用配置的元数据属性。 理想情况下，资产通过网络文件装载或通过外部驱动器装载到服务器上。
+ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，会从文件系统中提取资产，从CSV文件中提取资产元数据，以便进行资产导入。 Experience Manager资产管理器API用于将资产导入系统并应用配置的元数据属性。 理想情况下，资产通过网络文件装载或通过外部驱动器装载到服务器上。
 
 由于资产无需通过网络传输，因此总体性能得到显着改善，而且通常认为此方法是将资产加载到存储库中的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以通过一个步骤导入所有资产和元数据，而不是通过另一个工具创建第二个步骤来应用元数据。
 
@@ -117,15 +118,15 @@ ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io
 
 ## 跨部署 [!DNL Experience Manager] 迁移 {#migrating-between-aem-instances}
 
-虽然不是那么常见，但有时您需要将大量数据从一个实例迁移到另 [!DNL Experience Manager] 一个实例； 例如，当您执行升级 [!DNL Experience Manager] 、升级硬件或迁移到新数据中心时，例如AMS迁移。
+虽然不是那么常见，但有时您需要将大量数据从一个部署迁移到另 [!DNL Experience Manager] 一个部署； 例如，当您执行升级 [!DNL Experience Manager] 、升级硬件或迁移到新数据中心时，例如AMS迁移。
 
-在这种情况下，您的资产已填充元数据，并且已生成演绎版。 您只需将精力集中在将资产从一个实例移动到另一个实例上。 在实例之间 [!DNL Experience Manager] 迁移时，您需要执行以下步骤：
+在这种情况下，您的资产已填充元数据，并且已生成演绎版。 您只需将精力集中在将资产从一个实例移动到另一个实例上。 在部署之 [!DNL Experience Manager] 间迁移时，请执行以下步骤：
 
 1. 禁用工作流: 由于您正在将演绎版与我们的资产一起迁移，因此您希望禁用DAM更新资产工作流 [!UICONTROL 的工作流启动] 器。
 
-1. 迁移标记： 由于已在源实例中加载了标 [!DNL Experience Manager] 记，因此可以在内容包中构建它们并将该包安装在目标实例上。
+1. 迁移标记： 由于已在源部署中加载了标 [!DNL Experience Manager] 记，因此可以在内容包中构建标记并将该包安装在目标实例上。
 
-1. 迁移资产： 建议使用两种工具将资产从一个实例移 [!DNL Experience Manager] 动到另一个：
+1. 迁移资产： 建议使用两种工具将资产从一个部署移 [!DNL Experience Manager] 动到另一个：
 
    * **Vault Remote** Copy或vlt rcp允许您通过网络使用vlt。 您可以指定源目录和目标目录，vlt从一个实例下载所有存储库数据并将其加载到另一个实例。 Vlt rcp在https://jackrabbit.apache.org/filevault/rcp.html上有 [文档](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit** 是Time Warner Cable为实施而开发的一个开源内容同步 [!DNL Experience Manager] 工具。 由于它使用连续的数据流，与vlt rcp相比，它具有更低的延迟，并声称速度比vlt rcp快2到10倍。 Grabbit还支持仅同步增量内容，这允许它在完成初始迁移通过后同步更改。
