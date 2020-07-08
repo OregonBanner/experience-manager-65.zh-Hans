@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '9250'
 ht-degree: 8%
@@ -133,7 +133,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 串行上传 {#serialuploads}
 
-批量上传大量资产会消耗大量I/O资源，这可能会对实例的性能产生负面影响。 [!DNL Assets] 尤其是，如果Internet连接速度较慢，则由于磁盘I/O激增，上传的时间会显着增加。 此外，您的Web浏览器可能会对并发资产上传可处理的POST请 [!DNL Assets] 求数量引入其他限制。 因此，上传操作将失败或提前终止。 换句话说，在 [!DNL Experience Manager Assets] 摄取大量文件时可能会丢失某些文件，或者完全无法摄取任何文件。
+批量上传大量资产会消耗大量I/O资源，这可能会对部署性能产生不利影响。 [!DNL Assets] 尤其是，如果Internet连接速度较慢，则由于磁盘I/O激增，上传的时间会显着增加。 此外，您的Web浏览器可能会对并发资产上传可处理的POST请 [!DNL Assets] 求数量引入其他限制。 因此，上传操作将失败或提前终止。 换句话说，在 [!DNL Experience Manager Assets] 摄取大量文件时可能会丢失某些文件，或者完全无法摄取任何文件。
 
 要克服这种情况， [!DNL Assets] 请在批量上传操作期间一次摄取一个资产（串行上传），而不是同时摄取所有资产。
 
@@ -277,7 +277,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 |  | 链接 | 从PDF文件提取链接并将其转换为在电子目录查看器中使用的图像映射。 |
 | 从多页PDF自动生成电子目录 |  | 自动从PDF文件创建电子目录。 电子目录以您上传的PDF文件命名。 （只有在上传PDF文件时栅格化该文件时，此选项才可用。） |
 | 分辨率 |  | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认为 150。 |
-| 色彩空间 |  | 选择“色彩空间”菜单并为PDF文件选择色彩空间。 大多数PDF文件同时具有RGB和CMYK彩色图像。 RGB色彩空间是联机查看的首选。 |
+| 色彩空间 |  | 选择“色彩空间”菜单并为PDF文件选择色彩空间。 大多数PDF文件都有RGB和CMYK彩色图像。 RGB色彩空间是联机查看的首选。 |
 |  | 自动检测 | 保留PDF文件的色彩空间。 |
 |  | 强制为RGB | 转换为RGB色彩空间。 |
 |  | 强制为CMYK | 转换为CMYK色彩空间。 |
@@ -657,7 +657,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 您可以使用选择选项视图、导航和选择具有任何可用视图(卡片、列和列表)的 **[!UICONTROL 资产]** 。
 
-在列表视图和列视图中，当您将指 **[!UICONTROL 针悬停在]** 资产缩略图上时，将显示选择选项。
+在列表视图和列视图中，当 **[!UICONTROL 将指针]** 悬停在资产缩略图上时，将显示选择选项。
 
 ![在列表视图中选择资产](assets/select_quick_in_listview.png)
 
@@ -879,7 +879,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    * 在font- `<font_family_name_of_custom_font, sans-serif>` family选项中包含字符串。 例如，如果要在CJK（中文、日文和韩文）中打印批注，请在字体系列选 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` 项中包含该字符串。 如果要以印地语打印批注，请下载相应的字体并将字体系列配置为Arial Unicode MS、Noto Sans、Noto Sans CJK JP、Noto Sans Devagari、sans-serif。
 
-1. 重新启动 [!DNL Experience Manager] 实例。
+1. 重新启动 [!DNL Experience Manager] 部署。
 
 下面是如何配置以在CJK( [!DNL Experience Manager] 中文、日文和韩文)中打印批注的示例：
 
