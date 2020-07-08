@@ -3,7 +3,7 @@ title: 增强的智能标记
 description: 增强的智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 7%
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 在后台，智能内容服务使用Adobe Sensei AI框架来根据您的标签结构和业务分类培训其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
 
-智能内容服务是在Adobe I/O上托管的云服务。 要在Adobe Experience Manager中使用它，系统管理员必须将您的Experience Manager实例与Adobe I/O集成。
+智能内容服务是在Adobe I/O上托管的云服务。 要在Adobe Experience Manager中使用它，系统管理员必须将您的Experience Manager部署与Adobe I/O集成。
 
 总而言之，使用智能内容服务的主要步骤如下：
 
