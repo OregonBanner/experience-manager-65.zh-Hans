@@ -3,7 +3,7 @@ title: 生成共享资产的URL
 description: 本文介绍如何在Experience Manager资产中以URL的形式共享资产、文件夹和收藏集。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 10%
@@ -40,7 +40,7 @@ Adobe Experience Manager资产允许您以URL的形式与组织成员和外部�
 
    >[!NOTE]
    >
-   >如果要将Experience Manager作者实例中的链接共享到外部实体，请确保仅对请求显示以下URL（用于链接共享） `GET` 。 阻止其他URL以确保Experience Manager作者的安全。
+   >如果要将Experience Manager作者部署中的链接共享到外部实体，请确保仅对请求显示以下URL（用于链接共享） `GET` 。 阻止其他URL以确保Experience Manager作者的安全。
    >
    >* http://[aem_server]:[port]/linkshare.html
    >* http://[aem_server]:[port]/linksharepreview.html
