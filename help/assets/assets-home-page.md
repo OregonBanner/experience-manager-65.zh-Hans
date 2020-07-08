@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Manager资产主页体验
-description: 个性化Experience Manager Assets主页，获得丰富的欢迎屏幕体验，包括有关资产最近活动的快照。
+description: 个性化Experience Manager资产主页，获得丰富的欢迎屏幕体验，包括资产最近活动的快照。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Adobe Experience Manager资产主页体验 {#aem-assets-home-page-experience}
 
-个性化Adobe Experience Manager资产主页，获得丰富的欢迎屏幕体验，包括资产相关近期活动的快照。
+个性化Adobe Experience Manager资产主页，获得丰富的欢迎屏幕体验，包括资产最近活动的快照。
 
 资产主页可提供丰富且个性化的欢迎屏幕体验，包括最近活动的快照，如最近查看或上传的资产。
 
 默认情况下，资产主页卡处于禁用状态。 要启用它，请执行以下步骤：
 
-1. 打开Experience Manager Configuration Manager `https://[aem_server]:[port]/system/console/configMgr`。
+1. 打开Experience Manager配置管 `https://[aem_server]:[port]/system/console/configMgr`理器。
 1. 打开 **[!UICONTROL Day CQ DAM事件记录器服务]** 。
 1. 选择启 **[!UICONTROL 用此服务]** ，以启用活动录制。
 
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 **最近**: 此部 **[!UICONTROL 分下的]** “最近查看的内容”构件显示登录用户最近访问的实体，包括文件夹、集合和项目。
 
-**发现**: 此部 **[!UICONTROL 分下的]** “新建”构件显示最近上传到资产实例的资产和演绎版。
+**发现**: 此部 **[!UICONTROL 分下的]** “新建”构件显示最近上传到“资产”部署的资产和演绎版。
 
 要启用清除用户活动数据，请 **[!UICONTROL 从Configuration Manager启用DAM]** 事件清除服务。 启用此服务后，系统将删除超过指定数量的登录用户活动。
 
