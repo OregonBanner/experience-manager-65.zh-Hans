@@ -3,7 +3,7 @@ title: 通过DTM实现资产洞察
 description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 它免费�
 执行这些步骤，通过DTM启用资产分析。
 
 1. 单击Experience Manager徽标，然后转至 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 分析]**&#x200B;配置。
-1. [使用DTMExperience Manager配置Cloud Service实例](/help/sites-administering/dtm.md)
+1. [使用DTMExperience Manager配置Cloud Service](/help/sites-administering/dtm.md)
 
    登录https://dtm.adobe.com并访问用户用户档案中的 [帐户](https://dtm.adobe.com/) 设 **[!UICONTROL 置后，API令牌]** 应可用。 从资产分析的角度来看，不需要执行此步骤，因为Experience Manager站点与资产分析的集成仍在进行中。
 
@@ -34,6 +34,7 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 它免费�
    * 选择“ **[!UICONTROL Web属性]** ”选项卡，然后单 **[!UICONTROL 击“添加属性”]**。
 
    * 根据需要更新字段，然后单击“创 **[!UICONTROL 建属性”]**。 请参阅 [文档](https://helpx.adobe.com/experience-manager/using/dtm.html)。
+
    ![创建编辑Web属性](assets/Create-edit-web-property.png)
 
 1. 在“规 **[!UICONTROL 则]** ”选项卡中，从导 **[!UICONTROL 航窗格中选择“页面加载规则]** ”，然后单击“ **[!UICONTROL 创建新规则”]**。
