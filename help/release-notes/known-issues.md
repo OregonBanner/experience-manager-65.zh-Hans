@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: d11fc727-f23a-4cde-9fa6-97e2c81b4ad0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6943eb3d0b73a348fc7bb5a713813bf73f8e7e79
+source-git-commit: 0a55ed44cb7fe3320b2196df38fe8492ee03912d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 58%
+source-wordcount: '586'
+ht-degree: 55%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 58%
    1. 正在调&#x200B;*用“/libs/granite/ui/content/dumplibs.rebuild.html?invalidate=true*”。
    2. 升级到AEM 6.5。
    3. 在AEM 6.5上执行“延迟内容迁移”。
+
    有一 [篇知识库](https://helpx.adobe.com/experience-manager/kb/avoid-crx-quickstart-deletion-in-aem-6-5.html) 文章，提供了更多详细信息以及解决此问题的方法。
 
 * 如果对AEM 6.5实例使用JDK 11，则部署某些包后，某些页面可能显示为空。 日志文件中显示以下错误消息：
@@ -69,6 +70,8 @@ ht-degree: 58%
 * 在自适应表单中，当从规则编辑器调用表单数据模型服务以动态更新图像选项组件的值时，不会更新图像选项组件的值。(CQ-4254754)
 * AEM Forms Designer installer requires the 32-bit version of [Visual C++ redistributable runtime package 2012](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads) and [Visual C++ redistributable runtime packages 2013](https://support.microsoft.com/zh-cn/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). 确保在开始安装之前已安装上述可再发行运行时包。(CQ-4265668)
 
+* PDF Generator不支持基于智能卡的身份验证。  当管理员在Windows服务器上启 `Interactive Logon: Require Smart card` 用组策略时，所有现有PDF Generator用户都将失效。
+
 * 当自适应表单配置为动态更新组件的值并且通过调度程序访问托管表单的发布实例时，动态更新字段值的功能将停止工作。要解决此问题，请在发布实例上打开 CRXDE，导航到 /libs/fd/af/runtime/clientlibs/guideChartReducer，然后创建下面列出的属性。
 
    * 名称：allowProxy
@@ -78,6 +81,7 @@ ht-degree: 58%
    * 必填：False
    * 多选：False
    * 已自动创建：False
+
    该属性让运行时文件夹下的客户端库可以访问代理。(CQ-4268679)
 
 * 
