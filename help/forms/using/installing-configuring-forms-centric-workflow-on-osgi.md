@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
 workflow-type: tm+mt
 source-wordcount: '1700'
 ht-degree: 2%
@@ -26,11 +26,11 @@ ht-degree: 2%
 
 设置完成后，可以手动触发这些工作流以完成定义的进程，或在用户提交表单或交互通信时以编程方式运行。 该功能包含在AEM Forms附加包中。
 
-AEM Forms是一个功能强大的企业级平台。 OSGi上以表单为中心的工作流程只是AEM Forms的一项功能。 有关功能的完整列表，请参 [阅AEM Forms简介](../../forms/using/introduction-aem-forms.md)。
+AEM Forms是一个功能强大的企业级平台。 OSGi上以表单为中心的工作流程只是AEM Forms的一项功能。 有关功能的完整列表，请参 [阅AEM Forms简介](introduction-aem-forms.md)。
 
 >[!NOTE]
 >
->借助OSGi上以表单为中心的工作流程，您可以快速为OSGi堆栈上的各种任务构建和部署工作流，而无需在JEE堆栈上安装成熟的流程管理功能。 查看OSGi [上以表](../../forms/using/capabilities-osgi-jee-workflows.md) 单为中心的AEM工作流与JEE上的流程管理的对比，了解功能的不同之处和相似性。
+>借助OSGi上以表单为中心的工作流程，您可以快速为OSGi堆栈上的各种任务构建和部署工作流，而无需在JEE堆栈上安装成熟的流程管理功能。 查看OSGi [上以表](capabilities-osgi-jee-workflows.md) 单为中心的AEM工作流与JEE上的流程管理的对比，了解功能的不同之处和相似性。
 >
 >比较后，如果选择在JEE堆栈上安装流程管理功能，请参 [阅在JEE上安装或升级AEM Forms](/help/forms/home.md) ，了解有关安装和配置JEE堆栈和流程管理功能的详细信息。
 
@@ -141,11 +141,11 @@ AEM Forms有一些必选和可选配置。 必需配置包括配置BouncyCastle�
 
 #### 配置序列化代理 {#configure-the-serialization-agent}
 
-对所有“作者”和“发布”实例执行以下步骤，将包添加到allowlist:
+对所有“作者”和“发布”实例执行以下步骤，将包添加到该允许列表:
 
 1. 在浏览器窗口中打开AEM Configuration Manager。 默认URL为[https://&#39;]server[]:port&#39;/system/console/configMgr。
 1. 搜索并打开反序 **列化防火墙配置**。
-1. 将sun. **util.calendar包添加** 到allowlist **字段** 。 单击保存。
+1. 将sun. **util.calendar包添加** 到“ **** ”字段。 单击保存。
 1. 对所有“作者”和“发布”实例重复步骤1-3。
 
 ### 可选安装后配置 {#optional-post-installation-configurations}
