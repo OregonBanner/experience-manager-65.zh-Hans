@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 36c9b3d60331e7482655bc8039153b6b86d721f9
+source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -466,7 +466,7 @@ AEM Forms模式库包含有关系统配置和业务流程的敏感信息，应�
 
 1. 将变量的值设置为TRUE。
 
-1. 重新启动AEM表单实例。
+1. 重新启动AEM Forms实例。
 
 ## 在JEE上配置AEM Forms，以便在企业之外进行访问 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
