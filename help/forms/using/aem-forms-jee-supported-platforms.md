@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1584bc5034e7d4a549a5f824a89e8cf0c06ac3c
+source-git-commit: 5ae20c36efe40e7228488a59ffc27f86e56e2d48
 workflow-type: tm+mt
-source-wordcount: '3217'
+source-wordcount: '3225'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ JEE服务器上的AEM Forms可以使用支持的操作系统、应用程序服�
 >
 >* 有关受支持服务器平台的例外情况的完整列表，请参 [阅受支持服务器平台的例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
 >* JEE上的AEM Forms只支持支持的操作系统和应用程序的英语、法语、德语和日语版本。
+
 >
 
 
@@ -155,7 +156,7 @@ Adobe Experience Manager表单需要运行Java虚拟机，该虚拟机由Java开
    <td>支持</td>
   </tr> 
    <tr>
-   <td>Oracle Database 19c </td>
+   <td>Oracle Database 19c(Standard、Real Application Clusters(RAC)和Enterprise版本) </td>
    <td>存储库微核 </td>
    <td>支持</td>
   </tr>
@@ -452,9 +453,11 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >* 仅Windows和Linux支持OpenOffice的PDF Generator转换。
 >* OCR PDF、优化PDF和导出PDF功能仅在Windows上受支持。
 >* Acrobat的某个版本与AEM Forms捆绑在一起，以启用PDF Generator功能。 在AEM Forms许可期间，仅可通过AEM Forms以编程方式访问捆绑版本，以便与AEM FormsPDF Generator一起使用。 有关详细信息，请参阅AEM Forms产品说明([按部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)[或Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+
    >
    >
 * PDF Generator服务不支持Microsoft Windows 10。
+
 >
 
 
@@ -634,6 +637,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >* Safari不支持管理控制台。
 >* 对应管理不支持适用于AEM 6.1表单的Windows® Internet Explorer 9.0。
 >* 表单门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以实现辅助功能。
+
 >
 
 
@@ -668,6 +672,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >[!NOTE]
 >
 >* 仅在iPad上的Safari上支持表单门户。
+
 >
 
 
