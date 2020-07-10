@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -115,34 +115,6 @@ AMS Phonegap插件API中提 [供了多个跟踪API。](https://docs.adobe.com/co
 要获得参考，您可以查看Geometrixx Outdoors应用程序中的代码。 在Geometrixx Outdoors应用程序中，使用ADB.trackState()方法跟踪所有页面导航。 有关更多详细信息，请查看/libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.js的源代码
 
 通过使用这些方法调用检测源代码，您可以针对应用程序收集完整指标。
-
-### 用Bloodhound测试Analytics跟踪  {#testing-analytics-tracking-with-bloodhound}
-
-![](do-not-localize/chlimage_1.jpeg)
-
-<!--NOTE TO WRITER: Bloodhound is no longer available.-->
-
-（可选）在部署到生产之前，您可以使用Adobe [工具](https://marketing.adobe.com/developer/gallery/bloodhound-app-measurement-qa-tool-1) Bloodhound测试分析配置。 为了测试分析配置，您需要编辑ADBMobileConfig.json文件，以指向运行Bloodhound的服务器，而不是实际的Analytics服务器。 要进行此更改，请从ADBMobileConfig.json中更改以下条目。
-
-```xml
-...
-"analytics": {
-    "rsids": "YOUR_RSID",
-    "server": "YOUR_TRACKING_SERVER:YOUR_TRACKING_PORT",
-...
-```
-
-更改以匹配此条目：
-
-```xml
-...
-"analytics": {
-    "rsids": "YOUR_RSID",
-    "server": "localhost:50000",
-...
-```
-
-这会将AMS插件收集的所有数据重定向到Bloodhound，以便您能够视图结果。
 
 #### 连接到AMS的属性 {#properties-for-connecting-to-ams}
 
