@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager6.5 Service Pack发行说明
+title: Adobe Experience Manager 6.5 Service Pack Release Notes
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 Service Pack 5。
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1eca1fcce90dfde8b512414249eb8cc05323c5cc
+source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
 workflow-type: tm+mt
-source-wordcount: '4512'
+source-wordcount: '4529'
 ht-degree: 7%
 
 ---
 
 
-# Adobe Experience Manager6.5 Service Pack发行说明 {#aem-service-pack-release-notes}
+# Adobe Experience Manager 6.5 Service Pack Release Notes {#aem-service-pack-release-notes}
 
 ## 发行信息 {#release-information}
 
@@ -58,7 +58,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 当“Experience Manager站点”页面是包含多个Live Copy的大型内容集的一部分时，页面版本历史预览无法加载(NPR-33311)。
 * 使用“移动”命令重命名Experience Manager站点页面时，页面标题不会更新(NPR-33264)。
 * 在列视图中移动页面时，列会消失(NPR-33216)。
-* 当语言副本中的本地组件名称与蓝图中某个组件的名称相同并且从蓝图中转出该组件时，术语不会添加 `_msm_moved` 到本地组件的名称中(NPR-33208)。
+* 当语言副本中的本地组件的名称与蓝图中某个组件的名称相同，并且该组件从蓝图中转出时，术语不会添加到本 `_msm_moved` 地组件的名称中(NPR-33208)。
 * 页面重定向servlet将。html附加到ResourceType不为的Experience Manager站点URL `cq:Page` (NPR-33176)。
 * 粘贴子树时，没有选项可决定是否粘贴相应的子页面(NPR-33149)。
 * 组件在实时使用中的结果数限于数字49(NPR-33058)。
@@ -364,7 +364,7 @@ B.使用包 [管理器中的HTTP API](https://helpx.adobe.com/cn/experience-mana
 
 **验证安装**
 
-1. 产品信息页()`/system/console/productinfo`在“已安装产品”下显示更 `Adobe Experience Manager (6.5.5.0)` 新的 [!UICONTROL 版本字符串]。
+1. The product information page (`/system/console/productinfo`) displays the updated version string `Adobe Experience Manager (6.5.5.0)` under [!UICONTROL Installed Products].
 
 1. All OSGi bundles are either **[!UICONTROL ACTIVE]** or **[!UICONTROL FRAGMENT]** in the OSGi Console (Use Web Console: `/system/console/bundles`).
 
@@ -372,7 +372,7 @@ B.使用包 [管理器中的HTTP API](https://helpx.adobe.com/cn/experience-mana
 
 要了解经认证可与此版本一起使用的平台，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md)。
 
-### 安装Adobe Experience Manager表单加载项包 {#install-aem-forms-add-on-package}
+### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -392,9 +392,9 @@ For information about installing the cumulative installer for Experience Manager
 
 ### UberJar {#uber-jar}
 
-Adobe Public Maven存储库中提供UberJar for [6.5.5.0Experience Manager](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/)。
+The UberJar for Experience Manager 6.5.5.0 is available in the [Adobe Public Maven repository](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aem/uber-jar/6.5.5/).
 
-要在Maven项目中使用UberJar，请 [了解如何使用UberJar](/help/sites-developing/ht-projects-maven.md) ，并在项目POM中包含以下依赖项：
+To use UberJar in a Maven project, see [how to use UberJar](/help/sites-developing/ht-projects-maven.md) and include the following dependency in your project POM:
 
 ```shell
 <dependency>
@@ -414,11 +414,12 @@ Adobe Public Maven存储库中提供UberJar for [6.5.5.0Experience Manager](http
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | 已 **[!UICONTROL 弃用AEM cloud services]** “选择加入”屏幕。 随着AEM 6.5中更新的AEM和Target集成以支持Target StandardAPI（它使用通过Adobe IMS和I/O进行身份验证）以及Adobe Launch在检测AEM页面以进行分析和个性化方面日益重要的作用，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM cloud services配置系统连接、Adobe IMS身份验证和Adobe I/O集成。 |
+| 集成 | The **[!UICONTROL AEM Cloud Services Opt-In]** screen is deprecated. 随着AEM 6.5中更新的AEM和目标集成以支持Target StandardAPI（它使用通过Adobe IMS和I/O进行身份验证）以及Adobe Launch在检测AEM页面以进行分析和个性化方面日益重要的作用，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM cloud services配置系统连接、Adobe IMS身份验证和Adobe I/O集成。 |
+| 连接器 | AEM 6.5已弃用Adobe JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013。 | 不适用 |
 
 ## 已知问题 {#known-issues}
 
-* 如果您正在安 [!DNL Experience Manager] 装带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
+* 如果安装的 [!DNL Experience Manager] 是带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
 
 * 如果层次结构中的文件夹已重 [!DNL Experience Manager Assets] 命名，且包含资产的嵌套文件夹已发布到 [!DNL Brand Portal]，则只有在根文件夹再次发布后，才会更新 [!DNL Brand Portal] 该文件夹的标题。
 
@@ -426,11 +427,11 @@ Adobe Public Maven存储库中提供UberJar for [6.5.5.0Experience Manager](http
 
 * 无法使用AEM默认邮件发送器将电子邮件发送到远程SMTP服务器，因为它仅允许使用TLS v1.2进行通信。请从 `javax.mail:mail:1.5.0-b01` 包 `system/console` 中删除包并刷新包以解决此问题。
 
-* 当用户首次选择在自适应表单中配置字段时，用于保存配置的选项不会显示在属性浏览器中。 选择在同一编辑器中配置自适应表单的其他字段可解决此问题。
+* 当用户首次选择在自适应表单中配置字段时，用于保存配置的选项不会显示在属性浏览器中。 Selecting to configure some other field of the adaptive form in the same editor resolves the issue.
 
-* 如果 [!UICONTROL 连接的资产配置向导] 在安装后返回404错误消息，请使用包管理器 `cq-remotedam-client-ui-content` 手动重 `cq-remotedam-client-ui-components` 新安装和包。
+* If [!UICONTROL Connected assets configuration] wizard returns a 404 error message after installation, manually reinstall the `cq-remotedam-client-ui-content` and `cq-remotedam-client-ui-components` packages using the Package Manager.
 
-* 在安装AEM 6.5.x.x过程中，可能会显示以下错误和警告消息：
+* The following errors and warning messages may display during installation of AEM 6.5.x.x:
    * “在 AEN 中使用 Target Standard API（IMS 身份验证）配置 Target 集成，然后将“体验片段”导出到 Target 时，会导致创建错误的选件类型。而不是“体验片段”/源“Adobe Experience Manager”类型，Target 会创建若干个“HTML”/源“Adobe Target Classic”类型的选件。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证将失败。 CQ-4274424
@@ -450,7 +451,8 @@ Adobe Public Maven存储库中提供UberJar for [6.5.5.0Experience Manager](http
 这些网站仅适用于客户。如果您是客户并且需要访问，请联系您的 Adobe 客户经理。
 
 * [产品下载：licensing.adobe.com](https://licensing.adobe.com/)
-* [联系客户支](https://docs.adobe.com/content/help/en/customer-one/using/home.html)持有关访问支持门户的详细信息，请参 [阅访问支持门户](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)。
+* [Contact customer support](https://docs.adobe.com/content/help/en/customer-one/using/home.html)
+For more information on accessing the support portal, see [Accessing the support portal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
 
 >[!MORELIKETHIS]
 >
