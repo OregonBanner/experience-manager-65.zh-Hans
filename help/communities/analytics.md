@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 3%
@@ -107,9 +107,7 @@ AdobeAnalytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud解决�
 
       * 否 **`Counter (no subrelations)`**
    * 可以重用（重命名）现有事件或创建新的社区功能
-   <!--
-    NOTE TO WRITER: The following link was broken, so I replaced it. Check for accuracy https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/video_analytics_config.html 
-    -->
+
 
 * [视频管理](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
 
@@ -532,7 +530,8 @@ Analytics自动用于多个社区功能。
 * *UGC组件标题*: 远足主题
 * *login(authorizableId)*: `aaron.mcdonald@mailinator.com`
 * *UGC的SRP路径*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
-或要 *遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
+或 
+*要遵循的组件路径*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
 * *社区站点内容的路径*: `/content/sites/<site name>/en`
 
