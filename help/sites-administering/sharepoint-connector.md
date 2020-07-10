@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5d74f3510ff20e062f1e78f61d98e9c2e7a0414f
+source-git-commit: 6686c10f1af24cc4fbdcf6d4e8b07f7dc0e2a8bb
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 2%
@@ -74,7 +74,7 @@ SharePoint连接器可从包共享下 [载](https://www.adobeaemcloud.com/conten
 
 * AEM版本：
 
-   * AEM 6.5、6.4、6.3
+   * AEM 6.4、6.3
 
 * Microsoft SharePoint版本：
 
@@ -131,7 +131,7 @@ AEM包共享用于分发产品功能、示例和热修复。 有关详细信息�
 连接器也可配置为多个工作区。 在这种情况下，每个工作区都与通过工作区公开的相应SharePoint服务器的URL相关联。 要添加工作区，请向“工作区”(Workspaces)参数添加工作区定义。 工作区定义具有以下格式：
 `<name>`= `<url>` where`<name>` is the JCR workspace name and`<url>` is the SharePoint server for that workspace.
 
-在AEM中，执行与上述配置步骤不同的另一步。 允许列出&#x200B;**“com.day.cq.dam.cq-dam-jcr-connectors**”捆绑。
+在AEM中，执行与上述配置步骤不同的另一步。 允许列表&#x200B;**“com.day.cq.dam.cq-dam-jcr-connectors**”捆绑。
 
 要在AEM中允许列表包，请执行以下步骤：
 
@@ -164,7 +164,7 @@ AEM包共享用于分发产品功能、示例和热修复。 有关详细信息�
 1. 导航到OSGi管理控制台： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)。
 1. 搜索“Default DAMAssetSynchronization”服务。
 1. 编辑配置值。
-1. 设置有权访问SharePoint站点的用户的用户名和相应的口令。
+1. Set the user name and the corresponding Password of the user having access on the SharePoint site.
 1. 单击保存。
 
 启用DAM同步服务，默认情况下禁用该服务：
@@ -176,7 +176,7 @@ AEM包共享用于分发产品功能、示例和热修复。 有关详细信息�
 或者，您也可以配置不同同步周期之间的同步延迟：
 
 1. 导航到OSGi管理控制台： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-1. 搜索“DAY CQ DAM JCR连接器资产同步服务”。
+1. Search for &quot;DAY CQ DAM JCR Connector Asset Synchronization Service.&quot;
 1. 编辑配置值。
 1. 设置同步周期的值（以秒为单位）。
 1. 单击保存。
@@ -217,7 +217,7 @@ AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013，�
 1. 单击OSGI >配置。
 1. 搜索Day **JCR Connector for Microsoft Sharepoint**。
 1. 单击 `Edit the configuration values`.
-1. 将Sharepoint连接工厂的值设置为 `com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`。
+1. Set the value of Sharepoint Connection Factory to `com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`.
 1. 单击&#x200B;**保存**。
 
 只有在AEM和SharePoint上通过身份验证的用户才能通过连接器访问SharePoint内容。
@@ -226,7 +226,7 @@ AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013，�
 
 要在AEM中创建用户，请执行以下操作：
 
-1. 登录http://localhost:9502/with管理员用户。
+1. Login to http://localhost:9502/with the admin user.
 1. 单击“工具”。
 1. 单击“安全”。
 1. 单击“用户”。
@@ -238,29 +238,29 @@ AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013，�
 要在管理员组中添加用户，请执行以下操作：
 
 1. 转到“组管理”。
-1. 单击“a”节点。
-1. 单击“管理员”。
+1. Click the ‘a’ node.
+1. Click ‘administrators’.
 1. 在“浏览”按钮前的文本框中键入以上创建的 **用户** ID。
-1. 单击绿色勾号将用户添加到管理员组。
+1. Click the Green tick symbol to add the user to admin group.
 
-### 禁用令牌身份验证 {#disable-token-authentication}
+### Disable Token Authentication {#disable-token-authentication}
 
-1. 下载并安装包 `basic auth`。 `zip` 从包共享。
+1. Download and install the package `basic auth`. `zip` from Package Share.
 
-1. 关闭快速启动。
-1. 打开文件 *\crx-quickstart\repository\repository.xml*。
-1. 查找标记 `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.`
-1. 将标记插 `<param name="disableTokenAuth" value="true"/>` 入步骤4中提到的标记中。
-1. 保存并关闭xml文件。
-1. 重新启动QuickStart并使用凭据登录。
+1. Close Quickstart.
+1. Open the file *\crx-quickstart\repository\repository.xml*.
+1. Find the tag `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.`
+1. Insert the tag `<param name="disableTokenAuth" value="true"/>` inside the tag mentioned in step 4.
+1. Save and close the xml file.
+1. Restart QuickStart and log in with your credentials.
 
-#### 支持SharePoint服务器的不同身份验证方法 {#supporting-different-authentication-methods-of-the-sharepoint-server}
+#### Supporting different authentication methods of the SharePoint server {#supporting-different-authentication-methods-of-the-sharepoint-server}
 
-在其标准版本中，连接器支持标准IIS **Windows** 身份验证（基本）和基于表单的身份验证（基于令牌）。 通过 [可扩展性机制](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) ，可以支持其他身份验证方法。
+In its standard version, the connector supports the standard IIS **Windows** authentication (Basic) and Forms-based authentication (token based). The [other authentication methods](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) can be supported through the extensibility mechanism.
 
 以下步骤提供了扩展标准身份验证以支持SharePoint服务器的各种身份验证方法的相关指南：
 
-1. 实施 `com.day.crx.spi.sharepoint.security.SharepointConnectionFactory` 以处理特定身份验证过程的客户端。
+1. Implement `com.day.crx.spi.sharepoint.security.SharepointConnectionFactory` to handle the client side of your specific authentication process.
 1. 将实现 `SharepointConnectionFactory` 作为带有片段主机的片段包进行安 `com.day.crx.spi.crx2sharepoint-bundle`装。
 
    使用Maven时，请根据项目 `maven-bundle-plugin` 的要求调整以下配置：
@@ -284,7 +284,7 @@ AEM JCR Connector for Microsoft SharePoint 2010和Microsoft SharePoint 2013，�
               </plugin>
    ```
 
-1. 在连接 `SharepointConnectionFactory` 器配置中注册实现。 在连接器的配置窗口中，单击“高 **级选项”**。 在“for Sharepoint **连接工厂** ”字段中，指定实现的名称 `com.day.crx.spi.sharepoint.auth.CustomConnectionFactory`。
+1. Register the `SharepointConnectionFactory` implementation in the connector configuration. In the configuration window of the connector, click **Advanced options**. In the for **Sharepoint Connection Factory** field, specify the name of the implementation `com.day.crx.spi.sharepoint.auth.CustomConnectionFactory`.
 
-1. 重新启动连接器。
+1. Restart the connector.
 
