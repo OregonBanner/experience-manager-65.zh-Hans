@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1428'
 ht-degree: 1%
 
 ---
@@ -90,14 +90,16 @@ AEM Forms交互通信在AEM Forms的“作者”实例上运行管理、创作�
 
 AEM Forms加载项包是部署到AEM上的应用程序。 该软件包包含AEM Forms交互通信、通信管理和其他功能。 请执行以下步骤来安装加载项包：
 
-1. 以管理员身 [份登录](https://localhost:4502) AEM服务器并打 [开包共享](https://localhost:4502/crx/packageshare)。 您需要Adobe ID才能登录包共享。
-1. 在 [AEM包共享](https://localhost:4502/crx/packageshare/login.html)**中，搜索AEM 6.5 Forms Add-on包或最新** 的服务包 **，单击适用于您的操作系统的包，然后单******&#x200B;击“下载”。 阅读并接受许可协议，然后单击 **确定**。 下载开始。 下载后，包旁 **会显** 示“已下载”一词。
+1. 开放 [软件分发](https://experience.adobe.com/downloads)。 您需要Adobe ID登录软件分发。
+1. 点按 **[!UICONTROL 标题]** 菜单中可用的Adobe Experience Manager。
+1. 在过滤器 **[!UICONTROL 部分]** :
+   1. 从“ **[!UICONTROL 解决方]** 案 **[!UICONTROL ”下]** 拉列表中选择“表单”。
+   2. 选择包的版本和类型。 您还可以使用“搜 **[!UICONTROL 索下载]** ”选项筛选结果。
+1. 点按适用于您的操作系统的包名称，选择“ **[!UICONTROL 接受EULA条款]**”，然后点 **[!UICONTROL 按下载]**。
+1. 打开 [包管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) ，然后单 **[!UICONTROL 击“上传包]** ”以上传包。
+1. Select the package and click **[!UICONTROL Install]**.
 
-   您还可以使用版本号搜索加载项包。 有关最新包的版本号，请参阅 [AEM Forms发布](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 文章。
-
-1. 下载完成后，单击“已 **下载**”。 您被重定向到包管理器。 在包管理器中，搜索下载的包，然后单击“安 **装”**。
-
-   如果您通过AEM Forms版本文章中列出的直接链接手 [动下载包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) ，请登录到包管理器，单击“上 **传包**”，选择下载的包，然后单击“上传”。 上载包后，单击包名称，然后单击“安 **装”。**
+   您还可以通过AEM Forms版本文章中列出的直接链接下载 [该包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即重新启动服务器。** 在停止AEM Forms服务器之前，请等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止显示在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志是稳定的。
 1. 对所有“作者”和“发布”实例重复步骤1-4。
@@ -129,11 +131,11 @@ AEM Forms有一些必选和可选配置。 必需配置包括配置BouncyCastle�
 
 #### 配置序列化代理 {#configure-the-serialization-agent}
 
-对所有“作者”和“发布”实例执行以下步骤，将包添加到allowlist:
+对所有“作者”和“发布”实例执行以下步骤，将包添加到该允许列表:
 
 1. 在浏览器窗口中打开AEM Configuration Manager。 默认URL为[https://&#39;]server[]:port&#39;/system/console/configMgr。
 1. 搜索并打开反序 **列化防火墙配置**。
-1. 将sun. **util.calendar包添加** 到allowlist **字段** 。 单击保存。
+1. 将sun. **util.calendar包添加** 到“ **** ”字段。 单击保存。
 1. 对所有“作者”和“发布”实例重复步骤1-3。
 
 ### 可选安装后配置 {#optional-post-installation-configurations}
