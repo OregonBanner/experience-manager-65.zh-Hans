@@ -10,16 +10,19 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 43fe9540a3a29ae86f48756c77001c0a4b8ea3e4
+source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
 
 # 升级到AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5 Forms包括若干新增功能和增强功能，可简化表单和通信的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅新 [增功能摘要文档](../../forms/using/whats-new.md)。
+AEM 6.5 Forms包括若干新增功能和增强功能，可简化表单和通信的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅新增 [功能摘要文档](../../forms/using/whats-new.md)。
 
-您可以升级现有LiveCycle或AEM Forms安装，以获得AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、进程和资产完好无损。 升级时，还会保留元数据和进程的状态。 您可以选择升级途径以开始升级。
+您可以升级现有LiveCycle或AEM Forms安装，以获得AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、流程和资产不变。 升级时，还会保留元数据和进程的状态。 您可以选择升级途径开始升级。
 
 下图显示了OSGi上AEM Forms的可用升级路径：
 
@@ -32,11 +35,11 @@ AEM 6.5 Forms包括若干新增功能和增强功能，可简化表单和通信�
 
 您还可以从
 
-* OSGi上的AEM 6.0表单
+* OSGi上的AEM 6.0 Forms
 * OSGi上的AEM 6.1表单
 * OSGi上的AEM 6.2 Forms
 
-下图显示了JEE上的AEM Forms的可用升级路径：
+下图显示了JEE上AEM Forms的可用升级路径：
 
 ![](do-not-localize/jee-upgrade-6-5.png)
 
@@ -70,7 +73,7 @@ Migration involves moving only assets (PDF, XDP, images, adaptive forms, corresp
 
     * **Run Migration Utility**
 
-      The migration utility makes the adaptive forms and correspondence management assets of earlier versions compatible with AEM 6.3 forms. You can download the utility from AEM package share. For step-by-step information to configure and use the migration utility, see [migration utility](../../forms/using/migration-utility.md) documentation.
+      The migration utility makes the adaptive forms and correspondence management assets of earlier versions compatible with AEM 6.3 forms. You can download the utility from AEM Software Distribution. For step-by-step information to configure and use the migration utility, see [migration utility](../../forms/using/migration-utility.md) documentation.
 
     * **Reconfigure Adobe Sign**
 
