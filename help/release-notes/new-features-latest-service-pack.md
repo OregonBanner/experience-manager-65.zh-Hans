@@ -1,22 +1,22 @@
 ---
-title: Adobe Experience Manager 6.5 Service Pack 5的新增功能
-description: Adobe Experience Manager 6.5 Service Pack 5的新增功能
+title: Adobe Experience Manager6.5 Service Pack 5的新增功能
+description: Adobe Experience Manager6.5 Service Pack 5的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d7276f332bece4f736d92e5723d79ffc2d27e900
+source-git-commit: 71c0d0263e1d0da7e33762a3b22773f38db3ba52
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 2%
+source-wordcount: '1873'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Service Pack 5的新增功能 {#aem-whats-new-service-pack-5}
+# Adobe Experience Manager6.5 Service Pack 5的新增功能 {#aem-whats-new-service-pack-5}
 
-Adobe Experience Manager 6.5服务包每季度提供新功能、客户要求的增强功能以及性能、稳定性和安全性改进。 每季度上市使访问和采用新功能和创新变得很容易。
+Adobe Experience Manager6.5服务包每季度提供新功能、客户请求的增强功能以及性能、稳定性和安全性改进。 每季度上市使访问和采用新功能和创新变得很容易。
 
-本文重点介绍最新6.5 Service Pack包含的功 [能、先前6.5 Service Pack包含的主要功能](#key-features-previous-service-packs)，以及 [Experience Manager 6.5.4.0发布后的部分主要版本](#key-releases-since-last-sp) 。
+本文重点介绍最新6.5 Service Pack包含的功 [能、先前6.5 Service Pack包含的主要功能](#key-features-previous-service-packs)，以及自 [Experience Manager6.5.4.0版以来的部分主要版本](#key-releases-since-last-sp) 。
 
 ## Adobe Experience Manager Sites {#aem-sites}
 
@@ -78,23 +78,23 @@ Adobe Experience Manager 6.5服务包每季度提供新功能、客户要求的�
 
 ### 自定义Adobe Experience Manager收件箱列 {#customize-aem-inbox-columns}
 
-您可以自定义收 [!DNL Experience Manager] 件箱以更改列的默认标题，对列的位置重新排序，并根据工作流的数据显示其他列。 列或组 `administrators` 的 `workflow-administrators` 成员可以自定义列。
+您可以自定义收 [!DNL Experience Manager] 件箱以更改列的默认标题，对列的位置重新排序，并根据工作流的数据显示其他列。 列或组 `administrators` 的 `workflow-administrators` 成员可以自定义列。 有关详细信息，请参阅 [管理控制](../sites-authoring/inbox.md#inbox-admin-control)。
 
 ![自定义Experience Manager收件箱列](assets/customize-columns.gif)
 
 ### 将交互通信另存为草稿 {#save-as-draft}
 
-您可以使用代理UI为每个交互式通信保存一个或多个草稿，稍后检索草稿以继续处理它。 您可以为每个草稿指定一个不同的名称以标识它。
+您可以使用代理UI为每个交互式通信保存一个或多个草稿，稍后检索草稿以继续处理它。 您可以为每个草稿指定一个不同的名称以标识它。 有关详细信息，请参 [阅将交互式通信另存为草稿](../forms/using/prepare-send-interactive-communication.md#save-as-draft)。
 
 ![另存为草稿](assets/save-as-draft.gif)
 
 ### [!DNL Oracle WebLogic] 应用服务器支持 {#weblogic-support}
 
-Adobe Experience Manager Forms已在JEE上增 [!DNL Oracle WebLogic 12] 加了对Adobe Experience Manager Forms的支持。 您可以从先前版本升级，或在JEE服务器上的12.2.1.4及更高版本 [!DNL Oracle WebLogic] 设置新的Experience Manager 6.5 Forms。 稍后的版本更改与次要版本更改相对应，其中12.2.1.x中的x替换为版本号。
+Adobe Experience Manager表单在JEE上增加 [!DNL Oracle WebLogic 12] 了对Adobe Experience Manager表单的支持。 您可以从先前版本升级，或在JEE服务器上的12.2.1.4及更高版本 [!DNL Oracle WebLogic] 上设置新的Experience Manager6.5表单。 稍后的版本更改与次要版本更改相对应，其中12.2.1.x中的x替换为版本号。
 
 ### 辅助功能改进 {#accessibility-improvements}
 
-Adobe Experience Manager Forms包含以下辅助功能增强功能：
+Adobe Experience Manager表单包括以下辅助功能增强功能：
 
 * 当用户将自适应表单预览为HTML表单时，“涂 [!UICONTROL 抹签名] ”字段将保留选项卡焦点。
 
@@ -104,15 +104,15 @@ Adobe Experience Manager Forms包含以下辅助功能增强功能：
 
 ### 表单数据模型中基于X-509证书的基于SOAP的Web服务身份验证 {#x509-based-authentication-soap}
 
-表单数据模型现在支持基于X-509证书的身份验证，同时使用SOAP Web服务作为数据源。
+表单数据模型现在支持基于X-509证书的身份验证，同时使用SOAP Web服务作为数据源。 有关详细信息，请参 [阅配置SOAP Web服务](../forms/using/configure-data-sources.md#configure-soap-web-services)。
 
 ### 其他主要改进 {#other-improvements}
 
-* JEE文档安全上的Experience Manager 6.5表单现在基于 [!DNL Apache Struts 2]。
+* Experience Manager6.5 JEE文档安全表单现在基于 [!DNL Apache Struts 2]。
 
 * 增加了对的 [!DNL Oracle Real Applications Cluster (RAC) 19c]支持。
 
-## 以前的Experience Manager 6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
+## 先前Experience Manager6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
 ### Experience Manager Sites {#aem-sites-previous-service-packs}
 
@@ -136,7 +136,7 @@ Adobe Experience Manager Forms包含以下辅助功能增强功能：
 
 和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过Adobe [!DNL Brand Portal] I/O进行配置，Adobe I/O为租户提供IMS令牌以进行授 [!DNL Brand Portal] 权。
 
-使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产与Brand](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) Portal。
+使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) （使用Brand Portal）。
 
 #### Accessibility enhancements (6.5.4.0) {#accessibility-enhancements}
 
@@ -153,21 +153,21 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月�
 
 #### 可视 [!DNL Adobe Experience Manager Assets] 搜索(6.5.2.0) {#visual-search}
 
-[!DNL Assets] 用户可以搜索视觉上相似的图像。 Experience Manager显示来自DAM存储库的与用户选择的图像类似的标记智能图像。 See [Visual search](../assets/search-assets.md).
+[!DNL Assets] 用户可以搜索视觉上相似的图像。 Experience Manager显示来自DAM存储库的智能标记图像，该图像与用户选择的图像类似。 See [Visual search](../assets/search-assets.md).
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
-#### Dynamic Media的智能成像 {#smart-imaging}
+#### 面向Dynamic Media的智能成像 {#smart-imaging}
 
 智能成像使用每个用户独特的查看特性自动提供为其体验优化的正确图像，从而获得更好的性能和参与度。 智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 请参 [阅智能成像](../assets/imaging-faq.md)。
 
-#### Dynamic Media视频用户档案中的智能裁剪(6.5.3.0) {#smart-crop-video}
+#### 针对Dynamic Media的视频用户档案中的智能裁剪(6.5.3.0) {#smart-crop-video}
 
 视频智能裁剪是视频用户档案中的一项可选功能，它是一款工具，可利用Adobe Sensei中人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。 请参 [阅关于在视频用户档案中使用智能裁剪](../assets/video-profiles.md)。
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### 在Experience Manager Forms工作流(6.5.4.0)中生成可打印输出 {#generate-printable-output}
+#### 在Experience Manager表单工作流(6.5.4.0)中生成可打印输出 {#generate-printable-output}
 
 使用“生成可打印输出”工作流步骤，您可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流程——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
 
@@ -195,30 +195,30 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月�
 
 #### Accessibility enhancements (6.5.4.0) {#forms-accessibility-enhancements-6540}
 
-Experience Manager Forms包括以下辅助功能增强功能：
+Experience Manager表单包括以下辅助功能增强功能：
 
 * 屏幕阅读器在自适应表单中正确宣布复选框、链接、日期选取器和日期输入字段。
 
 * 自适应表单的每页现在包含一个标题和一个主要地标标签。
 
-#### 共享并请求访问Experience Manager Forms用户(6.5.3.0)的收件箱项目 {#share-request-access}
+#### 共享并请求访问Experience Manager表单用户的收件箱项目(6.5.3.0) {#share-request-access}
 
 您可以与其他用户共享您的收件箱项目。 当其他用户获得对您的收件箱项目的访问权限后，用户可以声明共享项目并采取相应操作。 同样，您也可以请求其他用户访问收件箱项目。 请参 [阅共享和请求对用户收件箱项目的访问权限](../forms/using/configure-shared-queues-osgi.md)。
 
-#### 为AEM Forms用户(6.5.3.0)的收件箱项目配置办公室外设置 {#configure-out-of-office}
+#### 为AEM Forms用户的收件箱项目配置办公室外设置(6.5.3.0) {#configure-out-of-office}
 
 如果您计划不在办公室，您可以指定对分配给您的该期间项目会发生什么情况。
 您可以选择指定开始日期、时间以及结束日期和时间，以使您的离职设置生效。 您可以设置将所有项目发送给的默认人员。 请参 [阅配置外出设置](../forms/using/configure-out-of-office-settings.md)。
 
-#### 使用AEM Forms的Batch API(6.5.3.0)生成多个交互式通信 {#generate-multiple-ic}
+#### 使用AEM Forms的Batch API生成多个交互式通信(6.5.3.0) {#generate-multiple-ic}
 
 您可以使用批处理API从模板生成多个交互式通信。 模板是无任何数据的交互式通信。 批处理API将数据与模板相结合以生成交互式通信。 API在大规模制作交互式通信中非常有用。 例如，电话单、多个客户的信用卡对帐单。 请参 [阅使用Batch API生成多个交互式通信](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)。
 
-## Adobe Experience Manager 6.5 SP4后的主要版本 {#key-releases-since-last-sp}
+## 自Adobe Experience Manager6.5 SP4以来的主要发行版 {#key-releases-since-last-sp}
 
 在2020年3月5日至2020年6月04日之间，Adobe除了发布服务包和累积修复包外，还发布了以下软件：
 
-* [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 可用于下载Experience Manager服务包、累积修复包、热修复和功能包。
+* [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) ，可下载Experience Manager服务包、累积修复包、热修复和功能包。
 
 * [!DNL Adobe Experience Manager Cloud Manager] [2020.3.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-3-0.html)、 [2020.4.0](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/release-notes/release-notes-2020-4-0.html)和 [2020.5.0](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/release-notes/release-notes-current.html)。
 
@@ -228,7 +228,7 @@ Experience Manager Forms包括以下辅助功能增强功能：
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager 6.5文档](../user-guide/home.md)
->* [Adobe Experience Manager 6.5的一般发行说明](release-notes.md)
->* [Adobe Experience Manager 6.5的Service Pack发行说明](sp-release-notes.md)
+>* [Adobe Experience Manager6.5文档](../user-guide/home.md)
+>* [Adobe Experience Manager6.5的一般发行说明](release-notes.md)
+>* [Adobe Experience Manager6.5的Service Pack发行说明](sp-release-notes.md)
 
