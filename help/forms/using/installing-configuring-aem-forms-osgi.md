@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 1%
@@ -122,7 +122,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该软件包包含AEM 
 
    您还可以通过AEM Forms版本文章中列出的直接链接下载 [该包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 。
 1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即重新启动服务器。** 在停止AEM Forms服务器之前，请等到文件中出现ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息， `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` 并且日志是稳定的。
-1. 对所有“作者”和“发布”实例重复步骤1-4。
+1. 对所有“作者”和“发布”实例重复步骤1-7。
 
 ## 安装后配置 {#post-installation-configurations}
 
