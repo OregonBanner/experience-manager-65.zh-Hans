@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 2%
@@ -114,7 +114,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该软件包包含OSGi
    您还可以通过AEM Forms版本文章中列出的直接链接下载 [该包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **请勿立即重新启动服务器。** 在停止AEM Forms服务器之前，请等到ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止显示在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志是稳定的。
-1. 对所有“作者”和“发布”实例重复步骤1-4。
+1. 对所有“作者”和“发布”实例重复步骤1-7。
 
 ## 安装后配置 {#post-installation-configurations}
 
