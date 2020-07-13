@@ -1,6 +1,6 @@
 ---
-title: Forum Essentials
-seo-title: Forum Essentials
+title: 论坛基础
+seo-title: 论坛基础
 description: 论坛概述
 seo-description: 论坛概述
 uuid: 68849582-8742-40be-9e7e-0b574ae38815
@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 1%
 
 ---
 
 
-# Forum Essentials {#forum-essentials}
+# 论坛基础 {#forum-essentials}
 
 本页提供了使用论坛功能的基本信息。
 
@@ -33,7 +36,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.partiting<br /> cq.social.hbs.forum</td>
+   <td>cq.ckeditor<br /> cq.social.hbs.porting<br /> cq.social.hbs.forum</td>
   </tr>
   <tr>
    <td> <strong>模板</strong></td>
@@ -62,21 +65,21 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ### 论坛功能 {#forum-function}
 
-包含论坛功能的社区站 [点结构](functions.md#forum-function)，包括已配置的组 `forum` 件以及影响协调、标记和翻译的设置。
+包含论坛功能的社区 [站点结构](functions.md#forum-function)，包括已配置 `forum` 的组件以及影响审核、标记和翻译的设置。
 
 ### 访问论坛帖子(UGC) {#accessing-forum-posts-ugc}
 
-UGC应使用一种标准的仲裁方法进行仲裁。
-请参阅 [审核用户生成的内容](moderate-ugc.md)。
+UGC应使用一种标准的协调方法进行仲裁。
+请参 [阅调节用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对UGC使用公 [用商店](working-with-srp.md) ，包括以编程方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -简介和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码准则
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南。
+* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
 
