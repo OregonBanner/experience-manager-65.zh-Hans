@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fb7d2a3cebda86fa4d91d2ea89ae459fa4b86fa0
+source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 9%
@@ -25,12 +25,12 @@ ht-degree: 9%
 
 该组 `Leaderboard` 件提供了通过根据所获得分（基本得分）或其专业知识（高级得分）对成员进行排名来了解成员在社区内交互情况的能力。
 
-在将排行榜组件包含在页面之前，必须配置社 [区评分和标记](/help/communities/implementing-scoring.md)。
+在将排行榜组件包含在页面之前，必须配置Communities [评分和标记](/help/communities/implementing-scoring.md)。
 
-文档的本节介绍
+文档的本节介绍：
 
-* 将组件 `Leaderboard` 添加到社 [区站点](/help/communities/overview.md#community-sites)
-* 组件的配置设 `Leaderboard` 置
+* 将组件 `Leaderboard` 添加到社 [区站点](/help/communities/overview.md#community-sites)。
+* 组件的配置 `Leaderboard` 设置。
 
 ### Adding a Leaderboard to a Page {#adding-a-leaderboard-to-a-page}
 
@@ -44,17 +44,19 @@ ht-degree: 9%
 
 首次放置到社区站点的页面时，组件的显示方式如下：
 
-![chlimage_1-19](assets/chlimage_1-19.png)
+![chlimage_1-8](assets/chlimage_1-8.png)
 
 ### 配置通栏 {#configuring-leaderboard}
 
 选择要访问的 `Leaderboard` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-20](assets/chlimage_1-20.png) ![chlimage_1-21](assets/chlimage_1-21.png)
+![chlimage_1-9](assets/chlimage_1-9.png)
+
+![chlimage_1-10](assets/chlimage_1-10.png)
 
 #### “设置”选项卡 {#settings-tab}
 
-在“设 **置** ”选项卡下，指定显示与成员相关的信息：
+在“设 **[!UICONTROL 置]** ”选项卡下，指定显示与成员相关的信息：
 
 * **显示名称**
 
@@ -118,7 +120,7 @@ ht-degree: 9%
    * 徽章规则 = `/libs/settings/community/badging/rules//reference-badging`
    * 显示限制 = `10`
 
-![chlimage_1-22](assets/chlimage_1-22.png)
+![chlimage_1-11](assets/chlimage_1-11.png)
 
 ### 示例： 专家排行榜 {#example-experts-leaderboard}
 
@@ -141,7 +143,7 @@ ht-degree: 9%
    * 徽章规则 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 显示限制 = `10`
 
-![chlimage_1-23](assets/chlimage_1-23.png)
+![chlimage_1-12](assets/chlimage_1-12.png)
 
 ### 附加信息 {#additional-information}
 
