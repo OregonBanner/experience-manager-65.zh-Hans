@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/filelibrary/components/hbs/filelibrary</td>
+   <td>社交／文件库／组件/hbs/文件库</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
@@ -62,21 +65,21 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ### 文件库功能 {#file-library-function}
 
-包含“文件库”功能的社区站 [点结构](functions.md#file-library-function)，包括已配置的组 `file library` 件。
+包含“文件库”功能的社 [区站点结构](functions.md#file-library-function)，包括已配置的 `file library` 组件。
 
-### 访问针对文件库(UGC)发布的注释 {#accessing-comments-posted-for-file-libraries-ugc}
+### 访问为文件库(UGC)发布的注释 {#accessing-comments-posted-for-file-libraries-ugc}
 
-UGC应使用一种标准的仲裁方法进行仲裁。
-请参阅 [审核用户生成的内容](moderate-ugc.md)。
+UGC应使用一种标准的协调方法进行仲裁。
+请参 [阅调节用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对 [UGC使用公用商店](working-with-srp.md) ，包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -介绍和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南。
+* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
 
