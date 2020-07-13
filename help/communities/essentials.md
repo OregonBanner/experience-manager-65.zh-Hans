@@ -1,8 +1,8 @@
 ---
 title: 组件、功能和功能要件
 seo-title: 组件、功能和功能要件
-description: 社区站点、模板和组的运行方式
-seo-description: 社区站点、模板和组的运行方式
+description: 社区站点、模板和组的工作方式
+seo-description: 社区站点、模板和组的工作方式
 uuid: 6edfca2d-fe5b-4261-b033-51dc2f9dbfd7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,24 +10,27 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 17%
 
 ---
 
 
-# 组件、功能和功能要件 {#component-function-and-feature-essentials}
+# 组件、功能和功能要件  {#component-function-and-feature-essentials}
 
-AEM Communities功能要求站点访客成为成员并登录社 [区站点](overview.md#communitiessites) ，然后才能发布内容。 因此， [从中创建社区站点的社区站点模](sites.md)板 [](sites-console.md)，设计为包括登录功能以及用户用户档案、消息、搜索、协调和翻译。
+AEM Communities功能要求站点访客成为成员并登录社 [区站点](overview.md#communitiessites) ，然后才能发布内容。 因此， [从中创建社区](sites.md)站点的社区站点模 [板](sites-console.md)，设计为包括登录功能以及用户用户档案、消息、搜索、协调和翻译。
 
-当社区组功能包含在所选社区站点模板中时，社 [区站点将支持创建](functions.md#groups-function) 社区组的成员。
+当社区组功能包含在所选社区站点模板中时，社 [区站点将支持](functions.md#groups-function) 创建社区组的成员。
 
-以下是指向社区组件、功能和功能的基本信息的链接。
+以下是社区组件、功能和功能的基本信息链接。
 
 ## 基本组件 {#base-components}
 
 * [评论](essentials-comments.md)
 * [审核](reviews-basics.md)
-* [Tally](tally.md)
+* [计数](tally.md)
 
    * [点赞](essentials-liking.md)
    * [评级](rating-basics.md)
@@ -61,16 +64,16 @@ AEM Communities功能要求站点访客成为成员并登录社 [区站点](over
 * [评分和徽章](configure-scoring.md)
 * [搜索](search-implementation.md)
 * [社交图](essentials-socialgraph.md)
-* [存储资源提供商](srp-and-ugc.md)`(SRP)`
+* [存储资源提供程序](srp-and-ugc.md) `(SRP)`
 
 * [标记](tag.md)
 
 ## Javadocs {#javadocs}
 
-联 [机javadocs](../../help/sites-developing/reference-materials.md) 反映AEM 6.3版本中提供的API。
-社区API位于包 `com.adobe.cq.social.*` 中。
+在 [线javadoc](../../help/sites-developing/reference-materials.md) 反映AEM 6.3版本中提供的API。
+社区API包含在 `com.adobe.cq.social.*` 包中。
 
-对于每个功 [能包](deploy-communities.md#latestfeaturepack)，都会提供一个javadocjar。 有关详细信息，请访 [问使用Maven for Communities](maven.md#javadocs)。
+对于每个功 [能包](deploy-communities.md#latestfeaturepack)，都提供一个javadocjar。 有关详细信息，请 [访问Maven for Communities](maven.md#javadocs)。
 
 ## 附加信息 {#additional-information}
 
