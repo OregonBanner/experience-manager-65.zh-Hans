@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: e795a647b8728b224792f342200a700169a5e87b
+source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 1%
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 要保护您的社区站点的内容免受匿名用户通过jcr内容和json访问，请执行以下步骤：
 
-1. 在AEM Author实例上，转至https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
+1. 在AEM作者实例中，转至https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
 
    >[!NOTE]
    >
@@ -182,7 +182,7 @@ ht-degree: 1%
 * 所有支持资源和学习路径
 * 一条特定的支持资源或学习路径
 
-导航到社 **区、报[表控制台](reports.md)**，然后根据
+导航到社 **区、报[表控制台](reports.md)**，并根据以下内容生成报表：
 
 * 支持资源和学习路径的分配
 * 在特定时间段内发布到社区站点
@@ -203,12 +203,11 @@ ht-degree: 1%
 
 在发布时只需稍加活动并与资源进行交互，即可查看有关作者的报告。
 
-* 论作者
-* 以管理权限登录
-* 从主菜单导航到“社 **[!UICONTROL 区”>“资源”]**
-* 选择站 `Enablement Tutorial` 点
-* 选择所 `Report` 有资源的摘要图标
-* 选择一个资源，然后选 `Report` 择该资源的报表的图标
+* 在创作时，使用管理权限登录。
+* 从主菜单导航到“社 **[!UICONTROL 区]** ”> **[!UICONTROL “资源]**”。
+* 选择站 `Enablement Tutorial` 点。
+* 选择所 `Report` 有资源的摘要图标。
+* 选择一个资源，然后选 `Report` 择该资源上的报表的图标。
 
 请注意，显示Adobe Analytics的数据可能为时过早，可能需要1到12小时才能显示。 但是，基本的SCORM报告已可用。
 
@@ -236,10 +235,9 @@ ht-degree: 1%
 
 对于分配报告：
 
-* 论作者
-* 以管理权限登录
-* 导航到 **[!UICONTROL 社区]** >报 **[!UICONTROL 表]** >分 **[!UICONTROL 配报表]**
-* 从下 **[!UICONTROL 拉菜]** 单中选择一个站点(选择 `Enablement Tutorial`)
+* 在创作时，使用管理权限登录。
+* 导航到 **[!UICONTROL 社区]** >报 **[!UICONTROL 表]** >分 **[!UICONTROL 配报表]**。
+* 从下 **[!UICONTROL 拉菜单]** （选择）中选择 `Enablement Tutorial`站点。
 
 * 选择 **[!UICONTROL 组]** (选择 `Community Ski Class`)
 
@@ -251,15 +249,15 @@ ht-degree: 1%
 
 有关视图的报告：
 
-* 在创作时，使用管理权限登录
-* 导航到 **[!UICONTROL 社区]** >报 **[!UICONTROL 表]** > **[!UICONTROL 视图报表]**
-* 从下 **拉菜&#x200B;**单中选择一个站点(选择`Enablement Tutorial`)
+* 在创作时，使用管理权限登录。
+* 导航到 **[!UICONTROL 社区]** >报 **[!UICONTROL 告]** > **[!UICONTROL 视图报告]**。
+* 从下 **拉菜单&#x200B;**（选择）中选择`Enablement Tutorial`站点。
 
-* 选择 **[!UICONTROL 内容类型]** (选择 `all`)
+* 选择 **[!UICONTROL 内容类型]** (选 `all`择)。
 
-* 选择日 **[!UICONTROL 期范围]** (选择 `Last 7 days`)
+* 选择日 **[!UICONTROL 期范围]** (选 `Last 7 days`择)。
 
-* 选择生 **[!UICONTROL 成]**
+* 选择 **[!UICONTROL 生成]**。
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
