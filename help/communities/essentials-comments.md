@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 本页提供了使用评论系统（评论组件）的基本功能以及管理用户在成员发布评论或回复时生成的内容(UGC)的选项。
 
-评论组件建立评论系统，使得每个单独的帖子由评论组件（单数）表示。 它是包含在页面上的评论系统。 注释系统将在被调用时创建单个注释。
+评论组件建立评论系统，使得每个单独的帖子由评论组件（单数）表示。 它是页面上包含的注释系统。 注释系统将在调用时创建单个注释。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -31,11 +34,11 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
-   <td>是——在设计模式下可编辑 <i>属 </i>性</td>
+   <td>是——属性在设计模式下 <i>可编 </i>辑</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.porting</td>
+   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.potting</td>
   </tr>
   <tr>
    <td> <strong>模板</strong></td>
@@ -56,9 +59,9 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ### 每页一个实例 {#one-instance-per-page}
 
-分页以及使用URL进行缓存和链接需要每个注释系统都具有唯一的URL。 因此，每页只允许一个评论系统实例。
+分页和使用URL进行缓存和链接需要每个注释系统都具有唯一的URL。 因此，每页只允许一个评论系统的实例。
 
-其他功能已包括评论系统。 这些是：
+其他功能已包括评论系统。 这四个关键原则分别是：
 
 * [博客](blog-developer-basics.md)
 * [日历](calendar-basics-for-developers.md)
@@ -67,7 +70,7 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 * [问题与解答](qna-essentials.md)
 * [审核](reviews-basics.md)
 
-### 旗标原因列表 {#flag-reason-list}
+### 标志原因列表 {#flag-reason-list}
 
 可以通过向应用程序添加flagreasonlist.hbs来自定义标记原因列表以覆盖中的内容
 
@@ -85,17 +88,17 @@ source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
 
 ### 访问已发布的注释(UGC) {#accessing-posted-comments-ugc}
 
-UGC应使用一种标准的仲裁方法进行仲裁。
-请参阅 [审核用户生成的内容](moderate-ugc.md)。
+UGC应使用一种标准的协调方法进行仲裁。
+请参 [阅调节用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对UGC使用公 [用商店](working-with-srp.md) ，包括以编程方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -简介和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码准则
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南。
+* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
 
