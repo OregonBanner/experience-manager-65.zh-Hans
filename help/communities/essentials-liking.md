@@ -11,18 +11,21 @@ content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 1%
 
 ---
 
 
 # 喜欢基本功能 {#liking-essentials}
 
-“喜欢”组件是一 [个数字子类](tally.md) ，它是一个有用的工具，它允许成员通过选择心形图标来表达对特定内容的积极看法。
+喜欢组件是一个 [数字子类](tally.md) ，是一个有用的工具，它允许成员通过选择心形图标来表达对特定内容的积极看法。
 
-允许在同一页面上放置一个喜欢组件的多个实例；每个实例都必须配置一个唯一的 `tally name` 属性。
+允许在同一页面上放置一个喜爱组件的多个实例； 每个实例都必须配置唯一 `tally name` 属性。
 
-不支持匿名发布类似内容。 站点访问者必须注册并登录才能参与喜欢。 已登录的访客（会员）可随时打开和关闭。
+不支持匿名发布类似内容。 网站访客必须注册并登录才能参与喜欢。 已登录访客（成员）可随时打开和关闭。
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
@@ -30,15 +33,15 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
  <tbody>
   <tr>
    <td> <strong>resourceType</strong></td>
-   <td>social/tally/components/hbs/liking</td>
+   <td>social/tall/components/hbs/lik</td>
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>可包含</strong></a></td>
-   <td>是——在设计模式下可编辑 <i>属 </i>性</td>
+   <td>是——属性在设计模式下 <i>可编 </i>辑</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
-   <td> cq.social.hbs.alking</td>
+   <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
    <td> <strong>模板</strong></td>
@@ -50,7 +53,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td><p>请参 <a href="liking.md">阅使用</a></p> </td>
+   <td><p>查看 <a href="liking.md">使用喜欢</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -59,25 +62,25 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ## 服务器端必备工具 {#essentials-for-server-side}
 
-* [Tally API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
+* [计数API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
 * [计数端点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [服务器端自定义](server-customize.md)
 
-### 访问已发布的投票(UGC) {#accessing-posted-voting-ugc}
+### 访问已过帐的投票(UGC) {#accessing-posted-voting-ugc}
 
-UGC应使用一种标准的仲裁方法进行仲裁。
-请参阅 [审核用户生成的内容](moderate-ugc.md)。
+UGC应使用一种标准的协调方法进行仲裁。
+请参 [阅调节用户生成的内容](moderate-ugc.md)。
 
-自AEM 6.1 Communities起，对 [UGC使用公用商店](working-with-srp.md) ，包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -介绍和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述。
+* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例。
+* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南。
+* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
 
