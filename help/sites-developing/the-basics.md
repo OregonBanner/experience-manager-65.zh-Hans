@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: fc09ba6cb923d9ea25ec14af093d7f86a4835d85
+source-git-commit: d621a612556f0bea032444c2e07be101868b1905
 workflow-type: tm+mt
-source-wordcount: '3365'
+source-wordcount: '3371'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在深入了解AEM的核心概念之前，Adobe建议完成WKND教程(位 [于开发AEM Sites文档入门中](/help/sites-developing/getting-started.md) )，了解AEM开发流程的概述和核心概念的简介。
+>在深入了解AEM的核心概念之前，Adobe建议完成“开 [发AEM Sites文档入门”中的WKND教程](/help/sites-developing/getting-started.md) ，以了解AEM开发流程的概述和核心概念的简介。
 
 ## 在AEM上进行开发的先决条件 {#prerequisites-for-developing-on-aem}
 
@@ -68,11 +68,11 @@ AEM是使用Sling [构建的](https://sling.apache.org/site/index.html),Sling是
 
 下图说明了Sling脚本分辨率： 它说明了如何从HTTP请求到内容节点、从内容节点到资源类型、从资源类型到脚本以及可以使用哪些脚本变量。
 
-![chlimage_1-84](assets/chlimage_1-97.png)
+![了解Apache Sling脚本分辨率](assets/sling-cheatsheet-01.png)
 
 下图说明了处理SlingPostServlet时可以使用的所有隐藏但功能强大的请求参数，SlingPostServlet是所有POST请求的默认处理函数，为您提供了在存储库中创建、修改、删除、复制和移动节点的无限选项。
 
-![chlimage_1-85](assets/chlimage_1-98.png)
+![使用SlingPostServlet](assets/sling-cheatsheet-02.png)
 
 ### Sling以内容为中心 {#sling-is-content-centric}
 
@@ -277,7 +277,7 @@ Felix管理控制台()中列出了AEM的给定实例支持的脚本引擎的列�
 
 * 自动处理GET以外的http方法，包括：
 
-   * POST、PUT、DELETE，它们通过sling默认实现进行处理
+   * POST、PUT、DELETE，使用sling默认实现处理
    * sling: `POST.jsp` resourceType位置中的脚本
 
 * 您的代码架构不再像原来那样清晰、结构清晰； 对于大规模开发至关重要
@@ -444,9 +444,9 @@ S`tring pageName = currentPage.getName();`
 
 对于AEM，生产环境通常由两种不同类型的实例组成： 作 [者实例和发布实例](/help/sites-deploying/deploy.md#author-and-publish-installs)。
 
-## 调度程序 {#the-dispatcher}
+## Dispatcher {#the-dispatcher}
 
-调度程序是Adobe用于缓存和／或负载平衡的工具。 在调度程序下可找 [到更多信息](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)。
+Dispatcher是Adobe用于缓存和／或负载平衡的工具。 在Dispatcher下可以找到更 [多信息](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)。
 
 ## FileVault（源修订系统） {#filevault-source-revision-system}
 
