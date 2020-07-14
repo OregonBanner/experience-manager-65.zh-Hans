@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 95c23d29aa1dd1695ed4e541dd11c2bbc7214f75
+source-git-commit: 4949eeb190f26850f80e1ad107f2057c661ed23d
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '2100'
 ht-degree: 1%
 
 ---
@@ -118,7 +118,78 @@ Node node = resource.adaptTo(Node.class);
   </tr>
   <tr>
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
-   <td>返回“文件”的二进制内容<code>nt:resource</code></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr><tr><td></td><td><code>cq:ContentSyncConfig</code></td></tr></tbody></table>
+   <td>返回文件资源的二进制内容(如果这是基于JCR节点的资源，且节点类型为 <code>nt:file</code> 或 <code>nt:resource</code>; 如果这是捆绑资源； 文件内容（如果这是文件系统资源）或二进制JCR属性资源的数据。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html">URL</a></td>
+   <td>返回资源的URL(如果此节点是基于JCR节点的资源，则返回此节点的存储库URL; jar bundle URL（如果这是捆绑资源）; 文件URL（如果这是文件系统资源）。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html">文件</a></td>
+   <td>如果这是文件系统资源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://sling.apache.org/apidocs/sling5/org/apache/sling/api/scripting/SlingScript.html">SlingScript</a></td>
+   <td>如果此资源是脚本（例如jsp文件），则脚本引擎将注册为sling。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/products/servlet/2.2/javadoc/javax/servlet/Servlet.html">Servlet</a></td>
+   <td>如果此资源是脚本（例如jsp文件），其脚本引擎使用sling进行注册，或如果这是servlet资源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html">String</a><br /> Boolean <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html">Long</a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html">Long</a><br /> Obelan值BooleanLong <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Double.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html"></a><br /><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html"></a><br /><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html"></a><br /><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html">多次值Boolean[]Boolean[]Long[]JolenCalendar Long[]JolanValue[]</a></td>
+   <td>如果这是基于JCR属性的资源（且值符合），则返回值。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html">LabeledResource</a></td>
+   <td>如果这是基于JCR节点的资源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html">资产</a></td>
+   <td>如果这是dam：资产节点资源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Rendition.html">再现</a></td>
+   <td>如果这是dam：资产演绎版（nt:file位于dam的演绎版文件夹下：Assert）</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
+   <td>如果这是基于JCR的资源，且用户具有访问UserManager的权限，则基于JCR会话。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">可授权</a></td>
+   <td>“可授权”是用户和组的通用基本界面。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/api/security/user/User.html">用户</a></td>
+   <td>用户是可验证和模拟的可授权的特殊用户。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/SimpleSearch.html">SimpleSearch</a></td>
+   <td>在资源下搜索(如果这是基于JCR的资源，则使用setSearchIn())。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/status/WorkflowStatus.html">WorkflowStatus</a></td>
+   <td>给定页面／工作流有效负荷节点的工作流状态。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html">复制状态</a></td>
+   <td>给定资源或其jcr:content子节点的复制状态（先选中）。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/connector/ConnectorResource.html">连接器资源</a></td>
+   <td>如果这是基于JCR节点的资源，则返回特定类型的适配连接器资源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/config/package-summary.html">配置</a></td>
+   <td>如果这是节 <code>cq:ContentSyncConfig</code> 点资源。</td>
+  </tr>
+  <tr>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/config/package-summary.html">ConfigEntry</a></td>
+   <td>如果它位于节点资 <code>cq:ContentSyncConfig</code> 源下方。</td>
+  </tr>
+ </tbody>
+</table>
 
 [**ResourceResolver适应&#x200B;**](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ResourceResolver.html):
 
