@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38f40badf8a850de363fa3f28232d3037fbf209b
+source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
 workflow-type: tm+mt
-source-wordcount: '5037'
+source-wordcount: '4685'
 ht-degree: 1%
 
 ---
@@ -77,31 +77,6 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 * 示例（内存中）Apache Derby数据库
 * Apache Derby Data Source（与Form Data Model一起使用）
 
-## 配置选项 {#configuration-options}
-
-用户可以配置各种工作流服务选项，这些选项包括：
-
-1. Microsoft Dynamics条目
-1. Adobe Sign
-1. AEM自定义通信管理
-1. AdobeAnalytics
-
-要将其配置为在工作流中启用，用户需要执行以下任务。
-
-1. 导航到[https://&#39;]server[]:port&#39;/system/console/configMgr。
-
-1. 找到WeGov *配置*。
-
-1. 打开服务定义，并启用在工作流中调用的选定服务。
-
->[!NOTE]
->
->正因为用户在“配置管理器”页面中启用了服务，用户仍需要设置服务配置才能与请求的外部服务通信。
-
-![we gov forms package](assets/aftia-configuration-options.jpg)
-
-1. 完成后，单击保存按钮以保存设置。
-
 ## 演示包安装 {#demo-package-installation}
 
 本节包含有关安装演示包的信息。
@@ -163,18 +138,19 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 1. 导航到 *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html*
 1. 以管理员身份登录以执行以下任务。
+1. 向下滚动到页面末尾以加载所有用户组。
 1. 搜索“工&#x200B;**作流**”。
 1. 选择“**工作流用户**”组，然后单击“属性”。
 1. 导航到“成员”选项卡。
 1. 在“选 **择用** 户或用户组”字段中键入wegov。
-1. 从下拉菜单“**We.Gov表单用户**”中选择。
+1. 从下拉菜单“**We.Gov Forms Users**”中进行选择。
 
    ![编辑工作流用户的组设置](assets/edit_group_settings.jpg)
 
 1. 单击菜单栏中的“保存并关闭”。
-1. 重复步骤2-7，方&#x200B;**法是**&#x200B;搜索“analytics”，选择“**Analytics管理员**”组，并将“**We.Gov表单用户**”组添加为成员。
-1. 重复步骤2-7，方&#x200B;**法为**：搜索“**表单用户**”，选择“表单——高级用户&#x200B;**”组，并将“We.Gov**&#x200B;表单用户”组添加为成员。
-1. 重复步骤2-7，方&#x200B;**法为**：搜索“**表单用户**”，选择“表单用户”**组，此时将“** We.Gov用户”组添加为成员。
+1. 重复步骤2-7，方&#x200B;**法是**&#x200B;搜索“analytics”，选择“**Analytics管理员**”组，并将“We.Gov **Forms Users**”组添加为成员。
+1. 重复步骤2-7，方&#x200B;**法为**：搜索“**表单用户**”，选择“表单——高级用户&#x200B;**”组，并将“We.Gov** Forms用户”组添加为成员。
+1. 重复步骤2-7，方&#x200B;**法为**：搜索“forms-users”**，选择“forms-users**”组，并&#x200B;**将“We.Gov Users**”组添加为成员。
 
 ### 电子邮件服务器配置 {#email-server-configuration}
 
@@ -362,7 +338,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 1. Click on **Save and Close**.
 
-1. 测试服务以确保它们成功连接到已配置的数据源
+1. [测试服务](work-with-form-data-model.md#test-data-model-objects-and-services) ，确保它们成功连接到已配置的数据源
 
    * 要测试连接，请选择 **HOMEMORGAGEACCOUNT** ，并为其提供获取服务。 测试服务，系统管理员可以看到正在检索的数据。
 
@@ -488,25 +464,6 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
    ![视图Analytics报告数据](assets/analytics_report_data.jpg)
 
-#### 视图AdobeAnalytics报告 {#view-adobe-analytics-reporting}
-
-或者，您也可以直接导航到AdobeAnalytics以查看分析数据。
-
-1. 导航到 [https://my.omniture.com/login/](https://my.omniture.com/login/)
-1. 使用凭据登录：
-
-   1. **公司:** AEM Forms演示
-   1. **用户：** &lt;请求时可用>
-   1. **密码：** &lt;请求时可用>
-
-1. 从报表包中选择“We.Gov参考站点”。
-
-   ![报表包](assets/report_suites.jpg)
-
-1. 选择一个可用报告以显示该报告的分析数据。
-
-   ![Analytics报告数据](assets/analytics_data.jpg)
-
 ### Adobe自动表单配置启用 {#automated-forms-enablement}
 
 要使用Adobe Forms安装和配置AEM Forms，转换工具用户必须具备以下各项。
@@ -535,7 +492,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
 1. 确保下载证书。
 
-1. 请勿继续执行配置——审阅部分(TBD)的其余部分
+1. 请勿继续执行其余的配置——查看在Adobe I/O [中创建集成部分](#create-integration-adobeio)
 
 >[!NOTE]
 本节中创建的证书将用于在Adobe I/O中创建集成服务。 用户在集成服务中创建后，用户可以使用Adobe I/O中的该信息完成配置。
@@ -590,7 +547,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
 #### 配置云配置（We.Gov AFC生产） {#configure-cloud-configuration}
 
-完成IMS配置后，我们可以继续在AEM中创建云配置。
+完成IMS配置后，我们可以继续查看AEM中的云配置。 如果配置不存在，请使用以下步骤在AEM中创建云配置：
 
 1. 打开浏览器并导航到系统URL https://&lt;domain_name>:&lt;system_port>
 
@@ -672,13 +629,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
    ![高级转换设置](assets/aftia-conversion-settings-2.jpg)
 
-1. 配置要使用的所有选项后，选择开始转换
-
-   >[!NOTE]
-   *指定“自适应表单主题* ”部分，用户可在此指定主题“可访问——超海洋主题”。
-
-   >[!NOTE]
-   如果要将生成的表单与FDM或其他任何对象进行绑定，则必须选中表示“生成不 *带数据绑定的自适应表单”的复选框*。
+1. 在配置了要使用的所有选项后，选择开始转换。
 
 1. 转换过程开始时，用户应看到以下屏幕：
 
@@ -688,57 +639,11 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
    ![转换的自适应表单](assets/aftia-converted-adaptive-form-2.jpg)
 
-#### 测试表单转换（We.Finance信用卡应用程序） {#testing-forms-conversion-wefinance}
-
-设置配置后，用户可以通过上传PDF文档来测试配置。
-
-1. 导航到AEM系统https://&lt;domain_name>:&lt;system_port>
-
-1. 单击“表单”>“表单和文档”>“AEM FormsWe.finance表单”>“PDF forms”。
-
-1. 选择We.Finance信用卡应用程序。
-
-1. 单击右上 **角的开始** “自动转换”按钮。
-
-1. 用户应能够看到以下选项。
-
-   ![PDF forms](assets/aftia-pdf-forms.jpg)
-
-1. 选择按钮后，用户将看到以下选项。
-
-   * 确保用户选择 *We.Finance AFC生产配置*
-
-   ![选择We.Finance AFC Production](assets/aftia-select-production-configuration.jpg)
-
-   ![高级转换设置](assets/aftia-advanced-conversion-settings-wefinance.jpg)
-
-1. 配置要使用的所有选项后，选择开始转换
-
-   >[!NOTE]
-   *指定“自适应表单主题* ”部分，用户可在此指定主题“可访问——超海洋主题”。
-
-   >[!NOTE]
-   如果要将生成的表单与FDM或其他任何对象进行绑定，则必须选中表示“生成不 *带数据绑定的自适应表单”的复选框*。
-
-   >[!NOTE]
-   用户应将输出文件夹位 *置设置为/content/dam/formsanddocuments/adobe-finance-forms/afc-converted-forms* ，以使呈现的表单显示在We.Gov站点的表单门户中。
-
-1. 转换过程开始时，用户应看到以下屏幕：
-
-   ![正在转化](assets/aftia-conversion-progress.jpg)
-
-   >[!NOTE]
-   三是报告的错误，即使您从云配置中选择单独的文件夹，它仍会在本地创建一个输出文件夹，然后将生成的表单放在正确的位置。
-
-1. 转换完成后，用户将看到以下屏幕：
-
-   ![正在转化](assets/aftia-conversion-complete.jpg)
-
-1. 用户还可以查看转换过程并编辑结果，为系统提供更好的转换能力。
+   单击“ **输出** ”文件夹以视图生成的自适应表单。
 
 #### 已知问题和说明 {#known-issues-notes}
 
-表单转换过程确实存在一些限制，可在Adobe网站上查看。 请参 [阅已知问](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html) 题，查看您的表单是否与此过程兼容。
+自动表单转换服务包括某些 [最佳实践、已知的复杂模式](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和已 [知问题](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 在开始使用AEM Forms自动表单转换服务之前，请先查看这些内容。
 
 1. 如果您希望在转换后将表单绑定到FDM，则在未启用数据绑定的情况下生成具有生成自适应表单的表单。
 
@@ -868,6 +773,30 @@ Adobe维护的公开Ultramarine主题内置于可安装的ZIP文件中`we-gov-fo
 包管理器，用户可以通过导航到“表单”>“AEM Forms”>“ **主题****”>“参考主题** ”>“ **Ultramarine-Accessible** ”，在 ****&#x200B;中访问Ultramarine主题。
 
 ![超海洋主题](assets/aftia-ultramarine-theme.jpg)
+
+## 配置选项 {#configuration-options}
+
+用户可以配置各种工作流服务选项，这些选项包括：
+
+1. Microsoft Dynamics条目
+1. Adobe Sign
+1. AEM自定义通信管理
+1. AdobeAnalytics
+
+要将其配置为在工作流中启用，用户需要执行以下任务。
+
+1. 导航到[https://&#39;]server[]:port&#39;/system/console/configMgr。
+
+1. 找到WeGov *配置*。
+
+1. 打开服务定义，并启用在工作流中调用的选定服务。
+
+>[!NOTE]
+正因为用户在“配置管理器”页面中启用了服务，用户仍需要设置服务配置才能与请求的外部服务通信。
+
+![we gov forms package](assets/aftia-configuration-options.jpg)
+
+1. 完成后，单击保存按钮以保存设置。
 
 ## 后续步骤 {#next-steps}
 
