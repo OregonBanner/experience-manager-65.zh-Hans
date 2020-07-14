@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c5ce62ad-ce9f-4681-bf85-78f7e72e1506
 translation-type: tm+mt
-source-git-commit: 95c23d29aa1dd1695ed4e541dd11c2bbc7214f75
+source-git-commit: c6b1d651940b5c556dea81d19354aac36d14b423
 workflow-type: tm+mt
-source-wordcount: '22'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Sling Cheatsheet{#sling-cheatsheet}
 
-![了解Apache Sling脚本分辨率](assets/sling-cheatsheet-01.png)
+![了解Apache Sling脚本分辨率。](assets/sling-cheatsheet-01.png)
 
-![使用SlingPostServlet](assets/sling-cheatsheet-02.png)
+![使用SlingPostServlet —— 这是POST请求的默认处理函数； 它几乎可以做任何事。](assets/sling-cheatsheet-02.png)
