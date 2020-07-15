@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 55%
+source-wordcount: '1723'
+ht-degree: 54%
 
 ---
 
@@ -139,7 +139,7 @@ You can edit the following [!UICONTROL Advanced] settings by clicking **[!UICONT
 
 #### 如何安全传输视频 {#how-to-delivery-secure-video}
 
-在 AEM 6.2 中，如果您安装了 [FP-13480](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)，则可以控制是通过安全的 SSL 连接 (HTTPS) 还是不安全的连接 (HTTP) 来传输视频。默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反之，如果网页通过 HTTP 加载，则视频也会通过 HTTP 进行传输。在大多数情况下，此默认行为不会产生问题，故而无需更改任何配置。不过，您可以通过以下方法覆盖此默认行为，以强制使用安全的视频传输方式：将 `VideoPlayer.ssl=on` 附加到 URL 路径末尾或嵌入式代码片段的其他查看器配置参数列表中。
+在 AEM 6.2 中，如果您安装了 [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)，则可以控制是通过安全的 SSL 连接 (HTTPS) 还是不安全的连接 (HTTP) 来传输视频。默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反之，如果网页通过 HTTP 加载，则视频也会通过 HTTP 进行传输。在大多数情况下，此默认行为不会产生问题，故而无需更改任何配置。不过，您可以通过以下方法覆盖此默认行为，以强制使用安全的视频传输方式：将 `VideoPlayer.ssl=on` 附加到 URL 路径末尾或嵌入式代码片段的其他查看器配置参数列表中。
 
 有关视频安全传输和在 URL 路径中使用 `VideoPlayer.ssl` 配置属性的更多信息，请参阅《查看器参考指南》中的[视频安全传输](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。除视频查看器外，安全视频投放还可用于混合媒体查看器和交互式视频查看器。
 
