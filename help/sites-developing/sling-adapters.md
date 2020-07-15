@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 translation-type: tm+mt
-source-git-commit: 4949eeb190f26850f80e1ad107f2057c661ed23d
+source-git-commit: bac56cb8e172d826114e1e607dc24b0a17821f8c
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Node node = resource.adaptTo(Node.class);
 
 * 获取特定于实施的对象。
 
-   例如，基于JCR的通用接口实现提 [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) 供对基础JCR的访 [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)问。
+   例如，基于JCR的通用接口实现提 [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) 供对基础JCR的访问 [`Node`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 * 需要传递内部上下文对象的对象的快捷方式创建。
 
@@ -70,7 +70,7 @@ Node node = resource.adaptTo(Node.class);
 可以通过多种方 `Adaptable.adaptTo()` 式实现：
 
 * 物体本身； 实现方法本身并映射到某些对象。
-* 由“ [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)”，它可以映射任意对象。
+* 由， [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)它可以映射任意对象。
 
    对象仍必须实现接 `Adaptable` 口并且必须扩 [`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) 展(将调用传递 `adaptTo` 给中央适配器管理器)。
 
