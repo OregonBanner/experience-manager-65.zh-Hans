@@ -7,7 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5
 discoiquuid: 7d3ceccb-4f00-4e11-9c9f-6de46a455e02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+workflow-type: tm+mt
+source-wordcount: '2182'
+ht-degree: 79%
 
 ---
 
@@ -36,7 +39,7 @@ source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
   </tr>
   <tr>
    <th>推荐的更新</th>
-   <td>See <a href="https://helpx.adobe.com/experience-manager/aem-releases-updates.html">AEM Releases and Updates</a></td>
+   <td>See <a href="https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html">AEM Releases and Updates</a></td>
   </tr>
  </tbody>
 </table>
@@ -53,7 +56,7 @@ Adobe Experience Manager 6.5 自 2019 年 4 月 8 日起正式发行。
 
 Adobe Experience Manager 6.5 是 Adobe Experience Manager 6.4 代码库的升级版本。它提供了一些新功能和增强功能、重要的客户修复、高优先级的客户增强功能，以及针对产品稳定性的一般错误修复。它还包括 Adobe Experience Manager 6.4 Service Pack 版本，最高版本为 SP4。
 
-以下列表提供了概述——而后续页面则列出完整的详细信息。
+以下列表提供了概述——而后续页面则列表完整详细信息。
 
 ### Experience Manager Foundation {#experience-manager-foundation}
 
@@ -89,7 +92,7 @@ Adobe Experience Manager 6.5 的平台建立在基于 OSGi 的框架（Apache Sl
 
 #### 搜索和索引 {#search-indexing}
 
-* 在 Oak 中搜索现在支持动态 Facet。例如，资产搜索中的筛选器边栏会显示估计的结果数量。
+* 在 Oak 中搜索现在支持动态 Facet。例如，资产搜索中的筛选器边栏会显示估计的结果量。
 * 扩展了 QueryBuilder 以提供包含动态 Facet 的结果
 
 #### 升级 {#upgrade}
@@ -102,7 +105,7 @@ Adobe Experience Manager 6.5 的平台建立在基于 OSGi 的框架（Apache Sl
 
 ### Experience Manager Sites {#experience-manager-sites}
 
-[AEM Sites和Add-ons中更改的完整列表](/help/release-notes/sites.md)。
+Full list of changes in [AEM Sites and Add-ons](/help/release-notes/sites.md).
 
 #### 托管单页应用程序 {#managed-single-page-apps}
 
@@ -146,13 +149,13 @@ For more details on changes to AEM Screens - see the Release Notes in the [AEM S
 
 ### Experience Manager Assets {#experience-manager-assets}
 
-[AEM 6.5 Assets发行说明中更改的完整列表](/help/release-notes/assets.md)。
+Full list of changes in [AEM 6.5 Assets release notes](/help/release-notes/assets.md).
 
 AEM 6.5 引入了以下功能和增强功能，以提高 AEM 用户、DAM 角色以及相关的创意和营销角色的生产力。
 
 #### 与 Adobe Creative Cloud 集成 {#integration-with-adobe-creative-cloud}
 
-引入了 [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)（一种面向使用 Adobe Creative Cloud 应用程序（包括 Photoshop、Illustrator 和 InDesign）的创意用户的应用程序内体验，简化了创意人员和营销人员在内容创建过程中的协作。AEM桌面应用程序继续支持使用任何文件类型和任何桌面应用程序从AEM在桌面上处理资产的用户的需求。
+引入了 [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)（一种面向使用 Adobe Creative Cloud 应用程序（包括 Photoshop、Illustrator 和 InDesign）的创意用户的应用程序内体验，简化了创意人员和营销人员在内容创建过程中的协作。AEM桌面应用程序继续支持使用任何文件类型和任何桌面应用程序从AEM在桌面上处理资产的用户的需求。
 
 此外，AEM 与 Adobe Stock 集成，可帮助直接从 AEM Web UI 中查找、预览、许可和保存 Adobe Stock 资产。
 
@@ -160,7 +163,7 @@ AEM 6.5 引入了以下功能和增强功能，以提高 AEM 用户、DAM 角色
 
 #### 连接的资产 {#connected-assets}
 
-互联资产功能针对的是需要利用中央AEM资产DAM部署中的资产的大量AEM Sites部署，这些部署都属于较大的部署范围。 它允许改进集中管理的资产管理，同时允许向各种站点部署提供资产的高效性。
+互联资产功能针对的是具有大量AEM Sites部署的较大部署，这些部署需要利用中央AEM AssetsDAM部署中的资产。 它允许改善对集中管理的资产的管理，同时允许为各种站点部署提供高效的资产。
 
 ### Dynamic Media {#dynamic-media}
 
@@ -217,7 +220,7 @@ For detailed list of changes, see [AEM 6.5 Communities release notes](/help/rele
 
 Adobe 正在使用以客户为中心的开发模型，借助该模型，客户可以在规范、开发和测试期间对开发流程的所有阶段做出贡献。我们衷心感谢在这一流程中做出贡献的所有客户和合作伙伴。
 
-Adobe 实施了多种规程和流程来对以客户为中心的错误解决方案和增强请求开发进行收集、优先级排序和跟踪。The [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/marketing-cloud/contact-support.html) is integrated with the Adobe Enhancement &amp; Defect Tracking System. 在可能的情况下，客户关怀可以识别并解决客户问题。升级到 R&amp;D 时，将捕获所有客户信息，并将这些信息用于确定优先级和报告。在开发过程中，优先考虑付费支持和保修问题以及付费客户增强。
+Adobe 实施了多种规程和流程来对以客户为中心的错误解决方案和增强请求开发进行收集、优先级排序和跟踪。The [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html) is integrated with the Adobe Enhancement &amp; Defect Tracking System. 在可能的情况下，客户关怀可以识别并解决客户问题。升级到 R&amp;D 时，将捕获所有客户信息，并将这些信息用于确定优先级和报告。在开发过程中，优先考虑付费支持和保修问题以及付费客户增强。
 
 这一确定优先级的流程已经产生了 750 多个以客户为中心的更改，并已在 AEM 6.5 中进行了修复。
 
@@ -226,14 +229,14 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 **Foundation**
 
 * 独立的快速入门：cq-quickstart-6.5.0.jar
-* 应用程序服务器快速启动：cq-quickstart-6.5.0.war
+* 应用程序服务器快速启动： cq-quickstart-6.5.0.war
 * 适用于各种 Web 服务器和平台的 Dispatcher 4.3.2 更高版本（[下载链接](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)）
 * 用于 Eclipse IDE 的插件（[了解更多并下载](/help/sites-developing/aem-eclipse.md)）
 
 * 用于 Brackets 代码编辑器的扩展（[了解更多并下载](/help/sites-developing/aem-brackets.md)）
 * Maven/Gradle 依赖（[下载链接](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.5.0/)）
 
-**Sites**
+**站点**
 
 * 核心组件（[GitHub 项目](https://github.com/adobe/aem-core-wcm-components)）
 * We.Retail 参考实施（[了解更多](/help/sites-developing/we-retail.md)）
@@ -246,22 +249,22 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 
 * 智能内容语言模型。已预先安装英语 - 可以下载更多语言
 
-   * [德语](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [西班牙语](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [意大利语](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [法语](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [德语](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [西班牙语](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [意大利语](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [法语](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * AEM 现代化工具套件，例如对话框转换工具。（[GitHub 项目](https://github.com/adobe/aem-modernize-tools)）
 
-**Assets**
+**资产**
 
 * 用于添加增强型 PDF 栅格化程序的软件包（[了解更多](/help/assets/aem-pdf-rasterizer.md)）
 * 用于添加扩展 RAW 图像支持的软件包（[了解更多](/help/assets/camera-raw.md)）
 
-**Forms**
+**表单**
 
-* [用于 AEM Forms 功能的软件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
-* [AEM Forms OSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [用于 AEM Forms 功能的软件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)
+* [AEM FormsOSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
 
 ## 语言 {#languages}
 
@@ -290,7 +293,7 @@ Experience Manager 6.5 已通过 GB18030-2005 CITS 认证，可使用中文编�
 
 请在 [AEM 6.5 技术要求](/help/sites-deploying/technical-requirements.md)中查找支持平台的完整矩阵，包括支持级别。
 
-Oak microKernel forOak MicroKernel for
+Oak MicroKernel forOak MicroKernel for
 
 >[!NOTE]
 >
