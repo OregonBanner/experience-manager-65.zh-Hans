@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 29b1a151a6c284fcb0bf01de425dfba79f5943c2
+source-git-commit: f4dcf58d70ea5a17617ef1e80942de7db3233031
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2464'
 ht-degree: 1%
 
 ---
@@ -102,7 +102,7 @@ We.Gov演示包随附以下内置虚拟用户：
 
 ## 自动表单转换(Camila) {#automated-forms-conversion}
 
-**本节**: “ CX Lead”有一个基于PDF的旧表单，该表单是基于纸张的流程的一部分。 作为现代化努力的一部分，她希望使用此PDF表单自动创建新的现代自适应表单。
+**本节**: CX潜在客户已有一个基于PDF的表单，该表单用作基于纸张的流程的一部分。 作为现代化努力的一部分，她希望使用此PDF表单自动创建新的现代自适应表单。
 
 ### 自动表单转换- We.Gov(Camila) {#automated-forms-conversion-wegov}
 
@@ -116,7 +116,7 @@ We.Gov演示包随附以下内置虚拟用户：
 
    ![上传表单](assets/aftia-upload-form.jpg)
 
-1. 然后，Camilla选择自动表单转换任务
+1. 然后，Camilla选择PDF表单并单击“ **开始自动转换** ”以开始转换过程。 如果已转换表单， **则可能需** 要单击“覆盖转换”。
 
    >[!NOTE]
    >
@@ -124,9 +124,11 @@ We.Gov演示包随附以下内置虚拟用户：
 
    * **可选**: 如果您希望使用“可访问的Ultramarine”主题，只需单击“指定自适应表单主题”，然后选择选项列表中显示的“可访问的Ultramarine”主题。
 
+   ![开始转换](assets/aftia-start-conversion.jpg)
+
    ![超海洋主题](assets/aftia-upload-conversion-settings.jpg)
 
-   ![开始转换](assets/aftia-start-conversion.jpg)
+   转换过程中将显示完成百分比状态。 状态显示“已转 **换**”后，单击 **输出文件夹** ，选择自适应表单并单击 **“编辑** ”以打开已转换的表单。
 
 1. 然后，Camilla会查看表单并确保所有字段都存在
 
@@ -156,7 +158,7 @@ We.Gov演示包随附以下内置虚拟用户：
 
 Camila还验证创建的内容是否根据公司标准构建正确且完全可访问。
 
-1. Camila打开填写好的We.Gov表单。
+1. 卡米拉单击 **输出文** 件夹，选择自适应表单，并 **单击** 预览，以打开完成的We.Gov表单。
 
 1. 在Chrome Developer Tool中打开“审核”选项卡。
 
@@ -214,24 +216,9 @@ Aya需要在家查看一些文档，然后才能完成服务请求申请。 她�
    1. 基本信息
 
       1. 名字
-      1. 中间名
       1. 姓氏
-      1. 首选名称
       1. DOB
-      1. 性别
-   1. 联系信息
-
-      1. 街道地址
-      1. 城市
-      1. 电话号码
-      1. 邮政编码
       1. 电子邮件
-      1. 状态
-   1. 军事地位
-
-      1. 家庭状态
-
-
 
 1. 使用以下动 **态逻辑** ，使用“系列状态”下拉 **菜单演示动** 态功能：
 
