@@ -4,10 +4,10 @@ description: 以下发行说明特定于 Adobe Experience Manager 6.5 Service Pa
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 97714abf86a80f6b3d1c68c85ccf443482da22bf
+source-git-commit: a599a1c75a1933d6b21e60e96485f43a0aedd679
 workflow-type: tm+mt
-source-wordcount: '4529'
-ht-degree: 7%
+source-wordcount: '4496'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 | 版本 | 6.5.5.0 |
 | 类型 | Service Pack 版本 |
 | 日期 | 2020年6月4日 |
-| 下载 URL | [包共享](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0)，软 [件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
+| 下载 URL | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip) |
 
 ## Adobe Experience Manager6.5.5.0包含的内容 {#what-s-included-in-aem}
 
@@ -58,7 +58,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 当“Experience Manager站点”页面是包含多个Live Copy的大型内容集的一部分时，页面版本历史预览无法加载(NPR-33311)。
 * 使用“移动”命令重命名Experience Manager站点页面时，页面标题不会更新(NPR-33264)。
 * 在列视图中移动页面时，列会消失(NPR-33216)。
-* 当语言副本中的本地组件的名称与蓝图中某个组件的名称相同，并且该组件从蓝图中转出时，术语不会添加到本 `_msm_moved` 地组件的名称中(NPR-33208)。
+* 当语言副本中的本地组件名称与蓝图中某个组件的名称相同并且从蓝图中转出该组件时，术语不会添加 `_msm_moved` 到本地组件的名称中(NPR-33208)。
 * 页面重定向servlet将。html附加到ResourceType不为的Experience Manager站点URL `cq:Page` (NPR-33176)。
 * 粘贴子树时，没有选项可决定是否粘贴相应的子页面(NPR-33149)。
 * 组件在实时使用中的结果数限于数字49(NPR-33058)。
@@ -93,7 +93,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 
 * 可单击的元素（如注释卡、版本更新、组合框和菜单的V形图标）现在可以使用键盘进行集中处理并与之交互(NPR-33514)。
 
-* 屏幕阅读器现在可以正确地宣布Insights视图上的洞察图标( [!UICONTROL 用于使用] 、展示和点击)的功能（或操作目的）(NPR-33513)。
+* 屏幕阅读器现在可以正确地宣布“洞察”视图上 [!UICONTROL 的洞察图标] （用于使用、展示和点击）的功能（或操作目的）(NPR-33513)。
 
 * 只读表单字段(例如，资产属性 [!UICONTROL “基本] ”选项卡 [!UICONTROL 上禁用的字段])现在可使用键盘(NPR-33493、CQ-4273031)进行聚焦。
 
@@ -165,7 +165,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 
 * 现 [!UICONTROL 在可] 以通过以下增强功能访问“引用”面板(NPR-33261、CQ-4293798):
 
-   * 在浏览模式下，屏幕阅读器的焦点不再移到“站点引用”、“资产引用”、 [!UICONTROL “副本]”和“表单引用 [!UICONTROL ”部分下]，隐藏的多行  编辑字段中。
+   * 在浏览模式下，屏幕阅读器的焦点不再移动到“站点引用”、“资产引用”、 [!UICONTROL “副本]”和“表单引用 [!UICONTROL ”等部分下]隐藏的多行编  辑字段中。
 
    * 屏幕阅读器现在宣布“站点引 [!UICONTROL 用”和] “语 [!UICONTROL 言副本”元素的角色] 。
 
@@ -217,7 +217,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 
 * 批量上传时的资产处理会卡住，而工作流实例会显示DAM更新资产的卡住实例(CQ-4293916)。
 
-* 在Experience Manager上创建Dynamic Media配置是有效的，但在用户界面上，选择“保存”时不会发生任何情况(CQ-4292442)。
+* 在Experience Manager上创建Dynamic Media配置有效，但在用户界面上，选择“保存”时不会发生任何情况(CQ-4292442)。
 
 * F4V视频资源的预览在Safari/Mac上的渐进式播放中不工作(CQ-4289844)。
 
@@ -340,7 +340,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 
 请执行以下步骤在现有Adobe Experience Manager6.5实例上安装Service Pack:
 
-1. 从“包共享”或“ [软件分发](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/AEM-6.5.5.0) ”下 [载服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
+1. 从“软件分发”下 [载服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.5.zip)。
 
 1. 打开包管理器，然 **[!UICONTROL 后单击]** “上传包”以上传包。 要了解如何使用它，请参阅 [包管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
