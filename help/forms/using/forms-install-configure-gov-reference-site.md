@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
 workflow-type: tm+mt
-source-wordcount: '4685'
+source-wordcount: '5004'
 ht-degree: 1%
 
 ---
@@ -222,6 +222,48 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 1. 从已配置的Adobe Sign实例提供已配置的客户端ID和客户端机密。
 1. 单击“连接到Adobe Sign”。
 1. 成功连接后，单击“保存并关闭”以完成集成。
+
+### 填写和签署多个表单 {#fill-sign-multiple-forms}
+
+本文档介绍设置填写和签署多个表单的能力所需的步骤。 您也可以在此处尝 [试相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例将此示例所需的必要数据存储在AME存储库中。 这样做是为了确保在本地服务器上部署演示资源的流畅体验。 在现实生活中，我们将在您选择的RDMS中存储相同的信息。
+
+#### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
+
+* [配置Day CQ邮件服务](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
+
+* [使用Adobe Sign配置AEM Forms](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
+
+#### 在本地服务器上设置示例 {#setup-sample-local-server}
+
+请执行以下步骤在本地服务器上设置示例：
+
+1. 安装包。 此包包含以下内容：
+   * 自适应表单. 表单位于formsandsigndemo文 **件夹中** 。
+   * 自定义OSGI捆绑
+   * 工作流
+1. 配置 [同意表](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) ，以使用您的Adobe Sign配置。
+1. 配置 [多状态兴趣锁](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) 表单以使用Adobe Sign配置。
+1. 打开 [表单和签名演示](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) 工作流模型：
+   1. 在CRX步骤中打开保存表单。
+   1. 将localhost更改为AEM Server的ip地址。
+   1. 保存更改。
+   1. 同步工作流以生成运行时模型。
+
+      ![对多个表单进行签名](assets/sign-multiple-forms.jpg)
+
+   1. 打开再 [融资表](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。
+   1. 填写必填字段。 确保提供有效的电子邮件地址，并选择一个或多个表单以签名和提交表单。
+您会收到一封电子邮件，其中包含填写和签署表单的链接。
+
+#### 疑难解答 {#troubleshoot-sign-multiple-forms}
+
+* 调试日志将写入服 `signingmultipleforms.log` 务器日志文件夹中的文件。
+
+* 要签名的表单存储在下 `/content/formsforsigning`。
+
+* 确保所有捆绑包处于活动状态。
+
+* 检查电子邮件服务器配置。
 
 ### （可选）MS Dynamics云配置 {#ms-dynamics-cloud-configuration}
 
@@ -703,7 +745,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
 [样式系统](../../sites-authoring/style-system.md)
 
-有关受支持样式的 [文档，还可参阅](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) “模板”自定义样式系统。
+您还可以参阅模板自 [定义样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) ，以获取有关受支持样式的文档。
 
 ### 自适应表单自定义 {#adaptive-forms-customization}
 
