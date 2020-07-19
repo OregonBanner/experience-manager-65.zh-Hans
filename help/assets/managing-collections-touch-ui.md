@@ -4,10 +4,10 @@ description: 了解管理资产集合的任务，如创建、视图、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
 workflow-type: tm+mt
-source-wordcount: '2177'
-ht-degree: 20%
+source-wordcount: '2197'
+ht-degree: 19%
 
 ---
 
@@ -173,7 +173,7 @@ Smart collections are built by saving a search so you can alter their content by
 
    >[!NOTE]
    >
-   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式在可包含多个值的字段中向现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
+   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式向可包含多个值的字段中的现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
 
 要自定义元数据 [!UICONTROL 属性] 页面，包括添加、修改和删除元数据属性，请使用模式编辑器。
 
@@ -246,7 +246,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 ![saved_searches_列表](assets/saved_searches_list.png)
 
-创建智能收藏集时将创建保存的搜索。智能收藏集会自动添加到&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表。收藏集的“保存的搜索”查询将保存在 `dam:query` CRXDE 的属性中的相对位置`/content/dam/collections/`。
+创建智能收藏集时将创建保存的搜索。智能收藏集会自动添加到&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表。The [!UICONTROL Saved Searches] query for the collection is saved in the `dam:query` property in CRXDE at the relative location `/content/dam/collections/`. 您可以保存的搜索以及列表中显示的保存的搜索没有限制。
 
 >[!NOTE]
 >
@@ -264,7 +264,7 @@ Smart collections are built by saving a search so you can alter their content by
 
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
-   ![select_smart_collection-1](assets/select_smart_collection-1.png)
+   ![select_smart_collection](assets/select_smart_collection.png)
 
 1. In the dialog, click **[!UICONTROL Delete]** to delete the saved search.
 
