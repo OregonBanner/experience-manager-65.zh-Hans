@@ -559,7 +559,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
       * **类型** `cq:WidgetCollection`
 
 
-1. 创建一个新节点(在相应的 `tableStyles` 或节 `cellStyles` 点下)以表示单个样式：
+1. 创建一个新节点(在相应 `tableStyles` 的节 `cellStyles` 点下)以表示单个样式：
 
    * **名称** ，您可以指定名称，但应反映样式。
    * **类型** `nt:unstructured`
