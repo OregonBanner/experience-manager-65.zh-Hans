@@ -45,7 +45,8 @@ AEM 使用一组机制为页面实现响应式布局：
 
          您可以将布局容器作为页面的标准，同时允许用户在其中添加更多布局容器; 例如，实现列控件。
 
-* **[布局模](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**式将布局容器放置到页面上后，您就可以使用布局&#x200B;**模式**，在响应式网格内放置内容。
+* **[布局模](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**式将布局容器放置到页面后，您可以使用
+**布局模式** ，用于在响应式网格内放置内容。
 
 * [**模拟器&#x200B;**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)模拟器让您能够创建并编辑响应式网站，这些网站可以根据设备/窗口大小，通过交互方式调整组件大小来重新安排布局。随后，用户可以使用模拟器查看内容的呈现方式。
 
@@ -116,6 +117,7 @@ AEM 使用一组机制为页面实现响应式布局：
 >
 >* 为模板添加断点
 >* 向现有页面添加相同的断点
+
 >
 >  
 继承正在运行中，您可以将继承限制在内容的根页面。
