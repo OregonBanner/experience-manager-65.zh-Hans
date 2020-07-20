@@ -50,6 +50,7 @@ ht-degree: 1%
    * 片段引用模型； 因此，对模型所做的更改可能会／会影响任何从属片段。
    * 模型是数据类型的构建。
    * 添加新变量等的函数必须相应更新片段。
+
    >[!CAUTION]
    >
    >对现有内容片段模型的任何更改都可能影响相关片段； 这会导致这些片段中的孤立属性。
@@ -79,7 +80,7 @@ ht-degree: 1%
 
 * 所有内容都存储在资 `jcr:content/data` 产的节点下：
 
-   * 元素数据存储在主子节点下：
+   * 元素数据存储在主控子节点下：
       `jcr:content/data/master`
 
    * 变体存储在子节点下，子节点带有变体的名称：
@@ -88,7 +89,8 @@ ht-degree: 1%
    * 每个元素的数据作为具有元素名称的属性存储在相应的子节点中：
 例如，元素的内容 `text` 作为属性存储在 `text` `jcr:content/data/master`
 
-* 元数据和关联内容存储在 `jcr:content/metadata`下面，但标题和说明除外，它们不被视为传统元数据，并存储在 `jcr:content`
+* 元数据和关联内容存储在 `jcr:content/metadata`下面，但标题和说明除外，它们不被视为传统元数据，并存储在 
+`jcr:content`
 
 #### 将简单内容片段映射到资产 {#mapping-simple-content-fragments-to-assets}
 
@@ -158,7 +160,8 @@ ht-degree: 1%
 
 Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)件配置配 **置配置此参数**。
 
-* **资源类**&#x200B;型可以提 `sling:resourceTypes` 供列表来定义用于渲染内容片段的组件，以及应将后台处理应用到的组件。
+* **资源类**&#x200B;型列表 
+`sling:resourceTypes` 可以提供用于定义用于渲染内容片段的组件以及应将后台处理应用到的位置。
 
 * **引用属**&#x200B;性可以配置属性列表，以指定对片段的引用存储到相应组件的位置。
 
@@ -262,6 +265,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
    * 内容片段模型或内容片段模板，从中创建内容片段，
    * 和（创建后）该片段的结构信息
+
    此信息可包括：
 
    * 访问基本数据（标题、说明）
@@ -276,6 +280,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
       * 获取给定变体的结构信息
       * 访问变体模板(请参阅 `VariationTemplate`)
    * 获取初始关联内容
+
    表示重要信息的接口：
 
    * `ElementTemplate`
@@ -318,6 +323,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
       * 添加集合
       * 删除集合
    * 访问片段的模型或模板
+
    表示片段主元素的接口包括：
 
    * **内容元素** ([ContentElement](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
@@ -337,6 +343,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
       * 获取基本数据（名称、标题、说明）
       * 获取／设置内容
       * 简单同步，基于上次修改的信息
+
    所有三个界面( `ContentFragment`、 `ContentElement`、 `ContentVariation`)都扩展了界面，它添加了内容片段 `Versionable` 所需的版本控制功能：
 
    * 创建元素的新版本
