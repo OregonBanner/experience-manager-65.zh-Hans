@@ -3,9 +3,9 @@ title: 从下载数字资产 [!DNL Adobe Experience Manager]。
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 3602a39e03536696911b39cceb20f10dfd3a9347
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '848'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 无法下载图像集、旋转集、混合媒体集和传送集等资产类型。
 
-**要下载资源，**
+要下载资产，请按照以下步骤操作：
 
 1. 在AEM的左上角，点按AEM徽标，然后在左边栏中，点按导 **[!UICONTROL 航]**。
 1. 在导航页面上，点按资 **[!UICONTROL 产]** >文 **[!UICONTROL 件。]**
@@ -35,16 +35,18 @@ ht-degree: 6%
 
 1. 在“下载”对话框中，选择所需的下载选项。
 
-   | 下载选项 | 描述 |
+   | 导出或下载选项 | 描述 |
    |---|---|
-   | **[!UICONTROL 为每个资产创建单独的文件夹]** | 选择此选项可将您下载的每个资产包括嵌套在资产父文件夹下的子文件夹中的资产，并包含到本地计算机上的一个文件夹中。 如果不选择此选项 ** ，则默认情况下，将忽略文件夹层次结构，并将所有资产下载到本地计算机上的一个文件夹中。 |
-   | **[!UICONTROL 电子邮件]** | 选择此选项可向收件人发送电子邮件通知。 标准电子邮件模板可在以下位置使用：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> 在部署过程中自定义的模板可在以下位置使用： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>您可以在以下位置存储特定于租户的自定义模板：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
+   | **[!UICONTROL 为每个资产创建单独的文件夹]** | 选择此选项可将您下载的每个资产包括嵌套在资产父文件夹下的子文件夹中的资产，并包含到本地计算机上的一个文件夹中。 如果未选择此选项，则默认情况下将忽略文件夹层次结构，并将所有资产下载到本地计算机上的一个文件夹中。 |
+   | **[!UICONTROL 电子邮件]** | 将向用户发送电子邮件通知。 标准电子邮件模板可在以下位置使用：<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> 在部署过程中自定义的模板可在以下位置使用： <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>您可以在以下位置存储特定于租户的自定义模板：<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
    | **[!UICONTROL 资产]** | 选择此选项可以下载资产的原始形式，而无需任何演绎版。<br>如果原始资产具有子资产，则子资产选项可用。 |
-   | **[!UICONTROL 演绎版]** | 演绎版是资产的二进制表示形式。资产具有主要表示形式——即已上传文件的表示形式。 它们可以有任意数量的表示。 <br> 通过此选项，您可以选择要下载的演绎版。 可用的演绎版取决于您选择的资产。 |
+   | **[!UICONTROL 演绎版]** | 演绎版是资产的二进制表示形式。资产具有主要表示形式——即已上传文件的表示形式。 它们可以有任意数量的表示。 <br> 通过此选项，您可以选择要下载的演绎版。 可用的演绎版取决于您选择的资产。 如果资产具有任何演绎版，则此选项可用。 |
    | **[!UICONTROL 智能裁剪]** | 选择此选项可从AEM中下载选定资产的所有智能裁剪演绎版。 系统会创建包含智能裁剪演绎版的zip文件，并将其下载到您的本地计算机。 |
    | **[!UICONTROL 动态演绎版]** | 选择此选项可实时生成一系列替代再现。 When you select this option, you also select the renditions that you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>此外，您还可以选择大小和度量单位、格式、色彩空间、分辨率以及任何可选的图像修饰符（如反转图像）。 此选项仅在您已启用的情况下才 [!DNL Dynamic Media] 可用。 |
 
 1. 在对话框中，点按下 **[!UICONTROL 载。]**.
+
+当您选择要下载的文件夹时，将下载该文件夹下的完整资产层次结构。 要将您下载的每个资产（包括嵌套在父文件夹下的子文件夹中的资产）包含在单个文件夹中，请选 **[!UICONTROL 择为每个资产创建单独的文件夹]**。
 
 ## 启用资产下载servlet {#enable-asset-download-servlet}
 
@@ -53,7 +55,6 @@ ht-degree: 6%
 要允许从DAM下载资产，例如，在使用诸如资产共享共享共享资源或其他类似门户的实施时，请通过OSGi配置手动启用servlet。 Adobe建议尽可能将允许的下载大小设置为最小，而不影响日常下载要求。 高价值可能会影响性能。
 
 1. 创建一个具有命名约定的文件夹，以目标发布运行模式(`config.publish`): `/apps/<your-app-name>/config.publish`. 要定义运行模式的配置属性，请参 [阅运行模式](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode)。
-
 1. 在配置文件夹中，创建一个名为的 `nt:file` 文件 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`。
 1. 填充 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` 以下内容。 将下载的最大大小（以字节为单位）设置为值 `asset.download.prezip.maxcontentsize`。 以下示例将ZIP下载的最大大小配置为不超过100 kB。
 
@@ -68,7 +69,7 @@ ht-degree: 6%
 
 1. 要通过调度程序配置阻止资产下载请求，请编 `dispatcher.any` 辑配置并向筛选器部分添 [加规则](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)。 `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
-1. 通过导航到位于的OSGi控制台，在发布实例上禁用OSGi组件 `http://[aem_server]:[port]/system/console/components`。 找到并 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` 单击“ **[!UICONTROL 禁用]**”。
+1. 要在发布实例上禁用OSGi组件，请访问OSGi控制台 `http://[aem_server]:[port]/system/console/components`。 找到并 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` 单击“ **[!UICONTROL 禁用]**”。
 
 >[!MORELIKETHIS]
 >
