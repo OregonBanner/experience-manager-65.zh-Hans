@@ -198,7 +198,8 @@ Some are immediately available through component browser, various others are als
 手动或使用选择器指定一个路径。如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
 
-         * **页面**&#x200B;选择页面列表。 使 `+` 用添加更多条目和上／下按钮来调整顺序。
+         * **页面**&#x200B;选择页面列表。 使用 
+`+` 以添加更多条目和上／下按钮来调整顺序。
       * **搜索选项**
 
          * **开始**
@@ -211,7 +212,8 @@ Some are immediately available through component browser, various others are als
          * **QueryBuilder 谓词记号**
 可以使用“QueryBuilder 谓词记号”输入搜索查询。例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
-   * **排序依**&#x200B;据 `jcr:title`从下 `jcr:created`拉菜 `cq:lastModified`单中选 `cq:template` 择、、或。
+   * **按选择排**&#x200B;序 
+`jcr:title`、 `jcr:created`、 `cq:lastModified`或 `cq:template` 从下拉菜单。
 
    * **限制**
 您希望在传送中使用的最多项目数；这是可选项。
