@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 419ca05287368235b292e1133c35c2680e6022fc
+source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
 workflow-type: tm+mt
-source-wordcount: '5004'
+source-wordcount: '5035'
 ht-degree: 1%
 
 ---
@@ -81,19 +81,16 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 本节包含有关安装演示包的信息。
 
-### 从包共享 {#from-package-share}
+### 从软件分发 {#from-software-distribution}
 
-1. 导航 *到https://&lt;aemserver>:&lt;port>/crx/packageshare/*
-
-   或者，在AEM中，单击部署并导航到包共享图标。
-
-   ![包共享图标](assets/package_share_icon.jpg)
-
-1. 使用Adobe ID登录。
-1. 搜索并找 **到we-gov-forms.pkg.all-&lt;version>软件包** 。
-1. 选择“下载”选项并接受条款与条件。
-1. 下载后，选择“已下载”选项，在包管理器中查找包。
-1. 选择“安装”选项以安装包。
+1. 开放 [软件分发](https://experience.adobe.com/downloads)。 您需要Adobe ID登录软件分发。
+1. 点按 **[!UICONTROL 标题]** 菜单中可用的Adobe Experience Manager。
+1. 在过滤器 **[!UICONTROL 部分]** :
+   1. 从“ **[!UICONTROL 解决方]** 案 **[!UICONTROL ”下]** 拉列表中选择“表单”。
+   2. 选择包的版本和类型。 您还可以使用“搜 **[!UICONTROL 索下载]** ”选项筛选结果。
+1. 点按 **we-gov-forms.pkg.all-&lt;version>.zip包名称** ，选择“接 **[!UICONTROL 受EULA条款]**”，然后点 **[!UICONTROL 按下载]**。
+1. 打开 [包管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) ，然后单 **[!UICONTROL 击“上传包]** ”以上传包。
+1. Select the package and click **[!UICONTROL Install]**.
 
    ![we gov forms package](assets/wegov_forms_package.jpg)
 
@@ -225,7 +222,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 ### 填写和签署多个表单 {#fill-sign-multiple-forms}
 
-本文档介绍设置填写和签署多个表单的能力所需的步骤。 您也可以在此处尝 [试相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例将此示例所需的必要数据存储在AME存储库中。 这样做是为了确保在本地服务器上部署演示资源的流畅体验。 在现实生活中，我们将在您选择的RDMS中存储相同的信息。
+本文档介绍设置填写和签署多个表单的能力所需的步骤。 您还可以在此处尝 [试相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例将此示例所需的必要数据存储在AME存储库中。 这样做是为了确保在本地服务器上部署演示资源的流畅体验。 在现实生活中，我们将在您选择的RDMS中存储相同的信息。
 
 #### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
 
