@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb5ec39431d365ed6ba274018bbca437a58bfafe
+source-git-commit: 9bd71115dac8109c9a47155ab60ac7573d88014c
 workflow-type: tm+mt
 source-wordcount: '3221'
 ht-degree: 71%
@@ -340,9 +340,7 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
    >
    >
 * Scene7 内容浏览器支持以下视频：
-   >
-   >   
-   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
+   >   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
    >   * 单个MP4视频
    >   * 单个F4V视频
 
