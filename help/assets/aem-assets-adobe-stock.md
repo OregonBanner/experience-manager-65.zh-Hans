@@ -3,10 +3,10 @@ title: 在 [!DNL Adobe Stock] 中管理资产 [!DNL Adobe Experience Manager Ass
 description: 从内部搜索、提取、许 [!DNL Adobe Stock] 可和管理资产 [!DNL Adobe Experience Manager]。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 376940612066123a8f84fe6c30ff3002cda08079
+source-git-commit: 2701c64b3e049ac423ef74147930de2da78a3d81
 workflow-type: tm+mt
-source-wordcount: '1109'
-ht-degree: 12%
+source-wordcount: '1098'
+ht-degree: 13%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 12%
 
 ## 前提条件 {#prerequisites}
 
-该集成需要 [企业Adobe Stock](https://stockenterprise.adobe.com/)[!DNL Experience Manager] 计划和6.5或更高版本。 有 [!DNL Experience Manager] 关6.5 Service Pack的详细信息，请参阅 [这些发行说明](/help/release-notes/sp-release-notes.md)。
+该集成需要 [企业Adobe Stock计划](https://stockenterprise.adobe.com/)。
 
 ## 集成 [!DNL Experience Manager] 和 [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
@@ -31,7 +31,7 @@ ht-degree: 12%
 
 ### Create an IMS configuration {#create-an-ims-configuration}
 
-1. 在用户 [!DNL Experience Manager] 界面中，导航 **[!UICONTROL 到工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL Adobe IMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 云解决方案]** > **[!UICONTROL Adobe Stock]**。
+1. In the [!DNL Experience Manager] user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. 单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 云解决方案]** > **[!UICONTROL Adobe Stock]**。
 1. 重用现有证书或选择“ **[!UICONTROL 创建新证书”]**。
 1. 单击&#x200B;**[!UICONTROL 创建证书]**。创建后，下载公钥。 单击&#x200B;**[!UICONTROL 下一步]**。
 1. 将下载的公钥添加到您的服 [!DNL Adobe Developer Console] 务帐户。 单击&#x200B;**[!UICONTROL 下一步]**。使Adobe IMS [!UICONTROL 技术帐户配置屏幕保持打开] ，以便很快提供这些值。
@@ -47,7 +47,7 @@ ht-degree: 12%
 1. In the [!DNL Experience Manager] user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**.
 1. 单击 **[!UICONTROL 创建]** ，创建配置并将其与现有IMS配置关联。 选 `PROD` 作环境参数。
 1. 在授 **[!UICONTROL 权资产路径]** 字段中，保留原样。 请勿更改要存储资产的位 [!DNL Adobe Stock] 置。
-1. 通过添加所有所需属性完成创建。 Click **[!UICONTROL Save &amp; Close]**.
+1. 通过添加所有所需属性完成创建。 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 1. 添加 [!DNL Experience Manager] 可授权资产的用户或用户组。
 
 >[!NOTE]
