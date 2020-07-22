@@ -2,9 +2,9 @@
 title: 页面导出器
 description: 了解如何使用AEM Page Exporter。
 translation-type: tm+mt
-source-git-commit: 000666e0c3f05635a9469d3571a10c67b3b21613
+source-git-commit: b0126894dec33648a24c0308972aa5b47d7e4b84
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,17 @@ AEM允许您将页面导出为包含图像和文件的完整网 `.js` 页 `.css`
 
 ## 导出页面 {#exporting-a-page}
 
-以下步骤介绍了如何导出页面，并假定站点存在导出配置模板。 配置模板可定义页面的导出方式，并特定于您的站点。 要创建配置模板，请参阅为 [您的站点创建页面导出器配置](#creating-a-page-exporter-configuration-for-your-site) 。
+以下步骤介绍了如何导出页面，并假定站点存在导出模板。 导出模板可定义页面的导出方式，并特定于您的站点。 要创建导出模板，请参阅为 [您的站点创建页面导出器配置](#creating-a-page-exporter-configuration-for-your-site) 。
 
 要导出页面，请执行以下操作：
 
-1. 导航到所需的页面，选择该页面，然后打开“属 **性”** 对话框。
+1. 导航到站点控制台中的所 **需页面** 。
+
+1. 选择页面，然后打开“属 **性** ”对话框。
 
 1. Select the **Advanced** tab.
 
-1. 展开“ **导出** ”字段以选择配置模板。
+1. 展开“ **导出** ”字段以选择导出模板。
 为站点选择所需的模板，然后单击“确定” **进行确认**。
 
 1. 选择 **保存并关闭** ，以关闭页面属性对话框。
@@ -52,23 +54,23 @@ AEM允许您将页面导出为包含图像和文件的完整网 `.js` 页 `.css`
 
    * 子文件夹， `content`它是反映存储库中页面路径的一系列子文件夹的根
 
-   * 在此结构中，有选定页面的html文件(`<page-name>.html`)
-
+      * 在此结构中，有选定页面的html文件(`<page-name>.html`)
    * 其他资源`.js` (文件 `.css` 、文件、图像等) 根据导出模板中的设置进行定位
+
 
 1. 在浏览器中打开页`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`面html文件()检查呈现。
 
 ## 为站点创建页面导出器配置 {#creating-a-page-exporter-configuration-for-your-site}
 
-页面导出器基于内容同步框架。 “页面属性”对话 **框中提供** 的配置是导出模板，它们定义了页面所需的依赖关系。
+页面导出器基于内容 [同步框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)。 “页面属性”对话 **框中提供** 的配置是导出模板，它们定义了页面所需的依赖关系。
 
 触发页面导出时，将引用导出模板并动态应用页面路径和设计路径。 然后，使用标准内容同步功能创建zip文件。
 
-AEM在下面嵌入一个默认模板 `/etc/contentsync/templates/default`。
+现成的AEM安装包含下的默认模板 `/etc/contentsync/templates/default`。
 
-* 在存储库中未找到配置模板时，此模板是回退模板。
+* 在存储库中未找到导出模板时，此模板是回退模板。
 
-* 该模 `default` 板会向您显示如何配置页面导出，以作为新配置模板的基础。
+* 该模 `default` 板会向您显示如何配置页面导出，以作为新导出模板的基础。
 
 * 要将浏览器中模板的节点结构视图为JSON格式，请请求以下URL:
    `http://localhost:4502/etc/contentsync/templates/default.json`
@@ -89,32 +91,35 @@ AEM在下面嵌入一个默认模板 `/etc/contentsync/templates/default`。
 
    * `Type`: `nt:unstructured`
 
-1. 在此处调用的模板节点下， `mysite`使用下面描述的配置节点创建一个节点结构。
+2. 在此处调用的模板节点下， `mysite`使用下面描述的配置节点创建一个节点结构。
 
 ## 为页面激活页面导出器模板 {#activating-a-page-exporter-configuration-for-your-pages}
 
 配置模板后，您需要使其可用：
 
-1. 在CRXDE中，导航到所需的页面。
+1. 在CRXDE中，导航到分支中的所需 `/content` 页面。
 
-1. 在节 `jcr:content` 点上创建属性：
+1. 在页 `jcr:content` 面的节点上创建属性：
    * `Name`: `cq:exportTemplate`
    * `Type`: `String`
    * `Value`: 模板的路径； 例如： `/etc/contentsync/templates/mysite`
 
 ### 页面导出器配置节点 {#page-exporter-configuration-nodes}
 
-模板由节点结构组成。 每个节点都有 `type` 一个属性，该属性定义了在zip文件创建过程中执行的特定操作。 有关type属性的更多详细信息，请参阅内容同步框架页中的配置类型概述部分。
+该模板由节点结构组成，因为它使用内 [容同步框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)。  每个节点都有 `type` 一个属性，该属性定义了在zip文件创建过程中执行的特定操作。
 
-以下节点可用于构建导出配置模板：
+<!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
+-->
+
+以下节点可用于构建导出模板：
 
 * `page`
 页面节点用于将页面html复制到zip文件。 具有以下特点：
 
    * 是必需节点。
-   * 位于下 `/etc/contentsync/templates/<sitename>`方。
-   * 名字是 `page`。
-   * 其节点类型为 `nt:unstructured`
+   * 位于下 `/etc/contentsync/templates/<mysite>`方。
+   * 使用设置为的属 `Name`性定义 `page`。
+   * 节点类型为 `nt:unstructured`
 
    节 `page` 点具有以下属性：
 
@@ -122,21 +127,21 @@ AEM在下面嵌入一个默认模板 `/etc/contentsync/templates/default`。
 
    * 它没有属性， `path` 因为当前页面路径是动态复制到配置的。
 
-   * 其他属性在内容同步框架的配置类型概述部分中进行了介绍。
-
+   <!--
+  * The other properties are described in the Overview of configuration types section of the Content Sync framework.
+  -->
 
 * `rewrite`
 重写节点定义链接在导出的页面中如何重写。 重写的链接可以指向包含在zip文件中的文件，也可以指向服务器上的资源。
-
-   有关节点的完整说明，请参阅内容同步 `rewrite` 页面。
+   <!-- Please refer to the Content Sync page for a complete description of the `rewrite` node. -->
 
 * `design`
 设计节点用于复制用于导出页面的设计。 具有以下特点：
 
    * 是可选的。
-   * 位于下 `/etc/contentsync/templates/<sitename>`方。
-   * 名字是 `design`。
-   * 其节点类型 `nt:unstructured`为。
+   * 位于下 `/etc/contentsync/templates/<mysite>`方。
+   * 使用设置为的 `Name` 属性定 `design`义。
+   * 节点类型为 `nt:unstructured`。
 
    节 `design` 点具有以下属性：
 
@@ -146,17 +151,14 @@ AEM在下面嵌入一个默认模板 `/etc/contentsync/templates/default`。
 
 
 * `generic`
-通用节点用于将clientlibs .js或。css文件等资源复制到zip文件。 具有以下特点：
+通用节点用于复制诸如clientlibs之类的资源 
+`.js` 或 `.css` 将文件转换为zip文件。 具有以下特点：
 
    * 是可选的。
-
-   * 位于下 `/etc/contentsync/templates/<sitename>`方。
-
+   * 位于下 `/etc/contentsync/templates/<mysite>`方。
    * 没有特定名称。
-
-   * 其节点类型 `nt:unstructured`为。
-
-   * 具有在 `type` 内容同步框 `type` 架的配置类型概述部分中定义的属性和任何相关属性。
+   * 节点类型为 `nt:unstructured`。
+   * 具有属 `type` 性和相 `type` 关属性。 <!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
    例如，以下配置节点将文 `mysite.clientlibs.js` 件复制到zip文件：
 
@@ -174,10 +176,13 @@ AEM在下面嵌入一个默认模板 `/etc/contentsync/templates/default`。
 也可以进行自定义配置。
 
 <!--
-As you may have noticed in the node structure, the **Geometrixx** page export configuration template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
+As you may have noticed in the node structure, the **Geometrixx** page export template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
 -->
 
-要满足某些特定要求，您可能需要实施自定义属 `type` 性： 要执行此操作，请参阅“内容同步”页中的实施自定义更新处理程序部分。
+为了满足某些特定要求，您可能需要实现一个自定 [义更新处理程序](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/handler/package-summary.html)。
+
+<!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
+-->
 
 ## 以编程方式导出页面 {#programmatically-exporting-a-page}
 
@@ -191,4 +196,3 @@ As you may have noticed in the node structure, the **Geometrixx** page export co
 ## 疑难解答 {#troubleshooting}
 
 如果您在下载zip文件时遇到问题，可以删除存储库中 `/var/contentsync` 的节点并再次发送导出请求。
-
