@@ -3,9 +3,9 @@ title: 在 [!DNL Adobe Stock] 中管理资产 [!DNL Adobe Experience Manager Ass
 description: 从内部搜索、提取、许 [!DNL Adobe Stock] 可和管理资产 [!DNL Adobe Experience Manager]。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2701c64b3e049ac423ef74147930de2da78a3d81
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1097'
 ht-degree: 13%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 13%
 
 * 要搜索资 [!DNL Adobe Stock] 产，请单 **[!UICONTROL 击导航]** > **[!UICONTROL 资]** 产 **[!UICONTROL >]**&#x200B;搜索Adobe Stock。
 
-* 要在和之间搜 [!DNL Adobe Stock] 索资 [!DNL Experience Manager Assets]产，请单 ![击search_icon](assets/search_icon.png)。
+* 要在和之间搜索资 [!DNL Adobe Stock] 产， [!DNL Experience Manager Assets]请单击搜索 ![搜索](assets/do-not-localize/search_icon.png)。
 
 或者，也可以开始 `Location: Adobe Stock` 在搜索栏中键入内容来选择 [!DNL Adobe Stock] 资产。 [!DNL Experience Manager] 优惠对已搜索的资产具有高级过滤功能，允许用户使用过滤器快速锁定所需的资产，如受支持的资产类型、图像方向和许可状态。
 
