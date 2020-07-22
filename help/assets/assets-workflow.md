@@ -3,9 +3,9 @@ title: 处理资产以完成业务流程、进行审核、实现法规遵从性�
 description: 资产处理功能，可转换格式、创建演绎版、管理资产、验证资产和运行工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f6c770e8830bd2fe7c436c4bfe9725564c49a08f
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '979'
 ht-degree: 3%
 
 ---
@@ -72,10 +72,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
-1. 单击 **[!UICONTROL 底部的]** “操作”。
-
-   ![chlimage_1-30](assets/chlimage_1-137.png)
-
+1. 单击 **[!UICONTROL 底]** 部的 ![](assets/do-not-localize/chevron-up-icon.png) “操作”(Actions)向上V形。
 1. 单击 **[!UICONTROL 开始工作流]**。 In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
    ![chlimage_1-31](assets/chlimage_1-138.png)
