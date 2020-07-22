@@ -3,9 +3,9 @@ title: 中的数字版权管理 [!DNL Adobe Experience Manager Assets]。
 description: 了解如何在中管理授权资产的资产到期状态和信息 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee54a3fa395e2c1ab4a5895a0bb8fc251d24a35a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1422'
 ht-degree: 6%
 
 ---
@@ -85,7 +85,7 @@ ht-degree: 6%
 To enable the [!DNL Assets] console to display the referencing compound assets along with the expired subassets, configure an **[!UICONTROL Adobe CQ DAM Expiry Notification]** workflow in [!DNL Experience Manager] Configuration Manager.
 
 1. 打开 [!DNL Experience Manager] Configuration Manager。
-1. 选择 **[!UICONTROL Adobe CQ DAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
+1. 选 **[!UICONTROL 择Adobe CQ DAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
@@ -108,10 +108,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
-1. 单击 **[!UICONTROL 工具栏]** 中的发布。 如果工具栏上未显示 **发布** ，请单击工 **[!UICONTROL 具栏上的]** 更多 **[!UICONTROL ，然后找到]** 发布选项。
-
-   ![chlimage_1-156](assets/chlimage_1-156.png)
-
+1. Click **[!UICONTROL Publish]** from the toolbar. 如果工具栏上未显示 **发布** ，请单击工 **[!UICONTROL 具栏上的]** “更多”，然后找到发布选 **[!UICONTROL 项选项]**![](assets/do-not-localize/publish-globe.png) “发布”。
 1. 从菜 **[!UICONTROL 单中选择]** “发布”，然后关闭确认对话框。
 1. 退出选择模式。 资产的发布状态会显示在卡片视图中资产缩略图的底部。 在列表视图中，已发布列显示资产发布的时间。
 
@@ -138,10 +135,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. 要根据资产的状态搜索资产，请单 **[!UICONTROL 击]** “搜索”以显示搜索栏。
-
-   ![chlimage_1-162](assets/chlimage_1-162.png)
-
+1. 要根据资产的状态搜索资产，请单 **[!UICONTROL 击搜]**![索选项](assets/do-not-localize/search_icon.png) ，以显示搜索栏。
 1. 按回车键并单击 [!DNL Experience Manager] 以显示搜索面板。
 1. In the search panel, click **[!UICONTROL Publish Status]** and select **[!UICONTROL Published]** to search for published assets in [!DNL Assets].
 
