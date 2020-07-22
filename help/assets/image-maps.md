@@ -3,9 +3,9 @@ title: 向数字图像添加具有超链接的图像映射
 description: 了解如何向图像添加具有超链接的图像映射。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,9 @@ ht-degree: 0%
    * 在卡 **[!UICONTROL 或列表]****[!UICONTROL 视图]** 中 **[!UICONTROL ，选择资产，然后单击工]** 具栏上的编辑。
    * 单击 **[!UICONTROL 资产]** 页面中的编辑。
 
-      ![chlimage_1-420](assets/chlimage_1-420.png)
+      ![编辑选项](assets/do-not-localize/edit_icon.png)
 
-1. 要插入图像映射，请单击工 **[!UICONTROL 具栏中的]** “启动映射”。
-
-   ![chlimage_1-421](assets/chlimage_1-421.png)
-
+1. 要插入图像映射，请单击工 **[!UICONTROL 具栏中]**![的启](assets/do-not-localize/image-map-icon.png) 动映射图像映射。
 1. 选择图像映射的形状。 所选形状的热点将放置在图像上。
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
@@ -40,13 +37,9 @@ ht-degree: 0%
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. 单击 **[!UICONTROL 确认]** ，然后单 **[!UICONTROL 击工]** 具栏中的完成以保存更改。
+1. 单击 **[!UICONTROL 确认]** ，然后单击完 **[!UICONTROL 成]**![,](assets/do-not-localize/check-ok-done-icon.png) 从工具栏中选择完成，以保存更改。
 
-   ![chlimage_1-424](assets/chlimage_1-424.png)
-
-   要删除图像映射，请单击热点并单击“删 **[!UICONTROL 除”]**。
-
-   ![chlimage_1-425](assets/chlimage_1-425.png)
+   要删除图像映射，请单击热点并单击“删 **[!UICONTROL 除]**![”](assets/do-not-localize/delete-solid-line.png)。
 
 1. 要视图图像映射，请导航到资产详细信息页面，然后将光标悬停在图像上方。
 
