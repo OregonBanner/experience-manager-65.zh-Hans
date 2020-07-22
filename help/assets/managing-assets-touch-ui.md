@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '9250'
+source-wordcount: '9245'
 ht-degree: 8%
 
 ---
@@ -100,7 +100,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
    >
    >在名称冲 **[!UICONTROL 突]** 对话框 [!UICONTROL 中选择替] 换时，将为新资产重新生成资产ID。 此ID与上一个资产的ID不同。
    >
-   >如果启用“资产分析”以通过AdobeAnalytics跟踪展示次数／点击次数，则重新生成的资产ID将使Analytics上为资产捕获的数据无效。
+   >如果启用资产分析以跟踪AdobeAnalytics的展示次数／点击次数，则重新生成的资产ID将使Analytics上为资产捕获的数据无效。
 
    If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. 仅当现有资产的二进制文 `SHA 1` 件的校验和值与您上传的资产的校验和值匹配时，才会显示该对话框。 在这种情况下，资产名称无关紧要。
 
@@ -277,7 +277,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 |  | 链接 | 从PDF文件提取链接并将其转换为在电子目录查看器中使用的图像映射。 |
 | 从多页PDF自动生成电子目录 |  | 自动从PDF文件创建电子目录。 电子目录以您上传的PDF文件命名。 （只有在上传PDF文件时栅格化该文件时，此选项才可用。） |
 | 分辨率 |  | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认为 150。 |
-| 色彩空间 |  | 选择“色彩空间”菜单并为PDF文件选择色彩空间。 大多数PDF文件都有RGB和CMYK彩色图像。 RGB色彩空间是联机查看的首选。 |
+| 色彩空间 |  | 选择“色彩空间”菜单并为PDF文件选择色彩空间。 大多数PDF文件同时具有RGB和CMYK彩色图像。 RGB色彩空间是联机查看的首选。 |
 |  | 自动检测 | 保留PDF文件的色彩空间。 |
 |  | 强制为RGB | 转换为RGB色彩空间。 |
 |  | 强制为CMYK | 转换为CMYK色彩空间。 |
@@ -335,11 +335,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 1. 在预览模式下，缩放选项可用于支持的 [图像类型](/help/assets/assets-formats.md#supported-raster-image-formats) （通过交互式编辑）。
 
-   要放大资产，请单 `+` 击（或单击资产上的放大镜）。 要缩小，请单击 `-`。 放大时，可以通过平移来仔细查看图像上的任意区域。重置缩放箭头可让您返回原始视图。
-
-   Click **[!UICONTROL Reset]** to reset the view to the original size.
-
-   ![重置以使用户恢复到原始视图](assets/chlimage_1-11.png)
+   要放大资产，请单 `+` 击（或单击资产上的放大镜）。 要缩小，请单击 `-`。 放大时，可以通过平移来仔细查看图像上的任意区域。重置缩放箭头可让您返回原始视图。 要将视图重置为原始大小，请单击“重 **[!UICONTROL 置]**![重置视图](assets/do-not-localize/revert.png)”。
 
 **预览仅使用键盘键**
 
@@ -413,7 +409,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
    有关详细信息，请参阅 [资产分析](/help/assets/touch-ui-asset-insights.md)。
 
-1. Click **[!UICONTROL Save &amp; Close]**.
+1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 1. 导航到用 [!DNL Assets] 户界面。 已编辑的元数据属性（包括标题、描述、评级等）将显示在卡片视图的资产卡上以及列表视图的相关列下。
 
 ## 复制资产 {#copying-assets}
@@ -428,8 +424,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 其他属性和元数据信息将被保留。 复制资产时不会创建部分副本。
 
-1. 在界 [!DNL Assets] 面中，选择一个或多个资产，然后 **[!UICONTROL 单击工]** 具栏中的复制。 或者，从资 **[!UICONTROL 产卡]** 中选择复制快速操作。
-   ![资产界面工具栏中的复制选项](assets/copy_icon.png)
+1. 在界 [!DNL Assets] 面中，选择一个或多个资产，然后 **[!UICONTROL 单击工]** 具栏中的复制。 或者，也可以从资 **[!UICONTROL 产卡]**![中选择资产界面工具栏中的](assets/do-not-localize/copy_icon.png) “复制”复制选项。
 
    >[!NOTE]
    >
@@ -441,10 +436,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
    >
    >If you copy an asset at the same location, [!DNL Experience Manager] automatically generates a variation of the name. For example, if you copy an asset titled `Square`, [!DNL Experience Manager] automatically generates the title for its copy as `Square1`.
 
-1. Click the **[!UICONTROL Paste]** asset option from the toolbar.
-
-   ![资产工具栏中的粘贴选项](assets/chlimage_1-14.png)
-   [!DNL Assets] 然后复制到此位置。
+1. 单击工 **[!UICONTROL 具栏]**![中资产工具栏中的](assets/do-not-localize/paste.png) “粘贴粘贴”选项。 资产随后会被复制到此位置。
 
    >[!NOTE]
    >
@@ -455,7 +447,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 1. 导航到要移动的资产所在的位置。
 
 1. 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的移动选项。
-   ![“资产”工具栏中的“移动”选项](assets/move_icon.png)
+   ![“资产”工具栏中的“移动”选项](assets/do-not-localize/move.png)
 
 1. In the [!UICONTROL Move Assets] wizard, do one of the following:
 
@@ -663,7 +655,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
@@ -683,11 +675,11 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
    * 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的编辑。
    * 单击 **[!UICONTROL 卡视图]** 中资产上显示的编辑选项。
-   * 单击工 **[!UICONTROL 具栏]** 中的编辑。
+   * 单击工具栏中的&#x200B;**[!UICONTROL 编辑]**。
 
-   ![工具栏中的编辑选项](assets/edit_icon.png)
+   ![工具栏中的编辑选项](assets/do-not-localize/edit_icon.png)
 
-1. 要裁剪图像，请单 **[!UICONTROL 击]**![裁剪选项以裁剪图像](assets/chlimage_1-22.png)。
+1. 要裁剪图像，请单 **[!UICONTROL 击]**![裁剪选项以裁剪图像](assets/do-not-localize/crop.png)。
 
 1. 从列表中选择所需的选项。图像上会根据您选择的选项显示裁剪区域。利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
 
@@ -695,19 +687,19 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 1. 选择要裁剪的区域，并在图像上调整其大小或位置。
 
-1. Use the **Undo** and **Redo** options to revert to the uncropped image or retain the cropped image, respectively.
+1. Use the **[!UICONTROL Undo]** and **[!UICONTROL Redo]** options to revert to the uncropped image or retain the cropped image, respectively.
 
    ![撤消和重做选项](assets/chlimage_1-25.png)
 
-1. 单击相应 **的“旋** 转”选项可顺时针或逆时针旋转图像。
+1. 单击相应 **[!UICONTROL 的“旋]** 转”选项可顺时针或逆时针旋转图像。
 
    ![顺时针和逆时针旋转选项](assets/chlimage_1-26.png)
 
-1. 单击相应的“ **翻转** ”选项，水平或垂直翻转图像。
+1. 单击相应的“ **[!UICONTROL 翻转]** ”选项，水平或垂直翻转图像。
 
    ![用于水平或垂直翻转图像的选项](assets/chlimage_1-27.png)
 
-1. 单击 **“完** 成 ![”选项](assets/chlimage_1-24.png) ，以完成图像编辑。 单击 **完成** ，还会开始再现的再生。
+1. 要完成图像编辑，请单击“完 **[!UICONTROL 成]**![”选项](assets/do-not-localize/check-ok-done-icon.png)。 单击 **完成** ，还会开始再现的再生。
 
 >[!NOTE]
 >
@@ -832,9 +824,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![要仅打印注释的审阅状态，请从时间轴中选择该状态](assets/chlimage_1-39.png)
 
-1. 单击工 **[!UICONTROL 具栏]** 中的“打印”。
+1. Click **[!UICONTROL Print]** from the toolbar.
 
-   ![工具栏中的打印选项](assets/chlimage_1-40.png)
+   ![工具栏中的打印选项](assets/do-not-localize/print.png)
 
 1. 从“打印”对话框中，选择您希望批注／审阅状态在PDF上显示的位置。 例如，如果希望在包含打印图像的页面的右上方打印注释／状态，请使用左 **上方的** 设置。 默认情况下为选中状态。
 
