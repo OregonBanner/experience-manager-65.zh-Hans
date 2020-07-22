@@ -2,7 +2,7 @@
 title: 页面导出器
 description: 了解如何使用AEM Page Exporter。
 translation-type: tm+mt
-source-git-commit: b0126894dec33648a24c0308972aa5b47d7e4b84
+source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -16,10 +16,11 @@ AEM允许您将页面导出为包含图像和文件的完整网 `.js` 页 `.css`
 
 配置后，您可以通过替换为URL，从浏览器 `html` 请求 `export.zip` 页面导出。 这将生成一个归档(zip)文件，其中包含以html格式呈现的页面以及引用的资产。 页面中的所有路径（例如，到图像的路径）都将重写，以指向归档中包含的文件或指向服务器上的资源。 然后，可从您的浏览器下载存档(zip)文件。
 
->!![NOTE]
-根据您的浏览器和设置，下载将是：
-* 存档文件(`<page-name>.export.zip`)
-* 文件夹(`<page-name>`); 有效地扩展了存档文件
+>[!NOTE]
+>
+>根据您的浏览器和设置，下载将是：
+>* 存档文件(`<page-name>.export.zip`)
+>* 文件夹(`<page-name>`); 有效地扩展了存档文件
 
 
 ## 导出页面 {#exporting-a-page}
