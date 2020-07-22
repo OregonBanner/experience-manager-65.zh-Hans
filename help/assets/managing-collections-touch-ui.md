@@ -4,9 +4,9 @@ description: 了解管理资产集合的任务，如创建、视图、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 983f281b77a122c757bb508bee570c6c8490a2b9
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2200'
 ht-degree: 19%
 
 ---
@@ -124,10 +124,7 @@ You can create a collection either with [static references](#creating-a-collecti
 
 Smart collections are built by saving a search so you can alter their content by modifying the search parameters of the [saved search](#saved-searches).
 
-1. 在资产用户界面中，单击工具栏中的搜索选项。
-
-   ![chlimage_1-9](assets/chlimage_1-110.png)
-
+1. 在资产用户界面中，单击工具栏中的搜 ![索选项](assets/do-not-localize/search_icon.png) “搜索”选项。
 1. 将光标置于“Omnisearch”（全搜索）框中，按Return键。
 1. 在Experience Manager界面中，打开过滤器面板。
 1. 从&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表中，选择要修改的智能收藏集。“搜索”面板显示为保存的搜索配置的过滤器。
@@ -256,12 +253,9 @@ Smart collections are built by saving a search so you can alter their content by
 
 要删除保存的搜索，请执行以下步骤：
 
-1. 在“资产”用户界面中，单 ![击search chlimage_1-13](assets/chlimage_1-114.png)。
-
-1. 将光标置于Omnisearch字段中，按Enter键。
-
+1. 在资产用户界面中，单击搜索 ![搜索选项](assets/do-not-localize/search_icon.png)。
+1. 在“Omnisearch”（全搜索）字段中，按Return键。
 1. 在Experience Manager界面中，打开过滤器面板。
-
 1. From the **[!UICONTROL Saved Searches]** list, click **[!UICONTROL Delete]** next to the smart collection that you want to delete.
 
    ![select_smart_collection](assets/select_smart_collection.png)
@@ -273,7 +267,7 @@ Smart collections are built by saving a search so you can alter their content by
 您可以为集合中的资产运行工作流。 如果集合包含嵌套集合，则该工作流也会运行在嵌套集合中的资产上。 但是，如果集合和嵌套集合包含重复资产，则此工作流仅对此类资产运行一次。
 
 1. 打开 **[!UICONTROL 资产]** > **[!UICONTROL 收藏集]**。 要对特定集合执行工作流，请选择该工作流。
-1. Open **[!UICONTROL Timeline]** rail. 单 ![击chlimage_1-14](assets/chlimage_1-137.png) ，然后单 **[!UICONTROL 击开始工作流]**。
+1. Open **[!UICONTROL Timeline]** rail. 单击 ![V形图](assets/do-not-localize/chevron-up-icon.png) ，然后单 **[!UICONTROL 击开始工作流]**。
 1. 在&#x200B;**[!UICONTROL 启动工作流]**&#x200B;部分，从列表中选择工作流模型。例如，选择 **[!UICONTROL DAM 更新资产]**&#x200B;模型。
 1. 输入工作流的标题，然后单击 **[!UICONTROL 开始]**。
 1. In the dialog, click **[!UICONTROL Proceed]**. 此工作流将处理选定集合中的所有资产。
