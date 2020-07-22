@@ -3,9 +3,9 @@ title: 相关资产
 description: 了解如何关联共享一些常见属性的数字资产。 还可在数字资产之间创建源源关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -37,10 +37,7 @@ ht-degree: 0%
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. 要将其他资产与您选择的资产关联，请单击工 **[!UICONTROL 具栏]** 中的关联。
-
-   ![chlimage_1-275](assets/chlimage_1-275.png)
-
+1. 要将其他资产与您选择的资产关联，请单 **[!UICONTROL 击工]** 具 ![栏中的](assets/do-not-localize/link-relate.png) “关联资产”。
 1. 执行下列操作之一：
 
    * 要关联资产的源文件，请从 **[!UICONTROL 列表]** 中选择源。
@@ -60,7 +57,7 @@ ht-degree: 0%
 
 1. 要取消资产关联，请单击工 **[!UICONTROL 具栏]** 中的取消关联。
 
-   ![chlimage_1-279](assets/chlimage_1-279.png)
+   ![相关资产](assets/do-not-localize/link-unrelate-icon.png)
 
 1. 从删除关系对话框中选择要取消关联的 **[!UICONTROL 资产]** ，然后单击取 **[!UICONTROL 消关联]**。
 
