@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d7e2d33b81847b15d1e33b3aa406e5e91d44a5f8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 13%
@@ -129,7 +129,7 @@ IMS 配置包括两个步骤：
 
 1. 登录到您的AEM Assets作者实例。 默认URL为
    `http:// localhost:4502/aem/start.html`
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![Adobe IMS 帐户配置 UI](assets/ims-config1.png)
 
@@ -302,7 +302,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登录到您的AEM Assets作者实例。
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
 1. 在Brand Portal的“配置”页中，单击“ **[!UICONTROL 创建]**”。
 
@@ -322,7 +322,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登录您的AEM Assets云实例。
 
-1. From the **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
+1. From the **Tools** ![Tools](assets/do-not-localize/tools.png) panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
    ![](assets/test-integration1.png)
 
@@ -379,7 +379,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 登录到您的AEM Assets作者实例。
 
-1. 从“工 **具**![”面](assets/tools.png) 板，导航至“部 **[!UICONTROL 署]** ”>“ ****&#x200B;部署复制”。
+1. 从“工 **具**![”面](assets/do-not-localize/tools.png) 板，导航至“部 **[!UICONTROL 署]** ”>“ ****&#x200B;部署复制”。
 
 1. 在复制页面中，单击作 **[!UICONTROL 者上的代理]**。
 
