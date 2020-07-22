@@ -3,9 +3,9 @@ title: 生成共享资产的URL
 description: 本文介绍如何在Experience Manager资产中以URL的形式共享资产、文件夹和收藏集。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1229'
 ht-degree: 10%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Manager资产允许您以URL的形式与组织成员和外部�
 >在与用户共享链接之前，请确保已配置Day CQ邮件服务。 如果尝试共享链接时未首先配置Day CQ邮 [件服务，则会出错](/help/assets/link-sharing.md#configmailservice)。
 
 1. 在“资产”用户界面中，选择要作为链接共享的资产。
-1. 在工具栏中，单 **[!UICONTROL 击共享链]**![接assets_share](assets/assets_share.png)。
+1. 在工具栏中，单击共享 **[!UICONTROL 链接共享]**![资产图标](assets/do-not-localize/assets_share.png)。
 
    资产链接会在共享链接字段中 **[!UICONTROL 自动创建]** 。 复制此链接并与用户共享。 链接的默认过期时间为一天。
 
@@ -116,6 +116,7 @@ Adobe Experience Manager资产允许您以URL的形式与组织成员和外部�
    * SMTP服务器端口： 电子邮件服务器端口
    * SMTP用户： 电子邮件服务器用户名
    * SMTP密码： 电子邮件服务器密码
+
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。
