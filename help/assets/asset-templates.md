@@ -3,9 +3,9 @@ title: 中的资产模板 [!DNL Adobe Experience Manager Assets]。
 description: 了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -165,9 +165,7 @@ ht-degree: 0%
 
    ![chlimage_1-120](assets/chlimage_1-325.png)
 
-1. 在“模 [!UICONTROL 板合并] ”页面中，单 **[!UICONTROL 击合并]**。
-
-   ![chlimage_1-121](assets/chlimage_1-326.png)
+1. 在“模 [!UICONTROL 板合并] ”页面中，单 **[!UICONTROL 击合]** 并 ![](assets/do-not-localize/assets_add_icon.png)添加资产。
 
 1. 导航到要合并的宣传品所在的位置，单击要合并的宣传品的缩略图以选择它们。
 
@@ -185,7 +183,7 @@ ht-degree: 0%
 
    ![chlimage_1-125](assets/chlimage_1-330.png)
 
-1. 单击工 **[!UICONTROL 具栏]** 中的“下一步”。
+1. Click **[!UICONTROL Next]** from the toolbar.
 1. 在“预览 **[!UICONTROL 和重新排序]** ”屏幕中，根据需要重新排列模板，并预览要合并的模板选择。 然后，单击工 **[!UICONTROL 具栏]** 中的“下一步”。
 
    ![chlimage_1-126](assets/chlimage_1-331.png)
