@@ -3,7 +3,7 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
 workflow-type: tm+mt
 source-wordcount: '2135'
 ht-degree: 1%
@@ -290,7 +290,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 以下是包含各种字段的元数据表单的示例：
 
-![chlimage_1-162](assets/chlimage_1-390.png)
+![元数据](assets/chlimage_1-390.png)
 
 在“资产编辑器”页面上，用户随后可以在元数据字段中输入值（如果可编辑）并执行结束操作（例如，提交更改）。
 
