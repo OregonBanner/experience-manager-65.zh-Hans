@@ -1,15 +1,18 @@
 ---
-title: Adobe Experience Manager Assets发行说明
+title: Adobe Experience Manager资产发行说明
 description: Adobe Experience Manager 6.5 Assets 的新增功能和增强功能。
 translation-type: tm+mt
-source-git-commit: a6f95e04fd5b8ed28beaa12e9fd170ed495397b8
+source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+workflow-type: tm+mt
+source-wordcount: '916'
+ht-degree: 42%
 
 ---
 
 
-# Adobe Experience Manager Assets发行说明 {#aem-assets-release-notes}
+# Adobe Experience Manager资产发行说明 {#aem-assets-release-notes}
 
-以下是Adobe Experience Manager 6.5 Assets版本的主要功能和亮点。
+以下是Adobe Experience Manager6.5 Assets版本的主要功能和亮点。
 
 ## Integration with [!DNL Adobe Creative Cloud] and creative workflows {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
@@ -19,7 +22,7 @@ Read on to know the specific capabilities and integrations of [!DNL Experience M
 
 ### Adobe Asset Link {#aal}
 
-[!DNL Adobe Asset Link] 在内容创建过程中加强创意人员与营销人员之间的协作。 Creatives can access content stored in [!DNL Experience Manager Assets], without leaving the apps that they are most familiar with. Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
+[!DNL Adobe Asset Link] 在内容创建过程中加强创意人员和营销人员之间的协作。 Creatives can access content stored in [!DNL Experience Manager Assets], without leaving the apps that they are most familiar with. Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
 
 [!DNL Adobe Asset Link] 是适用于企 [业的Creative Cloud产品的一部分](https://www.adobe.com/cn/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html).
 
@@ -31,19 +34,19 @@ Your organization can use its [!DNL Adobe Stock] enterprise plan within [!DNL Ex
 
 [!DNL Adobe Stock] 服务为设计师和企业提供了数百万种可用于所有创意项目的高品质、精选、免版税的照片、矢量、插图、视频、模板和 3D 资产。
 
-For more info, see [Use [!DNL Adobe Stock] assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
+For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
-![预览Adobe Stock图像和Experience Manager Assets中的许可](assets/stock_image_preview_license_options.png)
+![预览Adobe Stock图像和许可，从Experience Manager资产中获取](assets/stock_image_preview_license_options.png)
 
-*图：预览[!DNL Adobe Stock]图像和许可[!DNL Experience Manager Assets]。*
+*图： 预览[!DNL Adobe Stock]图像和许可证，从[!DNL Experience Manager Assets]中。*
 
-![在Experience Manager中搜索和过滤许可的Adobe Stock图像](assets/aem-search-filters2.jpg)
+![在Experience Manager中搜索和过滤已授权的Adobe Stock图像](assets/aem-search-filters2.jpg)
 
-*图：在中搜索和过滤许[!DNL Adobe Stock]可的图像[!DNL Experience Manager]。*
+*图： 在中搜索和筛选许[!DNL Adobe Stock]可的图像[!DNL Experience Manager]。*
 
 ### Dynamic references in [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
-[!DNL Experience Manager Assets] 文件中使 [!DNL Adobe InDesign] 用的是动态的。 如果引用的资产在存储库中移动，则引用会自动更新。 有关详细信息，请参 [阅如何管理复合资产](/help/assets/managing-linked-subassets.md)。
+[!DNL Experience Manager Assets] 文件中 [!DNL Adobe InDesign] 使用的是动态的。 如果引用的资产在存储库中移动，则引用会自动更新。 有关详细信息，请参 [阅如何管理复合资产](/help/assets/managing-linked-subassets.md)。
 
 ## Brand Portal 功能 {#brand-portal-capabilities}
 
@@ -55,15 +58,15 @@ For more info, see [Use [!DNL Adobe Stock] assets in Experience Manager Assets](
 
 在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和所需的数字资产位于不同的容器中。
 
-[!DNL Experience Manager Sites] 提供了创建网页的功能， 是为网站提供所需资产的数字资产管理 (DAM) 系统。[!DNL Experience Manager Assets][!DNL Experience Manager] 现在通过集成和支持上述用 [!DNL Sites] 例 [!DNL Assets]。 了解 [如何配置和使用“已连接的资产”功能](/help/assets/use-assets-across-connected-assets-instances.md)。
+[!DNL Experience Manager Sites] 提供了创建网页的功能， 是为网站提供所需资产的数字资产管理 (DAM) 系统。[!DNL Experience Manager Assets][!DNL Experience Manager] 现在通过集成和支持上述用 [!DNL Sites] 例 [!DNL Assets]。 了解 [如何配置和使用连接的资产功能](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-![将资产从部署拖 [!DNL Experience Manager] 动到其他部 [!DNL Sites] 署的页面上的部 [!DNL Experience Manager] 署](assets/connected-assets-drag-and-drop-only.gif)
+![将资产从部署拖 [!DNL Experience Manager] 动到其 [!DNL Sites] 他部署的页 [!DNL Experience Manager] 面](assets/connected-assets-drag-and-drop-only.gif)
 
-*图：将资产从部署中拖[!DNL Experience Manager]动到其他部[!DNL Sites]署的页面上的部[!DNL Experience Manager]署。*
+*图： 将资产从部署拖[!DNL Experience Manager]动到其他[!DNL Sites]部署的页面上的[!DNL Experience Manager]部署。*
 
 ## Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] 提供增强的富媒体创作和投放, [!DNL Experience Manager Assets] 以推动令人痴迷和个性化的前沿体验。 通过上传单个高质量主资产并使用我们的高级云渲染和查看器，您可以实时传送任何再现组合以支持您组织的媒体战略。
+[!DNL Dynamic Media] 提供增强的富媒体创作和投放 [!DNL Experience Manager Assets] 功能，以推动身临其境且个性化的前沿体验。 通过上传单个高质量主控资产，并使用我们的高级云渲染和查看器，您可以实时传送任意组合的演绎版以支持组织的媒体战略。
 
 For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
@@ -81,19 +84,19 @@ Manage your 360-video files directly in [!DNL Experience Manager] using the cutt
 
 ## 搜索体验增强功能 {#search-experience-enhancement}
 
-[!DNL Experience Manager] 6.5之后，营销人员可以从搜索结果页面更快地发现所需的资产。 即使还未应用搜索筛选器，也会为搜索 Facet 更新资产数量。查看筛选后的预计计数有助于用户有效地浏览搜索结果。有关详细信息，请参 [阅在Experience Manager中搜索资产](../assets/search-assets.md)。
+[!DNL Experience Manager] 6.5之后，营销人员可以在搜索结果页面更快地发现所需资产。 即使还未应用搜索筛选器，也会为搜索 Facet 更新资产数量。查看筛选后的预计计数有助于用户有效地浏览搜索结果。有关详细信息，请参阅 [在Experience Manager中搜索资产](../assets/search-assets.md)。
 
 ![在搜索 Facet 中查看未筛选搜索结果时的资产数量](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
-*图：在搜索彩块化中查看资产数量，但不筛选搜索结果。*
+*图： 在搜索彩块化中查看未筛选搜索结果的资产数量。*
 
 ## 可用性增强功能 {#usability-enhancement}
 
-您现在可以选择文件夹中或从搜索结果中一次选择所有加载的资产。 该功能可以帮助您快速管理多个资产。The check box selects all the assets that fits the scenario, say a search result and not just the assets that are visible in the [!DNL Experience Manager] interface.
+现在，您可以一次性从文件夹或搜索结果中选择所有加载的资产。 该功能可以帮助您快速管理多个资产。The check box selects all the assets that fits the scenario, say a search result and not just the assets that are visible in the [!DNL Experience Manager] interface.
 
 ![使用全选选项，只需单击一次即可选择所有加载的资产。](assets/select-all-in-aem-assets.gif)
 
-*图：使用全选选项，只需单击一次即可选择所有加载的资产。*
+*图： 使用全选选项，只需单击一次即可选择所有加载的资产。*
 
 ## 元数据增强功能 {#metadata-enhancements}
 
