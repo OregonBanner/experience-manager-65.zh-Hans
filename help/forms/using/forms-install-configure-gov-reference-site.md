@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a0717f5bf9ceb2e6def7feb37de4aa114de48938
+source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
 workflow-type: tm+mt
 source-wordcount: '5035'
 ht-degree: 1%
@@ -222,7 +222,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 ### 填写和签署多个表单 {#fill-sign-multiple-forms}
 
-本文档介绍设置填写和签署多个表单的能力所需的步骤。 您还可以在此处尝 [试相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例将此示例所需的必要数据存储在AME存储库中。 这样做是为了确保在本地服务器上部署演示资源的流畅体验。 在现实生活中，我们将在您选择的RDMS中存储相同的信息。
+本文档介绍设置填写和签署多个表单的能力所需的步骤。 您还可以在此处尝 [试相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例将此示例所需的必要数据存储在AEM存储库中。 这样做是为了确保在本地服务器上部署演示资源的流畅体验。 在现实生活中，我们将在您选择的RDMS中存储相同的信息。
 
 #### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
 
@@ -389,7 +389,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 * [与 Adobe Analytics 集成](../../sites-administering/adobeanalytics.md)
 
-* [连接到AdobeAnalytics并创建框架](../../sites-administering/adobeanalytics-connect.md)
+* [连接到AdobeAnalytics和创建框架](../../sites-administering/adobeanalytics-connect.md)
 
 * [查看页面分析数据](../../sites-authoring/pa-using.md)
 
@@ -419,7 +419,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 1. 导航到Adobe Experience Cloud门户。
    * 使用管理员凭据登录
-1. 在主仪表板中选择AdobeAnalytics图标。
+1. 在主Analytics中选择Adobe仪表板图标。
    ![快速访问](assets/aftia-quick-access.jpg)
 1. 导航到“管理员”选项卡，然后选择“用户管理（旧版）”项目
    ![报告](assets/aftia-reports.jpg)
@@ -432,7 +432,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 1. 请注意，用户名的名称中将包含冒号，冒号左侧的所有信息都是用户名，冒号右侧的所有信息都是公司名。
    * 以下是一个示例： *用户名： 公司名*
 
-#### 在AdobeAnalytics设置用户身份验证 {#setup-user-authentication}
+#### 在AdobeAnalytics中设置用户身份验证 {#setup-user-authentication}
 
 管理员可以执行以下操作，为用户提供AEM分析权限。
 
@@ -442,11 +442,11 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
    * 它位于管理员页面的主页上。
 
-1. 选择“Analytics完全管理员访问权限”。
+1. 选择Analytics完全管理员访问权限。
 
 1. 将用户添加到用户档案。
 
-   ![Analytics完全管理访问权限](assets/aftia-full-admin-access.jpg)
+   ![Analytics完全管理员访问权限](assets/aftia-full-admin-access.jpg)
 
 1. 将用户ID映射到用户档案后，单击权限选项卡。
 
@@ -461,15 +461,15 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 #### 视图AdobeAnalytics站点报告 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
-AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用AdobeAnalytics云配 `we-gov-forms.ui.analytics-<version>.zip` 置，但AEM Sites数据需要活动云配置。
+AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov-forms.ui.analytics-<version>.zip` 使用AdobeAnalytics云配置，但AEM Sites数据需要活动云配置。
 
 1. 导航到 *https://&lt;aemserver>:&lt;port>/sites.html/content*
 1. 选择“AEM FormsWe.Gov站点”以视图站点页面。
-1. 选择一个网站页面（例如主页），然后选择“Analytics和推荐”。
+1. 选择一个网站页面（例如“主页”），然后选择“Analytics和推荐”。
 
    ![分析和建议](assets/analytics_recommendations.jpg)
 
-1. 在此页上，您将看到从AdobeAnalytics获取的与AEM Sites页面相关的信息(注意： 设计后，此信息将从AdobeAnalytics定期刷新，不会实时显示)。
+1. 在此页上，您将看到从AdobeAnalytics获取的与AEM Sites页面相关的信息(注意： 设计时，此信息将定期从AdobeAnalytics刷新，不会实时显示)。
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
@@ -478,7 +478,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
    ![列表视图](assets/list_view.jpg)
 
-1. 从同一菜单中，选择“视图设置”，并从“Analytics”部分选择要显示的列。
+1. 从同一菜单中，选择“视图设置”，然后从“Analytics”部分选择要显示的列。
 
    ![配置列](assets/configure_columns.jpg)
 
@@ -489,7 +489,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 #### 视图AdobeAnalytics表单报告 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
-AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用AdobeAnalytics云配 `we-gov-forms.ui.analytics-<version>.zip` 置，但AEM Sites数据需要活动云配置。
+AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov-forms.ui.analytics-<version>.zip` 使用AdobeAnalytics云配置，但AEM Sites数据需要活动云配置。
 
 1. 导航至
 
@@ -499,7 +499,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
    ![Analytics报告](assets/analytics_report.jpg)
 
-1. 等待页面加载并视图Analytics报告数据。
+1. 等待页面加载，并视图Analytics报表数据。
 
    ![视图Analytics报告数据](assets/analytics_report_data.jpg)
 
@@ -742,7 +742,7 @@ AEM FormsAnalytics数据在离线时可用，如果安装了包，则不使用Ad
 
 [样式系统](../../sites-authoring/style-system.md)
 
-您还可以参阅模板自 [定义样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) ，以获取有关受支持样式的文档。
+有关受支持样式的 [文档，还可参阅](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) “模板”自定义样式系统。
 
 ### 自适应表单自定义 {#adaptive-forms-customization}
 
