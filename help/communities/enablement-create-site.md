@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 2%
@@ -160,7 +160,7 @@ ht-degree: 2%
    * 类型 `s`
    * 选择 `Sirius Nilson`
 
-* **Marketing Cloud组织ID**（可选）AdobeAnalytics帐户的ID，在启用报告中包含视频心 [跳Analytics](/help/communities/analytics.md#video-heartbeat-analytics) 时，此ID是必需的。
+* **Marketing Cloud组织Id**（可选）AdobeAnalytics帐户的ID，在启用报告中包含视频 [心跳Analytics](/help/communities/analytics.md#video-heartbeat-analytics) 时，此ID是必需的。
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
@@ -256,7 +256,7 @@ Select **Create.**
 
 `https://localhost:4503/content/sites/enable/en.html {#http-localhost-content-sites-enable-en-html}`
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![enablement-login](assets/enablement-login.png)
 
 ### 配置身份验证错误 {#configure-for-authentication-error}
 
