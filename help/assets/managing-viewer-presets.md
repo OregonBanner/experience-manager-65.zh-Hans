@@ -10,9 +10,9 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 8279cd590244a7f2d20cfaf1c7505a3ef57fae4a
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '4361'
+source-wordcount: '4360'
 ht-degree: 23%
 
 ---
@@ -423,7 +423,7 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
    ![6_5查看器预设](assets/6_5_viewerpresets.png)
 
 1. 在“查看器预设”页面的工具栏中，点按创 **[!UICONTROL 建。]**
-1. 在 **[!UICONTROL 新建查看器预设**&#x200B;对话框的&#x200B;**[!UICONTROL 预设名称]**&#x200B;字段中，输入新预设的名称。Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
+1. In the **[!UICONTROL New Viewer Preset]** dialog box, in the **[!UICONTROL Preset Name]** field, enter the name of the new preset. Choose a name carefully—they are not editable after you tap **[!UICONTROL Create.]**
 
    稍后在这些步骤中保存预设时，该名称会显示在“查看器预设”页面的“预设标题”列标题下。
 
