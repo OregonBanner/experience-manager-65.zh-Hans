@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: b242163267b43507e1cb9c6d4c36bb65385afc62
+source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 **http://localhost:4503/content/sites/enable/en.html**
 
-![chlimage_1-433](assets/chlimage_1-433.png)
+![enablement-login](assets/enablement-login.png)
 
 ## 匿名网站访客 {#anonymous-site-visitor}
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >可以授予对支持站点的匿名访问权，而不允许站点访客自行注册。
->如果启用资源设置为 `show in catalog` 且 `allow anonymous access`，则匿名站点访客可以视图目录中的资源。
+>如果启用资源设置为 `show in catalog` 且 `allow anonymous access`，则匿名站点访客可能会视图目录中的资源。
 
 
 ### 防止对JCR进行匿名访问 {#prevent-anonymous-access-on-jcr}
@@ -72,7 +72,7 @@ ht-degree: 1%
 1. 转至“高 **[!UICONTROL 级]** ”选项卡。
 1. Enable **[!UICONTROL Authentication Requirement]**.
 
-   ![站点身份验证-1](assets/site-authentication-1.png)
+   ![站点身份验证](assets/site-authentication.png)
 
 1. 添加登录页面的路径。 For example, `/content/......./GetStarted`.
 1. 发布页面。
@@ -122,7 +122,7 @@ ht-degree: 1%
 
 ### 滑雪目录 {#ski-catalog}
 
-“滑雪目录”页面是标记有命名空间标记的启用资源目 `Tutorial` 录。 这两个 *滑雪课资源* ，都使用标记进行标记 `Skiing` ，这样，如果选择了除或之外的任何标 `All` 记，则不会 `Tutorial: Sports / Skiing` 显示任何内容。
+“滑雪目录”页面是标记有命名空间标记的启用资源目 `Tutorial` 录。 这两个 *滑雪课* ，资源都用标记进行标记 `Skiing` ，这样，如果选择了除或之外的任何标 `All` 记，则不 `Tutorial: Sports / Skiing` 会显示任何内容。
 
 如果尚未直接或通过学习路径为成员分配启用资源，则可以与位于目录中的启用资源交互，并通过评论和评级提供反馈。
 
@@ -209,7 +209,7 @@ ht-degree: 1%
 * 选择所 `Report` 有资源的摘要图标。
 * 选择一个资源，然后选 `Report` 择该资源上的报表的图标。
 
-请注意，显示Adobe Analytics的数据可能为时过早，可能需要1到12小时才能显示。 但是，基本的SCORM报告已可用。
+请注意，显示AdobeAnalytics的数据可能为时过早，这可能需要1到12小时才能显示。 但是，基本的SCORM报告已可用。
 
 #### 滑雪课资源报告 {#ski-lessons-resource-report}
 
