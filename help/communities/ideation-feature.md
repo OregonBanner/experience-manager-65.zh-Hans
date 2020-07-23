@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
+source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+workflow-type: tm+mt
+source-wordcount: '1124'
+ht-degree: 9%
 
 ---
 
@@ -22,37 +25,39 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 构思功能为发布环境中的登录站点访客（社区成员）提供了一个区域，用于：
 
-* 创建想法并与社区共享。
+* 创建想法并与社区分享。
 * 视图和评论想法。
 * 遵循一个想法。
-* 就一个想法投票。
+* 投一票。
 
-本文档的这一部分描述了：
+文档的本节介绍：
 
 * 将构思功能添加到AEM站点。
-* 构思组件的配置设置。
+* 标识组件的配置设置。
 
 ### Adding a Ideation to a Page {#adding-a-ideation-to-a-page}
 
-要在创作模 `Ideation` 式下将组件添加到页面，请使用组件浏览器查找
+要在创作模 `Ideation` 式下将组件添加到页面，请使用组件浏览器来查找
 
 * `Communities / Ideation`
 
-并将其拖动到应该出现构思的页面上的位置。
+并将其拖动到应显示构思的页面上。
 
 有关必要的信息，请访 [问社区组件基础](/help/communities/basics.md)。
 
-当包含 [所需的客户端库时](/help/communities/ideation.md#essentials-for-client-side) ，组件的显示方式 `Ideation` 如下：
+当包 [含所需的客户端库](/help/communities/ideation.md#essentials-for-client-side) ，组件的显示 `Ideation` 方式如下：
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![构思](assets/ideation.png)
 
 ### 配置构思 {#configuring-an-ideation}
 
-选择要访问 `Ideation` 的已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
+选择要访问的 `Ideation` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-72](assets/chlimage_1-72.png) ![Ideation-settings](assets/ideation-settings.png)
+![configure-new](assets/configure-new.png)
 
-#### 设置选项卡 {#settings-tab}
+![视频设置](assets/ideation-settings.png)
+
+#### “设置”选项卡 {#settings-tab}
 
 在“设 **[!UICONTROL 置]** ”选项卡下，指定构思和注释的设置：
 
@@ -76,43 +81,43 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * **已审核**
 
-   如果选中此项，则发布构思和评论必须经过批准，才能在发布站点上显示。 默认为未选中。
+   如果选中此项，则发布创意和评论必须获得批准，然后才能在发布站点上显示。 默认为未选中。
 
 * **关闭**
 
-   如果选中此项，则会关闭构思论坛以查看新构思和评论。 默认为未选中。
+   如果选中此选项，则构思论坛将不会显示新想法和新注释。 默认为未选中。
 
 * **富文本编辑器**
 
-   如果选中此项，则可以使用标记输入想法和注释。 默认为未选中。
+   如果选中，则可以输入带有标记的想法和注释。 默认为未选中。
 
 * **允许标记**
 
-   如果选中此项，则允许成员向其帖子中添加标记标签(请参阅 **[!UICONTROL 标记字段]** 选项卡)。 默认为未选中。
+   如果选中此项，则允许成员向其帖子中添加标记标签(请参 **[!UICONTROL 阅标记字段]** 选项卡)。 默认为未选中。
 
 * **允许文件上传**
 
-   如果选中此项，则允许将文件附件添加到构思或注释中。 默认为未选中。
+   如果选中，则允许将文件附件添加到构思或注释中。 默认为未选中。
 
 * **最大文件大小**
 
-   仅在选中时 `Allow File Uploads` 相关。 此字段将限制已上载文件的大小（以字节为单位）。 默认为104857600(10 Mb)。
+   仅在选中时 `Allow File Uploads` 相关。 此字段将限制已上载文件的大小（以字节为单位）。 默认值为104857600(10 Mb)。
 
 * **允许的文件类型**
 
-   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表（以“点”分隔）。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **附加图像文件最大大小**
 
-   仅在选中“允许文件上传”时相关。 上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
+   仅当选中“允许文件上传”时相关。 上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
 
 * **允许回复**
 
-   如果选中此项，则允许回复发布到构思的评论。 默认为未选中。
+   如果选中，则允许回复发布到构思的注释。 默认为未选中。
 
 * **允许投票**
 
-   如果选中此项，则允许对某个想法的注释进行投票。 默认为未选中。
+   如果选中，允许对某个想法的注释进行投票。 默认为未选中。
 
 * **允许用户删除评论和主题**
 
@@ -120,25 +125,25 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * **允许关注**
 
-   如果选中此项，则为创意帖子加入以下功能，允许成员收到 [新帖子](/help/communities/notifications.md) 的通知。 默认为未选中。
+   如果选中此项，则为创意帖子添加以下功能，允许成员 [收到](/help/communities/notifications.md) 新帖子的通知。 默认为未选中。
 
 * **允许电子邮件订阅**
 
-   如果选中此项，则允许会员通过电子邮件([订阅](/help/communities/subscriptions.md))通知新帖子。 需要 `Allow Following` 选中并配置电 [子邮件](/help/communities/email.md)。 默认为未选中。
+   如果选中此项，则允许成员通过电子邮件(订阅)通知[新帖](/help/communities/subscriptions.md)子。 需要 `Allow Following` 检查并配置电 [子邮件](/help/communities/email.md)。 默认为未选中。
 
 * **允许投票**
 
-   如果选中此项，则允许对某个想法的注释进行投票。 默认为未选中。
+   如果选中，允许对某个想法的注释进行投票。 默认为未选中。
 
 * **显示徽章**
 
-   如果选中此项，则显示已获 [得的徽章](/help/communities/implementing-scoring.md) ，以及已分配的徽章。 默认为未选中。
+   如果选中，则用会员的 [想法](/help/communities/implementing-scoring.md) ，显示已获得和分配的徽章。 默认为未选中。
 
-* **不在列表页面上获取回复**
+* **列表页面上不收到回复**
 
 * **允许专题内容**
 
-   如果选中此项，则可将该创意标识为特色 [内容](/help/communities/featured.md)。 默认为未选中。
+   如果选中，则可以将该想法标识为特色 [内容](/help/communities/featured.md)。 默认为未选中。
 
 * **启用提及功能**
 * **最大提及次数**
@@ -146,47 +151,47 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 #### “用户审核”选项卡 {#user-moderation-tab}
 
-在“用户 **[!UICONTROL 协调]** ”选项卡下，指定如何管理已发布的构思和评论（用户生成的内容）。 有关详细信息，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md)。
+在“用 **[!UICONTROL 户协调]** ”选项卡下，指定如何管理已发布的想法和评论（用户生成的内容）。 有关详细信息，请参 [阅调节用户生成的内容](/help/communities/moderate-ugc.md)。
 
 * **拒绝帖子**
 
-   如果选中此项，则允许受信任的成员审核者拒绝帖子并阻止帖子显示在公共论坛中。 默认为未选中。
+   如果选中，则允许受信任的成员审核者拒绝帖子并阻止帖子显示在公共论坛中。 默认为未选中。
 
 * **关闭／重新打开主题**
 
-   如果选中此项，则受信任的成员审核者可以关闭主题以进一步编辑和评论，也可以重新打开主题。 默认为未选中。
+   如果选中，受信任的成员版主可以关闭主题以进一步编辑和评论，也可以重新打开主题。 默认为未选中。
 
 * **旗标帖子**
 
-   如果选中此项，则允许成员将他人的主题或评论标记为不合适。 默认为未选中。
+   如果选中，允许成员将其他人的主题或注释标记为不合适。 默认为未选中。
 
-* **旗标原因列表**
+* **标志原因列表**
 
-   如果选中此项，允许成员从下拉列表中选择其标记主题或评论为不适当的理由。 默认为未选中。
+   如果选中，允许成员从下拉式列表中选择其标记主题或评论为不合适的理由。 默认为未选中。
 
 * **自定义标志原因**
 
-   如果选中此项，则允许成员输入自己将主题或评论标记为不合适的原因。 默认为未选中。
+   如果选中，允许成员输入其自己将主题或评论标记为不合适的原因。 默认为未选中。
 
-* **协调阈值**
+* **审核阈值**
 
    输入在通知版主之前必须由成员标记主题或评论的次数。 默认值为1（一次）。
 
 * **标记限制**
 
-   输入主题或评论在隐藏于公共视图之前必须标出的次数。 如果设置为-1，则标记的主题或评论从不隐藏在公共视图中。 否则，此数字必须大于或等于审核阈值。 默认为5。
+   输入主题或评论在隐藏之前必须标出的次数，以免公开视图。 如果设置为-1，则标记的主题或评论从不隐藏于公共视图。 否则，此数字必须大于或等于仲裁阈值。 默认值为5。
 
 #### 标记字段选项卡 {#tag-field-tab}
 
-在“标 **[!UICONTROL 记字段]** ”选项卡下，可能应用的标记（如果允许）会根据选择的命名空间 **** 来限制。
+在“标 **[!UICONTROL 记”字段]** (Tag field)选项卡下 **[!UICONTROL ，根据所选的命名空间，在“设置”(Settings)选项卡下允许的情况下，]** 可以应用的标记会受到限制。
 
 * **允许的命名空间**
 
-   如果选中 `Allow Tagging` 了“设置”选项卡下 **[!UICONTROL 的选项]** ，则相关。 可应用的标记仅限于所选命名空间类别内的标记。 命名空间的列表包括“标准标记”(默认命名空间)和“包括所有标记”。 默认值为none checked，表示允许所有命名空间。
+   如果在“设 `Allow Tagging` 置”选项卡下选中， **[!UICONTROL 则相关]** 。 可应用的标记仅限于所选命名空间类别内的标记。 命名空间的列表包括“标准标记”(默认命名空间)和“包括所有标记”。 默认值为“无”(none checked)，这意味着允许所有命名空间。
 
 * **建议限制**
 
-   输入要作为建议显示给发布到论坛的成员的标记数。 值-1表 **示无** 限制。 默认值为0。
+   输入要作为建议显示给论坛成员的标记数。 值-1 **表示** 无限制。 默认值为0。
 
 #### “排序设置”选项卡 {#sort-settings-tab}
 
@@ -194,7 +199,7 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 * **排序方式**
 
-   选中所有允许的排序选择： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Default is `Newest, Oldest, Last Updated`.
+   检查所有允许的排序选择： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Default is `Newest, Oldest, Last Updated`.
 
 * **设置为默认**
 
@@ -212,28 +217,28 @@ source-git-commit: 85f3b8f2a5f079954f4907037c1c722a6b25fd91
 
 登录后，会员可能会创建新想法。
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![create-new-idea](assets/create-new-idea.png)
 
 在提交构思之前，成员可以保存草稿。
 
 通过选择按 `Save as Draft` 钮，将保存草稿。
 
-![chlimage_1-74](assets/chlimage_1-74.png)
+![保存构思](assets/save-idea.png)
 
-在选项卡中查看保存的草 `My Drafts` 稿时，选择 `Read More` 以重新进入编辑模式：
+在选项卡中查看保存的 `My Drafts` 草稿时， `Read More` 选择以重新进入编辑模式：
 
-![chlimage_1-75](assets/chlimage_1-75.png)
+![编辑构思](assets/edit-idea.png)
 
 #### 提供反馈 {#providing-feedback}
 
-构思发布后，其他成员可以登录，打开构思( `Read More`)并像其他想法一样，从而增加投票数并发表评论。
+构思发布后，其他成员可以登录，打开构思() `Read More`并像该构思一样，从而增加投票数并发表评论。
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![反馈](assets/feedback-idea.png)
 
 ### 附加信息 {#additional-information}
 
-有关详细信息，请参阅面向开发 [人员的Idemation Essentials](/help/communities/ideation.md) （构思基本工具）页面。
+有关详细信息，请参阅适 [用于开发人](/help/communities/ideation.md) 员的Idetation Essentials页。
 
-有关审核已发布的主题和评论，请参阅审核 [用户生成的内容](/help/communities/moderate-ugc.md)。
+有关审核已发布的主题和评论，请参 [阅审核用户生成的内容](/help/communities/moderate-ugc.md)。
 
-有关标记已发布的主题和评论，请参阅 [标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记已发布的主题和评论，请参 [阅标记用户生成的内容](/help/communities/tag-ugc.md)。
