@@ -2,9 +2,9 @@
 title: 页面导出器
 description: 了解如何使用AEM Page Exporter。
 translation-type: tm+mt
-source-git-commit: c152cf4bf8cf19e0fa7b328241ced753fa42f7a4
+source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1065'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ AEM允许您将页面导出为包含图像和文件的完整网 `.js` 页 `.css`
 
 页面导出器基于内容 [同步框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)。 “页面属性”对话 **框中提供** 的配置是导出模板，它们定义了页面所需的依赖关系。
 
-触发页面导出时，将引用导出模板并动态应用页面路径和设计路径。 然后，使用标准内容同步功能创建zip文件。
+触发页面导出时，将引用导出模板，并动态应用页面路径和设计路径。 然后，使用标准内容同步功能创建zip文件。
 
 现成的AEM安装包含下的默认模板 `/etc/contentsync/templates/default`。
 
@@ -98,7 +98,7 @@ AEM允许您将页面导出为包含图像和文件的完整网 `.js` 页 `.css`
 
 配置模板后，您需要使其可用：
 
-1. 在CRXDE中，导航到分支中的所需 `/content` 页面。
+1. 在CRXDE中，导航到分支中的所需 `/content` 页面。 这可以是单个页面，也可以是子树的根页面。
 
 1. 在页 `jcr:content` 面的节点上创建属性：
    * `Name`: `cq:exportTemplate`
