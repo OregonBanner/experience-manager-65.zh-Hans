@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: ee0d4aa07db6f00409cace8664d02c545e7d6550
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -259,7 +259,7 @@ BASIC面板允许修改
 
 >[!CAUTION]
 >
->组函数不能*是站点结 *构中的第一个* ，也不能是唯一的函数。
+>组函数不 *能是* 站 *点结构中* 的第一个，也不能是唯一的函数。
 >
 >任何其他函数(如页 [面函数](/help/communities/functions.md#page-function))必须首先包含并列出。
 
