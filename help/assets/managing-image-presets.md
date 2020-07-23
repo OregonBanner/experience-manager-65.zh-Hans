@@ -10,10 +10,10 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '3845'
-ht-degree: 25%
+source-wordcount: '3843'
+ht-degree: 23%
 
 ---
 
@@ -291,7 +291,7 @@ To create a responsive image preset, perform the steps in [Creating Image Preset
 
 在创建或编辑图像预设时，您可以使用本节介绍的几种选项。此外，Adobe建议开始选择以下“最佳实践”选项：
 
-* **[!UICONTROL 格式**（**[!UICONTROL 基本]**&#x200B;选项卡）- 选择 **[!UICONTROL JPEG]** 或其他符合您要求的格式。所有 Web 浏览器都支持 JPEG 图像格式；它可以在小文件大小和图像质量之间实现良好的平衡。但是，JPEG 格式图像使用有损压缩方案，如果压缩设置太低，则会引入不需要的图像伪影。因此，Adobe 建议将压缩质量设置为 75。此设置在图像质量和小文件大小之间提供了良好的平衡。
+* **[!UICONTROL 格式]** (**[!UICONTROL 基本]** 选项卡)-选 **[!UICONTROL 择JPEG]** 或其他符合要求的格式。 所有Web浏览器都支持JPEG图像格式； 它可以在小文件大小和图像质量之间实现良好的平衡。 但是，JPEG格式图像使用有损压缩方案，如果压缩设置太低，会引入不需要的图像伪影。 因此，Adobe 建议将压缩质量设置为 75。此设置在图像质量和小文件大小之间提供了良好的平衡。
 
 * **[!UICONTROL 启用简单锐化]** - 请勿选择&#x200B;**[!UICONTROL 启用简单锐化]**（此锐化滤镜提供的控制度低于“钝化蒙版”设置）。
 
@@ -504,5 +504,5 @@ To create a responsive image preset, perform the steps in [Creating Image Preset
 
 1. 在AEM中，点按或单击AEM徽标以访问全局导航控制台。
 1. 点按工 **[!UICONTROL 具图]** 标，然后导航到 **[!UICONTROL 资产>图像预设。]**
-1. Select a preset, and then click **[!UICONTROL Delete**. Dynamic Media会确认您是否要删除它。 点按 **[!UICONTROL 删除]** ，或点按取 **[!UICONTROL 消]** 以中止。
+1. Select a preset, and then click **[!UICONTROL Delete]**. Dynamic Media会确认您是否要删除它。 点按 **[!UICONTROL 删除]** ，或点按取 **[!UICONTROL 消]** 以中止。
 
