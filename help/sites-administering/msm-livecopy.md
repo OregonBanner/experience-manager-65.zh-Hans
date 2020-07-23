@@ -2,9 +2,9 @@
 title: 创建和同步Live Copy
 description: 了解如何创建和同步Live Copy。
 translation-type: tm+mt
-source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
+source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
 workflow-type: tm+mt
-source-wordcount: '4116'
+source-wordcount: '4115'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 
 您可以创建任何页面的Live Copy:
 
-* 页面是由Blueprint配置引 [用的页面](#creating-a-blueprint-configuration),
+* 由Blueprint配置引用 [的页面](#creating-a-blueprint-configuration)。
 * 以及与配置无连接的页面。
 * AEM还支持在其他Live Copy页面中创建Live Copy。
 
