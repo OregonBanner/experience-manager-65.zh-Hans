@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: f9b11eee4c044a8df4e694aa5f660b5ea375ca3c
+source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7698'
 ht-degree: 0%
 
 ---
@@ -377,7 +377,7 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 1. 在“域结构”下，单 *[击“基域]* ” > **Services** > **JDBC** > **Data Sources** ，并在右侧窗 ****&#x200B;格中单击IDP ，再单击IDP。
 1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性”框中** ，键入 `integratedSecurity=true`。
 1. 在“域结构”下，单 **[击“基域]** ” > **Services** > **JDBC** > **Data Sources** ，然后在右 ****&#x200B;窗格中单击DS RM。
-1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性”框中** ，键入 `integratedSecurity=true`。
+1. 在下一个屏幕的“配 **置** ”选项卡上，单 **击“连接池** ”选项卡，在“属 **性** ”框中键入 `integratedSecurity=true`。
 1. 将sqljdbc_auth.dll文件添加到运行应用程序服务器的计算机上的Windows系统路径。 sqljdbc_auth.dll文件位于Microsoft SQL JDBC 6.2.1.0驱动程序安装中。
 1. 将SQL Server的安全性从混 **合模式** 设置 **为仅Windows身份验证**。
 
@@ -393,7 +393,7 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 1. 在右侧窗格的“其他属性”下，单击“自 **定义属性**”，然后单击“ **新建”**。
 1. 在“名 **称** ”框中，键 `integratedSecurity` 入并在“值” **框中** 键入 `true`。
 1. 在安装WebSphere的计算机上，将sqljdbc_auth.dll文件添加到Windows系统路径(C:\Windows)。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 1.2驱动程序安装位置相同(默 *[认为]* InstallDir/sqljdbc_1.2/enu/auth/x86)。
-1. 选择 **“开始** ” **>“控制面板** ”>“服务”，右键单击WebSphere的Windows服务(IBM WebSphere Application Server &lt;version> - &lt;node>)，然后选择 ******** Properties。
+1. 选择 **开始** > **控制面板** > **服务，右键单击WebSphere的Windows服务（IBM WebSphere Application Server &lt;version> - &lt;节点>）并选择******。
 1. 在“属性”对话框中，单击“登 **录”选** 项卡。
 1. 选 **择此帐户** ，并提供设置要使用的登录帐户所需的信息。
 1. 将SQL Server上的安全性从混 **合模式** 设置 **为仅Windows身份验证**。
@@ -955,6 +955,8 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 有关JEE物理架构的部分AEM Forms中 [描述的物理架构](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)，您应为计划使用的所有连接配置SSL。 具体而言，所有SOAP连接都必须通过SSL进行，以防止用户凭据暴露在网络上。
 
 有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅管理帮助中的“配置 [SSL”](https://www.adobe.com/go/learn_aemforms_admin_64)。
+
+有关如何将证书导入为为AEM Forms服务器配置的JVM（Java虚拟机）的说明，请参阅AEM Forms工作台帮助中的“相互身份 [验证”部分](http://www.adobe.com/go/learn_aemforms_workbench_65)。
 
 ### 配置SSL重定向 {#configuring-ssl-redirect}
 
