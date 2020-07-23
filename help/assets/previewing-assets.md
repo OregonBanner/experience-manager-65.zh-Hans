@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '1346'
-ht-degree: 22%
+source-wordcount: '1344'
+ht-degree: 21%
 
 ---
 
@@ -36,7 +36,7 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
 
 **使用软件界面预览资产**
 
-1. 在 **[!UICONTROL Adobe Experience Manager** 的 **[!UICONTROL 导航**&#x200B;页面上，点按 **[!UICONTROL Assets]**，然后点按&#x200B;**[!UICONTROL 文件]**&#x200B;以访问资产。
+1. From **[!UICONTROL Adobe Experience Manager]**, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets]**, then **[!UICONTROL Files]** to access assets.
 1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View.]**
 1. （可选）使 **[!UICONTROL 用]** “类型”列按要预览的类型对资产进行排序。
 1. 在“标 **[!UICONTROL 题]** ”列下，单击要预览的资产的标题名称（而非缩略图图像）。
@@ -78,7 +78,9 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       </ul> <p><strong>在特定查看器中预览资产</strong></p>
       <ul>
       <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>多媒体</td>
@@ -99,7 +101,9 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td><p><strong>在特定查看器中预览资产</strong></p>
       <ul>
       <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>旋转集</td>
@@ -108,7 +112,9 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td><p><strong>在特定查看器中预览资产</strong></p>
       <ul>
       <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>混合媒体集</td>
@@ -117,7 +123,9 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td><p><strong>在特定查看器中预览资产</strong></p>
       <ul>
       <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>旋转集</td>
@@ -138,7 +146,9 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       </ul> <p><strong>在特定查看器中预览资产</strong></p>
       <ul>
       <li>在页面的左上角附近，点按图标以显示下拉列表。 选 <strong>择查看</strong>器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
     </tbody>
     </table>
