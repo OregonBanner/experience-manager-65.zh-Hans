@@ -10,10 +10,10 @@ topic-tags: introduction
 discoiquuid: 03886dd3-5873-4908-912b-fbbddb26c322
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 371ecbdaad97b7111353f40d1ddfb686e99d46c5
 workflow-type: tm+mt
-source-wordcount: '2864'
-ht-degree: 0%
+source-wordcount: '2878'
+ht-degree: 1%
 
 ---
 
@@ -216,8 +216,8 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 使用“软件分发”安装参 [考站点包](https://docs.adobe.com/content/help/en/experience-cloud/software-distribution/home.html)。
 
-* [AEM FormsFSI参考站点包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-FSI-REF-SITE)
-* [AEM Forms政府参考站点包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/fd/AEM-FORMS-6.5-GOV-REF-SITE)
+* [AEM FormsFSI参考站点包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-FSI-REF-SITE)
+* [AEM Forms政府参考站点包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffd%2FAEM-FORMS-6.5-GOV-REF-SITE)
 
 要进一步了解如何使用包，请参 [阅如何使用包](/help/sites-administering/package-manager.md)。
 
@@ -266,7 +266,7 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 1. 在AEM作者实例中，转 **到工具** > **Cloud Service** > **数据源** > **全**&#x200B;局。 点按 **Refsite Dynamics Integration图标** ，然后点按属性。
 1. 转到Microsoft Azure Active Directory帐户。 将复制的云服务配置URL添加到已注 **册应用程** 序的回复URL设置中。 保存配置。
 1. 在“身份验证设置”选 **项卡中**，为 **您的Microsoft** Dynamics实例指 **定服务根、**&#x200B;客户端Id、 **客户端机密和** 资源URL。 单击 **“连接到** OAuth”，它将重定向到Microsoft Dynamics登录页。
-1. 提供登录凭据。 登录后，您将被重定向到“AEM Forms云服务配置”页。 Click **Save &amp; Close**. 云服务配置已保存。
+1. 提供登录凭据。 登录后，您将被重定向到“AEM Forms云服务配置”页。 单击&#x200B;**保存并关闭**。云服务配置已保存。
 1. 转至 **表单** >数 **据集成** > **We.Finance**。 选择自动保险（动态），然后单击编辑。 Microsoft Dynamics实体列在“数据源”选项卡下。 请等待，直到从Microsoft Dynamics获取所有实体并列在数据源选项卡下。
 1. 选择AutoInsuranceRenewal **实体** ，然后单 **击“测试模型对象”**。 在输入请求部分，将客户ID的值指定为“900001”，然后单击“ **测试**”。 “输出”部分显示从Microsoft Dynamics为客户ID 900001获取的记录。
 1. 在输入请求部分，将客户ID的值指定为“900001”，然后单击“ **测试**”。 “输出”部分显示从Microsoft Dynamics为客户ID 900001获取的记录。
@@ -321,7 +321,7 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 ## 与Marketing Cloud集成 {#integrate-with-marketing-cloud}
 
-您可以将AEM Forms与AdobeAnalytics和Adobe Target集成。 AdobeAnalytics可以帮助您生成报告并分析自适应表单的性能，而Adobe Target则可以帮助您提供个性化体验并执行自适应表单的A/B测试。
+您可以将AEM Forms与AdobeAnalytics和Adobe Target集成。 AdobeAnalytics可以帮助您生成报告并分析自适应表单的性能，而Adobe Target则可以帮助您提供个性化体验并对自适应表单执行A/B测试。
 
 执行以下操作以在AEM Forms中配置AdobeAnalytics和Adobe Target。
 
@@ -329,14 +329,14 @@ We.Finance参考站点的电子邮件模板包含电子邮件中的个性化链�
 
 AEM Forms与AdobeAnalytics的集成使您能够监控和分析客户如何与您的表单和文档互动。 它有助于您识别和修复问题区域并采取行动增加转化率。
 
-要在参考站点中体验此功能，请按照配置分析和报告中的说明配 [置您的Analytics帐户](../../forms/using/configure-analytics-forms-documents.md)。
+要在参考站点中体验此功能，请按照配置分析和报告中的 [说明配置Analytics帐户](../../forms/using/configure-analytics-forms-documents.md)。
 
 要生成报告，种子数据会与引用站点绑定。 在使用种子数据之前，请执行以下操作：
 
 1. 确保We.Finance分析配置在AEM cloud services中可用。 您可以通过以下方式之一查找云服务：
 
    * 导航到“ **[!UICONTROL 工具”>“Cloud Service]** ”>“旧Cloud Service”或浏览到https://&lt;host>:&lt;port>/libs/cq/core/content/tools/cloudservices.html。
-   * 在Cloud Service **[!UICONTROL 页面]** 的Adobe **[!UICONTROL Analytics部]** 分下 `Show Configurations`，单击。 您可以看到We.Finance的可用配置。 单击以打开配置。 在配置页面中，单击 **[!UICONTROL 编辑]**。 提供有效公司、用户名、共享机密（密码）和数据中心，然后单 **[!UICONTROL 击连接到Analytics]**。 连接成功对话框后，单击 **[!UICONTROL 配置]** 对话框中的确定。 在Analytics配置下配置框架，如配置Analytics [和报告中所述](../../forms/using/configure-analytics-forms-documents.md)。
+   * 在Cloud Service **[!UICONTROL 页面中]** ，在Adobe **[!UICONTROL Analytics部]** 分下 `Show Configurations`，单击。 您可以看到We.Finance的可用配置。 单击以打开配置。 在配置页面中，单击 **[!UICONTROL 编辑]**。 提供有效公司、用户名、共享机密（密码）和数据中心，然后单击“连 **[!UICONTROL 接到Analytics”]**。 连接成功对话框后，单击 **[!UICONTROL 配置]** 对话框中的确定。 在Analytics配置下配置框架，如配置Analytics [和报告中所述](../../forms/using/configure-analytics-forms-documents.md)。
 
 1. 导航到https://&lt;*host*>:&lt;*port*>/system/console/configMgr并执行以下操作：
 
@@ -348,7 +348,7 @@ AEM Forms与AdobeAnalytics的集成使您能够监控和分析客户如何与您
 1. 导航到位于https://&lt;host>:&lt;port>/aem/forms的表单管理器，然后执行以下操作：
 
    * 打开We.Finance文件夹，选择要查看其报表的表单。
-   * 单击“操作”工具栏中的“启用Analytics”。 为表单启用分析后，单击“Analytics报告”。 您可以看到生成的空白报告。 生成空白报告后，您必须提供refsite包附带的种子数据，以生成分析报告以用于演示。
+   * 单击“操作”工具栏中的“启用Analytics”。 为表单启用分析后，单击Analytics报告。 您可以看到生成的空白报告。 生成空白报告后，您必须提供refsite包附带的种子数据，以生成分析报告以用于演示。
 
    参考站点为分析报告提供信用卡、家庭抵押和儿童支持使用案例的种子数据。
 
