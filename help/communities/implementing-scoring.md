@@ -12,7 +12,7 @@ discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
 workflow-type: tm+mt
 source-wordcount: '2897'
 ht-degree: 2%
@@ -62,7 +62,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
 已分配（和已通知）标记存储在选定 [SRP](/help/communities/srp.md) 中，无法直接访问。 在GUI可用之前，分配基于角色的标记的唯一方法是使用代码或cURL进行分配。 有关cURL说明，请参阅“分配 [和撤销标记”部分](#assign-and-revoke-badges)。
 
-发行版中包括三个基于角色的徽章：
+该版本包含三个基于角色的徽章：
 
 * **主持人**
 
@@ -308,7 +308,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
 ## 徽章规则 {#badging-rules}
 
-徽章规则通过指定：
+标记规则通过指定以下项将评分规则链接到标记：
 
 * 评分规则。
 * 必须获得的分数。
