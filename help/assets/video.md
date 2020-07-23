@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
 workflow-type: tm+mt
-source-wordcount: '11829'
+source-wordcount: '11828'
 ht-degree: 22%
 
 ---
@@ -459,7 +459,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    如有必要，您可能需要使 **[!UICONTROL 用Google]** 帐户凭据登录 **[!UICONTROL ，才能看到控制台]** 选项。
 
-1. 在仪表板页面的Google Cloud **[!UICONTROL Platform右侧]**，单击项目下拉列表以打开选择项目对话框。
+1. 在仪表板页面的Google Cloud Platform右 **[!UICONTROL 侧]**，单击项目下拉列表以打开选择项目对话框。
 1. 在选择项目对话框中，点按新 **[!UICONTROL 建项目。]**
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
@@ -872,7 +872,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
+   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
@@ -908,7 +908,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
+   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
@@ -918,7 +918,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
+>您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
 
 如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
 
@@ -1022,7 +1022,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 
    `videoViewer.setParam("config2", "<value>");`
 
-   The `config2` parameter enables tracking in HTML5 Viewers. 它还是一个特定于公司的预设，其中包含视频报告的配置信息以及特定于客户的AdobeAnalytics配置。
+   The `config2` parameter enables tracking in HTML5 Viewers. 它还是一个特定于公司的预设，其中包含视频报告和特定于客户的AdobeAnalytics配置的配置信息。
 
    在**嵌入代码**和副本**URL **函数中都可以找到config2参数的正确值。 在复制**URL **命令的URL中，要查找的参数为 `&config2=<value>` 。 该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
 
@@ -1090,7 +1090,7 @@ Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）�
 
    为获得最佳效果，请使用Internet Explorer 9或更高版本、Google Chrome或Safari中的工具。
 
-   在该工具中的&#x200B;**[!UICONTROL 输入视频文件的 URL]** 字段中，粘贴复制的视频文件的 URL，然后单击 **[!UICONTROL 加载**。请参阅[获取资产的 URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)，以获取视频文件的 URL，然后您可以将该 URL 粘贴到&#x200B;**[!UICONTROL 输入视频文件的 URL 字段。]**&#x200B;随后，Internet Explorer、Chrome 或 Safari 可以本机播放视频。
+   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. 请参阅[获取资产的 URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)，以获取视频文件的 URL，然后您可以将该 URL 粘贴到&#x200B;**[!UICONTROL 输入视频文件的 URL 字段。]**&#x200B;随后，Internet Explorer、Chrome 或 Safari 可以本机播放视频。
 
    现在，请按照站点屏幕上的说明创作和保存WebVTT文件。 完成后，复制题注文件内容并将其粘贴到纯文本编辑器中，并以。vtt文件扩展名保存它。
 
