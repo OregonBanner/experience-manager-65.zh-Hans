@@ -3,9 +3,9 @@ title: Adobe Experience Manager到Adobe Creative Cloud文件夹，共享最佳�
 description: 配置Adobe Experience Manager，允许Experience Manager资产中的用户与Adobe Creative Cloud(CC)用户交换文件夹。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->已弃用Experience Manager到Creative Cloud文件夹共享功能。 Adobe强烈建议使用Adobe Asset Link或 [Experience Manager桌面应用](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)[程序等新功能](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。 了解有关Experience Manager [和Creative Cloud集成最佳实践的更多信息](/help/assets/aem-cc-integration-best-practices.md)。
+>已弃用Experience Manager到Creative Cloud文件夹共享功能。 Adobe强烈建议使用Adobe Asset Link或 [Experience Manager桌面应用](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)[程序等新功能](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。 了解有关Experience Manager [和Creative Cloud集成最佳实践的更多信息](/help/assets/aem-cc-integration-best-practices.md)。
 
 Adobe Experience Manager可以配置为允许资产中的用户与Adobe Creative Cloud应用程序的用户共享文件夹，这样，在Adobe Creative Cloud Assets服务中，这些用户便可以作为共享文件夹。 该功能可用于在创意团队和资产用户之间交换文件，尤其是当创意用户无权访问资产部署时（他们不在企业网络上）。
 
