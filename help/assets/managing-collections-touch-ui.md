@@ -4,10 +4,10 @@ description: 了解管理资产集合的任务，如创建、视图、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2200'
-ht-degree: 19%
+source-wordcount: '2203'
+ht-degree: 18%
 
 ---
 
@@ -102,19 +102,14 @@ You can create a collection either with [static references](#creating-a-collecti
 
    ![collection_listing](assets/collection_listing.png)
 
-   “创建智能选 **[!UICONTROL 择”按钮的标签会变]** 为“编 **[!UICONTROL 辑智能选择”]**。 要编辑智能收藏集的设置，请从“文件和文 **[!UICONTROL 件夹]** ”列 **[!UICONTROL 表中选择“文件]** ”。 Then, Click the **[!UICONTROL Edit Smart Selection]** button.
-
-   ![chlimage_1-7](assets/chlimage_1-112.png)
+   The label of the **[!UICONTROL Create Smart Selection]** option changes to **[!UICONTROL Edit Smart Selection]**. 要编辑智能收藏集的设置，请从“文件和文 **[!UICONTROL 件夹]** ”列 **[!UICONTROL 表中选择“文件]** ”。 单击编辑 **[!UICONTROL 智能选择]**![编辑智能收藏集](assets/do-not-localize/edit-smart-collection.png) 。
 
 ## Add assets to a collection {#adding-assets-to-a-collection}
 
 您可以将资产添加到包含一系列引用的资产或文件夹的收藏集中。智能收藏集可使用搜索查询来填充资产。因此，对资产和文件夹的静态引用不适用于此类收藏集。
 
-1. 在资产用户界面中，选择资产，然后单击工 **[!UICONTROL 具栏中]** 的收藏集。
-
-   ![chlimage_1-8](assets/chlimage_1-113.png)
-
-   或者，也可以将资产拖到界 **[!UICONTROL 面上的“放入集]** ”区域。 当区域的标签变为拖放到添加时， **[!UICONTROL 添加资产]**。
+1. 在资产用户界面中，选择资产，然后单击工 **[!UICONTROL 具栏中]**![添加到收藏集](assets/do-not-localize/add-to-collection.png) 。
+或者，也可以将资产拖到界 **[!UICONTROL 面上的“放入集]** ”区域。 当区域的标签变为拖放到添加时， **[!UICONTROL 添加资产]**。
 
 1. 在添 **[!UICONTROL 加到收藏集]** ，选择要将资产添加到的收藏集。
 
@@ -170,7 +165,7 @@ Smart collections are built by saving a search so you can alter their content by
 
    >[!NOTE]
    >
-   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式向可包含多个值的字段中的现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
+   >您为所选集合添加的元数据将覆盖这些集合的以前元数据。 使用“ [!UICONTROL 追加] ”模式在可包含多个值的字段中向现有元数据添加新值。 单值字段始终被覆盖。 您在“标记”字段中添 [!UICONTROL 加的] 任何标记都会附加到元数据中的现有标记列表。
 
 要自定义元数据 [!UICONTROL 属性] 页面，包括添加、修改和删除元数据属性，请使用模式编辑器。
 
