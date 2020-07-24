@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -44,20 +44,18 @@ ht-degree: 0%
 
 * Select **[!UICONTROL Submit]**
 
-![chlimage_1-234](assets/chlimage_1-234.png)
+![jsrp配置](assets/jsrp-configuration.png)
 
 ### 发布配置 {#publishing-the-configuration}
 
 虽然JSRP是默认配置，要确保在发布环境中设置相同的配置：
 
-* 作者：
+* 从全局导航： **[!UICONTROL “工具]** ”>“ **[!UICONTROL 部署]** ”>“复 **[!UICONTROL 制”]**
+* 选择 **[!UICONTROL 激活树]** > **[!UICONTROL 开始路径]**:
 
-   * 从全局导航： **[!UICONTROL “工具]** ”>“ **[!UICONTROL 部署]** ”>“复 **[!UICONTROL 制”]**
-   * 选择 **[!UICONTROL 激活树]** > **[!UICONTROL 开始路径]**:
+   * 浏览到 `/conf/global/settings/community/srpc/`
 
-      * 浏览到 `/conf/global/settings/community/srpc/`
-   * 选择激 **[!UICONTROL 活]**
-
+* 选择激 **[!UICONTROL 活]**
 
 ## 管理用户数据 {#managing-user-data}
 
