@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1669412afb670a9f55f02476e828de55b4f7a55a
+source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
 workflow-type: tm+mt
 source-wordcount: '2424'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Adobe提供两种Maven原型，可用作AEM项目的基线。 请参阅以下链
 * [AEM项目原型](https://github.com/adobe/aem-project-archetype)
 * [Maven原型，用于单页应用程序Starter Kit](https://github.com/adobe/aem-spa-project-archetype)
 
-## Experience Manager API依赖项 {#experience-manager-api-dependencies}
+## Experience ManagerAPI依赖关系 {#experience-manager-api-dependencies}
 
 ### 什么是UberJar? {#what-is-the-uberjar}
 
@@ -122,11 +122,11 @@ AEM 6.5有两种Uber Jar:
 
 ### UberJar有什么用？ {#what-can-i-do-with-the-uberjar}
 
-借助UberJar，您可以编译依赖于AEM API（以及上述项目使用的API）的项目代码。 您还可以生成OSGi服务组件运行时(SCR)和OSGi元类型信息。 有一些限制，您还可以编写和执行单元测试。
+使用UberJar，您可以编译依赖于AEM API（以及上述项目使用的API）的项目代码。 您还可以生成OSGi服务组件运行时(SCR)和OSGi元类型信息。 有一些限制，您还可以编写和执行单元测试。
 
 ### UberJar怎么办？ {#what-can-t-i-do-with-the-uberjar}
 
-由于UberJar仅 **包含** API，因此它不可执行，无法用 **于运** 行Adobe Experience Manager。 要运行AEM，您需要AEM快速入门(独立或Web 应用程序存档(WAR)表单)。
+由于UberJar仅 **包含** API，因此它不可执行，无法用于运 **行Adobe Experience Manager** 。 要运行AEM，您需要AEM快速入门(独立或Web 应用程序存档(WAR)表单)。
 
 ### 您提到了设备测试的限制。 请进一步说明。 {#you-mentioned-limitations-on-unit-tests-please-explain-further}
 
@@ -386,10 +386,6 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/myproject"/>
-    <filter root="/etc/msm/rolloutconfigs/myrolloutconfig"/>
-    <filter root="/etc/blueprints/mysite/globalsite"/>
-    <filter root="/etc/workflow/models/myproject"/>
-    <filter root="/etc/designs/myproject"/>
     <filter root="/content/myproject/sample-content"/>
 </workspaceFilter>
 ```
