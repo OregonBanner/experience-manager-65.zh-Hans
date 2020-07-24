@@ -3,7 +3,7 @@ title: 中的数字版权管理 [!DNL Adobe Experience Manager Assets]。
 description: 了解如何在中管理授权资产的资产到期状态和信息 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 6%
@@ -65,9 +65,6 @@ ht-degree: 6%
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
 1. 单击 [!DNL Experience Manager] 徽标以显示搜索面板。
-
-   ![chlimage_1-151](assets/chlimage_1-151.png)
-
 1. Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -85,7 +82,7 @@ ht-degree: 6%
 To enable the [!DNL Assets] console to display the referencing compound assets along with the expired subassets, configure an **[!UICONTROL Adobe CQ DAM Expiry Notification]** workflow in [!DNL Experience Manager] Configuration Manager.
 
 1. 打开 [!DNL Experience Manager] Configuration Manager。
-1. 选 **[!UICONTROL 择Adobe CQ DAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
+1. 选择 **[!UICONTROL Adobe CQ DAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
@@ -114,11 +111,9 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. 要显示其资产详细信息页面，请在界 [!DNL Assets] 面中选择资产，然后单击 **[!UICONTROL 属性]**。
+1. 要显示其资产详细信息页面，请在界 [!DNL Assets] 面中选择资产，然后单击 **[!UICONTROL 属性]**![视图属性](assets/do-not-localize/info-circle-icon.png)。
 
-   ![chlimage_1-158](assets/chlimage_1-158.png)
-
-1. 在高级选项卡中，从过期字段中设置资产的过 **[!UICONTROL 期日]** 。
+1. 在高级 [!UICONTROL 选项卡中] ，从过期字段中设置资产的过 **[!UICONTROL 期日]** 期。
 
    ![在“过期”字段中设置资产过期日期和时间](assets/asset-properties-advanced-tab.png)
 
