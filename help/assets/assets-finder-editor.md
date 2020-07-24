@@ -3,9 +3,9 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '2135'
+source-wordcount: '2130'
 ht-degree: 1%
 
 ---
@@ -298,8 +298,6 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 子资产组件是您可以视图和选择子资产的位置。 您可以确定主资产和子资 [产下](/help/assets/assets.md#what-are-digital-assets) 显示的名称。
 
-![screen_shot_2012-04-23at24025pm](assets/screen_shot_2012-04-23at24025pm.png)
-
 多次-单击子资产组件以打开子资产对话框，您可以在该对话框中更改主资产和任何子资产的标题。 默认值显示在相应字段的下方。
 
 ![screen_shot_2012-04-23at23907pm](assets/screen_shot_2012-04-23at23907pm.png)
@@ -347,8 +345,6 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 #### 标题 {#title}
 
 标题组件显示资产的标题和说明。
-
-![chlimage_1-163](assets/chlimage_1-391.png)
 
 默认情况下，它处于只读模式，因此用户无法编辑它。 要使其可编辑，请多次单击组件并清除“隐 **藏编辑”按钮** 。 此外，为多个资产输入标题。
 
