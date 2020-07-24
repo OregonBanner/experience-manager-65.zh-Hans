@@ -4,7 +4,7 @@ seo-title: Adobe Experience Manager6.5资产用户指南
 description: 本指南涵盖所有Experience Manager资产任务，如如何创建、管理、投放和优化数字资产。
 seo-description: 涵盖所有Experience Manager资产任务，如如何创建、管理、投放和优化数字资产。
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 12%
@@ -17,6 +17,9 @@ ht-degree: 12%
 本指南涵盖所有Experience Manager资产任务，如如何创建、管理、投放和优化数字资产。
 
 ## 主要Experience Manager文章
+
+<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
+-->
 
 * [Experience Manager入门](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Experience Manager6.5发行说明](/help/release-notes/home.md)
