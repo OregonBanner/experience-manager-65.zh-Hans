@@ -3,9 +3,9 @@ title: 审核文件夹资产和收藏集
 description: 为文件夹或集合中的资产设置审阅工作流，并与审阅者或创意合作伙伴共享它以寻求反馈。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '794'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 为文件夹或集合中的资产设置审阅工作流，并与审阅者或创意合作伙伴共享它以寻求反馈。
 
-Adobe Experience Manager资产允许您为文件夹或集合中的资产设置临时审阅工作流，并与审阅人或创意合作伙伴共享该工作流以寻求反馈。
+Adobe Experience Manager资产允许您为文件夹或集合中的资产设置一个专门的审核工作流，并与审阅人或创意合作伙伴共享该工作流以寻求反馈。
 
 您可以将审核工作流与项目关联，也可以创建独立的审核任务。
 
@@ -26,9 +26,7 @@ Adobe Experience Manager资产允许您为文件夹或集合中的资产设置�
 ## 为文件夹创建审核任务 {#creating-a-review-task-for-folders}
 
 1. 从资产用户界面中，选择要为其创建审核任务的文件夹。
-1. From the toolbar, click **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-403](assets/chlimage_1-403.png)
+1. 在工具栏中，单击 **[!UICONTROL 创建审阅任务]**![创建审阅任务](assets/do-not-localize/create-review-task.png) ，以打开 **[!UICONTROL “审阅任务]** ”页面。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （可选）在“项 **[!UICONTROL 目]** ”列表中，选择要将审核任务关联到的项目。 默认情况下，选 **[!UICONTROL 择]** “无”选项。 如果您不想将任何项目与审核任务关联，请保留此选择。
 
@@ -74,9 +72,7 @@ Adobe Experience Manager资产允许您为文件夹或集合中的资产设置�
 ## 为集合创建审核任务 {#creating-a-review-task-for-collections}
 
 1. 从收藏集页面中，选择要为其创建审阅任务的收藏集。
-1. From the toolbar, click **[!UICONTROL Create Review Task]** to open the **[!UICONTROL Review Task]** page. If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
-
-   ![chlimage_1-405](assets/chlimage_1-405.png)
+1. 在工具栏中，单击 **[!UICONTROL 创建审阅任务]**![创建审阅任务](assets/do-not-localize/create-review-task.png) ，以打开 **[!UICONTROL “审阅任务]** ”页面。 If you cannot see the option on the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （可选）在“项 **[!UICONTROL 目]** ”列表中，选择要将审核任务关联到的项目。 默认情况下，选 **[!UICONTROL 择]** “无”选项。 如果您不想将任何项目与审核任务关联，请保留此选择。
 
