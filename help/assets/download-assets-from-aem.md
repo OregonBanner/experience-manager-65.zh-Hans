@@ -3,9 +3,9 @@ title: 从下载数字资产 [!DNL Adobe Experience Manager]。
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 3602a39e03536696911b39cceb20f10dfd3a9347
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '852'
 ht-degree: 6%
 
 ---
@@ -74,6 +74,6 @@ ht-degree: 6%
 >[!MORELIKETHIS]
 >
 >* [下载受DRM保护的资源](drm.md)。
->* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资源](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。
+>* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资源](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [从支持的Adobe Creative Cloud应用程序中使用Adobe Assets Link下载资产](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)。
 
