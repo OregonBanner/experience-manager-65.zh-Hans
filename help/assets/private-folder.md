@@ -3,10 +3,10 @@ title: 在Adobe Experience Manager中创建和共享专用文件夹。
 description: 了解如何在Adobe Experience Manager资产中创建专用文件夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 14%
+source-wordcount: '494'
+ht-degree: 13%
 
 ---
 
@@ -23,11 +23,9 @@ ht-degree: 14%
 
    ![创建资产文件夹](assets/Create-folder.png)
 
-1. 在“创 **[!UICONTROL 建文件夹]** ”对话框中，输入文件夹的标题和名称（可选），然后选择“专 **[!UICONTROL 用”]**。
+1. 在“创 **[!UICONTROL 建文件夹]** ”对话框中，输入文件夹的标题和名称（可选），然后选择“ **[!UICONTROL 专用]** ”选项。
 
-   ![选中“专用”复选框，将文件夹设为专用](assets/private-folder.png)
-
-1. 单击&#x200B;**[!UICONTROL 创建]**。将在UI中创建专用文件夹。
+1. 单击 **[!UICONTROL 创建]**。 将创建专用文件夹。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
