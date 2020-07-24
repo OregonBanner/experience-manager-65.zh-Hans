@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: c798eb79dc9f8e58cef86cf90af02622c3a2ed78
+source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 4%
@@ -38,13 +38,13 @@ ht-degree: 4%
 
    要切换到经典UI，请选择全局导航并将鼠标悬停在“项目”图标的右侧。 选择显 *示的切换到经典* UI图标：
 
-   ![chlimage_1-36](assets/chlimage_1-36.png)
+   ![经典ui](assets/classic-ui.png)
 
    管理员必须启用切换到经 [典UI的功能](../../help/sites-administering/enable-classic-ui.md)。
 
 1. 在经典 [UI欢迎页面中](http://localhost:4502/welcome.html)，选择 **[!UICONTROL 网站]**。
 
-   ![chlimage_1-37](assets/chlimage_1-37.png)
+   ![经典-ui-website](assets/classic-ui-website.png)
 
    或者，也可以通过浏览至/siteadmin直接访问网站的经 [典UI。](http://localhost:4502/siteadmin)
 
@@ -57,7 +57,7 @@ ht-degree: 4%
    * 选 **[!UICONTROL 择SCF沙箱播放模板]**
    * Click **[!UICONTROL Create]**
 
-   ![chlimage_1-38](assets/chlimage_1-38.png)
+   ![经典-ui-create-page](assets/classic-ui-create-page.png)
 
 1. 在资源管理器窗格中，选择刚刚创建的页面， `/Websites/SCF Sandbox Site`然后单击“ **[!UICONTROL 新建]** ”>“ **[!UICONTROL 新建页面]**”:
 
@@ -75,11 +75,11 @@ ht-degree: 4%
 
 1. 网站现在通过此方式显示在“网站”控制台中。 请注意，资源管理器窗格中选定项目的子页面会显示在可以管理这些页面的右侧窗格中。
 
-   ![chlimage_1-39](assets/chlimage_1-39.png)
+   ![经典-ui-website-page](assets/classic-ui-website-page.png)
 
    这是使用网站工具和模板创建内容的存储库视图:
 
-   ![chlimage_1-40](assets/chlimage_1-40.png)
+   ![classic-ui-repository-视图](assets/classic-ui-repository-view.png)
 
 ## 添加设计路径 {#add-the-design-path}
 
@@ -100,7 +100,7 @@ ht-degree: 4%
 
 存储库应当如下：
 
-![chlimage_1-41](assets/chlimage_1-41.png)
+![经典-ui-repository-path](assets/classic-ui-repository-path.png)
 
 * 单击“ **[!UICONTROL 全部保存”]**
 
