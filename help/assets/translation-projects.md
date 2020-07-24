@@ -3,9 +3,9 @@ title: 创建翻译项目
 description: 了解如何在中创建翻译项目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 34b98636966264b15b16fffc9e712b925303a701
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1904'
 ht-degree: 16%
 
 ---
@@ -46,11 +46,9 @@ ht-degree: 16%
 
 1. 单击 **[!UICONTROL 底部的“创建]** ”和“翻译”。
 
-   ![chlimage_1-58](assets/chlimage_1-58.png)
-
 1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
 
-   ![chlimage_1-59](assets/chlimage_1-59.png)
+   ![选择目标语](assets/target-language.png)
 
 1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 仅创建结构]**。
 
@@ -58,11 +56,11 @@ ht-degree: 16%
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。目标语的新结构列在“语言副 **[!UICONTROL 本”下]**。
 
-   ![chlimage_1-61](assets/chlimage_1-61.png)
+   ![语言副本](assets/lang-copy2.png)
 
 1. 单击列表中的结构，然后单击资 **[!UICONTROL 产中的显示]** ，以导航到目标语言中的文件夹结构。
 
-   ![chlimage_1-62](assets/chlimage_1-62.png)
+   ![显示资产](assets/reveal-in-assets.png)
 
 ### 创建新翻译项目 {#create-a-new-translation-project}
 
@@ -74,8 +72,6 @@ ht-degree: 16%
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
 1. 单击 **[!UICONTROL 底部的“创建]** ”和“翻译”。
-
-   ![chlimage_1-64](assets/chlimage_1-64.png)
 
 1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
@@ -91,15 +87,15 @@ ht-degree: 16%
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。源文件夹中的资产将复制到您在步骤4中选择的区域设置的目标文件夹。
 
-   ![chlimage_1-68](assets/chlimage_1-68.png)
+   ![语言副本](assets/lang-copy2.png)
 
 1. 要导航到文件夹，请选择语言副本，然后单击“在资 **[!UICONTROL 产中显示”]**。
 
-   ![chlimage_1-69](assets/chlimage_1-69.png)
+   ![显示资产](assets/reveal-in-assets.png)
 
 1. 导航到项目控制台。 翻译文件夹会被复制到项目控制台。
 
-   ![chlimage_1-78](assets/chlimage_1-70.png)
+   ![chlimage_1-70](assets/chlimage_1-70.png)
 
 1. 打开文件夹以视图翻译项目。
 
@@ -128,18 +124,16 @@ ht-degree: 16%
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project}
 
-如果您使用此选项，则在运行以前的翻译工作流后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含以前翻译过的资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
+如果您使用此选项，则在运行以前的翻译工作流后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含以前已翻译资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
 
 1. 在资产UI中，导航到包含未翻译资产的源文件夹。
 1. 选择要翻译的资产，然后打开&#x200B;**[!UICONTROL “引用”窗格]**。**[!UICONTROL 语言副本]**&#x200B;部分显示当前可用的翻译副本数。
 1. Click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 此时将显示可用翻译副本列表。
 1. 单击 **[!UICONTROL 底部的“创建]** ”和“翻译”。
 
-   ![chlimage_1-75](assets/chlimage_1-75.png)
-
 1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
-   ![chlimage_1-76](assets/chlimage_1-76.png)
+   ![选择目标语](assets/target-language.png)
 
 1. 从“项 **[!UICONTROL 目]** ”列表中，选择 **[!UICONTROL 添加到现有翻译项目]** ，以在文件夹上运行翻译工作流。
 
@@ -207,11 +201,9 @@ ht-degree: 16%
 1. Open the **[!UICONTROL References]** pane, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 1. 选中&#x200B;**[!UICONTROL 语言副本]**&#x200B;前面的复选框，然后选择相应区域设置的目标文件夹。
 
-   ![chlimage_1-84](assets/chlimage_1-84.png)
+   ![选择语言副本](assets/lang-copy1.png)
 
 1. 单击 **[!UICONTROL 底部的]** “更新语言副本”。
-
-   ![chlimage_1-85](assets/chlimage_1-85.png)
 
 1. 从“项 **[!UICONTROL 目]** ”列表 **[!UICONTROL 中]**，选择“创建新翻译项目”。
 
@@ -261,11 +253,9 @@ ht-degree: 16%
 
 1. 选中&#x200B;**[!UICONTROL 语言副本]**&#x200B;前面的复选框，这将选择所有语言副本。除与您要翻译的区域设置对应的语言副本外，取消选择其他副本。
 
-   ![chlimage_1-95](assets/chlimage_1-95.png)
+   ![选择语言副本](assets/lang-copy1.png)
 
 1. 单击 **[!UICONTROL 底部的]** “更新语言副本”。
-
-   ![chlimage_1-96](assets/chlimage_1-96.png)
 
 1. 从“项 **[!UICONTROL 目]** ”列表中， **[!UICONTROL 选择“添加到现有翻译项目]**”。
 
@@ -273,7 +263,7 @@ ht-degree: 16%
 
 1. 从“现 **[!UICONTROL 有翻译项目]** ”列表中，选择要添加要翻译的资产的项目。
 
-   ![chlimage_1-98](assets/chlimage_1-98.png)
+   ![选择项目](assets/select-a-project.png)
 
 1. 单击 **[!UICONTROL 开始]**。
 1. 请参阅添加到现 [有翻译项目中的步骤](translation-projects.md#add-to-existing-translation-project) 9-14以完成其余步骤。
@@ -294,17 +284,13 @@ ht-degree: 16%
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
 1. 选中“标题”旁的复 **[!UICONTROL 选框]**。
-1. From the toolbar, click **[!UICONTROL Accept Translation]** and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
-
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+1. From the toolbar, click **[!UICONTROL Accept Translation]** ![accept translation](assets/do-not-localize/thumb-up.png) and then click **[!UICONTROL Accept]** in the dialog to overwrite the translated asset in the target folder with the translated version of the edited asset.
 
    >[!NOTE]
    >
    >要启用翻译工作流来更新目标资产，请接受资产和元数据。
 
-   单 **[!UICONTROL 击“拒绝翻译]** ”，以在目标区域设置根目录中保留资产的最初翻译版本并拒绝编辑的版本。
-
-   ![chlimage_1-103](assets/chlimage_1-103.png)
+   单 **[!UICONTROL 击拒绝]** 翻译 ![](assets/do-not-localize/thumb-down.png) ，以在目标区域设置根目录中保留资产的最初翻译版本并拒绝编辑的版本。
 
 1. 要视图已翻译的元数据，请导航 [!DNL Assets] 到控制台，然后打 [!UICONTROL 开] 每个已翻译资产的“属性”页。
 
