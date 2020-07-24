@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '11828'
+source-wordcount: '11830'
 ht-degree: 22%
 
 ---
@@ -774,7 +774,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 在视频属性页面的右上角，单击保存并 **[!UICONTROL 关闭。]**
 1. 在工具栏中，单击“ **[!UICONTROL 快速发布”。]**
 
-   另请参 [阅将出版物管理与AEM Sites结合使用](https://helpx.adobe.com/experience-manager/kt/sites/using/publication-management-feature-video-use.html)。
+   另请参 [阅将出版物管理与AEM Sites结合使用](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)。
 
    您可以选择验证已发布到YouTube渠道上的视频。
 
