@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1486'
 ht-degree: 11%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->其中许多是 [Assets和／或AEM桌面应](/help/assets/managing-assets-touch-ui.md) 用程序 [的标准操作](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。
+>其中许多是 [Assets和／或AEM桌面应](/help/assets/managing-assets-touch-ui.md) 用程序 [的标准操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。
 
 ## 打开片段编辑器 {#opening-the-fragment-editor}
 
@@ -225,7 +225,7 @@ ht-degree: 11%
 
 ## 在片段中创建和管理变量 {#creating-and-managing-variations-within-your-fragment}
 
-创建主内容后，即可创建和管理该内容 [的](/help/assets/content-fragments/content-fragments-variations.md) 变体。
+创建主控内容后，即可创建和管理该内 [容](/help/assets/content-fragments/content-fragments-variations.md) 的变体。
 
 ## 将内容与片段关联 {#associating-content-with-your-fragment}
 
