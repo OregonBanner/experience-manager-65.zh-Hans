@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 37c9cb6db35cb941a117a03aadf7a9815809c85e
+source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
 workflow-type: tm+mt
-source-wordcount: '2684'
+source-wordcount: '2673'
 ht-degree: 75%
 
 ---
@@ -188,7 +188,7 @@ ht-degree: 75%
   </tr>
   <tr>
    <td>workflow</td>
-   <td><p>启动由 Target 属性定义的工作流（仅适用于页面），并将 Live Copy 作为有效负荷。</p> <p>目标路径是模型节点的路径，例如，/etc/workflow/models/request_for_activation/jcr:content/model</p> </td>
+   <td><p>启动由 Target 属性定义的工作流（仅适用于页面），并将 Live Copy 作为有效负荷。</p> <p>目标路径是模型节点的路径。</p> </td>
    <td>target：（字符串）工作流模型的路径。<br /> </td>
   </tr>
   <tr>
@@ -416,4 +416,4 @@ Configure the service using either the [Web Console](/help/sites-deploying/confi
 * 在 Web 控制台中，要配置的属性名称是默认转出配置。
 * Using a repository node, the name of the property to configure is `liverelationshipmgr.relationsconfig.default`.
 
-将此属性值设置为要用作系统默认值的转出配置的路径。The default value is `/etc/msm/rolloutconfigs/default`, which is the **Standard Rollout Config**.
+将此属性值设置为要用作系统默认值的转出配置的路径。The default value is `/libs/msm/wcm/rolloutconfigs/default`, which is the **Standard Rollout Config**.
