@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2051'
 ht-degree: 13%
 
 ---
@@ -70,13 +70,13 @@ Adobe Experience Manager(AEM)资产通过Adobe开发人员控制台配置为品�
 
 * 如果您是Adobe合作伙伴，请使 [用Adobe合作伙伴培训项目](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，请求AEM 6.5。
 
-下载AEM后，有关设置AEM作者实例的说明，请参阅部 [署和维护](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
+下载AEM后，有关设置AEM作者实例的说明，请参阅部 [署和维护](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html#default-local-install)。
 
 ### 下载并安装AEM最新Service Pack {#servicepack}
 
 有关详细说明，请参阅
 
-* [AEM 6.5 Service Pack 发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes/sp-release-notes.html)
+* [AEM 6.5 Service Pack 发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
 
 **如果找不到** 最新的AEM包或服务包，请与客户服务部门联系。
 
@@ -387,7 +387,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 找到Brand Portal租户的复制代理。
 
-   确保所有 **复制代理的队列** “空闲”，没有发布作业处于活动状态。
+   确保所有 **复制代理的队列** “空闲”，未激活任何发布作业。
 
    ![](assets/test-integration3.png)
 
