@@ -3,10 +3,10 @@ title: 准备要翻译的资产
 description: 创建语言根文件夹以准备资产进行翻译以支持多语言资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 0%
+source-wordcount: '450'
+ht-degree: 1%
 
 ---
 
@@ -67,4 +67,4 @@ Experience Manager界面提 **[!UICONTROL 供了]** “引用”面板，其中�
 
 1. 在“引用”窗格中，单击“ **[!UICONTROL 语言副本”]**。 “语 [!UICONTROL 言副本] ”面板显示资产的语言副本。
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+   ![语言副本](assets/lang-copy2.png)
