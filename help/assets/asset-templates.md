@@ -3,9 +3,9 @@ title: 中的资产模板 [!DNL Adobe Experience Manager Assets]。
 description: 了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 1. 单击 **[!UICONTROL 预览]** ，以预览文本更改。
 
-   ![chlimage_1-112](assets/chlimage_1-317.png)
+   ![视图更改](assets/view-changes.png)
 
 1. 要交换图像，请单击资 **[!UICONTROL 产查找器]**。
 
@@ -122,11 +122,11 @@ ht-degree: 0%
 
 1. 单击 **[!UICONTROL 预览]** ，以预览图像。
 
-   ![chlimage_1-116](assets/chlimage_1-321.png)
+   ![视图更改](assets/view-changes.png)
 
 1. 要编辑多页宣传资料中的特定页面，请使用底部的页面导航器。
 
-   ![chlimage_1-117](assets/chlimage_1-322.png)
+   ![页面导航器](assets/page-navigator.png)
 
 1. 单击 **[!UICONTROL 工具栏]** 上的预览，以预览所有更改。 单击 **[!UICONTROL 完成]** ，以保存对宣传资料的编辑更改。
 
@@ -173,8 +173,6 @@ ht-degree: 0%
 
    您还可以从“全局搜索”框中搜索模板。
 
-   ![chlimage_1-123](assets/chlimage_1-328.png)
-
    您可以浏览存储库 [!DNL Experience Manager Assets] 或集合，导航到所需模板的位置，然后选择它们进行合并。
 
    ![chlimage_1-124](assets/chlimage_1-329.png)
@@ -190,7 +188,7 @@ ht-degree: 0%
 
 1. 在“配 [!UICONTROL 置模板] ”屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选 **[!UICONTROL 择Acrobat(.PDF)]**。 默认情况下，辅助材料以JPG和格式 [!DNL InDesign] 导出。 要更改多页宣传资料的显示缩略图，请单击“更 **[!UICONTROL 改缩略图]**”。
 
-   ![chlimage_1-127](assets/chlimage_1-332.png)
+   ![chlimage_1-129](assets/chlimage_1-332.png)
 
 1. 单击 **[!UICONTROL “保存]** ”，然后 **[!UICONTROL 在对话]** 框中单击“确定”以关闭对话框。 多页宣传资料会在您开始使用的文件夹中创建。
 
