@@ -3,9 +3,9 @@ title: 处理资产以完成业务流程、进行审核、实现法规遵从性�
 description: 资产处理功能，可转换格式、创建演绎版、管理资产、验证资产和运行工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '986'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,9 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 1. In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
-   ![chlimage_1-254](assets/chlimage_1-50.png)
-
 1. （可选）指定可用于引用工作流实例的工作流的标题。
 
-   ![chlimage_1-255](assets/chlimage_1-51.png)
+   ![选择工作流，提供标题并单击开始](assets/start-workflow.png)
 
 1. 单击 **[!UICONTROL 开始]** ，然后单击 **[!UICONTROL 继续]**。 工作流的每个步骤都会作为事件显示在时间轴中。
 
@@ -75,7 +73,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 1. 单击 **[!UICONTROL 底]** 部的 ![](assets/do-not-localize/chevron-up-icon.png) “操作”(Actions)向上V形。
 1. 单击 **[!UICONTROL 开始工作流]**。 In the **[!UICONTROL Start Workflow]** dialog, select a workflow model from the list.
 
-   ![chlimage_1-31](assets/chlimage_1-138.png)
+   ![开始工作流](assets/start-workflow.png)
 
 1. （可选）指定工作流的标题，该标题可用于引用工作流实例。
 1. 单击 **[!UICONTROL 开始]** ，然后在对话 **[!UICONTROL 框中单击确]** 认。 该工作流会在您选择的所有资产上运行。
