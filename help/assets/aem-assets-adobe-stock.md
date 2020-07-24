@@ -3,9 +3,9 @@ title: 在 [!DNL Adobe Stock] 中管理资产 [!DNL Adobe Experience Manager Ass
 description: 从内部搜索、提取、许 [!DNL Adobe Stock] 可和管理资产 [!DNL Adobe Experience Manager]。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1099'
 ht-degree: 13%
 
 ---
@@ -122,7 +122,7 @@ ht-degree: 13%
 
 >[!MORELIKETHIS]
 >
->* [有关将Adobe Stock资源与Experience Manager资源结合使用的视频教程](https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html)
+>* [有关将Adobe Stock资源与Experience Manager资源结合使用的视频教程](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
 >* [Adobe Stock企业计划帮助](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
 >* [Adobe Stock常见问题解答](https://helpx.adobe.com/stock/faq.html)
 
