@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8ca4e3057ec13762404a8b7fb6f6bdf5dd562281
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '5826'
+source-wordcount: '5830'
 ht-degree: 6%
 
 ---
@@ -49,11 +49,11 @@ ht-degree: 6%
 
 ### 动态搜索彩块化 {#dynamicfacets}
 
-您可以使用动态更新的搜索彩块化中预期搜索结果数量，更快地从搜索结果页面发现所需的资产。 预期的资产数量会在应用搜索筛选器之前进行更新。 Seeing the expected count against the filter helps you navigate through the search results quickly and efficiently. 有关详细信息，请参阅 [在Experience Manager中搜索资产](search-assets.md)。
+您可以使用动态更新的搜索彩块化中预期搜索结果数量，更快地从搜索结果页面发现所需的资产。 预期的资产数量会在应用搜索筛选器之前进行更新。 查看筛选器的预期计数有助于您快速、高效地浏览搜索结果。 有关详细信息，请参阅 [在Experience Manager中搜索资产](search-assets.md)。
 
 ![在搜索彩块化中查看资产的大致数量，无需筛选搜索结果。](assets/asset_search_results_in_facets_filters.png)
 
-*Figure: See the approximate number of assets without filtering search results in search facets.*
+*图： 在搜索彩块化中查看资产的大致数量，无需筛选搜索结果。*
 
 ## 了解搜索结果和行为 {#searchbehavior}
 
@@ -116,9 +116,9 @@ ht-degree: 6%
 
 1. From the [!DNL Assets] user interface, open the properties page for the asset. Click **[!UICONTROL Advanced]** and click **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
 1. 在“搜 **[!UICONTROL 索提升]** ”框中，指定要提升图像搜索的关键字，然后单击“添 **[!UICONTROL 加”]**。 可以以相同方式指定多个关键字。
-1. Click **[!UICONTROL Save &amp; Close]**. 您为此关键字提升的资产会显示在顶级搜索结果中。
+1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。您为此关键字提升的资产会显示在顶级搜索结果中。
 
-您可以通过提升目标关键字的搜索结果中某些资产的排名来利用此功能。 请观看下面的示例视频。 有关详细信息，请参 [阅Experience Manager搜索](https://helpx.adobe.com/experience-manager/kt/assets/using/search-feature-video-use.html)。
+您可以通过提升目标关键字的搜索结果中某些资产的排名来利用此功能。 请观看下面的示例视频。 有关详细信息，请参 [阅Experience Manager搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
@@ -257,7 +257,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 * [!DNL Experience Manager] 在您从搜索结果中选择资产的属性，然后取消搜索后，可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 在搜索文件夹或文件和文件夹时，无法按任何参数对搜索结果进行排序。
 * 如果按回车键时未在Omnisearch栏中键入任何内容， [!DNL Experience Manager] 则返回仅包含文件的列表，而不包含文件夹。 如果您在不使用关键字的情况下专门搜索文 [!DNL Experience Manager] 件夹，则不返回任何结果。
-* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -327,22 +327,22 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ### 视觉或相似性搜索 {#configvisualsearch}
 
-Visual search uses smart tagging and requires [!DNL Experience Manager] 6.5.2.0 or later. After configuring smart tagging functionality, follow these steps:
+视觉搜索使用智能标记， [!DNL Experience Manager] 并且需要6.5.2.0或更高版本。 配置智能标记功能后，请执行以下步骤：
 
-1. In [!DNL Experience Manager] CRXDE, in `/oak:index/lucene` node, add the following properties and values and save the changes.
+1. 在 [!DNL Experience Manager] CRXDE的节点 `/oak:index/lucene` 中，添加以下属性和值并保存更改。
 
-   * `costPerEntry` property of type `Double` with the value `10`.
-   * `costPerExecution` property of type `Double` with the value `2`.
-   * `refresh` property of type `Boolean` with the value `true`.
+   * `costPerEntry` 类型的 `Double` 属性和值 `10`。
+   * `costPerExecution` 类型的 `Double` 属性和值 `2`。
+   * `refresh` 类型的 `Boolean` 属性和值 `true`。
 
-   This configuration allows searches from the appropriate index.
+   此配置允许从相应的索引中进行搜索。
 
-1. To create Lucene index, in CRXDE, at `/oak:index/damAssetLucene/indexRules/dam:Asset/properties`, create node named `imageFeatures` of type `nt-unstructured`. In `imageFeatures` node,
+1. 要创建Lucene索引，请在CRXDE中， `/oak:index/damAssetLucene/indexRules/dam:Asset/properties`创建名为类型 `imageFeatures` 的节点 `nt-unstructured`。 在节 `imageFeatures` 点中，
 
-   * Add `name` property of type `String` with the value `jcr:content/metadata/imageFeatures/haystack0`.
-   * Add `nodeScopeIndex` property of type `Boolean` with the value of `true`.
-   * Add `propertyIndex` property of type `Boolean` with the value of `true`.
-   * Add `useInSimilarity` property of type `Boolean` with the value `true`.
+   * 添加 `name` 具有该值 `String` 的类型的属性 `jcr:content/metadata/imageFeatures/haystack0`。
+   * 添加 `nodeScopeIndex` 值为 `Boolean` 的类型属性 `true`。
+   * 添加 `propertyIndex` 值为 `Boolean` 的类型属性 `true`。
+   * 添加 `useInSimilarity` 具有该值 `Boolean` 的类型的属性 `true`。
 
    保存更改。
 
@@ -351,7 +351,7 @@ Visual search uses smart tagging and requires [!DNL Experience Manager] 6.5.2.0 
 1. 在CRXDE的节点 `/oak-index/damAssetLucene` 中，将属性 `reindex` 设置为 `true`。 保存更改。
 1. （可选）如果您具有自定义的搜索表单，则将节 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 点复制到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 保存更改。
 
-有关信息，请参 [阅了解Experience Manager中的智能标记](https://helpx.adobe.com/experience-manager/kt/assets/using/smart-tags-feature-video-understand.html)[以及如何管理智能标记](/help/assets/managing-smart-tags.md)。
+有关信息，请参 [阅了解Experience Manager中的智能标记](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html)[以及如何管理智能标记](/help/assets/managing-smart-tags.md)。
 
 ### 强制元数据 {#mandatorymetadata}
 
@@ -381,8 +381,8 @@ Visual search uses smart tagging and requires [!DNL Experience Manager] 6.5.2.0 
 | 方向 | “水平”、“垂直”或“正方形”。 |
 | 样式 | “彩色”或“黑白”。 |
 | 视屏高度 | 指定为最小值和最大值。 值仅存储在视频演绎版的元数据中。 |
-| 视频宽度 | Specified as a minimum and maximum value. Value is stored in the metadata of video renditions only. |
-| 视频格式 | DVI, Flash, MPEG4, MPEG, OGG Theora, QuickTime, Windows Media. Value is stored in the metadata of the source video and any renditions. |
+| 视频宽度 | 指定为最小值和最大值。 值仅存储在视频演绎版的元数据中。 |
+| 视频格式 | DVI、Flash、MPEG4、MPEG、OGG Theora、QuickTime、Windows Media。 值存储在源视频和任何演绎版的元数据中。 |
 | 视频编解码器 | x264。 值仅存储在视频演绎版的元数据中。 |
 | 视频比特率 | 指定为最小值和最大值。 值仅存储在视频演绎版的元数据中。 |
 | 音频编解码器 | Libvorbis、Lame MP3、AAC编码。 值仅存储在视频演绎版的元数据中。 |
