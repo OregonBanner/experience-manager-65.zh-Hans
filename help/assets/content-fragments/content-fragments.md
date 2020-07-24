@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1973'
 ht-degree: 7%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Manager(AEM)内容片段允许您设计、创建、策 [划和�
 
 * [管理内容片段](/help/assets/content-fragments/content-fragments-managing.md) -创建您的内容片段； 然后，编辑、发布和引用
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md) -启用、创建和定义模型
-* [变量——创作片段内容](/help/assets/content-fragments/content-fragments-variations.md) -创作片段内容并创建主片段的变量
+* [变量——创作片段内容](/help/assets/content-fragments/content-fragments-variations.md) -创作片段内容并创建主控的变量
 * [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) —— 为片段使用Markdown语法
 * [使用关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md) -添加关联内容
 * [元数据——片段属性](/help/assets/content-fragments/content-fragments-metadata.md) -查看和编辑片段属性
@@ -79,11 +79,12 @@ AEM内容片段可用于描述和管理结构化内容。 结构化内容在可�
 >**内容片段**&#x200B;和&#x200B;**[体验片段](/help/sites-authoring/experience-fragments.md)**是 AEM 中的两个不同功能：
 >* **内容片段**&#x200B;是可编辑的内容，主要为文本和相关图像。它们是纯内容，不带有任何设计和布局。
 >* **体验片段**&#x200B;是经过充分布局的内容；例如，网页的一个片段。
+
 >
 >
 体验片段可以包含内容片段形式的内容，反之则不行。
 >
->有关更多信息，另请 [参阅了解AEM中的内容片段和体验片段](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/content-fragments-experience-fragments-article-understand.html)。
+>有关更多信息，另请 [参阅了解AEM中的内容片段和体验片段](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)。
 
 >[!CAUTION]
 >
@@ -138,6 +139,7 @@ AEM内容片段可用于描述和管理结构化内容。 结构化内容在可�
    * 是片段的一个完整部分(请参 [阅内容片段的组成部分](#constituent-parts-of-a-content-fragment))。
    * 定义资产的位置。
    * 有关 [详细信息，请参阅](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) ：在片段编辑器中将资产插入片段。
+
    >[!NOTE]
    >
    >插入到内容片段本身中的可视资产会附加到前一段落。 将片段添加到页面时，在添加中间内容时，这些资产会与该段落相关移动。
@@ -189,6 +191,7 @@ AEM内容片段可用于描述和管理结构化内容。 结构化内容在可�
    * 只能在片段编辑器中使用富文本格式添加到片段、从片段 [中删除片段或在片段中移动](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
    * 只能添加到多行文本元素（任何片段类型）。
    * 附加到前一文本（段落）。
+
    >[!CAUTION]
    >
    >可以切换为纯文本格式（无意中）从片段中删除。
@@ -218,6 +221,7 @@ AEM内容片段可用于描述和管理结构化内容。 结构化内容在可�
 
          * 通过从控制台查看／编 **辑片段** “属性”
          * 在片段编辑 **器中** ，通过编辑元数据
+
    >[!CAUTION]
    >
    >元数据处理用户档案不适用于内容片段。
@@ -226,19 +230,19 @@ AEM内容片段可用于描述和管理结构化内容。 结构化内容在可�
 
    * 碎片的一个完整部分
 
-      * 每个内容片段都有一个主实例。
-      * 无法删除主视图。
-   * 在片段编辑器中的变量下可访问 **[主节](/help/assets/content-fragments/content-fragments-variations.md)**。
-   * “主”不是变体，而是所有变体的基础。
+      * 每个内容片段都有一个主控实例。
+      * 主控无法删除。
+   * 主控可在片段编辑器的变量下 **[访问](/help/assets/content-fragments/content-fragments-variations.md)**。
+   * 主控不是变体，而是所有变体的基础。
 
 
 * **变量**
 
    * 特定于编辑目的的片段文本的呈现； 可以与渠道相关，但不是强制性的，也可以是临时本地修改。
-   * 创建为主页的副 **本**，但之后可以根据需要进行编辑； 这些变体之间通常存在内容重叠。
+   * 作为主控的副 **本创建**，但之后可根据需要进行编辑； 这些变体之间通常存在内容重叠。
    * 可以在片段创作过程中定义，也可以在片段模板中预定义。
    * 存储在片段中，以帮助避免内容副本的散布。
-   * 如果主内 [容已更新](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) ，则可以与主内容同步变量。
+   * 如果主控内 [容已更新](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) ，则变量可以与主控同步。
    * 可以进行 [汇总](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) ，以将文本快速截断到预定义的长度。
    * 可在片段编 [辑器](/help/assets/content-fragments/content-fragments-variations.md) 的“变量”选项卡下找到。
 
