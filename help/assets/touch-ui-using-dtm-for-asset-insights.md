@@ -3,10 +3,10 @@ title: 通过DTM实现资产洞察
 description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 0%
+source-wordcount: '637'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 它免费�
 
    * 选择“ **[!UICONTROL Web属性]** ”选项卡，然后单 **[!UICONTROL 击“添加属性”]**。
 
-   * 根据需要更新字段，然后单击“创 **[!UICONTROL 建属性”]**。 请参阅 [文档](https://helpx.adobe.com/experience-manager/using/dtm.html)。
+   * 根据需要更新字段，然后单击“创 **[!UICONTROL 建属性”]**。 请参阅 [文档](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
 
    ![创建编辑Web属性](assets/Create-edit-web-property.png)
 
@@ -56,7 +56,7 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 它免费�
    >* 对于托管Experience Manager的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
 
 
-1. 访问 `https://dtm.adobe.com`. 单击 **[!UICONTROL Web属性]** 中的“概述”，然后单 **[!UICONTROL 击“添加工]** 具”或打开现有的Adobe Analytics工具。 创建工具时，可将“配置方 **[!UICONTROL 法”设置为]** “自 **[!UICONTROL 动”]**。
+1. 访问 `https://dtm.adobe.com`. 单击 **[!UICONTROL Web属性]** 中的“概述”，然后单 **[!UICONTROL 击“添加工]** 具”或打开现有AdobeAnalytics工具。 创建工具时，可将“配置方 **[!UICONTROL 法”设置为]** “自 **[!UICONTROL 动”]**。
 
    ![添加AdobeAnalytics工具](assets/Add-Adobe-Analytics-Tool.png)
 
