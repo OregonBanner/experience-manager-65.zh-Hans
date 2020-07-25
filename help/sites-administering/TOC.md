@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
 user-guide-title: AEM 6.5管理用户指南
+user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 8d000088f4fd0ff1f85f11818d4e72337da5a280
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 13%
@@ -115,10 +116,10 @@ ht-degree: 13%
    + [与 Salesforce 集成](salesforce.md)
    + [与 Adobe Target 集成](target.md)
    + [与 Adobe Analytics 集成](adobeanalytics.md)
-   + [连接到AdobeAnalytics并创建框架](adobeanalytics-connect.md)
-   + [为Adobe Adobe配置链接跟踪Analytics](adobeanalytics-link.md)
+   + [连接到AdobeAnalytics和创建框架](adobeanalytics-connect.md)
+   + [为AdobeAnalytics配置链接跟踪](adobeanalytics-link.md)
    + [使用AdobeAnalytics属性映射组件数据](adobeanalytics-mapping.md)
-   + [为Adobe Adobe配置视频跟踪Analytics](adobeanalytics-video.md)
+   + [为AdobeAnalytics配置视频跟踪](adobeanalytics-video.md)
    + [HTTP2 内容交付常见问题解答](scene7-http2faq.md)
    + [Adobe Campaign集成疑难解答](troubleshooting-campaignintegration.md)
    + [SharePoint Connector许可、版权声明和免责声明](sharepoint-connector-licenses.md)
