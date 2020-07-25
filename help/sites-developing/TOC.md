@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5开发用户指南
+user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 62be4d88f6ed3df68a77a4b61f7e113bdf03002d
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 10%
@@ -121,7 +122,7 @@ ht-degree: 10%
    + [了解AEM中的内容片段和内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 开发工具{#devtools}
    + [开发工具](dev-tools.md)
-   + [AEM Moderization Tools](modernization-tools.md)
+   + [AEM 现代化工具](modernization-tools.md)
    + [对话框编辑器](dialog-editor.md)
    + [对话框转换工具](dialog-conversion.md)
    + [使用CRXDE Lite进行开发](developing-with-crxde-lite.md)
