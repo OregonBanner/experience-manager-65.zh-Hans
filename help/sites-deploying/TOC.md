@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.5 Deploying Guide
+user-guide-title: AEM 6.5部署指南
+user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 11%
 
 ---
 
@@ -12,8 +16,8 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
 # AEM 6.5 Deploying User Guide {#deploying}
 
 + [部署用户指南](home.md)
-+ AEM Platform简介 {#introduction}
-   + [AEM Platform简介](platform.md)
++ AEM平台简介 {#introduction}
+   + [AEM平台简介](platform.md)
    + [技术要求](technical-requirements.md)
    + [AEM 6.5中的存储元素](storage-elements-in-aem-6.md)
    + [AEM with MongoDB](aem-with-mongodb.md)
@@ -24,15 +28,15 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [自定义独立安装](custom-standalone-install.md)
    + [命令行启动和停止](command-line-start-and-stop.md)
    + [在AEM 6中配置节点存储和数据存储](data-store-config.md)
-   + [修订清除](revision-cleanup.md)
+   + [修订清理](revision-cleanup.md)
    + [Oak查询和索引](queries-and-indexing.md)
    + [如何使用TarMK Cold Standby运行AEM](tarmk-cold-standby.md)
    + [AEM 6.5中的RDBMS支持](rdbms-support-in-aem.md)
-   + [通过Oak-run Jar构建索引](indexing-via-the-oak-run-jar.md)
-   + [Oak-run.jar索引使用案例](oak-run-indexing-usecases.md)
+   + [通过Oak-run Jar建立索引](indexing-via-the-oak-run-jar.md)
+   + [Oak-run.jar索引用例](oak-run-indexing-usecases.md)
    + [Oak索引疑难解答](troubleshooting-oak-indexes.md)
-   + [选择汇总的使用统计信息收集](opt-in-aggregated-usage-statistics.md)
-   + [更新版本车辆定义](update-release-vehicle-definitions.md)
+   + [选择汇总的使用情况统计信息收集](opt-in-aggregated-usage-statistics.md)
+   + [更新发放车辆定义](update-release-vehicle-definitions.md)
    + [疑难解答](troubleshooting.md)
 + 配置AEM {#configuring}
    + [基本配置概念](configuring.md)
@@ -44,7 +48,7 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [复制](replication.md)
    + [使用互相SSL进行复制](mssl-replication.md)
    + [复制疑难解答](troubleshoot-rep.md)
-   + [静态对象的到期](expiration-static-objects.md)
+   + [静态对象的过期](expiration-static-objects.md)
    + [版本清除](version-purging.md)
    + [监视和维护AEM实例](monitoring-and-maintaining.md)
    + [卸载作业](offloading.md)
@@ -52,7 +56,7 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [资源映射](resource-mapping.md)
    + [启用HTTP Over SSL](/help/sites-administering/ssl-by-default.md)
    + [一致性和遍历检查](consistency-check.md)
-   + [性能准则](performance-guidelines.md)
+   + [性能指南](performance-guidelines.md)
    + [性能优化](configuring-performance.md)
    + [资产性能指南](assets-performance-sizing.md)
    + [配置操作方法文章](ht-deploy.md)
@@ -72,16 +76,16 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [可持续升级](sustainable-upgrades.md)
    + [升级代码和自定义](upgrading-code-and-customizations.md)
    + [应用程序服务器安装的升级步骤](app-server-upgrade.md)
-   + [升级后卸载的过时捆绑包列表](obsolete-bundles.md)
+   + [列表升级后卸载的过时捆绑包](obsolete-bundles.md)
 + 存储库重组 {#restructuring}
    + [AEM 6.5中的存储库重组](repository-restructuring.md)
-   + [AEM 6.5中的常见存储库重组](all-repository-restructuring-in-aem-6-5.md)
+   + [AEM 6.5中的常用存储库重组](all-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的站点存储库重组](sites-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的资产存储库重组](assets-repository-restructuring-in-aem-6-5.md)
-   + [AEM 6.5中的Dynamic Media存储库重组](dynamicmedia-repository-restructuring-in-aem-6-5.md)
+   + [Dynamic MediaAEM 6.5中的存储库重组](dynamicmedia-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的表单存储库重组](forms-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的电子商务存储库重组](ecommerce-repository-restructuring-in-aem-6-5.md)
-   + [6.5中的AEM Communities存储库重组](communities-repository-restructuring-in-aem-6-5.md)
+   + [6.5中的AEM Communities的存储库重组](communities-repository-restructuring-in-aem-6-5.md)
 + 电子商务 {#ecommerce}
    + [电子商务概述](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
@@ -92,5 +96,5 @@ source-git-commit: 47bd0c5327f4127080ca65f4f84db4c643c34e7c
    + [性能树](performance-tree.md)
    + [性能测试的最佳实践](best-practices-for-performance-testing.md)
    + [查询和索引的最佳实践](best-practices-for-queries-and-indexing.md)
-   + [针对客户的用户界面推荐](ui-recommendations.md)
+   + [客户的用户界面建议](ui-recommendations.md)
    + [性能和可伸缩性](performance.md)
