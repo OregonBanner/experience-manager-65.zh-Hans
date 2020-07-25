@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Experience Manager6.5资产用户指南
+user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 9f1548785283ffba119d8404e328f513012a082c
+source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 42%
@@ -52,7 +53,7 @@ ht-degree: 42%
    + [HTTP2 内容交付](http2.md)
    + [传送 Dynamic Media 资产](delivering-dynamic-media-assets.md)
    + [在 Dynamic Media 中激活热链接保护](hotlink-protection.md)
-   + [3D支持](/help/assets/assets-3d.md)
+   + [3D 支持](/help/assets/assets-3d.md)
    + [图像集](image-sets.md)
    + [全景图像](panoramic-images.md)
    + [混合媒体集](mixed-media-sets.md)
@@ -91,7 +92,7 @@ ht-degree: 42%
    + [XMP 写回到演绎版](xmp-writeback.md)
    + [资产链接共享](link-sharing.md)
    + [资产报表](asset-reports.md)
-   + [增强的智能标记](enhanced-smart-tags.md)
+   + [增强型智能标记](enhanced-smart-tags.md)
    + [用户档案处理元数据、图像和视频](processing-profiles.md)
    + [串联元数据](cascading-metadata.md)
    + [创建和配置资产编辑器页面](assets-finder-editor.md)
