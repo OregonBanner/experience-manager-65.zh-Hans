@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
-source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -34,17 +34,17 @@ ht-degree: 5%
 
 当包 [含所需的客户端库](essentials-liking.md#essentials-for-client-side) ，组件的显示 `Liking` 方式即为此。
 
-![chlimage_1-93](assets/chlimage_1-93.png)
+![喜欢组件](assets/liking-component.png)
 
 ## 配置喜欢 {#configuring-liking}
 
 选择要访问的 `Liking` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![configure-new](assets/configure-new.png)
 
 在“文 **[!UICONTROL 本和标签]** ”选项卡下，指定用于记录喜欢的属性。
 
-![chlimage_1-95](assets/chlimage_1-95.png)
+![配置类型](assets/configure-liking.png)
 
 * **[!UICONTROL 正面响应标签]**
 
