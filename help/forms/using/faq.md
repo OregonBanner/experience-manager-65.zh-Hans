@@ -11,7 +11,7 @@ topic-tags: hTML5_forms
 discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 407b4d0b86c6bcbff11a085ea10bd3bf90115257
+source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
 workflow-type: tm+mt
 source-wordcount: '1970'
 ht-degree: 0%
@@ -27,11 +27,11 @@ ht-degree: 0%
 
 1. 为什么条码和签名字段不显示在我的表单中？
 
-   答案： 条码和签名字段与HTML或移动场景无关。 这些字段显示为非交互区域。 但是，AEM Forms Designer提供了一个新的签名涂抹字段，可以使用它代替签名字段。 您还可以为条码添 [加自定义](../../forms/using/custom-widgets.md) 构件并将其集成。
+   答案： 条码和签名字段与HTML或移动场景无关。 这些字段显示为非交互区域。 但是，AEM Forms设计器提供了一个新的签名涂抹字段，它可以代替签名字段。 您还可以为条码添 [加自定义](../../forms/using/custom-widgets.md) 构件并将其集成。
 
 1. XFA文本字段是否支持富文本？
 
-   答案： 不支持XFA字段（它允许AEM Forms Designer中的丰富内容），它将呈现为普通文本，而不支持从用户界面设置文本样式。 此外，具有梳状属性的XFA字段显示为普通字段，但根据梳状数字的值，仍对允许的字符数有限制。
+   答案： 不支持XFA字段(它允许AEM Forms设计器中的丰富内容)，它将呈现为普通文本，而不支持从用户界面设置文本样式。 此外，具有梳状属性的XFA字段显示为普通字段，但根据梳状数字的值，仍对允许的字符数有限制。
 
 1. 使用可重复子表单是否存在任何限制？
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
    1. 使用表单的初始化事件隐藏子表单的主实例。 例如，下面的代码在表单初始化时隐藏子表单的主要实例。 它还验证应用程序类型以确保脚本仅在客户端执行：
 
-      ```
+      ```javascript
       if ((xfa.host.appType == "HTML 5" || xfa.host.appType == "Exchange-Pro" || xfa.host.appType == "Reader")&&(_RepeatSubform.count == 1)&&(form1.Page1.Subform1.RepeatSubform.Key.rawValue == null)) {
       RepeatSubform.presence = "hidden";
       }
@@ -53,7 +53,7 @@ ht-degree: 0%
 
       下面的代码检查子表单的隐藏实例。 如果找到子表单的隐藏实例，请删除子表单的隐藏实例并插入子表单的新实例。 如果找不到子表单的隐藏实例，则只需插入子表单的新实例。
 
-      ```
+      ```javascript
       if (RepeatSubform.presence == "hidden")
       {
       RepeatSubform.instanceManager.insertInstance(0);
@@ -69,7 +69,7 @@ ht-degree: 0%
 
       代码检查子表单的计数。 如果子表单的计数达到1，则代码将隐藏子表单，而不是删除子表单。
 
-      ```
+      ```javascript
       if (RepeatSubform.instanceManager.count == 1) {
       RepeatSubform.presence = "hidden";
       } else {
@@ -79,7 +79,7 @@ ht-degree: 0%
 
    1. 打开表单的预提交事件进行编辑。 将以下脚本添加到事件，以在编辑之前删除脚本的隐藏实例。 它可防止在提交时发送隐藏子表单的数据。
 
-      ```
+      ```javascript
       if(RepeatSubform.instanceManager.count == 1 && RepeatSubform.presence == "hidden") {
       RepeatSubform.instanceManager.removeInstance(0);
       }
@@ -91,15 +91,15 @@ ht-degree: 0%
 
 1. 为什么某些文本会被截断或在HTML5中显示不正确？
 
-   答案： 如果“绘图”或“题注”文本元素没有足够的空间来显示内容，则文本在移动表单再现中会被截断。 此截断操作也可在AEM Forms Designer的设计视图中看到。 尽管此截断可在PDF中处理，但无法在HTML5表单中处理。 要避免此问题，请提供足够的空间来绘制或描述文本，以便它不会在AEM Forms Designer的设计模式中截断。
+   答案： 如果“绘图”或“题注”文本元素没有足够的空间来显示内容，则文本在移动表单再现中会被截断。 此截断也可在AEM Forms设计器的设计视图中看到。 尽管此截断可在PDF中处理，但无法在HTML5表单中处理。 要避免此问题，请提供足够的空间来绘制或描述文本，以便它不会在AEM Forms设计器的设计模式中截断。
 
 1. 我正在观察与缺失内容或重叠内容相关的布局问题。 原因何在？
 
-   答案： 如果在同一位置（如矩形）存在“绘图文本”或“绘图图像”元素以及另一个重叠元素，则“绘图文本”内容稍后按文档顺序出现(在AEM Forms Designer层次结构视图中)时将不可见。 PDF支持透明分层，但HTML/浏览器不支持透明分层。
+   答案： 如果在同一位置（如矩形）有一个“绘图文本”或“绘图图像”元素以及另一个重叠元素，则“绘图文本”内容稍后按文档顺序出现(在AEM Forms设计器层次结构视图中)时将不可见。 PDF支持透明分层，但HTML/浏览器不支持透明分层。
 
 1. 为什么HTML表单中显示的某些字体与设计表单时使用的字体不同？
 
-   答案： HTML5表单不嵌入字体（与字体嵌入在表单中的PDF表单相反）。 要使表单的HTML版本按预期呈现，请确保在XDP中指定的字体在服务器和客户端计算机上可用。 如果服务器上不提供所需的字体，则使用回退字体。 此外，如果您在表单模板中使用客户端设备上不可用的字体，则使用浏览器的默认字体来呈现文本。
+   答案： HTML5表单不嵌入字体(与字体嵌入在表单中的PDF forms相反)。 要使表单的HTML版本按预期呈现，请确保在XDP中指定的字体在服务器和客户端计算机上可用。 如果服务器上不提供所需的字体，则使用回退字体。 此外，如果您在表单模板中使用客户端设备上不可用的字体，则使用浏览器的默认字体来呈现文本。
 
 1. HTML表单中是否支持vAlign和hAlign属性？
 
@@ -113,13 +113,13 @@ ht-degree: 0%
 
    答案： 是的，HTML5表单有一些限制。 如果数字数大于图片子句中指定的计数，则数字未本地化，并以英语区域设置显示。
 
-1. 为什么HTML表单比PDF表单大？
+1. 为什么HTML表单比PDF forms大？
 
    要将XDP渲染为HTML表单，需要许多中间数据结构和对象，如表单dom、数据dom和布局dom。
 
-   对于PDF表单，Adobe Acrobat具有一个内置的XTG引擎，用于创建中间数据结构和对象。 Acrobat还负责布局和脚本。
+   对于PDF forms,Adobe Acrobat具有一个内置的XTG引擎，用于创建中间数据结构和对象。 Acrobat还负责布局和脚本。
 
-   对于HTML5表单，浏览器没有内置的XTG引擎来创建中间数据结构和来自原始XDP字节的对象。 因此，对于HTML5表单，在服务器上生成中间结构并发送到客户端。 在客户端，基于javascript的脚本和布局引擎使用这些中间结构。
+   对于HTML5表单，浏览器没有内置的XTG引擎来创建中间数据结构和来自原始XDP字节的对象。 因此，对于HTML5表单，在服务器上生成中间结构并发送到客户端。 在客户端，基于JavaScript的脚本和布局引擎使用这些中间结构。
 
    中间结构的大小取决于原始XDP的大小以及与XDP合并的数据。
 
@@ -188,7 +188,7 @@ ht-degree: 0%
 
 1. 是否存在推荐的命名规范，是否存在保留的关键字？
 
-   * 在AEM Forms Designer中，建议不要以下划线(_)开头的对象（如子表单或文本字段）的名称。 要在名称的开头使用下划线，请在下划线后面添加前缀_&lt;prefix>&lt;objectname>。
+   * 在AEM Forms设计器中，建议不要以下划线(_)开头对象（如子表单或文本字段）的名称。 要在名称的开头使用下划线，请在下划线后面添加前缀_&lt;prefix>&lt;objectname>。
    * 所有HTML5表单API都是保留关键字。 对于自定义API/函数，请使用与HTML5表单API不 [同的名称](/help/forms/using/scripting-support.md)。
 
 1. HTML5表单是否支持浮动字段？
