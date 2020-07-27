@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c187daa4-41b7-47dc-9669-d7120850cafd
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 0%
@@ -94,7 +94,7 @@ ht-degree: 0%
 1. 
    * **对于单台服务器** ，在lc_&lt;dbaname/tunkey>.xml文件中，在&lt;security-inderds>部分后添加以下内容：
 
-   ```as3
+   ```xml
    <security-realm name="SSLRealm">
    <server-identities>
    <ssl>
@@ -110,13 +110,13 @@ ht-degree: 0%
 
    将以下代码添加到以上代码之后出现的&lt;server>部分：
 
-   ```
+   ```xml
    <https-listener name="default-secure" socket-binding="https" security-realm="SSLRealm"/>
    ```
 
    * **对于服务器群集** ，在 [appserver]root \domain\configuration\host.xml所有节点上，在&lt;security-indersms>部分后添加以下内容：
 
-   ```as3
+   ```xml
    <security-realm name="SSLRealm">
    <server-identities>
    <ssl>
@@ -132,7 +132,7 @@ ht-degree: 0%
 
    将以下代码添加到以上代码之后出现的&lt;server>部分：
 
-   ```
+   ```xml
    <https-listener name="default-secure" socket-binding="https" security-realm="SSLRealm"/>
    ```
 
