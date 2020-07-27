@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '2190'
 ht-degree: 0%
@@ -146,7 +146,7 @@ SQL Server还提供两种备份和恢复工具：
 
 请参 [阅备份战略摘要](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)。
 
-```as3
+```text
 binlog_format=mixed
 log-bin=logname
 ```
