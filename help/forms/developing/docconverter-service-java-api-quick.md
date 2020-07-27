@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ea4b26c8-b9cf-42c2-b4da-2884336014a9
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -36,7 +36,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 以下Java代码示例将名为Loan.pdf *的PDF文档* ，转换为另存为名为LoanArchive.pdf的PDF文件 *的PDF/A文档*。 (请参 [阅将文档转换为PDF/A文档](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -139,7 +139,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 以下Java代码示例确定输入的PDF文档符合PDF/A标准。 传递给DocConverter服务的输入PDF文档名 *为LoanArchive.pdf*。 验证结果将写入名为ValidationResults.xml *的XML文件*。 (请参 [阅以编程方式确定PDF/A兼容](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
