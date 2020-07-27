@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '7153'
 ht-degree: 0%
@@ -360,7 +360,7 @@ processWorkflowContext()的参数是com.adobe.aemfd.watchfolder.workflow.api.Wor
 
 ECMAScript获取工作流上下文服务的参考并创建WorkflowContextProcessor接口的实现。 WorkflowContextProcessor实现接受输入文件，将文件复制到临时位置，并返回表示复制文件的文档。 根据布尔变量purgePrevious的值，当前步骤将删除上次由当前工作流实例中启动该步骤时的同一步骤生成的输出。 最后，调用wfSvc.execute方法执行WorkflowContextProcessor实现。 输出文档的内容将保存到结果文件夹中“监视文件夹”配置节点中提到的物理路径。
 
-```java
+```javascript
 log.error("Watch-folder workflow script called for step: " + graniteWorkItem.getNode().getTitle());
 var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
 // Custom WorkflowContextProcessor implementation which defines the processWorkflowContext() method purely in JS
@@ -520,7 +520,7 @@ log.info("Exiting workflow script!")
 
 ### 故障点和恢复故障点和恢复 {#failure-points-and-recoveryfailure-points-and-recovery}
 
-在每个投票事件下，“监视文件夹”锁定输入文件夹，将与包含文件模式匹配的文件移动到舞台文件夹，然后解锁输入文件夹。 需要锁定，这样两个线程就不会选取同一组文件并处理它们两次。 发生这种情况的几率会随着pollInterval和大批量而增加。 将文件移到舞台文件夹后，将解锁输入文件夹，以便其他线程可以扫描该文件夹。 此步骤有助于提供高吞吐量，因为在一个线程处理文件时，其他线程可以进行扫描。
+在每个投票事件下，“监视文件夹”锁定输入文件夹，将与包含文件模式匹配的文件移动到舞台文件夹，然后解锁输入文件夹。 需要锁定，这样两个线程就不会选取同一组文件并处理它们两次。 发生这种情况的几率会随着pollInterval和大批量而增加。 将文件移到舞台文件夹后，将解锁输入文件夹，以便其他线程可以扫描文件夹。 此步骤有助于提供高吞吐量，因为在一个线程处理文件时，其他线程可以进行扫描。
 
 将文件移到舞台文件夹后，将为每个文件创建调用请求并调用目标服务。 有时监视文件夹无法恢复舞台文件夹中的文件：
 
@@ -613,7 +613,7 @@ ECMAScript将使用PDF Generator的createPDF API将Microsoft Word(.docx)文档�
 
 1. 在PDFG文件夹中，创建一个名为pdfg-openOffice-sample.ecma的文件，并将以下代码添加到该文件：
 
-   ```java
+   ```javascript
    var wfSvc = sling.getService(Packages.com.adobe.aemfd.watchfolder.workflow.api.WorkflowContextService);
    // Custom ContentProcessor implementation which defines the processInputs() method purely in JS
    var impl = { processWorkflowContext: function (wrkfContext) {
