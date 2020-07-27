@@ -10,26 +10,29 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
 
 # 将AEM Forms工作区组件集成到Web应用程序中 {#integrating-aem-forms-workspace-components-in-web-applications}
 
-您可以在自己的Web应用程 [序中使用](/help/forms/using/description-reusable-components.md) AEM Forms工作区组件。 以下示例实现使用安装在CRX™实例上的AEM Forms Workspace开发包中的组件创建Web应用程序。 自定义以下解决方案以满足您的特定需求。 示例实现重 `UserInfo`用Web `FilterList`门户 `TaskList`内的组件和组件。
+您可以在自己的Web应用 [程序中](/help/forms/using/description-reusable-components.md) ，使用AEM Forms工作区组件。 以下示例实现使用安装在CRX™实例上的AEM Forms工作区开发包中的组件创建Web应用程序。 自定义以下解决方案以满足您的特定需求。 示例实现重 `UserInfo`新使 `FilterList`用Web `TaskList`门户内的组件和组件。
 
-1. 登录CRXDE Lite环境，网址为 `https://'[server]:[port]'/lc/crx/de/`。 确保您已安装AEM Forms Workpace开发包。
+1. 登录CRXDE Lite环境 `https://'[server]:[port]'/lc/crx/de/`。 确保已安装AEM FormsWorkpace Dev包。
 1. 创建路径 `/apps/sampleApplication/wscomponents`。
 1. 复制css、图像、js/libs、js/runtime和js/registry.js
 
-   * 起始日期: `/libs/ws`
+   * 从 `/libs/ws`
    * 到 `/apps/sampleApplication/wscomponents`.
 
-1. 在/apps/sampleApplication/wscomponents/js文件夹内创建demomain.js文件。 将代码从/libs/ws/js/main.js复制到demomain.js中。
+1. 在/apps/sampleApplication/wscomponents/js文件夹中创建demomain.js文件。 将代码从/libs/ws/js/main.js复制到demomain.js。
 1. 在demomain.js中，删除用于初始化路由器的代码并添加以下代码：
 
-   ```
+   ```javascript
    require(['initializer','runtime/util/usersession'],
        function(initializer, UserSession) {
            UserSession.initialize(
@@ -40,11 +43,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
        });
    ```
 
-1. 在/content下按名称和类型创 `sampleApplication` 建节点 `nt:unstructured`。 在此节点的属性中，添加 `sling:resourceType` 类型String和value `sampleApplication`。 在此节点的访问控制列表中，添加一个允许jcr:read权 `PERM_WORKSPACE_USER` 限的条目。 此外，在访问控制列表中，添 `/apps/sampleApplication` 加允许jcr:read权 `PERM_WORKSPACE_USER` 限的条目。
-1. 在更 `/apps/sampleApplication/wscomponents/js/registry.js` 新从到的模板 `/lc/libs/ws/` 值 `/lc/apps/sampleApplication/wscomponents/` 路径中。
-1. 在您的门户主页JSP文件( `/apps/sampleApplication/GET.jsp`)中，添加以下代码以在门户中包含所需的组件。
+1. 按名称和类型在/content下 `sampleApplication` 创建节点 `nt:unstructured`。 在此节点的属性中，添加 `sling:resourceType` 类型为“字符串”和“值” `sampleApplication`。 在此节点的访问控制列表中，添加允许jcr: `PERM_WORKSPACE_USER` read权限的条目。 此外，在访问控制列表 `/apps/sampleApplication` 中添加允许jcr: `PERM_WORKSPACE_USER` read权限的条目。
+1. 在更 `/apps/sampleApplication/wscomponents/js/registry.js` 新从到的 `/lc/libs/ws/` 模板 `/lc/apps/sampleApplication/wscomponents/` 值路径中。
+1. 在门户主页JSP文 `/apps/sampleApplication/GET.jsp`件()中，添加以下代码，将所需的组件包含在门户中。
 
-   ```as3
+   ```jsp
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
    <div class="UserInfoView gcomponent" data-name="userinfo"></div>
    <div class="filterListView gcomponent" data-name="filterlist"></div>
@@ -55,11 +58,11 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    >[!NOTE]
    >
-   >呈现时，每个组件都会添加到组件标签（具有类组件）。 确保您的主页包含这些标记。 请参阅AEM `html.jsp` Forms工作区的文件，进一步了解这些基本控件标签。
+   >呈现时，每个组件都会添加到组件标签（具有类组件）。 确保您的主页包含这些标记。 查看AEM Forms `html.jsp` 工作区文件，进一步了解这些基本控件标签。
 
 1. 要自定义组件，您可以按如下方式扩展所需组件的现有视图:
 
-   ```as3
+   ```javascript
    define([
        ‘jquery’,
        ‘underscore’,
@@ -79,9 +82,9 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
    });
    ```
 
-1. 修改门户CSS以配置门户上所需组件的布局、位置和样式。 例如，您希望将此门户的背景颜色保留为黑色，以便很好地视图userInfo组件。 通过按如下方式更改背景颜色可以 `/apps/sampleApplication/wscomponents/css/style.css` 实现此目的：
+1. 修改门户CSS，在门户上配置所需组件的布局、位置和样式。 例如，您希望将此门户的背景颜色保持为黑色，以便视图userInfo组件。 可通过如下方式更改背景颜 `/apps/sampleApplication/wscomponents/css/style.css` 色来实现：
 
-   ```as3
+   ```css
    body {
        font-family: "Myriad pro", Arial;
        background: #000;    //This was origianlly #CCC
