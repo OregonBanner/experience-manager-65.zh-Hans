@@ -1,8 +1,8 @@
 ---
 title: 配置LDAP绑定口令
 seo-title: 配置LDAP绑定口令
-description: 了解如何在将配置文件导入其他系统之前配置绑定密码字段。
-seo-description: 了解如何在将配置文件导入其他系统之前配置绑定密码字段。
+description: 了解如何在将配置文件导入另一个系统之前配置绑定密码字段。
+seo-description: 了解如何在将配置文件导入另一个系统之前配置绑定密码字段。
 uuid: 1ab1907c-8b55-4b6f-bd5b-49f22d78b8a8
 contentOwner: admin
 content-type: reference
@@ -10,20 +10,23 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 165b3950-b03f-4848-8361-ffb0a26d2658
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
 
 # 配置LDAP绑定口令{#configure-the-ldap-bind-password}
 
-为避免安全风险，导出的配置文件(config.xml)中的绑定密码字段未配置。 在将配置文件导入其他系统之前，请确保配置此密码。 此口令将覆盖存储在数据库中的现有口令。 空密码不会覆盖现有的非空密码值。
+为避免安全风险，未配置导出配置文件(config.xml)中的绑定密码字段。 在将配置文件导入其他系统之前，请确保配置此密码。 此口令将覆盖存储在数据库中的现有口令。 空密码不会覆盖现有的非空密码值。
 
 1. 在管理控制台中，单击“设置”>“用户管理”>“配置”>“导入和导出配置文件”。
 1. 要将当前配置设置导出到文件，请单击“导出”，然后将配置文件保存到其他位置。
 1. 在文件中，找到 `Domains` >域 *[名]* > `DirectoryConfigs` >节 `LDAPGroupConfig` 点。 以下是一个示例：
 
-   ```as3
+   ```xml
     <node name="LDAPGroupConfig">
         <map>
             <entry key="bindanonymously" value="false" />
@@ -38,7 +41,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 在文件中，找到 `Domains` >域 *[名]* > `DirectoryConfigs` > `LDAPGroupConfig` >节 `LDAPUserConfig` 点。 以下是一个示例：
 
-   ```as3
+   ```xml
     <node name="LDAPUserConfig">
         <map>
             <entry key="bindanonymously" value="false" />
