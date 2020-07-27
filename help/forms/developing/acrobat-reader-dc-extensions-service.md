@@ -9,7 +9,10 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -20,22 +23,22 @@ Acrobat Reader DC Extensions服务提供以下快速开始。
 
 [快速开始（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[从PDF文档中删除使用权限](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[从PDF文档删除使用权限](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->使用AEM Forms进行编程中的快速开始基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>“使用开始进行编程”中的快速AEM Forms基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速开始（SOAP模式）：使用Java API应用使用权限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java代码示例将使用权限应用于名为 *Loan.pdf的PDF文档*。 启用权限的PDF文档将保存为名为 *LoanUsageRights.pdf的PDF文件*。 以下使用权限将应用于此PDF文档: `enabledComments`、 `enabledFormFillIn`和 `enabledDigitalSignatures`。 (请参 [阅将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例将使用权限应用于名为Loan.pdf *的PDF文档*。 启用权限的PDF文档将保存为名为LoanUsageRights. *pdf的PDF文件*。 以下使用权限已应用于此PDF文档: `enabledComments`、 `enabledFormFillIn`和 `enabledDigitalSignatures`。 (请参 [阅将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。)
 
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -143,11 +146,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API从PDF文档删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API从PDF文档删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-以下Java代码示例从名为 *LoanUsageRights.pdf的启用了权限的PDF文档中删除使用权限*。 (请参 [阅从PDF文档中删除使用权](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例从名为LoanUsageRights.pdf的启用权限的PDF文档 *中删除使用权限*。 (请参 [阅从PDF文档删除使用权](/help/forms/developing/assigning-usage-rights.md)。)
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
@@ -243,11 +246,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-以下Java代码示例检索有关用于将使用权限应用到名为 *LoanUsageRights.pdf的启用权限的PDF文档的凭据的信息*。 (请参阅 [检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例检索有关用于将使用权限应用于名为LoanUsageRights.pdf的启用权限的PDF文档的凭 *据的信息*。 (请参阅 [检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。)
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the SOAP mode and contains the following JAR files 
      * in the class path: 
