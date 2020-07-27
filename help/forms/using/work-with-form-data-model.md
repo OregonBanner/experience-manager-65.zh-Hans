@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '4102'
 ht-degree: 0%
@@ -200,7 +200,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 1. 在head.jsp文件中包含以下文本：
 
-   ```
+   ```jsp
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
     request.setAttribute("paramMap",paraMap);%>
@@ -242,6 +242,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
    * 选择关联类型——一到一或一到多。
    * 选择要关联的数据模型对象。
    * 选择读取服务以从选定的模型对象读取数据。 将显示读取服务参数。 编辑以根据需要更改参数，并将其绑定到要关联的数据模型对象的属性。
+
    在以下示例中，Dependents数据模型对象的读取服务的默认参数为 `dependentid`。
 
    ![add-association-example](assets/add-association-example.png)
@@ -279,6 +280,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
    * **数据模型对象**: 指定读写服务和编辑参数。
    * **属性**: 指定属性的类型、子类型和格式。 您还可以指定选定属性是否是数据模型对象的主键。
    * **服务**: 指定服务的输入模型对象、输出类型和参数。 对于Get服务，您可以指定它是否应返回阵列。
+
    ![edit-properties-service](assets/edit-properties-service.png)
 
    获取服务的“编辑属性”对话框
@@ -508,24 +510,24 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
 
 在此示例中，根据Swagger文件中定义的最大、最小和必需约束验证输入数据。 仅当订单ID存在且其值介于1和10之间时，输入数据才符合验证标准。
 
-```xml
-parameters: [
-{
-name: "orderId",
-in: "path",
-description: "ID of pet that needs to be fetched",
-required: true,
-type: "integer",
-maximum: 10,
-minimum: 1,
-format: "int64"
-}
-]
+```json
+   parameters: [
+   {
+   name: "orderId",
+   in: "path",
+   description: "ID of pet that needs to be fetched",
+   required: true,
+   type: "integer",
+   maximum: 10,
+   minimum: 1,
+   format: "int64"
+   }
+   ]
 ```
 
 如果输入数据不符合验证条件，则显示异常。 如果日志级别设置为 **Debug**，则错误将记录 **到error.log** 文件。 例如，
 
-```java
+```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}
 ```
 
