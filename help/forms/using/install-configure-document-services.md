@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '4295'
 ht-degree: 1%
@@ -414,14 +414,14 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该软件包包含AEM 
 
 1. 将以下属性添加到sling.properties文件：
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
 1. （仅限AIX）将以下属性添加到sling.properties文件：
 
-   ```
+   ```shell
    sling.bootdelegation.xerces=org.apache.xerces.*
    ```
 
