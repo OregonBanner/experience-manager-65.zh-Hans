@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 2%
@@ -133,7 +133,7 @@ AEM Forms有一些必选和可选配置。 必需配置包括配置BouncyCastle�
 
 1. 将以下属性添加到sling.properties文件：
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
@@ -166,7 +166,7 @@ Dispatcher是AEM的缓存和负载平衡工具。 AEMDispatcher还有助于保�
 
 1. 配置推荐人筛选器服务：
 
-   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL为https://&#39;server&#39;:[port_number]/system/console/configMgr。 在“配 **置** ”菜单中，选 **择“Apache Sling推荐人过滤器** ”选项。 在“允许主机”字段中，输入调度程序的主机名以允许它作为推荐人，然后单击“保 **存”**。 条目的格式为 `https://'[server]:[port]'`。
+   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL为https://&#39;server&#39;:[port_number]/system/console/configMgr。 在“配 **置** ”菜单中，选 **择“Apache Sling推荐人过滤器** ”选项。 在“允许主机”字段中，输入调度程序的主机名以允许它作为推荐人，然后单击“保 **存”**。 The format of the entry is `https://'[server]:[port]'`.
 
 #### 配置缓存 {#configure-cache}
 
