@@ -1,8 +1,8 @@
 ---
 title: Barcoded Forms Service
-seo-title: 使用AEM Forms Barcoded Forms Service
-description: '使用AEM Forms Barcoded Forms服务从条形码的电子图像中提取数据。 '
-seo-description: '使用AEM Forms Barcoded Forms服务从条形码的电子图像中提取数据。 '
+seo-title: 使用AEM Forms条码表单服务
+description: '使用AEM Forms条码表单服务从条码的电子图像中提取数据。 '
+seo-description: '使用AEM Forms条码表单服务从条码的电子图像中提取数据。 '
 uuid: b044a788-0e4a-4718-b71a-bd846933d51b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,10 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1042'
+ht-degree: 0%
 
 ---
 
@@ -19,15 +22,15 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 ## 概述 {#overview}
 
-Barcoded Forms服务从条形码的电子图像中提取数据。 该服务接受包含一个或多个条形码的TIFF和PDF文件作为输入并提取条形码数据。 条形码数据可以采用各种方式格式化，包括XML、分隔字符串或使用JavaScript创建的任何自定义格式。
+Barcoded Forms服务从条形码的电子图像中提取数据。 该服务接受包含一个或多个条码的TIFF和PDF文件作为输入并提取条形码数据。 条形码数据可以采用各种方式格式化，包括XML、分隔字符串或使用JavaScript创建的任何自定义格式。
 
-Barcoded Forms服务支持作为扫 **描的TIFF或PDF文档提供的以下二维(2D)符号** :
+Barcoded Forms服务支持以下 **作为扫描的TIFF或PDF文档** 提供的二维(2D)符号：
 
 * PDF417
 * 数据矩阵
 * QR码
 
-该服务还支持作为扫 **描的TIFF或PDF文档提供的** 以下一维符号：
+该服务还支持作为扫 **描的TIFF或PDF文档** 提供的以下一维符号：
 
 * 科达巴尔
 * Code128
@@ -35,16 +38,16 @@ Barcoded Forms服务支持作为扫 **描的TIFF或PDF文档提供的以下二�
 * EAN13
 * EAN8
 
-您可以使用Barcoded Forms服务来完成以下任务:
+您可以使用Barcoded Forms服务完成以下任务:
 
-* 从条形码图像（TIFF或PDF）中提取条形码数据。 数据以分隔文本的形式存储。
-* 将分隔文本数据转换为XML（XDP或XFDF）。 XML数据比分隔文本更易于解析。 此外，XDP或XFDF格式的数据可用作AEM Forms中其他服务的输入。
+* 从条形码图像（TIFF或PDF）提取条形码数据。 数据以分隔文本的形式存储。
+* 将分隔文本数据转换为XML（XDP或XFDF）。 XML数据比分隔文本更易于分析。 此外，XDP或XFDF格式的数据可用作AEM Forms中其他服务的输入。
 
-对于图像中的每个条形码，Barcoded Forms服务将定位条形码、解码并提取数据。 服务在XML文档的内容元素中返回条形码数据（在需要时使用实体编码）。 例如，表单的以下扫描TIFF图像包含两个条码：
+对于图像中的每个条形码，Barcoded Forms服务会定位条形码、解码并提取数据。 服务在XML文档的内容元素中返回条形码数据（在需要时使用实体编码）。 例如，表单的以下扫描TIFF图像包含两个条码：
 
 ![示例](assets/example.png)
 
-Barcoded Forms服务在解码条形码后返回以下XML文档:
+在解码条码后，Barcoded Forms服务返回以下XML文档:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>  
@@ -93,58 +96,58 @@ Barcoded Forms服务在解码条形码后返回以下XML文档:
 
 ### 使用条形码表单的工作流 {#workflows-that-use-barcoded-forms}
 
-表单作者使用Designer创建交互式条码表单。 (请参阅设 [计人员帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。)当用户使用Adobe Reader或Acrobat填充条形码表单时，条形码会自动更新以对表单数据进行编码。
+表单作者使用设计器创建交互式条码表单。 (请参阅 [设计人员帮](https://www.adobe.com/go/learn_aemforms_designer_63)助。) 当用户使用Adobe Reader或Acrobat填充条形码表单时，条形码会自动更新以对表单数据进行编码。
 
-Barcoded Forms服务可用于将纸质表单上的数据转换为电子格式。 例如，在填写和打印条形码表单时，可以扫描打印的副本并将其用作Barcoded Forms服务的输入。
+Barcoded Forms服务可用于将纸质上的数据转换为电子格式。 例如，当填写和打印条形码表单时，可以扫描打印的副本并将其用作Barcoded Forms服务的输入。
 
-监视的文件夹端点通常用于开始使用Barcoded Forms服务的应用程序。 例如，文档扫描仪可以将条形码表单的TIFF或PDF图像保存到监视的文件夹中。 监视的文件夹端点将图像传递给服务进行解码。
+监视的文件夹端点通常用于开始使用Barcoded Forms服务的应用程序。 例如，文档扫描仪可将条形码表单的TIFF或PDF图像保存到监视的文件夹中。 监视的文件夹端点将图像传递给服务进行解码。
 
-### 建议的编码和解码格式 {#recommended-encoding-and-decoding-formats}
+### 推荐的编码和解码格式 {#recommended-encoding-and-decoding-formats}
 
-在条形码中对数据进行编码时，鼓励作者使用简单的分隔格式（如制表符分隔）。 另外，请避免使用回车符作为字段分隔符。 设计人员提供一系列分隔的编码选择，这些编码自动生成JavaScript脚本以对条码进行编码。 解码数据具有第一行上的字段名和第二行上的字段值，每个字段之间有制表符。
+在条形码中对数据进行编码时，鼓励作者使用简单的分隔格式（如制表符分隔格式）。 另外，请避免使用回车作为字段分隔符。 设计人员提供一系列分隔的编码，这些编码自动生成JavaScript脚本以对条码进行编码。 解码数据具有第一行上的字段名称和第二行上的字段值，并且每个字段之间有制表符。
 
-在解码条形码时，指定用于分隔字段的字符。 为解码指定的字符必须与用于编码条形码的字符相同。 例如，在使用建议的制表符分隔格式时，“提取到XML”操作必须使用默认值“制表符”作为字段分隔符。
+在解码条码时，指定用于分隔字段的字符。 为解码指定的字符必须与用于编码条形码的字符相同。 例如，在使用建议的制表符分隔格式时，“提取到XML”操作必须使用“制表符”的默认值作为字段分隔符。
 
 ### 用户指定的字符集 {#user-specified-character-sets}
 
 当表单作者使用设计器将条形码对象添加到其表单时，他们可以指定字符编码。 公认的编码为UTF-8、ISO-8859-1、ISO-8859-2、ISO-8859-7、Shift-JIS、KSC-5601、Big-Five、GB-2312、UTF-16。 默认情况下，所有数据都以UTF-8的条形码进行编码。
 
-在解码条形码时，您可以指定要使用的字符集编码。 要确保正确解码所有数据，请指定表单作者在设计表单时指定的相同字符集。
+在解码条形码时，可以指定要使用的字符集编码。 要确保正确解码所有数据，请指定表单作者在设计表单时指定的相同字符集。
 
 ### API限制 {#api-limitations}
 
 使用BCF API时，请考虑以下限制：
 
 * 不支持动态表单。
-* 除非拼合了交互式表单，否则无法正确解码它们。
-* 1-D条码只能包含字母数字值（如果支持）。 不解码包含特殊符号的1-D条码。
+* 除非拼合交互式表单，否则无法正确解码它们。
+* 1-D条形码只能包含字母数字值（如果支持）。 包含特殊符号的1-D条码不解码。
 
 ### 其他限制 {#other-limitations}
 
 此外，在使用Barcoded Forms服务时，请考虑以下限制：
 
-* 该服务完全支持AcroForms和包含使用Adobe Reader或Acrobat保存的2D条码的静态表单。 但是，对于1D条码，可拼合表单或将其作为扫描的PDF或TIFF文档提供。
+* 该服务完全支持包含使用Adobe Reader或Acrobat保存的2D条码的AcroForms和静态表单。 但是，对于1D条形码，可拼合表单或以扫描的PDF或TIFF文档提供表单。
 * 不完全支持动态XFA表单。 要对动态表单中的1D和2D条码进行正确解码，请拼合表单或将其作为扫描的PDF或TIFF文档提供。
 
-此外，如果遵守上述限制，该服务可以解码使用支持的符号的任何条形码。 有关如何创建交互式条形码表单的详细信息，请参阅设计 [人员帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。
+此外，如果遵守上述限制，该服务可以解码使用受支持的符号的任何条形码。 有关如何创建交互式条码表单的更多信息，请参阅设计 [人员帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
-## 配置服务的属性 {#configureproperties}
+## 配置服务的属性   {#configureproperties}
 
-您可以在AEM控制 **台中使用AEMFD Barcoded Forms** Service配置此服务的属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`。
+您可以在AEM控 **制台中使用AEMFD** Barcoded Forms服务配置此服务的属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服务 {#using}
 
 Barcoded Forms Service提供以下两个API:
 
-* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:解码输入PDF文档或tiff图像中可用的所有条码。 它返回另一个XML文档，该文档包含从输入或图像中可用的所有条形码检索到的数据。
+* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: 解码输入PDF文档或tiff图像中可用的所有条码。 它返回另一个XML文档，该文档包含从输入或图像中所有可用的条形码检索到的数据。
 
-* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**:将使用解码API解码的数据转换为XML数据。 此XML数据可以与XFA表单合并。 它返回一列表XML文档，每个条形码对应一个。
+* **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: 将使用解码API解码的数据转换为XML数据。 此XML数据可以与XFA表单合并。 它返回一列表XML文档，每个条形码对应一个。
 
 ### 将BCF服务与JSP或Servlet一起使用 {#using-bcf-service-with-a-jsp-or-servlets}
 
 以下范例代码解码文档中的条形码并将输出XML保存到磁盘。
 
-```java
+```jsp
 <%@ page import="java.util.List,
                 com.adobe.fd.bcf.api.BarcodedFormsService,
                 com.adobe.fd.bcf.api.CharSet,
@@ -231,9 +234,9 @@ Barcoded Forms Service提供以下两个API:
 
 ### 将BCF服务与AEM工作流一起使用 {#using-the-bcf-service-with-aem-workflows}
 
-从工作流中运行Barcoded Forms服务与从JSP/Servlet运行服务类似。 唯一的区别是从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象中自动检索ResourceResolver对象的实例。 当从工作流调用代码时，此自动机制不起作用。
+从工作流中运行Barcoded Forms服务与从JSP/Servlet运行服务类似。 唯一的区别在于从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象自动检索ResourceResolver对象的实例。 从工作流调用代码时，此自动机制不工作。
 
-对于工作流，将ResourceResolver对象的一个实例显式传递给文档类构造函数。 然后，文档对象使用提供的ResourceResolver对象从存储库读取内容。
+对于工作流，将ResourceResolver对象的实例显式传递给文档类构造函数。 然后，文档对象使用提供的ResourceResolver对象从存储库读取内容。
 
 以下范例工作流程解码文档中的条形码并将结果保存到磁盘。 代码以ECMAScript编写，文档作为工作流有效负荷传递：
 
