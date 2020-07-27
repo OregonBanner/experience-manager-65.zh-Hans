@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -46,7 +46,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 下面的代码示例将名为Wendy Blue的用户添加到AEM Forms。 (请参阅 [添加用户](/help/forms/developing/users.md#adding-users)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -164,7 +164,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 以下代码示例从AEM Forms中删除名为Wendy Blue的用户。 (请参阅 [删除用户](/help/forms/developing/users.md#deleting-users)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -260,7 +260,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 下面的代码示例查找本地用户和该用户所属的本地组。 (See [Managing Users and Groups](/help/forms/developing/users.md#managing-users-and-groups).)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -384,7 +384,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 下面的代码示例将服务用户角色分配给主体，打印主体具有的角色，然后从主体中删除该角色。 为此快速开始调用了两个服务： 目录管理器服务和授权管理器服务。(请参阅 [管理角色和权限](/help/forms/developing/users.md#managing-roles-and-permissions)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -527,7 +527,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 以下Java代码示例使用用户管理API同步用户。 (请参 [阅以编程方式同步用户](/help/forms/developing/users.md#programmatically-synchronizing-users)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -636,7 +636,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 下面的代码示例将名为Wendy Blue的用户添加到AEM Forms。 (请参阅 [添加用户](/help/forms/developing/users.md#adding-users)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -754,7 +754,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 下面的代码示例为AEM Forms创建一个名为AdobeGroup的组。 (请参 [阅创建组](/help/forms/developing/users.md#creating-groups)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -906,7 +906,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 以下Java代码模型通过使用用户管理API管理首选项节点。 (请参 [阅以编程方式管理首选项节点](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -1009,7 +1009,7 @@ public class ManagePreferences {
 
 以下Java代码模型通过使用用户管理API管理首选项节点(请参 [阅以编程方式管理首选项节点](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
