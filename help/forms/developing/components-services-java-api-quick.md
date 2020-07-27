@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '450'
+ht-degree: 0%
 
 ---
 
@@ -20,38 +23,38 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 Java API快速开始(SOAP)可用于组件和服务。
 
 
-[快速开始（SOAP模式）:使用Java API部署组件](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API部署组件](components-services-java-api-quick.md#quick-start-soap-mode-deploying-a-component-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API设置服务的执行上下文](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API设置服务的执行上下文](components-services-java-api-quick.md#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API禁用服务安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API禁用服务安全性](components-services-java-api-quick.md#quick-start-soap-mode-disabling-service-security-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API启动服务](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API启动服务](components-services-java-api-quick.md#quick-start-soap-mode-starting-a-service-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API修改服务配置值](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API修改服务配置值](components-services-java-api-quick.md#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API删除组件](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API删除组件](components-services-java-api-quick.md#quick-start-soap-mode-removing-components-using-the-java-api)
 
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->不能使用Web服务以编程方式操作组件和服务。
+>不能通过使用Web服务以编程方式操作组件和服务。
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于JBoss和Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的快速开始基于JBoss和Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请用适用操作系统支持的路径替换特定于窗口的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 >[!NOTE]
 >
->如果您有自定义组件，并且使用SOAP或EJB协议在同一本地服务器上调用DSC，并且这些调用在升级后停止工作，则使用VM([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))调用策略。 将VM内DSC调用方法与默认的ServiceClientFactory一起使用，而不使用SOAP或EJB协议构建ServiceClientFactory。
+>如果您有自定义组件，并且使用SOAP或EJB协议在同一本地服务器上调用DSC，并且这些调用在升级后停止工作，则使用[VM(DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))调用策略。 将VM内DSC调用方法与默认的ServiceClientFactory一起使用，而不使用SOAP或EJB协议构建ServiceClientFactory。
 
-## 快速开始（SOAP模式）:使用Java API部署组件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API部署组件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-以下Java示例部署基于名为 *adobe-emailSample-dsc.jar的JAR文件的组件*。
+以下Java示例部署基于名为adobe-emailSample-dsc.jar *的JAR文件的组件*。
 
-```as3
+```java
  /* 
         * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -149,11 +152,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API设置服务的执行上下文 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API设置服务的执行上下文 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-以下Java代码示例将“运行为调用者”执行上下文设置为名为 *EncryptDocument的示例服务*。
+以下Java代码示例将“运行为调用者”执行上下文设置为名为EncryptDocument的示 *例服务*。
 
-```as3
+```java
  /* 
         * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -241,11 +244,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API禁用服务安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API禁用服务安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
 以下Java代码示例禁用示例EncryptDocument服务以及从此服务中调用的服务（设置值和加密服务）的安全性。
 
-```as3
+```java
  /* 
         * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -354,11 +357,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API启动服务 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API启动服务 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-以下Java代码示例开始了名为 *SendEmailService的服务*。
+以下Java代码示例开始名为SendEmailService *的服务*。
 
-```as3
+```java
  package com.adobe.sample.servicemanager; 
   
  /** 
@@ -412,11 +415,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API修改服务配置值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API修改服务配置值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
 以下Java示例修改属于SendEmail服务的配置值。
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the following JAR files 
         * 1. adobe-taskmanager-client.jar 
@@ -524,11 +527,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API删除组件 {#quick-start-soap-mode-removing-components-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API删除组件 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
 以下Java代码示例使用Java API删除组件。
 
-```as3
+```java
  /* 
      * This Java Quick Start uses the following JAR files 
      * 1. adobe-taskmanager-client.jar 
