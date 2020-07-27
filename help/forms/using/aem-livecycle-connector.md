@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 0%
@@ -33,7 +33,7 @@ AEM LiveCycle Connector是AEM Forms附加 [包的一部分](/help/forms/using/in
 
 * **服务器URL** —— 指定LiveCycle服务器的URL。 如果希望LiveCycle和AEM通过https通信，请使用以下JVM开始AEM
 
-   ```
+   ```java
    argument
     -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
    ```
@@ -118,7 +118,7 @@ AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务（可�
 
    以上代码段开始GeneratePdfServiceClient的createPDF API，将文档转换为PDF。 您可以使用以下代码在JSP中执行类似调用。 主要区别在于以下代码使用Sling ScriptHelper访问GeneratePdfServiceClient。
 
-   ```java
+   ```jsp
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
    <%@ page import="com.adobe.livecycle.generatepdf.client.CreatePDFResult" %>
    <%@ page import="com.adobe.idp.Document" %>
@@ -156,7 +156,7 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 LiveCycle中几乎每个文档服务都需要身份验证。 您可以使用以下任意选项来开始这些服务，而无需在代码中提供显式凭据：
 
-### Allowlist配置 {#allowlist-configuration}
+### 允许列表配置 {#allowlist-configuration}
 
 LiveCycle Client SDK配置包含有关服务名称的设置。 此配置是服务的列表，调用逻辑会立即使用管理员凭据。 例如，如果将DirectoryManager服务（用户管理API的一部分）添加到此列表，则任何客户端代码都可以直接使用该服务，调用层会自动将配置的凭据作为发送到LiveCycle服务器的请求的一部分传递
 
