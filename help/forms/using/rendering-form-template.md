@@ -1,15 +1,18 @@
 ---
 title: HTML5表单的渲染表单模板
 seo-title: HTML5表单的渲染表单模板
-description: HTML5表单用户档案与用户档案渲染相关联。 用户档案呈现是JSP页，负责通过调用Forms OSGi服务生成表单的HTML表示形式。
-seo-description: HTML5表单用户档案与用户档案渲染相关联。 用户档案呈现是JSP页，负责通过调用Forms OSGi服务生成表单的HTML表示形式。
+description: HTML5表单用户档案与用户档案渲染相关联。 用户档案呈现是JSP页，负责通过调用Forms OSGi服务生成表单的HTML表示。
+seo-description: HTML5表单用户档案与用户档案渲染相关联。 用户档案呈现是JSP页，负责通过调用Forms OSGi服务生成表单的HTML表示。
 uuid: 34daed78-0611-4355-9698-0d7f758e6b61
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '568'
+ht-degree: 0%
 
 ---
 
@@ -18,19 +21,19 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## 渲染端点 {#render-endpoint}
 
-HTML5表单的概念是用户档案 **** ，这些表单作为REST端点公开，以支持表单模板的移动渲染。 这些用户档案具有关联 **的用户档案呈示器**。 它们是JSP页，负责通过调用Forms OSGi服务生成表单的HTML表示。 用户档案节点的JCR路径决定渲染端点的URL。 指向“default”用户档案的表单的默认渲染终点如下：
+HTML5表单具有用户档案的概 **念** ，这些作为REST端点公开，以支持表单模板的移动渲染。 这些用户档案具有关联 **的用户档案呈现器**。 它们是JSP页，负责通过调用Forms OSGi服务生成表单的HTML表示。 用户档案节点的JCR路径决定渲染结束点的URL。 指向“默认”用户档案的表单的默认呈现终点如下：
 
-https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp *&amp;template=&lt;xdpAgrop的名称***>的文件夹路径
+https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;包含xdp *&amp;template=&lt;xdp的*&#x200B;文件夹的路径&#x200B;**>
 
 例如，`http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-对于自定义用户档案，端点会相应地更改。 例如，名称为hrforms的自定义用户档案的终点是：
+对于自定义用户档案，端点会相应地更改。 例如，名为hrforms的自定义用户档案的结束点是：
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-如果您的模板位于名为FormSubmission的应用程序的AEM存储库中，则URI为：
+如果您的模板驻留在名为FormSubmission的应用程序的AEM存储库中，则URI为：
 
-```
+```http
 http://localhost:4502/content/xfaforms/profiles/default.html?
  contentRoot=crx:///content/dam/formsanddocuments/FormSubmission/1.0
  &template=sampleForm.xdp
@@ -52,7 +55,7 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
   </tr>
   <tr>
    <td>contentRoot<br /> </td>
-   <td>此参数指定模板和关联资源所在的路径。 此路径可以是服务器文件系统路径或存储库路径或http或ftp路径。<br /> </td>
+   <td>此参数指定模板和相关资源所在的路径。 此路径可以是服务器文件系统路径或存储库路径、http或ftp路径。<br /> </td>
   </tr>
   <tr>
    <td>submitUrl<br /> </td>
@@ -65,19 +68,19 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 
 | 参数 | 描述 |
 |---|---|
-| dataRef | 此参数指 **定与模板合并** 的数据文件的绝对路径。 此参数可以是以xml格式返回数据的其余服务的URL。 |
+| dataRef | 此参数指 **定与** 模板合并的数据文件的绝对路径。 此参数可以是以xml格式返回数据的其余服务的URL。 |
 | 数据 | 此参数指定与模板合并的UTF-8编码数据字节。 如果指定此参数，HTML5表单将忽略dataRef参数。 |
 
 ### 传递渲染参数 {#passing-the-render-parameter}
 
-HTML5表单支持三种传递渲染参数的方法。 您可以通过URL、键值对和用户档案节点传递参数。 在render参数中，键值对具有最高优先级，后跟用户档案节点。 URL请求参数的优先级最低。
+HTML5表单支持三种传递渲染参数的方法。 您可以通过URL、键值对和用户档案节点传递参数。 在渲染参数中，键值对具有最高优先级，后跟用户档案节点。 URL请求参数的优先级最低。
 
-* **URL请求参数**:您可以在URL中指定渲染参数。 在URL请求参数中，最终用户可看到这些参数。 例如，以下提交URL在URL中包含模板参数： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
+* **URL请求参数**: 您可以在URL中指定渲染参数。 在URL请求参数中，最终用户可以看到这些参数。 例如，以下提交URL在URL中包含模板参数： `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
-* **SetAttribute请求参数**:可以将渲染参数指定为键值对。 在SetAttribute请求参数中，参数对最终用户不可见。 您可以将来自任何其他JSP的请求转发到HTML5表单用户档案渲染器JSP，并使用 *setAttribute* on request对象传递所有渲染参数。 此方法具有最高优先级。
+* **SetAttribute请求参数**: 可以将渲染参数指定为键值对。 在SetAttribute请求参数中，参数对最终用户不可见。 您可以将来自任何其他JSP的请求转发到HTML5表单用户档案渲染器JSP，并在请 *求对象上使用* setAttribute，以传递所有渲染参数。 此方法的优先级最高。
 
-* **用户档案节点请求参数：** 可以将渲染参数指定为用户档案节点的节点属性。 在用户档案节点请求参数中，参数对最终用户不可见。 用户档案节点是发送请求的节点。 要将参数指定为节点属性，请使用CRXDE lite。
+* **用户档案节点请求参数：** 您可以将渲染参数指定为用户档案节点的节点属性。 在用户档案节点请求参数中，参数对最终用户不可见。 用户档案节点是发送请求的节点。 要将参数指定为节点属性，请使用CRXDE lite。
 
 ### 提交参数 {#submit-parameters}
 
-HTML5表单提交数据；在AEM服务器上执行服务器端脚本和Web服务。 有关用于在AEM服务器上执行服务器端脚本和Web服务的参数的详细信息，请参阅 [HTML5表单服务代理](/help/forms/using/service-proxy.md)。
+HTML5表单提交数据； 在AEM服务器上执行服务器端脚本和web服务。 有关在AEM服务器上执行服务器端脚本和Web服务的参数的详细信息，请参 [阅HTML5表单服务代理](/help/forms/using/service-proxy.md)。
