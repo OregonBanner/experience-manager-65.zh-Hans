@@ -10,7 +10,7 @@ topic-tags: correspondence-management
 discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1910'
 ht-degree: 1%
@@ -226,7 +226,7 @@ ACMExtensionsMessages.properties文件包含“创建对应”用户界面中各
    1. 多次-单击crcustomization.js文件以在CRX中打开它。
    1. 在文件中，粘贴以下代码并单击“全 **部保存**:
 
-      ```
+      ```javascript
       /* for adding and handling custom actions in Extensible Toolbar.
         * One instance of handler will be created for each action.
         * CM.domain.CCRCustomActionHandler is actionHandler class.
@@ -380,7 +380,7 @@ LCA进程在LiveCycle服务器上运行，需要服务器地址和登录凭据�
 
 1. 单击&#x200B;**导入**。
 
-#### 将ServiceName添加到Allowlist服务列表 {#adding-servicename-to-the-allowlist-service-list}
+#### 将ServiceName添加允许列表到服务列表 {#adding-servicename-to-the-allowlist-service-list}
 
 在AEM服务器中提到要访问AEM服务器的LiveCycle服务。
 
