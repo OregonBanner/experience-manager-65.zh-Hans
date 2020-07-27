@@ -1,28 +1,31 @@
 ---
 title: 自定义错误对话框
 seo-title: 自定义错误对话框
-description: 如何自定义LiveCycle AEM Forms工作区的错误对话框以添加不同的错误描述。
-seo-description: 如何自定义LiveCycle AEM Forms工作区的错误对话框以添加不同的错误描述。
+description: 如何自定义LiveCycleAEM Forms工作区的错误对话框，以添加不同的错误描述。
+seo-description: 如何自定义LiveCycleAEM Forms工作区的错误对话框，以添加不同的错误描述。
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 4%
 
 ---
 
 
 # 自定义错误对话框 {#customizing-error-dialogs}
 
-AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作区自定义的常规步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行以下步骤以自定义错误对话框。
+AEM Forms工作区允许您自定义错误对话框。 对AEM Forms工 [作区进行自定义](/help/forms/using/generic-steps-html-workspace-customization.md) ，请执行常规步骤，然后执行以下步骤以自定义错误对话框。
 
 ## 自定义文本 {#customizing-text}
 
-1. 在文 `/apps/ws/locales/en-US/translation.json` 件中，将值更改 `wserror` 为自定义值。 例如：
+1. 在文 `/apps/ws/locales/en-US/translation.json` 件中，更改自定 `wserror` 义值的值。 例如：
 
-   ```
+   ```json
    "wserror" : {
     "message" : "Message:",
     "ComponentUI" : "Component UI:",
@@ -30,15 +33,18 @@ AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作�
     "ok" : "Ok",
     "ErrorCode" : "Error Code:"
     }
-   
-   To
-    "wserror" : {
-    "message" : "Error Message:",
-    "ComponentUI" : "UI Component:",
-    "error" : "Something went wrong!!",
-    "ok" : "Ok",
-    "ErrorCode" : "Error Code:"
-    }
+   ```
+
+   收件人
+
+   ```json
+   "wserror" : {
+   "message" : "Error Message:",
+   "ComponentUI" : "UI Component:",
+   "error" : "Something went wrong!!",
+   "ok" : "Ok",
+   "ErrorCode" : "Error Code:"
+   }
    ```
 
    >[!NOTE]
@@ -47,7 +53,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作�
 
 ## 自定义CSS {#customizing-css}
 
-1. 通过在文件中添加以下代码片断，可以更新对话框、标题、内容区域、脚栏、脚栏按钮和其他 `/apps/ws/css/newStyle.css` 抵押品：
+1. 您可以通过在文件中添加以下代码片断来更新对话框、标题、内容区域、脚栏、脚栏按钮和其他 `/apps/ws/css/newStyle.css` 抵押品：
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -182,7 +188,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作�
    }
    ```
 
-1. 对于脚栏按钮跨度，将和按 `.error-dialog` 钮跨 `.foot-bar` 度与复合列表分开。 要进行此更改，请在newStyle.css文件中添加以下内容：
+1. 对于脚条按钮跨度，将和按 `.error-dialog` 钮跨 `.foot-bar` 度与复合列表分开。 要进行此更改，请在newStyle.css文件中添加以下内容：
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -193,31 +199,33 @@ AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作�
        white-space: nowrap;
        overflow: hidden;
    }
-   
-   To
-   
+   ```
+
+   收件人
+
+   ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
    #userSearchPopUp #actionbar span, #taskarea .action button span, .oooAction button span, .wsMessageContainerDiv .action button span
    {
-       display: block;
-       text-overflow: ellipsis;
-       white-space: nowrap;
-       overflow: hidden;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
    }
    
    /*-------- Customized following Portion --------*/
    .error-dialog .foot-bar button span
    {
-       display: block;
-       text-overflow: ellipsis;
-       text-decoration:underline;
-       white-space: wrap;
+      display: block;
+      text-overflow: ellipsis;
+      text-decoration:underline;
+      white-space: wrap;
    }
    ```
 
 >[!NOTE]
 >
->如果您引用的是其他图像，请在下面的所需层次中添加这些图像 `/apps/ws/images`。
+>如果您引用的是其他图像，请在所需的层次结构下添加 `/apps/ws/images`。
 
 ## 示例 {#examples}
 
@@ -236,9 +244,11 @@ AEM Forms工作区允许您自定义错误对话框。 执行AEM Forms工 [作�
     box-shadow:0px 0px 10px 3px #888;
     display:none;
 }
+```
 
-To
+收件人
 
+```css
 .error-dialog{
     border: 9px solid #DEDEDE;
     width: 200px;
@@ -267,9 +277,11 @@ To
     overflow: hidden;
     white-space: nowrap;
 }
+```
 
-To
+收件人
 
+```css
 .error-dialog .head-bar{
     height: 40px;
     background: url(../images/error.png) no-repeat 7px 10px #DEDEDE;
