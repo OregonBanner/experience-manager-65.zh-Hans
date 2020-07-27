@@ -11,29 +11,32 @@ topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
 
 # 使用Manager任务管理组织层次结构中的视图{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
-在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人（直接或间接报告）的任务，并对其执行各种操作。 这些任务位于AEM Forms工作区的“待办事项”选项卡中。 对一任务直接报告支持的操作包括：
+在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人的任务（直接或间接报告），并对其执行各种操作。 任务位于AEM Forms工作区的待办事项选项卡中。 对一任务直接报表支持的操作包括：
 
 **转发** 将任务从直接报告转发给任何用户。
 
-**索赔** :任务直接报告。
+**索赔** 任务直接报告。
 
-**Claim &amp; Open** Claim a任务直接报告，并在经理的To-do列表中自动打开它。
+**Claim &amp; Open** Claim是直接报表的任务，并在经理的待办列表中自动打开它。
 
-**拒绝** “拒绝”其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接报告的任务。
+**拒绝** 拒绝由其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接报告的任务。
 
-AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这样的检查可确保用户只能获取具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告以满足其需求。
+AEM Forms将用户仅限于用户具有访问控制(ACL)的任务。 这样的检查可确保用户只能获取用户具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告，以满足其需求。
 
-1. 创建DSC。 有关详细信息，请参阅使用AEM Forms编程指南中的“为AEM表单开发 [组件”主题](https://www.adobe.com/go/learn_aemforms_programming_63) 。
-1. 在DSC中，为层次管理定义新的SPI，以在AEM Forms用户中定义直接报告和层次。 以下是示例Java™代码片断。
+1. 创建DSC。 有关详细信息，请参阅《使用AEM Forms进行编程》指南中的“为AEM Forms [开发组件](https://www.adobe.com/go/learn_aemforms_programming_63) ”主题。
+1. 在DSC中，为层次管理定义新的SPI，以在AEM Forms用户中定义直接报表和层次。 以下是示例Java™代码片段。
 
-   ```as3
+   ```java
    public class MyHierarchyMgmtService
    {
         /*
@@ -66,9 +69,9 @@ AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这�
    }
    ```
 
-1. 创建component.xml文件。 请确保spec-id必须与下面的代码片断中所示相同。 以下是可重用的示例代码片段。
+1. 创建component.xml文件。 请确保规范ID必须与下面的代码片断中所示相同。 以下是可重用的示例代码片段。
 
-   ```as3
+   ```xml
    <component xmlns="https://adobe.com/idp/dsc/component/document">
        <component-id>com.adobe.sample.SampleDSC</component-id>
        <version>1.1</version>
@@ -117,4 +120,4 @@ AEM Forms仅限制用户对其具有访问控制(ACL)的任务的访问。 这�
 
 ![cu_manager_视图](assets/cu_manager_view.png)
 
-访问直接报告的任务并采取相应任务
+访问任务的直接报告并采取相应行动任务
