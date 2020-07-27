@@ -10,7 +10,7 @@ topic-tags: forms-app
 discoiquuid: 88555db2-712f-4ef9-bf47-76c7ba83d964
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 0%
@@ -90,7 +90,7 @@ AEM Forms提供AEM Forms应用程序的完整源代码。 源包含构建自定�
 1. 确保为Debug、Release和 **任何iOS** SDK选 **择同**&#x200B;一签名 ****。
 1. 替换文件中的以下 `AEM Forms-info.plist` 代码：
 
-   ```java
+   ```xml
    <key>NSAppTransportSecurity</key>
    <dict>
    <key>NSAllowsArbitraryLoads</key>
@@ -100,7 +100,7 @@ AEM Forms提供AEM Forms应用程序的完整源代码。 源包含构建自定�
 
    替换为服务器 `yourserver.com` 的相应主机名时，将显示以下内容。
 
-   ```java
+   ```xml
    <key>NSAppTransportSecurity</key>
    <dict>
    <key>NSExceptionDomains</key>
