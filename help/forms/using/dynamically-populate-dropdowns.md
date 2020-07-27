@@ -10,7 +10,10 @@ topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -26,14 +29,14 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
 
 ## 动态填充下拉列表的过程 {#procedure-to-dynamically-populate-drop-down-lists}
 
-考虑您要根据您在“国家／地区 **** ”(Country **** )下拉列表中选择的值填充“状态”(State)下拉列表的方案。 如果在“国家／地区 **** ”(Country **)下拉列表中选择“澳大利亚”(Australia)，则“州** ”(State)下拉列表将显示澳大利亚内的州。 以下过程介绍如何完成此任务。
+请考虑您要根据在“国 **家** ”下拉列表中选择的值填充“状 **态** ”下拉列表的方案。 如果您在“国家／地 **区** ”下拉列表中选择 **了** “澳大利亚”，则“州”下拉列表将显示澳大利亚内的州。 以下过程介绍如何完成此任务。
 
 1. 使用以下模块创建项目：
 
-   * 包含用于填充下拉列表的逻辑的包，本例中为servlet。
+   * 包含用于填充下拉列表的逻辑的绑定，本例中为servlet。
    * 内容，它嵌入。jar文件并具有下拉资源。 Servlet指向此资源。
 
-1. 根据请求参数“国家／地区”编写servlet，该参数返回一个包含国家／地区内状态名称的数组。
+1. 根据请求参数Country编写servlet，该参数返回包含国家／地区内状态名称的数组。
 
    ```java
    @Component(metatype = false)
@@ -144,18 +147,18 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
    }
    ```
 
-1. 在应用程序中的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节 `sling:resourceType` 点的参数与servlet点(/apps/populatedropdown)的参数相同。
+1. 在应用程序中的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节 `sling:resourceType` 点的参数与servlet指向的参数相同(/apps/populatedropdown)。
 
    ![创建下拉节点](assets/dropdown-node.png)
 
 1. 打包内容节点并将。jar文件嵌入到特定位置（例如/apps/myfolder/demo/install/）。 在服务器上部署同一文件。
-1. 创建一个自适应表单并向其添加两个下拉列表（国家／地区和州）。 国家／地区列表可以包括国家／地区的名称。 状态列表可以动态填充您在第一个列表中选择的国家／地区的状态名称。
+1. 创建一个自适应表单并向其添加两个下拉列表：国家／地区和州。 国家列表可以包含国家名称。 “状态”列表可以动态填充您在第一个列表中选择的国家／地区的状态名称。
 
-   添加要在国家／地区列表中显示的国家／地区名称。 在“状态”列表中，添加一个脚本，以根据“国家／地区”列表中国家／地区的名称填充该脚本。
+   添加要在国家／地区列表中显示的国家／地区名称。 在“国家／地区”列表中，根据“国家／地区”列表中的国家／地区名称添加一个脚本以填充该脚本。
 
-   ![添加国家／地区名称](assets/country-dropdown.png) 添 ![加脚本以填充状态名称国家／地区](assets/state-dropdown.png)![和州／地区下拉列表以收集](assets/2dropdowns.png)
+   ![添加国家／地区](assets/country-dropdown.png)![名称添加脚本以填充国家／地区](assets/state-dropdown.png)![名和国家／地区名称下拉列表以收集](assets/2dropdowns.png)
 
-   ```
+   ```javascript
    JSON.parse(
        $.ajax({
            url: "/apps/myfolder/demo/dropdown",
@@ -171,6 +174,6 @@ source-git-commit: b2fd6e0412ee0dacf7b68f4a0b219804dd4a6150
    .responseText);
    ```
 
-包含示例自适应表单(demo/AFdemo)的内容包，其中实现了上述代码。
+包含具有上述代码的示例自适应表单(demo/AFdemo)的内容包。
 
 [获取文件](assets/dropdown-demo-content-1.0.1-snapshot.zip)
