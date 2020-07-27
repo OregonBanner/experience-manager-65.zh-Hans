@@ -8,9 +8,9 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '969'
 ht-degree: 2%
 
 ---
@@ -213,8 +213,8 @@ AEM Forms提供测试框架Calvin，以自动测试自适应表单。 使用框�
 
 测试套件可以有多个测试用例。 可以一次或单独运行测试套件中的所有测试用例。 运行测试时，图标会指示结果：
 
-* 复选标记图标指示通过的测试： ![](assets/save_icon.svg)
-* “X”图标表示测试失败： ![](assets/close-icon.svg)
+* 复选标记图标指示通过的测试： ![save_icon](assets/save_icon.svg)
+* “X”图标表示测试失败： ![关闭图标](assets/close-icon.svg)
 
 1. 导航到AEM图标> **[!UICONTROL 工具]**> **[!UICONTROL 操作]**>测 **[!UICONTROL 试]**
 1. 要运行测试套件的所有测试，请执行以下操作：
