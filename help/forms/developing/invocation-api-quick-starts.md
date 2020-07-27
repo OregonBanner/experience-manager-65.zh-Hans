@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -31,73 +34,73 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
  <tbody>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking_human_centric_long_lived_processes">调用以人为中心的长寿命进程</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">使用（AEM表单已弃用）AEM Forms Remoting调用长期进程</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">快速开始:使用调用API调用长寿命进程</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">快速开始:使用Web服务API调用长期进程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">使用（AEM表单已弃用）调用长寿命进程AEM Forms远程处理</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">快速开始: 使用调用API调用长寿命进程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">快速开始: 使用Web服务API调用长寿命进程</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">使用调用API调用短时间进程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">使用调用API调用短时进程</a></p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">快速开始:使用调用API调用短时间进程</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_short_lived_process_using_the_invocation_api">快速开始: 使用调用API调用短时进程</a></p></td>
    <td><p>不适用</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">使用Base64编码调用AEM Forms</a> （Java Web服务代理）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_java_proxy_files_and_base64_encoding">快速开始:使用Java代理文件和Base64编码调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_java_proxy_files_and_base64_encoding">快速开始: 使用Java代理文件和Base64编码调用服务</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">使用Base64编码</a> （.NET Web服务代理）调用AEM Forms</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">使用Base64编码调用AEM Forms</a> （.NET Web服务代理）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_base64_in_a_microsoft_net_project">快速开始:在Microsoft .NET项目中使用base64调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_base64_in_a_microsoft_net_project">快速开始: 在Microsoft .NET项目中使用base64调用服务</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">使用MTOM</a> （.NET Web服务示例）调用AEM Forms</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">使用MTOM调用AEM Forms</a> （.NET Web服务示例）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_mtom_in_a_net_project">快速开始:在。NET项目中使用MTOM调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_mtom_in_a_net_project">快速开始: 在。NET项目中使用MTOM调用服务</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref">使用SwaRef调用AEM Forms</a> （Java Web服务示例）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">快速开始:在Java项目中使用SwaRef调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">快速开始: 在Java项目中使用SwaRef调用服务</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">通过HTTP使用BLOB数据调用AEM Forms</a> （Java Web服务示例）</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">通过HTTP使用BLOBAEM Forms调用</a> （Java Web服务示例）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">快速开始:在。NET项目中使用HTTP上的BLOB数据调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">快速开始: 在。NET项目中使用BLOB数据通过HTTP调用服务</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">使用HTTP上的BLOB数据调用AEM</a> Forms（.NET Web服务示例）</p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">通过HTTP使用BLOBAEM Forms调用</a> （.NET Web服务示例）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">快速开始:在Java项目中使用HTTP上的BLOB数据调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">快速开始: 在Java项目中使用BLOB数据通过HTTP调用服务</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">使用DIME调用AEM Forms</a> （Java Web服务示例）</p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_dime_in_a_java_project">快速开始:在Java项目中使用DIME调用服务</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_dime_in_a_java_project">快速开始: 在Java项目中使用DIME调用服务</a></p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">使用（AEM表单已弃用）调用AEM Forms Remoting</a></p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">快速开始:通过使用（AEM表单已弃用）AEM Forms Remoting传递不安全的文档来调用短期流程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">调用AEM Forms使用（AEM表单已弃用）AEM Forms远程处理</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">快速开始: 通过使用（AEM表单已弃用）文档远程传递不安全的AEM Forms来调用短时过程</a></p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
   </tr>
   <tr>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">传递安全文档以使用远程处理调用进程</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">快速开始:通过使用（AEM表单已弃用）AEM Forms Remoting传递安全文档来调用短期流程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">使用远程处理传递安全文档以调用进程</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">快速开始: 通过使用（AEM表单已弃用）文档远程传递安全AEM Forms来调用短时过程</a></p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking_custom_component_services_using_remoting">使用远程处理调用自定义组件服务</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">快速开始:使用（AEM表单已弃用）AEM Forms Remoting调用客户自定义服务</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">快速开始: 使用（AEM表单已弃用）AEM Forms调用客户自定义服务</a></p></td>
    <td><p>不适用</p></td>
    <td><p>不适用</p></td>
   </tr>
@@ -108,13 +111,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于JBoss Application Server和Microsoft Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的快速开始基于正在JBoss Application Server和Microsoft Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始:使用调用API调用短时间进程 {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
+## 快速开始: 使用调用API调用短时进程 {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
-以下Java代码示例调用名为的短时进程 `MyApplication/EncryptDocument`。 请注意，此进程被同步调用。 此进程的输入参数被命名 `inDoc`。 此进程的输出参数被命名 `outDoc`。 密码加密的PDF文档将保存为名为的PDF文件 `EncryptLoan.pdf`。 (请参 [阅使用调用API调用短期进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api)。)
+以下Java代码示例调用名为的短时进程 `MyApplication/EncryptDocument`。 请注意，同步调用此进程。 此进程的输入参数被命名 `inDoc`。 此进程的输出参数被命名 `outDoc`。 密码加密的PDF文档将保存为名为的PDF文件 `EncryptLoan.pdf`。 (请参 [阅使用调用API调用短时进程](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -224,13 +227,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始:在Microsoft .NET项目中使用base64调用服务 {#quick-start-invoking-a-service-using-base64-in-a-microsoft-net-project}
+## 快速开始: 在Microsoft .NET项目中使用base64调用服务 {#quick-start-invoking-a-service-using-base64-in-a-microsoft-net-project}
 
-以下C#代码示例使用Base64编码调用从Microsoft .NET `MyApplication/EncryptDocument` 项目命名的进程。 (请参 [阅使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+以下C#代码示例使用Base64编 `MyApplication/EncryptDocument` 码调用从Microsoft .NET项目命名的进程。 (请参 [阅使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
 
-基于名为 *Loan.pdf的PDF文件的无担保PDF文档将传递到AEM Forms流程* 。 该过程会返回一个密码加密的PDF文档，该保存为名为 *EncryptedPDF.pdf的PDF文件*。
+基于名为Loan.pdf的PDF文件的无 *担保PDF文档* ，将传递给AEM Forms流程。 该过程返回一个密码加密的PDF文档，该保存为名为EncryptedPDF. *pdf的PDF文件*。
 
-```as3
+```java
  /*
      * Ensure that you create a .NET client assembly that uses
      * base64 encoding. This is required to populate a BLOB
@@ -305,13 +308,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:使用Java代理文件和Base64编码调用服务 {#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding}
+## 快速开始: 使用Java代理文件和Base64编码调用服务 {#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding}
 
-以下Java代码示例调用一个使用JAX-WS `MyApplication/EncryptDocument` 和Base64编码创建的Java代理文件命名的进程。 (请参 [阅使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+以下Java代码示例调用使用JAX-WS `MyApplication/EncryptDocument` 和Base64编码创建的Java代理文件命名的进程。 (请参 [阅使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
 
-基于名为 *Loan.pdf的PDF文件的无担保PDF文档将传递到AEM Forms流程* 。 该过程会返回一个密码加密的PDF文档，该保存为名为 *EncryptedDocument.pdf的PDF文件*。
+基于名为Loan.pdf的PDF文件的无 *担保PDF文档* ，将传递给AEM Forms流程。 该过程返回一个密码加密的PDF文档，该保存为名为EncryptedDocument.pdf *的PDF文件*。
 
-```as3
+```java
  /**
      * Ensure that you create Java proxy files that consume
      *theAEM Forms service WSDL. You can use JAX-WS to create
@@ -391,15 +394,15 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:通过使用（AEM表单已弃用）AEM Forms Remoting传递不安全的文档来调用短期流程 {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
+## 快速开始: 通过使用（AEM表单已弃用）文档远程传递不安全的AEM Forms来调用短时过程 {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
 
-以下Flex代码示例调用一个名为的短时间进程 `MyApplication/EncryptDocument`。 (请参 [阅使用（AEM表单已弃用）调用AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
+以下Flex代码示例调用一个名为的短时进程 `MyApplication/EncryptDocument`。 (请参 [阅使用（AEM表单已弃用）AEM FormsAEM Forms远程调用](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
 
 >[!NOTE]
 >
->此快速开始调用AEM Forms进程并上传不安全的文档。 要执行此快速开始，必须将AEM Forms配置为上传不安全文档。 有关如何将AEM Forms配置为接受不安全文档的信息，请参阅将AEM Forms配置 [为接受安全和不安全文档](/help/forms/developing/invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。
+>此快速开始调用AEM Forms进程并上传不安全文档。 要执行此快速开始，必须将AEM Forms配置为上传不安全文档。 有关如何将AEM Forms配置为接受不安全文档的信息，请参 [阅将AEM Forms配置为接受安全和不安全文档](/help/forms/developing/invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。
 
-```as3
+```java
  <?xml version="1.0" encoding="utf-8"?>
  <mx:Application  xmlns="*"
       creationComplete="initializeChannelSet();">
@@ -548,13 +551,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:在。NET项目中使用DIME调用服务 {#quick-start-invoking-a-service-using-dime-in-a-net-project}
+## 快速开始: 在。NET项目中使用DIME调用服务 {#quick-start-invoking-a-service-using-dime-in-a-net-project}
 
-以下C#代码示例使用Dime调用从Microsoft .NET `MyApplication/EncryptDocument` 项目命名的进程。 (请参 [阅使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+以下C#代码示例使用Dime调用从Microsoft . `MyApplication/EncryptDocument` NET项目命名的进程。 (请参 [阅使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
 
-基于名为 ** map.pdf的PDF文件的不安全PDF文档使用DIME传递到AEM Forms流程。 该过程会返回一个经过密码加密的PDF文档，该保存为名为 *mapEncrypt.pdf的PDF文件*。
+基于名为map.pdf的PDF文件的不安全 *的PDF文档* ，将使用DIME传递到AEM Forms流程。 该过程返回一个密码加密的PDF文档，该保存为名为mapEncrypt.pdf *的PDF文件*。
 
-```as3
+```java
  /**
      *
      * Ensure that you create a .NET project that uses
@@ -653,13 +656,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:在Java项目中使用DIME调用服务 {#quick-start-invoking-a-service-using-dime-in-a-java-project}
+## 快速开始: 在Java项目中使用DIME调用服务 {#quick-start-invoking-a-service-using-dime-in-a-java-project}
 
-以下Java代码示例调用一个使用DIME命 `MyApplication/EncryptDocument` 名的进程。 (请参 [阅使用DIME调用AEM表单](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime)。)
+以下Java代码示例调用使用DIME命 `MyApplication/EncryptDocument` 名的进程。 (请参 [阅使用DIME调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime)。)
 
-基于名为 ** Loan.pdf的PDF文件的无担保PDF文档使用DIME传递到AEM Forms流程。 该过程会返回一个密码加密的PDF文档，该保存为名为 *EncryptLoan.pdf的PDF文件*。
+基于名为Loan.pdf的PDF文件的无 *担保PDF文档* ，使用DIME传递到AEM Forms流程。 该过程返回一个经过密码加密的PDF文档，该保存为名为EncryptLoan. *pdf的PDF文件*。
 
-```as3
+```java
  /**
      * Ensure that you create Java Axis files that
      * are required to send a AEM Forms process
@@ -754,13 +757,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:在Java项目中使用HTTP上的BLOB数据调用服务 {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
+## 快速开始: 在Java项目中使用BLOB数据通过HTTP调用服务 {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
 
-以下Java代码示例调用一个使用HTTP上 `MyApplication/EncryptDocument` 的数据命名的进程。 (请参 [阅通过HTTP使用BLOB数据调用AEM表单](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)。)
+以下Java代码示例调用使用HTTP上 `MyApplication/EncryptDocument` 的数据命名的进程。 (请参 [阅通过HTTP使用BLOBAEM Forms调用](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)。)
 
-基于名为 ** Loan.pdf的PDF文件的不安全PDF文档使用SOAP over HTTP传递到AEM Forms进程。 PDF文件位于以下URL: `https://'[server]:[port]'/FormsQS`. 该过程会返回一个密码加密的PDF文档，该保存为名为 *EncryptedDocument.pdf的PDF文件*。
+基于名为Loan.pdf的PDF文件的无安 *全性PDF文档* ，使用SOAP over HTTP传递给AEM Forms进程。 PDF文件位于以下URL: `https://'[server]:[port]'/FormsQS`. 该过程返回一个密码加密的PDF文档，该保存为名为EncryptedDocument.pdf *的PDF文件*。
 
-```as3
+```java
  /**
      * Ensure that you create Java proxy files that consume
      *theAEM Forms service WSDL. You can use JAX-WS to create
@@ -829,13 +832,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:在。NET项目中使用HTTP上的BLOB数据调用服务 {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
+## 快速开始: 在。NET项目中使用BLOB数据通过HTTP调用服务 {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
-以下C#代码示例使用HTTP上的数 `MyApplication/EncryptDocument` 据调用从Microsoft .NET项目命名的进程。 (请参 [阅通过HTTP使用BLOB数据调用AEM表单](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)。)
+以下C#代码示例使用HTTP上的 `MyApplication/EncryptDocument` 数据调用从Microsoft .NET项目命名的进程。 (请参 [阅通过HTTP使用BLOBAEM Forms调用](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)。)
 
-基于名为 ** Loan.pdf的PDF文件的不安全PDF文档将使用BLOB over HTTP传递到AEM Forms进程。 该过程会返回一个密码加密的PDF文档，该保存为名为 *EncryptedPDF.pdf的PDF文件*。
+基于名为Loan.pdf的PDF文件的无安 *全性PDF文档* ，使用BLOB over HTTP传递到AEM Forms进程。 该过程返回一个密码加密的PDF文档，该保存为名为EncryptedPDF. *pdf的PDF文件*。
 
-```as3
+```java
  /*
      * Ensure that you create a .NET client assembly that uses
      * SOAP over HTTP. This is required to populate a BLOB
@@ -929,13 +932,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始:在。NET项目中使用MTOM调用服务 {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
+## 快速开始: 在。NET项目中使用MTOM调用服务 {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
-以下C#代码示例使用MTOM调用从Microsoft .NET `MyApplication/EncryptDocument` 项目命名的进程。 (请参 [阅使用MTOM调用AEM表单](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)。)
+以下C#代码示例使用MTOM调 `MyApplication/EncryptDocument` 用从Microsoft .NET项目命名的进程。 (请参 [阅使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)。)
 
-基于名为 ** loan.pdf的PDF文件的无担保PDF文档将使用MTOM传递到AEM Forms流程。 该过程会返回一个密码加密的PDF文档，该保存为名为 *EncryptedDocument.pdf的PDF文件*。
+基于名为loan.pdf的PDF文件的无安 *全性PDF文档* ，将使用MTOM传递到AEM Forms流程。 该过程返回一个密码加密的PDF文档，该保存为名为EncryptedDocument.pdf *的PDF文件*。
 
-```as3
+```java
  ???/**
      * Ensure that you create a .NET project that uses
      * MS Visual Studio 2008 and version 3.5 of the .NET
@@ -1017,15 +1020,15 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->许多显示如何执行AEM Forms服务操作的快速开始包括MTOM代码示例。
+>许多显示如何执行开始服务操作的快速AEM Forms包括MTOM代码示例。
 
-## 快速开始:在Java项目中使用SwaRef调用服务 {#quick-start-invoking-a-service-using-swaref-in-a-java-project}
+## 快速开始: 在Java项目中使用SwaRef调用服务 {#quick-start-invoking-a-service-using-swaref-in-a-java-project}
 
-以下Java代码示例调用从Java项目命 `MyApplication/EncryptDocument` 名的进程。 此Java项目使用使用JAX-WS和SwaRef创建的代理类作为编码类型。 (请参 [阅使用SwaRef调用AEM表单](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)。)
+以下Java代码示例调用从Java项目 `MyApplication/EncryptDocument` 命名的进程。 此Java项目使用使用JAX-WS和SwaRef创建的代理类作为编码类型。 (请参 [阅使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)。)
 
-基于名为 ** Loan.pdf的PDF文件的无担保PDF文档使用SwaRef传递到AEM Forms流程。 加密的PDF文档将保存为名为 *EncryptedDocument.pdf的PDF文件*。
+基于名为Loan.pdf的PDF文件的无 *担保PDF文档* ，使用SwaRef传递到AEM Forms流程。 加密的PDF文档将保存为名为EncryptedDocument.pdf *的PDF文件*。
 
-```as3
+```java
  /**
      * Ensure that you create Java proxy files that consume
      *theAEM Forms service WSDL. You can use JAX-WS to create
