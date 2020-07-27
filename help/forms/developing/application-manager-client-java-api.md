@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2ec2a75e-4191-4660-a6f2-26cc667720b3
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
@@ -19,17 +22,17 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 以下Java API快速开始(SOAP)可用于Application Manager客户端。
 
-[快速开始（SOAP模式）:使用Java API创建应用程序版本](#quick-start-soap-mode-creating-application-version-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API创建应用程序版本](#quick-start-soap-mode-creating-application-version-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API导出应用程序](#quick-start-soap-mode-exporting-applications-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API导出应用程序](#quick-start-soap-mode-exporting-applications-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API导入应用程序](#quick-start-soap-mode-importing-applications-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API导入应用程序](#quick-start-soap-mode-importing-applications-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API获取AEM Forms应用程序](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API获取AEM Forms应用程序](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API获取应用程序](application-manager-client-java-api.md#quick-start-soap-mode-getting-the-applications-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API获取应用程序](application-manager-client-java-api.md#quick-start-soap-mode-getting-the-applications-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API获取应用程序状态](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
+[快速开始（SOAP模式）: 使用Java API获取应用程序状态](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
 
 [快速开始（SOAP模式）：使用Java API预览AEM Forms和更高版本的应用程序存档](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
 
@@ -39,13 +42,13 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->使用AEM Forms进行编程中的快速开始基于JBoss和Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如Unix），请将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>“使用AEM Forms进行编程”中的快速开始基于JBoss和Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统，如Unix，则将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API创建应用程序版本 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API创建应用程序版本 {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
 以下Java代码示例使用JAVA API创建应用程序。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -140,11 +143,11 @@ public class CreateApplicationVersion_SOAP {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API导出应用程序 {#quick-start-soap-mode-exporting-applications-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API导出应用程序 {#quick-start-soap-mode-exporting-applications-using-the-java-api}
 
 以下Java代码示例使用JAVA API导出应用程序。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -243,7 +246,7 @@ public class ExportLCA_SOAP {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API导入应用程序 {#quick-start-soap-mode-importing-applications-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API导入应用程序 {#quick-start-soap-mode-importing-applications-using-the-java-api}
 
 以下Java代码示例使用JAVA API导入应用程序。
 
@@ -251,7 +254,7 @@ public class ExportLCA_SOAP {
 >
 >Java API importApplication()用较新的应用程序替换具有相同名称的现有应用程序。 要更新现有应用程序，请使用API importApplication()代替API updateApplication()。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -330,11 +333,11 @@ public class ImportLCA_SOAP {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API获取应用程序 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API获取应用程序 {#quick-start-soap-mode-getting-a-application-using-the-java-api}
 
-以下Java代码示例获取一个使用Java API的应用程序。
+以下Java代码示例使用Java API获取应用程序。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -437,13 +440,13 @@ public class GetApplication_SOAP {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API获取应用程序 {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API获取应用程序 {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
 
-以下Java代码示例获取使用Java API的应用程序。
+以下Java代码示例使用Java API获取应用程序。
 
-**注意**:获取AEM Forms Application API, getApplications()只返回已部署的应用程序。
+**注**: 获取AEM Forms应用程序API、getApplications()只返回已部署的应用程序。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -536,9 +539,9 @@ public class GetApplications_SOAP {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API获取应用程序状态 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## 快速开始（SOAP模式）: 使用Java API获取应用程序状态 {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -645,7 +648,7 @@ public class GetApplicationStatus_SOAP {
 
 以下Java代码示例用于使用Java API预览AEM Forms和更高版本的应用程序存档。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -722,9 +725,9 @@ public class PreviewLCA_SOAP {
 
 ## 快速开始（SOAP模式）：使用Java API删除应用程序存档 {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
 
-以下Java代码示例用于删除应用程序存档。
+以下Java代码示例用于删除应用程序归档文件。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
