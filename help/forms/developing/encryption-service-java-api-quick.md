@@ -1,6 +1,6 @@
 ---
-title: Encryption Service Java API QuickStart(SOAP)
-seo-title: Encryption Service Java API QuickStart(SOAP)
+title: 加密服务Java API QuickStart(SOAP)
+seo-title: 加密服务Java API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 3e29b3e9-340b-4b35-80cc-f0aff4180892
@@ -10,36 +10,39 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f12c10c3-1ce6-4415-ba9d-5349d1888237
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 
-# Encryption Service Java API快速开始(SOAP) {#encryption-service-java-api-quickstart-soap}
+# 加密服务Java API快速开始(SOAP) {#encryption-service-java-api-quickstart-soap}
 
-[快速开始（SOAP模式）:使用Java API加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API删除基于口令的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API删除基于密码的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API使用证书加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API使用证书加密PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API删除基于证书的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API删除基于证书的加密](encryption-service-java-api-quick.md#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API解锁加密的PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API解锁加密的PDF文档](encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API确定加密类型](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API确定加密类型](encryption-service-java-api-quick.md#quick-start-soap-mode-determining-encryption-type-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的快速开始基于JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
 
-以下Java代码示例使用密码值 *加密名为Loan.pdf* 的PDF文档 `OpenPassword`。 主密码为 `PermissionPassword`。 安全的PDF文档将保存为名为 *EncryptLoan.pdf的PDF文件*。 (请参 [阅使用口令加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
+以下Java代码示例使用密码值 *加密名为Loan* .pdf的PDF文档 `OpenPassword`。 主控密码为 `PermissionPassword`。 安全的PDF文档将保存为名为EncryptLoan.pdf *的PDF文件*。 (请参 [阅使用口令加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -155,11 +158,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API删除基于口令的加密 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API删除基于密码的加密 {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
-以下Java代码示例从名为 *EncryptLoan.pdf的PDF文档中删除了基于密码的加密*。 用于删除基于密码的加密的主密码值是 *PermissionPassword*。 不安全的PDF文档将另存为名为noEncryptionLoan.pdf *的PDF文件*。 (请参阅 [删除密码加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)。)
+以下Java代码示例从名为EncryptLoan.pdf的PDF文档中删除基于口 *令的加密*。 用于删除基于密码的加密的主控密码值为 *PermissionPassword*。 无保护的PDF文档将另存为名为noEncryptionLoan. *pdf的PDF文件*。 (请参 [阅删除密码](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -252,11 +255,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API使用证书加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API使用证书加密PDF文档 {#quick-start-soap-mode-encrypting-a-pdf-document-with-a-certificate-using-the-java-api}
 
-以下Java代码示例使用名为 *Encryption.cer的证书加密名为* Loan.pdf *的PDF*&#x200B;文档。 加密的PDF文档将保存为名为 *EncryptLoanCert.pdf的PDF文件*。 (请参阅 [使用证书加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。)
+以下Java代码示例使用名为Encryption.cer的 *证书加密名* 为Loan *.pdf的* PDF文档。 加密的PDF文档将保存为名为EncryptLoanCert.pdf *的PDF文件*。 (请参 [阅使用证书加密PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -381,11 +384,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API删除基于证书的加密 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API删除基于证书的加密 {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
 
-以下Java代码示例从名为 *EncryptLoanCert.pdf的PDF文档中删除基于证书的加密*。 用于删除加密的公钥的别名是 `Encryption`。 不安全的PDF文档将另存为名为noEncryptionLoan.pdf *的PDF文件*。 (请参阅 [删除基于证书的加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)。)
+以下Java代码示例从名为EncryptLoanCert.pdf的PDF文档中删除基 *于证书的加密*。 用于删除加密的公钥的别名为 `Encryption`。 无抵押的PDF文档将另存为名为noEncryptionLoan. *pdf的PDF文件*。 (请参阅 [删除基于证书的加密](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -478,11 +481,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API解锁加密的PDF文档 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API解锁加密的PDF文档 {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
 
-以下Java代码示例解锁名为 *EncryptLoan.pdf的密码加密PDF文档*。 (请参阅解 [锁加密的PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)。)
+以下Java代码示例解锁名为EncryptLoan.pdf的密码加 *密PDF文档*。 (请参 [阅解锁加密的PDF文档](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -574,11 +577,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API确定加密类型 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API确定加密类型 {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
 
-以下Java代码示例确定保护名为 *EncryptLoan.pdf的PDF文档的加密类型*。 (请参阅 [确定加密类型](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type)。)
+以下Java代码示例确定保护名为EncryptLoan.pdf的PDF文档的 *加密类型*。 (请参阅 [确定加密类型](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
