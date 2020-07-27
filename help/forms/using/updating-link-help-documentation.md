@@ -10,26 +10,29 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 2%
 
 ---
 
 
 # 更新指向文档的链接 {#updating-the-link-to-the-documentation}
 
-通过选择“帮助”>“工作区帮助”，可以访问AEM Forms工作区的 **默认帮助内容**。 它指向Adobe网站上的在线文档。 但是，您可以更新它以指向任何其他URL。
+您可以通过选择“帮助”>“工作区帮助”来访问AEM Forms工 **作区的默认帮助内容**。 它指向Adobe网站上的在线文档。 但是，您可以更新它以指向任何其他URL。
 
 请考虑以下用例，您可能希望更改默认帮助URL:
 
 * 以您选择的语言提供本地化帮助。
 * 为自定义工作区提供自定义帮助内容。
 
-要更新联机文档的URL，请按照自定义的 [常规步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行以下步骤。
+要更新联机文档的URL，请按照自定义 [的常规步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行以下步骤。
 
 1. 将文 `userinfo.html` 件从复 `/libs/ws/js/runtime/templates` 制到 `/apps/ws/js/runtime/templates`。
 1. 更改：
 
-   ```
+   ```html
    <ul class="helpmenu">
      <li>
        <a href="https://www.adobe.com/go/learn_aemforms_documentation_63" title="<%= $.t('index.header.dropdown.WorkspaceHelp')%>" target="_blank"><%= $.t('index.header.dropdown.WorkspaceHelp')%></a>
@@ -38,7 +41,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
    到
 
-   ```
+   ```html
    <ul class="helpmenu">
      <li>
        <a href="<!--place new help url here-->" title="<%= $.t('index.header.dropdown.WorkspaceHelp')%>" target="_blank"><%= $.t('index.header.dropdown.WorkspaceHelp')%></a>
