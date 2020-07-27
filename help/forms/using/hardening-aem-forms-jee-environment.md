@@ -9,7 +9,7 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 translation-type: tm+mt
-source-git-commit: 9e1d77b8696436b392f0d9209ddcb2c9196f3c09
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '7698'
 ht-degree: 0%
@@ -218,7 +218,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
 1. 打开META-INF/application.xml文件。
 1. 搜索adobe-bootstrapper.war部分：
 
-   ```as3
+   ```java
    <!-- bootstrapper start --> 
    <module id="WebApp_adobe_bootstrapper"> 
        <web> 
@@ -238,7 +238,7 @@ JEE上的AEM Forms默认情况下使用LocalSystem帐户安装服务。 内置�
 1. 停止AEM Forms服务器。
 1. 注释掉adobe-bootstrapper.war和adobe-lcm-bootstrapper-redirectory。 战争模块如下：
 
-   ```as3
+   ```java
    <!-- bootstrapper start --> 
    <!-- 
    <module id="WebApp_adobe_bootstrapper"> 
@@ -280,7 +280,7 @@ Configuration Manager允许您将Acrobat Reader DC扩展凭据上传到JEE信任
 
 1. 在Web浏览器中键入以下URL:
 
-   ```as3
+   ```java
    https://[host name]:[port]/adminui
    ```
 
@@ -313,7 +313,7 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 
 1. 在Web浏览器中键入以下URL:
 
-   ```as3
+   ```java
    https://[host name]:[port]/adminui
    ```
 
@@ -357,7 +357,7 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 
 1. 修 [改JBOSS_]HOME\\standalone\configuration\lc_{datasource.xml} `integratedSecurity=true` 以添加到连接URL，如本例所示：
 
-   ```as3
+   ```java
     jdbc:sqlserver://<serverhost>:<port>;databaseName=<dbname>;integratedSecurity=true
    ```
 
@@ -369,7 +369,7 @@ Web服务定义语言(WSDL)生成应仅对开发环境启用，开发者使用WS
 
 1. 开始WebLogic服务器管理控制台，方法是在Web浏览器的URL行中键入以下URL:
 
-   ```as3
+   ```java
    https://[host name]:7001/console
    ```
 
@@ -730,7 +730,7 @@ JEE上的AEM Forms提供API来管理允许的推荐人异常列表和允许的UR
 
 LC_ ***GLOBAL_ALLOWED_REFERER_EXCEPTION*** 列表ID在命名空间的类中 `UMConstants` 定义为常 `com.adobe.idp.um.api` 数，位于 `adobe-usermanager-client.jar`。 您可以使用AEM FormsAPI创建、修改或编辑此列表。 例如，要创建“全局允许推荐人例外”列表，请使用：
 
-```as3
+```java
 addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arrays.asList("/index.html", "/sample/(.)*"))
 ```
 
@@ -758,7 +758,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 以下是SAMPLE WAR文件web.xml *文件中的* filter项 ***的示例*** :
 
-```as3
+```java
 <filter> 
        <filter-name> filter-name </filter-name> 
        <filter-class> com.adobe.idp.um.auth.filter.RemoteCSRFFilter </filter-class> 
@@ -976,7 +976,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 1. 在https连接器元素中添加以下代码：
 
-   ```
+   ```xml
    <connector name="https" protocol="HTTP/1.1" scheme="https" socket-binding="https" secure="true" enabled="true"> 
     <ssl name="jboss7_ssl" key-alias="jboss71" password="Tibco321" certificate-key-file="../standalone/configuration/server.keystore" protocol="TLSv1"/> 
     </connector>
@@ -1053,7 +1053,7 @@ JEE上的AEM Forms通过以下方式使用文件系统：
 
 登录到管理控制台后，可以通过修改URL浏览控制台的目录列表。 例如，如果将URL更改为以下URL之一，则可能会显示目录列表：
 
-```as3
+```java
 https://<servername>:8080/adminui/secured/ 
 https://<servername>:8080/um/
 ```
@@ -1066,7 +1066,7 @@ https://<servername>:8080/um/
 
 将weblogic.xml文件中的index-directories属性设置为 `false`，如以下示例所示：
 
-```as3
+```xml
 <container-descriptor> 
     <index-directory-enabled>false 
     </index-directory-enabled> 
