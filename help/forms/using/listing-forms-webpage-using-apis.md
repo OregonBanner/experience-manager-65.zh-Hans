@@ -1,22 +1,25 @@
 ---
 title: 使用API在网页上列出表单
 seo-title: 使用API在网页上列出表单
-description: 以编程方式查询Forms Manager以检索已过滤的表单列表并显示在您自己的网页上。
-seo-description: 以编程方式查询Forms Manager以检索已过滤的表单列表并显示在您自己的网页上。
+description: 以编程方式查询Forms Manager以检索已过滤的表单列表并在您自己的网页上显示。
+seo-description: 以编程方式查询Forms Manager以检索已过滤的表单列表并在您自己的网页上显示。
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 1%
 
 ---
 
 
 # 使用API在网页上列出表单 {#listing-forms-on-a-web-page-using-apis}
 
-AEM Forms提供了基于REST的搜索API,Web开发人员可以使用它来查询和检索一组满足搜索条件的表单。 您可以使用API根据各种过滤器搜索表单。 响应对象包含表单属性、属性和渲染表单的端点。
+AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检索一组满足搜索条件的表单。 您可以使用API根据各种过滤器搜索表单。 响应对象包含表单属性、属性和呈现表单的端点。
 
 要使用REST API搜索表单，请使用下面描述的查询参数将GET请 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 求发送到服务器。
 
@@ -32,27 +35,27 @@ AEM Forms提供了基于REST的搜索API,Web开发人员可以使用它来查询
    <td>函数<br /> </td>
    <td><p>指定要调用的函数。 要搜索表单，请将属性的 <code>func </code>值设置为 <code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> 此 <em>参数为必填。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此参数为必填。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
-   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性搜索所有在根节点级别可用的应用程序。<br /> </p> <p>您可以在一个搜索查询中指定多个应用程序路径。 用竖线(|)字符分隔多个路径。 </p> </td>
+   <td><p>指定用于搜索表单的应用程序路径。 默认情况下，appPath属性会搜索根节点级别上所有可用的应用程序。<br /> </p> <p>您可以在一个搜索查询中指定多个应用程序路径。 用管道(|)字符分隔多条路径。 </p> </td>
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>指定要与资产一起提取的属性。 可以使用星号(*)同时获取所有属性。 使用管道(|)运算符指定多个属性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
+   <td><p>指定要用资产提取的属性。 可以使用星号(*)一次获取所有属性。 使用管道(|)运算符指定多个属性。 </p> <p>例如， <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>: </p>
     <ul>
      <li><em>始终获取id、路径和名称等属性。 </em></li>
-     <li><em>每个资产都有不同的属性集。 formUrl、pdfUrl和guideUrl等属性不取决于自定义点属性。 这些属性取决于资产类型，并相应地获取。 </em></li>
+     <li><em>每个资产都有一组不同的属性。 formUrl、pdfUrl和guideUrl等属性不取决于刀具点属性。 这些属性取决于资产类型，并会相应地获取。 </em></li>
     </ul> </td>
   </tr>
   <tr>
    <td>relation<br /> </td>
-   <td>指定要与搜索结果一起提取的相关资产。 您可以选择以下选项之一来获取相关资产：
+   <td>指定要与搜索结果一起提取的相关资产。 您可以选择以下选项之一来提取相关资产：
     <ul>
-     <li><strong>NO_RELATION</strong>:请勿提取相关资产。</li>
-     <li><strong>立即</strong>:获取与搜索结果直接相关的资产。</li>
-     <li><strong>全部</strong>:提取直接和间接相关资产。</li>
+     <li><strong>NO_RELATION</strong>: 请勿提取相关资产。</li>
+     <li><strong>立即</strong>: 获取与搜索结果直接相关的资产。</li>
+     <li><strong>全部</strong>: 直接及间接相关资产。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -75,9 +78,9 @@ AEM Forms提供了基于REST的搜索API,Web开发人员可以使用它来查询
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上例中， </p>
     <ul>
-     <li><strong>name</strong>:指定要搜索的属性的名称。</li>
-     <li><strong>value</strong>:指定要搜索的属性的值。</li>
-     <li><strong>operator</strong>:指定搜索时要应用的运算符。 支持以下运算符：
+     <li><strong>name</strong>: 指定要搜索的属性的名称。</li>
+     <li><strong>值</strong>: 指定要搜索的属性的值。</li>
+     <li><strong>运算符</strong>: 指定搜索时要应用的运算符。 支持以下运算符：
       <ul>
        <li>EQ —— 等于 </li>
        <li>NEQ —— 不等于</li>
@@ -88,10 +91,10 @@ AEM Forms提供了基于REST的搜索API,Web开发人员可以使用它来查询
        <li>CONTAINS —— 如果B是A的一部分，则A包含B</li>
        <li>全文——全文搜索</li>
        <li>STARTSWITH —— 如果B是A的开头部分，则为B的开始</li>
-       <li>ENDSWITH —— 如果B是A的结束部分，则A以B结束</li>
+       <li>ENDSWITH —— 如果B是A的结束部分，则A以B结尾</li>
        <li>LIKE —— 实现LIKE运算符</li>
        <li>AND —— 合并多个语句</li>
-      </ul> <p><strong>注意：</strong><em>GT、LT、GTEQ和LTEQ算子适用于线性类型的属性，如LONG、多次和DATE。</em></p> </li>
+      </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ和LTEQ运算符适用于线性类型的属性，如LONG、多次和DATE。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -103,28 +106,28 @@ AEM Forms提供了基于REST的搜索API,Web开发人员可以使用它来查询
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>name</strong>:指定用于对搜索结果排序的属性名称。</li>
-     <li><strong>条件</strong>:指定结果的顺序。 order属性接受以下值：
+     <li><strong>name</strong>: 指定用于对搜索结果排序的属性的名称。</li>
+     <li><strong>条件</strong>: 指定结果的顺序。 顺序属性接受以下值：
       <ul>
        <li>ASC —— 使用ASC按升序排列结果。<br /> </li>
-       <li>DES —— 使用DES按降序排列结果。</li>
+       <li>DES —— 使用DES以降序排列结果。</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>指定是否检索二进制内容。 该属 <code>includeXdp</code> 性适用于类型、类型 <code>FORM</code>和 <code>PDFFORM</code>类型的资产 <code>PRINTFORM</code>。</td>
+   <td>指定是否检索二进制内容。 该属 <code>includeXdp</code> 性适用于类型、类 <code>FORM</code>型 <code>PDFFORM</code>和类型的资产 <code>PRINTFORM</code>。</td>
   </tr>
   <tr>
-   <td>assetType</td>
-   <td>指定要从所有已发布资产中检索的资产类型。 使用管道(|)运算符指定多个资产类型。 有效的资产类型包括FORM、PDFFORM、PRINTFORM、RESOURCE和GUIDE。</td>
+   <td>资产类型</td>
+   <td>指定要从所有已发布资产中检索的资产类型。 使用管道(|)运算符指定多个资产类型。 有效的资产类型包括表单、PDFFORM、打印表单、资源和指南。</td>
   </tr>
  </tbody>
 </table>
 
 ## 示例请求 {#sample-request}
 
-```
+```json
 func : searchForms
 appPath : /content/dam/formsanddocuments/MyApplication23
 cutPoints : title|description|author|status|creationDate|lastModifiedDate|activationDate|expiryDate|tags|allowedRenderFormat|formmodel
@@ -144,7 +147,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 ## 示例响应 {#sample-response}
 
-```
+```json
 [
 {"resultCount":2},
     {"assetType":"FORM","name":"ExpenseClaim.xdp","id":"509fa2d5-e3c9-407b-b8dc-fa0ba08eb0ce",
@@ -175,4 +178,4 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
 * [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)
+* [在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)
