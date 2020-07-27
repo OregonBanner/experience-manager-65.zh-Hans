@@ -8,22 +8,25 @@ topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '916'
+ht-degree: 1%
 
 ---
 
 
 # 在电子邮件通知中使用元数据 {#use-metadata-in-an-email-notification}
 
-您可以使用分配任务步骤创建任务并将其分配给用户或用户组。 将任务分配给用户或用户组后，将向定义的用户或定义的用户组的每个成员发送电子邮件通知。 典型的电 [子邮件通知](../../forms/using/use-custom-email-template-assign-task-step.md) ，包含已分配任务的链接和与任务相关的信息。
+您可以使用分配任务步骤创建任务并将其分配给用户或用户组。 当任务被分配给用户或用户组时，将向已定义的用户或已定义用户组的每个成员发送电子邮件通知。 典型的 [电子邮件通](../../forms/using/use-custom-email-template-assign-task-step.md) 知包含指定任务的链接和与任务相关的信息。
 
-您可以使用电子邮件模板中的元数据在电子邮件通知中动态填充信息。 例如，以下电子邮件通知中的标题、描述、到期日期、优先级、工作流和最后日期的值在运行时（生成电子邮件通知时）动态选择。
+您可以在电子邮件模板中使用元数据动态填充电子邮件通知中的信息。 例如，在运行时（生成电子邮件通知时）动态选择以下电子邮件通知中的标题、描述、到期日、优先级、工作流和最后日期的值。
 
 ![默认电子邮件模板](assets/default_email_template_metadata_new.png)
 
-元数据以键值对的形式存储。 您可以在电子邮件模板中指定密钥，该密钥在运行时（生成电子邮件通知时）替换为值。 例如，在下面的代码示例中，“$ {workitem_title} ”是键。 在运行时，它被替换为值“Loan-Request”。
+元数据以键值对的形式存储。 您可以在电子邮件模板中指定密钥，该密钥在运行时（生成电子邮件通知时）替换为值。 例如，在下面的代码示例中，“$ {workitem_title}”是键。 在运行时，它被替换为值“Loan-Request”。
 
-```xml
+```html
 subject=Task Assigned - ${workitem_title}
 
 message=<html><body>\n\
@@ -96,7 +99,7 @@ message=<html><body>\n\
 
 ## 在电子邮件通知中使用系统生成的元数据 {#using-system-generated-metadata-in-an-email-notification}
 
-AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对）。 您可以在电子邮件模板中使用这些变量。 变量的值基于关联的表单应用程序。 下表列表了所有现成可用的元数据变量：
+一个AEM Forms应用程序提供了多个开箱即用的元数据变量（键值对）。 您可以在电子邮件模板中使用这些变量。 变量的值基于关联的表单应用程序。 下表列表了所有可用的现成元数据变量：
 
 <table>
  <tbody> 
@@ -105,12 +108,12 @@ AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对�
    <td>描述</td> 
   </tr> 
   <tr> 
-   <td>workitem_title</td> 
+   <td>工作项_标题</td> 
    <td>关联的表单应用程序的标题。</td> 
   </tr> 
   <tr> 
    <td>workitem_url</td> 
-   <td>用于访问关联的表单应用程序的URL。</td> 
+   <td>用于访问相关表单应用程序的URL。</td> 
   </tr> 
   <tr> 
    <td>workitem_description</td> 
@@ -125,7 +128,7 @@ AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对�
    <td>对关联的表单应用程序执行操作的上一个日期。</td> 
   </tr> 
   <tr> 
-   <td>工作项目工作流</td> 
+   <td>workitem_workflow</td> 
    <td>与表单应用程序关联的工作流的名称。</td> 
   </tr> 
   <tr> 
@@ -151,11 +154,11 @@ AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对�
 
 您还可以在电子邮件通知中使用自定义元数据。 自定义元数据除了包含系统生成的元数据之外，还包含信息。 例如，从数据库检索到的策略详细信息。 可以使用ECMAScript或OSGi捆绑在crx-repository中添加自定义元数据：
 
-### 使用ECMAScript添加自定义元数据 {#use-ecmascript-to-add-custom-metadata}
+### 使用ECMAScript添加自定义元数据  {#use-ecmascript-to-add-custom-metadata}
 
-[ECMAScript是一种脚本语言](https://en.wikipedia.org/wiki/ECMAScript) 。 它用于客户端脚本和服务器应用程序。 执行以下步骤以使用ECMAScript为电子邮件模板添加自定义元数据：
+[ECMAScript是](https://en.wikipedia.org/wiki/ECMAScript) 一种脚本语言。 它用于客户端脚本和服务器应用程序。 请执行以下步骤以使用ECMAScript为电子邮件模板添加自定义元数据：
 
-1. 使用管理帐户登录到CRX DE。 URL是https://&#39;[server]:[port]&#39;/crx/de/index.jsp
+1. 使用管理帐户登录CRX DE。 URL为https://&#39;[server]:[port]&#39;/crx/de/index.jsp
 
 1. 导航到/apps/fd/仪表板/scripts/metadataScripts。 创建扩展名为。ecma的文件。 例如，usermetadata.ecma
 
@@ -163,7 +166,7 @@ AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对�
 
 1. 向。ecma文件添加代码，该文件具有在键值对中生成自定义元数据的逻辑。 例如，以下ECMAScript代码为保险单生成自定义元数据：
 
-   ```
+   ```javascript
    function getUserMetaData()  {
        //Commented lines below provide an overview on how to set user metadata in map and return it.
        var HashMap = Packages.java.util.HashMap;
@@ -177,40 +180,36 @@ AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对�
 
 1. 单击“全部保存”。 现在，该脚本可在AEM工作流模型中进行选择。
 
-   ![assigntask-metadata](assets/assigntask-metadata.png)
+   ![分配任务——元数据](assets/assigntask-metadata.png)
 
 1. （可选）指定脚本的标题：
 
-   如果未指定标题，则“自定义元数据”字段将显示ECMAScript文件的完整路径。 执行以下步骤为脚本指定有意义的标题：
+   如果不指定标题，则“自定义元数据”字段将显示ECMAScript文件的完整路径。 请执行以下步骤为脚本指定有意义的标题：
 
    1. 展开脚本节点，右键单击 **[!UICONTROL jcr:content节点]** ，然后单击 **[!UICONTROL Mixins]**。
-   1. 在“编辑混音”对话框中键入mix:title，然后单 **击+**。
+   1. 在“编辑混音”对话框中键入mix:title，然 **后单击**+。
    1. 添加具有以下值的属性。
 
       | 名称 | jcr:title |
       |---|---|
       | 类型 | 字符串 |
-      | 值 | 指定脚本的标题。 例如，策略持有人的自定义元数据。 指定值显示在分配任务步骤中。 |
+      | 值 | 指定脚本的标题。 例如，策略持有者的自定义元数据。 指定值显示在分配任务步骤中。 |
 
 ### 使用OSGi捆绑和Java界面添加自定义元数据 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
-您可以使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据。 您可以创建一个OSGi捆绑包，它使用WorkitemUserMetadataService Java界面并将其部署到AEM Forms服务器。 它使元数据可在分配任务步骤中进行选择。
+您可以使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据。 您可以创建使用WorkitemUserMetadataService Java界面的OSGi捆绑包，并将其部署到AEM Forms服务器。 它使元数据可在分配任务步骤中进行选择。
 
-要创建带Java界面的OSGi捆绑，请将 [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar和 [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 文件添加为OSGi捆绑项目的外部依赖关系。 您可以使用任何Java IDE创建OSGi捆绑包。 以下过程提供了使用Eclipse创建OSGi包的步骤：
+要创建带有Java界面的OSGi捆绑，请将 [AEM Forms客户端](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) SDK jar和 [granite jar文件](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) 添加为OSGi捆绑项目的外部依赖项。 您可以使用任何Java IDE创建OSGi捆绑。 以下过程提供了使用Eclipse创建OSGi捆绑包的步骤：
 
 1. 打开Eclipse IDE。 导航到“文件”>“新建项目”。
 
-1. 在“选择向导”屏幕上，选择“管理项目”，然后单击“下一步”。
+1. 在“选择向导”屏幕上，选择“创建项目”，然后单击“下一步”。
 
-1. 在New Maven项目中，保留默认值，然后单击“下一步”。 选择原型并单击“下一步”。 例如，maven-archetype-quickstart。 指定项目的组ID、对象ID、版本和包，然后单击“完成”。 将创建项目。
+1. 在New Maven项目中，保留默认值，然后单击“下一步”。 选择原型并单击“下一步”。 例如，maven-archetype-quickstart。 为项目指定组ID、对象ID、版本和包，然后单击“完成”。 将创建项目。
 
 1. 打开pom.xml文件进行编辑，并将文件的所有内容替换为以下内容：
 
-   ```
-   
-   ```
-
-1. 添加使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据的源代码。 示例代码如下：
+1. 添加使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据的源代码。 示例代码如下所示：
 
    ```java
    package com.aem.impl;
@@ -246,10 +245,10 @@ AEM Forms应用程序提供了多种开箱即用的元数据变量（键值对�
    }
    ```
 
-1. 打开命令提示符，然后导航到包含OSGi捆绑项目的目录。 使用以下命令创建OSGi包：
+1. 打开命令提示符并导航到包含OSGi捆绑项目的目录。 使用以下命令创建OSGi包：
 
    `mvn clean install`
 
 1. 将捆绑包上传到AEM Forms服务器。 您可以使用AEM包管理器将包导入AEM Forms服务器。
 
-导入捆绑包后，您可以在“分配任务”步骤中选择元数据，并将其用作电子邮件模板。
+导入捆绑包后，您可以在分配任务步骤中选择元数据，并将其用作电子邮件模板。
