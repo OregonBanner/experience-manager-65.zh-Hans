@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -19,27 +22,27 @@ source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
 
 PDF实用程序服务提供以下快速开始。
 
-[快速开始（SOAP模式）:使用Java API将PDF文档转换为XDP文档](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API将PDF文档转换为XDP文档](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API将XDP文档转换为PDF文档](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API将XDP文档转换为PDF文档](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API检索PDF文档属性](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API检索PDF文档属性](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API为PDF文档设置保存样式](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
+[快速开始（SOAP模式）: 使用Java API为PDF文档设置保存样式](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
 
-[快速开始（SOAP模式）:整理PDF文档](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[快速开始（SOAP模式）: 清理PDF文档](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于Forms Server操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>AEM表单编程中的快速开始基于Forms Server操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API将PDF文档转换为XDP文档 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API将PDF文档转换为XDP文档 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
 以下代码示例将PDF文档转换为XDP文档。 (请参阅 [将PDF文档转换为XDP文档](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents)。
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -136,11 +139,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API将XDP文档转换为PDF文档 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API将XDP文档转换为PDF文档 {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
 
 以下代码示例将XDP文档转换为PDF文档。 (请参 [阅将XDP文档转换为PDF文档](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -236,11 +239,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API检索PDF文档属性 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API检索PDF文档属性 {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
-以下代码示例确定文档是否为PDF文档，如果是，则确定是可以阅读的最早的Acrobat版本。 (请参阅 [检索PDF文档属性](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties)。)
+以下代码示例确定文档是否为PDF文档，如果是，则确定是能够读取该数据的最早Acrobat版本。 (请参阅 [检索PDF文档属性](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -353,11 +356,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API为PDF文档设置保存样式 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API为PDF文档设置保存样式 {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
-下面的代码示例设置保存模式以快速查看Web，然后将PDF文档传递到加密服务，在该服务中加密该文件。 为快速Web查看而保存的加密PDF文档会另存为名为* FastWebViewLoan.pdf*的PDF文件。 (请参阅 [设置PDF文档保存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)。)
+下面的代码示例设置保存模式以快速查看Web，然后将PDF文档传递到加密服务，在该服务中加密它。 为快速Web查看而保存的加密PDF文档将另存为名为* FastWebViewLoan.pdf*的PDF文件。 (请参阅 [设置PDF文档保存模式](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the SOAP mode and contains the following JAR files
      * in the class path:
@@ -493,11 +496,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API将文档转换为PDF/A-2b文档 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
+## 快速开始（SOAP模式）: 使用Java API将文档转换为PDF/A-2b文档 {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
 
-以下Java代码示例将名为 *Loan.pdf* 的PDF文档转换为PDF/A-2b文档，该保存为名为 *LoanArchive.pdf的PDF文件*。 (请参 [阅将文档转换为PDF/A文档](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
+以下Java代码示例将名为Loan. *pdf的PDF文档* ，转换为另存为名为LoanArchive.pdf的PDF文件 *的PDF/A-2b文档*。 (请参 [阅将文档转换为PDF/A文档](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
@@ -581,11 +584,11 @@ public class CreatePDFADocument {
 }
 ```
 
-## 快速开始（SOAP模式）:整理PDF文档 {#quick-start-soap-mode-sanitizing-pdf-documents}
+## 快速开始（SOAP模式）: 清理PDF文档 {#quick-start-soap-mode-sanitizing-pdf-documents}
 
-以下Java代码示例清理了名为 *Loan.pdf的PDF文档*。
+以下Java代码示例清理了名为Loan.pdf *的PDF文档*。
 
-```as3
+```java
 /*
  * This Java Quick Start uses the SOAP mode and contains the following JAR files
  * in the class path:
