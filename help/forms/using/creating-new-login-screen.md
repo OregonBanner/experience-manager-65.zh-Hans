@@ -10,9 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 81249e13db9bd173d4251683ccaacbb7f71b3209
+source-git-commit: b4c1bc5f09491a8843a82c3589604f6717a76ea8
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 4%
 
 ---
@@ -74,124 +74,123 @@ ht-degree: 4%
 
 ***区域设置是语言代码***
 
-```
+```jsp
 String browserLocale = "en";
-       for(int i=0; i<locales.length; i++)
-       {
-           String prioperty = locales[i];
-           if(prioperty.trim().startsWith("en")) {
-               browserLocale = "en";
-               break;
-           }
-           if(prioperty.trim().startsWith("de")){
-               browserLocale = "de";
-               break;
-           }
-           if(prioperty.trim().startsWith("ja")){
-               browserLocale = "ja";
-               break;
-           }
-           if(prioperty.trim().startsWith("fr")){
-               browserLocale = "fr";
-               break;
-           }
-       }
 
-   To
+    for(int i=0; i<locales.length; i++)
+    {
+        String prioperty = locales[i];
+        if(prioperty.trim().startsWith("en")) {
+            browserLocale = "en";
+            break;
+        }
+        if(prioperty.trim().startsWith("de")){
+            browserLocale = "de";
+            break;
+        }
+        if(prioperty.trim().startsWith("ja")){
+            browserLocale = "ja";
+            break;
+        }
+        if(prioperty.trim().startsWith("fr")){
+            browserLocale = "fr";
+            break;
+        }
+    }
 
-   String browserLocale = "en";
-       for(int i=0; i<locales.length; i++)
-       {
-           String prioperty = locales[i];
-           if(prioperty.trim().startsWith("ar")) {
-               browserLocale = "ar";
-               break;
-           }
-           if(prioperty.trim().startsWith("en")) {
-               browserLocale = "en";
-               break;
-           }
-           if(prioperty.trim().startsWith("de")){
-               browserLocale = "de";
-               break;
-           }
-           if(prioperty.trim().startsWith("ja")){
-               browserLocale = "ja";
-               break;
-           }
-           if(prioperty.trim().startsWith("fr")){
-               browserLocale = "fr";
-               break;
-           }
-       }
-```
+To
 
-
-***区域设置是语言国家／地区代码***
-
-```
 String browserLocale = "en";
-       for(int i=0; i<locales.length; i++)
-       {
-           String prioperty = locales[i];
-           if(prioperty.trim().startsWith("en")) {
-               browserLocale = "en";
-               break;
-           }
-           if(prioperty.trim().startsWith("de")){
-               browserLocale = "de";
-               break;
-           }
-           if(prioperty.trim().startsWith("ja")){
-               browserLocale = "ja";
-               break;
-           }
-           if(prioperty.trim().startsWith("fr")){
-               browserLocale = "fr";
-               break;
-           }
-       }
+    for(int i=0; i<locales.length; i++)
+    {
+        String prioperty = locales[i];
+        if(prioperty.trim().startsWith("ar")) {
+            browserLocale = "ar";
+            break;
+        }
+        if(prioperty.trim().startsWith("en")) {
+            browserLocale = "en";
+            break;
+        }
+        if(prioperty.trim().startsWith("de")){
+            browserLocale = "de";
+            break;
+        }
+        if(prioperty.trim().startsWith("ja")){
+            browserLocale = "ja";
+            break;
+        }
+        if(prioperty.trim().startsWith("fr")){
+            browserLocale = "fr";
+            break;
+        }
+    }
+```jsp
 
-   To
-
-   String browserLocale = "en";
-       for(int i=0; i<locales.length; i++)
-       {
-           String prioperty = locales[i];
-           if(prioperty.trim().equalsIgnoreCase("ar-DZ")) {
-               browserLocale = "ar-DZ";
-               break;
-           }
-           if(prioperty.trim().startsWith("en")) {
-               browserLocale = "en";
-               break;
-           }
-           if(prioperty.trim().startsWith("de")){
-               browserLocale = "de";
-               break;
-           }
-           if(prioperty.trim().startsWith("ja")){
-               browserLocale = "ja";
-               break;
-           }
-           if(prioperty.trim().startsWith("fr")){
-               browserLocale = "fr";
-               break;
-           }
-       }
-```
-
-***更改默认区域设置***
-
-```
 String browserLocale = "en";
-   for(int i=0; i<locales.length; i++)
 
-   To
+    for(int i=0; i<locales.length; i++)
+    {
+        String prioperty = locales[i];
+        if(prioperty.trim().startsWith("en")) {
+            browserLocale = "en";
+            break;
+        }
+        if(prioperty.trim().startsWith("de")){
+            browserLocale = "de";
+            break;
+        }
+        if(prioperty.trim().startsWith("ja")){
+            browserLocale = "ja";
+            break;
+        }
+        if(prioperty.trim().startsWith("fr")){
+            browserLocale = "fr";
+            break;
+        }
+    }
 
-   String browserLocale = "ar";
-   for(int i=0; i<locales.length; i++)
+To
+
+String browserLocale = "en";
+    for(int i=0; i<locales.length; i++)
+    {
+        String prioperty = locales[i];
+        if(prioperty.trim().equalsIgnoreCase("ar-DZ")) {
+            browserLocale = "ar-DZ";
+            break;
+        }
+        if(prioperty.trim().startsWith("en")) {
+            browserLocale = "en";
+            break;
+        }
+        if(prioperty.trim().startsWith("de")){
+            browserLocale = "de";
+            break;
+        }
+        if(prioperty.trim().startsWith("ja")){
+            browserLocale = "ja";
+            break;
+        }
+        if(prioperty.trim().startsWith("fr")){
+            browserLocale = "fr";
+            break;
+        }
+    }
+***To change Default locale***
+
+```jsp
+
+String browserLocale = "en";
+for(int i=0; i<locales.length; i++)
+
+To
+
+String browserLocale = "ar";
+for(int i=0; i<locales.length; i++)
 ```
+
+
 
 ### 添加新文本或修改现有文本 {#adding-new-text-or-modifying-existing-text}
 
@@ -214,23 +213,28 @@ String browserLocale = "en";
 
    ![添加新键值对](assets/capture_new.png)
 
-
-```
-<div class="loginContent">
+   ```jsp
+   div class="loginContent">
+   
                        <span class="loginFlow"></code>
                        <span class="loginVersion"><%= i18n.get("Version: 11.0.0") %></code>
                        <span class="loginTitle"><%= i18n.get("Login") %></code>
                        <% if (loginFailed) {%>
+   ```
 
-   To
+   收件人
 
-   <div class="loginContent">
+   ```jsp
+   div class="loginContent">
+   
                        <span class="loginFlow"></code>
                        <span class="loginVersion"><%= i18n.get("My Welcome Message") %></code>
                        <span class="loginVersion"><%= i18n.get("Version: 11.0.0") %></code>
                        <span class="loginTitle"><%= i18n.get("Login") %></code>
                        <% if (loginFailed) {%>
-```
+   ```
+
+
 
 ### 添加新样式或修改现有样式 {#adding-new-style-or-modifying-existing-style}
 
@@ -266,13 +270,16 @@ css.newLoginContentArea {
 
 * 在中修改以 `/apps/livecycle/core/components/login.jsp`下。
 
-```
-<div class="loginContentArea">
 
-   To
+   ```jsp
+   <div class="loginContentArea">
+   ```
 
+   收件人
+
+   ```jsp
    <div class="newLoginContentArea">
-```
+   ```
 
 >[!NOTE]
 >
@@ -294,24 +301,27 @@ css.newLoginContentArea {
 
 例如：
 
-* 将以下内容添加到 `/apps/livecycle/core/content/login/login.css`
 
-```
-css.newLoginContainerBkg {
-    background-image: url(my_Bg.gif);
-    background-repeat: no-repeat;
-    background-position: left top;
-    width: 727px;
-   }
+```css
+.newLoginContainerBkg {
+
+ background-image: url(my_Bg.gif);
+ background-repeat: no-repeat;
+ background-position: left top;
+ width: 727px;
+}
 ```
 
-* 在中修改以 `/apps/livecycle/core/components/login.jsp`下。
 
-```
+    *在/apps/livecycle/core/components/login.jsp中修改以下内容。
+
+```jsp
 <div class="loginContainerBkg">
+```
 
-   To
+收件人
 
-   <div class="newLginContainerBkg">
+```jsp
+<div class="newLginContainerBkg">
 ```
 
