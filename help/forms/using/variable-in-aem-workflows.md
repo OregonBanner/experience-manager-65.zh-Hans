@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2113'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 1%
    * 表单数据模型——指定表单数据模型路径。
    * ArrayList —— 指定集合的子类型。
 
-1. 为变量指定可选描述，然后点 ![](assets/done_icon.png) 按以保存更改。 变量将显示在左窗格的可用列表中。
+1. 为变量指定可选描述，然 ![后点按done_icon](assets/done_icon.png) 以保存更改。 变量将显示在左窗格的可用列表中。
 
 在创建变量时，请考虑以下实践：
 
@@ -97,10 +97,10 @@ ht-degree: 1%
 执行以下步骤以添加变量之间的映射：
 
 1. 在工作流编辑页面上，点按工作流模型Sidekick中可用的步骤图标。
-1. 将设置变量步骤拖 **放到工作流** 编辑器中，点按该步骤并选 ![](assets/configure_icon.png) 择（配置）。
+1. 将“设置变量” **步骤拖放到** “工作流”编辑器中，点按该步骤并 ![选择configure_icon](assets/configure_icon.png) (Configure)。
 1. 在“设置变量”对话框中，选择“ **[!UICONTROL 映射]** ”> **[!UICONTROL “添加映射]**”。
 1. 在“映 **射变量** ”部分，选择要存储数据的变量，选择映射模式，并指定要存储在变量中的值。 映射模式因变量类型而异。
-1. 映射更多变量，实现有意义的表达式。 点按 ![](assets/done_icon.png) 以保存更改。
+1. 映射更多变量，实现有意义的表达式。 Tap ![done_icon](assets/done_icon.png) to save the changes.
 
 ### 示例1: 查询XML变量以设置字符串变量的值 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -273,8 +273,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 编辑变量 {#edit-a-variable}
 
 1. 在编辑工作流页面上，点按工作流模型Sidekick中的可用变量图标。 左窗格中的“变量”部分显示所有现有变量。
-1. 点按 ![](assets/edit.png) 要编辑的变量名称旁边的（编辑）图标。
-1. 编辑变量信息并点 ![](assets/done_icon.png) 按以保存更改。 不能编辑变 **[!UICONTROL 量的]** “名 **[!UICONTROL 称]** ”和“类型”字段。
+1. 点按 ![要编](assets/edit.png) 辑的变量名称旁的编辑（编辑）图标。
+1. 编辑变量信息，然 ![后点按done_icon](assets/done_icon.png) 以保存更改。 不能编辑变 **[!UICONTROL 量的]** “名 **[!UICONTROL 称]** ”和“类型”字段。
 
 ## 删除变量 {#delete-a-variable}
 
@@ -284,7 +284,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. 在编辑工作流页面上，点按工作流模型Sidekick中的可用变量图标。 左窗格中的“变量”部分显示所有现有变量。
 1. 点按要删除的变量名称旁边的删除图标。
-1. 点 ![](assets/done_icon.png) 按以确认和删除变量。
+1. 点 ![按done_icon](assets/done_icon.png) ，确认并删除变量。
 
 ## 引用 {#references}
 
