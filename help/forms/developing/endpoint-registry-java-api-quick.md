@@ -10,48 +10,51 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '545'
+ht-degree: 0%
 
 ---
 
 
 # 端点注册表Java API快速开始(SOAP) {#endpoint-registry-java-api-quickstart-soap}
 
-Java API快速开始(SOAP)可用于端点注册。
+Java API快速开始(SOAP)可用于端点注册表。
 
-[快速入门：使用Java API添加EJB端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+[快速入门： 使用Java API添加EJB端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加SOAP端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[快速入门： 使用Java API添加SOAP端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加监视文件夹端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[快速入门： 使用Java API添加监视文件夹端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加电子邮件端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
+[快速入门： 使用Java API添加电子邮件端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加远程处理端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+[快速入门： 使用Java API添加远程处理端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
-[快速入门：使用Java API添加TaskManager端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
+[快速入门： 使用Java API添加TaskManager端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
 
-[快速入门：使用Java API修改端点](endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
+[快速入门： 使用Java API修改端点](endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
-[快速入门：使用Java API删除端点](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+[快速入门： 使用Java API删除端点](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
-[快速入门：使用Java API检索端点连接器信息](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[快速入门： 使用Java API检索端点连接器信息](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于表单（如果您使用的是其他操作系统，如Unix），则使用适用操作系统支持的路径替换特定于窗口的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>如果您使用的是其他操作系统（如Unix），则“使用AEM表单进行编程”中的“快速开始”将基于表单，并将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 >[!NOTE]
 >
 >不能通过使用Web服务使用端点。
 
-## 快速入门：使用Java API添加EJB端点 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
+## 快速入门： 使用Java API添加EJB端点 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
-以下Java代码示例将一个EJB端点添加到名为 *MyApplication/EncryptDocument的服务*。 (请参阅 [添加EJB端点](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)。)
+以下Java代码示例将EJB端点添加到名为MyApplication/ *EncryptDocument的服务*。 (请参 [阅添加EJB端点](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -146,11 +149,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API添加SOAP端点 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
+## 快速入门： 使用Java API添加SOAP端点 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
-以下Java代码示例将一个SOAP端点添加到名为 *MyApplication/EncryptDocument的服务*。 (请参阅 [添加SOAP端点](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints)。)
+以下Java代码示例将SOAP端点添加到名为MyApplication/ *EncryptDocument的服务*。 (请参 [阅添加SOAP端点](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -246,15 +249,15 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API添加监视文件夹端点 {#quickstart-adding-a-watched-folder-endpoint-using-the-java-api}
+## 快速入门： 使用Java API添加监视文件夹端点 {#quickstart-adding-a-watched-folder-endpoint-using-the-java-api}
 
-以下Java代码示例将一个监视文件夹端点添加到名为 *MyApplication/EncryptDocument的服务*。 (请参阅 [添加监视文件夹端点](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints)。)
+以下Java代码示例将一个监视文件夹端点添加到名为MyApplication/EncryptDocument *的服务中*。 (请参阅 [添加监视的文件夹端点](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints)。)
 
 >[!NOTE]
 >
->必须在项目中包含WatchedFolderEndpointConfigConstants.java文件才能编译和运行以下快速开始。 (请参阅 [监视文件夹配置值常数文件](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file)。)
+>必须在项目中包含WatchedFolderEndpointConfigConstants.java文件，才能编译和运行以下快速开始。 (请参阅 [监视文件夹配置值常数文件](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -381,15 +384,15 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API添加电子邮件端点 {#quickstart-adding-an-email-endpoint-using-the-java-api}
+## 快速入门： 使用Java API添加电子邮件端点 {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-以下Java代码示例将电子邮件端点添加到名为 *MyApplication/* EncryptDocument的服务。(请参阅 [添加电子邮件端点](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)。)
+以下Java代码示例向名为MyApplication/EncryptDocument的服务添 *加电子邮件*&#x200B;端点。 (请参阅 [添加电子邮件端点](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)。)
 
 >[!NOTE]
 >
->必须在项目中包含EmailEndpointConfigConstants.java文件才能编译和运行以下快速开始。 (请参阅 [电子邮件配置值常数文件](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file)。)
+>必须在项目中包含EmailEndpointConfigConstants.java文件才能编译和运行以下快速开始。 (请参阅 [电子邮件配置值常量文件](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -524,11 +527,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API添加远程处理端点 {#quickstart-adding-a-remoting-endpoint-using-the-java-api}
+## 快速入门： 使用Java API添加远程处理端点 {#quickstart-adding-a-remoting-endpoint-using-the-java-api}
 
-以下Java代码示例将远程端点添加到名为 *MyApplication/EncryptDocument的服务*。 (请参阅 [添加远程处理端点](/help/forms/developing/programmatically-endpoints.md#adding-remoting-endpoints)。)
+以下Java代码示例将远程处理端点添加到名为MyApplication/ *EncryptDocument的服务*。 (请参阅 [添加远程处理端点](/help/forms/developing/programmatically-endpoints.md#adding-remoting-endpoints)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -629,11 +632,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API添加TaskManager端点 {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
+## 快速入门： 使用Java API添加TaskManager端点 {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
-以下Java代码示例将一个TaskManager端点添加到名为 *MyApplication/EncryptDocument的服务*。 请注意，类别的名称是 *EncryptProcess*。 (请参阅 [添加TaskManager端点](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints)。)
+以下Java代码示例将TaskManager端点添加到名为MyApplication/EncryptDocument *的服务*。 请注意，类别的名称为 *EncryptProcess*。 (请参 [阅添加TaskManager端点](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -738,11 +741,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API修改端点 {#quickstart-modifying-an-endpoint-using-the-java-api}
+## 快速入门： 使用Java API修改端点 {#quickstart-modifying-an-endpoint-using-the-java-api}
 
-以下Java代码示例修改了“监视的文件夹”端点。该端点用于 *MyApplication/EncryptDocument进程* 。 监视的文件夹已更改为 `C:\NewWatchedFolder`。 (请参阅 [修改端点](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints)。)
+以下Java代码示例修改监视的文件夹端点。该端点用于 *MyApplication/EncryptDocument进程* 。 已将监视的文件夹更改为 `C:\NewWatchedFolder`。 (请参阅 [修改端点](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -888,11 +891,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API删除端点 {#quickstart-removing-an-endpoint-using-the-java-api}
+## 快速入门： 使用Java API删除端点 {#quickstart-removing-an-endpoint-using-the-java-api}
 
 以下Java代码从名为MyApplication/EncryptDocument的服务中删除 *EJB端点*。 (请参阅 [删除端点](/help/forms/developing/programmatically-endpoints.md#removing-endpoints)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
@@ -1007,11 +1010,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门：使用Java API检索端点连接器信息 {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
+## 快速入门： 使用Java API检索端点连接器信息 {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
-以下Java代码检索有关“监视文件夹”端点的信息。 检索并显示有关每个配置值的信息。 此代码列表指定每个配置值是必需的还是可选的。 此外，还会显示每个配置值的名称和值。 (请参阅 [检索端点连接器信息](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)。)
+以下Java代码检索有关监视文件夹端点的信息。 检索并显示有关每个配置值的信息。 此代码列表指定每个配置值是必需值还是可选值。 此外，还显示每个配置值的名称和值。 (请参 [阅检索端点连接器信息](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)。)
 
-```as3
+```java
  /*
      * This Java Quick Start uses the following JAR files
      * 1. adobe-livecycle-client.jar
