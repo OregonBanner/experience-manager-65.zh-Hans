@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3271ad3a7d0daac731803975e12d79b77905068a
+source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
 workflow-type: tm+mt
-source-wordcount: '6107'
+source-wordcount: '6120'
 ht-degree: 1%
 
 ---
@@ -187,7 +187,7 @@ ht-degree: 1%
 
    ![Web频道资源](assets/webchannelassets.png)
 
-   点按文档片段，点 ![按configure_icon](assets/configure_icon.png) (Configure)，然后点 **[!UICONTROL 按交互式]** 通信Sidekick中的属性。 “变 **[!UICONTROL 量和数据模型对象]** ”部分列表变量，包括隐藏变量和文档片段中使用的数据模型对象。 使用每 ![个数据模型](assets/edit.svg) 对象或变量旁边的编辑（编辑）图标编辑属性。 此外，对于在Web文档中使 [用打印](#synchronize) 渠道自动生成的渠道片段 ![](assets/cancelinheritance.png) ，请使用每个数据模型对象和变量旁的（取消继承）图标 [来取消继承](#cancelinheritance) ，并可以编辑继承。
+   点按文档片段，点 ![按configure_icon](assets/configure_icon.png) (Configure)，然后点 **[!UICONTROL 按交互式]** 通信Sidekick中的属性。 “变 **[!UICONTROL 量和数据模型对象]** ”部分列表变量，包括隐藏变量和文档片段中使用的数据模型对象。 使用每 ![个数据模型](assets/edit.svg) 对象或变量旁边的编辑（编辑）图标编辑属性。 此外，对于在Web文档中使 [用打印渠道](#synchronize) 自动生成的渠道片段 ![，请使用每个数据模型对象和变量旁边的“取消继承](assets/cancelinheritance.png) ”（“取消继承”）图标来取消继承 [](#cancelinheritance) ，并能够编辑继承。
 
 1. 要在Web渠道中添加其他组件，请在选择Web渠道后点按 **[!UICONTROL 组件]**。 根据需要在交互通信的Web渠道中拖放组件，然后继续配置它们。
 
@@ -386,12 +386,12 @@ ht-degree: 1%
 
 #### 添加或编辑表单元格中的文本 {#addedittexttable}
 
-1. 在表单元格中选择默认文本框，然后点 ![](assets/edit.png) 按（编辑）。
-1. 在表单元格中键入文本，然后点 ![](assets/done_icon.png) 按以保存它。
+1. 在表单元格中选择默认文本框，然后点 ![按编](assets/edit.png) 辑（编辑）。
+1. 在表单元格中键入文本，然 ![后点按done_icon](assets/done_icon.png) 以保存它。
 
 #### 在表单元格和数据模型对象元素之间创建绑定 {#createbindingtablecells}
 
-1. 在表行中选择默认文本框，然后点 ![](assets/edit.png) 按（编辑）。
+1. 在表行中选择默认文本框，然后点按 ![编辑](assets/edit.png) （编辑）。
 1. 点按数据模型对象下拉列表，然后选择属性。
 1. 点按以保存表单元格和数据模型对象属性之间的绑定。
 
@@ -399,10 +399,10 @@ ht-degree: 1%
 
 #### 为表单元格中的文本创建超链接 {#createhyperlinktable}
 
-1. 在表单元格中选择默认文本框，然后点 ![](assets/edit.svg) 按（编辑）。
+1. 在表单元格中选择默认文本框，然后点 ![按编](assets/edit.svg) 辑（编辑）。
 1. 选择表单元格中的文本，然后点按超链接图标。
 1. 在路径字段中指 **定** URL。
-1. 点按 ![](assets/done_icon.png) 以保存超链接属性。
+1. 点按 ![done_icon](assets/done_icon.png) 以保存超链接属性。
 
 ![创建超链接](assets/create_hyperlink_table_new.png)
 
@@ -426,9 +426,9 @@ ht-degree: 1%
 
 要启用排序，请执行以下操作：
 
-1. 选择表，然后点 ![](assets/configure_icon.png) 按（配置）。 您还可以使用交互式通信 **的Sidekick** 中的内容浏览器选择表。
+1. 选择表并点按 ![configure_icon](assets/configure_icon.png) (Configure)。 您还可以使用交互式通信 **的Sidekick** 中的内容浏览器选择表。
 1. 选择 **启用排序。**
-1. 点 ![](assets/done_icon.png) 按以保存表属性。 列标题中的排序图标（向上和向下箭头）表示已启用排序。
+1. 点 ![按done_icon](assets/done_icon.png) 以保存表属性。 列标题中的排序图标（向上和向下箭头）表示已启用排序。
 
    ![启用排序](assets/enable_sorting_new-1.png)
 
@@ -479,7 +479,7 @@ ht-degree: 1%
 要添加按钮并定义其规则，请执行以下操作：
 
 1. 点按Web模板中的根面板，然 **后点** 按+，将 **Button组** 件添加到“交互通信”。
-1. 点按按钮组件，然 ![](assets/edit-rules.png) 后点按按钮以定义规则。
+1. 点按按钮组件，然 ![后点按edit](assets/edit-rules.png) -rules，以在点按按钮时定义规则。
 1. 在“ **时间** ”部分，从 **按钮下** 拉列表的状态中选择已单击。
 1. 在Then **部分** :
 
