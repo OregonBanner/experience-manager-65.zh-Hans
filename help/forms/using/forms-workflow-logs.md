@@ -10,16 +10,19 @@ topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 5%
 
 ---
 
 
 # 登录AEM Forms工作流{#logging-in-aem-forms-workflows}
 
-表单工作流程步骤提供了详细的日志，可方便地调试与工作流程相关的问题。 为AEM Forms工作流启用调试日志记录以视图日志。
+表单工作流步骤提供详细的日志，方便调试与工作流相关的问题。 为AEM Forms工作流启用调试日志记录以视图日志。
 
-默认情况下， **error.log文件中的** /crx-repository/logs/directory中提供所有日志信息 ** 。
+默认情况下，所有日志信息都 **在error.log文件** ( *位于/crx-repository/logs/directory)中可用* 。
 
 表单工作流的调试日志包括：
 
@@ -40,7 +43,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 写入JCR存储库的变量。 例如：
 
-   ```
+   ```verilog
       [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
    ```
 
@@ -49,14 +52,14 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 * 动态步骤元数据参数。 例如：
 
-   ```
+   ```verilog
    [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
     [DEBUG] Locale to be used for Document of Record is <locale>
    ```
 
-以下示例说明了“签名文档”步骤的日志：
+以下示例说明了“签名”文档步骤的日志：
 
-```xml
+```verilog
 [DEBUG] Executing sign document step.
 [DEBUG] Using adobe sign configuration: <path of adobe sign configuration>
 [DEBUG] Invoking Adobe Sign Service for creating agreement
@@ -66,29 +69,29 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 [DEBUG] Successfully finished sign document step
 ```
 
-使用日志评估：
+使用日志可评估：
 
-* 您使用的是正确的Adobe Sign配置。
+* 您使用的是正确的adobe sign配置。
 * Adobe Sign服务在成功创建协议后退出。
 * 签名文档步骤将退出并显示成功消息。
 
-如果有异常，可以视图完整的堆栈跟踪来评估错误的原因。
+如果存在异常，可以视图完整的堆栈跟踪来评估错误的原因。
 
 ## 为AEM Forms工作流启用调试日志记录 {#enable-debug-logging-for-aem-forms-workflows}
 
-执行以下步骤以启用AEM Forms工作流的调试日志记录：
+执行以下步骤以为AEM Forms工作流启用调试日志记录：
 
-1. 转至AEM Web控制台配置管理器：
+1. 转到AEM Web控制台配置管理器，网址为：
 
-   https://&#39;[服务器]:[port]&#39;/system/console/configMgr
+   https://&#39;[server]:[]port&#39;/system/console/configMgr
 
-1. 选择“ **[!UICONTROL Sling]** ”>“ **[!UICONTROL 日志支持”]**。
+1. 选择 **[!UICONTROL Sling]** > **[!UICONTROL Log Support]**。
 1. 点按 **[!UICONTROL 添加新记录器。]**
-1. 选择 **[!UICONTROL 调试]** ，作为日 **[!UICONTROL 志级别]**。
+1. 选 **[!UICONTROL 择]** “调试 **[!UICONTROL ”作为日志级]**。
 1. 指定日志文件的位置。 日志文件的默认位置为： *logs\error.log*
-1. 在“记录器”列中 **将包的名称指定为com.adobe.granite.workflow** . **[!UICONTROL core]** 。
+1. 在“记录器”列中 **将包的名称指定为com** .adobe.granite. **[!UICONTROL workflow]** .core。
 
-   执行这些步骤可存储 **com.adobe.granite.workflow.core包的调试日志** 。 点 **[!UICONTROL 按+]** ，然后将以下包名称添加到列表:
+   执行这些步骤可以存储com.adobe.granite. **workflow.core包的调试日志** 。 点按 **[!UICONTROL +]** 并将以下包名称添加到列表:
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
