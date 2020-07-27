@@ -6,7 +6,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 **JSON文件中的单个记录**
 
-```JSON
+```json
 {
    "employee": {
        "name": "Sara",
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 **JSON文件中的多个记录**
 
-```JSON
+```json
 [{
    "employee": {
        "name": "John",
@@ -179,7 +179,7 @@ ht-degree: 0%
 1. [在AEM实例上使用Apache Maven构建和部署](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) AEM项目。
 1. 在 [AEM项目的POM文件的依赖项列表中](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) 添加AEM Forms客户端SDK版本6.0.12或更高版本。 例如，
 
-   ```XML
+   ```xml
        <dependency>
            <groupId>com.adobe.aemfd</groupId>
            <artifactId>aemfd-client-sdk</artifactId>
