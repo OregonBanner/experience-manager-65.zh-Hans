@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 1%
@@ -49,11 +49,11 @@ ht-degree: 1%
 * 找到 `AEM Communities User Generated Content Contribution Limits Configuration`。
 * 选择编辑图标。
 
-![chlimage_1-127](assets/chlimage_1-127.png)
+![配置限制](assets/configure-limits.png)
 
 * **[!UICONTROL 自动应用UGC贡献限制]**
 
-   如果选中此项，则在用户注册为社区成员时自动设置缴费限制。 这反映在社区成员的用户档案中，并可从成员控制台中启用/ [禁用](members.md)。 具有域允许列表中电子邮件地址的新成员从不受限。
+   如果选中此项，则在用户注册为社区成员时自动设置缴费限制。 这反映在社区成员的用户档案中，并可从成员控制台中启用/ [禁用](members.md)。 具有来自一域的电子邮允许列表件地址的新成员从不受限。
 
    默认为未选中。
 
@@ -71,11 +71,11 @@ ht-degree: 1%
 
 * **[!UICONTROL 域]**
 
-   一个或多个电子邮件域的allowlist列表。 选择+图标以添加其他条目。
+   一个允许列表或多个电子邮件域的列表。 选择+图标以添加其他条目。
 
-   在自动应用UGC贡献限制时，在域的允许列表中具有电子邮件地址的用户不受影响。 例如，如果将域 `mycompany.com` 添加到域的列表，则始终不限制具有电子邮件地址 `me@mycompany.com` 的成员进行发布。
+   自动应用UGC贡献限允许列表制时，在域下具有电子邮件地址的用户不受影响。 例如，如果将域 `mycompany.com` 添加到域的列表，则始终不限制具有电子邮件地址 `me@mycompany.com` 的成员进行发布。
 
-   默认为空allowlist。
+   默认为空允许列表。
 
 * **[!UICONTROL 消息传递收件人]**
 
