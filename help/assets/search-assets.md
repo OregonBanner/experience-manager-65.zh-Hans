@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
 workflow-type: tm+mt
-source-wordcount: '5830'
+source-wordcount: '5860'
 ht-degree: 6%
 
 ---
@@ -257,7 +257,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 * [!DNL Experience Manager] 在您从搜索结果中选择资产的属性，然后取消搜索后，可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 在搜索文件夹或文件和文件夹时，无法按任何参数对搜索结果进行排序。
 * 如果按回车键时未在Omnisearch栏中键入任何内容， [!DNL Experience Manager] 则返回仅包含文件的列表，而不包含文件夹。 如果您在不使用关键字的情况下专门搜索文 [!DNL Experience Manager] 件夹，则不返回任何结果。
-* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -272,7 +272,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 * 在监视资产的审核状态时，请使用适当的选项来查找已批准的资产或待批准的资产。
 * 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况渠道按使用情况得分、展示次数、点击次数和显示资产的媒体类别进行分组。
-* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 * 要搜索不包含强制元数据的资产，请参阅强制 [元数据](#mandatorymetadata)。
 * 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
 * 全文搜索支持——和^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用“笔记本——美容”而不是“笔记本——美容”。
@@ -325,6 +325,8 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 资产发现依赖于DAM内容（包括元数据）的索引。 更快、更准确的资源发现依赖于优化的索引和适当的配置。 请参 [阅搜索索引](/help/assets/performance-tuning-guidelines.md#search-indexes)、 [Oak查询和索引](/help/sites-deploying/queries-and-indexing.md)，以及 [最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
+要从搜索结果中排除特定资产，请使 `excludedPath` 用Lucene索引上的属性。
+
 ### 视觉或相似性搜索 {#configvisualsearch}
 
 视觉搜索使用智能标记， [!DNL Experience Manager] 并且需要6.5.2.0或更高版本。 配置智能标记功能后，请执行以下步骤：
@@ -364,6 +366,8 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 ### 上传资产时提取文本 {#extracttextupload}
 
 您可以配 [!DNL Experience Manager] 置为在用户上传资产（如PSD或PDF文件）时从资产中提取文本。 [!DNL Experience Manager] 索引提取的文本，并帮助用户根据提取的文本搜索这些资产。 请参阅 [上传资产](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+
+如果文本提取对您的部署占用资源过多，请考虑禁 [用文本提取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
 ### 用于筛选搜索结果的自定义谓词 {#custompredicates}
 
