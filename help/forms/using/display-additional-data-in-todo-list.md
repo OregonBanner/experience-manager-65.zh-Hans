@@ -1,8 +1,8 @@
 ---
 title: 在ToDo列表中显示其他数据
 seo-title: 在ToDo列表中显示其他数据
-description: 如何自定义LiveCycle AEM Forms工作区的“待办事项”列表的显示，以显示除默认设置之外的更多信息。
-seo-description: 如何自定义LiveCycle AEM Forms工作区的“待办事项”列表的显示，以显示除默认设置之外的更多信息。
+description: 如何自定义LiveCycle列表工作区的“待办事项”AEM Forms的显示，以显示除默认值之外的更多信息。
+seo-description: 如何自定义LiveCycle列表工作区的“待办事项”AEM Forms的显示，以显示除默认值之外的更多信息。
 uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,10 @@ topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
@@ -25,18 +28,18 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## 可添加的内容 {#what-can-be-added}
 
-您可以添加服务器发送的 `task.json` 中可用的信息。 这些信息可以添加为纯文本，也可以使用样式来设置信息的格式。
+您可以添加服务器发 `task.json` 送的信息。 该信息可以添加为纯文本，也可以使用样式设置信息的格式。
 
-有关JSON对象描述的详细信息，请参阅 [此](/help/forms/using/html-workspace-json-object-description.md) 文章。
+有关JSON对象描述的详细信息，请参 [阅此](/help/forms/using/html-workspace-json-object-description.md) 文章。
 
-## 显示任务上的信息 {#displaying-information-on-a-task}
+## 在任务上显示信息 {#displaying-information-on-a-task}
 
-1. 按照AEM Forms工 [作区自定义的常规步骤操作](../../forms/using/generic-steps-html-workspace-customization.md)。
-1. 要显示任务的附加信息，相应的键值对必须添加到任务块中 `translation.json`。
+1. 按照AEM Forms [工作区自定义的常规步骤操作](../../forms/using/generic-steps-html-workspace-customization.md)。
+1. 要显示任务的附加信息，必须在任务块中添加相应的键值对 `translation.json`。
 
-   例如，对英 `/apps/ws/locales/en-US/translation.json` 语的更改：
+   例如，英 `/apps/ws/locales/en-US/translation.json` 语更改：
 
-   ```
+   ```json
    "task" : {
            "reminder" : {
                "value" : "Reminder",
@@ -112,7 +115,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 例如，在任务块中添加信息：
 
-   ```
+   ```json
    "stepname" : {
                "value" : "Step Name",
                "tooltip" : "This task belongs to __stepName__ step"
@@ -135,7 +138,7 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 ## 在HTML模板中添加条目 {#adding-entry-in-the-html-template}
 
-最后，您需要在开发包中为要添加到任务的每个属性加入一个条目。 要创建AEM表单，请参阅构建AEM Forms工作区代码。
+最后，您需要在开发包中包含要添加到任务的每个属性的条目。 要创建一个工作区，请参阅构建AEM Forms工作区代码。
 
 1. 复制 `task.html`:
 
@@ -144,8 +147,8 @@ source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 
 1. 将新信息添加到 `/apps/ws/js/runtime/templates/task.html`。
 
-   例如，添加位于 `div class="taskProperties"`:
+   例如，添加 `div class="taskProperties"`:
 
-   ```
+   ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
