@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 1%
@@ -326,7 +326,7 @@ AEM Forms门户草稿和提交组件允许用户将表单另存为草稿并稍�
 
 ## 验证文件名的长度  {#verify-length-of-the-file-name}
 
-Forms Portal的数据库实现使用其他元数据表。 表具有基于表的键和id列的组合主键。 MySQL允许最长255个字符的主键。 您可以使用以下客户端验证脚本验证附加到文件构件的文件名的长度。 附加文件时将运行验证。 当文件名大于150（包括扩展名）时，下面过程中提供的脚本会显示一条消息。 您可以修改脚本以检查其中是否有不同数量的字符。
+Forms Portal的数据库实现使用其他元数据表。 表具有基于表的键和id列的组合主键。 MySQL允许最长255个字符的主键。 您可以使用以下客户端验证脚本验证附加到文件构件的文件名的长度。 附加文件时将运行验证。 当文件名大于150（包括扩展名）时，下面过程中提供的脚本会显示一条消息。 您可以修改脚本，以检查其中是否有不同数量的字符。
 
 请执行以下步骤来创 [建客户端库](/help/sites-developing/clientlibs.md) ，并使用该脚本：
 
@@ -337,7 +337,7 @@ Forms Portal的数据库实现使用其他元数据表。 表具有基于表的�
 
 1. 右键单击节点，单 **[!UICONTROL 击新建文件]**，然后创建扩展名为。txt的文件。 例如，将 `js.txt`以下代码添加到新创建的。txt文件，然后单击“全 **[!UICONTROL 部保存”]**。
 
-   ```
+   ```javascript
    #base=util
     util.js
    ```
@@ -348,7 +348,7 @@ Forms Portal的数据库实现使用其他元数据表。 表具有基于表的�
 
 1. 将以下代码添加到util.js文件，然后单击“全 **[!UICONTROL 部保存”]**。 代码验证文件名的长度。
 
-   ```
+   ```javascript
    /*
     * ADOBE CONFIDENTIAL
     * ___________________
