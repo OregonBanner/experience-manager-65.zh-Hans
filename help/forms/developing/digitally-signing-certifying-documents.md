@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '16977'
 ht-degree: 0%
@@ -182,7 +182,7 @@ ht-degree: 0%
    * 使用对 `BLOB` 象的构造函数创建对象。 该 `BLOB` 对象用于存储将包含签名字段的PDF文档。
    * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个字符串值来创建对象，该字符串值表示PDF文档的文件位置以及打开文件的模式。
    * 创建存储对象内容的字节数 `System.IO.FileStream` 组。 您可以通过获取对象的属性来确定字 `System.IO.FileStream` 节数组的大 `Length` 小。
-   * 通过调用对象的方法并传递要读取的 `System.IO.FileStream` 字节数 `Read` 组、开始位置和流长度，用流数据填充字节数组。
+   * 通过调用对象的方法并传递要读取 `System.IO.FileStream` 的字节数 `Read` 组、开始位置和流长度，用流数据填充字节数组。
    * 通过 `BLOB` 将对象属性 `MTOM` 赋予字节数组的内容来填充对象。
 
 1. 添加签名字段
@@ -456,7 +456,7 @@ ht-degree: 0%
 
    * 使用对 `PDFSignatureFieldProperties` 象的构造函数创建对象。 对象 `PDFSignatureFieldProperties` 存储签名字段锁定字典和种子值字典信息。
    * 使用对 `PDFSeedValueOptionSpec` 象的构造函数创建对象。 此对象允许您设置种子值字典值。
-   * 通过调用对象的方法并传递文档值 `PDFSeedValueOptionSpec` ，禁止 `setMdpValue` 对PDF明细列表 `MDPPermissions.NoChanges` 进行更改。
+   * 通过调用对象的方法并传递文档 `PDFSeedValueOptionSpec` 值，禁 `setMdpValue` 止对PDF明细列表 `MDPPermissions.NoChanges` 进行更改。
    * 使用对 `FieldMDPOptionSpec` 象的构造函数创建对象。 此对象允许您设置签名字段锁定字典值。
    * 通过调用对象的方法并传递文档值 `FieldMDPOptionSpec` ，锁定PDF明细列表 `setMdpValue` 中的所有 `FieldMDPAction.ALL` 字段。
    * 通过调用对象的方法并传 `PDFSignatureFieldProperties` 递对象来 `setSeedValue` 设置种子值字 `PDFSeedValueOptionSpec` 典信息。
@@ -589,8 +589,8 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 
 您可以在cknfastrc文件中添加以下配置值，该文件位于/opt/nfast/cknfastrc(或c:\nfast\cknfastrc):
 
-```as3
- CKNFAST_ASSUME_SINGLE_PROCESS=0
+```shell
+    CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
 在将此配置值添加到cknfastrc文件后，无需重新启动J2EE应用程序服务器即可使用新凭据。
@@ -650,7 +650,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 
 * **无检查**: 不执行吊销检查。
 * **BestEffort**: 始终尝试检查是否吊销链中的所有证书。 如果检查中出现任何问题，则假定撤销有效。 如果发生任何故障，请假定证书未被吊销。
-* **检查是否可用：** 检查是否吊销链中的所有证书（如果有吊销信息）。 如果检查中出现任何问题，则假定撤销无效。 如果发生任何故障，则假定证书已被吊销且无效。 （这是默认值。）
+* **检查是否可用：** 检查是否吊销链中的所有证书（如果有吊销信息）。 如果检查中出现任何问题，则假定撤销无效。 如果发生任何故障，则假定证书被吊销且无效。 （这是默认值。）
 * **始终检查**: 检查是否吊销链中的所有证书。 如果任何证书中不存在吊销信息，则假定吊销无效。
 
 要对证书执行吊销检查，可以使用对象指定证书吊销列表(CRL)服务器的 `CRLOptionSpec` URL。 但是，如果要执行吊销检查，但未指定CRL服务器的URL，则签名服务将从证书获取该URL。
@@ -1008,7 +1008,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
    * 使用对 `BLOB` 象的构造函数创建对象。 对象 `BLOB` 用于存储表单数据。
    * 通过调 `System.IO.FileStream` 用其构造函数并传递一个字符串值来创建对象，该字符串值表示包含表单数据的XML文件的文件位置以及打开文件的模式。
    * 创建存储对象内容的字节数 `System.IO.FileStream` 组。 您可以通过获取对象的属性来确定字 `System.IO.FileStream` 节数组的大 `Length` 小。
-   * 通过调用对象的方法并传递要读取的 `System.IO.FileStream` 字节数 `Read` 组、开始位置和流长度，用流数据填充字节数组。
+   * 通过调用对象的方法并传递要读取 `System.IO.FileStream` 的字节数 `Read` 组、开始位置和流长度，用流数据填充字节数组。
    * 通过 `BLOB` 为对象的属性 `MTOM` 指定字节数组的内容来填充对象。
    * 创建 `PDFFormRenderSpec` 用于设置运行时选项的对象。 为对象 `true` 的字 `PDFFormRenderSpec` 段指定 `generateServerAppearance` 值。
    * 调用对 `FormsServiceClient` 象的方 `renderPDFForm2` 法并传递以下值：
@@ -1047,7 +1047,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 1. 保存已签名的PDF文档
 
    * 通过调 `System.IO.FileStream` 用对象的构造函数创建对象。 传递一个字符串值，它表示已签名PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储方 `BLOB` 法返回的对象的内 `sign` 容。 通过获取对象数据成员的 `BLOB` 值填充字 `MTOM` 节数组。
+   * 创建一个字节数组，用于存储方 `BLOB` 法返回的对象的内 `sign` 容。 通过获取对象数据成员的值 `BLOB` 填充字节 `MTOM` 数组。
    * 通过调 `System.IO.BinaryWriter` 用对象的构造函数并传递该对 `System.IO.FileStream` 象来创建。
    * 通过调用对象的方法并传递字节数组，将字 `System.IO.BinaryWriter` 节数组的 `Write` 内容写入PDF文件。
 
@@ -1077,8 +1077,8 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 
 您可以在cknfastrc文件中添加以下配置值，该文件位于/opt/nfast/cknfastrc(或c:\nfast\cknfastrc):
 
-```as3
-             CKNFAST_ASSUME_SINGLE_PROCESS=0
+```shell
+    CKNFAST_ASSUME_SINGLE_PROCESS=0
 ```
 
 在将此配置值添加到cknfastrc文件后，无需重新启动J2EE应用程序服务器即可使用新凭据。
@@ -1238,7 +1238,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
    * 使用对 `BLOB` 象的构造函数创建对象。 该对 `BLOB` 象用于存储经过认证的PDF文档。
    * 通过调 `System.IO.FileStream` 用其构造函数并传递一个字符串值来创建对象，该字符串值表示要验证的PDF文档的文件位置以及打开文件的模式。
    * 创建存储对象内容的字节数 `System.IO.FileStream` 组。 您可以通过获取对象的属性来确定字 `System.IO.FileStream` 节数组的大 `Length` 小。
-   * 通过调用对象的方法并传递要读取 `System.IO.FileStream` 的字节数 `Read` 组、开始位置和流长度，用流数据填充字节数组。
+   * 通过调用对象的方法并传递要读取的 `System.IO.FileStream` 字节数 `Read` 组、开始位置和流长度，用流数据填充字节数组。
    * 通过 `BLOB` 为对象的数据成 `MTOM` 员分配字节数组的内容来填充对象。
 
 1. 验证PDF文档
@@ -1269,7 +1269,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 1. 将认证的PDF文档另存为PDF文件
 
    * 通过调 `System.IO.FileStream` 用其构造函数并传递一个字符串值来创建对象，该字符串值表示将包含经认证的PDF文档的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储方 `BLOB` 法返回的对象的内 `certify` 容。 通过获取对象数据成员的值 `BLOB` 填充字节 `binaryData` 数组。
+   * 创建一个字节数组，用于存储方 `BLOB` 法返回的对象的内 `certify` 容。 通过获取对象数据成员的 `BLOB` 值填充字 `binaryData` 节数组。
    * 通过调 `System.IO.BinaryWriter` 用对象的构造函数并传递该对 `System.IO.FileStream` 象来创建。
    * 通过调用对象的方法并传递字节数组，将字 `System.IO.BinaryWriter` 节数组的 `Write` 内容写入PDF文件。
 
@@ -1428,7 +1428,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 
 1. 确定签名的状态
 
-   * 通过调用对象的方法确定 `PDFSignatureVerificationInfo` 签名的 `getStatus` 状态。 此方法返回 `SignatureStatus` 指定签名状态的对象。 例如，如果未修改已签名的PDF文档，则此方法返回 `SignatureStatus.DocumentSigNoChanges`。
+   * 通过调用对象的方法确定 `PDFSignatureVerificationInfo` 签名的状 `getStatus` 态。 此方法返回 `SignatureStatus` 指定签名状态的对象。 例如，如果未修改已签名的PDF文档，则此方法返回 `SignatureStatus.DocumentSigNoChanges`。
 
 1. 确定签署方的身份
 
@@ -1502,7 +1502,7 @@ PDF文档通过公钥技术进行签名。 签署方有两个密钥： 公钥和
 1. 确定签署方的身份
 
    * 通过检索对象数据成员的值来确 `PDFSignatureVerificationInfo` 定签署方 `signer` 的身份。 此成员返回一个 `IdentityInformation` 对象。
-   * 检索对 `IdentityInformation` 象的数 `status` 据成员以确定签署方的身份。 此明细列表成员返回 `IdentityStatus` 指定标识的值。 例如，如果签署方受信任，则此成员将返回 `IdentityStatus.TRUSTED`。
+   * 检索对 `IdentityInformation` 象的数 `status` 据成员，以确定签署方的身份。 此明细列表成员返回 `IdentityStatus` 指定标识的值。 例如，如果签署方受信任，则此成员将返回 `IdentityStatus.TRUSTED`。
 
 **另请参阅**
 
@@ -1869,7 +1869,7 @@ AEM Forms提供了验证PDF文档中所有数字签名的方法。 假定PDF文�
 1. 将PDF文档另存为PDF文件
 
    * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个字符串值来创建对象，该字符串值表示PDF文档的文件位置，该文件包含空签名字段以及打开文件的模式。
-   * 创建一个字节数组，用于存储方 `BLOB` 法返回的对象的内 `sign` 容。 通过获取对象数据成员的值 `BLOB` 填充字节 `MTOM` 数组。
+   * 创建一个字节数组，用于存储方 `BLOB` 法返回的对象的内 `sign` 容。 通过获取对象数据成员的 `BLOB` 值填充字 `MTOM` 节数组。
    * 通过调 `System.IO.BinaryWriter` 用对象的构造函数并传递该对 `System.IO.FileStream` 象来创建。
    * 通过调用对象的方法并传递字节数组，将字 `System.IO.BinaryWriter` 节数组的 `Write` 内容写入PDF文件。
 
