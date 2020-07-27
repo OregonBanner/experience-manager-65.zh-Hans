@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
 workflow-type: tm+mt
-source-wordcount: '1893'
+source-wordcount: '1894'
 ht-degree: 1%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-* [AEM 6.5Platform](/help/sites-deploying/deploy.md)
+* [AEM 6.5平台](/help/sites-deploying/deploy.md)
 
 * AEM Communities许可
 
 * 针对以下对象的可选许可证：
 
-   * [AdobeAnalytics社区版功能](/help/communities/analytics.md)
+   * [AdobeAnalytics社区功能](/help/communities/analytics.md)
    * [用于MSRP的MongoDB](/help/communities/msrp.md)
    * [适用于ASRP的Adobe Cloud](/help/communities/asrp.md)
 
@@ -138,7 +138,7 @@ AEM 6.5 Communities GA随社区包一起提供。 要了解AEM 6.5 Communities�
 
 #### 示例： 已安装的MySQL连接器包 {#example-installed-mysql-connector-bundle}
 
-![](/help/communities/assets/chlimage_1-125.png)
+![](../assets/chlimage_1-125.png)
 
 ### SCORM包 {#scorm-package}
 
@@ -156,7 +156,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 #### SCORM日志记录 {#scorm-logging}
 
-安装后，所有启用活动都会直接记录到系统控制台。
+安装后，所有启用活动都将直接记录到系统控制台。
 
 如果需要，可以将包的日志级别设置为“警 `RusticiSoftware.*` 告”。
 
@@ -216,13 +216,13 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 ### 主发布者 {#primary-publisher}
 
-当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为不应在所有实例(如依赖 **`primary publisher`** **notifications **或Adobe Depication)上发生的活动 **的实例**。
+当选择的部署是发 [布场](/help/communities/topologies.md#tarmk-publish-farm)，则必须将一个AEM发布实例标识为不应在所有实例(如依赖 **`primary publisher`** **通知**或AdobeAnalytics的功能)上发生的 **活动**。
 
 默认情况下， `AEM Communities Publisher Configuration` OSGi配置配置中选中了复 **`Primary Publisher`** 选框，这样，发布场中的所有发布实例都将自标识为主实例。
 
 因此，必须编辑所 **有辅助发布实例的配置** ，以取消选中 **`Primary Publisher`** 复选框。
 
-![](/help/communities/assets/chlimage_1-126.png)
+![](../assets/chlimage_1-126.png)
 
 对于发布场中的所有其他（辅助）发布实例：
 
@@ -266,11 +266,11 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 
 #### 默认代理（发布） {#default-agent-publish}
 
-![](/help/communities/assets/chlimage_1-127.png)
+![配置限制](../assets/configure-limits.png)
 
 #### 反向复制代理（发布反向） {#reverse-replication-agent-publish-reverse}
 
-![](/help/communities/assets/chlimage_1-128.png)
+![](../assets/chlimage_1-128.png)
 
 ### 作者上的隧道服务 {#tunnel-service-on-author}
 
@@ -293,11 +293,11 @@ AEM CommunitiesSCORM引擎是启用功能 [的](/help/communities/overview.md#en
 * 选中**enable **box
 * select **Save**
 
-![](/help/communities/assets/chlimage_1-129.png)
+![](../assets/chlimage_1-129.png)
 
 ### 复制加密密钥 {#replicate-the-crypto-key}
 
-AEM Communities有两种功能，要求所有AEM服务器实例使用相同的加密密钥。 这些是 [Analytics](/help/communities/analytics.md) , [ASRP](/help/communities/asrp.md)。
+AEM Communities有两种功能，要求所有AEM服务器实例使用相同的加密密钥。 这些是 [Analytics](/help/communities/analytics.md) 和 [ASRP](/help/communities/asrp.md)。
 
 从AEM 6.3开始，密钥材料存储在文件系统中，不再存储在存储库中。
 
@@ -350,7 +350,7 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
 
 * [刷新Granite Crypto捆绑](#refresh-the-granite-crypto-bundle)
 
-![](/help/communities/assets/chlimage_1-130.png)
+![](../assets/chlimage_1-130.png)
 
 #### 刷新Granite加密捆绑 {#refresh-the-granite-crypto-bundle}
 
@@ -361,7 +361,7 @@ AEM Communities有两种功能，要求所有AEM服务器实例使用相同的�
 * 定 `Adobe Granite Crypto Support` 位捆绑(com.adobe.granite.crypto)
 * 选择刷 **新**
 
-![](/help/communities/assets/chlimage_1-131.png)
+![](../assets/chlimage_1-131.png)
 
 * 稍后，应显示**成功**对话框：
    `Operation completed successfully.`
