@@ -1,15 +1,15 @@
 ---
 title: 安装和配置数据捕获功能
 seo-title: 安装和配置数据捕获功能
-description: 安装和配置自适应表单、PDF forms和HTML5表单。 配置AdobeAnalytics和Adobe Target的自适应表单，以根据其用户档案分析表单和目标用户的使用情况。
-seo-description: 安装和配置自适应表单、PDF forms和HTML5表单。 配置AdobeAnalytics和Adobe Target的自适应表单，以根据其用户档案分析表单和目标用户的使用情况。
+description: 安装和配置自适应表单、PDF forms和HTML5表单。 配置AdobeAnalytics和Adobe Target，使其能够适应自适应表单，从而根据表单和目标用户的用户档案分析表单的使用情况。
+seo-description: 安装和配置自适应表单、PDF forms和HTML5表单。 配置AdobeAnalytics和Adobe Target，使其能够适应自适应表单，从而根据表单和目标用户的用户档案分析表单的使用情况。
 uuid: 5d49032a-4dea-4f21-9dad-a7a30c5872ea
 topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a18a018181a779b9f48ef3e39c26410a1bc4919b
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 1%
@@ -126,7 +126,7 @@ AEM Forms加载项包是部署到AEM上的应用程序。 该软件包包含AEM 
 
 ## 安装后配置 {#post-installation-configurations}
 
-AEM Forms有一些必选和可选配置。 必需配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置调度程序、Forms Portal、Adobe Sign、AdobeAnalytics和Adobe Target。
+AEM Forms有一些必选和可选配置。 必需配置包括配置BouncyCastle库和序列化代理。 可选配置包括配置调度程序、Forms门户、Adobe Sign、AdobeAnalytics和Adobe Target。
 
 ### 强制安装后配置 {#mandatory-post-installation-configurations}
 
@@ -141,7 +141,7 @@ AEM Forms有一些必选和可选配置。 必需配置包括配置BouncyCastle�
 
 1. 将以下属性添加到sling.properties文件：
 
-   ```
+   ```shell
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
