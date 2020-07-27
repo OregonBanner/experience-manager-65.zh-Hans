@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -110,7 +110,7 @@ ht-degree: 0%
 * 在原始自适应表单上配置的提交操作将保留在嵌入式表单中。
 * 自适应表单规则在嵌入式表单中保留并具有完全功能。
 * 在原始自适应表单中配置的体验定位和A/B测试在嵌入式表单中不起作用。
-* 如果AdobeAnalytics是在原始表单上配置的，则分析数据会在AdobeAnalytics服务器中捕获。 但是，表单分析报告中不提供此功能。
+* 如果在原始表单上配置了AdobeAnalytics，则会在AdobeAnalytics服务器中捕获分析数据。 但是，表单分析报告中不提供此功能。
 
 ## 示例拓扑 {#sample-topology}
 
@@ -120,14 +120,14 @@ ht-degree: 0%
 
 1. 打开配 `httpd.conf` 置文件并取消以下代码行的注释。 或者，也可以在文件中添加这些代码行。
 
-   ```
+   ```text
    LoadModule proxy_html_module modules/mod_proxy_html.so
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
 1. 通过在配置文件中添加以下几行代码来设置代 `httpd-proxy.conf` 理规则。
 
-   ```
+   ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
@@ -136,7 +136,7 @@ ht-degree: 0%
 
 如果未在上下文路径上装载AEM服务器，则Apache层的代理规则将如下：
 
-```java
+```text
 ProxyPass /content https://<AEM_Instance>/content
 ProxyPass /etc https://<AEM_Instance>/etc
 ProxyPass /etc.clientlibs https://<AEM_Instance>/etc.clientlibs
@@ -151,7 +151,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->如果设置了任何其他拓扑，请确保将提交、预填和其他URL添加到调度程序层的allowlist中。
+>如果设置了任何其他拓扑，请确保将提交、预填和其他URL添加允许列表到调度程序层的。
 
 ## Best practices {#best-practices}
 
@@ -159,7 +159,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 * 确保网页CSS中定义的样式规则与表单对象CSS不冲突。 为避免冲突，您可以使用AEM客户端库在自适应表单主题中重用网页CSS。 有关在自适应表单主题中使用客户端库的信息，请参 [阅AEM Forms主题](../../forms/using/themes.md)。
 * 使网页中的表单容器使用整个窗口宽度。 它确保为移动设备配置的CSS规则能够正常工作，而无需进行任何更改。 如果表单容器不占用整个窗口宽度，您需要编写自定义CSS以使表单适应不同的移动设备。
-* 使 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用API在客户端获取表单数据的XML或JSON表示形式。
+* 使用 `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API在客户端获取表单数据的XML或JSON表示形式。
 * 使 `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` 用API从HTML DOM卸载自适应表单。
 * 从AEM服务器发送响应时设置访问控制来源头。
 
