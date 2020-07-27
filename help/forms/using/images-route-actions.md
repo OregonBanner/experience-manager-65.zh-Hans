@@ -1,30 +1,33 @@
 ---
 title: 自定义路由操作中使用的图像
 seo-title: 自定义路由操作中使用的图像
-description: 如何自定义在LiveCycle AEM Forms工作区中路由操作中使用的图像。
-seo-description: 如何自定义在LiveCycle AEM Forms工作区中路由操作中使用的图像。
+description: 如何自定义LiveCycleAEM Forms工作区中路由操作中使用的图像。
+seo-description: 如何自定义LiveCycleAEM Forms工作区中路由操作中使用的图像。
 uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
+source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
 
 # 自定义路由操作中使用的图像 {#customize-images-used-in-route-actions}
 
-要自定义路由操作中使用的图像，请执行自定义的常规步骤中所述的步骤 [](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行本文中描述的步骤。
+要自定义路由操作中使用的图像，请执行自定义的 [常规步骤中所述的步骤](/help/forms/using/generic-steps-html-workspace-customization.md) ，然后执行本文中描述的步骤。
 
 ## 用于路由操作的图像 {#images-for-route-actions}
 
-1. 在CSS中为新路由操作添加定义图像的样式，位置如下：
+1. 在CSS中为新路由操作添加定义图像的样式，其位置如下：
 
    `/apps/ws/css/newStyle.css`
 
-   例如：添加一个新样式， `myStyle1`如下所示，并使用WebDAV客户端将图像 `myStyleIcon1.png` 文件上 `/apps/ws/image`传到s文件夹。
+   例如： 添加一个新样式， `myStyle1`如下所示，并使用WebDAV客 `myStyleIcon1.png` 户端将 `/apps/ws/image`图像文件上传到s文件夹。
 
    >[!NOTE]
    >
@@ -50,7 +53,7 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
 
 1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`:
 
-   ```
+   ```jsp
    <%if(routeList == null){%>
                <li>
                    <a href="javascript:void(0);" title="<%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%>" value="<%= availableCommands.directCommands[0]%>" data-action="route"><%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%></a>
@@ -78,9 +81,9 @@ source-git-commit: 49da3dbe590f70b98185a6bc330db6077dc864c0
                <%}%>
    ```
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`。 它会添加一堆Servlet条 `if-else` 件，以将样式与路由操作名称映射。
+1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/task.html`。 它添加一个servlet条 `if-else` 件堆栈，用路由操作名称映射样式。
 
-```
+```jsp
 <%if(routeList == null){%>
             <li>
                 <a href="javascript:void(0);" title="<%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%>" value="<%= availableCommands.directCommands[0]%>" data-action="route"><%= $.t('taskaction.directcommand.'+availableCommands.directCommands[0])%></a>
@@ -120,7 +123,7 @@ To
 
 1. 如果CSS样式的名称与来自服务器的路由操作名称相同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`:
 
-   ```
+   ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
                            <li class="routeAction">
                                <a href="javascript:void(0);" title="<%= availableCommands.directCommands[i]%>" value="<%= availableCommands.directCommands[i]%>" data-action="route"><%= availableCommands.directCommands[i]%></a>
@@ -138,9 +141,9 @@ To
                        <%}%>
    ```
 
-1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`。 它会添加一堆Servlet条 `if-else` 件，以将样式与路由操作名称进行映射。
+1. 如果CSS样式的名称与来自服务器的路由操作名称不同，请在中修改以下代码 `/apps/ws/js/runtime/templates/taskdetails.html`。 它添加一堆Servlet `if-else` 条件，用路由操作名称映射样式。
 
-   ```
+   ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
                            <li class="routeAction">
                                <a href="javascript:void(0);" title="<%= availableCommands.directCommands[i]%>" value="<%= availableCommands.directCommands[i]%>" data-action="route"><%= availableCommands.directCommands[i]%></a>
