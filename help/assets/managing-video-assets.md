@@ -3,9 +3,9 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '816'
 ht-degree: 10%
 
 ---
@@ -23,17 +23,11 @@ ht-degree: 10%
 
 1. 在“数字资产”文件夹或子文件夹中，导航到要添加数字资产的位置。
 1. 要上传资产，请单击工 **[!UICONTROL 具栏]** 中的创建，然后选择 **[!UICONTROL 文件]**。 或者，直接将其拖放到资产区域。 See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
-1. To preview a video in the Card view, click the **[!UICONTROL Play]** button on the video asset.
+1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. 您只能在卡视图中暂停或播放视频。 “播 [!UICONTROL 放] ”和“ [!UICONTROL 暂停] ”选项在列表视图中不可用。
 
-   ![chlimage_1-65](assets/chlimage_1-201.png)
+1. 要预览资产详细信息页面中的视频，请单 **[!UICONTROL 击]** 卡上的编辑。 视频会在浏览器自带的视频播放器中播放。您可以播放视频，暂停视频，控制视频音量，以及将视频放大到全屏。
 
-   您只能在卡视图中暂停或播放视频。 “播 [!UICONTROL 放] ”和“ [!UICONTROL 暂停] ”按钮在列表视图中不可用。
-
-1. 要预览资产详细信息页面中的视频，请单 **[!UICONTROL 击]** 卡上的编辑。
-
-   视频会在浏览器自带的视频播放器中播放。您可以播放视频，暂停视频，控制视频音量，以及将视频放大到全屏。
-
-   ![chlimage_1-66](assets/chlimage_1-202.png)
+   ![视频播放控件](assets/video-playback-controls.png)
 
 ## 上传大于2 GB的资产的配置 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
@@ -41,7 +35,7 @@ ht-degree: 10%
 
 除了配置 [!DNL Assets] 之外，请更改以下配置以上传大型资产：
 
-* 增加令牌过期时间。 请参 [!UICONTROL 阅Web控制台中] 的Adobe Granite CSRF Servlet `https://[aem_server]:[port]/system/console/configMgr`。 有关详细信息，请参 [阅CSRF保护](/help/sites-developing/csrf-protection.md)。
+* 增加令牌过期时间。 请参 [!UICONTROL 阅在Web控制台中Adobe] Granite CSRF Servlet `https://[aem_server]:[port]/system/console/configMgr`，网址为。 有关详细信息，请参 [阅CSRF保护](/help/sites-developing/csrf-protection.md)。
 * 增加 `receiveTimeout` Dispatcher配置。 有关详细信息，请参阅 [Experience ManagerDispatcher配置](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
 
 >[!NOTE]
@@ -62,7 +56,7 @@ ht-degree: 10%
 
 1. 在工具栏中，单击“保 **[!UICONTROL 存全部”]**。
 1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-1. 在Web控 [!DNL Adobe Experience Manager] 制台 [!UICONTROL 的“捆绑包”页面] ，在表的“名称”列下，找到并单击“ **[!UICONTROL Adobe Granite Workflow外部进程作业处理程序”]**。
+1. 在Web控 [!DNL Adobe Experience Manager] 制台 [!UICONTROL 的“捆绑包”页面] ，在表的“名称”列下，找到并单击“AdobeGranite Workflow External Process Job Handler”(Granite工作 **[!UICONTROL 流外部进程作业处理程序)]**。
 1. On the [!UICONTROL Adobe Granite Workflow External Process Job Handler] page, set the seconds for both **[!UICONTROL Default Timeout]** and **[!UICONTROL Max Timeout]** fields to `18000` (five hours). 单击&#x200B;**[!UICONTROL 保存]**。
 1. 在中， [!DNL Experience Manager]单击“ **[!UICONTROL 工具]** ”>“ **[!UICONTROL 工作流]** ”>“ **[!UICONTROL 模型]**”。
 1. 在“工作流模型”页面上，选择“ **[!UICONTROL Dynamic Media编码视频]**”，然后单击 **[!UICONTROL 编辑]**。
