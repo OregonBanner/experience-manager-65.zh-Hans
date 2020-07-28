@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '9234'
+source-wordcount: '9216'
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在Dynamic Media- Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
+>在Dynamic Media-Scene7模式下，您只能上传文件大小为2 GB或更小的资源。
 
 您可以选择将资产上传到文件夹，无论是否分配了处理用户档案。
 
@@ -70,7 +70,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    您可以暂停上传大型资产（大于500 MB），稍后从同一页面继续上传。 单击 **[!UICONTROL 上传开始]** 时显示的进度栏旁边的“暂停”。
 
-   ![上传资产进度栏](assets/chlimage_1-5.png)
+   ![上传资产进度栏](assets/upload-progress-bar.png)
 
    资产被视为大资产的大小可以配置。 例如，您可以配置系统，将1000 MB以上（而不是500 MB）的资产视为大资产。 在这种情况下，当 **[!UICONTROL 上传大]** 于1000 MB的资产时，进度栏上会显示“暂停”。
 
@@ -80,7 +80,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    单击“暂 **[!UICONTROL 停]**”时，它切换到“播 **[!UICONTROL 放]** ”选项。 要继续上传，请单击“ **[!UICONTROL 播放]**”。
 
-   ![恢复暂停的资产上传](assets/chlimage_1-6.png)
+   ![恢复暂停的资产上传](assets/resume-paused-upload.png)
 
    To cancel an ongoing upload, click close (`X`) next to the progress bar. 取消上传操作时，将删 [!DNL Assets] 除资产部分上传的部分。
 
@@ -94,13 +94,13 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    您可以选择替换现有资产，创建另一个版本，或者重命名上传的新资产以同时保留两个资产。如果您替换现有资产，则资产的元数据以及您对现有资产所做的任何先前修改（例如注释或裁剪）都将被删除。 如果您选择保留这两个资产，则会重命名新资产，并在其名称 `1` 中附加数字。
 
-   ![用于解决资产名称冲突的名称冲突对话框](assets/chlimage_1-7.png)
+   ![用于解决资产名称冲突的名称冲突对话框](assets/resolve-naming-conflict.png)
 
    >[!NOTE]
    >
    >在名称冲 **[!UICONTROL 突]** 对话框 [!UICONTROL 中选择替] 换时，将为新资产重新生成资产ID。 此ID与上一个资产的ID不同。
    >
-   >如果启用资产分析以跟踪AdobeAnalytics的展示次数／点击次数，则重新生成的资产ID将使Analytics上为资产捕获的数据无效。
+   >如果启用“资产分析”以通过Adobe Analytics跟踪展示次数／点击次数，则重新生成的资产ID将使Analytics上为资产捕获的数据无效。
 
    If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. 仅当现有资产的二进制文 `SHA 1` 件的校验和值与您上传的资产的校验和值匹配时，才会显示该对话框。 在这种情况下，资产名称无关紧要。
 
@@ -108,7 +108,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
    >
    >The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
 
-   ![重复资产检测到对话框](assets/chlimage_1-8.png)
+   ![重复资产检测到对话框](assets/duplicate-asset-detected.png)
 
    要在中保留重复资 [!DNL Assets]产，请单 **[!UICONTROL 击保留]**。 要删除您上传的重复资产，请单击 **[!UICONTROL 删除]**。
 
@@ -123,7 +123,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    不要在资源文件名的扩展名中包含特殊字符。
 
-   ![上传进度对话框显示成功上传的文件和无法上传的文件的状态](assets/chlimage_1-10.png)
+   ![上传进度对话框显示成功上传的文件和无法上传的文件的状态](assets/bulk-upload-progress.png)
 
    此外，用户 [!DNL Assets] 界面还显示您上传的最新资产或您首先创建的文件夹。
 
@@ -133,7 +133,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 串行上传 {#serialuploads}
 
-批量上传大量资产会消耗大量I/O资源，这可能会对部署性能产生不利影响。 [!DNL Assets] 尤其是，如果Internet连接速度较慢，则由于磁盘I/O激增，上传的时间会显着增加。 此外，您的Web浏览器可能会对并发资产上传可处理的POST请 [!DNL Assets] 求数量引入其他限制。 因此，上传操作将失败或提前终止。 换句话说，在 [!DNL Experience Manager Assets] 摄取大量文件时可能会丢失某些文件，或者完全无法摄取任何文件。
+批量上传大量资产会消耗大量I/O资源，这可能会对部署性能产生不利影响。 [!DNL Assets] 尤其是，如果Internet连接速度较慢，则由于磁盘I/O激增，上传的时间会显着增加。 此外，您的Web浏览器可能会对并发资产上传可处理的POST请 [!DNL Assets] 求数量引入额外限制。 因此，上传操作将失败或提前终止。 换句话说，在 [!DNL Experience Manager Assets] 摄取大量文件时可能会丢失某些文件，或者完全无法摄取任何文件。
 
 要克服这种情况， [!DNL Assets] 请在批量上传操作期间一次摄取一个资产（串行上传），而不是同时摄取所有资产。
 
@@ -145,11 +145,11 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 >[!NOTE]
 >
->在Dynamic Media- Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
+>在Dynamic Media-Scene7模式下，您只能上传文件大小为2 GB或更小的资源。
 
 >[!NOTE]
 >
->要在Dynamic Media- Scene7模式下通过FTP上传资产，请在创作实例上安装功 [!DNL Experience Manager] 能包18912。 联 [系Adobe客户关](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 怀部，获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以实现批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media-Scene7模式下通过FTP上传资产，请在创作实例上安装功 [!DNL Experience Manager] 能包18912。 联 [系Adobe客](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 户关怀部门以访问FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以实现批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
 >
 >如果您使用FTP上传资产，则中指定的上传设 [!DNL Experience Manager] 置将被忽略。 而是使用在Dynamic Media经典中定义的文件处理规则。
 
@@ -189,9 +189,9 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 |  | 颜色用户档案选项 | 在创建用于投放的优化文件时选择颜色转换：<ul><li>默认颜色保留： 当图像包含色彩空间信息时，保留源图像颜色； 没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是用于在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间： 保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，任何颜色转换均使用在“发布”设置中配置的默认颜色用户档案进行。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用默认颜色保留选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换至色彩空间”。 此高级选项将覆盖嵌入在源文件中的任何颜色信息。 当您提交的所有图像都包含不正确或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
 |  | 图像编辑选项 | 您可以在图像中保留剪切蒙版，并选择颜色用户档案。<br> 请参 [阅在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
 |  | Postscript选项 | 您可以栅格化PostScript®文件、裁剪文件、维护透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
-|  | Photoshop选项 | 您可以从Adobe® Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定图像定位到模板的方式。<br> 请注意，中不支持模板 [!DNL Experience Manager]。<br> 请参 [阅设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
+|  | Photoshop选项 | 您可以从Adobe®Photoshop®文件创建模板、维护图层、指定如何命名图层、提取文本以及指定如何将图像定位到模板中。<br> 请注意，中不支持模板 [!DNL Experience Manager]。<br> 请参阅 [设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
 |  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成电子目录、设置分辨率和选择色彩空间。<br> 请注意，中不支持eCatalog [!DNL Experience Manager]。 <br> 请参 [阅设置PDF上传选项](#setting-pdf-upload-options)。 |
-|  | Illustrator选项 | 您可以栅格化Adobe Illustrator®文件、维护透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
+|  | Illustrator选项 | 您可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | EVideo选项 | 您可以通过选择视频预设对视频文件进行转码。<br> 请参 [阅设置eVideo上传选项](#setting-evideo-upload-options)。 |
 |  | 批集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media经典的“应用程序设置／批集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
 
@@ -223,7 +223,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 #### 设置PostScript和Illustrator上传选项 {#setting-postscript-and-illustrator-upload-options}
 
-上传PostScript(EPS)或Illustrator(AI)图像文件时，可以采用各种方式设置它们的格式。 您可以栅格化文件、保持透明背景、选择分辨率和选择色彩空间。 “PostScript选项”和“Illustrator选项”下的“上传作 [!UICONTROL 业选项] ”对话框中提 [!UICONTROL 供了PostScript] 和Illustrator [!UICONTROL 文件格式选项]。
+上传PostScript(EPS)或Illustrator(AI)图像文件时，可以采用各种格式设置它们。 您可以栅格化文件、保持透明背景、选择分辨率和选择色彩空间。 “PostScript选项”和“Illustrator选项”下的“上 [!UICONTROL 传作业选项] ”对话框中提 [!UICONTROL 供格式化PostScript] 和 [!UICONTROL “Illustrator]选项”选项。
 
 | 选项 | 子选项 | 描述 |
 |---|---|---|
@@ -242,7 +242,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多幅图像； 它为每个图层创建一个图像。
 
-使用上 [!UICONTROL 述裁剪][!UICONTROL 选项和颜]色用户档案选项，以及Photoshop上传选项。
+使用上 [!UICONTROL 述的裁剪][!UICONTROL 选项和颜]色用户档案选项，以及Photoshop上传选项。
 
 >[!NOTE]
 >
@@ -255,8 +255,8 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 | 提取文本 |  | 提取文本，以便用户在查看器中搜索文本。 |
 | 将图层扩展到背景大小 |  | 将已撕开的图像图层的大小扩展到背景图层的大小。 |
 | 图层命名 |  | PSD文件中的图层作为单独的图像上传。 |
-|  | 图层名称 | 在PSD文件中将图像命名为图层名称之后。 例如，原始PSD文件中名为Price Tag的图层将变为名为Price Tag的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、图层1、图层2等），则图像的命名将以PSD文件中的图层编号而非默认图层名称命名。 |
-|  | Photoshop和图层编号 | 在PSD文件中将图像命名为图层编号之后的图像，而忽略原始图层名称。 图像以Photoshop文件名和附加的图层编号命名。 例如，名为Spring Ad.psd的文件的第二个图层命名为Spring Ad_2，即使它在Photoshop中具有非默认名称。 |
+|  | 图层名称 | 在PSD文件中将图像命名为图层名称之后。 例如，原始PSD文件中名为Price Tag的图层将变为名为Price Tag的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、图层1、图层2等），则图像将以PSD文件中的图层编号命名，而不是以其默认图层名称命名。 |
+|  | Photoshop和层号 | 在PSD文件中将图像命名为图层编号之后的图像，而忽略原始图层名称。 图像以Photoshop文件名和附加的图层编号命名。 例如，名为Spring Ad.psd的文件的第二个层被命名为Spring Ad_2，即使它在Photoshop有非默认名称。 |
 |  | Photoshop和图层名称 | 在PSD文件之后命名图像，后跟图层名称或图层编号。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，在名为SpringAd的PSD文件中名为Price Tag的图层被命名为Spring Ad_Price Tag。 具有默认名称Layer 2的层称为Spring Ad_2。 |
 | 锚点 |  | 指定如何在从PSD文件生成的分层合成生成的模板中定位图像。 默认情况下，锚点为中心。 无论替换图像的长宽比如何，中心锚点都允许替换图像以最佳方式填充相同的空间。 当引用模板并使用参数替换时，具有替换此图像的不同方面的图像会有效地占据相同的空间。 如果应用程序需要替换图像以填充模板中分配的空间，请更改为其他设置。 |
 
@@ -479,10 +479,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 1. 您可以为资产添加或删除演绎版，但原始形式除外。导航到您要为其添加或删除演绎版的资产所在的位置。
 
-1. 单击资产以打开其资产页面。
-
-   ![用于管理演绎版的“资产详细信息”页面](assets/chlimage_1-15.png)
-
+1. 单击资产以打开其页面。
 1. 在Experience Manager界面中，从 **[!UICONTROL 列表中]** 选择演绎版。
 
    ![左边栏以打开菜单并选择演绎版选项](assets/renditions_menu.png)
@@ -515,7 +512,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
    同样，您也可以通过覆盖来自定义“注释”页面图 `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`像。
 
-   ![在CRXDE中叠加重新显示选取器节点以自定义注释页面图像](assets/chlimage_1-17.png)
+   ![在CRXDE中叠加重新显示选取器节点以自定义注释页面图像](assets/renditionpicker-node-crxde.png)
 
    要为视频资产配置演绎版维度，请导航到CRX `videopicker` 存储库中位于该位置的节 `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`点，叠加该节点，然后编辑相应的属性。
 
@@ -643,7 +640,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
@@ -671,21 +668,16 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 1. 从列表中选择所需的选项。图像上会根据您选择的选项显示裁剪区域。利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
 
-   ![裁剪选项](assets/chlimage_1-23.png)
+   ![裁剪选项](assets/crop-options.png)
 
 1. 选择要裁剪的区域，并在图像上调整其大小或位置。
 
-1. Use the **[!UICONTROL Undo]** and **[!UICONTROL Redo]** options to revert to the uncropped image or retain the cropped image, respectively.
-
-   ![撤消和重做选项](assets/chlimage_1-25.png)
-
+1. 使用撤消 **[!UICONTROL 撤消工]** 具栏选 ![项和重](assets/do-not-localize/undo.png) 做工 **[!UICONTROL 具栏选]**![](assets/do-not-localize/redo.png) 项图像，或分别恢复到未裁剪的图像或保留裁剪后的图像。
 1. 单击相应 **[!UICONTROL 的“旋]** 转”选项可顺时针或逆时针旋转图像。
 
-   ![顺时针和逆时针旋转选项](assets/chlimage_1-26.png)
+   ![顺时针和逆时针旋转选项](assets/do-not-localize/rotate-options.png)
 
-1. 单击相应的“ **[!UICONTROL 翻转]** ”选项，水平或垂直翻转图像。
-
-   ![用于水平或垂直翻转图像的选项](assets/chlimage_1-27.png)
+1. 单击相应的“ **[!UICONTROL 翻转]** ”选项，以水平 ![翻转图像水平](assets/do-not-localize/flip-horizontal.png) 反射选项 ![，或垂直](assets/do-not-localize/flip-vertical.png)反射垂直选项。
 
 1. 要完成图像编辑，请单击“完 **[!UICONTROL 成]**![”选项](assets/do-not-localize/check-ok-done-icon.png)。 单击 **完成** ，还会开始再现的再生。
 
@@ -731,23 +723,23 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    * [快速操作](/help/assets/managing-assets-touch-ui.md#quick-actions)
    * 在选择资产或导航到资产页面后，从工具栏中
 
-   ![注释选项](assets/chlimage_1-29.png)
+   ![注释选项](assets/annotate-option.png)
 
 1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
 
-   ![添加注释对话框中的注释框](assets/chlimage_1-30.png)
+   ![添加注释对话框中的注释框](assets/annotation-comment-box.png)
 
 1. 要向用户通知有关注释的信息，请指定用户的电子邮件地址并添加评论。 例如，要向 Aaron MacDonald 发送有关注释的通知，请输入 @aa。此时会出现一个列表，其中显示了所有匹配用户的提示。从列表中选择Aaron的电子邮件地址，用评论标记她。 同样，您可以在批注中的任意位置，或批注前后标记更多用户。
 
+   ![指定用户的电子邮件地址并添加注释以通知用户](assets/annotation-add-user-email.png)
+
    >[!NOTE]
    >
-   >对于非管理员用户，仅当用户在Crx-de中具有“在/ *home读取* ”权限时，才显示建议。
-
-   ![指定用户的电子邮件地址并添加注释以通知用户](assets/chlimage_1-31.png)
+   >对于非管理员用户，仅当用户在CRXDE的路径上具有读取权限时，才 `/home` 会显示建议。
 
 1. After adding the annotation, click **[!UICONTROL Add]** to save it. A notification for the annotation is sent to Aaron.
 
-   ![添加按钮以保存注释](assets/chlimage_1-32.png)
+   ![添加按钮以保存注释](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -778,15 +770,15 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 在Experience Manager界面中，选择时 **[!UICONTROL 间轴]**。
 
-   ![Experience Manager](assets/chlimage_1-35.png)
+   ![时间轴选项在Experience Manager中可用](assets/view-timeline.png)
 
 1. 从时间线的&#x200B;**[!UICONTROL 显示全部]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 注释]**&#x200B;以根据注释过滤结果。
 
-   ![在时间轴中显示所有列表](assets/chlimage_1-36.png)
+   ![在时间轴中显示所有列表](assets/timeline-show-all-option.png)
 
    单击“时间轴”面 **[!UICONTROL 板中]** 的注释以视图图像上的相应注释。
 
-   ![视图图像注释的时间轴面板](assets/chlimage_1-37.png)
+   ![视图图像注释的时间轴面板](assets/timeline-view-annotations.png)
 
    单击 **[!UICONTROL 删除]**，以删除特定注释。
 
@@ -806,11 +798,9 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 要打印特定注释，请从时间轴中选择注释。
 
-   ![从时间轴中选择注释以进行打印](assets/chlimage_1-38.png)
+   ![从时间轴中选择注释以进行打印](assets/timeline-select-annotations.png)
 
    要仅打印审阅状态，请从时间轴中选择它。
-
-   ![要仅打印注释的审阅状态，请从时间轴中选择该状态](assets/chlimage_1-39.png)
 
 1. Click **[!UICONTROL Print]** from the toolbar.
 
@@ -828,7 +818,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 1. 单击“ **[!UICONTROL 打印]**”。 根据您在步骤 2 中选择的选项，生成的 PDF 会在指定位置显示批注/状态。例如，如果您选择使用&#x200B;**左上角**&#x200B;设置打印批注和审阅状态，则生成的输出将类似于此处描述的 PDF 文件。
 
-   ![生成的PDF的批注和审阅状态](assets/chlimage_1-42.png)
+   ![生成的PDF的批注和审阅状态](assets/annotation-status-pdf.png)
 
 1. 下 ![载PDF的](assets/do-not-localize/download.png) “下 ![载”选项或使用右上](assets/do-not-localize/print.png) 方的选项在PDF上打印PDF的打印选项。
 
@@ -838,7 +828,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    要修改呈现的PDF文件的外观，例如注释和状态的字体颜色、大小和样式、背景颜色，请从Configuration Manager **[!UICONTROL 中打开]** “注释PDF”配置，并修改所需的选项。 例如，要更改批准状态的显示颜色，请修改相应字段中的颜色代码。 有关更改批注的字体颜色的信息，请参阅 [批注](/help/assets/managing-assets-touch-ui.md#annotating)。
 
-   ![在PDF文档上打印资产批注的配置](assets/chlimage_1-44.png)
+   ![在PDF文档上打印资产注释的配置](assets/annotation-print-pdf-config.png)
 
    返回渲染的PDF文件并刷新它。 刷新的PDF反映了您所做的更改。
 
@@ -848,7 +838,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 1. 要配置CQ-DAM-Handler-Gibson字体管理器服务，请执行下列操作之一：
 
    * 在“系统字体”目录选项中，指定系统上字体目录的完整路径。 例如，如果您是Mac用户，则可以在“System Fonts”目录选 *项中将路径指定为* /Library/Fonts。 [!DNL Experience Manager] 从此目录中获取字体。
-   * 在文件夹内创 `fonts` 建一个名 ``crx-quickstart`` 为的目录。 CQ-DAM-Handler-Gibson字体管理器服务自动获取位置的字体 `crx-quickstart/fonts`。 您可以从Adobe Server Fonts目录选项中覆盖此默认路径。
+   * 在文件夹内创 `fonts` 建一个名 ``crx-quickstart`` 为的目录。 CQ-DAM-Handler-Gibson字体管理器服务自动获取位置的字体 `crx-quickstart/fonts`。 您可以从Adobe服务器字体目录选项中覆盖此默认路径。
 
    * 在系统中为字体创建新文件夹，并将所需的字体存储在该文件夹中。 然后，在Customer Fonts目录选项中指定该文件夹的完整路径。
 
