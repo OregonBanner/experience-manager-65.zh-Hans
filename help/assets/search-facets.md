@@ -3,10 +3,10 @@ title: 搜索 Facet.
 description: 如何在Adobe Experience Manager中创建、修改和使用搜索彩块化。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2525'
-ht-degree: 29%
+source-wordcount: '2515'
+ht-degree: 28%
 
 ---
 
@@ -28,11 +28,9 @@ ht-degree: 29%
 对于全文搜索，请向表 [!UICONTROL 单添加] “全文”谓词。 使用属性谓词可搜索与您指定的单个属性匹配的资产。 使用“选项”谓词，可搜索与特定属性的一个或多个值匹配的资产。 添加日期范围谓词，以搜索在指定日期范围内创建的资产。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **Edit** ![edit icon](assets/do-not-localize/aemassets_edit.png).
+1. From the Search Forms page, select **[!UICONTROL Assets Admin Search Rail]**, then click **[!UICONTROL Edit]** ![edit icon](assets/do-not-localize/aemassets_edit.png).
 
    ![找到并选择资产管理搜索边栏](assets/assets_admin_searchrail.png)
-
-   找到并选择资产管理搜索边栏
 
    >[!NOTE]
    >
@@ -76,7 +74,7 @@ ht-degree: 29%
 1. To close the preview, click the **[!UICONTROL Close]** ![close](assets/do-not-localize/close.png) on the upper-right corner of the preview.
 1. 单击&#x200B;**[!UICONTROL 完成]**&#x200B;以保存设置。
 1. 导航到资产用户界面中的搜索面板。 属性谓词已添加到该面板。
-1. 在文本框中输入对要搜索的资产的描述。例如，输入“Adobe”。执行搜索时，其描述与“Adobe”匹配的资产便会列在搜索结果中。
+1. 在文本框中输入对要搜索的资产的描述。For example, enter `Adobe`. When you perform a search, assets with description matching `Adobe` are listed in the search results.
 
 ## 添加“选项”谓词 {#adding-an-options-predicate}
 
@@ -90,13 +88,13 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
 例如，如果您为文件类型选择“图像”，则资产的搜索查询将通过使用 OR 操作组合 `value` 属性来构建。For example, the search query for images is built by combining the results matched for *image/jpeg*, *image/gif*, *image/png*, *image/pjpeg*, and *image/tiff* for the property `jcr:content/metadata/dc:format` using an OR operation.
 
-![文件类型的值属性（如CRXDE中所示）用于搜索查询](assets/chlimage_1-418.png)
+![文件类型的值属性（如CRXDE中所示）用于搜索查询](assets/filetype-value-property.png)
 
 文件类型的值属性（如CRXDE中所示）用于搜索查询
 
 您可以通过指定相应的键值对，在JSON文件中定义选项，而不是手动为CRXDE存储库中的选项创建节点结构。 在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中指定 JSON 文件的路径。例如，您可以定义键值对、`image/bmp`、`image/gif`、`image/jpeg` 和 `image/png`，并指定它们的值，如以下示例 JSON 文件中所示。In the **[!UICONTROL Property Name]** field, you can specify the CRXDE path for this file.
 
-```JSON
+```json
 {
     "options" :
  [
@@ -137,7 +135,7 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 通过“多值属性”谓词，您可以搜索多个值的资产。 请考虑在资产中包含多个产品的图像，并且每个图像的元数据包括与产品关联的SKU编号的情况。 您可以使用此谓词根据多个SKU编号搜索产品图像。
 
 1. Click the Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. 在“搜索表单”页面上，选择“资 **[!UICONTROL 产管理员搜索边栏]**”，然后单击“ **[!UICONTROL 编辑]**![编辑”图标](assets/do-not-localize/aemassets_edit.png)。
+1. 在“搜索Forms”页面上，选 **[!UICONTROL 择“资产管理员搜索边栏]**”，然后单击 **[!UICONTROL “编]** 辑 ![”](assets/do-not-localize/aemassets_edit.png)图标。
 1. 在“编辑搜索表单”页中，将&#x200B;**[!UICONTROL 多值属性谓词]**&#x200B;从&#x200B;**[!UICONTROL 选择谓词]**&#x200B;选项卡拖到主窗格。
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 您还可以使用选择对话框选择节点。
 1. 确保选中&#x200B;**[!UICONTROL 分隔符支持]**。在&#x200B;**[!UICONTROL 输入分隔符]**&#x200B;字段中，指定要用于分隔各个值的分隔符。默认情况下，指定逗号为分隔符。您可以指定其他分隔符。
@@ -164,7 +162,7 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 1. 导航到“搜索”面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定要根据其搜索资产或从建议列表中进行选择的标记。
 
-   ![Experience Manager在键入标记名称时提供的建议](assets/chlimage_1-419.png)
+   ![Experience Manager在键入标记名称时提供的建议](assets/tag-suggestion.png)
 
    *图： Experience Manager在键入标记名称时提供的建议。*
 
@@ -193,13 +191,13 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
 ## 恢复默认搜索彩块化 {#restoring-default-search-facets}
 
-默认情况下，在“搜索表单” ![页面的“资产](assets/do-not-localize/lock_closed_icon.svg)**[!UICONTROL 管理员搜索边栏”]****[!UICONTROL 前，会显示一个锁]** 定图标锁定关闭的图标。 “搜索表单”页面上某个选项的锁图标表示默认设置保持不变且未进行自定义。 The icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) disappears if you add search facets to the form indicating that the default form has been modified.
+默认情况下，在“搜索 ![Forms”页面](assets/do-not-localize/lock_closed_icon.svg) 的“资 **[!UICONTROL 产管理员搜索边栏]** ” **[!UICONTROL 前，会显示一个锁]** 定图标锁定关闭的图标。 “搜索Forms”页面上某个选项的锁图标表示默认设置保持不变且未自定义。 The icon ![lock closed icon](assets/do-not-localize/lock_closed_icon.svg) disappears if you add search facets to the form indicating that the default form has been modified.
 
-![“搜索表单”页面上某个选项的锁图标表示默认设置保持不变且未进行自定义。](assets/locked_admin_rail.png)
+![“搜索Forms”页面上某个选项的锁图标表示默认设置保持不变且未自定义。](assets/locked_admin_rail.png)
 
 要恢复默认搜索彩块化，请执行以下步骤：
 
-1. 在“搜 **[!UICONTROL 索表单”页面中]** ，选择 **[!UICONTROL “资产管理员]** ”。
+1. 在“ **[!UICONTROL 搜索”Forms页面]** ，选择“资 **[!UICONTROL 产管理员]** ”搜索边栏。
 1. 单击 **[!UICONTROL 工具]** 栏中 ![](assets/do-not-localize/deleteoutline.png) 的“删除大纲”。
 1. In the confirmation dialog, click **[!UICONTROL Delete]** to remove the custom changes.
 
