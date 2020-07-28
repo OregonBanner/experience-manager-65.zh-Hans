@@ -3,9 +3,9 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2666'
 ht-degree: 13%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 组织会提出一个元数据模型，该模型增强了资产发现、使用、互操作性等。 正确的元数据应用程序对于维护元数据驱动的工作流和流程至关重要。 要遵守整个组织的元数据战略和标准，您可以使用元数据模式来帮助DAM用户进行调整。 [!DNL Adobe Experience Manager] 允许轻松、灵活地创建、维护和应用元数据模式。
 
-在 [!DNL Adobe Experience Manager Assets]中，模式包含要填写的特定信息的特定字段。 它还包含布局信息，以用户友好的方式显示元数据字段。 元数据属性包括标题、描述、MIME类型、标记等。 您可以使用元数 [!UICONTROL 据模式表单编辑器] ，修改现有模式或添加自定义元数据模式。
+在 [!DNL Adobe Experience Manager Assets]中，模式包含要填写的特定信息的特定字段。 它还包含布局信息，以用户友好的方式显示元数据字段。 元数据属性包括标题、描述、MIME类型、标记等。 您可以使用元数 [!UICONTROL 据模式Forms] ，修改现有模式或添加自定义元数据模式。
 
 要视图和编辑资产的属性页面，请执行以下步骤：
 
@@ -27,7 +27,7 @@ ht-degree: 13%
 
 *图： 资产属性上的“基[!UICONTROL 本”选项卡]。*
 
-要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 有关详 [细信息，请参阅编辑元模式](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) “表单”。 如果您修改MIME类型的元数据模式，则会修改资产和所有子类型的属性页面布局。 例如，修改jpeg模式时，只 `default/image` 会修改MIME类型资产的元数据布局（资产属性） `image/jpeg`。 但是，如果您编辑默认模式，则所做的更改将修改所有类型资产的元数据布局。
+要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 请参 [阅编辑元数据模式](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) Forms以了解更多信息。 如果您修改MIME类型的元数据模式，则会修改资产和所有子类型的属性页面布局。 例如，修改jpeg模式时，只 `default/image` 会修改MIME类型资产的元数据布局（资产属性） `image/jpeg`。 但是，如果您编辑默认模式，则所做的更改将修改所有类型资产的元数据布局。
 
 ## 元数据架构表单 {#default-metadata-schema-forms}
 
@@ -68,7 +68,7 @@ ht-degree: 13%
 
 您可以编辑新添加的或现有的元数据模式表单。 元数据模式表单包括选项卡和选项卡中的表单项。 您可以将这些表单项映射到／配置到CRX存储库中元数据节点内的字段。 可向元数据模式表单添加选项卡或表单项。 从父级派生的选项卡和表单项目处于锁定状态。 无法从子级别更改它们。
 
-1. 在元数 [!UICONTROL 据模式表单] ，选择一个表单，然后单击工 **[!UICONTROL 具栏中]** 的“编辑”。
+1. 在元数 [!UICONTROL 据模式] “Forms”页面上 **[!UICONTROL ，选择一个表单，然后单击工]** 具栏中的“编辑”。
 
 1. 在元数据 **[!UICONTROL 模式表单编辑器页]** ，自定义元数据表单。 将所需的组件从“构 **[!UICONTROL 建表单]** ”选项卡拖到其中一个选项卡。
 
@@ -111,7 +111,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 * `./jcr:content/metadata/dc:title`：将该值作为属性 `dc:title` 存储在资产的元数据节点中。
 
-* `./jcr:created`: 存储资产的创建日期和时间。 它是受保护的属性。 如果配置这些属性，Adobe建议您将其标记为“禁用编辑”。
+* `./jcr:created`: 存储资产的创建日期和时间。 它是受保护的属性。 如果配置这些属性，Adobe建议您将其标记为禁用编辑。
 
 要确保在元数据模式表单中正确显示组件，属性路径不应包含任何空格。
 
@@ -131,15 +131,15 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 如果选择&#x200B;**[!UICONTROL 必需]**&#x200B;选项，则可以搜索缺少必需元数据的资产。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，展开&#x200B;**[!UICONTROL 元数据验证]**&#x200B;谓词，然后选择&#x200B;**[!UICONTROL 无效]**&#x200B;选项。搜索结果中显示的资产缺少您通过架构表单配置的必需元数据。
 
-![在“过滤器”面板的“元数据验证”谓词中选择的选项无效 ](assets/chlimage_1-178.png)
+![在“过滤器”面板的“元数据验证”谓词中选择的选项](assets/invalid-metadata-predicate.png)
 
 如果您将上下文元数据组件添加到任何模式表单的任何选项卡，该组件将作为列表显示在应用特定模式的资产的属性页面中。 该列表包括除您应用了上下文元数据组件的选项卡外的所有其他选项卡。 目前，此功能提供基本功能，用于根据上下文控制元数据的显示。
 
-![资产属性的上下文元数据组件列表选项卡](assets/chlimage_1-179.png)
+![资产属性的上下文元数据组件列表选项卡](assets/metadata-contextual-component-list.png)
 
 要在属性页面中显示除应用上下文元数据组件的选项卡之外的任何选项卡，请从列表中选择该选项卡。 该选项卡会添加到属性页面。
 
-![在“上下文元数据”列表卡上选择的选项卡会显示在资产属性页面上](assets/contextual-metadata-asset-properties.png)
+![上下文元数据列表上选择的选项卡会显示在资产属性页面上](assets/contextual-metadata-asset-properties.png)
 
 *图： 资产属性页面中的上下文元数据。*
 
@@ -151,13 +151,11 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 通过架构编辑器，可以添加或删除选项卡。The default schema form includes the **[!UICONTROL Basic]**, **[!UICONTROL Advanced]** , **[!UICONTROL IPTC]**, and **[!UICONTROL IPTC Extension]** tabs.
 
-![元数据模式表单中的默认选项卡](assets/chlimage_1-181.png)
+![元数据模式表单中的默认选项卡](assets/metadata-schema-form-tabs.png)
 
-Click `+` to add a tab on a schema form. By default, the new tab has the name `Unnamed-1`. You can modify the name from the **[!UICONTROL Settings]** tab.
+Click `+` to add a tab on a schema form. By default, the new tab has the name `Unnamed-1`. You can modify the name from the **[!UICONTROL Settings]** tab. Click `X` to delete a tab.
 
-Click `X` to delete a tab.
-
-![使用元数据模式编辑器添加或删除选项卡](assets/chlimage_1-182.png)
+![使用元数据模式编辑器添加或删除选项卡](assets/metadata-schema-form-new-tab.png)
 
 ## 删除元数据模式表单 {#delete-metadata-schema-forms}
 
@@ -225,7 +223,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 1. 在界 [!DNL Experience Manager] 面中，导航到 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >元数据 **[!UICONTROL 模式]**。 此时会显示&#x200B;**[!UICONTROL 元数据架构表单]**&#x200B;页面。
 1. 选中表单前面的复选框（例如默认元数据表单），然后单击“复 **[!UICONTROL 制]** ”并将其另存为自定义表单。 指定表单的自定义名称，例如 `my_default`。 或者，您也可以创建自定义表单。
 
-1. 在元数 **[!UICONTROL 据模式表单]** ，选择表 `my_default` 单，然后单击编 **[!UICONTROL 辑]**。
+1. 在元数 **[!UICONTROL 据模式]** “Forms”页 `my_default` 面中，选择表单，然后单 **[!UICONTROL 击编辑]**。
 
 1. 在元数 **[!UICONTROL 据模式编辑]** 器页面中，向模式表单添加一个文本字段。 例如，添加一个带有标签类别 **[!UICONTROL 的字段]**。
 
@@ -233,12 +231,12 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
    *图： 文本字段已添加到元数据模式表单编辑器。*
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据 **[!UICONTROL 模式表单页]** 。
+1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据 **[!UICONTROL 模式Forms]** 页面。
 1. 单 **[!UICONTROL 击工具栏中的应用到文件夹]** ，以将自定义元数据应用到文件夹。
 
 1. 选择要应用已修改模式的文件夹，然后单击“应 **[!UICONTROL 用”]**。
 
-   ![选择要应用元数据模式的文件夹](assets/chlimage_1-188.png)
+   ![选择要应用元数据模式的文件夹](assets/metadata-schema-select-folder.png)
 
 1. 如果该文件夹应用了其他元数据模式，则会显示一条消息，警告您将覆盖现有元数据模式。 单击“ **覆盖**”。
 1. Click **OK** to close the success message.
@@ -261,11 +259,11 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
    *图： 元数据模式表单编辑器中的必填字段。*
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据 **[!UICONTROL 模式表单页]** 。 选择表单，然后单 **[!UICONTROL 击工具栏中的应用到文]** 件夹，以将自定义元数据应用到文件夹。
+1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据 **[!UICONTROL 模式Forms]** 页面。 选择表单，然后单 **[!UICONTROL 击工具栏中的应用到文]** 件夹，以将自定义元数据应用到文件夹。
 
 1. 导航到文件夹，然后上传某些资产，其中缺少您添加到自定义表单的必填字段的元数据。 资产的卡视图上会显示必填字段中缺少的元数据的消息。
 
-   ![在文件夹中上传资产时，资产卡视图中缺少必需元数据的消息](assets/chlimage_1-192.png)
+   ![在文件夹中上传资产时，资产卡视图中缺少必需元数据的消息](assets/metadata-missing-info-card-view.png)
 
 1. （可选）访 `https://[aem_server]:[port]/system/console/components/`问。 配置并启 `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` 用默认禁用的组件。 设置检查资产上 [!DNL Experience Manager] 元数据的有效性的频率。 此配置向资产 `hasValidMetadata` 添加 `jcr:content` 属性。 [!DNL Experience Manager] 使用此属性筛选搜索结果中的无效资产。 如果您在选中后添加资产，则直到下一个计划的选 `hasValidMetadata` 中后，资产才会被标记。 因此，资产不会显示在搜索过滤器中，搜索无效元数据，直到下次计划检查后才显示。
 
