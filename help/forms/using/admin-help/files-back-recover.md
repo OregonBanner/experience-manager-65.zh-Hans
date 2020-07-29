@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: ac3d18bf0b39efbe927c10aef557296140628e19
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2187'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ## 全局文档存储目录 {#global-document-storage-directory}
 
-GDS是一个用于存储进程中使用的长寿命文件的目录。 长寿命文件的使用期限旨在跨AEM表单系统的一个或多个启动项，并且可以跨日期甚至年。 这些长期文件可以包括PDF、策略和表单模板。 长寿命文件是许多AEM表单部署的整体状态的关键部分。 如果某些或所有长期文档丢失或损坏，表单服务器可能会变得不稳定。
+GDS是一个用于存储进程中使用的长寿命文件的目录。 长寿命文件的使用期限旨在跨AEM表单系统的一个或多个启动项，并且可以跨日甚至多年。 这些长期文件可以包括PDF、策略和表单模板。 长期文件是许多AEM表单部署的整体状态的关键部分。 如果某些或所有长期文档丢失或损坏，表单服务器可能会变得不稳定。
 
 异步作业调用的输入文档也存储在GDS中，必须可用于处理请求。 因此，务必考虑承载GDS并采用独立磁盘冗余阵列(RAID)或其他技术的文件系统的可靠性，以满足您的质量和服务级别要求。
 
@@ -55,13 +55,13 @@ GDS的位置是在AEM表单安装过程中或稍后使用管理控制台确定�
 
 ### 文档库用于存储时的备份选项 {#backup-options-when-database-is-used-for-document-storage}
 
-您可以使用管理控制台在AEM表单文档库中启用AEM表单存储。 即使此选项在文档库中保留所有永久性，AEM表单仍需要基于文件系统的GDS目录，因为它用于存储与AEM表单的会话和调用相关的永久和临时文件和资源。
+您可以使用管理控制台在AEM表单文档库中启用AEM forms存储。 即使此选项在文档库中保留所有永久性，AEM表单仍需要基于文件系统的GDS目录，因为它用于存储与AEM表单的会话和调用相关的永久和临时文件和资源。
 
 当您在管理控制台的核心系统设置中或使用Configuration Manager选择“在文档库中启用存储”选项时，AEM表单不允许快照备份模式和滚动备份模式。 因此，您无需使用AEM表单管理备份模式。 如果您使用此选项，则在启用该选项后只备份一次GDS。 从备份中恢复AEM表单时，无需重命名GDS的备份目录或恢复GDS。
 
 ## AEM存储库 {#aem-repository}
 
-如果在安装AEM表单时配置了crx-repository，则会创建AEM存储库(crx-repository)。 crx-repository目录的位置在AEM表单安装过程中确定。 需要AEM存储库备份和还原以及数据库和GDS，才能在AEM表单中实现一致的AEM表单数据。 AEM存储库包含Corressong Management Solution、Forms Manager和AEM FormsWorkspace的数据。
+如果在安装AEM forms时配置crx-repository，则会创建AEM repository(crx-repository)。 crx-repository目录的位置在AEM表单安装过程中确定。 AEM存储库备份和还原与数据库和GDS一起需要，以在AEM表单中实现一致的AEM表单数据。 AEM存储库包含Corressong Management Solution、Forms经理和AEM Forms工作区的数据。
 
 ### 通信管理解决方案 {#correspondence-management-solution}
 
@@ -75,17 +75,17 @@ GDS的位置是在AEM表单安装过程中或稍后使用管理控制台确定�
 
 ### AEM Forms工作区 {#html-workspace}
 
-AEM Forms工作区与（JEE上的AEM表单已弃用）Flex Workspace的功能相匹配，并添加了扩展和集成Workspace的新功能，使其更加用户友好。
+AEM Forms工作区与(JEE上的AEM表单已弃用)Flex工作区的功能相匹配，并添加了扩展和集成工作区的新功能，使其更易用。
 
 >[!NOTE]
 >
->AEM表单发行版中已弃用Flex工作空间。
+>Flex工作区已弃用于AEM表单发布。
 
-它允许在没有Flash Player和Adobe Reader的客户端上进行任务管理。 除了PDF forms和Flex表单，它还简化了HTML表单的再现。
+它允许在没有任务和Adobe Reader的客户上进行Flash Player管理。 除了PDF forms和Flex表单外，它还方便了HTMLForms的再现。
 
 ## AEM表单数据库 {#aem-forms-database}
 
-AEM表单存储库存储对GDS和内容根目录（针对内容服务）中文件的内容，如表单对象、服务配置、进程状态和数据库引用。 数据库备份可以实时执行而不中断服务，恢复可以到特定时间点或特定更改。 本节介绍如何配置数据库，以便实时备份它。
+AEM表单存储库存储对GDS和内容数据库根目录（对于内容服务）中文件的表单对象、服务配置、进程状态和数据库引用等内容。 数据库备份可以实时执行而不中断服务，恢复可以到特定时间点或特定更改。 本节介绍如何配置数据库，以便实时备份它。
 
 在正确配置的AEM表单系统上，系统管理员和数据库管理员可以轻松协作，将系统恢复到一致的已知状态。
 
@@ -93,7 +93,7 @@ AEM表单存储库存储对GDS和内容根目录（针对内容服务）中文�
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（已弃用）是与LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持将于2014年12月31日结束。 请参 [阅Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 要了解有关配置Content Services（已弃用）的信息，请参 [阅管理Content Services](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
+>Adobe®LiveCycle®内容服务ES（已弃用）是与LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 内容服务（已弃用）支持将于2014年12月31日结束。 请参阅 [Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。 要了解有关配置Content Services（已弃用）的信息，请参 [阅管理Content Services](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)。
 
 ### DB2 {#db2}
 
@@ -101,7 +101,7 @@ AEM表单存储库存储对GDS和内容根目录（针对内容服务）中文�
 
 >[!NOTE]
 >
->如果您的AEM表单环境是从AEM表单的先前版本升级的，并使用DB2，则不支持联机备份。 在这种情况下，您必须关闭AEM表单并执行脱机备份。 未来版本的AEM表单将支持升级客户的在线备份。
+>如果您的AEM表单环境是从AEM表单的先前版本升级的，并且使用DB2，则不支持联机备份。 在这种情况下，必须关闭AEM表单并执行脱机备份。 未来版本的AEM表单将支持升级客户的在线备份。
 
 IBM拥有一套工具和帮助系统来帮助数据库管理员管理其备份和恢复任务:
 
@@ -131,7 +131,7 @@ SQL Server还提供两种备份和恢复工具：
 * SQL Server Management Studio(GUI)
 * T-SQL（命令行）
 
-请参 [阅备](https://articles.techrepublic.com.com/5100-1035_61-1043671.md)份战 [略和备份和还原](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)。
+有关详细信息，请参 [阅备份和还原](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)。
 
 ### MySQL {#mysql}
 
@@ -197,10 +197,10 @@ log-bin=logname
 
 ## 客户安装的字体 {#customer-installed-fonts}
 
-如果您在AEM表单环境上安装了其他字体，则必须单独备份这些字体。 备份在管理控制台中的“设置”>“核心系统”>“配置”下指定的所有Adobe和客户字体目录。 确保备份整个字体目录。
+如果您在AEM表单环境上安装了其他字体，则必须单独备份这些字体。 备份在管理控制台中的设置>核心系统>配置下指定的所有Adobe和客户字体目录。 确保备份整个字体目录。
 
 >[!NOTE]
 >
->默认情况下，随AEM表单一起安装的Adobe字体位于目 `[aem-forms root]/fonts` 录中。
+>默认情况下，随AEM表单安装的Adobe字体位于目 `[aem-forms root]/fonts` 录中。
 
 如果您正在主机上重新初始化操作系统，并且希望使用先前操作系统中的字体，则还应备份系统字体目录的内容。 （有关具体说明，请参阅操作系统的文档）。
