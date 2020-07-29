@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: df59879cfa6b0bc7eba13f679e833fabbcbe92f2
+source-git-commit: 6a9f273c6e9eb822e2d4765700361a205019b84c
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
    * 版本2.6或更高版本
    * 无需配置蒙古或共享
    * 强烈建议使用复 [制集](#mongoreplicaset)
-   * 可能与AEM运行在同一台主机上，或远程运行
+   * 可以与AEM在同一主机上运行或远程运行
 
 * [Apache Solr](https://lucene.apache.org/solr/):
 
@@ -43,7 +43,7 @@ ht-degree: 1%
    * 运行模式的选择：
       * 独立模式
       * [SolrCloud模式](solr.md#solrcloud-mode) (建议用于生产环境)
-   * 多语言搜索选择(MLS)
+   * 多语言搜索选择(MLS):
       * [安装标准MLS](solr.md#installing-standard-mls)
       * [安装高级MLS](solr.md#installing-advanced-mls)
 
@@ -91,9 +91,11 @@ ht-degree: 1%
 
       * **[!UICONTROL Solr URL在]**独立模式下用于与Solr通信的URL。
 如果在SolrCloud模式下运行，则保留为空。
+
          *默认*: https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr集合]**Solr集合名称。
+
          *默认*: collection1
 
 * Select **[!UICONTROL Submit]**
@@ -222,7 +224,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 通过检查存储选项的配置，确保MSRP已配置为默认提供程序。 默认情况下，存储资源提供程序为JSRP。
 
-在所有作者和发布AEM实例上，重新访 [问存储配置控制台](srp-config.md) 或检查AEM存储库：
+在所有作者实例和发布AEM实例上，重新访 [问存储配置控制台](srp-config.md) ，或检查AEM存储库：
 
 * 在JCR中， [if/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
@@ -237,7 +239,7 @@ GitHub上有一个开放源代码工具可用于此用途：
 
 * [AEM CommunitiesUGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-可以自定义迁移工具，以从AEM社交社区的早期版本中导出UGC，导入到AEM Communities6.1或更高版本中。
+可以自定义迁移工具，将UGC从AEM social communities的早期版本导出，以导入到AEM Communities6.1或更高版本中。
 
 ### 错误——未定义字段provider_id {#error-undefined-field-provider-id}
 
@@ -268,6 +270,6 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 
 ## 资源 {#resources}
 
-* [AEM with MongoDB](../../help/sites-deploying/aem-with-mongodb.md)
+* [AEM与MongoDB](../../help/sites-deploying/aem-with-mongodb.md)
 * [MongoDB文档](https://docs.mongodb.org/)
 
