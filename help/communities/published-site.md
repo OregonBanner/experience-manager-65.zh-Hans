@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 在发布时浏览到新站点 {#browse-to-new-site-on-publish}
 
-新创建的社区站点已发布后，浏览到创建站点时显示的URL，但浏览到发布服务器，如
+新创建的社区站点已发布后，浏览到创建站点时显示的URL，但浏览到发布服务器，例如：
 
 * 作者URL = https://localhost:4502/content/sites/engage/en.html
 * 发布URL = https://localhost:4503/content/sites/engage/en.html
@@ -65,13 +65,14 @@ ht-degree: 0%
 
 1. 转到页 **面属性**。
 
-   ![站点身份验证](assets/site-authentication.png)
+   ![page-properties](assets/page-properties.png)
 
 1. 转至“高 **级** ”选项卡。
 
-   ![page-properties](assets/page-properties.png)
-
 1. Enable **Authentication Requirement**.
+
+   ![站点身份验证](assets/site-authentication.png)
+
 1. 添加登录页面的路径。 例如， **/content/....../GetStarted**。
 1. 发布页面。
 
