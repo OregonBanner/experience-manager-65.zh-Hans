@@ -1,8 +1,8 @@
 ---
 title: 创建新登录屏幕
 seo-title: 创建新登录屏幕
-description: 如何修改LiveCycle模块的登录页，如AEM Forms工作区或Forms Manager。
-seo-description: 如何修改LiveCycle模块的登录页，如AEM Forms工作区或Forms Manager。
+description: 如何修改LiveCycle模块的登录页面，例如AEM Forms工作区或Forms管理器。
+seo-description: 如何修改LiveCycle模块的登录页面，例如AEM Forms工作区或Forms管理器。
 uuid: 2d4a72f4-cc9a-412d-856d-0fca75f1272b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,17 +10,17 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b4c1bc5f09491a8843a82c3589604f6717a76ea8
+source-git-commit: 9fcfd1c2c63d9a32f2d68f5b0c974bc5b5d22b40
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 4%
+source-wordcount: '485'
+ht-degree: 5%
 
 ---
 
 
 # 创建新登录屏幕{#creating-a-new-login-screen}
 
-您可以修改所有使用AEM Forms登录屏幕的AEM Forms模块的登录屏幕。 例如，这些修改会影响Forms Manager和AEM Forms工作区的登录屏幕。
+您可以修改所有使用AEM Forms登录屏幕的AEM Forms模块的登录屏幕。 例如，这些修改会影响Forms管理器和AEM Forms工作区的登录屏幕。
 
 ## 先决条件 {#prerequisite}
 
@@ -97,9 +97,11 @@ String browserLocale = "en";
             break;
         }
     }
+```
 
-To
+收件人
 
+```jsp
 String browserLocale = "en";
     for(int i=0; i<locales.length; i++)
     {
@@ -125,8 +127,9 @@ String browserLocale = "en";
             break;
         }
     }
-```jsp
+```
 
+```jsp
 String browserLocale = "en";
 
     for(int i=0; i<locales.length; i++)
@@ -149,9 +152,11 @@ String browserLocale = "en";
             break;
         }
     }
+```
 
-To
+收件人
 
+```jsp
 String browserLocale = "en";
     for(int i=0; i<locales.length; i++)
     {
@@ -177,20 +182,19 @@ String browserLocale = "en";
             break;
         }
     }
-***To change Default locale***
-
-```jsp
-
-String browserLocale = "en";
-for(int i=0; i<locales.length; i++)
-
-To
-
-String browserLocale = "ar";
-for(int i=0; i<locales.length; i++)
 ```
 
+***更改默认区域设置***
 
+```jsp
+   String browserLocale = "en";
+   for(int i=0; i<locales.length; i++)
+
+   To
+
+   String browserLocale = "ar";
+   for(int i=0; i<locales.length; i++)
+```
 
 ### 添加新文本或修改现有文本 {#adding-new-text-or-modifying-existing-text}
 
@@ -233,8 +237,6 @@ for(int i=0; i<locales.length; i++)
                        <span class="loginTitle"><%= i18n.get("Login") %></code>
                        <% if (loginFailed) {%>
    ```
-
-
 
 ### 添加新样式或修改现有样式 {#adding-new-style-or-modifying-existing-style}
 
@@ -285,7 +287,6 @@ css.newLoginContentArea {
 >
 >如果删除中( `/apps/livecycle/core/content/login` 从中复 `/libs/livecycle/core/content/login`制)的现有图像，则删除CSS中的相应引用。
 
-
 ### 添加新图像 {#add-new-images}
 
 1. 请按照添加新样式或修改现有样式（见上文）的步骤操作。
@@ -324,4 +325,3 @@ css.newLoginContentArea {
 ```jsp
 <div class="newLginContainerBkg">
 ```
-
