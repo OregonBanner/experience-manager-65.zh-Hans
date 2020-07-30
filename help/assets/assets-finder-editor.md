@@ -3,7 +3,7 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: c679cc5ad8f0ecf3495b020ef593de2e73c05ae0
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 1%
@@ -171,7 +171,7 @@ To add predicates:
 
 1. Drag the appropriate predicates to the Asset Share page underneath the query builder. Doing so creates the appropriate fields.
 
-![assetshare4](assets/assetshare4.bmp)
+![assetshare4](assets/assetshare4.png)
 
 The following predicates are available:
 
@@ -204,17 +204,17 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 要创建资产编辑器页面，请执行以下操作：
 
 1. 在“网 **[!UICONTROL 站]** ”选项卡中，导航到要创建资产编辑器页面的位置，然后单击“新 **建”**。
-1. 选择 **Geometrixx资产编辑器** ，然后单 **击创建**。 将创建新页面，并且该页面会列在“网 **站** ”选项卡。
+1. 选择 **Geometrixx资产编辑** ，然后单 **击创建**。 将创建新页面，并且该页面会列在“网 **站** ”选项卡。
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
 使用Geometrixx资产编辑器模板创建的基本页面如下所示：
 
-![assetshare5](assets/assetshare5.bmp)
+![assetshare5](assets/assetshare5.png)
 
-要自定义资产编辑器页面，请使用Sidekick中的元素。 从Geometrixx新闻中心访问的“资 **产编辑器** ”页面是基于此模板的自定义页面版本：
+要自定义资产编辑器页面，请使用Sidekick中的元素。 从Geometrixx出版中心访问的资产编辑 **器页面** ，是基于此模板的自定义页面版本：
 
-![assetshare6](assets/assetshare6.bmp)
+![assetshare6](assets/assetshare6.png)
 
 #### 设置要从资产共享页面打开的资产编辑器 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
@@ -262,7 +262,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 #### 元数据表单和文本字段——配置视图元数据组件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-元数据表单是包含开始和结束操作的表单。 在中间输入文 **本** 字段。 有关 [使用表](/help/sites-authoring/default-components-foundation.md#form-component) 单的更多信息，请参阅表单。
+元数据表单是包含开始和结束操作的表单。 在中间输入文 **本** 字段。 请参 [阅Forms](/help/sites-authoring/default-components-foundation.md#form-component) ，了解有关使用表单的更多信息。
 
 1. 通过单击表单的开始区 **域** 中的编辑，创建开始操作。 如果需要，可以输入Box标题。 默认情况下，“框”标题为 **元数据**。 如果希望生成验证的java脚本客户端代码，请选中“客户端验证”复选框。
 
@@ -394,7 +394,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 要使用“资产编辑器”页面对资产进行多次编辑，请执行以下操作：
 
-1. 打开Geometrixx **新闻中心** 页：
+1. 打开Geometrixx **新闻中心** (P)页：
    `https://localhost:4502/content/geometrixx/en/company/press.html`
 
 1. 选择资产：
@@ -405,7 +405,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
    要选择资产范围，请执行以下操作： 单击第一个资产，然后 `Shift + click` 单击最后一个资产。
 
 1. 在“ **操作** ”字段( **页面左侧部分** )中单击“编辑元数据”。
-1. Geometrixx Press **Center资产编辑器页** 面在新选项卡中打开。 资产的元数据会按如下方式显示：
+1. Geometrixx按 **下中心资产编辑器** (Center Asset Editor)页面在新选项卡中打开。 资产的元数据会按如下方式显示：
 
    * 标记不适用于所有资产，但仅适用于少数几个资产，以斜体显示。
    * 应用于所有资产的标记会以普通字体显示。
@@ -423,7 +423,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
    * 单 `+` 击可向所有资产添加标记。
    * 单击箭 **头** ，然后选择一个标记以向所有资产添加新标记。
 
-   单 **击** “确定”将更改写入表单。 “标记”字段旁 **边的框** 将自动被选中。
+   单 **击** “确定”将更改写入表单。 将自动选中 **“标记** ”字段旁边的框。
 
 1. 编辑“说明”字段。 例如，将其设置为：
 
