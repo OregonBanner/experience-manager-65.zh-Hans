@@ -8,7 +8,7 @@ contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 252dac988c8256cf99ee8487feb937d5345ed797
+source-git-commit: a842aa85652e5c04d5825a3e88aa6b64ef8a0088
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 2%
@@ -34,9 +34,9 @@ AEM Forms提供测试框架Calvin，以自动测试自适应表单。 使用框�
 
 测试套件包含一组测试用例。 您可以有多个测试套件。 建议为每个表单单独提供一个测试套件。 要创建测试套件，请执行以下操作：
 
-1. 以管理员身份登录到AEM Forms作者实例。 打开CRXDE Lite。 您可以点击“AEM徽标”>“ **工具** ”>“常 **规** ” **>“** CRXDE Lite [”，或在浏](https://localhost:4502/crx/de/index.jsp) 览器中打开https://localhost:4502/crx/de/index.jsp  URL以打开CRXDE Lite。
+1. 以管理员身份登录到AEM Forms作者实例。 打开CRXDE Lite。 您可以点按AEM徽标> **工具** >常 **规** > **CRXDE Lite** ，或在浏 [览器中打](https://localhost:4502/crx/de/index.jsp) 开https://localhost:4502/crx/de/index.jspURL以打开CRXDE Lite。
 
-1. 导航到CRXDE Lite中的/etc/clientlibs。 右键单击/etc/clientlibs子文件夹，然后单击“创 **建** ”>“ **创建节点”。** 在“名称”字段中， **键入WeRetailFormTestCases**。 选择类型( **cq:ClientLibraryFolder** )，然后单 **击“确定”**。 它创建一个节点。 您可以使用任何名称代替WeRetailFormTestCases。
+1. 在CRXDE Lite中导航到/etc/clientlibs。 右键单击/etc/clientlibs子文件夹，然后单击“创 **建** ”>“ **创建节点”。** 在“名称”字段中， **键入WeRetailFormTestCases**。 选择类型( **cq:ClientLibraryFolder** )，然后单 **击“确定”**。 它创建一个节点。 您可以使用任何名称代替WeRetailFormTestCases。
 1. 将以下属性添加到WeRetailFormTestCases节点并点按保 **存全部**。
 
 <table>
@@ -101,7 +101,7 @@ AEM Forms提供测试框架Calvin，以自动测试自适应表单。 使用框�
 
    以上代码创建名为We retail - **Tests的测试套件**。
 
-1. 打开AEM测试UI（AEM >工具>操作>测试）。 UI中列出 **测试套件** - We retail - Tests。
+1. 打开AEM Testing UI(AEM >工具>操作>测试)。 UI中列出 **测试套件** - We retail - Tests。
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
@@ -177,7 +177,7 @@ AEM Forms提供测试框架Calvin，以自动测试自适应表单。 使用框�
 
 1. 在WeRetailFormTests节 `prefillTest.js`点中创 **[!UICONTROL 建文件]** 。 将以下代码添加到文件。 代码创建测试用例。 测试用例预填表单的所有字段并验证某些字段，以确保输入正确的值。
 
-   ```
+   ```javascript
    (function (window, hobs) {
        'use strict';
    
