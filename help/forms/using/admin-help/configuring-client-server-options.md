@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '10273'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 **基本URL:** 基本文档安全URL，包含服务器名称和端口。 附加到基础的信息会创建连接URL。 例如，在访问网页时会附加/edc/Main.do。 用户还通过此URL响应外部用户注册邀请。
 
-如果您使用IPv6，请输入基本URL作为计算机名或DNS名称。 如果您使用数字IP地址，Acrobat将无法打开受策略保护的文件。 此外，请为服务器使用HTTP安全(HTTPS)URL。
+如果您使用IPv6，请输入基本URL作为计算机名或DNS名称。 如果使用数字IP地址，Acrobat将无法打开受策略保护的文件。 此外，请为服务器使用HTTP安全(HTTPS)URL。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 **允许匿名用户访问：** 选择此选项可启用创建共享策略和个人策略的功能，这些策略允许匿名用户打开受策略保护的文档。 (没有帐户的用户可以访问文档，但无法登录文档安全或使用其他受策略保护的文档。)
 
-**禁用对版本7客户端的访问：** 指定用户是可以使用Acrobat还是Reader 7.0连接到服务器。 选择此选项后，用户必须使用Acrobat或Reader 8.0及更高版本，以完成PDF文档的文档安全操作。 如果策略要求在打开受策略保护的文档时，Acrobat或Reader 8.0及更高版本必须以认证模式运行，则应禁用对Acrobat或Reader 7的访问。 (请参阅指定用户和用户组的文档权限。)
+**禁用对版本7客户端的访问：** 指定用户是可以使用Acrobat还是Reader7.0连接到服务器。 选择此选项后，用户必须使用Acrobat或Reader8.0及更高版本，以完成PDF文档的文档安全操作。 如果策略要求在打开受策略保护的Acrobat时，文档或Reader8.0及更高版本必须以认证模式运行，则应禁用对Acrobat或Reader7的访问。 (请参阅指定用户和用户组的文档权限。)
 
 **允许每个文档脱机访问** 选择此选项以指定每个文档的脱机访问。 如果启用此设置，则用户将只能脱机访问用户至少在线打开过一次的文档。
 
@@ -55,25 +55,25 @@ ht-degree: 0%
 
 **允许扩展身份验证** 选择以启用扩展身份验证，然后输入扩展身份验证登录URL。
 
-选择此选项将使客户端应用程序能够使用扩展身份验证。 扩展身份验证提供了自定义身份验证过程以及在AEM表单服务器上配置的不同身份验证选项。 例如，用户现在可以从Acrobat和Reader客户端体验基于SAML的身份验证，而不是AEM表单用户名／密码。 默认情况下，登录URL包含 *localhost* 作为服务器名称。 用完全限定的主机名替换服务器名称。 如果尚未启用扩展身份验证，则登陆URL中的主机名将自动从基本URL填充。 请参 [阅添加扩展身份验证提供程序](configuring-client-server-options.md#add-the-extended-authentication-provider)。
+选择此选项将使客户端应用程序能够使用扩展身份验证。 扩展身份验证提供了自定义身份验证过程和在AEM forms服务器上配置的不同身份验证选项。 例如，用户现在可以体验基于SAML的身份验证，而不是AEM表单的用户名／密码(来自Acrobat和Reader客户端)。 默认情况下，登录URL包含 *localhost* 作为服务器名称。 用完全限定的主机名替换服务器名称。 如果尚未启用扩展身份验证，则登陆URL中的主机名将自动从基本URL填充。 请参 [阅添加扩展身份验证提供程序](configuring-client-server-options.md#add-the-extended-authentication-provider)。
 
-***注&#x200B;**: Apple Mac OS X上支持Adobe Acrobat 11.0.6及更高版本的扩展身份验证。*
+***注&#x200B;**: Apple Mac OS X上支持Adobe Acrobat版本11.0.6及更高版本的扩展身份验证。*
 
-**扩展身份验证的首选HTML控制宽度** 指定扩展身份验证对话框的宽度，该对话框在Acrobat中打开，用于输入用户凭据。
+**扩展身份验证的首选HTML控制宽度** 指定扩展身份验证对话框的宽度，该对话框在Acrobat打开以输入用户凭据。
 
-**扩展身份验证的首选HTML控制高度** 指定扩展身份验证对话框的高度，该对话框在Acrobat中打开，用于输入用户凭据。
+**扩展身份验证的首选HTML控制高度** 指定扩展身份验证对话框的高度，该对话框在Acrobat打开以输入用户凭据。
 
 ***注&#x200B;**: 此对话框的宽度和高度限制如下：*宽度： 最小= 400，最大= 900
 
 高度： 最低= 450; 最大= 800
 
-**启用客户端凭据缓存：** 选择此选项可允许用户缓存其凭据（用户名和密码）。 缓存用户的凭据时，他们不必每次打开文档或单击Adobe Acrobat的“管理安全策略”页面上的“刷新”按钮时输入凭据。 您可以指定用户必须再次提供凭据的天数。 将天数设置为0可无限期缓存凭据。
+**启用客户端凭据缓存：** 选择此选项可允许用户缓存其凭据（用户名和密码）。 缓存用户的凭据时，他们不必每次打开文档或单击Adobe Acrobat“管理安全策略”页上的“刷新”按钮时输入凭据。 您可以指定用户必须再次提供凭据的天数。 将天数设置为0可无限期缓存凭据。
 
 ## 配置文档安全用户和管理员 {#configuring-document-security-users-and-administrators}
 
 ### 为管理员分配文档安全角色 {#assigning-document-security-roles-to-administrators}
 
-您的AEM表单环境包含一个或多个具有创建用户和组相应权限的管理员用户。 如果您的组织正在使用文档安全，则还必须向至少一个管理员分配管理已邀请和本地用户的权限。
+AEM表单环境包含一个或多个具有创建用户和组相应权限的管理员用户。 如果您的组织正在使用文档安全，则还必须向至少一个管理员分配管理已邀请和本地用户的权限。
 
 管理员还必须具有管理控制台用户角色才能访问管理控制台。 (请参 [阅创建和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。)
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 可见的用户和组列表对策略集协调器是可见的，用于限制最终用户在选择要添加到策略的用户或组时可以浏览的域。 如果未执行此任务，则策略集协调员将找不到要添加到策略的任何用户或组。 对于任何给定的策略集，都可以有多个策略集协调器。
 
-1. 在安装并配置AEM表单环境以及文档安全后，请在“用户管理”中设置所有适当的域。 <!-- Fix broken link (See Setting up and managing domains) -->
+1. 安装并配置AEM表单环境及文档安全后，请在“用户管理”中设置所有适当的域。 <!-- Fix broken link (See Setting up and managing domains) -->
 
    ***注&#x200B;**: 必须先创建域，然后才能创建任何策略。*
 
@@ -95,11 +95,11 @@ ht-degree: 0%
 
 ## 添加扩展身份验证提供程序 {#add-the-extended-authentication-provider}
 
-AEM表单提供了一个配置示例，您可以为环境自定义该配置。 执行以下步骤：
+AEM forms提供了可为环境自定义的示例配置。 执行以下步骤：
 
 >[!NOTE]
 >
->Apple Mac OS X上支持Adobe Acrobat 11.0.6及更高版本的扩展身份验证。
+>Apple Mac OS X上支持Adobe Acrobat版本11.0.6及更高版本的扩展身份验证。
 
 1. 获取部署WAR文件的示例。 请参阅适用于应用程序服务器的安装指南。
 1. 确保表单服务器具有完全限定的名称，而不是作为基本URL的IP地址，并且它是HTTPS URL。 请参阅 [服务器配置设置](configuring-client-server-options.md#server-configuration-settings)。
@@ -108,11 +108,11 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 ### 为扩展身份验证添加SSO重定向URL {#add-sso-redirect-urls-for-extended-authentication}
 
-启用扩展身份验证后，在Acrobat XI或Reader XI中打开受策略保护的文档的用户将看到一个用于身份验证的对话框。 此对话框加载您在文档安全服务器设置上指定为扩展身份验证登录URL的HTML页。 请参阅 [服务器配置设置](configuring-client-server-options.md#server-configuration-settings)。
+启用扩展身份验证后，在AcrobatXI或ReaderXI中打开受策略保护的文档的用户将看到用于身份验证的对话框。 此对话框加载您在文档安全服务器设置上指定为扩展身份验证登录URL的HTML页。 请参阅 [服务器配置设置](configuring-client-server-options.md#server-configuration-settings)。
 
 >[!NOTE]
 >
->Apple Mac OS X上支持Adobe Acrobat 11.0.6及更高版本的扩展身份验证。
+>Apple Mac OS X上支持Adobe Acrobat版本11.0.6及更高版本的扩展身份验证。
 
 1. 在管理控制台中，单击“设置”>“用户管理”>“配置”>“导入和导出配置文件”。
 1. 单击“Export”（导出），然后将配置文件保存到磁盘。
@@ -131,7 +131,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 文档安全性提供离线使用受策略保护的文档的能力，而无需Internet或网络连接。 此功能要求策略允许脱机访问，如指定用 [户和用户组的文档权限中所述](/help/forms/using/admin-help/creating-policies.md#specify-the-document-permissions-for-users-and-groups)。 在脱机使用具有此策略的文档之前，收件人必须在联机时打开文档，并在出现提示时单击“是”启用脱机访问。 还可请求收件人验证其身份。 然后，收件人可以在策略中指定的脱机租用期内脱机使用文档。
 
-脱机租用期结束时，收件人必须通过联机打开文档或使用Acrobat或Acrobat Reader DC扩展菜单命令进行同步，以再次与文档安全性同步。 (请参 *阅“Acrobat帮助* ”或相 *应的Acrobat Reader DC扩展帮助*。)
+脱机租用期结束时，收件人必须通过联机打开文档或使用Acrobat或Acrobat Reader DC扩展菜单命令进行同步，以再次与文档安全同步。 (请参阅 *Acrobat帮* 助或相应的 *Acrobat Reader DC扩展帮助*。)
 
 由于允许脱机访问的文档需要在脱机存储文件的计算机上缓存关键材料，因此，如果未经授权的用户可以获取关键材料，则文件可能会受到威胁。 为了弥补这种可能性，提供了计划和手动密钥翻转选项，您可以配置这些选项以防止未经授权的人使用密钥访问文档。
 
@@ -196,7 +196,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 * 受策略保护的文档事件，如授权或未经授权的用户尝试打开文档
 * 策略事件，如创建、更改、删除、启用和禁用策略
 * 用户事件，如外部用户邀请和注册、已激活和已停用的用户帐户、对用户密码的更改以及用户档案更新
-* AEM表单事件，如版本不匹配、目录服务器和授权提供程序不可用以及服务器配置更改
+* AEM表单事件，如版本不匹配、目录服务器和授权提供者不可用以及服务器配置更改
 
 ### 启用或禁用事件审核 {#enable-or-disable-event-auditing}
 
@@ -239,7 +239,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 ### 导入自定义审核事件类型 {#import-a-custom-audit-event-type}
 
-如果您使用支持审核其他事件(如特定于某个文件类型的文档)的启用事件安全的应用程序，Adobe合作伙伴可以为您提供可导入到文档安全中的自定义审核事件。 仅当Adobe合作伙伴为您提供了自定义事件类型时，才使用此功能。
+如果您使用支持审核其他文档(如特定于某个文件类型的事件)的启用事件安全的应用程序，Adobe合作伙伴可以为您提供可导入到文档安全中的自定义审核事件。 仅当事件类型合作伙伴为您提供了自定义Adobe时，才使用此功能。
 
 1. 在管理控制台中，单击“服务”>“文档安全”>“配置”>“事件管理”。
 1. 单击“浏览”以转到要导入的XML文件，然后单击“导入”。
@@ -309,9 +309,9 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 **切换文档策略：** 用户或管理员切换附加到文档的策略。
 
-**发布文档为：** 服务器上注册了一个新文档，其documentName和许可证与现有文档相同，文档没有父子关系。 此事件可使用AEM表单SDK触发。
+**发布文档为：** 服务器上注册了一个新文档，其documentName和许可证与现有文档相同，文档没有父子关系。 此事件可使用AEM forms SDK触发。
 
-**迭代文档:** 服务器上注册了一个新文档，其documentName和许可证与现有文档相同，文档具有父子关系。 此事件可使用AEM表单SDK触发。
+**迭代文档:** 服务器上注册了一个新文档，其documentName和许可证与现有文档相同，文档具有父子关系。 此事件可使用AEM forms SDK触发。
 
 **政策事件**
 
@@ -365,7 +365,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 **Synchronized Client** Client应用程序必须与服务器同步信息才允许脱机访问。
 
-**版本不匹配：** 与服务器不兼容的AEM表单SDK版本尝试连接到服务器。
+**版本不匹配：** 与服务器不兼容的AEM forms SDK版本尝试连接到服务器。
 
 **目录同步信息：** 此信息不可从事件页面获取。 当前目录同步信息（包括上次同步的当前同步状态和时间）显示在“域管理”页上。 要访问管理控制台中的“域管理”页，请单击“设置”>“用户管理”>“域管理”。
 
@@ -420,7 +420,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 **客户端证书显示的自定义**
 
-**仅显示受信任的凭证发行者：** 选择此选项后，客户端应用程序仅向用户显示AEM表单配置为信任的凭据颁发者颁发的证书（请参阅管理证书和凭据）。 如果未选择此选项，则用户系统上将显示所有证书的列表。
+**仅显示受信任的凭证发行者：** 选择此选项后，客户端应用程序只向用户显示AEM表单配置为信任的凭据颁发者的证书（请参阅管理证书和凭据。） 如果未选择此选项，则用户系统上将显示所有证书的列表。
 
 ## 配置动态水印 {#configure-dynamic-watermarks}
 
@@ -432,7 +432,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 当收件人视图或打印文档时，策略指定的水印将显示在受策略保护的文档中。 与永久水印不同，动态水印从不保存在文档中，这提供了在Intranet环境中部署文档时所需的灵活性，以确保查看应用程序显示特定用户的身份。 此外，如果文档有多个用户，使用动态水印意味着您可以使用一个文档而不是多个版本，每个版本具有不同的水印。 显示的水印反映当前用户的身份。
 
-请注意，动态水印与用户可以直接添加到Acrobat文档的水印不同。 结果是，在受策略保护的文档中可以有两个水印。
+请注意，动态水印与用户可直接添加到Acrobat文档的水印不同。 结果是，在受策略保护的文档中可以有两个水印。
 
 ### 创建水印时的注意事项 {#considerations-when-creating-watermarks}
 
@@ -452,24 +452,24 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 * 您可以更改要用作水印元素的最大PDF文件大小。 但是，在脱机同步应用于此类水印的文档时，用作水印的大型PDF文档会降低性能。 请参 [阅更改水印配置参数](configuring-client-server-options.md#change-the-watermark-configuration-parameters)。
 * 只有选定PDF的第一页用作水印。 确保要作为水印显示的信息在第一页本身上可用。
 * 即使您可以指定PDF文档的缩放，如果您计划将PDF用作页眉、页脚或边距中的水印，请考虑其页面大小和布局。
-* 指定字体名称时，请正确输入该名称。 如果打开文档的客户端计算机中不存在您指定的字体，则AEM表单将替换该字体。
+* 指定字体名称时，请正确输入该名称。 AEM表单将替换您指定的字体(如果在打开文档的客户端计算机中不存在)。
 * 如果选择文本作为水印内容，则对于宽度不同的页面，将缩放选项指定为“适合页面”不起作用。
 * 指定水印元素的位置时，请确保只有一个元素具有相同的位置。 如果两个水印元素具有相同的位置（如中心），则它们会在文档上出现重叠，并按照它们添加到水印的顺序显示。
-* 指定字体大小和类型时，请确保文本长度在页面中完全可见。 文本内容会滚动到新行中，因此您希望显示在边距中的水印内容可能会重叠到页面上的内容区域。 但是，如果在Acrobat 9中打开文档，则超出单行的文本将被截断。
+* 指定字体大小和类型时，请确保文本长度在页面中完全可见。 文本内容会滚动到新行中，因此您希望显示在边距中的水印内容可能会重叠到页面上的内容区域。 但是，如果在Acrobat 9打开文档，则超出单行的文本将被截断。
 
 ### 动态水印的限制 {#limitations-of-dynamic-watermarks}
 
-某些客户端应用程序可能不支持动态水印。 请参阅相应的Acrobat Reader DC扩展帮助。 此外，请记住以下关于支持动态水印的Acrobat版本的信息：
+某些客户端应用程序可能不支持动态水印。 请参阅相应的Acrobat Reader DC扩展帮助。 此外，请记住以下支持动态水印的Acrobat版本：
 
 * 您不能使用受密码保护的PDF文档作为水印元素。
-* 低于10的Acrobat和Adobe Reader版本不支持以下水印功能：
+* Acrobat和Adobe Reader10之前的版本不支持以下水印功能：
 
    * PDF水印
    * 水印中的多个元素（文本/PDF）
    * 高级选项，如页面范围或显示选项
-   * 文本格式选项，如指定的字体、字体名称和颜色。 但是，Acrobat和Reader的早期版本将以默认字体和颜色显示文本内容。
+   * 文本格式选项，如指定的字体、字体名称和颜色。 但是，Acrobat语和Reader语的早期版本将以默认字体和颜色显示文本内容。
 
-* Acrobat 9.0及更早版本： Acrobat 9.0及早期版本不支持动态水印中的策略名称。 如果Acrobat 9.0打开一个受策略保护的文档，其中包含策略名称和其他动态数据的动态水印，则显示水印时不带策略名称。 如果动态水印仅包含策略名称，则Acrobat会显示一条错误消息
+* Acrobat 9.0及更早版本 Acrobat 9.0及更早版本不支持动态水印中的策略名称。 如果Acrobat 9.0打开一个受策略保护的文档，其中包含策略名称和其他动态数据的动态水印，则显示水印时不带策略名称。 如果动态水印仅包含策略名称，则Acrobat显示错误消息
 
 ### 添加动态水印模板 {#add-a-dynamic-watermark-template}
 
@@ -586,7 +586,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 以下设置位于“已邀请的用户注册”页面的“常规设置”区域。
 
-**SMTP主机：** SMTP服务器的主机名。 SMTP服务器管理传出电子邮件通知以注册和激活已邀请的用户帐户。
+**SMTP主机：** SMTP服务器的主机名。 SMTP服务器管理传出电子邮件通知以注册和激活受邀用户帐户。
 
 如果SMTP主机需要，请在“SMTP服务器帐户名”和“SMTP服务器帐户密码”框中键入所需信息以连接到SMTP服务器。 有些组织不执行此要求。 如果您需要信息，请咨询系统管理员。
 
@@ -779,9 +779,9 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 拒绝服务功能要求客户端应用程序使用文档安全性C++客户端SDK版本8.2或更高版本。 以下Adobe产品在请求文档安全服务时提供产品信息：
 
-* Adobe Acrobat 9.0 Professional/Acrobat 9.0 Standard及更高版本
-* Adobe Reader 9.0及更高版本
-* 适用于Microsoft Office 8.2和更高版本的Acrobat Reader DC扩展
+* Adobe Acrobat9.0专业版/Acrobat 9.0标准版及更高版本
+* Adobe Reader9.0及更高版本
+* Acrobat Reader DCMicrosoft Office 8.2及更高版本的扩展
 
 客户端应用程序使用文档安全C++客户端SDK中的客户端API从文档安全请求服务。 客户端API请求包括平台和SDK版本信息（预编译到客户端API中）以及从客户端应用程序获取的产品信息。
 
@@ -795,25 +795,25 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 如果任何信息不适用，客户端应用程序会将相应字段留空。
 
-在请求文档安全服务时，多个Adobe应用程序都包含产品信息，包括Acrobat、Adobe Reader和Acrobat Reader DC的Microsoft Office扩展。
+在请求Adobe安全服务时，一些文档应用程序包括产品信息，包括Acrobat、Adobe Reader和Acrobat Reader DC的Microsoft Office扩展。
 
 **Acrobat和Adobe Reader**
 
-当Acrobat或Adobe Reader从文档安全性请求服务时，它提供以下产品信息：
+当Acrobat或Adobe Reader从文档安全部门请求服务时，它提供以下产品信息：
 
-* **集成商：** Adobe Systems, Inc.
+* **集成商：** Adobe Systems公司
 * **集成商版本：** 1.0
 * **应用程序系列：** Acrobat
 * **应用程序名称：** Acrobat
 * **应用程序版本：** 9.0.0
 
-**适用于Microsoft Office的Acrobat Reader DC扩展**
+**Acrobat Reader DCMicrosoft Office扩展**
 
-适用于Microsoft Office的Acrobat Reader DC扩展是与Microsoft Word、Microsoft Excel和Microsoft PowerPoint一起使用的Microsoft Office产品的插件。 当它请求服务时，它提供以下信息：
+Acrobat Reader DC的Microsoft Office扩展是与Microsoft Word、Microsoft Excel和Microsoft PowerPoint一起使用的Microsoft Office产品的插件。 当它请求服务时，它提供以下信息：
 
 * **集成商：** Adobe Systems Incorporated
 * **集成商版本：** 8.2
-* **应用程序系列：** 适用于Microsoft Office的Acrobat Reader DC扩展
+* **应用程序系列：** Acrobat Reader DCMicrosoft Office扩展
 * **应用程序名称：** Microsoft Word、Microsoft Excel或Microsoft PowerPoint
 * **应用程序版本：** 2003或2007
 
@@ -822,7 +822,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 1. 导出文档安全配置文件。 (请参 [阅手动编辑文档安全配置文件](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)。)
 1. 在编辑器中打开配置文件并找到该 `PolicyServer` 节点。 添加节 `ClientVersionRules` 点作为节点的直接子 `PolicyServer` 节点（如果不存在）:
 
-   ```java
+   ```xml
     <node name="ClientVersionRules">
         <map>
             <entry key="infoURL" value="URL"/>
@@ -879,7 +879,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 在此示例中，拒绝访问所有Windows客户端。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value="https://www.dont.use/windows.html"/>
@@ -897,7 +897,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 在此示例中，拒绝访问“我的应用程序3.0版”和“我的其他应用程序2.0版”。 无论拒绝的原因如何，都会使用相同的拒绝信息URL。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -920,9 +920,9 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
  </node>
 ```
 
-在此示例中，拒绝来自Microsoft PowerPoint 2007或Microsoft PowerPoint 2010安装的Acrobat Reader DC扩展的所有请求。
+在此示例中，拒绝来自Microsoft PowerPoint 2007或Microsoft PowerPoint 2010安装的Acrobat Reader DCMicrosoft Office扩展的所有请求。
 
-```java
+```xml
  <node name="ClientVersionRules">
      <map>
          <entry key="infoURL" value=”https://get.a.new/version.html”/>
@@ -955,7 +955,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
    第二个条 *目* ,max elements是水印中允许的元素的最大数量。 默认值为5。
 
-   ```java
+   ```xml
    <entry key="maximumSizeOfWatermarkElement" value="max filesize in KB"/>
    <entry key="maximumWatermarkElementsPerWatermark" value="max elements"/>
    ```
@@ -975,7 +975,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 1. 在编辑器中打开配置文件并找到该 `DisplaySettings` 节点。
 1. 要禁用所有外部链接，请在节 `DisplaySettings` 点中添加以下条目，然后保存文件： `<entry key="ExternalLinksAllowed" value="false"/>`
 
-   ```java
+   ```xml
    <entry key="ExternalLinksAllowed" value="false"/>
    ```
 
@@ -989,7 +989,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 1. 在编辑器中打开配置文件并找到该 `DisplaySettings` 节点。
 1. 找到以下节点： `<node name="ExternalUser">`
 
-   ```java
+   ```xml
    <node name="ExternalUser">
    ```
 
@@ -1005,7 +1005,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 1. 导出文档安全配置文件。 (请参 [阅手动编辑文档安全配置文件](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)。)
 1. 在编辑器中打开配置文件并找到以下节点： `<node name="DRM">`
 
-   ```java
+   ```xml
    <node name="DRM">
    ```
 
@@ -1015,7 +1015,7 @@ AEM表单提供了一个配置示例，您可以为环境自定义该配置。 �
 
 1. 要为文档安全文档禁用SOAP端点，请将value属性设置为 **false**。
 
-   ```java
+   ```xml
    <node name="DRM">
        <map>
            <entry key="AllowUnencryptedVoucher" value="false"/>
