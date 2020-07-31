@@ -1,8 +1,8 @@
 ---
-title: Barcoded Forms Service
-seo-title: 使用AEM Forms条码表单服务
-description: '使用AEM Forms条码表单服务从条码的电子图像中提取数据。 '
-seo-description: '使用AEM Forms条码表单服务从条码的电子图像中提取数据。 '
+title: 巴科德Forms
+seo-title: 使用AEM FormsBarcodedForms服务
+description: '使用AEM FormsBarcodedForms服务从条形码的电子图像中提取数据。 '
+seo-description: '使用AEM FormsBarcodedForms服务从条形码的电子图像中提取数据。 '
 uuid: b044a788-0e4a-4718-b71a-bd846933d51b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Barcoded Forms Service{#barcoded-forms-service}
+# 巴科德Forms{#barcoded-forms-service}
 
 ## 概述 {#overview}
 
-Barcoded Forms服务从条形码的电子图像中提取数据。 该服务接受包含一个或多个条码的TIFF和PDF文件作为输入并提取条形码数据。 条形码数据可以采用各种方式格式化，包括XML、分隔字符串或使用JavaScript创建的任何自定义格式。
+BarcodedForms服务从条形码的电子图像中提取数据。 该服务接受包含一个或多个条码的TIFF和PDF文件作为输入并提取条形码数据。 条形码数据可以采用各种方式格式化，包括XML、分隔字符串或使用JavaScript创建的任何自定义格式。
 
-Barcoded Forms服务支持以下 **作为扫描的TIFF或PDF文档** 提供的二维(2D)符号：
+BarcodedForms服务支持以 **下二维(2D)符号** ，它们作为扫描的TIFF或PDF文档提供：
 
 * PDF417
 * 数据矩阵
@@ -38,16 +38,16 @@ Barcoded Forms服务支持以下 **作为扫描的TIFF或PDF文档** 提供的�
 * EAN13
 * EAN8
 
-您可以使用Barcoded Forms服务完成以下任务:
+您可以使用BarcodedForms服务完成以下任务:
 
 * 从条形码图像（TIFF或PDF）提取条形码数据。 数据以分隔文本的形式存储。
 * 将分隔文本数据转换为XML（XDP或XFDF）。 XML数据比分隔文本更易于分析。 此外，XDP或XFDF格式的数据可用作AEM Forms中其他服务的输入。
 
-对于图像中的每个条形码，Barcoded Forms服务会定位条形码、解码并提取数据。 服务在XML文档的内容元素中返回条形码数据（在需要时使用实体编码）。 例如，表单的以下扫描TIFF图像包含两个条码：
+对于图像中的每个条形码，BarcodedForms服务将定位条形码、解码并提取数据。 服务在XML文档的内容元素中返回条形码数据（在需要时使用实体编码）。 例如，表单的以下扫描TIFF图像包含两个条码：
 
 ![示例](assets/example.png)
 
-在解码条码后，Barcoded Forms服务返回以下XML文档:
+BarcodedForms服务在解码条形码后返回以下XML文档:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>  
@@ -96,9 +96,9 @@ Barcoded Forms服务支持以下 **作为扫描的TIFF或PDF文档** 提供的�
 
 ### 使用条形码表单的工作流 {#workflows-that-use-barcoded-forms}
 
-表单作者使用设计器创建交互式条码表单。 (请参阅 [设计人员帮](https://www.adobe.com/go/learn_aemforms_designer_63)助。) 当用户使用Adobe Reader或Acrobat填充条形码表单时，条形码会自动更新以对表单数据进行编码。
+表单作者使用设计器创建交互式条码表单。 (请参阅 [设计人员帮](https://www.adobe.com/go/learn_aemforms_designer_63)助。) 当用户使用Adobe Reader或Acrobat填充条码表单时，条形码会自动更新以对表单数据进行编码。
 
-Barcoded Forms服务可用于将纸质上的数据转换为电子格式。 例如，当填写和打印条形码表单时，可以扫描打印的副本并将其用作Barcoded Forms服务的输入。
+BarcodedForms服务可用于将纸质上的数据转换为电子格式。 例如，当填写和打印条形码表单时，可以扫描打印的副本并将其用作BarcodedForms服务的输入。
 
 监视的文件夹端点通常用于开始使用Barcoded Forms服务的应用程序。 例如，文档扫描仪可将条形码表单的TIFF或PDF图像保存到监视的文件夹中。 监视的文件夹端点将图像传递给服务进行解码。
 
@@ -124,20 +124,20 @@ Barcoded Forms服务可用于将纸质上的数据转换为电子格式。 例�
 
 ### 其他限制 {#other-limitations}
 
-此外，在使用Barcoded Forms服务时，请考虑以下限制：
+此外，在使用BarcodedForms服务时，请考虑以下限制：
 
-* 该服务完全支持包含使用Adobe Reader或Acrobat保存的2D条码的AcroForms和静态表单。 但是，对于1D条形码，可拼合表单或以扫描的PDF或TIFF文档提供表单。
+* 该服务完全支持AcroForms和包含2D条形码的静态表单，这些条形码是使用Adobe Reader或Acrobat保存的。 但是，对于1D条形码，可拼合表单或以扫描的PDF或TIFF文档提供表单。
 * 不完全支持动态XFA表单。 要对动态表单中的1D和2D条码进行正确解码，请拼合表单或将其作为扫描的PDF或TIFF文档提供。
 
 此外，如果遵守上述限制，该服务可以解码使用受支持的符号的任何条形码。 有关如何创建交互式条码表单的更多信息，请参阅设计 [人员帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。
 
 ## 配置服务的属性   {#configureproperties}
 
-您可以在AEM控 **制台中使用AEMFD** Barcoded Forms服务配置此服务的属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`。
+您可以使用AEM **控制台中的AEMFD Barcoded** Forms服务，为此服务配置属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`。
 
 ## 使用服务 {#using}
 
-Barcoded Forms Service提供以下两个API:
+BarcodedForms服务提供以下两个API:
 
 * **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: 解码输入PDF文档或tiff图像中可用的所有条码。 它返回另一个XML文档，该文档包含从输入或图像中所有可用的条形码检索到的数据。
 
@@ -234,13 +234,13 @@ Barcoded Forms Service提供以下两个API:
 
 ### 将BCF服务与AEM工作流一起使用 {#using-the-bcf-service-with-aem-workflows}
 
-从工作流中运行Barcoded Forms服务与从JSP/Servlet运行服务类似。 唯一的区别在于从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象自动检索ResourceResolver对象的实例。 从工作流调用代码时，此自动机制不工作。
+从工作流运行BarcodedForms服务与从JSP/Servlet运行服务类似。 唯一的区别在于从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象自动检索ResourceResolver对象的实例。 从工作流调用代码时，此自动机制不工作。
 
 对于工作流，将ResourceResolver对象的实例显式传递给文档类构造函数。 然后，文档对象使用提供的ResourceResolver对象从存储库读取内容。
 
 以下范例工作流程解码文档中的条形码并将结果保存到磁盘。 代码以ECMAScript编写，文档作为工作流有效负荷传递：
 
-```
+```javascript
 /*
  * Imports 
  */
