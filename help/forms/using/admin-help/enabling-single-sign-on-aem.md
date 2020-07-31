@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 0%
@@ -20,15 +20,15 @@ ht-degree: 0%
 
 # 在AEM表单中启用单点登录{#enabling-single-sign-on-in-aem-forms}
 
-AEM表单提供两种启用单点登录(SSO)的方法- HTTP头和SPNEGO。
+AEM表单提供两种启用单一登录(SSO)的方法- HTTP头和SPNEGO。
 
-实施SSO后，AEM表单用户登录页面不是必需的，如果用户已通过其公司门户进行身份验证，则不会显示该页面。
+实施SSO时，AEM表单用户登录页面不是必需的，如果用户已通过其公司门户进行身份验证，则不显示。
 
-如果AEM表单无法使用以下任一方法对用户进行身份验证，则会将用户重定向到登录页面。
+如果AEM表单无法使用以下任一方法验证用户身份，则会将用户重定向到登录页。
 
 ## 使用HTTP头启用SSO {#enable-sso-using-http-headers}
 
-您可以使用“门户配置”页在应用程序和支持通过HTTP头传递标识的任何应用程序之间启用单一登录(SSO)。 实施SSO后，AEM表单用户登录页面不是必需的，如果用户已通过其公司门户进行身份验证，则不会显示该页面。
+您可以使用“门户配置”页在应用程序和支持通过HTTP头传递标识的任何应用程序之间启用单一登录(SSO)。 实施SSO时，AEM表单用户登录页面不是必需的，如果用户已通过其公司门户进行身份验证，则不显示。
 
 您还可以使用SPNEGO启用SSO。 (请参 [阅使用SPNEGO启用SSO](enabling-single-sign-on-aem.md#enable-sso-using-spnego)。)
 
@@ -56,7 +56,7 @@ AEM表单提供两种启用单点登录(SSO)的方法- HTTP头和SPNEGO。
 
 ## 使用SPNEGO启用SSO {#enable-sso-using-spnego}
 
-在Windows环境中将Active Directory用作LDAP服务器时，可以使用简单和受保护的GSSAPI协商机制(SPNEGO)启用单一登录(SSO)。 启用SSO后，AEM表单用户登录页面不是必需的，也不会显示。
+在Windows环境中将Active Directory用作LDAP服务器时，可以使用简单和受保护的GSSAPI协商机制(SPNEGO)启用单一登录(SSO)。 启用SSO后，AEM表单用户登录页面不是必需的，也不显示。
 
 您还可以使用HTTP头启用SSO。 (请参 [阅使用HTTP头启用SSO](enabling-single-sign-on-aem.md#enable-sso-using-http-headers)。)
 
@@ -86,7 +86,7 @@ AEM表单提供两种启用单点登录(SSO)的方法- HTTP头和SPNEGO。
 
 ### 创建用户帐户 {#create-a-user-account}
 
-1. 在SPNEGO中，在域控制器的Active Directory中以用户身份注册服务以表示AEM表单。 在域控制器上，转到“开始菜单”>“管理工具”>“Active Directory用户和计算机”。 如果“管理工具”不在“开始”菜单中，请使用控制面板。
+1. 在SPNEGO中，将服务注册为域控制器上Active Directory中的用户，以表示AEM表单。 在域控制器上，转到“开始菜单”>“管理工具”>“Active Directory用户和计算机”。 如果“管理工具”不在“开始”菜单中，请使用控制面板。
 1. 单击“用户”文件夹以显示用户列表。
 1. 右键单击用户文件夹，然后选择“新建”>“用户”。
 1. 键入名／姓和用户登录名，然后单击下一步。 例如，设置以下值：
@@ -121,14 +121,14 @@ AEM表单提供两种启用单点登录(SSO)的方法- HTTP头和SPNEGO。
 
 如果遇到此错误：
 
-```java
+```shell
 DsCrackNames returned 0x2 in the name entry for spnegodemo.
 ktpass:failed getting target domain for specified user.
 ```
 
 尝试将用户指定为spnegodemo@um.lc.com:
 
-```java
+```shell
 ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 ```
 
@@ -153,7 +153,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 1. 单击“本地内部网”图标，然后单击“站点”。
 1. 单击“高级”，在“将此网站添加到区域”框中，键入表单服务器的URL。 例如，类型 `https://lcserver.um.lc.com`
 1. 单击“确定”，直到关闭所有对话框。
-1. 通过访问AEM表单服务器的URL测试配置。 例如，在浏览器URL框中，键入 `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
+1. 通过访问AEM forms服务器的URL测试配置。 例如，在浏览器URL框中，键入 `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
 
 **配置Mozilla Firefox**
 
