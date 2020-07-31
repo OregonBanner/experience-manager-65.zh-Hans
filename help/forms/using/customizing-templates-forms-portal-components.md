@@ -10,7 +10,7 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -30,9 +30,9 @@ HTML和CSS的工作知识
 
 AEM Forms用户界面允许您向任何表单添加元数据。 自定义元数据可在列出和搜索组织表单时增强用户体验。
 
-Forms Portal允许您在表单列表中使用自定义元数据。 在为资产创建自定义模板时，您可以修改其布局并将自定义元数据与CSS样式集结合使用。
+Forms门户允许您在表单列表中使用自定义元数据。 在为资产创建自定义模板时，您可以修改其布局并将自定义元数据与CSS样式集结合使用。
 
-请执行以下步骤，为各种Forms Portal组件创建自定义模板。
+请执行以下步骤，为各种Forms门户组件创建自定义模板。
 
 ## Creating a custom template {#creating-a-nbsp-custom-template}
 
@@ -61,9 +61,9 @@ Forms Portal允许您在表单列表中使用自定义元数据。 在为资产�
 
 ## 工作示例 {#working-example}
 
-以下是自定义模板的示例实现，在该模板中，Forms Portal为Search &amp; Lister组件获取自定义Geometrixx Gov卡布局。
+以下是自定义模板的示例实现，在该模板中，Forms门户为搜索和制表人组件获取自定义GeometrixxGov卡布局。
 
-```xml
+```html
 <div class="__FP_boxes-container __FP_single-color">
     <div class="boxes __FP_boxes __FP_single-color" data-repeatable="true">
  <div class="__FP_boxes-thumbnail">
@@ -83,9 +83,9 @@ Forms Portal允许您在表单列表中使用自定义元数据。 在为资产�
 
 ## 自定义模板的技术规范 {#technical-specifications-for-custom-templates}
 
-任何Forms Portal组件的自定义模板都包括可重复和不可重复的条目。 可重复条目是列表的基本实体。 可重复条目的示例包括搜索和制表人、草稿和提交以及链接组件。
+任何Forms门户组件的自定义模板都包括可重复和不可重复的条目。 可重复条目是列表的基本实体。 可重复条目的示例包括搜索和制表人、草稿和提交以及链接组件。
 
-Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在显示表单、草稿或提交结果后，将填充占位符。
+Forms门户为占位符提供显示自定义/OOTB元数据的语法。 在显示表单、草稿或提交结果后，将填充占位符。
 
 要包含可重复的条目，请将可重复数据 **属性的值** 配置 **为true**。
 
@@ -97,7 +97,7 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 
 ## 开箱即用的元数据 {#out-of-the-box-metadata}
 
-各种Forms Portal组件提供可用于列表的独家OOTB元数据集。
+各种Forms门户组件提供专有的OOTB元数据集，您可以使用这些元数据进行列表。
 
 ### 搜索和制表人组件 {#search-amp-lister-component}
 
@@ -144,9 +144,9 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 * **状态**: 已提交表单的状态。 （仅在“提交”部分的模板中使用）。
 * **描述**: 与草稿或提交关联的自适应表单的说明。
 * **diffTime**: 草稿的当前时间与上次保存操作之间的差异。 或者，当前时间与上次提交操作之间用于提交的时间的差异。
-* **iconClass**: CSS类用于显示草稿／提交的第一个字母。 Forms Portal包括以下类，它们提供各种彩色背景。
+* **iconClass**: CSS类用于显示草稿／提交的第一个字母。 Forms门户网站包括以下各类课程，它们提供各种彩色背景。
 * **所有者**: 创建草稿／提交的用户。
-* **今天**: 草稿或提交的创建日期，DD:MM:YYYY格式。
+* **今天**: 草稿或提交的创建日期，格式为DD:MM:YYYY。
 * **TimeNow**: 草稿或提交的创建时间，以HH:MM:SS 24小时格式表示
 
 *注意:*
@@ -172,7 +172,7 @@ Forms Portal为占位符提供了显示自定义/OOTB元数据的语法。 在�
 ## 提示、技巧和已知问题 {#tips-tricks-and-known-issues}
 
 1. 请勿在任何自定义模板中使用单引号(&#39;)。
-1. 对于自定义元数据，请仅将此属性存 **储在jcr:content/metadata节** 点上。 如果将其存储在任何其他位置，则Forms Portal无法显示元数据。
+1. 对于自定义元数据，请仅将此属性存 **储在jcr:content/metadata节** 点上。 如果将其存储在任何其他位置，Forms门户无法显示元数据。
 1. 确保任何自定义元数据或现有元数据的名称不包含冒号(: )。 如果显示，则无法在用户界面上显示。
 1. **data-repeatable** 对于Link组件没有任何 **意义** 。 Adobe建议您避免在链接组件的模板中使用此属性。
 
