@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 执行任何自定义的一般步骤包括：
 
-1. 通过访问登录到CRXDE `https://'[server]:[port]'/lc/crx/de/index.jsp`Lite。
+1. 通过访问登录CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
 1. 如果文件夹不 `ws`存 `/apps`在，请创建名为的文件夹。 单击“ **[!UICONTROL 全部保存]**”。
 1. 浏览至 `/apps/ws`访问控制，然后导航到 **** 选项卡。
 1. 在 **[!UICONTROL 访问控制]** 列表 **[!UICONTROL 中]** ，单击+以添加新条目。 再次 **[!UICONTROL 单击]** +。
@@ -37,7 +37,7 @@ ht-degree: 1%
 1. 复制文 `/libs/ws/locales` 件夹中的文 `/apps/ws` 件夹。 单击“ **[!UICONTROL 全部保存]**”。
 1. 如下所示，更新文件中的引用 `GET.jsp` 和相对路径，然后单击“全 **[!UICONTROL 部保存”]**。
 
-   ```jsp
+   ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
    ```
 
@@ -49,14 +49,14 @@ ht-degree: 1%
 
    1. 打开 `/apps/ws/html`.jsp并从
 
-   ```css
+   ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="css/style.css" />
    <link lang="en" rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
    ```
 
    到
 
-   ```css
+   ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="../../libs/ws/css/style.css" />
    <link lang="en" rel="stylesheet" type="text/css" href="css/newStyle.css" />
    <link lang="en" rel="stylesheet" type="text/css" href="../../libs/ws/css/jquery-ui.css"/>
@@ -68,13 +68,13 @@ ht-degree: 1%
 
 1. 在/apps/ws/html.jsp文件中，更改
 
-   ```css
+   ```jsp
    <script data-main="js/main" src="js/libs/require/require.js"></script>
    ```
 
    到
 
-   ```css
+   ```jsp
    <script data-main="js/main" src="../../libs/ws/js/libs/require/require.js"></script>
    ```
 
