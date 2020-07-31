@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 0%
@@ -127,7 +127,7 @@ ht-degree: 0%
 
    您的用户档案现在可在自定义SSL设置和证书上运行。
 
-## 启用对AEM表单原生代的支持 {#enabling-support-for-aem-forms-natives}
+## 支持AEM表单原生代 {#enabling-support-for-aem-forms-natives}
 
 1. 在WebSphere管理控制台中，选择“ **安全”>“全局安全**”。
 1. 在“身份验证”部分，展 **开RMI/IIOP安全性** ，然后单 **击“CSIv2入站通信”**。
@@ -178,7 +178,7 @@ ht-degree: 0%
 1. 打开 `[aem-forms_root]`\crx-repository\launchpad\sling.properties文件进行编辑。
 1. 找到属 `sling.bootdelegation.ibm` 性并添 `com.ibm.websphere.ssl.*`加到其值字段。 更新后的字段如下所示：
 
-   ```java
+   ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
