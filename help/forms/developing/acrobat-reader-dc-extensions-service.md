@@ -9,7 +9,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Acrobat Reader DC扩展服务Java API快速开始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC Extensions服务提供以下快速开始。
+Acrobat Reader DC扩展服务提供以下快速开始。
 
 [快速开始（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
@@ -143,7 +143,6 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  } 
   
   
- 
 ```
 
 ## 快速开始（SOAP模式）: 使用Java API从PDF文档删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
