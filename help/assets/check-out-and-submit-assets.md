@@ -1,19 +1,19 @@
 ---
-title: 签入和签出数字资产进行编辑
+title: 签入和签出您的数字资产进行编辑。
 description: 了解如何签出资产进行编辑，并在更改完成后将其签回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
 
 
-# Experience Manager DAM中的登记和注销文件 {#check-in-and-check-out-files-in-assets}
+# DAM中的登记和注销文 [!DNL Experience Manager] 件 {#check-in-and-check-out-files-in-assets}
 
-通过Adobe Experience Manager资产，您可以签出资产进行编辑，并在完成更改后将其签回。 注销资产后，只有您才能编辑、批注、发布、移动或删除资产。 签出资产会锁定资产。 在您将资产签回资产之前，其他用户无法对资产执行任何这些操作。 但是，他们仍可以更改锁定资产的元数据。
+[!DNL Adobe Experience Manager Assets] 允许您签出要编辑的资产，并在完成更改后重新将其签回。 注销资产后，只有您才能编辑、批注、发布、移动或删除资产。 签出资产会锁定资产。 在您将资产重新签入之前，其他用户无法对资产执行任何这些操作 [!DNL Assets]。 但是，他们仍可以更改锁定资产的元数据。
 
 要能够签出／登录资产，您需要对资产具有写入权限。
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 注销资产 {#checking-out-assets}
 
-1. 从资产UI中，选择要签出的资产。 您还可以选择多个资产进行注销。
+1. 从用 [!DNL Assets] 户界面中，选择要签出的资产。 您还可以选择多个资产进行注销。
 1. 在工具栏中，单击 **[!UICONTROL 签出]**。
 “检 **[!UICONTROL 出]** ”选项切换 **[!UICONTROL 为“检入]**”。
 要验证其他用户是否可以编辑您注销的资产，请以其他用户身份登录。 签出的资产的缩略图上会显示锁定符号。
@@ -44,14 +44,14 @@ ht-degree: 0%
 
    您还可以选择对资产添加注释或发布。
 
-1. 从界面中选择已编辑的 [!DNL Assets] 资产，然后单 **[!UICONTROL 击工]** 具栏中的签入。 修改后的资产会检入到资产，可供其他用户编辑。
+1. 从界面中选择已编辑的 [!DNL Assets] 资产，然后单 **[!UICONTROL 击工]** 具栏中的签入。 修改后的资产已签入， [!DNL Assets] 可供其他用户编辑。
 
 ## 强制签入 {#forced-check-in}
 
 管理员可以签入其他用户签出的资产。
 
-1. 以管理员身份登录资产。
-1. 在资产UI中，选择已由其他用户签出的一个或多个资产。
+1. 以管理员 [!DNL Assets] 身份登录。
+1. 从用户 [!DNL Assets] 界面中，选择已由其他用户签出的一个或多个资产。
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
