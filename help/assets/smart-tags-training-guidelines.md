@@ -4,9 +4,9 @@ description: 培训Adobe Sensei的AI服务，将智能标签应用于资产
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '462'
 ht-degree: 11%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 11%
 
 ![说明性图像为培训准则的例证](/help/assets/assets/do-not-localize/coherence.png)
 
-**覆盖**: 培训中的图像应该有足够的多样性。 其理念是提供几个但相当多样化的示例，以便Experience Manager学会专注于正确的事情。 如果要对视觉上不相似的图像应用同一标签，请至少包含每种类型的五个示例。
+**覆盖**: 培训中的图像应该有足够的多样性。 我们的想法是提供几个但相当多样化的例子，让Experience Manager学会专注于正确的事情。 如果要对视觉上不相似的图像应用同一标签，请至少包含每种类型的五个示例。
 
 例如，对于标签下 *模式姿势*，为服务包括更多与下面突出显示的图像相似的培训图像，以便在标记过程中更准确地识别类似图像。
 
@@ -50,10 +50,10 @@ ht-degree: 11%
 
 * 无法识别图像中的细微差异。 比如，修身与普通衬衫。
 * 无法根据图像的微小图案／部分识别标记。 例如，T恤上的徽标。
-* 在支持Experience Manager的区域设置中支持标记。 有关列表语言，请参阅智 [能内容服务发行说明](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
+* 中支持的区域设置 [!DNL Experience Manager] 支持标记。 有关列表语言，请参阅智 [能内容服务发行说明](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
 
-要使用智能标记（常规或增强）搜索资产，请使用资产搜索（全文搜索）。 智能标记没有单独的搜索谓词。
+要使用智能标记（常规或增强）搜索资产，请使 [!DNL Assets] 用全文搜索（全文搜索）。 智能标记没有单独的搜索谓词。
 
 >[!NOTE]
 >
->智能内容服务能否训练您的标记并将它们应用于其他图像取决于您用于培训的图像质量。 为获得最佳效果，Adobe建议您使用视觉上相似的图像来针对每个标签培训服务。
+>智能内容服务能否训练您的标记并将它们应用于其他图像取决于您用于培训的图像质量。 为获得最佳效果，Adobe建议您使用视觉上相似的图像为每个标签培训服务。
