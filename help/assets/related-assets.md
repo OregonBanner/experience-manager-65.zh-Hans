@@ -3,9 +3,9 @@ title: 相关资产
 description: 了解如何关联共享一些常见属性的数字资产。 还可在数字资产之间创建源源关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## Relate assets {#relating-assets}
 
-1. 从Experience Manager界面中，打 **[!UICONTROL 开要]** 关联的资产的属性页面。
+1. 从界 [!DNL Experience Manager] 面中，打开要 **[!UICONTROL 关联的]** 资产的“属性”页面。
 
    ![打开资产的“属性”页面以关联资产](assets/asset-properties-relate-assets.png)
 
@@ -65,9 +65,9 @@ ht-degree: 0%
 
 1. Click **[!UICONTROL OK]** to close the dialog. 您删除关系的资产会从相关资产的列表中删除“相关” **[!UICONTROL 部分]** 。
 
-## 转换相关资产 {#translating-related-assets}
+## 翻译相关资产 {#translating-related-assets}
 
-使用“相关资产”功能在资产之间创建源／派生关系在翻译工作流也很有帮助。 当您对派生资产运行转换工作流时，会自 [!DNL Experience Manager Assets] 动获取源文件引用的任何资产并将其包含在其中以进行转换。 这样，源资产引用的资产便会与源资产和派生资产一起进行折算。 例如，假设您的英语副本包括派生资产及其源文件，如所示。
+使用相关资产功能在资产之间创建源／派生关系在翻译工作流也很有帮助。 当您对派生资产运行转换工作流时，会自 [!DNL Experience Manager Assets] 动获取源文件引用的任何资产并将其包含在其中以进行转换。 这样，源资产引用的资产便会与源资产和派生资产一起进行折算。 例如，假设您的英语副本包括派生资产及其源文件，如所示。
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
