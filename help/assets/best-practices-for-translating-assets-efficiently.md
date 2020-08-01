@@ -3,9 +3,9 @@ title: 翻译资产的最佳实践
 description: 有效管理资产的最佳实践，可同步各种翻译版本并简化翻译工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '416'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 翻译资产的最佳实践 {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager资产支持多语言工作流，将数字资产的二进制文件、元数据和标记翻译为多个语言环境并管理已翻译的资产。 有关详细信息，请参 [阅多语言资产](multilingual-assets.md)。
+[!DNL Adobe Experience Manager Assets] 支持多语言工作流将数字资产的二进制文件、元数据和标记翻译为多个语言环境并管理已翻译的资产。 有关详细信息，请参 [阅多语言资产](multilingual-assets.md)。
 
 为了有效管理资产以确保不同的翻译版本保持同步，请在运行 [翻译工作流](preparing-assets-for-translation.md) 之前创建资产的语言副本。
 
@@ -23,14 +23,14 @@ Adobe Experience Manager资产支持多语言工作流，将数字资产的二�
 
 与元数据和标记相比，资源二进制文件占用的存储空间要大得多。 因此，如果转换元数据和标记只能满足您的目的，请忽略转换二进制文件。 您可以在存储库中保留二进制文件的原始副本，以便与翻译为不同区域设置的元数据和标记关联。 维护一个二进制副本（而不是多个译文版本）可最大限度地减少对存储库大小的影响。
 
-文件数据存储和Amazon S3数据存储提供最适合这些场景的存储基础架构。 这些存储存储库存储资产二进制文件（包括演绎版）的单一副本，这些二进制文件可以在多个区域设置中由元数据和标记共享。 因此，创建资产语言副本以及翻译元数据和标记不会影响存储库大小。
+文件数据存储和AmazonS3数据存储提供最适合这些情形的存储基础结构。 这些存储存储库存储资产二进制文件（包括演绎版）的单一副本，这些二进制文件可以在多个区域设置中由元数据和标记共享。 因此，创建资产语言副本以及翻译元数据和标记不会影响存储库大小。
 
 您还可以对两个工作流和翻译集成框架进行一些配置更改以进一步简化该过程。
 
 1. 执行下列操作之一：
 
    * [设置文件数据存储](/help/sites-deploying/data-store-config.md)
-   * [设置Amazon S3数据存储](/help/sites-deploying/data-store-config.md)
+   * [设置AmazonS3数据存储](/help/sites-deploying/data-store-config.md)
 
 <!--
 1. Disable the [DAM MetaData Write-back](/help/sites-administering/workflow-offloader.md#disable-offloading) workflow.
@@ -44,7 +44,7 @@ Adobe Experience Manager资产支持多语言工作流，将数字资产的二�
 
 1. 启用“设 [!UICONTROL 置上次修改日期] ”工作流。
 
-   DAM MetaData [!UICONTROL 写回工作流] ，配置资产的上次修改日期。 由于您在步骤2中禁用了此工作流，因此资产无法再将资产的上次修改日期保持为最新状态。 因此，请启 *用“设置上次修改日期* ”工作流，以确保资产的上次修改日期为最新日期。 具有过期的上次修改日期的资产可能会导致错误。
+   DAM MetaData [!UICONTROL 写回工作流] ，配置资产的上次修改日期。 由于您在步骤2中禁用此工 [!DNL Assets] 作流，因此无法再让资产的上次修改日期保持最新。 因此，请启 *用“设置上次修改日期* ”工作流，以确保资产的上次修改日期为最新日期。 具有过期的上次修改日期的资产可能会导致错误。
 
-1. [配置转换集成框架](/help/sites-administering/tc-tic.md) ，以停止转换资产二进制文件。 取消选择 **[!UICONTROL 资产选项卡]** 下的转换资产选项，以停止转换资产二进制文件。
+1. [配置转换集成框架](/help/sites-administering/tc-tic.md) ，以停止转换资产二进制文件。 取消选择 **[!UICONTROL “资产]** ”选项卡下 [!UICONTROL 的“转] 换资产”选项，以停止转换资产二进制文件。
 1. 使用多语言资产工作流转 [译资产元数据／标记](multilingual-assets.md)。
