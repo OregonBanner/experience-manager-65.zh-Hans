@@ -1,25 +1,25 @@
 ---
-title: 在Adobe Experience Manager中创建和共享专用文件夹。
-description: 了解如何在Adobe Experience Manager资产中创建专用文件夹并与其他用户共享该文件夹，以及为他们分配各种权限。
+title: 在中创建和共享专用文件夹 [!DNL Adobe Experience Manager]。
+description: 了解如何在中创建专用文件 [!DNL Adobe Experience Manager Assets] 夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 13%
+source-wordcount: '480'
+ht-degree: 9%
 
 ---
 
 
 # 专用文件夹共享 {#private-folder-sharing}
 
-您可以在Adobe Experience Manager资产用户界面中创建仅供您使用的专用文件夹。 您可以将此专用文件夹共享给其他用户，并为其分配各种权限。 根据您分配的权限级别，用户可以对文件夹执行各种任务，例如，视图文件夹中的资产或编辑资产。
+您可以在用户界面中创 [!DNL Adobe Experience Manager Assets] 建仅供您使用的专用文件夹。 您可以将此专用文件夹共享给其他用户，并为其分配各种权限。 根据您分配的权限级别，用户可以对文件夹执行各种任务，例如，视图文件夹中的资产或编辑资产。
 
 >[!NOTE]
 >
 >专用文件夹至少有一个具有所有者角色的成员。
 
-1. 在“资产”控制台中，单 **[!UICONTROL 击工]** 具栏中的创建，然后从 **[!UICONTROL 菜单中选]** 择“文件夹”。
+1. 在控制 [!DNL Assets] 台中，单 **[!UICONTROL 击工]** 具栏中的创建，然后从菜 **[!UICONTROL 单中选]** 择“文件夹”。
 
    ![创建资产文件夹](assets/Create-folder.png)
 
@@ -49,9 +49,9 @@ ht-degree: 13%
    >
    >专用文件夹至少有一个具有所有者角色的成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。根据您分配的角色，用户在登录 资产时便会被分配一组针对您的专用文件夹所拥有的权限。
+1. 单击&#x200B;**[!UICONTROL 保存]**。Depending on the role you assign, the user is assigned a set of privileges on your private folder when the user logs in to [!DNL Assets].
 1. 单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭确认消息。
-1. 您向用户共享文件夹时，用户会收到共享通知。使用用户的凭据登录资产以视图通知。
+1. 您向用户共享文件夹时，用户会收到共享通知。使用用 [!DNL Assets] 户的凭据登录以视图通知。
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
