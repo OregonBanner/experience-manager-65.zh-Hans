@@ -1,19 +1,19 @@
 ---
-title: 时间轴中的活动流
+title: 活动时间轴视图中的数字资产流 [!DNL Experience Manager]。
 description: 本文介绍如何在时间轴上显示资产的活动日志。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 35%
+source-wordcount: '216'
+ht-degree: 33%
 
 ---
 
 
 # 时间轴中的活动流 {#activity-stream-in-timeline}
 
-这项功能可将资产的活动日志显示在时间轴上。如果您在Adobe Experience Manager资产中执行下列任何与资产相关的操作，活动流功能会更新时间轴以反映活动。
+这项功能可将资产的活动日志显示在时间轴上。如果您在中执行下列任何与资产相关的操 [!DNL Adobe Experience Manager Assets]作，活动流功能会更新时间轴以反映活动。
 
 以下操作记录在活动流中：
 
@@ -26,7 +26,7 @@ ht-degree: 35%
 * 拒绝
 * 移动
 
-时间轴中显示的活动日志是从 CRX 中的 `/var/audit/com.day.cq.dam/content/dam` 位置获取的，日志文件就存储在该位置。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into Experience Manager via [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html).
+时间轴中显示的活动日志是从 CRX 中的 `/var/audit/com.day.cq.dam/content/dam` 位置获取的，日志文件就存储在该位置。In addition, timeline activity is logged when new assets are uploaded or existing asses are modified and checked into [!DNL Experience Manager] via [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html) or [Experience Manager desktop app](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
