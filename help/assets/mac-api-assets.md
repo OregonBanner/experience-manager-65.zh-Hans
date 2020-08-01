@@ -1,26 +1,26 @@
 ---
-title: 中的资源HTTP API [!DNL Adobe Experience Manager]。
+title: '[!DNL资产]中的HTTP API [!DNL Adobe Experience Manager]。'
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f29eeb54c115514947a11bbc8a9e9e7df7cd082b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1579'
 ht-degree: 1%
 
 ---
 
 
-# 资产 HTTP API {#assets-http-api}
+# [!DNL Assets] HTTP API {#assets-http-api}
 
 ## 概述 {#overview}
 
-资产HTTP API允许对数字资产（包括元数据、演绎版和注释）以及使用内容片段的结构化内容执行创建读取更新删除(CRUD) [!DNL Experience Manager] 操作。 它在上公 `/api/assets` 开，并作为REST API实施。 它包含 [对内容片段的支持](/help/assets/assets-api-content-fragments.md)。
+HTTP [!DNL Assets] API允许对数字资产（包括元数据、演绎版和注释）以及使用内容片段的结构化内容执行创建读取更新删除(CRUD) [!DNL Experience Manager] 操作。 它在上公 `/api/assets` 开，并作为REST API实施。 它包含 [对内容片段的支持](/help/assets/assets-api-content-fragments.md)。
 
 访问API:
 
 1. 在打开API服务文档 `https://[hostname]:[port]/api.json`。
-1. 按照以下链接的“资产”服务链 `https://[hostname]:[server]/api/assets.json`接：
+1. 按照服务 [!DNL Assets] 链接进行操作，以 `https://[hostname]:[server]/api/assets.json`便。
 
 API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 JSON响应是可选的，可能不可用，例如PDF文件。 依赖响应代码进行进一步的分析或操作。
 
@@ -34,7 +34,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 
 ## Data model {#data-model}
 
-资产HTTP API公开两个主要元素、文件夹和资产（对于标准资产）。
+HTTP [!DNL Assets] API公开两个主要元素、文件夹和资产（对于标准资产）。
 
 此外，它还针对描述内容片段中结构化内容的自定义数据模型显示更详细的元素。 有关更 [多信息，请参阅](/help/assets/assets-api-content-fragments.md#content-fragments) “内容片段数据模型”。
 
@@ -75,7 +75,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 * 属性.
 * 链接.
 
-资产HTTP API包括以下功能：
+HTTP [!DNL Assets] API包括以下功能：
 
 * [检索文件夹列表](#retrieve-a-folder-listing)。
 * [创建文件夹](#create-a-folder)。
@@ -191,7 +191,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 201 —— 已创建——如果再现已成功创建。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
@@ -204,7 +204,7 @@ API响应是某些MIME类型的JSON文件和所有MIME类型的响应代码。 J
 **响应代码**: 响应代码为：
 
 * 200 —— 确定——如果再现已成功更新。
-* 404 —— 未找到——如果在提供的URI中找不到或访问资产，则返回该资产。
+* 404 —— 未找到——如果在提供的URI中找不到或访问资产，请执行此操作。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
 
