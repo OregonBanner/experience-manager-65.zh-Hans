@@ -1,12 +1,12 @@
 ---
-title: 在Adobe Experience Manager资产中将Lightbox作为您的个人图像库。
-description: 了解Lightbox作为Adobe Experience Manager资产中的个人图像库的信息。
+title: Lightbox作为您的个人图像库 [!DNL Adobe Experience Manager Assets]。
+description: 了解Lightbox作为Adobe Experience Manager资产中的个人图像库]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 23%
+source-wordcount: '250'
+ht-degree: 24%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 23%
 
 Lightbox 是一种特殊类型的收藏集，使用它可以轻松访问资产。您可以快速访问 Lightbox 以添加或删除资产。它用作您的个人图像库。
 
-如果您是Adobe Experience Manager资产用户，则当您首次登录应用程序时，Lightbox将自动创建。 仅供您登录。 其他用户无法访问您的Lightbox。
+如果您是用 [!DNL Adobe Experience Manager Assets] 户，将在您首次登录应用程序时自动创建Lightbox。 仅供您登录。 其他用户无法访问您的Lightbox。
 
 ## 将资产添加到Lightbox {#adding-assets-to-lightbox}
 
-1. 从“资产”用户界面中，选择要添加到Lightbox的资产。
+1. 从用 [!DNL Assets] 户界面中，选择要添加到Lightbox的资产。
 1. 将资产拖放 **[!UICONTROL 到Lightbox区]** 。 当拖放区域变为活动状态且其标签变为拖放 **[!UICONTROL 到添加时释放]**。
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
