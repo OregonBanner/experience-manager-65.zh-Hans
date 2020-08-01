@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Experience Manager6.5资产用户指南
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '630'
 ht-degree: 42%
 
 ---
@@ -16,28 +16,28 @@ ht-degree: 42%
 # Experience Manager6.5资产用户指南 {#assets}
 
 + [[!DNL Assets] 用户指南](home.md)
-+ [AEM 6.5 Assets发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [Experience Manager6.5资产发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [关于DAM](assets.md)
 + [资产的最佳实践](best-practices-for-assets.md)
-+ 使用AEM Assets {#using}
-   + [AEM Assets主页体验](assets-home-page.md)
-   + [在AEM中搜索资产](search-assets.md)
++ 使用Experience Manager资产 {#using}
+   + [资产主页体验](assets-home-page.md)
+   + [搜索数字资产](search-assets.md)
    + [多语言资源](multilingual-assets.md)
-   + [在AEM Assets [!DNL Adobe Stock] 中使用资产](aem-assets-adobe-stock.md)
+   + [在资 [!DNL Adobe Stock] 产中使用资产](aem-assets-adobe-stock.md)
    + [预览3D资产](previewing-3d-assets.md)
    + [审核文件夹资产和收藏集](bulk-approval.md)
    + [时间轴中的活动流](activity-stream.md)
    + [处理资产](assets-workflow.md)
    + [添加图像映射](image-maps.md)
    + [使用MSM重用资源](reuse-assets-using-msm.md)
-   + [与AEM Sites连接的资产](use-assets-across-connected-assets-instances.md)
+   + [与站点连接的资产](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
    + [设置 Dynamic Media](administering-dynamic-media.md)
    + [使用 Dynamic Media](dynamic-media.md)
-   + [配置Dynamic Media- Scene7模式](config-dms7.md)
+   + [配置Dynamic Media-Scene7模式](config-dms7.md)
    + [配置Dynamic Media-混合模式](config-dynamic.md)
-   + [Dynamic Media疑难解答- Scene7模式](troubleshoot-dms7.md)
+   + [疑难解答Dynamic Media-Scene7模式](troubleshoot-dms7.md)
    + [从Dynamic Media迁移——混合模式到Dynamic Media- S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
@@ -76,14 +76,14 @@ ht-degree: 42%
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产 {#extending}
-   + [自定义和扩展AEM Assets](extending-assets.md)
+   + [自定义和扩展资产](extending-assets.md)
    + [使用媒体处理程序和工作流处理资源](media-handlers.md)
    + [扩展搜索功能](searchx.md)
-   + [安装并配 [!DNL ImageMagick] 置以与AEM Assets配合使用](best-practices-for-imagemagick.md)
+   + [安装并配 [!DNL ImageMagick] 置为使用资产](best-practices-for-imagemagick.md)
    + [将资源与活动流集成](extending-activity-stream.md)
    + [扩展资产编辑器](asseteditorx.md)
    + [资产 HTTP API](mac-api-assets.md)
-   + [AEM AssetsHTTP API中的内容片段支持](assets-api-content-fragments.md)
+   + [资产HTTP API中的内容片段支持](assets-api-content-fragments.md)
    + [资产代理开发](proxy.md)
 + 管理资产 {#administer}
    + [支持的文件格式](assets-formats.md)
@@ -104,13 +104,13 @@ ht-degree: 42%
    + [资产迁移指南](assets-migration-guide.md)
    + [XMP 元数据](xmp.md)
    + [资产网络注意事项](assets-network-considerations.md)
-   + [AEM Assets和AEM MediaLibrary](medialibrary.md)
+   + [资源和媒体库](medialibrary.md)
    + [使用PDF光栅器](aem-pdf-rasterizer.md)
    + [配置上传限制](configuring-asset-upload-restrictions.md)
-   + [AEM和Creative Cloud集成最佳实践](aem-cc-integration-best-practices.md)
+   + [Experience Manager和Creative Cloud集成](aem-cc-integration-best-practices.md)
    + [与InDesign Server集成](indesign.md)
    + [元数据配置文件](metadata-profiles.md)
-   + [资产中的数字版权管理](drm.md)
+   + [Digital Rights Management资产](drm.md)
    + [使用演示包获得资产洞察](touch-ui-using-demo-package-for-asset-insights.md)
    + [资产文件格式最佳实践](assets-file-format-best-practices.md)
    + [监视资产的最佳实践](assets-monitoring-best-practices.md)
@@ -127,7 +127,7 @@ ht-degree: 42%
    + [文件夹元数据架构](folder-metadata-schema.md)
    + [管理智能标记](managing-smart-tags.md)
 + Brand Portal {#brandportal}
-   + [使用 Brand Portal 配置 AEM Assets](configure-aem-assets-with-brand-portal.md)
+   + [使用 Brand Portal 配置 Assets](configure-aem-assets-with-brand-portal.md)
    + [将资产发布到 Brand Portal](brand-portal-publish-assets.md)
    + [将文件夹发布到 Brand Portal](brand-portal-publish-folder.md)
    + [将收藏集发布到 Brand Portal](brand-portal-publish-collection.md)
@@ -151,11 +151,11 @@ ht-degree: 42%
    + [管理视频资产](managing-video-assets.md)
    + [创建翻译项目](translation-projects.md)
    + [准备要翻译的资产](preparing-assets-for-translation.md)
-   + [从 AEM 下载资产](download-assets-from-aem.md)
+   + [从Experience Manager下载资源](download-assets-from-aem.md)
    + [异步作业](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [资产分析](touch-ui-asset-insights.md)
-   + [通过Adobe Launch实现资产洞察](touch-ui-using-dtm-for-asset-insights.md)
+   + [通过Adobe启动启用资产洞察](touch-ui-using-dtm-for-asset-insights.md)
    + [配置资产分析](touch-ui-configuring-asset-insights.md)
    + [登记和注销资产](check-out-and-submit-assets.md)
    + [将翻译云服务应用到文件夹](transition-cloud-services.md)
