@@ -3,9 +3,9 @@ title: 处理资产以完成业务流程、进行审核、实现法规遵从性�
 description: 资产处理功能，可转换格式、创建演绎版、管理资产、验证资产和运行工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '985'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 将工作流应用于多个资产 {#applying-a-workflow-to-multiple-assets}
 
-1. 从“资产”控制台中，导航到您要为其开始工作流的资产所在的位置，然后选择资产。 从菜 **[!UICONTROL 单中选择]** “时间轴”以显示时间轴。
+1. 从控 [!DNL Assets] 制台中，导航到要开始工作流的资产所在的位置，然后选择资产。 从菜 **[!UICONTROL 单中选择]** “时间轴”以显示时间轴。
 
    ![screen_shot_2019-03-06at123325pm](assets/chlimage_1-136.png)
 
