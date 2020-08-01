@@ -1,29 +1,29 @@
 ---
-title: 在Adobe Experience Manager资产中支持XMP元数据。
-description: 了解Experience Manager资产用于元数据管理的XMP（可扩展元数据平台）元数据标准。 XMP 为在各种应用程序中创建、处理和交换元数据提供了一种标准格式。
+title: 支持中的XMP元数据 [!DNL Adobe Experience Manager Assets]。
+description: 了解用于元数据管理的XMP（可扩展元数据平台）元 [!DNL Experience Manager Assets] 数据标准。 XMP 为在各种应用程序中创建、处理和交换元数据提供了一种标准格式。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 66%
+source-wordcount: '776'
+ht-degree: 63%
 
 ---
 
 
 # XMP 元数据 {#xmp-metadata}
 
-XMP（可扩展元数据平台）是Adobe Experience Manager资产用于所有元数据管理的元数据标准。 XMP 为在各种应用程序中创建、处理和交换元数据提供了一种标准格式。
+XMP (Extensible Metadata Platform) is the metadata standard used by [!DNL Adobe Experience Manager Assets] for all metadata management. XMP 为在各种应用程序中创建、处理和交换元数据提供了一种标准格式。
 
-Aside from offering universal metadata encoding that can be embedded into all file formats, XMP provides a rich [content model](xmp.md#xmp-core-concepts) and is [supported by Adobe](xmp.md#advantages-of-xmp) and other companies, so that users of XMP in combination with Assets have a powerful platform to build upon.
+Aside from offering universal metadata encoding that can be embedded into all file formats, XMP provides a rich [content model](xmp.md#xmp-core-concepts) and is [supported by Adobe](xmp.md#advantages-of-xmp) and other companies, so that users of XMP in combination with [!DNL Assets] have a powerful platform to build upon.
 
 Adobe 支持 [XMP 规范](https://www.adobe.com/devnet/xmp.html)。
 
 ## What is XMP? {#what-is-xmp}
 
- 资产在本机支持由 Adobe 率先推出的 XMP，即可扩展元数据平台。XMP是处理和存储数字资产中标准化的专有元数据的标准。 XMP 旨在形成通用标准，从而让多个应用程序能够高效地处理元数据。
+[!DNL Assets] 本机支持XMP —— 由Adobe牵头的可扩展元数据平台。 XMP是处理和存储数字资产中标准化的专有元数据的标准。 XMP 旨在形成通用标准，从而让多个应用程序能够高效地处理元数据。
 
-例如，专业制作人员可以使用Adobe应用程序中内置的XMP支持，跨多种文件格式传递信息。 资产存储库会提取XMP元数据，并使用它管理内容生命周期，并优惠创建自动化工作流的能力。
+例如，专业生产人士可以使用 Adobe 应用程序中内置的 XMP 支持，在多种文件格式之间传递信息。[!DNL Assets] 存储库会提取XMP元数据，并使用它管理内容生命周期，优惠创建自动化工作流的能力。
 
 XMP 通过提供数据模型、存储模型和架构，使元数据的定义、创建和处理方式实现标准化。本节将介绍所有这些概念。
 
@@ -71,15 +71,13 @@ For example, the `Creator` property in two independently designed schemas might 
 
 ### 属性和值 {#properties-and-values}
 
-XMP 可以包含来自一个或多个架构的属性。
+XMP 可以包含来自一个或多个架构的属性。例如，很多 Adobe 应用程序使用的典型子集包括以下架构：
 
-例如，很多 Adobe 应用程序使用的典型子集包括以下架构：
-
-* 都柏林核心架构：dc:title、dc:creator、dc:subject、dc:format、dc:rights
-* XMP 基本架构：xmp:CreateDate、xmp:CreatorTool、xmp:ModifyDate、xmp:metadataDate
-* XMP 权限管理架构：xmpRights:WebStatement、xmpRights:Marked
-* XMP 媒体管理架构：xmpMM:DocumentID
+* 都柏林核心模式: `dc:title`、 `dc:creator`、 `dc:subject`、 `dc:format`、 `dc:rights`。
+* XMP基本模式: `xmp:CreateDate`、 `xmp:CreatorTool`、 `xmp:ModifyDate`、 `xmp:metadataDate`。
+* XMP rights management模式: `xmpRights:WebStatement`, `xmpRights:Marked`o.
+* XMP media management schema: `xmpMM:DocumentID`.
 
 ### 替代语言 {#language-alternatives}
 
-XMP 支持向文本属性添加 `xml:lang` 属性以指定文本的语言。
+XMP允许您向文 `xml:lang` 本属性添加属性以指定文本的语言。
