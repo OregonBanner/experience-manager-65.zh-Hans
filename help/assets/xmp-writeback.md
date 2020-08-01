@@ -3,9 +3,9 @@ title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有或特定演绎版。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 8%
 
 ---
@@ -25,21 +25,21 @@ ht-degree: 8%
 
 However, [!DNL Experience Manager Assets] does not automatically propagate any metadata changes to the renditions of an asset.
 
-利用XMP写回功能，您可以将元数据更改传播到资产的所有演绎版或特定演绎版。 但是，这些更改不会存储在资产层次结构中的元数据节点下。此功能而是会将更改嵌入到演绎版的二进制文件中。
+XMP写回功能允许您将元数据更改传播到资产的所有或特定演绎版。 但是，这些更改不会存储在资产层次结构中的元数据节点下。此功能而是会将更改嵌入到演绎版的二进制文件中。
 
 ## 启用XMP写回 {#enabling-xmp-writeback}
 
-要在上传元数据更改时将其传播到资产的演绎版，请在Configuration Manager中 **[!UICONTROL 修改Adobe CQ DAM Rendition]** Maker配置。
+要在上传元数据更改时将其传播到资产的演绎版，请在配置管理器中 **[!UICONTROL 修改Adobe CQDAM演绎版]** Maker配置。
 
 1. 要打开Configuration Manager，请访 `https://[aem_server]:[port]/system/console/configMgr`问。
-1. 打开 **[!UICONTROL Adobe CQ DAM Rendition Maker配置]** 。
-1. 选择**[!UICONTROL传播XMP[!UICONTROL **选项，然后保存更改。
+1. 打开 **[!UICONTROL Adobe CQDAM再现生成器]** 。
+1. 选择**[!UICONTROL Propagate XMP[!UICONTROL **选项，然后保存更改。
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
 ## 为特定再现启用XMP写回 {#enabling-xmp-writeback-for-specific-renditions}
 
-要让XMP写回功能将元数据更改传播到选定的演绎版，请将这些演绎版指定到DAM元数据写回工作流的“XMP写 [!UICONTROL 回流程”工作流] 步骤。 默认情况下，此步骤配置为原始再现。
+要让XMP写回功能将元数据更改传播到选定的演绎版，请指定这些演绎版到DAM元数据写回工作流的XMP写 [!UICONTROL 回流程工作流步骤] 。 默认情况下，此步骤配置为原始再现。
 
 要使XMP写回功能将元数据传播到再现缩略图140.100.png和319.319.png，请执行这些步骤。
 
@@ -68,9 +68,9 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 
 ## 筛选XMP元数据 {#filtering-xmp-metadata}
 
-[!DNL Experience Manager Assets] 支持阻止列表和允许列表过滤XMP元数据的属性／节点，该元数据从资产二进制文件读取并在摄取资产时存储在JCR中。
+[!DNL Experience Manager Assets] 支持XMP元数据的属性／节点的阻止列表和允许列表过滤，该元数据从资产二进制文件读取并在摄取资产时存储在JCR中。
 
-使用阻止列表进行筛选可导入除为排除指定的属性外的所有XMP元数据属性。 但是，对于具有大量XMP元数据（例如，1000个节点具有10,000个属性）的资产类型（如INDD文件），要筛选的节点名称并不总是预先知道的。 如果使用阻止列表进行筛选允许导入大量具有大量XMP元数据的资产，则AEM部署可能会遇到稳定性问题，例如阻塞的观察队列。
+使用阻止列表进行筛选后，您可以导入除为排除指定的属性外的所有XMP元数据属性。 但是，对于具有大量XMP元数据（例如，1000个节点具有10,000个属性）的资产类型（如INDD文件），要筛选的节点名称并不总是预先知道的。 如果使用阻止列表进行筛选允许导入大量具有大量XMP元数据的资产，则部署可能会遇 [!DNL Experience Manager] 到稳定性问题，例如阻塞的观察队列。
 
 通过允许列表筛选XMP元数据可通过允许您定义要导入的XMP属性来解决此问题。 这样，将忽略任何其他或未知的XMP属性。 为了向后兼容，您可以向使用阻止列表的筛选器中添加一些这些属性。
 
@@ -79,15 +79,15 @@ However, [!DNL Experience Manager Assets] does not automatically propagate any m
 >筛选仅适用于资产二进制文件中从XMP源派生的属性。 对于从非XMP源（如EXIF和IPTC格式）派生的属性，过滤不起作用。 例如，资产创建日期存储在以EXIF TIFF命名 `CreateDate` 的属性中。 Experience Manager将此值存储在名为的元数据字段中 `exif:DateTimeOriginal`。 由于源是非XMP源，因此过滤不适用于此属性。
 
 1. 要打开Configuration Manager，请访 `https://[aem_server]:[port]/system/console/configMgr`问。
-1. 打开 **[!UICONTROL Adobe CQ DAM XmpFilter配置]** 。
+1. 打开 **[!UICONTROL Adobe CQDAM XmpFilter]** 配置。
 1. To apply filtering via an allowed list, select **[!UICONTROL Apply Allowlist to XMP Properties]**, and specify the properties to be imported in the **[!UICONTROL Allowed XML Names for XMP filtering]** box.
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
-1. 要在通过允许列表应用过滤后过滤掉被阻止的XMP属性，请在“XMP过 **[!UICONTROL 滤的被阻止的XML名称]** ”框中指定这些属性。
+1. 要在通过允许列表应用过滤后过滤掉已阻止的XMP属性，请在“XMP过滤的 **[!UICONTROL XML名称被阻止”框中指定]** 这些属性。
 
    >[!NOTE]
    >
-   >默 **[!UICONTROL 认情阻止列表况下，“应用到XMP]** 属性”选项处于选中状态。 换言之，默认情况下启用使用阻止列表进行筛选。 要禁用此类过滤，请取消选 **[!UICONTROL 择“应阻止列表用到XMP属性]** ”选项。
+   >默 **[!UICONTROL 认情阻止列表况下，将“应用到XMP属性]** ”选项选中。 换言之，默认情况下启用使用阻止列表进行筛选。 要禁用此类过滤，请取消选 **[!UICONTROL 择应阻止列表用到XMP属性]** 。
 
 1. 保存更改。
