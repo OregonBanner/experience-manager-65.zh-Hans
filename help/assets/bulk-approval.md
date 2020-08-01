@@ -3,9 +3,9 @@ title: 审核文件夹资产和收藏集
 description: 为文件夹或集合中的资产设置审阅工作流，并与审阅者或创意合作伙伴共享它以寻求反馈。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '784'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 为文件夹或集合中的资产设置审阅工作流，并与审阅者或创意合作伙伴共享它以寻求反馈。
 
-Adobe Experience Manager资产允许您为文件夹或集合中的资产设置一个专门的审核工作流，并与审阅人或创意合作伙伴共享该工作流以寻求反馈。
+[!DNL Adobe Experience Manager Assets] 允许您为文件夹或集合中的资产设置临时审阅工作流，并与审阅者或创意合作伙伴共享该工作流以寻求反馈。
 
 您可以将审核工作流与项目关联，也可以创建独立的审核任务。
 
@@ -25,7 +25,7 @@ Adobe Experience Manager资产允许您为文件夹或集合中的资产设置�
 
 ## 为文件夹创建审核任务 {#creating-a-review-task-for-folders}
 
-1. 从资产用户界面中，选择要为其创建审核任务的文件夹。
+1. From the [!DNL Assets] user interface, select the folder for which you want to create a review task.
 1. 在工具栏中，单击 **[!UICONTROL 创建审阅任务]**![创建审阅任务](assets/do-not-localize/create-review-task.png) ，以打开 **[!UICONTROL “审阅任务]** ”页面。 If you cannot see the option in the toolbar, click **[!UICONTROL More]** and then select the option.
 
 1. （可选）在“项 **[!UICONTROL 目]** ”列表中，选择要将审核任务关联到的项目。 默认情况下，选 **[!UICONTROL 择]** “无”选项。 如果您不想将任何项目与审核任务关联，请保留此选择。
@@ -49,7 +49,7 @@ Adobe Experience Manager资产允许您为文件夹或集合中的资产设置�
    ![review_name](assets/review_name.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新任务的通知将发送给审批者。
-1. 以审批者身份登录资产，然后导航到资产UI。 要批准资产，请单击 **[!UICONTROL 通知]** ，然后从列表中选择审核任务。
+1. 以审批人 [!DNL Assets] 身份登录并导航到 [!DNL Assets] UI。 要批准资产，请单击 **[!UICONTROL 通知]** ，然后从列表中选择审核任务。
 
    ![资产通知](assets/aemAssetsNotification.png)
 
@@ -59,7 +59,7 @@ Adobe Experience Manager资产允许您为文件夹或集合中的资产设置�
    ![review_任务](assets/review_task.png)
 
 1. Click **[!UICONTROL Complete]** from the toolbar. 在对话框中，输入注释，然后单 **[!UICONTROL 击完]** 成以确认。
-1. 导航到资产用户界面并打开文件夹。 资产的批准状态图标以卡视图和列表视图显示。
+1. 导航到用 [!DNL Assets] 户界面并打开文件夹。 资产的批准状态图标以卡视图和列表视图显示。
 
    **卡片视图**
 
@@ -91,7 +91,7 @@ Adobe Experience Manager资产允许您为文件夹或集合中的资产设置�
    ![任务详细信息集合](assets/task_details-collection.png)
 
 1. Click **[!UICONTROL Submit]**, and then click **[!UICONTROL Done]** to close the confirmation message. 新任务的通知将发送给审批者。
-1. 以审批者身份登录资产，然后导航到资产控制台。 要批准资产，请单击 **[!UICONTROL 通知]** ，然后从列表中选择审核任务。
+1. 以审批者身 [!DNL Assets] 份登录并导航到控制 [!DNL Assets] 台。 要批准资产，请单击 **[!UICONTROL 通知]** ，然后从列表中选择审核任务。
 1. In the **[!UICONTROL Review Task]** page, examine the details of the review task, and then click **[!UICONTROL Review]**.
 1. 集合中的所有资产都会显示在审核页面上。 Select the assets and click **[!UICONTROL Approve/Reject]** to approve or reject assets, as appropriate.
 
