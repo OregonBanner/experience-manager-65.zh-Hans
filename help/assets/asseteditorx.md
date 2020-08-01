@@ -3,9 +3,9 @@ title: 扩展资产编辑器
 description: 了解如何使用自定义组件扩展资产编辑器的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '688'
 ht-degree: 13%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 13%
 
 有关使用预定义编辑组件配置编辑器的信息，请参 [阅创建和配置资产编辑器页面](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)。
 
-除了使用预先存在的编辑器组件，Adobe Experience Manager开发人员还可以创建自己的组件。
+除了使用预先存在的编辑器组件，开发 [!DNL Adobe Experience Manager] 人员还可以创建自己的组件。
 
 ## 创建资产编辑器模板 {#creating-an-asset-editor-template}
 
@@ -29,9 +29,9 @@ Geometrixx中包含以下示例页面：
 
 ### 配置Clientlib {#configuring-clientlib}
 
-资产组件使用WCM edit clientlib的扩展。 客户端库通常加载到 `init.jsp`。
+[!DNL Assets] 组件使用WCM edit clientlib的扩展。 客户端库通常加载到 `init.jsp`。
 
-与默认的clientlib加载(在核心的 `init.jsp`)相比，资产模板必须具有以下内容：
+与默认的clientlib加载(在核心的 `init.jsp`)相比，模 [!DNL Assets] 板必须具有以下内容：
 
 * 模板必须包含 `cq.dam.edit` clientlib(而非 `cq.wcm.edit`)。
 
@@ -41,17 +41,17 @@ Geometrixx中包含以下示例页面：
 
 ### 配置JS操作 {#configuring-js-actions}
 
-某些资产组件需要在中定义的JS函数 `component.js`。 将此文件复制到您的组件目录并将其链接。
+某些组件 [!DNL Assets] 需要在中定义的JS函 `component.js`数。 将此文件复制到您的组件目录并将其链接。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-示例将此javascript源加载 `head.jsp`到(`/apps/geometrixx/components/asseteditor/head.jsp`)中。
+该示例在()中加 `head.jsp`载此`/apps/geometrixx/components/asseteditor/head.jsp`JavaScript源。
 
 ### 其他样式表 {#additional-style-sheets}
 
-某些资产组件使用构件库。 要在内容上下文中正确呈现，必须加载其他样式表。 标记操作组件需要再一个。
+某些组件 [!DNL Assets] 使用构件库。 要在内容上下文中正确呈现，必须加载其他样式表。 标记操作组件需要再一个。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
