@@ -1,17 +1,17 @@
 ---
-title: 增强的智能标记
-description: 增强的智能标记
+title: 增强型智能标记
+description: 增强型智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1561'
-ht-degree: 7%
+source-wordcount: '1536'
+ht-degree: 8%
 
 ---
 
 
-# 增强的智能标记 {#enhanced-smart-tags}
+# 增强型智能标记 {#enhanced-smart-tags}
 
 ## 增强的智能标记概述 {#overview-of-enhanced-smart-tags}
 
@@ -25,9 +25,9 @@ ht-degree: 7%
 
 一旦标记经过培训并准备就绪，该服务现在就可以通过标记工作流将这些标记应用于资产。
 
-在后台，智能内容服务使用Adobe Sensei AI框架来根据您的标签结构和业务分类培训其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
+在后台，智能内容服务使用Adobe Sensei人工智能框架来根据您的标签结构和业务分类训练其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
 
-智能内容服务是在Adobe I/O上托管的云服务。 要在Adobe Experience Manager中使用它，系统管理员必须将您的Experience Manager部署与Adobe I/O集成。
+智能内容服务是托管在AdobeI/O上的云服务。 要在中使 [!DNL Adobe Experience Manager]用它，系统管理员必须将您 [!DNL Experience Manager] 的部署与AdobeI/O集成。
 
 总而言之，使用智能内容服务的主要步骤如下：
 
@@ -40,22 +40,22 @@ ht-degree: 7%
 
 ## 前提条件 {#prerequisites}
 
-在使用智能内容服务之前，请确保以下各项在Adobe I/O上创建集成：
+在使用智能内容服务之前，请确保以下各项在AdobeI/O上创建集成：
 
-* 具有组织管理员权限的Adobe ID帐户。
+* 具备拥有组织管理员权限的 Adobe ID 帐户。
 * 您的组织已启用智能内容服务。
 
 ## 入门 {#onboarding}
 
-智能内容服务可作为附加组件购买Experience Manager。 购买后，系统会向组织的管理员发送一封电子邮件，其中包含指向Adobe I/O的链接。
+The Smart Content Service is available for purchase as an add-on to [!DNL Experience Manager]. 购买后，系统会向组织的管理员发送一封电子邮件，其中包含指向AdobeI/O的链接。
 
-管理员可以点击链接将智能内容服务与Experience Manager集成。 要将服务与Experience Manager资产集成，请参 [阅配置智能标记](config-smart-tagging.md)。
+管理员可以点击链接将智能内容服务与集成 [!DNL Experience Manager]。 要将服务与集成，请 [!DNL Experience Manager Assets]参阅 [配置智能标记](config-smart-tagging.md)。
 
-管理员配置服务并以Experience Manager添加用户时，入门过程即完成。
+管理员配置服务并在中添加用户时，入门过程即完成 [!DNL Experience Manager]。
 
 >[!NOTE]
 >
->如果您使用的是Experience Manager6.3或更早版本，并且需要为资产提供标记服务，请参阅智 [能标记](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智能标记不使用最新的AI功能，因此不如增强的智能标记服务准确。
+>如果您使用的是 [!DNL Experience Manager] 6.3或更早版本，并且需要为资产提供标记服务，请参阅智 [能标记](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智能标记不使用最新的AI功能，因此不如增强的智能标记服务准确。
 
 ## 审核资产和标记 {#reviewing-assets-and-tags}
 
@@ -67,7 +67,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->1. 培训是一个不可撤消的过程。 Adobe建议您在培训标记上的智能内容服务之前，先查看特选资产集中的标记。
+>1. 培训是一个不可撤消的过程。 Adobe建议您在对标记培训智能内容服务之前，先查看特选资产集中的标记。
 >1. 请在开始针对 [任何标记的培训之前](smart-tags-training-guidelines.md) ，阅读智能内容服务培训指南。
 >1. 首次培训智能内容服务时，Adobe建议您至少使用两个不同的标签对其进行培训。
 
@@ -90,13 +90,13 @@ ht-degree: 7%
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-为文件夹选择此选项后，Experience Manager将自动运行培训工作流，以对文件夹资产及其标记进行智能内容服务培训。 默认情况下，培训工作流程每周在星期六的凌晨12:30运行。
+为文件夹选择此选项后，会自 [!DNL Experience Manager] 动运行培训工作流，以便对文件夹资产及其标记进行智能内容服务培训。 默认情况下，培训工作流程每周在星期六的凌晨12:30运行。
 
 ### 按需培训 {#on-demand-training}
 
 您可以根据需要从工作流控制台培训智能内容服务。
 
-1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** >工 **[!UICONTROL 作流]****[!UICONTROL >]**&#x200B;模型。
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL Smart Tags Training]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 1. 在“运 **[!UICONTROL 行工作流]** ”对话框中，浏览到有效负荷文件夹，该文件夹包含用于培训服务的标记资产。
 1. 指定工作流的标题并添加评论。 然后，单击“ **[!UICONTROL 运行]**”。 资产和标记将提交用于培训。
@@ -111,7 +111,7 @@ ht-degree: 7%
 
 要检查智能内容服务是否在资产培训集中的标记上接受过培训，请从“报告”控制台查看培训工作流报告。
 
-1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 报]**&#x200B;告。
+1. 在界 [!DNL Experience Manager] 面中，转到 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 报]**&#x200B;告。
 1. In the **[!UICONTROL Asset Reports]** page, click **[!UICONTROL Create]**.
 1. Select the **[!UICONTROL Smart Tags Training]** report, and then click **[!UICONTROL Next]** from the toolbar.
 1. 指定报表的标题和描述。在&#x200B;**[!UICONTROL 计划报告]**&#x200B;下，保持选中&#x200B;**[!UICONTROL 立即]**&#x200B;选项。如果要安排以后的计划报告，请选择&#x200B;**[!UICONTROL 稍后]**，然后指定日期和时间。Then, click **[!UICONTROL Create]** from the toolbar.
@@ -153,7 +153,7 @@ ht-degree: 7%
 
 #### 从工作流控制台标记资产 {#tagging-assets-from-the-workflow-console}
 
-1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** >工 **[!UICONTROL 作流]****[!UICONTROL >]**&#x200B;模型。
+1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
@@ -167,7 +167,7 @@ ht-degree: 7%
 
 #### 从时间轴标记资产 {#tagging-assets-from-the-timeline}
 
-1. 从资产用户界面中，选择包含要应用智能标记的资产或特定资产的文件夹。
+1. 从用 [!DNL Assets] 户界面中，选择包含要应用智能标记的资产或特定资产的文件夹。
 1. 从左上角打开时间 **[!UICONTROL 轴]**。
 1. 从左侧提要栏底部打开操作，然后单击“ **[!UICONTROL 开始工作流]**”。
 
