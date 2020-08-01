@@ -3,9 +3,9 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '814'
 ht-degree: 10%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 10%
 
 ## 上传和预览视频资产 {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] 为扩展名为MP4的视频资产生成预览。 如果资产的格式不是MP4，请安装FFmpeg包以生成预览。 FFmpeg创建OGG和MP4类型的视频演绎版。 您可以在“资产”用户界面中预览演绎版。
+[!DNL Adobe Experience Manager Assets] 为扩展名为MP4的视频资产生成预览。 如果资产的格式不是MP4，请安装FFmpeg包以生成预览。 FFmpeg创建OGG和MP4类型的视频演绎版。 您可以在用户界面中预览 [!DNL Assets] 再现。
 
-1. 在“数字资产”文件夹或子文件夹中，导航到要添加数字资产的位置。
+1. 在数字资产文件夹或子文件夹中，导航到要添加数字资产的位置。
 1. 要上传资产，请单击工 **[!UICONTROL 具栏]** 中的创建，然后选择 **[!UICONTROL 文件]**。 或者，直接将其拖放到资产区域。 See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. 您只能在卡视图中暂停或播放视频。 “播 [!UICONTROL 放] ”和“ [!UICONTROL 暂停] ”选项在列表视图中不可用。
 
@@ -33,7 +33,7 @@ ht-degree: 10%
 
 默认情 [!DNL Assets] 况下，您不会上传任何大于2 GB的资产，因为文件大小限制。 但是，您可以通过进入CRXDE Lite并在目录下创建节点来覆盖此 `/apps` 限制。 该节点必须具有相同的节点名称、目录结构和可比的节点属性。
 
-除了配置 [!DNL Assets] 之外，请更改以下配置以上传大型资产：
+除了配置 [!DNL Assets] 之外，还要更改以下配置以上传大型资产：
 
 * 增加令牌过期时间。 请参 [!UICONTROL 阅在Web控制台中Adobe] Granite CSRF Servlet `https://[aem_server]:[port]/system/console/configMgr`，网址为。 有关详细信息，请参 [阅CSRF保护](/help/sites-developing/csrf-protection.md)。
 * 增加 `receiveTimeout` Dispatcher配置。 有关详细信息，请参阅 [Experience ManagerDispatcher配置](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
@@ -71,7 +71,7 @@ ht-degree: 10%
 
 ## 注释视频资产 {#annotate-video-assets}
 
-1. 在“资产”控制台中，单 [!UICONTROL 击资] 产卡上的编辑以显示资产详细信息页面。
+1. 在控制 [!DNL Assets] 台中，单 [!UICONTROL 击资产] 卡上的编辑以显示资产详细信息页面。
 1. 要播放视频，请单击 [!UICONTROL 预览]。
 1. 要对视频添加注释，请单击“注 **[!UICONTROL 释]** ”按钮。 注释会在视频中的特定时间（帧）添加。 添加注释时，您可以在画布上绘图，并在绘图中包含注释。 注释将自动保存。
 
