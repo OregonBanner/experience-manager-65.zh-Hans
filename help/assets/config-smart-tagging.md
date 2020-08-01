@@ -3,9 +3,9 @@ title: 使用智能内容服务配置资产标记。
 description: 了解如何使用智能内容服务在中配置智能标记 [!DNL Adobe Experience Manager]，以及增强智能标记功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1103'
 ht-degree: 43%
 
 ---
@@ -13,19 +13,19 @@ ht-degree: 43%
 
 # 使用智能内容服务配置资产标记 {#configure-asset-tagging-using-the-smart-content-service}
 
-您可以使 [!DNL Adobe Experience Manager] 用Adobe开发人员控制台与智能内容服务集成。 使用此配置从中访问智能内容服 [!DNL Experience Manager]务。
+您可以使用 [!DNL Adobe Experience Manager] Adobe开发者控制台与智能内容服务集成。 使用此配置从中访问智能内容服 [!DNL Experience Manager]务。
 
 文章详细列出了配置智能内容服务所需的以下主要任务。 At the back end, the [!DNL Experience Manager] server authenticates your service credentials with the Adobe Developer Console gateway before forwarding your request to the Smart Content Service.
 
 1. Create a Smart Content Service configuration in [!DNL Experience Manager] to generate a public key. 为 OAuth 集成[获取公共证书](#obtain-public-certificate)。
 1. [在 Adobe 开发人员控制台中创建集成](#create-adobe-i-o-integration)，并上传生成的公共密钥。
-1. [使用Adobe](#configure-smart-content-service) Developer Console中的API密钥和其他凭据配置您的部署。
+1. [使用Adobe开发](#configure-smart-content-service) 者控制台中的API密钥和其他凭据配置您的部署。
 1. [测试配置](#validate-the-configuration)。
 1. （可选） [在资产上传时启用自动标记](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
 ## 前提条件 {#prerequisites}
 
-在使用智能内容服务之前，请确保在Adobe开发人员控制台上创建集成：
+在使用智能内容服务之前，请确保在Adobe开发者控制台上创建以下集成：
 
 * 具备拥有组织管理员权限的 Adobe ID 帐户。
 * 您的组织已启用智能内容服务。
@@ -33,7 +33,7 @@ ht-degree: 43%
 <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
 -->
 
-除了上述功能之外，要启用增强的智能标记，还请安装最 [新的AEM服务包](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)。
+除了上述功能之外，要启用增强的智能标记，还要安装最新 [的Experience Manager服务包](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)。
 
 ## 获取公共证书 {#obtain-public-certificate}
 
@@ -43,7 +43,7 @@ ht-degree: 43%
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 1. 在创 **[!UICONTROL 建配置]** 对话框中，指定智能标记配置的标题和名称。 单击&#x200B;**[!UICONTROL 创建]**。
-1. 在AEM **[!UICONTROL 智能内容服务]** 对话框中，使用以下值：
+1. 在AEM智 **[!UICONTROL 能内容服务]** 对话框中，使用以下值：
 
    **[!UICONTROL 服务 URL]**: `https://mc.adobe.io/marketingcloud/smartcontent`
 
@@ -77,9 +77,9 @@ ht-degree: 43%
 1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 云服务]** > **[!UICONTROL 旧版云服务]**。单击 **[!UICONTROL 资产智能标记]** >显 **[!UICONTROL 示配置]** >可 **[!UICONTROL 用配置]**。 单击所需的配置。
 
 1. To download a public certificate, click **[!UICONTROL Download Public Certificate for OAuth Integration]**.
-1. 访 [问https://console.adobe.io](https://console.adobe.io) ，然后导航到“集成”页面上的现有智能 **[!UICONTROL 内容]** 服务。 上传新证书。 For more information, see the instructions in [Create Adobe Developer Console integration](#create-adobe-i-o-integration).
+1. 访 [问https://console.adobe.io](https://console.adobe.io) ，并导航到“集成”页面上的现有智能 **[!UICONTROL 内容]** 服务。 上传新证书。 For more information, see the instructions in [Create Adobe Developer Console integration](#create-adobe-i-o-integration).
 
-## 创建Adobe Developer Console集成 {#create-adobe-i-o-integration}
+## 创建Adobe开发人员控制台集成 {#create-adobe-i-o-integration}
 
 要使用智能内容服务API，请在Adobe开发人员控制台中创建集成，以生成API密钥、技术帐户ID、组织ID和客户端机密。
 
