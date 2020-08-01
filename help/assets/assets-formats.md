@@ -3,9 +3,9 @@ title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 62085bdd8fa576e0d4eaeae19076d6edbf8c484a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1636'
 ht-degree: 22%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 22%
 
 # 支持的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-[!DNL Experience Manager Assets] 支持各种文件格式，每种功能都对不同的MIME类型提供不同的支持。 要与其他 [!DNL Assets] 符合标准的数字资产管理(DAM)解决方案和桌面软件集成，请使用Adobe的 [!DNL Extensible Metadata Platform] (XMP)。
+[!DNL Experience Manager Assets] 支持各种文件格式，每种功能都对不同的MIME类型提供不同的支持。 要与符 [!DNL Assets] 合标准的其他数字资产管理(DAM)解决方案和桌面软件集成，请使用Adobe的 [!DNL Extensible Metadata Platform] XMP。
 
 使用图例了解支持级别。
 
@@ -66,15 +66,15 @@ ht-degree: 22%
 
 * 元数据写回在添加到处理函数时适用于PSB文件 `NComm` 格式。
 
-* 要用 [!DNL Dynamic Media] 于预览和生成EPS文件的动态再 [现，请参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要用 [!DNL Dynamic Media] 于预览和生成EPS文件的动态再现，请 [参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 对于EPS文件，PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
+* 对于EPS文件，PostScript文档结构约定(PS-Adobe)3.0版或更高版本支持元数据写回。
 
 ## 支持的3D格式 {#support-3d-formats}
 
 支持以下3D格式列表。
 
-另请参阅 [在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
+See also [Working with 3D assets in Dynamic Media.](/help/assets/assets-3d.md)
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | Dynamic Media投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -118,7 +118,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## 支持的PDF光栅器库 {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer库为大型和内容密集型和PDF文件生成高质量的缩览图 [!DNL Adobe Illustrator] 和预览。 Adobe建议对以下对象使用PDF光栅器库：
+Adobe PDF光栅化器库为大型、内容密集型和PDF文件生成高质量的缩览 [!DNL Adobe Illustrator] 图和预览。 Adobe建议对以下对象使用PDF光栅器库：
 
 * 需要大量处理的资源的内容密集型AI/PDF文件。
 * AI/PDF文件，默认情况下不生成缩略图。
@@ -128,7 +128,7 @@ See [Using PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## 支持的图像转码库 {#supported-image-transcoding-library}
 
-Adobe Imaging Transcoding库是一款图像处理解决方案，可执行核心图像处理功能，如编码、转码、重新取样和调整大小。
+Adobe成像转码库是一款图像处理解决方案，可执行核心图像处理功能，如编码、转码、重新取样和调整大小。
 
 成像转码库支持JPG/JPEG、PNG（8位和16位）、GIF、BMP、TIFF/压缩TIFF（除32位TIFF文件和PTIFF文件外）、ICO和ICN MIME类型。
 
@@ -136,9 +136,9 @@ Adobe Imaging Transcoding库是一款图像处理解决方案，可执行核心�
 
 ## 支持的相机原始数据 {#supported-camera-raw}
 
-Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](camera-raw.md).
+库 [!DNL Adobe Camera Raw] 允许 [!DNL Assets] 摄取原始图像。 See [Camera Raw support](camera-raw.md).
 
-## 支持的资产文档格式 {#supported-document-formats}
+## Supported [!DNL Assets] document formats {#supported-document-formats}
 
 资产管理功能支持的文档格式如下：
 
@@ -173,9 +173,9 @@ Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](ca
 
 除了上述功能之外，还要考虑以下事项：
 
-* 要使用Dynamic Media为PDF文件生成动态再 [现，请参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media为PDF文件生成动态演绎版，请 [参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic Media预览AI文件并生成动态演绎版，请 [参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media预览AI文件并生成动态演绎版，请参 [阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 要使用Dynamic Media为INDD文件生成动态演绎版，请参 [阅InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
 
@@ -249,9 +249,9 @@ Adobe Camera Raw库使资产能摄取原始图像。 See [Camera Raw support](ca
 
 ## Supported MIME types {#supported-mime-types}
 
-默认情况下，Experience Manager使用文件扩展名检测文件类型。 Experience Manager可以从文件内容中检测到它。 对于后者，在 [!UICONTROL Experience ManagerWeb控制台][!UICONTROL 的Day CQ DAM Mime类型服务中选择“从内容检测MIME] ”选项。
+默认情况下 [!DNL Experience Manager] ，使用文件扩展名检测文件类型。 [!DNL Experience Manager] 可以从文件内容中检测到它。 对于后者，在 [!UICONTROL Web控制台中] Day CQ DAM [!UICONTROL MIME类型服务中选择“从内容检] 测MIME [!DNL Experience Manager] ”选项。
 
-在CRXDE Lite中，有一列表支持的MIME类型 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
+支持的MIME类型列表在CRXDE Lite中可用 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`。
 
 | 文件扩展名 | MIME类型/ Internet媒体类型 | 默认jobParam值 | 允许的jobParam值 |
 |---|---|---|---|
