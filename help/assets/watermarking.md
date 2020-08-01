@@ -3,9 +3,9 @@ title: 将水印添加到您的数字资产。
 description: 了解如何使用水印功能向资产添加数字水印。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5035d3457187f4d5fe5c2af255a1a886df7291b4
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -39,4 +39,4 @@ ht-degree: 0%
 1. Save the **[!UICONTROL DAM Update Asset]** workflow with the watermark step.
 1. 从用户 [!DNL Assets] 界面上传示例资产。 在您在上述步骤中配置的位置，将显示带有字体大小、颜色等的水印。
 
-要以编程方式或使用动态信息对PDF文档进行水印，请考 [虑使用AEM文档服务](/help/forms/using/overview-aem-document-services.md) 。
+要以编程方式或利用动态信息对PDF文档进行水印，请考虑使 [用Experience Manager文档服务](/help/forms/using/overview-aem-document-services.md) 。
