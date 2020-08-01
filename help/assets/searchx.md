@@ -1,12 +1,12 @@
 ---
-title: 扩展Adobe Experience Manager资产的搜索功能
-description: 将Adobe Experience Manager资产的搜索功能扩展至默认值之外。
+title: 扩展的搜索功能 [!DNL Adobe Experience Manager Assets]。
+description: 将搜索功能扩展 [!DNL Adobe Experience Manager Assets] 到默认值之外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 18%
+source-wordcount: '841'
+ht-degree: 19%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 18%
 
 ## 添加选项卡 {#adding-tabs}
 
-您可以通过在资产管理界面中配置其他搜索选项卡来添加这些选项卡。 要创建其他选项卡：
+您可以通过在管理员界面中配置其他搜索 [!DNL Assets] 选项卡。 要创建其他选项卡：
 
 1. 如果文件夹结 `/apps/wcm/core/content/damadmin/tabs,`构尚不存在，请创建该文件夹结构，然后从中 `tabs` 复制并 `/libs/wcm/core/content/damadmin` 粘贴该节点。
 1. 根据需要创建和配置第二个选项卡。
@@ -48,7 +48,7 @@ ht-degree: 18%
 
 [!DNL Assets] 附带一组预定义谓词，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用预存在的谓词外，Experience Manager开发人员还可以使用查询生成器API创 [建自己的谓词](/help/sites-developing/querybuilder-api.md)。
+除了使用预存在的谓词，开发 [!DNL Experience Manager] 人员还可以使用查询生成器API创 [建自己的谓词](/help/sites-developing/querybuilder-api.md)。
 
 创建自定义谓词需要有关构件框架的 [基本知识](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)。
 
@@ -296,6 +296,6 @@ ht-degree: 18%
 
 ## 自定义搜索结果 {#customizing-search-results}
 
-在“资产共享”页面上显示搜索结果受所选镜头的约束。 Experience Manager资产附带一组预定义的镜头，这些镜头可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
+在“资产共享”页面上显示搜索结果受所选镜头的约束。 [!DNL Experience Manager Assets] 附带一组预定义的镜头，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用现有镜头外，Experience Manager开发者还可以制作自己的镜头。
+除了使用现有的镜头外，开发者 [!DNL Experience Manager] 还可以制作自己的镜头。
