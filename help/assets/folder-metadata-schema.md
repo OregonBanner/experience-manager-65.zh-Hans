@@ -3,25 +3,25 @@ title: 文件夹元数据架构
 description: 了解如何在Adobe Experience Manager资产中为资产文件夹创建元数据模式
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 9%
+source-wordcount: '1016'
+ht-degree: 11%
 
 ---
 
 
 # 文件夹元数据架构 {#folder-metadata-schema}
 
-Adobe Experience Manager资产允许您为资产文件夹创建元数据模式，从而定义在文件夹属性页面中显示的布局和元数据。
+[!DNL Adobe Experience Manager Assets] 允许您为资产文件夹创建元数据架构，这些架构定义了文件夹属性页面中显示的布局和元数据。
 
 ## 添加文件夹元数据模式表单 {#add-a-folder-metadata-schema-form}
 
-使用文件夹元数据模式表单编辑器创建和编辑文件夹的元数据模式。
+使用文件夹元数据模式Forms编辑器创建和编辑文件夹的元数据模式。
 
-1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** >资 **[!UICONTROL 产]** >文 **[!UICONTROL 件夹元数据模式]**。
-1. 在“文件 [!UICONTROL 夹元数据模式表单] ”页面上，单 **[!UICONTROL 击创建]**。
-1. Specify a name for the form, and click **[!UICONTROL Create]**. 新的模式表单列在“模式 [!UICONTROL 表单] ”页。
+1. 在界 [!DNL Experience Manager] 面中，转至 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >文件 **[!UICONTROL 夹元数]**&#x200B;据模式。
+1. 在“文件 [!UICONTROL 夹元数据模式”] “Forms”页 **[!UICONTROL 面上，单击]**“创建”。
+1. Specify a name for the form, and click **[!UICONTROL Create]**. 新的模式表单列在 [!UICONTROL 模式Forms] 。
 
 ## Edit folder metadata schema forms {#edit-folder-metadata-schema-forms}
 
@@ -32,7 +32,7 @@ Adobe Experience Manager资产允许您为资产文件夹创建元数据模式�
 
 您可以将这些表单项映射到／配置到CRX存储库中元数据节点内的字段。 可以向元数据架构表单中添加新的选项卡或表单项目。
 
-1. 在模式表单页面中，选择您创建的表单，然后从工具栏 **[!UICONTROL 中]** 选择编辑选项。
+1. 在“模式Forms”页面中，选择您创建的表单，然后从工具栏 **[!UICONTROL 中选]** 择编辑选项。
 1. 在“文件夹元数据模式编辑器”页 `+` 面中，单击以向表单添加选项卡。 要重命名选项卡，请单击默认名称，并在“设置”下指定新 **[!UICONTROL 名称]**。
 
    ![custom_tab](assets/custom_tab.png)
@@ -96,20 +96,20 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your folder
 
 ## Delete folder metadata schema forms {#delete-folder-metadata-schema-forms}
 
-您可以从“文件夹元数据模式表单”页面删除文件夹元数据模式表单。 要删除表单，请选择表单，然后单击工具栏中的删除选项。
+您可以从“文件夹元数据模式”Forms页删除文件夹元数据模式表单。 要删除表单，请选择表单，然后单击工具栏中的删除选项。
 
 ![delete_form](assets/delete_form.png)
 
 ## 分配文件夹元数据模式 {#assign-a-folder-metadata-schema}
 
-您可以从“文件夹元数据模式表单”页面或在创建文件夹时，将文件夹元数据模式分配给文件夹。
+您可以从“文件夹元数据模式”Forms页或在创建文件夹时，将文件夹元数据模式分配给文件夹。
 
 如果为文件夹配置元数据模式，则模式表单的路径将存储在下的文 `folderMetadataSchema` 件夹节点的属性中。*/jcr:content*。
 
 ### 从“文件夹元数据”模式页面分配给模式 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. 在Experience Manager界面中，转 **[!UICONTROL 到工具]** >资 **[!UICONTROL 产]** >文 **[!UICONTROL 件夹元数据模式]**。
-1. 从“文件夹元数据模式表单”页面中，选择要应用于文件夹的模式表单。
+1. 在界 [!DNL Experience Manager] 面中，转至 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >文件 **[!UICONTROL 夹元数]**&#x200B;据模式。
+1. 从文件夹元数据模式Forms页中，选择要应用于文件夹的模式表单。
 1. 在工具栏中，单 **[!UICONTROL 击“应用到文件夹”]**。
 
 1. 选择要应用模式的文件夹，然后单击“应 **[!UICONTROL 用]**”。 如果已在文件夹上应用元数据模式，则会显示一条警告消息，通知您将覆盖现有元数据模式。 单击“ **[!UICONTROL 覆盖]**”。
