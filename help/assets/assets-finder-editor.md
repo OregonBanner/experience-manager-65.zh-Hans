@@ -3,9 +3,9 @@ title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c679cc5ad8f0ecf3495b020ef593de2e73c05ae0
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2120'
 ht-degree: 1%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 1%
 
 ## 为何要创建和配置资产编辑器页面？ {#why-create-and-configure-asset-editor-pages}
 
-数字资产管理正在越来越多的场景中使用。 当从面向受过专业培训的小用户群（如摄影师或分类学者）的小规模解决方案转向更大、更多样化的用户群（如企业用户、WCM作者、记者等）时，面向专业用户的Adobe Experience Manager资产强大的用户界面可能提供太多信息和利益相关方开始，要求特定用户界面或应用程序访问与其相关的数字资产。
+数字资产管理正在越来越多的场景中使用。 当从面向小型用户群（例如摄影师或分类学者）的专业培训用户的小型解决方案转变为面向更大、更多样化的用户群（例如商业用户、WCM作者、记者等）时，专业用户的强大用户界面会提供太多信息和利益相关方开始请求特定用户界面或应用程序以访问与他们相关的数字资产。 [!DNL Adobe Experience Manager Assets]
 
 这些以资产为中心的应用程序可以是企业内部网中的简单照片库，员工可以从贸易展访问或面向公众的网站的新闻中心上传照片。 以资产为中心的应用程序还可以扩展到包括购物车、结帐和验证流程在内的完整解决方案。
 
-创建以资产为中心的应用程序在很大程度上成为一个无需编码的配置过程，只需了解用户组及其需求以及所使用元数据的知识。 使用Assets创建的以资源为中心的应用程序具有可扩展性： 借助适当的编码工作量，可以创建用于搜索、查看和修改资产的可重用组件。
+创建以资产为中心的应用程序在很大程度上成为一个无需编码的配置过程，只需了解用户组及其需求以及所使用元数据的知识。 创建的以资源为中心的应用程序 [!DNL Assets] 具有可扩展性： 借助适当的编码工作量，可以创建用于搜索、查看和修改资产的可重用组件。
 
-Experience Manager中以资产为中心的应用程序由资产编辑器页面组成，该页面可用于获取特定资产的详细视图。 资产编辑器页面还允许编辑元数据，前提是访问资产的用户具有必要的权限。
+中以资产为中心的应 [!DNL Experience Manager] 用程序包含资产编辑器页面，该页面可用于获取特定资产的详细视图。 资产编辑器页面还允许编辑元数据，前提是访问资产的用户具有必要的权限。
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -387,7 +387,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ## 使用“资产编辑器”页面对资产进行多次编辑 {#multi-editing-assets-with-the-asset-editor-page}
 
-利用Experience Manager资产，您可以一次更改多个资产。 在选定资产后，您可以同时更改其：
+您 [!DNL Experience Manager Assets] 可以一次更改多个资产。 在选定资产后，您可以同时更改其：
 
 * 标记
 * 元数据
