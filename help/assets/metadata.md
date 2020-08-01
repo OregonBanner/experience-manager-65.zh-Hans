@@ -3,7 +3,7 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 15%
@@ -35,7 +35,7 @@ Typically, the applications that create digital assets add some metadata to the 
 
 ## Modify metadata in bulk {#modify-metadata-in-bulk}
 
-Adobe Enterprise Manager Assets lets you edit the metadata of multiple assets simultaneously so you can quickly propagate common metadata changes to assets in bulk. You can also edit the metadata for multiple collections in bulk.
+[!DNL Adobe Enterprise Manager Assets] lets you edit the metadata of multiple assets simultaneously so you can quickly propagate common metadata changes to assets in bulk. You can also edit the metadata for multiple collections in bulk.
 
 Use the properties page to perform metadata changes on multiple assets or collections:
 
@@ -48,7 +48,7 @@ To customize the metadata properties page, including adding, modifying, deleting
 >
 >The bulk editing methods work for assets available in a folder or a collection. For the assets that are available across folders or match a common criteria, it is possible to [bulk update the metadata after searching](search-assets.md#metadataupdates).
 
-1. In the Assets user interface, navigate to the location of the assets you want to edit.
+1. In the [!DNL Assets] user interface, navigate to the location of the assets you want to edit.
 1. Select the assets for which you want to edit common properties.
 1. From the toolbar, click **[!UICONTROL Properties]** to open the properties page for the selected assets.
 
@@ -121,7 +121,7 @@ For these reasons, [!DNL Assets] provides you with the right means of creating, 
 技术性元数据对于处理数字资产的软件应用程序而言非常有用，因此不应该手动维护。[!DNL Experience Manager Assets] 而其他软件会自动确定技术性元数据，并且修改资产时，元数据可能会发生更改。 资产的可用技术性元数据主要取决于资产的文件类型。技术元数据的一些示例包括：
 
 * 文件的大小。
-* 图像的尺寸（高度和宽度）。
+* Dimension（高度和宽度）。
 * 音频或视频文件的比特率。
 * 图像的分辨率（详细程度）。
 
@@ -140,7 +140,7 @@ For these reasons, [!DNL Assets] provides you with the right means of creating, 
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP)是一个开放标准，用于所 [!DNL Experience Manager Assets] 有元数据管理。 标准优惠可嵌入到所有文件格式的通用元数据编码。 Adobe和其他公司支持XMP标准，因为它提供丰富的内容模型。 XMP标准和的用户 [!DNL Experience Manager Assets] 拥有强大的基础平台。 有关详细信息，请参 [阅XMP](https://www.adobe.com/products/xmp.html)。
+[!DNL Extensible Metadata Platform] (XMP)是一个开放标准，用于所 [!DNL Experience Manager Assets] 有元数据管理。 标准优惠可嵌入到所有文件格式的通用元数据编码。 Adobe和其他公司支持XMP标准，因为它提供丰富的内容模型。 XMP标准和的用户拥 [!DNL Experience Manager Assets] 有强大的基础平台。 有关详细信息，请参 [阅XMP](https://www.adobe.com/products/xmp.html)。
 
 ### ID3 {#id}
 
@@ -160,7 +160,7 @@ ID3 标记是专为 MP3 文件格式而设计。有关各种格式的其他信�
 
 Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或PNG）不支持它。
 
-由Exif定义的元数据字段通常是技术性的，在描述性元数据管理中的用途有限。 因此，将Exif属 [!DNL Experience Manager Assets] 性映射到通用元数 [据架构](metadata-schemas.md) 和XMP [中的优惠](xmp-writeback.md)。
+由Exif定义的元数据字段通常是技术性的，在描述性元数据管理中的用途有限。 因此，将Exif属 [!DNL Experience Manager Assets] 性映射到通用元数 [据架构](metadata-schemas.md) 和XMP [中](xmp-writeback.md)。
 
 ### Other metadata {#other-metadata}
 
@@ -197,7 +197,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
 * MicrosoftPhoto和MP - Microsoft Photo。
 * PDF和PDF/X。
-* Photoshop和psAux - [!DNL Adobe Photoshop]。
+* Photoshop和帕奥 [!DNL Adobe Photoshop]。
 
 ### Digital Rights Management metadata {#digital-rights-management-metadata}
 
@@ -218,7 +218,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 
 ### Print-specific metadata {#print-specific-metadata}
 
-* PDF和PDF/X - Adobe PDF和第三方应用程序。
+* PDF和PDF/X -Adobe PDF和第三方应用程序。
 * PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.prismstandard.org).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` -分页文本的XMP元数据。
