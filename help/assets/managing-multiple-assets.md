@@ -1,11 +1,11 @@
 ---
-title: 在Adobe Enterprise Manager中管理许多资产和集合的元数据。
+title: 管理中许多资产和集合的元数据 [!DNL Adobe Enterprise Manager]。
 description: 同时编辑许多资产和收藏集的元数据，以快速传播常见的元数据更改。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '487'
 ht-degree: 16%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 16%
 
 # 管理资产和收藏集 {#managing-multiple-assets-and-collections}
 
-通过Adobe Enterprise Manager Assets，您可以同时编辑多个资产的元数据，以便快速将常见元数据更改批量传播到资产。 您还可以批量编辑多个集合的元数据。
+[!DNL Adobe Enterprise Manager Assets] 允许您同时编辑多个资产的元数据，以便快速将通用元数据更改批量传播到资产。 您还可以批量编辑多个集合的元数据。
 
 使用属性页可以对多个资产或收藏集执行元数据更改：
 
@@ -28,7 +28,7 @@ ht-degree: 16%
 
 ## 编辑多个资产的元数据属性 {#editing-metadata-properties-of-multiple-assets}
 
-1. 在资产用户界面中，导航到要编辑的资产所在的位置。
+1. In the [!DNL Assets] user interface, navigate to the location of the assets you want to edit.
 1. 选择要编辑其通用属性的资产。
 1. 在工具栏中，单 **[!UICONTROL 击]** “属性”以打开选定资产的属性页面。
 
