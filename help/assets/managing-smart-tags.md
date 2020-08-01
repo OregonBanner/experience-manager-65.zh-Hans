@@ -3,9 +3,9 @@ title: 管理智能标记和搜索
 description: 更新或删除不准确的智能标记，以提高标记的相关性
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,16 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 您还可以为标记分配更高的等级，以提高其与图像的相关性。 提升图像的标记可提高当基于特定标记执行搜索时在搜索结果中出现图像的可能性。
 
 1. 在“全局搜索”框中，根据标记搜索资产。
-1. 检查搜索结果以识别与搜索不相关的图像。
+1. Inspect搜索结果，以识别与搜索不相关的图像。
 1. 选择图像，然后单击工 **[!UICONTROL 具栏中的]** “管理标记”。
 1. 从“管 **[!UICONTROL 理标记]** ”页面检查标记。 如果不希望根据特定标记搜索图像，请选择该标记，然后单击工 **[!UICONTROL 具栏]** 中的删除。 或者，单 `X` 击标签旁边显示的符号。
 1. 要为标记分配更高的等级，请选择标记，然后单 **[!UICONTROL 击工]** 具栏中的提升。 您提升的标记将移到“标记 **[!UICONTROL ”部]** 分。
 1. Click **[!UICONTROL Save]**, and then click **[!UICONTROL OK]** to close the Success dialog.
 1. 导航到图像的属性页面。 请注意，您提升的标记具有较高的相关性，因此在搜索结果中显示得更高。
 
-## 通过智能标记了解Experience Manager搜索结果 {#understandsearch}
+## 使用智 [!DNL Experience Manager] 能标记了解搜索结果 {#understandsearch}
 
-默认情况下，Experience Manager搜索将搜索词与子句 `AND` 组合。 使用智能标记不会更改此默认行为。 使用智能标记可添加 `OR` 一个附加子句，以在应用智能标记中查找任何搜索词。 For example, consider searching for `woman running`. 默认情况下， `woman` 元数据 `running` 中仅包含关键字的资产不会显示在搜索结果中。 但是，在此类搜索查询中， `woman` 会显 `running` 示带有或使用智能标记的资产。 搜索结果是，
+默认情况下， [!DNL Experience Manager] 搜索将搜索词与子句 `AND` 组合。 使用智能标记不会更改此默认行为。 使用智能标记可添加 `OR` 一个附加子句，以在应用智能标记中查找任何搜索词。 For example, consider searching for `woman running`. 默认情况下， `woman` 元数据 `running` 中仅包含关键字的资产不会显示在搜索结果中。 但是，在此类搜索查询中， `woman` 会显 `running` 示带有或使用智能标记的资产。 搜索结果是，
 
 * 元数据 `woman` 中 `running` 包含和关键字的资产。
 
