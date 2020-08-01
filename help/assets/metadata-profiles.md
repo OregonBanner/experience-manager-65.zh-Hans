@@ -3,9 +3,9 @@ title: 元数据用户档案可自定义资产的元数据要求
 description: 了解资产的元数据用户档案。 了解如何创建元数据用户档案并将其应用到文件夹资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1404'
 ht-degree: 36%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 36%
 
    ![chlimage_1-199](assets/chlimage_1-482.png)
 
-   您为&#x200B;**[!UICONTROL 映射到属性]**&#x200B;指定的值会作为属性存储在资产的元数据节点下。例如，如果您指定`/jcr:content/metadata/dc:desc` 作为映射到属 **[!UICONTROL 性的名称]**，资产会将该值存储 `dc:desc` 在资产的元数据节点。
+   您为&#x200B;**[!UICONTROL 映射到属性]**&#x200B;指定的值会作为属性存储在资产的元数据节点下。例如，如果您指定`/jcr:content/metadata/dc:desc` 作为映射到属 **[!UICONTROL 性的名称]**, [!DNL Assets] 将值存储 `dc:desc` 在资产的元数据节点。
 
    * **[!UICONTROL 默认值]**：使用此属性可为元数据组件添加默认值。For example, if you specify &quot;My description&quot; then this value is assigned to the property `dc:desc` at the asset&#39;s metadata node.
 
@@ -67,7 +67,7 @@ ht-degree: 36%
 
    ![chlimage_1-203](assets/chlimage_1-486.png)
 
-1. 单击 **[!UICONTROL 工具栏]** 中的复制。
+1. Click **[!UICONTROL Copy]** from the toolbar.
 1. 在&#x200B;**[!UICONTROL 复制元数据配置文件]**&#x200B;对话框中，为元数据配置文件的新副本输入标题。
 1. 单击&#x200B;**[!UICONTROL 复制]**。元数据配置文件的副本将显示在&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;页面的配置文件列表中。
 
@@ -108,7 +108,7 @@ ht-degree: 36%
 
 请按照以下步骤应用元数据用户档案:
 
-1. 单击Experience Manager标志，然后导航到 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >元 **[!UICONTROL 数据用户档案]**。
+1. Click the [!DNL Experience Manager] logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. 选择您要应用到一个或多个文件夹的元数据配置文件。
 
    ![chlimage_1-207](assets/chlimage_1-490.png)
@@ -128,7 +128,7 @@ ht-degree: 36%
 
 ### 全局应用元数据用户档案 {#applying-a-metadata-profile-globally}
 
-除了将用户档案应用到文件夹外，您还可以全局应用一个用户档案，以便上传到任何文件夹中的Experience Manager资产的任何内容都会应用选定的。
+除了将用户档案应用到文件夹外，您还可以全局应用一个，以便上传到任何文件夹中的资产的任何内容 [!DNL Experience Manager] 都应用了选定的用户档案。
 
 您可以重新处理文件夹中的资产，该文件夹中已经存在稍后更改的元用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
@@ -150,7 +150,7 @@ ht-degree: 36%
 
 ### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-1. 单击Experience Manager标志，然后导航到 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >元 **[!UICONTROL 数据用户档案]**。
+1. Click the [!DNL Experience Manager] logo and navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. 选择您要从一个或多个文件夹删除的元数据配置文件。
 1. Click **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from and click **[!UICONTROL Done]**.
 
@@ -158,7 +158,7 @@ ht-degree: 36%
 
 ### 通过“属性”将元数据用户档案从文件夹删除 {#removing-metadata-profiles-from-folders-via-properties}
 
-1. 单击Experience Manager标志，导 **[!UICONTROL 航]** “资产”，然后导航到要从中删除元数据用户档案的文件夹。
+1. 单击标 [!DNL Experience Manager] 志并导航 **[!UICONTROL 资产]** ，然后导航到您要从中删除元数据用户档案的文件夹。
 1. 在文件夹中，单击复选标记以将其选中，然后单击“属 **[!UICONTROL 性”]**。
 1. 选择&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;选项卡，并从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
