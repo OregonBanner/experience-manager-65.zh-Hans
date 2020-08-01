@@ -3,9 +3,9 @@ title: 创建翻译项目
 description: 了解如何在中创建翻译项目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 34b98636966264b15b16fffc9e712b925303a701
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1898'
 ht-degree: 16%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 16%
 
 如果您使用此选项，则要翻译的资产会复制到要翻译的语言的语言根目录。 系统会根据您选择的选项，在“项目”控制台中为资产创建一个转换项目。 根据设置，翻译项目可以手动启动，也可以在翻译项目创建后自动运行。
 
-1. 在资产UI中，选择要为其创建语言副本的源文件夹。
+1. 在用 [!DNL Assets] 户界面中，选择要为其创建语言副本的源文件夹。
 1. Open the **[!UICONTROL References]** pane and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
@@ -85,7 +85,7 @@ ht-degree: 16%
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-1. 单击&#x200B;**[!UICONTROL 创建]**。源文件夹中的资产将复制到您在步骤4中选择的区域设置的目标文件夹。
+1. 单击&#x200B;**[!UICONTROL 创建]**。[!DNL Assets] 从源文件夹复制到您在步骤4中选择的区域设置的目标文件夹。
 
    ![语言副本](assets/lang-copy2.png)
 
@@ -111,12 +111,11 @@ ht-degree: 16%
 
    有关作业状态的更多详细信息， [请参阅监视翻译作业的状态](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
+1. 导航到 [!DNL Assets] UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
 
    ![视图资产属性页面中的已翻译元数据](assets/translated-metadata-asset-properties.png)
 
    *图： 资产属性页面中的已翻译元数据。*
-
 
    >[!NOTE]
    >
@@ -124,9 +123,9 @@ ht-degree: 16%
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project}
 
-如果您使用此选项，则在运行以前的翻译工作流后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含以前已翻译资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
+如果您使用此选项，则在运行以前的翻译工作流后，将为添加到源文件夹的资产运行翻译工作流。 只有新添加的资产才会复制到包含以前翻译过的资产的目标文件夹中。 在这种情况下，不会创建新的翻译项目。
 
-1. 在资产UI中，导航到包含未翻译资产的源文件夹。
+1. 在UI [!DNL Assets] 中，导航到包含未翻译资产的源文件夹。
 1. 选择要翻译的资产，然后打开&#x200B;**[!UICONTROL “引用”窗格]**。**[!UICONTROL 语言副本]**&#x200B;部分显示当前可用的翻译副本数。
 1. Click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**. 此时将显示可用翻译副本列表。
 1. 单击 **[!UICONTROL 底部的“创建]** ”和“翻译”。
@@ -184,7 +183,7 @@ ht-degree: 16%
 
    有关详细信息，请 [参阅监视翻译作业的状态](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 翻译完成后，状态将变为“准备审阅”。 导航到资产UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
+1. 翻译完成后，状态将变为“准备审阅”。 导航到 [!DNL Assets] UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
 
 ## 更新语言副本 {#update-language-copies}
 
@@ -197,7 +196,7 @@ ht-degree: 16%
 
 如果您使用此选项，则会为要更新语言副本的一组资产创建一个翻译项目。
 
-1. 从资产UI中，选择添加资产的源文件夹。
+1. 从UI [!DNL Assets] 中，选择添加资产的源文件夹。
 1. Open the **[!UICONTROL References]** pane, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 1. 选中&#x200B;**[!UICONTROL 语言副本]**&#x200B;前面的复选框，然后选择相应区域设置的目标文件夹。
 
@@ -240,13 +239,13 @@ ht-degree: 16%
 
    有关作业状态的更多详细信息， [请参阅监视翻译作业的状态](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 导航到资产UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
+1. 导航到用 [!DNL Assets] 户界面，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project-1}
 
 如果您使用此选项，则将一组资产添加到现有翻译项目中，以更新您选择的区域设置的语言副本。
 
-1. 从资产UI中，选择您添加资产文件夹的源文件夹。
+1. 从UI [!DNL Assets] 中，选择您添加资产文件夹的源文件夹。
 1. Open the **[!UICONTROL References pane]**, and click **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** to display the list of language copies.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
