@@ -3,9 +3,9 @@ title: 使用中的引用和多页资产管理复合资产 [!DNL Adobe Experienc
 description: 了解如何从中创建数字资产引用 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -48,11 +48,11 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
 To reference digital assets from within an [!DNL InDesign] file, either drag assets to the [!DNL InDesign] file or export the [!DNL InDesign] file as a ZIP archive.
 
-中已存在引用的资产 [!DNL Experience Manager Assets]。 您可以通过配置InDesign [Server提取子资产](indesign.md)。 文件中的嵌入 [!DNL InDesign] 资产会被提取为子资产。
+中已存在引用的资产 [!DNL Experience Manager Assets]。 您可以通过配置InDesign Server [提取子资产](indesign.md)。 文件中的嵌入 [!DNL InDesign] 资产会被提取为子资产。
 
 >[!NOTE]
 >
->如果代 [!DNL InDesign Server] 理，则 [!DNL InDesign] 文件的预览将嵌入到其XMP元数据中。 在这种情况下，缩略图提取不是明确必需的。 但是，如果未 [!DNL InDesign Server] 代理，则必须显式提取文件的缩 [!DNL InDesign] 略图。
+>如果代 [!DNL InDesign Server] 理，则文 [!DNL InDesign] 件的预览将嵌入到XMP元数据中。 在这种情况下，不显式需要缩略图提取。 但是，如果未 [!DNL InDesign Server] 代理，则必须显式提取文件的缩 [!DNL InDesign] 略图。
 
 ### 通过拖动资产创建引用 {#create-references-by-dragging-aem-assets}
 
@@ -91,7 +91,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 1. 以管理 [!DNL Experience Manager] 员身份登录。 访问 **[!UICONTROL 工具]** >工 **[!UICONTROL 作流]** > **[!UICONTROL 模型]**。
 1. 选择 **[!UICONTROL DAM更新资产工作流]** ，然后单击 **[!UICONTROL 编辑]**。
-1. 单击 **[!UICONTROL 切换侧面板]** ，然后找到 **[!UICONTROL 创建子资产步骤]** 。 将步骤添加到工作流。 单击 **[!UICONTROL 同步]**。
+1. 单击 **[!UICONTROL 切换侧面板]** ，然后找到 **[!UICONTROL 创建子资产步骤]** 。 将步骤添加到工作流。 单击&#x200B;**[!UICONTROL 同步]**。
 
 要生成子资产，请执行以下操作之一：
 
@@ -131,12 +131,12 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 ## 最佳实践和限制 {#best-practice-limitation-tips}
 
-* 子资产生成会占用大量资源用于任何Experience Manager部署。 如果您是在上传复杂资产时生成子资产，请在DAM更新资产工作流中添加该步骤。 如果要按需生成子资产，请创建单独的工作流以生成子资产。 专用工作流允许您跳过DAM更新资产工作流中的其他步骤并保存计算资源。
+* 子资产生成会占用任何部署的大量 [!DNL Experience Manager] 资源。 如果您是在上传复杂资产时生成子资产，请在DAM更新资产工作流中添加该步骤。 如果要按需生成子资产，请创建单独的工作流以生成子资产。 专用工作流允许您跳过DAM更新资产工作流中的其他步骤并保存计算资源。
 
 >[!MORELIKETHIS]
 >
 >* [使用Adobe Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
 >* [在Adobe Experience Manager中配置桌面操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
->* [在Adobe Photoshop中创建链接的智能对象](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
->* [将图形置入Adobe InDesign中](https://helpx.adobe.com/indesign/using/placing-graphics.html)
+>* [在Adobe Photoshop创建链接的智能对象](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
+>* [将图形置入Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
