@@ -1,11 +1,11 @@
 ---
 title: 使用演示包进行资产分析
-description: 使用演示包，Adobe Asset Insights可从网页捕获数据并生成洞察。
+description: 使用演示包，Adobe资产洞察可从网页捕获数据并生成洞察。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 566add37d6dd7efe22a99fc234ca42878f050aee
+source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # 使用演示包进行资产分析 {#using-demo-package-for-asset-insights}
 
-使用演示包，您可以使用Adobe Asset Insights从范例网页捕获数据并生成洞察。
+使用演示包，您可以启用Adobe资产洞察来捕获示例网页中的数据并生成洞察。
 
-## 将Experience Manager Assets Insights与示例网页结合使用  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] 通过示例网页获得洞察  {#using-aem-assets-insights-with-sample-web-page}
 
 1. 按照配置资产分析中的说明 [配置资产分析](touch-ui-configuring-asset-insights.md)。
 1. 从下面下载示例资产包，并从CRXDE包管理器安装该包。
@@ -34,4 +34,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >外部网页可以位于Experience Manager本身。
+   >外部网页本身可 [!DNL Experience Manager] 以。
