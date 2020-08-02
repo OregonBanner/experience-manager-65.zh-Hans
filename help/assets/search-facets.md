@@ -3,9 +3,9 @@ title: 搜索 Facet.
 description: 如何在中创建、修改和使用搜索彩块化 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2485'
 ht-degree: 28%
 
 ---
@@ -134,8 +134,8 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
 通过“多值属性”谓词，您可以搜索多个值的资产。 请考虑这样的情况：您在中有多个产品的 [!DNL Assets] 图像，每个图像的元数据包括与产品关联的SKU编号。 您可以使用此谓词根据多个SKU编号搜索产品图像。
 
-1. Click the [!DNL Experience Manager logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. 在“搜索Forms”页面上，选 **[!UICONTROL 择“资产管理员搜索边栏]**”，单击“ **[!UICONTROL 编]** 辑 ![”](assets/do-not-localize/aemassets_edit.png)图标。
+1. Click the [!DNL Experience Manager] logo, and then go to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. 在“搜索Forms”页面上，选 **[!UICONTROL 择“资产管理员搜索边栏]**”，然后单击 **[!UICONTROL “编]** 辑 ![”](assets/do-not-localize/aemassets_edit.png)图标。
 1. 在“编辑搜索表单”页中，将&#x200B;**[!UICONTROL 多值属性谓词]**&#x200B;从&#x200B;**[!UICONTROL 选择谓词]**&#x200B;选项卡拖到主窗格。
 1. In the **[!UICONTROL Settings]** tab, enter a label and placeholder text for the predicate. Specify the property name based on which the search is to be performed in the property field, for example `jcr:content/metadata/dc:value`. 您还可以使用选择对话框选择节点。
 1. 确保选中&#x200B;**[!UICONTROL 分隔符支持]**。在&#x200B;**[!UICONTROL 输入分隔符]**&#x200B;字段中，指定要用于分隔各个值的分隔符。默认情况下，指定逗号为分隔符。您可以指定其他分隔符。
