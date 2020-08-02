@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager资产发行说明
-description: Adobe Experience Manager 6.5 Assets 的新增功能和增强功能。
+title: 发行说 [!DNL Adobe Experience Manager Assets] 明6.5。
+description: The new capabilities and enhancements to [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 42%
+source-wordcount: '901'
+ht-degree: 41%
 
 ---
 
 
-# Adobe Experience Manager资产发行说明 {#aem-assets-release-notes}
+# [!DNL Adobe Experience Manager Assets] 发行说明 {#aem-assets-release-notes}
 
-以下是Adobe Experience Manager6.5 Assets版本的主要功能和亮点。
+Here are the key features and highlights of the [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] release.
 
 ## Integration with [!DNL Adobe Creative Cloud] and creative workflows {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
@@ -24,9 +24,9 @@ Read on to know the specific capabilities and integrations of [!DNL Experience M
 
 [!DNL Adobe Asset Link] 在内容创建过程中加强创意人员和营销人员之间的协作。 Creatives can access content stored in [!DNL Experience Manager Assets], without leaving the apps that they are most familiar with. Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign] apps.
 
-[!DNL Adobe Asset Link] 是适用于企 [业的Creative Cloud产品的一部分](https://www.adobe.com/cn/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] 是企业产品 [Creative Cloud的一部分](https://www.adobe.com/cn/creativecloud/business/enterprise.html) 。 For more information about it, including necessary configuration of your [!DNL Experience Manager] deployment, see [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html).
 
-![在Adobe Photoshop中搜索资源](assets/asset_search_photoshop.png)
+![在Adobe Photoshop搜索资产](assets/asset_search_photoshop.png)
 
 ### [!DNL Adobe Stock] 集成 {#stock}
 
@@ -36,11 +36,11 @@ Your organization can use its [!DNL Adobe Stock] enterprise plan within [!DNL Ex
 
 For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
-![预览Adobe Stock图像和许可，从Experience Manager资产中获取](assets/stock_image_preview_license_options.png)
+![预览Adobe Stock图像和许可从Experience Manager资产内部获得](assets/stock_image_preview_license_options.png)
 
 *图： 预览[!DNL Adobe Stock]图像和许可证，从[!DNL Experience Manager Assets]中。*
 
-![在Experience Manager中搜索和过滤已授权的Adobe Stock图像](assets/aem-search-filters2.jpg)
+![在Experience Manager中搜索和过滤获得许可的Adobe Stock图像](assets/aem-search-filters2.jpg)
 
 *图： 在中搜索和筛选许[!DNL Adobe Stock]可的图像[!DNL Experience Manager]。*
 
@@ -70,11 +70,11 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 For more details on new [!DNL Dynamic Media] features see [Dynamic Media Release Notes](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
-### 360 视频支持 {#video-support}
+### 360 video support {#video-support}
 
 Manage your 360-video files directly in [!DNL Experience Manager] using the cutting edge viewers to deliver VR-experiences to desktops, mobile and VR-headsets. 有关更多信息，请参阅[使用 360 视频](/help/assets/360-video.md)。
 
-### 自定义视频缩略图 {#custom-video-thumbnails}
+### Custom video thumbnails {#custom-video-thumbnails}
 
 您现在可以使用视频本身的帧或存储在 DAM 中的其他内容自定义视频资产的缩略图。有关其他说明，请参阅[关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
@@ -82,7 +82,7 @@ Manage your 360-video files directly in [!DNL Experience Manager] using the cutt
 
 [!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。 有关其他详细信息，请参阅 [Dynamic Media 查看器发行说明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
 
-## 搜索体验增强功能 {#search-experience-enhancement}
+## 搜索体验增强功能 {#experience-enhancement-for-searching}
 
 [!DNL Experience Manager] 6.5之后，营销人员可以在搜索结果页面更快地发现所需资产。 即使还未应用搜索筛选器，也会为搜索 Facet 更新资产数量。查看筛选后的预计计数有助于用户有效地浏览搜索结果。有关详细信息，请参阅 [在Experience Manager中搜索资产](../assets/search-assets.md)。
 
