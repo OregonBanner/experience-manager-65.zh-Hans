@@ -1,13 +1,8 @@
 ---
 title: AEM Sites 发行说明
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 Sites。
-uuid: 676ead61-3d97-4f23-b616-c647d590bc8f
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.4
-discoiquuid: f82e9bd4-f7b6-492d-8e02-593e74fa1058
-docset: aem65
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 63%
@@ -15,7 +10,7 @@ ht-degree: 63%
 ---
 
 
-# AEM Sites 发行说明{#aem-sites-release-notes}
+# AEM Sites 发行说明 {#aem-sites-release-notes}
 
 有关 AEM Sites 6.5 增强功能的详细信息，请参阅以下内容：
 
@@ -27,10 +22,10 @@ ht-degree: 63%
 
    * 字符串、数组和对象的“in”运算符：
 
-      ```
+      ```html
       ${'a' in 'abc’}
-       ${100 in myArray}
-       ${'a' in myObject}
+      ${100 in myArray}
+      ${'a' in myObject}
       ```
 
    * 具有数据密集的变量声明：
@@ -41,10 +36,10 @@ ht-degree: 63%
 
    * 数据解密的标识符：
 
-      ```
+      ```html
       <div data-sly-unwrap.isUnwrapped="${myCondition || myOtherCondition}">
-       text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
-       </div>
+      text <span data-sly-test="${isUnwrapped}>is unwrapped</code>
+      </div>
       ```
 
    * 支持负数
@@ -117,16 +112,16 @@ ht-degree: 63%
 >
 >在 AEM 6.5 发布时，AEM 不支持 at.js 2.x。请使用最新版本的 at.js 1.x。
 
-* Adobe Target 集成现在可以使用 Target Standard API。早期版本的AEM使用Target经典HTTP API，现已弃用。
+* Adobe Target 集成现在可以使用 Target Standard API。较早版本的AEM使用目标经典HTTP API，现已弃用。
 * Adobe Target `mbox.js` version 63 is included. Adobe strongly recommends to switch implementation to `at.js` v1.x.
 * `at.js` 版本1.5.0现已包含在内。 Adobe recommends that you use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision `at.js` v1.x into the site.
 
-## AEM和AdobeAnalytics {#aem-amp-adobe-analytics}
+## AEM和Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` 包含H.27.5。 Adobe建议您将实施切换到 `AppMeasurement.js`
 * `AppMeasurement.js` 包含v1.8.0。 Adobe recommends to use [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) to provision AppMeasurement.js into the site.
 
-## AEM和Commerce {#aem-commerce}
+## AEM和商务 {#aem-commerce}
 
 Improvements to the Commerce Integration Framework are on a faster release cycle since AEM 6.4. [Learn more here](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html).
 
