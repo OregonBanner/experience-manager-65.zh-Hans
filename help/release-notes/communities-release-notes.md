@@ -1,20 +1,18 @@
 ---
 title: AEM Communities 发行说明
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 Communities。
-uuid: 1b436959-581c-4b34-b2df-cccc5727da59
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5
-discoiquuid: c3505807-1550-491a-8619-e87839afca4f
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 57bad4e74b2dfd9e389643bfe58ef25564c5c545
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 61%
 
 ---
 
 
-# AEM Communities 发行说明{#aem-communities-release-notes}
+# AEM Communities release notes {#aem-communities-release-notes}
 
-继续阅读以了解自 6.4 发行版以后对 AEM Communities 所做的改进。To learn about the new features in greater detail, see [AEM 6.5 Communities User Guide](https://helpx.adobe.com/experience-manager/6-4/communities/user-guide.html).
+继续阅读以了解自 6.4 发行版以后对 AEM Communities 所做的改进。To learn about the new features in greater detail, see [AEM 6.5 Communities User Guide](https://helpx.adobe.com/cn/experience-manager/6-4/communities/user-guide.html).
 
 To obtain the latest release, see the [Deploying Communities](https://helpx.adobe.com/in/experience-manager/6-4/help/communities/deploy-communities.html#LatestReleases) section of the documentation.
 
@@ -28,7 +26,7 @@ To obtain the latest release, see the [Deploying Communities](https://helpx.adob
 
 社区用户无需搜索他们的名字、姓氏或用户名，即可查看是否有人与他们联系或需要他们注意。此外，它还允许 UGC 作者寻求能够最佳解决问题并提出意见或建议的特定注册用户的答复。
 
-社区管理员需要**在社区组件上启用提及**，以允许注册用户使用这些组件的功能。
+The community administrators need to **Enable Mention** on community components to allow registered users use the functionality on those components.
 
 **组消息传递**
 
@@ -38,9 +36,9 @@ To obtain the latest release, see the [Deploying Communities](https://helpx.adob
 
 ### 批量审核增强功能 {#enhancements-to-bulk-moderation}
 
-批量协调中的自定义过滤器
+批量审核中的自定义过滤器
 
-[现在可以开发自定义过滤器](/help/communities/moderation.md#custom-filters) ，并将其添加到“批量协调”UI中。
+[现在可以开](/help/communities/moderation.md#custom-filters) 发自定义过滤器并将其添加到批量协调UI。
 
 [Github](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) 中提供了一个演示通过标记进行筛选的[样本项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)。该项目可用作开发类似自定义筛选器的基础。
 
@@ -60,7 +58,7 @@ AEM 6.5 以后的 Communities 允许对不同的社区站点和组/嵌套组进�
 
 ![站点管理员](assets/site-admin.png)
 
-站点管理员可以在任何级别的层次结构中创建组，并成为默认管理员。这些管理员稍后可被其他组管理员删除。 组管理员可以管理其组 G1 并创建嵌套在 G1 下的子组。
+站点管理员可以在任何级别的层次结构中创建组，并成为默认管理员。以后，其他组管理员可以删除这些管理员。 组管理员可以管理其组 G1 并创建嵌套在 G1 下的子组。
 
 ### 启用增强功能 {#enhancements-to-enablement}
 
@@ -68,8 +66,10 @@ AEM 6.5 以后的 Communities 允许对不同的社区站点和组/嵌套组进�
 
 The enablement functionality of AEM 6.5 Communities support Shareable Content Object Reference Model [(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) engine.
 
-**支持组件上的键盘导航支持**AEM Communities中的支持组件（例如目录和课程播放、任务分配、文件库）支持键盘导航以改进辅助功能。
+* 启用组件上的键盘导航支持
+* AEM Communities中的支持组件（例如目录和课程播放、任务、文件库）支持键盘导航以改进辅助功能。
 
 ### 其他增强功能 {#other-enhancements}
 
-* **Solr 7支持**AEM 6.5 Communities在设置MSRP和DSRP时支持Apache Solr 7.0版本的搜索平台。
+* Solr 7支持
+* AEM 6.5 Communities在设置MSRP和DSRP时支持Apache Solr 7.0版本的搜索平台。
