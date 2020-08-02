@@ -3,9 +3,9 @@ title: 签入和签出您的数字资产进行编辑。
 description: 了解如何签出资产进行编辑，并在更改完成后将其签回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,10 @@ ht-degree: 0%
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
 1. 在工具栏中，单击“ **[!UICONTROL 释放锁定]**”。 资产将签回，可供其他用户编辑。
+
+## 最佳实践和限制 {#tips-limitations}
+
+* 可以删除包含已签 *出的资* 源文件的文件夹。 删除文件夹之前，请确保用户未签出任何数字资产。
 
 >[!MORELIKETHIS]
 >
