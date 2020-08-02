@@ -1,8 +1,8 @@
 ---
-title: 使用SAP Commerce Cloud进行开发
-seo-title: 使用SAP Commerce Cloud进行开发
-description: SAP Commerce Cloud集成框架包括一个包含API的集成层
-seo-description: SAP Commerce Cloud集成框架包括一个包含API的集成层
+title: 使用SAPCommerce Cloud进行开发
+seo-title: 使用SAPCommerce Cloud进行开发
+description: SAPCommerce Cloud集成框架包括一个带有API的集成层
+seo-description: SAPCommerce Cloud集成框架包括一个带有API的集成层
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,15 +10,15 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# 使用SAP Commerce Cloud进行开发 {#developing-with-sap-commerce-cloud}
+# 使用SAPCommerce Cloud进行开发 {#developing-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 0%
 该集成框架包含一个带有API的集成层。 这允许您：
 
 * 插入电子商务系统并将产品数据拉入AEM
-* 构建AEM组件，使其能够独立于特定的电子商务引擎
+* 构建AEM组件，使其能够独立于特定的eCommerce引擎
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
 
@@ -35,17 +35,17 @@ ht-degree: 0%
 >
 >[还提供](/help/sites-developing/ecommerce.md#api-documentation) API文档。
 
-为使用集成层提供了许多现成的AEM组件。 目前有：
+提供了许多现成的AEM组件以使用集成层。 目前有：
 
 * 产品展示组件
 * 购物车
 * 结帐
 
-对于搜索，会提供一个集成挂接，允许您使用AEM搜索、电子商务系统的搜索、第三方搜索(如Search&amp;Promote)或其组合。
+为了搜索，提供了集成挂钩，它允许您使用AEM搜索、电子商务系统的搜索、第三方搜索(如Search&amp;Promote)或其组合。
 
 ## 电子商务引擎选择 {#ecommerce-engine-selection}
 
-电子商务框架可与任何电子商务解决方案一起使用，所使用的引擎需要由AEM识别：
+电子商务框架可与任何电子商务解决方案一起使用，所使用的引擎需要由AEM进行识别：
 
 * 电子商务引擎是支持接口的OSGi服 `CommerceService` 务
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 请参阅以下示例：
 
-| `cq:commerceProvider = geometrixx` | 在标准AEM安装中，需要特定实施； 例如，geometrixx示例，其中包括通用API的最小扩展 |
+| `cq:commerceProvider = geometrixx` | 在标准AEM安装中，需要具体实施； 例如，geometrixx示例，其中包括通用API的最小扩展 |
 |---|---|
 | `cq:commerceProvider = hybris` | hybris implementation |
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Using CRXDE Lite you can see how this is handled in the product component for the hybris implementation:
+>UsingCRXDE Lite, you can see how this is handled in the product component for the hybris implementation:
 >
 >`/apps/geometrixx-outdoors/components/hybris/product/product.jsp`
 
@@ -112,11 +112,7 @@ To develop for Hybris 4 the following is required:
 
    `-P hybris4`
 
-   It downloads the pre-configured Hybris 4 distribution and embeds it in the bundle:
-
-   ```
-   cq-commerce-hybris-server
-   ```
+   它下载预配置的Hybris 4分发并将其嵌入捆绑中 `cq-commerce-hybris-server`。
 
 * 在OSGi配置管理器中：
 
@@ -156,15 +152,15 @@ hybris uses a user session to store information such as the customer&#39;s shopp
 Product data that is maintained in hybris needs to be available in AEM. 已实施以下机制：
 
 * An initial load of IDs is provided by hybris as a feed. 此源可能有更新。
-* hybris will supply update information via a feed(wich AEM polls)。
-* 当AEM is using product data, it will send requests back to hybris for the current data(conditional get request using last modified date)。
+* hybris will supply update information via a feed(wish AEM pols)。
+* 当AEM is using product data时，它将发送请求返回至hybris for the current data(conditional get request using last modified date)。
 * On hybris is possible to specify feed contents in a declaporational way.
-* 将源结构映射到AEM内容模型时，会在AEM端的源适配器中进行。
+* 将供给结构映射到AEM内容模型会在AEM端的供给适配器中发生。
 
 ![chlimage_1-12](assets/chlimage_1-12a.png)
 
-* 导入程序(b)用于AEM中目录的页面树结构的初始设置。
-* Catalog changes in hybris are is adised to AEM via a feed, thes then propagate to AEM(b)
+* 导入程序(b)用于AEM目录中页面树结构的初始设置。
+* hybris中的目录更改通过源指示到AEM, thes propagate to AEM(b)
 
    * 与目录版本相关的产品已添加／删除／更改。
    * 已批准产品。
@@ -173,7 +169,7 @@ Product data that is maintained in hybris needs to be available in AEM. 已实�
 
    * 
 
-      ```
+      ```js
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
        * "jcr:mixinTypes": ["cq:PollConfig"],
@@ -184,7 +180,7 @@ Product data that is maintained in hybris needs to be available in AEM. 已实�
        }
       ```
 
-* AEM中的目录配置可识别“ **暂存** ”和 **“在线** ”目录版本。
+* AEM中的目录配置可识别 **暂存** 和 **联机目** 录版本。
 
 * 在目录版本之间同步产品需要相应AEM页面(a, c)的(de-)激活
 
@@ -229,7 +225,7 @@ The product/variant resource does not always hold the actual product dataIt migh
 1. 再加一个
 >
 >   
-通过产品引用的属性选 `variationAxis` 择此附加变体(通常适 `color` 用于Geometrixx Outdoors)。
+通过产品引用的属性选 `variationAxis` 择此附加变体(通常 `color` 用于Geometrixx Outdoors)。
 
 #### 产品引用和产品数据 {#product-references-and-product-data}
 
@@ -241,25 +237,25 @@ The product/variant resource does not always hold the actual product dataIt migh
 
 产品变量和产品数据节点之间必须有1:1的映射。
 
-产品引用还必须为呈现的每个变体提供一个节点，但不要求显示所有变体。 例如，如果产品具有S、M、L变量，则产品数据可能为：
+产品引用还必须为呈现的每个变体提供一个节点，但不要求显示所有变体。 例如，如果产品具有S、M、L变量，则产品数据可能为。
 
 ```shell
 etc
-  commerce
-    products
-      shirt
-        shirt-s
-        shirt-m
-        shirt-l
+|──commerce
+|  |──products
+|     |──shirt
+|       |──shirt-s
+|       |──shirt-m
+|       |──shirt-l
 ```
 
-而“大而高”目录可能只包含：
+而“Big and Tall”目录可能只有。
 
 ```shell
 content
-  big-and-tall
-    shirt
-      shirt-l
+|──big-and-tall
+|  |──shirt
+|     |──shirt-l
 ```
 
 最后，不需要使用产品数据。 您可以将所有产品数据放在目录引用下； 但是，如果不复制所有产品数据，您就无法真正拥有多个目录。
@@ -429,16 +425,16 @@ public class AxisFilter implements VariantFilter {
 * 存储
 
    * In the hybris case, the hybris server owns the cart.
-   * 在AEM-generic案例中，购物车存储在ClientContext [中](/help/sites-administering/client-context.md)。
+   * 在AEM-generic case购物车中，购物车存储在 [ClientContext中](/help/sites-administering/client-context.md)。
 
 **个性化**
 
-* 个性化应始终通过ClientContext [推动](/help/sites-administering/client-context.md)。
-* A ClientContext `/version/` of the cart is created in all cases:
+* 个性化应始终通过 [ClientContext](/help/sites-administering/client-context.md)。
+* AClientContext `/version/` of the cart is created in all cases:
 
    * 应使用该方法添加产 `CommerceSession.addCartEntry()` 品。
 
-* 以下说明了ClientContext购物车中购物车信息的示例：
+* 以下说明了ClientContext车中购物车信息的示例：
 
 ![chlimage_1-13](assets/chlimage_1-13a.png)
 
@@ -457,9 +453,9 @@ public class AxisFilter implements VariantFilter {
    购物车内容模式由API修复：
 
    ```java
-       public void addCartEntry(Product product, int quantity);
-       public void modifyCartEntry(int entryNumber, int quantity);
-       public void deleteCartEntry(int entryNumber);
+   public void addCartEntry(Product product, int quantity);
+   public void modifyCartEntry(int entryNumber, int quantity);
+   public void deleteCartEntry(int entryNumber);
    ```
 
 1. **定价**
@@ -467,12 +463,12 @@ public class AxisFilter implements VariantFilter {
    定价模式也由API修复：
 
    ```java
-       public String getCartPreTaxPrice();
-       public String getCartTax();
-       public String getCartTotalPrice();
-       public String getOrderShipping();
-       public String getOrderTotalTax();
-       public String getOrderTotalPrice();
+   public String getCartPreTaxPrice();
+   public String getCartTax();
+   public String getCartTotalPrice();
+   public String getOrderShipping();
+   public String getOrderTotalTax();
+   public String getOrderTotalPrice();
    ```
 
 1. **订单详细信息**
@@ -480,9 +476,9 @@ public class AxisFilter implements VariantFilter {
    但是，订单详细 *信息* 不由API修复：
 
    ```java
-       public void updateOrderDetails(Map<String, String> orderDetails);
-       public Map<String, String> getOrderDetails();
-       public void submitOrder();
+   public void updateOrderDetails(Map<String, String> orderDetails);
+   public Map<String, String> getOrderDetails();
+   public void submitOrder();
    ```
 
 **发运计算**
@@ -496,7 +492,7 @@ public class AxisFilter implements VariantFilter {
 
 >[!NOTE]
 >
->您可以实施运输选择器； 例如：
+>您可以实施送货选择器； 例如：
 >
 >`yourProject/commerce/components/shippingpicker`:
 >
@@ -505,12 +501,12 @@ public class AxisFilter implements VariantFilter {
    >
 * 检查方法是否可用
 >* 添加定价信息
->* 要使购物者能够在AEM中更新订单页面（包括发运方法的超集和描述它们的文本），同时仍具有显示相关信息的控 `CommerceSession` 件。
+>* 要使购物者能够更新AEM中的订单页（包括发运方法的超集和描述它们的文本），同时仍具有显示相关信息的控 `CommerceSession` 件。
 
 
 **付款处理**
 
-* 支付 `CommerceSession` 处理连接也归该用户所有。
+* 付款 `CommerceSession` 处理连接也归该用户所有。
 * 实施者需要向实施添加特定呼叫(到他们选择的付款处理服务 `CommerceSession` )。
 
 **订单履行**
@@ -552,23 +548,23 @@ public class AxisFilter implements VariantFilter {
 
 ### 用户集成 {#user-integration}
 
-AEM与各种电子商务系统之间提供集成。 这需要一种在不同系统之间同步购物者的策略，这样AEM特定的代码就只能知道AEM，反之亦然：
+AEM与各种电子商务系统之间提供集成。 这需要一种在不同系统之间同步购物者的策略，这样AEM特定的代码只需了解AEM，反之亦然：
 
 * 身份验证
 
-   假定AEM是唯一的 *Web* 前端，因此执行 *所有* 身份验证。
+   AEM被假定为唯 *一* 的web前端，因此执行 *所有* 身份验证
 
 * Accounts in Hybris
 
-   AEM creates a ecompoged(下属)account in hybris for each shopper. 此帐户的用户名与AEM用户名相同。 密码随机密码是自动生成并存储在AEM中（已加密）的。
+   AEM creates a ecoped(下属)account in hybris for each shopper 此帐户的用户名与AEM用户名相同。 密码随机密码是自动生成并存储（加密）在AEM中的。
 
 #### 预先存在的用户 {#pre-existing-users}
 
-AEM front-end can be posited in front of an existing hybris implementation. Asso a hybris engine can be added to an existing AEM installation. 为此，系统必须能够正常地处理任一系统中的现有用户：
+AEM前端可定位在现有hybris实现的前面。 Asso a hybris engine can be added to an existing AEM installation. 为此，系统必须能够正常地处理任一系统中的现有用户：
 
 * AEM -> hybris
 
-   * 登录到hybris时，如果AEM用户不存在：
+   * 登录到hybris时，如果AEM user不已存在：
 
       * create new hybris user with a cryptographically random password
       * store hybris username in the user directory of the AEM user
@@ -577,10 +573,10 @@ AEM front-end can be posited in front of an existing hybris implementation. Asso
 
 * hybris -> AEM
 
-   * 登录AEM时，如果系统识别用户：
+   * 登录到AEM时，如果系统识别用户：
 
       * attemt log in to hybris with supplied username/pwd
-      * 如果成功，请在AEM中使用相同的口令创建新用户（AEM特定的salt将导致AEM特定的哈希）
+      * 如果成功，请在AEM中使用相同的口令创建新用户(AEM特定的salt将导致AEM特定的哈希)
    * 在Sling中实现了上述算法 `AuthenticationInfoPostProcessor`
 
       * See: `com.adobe.cq.commerce.hybris.impl.user.LazyUserImporter.java`
@@ -592,7 +588,7 @@ AEM front-end can be posited in front of an existing hybris implementation. Asso
 
 * 必须实现接 `ImportHandler` 口
 
-* 可以扩展 `DefaultImportHandler`
+* 可以扩展 `DefaultImportHandler`。
 
 ```java
 /**
@@ -602,66 +598,66 @@ AEM front-end can be posited in front of an existing hybris implementation. Asso
  */
 public interface ImportHandler {
 
-    /**
-     * Not used.
-     */
-    public void createTaxonomie(ImporterContext ctx);
+  /**
+  * Not used.
+  */
+  public void createTaxonomie(ImporterContext ctx);
 
-    /**
-     * Creates a catalog with the given name.
-     * @param ctx   The importer context
-     * @param name  The catalog's name
-     * @return Path of created catalog
-     */
-    public String createCatalog(ImporterContext ctx, String name) throws Exception;
+  /**
+  * Creates a catalog with the given name.
+  * @param ctx   The importer context
+  * @param name  The catalog's name
+  * @return Path of created catalog
+  */
+  public String createCatalog(ImporterContext ctx, String name) throws Exception;
 
-    /**
-     * Creates a product from the given values.
-     * @param ctx                The importer context
-     * @param values             The product's properties
-     * @param parentCategoryPath The containing category's path
-     * @return Path of created product
-     */
-    public String createProduct(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
+  /**
+  * Creates a product from the given values.
+  * @param ctx                The importer context
+  * @param values             The product's properties
+  * @param parentCategoryPath The containing category's path
+  * @return Path of created product
+  */
+  public String createProduct(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
 
-    /**
-     * Creates a variant product from the given values.
-     * @param ctx             The importer context
-     * @param values          The product's properties
-     * @param baseProductPath The base product's path
-     * @return Path of created product
-     */
-    public String createVariantProduct(ImporterContext ctx, ValueMap values, String baseProductPath) throws Exception;
+  /**
+  * Creates a variant product from the given values.
+  * @param ctx             The importer context
+  * @param values          The product's properties
+  * @param baseProductPath The base product's path
+  * @return Path of created product
+  */
+  public String createVariantProduct(ImporterContext ctx, ValueMap values, String baseProductPath) throws Exception;
 
-    /**
-     * Creates an asset for a product. This is usually a product
-     * image.
-     * @param ctx             The importer context
-     * @param values          The product's properties
-     * @param baseProductPath The product's path
-     * @return Path of created asset
-     */
-    public String createAsset(ImporterContext ctx, ValueMap values, String productPath) throws Exception;
+  /**
+  * Creates an asset for a product. This is usually a product
+  * image.
+  * @param ctx             The importer context
+  * @param values          The product's properties
+  * @param baseProductPath The product's path
+  * @return Path of created asset
+  */
+  public String createAsset(ImporterContext ctx, ValueMap values, String productPath) throws Exception;
 
-    /**
-     * Creates a category from the given values.
-     * @param ctx           The importer context
-     * @param values        The category's properties
-     * @param parentPath    Path of parent category or base path of import in case of root category
-     * @return Path of created category
-     */
-    public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
+  /**
+  * Creates a category from the given values.
+  * @param ctx           The importer context
+  * @param values        The category's properties
+  * @param parentPath    Path of parent category or base path of import in case of root category
+  * @return Path of created category
+  */
+  public String createCategory(ImporterContext ctx, ValueMap values, String parentCategoryPath) throws Exception;
 }
 ```
 
-要让导入程序识别您的自定义处理程序，它必 `service.ranking`须指定值大于0的属性； 例如：
+要让导入程序识别您的自定义处理程序，它必 `service.ranking`须指定值大于0的属性； 例如。
 
 ```java
 @Component
 @Service
 @Property(name = "service.ranking", value = 100)
-public class MyImportHandler extends DefaultImportHandler {
-    ...
+public class MyImportHandler extends DefaultImportHandler
+{
+...
 }
 ```
-
