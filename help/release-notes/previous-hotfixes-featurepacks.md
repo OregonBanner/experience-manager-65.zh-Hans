@@ -3,7 +3,7 @@ title: Adobe Experience Manager6.5以前的Service Pack发行说明
 description: 特定于Adobe Experience Manager6.5 Service Pack 3及更早版本的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 60a5bb489c1f473f3f848909b8c2eb3192c49e88
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '8108'
 ht-degree: 35%
@@ -19,9 +19,9 @@ Adobe Experience Manager6.5.4.0是一项重要更新，包含新功能、关键�
 
 Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包括：
 
-* Adobe Experience Manager资产现已通过Adobe I/O控制台通过Brand Portal配置。
+* Adobe Experience Manager资产现在通过AdobeI/O控制台配置为品牌门户。
 
-* 现在，新 [的“生成可打印输出](../forms/using/aem-forms-workflow-step-reference.md) ”步骤可用于Adobe Experience Manager表单工作流。
+* 现在，Adobe Experience Manager Forms [工作流可使用新的](../forms/using/aem-forms-workflow-step-reference.md) “生成可打印输出”步骤。
 
 * [自适应表单](../forms/using/resize-using-layout-mode.md) 、交互式通信的布局模式支持多列。
 
@@ -31,7 +31,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.8。
 
-* 您现在可以将选择性内容子树同 *步到Dynamic Media- Scene* 7模式，而不是所有可用 `content/dam`。
+* 您现在可以将选择性内容子树同步 *到Dynamic Media-Scene7模式* ，而不是所有在 `content/dam`。
 
 * 与SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
 
@@ -41,7 +41,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 ### 站点 {#sites-fixes}
 
-* 当Adobe Experience Manager站点页面的URL包含冒号(`:`)或百分比符号(`%`)时，浏览器停止响应，CPU使用率高峰(NPR-32369、NPR-31918)。
+* 当Adobe Experience Manager Sites页面的URL包含冒号(`:`)或百分比符号(`%`)时，浏览器停止响应，CPU使用率高峰(NPR-32369、NPR-31918)。
 
 * 当打开Experience Manager站点页面进行编辑并复制组件时，粘贴操作对于某些占位符仍然不可用(NPR-32317)。
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 在资产收集页面上触发工作流的按钮被禁用(NPR-32471)。
 
-* 在SPS(Scene7 Publishing System)中创建一个无名称的文件夹，同时使用Dynamic MediaScene7配置将资源从一个文件夹移到另一个文件夹(NPR-32440)。
+* 在SPS(Scene7出版系统)中创建一个无名称的文件夹，同时使用Dynamic MediaScene7配置将资源从一个文件夹移到另一个文件夹(NPR-32440)。
 
 * 将所有资产（使用全选，然后移动）移动到包含已发布资产的文件夹的操作会失败，并显示错误(NPR-32366)。
 
@@ -107,7 +107,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * Experience Manager资产在上传文件名超过50个字符的资产时，用户界面会显示截断的文件名(NPR-32054)。
 
-* 当选中Adobe Stock中复选框树的第二级复选框时，“滤镜”面板中的所有复选框都会在第一个和第二个复选框被清除时被清除(NPR-31919)。
+* 当选中Adobe Stock复选框树的第2级复选框时，“筛选器”面板中的所有复选框都将被清除(NPR-31919)。
 
 * 使用Omnisearch彩块化的文件和文件夹搜索会出现异常(NPR-31872)。
 
@@ -183,7 +183,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 ### Brand Portal {#assets-brand-portal-6540}
 
-* 在升级到Adobe I/O(Experience Manager6.5.4) [!DNL Assets] 时，Brand Portal用户无法将贡献文件夹资产发布到6.5.4(CQDOC-15655)。 要立即修复Experience Manager6.5.4，建议下载 [修补程序](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，并在创作实例上安装。
+* 在升级到Adobe6.5.4(CQDOC-15655) [!DNL Assets] 上的I/O时，Brand Portal用户无法将贡献文件夹资产发布到该Experience Manager。 要立即修复Experience Manager6.5.4，建议下载 [修补程序](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) ，并在创作实例上安装。
 
 * 元数据模式弹出值在资产属性中不可见(CQ-4283287)。
 
@@ -203,7 +203,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * “创建成员”表单显示为空白页面(NPR-31997)。
 
-* 用户无法视图Analytics关于作者实例的报告(NPR-30913)。
+* 用户无法视图有关作者实例的Analytics报告(NPR-30913)。
 
 ### Oak-索引和查询 {#oak-indexing-6540}
 
@@ -213,7 +213,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 >[!NOTE]
 >
->Experience Manager服务包不包含针对Experience Manager表单的修复。 它们是通过单独的 Forms 附加组件包交付的。此外，还会发布一个累积安装程序，其中包含对JEE上Adobe Experience Manager表单的修复。 有关详细信息，请 [参阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[表单加载项和安装Experience Manager表单](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
+>Experience Manager服务包不包含针对Experience ManagerForms的修复。 它们是通过单独的 Forms 附加组件包交付的。此外，还发布了包含针对Adobe Experience Manager Forms的JEE修复的累积安装程序。 有关详细信息，请参 [阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[Forms加载项和安装Experience ManagerForms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 * 通信管理： 提交到后处理工作流后，字母会显示额外字符(NPR-32626)。
 
@@ -221,17 +221,17 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 通信管理： 在字母模板中定义的默认值不会在预览模式下显示(NPR-32511)。
 
-* 移动表单： 以HTML版本呈现XDP表单时，提交按钮显示为扩展大小(NPR-32514)。
+* 移动Forms: 以HTML版本呈现XDP表单时，提交按钮显示为扩展大小(NPR-32514)。
 
 * 文档服务： 应用Service Pack 2后，Letter和某些其他页面的URL访问问题(NPR-32508、NPR-32509)。
 
 * 文档服务： 如果服务器上的事务数超过特定限制，则HTML到PDF的转换将失败，并且文件类型设置将从服 [!DNL Forms] 务器中删除(NPR-32204)。
 
-* 自适应表单： 浏览器辅助工具工具根据WCAG2 Level AA准则报告自适应表单中的故障(NPR-32312、NPR-32309、CQ-4285439)。
+* 适应性Forms: 浏览器辅助工具工具根据WCAG2 Level AA准则报告自适应表单中的故障(NPR-32312、NPR-32309、CQ-4285439)。
 
-* 自适应表单： Chrome浏览器辅助工具工具报告最佳实践失败(NPR-32310)。
+* 适应性Forms: Chrome浏览器辅助工具工具报告最佳实践失败(NPR-32310)。
 
-* 自适应表单： 配置嵌入在Experience Manager站点页面中的自适应表单时的转换问题(NPR-32168)。
+* 适应性Forms: 配置嵌入在Experience Manager站点页面中的自适应表单时的转换问题(NPR-32168)。
 
 * 工作台： 使用“为PDF实用程序获取PDF属性”操作服务时显示错误消息(NPR-32150)。
 
@@ -241,7 +241,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 设计人员： 如果表中存在合并的单元格，则使用输出服务从XDP表单转换的输出PDF文件的辅助功能测试将失败(CQ-4285372)。
 
-* JEE基金会： 如果Experience Manager表单服务器与群集断开连接，缓存问题会阻止它重新连接到服务器(NPR-32412)。
+* JEE基金会： 如果Experience ManagerForms服务器与群集断开连接，缓存问题会阻止它重新连接到服务器(NPR-32412)。
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -321,25 +321,25 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 资产的批量移动失败并显示警告消息(NPR-30610)。
 
-* 在-Scene7模式下，当将资产从一个文件夹移到另一个文件夹时，资产名称 [!DNL Experience Manager] 将更改 [!DNL Dynamic Media]为小写字母(NPR-31630)。
+* 在以Scene7模式运行时，将资产从一个文件夹移到另一个文件夹时，资产名称 [!DNL Experience Manager] 将更改 [!DNL Dynamic Media]为小写字母(NPR-31630)。
 
-* 编辑远程图像集时，对于与Scene7公司名称相同的文件夹中的图像，会出现错误(NPR-31340)。
+* 编辑远程图像集时，对于与Scene7公司名称(NPR-31340)同名的文件夹中的图像，会出现错误。
 
 * [!DNL Dynamic Media] 包含引用的资产将不会被发布(NPR-31180)。
 
-* 从7- [!DNL Dynamic Media]Scene7模式上载到 [!DNL Dynamic Media Classic] 的时间过长，无法完成(NPR-31048)。
+* 从7- [!DNL Dynamic Media]Scene7模式上 [!DNL Dynamic Media Classic] 传到的时间太长，无法完成(NPR-31048)。
 
 * 添加到图像资产的热点不会通过资产详细信息页面中的交互式图像查看器显示(NPR-30979)。
 
-* 当对中的资产执行的操作被传递到Scene7时，将创建大的sling作业并重 [!DNL Experience manager Assets] 新显示“处理”横幅(NPR-30947)。
+* 当对中的资产执行的操作被传递到Scene7时，将创建巨大的吊 [!DNL Experience manager Assets] 带作业并重新显示“处理”横幅(NPR-30947)。
 
-* 创建资产的语言副本时发生冲突，且资产未上传到Scene7(NPR-30932)。
+* 创建资产和资产的语言副本时发生冲突(NPR-30932)。
 
 * 从以混合模 [!DNL Experience Manager] 式运行 [!DNL Dynamic Media]下载的动态演绎版将断开（它们属于文本类型，内容为“找不到图像”而非图像内容类型）(NPR-30876)。
 
-* [!DNL Dynamic Media] 编码视频工作流无法为Adobe Experience Manager时从 [!DNL Dynamic Media Classic] -Scene7 [!DNL Dynamic Media]模式迁移到的视频生成缩略图(CQ-4282011)。
+* [!DNL Dynamic Media] 编码视频工作流无法为Adobe Experience Manager时从Scene7模式迁 [!DNL Dynamic Media Classic] 移到 [!DNL Dynamic Media]模式的视频生成缩略图(CQ-4282011)。
 
-* 使用不同的Scene7公司ID将资源从一个实例迁移到另一个实例时观察到IpsApiException(CQ-4280548)。
+* 使用不同的Scene7公司ID(CQ-4280548)将资源从一个实例迁移到另一个实例时观察到IpsApiException。
 
 * 当3D资产缩略图被收录到支持的3D模型中( [!DNL Experience Manager] CQ-4283701)时，该缩略图不会提供相关信息。
 
@@ -349,17 +349,17 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 无法在Internet Explorer 11和Safari上使用SmartCropVideoViewer播放视频(CQ-4281422)。
 
-* 在Scene7运行模式下，使用移动按钮将多个资产从一个文件夹移 [!DNL Experience Manager] 动到另 [!DNL Dynamic Media]一个文件夹失败(CQ-4280384)。
+* 在-Scene7运行模式上运行时，使用移动按钮将多个资源从一个文件夹 [!DNL Experience Manager] 移动到另 [!DNL Dynamic Media]一个文件夹失败(CQ-4280384)。
 
 * 当MIME类型不是MP4时，资产详细信息上会显示扭曲的视频(CQ-4279704)。
 
 * 新摄取到具有视频用户档案的文件夹中的视频即使在编码百分比完成到100%后仍处于处理状态(CQ-4279389)。
 
-* 从文件夹移动资产会创建大量sling作业（Scene7 API调用），而非理想的必需项(CQ-4278664)。
+* 从文件夹移动资源会创建大量sling作业(Scene7API调用)，而非理想的必需(CQ-4278664)。
 
-* 在Scene7中，当在DAM中创建图像集（或媒体集）并使用适当的命名约定进行命名时，图像集的名称将更改为小写(CQ-4281112)。
+* 在Scene7，当在DAM中创建图像集（或mediaset）并使用适当的命名约定进行命名时，图像集的名称将更改为小写字母(CQ-4281112)。
 
-* Scene7 Migrator设置发布状态时不正确(CQ-4263492)。
+* Scene7迁移程序设置发布状态不正确(CQ-4263492)。
 
 * 触屏UI搜索（通过Omnisearch完成）结果页自动向上滚动并丢失内容片段中用户的滚动位置(CQ-4282898)。
 
@@ -399,7 +399,7 @@ Remove one mention of this fix.
 * 当在非编辑器模式下(在“作者”模式下(不带前缀 `editor.html` 和 `wcmmode=disabled`，或在“发布者”中)打开包含某些体验片段的页面时，请求以HTTP状态错误代码( `500` NPR-30743)结束。
 * 用户无法更改其口令并访问其用户档案页(NPR-31161)。
 
-### 搜索和用户界面 {#search-ui-interface}
+### 搜索和用户界面 {#ui-interface-and-search}
 
 * 在搜索结果页面上从卡视图切换到列表视图时，在可滚动页面之前会出现延迟(NPR-31286)。
 
@@ -472,7 +472,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修复 [!DNL Experience Manager Forms]。 它们是通过单独的 Forms 附加组件包交付的。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 有关详细信息，请 [参阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[表单加载项和安装Experience Manager表单](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
+>[!DNL Experience Manager] Service Pack不包含修复 [!DNL Experience Manager Forms]。 它们是通过单独的 Forms 附加组件包交付的。In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 有关详细信息，请参 [阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[Forms加载项和安装Experience ManagerForms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 #### Forms 附加组件包 {#forms-add-on-package-6530}
 
@@ -488,7 +488,7 @@ Remove one mention of this fix.
 
 **通信管理**
 
-* 将字母从LiveCycle ES4SP1迁移到6.5(NPR- [!DNL Experience Manager] 31615)时，字幕和工具提示不显示。
+* 将字母从LiveCycleES4SP1迁移到6.5时，字幕 [!DNL Experience Manager] 和工具提示不显示(NPR-31615)。
 
 * **将字母另存为草稿时** ，不再显示支持文本流格式的错误消息(NPR-30463)。
 
@@ -500,7 +500,7 @@ Remove one mention of this fix.
 
 * 在添加子表单的实例时，生成 XDP 表单的 HTML5 预览会显示闪烁 (NPR-30909)。
 
-#### JEE安装程序上的表单 {#forms-jee-installer-6530}
+#### FormsJEE安装程序 {#forms-jee-installer-6530}
 
 **表单 - 文档服务**
 
@@ -510,7 +510,7 @@ Remove one mention of this fix.
 
 **Foundation JEE**
 
-* 操作配置不会加载调用表单工作流提交操作的进程名称(NPR-31478)。
+* 操作配置不加载调用Forms Workflow提交操作的进程名称(NPR-31478)。
 
 ### 包含的功能包 {#feature-packs-included-6530}
 
@@ -520,7 +520,7 @@ Remove one mention of this fix.
 
 #### Forms - Foundation JEE {#forms-foundation-jee-feature}
 
-* [!DNL Experience Manager] 对Oracle 18c的表单支持(NPR-29155)。
+* [!DNL Experience Manager] Forms对Oracle 18c的支持(NPR-29155)。
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
@@ -840,7 +840,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * OSGi only: Added a new attribute `PAGECOUNT` in Output and Forms Service.
 
-* 仅限OSGI: 支持使用Forms Service创建静态PDF文件。
+* 仅限OSGI: 支持使用Forms服务创建静态PDF文件。
 * 为管理员和根用户启用了对 XMLForm.exe 的权限。
 * 为 Dynamics 内部部署集成启用了对 ADFS v3.0 的支持。
 
@@ -933,7 +933,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 * “表单”字段无法转换为PDF/A-1b，没有外观命令。 NPR-29940：适用于 CQ-4269618 的修补程序
 
 * OSGi: 无法确定渲染过程中生成的页数。 NPR-28922：适用于 CQ-4270870 的修补程序
-* 支持使用中的Forms Service对静态PDF文件进行 [!DNL Experience Manager Forms OSGi]支持。 NPR-28572：适用于 CQ-4270869 的修补程序
+* 使用中的Forms服务支持静态PDF文 [!DNL Experience Manager Forms OSGi]件。 NPR-28572：适用于 CQ-4270869 的修补程序
 * 无法更改对 XMLForm.exe 的权限。NPR-29828、NPR-29237：适用于 Q-4267080 的修补程序
 * The static PDF created by the [!DNL Experience Manager Forms] server’s output module does not populate the language attribute/tag with the language of the document created. NPR-27332：适用于 CQ-4271002 的修补程序
 
@@ -955,8 +955,8 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 #### Forms - 文档服务 -包括
 
-* 仅限OSGi: 在Output and Forms Service中添加了新属性PAGECOUNT。 NPR-28922：适用于 CQ-4270870 的修补程序
-* 仅限OSGi: 支持使用Forms Service创建静态PDF文件。 NPR-28572：适用于 CQ-4270869 的修补程序
+* 仅限OSGi: 在“输出”和“Forms服务”中添加了新属性PAGECOUNT。 NPR-28922：适用于 CQ-4270870 的修补程序
+* 仅限OSGi: 支持使用Forms服务创建静态PDF文件。 NPR-28572：适用于 CQ-4270869 的修补程序
 * 为管理员和根用户启用了对 XMLForm.exe 的权限。NPR-29237：适用于 CQ-4267080 的修补程序
 
 ### OSGi 包和内容包
