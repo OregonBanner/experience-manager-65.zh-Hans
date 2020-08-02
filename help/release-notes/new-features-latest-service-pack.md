@@ -4,10 +4,10 @@ description: Adobe Experience Manager6.5 Service Pack 5的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 71c0d0263e1d0da7e33762a3b22773f38db3ba52
+source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '1873'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -56,7 +56,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户请求的�
 
 * 许多用户界面元素、控件和输入表单字段都可使用键盘进行访问。
 
-* 某些用户界面元素的颜色和对比度被更新，以便视觉受限的用户或没有颜色感知的用户能够区分这些用户界面元素。 例如，星级图标的颜色(如资产属性 [!UICONTROL 中] “高级”选 [!UICONTROL 项卡的] “评级 [!UICONTROL ”部分或] 卡视图中)会更改为适当的对比度。
+* 某些用户界面元素的颜色和对比度已更新，以便视力有限和不能感知颜色的用户能够区分这些用户界面元素。For example, the color of star rating icons (such as in [!UICONTROL Rating] section of [!UICONTROL Advanced] tab in asset [!UICONTROL Properties] or in card view) is changed for appropriate contrast.
 
    ![对比度得到改善的等级图标](assets/star-rating-icons.png)
 
@@ -90,11 +90,11 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户请求的�
 
 ### [!DNL Oracle WebLogic] 应用服务器支持 {#weblogic-support}
 
-Adobe Experience Manager表单在JEE上增加 [!DNL Oracle WebLogic 12] 了对Adobe Experience Manager表单的支持。 您可以从先前版本升级，或在JEE服务器上的12.2.1.4及更高版本 [!DNL Oracle WebLogic] 上设置新的Experience Manager6.5表单。 稍后的版本更改与次要版本更改相对应，其中12.2.1.x中的x替换为版本号。
+Adobe Experience Manager Forms在JEE上为 [!DNL Oracle WebLogic 12] Adobe Experience Manager Forms增加了支持。 您可以从先前版本升级，或在JEE服务器上的12.2.1.4及更高版本上 [!DNL Oracle WebLogic] 设置新的Experience Manager6.5Forms。 稍后的版本更改与次要版本更改相对应，其中12.2.1.x中的x替换为版本号。
 
 ### 辅助功能改进 {#accessibility-improvements}
 
-Adobe Experience Manager表单包括以下辅助功能增强功能：
+Adobe Experience Manager Forms包括以下辅助功能增强：
 
 * 当用户将自适应表单预览为HTML表单时，“涂 [!UICONTROL 抹签名] ”字段将保留选项卡焦点。
 
@@ -108,7 +108,7 @@ Adobe Experience Manager表单包括以下辅助功能增强功能：
 
 ### 其他主要改进 {#other-improvements}
 
-* Experience Manager6.5 JEE文档安全表单现在基于 [!DNL Apache Struts 2]。
+* Experience Manager6.5Forms关于JEE文档安全的现在基于 [!DNL Apache Struts 2]。
 
 * 增加了对的 [!DNL Oracle Real Applications Cluster (RAC) 19c]支持。
 
@@ -134,7 +134,7 @@ Adobe Experience Manager表单包括以下辅助功能增强功能：
 
 #### 配 [!DNL Experience Manager Assets] 置 [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过Adobe [!DNL Brand Portal] I/O进行配置，Adobe I/O为租户提供IMS令牌以进行授 [!DNL Brand Portal] 权。
+和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
 
 使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) （使用Brand Portal）。
 
@@ -163,13 +163,13 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月�
 
 #### 针对Dynamic Media的视频用户档案中的智能裁剪(6.5.3.0) {#smart-crop-video}
 
-视频智能裁剪是视频用户档案中的一项可选功能，它是一款工具，可利用Adobe Sensei中人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。 请参 [阅关于在视频用户档案中使用智能裁剪](../assets/video-profiles.md)。
+视频智能裁剪是视频用户档案中的一项可选功能，它使用Adobe Sensei人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。 请参 [阅关于在视频用户档案中使用智能裁剪](../assets/video-profiles.md)。
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
-#### 在Experience Manager表单工作流(6.5.4.0)中生成可打印输出 {#generate-printable-output}
+#### 在Experience ManagerForms工作流(6.5.4.0)中生成可打印输出 {#generate-printable-output}
 
-使用“生成可打印输出”工作流步骤，您可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的详细信息，请参 [阅OSGi上以表单为中心的工作流程——步骤参考](../forms/using/aem-forms-workflow-step-reference.md)。
+使用“生成可打印输出”工作流步骤，您可以将源模板文件与数据文件集成。 此集成允许您打印或保存模板文件的不同副本。 该步骤生成PCL、PostScript、ZPL、IPL、TPCL或DPL输出。 有关此功能的更多信息，请参 [阅OSGi —— 步骤参考上以Forms为中心的工作流程](../forms/using/aem-forms-workflow-step-reference.md)。
 
 ![生成可打印输出](assets/generate-print-output-step.gif)
 
@@ -195,13 +195,13 @@ For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月�
 
 #### Accessibility enhancements (6.5.4.0) {#forms-accessibility-enhancements-6540}
 
-Experience Manager表单包括以下辅助功能增强功能：
+Experience ManagerForms包含以下辅助功能增强功能：
 
 * 屏幕阅读器在自适应表单中正确宣布复选框、链接、日期选取器和日期输入字段。
 
 * 自适应表单的每页现在包含一个标题和一个主要地标标签。
 
-#### 共享并请求访问Experience Manager表单用户的收件箱项目(6.5.3.0) {#share-request-access}
+#### 共享并请求访问Experience ManagerForms用户的收件箱项目(6.5.3.0) {#share-request-access}
 
 您可以与其他用户共享您的收件箱项目。 当其他用户获得对您的收件箱项目的访问权限后，用户可以声明共享项目并采取相应操作。 同样，您也可以请求其他用户访问收件箱项目。 请参 [阅共享和请求对用户收件箱项目的访问权限](../forms/using/configure-shared-queues-osgi.md)。
 
@@ -216,7 +216,7 @@ Experience Manager表单包括以下辅助功能增强功能：
 
 ## 自Adobe Experience Manager6.5 SP4以来的主要发行版 {#key-releases-since-last-sp}
 
-在2020年3月5日至2020年6月04日之间，Adobe除了发布服务包和累积修复包外，还发布了以下软件：
+在2020年3月5日至2020年6月4日之间，除了服务包和累积修复包外，Adobe还发布了以下产品：
 
 * [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) ，可下载Experience Manager服务包、累积修复包、热修复和功能包。
 
@@ -224,7 +224,7 @@ Experience Manager表单包括以下辅助功能增强功能：
 
 * [Experience Manager桌面应用程序2.0.2.0](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager屏幕： 功能包202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)。
+* [Experience Manager Screens: 功能包202004](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/release-notes/release-notes-fp-202004.html)。
 
 >[!MORELIKETHIS]
 >
