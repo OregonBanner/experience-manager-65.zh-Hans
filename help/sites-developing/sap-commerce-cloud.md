@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 2dad235c94c73c1c624fa05ff86a7260d4d4a01b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2329'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
 该集成框架包含一个带有API的集成层。 这允许您：
 
 * 插入电子商务系统并将产品数据拉入AEM
+
 * 构建AEM组件，使其能够独立于特定的eCommerce引擎
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
@@ -56,6 +57,7 @@ ht-degree: 0%
    * 实 `adaptTo` 现在资源的 `cq:commerceProvider` 层次结构中查找属性：
 
       * 如果找到，则使用该值过滤商务服务查找。
+
       * 如果找不到，则使用排名最高的商务服务。
    * 使 `cq:Commerce` 用混音，以便 `cq:commerceProvider` 可以将其添加到强类型资源。
 
@@ -64,12 +66,12 @@ ht-degree: 0%
 
    * 例如， `cq:commerceProvider` a property with the `hybris` value will correate to the OSGi configuration for **Day CQ Commerce Factory for Hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory)- where the parameter asse value `commerceProvider``hybris`.
 
-   * 此处可以配置目录版 **本等其** 他属性（如果适用且可用）。
+   * 此处可以配置目录版 **本等其** 他属性（如果适用并可用）。
 
 请参阅以下示例：
 
 | `cq:commerceProvider = geometrixx` | 在标准AEM安装中，需要具体实施； 例如，geometrixx示例，其中包括通用API的最小扩展 |
-|---|---|
+|--- |--- |
 | `cq:commerceProvider = hybris` | hybris implementation |
 
 ### 示例 {#example}
@@ -117,6 +119,7 @@ To develop for Hybris 4 the following is required:
 * 在OSGi配置管理器中：
 
    * 禁用Hybris 5支持Default Response Parser服务。
+
    * 确保Hybris Basic Authentication Handler服务的服务级别低于Hybris OAuth Handler服务。
 
 ### 会话处理 {#session-handling}
@@ -124,7 +127,9 @@ To develop for Hybris 4 the following is required:
 hybris uses a user session to store information such as the customer&#39;s shopping cart. The session id is returned from hybris in a `JSESSIONID` cookie that needs to be sent on extensed requests to hybris. 为避免将会话ID存储在存储库中，会话ID将编码到存储在购物者浏览器中的其他cookie中。 将执行以下步骤：
 
 * 在第一个请求时，不会对购物者的请求设置cookie; so a request is sent to the hybris instance to create a session.
+
 * 会话cookies从响应中提取，编码为新cookie(例如， `hybris-session-rest`)，并在对购物者的响应时设置。 新cookie中的编码是必需的，因为原始cookie仅对特定路径有效，否则在后续请求中不会从浏览器发回。 路径信息还必须添加到cookie的值中。
+
 * 在后续请求中，cookies从cookies中解 `hybris-session-<*xxx*>` 码，并在用于请求hybris数据的HTTP客户端上设置。
 
 >[!NOTE]
@@ -136,6 +141,7 @@ hybris uses a user session to store information such as the customer&#39;s shopp
 * 此会话“拥有”购 **物车**
 
    * 执行add/remove/etc
+
    * 在购物车上执行各种计算；
 
       `commerceSession.getProductPrice(Product product)`
@@ -145,6 +151,7 @@ hybris uses a user session to store information such as the customer&#39;s shopp
    `CommerceSession.getUserContext()`
 
 * 还拥有付 **款处** 理连接
+
 * 还拥有履行 **连接** 。
 
 ### 产品同步和发布 {#product-synchronization-and-publishing}
@@ -163,33 +170,34 @@ Product data that is maintained in hybris needs to be available in AEM. 已实�
 * hybris中的目录更改通过源指示到AEM, thes propagate to AEM(b)
 
    * 与目录版本相关的产品已添加／删除／更改。
+
    * 已批准产品。
 
 * The hybris extension provides a polling importer(&quot;hybris&quot; scheme&quot;), which can be configured to import changes into AEM at a specified interval(example, ever 24 hours where the interval is specified in seconds):
 
-   * 
-
-      ```js
-      http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
-       {
-       * "jcr:mixinTypes": ["cq:PollConfig"],
-       * "enabled": true,
-       * "source": "hybris:outdoors",
-       * "jcr:primaryType": "cq:PageContent",
-       * "interval": 86400
-       }
-      ```
+   ```JavaScript
+       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
+        {
+        * "jcr:mixinTypes": ["cq:PollConfig"],
+        * "enabled": true,
+        * "source": "hybris:outdoors",
+        * "jcr:primaryType": "cq:PageContent",
+        * "interval": 86400
+        }
+   ```
 
 * AEM中的目录配置可识别 **暂存** 和 **联机目** 录版本。
 
 * 在目录版本之间同步产品需要相应AEM页面(a, c)的(de-)激活
 
    * 将产品添加到 **在线** 目录版本需要激活产品的页面。
+
    * 删除产品需要取消激活。
 
 * 在AEM(c)中激活页面需要选中(b)项，并且仅当
 
    * 该产品位于产品页 **面的** “在线目录”版本中。
+
    * 引用的产品在其他页 **面** (例如活动页面)的在线目录版本中可用。
 
 * 激活的产品页面需要访问产品数据的 **在线** 版本(d)。
@@ -213,7 +221,6 @@ The product/variant resource does not always hold the actual product dataIt migh
 >[!NOTE]
 >
 >实际上，变型轴由任何返回决定 `Product.getVariantAxes()` :
->
 >* hybris defines it for hybris implementation
 >
 >
@@ -224,7 +231,7 @@ The product/variant resource does not always hold the actual product dataIt migh
    >
 1. 再加一个
 >
->   
+>
 通过产品引用的属性选 `variationAxis` 择此附加变体(通常 `color` 用于Geometrixx Outdoors)。
 
 #### 产品引用和产品数据 {#product-references-and-product-data}
@@ -237,7 +244,7 @@ The product/variant resource does not always hold the actual product dataIt migh
 
 产品变量和产品数据节点之间必须有1:1的映射。
 
-产品引用还必须为呈现的每个变体提供一个节点，但不要求显示所有变体。 例如，如果产品具有S、M、L变量，则产品数据可能为。
+产品引用还必须为呈现的每个变体提供一个节点，但不要求显示所有变体。 例如，如果产品具有S、M、L变量，则产品数据可能为：
 
 ```shell
 etc
@@ -249,7 +256,7 @@ etc
 |       |──shirt-l
 ```
 
-而“Big and Tall”目录可能只有。
+而“大而高”目录可能只包含：
 
 ```shell
 content
@@ -335,24 +342,30 @@ public class AxisFilter implements VariantFilter {
 
 * **一般存储机制**
 
-   * 产品节点不是非结构化的。
+   * 产品节点 `nt:unstructured`为。
+
    * 产品节点可以是：
 
       * 参考，将产品数据存储在其他位置：
 
          * 产品引用包 `productData` 含一个属性，它指向产品数据(通常在 `/etc/commerce/products`下)。
+
          * 产品数据是分层的； 产品属性从产品数据节点的祖先继承。
+
          * 产品引用还可以包含本地属性，这些属性会覆盖在产品数据中指定的属性。
       * 产品本身：
 
          * 没有财 `productData` 产。
+
          * 本地保存所有属性（不包含productData属性）的产品节点直接从其自己的祖先继承产品属性。
 
 
 * **AEM-generic产品结构**
 
    * 每个变体必须有其自己的叶节点。
+
    * 产品界面表示产品和变型，但相关存储库节点特定于它。
+
    * 产品节点描述产品属性和变型轴。
 
 #### 示例 {#example-1}
@@ -506,7 +519,8 @@ public class AxisFilter implements VariantFilter {
 
 **付款处理**
 
-* 付款 `CommerceSession` 处理连接也归该用户所有。
+* 支付 `CommerceSession` 处理连接也归该用户所有。
+
 * 实施者需要向实施添加特定呼叫(到他们选择的付款处理服务 `CommerceSession` )。
 
 **订单履行**
