@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd9abe033216a00b93b2098e12b100ad478a8d08
+source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 `https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}`
 
-![chlimage_1-31](assets/chlimage_1-31.png)
+![署名](assets/authorpublished.png)
 
 ## 匿名网站访客 {#anonymous-site-visitor}
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 在右上角，选择并 `Log in`使用用户名(aaron.mcdonald@mailinator.com)和密码（密码）进行签名。 注意使用Twitter或Facebook凭据登录的能力。
 
-![chlimage_1-32](assets/chlimage_1-32.png)
+![登录](assets/login.png)
 
 以注册社区成员身份登录后，请注意以下菜单项，单击并浏览您的社区站点：
 
@@ -95,11 +95,11 @@ ht-degree: 0%
 * [通知](/help/communities/notifications.md) 选项会指引您进入通知部分，您可以在该部分视图您感兴趣的事件并编辑通知设置。
 * [管理](/help/communities/published-site.md#moderationlink) （如果您具有审核权限）会将您定向到AEM Communities审核页面。
 
-![chlimage_1-33](assets/chlimage_1-33.png)
+![adminstree](assets/adminscreen.png)
 
 请注意，“日历”页面是主页，因为所选的“参考站点模板”首先包含“日历”功能，然后是“活动流”功能、“论坛”功能等。 此结构可从站点模板控 [制台中](/help/communities/sites.md#edit-site-template) ，或在创作环境中修改站点属性时显示：
 
-![chlimage_1-34](assets/chlimage_1-34.png)
+![站点模板](assets/sitetemplate.png)
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 站点访客能够视图帖子并以各种方式对其进行排序。
 
-![chlimage_1-35](assets/chlimage_1-35.png)
+![forumlink](assets/forumlink.png)
 
 ### 组链接 {#groups-link}
 
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 用户组也可以在作者环境中创建，并在创作环境（“社区组”控制台）的社[区站点内进行](/help/communities/groups.md)管理。 本教程的 [下一个内容是](/help/communities/nested-groups.md) ，在创作时创建组。
 
-![经典ui](assets/classic-ui.png)
+![上行](assets/grouplink.png)
 
 创建引用组：
 
@@ -148,11 +148,11 @@ ht-degree: 0%
 
 1. 选择 **创建组**
 
-![经典-ui-website](assets/classic-ui-website.png)
+   ![creategroup](assets/creategroup.png)
 
 创建新组后，选 **择新的“体育组** ”，以便在其中创建两个组（嵌套）。 由于站点结构不能从组功能开始，在打开运动组后，必须选择组链接：
 
-![经典-ui-create-page](assets/classic-ui-create-page.png)
+![grouplink1](assets/grouplink1.png)
 
 第二组链接(从开始 `Blog`)属于当前选定的组，即 `Sports` 组。 通过选择“体 `Groups` 育”链接，可以在“体育”组内嵌套两个组。
 
@@ -180,7 +180,7 @@ ht-degree: 0%
 
 组的链接显示在主站点的链接下方，并会显示以下内容：
 
-![经典-ui-website-page](assets/classic-ui-website-page.png)
+![grouplink2](assets/grouplink2.png)
 
 在创作时——具有管理权限，导航到“ [社区组”控制台](/help/communities/members.md) ，并将Weston McCall添加到 `Community Engage Gymnastics <uid> Members` 组中。
 
@@ -195,7 +195,7 @@ ht-degree: 0%
 
 以Weston McCall(weston.mccall@dodgit.com /密码)身份登录，然后导航到同一位置。 请注意，Weston能够访问 `Join` 打开 `Baseball` 的组和 `enter or Leave` 私有 `Gymnastics` 组。
 
-![classic-ui-repository-视图](assets/classic-ui-repository-view.png)
+![grouplink3](assets/grouplink3.png)
 
 ### 网页链接 {#web-page-link}
 
@@ -203,7 +203,7 @@ ht-degree: 0%
 
 例如，转到作 **者实例** ，在“社区站点” `engage` 控制台中打 [开文件夹](/help/communities/sites-console.md)，选择“打开站点 **** ”图标以进入作者编辑模式。 然后选择预览模式以选择链 `Web Page` 接，然后选择编辑模式以添加标题和文本组件。 最后，只重新发布页面或整个站点。
 
-![经典-ui-repository-path](assets/classic-ui-repository-path.png)
+![webpagelink](assets/webpagelink.png)
 
 ### 审核链接 {#moderationlink}
 
@@ -211,7 +211,7 @@ ht-degree: 0%
 
 使用浏览器的返回按钮返回已发布的站点。 大多数控制台都无法通过发布环境中的全局导航访问。 [](/help/communities/moderate-ugc.md)
 
-![chlimage_1-42](assets/chlimage_1-42.png)
+![版本链接](assets/moderationlink.png)
 
 ## 自助注册 {#self-registration}
 
@@ -220,7 +220,9 @@ ht-degree: 0%
 * 选择 `Log In`
 * 选择 `Sign up for a new account`
 
-![chlimage_1-43](assets/chlimage_1-43.png) ![chlimage_1-44](assets/chlimage_1-44.png)
+![注册](assets/registration.png)
+
+![注册](assets/signup.png)
 
 默认情况下，电子邮件地址为登录ID。 如果未选中，访客可以输入自己的登录ID（用户名）。 用户名在发布环境中必须唯一。
 
@@ -228,9 +230,9 @@ ht-degree: 0%
 
 登录后，显示的第一个页面即 `Profile` 是其页面，可进行个性化。
 
-![chlimage_1-45](assets/chlimage_1-45.png)
+![配置文件](assets/profile.png)
 
 如果成员忘记了其登录ID，则可以使用其电子邮件地址进行恢复。
 
-![chlimage_1-46](assets/chlimage_1-46.png)
+![forgotusername](assets/forgotusername.png)
 
