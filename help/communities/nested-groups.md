@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 752235d2-21ac-46d2-82ed-5fec09c645e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9fa5624a59f4b9a6f970628b03bbd8b7a277a73
+source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 在AEM Author实例上，从全局导航：
 
-* 选择“**社[!UICONTROL 区] ”> **[!UICONTROL “站点]**”。
+* 选择 **[!UICONTROL “社区]** ”> **[!UICONTROL “站点]**”。
 * 选择 **[!UICONTROL Engage文件夹]** ，以将其打开。
 * 选择“Getting Started Tutorial English(教 **[!UICONTROL 程英语入门]** )”站点的卡。
 
@@ -34,11 +34,11 @@ ht-degree: 4%
 
 结果是可以访问“组” [控制台](/help/communities/groups.md):
 
-![chlimage_1-91](assets/chlimage_1-91.png)
+![创建组](assets/create-group.png)
 
 组函数将显示为创建组实例的文件夹。 选择要打开的组文件夹。 将显示在发布时创建的组。
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![create-new-group](assets/create-new-group.png)
 
 ## 创建主要艺术组 {#create-main-arts-group}
 
@@ -94,11 +94,11 @@ ht-degree: 4%
 
 在创建嵌套在组中的 `arts` 组之前，将指针悬 `arts` 停在卡上并选择发布图标以发布它。
 
-![喜欢组件](assets/liking-component.png)
+![发布站点](assets/publish-site.png)
 
 等待确认组已发布。
 
-![chlimage_1-94](assets/chlimage_1-94.png)
+![组发布](assets/group-published.png)
 
 组 `arts` 还应包含一个文 `groups` 件夹，但该文件夹为空，可在其中创建新组。 导航到艺术组文件夹并创建3个嵌套用户组，每个用户组具有不同的成员资格设置：
 
@@ -133,11 +133,11 @@ ht-degree: 4%
 * 选 **[!UICONTROL 择艺术卡]**
 * 选择 **[!UICONTROL 用户组]** 文件夹
 
-![配置类型](assets/configure-liking.png)
+![create-new-group2](assets/create-new-group2.png)
 
 ## 发布组 {#publishing-groups}
 
-![chlimage_1-96](assets/chlimage_1-96.png)
+![发布站点](assets/publish-site.png)
 
 发布主社区站点后：
 
@@ -149,7 +149,7 @@ ht-degree: 4%
 
    * 所有组都必须以自上而下的方式发布。
 
-![chlimage_1-97](assets/chlimage_1-97.png)
+![组发布](assets/group-published.png)
 
 ## 发布体验 {#experience-on-publish}
 
