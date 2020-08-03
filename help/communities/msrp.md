@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 6a9f273c6e9eb822e2d4765700361a205019b84c
+source-git-commit: 412200c1bb0c7050c981fc5dc2a5430f37b3beb3
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 * 从全局导航中，选 **[!UICONTROL 择工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 存储配置]**。
 
-![chlimage_1-28](assets/chlimage_1-28.png)
+![msrp](assets/msrp.png)
 
 * Select **[!UICONTROL MongoDB Storage Resource Provider (MSRP)]**
 * **[!UICONTROL mongoDB 配置]**
