@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: c71c24a291b728ab429b18a405123c96123cf617
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 11%
@@ -120,7 +120,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->其中许多是 [Assets和／或AEM桌面应](/help/assets/managing-assets-touch-ui.md) 用程序 [的标准操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。
+>其中许多是 [资产和／或AEM桌面](/help/assets/managing-assets-touch-ui.md) 应用程序 [的标准操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。
 
 ## 打开片段编辑器 {#opening-the-fragment-editor}
 
@@ -143,11 +143,7 @@ ht-degree: 11%
    >[!NOTE]
    >
    >1. 当内容页面上已引用片段时，将显示一条消息。
-      >
-      >
-      >
-
-   2. 使用“切换侧面板”图标可隐藏/ **显示侧面** 板。
+   >2. 使用“切换侧面板”图标可隐藏/ **显示侧面** 板。
 
 
 1. 使用侧面板中的图标在三种模式之间导航：
@@ -197,9 +193,9 @@ ht-degree: 11%
 
    将退出编辑器，而不保存最新更改。
 
-在编辑内容片段时，AEM会自动创建版本，以确保在取消更改时可以恢复以 **前的** 内容：
+编辑内容片段时，AEM会自动创建版本，以确保在取消更改时可以恢复以 **前的** 内容：
 
-1. 当打开内容片段以进行编辑时，AEM会检查是否存在基于cookie的令牌，该令牌指示编辑会 *话是否存* 在：
+1. 打开内容片段以编辑AEM时，会检查是否存在基于cookie的令牌，该令牌指示编辑会 *话是否存* 在：
 
    1. 如果找到令牌，则片段被视为现有编辑会话的一部分。
    2. 如果令牌不可 *用* ，且用户开始编辑内容，则会创建一个版本，并将此新编辑会话的令牌发送到客户端，在客户端将其保存在cookie中。
@@ -330,7 +326,7 @@ ht-degree: 11%
 
 >[!CAUTION]
 >
->在发布和／或引用片段后，当作者打开片段以再次进行编辑时，AEM将显示警告。 这将警告对片段所做的更改也会影响引用的页面。
+>在发布和／或引用片段后，当作者打开片段以再次进行编辑时，AEM将显示一条警告消息。 这将警告对片段所做的更改也会影响引用的页面。
 
 ## 删除片段 {#deleting-a-fragment}
 
