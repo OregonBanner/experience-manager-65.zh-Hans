@@ -4,9 +4,9 @@ description: 以下发行说明特定于 Adobe Experience Manager 6.5 Service Pa
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2f5072a73b11853bbfd63c4b4ce9ffcf186adad1
 workflow-type: tm+mt
-source-wordcount: '4496'
+source-wordcount: '4522'
 ht-degree: 7%
 
 ---
@@ -55,7 +55,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 
 * Experience Manager站点提供了一个选项，用于发布或取消发布别名中的页面。 此选项无效(NPR-33415)。
 * 从包含多个模板的模板中删除布局容器时，该模板无法正确呈现(NPR-33347)。
-* 当“Experience Manager站点”页面是包含多个Live Copy的大型内容集的一部分时，页面版本历史预览无法加载(NPR-33311)。
+* 当“Experience Manager站点”页面是包含多个Live Copy的大型内容集的一部分时，页面版本历史记录预览无法加载(NPR-33311)。
 * 使用“移动”命令重命名Experience Manager站点页面时，页面标题不会更新(NPR-33264)。
 * 在列视图中移动页面时，列会消失(NPR-33216)。
 * 当语言副本中的本地组件名称与蓝图中某个组件的名称相同并且从蓝图中转出该组件时，术语不会添加 `_msm_moved` 到本地组件的名称中(NPR-33208)。
@@ -78,6 +78,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 从Experience Manager6.2升级到Experience Manager6.5时，静态模板的Parsys组件无法正确显示。 Parsys组件的高度设置为0，并且其中的组件不可见(NPR-33663)。
 * 当用户复制并粘贴同一页面上的布局容器时，布局容器中的组件不会显示(NPR-33648)。
 * Dispatcher运行状况 `Invalid cookie header` 检查在日志文件中显示警告消息(NPR-33629)。
+* PreferencesServlet中反射的XSS(NPR-33438)。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -239,6 +240,8 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 
 * 安装Experience ManagerSDL包时显示错误消息(NPR-33175)。
 
+* Experience Manager中的SSRF漏洞(NPR-33435)。
+
 ### 平台 {#platform-6550}
 
 * 如果 [!DNL Sling] 在(NPR-33362)下 `sling:match` 创建了映射条目， `/etc/maps` 则不调用该过滤器。
@@ -264,6 +267,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 本地Experience Manager管理组中的授权IMS用户无法创建或修改IMS配置(NPR-33045)。
 * Adobe启动配置页面不显示所有记录(NPR-33011)。
 * 由于JavaScript错误(NPR-32996)，内容作者组中的用户无法编辑Adobe Target组件的属性。
+* JSON的跨站点脚本(NPR-32744)。
 
 ### 翻译项目 {#translation-6550}
 
@@ -295,6 +299,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 用户无法向社区中的其他用户发送电子邮件(NPR-32598)。
 * 提交的博客在用户刷新页面之前不会显示(NPR-32391)。
 * 创建通知版本和用户生成内容订阅(UGC)时，会存储源页面的错误ID(CQ-4279355、CQ-4289703)。
+* 跨站点脚本问题(NPR-33203)。
 
 ### 工作流 {#workflow-6550}
 
@@ -321,6 +326,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 后端集成： 表单数据模型请求失败，因为由于不正确的非活动状态，刷新令牌过期(NPR-33169)。
 * 设计人员： 屏幕阅读器根据默认的地理顺序而不是XDP文件中定义的自定义Tab键顺序(NPR-32160)执行Tab键顺序。
 * 设计人员： 如果启用标记选项，子表单边框将消失在生成的PDF输出中(NPR-32778)。
+* 使用GuideSOMProviderServlet存储XSS(NPR-32700)。
 
 ## Install 6.5.5.0 {#install}
 
@@ -419,7 +425,7 @@ Experience Manager6.5.5.0的UberJar可在Adobe公共Maven [存储库中获得](h
 
 ## 已知问题 {#known-issues}
 
-* 如果您正在安 [!DNL Experience Manager] 装带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
+* 如果安装的 [!DNL Experience Manager] 是带有11的6.5.5.0, [!DNL Java] 请在安装Service Pack后重新启动服务器。 如果安装带有8的Service Pack，则无需重新启 [!DNL Java] 动。
 
 * 如果层次结构中的文件夹已重 [!DNL Experience Manager Assets] 命名，且包含资产的嵌套文件夹已发布到 [!DNL Brand Portal]，则只有在根文件夹再次发布后，才会更新 [!DNL Brand Portal] 该文件夹的标题。
 
