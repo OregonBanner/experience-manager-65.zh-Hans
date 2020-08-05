@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
+source-git-commit: c2937a1989c6cfe33cc3f56f89c307cb5fb8d272
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 1%
 
 ---
 
 
 # AEM 6.5中的自定义用户组映射 {#custom-user-group-mapping-in-aem}
 
-## CUG相关JCR内容比较 {#comparison-of-jcr-content-related-to-cug}
+## 与CUG相关的JCR内容比较 {#comparison-of-jcr-content-related-to-cug}
 
 <table>
  <tbody>
@@ -28,22 +31,22 @@ source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
    <td><strong>评论</strong></td>
   </tr>
   <tr>
-   <td><p>属性：cq:cugEnabled</p> <p>声明节点类型：N/A，剩余属性</p> </td>
-   <td><p>授权:</p> <p>节点：rep:cugPolicy of node type rep:CugPolicy</p> <p>声明节点类型：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 身份验证:</p> <p>混音类型：granite:AuthenticationRequired</p> </td>
-   <td><p>为了限制读访问，专用CUG策略被应用到目标节点。</p> <p>注意：策略只能应用于已配置的受支持路径。</p> <p>名为rep:cugPolicy和type rep:CugPolicy的节点受保护，无法使用常规JCR API调用编写；请改用JCR访问控制管理。</p> <p>有关 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">详细信息</a> ，请参阅此页。</p> <p>为了对节点实施身份验证要求，添加混音类型granite:AuthenticationRequired已足够。</p> <p>注意：仅在已配置的受支持路径下方考虑。</p> </td>
+   <td><p>属性： cq:cugEnabled</p> <p>声明节点类型： N/A，剩余属性</p> </td>
+   <td><p>授权:</p> <p>节点： rep:cugPolicy of node type rep:CugPolicy</p> <p>声明节点类型： rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 身份验证:</p> <p>混合类型： granite：需要身份验证</p> </td>
+   <td><p>为了限制读访问，专用CUG策略被应用到目标节点。</p> <p>注意： 策略只能应用于已配置的支持路径。</p> <p>名为rep:cugPolicy和type rep:CugPolicy的节点受保护，不能使用常规JCR API调用编写； 请改用JCR访问控制管理。</p> <p>有关 <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">更多信息</a> ，请参阅此页。</p> <p>为了对节点强制实施身份验证要求，添加混合类型granite:AuthenticationRequired已足够。</p> <p>注意： 仅在已配置的受支持路径下受尊重。</p> </td>
   </tr>
   <tr>
-   <td><p>属性：cq:cugPrincipals</p> <p>声明节点类型：NA，剩余财产</p> </td>
-   <td><p>属性：rep:principalNames</p> <p>声明节点类型：rep:CugPolicy</p> </td>
-   <td><p>包含允许读取受限CUG下内容的那些承担者名称的属性受保护，不能使用常规JCR API调用编写；请改用JCR访问控制管理。</p> <p>有关 <a href="https://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbitapi/src/main/java/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.java">实施的更多详细信息</a> ，请参阅本页。</p> </td>
+   <td><p>属性： cq:cugPrincipals</p> <p>声明节点类型： NA，剩余财产</p> </td>
+   <td><p>属性： rep:principalNames</p> <p>声明节点类型： rep:CugPolicy</p> </td>
+   <td><p>包含允许读取受限CUG下内容的那些承担者名称的属性受保护，不能使用常规JCR API调用进行写入； 请改用JCR访问控制管理。</p> <p>有关 <a href="https://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbitapi/src/main/java/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.java">实施的更</a> 多详细信息，请参阅本页。</p> </td>
   </tr>
   <tr>
-   <td><p>属性：cq:cugLoginPage</p> <p>声明节点类型：NA，剩余财产</p> </td>
-   <td><p>属性：granite:loginPath（可选）</p> <p>声明节点类型：granite:AuthenticationRequired</p> </td>
-   <td><p>具有混合类型granite:AuthenticationRequired定义的JCR节点可以选择地定义替代登录路径。</p> <p>注意：仅在已配置的受支持路径下方考虑。</p> </td>
+   <td><p>属性： cq:cugLoginPage</p> <p>声明节点类型： NA，剩余财产</p> </td>
+   <td><p>属性： granite:loginPath（可选）</p> <p>声明节点类型： granite：需要身份验证</p> </td>
+   <td><p>定义混合类型granite:AuthenticationRequired的JCR节点可以选择地定义替代登录路径。</p> <p>注意： 仅在已配置的受支持路径下受尊重。</p> </td>
   </tr>
   <tr>
-   <td><p>属性：cq:cugRealm</p> <p>声明节点类型：NA，剩余财产</p> </td>
+   <td><p>属性： cq:cugRealm</p> <p>声明节点类型： NA，剩余财产</p> </td>
    <td>NA</td>
    <td>不再支持新实施。</td>
   </tr>
@@ -54,44 +57,46 @@ source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
 
 **旧版AEM**
 
-标签：Adobe Granite封闭式用户组(CUG)支持
+标签： AdobeGranite封闭用户组(CUG)支持
 
-名称：com.day.cq.auth.impl.CugSupportImpl
+名称： com.day.cq.auth.impl.CugSupportImpl
 
 **AEM 6.5**
 
-* 标签：Apache Jackrabbit Oak CUG配置
+* 标签： Apache Jackrabbit Oak CUG配置
 
-   名称：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
-
-   ConfigurationPolicy = REQUIRED
-
-* 标签：Apache Jackrabbit Oak CUG排除列表
-
-   名称：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugImpl
+   名称： org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
 
    ConfigurationPolicy = REQUIRED
 
-* 名称：com.adobe.granite.auth.requirement.impl.RequirementService
-* 标签：Adobe Granite身份验证要求和登录路径处理程序
+* 标签： Apache Jackrabbit Oak CUG排除列表
 
-   名称：com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
+   名称： org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugExcludeImpl
+
+   ConfigurationPolicy = REQUIRED
+
+* 名称： com.adobe.granite.auth.requirement.impl.RequirementService
+* 标签： AdobeGranite身份验证要求和登录路径处理程序
+
+   名称： com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
 
    ConfigurationPolicy = REQUIRED
 
 **评论**
 
 * 配置CUG授权并启用／禁用评估。
-用于配置不应受CUG授权影响的承担者排除列表的服务。
+用于配置不应受CUG授权影响的承担者的排除列表的服务。
 
-   >[!NOTE] 如果未配置CugExcludeImpl，则CugConfiguration将返回至默认值。
+   >[!NOTE]
+   > 
+   >如果未 `CugExcludeImpl` 配置，则 `CugConfiguration` 将返回默认值。
 
    根据特殊需要，可以插入自定义CugExclude实现。
 
-* 实现LoginPathProvider的OSGi组件，它向LoginSelectorHandler公开匹配的登录路径。 它对RequirementHandler有强制引用，用于注册观察者，该观察者通过granite:AuthenticationRequired mixin类型监听存储在内容中的已更改的身份验证要求。
-* 实施RequirementHandler的OSGi组件，该组件通知SlingAuthenticator有关对创作要求的更改。
+* 实现LoginPathProvider的OSGi组件，它向LoginSelectorHandler公开匹配的登录路径。 它对RequirementHandler有强制引用，它用于注册观察者，该观察者通过granite:AuthenticationRequired混音类型监听存储在内容中的更改的身份验证要求。
+* 实现RequirementHandler的OSGi组件，该组件会通知SlingAuthenticator有关对身份验证要求的更改。
 
-   由于此组件的配置策略为“必需”，因此只有在指定了一组支持的路径时，才会激活该策略。
+   由于此组件的配置策略为REQUIRE，因此只有在指定了一组受支持的路径时，才会激活它。
 
    启用服务将启动RequirementService。
 
