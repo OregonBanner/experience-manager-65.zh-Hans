@@ -3,9 +3,9 @@ title: 批量迁 [!DNL Adobe Experience Manager Assets] 移资产。
 description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版并将其激活以发布实例。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1799'
 ht-degree: 8%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 8%
 
 ## 前提条件 {#prerequisites}
 
-在实际执行此方法中的任何步骤之前，请查看并实施资产性能调整 [提示中的指导](performance-tuning-guidelines.md)。 许多步骤（如配置最大并发作业）都极大地提高了服务器在负载下的稳定性和性能。 其他步骤（如配置文件数据存储）在系统加载资产后更难执行。
+在实际执行此方法中的任何步骤之前，请查看并实施资产性能 [调整提示中的指导](performance-tuning-guidelines.md)。 许多步骤（如配置最大并发作业）都极大地提高了服务器在负载下的稳定性和性能。 其他步骤（如配置文件数据存储）在系统加载资产后更难执行。
 
 >[!NOTE]
 >
->以下资产迁移工具不是Adobe的 [!DNL Experience Manager] 一部分，也不受Adobe支持：
+>以下资产迁移工具不是Adobe的一 [!DNL Experience Manager] 部分，也不受支持：
 >
 >* ACS AEM Tools Tag Maker
 >* ACS AEM工具CSV资产导入程序
@@ -52,7 +52,7 @@ ht-degree: 8%
 
 ### 加载标记 {#loading-tags}
 
-您可能已经拥有要应用于图像的标记分类。 虽然CSV资产导入程序和元数据用户档案 [!DNL Experience Manager] 支持等工具可以自动将标记应用到资产的流程，但需要将标记加载到系统中。 利用 [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS AEM工具标记生成器）功能，您可以通过使用加载到系统中的Microsoft Excel电子表格填充标记。
+您可能已经拥有要应用于图像的标记分类。 虽然CSV资产导入程序和元数据用户档案 [!DNL Experience Manager] 支持等工具可以自动将标记应用到资产的流程，但需要将标记加载到系统中。 ACS [AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) （ACS工具标记生成器）功能允许您通过使用加载到系统中的Microsoft Excel电子表格填充标记。
 
 ### 收录资源 {#ingesting-assets}
 
@@ -73,13 +73,13 @@ Adobe的Managed Services团队使用一种名为Glutton的工具将数据加载�
 
 #### 从本地文件系统读取 {#pulling-from-the-local-filesystem}
 
-ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，会从文件系统中提取资产，从CSV文件中提取资产元数据，以便进行资产导入。 Experience Manager资产管理器API用于将资产导入系统并应用配置的元数据属性。 理想情况下，资产通过网络文件装载或通过外部驱动器装载到服务器上。
+ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，从文件系统中提取资产，从CSV文件中提取资产元数据以进行资产导入。 Experience Manager资产管理器API用于将资产导入系统并应用配置的元数据属性。 理想情况下，资产通过网络文件装载或通过外部驱动器装载到服务器上。
 
-由于资产无需通过网络传输，因此总体性能得到显着改善，而且通常认为此方法是将资产加载到存储库中的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以通过一个步骤导入所有资产和元数据，而不是通过另一个工具创建第二个步骤来应用元数据。
+由于资产无需通过网络传输，因此总体性能得到了显着改善，这种方法通常被认为是将资产加载到存储库中的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以通过一个步骤导入所有资产和元数据，而不是通过另一个工具创建第二个步骤来应用元数据。
 
 ### 处理演绎版 {#processing-renditions}
 
-在将资产加载到系统后，您需要通过DAM更新资产工作流 [!UICONTROL 处理资产] ，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复和修改 [!UICONTROL DAM更新资产工作流] ，以满足您的需求。 现成工作流包含许多您可能不需要的步骤，如Scene7 PTIFF生成或集 [!DNL InDesign Server] 成。
+在将资产加载到系统后，您需要通过DAM更新资产工作流 [!UICONTROL 处理资产] ，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复和修改 [!UICONTROL DAM更新资产工作流] ，以满足您的需求。 现成工作流程包含许多您可能不需要的步骤，如Scene7PTIFF生成或集 [!DNL InDesign Server] 成。
 
 根据需要配置工作流后，您有两个选项可用于执行该工作流：
 
