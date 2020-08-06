@@ -4,7 +4,7 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8f8134d6c4fcc0ef54f9cc8298936c5c7d746c09
+source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
 workflow-type: tm+mt
 source-wordcount: '5860'
 ht-degree: 6%
@@ -27,13 +27,13 @@ ht-degree: 6%
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索： 筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
 | [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Manager桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic Media资产](#dynamicmedia)</li></ul> |  |  |
-| [资产选取器](#assetselector) |  |  |
+| [资产选取器](#assetpicker) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [示例](#samples) |  |  |
 
 使用Web界面顶部的“全名搜索”字段搜索 [!DNL Experience Manager] 资产。 转到 **[!UICONTROL 资产]** >文 **[!UICONTROL 件]** , [!DNL Experience Manager]单击顶栏中的搜索，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键/（正斜杠）打开Omnisearch字段。 `Location:Assets` 已预先选择，以将搜索限制为DAM资产。 [!DNL Experience Manager] 在开始键入搜索关键字时提供建议。
 
-使用 **[!UICONTROL 过滤器]** 面板，根据各种选项（谓词）筛选搜索结果，从而缩小搜索范围。这些选项（谓词）包括文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock许可。 您的管理员可以自定义“过滤器”面板，并使用搜索彩块化添加或删除搜索谓词。 “ [!UICONTROL 过滤器] ”面板中的“文 [!UICONTROL 件类] 型”筛选器包含混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
+使用 **[!UICONTROL 过滤器]** 面板根据各种选项（谓词）筛选搜索结果，从而缩小搜索范围，如文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock授权。 您的管理员可以自定义“过滤器”面板，并使用搜索彩块化添加或删除搜索谓词。 “ [!UICONTROL 过滤器] ”面板中的“文 [!UICONTROL 件类] 型”筛选器包含混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
 
 [!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
 
@@ -146,7 +146,7 @@ ht-degree: 6%
 
 ### Adobe Stock图像 {#adobestock}
 
-在用户界 [!DNL Experience Manager] 面中，用户可以搜 [索Adobe Stock资源](/help/assets/aem-assets-adobe-stock.md) ，并许可所需的资源。 添加 `Location: Adobe Stock` 到Omnisearch栏中。 您还可以使用“过滤器”面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。
+在用户界面 [!DNL Experience Manager] 中，用户可以搜索 [Adobe Stock资产](/help/assets/aem-assets-adobe-stock.md) ，并授权使用所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch栏中。 您还可以使用“过滤器”面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。
 
 ### Dynamic Media资产 {#dmassets}
 
@@ -162,7 +162,7 @@ ht-degree: 6%
 | 创建者 | creator:John |
 | 位置 | 位置：NA |
 | 描述 | description:&quot;Sample Image&quot; |
-| 创建程序工具 | creatortool:&quot;Adobe Photoshop CC 2020&quot; |
+| 创建程序工具 | creatortool:&quot;Adobe Photoshop CC2020&quot; |
 | 版权所有者 | copyrightowner:&quot;Adobe Systems&quot; |
 | 参与者 | contributor:John |
 | 使用条款 | usageterms:&quot;CopyRights Reserved&quot; |
@@ -198,9 +198,9 @@ ht-degree: 6%
 
 [!DNL Adobe Experience Manager] 将DAM存储库连接到各种其 [!DNL Experience Manager] 他解决方案，以便更快地访问数字资产并简化创意工作流。 具有浏览或搜索的任何资产发现开始。 搜索行为在不同的表面和解决方案上基本保持不变。 某些搜索方法会随着目标受众、用例和用户界面的不同而发生变化，而且这些解决方案会有所 [!DNL Experience Manager] 不同。 下面的链接介绍了针对各个解决方案的具体方法。 本文描述了普遍适用的提示和行为。
 
-### 从Adobe Asset Link面板搜索资产 {#aal}
+### 从“Adobe资产链接”面板搜索资产 {#aal}
 
-创意专业人士现在可以使用Adobe Asset Link访问存储在中的内容， [!DNL Experience Manager Assets]而无需离开受支持的Adobe Creative Cloud应用程序。 Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in the [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign]. 资产链接还允许用户搜索视觉效果相似的结果。 可视搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户找到美学上相似的图像。 请参 [阅使用Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) 搜索和浏览资产。
+使用Adobe资源链接，创意专业人士现在可以访问存储在中的内容， [!DNL Experience Manager Assets]而无需离开受支持的Adobe Creative Cloud应用程序。 Creatives can seamlessly browse, search, check out, and check in assets using the in-app panel in the [!DNL Adobe Creative Cloud apps]: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], and [!DNL Adobe InDesign]. 资产链接还允许用户搜索视觉效果相似的结果。 可视搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户找到美学上相似的图像。 请参 [阅使用Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) ，搜索和浏览资产。
 
 ### 在桌面应用程序 [!DNL Experience Manager] 中搜索资产 {#desktopapp}
 
@@ -212,7 +212,7 @@ ht-degree: 6%
 
 ### 搜索图 [!DNL Adobe Stock] 像 {#adobestock-1}
 
-在用户界 [!DNL Experience Manager] 面中，用户可以搜索Adobe Stock资源并许可所需的资源。 添加 `Location: Adobe Stock` 到Omnisearch字段。 您还可以使用 **[!UICONTROL 过滤器]** 面板查找所有授权或未授权的资源，或使用Adobe Stock文件号搜索特定资源。 请参 [阅以Experience Manager方式管理Adobe Stock图像](/help/assets/aem-assets-adobe-stock.md#usemanage)。
+在用户界面 [!DNL Experience Manager] 中，用户可以搜索Adobe Stock资产并许可所需的资产。 添加 `Location: Adobe Stock` 到Omnisearch字段。 您还可以使用 **[!UICONTROL 过滤器]** 面板查找所有授权或未授权的资产，或使用Adobe Stock文件号搜索特定资产。 请参阅 [以Experience Manager方式管理Adobe Stock图像](/help/assets/aem-assets-adobe-stock.md#usemanage)。
 
 ### 搜索Dynamic Media资产 {#dynamicmedia}
 
@@ -226,7 +226,7 @@ ht-degree: 6%
 
 [!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
 
-## 资产选取器 {#assetselector}
+## 资产选取器 {#assetpicker}
 
 通过资产选取器，您可以以特殊方式搜索、筛选和浏览DAM资产。 资产选取器在上可 `https://[aem-server]:[port]/aem/assetpicker.html`用。 您可以使用此功能提取您选择的资产的元数据。 您可以使用支持的请求参数启动它，如资产类型（图像、视频、文本）和选择模式（单个或多个选择）。 这些参数为特定搜索实例设置资产选取器的上下文，并在整个选择过程中保持不变。
 
@@ -272,7 +272,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 * 在监视资产的审核状态时，请使用适当的选项来查找已批准的资产或待批准的资产。
 * 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况渠道按使用情况得分、展示次数、点击次数和显示资产的媒体类别进行分组。
-* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 * 要搜索不包含强制元数据的资产，请参阅强制 [元数据](#mandatorymetadata)。
 * 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
 * 全文搜索支持——和^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用“笔记本——美容”而不是“笔记本——美容”。
@@ -405,7 +405,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 对搜索结果进行排序，以更快地发现所需的资产。 You can sort the search results in list view and only when you select **[!UICONTROL [Files](#searchui)]**from the**[!UICONTROL  Filters ]**panel.[!DNL Experience Manager Assets]使用服务器端排序功能快速对某个文件夹或搜索查询的结果中的所有资产（无论数量多少）进行排序。 与客户端排序相比，服务器端排序提供更快、更准确的结果。
 
-在列表视图中，您可以像对任意文件夹中的资产进行排序一样对搜索结果进行排序。 排序功能适用于这些列——名称、标题、状态、维度、大小、评级、使用情况、创建日期、修改日期、发布日期、工作流和检出。
+在列表视图中，您可以像对任意文件夹中的资产进行排序一样对搜索结果进行排序。 排序功能适用于这些列——名称、标题、状态、Dimension、大小、评级、使用情况、创建日期、修改日期、发布日期、工作流和检出。
 
 有关排序功能的限制，请参 [阅限制](#limitations)。
 
