@@ -3,9 +3,9 @@ title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1533'
 ht-degree: 8%
 
 ---
@@ -68,7 +68,7 @@ The Smart Content Service is available for purchase as an add-on to [!DNL Experi
 >[!NOTE]
 >
 >1. 培训是一个不可撤消的过程。 Adobe建议您在对标记培训智能内容服务之前，先查看特选资产集中的标记。
->1. 请在开始针对 [任何标记的培训之前](smart-tags-training-guidelines.md) ，阅读智能内容服务培训指南。
+>1. 在培训标记之前，请参阅智 [能内容服务培训指南](smart-tags-training-guidelines.md)。
 >1. 首次培训智能内容服务时，Adobe建议您至少使用两个不同的标签对其进行培训。
 
 
