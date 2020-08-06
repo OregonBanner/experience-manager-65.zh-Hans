@@ -12,7 +12,7 @@ discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -28,10 +28,9 @@ ht-degree: 0%
 
 升级AEM环境时，您需要考虑升级作者环境或发布环境之间的方法差异，以最大限度地减少作者和最终用户的停机时间。 本页概述了升级AEM 6.x版本上当前运行的AEM拓扑的高级过程。 由于创作层和发布层以及基于Mongo和TarMK的部署之间的流程不同，因此每个层和微内核都列在单独的部分中。 执行部署时，我们建议先升级您的创作环境，确定成功与否，然后继续访问发布环境。
 
->[!IMPORTANT]
+<!-->>[!IMPORTANT]
+>在执行升级之前，为存储库编制索引可以显着减少升级期间的停机时间。 有关详细信息，请参 [阅使用脱机重新索引减少升级期间的停机时间](/help/sites-deploying/upgrade-offline-reindexing.md)—>
 >
->在执行升级之前，为存储库编制索引可以显着减少升级期间的停机时间。 有关详细信息，请参 [阅使用脱机重新索引减少升级期间的停机时间](/help/sites-deploying/upgrade-offline-reindexing.md)
-
 ## TarMK作者层 {#tarmk-author-tier}
 
 ### 启动拓扑 {#starting-topology}
