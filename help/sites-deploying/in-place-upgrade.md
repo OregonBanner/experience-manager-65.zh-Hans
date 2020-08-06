@@ -11,9 +11,9 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 在执行升级之前，必须完成几个步骤。 有关 [详细信息，请参阅](/help/sites-deploying/upgrading-code-and-customizations.md)[升级代码和自定义以及升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) 。 此外，确保您的系统满足新版AEM的要求。 了解Pattern Detector如何帮助您评估升级的复杂性，并参阅计划升级的升级范围和要 [求部分](/help/sites-deploying/upgrade-planning.md) ，了解更多信息。
 
-最后，请注意，在执行升级之前，通过索引存储库，可以大 **幅减** 少升级期间的停机时间。 有关详细信息，请参 [阅使用脱机重新索引减少升级期间的停机时间](/help/sites-deploying/upgrade-offline-reindexing.md)
+<!--Finally, note that the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
 ## 迁移先决条件 {#migration-prerequisites}
 
