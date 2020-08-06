@@ -12,9 +12,9 @@ discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '720'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,8 @@ ht-degree: 4%
 * [计划升级](/help/sites-deploying/upgrade-planning.md)
 * [用模式检测器评估升级复杂度](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5中的向后兼容性](/help/sites-deploying/backward-compatibility.md)
-* [使用脱机重新索引减少升级期间的停机时间](/help/sites-deploying/upgrade-offline-reindexing.md)
+
+<!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [升级过程](/help/sites-deploying/upgrade-procedure.md)
 * [升级代码和自定义](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
@@ -46,7 +47,7 @@ ht-degree: 4%
 >
 >作为提高升级可靠性的努力的一部分，AEM已进行了全面的存储库重组。 有关如何与新结构保持一致的详细信息，请参阅AEM [中的存储库重组。](/help/sites-deploying/repository-restructuring.md)
 
-## 有什么改变？ {#what-has-changed}
+## 有什么变化？ {#what-has-changed}
 
 以下是AEM最近几个发行版中注意事项的主要更改：
 
