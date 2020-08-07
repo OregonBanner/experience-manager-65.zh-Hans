@@ -3,9 +3,9 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各种功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
-source-wordcount: '4400'
+source-wordcount: '4397'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 |  | 启用所有功能 | 启用一些特定功能 | 禁用所有功能 |
 |---|---|---|---|
 | 名称 | 特征 | 特征 | 特征 |
-| 类型 | 字符串 | 字符串[] (多字符串； 在CRXDE Lite中，将类型设置为字符串并单击多) | 字符串 |
+| 类型 | 字符串 | 字符串[] (多字符串；将类型设置为“字符串”并单击“多”(在CRXDE Lite中) | 字符串 |
 | 值 | `*` （星号） | 设置为一个或多个功能值 | - |
 
 ## 了解findreplace插件 {#findreplace}
@@ -77,21 +77,21 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 使用RTE时，作者可以在以下三种模式之一粘贴内容：
 
-* **浏览器模式**: 使用浏览器的默认粘贴实现粘贴文本。 它不是推荐的方法，因为它可能引入不需要的标记。
+* **浏览器模式**:使用浏览器的默认粘贴实现粘贴文本。 它不是推荐的方法，因为它可能引入不需要的标记。
 
-* **纯文本模式**: 将剪贴板内容粘贴为纯文本。 在AEM组件中插入之前，它会去除复制内容中的所有样式和格式元素。
+* **纯文本模式**:将剪贴板内容粘贴为纯文本。 在AEM组件中插入之前，它会删除复制内容中的所有样式和格式元素。
 
-* **MS Word模式**: 从MS Word复制时，粘贴带有格式的文本（包括表）。 不支持从网页或MS Excel等其他源复制和粘贴文本，只保留部分格式。
+* **MS Word模式**:从MS Word复制时，粘贴带有格式的文本（包括表）。 不支持从网页或MS Excel等其他源复制和粘贴文本，只保留部分格式。
 
 ### 配置RTE工具栏上可用的粘贴选项  {#configure-paste-options-available-on-the-rte-toolbar}
 
 您可以在RTE工具栏中为作者提供以下三个图标中的一些、全部或无一个：
 
-* **[!UICONTROL 粘贴(Ctrl+V)]**: 可以预配置为与上述三种粘贴模式之一相对应。
+* **[!UICONTROL 粘贴(Ctrl+V)]**:可以预配置为与上述三种粘贴模式之一相对应。
 
-* **[!UICONTROL 粘贴为文本]**: 提供纯文本模式功能。
+* **[!UICONTROL 粘贴为文本]**:提供纯文本模式功能。
 
-* **[!UICONTROL 从Word粘贴]**: 提供MS Word模式功能。
+* **[!UICONTROL 从Word粘贴]**:提供MS Word模式功能。
 
 要配置RTE以显示所需的图标，请按照以下步骤操作。
 
@@ -107,7 +107,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 * 使用浏览器的默认粘贴实现粘贴文本。 它不是推荐的方法，因为它可能引入不需要的标记。 使用下面 `browser` 进行配置。
 
-* 将剪贴板内容粘贴为纯文本。 在AEM组件中插入之前，它会去除复制内容中的所有样式和格式元素。 使用下面 `plaintext` 进行配置。
+* 将剪贴板内容粘贴为纯文本。 在AEM组件中插入之前，它会删除复制内容中的所有样式和格式元素。 使用下面 `plaintext` 进行配置。
 
 * 从MS Word复制时，粘贴带有格式的文本（包括表）。 不支持从网页或MS Excel等其他源复制和粘贴文本，只保留部分格式。 使用下面 `wordhtml` 进行配置。
 
@@ -120,9 +120,9 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 ### 配置粘贴内容时允许的格式 {#pasteformats}
 
-可以进一步配置粘贴为Microsoft-`paste-wordhtml`Word()模式，以便您能够明确定义在从其他项目（如Microsoft Word）在AEM中粘贴时允许使用的样式。
+可以进一步配置粘贴为Microsoft-Word(`paste-wordhtml`)模式，以便您能够明确定义在AEM中从其他项目（如Microsoft Word）粘贴时允许使用的样式。
 
-例如，如果在AEM中粘贴时仅允许使用粗体格式和列表，则可以过滤掉其他格式。 这称为可配置粘贴过滤，可针对以下两种情况执行此操作：
+例如，如果在AEM中粘贴时只允许使用粗体格式和列表，则可以过滤掉其他格式。 这称为可配置粘贴过滤，可针对以下两种情况执行此操作：
 
 * [文本](#pastemodes)
 * [链接](#linkstyles)
@@ -186,8 +186,8 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    <td>nt:unstructured</td>
    <td><p>定义粘贴表时的行为。<br /> </p> <p>此节点必须具有属性( <code>allow</code> 类型) <code>Boolean</code>来定义是否允许粘贴表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code> 类型<code> String</code>)以定义如何处理粘贴的表内容。 有效值 <code>ignoreMode</code> 为：</p>
     <ul>
-     <li><code>remove</code>: 删除表内容。</li>
-     <li><code>paragraph</code>: 将表单元格转换为段落。</li>
+     <li><code>remove</code>:删除表内容。</li>
+     <li><code>paragraph</code>:将表单元格转换为段落。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -195,8 +195,8 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    <td>nt:unstructured</td>
    <td><p>定义粘贴列表时的行为。<br /> </p> <p>必须具有属 <code>allow</code> 性(类 <code>Boolean</code>型)来定义是否允许粘贴列表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code> 类型)以 <code>String</code>定义如何处理粘贴的任何列表内容。 有效值 <code>ignoreMode</code> 为：</p>
     <ul>
-     <li><code>remove</code>: 删除列表内容。</li>
-     <li><code>paragraph</code>: 将列表项转换为段落。</li>
+     <li><code>remove</code>:删除列表内容。</li>
+     <li><code>paragraph</code>:将列表项转换为段落。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -269,7 +269,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 1. 将属性添 `externalStyleSheets` 加到以下项的父节点 `<rtePlugins-node>`:
 
    * **名称** `externalStyleSheets`
-   * **类型**`String[]` (多字符串； 在CRXDE **中单** 击“多”)
+   * **类型**`String[]` (多字符串；在CRXDE **中单** 击“多”)
    * **值要包括的** 每个样式表的路径和文件名。 使用存储库路径。
 
    >[!NOTE]
@@ -317,11 +317,11 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    * **类型** `String`
    * **值** CSS类的名称（没有前面的“.”）; for example, `cssClass` instead of `.cssClass`)
 
-1. 将属性添 `text` 加到同一节点； 这定义了选择框中显示的文本：
+1. 将属性添 `text` 加到同一节点；这定义了选择框中显示的文本：
 
    * **名称** `text`
    * **类型** `String`
-   * **值** ：样式描述； 显示在样式下拉选择框中。
+   * **值** ：样式描述；显示在样式下拉选择框中。
 
 1. 保存更改。
 
@@ -329,7 +329,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 ### 配置RTE，以在日语中实现最佳换行 {#jpwordwrap}
 
-使用AEM创作日语内容的作者可以将样式应用于字符，以避免在不需要换行的情况下换行。 这允许作者让句子在所需位置断开。 此功能的样式基于CSS样式表中预定义的CSS类。
+使用AEM创作日文内容的作者可以将样式应用于字符以避免在不需要换行的情况下换行。 这允许作者让句子在所需位置断开。 此功能的样式基于CSS样式表中预定义的CSS类。
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 1. 在样式节点下创建新节点。 请参 [阅指定新样式](#stylesindropdown)。
    * 名称: `jpn-word-wrap`
-   * 类型： `nt&#39;:unstructure
+   * 类型：`nt&#39;:unstructure
 
 1. 将属性添 `cssName` 加到节点以引用CSS类。 此类名称是日语换行功能的保留名称。
    * 名称: `cssName`
@@ -426,7 +426,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
    * **名称** `tag`
    * **类型** `String`
-   * **值** ：格式的块标记； 例如： p、h1、h2等。
+   * **值** ：格式的块标记；例如：p、h1、h2等。
 
       您无需输入分界角括号。
 
@@ -434,7 +434,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
    * **名称** `description`
    * **类型** `String`
-   * **值** ：此格式的描述性文本； 例如，“段落”、“标题1”、“标题2”等。 此文本将显示在“格式”选择列表中。
+   * **值** ：此格式的描述性文本；例如，“段落”、“标题1”、“标题2”等。 此文本将显示在“格式”选择列表中。
 
 1. 保存更改。
 
@@ -445,9 +445,9 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 ## 配置特殊字符 {#spchar}
 
-在标准AEM安装中，当 `misctools` 为特殊字符启用插件时()`specialchars`默认选择会立即可用； 例如，版权和商标符号。
+在标准AEM安装中，当 `misctools` 为特殊字符启用插件时(`specialchars`)默认选项可立即使用；例如，版权和商标符号。
 
-您可以配置RTE，使您自己选择的字符可用； 通过定义不同的字符或整个序列。
+您可以配置RTE，使您自己选择的字符可用；通过定义不同的字符或整个序列。
 
 >[!CAUTION]
 添加自己的特殊字符将覆盖默认选择。 如果需要，（重新）在您自己的选择中定义这些字符。
@@ -475,14 +475,14 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 1. 在“ `chars` 添加新节点”下，可保存单个字符定义：
 
-   * **名称** ，您可以指定名称，但应反映字符； 例如，一半。
+   * **名称** ，您可以指定名称，但应反映字符；例如，一半。
    * **类型** `nt:unstructured`
 
 1. 要添加此节点，请添加以下属性：
 
    * **名称** `entity`
    * **类型** `String`
-   * **评估** 所需字符的HTML表示形式； 例如， `&189;` 对于分数半。
+   * **评估** 所需字符的HTML表示形式；例如， `&189;` 对于分数半。
 
 1. 保存更改。
 
@@ -495,7 +495,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 1. 使用定义单个字符 [中的步骤1到3](#definesinglechar)。
 1. 在“ `chars` 添加新节点”下，可保存字符范围的定义：
 
-   * **名称** ，您可以指定名称，但应反映字符范围； 比如铅笔。
+   * **名称** ，您可以指定名称，但应反映字符范围；比如铅笔。
    * **类型** `nt:unstructured`
 
 1. 在此节点下（根据特殊字符范围命名）添加以下两个属性：
@@ -516,7 +516,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
    ![在CRXDE中，定义要在RTE中可用的字符范围](assets/chlimage_1-107.png)
 
-   *图： 在CRXDE中，定义要在RTE中可用的字符范围*
+   *图：在CRXDE中，定义要在RTE中可用的字符范围*
 
    ![RTE中的可用特殊字符在弹出窗口中显示给作](assets/rtepencil.png "者RTE中的可用特殊字符在弹出窗口中向作者显示")
 
@@ -542,7 +542,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    * **类型** `String[]`
 
    * **根据**&#x200B;需要，以下各项的值之一或两者：
-      * `table` 允许编辑表属性； 包括样式。
+      * `table` 允许编辑表属性；包括样式。
       * `cellprops` 以允许编辑单元格属性，包括样式。
 
 
@@ -588,26 +588,26 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 为了增强此类情况下的辅助功能，RTE支持隐藏的标题单元格。 此外，它还提供与表中隐藏的标题相关的配置设置。 这些设置允许您在编辑和预览模式下对隐藏的标题应用CSS样式。 要帮助作者在编辑模式下识别隐藏的标题，请在代码中包含以下参数：
 
-* `hiddenHeaderEditingCSS`: 指定在编辑RTE时应用于隐藏标题单元格的CSS类的名称。
-* `hiddenHeaderEditingStyle`: 指定在编辑RTE时应用于隐藏标题单元格的样式字符串。
+* `hiddenHeaderEditingCSS`:指定在编辑RTE时应用于隐藏标题单元格的CSS类的名称。
+* `hiddenHeaderEditingStyle`:指定在编辑RTE时应用于隐藏标题单元格的样式字符串。
 
 如果在代码中指定CSS和样式字符串，则CSS类优先于样式字符串，并可能覆盖样式字符串所做的任何配置更改。
 
 要帮助作者在预览模式中对隐藏的标题应用CSS，您可以在代码中包含以下参数：
 
-* `hiddenHeaderClassName`: 指定在预览模式下应用于隐藏标题单元格的CSS类的名称。
-* `hiddenHeaderStyle`: 指定在预览模式下应用于隐藏标题单元格的样式字符串。
+* `hiddenHeaderClassName`:指定在预览模式下应用于隐藏标题单元格的CSS类的名称。
+* `hiddenHeaderStyle`:指定在预览模式下应用于隐藏标题单元格的样式字符串。
 
 如果在代码中指定CSS和样式字符串，则CSS类优先于样式字符串，并可能覆盖样式字符串所做的任何配置更改。
 
 ## 为拼写检查器添加词典 {#adddict}
 
-激活拼写检查插件后，RTE会为每种相应的语言使用词典。 然后根据网站的语言选择，采用子树的语言属性或从URL中提取语言； 例如。 分支 `/en/` 被选为英语，分支被选 `/de/` 为德语。
+激活拼写检查插件后，RTE会为每种相应的语言使用词典。 然后根据网站的语言选择，采用子树的语言属性或从URL中提取语言；例如。 分支 `/en/` 被选为英语，分支被选 `/de/` 为德语。
 
 >[!NOTE]
 如果 `Spell checking failed` 尝试检查未安装的语言，则会看到消息。 标准词典与相应的自 `/libs/cq/spellchecker/dictionaries`述文件一起位于。 请勿修改文件。
 
-标准AEM安装包含美国英语()和英`en_us`语()的词典`en_gb`。 要添加更多字典，请按照以下步骤操作。
+标准AEM安装包括美国英语()和英`en_us`国英语()的`en_gb`词典。 要添加更多字典，请按照以下步骤操作。
 
 1. 导航到页面 [https://extensions.openoffice.org/](https://extensions.openoffice.org/)。
 
@@ -643,7 +643,7 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
 
 ## 配置选项卡大小 {#tabsize}
 
-当在任何文本中按下制表符字符时，会插入预定义的空格数； 默认情况下，这是三个不间断空格和一个空格。
+当在任何文本中按下制表符字符时，会插入预定义的空格数；默认情况下，这是三个不间断空格和一个空格。
 
 要定义选项卡大小，请执行以下操作：
 
@@ -661,14 +661,14 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
 启用缩进（默认）后，您可以定义缩进大小：
 
 >[!NOTE]
-此缩进大小仅应用于文本的段落（块）; 它不影响实际列表的缩进。
+此缩进大小仅应用于文本的段落（块）;它不影响实际列表的缩进。
 
 1. 在组件中，导航到节点 `<rtePlugins-node>/lists`。 如果这些节点不存在，请创建它们。 有关详细信息， [请参阅激活插件](#activateplugin)。
 1. 在节 `lists` 点上创建 `identSize` 参数：
 
    * **名称**: `identSize`
    * **类型**: `Long`
-   * **值**: 缩进边距所需的像素数。
+   * **值**:缩进边距所需的像素数。
 
 ## 配置可编辑空间的高度 {#editablespace}
 
@@ -695,7 +695,7 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
 * 要使用的CSS样式
 * 协议自动接受
 
-要配置如何从其他项目在AEM中添加链接，请定义HTML规则。
+要配置如何在AEM中从其他项目添加链接，请定义HTML规则。
 
 1. 使用CRXDE Lite找到项目的文本组件。
 1. 在与创建节点相同的级别 `<rtePlugins-node>`创建新节点，即在以下节点的父节点下创建节点 `<rtePlugins-node>`:
@@ -709,7 +709,7 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
    * **类型** `String`
    * **值** `richtext`
 
-   节点的位置 `../items/text` 可能因对话框的结构而异； 两个示例包括：
+   节点的位置 `../items/text` 可能因对话框的结构而异；两个示例包括：
    * `/apps/myProject>/components/text/dialog/items/text`
    * `/apps/<myProject>/components/text/dialog/items/panel/items/text`
 
@@ -731,12 +731,12 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
       * **名称** `cssExternal`
       * **类型** `String`
       * **值** CSS类的名称（没有前面的“.”）; for example, `cssClass` instead of `.cssClass`)
-   * 有效协议 **的阵列** (包括https://、https:// file://、mailto：等)
+   * 有效协 **议** (包 `https://`括、 `https://``file://`、 `mailto:` 等)的阵列
 
       * **名称** `protocols`
       * **类型** `String[]`
       * **值**（一个或多个）协议
-   * **defaultProtocol** (String类型的 **属性**): 在用户未明确指定协议时使用的协议。
+   * **defaultProtocol** (String类型的 **属性**):在用户未明确指定协议时使用的协议。
 
       * **名称** `defaultProtocol`
       * **类型** `String`
@@ -746,7 +746,7 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
       * **名称** `targetConfig`
       * **类型** `nt:unstructured`
 
-      在节点上 `targetConfig`: 定义所需的属性：
+      在节点上 `targetConfig`:定义所需的属性：
 
       * 指定目标模式：
 
@@ -754,17 +754,17 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
          * **类型** `String`)
          * **值**:
 
-            * `auto`: 表示已选择自动目标
+            * `auto`:表示已选择自动目标
 
                (由外部链 `targetExternal` 接或内部链接的 `targetInternal` 属性指定)。
 
-            * `manual`: 不适用于此上下文
-            * `blank`: 不适用于此上下文
+            * `manual`:不适用于此上下文
+            * `blank`:不适用于此上下文
       * 内部链接的目标:
 
          * **名称** `targetInternal`
          * **类型** `String`
-         * **为内部** 链接的目标值(仅在“”模式为时使 `auto`用)
+         * **为内部** 链接的目标值(仅当模式为时使用 `auto`)
       * 外部链接的目标:
 
          * **名称** `targetExternal`
