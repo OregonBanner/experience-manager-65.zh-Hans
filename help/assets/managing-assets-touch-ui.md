@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
 source-wordcount: '9240'
 ht-degree: 8%
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 在此 [!DNL Adobe Experience Manager Assets] 中，您可以执行的不仅仅是存储和管理资产。 [!DNL Experience Manager] 优惠企业级资产管理功能。 您可以编辑和共享资产、运行高级搜索、创建数十种受支持文件格式的多个再现、管理版本和数字权限、自动处理资产、管理和管理元数据、使用批注进行协作等。
 
-本文描述基本的资产管理任务，如创建或上传； 元数据更新； 复制、移动和删除； 发布、取消发布和搜索资产。 要了解用户界面，请参 [阅资产用户界面快速入门](/help/sites-authoring/basic-handling.md)。 要管理内容片段，请参 [阅管理内容片段](/help/assets/content-fragments/content-fragments-managing.md) 资产。
+本文描述基本的资产管理任务，如创建或上传；元数据更新；复制、移动和删除；发布、取消发布和搜索资产。 要了解用户界面，请参 [阅资产用户界面快速入门](/help/sites-authoring/basic-handling.md)。 要管理内容片段，请参 [阅管理内容片段](/help/assets/content-fragments/content-fragments-managing.md) 资产。
 
 ## 创建文件夹 {#creating-folders}
 
@@ -50,7 +50,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在Dynamic Media-Scene7模式下，您只能上传文件大小为2 GB或更小的资源。
+>在Dynamic Media -Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
 
 您可以选择将资产上传到文件夹，无论是否分配了处理用户档案。
 
@@ -100,7 +100,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
    >
    >在名称冲 **[!UICONTROL 突]** 对话框 [!UICONTROL 中选择替] 换时，将为新资产重新生成资产ID。 此ID与上一个资产的ID不同。
    >
-   >如果启用“资产分析”以通过Adobe Analytics跟踪展示次数／点击次数，则重新生成的资产ID将使Analytics上为资产捕获的数据无效。
+   >如果启用“资产分析”以通过Adobe Analytics跟踪展示次数／点击次数，则重新生成的资产ID将使在Analytics上为资产捕获的数据失效。
 
    If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. 仅当现有资产的二进制文 `SHA 1` 件的校验和值与您上传的资产的校验和值匹配时，才会显示该对话框。 在这种情况下，资产名称无关紧要。
 
@@ -133,7 +133,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 ### 串行上传 {#serialuploads}
 
-批量上传大量资产会消耗大量I/O资源，这可能会对部署性能产生不利影响。 [!DNL Assets] 尤其是，如果Internet连接速度较慢，则由于磁盘I/O激增，上传的时间会显着增加。 此外，您的Web浏览器可能会对并发资产上传可处理的POST请 [!DNL Assets] 求数量引入额外限制。 因此，上传操作将失败或提前终止。 换句话说，在 [!DNL Experience Manager Assets] 摄取大量文件时可能会丢失某些文件，或者完全无法摄取任何文件。
+批量上传大量资产会消耗大量I/O资源，这可能会对部署性能产生不利影响。 [!DNL Assets] 尤其是，如果Internet连接速度较慢，则由于磁盘I/O激增，上传的时间会显着增加。此外，您的Web浏览器可能会对并发资产上传可处理的POST请 [!DNL Assets] 求数量引入额外限制。 因此，上传操作将失败或提前终止。 换句话说，在 [!DNL Experience Manager Assets] 摄取大量文件时可能会丢失某些文件，或者完全无法摄取任何文件。
 
 要克服这种情况， [!DNL Assets] 请在批量上传操作期间一次摄取一个资产（串行上传），而不是同时摄取所有资产。
 
@@ -145,33 +145,33 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 >[!NOTE]
 >
->在Dynamic Media-Scene7模式下，您只能上传文件大小为2 GB或更小的资源。
+>在Dynamic Media -Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
 
 >[!NOTE]
 >
->要在Dynamic Media-Scene7模式下通过FTP上传资产，请在创作实例上安装功 [!DNL Experience Manager] 能包18912。 联 [系Adobe客](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 户关怀部门以访问FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以实现批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media -Scene7模式下通过FTP上传资产，请在创作实例上安装功 [!DNL Experience Manager] 能包18912。 联 [系Adobe客](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 户关怀部门以访问FP-18912并完成FTP帐户的设置。 有关详细信息，请参 [阅安装功能包18912以实现批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
 >
->如果您使用FTP上传资产，则中指定的上传设 [!DNL Experience Manager] 置将被忽略。 而是使用在Dynamic Media经典中定义的文件处理规则。
+>如果您使用FTP上传资产，则中指定的上传设 [!DNL Experience Manager] 置将被忽略。 而是使用在Dynamic Media Classic中定义的文件处理规则。
 
 **使用FTP上传资产**
 
 1. 使用您选择的FTP客户端，使用您从供应电子邮件收到的FTP用户名和密码登录到FTP服务器。 在FTP客户端中，将文件或文件夹上传到FTP服务器。
-1. [使用从供应电子邮件收](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 到的凭据登录到Dynamic Media经典。 在全局导航栏上，单击“ **[!UICONTROL 上传]**”。
+1. [使用从供应电子邮件收到的凭据](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) ，登录到Dynamic Media Classic。 在全局导航栏上，单击“ **[!UICONTROL 上传]**”。
 
 1. 在上传页面左上角附近，单击通过FTP **[!UICONTROL 选项卡]** 。
-1. 在页面左侧，选择要从中上传文件的FTP文件夹； 在页面的右侧，选择目标文件夹。
+1. 在页面左侧，选择要从中上传文件的FTP文件夹；在页面的右侧，选择目标文件夹。
 1. 在页面右下角附近，单击作 **[!UICONTROL 业选项]** ，然后根据您选择的文件夹中的资产设置所需的选项。
 
    请参 [阅上传作业选项](#upload-job-options)。
 
    >[!NOTE]
    >
-   >当您通过FTP上传资产时，您在Dynamic Media经典(S7)中设置的上传作业选项优先于在中设置的资产处理参数 [!DNL Experience Manager]。
+   >当您通过FTP上传资产时，您在Dynamic Media Classic(S7)中设置的上传作业选项优先于在中设置的资产处理参数 [!DNL Experience Manager]。
 
 1. 在“上传作业选项”对话框的右下角，单击“保 **[!UICONTROL 存”]**。
 1. 在上传页面的右下角，单击“提交 **[!UICONTROL 上传”]**。
 
-   要视图上传进度，请在全局导航栏上单击“作 **[!UICONTROL 业”]**。 “作业”页面显示上传的进度。 您可以随 [!DNL Experience Manager] 时在Dynamic Media经典中继续工作并返回“作业”页面，以查看进行中的作业。
+   要视图上传进度，请在全局导航栏上单击“作 **[!UICONTROL 业”]**。 “作业”页面显示上传的进度。 您可以随时继 [!DNL Experience Manager] 续在Dynamic Media Classic中工作并返回“作业”页面，以查看进行中的作业。
 要取消正在进行的上载作业，请单击“持 **[!UICONTROL 续时间]** ”旁边的“取消”。
 
 #### 上传作业选项 {#upload-job-options}
@@ -186,14 +186,14 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 |  | 当 | 选择一次或重复。 要设置重复作业，请选择“重复”选项（每日、每周、每月或自定义），以指定要重复FTP上传作业的时间。 然后根据需要指定计划选项。 |
 |  | 包含子文件夹 | 上传您要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称会自动输入 [!DNL Experience Manager Assets]。 |
 |  | 裁剪选项 | 要从图像两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要自动裁切图像中的空白像素，请打开“裁剪”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁剪。 您还可以在“裁剪”菜单上选择“修剪”并选择以下选项：<br> **根据裁切** <ul><li>**颜色** -选择颜色选项。 然后，选择“角”菜单，选择图像的角，其颜色最能代表您要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅裁剪透明像素。 接近1的数字意味着更加透明。</li></ul><br>请注意，这些裁剪选项是无损的。 |
-|  | 颜色用户档案选项 | 在创建用于投放的优化文件时选择颜色转换：<ul><li>默认颜色保留： 当图像包含色彩空间信息时，保留源图像颜色； 没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是用于在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间： 保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，任何颜色转换均使用在“发布”设置中配置的默认颜色用户档案进行。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用默认颜色保留选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换至色彩空间”。 此高级选项将覆盖嵌入在源文件中的任何颜色信息。 当您提交的所有图像都包含不正确或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
+|  | 颜色用户档案选项 | 在创建用于投放的优化文件时选择颜色转换：<ul><li>默认颜色保留：当图像包含色彩空间信息时，保留源图像颜色；没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是用于在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间：保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，任何颜色转换均使用在“发布”设置中配置的默认颜色用户档案进行。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用默认颜色保留选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换至色彩空间”。 此高级选项将覆盖嵌入在源文件中的任何颜色信息。 当您提交的所有图像都包含不正确或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
 |  | 图像编辑选项 | 您可以在图像中保留剪切蒙版，并选择颜色用户档案。<br> 请参 [阅在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
 |  | Postscript选项 | 您可以栅格化PostScript®文件、裁剪文件、维护透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | Photoshop选项 | 您可以从Adobe®Photoshop®文件创建模板、维护图层、指定如何命名图层、提取文本以及指定如何将图像定位到模板中。<br> 请注意，中不支持模板 [!DNL Experience Manager]。<br> 请参阅 [设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
 |  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成电子目录、设置分辨率和选择色彩空间。<br> 请注意，中不支持eCatalog [!DNL Experience Manager]。 <br> 请参 [阅设置PDF上传选项](#setting-pdf-upload-options)。 |
 |  | Illustrator选项 | 您可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | EVideo选项 | 您可以通过选择视频预设对视频文件进行转码。<br> 请参 [阅设置eVideo上传选项](#setting-evideo-upload-options)。 |
-|  | 批集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media经典的“应用程序设置／批集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
+|  | 批集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置／批集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
 
 #### 在上传时设置图像编辑选项 {#setting-image-editing-options-at-upload}
 
@@ -240,7 +240,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时，可以自动从文件创建图像模板(在“上传”屏 [!UICONTROL 幕上选择] “创建模板”选项)。
 
-Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多幅图像； 它为每个图层创建一个图像。
+如果您使用PSD文件创建模板，Dynamic Media会使用图层从PSD文件创建多个图像；它为每个图层创建一个图像。
 
 使用上 [!UICONTROL 述的裁剪][!UICONTROL 选项和颜]色用户档案选项，以及Photoshop上传选项。
 
@@ -303,17 +303,17 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 ### 流式上传 {#streamed-uploads}
 
-如果将许多资产上传到Adobe Experience Manager，则对服务器的I/O请求会显着增加，这会降低上传效率，甚至会导致某些上传任务超时。 [!DNL Experience Manager Assets] 支持流式上传资产。 流式上传通过在将磁盘复制到存储库之前避免在服务器上的临时文件夹中存储资产，减少了上传操作期间的磁盘I/O。 而是直接将数据传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，在中启用流式上传 [!DNL Assets]。
+如果将许多资产上传到Adobe Experience Manager，则对服务器的I/O请求会显着增加，这会降低上传效率，甚至会导致一些上传任务超时。 [!DNL Experience Manager Assets] 支持流式上传资产。 流式上传通过在将磁盘复制到存储库之前避免在服务器上的临时文件夹中存储资产，减少了上传操作期间的磁盘I/O。 而是直接将数据传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，在中启用流式上传 [!DNL Assets]。
 
 >[!NOTE]
 >
->对于在JEE服务器上运行的Adobe Experience Manager，其servlet-api版本低于3.1，流上传被禁用。
+>对于在JEE服务器上运行的版本低于3.1的servlet-api的Adobe Experience Manager，禁用流上传。
 
 ### 提取包含资产的ZIP存档 {#extractzip}
 
 您可以像上传任何其他受支持的资产一样上传ZIP存档。 同一文件名规则适用于ZIP文件。 [!DNL Experience Manager] 允许您将ZIP存档解压到DAM位置。 如果存档文件不包含ZIP作为扩展名，请使用内容启用文件类型检测。
 
-一次选择一个ZIP归档，单击“解 **[!UICONTROL 压归档]**”，然后选择目标文件夹。 选择一个选项以处理冲突（如果有）。 如果目标文件夹中已存在ZIP文件中的资产，您可以选择以下选项之一： 跳过提取、替换现有文件、重命名以保留两个资产或创建新版本。
+一次选择一个ZIP归档，单击“解 **[!UICONTROL 压归档]**”，然后选择目标文件夹。 选择一个选项以处理冲突（如果有）。 如果目标文件夹中已存在ZIP文件中的资产，您可以选择以下选项之一：跳过提取、替换现有文件、重命名以保留两个资产或创建新版本。
 
 提取完成后， [!DNL Experience Manager] 在通知区域通知您。 在 [!DNL Experience Manager] 提取ZIP时，您可以返回工作，而不中断提取。
 
@@ -379,7 +379,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
    ![日期时间选取器或使用“开始时间”(On Time)字段中的键盘键添加资产激活的日期和时间](assets/datepicker.png)
 
-   *图： 使用日期选取器计划资产激活。*
+   *图：使用日期选取器计划资产激活。*
 
 1. 要在特定持续时间后取消激活资产，请从关闭时间字段旁边的日期选取器中选择取消激 **[!UICONTROL 活日期]** /时间。 取消激活日期应晚于资产的激活日期。 结束 [!UICONTROL 时间后]，资产及其演绎版不能通过Web界面 [!DNL Assets] 或通过HTTP API使用。
 
@@ -554,7 +554,7 @@ Dynamic Media使用PSD文件创建模板时，会用图层从PSD文件创建多�
 
 >[!NOTE]
 >
->有关特定于Dynamic Media的更多信息，请参 [阅发布Dynamic Media资产。](/help/assets/publishing-dynamicmedia-assets.md)
+>有关Dynamic Media的详细信息，请参阅发 [布Dynamic Media资产。](/help/assets/publishing-dynamicmedia-assets.md)
 
 1. 导航到要发布的资产／文件夹所在的位置。
 
@@ -625,20 +625,20 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 快速操作图标一次只能用于单个资产。根据设备，执行以下操作以显示快速操作图标：
 
-* 触控设备： 触摸并按住。 例如，在iPad上，您可以点按并按住资产，以便显示快速操作。
-* 非触控设备： 悬停指针。 例如，在桌面设备上，如果将指针悬停在资产缩略图上，则会显示快速操作栏。
+* 触控设备：触摸并按住。 例如，在iPad上，您可以点按并按住资产，以便显示快速操作。
+* 非触控设备：悬停指针。 例如，在桌面设备上，如果将指针悬停在资产缩略图上，则会显示快速操作栏。
 
 ### 导航并选择资产 {#navigating-and-selecting-assets}
 
 您可以使用选择选项视图、导航和选择具有任何可用视图(卡片、列和列表)的 **[!UICONTROL 资产]** 。
 
-在列表视图和列视图中，当您将指 **[!UICONTROL 针悬停在]** 资产缩略图上时，将显示选择选项。
+在列表视图和列视图中，当 **[!UICONTROL 将指针]** 悬停在资产缩略图上时，将显示选择选项。
 
 ![在列表视图中选择资产](assets/select_quick_in_listview.png)
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
@@ -695,7 +695,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 ![对资产的时间轴条目进行排序](assets/sort_timeline.gif)
 
-*图： 对资产的时间轴条目进行排序。*
+*图：对资产的时间轴条目进行排序。*
 
 >[!NOTE]
 >
@@ -836,7 +836,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 1. 要配置CQ-DAM-Handler-Gibson字体管理器服务，请执行下列操作之一：
 
    * 在“系统字体”目录选项中，指定系统上字体目录的完整路径。 例如，如果您是Mac用户，则可以在“System Fonts”目录选 *项中将路径指定为* /Library/Fonts。 [!DNL Experience Manager] 从此目录中获取字体。
-   * 在文件夹内创 `fonts` 建一个名 ``crx-quickstart`` 为的目录。 CQ-DAM-Handler-Gibson字体管理器服务自动获取位置的字体 `crx-quickstart/fonts`。 您可以从Adobe服务器字体目录选项中覆盖此默认路径。
+   * 在文件夹内创 `fonts` 建一个名 `crx-quickstart` 为的目录。 CQ-DAM-Handler-Gibson字体管理器服务自动获取位置的字体 `crx-quickstart/fonts`。 您可以从Adobe服务器字体目录选项中覆盖此默认路径。
 
    * 在系统中为字体创建新文件夹，并将所需的字体存储在该文件夹中。 然后，在Customer Fonts目录选项中指定该文件夹的完整路径。
 
@@ -875,7 +875,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![从左侧导航菜单中，选择时间轴选项](assets/timeline.png)
 
-   *图： 从页面的左上角区域打开菜单，然后选择“时[!UICONTROL 间轴]”选项。*
+   *图：从页面的左上角区域打开菜单，然后选择“时[!UICONTROL 间轴]”选项。*
 
 1. 要创建资产版本，请执行以下操作：
 
@@ -885,7 +885,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
       ![从提要栏创建资产版本](assets/create-new-version-from-timeline.png)
 
-      *图： 从时间轴左侧提要栏中创建资[!UICONTROL 产的]版本。*
+      *图：从时间轴左侧提要栏中创建资[!UICONTROL 产的]版本。*
 
 1. 要视图某个版本的资产，请执行以下操作：
 
@@ -903,7 +903,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
       ![选择要还原到的版本](assets/select_version.png)
 
-      *图： 选择一个版本并还原到它。 它将成为当前版本，DAM用户随后可使用它。*
+      *图：选择一个版本并还原到它。 它将成为当前版本，DAM用户随后可使用它。*
 
 1. 要比较图像的两个版本，请执行以下步骤：
    * 单击要与当前版本进行比较的版本。
@@ -911,7 +911,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![使用滑块将资产的选定版本与当前版本进行比较](assets/version-slider.gif)
 
-   *图： 使用滑块可轻松将资产的选定版本与当前版本进行比较。*
+   *图：使用滑块可轻松将资产的选定版本与当前版本进行比较。*
 
 ### 开始资产上的工作流 {#starting-a-workflow-on-an-asset}
 
