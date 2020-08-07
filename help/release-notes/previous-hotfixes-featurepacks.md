@@ -3,7 +3,7 @@ title: Adobe Experience Manager6.5以前的Service Pack发行说明
 description: 特定于Adobe Experience Manager6.5 Service Pack 3及更早版本的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
 workflow-type: tm+mt
 source-wordcount: '8108'
 ht-degree: 35%
@@ -15,11 +15,11 @@ ht-degree: 35%
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
 
-Adobe Experience Manager6.5.4.0是一项重要更新，包含新功能、关键客户请求的增强功能以及性能、稳定性、安全性改进，自2019年4月6.5版正式发布 **以来发布**。 它可安装在Adobe Experience Manager6.5上。
+Adobe Experience Manager6.5.4.0是一项重要更新，包括新功能、关键客户请求的增强功能和性能、稳定性、安全性改进，自2019年4月6.5版正式发布 **以来发布**。 它可安装在Adobe Experience Manager6.5之上。
 
 Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包括：
 
-* Adobe Experience Manager资产现在通过AdobeI/O控制台配置为品牌门户。
+* Adobe Experience Manager资产现在通过AdobeI/O控制台配置了Brand Portal。
 
 * 现在，Adobe Experience Manager Forms [工作流可使用新的](../forms/using/aem-forms-workflow-step-reference.md) “生成可打印输出”步骤。
 
@@ -31,7 +31,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.8。
 
-* 您现在可以将选择性内容子树同步 *到Dynamic Media-Scene7模式* ，而不是所有在 `content/dam`。
+* 您现在可以将选择性内容子树同 *步到Dynamic Media -Scene7模式* ，而不是所有在 `content/dam`。
 
 * 与SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 在资产收集页面上触发工作流的按钮被禁用(NPR-32471)。
 
-* 在SPS(Scene7出版系统)中创建一个无名称的文件夹，同时使用Dynamic MediaScene7配置将资源从一个文件夹移到另一个文件夹(NPR-32440)。
+* 在使用Dynamic Media Scene7配置(NPR-32440)的Experience Manager下将资源从一个文件夹移到另一个文件夹时，将在SPS(Scene7出版系统)中创建一个无名称的文件夹。
 
 * 将所有资产（使用全选，然后移动）移动到包含已发布资产的文件夹的操作会失败，并显示错误(NPR-32366)。
 
@@ -123,7 +123,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 通过Scene7的批量上传过程处理资产需要太长的时间(CQ-4286445)。
 
-* 当用户未在Dynamic Media客户端的“设置编辑器”中进行任何更改时，“保存”按钮不会导入远程集(CQ-4285690)。
+* 当用户未在Dynamic Media Client中的“设置编辑器”中进行任何更改时，“保存”按钮不会导入“远程设置”(CQ-4285690)。
 
 * 当支持的3D模型被引入Experience Manager时，3D资产缩略图不会提供相关信息(CQ-4283701)。
 
@@ -131,7 +131,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 资产的详细信息页面上会观察到在3D查看器中预览的已上传3D模型的容器高度不正确(CQ-4283309)。
 
-* 在Experience ManagerDynamic Media混合模式(CQ-4255590)的IE 11中，旋转式编辑器不打开。
+* 在IE 11中Experience ManagerDynamic Media Hybrid模式(CQ-4255590)下，旋转式编辑器未打开。
 
 * 键盘焦点卡在Chrome和Safari浏览器的“下载”对话框的“电子邮件”下拉菜单中(NPR-32067)。
 
@@ -141,9 +141,9 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 使用“筛选器”面板搜索资产时，鼠标控件会切换到上一个筛选器字段，而不是停留在现有筛选器字段中(NPR-32538)。
 
-* 平台标记： 通过在标记字段中键入内容搜索标记会显示根边界外的标记，并且不 `rootPath` 尊重标记字段的属性(NPR-31895)。
+* 平台标记：通过在标记字段中键入内容搜索标记会显示根边界外的标记，并且不 `rootPath` 尊重标记字段的属性(NPR-31895)。
 
-* 平台UI: 如果在文本字段中添加了无效的路径，则路径浏览器将断开(NPR-31884)。
+* 平台UI:如果在文本字段中添加了无效的路径，则路径浏览器将断开(NPR-31884)。
 
 * 在选择页面时，通知会隐藏在粘滞菜单后面(NPR-31628)。
 
@@ -203,7 +203,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * “创建成员”表单显示为空白页面(NPR-31997)。
 
-* 用户无法视图有关作者实例的Analytics报告(NPR-30913)。
+* 用户无法视图创作实例的Analytics报告(NPR-30913)。
 
 ### Oak-索引和查询 {#oak-indexing-6540}
 
@@ -215,33 +215,33 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 >
 >Experience Manager服务包不包含针对Experience ManagerForms的修复。 它们是通过单独的 Forms 附加组件包交付的。此外，还发布了包含针对Adobe Experience Manager Forms的JEE修复的累积安装程序。 有关详细信息，请参 [阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[Forms加载项和安装Experience ManagerForms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
-* 通信管理： 提交到后处理工作流后，字母会显示额外字符(NPR-32626)。
+* 通信管理：提交到后处理工作流后，字母会显示额外字符(NPR-32626)。
 
-* 通信管理： 在提交到后处理工作流后，字母将显示一个下拉占位符作为文本组件(NPR-32539)。
+* 通信管理：在提交到后处理工作流后，字母将显示一个下拉占位符作为文本组件(NPR-32539)。
 
-* 通信管理： 在字母模板中定义的默认值不会在预览模式下显示(NPR-32511)。
+* 通信管理：在字母模板中定义的默认值不会在预览模式下显示(NPR-32511)。
 
-* 移动Forms: 以HTML版本呈现XDP表单时，提交按钮显示为扩展大小(NPR-32514)。
+* 移动Forms:以HTML版本呈现XDP表单时，提交按钮显示为扩展大小(NPR-32514)。
 
-* 文档服务： 应用Service Pack 2后，Letter和某些其他页面的URL访问问题(NPR-32508、NPR-32509)。
+* 文档服务：应用Service Pack 2后，Letter和某些其他页面的URL访问问题(NPR-32508、NPR-32509)。
 
-* 文档服务： 如果服务器上的事务数超过特定限制，则HTML到PDF的转换将失败，并且文件类型设置将从服 [!DNL Forms] 务器中删除(NPR-32204)。
+* 文档服务：如果服务器上的事务数超过特定限制，则HTML到PDF的转换将失败，并且文件类型设置将从服 [!DNL Forms] 务器中删除(NPR-32204)。
 
-* 适应性Forms: 浏览器辅助工具工具根据WCAG2 Level AA准则报告自适应表单中的故障(NPR-32312、NPR-32309、CQ-4285439)。
+* 适应性Forms:浏览器辅助工具工具根据WCAG2 Level AA准则报告自适应表单中的故障(NPR-32312、NPR-32309、CQ-4285439)。
 
-* 适应性Forms: Chrome浏览器辅助工具工具报告最佳实践失败(NPR-32310)。
+* 适应性Forms:Chrome浏览器辅助工具工具报告最佳实践失败(NPR-32310)。
 
-* 适应性Forms: 配置嵌入在Experience Manager站点页面中的自适应表单时的转换问题(NPR-32168)。
+* 适应性Forms:配置嵌入在Experience Manager站点页面中的自适应表单时的转换问题(NPR-32168)。
 
-* 工作台： 使用“为PDF实用程序获取PDF属性”操作服务时显示错误消息(NPR-32150)。
+* 工作台：使用“为PDF实用程序获取PDF属性”操作服务时显示错误消息(NPR-32150)。
 
-* 文档安全： 如果将DisableGlobalOfflineSynchronizationData选项设置为True，则受保护的PDF文件无法脱机打开(NPR-32078)。
+* 文档安全：如果将DisableGlobalOfflineSynchronizationData选项设置为True，则受保护的PDF文件无法脱机打开(NPR-32078)。
 
-* 设计人员： 如果启用标记选项，子表单边框将消失在生成的PDF输出中(NPR-32547、NPR-31983、NPR-31950)。
+* 设计人员：如果启用标记选项，子表单边框将消失在生成的PDF输出中(NPR-32547、NPR-31983、NPR-31950)。
 
-* 设计人员： 如果表中存在合并的单元格，则使用输出服务从XDP表单转换的输出PDF文件的辅助功能测试将失败(CQ-4285372)。
+* 设计人员：如果表中存在合并的单元格，则使用输出服务从XDP表单转换的输出PDF文件的辅助功能测试将失败(CQ-4285372)。
 
-* JEE基金会： 如果Experience ManagerForms服务器与群集断开连接，缓存问题会阻止它重新连接到服务器(NPR-32412)。
+* JEE基金会：如果Experience ManagerForms服务器与群集断开连接，缓存问题会阻止它重新连接到服务器(NPR-32412)。
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -307,7 +307,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 取消选择“文件类型”过滤器中的二级复选框时，将清除所有复选框，并且搜索栏中的文本与选定或取消选择的属性不同步(NPR-31287)。
 
-* 不能从文件夹的“成员”部分删除所有成员（用户／用户组）; 在尝试删除所有用户时，已登录用户将添加到列表(NPR-31171)。
+* 不能从文件夹的“成员”部分删除所有成员（用户／用户组）;在尝试删除所有用户时，已登录用户将添加到列表(NPR-31171)。
 
 * 无法删除文件名`+`中包含加号()的资源(NPR-31162)。
 
@@ -337,7 +337,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 从以混合模 [!DNL Experience Manager] 式运行 [!DNL Dynamic Media]下载的动态演绎版将断开（它们属于文本类型，内容为“找不到图像”而非图像内容类型）(NPR-30876)。
 
-* [!DNL Dynamic Media] 编码视频工作流无法为Adobe Experience Manager时从Scene7模式迁 [!DNL Dynamic Media Classic] 移到 [!DNL Dynamic Media]模式的视频生成缩略图(CQ-4282011)。
+* [!DNL Dynamic Media] “编码视频”工作流无法为从Adobe Experience Manager的“Scene7” [!DNL Dynamic Media Classic] 模式迁 [!DNL Dynamic Media]移到“”模式的视频生成缩略图(CQ-4282011)。
 
 * 使用不同的Scene7公司ID(CQ-4280548)将资源从一个实例迁移到另一个实例时观察到IpsApiException。
 
@@ -365,7 +365,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * PDF文件不进行索引，内容也不可搜索(CQ-4278916)。
 
-* 错误“用户选取器未列出组： 在添加具有不同和的已关闭用户组时，将观察“ `principalName` 预期 `authorizableId` 为false”到“等于true”(CQ-4278177)。
+* 错误“用户选取器未列出组：在添加具有不同和的已关闭用户组时，将观察“ `principalName` 预期 `authorizableId` 为false”到“等于true”(CQ-4278177)。
 
 * 资产UI列视图显示所有路径，而不管特定租户的dam根路径如何(CQ-4278175)。
 
@@ -421,7 +421,7 @@ Remove one mention of this fix.
 
 * 基于 Jetty 的 HTTP 服务的缓冲区大小配置中的更新未保存 (NPR-30925)。
 
-* QueryBuilder现在支持 ``fn:name()`` xpath查询中的orderby(NPR-31322)。
+* QueryBuilder现在支持 `fn:name()` xpath查询中的orderby(NPR-31322)。
 
 * 重复激活树是在从6.3 [!DNL Experience Manager] 升级时创建的(NPR-31513)。
 
@@ -431,7 +431,7 @@ Remove one mention of this fix.
 
 * 由于Apache POI和Apache Tika捆绑包的不 [!DNL Experience Manager Communities] 同版本，将ZIP文件附加到帖子时会显示错误(NPR-31018)。
 
-* 捆绑 ``org.apache.sling.distribution.api`` 包隐藏在配置管理器中，因此对自定义捆绑包不可用(NPR-31720)。
+* 捆绑 `org.apache.sling.distribution.api` 包隐藏在配置管理器中，因此对自定义捆绑包不可用(NPR-31720)。
 
 ### 项目 {#projects}
 
@@ -554,13 +554,13 @@ Remove one mention of this fix.
 
 * 通过 ACP API 生成的 URL 和文件夹元数据中的资产路径未进行 URL 编码。GRANITE-26198：适用于 CQ-4271814 的修补程序
 * Unzipping an archive with a folder having a percent sign (%) in its name can not be opened using [!DNL Experience Manager Assets] interface. NPR-29989：适用于 CQ-4270467 的修补程序
-* 触屏UI: 在管理发布向导过程中，在发布请求主体中的页面之后添加引用，导致所有资产在页面后发布，呈现页面时，发布实例中的部分资产会丢失。 NPR-29985：适用于 CQ-4270724 的修补程序
+* 触屏UI:在管理发布向导过程中，在发布请求主体中的页面之后添加引用，导致所有资产在页面后发布，呈现页面时，发布实例中的部分资产会丢失。 NPR-29985：适用于 CQ-4270724 的修补程序
 * “取消关联资产”功能无法用于名称中包含特殊字符（成为 URI 编码的字符）的关联资产。NPR-30387：适用于 CQ-4274446 的修补程序
 * 编辑内容片段时，使用错误的用户创建此版本。
 * 在基于“租户”的系统上创建收藏集失败。NPR-30114：适用于 CQ-4272948 的修补程序
 * Asset UI 列视图不遵循当前租户的 dam 根路径，而是访问所有租户的 dam 路径。NPR-30636：适用于 CQ-4275481 的修补程序
 * 由于能够看到插入的图像，可通过受限的文件警告窗口实施跨站点脚本 (XSS) 攻击。NPR-30617：适用于 CQ-4270133 的修补程序
-* 多租户： 保存文件夹属性的租户会同时观察成功提示和错误消息，说明操作未成功，“无法编辑属性。 权限不足。”因此，让租户感到困惑。NPR-30545：适用于 CQ-4275333 的修补程序
+* 多租户：保存文件夹属性的租户会同时观察成功提示和错误消息，说明操作未成功，“无法编辑属性。 权限不足。”因此，让租户感到困惑。NPR-30545：适用于 CQ-4275333 的修补程序
 * 资产选择器对话框不允许选择资产，因此无法使用相关源替换功能来更新源。NPR-30502：适用于 CQ-4275029 的修补程序
 * [!UICONTROL DAM更新资产工作流] -在上传大型mp4文件时处于过时状态。 NPR-30480：适用于 CQ-4271352 的修补程序
 * 由于有效负荷为空，“创建审核任务”功能不起作用，使所有后续与审核任务相关的操作失败。NPR-30468：适用于 CQ-4274263 的修补程序
@@ -574,7 +574,7 @@ Remove one mention of this fix.
 * Share Link feature is not working on [!DNL Experience Manager] instance with DMS7 configuration. NPR-30080、NPR-30492：适用于 CQ-4273651 的修补程序
 * Adding the [!DNL Dynamic Media]–Scene7 component to the page, and then publishing the page does not trigger the dmscene7 configuration every time. NPR-30641：适用于 CQ-4275962 的修补程序
 * Added an IPSJobJournal in [!DNL Experience Manager] to create only one Intrusion Prevention Systems (IPS) job per processing profile. NPR-30490：适用于 CQ-4273614 的修补程序
-* [!DNL Dynamic Media]: 添加了默认过滤器，以排除资产被复制到发 [!DNL Experience Manager] 布节点。 NPR-30538：适用于 CQ-4274678 的修补程序
+* [!DNL Dynamic Media]:添加了默认过滤器，以排除资产被复制到发 [!DNL Experience Manager] 布节点。 NPR-30538：适用于 CQ-4274678 的修补程序
 * 为多资源支持引入了一个外部“重新处理”工作流，以允许文件夹作为有效负载。工作流包含两个步骤 - 通过到下一步的元数据映射重新处理没有句柄的资产，并在单个 IPS 作业中将所有没有资产句柄的资产重新上传到 S7。For more details, see Configuring [!DNL Dynamic Media] Cloud Services. NPR-30489：适用于 CQ-4272903 的修补程序
 * 正确的 CSV 擦除正确的 CSV 后，会上传一个错误的 CSV。适用于 CQ-4277694、CQ-4277814 的修补程序
 * 特定于要删除的贡献文件夹的图标错误。适用于 CQ-4277580 的修补程序
@@ -592,7 +592,7 @@ Remove one mention of this fix.
 * 搜索筛选器面板中错误地显示用户生成内容。适用于 CQ-4273875 的修补程序
 * “查找近似项”选项不适用于 TIFF 图像。适用于 CQ-4278238 的修补程序
 * 在 VideoPlayer 中实施了加载时使视频静音的选项。适用于 CQ-4266465 的修补程序
-* 查看器- VideoViewer: poster=none在使用外部视频时工作不正确。 适用于 CQ-4265536 的修补程序
+* 查看器- VideoViewer:poster=none在使用外部视频时工作不正确。 适用于 CQ-4265536 的修补程序
 * 在 IE11 和 MS Edge 浏览器中播放视频期间显示“等待”图标。适用于 CQ-4251539 的修补程序
 * 3.8 SDK和5.13查看器自述文件不会更新，并包含先前版本的信息。 适用于 CQ-4273737 的修补程序
 * 即使在保存更改之前，也要对内容片段进行版本控制。NPR-30616：适用于 CQ-4273088 的修补程序
@@ -669,7 +669,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 **后端集成**
 
 * 无法使用 AWS 托管的负载平衡 URL 来配置“表单数据模型”。NPR-30123：适用于 CQ-4273359 的修补程序
-* 使用Web服务定义语言(WSDL)创建表单数据模型(FDM)时，返回错误 `Caused by: com.adobe.aem.dermis.exception.DermisException: java.lang.Exception: Unable to handle content type` 消息： NPR-30477: CQ-4272921的修补程序
+* 使用Web服务定义语言(WSDL)创建表单数据模型(FDM)时，返回错误 `Caused by: com.adobe.aem.dermis.exception.DermisException: java.lang.Exception: Unable to handle content type` 消息：NPR-30477:CQ-4272921的修补程序
 
 **通信管理**
 
@@ -736,7 +736,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 ### 资产
 
 * 针对 S3 多部分支持更新了 DAM DMGateway 接口。NPR-29740：适用于 CQ-4226303 的修补程序
-* 再现预览 `Only empty tenantId is currently supported` 在升级到6.5 [!DNL Experience Manager] 后生成错误。NPR-29986: CQ-4272353的修补程序
+* 再现预览 `Only empty tenantId is currently supported` 在升级到6.5 [!DNL Experience Manager] 后生成错误。NPR-29986:CQ-4272353的修补程序
 * “删除”对话框不可见，因此不允许删除作业。NPR-29720：适用于 CQ-4271074 的修补程序
 * After adding asset title in the properties page, when a user attempts to close the page, [!DNL Experience Manager] opens the properties page again. NPR-29627：适用于 CQ-4264929 的修补程序
 * VersioningTimelineEventProvider 应该提供 root 版本以及 nt：version 类型的节点。适用于 GRANITE-26063 的修补程序
@@ -840,7 +840,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * OSGi only: Added a new attribute `PAGECOUNT` in Output and Forms Service.
 
-* 仅限OSGI: 支持使用Forms服务创建静态PDF文件。
+* 仅限OSGI:支持使用Forms服务创建静态PDF文件。
 * 为管理员和根用户启用了对 XMLForm.exe 的权限。
 * 为 Dynamics 内部部署集成启用了对 ADFS v3.0 的支持。
 
@@ -868,7 +868,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 * Adaptive Form field validation failure breaks [!DNL Adobe Sign]. 适用于 CQ-4269463 的修补程序
 * When an [!DNL Experience Manager Forms] instance has more than 20 adaptive form fragments and name of all the form fragments starts with the same string, the search returns no or only recent 20 created fragments. 适用于 CQ-4264414、CQ-4264914 的修补程序
 
-* Adaptive Forms应用程序与大数据集一起使用时的性能问题。 . 适用于 CQ-4235310 的修补程序
+* Adaptive Forms应用程序与大数据集一起使用时的性能问题。. 适用于 CQ-4235310 的修补程序
 
 * 通过匿名帐户在发布实例上进行访问时，GuideRuntime 脚本加载失败。适用于 CQ-4268679 的修补程序
 
@@ -932,7 +932,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 * “表单”字段无法转换为PDF/A-1b，没有外观命令。 NPR-29940：适用于 CQ-4269618 的修补程序
 
-* OSGi: 无法确定渲染过程中生成的页数。 NPR-28922：适用于 CQ-4270870 的修补程序
+* OSGi:无法确定渲染过程中生成的页数。 NPR-28922：适用于 CQ-4270870 的修补程序
 * 使用中的Forms服务支持静态PDF文 [!DNL Experience Manager Forms OSGi]件。 NPR-28572：适用于 CQ-4270869 的修补程序
 * 无法更改对 XMLForm.exe 的权限。NPR-29828、NPR-29237：适用于 Q-4267080 的修补程序
 * The static PDF created by the [!DNL Experience Manager Forms] server’s output module does not populate the language attribute/tag with the language of the document created. NPR-27332：适用于 CQ-4271002 的修补程序
@@ -955,8 +955,8 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 #### Forms - 文档服务 -包括
 
-* 仅限OSGi: 在“输出”和“Forms服务”中添加了新属性PAGECOUNT。 NPR-28922：适用于 CQ-4270870 的修补程序
-* 仅限OSGi: 支持使用Forms服务创建静态PDF文件。 NPR-28572：适用于 CQ-4270869 的修补程序
+* 仅限OSGi:在“输出”和“Forms服务”中添加了新属性PAGECOUNT。 NPR-28922：适用于 CQ-4270870 的修补程序
+* 仅限OSGi:支持使用Forms服务创建静态PDF文件。 NPR-28572：适用于 CQ-4270869 的修补程序
 * 为管理员和根用户启用了对 XMLForm.exe 的权限。NPR-29237：适用于 CQ-4267080 的修补程序
 
 ### OSGi 包和内容包
