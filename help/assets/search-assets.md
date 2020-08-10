@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
 workflow-type: tm+mt
-source-wordcount: '5860'
+source-wordcount: '5858'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 6%
 | [搜索建议](#searchsuggestions) | [强制元数据](#mandatorymetadata) | [下载](#download) |
 | [了解搜索结果和行为](#searchbehavior) | [修改搜索彩块化](#searchfacets) | [批量元数据更新](#metadataupdates) |
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
-| [高级搜索： 筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
+| [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
 | [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Manager桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic Media资产](#dynamicmedia)</li></ul> |  |  |
 | [资产选取器](#assetpicker) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
@@ -43,7 +43,7 @@ ht-degree: 6%
 
 ![了解Experience Manager资产搜索结果界面](assets/aem_search_results.png)
 
-*图： 了解[!DNL Experience Manager Assets]搜索结果界面。*
+*图：了解[!DNL Experience Manager Assets]搜索结果界面。*
 
 **答：将搜索** 另存为智能收藏集。 **B.过滤器** 或谓词，以缩小搜索结果。 **C.显示文件** 、文件夹，或同时显示这两个文件。 **D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F. Omnisearch** 字段，其中包含用户提供的搜索关键字。 **G.选择** 加载的搜索结果。 **H.** 在总搜索结果中显示的搜索结果数。 **I.关闭** 搜索 **J.在卡视图** 和列表视图之间切换。
 
@@ -53,7 +53,7 @@ ht-degree: 6%
 
 ![在搜索彩块化中查看资产的大致数量，无需筛选搜索结果。](assets/asset_search_results_in_facets_filters.png)
 
-*图： 在搜索彩块化中查看资产的大致数量，无需筛选搜索结果。*
+*图：在搜索彩块化中查看资产的大致数量，无需筛选搜索结果。*
 
 ## 了解搜索结果和行为 {#searchbehavior}
 
@@ -102,7 +102,7 @@ ht-degree: 6%
 
 ![键入多个关键字以视图建议，使其全部适合](assets/search_suggestionsmanykeywords.gif)
 
-*图： 键入多个关键字以视图建议，使其全部适合。*
+*图：键入多个关键字以视图建议，使其全部适合。*
 
 ### 搜索排名和提升 {#searchrank}
 
@@ -128,13 +128,13 @@ ht-degree: 6%
 
 [!DNL Experience Manager] 提供了各种方法(如应用于搜索的资产的过滤器)，以帮助您更快地找到所需的资产。 下面介绍了一些常用的方法。 下面 [分享了一些](#samples) 带插图的示例。
 
-**搜索文件或文件夹**: 在搜索结果中，可查看文件、文件夹或两者。 从“ **[!UICONTROL 过滤器]** ”面板中，可以选择相应的选项。 请参阅 [搜索界面](#searchui)。
+**搜索文件或文件夹**:在搜索结果中，可查看文件、文件夹或两者。 从“ **[!UICONTROL 过滤器]** ”面板中，可以选择相应的选项。 请参阅 [搜索界面](#searchui)。
 
-**在文件夹内搜索资产**: 您可以将搜索限制为特定文件夹。 在“ **[!UICONTROL 过滤器]** ”面板中，添加文件夹的路径。 一次只能选择一个文件夹。
+**在文件夹内搜索资产**:您可以将搜索限制为特定文件夹。 在“ **[!UICONTROL 过滤器]** ”面板中，添加文件夹的路径。 一次只能选择一个文件夹。
 
 ![通过在“过滤器”面板中添加文件夹路径，将搜索结果限制为文件夹](assets/search_folder_select.gif)
 
-*图： 通过在“过滤器”面板中添加文件夹路径，将搜索结果限制为文件夹。*
+*图：通过在“过滤器”面板中添加文件夹路径，将搜索结果限制为文件夹。*
 
 ### 查找类似图像 {#visualsearch}
 
@@ -142,7 +142,7 @@ ht-degree: 6%
 
 ![使用卡视图中的选项查找类似图像](assets/search_find_similar.png)
 
-*图： 使用卡视图中的选项查找类似图像。*
+*图：使用卡视图中的选项查找类似图像。*
 
 ### Adobe Stock图像 {#adobestock}
 
@@ -170,7 +170,7 @@ ht-degree: 6%
 | 过期日期 | expires:YYYY-MM-DDTHH |
 | 开始时间 | ontime:YYYY-MM-DDTHH |
 | 结束时间 | offtime:YYYY-MM-DDTHH |
-| 时间范围（过期日期、开始时间、结束时间） | facet字段： lowerbound...上界 |
+| 时间范围（过期日期、开始时间、结束时间） | facet字段：lowerbound...上界 |
 | 路径 | /content/dam/&lt;folder name> |
 | PDF 标题 | pdftitle:&quot;Adobe Document&quot; |
 | 主题 | subject:&quot;Training&quot; |
@@ -247,7 +247,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ![在资产选取器中浏览并选择资产](assets/assetpicker.png)
 
-*图： 在资产选取器中浏览并选择资产。*
+*图：在资产选取器中浏览并选择资产。*
 
 ## 限制 {#limitations}
 
@@ -257,7 +257,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 * [!DNL Experience Manager] 在您从搜索结果中选择资产的属性，然后取消搜索后，可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 在搜索文件夹或文件和文件夹时，无法按任何参数对搜索结果进行排序。
 * 如果按回车键时未在Omnisearch栏中键入任何内容， [!DNL Experience Manager] 则返回仅包含文件的列表，而不包含文件夹。 如果您在不使用关键字的情况下专门搜索文 [!DNL Experience Manager] 件夹，则不返回任何结果。
-* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -272,15 +272,15 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 * 在监视资产的审核状态时，请使用适当的选项来查找已批准的资产或待批准的资产。
 * 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况渠道按使用情况得分、展示次数、点击次数和显示资产的媒体类别进行分组。
-* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 * 要搜索不包含强制元数据的资产，请参阅强制 [元数据](#mandatorymetadata)。
 * 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
 * 全文搜索支持——和^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用“笔记本——美容”而不是“笔记本——美容”。
 * 如果搜索结果太多，请将所 [需资产的搜](#scope) 索范围限制为零。 当您了解如何更好地查找所需的资产（例如特定文件类型、特定位置、特定元数据等）时，它会发挥最佳作用。
 
-* **标记**: 标记可帮助您更高效地对可以浏览和搜索的资产进行分类。 标记有助于将相应的分类传播到其他用户和工作流。 [!DNL Experience Manager] 优惠使用Adobe Sensei的人为智能服务自动标记资产的方法，这些服务通过使用和培训不断改进资产标记功能。 在搜索资产时，如果您的帐户启用了智能标记，则智能标记会被纳入其中。 它与内置的搜索功能配合使用。 查看 [搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以提 [升几个选定资产](#searchrank) 的搜索排名。
+* **标记**:标记可帮助您更高效地对可以浏览和搜索的资产进行分类。 标记有助于将相应的分类传播到其他用户和工作流。 [!DNL Experience Manager] 优惠使用Adobe Sensei的人为智能服务自动标记资产的方法，这些服务通过使用和培训不断改进资产标记功能。 在搜索资产时，如果您的帐户启用了智能标记，则智能标记会被纳入其中。 它与内置的搜索功能配合使用。 查看 [搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以提 [升几个选定资产](#searchrank) 的搜索排名。
 
-* **索引**: 搜索结果中只返回已索引的元数据和资产。 为获得更好的覆盖和性能，请确保正确的索引并遵循最佳做法。 请参阅 [索引](#searchindex)。
+* **索引**:搜索结果中只返回已索引的元数据和资产。 为获得更好的覆盖和性能，请确保正确的索引并遵循最佳做法。 请参阅 [索引](#searchindex)。
 
 ## 一些说明搜索的示例 {#samples}
 
@@ -288,9 +288,9 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ![带引号和不带引号的搜索行为](assets/search_with_quotes.gif)
 
-*图： 带引号和不带引号的搜索行为。*
+*图：带引号和不带引号的搜索行为。*
 
-**使用星号通配符搜索**: 要扩大搜索范围，请在搜索单词之前或之后使用星号来匹配任意数量的字符。 例如，搜索不带星号的运行不会返回包含该单词任何变体（包括在元数据中）的资产。 星号可替换任意数量的字符。 例如，
+**使用星号通配符搜索**:要扩大搜索范围，请在搜索单词之前或之后使用星号来匹配任意数量的字符。 例如，搜索不带星号的运行不会返回包含该单词任何变体（包括在元数据中）的资产。 星号可替换任意数量的字符。 例如，
 
 * `run` 返回具有完全运行关键字的资产
 * `run*` 返回资产，包括流动、流动、失控等。
@@ -299,9 +299,9 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ![通过示例说明在资产搜索中使用星号通配符](assets/search_with_asterisk_run.gif)
 
-*图： 通过示例说明在资产搜索中使用星号通配符。*
+*图：通过示例说明在资产搜索中使用星号通配符。*
 
-**使用问号通配符搜索**: 要扩展搜索范围，请使用一个或多个“?” 字符与字符数完全匹配。 例如，在下图中，
+**使用问号通配符搜索**:要扩展搜索范围，请使用一个或多个“?” 字符与字符数完全匹配。 例如，在下图中，
 
 * `run???` 查询与任何资产不匹配。
 
@@ -311,13 +311,13 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ![通过示例说明在资产搜索中使用问号通配符](assets/search_with_questionmark_run.gif)
 
-*图： 通过示例说明在资产搜索中使用问号通配符。*
+*图：通过示例说明在资产搜索中使用问号通配符。*
 
-**排除关键字**: 使用短划线搜索不包含关键字的资产。 例如， `running -shoe` 查询返回包含但 `running`不包含的资 `shoe`产。 同样， `camp -night` 查询会返回包含但 `camp` 不包含的 `night`资产。 查询 `camp-night` 返回同时包含和的 `camp` 资产 `night`。
+**排除关键字**:使用短划线搜索不包含关键字的资产。 例如， `running -shoe` 查询返回包含但 `running`不包含的资 `shoe`产。 同样， `camp -night` 查询会返回包含但 `camp` 不包含的 `night`资产。 查询 `camp-night` 返回同时包含和的 `camp` 资产 `night`。
 
 ![使用短划线搜索不包含被排除关键字的资产](assets/search_dash_exclude_keyword.gif)
 
-*图： 使用短划线搜索不包含被排除关键字的资产。*
+*图：使用短划线搜索不包含被排除关键字的资产。*
 
 ## 与搜索功能相关的配置和管理任务 {#configadmin}
 
@@ -419,7 +419,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ![对搜索资产的时间轴条目进行排序](assets/sort_timeline_search_results.gif)
 
-*图： 对搜索资产的时间轴条目进行排序。*
+*图：对搜索资产的时间轴条目进行排序。*
 
 ### 下载搜索的资源 {#download}
 
@@ -457,6 +457,6 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 >[!MORELIKETHIS]
 >
 >* [Experience Manager搜索实施指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
->* [多值和标记搜索谓词的高级配置](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/search-feature-video-use.html)
+>* [用于提升搜索结果的高级配置](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search-boost.html)
 >* [配置智能翻译搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
 
