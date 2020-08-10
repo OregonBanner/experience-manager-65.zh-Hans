@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 17%
@@ -19,103 +19,103 @@ ht-degree: 17%
 
 # 将 Dynamic Media 查看器与 Adobe Analytics 和 Adobe Launch 集成 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
-## 什么是Dynamic Media查看器与AdobeAnalytics和Adobe Launch集成？ {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
+## 什么是Dynamic Media Viewers与Adobe Analytics和AdobeLaunch集成？ {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
 The new *Dynamic Media Viewers* extension for Adobe Launch, along with the recent release of Dynamic Media Viewers 5.13, lets customers of Dynamic Media, Adobe Analytics, and Adobe Launch to use events and data specific for the Dynamic Media Viewers in their Adobe Launch configuration.
 
-此集成意味着您可以通过AdobeDynamic Media跟踪网站上Analytics查看器的使用情况。 同时，您可以将查看者公开的事件和数据与来自Adobe或第三方的任何其他Launch扩展一起使用。
+此集成意味着您可以跟踪Dynamic Media查看器在您与Adobe Analytics的网站上的使用情况。 同时，您可以将查看者公开的事件和数据与来自Adobe或第三方的任何其他启动扩展一起使用。
 
-请参 [阅《Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/overview.html) 用户指南》中的Adobe Extension，进一步了解扩展。
+请参 [阅《Adobe](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/overview.html) 用户指南》中的“Experience Platform Launch扩展”，以了解有关扩展的更多信息。
 
 **谁应阅读此文档：** AEM 平台及操作中的站点管理员、开发人员。
 
 ### 集成限制 {#limitations-of-the-integration}
 
-* 适用于Dynamic Media查看器的Adobe Launch集成在AEM作者节点中不起作用。 在WCM页面发布之前，您无法看到任何跟踪。
-* “弹出”操作模式不支持Dynamic Media查看器的Adobe Launch集成，在该模式下，查看器URL使用“资产详细信息”页面上的“URL”按钮获取。
-* Adobe Launch集成不能与传统查看器Analytics集成（通过参数）同时 `config2=` 使用。
+* Adobe启动与Dynamic Media查看器的集成在AEM作者节点中不起作用。 在WCM页面发布之前，您无法看到任何跟踪。
+* “弹出”操作模式不支持Adobe启动Dynamic Media查看器的集成，在该模式下，查看器URL是使用“资产详细信息”页面上的“URL”按钮获取的。
+* Adobe启动集成不能与传统查看器分析集成（通过参数）同时 `config2=` 使用。
 * 视频跟踪支持仅限于核心回放跟踪，如跟踪概述 [中所述](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html)。 特别是，不支持QoS、广告、章节／段或错误跟踪。
-* 使用存储查看器扩展的Dynamic Media元素不支持数据元素的 *持续时间* 配置。 存储持续时间必须设置为 **[!UICONTROL 无]**。
+* 使用Dynamic Media Viewer扩展的存储元素不支持元素的 *持续时间* 配置。 存储持续时间必须设置为 **[!UICONTROL 无]**。
 
 ### 集成用例 {#use-cases-for-the-integration}
 
-与Adobe Launch集成的主要用例是同时使用AEM Assets和AEM Sites的客户。 在这些情况下，您可以在AEM作者节点与Adobe Launch之间设置标准集成，然后将站点实例与Adobe Launch属性关联。 之后，添加到“站点”页面的任何Dynamic MediaWCM组件都将跟踪查看者的数据和事件。
+与AdobeLaunch集成的主要用例是同时使用AEM Assets和AEM Sites的客户。 在这种情况下，您可以在AEM作者节点和Adobe启动之间设置标准集成，然后将您的站点实例与Adobe启动属性相关联。 之后，添加到“站点”页面的任何Dynamic Media WCM组件都将跟踪查看者的数据和事件。
 
-请参 [阅关于跟踪AEM Sites中的Dynamic Media查看器](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites)。
+请参 [阅关于跟踪AEM Sites的Dynamic Media查看器](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites)。
 
-集成支持的次要用例是那些仅使用AEM Assets的客户或Dynamic Media经典。 在这种情况下，您将获得查看器的嵌入代码并将其添加到网站页面。 然后，从Adobe Launch获取Adobe Launch库生产URL，然后手动将其添加到网页代码。
+集成支持的次要用例是那些仅使用AEM Assets或Dynamic Media Classic的客户。 在这种情况下，您将获得查看器的嵌入代码并将其添加到网站页面。 然后，从Adobe启动中获取Adobe启动库生产URL，然后手动将其添加到网页代码。
 
 请参 [阅关于使用嵌入代码跟踪Dynamic Media查看器](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode)。
 
 ## 数据和事件跟踪如何在集成中工作 {#how-data-and-event-tracking-works-in-the-integration}
 
-该集成利用两种独立的Dynamic Media查看器跟踪类型： *AdobeAnalytics* 和 *Adobe音频和视频Analytics*。
+该集成利用两种独立类型的Dynamic Media查看器跟踪： *Adobe Analytics* 和 *Adobe Analytics音频和视频部*。
 
-### 关于使用AdobeAnalytics进行跟踪  {#about-tracking-using-adobe-analytics}
+### 关于使用Adobe Analytics跟踪  {#about-tracking-using-adobe-analytics}
 
-AdobeAnalytics允许您跟踪最终用户在您网站上与Dynamic Media查看器交互时执行的操作。 AdobeAnalytics还允许您跟踪特定于查看器的数据。 例如，您可以跟踪和记录视图加载事件以及资产名称、发生的任何缩放操作、视频播放操作等。
+Adobe Analytics允许您跟踪最终用户在您网站上与Dynamic Media查看器交互时执行的操作。 Adobe Analytics还允许您跟踪特定于查看器的数据。 例如，您可以跟踪和记录视图加载事件以及资产名称、发生的任何缩放操作、视频播放操作等。
 
-在Adobe Launch中，数据元素 *和规则**的概念可协* 同使用，以实现AdobeAnalytics跟踪。
+在Adobe启动中，数据元 *素和规则**的概念协同工* 作，实现Adobe Analytics跟踪。
 
-#### 关于Adobe Launch中的数据元素 {#about-data-elements-in-adobe-launch}
+#### 关于Adobe启动中的数据元素 {#about-data-elements-in-adobe-launch}
 
-Adobe Launch中的数据元素是已命名的属性，其值是静态定义的，或根据网页或Dynamic Media查看器数据的状态动态计算的。
+Adobe启动中的数据元素是已命名的属性，其值是静态定义的，或根据网页或Dynamic Media查看器数据的状态动态计算的。
 
-数据元素定义的可用选项取决于Adobe Launch属性中安装的扩展的列表。 “核心”扩展已预装，可在任何配置中开箱即用。 此“核心”扩展允许定义一个数据元素，该数据元素的值来自cookie、JavaScript代码、查询字符串和许多其他源。
+可用于数据元素定义的选项取决于Adobe启动属性中安装的扩展的列表。 “核心”扩展已预装，可在任何配置中开箱即用。 此“核心”扩展允许定义一个数据元素，该数据元素的值来自cookie、JavaScript代码、查询字符串和许多其他源。
 
-对于跟踪多个附加扩展的AdobeAnalytics，需要安装这些扩展，如 [扩展的安装和设置中所述](#installing-and-setup-of-extensions)。 Dynamic Media查看器扩展添加了定义数据元素的功能，该值是Dynamic Viewer事件的参数。 例如，可以引用查看器类型或查看器在加载时报告的资产名称、最终用户缩放时报告的缩放级别等。
+Adobe Analytics跟踪需要安装多个附加扩展，如安装和 [设置扩展中所述](#installing-and-setup-of-extensions)。 Dynamic Media Viewers扩展添加了定义数据元素的功能，该数据元素值是Dynamic Viewer事件的参数。 例如，可以引用查看器类型或查看器在加载时报告的资产名称、最终用户缩放时报告的缩放级别等。
 
-Dynamic Media查看器扩展自动保持其数据元素的值最新。
+Dynamic Media Viewer扩展可自动使其数据元素的值保持最新。
 
-定义数据元素后，可以使用数据元素选取器构件在Adobe Launch UI的其他位置使用数据元素。 尤其是，为Dynamic Media查看器跟踪而定义的数据元素将被AdobeAnalytics扩展的“设置变量操作”（见下文）引用。
+定义数据元素后，可以使用Adobe元素选取器构件在数据启动UI的其他位置使用数据元素。 尤其是，为了Dynamic Media查看器跟踪而定义的数据元素将由规则中Adobe Analytics扩展的设置变量操作引用（请参阅下文）。
 
 请参 [阅《Experience Platform Launch](https://docs.adobe.com/content/help/zh-Hans/launch/using/reference/manage-resources/data-elements.html) 用户指南》中的数据元素了解更多信息。
 
-#### 关于Adobe Launch中的规则 {#about-rules-in-adobe-launch}
+#### 关于Adobe启动中的规则 {#about-rules-in-adobe-launch}
 
-Adobe Launch中的规则是一个不可知配置，它定义构成规则的三个区域： *事件*、 *条件*&#x200B;和 *操作*:
+Adobe启动中的规则是一种不可知配置，它定义构成规则的三个区域： *事件*、 *条件*&#x200B;和 *操作*:
 
-* *事件* （如果）告知Adobe Launch何时触发规则。
-* *条件* （如果）告知Adobe Launch在触发规则时允许或禁止哪些附加限制。
-* *操作* （然后）告诉Adobe Launch在触发规则时要执行什么操作。
+* *事件* （如果）告诉Adobe启动何时触发规则。
+* *条件* （如果）告知Adobe启动在触发规则时允许或禁止的附加限制。
+* *操作* （然后）告诉Adobe启动在触发规则时要执行的操作。
 
-“事件”、“条件”和“操作”部分提供的选项取决于Adobe Launch属性中安装的扩展。 已 *预装* “核心扩展”，并可在任何配置中开箱即用。 该扩展为事件提供了多个选项，如基本的浏览器级操作，包括焦点更改、按键、表单提交等。 它还包含Conditions选项，如cookie值、浏览器类型等。 对于“操作”，仅“自定义代码”选项可用。
+“事件”、“条件”和“操作”部分提供的选项取决于Adobe启动属性中安装的扩展。 已 *预装* “核心扩展”，并可在任何配置中开箱即用。 该扩展为事件提供了多个选项，如基本的浏览器级操作，包括焦点更改、按键、表单提交等。 它还包含Conditions选项，如cookie值、浏览器类型等。 对于“操作”，仅“自定义代码”选项可用。
 
-要进行AdobeAnalytics跟踪，必须安装若干附加扩展，如扩展 [的安装和设置中所述](#installing-and-setup-of-extensions)。 具体而言：
+要进行Adobe Analytics跟踪，必须安装多个附加扩展，如安装和 [设置扩展中所述](#installing-and-setup-of-extensions)。 具体而言：
 
-* Dynamic Media查看器扩展将受支持事件的列表扩展到特定于Dynamic Media查看器的事件，如查看器加载、资产交换、放大和视频播放。
-* AdobeAnalytics扩展扩展了受支持操作的列表，其中包含将数据发送到跟踪服务器所需的两个操作： *设置变量* 和 *发送信标*。
+* Dynamic Media Viewers扩展将受支持事件的列表扩展到特定于Dynamic Media查看器的事件，如查看器加载、资产交换、放大和视频播放。
+* Adobe Analytics扩展通过向跟踪服务器发送数据所需的两个操作扩展了受支持操作的列表: *设置变量* 和 *发送信标*。
 
 要跟踪Dynamic Media查看器，可以使用以下任何类型：
 
-* 事件来自Dynamic Media查看器扩展、核心扩展或任何其他扩展。
+* 来自Dynamic Media Viewers扩展、核心扩展或任何其他扩展的事件。
 * 规则定义中的条件。 或者，可以将条件区域留空。
 
-在“操作”部分，需要执行“设置变 *量”操作* 。 此操作告知AdobeAnalytics如何用数据填充跟踪变量。 同时，“设置变 *量* ”动作不会向跟踪服务器发送任何内容。
+在“操作”部分，需要执行“设置变 *量”操作* 。 此操作告诉Adobe Analytics如何用数据填充跟踪变量。 同时，“设置变 *量* ”动作不会向跟踪服务器发送任何内容。
 
-“设 *置变量* ”动作后面必须有“发送 *信标”动作* 。 “发 *送信标* ”操作实际会向分析跟踪服务器发送数据。 “设置变 *量”和* “ *发送信标*”操作均来自AdobeAnalytics扩展。
+“设 *置变量* ”动作后面必须有“发送 *信标”动作* 。 “发 *送信标* ”操作实际会向分析跟踪服务器发送数据。 “设置变 *量* ”和“ *发送信标*”操作均来自Adobe Analytics扩展。
 
 请参 [阅《Experience Platform Launch](https://docs.adobe.com/content/help/zh-Hans/launch/using/reference/manage-resources/rules.html) 用户指南》中的规则，了解更多信息。
 
 #### 示例配置 {#sample-configuration}
 
-Adobe Launch中的以下示例配置演示了如何在加载查看器时跟踪资产名称。
+Adobe启动中的以下示例配置演示了如何在加载查看器时跟踪资产名称。
 
-1. 在“数 **[!UICONTROL 据元素]** ”选项卡中，定义一个数据元 `AssetName` 素，该元素从“Dynamic Media查看器”扩 `asset` 展中引用 `LOAD` 事件的参数。
+1. 在“数 **[!UICONTROL 据元素]** ”选项卡中，定义一个从Dynamic `AssetName` Media Viewers扩展中引 `asset` 用事件 `LOAD` 参数的数据元素。
 
    ![image2019-11](assets/image2019-11.png)
 
 1. 在“规 **[!UICONTROL 则]** ”选项卡中，定义 *规则TrackAssetOnLoad*。
 
-   在此规则中， **[!UICONTROL 事件]** 字段使 **[!UICONTROL 用Dynamic Media查]** 看器扩展的LOAD事件。
+   在此规则中， **[!UICONTROL 事件]** 字段使 **[!UICONTROL 用]** Dynamic Media Viewer扩展中的LOAD事件。
 
    ![image2019-22](assets/image2019-22.png)
 
-1. “操作”配置包含AdobeAnalytics扩展中的两种操作类型：
+1. “操作”配置有来自Adobe Analytics扩展的两种“操作”类型：
 
    *设置变量*，将您选择的分析变量映射到数据元素 `AssetName` 的值。
 
-   *发送信标*，它向AdobeAnalytics发送跟踪信息。
+   *发送信标*，将跟踪信息发送给Adobe Analytics。
 
    ![image2019-3](assets/image2019-3.png)
 
@@ -123,23 +123,23 @@ Adobe Launch中的以下示例配置演示了如何在加载查看器时跟踪�
 
    ![image2019-4](assets/image2019-4.png)
 
-### 关于Adobe音频和视频Analytics {#about-adobe-analytics-for-audio-and-video}
+### 关于Adobe Analytics音频和视频 {#about-adobe-analytics-for-audio-and-video}
 
-订阅Experience Cloud帐户以使用AdobeAnalytics进行音频和视频时，就足以在Dynamic Media查看器扩展设置中启 *用视频* 跟踪。 视频指标在AdobeAnalytics中可用。 视频跟踪取决于是否存在用于音频和视频扩展的Adobe媒体Analytics。
+订阅Experience Cloud帐户以使用Adobe Analytics音频和视频时，就足以在Dynamic Media查看器扩展设置中启 *用视频* 跟踪。 视频指标在Adobe Analytics可用。 视频跟踪取决于是否存在用于音频和视频扩展的Adobe媒体分析。
 
 请参 [阅扩展的安装和设置](#installing-and-setup-of-extensions)。
 
 目前，对视频跟踪的支持仅限于“核心播放”跟踪，如跟踪概述中 [所述](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html)。 特别是，不支持QoS、广告、章节／段或错误跟踪。
 
-## 使用Dynamic Media查看器扩展 {#using-the-dynamic-media-viewers-extension}
+## 使用Dynamic Media Viewers扩展 {#using-the-dynamic-media-viewers-extension}
 
-如集成 [的使用案例中所述](#use%20cases%20for%20the%20integration)，可以通过AEM Sites中新的Adobe Launch集成和使用嵌入代码跟踪Dynamic Media查看器。
+如集成 [的使用案例中所述](#use%20cases%20for%20the%20integration)，可以通过AEM Sites的新Adobe启动集成和使用嵌入代码跟踪Dynamic Media查看器。
 
-### 跟踪AEM Sites中的Dynamic Media查看器 {#tracking-dynamic-media-viewers-in-aem-sites}
+### 跟踪AEM Sites的Dynamic Media查看器 {#tracking-dynamic-media-viewers-in-aem-sites}
 
-要跟踪AEM Sites中的Dynamic Media查看器，必须执行配置 [所有集成部分下列](#configuring-all-the-integration-pieces) 的所有步骤。 具体而言，您必须创建IMS配置和Adobe Launch Cloud配置。
+要跟踪AEM Sites的Dynamic Media查看器，必须执行配置所 [有集成部分下列出的所](#configuring-all-the-integration-pieces) 有步骤。 具体而言，您必须创建IMS配置和Adobe启动云配置。
 
-在进行正确配置后，您向“站点”页面添加的任何Dynamic Media查看器(使用Dynamic Media支持的WCM组件)会自动跟踪数据至AdobeAnalytics、Adobe视频Analytics，或同时跟踪两者。
+在进行正确配置后，您使用Dynamic Media支持的WCM组件将添加到“站点”页面的任何Dynamic Media查看器自动跟踪到Adobe Analytics或Adobe Analytics的视频数据，或同时跟踪到这两个数据。
 
 <!-- To be reviewed and updated:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
@@ -147,13 +147,13 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 ### 使用嵌入代码跟踪Dynamic Media查看器 {#tracking-dynamic-media-viewers-using-embed-code}
 
-未使用AEM Sites或将Dynamic Media查看器嵌入AEM Sites以外（或两者兼有）的客户仍可使用Adobe Launch集成。
+未使用AEM Sites或将Dynamic Media查看器嵌入AEM Sites以外网页或两者的客户仍可使用AdobeLaunch集成。
 
 您必须完成[配置 Adobe Analytics](#configuringadobeanalytics) 和[配置 Adobe Launch](#configuringadobelaunch) 部分中的配置步骤。但是，不需要执行与 AEM 相关的配置步骤。
 
-在进行正确配置后，您可以使用Dynamic Media查看器将Adobe Launch支持添加到网页。
+在进行正确配置后，您可以使用Dynamic Media查看器向网页添加Adobe启动支持。
 
-请参 [阅添加启动项嵌入代码](https://docs.adobe.com/content/help/en/launch/using/implement/configure/implement-the-launch-install-code.html) ，进一步了解如何使用Adobe Launch库嵌入代码。
+请参 [阅添加启动项嵌入代码](https://docs.adobe.com/content/help/en/launch/using/implement/configure/implement-the-launch-install-code.html) ，进一步了解如何使用Adobe启动库嵌入代码。
 
 <!-- To be reviewed and updated:
 See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
@@ -162,35 +162,35 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **要使用嵌入代码跟踪Dynamic Media查看器**:
 
 1. 为嵌入Dynamic Media查看器准备网页。
-1. 首先登录Adobe Launch，获取Adobe Launch库的嵌入代码(请参 [阅配置Adobe Launch](#configuringadobelaunch))。
+1. 首先登录Adobe启动，获取Adobe启动库的嵌入代码(请参 [阅配置Adobe启动](#configuringadobelaunch))。
 1. 单击 **[!UICONTROL 属性]**，然后单击 **[!UICONTROL 环境]** 选项卡。
 1. 提取与网页环境相关的环境级别。 然后，在“安 **[!UICONTROL 装]** ”列中，单击框图标。
-1. **[!UICONTROL 在“Web安装说明]** ”对话框中，复制完整的Adobe Launch库嵌入代码以及周围的 `<script/>` 标记。
+1. **[!UICONTROL 在“Web安装说明]** ”对话框中，复制完整的Adobe启动库嵌入代码以及周围的 `<script/>` 标记。
 
 ## Dynamic Media查看器扩展的参考指南 {#reference-guide-for-the-dynamic-media-viewers-extension}
 
 ### 关于Dynamic Media查看器配置 {#about-the-dynamic-media-viewers-configuration}
 
-如果满足以下所有条件，Dynamic Media查看器扩展将自动与Adobe Launch库集成：
+如果满足以下所有条件，Dynamic Media Viewer扩展将自动与Adobe启动库集成：
 
-* 页面上存在Adobe `_satellite`Launch库全局对象()。
-* Dynamic Media查看器扩展功 `_dmviewers_v001()` 能在上定 `_satellite`义。
+* Adobe启动库全 `_satellite`局对象()在页面上。
+* Dynamic Media Viewers扩展功能 `_dmviewers_v001()` 在上定 `_satellite`义。
 
 * `config2=` 未指定查看器参数，这意味着查看器不使用传统Analytics集成。
 
-此外，还有一个选项，可通过在查看器的配置中指定参数来显 `launch=0` 式禁用查看器中的Adobe Launch集成。 此参数的默认值为 `1`。
+此外，还有一个选项，可通过在查看器的配置中指定参数，在查看器 `launch=0` 中显式禁用Adobe启动集成。 此参数的默认值为 `1`。
 
-### 配置Dynamic Media查看器扩展 {#configuring-the-dynamic-media-viewers-extension}
+### 配置Dynamic Media Viewer扩展 {#configuring-the-dynamic-media-viewers-extension}
 
-Dynamic Media查看器扩展的唯一配置选项 **[!UICONTROL 是为音频和视频启用Adobe Media]**。
+Dynamic Media Viewers扩展的唯一配置选项是为音 **[!UICONTROL 频和视频启用Adobe媒体分析]**。
 
-当您选中（启用或“开启”）此选项，并且如果安装并正确配置了Adobe音频和视频扩展媒体Analytics，则视频播放量度将发送到Adobe音频和视频Analytics解决方案。 禁用此选项将关闭视频跟踪。
+当您选中（启用或“开启”）此选项，并且如果安装并正确配置了Adobe媒体分析音频和视频扩展，则视频回放指标将发送到Adobe Analytics音频和视频解决方案。 禁用此选项将关闭视频跟踪。
 
-请注意，如果启用此选 *项而* 未安装Adobe Media Extension for Audio and Video Extension，则此选项无效。
+请注意，如果启用此选 *项时* ，未安装Adobe媒体分析的音频和视频扩展，则此选项无效。
 
 ![image2019-7-22_12-4-23](assets/image2019-7-22_12-4-23.png)
 
-### 关于Dynamic Media查看器扩展中的数据元素 {#about-data-elements-in-the-dynamic-media-viewers-extension}
+### 关于Dynamic Media Viewers扩展中的数据元素 {#about-data-elements-in-the-dynamic-media-viewers-extension}
 
 Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICONTROL 数据元素类型]**&#x200B;下拉列表中的&#x200B;**[!UICONTROL 查看器事件]**。
 
@@ -201,7 +201,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
 
-请参阅Dynamic Media [查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) ，了解按各种查看器类型列表受支持的事件; 转到特定查看器部分，然后单击“支持AdobeAnalytics跟踪”子部分。 目前，Dynamic Media查看器参考指南不文档事件参数。
+有关按每 [种查看器类型列表受支持事件的信息](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) ，请参阅Dynamic Media查看器参考指南；转到特定查看器部分，然后单击“支持Adobe Analytics跟踪”子部分。 目前，Dynamic Media查看器参考指南不文档事件参数。
 
 现在，我们来考虑Dynamic Media查看器数据元素的 *生命周期*。 在页面上发生相应的Dynamic Media查看器事件后，将填充此类数据元素的值。 例如，如果数据元素指向 **[!UICONTROL LOAD]** 事件及其“asset”参数，则此类数据元素的值将在查看器首次运行LOAD事件后接收有效数据。 如果数据元素指向 **[!UICONTROL ZOOM]** 事件及其“scale”参数，则此类数据元素的值将保持为空，直到查看器首次发送 **[!UICONTROL ZOOM]** 事件。
 
@@ -209,38 +209,38 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 任何Dynamic media查看器在网页上都有唯一标识符。 数据元素会跟踪值本身以及已填充该值的查看器。 这意味着，如果同一页面上有多个查看器，并且有一个指向 **[!UICONTROL LOAD]** 事件及其“asset”参数的 **[!UICONTROL AssetName]** Data Element，则 **[!UICONTROL AssetName]** Data Element将保留与页面上加载的每个查看器关联的资产名称集合。
 
-数据元素返回的确切值取决于上下文。 如果在由Dynamic Media查看器事件触发的规则中请求数据元素，则为启动该规则的查看器返回数据元素值。 而且，如果数据元素是在由来自某些其他Adobe Launch扩展的事件触发的规则中请求的，则数据元素的值是来自查看器的最后一个用于更新此数据元素的值。
+数据元素返回的确切值取决于上下文。 如果在由Dynamic Media查看器事件触发的规则中请求数据元素，则为启动该规则的查看器返回数据元素值。 而且，如果在由事件从某些其他Adobe启动扩展触发的规则中请求数据元素，则数据元素的值是查看器中最后一个更新此数据元素的值。
 
 **请考虑以下示例设置**:
 
-* 网页，具有两个Dynamic Media缩放查看器； 我们将它们称为 *viewer1* 和 *viewer2*。
+* 具有两个Dynamic Media缩放查看器的网页；我们将它们称为 *viewer1* 和 *viewer2*。
 
 * **[!UICONTROL ZoomScale]** Data Element指向 **[!UICONTROL ZOOM]** 事件及其“scale”参数。
 * **[!UICONTROL TrackPan]** 规则，包含以下项：
 
-   * 使用Dynamic Media查 **[!UICONTROL 看器]** PAN事件作为触发器。
-   * 将ZoomScale数据元 **[!UICONTROL 素的值]** 发送给AdobeAnalytics。
+   * 使用Dynamic Media Viewer PAN **[!UICONTROL 事件]** 作为触发器。
+   * 将ZoomScale数据元 **[!UICONTROL 素的值]** 发送到Adobe Analytics。
 
 * 
    * **[!UICONTROL TrackKey]** Rule with the follow:
 
-   * 使用核心Adobe Launch扩展的按键事件作为触发器。
-   * 将ZoomScale数据元 **[!UICONTROL 素的值]** 发送给AdobeAnalytics。
+   * 使用核心事件启动扩展的按键Adobe作为触发器。
+   * 将ZoomScale数据元 **[!UICONTROL 素的值]** 发送到Adobe Analytics。
 
-现在，假定最终用户加载包含两个查看器的网页。 在 *viewer1*&#x200B;中，它们放大到50%; 然后，在 *viewer2中*，它们放大到25%缩放。 在 *viewer1*&#x200B;中，它们四处平移图像，最后按下键盘上的键。
+现在，假定最终用户加载包含两个查看器的网页。 在 *viewer1*&#x200B;中，它们放大到50%;然后，在 *viewer2中*，它们放大到25%缩放。 在 *viewer1*&#x200B;中，它们四处平移图像，最后按下键盘上的键。
 
-最终用户的活动导致向AdobeAnalytics发出以下两次跟踪调用：
+最终用户的活动导致向Adobe Analytics发出以下两个跟踪调用：
 
 * 第一次调用是因 **[!UICONTROL 为当用户]** 在viewer1中平移时触发 *TrackPan规则*。 该调用将50%作为ZoomScale Data Element **[!UICONTROL 的值]** ，因为数据元素将知道规则由viewer1触发并 *提取相应* 的缩放值；
 * 第二次调用是因 **[!UICONTROL 为当用户]** 在键盘上按下键时触发TrackKey规则。 该调用将发送25%作为ZoomScale **[!UICONTROL 数据元素的值]** ，因为该规则不是由查看器触发的。 因此，数据元素返回最新值。
 
-上述设置的示例还影响“数据元素”值的寿命。 Dynamic Media查看器管理的数据元素值存储在Adobe Launch库代码中，即使查看器本身已放置在网页上也是如此。 这意味着，如果存在由非Dynamic Media查看器扩展触发并引用此类数据元素的规则，则数据元素将返回最后一个已知值，即使该查看器不再出现在网页上。
+上述设置的示例还影响“数据元素”值的寿命。 即使查看器本身已放置在网页上，Dynamic Media Viewer所管理的Adobe元素值也会存储在启动库代码中。 这意味着，如果存在由非Dynamic Media Viewer扩展触发并引用此类数据元素的规则，则数据元素将返回最后一个已知值，即使该查看器不再出现在网页上也是如此。
 
-无论如何，由Dynamic Media查看器驱动的数据元素值不会存储在本地存储或服务器上； 而是仅保留在客户端Adobe Launch库中。 当网页重新加载时，此类数据元素的值会消失。
+无论如何，由Dynamic Media查看器驱动的数据元素值不会存储在本地存储或服务器上；而是仅保留在客户端Adobe启动库中。 当网页重新加载时，此类数据元素的值会消失。
 
-通常，数据元素编辑器支持 [存储持续时间选择](https://docs.adobe.com/content/help/zh-Hans/launch/using/reference/manage-resources/data-elements.html#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的存储元素仅支持“无”的持续时间 **[!UICONTROL 选项]**。 在用户界面中可以设置任何其他值，但在本例中未定义数据元素行为。 扩展自行管理数据元素的值： 在整个查看器生命周期中维护查看器事件参数值的数据元素。
+通常，数据元素编辑器支持 [存储持续时间选择](https://docs.adobe.com/content/help/zh-Hans/launch/using/reference/manage-resources/data-elements.html#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的存储元素仅支持“无”的数据持 **[!UICONTROL 续时间]**。 在用户界面中可以设置任何其他值，但在本例中未定义数据元素行为。 扩展自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
 
-### 关于Dynamic Media查看器扩展中的规则 {#about-rules-in-the-dynamic-media-viewers-extension}
+### 关于Dynamic Media Viewers扩展中的规则 {#about-rules-in-the-dynamic-media-viewers-extension}
 
 在规则编辑器中，扩展将为事件编辑器添加新的配置选项。 此外，还提供了一个选项，用于在“操作”编辑器中手动引用事件参数，作为一个简单选项，而不是使用预配置的数据元素。
 
@@ -248,18 +248,18 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 在事件编辑器中，Dynamic Media 查看器扩展会添加一个新的&#x200B;**[!UICONTROL 事件类型]**，称为&#x200B;**[!UICONTROL 查看器事件]**。
 
-选中后，事件编辑器将呈现下拉式 **[!UICONTROL Dynamic Media查看器事件]**，列出Dynamic Media查看器支持的所有可用事件。
+选中后，事件编辑器会呈现下拉 **[!UICONTROL 式Dynamic Media Viewer事件]**，列出Dynamic Media查看器支持的所有可用事件。
 
 ![image2019-8-2_15-13-1](assets/image2019-8-2_15-13-1.png)
 
 #### 关于操作编辑器 {#about-the-actions-editor}
 
-Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数映射到AdobeAnalytics扩展的“设置变量”编辑器中的分析变量。
+通过Dynamic Media查看器扩展，您可以使用Dynamic Media查看器的事件参数映射到Adobe Analytics扩展的“设置变量”编辑器中的分析变量。
 
 执行此操作的最简单方法是完成以下两步过程：
 
-* 首先，定义一个或多个数据元素，其中每个数据元素表示Dynamic Media查看器事件的参数。
-* 最后，在AdobeAnalytics扩展的“设置变量”编辑器中，单击“数据元素”选取器图标（三个堆叠的磁盘）以打开“选择数据元素”对话框，然后从中选择一个数据元素。
+* 首先，定义一个或多个数据元素，其中每个数据元素都表示Dynamic Media Viewer事件的参数。
+* 最后，在Adobe Analytics扩展的“设置变量”编辑器中，单击“数据元素”选取器图标（三个堆叠的磁盘）以打开“选择数据元素”对话框，然后从中选择一个数据元素。
 
 ![image2019-7-10_20-41-52](assets/image2019-7-10_20-41-52.png)
 
@@ -273,7 +273,7 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
 
 例如，如果规 `%event.detail.dm.LOAD.asset%` 则是由Dynamic Media Viewer扩展的 **[!UICONTROL LOAD]** 事件触发的，则引用将返回正确的资产名称。 但是，对于任何其他事件，它都会返回一个空值。
 
-下表列表Dynamic Media查看器事件及其支持的参数：
+下表列表了Dynamic Media Viewer事件及其支持的参数：
 
 <table>
  <tbody>
@@ -408,35 +408,35 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
 
 **开始之前**
 
-如果您尚未完成此操作，Adobe建议您在本部分之前仔细查看所有文档，以了解完整集成。
+如果您尚未完成此操作，Adobe建议您在本节之前仔细查看所有文档，以了解完整集成。
 
-本节介绍将Dynamic Media查看器与AdobeAnalytics和Adobe音频和视频Analytics集成所需的配置步骤。 虽然可以在Adobe Launch中将Dynamic Media查看器扩展用于其他用途，但本文档未介绍此类情形。
+本节介绍将Dynamic Media查看器与Adobe Analytics和Adobe Analytics音频和视频部门集成所需的配置步骤。 虽然在Adobe启动中将Dynamic Media查看器扩展用于其他用途是可能的，但本文档未介绍此类情况。
 
 您将在以下Adobe产品中配置集成：
 
-* AdobeAnalytics-您将配置跟踪变量和报表。
-* Adobe Launch —— 您将定义一个属性、一个或多个规则以及一个或多个数据元素，以启用查看器跟踪。
+* Adobe Analytics-您将配置跟踪变量和报表。
+* Adobe启动——您将定义一个属性、一个或多个规则以及一个或多个数据元素，以启用查看器跟踪。
 
 此外，如果此集成解决方案与AEM Sites一起使用，则还需要进行以下配置：
 
-* Adobe I/O Console —— 为Adobe Launch创建集成。
-* AEM作者节点- IMS配置和Adobe Launch云配置。
+* AdobeI/O控制台——为Adobe启动创建集成。
+* AEM作者节点- IMS配置和Adobe启动云配置。
 
-作为配置的一部分，请确保您有权访问已启用Adobe公司和Adobe Launch的Adobe Experience Cloud中的Analytics。
+作为配置的一部分，请确保您有权访问已启用Adobe Analytics和Adobe启动的Adobe Experience Cloud公司。
 
-## 配置AdobeAnalytics以进行集成 {#configuring-adobe-analytics-for-the-integration}
+## 为集成配置Adobe Analytics {#configuring-adobe-analytics-for-the-integration}
 
-配置AdobeAnalytics后，将为集成设置以下内容：
+配置Adobe Analytics后，将为集成设置以下内容：
 
 * 报告套件就位并处于选定状态。
-* Analytics变量可用于接收跟踪数据。
-* 报告可用于视图AdobeAnalytics内收集的数据。
+* 分析变量可用于接收跟踪数据。
+* 报告可用于视图Adobe Analytics内收集的数据。
 
-另请参阅 [Analytics实施指南](https://docs.adobe.com/content/help/en/analytics/implementation/home.html)。
+另请参 [阅分析实施指南](https://docs.adobe.com/content/help/en/analytics/implementation/home.html)。
 
-**为集成配置AdobeAnalytics**:
+**为集成配置Adobe Analytics**:
 
-1. 开始，即从Experience Cloud主页访问 [AdobeAnalytics](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)。 在菜单栏中，单击页面右上角附近的“解决方案”图标（三个圆点乘以三个圆点表），然后单击 **[!UICONTROL Analytics]**。
+1. 开始，从Experience Cloud [主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)。 在菜单栏中，单击页面右上角附近的解决方案图标（三个圆点乘以三个圆点表），然后单击分 **[!UICONTROL 析]**。
 
    ![2019-07-22_18-08-47](assets/2019-07-22_18-08-47.png)
 
@@ -446,29 +446,29 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
 
 1. 在 Adobe Analytics 页面的右上角附近，在&#x200B;**[!UICONTROL 搜索报告]**&#x200B;字段的右侧，从下拉列表中选择正确的报表包。如果有多个可用报表包，并且您不确定要使用哪个报表包，请与 Adobe Analytics 管理员联系，帮助您选择要使用的报表包。
 
-   在下图中，用户创建了一个名为DynamicMediaViewersExtensionDoc *的报表包* ，并从下拉列表中将其选中。 报告套件名称仅供说明； 最终选择的报表包名称将有所不同。
+   在下图中，用户创建了一个名为DynamicMediaViewersExtensionDoc *的报表包* ，并从下拉列表中将其选中。 报告套件名称仅供说明；最终选择的报表包名称将有所不同。
 
-   如果没有可用的报告包，则您或您的AdobeAnalytics管理员必须创建一个报告包，然后才能继续进行进一步的配置。
+   如果没有可用的报表包，则您或您的Adobe Analytics管理员必须创建一个报表包，然后才能继续进行配置。
 
-   请参 [阅报表和报表](https://docs.adobe.com/content/help/en/analytics/implementation/analytics-basics/ref-reports-report-suites.html)[包以及创建报表包](https://docs.adobe.com/content/help/en/analytics/admin/admin-console/create-report-suite.html)。
+   请参 [阅报表和报表](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)[包以及创建报表包](https://docs.adobe.com/content/help/en/analytics/admin/admin-console/create-report-suite.html)。
 
-   在AdobeAnalytics中，报表包通过“管理员”>“ **[!UICONTROL 报表包”进行管理]**。
+   在Adobe Analytics，报表包通过“管理员”>“ **[!UICONTROL 报表包”进行管理]**。
 
    ![2019-07-22_18-09-49](assets/2019-07-22_18-09-49.png)
 
-   您现在将设置AdobeAnalytics变量。
+   你现在设置Adobe Analytics变量。
 
-### 设置AdobeAnalytics变量 {#setting-up-adobe-analytics-variables}
+### 设置Adobe Analytics变量 {#setting-up-adobe-analytics-variables}
 
-1. 您现在将指定一个或多个AdobeAnalytics变量，以用于跟踪网页上的Dynamic Media查看器行为。
+1. 您现在将指定一个或多个要用于跟踪网页上Dynamic Media查看器行为的Adobe Analytics变量。
 
-   可以使用AdobeAnalytics支持的任何类型的变量。 关于变量类型(如自定义流量 [prop]、转 [换eVar])的决定应由您Analytics实施的特定需求驱动。
+   可以使用Adobe Analytics支持的任何类型的变量。 有关变量类型(如自定义流量 [prop]、转换 [eVar])的决定应由您实施Analytics的特定需求来驱动。
 
-   请参 [阅prop和eVar的概述](https://docs.adobe.com/content/help/en/analytics/implementation/analytics-basics/traffic-props-evars/props-evars.html)。
+   请参 [阅prop和eVar的概述](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/evar.html)。
 
-   就本文档而言，只会使用自定义流量(props)变量，因为在网页上执行操作后几分钟内，这些变量便会显示在Analytics报表中。
+   就本文档而言，将仅使用自定义流量(props)变量，因为在网页上执行操作后几分钟内，这些变量便会显示在分析报告中。
 
-   要启用新的自定义流量变量，请在AdobeAnalytics卡的工具栏中，单击管 **[!UICONTROL 理>报表包]**。
+   要启用新的自定义流量变量，请在工具栏的Adobe Analytics，单 **[!UICONTROL 击管理>报表包]**。
 
 1. 在&#x200B;**[!UICONTROL 报表包管理器]**&#x200B;页面上，选择正确的报表，然后在工具栏中，单击&#x200B;**[!UICONTROL 编辑设置 > 流量 > 流量变量]**。
 1. 在这里，选取未使用的变量，为它提供一个描述性 **[!UICONTROL 名称(查看器资产(prop 30)]**)，并将组合框更改为“已启用”列中的“已启用”。
@@ -481,9 +481,9 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
 
 ### 设置报告 {#setting-up-a-report}
 
-1. 通常，在AdobeAnalytics中设置报告由特定项目需求驱动。 因此，详细的报告设置超出了此集成的范围。
+1. 通常，在Adobe Analytics设置报告是由特定项目需求驱动的。 因此，详细的报告设置超出了此集成的范围。
 
-   但是，在设置AdobeAnalytics变量中设置自定义流量变量后，您应该知道自定义流量报表会在AdobeAnalytics **[中自动变为可用](#setting-up-adobe-analytics-variables)**。
+   但是，在设置Adobe Analytics变量中设置自定义流量变量后，您应该知道自定义流量报告在Adobe Analytics自动 **[变得可用](#setting-up-adobe-analytics-variables)**。
 
    例如，可从&#x200B;**[!UICONTROL 自定义流量 > 自定义流量 21 - 30 > 查看器资产 (prop 30)]**&#x200B;下的“报告”菜单中获得&#x200B;**[!UICONTROL 查看器资产 (prop 30)]**&#x200B;的报告。
 
@@ -491,30 +491,30 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
 
    ![image2019-6-26_23-12-49](assets/image2019-6-26_23-12-49.png)
 
-## 为集成配置Adobe Launch {#configuring-adobe-launch-for-the-integration}
+## 为集成配置Adobe启动 {#configuring-adobe-launch-for-the-integration}
 
-配置Adobe Launch后，将为集成设置以下内容：
+配置Adobe启动后，将为集成设置以下内容：
 
 * 创建新属性以将您的所有配置保持一致。
 * 扩展的安装和设置。 属性中安装的所有扩展的客户端代码一起编译为一个库。 此库稍后由网页使用。
-* 数据元素和规则的配置。 此配置定义要从Dynamic Media查看器捕获哪些数据、何时触发跟踪逻辑以及在AdobeAnalytics中发送查看器数据的位置。
+* 数据元素和规则的配置。 此配置定义从Dynamic Media查看器捕获哪些数据、何时触发跟踪逻辑以及在Adobe Analytics将查看器的数据发送到何处。
 * 发布库。
 
-**要配置Adobe Launch进行集成，请执行以下操作**:
+**为集成配置Adobe启动**:
 
-1. 开始，方法是从Experience Cloud [主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)。 在菜单栏中，单击页面右上角附近的解决方案图标（三个圆点对齐三个表），然后单击启 **[!UICONTROL 动]**。
+1. 开始，即从Experience Cloud主页访问Adobe [启动](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)。 在菜单栏中，单击页面右上角附近的解决方案图标（三个圆点对齐三个表），然后单击启 **[!UICONTROL 动]**。
 
-   您还可以 [直接打开Adobe Launch](https://launch.adobe.com/)。
+   您还可以直 [接打开Adobe启动](https://launch.adobe.com/)。
 
    ![image2019-7-8_15-38-44](assets/image2019-7-8_15-38-44.png)
 
-### 在Adobe Launch中创建属性 {#creating-a-property-in-adobe-launch}
+### 在Adobe启动中创建属性 {#creating-a-property-in-adobe-launch}
 
-Adobe Launch中的属性是将所有设置放在一起的命名配置。 将生成配置设置库并将其发布到不同的环境级别（开发、暂存和生产）。
+Adobe启动中的属性是将所有设置放在一起的命名配置。 将生成配置设置库并将其发布到不同的环境级别（开发、暂存和生产）。
 
 另请参阅 [创建属性](https://docs.adobe.com/content/help/en/launch/using/implement/configure/create-a-property.html)。
 
-1. 在Adobe Launch中，单击“ **[!UICONTROL 新建属性]**”。
+1. 在Adobe启动中，单击 **[!UICONTROL 新建属性]**。
 1. 在&#x200B;**[!UICONTROL 创建属性]**&#x200B;对话框的&#x200B;**[!UICONTROL 名称]**&#x200B;字段中，键入描述性名称，如网站的标题。例如，`DynamicMediaViewersProp.`
 1. 在“ **[!UICONTROL 域]** ”字段中，输入网站的域。
 1. In the **[!UICONTROL Advanced Options]** drop-down, enable **[!UICONTROL Configure for extension development (cannot be modified later)]** in case the extension you want to use--in this case, *Dynamic Media Viewers*--is not yet released.
@@ -527,7 +527,7 @@ Adobe Launch中的属性是将所有设置放在一起的命名配置。 将生�
 
 ### 安装和设置扩展 {#installing-and-setup-of-extensions}
 
-Adobe Launch中的所有可用扩展都列在“扩展”>“ **[!UICONTROL 目录”下]**。
+Adobe启动中的所有可用扩展都列在“扩展”>“ **[!UICONTROL 目录”下]**。
 
 要安装扩展，请单击“ **[!UICONTROL 安装]**”。 如果需要，请执行一次性扩展配置，然后单击“ **[!UICONTROL 保存]**”。
 
@@ -539,7 +539,7 @@ Adobe Launch中的所有可用扩展都列在“扩展”>“ **[!UICONTROL 目�
 
 请参 [阅Experience CloudID服务扩展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)。
 
-* （必需） *AdobeAnalytics扩* 展
+* （必需） *Adobe Analytics* 延保
 
 要配置此扩展，您首先需要 Adobe Analytics 中&#x200B;**[!UICONTROL 管理员 > 报表包]** > **[!UICONTROL 报表包 ID]** 列标题下的报表包 ID。
 
@@ -557,23 +557,23 @@ Adobe Launch中的所有可用扩展都列在“扩展”>“ **[!UICONTROL 目�
 
 单击&#x200B;**[!UICONTROL 保存]**。
 
-请参 [阅AdobeAnalytics扩展](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)。
+请参阅 [Adobe Analytics分机](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)。
 
-* (可选； (仅当需要视频跟踪时才需 *要)音频和视频扩展的Adobe* MediaAnalytics
+* (可选；（仅当需要视频跟踪时才需要） *Adobe音频和视频扩展的Media* Analytics
 
-填写跟踪服务器字段。 用于音频和视 *频扩展的Adobe MediaAnalytics的跟踪服务器* ，与用于AdobeAnalytics的跟踪服务器不同。 它将遵循模 `<trackingNamespace>.hb.omtrdc.net`板， `<trackingNamespace>` 其中是供应电子邮件中的信息。
+填写跟踪服务器字段。 用于音频和视 *频扩展的Adobe媒体分析的跟踪服务器* ，与用于Adobe Analytics的跟踪服务器不同。 它将遵循模 `<trackingNamespace>.hb.omtrdc.net`板， `<trackingNamespace>` 其中是供应电子邮件中的信息。
 
 所有其他字段都是可选字段。
 
-请参 [阅适用于音频和视频扩展的Adobe MediaAnalytics](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)。
+请参 [阅音频和视频扩展的Adobe媒体分析](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)。
 
-* （必需） *Dynamic Media查看器* 扩展
+* （必需） *Dynamic Media查看器扩* 展
 
 选择&#x200B;**[!UICONTROL 启用 Adobe Analytics for Video]** 以启用（打开）视频检测信号跟踪。
 
-请注意，在编写本文时，只有在创建 *Adobe Launch Property用于开* 发时，Dynamic Media查看器扩展才可用。
+请注意，在编写本文时，只有在创建Adobe *启动属性以供开发时* ,Dynamic Media Viewers扩展才可用。
 
-请参 [阅在Adobe Launch中创建属性](#creating-a-property-in-adobe-launch)。
+请参 [阅在Adobe启动中创建属性](#creating-a-property-in-adobe-launch)。
 
 安装和安装这些扩展后，“扩展”>“安装”区域至少会列出以下五个扩展（如果您没有跟踪视频，则至少列出四个）。
 
@@ -581,21 +581,21 @@ Adobe Launch中的所有可用扩展都列在“扩展”>“ **[!UICONTROL 目�
 
 ### 设置数据元素和规则 {#setting-up-data-elements-and-rules}
 
-在Adobe Launch中，创建跟踪Dynamic Media查看器所需的数据元素和规则。
+在Adobe启动中，创建跟踪Dynamic Media查看器所需的数据元素和规则。
 
-有 [关使用Adobe Launch进行跟踪的概述](#how-data-and-event-tracking-works-in-the-integration) ，请参阅集成中的数据和事件跟踪的工作方式。
+有 [关Adobe启动跟踪的概述，请参阅](#how-data-and-event-tracking-works-in-the-integration) “数据和事件跟踪在集成中的工作方式”。
 
-请参 [阅Adobe](#sample-configuration) Launch中的示例配置示例，该配置演示如何在加载查看器时跟踪资产名称。
+请参 [阅Adobe启](#sample-configuration) 动中的示例配置示例，该示例配置演示如何在加载查看器时跟踪资产名称。
 
-请参 [阅配置Dynamic Media查看器扩展](#configuring-the-dynamic-media-viewers-extension) ，以详细了解扩展的功能。
+有 [关扩展功能的详细信息](#configuring-the-dynamic-media-viewers-extension) ，请参阅配置Dynamic Media Viewers扩展。
 
 ### 发布库 {#publishing-a-library}
 
-要在Adobe Launch配置中进行更改（包括属性、扩展、规则和数据元素设置），您需要发 *布* 此类更改*。*在Adobe Launch中发布是从属性配置下的发布选项卡执行的。
+要在Adobe启动配置（包括设置的属性、扩展、规则和数据元素）中进行更改，您需要发 *布* 此类更改*。*在Adobe启动中发布是从属性配置下的发布选项卡执行的。
 
-Adobe Launch可能具有多个开发环境、一个阶段环境和一个生产环境。 默认情况下，AEM中的Adobe Launch Cloud配置将AEM作者节点指向Adobe Launch的阶段环境,AEM发布节点指向Adobe Launch的生产环境。 此安排意味着，在使用默认AEM设置的情况下，必须将Adobe Launch库发布到临时环境，以便在AEM作者中利用它，然后将其发布到生产环境，以便在AEM发布中使用它。
+Adobe启动可能具有多个开发环境、一个分阶段环境和一个生产环境。 默认情况下，AEM中的Adobe启动云配置将AEM作者节点指向Adobe启动的阶段环境，并将AEM发布节点指向Adobe启动的生产环境。 此安排意味着，使用默认的AEM设置，必须将Adobe启动库发布到临时环境，以便在AEM作者中使用它，然后将其发布到生产环境，以便在发布中使用它。
 
-请参 [阅环境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) ，了解有关Adobe Launch环境的更多信息。
+请参 [阅环境](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) ，了解有关Adobe启动环境的更多信息。
 
 发布库涉及以下两个步骤：
 
@@ -604,7 +604,7 @@ Adobe Launch可能具有多个开发环境、一个阶段环境和一个生产�
 
 #### 添加和构建新库 {#adding-and-building-a-new-library}
 
-1. 首次在Adobe Launch中打开“发布”选项卡时，库列表为空。
+1. 首次在Adobe启动中打开“发布”选项卡时，库列表为空。
 
    在左列中，单击“添 **[!UICONTROL 加新库”]**。
 
@@ -653,34 +653,34 @@ Adobe Launch可能具有多个开发环境、一个阶段环境和一个生产�
 
    ![image2019-7-15_16-8-9](assets/image2019-7-15_16-8-9.png)
 
-   有关 [Adobe](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) Launch中发布流程的更多信息，请参阅发布。
+   请参 [阅发布](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) ，以了解有关Adobe启动中发布过程的更多信息。
 
-## 配置集成Adobe Experience Manager {#configuring-adobe-experience-manager-for-the-integration}
+## 为集成配置Adobe Experience Manager {#configuring-adobe-experience-manager-for-the-integration}
 
 前提条件:
 
 * AEM同时运行作者实例和发布实例。
-* AEM作者节点以Dynamic Media- Scene7运行模式(dynamicmedia_s7)设置
-* Dynamic Media在AEM Sites中启用WCM组件。
+* AEM作者节点在Dynamic Media -Scene7运行模式下设置(dynamicmedia_s7)
+* 在AEM Sites启用Dynamic Media WCM组件。
 
 AEM配置包含以下两个主要步骤：
 
-* 配置AEM IMS
-* 配置Adobe Launch Cloud。
+* AEM IMS的配置
+* 配置Adobe启动云。
 
 ### 配置AEM IMS {#configuring-aem-ims}
 
-1. 在AEM作者中，单击工具图标（锤子），然后单击 **[!UICONTROL 安全> Adobe IMS配置]**。
+1. 在AEM作者中，单击工具图标（锤子），然后单 **[!UICONTROL 击安全>AdobeIMS配置]**。
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
-1. 在Adobe IMC配置页面的左上角附近，单击创 **[!UICONTROL 建]**。
+1. 在“AdobeIMC配置”页的左上角附近，单击“创 **[!UICONTROL 建]**”。
 1. 在 **[!UICONTROL Adobe IMS 技术帐户配置]**&#x200B;页面的&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中，单击 **[!UICONTROL Adobe Launch]**。
 1. 启用 **[!UICONTROL 创建新证书]**，然后在文本字段中为证书输入任何有意义的值。 例如， *AdobeLaunchIMSCert*。 单击&#x200B;**[!UICONTROL 创建证书]**。
 
    将显示以下信息消息：
 
-   *要检索有效访问令牌，必须将新证书的公钥添加到Adobe I/O！上的技术帐户*。
+   *要检索有效访问令牌，必须将新证书的公钥添加到AdobeI/O！上的技术帐户*。
 
    Click **[!UICONTROL OK]** to dismiss the Info dialog box.
 
@@ -694,9 +694,9 @@ AEM配置包含以下两个主要步骤：
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. 在新的浏览器选项卡中，导 [航到Adobe I/O控制台](https://console.adobe.io/integrations)。
+1. 在新的浏览器选项卡中，导航到 [AdobeI/O控制台](https://console.adobe.io/integrations)。
 
-1. 在Adobe **[!UICONTROL I/O Console Integrations页面]** （位于右上角附近），单击 **[!UICONTROL New integration]**。
+1. 在Adobe **[!UICONTROL I/O控制台集成页面]** （位于右上角附近），单击 **[!UICONTROL 新集成]**。
 1. 在&#x200B;**[!UICONTROL 创建新集成]**&#x200B;对话框中，确保选中&#x200B;**[!UICONTROL 访问 API]** 单选按钮，然后单击&#x200B;**[!UICONTROL 继续]**。
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
@@ -740,13 +740,13 @@ AEM配置包含以下两个主要步骤：
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
-   “Adobe IMS技术帐户配置——证书”页。
+   AdobeIMS技术帐户配置——证书页。
 
 1. “帐 **[!UICONTROL 户]** ”页面有五个字段，需要您使用上一步“集成”详细信息页面中的信息填写这些字段。
 
    ![2019-07-25_20-42-45](assets/2019-07-25_20-42-45.png)
 
-   Adobe IMS技术帐户配置——帐户页。
+   AdobeIMS技术帐户配置——帐户页。
 
 1. 在“帐 **[!UICONTROL 户]** ”页面上，填写以下字段：
 
@@ -785,17 +785,17 @@ AEM配置包含以下两个主要步骤：
 
 1. Near the upper-right corner of the **[!UICONTROL Account]** page, click **[!UICONTROL Create]**.
 
-   配置AEM IMS后，您现在有一个新的IMSAccount列 **[!UICONTROL 在Adobe IMS配置下]**。
+   配置AEM IMS后，您现在有一个新的IMSAccount列在 **[!UICONTROL AdobeIMS配置下]**。
 
    ![image2019-7-15_14-17-54](assets/image2019-7-15_14-17-54.png)
 
-## 配置Adobe Launch Cloud以进行集成 {#configuring-adobe-launch-cloud-for-the-integration}
+## 配置Adobe启动云以进行集成 {#configuring-adobe-launch-cloud-for-the-integration}
 
-1. 在AEM作者中，在左上角附近，单击工具图标（锤子），然后单击 **[!UICONTROL Cloud Service> Adobe Launch配置]**。
+1. 在AEM作者中，在左上角附近，单击工具图标（锤子），然后单击 **[!UICONTROL Cloud Services>Adobe启动配置]**。
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 
-1. 在Adobe **[!UICONTROL 启动配置页]** 面的左侧面板中，选择要为其应用Adobe启动配置的AEM站点。
+1. 在Adobe **[!UICONTROL 启动配置页]** ，在左侧面板中，选择要应用Adobe启动配置的AEM站点。
 
    仅出于说明目的， **[!UICONTROL 在以下屏幕截图中选]** 择了We.Retail站点。
 
@@ -806,11 +806,11 @@ AEM配置包含以下两个主要步骤：
 
    * **[!UICONTROL 标题]** -输入描述性配置标题。 For example, `We.Retail Launch cloud configuration`.
 
-   * **[!UICONTROL 关联的Adobe IMS配置]** -选择您之前在配置AEM IMS中创 [建的IMS配置](#configuring-aem-ims)。
+   * **[!UICONTROL 关联AdobeIMS配置]** -选择您之前在配置AEM IMS时创 [建的IMS配置](#configuring-aem-ims)。
 
    * **[!UICONTROL 公司]** -从 **[!UICONTROL 公司下拉]** 列表中，选择您的Experience Cloud公司。 列表会自动填充。
 
-   * **[!UICONTROL 属性]** -从“属性”下拉列表卡中，选择您之前创建的Adobe Launch属性。 列表会自动填充。
+   * **[!UICONTROL 属性]** -从“属性”下拉列表卡中，选择您之前创建的Adobe启动属性。 列表会自动填充。
    完成所有字段后，您的“ **[!UICONTROL 常规]** ”页面的外观将类似于以下内容：
 
    ![image2019-7-15_14-34-23](assets/image2019-7-15_14-34-23.png)
@@ -820,7 +820,7 @@ AEM配置包含以下两个主要步骤：
 
    在&#x200B;**[!UICONTROL 库 URI]** 字段中，查看 Adobe Launch 库的测试版本的位置。AEM 会自动填充此字段。
 
-   仅出于说明目的，此步骤将使用部署到Adobe CDN的Adobe Launch库。
+   仅供说明，此步骤将使用部署到AdobeCDN的Adobe启动库。
 
    >[!NOTE]
    >
@@ -837,16 +837,16 @@ AEM配置包含以下两个主要步骤：
 1. 如有需要，在&#x200B;**[!UICONTROL 创建 Adobe Launch 配置]**&#x200B;窗口的&#x200B;**[!UICONTROL 生产]**&#x200B;页面（第 3/3 页）中，修复自动填充的生产 URI，类似于在上一个&#x200B;**[!UICONTROL 测试]**&#x200B;页面中的操作。
 1. 在右上角附近，单击“创 **[!UICONTROL 建”]**。
 
-   您的新Adobe Launch Cloud配置现已创建并列在您的网站旁边，如下例所示：
+   您的新Adobe启动云配置现已创建并列在您的网站旁边，如下例所示：
 
-1. 选择您的新Adobe Launch Cloud配置（选中配置标题后，其左侧会显示一个复选标记）。 在工具栏中，单击“ **[!UICONTROL 发布]**”。
+1. 选择新的Adobe启动云配置（选中配置标题后，将在其左侧显示复选标记）。 在工具栏中，单击“ **[!UICONTROL 发布]**”。
 
    ![image2019-7-15_15-47-6](assets/image2019-7-15_15-47-6.png)
 
-目前，AEM作者不支持将Dynamic Media查看器与Adobe Launch集成。
+目前，AEM作者不支持将Dynamic Media查看器与Adobe启动相集成。
 
-但是，AEM发布节点中支持该属性。 AEM发布使用Adobe Launch Cloud配置的默认设置，使用Adobe Launch的生产环境。 因此，在测试过程中，每次必须将Adobe Launch库更新从“开发”推送到“生产”环境。
+但是，AEM publish节点支持它。 使用Adobe启动云配置的默认设置，AEM publish使用Adobe启动的生产环境。 因此，在测试过程中，每次必须将Adobe启动库更新从开发推送到生产环境。
 
-通过在上述AEM发布的Adobe Launch Cloud配置中指定Adobe Launch库的开发或临时URL，可以解决此限制。 这样做会使AEM发布节点使用Adobe Launch库的开发或暂存版本。
+通过在上述Adobe发布的Adobe启动云配置中指定AEM启动库的开发或临时URL，可以解决此限制。 这样做会使AEM发布节点使用Adobe启动库的开发或暂存版本。
 
-有 [关设置Adobe Launch Cloud配置的更多信息](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html) ，请参阅通过Adobe I/O将AEM与Adobe Launch集成。
+有关 [设置Adobe启](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html) 动云配置的详细信息，请参阅通过AdobeI/O将AEM与Adobe启动集成。
