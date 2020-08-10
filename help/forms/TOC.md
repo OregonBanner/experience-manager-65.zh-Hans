@@ -3,19 +3,19 @@ cloud: experience-cloud
 product: adobe experience manager
 sub-product: 表单
 audience: end-user
-user-guide-title: AEM 6.5 Forms用户指南
+user-guide-title: AEM 6.5Forms用户指南
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3708'
 ht-degree: 1%
 
 ---
 
 # AEM 6.5 - Forms User Guide {#forms}
 
-+ [AEM 6.5 Forms用户指南](home.md)
++ [AEM 6.5Forms用户指南](home.md)
 + 发行说明 {#release-notes-new-features}
    + [发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
    + [新增功能摘要](using/whats-new.md)
@@ -26,22 +26,22 @@ ht-degree: 1%
    + [交互通信简介](using/interactive-communications-overview.md)
    + [表单管理简介](using/introduction-managing-forms.md)
    + [自动化表单转换服务简介](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
-   + 教程： 创建您的第一个自适应表单 {#create-first-adaptive-form}
-      + [教程： 创建您的第一个自适应表单](using/create-your-first-adaptive-form.md)
-      + [教程： 创建自适应表单](using/create-adaptive-form.md)
-      + [教程： 创建表单数据模型](using/create-form-data-model.md)
-      + [教程： 将规则应用于自适应表单字段l](using/apply-rules-to-adaptive-form-fields.md)
-      + [教程： 设置自适应表单的样式](using/style-your-adaptive-form.md)
-      + [教程： 发布自适应表单](/help/forms/using/publish-your-adaptive-form.md)
-      + [教程： 测试自适应表单](/help/forms/using/testing-your-adaptive-form.md)
-   + 教程： 创建您的第一个交互式通信 {#create-first-interactive-communication}
-      + [教程： 创建您的第一个交互式通信](using/create-your-first-interactive-communication.md)
-      + [教程： 规划交互式通信](using/planning-interactive-communications.md)
-      + [教程： 创建表单数据模型](using/create-form-data-model0.md)
-      + [教程： 创建文档片段](using/create-document-fragments.md)
-      + [教程： 创建模板](using/create-templates-print-web.md)
-      + [教程： 创建交互式通信](using/create-interactive-communication0.md)
-   + AEM Forms参考抵押品 {#aem-forms-reference-collaterals}
+   + 教程：创建您的第一个自适应表单 {#create-first-adaptive-form}
+      + [教程：创建您的第一个自适应表单](using/create-your-first-adaptive-form.md)
+      + [教程：创建自适应表单](using/create-adaptive-form.md)
+      + [教程：创建表单数据模型](using/create-form-data-model.md)
+      + [教程：将规则应用于自适应表单字段l](using/apply-rules-to-adaptive-form-fields.md)
+      + [教程：设置自适应表单的样式](using/style-your-adaptive-form.md)
+      + [教程：发布自适应表单](/help/forms/using/publish-your-adaptive-form.md)
+      + [教程：测试自适应表单](/help/forms/using/testing-your-adaptive-form.md)
+   + 教程：创建您的第一个交互式通信 {#create-first-interactive-communication}
+      + [教程：创建您的第一个交互式通信](using/create-your-first-interactive-communication.md)
+      + [教程：规划交互式通信](using/planning-interactive-communications.md)
+      + [教程：创建表单数据模型](using/create-form-data-model0.md)
+      + [教程：创建文档片段](using/create-document-fragments.md)
+      + [教程：创建模板](using/create-templates-print-web.md)
+      + [教程：创建交互式通信](using/create-interactive-communication0.md)
+   + AEM Forms参考资料 {#aem-forms-reference-collaterals}
       + [设置和配置We.Finance和Employee自助参考站点](using/setup-reference-sites.md)
       + [设置和配置We.Gov参考站点](/help/forms/using/forms-install-configure-gov-reference-site.md)
       + [We.Finance参考站点演练](using/finance-reference-site-walkthrough.md)
@@ -58,72 +58,72 @@ ht-degree: 1%
    + [AEM Forms的架构和部署拓扑](using/aem-forms-architecture-deployment.md)
    + [为AEM Forms安装选择持久性类型](using/choosing-persistence-type-for-aem-forms.md)
    + 在OSGi上安装AEM Forms {#osgi-installation}
-      + [OSGi上AEM表单支持的平台](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/introduction/technical-requirements.html)
+      + [支持AEM表单在OSGi上的平台](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/introduction/technical-requirements.html)
       + [安装和配置文档服务](using/install-configure-document-services.md)
       + [安装和配置数据捕获功能](using/installing-configuring-aem-forms-osgi.md)
-      + [在OSGi上安装和配置以表单为中心的工作流程](using/installing-configuring-forms-centric-workflow-on-osgi.md)
+      + [在OSGi上安装和配置以Forms为中心的工作流程](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [安装和配置交互通信](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [安装和配置自动表单转换服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [安装和配置自动化Forms转换服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Install AEM Forms on JEE {#jee-installation}
-      + [JEE上的AEM表单支持的平台](using/aem-forms-jee-supported-platforms.md)
+      + [支持AEM表单在JEE上的平台](using/aem-forms-jee-supported-platforms.md)
       + [在JEE上使用JBoss统包安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
       + [安装和配置AEM Forms文档安全服务器](using/installing-and-configuring-the-document-security-server.md)
       + [准备安装AEM Forms单台服务器](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
-      + [在JEE上安装和部署JBossAEM Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
+      + [在JEE上安装和部署JBoss的AEM Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
       + [在WebSphere的JEE上安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
-      + [在JEE for WebLogic上安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
+      + [在WebLogic的JEE上安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安装AEM Forms工作台](using/install-workbench.md)
       + [安装和配置Designer](using/installing-configuring-designer.md)
       + [准备安装AEM Forms服务器群集](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
-      + [在JBoss群集上的JEE上配置AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
-      + [在WebSphere群集上的JEE上配置AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
-      + [在WebLogic群集上的JEE上配置AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
+      + [在JBoss群集上在JEE上配置AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
+      + [在WebSphere群集上在JEE上配置AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
+      + [在WebLogic群集上在JEE上配置AEM Forms](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
    + 设定 AEM Forms {#configure-aem-forms}
       + [AEM Forms服务器的性能调整](using/performance-tuning-aem-forms.md)
       + [配置自适应表单缓存](using/configure-adaptive-forms-cache.md)
       + [配置AEM DS设置](using/configuring-the-processing-server-url-.md)
       + [配置同步调度程序](using/configure-synchronization-scheduler.md)
       + [为Microsoft SharePoint配置连接器](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
-      + [使用Adobe LiveCycle连接AEM Forms](using/aem-livecycle-connector.md)
-      + [配置AEM Forms以向JEE流程的AEM Forms提交表单数据](using/submit-form-data-livecycle-process.md)
-      + [适用于AEM Forms的AEM桌面应用程序](/help/forms/using/aem-desktop-app-for-aem-forms.md)
+      + [连接AEM Forms与AdobeLiveCycle](using/aem-livecycle-connector.md)
+      + [将AEM Forms配置为在JEE流程中向AEM Forms提交表单数据](using/submit-form-data-livecycle-process.md)
+      + [AEM桌面应用程序(AEM Forms)](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + 升级AEM Forms {#upgrade-aem-forms}
    + [可用的升级路径](using/upgrade.md)
-   + 升级OSGi上的AEM Forms {#aem-forms-osgi-upgrade}
+   + 在OSGi上升级AEM Forms {#aem-forms-osgi-upgrade}
       + [在OSGi上升级到AEM 6.5表单](using/upgrade-forms-osgi.md)
       + [安装兼容性包](using/compatibility-package.md)
       + [迁移AEM Forms资产和文档](using/migration-utility.md)
-   + JEE上的升级AEM Forms {#aem-forms-jee-upgrade}
+   + 升级JEE上的AEM Forms {#aem-forms-jee-upgrade}
       + [准备升级AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
       + [升级清单和计划](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [在JEE上升级到AEM 6.5表单](using/upgrade-forms-jee.md)
-      + [从AEM Forms版本升级到JEE上的AEM 6.5 Forms for JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [从AEM Forms版本升级到JEE上的AEM 6.5 Forms for JBoss turnkey](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [从AEM Forms版本升级到WebSphere JEE上的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-      + [从AEM Forms版本升级到JEE for WebLogic上的AEM 6.5 Forms](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
+      + [从AEM Forms版本升级到AEM 6.5FormsJEE for JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
+      + [从AEM Forms版本升级到AEM 6.5Forms的JEE for JBoss trunky](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+      + [从AEM Forms版本升级到AEM 6.5Forms的WebSphere JEE版](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+      + [从AEM Forms版本升级到AEM 6.5Forms的JEE for WebLogic](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
 + 管理AEM Forms {#manage-administer-aem-forms}
-   + [AEM FormsOSGi组和权限](using/forms-groups-privileges-tasks.md)
+   + [AEM Forms论OSGi集团与特权](using/forms-groups-privileges-tasks.md)
    + [创建新文件夹以对表单进行分类](using/creating-new-folders-categorize-forms.md)
    + [搜索表单和资产](using/searching-forms-or-assets.md)
    + [管理表单元数据](using/manage-form-metadata.md)
    + [下载XFA或PDF表单模板](using/download-xfa-or-pdf-form.md)
    + [删除表单和相关资源](using/deleting-forms-related-resources.md)
-   + [以AEM Forms获取XDP和PDF文档](using/get-xdp-pdf-documents-aem.md)
-   + [将资产导入和导出到AEM Forms](using/import-export-forms-templates.md)
+   + [在AEM Forms获取XDP和PDF文档](using/get-xdp-pdf-documents-aem.md)
+   + [向AEM Forms进口和出口资产](using/import-export-forms-templates.md)
    + [支持自适应表单本地化的新语言环境](using/supporting-new-language-localization.md)
    + 处理用户数据 {#handling-user-data}
-      + [OSGi上以表单为中心的工作流](using/forms-workflow-osgi-handling-user-data.md)
-      + [表单用户管理](using/user-management-handling-user-data.md)
-      + [表单JEE工作流](using/forms-workflow-jee-handling-user-data.md)
-      + [Forms Portal](using/forms-portal-handling-user-data.md)
+      + [以Forms为中心的OSGi工作流](using/forms-workflow-osgi-handling-user-data.md)
+      + [Forms用户管理](using/user-management-handling-user-data.md)
+      + [Forms·吉工作流](using/forms-workflow-jee-handling-user-data.md)
+      + [Forms门户](using/forms-portal-handling-user-data.md)
       + [通信管理](using/correspondence-management-handling-user-data.md)
       + [与Adobe Sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [文档安全](/help/forms/using/document-security-handling-user-data.md)
-   + 强化AEM Forms环境 {#hardening-aem-forms-environment}
+   + 硬化的AEM Forms环境 {#hardening-aem-forms-environment}
       + [在OSGi环境上强化和保护AEM表单](using/hardening-securing-aem-forms-environment.md)
-      + [JEEAEM Forms的一般安全注意事项](using/general-security-considerations.md)
-      + [强化您对JEEAEM Forms的环境](using/hardening-aem-forms-jee-environment.md)
-      + [为JEE上的AEM Forms配置安全管理设置](using/configuring-secure-administration-settings-aem.md)
+      + [AEM Forms关于JEE的一般安全考虑](using/general-security-considerations.md)
+      + [强化你的AEM Forms对JEE环境的支持](using/hardening-aem-forms-jee-environment.md)
+      + [在JEE上为AEM Forms配置安全管理设置](using/configuring-secure-administration-settings-aem.md)
 + 表单数据模型 {#form-data-model}
    + [AEM Forms数据集成简介](using/data-integration.md)
    + [配置数据源](using/configure-data-sources.md)
@@ -131,7 +131,7 @@ ht-degree: 1%
    + [创建表单数据模型](using/create-form-data-models.md)
    + [使用表单数据模型](using/work-with-form-data-model.md)
    + [使用表单数据模型](using/using-form-data-model.md)
-+ 自适应表单——基本创作 {#adaptive-forms-basic-authoring}
++ 自适应Forms-基本创作 {#adaptive-forms-basic-authoring}
    + [使用自适应表单的最佳实践](using/adaptive-forms-best-practices.md)
    + [创建自适应表单](using/creating-adaptive-form.md)
    + [自适应表单片段](using/adaptive-form-fragments.md)
@@ -148,7 +148,7 @@ ht-degree: 1%
    + [自适应表单组件的内联样式](using/inline-style-adaptive-forms.md)
    + [多步表单序列简介](using/introduction-form-sequence.md)
    + [自适应表单的布局功能](using/layout-capabilities-adaptive-forms.md)
-   + [AEM Forms中的占位符文本](using/placeholder-text-in-aem-forms-.md)
+   + [AEM Forms占位符文本](using/placeholder-text-in-aem-forms-.md)
    + [预览表单](using/previewing-forms.md)
    + [重用自适应表单](using/reusing-adaptive-forms.md)
    + [自适应表单中的分隔符组件](using/separator-component-in-adaptive-forms.md)
@@ -157,10 +157,10 @@ ht-degree: 1%
    + [将提交审阅者与表单关联](using/adding-reviewers-form.md)
    + [为表单字段创作上下文帮助](using/authoring-in-field-help.md)
    + [使用布局模式调整组件大小](/help/forms/using/resize-using-layout-mode.md)
-+ 自适应表单——高级创作 {#adaptive-forms-advanced-authoring}
++ 自适应Forms-高级创作 {#adaptive-forms-advanced-authoring}
    + [使用JSON模式创建自适应表单](using/adaptive-form-json-schema-form-model.md)
    + [使用XML模式创建自适应表单](using/adaptive-form-xml-schema-form-model.md)
-   + [在自适应表单中使用Adobe Sign](using/working-with-adobe-sign.md)
+   + [以自适应形式使用Adobe Sign](using/working-with-adobe-sign.md)
    + [创建和使用主题](using/themes.md)
    + [自适应表单规则编辑器](using/rule-editor.md)
    + [从自适应表单调用表单数据模型服务的API](using/invoke-form-data-model-services.md)
@@ -179,11 +179,11 @@ ht-degree: 1%
    + [使用AEM翻译工作流程本地化自适应表单和记录文档](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [自动测试自适应表单](using/calvin.md)
    + [自适应表单的样式构造](using/styling-constructs-adaptive-forms.md)
-   + [将自适应表单与XFA表单模板同步](using/synchronizing-adaptive-forms-xfa.md)
-   + [将Adobe Sign与AEM Forms集成](using/adobe-sign-integration-adaptive-forms.md)
+   + [将自适应Forms与XFA表单模板同步](using/synchronizing-adaptive-forms-xfa.md)
+   + [将Adobe Sign与AEM Forms整合](using/adobe-sign-integration-adaptive-forms.md)
    + [在表单中创建和管理资产的审阅](using/create-reviews-forms.md)
    + [在AEM Sites单页应用程序中嵌入自适应表单或交互式通信](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
-   + [标准验证错误消息自适应表单](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
+   + [标准验证错误消息自适应Forms](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
 + 交互式通信 {#interactive-communications}
    + [交互通信创作UI简介](using/introduction-interactive-communication-authoring.md)
    + [创建交互式通信](using/create-interactive-communication.md)
@@ -195,8 +195,8 @@ ht-degree: 1%
    + [交互通信配置属性](using/interactive-communication-configuration-properties.md)
    + [生成多个交互式通信](using/generate-multiple-interactive-communication-using-batch-api.md)
 + 工作流 {#workflows}
-   + [OSGi上以表单为中心的工作流程](using/aem-forms-workflow.md)
-   + [OSGi上以表单为中心的工作流程——步骤参考](using/aem-forms-workflow-step-reference.md)
+   + [OSGi上以Forms为中心的工作流程](using/aem-forms-workflow.md)
+   + [OSGi上以Forms为中心的工作流——步骤参考](using/aem-forms-workflow-step-reference.md)
    + [为以AEM Forms为中心的工作流步骤动态选择用户或用户组](using/dynamically-select-a-user-or-group-for-aem-workflow.md)
    + [以表单为中心的AEM工作流在OSGi和AEM FormsJEE工作流上的操作和功能](using/capabilities-osgi-jee-workflows.md)
    + [从AEM工作流启动文档服务API](using/initiating-document-services-apis-aem.md)
@@ -207,8 +207,8 @@ ht-degree: 1%
 + AEM Forms工作区 {#use-aem-forms-workspace}
    + [AEM Forms工作区简介](using/introduction-html-workspace.md)
    + [使用AEM Forms工作区](using/html-workspace-overview.md)
-   + [AEM Forms工作区体系结构](using/html-workspace-architecture.md)
-   + [Flex工作区中不提供AEM Forms工作区的功能](using/features-html-workspace-available-flex.md)
+   + [AEM Forms工作区架构](using/html-workspace-architecture.md)
+   + [AEM Forms工作区功能在Flex工作区中不可用](using/features-html-workspace-available-flex.md)
    + [Flex工作区功能在AEM Forms工作区中不可用](using/features-flex-workspace-available-html.md)
    + [骨干交互](using/backbone-interaction.md)
    + [可重用组件的描述](using/description-reusable-components.md)
@@ -235,7 +235,7 @@ ht-degree: 1%
    + [更新指向文档的链接](using/updating-link-help-documentation.md)
    + [在AEM Forms工作区中使用表单集](using/form-sets-html-workspace.md)
    + [AEM Forms工作区中使用的API](using/apis-used-html-workspace.md)
-   + [使用AEM Forms工作区中的现有流程数据启动新流程](using/initiating-new-process-existing-process.md)
+   + [利用AEM Forms工作区中的现有流程数据启动新流程](using/initiating-new-process-existing-process.md)
    + [在一台服务器上承载两个AEM Forms工作区实例](using/two-html-workspace-instances-one.md)
    + [更改接口的颜色方案](using/changing-color-scheme-interface.md)
    + [更改界面上的字体](using/changing-font-interface.md)
@@ -275,7 +275,7 @@ ht-degree: 1%
    + [添加附件](using/add-attachments.md)
    + [在脱机模式下工作](using/work-offline-mode.md)
    + [更新常规设置](using/update-general-settings.md)
-   + [AEM Forms应用程序疑难解答](using/issues-aem-forms-app.md)
+   + [对AEM Forms应用程序进行疑难解答](using/issues-aem-forms-app.md)
 + HTML5 表单 {#html5-forms}
    + [HTML5表单简介](using/introduction.md)
    + [HTML5表单入门](using/get-started.md)
@@ -304,7 +304,7 @@ ht-degree: 1%
    + [为HTML5表单启用日志记录](using/enable-logs.md)
    + [调试HTML5表单](using/debug.md)
    + [HTML5表单的脚本支持](using/scripting-support.md)
-   + [以AEM Forms设置的表单](using/formset-in-aem-forms.md)
+   + [AEM Forms设置的表单](using/formset-in-aem-forms.md)
 + 字母和对应 {#letters-correspondences}
    + [通信管理概述](using/cm-overview.md)
    + [布局设计](using/layout-design-details.md)
@@ -320,7 +320,7 @@ ht-degree: 1%
    + [将自定义属性添加到Corresponce Management资产](using/add-custom-properties-cm-assets.md)
    + [自定义创建对应UI](using/customize-create-correspondence-ui.md)
    + [自定义文本编辑器](using/customize-text-editor.md)
-   + [通信管理： 疑难解答](using/cm-troubleshooting.md)
+   + [通信管理：疑难解答](using/cm-troubleshooting.md)
    + [用于访问字母实例的API](using/cm-apis-to-access-letter-instances.md)
    + [将创建对应UI与自定义门户集成](using/integrating-create-correspondence-ui-with-your-portal.md)
    + [通信管理中的定制特征](using/custom-special-characters.md)
@@ -330,17 +330,17 @@ ht-degree: 1%
    + [文档片段](using/lists.md)
    + [对应管理配置属性](using/cm-configuration-properties.md)
 + 将AEM Forms与Experience Cloud解决方案集成 {#integrate-aem-forms-with-experience-cloud-solutions}
-   + [在AEM Forms中创建有针对性的体验](/help/forms/using/experience-targeting-forms.md)
+   + [在AEM Forms创造有针对性的体验](/help/forms/using/experience-targeting-forms.md)
    + [衡量和改进表单的有效性和转换](using/measure-improve-performance-forms-documents.md)
    + [配置分析和报告](using/configure-analytics-forms-documents.md)
    + [视图和了解AEM Forms分析报告](using/view-understand-aem-forms-analytics-reports.md)
    + [创建和管理自适应表单的A/B测试](using/ab-testing-adaptive-forms.md)
-+ 发布和处理AEM Forms {#publish-process-aem-forms}
++ 出版和处理AEM Forms {#publish-process-aem-forms}
    + [在门户上发布表单简介](using/introduction-publishing-forms.md)
    + [将草稿和提交组件与数据库集成的示例](using/integrate-draft-submission-database.md)
    + [为草稿和提交配置存储服务](using/configuring-draft-submission-storage.md)
-   + [在AEM收件箱中管理表单应用程序和任务](using/manage-applications-inbox.md)
-   + [以AEM Forms形式监视文件夹](using/watched-folder-in-aem-forms.md)
+   + [在AEM收件箱中管理Forms应用程序和任务](using/manage-applications-inbox.md)
+   + [在AEM Forms监视文件夹](using/watched-folder-in-aem-forms.md)
    + [草稿和提交组件](using/draft-submission-component.md)
    + [在页面中嵌入链接组件](using/embedding-link-component-page.md)
    + [发布和取消发布表单和文档](using/publishing-unpublishing-forms.md)
@@ -350,7 +350,7 @@ ht-degree: 1%
    + [创建或配置监视文件夹](using/creating-configure-watched-folder.md)
    + [在分配任务步骤中使用自定义电子邮件模板](using/use-custom-email-template-assign-task-step.md)
    + [在电子邮件通知中使用元数据](using/use-metadata-in-email-notifications.md)
-+ Forms Portal {#use-forms-portal}
++ Forms门户 {#use-forms-portal}
    + [自定义表单门户组件的模板](using/customizing-templates-forms-portal-components.md)
    + [启用表单门户组件](using/enabling-forms-portal-components.md)
    + [创建表单门户页面](using/creating-form-portal-page.md)
@@ -361,17 +361,17 @@ ht-degree: 1%
    + [表单服务](using/forms-service.md)
    + [输出服务](using/output-service.md)
    + [转换PDF服务](using/using-convertpdf-service.md)
-   + [Barcoded Forms Service](using/using-barcoded-forms-service.md)
+   + [巴科德Forms](using/using-barcoded-forms-service.md)
    + [使用Assembler Service](using/assembler-service.md)
    + [使用HSM对文档进行数字签名或验证](using/hsm-certify-esign-docs.md)
    + [以编程方式使用AEM文档服务](using/aem-document-services-programmatically.md)
    + [使用sendToPrinter API](using/using-sendtoprinter-api.md)
 + 文档安全 {#use-document-security}
    + [文档安全产品](using/document-security-offerings.md)
-   + [启用AEM以搜索文档安全保护的PDF文档](using/enable-search-for-drm-protected-pdf-documents-in-aem.md)
+   + [使AEM能够搜索文档安全保护的PDF文档](using/enable-search-for-drm-protected-pdf-documents-in-aem.md)
    + [Reader使用可移植保护库扩展受策略保护的PDF文档](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
-   + [启用AEM以搜索文档安全保护的PDF和Microsoft Office文档](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
-   + [代表其他用户保护文档](using/protect-document-on-behalf-of-another-user.md)
+   + [使AEM能够搜索文档安全保护的PDF和Microsoft Office文档](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
+   + [Protect代表其他用户创建文档](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
    + [使用设计器](http://www.adobe.com/go/learn_aemforms_designer_65)
    + [设计人员快速开始教程](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
@@ -400,9 +400,9 @@ ht-degree: 1%
    + [查看和了解事务处理报表](using/viewing-and-understanding-transaction-reports.md)
    + [事务处理报表可计费API](using/transaction-reports-billable-apis.md)
    + [记录自定义实现的事务](using/record-transaction-custom-implementation.md)
-+ 针对JEEAEM Forms的管理员帮助 {#administrator-help}
++ 针对AEM Forms的JEE管理员帮助 {#administrator-help}
    + 开始使用 {#get-started}
-      + [常规AEM Forms设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
+      + [一般AEM Forms设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
       + [更新部署的许可证类型](/help/forms/using/admin-help/update-license-type-deployment.md)
    + 设置和管理域 {#setup-manage-domains}
       + [添加域](/help/forms/using/admin-help/adding-domains.md)
@@ -458,11 +458,11 @@ ht-degree: 1%
    + 配置Acrobat Reader DC扩展 {#configure-acrobat-reader-dc-extensions}
       + [Acrobat Reader DC扩展使用的证书类型](/help/forms/using/admin-help/certificate-types-used-acrobat-reader.md)
       + [识别PDF文档中的有效和过期证书](/help/forms/using/admin-help/recognizing-valid-expired-certificates-pdf.md)
-      + [配置Acrobat Reader DC扩展以进行数据捕获](/help/forms/using/admin-help/configuring-acrobat-reader-dc-extensions.md)
+      + [配置Acrobat Reader DC数据捕获扩展](/help/forms/using/admin-help/configuring-acrobat-reader-dc-extensions.md)
       + [查看凭据使用信息](/help/forms/using/admin-help/review-credential-information.md)
       + [配置凭据以与Acrobat Reader DC扩展一起使用](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md)
       + [查看PDF文件的使用权限](/help/forms/using/admin-help/review-usage-rights-pdf-file.md)
-      + [启用Adobe Reader Web浏览器插件的在线注释](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
+      + [启用Adobe ReaderWeb浏览器插件的在线注释](/help/forms/using/admin-help/enabling-online-commenting-reader-web.md)
       + [设置用于Acrobat Reader DC扩展的超时值](/help/forms/using/admin-help/setting-timeout-values-acrobat-reader.md)
    + 使用PDF生成器 {#work-with-pdf-generator}
       + [使用PDF生成器简介](/help/forms/using/admin-help/overview-5.md)
@@ -492,14 +492,14 @@ ht-degree: 1%
       + [使用文档安全网页](/help/forms/using/admin-help/using-document-security-web-pages.md)
       + [创建和管理策略集](/help/forms/using/admin-help/creating-policy-sets.md)
       + [注册为用户](/help/forms/using/admin-help/registering-as-a-user.md)
-   + 配置表单 {#configure-forms}
+   + 配置Forms {#configure-forms}
       + [表单配置基础知识](/help/forms/using/admin-help/overview-7.md)
       + [设置国际化选项](/help/forms/using/admin-help/setting-internationalization-options.md)
-      + [配置表单缓存](/help/forms/using/admin-help/configuring-caching-forms.md)
+      + [为Forms配置缓存](/help/forms/using/admin-help/configuring-caching-forms.md)
       + [指定XCI配置选项](/help/forms/using/admin-help/specifying-xci-configuration-options.md)
       + [配置表单输出](/help/forms/using/admin-help/configuring-form-output.md)
       + [指定要嵌入的字体](/help/forms/using/admin-help/specifying-fonts-embed.md)
-      + [配置表单位置](/help/forms/using/admin-help/configuring-locations-forms.md)
+      + [配置Forms位置](/help/forms/using/admin-help/configuring-locations-forms.md)
       + [指定安全设置](/help/forms/using/admin-help/specifying-security-settings.md)
       + [配置验证消息](/help/forms/using/admin-help/configuring-validation-messages.md)
    + 配置输出 {#configure-output}
@@ -516,7 +516,7 @@ ht-degree: 1%
       + [关于管理和流程术语](/help/forms/using/admin-help/administration-process-terminology.md)
       + [管理流程](/help/forms/using/admin-help/processes.md)
       + [配置业务日历](/help/forms/using/admin-help/configuring-business-calendars.md)
-      + [表单工作流概述](/help/forms/using/admin-help/overview-9.md)
+      + [Forms工作流程概述](/help/forms/using/admin-help/overview-9.md)
       + [配置外出设置](/help/forms/using/admin-help/configuring-out-office-settings.md)
       + [搜索进程实例](/help/forms/using/admin-help/searching-process-instances.md)
       + [配置服务器设置](/help/forms/using/admin-help/configuring-server-settings.md)
@@ -538,15 +538,15 @@ ht-degree: 1%
    + 维护AEM表单 {#maintain-aem-forms}
       + [日志文件](/help/forms/using/admin-help/log-files.md)
       + [用户管理](/help/forms/using/admin-help/user-management.md)
-      + [监视AEM表单部署](/help/forms/using/admin-help/monitoring-aem-forms-deployments.md)
+      + [监控AEM表单部署](/help/forms/using/admin-help/monitoring-aem-forms-deployments.md)
       + [Work Manager和限制](/help/forms/using/admin-help/manager-throttling.md)
       + [在维护模式下运行AEM表单](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
    + 维护AEM表单数据库 {#maintain-aem-forms-database}
-      + [DB2数据库： 每周运行进程](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
+      + [DB2数据库：每周运行进程](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
       + [Oracle数据库最大打开游标阈值](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
-      + [IBM DB2数据库： 运行命令以进行定期维护](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
+      + [IBM DB2数据库：运行命令以进行定期维护](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
       + [清除流程数据](/help/forms/using/admin-help/purging-process-data.md)
-      + [Microsoft SQL Server数据库： 微调配置](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
+      + [Microsoft SQL Server数据库：微调配置](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
       + [最小化数据库增长的提示](/help/forms/using/admin-help/tips-minimizing-database-growth.md)
    + 维护应用程序服务器 {#manage-application-server}
       + [应用程序服务器网站](/help/forms/using/admin-help/application-server-websites.md)
@@ -554,12 +554,12 @@ ht-degree: 1%
       + [运行AdministrationConsole时的注意事项](/help/forms/using/admin-help/considerations-running-administration-console.md)
       + [增强应用程序服务器性能](/help/forms/using/admin-help/enhancing-application-server-performance.md)
       + [启动和停止WebSphere Application Server](/help/forms/using/admin-help/starting-stopping-websphere-application-server.md)
-   + AEM Forms备份和恢复 {#aem-forms-backup-recovery}
+   + AEM表单备份和恢复 {#aem-forms-backup-recovery}
       + [备份和恢复EMC Documentum存储库](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md)
       + [启用和禁用安全备份模式](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md)
       + [备份AEM表单数据](/help/forms/using/admin-help/backing-aem-forms-data.md)
       + [要备份和恢复的文件](/help/forms/using/admin-help/files-back-recover.md)
-      + [AEM表单的备份和恢复策略](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
+      + [AEM表单的备份和恢复战略](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
       + [PDF Generator备份限制](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
       + [监视文件夹的备份策略](/help/forms/using/admin-help/backup-strategies-watched-folders.md)
       + [恢复AEM表单数据](/help/forms/using/admin-help/recovering-aem-forms-data.md)
@@ -579,17 +579,18 @@ ht-degree: 1%
 + 开发人员参考 {#developer-reference}
    + [开发人员基础知识](https://docs.adobe.com/content/help/en/experience-manager-65/developing/home.html)
    + [HTML 模板语言](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
-   + [用于调试自适应表单的AEM插件](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
+   + [AEM插件调试自适应表单](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM FormsJava API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
-   + [AEM Forms关于JEE Java API参考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
+   + [AEM FormsJEE Java API参考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
    + [HTML5表单的Form Bridge API](using/form-bridge-apis.md)
+   + [JavaScript库API参考，AdaptiveForms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
    + [Assembler Service和DDX参考](http://www.adobe.com/go/learn_aemforms_ddxRef_65)
    + [工作台帮助](http://www.adobe.com/go/learn_aemforms_workbench_65)
-   + 使用JEEAEM Forms进行编程 {#programming-aem-forms-jee}
-      + JEEAEM Forms编程简介 {#introduction-programming-aem-forms-jee}
+   + 与AEM Forms一起编程JEE {#programming-aem-forms-jee}
+      + 关于JEE的与AEM Forms的编程简介 {#introduction-programming-aem-forms-jee}
          + [介绍Java API QuickStart](developing/introducing-java-api-soap-quick.md)
          + [使用API调用AEM Forms](developing/invoking-aem-forms-using-apis.md)
-         + [了解AEM Forms流程](developing/aem-forms-processes.md)
+         + [理解AEM Forms进程](developing/aem-forms-processes.md)
          + [服务容器](developing/service-container.md)
       + Java API快速开始-代码示例 {#java-api-quick-start-code-examples}
          + [Application Manager客户端JavaAPI快速开始(SOAP)](developing/application-manager-client-java-api.md)
@@ -597,18 +598,18 @@ ht-degree: 1%
          + [Assembler Service Java API QuickStart(SOAP)](developing/assembler-service-java-api-quick.md)
          + [Acrobat Reader DC扩展服务Java API快速开始(SOAP)](developing/acrobat-reader-dc-extensions-service.md)
          + [备份和还原服务APIQ快速开始](developing/backup-restore-service-api-quick.md)
-         + [Barcoded Forms Service Java APIQ快速开始(SOAP)](developing/barcoded-forms-service-java-api.md)
+         + [BarcodedForms服务Java APIQ快速开始(SOAP)](developing/barcoded-forms-service-java-api.md)
          + [组件和服务Java APIQ快速开始(SOAP)](developing/components-services-java-api-quick.md)
          + [转换PDF服务Java API QuickStart(SOAP)](developing/convert-pdf-service-java-api.md)
          + [凭据服务Java API QuickStart(SOAP)](developing/credential-service-java-api-quick.md)
-         + [Distiller Service Java API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
+         + [Distiller服务Java API QuickStart(SOAP)](developing/distiller-service-java-api-quick.md)
          + [DocConverter Service Java API QuickStart(SOAP)](developing/docconverter-service-java-api-quick.md)
          + [文档管理服务（已弃用）Java API快速开始(SOAP)](developing/document-management-service-deprecated-java.md)
          + [文档安全服务JavaAPI快速开始(SOAP)](developing/document-security-service-java-api.md)
          + [加密服务Java API QuickStart(SOAP)](developing/encryption-service-java-api-quick.md)
          + [端点注册表Java API QuickStart(SOAP)](developing/endpoint-registry-java-api-quick.md)
          + [表单开始集成服务JavaAPI快速数据(SOAP)](developing/form-data-integration-service-java.md)
-         + [Forms Service API快速开始](developing/forms-service-api-quick-starts.md)
+         + [Forms服务API快速开始](developing/forms-service-api-quick-starts.md)
          + [生成PDF服务Java API QuickStart(SOAP)](developing/generate-pdf-service-java-api.md)
          + [调用API快速开始](developing/invocation-api-quick-starts.md)
          + [LiveCycleProcess Java API(SOAP)快速开始](developing/livecycleprocess-java-api-soap-quick.md)
@@ -622,13 +623,13 @@ ht-degree: 1%
       + 使用API调用JEE上的AEM Forms {#invoking-aem-forms-jee-apis}
          + [使用REST请求调用AEM Forms](developing/invoking-aem-forms-using-rest.md)
          + [使用Web服务调用AEM Forms](developing/invoking-aem-forms-using-web.md)
-         + [使用远程处理调用AEM Forms](developing/invoking-aem-forms-using-remoting.md)
+         + [使用远程调用AEM Forms](developing/invoking-aem-forms-using-remoting.md)
          + [使用Web服务调用AEM Forms](developing/invoking-human-centric-long-lived.md)
          + [使用JavaAPI调用AEM Forms](developing/invoking-aem-forms-using-java.md)
          + [创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序](developing/creating-flash-builder-applications-perform.md)
       + 使用API执行服务操作 {#performing-service-operations-using-apis}
          + [使用API执行服务操作](developing/performing-service-operations-using-apis.md)
-         + [渲染表单](developing/rendering-forms.md)
+         + [呈现Forms](developing/rendering-forms.md)
          + [汇编PDF文档](developing/assembling-pdf-documents.md)
          + [以编程方式组合PDF文档](developing/programmatically-assembling-pdf-documents.md)
          + [在文件格式和PDF之间转换](developing/converting-file-formats-pdf.md)
@@ -639,25 +640,25 @@ ht-degree: 1%
          + [汇编非交互式PDF文档](developing/assembling-non-interactive-pdf-documents.md)
          + [将PDF文档与书签组合](developing/assembling-pdf-documents-bookmarks.md)
          + [分配使用权限](developing/assigning-usage-rights.md)
-         + [汇编PDF包](developing/assembling-pdf-portfolios.md)
+         + [汇编PDFPortfolio](developing/assembling-pdf-portfolios.md)
          + [计算表单数据](developing/calculating-form-data.md)
-         + [创建呈现表单的Web 应用程序](developing/creating-web-applications-renders-forms.md)
+         + [创建呈现Forms的Web 应用程序](developing/creating-web-applications-renders-forms.md)
          + [使用SubmittedXML文档创建PDF](developing/creating-pdf-documents-submitted-xml.md)
          + [使用Web服务API反汇编PDF文档](developing/disassemble-pdf-document-using-web.md)
          + [确定文档是否符合PDF/A规范](developing/determining-whether-documents-pdf-a.md)
          + [动态创建DDX文档](developing/dynamically-creating-ddx-documents.md)
-         + [处理提交的表单](developing/handling-submitted-forms.md)
+         + [处理提交的Forms](developing/handling-submitted-forms.md)
          + [优化Forms服务的性能](developing/optimizing-performance-forms-service.md)
          + [将文档传递到FormsService](developing/passing-documents-forms-service.md)
-         + [使用可流动布局预填充表单](developing/prepopulating-forms-flowable-layouts.md)
-         + [基于片段呈现表单](developing/rendering-forms-based-fragments.md)
-         + [按值呈现表单](developing/rendering-forms-value.md)
-         + [将表单渲染为HTML](developing/rendering-forms-html.md)
-         + [在客户端渲染表单](developing/rendering-forms-client.md)
-         + [使用自定义CSS文件渲染HTML表单](developing/rendering-html-forms-using-custom.md)
-         + [使用自定义工具栏渲染HTML表单](developing/rendering-html-forms-custom-toolbars.md)
+         + [使用可流动布局预填充Forms](developing/prepopulating-forms-flowable-layouts.md)
+         + [基于片段呈现Forms](developing/rendering-forms-based-fragments.md)
+         + [按价值呈现Forms](developing/rendering-forms-value.md)
+         + [将Forms渲染为HTML](developing/rendering-forms-html.md)
+         + [在客户端呈现Forms](developing/rendering-forms-client.md)
+         + [使用自定义CSS文件渲染HTMLForms](developing/rendering-html-forms-using-custom.md)
+         + [使用CustomToolbars渲染HTMLForms](developing/rendering-html-forms-custom-toolbars.md)
          + [渲染交互式PDF forms](developing/rendering-interactive-pdf-forms.md)
-         + [渲染启用权限的表单](developing/rendering-rights-enabled-forms.md)
+         + [启用渲染权限的Forms](developing/rendering-rights-enabled-forms.md)
          + [验证DDX文档](developing/validating-ddx-documents.md)
          + [将PDF转换为Postscript和图像文件](developing/converting-pdf-postscript-image-files.md)
          + [将Postscript转换为PDF文档](developing/converting-postscript-pdf-documents.md)
@@ -672,7 +673,7 @@ ht-degree: 1%
          + [使用PDF/A文档](developing/pdf-a-documents.md)
          + [使用PDF实用程序](developing/pdf-utilities.md)
          + [使用XMP实用程序](developing/xmp-utilities.md)
-         + [准备备份AEM Forms](developing/preparing-aem-forms-backup.md)
+         + [准备AEM Forms备份](developing/preparing-aem-forms-backup.md)
          + [以编程方式管理端点](developing/programmatically-endpoints.md)
          + [以编程方式管理首选项节点](developing/programmatically-preferences-nodes.md)
          + [使用策略保护文档](developing/protecting-documents-policies.md)
