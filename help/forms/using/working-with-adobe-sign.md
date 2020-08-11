@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70052a5a8cba16dd2d73179e6e1d617347d716bc
+source-git-commit: e562ffe229543a1ee93467bcbc1a7be6c12927c6
 workflow-type: tm+mt
-source-wordcount: '3679'
+source-wordcount: '3643'
 ht-degree: 0%
 
 ---
@@ -22,14 +22,14 @@ ht-degree: 0%
 
 Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善处理法律、销售、工资、人力资源管理等文档的工作流。
 
-在典型的Adobe Sign和自适应表单场景中，用户填充自适应表单以申请服务。 例如，抵押和信用卡申请需要所有借款人和共同申请人的合法签名。 要为类似情况启用电子签名工作流，您可以将Adobe Sign与AEM Forms集成。 还有几个示例，您可以使用Adobe Sign:
+在典型的Adobe Sign和自适应表单场景中，用户填充自适应表单以申请服务。 例如，抵押和信用卡申请需要所有借款人和共同申请人的合法签名。 要针对类似情况启用电子签名工作流，您可以将Adobe Sign与AEM Forms集成。 还有几个示例，您可以使用Adobe Sign:
 
 * 通过完全自动化的建议书、报价和合同流程，从任何设备达成交易。
 * 更快地完成人力资源流程并为员工提供数字体验。
 * 缩短合同周期并加快供应商的投放速度。
 * 创建可自动处理常见流程的数字工作流。
 
-Adobe Sign与AEM Forms的集成支持：
+Adobe Sign与AEM Forms的整合支持：
 
 * 单用户和多用户签名工作流
 * 顺序和同时签名工作流
@@ -42,7 +42,7 @@ Adobe Sign与AEM Forms的集成支持：
 
 在以自适应形式使用Adobe Sign之前：
 
-* 确保AEM Forms云服务已配置为使用Adobe Sign。 有关详细信息，请参 [阅将Adobe Sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md)。
+* 确保将AEM Forms云服务配置为使用Adobe Sign。 有关详细信息，请参 [阅将Adobe Sign与AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md)。
 * 让签署方的列表准备就绪。 您至少需要为每位签署方提供一个电子邮件地址。
 
 ## 为自适应表单配置Adobe Sign {#configure-adobe-sign-for-an-adaptive-form}
@@ -69,13 +69,13 @@ Adobe Sign与AEM Forms的集成支持：
 
 请执行以下步骤以创建启用签名的自适应表单：
 
-1. 导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]****[!UICONTROL >]** Forms和文档。
+1. 导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms]**&#x200B;和文档。
 1. 点按 **[!UICONTROL 创建]** ，然后选择 **[!UICONTROL 自适应表单]**。 出现一列表模板。 选择模板并点按 **[!UICONTROL 下一步]**。
 1. 在“基 **[!UICONTROL 本]** ”选项卡中：
 
    1. 为自适应 **表单****指定名** 称和标题。
 
-   1. 选择在 [配置容器](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) (使用AEM Forms)时创建的配置Adobe Sign。
+   1. 选择在配 [置Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) (与AEM Forms)时创建的配置容器。
 
 1. 在“表 **[!UICONTROL 单模型]** ”选项卡中，选择以下选项之一：
 
@@ -89,9 +89,9 @@ Adobe Sign与AEM Forms的集成支持：
 
 请执行以下步骤以在现有的自适应表单中使用Adobe Sign:
 
-1. 导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]****[!UICONTROL >]** Forms和文档。
+1. 导航到 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms]**&#x200B;和文档。
 1. 选择自适应表单并点按 **[!UICONTROL 属性]**。
-1. 在“基 **[!UICONTROL 本]** ”选项卡中，选择在 [使用AEM Forms配](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) 置Adobe Sign时创建的配置容器。
+1. 在“基 **[!UICONTROL 本]** ”选项卡中，选择在 [配置Adobe Sign时创](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) 建的配置容器(使用AEM Forms)。
 1. 在“表 **[!UICONTROL 单模式]** ”选项卡中，选择以下选项之一：
 
    * 选择“ **[!UICONTROL 关联表单模板”作为“记录模板文档]** ”选项，然后选择“记录模板文档”。 如果您使用基于表单模板的自适应表单，则发送用于签名的文档仅显示基于关联表单模板的字段。 它不显示自适应表单的所有字段。
@@ -156,9 +156,9 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 1. 在内容浏览器中，点 **按表单容器**，然后点按 **配置**![配置图标](assets/configure.png) 。 它打开属性浏览器并显示自适应表单容器属性。
 1. 在属性浏览器中，展开“电 **子签名** ”折叠面板，然后选择“启 **用Adobe Sign** ”选项。 它使Adobe Sign能够获得一种适应性表单。
-1. 从已配置的Adobe SignCloud Service列表中选择云服务。
+1. 从已配置的Adobe SignCloud Services列表中选择云服务。
 
-   如果 **Adobe SignCloud Service** 列表为空 [，请按照使用AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) 文件配置Adobe Sign来配置服务。
+   如果 **Adobe SignCloud Service** 列表为空，请按照“ [配置Adobe Sign”(使用AEM Forms文](../../forms/using/adobe-sign-integration-adaptive-forms.md) )配置服务。
 
 1. 从“签名者可以签名”对 **话框中选择签** 名顺序。 Adobe Sign歌手可以按任 **意顺序** (依次为另一个签署方 **或同时** )签署自适应格式。
 
@@ -184,7 +184,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
    * **签署方和填写表单的人是否相同？** 如果 **表单填写**&#x200B;者和第一个签署者是同一人，请选择“是”。 如果选项设置为“ **否”** ，则请勿在自适应表单中使用签名步骤组件。 如果表单包含签名步骤组件，则字段将自动设置为是。
 
-   * **签署方电子邮件地址：** 指定签署方的电子邮件地址。 签署方将收到指定电子邮件地址上的待签名文档/表单。 您可以选择在登录用户的AEM用户用户档案中使用表单字段中提供的电子邮件地址，也可以手动输入电子邮件地址。 这是必要步骤。 确保第一个签署方或唯一签署方（对于单一签署方）的电子邮件地址与用于配置AEM cloud services的Adobe Sign帐户不相同。
+   * **签署方电子邮件地址：** 指定签署方的电子邮件地址。 签署方将收到指定电子邮件地址上的待签名文档/表单。 您可以选择在登录用户的AEM用户用户档案中使用表单字段中提供的电子邮件地址，也可以手动输入电子邮件地址。 这是必要步骤。 确保第一个签署方或唯一签署方（对于单一签署方）的电子邮件地址与用于配置AEM云服务的Adobe Sign帐户不相同。
 
    * **签署方身份验证方法：** 指定在打开表单进行签名之前对用户进行身份验证的方法。 您可以选择电话、知识库和基于社交身份的身份验证。
    >[!NOTE]
@@ -196,7 +196,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
    ![签署方详细信息](assets/signer-details.png)
 
-   上图有两个示例Adobe Sign区块： 个人信息和办公室详细信息
+   上图有两个示例Adobe Sign区块：个人信息和办公室详细信息
 
    点按完 ![成aem_6_3_forms_save图标](assets/aem_6_3_forms_save.png) 。 签署方已添加并配置。
 
@@ -206,9 +206,10 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 此外，只有在所有签名者签署表单后，才会提交启用Adobe Sign的自适应表单。 您可以在表单门户的“待签名”部分找到部分签名的表单。 Adobe Sign配置服务会定期轮询 [Adobe Sign服务器](../../forms/using/adobe-sign-integration-adaptive-forms.md) ，以验证签名状态。 如果所有签署方都完成了表单的签名，则会启动提交操作服务并提交表单。 如果您使用自定义提交操作，并且表单使用Adobe Sign，请更新自定义提交操作以使用提交操作服务。
 
+<!-- Remove when forms portal goes live
 >[!NOTE]
 >
->自适应表单的数据临时存储在Forms门户网站上。 建议对Forms门 [户使用自定义存储](/help/forms/using/configuring-draft-submission-storage.md)。 它确保PII（个人身份信息）数据不存储在AEM服务器上。
+>Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. -->
 
 您的表单签名体验已就绪。 您可以预览表单以验证签名体验。 在已发布的表单上，当签署方收到通过电子邮件进行签名的表单时，将显示“Adobe Sign阻止”字段。 此体验也称为表外签名体验。 您还可以为第一个签署方配置表单内签名体验，有关详细步骤，请参 [阅创建表单内签名体验](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)。
 
@@ -238,8 +239,8 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
    使用以下方式将数字签名应用于自适应表单：
 
-   * 云签名： 使用由信 [任服务提供商托](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 管的数字ID进行签名。
-   * Adobe Acrobat或Reader: 下载并打开与Adobe Acrobat或Reader的文档，以使用智能卡、USB令牌或基于文件的数字ID进行签名。
+   * 云签名：使用由信 [任服务提供商托](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 管的数字ID进行签名。
+   * Adobe Acrobat或Reader:下载并打开与Adobe Acrobat或Reader的文档，以使用智能卡、USB令牌或基于文件的数字ID进行签名。
 
    在将云签名字段添加到自适应表单后，请执行以下步骤以完成配置过程：
 
@@ -267,15 +268,15 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 1. 将签名步骤组 **件从组件** 浏览器拖放到表单。
 1. 选择新添加的签名步骤组件，然后点按 **配置**![配置](assets/configure.png) 图标。 它打开属性浏览器并显示签名步骤属性。 配置以下属性：
 
-   * **元素名称**: 指定组件的名称。
+   * **元素名称**:指定组件的名称。
 
    * **标题：** 指定组件的唯一标题。
    * **模板消息：** 指定加载签名PDF时要显示的消息。 Adobe Sign服务需要一些时间来准备和加载签名PDF。
    * **签名服务：** 选择“ **Adobe Sign** ”选项。
 
-   * **使用旧版电子签名组件**: 如果您在AEM Forms工作区、AEM Forms应用 [程序或基础自适应表单中使用](../../forms/using/introduction-html-workspace.md)，则选择使用旧版电子签名 **** 组件选项。
+   * **使用旧版电子签名组件**:如果您在AEM Forms工作区、AEM Forms应 [用程序中使用相应的自适应表单](../../forms/using/introduction-html-workspace.md)，或者基础自适应表单具有旧版电子签名组件，请选择 **使用旧版电子签名组件选项** 。
 
-   * **配置**: 选择配置(Adobe SignCloud Service)。 仅当启用了使用旧版电子签名 **组件选项时，下拉框** 才可用。
+   * **配置**:选择配置(Adobe SignCloud Service)。 仅当启用了使用旧版电子签名 **组件选项时，下拉框** 才可用。
 
    点按完 ![成aem_6_3_forms_save图标](assets/aem_6_3_forms_save.png) ，以保存更改。
 
@@ -307,13 +308,13 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 **答：** 使用高级模板创建的自适应表单配置为使用Adobe Sign。 要解决错误，请创建并选择Adobe Sign云配置，并为自适应表单配置Adobe Sign签署方。
 
-**答：** 是的，您可以在文本组件中使用文本标记将Adobe Sign字段添加到 [记录文档](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) (仅自动生成记录文档选项)启用的自适应表单。 要了解创建文本标记的过程和规则，请参阅 [Adobe Sign文档](https://helpx.adobe.com/sign/help/text-tags.html)。 另外，自适应表单对文本标记的支持有限。 您可以使用文本标记仅创建Adobe Sign块支 [持的字段](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
+**答：** 是的，您可以在文本组件中使用文本标记将Adobe Sign字段添加到 [记录文档](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md) (仅自动生成记录文档选项)启用的自适应表单。 要了解创建文本标记的过程和规则，请参阅 [Adobe Sign文档](https://helpx.adobe.com/sign/using/text-tag.html)。 另外，自适应表单对文本标记的支持有限。 您可以使用文本标记仅创建Adobe Sign块支 [持的字段](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form) 。
 
 **答：** 您可以在表单中同时使用这两个组件。 以下是使用这些组件的一些建议：
 
 **Adobe Sign区：** 您可以使用Adobe Sign块在自适应表单的任意位置添加Adobe Sign字段。 它还有助于为签名者分配特定字段。 默认情况下，当预览或发布自适应表单时，Adobe Sign块不可见。 这些块仅在签名文档中启用。 在签名文档中，只启用分配给签署方的字段。 Adobe Sign区块可以与第一个和后续签署者一起使用。
 
-**签名步骤组件：** 您可以使用签名步骤组件创建表单内签名体验。 它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 它通常是表单的最后一个或倒数第二个部分，后跟摘要组件。
+**签名步骤组件：** 您可以使用签名步骤组件创建表单内签名体验。 它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 通常是表单的最后一个或倒数第二个部分，后面是摘要组件。
 
 ## 故障诊断 {#troubleshoot}
 
@@ -327,7 +328,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 * 确保用于配置Adobe Sign云服务的Adobe Sign服务器上的API应用程序具有所需的权限。
 * 如果您使用多个Adobe Sign云服务，请将所 **[!UICONTROL 有服务的]** oAuth URL指向同一 **[!UICONTROL 个Adobe Sign共享]**。
 
-* 使用单独的电子邮件地址为Adobe Sign帐户以及第一个签署方和单个签署方配置电子邮件地址。 第一个签署方或唯一签署方（对于单个签署方）的电子邮件地址不能与用于配置AEM cloud services的Adobe Sign帐户相同。
+* 使用单独的电子邮件地址为Adobe Sign帐户以及第一个签署方和单个签署方配置电子邮件地址。 第一个签署方或唯一签署方（对于单个签署方）的电子邮件地址不能与用于配置AEM云服务的Adobe Sign帐户相同。
 
 ## 相关文章 {#related-articles}
 
