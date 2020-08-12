@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: Experience Manager6.5资产用户指南
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 42%
+source-wordcount: '635'
+ht-degree: 41%
 
 ---
 
@@ -35,10 +35,10 @@ ht-degree: 42%
    + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
    + [设置 Dynamic Media](administering-dynamic-media.md)
    + [使用 Dynamic Media](dynamic-media.md)
-   + [配置Dynamic Media-Scene7模式](config-dms7.md)
-   + [配置Dynamic Media-混合模式](config-dynamic.md)
-   + [疑难解答Dynamic Media-Scene7模式](troubleshoot-dms7.md)
-   + [从Dynamic Media迁移——混合模式到Dynamic Media- S7模式](migrate-from-hybrid-to-dms7.md)
+   + [配置Dynamic Media -Scene7模式](config-dms7.md)
+   + [配置Dynamic Media —— 混合模式](config-dynamic.md)
+   + [Dynamic Media疑难解答-Scene7模式](troubleshoot-dms7.md)
+   + [从Dynamic Media —— 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [管理 Dynamic Media 查看器预设](managing-viewer-presets.md)
@@ -58,7 +58,7 @@ ht-degree: 42%
    + [全景图像](panoramic-images.md)
    + [混合媒体集](mixed-media-sets.md)
    + [旋转集](spin-sets.md)
-   + [Dynamic Media视频](video.md)
+   + [Dynamic Media中的视频](video.md)
    + [传送横幅](carousel-banners.md)
    + [交互式图像](interactive-images.md)
    + [交互式视频](interactive-videos.md)
@@ -72,7 +72,7 @@ ht-degree: 42%
    + [将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md)
    + [使用规则集转换 URL](using-rulesets-to-transform-urls.md)
    + [发布 Dynamic Media 资产](publishing-dynamicmedia-assets.md)
-   + [使 CDN 缓存内容无效](invalidate-cdn-cached-content.md)
+   + [通过Dynamic Media Classic使CDN缓存失效](invalidate-cdn-cache-dm-classic.md)
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产 {#extending}
