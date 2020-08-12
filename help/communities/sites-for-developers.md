@@ -1,6 +1,6 @@
 ---
-title: Community Site Essentials
-seo-title: Community Site Essentials
+title: 社区站点基础
+seo-title: 社区站点基础
 description: 导出和删除社区站点以及创建自定义站点模板
 seo-description: 导出和删除社区站点以及创建自定义站点模板
 uuid: f0ec0e71-64e9-415a-b14a-939a9b1611c1
@@ -10,12 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 1%
 
 ---
 
 
-# Community Site Essentials {#community-site-essentials}
+# 社区站点基础 {#community-site-essentials}
 
 ## 自定义站点模板 {#custom-site-template}
 
@@ -26,7 +29,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 * 创建自定义模板。
 * 叠加默认站点模板路径。
 * 将自定义模板添加到叠加路径。
-* 通过向节点添加属性来指 `page-template` 定自定义模 `configuration` 板。
+* 通过向节点添加属性来 `page-template` 指定自定义 `configuration` 模板。
 
 **默认模板**:
 
@@ -55,12 +58,12 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 >[!CAUTION]
 >
->如果为自定义模板指定名称 *sitepage.hbs*，则将自定义所有社区站点。
+>如果为自定义模板指定了名 *称sitepage.hbs*，则将自定义所有社区站点。
 
 
 ### 自定义站点模板示例 {#custom-site-template-example}
 
-例如，站点模 `vertical-sitepage.hbs` 板导致菜单链接在页面左侧垂直放置，而不是在横幅下方水平放置。
+例如，站点 `vertical-sitepage.hbs` 模板会导致菜单链接垂直放置在页面左侧而不是横幅下方。
 
 [获取文](assets/vertical-sitepage.hbs)件将自定义站点模板放在叠加文件夹中：
 
@@ -70,25 +73,25 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 `/content/sites/sample/en/configuration`
 
-![chlimage_1-80](assets/chlimage_1-80.png)
+![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
 请务必保 **存全部** ，并将自定义代码复制到所有AEM实例（从控制台发布社区站点内容时不包括自定义代码）。
 
-复制自定义代码的建议做法是创 [建一个包](../../help/sites-administering/package-manager.md#creating-a-new-package) ，并将其部署到所有实例。
+复制自定义代码的建议做法是 [创建包并在](../../help/sites-administering/package-manager.md#creating-a-new-package) 所有实例上部署它。
 
 ## 导出社区站点 {#exporting-a-community-site}
 
-创建社区站点后，可以将站点导出为存储在包管理器中并可供下载和上传的AEM包。
+创建社区站点后，可以将站点导出为存储在包管理器中的AEM包，并可供下载和上传。
 
-可从“社区站点”控 [制台中执行此操作](sites-console.md#exporting-the-site)。
+可从“社区站点” [控制台访问](sites-console.md#exporting-the-site)。
 
-请注意，UGC和自定义代码不包含在社区站点包中。
+请注意，UGC和自定义代码不包括在社区站点包中。
 
-要导出UGC，请使用 [AEM Communities UGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)，这是GitHub上提供的一个开放源代码迁移工具。
+要导出UGC，请使用 [AEM CommunitiesUGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)（GitHub上提供的一个开放源代码迁移工具）。
 
 ## 删除社区站点 {#deleting-a-community-site}
 
-自AEM Communities 6.3 Service Pack 1起，“删除站点”图标显示在“社区” **[!UICONTROL >“站点”控制台中]** 的社区站 **** 点上。 在开发过程中，如果需要删除社区站点和开始，您可以使用此功能。 删除社区站点时，会删除与该站点关联的以下项目：
+从AEM Communities6.3 Service Pack 1开始，“社区”>“站点”控制台中将鼠标悬停在社区站点上方时，将显示“删 **[!UICONTROL 除站点]** ” **[!UICONTROL 图标]** 。 在开发过程中，如果需要删除社区站点和开始，则可以使用此功能。 删除社区站点时，会删除与该站点关联的以下项目：
 
 * [UGC](#user-generated-content)
 * [用户组](#community-user-groups)
@@ -107,7 +110,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
    例如，如果 `rep:principalName = community-enable-nrh9h-members`
 
-   * **站点名称** = *enable*
+   * **站点名称** =启 *用*
    * **站点ID** = *nrh9h*
    * **唯一站点ID** = *enable-nrh9h*
 
@@ -119,7 +122,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 它包含一个servlet，用于从任何SRP中删除所有UGC。
 
-所有UGC都可能被删除，或者特定站点的UGC都会被删除，例如：
+可以删除所有UGC或针对特定站点，例如：
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
@@ -127,7 +130,7 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ### 社区用户组 {#community-user-groups}
 
-在所有作者实例和发布实例上，从安 [全控制台](../../help/sites-administering/security.md)，找到并删 [除以下用户组](users.md) :
+在所有作者和发布实例上，从 [安全控制台](../../help/sites-administering/security.md)，找到并 [删除以下用](users.md) 户组：
 
 * 前缀为 `community`
 * 后跟唯 [一站点ID](#community-unique-site-id)
@@ -136,15 +139,15 @@ For example, `community-engage-x0e11-members`.
 
 ### Enablement Assets {#enablement-assets}
 
-从主控制台中：
+从主控制台：
 
 * Select **[!UICONTROL Assets]**.
 * 进入 **[!UICONTROL 选择]** 模式。
-* 选择以唯一站点Id命名 [的文件夹](#community-unique-site-id)。
-* 选 **[!UICONTROL 择删除]** (可能需要从更 **[!UICONTROL 多……]**)。
+* 选择使用唯一站点ID [命名的文件夹](#community-unique-site-id)。
+* 选 **[!UICONTROL 择]** “删除”(可能需要从更 **[!UICONTROL 多……]**)。
 
 ### 数据库记录 {#database-records}
 
-没有用于选择性地删除特定支持社区站点的数据库条目的工具。
+没有用于选择性地删除特定启用社区站点的数据库条目的工具。
 
-删除所有社区站点后，请使用MySQL Workbench放置enablementdb和scormenginedb。
+删除所有社区站点后，使用MySQL Workbench删除enablementdb和scormenginedb。
