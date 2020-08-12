@@ -3,7 +3,7 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 10%
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 视频格式是组织数字资产的关键部分。 [!DNL Adobe Experience Manager] 优惠可以提供成熟的产品和功能，在视频资产创建后管理其整个生命周期。
 
-了解如何在中管理和编辑视频资 [!DNL Adobe Experience Manager Assets]产。 此外，如果您获得使用许可， [!DNL Dynamic Media]请参阅Dynamic Media [视频文档](/help/assets/video.md)。
+了解如何在中管理和编辑视频资 [!DNL Adobe Experience Manager Assets]产。 此外，如果您获得使用许可， [!DNL Dynamic Media]请参阅Dynamic [Media视频文档](/help/assets/video.md)。
 
 ## 上传和预览视频资产 {#upload-and-preview-video-assets}
 
@@ -33,10 +33,10 @@ ht-degree: 10%
 
 默认情 [!DNL Assets] 况下，您不会上传任何大于2 GB的资产，因为文件大小限制。 但是，您可以通过进入CRXDE Lite并在目录下创建节点来覆盖此 `/apps` 限制。 该节点必须具有相同的节点名称、目录结构和可比的节点属性。
 
-除了配置 [!DNL Assets] 之外，还要更改以下配置以上传大型资产：
+除了配置 [!DNL Assets] 之外，请更改以下配置以上传大型资产：
 
 * 增加令牌过期时间。 请参 [!UICONTROL 阅在Web控制台中Adobe] Granite CSRF Servlet `https://[aem_server]:[port]/system/console/configMgr`，网址为。 有关详细信息，请参 [阅CSRF保护](/help/sites-developing/csrf-protection.md)。
-* 增加 `receiveTimeout` Dispatcher配置。 有关详细信息，请参阅 [Experience ManagerDispatcher配置](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
+* 增加调 `receiveTimeout` 度程序配置。 有关详细信息，请参阅 [Experience Manager调度程序配置](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
 
 >[!NOTE]
 >
@@ -59,11 +59,11 @@ ht-degree: 10%
 1. 在Web控 [!DNL Adobe Experience Manager] 制台 [!UICONTROL 的“捆绑包”页面] ，在表的“名称”列下，找到并单击“AdobeGranite Workflow External Process Job Handler”(Granite工作 **[!UICONTROL 流外部进程作业处理程序)]**。
 1. On the [!UICONTROL Adobe Granite Workflow External Process Job Handler] page, set the seconds for both **[!UICONTROL Default Timeout]** and **[!UICONTROL Max Timeout]** fields to `18000` (five hours). 单击&#x200B;**[!UICONTROL 保存]**。
 1. 在中， [!DNL Experience Manager]单击“ **[!UICONTROL 工具]** ”>“ **[!UICONTROL 工作流]** ”>“ **[!UICONTROL 模型]**”。
-1. 在“工作流模型”页面上，选择“ **[!UICONTROL Dynamic Media编码视频]**”，然后单击 **[!UICONTROL 编辑]**。
-1. 在工作流页面上，多次并单击“ **[!UICONTROL Dynamic Media视频服务流程]** ”组件。
+1. 在“工作流模型”页面上，选 **[!UICONTROL 择Dynamic Media编码视频]**，然后单击 **[!UICONTROL 编辑]**。
+1. 在工作流页面上，多次并单 **[!UICONTROL 击Dynamic Media视频服务流程组]** 件。
 1. 在[!UICONTROL 步骤属性]对话框的&#x200B;**[!UICONTROL 常用]**&#x200B;选项卡下，展开&#x200B;**高级设置**。
 1. In the **[!UICONTROL Timeout]** field, specify a value of `18000`, then click **[!UICONTROL OK]** to return to the **[!UICONTROL Dynamic Media Encode Video]** workflow page.
-1. 在页面顶部附近，在“Dynamic Media编码视 [!UICONTROL 频”页面标题下] ，单击“ **[!UICONTROL 保存”]**。
+1. 在页面顶部附近的Dynamic Media编码视 [!UICONTROL 频页面标题下] ，单击 **[!UICONTROL 保存]**。
 
 ## 发布视频资产 {#publish-video-assets}
 
@@ -79,7 +79,7 @@ ht-degree: 10%
 
    要退出注释向导，请单击“关 **[!UICONTROL 闭”]**。
 
-1. 搜索到视频中的特定点，在&#x200B;**文本**&#x200B;字段中指定时间（以秒为单位），然后单击&#x200B;**跳转**。例如，要跳过视频的前 10 秒，请在文本字段中输入 20。
+1. 搜索到视频中的特定点，在&#x200B;**文本**&#x200B;字段中指定时间（以秒为单位），然后单击&#x200B;**跳转**。例如，要跳过视频的前 20 秒，请在文本字段中输入 20。
 
    ![在视频中搜索时间以跳过指定秒数](assets/seek-in-video.png)
 
@@ -89,6 +89,6 @@ ht-degree: 10%
 
 >[!MORELIKETHIS]
 >
->* [管理Experience Manager资产中的数字资产](/help/assets/managing-assets-touch-ui.md)
+>* [在Experience Manager资产中管理数字资产](/help/assets/managing-assets-touch-ui.md)
 >* [管理Experience Manager资产中的收藏集](/help/assets/managing-collections-touch-ui.md)
 
