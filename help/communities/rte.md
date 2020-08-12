@@ -1,6 +1,6 @@
 ---
-title: 富文本编辑器基本工具
-seo-title: 富文本编辑器基本工具
+title: 富文本编辑器基础工具
+seo-title: 富文本编辑器基础工具
 description: 富文本编辑器功能概述
 seo-description: 富文本编辑器功能概述
 uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 3%
 
 ---
 
@@ -21,15 +24,15 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 富文本编辑器(RTE)提供了输入带有标记的文本的功能。
 
-对于“社区”组件，它与创作环 [境中的富文本编辑器相似](../../help/sites-authoring/rich-text-editor.md)，但会影响在发布环境中输入的文本。
+对于“社区”组件，它与创作环境 [中的富文本编辑器相似](../../help/sites-authoring/rich-text-editor.md)，但会影响在发布环境中输入的文本。
 
-![chlimage_1-410](assets/chlimage_1-410.png)
+![富文本编辑器](assets/rich-text-editor.png)
 
 ## Enabling Rich Text Editor {#enabling-rich-text-editor}
 
-可以启用允许用户生成内容(UGC)的社区组件以允许RTE。 根据是将组件添加到页面还是包含在函 [数中](functions.md),RTE在默认情况下可能启用或不启用。
+可以启用允许用户生成内容(UGC)的社区组件以允许RTE。 根据是将组件添加到页面还是包含在函数 [中](functions.md),RTE在默认情况下可能处于启用状态。
 
-如果未启用，只需进入作 [者编辑模式](sites-console.md#authoring-site-content)，选择要编辑的组件，然后选中复选 `Rich Text Editor` 框。
+如果未启用，只需进入作 [者编辑模式](sites-console.md#authoring-site-content)，选择要编辑的组件，然后选中复 `Rich Text Editor` 选框。
 
 RTE可用于以下社区组件：
 
@@ -44,9 +47,9 @@ RTE可用于以下社区组件：
 
 ## 自定义 {#customization}
 
-由于该实现基于 [CKEditor，所以可以自定义富文本编辑器](https://www.ckeditor.com/)。
+由于实现基于CKEditor，因此可以自定义富文本 [编辑器](https://www.ckeditor.com/)。
 
-Communities组件的当前配置位于 `cq.social.  scf   clientlib`位于
+Communities组件的当前配置位于 `cq.social.  scf   clientlib`存储库中，位于
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
@@ -54,9 +57,9 @@ Communities组件的当前配置位于 `cq.social.  scf   clientlib`位于
 
 ### 自定义示例：内联链接 {#example-customization-inline-links}
 
-出于安全考虑，默认情况下向成员显示的富文本图标集中不包括超链接选项。 在UGC中允许href时，恶意攻击的能力很大。
+出于安全考虑，默认情况下，向成员显示的富文本图标集中不包含超链接选项。 UGC中允许href时，其恶劣性能较为强大。
 
-要将超链接选项添加到工具栏，请执行以下操作：
+要向工具栏添加超链接选项，请执行以下操作：
 
 * 添加名为“”的工 `links`具栏
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
