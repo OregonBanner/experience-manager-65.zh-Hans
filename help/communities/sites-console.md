@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
+source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+workflow-type: tm+mt
+source-wordcount: '3292'
+ht-degree: 4%
 
 ---
 
@@ -25,90 +28,90 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 * 站点管理
 * [创建和编辑嵌套组](/help/communities/groups.md) （子社区）
 
-请参 [阅AEM Communities入门](/help/communities/getting-started.md) ，体验在创作环境中创建社区站点的速度，以及如何从创作和发布环境创建社区组。
+请参 [阅AEM Communities入门](/help/communities/getting-started.md) ，体验在创作环境下创建社区站点的速度，以及如何从创作者和发布环境创建社区组。
 
 >[!NOTE]
 >
->主要的社区菜单用于创建社区 [站点](/help/communities/sites-console.md)、社区 [站点模板](/help/communities/sites.md)、社区 [组模板和社区功](/help/communities/tools-groups.md)[](/help/communities/functions.md) 能创作者只能在环境中使用。
+>用于创建社区站点的主“社 [区”菜单](/help/communities/sites-console.md)、社 [区站点模板](/help/communities/sites.md)、社 [区组模板](/help/communities/tools-groups.md) 和社区功 [能的主“社区”菜单仅供作](/help/communities/functions.md) 者环境使用。
 
 
 ## 前提条件 {#prerequisites}
 
-在创建社区站点之前，必 *须* :
+在创建社区站点之前，需 *要* :
 
 * 确保一个或多个发布实例正在运行。
-* 启用隧道 [服务](/help/communities/deploy-communities.md#tunnel-service-on-author) ，以管理成员和成员组。
-* 识别主 [发行商](/help/communities/deploy-communities.md#primary-publisher)。
-* [在主发布者端口不是默认端口时](/help/communities/deploy-communities.md#replication-agents-on-author) ，配置复制(4503)。
+* 启用隧 [道服务](/help/communities/deploy-communities.md#tunnel-service-on-author) ，以管理成员和成员组。
+* 确定主 [发行商](/help/communities/deploy-communities.md#primary-publisher)。
+* [在主发布者端口](/help/communities/deploy-communities.md#replication-agents-on-author) (4503)不是默认端口时配置复制。
 
-最佳实践是，为确保站点准备好支持许多功能，请采取以下步骤：
+最佳实践是，为确保站点能够支持许多功能，请采取以下步骤：
 
 * 安装最 [新的功能包](/help/communities/deploy-communities.md#latestfeaturepack)。
-* 为 [AEM Communities启用Adobe Analytics](/help/communities/analytics.md) 。
+* 让 [Adobe Analytics](/help/communities/analytics.md) ,AEM Communities。
 * 配置电子 [邮件](/help/communities/email.md)
 * 识别 [社区管理员](/help/communities/users.md#creating-community-members)。
-* [为社交登录启用OAuth处理程序](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) 。
+* [为社交登录启用](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) OAuth处理程序。
 
 ## 访问社区站点控制台 {#accessing-communities-sites-console}
 
-在创作环境中，要访问“社区站点”控制台，请执行以下操作：
+在创作环境中，要访问“社区站点”控制台：
 
-* 从全局导航：“社 **[!UICONTROL 区]** ”>“站 **[!UICONTROL 点”]**
+* 从全局导航： **[!UICONTROL “社区]** ”>“站 **[!UICONTROL 点”]**
 
 “社区站点”控制台显示任何现有社区站点。 在此控制台中，可以创建、编辑、管理和删除社区站点。
 
 要创建新社区站点，请选择“创 **建** ”图标。
 
-要访问现有社区站点，为了创作、修改、发布、导出或添加嵌套组，请选择站点的文件夹图标。
+要访问现有社区站点，为创作、修改、发布、导出或添加嵌套组，请选择该站点的文件夹图标。
 
-例如，下图显示了主“社区站点”控制台，其中显示了两个社区站点的文件夹：启 [用](/help/communities/getting-started-enablement.md)[和参与](/help/communities/getting-started.md):
+例如，下图显示了主“社区站点”控制台，其中显示了两个社区站点的文件夹： [启用](/help/communities/getting-started-enablement.md) 和 [吸引](/help/communities/getting-started.md):
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![站点控制台](assets/site-console.png)
 
 ## 站点创建 {#site-creation}
 
-站点创建控制台提供了一种分步方法，可根据选定的社区站点模板和设置组合 [站点的功能](/help/communities/sites.md) 。
+站点创建控制台提供了一种分步方法，根据选定的社区站点模板和设置来 [组合站点](/help/communities/sites.md) 的功能。
 
-创建的每个站点都包含登录功能，因为站点访客必须先登录才能发布内容、发送消息或加入组。 其他包含的功能包括用户用户档案、消息、通知、网站菜单、搜索、主题和品牌。
+创建的每个站点都包含登录功能，因为站点访客必须先登录才能发布内容、发送消息或加入组。 其他功能包括用户用户档案、消息、通知、站点菜单、搜索、主题和品牌。
 
-通过选择位于“社区站点” `Create` 控制台顶部的按钮启动该过程。
+通过选择“社区站点” `Create` 控制台顶部的按钮启动该过程。
 
-创建过程是一系列步骤，这些步骤以面板的形式呈现，其中包含要配置的一组特征（以子面板的形式呈现）。 在最后一步中提交站点之前，可 **以前进****** 到下一步或后退到上一步。
+创建过程是一系列步骤，这些步骤以面板的形式呈现，其中包含要配置的一组特征（以子面板的形式呈现）。 在最后一步中提交站点 **之前** ，可 **以前** 进到下一步，也可以后退到上一步。
 
 ### 第1步：站点模板 {#step-site-template}
 
 ![新站点模板](assets/newsitetemplate.png)
 
-在“站点模板”面板中，将指定“标题”、“说明”、“站点根”、“基本语言”、“名称”和“站点模板”:
+在“站点模板”面板中，将指定标题、说明、站点根、基本语言、名称和站点模板：
 
 * **社区站点标题**
 
    站点的显示标题。
 
-   标题显示在已发布的站点上以及站点管理员UI中。
+   标题将显示在已发布的站点上以及站点管理员UI中。
 
 * **社区站点描述**
 
-   站点的说明。
+   站点的描述。
 
-   说明不显示在已发布的站点上。
+   该说明不显示在已发布的站点上。
 
-* **社区站点根目录**
+* **社区站点根**
 
    站点的根路径。
 
-   默认的根目 `/content/sites`录为，但根目录可能被移动到网站中的任意位置。
+   默认根目录 `/content/sites`为，但根目录可以移动到网站中的任何位置。
 
 * **社区站点基本语言**
 
-   (单一语言不更改：英语)使用下拉菜单从可用语言中选择一 *种或多种基本语言* -德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文和简体中文。 将根据多语言站点翻译内容中所述的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将存 [在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个子页面，该子页面由所选语言之一的语言代码命名，如英语为“en”或法语为“fr”。
+   (单语言不更改：英语)使用下拉菜单从可用 *语言* (德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、中文（繁体）和简体中文)中选择一种或多种基本语言。 将根据多语言站点的翻译内容中介绍的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将 [存在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个由所选语言之一的语言代码命名的子页面，如英语为“en”或法语为“fr”。
 
 * **社区站点名称**:
 
-   站点的根页面的名称，该名称显示在URL中。
+   站点的根页面的名称，显示在URL中。
 
    * 多次检查名称，因为创建站点后该名称不易更改。
-   * 基本URL( `https://server:port/site root/site name)` 将显示在下面 `Community Site Name`。
+   * 基本URL( `https://server:port/site root/site name)` 将显示在下 `Community Site Name`面。
 
    * 对于有效的URL，请附加基本语言代码+ &quot;。html&quot;
 
@@ -126,17 +129,17 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 #### COMMUNITY SITE THEME {#community-site-theme}
 
-![sitetheme](assets/sitetheme.png)
+![站点主题](assets/sitetheme.png)
 
-该框架使 [用Twitter Bootstrap](https://twitterbootstrap.org/) ，为网站提供响应迅速、灵活的设计。 可以选择多个预加载Bootstrap主题之一来设置所选社区站点模板的样式，或者可以上传Bootstrap主题。
+该框架使 [用TwitterBootstrap](https://twitterbootstrap.org/) ，为网站提供响应迅速、灵活的设计。 可以选择多个预先加载的Bootstrap主题之一来设置所选社区站点模板的样式，或者可以上传Bootstrap主题。
 
-选择后，主题将用不透明的蓝色复选标记覆盖。
+选中后，主题将用不透明的蓝色复选标记覆盖。
 
-发布社区站点后，可以编辑属性 [并选择其](#modifying-site-properties) 他主题。
+发布社区站点后，可以编辑属 [性并选择](#modifying-site-properties) 其他主题。
 
 #### COMMUNITY SITE BRANDING {#community-site-branding}
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![站点品牌](assets/site-branding.png)
 
 社区站点品牌是显示为每个页面顶部标题的图像。
 
@@ -144,18 +147,18 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 创建或选择图像时，请牢记：
 
-* 图像高度将从图像的上边缘裁切为120像素。
+* 图像高度将从图像的上边缘裁剪为120像素。
 * 图像被固定到浏览器窗口的左边缘。
 * 图像不会调整大小，因此当图像宽度为……
 
    * 小于浏览器的宽度，图像将水平重复。
-   * 大于浏览器的宽度后，图像将看起来会被裁掉。
+   * 图像的宽度大于浏览器的宽度后，图像将被裁剪。
 
 * 选择&#x200B;**下一步**。
 
 ### 第3步：设置 {#step-settings}
 
-“设置”面板包含几个子面板，这些子面板显示要配置的功能，然后移至创建站点的最后一步。
+“设置”面板包含几个子面板，这些子面板显示要配置的功能，然后转到创建站点的最后一步。
 
 * [用户管理](#user-management)
 * [标记](#tagging)
@@ -169,13 +172,13 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 >
 >**启用隧道服务**
 >
->“设置”子面板中的几个允许分配受信任成员以审核UGC、管理组或者成为发布环境中的启用资源的联系人。
+>几个“设置”子面板允许指定受信任成员以审核UGC、管理组或成为发布环境中的启用资源联系人。
 >
->该约定适用于发布端用 [户和用户组](/help/communities/users.md) （成员和成员组）在创作环境中不重复。
+>约定发布端用户 [和用户组](/help/communities/users.md) （成员和成员组）在创作环境中不重复。
 >
->因此，在创作环境中创建社区站点并将受信任成员分配到各种角色时，必须从发布环境检索成员数据。
+>因此，在创作环境中创建社区站点并将受信任成员分配给各种角色时，必须从发布环境检索成员数据。
 >
->这是通过为创作 ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` 环境启用来实现的。
+>这是通过为作者 ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` 环境启用来实现的。
 
 
 #### USER MANAGEMENT {#user-management}
@@ -184,55 +187,55 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 >[!NOTE]
 >
->建议将启用社 [区站点设为私有](/help/communities/overview.md#enablement-community) （有关详细信息，请与您的客户代表联系）。
+>建议将教育社 [区站点](/help/communities/overview.md#enablement-community) （有关详细信息，请与客户代表联系）。
 >
->当匿名网站访客被拒绝访问、不能自行注册或不能使用社交登录时，社区站点是私有的。
+>当拒绝匿名站点访客访问、不能自行注册或不能使用社交登录时，社区站点是私有的。
 
 
 * **允许用户注册**
 
-   如果选中此项，站点访客可通过自助注册成为社区成员。
-如果未选中此项，则会限 *制社区站点* ，并且必须将站点访客分配给社区站点的成员组、发出请求或通过电子邮件发送邀请。 如果未选中，则不允许匿名访问。
-取消选中某个私 *人社区* 站点的选项。 选中默认值。
+   如果选中此项，站点访客可以通过自助注册成为社区成员。
+如果未选中，则会限 *制社区* 站点，并且必须将站点访客分配给社区站点的成员组、发出请求或通过电子邮件发送邀请。 如果未选中，则不允许匿名访问。
+取消选中私 *人社* 区站点。 选中默认值。
 
 * **允许匿名访问**
 
-   如果选中此项，则社区站点*打开*并且任何站点访客都可以访问该站点。
-如果未选中，则只有登录成员才能访问站点。
+   如果选中，则社区站点*打开*并且任何站点访客都可以访问该站点。
+如果未选中，则只有登录成员才能访问该站点。
 取消选中*私人*社区站点。 选中默认值。
 
 * **允许发送消息**
 
-   如果选中此项，成员可以向彼此发送消息，也可以向社区站点内的组发送消息。
+   如果选中，成员可以向彼此发送消息，并向社区站点内的组发送消息。
 如果未选中，则不会为社区设置消息。
 默认为未选中。
 
 * **允许社交登录: Facebook**
 
-   如果选中此项，则允许站点访客使用其Facebook帐户凭据登录。 应将选 [定的Facebook云配置配置为](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) ，在创建社区站点后，将用户添加到社区站点的成员组。
-如果未选中，则不显示Facebook登录名。
-对于私人社区站点， *不选中* “保留”。 默认为未选中。
+   如果选中，则允许网站访客使用其Facebook帐户凭据登录。 在创建 [社区站点后](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) ，应将选定的Facebook云配置配置为将用户添加到社区站点的成员组。
+如果不选中，则不显示Facebook登录名。
+对私人社区站点 *取消选* 中选项。 默认为未选中。
 
 * **允许社交登录: Twitter**
 
-   如果选中此项，则允许站点访客使用其Twitter帐户凭据登录。 应将选 [定的Twitter云配置配置配置](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) ，以在创建社区站点后，将用户添加到社区站点的成员组。
-如果未选中，则不显示Twitter登录名。
-对于私人社区站点， *不选中* “保留”。 默认为未选中。
+   如果选中，允许站点访客使用其Twitter帐户凭据登录。 应将选 [定的Twitter](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) 云配置配置为在创建社区站点后将用户添加到社区站点的成员组。
+如果不选中，则不显示Twitter登录名。
+对私人社区站点 *取消选* 中选项。 默认为未选中。
 
 >[!NOTE]
 >
 >**允许社交登录**
 >
->虽然Facebook和Twitter配置示例可能存在并可供选择，但对于生产 [环境](/help/sites-administering/production-ready.md)，必须创建自定义Facebook和Twitter应用程序。 请参 [阅使用Facebook和Twitter进行社交登录](/help/communities/social-login.md)。
+>尽管Facebook和Twitter配置示例可能存在并可供选择，但对于 [生产环境](/help/sites-administering/production-ready.md)，有必要创建自定义Facebook和Twitter应用程序。 请参 [阅使用Facebook和Twitter进行社交登录](/help/communities/social-login.md)。
 
 
 #### TAGGING {#tagging}
 
-![chlimage_1-156](assets/chlimage_1-156.png)
+![站点标记](assets/site-tagging.png)
 
-可应用于社区内容的标记通过选择之前通过标记控制台定义的标记命名空间来 [控制](/help/sites-administering/tags.md#tagging-console)。
+可应用于社区内容的标记通过选择之前通过标记控制台定义的标记命名空间来 [进行控制](/help/sites-administering/tags.md#tagging-console)。
 
-此外，为社区站点选择标记命名空间会限制在定义目录和资源时显示的选择。 有关重 [要信息，请参阅标记启用资源](/help/communities/tag-resources.md) 。
+此外，为社区站点选择标记命名空间会限制在定义目录和资源时显示的选择。 有关重 [要信息，请参阅](/help/communities/tag-resources.md) “标记启用资源”。
 
 * 文本搜索框：开始键入以标识允许在站点上使用的标记。
 
@@ -240,108 +243,108 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 ![社区角色](assets/site-admin-2.png)
 
-社 [区成员的角色](/help/communities/users.md) ，会分配这些设置。
+社 [区成员的角色](/help/communities/users.md) ，会通过这些设置进行分配。
 
-使用预先键入搜索可轻松查找社区成员。
+使用预先键入搜索，可轻松查找社区成员。
 
 * **社区管理员**
 
-   开始键入以选择一个或多个社区成员或可管理社区成员和成员组的成员组。
+   开始键入以选择一个或多个社区成员或可以管理社区成员和成员组的成员组。
 
 * **社区审查方**
 
-   开始键入内容以选择一个或多个要作为用户生成内容的版主信任的社区成员或成员组。
+   开始键入以选择一个或多个社区成员或成员组，这些成员组将作为用户生成内容的版主者受信任。
 
 * **拥有权限的社区成员**
 
-   开始键入内容以选择一个或多个社区成员或要授予成员组在为社区功能选择 `Allow Privileged Member` 内容后创建新内容 [的能力](/help/communities/functions.md)。
+   开始键入以选择一个或多个社区成员或要赋予其在为社区功能选择后创建新内 `Allow Privileged Member` 容的能力的成 [员组](/help/communities/functions.md)。
 
 * **社区管理员**
 
-   开始键入以选择一个或多个站点管理员，这些管理员可以独立于其他站点管理员和默认社区管理员处理站点结构。 他们可以在层次结构的任何级别创建组，并成为嵌套组的默认管理员（但稍后可以从嵌套组的管理员角色中删除这些组）。
+   开始键入以选择一个或多个站点管理员，这些管理员可以独立于其他站点管理员和默认社区管理员处理站点结构。 他们可以在层次结构的任何级别创建组，并成为嵌套组的默认管理员（但以后可以从嵌套组的管理员角色中删除这些组）。
 
 #### MODERATION {#moderation}
 
-![chlimage_1-157](assets/chlimage_1-157.png)
+![站点协调](assets/site-moderation.png)
 
-审核用户生成的内容(UGC)的全局设置由这些设置控制。 单个组件具有用于控制仲裁的其他设置。
+用于调节用户生成的内容(UGC)的全局设置由这些设置控制。 单个组件具有其他设置来控制仲裁。
 
 * **内容已通过预审**
 
-   如果选中此项，则发布的社区内容只有在审查方批准后才会显示。 默认为未选中。 有关详细信息，请参阅 [协调社区内容](/help/communities/moderate-ugc.md#premoderation)。
+   如果选中此项，则发布的社区内容只有在审查方批准后才会显示。 默认为未选中。 有关详细信息，请参 [阅协调社区内容](/help/communities/moderate-ugc.md#premoderation)。
 
 * **标记阈值，达到此值后隐藏内容**
 
-   如果大于0，则主题或帖子在隐藏到公共视图之前必须标出的次数。 如果设置为-1，则标记的主题或帖子从不隐藏在公共视图中。 默认为5。
+   如果大于0，则主题或帖子在隐藏到公共视图之前必须标出的次数。 如果设置为-1，则标记的主题或帖子从不隐藏于公开视图。 默认值为5。
 
 #### ANALYTICS {#analytics}
 
-![chlimage_1-158](assets/chlimage_1-158.png)
+![站点分析](assets/site-analytics.png)
 
 * **启用 Analytics**
 
-   仅在为Communities功能配置Adobe Analytics [后](/help/communities/analytics.md) ，才可用。
-默认为未选中。 选中此项后，将显示另一个选择菜单：
+   仅当Adobe Analytics已配置 [Communities功](/help/communities/analytics.md) 能时可用。
+默认为未选中。 选中后，将显示其他选择菜单：
 
-![chlimage_1-159](assets/chlimage_1-159.png)
+![启用站点分析](assets/site-analytics-enable.png)
 
 * **云配置框架引用**
 
    从下拉菜单中，选择为此社区站点配置的Analytics云服务框架。
-   `Communities` 是Analytics Configuration for Communities Features文档中 [的框架示例](/help/communities/analytics.md#aem-analytics-framework-configuration) 。
+   `Communities` 是Analytics Configuration for Communities Features文 [档中的框架示例](/help/communities/analytics.md#aem-analytics-framework-configuration) 。
 
 #### TRANSLATION {#translation}
 
-![chlimage_1-160](assets/chlimage_1-160.png)
+![站点翻译](assets/site-translation.png)
 
 * **允许机器翻译**
 
-   选中（默认为未选中）后，站点内的UGC将启用机器翻译。 这不会影响任何其他内容，如页面内容，即使站点设置为多语言站点也是如此。 有关 [为AEM Communities配置许可翻译服务的信息](/help/communities/translate-ugc.md) ，请参阅翻译用户生成的内容。 有关 [完整概述，请参阅翻译多语言站点的内容](/help/sites-administering/translation.md) 。
+   选中（默认为未选中）后，站点中的UGC将启用机器翻译。 这不会影响任何其他内容，如页面内容，即使该站点设置为多语言站点也是如此。 有关 [为AEM Communities配置授权翻译服务](/help/communities/translate-ugc.md) ，请参阅翻译用户生成的内容。 有关 [完整概述，请参阅](/help/sites-administering/translation.md) “多语言站点翻译内容”。
 
-![chlimage_1-161](assets/chlimage_1-161.png)
+![允许机器翻译](assets/allow-machine-translation.png)
 
 * **为选定的语言启用机器翻译**
 
-   为机器翻译启用的语言默认为翻译集成配置指定的 [系统设置](/help/communities/translate-ugc.md#translation-integration-configuration)。 通过删除默认值和／或从下拉菜单中选择其他语言，此站点的这些默认设置可能会被覆盖。
+   启用机器翻译的语言默认为翻译集成配置指定的 [系统设置](/help/communities/translate-ugc.md#translation-integration-configuration)。 通过删除默认值和／或从下拉菜单中选择其他语言，可能会覆盖此站点的这些默认设置。
 
 * **选择翻译提供商**
 
-   默认情况下，服务提供商是仅用于演示的试 `microsoft` 用版服务。 如果未获得翻译服务提供商的许可，则应 **取消选中“允许机器翻译** ”。
+   默认情况下，服务提供商是仅用于演示的试 `microsoft` 用服务。 如果未授权翻译服务提供商, **应取消选中** “允许机器翻译”。
 
 * **选择全球共享商店**
 
-   对于具有多语言副本的网站，全局共享存储提供单个会话线程，每个语言副本中都可见。 这是通过选择作为语言副本包含的语言之一来实现的。 默认为 *无全局共享商店*。
+   对于包含多个语言副本的网站，全局共享商店提供单一的对话线程，每个语言副本中均可见。 这是通过选择作为语言副本包含的语言之一来实现的。 默认为 *无全局共享存储*。
 
 * **选择翻译提供商配置**
 
-   选择为许 [可的翻译提供者创建的翻译集成框架](/help/sites-administering/tc-tic.md) 。
+   选择为 [授权翻译提供者](/help/sites-administering/tc-tic.md) 创建的翻译集成框架。
 
 * **为您的社区站点选择翻译选项**
 
    * **翻译整个页面**
 
-      如果选择此项，则页面上的所有UGC都将转换为页面的基本语言。
+      如果选中此选项，则页面上的所有UGC都将转换为页面的基本语言。
 
-      未选择 *默认值*。
+      未选 *择默认值*。
 
    * **仅翻译选定内容**
 
-      如果选择此项，则每个帖子旁边会显示一个翻译选项，允许将各个帖子翻译为页面的基本语言。
-选中“默 *认”*。
+      如果选中此项，则每个帖子旁边会显示一个翻译选项，允许将各个帖子翻译为页面的基本语言。
+选中默认 *值*。
 
 * **选择持久性选项**
 
-   * **根据用户请求翻译稿件，**&#x200B;然后再保留如果选择，则内容在发出请求前不会翻译。 翻译后，翻译会存储在存储库中。
+   * **根据用户请求翻译稿件，**&#x200B;然后保留如果选择，则直到发出请求后，内容才会进行翻译。 翻译完成后，翻译会存储在存储库中。
 
-      未选择 *默认值*。
+      未选 *择默认值*。
 
    * **不保留翻译**
 
-      如果选择此项，则翻译不会存储在存储库中。
+      如果选择此项，则转换不会存储在存储库中。
 
       如果未选择，则保留翻译。
 
-      未选择 *默认值*。
+      未选 *择默认值*。
 
 * **智能渲染**
 
@@ -353,65 +356,63 @@ source-git-commit: 89156f94f2d0494d44d4f0b99abfba4fafbc66d3
 
 #### ENABLEMENT {#enablement}
 
-![chlimage_1-162](assets/chlimage_1-162.png)
+![站点启用](assets/site-enablement.png)
 
-当选 `ENABLEMENT`定的社区站点模板包含分配功能 [时，这些设置适用](/help/communities/functions.md#assignments-function)，启用功能获得许可并配置时，这些功能 [可用](/help/communities/enablement.md)。 包含分配功能的引用站点模板是 `Reference Structured Learning Site Template.`
+当选 `ENABLEMENT`定的社区站点模板包含分配功能时，这些 [设置将适用](/help/communities/functions.md#assignments-function)，启用功能获得许可并配 [置时](/help/communities/enablement.md)。 包含分配功能的参考站点模板是 `Reference Structured Learning Site Template.`
 
-* **Enablement Managers**（必需）仅可选择用 `Community Enablementmanagers` 于管理此启用社区的组成员。 Enablement Manager负责将成员分配到资源。 另请参阅 [管理用户和用户组](/help/communities/users.md)。
+* **Enablement Managers**（必需）仅可选择组 `Community Enablementmanagers` 成员以管理此Enablement Community。 Enablement Manager负责将成员分配给资源。 另请参阅 [管理用户和用户组](/help/communities/users.md)。
 
 * **Marketing Cloud 组织 ID**
 
-   （可选）视频心率分析许 [可证的ID](/help/communities/analytics.md#video-heartbeat-analytics) 。
+   （可选）视频心跳分析 [许可证的ID](/help/communities/analytics.md#video-heartbeat-analytics) 。
 
 * 选择&#x200B;**下一步**。
 
 ### 第4步：创建社区站点 {#step-create-communities-site}
 
-如果需要进行任何调整，请使 **用** “返回”按钮进行调整。
+如果需要调整，请使 **用** “返回”按钮。
 
-选 **择并启动** “创建”后，创建站点的过程将无法中断。
+选择 **并启** 动“创建”后，创建站点的过程将无法中断。
 
 创建站点后：
 
 * 不支持更改url（节点名称）。
-* 将来对社区站点模板所做的更改不会影响创建的社区站点。
+* 将来更改社区站点模板不会影响创建的社区站点。
 * 禁用社区站点模板不会影响创建的社区站点。
 * 可以通过修改社 [区站点](#modify-structure) 的属性来编辑其STRUCTURE。
 
-![chlimage_1-163](assets/chlimage_1-163.png)
+![创建站点](assets/create-site1.png)
 
-完成该过程后，新站点的文件夹将显示在“社区站点”控制台中，作者可以从中添加页面内容，或管理员可以修改站点的属性。
+完成该过程后，新站点的文件夹会显示在“社区站点”控制台中，作者可以从该控制台添加页面内容，或管理员可以修改站点的属性。
 
-![chlimage_1-164](assets/chlimage_1-164.png)
+![modify-site-property](assets/modify-site-property.png)
 
 要修改社区站点，请选择其项目文件夹以将其打开：
 
-![siteactions-1](assets/siteactions-1.png)
+![站点项目](assets/site-project.png)
 
-当鼠标悬停在站点上或触摸站点卡时，将显示允许以作者模式编辑站点的图标 [，打开站点属性进行修改](#authoring-site-content)，发布站点 [,](#modifying-site-properties)[](#publishing-the-site)[](#exporting-the-site)[](#deleting-the-site)导出站点并删除站点图标。
+当用鼠标悬停在站点上或触摸站点卡时，会出现以作者 [模式编辑站点](#authoring-site-content)、打开站点属性进行 [修改、](#modifying-site-properties)发布站点 [、导](#publishing-the-site)[](#exporting-the-site)[](#deleting-the-site)出站点、删除站点图标。
 
 ## 创作站点内容 {#authoring-site-content}
 
-![chlimage_1-165](assets/chlimage_1-165.png)
+站点的内容可以与任何其他AEM网站使用相同的工具进行创作。 要打开站点进行创作，请选 `Open Site` 择鼠标悬停站点时显示的图标。 该站点将在新选项卡中打开，以便“社区站点”控制台仍可访问。
 
-站点内容的创作工具可能与任何其他AEM网站相同。 要打开站点进行创作，请选择鼠标 `Open Site` 悬停在站点上时显示的图标。 该站点将在新选项卡中打开，以便“社区站点”控制台仍可访问。
-
-![chlimage_1-166](assets/chlimage_1-166.png)
+![站点内容](assets/site-content.png)
 
 >[!NOTE]
 >
->如果不熟悉AEM，请视图有关基本操作 [的文档](/help/sites-authoring/basic-handling.md) ，以 [及页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉AEM，请视图有关基本 [操作的文档](/help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
 
 ## 修改站点属性 {#modifying-site-properties}
 
-![chlimage_1-167](assets/chlimage_1-167.png)
+![edit-site](assets/edit-site.png)
 
-通过选择鼠标悬停在站点上时显示的图标，可以修改在站点创建过程中指 `Edit Site`定的现有站点的属性。
+通过选择鼠标悬停站点时显示的图标，可以修改在站点创建过程中 `Edit Site`指定的现有站点的属性。
 
-`Details of the following properties match the descriptions provided in the` “ [站点创建](#site-creation) ”部分。
+`Details of the following properties match the descriptions provided in the` [“站点创建](#site-creation) ”部分。
 
-![chlimage_1-168](assets/chlimage_1-168.png)
+![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
 ### 修改基本 {#modify-basic}
 
@@ -420,17 +421,17 @@ BASIC面板允许修改：
 * 社区站点标题
 * 社区站点描述
 
-社区站点名称不得修改。
+不能修改社区站点名称。
 
-选择其他社区站点模板不会影响现有的社区站点，因为模板和站点之间没有任何连接。
+选择其他社区站点模板不会影响现有社区站点，因为模板和站点之间没有任何连接。
 
-相反，社 [区站点的](#modify-structure) STRUCTURE可以被修改。
+相反，可 [以修](#modify-structure) 改社区站点的STRUCTURE。
 
 ### 修改结构 {#modify-structure}
 
-STRUCTURE面板允许修改最初从所选社区站点模板创建的结构。 从面板中，可以：
+STRUCTURE面板允许修改最初从所选社区站点模板创建的结构。 在该面板中，可以：
 
-* 将其他社区功能拖 [放到站点结](/help/communities/functions.md) 构中。
+* 将其他社区功 [能拖放](/help/communities/functions.md) 到站点结构中。
 * 在站点结构中社区功能的实例上：
 
    * **`gear icon`**
@@ -439,11 +440,11 @@ STRUCTURE面板允许修改最初从所选社区站点模板创建的结构。 �
 
    * **`trashcan icon`**
 
-      从站点结构中删除（删除）功能。
+      从站点结构中删除（删除）函数。
 
    * **`grid icon`**
 
-      修改站点顶级导航栏中显示的函数顺序。
+      修改在站点的顶级导航栏中显示的函数顺序。
 
 >[!NOTE]
 >
@@ -460,18 +461,18 @@ STRUCTURE面板允许修改最初从所选社区站点模板创建的结构。 �
 
 >[!CAUTION]
 >
->组函数不能 *是**站点结构中的第一个* ，也不能是唯一的函数。
+>组函数不 *能是* 站 *点结构中* 的第一个，也不能是唯一的函数。
 >
->必须首先包含并列出任何其 [他函数](/help/communities/functions.md#page-function)，如页面函数。
+>任何其他函数(如页 [面函数](/help/communities/functions.md#page-function))必须首先包含并列出。
 
 
 #### 示例：将目录功能添加到社区站点结构 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
-![chlimage_1-169](assets/chlimage_1-169.png)
+![add-catalog-site](assets/add-catalog-site.png)
 
 ### 修改设计 {#modify-design}
 
-“设计”面板允许应用新主题：
+DESIGN面板允许应用新主题：
 
 * [社区站点主题](#community-site-theme)
 * [社区站点品牌化](#community-site-branding)
@@ -491,7 +492,7 @@ STRUCTURE面板允许修改最初从所选社区站点模板创建的结构。 �
 
 ### 修改缩略图 {#modify-thumbnail}
 
-THUMBNAIL面板允许上传图像以在“社区站点”控制台中代表站点。
+通过THUMBNAIL面板，可以上传图像以在“社区站点”控制台中代表站点。
 
 ### 修改启用 {#modify-enablement}
 
@@ -501,13 +502,13 @@ ENABLEMENT面板允许访问在社区站点创建过程中提供的设置。
 
 ## 发布站点 {#publishing-the-site}
 
-在新创建或修改社区站点后，可以通过选择鼠标悬停在站点上时显示的图标来发布（激活）该站 `Publish Site` 点。
+新建或修改社区站点后，可以选择鼠标悬停在站点上时显示的图标 `Publish Site` 来发布（激活）站点。
 
-![chlimage_1-170](assets/chlimage_1-170.png)
+![发布站点](assets/publish-site.png)
 
-站点成功发布后，将显示一个指示。
+网站成功发布后将显示一个指示。
 
-![chlimage_1-171](assets/chlimage_1-171.png)
+![站点发布](assets/site-published.png)
 
 ### 使用嵌套组发布 {#publishing-with-nested-groups}
 
@@ -515,9 +516,9 @@ ENABLEMENT面板允许访问在社区站点创建过程中提供的设置。
 
 ## 导出站点 {#exporting-the-site}
 
-![chlimage_1-172](assets/chlimage_1-172.png)
+![导出站点](assets/export-site.png)
 
-选择导出图标，鼠标悬停在站点上，可创建存储在包管理器中和已下载的社区站点 [的包](/help/sites-administering/package-manager.md) 。
+选择导出图标（鼠标悬停在站点上）以创建同时存储在包管理器中和已下载的 [社区站](/help/sites-administering/package-manager.md) 点包。
 
 请注意，UGC未包含在站点包中。
 
@@ -525,48 +526,48 @@ ENABLEMENT面板允许访问在社区站点创建过程中提供的设置。
 
 ![删除图标](assets/deleteicon.png)
 
-要删除社区站点，请选择将鼠标悬停在Communities站点控制台中站点上时显示的“删除站点”图标。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
+要删除社区站点，请选择将鼠标悬停在“社区站点”控制台中该站点上时显示的“删除站点”图标。 此操作将删除与站点关联的所有项目，如UGC、用户组、资产和数据库记录。
 
 ## 创建的社区用户组 {#created-community-user-groups}
 
-发布新社区站点后，新成员组(在发布环境中创建用户组)将具有为各种管理和成员角色设置的相应权限。
+发布新社区站点后，新成员组(在发布环境创建用户组)将具有为各种管理和成员角色设置的相应权限。
 
-为成员组创建的名称包括步骤1 *（URL中显示的名称）中为站点指定的站点名称*[](#step13asitetemplate) ，以及一个唯一ID，以避免与社区站点以及具有不同社区站点根目录的站点名相同的组发生冲突。
+为成员组创建的名称 *包括步骤1* （URL中显示的名称）中给定 [](#step13asitetemplate) 站点的站点名，以及一个唯一ID，以避免与社区站点以及具有不同社区站点根目录的具有相同站点名的组发生冲突。
 
-例如，如果标题为“入门教程”的站点的名称为“engage”，则版主的用户组将为：
+例如，如果标题为“入门教程”的站点的名称为“参与”，则版主的用户组将为：
 
-* title:社区参与版主
-* name:community-*engage-uid*-moderators
+* 标题：社区参与版主
+* 名称：community-*engage-uid*-moderators
 
-请注意，在创建站点时，任何成员都将作为审核者或组管理员分配角色，并将其分配给相应的组以及成员组。 发布新站点时，将在发布时创建这些组和成员分配。
+请注意，在创建站点时，任何分配了主持人角色或组管理员角色的成员都将分配到相应的组，并分配到成员组。 发布新站点时，将在发布时创建这些组和成员分配。
 
 有关详细信息，请 [参阅管理用户和用户组](/help/communities/users.md)。
 
 >[!NOTE]
 >
->如果允 [许社交登录：在用户组启用后](#user-management) ,Facebook即会启用
+>如果允 [许社交登录：在用户](#user-management) 组启用后，Facebook即处于启用状态
 >
 >* `community-<site-name>-<uid>-members`
 >
 >
-创建后，应将应 [用的Facebook云服务](/help/communities/social-login.md#createafacebookcloudservice) ，配置为将用户添加到此组。
+已创建，应将已 [应用的Facebook](/help/communities/social-login.md#createafacebookcloudservice) 云服务配置为将用户添加到此组。
 
 
 ## 配置身份验证错误 {#configure-for-authentication-error}
 
-默认情况下，当用户输入错误的凭据且无法登录时，社区站点将重定向到示例登录页面。 此示例登录名在生产服务器上不 [存在](/help/sites-administering/production-ready.md)。
+默认情况下，当用户输入错误凭据且无法登录时，社区站点将重定向到示例登录页。 此示例登录在生产服务器上不 [存在](/help/sites-administering/production-ready.md)。
 
-要正确重定向，在将站点配置并推送到发布后，请完成以下步骤，以使身份验证失败而重定向到社区站点：
+要正确重定向，在将站点配置并推送到发布后，请完成以下步骤，以获取身份验证失败，将其重定向到社区站点：
 
 * 在每个AEM发布实例上。
-* 使用管理员权限登录。
+* 以管理员权限登录。
 * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)。
 
    * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
 * 找到 `Adobe Granite Login Selector Authentication Handler`。
 * 选择图 `pencil` 标以打开要编辑的配置。
-* 输入登 **录页面映射** ，如下所示：
+* 按如下 **输入登录页** 面映射：
 
    `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
@@ -575,11 +576,11 @@ ENABLEMENT面板允许访问在社区站点创建过程中提供的设置。
 
 * 选择&#x200B;**保存**。
 
-![chlimage_1-173](assets/chlimage_1-173.png)
+![身份验证错误](assets/auth-error.png)
 
 ### 测试身份验证重定向 {#test-authentication-redirection}
 
-在配置了社区站点登录页面映射的同一AEM发布实例上：
+在为社区站点配置登录页面映射的同一AEM发布实例上：
 
 * 浏览到社区站点主页。
 
@@ -590,13 +591,15 @@ ENABLEMENT面板允许访问在社区站点创建过程中提供的设置。
 * 输入明显不正确的凭据，如用户名“x”和密码“x”。
 * 登录页面应显示“登录名无效”错误。
 
-![chlimage_1-174](assets/chlimage_1-174.png)
+![测试验证](assets/test-authentication.png)
 
-## 从“主站点”控制台访问社区站点 {#accessing-community-sites-from-main-sites-console}
+## 从主站点控制台访问社区站点 {#accessing-community-sites-from-main-sites-console}
 
 在全局导航站点控制台中，社区站点位于文件夹 `Community Sites` 中。
 
 虽然可以通过这种方式访问社区站点，但对于管理任务，应从“社区站点”控制台访问社区站点。
 
-![chlimage_1-175](assets/chlimage_1-175.png)
+![访问站点](assets/access-site.png)
+
+
 
