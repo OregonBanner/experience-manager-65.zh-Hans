@@ -1,5 +1,5 @@
 ---
-title: “请勿发布教程： 将规则应用于自适应表单字段”
+title: “请勿发布教程：将规则应用于自适应表单字段”
 seo-title: 将规则应用于自适应表单字段
 description: 创建规则，将交互性、业务逻辑和智能验证添加到自适应表单。
 seo-description: 创建规则，将交互性、业务逻辑和智能验证添加到自适应表单。
@@ -8,15 +8,15 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
 
 
-# 教程： 将规则应用于自适应表单字段 {#tutorial-apply-rules-to-adaptive-form-fields}
+# 教程：将规则应用于自适应表单字段 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 您可以使用规则向自适应表单添加交互性、业务逻辑和智能验证。 自适应表单具有内置规则编辑器。 规则编辑器提供拖放功能，类似于导览。 拖放方法是创建规则最快、最简单的方法。 规则编辑器还为有兴趣测试其编码技能或将规则提升到更高级别的用户提供了一个代码窗口。
 
-您可以在自适应表单规则编辑器中进一步 [了解规则编辑器](/help/forms/using/rule-editor.md)。
+您可以在自适应Forms规则编辑器中进一步 [了解规则编辑器](/help/forms/using/rule-editor.md)。
 
 在教程结束时，您将学习如何创建规则以：
 
@@ -36,9 +36,9 @@ ht-degree: 0%
 
 教程每个部分结尾的交互式GIF图像可以帮助您学习和验证正在构建的表单的功能。
 
-## 第1步： 从数据库检索客户记录 {#retrieve-customer-record}
+## 第1步：从数据库检索客户记录 {#retrieve-customer-record}
 
-您通过遵循创建表单数据模型文 [章创建表单数据模型](/help/forms/using/create-form-data-model.md) 。 现在，您可以使用规则编辑器调用表单数据模型服务来检索信息并将信息添加到数据库。
+您通过遵循创建表单数据模型文 [章创建表单数据模型](/help/forms/using/create-form-data-model.md) 。 现在，您可以使用规则编辑器调用Forms数据模型服务来检索信息并将信息添加到数据库。
 
 每个客户都会获得一个唯一的客户ID编号，这有助于识别数据库中的相关客户数据。 以下过程使用客户ID从数据库检索信息：
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
    ![检索信息](assets/retrieve-information.gif)
 
-## 第2步： 将更新的客户地址添加到数据库 {#updated-customer-address}
+## 第2步：将更新的客户地址添加到数据库 {#updated-customer-address}
 
 从数据库检索客户详细信息后，您可以更新送货地址、状态和邮政编码。 以下过程调用表单数据模型服务将客户信息更新到数据库：
 
@@ -89,27 +89,27 @@ ht-degree: 0%
 
    ![update-shipping-address](assets/update-shipping-address.png)
 
-1. ![dropojectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
+   ![dropojectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-   将Shipping Address、State和 **[!UICONTROL Zip Code字段从Form Objects选项卡拖放到Drop对象的相应表名。property（例如，customerdetails .shippingAddress）]** 中，或在INPUT框中选择 ******[!UICONTROL Here字]** 段。 以表名（例如，此用例中的customerdetails）为前缀的所有字段用作更新服务的输入数据。 这些字段中提供的所有内容都将在数据源中更新。
+1. 将Shipping Address、 **[!UICONTROL State和Zip Code]** field从Form Objects选项卡拖放到Drop对象的相应表名。property（例如，customerdetails .shippingAddress）或在INPUT Box中选择 [!UICONTROL Here] Field(此处 ******** 地址、状态和邮政编码)。 以表名（例如，此用例中的customerdetails）为前缀的所有字段用作更新服务的输入数据。 这些字段中提供的所有内容都将在数据源中更新。
 
    >[!NOTE]
    >
    >请勿将Name和Customer ID **[!UICONTROL 字段拖]****[!UICONTROL 放到相应]** 的tablename.property（例如，customerdetails.name）。 它有助于避免错误地更新客户的名称和ID。
 
-1. 将客户ID字段从 **[!UICONTROL 表单对象]** 选项卡拖放到INPUT框的id **[!UICONTROL 字段]** 。 没有前缀表名的字段（例如，此用例中的customerdetails）用作更新服务的搜索参数。 此用 **[!UICONTROL 例中的]** id字段唯一标识customerdetails表中的记录。
+1. 将“客户ID”字 **[!UICONTROL 段从]** “表单对 [!UICONTROL 象”选项卡拖放到] “输入”框的 **[!UICONTROL id字段]** 。 没有前缀表名的字段（例如，此用例中的customerdetails）用作更新服务的搜索参数。 此用 **[!UICONTROL 例中的]** id字段唯一标识customerdetails表中 **的记录** 。
 1. 点按 **[!UICONTROL 完成]** ，以保存规则。 在规则编辑器窗口中，点按 **[!UICONTROL 关闭]**。
 1. 预览自适应表单。 检索客户的详细信息、更新送货地址并提交表单。 再次检索同一客户的详细信息时，将显示更新的发运地址。
 
-## 第3步： （奖励部分）使用代码编辑器运行验证并显示错误消息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
+## 第3步：（奖励部分）使用代码编辑器运行验证并显示错误消息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
 
 您应对表单运行验证，以确保在表单中输入的数据正确无误，并在数据不正确时显示错误消息。 例如，如果在表单中输入了非现有客户ID，则应显示一条错误消息。
 
 自适应表单提供了多个具有内置验证功能的组件，例如，电子邮件和数字字段，您可以将这些字段用于常见用例。 对高级用例使用规则编辑器，例如，当数据库返回零(0)条记录（无记录）时，显示错误消息。
 
-下面的过程说明了如何创建规则，如果在表单中输入的客户ID在数据库中不存在，则显示错误消息。 该规则还将焦点置于客户ID字段并重置该字段。 该规则使 [用表单数据模型服务的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) ，检查数据库中是否存在客户ID。
+下面的过程说明了如何创建规则，如果在表单中输入的客户ID在数据库中不存在，则显示错误消息。 该规则还将焦点置于客户ID字 **[!UICONTROL 段并重置]** 。 该规则使 [用表单数据模型服务的dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) ，检查数据库中是否存在客户ID。
 
-1. 点按客 **[!UICONTROL 户ID]** 字段，然后点 `Edit Rules` 按图标。 “规则编辑器”(Rule Editor)窗口将打开。
+1. 点按客 **[!UICONTROL 户ID]** 字段，然后点 `Edit Rules` 按图标。 将打 [!UICONTROL 开“规则编辑] ”窗口。
 1. 点按+ **[!UICONTROL 创建]** 图标以添加规则。 它打开可视编辑器。
 
    在可视编辑器中，默认 **[!UICONTROL 情况下]** ，选择WHEN语句。 此外，在WHEN语句中指定从其 **[!UICONTROL 中启动规则]**&#x200B;编辑器的表单对象(本例中为客 **[!UICONTROL 户ID]** )。
@@ -132,7 +132,7 @@ ht-degree: 0%
    };
    ```
 
-1. 将guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)部分替换为以下代码：
+1. 将该部 `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` 分替换为以下代码：
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
