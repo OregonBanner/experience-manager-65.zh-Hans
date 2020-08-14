@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1361296ee0161c36061543459056c25ebef0e97
+source-git-commit: f34742a9d11909dcf8403e1b002b65a01e882a74
 workflow-type: tm+mt
-source-wordcount: '3839'
+source-wordcount: '3853'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
    * **签署方身份验证方法：** 指定在打开表单进行签名之前对用户进行身份验证的方法。 您可以选择电话、知识库和基于社交身份的身份验证。
    >[!NOTE]
    >
-   >    * 默认情况下，基于社交身份的身份验证提供一个选项，用于使用Facebook、Google和LinkedIn进行身份验证。 您可以联系Adobe Sign支持以启用其他社交身份验证提供商。
+   >    * 默认情况下，基于社交身份的身份验证提供了使用Facebook、Google和LinkedIn进行身份验证的选项。 您可以联系Adobe Sign支持以启用其他社交身份验证提供商。
 
 
    * **Adobe Sign字段填写或签名：** 为签署方选择Adobe Sign字段。 自适应表单可以具有多个Adobe Sign字段。 您可以选择为签署方启用特定字段。 该字段显示所有可用的Adobe Sign区块。 选择块时，该块的所有字段都将被选中。 您可以使用X图标取消选择字段。
@@ -334,6 +334,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 * 使用单独的电子邮件地址为Adobe Sign帐户以及第一个签署方和单个签署方配置电子邮件地址。 第一个签署方或唯一签署方（对于单个签署方）的电子邮件地址不能与用于配置AEM云服务的Adobe Sign帐户相同。
 
+### AEM Forms为启用Adobe Sign的自适应表单配置的工作流不开始 {#adobe-sign-aem-form-workflow-failures}
 
 **问题**：当为自适应表单配置了Adobe Sign时，使用调用Forms Workflow选项配置的工作流不会开始。
 
