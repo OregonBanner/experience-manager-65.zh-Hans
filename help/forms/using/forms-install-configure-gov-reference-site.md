@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5412d788ccebe00707f2d94dfb1e40da6cb0471c
+source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
 workflow-type: tm+mt
-source-wordcount: '5035'
+source-wordcount: '4738'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 ### 安装先决条件 {#installation-prerequisites}
 
-此包是为 **AEM Forms6.4 OSGI作者创建的**，经过测试，因此在以下平台版本上受支持：
+此包是为AEM Forms **6.4 OSGI作者创建的**，经过测试，因此在以下平台版本上受支持：
 
-| AEM版本 | AEM FORMS。包版本 | 状态 |
+| AEM版本 | AEM FORMS.包版本 | 状态 |
 |---|---|---|
 | 6.4 | 5.0.86 | **支持** |
 | 6.5 | 6.0.80 | **支持** |
@@ -36,7 +36,7 @@ ht-degree: 1%
 |---|---|---|
 | Adobe Sign | v5 API | **支持** |
 | Microsoft Dynamics 365 | 1710 (9.1.0.3020) | **支持** |
-| AdobeAnalytics | v1.4 Rest API | **支持** |
+| Adobe Analytics | v1.4 Rest API | **支持** |
 **包安装注意事项：**
 
 * 该包应安装在干净的服务器上，没有其他演示包或旧的演示包版本
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 ### 此包包含什么 {#what-does-this-package-include}
 
-AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作为包提供，包含若干其他子包和服务。 该包包含以下模块：
+[AEM FormsWe.Gov演示包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip) (**we-gov-forms.pkg.all-&lt;version>.zip**)是一个包，包含若干其他子包和服务。 该包包含以下模块：
 
 * **we-gov-forms.pkg.all-&lt;version>.zip** —— 完 *整演示包*
 
@@ -56,21 +56,21 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
       * **core.wcm.components.all-2.0.4.zip —— 范例WCM** 组 *件的集合*
 
-      * **grid-aem.ui.ap-1.0-SNAPSHOT.zip -** *AEM Sites网格布局包的“站点”页面列控件*
+      * **grid-aem.ui.ap-1.0-SNAPSHOT.zip -“站点”页***面列控件的AEM Sites网格布局包*
    * **we-gov-forms.ui.content-&lt;version>.zip** - *包含所有内容、页面、图像、表单、交互式通信资源等。*
 
-   * **we-gov-forms.ui.an Alytics-&lt;version>.zip** - *包含要存储在存储库中的所有We.Gov FormsAnalytics数据。*
+   * **we-gov-forms.ui.an Alytics-&lt;version>.zip** - *包含要存储在存储库中的所有We.GovForms分析数据。*
 
    * **we-gov-forms.config.public-&lt;version>.zip** - *包含所有默认配置节点，包括占位符云配置，以帮助避免表单数据模型和服务绑定问题。*
 
 
 此包中包含的资产包括：
 
-* 包含可编辑模板的AEM站点页面
-* AEM Forms自适应表单
+* AEM包含可编辑模板的网站页面
+* AEM Forms适应性Forms
 * AEM Forms交互通信(印刷和Web渠道)
-* AEM FormsXDP记录文档
-* AEM FormsMS Dynamics表单数据模型
+* AEM FormsXDP文档
+* AEM FormsMS DynamicsForms数据模型
 * Adobe Sign集成
 * AEM工作流模型
 * AEM Assets示例图像
@@ -83,10 +83,10 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 ### 从软件分发 {#from-software-distribution}
 
-1. 开放 [软件分发](https://experience.adobe.com/downloads)。 您需要Adobe ID登录软件分发。
-1. 点按 **[!UICONTROL 标题]** 菜单中可用的Adobe Experience Manager。
+1. 开放 [软件分发](https://experience.adobe.com/downloads)。 您需要Adobe ID才能登录软件分发。
+1. 点按 **[!UICONTROL 标题]** 菜单中提供的Adobe Experience Manager。
 1. 在过滤器 **[!UICONTROL 部分]** :
-   1. 从“ **[!UICONTROL 解决方]** 案 **[!UICONTROL ”下]** 拉列表中选择“表单”。
+   1. 从“ **[!UICONTROL 解决方]** 案 **[!UICONTROL ”下拉]** 列表中选择Forms。
    2. 选择包的版本和类型。 您还可以使用“搜 **[!UICONTROL 索下载]** ”选项筛选结果。
 1. 点按 **we-gov-forms.pkg.all-&lt;version>.zip包名称** ，选择“接 **[!UICONTROL 受EULA条款]**”，然后点 **[!UICONTROL 按下载]**。
 1. 打开 [包管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) ，然后单 **[!UICONTROL 击“上传包]** ”以上传包。
@@ -109,7 +109,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 1. 单击“打开”以上传。
 1. 上传后，选择“安装”选项以安装包。
 
-   ![安装WeGov Forms包](assets/wegov_forms_package-1.jpg)
+   ![安装WeGovForms包](assets/wegov_forms_package-1.jpg)
 
 1. 允许完成安装过程。
 1. 导航 *到https://&lt;aemserver>:&lt;port>/content/we-gov/home.html?wcmmode=disabled* ，确保安装成功。
@@ -140,13 +140,13 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 1. 选择“**工作流用户**”组，然后单击“属性”。
 1. 导航到“成员”选项卡。
 1. 在“选 **择用** 户或用户组”字段中键入wegov。
-1. 从下拉菜单“**We.Gov Forms Users**”中进行选择。
+1. 从下拉菜单“**We.GovForms用户**”中选择。
 
    ![编辑工作流用户的组设置](assets/edit_group_settings.jpg)
 
 1. 单击菜单栏中的“保存并关闭”。
-1. 重复步骤2-7，方&#x200B;**法是**&#x200B;搜索“analytics”，选择“**Analytics管理员**”组，并将“We.Gov **Forms Users**”组添加为成员。
-1. 重复步骤2-7，方&#x200B;**法为**：搜索“**表单用户**”，选择“表单——高级用户&#x200B;**”组，并将“We.Gov** Forms用户”组添加为成员。
+1. 重复步骤2-7，方&#x200B;**法是**&#x200B;搜索“analytics”，选&#x200B;**择“Analytics Administrators**”组，并将“We.Gov **** Forms用户”组添加为成员。
+1. 重复步骤2-7，方&#x200B;**法为**：搜索“**表单用户**”，选择“表单&#x200B;**-高级用户”组，并将“We.Gov** Forms用户”组添加为成员。
 1. 重复步骤2-7，方&#x200B;**法为**：搜索“forms-users”**，选择“forms-users**”组，并&#x200B;**将“We.Gov Users**”组添加为成员。
 
 ### 电子邮件服务器配置 {#email-server-configuration}
@@ -160,10 +160,10 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 1. 配置服务以连接到您选择的SMTP服务器：
 
-   1. **SMTP服务器主机名**: 例如(smtp.gmail.com)
-   1. **服务器端口**: 例如(465)，用于使用SSL的gmail
+   1. **SMTP服务器主机名**:例如(smtp.gmail.com)
+   1. **服务器端口**:例如(465)，用于使用SSL的gmail
    1. **SMTP用户：** demo@ &lt;companyname>
-   1. **“发件人”地址**: aemformsdemo@adobe.com
+   1. **“发件人”地址**:aemformsdemo@adobe.com
 
    ![配置SMTP](assets/configure_smtp.jpg)
 
@@ -171,7 +171,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 ### （可选）AEM SSL配置 {#aemsslconfig}
 
-本节包含有关在AEM实例上配置SSL以便能够配置Adobe Sign Cloud配置的详细信息。
+本节包含有关在AEM实例上配置SSL以便能够配置Adobe Sign云配置的详细信息。
 
 **引用:**
 
@@ -199,68 +199,26 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 **引用:**
 
-1. [将Adobe Sign与AEM Forms集成](adobe-sign-integration-adaptive-forms.md)
+1. [将Adobe Sign与AEM Forms整合](adobe-sign-integration-adaptive-forms.md)
 
 #### Cloud configuration {#cloud-configuration}
 
-1. 查看先决条件。 请参 [阅AEM SSL配置](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) ，以获得所需的SSL配置。
+1. 查看先决条件。 请参 [阅AEM SSL](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig) Configuration（ SSL配置）以获得所需的SSL配置。
 1. 导航至:
 
    *https://&lt;aemserver>:&lt;port>/libs/adobesign/cloudservices/adobesign.html/conf/we-gov*
 
    >[!NOTE]
    >
-   >用于访问AEM服务器的URL应与在Adobe Sign OAuth重定向URI中配置的URL匹配，以避免配 *置问题(例如https://&lt;aemserver>:&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)
+   >用于访问AEM服务器的URL应与在Adobe SignOAuth重定向URI中配置的URL匹配，以避免配 *置问题(例如https://&lt;aemserver>:&lt;port>/mnt/overlay/adobesign/cloudservices/adobesign/properties.html*)
 
-1. 选择“We.gov Adobe Sign”配置。
+1. 选择“We.govAdobe Sign”配置。
 1. 单击“属性”。
 1. 导航到“设置”选项卡。
 1. 输入身份验证URL，例如： [https://secure.na1.echosign.com/public/oauth](https://secure.na1.echosign.com/public/oauth)
 1. 从已配置的Adobe Sign实例提供已配置的客户端ID和客户端机密。
 1. 单击“连接到Adobe Sign”。
 1. 成功连接后，单击“保存并关闭”以完成集成。
-
-### 填写和签署多个表单 {#fill-sign-multiple-forms}
-
-本文档介绍设置填写和签署多个表单的能力所需的步骤。 您还可以在此处尝 [试相同的功能](https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。 此示例将此示例所需的必要数据存储在AEM存储库中。 这样做是为了确保在本地服务器上部署演示资源的流畅体验。 在现实生活中，我们将在您选择的RDMS中存储相同的信息。
-
-#### 前提条件 {#pre-requisites-fill-sign-multiple-forms}
-
-* [配置Day CQ邮件服务](https://docs.adobe.com/content/help/en/experience-manager-65/communities/administer/email.html)
-
-* [使用Adobe Sign配置AEM Forms](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html)
-
-#### 在本地服务器上设置示例 {#setup-sample-local-server}
-
-请执行以下步骤在本地服务器上设置示例：
-
-1. 安装包。 此包包含以下内容：
-   * 自适应表单. 表单位于formsandsigndemo文 **件夹中** 。
-   * 自定义OSGI捆绑
-   * 工作流
-1. 配置 [同意表](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/consentform.html) ，以使用您的Adobe Sign配置。
-1. 配置 [多状态兴趣锁](http://localhost:4502/editor.html/content/forms/af/formsandsigndemo/multistateinterestratelock.html) 表单以使用Adobe Sign配置。
-1. 打开 [表单和签名演示](http://localhost:4502/editor.html/conf/global/settings/workflow/models/formsandsigningdemo.html) 工作流模型：
-   1. 在CRX步骤中打开保存表单。
-   1. 将localhost更改为AEM Server的ip地址。
-   1. 保存更改。
-   1. 同步工作流以生成运行时模型。
-
-      ![对多个表单进行签名](assets/sign-multiple-forms.jpg)
-
-   1. 打开再 [融资表](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled)。
-   1. 填写必填字段。 确保提供有效的电子邮件地址，并选择一个或多个表单以签名和提交表单。
-您会收到一封电子邮件，其中包含填写和签署表单的链接。
-
-#### 疑难解答 {#troubleshoot-sign-multiple-forms}
-
-* 调试日志将写入服 `signingmultipleforms.log` 务器日志文件夹中的文件。
-
-* 要签名的表单存储在下 `/content/formsforsigning`。
-
-* 确保所有捆绑包处于活动状态。
-
-* 检查电子邮件服务器配置。
 
 ### （可选）MS Dynamics云配置 {#ms-dynamics-cloud-configuration}
 
@@ -312,19 +270,19 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 1. 从左侧菜单中选择“所有服务”。
 1. 搜索或导航至“应用程序注册”。
 1. 创建或选择现有的应用程序注册。
-1. 复制 **应用程序 ID** ，以在AEM云配置 **中用作OAuth** 客户端ID
+1. 复制 **应用程序 ID** ，以在AEM云配 **置中用** 作OAuth客户端ID
 1. 单击“设置”或“清单”以配置回 **复URL。**
 
    1. 此URL必须与配置OData服务时用于访问AEM服务器的URL匹配。
 
-1. 在设置视图中，单击“密钥”以视图创建新密钥（在AEM中，此密钥用作客户端机密）。
+1. 在“设置”视图中，单击“密钥”以视图创建新密钥(在AEM中此密钥用作客户端机密)。
 
    1. 请确保保留密钥的副本，因为您以后无法在Azure或AEM中视图它。
 
 1. 要找到资源URL/服务根URL，请导航到MS Dynamics实例仪表板。
 1. 在顶部导航栏中，单击“销售”或您自己的实例类型和“选择设置”。
 1. 单击右下方附近的“自定义”和“开发人员资源”。
-1. 您会找到服务根URL: e.g
+1. 您会找到服务根URL:e.g
 
    *[https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
 
@@ -332,7 +290,7 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
    *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
-#### 测试表单数据模型(Dynamics) {#testing-the-form-data-model}
+#### 测试Forms数据模型(Dynamics) {#testing-the-form-data-model}
 
 云配置完成后，您可能需要测试表单数据模型。
 
@@ -357,9 +315,9 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
    测试服务后，单击 **取消** ，以确保非自愿更改不会传播到表单数据模型。
 
    >[!NOTE]
-   据报告，数据源成功绑定到FDM需要AEM服务器重新启动。
+   据报，数据源需要重启AEM服务器才能成功绑定到FDM。
 
-#### 测试表单数据模型(Derby) {#test-fdm-derby}
+#### 测试Forms数据模型(Derby) {#test-fdm-derby}
 
 云配置完成后，您可能需要测试表单数据模型。
 
@@ -381,15 +339,15 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
    * 要测试连接，请选择 **HOMEMORGAGEACCOUNT** ，并为其提供获取服务。 测试服务，系统管理员可以看到正在检索的数据。
 
-### AdobeAnalytics配置（可选） {#adobe-analytics-configuration}
+### Adobe Analytics配置（可选） {#adobe-analytics-configuration}
 
-本节包含有关AdobeAnalytics云配置的详细信息和说明。
+本节包含有关Adobe Analytics Cloud配置的详细信息和说明。
 
 **引用:**
 
 * [与 Adobe Analytics 集成](../../sites-administering/adobeanalytics.md)
 
-* [连接到AdobeAnalytics和创建框架](../../sites-administering/adobeanalytics-connect.md)
+* [连接Adobe Analytics和创建框架](../../sites-administering/adobeanalytics-connect.md)
 
 * [查看页面分析数据](../../sites-authoring/pa-using.md)
 
@@ -397,29 +355,29 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 * [视图和了解AEM Forms分析报告](view-understand-aem-forms-analytics-reports.md)
 
-### AdobeAnalytics云服务配置 {#adobe-analytics-cloud-service-configuration}
+### Adobe Analytics云服务配置 {#adobe-analytics-cloud-service-configuration}
 
-此包已预配置为连接到AdobeAnalytics。 下面的步骤允许更新此配置。
+此包已预配置为连接Adobe Analytics。 下面的步骤允许更新此配置。
 
 1. 导航到 *https://&lt;aemserver>:&lt;port>/libs/cq/core/content/tools/cloudservices.html*
-1. 找到AdobeAnalytics部分，然后选择“显示配置”链接。
-1. 选择“We.Gov AdobeAnalytics(Analytics配置)”配置。
+1. 找到“Adobe Analytics”部分，然后选择“显示配置”链接。
+1. 选择“We.GovAdobe Analytics（分析配置）”配置。
 
    ![Analytics云服务配置](assets/analytics_config.jpg)
 
-1. 单击“编辑”按钮以更新AdobeAnalytics配置（您需要提供共享机密）。 单击“连接到Analytics”以连接，单击“确定”以完成。
+1. 单击“编辑”按钮以更新Adobe Analytics配置（您需要提供共享机密）。 单击“连接到分析”以连接，单击“确定”以完成。
 
-   ![We.Gov AdobeAnalytics](assets/wegov_adobe_analytics.jpg)
+   ![We.GovAdobe Analytics](assets/wegov_adobe_analytics.jpg)
 
-1. 如果要更新框架配置，请在同一页中单击“We.Gov AdobeAnalytics框架(Analytics框架)”(请参阅启 [用AEM创作](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) 以启用创作)。
+1. 如果要更新框架配置，请在同一页中单击“We.GovAdobe Analytics框架(Analytics Framework)”(请参阅启 [用AEM创](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) 以启用创作)。
 
-#### AdobeAnalytics查找用户凭据 {#analytics-locating-user-credentials}
+#### Adobe Analytics查找用户凭据 {#analytics-locating-user-credentials}
 
-要查找AdobeAnalytics帐户的用户凭据，帐户管理员必须执行以下任务。
+要查找Adobe Analytics帐户的用户凭据，帐户管理员必须执行以下任务。
 
 1. 导航到Adobe Experience Cloud门户。
    * 使用管理员凭据登录
-1. 在主Analytics中选择Adobe仪表板图标。
+1. 在主仪表板中选择Adobe Analytics图标。
    ![快速访问](assets/aftia-quick-access.jpg)
 1. 导航到“管理员”选项卡，然后选择“用户管理（旧版）”项目
    ![报告](assets/aftia-reports.jpg)
@@ -430,15 +388,15 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
    ![管理访问](assets/aftia-admin-user-access.jpg)
 1. 用户名和共享机密信息将显示在权限框的右侧。
 1. 请注意，用户名的名称中将包含冒号，冒号左侧的所有信息都是用户名，冒号右侧的所有信息都是公司名。
-   * 以下是一个示例： *用户名： 公司名*
+   * 以下是一个示例： *用户名：公司名*
 
-#### 在AdobeAnalytics中设置用户身份验证 {#setup-user-authentication}
+#### 在Adobe Analytics设置用户身份验证 {#setup-user-authentication}
 
-管理员可以执行以下操作，为用户提供AEM分析权限。
+管理员可以通过执行以下操作为用户提供AEM分析权限。
 
-1. 导航到AdobeAdmin Console。
+1. 导航到Adobe Admin Console。
 
-1. 单击向Admin Console公开的Analytics实例。
+1. 单击向管理控制台公开的Analytics实例。
 
    * 它位于管理员页面的主页上。
 
@@ -456,20 +414,20 @@ AEM FormsWe.Gov演示&#x200B;**包(we-gov-forms.pkg.all-&lt;version>.zip**)作�
 
 1. 请注意，一旦权限映射到用户登录的功能，可能需要几个小时。
 
-### AdobeAnalytics报告 {#adobe-analytics-reporting}
+### Adobe Analytics报告 {#adobe-analytics-reporting}
 
-#### 视图AdobeAnalytics站点报告 {#view-adobe-analytics-sites-reporting}
+#### 视图Adobe Analytics遗址报告 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
-AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov-forms.ui.analytics-<version>.zip` 使用AdobeAnalytics云配置，但AEM Sites数据需要活动云配置。
+AEM Forms分析数据在离线时可用，或者如果安装了包，则不 `we-gov-forms.ui.analytics-<version>.zip` 使用Adobe Analytics云配置，但AEM Sites数据需要活动云配置。
 
 1. 导航到 *https://&lt;aemserver>:&lt;port>/sites.html/content*
-1. 选择“AEM FormsWe.Gov站点”以视图站点页面。
-1. 选择一个网站页面（例如“主页”），然后选择“Analytics和推荐”。
+1. 选择“AEM FormsWe.Gov网站”以视图网页。
+1. 选择其中一个网站页面（例如“主页”），然后选择“Analytics &amp;Recommendations”。
 
-   ![分析和建议](assets/analytics_recommendations.jpg)
+   ![分析和Recommendations](assets/analytics_recommendations.jpg)
 
-1. 在此页上，您将看到从AdobeAnalytics获取的与AEM Sites页面相关的信息(注意： 设计时，此信息将定期从AdobeAnalytics刷新，不会实时显示)。
+1. 在此页上，您将看到从Adobe Analytics获取的与AEM Sites页面相关的信息(注：设计时，此信息将定期从Adobe Analytics更新，不会实时显示)。
 
    ![AEM Sites分析](assets/sites_analysis.jpg)
 
@@ -478,7 +436,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
    ![列表视图](assets/list_view.jpg)
 
-1. 从同一菜单中，选择“视图设置”，然后从“Analytics”部分选择要显示的列。
+1. 从同一菜单中，选择“视图设置”，然后从“分析”部分选择要显示的列。
 
    ![配置列](assets/configure_columns.jpg)
 
@@ -486,32 +444,32 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
    ![显示新列](assets/new_columns_display.jpg)
 
-#### 视图AdobeAnalytics表单报告 {#view-adobe-analytics-forms-reporting}
+#### 视图Adobe Analytics形成报告 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
-AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov-forms.ui.analytics-<version>.zip` 使用AdobeAnalytics云配置，但AEM Sites数据需要活动云配置。
+AEM Forms分析数据在离线时可用，或者如果安装了包，则不 `we-gov-forms.ui.analytics-<version>.zip` 使用Adobe Analytics云配置，但AEM Sites数据需要活动云配置。
 
 1. 导航至
 
    *https://&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-1. 选择“健康福利登记申请”自适应表单并选择“Analytics报告”选项。
+1. 选择“健康福利的注册申请”自适应表单并选择“分析报告”选项。
 
-   ![Analytics报告](assets/analytics_report.jpg)
+   ![分析报告](assets/analytics_report.jpg)
 
-1. 等待页面加载，并视图Analytics报表数据。
+1. 等待页面加载，并视图Analytics Report数据。
 
-   ![视图Analytics报告数据](assets/analytics_report_data.jpg)
+   ![视图分析报告数据](assets/analytics_report_data.jpg)
 
-### Adobe自动表单配置启用 {#automated-forms-enablement}
+### Adobe自动化Forms配置启用 {#automated-forms-enablement}
 
-要使用Adobe Forms安装和配置AEM Forms，转换工具用户必须具备以下各项。
+要使用AdobeForms安装和配置AEM Forms，转换工具用户必须具有以下各项。
 
-1. 访问Adobe IO。
+1. 访问AdobeIO。
 
-1. 创建与Adobe Forms Conversion服务集成的权限。
+1. 创建与AdobeForms转换服务集成的权限。
 
-1. 以作者身份运行的Adobe AEM 6.5最新服务包。
+1. AdobeAEM 6.5作为作者运行的最新服务包。
 
 阅读进一步说明前，请查看以下内容：
 
@@ -519,9 +477,9 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 #### 创建IMS配置第1部分 {#creating-ims-config}
 
-要配置服务以正确与表单转换工具通信，用户必须配置Identity Management系统(IMS)服务以能够向Adobe I/O注册。
+为了配置服务以正确地与表单转换工具通信，用户必须配置Identity Management系统(IMS)服务以能够向AdobeI/O注册。
 
-1. 导航到https://&lt;aemserver>:&lt;port> >单击左上角的Adobe ExperienceManager >工具>安全>Adobe IMS配置。
+1. 导航到https://&lt;aemserver>:&lt;port> >单击左上角的“AdobeExperienceManager”>“工具”>“安全”>“AdobeIMS配置”。
 
 1. 单击创建。
 
@@ -531,16 +489,16 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 1. 确保下载证书。
 
-1. 请勿继续执行其余的配置——查看在Adobe I/O [中创建集成部分](#create-integration-adobeio)
+1. 请勿继续使用配置的其余部分——查看在AdobeI/O [中创建集成部分的内容](#create-integration-adobeio)
 
 >[!NOTE]
-本节中创建的证书将用于在Adobe I/O中创建集成服务。 用户在集成服务中创建后，用户可以使用Adobe I/O中的该信息完成配置。
+本节中创建的证书将用于在AdobeI/O中创建集成服务。用户在集成服务中创建后，用户可以使用AdobeI/O中的该信息完成配置。
 
-#### 在Adobe I/O中创建集成 {#create-integration-adobeio}
+#### 在AdobeI/O中创建集成 {#create-integration-adobeio}
 
-如果您没有与系统管理员联系以便在Adobe域中创建集成，请确保您能够这样做。
+如果您没有与系统管理员联系以便在Adobe域中创建集成，请确保您能够创建集成。
 
-1. 导航到 [Adobe I/O控制台](https://console.adobe.io/)。
+1. 导航到 [AdobeI/O控制台](https://console.adobe.io/)。
 
 1. 单击创建集成。
 
@@ -548,7 +506,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 1. 确保您处于正确的组中(右上下拉列表)。
 
-1. 在“Experience Cloud”部分，选择“表单转换工具”。
+1. 在“Experience Cloud”部分，选择“Forms转换工具”。
 
 1. 单击“继续”。
 
@@ -564,9 +522,9 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 现在您已创建集成，我们可以完成IMS配置的安装。
 
-1. 单击Adobe I/O中的集成，以显示连接详细信息。
+1. 单击AdobeI/O中的集成，以显示连接详细信息。
 
-1. 导航到AEM中的IMS配置（“工具”>“安全性”>“IMS”）
+1. 导航到AEM中的IMS配置（“工具”>“安全”>“IMS”）
 
 1. 在IMS配置屏幕上单击“下一步”。
 
@@ -574,9 +532,9 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 1. 输入API密钥。
 
-1. 输入客户端机密（必须单击Adobe I/O中集成的公开，才能显示它）。
+1. 输入客户端机密(必须单击AdobeI/O中的“集成”上的“公开”，才能显示它)。
 
-1. 单击Adobe I/O中的JWT选项卡，以获取JWT有效负荷并将其粘贴到IMS配置的有效负荷中。
+1. 单击AdobeI/O中的JWT选项卡，以获取JWT有效负荷并将其粘贴到IMS配置的有效负荷中。
 
    ![负载IMS配置](assets/aftia-payload-ims-config.jpg)
 
@@ -586,11 +544,11 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 #### 配置云配置（We.Gov AFC生产） {#configure-cloud-configuration}
 
-完成IMS配置后，我们可以继续查看AEM中的云配置。 如果配置不存在，请使用以下步骤在AEM中创建云配置：
+IMS配置完成后，我们可以继续检查AEM中的云配置。 如果配置不存在，请使用以下步骤在AEM中创建云配置：
 
 1. 打开浏览器并导航到系统URL https://&lt;domain_name>:&lt;system_port>
 
-1. 单击屏幕左上角的Adobe Experience Manager>工具>Cloud Service>自动表单对话配置。
+1. 单击屏幕左上角的Adobe Experience Manager>工具>Cloud Services>自动Forms对话配置。
 
 1. 选择要将配置放入的配置文件夹。
 
@@ -620,7 +578,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 1. 打开浏览器并导航到系统URL https://&lt;domain_name>:&lt;system_port>
 
-1. 单击屏幕左上角的Adobe Experience Manager>工具>Cloud Service>自动表单对话配置。
+1. 单击屏幕左上角的Adobe Experience Manager>工具>Cloud Services>自动Forms对话配置。
 
 1. 选择要将配置放入的配置文件夹。
 
@@ -650,7 +608,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 1. 导航到AEM系统https://&lt;domain_name>:&lt;system_port>
 
-1. 单击“表单”>“表单和文档”>“AEM FormsWe.gov表单”>“AFC”。
+1. 单击Forms>Forms与文档>AEM Forms州政府Forms> AFC。
 
 1. 选择We.Gov注册应用程序PDF。
 
@@ -682,7 +640,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 #### 已知问题和说明 {#known-issues-notes}
 
-自动表单转换服务包括某些 [最佳实践、已知的复杂模式](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和已 [知问题](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 在开始使用AEM Forms自动表单转换服务之前，请先查看这些内容。
+自动化Forms转化服务包 [括某些最佳实践、已知复杂模式](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和已 [知问题](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)。 在开始使用AEM Forms自动化Forms转化服务之前，请先查看这些内容。
 
 1. 如果您希望在转换后将表单绑定到FDM，则在未启用数据绑定的情况下生成具有生成自适应表单的表单。
 
@@ -698,7 +656,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 *https://&lt;aemserver>:&lt;port>/libs/wcm/core/content/sites/templates.html/conf/we-gov*
 
-这些模板包括AEM站点、自适应表单和交互式通信模板，这些模板是使用组件创建和组合的，这些组件位于：
+这些模板包括AEM站点、自适应表单和交互式通信模板，这些模板是使用组件创建和组合的，可在以下位置找到：
 
 *https://&lt;aemserver>:&lt;port>/crx/de/index.jsp#/apps/we-gov/components*
 
@@ -734,7 +692,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 所有网站页面均可从以下网页获取： *https://&lt;aemserver>:&lt;port>/sites.html/content/we-gov*
 
-这些站点页面还利用AEM Grid包控制一些组件的布局。
+这些网站页面还利用AEM Grid包控制一些组件的布局。
 
 #### Style system {#style-system}
 
@@ -755,8 +713,8 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 **健康福利的注册申请：**
 
 * contact_id —— 用于在提交期间接收MS Dynamics联系人ID的隐藏字段
-* 提交——需要自定义提交按钮逻辑以支持回呼。 自定义是有记录的，但在通过表单数据模型向MS Dynamics执行POST和GET操作时，需要一个大型脚本来提交表单。
-* 根面板——初始化事件用于以尽可能少的侵入方式向AEM收件箱中添加MS Dynamics按钮，因为所有AEM收件箱Granite UI组件都不可修改。
+* 提交——需要自定义提交按钮逻辑以支持回呼。 自定义是有记录的，但在通过Forms数据模型向MS Dynamics执行POST和GET操作时，需要一个大型脚本来提交表单。
+* 根面板——初始化事件用于以尽可能少的侵入方式将MS Dynamics按钮添加到AEM收件箱，因为所有AEM收件Granite UI组件都不可修改。
 
 #### 自适应表单样式 {#adaptive-form-styling}
 
@@ -785,7 +743,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 ### 已知问题 {#known-issues}
 
 * (AGRS-120)站点导航组件当前不支持深度超过2级的嵌套子页面。
-* (AGRS-159)当前MS Dynamics FDM首先需要执行2个操作，将注册自适应表单数据发布到Dynamics，然后提取用户记录以检索联系人ID。 在其当前状态下，如果Dynamics中存在两个以上同名用户，则获取联系人ID将失败，这将不允许提交注册自适应表单。
+* (AGRS-159)当前MS Dynamics FDM首先需要执行2个操作，将注册自适应表单数据POST为Dynamics，然后提取用户记录以检索联系人ID。 在其当前状态下，如果Dynamics中存在两个以上同名用户，则获取联系人ID将失败，这将不允许提交注册自适应表单。
 
 ## 配置辅助功能测试 {#configure-accessibility-testing}
 
@@ -793,7 +751,7 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 要首先执行辅助功能测试，您需要安装Chrome插件，可以在此处找 [到它](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)。
 
-安装后，请在Chrome浏览器中加载要测试的页面(注意： 打开多个选项卡可能会影响您的得分，最好只打开一个选项卡)。 载入页面后&#x200B;**，右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择要由辅助功能插件执行的审核类型。 选择所有所需选项后，用户便可选择生成报告按钮。 这将生成一个PDF文档，它显示总体辅助工具等级以及可用于提高总体辅助工具等级的内容。
+安装后，请在Chrome浏览器中加载要测试的页面(注意：打开多个选项卡可能会影响您的得分，最好只打开一个选项卡)。 载入页面后&#x200B;**，右键单击** ，然后选择 **审核** 选项卡。 开发人员可以选择要由辅助功能插件执行的审核类型。 选择所有所需选项后，用户便可选择生成报告按钮。 这将生成一个PDF文档，它显示总体辅助工具等级以及可用于提高总体辅助工具等级的内容。
 
 执行报告后，用户将看到以下内容：
 
@@ -807,9 +765,9 @@ AEM FormsAnalytics数据在离线时可用，如果已安装包，则不 `we-gov
 
 ### 超海洋主题 {#ultramarine-theme}
 
-Adobe维护的公开Ultramarine主题内置于可安装的ZIP文件中`we-gov-forms.pkg.all-<version>.zip` 。 使用CRX安装此包后。
+由Adobe维护的公开Ultramarine主题内置于可安装的`we-gov-forms.pkg.all-<version>.zip` ZIP文件中。 使用CRX安装此包后。
 
-包管理器，用户可以通过导航到“表单”>“AEM Forms”>“ **主题****”>“参考主题** ”>“ **Ultramarine-Accessible** ”，在 ****&#x200B;中访问Ultramarine主题。
+包管理者，用户可以通过导航至AEM Forms的 **Ultramarine** > **主题****>参考主题** > **Ultramarine-AccessibleForms**，访问Ultramarine主题。
 
 ![超海洋主题](assets/aftia-ultramarine-theme.jpg)
 
@@ -820,7 +778,7 @@ Adobe维护的公开Ultramarine主题内置于可安装的ZIP文件中`we-gov-fo
 1. Microsoft Dynamics条目
 1. Adobe Sign
 1. AEM自定义通信管理
-1. AdobeAnalytics
+1. Adobe Analytics
 
 要将其配置为在工作流中启用，用户需要执行以下任务。
 
