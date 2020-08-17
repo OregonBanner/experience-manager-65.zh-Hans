@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5Forms用户指南
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
+source-git-commit: a1ada0e747f46923dc834c872e522e648adae073
 workflow-type: tm+mt
-source-wordcount: '3708'
+source-wordcount: '3719'
 ht-degree: 1%
 
 ---
@@ -592,6 +592,8 @@ ht-degree: 1%
          + [使用API调用AEM Forms](developing/invoking-aem-forms-using-apis.md)
          + [理解AEM Forms进程](developing/aem-forms-processes.md)
          + [服务容器](developing/service-container.md)
+      + 为AEM Forms开发SPI {#developing-spis-aem-forms}
+         + [创建邀请外部用户处理程序](developing/creating-invite-external-users-handler.md)
       + Java API快速开始-代码示例 {#java-api-quick-start-code-examples}
          + [Application Manager客户端JavaAPI快速开始(SOAP)](developing/application-manager-client-java-api.md)
          + [Application Manager Service JavaAPI快速开始(SOAP)](developing/application-manager-service-java-api.md)
