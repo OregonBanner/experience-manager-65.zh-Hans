@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media视频
-description: 了解如何在Dynamic Media中使用视频
+title: Dynamic Media中的视频
+description: 了解如何在Dynamic Media中处理视频
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
 workflow-type: tm+mt
 source-wordcount: '11830'
 ht-degree: 22%
@@ -17,22 +17,22 @@ ht-degree: 22%
 ---
 
 
-# Dynamic Media视频 {#video}
+# Dynamic Media中的视频 {#video}
 
 本节介绍如何在 Dynamic Media 中处理视频。
 
-## 快速开始: 视频 {#quick-start-videos}
+## 快速开始:视频 {#quick-start-videos}
 
-以下工作流分步说明旨在帮助您快速设置并运行Dynamic Media中的自适应视频集。 每个步骤之后都会交叉引用主题标题，您可以从中找到更多信息。
+以下工作流分步说明旨在帮助您快速设置并运行Dynamic Media中的自适应视频集。每个步骤之后都会交叉引用主题标题，您可以从中找到更多信息。
 
 >[!NOTE]
 >
->在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media- Scene7模式或Dynamic Media-混合模式中启用并配置Dynamic MediaCloud Service。
+>在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media -Scene7模式或Dynamic Media —— 混合模式中启用并配置了Dynamic MediaCloud Services。
 >
->* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) - Scene7模式和故障排 [除Dynamic Media- Scene7模式中的配置Cloud Service。](/help/assets/troubleshoot-dms7.md)
+>* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) -Scene7模式和Dynamic Media -Scene7模 [式中的配置Dynamic MediaCloud Services。](/help/assets/troubleshoot-dms7.md)
    >
    >
-* 请参 [阅配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) -混合模式中的配置Dynamic Media。
+* 请参 [阅配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) —— 混合模式中的配置Dynamic MediaCloud Services。
 
 >
 
@@ -40,7 +40,7 @@ ht-degree: 22%
 
 1. 通过执行以下操作，**上传 Dynamic Media 视频**：
 
-   * 创建您自己的视频编码用户档案。 或者，您只需使用Dynamic Media附 _带的预定义自_ 适应视频编码用户档案。
+   * 创建您自己的视频编码用户档案。或者，您只需使用Dynamic Media附 _带的预定义自_ 适应视频编码用户档案。
 
       * [创建视频编码用户档案](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
       * Learn more about [Best practices for video encoding](#best-practices-for-encoding-videos).
@@ -119,11 +119,11 @@ ht-degree: 22%
 
 ## Working with video in Dynamic Media {#working-with-video-in-dynamic-media}
 
-Dynamic Media中的视频是一种端到端的解决方案，它使得发布高质量自适应视频以跨多个屏幕（包括桌面、iOS、Android、Blackberry和Windows移动设备）进行流化变得很容易。 自适应视频集为同一视频的不同版本编码，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。 桌面计算机或移动设备会检测可用带宽。
+Dynamic Media中的视频是一款端到端解决方案，它可轻松发布高质量自适应视频以跨多个屏幕（包括桌面、iOS、Android、Blackberry和Windows移动设备）进行流化。自适应视频集为同一视频的不同版本编码，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。桌面计算机或移动设备会检测可用带宽。
 
 例如，在 iOS 移动设备上，设备检测到 3G、4G 或 Wi-Fi 等带宽。设备会随之自动从自适应视频集内的各种视频比特率中选择正确的编码视频。然后，视频会在桌面设备、移动设备或平板电脑上进行流播放。
 
-此外，如果桌面或移动设备上的网络条件发生变化，设备会自动动态地切换视频质量。同时，如果客户在桌面上进入全屏模式，自适应视频集也会做出响应来使用较好的分辨率，从而改善客户的观看体验。使用自适应视频集，为在多个屏幕和设备上播放Dynamic Media视频的客户提供最佳播放方式。
+此外，如果桌面或移动设备上的网络条件发生变化，设备会自动动态地切换视频质量。同时，如果客户在桌面上进入全屏模式，自适应视频集也会做出响应来使用较好的分辨率，从而改善客户的观看体验。使用自适应视频集可为在多个屏幕和设备上播放Dynamic Media视频的客户提供最佳播放方式。
 
 视频播放器用来确定在播放期间要播放或要选择的编码视频的逻辑基于以下算法：
 
@@ -162,11 +162,11 @@ Dynamic Media supports mobile video playback for MP4 H.264 video. You can find B
 
 See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480) sample.
 
-另请参 [阅《Adobe Scene7](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) 查看器参考指南》中的AEM Assets [、Dynamic Media](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 经典查看器和AEM资产的查看器。
+另请参 [阅《AEM Assets查看器参考指南》中的Adobe Scene7查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html) 、 [动态媒体经典查看器和AEM资产查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) 。
 
 ## Best practice: Using the HTML5 video viewer {#best-practice-using-the-html-video-viewer}
 
-Dynamic MediaHTML5视频查看器预设是功能强大的视频播放器。 您可以使用它们避免许多与HTML5视频播放相关的常见问题以及与移动设备相关的问题，如缺少自适应流投放和桌面浏览器访问能力有限。
+Dynamic Media HTML5视频查看器预设是强大的视频播放器。您可以使用它们避免许多与HTML5视频播放相关的常见问题以及与移动设备相关的问题，如缺少自适应流投放和桌面浏览器访问能力有限。
 
 在播放器的设计方面，您可以使用标准的 Web 开发工具设计视频播放器的所有功能。例如，您可以使用 HTML5 和 CSS 设计按钮、控件和自定义标识图像背景，从而帮助您向客户展示自定义的外观。
 
@@ -182,7 +182,7 @@ Dynamic MediaHTML5视频查看器预设是功能强大的视频播放器。 您�
 
 使用HLS或渐进式视频下载进行视频播放。 在AEM的先前版本（如6.0、6.1和6.2）中，视频通过HTTP进行流化。
 
-但是，在AEM 6.3和ON中，视频现在通过HTTPS（即HLS）进行流传输，因为DM网关服务URL也始终使用HTTPS。 请注意，此默认行为不会对客户造成任何影响。 也就是说，除非浏览器不支持，否则视频流将始终通过HTTPS进行。 （请参阅下表）。 因此，
+但是，在AEM 6.3及更高版本中，视频现在通过HTTPS（即HLS）进行流传输，因为DM网关服务URL也始终使用HTTPS。 请注意，此默认行为不会对客户造成任何影响。 也就是说，除非浏览器不支持，否则视频流将始终通过HTTPS进行。 （请参阅下表）。 因此，
 
 * 如果您的HTTPS网站具有HTTPS视频流，则流可以正常进行。
 * 如果您有一个HTTP网站，其中包含HTTPS视频流，则流程可以正常进行，并且Web浏览器中不存在混合内容问题。
@@ -191,7 +191,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 渐进式视频通过在用户的桌面系统或移动设备上本地下载和存储视频来交付。
 
-下表介绍了使用Scene7 Video Viewer在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
+下表介绍使用Scene7视频查看器在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
 
 <table>
  <tbody>
@@ -208,7 +208,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
   <tr>
    <td>桌面设备</td>
    <td>Internet Explorer 11+</td>
-   <td>在Windows 8和Windows 10上——只要请求HLS，就强制使用HTTPS。 已知限制： HLS上的HTTP在Windows 7上的浏览器／操作系统组合<br /> - <br /> 渐进式下载中不工作。 使用标准逻辑选择HTTP与HTTPS协议。</td>
+   <td>在Windows 8和Windows 10上——只要请求HLS，就强制使用HTTPS。 已知限制：HLS上的HTTP在Windows 7上的浏览器／操作系统组合<br /> - <br /> 渐进式下载中不工作。 使用标准逻辑选择HTTP与HTTPS协议。</td>
   </tr>
   <tr>
    <td>桌面设备</td>
@@ -265,7 +265,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 ## Architecture of Dynamic Media video solution {#architecture-of-dynamic-media-video-solution}
 
-下图显示了通过DMGateway(在Dynamic Media混合模式下)上传和编码并供公众观看的视频的整体创作工作流程。
+下图显示了通过DMGateway（在Dynamic Media Hybrid模式下）上传和编码并供公众使用的视频的整体创作工作流程。
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
@@ -281,7 +281,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 有关视频编码的建议，请参阅以下资源：
 
-* [流101: 基础知识——编解码器、带宽、数据速率和分辨率](https://www.adobe.com/go/learn_s7_streaming101_en)。
+* [流101:基础知识——编解码器、带宽、数据速率和分辨率](https://www.adobe.com/go/learn_s7_streaming101_en)。
 * [视频编码基础](https://www.adobe.com/go/learn_s7_encoding_en)。
 
 ### 源视频文件 {#source-video-files}
@@ -337,7 +337,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 如果视频在整个视频中包含类似的运动级别，则使用CBR。 CBR最常用于流式视频内容。 另请参 [阅使用自定义添加的视频编码参数](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters)。
 
 * **[!UICONTROL 可变比特率编码]** (VBR)- VBR编码根据压缩程序所需的数据，将数据率调低并调整到您设置的上限。 这意味着在VBR编码过程中，媒体文件的比特率会根据媒体文件的比特率需求动态地增加或减少。
-VBR编码时间较长，但生成的结果最为有利； 媒体文件的质量优越。 VBR最常用于视频内容的http渐进投放。
+VBR编码时间较长，但生成的结果最为有利；媒体文件的质量优越。 VBR最常用于视频内容的http渐进投放。
 
 您何时应使用VBR与CRB?
 在选择VBR与CBR时，几乎始终建议您对媒体文件使用VBR。 VBR以竞争比特率提供更高质量的文件。 使用VBR时，请确保使用两遍编码，并将最大比特率设置为目标视频比特率的1.5倍。
@@ -350,12 +350,12 @@ VBR编码时间较长，但生成的结果最为有利； 媒体文件的质量�
 |--- |--- |
 | 256 | 拨号连接。 |
 | 800 | 典型移动连接。对于此类连接，3G 体验的目标数据率范围为 400 至最高 800。 |
-| 2000 | 典型宽带桌面连接。 对于此连接，目标数据率范围为800-2000 Kbps，大多数目标的平均速率为1200-1500 Kbps。 |
+| 2000 | 典型宽带桌面连接。对于此连接，目标数据率范围为800-2000 Kbps，大多数目标的平均速率为1200-1500 Kbps。 |
 | 5000 | 典型高宽带连接。不建议在此较高范围下进行编码，因为大多数用户并不具备此速度的视频传送条件。 |
 
 ### 分辨率 {#resolution}
 
-**分辨率**以像素为单位描述视频文件的高度和宽度。 大多数源视频以高分辨率存储（例如，1920 x 1080）。 出于流播放目的，源视频会压缩到较低的分辨率（640 x 480或更低）。
+**分辨率**以像素为单位描述视频文件的高度和宽度。大多数源视频以高分辨率存储（例如，1920 x 1080）。 出于流播放目的，源视频会压缩到较低的分辨率（640 x 480或更低）。
 
 分辨率和数据率是两个相互关联、密不可分的因素，它们决定着视频质量。为保持同等的视频质量，视频文件的像素数越高（分辨率越高），数据率就必须越高。例如，考虑分辨率分别为 320 x 240 和 640 x 480 的视频文件的每帧像素数：
 
@@ -417,9 +417,9 @@ Dynamic Media 建议使用 MP4 H.264 视频编码预设。由于 MP4 文件使�
 
 要将视频资产发布到YouTube，您需要设置带有标记的AEM Assets。 将这些标记与YouTube渠道关联。 如果视频资产的标签与YouTube渠道的标签匹配，则视频将发布到YouTube。 只要使用关联标记，发布到YouTube就会与视频的正常发布一起发生。
 
-YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media已创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但在回放时需要查看器预设时，视频会这样处理。
+YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media编码创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但在回放时需要查看器预设时，视频会处理。
 
-当您绕过视频处理用户档案并直接发布到YouTube时，这仅意味着您的AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您以dynamicmedia或dynamicmedia_scene7运行模式运行，则未编码的视频将不能用于任何Dynamic Media资产类型。
+当您绕过视频处理用户档案并直接发布到YouTube时，这只意味着AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您以动态媒体或dynamicmedia_scene7运行模式运行，则未编码的视频将不能用于任何Dynamic Media资产类型。
 
 将视频资产发布到YouTube服务器需要完成以下任务，以确保使用YouTube进行安全、安全的服务器到服务器身份验证：
 
@@ -437,7 +437,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 ### 配置Google Cloud设置 {#configuring-google-cloud-settings}
 
-要发布到YouTube，您需要一个Google帐户。 如果你有GMAIL账户，那么你已经有了Google账户； 如果您没有Google帐户，您可以轻松创建一个。 您需要此帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务，直接进 [入创建YouTube渠道](#creating-a-youtube-channel)。
+要发布到YouTube，您需要一个Google帐户。 如果你有GMAIL账户，那么你已经有了Google账户；如果您没有Google帐户，您可以轻松创建一个。 您需要此帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务，直接进 [入创建YouTube渠道](#creating-a-youtube-channel)。
 
 与Google Cloud一起使用的帐户和用于YouTube的Google帐户不需要相同。
 
@@ -466,7 +466,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 在“新建项目”对话框的“项目名称”字段中，键入新项目的名称。
 
-   请注意，您的项目ID基于您的项目名称。 因此，请仔细选择项目名称； 创建后无法更改它。 此外，稍后在AEM中设置YouTube时，您还需要再次输入同一项目ID; 你可能想把它写下来。
+   请注意，您的项目ID基于您的项目名称。 因此，请仔细选择项目名称；创建后无法更改它。 此外，稍后在AEM中设置YouTube时，您还需要再次输入同一项目ID;你可能想把它写下来。
 
 1. Click **[!UICONTROL Create.]**
 
@@ -505,7 +505,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    例如，`https://1a2b3c.mycompany.com:4321`
 
-   **注意**: 以上路径示例仅供说明。
+   **注意**:以上路径示例仅供说明。
 
    ![6_5_googleaccount-apis-createcredentials-oauth](assets/6_5_googleaccount-apis-createcredentials-oauth.png)
 
@@ -515,7 +515,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    例如，`https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   **注意**: 以上路径示例仅供说明。
+   **注意**:以上路径示例仅供说明。
 
 1. 单击 **[!UICONTROL 创建OAuth客户端ID。]**
 1. 在&#x200B;**[!UICONTROL 向项目添加凭据]**&#x200B;页面的步骤 3 中，在&#x200B;**[!UICONTROL 设置 OAuth 2.0 许可屏幕]**&#x200B;标题下，选择您当前使用的 Gmail 电子邮件地址。
@@ -524,7 +524,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 在显示 **[!UICONTROL 给用户的产品名称标题]** （在文本字段中）下，输入您希望在同意屏幕上显示的内容。
 
-   AEM管理员在YouTube上进行身份验证时，会向其显示同意屏幕； AEM将与YouTube联系以获得许可。
+   AEM管理员在YouTube上进行身份验证时，会显示同意屏幕；AEM将与YouTube联系以获得许可。
 
 1. 单击“ **[!UICONTROL 继续”。]**
 1. On the Add credentials to your project page, step 4, under the **[!UICONTROL Download credentials]** heading, tap **[!UICONTROL Download.]**
@@ -533,7 +533,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 保存文 `client_id.json` 件。
 
-   以后在Adobe Experience Manager中设置YouTube时，您需要此下载的json文件。
+   稍后在Adobe Experience Manager设置YouTube时，您将需要此下载的json文件。
 
 1. Click **[!UICONTROL Done.]**
 
@@ -545,7 +545,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!CAUTION]
 >
->在在AEM的“YouTube设置”下添加渠道之 *前* ，请确保已在YouTube中设置一个或多个渠道(请参 [阅下面的AEM中](#setting-up-youtube-in-aem) 设置YouTube)。 如果您未能这样做，则系统不会对任何现有渠道发出警告。 但是，添加渠道时仍会发生Google身份验证，但无法选择发送视频的渠道。
+>在AEM的“YouTube设置”下添加渠道之前 *，请确保已在YouTube中设置一个或多个渠道* (请参 [阅下面的AEM中](#setting-up-youtube-in-aem) 设置YouTube)。 如果您未能这样做，则系统不会对任何现有渠道发出警告。 但是，添加渠道时仍会发生Google身份验证，但无法选择发送视频的渠道。
 
 要创建YouTube渠道，请执行以下操作：
 
@@ -555,7 +555,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 在渠道页面上，单 **[!UICONTROL 击创建新渠道。]**
 1. 在“品牌帐户”页面的“品牌帐户名称”字段中，输入您要在何处发布视频资产的业务名称或任何其他渠道名称，然后单击创 **[!UICONTROL 建。]**
 
-   请记住在此处输入的名称，因为在AEM中设置YouTube时，您需要再次输入该名称。
+   记住在此处输入的名称，因为在AEM中设置YouTube时，您需要再次输入该名称。
 
 1. （可选）如有必要，请添加更多渠道。
 
@@ -565,7 +565,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 要将视频发布到YouTube,AEM会将标记关联到一个或多个YouTube渠道。 要添加用于发布的标记，请参阅 [管理标记](/help/sites-administering/tags.md)。
 
-或者，如果您打算在AEM中使用默认标记，则可以跳过此任务，转 [至启用YouTube发布复制代理](#enabling-the-youtube-publish-replication-agent)。
+或者，如果您打算在AEM中使用默认标记，则可以跳过此任务并转 [到启用YouTube发布复制代理](#enabling-the-youtube-publish-replication-agent)。
 
 ### 启用YouTube发布复制代理 {#enabling-the-youtube-publish-replication-agent}
 
@@ -577,7 +577,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 选中“ **[!UICONTROL 启用]** ”复选框以打开复制代理。
 1. Click **[!UICONTROL OK.]**
 
-   现在，您将在AEM中设置YouTube。
+   现在你将在AEM建立YouTube。
 
 ### Setting up YouTube in AEM {#setting-up-youtube-in-aem}
 
@@ -586,9 +586,9 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 * 要在6.4之前的AEM中配置YouTube，请参阅 [在6.4之前的AEM中设置YouTube](/help/assets/video.md#setting-up-youtube-in-aem-before)。
 * 要在AEM 6.4或更高版本中配置YouTube，请参 [阅在AEM 6.4和更高版本中设置YouTube](#setting-up-youtube-in-aem-and-later)。
 
-#### 在AEM 6.4及更高版本中设置YouTube {#setting-up-youtube-in-aem-and-later}
+#### 在AEM 6.4和更高版本中设置YouTube {#setting-up-youtube-in-aem-and-later}
 
-1. 请确保以管理员身份登录Dynamic Media实例。
+1. 请确保以管理员身份登录到Dynamic Media实例。
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]**(hammer icon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration.]**
 1. 点 **[!UICONTROL 按全局]** （请勿选择它）。
 
@@ -596,7 +596,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 在“创建 YouTube 配置”页面的“Google Cloud Platform 设置”下的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
    您最初在之前配置Google Cloud设置时指定了项目ID。
-保持“创建YouTube配置”页面处于打开状态； 你马上就会回来。
+保持“创建YouTube配置”页面处于打开状态；你马上就会回来。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -616,14 +616,14 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 将显示YouTube/Google身份验证。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
 
    * 输入与上述Google项目ID和JSON文本关联的Google用户名和密码。
-   * 根据您的帐户拥有的渠道数，您会看到两个或更多项目。 选择渠道。 不要选择电子邮件地址； 它不是渠道。
+   * 根据您的帐户拥有的渠道数，您会看到两个或更多项目。 选择渠道。 不要选择电子邮件地址；它不是渠道。
    * 在下一页，点按接 **[!UICONTROL 受]** ，以允许访问此渠道。
 
 1. 点按 **[!UICONTROL 允许。]**
 
    您现在将设置用于发布的标记。
 
-1. **[!UICONTROL 设置要发布的标记]** -在“Cloud Service”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记的列表。
+1. **[!UICONTROL 设置要发布的标记]** -在“Cloud Services”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记的列表。
 1. 点按下拉列表图标（倒转插入符号）以显示AEM中可用标记的列表。
 1. 点击一个或多个标记以添加它们。
 
@@ -633,9 +633,9 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    现在，您可以将视频发布到YouTube渠道。
 
-#### 在6.4之前的AEM中设置YouTube {#setting-up-youtube-in-aem-before}
+#### 在AEM 6.4之前设置YouTube {#setting-up-youtube-in-aem-before}
 
-1. 请确保以管理员身份登录Dynamic Media实例。
+1. 请确保以管理员身份登录到Dynamic Media实例。
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services.]**
 1. 在“第三方服务”标题下的YouTube下，点按 **[!UICONTROL 立即配置。]**
@@ -644,7 +644,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 在“YouTube 帐户设置”对话框的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
    您最初配置Google Cloud设置时 [指定了项目ID](/help/assets/video.md#configuring-google-cloud-settings) 。
-保持“YouTube帐户设置”对话框打开； 你马上就会回来。
+保持“YouTube帐户设置”对话框打开；你马上就会回来。
 
 1. 使用纯文本编辑器，打开之前在“配置Google Cloud”设置中下载并保存的JSON文件。
 1. 选择并复制整个JSON文本。
@@ -662,14 +662,14 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. 将显示YouTube/Google身份验证。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
 
    * 输入与上述Google项目ID和JSON文本关联的Google用户名和密码。
-   * 根据您的帐户拥有的渠道数，您会看到两个或更多项目。 选择渠道。 不要选择电子邮件地址； 它不是渠道。
+   * 根据您的帐户拥有的渠道数，您会看到两个或更多项目。 选择渠道。 不要选择电子邮件地址；它不是渠道。
    * 在下一页，点按接 **[!UICONTROL 受]** ，以允许访问此渠道。
 
 1. 点按 **[!UICONTROL 允许。]**
 
    您现在将设置用于发布的标记。
 
-1. **[!UICONTROL 设置要发布的标记]** -在“Cloud Service”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记的列表。
+1. **[!UICONTROL 设置要发布的标记]** -在“Cloud Services”>“YouTube”页面上，点按铅笔图标以编辑要使用的标记的列表。
 1. 点按下拉列表图标（倒转插入符号）以显示AEM中可用标记的列表。
 1. 点击一个或多个标记以添加它们。
 
@@ -681,7 +681,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 ### （可选）自动设置已上传视频的默认YouTube属性 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
-您可以选择在上传视频时自动设置YouTube属性。 您可以通过在AEM中创建元数据处理用户档案来完成此操作。
+您可以选择在上传视频时自动设置YouTube属性。 要完成此操作，请在AEM中创建元数据处理用户档案。
 
 要创建元数据处理配置文件，您首先需要从&#x200B;**[!UICONTROL 字段标签]**、**[!UICONTROL 映射到属性]**&#x200B;和&#x200B;**[!UICONTROL 选择]**&#x200B;字段中复制值，所有这些字段均位于视频的元数据架构中。然后，您可以通过向处理配置文件添加这些值来构建您的 YouTube 视频元数据处理配置文件。
 
@@ -744,17 +744,17 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 ### 将视频发布到您的 YouTube 频道 {#publishing-videos-to-your-youtube-channel}
 
-现在，您可以关联之前添加到视频资产的标记。 此过程会让AEM知道要发布到您的YouTube渠道的资产。
+现在，您可以关联之前添加到视频资产的标记。 此过程可让AEM知道要发布到YouTube渠道的资产。
 
 >[!NOTE]
 >
->在Dynamic Media- Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation.]**
+>在Dynamic Media -Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 When Dynamic Media - Scene7 mode is set up, there are two publish options to choose from: **[!UICONTROL Immediately]** or **[!UICONTROL Upon Activation.]**
 >
->**[!UICONTROL 立即发布]** ，意味着上传的资产在与IPS同步后会自动发布到投放系统。 尽管这对Dynamic Media来说是正确的，但对YouTube来说则并非如此。 要发布到YouTube，您必须通过AEM Author进行发布。
+>**[!UICONTROL 立即发布]** ，意味着上传的资产在与IPS同步后会自动发布到投放系统。 虽然Dynamic Media是如此，但YouTube则并非如此。 要发布到YouTube，您必须通过AEM作者进行发布。
 
 >[!NOTE]
 >
->要从YouTube发布内容，AEM使用“发 **[!UICONTROL 布到YouTube]** ”工作流程，它允许您监视进度并视图任何故障信息。
+>要从YouTube发布内容，AEM使用“ **[!UICONTROL 发布到YouTube]** ”工作流程，它允许您监视进度并视图任何故障信息。
 >
 >请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 >
@@ -790,7 +790,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 ### 将 YouTube URL 关联到您的 Web 应用程序 {#linking-youtube-urls-to-your-web-application}
 
-您可以在发布视频后获得由Dynamic Media生成的YouTube URL字符串。 在复制该 YouTube URL 时，它会进入“剪贴板”，以便您能够视需要将其粘贴到网站或应用程序中的页面。
+您可以在发布视频后获取Dynamic Media生成的YouTube URL字符串。 在复制该 YouTube URL 时，它会进入“剪贴板”，以便您能够视需要将其粘贴到网站或应用程序中的页面。
 
 >[!NOTE]
 >
@@ -812,11 +812,11 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!CAUTION]
 >
->如果您直接从YouTube中删除视频，AEM不会察觉，并继续表现为视频仍发布到YouTube。 始终通过AEM从YouTube取消发布视频资产。
+>如果您直接从YouTube中删除视频，AEM不会察觉并继续表现出视频仍发布到YouTube的样子。 始终通过AEM从YouTube取消发布视频资产。
 
 >[!NOTE]
 >
->要从YouTube中删除内容，AEM使用“从YouTube **[!UICONTROL 中取消发布]** ”工作流，它允许您监视进度并视图任何故障信息。
+>要从YouTube中删除内容，AEM使 **[!UICONTROL 用从YouTube中取消发布]** ，该工作流允许您监视进度并视图任何故障信息。
 >
 >请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
@@ -824,7 +824,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 导航到要从YouTube渠道取消发布的视频资产。
 1. 在资产选择模式下，选择一个或多个已发布的视频资产。
-1. 在工具栏中，单击“管 **[!UICONTROL 理发布”。]** 您可能需要点按三个点图标(. . .) 在工具栏中，查看管 **[!UICONTROL 理发布。]**
+1. 在工具栏中，单击“管 **[!UICONTROL 理发布”。]** 您可能需要点按三个点图标(...) 在工具栏中，查看管 **[!UICONTROL 理发布。]**
 1. 在“管理发布”页面上，点按取 **[!UICONTROL 消发布。]**
 1. In the upper-right corner of the page, tap **[!UICONTROL Next.]**
 1. In the upper-right corner of the page, tap **[!UICONTROL Unpublish.]**
@@ -862,7 +862,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    >由于 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) 中存在多个关于&#x200B;**[!UICONTROL 重试]**、**[!UICONTROL 重试延迟]**&#x200B;和&#x200B;**[!UICONTROL 超时]**&#x200B;的工作流配置，最终记录失败/错误会花费较长时间，例如：
    >
    >    * Apache Sling作业队列配置
-   >    * Adobe Granite Workflow External Process Job Handler
+   >    * AdobeGranite工作流外部进程作业处理程序
    >    * Granite工作流超时队列
 
    >
@@ -897,7 +897,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    >
    >
    >    * Apache Sling作业队列配置
-   >    * Adobe Granite Workflow External Process Job Handler
+   >    * AdobeGranite工作流外部进程作业处理程序
    >    * Granite工作流超时队列
 
    >
@@ -922,7 +922,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
 
-* 对于编码作业，您可以通过搜索Day CQ Workflow电子邮件通知服务访问 **[!UICONTROL 所有AEM]** **[!UICONTROL Workflow电子邮]** 件通知的配置页 **[!UICONTROL 面]** ，该页面位于“工具”>“操 **[!UICONTROL 作”>“Web控制台”。]** 请参阅 [在AEM中配置电子邮件通知](/help/sites-administering/notification.md)。 您可以相应地选中或清除“中止时 **[!UICONTROL 通知”或]** “ **[!UICONTROL 完成时通知]** ”复选框。
+* 对于编码作业，您可以通过搜索Day CQ Workflow电子邮件通知服务访问 **[!UICONTROL 所有AEM]** **[!UICONTROL Operations]** > Web Console **[!UICONTROL 中的工作流电子邮]****[!UICONTROL 件通知的配置页。]** 请参阅 [在AEM中配置电子邮件通知](/help/sites-administering/notification.md)。 您可以相应地选中或清除“中止时 **[!UICONTROL 通知”或]** “ **[!UICONTROL 完成时通知]** ”复选框。
 
 * 对于YouTube发布作业，请执行以下操作：
 
@@ -960,9 +960,9 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->视频报表仅在运行Dynamic Media-混合模式时可用。
+>视频报告仅在运行Dynamic Media —— 混合模式时可用。
 
-视频报表显示指定时间段内的多个聚合量度，帮助您监控*已发布*单个和聚合视频是否按预期效果呈现。 以下顶级指标数据是整个网站中所有已发布视频的汇总数据：
+视频报表显示指定时间段内的多个聚合量度，帮助您监控*已发布*单个和聚合视频是否按预期效果呈现。以下顶级指标数据是整个网站中所有已发布视频的汇总数据：
 
 * 视频开始
 * 完成率
@@ -976,13 +976,13 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 如果视频是在 Adobe Experience Manager Dynamic Media 外部编码的，就不会提供受众保留（流失）图表和表中的播放比例数据。
 
-另请参阅 [配置Dynamic MediaCloud Service](/help/assets/config-dynamic.md)。
+另请参 [阅配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md)。
 
 >[!NOTE]
 >
 >只有在使用 Dynamic Media 自带的视频播放器及关联的视频播放器预设时，才可跟踪并报告数据。因此，对于通过其他视频播放器播放的视频，您无法进行跟踪和报告。
 
-默认情况下，在您首次进入视频报表时，报表会显示从当月的第一个开始到当月的当日结束的视频数据。 但是，您可以通过指定您自己的日期范围来覆盖默认日期范围。 下次输入视频报表时，将使用您指定的日期范围。
+默认情况下，在您首次进入视频报表时，报表会显示从当月的第一个开始到当月的当日结束的视频数据。但是，您可以通过指定您自己的日期范围来覆盖默认日期范围。下次输入视频报表时，将使用您指定的日期范围。
 
 For video reports to work correctly, a Report Suite ID is automatically created when Dynamic Media Cloud Services is configured. At the same time, the Report Suite ID is pushed to the Publish server so that it is available for the Copy URL feature when you preview assets. However, this requires that the Publish server be already set up. If the Publish server is not set up, you can still publish to see the video report, however, you will need to return to the Dynamic Media Cloud Configuration and tap **[!UICONTROL OK.]**
 
@@ -991,8 +991,7 @@ For video reports to work correctly, a Report Suite ID is automatically created 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports.]**
 1. 在“视频报表”页面中，执行以下任一操作：
 
-   * 在右上角附近，点按**刷新视频报表**图标。
-如果报表的结束日期是当天，您只需使用“刷新”。 这可确保您查看自上次运行报告以来发生的视频跟踪。
+   * 在右上角附近，点按**刷新视频报表**图标。如果报表的结束日期是当天，您只需使用“刷新”。这可确保您查看自上次运行报告以来发生的视频跟踪。
 
    * Near the upper-right corner, tap the **Date Picker **icon.
 Specify the beginning and end date range for which you want video data, and then tap **[!UICONTROL Run Report.]**
@@ -1003,7 +1002,7 @@ Specify the beginning and end date range for which you want video data, and then
 
 ### 查看基于使用 Scene7 HMTL5 查看器 SDK 创建的视频查看器的视频报表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-如果您使用由Dynamic Media提供的现成视频查看器，或者您基于现成视频查看器创建了自定义查看器预设，则无需执行任何其他步骤即可视图视频报告。 但是，如果您基于Scene7 HTML5查看器SDK创建了自己的视频查看器，请使用以下步骤确保视频查看器将跟踪事件发送给Dynamic Media视频报表。
+如果您使用的是Dynamic Media提供的现成视频查看器，或者您基于现成视频查看器创建了自定义查看器预设，则无需执行任何其他步骤即可视图视频报告。但是，如果您基于Scene7HTML5查看器SDK创建了自己的视频查看器，请使用以下步骤确保视频查看器将跟踪事件发送到Dynamic Media视频报表。
 
 使用 Scene7 查看器参考和 Scene7 HTML5 查看器 SDK 创建您自己的视频查看器。
 
@@ -1022,9 +1021,9 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 
    `videoViewer.setParam("config2", "<value>");`
 
-   The `config2` parameter enables tracking in HTML5 Viewers. 它还是一个特定于公司的预设，其中包含视频报告和特定于客户的AdobeAnalytics配置的配置信息。
+   The `config2` parameter enables tracking in HTML5 Viewers. 它还是一个特定于公司的预设，其中包含视频报告的配置信息以及特定于客户的Adobe Analytics配置。
 
-   在**嵌入代码**和副本**URL **函数中都可以找到config2参数的正确值。 在复制**URL **命令的URL中，要查找的参数为 `&config2=<value>` 。 该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
+   在**嵌入代码**和副本**URL **函数中都可以找到config2参数的正确值。在复制**URL **命令的URL中，要查找的参数为 `&config2=<value>` 。 该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
 
 1. 在您的自定义视频查看器代码中，通过执行以下操作，将 AppMeasurementBridge.jsp 添加到查看器页面：
 
@@ -1058,7 +1057,7 @@ If `config2` is anything else, set the preset parameter the same as the `config2
       trackingManager.setCallback(appMeasurementBridge.track,
        appMeasurementBridge);
       ```
-   appMeasurementBridge对象具有内置的跟踪功能。 但是，您可以提供自己的功能来支持多个跟踪系统或其他功能。
+   appMeasurementBridge对象具有内置的跟踪功能。但是，您可以提供自己的功能来支持多个跟踪系统或其他功能。
 
    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html).
 
@@ -1072,9 +1071,9 @@ If `config2` is anything else, set the preset parameter the same as the `config2
 >
 >您使用的视频播放器必须支持字幕的显示。
 
-Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
+Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
 
-有 [关在URL中使用JSON函](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html) 数的更多信息，请参 ** 阅Scene7图像服务API帮助中的Serving static（非图像）内容。
+有 [关在URL中使用JSON函数](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html) ，请参 *阅“Scene7图像服务API帮助”中的* “服务静态（非图像）内容”。
 
 要向视频添加字幕或字幕，请执行以下操作：
 
@@ -1082,9 +1081,9 @@ Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）�
 
    确保您创建的文件符合WebVTT（Web视频文本轨道）标准。 字幕文件扩展名为。vtt。 您可以了解有关WebVTT字幕标准的更多信息。
 
-   请参 [阅WebVTT: Web视频文本跟踪格式](https://dev.w3.org/html5/webvtt/)。
+   请参 [阅WebVTT:Web视频文本跟踪格式](https://dev.w3.org/html5/webvtt/)。
 
-   您可以使用免费和高级工具及服务在Dynamic Media之外创作字幕／子标题文件。 例如，要创建不带样式的简单视频题注文件，您可以使用以下免费的在线题注创作和编辑工具：
+   您可以使用免费和高级工具及服务在Dynamic Media外创作字幕／子标题文件。 例如，要创建不带样式的简单视频题注文件，您可以使用以下免费的在线题注创作和编辑工具：
 
    [WebVTT字幕制作器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -1101,7 +1100,7 @@ Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）�
    通常，您希望将字幕VTT文件命名为与视频文件同名，并附加语言区域设置，如-EN、-FR或-DE等。 通过这样做，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
 
 1. 在AEM中，将您的WebVTT题注文件上传到DAM。
-1. 导航到要与上传的题注文件关联的*已发布*视频资产。
+1. 导航到要 *与上* 传的题注文件关联的已发布视频资产。
 
    请注意，只有在首次&#x200B;*发布*&#x200B;资产&#x200B;*后*，才可复制 URL。
 
@@ -1127,11 +1126,11 @@ Dynamic Media可以将题注文件转换为JSON（JavaScript对象表示法）�
 
 >[!NOTE]
 >
->使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器确实支持章节标记，但使用第三方视频播放器则不支持。
+>使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器确实支持章节标记，但使用第三方视频播放器可能不支持。
 
-如果需要，您可以使用章节而不是使用视频查看器预设创建自定义视频查看器并为其添加品牌。 有关使用章节导航创建您自己的HTML5查看器的说明，请参阅Adobe Scene7 Viewer SDK for HTML5指南中的类和下方的标题“使用修饰符自定义行为” `s7sdk.video.VideoPlayer` 和 `s7sdk.video.VideoScrubber`。 Adobe Scene7 Viewer SDK可从Adobe Developer Connection下 [载](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)。
+如果需要，您可以使用章节而不是使用视频查看器预设创建自定义视频查看器并为其添加品牌。 有关创建具有章节导航的自己HTML5查看器的说明，请参阅《Adobe Scene7查看器SDK for HTML5指南》中的类和下方的标题“使用修饰符自定义行为 `s7sdk.video.VideoPlayer` ” `s7sdk.video.VideoScrubber`。 可从Adobe Scene7下载Adobe Developer Connection查看器 [SDK](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)。
 
-为视频创建章节列表的方法与创建字幕的方法非常相似。 即，创建一个WebVTT文件。 但是，请注意，此文件必须与您也可能使用的任何WebVTT题注文件分开； 不能将字幕和章节合并到一个WebVTT文件中。
+为视频创建章节列表的方法与创建字幕的方法非常相似。 即，创建一个WebVTT文件。 但是，请注意，此文件必须与您也可能使用的任何WebVTT题注文件分开；不能将字幕和章节合并到一个WebVTT文件中。
 
 您可以将以下示例用作创建具有章节导航的WebVTT文件所使用格式的示例：
 
@@ -1157,7 +1156,7 @@ Cost-efficient access to rapidly evolving technology.
 
 由于您使用的是HTML5视频查看器，请确保您创建的章节文件符合WebVTT（Web视频文本轨道）标准。 章节文件扩展名为。vtt。 您可以了解有关WebVTT字幕标准的更多信息。
 
-请参 [阅WebVTT: Web视频文本轨道格式](https://dev.w3.org/html5/webvtt/)
+请参 [阅WebVTT:Web视频文本轨道格式](https://dev.w3.org/html5/webvtt/)
 
 **要向视频添加章节标记，请执行以下操作：**
 
@@ -1199,11 +1198,11 @@ Cost-efficient access to rapidly evolving technology.
      </tbody>
    </table>
 
-## 关于Dynamic Media中的视频缩略图- Scene7模式 {#about-video-thumbnails-in-dynamic-media-scene-mode}
+## 关于Dynamic Media -Scene7模式中的视频缩略图 {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
 视频缩略图是视频帧或向客户展示视频的图像资产的缩小版本。 缩略图应用于鼓励客户点击视频。
 
-AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图而不替换它。 默认情况下，将视频上传到AEM时，第一帧将用作缩略图。 但是，您可以自定义缩略图，以用于品牌或视觉搜索。 自定义视频缩略图时，您可以播放视频并暂停要使用的帧，也可以选择已在数字资产管理器中上传和发 *布* 的图像资产。
+AEM中的所有视频都必须具有关联的缩略图；不能删除缩略图而不替换它。 默认情况下，将视频上传到AEM时，第一帧将用作缩略图。 但是，您可以自定义缩略图，以用于品牌或视觉搜索。 自定义视频缩略图时，您可以播放视频并暂停要使用的帧，也可以选择已在数字资产管理器中上传和发 *布* 的图像资产。
 
 请注意，您从视频中选择的自定义视频缩略图图像不会提取并另存为单独的独特资产。 但是，您从现有图像资产中选择的自定义视频缩略图会保存到JCR。 选定资产的路径会存储在视频资产的节点下，如下面的示例路径所示：
 
@@ -1211,7 +1210,7 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
 
 只有在将视频用户档案应用到视频所在的文件夹后，才能自定义视频缩略图。
 
-另请参阅 [关于Dynamic Media中的视频缩略图——混合模式](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
+另请参 [阅关于Dynamic Media —— 混合模式中的视频缩略图](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
 
 ### 添加自定义视频缩略图 {#adding-a-custom-video-thumbnail}
 
@@ -1249,15 +1248,15 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
 
 ## 关于Dynamic Media中的视频缩略图——混合模式 {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-您可以从Dynamic Media自动生成的十张缩略图中选择一张，以将其添加到视频。 在Dynamic Media、AEM Mobile或AEM Screens的创作环境中，当视频资产与AEM Sites组件一起使用时，视频播放器会显示您选择的缩略图。 缩略图用作最能代表整个视频内容的静态图片，并进一步鼓励用户单击“播放”按钮。
+您可以从Dynamic Media自动生成的十张缩略图中选择一张，以将其添加到视频中。 在AEM Sites、AEM Mobile或AEM Screens的创作环境中，当视频资产与Dynamic Media组件一起使用时，视频播放器会显示您选择的缩略图。 缩略图用作最能代表整个视频内容的静态图片，并进一步鼓励用户单击“播放”按钮。
 
-根据视频的总时间，Dynamic Media在视频中以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例捕获十张（默认）缩略图。 十个缩览图将保留，这意味着如果您稍后决定选择其他缩略图，则无需重新生成该系列。 您预览十个缩略图图像，然后选择要用于视频的图像。 如果要更改为默认值，可以使用CRXDE Lite配置生成缩略图的时间间隔。 例如，如果您只想从视频中生成一系列四张均匀间隔的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
+根据视频的总时间，Dynamic Media将以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例捕获十张（默认）缩略图图像。 十个缩览图将保留，这意味着如果您稍后决定选择其他缩略图，则无需重新生成该系列。 您预览十个缩略图图像，然后选择要用于视频的图像。 如果要更改为默认值，则可以使用CRXDE Lite配置生成缩略图的时间间隔。 例如，如果您只想从视频中生成一系列四张均匀间隔的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
 
 理想情况下，在上传视频后但在网站上发布视频之前，您可以随时添加视频缩略图。
 
 如果您愿意，您可以选择上传自定义缩略图来代表您的视频，而不是使用Dynamic Media生成的缩略图。 例如，您可以创建自定义缩略图图像，该图像具有视频的标题、引人注目的开始图像或从视频捕获的非常特定的图像。 您上传的自定义视频缩略图图像的最大分辨率应为1280 x 720像素（最小宽度为640像素）且不应大于2MB。
 
-另请参阅 [关于Dynamic Media中的视频缩略图- Scene7模式](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
+另请参 [阅关于Dynamic Media -Scene7模式中的视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
 ### 添加视频缩略图 {#adding-a-video-thumbnail}
 
@@ -1278,7 +1277,7 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
 
    视频的缩略图图像将更新为使用您选择的缩略图。 如果您稍后决定更改缩略图图像，则可返回“更改 **[!UICONTROL 缩略图]** ”页面并选择新缩略图。
 
-   如果您配置了新的默认时间间隔，或者上传了新视频以替换现有视频，则需要让Dynamic Media重新生成缩略图。
+   如果您配置了新的默认时间间隔，或者上传了新视频以替换现有视频，则需要Dynamic Media重新生成缩略图。
 
    请参 [阅配置生成视频缩略图的默认时间间隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)。
 
@@ -1304,7 +1303,7 @@ AEM中的所有视频都必须具有关联的缩略图； 不能删除缩略图�
    * 点按向上箭头图标和向下箭头图标以重新排序间隔值。
 
 1. 点按 **[!UICONTROL 确定]** ，以返回“属性”选项卡。
-1. 在CRXDE Lite页面的左上角附近，点 **[!UICONTROL 按全部]**，然后点按左上角的“返回主页”图标以返回AEM。
+1. 在CRXDE Lite页面的左上角附近，点 **[!UICONTROL 按全部保存]**，然后点按左上角的“返回主页”图标以返回AEM。
 
    请参 [阅添加视频缩略图。](#adding-a-video-thumbnail)
 
