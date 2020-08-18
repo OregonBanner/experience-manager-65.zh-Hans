@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 636224c2ea165e43f8979797926fd05197a15905
+source-git-commit: 1148ac87ef6ff1afa77788e9cbd180d883290bfe
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善
 * 启 [用SSL的](/help/sites-administering/ssl-by-default.md) AEM Forms服务器。
 * 一个 [Adobe SignAPI应用程序](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
 * Adobe SignAPI应用程序的凭据（客户端ID和客户端机密）。
+* 重新配置时，从创作实例和发布实例中删除现有的Adobe Sign配置。
 
 ## 配置Adobe Sign与AEM Forms {#configure-adobe-sign-with-aem-forms}
 
@@ -51,7 +52,7 @@ Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善
 1. 在配置页面上，点按创 **[!UICONTROL 建]** ，在AEM Forms创建Adobe Sign配置。
 1. 在“创 **[!UICONTROL 建Adobe Sign]** 配置”页 **[!UICONTROL 面的“常规]** ”选项卡中，指 **定配置的名** 称 **，然后点**&#x200B;按下一。 您可以选择指定标题并浏览以选择配置的缩略图。
 
-   在当前浏览器窗口中复制URL。 需要配置Adobe Sign应用程序与AEM Forms。
+1. 将当前浏览器窗口中的URL复制到记事本。 需要配置Adobe Sign应用程序与AEM Forms。
 
 1. 为Adobe Sign应用程序配置OAuth设置：
 
@@ -95,6 +96,9 @@ Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善
 1. 重复第1步到第12步，将Adobe Sign配置为AEM Forms。 使用相同的配置标题（如第3步中指定）和相同的名称（如第6步中指定）来复制在创作实例上配置的设置。
 
    现在，Adobe Sign已与AEM Forms集成，并准备以自适应形式使用。 要在 [自适应表单中使用Adobe Sign服务](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，请在自适应表单属性中指定上面创建的配置容器。
+
+   >[!NOTE]
+   > 如果您具有强化的环境并且无权访问URL, `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`请在“作者”上完成配置，然后使用复 [制](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) ，在相应的发布实例上创建相同的配置。
 
 ## 配置Adobe Sign调度程序以同步签名状态 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
