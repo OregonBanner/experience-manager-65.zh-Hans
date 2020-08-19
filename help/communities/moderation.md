@@ -11,17 +11,17 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
 workflow-type: tm+mt
 source-wordcount: '2110'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 
 # 审核控制台 {#moderation-console}
 
-在AEM Communities中，可 [以通过作者和社区版主](/help/communities/moderate-ugc.md) （分配为版主的受信任社区成员）的环境和发布社区内容进行批量审核。
+在AEM Communities，可 [以通过作者和社区版主](/help/communities/moderate-ugc.md) （指定为版主的受信任社区成员）发布环境，批量审核社区内容。
 
 管理员和社区版主者还可 [以在发布环境中执行](/help/communities/in-context.md) 上下文内协调。
 
@@ -241,15 +241,15 @@ ht-degree: 4%
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Github [上的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) 实现了标记过滤器，以根据特定标记是否应用于用户生成的内容来过滤UGC列表。 您可以按照示例代码，为其他类似的UGC元数据字段构建类似过滤器。
+Github [上的示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) 实现了标记过滤器，以根据特定标记是否应用于用户生成的内容来过滤UGC列表。 您可以按照示例代码，为其他类似的UGC元数据字段构建类似过滤器。
 
 要安装“标记”过滤器的示例，请执行以下操作：
 
-1. 在AEM Author(https://[aem-author]:[4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))实例和AEM Publish([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))实例上打开包管理器。
+1. 在AEM作者(https://[aem-author]:[4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))实例和AEM发布([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))实例上打开包管理器。
 1. 从Github代 `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` 码构建包，并安装和启用它。
-1. 在AEM Author()实例和 `https://[aem-author]:4502/system/console/bundles`AEM Publish()实例上打 `https://[aem-publish]:4503/system/console/bundles`开捆绑控制台。
+1. 在AEM作者()实例和AEM发 `https://[aem-author]:4502/system/console/bundles`布()实例上打开 `https://[aem-publish]:4503/system/console/bundles`捆绑控制台。
 1. 从Github构 ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` 建包，并安装并启用它。
-1. 转到AEM Author **上的** /apps/social/仲裁/facets节点([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/仲裁/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))和AEM Publish([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/仲裁/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))实例。
+1. 转到AEM **作者(https://[aem-author]:4502/crx/de/index.jsp#/apps/social** /仲裁/facets[)和AEM发布(](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/仲裁/facets[](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))实例上的/apps/social/comareation/facets节点。
 1. 添加具有权限 **的技术用户社区——实用程序** -阅读 `jcr:read` 器。
 
 在现有社区站点上公开自定义过滤器:
