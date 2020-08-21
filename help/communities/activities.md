@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10c17fc199c476ec66059cc6bf4cbb4a0ff1af40
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 4%
@@ -44,13 +44,13 @@ ht-degree: 4%
 
 当包含 [所需的客户端库](/help/communities/essentials-activities.md#essentials-for-client-side) ，组件的显示 `Activity Streams` 方式如下：
 
-![chlimage_1-195](assets/chlimage_1-195.png)
+![活动流](assets/activity-component.png)
 
 ### 配置活动流 {#configuring-activity-streams}
 
 选择要访问的 `Activity Streams` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-494](assets/chlimage_1-494.png)
+![配置](assets/configure-new.png)
 
 在“用 **户活动** ”选项卡下，指定要显示的活动:
 
@@ -80,7 +80,7 @@ ht-degree: 4%
 
 必须配置组件以启用以下功能。 支持以下功能：博 [客](/help/communities/blog-feature.md)、论 [坛](/help/communities/forum.md)、QnA [、](/help/communities/working-with-qna.md)日历 [、、](/help/communities/calendar.md)、、 [](/help/communities/file-library.md)[](/help/communities/comments.md)、、和标。
 
-![chlimage_1-5](assets/chlimage_1-5.png)
+![后视图](assets/following-activities.png)
 
 “跟 **踪** ”按钮提供了以活动、通知或 [订阅](/help/communities/notifications.md)形式跟 [踪条目](/help/communities/subscriptions.md)。 每次选 **择** “跟随”按钮时，都可以打开或关闭选择。 仅 `Email Subscriptions` 在配置后才显示选择。
 
