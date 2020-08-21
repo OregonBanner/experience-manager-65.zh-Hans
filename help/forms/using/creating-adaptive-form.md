@@ -9,7 +9,7 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 3cbcd23254e16231a199276aa2f9e70d6ff39b34
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 0%
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 按照以下步骤创建自适应表单。
 
-1. 访问AEM Forms作者实例： `https://'[server]:[port]'/<custom-context-if-any>.`
+1. 访问AEM Forms作者实例 `https://'[server]:[port]'/<custom-context-if-any>.`
 
 1. 在AEM登录页面上输入凭据。
 
-   登录后，在左上角，点按 **[!UICONTROL Adobe Experience Manager>表单>表单和文档]**。
+   登录后，在左上角，点按 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**。
 
    >[!NOTE]
    >
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 要使用表单数据模型创建自适应表单，请执行以下操作：
 
-1. 在“添加属性”屏幕的“表单模型”选项卡 **[!UICONTROL 中，在“从选]** 择中 **[!UICONTROL ”下]** 拉列表中选择“表单数据模型”。
+1. 在“添加属性”屏幕的“表单模型”选项卡 **[!UICONTROL 中，在“从选]** 择中 **[!UICONTROL ”下拉]** 列表中选择“表单数据模型”。
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
@@ -98,10 +98,10 @@ ht-degree: 0%
 执行以下操作以将XFA表单模板用作自适应表单的表单模型：
 
 1. 在“添 **[!UICONTROL 加属性]** ”页面上，打开 **[!UICONTROL “表单模型]** ”选项卡。
-1. 在表单模型选项卡的下拉列表中，选择表单 **[!UICONTROL 模板]**。 将列出通过AEM FormsUI上传到存储库的所有表单模板供选择。 从列表中选择模板。
+1. 在表单模型选项卡的下拉列表中，选择表单 **[!UICONTROL 模板]**。 所有通过AEM FormsUI上传到存储库的表单模板都将列出供选择。 从列表中选择模板。
 
    ![将XFA表单模板与自适应表单关联](assets/form_model_xfa_associate.png)
-   **图：** *选择表单模板*
+   **图：***选择表单模板*
 
    >[!NOTE]
    >
@@ -128,15 +128,15 @@ XML和JSON模式表示组织中的后端系统生成或使用数据的结构。 
 
    >[!CAUTION]
    >
-   >确保JSON模式文件名以。 **模式.json结尾**。 例如： mySchema.模式.json
+   >确保JSON模式文件名以。 **模式.json结尾**。 例如：mySchema.模式.json
 
    ![选择XML或JSON模式](assets/upload-schema.png)
-   **图：** *选择XML或JSON模式*
+   **图：***选择XML或JSON模式*
 
 1. (仅限XML模式)选择或上传XML模式后，请指定选定XSD文件的根元素，以与自适应表单进行映射。
 
    ![选择XSD根元素](assets/xsd-root-element.png)
-   **图：** *选择XSD根元素*
+   **图：***选择XSD根元素*
 
 >[!NOTE]
 >
@@ -144,13 +144,13 @@ XML和JSON模式表示组织中的后端系统生成或使用数据的结构。 
 
 ## 自适应表单模板 {#adaptive-form-templates}
 
-模板提供基本结构并定义自适应表单的外观（布局和样式）。 它具有预格式化的组件，这些组件包含某些属性和内容结构。 开箱即用，AEM Forms提供一些自适应表单模板。 要获得包含高级模板的完整模板包，您需要安装AEM Forms加载项包。 有关详细信息，请 [参阅安装AEM Forms加载项包](/help/forms/using/installing-configuring-aem-forms-osgi.md)。
+模板提供基本结构并定义自适应表单的外观（布局和样式）。 它具有预格式化的组件，这些组件包含某些属性和内容结构。 开箱即用，AEM Forms提供了一些自适应表单模板。 要获得包含高级模板的完整模板包，您需要安装AEM Forms加载项包。 有关详细信息，请 [参阅安装AEM Forms加载项包](/help/forms/using/installing-configuring-aem-forms-osgi.md)。
 
 此外，您可以使用模板编辑器创建您自己的模板。 有关使用模板的更多信息，请参阅自 [适应表单模板](/help/forms/using/template-editor.md)。
 
 >[!NOTE]
 >
->打开使用高级模板创建的自适应表单进行编辑时，将显示一条错误消息。 高级模板具有签名步骤组件，默认情况下为其启用Adobe Sign。 创建并选择 [Adobe Sign云配置](/help/forms/using/adobe-sign-integration-adaptive-forms.md) , [并配置签署方](working-with-adobe-sign.md#addsignerstoanadaptiveform) 以解决错误。
+>当您打开使用高级模板创建的自适应表单进行编辑时，将显示一条错误消息。 高级模板具有签名步骤组件，默认情况下为其启用Adobe Sign。 创建并选择 [Adobe Sign云配置](/help/forms/using/adobe-sign-integration-adaptive-forms.md) , [并配置签署方](working-with-adobe-sign.md#addsignerstoanadaptiveform) 以解决错误。
 
 ## 编辑自适应表单的表单模型属性 {#edit-form-model}
 
@@ -204,6 +204,6 @@ XML和JSON模式表示组织中的后端系统生成或使用数据的结构。 
 
    >[!NOTE]
    >
-   >要使自动保存选项适用于匿名用户，请确保配置Forms Common Configuration Service以允许所有用户对表单进行预览、验证和签名。
+   >要使自动保存选项适用于匿名用户，请确保配置Forms通用配置服务以允许所有用户预览、验证和签署表单。
    >
-   >要配置服务，请转到AEM Web Console配置，并 `https://'[server]:[port]'system/console/configMgr` 编辑Forms **[!UICONTROL Common Configuration Service]** ，在“允 **[!UICONTROL 许”字段中选]** 择“所有用户 **[!UICONTROL ”选项]** ，然后保存配置。
+   >要配置服务，请转至AEM Web Console配置， `https://'[server]:[port]'system/console/configMgr` 并编辑 **[!UICONTROL FormsCommon Configuration Service]** ，在“允 **[!UICONTROL 许”字段中选]** 择 **[!UICONTROL “所有用户]** ”选项，然后保存配置。
