@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9ea2efb7409ae38c8771815336ae0d9388d923fa
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 高级评分引擎提供OSGi配置，其参数影响高级评分算法。
 
-![chlimage_1-260](assets/chlimage_1-260.png)
+![高级评分引擎](assets/advanced-scoring-engine.png)
 
 * **评分权重**
 
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 请参 [阅评分子规则](/help/communities/implementing-scoring.md#scoring-sub-rules)。
 
-![chlimage_1-261](assets/chlimage_1-261.png)
+![高级评分类型](assets/advanced-scoring-type.png)
 
 ### 秒词 {#stopwords}
 
@@ -123,7 +123,7 @@ ht-degree: 1%
 
 除了将点与徽章图像关联之外，只需确定允许的专家数量和要授予的徽章图像。
 
-![chlimage_1-262](assets/chlimage_1-262.png)
+![高级徽章规则](assets/advanced-badging-rules.png)
 
 <table>
  <tbody>
@@ -150,7 +150,7 @@ ht-degree: 1%
   <tr>
    <td>scoringRules</td>
    <td>String[]</td>
-   <td><em>（可选）</em> ，用于将标记规则限制为对列出的评分规则标识的事件进行评分的多值字符串。<br /> 示例条目：<br /> <code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 默认值为无限制。</td>
+   <td><em>（可选）</em> ，用于将标记规则限制为对列出的评分规则标识的事件进行评分的多值字符串。<br /> 示例条目：<br /><code>/libs/settings/community/scoring/rules/adv-comments-scoring</code><br /> 默认值为无限制。</td>
   </tr>
  </tbody>
 </table>
@@ -165,7 +165,7 @@ ht-degree: 1%
 
    `/libs/settings/community/badging/images/expert-badge/jcr:content/expert.png`
 
-![chlimage_1-263](assets/chlimage_1-263.png)
+![专家徽章](assets/included-badge.png)
 
 要让专家徽章显示为活动奖励，请确保：
 
