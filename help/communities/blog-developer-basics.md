@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 2%
@@ -71,8 +71,8 @@ ht-degree: 2%
 
 | **resourceType** | 社交/日志/组件/hbs/侧栏 |
 |---|---|
-| [**可包含&#x200B;**](/help/communities/scf.md#add-or-include-a-communities-component) | 否 |
-| [**clientlibs **](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
+| [**可包含**](/help/communities/scf.md#add-or-include-a-communities-component) | 否 |
+| [**clientlibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **模板** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
 | **属性** | 查看 [博客功能](/help/communities/blog-feature.md) |
@@ -96,7 +96,7 @@ ht-degree: 2%
 UGC应使用一种标准的协调方法进行仲裁。
 请参 [阅调节用户生成的内容](/help/communities/moderate-ugc.md)。
 
-自AEM 6.1 Communities起，使用UGC的 [公用商店](/help/communities/working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1社区起，使用UGC的公 [用商店](/help/communities/working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
@@ -117,11 +117,11 @@ UGC应使用一种标准的协调方法进行仲裁。
 
 AEM平台阻止来自其他网站的链接，以防止XSS攻击，如
 
-* [防止跨站点脚本(XSS)](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
+* [Protect反对跨站点脚本(XSS)](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
-自AEM 6.2起，之前手动进行的修改将包括在默认的AntiSamy配置文件中。
+从AEM 6.2开始，之前手动进行的修改将包括在默认的AntiSamy配置文件中。
 
 通过选择图标，富媒体嵌入在博客文 `Embed Media from External Sites` 章中：
 
-![chlimage_1-471](assets/chlimage_1-471.png)
+![媒体](assets/media-icon.png)
 
