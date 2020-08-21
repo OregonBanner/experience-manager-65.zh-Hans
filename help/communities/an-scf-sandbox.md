@@ -1,8 +1,8 @@
 ---
 title: 创建SCF沙箱
 seo-title: 创建SCF沙箱
-description: 本教程主要面向对SCF组件感兴趣的AEM新手开发人员。  它将逐步介绍如何创建SCF沙箱站点
-seo-description: 本教程主要面向对SCF组件感兴趣的AEM新手开发人员。  它将逐步介绍如何创建SCF沙箱站点
+description: 本教程主要针对AEM新手的开发人员，他们对使用SCF组件感兴趣。  它将逐步介绍如何创建SCF沙箱站点
+seo-description: 本教程主要针对AEM新手的开发人员，他们对使用SCF组件感兴趣。  它将逐步介绍如何创建SCF沙箱站点
 uuid: ee52e670-e1e6-4bcd-9548-c963142e6704
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e1b5c25d-cbdd-421c-b81a-feb6039610a3
 translation-type: tm+mt
-source-git-commit: 342e148ba183782e4c8b0f08328b9d87685ca08e
+source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 另一个对开发人员有用的工 [具是“社区组件](components-guide.md)”指南，它允许探索社区组件和功能并快速为它们创建原型。
 
-创建网站的练习对于了解AEM网站的结构（可能包括社区功能）非常有用，同时还提供可探索使用社交组件框架( [SCF)的简单页面](scf.md)。
+创建网站的练习对于理解AEM网站的结构（可能包括Communities功能）非常有用，同时还提供了一些简单的页面，用于探 [索与社交组件框架(SCF)的结合](scf.md)。
 
-本教程主要面向对SCF组件感兴趣的AEM初学者开发人员。 它将逐步介绍如何创建SCF沙箱站点，与 [如何创建功能齐全的Internet网站教程类似](../../help/sites-developing/website.md) ，该网站侧重于站点结构，如导航、徽标、搜索、工具栏和列出子页面。
+本教程主要针对AEM新手的开发人员，他们对使用SCF组件感兴趣。 它将逐步介绍如何创建SCF沙箱站点，与 [如何创建功能齐全的Internet网站教程类似](../../help/sites-developing/website.md) ，该网站侧重于站点结构，如导航、徽标、搜索、工具栏和列出子页面。
 
 在创作实例上进行开发，而在发布实例上试验站点最好。
 
@@ -49,28 +49,28 @@ ht-degree: 0%
 
 ## 前提条件 {#prerequisites}
 
-本教程假定您安装了一个AEM作者和一个安装了最新版Communities的 [AEM发](deploy-communities.md#latest-releases) 布实例。
+本教程假定您安装了一个AEM作者和一个AEM发布实例，该实例具有最 [新版](deploy-communities.md#latest-releases) Communities。
 
-以下是一些对AEM平台新手的开发人员有用的链接：
+下面是刚接触AEM平台的开发人员的一些有用链接：
 
-* [入门](../../help/sites-deploying/deploy.md#getting-started): 用于部署AEM实例。
+* [入门](../../help/sites-deploying/deploy.md#getting-started):部署AEM实例。
 
-   * [基础知识](../../help/sites-developing/the-basics.md): 面向网站和功能的开发人员。
-   * [创作的最初步骤](../../help/sites-authoring/first-steps.md): 创作页面内容。
+   * [基础知识](../../help/sites-developing/the-basics.md):面向网站和功能的开发人员。
+   * [创作的最初步骤](../../help/sites-authoring/first-steps.md):创作页面内容。
 
 ## 使用CRXDE Lite开发环境 {#using-crxde-lite-development-environment}
 
-AEM开发人员将大部分时间用在CRXDE Lite开 [发环境中](../../help/sites-developing/developing-with-crxde-lite.md) ，用于创作实例。 CRXDE Lite提供对CRX存储库的较少限制的访问。 经典UI工具和触屏优化UI控制台提供对CRX存储库特定部分的更结构化的访问。
+AEM开发人员将大部分时间用在创作 [实例的](../../help/sites-developing/developing-with-crxde-lite.md) CRXDE Lite开发环境中。 CRXDE Lite提供对CRX存储库的较少受限访问。 经典UI工具和触屏优化UI控制台提供对CRX存储库特定部分的更结构化的访问。
 
-使用管理权限登录后，有多种方式可访问CRXDE Lite:
+使用管理权限登录后，可通过多种方式访问CRXDE Lite:
 
-1. 从全局导航中，选择导 **[!UICONTROL 航工具> CRXDE Lite]**。
+1. 从全局导航中，选择导航 **[!UICONTROL 工具>CRXDE Lite]**。
 
-   ![chlimage_1-350](assets/chlimage_1-350.png)
+   ![crxde-lite](assets/tools-crxde.png)
 
-2. 从经典 [UI欢迎页](http://localhost:4502/welcome.html)，向下滚动并 **[!UICONTROL 单击右面板中]** 的CRXDE Lite。
+2. 从经典 [UI欢迎页面](http://localhost:4502/welcome.html)，向下滚动并单 **[!UICONTROL 击右面]** 板中的“CRXDE Lite”。
 
-   ![chlimage_1-351](assets/chlimage_1-351.png)
+   ![classic-ui-crxde](assets/classic-ui-crxde.png)
 
 3. 直接浏览 `CRXDE Lite`: `<server>:<port>/crx/de`
 
@@ -88,4 +88,4 @@ AEM开发人员将大部分时间用在CRXDE Lite开 [发环境中](../../help/s
 
 ***如果有疑问，请重新登录！***
 
-![chlimage_1-352](assets/chlimage_1-352.png)
+![重新登录](assets/relogin.png)
