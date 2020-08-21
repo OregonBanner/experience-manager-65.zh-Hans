@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 4%
@@ -41,7 +41,7 @@ ht-degree: 4%
 
 此控制台显示当前可用的标记，以及可从中添加新标记。
 
-![chlimage_1-242](assets/chlimage_1-242.png)
+![徽章主页](assets/badges-homepage.png)
 
 ## 创建徽章 {#create-badge}
 
@@ -49,7 +49,7 @@ ht-degree: 4%
 
 如果发布环境是发布者的场，则必须配置用 [户同步](/help/communities/sync.md)。
 
-![chlimage_1-243](assets/chlimage_1-243.png)
+![create-badge](assets/create-badge.png)
 
 * **上传图像**
 
