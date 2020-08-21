@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2b1cc29fbfdb80aff6b6fc5c6c4fc9093d12e418
+source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 1%
@@ -23,9 +23,9 @@ ht-degree: 1%
 
 ## 添加ClientLibraryFolder(clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
-创建一个名 `clientlibs`为ClientLibraryFolder，其中将包含用于呈现站点页面的JS和CSS。
+创建一个名为的 `clientlibs` ClientLibraryFolder，其中将包含用于呈现站点页面的JS和CSS。
 
-赋予 `categories`此客户端库的属性值是用于从内容页面直接包含此clientlib或将其嵌入到其他clientlib的标识符。
+赋予 `categories` 此客户端库的属性值是用于从内容页面直接包含此clientlib或将其嵌入到其他clientlib的标识符。
 
 1. 使用 **CRXDE Lite**，展开 `/etc/designs`
 
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 1. Click **OK**
 
-![chlimage_1-220](assets/chlimage_1-220.png)
+![add-client-library](assets/add-client-library.png)
 
 在新节 **点的** “属性”选 `clientlibs` 项卡中，输入 **类别属性** :
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 * Click **Add**
 * 单击“ **全部保存”**
 
-注意： 用“apps”预先呈现类别价值。 是用于将“拥有的应用程序”标识为位于/apps文件夹（而非/libs）中的约定。  重要： 添加占 `js.tx`位符t **`css.txt`** 和文件。 （没有它们，它不是正式的cq:ClientLibraryFolder。）
+注意：用“apps”预先呈现类别价值。 是用于将“拥有的应用程序”标识为位于/apps文件夹（而非/libs）中的约定。  重要：添加占 `js.tx`位符t **`css.txt`** 和文件。 （没有它们，它不是正式的cq:ClientLibraryFolder。）
 
 1. 右键单击 **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 选择 **创建文件……**
@@ -55,7 +55,7 @@ ht-degree: 1%
 1. Enter **Name:** `js.txt`
 1. 单击“ **全部保存”**
 
-![chlimage_1-221](assets/chlimage_1-221.png)
+![clientlibs-css](assets/clientlibs-css.png)
 
 css.txt和js.txt的第一行标识了从中找到以下一列表文件的基本位置。
 
@@ -103,11 +103,11 @@ css.txt和js.txt的第一行标识了从中找到以下一列表文件的基本�
 
 * 单击“ **全部保存”**
 
-![chlimage_1-222](assets/chlimage_1-222.png)
+![scf-clientlibs](assets/scf-clientlibs.png)
 
 这是现在 `/etc/designs/an-scf-sandbox/clientlibs` 在存储库中的显示方式：
 
-![chlimage_1-223](assets/chlimage_1-223.png)
+![scf-clientlibs-视图](assets/scf-clientlibs1.png)
 
 ### 在PlayPage模板中包含客户端库 {#include-clientlibs-in-playpage-template}
 
@@ -115,11 +115,11 @@ css.txt和js.txt的第一行标识了从中找到以下一列表文件的基本�
 
 例如，如果不包括clientlib，则SCF注释组件将显示为未设置样式：
 
-![chlimage_1-224](assets/chlimage_1-224.png)
+![clientlibs-comment](assets/clientlibs-comment.png)
 
 在包含apps.an-scf-sandbox clientlibs后，SCF注释组件将显示样式：
 
-![chlimage_1-225](assets/chlimage_1-225.png)
+![clientlibs-comment-steled](assets/clientlibs-comment1.png)
 
 include语句属于脚 `head` 本的一 `html` 节。 默认包 **`foundation head.jsp`** 括可以叠加的脚本： **`headlibs.jsp`**.
 
@@ -150,7 +150,7 @@ include语句属于脚 `head` 本的一 `html` 节。 默认包 **`foundation he
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
-![chlimage_1-226](assets/chlimage_1-226.png)
+![社区播放](assets/community-play.png)
 
 ### 到目前为止，保存您的作品 {#saving-your-work-so-far}
 
@@ -160,11 +160,11 @@ include语句属于脚 `head` 本的一 `html` 节。 默认包 **`foundation he
 
 要创建包，请执行以下操作：
 
-* 从CRXDE Lite中，单击“包” [图标](https://localhost:4502/crx/packmgr/)
+* 从CRXDE Lite单击“ [包”图标](https://localhost:4502/crx/packmgr/)
 * 单击“ **创建包”**
 
-   * 包名称： an-scf-sandbox-minimal-pkg
-   * 版本： 0.1
+   * 包名称：an-scf-sandbox-minimal-pkg
+   * 版本：0.1
    * 组: `leave as default`
    * Click **OK**
 
@@ -173,13 +173,13 @@ include语句属于脚 `head` 本的一 `html` 节。 默认包 **`foundation he
    * 选择 **过滤器** 选项卡
 
       * 单击“ **添加过滤器”**
-      * 根路径： 浏览至 `/apps/an-scf-sandbox`
+      * 根路径：浏览至 `/apps/an-scf-sandbox`
       * Click **Done**
       * 单击“ **添加过滤器”**
-      * 根路径： 浏览至 `/etc/designs/an-scf-sandbox`
+      * 根路径：浏览至 `/etc/designs/an-scf-sandbox`
       * Click **Done**
       * 单击“ **添加过滤器”**
-      * 根路径： 浏览至 `/content/an-scf-sandbox**`
+      * 根路径：浏览至 `/content/an-scf-sandbox**`
       * Click **Done**
    * Click **Save**
 
