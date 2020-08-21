@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 4a0debdd-acb9-4646-80bb-fec66fae4088
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 4%
@@ -33,9 +33,9 @@ ht-degree: 4%
 
 ### 要求 {#requirement}
 
-只有在为社 `Community Activity List` 区站点授权和配置AdobeAnalytics时，才提供该站点的数据。
+只有在Adobe Analytics `Community Activity List` 获得社区站点的许可和配置后，才能获得社区站点的数据。
 
-请参 [阅社区功能的Analytics配置](/help/communities/analytics.md)。
+请参 [阅社区分析配置功能](/help/communities/analytics.md)。
 
 ### 将社区活动列表添加到页面 {#adding-a-community-activity-list-to-a-page}
 
@@ -55,11 +55,11 @@ ht-degree: 4%
 
 选择要访问的 `Community Activity List` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-55](assets/chlimage_1-55.png)
+![配置](assets/configure-new.png)
 
 在“注 **释** ”选项卡下，指定是否显示已上载文件的注释以及如何显示：
 
-![chlimage_1-56](assets/chlimage_1-56.png)
+![属性](assets/activity-list-properties.png)
 
 * **类型**
 
@@ -118,13 +118,13 @@ ht-degree: 4%
 
 ### 包含4个组件的示例页面 {#example-page-with-components}
 
-**顶级访客** 配置： 类型=成员，活动类型=视图
+**顶级访客** 配置：类型=成员，活动类型=视图
 
-**顶级参与者** 配置： 类型=成员，活动类型=帖子
+**顶级参与者** 配置：类型=成员，活动类型=帖子
 
-**主要内容** 配置： 类型=内容，活动类型=视图,
+**主要内容** 配置：类型=内容，活动类型=视图,
 
-**趋势内容** 配置： 类型=内容，活动类型=帖子
+**趋势内容** 配置：类型=内容，活动类型=帖子
 
-![chlimage_1-57](assets/chlimage_1-57.png)
+![组件](assets/activity-list-components.png)
 
