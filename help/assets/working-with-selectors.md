@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '726'
 ht-degree: 19%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 19%
 
 在创建传送集、添加热点和图像映射、创建交互式视频和图像时，您可以访问选择器。
 
-例如，在此传送横幅中，如果要将热点或图像映射链接到概览页面，则使用产品选择器； 如果要将热点或图像映射链接到超链接，请使用站点选择器； 创建新幻灯片时，请使用资产选择器。
+例如，在此传送横幅中，如果要将热点或图像映射链接到概览页面，则使用产品选择器；如果要将热点或图像映射链接到超链接，请使用站点选择器；创建新幻灯片时，请使用资产选择器。
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
@@ -36,7 +36,7 @@ ht-degree: 19%
 
 1. 导航到传送集、交互式图像或交互式视频，然后点按“ **[!UICONTROL Actions]** ”（操作）选项卡（仅当您定义了热点或图像映射时可用）。
 
-   The Product selector is in the **[!UICONTROL Action Type** area.
+   The Product selector is in the **[!UICONTROL Action Type]** area.
 
    ![chlimage_1-521](assets/chlimage_1-521.png)
 
