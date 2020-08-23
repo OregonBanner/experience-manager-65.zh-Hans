@@ -1,8 +1,8 @@
 ---
 title: SPA简介和演练
 seo-title: SPA简介和演练
-description: 本文介绍SPA的概念，并逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与基础AEM SPA编辑器的关系。
-seo-description: 本文介绍SPA的概念，并逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与基础AEM SPA编辑器的关系。
+description: 本文介绍SPA的概念，并逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与底层AEM SPA编辑器的关系。
+seo-description: 本文介绍SPA的概念，并逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与底层AEM SPA编辑器的关系。
 uuid: 4b0a9e53-3892-4d60-8bd3-7ff740d2f137
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # SPA简介和演练{#spa-introduction-and-walkthrough}
 
-单页应用程序(SPA)可以为网站用户优惠引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，作者希望在AEM中为使用此类框架构建的站点无缝编辑内容。
+单页应用程序(SPA)可以为网站用户优惠引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，而作者希望在AEM内无缝编辑内容，使用此类框架构建站点。
 
-SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本文将逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与基础AEM SPA编辑器的关系。
+SPA编辑器优惠了一个全面的解决方案，支持AEM中的SPA。 本文将逐步介绍如何使用基本的SPA应用程序进行创作，并说明它与基础的AEM SPA Editor的关系。
 
 >[!NOTE]
 >
@@ -33,21 +33,20 @@ SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本文将逐�
 
 ### 文章目标 {#article-objective}
 
-本文介绍了SPA的基本概念，然后使用一个简单的SPA应用程序演示基本内容编辑，带领读者演练SPA编辑器。 然后深入到页面的构建以及SPA应用程序与AEM SPA编辑器的关联和交互。
+本文介绍了SPA的基本概念，然后使用一个简单的SPA应用程序演示基本内容编辑，带领读者演练SPA编辑器。 然后深入到页面的构造以及SPA应用程序与AEM SPA Editor的关联和交互。
 
-此简介和演练的目的是向AEM开发人员演示SPA的相关性、它们的一般工作方式、AEM SPA编辑器如何处理SPA以及它与标准AEM应用程序有何不同。
+本简介和演练的目的是向AEM开发人员演示SPA的相关性、它们的一般工作方式、AEM SPA编辑器如何处理SPA以及它与标准AEM应用程序有何不同。
 
-演练基于标准AEM功能和示例We.Retail日志应用程序。 必须满足以下要求：
+该演练基于标准AEM功能和示例We.Retail日志应用程序。 必须满足以下要求：
 
-* [AEM 6.4版（带Service Pack 2或更高版本）
-   ](/help/release-notes/sp-release-notes.md)
+* [AEM 6.4版（带有service pack 2）或更高版本](/help/release-notes/sp-release-notes.md)
 * [在GitHub上安装We.Retail日志应用程序示例。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 >[!CAUTION]
 >
 >此文档仅将 [We.Retail日志应用程序用](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 于演示目的。 它不应用于任何项目工作。
 >
->任何AEM项目都应利 [用AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)，该原型支持使用React或Angular的SPA项目并利用SPA SDK。
+>任何AEM项目都应利用 [AEM Project](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)Archetype，它支持使用React或Angular的SPA项目并利用SPA SDK。
 
 ### 什么是SPA? {#what-is-a-spa}
 
@@ -55,7 +54,7 @@ SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本文将逐�
 
 这减少了页面刷新的需求，并为用户提供了无缝、快速的体验，更像原生的App体验。
 
-AEM SPA编辑器允许前端开发人员创建可集成到AEM站点的SPA，使内容作者能够像编辑任何其他AEM内容一样轻松地编辑SPA内容。
+AEM SPA编辑器允许前端开发人员创建可集成到AEM站点中的SPA，使内容作者能够像编辑任何其他AEM内容一样轻松地编辑SPA内容。
 
 ### 为什么要做SPA? {#why-a-spa}
 
@@ -92,19 +91,19 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
 >[!NOTE]
 >
->有关SPA在AEM中的工作方式的技术详细信息，请参 [阅AEM中SPA快速入门文章](/help/sites-developing/spa-getting-started-react.md)。
+>有关AEM中SPA如何工作的技术详细信息，请参 [阅AEM中SPA快速入门文章](/help/sites-developing/spa-getting-started-react.md)。
 >
 >要详细了解SPA编辑器的设计、架构和技术工作流程，请参阅文章SPA [编辑器概述](/help/sites-developing/spa-overview.md)。
 
 ## SPA内容编辑体验 {#content-editing-experience-with-spa}
 
-当构建SPA以利用AEM SPA编辑器时，内容作者注意到在编辑和创建内容时没有区别。 通用AEM功能可用，无需更改作者的工作流。
+当构建SPA以利用AEM SPA编辑器时，内容作者注意到在编辑和创建内容时没有区别。 通用的AEM功能可用，无需更改作者的工作流程。
 
 >[!NOTE]
 >
->演练基于标准AEM功能和示例We.Retail日志应用程序。 必须满足以下要求：
+>该演练基于标准AEM功能和示例We.Retail日志应用程序。 必须满足以下要求：
 >
->* [AEM 6.4版（带Service Pack 2）](/help/release-notes/sp-release-notes.md)
+>* [AEM 6.4版（带有service pack 2）](/help/release-notes/sp-release-notes.md)
 >* [在GitHub上安装We.Retail日志应用程序示例。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 >
@@ -121,7 +120,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
    ![screen_shot_2018-06-07at142937](assets/screen_shot_2018-06-07at142937.png)
 
-1. 在AEM中按正常方式编辑内容，并注意这些更改会被保留。
+1. 按照AEM中的正常方式编辑内容，并注意更改会保留。
 
    ![screen_shot_2018-06-07at143419](assets/screen_shot_2018-06-07at143419.png)
 
@@ -229,7 +228,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
    ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
 
-   AEM SPA编辑器利 [用AEM Content](/help/assets/content-fragments/content-fragments.md) Services将页面的整个内容作为JSON模型提供。
+   AEM SPA Editor利用 [AEM Content](/help/assets/content-fragments/content-fragments.md) Services将页面的整个内容作为JSON模型提供。
 
    通过实现特定界面，Sling Models为SPA提供必要的信息。 JSON投放的会向下委派给每个组件（从页面、段落、组件等）。
 
@@ -253,7 +252,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
 使用示例We.Retail日志应用程序，您可以清楚地了解应用程序的行为和发布时的加载方式，为JSON内容投放提供内容服务，并异步加载资源。
 
-此外，对于内容作者而言，使用SPA编辑器创建内容在AEM中是无缝的。
+此外，对于内容作者而言，使用SPA编辑器在AEM中创建内容是无缝的。
 
 在下一节中，我们将探索允许SPA编辑器将SPA中的组件与AEM组件关联并实现无缝编辑体验的合同。
 
@@ -279,15 +278,15 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
    >[!NOTE]
    >
-   >这是对AEM中服务器端呈现页面行为的更改，在AEM中，每个可编辑组件 `cq` 都插入了一个元素。
+   >这是AEM中服务器端呈现页面的行为变化，其中为每个可编辑组件 `cq` 插入了一个元素。
    >
    >
    >SPA中的这种方法消除了注入自定义元素的需要，只依赖附加的数据属性，使得前端开发者的标记更简单。
 
 ## 后续步骤 {#next-steps}
 
-现在，您已了解AEM中的SPA编辑体验以及SPA与SPA编辑器的关系，进一步了解SPA的构建方式。
+现在，您已了解AEM的SPA编辑体验以及SPA与SPA编辑器的关系，进一步了解SPA的构建方式。
 
-* [AEM中的SPA入门](/help/sites-developing/spa-getting-started-react.md) ，可显示如何构建基本SPA以与AEM中的SPA编辑器配合使用
+* [AEM中的SPA入门](/help/sites-developing/spa-getting-started-react.md) ，展示如何构建基本SPA以与AEM的SPA编辑器配合使用
 * [SPA编辑器概述](/help/sites-developing/spa-overview.md) 深入介绍AEM与SPA之间的通信模型。
-* [为AEM开发SPA](/help/sites-developing/spa-architecture.md) ，介绍如何吸引前端开发人员来为AEM开发SPA，以及SPA如何与AEM架构交互。
+* [为AEM开发SPA](/help/sites-developing/spa-architecture.md) ，介绍如何吸引前端开发人员来为AEM开发SPA，以及SPA如何与AEM体系结构交互。
