@@ -8,7 +8,7 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 translation-type: tm+mt
-source-git-commit: 5bbafd9006b04d761ffab218e8480c1e94903bb6
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
@@ -236,84 +236,84 @@ import java.util.*;
 @Component(service = CCRDocumentInstanceService.class, immediate = true)
 public class CCRDraftService implements CCRDocumentInstanceService {
 
- private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
+    private static final Logger logger = LoggerFactory.getLogger(CCRDraftService.class);
 
- private HashMap<String, Object> draftDataMap = new HashMap<>();
+    private HashMap<String, Object> draftDataMap = new HashMap<>();
 
- @Override
- public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
-     String documentInstanceName = ccrDocumentInstance.getName();
-     if (StringUtils.isNotEmpty(documentInstanceName)) {
-         logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
-         if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
-             ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
-         }
-     } else {
-         logger.error("Could not save data as draft name is empty");
-     }
-     return ccrDocumentInstance.getId();
- }
+    @Override
+    public String save(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+        String documentInstanceName = ccrDocumentInstance.getName();
+        if (StringUtils.isNotEmpty(documentInstanceName)) {
+            logger.info("Saving ccrData with name : {}", ccrDocumentInstance.getName());
+            if (!CCRDocumentInstance.Status.SUBMIT.equals(ccrDocumentInstance.getStatus())) {
+                ccrDocumentInstance = mySQLDataBaseServiceCRUD(ccrDocumentInstance,null, "SAVE");
+            }
+        } else {
+            logger.error("Could not save data as draft name is empty");
+        }
+        return ccrDocumentInstance.getId();
+    }
 
- @Override
- public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
-     String documentInstanceName = ccrDocumentInstance.getName();
-     if (StringUtils.isNotEmpty(documentInstanceName)) {
-         logger.info("Saving ccrData with name : {}", documentInstanceName);
-         mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
-     } else {
-         logger.error("Could not save data as draft Name is empty");
-     }
- }
+    @Override
+    public void update(CCRDocumentInstance ccrDocumentInstance) throws CCRDocumentException {
+        String documentInstanceName = ccrDocumentInstance.getName();
+        if (StringUtils.isNotEmpty(documentInstanceName)) {
+            logger.info("Saving ccrData with name : {}", documentInstanceName);
+            mySQLDataBaseServiceCRUD(ccrDocumentInstance, ccrDocumentInstance.getId(), "UPDATE");
+        } else {
+            logger.error("Could not save data as draft Name is empty");
+        }
+    }
 
- @Override
- public CCRDocumentInstance get(String id) throws CCRDocumentException {
-     CCRDocumentInstance cCRDocumentInstance;
-     if (StringUtils.isEmpty(id)) {
-         logger.error("Could not retrieve data as draftId is empty");
-         cCRDocumentInstance = null;
-     } else {
-         cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
-     }
-     return cCRDocumentInstance;
- }
+    @Override
+    public CCRDocumentInstance get(String id) throws CCRDocumentException {
+        CCRDocumentInstance cCRDocumentInstance;
+        if (StringUtils.isEmpty(id)) {
+            logger.error("Could not retrieve data as draftId is empty");
+            cCRDocumentInstance = null;
+        } else {
+            cCRDocumentInstance = mySQLDataBaseServiceCRUD(null, id,"GET");
+        }
+        return cCRDocumentInstance;
+    }
 
- @Override
- public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
-                                         Map<String, Object> optionsParams) throws CCRDocumentException {
-     List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
+    @Override
+    public List<CCRDocumentInstance> getAll(String userId, Date creationTime, Date updateTime,
+                                            Map<String, Object> optionsParams) throws CCRDocumentException {
+        List<CCRDocumentInstance> ccrDocumentInstancesList = new ArrayList<>();
 
-     HashMap<String, Object> allSavedDraft = mySQLGetALLData();
-     for (String key : allSavedDraft.keySet()) {
-         ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
-     }
-     return ccrDocumentInstancesList;
- }
+        HashMap<String, Object> allSavedDraft = mySQLGetALLData();
+        for (String key : allSavedDraft.keySet()) {
+            ccrDocumentInstancesList.add((CCRDocumentInstance) allSavedDraft.get(key));
+        }
+        return ccrDocumentInstancesList;
+    }
 
- //The APIs call the service in the database using the following section.
- private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
-     if(method.equals("SAVE")){
+    //The APIs call the service in the database using the following section.
+    private CCRDocumentInstance mySQLDataBaseServiceCRUD(CCRDocumentInstance ccrDocumentInstance,String draftId, String method){
+        if(method.equals("SAVE")){
 
-         String autoGenerateId = draftDataMap.size() + 1 +"";
-         ccrDocumentInstance.setId(autoGenerateId);
-         draftDataMap.put(autoGenerateId, ccrDocumentInstance);
-         return ccrDocumentInstance;
+            String autoGenerateId = draftDataMap.size() + 1 +"";
+            ccrDocumentInstance.setId(autoGenerateId);
+            draftDataMap.put(autoGenerateId, ccrDocumentInstance);
+            return ccrDocumentInstance;
 
-     }else if (method.equals("UPDATE")){
+        }else if (method.equals("UPDATE")){
 
-         draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
-         return ccrDocumentInstance;
+            draftDataMap.put(ccrDocumentInstance.getId(), ccrDocumentInstance);
+            return ccrDocumentInstance;
 
-     }else if(method.equals("GET")){
+        }else if(method.equals("GET")){
 
-         return (CCRDocumentInstance) draftDataMap.get(draftId);
+            return (CCRDocumentInstance) draftDataMap.get(draftId);
 
-     }
-     return null;
- }
+        }
+        return null;
+    }
 
- private HashMap<String, Object> mySQLGetALLData(){
-     return draftDataMap;
- }
+    private HashMap<String, Object> mySQLGetALLData(){
+        return draftDataMap;
+    }
 }
 ```
 
