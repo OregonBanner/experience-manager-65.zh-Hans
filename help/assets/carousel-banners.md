@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 76f2df9b1d3e6c2ca7a12cc998d64423d49ebc5b
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '4814'
+source-wordcount: '4813'
 ht-degree: 20%
 
 ---
@@ -43,22 +43,22 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->必须将非管理用户添加到 **[!UICONTROL dam-users组]** ，才能创建或编辑传送横幅。 如果您在创建或编辑时遇到问题，请咨询系统管理员，他可以将您添 **[!UICONTROL 加到dam用户组&#x200B;]**。
+>必须将非管理用户添加到 **[!UICONTROL dam-users组]** ，才能创建或编辑传送横幅。 如果您在创建或编辑时遇到问题，请咨询系统管理员，他可以将您添 **[!UICONTROL 加到dam用户组]** 。
 
-## 快速开始: 传送横幅 {#quick-start-carousel-banners}
+## 快速开始:传送横幅 {#quick-start-carousel-banners}
 
 要快速设置并运行图像集，请执行以下操作：
 
-1. [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables) (仅适用于使用AEM Assets+Dynamic Media的客户)
+1. [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables) (仅适用于使用AEM Assets+ Dynamic Media的客户)
 
-   开始，通过识别现有快速视图实施所使用的动态变量，以便在AEM Assets的传送横幅创建过程中输入适当的热点和图像映射数据。
+   开始，识别现有快速视图实施所使用的动态变量，以便在AEM Assets的传送横幅创建过程中输入适当的热点和图像映射数据。
 
    >[!NOTE]
    >
-   >如果您是AEM Sites或电子商务客户，则可以使用内置功能导航到产品页面并查找产品目录中的现有外观。 无需手动输入热点或图像映射变量。 请参阅有关设 [置电子商务的信息](/help/sites-administering/generic.md)。
+   >如果您是AEM Sites或电子商务客户，则可以使用内置功能导航到产品页面并查找产品目录中的现有外观。 您无需手动输入热点或图像映射变量。 请参阅有关设 [置电子商务的信息](/help/sites-administering/generic.md)。
    >
    >
-   >如果您是AEM Assets和Dynamic Media客户，您将手动输入热点和图像地图的数据，然后将发布的URL或嵌入代码集成到您的第三方内容管理系统中。
+   >如果您是AEM Assets和Dynamic Media的客户，您将手动输入热点和图像地图的数据，然后将已发布的URL或嵌入代码集成到您的第三方内容管理系统中。
 
 1. 可选：根据需要[创建轮播集查看器预设](/help/assets/managing-viewer-presets.md)。
 
@@ -86,25 +86,23 @@ ht-degree: 20%
 
 1. 执行下列操作之一：
 
-   * [将传送横幅添加到网站页面
-      ](#adding-a-carousel-banner-to-your-website-page)您可以添加已复制到网站页面上的传送横幅URL或嵌入代码。
+   * [将传送横幅添加到您的网站页面](#adding-a-carousel-banner-to-your-website-page) 。您可以添加已复制到网站页面上的传送横幅URL或嵌入代码。
 
       * [将轮盘横幅与现有概览相集成](#integrating-the-carousel-banner-with-an-existing-quickview)。 如果您使用的是第三方Web内容管理系统，则需要将新的传送横幅与网站上现有的Quickview实现相集成。
-   * [在AEM中向网站添加传送横幅
-      ](/help/assets/adding-dynamic-media-assets-to-pages.md)如果您是AEM Sites客户，则可以使用交互式媒体组件将传送集直接添加到AEM中的页面。
+   * [在AEM中向网站添加传送横幅](/help/assets/adding-dynamic-media-assets-to-pages.md) 如果您是AEM Sites客户，可以使用交互式媒体组件将传送集直接添加到AEM的页面。
 
 
 If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carousel-sets) 此外，您还可以视图和编 [辑传送集属性](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)。
 
 ## 识别热点和图像映射变量 {#identifying-hotspot-and-image-map-variables}
 
-开始，通过识别现有快速视图实施所使用的动态变量，以便在AEM Assets中创建传送集的过程中输入热点或图像映射数据。
+开始，通过识别现有快速视图实施所使用的动态变量，以便在AEM Assets的传送集创建过程中输入热点或图像映射数据。
 
-在AEM Assets中向横幅图像添加热点或图像映射时，您需要为每个热点或图像映射分配一个SKU和可选的其他变量。 以后会使用这些变量将热点或图像地图与快速视图内容进行匹配。
+在AEM Assets向横幅图像添加热点或图像映射时，您需要为每个热点或图像映射分配一个SKU和可选的其他变量。 以后会使用这些变量将热点或图像地图与快速视图内容进行匹配。
 
 >[!NOTE]
 >
->如果您是AEM Sites和／或AEM Ecommerce客户，请跳过此步骤。 无需手动识别热点或图像映射变量； 您可以使用与Ecommerce的集成进行产品集成。 请参阅有关设 [置电子商务的信息](/help/sites-administering/generic.md)。 此外，您可以使用交互式组件并将其添加到网页。
+>如果您是AEM Sites和／或AEM电子商务客户，请跳过此步骤。 无需手动识别热点或图像映射变量；您可以使用与Ecommerce的集成进行产品集成。 请参阅有关设 [置电子商务的信息](/help/sites-administering/generic.md)。 此外，您可以使用交互式组件并将其添加到网页。
 >
 >如果您是AEM Assets或媒体客户，则应发布URL或嵌入代码，然后与第三方内容管理系统集成，并手动识别热点和图像地图。
 
@@ -200,8 +198,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
    * Near the upper-left corner of the page, tap **[!UICONTROL Add Slide]** icon.
 
    * 在页面中间附近，点按 **[!UICONTROL 以打开资产选择器。]**
-
-   点按以选择要包含在轮播集中的资产。选定资产上有一个复选标记图标。完成后，在页面的右上角附近，点按 **[!UICONTROL 选择**。
+   点按以选择要包含在轮播集中的资产。选定资产上有一个复选标记图标。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select]**.
 
    借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回来搜索资产。]**&#x200B;您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后点按工具栏上的&#x200B;**[!UICONTROL 过滤器]**&#x200B;图标。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
 
@@ -214,7 +211,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
    * 要删除图像，请选择图像，然后点按工 **[!UICONTROL 具栏上的]** “删除幻灯片”。
 
    * 要应用预设，请点按页面右上角附近的预设下拉列表，然后选择要一次应用到该预设集的预设。
-   要删除幻灯片，请点按或单击幻灯片，然后点按或单击工 **[!UICONTROL 具栏中的]** “删除幻灯片”。 要移动幻灯片，请点按重排器图标，按住并移至所需位置。
+   要删除幻灯片，请点按或单击幻灯片，然后点按或单 **[!UICONTROL 击工具栏中]** 的删除幻灯片。 要移动幻灯片，请点按重排器图标，按住并移至所需位置。
 
 1. 在幻灯片中添加图像后，您可以向图像添加热点和／或图像映射。 请参 [阅添加热点或图像地图](#adding-hotspots-or-image-maps-to-an-image-banner)。
 1. 通过点按或单击“行为和外观”选项卡，并调整传送横幅的外观或特定组件的行为，可以更改传送集的可视设计和行为。 有关 [如何使用查看器编辑](/help/assets/viewer-presets.md) 器的更多信息，请参阅管理查看器预设。
@@ -259,7 +256,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 >
 >当您在交互式图像或传送横幅 [中向图像](/help/assets/interactive-images.md) 添加热点时，热点信息会存储在相同的元数据位置——相对于图像的位置和控制板，而不管该位置是交互式图像还是传送横幅。 此功能意味着您可以在任一查看器中轻松重复使用同一图像及其定义的热点数据。
 
->但是，请注意，传送横幅支持图像上的图像地图，这些图像上也可能包含热点； 交互式图像则不会。 如果要创建使用同一图像的交互式图像或传送横幅，请牢记这一点。 您可能希望改为使用同一图像的单独副本创建交互式图像和传送横幅。
+>但是，请注意，传送横幅支持图像上的图像地图，这些图像上也可能包含热点；交互式图像则不会。 如果要创建使用同一图像的交互式图像或传送横幅，请牢记这一点。 您可能希望改为使用同一图像的单独副本创建交互式图像和传送横幅。
 
 >[!NOTE]
 如果您正在使用热点编辑交互式图像并裁剪图像，则您的热点将被删除。
@@ -274,8 +271,8 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 1. Near the upper-left corner of the page, tap **[!UICONTROL Hotspot]** or **[!UICONTROL Image Map.]**
 1. 执行下列操作之一：
 
-   * 对于热点： 在图像上，点按您希望显示热点的位置。
-   * 对于图像映射： 在图像上，单击，然后从左上角拖动到右下角以创建图像映射区域。 您可以通过拖动角来调整图像映射的大小。
+   * 对于热点：在图像上，点按您希望显示热点的位置。
+   * 对于图像映射：在图像上，单击，然后从左上角拖动到右下角以创建图像映射区域。 您可以通过拖动角来调整图像映射的大小。
 
    如有必要，请将热点或图像映射拖到新位置。 根据需要添加其他热点或图像地图。
 
@@ -290,7 +287,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
       * 如果您不是AEM Sites或电子商务客户
 
          * 请参 [阅识别热点](#identifying-hotspot-and-image-map-variables) 变量，就像您想要定义这些变量一样。
-         * 然后，手动输入SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），即您优惠的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充快速视图模板的变量部分，以便系统能够将点按的热点与特定SKU的快速视图相关联。
+         * 然后，手动输入SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），即您优惠的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充快速视图模板的变量部分，以便系统能够将点按的热点与特定SKU的快速视图关联。
          * (Optional) If there are other variables within the quick view that you need to use to further identify a product, tap **[!UICONTROL Add Generic Variable.]** In the text field, specify an additional variable. 例如，类别=Mens是添加的变量。
 
          * 有关更 [多信息，请参](/help/assets/working-with-selectors.md) 阅使用选择器。
@@ -298,7 +295,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 
       * 如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到URL。
          >[!NOTE]
-         如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+         如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
       * 如果您是独立客户，请在“HREF”文本字段中指定链接网页的完整URL路径。
 
@@ -308,7 +305,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 
    * Tap **[!UICONTROL Experience Fragment.]**
 
-      * 如果您是AEM Sites客户，请点按搜索图标（放大镜）以打开体验片段页面。 点按或单击要使用的体验片段，然后点按页面右上角的选择以返回到热点管理页面。
+      * 如果您是AEM Sites客户，请点击搜索图标（放大镜）以打开体验片段页面。 点按或单击要使用的体验片段，然后点按页面右上角的选择以返回到热点管理页面。
 请参 [阅体验片段](/help/sites-authoring/experience-fragments.md)。
 
       * 指定体验片段在横幅上的显示方式，如同其宽度和高度一样。
@@ -321,7 +318,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
    您还可以预览传送横幅的外观。 请参 [阅（可选）预览传送横幅](#optional-previewing-carousel-banners)。
 
 1. Tap **[!UICONTROL Save.]**
-1. 发布传送集。 发布会创建可在网站页面上使用的嵌入代码或URL。 如果您是AEM Sites客户，则可以直接将传送集添加到您的网页。
+1. 发布传送集。 发布会创建可在网站页面上使用的嵌入代码或URL。 如果您是AEM Sites客户，可以直接将传送集添加到网页。
 
    请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
@@ -369,7 +366,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 您可以使用预览来查看传送横幅对客户的外观，并测试传送横幅热点和图像映射以确保它们按预期的方式显示。
 
 当您对传送横幅感到满意时，可以发布它。
-请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。请参阅[将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页的链接，则无法使用基于URL的链接方法。
+请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。请参阅[将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。
 See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 您可以从传送编辑器（首选方法）或查看器预览传送 **[!UICONTROL 横幅]** 。
@@ -382,7 +379,7 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. 点按 **预览。]**
+1. 点按 **[预览。]**
 1. 点按图像上的热点或图像映射，以测试其关联的操作。
 
 **从“查看器”预览传送横幅列表**
@@ -394,7 +391,7 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 
 ## 发布传送横幅 {#publishing-carousel-banners}
 
-您需要发布传送才能使用它。 发布传送集时，将激活URL和嵌入代码。 它还将传送发布到Dynamic Media云，该云与CDN集成，以实现可扩展和高性能投放。
+您需要发布传送才能使用它。 发布传送集时，将激活URL和嵌入代码。 它还将传送发布到Dynamic Media云，该云与CDN集成，可进行可扩展且高性能的投放。
 
 >[!NOTE]
 如果您将现有的带热点的交互式图像用于传送横幅，则必须在发布传送横幅后单独发布该交互式图像。
@@ -407,9 +404,9 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 在上传横幅图像以创建传送、向横幅添加热点和／或图像映射并发布传送集后，您现在可以将其添加到现有网站页面。
 
 >[!NOTE]
-如果您是AEM Sites客户，则可以通过将交互式媒体组件拖动到页面，将传送横幅直接添加到您的页面。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+如果您是AEM Sites的客户，则可以通过将交互式媒体组件拖动到页面，将传送横幅直接添加到您的页面。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-但是，如果您是独立AEM资产客户，则可以手动将传送横幅添加到您的网站登陆页，如本节所述。
+但是，如果您是独立的AEM assets客户，则可以按本节所述手动将传送横幅添加到您的网站登陆页。
 
 1. 复制已发布的传送集的嵌入代码。
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
@@ -419,7 +416,7 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 
 ## 将传送横幅与现有概览相集成 {#integrating-the-carousel-banner-with-an-existing-quickview}
 
-注意： 仅当您是独立AEM Assets客户时，此步骤才适用。
+注意：此步骤仅在您是独立的AEM Assets客户时适用。
 
 此过程的最后一步是将传送横幅与网站上的现有快速视图实施相集成。 每个概览实施都是独一无二的，都需要特定的方法，并且极有可能需要前端 IT 人员的协助。
 
@@ -443,7 +440,7 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 * 根据热点或图像映射数据构建快速视图URL。
 * 触发从后端加载概览并将概览呈现在显示屏幕上的进程。
 
-AEM Assets返回的嵌入代码已经有一个现成的事件处理程序，该处理程序已被注释掉。
+AEM Assets返回的嵌入代码已经有一个现成的事件处理程序，它已被注释掉。
 
 因此，只需取消对该代码的注释，并用针对特定网页的代码来替换虚拟处理程序主体即可。
 
