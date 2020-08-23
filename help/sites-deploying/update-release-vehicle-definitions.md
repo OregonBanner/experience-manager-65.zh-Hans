@@ -1,8 +1,8 @@
 ---
 title: 更新发放车辆定义
 seo-title: 更新发放车辆定义
-description: 本文详细介绍了各种类型的AEM版本，包括完整版本、功能包和服务包。
-seo-description: 本文详细介绍了各种类型的AEM版本，包括完整版本、功能包和服务包。
+description: 本文详细介绍了各种类型的AEM发行版，包括完整发行版、功能包和服务包。
+seo-description: 本文详细介绍了各种类型的AEM发行版，包括完整发行版、功能包和服务包。
 uuid: 388fb6f5-0249-41e2-a460-1bb4cd0f8494
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,21 +10,21 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 32695db5-d62d-4959-8a24-3d56b4a19904
 translation-type: tm+mt
-source-git-commit: 6a5a8e64c6eaab816d07d8206601849c974d1e26
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 3%
 
 ---
 
 
-# AEM Update发布车辆定义{#update-release-vehicle-definitions}
+# AEM更新发布车辆定义{#update-release-vehicle-definitions}
 
-本文档包含有关各种类型的Adobe Experience Manager(AEM)版本的详细信息，包括Adobe向客户交付的完整版本、功能包和服务包。
+本文档包括有关Adobe Experience Manager(AEM)各种版本的详细信息，包括Adobe向客户交付的完整版本、功能包和服务包。
 
->[!Note]
+>[!NOTE]
 >
->有关AEM更新版本的发布计划，请参 [阅AEM更新版本路线图](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)
+>有关AEM更新版本的发布计划，请参阅AEM更 [新版本路线图](https://helpx.adobe.com/experience-manager/update-releases-roadmap.html)
 
 ## 完整版本 {#full-release}
 
@@ -72,7 +72,7 @@ ht-degree: 3%
    <td>
     <ul>
      <li>以独立产品安装程序形式提供</li>
-     <li>可从授权许可网站和托管服务授权许可网站获得</li>
+     <li>可从授权许可网站和Managed Services授权许可网站获得</li>
      <li>可能需要迁移内容存储库</li>
     </ul> </td>
   </tr>
@@ -221,7 +221,7 @@ ht-degree: 3%
    <td><strong>可用性和安装</strong></td>
    <td>
     <ul>
-     <li>由AEM客户关怀团队以包方式提供</li>
+     <li>由AEM客户关怀团队以包裹形式提供</li>
      <li>未必包含在Service Pack或完整版本中</li>
     </ul> </td>
   </tr>
@@ -240,8 +240,8 @@ ht-degree: 3%
    <td><strong>定义</strong></td>
    <td>
     <ul>
-     <li>功能包是附加功能，通过Service Pack提供。 如果AEM版本已发布其最后一个服务包，Adobe将来不会为其提供任何功能包。</li>
-     <li>FP包含产品增强功能，计划在后续产品发布中发布，但根据Adobe产品管理部门的决定提前发布。</li>
+     <li>功能包是附加功能，通过Service Pack提供。 如果AEM版本发布了其最后一个服务包，Adobe将来不会为它提供任何功能包。</li>
+     <li>FP包含产品增强功能，计划在随后的产品发布中发布，但根据Adobe产品管理的决定提前发布。</li>
      <li>功能始终与下一个主要版本合并，然后支持客户所需的AEM版本</li>
      <li>Common Interest和GA功能包合并到下一个服务包中</li>
     </ul> </td>
@@ -282,5 +282,5 @@ ht-degree: 3%
  </tbody>
 </table>
 
-* [1]: OAK修复不是作为单独的热修复提供的。 但是，它们包含在后续的Cumulative Oak热修复中。 如有必要，可以在最新COFP上提供诊断版本。 前提是客户拥有最新的COFP运行。 诊断构建只提供与热修复相同级别的质量保证。 因此，他们提供的质量保证级别与累积修补程序包、服务包或产品版本不同。 最终的修复将与下一个CFP一起提供。
+* [1]:OAK修复不是作为单独的热修复提供的。 但是，它们包含在后续的Cumulative Oak热修复中。 如有必要，可以在最新COFP上提供诊断版本。 前提是客户拥有最新的COFP运行。 诊断构建只提供与热修复相同级别的质量保证。 因此，他们提供的质量保证级别与累积修补程序包、服务包或产品版本不同。 最终的修复将与下一个CFP一起提供。
 
