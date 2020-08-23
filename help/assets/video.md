@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ba6f94435a4d4945d54614db19f7ff612a317692
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '11830'
+source-wordcount: '11828'
 ht-degree: 22%
 
 ---
@@ -689,7 +689,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. In the upper-left corner of AEM, click the AEM logo, then in the left rail, click **[!UICONTROL Tools]** (hammer icon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas.]**
 1. 单击 **[!UICONTROL 默认。]** （请勿在“default”左侧的选择框中添加复选标记。）
-1. On the **[!UICONTROL default]** page, check the box to the left of **[!UICONTROL video]**, then click **Edit.]**
+1. On the **[!UICONTROL default]** page, check the box to the left of **[!UICONTROL video]**, then click **[!UICONTROL Edit.]**
 1. 在元数据模式编辑器页面上，单击高 **[!UICONTROL 级选]** 项卡。
 1. Under the YouTube Publishing heading, click **[!UICONTROL YouTube Category.]**
 1. 在页面右侧的设置选项卡 **[!UICONTROL 下]** ，执行以下操作：
@@ -714,7 +714,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 在元数据用户档案页面的右上角附近，单击创 **[!UICONTROL 建。]**
 1. In the Add Metadata Profile dialog box, in the **[!UICONTROL Profile title]** text field, enter the name `YouTube Video` then click **[!UICONTROL Create.]**
-1. 在元数据用户档案编辑器页面上，单击高级 **[!UICONTROL 选项]** 卡。
+1. 在“元数据用户档案编辑器”页面上，单击“高 **[!UICONTROL 级]** ”选项卡。
 1. 通过执行以下操作，将复制的YouTube发布值添加到用户档案:
 
    * 在页面的右侧，单击“构建表 **[!UICONTROL 单”选项卡]** 。
@@ -723,7 +723,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
    * （可选）在页面右侧的“设置”选项卡下，在“字段标签”文本字段中输入 `YouTube Publishing`。
    * Click the **[!UICONTROL Build Form]** tab, then drag the component labeled **[!UICONTROL Multi Value Text]** and drop it below the **[!UICONTROL YouTube Publishing]** heading that you just created.
 
-   * Click **[!UICONTROL Field Label** to select the component.
+   * Click **[!UICONTROL Field Label]** to select the component.
    * 在页面右侧的“设置”选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单的各自字段中。 将选择值粘贴到默认值字段中。
 
 1. 通过执行以下操作，将复制的YouTube隐私值添加到用户档案:
@@ -872,7 +872,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
@@ -886,7 +886,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-435](assets/chlimage_1-435.png)
 
@@ -908,7 +908,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
    >[!NOTE]
    >
-   >您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+   >您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
@@ -918,7 +918,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->您可能需要管理权限才能访问“ **[!UICONTROL 工具]** ”菜单。
+>您可能需要管理权限才能访问“工 **[!UICONTROL 具]** ”菜单。
 
 如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
 
@@ -1097,7 +1097,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
    >
    >要全局支持多语言视频字幕，请注意，WebVTT标准要求您为要支持的每种语言创建单独的。vtt文件和调用。
 
-   通常，您希望将字幕VTT文件命名为与视频文件同名，并附加语言区域设置，如-EN、-FR或-DE等。 通过这样做，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
+   通常，您要将字幕VTT文件命名为与视频文件同名，并附加语言区域设置，如-EN、-FR或-DE等。 通过这样做，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
 
 1. 在AEM中，将您的WebVTT题注文件上传到DAM。
 1. 导航到要 *与上* 传的题注文件关联的已发布视频资产。
@@ -1122,7 +1122,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
 
 ## 向视频添加章节标记 {#adding-chapter-markers-to-video}
 
-您可以通过向单个视频或自适应视频集添加章节标记，使长形视频更易于观看和导航。 当用户播放视频时，他们可以单击视频时间线上的章节标记（也称为视频浏览条），轻松导航到自己感兴趣的位置，或立即跳到新内容、演示、教程等。
+您可以通过向单个视频或自适应视频集添加章节标记，使长形视频更易于观看和导航。 当用户播放视频时，他们可以单击视频时间线上的章节标记（也称为视频浏览条），轻松导航到自己感兴趣的点，或立即跳到新内容、演示、教程等。
 
 >[!NOTE]
 >
@@ -1227,7 +1227,7 @@ AEM中的所有视频都必须具有关联的缩略图；不能删除缩略图�
 
 1. 导航到您要更改其缩略图的已上传视频资产。
 1. 在资产选择模式下，从 **[!UICONTROL 列表视图]** 或卡 **[!UICONTROL 片视图中]**&#x200B;点按视频资产。
-1. 在工具栏上，点 **按[!UICONTROL属性图标** （其中带有“i”的圆圈）。
+1. 在工具栏中，点按 **[!UICONTROL 属性]** 图标（其中带有“i”的圆圈）。
 1. 在视频的“属性”页面上，点按更改 **[!UICONTROL 缩略图。]**
 1. 在“更改缩略图”页面上，执行下列操作之一：
 
