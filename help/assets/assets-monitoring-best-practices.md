@@ -3,9 +3,9 @@ title: 监控部署的 [!DNL Adobe Experience Manager Assets] 最佳实践。
 description: 监视部署部署部署在部署后 [!DNL Adobe Experience Manager] 的环境和性能的最佳实践。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 99ce6e0572797b7bccf755aede93623be6bd5698
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -28,27 +28,27 @@ ht-degree: 1%
 
 您应在开发的性能测试阶段或高负载情况下执行实时监视，以了解环境的性能特性。 通常，应使用一套工具执行实时监视。 以下是一些建议：
 
-* [可视VM](https://visualvm.java.net/): Visual VM使您能够视图详细的Java VM信息，包括CPU使用、Java内存使用。 此外，它还允许您对在部署上运行的代码进行采样和评估。
-* [顶部](https://man7.org/linux/man-pages/man1/top.1.html): 顶部是打开仪表板的Linux命令，显示使用情况统计信息，包括CPU、内存和IO使用情况。 它提供了实例中所发生情况的高级概述。
-* [顶部](https://hisham.hm/htop/): Htop是一个交互式流程查看器。 除了Top可以提供的功能外，它还提供详细的CPU和内存使用。 Htop可以使用或安装在大多数Linux系 `yum install htop` 统上 `apt-get install htop`。
+* [可视VM](https://visualvm.java.net/):Visual VM使您能够视图详细的Java VM信息，包括CPU使用、Java内存使用。 此外，它还允许您对在部署上运行的代码进行采样和评估。
+* [顶部](https://man7.org/linux/man-pages/man1/top.1.html):顶部是打开仪表板的Linux命令，显示使用情况统计信息，包括CPU、内存和IO使用情况。 它提供了实例中所发生情况的高级概述。
+* [顶部](https://hisham.hm/htop/):Htop是一个交互式流程查看器。 除了Top可以提供的功能外，它还提供详细的CPU和内存使用。 Htop可以使用或安装在大多数Linux系 `yum install htop` 统上 `apt-get install htop`。
 
-* [Iotop](https://guichaz.free.fr/iotop/): Iotop是磁盘IO使用情况的详细仪表板。 它显示描述使用磁盘IO的进程及其使用量的栏和表。 Iotop可以使用或安装在大多数Linux系 `yum install iotop` 统上 `apt-get install iotop`。
+* [Iotop](https://guichaz.free.fr/iotop/):Iotop是磁盘IO使用情况的详细仪表板。 它显示描述使用磁盘IO的进程及其使用量的栏和表。 Iotop可以使用或安装在大多数Linux系 `yum install iotop` 统上 `apt-get install iotop`。
 
-* [Iftop](https://www.ex-parrot.com/pdw/iftop/): Iftop显示有关以太网／网络使用的详细信息。 Iftop显示使用以太网的实体的每个通信渠道统计信息以及它们使用的带宽量。 Iftop可以使用或安装在大多数Linux系 `yum install iftop` 统上 `apt-get install iftop`。
+* [Iftop](https://www.ex-parrot.com/pdw/iftop/):Iftop显示有关以太网／网络使用的详细信息。 Iftop显示使用以太网的实体的每个通信渠道统计信息以及它们使用的带宽量。 Iftop可以使用或安装在大多数Linux系 `yum install iftop` 统上 `apt-get install iftop`。
 
-* Java Flight Recorder(JFR): Oracle提供的一种商业工具，您可以在非生产环境中自由使用。 有关详细信息，请 [参阅如何使用Java飞行记录器诊断CQ运行时问题](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
-* [!DNL Experience Manager] `error.log` 文件： 您可以调查文 [!DNL Experience Manager] 件，了 `error.log` 解系统中记录的错误的详细信息。 使用命令 `tail -F quickstart/logs/error.log` 识别要调查的错误。
-* [工作流控制台](/help/sites-administering/workflows.md): 利用工作流控制台监视滞后或卡住的工作流。
+* Java Flight Recorder(JFR):Oracle提供的一种商业工具，您可以在非生产环境中自由使用。 有关详细信息，请 [参阅如何使用Java飞行记录器诊断CQ运行时问题](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)。
+* [!DNL Experience Manager] `error.log` 文件：您可以调查文 [!DNL Experience Manager] 件，了 `error.log` 解系统中记录的错误的详细信息。 使用命令 `tail -F quickstart/logs/error.log` 识别要调查的错误。
+* [工作流控制台](/help/sites-administering/workflows.md):利用工作流控制台监视滞后或卡住的工作流。
 
 通常，您可以结合使用这些工具来全面了解部署的 [!DNL Experience Manager] 性能。
 
 >[!NOTE]
 >
->这些工具是标准工具，Adobe不直接支持。 他们不需要额外的许可证。
+>这些工具是标准工具，不直接受Adobe支持。 他们不需要额外的许可证。
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
-*图： 使用Visual VM工具进行实时监视。*
+*图：使用Visual VM工具进行实时监视。*
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
@@ -71,7 +71,7 @@ ht-degree: 1%
 * JMX MBean
 * 外部网站
 
-您需要NewRelic(TM)和AppDynamics(TM)等外部工具来监视每个项目。 使用这些工具，您可以定义特定于您系统的警报，例如高系统利用率、工作流备份、运行状况检查失败或未经身份验证的网站访问。 Adobe不推荐任何特定工具胜过其他工具。 找到适合您的工具，并利用它来监视讨论的项目。
+您需要NewRelic(TM)和AppDynamics(TM)等外部工具来监视每个项目。 使用这些工具，您可以定义特定于您系统的警报，例如高系统利用率、工作流备份、运行状况检查失败或未经身份验证的网站访问。 Adobe不推荐任何特定工具。 找到适合您的工具，并利用它来监视讨论的项目。
 
 #### 内部应用程序监控 {#internal-application-monitoring}
 
@@ -91,11 +91,11 @@ ht-degree: 1%
 
 * `MBean: lava.lang:type=Memory`
 * URL: `/system/console/jmx/java.lang:type=Memory`
-* 实例： 所有服务器
-* 警报阈值： 当堆或非堆内存利用率超过相应最大内存的75%时。
-* 警报定义： 系统内存不足，或代码中有内存泄漏。 分析线程转储以得出定义。
+* 实例：所有服务器
+* 警报阈值：当堆或非堆内存利用率超过相应最大内存的75%时。
+* 警报定义：系统内存不足，或代码中有内存泄漏。 分析线程转储以得出定义。
 
->[!Note]
+>[!NOTE]
 >
 >此Bean提供的信息以字节表示。
 
@@ -103,9 +103,9 @@ ht-degree: 1%
 
 * MBean: `java.lang:type=Threading`
 * URL: `/system/console/jmx/java.lang:type=Threading`
-* 实例： 所有服务器
-* 警报阈值： 当线程数大于基线的150%时。
-* 警报定义： 要么存在一个活动失控的过程，要么效率低下的操作消耗大量资源。 分析线程转储以得出定义。
+* 实例：所有服务器
+* 警报阈值：当线程数大于基线的150%时。
+* 警报定义：要么存在一个活动失控的过程，要么效率低下的操作消耗大量资源。 分析线程转储以得出定义。
 
 **监视器[!DNL Experience Manager]**
 
@@ -117,12 +117,12 @@ ht-degree: 1%
 
 * MBean: `com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
 * URL: `/system/console/jmx/com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>"`
-* 实例： 一个作者实例和所有发布实例（适用于刷新代理）
-* 警报阈值： 当值为 `QueueBlocked` 或 `true` 值大于 `QueueNumEntries` 基线的150%时。
+* 实例：一个作者实例和所有发布实例（适用于刷新代理）
+* 警报阈值：当值为 `QueueBlocked` 或 `true` 值大于 `QueueNumEntries` 基线的150%时。
 
-* 警报定义： 系统中存在阻止的队列，表明复制目标已关闭或不可到达。 通常，网络或基础架构问题会导致过多条目排队，从而对系统性能产生不利影响。
+* 警报定义：系统中存在阻止的队列，表明复制目标已关闭或不可到达。 通常，网络或基础架构问题会导致过多条目排队，从而对系统性能产生不利影响。
 
->[!Note]
+>[!NOTE]
 >
 >对于MBean和URL参数， `<AGENT_NAME>` 替换为要监视的复制代理的名称。
 
@@ -130,9 +130,9 @@ ht-degree: 1%
 
 * MBean: `org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
 * URL: */system/console/jmx/org.apache.jackrabbit.oak:id=7,name=&quot;OakRepository统计信息&quot;,type*=&quot;RepositoryStats&quot;
-* 实例： 所有服务器
-* 警报阈值： 当打开的会话超过基线超过50%时。
-* 警报定义： 会话可以通过一段代码打开，并且永不关闭。 这可能会随着时间推移缓慢发生，并最终导致系统中的内存泄漏。 虽然系统上的会话数应有所波动，但不应持续增加。
+* 实例：所有服务器
+* 警报阈值：当打开的会话超过基线超过50%时。
+* 警报定义：会话可以通过一段代码打开，并且永不关闭。 这可能会随着时间推移缓慢发生，并最终导致系统中的内存泄漏。 虽然系统上的会话数应有所波动，但不应持续增加。
 
 运行状况检查
 
@@ -143,49 +143,49 @@ ht-degree: 1%
 * 系统检查
    * MBean: `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * 实例： 一个作者，所有发布服务器
-   * 警报阈值： 状态不正常时
-   * 警报定义： 其中一个指标的状态为“警告”或“关键”。 检查日志属性以了解有关问题原因的更多信息。
+   * 实例：一个作者，所有发布服务器
+   * 警报阈值：状态不正常时
+   * 警报定义：其中一个指标的状态为“警告”或“关键”。 检查日志属性以了解有关问题原因的更多信息。
 
 * 复制队列
 
    * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * 实例： 一个作者，所有发布服务器
-   * 警报阈值： 状态不正常时
-   * 警报定义： 其中一个指标的状态为“警告”或“关键”。 检查日志属性以了解有关导致此问题的队列的详细信息。
+   * 实例：一个作者，所有发布服务器
+   * 警报阈值：状态不正常时
+   * 警报定义：其中一个指标的状态为“警告”或“关键”。 检查日志属性以了解有关导致此问题的队列的详细信息。
 
 * 响应性能
 
    * MBean: `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * 实例： 所有服务器
-   * 警报持续时间： 状态不正常时
-   * 警报定义： 其中一个度量的状态为“警告”或“关键”状态。 检查日志属性以了解有关导致此问题的队列的详细信息。
+   * 实例：所有服务器
+   * 警报持续时间：状态不正常时
+   * 警报定义：其中一个度量的状态为“警告”或“关键”状态。 检查日志属性以了解有关导致此问题的队列的详细信息。
 
 * 查询性能
 
    * MBean: `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
-   * 实例： 一个作者，所有发布服务器
-   * 警报阈值： 状态不正常时
-   * 警报定义： 一个或多个查询在系统中运行缓慢。 检查日志属性，以了解有关导致此问题的查询的更多信息。
+   * 实例：一个作者，所有发布服务器
+   * 警报阈值：状态不正常时
+   * 警报定义：一个或多个查询在系统中运行缓慢。 检查日志属性，以了解有关导致此问题的查询的更多信息。
 
 * 活动包
 
    * MBean: `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * 实例： 所有服务器
-   * 警报阈值： 状态不正常时
-   * 警报定义： 系统上存在非活动或未解析的OSGi捆绑包。 有关导致此问题的捆绑包的详细信息，请查看log属性。
+   * 实例：所有服务器
+   * 警报阈值：状态不正常时
+   * 警报定义：系统上存在非活动或未解析的OSGi捆绑包。 有关导致此问题的捆绑包的详细信息，请查看log属性。
 
 * 日志错误
 
    * MBean: `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
    * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * 实例： 所有服务器
-   * 警报阈值： 状态不正常时
-   * 警报定义： 日志文件中有错误。 检查日志属性以了解有关问题原因的更多信息。
+   * 实例：所有服务器
+   * 警报阈值：状态不正常时
+   * 警报定义：日志文件中有错误。 检查日志属性以了解有关问题原因的更多信息。
 
 ## 共同问题和决议  {#common-issues-and-resolutions}
 
