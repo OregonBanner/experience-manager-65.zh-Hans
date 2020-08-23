@@ -3,9 +3,9 @@ title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有或特定演绎版。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '789'
 ht-degree: 8%
 
 ---
@@ -33,9 +33,9 @@ XMP写回功能允许您将元数据更改传播到资产的所有或特定演�
 
 1. 要打开Configuration Manager，请访 `https://[aem_server]:[port]/system/console/configMgr`问。
 1. 打开 **[!UICONTROL Adobe CQDAM再现生成器]** 。
-1. 选择**[!UICONTROL Propagate XMP[!UICONTROL **选项，然后保存更改。
+1. 选择“ **[!UICONTROL 传播XMP]** ”选项，然后保存更改。
 
-   ![chlimage_1-135](assets/chlimage_1-346.png)
+   ![chlimage_1-133](assets/chlimage_1-346.png)
 
 ## 为特定再现启用XMP写回 {#enabling-xmp-writeback-for-specific-renditions}
 
