@@ -1,15 +1,15 @@
 ---
 title: 呈现器的文档详细信息
 seo-title: 呈现器的文档详细信息
-description: 关于如何在AEM Forms工作区中呈现工作以呈现各种支持的表单和文件类型的概念性信息。
-seo-description: 关于如何在AEM Forms工作区中呈现工作以呈现各种支持的表单和文件类型的概念性信息。
+description: 关于如何在AEM Forms工作区中呈现各种支持的表单和文件类型的概念性信息。
+seo-description: 关于如何在AEM Forms工作区中呈现各种支持的表单和文件类型的概念性信息。
 uuid: ae3f0585-9105-4ca7-a490-ffdefd3ac8cd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-在AEM Forms工作区中，可无缝支持多种表单类型。 这些 Cookie 包括：
+在AEM Forms工作区中，可以无缝支持多个表单类型。 这些 Cookie 包括：
 
 * PDF forms语（XDP/Acroform/平面PDF）
 * 新的HTML表单
 * 图像
 * 第三方应用程序（例如，通信管理）
 
-本文档从语义自定义／组件重用的角度解释了这些呈示器的工作，这样客户需求就得到满足，而不会中断任何再现。 虽然AEM Forms工作区允许任何用户界面／语义更改，但建议不要更改不同表单类型的呈现逻辑，否则结果将不可预知。 此文档旨在提供指导／知识，以支持渲染相同的表单，在不同的门户中使用相同的工作区组件，而不是修改渲染逻辑本身。
+本文档从语义自定义／组件重用的角度解释了这些呈示器的工作，这样客户需求就得到满足，而不会中断任何再现。 尽管AEM Forms工作区允许任何用户界面／语义更改，但建议不要更改不同表单类型的呈现逻辑，否则结果可能不可预知。 此文档旨在提供指导／知识，以支持渲染相同的表单，在不同的门户中使用相同的工作区组件，而不是修改渲染逻辑本身。
 
 ## PDF forms {#pdf-forms}
 
@@ -54,11 +54,11 @@ PDF forms由呈现 `PdfTaskForm View`。
 >
 >不建议修改PdfTaskForm视图的pdf.html/内容。
 
-## 新的HTML表单 {#new-html-forms}
+## 新HTMLForms {#new-html-forms}
 
 新的HTML表单由NewHTMLTaskForm视图呈现。
 
-当XDP表单使用在CRX上部署的移动表单包呈现为HTML时，它还会向表单中添加其他 `FormBridge`JavaScript，这会显示保存和提交表单数据的不同方法。
+当使用在CRX上部署的移动表单包将XDP表单呈现为HTML时，它还会向表单中添加其他 `FormBridge`JavaScript，它显示保存和提交表单数据的不同方法。
 
 此JavaScript与上述PDF forms中所述的JavaScript不同，但用途类似。
 
@@ -66,11 +66,11 @@ PDF forms由呈现 `PdfTaskForm View`。
 >
 >不建议修改NewHTMLTaskForm视图的内容。
 
-## Flex表单和指南 {#flex-forms-and-guides}
+## Flex·Forms与指南 {#flex-forms-and-guides}
 
-Flex表单由SwfTaskForm呈现，参考线由HtmlTaskForm视图呈现。
+Flex·Forms由SwfTaskForm呈现，而指南由HtmlTaskForm视图呈现。
 
-在AEM Forms工作区中，这些视图使用介质SWF与构成flex表单／指南的实际SWF通信， `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
+在AEM Forms工作区中，这些视图使用介质SWF与构成flex表单／指南的实际SWF进行通信， `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
 
 通信使用/ `swfObject.postMessage` 进行 `window.flexMessageHandler`。
 
@@ -84,7 +84,7 @@ Flex表单由SwfTaskForm呈现，参考线由HtmlTaskForm视图呈现。
 
 第三方应用程序使用ExtAppTaskForm视图呈现。
 
-**第三方应用于AEM Forms工作区通信**
+**第三方在AEM Forms工作区通信中的应用**
 
 AEM Forms工作区监听 `window.global.postMessage([Message],[Payload])`
 
@@ -92,8 +92,8 @@ AEM Forms工作区监听 `window.global.postMessage([Message],[Payload])`
 
 **AEM Forms工作区与第三方应用程序通信**
 
-如果AEM Forms工作区的直接操作按钮可见，则它将调 `window.[External-App-Name].getMessage([Action])`用，其 `Action]` 中从读取[ `routeActionMap`。 第三方应用程序必须监听此界面，然后通过API通知AEM Forms工 `postMessage ()` 作区。
+如果AEM Forms工作区的直接操作按钮可见，则它将调 `window.[External-App-Name].getMessage([Action])`用，从中 `[Action]` 读取的位置 `routeActionMap`。 第三方应用程序必须监听此界面，然后通过API通知AEM Forms工 `postMessage ()` 作区。
 
 例如，Flex应用程序可以定 `ExternalInterface.addCallback('getMessage', listener)` 义支持此通信。 如果第三方应用程序希望通过其自己的按钮处理表单提交，则您应指 `hideDirectActions = true() in the runtimeMap` 定并可跳过此监听器。 因此，此构造是可选的。
 
-您可以在AEM Forms工作区中集成通信管理中阅读有关通信管理的第 [三方应用程序集成的更多信息](/help/forms/using/integrating-correspondence-management-html-workspace.md)。
+您可以在AEM Forms工作区的“集成通信管理”中阅读有关通信管理的第 [三方应用程序集成的更多信息](/help/forms/using/integrating-correspondence-management-html-workspace.md)。
