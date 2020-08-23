@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3707'
 ht-degree: 33%
@@ -39,7 +39,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 >
 >要生成视频的元数据和关联的视频图像缩略图，视频本身需要在 Dynamic Media 中完成编码过程。在 AEM 中，如果您已启用 Dynamic Media 并设置了视频云服务，则 **[!UICONTROL Dynamic Media 编码视频]**&#x200B;工作流会对视频进行编码。此工作流会捕获工作流进程历史记录和失败信息。请参阅[监视视频编码和 YouTube 发布进度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已启用 Dynamic Media，并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media 编码视频]**&#x200B;工作流将自动生效。（如果您未使用 Dynamic Media，则 **[!UICONTROL DAM 更新资产]**&#x200B;工作流将生效。）
 >
->在搜索资产时，元数据很有用。 缩略图是编码过程中生成的静态视频图像。 AEM系统需要在用户界面中使用它们，以帮助您在“卡”视图、“搜索结果”视图和“资产”列表视图中直观地识别视频。 点按编码视频的演绎版图标（画板调色板）时，可以看到生成的缩略图。
+>在搜索资产时，元数据很有用。 缩略图是编码过程中生成的静态视频图像。 AEM系统需要它们，并在用户界面中使用它们，以帮助您在“卡”视图、“搜索结果”视图和“资产”列表视图中直观地识别视频。 点按编码视频的演绎版图标（画板调色板）时，可以看到生成的缩略图。
 
 创建完视频用户档案后，可将其应用到一个或多个文件夹。 See [Applying a video profile to folders.](#applying-a-video-profile-to-folders)
 
@@ -98,7 +98,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 ## 关于在视频用户档案中使用智能裁剪 {#about-smart-crop-video}
 
-视频智能裁剪是视频用户档案中的一项可选功能，它是一款工具，可利用Adobe Sensei中人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。
+视频智能裁剪是视频用户档案中的一项可选功能，它使用Adobe Sensei人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。
 
 支持的智能裁剪视频格式包括MP4、MKV、MOV、AVI、FLV和WMV。
 
@@ -108,7 +108,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 * 30帧／秒(FPS)。
 * 300 MB文件大小。
 
-请注意，Adobe Sensei当前仅限9000帧。 即，在30 FPS时5分钟。 如果视频的FPS较高，则支持的最大视频持续时间会减少。 例如，60 FPS视频必须长达2.5分钟，Adobe Sensai和智能裁剪才能支持。
+请注意，Adobe Sensei目前仅限9000帧。 即，在30 FPS时5分钟。 如果视频的FPS较高，则支持的最大视频持续时间会减少。 例如，60 FPS视频必须长达2.5分钟，才能得到SensaiAdobe和智能裁剪的支持。
 
 ![视频智能裁剪](assets/smart-crop-video.png)
 
@@ -130,7 +130,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 ## Creating a video profile for adaptive streaming {#creating-a-video-encoding-profile-for-adaptive-streaming}
 
-Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对MP4 H.264的视频上传设置，该设置为获得最佳的观看体验而优化。 您可以在上传视频时使用此用户档案。
+Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对MP4 H.264的视频上传设置，该设置为获得最佳观看体验而优化。您可以在上传视频时使用此用户档案。
 
 但是，如果该预定义的配置文件不符合您的需求，您也可以选择自行创建自适应视频编码配置文件。When you use the setting **[!UICONTROL Encode for adaptive streaming]**–as a best practice–all encoding presets that you add to the profile are validated to ensure that all videos have the same aspect ratio. 此外，编码的视频会被视为流播放的多比特率集。
 
@@ -199,8 +199,8 @@ Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对
 
 根据您正在运行的模式，支持的视频格式编解码器如下：
 
-* Dynamic Media-Scene7模式： H.264(.mp4)
-* Dynamic Media-混合模式： H.264(.mp4),WebM
+* 动态媒体-Scene7模式：H.264(.mp4)
+* 动态媒体——混合模式：H.264(.mp4),WebM
 
 另请参阅[为自适应流播放创建视频编码配置文件](#creating-a-video-encoding-profile-for-adaptive-streaming)。
 
@@ -216,7 +216,7 @@ Dynamic Media已附带预定义的自适应视频编码用户档案-一组针对
 1. 在“创建／编辑视频编码预设”页面，点按添 **[!UICONTROL 加视频编码预设。]**
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
 点按每个选项旁边的信息图标，以根据选定的视频格式编解码器获得更多说明或推荐的设置。
-1. （可选）在“视频大小”标题下，取消选中“保 **[!UICONTROL 持长宽比”。]**
+1. （可选）在“视频大小”标题下，取消选中“保 **[!UICONTROL 持宽高比”。]**
 1. 执行以下操作：
    * In the **[!UICONTROL Width]** field, enter **[!UICONTROL auto.]**
    * In the **[!UICONTROL Height]** field, enter a value in pixels.
@@ -256,7 +256,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
 **要使用自定义添加的视频编码参数**:
 
 1. Tap the AEM logo, then navigate to **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite.]**
-1. 在CRXDE Lite页面左侧的“资源管理器”面板中，导航到以下内容：
+1. 在CRXDE Lite页面左侧的资源管理器面板中，导航到以下内容：
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
 
@@ -313,7 +313,7 @@ To help you visualize the size of the video, tap the Height&#39;s information ic
    * 重复第3步和第4步，向视频编码用户档案添加其他参数。
    * Near the upper-left corner of the page, tap **[!UICONTROL Save All.]**
 
-1. 在CRXDE Lite页面的左上角，点按“返 **[!UICONTROL 回主页]** ”图标以返回AEM。
+1. 在CRXDE Lite页面的左上角，点按“ **[!UICONTROL 返回主页]** ”图标以返回AEM。
 
 ### Editing a video profile {#editing-a-video-encoding-profile}
 
@@ -346,7 +346,7 @@ By default, you cannot edit the predefined, out-of-the-box **[!UICONTROL Adaptiv
 1. 在“视频编码用户档案”页面上，输入用户档案的新名称。
 1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 点按信息图标以获取自适应流播放的说明。 （如果要复制渐进式视频配置文件，请勿选中此复选框。）
 
-   在Dynamic Media-混合模式中，如果WebM视频预设是视频用户档案的一部分，则无法进 **[!UICONTROL 行自适应流播放的编码]** ，因为所有预设都必须是MP4。
+   在Dynamic Media —— 混合模式中，如果WebM视频预设是视频用户档案的一部分，则无法进 **[!UICONTROL 行自适应流播放的编码]** ，因为所有预设都必须是MP4。
 1. 在“视频编码预设”标题下，添加、编辑或删除构成该配置文件的视频编码预设。
 
    点按“基本”和“高级”选项卡上每个选项旁边的信息图标，查看推荐的设置和说明。
@@ -391,7 +391,7 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 #### 从“属性”将视频用户档案应用到文件夹 {#applying-video-profiles-to-folders-from-properties}
 
-1. 点按或单击AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到您要对其应用视频用户档案的文件夹。
+1. 点按或单击AEM徽标，导航 **[!UICONTROL 到]** “资产”，然后导航到要应用视频用户档案的文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性。]**
 1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
@@ -399,7 +399,7 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 ### 全局应用视频用户档案 {#applying-a-video-profile-globally}
 
-除了将用户档案应用到文件夹外，您还可以全局应用一个用户档案，以便上传到任何文件夹中的AEM资产的任何内容都已应用选定的。
+除了将用户档案应用到文件夹之外，您还可以全局应用一个用户档案，以便上传到任何文件夹中的AEM资产的任何内容都应用了选定的。
 
 See also [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile).
 
@@ -414,7 +414,7 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 将显示处理指示器（或进度栏），以便您可以以可视方式监视视频用户档案处理作业的进度。
 
-您还可以视图文 `error.log` 件以监视编码作业的进度、查看编码是否完成或查看任何作业错误。 该文 `error.log` 件夹位于安 `logs` 装AEM实例的文件夹中。
+您还可以视图文 `error.log` 件以监视编码作业的进度、查看编码是否完成或查看任何作业错误。 在安 `error.log` 装AEM实例 `logs` 的文件夹中找到。
 
 ## Removing a video profile from folders {#removing-a-video-profile-from-folders}
 
@@ -433,6 +433,6 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 ### 通过属性将视频用户档案从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. 点按或单击AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到您要从中删除视频用户档案的文件夹。
-1. 在文件夹中，点按或单击复选标记以将其选中，然后点按或单 **击属性。]**
+1. 在文件夹中，点按或单击复选标记以将其选中，然后点按或单击 **[!UICONTROL 属性。]**
 1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
