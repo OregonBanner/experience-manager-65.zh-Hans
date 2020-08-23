@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f34742a9d11909dcf8403e1b002b65a01e882a74
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3853'
 ht-degree: 0%
@@ -158,7 +158,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 1. 在属性浏览器中，展开“电 **子签名** ”折叠面板，然后选择“启 **用Adobe Sign** ”选项。 它使Adobe Sign能够获得一种适应性表单。
 1. 从已配置的Adobe SignCloud Services列表中选择云服务。
 
-   如果 **Adobe SignCloud Service** 列表为空，请按照“ [配置Adobe Sign”(使用AEM Forms文](../../forms/using/adobe-sign-integration-adaptive-forms.md) )配置服务。
+   如果 **Adobe SignCloud Service** 列表为空，请按照 [使用AEM Forms文配置](../../forms/using/adobe-sign-integration-adaptive-forms.md) Adobe Sign来配置服务。
 
 1. 从“签名者可以签名”对 **话框中选择签** 名顺序。 Adobe Sign歌手可以按任 **意顺序** (依次为另一个签署方 **或同时** )签署自适应格式。
 
@@ -318,7 +318,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 **Adobe Sign区：** 您可以使用Adobe Sign块在自适应表单的任意位置添加Adobe Sign字段。 它还有助于为签名者分配特定字段。 默认情况下，当预览或发布自适应表单时，Adobe Sign块不可见。 这些块仅在签名文档中启用。 在签名文档中，只启用分配给签署方的字段。 Adobe Sign区块可以与第一个和后续签署者一起使用。
 
-**签名步骤组件：** 您可以使用签名步骤组件创建表单内签名体验。 它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 通常是表单的最后一个或倒数第二个部分，后面是摘要组件。
+**签名步骤组件：** 您可以使用签名步骤组件创建表单内签名体验。 它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 它通常是表单的最后一个或倒数第二个部分，后跟摘要组件。
 
 ## 故障诊断 {#troubleshoot}
 
@@ -347,6 +347,4 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 * [将Adobe Sign与AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md)
 * [以自适应形式使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
-
-* [将Adobe Sign与AEM Forms结合使用（视频）
-   ](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [将Adobe Sign与AEM Forms结合使用（视频）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
