@@ -1,6 +1,6 @@
 ---
 title: 交互式视频
-description: 了解如何在Dynamic Media中使用交互式视频和购物视频
+description: 了解如何在Dynamic Media中处理交互式视频和购物视频
 uuid: c3ff6839-fff5-4709-8163-5c4245b80e6d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '6053'
-ht-degree: 26%
+source-wordcount: '6050'
+ht-degree: 25%
 
 ---
 
@@ -39,7 +39,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 >[!NOTE]
 >
->如果您创建交互式视频以在用户单击缩略图时启动网页，某些设备将阻止打开弹出网页。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点 **按[!UICONTROL** Settings **> Safari** > Block Pop-ups **，然后将控件滑******&#x200B;动到[!ICONTROL Off Jaud。 现在，当您播放交互式视频并单击缩略图时，如果要打开弹出窗口，将提示您。 如果您接受，则将打开网页。
+>如果您创建交互式视频以在用户单击缩略图时启动网页，某些设备将阻止打开弹出网页。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点按 **[!UICONTROL 设置]** > **Safari** > **阻止弹出窗口**，然后将控件滑 **[!UICONTROL 动到Off]**。 现在，当您播放交互式视频并单击缩略图时，如果要打开弹出窗口，将提示您。 如果您接受，则将打开网页。
 
 ### 观看如何创建交互式视频 {#watch-how-interactive-videos-are-created}
 
@@ -48,7 +48,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 ### Adobe 客户成功网络研讨会 {#adobe-customer-success-webinar}
 
-“在AEM Assets中使用交互式视频、链接共享和YouTube共享”网络研讨会教您如何使用交互式视频和其他功能将转化驱动型事件绑定到视频营销内容中。
+“使用AEM Assets的交互式视频、链接共享和YouTube共享”网络研讨会教您如何使用交互式视频和其他功能将转化驱动的事件绑定到视频营销内容中。
 
 >[!NOTE]
 [在 AEM 资产中使用交互式视频、链接共享和 YouTube 共享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/).
@@ -70,9 +70,8 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 交互式视频步骤：
 
 1. **（可选）识别概览变量** -通过识别现有概览实施所使用的动态变量来开始。 在创建交互式视频时，可以使用变量将产品缩略图映射到相应的产品概览。 请参 [阅（可选）识别概览变量](#optional-identifying-quickview-variables)。
-   *请注意，仅当以下所有情况均为真时，才需要执行此步骤*:
-·您希望通过触发概览来为视频添加交互性。
-·您的AEM实施不 *使用* eCommerce integration framework从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）将产品数据拉入AEM。 请参阅 [AEM Assets中的电子商务概念](/help/sites-administering/concepts.md)。
+   *请注意，仅当以下所有情况均为真时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。
+·您的AEM实施不 *使用* eCommerce integration framework从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）将产品数据拉入AEM。 请参阅 [AEM Assets的电子商务概念](/help/sites-administering/concepts.md)。
 
 1. **（可选）创建交互式视频查看器预设** -自定义组成播放器的各种组件的外观和行为，如视频浏览条和交互式缩略图。
 Creating your own Interactive Video viewer preset is not required if you intend to use the out-of-the-box Interactive Video viewer presets `Shoppable_Video_Light` or `Shoppable_Video_Dark` instead.
@@ -83,11 +82,11 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 
 
 1. **为视频添加交互性** -为视频添加一个或多个时间段。 然后，将这些时间段内的图像缩略图关联起来。 将每个图像缩略图分配给操作，如超链接、概览或体验片段。
-(请注意，如果您的交互式内容包含带有相对URL的链接，特别是指向AEM Sites页的链接，则无法使用基于URL的链接方法。)
+(请注意，如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。)
 最后，发布交互式视频资源。 Publishing creates the embed code or URL that you will eventually copy and apply to your website landing page.See [Adding interactivity to your video](#adding-interactivity-to-your-video).
 请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **在AEM中向网站或网站添加交互式视频**&#x200B;如果您使用AEM Sites、AEM电子商务或两者，则可以通过将交互式媒体组件拖动到页面上，将交互式视频直接添加到AEM的网页。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+1. **将交互式视频添加到您的网站或AEM中的您的网站**&#x200B;如果您使用AEM Sites、AEM电子商务，或同时使用二者，则可以通过将交互式媒体组件拖动到页面上，将交互式视频直接添加到AEM的网页。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 使用嵌入代码或URL将交互式视频与您的网站体验相集成。 See [Integrating an interactive video with your website](#integrating-an-interactive-video-with-your-website).
 如果您使用第三方WCM（Web内容管理器），则必须将新的交互式视频与网站上使用的现有Quickview实现相集成。 请参 [阅将交互式视频与现有Quickview集成](#integrating-an-interactive-video-with-an-existing-quickview)。
    [](/help/assets/adding-dynamic-media-assets-to-pages.md)
@@ -97,9 +96,9 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 >[!NOTE]
 仅当满足以下条件时，才需要此任务:
 * 您希望通过触发Quickviews向视频添加交互性。
-* 您的AEM实施不 *使用* eCommerce integration framework从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）将产品数据拉入AEM。 请参阅 [AEM Assets中的电子商务概念](/help/sites-administering/concepts.md)。
+* 您的AEM实施不 *使用* eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 请参阅 [AEM Assets的电子商务概念](/help/sites-administering/concepts.md)。
 
-如果您的AEM实施使用电子商务，您可以跳过此任务并继续到下一个任务。
+如果您的AEM实施使用电子商务，则可以跳过此任务并继续到下一个任务。
 
 开始，识别现有Quickview实施所使用的动态变量，以便在交互式视频创建过程中将产品缩略图映射到相应的产品Quickview。
 
@@ -122,7 +121,7 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 
 * To see all outgoing HTTP requests in Google Chrome, press **F12** (Windows) or **Command+Options+I** (Mac) to open the Developer Tools panel, and then click the **Network** tab.
 
-* 在Firefox中，您可以通过按 **F12** (Windows)或 **Command+Option+I** (Mac)并使用其 **Net]** 选项卡来激活Firebug插件，也可以使用内置的检查器工具及其“网络”选项卡。
+* In Firefox, you can either activate the Firebug plug-in by pressing **F12** (Windows) or **Command+Option+I** (Mac) and use its **`[Net]`** tab, or you can use the built-in Inspector tool and its Network tab.
 
 * 在Internet Explorer中，通过按F12激活调 **试器工具**。
 
@@ -132,9 +131,9 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 
 在此过程中，访问网站的不同区域(具有不同的产品类别和类型)非常重要。 其原因是，Quickview URL可能具有特定网站类别通用的部分，但仅在您访问网站的其他区域时更改。
 
-在最简单的情况下，Quickview URL中唯一的变量部分是产品SKU。 在这种情况下，产品SKU值是在AEM中的交互式视频中向时间段添加缩略图时唯一需要的数据。
+在最简单的情况下，Quickview URL中唯一的变量部分是产品SKU。 在这种情况下，产品SKU值是向AEM交互式视频中的某个时间段添加缩略图时唯一需要的数据。
 
-但是，在复杂情况下，Quickview URL除了产品SKU之外还具有不同的可变元素，如类别ID、颜色代码等。 在这种情况下，在AEM中的缩略图数据定义中，每个此类元素都会变为一个单独的变量。
+但是，在复杂情况下，Quickview URL除了产品SKU之外还具有不同的可变元素，如类别ID、颜色代码等。 在这种情况下，AEM的缩略图数据定义中的每个此类元素都会成为单独的变量。
 
 请考虑以下Quickview URL及其生成的缩略图变量示例：
 
@@ -261,11 +260,11 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
 
 >[!NOTE]
-如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
 在当前创建／编辑会话中，页面右上角附近支持撤消和重做选项。
 
-保存交互式视频后，视频会立即打开到预览。 您可以从中选择交互式视频查看器预设并播放视频，大致了解交互式视频将如何呈现给客户。
+保存交互式视频后，视频会立即打开到预览。您可以从中选择交互式视频查看器预设并播放视频，大致了解交互式视频将如何呈现给客户。
 
 要为视频添加交互性，请执行以下操作：
 
@@ -286,7 +285,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 
       对于您添加的每个时间区段，您可以向其分配一个或多个缩略图，然后将这些缩略图链接到Quickview产品页面供客户购买，或链接到网页以了解更多信息。
 
-   * 点击“ **[!UICONTROL 播放]** ”按钮开始播放视频。 当您要突出显示的特定产品、服务或详细信息进入视图时，点按 **[!UICONTROL 暂停。]** 点按 **[!UICONTROL 添加区段。]**
+   * 点击“ **[!UICONTROL 播放]** ”按钮开始播放视频。当您要突出显示的特定产品、服务或详细信息进入视图时，点按 **[!UICONTROL 暂停。]** 点按 **[!UICONTROL 添加区段。]**
 
       继续播放视频，并在您要添加区段的时间轴点处暂停视频，直到视频结束。
 
@@ -363,6 +362,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       * 点按前导蓝色椭圆，将视频直接搜索到该区段的开头。
       * 点按尾部蓝色椭圆，将视频直接搜索到该段的末尾。
       * 点按整个区段，使视频播放返回到该区段的开头。
+
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
    调整时间轴区段结尾的位置
@@ -409,7 +409,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       <td>将所选缩略图与概览相关联</td> 
       <td><p>在“操作类型”下，点 <strong>按概览</strong>。</p> <p>如果您是AEM Sites和电子商务客户：</p> 
        <ul> 
-       <li>请注意，“SKU 值”文本字段会预先填充选定产品的 SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。当图像与AEM Commerce中的产品关联时，系统会自动填充该字段。</li> 
+       <li>请注意，“SKU 值”文本字段会预先填充选定产品的 SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。当图像与AEM Commerce中的产品关联时，会自动填充该字段。</li> 
        <li>如果预填充的SKU不正确，请点按或单击产品选取器图标（放大镜）以打开选择产品页面。 点按或单击要使用的产品，然后点按页面右上角的复选标记，以返回到交互式视频编辑器。</li> 
        </ul> <p> 如果您不是 <em>AEM Sites</em> 或电子商务客户</p> 
        <ul> 
@@ -422,8 +422,8 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       <td>将选定的缩略图与超链接相关联</td> 
       <td><p>在“操作类型”下，点 <strong>按超链</strong>接，然后执行下列操作之一：</p> 
        <ul> 
-       <li>如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到网页。 请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页的链接，则无法使用基于URL的链接方法。</li> 
-       <li>如果您是独立Dynamic Media客户，请在“HREF”文本字段中指定链接网页的完整URL路径。</li> 
+       <li>如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到网页。 请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。</li> 
+       <li>如果您是独立的Dynamic Media客户，请在“HREF”文本字段中指定链接网页的完整URL路径。</li> 
        </ul> <p>请确保指定是在新的浏览器选项卡还是在当前的选项卡中打开链接。</p> </td> 
       </tr> 
       <tr> 
@@ -434,7 +434,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       </ul> 
        <ul> 
        <li>指定体验片段在视频中的显示方式，如同其宽度和高度一样。</li>
-       </ul><strong>注意</strong>: 请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。</p></tr>&lt; 
+       </ul><strong>注意</strong>:请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。</p></tr>&lt; 
       <tr> 
       <td>编辑已分配给缩略图的操作</td> 
       <td>在某个时间轴区段内，点按其文本标签右侧带有链式链接的缩略图。该链式链接表示已向该缩略图分配操作。点按<strong>操作</strong>选项卡以进行更改。</td> 
@@ -475,7 +475,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       在时间轴上，点按要分成两半的区段，然后点按工 **[!UICONTROL 具栏上的]** “拆分区段”。
 
       选择两个或多个段将禁用“拆 **[!UICONTROL 分段]** ”功能。
-   ![chlimage_1-135](assets/chlimage_1-135.png)
+   ![chlimage_1-133](assets/chlimage_1-135.png)
 
    将选定的10秒段分为两段，每段5秒。
 
@@ -493,7 +493,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 
 1. 发布交互式视频。发布后会创建嵌入代码或 URL，最后您需要将该嵌入代码或 URL 复制并粘贴到您的网站体验。
 
-   如果您使用Quickviews添加交互性，则只使用嵌入代码； 如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+   如果您使用Quickviews添加交互性，则只使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
    请参阅[发布资产](publishing-dynamicmedia-assets.md)。
 
@@ -510,7 +510,7 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 
 现在，在上传视频、向视频添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站。
 
-如果您是AEM Sites客户，则可以通过将交互式媒体组件拖动到页面来添加交互式视频。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+如果您是AEM Sites的客户，则可以通过将交互式媒体组件拖动到页面来添加交互式视频。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 如果您是独立的AEM Assets客户，则可以按本节所述手动将交互式视频添加到您的网站。
 
@@ -518,7 +518,7 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-如果您使用Quickviews添加交互性，则只使用嵌入代码； 如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+如果您使用Quickviews添加交互性，则只使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
 1. 在目标网页代码中，找到静态视频所在的位置。
 
@@ -528,7 +528,7 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 
 >[!NOTE]
 至此，如果您只是通过超链接的网页添加交互性，您就已经完成了所有操作。
-但是，如果您为触发概览而添加了任何交互性，则交互式视频旁边的缩略图仅用于显示目的； 它们尚未与您现有的Quickviews集成。 在这种情况下，您现在需要将交互式视频与网站上的现有Quickviews相集成。
+但是，如果您为触发概览而添加了任何交互性，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与您现有的Quickviews集成。 在这种情况下，您现在需要将交互式视频与网站上的现有Quickviews相集成。
 
 **示例**
 
@@ -563,14 +563,14 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 </script>
 ```
 
-集成过程很简单，只需从AEM中删除视频嵌入代码并将其替换为交互式视频嵌入代码。 您可以在以下URL查看结果。 虽然它在页面上显示交互式视频，但尚未与现有概览相集成：
+集成过程很简单，只需删除视频嵌入代码并将其替换为AEM中的交互式视频嵌入代码。 您可以在以下URL查看结果。 虽然它在页面上显示交互式视频，但尚未与现有概览相集成：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
 
 ## 将交互式视频与现有Quickview集成 {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
-此任务仅在您是独立AEM Assets客户时适用。
+此任务仅在您是独立的AEM Assets客户时适用。
 
 该过程的最后一步是将交互式视频与网站上使用的现有Quickview实现相集成。 但是，没有任何一种集成解决方案是在所有情况下都适用的。每个Quickview实施都是独一无二的。 因此，需要一种最可能需要前端IT人员协助的特定方法。
 
@@ -578,7 +578,7 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 
 1. 用户在网站的用户界面上触发一个元素。
 1. 前端代码根据在步骤1中触发的用户界面元素获取Quickview URL。
-1. 前端代码使用在步骤2中获取的URL发送AJAX请求。
+1. 前端代码使用步骤2中获取的URL发送AJAX请求。
 1. 后端逻辑将相应的概览数据或内容返回到前端代码。
 1. 前端代码加载Quickview数据或内容。
 1. （可选）前端代码将加载的Quickview数据转换为HTML表示形式。
@@ -586,7 +586,7 @@ See [Publishing Assets](/help/assets/publishing-dynamicmedia-assets.md) for deta
 
 这些调用并非独立的公共 API 调用（可以由网页逻辑从任意步骤进行调用）。相反，这些调用属于链式调用，即，每个后续步骤都隐藏在前一步的最后阶段（回调）。
 
-在替换步骤1和部分步骤2的同时，当用户单击交互式视频中的缩略图时，查看器将处理此类用户交互。 查看器会返回一个事件，其中包含之前添加到AEM的所有缩略图数据。
+在替换步骤1和部分步骤2的同时，当用户单击交互式视频中的缩略图时，查看器将处理此类用户交互。 查看器将返回一个事件到网页，其中包含之前添加到AEM的所有缩略图数据。
 
 在这种事件处理程序中，前端代码执行以下操作：
 
