@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e6d02717811ac78b77dc459814941d654e94733f
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -119,7 +119,6 @@ AEM Experience Fragments可导出到Adobe Target的默认工作区，或导出�
 
 1. 在 **Cloud Service配置**&#x200B;下，从 **下拉** 列表中选择“Adobe Target”。
 
-1. 
    >[!NOTE]
    >
    >可以自定义体验片段优惠的JSON格式。 为此，请定义客户体验片段组件，然后在组件Sling Model中注释如何导出其属性。
