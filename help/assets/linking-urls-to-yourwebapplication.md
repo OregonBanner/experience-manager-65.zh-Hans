@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1274'
 ht-degree: 24%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 24%
 
 您的网站和应用程序通过URL调用访问Dynamic Media服务。 在您发布资产后，Dynamic Media 会激活引用该资产的 URL 字符串。您可以将这些 URL 粘贴到 Web 浏览器中以进行测试。
 
-仅当您未将AEM用作WCM *时* ，才链接到URL。 链接与嵌入——用于以弹出窗口或模态窗口的形式传送视频播放器。 如果您将AEM用作WCM, [则可以直接在页面上添加资产。](adding-dynamic-media-assets-to-pages.md)
+仅当您未将AEM用作 *WCM* 时，才链接到URL。 链接与嵌入——用于以弹出窗口或模态窗口的形式传送视频播放器。 如果您使用AEM作为WCM, [则直接在页面上添加资产。](adding-dynamic-media-assets-to-pages.md)
 
 要将这些URL字符串放置到网页和应用程序中，请从Dynamic Media复制它们。
 
@@ -122,30 +122,30 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
 ## 获取已发布视频演绎版的视频URL {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>Cloud Service。]**
+1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>Cloud Services。]**
 1. On the **[!UICONTROL Cloud Services]** page, scroll down to the **[!UICONTROL Dynamic Media Cloud Services]** heading, then tap **[!UICONTROL Show Configurations.]**
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
 
-1. 在“ **[!UICONTROL Dynamic Media云设置]** ”页面 **[!UICONTROL 的“视频服务URL]**”下，复制整个URL路径。 您稍后将需要复制的URL路径。
+1. 在Dynamic Media **[!UICONTROL Cloud设置页]** 面的视频 **[!UICONTROL 服务URL下]**，向下复制整个URL路径。 您稍后将需要复制的URL路径。
 
    例如，URL路径可能与以下内容类似：
 
    `https://s7athens.macromedia.com:9090/DMGateway/`
 
-   (以上路径仅供说明； 它不是您复制的实际路径。)
+   (以上路径仅供说明；它不是您复制的实际路径。)
 
 1. 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。
 
    例如，如果注册ID为 `87654321|MyCompany`，则客户名称为 `MyCompany`。
 
-1. 在页面的左上角附近，点按 **[!UICONTROLCloud Service**，然后点按Experience Manager标志并导航 **[!UICONTROL 到“常规”>“CRXDE Lite”。]**
+1. 在页面的左上角附近，点按 **[!UICONTROL Cloud Services]**，然后点按Experience Manager徽标并导航 **[!UICONTROL 到“常规”>“CRXDE Lite”。]**
 1. 从JCR（Java内容存储库）中向下复制整个视频再现路径。
 
    例如，视频的再现路径可能与以下内容类似：
 
    `/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112f/avs/Momentum_1080-0x720-2600k.mp4`
 
-   (以上路径仅供说明； 它不是您复制的实际路径。)
+   (以上路径仅供说明；它不是您复制的实际路径。)
 
 1. 按照以下顺序排列复制的信息，以形成完整的URL路径：
 
@@ -159,16 +159,16 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
 ## 获取自适应流播放(HLS)的视频URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>Cloud Service。]**
+1. 在AEM中，导航到 **[!UICONTROL 工具>部署>云>Cloud Services。]**
 1. On the **[!UICONTROL Cloud Services]** page, scroll down to the **[!UICONTROL Dynamic Media Cloud Services]** heading, then tap **[!UICONTROL Show Configurations.]**
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
-1. 在“Dynamic Media **[!UICONTROL Cloud Service设置]** ”页面上，执行以下操作：
+1. 在Dynamic Media **[!UICONTROL Cloud Services设置页]** ，执行以下操作：
 
    * 在“ **[!UICONTROL 视频服务]** URL”下，复制整个URL路径。 在这些步骤之后，您将需要复制的URL路径。 例如，URL路径可能与以下内容类似：
 
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
-   (以上路径仅供说明； 它不是您复制的实际路径。)
+   (以上路径仅供说明；它不是您复制的实际路径。)
 
    * 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。在稍后这些步骤中，您将需要复制的客户名称。
 
@@ -182,7 +182,7 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
    | HTTP <br> 如果您使用HTTP(非安全视频投放)，请确保在您之前复制的视频服务URL值中将https更改为http。 | `public/` |
    | HTTPS | `public-ssl/` |
 
-1. 复制AEM中由Dynamic Media处理的完整视频资产路径。 在这些步骤的稍后部分，您将需要此复制的视频资产路径。
+1. 在AEM中复制完整的视频资产路径（由Dynamic Media处理）。 在这些步骤的稍后部分，您将需要此复制的视频资产路径。
 
    例如：
 
@@ -200,8 +200,8 @@ Dynamic Media支持静态资产的投放，静态资产是除图像和视频之�
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## 使用HTTP/2传送Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2交付Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
 
-HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 投放Dynamic Media资源现在可以通过HTTP/2，从而提供更好的响应和加载时间。
+HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 Dynamic Media资产的投放现在可以通过HTTP/2，从而提供更好的响应和加载时间。
 
-有 [关通过Dynamic Media](http2.md) 帐户开始使用HTTP/2的完整详细信息，请参阅内容的HTTP2投放。
+有 [关使用Dynamic Media帐户](http2.md) HTTP/2入门的完整详细信息，请参阅内容的HTTP2投放。
