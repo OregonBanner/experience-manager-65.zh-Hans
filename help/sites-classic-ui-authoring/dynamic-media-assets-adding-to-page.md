@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: 23dfcc944a83dd683078cfe00f85c4cc734e7752
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 54%
+source-wordcount: '1722'
+ht-degree: 55%
 
 ---
 
@@ -48,7 +48,7 @@ Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] componen
 
 ## Dynamic Media 组件 {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] 和 [!UICONTROL 交互式媒体] ，在Sidekick中的 [!UICONTROL Dynamic Media] 下可 **[!UICONTROL 以使用。]**&#x200B;对于任何交互式资产（例如交互式视频、交互式图像或传送集），请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。对于所有其他 Dynamic Media 资产，请使用 **[!UICONTROL Dynamic Media]** 组件。
+[!UICONTROL Dynamic Media和][!UICONTROL Interactive Media] 位于Sidekick的 [!UICONTROL Dynamic Media下] ，可 **[!UICONTROL 用于Dynamic Media。]**&#x200B;对于任何交互式资产（例如交互式视频、交互式图像或传送集），请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。对于所有其他 Dynamic Media 资产，请使用 **[!UICONTROL Dynamic Media]** 组件。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -159,7 +159,7 @@ The [!UICONTROL Interactive Media] component is smart – depending on whether y
 
 **[!UICONTROL 宽度和高度]** -如果希望视频具有固定大小，请输入以像素为单位的值。 将这两个值留空会使视频成为自适应资产。
 
-You can edit the following **[!UICONTROL Add To Cart** settings by clicking **[!UICONTROL Edit]** in the component.
+您可以通过在组件中单击&#x200B;**[!UICONTROL 编辑]**，来编辑以下&#x200B;**[!UICONTROL 添加到购物车]**&#x200B;设置。
 
 **[!UICONTROL 显示产品资产]** -默认情况下，此值处于选中状态。 产品资产会按“商务”模块中的定义显示产品的图像。清除复选标记不会显示产品资产。
 
