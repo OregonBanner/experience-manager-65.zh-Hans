@@ -10,26 +10,29 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+workflow-type: tm+mt
+source-wordcount: '1145'
+ht-degree: 1%
 
 ---
 
 
 # 配置电子邮件通知{#configuring-email-notification}
 
-AEM会向以下用户发送电子邮件通知：
+AEM向用户发送电子邮件通知：
 
-* 已订阅页面事件，例如修改或复制。 “通 [知收件箱](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) ”部分介绍如何订阅此类活动。
+* 已订阅页面事件，例如修改或复制。 “通 [知收件箱](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) ”部分介绍如何订阅此类事件。
 
-* 已订阅论坛活动。
-* 必须在工作流中执行步骤。 “参 [加者步骤](/help/sites-developing/workflows-step-ref.md#participant-step) ”部分介绍如何在工作流中触发电子邮件通知。
+* 已订阅论坛事件。
+* 必须在工作流中执行一个步骤。 参加 [者步骤](/help/sites-developing/workflows-step-ref.md#participant-step) (Participant Step)部分介绍如何在工作流中触发电子邮件通知。
 
 先决条件：
 
-* 用户需要在其个人资料中定义有效的电子邮件地址。
-* 需 **要正确配置Day CQ邮件服务** 。
+* 用户需要在其用户档案中定义有效的电子邮件地址。
+* 需 **要正确配置Day** CQ Mail Service。
 
-当用户收到通知时，他会收到一封电子邮件，其语言在其个人资料中定义。 每种语言都有其自己的可自定义的模板。 可以为新语言添加新的电子邮件模板。
+当用户收到通知时，他会收到一封电子邮件，其语言在用户档案中定义。 每种语言都有其自己的可自定义的模板。 可以为新语言添加新的电子邮件模板。
 
 >[!NOTE]
 >
@@ -37,16 +40,16 @@ AEM会向以下用户发送电子邮件通知：
 
 ## 配置邮件服务 {#configuring-the-mail-service}
 
-要使AEM能够发送电子邮件， **Day CQ Mail Service** to be reportly configured. 您可以在Web控制台中查看配置。 When working with AEM there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
+要使AEM能够发送电子邮件， **Day CQ邮件服务** 需要正确配置。 您可以在Web控制台中视图配置。 When working with AEM there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
 
 以下约束适用：
 
-* SMTP服 **务器端口必须** 25或更高。
+* SMTP服 **务器端口** 必须为25或更高。
 
-* SMTP服 **务器主机名** ，不得为空。
-* “ **发件人”地址不得为空** 。
+* SMTP服 **务器主机名** 不能为空。
+* “ **发件人”地址** 不得为空。
 
-为了帮助您调试 **Day CQ邮件服务的问题**，您可以观看服务的日志：
+为了帮助您调试Day CQ邮 **件服务的问题**，您可以观看服务的日志：
 
 `com.day.cq.mailer.DefaultMailService`
 
@@ -56,16 +59,16 @@ AEM会向以下用户发送电子邮件通知：
 
 ## 配置电子邮件通知渠道 {#configuring-the-email-notification-channel}
 
-订阅页面或论坛活动通知时，默认情况下会将发件人电子邮件地址设 `no-reply@acme.com` 置为。 您可以通过在Web控制台中配置 **通知电子邮件渠道** ，来更改此值。
+当您订阅页面或论坛事件通知时，默认情况下会将发件人电子邮件地址设 `no-reply@acme.com` 置为。 您可以通过在Web控制台中配 **置通知电子邮件渠道** ，来更改此值。
 
-要配置发件人电子邮件地址，请向存储库 `sling:OsgiConfig` 中添加一个节点。 请按照以下过程直接使用CRXDE Lite添加节点：
+要配置发件人电子邮件地址，请向存储 `sling:OsgiConfig` 库添加节点。 请按照以下过程，直接使用CRXDE Lite添加节点：
 
-1. 在CRXDE lite中，添加一个名为应用程序文 `config` 件夹下的文件夹。
+1. 在CRXDE Lite中，在应用程序文件夹下 `config` 添加一个名为的文件夹。
 1. 在config文件夹中，添加一个名为：
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel` 类型 `sling:OsgiConfig`
 
-1. 向名为 `String` 的节点添加属性] `email.from`。 对于该值，指定要使用的电子邮件地址。
+1. 向名 `String` 为的节点添加属性 `email.from`。 对于该值，指定要使用的电子邮件地址。
 
 1. 单击“ **全部保存**”。
 
@@ -82,7 +85,7 @@ AEM会向以下用户发送电子邮件通知：
 
 ## 配置工作流电子邮件通知服务 {#configuring-the-workflow-email-notification-service}
 
-当您收到工作流电子邮件通知时，发件人电子邮件地址和主机URL前缀均设置为默认值。 您可以通过在Web控制台中配置 **Day CQ Workflow电子邮件通知服务来更改这些值** 。 如果这样做，建议在存储库中保留所做的更改。
+当您收到工作流电子邮件通知时，发件人电子邮件地址和主机URL前缀均设置为默认值。 您可以通过在Web控制台中配 **置Day CQ Workflow电子邮件通知服** 务来更改这些值。 如果这样做，建议保留存储库中的更改。
 
 默认配置在Web控制台中如下所示：
 
@@ -94,7 +97,7 @@ AEM会向以下用户发送电子邮件通知：
 
 `/etc/notification/email/default/com.day.cq.wcm.core.page`
 
-默认的英语模板( `en.txt`)定义如下：
+默认的英语模 `en.txt`板()定义如下：
 
 ```xml
 subject=[CQ Page Event Notification]: Page Event
@@ -133,16 +136,16 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-其中，&lt;text_x>可以是静态文本和动态字符串变量的混合。 可在页面通知的电子邮件模板中使用以下变量：
+其中，&lt;text_x>可以是静态文本和动态字符串变量的混合。 以下变量可在页面通知的电子邮件模板中使用：
 
-* `${time}`、活动日期和时间。
+* `${time}`、事件日期和时间。
 
-* `${userFullName}`，触发活动的用户的全名。
+* `${userFullName}`，触发事件的用户的全名。
 
-* `${userId}`、触发活动的用户的ID。
-* `${modifications}`，以下列格式描述页面事件的类型和页面路径：
+* `${userId}`，触发事件的用户的ID。
+* `${modifications}`，以以下格式描述页面事件类型和页面路径：
 
-   &lt;page event type> => &lt;page path>
+   &lt;page事件类型> => &lt;page path>
 
    例如：
 
@@ -154,7 +157,7 @@ This is an automatically generated message. Please do not reply.
 
 `/etc/notification/email/default/com.day.cq.collab.forum`
 
-默认的英语模板( `en.txt`)定义如下：
+默认的英语模 `en.txt`板()定义如下：
 
 ```xml
 subject=[CQ Forum Notification]
@@ -173,7 +176,7 @@ This is an automatically generated message. Please do not reply.
 
 #### 为论坛通知自定义电子邮件模板 {#customizing-email-templates-for-forum-notification}
 
-为论坛通知自定义英语电子邮件模板：
+要自定义论坛通知的英语电子邮件模板，请执行以下操作：
 
 1. 在CRXDE中，打开文件：
 
@@ -195,7 +198,7 @@ This is an automatically generated message. Please do not reply.
 
 以下变量可在论坛通知的电子邮件模板中使用：
 
-* `${time}`、活动日期和时间。
+* `${time}`、事件日期和时间。
 
 * `${forum.path}`, the path to the forum page.
 
@@ -228,7 +231,7 @@ This is an automatically generated message. Please do not reply.
 
 #### 为工作流通知自定义电子邮件模板 {#customizing-email-templates-for-workflow-notification}
 
-为工作流活动通知自定义英语电子邮件模板：
+要自定义工作流事件通知的英语电子邮件模板，请执行以下操作：
 
 1. 在CRXDE中，打开文件：
 
@@ -248,17 +251,17 @@ subject=<text_1>
 
 >[!NOTE]
 >
->其中 `<text_x>` 可以是静态文本和动态字符串变量的混合。 项目的每行都 `<text_x>` 需要用反斜杠( `\`)结束，但最后一个实例除外，因为没有反斜杠表示字符串变量的 `<text_x>` 结尾。
+>其中 `<text_x>` 可以是静态文本和动态字符串变量的混合。 项目的每行 `<text_x>` 都需要用反斜杠( `\`)结束，但最后一个实例除外，因为缺少反斜杠表示字符串变量 `<text_x>` 的结尾。
 >
->有关模板格式的更多信息，请参 [阅Properties.load()方法的javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) 。
+>有关模板格式的更多信息，请 [参阅Properties.load()方法的javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) 。
 
-该方法 `${payload.path.open}` 显示工作项有效负荷的路径。 例如，对于站点中的页面， `payload.path.open` 则类似于 `/bin/wcmcommand?cmd=open&path=…`。;这是没有服务器名称的，这就是模板为此预先提供的原因 `${host.prefix}`。
+该方法 `${payload.path.open}` 显示工作项的有效负荷路径。 例如，对于站点中的页面， `payload.path.open` 则类似于 `/bin/wcmcommand?cmd=open&path=…`。;这没有服务器名称，因此模板会优先使用它 `${host.prefix}`
 
 可以在电子邮件模板中使用以下变量：
 
-* `${event.EventType}`，事件类型
-* `${event.TimeStamp}`、活动的日期和时间
-* `${event.User}`，触发活动的用户
+* `${event.EventType}`，类型事件
+* `${event.TimeStamp}`、事件日期和时间
+* `${event.User}`，触发事件的用户
 * `${initiator.home}`，启动器节点路径
 
 * `${initiator.name}`，启动器名称
@@ -268,7 +271,7 @@ subject=<text_1>
 * `${item.node.id}`，与此工作项关联的工作流模型中节点的id
 * `${item.node.title}`，工作项的标题
 * `${participant.email}`，参加者的电子邮件地址
-* `${participant.name}`，参加者姓名
+* `${participant.name}`、参加者姓名
 * `${participant.familyName}`，参加者的姓氏
 * `${participant.id}`，参加者的id
 * `${participant.language}`，参加者语言
@@ -278,10 +281,10 @@ subject=<text_1>
 * `${model.id}`，工作流模型的id
 
 * `${model.version}`，工作流模型的版本
-* `${payload.data}`，有效负荷
+* `${payload.data}`、有效负荷
 
-* `${payload.type}`，有效载荷类型
-* `${payload.path}`，有效负荷路径
+* `${payload.type}`、有效负荷类型
+* `${payload.path}`，有效负荷的路径
 * `${host.prefix}`，主机前缀，例如：http://localhost:4502
 
 ### 为新语言添加电子邮件模板 {#adding-an-email-template-for-a-new-language}
@@ -291,21 +294,21 @@ subject=<text_1>
 1. 在CRXDE中，添加以下文 `<language-code>.txt` 件：
 
    * `/etc/notification/email/default/com.day.cq.wcm.core.page` :适用于页面通知
-   * `/etc/notification/email/default/com.day.cq.collab.forum` :用于论坛通知
-   * `/etc/workflow/notification/email/default` :适用于工作流通知
+   * `/etc/notification/email/default/com.day.cq.collab.forum` :论坛通知
+   * `/etc/workflow/notification/email/default` :工作流通知
 
 1. 使文件适应语言。
 1. 保存更改。
 
 >[!NOTE]
 >
->用 `<language-code>` 作电子邮件模板文件名的语言代码必须为AEM识别的小写字母。 对于语言代码，AEM依赖ISO-639-1。
+>用 `<language-code>` 作电子邮件模板文件名的代码必须是由AEM识别的小写字母语言代码。 对于语言代码，AEM依赖于ISO-639-1。
 
 ## 配置AEM Assets电子邮件通知 {#assetsconfig}
 
-在共享或取消共享AEM资产中的收藏集时，用户可以接收来自AEM的电子邮件通知。 要配置电子邮件通知，请按照以下步骤操作。
+当AEM Assets的集合被共享或取消共享时，用户可以收到AEM发送的电子邮件通知。 要配置电子邮件通知，请按照以下步骤操作。
 
-1. 按照上述配置邮件服务中的 [说明配置电子邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service)。
-1. 以管理员身份登录AEM。 单击 **工具** >操 **作** > **Web控制台** ，以打开Web控制台配置。
+1. 按照配置邮件服务中的上述 [说明配置电子邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service)。
+1. 以管理员身份登录AEM。 单击 **工具** >操 **作** > Web **控制台** ，打开Web控制台配置。
 1. 编辑 **Day CQ DAM资源集合Servlet**。 选择“ **发送电子邮件**”。 单击&#x200B;**保存**。
 
