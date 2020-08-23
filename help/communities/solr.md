@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1491'
 ht-degree: 2%
@@ -80,8 +80,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
 #### 2.创建集合 {#create-a-collection}
 
-参考：[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create
-](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+参考：[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
 使用:
 ./bin/solr create \
@@ -190,7 +189,7 @@ Solr 4.10的标准MLS文件(模式.xml、solrconfig.xml)。
 
 1. [将新配置上传](#upload-a-configuration-to-zookeeper) 到ZooKeeper。
 1. [创建指定必](#create-a-collection) 要参数的集合，如分片数、副本数和配置名称。
-1. 如果在创建集合时*未*提供配置名称，请将此新 [创建的集合与上传到ZooKeeper的](#link-a-collection-to-a-configuration-set) 配置链接。
+1. 如果在创建集合时*未*提供配置名称，请将此新 [创建的集合与上传到ZooKeeper](#link-a-collection-to-a-configuration-set) 的配置链接起来。
 
 1. 对于MSRP，请运 [行MSRP重新索引工具](msrp.md#msrp-reindex-tool)，除非这是新安装。
 
