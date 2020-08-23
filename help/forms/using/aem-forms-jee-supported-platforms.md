@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 456460d54650bcb71d8eee47fdf0e859a383b3d4
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '3228'
 ht-degree: 1%
@@ -186,7 +186,7 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
 * 仅支持MongoDB存储引擎WiredTiger。
 * AEM不支持MongoDB共享。
 * AEM Forms在JEE上不支持MySQL的RDBMK持久性。
-* 文档安全模块不使用内容存储库。 这意味着，如果您仅使用文档安全，并且不计划使用HTML Workspace、HTML5表单或自适应表单，则不要安装内容存储库。
+* 文档安全模块不使用内容存储库。 这意味着，如果您仅使用文档安全，并且不计划使用HTML Workspace、HTML5表单或自适应表单，则请勿安装内容存储库。
 * AEM Forms在JEE上不支持使用MySQL来持久化AEM存储库(CRX-Repository)。
 
 
@@ -511,8 +511,7 @@ AEM Forms的以下子系统不 [符合](https://www.section508.gov/) 508:
 有关其他要求，请参阅：
 
 * [单服务器AEM Forms部署JEE的系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
-* [集群AEM Forms部署JEE的系统要求
-   ](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
+* [集群AEM Forms部署JEE的系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
 
 ## AEM FormsJEE支持的客户 {#supported-clients-for-aem-forms-on-jee}
 
