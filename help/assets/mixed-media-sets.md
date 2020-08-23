@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 38%
@@ -71,7 +71,7 @@ If you need to, you can edit [Mixed Media Sets](#editing-mixed-media-sets). In a
 
 >[!NOTE]
 >
->如果您在创建集时遇到问题，请参 [阅疑难解答Dynamic Media- Scene7模式](/help/assets/troubleshoot-dms7.md)。
+>如果创建集时遇到问题，请参 [阅Dynamic Media -Scene7模式疑难解答](/help/assets/troubleshoot-dms7.md)。
 
 ## 上传资产 {#uploading-assets}
 
@@ -151,10 +151,10 @@ You can perform a variety of editing tasks to assets in Mixed Media Sets directl
 
       >[!NOTE]
       >
-      >    * To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card View]** or **[!UICONTROL Column View]**) navigate to the Mixed Media Set. 将鼠标悬停在资产上，然后点按复选标记图标以将其选中。 Press **[!UICONTROL Backspace]** on the keyboard, or click **[!UICONTROL More]** (three dots) on the toolbar, then tap **[!UICONTROL Delete.]**
+      >* To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card View]** or **[!UICONTROL Column View]**) navigate to the Mixed Media Set. 将鼠标悬停在资产上，然后点按复选标记图标以将其选中。 Press **[!UICONTROL Backspace]** on the keyboard, or click **[!UICONTROL More]** (three dots) on the toolbar, then tap **[!UICONTROL Delete.]**
          >
-         >    
-      * You can edit the assets in a Mixed Media Set by navigating to the set, clicking **Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
+         >
+      * You can edit the assets in a Mixed Media Set by navigating to the set, clicking **[!UICONTROL Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
 
 
 1. 完成 **[!UICONTROL 编辑]** 后，点按保存。
@@ -164,7 +164,7 @@ You can perform a variety of editing tasks to assets in Mixed Media Sets directl
    >* 要编辑混合媒体集中的资产，请导航到混合媒体集。 点按（不选择）该集，以在“AEM 集预览”页面中将其打开。In the left rail, click the down caret to open the drop-down list, then tap **[!UICONTROL Set Members.]** 在“设置成员”页面中，将指针悬停在资产上，然 **[!UICONTROL 后点]** 按编辑（铅笔图标）以打开编辑页面。
       >
       >
-   * 要删除整个混合媒体集——在任何查看模式(如卡片视图或列视图)中，导航到混合媒体集。 Hover on the set, then tap **Select]** (checkmark icon). Press **[!UICONTROL Backspace]** on your keyboard, or tap **[!UICONTROL More]** (row of three dots), then tap **[!UICONTROL Delete.]**
+   * 要删除整个混合媒体集——在任何查看模式(如卡片视图或列视图)中，导航到混合媒体集。 Hover on the set, then tap **Select** (checkmark icon). Press **[!UICONTROL Backspace]** on your keyboard, or tap **[!UICONTROL More]** (row of three dots), then tap **[!UICONTROL Delete.]**
 
 
 ## 预览混合媒体集 {#previewing-mixed-media-sets}
