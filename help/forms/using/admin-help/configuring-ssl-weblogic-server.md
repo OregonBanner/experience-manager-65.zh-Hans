@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
@@ -59,8 +59,8 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
    <td><p>密钥库文件的位置和名称。</p><p>该位置可以包含文件的绝对路径。 或者，它可以相对于输入keytool命令的命令提示符的当前目录。</p></td>
    <td>
     <ul>
-     <li><p>自定义标识密钥库： <code>[</code><i>appserverdomain]</i><code>/adobe/</code><i>[服务器名称]</i><code>/ads-ssl.jks</code></p></li>
-     <li><p>自定义信任密钥库： <code>[</code><i>appserverdomain]</i><code>/adobe/</code><i>[服务器名称]</i><code>/ads-ca.jks</code></p></li>
+     <li><p>自定义标识密钥库： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[服务器名称]</i><code>/ads-ssl.jks</code></p></li>
+     <li><p>自定义信任密钥库： <code>[</code><i>appserverdomain<code>]</code></i><code>/adobe/</code><i>[服务器名称]</i><code>/ads-ca.jks</code></p></li>
     </ul></td>
   </tr>
   <tr>
@@ -78,8 +78,8 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
    <td><p>保护密钥库内容的密码。 </p></td>
    <td>
     <ul>
-     <li><p>自定义标识密钥库： 密钥库密码必须与为管理控制台的信任存储组件指定的SSL凭据密码相对应。</p></li>
-     <li><p>自定义信任密钥库： 使用与用于自定义身份密钥库的口令相同的口令。</p></li>
+     <li><p>自定义标识密钥库：密钥库密码必须与为管理控制台的信任存储组件指定的SSL凭据密码相对应。</p></li>
+     <li><p>自定义信任密钥库：使用与用于自定义身份密钥库的口令相同的口令。</p></li>
     </ul></td>
   </tr>
   <tr>
@@ -134,7 +134,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
    >[!NOTE]
    >
-   >替 `[JAVA_HOME]` 换为安装JDK的目录，并将_ `store`**替换为自定义&#x200B;*`password`标识密钥库的口令。*
+   >替 `[JAVA_HOME]` 换为安装JDK的目录，并将_ `store`**替换为自定义*`password`标识密钥库的口令。*
 
    例如：
 
@@ -151,7 +151,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
    >[!NOTE]
    >
-   >替换 `[JAVA_HOME]` 为安装JDK的目录，并用您自 `store`*己的密码替&#x200B;*换_和`password`_`key`**`password`*。*
+   >替换 `[JAVA_HOME]` 为安装JDK的目录，并用您自 `store`*己的密码替* 换_和 `password` _ `key`**`password`*。*
 
    例如：
 
@@ -182,7 +182,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
    **自定义标识密钥库**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks，其中*[appserverdomain] *是实际路径， *[服务器名称]* 是应用服务器的名称。
 
-   **自定义标识密钥库类型**: JKS
+   **自定义标识密钥库类型**:JKS
 
    **自定义标识密钥库密码**: *mypassword* （自定义标识密钥库密码）
 
@@ -190,7 +190,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 
    **自定义信任密钥库文件名**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`，其中 `*[appserverdomain]*` 是实际路径
 
-   **自定义信任密钥库类型**: JKS
+   **自定义信任密钥库类型**:JKS
 
    **自定义信任密钥库密码短语**: *mypassword* （自定义信任密钥密码）
 
@@ -198,7 +198,7 @@ keytool命令通常位于Java jre/bin目录中，并且必须包括多个选项�
 1. 默认情况下，为“标识和信任位置”选择“密钥库”。 否则，将其更改为密钥库。
 1. 在“标识”下，指定以下值：
 
-   **私钥别名**: ads-credentials
+   **私钥别名**:ads-credentials
 
    **密码**: *mypassword*
 
