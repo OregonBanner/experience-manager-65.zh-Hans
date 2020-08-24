@@ -3,10 +3,10 @@ title: 如何编辑或添加元数据
 description: 了解通过各种方 [!DNL Adobe Experience Manager Assets] 式编辑资产元数据的资产元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4748eed3ce484e8446b641ccbc7b5d76cb66f428
+source-git-commit: fc14ccc834c9a41b67eb8cf17dd8b34f5dff2406
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 2%
+source-wordcount: '473'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 
    ![选择资产的属性以视图其元数据](assets/asset-metadata.png)
 
-   *图： 在资产属性页面上编辑或添[!UICONTROL 加元]数据。*
+   *图：在资产属性页面上编辑或添[!UICONTROL 加元]数据。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -39,9 +39,9 @@ ht-degree: 2%
    >
    >如果文本字段为空，则没有现有元数据集。 您可以在字段中输入一个值并保存它以添加该元数据属性。
 
-对资产元数据所做的任何更改都会作为其XMP数据的一部分写回原始二进制文件。 元数据回写工作流会将元数据添加到原始二进制文件中。 对现有属性（如）所做的更 `dc:title`改将被覆盖，新属性(包括自定义属 `cq:tags`性，如)将随模式添加。
+对资产元数据所做的任何更改都会作为XMP数据的一部分写回原始二进制文件。 元数据回写工作流会将元数据添加到原始二进制文件中。 对现有属性（如）所做的更 `dc:title`改将被覆盖，新属性(包括自定义属 `cq:tags`性，如)将随模式添加。
 
-支持XMP写回，并支持技术要求中描述的平台和文 [件格式。](/help/sites-deploying/technical-requirements.md)
+支持并支持技术要求中描述的平台和文件格式 [的XMP写回。](/help/sites-deploying/technical-requirements.md)
 
 ## 编辑元数据模式 {#editing-metadata-schema}
 
@@ -49,12 +49,16 @@ ht-degree: 2%
 
 ## 在 [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
 
-您可以在中添加您自己的命名空间 [!DNL Experience Manager]。 正如存在预定义的命名空间 `cq`, `jcr`如、 `sling`和，您可以为存储库元数据和XML处理创建命名空间。
+您可以在中添加您自己的命名空间 [!DNL Experience Manager]。 正如存在预定义的命名空间 `cq`, `jcr`如、 `sling`和，您可以对存储库元数据和XML处理进行命名空间。
 
 1. 访问节点类型管理页 `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`面。
 1. 要访问命名空间管理页面，请 **[!UICONTROL 单击]** 页面顶部的命名空间。
 1. 要添加命名空间, **[!UICONTROL 请单]** 击页面底部的“新建”。
 1. 在XML命名空间约定中指定自定义命名空间。 以URI的形式指定ID，并为ID指定关联前缀。 单击&#x200B;**[!UICONTROL 保存]**。
+
+## 提示和限制 {#best-practices-limitations}
+
+* 通过触屏UI进行的元数据更新会更改命名空间中的元数据 `dc` 属性。 通过HTTP API进行的任何更新都会更改命名空间中的元数据属 `jcr` 性。 了 [解如何使用HTTP API更新元数据](/help/assets/mac-api-assets.md#update-asset-metadata)。
 
 >[!MORELIKETHIS]
 >
