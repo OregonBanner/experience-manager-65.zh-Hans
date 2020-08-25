@@ -3,7 +3,7 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9e67e252348f471c052f6c3e88aea61d7a309241
+source-git-commit: 268689d534f8bf649335269f9169455c381f9554
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 10%
@@ -33,7 +33,7 @@ ht-degree: 10%
 
 默认情 [!DNL Assets] 况下，您不会上传任何大于2 GB的资产，因为文件大小限制。 但是，您可以通过进入CRXDE Lite并在目录下创建节点来覆盖此 `/apps` 限制。 该节点必须具有相同的节点名称、目录结构和可比的节点属性。
 
-除了配置 [!DNL Assets] 之外，请更改以下配置以上传大型资产：
+除了配置 [!DNL Assets] 之外，还要更改以下配置以上传大型资产：
 
 * 增加令牌过期时间。 请参 [!UICONTROL 阅在Web控制台中Adobe] Granite CSRF Servlet `https://[aem_server]:[port]/system/console/configMgr`，网址为。 有关详细信息，请参 [阅CSRF保护](/help/sites-developing/csrf-protection.md)。
 * 增加调 `receiveTimeout` 度程序配置。 有关详细信息，请参阅 [Experience Manager调度程序配置](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
@@ -51,8 +51,8 @@ ht-degree: 10%
 
    ![叠加节点](assets/overlay-node-path.png)
 
-1. 刷新浏览器。 叠加节 `/jcr_root/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` 点被选中。
-1. 在“属 **[!UICONTROL 性]** ”选项卡中，输入相应的字节值，将大小限制增加到所需大小。 例如，要将大小限制增加到30 GB，请输入 `{sizeLimit : "32212254720"}` 值。
+1. 刷新浏览器。 叠加节 `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` 点被选中。
+1. 在“属 **[!UICONTROL 性]** ”选项卡中，输入相应的字节值，将大小限制增加到所需大小。 例如，要将大小限制增加到30 GB，请输入 `32212254720` 值。
 
 1. 在工具栏中，单击“保 **[!UICONTROL 存全部”]**。
 1. In [!DNL Experience Manager], click **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
@@ -89,6 +89,6 @@ ht-degree: 10%
 
 >[!MORELIKETHIS]
 >
->* [在Experience Manager资产中管理数字资产](/help/assets/managing-assets-touch-ui.md)
+>* [管理Experience Manager资产中的数字资产](/help/assets/managing-assets-touch-ui.md)
 >* [管理Experience Manager资产中的收藏集](/help/assets/managing-collections-touch-ui.md)
 
