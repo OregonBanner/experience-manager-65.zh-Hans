@@ -1,15 +1,15 @@
 ---
 title: 配置共享队列
 seo-title: 配置共享队列
-description: 了解如何在OSGi上的AEM Forms上为以表单为中心的工作流使用共享队列。
-seo-description: 了解如何在OSGi上的AEM Forms上为以表单为中心的工作流使用共享队列。
+description: 了解如何在OSGi上为以Forms为中心的工作流使用共享队列来管理AEM Forms。
+seo-description: 了解如何在OSGi上为以Forms为中心的工作流使用共享队列来管理AEM Forms。
 uuid: null
 topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: null
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 2c8220aab9215efba2e4568961a2a6a544803920
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 共享和请求对用户收件箱项目的访问权限 {#share-and-request-access}
 
-队列是用户AEM收件箱中项目的列表。 这些项目可以是分配给用户的项目，也可以是共享给用户所属的组的项目。 您可以访问收件箱以视图，并对收件箱项目执行操作。 例如，与其他用户共享项目。
+队列是用户AEM收件箱中的项目列表。 这些项目可以是分配给用户的项目，也可以是共享给用户所属的组的项目。 您可以访问收件箱以视图，并对收件箱项目执行操作。 例如，与其他用户共享项目。
 
 您还可以与其他用户共享您的收件箱项目。 当其他用户可以访问您的收件箱项目时，用户可以声明共享项目并采取相应的操作。 同样，您也可以请求其他用户访问收件箱项目。
 
@@ -43,7 +43,7 @@ AEM收件箱允许您与其他用户共享收件箱中的单个或所有项目�
 
 >[!NOTE]
 >
->（仅限以表单为中心的工作流项目）启 **[用工作流中“分配任务”步骤](aem-forms-workflow-step-reference.md)**，允许被分&#x200B;**派人通过收件箱共享**选项进行共享。 只有启用了上述选项的项目才会显示给其他用户。
+>(仅限于以Forms为中心的工作流项目)启 **[用工作流中“分配任务”](aem-forms-workflow-step-reference.md)** 步骤的“允许被分派人通过收件箱共享 **”选项** 进行共享。 只有启用了上述选项的项目才会显示给其他用户。
 
 ### 共享单个项目
 
@@ -57,7 +57,7 @@ AEM收件箱允许您与其他用户共享收件箱中的单个或所有项目�
 
 >[!NOTE]
 >
->（仅限以表单为中心的工作流项目）启 **[用工作流中“分配任务](aem-forms-workflow-step-reference.md)**”步骤的“允许被分&#x200B;**派人显式共享收件箱**”选项。 只有启用了上述选项的项目才会显示给其他用户。
+>(仅限于以Forms为中心的工作流项目)启 **[用工作流中“分配任务”](aem-forms-workflow-step-reference.md)** 步骤的“允许被分派人显式 **”选项，** 以便在收件箱中共享。 只有启用了上述选项的项目才会显示给其他用户。
 
 ## 请求访问收件箱项目 {#request-access}
 
@@ -75,7 +75,7 @@ AEM收件箱允许您与其他用户共享收件箱中的单个或所有项目�
 
 1. 登录到AEM实例。 点按收件箱 ![收件箱](assets/bell.svg) 图标，然后点 **[!UICONTROL 按全部视图]**。
 1. 点按“仅 ![限内容](assets/railleft.svg) ”图标以打开筛选器选择器。
-1. 点按选 **[!UICONTROLS择被分派人]** (Select Assignee)下拉列表以视图，然后选择已与您共享其收件箱项目的用户。
+1. 点按选 **[!UICONTROL 择被分派人]** (Select Assignee)下拉列表以视图，然后选择已与您共享其收件箱项目的用户。
 1. 选择一个项目，然后点按 **[!UICONTROL 声明]**。 该项目会添加到您的收件箱中。
 
 ## 释放已申请的项目 {#release-items}
