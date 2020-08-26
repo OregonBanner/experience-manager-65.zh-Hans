@@ -3,9 +3,9 @@ title: 在中管理视频资产 [!DNL Adobe Experience Manager]。
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 268689d534f8bf649335269f9169455c381f9554
+source-git-commit: 93b8fccc2a0c4663104150fdba3651ff5e4f6bbc
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '810'
 ht-degree: 10%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 10%
 
 视频格式是组织数字资产的关键部分。 [!DNL Adobe Experience Manager] 优惠可以提供成熟的产品和功能，在视频资产创建后管理其整个生命周期。
 
-了解如何在中管理和编辑视频资 [!DNL Adobe Experience Manager Assets]产。 此外，如果您获得使用许可， [!DNL Dynamic Media]请参阅Dynamic [Media视频文档](/help/assets/video.md)。
+了解如何在中管理和编辑视频资 [!DNL Adobe Experience Manager Assets]产。 通过集成，可以进行视频编码和转码（例如FFmpeg转码） [!DNL Dynamic Media] 操作。
 
 ## 上传和预览视频资产 {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] 为扩展名为MP4的视频资产生成预览。 如果资产的格式不是MP4，请安装FFmpeg包以生成预览。 FFmpeg创建OGG和MP4类型的视频演绎版。 您可以在用户界面中预览 [!DNL Assets] 再现。
 
 1. 在数字资产文件夹或子文件夹中，导航到要添加数字资产的位置。
-1. 要上传资产，请单击工 **[!UICONTROL 具栏]** 中的创建，然后选择 **[!UICONTROL 文件]**。 或者，直接将其拖放到资产区域。 See [upload assets](managing-assets-touch-ui.md#uploading-assets) for details around the upload operation.
+1. 要上传资产，请单击工 **[!UICONTROL 具栏]** 中的创建，然后选择 **[!UICONTROL 文件]**。 或者，在用户界面上拖动文件。 有关详 [细信息](managing-assets-touch-ui.md#uploading-assets) ，请参阅上传资产。
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. 您只能在卡视图中暂停或播放视频。 “播 [!UICONTROL 放] ”和“ [!UICONTROL 暂停] ”选项在列表视图中不可用。
 
 1. 要预览资产详细信息页面中的视频，请单 **[!UICONTROL 击]** 卡上的编辑。 视频会在浏览器自带的视频播放器中播放。您可以播放视频，暂停视频，控制视频音量，以及将视频放大到全屏。
@@ -71,13 +71,11 @@ ht-degree: 10%
 
 ## 注释视频资产 {#annotate-video-assets}
 
-1. 在控制 [!DNL Assets] 台中，单 [!UICONTROL 击资产] 卡上的编辑以显示资产详细信息页面。
-1. 要播放视频，请单击 [!UICONTROL 预览]。
-1. 要对视频添加注释，请单击“注 **[!UICONTROL 释]** ”按钮。 注释会在视频中的特定时间（帧）添加。 添加注释时，您可以在画布上绘图，并在绘图中包含注释。 注释将自动保存。
+1. 从控制 [!DNL Assets] 台中，选 **[!UICONTROL 择资产]** 卡上的编辑以显示资产详细信息页面。
+1. 要播放视频，请单击 **[!UICONTROL 预览]**。
+1. 要对视频添加注释，请单击“ **[!UICONTROL 注释]**”。 注释会在视频中的特定时间（帧）添加。 添加注释时，您可以在画布上绘图，并在绘图中包含注释。 注释将自动保存。 要退出注释向导，请单击“关 **[!UICONTROL 闭”]**。
 
    ![在视频帧上绘制和添加注释](assets/annotate-video.png)
-
-   要退出注释向导，请单击“关 **[!UICONTROL 闭”]**。
 
 1. 搜索到视频中的特定点，在&#x200B;**文本**&#x200B;字段中指定时间（以秒为单位），然后单击&#x200B;**跳转**。例如，要跳过视频的前 20 秒，请在文本字段中输入 20。
 
@@ -91,4 +89,5 @@ ht-degree: 10%
 >
 >* [管理Experience Manager资产中的数字资产](/help/assets/managing-assets-touch-ui.md)
 >* [管理Experience Manager资产中的收藏集](/help/assets/managing-collections-touch-ui.md)
+>* [动态媒体视频文档](/help/assets/video.md)。
 
