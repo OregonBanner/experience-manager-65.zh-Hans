@@ -4,7 +4,7 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 4efe5247d91fa846c4a444c81245b0fa1515a7b4
 workflow-type: tm+mt
 source-wordcount: '5858'
 ht-degree: 6%
@@ -255,7 +255,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 * 请勿在搜索查询中输入前导空格，否则搜索无效。
 * [!DNL Experience Manager] 在您从搜索结果中选择资产的属性，然后取消搜索后，可能会继续显示搜索词。 <!-- (CQ-4273540) -->
-* 在搜索文件夹或文件和文件夹时，无法按任何参数对搜索结果进行排序。
+* 在搜索文件夹或文件和文件夹时，无法对任何参数对搜索结果进行排序。
 * 如果按回车键时未在Omnisearch栏中键入任何内容， [!DNL Experience Manager] 则返回仅包含文件的列表，而不包含文件夹。 如果您在不使用关键字的情况下专门搜索文 [!DNL Experience Manager] 件夹，则不返回任何结果。
 * 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 
@@ -266,13 +266,13 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 在以下情况下，搜索功能可能存在性能限制：
 
-* 与显示搜索结果的视图视图相比，卡列表的加载时间更短。
+* 与显示搜索结果的视图视图相比，卡列表具有更快的加载时间。
 
 ## 搜索提示 {#tips}
 
 * 在监视资产的审核状态时，请使用适当的选项来查找已批准的资产或待批准的资产。
 * 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况渠道按使用情况得分、展示次数、点击次数和显示资产的媒体类别进行分组。
-* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 * 要搜索不包含强制元数据的资产，请参阅强制 [元数据](#mandatorymetadata)。
 * 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
 * 全文搜索支持——和^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用“笔记本——美容”而不是“笔记本——美容”。
@@ -329,7 +329,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ### 视觉或相似性搜索 {#configvisualsearch}
 
-视觉搜索使用智能标记， [!DNL Experience Manager] 并且需要6.5.2.0或更高版本。 配置智能标记功能后，请执行以下步骤：
+视觉搜索使用智能标记， [!DNL Experience Manager] 并且需要6.5.2.0或更高版本。 配置智能标记功能后，请按照以下步骤操作：
 
 1. 在 [!DNL Experience Manager] CRXDE的节点 `/oak:index/lucene` 中，添加以下属性和值并保存更改。
 
@@ -403,7 +403,7 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 
 ### 对搜索结果进行排序 {#sort}
 
-对搜索结果进行排序，以更快地发现所需的资产。 You can sort the search results in list view and only when you select **[!UICONTROL [Files](#searchui)]**from the**[!UICONTROL  Filters ]**panel.[!DNL Experience Manager Assets]使用服务器端排序功能快速对某个文件夹或搜索查询的结果中的所有资产（无论数量多少）进行排序。 与客户端排序相比，服务器端排序提供更快、更准确的结果。
+对搜索结果进行排序，以更快地发现所需的资产。 You can sort the search results in list view and only when you select **[!UICONTROL [Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Experience Manager Assets] 使用服务器端排序功能快速对某个文件夹或搜索查询的结果中的所有资产（无论数量多少）进行排序。 与客户端排序相比，服务器端排序提供更快、更准确的结果。
 
 在列表视图中，您可以像对任意文件夹中的资产进行排序一样对搜索结果进行排序。 排序功能适用于这些列——名称、标题、状态、Dimension、大小、评级、使用情况、创建日期、修改日期、发布日期、工作流和检出。
 
