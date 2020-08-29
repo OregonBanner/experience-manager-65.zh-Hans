@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6eb6ea86c5544329be5cb28500c59c632ccc9639
+source-git-commit: 2e5cf93eb3ce47b65298b8de13c7d874d1989073
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -90,6 +90,7 @@ Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善
 1. 打开AEM Web Console。 URL为 `https://'[server]:[port]'/system/console/configMgr`
 1. 打开 **Forms通用配置服务。**
 1. 在“允 **许** ”字段中，选 **择“所有用户** -所有用户”（匿名或登录），可以预览附件、验证和签署表单，然后单击“保 **存”。** 作者实例配置为使用Adobe Sign。
+1. 发布配置。
 1. 使用复 [制](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) ，在相应的发布实例上创建相同的配置。
 
 现在，Adobe Sign已与AEM Forms集成，并准备以自适应形式使用。 要在 [自适应表单中使用Adobe Sign服务](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，请在自适应表单属性中指定上面创建的配置容器。
