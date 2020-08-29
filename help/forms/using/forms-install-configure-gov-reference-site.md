@@ -1,5 +1,5 @@
 ---
-title: 设置和配置We.Gov参考站点
+title: 设置和配置We.Gov和We.Finance参考站点
 seo-title: 设置和配置We.Gov参考站点
 description: 安装、配置和自定义AEM Forms演示包。
 seo-description: 安装、配置和自定义AEM Forms演示包。
@@ -8,15 +8,15 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c42e5e5274c41469824f12b228698a77bf5d4a6
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '4738'
+source-wordcount: '4742'
 ht-degree: 1%
 
 ---
 
 
-# 设置和配置We.Gov参考站点 {#set-up-and-configure-we-gov-reference-site}
+# 设置和配置We.Gov和We.Finance参考站点 {#set-up-and-configure-we-gov-reference-site}
 
 ## 演示包详细信息 {#demo-package-details}
 
@@ -700,7 +700,7 @@ IMS配置完成后，我们可以继续检查AEM中的云配置。 如果配置�
 
 [样式系统](../../sites-authoring/style-system.md)
 
-有关受支持样式的 [文档，还可参阅](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) “模板”自定义样式系统。
+您还可以参阅模板自 [定义样式系统](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates) ，以获取有关受支持样式的文档。
 
 ### 自适应表单自定义 {#adaptive-forms-customization}
 
@@ -767,7 +767,7 @@ IMS配置完成后，我们可以继续检查AEM中的云配置。 如果配置�
 
 由Adobe维护的公开Ultramarine主题内置于可安装的`we-gov-forms.pkg.all-<version>.zip` ZIP文件中。 使用CRX安装此包后。
 
-包管理者，用户可以通过导航至AEM Forms的 **Ultramarine** > **主题****>参考主题** > **Ultramarine-AccessibleForms**，访问Ultramarine主题。
+包管理者，用户可以通过导航至AEM Forms的 **Ultramarine** > **主题****>参** 考主题 **>** Ultramarine-AccessibleForms来访问Ultramarine主题。
 
 ![超海洋主题](assets/aftia-ultramarine-theme.jpg)
 
