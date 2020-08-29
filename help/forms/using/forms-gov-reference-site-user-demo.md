@@ -1,26 +1,26 @@
 ---
-title: We.Gov参考站点演练
-seo-title: We.Gov参考站点演练
-description: 使用虚构的用户和组使用We.Gov演示包执行AEM Forms任务。
-seo-description: 使用虚构的用户和组使用We.Gov演示包执行AEM Forms任务。
+title: We.Gov和We.Finance参考站点演练
+seo-title: We.Gov和We.Finance参考站点演练
+description: 使用虚构的用户和组，使用We.Gov和We.Finance演示包执行AEM Forms任务。
+seo-description: 使用虚构的用户和组，使用We.Gov和We.Finance演示包执行AEM Forms任务。
 uuid: 797e301a-36ed-4bae-9ea8-ee77285c786d
 contentOwner: anujkapo
 discoiquuid: ddb3778b-be06-4cde-bc6e-0994efa42b18
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d1da42d7274e9a4257b9e8effae2b754e0104aa4
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '2536'
+source-wordcount: '2548'
 ht-degree: 1%
 
 ---
 
 
-# We.Gov参考站点演练 {#we-gov-reference-site-walkthrough}
+# We.Gov和We.Finance参考站点演练 {#we-gov-reference-site-walkthrough}
 
 ## Pre-requisites {#pre-requisites}
 
-按照设置和配置We.Gov参 [考站点中的说明设置参考站点](../../forms/using/forms-install-configure-gov-reference-site.md)。
+按照设置和配置We.Gov和 [We.Finance参考站点中的说明设置参考站点](../../forms/using/forms-install-configure-gov-reference-site.md)。
 
 ## 用户案例 {#user-story}
 
@@ -418,7 +418,7 @@ George批准Aya的应用程序，并且由于现有的自动工作流程，还�
 
    *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?渠道=web&amp;mode=disabled*
 
-   ![Welcome Benefits Handbook](/help/forms/using/assets/welcome_benefits_handbook.png) Interactive ![Communication Link](/help/forms/using/assets/interactive_communication.png)
+   ![Welcome Benefits Handbook](/help/forms/using/assets/welcome_benefits_handbook.png) ![Interactive Communication Link](/help/forms/using/assets/interactive_communication.png)
 
 ## 续订提醒市民(Aya) {#renewal-reminder-citizen-aya}
 
