@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.5Forms用户指南
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: a1ada0e747f46923dc834c872e522e648adae073
+source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
 workflow-type: tm+mt
-source-wordcount: '3719'
+source-wordcount: '3704'
 ht-degree: 1%
 
 ---
@@ -42,11 +42,8 @@ ht-degree: 1%
       + [教程：创建模板](using/create-templates-print-web.md)
       + [教程：创建交互式通信](using/create-interactive-communication0.md)
    + AEM Forms参考资料 {#aem-forms-reference-collaterals}
-      + [设置和配置We.Finance和Employee自助参考站点](using/setup-reference-sites.md)
-      + [设置和配置We.Gov参考站点](/help/forms/using/forms-install-configure-gov-reference-site.md)
-      + [We.Finance参考站点演练](using/finance-reference-site-walkthrough.md)
-      + [We.Gov参考站点演练](/help/forms/using/forms-gov-reference-site-user-demo.md)
-      + [员工自助参考站点演练](/help/forms/using/employee-self-service-reference-site.md)
+      + [设置和配置We.Gov和We.Finance参考站点](/help/forms/using/forms-install-configure-gov-reference-site.md)
+      + [We.Gov和We.Finance参考站点演练](/help/forms/using/forms-gov-reference-site-user-demo.md)
       + [员工招聘参考站点演练](/help/forms/using/employee-recruitment-reference-site.md)
       + [We.Finance汽车保险续订参考站点](/help/forms/using/finance-auto-insurance-renewal-reference-site-walkthrough.md)
       + [We.Gov参考站点FOIA演练](/help/forms/using/gov-reference-site-foia-walkthrough.md)
@@ -69,7 +66,7 @@ ht-degree: 1%
       + [在JEE上使用JBoss统包安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
       + [安装和配置AEM Forms文档安全服务器](using/installing-and-configuring-the-document-security-server.md)
       + [准备安装AEM Forms单台服务器](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
-      + [在JEE上安装和部署JBoss的AEM Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
+      + [在JEE上为JBoss安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
       + [在WebSphere的JEE上安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [在WebLogic的JEE上安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安装AEM Forms工作台](using/install-workbench.md)
