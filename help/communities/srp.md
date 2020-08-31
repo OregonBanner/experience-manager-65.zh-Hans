@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -100,7 +100,7 @@ JSRP是访问单个AEM实例上的所有UGC的默认提供程序。 它提供快
 
 此外，不共享创作和发布环境的存储库。 虽然发布实例群集导致共享发布存储库，但发布时输入的UGC在作者中不可见，因此无法从作者管理UGC。 UGC仅保留在输入UGC的实例的AEM存储库(JCR)中。
 
-JSRP使用查询的Oak索引。
+JSRP将Oak索引用于查询。
 
 ## 关于JCR中的阴影节点 {#about-shadow-nodes-in-jcr}
 
