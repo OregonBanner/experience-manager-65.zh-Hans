@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 translation-type: tm+mt
-source-git-commit: d3a69bbbc9c3707538be74fd05f94f20a688d860
+source-git-commit: f465b6ffd1a93ddad3db0caf00d4ff797e1b189f
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ## 简介 {#introduction}
 
-升级Adobe Experience Manager的一个关键挑战是执行就地升级时与作者环境相关的停机时间。 内容作者在升级过程中将无法访问环境。 因此，最好尽量缩短执行升级所花费的时间。 对于大型存储库，特别是AEM Assets项目，它通常拥有大型数据存储和每小时高级别的资产上传，重新为Oak索引编制索引需要相当大比例的升级时间。
+升级Adobe Experience Manager的一个关键挑战是执行就地升级时与作者环境相关的停机时间。 内容作者在升级过程中将无法访问环境。 因此，最好尽量缩短执行升级所花费的时间。 对于大型存储库，特别是AEM Assets项目，它通常拥有大型数据存储和每小时高级别的资产上传，重新索引Oak索引需要相当大比例的升级时间。
 
-本节介绍如何使用Oak-run工具在执行升级之前 **重新** 索引存储库，从而减少实际升级过程中的停机时间。 所提出的步骤可应用 [于AEM](https://jackrabbit.apache.org/oak/docs/query/lucene.html) 6.4及更高版本的Lucene索引。
+本节介绍如何使用Oak-run工具在执行升级之前 **重新** 索引存储库，从而减少实际升级过程中的停机时间。 提出的步骤可应用于 [AEM](https://jackrabbit.apache.org/oak/docs/query/lucene.html) 6.4及更高版本的Lucene索引。
 
 ## 概述 {#overview}
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 1. 首先提取二进制文本
 2. 目标索引定义已创建
-3. 创建脱机索引
+3. 已创建脱机索引
 4. 然后在升级过程中导入索引
 
 ### 文本提取 {#text-extraction}
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ![脱机——重新索引——升级——文本-提取](assets/offline-reindexing-upgrade-text-extraction.png)
 
-系统中存储的二进制文本可以使用tika库中的oak-run工具进行提取。 可以在升级之前克隆生产系统，并可用于此文本提取过程。 然后，此过程将通过执行以下步骤创建文本存储：
+系统中存储的二进制文本可以使用tika库中的oak-run工具进行提取。 可以在升级前克隆生产系统，并可用于此文本提取过程。 然后，此过程将通过执行以下步骤创建文本存储：
 
 **1. 遍历存储库并收集二进制文件的详细信息**
 
