@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 4%
@@ -46,7 +46,7 @@ ht-degree: 4%
 
 ## UGC搜索API {#ugc-search-api}
 
-UGC [公共存储](working-with-srp.md) 由各种存储资源提供者(SRP)之一提供，每个提供者可能具有不同的本机查询语言。 因此，无论选择何种SRP，自定义代码都应使用 [UGC API包](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)中的方法，该方法将调用适用于所选SRP的查询语言。
+UGC [公共存储](working-with-srp.md) 由各种存储资源提供者(SRP)之一提供，每个提供者可能具有不同的本机查询语言。 因此，无论选择何种SRP，自定义代码都应使用 [UGC API包](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*)中的方法，该方法将调用适合所选SRP的查询语言。
 
 ### ASRP搜索 {#asrp-searches}
 
@@ -85,16 +85,16 @@ UGC [公共存储](working-with-srp.md) 由各种存储资源提供者(SRP)之�
 
 虽然Oak索引不是为AEM平台搜索自动创建的，但从AEM 6.2开始，它们已经为AEM Communities添加，以提高性能，并在呈现UGC搜索结果时提供分页支持。
 
-如果自定义属性正在使用，且搜索速度较慢，则需要为自定义属性创建其他索引，以提高其性能。 要保持可移植性，在创建可搜 [索的自定](#naming-of-custom-properties) 义属性时，请遵循命名要求。
+如果自定义属性正在使用，且搜索速度慢，则需要为自定义属性创建其他索引，以提高其性能。 要保持可移植性，在创建可搜 [索的自定](#naming-of-custom-properties) 义属性时，请遵循命名要求。
 
 要修改现有索引或创建自定义索引，请参 [阅Oak查询和索引](../../help/sites-deploying/queries-and-indexing.md)。
 
 Oak Index [Manager可从](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) ACS AEM Commons获得。 它提供：
 
-* 现有指数的视图。
+* 现有索引的视图。
 * 启动重新索引的能力。
 
-要在视图中CRXDE Lite现有的 [Oak指数](../../help/sites-developing/developing-with-crxde-lite.md)，位置为：
+要在视图中CRXDE Lite现有 [Oak索引](../../help/sites-developing/developing-with-crxde-lite.md)，位置为：
 
 * `/oak:index/socialLucene`
 
