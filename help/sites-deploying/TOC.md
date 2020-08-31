@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5部署指南
 user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.5, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '328'
 ht-degree: 11%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 11%
 + AEM平台简介 {#introduction}
    + [AEM平台简介](platform.md)
    + [技术要求](technical-requirements.md)
-   + [AEM 6.5中的存储元素](storage-elements-in-aem-6.md)
-   + [AEM with MongoDB](aem-with-mongodb.md)
+   + [存储6.5中的元素](storage-elements-in-aem-6.md)
+   + [AEM与MongoDB](aem-with-mongodb.md)
 + 部署 AEM {#deploying}
    + [部署和维护](deploy.md)
    + [建议的部署](recommended-deploys.md)
@@ -68,33 +68,34 @@ ht-degree: 11%
    + [AEM 6.5中的向后兼容性](backward-compatibility.md)
    + [升级过程](upgrade-procedure.md)
    + [执行就地升级](in-place-upgrade.md)
+   + [使用脱机重新索引减少升级期间的停机时间](upgrade-offline-reindexing.md)
    + [延迟内容迁移](lazy-content-migration.md)
    + [使用CRX2Oak迁移工具](using-crx2oak.md)
    + [升级前维护任务](pre-upgrade-maintenance-tasks.md)
    + [升级后检查和疑难解答](post-upgrade-checks-and-troubleshooting.md)
-   + [升级自定义搜索表单](upgrading-custom-search-forms.md)
+   + [升级自定义搜索Forms](upgrading-custom-search-forms.md)
    + [可持续升级](sustainable-upgrades.md)
    + [升级代码和自定义](upgrading-code-and-customizations.md)
    + [应用程序服务器安装的升级步骤](app-server-upgrade.md)
    + [列表升级后卸载的过时捆绑包](obsolete-bundles.md)
 + 存储库重组 {#restructuring}
    + [AEM 6.5中的存储库重组](repository-restructuring.md)
-   + [AEM 6.5中的常用存储库重组](all-repository-restructuring-in-aem-6-5.md)
+   + [AEM 6.5中的常见存储库重组](all-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的站点存储库重组](sites-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的资产存储库重组](assets-repository-restructuring-in-aem-6-5.md)
-   + [Dynamic MediaAEM 6.5中的存储库重组](dynamicmedia-repository-restructuring-in-aem-6-5.md)
-   + [AEM 6.5中的表单存储库重组](forms-repository-restructuring-in-aem-6-5.md)
+   + [AEM 6.5中的Dynamic Media存储库重组](dynamicmedia-repository-restructuring-in-aem-6-5.md)
+   + [Forms6.5中的存储库重组](forms-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的电子商务存储库重组](ecommerce-repository-restructuring-in-aem-6-5.md)
-   + [6.5中的AEM Communities的存储库重组](communities-repository-restructuring-in-aem-6-5.md)
+   + [6.5中的AEM Communities库重组](communities-repository-restructuring-in-aem-6-5.md)
 + 电子商务 {#ecommerce}
    + [电子商务概述](ecommerce.md)
-   + [SAP Commerce Cloud](sap-commerce-cloud.md)
-   + [Salesforce商务云](https://github.com/adobe/commerce-salesforce)
-   + [马根托](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
+   + [SAPCommerce Cloud](sap-commerce-cloud.md)
+   + [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
+   + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 + 最佳实践 {#practices}
    + [部署最佳实践](best-practices.md)
    + [性能树](performance-tree.md)
    + [性能测试的最佳实践](best-practices-for-performance-testing.md)
    + [查询和索引的最佳实践](best-practices-for-queries-and-indexing.md)
-   + [客户的用户界面建议](ui-recommendations.md)
+   + [客户用户界面Recommendations](ui-recommendations.md)
    + [性能和可伸缩性](performance.md)
