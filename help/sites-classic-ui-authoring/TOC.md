@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.5经典UI创作用户指南
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '257'
 ht-degree: 89%
 
 ---
@@ -61,10 +61,8 @@ ht-degree: 89%
 + 个性化 {#personalization}
    + [了解分段](classic-personalization-campaigns-segmentation.md)
    + [营销活动管理](classic-personalization-campaigns.md)
-   + [Teaser 和战略](classic-personalization-campaigns-teasers-strategy.md)
    + [登陆页面](classic-personalization-campaigns-landingpage.md)
    + [Target 选件](classic-personalization-campaigns-target-offers.md)
-   + [使用营销活动管理器](classic-personalization-campaigns-mktg-manager.md)
    + [电子邮件营销](classic-personalization-campaigns-email.md)
    + [跟踪弹回的电子邮件](classic-personalization-campaigns-email-tracking-bounces.md)
    + [Teaser 和战略](classic-personalization-campaigns-teasers-strategy.md)
