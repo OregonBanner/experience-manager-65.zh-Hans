@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.5 发行说明
 user-guide-description: Learn about the latest new features in AEM 6.5 in the release notes.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 50%
+source-wordcount: '57'
+ht-degree: 45%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 50%
    + [以前的Service Pack发行说明](previous-hotfixes-featurepacks.md)
 + [AEM Sites 发行说明](sites.md)
 + [AEM Assets 发行说明](assets.md)
++ [AEM FormsJEE修补程序安装程序](jee-patch-installer-65.md)
 + [AEM Communities 发行说明](communities-release-notes.md)
 + [已弃用和已删除的功能](deprecated-removed-features.md)
 + [已知问题](known-issues.md)
