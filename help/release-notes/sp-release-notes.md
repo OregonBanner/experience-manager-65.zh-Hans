@@ -4,7 +4,7 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6da27dfda2bb504fc7a1de24260e94141f1a22ab
+source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
 workflow-type: tm+mt
 source-wordcount: '4407'
 ht-degree: 6%
@@ -154,7 +154,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
    *图：[!UICONTROL 在“帮助”菜单]中搜[!UICONTROL 索帮助]。*
 
-   * 如果在“User”选项下的“Impersonate [!ICONTROL as] ”字段中输入了错误  值，并且焦点会正确移动到文本字段(NPR-33804)，则显示错误消息。
+   * 如果在“User”选项下的“Impersonate [!UICONTROL as] ”字段中输入了错误  值，并且焦点会正确移动到文本字段(NPR-33804)，则显示错误消息。
 
    ![标题中的用户菜单](assets/User_aem_header.png)
 
