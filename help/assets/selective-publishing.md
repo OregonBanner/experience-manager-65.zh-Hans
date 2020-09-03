@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6e7368663d18dd0b5b46be9e292dba17577acf70
+source-git-commit: 6890af51d240cbdf84d8d95215ac0ea80326c713
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 2%
@@ -202,6 +202,7 @@ ht-degree: 2%
    | 发布到 Dynamic Media | 选择性发布 | 仅发布到Dynamic Media。 |
    | 从 Dynamic Media 取消发布 | 立即或在激活 | 未从AEM或Dynamic Media或两者取消发布。 |
    | 从 Dynamic Media 取消发布 | 选择性发布 | 仅从Dynamic Media取消发布。 |
+
 1. 在 **[!UICONTROL 计划]**下，设置取消激活的时间。
 |选定计划 |发生什么情况 |
 | — | — |
