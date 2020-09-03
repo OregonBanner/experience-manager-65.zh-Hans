@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Experience Manager6.5资产用户指南
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 32f8e42325314d5afbec3b3e1611fd696e1a4603
+source-git-commit: c57cc70fbdeabfdff1e8977d3bf8187f7c41ce77
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '651'
 ht-degree: 40%
 
 ---
@@ -73,6 +73,7 @@ ht-degree: 40%
    + [使用规则集转换 URL](using-rulesets-to-transform-urls.md)
    + [发布 Dynamic Media 资产](publishing-dynamicmedia-assets.md)
    + [在Dynamic Media中使用选择性发布](selective-publishing.md)
+   + [通过Dynamic Media使CDN缓存失效](invalidate-cdn-cache-dynamic-media.md)
    + [通过Dynamic Media Classic使CDN缓存失效](invalidate-cdn-cache-dm-classic.md)
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
