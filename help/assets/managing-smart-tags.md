@@ -3,9 +3,9 @@ title: 管理智能标记和搜索
 description: 更新或删除不准确的智能标记，以提高标记的相关性
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -44,3 +44,7 @@ TBD: This article should be merged into a new, uber article for Smart Tags. Dele
 1. 的匹配 `woman running` 项。
 1. 智能标 `woman running` 记中的匹配项。
 1. 智能标 `woman` 签的 `running` 匹配项或匹配项。
+
+>[!CAUTION]
+>
+>如果Lucene索引完成 [!DNL Adobe Experience Manager] 后，基于智能标记的搜索无法按预期工作。
