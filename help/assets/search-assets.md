@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5bbdc80f199a2af38631a5443c46daae827abb52
+source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
 workflow-type: tm+mt
-source-wordcount: '5858'
+source-wordcount: '5878'
 ht-degree: 6%
 
 ---
@@ -354,6 +354,10 @@ To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/ass
 1. （可选）如果您具有自定义的搜索表单，则将节 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 点复制到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 保存更改。
 
 有关信息，请参 [阅了解Experience Manager中的智能标记](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html)[以及如何管理智能标记](/help/assets/managing-smart-tags.md)。
+
+>[!CAUTION]
+>
+>如果Lucene索引完成 [!DNL Adobe Experience Manager]不了，则基于智能标记的搜索不会按预期工作。
 
 ### 强制元数据 {#mandatorymetadata}
 
