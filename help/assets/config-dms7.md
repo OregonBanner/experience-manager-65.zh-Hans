@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: d357b5832a3bd95c372c26fd7553eba70583eb6f
 workflow-type: tm+mt
-source-wordcount: '5778'
+source-wordcount: '5944'
 ht-degree: 5%
 
 ---
@@ -71,17 +71,17 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 有关 [详细信息，请参阅安装功能包18912](/help/assets/bulk-ingest-migrate.md) ，以实现批量资产迁移。
 
-## 创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
+## 在Cloud Services中创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
 
 **在配置Dynamic Media之前**:在您收到包含Dynamic Media凭据的供应电子邮件后，必 [须登录](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以更改密码。 供应电子邮件中提供的密码是系统生成的，并且仅用于临时密码。 更新密码以使Dynamic MediaCloud Service设置的凭据正确，这一点很重要。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**创建Dynamic Media配置**
+**在Cloud Services中创建Dynamic Media配置**
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按或单击工具图标，然后点按 **[!UICONTROL Cloud Services> Dynamic Media配置。]**
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按工具图标，然后点 **[!UICONTROL 按Cloud Services> Dynamic Media配置。]**
 1. On the Dynamic Media Configuration Browser page, in the left pane, tap **[!UICONTROL global]** (do not tap or select the folder icon to the left of **[!UICONTROL global]**), then tap **[!UICONTROL Create.]**
-1. 在“创建Dynamic Media配置”页面中，输入标题、Dynamic Media帐户电子邮件地址和密码，然后选择您所在的区域。 这些资源是通过供应电子邮件中的Adobe提供给您的。 如果您未收到此信息，请与支持部门联系。
+1. 在“创 **[!UICONTROL 建Dynamic Media配置]** ”页面上，输入标题、Dynamic Media帐户电子邮件地址和密码，然后选择您所在的区域。 这些资源是通过供应电子邮件中的Adobe提供给您的。 如果您未收到此信息，请与支持部门联系。
 
    Click **[!UICONTROL Connect to Dynamic Media.]**
 
@@ -89,7 +89,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    >
    >在您收到包含Dynamic Media凭据的供应电子邮件后，请 [登录](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Dynamic Media Classic以更改您的密码。 供应电子邮件中提供的密码是系统生成的，并且仅用于临时密码。 请务必更新密码，以便Dynamic Media云服务设置正确的凭据。
 
-1. 连接成功时，还可以设置以下内容：
+1. 连接成功时，请设置以下内容。 标题带星号(*):
 
    * **[!UICONTROL 公司]** - Dynamic Media帐户的名称。 您可能为不同的子品牌、部门或不同的分阶段／生产环境拥有多个Dynamic Media帐户。
 
@@ -98,6 +98,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL 发布资产]** -您可以从以下三个选项中进行选择：
       * **[!UICONTROL 立即]** ，意味着上传资产时，系统会立即收录资产并提供URL/Embed。 发布资产不需要用户干预。
       * **[!UICONTROL 激活]** ，即您需要在提供URL/嵌入链接之前先显式发布资产。
+      * **[!UICONTROL 选择性发布]** 通过此选项，您可以控制在Dynamic Media中发布的文件夹，以便使用智能裁剪或动态演绎版等功能，或者只在AEM中发布哪些文件夹进行预览；这些相同资产 *不会* 在Dynamic Media中发布，以便在公共域中进行投放。<br>您可以在Dynamic Media Cloud配置中 **[!UICONTROL 设置此选项]** ，也可以选择在文件夹的属性中的文件夹级别设置此 **[!UICONTROL 选项]**。<br>请参 [阅在Dynamic Media中使用选择性发布。](/help/assets/selective-publishing.md)<br>请注意，如果您稍后更改此配置，或稍后在文件夹级别更改它，这些更改只影响您从该点向前上传的新资产。 在您从“快速发布”或“管理发布”对话框手动更改文件夹中现有资 **[!UICONTROL 产的发布]** 状态 **[!UICONTROL 之前，该状]** 态将保持不变。
    * **[!UICONTROL 安全预览服务器]** -允许您指定到安全再现预览服务器的URL路径。 也就是说，在生成再现后，AEM可以安全访问和预览远程Dynamic Media再现(不会将二进制文件发回AEM实例)。
 除非您有特殊安排来使用自己的公司服务器或特殊服务器，否则Adobe Systems建议您按照指定的方式保留此设置。
 
@@ -106,7 +107,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL Dynamic Media 同步模式]**
       * **[!UICONTROL 默认为启用]** -默认情况下，该配置将应用于所有文件夹，除非您专门为排除标记文件夹。 <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 默认禁用]** -在明确标记选定文件夹以同步到Dynamic Media之前，该配置不会应用于任何文件夹。
-要将选定的文件夹标记为同步到Dynamic Media，请选择资产文件夹，然后在工具栏中单击 **[!UICONTROL 属性。]** 在“详 **[!UICONTROL 细信息]** ”选项卡 **[!UICONTROL 的“Dynamic Media同步模式]** ”下拉列表中，从以下三个选项中进行选择。 完成后，点按保 **[!UICONTROL 存。]** *记住：如果您之前选择了“同步所有内容”，则这&#x200B;**三个选项将不可**用。*
+要将选定的文件夹标记为同步到Dynamic Media，请选择资产文件夹，然后在工具栏中单击 **[!UICONTROL 属性。]** 在“详 **[!UICONTROL 细信息]** ”选项卡 **[!UICONTROL 的“Dynamic Media同步模式]** ”下拉列表中，从以下三个选项中进行选择。 完成后，点按保 **[!UICONTROL 存。]** *记住：如果您之前选择了“同步所有内容”，则这&#x200B;**三个选项将不可**用。* 另请参 [阅在Dynamic Media的文件夹级别使用选择性发布。](/help/assets/selective-publishing.md)
          * **[!UICONTROL 继承]** -文件夹上没有显式同步值；相反，文件夹会从其上级文件夹之一或云配置中的默认模式继承同步值。 通过工具提示显示继承的详细状态。
          * **[!UICONTROL 为子文件夹启用]** -在此子树中包含所有内容，以便同步到Dynamic Media。 特定于文件夹的设置将覆盖云配置中的默认模式。
          * **[!UICONTROL 对子文件夹禁用]** -排除此子树中的所有内容，使其无法同步到Dynamic Media。
