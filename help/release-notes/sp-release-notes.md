@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f072522706074d5b3f4e4749caf4379ff8fdfcc3
+source-git-commit: 32addae877604a242c97eac3ed81bbc2f55ec60a
 workflow-type: tm+mt
-source-wordcount: '4407'
+source-wordcount: '4423'
 ht-degree: 6%
 
 ---
@@ -361,6 +361,8 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 * 打开Designer时，“欢迎”屏幕显示错误的年份(CQ-4295289)。
 
 * 在服务器 [!DNL Acrobat DC] 上安装时，“分 **[!UICONTROL 发表单]** ”选项处于非活动状态(CQ-4296304)。
+
+有关安全更新的信息，请参阅 [Experience Manager安全公告页](https://helpx.adobe.com/security/products/experience-manager.html)。
 
 ## Install 6.5.6.0 {#install}
 
