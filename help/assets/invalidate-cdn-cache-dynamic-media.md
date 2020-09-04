@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 6a44c4ac11f2fdf794895c28468c2a600a09b3c0
+source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 1%
@@ -20,7 +20,7 @@ CDN(内容投放网络)会缓存Dynamic Media资源，以便快速投放给客�
 
 >[!IMPORTANT]
 >
->以下步骤仅适用于AEM 6.5、Service Pack 6(AEM 6.5.6)或更高版本的Dynamic Media -Scene7模式。 此CDN失效功能还要求您使用与AEM Dynamic Media绑定的现成CDN;不支持任何其他自定义CDN。<br>如果您在AEM 6.5、Service Pack 5(AEM 6.5.5)或更早版本中使用Dynamic Media，请按照通过Dynamic Media Classic [使CDN缓存失效中的步骤操作](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>以下步骤仅适用于AEM 6.5、Service Pack 6(AEM 6.5.6)或更高版本的Dynamic Media -Scene7模式。 此CDN失效功能还要求您使用与AEM Dynamic Media绑定的现成CDN;不支持任何其他自定义CDN。<br>如果您在AEM 6.5、Service Pack 5(AEM 6.5.5)或更早版本中使用Dynamic Media，请按照通过Dynamic Media [Classic使CDN缓存失效中的步骤操作。](/help/assets/invalidate-cdn-cache-dm-classic.md)
 
 另请参 [阅Dynamic Media中的缓存概述](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)。
 
