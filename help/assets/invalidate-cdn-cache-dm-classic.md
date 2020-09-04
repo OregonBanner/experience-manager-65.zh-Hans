@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 10eef47ec15aef1f17238702520848df4ed36342
+source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 24%
@@ -22,7 +22,7 @@ CDN会缓存Dynamic Media资源以快速投放。 但是，当您对资产进行
 
 >[!IMPORTANT]
 >
->以下步骤仅适用于AEM 6.5、Service Pack 5(AEM 6.5.5)或更早版本中的Dynamic Media。<br>如果您在AEM 6.5、Service Pack 6(AEM 6.5.6)或更高版本中使用Dynamic Media，请按照通过Dynamic Media [使CDN缓存失效中的步骤操作](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>以下步骤仅适用于AEM 6.5、Service Pack 5(AEM 6.5.5)或更早版本中的Dynamic Media。<br>如果您在AEM 6.5、Service Pack 6(AEM 6.5.6)或更高版本中使用Dynamic Media，请按照通过Dynamic Media使 [CDN缓存失效中的步骤操作。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 
 另请参 [阅Dynamic Media Classic中的缓存概述(Scene7)](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)。
 
