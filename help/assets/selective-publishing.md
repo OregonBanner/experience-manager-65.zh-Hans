@@ -7,10 +7,10 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6890af51d240cbdf84d8d95215ac0ea80326c713
+source-git-commit: 5e5108b943907e5286298552c724d2b33873503f
 workflow-type: tm+mt
 source-wordcount: '2934'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -50,11 +50,12 @@ ht-degree: 2%
    * 编辑新文件夹的属性——在 **[!UICONTROL 卡片视图]**、列 **[!UICONTROL 视图或]**&#x200B;列表视图 **[!UICONTROL 中，在页面的右上角附]**&#x200B;近，点按 **[!UICONTROL 创建>文件夹。]** 在“创 **[!UICONTROL 建文件夹]** ”对话框中，输入文件夹的标题（必需），然后点按 **[!UICONTROL 创建。]** 选择文件夹，然后在工具栏中点按 **[!UICONTROL 属性。]**
 
 1. 在“同 **[!UICONTROL 步模式]** ”下拉列表中，选择以下选项之一：
-|同步模式 |说明 |
-| — | — |
-|已继 **[!UICONTROL 承]** |文件夹上没有明确的同步值；相反，文件夹会从其父文件夹或Dynamic Media配置中设置的默认模式继承 **[!UICONTROL 同步值]**。 “已继承 **[!UICONTROL ”]** (Inherited)的详细状态通过工具提示显示。 |
-|将 **[!UICONTROL 此文件夹子树中的所有内容同步到dynamicmedia]** |要成功发布到Dynamic Media，资产必须同步到Dynamic Media。 选择此选项将包括此子树中用于同步到Dynamic Media的所有资产。 特定于文件夹的设置将覆盖Dynamic Media配置中的 **[!UICONTROL 默认设置]**。 |
-|从 **[!UICONTROL dynamicmedia sync中排除此文件夹子树中的所有内容]** |排除此子树中的所有资产，使其不能同步到Dynamic Media。 |
+
+   | 同步模式 | 描述 |
+   | --- | --- |
+   | **[!UICONTROL 已继承]** | 文件夹上没有明确的同步值；相反，文件夹会从其父文件夹或Dynamic Media配置中设置的默认模式继承 **[!UICONTROL 同步值]**。 “已继承 **[!UICONTROL ”]** (Inherited)的详细状态通过工具提示显示。 |
+   | **[!UICONTROL 将该文件夹子树中的所有内容同步到 dynamicmedia]** | 要成功发布到Dynamic Media，资产必须同步到Dynamic Media。 选择此选项将包括此子树中用于同步到Dynamic Media的所有资产。 特定于文件夹的设置将覆盖Dynamic Media配置中的 **[!UICONTROL 默认设置]**。 |
+   | **[!UICONTROL 从dynamicmedia sync中排除此文件夹子树中的所有内容]** | 排除此子树中的所有资产，使其不能同步到Dynamic Media。 |
 
    ![文件夹级别选择性发布](/help/assets/assets-dm/createfolder-properties-selectivepublish.png)
 
@@ -69,6 +70,7 @@ ht-degree: 2%
    | **[!UICONTROL 立即]** | 资产上传到此文件夹后，系统会将资产引入AEM并立即提供URL/Embed。 此选项仅与AEM发布相关联，发布资产不需要用户干预。<br>如果您在上 *一步* 的“同步”模式 **[!UICONTROL 中选择“从Dynamicmedia sync中排除此文件夹子树中的所有内容]** ”，则 **[!UICONTROL 此选项不]** 可用。 |
    | **[!UICONTROL 激活后]** | 将资产上传到此文件夹后，您需要先明确发布资产，然后才能提供URL/嵌入链接。 此选项仅绑定到AEM发布。<br>如果您在上 *一步* 的“同步”模式 **[!UICONTROL 中选择“从Dynamicmedia sync中排除此文件夹子树中的所有内容]** ”，则 **[!UICONTROL 此选项不]** 可用。 |
    | **[!UICONTROL 选择性发布]** | 资产会发布到您选择的AEM或Dynamic Media，以便在公共域中投放。 两种出版方法相互排斥。  即，您可以将资产发布到DMS7，以便使用智能裁剪或动态演绎版等功能。 或者，您也可以将资产仅发布到AEM以进行安全预览；这些相同的资 *产不* 会发布到DMS7，以便在公共域中进行投放。 如果您在上一步的“同步”模 **[!UICONTROL 式下从Dynamicmedia同步中排除此文件夹子树中的]** 所有内容，则此选 **[!UICONTROL 项不可用]** 。 |
+
 1. 在页面的右上角，点按保 **[!UICONTROL 存并关闭]**，然后点 **[!UICONTROL 按确]** 定，返回AEM Assets。
 
 ## 使用管理发布，有选择地将资产发布到Dynamic Media或AEM{#selective-publish-manage-publication}
@@ -97,15 +99,19 @@ ht-degree: 2%
       >如 **[!UICONTROL 果工具栏]** 上未显示管理发布 **[!UICONTROL ，请点按省略号按钮，然后从列表菜单]** 中选择管理发布。
 
 1. 在“管 **[!UICONTROL 理发布——选项]** ”页面 **[!UICONTROL 的“操作]**”下，选择所需的激活类型。
-|操作 |说明 |
-| — | — |
-|发 **[!UICONTROL 布]** (到AEM) |选择此选项可将资产发布到AEM以实现安全预览。 |
-|发 **[!UICONTROL 布到Dynamic Media]** |选择此选项可将资产发布到Dynamic Media以在公共域中投放，或者这样您就可以使用智能裁剪或动态演绎版等功能。<br>只有在文件夹属性中 **[!UICONTROL 的“Dynamic Media Publish]** ”模式设置 **[!UICONTROL 为“Selective Publish]** ”时，此选项才可用。 |
-1. 在 **[!UICONTROL 计划]**下，设置发布的时间。
-|计划 |说明 |
-| — | — |
-|立 **[!UICONTROL 即]** |选择以立即发布资产。 |
-|稍 **[!UICONTROL 后]** |选择以在特定日期和时间发布资产。 |
+
+   | 操作 | 描述 |
+   | --- | --- |
+   | **[!UICONTROL 发布]** (到AEM) | 选择此选项可将资产发布到AEM以实现安全预览。 |
+   | **[!UICONTROL 发布到 Dynamic Media]** | 选择此选项可将资产发布到Dynamic Media以在公共域中投放，或者这样您就可以使用智能裁剪或动态演绎版等功能。<br>只有在文件夹属性中 **[!UICONTROL 的“Dynamic Media Publish]** ”模式设置 **[!UICONTROL 为“Selective Publish]** ”时，此选项才可用。 |
+
+1. 在 **[!UICONTROL 计划]**&#x200B;下，设置发布的时间。
+
+   | 计划 | 描述 |
+   | --- | --- |
+   | **[!UICONTROL 现在]** | 选择以立即发布资产。 |
+   | **[!UICONTROL 稍后]** | 选择以在特定日期和时间发布资产。 |
+
 1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按 **[!UICONTROL 下一步]**。
 1. 在“管 **[!UICONTROL 理发布——范围]** ”页中，执行下列操作之一：
    * 根据需要，选择要从发布中删除的一个或多个资产。
@@ -124,15 +130,19 @@ ht-degree: 2%
       >如 **[!UICONTROL 果工具栏]** 上未显示管理发布 **[!UICONTROL ，请点按省略号按钮，然后从列表菜单]** 中选择管理发布。
 
 1. 在“管 **[!UICONTROL 理发布——选项]** ”页面 **[!UICONTROL 的“操作]**”下，选择所需的取消激活类型。
-|操作 |说明 |
-| — | — |
-|取 **[!UICONTROL 消发布]** (从AEM) |选择此选项可从AEM取消发布资产。 |
-|从 **[!UICONTROL Dynamic Media取消发布]** |选择此选项可从Dynamic Media中取消发布资产。<br>只有在文件夹属性中 **[!UICONTROL 的“Dynamic Media Publish]** ”模式设置 **[!UICONTROL 为“Selective Publish]** ”时，此选项才可用。  |
-1. 在 **[!UICONTROL 计划]**下，设置取消激活的时间。
-|计划 |说明 |
-| — | — |
-|立 **[!UICONTROL 即]** |选择以立即取消发布资产。 |
-|稍 **[!UICONTROL 后]** |选择以在特定日期和时间取消发布资产。 |
+
+   | 操作 | 描述 |
+   | --- | --- |
+   | **[!UICONTROL 取消发布]** (从AEM) | 选择此选项可从AEM中取消发布资产。 |
+   | **[!UICONTROL 从 Dynamic Media 取消发布]** | 选择此选项可从Dynamic Media中取消发布资产。<br>只有在文件夹属性中 **[!UICONTROL 的“Dynamic Media Publish]** ”模式设置 **[!UICONTROL 为“Selective Publish]** ”时，此选项才可用。 |
+
+1. 在 **[!UICONTROL 计划]**&#x200B;下，设置取消激活的时间。
+
+   | 计划 | 描述 |
+   | --- | --- |
+   | **[!UICONTROL 现在]** | 选择以立即取消发布资产。 |
+   | **[!UICONTROL 稍后]** | 选择此项可在特定日期和时间取消发布资产。 |
+
 1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按 **[!UICONTROL 下一步]**。
 1. 在“管 **[!UICONTROL 理发布——范围]** ”页中，执行下列操作之一：
    * 选择要从取消发布中删除的一个或多个资产。
@@ -159,12 +169,15 @@ ht-degree: 2%
       >如 **[!UICONTROL 果工具栏]** 上未显示快速发布 **[!UICONTROL ，请点按省略号按钮，然后从列表菜单]** 中选择快速发布。
 
       ![文件夹级快速发布到Dynamic Media](/help/assets/assets-dm/selective-publish-folder-quick-publish-to-dm.png)
+
 1. 从“快速发布”菜单列表 **[!UICONTROL 中选择以]** 下选项之一。
-|快速发布选项 |它的用途 |
-| — | — |
-|发布到AEM |将选定的资产立即发布到AEM。 |
-|发布到品牌门户 |将选定的资产立即发布到 **[!UICONTROL Brand Portal]**。<br>仅当您的AEM Assets实例已配置Brand Portal时， **[!UICONTROL 此选项]** 才可用。 |
-|发布到Dynamic Media |将选定的资产立即发布到Dynamic Media。<br>资产必须已同步到Dynamic Media。 如有必要，请确 **[!UICONTROL 保将文件夹]** 属性中的“同步模式”设置 **[!UICONTROL 为将此文件夹子树中的所有内容同步到dynamicmedia]**。 |
+
+   | 快速发布选项 | 它的用途 |
+   | --- | --- | 
+   | 发布到 AEM | 将选定的资产立即发布到AEM。 |
+   | 发布至 Brand Portal | 将选定的资产立即发布 **[!UICONTROL 到Brand Portal]**。<br>仅当您的AEM Assets实例已配置Brand Portal时， **[!UICONTROL 此选项]** 才可用。 |
+   | 发布到 Dynamic Media | 将选定的资产立即发布到Dynamic Media。<br>资产必须已同步到Dynamic Media。 如有必要，请确 **[!UICONTROL 保将文件夹]** 属性中的“同步模式”设置 **[!UICONTROL 为将此文件夹子树中的所有内容同步到dynamicmedia]**。 |
+
 1. 点按 **[!UICONTROL 确定]**，然后点 **[!UICONTROL 按关闭]**。
 
 ## 通过搜索结果有选择地发布或取消发布资产 {#selective-publish-unpublish-search-results}
@@ -203,11 +216,13 @@ ht-degree: 2%
    | 从 Dynamic Media 取消发布 | 立即或在激活 | 未从AEM或Dynamic Media或两者取消发布。 |
    | 从 Dynamic Media 取消发布 | 选择性发布 | 仅从Dynamic Media取消发布。 |
 
-1. 在 **[!UICONTROL 计划]**下，设置取消激活的时间。
-|选定计划 |发生什么情况 |
-| — | — |
-|现在 |将立即执行选定的操作。 |
-|稍后 |所选操作在所选特定日期和时间运行。 |
+1. 在 **[!UICONTROL 计划]**&#x200B;下，设置取消激活的时间。
+
+   | 所选计划 | 发生了什么 |
+   | --- | --- |
+   | 现在 | 将立即执行选定的操作。 |
+   | 稍后 | 所选操作将在所选的特定日期和时间运行。 |
+
 1. 在“管理发布——选项”页 **[!UICONTROL 面的右上角]** ，点按 **[!UICONTROL 下一步]**。
 1. （可选）在管 **[!UICONTROL 理发布——范围]** 页面中，查看 **[!UICONTROL 选定资产]** 的表中的发布目标列。
 
