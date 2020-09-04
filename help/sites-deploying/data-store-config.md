@@ -12,9 +12,9 @@ discoiquuid: b97482f2-2791-4d14-ae82-388302d9eab3
 docset: aem65
 legacypath: /deploy/platform/data-store-config
 translation-type: tm+mt
-source-git-commit: f0ec3415ffef70c985828f17b32dc0d453c1ae7c
+source-git-commit: 93cb84763cfd77b67a5dd1481caab79337f6e7c4
 workflow-type: tm+mt
-source-wordcount: '3427'
+source-wordcount: '3423'
 ht-degree: 1%
 
 ---
@@ -190,7 +190,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 编辑文件并添加安装程序所需的配置选项。
 1. 开始AEM。
 
-### 升级到1.10.x S3连接器的新版本 {#upgrading-to-a-new-version-of-the-x-s-connector}
+### 升级到1.10.x S3连接器的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
 
 如果您需要升级到1.10.x S3连接器的新版本（例如，从1.10.0升级到1.10.4），请按照以下步骤操作：
 
@@ -204,7 +204,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    >[!NOTE]
    >
-   >上述文件名仅供说明之用，并非确定性。
+   >上述文件名仅供说明之用。
 
 1. 从Adobe库下载最新版1.8.x功 [能包](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)。
 1. 将内容解压缩到单独的文件夹，然后导航到 `jcr_root/libs/system/install/15`。
