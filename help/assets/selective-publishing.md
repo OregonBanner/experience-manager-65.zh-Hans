@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5e5108b943907e5286298552c724d2b33873503f
+source-git-commit: 4a144e53217c4353818d778415cc303b21412566
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 4%
@@ -31,9 +31,9 @@ ht-degree: 4%
 
 如果您稍后决定更改文 **[!UICONTROL 件夹中的]** “选择性发布”设置，这些更改只影响您从此时起上传到该文件夹的新资产。 在您从“快速发布”或“管理发布”对话框手动更改文件夹中现有资 **[!UICONTROL 产的发布]** 状态 **[!UICONTROL 之前，该状]** 态将保持不变。
 
-文件夹级 **[!UICONTROL 别的Dynamic Media发布模式]** 选项始终默认为Dynamic Media配置中 **[!UICONTROL 的发布资产设]** 置中的 **[!UICONTROL 值]**。 但是，本主题中的以下步骤会向您显示如何在文件夹级别手动更改此默认值（如以下步骤所述）以覆盖Dynamic **[!UICONTROL Media配置值]** 。
+文件夹级 **[!UICONTROL 别的Dynamic Media发布模式]** 选项始终默认为Dynamic Media配置中 **[!UICONTROL 的发布资产]** 设置 **[!UICONTROL 中的值。]** 但是，本主题中的以下步骤会向您显示如何在文件夹级别手动更改此默认值（如以下步骤所述）以覆盖Dynamic **[!UICONTROL Media配置值]** 。
 
-无论您是依赖在Dynamic Configuration中设 **[!UICONTROL 置的Assets]** 值，还是在文件夹级别中设置的Dynamic Publish模式值 **[!UICONTROL ，您都仍然能够]**&#x200B;立即选择DimaystMedia, **************** Publish Selective Publish Media的Publish Publish Proprish媒体。 例如，您可以在Dynamic Media配 **[!UICONTROL 置中将]** Assets值设置为Pon **[!UICONTROL Dynamic Media Publish Assets值，但]** 将Dynamic Media Mode值设置在 ************&#x200B;文件夹级别，将Dynamic Media Publish 激活发布，反之亦然，等等。
+无论您是依赖在Dynamic Media Configuration中设 **[!UICONTROL 置的Assets]** 值，还是依赖在文件夹级别中设置的Dynamic Media Publish模式值 **[!UICONTROL ，您都仍然能够选择立即发布、激活发布]****************[!UICONTROL 、选择性发布。]** 例如，您可以在Dynamic Media配 **[!UICONTROL 置中将]** Assets值设置为Pon **[!UICONTROL Dynamic Media Publish Assets值，但]** 将Dynamic Media Mode值设置在 ************&#x200B;文件夹级别，将Dynamic Media Publish 激活发布，反之亦然，等等。
 
 在文件夹中配置选择性发布后，可以执行下列任一操作：
 
@@ -53,13 +53,13 @@ ht-degree: 4%
 
    | 同步模式 | 描述 |
    | --- | --- |
-   | **[!UICONTROL 已继承]** | 文件夹上没有明确的同步值；相反，文件夹会从其父文件夹或Dynamic Media配置中设置的默认模式继承 **[!UICONTROL 同步值]**。 “已继承 **[!UICONTROL ”]** (Inherited)的详细状态通过工具提示显示。 |
-   | **[!UICONTROL 将该文件夹子树中的所有内容同步到 dynamicmedia]** | 要成功发布到Dynamic Media，资产必须同步到Dynamic Media。 选择此选项将包括此子树中用于同步到Dynamic Media的所有资产。 特定于文件夹的设置将覆盖Dynamic Media配置中的 **[!UICONTROL 默认设置]**。 |
+   | **[!UICONTROL 已继承]** | 文件夹上没有明确的同步值；相反，文件夹会从其父文件夹或Dynamic Media配置中设置的默认模式继承 **[!UICONTROL 同步值。]** “已继承 **[!UICONTROL ”]** (Inherited)的详细状态通过工具提示显示。 |
+   | **[!UICONTROL 将该文件夹子树中的所有内容同步到 dynamicmedia]** | 要成功发布到Dynamic Media，资产必须同步到Dynamic Media。 选择此选项将包括此子树中用于同步到Dynamic Media的所有资产。 特定于文件夹的设置将覆盖Dynamic Media配置中的默 **[!UICONTROL 认设置。]** |
    | **[!UICONTROL 从dynamicmedia sync中排除此文件夹子树中的所有内容]** | 排除此子树中的所有资产，使其不能同步到Dynamic Media。 |
 
    ![文件夹级别选择性发布](/help/assets/assets-dm/createfolder-properties-selectivepublish.png)
 
-1. 在Dynamic **[!UICONTROL Media发布模式下拉列表]** ，选择一个选项。 请注意，Dynamic **[!UICONTROL Media发布模式]** 选项始终默认为在Dynamic Media配置中 **[!UICONTROL 设置的值]**。 但是，您可以使用以下选项 **[!UICONTROL 之一手动覆盖]** 此默认的Dynamic Media配置值。
+1. 在Dynamic **[!UICONTROL Media发布模式下拉列表]** ，选择一个选项。 请注意，Dynamic **[!UICONTROL Media发布模式]** 选项始终默认为在Dynamic Media配置中 **[!UICONTROL 设置的值。]** 但是，您可以使用以下选项 **[!UICONTROL 之一手动覆盖]** 此默认的Dynamic Media配置值。
 
    >[!IMPORTANT]
    >
@@ -92,7 +92,7 @@ ht-degree: 4%
 1. 在AEM中，点按AEM徽标以访问全局导航控制台。 在左侧，点按导航图标（就在工具图标上方），然后点按资产> **[!UICONTROL 文件。]**
 1. 在 **[!UICONTROL 卡视图]**、列 **[!UICONTROL 视图]**&#x200B;或 **[!UICONTROL 列表视图]**&#x200B;中，执行下列操作之一：
    * 导航到要发布其资产的文件夹。 选择文件夹，然后在工具栏中点按管 **[!UICONTROL 理发布。]**  您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定文件夹的发布状态。
-   * 导航到要发布其资产的文件夹。 打开文件夹，然后选择一个或多个资产。 在工具栏中，点按管 **[!UICONTROL 理发布]**。 您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定资产的发布状态。
+   * 导航到要发布其资产的文件夹。 打开文件夹，然后选择一个或多个资产。 在工具栏中，点按管 **[!UICONTROL 理发布。]** 您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定资产的发布状态。
 
       >[!NOTE]
       >
@@ -112,18 +112,18 @@ ht-degree: 4%
    | **[!UICONTROL 现在]** | 选择以立即发布资产。 |
    | **[!UICONTROL 稍后]** | 选择以在特定日期和时间发布资产。 |
 
-1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按 **[!UICONTROL 下一步]**。
+1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按下 **[!UICONTROL 一步。]**
 1. 在“管 **[!UICONTROL 理发布——范围]** ”页中，执行下列操作之一：
    * 根据需要，选择要从发布中删除的一个或多个资产。
    * 在“管理发布——范围”页 **[!UICONTROL 面的右上角]** ，点按 **[!UICONTROL 发布]** 或 **[!UICONTROL 发布到Dynamic Media。]**
-1. 点按 **[!UICONTROL 确定]**。
+1. 点按 **[!UICONTROL 确定。]**
 
 ### 使用管理发布从Dynamic Media或AEM选择性地取消发布资产 {#selective-unpublish-manage-publication}
 
 1. 在AEM中，点按AEM徽标以访问全局导航控制台。 在左侧，点按导航图标（就在工具图标上方），然后点按资产> **[!UICONTROL 文件。]**
 1. 在 **[!UICONTROL 卡视图]**、列 **[!UICONTROL 视图]**&#x200B;或 **[!UICONTROL 列表视图]**&#x200B;中，执行下列操作之一：
    * 导航到要取消发布其资产的文件夹。 选择文件夹，然后在工具栏中点按管 **[!UICONTROL 理发布。]**  您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定文件夹的发布状态。
-   * 导航到要取消发布其资产的文件夹。 打开文件夹，然后选择一个或多个资产。 在工具栏中，点按管 **[!UICONTROL 理发布]**。 您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定资产的发布状态。
+   * 导航到要取消发布其资产的文件夹。 打开文件夹，然后选择一个或多个资产。 在工具栏中，点按管 **[!UICONTROL 理发布。]** 您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定资产的发布状态。
 
       >[!NOTE]
       >
@@ -143,11 +143,11 @@ ht-degree: 4%
    | **[!UICONTROL 现在]** | 选择以立即取消发布资产。 |
    | **[!UICONTROL 稍后]** | 选择此项可在特定日期和时间取消发布资产。 |
 
-1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按 **[!UICONTROL 下一步]**。
+1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按下 **[!UICONTROL 一步。]**
 1. 在“管 **[!UICONTROL 理发布——范围]** ”页中，执行下列操作之一：
    * 选择要从取消发布中删除的一个或多个资产。
-   * 在“管理发布——范围”页 **[!UICONTROL 面的右上角]** ，点按 **[!UICONTROL 取消发布]** 或 **[!UICONTROL 从Dynamic Media取消发布]**。
-1. 点按 **[!UICONTROL 确定]**。
+   * 在“管理发布——范围”页 **[!UICONTROL 面的右上角]** ，点 **[!UICONTROL 按取消发布]** 或 **[!UICONTROL 从Dynamic Media取消发布。]**
+1. 点按 **[!UICONTROL 确定。]**
 
 ## 使用快速发布将资产发布到Dynamic Media或AEM {#quick-publish-aem-dm}
 
@@ -162,7 +162,7 @@ ht-degree: 4%
 1. 在AEM中，点按AEM徽标以访问全局导航控制台。 在页面的左侧，点按导航图标（就在工具图标的上方），然后在页面的右侧，点按资产> **[!UICONTROL 文件。]**
 1. 在 **[!UICONTROL 卡视图]**、列 **[!UICONTROL 视图]**&#x200B;或 **[!UICONTROL 列表视图]**&#x200B;中，执行下列操作之一：
    * 导航到要发布其资产的文件夹。 选择文件夹，然后在工具栏中点按快 **[!UICONTROL 速发布。]**  您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定文件夹的发布状态。
-   * 导航到要发布其资产的文件夹。 打开文件夹，然后选择一个或多个资产。 On the toolbar, tap **[!UICONTROL Quick Publish]**. 您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定资产的发布状态。
+   * 导航到要发布其资产的文件夹。 打开文件夹，然后选择一个或多个资产。 On the toolbar, tap **[!UICONTROL Quick Publish.]** 您可能会发现使用列表 **[!UICONTROL 视图很有帮]** 助，因此您可以更轻松地检查特定资产的发布状态。
 
       >[!NOTE]
       >
@@ -175,10 +175,10 @@ ht-degree: 4%
    | 快速发布选项 | 它的用途 |
    | --- | --- | 
    | 发布到 AEM | 将选定的资产立即发布到AEM。 |
-   | 发布至 Brand Portal | 将选定的资产立即发布 **[!UICONTROL 到Brand Portal]**。<br>仅当您的AEM Assets实例已配置Brand Portal时， **[!UICONTROL 此选项]** 才可用。 |
-   | 发布到 Dynamic Media | 将选定的资产立即发布到Dynamic Media。<br>资产必须已同步到Dynamic Media。 如有必要，请确 **[!UICONTROL 保将文件夹]** 属性中的“同步模式”设置 **[!UICONTROL 为将此文件夹子树中的所有内容同步到dynamicmedia]**。 |
+   | 发布至 Brand Portal | 将选定的资产立即发布 **[!UICONTROL 到Brand Portal。]**<br>仅当您的AEM Assets实例已配置Brand Portal时，**[!UICONTROL &#x200B;此选项&#x200B;]**才可用。 |
+   | 发布到 Dynamic Media | 将选定的资产立即发布到Dynamic Media。<br>资产必须已同步到Dynamic Media。 如有必要，请确 **[!UICONTROL 保将文件夹]** 属性中的“同步模式”设置 **[!UICONTROL 为将此文件夹子树中的所有内容同步到dynamicmedia。]** |
 
-1. 点按 **[!UICONTROL 确定]**，然后点 **[!UICONTROL 按关闭]**。
+1. 点按 **[!UICONTROL 确定]**，然后点按 **[!UICONTROL 关闭。]**
 
 ## 通过搜索结果有选择地发布或取消发布资产 {#selective-publish-unpublish-search-results}
 
@@ -190,7 +190,7 @@ ht-degree: 4%
 
 1. 在AEM的页面左上角，点按AEM徽标以访问全局导航控制台。 在页面的左侧，点按导航图标（在工具图标上方），然后点按资产> **[!UICONTROL 文件。]**
 1. 在工具栏中，点按页面右上角附近的“搜索”图标（放大镜）。
-1. 在“要 **[!UICONTROL 搜索的类型]** ”文本字段中，输入关键字，然后按 **[!UICONTROL Enter]**。
+1. 在“要 **[!UICONTROL 搜索的类型]** ”文本字段中，输入关键字，然后按 **[!UICONTROL Enter。]**
 1. 在页面的右上角附近，点按 **[!UICONTROL 列表视图图标]** 。
 1. 在页面的左上角附近，点按 **[!UICONTROL 过滤器]** 。
 
@@ -201,8 +201,8 @@ ht-degree: 4%
 （可选）您可以将这些复选框与发布搜索谓 **[!UICONTROL 词结合使用]** ，以优化已发布和未发布 **[!UICONTROL 的AEM资]** 资 **[!UICONTROL 产的搜索结]** 果。
 1. 执行下列操作之一：
    * 选择要发布或取消发布的一个或多个资产。
-   * 在“搜索结果”页面的右上 **[!UICONTROL 角附近]** ，点按 **[!UICONTROL 全选]**。
-1. 在工具栏中，点按管 **[!UICONTROL 理发布]**。 您可能需要点按工具栏上的省略号图标才能看到管理 **[!UICONTROL 发布]**。
+   * 在“搜索结果”页面的右上 **[!UICONTROL 角附近]** ，点按 **[!UICONTROL 全选。]**
+1. 在工具栏中，点按管 **[!UICONTROL 理发布。]** 您可能需要点按工具栏上的省略号图标才能看到管理 **[!UICONTROL 发布。]**
 1. 在“管 **[!UICONTROL 理发布——选项]** ”页面上，选择所需的操作。
 
    | 所选操作 | Dynamic Media配置中的“发布资产”设置 | 资产包括 |
@@ -223,7 +223,7 @@ ht-degree: 4%
    | 现在 | 将立即执行选定的操作。 |
    | 稍后 | 所选操作将在所选的特定日期和时间运行。 |
 
-1. 在“管理发布——选项”页 **[!UICONTROL 面的右上角]** ，点按 **[!UICONTROL 下一步]**。
+1. 在“管理发布——选项”页 **[!UICONTROL 面的右上角]** ，点按下 **[!UICONTROL 一步。]**
 1. （可选）在管 **[!UICONTROL 理发布——范围]** 页面中，查看 **[!UICONTROL 选定资产]** 的表中的发布目标列。
 
    | Dynamic Media配置中的“发布资产”设置 | 所选操作 | 发布目标 |
@@ -240,7 +240,7 @@ ht-degree: 4%
 1. 在“管 **[!UICONTROL 理发布——范围]** ”页中，执行下列操作之一：
    * 选择要从发布或取消发布中删除的一个或多个资产。
    * 在“管理发布——范围”页 **[!UICONTROL 面的右上角]** ，点 **[!UICONTROL 按发布]** 或 **[!UICONTROL 取消发布]** ，开始执行操作。
-1. 点按 **[!UICONTROL 确定]**。
+1. 点按 **[!UICONTROL 确定。]**
 
 ## 检查资产的发布状态 {#check-publish-status-of-asset}
 
@@ -251,7 +251,7 @@ ht-degree: 4%
 1. 在AEM的页面左上角，点按AEM徽标以访问全局导航控制台。 在页面的左侧，点按导航图标（在工具图标上方），然后点按资产> **[!UICONTROL 文件。]**
 1. 在卡 **[!UICONTROL 片视图]**、列 **[!UICONTROL 视图或列表]**&#x200B;视图中(下面的截图显示 ********&#x200B;了列表视图的)，打开一个包含您已发布或取消发布的资产的文件夹。
 1. 选择资产，以便显示带有复选标记的资产。 请参见下面的屏幕截图。
-1. Near the upper-left corner of the page, from the drop-down menu, select **[!UICONTROL Timeline]**. 左 **[!UICONTROL 面板中]** 的“状态”区域显示选定资产的发布状态。
+1. Near the upper-left corner of the page, from the drop-down menu, select **[!UICONTROL Timeline.]** 左 **[!UICONTROL 面板中]** 的“状态”区域显示选定资产的发布状态。
 使用列表 **[!UICONTROL 视图]**&#x200B;时，将显示另一 **[!UICONTROL 列作为Dynamic Media]** 发布状态。
    * 默认情况下，配置为同步到Dynamic Media的文件夹 **[!UICONTROL 将显示]** Dynamic Media列。
    * 未配置为 *同步* 到Dynamic Media的文件夹将不显示Dynamic Media列。
