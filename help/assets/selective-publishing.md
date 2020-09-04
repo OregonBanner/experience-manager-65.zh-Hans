@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 68e3e80b1c1dda8352ff30989f85f83e82bde261
+source-git-commit: 29f91713f5760ab0b5a557b5c811ef2efee1cc61
 workflow-type: tm+mt
 source-wordcount: '2934'
 ht-degree: 4%
@@ -114,6 +114,7 @@ ht-degree: 4%
 
 1. 在“管理发布”页面的右 **[!UICONTROL 上角]** ，点按下 **[!UICONTROL 一步。]**
 1. 在“管 **[!UICONTROL 理发布——范围]** ”页中，执行下列操作之一：
+
    * 根据需要，选择要从发布中删除的一个或多个资产。
    * 在“管理发布——范围”页 **[!UICONTROL 面的右上角]** ，点按 **[!UICONTROL 发布]** 或 **[!UICONTROL 发布到Dynamic Media。]**
 1. 点按 **[!UICONTROL 确定。]**
