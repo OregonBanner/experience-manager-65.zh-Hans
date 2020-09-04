@@ -124,7 +124,7 @@ customBlobStore=B"false"
 
 >[!NOTE]
 >
->要启用自定义数据存储，您需要确保在相应的节 `customBlobStore` 点存储配 `true` 置文件(段节点存储或[文档节点存](/help/sites-deploying/data-store-config.md#segment-node-store) 储)中将该设置 [](/help/sites-deploying/data-store-config.md#document-node-store)为“”。
+>要启用自定义数据存储，您需要确保在相应的节 `customBlobStore` 点存储配 `true` 置文件(段节点存储或[文档节点存](/help/sites-deploying/data-store-config.md#segment-node-store) 储)中将该设置为 [“”节点存储](/help/sites-deploying/data-store-config.md#document-node-store)。
 
 ### 文件数据存储 {#file-data-store}
 
