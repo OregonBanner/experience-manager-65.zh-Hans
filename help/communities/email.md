@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 097109edcf66cc06460c9d962037e49613e3405b
+source-git-commit: 8496c2fa298b5490bb2560f61de77876d66fd6f6
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '822'
 ht-degree: 4%
 
 ---
@@ -112,7 +112,7 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 
 * 验证 **是否通过回复电子邮件创建帖子**`unchecked`。
 
-![chlimage_1-100](assets/chlimage_1-100.png)
+![chlimage_1-100](assets/configure-email.png)
 
 ### 订阅配置 {#configuration-for-subscriptions}
 
@@ -122,7 +122,7 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 * 选择编辑图标。
 * 验证 **名称** 为 `subscriptions-email`。
 
-![chlimage_1-101](assets/chlimage_1-101.png)
+   ![chlimage_1-101](assets/configure-email-subscription.png)
 
 * **[!UICONTROL 名称]**
 
@@ -138,9 +138,10 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 * **[!UICONTROL 最大主题长度]**
 
    如果跟踪器ID添加到主题行，则这是主题的最大长度（不包括跟踪的ID），之后将裁切它。 请注意，这应尽可能小，以避免跟踪的ID信息丢失。 默认值为200。
-* **[!UICONTROL 电子邮件“发件人”地址]**
 
-   *（必需）* 通知电子邮件的发送地址。 可能为默 **认邮件服务** 指定的 [相同SMTP用户](#configuredefaultmailservice)。 Default is `no-reply@example.com`.
+* **[!UICONTROL “回复”电子邮件地址]**
+
+   用作“回复”电子邮件地址的地址。 Default is `communities@adobe.com`.
 
 * **[!UICONTROL 答复分隔符]**
 
@@ -154,7 +155,7 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 
    如果跟踪器ID添加到消息正文，则将使用此前缀。 Default is `Please do not remove this:`.
 
-* **[!UICONTROL 以HTML形式发送电子邮件]**: 如果选中，则电子邮件的“内容类型”将设置为 `"text/html;charset=utf-8"`。 选中默认值。
+* **[!UICONTROL 以HTML形式发送电子邮件]**:如果选中，则电子邮件的“内容类型”将设置为 `"text/html;charset=utf-8"`。 选中默认值。
 
 * **[!UICONTROL 默认用户名]**
 
@@ -213,8 +214,8 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 * 使用管理员权限登录到主发布者，并浏 [览到https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling)。
 * 选择新创建的配置并修改以下属性：
 
-   * **feedType**: 替换 `pop3s` 为 **`emailreply`**
-   * **源**: 将源协议替换 `pop3s://` 为 **`emailreply://`**
+   * **feedType**:替换 `pop3s` 为 **`emailreply`**
+   * **源**:将源协议替换 `pop3s://` 为 **`emailreply://`**
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
