@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 8980348736825f45647a91062b1fe4e4a790b8f1
+source-git-commit: f8a072e0ab24d542a1bec8faf03da57f99747102
 workflow-type: tm+mt
-source-wordcount: '2438'
+source-wordcount: '2462'
 ht-degree: 2%
 
 ---
@@ -126,6 +126,8 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 * 改进了屏幕阅读器支持。
 
 #### 其他主要增强功能(6.5.5.0) {#other-enhancements-sites}
+
+* 禁止匿名访问CRXDE Lite以增强安全性。 而是将用户定向到登录屏幕。 请参 [阅使用CRXDE Lite开发](/help/sites-developing/developing-with-crxde-lite.md)。
 
 * 现在，在复制或粘贴页面树时，您可以选择粘贴根页面或将根页面与树的子页面一起粘贴。
 
