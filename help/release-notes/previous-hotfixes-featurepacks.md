@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Manager6.5以前的Service Pack发行说明
-description: 特定于Adobe Experience Manager6.5 Service Pack 3及更早版本的发行说明。
+title: '[!DNLAdobe Experience Manager] 6.5以前的Service Pack发行说明。'
+description: 6.5 Service [!DNL Adobe Experience Manager] Pack的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: a842da57a155f56ad3efc268610c167fe140998b
+source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
 workflow-type: tm+mt
-source-wordcount: '11431'
+source-wordcount: '11438'
 ht-degree: 25%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 25%
 
 # 以前 Service Pack 中包含的修补程序和功能包 {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## Adobe Experience Manager 6.5.5.0 {#experience-manager-6550}
+## [!DNL Adobe Experience Manager] 6.5.5.0 {#experience-manager-6550}
 
 Adobe Experience Manager6.5.5.0是一项重要更新，包括自2019年4月发布6.5版本以来发布的新功能、关键客户请求的增强功能以及性能、稳定性和安全 **性改进**。 它可安装在Adobe Experience Manager6.5之上。
 
-Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包括：
+6.5.5.0中引入的一些 [!DNL Adobe Experience Manager] 主要功能和增强功能包括：
 
-* 自定义在Adobe Experience Manager收件箱中显示的列名。
+* 不允许匿名访问CRXDE Lite。 而是将用户定向到登录屏幕。 请参 [阅使用CRXDE Lite开发](/help/sites-developing/developing-with-crxde-lite.md)。
+
+* 自定义收件箱中显示的列 [!DNL Adobe Experience Manager] 名称。
 
 * 改进了Experience ManagerWeb内容管理(WCM)中各个区域（如页面编辑器、核心组件、RTE和管理员用户界面）的辅助功能。
 
@@ -69,7 +71,7 @@ Adobe Experience Manager6.5.5.0中引入的一些主要功能和增强功能包�
 * 当用户复制并粘贴同一页面上的布局容器时，布局容器中的组件不会显示(NPR-33648)。
 * 调度程序运行状况 `Invalid cookie header` 检查在日志文件中显示警告消息(NPR-33629)。
 * PreferencesServlet中反射的XSS(NPR-33438)。
-* 匿名用户可以访问CRX DE Lite功能(GRANITE-27790)。
+* 匿名用户可以访问CRXDE Lite功能(GRANITE-27790)。
 
 ### [!DNL Assets] {#assets-6550}
 
@@ -830,7 +832,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
@@ -1210,7 +1212,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 **Forms - 通信管理**
 
-* [!DNL Experience Manager Forms] 6.5创建通信UI(CCR UI)无法打开使用6.3创 [!DNL Experience Manager Forms] 建的通信。CQ-4266392的修补程序
+* [!DNL Experience Manager Forms] 6.5创建通信UI(CCR UI)无法打开使用6. [!DNL Experience Manager Forms] 3创建的通信。CQ-4266392的修补程序
 * 如果 DDE 数据类型是数字类型，则 XDP 中的求和功能将不起作用。适用于 CQ-4227403 的修补程序
 * 内存中的字母缓存失效逻辑将被更新，因为当资产发布时，其最后修改时间不会更新。适用于 CQ-4250465 的修补程序
 * 无法发布文档片段、DD 和 Letters。适用于 CQ-4272893 的修补程序
