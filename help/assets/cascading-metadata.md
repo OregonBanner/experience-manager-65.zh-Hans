@@ -3,9 +3,9 @@ title: 在中层叠元数据 [!DNL Adobe Experience Manager Assets]。
 description: 本文介绍如何为资产定义层叠元数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a61e1e9ffb132b59c725b2078f09641a3c2a479a
+source-git-commit: c92215a6cb1f4c3d02e9a5f5b3fd36c65fc002ce
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '948'
 ht-degree: 6%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 6%
 在捕获资产的元数据信息时，用户会在各种可用字段中提供信息。 您可以显示特定元数据字段或字段值，这些字段或字段值取决于在其他字段中选择的选项。 此类元数据的条件显示称为级联元数据。 换言之，您可以在特定元数据字段／值与一个或多个字段和／或其值之间创建依赖关系。
 
 使用元数据模式定义用于显示级联元数据的规则。 例如，如果您的元数据模式包含资产类型字段，则您可以根据用户选择的资产类型定义要显示的相关字段集。
+
+>[!CAUTION]
+>
+>内容片段不支持层叠元数据。
 
 以下是一些可定义级联元数据的使用案例：
 
@@ -55,6 +59,7 @@ ht-degree: 6%
    * 要手动指定值，请选择“手 **[!UICONTROL 动添加]**”，然后单 **[!UICONTROL 击“添加选项]** ”，然后指定选项文本和值。 例如，指定视频、PDF、Word和图像资产类型。
 
    * 要动态从JSON文件中提取值，请选 **[!UICONTROL 择“通过JSON路径添加]** ”并提供JSON文件的路径。 [!DNL Experience Manager] 向用户显示表单时，实时获取键值对。
+
    这两种选择是互斥的。 无法从JSON文件导入选项并手动编辑。
 
    ![add_choice](assets/add_choice.png)
@@ -108,8 +113,8 @@ ht-degree: 6%
 
    ![视频资产的层叠元数据](assets/video_asset.png)
 
-   *图： 为视频级联元数据。*
+   *图：为视频级联元数据。*
 
    ![文档资产的级联元数据](assets/doc_type_fields.png)
 
-   *图： 为文档级联元数据。*
+   *图：为文档级联元数据。*
