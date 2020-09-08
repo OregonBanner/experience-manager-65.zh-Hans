@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 24d817bf8e52136980783ef14cea8531519ee622
+source-git-commit: cbc43991143397c8bc0080b7402bfdc664522ab8
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1910'
 ht-degree: 1%
 
 ---
@@ -180,7 +180,7 @@ AEM Forms有一些强制性和可选配置。 必需配置包括配置BouncyCast
 
 #### 配置调度程序 {#configure-dispatcher}
 
-调度程序是AEM的缓存和负载平衡工具。 AEM Dispatcher还有助于保护AEM服务器免受攻击。 通过将调度程序与企业级Web服务器结合使用，可以提高AEM实例的安全性。 如果您使 [用Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，请为AEM Forms执行以下配置：
+调度程序是Adobe Experience Manager的缓存和／或负载平衡工具，可与企业级Web服务器结合使用。 如果您使 [用Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，请为AEM Forms执行以下配置：
 
 1. 为AEM Forms配置访问：
 
