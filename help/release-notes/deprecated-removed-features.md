@@ -2,7 +2,7 @@
 title: Adobe Experience Manager6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 translation-type: tm+mt
-source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
+source-git-commit: 1e6feac534fe990d614997c4bd3ab999a4a8d479
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 43%
@@ -49,7 +49,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 开发人员 | 使用 YUI 压缩/缩小 JavaScript 客户端库。Adobe 不打算进一步更新 YUI 库。在AEM 6.4之前，YUI默认为使用切换到Google Closure Compiler(GCC)的选项缩小JavaScript。 从 AEM 6.5 开始，默认使用 GCC。 | Adobe建议升级到AEM 6.5的客户切换到GCC进行实施 |
 | 开发人员 | CRXDE lite 中的 Classic UI Dialog Editor. Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 无可替换。 |
 | 表单 | AEM Forms与AEM Mobile的集成已弃用。 | 无可用替换。 |  | 开发人员 | CRXDE lite 中的 Classic UI Dialog Editor. Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 无可替换。 |
-| 表单 | Lodash/下划线客户端库。 Adobe不打算进一步维护和更新作为分发（快速入门）的一部分提供的Lodash/下划线客户端库 | Adobe建议仍需使用Lodash/下划线的客户将其代码添加到其项目代码库中。 |
+| 开发人员 | Lodash/下划线客户端库。 Adobe不打算进一步维护和更新作为分发（快速入门）的一部分提供的Lodash/下划线客户端库 | Adobe建议仍需使用Lodash/下划线的客户将其代码添加到其项目代码库中。 |
 
 ## 已删除功能 {#removed-features}
 
