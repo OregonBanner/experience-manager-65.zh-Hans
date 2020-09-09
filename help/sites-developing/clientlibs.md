@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
+source-git-commit: 5d33b48000cf607eb77c626ec539280cadab378e
 workflow-type: tm+mt
-source-wordcount: '2740'
+source-wordcount: '2889'
 ht-degree: 0%
 
 ---
@@ -233,9 +233,9 @@ Web客户端必须具有访问节点的 `cq:ClientLibraryFolder` 权限。 您�
 * **类型：** 字符串[]
 * **值：** 要嵌入的节点的类别 `cq:ClientLibraryFolder` 属性值。
 
-<!-- #### Using Embedding to Minimize Requests {#using-embedding-to-minimize-requests}
+#### 使用嵌入最小化请求 {#using-embedding-to-minimize-requests}
 
-In some cases you may find that the final HTML generated for typical page by your publish instance includes a relatively large number of `<script>` elements, particularly if your site is using client context information for analaytics or targeting. For example, in a non-optimized project you might find the following series of `<script>` elements in the HTML for a page:
+在某些情况下，您可能会发现，发布实例为典型页面生成的最终HTML包含相对大量的元素 `<script>` ，尤其是当您的站点使用Client Context信息进行分析或定位时。 例如，在未优化的项目中，您可能会在页面的HTML `<script>` 中找到以下一系列元素：
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
@@ -243,13 +243,12 @@ In some cases you may find that the final HTML generated for typical page by you
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/shared.js"></script>
-<script type="text/javascript" src="/etc/clientlibs/granite/underscore.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
-In such cases, it can be useful to combine all the required client library code in to a single file so that the number of back and forth requests on page load is reduced. To do this you can `embed` the required libraries into you app-specific client library using the embed property of the `cq:ClientLibraryFolder` node.
+在这种情况下，将所有所需的客户端库代码合并到单个文件中，以减少页面加载时来回请求的数量，这是非常有用的。 为此，您可以使用 `embed` 节点的embed属性将所需的库添加到特定于应用程序的客户端 `cq:ClientLibraryFolder` 库中。
 
-The following client library categories are incuded with AEM. You should embed only those that are required for he functioning of your particular site. However, **you should maintain the order listed here**:
+以下客户端库类别包含在AEM中。 您应仅嵌入特定站点运行所需的内容。 但是， **您应维护此处列出的订单**:
 
 1. `browsermap.standard`
 1. `browsermap`
@@ -269,10 +268,6 @@ The following client library categories are incuded with AEM. You should embed o
 1. `cq.collab.toggle`
 1. `cq.collab.forum`
 1. `cq.cleditor`
-
-EDITOR NOTE: removed as requested on CQDOC-16765
-
--->
 
 #### CSS文件中的路径 {#paths-in-css-files}
 
@@ -466,4 +461,4 @@ HTML库管理器服务在运 `cq:ClientLibraryFolder` 行时处理标记并生�
 * 提高性能：删除空白并压缩库。
 * 提高可读性：包括空格，不压缩。
 
-有关配置服务的信息，请参 [阅AEM HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager)。
+有关配置服务的信息，请 [参阅AEM HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#aemhtmllibrarymanager)。
