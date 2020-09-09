@@ -2,9 +2,9 @@
 title: Adobe Experience Manager6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: f0dc620926a3ba2558313153f7a0fd3f8cd3c712
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1722'
 ht-degree: 43%
 
 ---
@@ -29,7 +29,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| Creative Cloud集成 | AEM到Creative Cloud文件夹共享在AEM 6.2中引入，旨在让创意用户能够访问AEM中的资产，以便他们能够在CC应用程序中打开这些资产并上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 有关更多详细信息，请查阅AEM和Creative Cloud集成最佳实践。 |
+| Creative Cloud集成 | AEM到Creative Cloud文件夹共享在AEM 6.2中引入，旨在让创意用户能够访问AEM中的资产，以便他们能够在CC应用程序中打开这些资产并上传新文件，或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 有关更多详细信息，请查阅AEM和Creative Cloud集成最佳实践。 |
 | 资产 | `AssetDownloadServlet`默认情况下，对发布实例禁用 有关更多详细信息，请参阅 [AEM 安全核对清单](/help/sites-administering/security-checklist.md)。 | [AEM 安全核对清单](/help/sites-administering/security-checklist.md)中描述的配置。 |
 | 资产 | If a user does not have sufficient (read and write) permissions on `/content/dam/collections`, the user cannot create a Collection. | 遵循用户的访问控制设置并确保具有适当的权限。 |
 | Adobe Search &amp; Promote | 已弃用与Adobe Search&amp;Promote的集成。 Adobe 不打算进一步增强 Search &amp; Promote 集成。请注意，Search &amp; Promote 集成在弃用期间仍完全受支持。 |  |
@@ -48,7 +48,8 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 开发人员 | `Granite.Sling.js` 客户端库。 Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Granite.Sling.js 客户端库 | Adobe建议依赖库功能的客户重新调整其代码以不再使用它。 |
 | 开发人员 | 使用 YUI 压缩/缩小 JavaScript 客户端库。Adobe 不打算进一步更新 YUI 库。在AEM 6.4之前，YUI默认为使用切换到Google Closure Compiler(GCC)的选项缩小JavaScript。 从 AEM 6.5 开始，默认使用 GCC。 | Adobe建议升级到AEM 6.5的客户切换到GCC进行实施 |
 | 开发人员 | CRXDE lite 中的 Classic UI Dialog Editor. Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 无可替换。 |
-| 表单 | AEM Forms与AEM Mobile的集成已弃用。 | 无可用替换。 |
+| 表单 | AEM Forms与AEM Mobile的集成已弃用。 | 无可用替换。 |  | 开发人员 | CRXDE lite 中的 Classic UI Dialog Editor. Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 无可替换。 |
+| 表单 | Lodash/下划线客户端库。 Adobe不打算进一步维护和更新作为分发（快速入门）的一部分提供的Lodash/下划线客户端库 | Adobe建议仍需使用Lodash/下划线的客户将其代码添加到其项目代码库中。 |
 
 ## 已删除功能 {#removed-features}
 
@@ -63,11 +64,11 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 表单 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项. |
 | 表单 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |
 | 表单 | JEE上不提供从LiveCycleES4 SP1到AEM 6.5Forms的单跳升级 | 请参 [阅AEM Forms升级文档](../forms/using/upgrade.md) 中的可用升级路径。 |
-| 表单 | 从JEE上的AEM Forms中删除了基于UPD的群集支持 | 在JEE上的AEM Forms中只能使用基于TCP的群集。 如果将UDP多播服务器从先前版本升级到AEM 5.5FormsJEE上的UDP多播服务器，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请 [参阅升级到JEE上的AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |
+| 表单 | 删除了JEE上AEM Forms的基于UPD的群集支持 | 在JEE上的AEM Forms，只能使用基于TCP的群集。 如果将UDP多播服务器从先前版本升级到AEM 5.5FormsJEE上的UDP多播服务器，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请 [参阅升级到JEE上的AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |
 | 开发人员 | Firebug Lite 已从默认分发版（快速入门）中删除 | 使用浏览器内置的开发人员控制台 |
 | 开发人员 | Remove `customJavaScriptPath` support in HTML Client Library Manager. | 无替换项 |
 | [!DNL Assets] | 资源卸载功能在6.5 [!DNL Adobe Experience Manager] 中被删除。 | 无可替换。 |
-| 缓存 | `system/console/slingjsp` AEM 6.5中不再提供is removed。 | 类和轻缓存存储在Apache Sling Commons FileSystem ClassLoader捆绑包下。 您可以在AEM Web Console中检查捆绑号，并直接从文件系统()中删除缓存文`crx-quickstart/launchpad/felix/bundle<ID>`件夹。 |
+| 缓存 | `system/console/slingjsp` aem 6.5中不再提供is removed。 | 类和轻缓存存储在Apache Sling Commons FileSystem ClassLoader捆绑包下。 您可以在AEM Web Console中检查捆绑编号，并直接从文件系统()中删除缓存文`crx-quickstart/launchpad/felix/bundle<ID>`件夹。 |
 
 ## Pre-announcement for next release {#pre-announcement-for-next-release}
 
