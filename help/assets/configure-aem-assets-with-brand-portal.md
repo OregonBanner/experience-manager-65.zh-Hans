@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5baef6f4d570aff738444e0620b982729b897f89
+source-git-commit: 8633216807061c73f4bc692d13f9eba37845cffc
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 11%
+source-wordcount: '2028'
+ht-degree: 10%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Manager(AEM)资产通过Adobe开发者控制台配置了品牌�
 
 * [AEM 6.5 Service Pack 发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
 
-**如果找不到** 最新的AEM包或Service Pack，请与客户服务部门联系。
+**如果您找不到** 最新的AEM包或Service Pack，请与客户服务部门联系。
 
 ## 创建配置 {#configure-new-integration-65}
 
@@ -140,7 +140,7 @@ IMS 配置包括两个步骤：
 
 1. Click **[!UICONTROL Download Public Key]** and save the certificate (.crt) file on your machine.
 
-   此后将使用证书文件为您的Brand Portal租户配置API并在Adobe开发人员控制台中生成服务帐户凭据。
+   证书文件稍后将用于为您的Brand Portal租户配置API并在Adobe开发人员控制台中生成服务帐户凭据。
 
    ![下载证书](assets/ims-config3.png)
 
@@ -357,6 +357,8 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >[!NOTE]
    >
    >避免禁用任何复制代理。 它可能导致某些资产的复制失败。
+   >
+   >确保将所有四个复制代理都配置为避免超时错误。 See [troubleshoot issues in parallel publishing to Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 您的AEM Assets作者实例已通过Brand Portal成功配置，您现在可以：
 
@@ -386,7 +388,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
 1. 找到Brand Portal租户的复制代理。
 
-   确保所有 **复制代理的队列** “空闲”，没有发布作业处于活动状态。
+   确保所有 **复制代理的队列** “空闲”，未激活任何发布作业。
 
    ![](assets/test-integration3.png)
 
