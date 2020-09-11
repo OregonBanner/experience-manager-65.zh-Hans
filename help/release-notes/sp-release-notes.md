@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 622fbe5eba3e737ebc25e6c57d7ed68d7bff9555
+source-git-commit: 74f1fc80bb908f7b7114177c5f8355ff892b95ed
 workflow-type: tm+mt
-source-wordcount: '4423'
+source-wordcount: '4422'
 ht-degree: 6%
 
 ---
@@ -112,7 +112,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 现在，搜索页面和搜索结果页面包含更多信息标题，以便更好地了解屏幕阅读器用户(NPR-34093)。
 
-* 屏幕阅读器现在会宣布删除资产属性按钮 [!UICONTROL 的] “基本” 选项卡中选定标记的选项，以删除选定标记(NPR-33972)。
+* 屏幕阅读器现在会宣布删除资产属性按钮 [!UICONTROL “基] 本”选项卡中 [!UICONTROL 选定] 标记的选项，以删除选定标记(NPR-33972)。
 
 * 列表视图中每行中的元素现在由屏幕阅读器正确宣布为同一行的元素(NPR-33932)。
 
