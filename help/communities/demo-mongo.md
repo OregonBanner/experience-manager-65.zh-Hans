@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: c3438cff60901edad8b81fe1a1bfddbbbe39a18d
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
    * 定义的数据目录路径将称为&lt;mongo-dbpath>。
 
 
-* MongoDB可以与AEM在同一台主机上运行，也可以远程运行。
+* MongoDB可以与AEM运行在同一台主机上，也可以远程运行。
 
 ### 开始MongoDB {#start-mongodb}
 
@@ -72,10 +72,10 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果MongoDB在AEM *后启动* ，请重 **新启** 动所有AEM实例 **** ，以便它们正确连接到MongoDB。
+>如果MongoDB在AEM后 *启动* ，请重 **新启** 动所有AEM **** 实例，以便它们能正确地连接到MongoDB。
 
 
-### 演示制作选项： 设置MongoDB复制副本集 {#demo-production-option-setup-mongodb-replica-set}
+### 演示制作选项：设置MongoDB复制副本集 {#demo-production-option-setup-mongodb-replica-set}
 
 以下命令是在localhost上设置具有3个节点的复制副本集的示例：
 
@@ -100,7 +100,7 @@ ht-degree: 1%
 * 从Apache Lucene下 [载Solr](https://archive.apache.org/dist/lucene/solr/):
 
    * 适用于任何操作系统。
-   * 使用版本4.10或版本5。
+   * Solr版本7.0。
    * Solr需要Java 1.7或更高版本。
 
 * 基本配置
@@ -131,7 +131,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果Solr控制台不可用，请检查&lt;solrinstall>/example/logs下的日志。 查看SOLR是否尝试绑定到无法解析的特定主机名(例如， “user-macbook-pro”)。
+>如果Solr控制台不可用，请检查&lt;solrinstall>/example/logs下的日志。 查看SOLR是否尝试绑定到无法解析的特定主机名(例如，“user-macbook-pro”)。
 如果是，则使用此主机名的新条目（如127.0.0.1 user-macbook-pro）更新etc/hosts文件，Solr将正确开始。
 
 
@@ -143,7 +143,7 @@ ht-degree: 1%
 
 ## 将MongoDB标识为常用商店 {#identify-mongodb-as-common-store}
 
-根据需要启动作者和发布AEM实例。
+如有必要，启动作者实例并发布AEM实例。
 
 如果AEM在启动MongoDB之前运行，则需要重新启动AEM实例。
 
@@ -163,7 +163,7 @@ ht-degree: 1%
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-   注意： 虽然作者在asipath下有JCR *节点* ，但这些节点是用于SCF框架的。 实际UGC不在JCR中，而在MongoDB中。
+   注意：虽然作者在asipath下有JCR *节点* ，但这些节点是用于SCF框架的。 实际UGC不在JCR中，而在MongoDB中。
 
 1. 视图mongodb Communities中的 **[!UICONTROL UGC]** > **[!UICONTROL 集合]** >内 **[!UICONTROL 容]**
 
@@ -175,6 +175,7 @@ ht-degree: 1%
    * 要选 `core selector` 择的用户 `collection1`
    * 选择 `Query`
    * 选择 `Execute Query`
+
    ![chlimage_1-194](assets/chlimage_1-194.png)
 
 ## 疑难解答 {#troubleshooting}
@@ -185,7 +186,8 @@ ht-degree: 1%
 
 1. 确保MSRP已配置为默认提供程序：
 
-   * 在所有作者和发布AEM实例上，重新访问 [存储配置控制台](srp-config.md)
+   * 在所有作者实例和发布AEM实例上，重新访问 [存储配置控制台](srp-config.md)
+
    或检查AEM存储库：
 
    * 在JCR中， [if/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
