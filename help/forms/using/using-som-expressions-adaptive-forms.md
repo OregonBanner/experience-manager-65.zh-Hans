@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6b4bc58efd72900c54cb245878239e345d72ae3e
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # 在自适应表单中使用SOM表达式{#using-som-expressions-in-adaptive-forms}
 
-自适应表单建模为AEM页面，在AEM存储库中以JCR内容结构表示。 内容结构的关键元素是guideContainer节点。 在guideContainer下面有rootPanel，它可能包含嵌套面板和字段。
+自适应表单建模为AEM页面，它在AEM存储库中表示为JCR内容结构。 内容结构的关键元素是guideContainer节点。 在guideContainer下面有rootPanel，它可能包含嵌套面板和字段。
 
 您可以使用脚本对象模型(SOM)来引用特定文档对象模型(DOM)中的值、属性和方法。 DOM将内存对象和属性组织在树层次结构中。 SOM表达式引用字段／绘图元素和面板。
 
@@ -35,7 +35,7 @@ DOM树
 
 具有两个单选按钮的DOM树
 
-在自适应表单中更改单选按钮的位置时，SOM表达式会发生变化。 在创作模式中，您可以使用视图SOM表达式选项视图AEM Forms中字段或元素的SOM表达式。 该选项显示在面板上，并在右键单击该字段或元素时显示。
+在自适应表单中更改单选按钮的位置时，SOM表达式会发生变化。 在创作模式中，您可以使用视图SOM表达式选项来视图AEM Forms内某个字段或元素的SOM表达式。 该选项显示在面板上，并在右键单击该字段或元素时显示。
 
 ![以自适应形式提取SOM表达式](assets/som-expressions.png)
 
@@ -48,4 +48,3 @@ DOM树
 使用面板工具栏提取SOM表达式
 
 GuideBridge中列出的 [某些API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) 使用元素的SOM表达式。 例如，要以自适应形式将焦点置于特定字段，请将相应的SOM表达式传递 `getFocus`到API `guideBridge`。
-
