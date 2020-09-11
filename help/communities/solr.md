@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1483'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Apache [Solr](https://lucene.apache.org/solr/) (Aak)安装可通过使用不同 
 
 下载和安装Apache Solr:
 
-* [4.10版](https://archive.apache.org/dist/lucene/solr/4.10.4/) 或 [5.x版](https://archive.apache.org/dist/lucene/solr/5.5.3/)
+* [版本 7.0](https://archive.apache.org/dist/lucene/solr/7.0.0/)
 
 * Solr需要Java 1.7或更高版本
 * 无需服务
