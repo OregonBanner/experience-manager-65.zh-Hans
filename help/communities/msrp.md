@@ -1,8 +1,8 @@
 ---
 title: MSRP - MongoDB存储资源提供程序
 seo-title: MSRP - MongoDB存储资源提供程序
-description: 设置AEM Communities以将关系数据库用作其公用存储
-seo-description: 设置AEM Communities以将关系数据库用作其公用存储
+description: 设置AEM Communities以将关系数据库用作其常用存储
+seo-description: 设置AEM Communities以将关系数据库用作其常用存储
 uuid: 9fc06d4f-a60f-4ce3-8586-bcc836aa7de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 412200c1bb0c7050c981fc5dc2a5430f37b3beb3
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1209'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 * [Apache Solr](https://lucene.apache.org/solr/):
 
-   * 4.10版或5版
+   * Solr版本7.0
    * Solr需要Java 1.7或更高版本
    * 无需服务
    * 运行模式的选择：
@@ -64,23 +64,23 @@ ht-degree: 1%
 
    * **[!UICONTROL mongoDB URI]**
 
-      *默认*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+      *默认*:mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL mongoDB 数据库]**
 
-      *默认*: 社区
+      *默认*:社区
 
    * **[!UICONTROL mongoDB UGC 收藏集]**
 
-      *默认*: 内容
+      *默认*:内容
 
    * **[!UICONTROL mongoDB 附件收藏集]**
 
-      *默认*: 附件
+      *默认*:附件
 
 * **[!UICONTROL Solr配置]**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper 主机&#x200B;**
+   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper 主机**
 
       在SolrCloud [模式下运行](solr.md#solrcloud-mode) ，与外部ZooKeeper一起运行时，将此值设置为 `HOST:PORT` ZooKeeper的值， *如my.server.com:2181*
 
@@ -92,11 +92,11 @@ ht-degree: 1%
       * **[!UICONTROL Solr URL在]**独立模式下用于与Solr通信的URL。
 如果在SolrCloud模式下运行，则保留为空。
 
-         *默认*: https://127.0.0.1:8983/solr/
+         *默认*:https://127.0.0.1:8983/solr/
 
       * **[!UICONTROL Solr集合]**Solr集合名称。
 
-         *默认*: collection1
+         *默认*:collection1
 
 * Select **[!UICONTROL Submit]**
 
@@ -137,7 +137,7 @@ mongodb://mongoserver1:<mongoport1>,mongoserver2:<mongoport2>,mongoserver3:<mong
 
 如果从配置了MSRP的早期版本升级，则必须：
 
-1. 执行 [AEM Communities升级](upgrade.md)
+1. 执行升 [级到AEM Communities](upgrade.md)
 1. 安装新的Solr配置文件
    * 对于 [标准MLS](solr.md#installing-standard-mls)
    * 对于 [高级MLS](solr.md#installing-advanced-mls)
@@ -166,13 +166,13 @@ MSRP必须被标识为所有作者和发布实例上的公用存储。
 
 在安装新配置文件或修复损坏的Solr索引时，有一个HTTP端点用于为MSRP的Solr重新建立索引。
 
-MongoDB是MSRP的真 *相* 源； 只需备份MongoDB。
+MongoDB是MSRP的真 *相* 源；只需备份MongoDB。
 
 可以重新索引整个UGC树，或者只重新索引特定子树，如*path *data参数所指定。
 
 此工具可以使用cURL或任何其他HTTP工具从命令行运行。
 
-重新索引时，内存与性能之间会有权权衡，这是由*batchSize *data参数控制的，该参数指定每批重新索引多少个UGC记录。
+重新索引时，内存与性能之间会有权权衡，这是由*batchSize *data参数控制的，它指定每批重新索引多少个UGC记录。
 
 合理默认值为5000:
 
@@ -187,7 +187,7 @@ MongoDB是MSRP的真 *相* 源； 只需备份MongoDB。
 
 cURL -u *签名* -d *data**reindex-url*
 
-*signin* = administrator-id:password例如： admin:admin
+*signin* = administrator-id:password例如：admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
@@ -233,19 +233,19 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ### 升级后UGC消失 {#ugc-disappears-after-upgrade}
 
-如果从现有AEM Communities6.0站点升级，则在升级到AEM Communities6.3后，任何预先存在的UGC必须转换为符合 [SRP](srp.md) API所需的结构。
+如果从现有的AEM Communities6.0站点升级，则在升级到AEM Communities6.3后，任何预先存在的UGC必须转换为符合 [SRP](srp.md) API所需的结构。
 
 GitHub上有一个开放源代码工具可用于此用途：
 
 * [AEM CommunitiesUGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-可以自定义迁移工具，将UGC从AEM social communities的早期版本导出，以导入到AEM Communities6.1或更高版本中。
+可以自定义迁移工具，将UGC从AEM social communities的早期版本导出，以导入到AEM Communities6.1或更高版本。
 
 ### 错误——未定义字段provider_id {#error-undefined-field-provider-id}
 
 如果日志中出现以下错误，则表示Solr模式文件配置不正确。
 
-#### JsonMappingException: undefined字段provider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException:undefined字段provider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
