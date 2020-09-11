@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: ac3d18bf0b39efbe927c10aef557296140628e19
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 0%
@@ -75,7 +75,7 @@ GDS的位置是在AEM表单安装过程中或稍后使用管理控制台确定�
 
 ### AEM Forms工作区 {#html-workspace}
 
-AEM Forms工作区与(JEE上的AEM表单已弃用)Flex工作区的功能相匹配，并添加了扩展和集成工作区的新功能，使其更易用。
+AEM Forms工作区与(JEE上已弃用的AEM表单)Flex工作区的功能相匹配，并添加了扩展和集成Workspace的新功能，使其更加用户友好。
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ AEM Forms工作区与(JEE上的AEM表单已弃用)Flex工作区的功能相匹�
 
 ## AEM表单数据库 {#aem-forms-database}
 
-AEM表单存储库存储对GDS和内容数据库根目录（对于内容服务）中文件的表单对象、服务配置、进程状态和数据库引用等内容。 数据库备份可以实时执行而不中断服务，恢复可以到特定时间点或特定更改。 本节介绍如何配置数据库，以便实时备份它。
+AEM表单存储库存储对GDS和内容数据库根目录（对于内容服务）中文件的表单对象、服务配置、进程状态和数据库引用等内容。 数据库备份可以实时执行，而不会中断服务，恢复可以到特定时间点或特定更改。 本节介绍如何配置数据库，以便实时备份它。
 
 在正确配置的AEM表单系统上，系统管理员和数据库管理员可以轻松协作，将系统恢复到一致的已知状态。
 
@@ -114,7 +114,7 @@ DB2具有将数据库备份到Tivoli存储管理器的内置功能。 通过使�
 
 ### Oracle {#oracle}
 
-使用快照备份或将Oracle数据库配置为以存档日志模式运行。 (请参 [阅Oracle备份： 简介](https://www.databasedesign-resource.com/oracle-backup.md)。) 有关备份和恢复Oracle数据库的详细信息，请转到以下站点：
+使用快照备份或将Oracle数据库配置为以存档日志模式运行。 (请参 [阅Oracle备份：简介](https://www.databasedesign-resource.com/oracle-backup.md)。) 有关备份和恢复Oracle数据库的详细信息，请转到以下站点：
 
 [Oracle备份和恢复：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) 更详细地介绍备份和恢复的概念以及使用Recovery Manager(RMAN)进行备份、恢复和报告的最常用技术，并提供有关如何规划备份和恢复战略的更多信息。
 
