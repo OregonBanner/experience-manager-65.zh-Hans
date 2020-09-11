@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7e05502b590fb2c7c36919f94611efe999262d32
+source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
 workflow-type: tm+mt
 source-wordcount: '1890'
 ht-degree: 1%
@@ -150,7 +150,7 @@ AEM CommunitiesSCORM引擎是启用功能 [的必](/help/communities/overview.md
 
 **安装SCORM包**
 
-1. 从包 [共享安装cq-social-scorm-package 2.3](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg).7版
+1. 从包 [共享安装cq-social-scorm-package版本2.3](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) .7
 1. 从cq `/libs/social/config/scorm/database_scormengine_data.sql` 实例下载并在mysql服务器中执行它以创建升级的scormEngineDB模式。
 1. 在发 `/content/communities/scorm/RecordResults` 布者的CSRF过滤器的“排除路径”属 `https://<hostname>:<port>/system/console/configMgr` 性中添加。
 
