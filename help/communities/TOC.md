@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Communities用户指南
+breadcrumb-title: Communities Guide
 user-guide-description: Create online experiences such as forums, user groups, learning resources, and other social features.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 7%
@@ -21,7 +22,7 @@ ht-degree: 7%
    + [AEM Communities概述](overview.md)
    + [AEM Communities 发行说明](/help/release-notes/communities-release-notes.md)
    + [AEM Communities 快速入门](getting-started.md)
-   + [AEM Communities支持入门](getting-started-enablement.md)
+   + [AEM Communities教育入门](getting-started-enablement.md)
    + [初始设置](setup.md)
    + [创作新社区站点](create-site.md)
    + [体验发布的站点](published-site.md)
@@ -36,10 +37,10 @@ ht-degree: 7%
    + [社区的推荐拓扑](topologies.md)
    + [为社区配置Dispatcher](dispatcher.md)
 + 管理 {#administer}
-   + [AEM Communities中的用户和UGC管理服务](user-ugc-management-service.md)
+   + [AEM Communities用户与UGC管理服务](user-ugc-management-service.md)
    + [社区站点](administer-landing.md)
    + [社区控制台](consoles.md)
-   + [Analytics社区配置功能](analytics.md)
+   + [社区分析配置功能](analytics.md)
    + [配置Enablement Features](enablement.md)
    + [配置消息传递](messaging.md)
    + [协调社区内容](moderate-ugc.md)
@@ -66,7 +67,7 @@ ht-degree: 7%
    + [适用于社区的FFmpeg](ffmpeg.md)
    + [上下文协调](in-context.md)
    + [高级评分和徽章](advanced.md)
-   + [ASRP - Adobe存储资源提供商](asrp.md)
+   + [ASRP -Adobe存储资源提供程序](asrp.md)
    + [MSRP - MongoDB存储资源提供程序](msrp.md)
    + [如何为演示设置MongoDB](demo-mongo.md)
    + [DSRP —— 关系存储库资源提供程序](dsrp.md)
