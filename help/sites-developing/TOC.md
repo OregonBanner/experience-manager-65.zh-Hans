@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.5开发用户指南
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 10%
+source-wordcount: '820'
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 10%
 + [开发用户指南概述](home.md)
 + 开发人员简介{#introduction}
    + [AEM Sites 开发入门- WKND 教程](getting-started.md)
-   + [AEM Core Concepts](the-basics.md)
+   + [AEM核心概念](the-basics.md)
    + [AEM触屏优化UI的结构](touch-ui-structure.md)
    + [AEM触屏优化UI的概念](touch-ui-concepts.md)
    + [AEM开发——准则和最佳实践](dev-guidelines-bestpractices.md)
@@ -27,15 +27,15 @@ ht-degree: 10%
    + [编辑器限制](editor-limitations.md)
    + [CSRF保护框架](csrf-protection.md)
    + [数据建模- David Nuescheler的模型](model-data.md)
-   + [为AEM贡献](contributing-to-cq.md)
+   + [为AEM做出贡献](contributing-to-cq.md)
    + [安全](security.md)
    + [参考材料](reference-materials.md)
    + [创建功能齐备的网站（经典UI）](website.md)
    + [设计和设计人员（经典UI）](designer.md)
    + [迁移到触屏UI](/help/sites-developing/touch-ui-migration.md)
 + 平台{#platform}
-   + [Sling Cheatsheet](sling-cheatsheet.md)
-   + [使用Sling适配器](sling-adapters.md)
+   + [Sling 备忘单](sling-cheatsheet.md)
+   + [使用 Sling 适配器](sling-adapters.md)
    + [标记库](taglib.md)
    + 模板{#templates}
       + [模板](templates.md)
@@ -43,7 +43,7 @@ ht-degree: 10%
       + [页面模板——静态](page-templates-static.md)
       + [内容片段模板](content-fragment-templates.md)
       + [自适应模板渲染](templates-adaptive-rendering.md)
-   + [在AEM中使用Sling资源合并](sling-resource-merger.md)
+   + [AEM中Sling资源合并的应用](sling-resource-merger.md)
    + [叠加](overlays.md)
    + [命名约定](naming-conventions.md)
    + [创建新的Granite UI字段组件](granite-ui-component.md)
@@ -54,7 +54,7 @@ ht-degree: 10%
    + 标记{#tagging}
       + [标记](tags.md)
       + [AEM Tagging Framework](framework.md)
-      + [在AEM应用程序中构建标记](building.md)
+      + [将标记构建到AEM应用程序](building.md)
    + [自定义错误处理程序显示的页面](customizing-errorhandler-pages.md)
    + [自定义节点类型](custom-nodetypes.md)
    + [为图形渲染添加字体](adding-fonts.md)
@@ -69,7 +69,7 @@ ht-degree: 10%
    + 电子商务{#ecommerce}
       + [电子商务](ecommerce.md)
       + [开发（通用）](generic.md)
-      + [使用SAP Commerce Cloud进行开发](sap-commerce-cloud.md)
+      + [使用SAPCommerce Cloud进行开发](sap-commerce-cloud.md)
 + 组件{#components}
    + [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
    + [样式系统](/help/sites-authoring/style-system.md)
@@ -96,15 +96,15 @@ ht-degree: 10%
       + [开发AEM组件（经典UI）](developing-components-classic.md)
       + [使用和扩展构件（经典UI）](widgets.md)
       + [使用xtypes（经典UI）](xtypes.md)
-      + [开发表单（经典UI）](developing-forms.md)
+      + [开发Forms（经典UI）](developing-forms.md)
 + 无外设体验管理{#headless}
-   + [与AEM结合使用的无外设和混合](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [具有AEM的无头和混合](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [为组件启用JSON导出](json-exporter-components.md)
    + 单页应用程序{#spas}
       + [SPA简介和演练](spa-walkthrough.md)
       + [SPA WKND教程](spa-wknd.md)
-      + [AEM中SPA快速入门——反应](spa-getting-started-react.md)
-      + [AEM中SPA快速入门——角度](spa-getting-started-angular.md)
+      + [AEM中的SPA入门——反应](spa-getting-started-react.md)
+      + [AEM中的SPA入门——角度](spa-getting-started-angular.md)
       + [为SPA实施React组件](spa-implementing-react-component.md)
       + [SPA深海潜水](spa-deep-dives.md)
       + [SPA编辑器概述](spa-overview.md)
@@ -113,9 +113,9 @@ ht-degree: 10%
       + [SPA页面组件](spa-page-component.md)
       + [SPA的动态模型到组件映射](spa-dynamic-model-to-component-mapping.md)
       + [SPA模型路由](spa-routing.md)
-      + [SPA和Adobe Experience Platform启动集成](spa-launch.md)
+      + [SPA与Adobe Experience Platform Launch集成](spa-launch.md)
       + [SPA和服务器端渲染](spa-ssr.md)
-      + [SPA Javascript API参考](spa-reference-materials.md)
+      + [SPA参考资料](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [内容片段](/help/assets/content-fragments/content-fragments.md)
    + [体验片段](/help/sites-authoring/experience-fragments.md)
@@ -125,7 +125,7 @@ ht-degree: 10%
    + [AEM 现代化工具](modernization-tools.md)
    + [对话框编辑器](dialog-editor.md)
    + [对话框转换工具](dialog-conversion.md)
-   + [使用CRXDE Lite进行开发](developing-with-crxde-lite.md)
+   + [利用CRXDE Lite进行开发](developing-with-crxde-lite.md)
    + [使用Maven管理包](vlt-mavenplugin.md)
    + [如何使用Eclipse开发AEM项目](howto-projects-eclipse.md)
    + [如何使用Apache Maven构建AEM项目](ht-projects-maven.md)
@@ -165,10 +165,10 @@ ht-degree: 10%
       + [工作流进程参考](workflows-process-ref.md)
       + [AEM工作流中的变量](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [扩展多站点管理器](extending-msm.md)
-   + 跟踪和Analytics{#extending-analytics}
+   + 跟踪和分析{#extending-analytics}
       + [扩展事件跟踪](extending-analytics.md)
-      + [将AdobeAnalytics跟踪添加到组件](extending-analytics-components.md)
-      + [自定义AdobeAnalytics框架](extending-analytics-framework.md)
+      + [将Adobe Analytics跟踪添加到组件](extending-analytics-components.md)
+      + [自定义Adobe Analytics框架](extending-analytics-framework.md)
       + [为Analytics实施服务器端页面命名](extending-analytics-pa-naming.md)
    + 云服务{#extending-cloud-services}
       + [云服务配置](extending-cloud-config.md)
