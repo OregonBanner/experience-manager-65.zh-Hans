@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: d0b333ffa6cad4841e70e652328e92554fb2a7a1
+source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 3%
@@ -48,7 +48,7 @@ ht-degree: 3%
 
 ### 头部和身体脚本 {#head-and-body-scripts}
 
-1. 在 **CRXDE Lite** explorer窗格中，导航到 `/apps/an-scf-sandbox/components/playpage` 并多次单击文件， `playpage.jsp` 在编辑窗格中打开它。
+1. 在“ **CRXDE Lite** ”资源管理器窗格中，导 `/apps/an-scf-sandbox/components/playpage` 航到多次并单击文件， `playpage.jsp` 在编辑窗格中将其打开。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
