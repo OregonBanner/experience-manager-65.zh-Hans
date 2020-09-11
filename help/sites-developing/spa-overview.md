@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fe81a72a6269060a7ec1283f817920618ba715ef
+source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # SPA编辑器概述{#spa-editor-overview}
 
-单页应用程序(SPA)可以为网站用户优惠引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，作者希望在AEM中为使用此类框架构建的站点无缝编辑内容。
+单页应用程序(SPA)可以为网站用户优惠引人入胜的体验。 开发人员希望能够使用SPA框架构建站点，而作者希望在AEM内无缝编辑内容，使用此类框架构建站点。
 
-SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本页概述了SPA支持在AEM中的结构、SPA编辑器的工作方式以及SPA框架和AEM保持同步的方式。
+SPA编辑器优惠了一个全面的解决方案，支持AEM中的SPA。 本页概述了AEM中SPA支持的结构、SPA编辑器的工作方式以及SPA框架和AEM保持同步的方式。
 
 >[!NOTE]
 >
@@ -31,11 +31,11 @@ SPA编辑器为在AEM中支持SPA提供了全面的解决方案。 本页概述�
 
 ## 简介 {#introduction}
 
-使用常见SPA框架（如React和Angular）构建的站点通过动态JSON加载其内容，并且不提供AEM页面编辑器必须的HTML结构才能放置编辑控件。
+使用常见SPA框架（如React和Angular）构建的站点通过动态JSON加载其内容，并且不提供AEM页面编辑器能够放置编辑控件所必需的HTML结构。
 
-要在AEM中启用SPA编辑，需要SPA的JSON输出与AEM存储库中的内容模型之间的映射才能保存对内容所做的更改。
+要在AEM中编辑SPA，需要在SPA的JSON输出与AEM存储库中的内容模型之间进行映射，以保存对内容所做的更改。
 
-AEM中的SPA支持引入了一个精简JS层，当在页面编辑器中加载时，该层会与SPA JS代码交互，事件可通过该层发送，编辑控件的位置也可以激活，以便进行上下文编辑。 此功能基于Content Services API端点概念，因为SPA中的内容需要通过Content Services加载。
+AEM中的SPA支持引入了一个精简JS层，当在页面编辑器中加载时，该层与SPA JS代码交互，可通过该层发送事件，并激活编辑控件的位置以允许进行上下文编辑。 此功能基于Content Services API端点概念，因为SPA中的内容需要通过Content Services加载。
 
 有关AEM中SPA的更多详细信息，请参阅以下文档:
 
@@ -48,7 +48,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 
 ### 页面模型管理 {#page-model-management}
 
-页面模型的解析和管理被委托给提供的 `PageModel` 库。 SPA必须使用页面模型库才能进行初始化并由SPA编辑器创作。 页面模型库通过npm间接提供给AEM页面组 `cq-react-editable-components` 件。 页面模型是AEM和SPA之间的解释器，因此始终必须存在。 创作页面时，必须添加其 `cq.authoring.pagemodel.messaging` 他库才能启用与页面编辑器的通信。
+页面模型的解析和管理被委托给提供的 `PageModel` 库。 SPA必须使用页面模型库才能进行初始化并由SPA编辑器创作。 页面模型库通过npm间接提供给AEM页面 `aem-react-editable-components` 组件。 页面模型是AEM和SPA之间的解释器，因此始终必须存在。 创作页面时，必须添加其 `cq.authoring.pagemodel.messaging` 他库才能启用与页面编辑器的通信。
 
 如果SPA页面组件从页面核心组件继承内容，则有两个选项可使客户端库 `cq.authoring.pagemodel.messaging` 类别可用：
 
@@ -70,7 +70,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 
 ## 工作流 {#workflow}
 
-您可以将SPA编辑器视为SPA和AEM之间的调解者，从而了解SPA与AEM之间的交互流程。
+您可以通过将SPA编辑器视为SPA编辑器与AEM之间的调解器来了解SPA与之间的交互流程。
 
 * 页面编辑器与SPA之间的通信是使用JSON而不是HTML进行的。
 * 页面编辑器通过iframe和消息传递API向SPA提供最新版本的页面模型。
@@ -81,7 +81,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 
 ### 基本SPA编辑器工作流程 {#basic-spa-editor-workflow}
 
-请注意SPA编辑器的关键元素，创作者可以按如下方式了解在AEM中编辑SPA的高级工作流程。
+在创作过程中，请注意SPA编辑器的关键元素，AEM中编辑SPA的高级工作流程如下所示。
 
 ![untitled1](assets/untitled1.gif)
 
@@ -90,7 +90,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 1. SPA请求JSON内容并在客户端呈现组件。
 1. SPA编辑器检测渲染的组件并生成叠加。
 1. 创作单击叠加，显示组件的编辑工具栏。
-1. SPA编辑器会持续对服务器进行编辑，并向服务器发出POST请求。
+1. SPA编辑器会持续进行编辑，并向服务器发出POST请求。
 1. SPA编辑器向SPA编辑器请求更新的JSON,SPA编辑器会通过DOM事件发送到SPA。
 1. SPA重新呈现相关组件，更新其DOM。
 
@@ -122,10 +122,10 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
    **6b页面编辑器** 请求组件创作配置。
 
    **6c页面** 编辑器接收组件配置。
-1. 作者编辑组件时，页面编辑器会将修改请求发布到默认的POST servlet。
+1. 当作者编辑组件时，页面编辑器会将修改请求发布到默认POSTservlet。
 1. 资源会在存储库中更新。
-1. 更新的资源被提供给POST servlet。
-1. 默认的POST servlet通知页面编辑器资源已更新。
+1. 更新的资源被提供给POSTservlet。
+1. 默认POSTservlet通知页面编辑器资源已更新。
 1. 页面编辑器请求新的页面模型。
 1. 从存储库请求构成页面的资源。
 1. 组成页面的资源由存储库提供给Sling Model Exporter。
@@ -150,7 +150,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 1. **2a页面** 模型为编辑者提供创作所需的数据。
 
    **2b通知** ,component orchestrator会更新页面的内容结构。
-1. 组件查询器可以管理AEM资源类型与SPA组件之间的映射。
+1. 组件查询器将AEM资源类型与SPA组件之间的映射进行管理。
 1. 组件管理器根据页面模型和组件映射动态地实例化SPA组件。
 1. 页面编辑器会更新页面模型。
 1. **6a页面模型** 为页面编辑器提供了更新的创作数据。
@@ -162,7 +162,7 @@ SPA的页面组件不会通过JSP或HTL文件提供其子组件的HTML元素。 
 
 ## 要求和限制 {#requirements-limitations}
 
-要使作者能够使用页面编辑器编辑SPA的内容，必须实施您的SPA应用程序才能与AEM SPA Editor SDK进行交互。 请参阅AEM [文档中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md) ，了解让您的SPA投入运行所需的最低要求。
+要使作者能够使用页面编辑器编辑SPA的内容，必须实施您的SPA应用程序以与AEM SPA编辑器SDK交互。 请参阅AEM [文档中的SPA](/help/sites-developing/spa-getting-started-react.md) 入门，至少了解您运行所需的知识。
 
 ### 支持的框架 {#supported-frameworks}
 
@@ -175,18 +175,18 @@ SPA编辑器SDK支持以下最低版本：
 
 ### 其他框架 {#additional-frameworks}
 
-可以实施其他SPA框架以与AEM SPA Editor SDK配合使用。 请参阅 [SPA Blueprint文档](/help/sites-developing/spa-blueprint.md) ，了解框架创建框架特定层时必须满足的要求，该层由模块、组件和服务组成，以与AEM SPA Editor结合使用。
+可以实施其他SPA框架以与AEM SPA Editor SDK配合使用。 请参见SPA [Blueprint文档](/help/sites-developing/spa-blueprint.md) ，了解框架创建框架特定层时必须满足的要求，该层由模块、组件和服务组成，以便与AEM SPA Editor协同工作。
 
 ### 使用多个选择器 {#multiple-selectors}
 
-可以定义其他自定义选择器并将其用作为为AEM SPA SDK开发的SPA的一部分。 但是，此支持要求选 `model` 择器是第一个选择器，而扩展是 `.json` JSON导 [出器所需的。](json-exporter-components.md#multiple-selectors)
+可以定义其他自定义选择器并将其用作为AEM SPA SDK开发的SPA的一部分。 但是，此支持要求选 `model` 择器是第一个选择器，而扩展是 `.json` JSON导 [出器所需的。](json-exporter-components.md#multiple-selectors)
 
 ### 文本编辑器要求 {#text-editor-requirements}
 
 如果要使用在SPA中创建的文本组件的就地编辑器，则需要其他配置。
 
 1. 在包含文本HTML的容器包装器元素上设置属性（它可以是任何属性）。 对于WKND日志范例内容，它是一 `<div>` 个元素，已使用的选择器 `data-rte-editelement`。
-1. 在相应的 `editElementQuery` AEM文本组件上设置指向该选 `cq:InplaceEditingConfig` 择器的配置，例如， `data-rte-editelement`. 这样，编辑者就知道哪些HTML元素会包裹HTML文本。
+1. 在相应的 `editElementQuery` AEM文本组件上设置指向 `cq:InplaceEditingConfig` 该选择器的配置，例如 `data-rte-editelement`. 这样，编辑者就知道哪些HTML元素会包裹HTML文本。
 
 有关如何实现此操作的示例，请参阅 [WKND日志范例内容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
@@ -194,7 +194,7 @@ SPA编辑器SDK支持以下最低版本：
 
 ### 限制 {#limitations}
 
-AEM 6.4 service pack 2引入了AEM SPA Editor SDK。 它得到Adobe的全面支持，并且作为一项新功能，它将继续得到增强和扩展。 SPA编辑器尚不支持以下AEM功能：
+AEM SPA Editor SDK随AEM 6.4 service pack 2一起推出。 它完全受Adobe支持，并且作为一项新功能，它将继续得到增强和扩展。 SPA编辑器尚不支持以下AEM功能：
 
 * 目标模式
 * ContextHub
