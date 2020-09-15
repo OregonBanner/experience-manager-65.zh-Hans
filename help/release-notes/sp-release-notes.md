@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74606bc3e9c768c3d94b7d05c722980f29e20e0e
+source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
 workflow-type: tm+mt
-source-wordcount: '4418'
+source-wordcount: '4458'
 ht-degree: 6%
 
 ---
@@ -434,7 +434,7 @@ For information about installing the cumulative installer for Experience Manager
 
 ### UberJar {#uber-jar}
 
-Experience Manager6.5.6.0的UberJar可在Adobe公共Maven [存储库中获得](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
+Maven Central存储库中提供UberJar 6.5.6.0Experience Manager [版](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.6-1.0/)。
 
 要在Maven项目中使用UberJar，请 [了解如何使用UberJar](/help/sites-developing/ht-projects-maven.md) ，并在项目POM中包含以下依赖项：
 
@@ -446,6 +446,10 @@ Experience Manager6.5.6.0的UberJar可在Adobe公共Maven [存储库中获得](h
       <scope>provided</scope>
 </dependency>
 ```
+
+>[!NOTE]
+>
+>从此版本开始，UberJar和其他相关对象可在Maven Central存储库中使用，而不是Adobe公共Maven存储库(repo.adobe.com)。 主UberJar文件已重命名为 `uber-jar-<version>.jar`。 因此，标签没 `classifier`有 `apis` 任何值（作为值） `dependency` 。
 
 ## 已弃用功能 {#removed-deprecated-features}
 
