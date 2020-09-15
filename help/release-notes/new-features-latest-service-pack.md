@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f8a072e0ab24d542a1bec8faf03da57f99747102
+source-git-commit: 5cf27977d3d94d39c9dfec51eb50778048f76dfd
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2482'
 ht-degree: 2%
 
 ---
@@ -88,6 +88,10 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 ### 在自动化Forms [!DNL Adobe Sign] 转换服务中增加了对文本标记的支持 {#sign-integration-acroform-afcs}
 
 如果AcroForm包含文 [!DNL Adobe Sign] 本标记，则这些字段现在可识别并表示为 [!DNL Adobe Sign] 使用转换的自适应表单中的字段 [!DNL Automated Forms Conversion service]。 签署方可以在签署自适应表单时填写此类字段。
+
+### 支持将彩色PDF forms转换为自适应表单 {#colore-PDF-forms}
+
+您可以使用 [!DNL Automated Forms Conversion service] 将彩色PDF forms转换为自适应表单。
 
 ### 支持SMB 2和SMB 3协议 {#smb-support}
 
