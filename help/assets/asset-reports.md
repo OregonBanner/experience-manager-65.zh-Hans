@@ -3,7 +3,7 @@ title: 有关数字资产使用情况和共享的报告。
 description: 有关您的资产的 [!DNL Adobe Experience Manager Assets] 报告，有助于您了解数字资产的使用、活动和共享。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a8c4bc1992a48dd01a3f58498e9e924dcc9e886a
+source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 8%
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 ## 先决条件 {#prerequisite-for-reporting}
 
-要生成报告，请确保：
+要生成报告，请执行以下操作：
 
 * 从“ [!UICONTROL 工具”>“操作] ”>“Web控 **[!UICONTROL 制台]** ”启用Day **[!UICONTROL CQ DAM事件]** Recorder **** service。
 * 选择要活动的事件。 例如，要生成有关已下载资产的报告，请选 [!UICONTROL 择已下载资产(DOWNLOADED)]。
@@ -48,9 +48,9 @@ ht-degree: 8%
 
 [!DNL Adobe Experience Manager] 管理员可以轻松地为您的实施生成和自定义这些报告。 管理员可以按照以下步骤生成报告：
 
-1. 在界 [!DNL Experience Manager] 面中，单击 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** > **[!UICONTROL 报]**&#x200B;告。
+1. 在界 [!DNL Experience Manager] 面中，单击 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >报 **[!UICONTROL 告]**。
 
-![“工具”页面以导航资产报表](assets/AssetsReportNavigation.png)
+   ![“工具”页面以导航资产报表](assets/AssetsReportNavigation.png)
 
 1. 在资产 [!UICONTROL 报表页] ，单击工 **[!UICONTROL 具栏]** 中的创建。
 1. 从创 **[!UICONTROL 建报表]** ，选择要创建的报表，然后单击下 **[!UICONTROL 一步]**。
@@ -63,7 +63,8 @@ ht-degree: 8%
 
    >[!NOTE]
    >
-   >“下 [!UICONTROL 载] ”报告仅显示单独选择、使用快速操作下载或下载的资产的详细信息。 但是，它不包含下载文件夹内的资产详细信息。
+   >“下 [!UICONTROL 载] ”报告仅显示单独选择后下载或使用快速操作下载的资产的详细信息。 但是，它不包括已下载文件夹中资产的详细信息。
+
 1. 在存储报告的CRX存储库中配置报告详细信息，如标题、描述、缩略图和文件夹路径。 默认情况下，文件夹路径为 `/content/dam`。 可以指定其他路径。
 
    ![要添加报告详细信息的页面](assets/report_configuration.png)
@@ -94,7 +95,7 @@ ht-degree: 8%
 
    ![链接共享报告的详细信息页](assets/link_share.png)
 
-1. 单击工 **[!UICONTROL 具栏]** 中的“下一步”。
+1. Click **[!UICONTROL Next]** from the toolbar.
 
 1. 在“配 **[!UICONTROL 置列]** ”页中，默认情况下会选择某些列以显示在报告中。 您可以选择更多列。 取消选择选定列，以在报告中将其排除。
 
@@ -104,7 +105,7 @@ ht-degree: 8%
 
    ![选择或取消选择报告列](assets/custom_columns.png)
 
-1. 单击 **[!UICONTROL 工具栏]** 中的创建。 系统会显示一条消息，通知已开始生成报告。
+1. Click **[!UICONTROL Create]** from the toolbar. 系统会显示一条消息，通知已开始生成报告。
 1. 在“资 [!UICONTROL 产报表] ”页上，报表生成状态基于报表作业的当前状态，例如， [!UICONTROL 成功]、 [!UICONTROL 失败]、排队 [!UICONTROL 队列、或计]划。 通知收件箱中显示相同的状态。要视图报告页面，请单击报告链接。 或者，选择报表，然后单击工 **[!UICONTROL 具栏]** 中的视图。
 
    ![生成的报告](assets/report_page.png)
@@ -141,7 +142,7 @@ ht-degree: 8%
 
    要添加更多自定义列，请单 **[!UICONTROL 击]** “添加”，并重复步骤5和6。
 
-1. 单击 **[!UICONTROL 工具栏]** 中的创建。 系统会显示一条消息，通知已开始生成报告。
+1. Click **[!UICONTROL Create]** from the toolbar. 系统会显示一条消息，通知已开始生成报告。
 
 ## 配置清除服务 {#configure-purging-service}
 
