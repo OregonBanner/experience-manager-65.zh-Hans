@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: deb8ce3c6758efa9a127bfad4163ebd1c0f6f97a
+source-git-commit: cdf22fea17f6c79e3a2b565a4c6f728bf0bbd23a
 workflow-type: tm+mt
-source-wordcount: '5878'
+source-wordcount: '5888'
 ht-degree: 6%
 
 ---
@@ -65,9 +65,7 @@ ht-degree: 6%
 
 为了快速找到相关资产，富界面提供了筛选、排序和选择机制。 您可以根据多个条件筛选结果，并查看搜索到的各种过滤器的资产数。 或者，也可以通过在“全搜索”字段中更改查询来重新运行搜索。 当您更改搜索词或过滤器时，其他过滤器仍然被应用以保留搜索的上下文。
 
-当结果为多个资产时， [!DNL Experience Manager] 在卡视图中显示前100个，在列表视图中显示200个。 用户滚动时，会加载更多资产。 这是为了提高性能。
-
->[!VIDEO](https://www.youtube.com/watch?v=LcrGPDLDf4o)
+当结果为多个资产时， [!DNL Experience Manager] 在卡视图中显示前100个，在列表视图中显示200个。 用户滚动时，会加载更多资产。 这是为了提高性能。 观看显示的资 [源数的视频演示](https://www.youtube.com/watch?v=LcrGPDLDf4o)。
 
 有时，您可能会在搜索结果中看到一些意外的资产。 有关详细信息，请参 [阅意外结果](#troubleshoot-unexpected-search-results-and-issues)。
 
