@@ -3,9 +3,9 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各种功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 6f5e650c99017c4b2f04ca8495eea8481b3236cd
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4398'
 ht-degree: 3%
 
 ---
@@ -184,7 +184,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
   <tr>
    <td>表</td>
    <td>nt:unstructured</td>
-   <td><p>定义粘贴表时的行为。<br /> </p> <p>此节点必须具有属性( <code>allow</code> 类型) <code>Boolean</code>来定义是否允许粘贴表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code> 类型<code> String</code>)以定义如何处理粘贴的表内容。 有效值 <code>ignoreMode</code> 为：</p>
+   <td><p>定义粘贴表时的行为。<br /> </p> <p>此节点必须具有属性( <code>allow</code> 类型) <code>Boolean</code>来定义是否允许粘贴表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code> 类型<code> String</code>)以定义如何处理粘贴的表内容。 有效的 <code>ignoreMode</code> 值为：</p>
     <ul>
      <li><code>remove</code>:删除表内容。</li>
      <li><code>paragraph</code>:将表单元格转换为段落。</li>
@@ -193,7 +193,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
   <tr>
    <td>列表</td>
    <td>nt:unstructured</td>
-   <td><p>定义粘贴列表时的行为。<br /> </p> <p>必须具有属 <code>allow</code> 性(类 <code>Boolean</code>型)来定义是否允许粘贴列表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code> 类型)以 <code>String</code>定义如何处理粘贴的任何列表内容。 有效值 <code>ignoreMode</code> 为：</p>
+   <td><p>定义粘贴列表时的行为。<br /> </p> <p>必须具有属 <code>allow</code> 性(类 <code>Boolean</code>型)来定义是否允许粘贴列表。</p> <p>如果 <code>allow</code> 设置为 <code>false</code>，则必须指定属性( <code>ignoreMode</code> 类型)以 <code>String</code>定义如何处理粘贴的任何列表内容。 有效的 <code>ignoreMode</code> 值为：</p>
     <ul>
      <li><code>remove</code>:删除列表内容。</li>
      <li><code>paragraph</code>:将列表项转换为段落。</li>
@@ -259,7 +259,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 >[!NOTE]
 >
->启用样式插件后，“样式”(Style)下拉列表将显示在编辑对话框中。 但是，列表为空，因为未配置样式。
+>启用样式插件后，“样式”下拉列表将显示在编辑对话框中。 但是，列表为空，因为未配置样式。
 
 ### 指定样式表位置 {#locationofstylesheet}
 
@@ -643,7 +643,7 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
 
 ## 配置选项卡大小 {#tabsize}
 
-当在任何文本中按下制表符字符时，会插入预定义的空格数；默认情况下，这是三个不间断空格和一个空格。
+当在任何文本中按制表符时，会插入预定义的空格数；默认情况下，这是三个不间断空格和一个空格。
 
 要定义选项卡大小，请执行以下操作：
 
@@ -731,7 +731,7 @@ RTE允许作者撤消或重做上次所做的几项编辑。 默认情况下，5
       * **名称** `cssExternal`
       * **类型** `String`
       * **值** CSS类的名称（没有前面的“.”）; for example, `cssClass` instead of `.cssClass`)
-   * 有效协 **议** (包 `https://`括、 `https://``file://`、 `mailto:` 等)的阵列
+   * 有效协议 **的数组**。 支持的协议 `http://`有 `https://`、 `file://`和 `mailto:`。
 
       * **名称** `protocols`
       * **类型** `String[]`
