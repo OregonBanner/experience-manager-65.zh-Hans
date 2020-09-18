@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b6db346f7ec2570972329a8edb089fe909120b75
+source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
 workflow-type: tm+mt
-source-wordcount: '4402'
+source-wordcount: '4413'
 ht-degree: 6%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 支持自动化Forms转换服务中的Adobe Sign文本标记。
 
-* 支持使用将彩色表单转换为自适应表单 [!DNL Automated Forms Conversion service]。
+* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
 
 * 支持SMB 2和SMB 3协议。
 
@@ -169,6 +169,8 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 **Experience Manager资产中修复的问题**
 
 [!DNL Adobe Experience Manager] 6.5.6.0修 [!DNL Assets] 复了以下问题：
+
+* 从资产的时间轴中选择注释时，不会突出显示(CQ-4302422)。
 
 * 预览使用模板创建的营销附属品资产（如宣传册、传单和名片） [!DNL Adobe InDesign] 不显示换行符和分段符(NPR-34268)。
 
