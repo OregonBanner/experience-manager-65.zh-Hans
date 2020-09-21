@@ -3,9 +3,9 @@ title: '[!DNLAdobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: 6.5 Service [!DNL Adobe Experience Manager] Pack的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: c27f44326f653bbdc61e866e89e60893e81a7a3b
+source-git-commit: 5db4dd7ccc7d722f0503b22fdd5ff9e5508be4ea
 workflow-type: tm+mt
-source-wordcount: '11438'
+source-wordcount: '11482'
 ht-degree: 25%
 
 ---
@@ -74,6 +74,10 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括自2019年4月发�
 * 匿名用户可以访问CRXDE Lite功能(GRANITE-27790)。
 
 ### [!DNL Assets] {#assets-6550}
+
+>[!IMPORTANT]
+>
+>建议的Windows [!DNL Experience Manager desktop app] 用户升级到 [桌面应用程序版本2.0.3.2](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html#whats-new-added) ，以访问实例上的DAM存储 [!DNL Adobe Experience Manager 6.5.5.0] 库。 因为他们在使用桌面应用程序版本2.0.2 [!DNL Adobe Experience Manager] 访问6.5.5.0实例上的DAM存储库时可能会遇到问题。
 
 **Experience Manager资源中的辅助功能增强**
 
@@ -149,7 +153,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括自2019年4月发�
 
 * 屏幕阅读器现在宣布控件上标签用于移动到日历日期选取器中的下一个和上一个月(NPR-32604)。
 
-* 星级图标现在可以使用键盘键(NPR-32513)获得焦点并具有可操作性。
+* 星级图标现在可以使用键盘键(NPR-32513)获得焦点并具有操作性。
 
 * 现在可通过选项卡（聚焦在音量滑块上）和箭头键（调整键盘上的音量）访问控制视频音量的功能(NPR-32065)。
 
@@ -832,7 +836,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
@@ -1212,7 +1216,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 **Forms - 通信管理**
 
-* [!DNL Experience Manager Forms] 6.5创建通信UI(CCR UI)无法打开使用6. [!DNL Experience Manager Forms] 3创建的通信。CQ-4266392的修补程序
+* [!DNL Experience Manager Forms] 6.5创建通信UI(CCR UI)无法打开使用6.3创 [!DNL Experience Manager Forms] 建的通信。CQ-4266392的修补程序
 * 如果 DDE 数据类型是数字类型，则 XDP 中的求和功能将不起作用。适用于 CQ-4227403 的修补程序
 * 内存中的字母缓存失效逻辑将被更新，因为当资产发布时，其最后修改时间不会更新。适用于 CQ-4250465 的修补程序
 * 无法发布文档片段、DD 和 Letters。适用于 CQ-4272893 的修补程序
