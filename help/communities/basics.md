@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: f1870c1222004f582ccf337a59e1f30e2dc2cf32
+source-git-commit: c77a353d43a3a6f33dffecf0b4e7672ed3e2dd3f
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 1%
@@ -22,9 +22,9 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-文档的创作部分介绍在作者编辑模式下向AEM站点添加社区功能，以及组件配置的说明。
+文档的创作部分介绍在作者编辑模式下将社区功能添加到AEM站点，并描述组件配置。
 
-可以使用AEM实例和交互式社区组件指南来 [探索组件](components-guide.md)。
+可以使用AEM实例和交互式社区组件指 [南探索组件](components-guide.md)。
 
 ## 访问社区组件 {#accessing-communities-components}
 
@@ -47,11 +47,11 @@ ht-degree: 1%
 
 以下是选择几个社区组件并在组件浏览器中查看它们的图像：
 
-![chlimage_1-424](assets/chlimage_1-424.png)
+![组件设计](assets/component-design.png)
 
 现在，组件浏览器中提供选定的组件：
 
-![chlimage_1-425](assets/chlimage_1-425.png)
+![component-design1](assets/component-design1.png)
 
 ## 必需的客户端库 {#required-clientlibs}
 
@@ -59,13 +59,13 @@ ht-degree: 1%
 
 在向页面添加社区组件时，如果结果是错误或意外外观，首先要尝试为社区组件添加所需的客户端库。 有关详细信息，请 [参阅Clientlibs for Communities组件](clientlibs.md)。
 
-### 示例： 最初放置的审阅没有客户端库…… {#example-initially-placed-reviews-without-client-libraries}
+### 示例：最初放置的审阅没有客户端库…… {#example-initially-placed-reviews-without-client-libraries}
 
-![chlimage_1-426](assets/chlimage_1-426.png)
+![clientlibs1](assets/clientlibs1.png)
 
-### ... 使用客户端库 {#and-with-client-libraries}
+### ...使用客户端库 {#and-with-client-libraries}
 
-![chlimage_1-427](assets/chlimage_1-427.png)
+![clientlibs2](assets/clientlibs2.png)
 
 ## 标记 {#tagging}
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 有关管理信息：
 
 * 创建标记命名空间（分类）: [管理标记](../../help/sites-administering/tags.md)
-* 社区站点配置： 请参阅 [标记](sites-console.md#tagging)
+* 社区站点配置：请参阅 [标记](sites-console.md#tagging)
 * [标记用户生成的内容](../../help/sites-authoring/tags.md)
 * [标记支持资源](tag-resources.md)
 
