@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4f6b2bbb58f7f18798eb01a6c8f2cef4b02063a3
+source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
 workflow-type: tm+mt
-source-wordcount: '4413'
+source-wordcount: '4485'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,11 @@ ht-degree: 6%
 | 版本 | 6.5.6.0 |
 | 类型 | Service Pack 版本 |
 | 日期 | 2020年9月3日 |
-| 下载 URL | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip) |
+| 下载 URL | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
+
+>[!NOTE]
+>
+>AEM 6.5 Service Pack 6的更新版本可用。 如果您已安装Service Pack 6的先前版本，请升级到最新可用版本。
 
 ## 包含在Adobe Experience Manager6.5.6.0中的内容 {#what-s-included-in-aem}
 
@@ -377,7 +381,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 请执行以下步骤在现有的Adobe Experience Manager6.5实例上安装Service Pack:
 
-1. 从“软件分发”下 [载服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6.zip)。
+1. 从“软件分发”下 [载服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip)。
 
 1. 打开包管理器，然 **[!UICONTROL 后单击]** “上传包”以上传包。 要了解如何使用它，请参阅 [包管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
@@ -458,6 +462,17 @@ Maven Central存储库中提供UberJar 6.5.6.0Experience Manager [版](https://r
 | 连接器 | 针对Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR Connector已在AEM 6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
+
+* 如果安全运行状况检查无效，且系统显示以下错误消息：
+   `message: Could not verify users and could not test system account logins.`
+请执行以下步骤以解决问题：
+   1. 转至https://&lt;*hostname*>:&lt;*port*>/system/console/configMgr。
+
+   1. 搜索 `hc.impl`.
+
+   1. 在“ [!UICONTROL 服务映射]”中，单 `+` 击并指定 `com.adobe.granite.repository.hc.impl=[user-reader-service]`。
+
+   1. Click [!UICONTROL Save] to save the configuration.
 
 * 如果您 [!DNL Experience Manager] 在6.5上安装6.5 Service Pack 5或以前的 [!DNL Experience Manager] Service Pack，则会删除资产自定义工作流模型(在中创建 `/var/workflow/models/dam`)的运行时副本。
 要检索运行时副本，Adobe建议使用HTTP API将自定义工作流模型的设计时间副本与其运行时副本同步：
