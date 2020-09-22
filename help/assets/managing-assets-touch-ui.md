@@ -4,10 +4,10 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d6f48896a56950d44dfe0d1f9b712157951af83c
+source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
 workflow-type: tm+mt
-source-wordcount: '9240'
-ht-degree: 8%
+source-wordcount: '9370'
+ht-degree: 7%
 
 ---
 
@@ -68,68 +68,80 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    要选择多个文件，请按Ctrl或Command键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
 
-   您可以暂停上传大型资产（大于500 MB），稍后从同一页面继续上传。 单击 **[!UICONTROL 上传开始]** 时显示的进度栏旁边的“暂停”。
+   您可以暂停上传大型资产（大于500 MB），稍后从同一页面恢复它。 单击 **[!UICONTROL 上传开始]** 时显示的进度栏旁边的“暂停”。
 
    ![上传资产进度栏](assets/upload-progress-bar.png)
 
-   资产被视为大资产的大小可以配置。 例如，您可以配置系统，将1000 MB以上（而不是500 MB）的资产视为大资产。 在这种情况下，当 **[!UICONTROL 上传大]** 于1000 MB的资产时，进度栏上会显示“暂停”。
+资产被视为大资产的大小可以配置。 例如，您可以配置系统，将1000 MB以上（而不是500 MB）的资产视为大资产。 在这种情况下，当 **[!UICONTROL 上传大]** 于1000 MB的资产时，进度栏上会显示“暂停”。
 
-   如果上载的文件大于1000 MB且文件小于1000 MB，则“暂停”按钮不显示。 但是，如果取消少于1000 MB的文件上传，将显示“ **[!UICONTROL 暂停]** ”按钮。
+如果上载的文件大于1000 MB且文件小于1000 MB，则“暂停”按钮不显示。 但是，如果取消少于1000 MB的文件上传，将显示“ **[!UICONTROL 暂停]** ”按钮。
 
-   要修改大小限制，请在CRX `chunkUploadMinFileSize` 存储库中 `fileupload`配置节点的属性。
+要修改大小限制，请在CRX `chunkUploadMinFileSize` 存储库中 `fileupload`配置节点的属性。
 
-   单击“暂 **[!UICONTROL 停]**”时，它切换到“播 **[!UICONTROL 放]** ”选项。 要继续上传，请单击“ **[!UICONTROL 播放]**”。
+单击“暂 **[!UICONTROL 停]**”时，它切换到“播 **[!UICONTROL 放]** ”选项。 要继续上传，请单击“ **[!UICONTROL 播放]**”。
 
-   ![恢复暂停的资产上传](assets/resume-paused-upload.png)
+![恢复暂停的资产上传](assets/resume-paused-upload.png)
 
-   To cancel an ongoing upload, click close (`X`) next to the progress bar. 取消上传操作时，将删 [!DNL Assets] 除资产部分上传的部分。
+To cancel an ongoing upload, click close (`X`) next to the progress bar. 取消上传操作时，将删 [!DNL Assets] 除资产部分上传的部分。
 
-   在低带宽情况和网络故障中，恢复上传的功能尤为有用，因为上传大型资产需要很长时间。 您可以暂停上传操作，稍后在情况好转时继续。 在继续时，从暂停的位置上传开始。
+在低带宽情况和网络故障中，恢复上传的功能尤为有用，因为上传大型资产需要很长时间。 您可以暂停上传操作，稍后在情况好转时继续。 在继续时，从暂停的位置上传开始。
 
-   在上传操作过程中， [!DNL Experience Manager] 将要上传的资产部分作为数据块保存在CRX存储库中。 上载完成后， [!DNL Experience Manager] 将这些区块合并到存储库中的单个数据块中。
+在上传操作过程中， [!DNL Experience Manager] 将要上传的资产部分作为数据块保存在CRX存储库中。 上载完成后， [!DNL Experience Manager] 将这些区块合并到存储库中的单个数据块中。
 
-   要为未完成的区块上传作业配置清除任务，请转至 `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`。
+要为未完成的区块上传作业配置清除任务，请转至 `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`。
 
-   如果您上传的资产名称与您上传资产的位置中已有资产的名称相同，则会显示一个警告对话框。
-
-   您可以选择替换现有资产，创建另一个版本，或者重命名上传的新资产以同时保留两个资产。如果您替换现有资产，则资产的元数据以及您对现有资产所做的任何先前修改（例如注释或裁剪）都将被删除。 如果您选择保留这两个资产，则会重命名新资产，并在其名称 `1` 中附加数字。
-
-   ![用于解决资产名称冲突的名称冲突对话框](assets/resolve-naming-conflict.png)
-
-   >[!NOTE]
+>[!CAUTION]
+>
+>触发区块上传时的默认值为500 MB，区块大小为50 MB。 如果修改Apache [Jackrabbit Oak](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) TokenConfiguration `timeout configuration` ，将资产上传时间设置为小于资产上传时间，则在资产上传过程中，您可能会遇到会话超时情况。 因此，您需要更改和， `chunkUploadMinFileSize` 以便 `chunksize`每个区块请求刷新会话。
+>
+>考虑到凭据到期超时、延迟、带宽和预期的并发上传，允许您确保选取以下两项的最高值：
+>
+>* 要确保在上传过程中对可能导致凭据过期的文件大小的文件启用区块上传。
    >
-   >在名称冲 **[!UICONTROL 突]** 对话框 [!UICONTROL 中选择替] 换时，将为新资产重新生成资产ID。 此ID与上一个资产的ID不同。
    >
-   >如果启用“资产分析”以通过Adobe Analytics跟踪展示次数／点击次数，则重新生成的资产ID将使在Analytics上为资产捕获的数据失效。
+* 确保每个区块在凭据过期前完成。
 
-   If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. 仅当现有资产的二进制文 `SHA 1` 件的校验和值与您上传的资产的校验和值匹配时，才会显示该对话框。 在这种情况下，资产名称无关紧要。
 
-   >[!NOTE]
-   >
-   >The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
+如果您上传的资产名称与您上传资产的位置中已有资产的名称相同，则会显示一个警告对话框。
 
-   ![重复资产检测到对话框](assets/duplicate-asset-detected.png)
+您可以选择替换现有资产，创建另一个版本，或者重命名上传的新资产以同时保留两个资产。如果您替换现有资产，则资产的元数据以及您对现有资产所做的任何先前修改（例如注释或裁剪）都将被删除。 如果您选择保留这两个资产，则会重命名新资产，并在其名称 `1` 中附加数字。
 
-   要在中保留重复资 [!DNL Assets]产，请单 **[!UICONTROL 击保留]**。 要删除您上传的重复资产，请单击 **[!UICONTROL 删除]**。
+![用于解决资产名称冲突的名称冲突对话框](assets/resolve-naming-conflict.png)
 
-   [!DNL Experience Manager Assets] 阻止您上传文件名中带有禁止字符的资产。 如果您尝试上传包含不允许的字符或更多字符的资产，则会显 [!DNL Assets] 示一条警告消息，并停止上传，直到您删除这些字符或使用允许的名称进行上传。
+>[!NOTE]
+>
+>在名称冲 **[!UICONTROL 突]** 对话框 [!UICONTROL 中选择替] 换时，将为新资产重新生成资产ID。 此ID与上一个资产的ID不同。
+>
+>如果启用“资产分析”以通过Adobe Analytics跟踪展示次数／点击次数，则重新生成的资产ID将使在Analytics上为资产捕获的数据失效。
 
-   为了符合组织的特定文件命名约定，您 [!UICONTROL 可以在“上传资产] ”对话框中为上传的文件指定长名。
+If the asset you upload exists in [!DNL Assets], the **[!UICONTROL Duplicates Detected]** dialog warns that you are attempting to upload a duplicate asset. 仅当现有资产的二进制文 `SHA 1` 件的校验和值与您上传的资产的校验和值匹配时，才会显示该对话框。 在这种情况下，资产名称无关紧要。
 
-   但是，不支持以下(以空格分隔的列表)字符：
+>[!NOTE]
+>
+>The [!UICONTROL Duplicates Detected] dialog appears only when the duplicate detection feature is enabled. To enable the duplicate detection feature, see [Enable Duplicate Detection](/help/assets/duplicate-detection.md).
 
-   * 资产文件名不能包含 `* / : [ \\ ] | # % { } ? &`
-   * 资产文件夹名称不能包含 `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+![重复资产检测到对话框](assets/duplicate-asset-detected.png)
 
-   不要在资源文件名的扩展名中包含特殊字符。
+要在中保留重复资 [!DNL Assets]产，请单 **[!UICONTROL 击保留]**。 要删除您上传的重复资产，请单击 **[!UICONTROL 删除]**。
 
-   ![上传进度对话框显示成功上传的文件和无法上传的文件的状态](assets/bulk-upload-progress.png)
+[!DNL Experience Manager Assets] 阻止您上传文件名中带有禁止字符的资产。 如果您尝试上传包含不允许的字符或更多字符的资产，则会显 [!DNL Assets] 示一条警告消息，并停止上传，直到您删除这些字符或使用允许的名称进行上传。
 
-   此外，用户 [!DNL Assets] 界面还显示您上传的最新资产或您首先创建的文件夹。
+为了符合组织的特定文件命名约定，您 [!UICONTROL 可以在“上传资产] ”对话框中为上传的文件指定长名。
 
-   如果在上传文件之前取消上传操作，则停 [!DNL Assets] 止上传当前文件并刷新内容。 但是，不会删除已上传的文件。
+但是，不支持以下(以空格分隔的列表)字符：
 
-   中的上传进度 [!DNL Assets] 对话框显示成功上传的文件和无法上传的文件计数。
+* 资产文件名不能包含 `* / : [ \\ ] | # % { } ? &`
+* 资产文件夹名称不能包含 `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+
+不要在资源文件名的扩展名中包含特殊字符。
+
+![上传进度对话框显示成功上传的文件和无法上传的文件的状态](assets/bulk-upload-progress.png)
+
+此外，用户 [!DNL Assets] 界面还显示您上传的最新资产或您首先创建的文件夹。
+
+如果在上传文件之前取消上传操作，则停 [!DNL Assets] 止上传当前文件并刷新内容。 但是，不会删除已上传的文件。
+
+中的上传进度 [!DNL Assets] 对话框显示成功上传的文件和无法上传的文件计数。
 
 ### 串行上传 {#serialuploads}
 
@@ -187,7 +199,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 |  | 包含子文件夹 | 上传您要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称会自动输入 [!DNL Experience Manager Assets]。 |
 |  | 裁剪选项 | 要从图像两侧手动裁剪，请选择“裁剪”菜单，然后选择“手动”。 然后输入要从图像的任何一侧或每一侧裁剪的像素数。 裁剪的图像多少取决于图像文件中的 ppi（每英寸像素数）设置。例如，如果图像显示 150 ppi，您在“顶部”、“右”、“底部”和“左”文本框中分别输入 75，则会从每个侧边裁剪半英寸。<br> 要自动裁切图像中的空白像素，请打开“裁剪”菜单，选择“手动”，然后在“顶部”、“右”、“底部”和“左”字段中输入像素度量值以从两侧进行裁剪。 您还可以在“裁剪”菜单上选择“修剪”并选择以下选项：<br> **根据裁切** <ul><li>**颜色** -选择颜色选项。 然后，选择“角”菜单，选择图像的角，其颜色最能代表您要裁剪的空白颜色。</li><li>**透明度** -选择“透明度”选项。<br> **容差** -拖动滑块以指定从0到1的容差。对于基于颜色的修剪，指定0仅在像素与您在图像角中选择的颜色完全匹配时裁剪像素。 接近1的数字允许更多的颜色差异。<br>对于基于透明度的修剪，指定0可仅裁剪透明像素。 接近1的数字意味着更加透明。</li></ul><br>请注意，这些裁剪选项是无损的。 |
 |  | 颜色用户档案选项 | 在创建用于投放的优化文件时选择颜色转换：<ul><li>默认颜色保留：当图像包含色彩空间信息时，保留源图像颜色；没有颜色转换。 现在几乎所有图像都已嵌入相应的颜色用户档案。 但是，如果CMYK源图像不包含嵌入的颜色用户档案，则这些颜色将转换为sRGB（标准红绿蓝）色彩空间。 sRGB是用于在网页上显示图像的推荐色彩空间。</li><li>保留原始色彩空间：保留原始颜色，点上不进行任何颜色转换。 对于没有嵌入颜色用户档案的图像，任何颜色转换均使用在“发布”设置中配置的默认颜色用户档案进行。 颜色用户档案可能与使用此选项创建的文件中的颜色不对齐。 因此，建议您使用默认颜色保留选项。</li><li>“自定义自”>“至<br> ”打开菜单，因此您可以选择“转换自”和“转换至色彩空间”。 此高级选项将覆盖嵌入在源文件中的任何颜色信息。 当您提交的所有图像都包含不正确或缺少颜色用户档案数据时，请选择此选项。</li></ul> |
-|  | 图像编辑选项 | 您可以在图像中保留剪切蒙版，并选择颜色用户档案。<br> 请参 [阅在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
+|  | 图像编辑选项 | 您可以保留图像中的剪切蒙版，并选择颜色用户档案。<br> 请参 [阅在上传时设置图像编辑选项](#setting-image-editing-options-at-upload)。 |
 |  | Postscript选项 | 您可以栅格化PostScript®文件、裁剪文件、维护透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | Photoshop选项 | 您可以从Adobe®Photoshop®文件创建模板、维护图层、指定如何命名图层、提取文本以及指定如何将图像定位到模板中。<br> 请注意，中不支持模板 [!DNL Experience Manager]。<br> 请参阅 [设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
 |  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成电子目录、设置分辨率和选择色彩空间。<br> 请注意，中不支持eCatalog [!DNL Experience Manager]。 <br> 请参 [阅设置PDF上传选项](#setting-pdf-upload-options)。 |
@@ -452,7 +464,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * Click **[!UICONTROL Cancel]** to stop the process.
    >[!NOTE]
    >
-   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
+   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果您使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
    >* 重命名时，文件名中不允许有空格。
 
 
@@ -563,7 +575,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    >[!NOTE]
    >
-   >属于您已发布文件夹的空文件夹不会发布。
+   >空文件夹（属于您已发布的文件夹的一部分）不会发布。
 
 1. Click **[!UICONTROL Publish]** to confirm the activation for the assets.
 
@@ -638,7 +650,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 ![在列视图中选择资产](assets/select_quick_in_columnview.png)
 
-在卡视图中，选 **[!UICONTROL 择]** (Select)选项显示为快速操作。
+在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
 
@@ -691,7 +703,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
 ## 时间轴 {#timeline}
 
-通过时间轴，您可以视图选定项目的各种事件，如资产的活动工作流、注释／注释、活动日志和版本。
+通过时间轴，您可以视图选定项目的各种事件，如资产的活动工作流、注释／批注、活动日志和版本。
 
 ![对资产的时间轴条目进行排序](assets/sort_timeline.gif)
 
@@ -853,7 +865,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    * 全部在一个超级CJK字体中： [https://www.google.com/get/noto/help/cjk/](https://www.google.com/get/noto/help/cjk/)
    * Noto Sans（适用于欧洲语言）: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
-   * 您选择的语言的Noto字体： [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
+   * 您选择的语言没有字体： [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
 
 1. 通过将font-family参数设置为配置批注PDF文 `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`件。 此配置默认可用，适用于所有欧洲和CJK语言。
 1. 如果您选择的语言与步骤2中提到的语言不同，请在默认字体系列后面附加一个适当（以逗号分隔）的条目。
@@ -875,7 +887,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    ![从左侧导航菜单中，选择时间轴选项](assets/timeline.png)
 
-   *图：从页面的左上角区域打开菜单，然后选择“时[!UICONTROL 间轴]”选项。*
+   *图：从页面左上角的区域打开菜单，然后选择“时[!UICONTROL 间轴]”选项。*
 
 1. 要创建资产版本，请执行以下操作：
 
