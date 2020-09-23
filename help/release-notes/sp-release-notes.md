@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4da9481dbd74a8cecf13c51b78c94abc4d48332e
+source-git-commit: bd67a41e493cbcf97956de09e088d16997ab0e93
 workflow-type: tm+mt
-source-wordcount: '4485'
+source-wordcount: '4495'
 ht-degree: 6%
 
 ---
@@ -22,10 +22,6 @@ ht-degree: 6%
 | 类型 | Service Pack 版本 |
 | 日期 | 2020年9月3日 |
 | 下载 URL | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.6-1.0.zip) |
-
->[!NOTE]
->
->AEM 6.5 Service Pack 6的更新版本可用。 如果您已安装Service Pack 6的先前版本，请升级到最新可用版本。
 
 ## 包含在Adobe Experience Manager6.5.6.0中的内容 {#what-s-included-in-aem}
 
@@ -319,6 +315,8 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 自适应表单具有一些开放的资源解析器。 这会导致提交失败。 出现间歇性问题(CQ-4299407)。
 
+* 首次打开字段配置时，不显示属性图标(CQ-4296284)。
+
 **工作流**
 
 * 当工作流审批者上传附件时，附件将重命 `undefined` 名为(NPR-33699)。
@@ -386,6 +384,10 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 1. 打开包管理器，然 **[!UICONTROL 后单击]** “上传包”以上传包。 要了解如何使用它，请参阅 [包管理器](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)。
 
 1. Select the package and click **[!UICONTROL Install]**.
+
+>[!NOTE]
+>
+>由于已知问题，已提供更新的Service Pack包。 建议安装该包。
 
 >[!NOTE]
 >
