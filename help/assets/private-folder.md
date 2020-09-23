@@ -3,9 +3,9 @@ title: 中的专用文件夹 [!DNL Adobe Experience Manager Assets]
 description: 了解如何在中创建专用文件 [!DNL Adobe Experience Manager Assets] 夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
+source-git-commit: be97ef4f3bb6b904dabcfcd44025a4898bcf4dee
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '641'
 ht-degree: 6%
 
 ---
@@ -67,26 +67,30 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->要创建专用文件夹，您需要对要创建专用文件夹的父文件夹具有读取和编辑ACL权限。 如果您不是管理员，则默认情况下不会为您启用这些权限 `/content/dam`。 在这种情况下，首先获得用户ID/组的这些权限，然后再尝试创建专用文件夹或视图文件夹设置。
+>要创建专用文件夹，您需要对要创建专用文件夹 [的父级](/help/sites-administering/security.md#permissions-in-aem) 文件夹具有“读取”和“修改”访问控制权限。 如果您不是管理员，则默认情况下不会为您启用这些权限 `/content/dam`。 在这种情况下，首先获得用户ID/组的这些权限，然后再尝试创建专用文件夹。
 
 ## 删除专用文件夹 {#delete-private-folder}
 
-您可以通过选择文件夹并从顶部菜单中选择“ [!UICONTROL 删除] ”选项，或使用键盘上的Backspace键来删除专用文件夹。
+您可以通过选择文件夹并从顶部菜单中选择“ [!UICONTROL 删除] ”选项，或使用键盘上的Backspace键来删除文件夹。
 
-### 删除文件夹时删除用户组 {#group-removal-on-folder-deletion}
-
-如果使用上述方法从用户界面删除专用文件夹，则关联的用户组也会被删除。 但是，可以使用JMX从存储库中清理现有的冗余、未使用和自动生 [成的用户组](#group-clean-up-jmx)。
+![顶部菜单中的删除选项](assets/delete-option.png)
 
 >[!CAUTION]
 >
 >如果从CRXDE Lite中删除专用文件夹，则会在存储库中保留冗余用户组。
 
+>[!NOTE]
+>
+>如果使用上述方法从用户界面删除文件夹，则关联的用户组也会被删除。
+但是，可以使用JMX从存储库中清理现有的冗余、未使用和自动生 [成的用户组](#group-clean-up-jmx)。
+
 ### 使用JMX清除未使用的用户组 {#group-clean-up-jmx}
 
 要清理未使用的用户组的存储库，请执行以下操作：
 
-1. 打开JMX以清除Assets的冗余组 `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`。
+1. 打开JMX以清除创作实例上资 [!DNL Experience Manager] 产的冗余组 `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`。
+For example, `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
 
 1. 从此 `clean` JMX调用方法。
 
-您可以看到，所有冗余用户组或自动生成的用户组（创建与先前删除的用户组同名的专用文件夹时创建的用户组）都从路径中删除 `/home/groups/mac/default/<user_name>/<folder_name>`。
+您可以看到，所有冗余用户组或自动生成的用户组（创建与先前删除的用户组同名的文件夹时创建的用户组）都从路径中删除 `/home/groups/mac/default/<user_name>/<folder_name>`。
