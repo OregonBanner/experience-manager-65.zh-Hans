@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2de85f2fc8daaf1cc30a1e12b7c18b20a640c747
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '9370'
+source-wordcount: '9368'
 ht-degree: 7%
 
 ---
@@ -94,7 +94,7 @@ To cancel an ongoing upload, click close (`X`) next to the progress bar. 取消�
 >
 >触发区块上传时的默认值为500 MB，区块大小为50 MB。 如果修改Apache [Jackrabbit Oak](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) TokenConfiguration `timeout configuration` ，将资产上传时间设置为小于资产上传时间，则在资产上传过程中，您可能会遇到会话超时情况。 因此，您需要更改和， `chunkUploadMinFileSize` 以便 `chunksize`每个区块请求刷新会话。
 >
->考虑到凭据到期超时、延迟、带宽和预期的并发上传，允许您确保选取以下两项的最高值：
+>给定凭据到期超时、延迟、带宽和预期的并发上传，允许您确保选取以下内容的最高值：
 >
 >* 要确保在上传过程中对可能导致凭据过期的文件大小的文件启用区块上传。
    >
