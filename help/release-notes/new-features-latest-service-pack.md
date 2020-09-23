@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3ed140d0649379d27019e9f5b0753c07f30f5491
+source-git-commit: b676f73a800c45be12de70b8ba57a332563a49a4
 workflow-type: tm+mt
-source-wordcount: '2482'
+source-wordcount: '2492'
 ht-degree: 2%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 ### Assets中的其他增强功能 {#other-enhancements-assets-6560}
 
-* 现在，删除专用文件夹后，专用文件夹的用户组将从存储库中删除。 删除专用文件夹将清除孤立用户组的存储库，这些用户组在每次创建专用文件夹时都会创建。
+* 现在，删除专用文件夹后，专用文件夹的用户组将从存储库中删除。 删除专用文件夹将清除孤立用户组的存储库，这些用户组在每次创建专用文件夹时都会创建。 有关详细信息，请参 [阅删除文件夹时删除用户组](#group-removal-on-folder-deletion)。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 如果AcroForm包含文 [!DNL Adobe Sign] 本标记，则这些字段现在可识别并表示为 [!DNL Adobe Sign] 使用转换的自适应表单中的字段 [!DNL Automated Forms Conversion service]。 签署方可以在签署自适应表单时填写此类字段。
 
-### 支持将彩色PDF forms转换为自适应表单 {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
 
 您可以使用 [!DNL Automated Forms Conversion service] 将彩色PDF forms转换为自适应表单。
 
