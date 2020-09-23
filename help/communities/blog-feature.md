@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e74d39e63f8b3b5961ea2c31e0ef99c3ab8b06dd
+source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1676'
 ht-degree: 6%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 ## 简介 {#introduction}
 
-针对AEM Communities的博客功能已从创作活动转变为在发布环境中发生的真正社区活动。
+AEM Communities的博客功能已从创作活动转变为在发布环境中发生的真正社区活动。
 
 博客功能支持以日志格式提供社区信息。 博客条目由授权成员（注册、登录用户）在发布环境下创建。
 
@@ -61,19 +61,15 @@ ht-degree: 6%
 
 有关必要的信息，请访 [问社区组件基础](/help/communities/basics.md)。
 
-当包含 [所需的客户端库](/help/communities/blog-developer-basics.md#essentials-for-client-side) ，组件的显示 `Blog` 方式如下：
+当包 [含所需的客户端库](/help/communities/blog-developer-basics.md#essentials-for-client-side) ，组件的显示 `Blog` 方式如下：
 
-![chlimage_1-147](assets/chlimage_1-147.png)
-
-以及显示 `Blog Sidebar` 方式：
-
-![chlimage_1-148](assets/chlimage_1-148.png)
+![add-blog-component](assets/add-blog-component.png)
 
 ### 配置博客 {#configuring-blog}
 
 选择要访问的 `Blog` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-149](assets/chlimage_1-149.png)
+![配置](assets/configure-new.png)
 
 ![博客设置](assets/blog-configure.png)
 
@@ -153,7 +149,7 @@ ht-degree: 6%
 
 * **允许的文件类型**
 
-   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **附加图像文件最大大小**
 
@@ -165,7 +161,7 @@ ht-degree: 6%
 
 * **允许投票**
 
-   如果选中此项，则在博客条目中加入投票功能。 默认为未选中。
+   如果选中此项，则在博客条目中包含投票功能。 默认为未选中。
 
 * **允许用户删除评论和主题**
 
@@ -257,11 +253,11 @@ ht-degree: 6%
 
    用于显示博客条目存档的格式。 格式使用遵循Java约定的占位符。
 
-   * yyyy: 全年，比如2015年
-   * yy: 短年，比如15
-   * MMMMMM: 整月，如6月
-   * 嗯： 短月，如6月
-   * MM: 月号，如06
+   * yyyy:全年，比如2015年
+   * yy:短年，比如15
+   * MMMMMM:整月，如6月
+   * 嗯：短月，如6月
+   * MM:月号，如06
 
    默认值为“yyyy MMMM”，例如显示“2015年6月”
 
@@ -307,7 +303,7 @@ ht-degree: 6%
 
 当登录用户具有版主或管理员权限时，他们能够对发布到博 [客的所有博客文章](/help/communities/moderate-ugc.md) 和评论执行审核任务（如组件的配置所允许）。
 
-![chlimage_1-152](assets/chlimage_1-152.png)
+![版主页](assets/moderator-homepage.png)
 
 #### 成员 {#members}
 
@@ -322,15 +318,15 @@ ht-degree: 6%
 * 删除自己的博客文章或评论
 * 标记他人的博客文章或评论
 
-![chlimage_1-153](assets/chlimage_1-153.png)
+![会员主页](assets/member-homepage.png)
 
-![chlimage_1-154](assets/chlimage_1-154.png)
+![create-blog](assets/create-blog.png)
 
 #### 匿名 {#anonymous}
 
 未登录的网站访客只能阅读张贴的博客文章和评论，如果支持，可翻译这些文章和评论，但不得添加博客文章或评论，也不得标记他人的文章或评论。
 
-![chlimage_1-155](assets/chlimage_1-155.png)
+![匿名用户视图](assets/anonymous-user-view.png)
 
 ## 附加信息 {#additional-information}
 
