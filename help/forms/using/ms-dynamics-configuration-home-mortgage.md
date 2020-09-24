@@ -5,10 +5,10 @@ description: 了解如何通过自适应表单利用We.Finance Reference网站�
 seo-description: 了解如何通过自适应表单利用We.Finance Reference网站的家庭抵押工作流程的Microsoft® Dynamics 365服务
 uuid: a0656d90-84c7-46d1-9a16-dadcc19ff9ef
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
-topic-tags: Configuration
+topic-tags: develop, Configuration
 discoiquuid: 6b31397a-fb06-4043-9368-59fb4fce8afa
 translation-type: tm+mt
-source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
