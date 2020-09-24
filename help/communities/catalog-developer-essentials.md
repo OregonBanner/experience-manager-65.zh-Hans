@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 2%
@@ -95,7 +95,7 @@ ht-degree: 2%
    * 添加多属性
 
       * 名称: `se_resource-tags`
-      * 类型： 字符串
+      * 类型：字符串
       * 值： *&lt;输入[TagID](#pre-filter-tagids)>*
          * 选择多 **[!UICONTROL 个]**
          * 选择添 **[!UICONTROL 加]**
@@ -104,13 +104,13 @@ ht-degree: 2%
 
 * 重新发布社区站点
 
-![chlimage_1-189](assets/chlimage_1-189.png)
+![configure-catalog](assets/configure-catalog.png)
 
 #### 预过滤标记ID {#pre-filter-tagids}
 
 预过滤器 [TagID必须](../../help/sites-developing/framework.md#tagid) 与应用到启用资源的标记完全匹配。 这些属性在站 `resources` 点的文件夹中显示为属性值 `se_resource-tags`。
 
-![chlimage_1-190](assets/chlimage_1-190.png)
+![配置过滤器](assets/configure-catalog1.png)
 
 ### 参考API {#reference-apis}
 
@@ -118,5 +118,5 @@ ht-degree: 2%
 
 * [报告API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
 
-* [报告AnalyticsAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
+* [报告分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
 
