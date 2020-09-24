@@ -10,17 +10,17 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
 
 # 社区控制台 {#communities-consoles}
 
-“AEM Communities”控制台(位于全局导航面板的作者环境中)提供对管理任务的访问，例如：
+AEM Communities控制台(在全局导航面板的作者环境中提供)提供对管理任务的访问，例如：
 
 * [创建社区站点](sites-console.md)
 * 添加 [嵌套](groups.md) 在站点中的组
@@ -41,8 +41,6 @@ ht-degree: 1%
 
 ## 全局导航面板 {#global-navigation-panel}
 
-![chlimage_1-91](assets/chlimage_1-91.png)
-
 选择左 `Adobe Experience Manager` 上角的图标以打开全局导航面板并访问两个图标：
 
 * [导航控制台](#navigation-console)
@@ -52,7 +50,7 @@ ht-degree: 1%
 
 要访问各个“社区”控制台，请从全局导航中选择 **导航“社区”**。
 
-![chlimage_1-92](assets/chlimage_1-92.png)
+![社区](assets/communities.png)
 
 * [站点](sites-console.md)
 
@@ -68,7 +66,7 @@ ht-degree: 1%
 
 * [报告](reports.md)
 
-   在“报告”控制台中，社区站点启用Adobe Analytics后，可以生成有关分配、页面视图和已发布内容(UGC) [的报告](sites-console.md#analytics)。 该控制台仅在创作环境中可用。
+   在“报告”控制台中，当社区站点启用“Adobe Analytics”时，可以生成有关分配、页面视图和已发布内容(UGC) [的报告](sites-console.md#analytics)。 该控制台仅在创作环境中可用。
 
 * [资源](resources.md)
 
