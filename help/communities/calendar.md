@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+source-git-commit: 41de9fff615b5b2f77d835740dfb1d33aa81e59b
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 5%
@@ -42,15 +42,15 @@ ht-degree: 5%
 
 当包 [含所需的客户端库](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) ，组件的显示 `Calendar` 方式即为此。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![calendar-component](assets/calendar-component.png)
 
 ### 配置日历 {#configuring-calendar}
 
 选择要访问的 `Calendar` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
 
-![chlimage_1-113](assets/chlimage_1-113.png)
+![配置](assets/configure-new.png)
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![configure-calendar](assets/configure-calendar1.png)
 
 #### “设置”选项卡 {#settings-tab}
 
@@ -90,7 +90,7 @@ ht-degree: 5%
 
 * **允许的文件类型**
 
-   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **附加图像文件最大大小**
 
@@ -158,7 +158,7 @@ ht-degree: 5%
 
 #### 标记字段选项卡 {#tag-field-tab}
 
-在“标 **记”字段** (Tag field)选项卡下 **，根据所选的命名空间，在“设置”(Settings)选项卡下允许的情况下，** 可以应用的标记会受到限制。
+在“标 **记”字段** (Tag field)选项卡下 **，根据所选的命名空间，在“设置”(Settings)选项卡下允许的** 情况下，可应用的标记会受到限制。
 
 * **允许的命名空间**
 
@@ -193,7 +193,7 @@ ht-degree: 5%
 
 当登录用户具有审查方或管理员权限时，他们能够对发布到 [事件的所有日历任务](/help/communities/moderate-ugc.md) （在组件配置允许的情况下）执行审核事件。
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![版主-视图](assets/moderators-view.png)
 
 #### 成员 {#members}
 
@@ -207,15 +207,15 @@ ht-degree: 5%
 * 删除自己的日历事件或注释
 * 标记他人的日历事件或注释
 
-![chlimage_1-116](assets/chlimage_1-116.png)
+![创建事件](assets/configure-calendar2.png)
 
-![chlimage_1-117](assets/chlimage_1-117.png)
+![事件后](assets/configure-calendar3.png)
 
 #### 匿名 {#anonymous}
 
 未登录的网站访客只能阅读已发布的日历事件，如果受支持，可翻译这些，但不能添加事件或评论，也不能标记其他人的事件或评论。
 
-![chlimage_1-118](assets/chlimage_1-118.png)
+![匿名用户视图](assets/anonymous-user-view1.png)
 
 ## 附加信息 {#additional-information}
 
