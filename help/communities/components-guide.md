@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 3da113e88784def54e0a94e280bf1a965de015ed
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 # 社区组件指南  {#community-components-guide}
 
-“社区组件”指南是用于社交组件框 [架(SCF)的交互式开发工具](scf.md)。 它提供了可用AEM Communities组件的列表或由多个组件构建的更复杂的功能。
+“社区组件”指南是用于社交组件框 [架(SCF)的交互式开发工具](scf.md)。 它提供可用的AEM Communities组件列表或由多个组件构建的更复杂的功能。
 
 除了每个组件的基本信息，该指南还允许对SCF组件／功能的工作方式以及配置或自定义它们的方式进行试验。
 
@@ -70,25 +70,25 @@ ht-degree: 2%
 
 组件指南，如在编辑模式下在作者实例上查看：
 
-![chlimage_1-404](assets/chlimage_1-404.png)
+![community-component1](assets/community-component1.png)
 
 ## 组件页面 {#component-pages}
 
 从页面左侧的列表中选择组件。
 
-![chlimage_1-405](assets/chlimage_1-405.png)
+![社区组件——页面](assets/community-component2.png)
 
 向导的主体显示：
 
-1. 标题： 所选组件的名称
-1. [客户端库](#client-side-libraries): 列表一个或多个必需类别
-1. [包括](scf.md#add-or-include-a-communities-component): 如果组件可以动态包含，则可以在作者编辑模式下切换状态：
+1. 标题：所选组件的名称
+1. [客户端库](#client-side-libraries):列表一个或多个必需类别
+1. [包括](scf.md#add-or-include-a-communities-component):如果组件可以动态包含，则可以在作者编辑模式下切换状态：
 
-   * 如果添加，则显示的文本为： “此组件通过其par节点提供。”
-   * 如果包括，则显示的文本为： “此组件是动态包含的。”
+   * 如果添加，则显示的文本为：“此组件通过其par节点提供。”
+   * 如果包括，则显示的文本为：“此组件是动态包含的。”
    * 如果不包括，则不显示任何文本
 
-1. 示例组件或功能： 组件或功能的活动实例。 如果某个组件，则可能会随着对选项卡部分中提供的模板、CSS和数据所做的更改而改变它。
+1. 示例组件或功能：组件或功能的活动实例。 如果某个组件，则可能会随着对选项卡部分中提供的模板、CSS和数据所做的更改而改变它。
 
 >[!NOTE]
 >
@@ -100,21 +100,21 @@ ht-degree: 2%
 
 对于“社区组件”指南，某些组件对话框设置会与“包含” [切换](scf.md#add-or-include-a-communities-component) 状态一起覆盖。 要在使用现有资源或动态包含的资源之间进行切换，请在编辑模式下同时选择组件和可包含文本，并单击多次以打开编辑对话框：
 
-![chlimage_1-406](assets/chlimage_1-406.png)
+![community-component3](assets/community-component3.png)
 
 在“模板 **”选项卡** 下：
 
-![chlimage_1-407](assets/chlimage_1-407.png)
+![community-component4](assets/community-component4.png)
 
 * **通过 sling:include 包含子组件**
 
    如果未选中，组件指南将使用存储库（jcr节点，它是par节点的子节点）中的现有资源。
 
-   * 显示的文本： “此组件通过其par节点提供。”
+   * 显示的文本：“此组件通过其par节点提供。”
 
    如果选中此项，组件指南将使用sling动态包含子节点的resourceType（非现有资源）的组件。
 
-   * 显示的文本： “此组件是动态包含的。”
+   * 显示的文本：“此组件是动态包含的。”
 
    默认为未选中。
 
@@ -152,7 +152,7 @@ ht-degree: 2%
 
 以注释组件为例，在作者实例或发布实例上，使用管理员权限登录：
 
-1. 浏览到 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
+1. 浏览至 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 
    例如， [http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
@@ -173,7 +173,9 @@ ht-degree: 2%
 
 1. 请注意，现在有3个用于模板、CSS和数据的选项卡。
 
-![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
+![community-component5](assets/community-component5.png)
+
+![community-component6](assets/community-component6.png)
 
 ### 模板选项卡 {#templates-tab}
 
