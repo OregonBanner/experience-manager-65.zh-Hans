@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 15bebf5727e0a575d65806375840a44e423efaa0
+source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 4%
@@ -47,7 +47,7 @@ ht-degree: 4%
 
 当包 [含所需的客户端库](/help/communities/essentials-comments.md#essentials-for-client-side) ，组件的显示方式 `Comments` 为此。
 
-![chlimage_1-428](assets/chlimage_1-428.png)
+![注释——组件](assets/comments-component.png)
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ ht-degree: 4%
 
 * **允许的文件类型**
 
-   仅当选中“允许文件上传”时相关。 带有“点”分隔符的以逗号分隔的文件扩展名列表。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅当选中“允许文件上传”时相关。 带有“点”分隔符的以逗号分隔的文件扩展名列表。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **富文本编辑器**
 
@@ -166,7 +166,7 @@ ht-degree: 4%
 
 在“资 **源类型** ”选项卡下，为组件的新实例指定自定义resourceType `Comments or Voting` :
 
-![chlimage_1-429](assets/chlimage_1-429.png)
+![资源类型](assets/resource-type.png)
 
 * **评论资源类型**
 
