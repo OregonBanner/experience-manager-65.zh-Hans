@@ -6,11 +6,11 @@ seo-description: 使用内联条件并在交互通信和字母中重复，您可
 uuid: 32b48a8b-431d-4f9c-9f51-8e7e9ac624a0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
-topic-tags: interactive-communications
+topic-tags: interactive-communications, correspondence-management
 discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 内联条件 {#inline-conditions}
 
-AEM Forms允许您在文本模块中使用内联条件，以自动呈现取决于与表单数据模型（在交互通信中）或数据字典（在字母中）关联的上下文或数据的文本。 内联条件根据条件评估为true或false显示特定内容。
+AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于与表单数据模型（在交互通信中）或数据字典（在字母中）关联的上下文或数据的文本。 内联条件根据条件评估为true或false显示特定内容。
 
 条件对表单数据模型／数据字典或最终用户提供的数据值执行计算。 使用内联条件，您可以节省时间并减少人为错误，同时创建高度情境化和个性化的交互式通信／字母。
 
@@ -32,7 +32,7 @@ AEM Forms允许您在文本模块中使用内联条件，以自动呈现取决�
 * [通信管理概述](/help/forms/using/cm-overview.md)
 * [交互通信中的文本](../../forms/using/texts-interactive-communications.md)
 
-### 示例： 使用规则在交互式通信中条件化内联文本 {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
+### 示例：使用规则在交互式通信中条件化内联文本 {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
 
 要在交互通信中对句子、段落或文本字符串进行条件化，可以在相应的文本文档片段中创建规则。 以下示例使用规则仅向交互通信的美国收件人显示免费电话号码。
 
@@ -40,7 +40,7 @@ AEM Forms允许您在文本模块中使用内联条件，以自动呈现取决�
 
 在交互通信中包含文本片段后，代理使用代理UI准备交互通信后，将评估收件人的（表单数据模型）数据，并且该文本仅显示给美国的收件人。
 
-### 示例： 在字母中使用内联条件来呈现相应的地址  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### 示例：在字母中使用内联条件来呈现相应的地址  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 通过在相应的文本模块中插入内联条件，可以在字母中插入内联条件。 以下示例使用两个条件在基于DD元素“性别”的信件中评估和显示相应的地址，即Sir或Ma&#39;am。 使用类似的步骤，您可以创建其他条件。
 
@@ -95,7 +95,7 @@ AEM Forms允许您在文本模块中使用内联条件，以自动呈现取决�
 
 此外，您可以在重复构造中指定规则／条件，以条件化在交互通信／字母中呈现的信息／条目。
 
-### 示例： 在交互通信中使用重复设置信用卡交易列表的格式、结构和显示 {#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 示例：在交互通信中使用重复设置信用卡交易列表的格式、结构和显示 {#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 以下示例介绍了在交互通信中使用重复来构造和呈现信用卡交易记录的步骤。
 
@@ -133,13 +133,13 @@ AEM Forms允许您在文本模块中使用内联条件，以自动呈现取决�
 
    ![5_onmouseoverconditionrule](assets/5_onmouseoverconditionrule.png)
 
-   在鼠标悬停时，文本文档片段将显示条件和应用于内容的重复中使用的分隔符。
+   在鼠标悬停时，文本文档片段将显示条件以及应用于内容的重复中使用的分隔符。
 
 1. 保存文本文档片段并预览相关的交互通信。 根据表单数据模型中的数据，对元素应用的重复操作将呈现与预览中以下内容类似的事务详细信息：
 
    ![screen_shot_2018-03-09at155516copy](assets/screen_shot_2018-03-09at155516copy.png)
 
-### 示例： 在信函中重复使用格式、结构和显示信用卡交易列表 {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 示例：在信函中重复使用格式、结构和显示信用卡交易列表 {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 以下示例提供了使用重复来在信函中构造和呈现信用卡交易记录的步骤。 使用类似步骤，您可以在其他场景中使用重复。
 
@@ -186,8 +186,8 @@ AEM Forms允许您在文本模块中使用内联条件，以自动呈现取决�
 
 1. 选择用于格式化动态文本的分隔符，然后点按复选标记以保存：
 
-   * **换行**: 在输出字母中的每个事务条目后插入换行符。
-   * **文本**: 在输出字母中的每个事务项后面插入指定的文本字符。
+   * **换行**:在输出字母中的每个事务条目后插入换行符。
+   * **文本**:在输出字母中的每个事务项后面插入指定的文本字符。
 
    插入条件后，重复文本将以红色突出显示，并在其左侧显示一个手柄。 您可以将鼠标悬停在重复项左侧的手柄上，以视图重复构造。
 
