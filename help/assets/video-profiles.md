@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '3707'
 ht-degree: 33%
@@ -372,7 +372,7 @@ By default, you cannot edit the predefined, out-of-the-box **[!UICONTROL Adaptiv
 
 您可以将视频用户档案应用到特定文件夹或全局应用于所有资产。
 
-您可以重新处理文件夹中的资产，该文件夹中已经有您稍后更改的现有视频用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile)。
+您可以重新处理文件夹中的资产，该文件夹中已经有您稍后更改的现有视频用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
 ### Applying a video profile to specific folders {#applying-video-profiles-to-specific-folders}
 
@@ -380,7 +380,7 @@ By default, you cannot edit the predefined, out-of-the-box **[!UICONTROL Adaptiv
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-See also [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile).
+See also [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets).
 
 #### 通过用户档案用户界面将视频用户档案应用到文件夹 {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
@@ -401,7 +401,7 @@ See also [Reprocessing assets in a folder after you have edited its processing p
 
 除了将用户档案应用到文件夹之外，您还可以全局应用一个用户档案，以便上传到任何文件夹中的AEM资产的任何内容都应用了选定的。
 
-See also [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets-in-a-folder-after-you-have-edited-its-processing-profile).
+See also [Reprocessing assets in a folder after you have edited its processing profile](processing-profiles.md#reprocessing-assets).
 
 **要全局应用视频用户档案**,
 
