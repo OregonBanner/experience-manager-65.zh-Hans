@@ -6,7 +6,7 @@ user-guide-title: AEM 6.5管理用户指南
 breadcrumb-title: Administering Guide
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 14%
@@ -97,7 +97,7 @@ ht-degree: 14%
    + [AEM 6.5中的自定义用户组映射](/help/sites-administering/cug-mapping.md)
 + 个性化 {#personalization}
    + [个性化](personalization.md)
-   + [配置ContextHub](contexthub-config.md)
+   + [配置ContextHub](/help/sites-developing/ch-configuring.md)
    + [ClientContext](client-context.md)
    + [营销活动](campaigns.md)
    + [使用ContextHub配置分段](segmentation.md)
