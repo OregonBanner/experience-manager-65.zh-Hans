@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 32%
@@ -31,13 +31,13 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 >
 >有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/managing-assets-touch-ui.md)。
 
-## 快速开始: 旋转集 {#quick-start-spin-sets}
+## 快速开始:旋转集 {#quick-start-spin-sets}
 
 要快速设置并运行旋转集，请执行以下步骤：
 
 1. [上传多个视图的图像。](#uploading-assets-for-spin-sets)
 
-   对于一维旋转集，一个项目至少需要8-12张照片；对于二维旋转集，一个项目至少需要16-24张照片。 拍摄时必须定期进行，以给人以项目正在旋转和翻动的印象。 例如，如果一维旋转集包含12个镜头，则对每个镜头将项目旋转30度(360/12)。
+   对于一维旋转集，一个项目至少需要8-12张照片；对于二维旋转集，一个项目至少需要16-24张照片。拍摄时必须定期进行，以给人以项目正在旋转和翻动的印象。例如，如果一维旋转集包含12个镜头，则对每个镜头将项目旋转30度(360/12)。
 
 1. [创建旋转集。](#creating-spin-sets)
 
@@ -47,7 +47,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    >[!NOTE]
    >
-   >您还可以通过[批量集预设](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)自动创建旋转集。**重要：** 批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media- Scene7模式下可用。
+   >您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。**重要：** 批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media -Scene7模式下可用。
 
 1. 根据需要设置[旋转集查看器预设](/help/assets/managing-viewer-presets.md)。
 
@@ -81,7 +81,7 @@ If you need to, you can [edit Spin Sets](#editing-spin-sets). In addition, you c
 
 ## 上传旋转集的资产 {#uploading-assets-for-spin-sets}
 
-对于一维旋转集，一个项目至少需要8-12张照片；对于二维旋转集，一个项目至少需要16-24张照片。 拍摄时必须定期进行，以给人以项目正在旋转和翻动的印象。 例如，如果一维旋转集包含12个镜头，则对每个镜头将项目旋转30度(360/12)。
+对于一维旋转集，一个项目至少需要8-12张照片；对于二维旋转集，一个项目至少需要16-24张照片。拍摄时必须定期进行，以给人以项目正在旋转和翻动的印象。例如，如果一维旋转集包含12个镜头，则对每个镜头将项目旋转30度(360/12)。
 
 You can upload images for the Spin Sets as you would [upload any other asset in AEM Assets](/help/assets/managing-assets-touch-ui.md).
 
@@ -89,7 +89,7 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
 以下是关于旋转集图像的一些最佳实践。一般而言，旋转集中的图像越多，图像的旋转效果越好。但是，在旋转集中包含很多图像也会使加载图像所需的时间变长。在拍摄用于旋转集的图像时，AEM 建议遵循以下准则：
 
-* 在一维旋转集中至少使用8-12幅图像，在二维旋转集中至少使用16-24幅图像。 必须至少使用8张图像才能进行360度旋转。 一维旋转集比较常见，因为创建二维旋转集非常繁琐。
+* 在一维旋转集中至少使用8-12幅图像，在二维旋转集中至少使用16-24幅图像。必须至少使用8张图像才能进行360度旋转。一维旋转集比较常见，因为创建二维旋转集非常繁琐。
 * 使用无损格式；建议使用 TIFF 和 PNG。
 * 对所有图像使用蒙版，以使项目显示在纯白或其他高对比度的背景中。或者，也可以添加阴影。
 * 确保充分突出产品细节，使其成为焦点。
@@ -101,9 +101,9 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
 >[!NOTE]
 >
->您还可以通过[批量集预设](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)自动创建旋转集。**重要：** 批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media- Scene7模式下可用。
+>您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。**重要：** 批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media -Scene7模式下可用。
 >
->请参阅配置Dynamic Media- Scene7模式中的创建批集预设以自动生成图 [像集和旋转集](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)。
+>请参阅配置Dynamic Media -Scene7模式中的“创建批集预设以自动生成图 [像集和旋转集”](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。
 
 
 >[!NOTE]
@@ -155,11 +155,11 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
 ## 查看旋转集 {#viewing-spin-sets}
 
-您可以在用户界面中创建旋转集，也可以使用批 [集预设自动创建](/help/assets/config-dms7.md#creating%20batch%20set%20presets%20to%20auto-generate%20image%20sets%20and%20spin%20sets)。 但是，使用批集预设创建的集 *不会* 显示在用户界面中。 您可以通过三种不同方式访问通过批集预设创建的集。 （即使您在用户界面中创建了旋转集，这些方法也可用）。
+您可以在用户界面中创建旋转集，也可以使用批 [集预设自动创建](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。 但是，使用批集预设创建的集 *不会* 显示在用户界面中。 您可以通过三种不同方式访问通过批集预设创建的集。 （即使您在用户界面中创建了旋转集，这些方法也可用）。
 
 >[!NOTE]
 >
->您还可以通过用户界面视图集，如编辑旋 [转集所述](#editing-spin-sets)。
+>您还可以通过用户界面视图集，如编辑旋转 [集中所述](#editing-spin-sets)。
 
 **视图旋转集**
 
@@ -173,7 +173,7 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
 1. From search, you can Select **[!UICONTROL Filters]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets.]**
 
-   搜索会返回在UI中手动创建或通过批集预设自动创建的匹配集。 对于自动化集，搜索查询使用与AEM `Starts with` 搜索不同的搜索条件(基于使用搜索条件 `Contains` )执行。 将过滤器设 **[!UICONTROL 置为]** “集”是搜索自动集的唯一方法。
+   搜索会返回在UI中手动创建或通过批集预设自动创建的匹配集。 对于自动集，搜索查询使用与AEM搜索 `Starts with` 不同的搜索条件进行，后者基于使用搜索 `Contains` 条件进行。 将过滤器设 **[!UICONTROL 置为]** “集”是搜索自动集的唯一方法。
 
    ![chlimage_1-158](assets/chlimage_1-386.png)
 
@@ -201,7 +201,7 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
    * 要对图像重新排序，请将图像拖到新位置（选择重新排序图标以移动项目）。
    * 要按升序或降序对项目排序，请单击列标题。
    * To add an asset or update an existing asset, click **[!UICONTROL Add Asset.]** 导航到资产，选择它，然 **[!UICONTROL 后点]** 按右上角附近的选择。
-如果通过将AEM用作缩略图的图像替换为其他图像来删除该图像，则仍会显示原始资产。
+如果通过将缩略图替换为其他图像来删除AEM用的缩略图图像，则仍会显示原始资产。
    * 要删除资产，请选择该资产，然后单击或点按删 **[!UICONTROL 除资产。]**
    * 要应用预设，请点按或单击预设图标，然后选择预设。
    * To delete an entire Spin Set, navigate to the Spin Set, select it, and select **[!UICONTROL Delete]**
