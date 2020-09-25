@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '5029'
 ht-degree: 2%
@@ -532,7 +532,7 @@ ContextHub.Store.SessionStore扩展 [了ContextHub.Store.Core](/help/sites-devel
 
 #### registerRenderer(moduleType, renderer, dontRenderer) {#registerrenderer-moduletype-renderer-dontrender}
 
-向ContextHub注册UI模块渲染器。 注册呈示器后，可以使用它创 [建UI模块](/help/sites-administering/contexthub-config.md#adding-a-ui-module)。 当您扩展ContextHub.UI.BaseModuleRenderer [以创建自定义](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types) UI模块渲染器时，请使用此函数。
+向ContextHub注册UI模块渲染器。 注册呈示器后，可以使用它创 [建UI模块](ch-configuring.md#adding-a-ui-module)。 当您扩展ContextHub.UI.BaseModuleRenderer [以创建自定义](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types) UI模块渲染器时，请使用此函数。
 
 **参数**
 
