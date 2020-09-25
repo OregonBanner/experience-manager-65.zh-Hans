@@ -1,17 +1,17 @@
 ---
 title: 自适应表单中的表
 seo-title: 自适应表单中的表
-description: AEM Forms中的表组件允许您以自适应表单创建对移动布局具有响应的表，还允许使用XDP表组件。
-seo-description: AEM Forms中的表组件允许您以自适应表单创建对移动布局具有响应的表，还允许使用XDP表组件。
+description: 通过AEM Forms的表组件，您可以以自适应表单创建对移动布局有响应的表，还允许使用XDP表组件。
+seo-description: 通过AEM Forms的表组件，您可以以自适应表单创建对移动布局有响应的表，还允许使用XDP表组件。
 uuid: 03436c81-42f0-430f-9e52-14a4ab0e877d
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2302'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 使用表是一种有效、简化和有组织的呈现复杂数据的方式。 它帮助用户容易地识别信息并以行和列的有序排列提供输入。 金融服务和政府机构的大多数表单都要求使用大型数据表来填写数字并执行计算。
 
-AEM Forms在提要栏中的组件浏览器中提供一个表组件，允许您在自适应表单中创建表。 它提供的一些关键功能是：
+AEM Forms在组件浏览器的提要栏中提供一个表组件，允许您在自适应表单中创建表。 它提供的一些关键功能是：
 
 * 移动设备上的响应式布局
 * 可配置的行和列
@@ -87,7 +87,7 @@ AEM Forms在提要栏中的组件浏览器中提供一个表组件，允许您�
 * 数据模型对象属性
 * 静态文本和数据模型对象属性的组合
 
-要对表列应用排序，表列单元格必须包含以下任何组件： 数字框、数字步进器、日期输入字段、日期选取器、文本或文本框。
+要对表列应用排序，表列单元格必须包含以下任何组件：数字框、数字步进器、日期输入字段、日期选取器、文本或文本框。
 
 要启用排序，请执行以下操作：
 
@@ -121,7 +121,7 @@ AEM Forms在提要栏中的组件浏览器中提供一个表组件，允许您�
 
 >[!NOTE]
 >
->您可以通过更改LESS变量的值来更改标题行和正文行的颜色主题。 有关详细信息，请参阅 [AEM Forms中的主题](/help/forms/using/themes.md)[](/help/forms/using/creating-custom-adaptive-form-themes.md)。
+>您可以通过更改LESS变量的值来更改标题行和正文行的颜色主题。 有关详细信息，请参阅 [AEM Forms的主题](/help/forms/using/themes.md)[](/help/forms/using/creating-custom-adaptive-form-themes.md)。
 
 ## 动态添加或删除行 {#add-or-delete-a-row-dynamically}
 
@@ -152,18 +152,18 @@ AEM Forms在提要栏中的组件浏览器中提供一个表组件，允许您�
 >
 >如果XFA更改／退出脚本也应用于同一字段，则XFA更改／退出脚本在“值提交”脚本之前执行。
 
-* **计算表达式**: 自动计算字段的值。
-* **验证表达式**: 来验证字段。
-* **访问表达式**: 启用／禁用字段。
-* **可见性表达式**: 控制字段和面板的可见性。
+* **计算表达式**:自动计算字段的值。
+* **验证表达式**:来验证字段。
+* **访问表达式**:启用／禁用字段。
+* **可见性表达式**:控制字段和面板的可见性。
 
 表或行的可见性表达式可以在相应编辑组件对话框的面板属性选项卡中定义。 单元格的表达式可在其“编辑”组件对话框的“脚本”选项卡中定义。
 
-有关自适应表单类、事件、对象和公共API的完整列表，请参 [阅自适应表单的JavaScript库API参考](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html)。
+有关自适应表单类、事件、对象和公共API的完整列表，请参 [阅自适应表单的JavaScript库API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)。
 
 ## 移动布局 {#mobile-layouts}
 
-自适应表单表格因其流畅且响应迅速的布局，提供了无与伦比的移动设备体验。 AEM Forms优惠两种类型的表移动布局——左侧的标题和可折叠列。
+自适应表单表格因其流畅且响应迅速的布局，提供了无与伦比的移动设备体验。 AEM Forms优惠了两种类型的表移动布局——左侧的标题和可折叠列。
 
 您可以从表的编辑组件对话框的样式选项卡中为表配置移动布局。
 
@@ -199,7 +199,7 @@ AEM Forms在提要栏中的组件浏览器中提供一个表组件，允许您�
 
 ## 将数据合并到表中 {#merge-data-in-a-table}
 
-自适应表单中的表允许您在运行时使用XML文件中的数据填充表。 AEM FormsXML文件可以驻留在运行数据服务器的计算机的本地文件系统中，也可以驻留在CRX存储库中。
+自适应表单中的表允许您在运行时使用XML文件中的数据填充表。 数据XML文件可以驻留在运行AEM Forms服务器的计算机的本地文件系统中或CRX存储库中。
 
 让我们举一个以下银行交易汇总表为例，我们希望用XML文件中的数据填充这些表。
 
@@ -281,7 +281,7 @@ AEM Forms在提要栏中的组件浏览器中提供一个表组件，允许您�
 
 ## 使用XDP组件和XSD复杂类型 {#use-xdp-components-and-xsd-complex-types}
 
-如果您基于XFA表单模板创建了自适应表单，则XFA元素可在AEM内容查找器的“数据模型”选项卡中使用。 您可以以自适应形式拖放这些XFA元素，包括表。
+如果您基于XFA表单模板创建了自适应表单，则XFA元素可在AEM Content Finder的“数据模型”选项卡中找到。 您可以以自适应形式拖放这些XFA元素，包括表。
 
 XFA表元素将映射到表组件，并以自适应表单开箱即用。 XDP表的所有属性和功能在移入自适应表单时都会保留，您可以像使用本机自适应表单表一样对它执行任何操作。 例如，如果XDP表中的某行被标记为可重复，则在自适应表单中删除时也会重复该行。
 
