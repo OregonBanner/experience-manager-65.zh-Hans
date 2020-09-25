@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8bdb019855edd08ef3d8ef58e627c91a092bc29f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 17%
@@ -93,7 +93,7 @@ Adobe启动中的规则是一种不可知配置，它定义构成规则的三个
 
 在“操作”部分，需要执行“设置变 *量”操作* 。 此操作告诉Adobe Analytics如何用数据填充跟踪变量。 同时，“设置变 *量* ”动作不会向跟踪服务器发送任何内容。
 
-“设 *置变量* ”动作后面必须有“发送 *信标”动作* 。 “发 *送信标* ”操作实际会向分析跟踪服务器发送数据。 “设置变 *量* ”和“ *发送信标*”操作均来自Adobe Analytics扩展。
+“设 *置变量* ”操作后面必须有“发 *送信标* ”操作。 “发 *送信标* ”操作实际会向分析跟踪服务器发送数据。 “设置变 *量* ”和“ *发送信标*”操作均来自Adobe Analytics扩展。
 
 请参 [阅《Experience Platform Launch](https://docs.adobe.com/content/help/zh-Hans/launch/using/reference/manage-resources/rules.html) 用户指南》中的规则，了解更多信息。
 
@@ -133,7 +133,7 @@ Adobe启动中的以下示例配置演示了如何在加载查看器时跟踪资
 
 ## 使用Dynamic Media Viewers扩展 {#using-the-dynamic-media-viewers-extension}
 
-如集成 [的使用案例中所述](#use%20cases%20for%20the%20integration)，可以通过AEM Sites的新Adobe启动集成和使用嵌入代码跟踪Dynamic Media查看器。
+如集成 [的使用案例中所述](#use-cases-for-the-integration)，可以通过AEM Sites的新Adobe启动集成和使用嵌入代码跟踪Dynamic Media查看器。
 
 ### 跟踪AEM Sites的Dynamic Media查看器 {#tracking-dynamic-media-viewers-in-aem-sites}
 
@@ -149,7 +149,7 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 未使用AEM Sites或将Dynamic Media查看器嵌入AEM Sites以外网页或两者的客户仍可使用AdobeLaunch集成。
 
-您必须完成[配置 Adobe Analytics](#configuringadobeanalytics) 和[配置 Adobe Launch](#configuringadobelaunch) 部分中的配置步骤。但是，不需要执行与 AEM 相关的配置步骤。
+您必须完成[配置 Adobe Analytics](#configuring-adobe-analytics-for-the-integration) 和[配置 Adobe Launch](#configuring-adobe-launch-for-the-integration) 部分中的配置步骤。但是，不需要执行与 AEM 相关的配置步骤。
 
 在进行正确配置后，您可以使用Dynamic Media查看器向网页添加Adobe启动支持。
 
@@ -162,12 +162,12 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 **要使用嵌入代码跟踪Dynamic Media查看器**:
 
 1. 为嵌入Dynamic Media查看器准备网页。
-1. 首先登录Adobe启动，获取Adobe启动库的嵌入代码(请参 [阅配置Adobe启动](#configuringadobelaunch))。
+1. 首先登录Adobe启动，获取Adobe启动库的嵌入代码(请参 [阅配置Adobe启动](#configuring-adobe-launch-for-the-integration))。
 1. 单击 **[!UICONTROL 属性]**，然后单击 **[!UICONTROL 环境]** 选项卡。
 1. 提取与网页环境相关的环境级别。 然后，在“安 **[!UICONTROL 装]** ”列中，单击框图标。
 1. **[!UICONTROL 在“Web安装说明]** ”对话框中，复制完整的Adobe启动库嵌入代码以及周围的 `<script/>` 标记。
 
-## Dynamic Media查看器扩展的参考指南 {#reference-guide-for-the-dynamic-media-viewers-extension}
+## Dynamic Media Viewer扩展的参考指南 {#reference-guide-for-the-dynamic-media-viewers-extension}
 
 ### 关于Dynamic Media查看器配置 {#about-the-dynamic-media-viewers-configuration}
 
@@ -448,7 +448,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
    在下图中，用户创建了一个名为DynamicMediaViewersExtensionDoc *的报表包* ，并从下拉列表中将其选中。 报告套件名称仅供说明；最终选择的报表包名称将有所不同。
 
-   如果没有可用的报表包，则您或您的Adobe Analytics管理员必须创建一个报表包，然后才能继续进行配置。
+   如果没有可用的报告套件，您或您的Adobe Analytics管理员必须创建一个报告套件，然后才能继续进行配置。
 
    请参 [阅报表和报表](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/report-suites-admin.html)[包以及创建报表包](https://docs.adobe.com/content/help/en/analytics/admin/admin-console/create-report-suite.html)。
 
