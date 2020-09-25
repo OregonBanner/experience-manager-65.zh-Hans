@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d357b5832a3bd95c372c26fd7553eba70583eb6f
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '5944'
 ht-degree: 5%
@@ -132,19 +132,19 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 现在您已完成基本配置；您已准备好使用Dynamic Media -Scene7模式。
 
-如果要进一步自定义配置，您可以选择在Dynamic Media -Scene7模式中 [配置高级设置下完成任何任务](#optionalconfigurationofadvancedsettingindynamicmediascene7mode)。
+如果要进一步自定义配置，您可以选择在Dynamic Media -Scene7模式中 [配置高级设置下完成任何任务](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)。
 
 ## （可选）在Dynamic Media -Scene7模式中配置高级设置 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
 如果要进一步自定义Dynamic Media -Scene7模式的配置和设置，或优化其性能，您可以完成以下一个或多个可选 *任务* :
 
-* [（可选）Dynamic Media的设置和配置-Scene7模式设置](#optionalsetupandconfigurationofdynamicmediascene7modesettings)
+* [（可选）Dynamic Media的设置和配置-Scene7模式设置](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
 
 * [（可选）调整Dynamic Media -Scene7模式的性能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [（可选）筛选要复制的资产](#optional-filtering-assets-for-replication)
 
-### （可选）Dynamic Media的设置和配置-Scene7模式设置</p> {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings-p}
+### （可选）Dynamic Media的设置和配置-Scene7模式设置 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
 在运行模式 `dynamicmedia_scene7`下，可使用Dynamic Media Classic(Scene7)用户界面更改Dynamic Media设置。
 
@@ -196,7 +196,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 >[!NOTE]
 >
->默认情况下，当您选择&#x200B;**[!UICONTROL 呈现]**&#x200B;时，系统会显示 15 种呈现形式，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示 15 个查看器预设。您可以提高此限制。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasingthenumberofimagepresetsthatdisplay) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+>默认情况下，当您选择&#x200B;**[!UICONTROL 呈现]**&#x200B;时，系统会显示 15 种呈现形式，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示 15 个查看器预设。您可以提高此限制。See [Increasing the number of image presets that display](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) or [Increasing the number of viewer presets that display](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 
 #### 配置颜色管理 {#configuring-color-management}
