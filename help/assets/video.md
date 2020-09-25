@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 22%
@@ -51,7 +51,7 @@ ht-degree: 22%
       * 了解有关[组织数字资产](/help/assets/organize-assets.md)的更多信息。
    * 将主源视频上传到文件夹。 您可以上传每个高达15 GB的视频文件。 向文件夹添加视频时，会根据您为文件夹分配的视频处理用户档案对视频进行编码。
 
-      * [上传视频](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
+      * [上传视频](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * Learn more about [Supported input file formats](/help/assets/assets-formats.md#supported-multimedia-formats).
    * 监视视 [频编码在资产](#monitoring-video-encoding-and-youtube-publishing-progress) 或工作流视图中的进展情况。
 
@@ -62,10 +62,10 @@ ht-degree: 22%
 
    * 组织、浏览和搜索视频资产
 
-      * [组织数字资产
-](/help/assets/organize-assets.md)了解有关[组织数字资产以使用处理配置文件的最佳实践](organize-assets.md)的更多信息
+      * [组织数字资产](/help/assets/organize-assets.md)
+了解有关[组织数字资产以使用处理配置文件的最佳实践](organize-assets.md)的更多信息
 
-      * [搜索视频资产](search-assets.md#custompredicates) 或搜 [索资产](managing-assets-touch-ui.md#search-assets)
+      * [搜索视频资产](search-assets.md#custompredicates) 或搜 [索资产](/help/assets/search-assets.md)
    * 预览和发布视频资产
 
       * 视图源视频和视频的编码演绎版及其关联的缩略图：
@@ -1223,7 +1223,7 @@ AEM中的所有视频都必须具有关联的缩略图；不能删除缩略图�
    * 为视频资产创建了文件夹。
    * [已将视频用户档案应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
 
-   * [已将视频上传到文件夹](/help/assets/managing-video-assets.md#uploadingandpreviewingvideoassets)。
+   * [已将视频上传到文件夹](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
 1. 导航到您要更改其缩略图的已上传视频资产。
 1. 在资产选择模式下，从 **[!UICONTROL 列表视图]** 或卡 **[!UICONTROL 片视图中]**&#x200B;点按视频资产。
