@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '5374'
 ht-degree: 77%
@@ -43,7 +43,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->在 Adobe Target 中创建营销活动时，会为每个营销活动分配名为 `thirdPartyId` 的属性。在 Adobe Target 中删除营销活动时，不会删除 thirdPartyId。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免此问题，请为每个活动命名一个唯一的名称； 因此，活动名称不能在不同的活动类型中重新使用。
+>在 Adobe Target 中创建营销活动时，会为每个营销活动分配名为 `thirdPartyId` 的属性。在 Adobe Target 中删除营销活动时，不会删除 thirdPartyId。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免此问题，请为每个活动命名一个唯一的名称；因此，活动名称不能在不同的活动类型中重新使用。
 >
 >如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
 >
@@ -121,7 +121,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->要使用定位流程，您必须是Target活动作者用户组的成员。
+>要使用定位流程，您必须是目标活动作者用户组的成员。
 
 要添加活动，请执行以下操作：
 
@@ -227,7 +227,7 @@ ht-degree: 77%
 可为体验定位组件或创建选件。目标组件所提供的内容将用作体验的选件。
 
 * [定位现有组件](/help/sites-authoring/content-targeting-touch.md#creating-a-default-offer-by-targeting-an-existing-component)。内容会成为默认体验的选件。
-* [添加Target组件](/help/sites-authoring/content-targeting-touch.md#creating-an-offer-by-adding-a-target-component)，然后向组件添加内容。
+* [添加目标组件](/help/sites-authoring/content-targeting-touch.md#creating-an-offer-by-adding-a-target-component)，然后向组件添加内容。
 
 定位某个组件后，您可以为每个体验添加选件：
 
@@ -260,7 +260,7 @@ ht-degree: 77%
 
 #### 通过添加 Target 组件创建选件 {#creating-an-offer-by-adding-a-target-component}
 
-可添加 Target 组件，以创建默认体验的选件。Target组件是其他组件的容器，放置在其中的组件将成为目标。 使用 Target 组件时，可以在其中添加多个组件以创建选件。此外，您还可以在每个体验中使用不同的组件，以创建不同的选件。
+可添加 Target 组件，以创建默认体验的选件。目标组件是其他组件的容器，放置在其中的组件将成为目标。 使用 Target 组件时，可以在其中添加多个组件以创建选件。此外，您还可以在每个体验中使用不同的组件，以创建不同的选件。
 
 See [Configuring Target component options](/help/sites-authoring/content-targeting-touch.md#configuring-target-component-options) for information on customizing this component.
 
@@ -314,7 +314,7 @@ If you decide that the offer can be used for other experiences, you can create a
 1. 选择要添加选件的体验。
 1. 要显示组件菜单，请单击或点按要添加选件的目标组件。
 
-   ![chlimage_1-21](assets/chlimage_1-21.png)
+   ![chlimage_1-29](assets/chlimage_1-21.png)
 
 1. 单击或点按“+”图标。
 
@@ -427,7 +427,7 @@ For information about using the Offers console to create a reusable offer, see [
 
 您可以更改百分比，但前提是这些百分比的总和为 100%。在 A/B 测试中，一个受众可由多个体验使用。
 
-![chlimage_1-29](assets/chlimage_1-29.png)
+![chlimage_1-21](assets/chlimage_1-29.png)
 
 ### 在 A/B 测试中关联受众和流量百分比 {#associating-audiences-and-traffic-percentages-with-a-b-testing}
 
@@ -666,7 +666,7 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
   </tr>
   <tr>
    <td><strong>引擎</strong></td>
-   <td>根据 <strong>要使用的引擎，在客户端规则 </strong>(无<strong> 跟踪)、Adobe Target、ContextHub和 </strong>Adobe Campaign之间进行选择。</td>
+   <td>根据 <strong>要使用的引擎，在客户端规则(无 </strong>跟踪<strong> )、Adobe Target、ContextHub </strong>和Adobe Campaign之间进行选择。</td>
   </tr>
  </tbody>
 </table>
@@ -683,11 +683,11 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
   </tr>
   <tr>
    <td><strong>准确定位</strong></td>
-   <td><p>启用准确定位会告知组件在向Adobe Target发送请求之前等待Client Context或Context Hub数据可用。 这可能会增加加载时间。在创作时，“准确定位”始终处于启用状态。</p> <p>If you select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxDefine</code> first and an <code>mboxUpdate</code> later resulting in an Ajax request once the data is available.</p> <p>If you do not select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxCreate</code> resulting in a synchronous request right away (in this case, not all context data may be available yet).</p> <p><strong>注意：</strong> 对特定组件启用或禁用精确定位不会影响您已全局设置的设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
+   <td><p>启用准确定位会告知组件在将请求发送到Adobe Target之前等待Client Context或Context Hub数据可用。 这可能会增加加载时间。在创作时，“准确定位”始终处于启用状态。</p> <p>If you select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxDefine</code> first and an <code>mboxUpdate</code> later resulting in an Ajax request once the data is available.</p> <p>If you do not select the <strong>Accurate targeting</strong> check box, the mbox performs an <code>mboxCreate</code> resulting in a synchronous request right away (in this case, not all context data may be available yet).</p> <p><strong>注意：</strong> 对特定组件启用或禁用精确定位不会影响您已全局设置的设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
   </tr>
   <tr>
    <td><strong>包含已解析的区段</strong></td>
-   <td><p>选中此复选框后，mbox调用中的所有已解析段以及页面和框架中配置的任何参数。</p> <p>这仅适用于同步AEM区段的XML API的情况。 如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项允许您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
+   <td><p>选中此复选框后，mbox调用中的所有已解析段以及页面和框架中配置的任何参数。</p> <p>这仅适用于同步AEM区段的XML API。 如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项允许您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
   </tr>
   <tr>
    <td><strong>继承的上下文参数</strong></td>
@@ -695,11 +695,11 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
   </tr>
   <tr>
    <td><strong>上下文参数</strong></td>
-   <td>单击或点按 <strong>添加字段</strong> ，以配置其他上下文参数(与Target框架中提供的内容相同)。 Context parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added context parameters directly to the framework.</td>
+   <td>单击或点按 <strong>添加字段</strong> ，以配置其他上下文参数(与目标框架中提供的内容相同)。 Context parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added context parameters directly to the framework.</td>
   </tr>
   <tr>
    <td><strong>静态参数</strong></td>
-   <td>单击或点按 <strong>添加字段</strong> ，以配置其他静态参数(与Target框架中提供的参数相同)。 Static parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added static parameters directly to the framework. 静态参数不是来自于上下文（Client Context 或 Context Hub）。</td>
+   <td>单击或点按 <strong>添加字段</strong> ，以配置其他静态参数(与目标框架中提供的参数相同)。 Static parameters added to the component apply <i>only</i> to the component and not to other component as would be the case if you added static parameters directly to the framework. 静态参数不是来自于上下文（Client Context 或 Context Hub）。</td>
   </tr>
  </tbody>
 </table>
@@ -721,9 +721,9 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
    <td><strong>客户端选项——策略</strong></td>
    <td><p>从以下任一选项中进行选择：</p>
     <ul>
-     <li><strong>第一</strong>: 列表中按活动排序的最高体验。</li>
-     <li><strong>随机</strong>: 使用任何体验。</li>
-     <li><strong>Clickstream得分</strong>: 使用在Client Context中跟踪的标记和相关标记点击。 将比较 Teaser 页面上定义的标记的点击率。</li>
+     <li><strong>第一</strong>:列表中按活动排序的最高体验。</li>
+     <li><strong>随机</strong>:使用任何体验。</li>
+     <li><strong>Clickstream得分</strong>:使用在Client Context中跟踪的标记和相关标记点击。 将比较 Teaser 页面上定义的标记的点击率。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -731,5 +731,4 @@ The Goals &amp; Settings step of [the targeting process](/help/sites-authoring/c
 
 如果要将 AEM 与 Adobe Campaign 集成，请选择 **Adobe Campaign** 作为引擎。有关更多信息，请参阅[将 AEM 与 Adobe Campaign 集成](/help/sites-administering/campaign.md)。
 
-如果要使用 ContextHub 进行定位，请选择 **ContextHub** 作为引擎。请参阅[配置 ContextHub](/help/sites-administering/contexthub-config.md)。
-
+如果要使用 ContextHub 进行定位，请选择 **ContextHub** 作为引擎。请参阅[配置 ContextHub](/help/sites-developing/ch-configuring.md)。
