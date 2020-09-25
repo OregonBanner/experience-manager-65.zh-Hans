@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 20%
@@ -223,11 +223,10 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
    >    * 动画. 默认情况下，每个幻灯片过渡都是淡入淡出。 您可以将其更改为幻灯片过渡。
    >    * 按钮的样式。 用户点击每个点或数字即可在横幅中旋转。 您可以更改设置指示符按钮的显示位置（如果它们是数字或虚线样式）以及它们的大小。
    >    * 更改图像映射的高亮样式或用于热点的图标。
-   >    * 在编辑查看器预设之前，请选择要将该预设作为基础的样式。 如果不这样做，则在开始编辑查看器预设时，如果您决定更改其他预设，您将丢失所有更改
+   >    * 在编辑查看器预设之前，请选择要将该预设作为基础的样式。 如果不这样做，则在您开始编辑查看器预设时，如果您决定更改其他预设，您将丢失所有更改。
 
    >
-   >
-   >有关 [查看器编辑器的详细说明](/help/assets/viewer-presets.md#specialconsiderationsforcreatingacarouselbannerviewerpreset) 和详细信息，请参阅传送横幅的特殊注意事项。
+   >有关 [查看器编辑器的详细说明](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) 和详细信息，请参阅传送横幅的特殊注意事项。
 
    您还可以预览传送横幅的外观。 请参 [阅（可选）预览传送横幅](#optional-previewing-carousel-banners)。
 
