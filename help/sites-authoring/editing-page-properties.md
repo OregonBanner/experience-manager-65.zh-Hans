@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '1781'
+ht-degree: 89%
 
 ---
 
@@ -43,6 +46,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
       * 随后将会显示新标记，其右侧带有一个小星星，表示该标记为新标记。
    * 使用下拉列表功能，可从现有标记中进行选择。
    * 当您将鼠标悬停在选择框中的标记条目上时，会显示 x，用于为此页面删除该标记。
+
    有关标记的更多信息，请访问[使用标记](/help/sites-authoring/tags.md)。
 
 * **隐藏导航**
@@ -92,7 +96,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
    >* 不应设置为现有页面。
 
 
-   您还需要配置Dispatcher以启用对虚URL的访问。 有关更 [多详细信息，请参阅启用对虚URL的访问](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 。
+   您还需要配置Dispatcher以启用对虚URL的访问。 有关 [详细信息，请参阅启用](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) “对虚URL的访问”。
 
 * **重定向虚 URL**
 
@@ -146,11 +150,11 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    >[!NOTE]
    >
-   >已关闭的用户组在&#x200B;**[权限](/help/sites-authoring/editing-page-properties.md#permissions)**选项卡上定义。
+   >已关闭的用户组在&#x200B;**[权限](/help/sites-authoring/editing-page-properties.md#permissions)**&#x200B;选项卡上定义。
 
    >[!CAUTION]
    >
-   >The **[Permissions](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**tab allows editing of CUG configurations based on the presence of the`granite:AuthenticationRequired`mixin. If page permissions are configured using deprecated CUG configurations, based on the presence of`cq:cugEnabled`property, a warning message will be shown under **Authentication Requirement**and the option will not be editable, nor will the[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)be editable.
+   >The **[Permissions](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** tab allows editing of CUG configurations based on the presence of the `granite:AuthenticationRequired` mixin. If page permissions are configured using deprecated CUG configurations, based on the presence of `cq:cugEnabled` property, a warning message will be shown under **Authentication Requirement** and the option will not be editable, nor will the [Permissions](/help/sites-authoring/editing-page-properties.md#permissions) be editable.
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
@@ -204,14 +208,14 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 * **ContextHub 配置**
 
-   选择 [ContextHub 配置](/help/sites-administering/contexthub-config.md)和[区段路径](/help/sites-administering/segmentation.md)。
+   选择 [ContextHub 配置](/help/sites-developing/ch-configuring.md)和[区段路径](/help/sites-administering/segmentation.md)。
 
 * **定位配置**
 
    选择一个[品牌以指定定位的范围](/help/sites-authoring/target-adobe-campaign.md)。
 
    >[!NOTE]
-   >此选项要求用户帐户位于组 `Target Adminstrators`中。
+   >此选项要求用户帐户属于 `Target Adminstrators` 组。
 
 ### 权限 {#permissions}
 
@@ -277,6 +281,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#selectionmode)
+
    此时将使用相应的选项卡显示页面属性。
 
 1. 查看或编辑所需的属性。
@@ -302,7 +307,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
 ### 从“站点”控制台中 - 多个页面 {#from-the-sites-console-multiple-pages}
 
-从“站 **点** ”控制台中，您可以选择多个页面，然后使用 **查看属性** ，以查看和／或编辑页面属性。 这称为批量编辑页面属性。
+从“站 **点** ”控制台中，您可以选择多个页面，然后使用&#x200B;**查看属性** ，以查看和／或编辑页面属性。 这称为批量编辑页面属性。
 
 >[!NOTE]
 >
@@ -348,6 +353,7 @@ source-git-commit: 60d36fd98bd4329a2b707229755fd197e2236748
 
       * 在“查看”模式中，只显示具有相同值的属性。
       * 当字段有多个值时（例如“标记”），只有在&#x200B;*所有值*&#x200B;均相同的情况下，才会显示这些值。如果只有部分值相同，则仅在编辑时才显示它们。
+
    如果不存在具有相同值的属性，则会显示一条消息。
 
 * **编辑**
