@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 93%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 * UI 模式是显示在工具栏左侧的图标。当您单击或点按某个图标时，工具栏会显示该模式包含的 UI 模块。
 * UI 模块显示一个或多个 ContextHub 存储区中的数据。某些 UI 模块还允许您处理存储区数据。
 
-ContextHub 安装了多个 UI 模式和 UI 模块。您的管理员可能已[配置 ContextHub](/help/sites-administering/contexthub-config.md)，使其显示不同的内容。
+ContextHub 安装了多个 UI 模式和 UI 模块。您的管理员可能已[配置 ContextHub](/help/sites-developing/ch-configuring.md)，使其显示不同的内容。
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 
