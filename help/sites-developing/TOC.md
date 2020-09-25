@@ -6,9 +6,9 @@ user-guide-title: AEM 6.5开发用户指南
 breadcrumb-title: Developing Guide
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fe3e8c29abe832899a6466c4b018b9aa2104e908
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '823'
 ht-degree: 11%
 
 ---
@@ -138,13 +138,14 @@ ht-degree: 11%
    + [AEM Repo工具](aem-repo-tool.md)
 + 个性化{#personlization}
    + [ContextHub](contexthub.md)
-   + [ContextHub Javascript API参考](contexthub-api.md)
-   + [扩展ContextHub](ch-extend.md)
+   + [配置Context Hub](ch-configuring.md)
    + [将ContextHub添加到页面和访问商店](ch-adding.md)
+   + [扩展ContextHub](ch-extend.md)
    + [示例ContextHub存储候选项](ch-samplestores.md)
    + [示例ContextHub UI模块类型](ch-samplemodules.md)
    + [ContextHub诊断](ch-diagnostics.md)
    + [针对目标内容进行开发](target.md)
+   + [ContextHub Javascript API参考](contexthub-api.md)
    + ClientContext{#client-context}
       + [Client Context详解](client-context.md)
       + [Client Context Javascript API](ccjsapi.md)
