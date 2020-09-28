@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9d952604-f9ef-498f-937b-871817c80226
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 3%
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 # 消息功能 {#messaging-feature}
 
-除了在论坛和评论中发生的公开可见的交互外，AEM Communities的消息传递功能还使社区成员能够更加私下地进行交互。
+除了在论坛和评论中发生的公开可见的互动外，AEM Communities的消息功能还使社区成员能够更加私下地进行互动。
 
 创建社区站点时可 [以包含](/help/communities/overview.md#communitiessites) 此功能。
 
@@ -41,7 +41,9 @@ ht-degree: 3%
 
 **G** —— 恢复已删除的消息
 
-![消息](assets/messaging-section.png)![区还原消息](assets/restore-message.png)
+![消息部分](assets/messaging-section.png)
+
+![恢复消息](assets/restore-message.png)
 
 要启用和修改消息功能，请参阅：
 
@@ -59,7 +61,7 @@ ht-degree: 3%
 
 ### 配置消息列表（消息框） {#configure-message-list-message-box}
 
-要修改消息传递功能的收件箱 **、已发送**&#x200B;项目和废纸篓页面 **的邮件列表的配置**，请以作者编辑模式打 **开该网**[](/help/communities/sites-console.md#authoring-site-content)站的作者编辑模式。
+要修改消息传递功能的收件箱 **、已发送**&#x200B;项目和废纸篓页面 **的邮件列表的配置**，请以作者编辑模式打 **开该**[](/help/communities/sites-console.md#authoring-site-content)网站。
 
 1. 在模 `Preview` 式中，选择 **消息链** 接以打开主消息页面。 然后，选择“收 **件箱**”、“ **已发送项目** ”或“废 **纸篓** ”来为该邮件列表配置组件。
 
@@ -97,7 +99,7 @@ ht-degree: 3%
 
 * **文件夹路径**
 
-   (*必需*)引用“AEM Communities **Operations Messaging Service”中为** inbox.path.name和 **sentitems.path.name设**[](/help/communities/messaging.md#messaging-operations-service)置的值。 为配置时， `Inbox`请使用inbox.path.name的值 **添加一个条目**。 为配置时， `Outbox`请使用sentitems.path.name的 **值添加一个条目**。 配置时， `Trash`添加两个同时具有这两个值的条目。
+   (*必需*)引用AEM Communities消息 **业务服务中inbox.path** .name和 **insentims** [path.name设置](/help/communities/messaging.md#messaging-operations-service)的值。 为配置时， `Inbox`请使用inbox.path.name的值 **添加一个条目**。 为配置时， `Outbox`请使用sentitems.path.name的 **值添加一个条目**。 配置时， `Trash`添加两个同时具有这两个值的条目。
 
 #### 显示选项卡 {#display-tab}
 
@@ -121,7 +123,7 @@ ht-degree: 3%
 
 * **每个页面的消息数**
 
-   指定的数量是分页方案中每页显示的最大消息数。 如果未指定任何数字（留空），则显示所有消息，且不显示分页。
+   指定的数量是分页方案中每页显示的最大消息数。 如果未指定数字（留空），则显示所有消息，且不显示分页。
 
 * **时间戳模式**
 
