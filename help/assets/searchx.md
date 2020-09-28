@@ -1,11 +1,11 @@
 ---
-title: 扩展的搜索功能 [!DNL Adobe Experience Manager Assets]。
+title: 扩展搜索功能。
 description: 将搜索功能扩展 [!DNL Adobe Experience Manager Assets] 到默认值之外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '840'
 ht-degree: 19%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 19%
 
 最佳实践是复制现有谓词并对其进行调整。 示例谓词位于 **/libs/cq/search/components/谓词中**。
 
-### 示例： 构建简单属性谓词 {#example-build-a-simple-property-predicate}
+### 示例：构建简单属性谓词 {#example-build-a-simple-property-predicate}
 
 要构建属性谓词，请执行以下操作：
 
@@ -147,7 +147,7 @@ ht-degree: 19%
    >
    >搜索时，请务必准确键入术语，包括正确的大小写。
 
-### 示例： 生成简单的组谓词 {#example-build-a-simple-group-predicate}
+### 示例：生成简单的组谓词 {#example-build-a-simple-group-predicate}
 
 要生成组谓词，请执行以下操作：
 
@@ -298,4 +298,4 @@ ht-degree: 19%
 
 在“资产共享”页面上显示搜索结果受所选镜头的约束。 [!DNL Experience Manager Assets] 附带一组预定义的镜头，可用于自定义资产共享页面。 以这种方式自定义资产共享在创建和配 [置资产共享页面中有介绍](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)。
 
-除了使用现有的镜头外，开发者 [!DNL Experience Manager] 还可以制作自己的镜头。
+除了使用现有的镜头外，开发者还 [!DNL Experience Manager] 可以制作自己的镜头。
