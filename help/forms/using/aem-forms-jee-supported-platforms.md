@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 23aee6802e625e82d18a205586eb77341b6ef16e
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3247'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,6 @@ AEM Forms在JEE服务器上的设置可以使用支持的操作系统、应用�
 >
 >* 有关受支持服务器平台的例外情况的完整列表，请参 [阅受支持服务器平台的例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
 >* AEM Forms在JEE上仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
-
 >
 
 
@@ -457,11 +456,9 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >* 仅Windows和Linux支持OpenOffice的PDF Generator转换。
 >* OCR PDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
 >* Acrobat的某个版本与AEM Forms捆绑在一起，以实现PDF Generator功能。 捆绑版本仅应在AEM Forms许可期限内通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关详细信息，请参阅按部署说明的AEM Forms[产品说明(内部部](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 署 [或Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
-
    >
    >
 * PDF Generator服务不支持Microsoft Windows 10。
-
 >
 
 
@@ -640,7 +637,6 @@ AEM Forms的以下子系统不 [符合](https://www.section508.gov/) 508:
 >* Safari不支持管理控制台。
 >* 通信管理不支持Windows® Internet Explorer 9.0 for AEM 6.1表单。
 >* Forms门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以实现辅助功能。
-
 >
 
 
@@ -675,7 +671,6 @@ AEM Forms的以下子系统不 [符合](https://www.section508.gov/) 508:
 >[!NOTE]
 >
 >* Forms门户仅在iPad上的Safari上受支持。
-
 >
 
 
@@ -688,7 +683,7 @@ AEM Forms应用程序可用于以下平台：
 
 | **平台** | **支持的设备** |
 |---|---|
-| Apple iOS | 运行iOS 11及更高版本的Apple iPhone、iPad、iPad Air和iPad mini。 |
+| Apple iOS | 运行iOS 12及更高版本的Apple iPhone、iPad、iPad Air和iPad mini。 |
 | Google Android | Android 5.1及更高版本。 AEM Forms应用在7英寸和10英寸的三星Galaxy平板电脑和流行智能手机上获得认证。 |
 | Microsoft Windows | 运行Microsoft Windows 10操作系统的Microsoft Surface设备、平板电脑、笔记本电脑和台式机。 |
 
@@ -734,3 +729,8 @@ Adobe支持第三方供应商在发布时发布的紧急或推荐的修补程序
 Adobe保留在任何给定时刻更改由AEM Forms在JEE版本上支持的第三方参考平台及其支持的修补程序定义的权利。
 
 通过搜索Adobe企业支持站点以找到与您的产品相关的知识库文章，还可以找到有关第三方修补程序的其他信息。
+
+## 修订历史记录 {#revision-history}
+
+* 2020年9月9日
+   * 将AEM Forms应用程序的受支持iOS版本更改为iOS 12。 以前的版本是iOS 11。
