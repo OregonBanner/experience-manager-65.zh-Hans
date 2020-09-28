@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 12b2b73b6363c90d784527b260d664e48c746496
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2200'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,9 @@ ht-degree: 0%
 
 基于XFA的自适应表单的预填XML和提交的XML的结构如下：
 
-* **预填充XML结构**: 基于XFA的自适应表单的预填XML必须符合XFA表单模板的数据模式。 要预填未绑定的字段，请将预填XML结构包含在标 `/afData/afBoundData` 签中。
+* **预填充XML结构**:基于XFA的自适应表单的预填XML必须符合XFA表单模板的数据模式。 要预填未绑定的字段，请将预填XML结构包含在标 `/afData/afBoundData` 签中。
 
-* **已提交的XML结构**: 当不使用预填充XML时，提交的XML包含包装器标签中绑定字段和未绑定字段 `afData` 的数据。 如果使用预填XML，则提交的XML与预填XML的结构相同。 如果XML开始的根标 `afData` 签是预填充的，则输出XML也具有相同的格式。 如果预填充XML没有包装 `afData/afBoundData`器，而是直接从开始根标签中模式( `employeeData`如，提交的XML还开始 `employeeData` 标签。
+* **已提交的XML结构**:当不使用预填充XML时，提交的XML包含包装器标签中绑定字段和未绑定字段 `afData` 的数据。 如果使用预填XML，则提交的XML与预填XML的结构相同。 如果XML开始的根标 `afData` 签是预填充的，则输出XML也具有相同的格式。 如果预填充XML没有包装 `afData/afBoundData`器，而是直接从开始根标签中模式( `employeeData`如，提交的XML还开始 `employeeData` 标签。
 
 Prefill-Submit-Data-ContentPackage.zip
 
@@ -93,8 +93,8 @@ Prefill-Submit-Data-ContentPackage.zip
 
 基于XML模式的自适应表单预填XML和提交XML的结构如下：
 
-* **预填XML结构**: 预填XML必须符合关联的XML模式。 要预填未绑定的字段，请将预填XML结构包含在/afData/afBoundData标签中。
-* **已提交的XML结构**: 如果未使用预填充XML，则提交的XML包含包装器标签中绑定字段和未绑定字段 `afData` 的数据。 如果使用预填充XML，则提交的XML与预填充XML的结构相同。 如果XML开始的根标 `afData` 签为预填充，则输出XML的格式相同。 如果预填充XML没有包装 `afData/afBoundData` 器，而是直接从开始根标签(如模式 `employeeData`)中，则提交的XML也会开始 `employeeData` 标签。
+* **预填XML结构**:预填XML必须符合关联的XML模式。 要预填未绑定的字段，请将预填XML结构包含在/afData/afBoundData标签中。
+* **已提交的XML结构**:如果未使用预填充XML，则提交的XML包含包装器标签中绑定字段和未绑定字段 `afData` 的数据。 如果使用预填充XML，则提交的XML与预填充XML的结构相同。 如果XML开始的根标 `afData` 签为预填充，则输出XML的格式相同。 如果预填充XML没有包装 `afData/afBoundData` 器，而是直接从开始根标签(如模式 `employeeData`)中，则提交的XML也会开始 `employeeData` 标签。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -146,8 +146,8 @@ Prefill-Submit-Data-ContentPackage.zip
 
 对于基于JSON模式的自适应表单，预填JSON和提交JSON的结构如下所述。 有关详细信息，请参 [阅使用JSON模式创建自适应表单](../../forms/using/adaptive-form-json-schema-form-model.md)。
 
-* **预填JSON结构**: 预填JSON必须符合关联的JSON模式。 （可选）如果还要预填未绑定字段，可将其打包到/afData/afBoundData对象中。
-* **已提交的JSON结构**: 如果未使用预填JSON，则提交的JSON包含afData包装器标记中绑定和未绑定字段的数据。 如果使用预填JSON，则提交的JSON的结构与预填JSON相同。 如果用afData根对象预填JSON开始，则输出JSON的格式相同。 如果预填JSON没有afData/afBoundData包装器，而是直接从开始根对象（如用户）模式，则提交的JSON也会与用户对象开始。
+* **预填JSON结构**:预填JSON必须符合关联的JSON模式。 （可选）如果还要预填未绑定字段，可将其打包到/afData/afBoundData对象中。
+* **已提交的JSON结构**:如果未使用预填JSON，则提交的JSON包含afData包装器标记中绑定和未绑定字段的数据。 如果使用预填JSON，则提交的JSON的结构与预填JSON相同。 如果用afData根对象预填JSON开始，则输出JSON的格式相同。 如果预填JSON没有afData/afBoundData包装器，而是直接从开始根对象（如用户）模式，则提交的JSON也会与用户对象开始。
 
 ```json
 {
@@ -227,13 +227,13 @@ Prefill-Submit-Data-ContentPackage.zip
 
 ## 使用Configuration Manager配置预填服务 {#configuring-prefill-service-using-configuration-manager}
 
-要启用预填服务，请在AEM Web Console配置中指定默认预填服务配置。 使用以下步骤配置预填服务：
+要启用预填服务，请在AEM Web控制台配置中指定默认预填服务配置。 使用以下步骤配置预填服务：
 
 >[!NOTE]
 >
 >预填服务配置适用于自适应表单、HTML5表单和HTML5表单集。
 
-1. 使用 **[!UICONTROL URL打开Adobe Experience Manager]** Web控制台配置：\
+1. 使用 **[!UICONTROL URL打开Adobe Experience ManagerWeb]** 控制台配置：\
    https://&lt;server>:&lt;port>/system/console/configMgr
 1. 搜索并打开默 **[!UICONTROL 认预填服务配置]**。
 
@@ -246,7 +246,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
    >[!NOTE]
    >
-   >默认情况下，允许通过crx文件预填所有类型的自适应表单（XSD、XDP、JSON、FDM以及不基于表单模型）。 仅允许对JSON和XML文件进行预填。
+   >默认情况下，允许通过crx文件预填所有类型的自适应Forms（XSD、XDP、JSON、FDM，且不基于表单模型）。 仅允许对JSON和XML文件进行预填。
 
 1. 现在已为表单配置预填服务。
 
@@ -283,7 +283,7 @@ https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=crx://
 https://localhost:4502/content/forms/af/someAF.html?wcmmode=disabled&dataRef=file:///C:/Users/form-user/Downloads/somesamplexml.xml
 ```
 
-引用的文件必须位于同一服务器上。
+引用的文件必须位于同一台服务器上。
 
 ### https://协议 {#the-http-protocol}
 
@@ -326,7 +326,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 您可以编写包含所有数据的简单XML或JSON字符串，并在slingRequest中设置它。 这可以轻松地在您的呈示器JSP中为任何组件完成，您要将这些组件包含在可以设置slingRequest数据属性的页面中。
 
-例如，您希望页面具有特定类型标题的特定设计。 为此，您可以编写自己的内 `header.jsp`容，将其包含在页面组件中并设置属 `data` 性。
+例如，您希望页面具有特定类型标题的特定设计的位置。 为此，您可以编写自己的内 `header.jsp`容，将其包含在页面组件中并设置属 `data` 性。
 
 另一个好示例是您希望在登录时通过Facebook、Twitter或LinkedIn等社交帐户预填数据的用例。 在这种情况下，您可以在中包含一个简 `header.jsp`单的JSP，它从用户帐户中获取数据并设置数据参数。
 
@@ -334,13 +334,13 @@ prefill page component.zip
 
 [在页面](assets/prefill-page-component.zip)组件中获取文件示例prefill.jsp
 
-## AEM Forms自定义预填服务 {#aem-forms-custom-prefill-service}
+## AEM Forms定制预填服务 {#aem-forms-custom-prefill-service}
 
 您可以在场景中使用自定义预填服务，在场景中，您经常从预定义的源读取数据。 预填服务从定义的数据源读取数据，并用预填数据文件的内容预填自适应表单的字段。 它还可以帮助您将预先填写的数据与自适应表单永久关联。
 
 ### 创建和运行预填服务 {#create-and-run-a-prefill-service}
 
-预填服务是OSGi服务，通过OSGi捆绑包进行打包。 您可以创建OSGi捆绑包、上传它并将其安装到AEM Forms捆绑包。 开始创建捆绑包之前：
+预填服务是OSGi服务，通过OSGi捆绑包进行打包。 您创建OSGi捆绑包，上传并将其安装到AEM Forms捆绑包。 开始创建捆绑包之前：
 
 * [下载AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)
 * 下载样板程序包
@@ -367,7 +367,24 @@ prefill page component.zip
 
 要开始预填服务，请将JAR文件上传到AEM FormsWeb控制台，然后激活该服务。 现在，在自适应表单编辑器中显示的服务开始。 将预填服务与自适应表单关联：
 
-1. 在表单编辑器中打开自适应表单，然后打开表单容器的属性面板。
+1. 在Forms编辑器中打开自适应表单，然后打开表单容器的“属性”面板。
 1. 在“属性”控制台中，导航到AEM Forms容器>基本>预填服务。
 1. 选择“默认预填服务”，然后单击“ **[!UICONTROL 保存]**”。 服务与表单关联。
 
+## 在客户端预填数据 {#prefill-at-client}
+
+在您预填自适应表单时，AEM Forms服务器将数据与自适应表单合并，并将填写的表单发送给您。 默认情况下，数据合并操作在服务器上进行。
+
+您可以配置AEM Forms服务器以在客户端而不是服务器执行数据合并操作。 它显着缩短了预填和渲染自适应表单所需的时间。 默认情况下，该功能处于禁用状态。 您可以从配置管理器或命令行启用它。
+
+* 要从配置管理器启用或禁用：
+   1. 打开AEM Configuration Manager。
+   1. 找到并打开自适应表单和交互式通信Web渠道配置
+   1. 启用Configuration.af.clientside.datamerge.enabled.name选项
+* 要从命令行启用或禁用：
+   * 要启用，请运行以下cURL命令：
+      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+
+   * 要禁用，请运行以下cURL命令：
+      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+   要充分利用客户端预填数据选项，请更新预填服务以返回 [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) 和 [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
