@@ -1,11 +1,11 @@
 ---
-title: 使用中的引用和多页资产管理复合资产 [!DNL Adobe Experience Manager]。
+title: 使用引用和多个页面管理复合资产
 description: 了解如何从中创建数字资产引用 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 
    ![视图资产详细信息中引用列中Experience Manager资产的引用](assets/asset-references.png)
 
-   *图： 资产详细信息中的资产引用。*
+   *图：资产详细信息中的资产引用。*
 
 ## 将数字资产作为引用添加到 [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}
 
@@ -52,7 +52,7 @@ To reference digital assets from within an [!DNL InDesign] file, either drag ass
 
 >[!NOTE]
 >
->如果代 [!DNL InDesign Server] 理，则文 [!DNL InDesign] 件的预览将嵌入到XMP元数据中。 在这种情况下，不显式需要缩略图提取。 但是，如果未 [!DNL InDesign Server] 代理，则必须显式提取文件的缩 [!DNL InDesign] 略图。
+>如果代 [!DNL InDesign Server] 理，则文 [!DNL InDesign] 件的预览将嵌入到XMP元数据中。 在这种情况下，缩略图提取不是明确必需的。 但是，如果未 [!DNL InDesign Server] 代理，则必须显式提取文件的缩 [!DNL InDesign] 略图。
 
 ### 通过拖动资产创建引用 {#create-references-by-dragging-aem-assets}
 
@@ -95,11 +95,11 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 要生成子资产，请执行以下操作之一：
 
-* 新资产： DAM [!UICONTROL 更新资产工作流] ，对上传到的任何新资产执行 [!DNL Experience Manager]。 子资产是为新的多页资产自动生成的。
-* 现有多页资产： 按照以下任 [!UICONTROL 一步骤手动执行] DAM更新资产工作流：
+* 新资产：DAM [!UICONTROL 更新资产工作流] ，对上传到的任何新资产执行 [!DNL Experience Manager]。 子资产是为新的多页资产自动生成的。
+* 现有多页资产：按照以下任 [!UICONTROL 一步骤手动执行] DAM更新资产工作流：
 
    * 选择一个资产，然 [!UICONTROL 后单击] “时间轴”以打开左侧面板。 或者，使用键盘快捷键 `alt + 3`。 单击 [!UICONTROL 开始工]作流，选 [!UICONTROL 择DAM更新资产]，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继]续。
-   * 选择资产，然后从工 [!UICONTROL 具栏中] ，单 [!UICONTROL 击创] 建>工作流。 从弹出对话框中，选 [!UICONTROL 择DAM更新资产工作] 流，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继续]。
+   * 选择资产，然后从工 [!UICONTROL 具栏中] ，单 [!UICONTROL 击] “创建”>“工作流”。 从弹出对话框中，选 [!UICONTROL 择DAM更新资产] ，单击 [!UICONTROL 开始]，然后 [!UICONTROL 单击继续]。
 
 特别是对于Microsoft Word文档，请执 **[!UICONTROL 行DAM分析Word文档工作流]** 。 它从Microsoft `cq:Page` Word文档的内容生成一个组件。 从文档提取的图像从组件中引 `cq:Page` 用。 即使禁用了子资产生成，也会提取这些图像。
 
@@ -136,7 +136,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 >[!MORELIKETHIS]
 >
 >* [使用Adobe Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
->* [在Adobe Experience Manager中配置桌面操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [在Adobe Experience Manager配置桌面操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [在Adobe Photoshop创建链接的智能对象](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [将图形置入Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
