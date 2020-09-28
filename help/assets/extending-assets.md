@@ -1,9 +1,9 @@
 ---
-title: 自定义和扩展 [!DNL Adobe Experience Manager Assets]。
+title: 自定义和扩展 [!DNL Assets]
 description: 了解自定义和扩展资产共享和资产编辑器的方式，它们为用户提供了专门定制的界面和功能集。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -30,9 +30,9 @@ ht-degree: 0%
 
 资产编辑器外观的以下方面可自定义：
 
-* 徽标： 您可以向界面添加您自己组织的徽标。
-* 颜色和字体： 您可以更改界面中使用的颜色和字体。
-* HTML代码： 要进行更彻底的自定义，您可以更改定义界面的底层HTML代码。
+* 徽标：您可以向界面添加您自己组织的徽标。
+* 颜色和字体：您可以更改界面中使用的颜色和字体。
+* HTML代码：要进行更彻底的自定义，您可以更改定义界面的底层HTML代码。
 
 ## 自定义再现 {#customizing-renditions}
 
