@@ -1,11 +1,11 @@
 ---
-title: 中的专用文件夹 [!DNL Adobe Experience Manager Assets]
+title: 用于共享资产的专用文件夹
 description: 了解如何在中创建专用文件 [!DNL Adobe Experience Manager Assets] 夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: be97ef4f3bb6b904dabcfcd44025a4898bcf4dee
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '643'
 ht-degree: 6%
 
 ---
