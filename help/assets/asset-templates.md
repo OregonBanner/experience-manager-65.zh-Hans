@@ -1,11 +1,11 @@
 ---
-title: 中的资产模板 [!DNL Adobe Experience Manager Assets]。
+title: 资产模板
 description: 了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Asset templates {#asset-templates}
 
-资产模板是一种特殊的资产类别，它有助于快速为数字和印刷媒体重用视觉效果丰富的内容。 资产模板包括两个部分，即固定消息部分和可编辑部分。 固定消息部分可以包含专有内容，如品牌徽标和禁用进行编辑的版权信息。 可编辑部分可在可编辑的字段中包含可视内容和文本内容，以自定义消息。
+资产模板是一种特殊的资产类别，它有助于快速为数字和印刷媒体重用视觉效果丰富的内容。 资产模板包括两个部分，即固定消息部分和可编辑部分。 固定消息部分可以包含专有内容，如品牌徽标和禁用进行编辑的版权信息。 可编辑部分可在可编辑以自定义消息的字段中包含可视内容和文本内容。
 
 在保护全球标牌的同时灵活地进行有限的编辑，使资产模板成为快速调整内容和分发内容的理想构件块，并将其作为各种功能的内容伪像。 重新调整内容用途有助于降低管理印刷和数字渠道的成本，并在这些渠道提供全面、一致的体验。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 1. （可选）单击“ **[!UICONTROL 标记]** ”，然后为小册子选择一个或多个标记。 单击 **[!UICONTROL 确认]** ，以确认您的选择。
 
-   ![chlimage_1-105](assets/chlimage_1-310.png)
+   ![chlimage_1-106](assets/chlimage_1-310.png)
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。对话框会确认新手册的制作。 单击 **[!UICONTROL 打开]** ，以编辑模式打开宣传册。
 
@@ -96,11 +96,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >确保您的 [!DNL Experience Manager] 部署与集成， [!DNL InDesign Server] 以启用 [!DNL Experience Manager Assets] 从模板提取数据并 [!DNL InDesign] 使其可供编辑。 有关详细信息，请 [参阅将Experience Manager资源与InDesign Server集成](/help/assets/indesign.md)。
+   >确保您的 [!DNL Experience Manager] 部署与集成， [!DNL InDesign Server] 以启用 [!DNL Experience Manager Assets] 从模板提取数据并 [!DNL InDesign] 使其可供编辑。 有关详细信息，请 [参阅将Experience Manager资产与InDesign Server集成](/help/assets/indesign.md)。
 
 1. 要修改可编辑字段中的文本，请单击可编辑字段列表中的文本字段，然后编辑该字段中的文本。
 
-   ![chlimage_1-111](assets/chlimage_1-316.png)
+   ![chlimage_1-191](assets/chlimage_1-316.png)
 
    您可以编辑文本属性，例如字体样式、颜色和大小，使用提供的选项。
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 1. 从可编辑字段的列表中选择图像字段，然后将所需图像从资产选取器拖到可编辑字段。
 
-   ![chlimage_1-114](assets/chlimage_1-319.png)
+   ![chlimage_1-115](assets/chlimage_1-319.png)
 
    您还可以使用关键字、标记并根据图像的发布状态搜索图像。 您可以浏览存储 [!DNL Experience Manager Assets] 库并导航到所需图像的位置。
 
@@ -144,9 +144,9 @@ ht-degree: 0%
    >* 装载 [!DNL Experience Manager] 到本地文件系统，然后将缺少的图标与中的现有资源映射 [!DNL Experience Manager]。
 
    >
-   >有关使用文档的更多 [!DNL InDesign] 信息，请 [参阅Experience Manager中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
+   >有关使用文档的更多信 [!DNL InDesign] 息，请参 [阅在Experience Manager中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
-1. 要为手册生成PDF再现，请在对话框中选择Acrobat选项，然后单击“继 **[!UICONTROL 续”]**。
+1. 要为手册生成PDF再现，请在对话框中选择“Acrobat”选项，然后单击“继 **[!UICONTROL 续”]**。
 1. 附属品会在您开始使用的文件夹中创建。 要视图演绎版，请打开宣传品，然 **[!UICONTROL 后从]** GlobalNav列表中选择“演绎版”。
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
@@ -188,7 +188,7 @@ ht-degree: 0%
 
 1. 在“配 [!UICONTROL 置模板] ”屏幕中，指定宣传品的名称。 （可选）指定您认为合适的任何标记。 如果要以PDF格式导出输出，请选 **[!UICONTROL 择Acrobat(.PDF)]**。 默认情况下，辅助材料以JPG和格式 [!DNL InDesign] 导出。 要更改多页宣传资料的显示缩略图，请单击“更 **[!UICONTROL 改缩略图]**”。
 
-   ![chlimage_1-129](assets/chlimage_1-332.png)
+   ![chlimage_1-127](assets/chlimage_1-332.png)
 
 1. 单击 **[!UICONTROL “保存]** ”，然后 **[!UICONTROL 在对话]** 框中单击“确定”以关闭对话框。 多页宣传资料会在您开始使用的文件夹中创建。
 
