@@ -1,12 +1,12 @@
 ---
-title: 在中管理您的数字资产 [!DNL Adobe Experience Manager Assets]。
+title: 管理您的数字资产
 description: 了解资产管理任务，如上传、下载、编辑、搜索、删除、批注以及对数字资产进行版本管理。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52eb4ccfc1c9f0a121039432ed57401a2def573
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '9410'
+source-wordcount: '9409'
 ht-degree: 7%
 
 ---
@@ -464,7 +464,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * Click **[!UICONTROL Cancel]** to stop the process.
    >[!NOTE]
    >
-   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果您使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
+   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
    >* 重命名时，文件名中不允许有空格。
 
 
