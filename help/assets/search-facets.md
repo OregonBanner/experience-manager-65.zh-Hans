@@ -1,11 +1,11 @@
 ---
-title: 搜索 Facet.
+title: 搜索彩块化以筛选搜索结果
 description: 如何在中创建、修改和使用搜索彩块化 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2489'
 ht-degree: 28%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 28%
 
 总之，搜索彩块化允许您以多种方式而非按单一、预先确定的分类顺序搜索资产。 您可以轻松地向下展开到所需的详细级别，以便进行更集中的搜索。
 
-例如，如果您要查找图像，则可以选择要位图还是矢量图像。 您可以通过为图像指定MIME类型进一步缩小搜索范围。 同样，在搜索文档时，可以指定格式，例如PDF或MS Word。
+例如，如果您要查找图像，则可以选择是要位图还是矢量图像。 您可以通过为图像指定MIME类型进一步缩小搜索范围。 同样，在搜索文档时，可以指定格式，例如PDF或MS Word。
 
 ## 添加谓词 {#adding-a-predicate}
 
@@ -46,7 +46,7 @@ ht-degree: 28%
 
    ![按并移动谓词以自定义搜索过滤器](assets/drag_predicate.png)
 
-   *图： 按并移动谓词以自定义搜索过滤器。*
+   *图：按并移动谓词以自定义搜索过滤器。*
 
 1. 在设置选项卡中，输入谓词的字段标签、占位符文本和说明。 为要与谓词关联的元数据属性指定有效名称。
 
@@ -128,7 +128,7 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
    “选项”谓词中的可用字段
 
 1. 在&#x200B;**[!UICONTROL 描述]**&#x200B;字段中，输入可选描述，然后单击&#x200B;**[!UICONTROL 完成]**。
-1. 导航到“搜索”面板。 “选项”谓词已添加到“搜 **索** ”面板。 “文件类型 **[!UICONTROL ”的选项]** 将显示为复选框。
+1. 导航到“搜索”面板。“选项”谓词已添加到“搜 **索** ”面板。 “文件类型 **[!UICONTROL ”的选项]** 将显示为复选框。
 
 ## 添加多值属性谓词 {#adding-a-multi-value-property-predicate}
 
@@ -164,7 +164,7 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 
    ![Experience Manager在键入标记名称时提供的建议](assets/tag-suggestion.png)
 
-   *图： Experience Manager在键入标记名称时提供的建议。*
+   *图：Experience Manager在键入标记名称时提供的建议。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
