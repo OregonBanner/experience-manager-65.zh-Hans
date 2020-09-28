@@ -1,11 +1,11 @@
 ---
-title: 在 [!DNL Adobe Stock] 中管理资产 [!DNL Adobe Experience Manager Assets]。
+title: 管 [!DNL Adobe Stock] 理资产
 description: 从内部搜索、提取、许 [!DNL Adobe Stock] 可和管理资产 [!DNL Adobe Experience Manager]。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2ac848fa360ad87ff4f87efc38ae1361ae890cb2
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1109'
 ht-degree: 13%
 
 ---
