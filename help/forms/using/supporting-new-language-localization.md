@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -30,23 +30,34 @@ ht-degree: 0%
 
 ### 自适应表单的本地化如何工作 {#how-localization-of-adaptive-form-works}
 
-呈现自适应表单时，它通过按指定顺序查看以下参数来标识所请求的区域设置：
+有两种方法可标识自适应表单的区域设置。 呈现自适应表单时，它通过以下方式标识所请求的区域设置：
 
-* 请求参 `afAcceptLang`数要覆盖用户的浏览器区域设置，您可以通过 
+* 查看自适应 `[local]` 表单URL中的选择器。 The format of the URL is `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. 使用选 `[local]` 择器可缓存自适应表单。
+
+* 按指定顺序查看以下参数：
+
+   * 请求参 `afAcceptLang`数要覆盖用户的浏览器区域设置，您可以通过 
 `afAcceptLang` 请求参数以强制使用区域设置。 例如，以下URL将强制在日语区域设置中呈现表单：
-   `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* 为用户设置的浏览器区域设置，使用标题在请求中指 `Accept-Language` 定。
+   * 为用户设置的浏览器区域设置，使用标题在请求中指 `Accept-Language` 定。
 
-* 在AEM中指定的用户的语言设置。
+   * AEM中指定用户的语言设置。
 
-识别区域设置后，自适应表单会选取特定于表单的词典。 如果找不到所请求区域设置的表单特定词典，则使用英语(en)词典。
+   * 默认情况下，浏览器区域设置处于启用状态。 要更改浏览器区域设置，
+      * 打开配置管理器。 URL为 `http://[server]:[port]/system/console/configMgr`
+      * 找到并打开自 **[!UICONTROL 适应表单和交互式通信Web渠道配置]** 。
+      * 更改“使用浏览器 **[!UICONTROL 区域设置]** ”选项的 **[!UICONTROL 状态并保]** 存配置。
+
+识别区域设置后，自适应表单会选取特定于表单的词典。 如果找不到所请求区域设置的特定于表单的词典，则它将该词典用于创作自适应表单的语言。
+
+如果没有区域设置信息，则以表单的原始语言提供自适应表单。 原始语言是开发自适应表单时使用的语言。
 
 如果所请求区域设置的客户端库不存在，则它检查客户端库是否存在区域设置中的语言代码。 例如，如果请求的区域设 `en_ZA` 置为（南非英语），并且不存在 `en_ZA` 客户端库，自适应表单将使用客户端库( `en` 英语)语言（如果存在）。 但是，如果这些表单都不存在，自适应表单将字典用于区 `en` 域设置。
 
 ## 添加对不支持的区域设置的本地化支持 {#add-localization-support-for-non-supported-locales}
 
-AEM Forms目前支持本地化适应表单内容，语言版本有英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、巴西葡萄牙语(pt-BR)、中文(zh-CN)、中国台湾地区(zh-TW)和韩语(ko-KR)。
+AEM Forms目前支持本地化适应表单内容，语言版本有英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、巴西葡萄牙语(pt-BR)、中文(zh-CN)、中国台湾(zh-TW)和韩语(ko-KR)。
 
 要在自适应表单运行时添加对新区域设置的支持，请执行以下操作：
 
@@ -82,11 +93,11 @@ I18N.js
 
 ### 为区域设置添加自适应表单客户端库 {#add-adaptive-form-client-library-for-a-locale-br}
 
-创建以下类型 `cq:ClientLibraryFolder` 的节 `etc/<folderHierarchy>`点，其类别 `guides.I18N.<locale>` 为和依赖项 `xfaforms.3rdparty`为 `xfaforms.I18N.<locale>` 和 `guide.common`。 &quot;
+创建以下类型 `cq:ClientLibraryFolder` 的节 `etc/<folderHierarchy>`点，其类别 `guides.I18N.<locale>` 为和依赖项 `xfaforms.3rdparty`为 `xfaforms.I18N.<locale>` 和 `guide.common`。&quot;
 
 将以下文件添加到客户端库：
 
-* **i18n.js定义** ，具有“ `guidelib.i18n`calendarSymbols”、、、、 `datePatterns`、 `timePatterns`、按XFA规范的模式（在地区设置的XFA规范中）、 `dateTimeSymbols`，以 `numberPatterns``numberSymbols``currencySymbols``typefaces``<locale>`[](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)及中描述的XFA规范。 您还可以在中了解如何为其他支持的语言环境定义该 `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`语言。
+* **i18n.js定义** ，具有“ `guidelib.i18n`calendarSymbols”、、、、 `datePatterns`、 `timePatterns`、按XFA规范的模式(在地区设置XFA规范中 `dateTimeSymbols``numberPatterns``numberSymbols``currencySymbols``typefaces``<locale>`[](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf))、XFA规范中描述的模式。 您还可以在中了解如何为其他支持的语言环境定义该 `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`语言。
 * **LogMessages.js** 定 `guidelib.i18n.strings` 义 `guidelib.i18n.LogMessages` 和(如 `<locale>` 中定义) `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`。
 * **js.txt** ，包含以下内容：
 
