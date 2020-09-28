@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 56c2e6b55964ea5f3e180b17bd2a244882aa62ea
+source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -35,7 +35,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
 >[!CAUTION]
 >
->CRXDE Lite中可见的实现结构可能会发生变化。
+>在CRXDE Lite中可见的实现结构可能会发生变化。
 
 ## 显示标记 {#displaying-badges}
 
@@ -102,7 +102,7 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
 
 
-![chlimage_1-248](assets/chlimage_1-248.png)
+![debug-scaring-log](assets/debug-scoring-log.png)
 
 要查看日志条目：
 
@@ -118,17 +118,17 @@ AEM Communities评分和徽章功能提供识别和奖励社区成员的能力�
 
    * 例如，`.../crx-quickstart/logs/scoring-debug.log`
 
-![chlimage_1-249](assets/chlimage_1-249.png)
+![评分日志](assets/scoring-log.png)
 
 ## 用于评分和徽章的UGC {#ugc-for-scoring-and-badging}
 
 当所选SRP是JSRP或MSRP，但不是ASRP时，可以视图与评分和徽章相关的UGC。 (如果不熟悉这些术语，请参 [阅社区内容存储](/help/communities/working-with-srp.md)[和存储资源提供者概述](/help/communities/srp.md)。)
 
-访问评分和标记数据的说明使用JSRP，因为UGC可使用CRXDE Lite轻 [松访问](/help/sites-developing/developing-with-crxde-lite.md)。
+访问评分和标记数据的描述使用JSRP，因为UGC可以使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。
 
-**作者JSRP**: 在作者环境中进行实验，结果在UGC中，仅在作者环境中可见。
+**作者JSRP**:在作者环境中进行实验，结果在UGC中，仅在作者环境中可见。
 
-**发布时的JSRP**: 同样，如果在发布环境上进行测试，则必须对发布实例使用管理权限访问CRXDE Lite。 如果发布实例在生 [产模式](/help/sites-administering/production-ready.md) （nosamplecontent运行模式）下运行 [，则需要启用](/help/sites-administering/enabling-crxde-lite.md)CRXDE Lite。
+**发布时的JSRP**:同样，如果在发布环境上进行测试，则必须对发布实例使用管理权限访问CRXDE Lite。 如果发布实例在生产模 [式](/help/sites-administering/production-ready.md) （nosamplecontent运行模式）中运行 [，则需要启用](/help/sites-administering/enabling-crxde-lite.md)CRXDE Lite。
 
 UGC在JSRP上的基本位置是 `/content/usergenerated/asi/jcr/`。
 
@@ -139,7 +139,7 @@ UGC在JSRP上的基本位置是 `/content/usergenerated/asi/jcr/`。
 * [com.adobe.cq.social.scoring.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/scoring/api/package-summary.html)
 * [com.adobe.cq.social.badging.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/badging/api/package-summary.html)
 
-Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc。 请参 [阅将Maven用于社区： Javadocs](/help/communities/maven.md#javadocs)。
+开发人员可从Adobe库获得已安装功能包的最新Javadoc。 请参 [阅将Maven用于社区：Javadocs](/help/communities/maven.md#javadocs)。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
@@ -147,7 +147,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 存储库数据的屏幕快照来自为两个不同AEM站点上的论坛设置评分和徽章：
 
-1. 具有唯一 *id的* AEM站点（使用向导创建的社区站点）:
+1. 具有唯一 *id的AEM* 站点（使用向导创建的社区站点）:
 
    * 使用在入门教程中创建的入门教程( [参与)站点](/help/communities/getting-started.md)
    * 找到论坛页面节点
@@ -217,19 +217,20 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
    由于用户已获得两个铜牌徽章，并且已获得版主徽章，因此用户在论坛条目中的显示方式是这样的。
 
-![chlimage_1-250](assets/chlimage_1-250.png)
+   ![主持人](assets/moderator.png)
 
 >[!NOTE]
 >
 >此示例不遵循以下最佳实践：
 >
->* 评分规则名称应全局唯一； 他们不应以同一个名字结尾。
+>* 评分规则名称应全局唯一；他们不应以同一个名字结尾。
    >  不要执行 *的* 示例：
    >  /libs/settings/community/scommunity/scorning/rules/site1/forums-scorning
    >  /libs/settings/community/scorning/rules/site2/forums-scorning
    >
    >
 * 为不同的AEM站点创建唯一的徽章图像
+
 >
 
 
@@ -244,7 +245,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 的子节点 `scoring` 是评分规则名称。 因此，最佳实践是，在服务器上对规则名称进行评分是全局唯一的。
 
-对于Geometrixx Engage站点，用户及其得分所在的路径包含评分规则名称、社区站点的站点id()、唯 `engage-ba81p`一id和用户的id:
+对于“Geometrixx参与”站点，用户及其得分所在的路径包含评分规则名称、社区站点的站点id()、唯一id `engage-ba81p`和用户的id:
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
@@ -254,7 +255,7 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 得分存储在属性中， `scoreValue_tl` 该属性可能仅直接包含值或间接引用atomicCounter。
 
-![chlimage_1-251](assets/chlimage_1-251.png)
+![access-scoring-ugc](assets/access-scoring-ugc.png)
 
 ### 访问标记UGC {#access-badging-ugc}
 
@@ -270,15 +271,15 @@ Adobe存储库中的开发人员可以使用已安装功能包的最新Javadoc�
 
 #### 奖章 {#awarded-badge}
 
-![chlimage_1-252](assets/chlimage_1-252.png)
+![奖励徽章-ugc](assets/access-badging-ugc.png)
 
 #### 分配的徽章 {#assigned-badge}
 
-![chlimage_1-253](assets/chlimage_1-253.png)
+![已分配徽章](assets/assigned-badge.png)
 
 ## 附加信息 {#additional-information}
 
-要根据点显示成员的排序列表:
+要根据点显示成员的排序列表，请执行以下操作：
 
 * [用于包含在](/help/communities/functions.md#leaderboard-function) 社区站点或组模板中的排行榜功能。
 * [通栏组件](/help/communities/enabling-leaderboard.md)，通栏功能的特色组件，用于页面创作。
