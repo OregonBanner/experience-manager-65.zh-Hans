@@ -1,11 +1,11 @@
 ---
-title: 签入和签出您的数字资产进行编辑。
+title: 签入和签出资产以进行编辑
 description: 了解如何签出资产进行编辑，并在更改完成后将其签回。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ee94193ff31c60e954be0070ecf84e447effc4f6
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
