@@ -1,11 +1,11 @@
 ---
-title: '[!DNL资产]网络注意事项和要求。'
+title: 网络注意事项和要求
 description: 讨论设计和部署时的网 [!DNL Adobe Experience Manager Assets] 络注意事项。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ## 公司网络的拓扑 {#topology-of-the-corporate-network}
 
-![chlimage_1-356](assets/chlimage_1-354.png)
+![chlimage_1-354](assets/chlimage_1-354.png)
 
 该图表显示公司网络内的上行链路速度高于通常使用的速度。 这些管道是共享资源。 如果共享交换机应处理50个客户端，它可能是一个瓶颈。 在初始图中，只有两台计算机共享特定连接。
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 设计环境的拓扑 [!DNL Experience Manager] 需要详细了解系统配置以及网络在用户环境内的连接方式。
 
-示例方案包括一个包含五台服务器的发布场、一个S3二进制存储和配置的Dynamic Media。
+示例方案包括配置了五台服务器、一个S3二进制存储和Dynamic Media的发布场。
 
 调度程序与两个实体共享100Mbps的连接，外部世界和部 [!DNL Experience Manager] 署。 要同时上传和下载操作，应将此数字除以二。 连接的外部存储使用单独的连接。
 
