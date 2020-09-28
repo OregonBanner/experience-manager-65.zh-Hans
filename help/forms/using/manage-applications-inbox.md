@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 0%
+source-wordcount: '1133'
+ht-degree: 2%
 
 ---
 
@@ -123,3 +123,37 @@ AEM收件箱仅显示活动任务。 已完成的任务不显示在列表中。 
 
 ![completed-任务-workflow](assets/completed-task-workflow.png)
 
+## 疑难解答 {#troubleshooting-workflows}
+
+### 无法在AEM收件箱中视图与AEM工作流相关的项目 {#unable-to-see-aem-worklow-items}
+
+工作流模型所有者无法在AEM收件箱中视图与AEM工作流相关的项目。 要解决此问题，请将以下列出的索引添加到AEM存储库并重新构建索引。
+
+1. 使用以下方法之一添加索引：
+
+   * 在CRX DE中，使用下表中 `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` 指定的相应属性在创建以下节点：
+
+      | 节点 | 属性 | 类型 |
+      |---|---|---|
+      | sharedWith | sharedWith | 字符串 |
+      | 已锁定 | 已锁定 | Boolean |
+      | 返回 | 返回 | Boolean |
+      | allowInboxSharing | allowInboxSharing | Boolean |
+      | allowExplicitSharing | allowExplicitSharing | Boolean |
+
+
+   * 通过AEM包部署索引。 您可以使用AEM [Archetype项目](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype) ，创建可部署的AEM包。 使用以下示例代码向AEM Archetype项目添加索引：
+
+   ```Java
+      .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
+      .property("locked", "locked").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("returned", "returned").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("allowInboxSharing", "allowInboxSharing").type(TYPENAME_BOOLEAN).propertyIndex()
+      .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
+   ```
+
+1. [创建属性索引并将其设置为true](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index)。
+
+1. 在CRX DE中配置索引或通过包部署后， [重新为存储库编制索引](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
+
+https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html
