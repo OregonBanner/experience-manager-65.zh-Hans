@@ -1,11 +1,11 @@
 ---
-title: 使用PDF栅格化器生成PDF文件的再现。
-description: 使用中的Adobe PDF Rasterizer库生成高质量的缩略图和再现 [!DNL Adobe Experience Manager]。
+title: 使用PDF栅格化器生成再现
+description: 使用中的Adobe PDF光栅器库生成高质量的缩略图和再现 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # 使用PDF光栅器 {#using-pdf-rasterizer}
 
-将大型、内容密集型PDF或AI文件上传到 [!DNL Adobe Experience Manager Assets]时，默认转换可能无法生成准确的输出。 与默认库的输出相比，Adobe的PDF光栅化器库可以生成更可靠、更准确的输出。 Adobe建议在以下情况下使用PDF光栅器库：
+将大型、内容密集型PDF或AI文件上传到 [!DNL Adobe Experience Manager Assets]时，默认转换可能无法生成准确的输出。 Adobe的PDF光栅化器库与默认库的输出相比，可以生成更可靠、更准确的输出。 Adobe建议在以下情况下使用PDF光栅器库：
 
 * 内容密集的繁重AI文件或PDF文件。
 * 默认不生成缩览图的AI文件和PDF文件。
 * 具有Pantone Matching System(PMS)颜色的AI文件。
 
-与开箱即用输出相比，使用PDF光栅器生成的缩略图和预览的质量更高，因此，可以跨设备提供一致的查看体验。 Adobe PDF Rasterizer库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
+与开箱即用输出相比，使用PDF光栅器生成的缩略图和预览的质量更高，因此，可以跨设备提供一致的查看体验。 Adobe PDF光栅器库不支持任何色彩空间转换。 它始终输出为RGB，而与源文件的色彩空间无关。
 
 1. 从“软件分发”在部署时安 [!DNL Adobe Experience Manager] 装PDF栅 [格器包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)。
 
@@ -48,19 +48,19 @@ ht-degree: 0%
 
    * MIME类型： `application/pdf` 或 `application/postscript`
    * 命令: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
-   * 添加缩略图大小： 319:319, 140:100, 48:48。 根据需要添加自定义缩略图配置。
+   * 添加缩略图大小：319:319, 140:100, 48:48。 根据需要添加自定义缩略图配置。
 
    该命令的命令行参 `PDFRasterizer` 数可以包括以下参数：
 
-   * `-d`: 标记可实现文本、矢量图稿和图像的平滑渲染。 创建更优质的图像。 但是，包含此参数会导致命令运行缓慢并增加图像大小。
+   * `-d`:标记可实现文本、矢量图稿和图像的平滑渲染。 创建更优质的图像。 但是，包含此参数会导致命令运行缓慢并增加图像大小。
 
-   * `-p`: 页码。 默认值是所有页面。 要表示所有页面，请使用 `*`。
+   * `-p`:页码。 默认值是所有页面。 要表示所有页面，请使用 `*`。
 
-   * `-s`: 最大图像尺寸（高度或宽度）。 此值将转换为每页的DPI。 如果页面大小不同，则每个页面都可能按不同数量缩放。 默认值为实际页面大小。
+   * `-s`:最大图像尺寸（高度或宽度）。 此值将转换为每页的DPI。 如果页面大小不同，则每个页面都可能按不同数量缩放。 默认值为实际页面大小。
 
-   * `-t`: 输出图像类型。 有效类型有JPEG、PNG、GIF和BMP。 默认值为JPEG。
+   * `-t`:输出图像类型。 有效类型有JPEG、PNG、GIF和BMP。 默认值为JPEG。
 
-   * `-i`: 输入PDF的路径。 它是一个必需参数。
+   * `-i`:输入PDF的路径。 它是一个必需参数。
 
    * `-h`: 帮助
 
@@ -90,15 +90,15 @@ ht-degree: 0%
 
    该命令的命令行参 `PDFRasterizer` 数可以包括以下参数：
 
-   * `-d`: 标记可实现文本、矢量图稿和图像的平滑渲染。 创建更优质的图像。 但是，包含此参数会导致命令运行缓慢并增加图像大小。
+   * `-d`:标记可实现文本、矢量图稿和图像的平滑渲染。 创建更优质的图像。 但是，包含此参数会导致命令运行缓慢并增加图像大小。
 
-   * `-p`: 页码。 默认值是所有页面。 `*` 表示所有页面。
+   * `-p`:页码。 默认值是所有页面。 `*` 表示所有页面。
 
-   * `-s`: 最大图像尺寸（高度或宽度）。 此值将转换为每页的DPI。 如果页面大小不同，则每个页面都可能按不同数量缩放。 默认值为实际页面大小。
+   * `-s`:最大图像尺寸（高度或宽度）。 此值将转换为每页的DPI。 如果页面大小不同，则每个页面都可能按不同数量缩放。 默认值为实际页面大小。
 
-   * `-t`: 输出图像类型。 有效类型有JPEG、PNG、GIF和BMP。 默认值为JPEG。
+   * `-t`:输出图像类型。 有效类型有JPEG、PNG、GIF和BMP。 默认值为JPEG。
 
-   * `-i`: 输入PDF的路径。 它是一个必需参数。
+   * `-i`:输入PDF的路径。 它是一个必需参数。
 
    * `-h`: 帮助
 
