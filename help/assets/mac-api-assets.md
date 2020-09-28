@@ -1,11 +1,11 @@
 ---
-title: '[!DNL资产]中的HTTP API [!DNL Adobe Experience Manager]。'
+title: '[!DNL资产] HTTP API。'
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: fb3fdf25718cd099ff36a206718aa4bf8a2b5068
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1672'
 ht-degree: 1%
 
 ---
