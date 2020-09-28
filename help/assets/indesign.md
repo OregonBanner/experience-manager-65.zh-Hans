@@ -1,9 +1,9 @@
 ---
-title: 集 [!DNL Adobe Experience Manager Assets] 成 [!DNL Adobe InDesign Server]
+title: 集 [!DNL Assets] 成 [!DNL InDesign Server]
 description: 了解如何 [!DNL Adobe Experience Manager Assets] 集成 [!DNL Adobe InDesign Server]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 4%
@@ -17,13 +17,13 @@ ht-degree: 4%
 
 * 用于分配特定处理任务的负载的代理。 代理是与代 [!DNL Experience Manager] 理工作者通信以实现特定任务的实例，而其 [!DNL Experience Manager] 他实例则用于传送结果。
 * 用于定义和管理特定任务的代理工作器。
-这些任务可以涵盖多种领域； 例如，使用 [!DNL InDesign Server] 处理文件。
+这些任务可以涵盖多种领域；例如，使用 [!DNL InDesign Server] 处理文件。
 
 将文件完全上 [!DNL Experience Manager Assets] 传到您使用代理 [!DNL Adobe InDesign] 创建的文件。 它使用代理工作器与进行通信， [!DNL Adobe InDesign Server]在该 [工作器中](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) ，运行脚本以提取元数据并生成各种再现 [!DNL Experience Manager Assets]。 代理工作器在云配置中启用与实 [!DNL InDesign Server] 例之 [!DNL Experience Manager] 间的双向通信。
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] 作为两个单独的产品提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html) 桌面应用程序，用于设计用于印刷和数字分发的页面布局。 [Adobe InDesign Server使您](https://www.adobe.com/products/indesignserver.html) 能够根据自己创建的内容有计划地创建自动文档 [!DNL InDesign]。 它作为服务运行，为其ExtendScript引 [擎提供](https://www.adobe.com/devnet/scripting.html) 接口。脚本是 [!DNL ExtendScript]在中编写的，类似于 [!DNL JavaScript]。 有关脚本的 [!DNL InDesign] 信息，请 [参阅https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
+>[!DNL Adobe InDesign] 作为两个单独的产品提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html) 桌面应用程序，用于设计用于印刷和数字分发的页面布局。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) 使您能够根据您所用的创作有计划地创建自动文档 [!DNL InDesign]。 它作为服务运行，提供其 [ExtendScript](https://www.adobe.com/devnet/scripting.html) 引擎的接口。脚本 [!DNL ExtendScript]在中编写，类似于 [!DNL JavaScript]。 有关脚本的 [!DNL InDesign] 信息，请 [参阅https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
 
 ## 提取的工作方式 {#how-the-extraction-works}
 
@@ -47,7 +47,7 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   >IDML是一种基于XML的格式，可呈现文件的所有 [!DNL InDesign] 内容。 它使用ZIP压缩存储为压 [缩包](https://www.techterms.com/definition/zip) 。 有关详细信息，请 [参阅InDesign交换格式INX和IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
+   >IDML是一种基于XML的格式，可呈现文件的所有 [!DNL InDesign] 内容。 它使用ZIP压缩存储为压 [缩包](https://www.techterms.com/definition/zip) 。 有关详细信息，请参 [阅InDesign交换格式INX和IDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)。
 
    >[!CAUTION]
    >
@@ -66,7 +66,7 @@ ht-degree: 4%
 1. [安装InDesign Server](#installing-the-indesign-server)。
 1. 根据需要， [配置Experience Manager资产工作流](#configuring-the-aem-assets-workflow)。
 仅当默认值不适用于您的实例时，才需要这样做。
-1. 为InDesign [Server配置代理工作器](#configuring-the-proxy-worker-for-indesign-server)。
+1. 为InDesign Server [配置代理工作器](#configuring-the-proxy-worker-for-indesign-server)。
 
 ### 安装 [!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -84,7 +84,7 @@ ht-degree: 4%
 
    >[!NOTE]
    >
-   >如果要将输出消息保存到文件，则使用重定向； 例如，在Windows下：
+   >如果要将输出消息保存到文件，则使用重定向；例如，在Windows下：
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
 ### 配置工作 [!DNL Experience Manager Assets] 流 {#configuring-the-aem-assets-workflow}
@@ -94,7 +94,7 @@ ht-degree: 4%
 * [媒体提取](#media-extraction)
 * [页面提取](#page-extraction)
 
-此工作流设置了默认值，这些默认值可以适应您在各种创作实例上的设置(这是一个标准工作流，因此在编辑工作流下可 [以获取更多信息](/help/sites-developing/workflows-models.md#configuring-a-workflow-step))。 如果您使用默认值（包括SOAP端口），则不需要任何配置。
+此工作流设置了默认值，这些默认值可以适应您在各种创作实例上的设置(这是一个标准工作流，因此在编辑工作流下可 [以获得更多信息](/help/sites-developing/workflows-models.md#configuring-a-workflow-step))。 如果您使用默认值（包括SOAP端口），则不需要任何配置。
 
 设置后，将文 [!DNL InDesign] 件上传 [!DNL Experience Manager Assets] 到（通过任何常用方法）会触发工作流以处理资产和准备各种演绎版。 将INDD文件上传到，以确 [!DNL Experience Manager Assets] 认您看到IDS创建的不同演绎版 `<*your_asset*>.indd/Renditions`
 
@@ -108,11 +108,11 @@ ht-degree: 4%
 
 媒体提取参数和脚本路径
 
-* **ExtendScript库**: 这是一个简单的http get/post方法库，其他脚本需要它。
+* **ExtendScript图书馆**:这是一个简单的http get/post方法库，其他脚本需要它。
 
-* **扩展脚本**: 您可以在此处指定不同的脚本组合。 如果希望在上执行您自己的脚本， [!DNL InDesign Server]请将脚本保存在 `/apps/settings/dam/indesign/scripts`。
+* **扩展脚本**:您可以在此处指定不同的脚本组合。 如果希望在上执行您自己的脚本， [!DNL InDesign Server]请将脚本保存在 `/apps/settings/dam/indesign/scripts`。
 
-有关脚本的 [!DNL Adobe InDesign] 信息，请参 [阅InDesign开发人员文档](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
+有关脚本的信 [!DNL Adobe InDesign] 息，请参阅 [InDesign开发人员文档](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
 
 >[!CAUTION]
 >
@@ -130,19 +130,19 @@ ht-degree: 4%
 
 ![chlimage_1-96](assets/chlimage_1-289.png)
 
-* **页面提取处理程序**: 从弹出列表中，选择要使用的处理函数。 提取处理程序对由相关 `RenditionPicker` 选择的特定呈现进行操作（请参阅 `ExtractionHandler` API）。
+* **页面提取处理程序**:从弹出列表中，选择要使用的处理函数。 提取处理程序对由相关 `RenditionPicker` 选择的特定呈现进行操作（请参阅 `ExtractionHandler` API）。
 In a standard [!DNL Experience Manager] installation the following is available:
-   * IDML导出提取句柄： 对在MediaExtract `IDML` 步骤中生成的再现进行操作。
+   * IDML导出提取句柄：对在MediaExtract `IDML` 步骤中生成的再现进行操作。
 
-* **页面名称**: 指定要分配给结果页面的名称。 如果留空，则名称为“page”（如果“page”已存在，则为衍生项）。
+* **页面名称**:指定要分配给结果页面的名称。 如果留空，则名称为“page”（如果“page”已存在，则为衍生项）。
 
-* **页面标题**: 指定要分配给结果页面的标题。
+* **页面标题**:指定要分配给结果页面的标题。
 
-* **页面根路径**: 生成页面的根位置的路径。 如果留空，则将使用包含资产演绎版的节点。
+* **页面根路径**:生成页面的根位置的路径。 如果留空，则将使用包含资产演绎版的节点。
 
-* **页面模板**: 生成结果页面时使用的模板。
+* **页面模板**:生成结果页面时使用的模板。
 
-* **页面设计**: 生成结果页面时要使用的页面设计。
+* **页面设计**:生成结果页面时要使用的页面设计。
 
 ### 为配置代理工作器 [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}
 
@@ -150,7 +150,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 >
 >该工作器驻留在代理实例上。
 
-1. 在“工具”控制台中，展 **[!UICONTROL 开左窗格中]** 的“Cloud Service配置”。 然后展开 **[!UICONTROL 云代理配置]**。
+1. 在“工具”控制台中，展 **[!UICONTROL 开左窗格中]** 的“Cloud Services配置”。 然后展开 **[!UICONTROL 云代理配置]**。
 
 1. 双击 **[!UICONTROL IDS worker]** 以打开进行配置。
 
@@ -181,7 +181,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
 
 要配置并行IDS作业数：
 
-1. 打开 **[!UICONTROL Felix]** Console的“配置”选项卡； 例如： `https://[aem_server]:[port]/system/console/configMgr`.
+1. 打开 **[!UICONTROL Felix]** Console的“配置”选项卡；例如： `https://[aem_server]:[port]/system/console/configMgr`.
 
 1. 在下选择IDS处理队列 `Apache Sling Job Queue Configuration`。
 
@@ -191,7 +191,7 @@ In a standard [!DNL Experience Manager] installation the following is available:
    * **最大并行作业** - `<*x*>` （如上所计算）
 
 1. 保存这些更改。
-1. 要启用Adobe CS6和更高版本的多会话支持，请选中配 `enable.multisession.name` 置下的复选 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 框。
+1. 要启用AdobeCS6和更高版本的多会话支持，请选中配 `enable.multisession.name` 置下的复选 `com.day.cq.dam.ids.impl.IDSJobProcessor.name` 框。
 1. 通过向 [IDS Worker `x` 配置添加SOAP端点，创建IDS Worker池](#configuring-the-proxy-worker-for-indesign-server)。
 
    如果有多台计算机正在运行， [!DNL InDesign Server]请为每台计算机添加SOAP端点（每台计算机的处理器数-1）。
