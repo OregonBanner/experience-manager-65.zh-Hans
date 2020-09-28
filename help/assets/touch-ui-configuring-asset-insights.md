@@ -1,11 +1,11 @@
 ---
-title: 配置资产分析以获取数字资产使用情况分析。
+title: 配置资产分析以获取分析。
 description: 在中配置资产分析 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b59f7471ab9f3c5e6eb3365122262b592c8e6244
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '228'
 ht-degree: 7%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 # 配置资产分析 {#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] 从第三方网站使用的数字资产中获取使用数据 [!DNL Adobe Analytics]。 要使资产分析能够检索此数据并生成洞察，请首先配置该功能以与AdobeAnalytics集成。
+[!DNL Adobe Experience Manager Assets] 从第三方网站使用的数字资产中获取使用数据 [!DNL Adobe Analytics]。 要使资产分析能够检索此数据并生成洞察，请首先配置该功能以与Adobe Analytics集成。
 
 >[!NOTE]
 >
@@ -26,9 +26,9 @@ ht-degree: 7%
 1. 单击&#x200B;**[!UICONTROL 分析配置]**&#x200B;卡。
 1. 在向导中，选择一个数据中心并提供您的凭据，包括您的组织名称、用户名和共享机密。
 
-   ![配置AdobeAnalytics以获得Experience Manager中的资产洞察](assets/insights_config2.png)
+   ![配置Adobe AnalyticsExperience Manager的资产洞察](assets/insights_config2.png)
 
-   *图： 在中[!DNL Adobe Analytics]配置资产分[!DNL Experience Manager]析。*
+   *图：在中[!DNL Adobe Analytics]配置资产分[!DNL Experience Manager]析。*
 
 1. 单击“ **[!UICONTROL 身份验证]**”。
 1. 验证 [!DNL Experience Manager] 您的凭据后，从报 **[!UICONTROL 表包列表中]** ，选择您希望 [!DNL Adobe Analytics] 资产分析从中获取数据的报表包。 单击&#x200B;**[!UICONTROL 添加]**。
