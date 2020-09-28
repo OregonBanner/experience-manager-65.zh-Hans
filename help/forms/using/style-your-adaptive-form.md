@@ -8,9 +8,9 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
+source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2058'
 ht-degree: 7%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 7%
 
 ## 第3步：为自适应表单创建自定义主题 {#step-create-a-custom-theme-for-your-adaptive-form}
 
-您可以使用 [主题编辑器](/help/forms/using/themes.md) ，创建自定义主题。 主题编辑器是功能强大的WYSIWYG编辑器。 将CSS应用于自适应表单的各个组件是一种可视方法。 它为自适应表单的组件和面板提供了更精细的控制。
+您可以使用主 [题编辑器](/help/forms/using/themes.md) ，创建自定义主题。 主题编辑器是功能强大的WYSIWYG编辑器。 将CSS应用于自适应表单的各个组件是一种可视方法。 它为自适应表单的组件和面板提供了更精细的控制。
 
 主题是独立的实体，如自适应表单。 它包含自适应表单的组件和面板的样式(CSS)。 样式包括CSS属性，如背景颜色、状态颜色、透明度、对齐方式和大小。 应用主题时，指定的样式将应用于自适应表单的相应组件。
 
@@ -442,18 +442,18 @@ ht-degree: 7%
 
 您可以使用各种字体来设计自适应表单。 在查看自适应表单的所有设备可能没有用于设计自适应表单的字体。 您可以使用Web字体服务将所需的字体交付到目标设备。
 
-[!DNL Adobe Typekit] 是web字体服务。 您可以配置和使用带有自适应表单的服务。 要在自适应 [!DNL Adobe Typekit] 表单中使用，请执行以下操作：
+[!DNL Adobe Fonts] 是web字体服务。 您可以配置和使用带有自适应表单的服务。 要在自适应 [!DNL Adobe Fonts] 表单中使用，请执行以下操作：
 
 >[!NOTE]
 >
 >![typekit-to-adobe-fonts现在称为](assets/typekit-to-adobe-fonts.png) “Adobe Fonts [!DNL Typekit] ”，随Creative Cloud和其他订阅提供。 [了解更多](https://fonts.adobe.com/).
 
-1. 创建 [Adobe Typekit](https://typekit.com/) 帐户、创建工具包、将字体MyriadPro添加到工具包、发布工具包并获取工具包ID。 需要在自适应 [!DNL Adobe Typekit] 表单中使用字体（Web字体）。
-1. 在AEM服务 [!DNL Forms] 器中，导航 ![到adobeexperiencemanager](assets/adobeexperiencemanager.png) “Adobe Experience Manager” **[!UICONTROL > “Deployment工具”]** > “Cloud Services” ****![](assets/hammer.png)********> “” > “”。 在Cloud Services页面上，导航到 **[!UICONTROL 第三方服务]** > **[!UICONTROL Typekit]**，然后单击Typekit **[!UICONTROL 下的]** “立即 配置”。 如果某个配置已可用，请单击+按钮以创建新实例。
+1. 创建 [Adobe Fonts](https://typekit.com/) 帐户、创建工具包、将字体MyriadPro添加到工具包、发布工具包并获取工具包ID。 需要在自适应 [!DNL Adobe Fonts] 表单中使用（Web字体）。
+1. 在AEM服务 [!DNL Forms] 器中，导航到 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) Adobe Experience Manager **[!UICONTROL > Adobeemer]** Tools **[!UICONTROL >]** ![](assets/hammer.png)**** Adobe Fonts。 现在，打开一个配置文件夹。 如果某个配置已可用，请单击“ **[!UICONTROL 创建]** ”按钮以创建新实例。
 
    在创建配置对话框中，为配 **置指** 定标题，然后单 **[!UICONTROL 击创建]**。 您将被重定向到配置页面。 在显示的 [!UICONTROL 编辑组件] 对话框中 **，提供您的工具包** ID **[!UICONTROL ，然后单]**&#x200B;击确定。
 
-1. 配置主题以使用 [!DNL TypeKit] 配置。 在创作实例中，在主 **[!UICONTROL 题编辑器中]** ，打开全局主题。 在主题编辑器中，导航到“主 **[!UICONTROL 题选项]**![”主题选项](assets/theme-options.png) >“ **[!UICONTROL 配置]**”。 在“ **[!UICONTROL Typekit配置]** ”字段中，选择工具包，然后单击 **[!UICONTROL 保存]**。
+1. 配置主题以使用 [!DNL Adobe Fonts] 配置。 在创作实例中，在主 **[!UICONTROL 题编辑器中]** ，打开全局主题。 在主题编辑器中，导航到“主 **[!UICONTROL 题选项]**![”主题选项](assets/theme-options.png) >“ **[!UICONTROL 配置]**”。 在“ **[!UICONTROL Adobe Fonts配置]** ”字段中，选择工具包，然后单击 **[!UICONTROL 保存]**。
 
-   添加到Typekit的字 [!UICONTROL 体] ，可在所有组件的 **[!UICONTROL Text]** accordion中进行选择。
+   添加到Adobe Fonts的 **[!UICONTROL 字体]** ，可在所有组件的 **[!UICONTROL Text]** accordion中进行选择。
 
