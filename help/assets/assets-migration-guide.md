@@ -1,11 +1,11 @@
 ---
-title: 批量迁 [!DNL Adobe Experience Manager Assets] 移资产。
+title: 批量迁移资产
 description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版并将其激活以发布实例。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1798'
 ht-degree: 8%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 8%
 
 在将资产引入系统时，性能和稳定性是重要考虑事项。 由于要将大量数据加载到系统中，因此您需要确保系统能够正常运行，并尽可能减少所需的时间，避免系统过载，这会导致系统崩溃，特别是在已在生产中的系统中。
 
-将资产加载到系统中有两种方法： 使用HTTP的基于推送的方法，或使用JCR API的基于拖曳的方法。
+将资产加载到系统中有两种方法：使用HTTP的基于推送的方法，或使用JCR API的基于拖曳的方法。
 
 #### 通过HTTP发送 {#pushing-through-http}
 
@@ -75,7 +75,7 @@ Adobe的Managed Services团队使用一种名为Glutton的工具将数据加载�
 
 ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) ，从文件系统中提取资产，从CSV文件中提取资产元数据以进行资产导入。 Experience Manager资产管理器API用于将资产导入系统并应用配置的元数据属性。 理想情况下，资产通过网络文件装载或通过外部驱动器装载到服务器上。
 
-由于资产无需通过网络传输，因此总体性能得到了显着改善，这种方法通常被认为是将资产加载到存储库中的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以通过一个步骤导入所有资产和元数据，而不是通过另一个工具创建第二个步骤来应用元数据。
+由于资产无需通过网络传输，因此总体性能得到显着改善，而且通常认为此方法是将资产加载到存储库中的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以通过一个步骤导入所有资产和元数据，而不是通过另一个工具创建第二个步骤来应用元数据。
 
 ### 处理演绎版 {#processing-renditions}
 
@@ -88,7 +88,7 @@ ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io
 
 ### 激活资产 {#activating-assets}
 
-对于具有发布层的部署，您需要将资产激活到发布场。 虽然Adobe建议运行多个发布实例，但最有效的方法是将所有资源复制到单个发布实例，然后克隆该实例。 在激活大量资产时，在触发树状激活后，您可能需要进行干预。 原因如下： 触发激活时，项目会添加到Sling作业/事件序列。 当此队列的大小开始超过约40,000个项目时，处理速度会显着降低。 当此队列的大小超过100,000项后，系统稳定性开始会受到影响。
+对于具有发布层的部署，您需要将资产激活到发布场。 虽然Adobe建议运行多个发布实例，但最有效的方法是将所有资源复制到单个发布实例，然后克隆该实例。 在激活大量资产时，在触发树状激活后，您可能需要进行干预。 原因如下：触发激活时，项目会添加到Sling作业/事件序列。 当此队列的大小开始超过约40,000个项目时，处理速度会显着降低。 当此队列的大小超过100,000项后，系统稳定性开始会受到影响。
 
 要解决此问题，您可以使用快速操 [作管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 来管理资产复制。 这样，无需使用Sling队列，即可降低开销，同时还可以限制工作负载以防止服务器过载。 该功能的文档页面上显示了使用FAM管理复制的示例。
 
@@ -118,21 +118,21 @@ ACS [AEM工具CSV资产导入程序](https://adobe-consulting-services.github.io
 
 ## 跨部署 [!DNL Experience Manager] 迁移 {#migrating-between-aem-instances}
 
-虽然不是那么常见，但有时您需要将大量数据从一个部署迁移到另 [!DNL Experience Manager] 一个部署； 例如，当您执行升级 [!DNL Experience Manager] 、升级硬件或迁移到新数据中心时，例如AMS迁移。
+虽然这种情况并不常见，但有时您需要将大量数据从一个部署迁移到另 [!DNL Experience Manager] 一个部署；例如，当您执行升级 [!DNL Experience Manager] 、升级硬件或迁移到新数据中心时，例如AMS迁移。
 
 在这种情况下，您的资产已填充元数据，并且已生成演绎版。 您只需将精力集中在将资产从一个实例移动到另一个实例上。 在部署之 [!DNL Experience Manager] 间迁移时，请执行以下步骤：
 
-1. 禁用工作流: 由于您正在将演绎版与我们的资产一起迁移，因此您希望禁用DAM更新资产工作流 [!UICONTROL 的工作流启动] 器。
+1. 禁用工作流:由于您正在将演绎版与我们的资产一起迁移，因此您希望禁用DAM更新资产工作流 [!UICONTROL 的工作流启动] 器。
 
-1. 迁移标记： 由于已在源部署中加载了标 [!DNL Experience Manager] 记，因此可以在内容包中构建标记并将该包安装在目标实例上。
+1. 迁移标记：由于已在源部署中加载了标 [!DNL Experience Manager] 记，因此可以在内容包中构建标记并将该包安装在目标实例上。
 
-1. 迁移资产： 建议使用两种工具将资产从一个部署移 [!DNL Experience Manager] 动到另一个：
+1. 迁移资产：建议使用两种工具将资产从一个部署移 [!DNL Experience Manager] 动到另一个：
 
    * **Vault Remote** Copy或vlt rcp允许您通过网络使用vlt。 您可以指定源目录和目标目录，vlt从一个实例下载所有存储库数据并将其加载到另一个实例。 Vlt rcp在https://jackrabbit.apache.org/filevault/rcp.html上有 [文档](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit** 是Time Warner Cable为实施而开发的一个开源内容同步 [!DNL Experience Manager] 工具。 由于它使用连续的数据流，与vlt rcp相比，它具有更低的延迟，并声称速度比vlt rcp快2到10倍。 Grabbit还支持仅同步增量内容，这允许它在完成初始迁移通过后同步更改。
 
-1. 激活资产： 按照说明激活 [为初始迁移](#activating-assets) 而记录的资产 [!DNL Experience Manager]。
+1. 激活资产：按照说明激活 [为初始迁移](#activating-assets) 而记录的资产 [!DNL Experience Manager]。
 
-1. 克隆发布： 与新迁移一样，加载单个发布实例并克隆它比激活两个节点上的内容更有效。 请参 [阅克隆发布。](#cloning-publish)
+1. 克隆发布：与新迁移一样，加载单个发布实例并克隆它比激活两个节点上的内容更有效。 请参 [阅克隆发布。](#cloning-publish)
 
-1. 启用工作流: 完成迁移后，请重新启用DAM更新资产工 [!UICONTROL 作流的启动程序] ，以支持再现生成和元数据提取，以便进行日常系统使用。
+1. 启用工作流:完成迁移后，请重新启用DAM更新资产工 [!UICONTROL 作流的启动程序] ，以支持再现生成和元数据提取，以便持续使用日常系统。
