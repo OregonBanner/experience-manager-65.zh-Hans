@@ -1,11 +1,11 @@
 ---
-title: 使用中的媒体处理程序和工作流处理资源 [!DNL Adobe Experience Manager]。
+title: 使用媒体处理程序和工作流处理资源
 description: 了解媒体处理程序以及如何使用工作流对您的数字资产执行任务。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 39bbb1d663bb54ef425dfeb5e0fc10ea37eb5708
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2108'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 媒体处理程序是通常与工作流结合使用的服务。
 
-[!DNL Experience Manager] 具有一些处理资产的默认工作流。 要视图这些模型，请打开工作流控制台，然后单 **[!UICONTROL 击模型]** 选项卡： 与之开始的工作流 [!DNL Assets] 标题是特定于资产的标题。
+[!DNL Experience Manager] 具有一些处理资产的默认工作流。 要视图这些模型，请打开工作流控制台，然后单 **[!UICONTROL 击模型]** 选项卡：与之开始的工作流 [!DNL Assets] 标题是特定于资产的标题。
 
 现有工作流可以扩展，也可以创建新客户，以根据特定要求处理资产。
 
@@ -76,7 +76,7 @@ ht-degree: 3%
 
 1. In your browser, navigate to `https://<host>:<port>/system/console/components`.
 1. 单击 **[!UICONTROL 媒体处]** 理程序名称旁边的“禁用”。 For example: `com.day.cq.dam.handler.standard.mp3.Mp3Handler`.
-1. 刷新页面： 媒体处理程序旁边会显示一个图标，指示它已禁用。
+1. 刷新页面：媒体处理程序旁边会显示一个图标，指示它已禁用。
 1. 要启用媒体处理程序，请单 **[!UICONTROL 击]** 媒体处理程序名称旁的“启用”。
 
 ### 创建新的媒体处理程序 {#creating-a-new-media-handler}
@@ -85,15 +85,15 @@ ht-degree: 3%
 
 #### 重要类和接口 {#important-classes-and-interfaces}
 
-开始实现的最佳方法是继承所提供的抽象实现，该实现能够处理大多数事情并提供合理的默认行为： 课 `com.day.cq.dam.core.AbstractAssetHandler` 程。
+开始实现的最佳方法是继承所提供的抽象实现，该实现能够处理大多数事情并提供合理的默认行为：课 `com.day.cq.dam.core.AbstractAssetHandler` 程。
 
 该类已提供抽象服务描述符。 因此，如果您继承了此类并使用maven-sling-plugin，请确保将inherit标志设置为 `true`。
 
 实现以下方法：
 
-* `extractMetadata()`: 提取所有可用的元数据。
-* `getThumbnailImage()`: 在传递的资产中创建缩略图。
-* `getMimeTypes()`: 返回资产MIME类型。
+* `extractMetadata()`:提取所有可用的元数据。
+* `getThumbnailImage()`:在传递的资产中创建缩略图。
+* `getMimeTypes()`:返回资产MIME类型。
 
 以下是一个示例模板：
 
@@ -103,30 +103,30 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 接口和类包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 接口： 此接口描述添加对特定MIME类型的支持的服务。 添加新MIME类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
-* `com.day.cq.dam.core.AbstractAssetHandler` 类： 此类用作所有其他资产处理程序实现的基础，并提供常用功能。
+* `com.day.cq.dam.api.handler.AssetHandler` 接口：此接口描述添加对特定MIME类型的支持的服务。 添加新MIME类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
+* `com.day.cq.dam.core.AbstractAssetHandler` 类：此类用作所有其他资产处理程序实现的基础，并提供常用功能。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` class:
    * 此类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能以及常用功能。
-   * 开始实现的最佳方法是继承所提供的抽象实现，该实现能够处理大多数事情并提供合理的默认行为： com.day.cq.dam.core.AbstractAssetHandler类。
+   * 开始实现的最佳方法是继承所提供的抽象实现，该实现能够处理大多数事情并提供合理的默认行为：com.day.cq.dam.core.AbstractAssetHandler类。
    * 该类已提供抽象服务描述符。 因此，如果您继承了此类并使用maven-sling-plugin，请确保将inherit标志设置为true。
 
 需要实现以下方法：
 
-* `extractMetadata()`: 此方法会提取所有可用的元数据。
-* `getThumbnailImage()`: 此方法会从传递的资产中创建缩略图。
-* `getMimeTypes()`: 此方法返回资产MIME类型。
+* `extractMetadata()`:此方法会提取所有可用的元数据。
+* `getThumbnailImage()`:此方法会从传递的资产中创建缩略图。
+* `getMimeTypes()`:此方法返回资产MIME类型。
 
 以下是一个示例模板：
 
-打包my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot;true&quot; &amp;ast; @scr.service &amp;ast;/公共类MyMediaHandler扩展com.day.cq.dam.core.AbstractAssetHandler { //实现相关部分}
+打包my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;true&quot; &amp;ast;@scr.service &amp;ast;/公共类MyMediaHandler扩展com.day.cq.dam.core.AbstractAssetHandler { //实现相关部分}
 
 接口和类包括：
 
-* `com.day.cq.dam.api.handler.AssetHandler` 接口： 此接口描述添加对特定MIME类型的支持的服务。 添加新MIME类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
-* `com.day.cq.dam.core.AbstractAssetHandler` 类： 此类用作所有其他资产处理程序实现的基础，并提供常用功能。
-* `com.day.cq.dam.core.AbstractSubAssetHandler` 类： 此类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能以及常用功能。
+* `com.day.cq.dam.api.handler.AssetHandler` 接口：此接口描述添加对特定MIME类型的支持的服务。 添加新MIME类型需要实现此接口。 该界面包含用于导入和导出特定文档、创建缩略图和提取元数据的方法。
+* `com.day.cq.dam.core.AbstractAssetHandler` 类：此类用作所有其他资产处理程序实现的基础，并提供常用功能。
+* `com.day.cq.dam.core.AbstractSubAssetHandler` 类：此类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能以及常用功能。
 
-#### 示例： 创建特定文本处理程序 {#example-create-a-specific-text-handler}
+#### 示例：创建特定文本处理程序 {#example-create-a-specific-text-handler}
 
 在本节中，您将创建一个特定的文本处理程序，它生成带有水印的缩略图。
 
@@ -144,9 +144,9 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
    1. 定义项 [!DNL Maven] 目：
 
       * 组ID: `com.day.cq5.myhandler`.
-      * 对象ID: myBundle。
-      * 名称： 我 [!DNL Experience Manager] 的包。
-      * 描述： 这是我的 [!DNL Experience Manager] 包。
+      * 对象ID:myBundle。
+      * 名称：我 [!DNL Experience Manager] 的包。
+      * 描述：这是我的 [!DNL Experience Manager] 包。
    1. 单击 **[!UICONTROL 完成]**。
 
 
@@ -471,7 +471,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 安装 [!DNL ImageMagick] 在承载服务器的磁 [!DNL Experience Manager] 盘上：
 
-1. 安装 [!DNL ImageMagick]: 请参 [阅ImageMagick文档](https://www.imagemagick.org/script/download.php)。
+1. 安装 [!DNL ImageMagick]:请参 [阅ImageMagick文档](https://www.imagemagick.org/script/download.php)。
 1. 设置工具，以便在命令行上运行转换。
 1. 要查看该工具是否安装正确，请在命令行 `convert -h` 上运行以下命令。
 
@@ -502,14 +502,14 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 | 参数格式 | 描述 |
 |---|---|
 | mime:&lt;mime类型> | 可选参数。 如果资产的MIME类型与其中一个参数相同，则应用该过程。 <br>可以定义多个MIME类型。 |
-| tn:&lt;width>:&lt;height> | 可选参数。 该过程会创建缩略图，其尺寸在参数中定义。 <br>可以定义多个缩略图。 |
-| cmd: &lt;命令> | 定义执行的命令。 语法取决于命令行工具。 只能定义一个命令。 <br>以下变量可用于创建命令：<br>`${filename}`: 输入文件的名称，例如original.jpg <br> `${file}`: 输入文件的完整路径名，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`: 输入文件的目录，例如 `/tmp/cqdam0816.tmp`<br>`${basename}`: 不带扩展名的输入文件的名称，例如原始文 <br>`${extension}`件： 扩展名，例如JPG。 |
+| tn:&lt;width>:&lt;height> | 可选参数。 该过程创建一个缩略图，其尺寸在参数中定义。 <br>可以定义多个缩略图。 |
+| cmd:&lt;命令> | 定义执行的命令。 语法取决于命令行工具。 只能定义一个命令。 <br>以下变量可用于创建命令：<br>`${filename}`:输入文件的名称，例如original.jpg <br> `${file}`:输入文件的完整路径名，例如 `/tmp/cqdam0816.tmp/original.jpg` <br> `${directory}`:输入文件的目录，例如 `/tmp/cqdam0816.tmp`<br>`${basename}`:不带扩展名的输入文件的名称，例如原始文 <br>`${extension}`件：扩展名，例如JPG。 |
 
 例如，如果安 [!DNL ImageMagick] 装在承载服务器的磁盘 [!DNL Experience Manager] 上，并且您使用CommandLineProcess作为实现创建了进程步 [!UICONTROL 骤，以及以下值作] 为进程参数 :
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-然后，当工作流运行时，该步骤仅应用于具有或 `image/gif` 作为 `mime:image/tiff` 原始图像 `mime-types`的资产，它会创建翻转后的原始图像，将其转换为JPG并创建具有尺寸的三个缩略图： 140x100、48x48和10x250。
+然后，当工作流运行时，该步骤仅应用于具有或 `image/gif` 作为 `mime:image/tiff` 原始图像 `mime-types`的资产，它会创建翻转后的原始图像，将其转换为JPG并创建具有尺寸的三个缩略图：140x100、48x48和10x250。
 
 使用以下 [!UICONTROL 流程参数] ，创建三个标准缩略图 [!DNL ImageMagick]:
 
