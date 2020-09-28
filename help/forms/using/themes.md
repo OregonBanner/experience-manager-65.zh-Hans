@@ -10,9 +10,9 @@ content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
 workflow-type: tm+mt
-source-wordcount: '6067'
+source-wordcount: '6062'
 ht-degree: 1%
 
 ---
@@ -348,7 +348,7 @@ AEM Forms的主题支持在表单和交互式通信中为面板布局中的元�
 * **切换侧面板**![切换侧面板](assets/toggle-side-panel.png):用于显示或隐藏提要栏。
 * **主题选项**![主题选项](assets/theme-options.png):提供三个选项
 
-   * 配置：提供选项以选择预览表单或交互式通信、基clientlib和typekit配置。
+   * 配置：提供选项以选择预览表单或交互式通信、基clientlib和Adobe Fonts配置。
    * 视图主题CSS:为所选主题生成CSS。
    * 管理样式：提供用于管理文本和图像样式的选项
    * 帮助：运行主题编辑器的图像导览。
@@ -485,23 +485,23 @@ AEM Forms的主题支持在表单和交互式通信中为面板布局中的元�
 
 ### 在主题中使用Web字体 {#using-web-fonts-in-a-theme}
 
-您现在可以通过自适应表单或交互式通信使用Web服务中提供的字体。 开箱即用的Typekit [是Adobe](https://typekit.com/)的Web字体服务，可用作配置。 要使用Typekit，请在其中创建工具包和字体，并从Typekit网站获 [取工具包ID](https://typekit.com/)。
+您现在可以通过自适应表单或交互式通信使用Web服务中提供的字体。 开箱即用， [Adobe Fonts](https://fonts.adobe.com/)(Adobe的Web字体服务)可作为配置。 要使用Adobe Fonts，请创建工具包，在它中添加字体，并从Adobe Fonts获得工具包 [ID](https://fonts.adobe.com/)。
 
-执行以下步骤在AEM中配置Typekit:
+执行以下步骤在AEM中配置Adobe Fonts:
 
 1. 在创作实例中，单击 ![](assets/adobeexperiencemanager.png)adobeexperiencemanagerAdobeExperience Manager> ![工具锤](assets/hammer.png) >部署>Cloud Services。
-1. 在Cloud Services **页** ，导航到第 **三方服务** > Typekit **，然后** 单击Typekit下 **的“立即配** 置”。 如果某个配置已可用，请单 **击+** 按钮以创建新实例。
+1. 在Cloud Services **页** ，导航到并打开 **Adobe Fonts** 选项。 打开配置文件夹，然后单击 **创建**。
 1. 在“创 **建配置** ”对话框中，指定配置的标题，然后单击 **创建**。
 
    您将被重定向到配置页面。
 
 1. 在出现的编辑组件对话框中，提供您的工具包ID并单击 **确定**。
 
-请执行以下步骤来配置主题以使用TypeKit配置：
+请执行以下步骤来配置主题以使用Adobe Fonts配置：
 
 1. 在创作实例中，在主题编辑器中打开一个主题。
 1. 在主题编辑器中，导航到“主 **题选项**![”主题选项](assets/theme-options.png) >“ **配置**”。
-1. 在“ **Typekit配置** ”字段中，选择一个工具包，然后单击 **保存**。
+1. 在“ **Adobe Fonts配置** ”字段中，选择一个工具包，然后单击 **保存**。
 
    现在，您可以看到这些字体添加到主题的font-family属性中。
 
