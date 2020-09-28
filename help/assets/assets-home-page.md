@@ -1,11 +1,11 @@
 ---
-title: '[!DNLAdobe Experience Manager资产]主页体验。'
+title: '[!DNL资产]主页体验'
 description: 个性 [!DNL Experience Manager Assets] 化主页以获得丰富的欢迎屏幕体验，包括有关资产的近期活动的快照。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
@@ -65,11 +65,11 @@ ht-degree: 1%
 * 最近
 * 发现
 
-**活动**: 在此部分中，我的 **[!UICONTROL 活动]** 构件显示由登录用户对资产（包括无演绎版的资产）执行的最近活动，例如资产上传、下载、资产创建、编辑、注释、批注和共享。
+**活动**:在此部分中，我的 **[!UICONTROL 活动]** 构件显示由登录用户对资产（包括无演绎版的资产）执行的最近活动，例如资产上传、下载、资产创建、编辑、注释、批注和共享。
 
-**最近**: 此部 **[!UICONTROL 分下的]** “最近查看的内容”构件显示登录用户最近访问的实体，包括文件夹、集合和项目。
+**最近**:此部 **[!UICONTROL 分下的]** “最近查看的内容”构件显示登录用户最近访问的实体，包括文件夹、集合和项目。
 
-**发现**: 此部 **[!UICONTROL 分下的]** “新建”构件显示最近上传到部署的资产和 [!DNL Assets] 演绎版。
+**发现**:此部 **[!UICONTROL 分下的]** “新建”构件显示最近上传到部署的资产和 [!DNL Assets] 演绎版。
 
 要启用清除用户活动数据，请 **[!UICONTROL 从Configuration Manager启用DAM]** 事件清除服务。 启用此服务后，系统将删除超过指定数量的登录用户活动。
 
