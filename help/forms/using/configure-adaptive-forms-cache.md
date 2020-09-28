@@ -10,7 +10,7 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
+source-git-commit: d5a649337acdc01c58ecc473e7c919e06cbd0188
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 0%
@@ -127,7 +127,8 @@ ht-degree: 0%
       # added for AEM forms specific use cases.
       /0003 { /glob "dataRef" /type "allow" }
       }
-   
+   ```
+
 您的AEM环境配置为缓存自适应表单。 它缓存所有类型的自适应表单。 如果在传送缓存的页面之前需要检查页面的用户访问权限，请参阅缓 [存安全内容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
 
 ## 疑难解答 {#troubleshooting}
