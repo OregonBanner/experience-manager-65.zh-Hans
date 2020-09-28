@@ -1,11 +1,11 @@
 ---
-title: 中的数字版权管理 [!DNL Adobe Experience Manager Assets]。
+title: 资产Digital Rights Management
 description: 了解如何在中管理授权资产的资产到期状态和信息 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 29cf202b2522b4e624960e8b911f77ec7f291e24
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1423'
 ht-degree: 6%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 6%
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*图： 在卡视图中，卡上的标记指示已过期的资产。*
+*图：在卡视图中，卡上的标记指示已过期的资产。*
 
 ![expired_flag_列表](assets/expired_flag_list.png)
 
-*图： 在列表视图中，“[!UICONTROL 状态]”列显示[!UICONTROL “过期]”横幅。*
+*图：在列表视图中，“[!UICONTROL 状态]”列显示[!UICONTROL “过期]”横幅。*
 
 您可以在左边栏的时间轴中视图资 [!UICONTROL 产的] 到期状态。
 
@@ -82,7 +82,7 @@ ht-degree: 6%
 To enable the [!DNL Assets] console to display the referencing compound assets along with the expired subassets, configure an **[!UICONTROL Adobe CQ DAM Expiry Notification]** workflow in [!DNL Experience Manager] Configuration Manager.
 
 1. 打开 [!DNL Experience Manager] Configuration Manager。
-1. 选择 **[!UICONTROL Adobe CQ DAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
+1. 选择 **[!UICONTROL Adobe CQDAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
@@ -148,7 +148,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## Adobe Cloud中的数字版权管理 [!DNL Assets] {#digital-rights-management-in-assets-1}
+## Digital Rights Management [!DNL Assets] {#digital-rights-management-in-assets-1}
 
 此功能强制您接受许可协议，然后您才能从下载许可资产 [!DNL Adobe Experience Manager Assets]。
 
@@ -165,7 +165,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 >
 >已弃用 `/etc/dam/drm/licenses` 用于在早期版本中存储许可证 [!DNL Experience Manager] 的位置。
 >
->如果您创建或修改许可证页面，或从以前的版本移植 [!DNL Experience Manager] 这些页面，Adobe建议您将它们存储在或 `/apps/settings/dam/drm/licenses` 下面 `/conf/&ast;/settings/dam/drm/licenses`。
+>如果您创建或修改许可证页面，或从以前的版本移 [!DNL Experience Manager] 植这些页面，Adobe建议您将它们存储在或 `/apps/settings/dam/drm/licenses` 下面 `/conf/&ast;/settings/dam/drm/licenses`。
 
 ### 下载受DRM保护的资源 {#downloading-drm-assets}
 
