@@ -1,9 +1,9 @@
 ---
-title: 支持的文件格式 [!DNL Adobe Experience Manager Assets]。
+title: 支持的文件格式和MIME类型
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 22%
@@ -76,7 +76,7 @@ ht-degree: 22%
 
 See also [Working with 3D assets in Dynamic Media.](/help/assets/assets-3d.md)
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | Dynamic Media投放 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
@@ -87,9 +87,9 @@ See also [Working with 3D assets in Dynamic Media.](/help/assets/assets-3d.md)
 
 ## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
-以下列表描述了Dynamic Media不支持的栅格图像文件格式 *的子* 类型。
+以下列表描述了Dynamic Media不支持的栅格图像文件 *格式* 的子类型。
 
-另请参阅 [检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
+另请参 [阅检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
 
 * IDAT区块大小大于100 MB的PNG文件。
 * PSB文件。
@@ -163,7 +163,7 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 | QXP | ✓ | ✓ |  |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
 
-## 支持文档格式的Dynamic Media {#supported-document-formats-dynamic-media}
+## Dynamic Media支持的文档格式 {#supported-document-formats-dynamic-media}
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -173,7 +173,7 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 除了上述功能之外，还要考虑以下事项：
 
-* 要使用Dynamic Media为PDF文件生成动态演绎版，请 [参阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media为PDF文件生成动态演绎版，请参 [阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 要使用Dynamic Media预览AI文件并生成动态演绎版，请参 [阅Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
@@ -227,7 +227,7 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 下表介绍了支持的存档格式和常见DAM工作流的适用性。
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media投放 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | TGZ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
@@ -237,9 +237,9 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件都支持存储、版本控制、ACL、工作流、发布和元数据管理等常用DAM功能，Dynamic Media投放除外。
+下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持存储、版本控制、ACL、工作流、发布和元数据管理等常用DAM功能(Dynamic Media投放除外)。
 
-| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | Dynamic Media投放 |
+| 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
