@@ -1,11 +1,11 @@
 ---
-title: 向数字图像添加具有超链接的图像映射
+title: 添加具有超链接的图像映射
 description: 了解如何向图像添加具有超链接的图像映射。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 91caca39b0b6c5c0c98b58be02f518901a3d90e3
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,8 @@ ht-degree: 0%
 
    要删除图像映射，请单击热点并单击“删 **[!UICONTROL 除]**![”](assets/do-not-localize/delete-solid-line.png)。
 
-1. 要视图图像映射，请导航到资产详细信息页面，然后将光标悬停在图像上方。
+1. 要视图图像映射，请导航到资产详细信息页面，然后将光标悬停在图像上。
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   如果启用“Dynamic Media”选项，请导航到资产编辑器，然后单击“ **[!UICONTROL 映射]** ”以视图所有已应用的图像映射。
+   如果启用了Dynamic Media选项，请导航到资产编辑器，然后单击 **[!UICONTROL 映射]** ，以视图所有已应用的图像映射。
