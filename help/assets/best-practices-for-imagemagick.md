@@ -1,11 +1,11 @@
 ---
-title: 安装并配置ImageMagick以与之配合 [!DNL Adobe Experience Manager Assets]。
+title: 安装和配置ImageMagick
 description: 了解ImageMagick软件、如何安装、设置命令行处理步骤以及使用它编辑、合成和生成图像的缩略图。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5d66bf75a6751e41170e6297d26116ad33c2df44
+source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ImageMagick是用于创建、编辑、合成或转换位图图像的软件插件
 
 >[!NOTE]
 >
->如果您正在使 [!DNL Experience Manager] 用 [!DNL Adobe Managed Services] (AMS)，如果您计划处理许多高分辨率PSD或PSB文件，请与Adobe客户服务部联系。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
+>如果您正在使 [!DNL Experience Manager] 用 [!DNL Adobe Managed Services] (AMS)，请与Adobe客户服务部门联系，以处理许多高分辨率PSD或PSB文件。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ## 安装ImageMagick {#installing-imagemagick}
 
@@ -82,7 +82,7 @@ ImageMagick是用于创建、编辑、合成或转换位图图像的软件插件
 
 此外，各种图像处理插件都依赖于ImageMagick库，包括但不限于PHP的图像、Ruby的图像和平装剪辑以及nodejs的图像。
 
-如果您使用ImageMagick或受影响的库，Adobe建议您通过执行以下至少一项任务（但最好同时执行两项操作）来减轻已知漏洞：
+如果您使用ImageMagick或受影响的库，Adobe建议您通过执行以下至少一个任务（但最好同时执行两个）来减轻已知的漏洞：
 
 1. 在将所有图像文件发送到ImageMagick进行处 [理之前，请先验证所有图像文件是否以您支持的图像文件类型](https://en.wikipedia.org/wiki/List_of_file_signatures) ，对应的预期“幻数字节”开头。
 1. 使用策略文件禁用易受攻击的ImageMagick编码器。 有关ImageMagick的全局策略，请访问 `/etc/ImageMagick`。
