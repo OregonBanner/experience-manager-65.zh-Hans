@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cdf22fea17f6c79e3a2b565a4c6f728bf0bbd23a
+source-git-commit: 7b3282f086ba1f0a2f1e5430b90a6742ddf946d6
 workflow-type: tm+mt
-source-wordcount: '5888'
+source-wordcount: '5955'
 ht-degree: 6%
 
 ---
@@ -224,28 +224,33 @@ ht-degree: 6%
 
 [!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
 
-## 资产选取器 {#assetpicker}
+## Asset selector {#assetpicker}
 
-通过资产选取器，您可以以特殊方式搜索、筛选和浏览DAM资产。 资产选取器在上可 `https://[aem-server]:[port]/aem/assetpicker.html`用。 您可以使用此功能提取您选择的资产的元数据。 您可以使用支持的请求参数启动它，如资产类型（图像、视频、文本）和选择模式（单个或多个选择）。 这些参数为特定搜索实例设置资产选取器的上下文，并在整个选择过程中保持不变。
+>[!NOTE]
+>
+>在旧版本的中，资 [产选择器](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html) 称为资产选择 [!DNL Adobe Experience Manager]器。
 
-资产选取器使用HTML5 `Window.postMessage` 消息将选定资产的数据发送到收件人。 资产选取器仅在浏览模式下工作，并且仅在全搜索结果页面中工作。
+通过资产选择器，您可以以特殊方式浏览、搜索和筛选DAM资产。 您可以使用在实例中启动资 [!DNL Experience Manager] 产选择 `https://[aem-server]:[port]/aem/assetpicker.html`器。 此URL将在浏览模式下打开资产选择器。 将支持的请求参数用作后缀， `mode` 如（单选或多选）或 `viewmode` ( `assettype` 图像、视频、文本)和 `mimetype`。 这些参数为特定搜索实例设置资产选择器的上下文，并在整个选择过程中保持不变。 您还可以使用此功能提取您选择的资产的元数据。
 
-您可以在URL中传递以下请求参数，以在特定上下文中启动资产选取器：
+资产选择器使用HTML5 `Window.postMessage` 消息将选定资产的数据发送到收件人。 它仅在浏览模式下工作，并且仅用于全搜索结果页面。
+
+在URL中传递以下请求参数，以在特定上下文中启动资产选择器：
 
 | 名称 | 值 | 示例 | 用途 |
 |---|---|---|---|
-| 资源后缀(B) | 作为URL中资源后缀的文件夹路[径：https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 要在选定特定文件夹的情况下启动资产选取器(例如，在选 `/content/dam/we-retail/en/activities` 定文件夹时),URL应采用以下格式： [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在启动资产选择器时需要选择特定文件夹，请将其作为资源后缀进行传递。 |
+| 资源后缀(B) | 作为URL中资源后缀的文件夹路[径：https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 要在选定特定文件夹的情况下启动资产选择器(例如，在选 `/content/dam/we-retail/en/activities` 定文件夹时),URL应采用以下格式： [https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在启动资产选择器时需要选择特定文件夹，请将其作为资源后缀进行传递。 |
 | 模式 | 单个，多个 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 在多个模式下，您可以使用资产选择器同时选择多个资产。 |
-| mimetype | 资产的mimetype(`/jcr:content/metadata/dc:format`s)()(还支持通配符 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mimetype=image/png](https://localhost:4502/aem/assetpicker.html?mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它根据MIME类型筛选资产 |
 | 对话框 | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框的形式打开资产选择器。 仅当您通过Granite路径字段启动资产选择器并将其配置为pickerSrc URL时，此选项才适用。 |
-| 资源类型(S) | 图像，文档，多媒体，存档 | <ul><li>[https://localhost:4502/aem/assetpicker.html?assettype=images](https://localhost:4502/aem/assetpicker.html?assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=multimedia](https://localhost:4502/aem/assetpicker.html?assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?assettype=archives](https://localhost:4502/aem/assetpicker.html?assettype=archives)</li></ul> | 使用此选项可根据传递的值筛选资产类型。 |
 | 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | 使用此选项可指定资产选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接／间接）。 |
+| viewmode | 搜索 |  | 要在搜索模式下启动资产选择器，请使用资产类型和mimetype参数。 |
+| assettype | 图像，文档，多媒体，存档 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 使用此选项可根据传递的值筛选资产类型。 |
+| mimetype | 资产的mimetype(`/jcr:content/metadata/dc:format`s)()(还支持通配符 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它根据MIME类型筛选资产 |
 
-To access the asset Picker interface, go to `https://[aem_server]:[port]/aem/assetpicker`. 导航到所需的文件夹，然后选择一个或多个资产。 或者，从搜索框中搜索所需的资产，根据需要应用筛选器，然后选择它。
+要访问资产选择器界面，请转到 `https://[aem_server]:[port]/aem/assetpicker`。 导航到所需的文件夹，然后选择一个或多个资产。 或者，从搜索框中搜索所需的资产，根据需要应用筛选器，然后选择它。
 
-![在资产选取器中浏览并选择资产](assets/assetpicker.png)
+![在资产选择器中浏览并选择资产](assets/assetpicker.png)
 
-*图：在资产选取器中浏览并选择资产。*
+*图：在资产选择器中浏览并选择资产。*
 
 ## 限制 {#limitations}
 
