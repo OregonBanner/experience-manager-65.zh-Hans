@@ -3,9 +3,9 @@ title: 用于共享资产的专用文件夹
 description: 了解如何在中创建专用文件 [!DNL Adobe Experience Manager Assets] 夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 63d08f932b09e375e1b0da92cde27a60ec6e7f56
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '591'
 ht-degree: 6%
 
 ---
@@ -82,15 +82,4 @@ ht-degree: 6%
 >[!NOTE]
 >
 >如果使用上述方法从用户界面删除文件夹，则关联的用户组也会被删除。
-但是，可以使用JMX从存储库中清理现有的冗余、未使用和自动生 [成的用户组](#group-clean-up-jmx)。
-
-### 使用JMX清除未使用的用户组 {#group-clean-up-jmx}
-
-要清理未使用的用户组的存储库，请执行以下操作：
-
-1. 打开JMX以清除创作实例上资 [!DNL Experience Manager] 产的冗余组 `http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`。
-For example, `http://no1010042068039.corp.adobe.com:4502/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`.
-
-1. 从此 `clean` JMX调用方法。
-
-您可以看到，所有冗余用户组或自动生成的用户组（创建与先前删除的用户组同名的文件夹时创建的用户组）都从路径中删除 `/home/groups/mac/default/<user_name>/<folder_name>`。
+但是，可以在创作实例的JMX中使用 `clean` 方法(http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redunt+groups+for+Assets)从存储库中清理现有的冗余、未使用和自动生成的用户组。
