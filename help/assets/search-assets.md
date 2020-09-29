@@ -4,7 +4,7 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7b3282f086ba1f0a2f1e5430b90a6742ddf946d6
+source-git-commit: c94220ca6e31716b6de4dac99dfb98ac1ba1faff
 workflow-type: tm+mt
 source-wordcount: '5955'
 ht-degree: 6%
@@ -27,7 +27,7 @@ ht-degree: 6%
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
 | [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Manager桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic Media资产](#dynamicmedia)</li></ul> |  |  |
-| [资产选取器](#assetpicker) |  |  |
+| [资产选择器](#assetpicker) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [示例](#samples) |  |  |
 
