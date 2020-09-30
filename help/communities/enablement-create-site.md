@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1728'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 * 选择&#x200B;**创建**。
 
-### 第1步： 站点模板 {#step-site-template}
+### 第1步：站点模板 {#step-site-template}
 
 ![启用站点模板](assets/enablement-site-template.png)
 
@@ -43,10 +43,10 @@ ht-degree: 2%
 
 * **社区站点描述**: `A site for enabling the community to learn.`
 
-* **社区站点根目录**: (默认根留空 `/content/sites`)
+* **社区站点根目录**:(默认根留空 `/content/sites`)
 
-* **云配置**: （如果未指定云配置，则留空）提供指定云配置的路径。
-* **社区站点基础语言**: (单语言未更改： 英语)使用下拉框从可用 *语言* (德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文和简体中文)中选择一种或多种基本语言。 将根据多语言站点的翻译内容中介绍的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将 [存在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个由所选语言之一的语言代码命名的子页面，如英语为“en”或法语为“fr”。
+* **云配置**:（如果未指定云配置，则留空）提供指定云配置的路径。
+* **社区站点基础语言**:(单语言未更改：英语)使用下拉框从可用 *语言* (德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、繁体中文和简体中文)中选择一种或多种基本语言。 将根据多语言站点的翻译内容中介绍的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将 [存在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个由所选语言之一的语言代码命名的子页面，如英语为“en”或法语为“fr”。
 
 * **社区站点名称**: `enable`
 
@@ -54,11 +54,11 @@ ht-degree: 2%
    * 对于有效的URL，请附加基本语言代码+ &quot;。html&quot;
       *例如*,https://localhost:4502/content/sites/ `enable/en.html`
 
-* **引用站点模板**: 下拉选择 `Reference Structured Learning Site Template`
+* **引用站点模板**:下拉选择 `Reference Structured Learning Site Template`
 
 选择&#x200B;**下一步**。
 
-### 第2步： 设计 {#step-design}
+### 第2步：设计 {#step-design}
 
 设计步骤分为两个部分，用于选择主题和品牌横幅：
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 选择&#x200B;**下一步**。
 
-### 第3步： 设置 {#step-settings}
+### 第3步：设置 {#step-settings}
 
 在设置步骤中，在选择之 `Next`前，请注意有七个部分提供了对涉及用户管理、标记、角色、协调、分析、翻译和启用的配置的访问权限。
 
@@ -98,7 +98,7 @@ ht-degree: 2%
 
 #### TAGGING {#tagging}
 
-可应用于社区内容的标记通过选择之前通过标记控制台定义的AEM命名空间( [如教程命名空间](/help/sites-administering/tags.md#tagging-console) )来 [进行控制](/help/communities/enablement-setup.md#create-tutorial-tags)。
+可应用于社区内容的标记通过选择先前通过标记控制台定义的AEM命名空间( [如教程命名空间](/help/sites-administering/tags.md#tagging-console) )来 [进行控制](/help/communities/enablement-setup.md#create-tutorial-tags)。
 
 此外，为社区站点选择标记命名空间会限制在定义目录和启用资源时显示的选择。 有关重 [要信息，请参阅](/help/communities/tag-resources.md) “标记启用资源”。
 
@@ -160,13 +160,13 @@ ht-degree: 2%
    * 类型 `s`
    * 选择 `Sirius Nilson`
 
-* **Marketing Cloud组织Id**（可选）AdobeAnalytics帐户的ID，在启用报告中包含视频 [心跳Analytics](/help/communities/analytics.md#video-heartbeat-analytics) 时，此ID是必需的。
+* **Marketing Cloud组织** Id（可选）在启用报告中包含视频心跳分析时，必 [需的Adobe Analytics帐户](/help/communities/analytics.md#video-heartbeat-analytics) ID。
 
 ![chlimage_1-457](assets/chlimage_1-457.png)
 
 选择&#x200B;**下一步**。
 
-### 第4步： 创建社区站点 {#step-create-community-site}
+### 第4步：创建社区站点 {#step-create-community-site}
 
 Select **Create.**
 
@@ -319,15 +319,15 @@ Select **Create.**
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-#### 疑难解答： 保存映射时出错 {#troubleshooting-error-saving-map}
+#### 疑难解答：保存映射时出错 {#troubleshooting-error-saving-map}
 
 如果无法保存更改，请确保节点名称为 `localhost.4503`“点”分隔符，而不 `localhost:4503` 是“冒号”分隔符，因 `localhost` 为它不是有效的命名空间前缀。
 
 ![chlimage_1-365](assets/chlimage_1-365.png)
 
-#### 疑难解答： 无法重定向 {#troubleshooting-fail-to-redirect}
+#### 疑难解答：无法重定向 {#troubleshooting-fail-to-redirect}
 
-常规表达式&#x200B;**字符串**`sling:match``https://localhost:4503/` 末尾的“$”很重要，因此只能完全映射，否则重定向值会优先于URL中的server:port之后可能存在的任何路径。 因此，当AEM尝试重定向到登录页面时，该操作将失败。
+常规表达式&#x200B;**字符串**`sling:match``https://localhost:4503/` 末尾的“$”很重要，因此只能完全映射，否则重定向值会优先于URL中的server:port之后可能存在的任何路径。 因此，当AEM尝试重定向到登录页面时，将失败。
 
 ## 修改社区站点 {#modifying-the-community-site}
 
@@ -339,7 +339,7 @@ Select **Create.**
 
 >[!NOTE]
 >
->如果不熟悉AEM，请视图有关基本 [操作的文](/help/sites-authoring/basic-handling.md) 档和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉AEM，请视图有关基本 [操作的文档](/help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
 
 ### 添加目录 {#add-a-catalog}
@@ -350,7 +350,7 @@ Select **Create.**
 
 如果站点结构已包含目录功能，则其标题可以更改。
 
-要修改站点的结构，请导航到社 **区、站点** 控制台，打开文 `enable` 件夹，然后选择编 **辑站点图标以访问其属性**`Enablement Tutorial`。
+要修改站点的结构，请导航到 **[!UICONTROL Communities]** > Sites **[!UICONTROL 控制台，打开文]** 件夹，然后选择“ `enable` 编辑站点 ****`Enablement Tutorial`”图标以访问Adobe的属性。
 
 选择“结构”面板以添加目录或修改现有目录：
 
@@ -358,7 +358,7 @@ Select **Create.**
 
 * **URL**: `catalog`
 
-* **选择所有命名空间**: 保留为默认值。
+* **选择所有命名空间**:保留为默认值。
 
 * 选择&#x200B;**保存**。
 
