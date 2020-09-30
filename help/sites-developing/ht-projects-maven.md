@@ -1,8 +1,8 @@
 ---
 title: 如何使用Apache Maven构建AEM项目
 seo-title: 如何使用Apache Maven构建AEM项目
-description: 本文档介绍如何设置基于Apache Maven的AEM项目
-seo-description: 本文档介绍如何设置基于Apache Maven的AEM项目
+description: 本文档介绍如何基于Apache Maven设置AEM项目
+seo-description: 本文档介绍如何基于Apache Maven设置AEM项目
 uuid: 5db68639-7393-48b7-9d81-5b19b596ff21
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3ebc1d22-a7a2-4375-9aa5-a18a7ceb446a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: add17f46dfb292aeaf8425e5f75cfe955ed93cbc
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2468'
 ht-degree: 0%
 
 ---
@@ -23,16 +23,16 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-本文档介绍如何设置基于Apache Maven的AEM [项目](https://maven.apache.org/)。
+本文档介绍如何基于Apache Maven设置AEM [项目](https://maven.apache.org/)。
 
-Apache Maven是一个开放源码工具，用于通过自动化构建和提供高质量项目信息来管理软件项目。 它是建议用于AEM项目的构建管理工具。
+Apache Maven是一个开放源码工具，用于通过自动化构建和提供高质量项目信息来管理软件项目。 它是AEM项目的推荐构建管理工具。
 
-根据Maven优惠构建AEM项目可为您带来以下几项好处：
+基于Maven优惠构建AEM项目可为您带来以下几大好处：
 
 * 与IDE无关的开发环境
-* Adobe提供的Maven原型和工件的使用
+* Maven原型和由Adobe提供的文物的使用
 * 将Apache Sling和Apache Felix工具集用于基于Maven的开发设置
-* 轻松导入IDE; 例如，Eclipse和／或IntelliJ
+* 轻松导入IDE;例如，Eclipse和／或IntelliJ
 * 与连续集成系统轻松集成
 
 ### Maven Project Archetypes {#maven-project-archetypes}
@@ -46,13 +46,13 @@ Adobe提供两种Maven原型，可用作AEM项目的基线。 请参阅以下链
 
 ### 什么是UberJar? {#what-is-the-uberjar}
 
-“UberJar”是Adobe提供的特殊Java存档(JAR)文件的非正式名称。 这些JAR文件包含Adobe Experience Manager公开的所有公共Java API。 它们还包含有限的外部库，特别是AEM中提供的来自Apache Sling、Apache Jackrabbit、Apache Lucene、Google Guava的所有公共API，以及两个用于图像处理的库（Werner Randelshofer的CYMK JPEG ImageIO库和Twelkes图像库）。 UberJar仅包含API接口和类，这意味着它们只包含由AEM中的OSGi捆绑包导出的接口和类。 它们还包含一 *个MANIFEST.MF文件* ，其中包含所有这些导出包的正确包导出版本，从而确保基于UberJar构建的项目具有正确的包导入范围。
+“UberJar”是Adobe提供的特殊Java归档文件(JAR)文件的非正式名称。 这些JAR文件包含Adobe Experience Manager公开的所有公共Java API。 它们还包括有限的外部库，特别是AEM中提供的所有公共API，这些API来自Apache Sling、Apache Jackrabbit、Apache Lucene、Google Guava以及两个用于图像处理的库（Werner Randelshofer的CYMK JPEG ImageIO库和Twelkes图像库）。 UberJar只包含API接口和类，这意味着它们只包含由AEM中的OSGi捆绑导出的接口和类。 它们还包含一 *个MANIFEST.MF文件* ，其中包含所有这些导出包的正确包导出版本，从而确保基于UberJar构建的项目具有正确的包导入范围。
 
 ### Adobe为何创建UberJar? {#why-did-adobe-create-the-uberjars}
 
-过去，开发人员必须管理不同AEM库的相对大量的单个依赖关系，当使用每个新API时，必须向项目添加一个或多个单个依赖关系。 在一个项目中，引入UberJar导致从项目中删除30个单独的依赖项。
+过去，开发人员必须管理到不同AEM库的相对大量的单个依赖关系，当使用每个新API时，必须向项目添加一个或多个单个依赖关系。 在一个项目中，引入UberJar导致从项目中删除30个单独的依赖项。
 
-从AEM 6.5开始，Adobe提供两个UberJar: 一个包含已弃用的接口，另一个用于删除那些已弃用的接口。 通过在构建时显式引用一个代码，客户一定要了解他们是否对已弃用的代码具有依赖关系。
+从AEM 6.5开始，Adobe提供了两个UberJar:一个包含已弃用的接口，另一个用于删除那些已弃用的接口。 通过在构建时显式引用一个代码，客户一定要了解他们是否对已弃用的代码具有依赖关系。
 
 第二个Uber Jar删除了任何已弃用的类、方法和属性，使客户能够根据它们进行编译并了解自定义代码是否为将来的验证。
 
@@ -61,11 +61,15 @@ Adobe提供两种Maven原型，可用作AEM项目的基线。 请参阅以下链
 AEM 6.5有两种Uber Jar:
 
 1. Uber Jar —— 仅包括未标记为弃用的公共接口。 这是推荐 **的** UberJar，因为它可帮助将来验证代码库，避免依赖已弃用的API。
-1. 包含已弃用API的Uber Jar —— 包括所有公共接口，包括那些在AEM的未来版本中已标记为弃用的接口。
+1. 包含已弃用API的Uber Jar —— 包括所有公共接口，包括在AEM的未来版本中标记为弃用的接口。
+
+>[!NOTE]
+>
+>从AEM 6.5.6开始，UberJar和其他相关对象可在Maven Central存储库 [中使用](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/) ，而不是Adobe公共Maven存储库(repo.adobe.com)。 主UberJar文件已重命名为 `uber-jar-<version>.jar`。 因此，标签没 `classifier`有 `apis` 任何值（作为值） `dependency` 。
 
 ### 我如何使用UberJar? {#how-do-i-use-the-uberjars}
 
-如果您将Apache Maven用作构建系统（大多数AEM Java项目都是如此），您将需要向pom.xml文件添加一 *两个元素* 。 第一个是将实际 *依赖关系* 添加到您的项目的依赖关系元素：
+如果您将Apache Maven用作构建系统(大多数AEM Java项目都是如此)，您需要向pom.xml文件添加一 *两个元素* 。 第一个是将实际 *依赖关系* 添加到您的项目的依赖关系元素：
 
 **Uber Jar依赖&#x200B;*关系（没有弃用的API）***
 
@@ -83,7 +87,7 @@ AEM 6.5有两种Uber Jar:
 
 >[!CAUTION]
 >
->Adobe建议针对**不包含已弃&#x200B;*用的* **API的Uber Jar进行部署，以确保您的应用程序在未来版本的AEM上正常运行。
+>Adobe建议针对**不包&#x200B;*含已弃* 用的API的Uber Jar进行部署，以确保您的应用程序在AEM的将来版本上正常运行。
 >
 >仅当无法修改依赖已弃用API的代码以适应更改时，才使用支持已弃用API的Uber Jar。
 
@@ -97,7 +101,7 @@ AEM 6.5有两种Uber Jar:
 </dependency>
 ```
 
-如果您的公司已经使用Maven Repository Manager（如Sonatype Nexus、Apache Archiva或JFrog Artifactory），请向项目添加适当的配置以引用此存储库管理器，并将Adobe的Maven Repository([https://repo.adobe.com/nexus/content/groups/public/](https://repo.adobe.com/nexus/content/groups/public/))添加到存储库管理器。
+如果公司已使用Maven Repository Manager（如Sonatype Nexus、Apache Archiva或JFrog Artifactory），请向项目添加适当的配置以引用此存储库管理器，并将Adobe的Maven Repository([https://repo.maven.apache.org/maven2/](https://repo.maven.apache.org/maven2/))添加到存储库管理器。
 
 如果您没有使用存储库管理器，则需要向pom.xml文 *件中* 添加一 *个存储库元素* :
 
@@ -106,7 +110,7 @@ AEM 6.5有两种Uber Jar:
     <repository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -114,7 +118,7 @@ AEM 6.5有两种Uber Jar:
     <pluginRepository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </pluginRepository>
 </pluginRepositories>
@@ -122,11 +126,11 @@ AEM 6.5有两种Uber Jar:
 
 ### UberJar有什么用？ {#what-can-i-do-with-the-uberjar}
 
-使用UberJar，您可以编译依赖于AEM API（以及上述项目使用的API）的项目代码。 您还可以生成OSGi服务组件运行时(SCR)和OSGi元类型信息。 有一些限制，您还可以编写和执行单元测试。
+借助UberJar，您可以编译依赖AEM API（以及上述项目使用的API）的项目代码。 您还可以生成OSGi服务组件运行时(SCR)和OSGi元类型信息。 有一些限制，您还可以编写和执行单元测试。
 
 ### UberJar怎么办？ {#what-can-t-i-do-with-the-uberjar}
 
-由于UberJar仅 **包含** API，因此它不可执行，无法用于运 **行Adobe Experience Manager** 。 要运行AEM，您需要AEM快速入门(独立或Web 应用程序存档(WAR)表单)。
+由于UberJar仅 **包含** API，因此它不可执行，不能用于运 **行Adobe Experience Manager** 。 要运行AEM，您需要AEM快速入门(独立或Web 应用程序存档(WAR)表单)。
 
 ### 您提到了设备测试的限制。 请进一步说明。 {#you-mentioned-limitations-on-unit-tests-please-explain-further}
 
@@ -134,7 +138,7 @@ AEM 6.5有两种Uber Jar:
 
 #### 用例#1 —— 调用API接口的自定义代码 {#use-case-custom-code-which-calls-a-api-interface}
 
-这种情况下最常见的情况是，涉及一些自定义代码，它们在AEM API定义的Java界面上执行方法。 该接口的实现可以直接提供或使用依赖注入模式注入。 **此用例可通过UberJar处理。**
+这种情况下最常见的是一些自定义代码，它们在AEM API定义的Java界面上执行方法。 该接口的实现可以直接提供或使用依赖注入模式注入。 **此用例可通过UberJar处理。**
 
 前者的一个例子是：
 
@@ -238,7 +242,7 @@ public class ComponentWhichHasAEMInterfaceInjectedTest {
 
 #### 用例#2 —— 调用API实现类的自定义代码 {#use-case-custom-code-which-calls-an-api-implementation-class}
 
-此用例涉及调用AEM API中某个类的静态或实例方法，在该类中您引用的是具体类，而不是与用例#1中的接口相反。
+此用例涉及调用AEM API中某个类的静态或实例方法，在该类中您引用的是具体类，而与用例#1中的接口相对。
 
 ```java
 public class ClassWhichUsesAStaticMethodFromAPI {
@@ -349,7 +353,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 #### 用例#3 —— 自定义代码，它从API扩展基类 {#use-case-custom-code-which-extends-a-base-class-from-the-api}
 
-与SCR生成一样，如果代码从AEM API扩展基类（抽象或具体）, **则必须** 使用UberJar来测试它。
+与SCR生成一样，如果代码从AEM API扩展基类（抽象或具体），则 **必须** 使用UberJar来测试它。
 
 ## 与Maven的常见开发任务 {#common-development-tasks-with-maven}
 
@@ -370,7 +374,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 * 确 `content-package-maven-plugin` 定要包含在包中的内容
 * 由VLT工具确定要考虑的路径
-* 如果包是在AEM包管理器中重新构建的，则还定义要包括的路径
+* 如果在AEM Package Manager中重新构建包，则还定义要包括的路径
 
 根据应用程序的要求，您可能希望添加到这些路径中以包含更多内容，如：
 
@@ -404,7 +408,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 #### 在不将路径添加到包的情况下同步路径 {#syncing-paths-without-adding-them-to-the-package}
 
-在某些情况下，您可能希望在文件系统和存储库之间保持特定路径的同步，但不要将这些路径包含在构建为安装到AEM的包中。
+在某些情况下，您可能希望在文件系统和存储库之间保持特定路径的同步，但是不要将它们包含在构建为安装到AEM的包中。
 
 典型情况是路 `/libs/foundation` 径。 出于开发目的，您可能希望在文件系统中提供此路径的内容，例如，您的IDE可以解析包含JSP的JSP包含 `/libs`。 但是，您不希望将该部件包含在您构建的包中，因为该部 `/libs` 件包含产品代码，而自定义实施不能修改该产品代码。
 
@@ -431,7 +435,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 </workspaceFilter>
 ```
 
-您还需要重新配置maven-resources-plugin，以不在包中包含这些文件： 在安装包时不应用filter.xml文件，但仅当使用包管理器重新构建包时才应用filter.xml文件。
+您还需要重新配置maven-resources-plugin，以不在包中包含这些文件：在安装包时不应用filter.xml文件，但仅当使用包管理器重新构建包时才应用filter.xml文件。
 
 相应 `<resources>` 地更改内容中的部分：
 
@@ -457,9 +461,9 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 到目前为止所描述的Maven设置创建了一个内容包，该内容包还可以包含组件及其相应的JSP。 但是，Maven将它们视为属于内容包的任何其他文件，甚至不将它们识别为JSP。
 
-生成的组件在AEM中的工作方式相同，但使Maven了解JSP有两个主要优点
+生成的组件在AEM中工作一样，但使Maven了解JSP有两个主要优点
 
-* 如果JSP包含错误，它允许Maven失败，因此这些错误是在构建时呈现的，而不是在AEM中首次编译它们时呈现的
+* 如果JSP包含错误，它允许Maven失败，因此这些错误在构建时出现，而不是在AEM中首次编译时出现
 * 对于可以导入Maven项目的IDE，这还支持JSP中的代码完成和标记库支持
 
 启用此设置需要两件事：
@@ -473,11 +477,11 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 
 >[!NOTE]
 >
->除非如上面的导入AEM产品依赖 [关系中所述导入产品依赖关系](#importingaemproductdependencies) ，否则还需要将它们与与AEM设置匹配的版本一起添加到父POM，如上面添加依赖 [关系中所述](#addingdependencies) 。 以下每个条目中的注释显示要在依赖关系查找器中搜索的包。
+>除非如上面的“导入AEM产品依赖关系 [”中所述导入产品依赖关系](#importingaemproductdependencies) ，否则还需要将它们与与AEM设置匹配的版本一起添加到父POM，如上面的添加依赖 [关系中所述](#addingdependencies) 。 以下每个条目中的注释显示要在依赖关系查找器中搜索的包。
 
 >[!NOTE]
 >
->该 `com.adobe.granite.xssprotection` 伪像不包括在cq-quickstart-product-dependencies POM中，并且需要从依赖关系查找器获得的完全Maven坐标。
+>该 `com.adobe.granite.xssprotection` 伪像不包括在cq-quickstart-product-dependencies POM中，并且需要从依赖关系查找器获取的完整Maven坐标。
 
 #### 将JSP编译为Maven编译阶段的一部分 {#compiling-jsps-as-part-of-the-maven-compile-phase}
 
@@ -488,7 +492,7 @@ public class ClassWhichUsesAnInstanceMethodFromAPITest {
 * 我们告诉它编译 `${project.build.directory}/jsps-to-compile`
 * 并将结果输 `${project.build.directory}/ignoredjspc` 出到(即 `myproject/content/target/ignoredjspc`)
 
-* 我们设置maven-resources-plugin以将JSP复制到 `${project.build.directory}/jsps-to-compile``libs/` generate-sources阶段，并将其配置为不复制文件夹(因为这是AEM产品代码，我们不希望产生用于项目编译的依赖关系，也不需要验证它是否进行编译。
+* 我们设置maven-resources-plugin以在“生成源” `${project.build.directory}/jsps-to-compile``libs/` 阶段将JSP复制到文件夹，并将其配置为不复制该文件夹(因为这是AEM产品代码，我们不想为我们的项目生成依赖项，也不需要验证它是否进行编译。
 
 如上所述，我们的主要目标是验证JSP，并确保在生成过程包含错误时失败。 因此，我们将它们编译为一个被忽略的单独目录（事实上，稍后会立即删除，您将看到）。
 
@@ -695,7 +699,7 @@ $ mvn -PautoInstallPackagePublish -PintegrationServer install
 </profiles>
 ```
 
-### 如何与AEM Communities配合使用 {#how-to-work-with-aem-communities}
+### 如何与AEM Communities {#how-to-work-with-aem-communities}
 
 获得AEM Communities功能许可后，需要额外的APIjar。
 
