@@ -3,10 +3,10 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 7790c9c90953e0f5c5b6be38f5d54346fb595e8f
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 44%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -157,7 +157,9 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 获取的资产可用作任何其他本地资产，但关联的元数据无法编辑。
 
-## 限制 {#limitations}
+## Limitations and best practices {#tips-and-limitations}
+
+* 要了解资产使用情况，请在实 [例上配置](/help/assets/touch-ui-asset-insights.md) “资产分析” [!DNL Sites] 功能。
 
 ### 权限和资产管理 {#permissions-and-managing-assets}
 
@@ -165,7 +167,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 * 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。不允许进行其他编辑。
 * 本地获取的资产只能用于创作。不能应用资产更新工作流，也不能编辑元数据。
 * 仅支持图像和列出的文档格式。[!DNL Dynamic Media]不支持 资产、内容片段和体验片段。
-* 不获取元数据架构。
+* [!DNL Experience Manager] 不提取元数据模式。 这意味着可能无法显示所有获取的元数据。 如果模式单独更新，则显示所有属性。
 * 所有 [!DNL Sites] 作者都对获取的副本具有读取权限，即使作者无法访问远程DAM部署。
 * 没有支持自定义集成的 API。
 * 该功能支持无缝搜索和使用远程资产。为了能够在本地部署中一次使用许多远程资产，请考虑批量迁移这些资产。请参阅 [Assets 迁移指南](assets-migration-guide.md)。
@@ -184,6 +186,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 * 获取操作会在 5 秒后超时。作者在获取资产时可能会遇到问题，比如，网络问题。Authors can reattempt by dragging the remote asset from [!UICONTROL Content Finder] to [!UICONTROL Page Editor].
 * 可以对获取的资产执行无损的简单编辑以及 `Image` 组件支持的编辑。资产是只读的。
 * 重新提取资产的唯一方法是将其拖动到页面上。 没有API支持或其他方法可重新获取资产以进行更新。
+* 如果资产从DAM中停止使用，则这些资产将继续在页面上 [!DNL Sites] 使用。
 
 ## 故障诊断问题 {#troubleshoot}
 
