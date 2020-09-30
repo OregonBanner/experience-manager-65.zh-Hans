@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d5f4b8a8c42df86831bb57b73949e443ec19d7ea
+source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 2%
@@ -23,10 +23,10 @@ ht-degree: 2%
 
 ## 创建社区站点 {#create-a-community-site}
 
-使用创作实例创建社区站点。 在AEM Author实例上：
+使用创作实例创建社区站点。 在AEM作者实例上：
 
 1. 以管理员权限登录。
-1. 在全局导航中，转 **到导航、社区、站点。**
+1. 在全局导航中，转到“ **[!UICONTROL 社区]** ”> **[!UICONTROL “站点]**”。
 
 “社区站点”控制台提供一个向导，用于指导用户完成创建社区站点的各个步骤。 在最后一步中提交站点 `Next` 之前， `Back` 可以前进到该步骤或前一步。
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 
 ![createcommunity站点](assets/createcommunitysite.png)
 
-### 第1步： 站点模板 {#step-site-template}
+### 第1步：站点模板 {#step-site-template}
 
 ![创建站点的模板](assets/create-site.png)
 
@@ -44,22 +44,22 @@ ht-degree: 2%
 
 * **社区站点标题**: `Getting Started Tutorial`
 * **社区站点描述**: `A site for engaging with the community.`
-* **社区站点根目录**: (默认根留空 `/content/sites`)
-* **云配置**: （如果未指定云配置，则留空）提供指定云配置的路径。
-* **社区站点基础语言**: (对于单种语言，请保持不变： 英语)使用下拉式列表 *从可用语言* -德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、中文（繁体）和中文（简体）中选择一种或多种基本语言。 将根据多语言站点的翻译内容中介绍的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将 [存在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个由所选语言之一的语言代码命名的子页面，如英语为“en”或法语为“fr”。
+* **社区站点根目录**:(默认根留空 `/content/sites`)
+* **云配置**:（如果未指定云配置，则留空）提供指定云配置的路径。
+* **社区站点基础语言**:(对于单种语言，请保持不变：英语)使用下拉式列表 *从可用语言* -德语、意大利语、法语、日语、西班牙语、葡萄牙语（巴西）、中文（繁体）和中文（简体）中选择一种或多种基本语言。 将根据多语言站点的翻译内容中介绍的最佳实践，为添加的每种语言创建一个社区站点，并且该站点将 [存在于同一站点文件夹中](/help/sites-administering/translation.md)。 每个站点的根页面将包含一个由所选语言之一的语言代码命名的子页面，如英语为“en”或法语为“fr”。
 
-* **社区站点名称**: 参与
+* **社区站点名称**:参与
 
    * 多次-检查名称，因为创建站点后该名称不易更改
    * 初始URL将显示在社区站点名称下方
    * 对于有效的URL，请附加基本语言代码+ &quot;。html&quot;
    * *例如*,https://localhost:4502/content/sites/ `engage/en.html`
 
-* **模板**: 下拉选择 `Reference Site`
+* **模板**:下拉选择 `Reference Site`
 
 * 选择&#x200B;**下一步**。
 
-### 第2步： 设计 {#step-design}
+### 第2步：设计 {#step-design}
 
 设计步骤分为两个部分，用于选择主题和品牌横幅：
 
@@ -71,17 +71,17 @@ ht-degree: 2%
 
 （可选）上传要在网站页面上显示的横幅图像。 横幅被固定到浏览器的左边缘，位于社区站点标题和导航链接之间。 横幅高度会被裁剪为120像素。 横幅的大小不会调整为适合浏览器的宽度和120像素高。
 
-![chlimage_1-284](assets/chlimage_1-284.png)
+![社区站点品牌](assets/community-site-branding.png)
 
 ![上传——图像——站点](assets/upload-image-site.png)
 
 选择&#x200B;**下一步**。
 
-### 第3步： 设置 {#step-settings}
+### 第3步：设置 {#step-settings}
 
 在“设置”步骤中，在选 `Next`择之前，请注意，有七个部分提供对配置的访问，这些配置涉及用户管理、标记、审核、组管理、分析、翻译和启用。
 
-请访问 [EnablementAEM Communities入门教程](/help/communities/getting-started-enablement.md) ，以体验使用启用功能。
+请访问AEM Communities [快速入门教程(Enablement](/help/communities/getting-started-enablement.md) Tutorial)，体验如何使用支持功能。
 
 #### 用户管理 {#user-management}
 
@@ -102,14 +102,14 @@ ht-degree: 2%
 
 #### TAGGING {#tagging}
 
-可应用于社区内容的标记通过选择之前通过标记控制台定义的AEM命名空间( [如教程命名空间](/help/sites-administering/tags.md#tagging-console) )来 [进行控制](/help/communities/setup.md#create-tutorial-tags)。
+可应用于社区内容的标记通过选择先前通过标记控制台定义的AEM命名空间( [如教程命名空间](/help/sites-administering/tags.md#tagging-console) )来 [进行控制](/help/communities/setup.md#create-tutorial-tags)。
 
 使用预先键入搜索可轻松查找命名空间。 例如，
 
 * 类型 `tut`
 * 选择 `Tutorial`
 
-![chlimage_1-286](assets/chlimage_1-286.png)
+![标记](assets/tagging.png)
 
 #### ROLES {#roles}
 
@@ -133,15 +133,15 @@ ht-degree: 2%
 
 接受审核用户生成 [的内容](/help/communities/sites-console.md#moderation) (UGC)的默认全局设置。
 
-![chlimage_1-287](assets/chlimage_1-287.png)
+![审核](assets/moderation1.png)
 
 #### ANALYTICS {#analytics}
 
-如果AdobeAnalytics已获得许可，且已配置Analytics云服务和框架，则可以启用Analytics并选择该框架。
+如果Adobe Analytics获得许可，且已配置Analytics云服务和框架，则可以启用Analytics并选择框架。
 
-请参 [阅Analytics社区配置功能](/help/communities/analytics.md)。
+请参 [阅社区分析配置功能](/help/communities/analytics.md)。
 
-![chlimage_1-288](assets/chlimage_1-288.png)
+![分析](assets/analytics.png)
 
 #### TRANSLATION {#translation}
 
@@ -154,23 +154,23 @@ ht-degree: 2%
 * 选择 **翻译整个页面**
 * 保留默认持久性选项
 
-![chlimage_1-289](assets/chlimage_1-289.png)
+![翻译设置](assets/translation-settings.png)
 
 #### ENABLEMENT {#enablement}
 
 创建参与社区时留空。
 
-有关快速创建支持社区的类 [似教程](/help/communities/overview.md#enablement-community)，请参 [阅EnablementAEM Communities入门](/help/communities/getting-started-enablement.md)。
+有关快速创建支持社区的类似教 [程](/help/communities/overview.md#enablement-community)，请参 [阅AEM Communities教育入门](/help/communities/getting-started-enablement.md)。
 
 选择&#x200B;**下一步**。
 
-![chlimage_1-290](assets/chlimage_1-290.png)
+![启用](assets/enablement.png)
 
-### 第4步： 创建社区站点 {#step-create-communities-site}
+### 第4步：创建社区站点 {#step-create-communities-site}
 
 Select **Create.**
 
-![chlimage_1-291](assets/chlimage_1-291.png)
+![创建站点](assets/create-site2.png)
 
 完成该过程后，新站点的文件夹会显示在“社区——站点”控制台中。
 
@@ -224,9 +224,10 @@ Select **Create.**
 >1. 选择 **[!UICONTROL 默认代理（发布）]**。
 >1. 在“设置 **[!UICONTROL ”旁]**，选择“ **[!UICONTROL 编辑]**”。
 >1. 在“代理设置”的弹出对话框中，选择“传 **[!UICONTROL 输]** ”选项卡。
->1. 在URI中，将端口号4503更改为所需的端口号。 例如，要使用端口6103: https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. 在URI中，将端口号4503更改为所需的端口号。 例如，要使用端口6103:https://localhost:6103/bin/receive?sling:authRequestLogin=1
 >1. 选择 **[!UICONTROL 确定]**。
 >1. （可选）选择 **[!UICONTROL 清除]** 或强 **[!UICONTROL 制重试]** ，以重置复制队列。
+
 >
 
 
@@ -235,17 +236,15 @@ Select **Create.**
 
 确保发布服务器正在运行后，选择“全球”图标以发布社区站点。
 
-![chlimage_1-292](assets/chlimage_1-292.png)
+![发布站点](assets/publish-site.png)
 
-社区站点成功发布后，将短暂显示一条消息：
-
-![chlimage_1-293](assets/chlimage_1-293.png)
+社区站点成功发布后，将短暂显示一条消息“站点已发布”。
 
 ### 新建社区用户组 {#new-community-user-groups}
 
 与新社区站点一起，还会创建新用户组，这些用户组具有为各种管理功能设置的适当权限。 有关详细信息，请 [访问社区站点的用户组](/help/communities/users.md#usergroupsforcommunitysites)。
 
-对于此新社区站点，如果在步骤1中指定站点名称“参与”，则可以从“组”控制台中看到四个新 [用户组](/help/communities/members.md) (全局导航： 社区、组):
+对于此新社区站点，如果在步骤1中指定站点名称“参与”，则可以从“组”控制台中看到四个新 [用户组](/help/communities/members.md) (全局导航：社区、组):
 
 * 社区参与社区经理
 * 社区参与组管理员
@@ -260,11 +259,11 @@ Select **Create.**
 * 社区参与版主
 * 社区参与成员（间接作为主持人组的成员）
 
-![chlimage_1-294](assets/chlimage_1-294.png)
+![用户组](assets/user-group.png)
 
 #### https://localhost:4503/content/sites/engage/en.html {#http-localhost-content-sites-engage-en-html}
 
-![chlimage_1-311](assets/chlimage_1-311.png)
+![参与](assets/engage.png)
 
 ## 配置身份验证错误 {#configure-for-authentication-error}
 
@@ -317,20 +316,20 @@ Select **Create.**
 
 >[!NOTE]
 >
->要禁用，只需在属性 `sling:match` 值前加上“x”- - `xlocalhost.4503/$` 和“ **全部保存”**。
+>要禁用，只需在属性 `sling:match` 值前添加“x”- —— 前缀 `xlocalhost.4503/$` ，然后 **保存全部**。
 
 
-![chlimage_1-297](assets/chlimage_1-297.png)
+![可选步骤](assets/optional-steps.png)
 
-#### 疑难解答： 保存映射时出错 {#troubleshooting-error-saving-map}
+#### 疑难解答：保存映射时出错 {#troubleshooting-error-saving-map}
 
 如果无法保存更改，请确保节点名称为 `localhost.4503`“点”分隔符，而不是“冒号”分 `localhost:4503` 隔符，因为它 `localhost`不是有效的命名空间前缀。
 
-![chlimage_1-298](assets/chlimage_1-298.png)
+![error-message](assets/error-message.png)
 
-#### 疑难解答： 无法重定向 {#troubleshooting-fail-to-redirect}
+#### 疑难解答：无法重定向 {#troubleshooting-fail-to-redirect}
 
-常规表达式&#x200B;**字符串**&#x200B;末尾的“$”很重要，因此只 `sling:match``https://localhost:4503/` 能精确映射，否则重定向值前缀于URL中server:port之后可能存在的任何路径。 因此，当AEM尝试重定向到登录页面时，该操作将失败。
+常规表达式&#x200B;**字符串**&#x200B;末尾的“$”很重要，因此只 `sling:match``https://localhost:4503/` 能精确映射，否则重定向值前缀于URL中server:port之后可能存在的任何路径。 因此，当AEM尝试重定向到登录页面时，将失败。
 
 ### 修改站点 {#modify-the-site}
 
@@ -342,6 +341,6 @@ Select **Create.**
 
 >[!NOTE]
 >
->如果不熟悉AEM，请视图有关基本 [操作的文](/help/sites-authoring/basic-handling.md) 档和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉AEM，请视图有关基本 [操作的文档](/help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
 
