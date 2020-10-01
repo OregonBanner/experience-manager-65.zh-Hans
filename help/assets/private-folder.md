@@ -3,10 +3,10 @@ title: 用于共享资产的专用文件夹
 description: 了解如何在中创建专用文件 [!DNL Adobe Experience Manager Assets] 夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 63d08f932b09e375e1b0da92cde27a60ec6e7f56
+source-git-commit: 2bd850ff421494dda83bafb59fa695365498bbbe
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 6%
+source-wordcount: '578'
+ht-degree: 7%
 
 ---
 
@@ -82,4 +82,4 @@ ht-degree: 6%
 >[!NOTE]
 >
 >如果使用上述方法从用户界面删除文件夹，则关联的用户组也会被删除。
-但是，可以在创作实例的JMX中使用 `clean` 方法(http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redunt+groups+for+Assets)从存储库中清理现有的冗余、未使用和自动生成的用户组。
+但是，在创作实例()的JMX中，可以使用方法从存储库中清 `clean` 除现有的冗余、未使用和自动生成的`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`用户组。
