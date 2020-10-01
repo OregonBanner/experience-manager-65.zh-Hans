@@ -3,9 +3,9 @@ title: '[!DNLAdobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: 6.5 Service [!DNL Adobe Experience Manager] Pack的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 5db4dd7ccc7d722f0503b22fdd5ff9e5508be4ea
+source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
 workflow-type: tm+mt
-source-wordcount: '11482'
+source-wordcount: '11484'
 ht-degree: 25%
 
 ---
@@ -307,7 +307,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括自2019年4月发�
 
 >[!NOTE]
 >
->Experience ManagerService Pack不包含修复 [!DNL Forms]。 它们是通过单独的 Forms 附加组件包交付的。此外，还发布了包含针对AEM Forms的JEE修复的累积安装程序。 For more information, see [Install AEM Forms add-on](#install-aem-forms-add-on-package) and [Install AEM Forms on JEE](#install-aem-forms-jee-installer).
+>Experience ManagerService Pack不包含修复 [!DNL Forms]。 它们是通过单独的 Forms 附加组件包交付的。此外，还发布了包含针对AEM Forms的JEE修复的累积安装程序。 有关详细信息，请参 [阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[Forms加载项和安装Experience ManagerForms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 * 通信管理：在目标区的资产顺序在提交信件(NPR-33359、NPR-33153)后混乱。
 * 适应性Forms:当用户编辑自适应表单时，“页 [!UICONTROL 面信息] ”菜单中可 [!UICONTROL 用的“开始工] 作流”选项将不起作用(NPR-33004)。
@@ -836,7 +836,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
@@ -970,7 +970,7 @@ Remove one mention of this fix.
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Service Pack不包含修复 [!DNL Experience Manager Forms]。 They are delivered using a separate [!DNL Forms] add-on package. In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. For more information, see [Install Experience Manager Forms add-on](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package) and [Install Experience Manager Forms JEE installer](#forms-jee-installer).
+>[!DNL Experience Manager] Service Pack不包含修复 [!DNL Experience Manager Forms]。 They are delivered using a separate [!DNL Forms] add-on package. In addition, a cumulative installer is released that includes fixes for [!DNL Experience Manager Forms] on JEE. 有关详细信息，请参 [阅在JEE上安装Experience Manager](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)[Forms加载项和安装Experience ManagerForms](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)。
 
 The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
