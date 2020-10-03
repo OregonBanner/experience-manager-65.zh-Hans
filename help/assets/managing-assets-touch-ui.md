@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cb531bfc009fc766bab20d28cf332856b1e95c7b
+source-git-commit: 087940d0a51c43125a309b34b82831030e7e54b4
 workflow-type: tm+mt
-source-wordcount: '9408'
+source-wordcount: '9618'
 ht-degree: 7%
 
 ---
@@ -450,7 +450,14 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    >
    >The **[!UICONTROL Paste]** option is available in the toolbar until the paste operation is completed.
 
-### 移动或重命名资产 {#moving-or-renaming-assets}
+## 移动和重命名资产 {#moving-or-renaming-assets}
+
+当您将资产（或文件夹）移动到其他位置时，资产（或文件夹）不会重复，这与复制资产时不同。 资产（或文件夹）将放置在目标位置，并从源位置删除。 您还可以在将资产移至新位置时对其重命名。
+如果您要将已发布的资产移动到其他位置，则可以选择重新发布资产。 默认情况下，已发布资产上的移动操作会自动取消发布该资产。 如果作者在移动资产时选择了“重新 [!UICONTROL 发布] ”选项，则移动的资产会重新发布。
+
+![您可以在移动已发布的资产时重新发布它](assets/republish-on-move.png)
+
+移动资产或文件夹：
 
 1. 导航到要移动的资产所在的位置。
 
@@ -486,6 +493,14 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * 单击 **[!UICONTROL 取消]** ，以停止移动操作。
 
    如果您不更新引用，则它们会继续指向资产的上一路径。 如果您调整引用，它们将更新为新的资产路径。
+
+### 使用拖动操作移动资产 {#move-using-drag}
+
+您可以将资产（或文件夹）移动到同级文件夹、 [!UICONTROL Lightbox] 收藏集或其他收藏集，方法是将它们拖动到目标位置，而不 [!UICONTROL 是使用] 用户界面中的移动选项。 但是，此操作只能在列表视图中执行。
+
+通过拖动资产来移动资产不会打 [!UICONTROL 开“移动资产] ”向导，因此在移动资产时，您不会选择重命名资产。 此外，在移动资产时，会通过拖动重新发布已发布的资产，而无需征求用户批准重新发布。
+
+![通过拖动资产将资产移至同级文件夹](assets/move-by-drag.gif)
 
 ## 管理再现 {#managing-renditions}
 
