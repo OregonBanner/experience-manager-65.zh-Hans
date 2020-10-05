@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: a99313c35872d3f481c3dc6f42b372cc603e7549
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 1%
@@ -157,26 +157,26 @@ ht-degree: 1%
 1. 登录以发布评论：
 1. 在注释文本输入框中输入文本，然后单击“发 **[!UICONTROL 布”]**
 
-   ![chlimage_1-191](assets/chlimage_1-191.png)
+   ![置评后](assets/post-comment.png)
 
 1. 只需视图创作实例 [上的评论](http://localhost:4502/content/community-components/en/comments.html) （可能仍以管理员／管理员身份登录）。
 
-   ![chlimage_1-192](assets/chlimage_1-192.png)
+   ![视图注释](assets/view-comment.png)
 
    注意：虽然作者在asipath下有JCR *节点* ，但这些节点是用于SCF框架的。 实际UGC不在JCR中，而在MongoDB中。
 
 1. 视图mongodb Communities中的 **[!UICONTROL UGC]** > **[!UICONTROL 集合]** >内 **[!UICONTROL 容]**
 
-   ![chlimage_1-193](assets/chlimage_1-193.png)
+   ![ugc内容](assets/ugc-content.png)
 
 1. 视图Solr中的UGC:
 
-   * 浏览至Solr仪表板: [http://localhost:8983/solr/](http://localhost:8983/solr/)
-   * 要选 `core selector` 择的用户 `collection1`
-   * 选择 `Query`
-   * 选择 `Execute Query`
+   * 浏览至Solr仪表板: [http://localhost:8983/solr/](http://localhost:8983/solr/)。
+   * 要选 `core selector` 择的用户 `collection1`。
+   * 选择 `Query`.
+   * 选择 `Execute Query`.
 
-   ![chlimage_1-194](assets/chlimage_1-194.png)
+   ![ugc-solr](assets/ugc-solr.png)
 
 ## 疑难解答 {#troubleshooting}
 
@@ -186,14 +186,9 @@ ht-degree: 1%
 
 1. 确保MSRP已配置为默认提供程序：
 
-   * 在所有作者实例和发布AEM实例上，重新访问 [存储配置控制台](srp-config.md)
+   * 在所有作者实例和发布AEM实例上，重新访 [问存储配置控制台](srp-config.md) ，或检查AEM存储库：
 
-   或检查AEM存储库：
-
-   * 在JCR中， [if/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
-
-   * 不包含srpc [节点](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ，它表示存储提供程序是JSRP
-   * 如果srpc节点存在并包含节 [点defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则默认配置的属性应将MSRP定义为默认提供程序
-
+   * 在JCR中，如 [果/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [srpc节点，则表](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 示存储提供程序是JSRP。
+   * 如果srpc节点存在并包含 [节点defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则defaultconfiguration的属性应将MSRP定义为默认提供程序。
 
 1. 确保在选择MSRP后重新启动AEM。
