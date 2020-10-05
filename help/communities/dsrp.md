@@ -1,8 +1,8 @@
 ---
 title: DSRP —— 关系存储库资源提供程序
 seo-title: DSRP —— 关系存储库资源提供程序
-description: 设置AEM Communities以将关系数据库用作其公用存储
-seo-description: 设置AEM Communities以将关系数据库用作其公用存储
+description: 设置AEM Communities以将关系数据库用作其常用存储
+seo-description: 设置AEM Communities以将关系数据库用作其常用存储
 uuid: f364e7da-ee54-4ab2-a630-7ec9239005ac
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 关于DSRP {#about-dsrp}
 
-将AEM Communities配置为使用关系数据库作为其公用存储时，用户生成的内容(UGC)可从所有作者和发布实例进行访问，而无需同步或复制。
+将AEM Communities配置为使用关系数据库作为其公用存储时，用户生成的内容(UGC)可从所有作者和发布实例访问，而无需同步或复制。
 
 另请参 [阅SRP选项的特性](working-with-srp.md#characteristics-of-srp-options) 和建 [议的拓扑](topologies.md)。
 
@@ -71,7 +71,7 @@ MySQL安装可以通过使用不同的数据库(模式)名称以及不同的连�
       >[!NOTE]
       >
       >默认存储配置现在存储在会议路径(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而不是etc路径(`/etc/socialconfig/srpc/defaultconfiguration`)中。 建议您按照迁移步 [骤执行](#zerodt-migration-steps) ，以使默认更新工作正常。
-   ![chlimage_1-128](assets/chlimage_1-128.png)
+   ![dsrp-config](assets/dsrp-config.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
 * **数据库配置**
@@ -80,17 +80,17 @@ MySQL安装可以通过使用不同的数据库(模式)名称以及不同的连�
 
       给MySQL连接的名称必须与在JDBC OSGi配置中输 [入的名称相同](dsrp-mysql.md#configurejdbcconnections)
 
-      *默认*: 社区
+      *默认*:社区
 
    * **[!UICONTROL 数据库名称]**
 
       在init_ [模式.sql脚本中给予模式](dsrp-mysql.md#obtain-the-sql-script) 的名称
 
-      *默认*: 社区
+      *默认*:社区
 
 * **Solr配置**
 
-   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper 主机&#x200B;**
+   * **[](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files)Zookeeper 主机**
 
       如果使用内部ZooKeeper运行Solr，则将此值留空。 否则，当在SolrCloud [模式下](solr.md#solrcloud-mode) ，与外部ZooKeeper一起运行时，将此值设置为ZooKeeper的URI, *如my.server.com:80*
 
@@ -98,11 +98,11 @@ MySQL安装可以通过使用不同的数据库(模式)名称以及不同的连�
 
    * **[!UICONTROL Solr URL]**
 
-      *默认*: https://127.0.0.1:8983/solr/
+      *默认*:https://127.0.0.1:8983/solr/
 
    * **[!UICONTROL Solr 收藏集]**
 
-      *默认*: collection1
+      *默认*:collection1
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
@@ -135,7 +135,7 @@ DSRP必须被标识为所有作者和发布实例上的公用存储。
 
 ## 管理用户数据 {#managing-user-data}
 
-有关用户 *、用*&#x200B;户用户档案 ***、用户*&#x200B;和用户组(通常在发布环境中输入)的信息，请访问：
+有关用户 *、用*&#x200B;户用户档案 ** 和用户 *组(通常在发布环境中输入*)的信息，请访问：
 
 * [用户同步](sync.md)
 * [管理用户和用户组](users.md)
