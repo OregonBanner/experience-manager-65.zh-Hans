@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
 translation-type: tm+mt
-source-git-commit: 50c1532b2bdc41555eff2be718cd478aad1f403a
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 4%
@@ -48,7 +48,7 @@ AEM Communities使用电子邮件：
 
 例如（仅为说明目的而填写值）:
 
-![chlimage_1-98](assets/chlimage_1-98.png)
+![email-config](assets/email-config.png)
 
 * **[!UICONTROL SMTP服务器主机名]**
 
@@ -98,7 +98,7 @@ AEM Communities使用电子邮件：
 
 * 找到 `AEM Communities Email Reply Configuration`。
 
-![chlimage_1-99](assets/chlimage_1-99.png)
+![email-reply-config](assets/email-reply-config.png)
 
 ### 通知配置 {#configuration-for-notifications}
 
@@ -177,7 +177,7 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 
 * 选择添 **[!UICONTROL 加]**
 
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+   ![轮询导入程序](assets/polling-importer.png)
 
 * **[!UICONTROL 类型]**
 
@@ -207,7 +207,7 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
 
 ### 调整新轮询导入程序的协议 {#adjust-protocol-for-new-polling-importer}
 
-保存新的轮询配置后，必须进一步修改订阅电子邮件导入程序的属性，以便将协议从更改为 `POP3` `emailreply`
+保存新的轮询配置后，必须进一步修改订阅电子邮件导入程序的属性，以便将协议从更改 `POP3` 为 `emailreply`。
 
 使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
@@ -217,7 +217,7 @@ OSGi配置和 `AEM Communities Email Reply Configuration` 名称电子邮件的�
    * **feedType**:替换 `pop3s` 为 **`emailreply`**
    * **源**:将源协议替换 `pop3s://` 为 **`emailreply://`**
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![轮询协议](assets/polling-protocol.png)
 
 红色三角形表示修改的属性。 请确保保存更改：
 
