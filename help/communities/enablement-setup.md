@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果不熟悉AEM，请视图有关基本 [操作的文](../../help/sites-authoring/basic-handling.md) 档和 [页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉AEM，请视图有关基本 [操作的文档](../../help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 
 
 ## 安装最新的Communities版本 {#install-latest-communities-release}
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 * [最新版本](deploy-communities.md#latest-releases)
 
-有关创建参与社区站 [点的教程](overview.md#engagement-community)，请访 [问AEM Communities入门](getting-started.md)。
+有关创建参与社区站 [点的教程](overview.md#engagement-community)，请 [访问AEM Communities入门](getting-started.md)。
 
 ## 配置启用功能 {#configure-enablement-features}
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 
 ## 配置 Analytics {#configure-analytics}
 
-为社 [区站点配置AdobeAnalytics后](analytics.md)，有关分配给社区成员（学员）的支持资源和 [学习路径](reports.md) ，生成的报告中会提供更多信息。
+为社 [区站点配置Adobe Analytics后](analytics.md)，有关分配给社区成员（学员）的支持资源和 [学习路径](reports.md) ，生成的报告中会提供更多信息。
 
 ## 为通知配置电子邮件 {#configure-email-for-notifications}
 
@@ -94,14 +94,14 @@ For more information see [Managing Users and User Groups](users.md).
 * `Tutorial: Arts / Auditory`
 * `Tutorial: Arts / History`
 
-![chlimage_1-417](assets/chlimage_1-417.png)
+![教程——标记](assets/tutorial-tags.png)
 
 然后，按照说明操作：
 
 1. [设置标记权限](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [发布标记](../../help/sites-administering/tags.md#publishing-tags)
 
-为AEM Communities入门教程创建的标记包示例
+为AEM Communities入门Tutorials创建的标记包示例
 
 [获取文件](assets/communities_tutorialtags-10.zip)
 
@@ -128,42 +128,42 @@ For more information see [Managing Users and User Groups](users.md).
 
 [创建将添加到](members.md#create-new-member) “学员”组（“社区滑雪课”组）的成员。
 
-* **ID**: 莱
-* **电子邮件**: riley.taylor@mailinator.com
-* **密码**: 口令
-* **确认密码**: 口令
-* **名字**: 莱利
-* **姓氏**: 泰勒
+* **ID**:莱
+* **电子邮件**:riley.taylor@mailinator.com
+* **密码**:口令
+* **确认密码**:口令
+* **名字**:莱利
+* **姓氏**:泰勒
 
 ### Sidney Croft —— 登记者 {#sidney-croft-enrollee}
 
 [创建将添加到](members.md#create-new-member) “社区滑雪课”组的第二个成员。
 
-* **ID**: 西德
-* **电子邮件**: sidney.croft@mailinator.com
-* **密码**: 口令
-* **确认密码**: 口令
-* **名字**: 西德尼
-* **姓氏**: 克罗夫特
+* **ID**:西德
+* **电子邮件**:sidney.croft@mailinator.com
+* **密码**:口令
+* **确认密码**:口令
+* **名字**:西德尼
+* **姓氏**:克罗夫特
 
 ### Quinn Harper - Enablement Resource联系人和版主 {#quinn-harper-enablement-resource-contact-and-moderator}
 
 [创建将在](members.md#create-new-member) “社区站点”成员组中添加到该站点的成员。 此会员资格将允许在为站点创建启 [用资源时](resources.md#settings) ，将该成员分配为启用资源联系人。
 
-* **ID**: 奎恩
-* **电子邮件**: quinn.harper@mailinator.com
-* **密码**: 口令
-* **确认密码**: 口令
-* **名字**: 奎恩
-* **姓氏**: 哈珀
+* **ID**:奎恩
+* **电子邮件**:quinn.harper@mailinator.com
+* **密码**:口令
+* **确认密码**:口令
+* **名字**:奎恩
+* **姓氏**:哈珀
 
 ### 添加用户组——社区滑雪课 {#add-a-user-group-community-ski-class}
 
 [添加一个名为](members.md#create-new-group) Community Ski Class的新组。
 
-* **ID**: 社区滑雪课
-* **名称**: 社区滑雪课
-* **描述**: 分配启动资源的示例组
+* **ID**:社区滑雪课
+* **名称**:社区滑雪课
+* **描述**:分配启动资源的示例组
 * **将成员添加到组** “添加”:
 
    * 莱
@@ -173,7 +173,7 @@ For more information see [Managing Users and User Groups](users.md).
 
 ### 社区滑雪类属性 {#community-ski-class-properties}
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![滑雪级属性](assets/ski-class-properties.png)
 
 >[!NOTE]
 >
@@ -201,12 +201,12 @@ For more information see [Managing Users and User Groups](users.md).
 
 * 在对话 `Create New User` 框中输入：
 
-   * **ID&amp;ast;**: 天狼星
-   * **电子邮件地址**: sirius.nilson@mailinator.com
-   * **口令&amp;ast;**: 口令
-   * **确认密码&amp;ast;**: 口令
-   * **名字**: 天狼星
-   * **姓氏&amp;ast;**: 尼尔森
+   * **ID&amp;ast;**:天狼星
+   * **电子邮件地址**:sirius.nilson@mailinator.com
+   * **口令&amp;ast;**:口令
+   * **确认密码&amp;ast;**:口令
+   * **名字**:天狼星
+   * **姓氏&amp;ast;**:尼尔森
 
 ### 将Sirius分配给社区管理员组 {#assign-sirius-to-community-administrators-group}
 
@@ -219,5 +219,5 @@ For more information see [Managing Users and User Groups](users.md).
 
 * Select **[!UICONTROL Save]**
 
-![chlimage_1-419](assets/chlimage_1-419.png)
+![管理员角色](assets/admin-role.png)
 
