@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 618464d1e01986786a47a4e9c6ecce87e2a77ec3
+source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 [继续在发布实例](/help/communities/extend-sample-page.md#publish-sample-page) （仍以同一用户身份登录）上体验，现在可以刷新发布环境中的页面，以视图修改以删除头像：
 
-![chlimage_1-81](assets/chlimage_1-81.png)
+![视图修改内容](assets/view-modified-content.png)
 
 ### 注释扩展包示例 {#sample-comment-extension-package}
 
