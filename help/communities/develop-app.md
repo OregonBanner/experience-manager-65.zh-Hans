@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: bbaf9afbf009281c0009bf3895e82988540e15f0
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 3%
@@ -44,7 +44,7 @@ ht-degree: 3%
 1. 单击绿色 **[!UICONTROL +添加]** 按钮。
 1. 单击“ **[!UICONTROL 全部保存]**”。
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![page-script](assets/page-script.png)
 
 ### 头部和身体脚本 {#head-and-body-scripts}
 
@@ -128,13 +128,13 @@ ht-degree: 3%
 
 当侧面板两者切换为打开且窗口足够宽以便同时显示侧面内容和页面内容时，会显示“资源／组件”侧面板。
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![视图页](assets/view-page.png)
 
 * 经典UI: [http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
 
 以下是播放页面在经典UI中的显示方式，包括内容查找器(cf):
 
-![chlimage_1-233](assets/chlimage_1-233.png)
+![播放页视图](assets/play-page-view.png)
 
 ## 社区组件 {#communities-components}
 
