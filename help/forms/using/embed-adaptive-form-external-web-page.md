@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: ade3747ba608164a792a62097b82c55626245891
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 1. 在嵌入代码中：
 
-   * 使用自适应 *表单的发布* URL的路径更改options.path变量的值。 如果AEM服务器在上下文路径上运行，请确保URL包含上下文路径。 例如，上述代码和adaptive from驻留在同一aem forms服务器上，因此该示例使用adaptive form /content/forms/af/locbasic.html的上下文路径。
+   * 使用自适应 *表单的发布* URL的路径更改options.path变量的值。 如果AEM服务器在上下文路径上运行，请确保URL包含上下文路径。 始终提及自适应表单的完整名称（包括扩展名）。   例如，上述代码和adaptive from驻留在同一AEM forms服务器上，因此该示例使用自适应表单/content/forms/af/locbasic.html的上下文路径。
    * 将 *options.dataRef替换为* 要随URL传递的属性。 您可以使用dataref变量预 [填自适应表单](/help/forms/using/prepopulate-adaptive-form-fields.md)。
    * 将 *options.themePath替换* ，为在自适应表单中配置的主题以外的主题的路径。 或者，也可以使用request属性指定主题路径。
    * CSS_Selector是嵌入自适应表单的表单容器的CSS选择器。 例如，.customafsection css类是上例中的CSS选择器。
