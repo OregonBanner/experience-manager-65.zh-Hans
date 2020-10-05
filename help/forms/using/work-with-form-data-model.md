@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 39ae3d8348b0c149c047c9fb3ac2eb673b610645
 workflow-type: tm+mt
-source-wordcount: '4102'
+source-wordcount: '4162'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # 使用表单数据模型{#work-with-form-data-model}
 
-![](do-not-localize/data-integeration.png)
+![数据集成](do-not-localize/data-integeration.png)
 
 表单数据模型编辑器提供了用于编辑和配置表单数据模型的直观用户界面和工具。 使用编辑器，您可以在表单数据模型中添加和配置来自关联数据源的数据模型对象、属性和服务。 此外，它允许您创建数据模型对象和属性（无需数据源），并在以后将它们与相应的数据模型对象和属性绑定。 您还可以为数据模型对象属性生成和编辑示例数据，在预览时可以使用这些数据预填自适应表单和交互式通信。 您可以测试在表单数据模型中配置的数据模型对象和服务，以确保它与数据源正确集成。
 
-如果您不熟悉表单数据集成，并且尚未配置数据源或创建表单数据模型，请参阅以下主题：
+如果您是Forms数据集成的新手，但尚未配置数据源或创建表单数据模型，请参阅以下主题：
 
 * [AEM Forms数据集成](/help/forms/using/data-integration.md)
 * [配置数据源](/help/forms/using/configure-data-sources.md)
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必须是fdm-author **和forms** - **user组的成员** ，才能创建和使用表单数据模型。 请与AEM管理员联系以成为用户组的成员。
+>您必须是fdm-author **和forms** - **user组的成员** ，才能创建和使用表单数据模型。 请与AEM管理员联系，成为组的成员。
 
 ## 添加数据模型对象和服务 {#add-data-model-objects-and-services}
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 要添加数据模型对象和服务，请执行以下操作：
 
-1. 登录AEM作者实例，导航到 **[!UICONTROL 表单>数据集成]**，然后打开要在其中添加数据模型对象的表单数据模型。
+1. 登录AEM作者实例，导航到 **[!UICONTROL Forms>数据集成]**，然后打开要在其中添加数据模型对象的表单数据模型。
 1. 在“数据源”窗格中，展开数据源以视图可用的数据模型对象和服务。
 1. 选择要添加到表单数据模型的数据模型对象和服务，然后点按添 **[!UICONTROL 加选定]**。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 要创建没有数据源的数据模型对象，请执行以下操作：
 
-1. 登录AEM作者实例，导航到 **[!UICONTROL 表单>数据集成]**，然后打开要在其中创建数据模型对象或实体的表单数据模型。
+1. 登录AEM作者实例，导航到 **[!UICONTROL Forms>数据集成]**，然后打开要在其中创建数据模型对象或实体的表单数据模型。
 1. 点按 **[!UICONTROL 创建实体]**。
 1. 在“创建数据模型”对话框中，指定数据模型对象的名称，然后点按“添 **[!UICONTROL 加”]**。 数据模型对象被添加到表单数据模型。 请注意，新添加的数据模型对象未绑定到数据源，并且没有任何属性，如下图所示。
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
    在表单数据模型中配置的数据模型对象可用于基于表单数据模型的自适应表单的内容浏览器中的“数据模型对象”选项卡。 在两个数据模型对象之间添加关联时，您要关联的数据模型对象嵌套在您要从“数据模型对象”(Data Model Objects)选项卡中关联的数据模型对象下。 如果嵌套数据模型是顶级对象，它也将单独显示在“数据模型对象”(Data Model Objects)选项卡中。 因此，您将看到它的两个条目，一个在嵌套层次结构内部，另一个在嵌套层次结构外部，这可能会使表单作者感到困惑。 要使关联的数据模型对象仅显示在嵌套层次结构中，请禁用“顶级对象”属性。
 
-1. 为所选数据模型对象选择读取和写入服务。 出现服务的参数。
+1. 为所选数据模型对象选择“读取和写入”服务。 出现服务的参数。
 
    ![读写服务](assets/read-write-services.png)
 
@@ -163,7 +163,7 @@ ht-degree: 0%
 
 ### 绑定读取服务参数 {#bindargument}
 
-根据绑定值将读取服务参数绑定到用户用户档案属性、请求属性或文本值。 该值作为参数传递到服务，以从数据源获取与指定值关联的详细信息。
+根据绑定值将Read服务参数绑定到用户用户档案属性、请求属性或文本值。 该值作为参数传递到服务，以从数据源获取与指定值关联的详细信息。
 
 #### Literal value {#literal-value}
 
@@ -175,11 +175,11 @@ ht-degree: 0%
 
 #### 用户配置文件属性 {#user-profile-attribute}
 
-从“ **[!UICONTROL 绑定到]** ”下 **[!UICONTROL 拉菜单中选]** 择“用户用户档案 **[!UICONTROL 属性”，并在“绑定值”字段中输]** 入属性名。 登录到AEM实例的用户的详细信息将基于属性名称从数据源检索。
+从“ **[!UICONTROL 绑定到]** ”下 **[!UICONTROL 拉菜单中选]** 择“用户用户档案 **[!UICONTROL 属性”，并在“绑定值”字段中输]** 入属性名。 登录AEM实例的用户的详细信息基于属性名称从数据源检索。
 
 在“绑定值”字段中指 **[!UICONTROL 定的属性名]** ，必须包括完整的绑定路径，直到用户的属性名。 打开以下URL以访问CRXDE上的用户详细信息：
 
-https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
+`https://[server-name]:[port]/crx/de/index.jsp#/home/users/`
 
 ![用户个人资料](assets/binding_crxde_user_profile_new.png)
 
@@ -195,15 +195,29 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 1. 从“ **[!UICONTROL 绑定到]** ” **[!UICONTROL 下拉菜单中选择]** “请求属性”，并在“绑定值”字段 **[!UICONTROL 中输入属性名]** 。
 
-1. 打开head.jsp以定义CRXDE上的属性详细信息：\
-   `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. 为head [](../../../help/sites-developing/overlays.md) .jsp创建叠加。 要创建叠加，请打开CRX DE并将文 `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` 件复制到 `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
-1. 在head.jsp文件中包含以下文本：
+   >[!NOTE]
+   >
+   > * 如果使用静态模板，请在以下位置叠加head.jsp:/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp
+   > * 如果使用可编辑的模板，请在以下位置叠加aftemplatedpage.jsp:/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp
 
-   ```jsp
+
+1. 设置 [!DNL paramMap] 请求属性。 例如，在apps文件夹的。jsp文件中包含以下代码：
+
+   ```javascript
    <%Map paraMap = new HashMap();
     paraMap.put("<request_attribute>",request.getParameter("<request_attribute>"));
-    request.setAttribute("paramMap",paraMap);%>
+    request.setAttribute("paramMap",paraMap);
+   ```
+
+   例如，使用以下代码从数据源检索petid的值：
+
+
+   ```javascript
+   <%Map paraMap = new HashMap();
+   paraMap.put("petId",request.getParameter("petId"));
+   request.setAttribute("paramMap",paraMap);%>
    ```
 
 根据在请求中指定的属性名称从数据源检索详细信息。
@@ -249,7 +263,7 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
    依赖项读取服务的默认参数是dependentid
 
-   但是，参数必须是关联数据模型对象之间的通用属性，在本例中为 `Employeeid`。 因此，该参 `Employeeid` 数必须绑定到Employee数据模 `id` 型对象的属性，才能从Dependents数据模型对象中获取关联的依赖项详细信息。
+   但是，参数必须是关联数据模型对象之间的公用属性，本例中为 `Employeeid`。 因此，该参 `Employeeid` 数必须绑定到Employee数据模 `id` 型对象的属性，才能从Dependents数据模型对象中获取关联的依赖项详细信息。
 
    ![add-association-example-2](assets/add-association-example-2.png)
 
@@ -277,9 +291,9 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 1. 选中表单数据模型中数据模型对象、属性或服务旁的复选框。
 1. 点按 **[!UICONTROL 编辑属性]**。 此时 **[!UICONTROL 将打开选定]** 模型对象、属性或服务的“编辑属性”(Edit Properties)窗格。
 
-   * **数据模型对象**: 指定读写服务和编辑参数。
-   * **属性**: 指定属性的类型、子类型和格式。 您还可以指定选定属性是否是数据模型对象的主键。
-   * **服务**: 指定服务的输入模型对象、输出类型和参数。 对于Get服务，您可以指定它是否应返回阵列。
+   * **数据模型对象**:指定读写服务和编辑参数。
+   * **属性**:指定属性的类型、子类型和格式。 您还可以指定选定属性是否是数据模型对象的主键。
+   * **服务**:指定服务的输入模型对象、输出类型和参数。 对于Get服务，您可以指定它是否应返回阵列。
 
    ![edit-properties-service](assets/edit-properties-service.png)
 
@@ -407,9 +421,9 @@ https://&lt;server-name>:&lt;port number>/crx/de/index.jsp#/home/users/
 
 该标志可以设置为以下任意值：
 
-* **完整**: FDM根据所有约束执行验证
-* **关闭**: 无验证
-* **基本**: FDM根据“必需”和“可为空”约束执行验证
+* **完整**:FDM根据所有约束执行验证
+* **关闭**:无验证
+* **基本**:FDM根据“必需”和“可为空”约束执行验证
 
 如果未为标志设置任何 `ValidationOptions`值， **则对输入数** 据执行BASIC验证。
 
