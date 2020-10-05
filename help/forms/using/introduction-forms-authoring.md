@@ -10,9 +10,9 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
+source-git-commit: 42386f6e580d85efb972f2e63c5ab89112b3f734
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3145'
 ht-degree: 3%
 
 ---
@@ -146,7 +146,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>文件附件</td>
-   <td><p>添加一个按钮，允许用户浏览支持文档并将其附加到表单。 可将多个文件附加到文件附件组件。</p> <p><strong> 注意: </strong><ul> <li> 要将多个文件附加到在Apple Safari浏览器中打开的文件附件组件，请逐个选择并附加文件。 不能同时选择并附加多个文件。</li> <li>文件附件组件支持为Adobe Sign启用的自适应表单中的预定义文件格式集。 有关详细信息，请参 <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">阅支持的文件格式</a>。 </li> </ul></p> </td>
+   <td><p>添加一个按钮，允许用户浏览支持文档并将其附加到表单。 可将多个文件附加到文件附件组件。</p> <p><strong> 注意: </strong><ul> <li> 该组件不支持附加文件名以字符(.)开头、包含字符\ / :* ? " &lt; &gt; |;% $，或包含为Windows操作系统保留的特殊文件名，如nul、prn、con、lpt或com。 </li> <li> 要将多个文件附加到在Apple Safari浏览器中打开的文件附件组件，请逐个选择并附加文件。 不能同时选择并附加多个文件。</li> <li>文件附件组件支持为Adobe Sign启用的自适应表单中的预定义文件格式集。 有关详细信息，请参 <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">阅支持的文件格式</a>。 </li> </ul></p> </td>
   </tr>
   <tr>
    <td>文件附件列表</td>
