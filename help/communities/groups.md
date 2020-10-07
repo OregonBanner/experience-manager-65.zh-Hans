@@ -12,7 +12,7 @@ discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
 translation-type: tm+mt
-source-git-commit: a76707e16aa7054078bcfffe43476e4bd83d83e3
+source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 当社区站点的模板结构包括组功能时，“组”控制台 [提供创建](/help/communities/sites-console.md#step1) 社区 [组的权限](/help/communities/functions.md#groups-function)。
 
-* AEM Communities支持在其他组内嵌套组。 当新组的结构包 [含组函数时](/help/communities/tools-groups.md) ，可进行组嵌套。
+* AEM Communities支持在其他群体内嵌套群体。 当新组的结构包 [含组函数时](/help/communities/tools-groups.md) ，可进行组嵌套。
 * 仅对于作者环境，存在与站点创建向导类似的组创建向导。
 * 在发布环境下，成员是否可以创建组，在将组功能添加到社区站点结构或社区组结构时，可以配置该组。
 
@@ -32,21 +32,21 @@ ht-degree: 2%
 
 社区组的不同方面包括：
 
-* **创建**: 可以在作者上和发布实例上创建新组（可选）。
-* **控制**: 组可以是开放的或秘密的。
-* **嵌套**: 组可以包含零个或多个组。
+* **创建**:可以在作者上和发布实例上创建新组（可选）。
+* **控制**:组可以是开放的或秘密的。
+* **嵌套**:组可以包含零个或多个组。
 
 <!-- This is a 404 on helpx. Please update or remove.
 >[!NOTE]
 >
->Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.-->
+>Community groups, created in the publish environment before the [existence of the Community Groups console](/help/communities/version-history.md#featurepack1fp1), will not be listed in the Community Groups console, and thus, are not modifiable using the console.
+-->
 
 >[!NOTE]
 >
 >此“组”控制台仅可从“社区站点”控制台访问，不要与用于管理成员组的“成 [员组”](/help/communities/members.md) 控制台相混淆。
 >
 >成员组是在发布环境中注册的用户组，并通过隧道服务从作者环境 [访问它们](/help/communities/deploy-communities.md#tunnel-service-on-author)。
-
 
 ## 组创建 {#group-creation}
 
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 * 选择“ **创建组** ”按钮。
 
-### 第1步： 社区组模板 {#step-community-group-template}
+### 第1步：社区组模板 {#step-community-group-template}
 
 ![多语言社区组](assets/multi-lingual-group.png)
 
@@ -107,7 +107,7 @@ ht-degree: 2%
 
    使用下拉框选择可用的社 [区组模板](/help/communities/tools.md)。
 
-### 第2步： 设计 {#step-design}
+### 第2步：设计 {#step-design}
 
 ### COMMUNITY GROUP THEME {#community-group-theme}
 
@@ -138,7 +138,7 @@ ht-degree: 2%
    * 小于浏览器的宽度，图像将水平重复。
    * 图像的宽度大于浏览器的宽度后，图像将被裁剪。
 
-### 第3步： 设置 {#step-settings}
+### 第3步：设置 {#step-settings}
 
 **协调**
 
@@ -188,7 +188,7 @@ ht-degree: 2%
 
 ![缩略图](assets/thumbnail-image.png)
 
-### 第4步： 创建组 {#step-create-group}
+### 第4步：创建组 {#step-create-group}
 
 ![社区创建组](assets/community-create-group.png)
 
@@ -202,8 +202,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->按照步骤1中的指定，用户组将以所有语 [言创建： 社区组模板](/help/communities/groups.md#step-community-group-template) （位于相应社区站点的“社区组”控制台中），使用其他可用的社区组语言。
-
+>按照步骤1中的指定，用户组将以所有语 [言创建：社区组模板](/help/communities/groups.md#step-community-group-template) （位于相应社区站点的“社区组”控制台中），使用其他可用的社区组语言。
 
 ## 作者组内容 {#author-group-content}
 
@@ -256,15 +255,13 @@ BASIC面板允许修改
 >
 >例如，重命名URL不会移动现有UGC，因此具有“丢失”UGC的效果。
 
-
 >[!CAUTION]
 >
 >组函数不 *能是* 站 *点结构中* 的第一个，也不能是唯一的函数。
 >
 >任何其他函数(如页 [面函数](/help/communities/functions.md#page-function))必须首先包含并列出。
 
-
-**示例： 向子社区（组）结构添加日历功能**
+**示例：向子社区（组）结构添加日历功能**
 
 ![community-group-add-calendar](assets/community-group-add-calendar.png)
 
@@ -304,7 +301,6 @@ MEMBERSHIP [面板](#membership) (MEMBERSHIP)仅供参考。 无论是可选的�
 >父社区站点和父组应已发布。
 >
 >社区站点和嵌套组应以自上而下的方式发布。
-
 
 ## 删除组 {#delete-the-group}
 
