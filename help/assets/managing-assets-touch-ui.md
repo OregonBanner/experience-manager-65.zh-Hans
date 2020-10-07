@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b76d93ada35f5d054c1d07bf1a7dd9deaaaec1ee
+source-git-commit: 0c6a1afff62d4a962edfc8c2e6574d65a18534ac
 workflow-type: tm+mt
 source-wordcount: '9619'
 ht-degree: 7%
@@ -452,7 +452,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 ## 移动和重命名资产 {#moving-or-renaming-assets}
 
-当您将资产（或文件夹）移动到其他位置时，资产（或文件夹）不会重复，这与复制资产时不同。 资产（或文件夹）将放置在目标位置，并从源位置删除。 您还可以在将资产移至新位置时对其重命名。
+当您将资产（或文件夹）移动到其他位置时，与复制资产时不重复的资产（或文件夹）。 资产（或文件夹）将放置在目标位置，并从源位置删除。 您还可以在将资产移至新位置时对其重命名。
 如果您要将已发布的资产移动到其他位置，则可以选择重新发布资产。 默认情况下，已发布资产上的移动操作会自动取消发布该资产。 如果作者在移动资产时选择了重新发 [!UICONTROL 布选项] ，则已移动的资产将重新发布。
 
 ![您可以在移动已发布的资产时重新发布它](assets/republish-on-move.png)
