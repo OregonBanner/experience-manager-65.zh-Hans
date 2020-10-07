@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0c6a1afff62d4a962edfc8c2e6574d65a18534ac
+source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
 workflow-type: tm+mt
-source-wordcount: '9619'
+source-wordcount: '9613'
 ht-degree: 7%
 
 ---
@@ -496,7 +496,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 ### 使用拖动操作移动资产 {#move-using-drag}
 
-您可以将资产（或文件夹）移动到同级文件夹、 [!UICONTROL Lightbox] 收藏集或其他收藏集，方法是将它们拖动到目标位置，而不 [!UICONTROL 是使用] 用户界面中的移动选项。 但是，此操作只能在列表视图中执行。
+您可以将资产（或文件夹）拖动到目标位置，而不是使用用户界面中的移动 [!UICONTROL 选项] ，从而将它们移动到同级文件夹。 但是，此操作只能在列表视图中执行。
 
 通过拖动资产来移动资产不会打 [!UICONTROL 开移动资产] ，因此您在移动资产时不会选择重命名资产。 此外，在移动资产时，会通过拖动重新发布已发布的资产，而无需征求用户批准重新发布。
 
