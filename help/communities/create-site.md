@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 2%
@@ -97,7 +97,6 @@ ht-degree: 2%
 >
 >对于生产环境，必须创建自定义Facebook和Twitter应用程序。 请参 [阅使用Facebook和Twitter进行社交登录](/help/communities/social-login.md)。
 
-
 ![社区站点设置](assets/site-settings.png)
 
 #### TAGGING {#tagging}
@@ -125,7 +124,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >[隧道服务](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) 允许选择仅在发布环境中存在的成员和组。
-
 
 ![新站点中的用户角色](assets/site-admin-1.png)
 
@@ -228,9 +226,6 @@ Select **Create.**
 >1. 选择 **[!UICONTROL 确定]**。
 >1. （可选）选择 **[!UICONTROL 清除]** 或强 **[!UICONTROL 制重试]** ，以重置复制队列。
 
->
-
-
 
 ### Select Publish {#select-publish}
 
@@ -318,7 +313,6 @@ Select **Create.**
 >
 >要禁用，只需在属性 `sling:match` 值前添加“x”- —— 前缀 `xlocalhost.4503/$` ，然后 **保存全部**。
 
-
 ![可选步骤](assets/optional-steps.png)
 
 #### 疑难解答：保存映射时出错 {#troubleshooting-error-saving-map}
@@ -342,5 +336,3 @@ Select **Create.**
 >[!NOTE]
 >
 >如果不熟悉AEM，请视图有关基本 [操作的文档](/help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
-
