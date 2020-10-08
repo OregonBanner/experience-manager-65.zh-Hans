@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 0%
@@ -52,7 +52,6 @@ AEM Communities提供 [试用许可证](../../help/sites-administering/tc-msconf
 >
 >对于生产系统，需要获得许可的翻译服务。 如果未获得许可，则应关闭默认 [翻译服务](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)。
 
-
 ## UGC的全球翻译 {#global-translation-of-ugc}
 
 当网站有多个语 [言副本](../../help/sites-administering/tc-prep.md)，默认翻译服务不会识别在一个站点上输入的UGC可能与在另一个站点上输入的UGC相关，因为当UGC实质上是由同一组件（包含该组件的页面的语言副本）生成时。
@@ -70,7 +69,6 @@ AEM Communities提供 [试用许可证](../../help/sites-administering/tc-msconf
 >虽然UGC仍位于公 [共存储](working-with-srp.md)，但它位于特定于语言的UGC位置下，而配置全局转换后添加的新内容则从全局共享存储位置检索。
 >
 >没有迁移工具可将特定语言的内容移动或合并到全局共享存储中。
-
 
 ### 翻译集成配置 {#translation-integration-configuration}
 
@@ -145,7 +143,6 @@ AEM Communities提供 [试用许可证](../../help/sites-administering/tc-msconf
 >首选语言是当站点用户档案登录并指定了语言首选项时在用户的访客中设置的语言首选项。
 >
 >当站点访客为匿名或在其用户档案中未指定语言首选项时，首选语言是页面模板的基本语言。
-
 
 ### 用户首选项 {#user-preference}
 
