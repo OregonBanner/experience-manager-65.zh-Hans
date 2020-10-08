@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
-source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 2%
@@ -27,7 +27,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >不支持匿名发布审阅。 站点访客必须注册（成为会员）并登录才能参加。 已签名的访客可随时更新其审阅。
-
 
 ## Adding a Review to a Page {#adding-a-review-to-a-page}
 
@@ -75,7 +74,6 @@ ht-degree: 2%
 >
 >如果在“必需评级 **[!UICONTROL ”选项卡上输入了未在“允]** 许评级”选项卡上 **[!UICONTROL 指定的项]** ，则该项目不会包括在要评级的项中。
 
-
 在“审 **[!UICONTROL 阅]** ”选项卡下，指定如何处理审阅。
 
 ![审核](assets/configure-review3.png)
@@ -92,7 +90,7 @@ ht-degree: 2%
 
    如果选中此项，则允许上传文件附件以进行审阅。 默认为未选中。
 
-* **最大文件大小&#x200B;**
+* **最大文件大小**
 
    仅当选中“允 **[!UICONTROL 许文件上传]** ”时相关。 此字段限制已上载文件的大小（以字节为单位）。 默认值为10 MB。
 
@@ -169,7 +167,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >“平均值”反映摘要审阅的“允许评级”选项卡上列出的第一个项目的投票。
-
 
 ### 配置审阅摘要（显示） {#configuring-reviews-summary-display}
 
