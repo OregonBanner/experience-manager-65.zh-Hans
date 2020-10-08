@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -224,15 +224,14 @@ UGC在JSRP上的基本位置是 `/content/usergenerated/asi/jcr/`。
 >此示例不遵循以下最佳实践：
 >
 >* 评分规则名称应全局唯一；他们不应以同一个名字结尾。
-   >  不要执行 *的* 示例：
-   >  /libs/settings/community/scommunity/scorning/rules/site1/forums-scorning
-   >  /libs/settings/community/scorning/rules/site2/forums-scorning
-   >
-   >
-* 为不同的AEM站点创建唯一的徽章图像
-
 >
-
+>  
+不要执行 *的* 示例：
+>
+>  /libs/settings/community/scommunity/scorning/rules/site1/forums-scorning
+>  /libs/settings/community/scorning/rules/site2/forums-scorning
+>
+>* 为不同的AEM站点创建唯一的徽章图像
 
 
 ### 访问评分UGC {#access-scoring-ugc}
