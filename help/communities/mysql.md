@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: 5d196d1f6d5f94f2d3ef0d4461cfe38562f8ba8c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 3%
@@ -107,7 +107,7 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装模式和
 SQL脚本是使用创作实例上的CRXDE Lite获取的。 必 [须安装](deploy-communities.md#scorm) SCORM包：
 
 1. 浏览至CRXDE Lite:
-   * 例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
+   * 例如， [http://localhost:4503/crx/de](http://localhost:4502/crx/de)
 1. 展开文件 `/libs/social/config/scorm/` 夹
 1. 下载 `database_scormengine.sql`
 1. 下载 `database_scorm_integration.sql`
@@ -140,11 +140,8 @@ Follow the steps below (
 >* [JDBC配置](#configure-jdbc-connections)
 >* [SCORM配置](#configure-scorm)
 
->
 
-
-
-#### 第1步： 打开SQL文件 {#step-open-sql-file}
+#### 第1步：打开SQL文件 {#step-open-sql-file}
 
 在MySQL Workbench中
 
@@ -156,7 +153,7 @@ Follow the steps below (
 
 ![scrom-database](assets/scrom-database.png)
 
-#### 第2步： 执行SQL脚本 {#step-execute-sql-script}
+#### 第2步：执行SQL脚本 {#step-execute-sql-script}
 
 在“工作台”窗口中，对于在步骤1中打开的文件，选择 `lightening (flash) icon` 要执行脚本的文件。
 
@@ -170,7 +167,7 @@ Follow the steps below (
 
 ![scrom-database2](assets/scrom-database2.png)
 
-#### 结果： scormingedb {#result-scormenginedb}
+#### 结果：scormingedb {#result-scormenginedb}
 
 安装和刷新模式后， `scormenginedb` 将显示该内容。
 
@@ -195,10 +192,10 @@ Day Commons JDBC连接 **池的OSGi配置** ，配置MySQL JDBC驱动程序。
 
 * 输入以下值：
    * **[!UICONTROL JDBC驱动程序类]**: `com.mysql.jdbc.Driver`
-   * **DBC connection URIJ **:`jdbc:mysql://localhost:3306/aem63reporting`如果MySQL服务器与“this” AEM服务器不相同，则指定服务器代替localhost。
-   * **[!UICONTROL 用户名]**: 为MySQL服务器输入已配置的用户名（如果不是“root”）或根。
-   * **[!UICONTROL 密码]**: 如果没有为MySQL设置口令，请清除此字段，否则，请输入MySQL用户名的已配置口令。
-   * **[!UICONTROL 数据源名称]**: 为MySQL连接 [输入的名](#new-connection-settings)称，例如“enablement”。
+   * **DBC connection URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` 如果MySQL服务器与“this” AEM服务器不相同，则指定服务器代替localhost。
+   * **[!UICONTROL 用户名]**:为MySQL服务器输入已配置的用户名（如果不是“root”）或根。
+   * **[!UICONTROL 密码]**:如果没有为MySQL设置口令，请清除此字段，否则，请输入MySQL用户名的已配置口令。
+   * **[!UICONTROL 数据源名称]**:为MySQL连接 [输入的名](#new-connection-settings)称，例如“enablement”。
 * 选择&#x200B;**[!UICONTROL 保存]**。
 
 ## 配置Scorm {#configure-scorm}
@@ -209,7 +206,7 @@ AEM CommunitiesScormEngine服 **务的OSGi配置** ，为启用社区使用MySQL
 
 安装SCORM包时 [存在此配](deploy-communities.md#scorm-package) 置。
 
-所有发布和作者实例都指向同一MySQL服务器。
+所有发布和作者实例都指向同一个MySQL服务器。
 
 当MySQL在AEM以外的服务器上运行时，必须在ScormEngine服务中指定服务器主机名，而不是“localhost”，该服务通常从JDBC连接配 [置中填充](#configure-jdbc-connections) 。
 
@@ -224,12 +221,12 @@ AEM CommunitiesScormEngine服 **务的OSGi配置** ，为启用社区使用MySQL
 
 * 验证以下参数值是否与JDBC连接 [配置一致](#configurejdbcconnectionspool) :
    * **[!UICONTROL JDBC连接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB是* SQL脚本中的默认数据库名称
-   * **[!UICONTROL 用户名]**: Root或输入MySQL服务器的已配置用户名（如果不是“root”）
-   * **[!UICONTROL 密码]**: 如果没有为MySQL设置口令，请清除此字段，否则，请输入为MySQL用户名配置的口令
+   * **[!UICONTROL 用户名]**:Root或输入MySQL服务器的已配置用户名（如果不是“root”）
+   * **[!UICONTROL 密码]**:如果没有为MySQL设置口令，请清除此字段，否则，请输入为MySQL用户名配置的口令
 * 关于以下参数：
-   * **[!UICONTROL Scorm用户密码]**: 不编辑
+   * **[!UICONTROL Scorm用户密码]**:不编辑
 
-      仅供内部使用： 它供AEM Communities使用的特殊服务用户与scorm引擎通信。
+      仅供内部使用：它供AEM Communities使用的特殊服务用户与scorm引擎通信。
 * Select **[!UICONTROL Save]**
 
 ### Adobe花岗石CSRF滤池 {#adobe-granite-csrf-filter}
