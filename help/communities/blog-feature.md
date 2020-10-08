@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8361f65f52c2a67658ef1b7b7615df149208777b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 6%
@@ -48,7 +48,6 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 >组件 `Journal` 和 `Journal Sidebar` 标题 `Blog` 为和 `Blog Sidebar`。
 >
 >AEM 6.0及更早版本中的博客功能现已删除。 它基于模板，并且仅允许作者在创作环境中创建内容。
-
 
 ## 将博客组件添加到页面 {#adding-blog-components-to-a-page}
 
@@ -112,8 +111,8 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 >[!NOTE]
 >
 >日志标题用于自动创建博客的URL。
+>
 >您在此指定的日志标题中最多使用50个字符（除5个字符外，还有5个字符可用于唯一性）来创建博客的URL。
-
 
 * **日志描述**
 
