@@ -8,7 +8,7 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c6b8e184042394d99ceb099c918b81e2cce49497
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4742'
 ht-degree: 1%
@@ -788,10 +788,10 @@ IMS配置完成后，我们可以继续检查AEM中的云配置。 如果配置�
 
 1. 打开服务定义，并启用在工作流中调用的选定服务。
 
->[!NOTE]
-正因为用户在“配置管理器”页面中启用了服务，用户仍需要设置服务配置才能与请求的外部服务通信。
+   >[!NOTE]
+   正因为用户在“配置管理器”页面中启用了服务，用户仍需要设置服务配置才能与请求的外部服务通信。
 
-![we gov forms package](assets/aftia-configuration-options.jpg)
+   ![we gov forms package](assets/aftia-configuration-options.jpg)
 
 1. 完成后，单击保存按钮以保存设置。
 
