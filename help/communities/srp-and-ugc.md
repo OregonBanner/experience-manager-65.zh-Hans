@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
-source-git-commit: 7acd89d830b9e758eec1b5a4beb18c22e4d12dcf
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -46,7 +46,6 @@ SRP API不是抽象类，它是接口。 不应轻率地实施自定义实施，
 >
 >有关替换实用程序，请参 [阅SocialUtils重构](socialutils.md)。
 
-
 ## 访问UGC的实用方法 {#utility-method-to-access-ugc}
 
 要访问UGC，请使用SocialResourceUtilities包中的方法，该方法返回适合从SRP访问UGC的路径，并替换SocialUtils包中已弃用的方法。
@@ -66,14 +65,13 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-有关其他SocialUtils替换项，请参 [阅SocialUtils重构](socialutils.md)。
+有关其他SocialUtils替换，请参 [阅SocialUtils重构](socialutils.md)。
 
 有关编码指南，请 [访问使用SRP访问UGC](accessing-ugc-with-srp.md)。
 
 >[!CAUTION]
 >
 >路径resourceToUGCStoragePath()返回 *不适* 用于 [ACL检查](srp.md#for-access-control-acls)。
-
 
 ## 访问ACL的实用方法 {#utility-method-to-access-acls}
 
@@ -102,7 +100,6 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 >
 >resourceToACLPath()返回的路 *径不* 适 [于访](#utility-method-to-access-acls) 问UGC本身。
 
-
 ## UGC相关存储位置 {#ugc-related-storage-locations}
 
 在使用JSRP或MSRP进行开发时，以下存储位置描述可能会有所帮助。 当前没有UI可访问存储在ASRP中的UGC，因为存在JSRP([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md))和MSRP（MongoDB工具）。
@@ -129,11 +126,10 @@ UGC不在这两个位置创建，只应使用调用SRP API的实 [用程序方](
 * 根路径 = `/content/usergenerated/asi/srp-choice`
 * JSRP的UGC节点= `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*请注意*，对于JSRP,UGC节点 *将仅存在* 在输入它的AEM实例（作者或发布）上。 如果在发布实例中输入，则无法通过创作时的审核控制台进行审核。
+*请注意*，对于JSRP,UGC节 *点将仅存* 在在输入它的AEM实例（作者或发布）上。 如果在发布实例中输入，则无法通过创作时的审核控制台进行审核。
 
 ## 相关信息 {#related-information}
 
 * [存储资源提供者概述](srp.md) -简介和存储库使用概述。
 * [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南。
 * [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法。
-
