@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 44%
@@ -29,12 +29,11 @@ ht-degree: 44%
 
 * [AEM Communities概述](/help/communities/overview.md)
 * [AEM Communities 快速入门](/help/communities/getting-started.md)
-* [AEM Communities支持入门](/help/communities/getting-started-enablement.md)
+* [AEM Communities教育入门](/help/communities/getting-started-enablement.md)
 
 >[!NOTE]
 >
->如果不熟悉创作环境，请视图有关基本操 [作的文档](/help/sites-authoring/basic-handling.md) ，以 [及页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
+>如果不熟悉创作环境，请视图有关基本 [操作的文档](/help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
 
 ## 可用社区组件 {#available-communities-components}
 
@@ -82,7 +81,6 @@ ht-degree: 44%
 >[!NOTE]
 >
 >投票组件不再可用，并且在Experience Manager社区中受支持。
-
 
 ## 相关社区文档 {#related-communities-documentation}
 
