@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1505'
 ht-degree: 0%
@@ -158,7 +158,7 @@ Handlebars(HBS)模板文件(.hbs)与。jsp和。html模板文件类似，不同�
 
 包括组件是指在模板中添加对“非现 [有”资源](srp.md#for-non-existing-resources-ners) （无JCR节点）的引用的过程，如使用脚本语言。
 
-自AEM 6.1起，当动态包含组件而不是添加组件时，可以在作者*design *mode中编辑组件的属性。
+自AEM 6.1起，当动态包含某个组件而不是添加该组件时，可以在作者*design *mode中编辑该组件的属性。
 
 只能动态地包含少数AEM Communities组件。 它们是：
 
@@ -183,7 +183,6 @@ Handlebars(HBS)模板文件(.hbs)与。jsp和。html模板文件类似，不同�
 >[!NOTE]
 >
 >要动态地向页面添加组件（而不是在模板中添加或包含组件），请参 [阅组件侧传](sideloading.md)。
-
 
 ### Handlebars Helpers {#handlebars-helpers}
 
