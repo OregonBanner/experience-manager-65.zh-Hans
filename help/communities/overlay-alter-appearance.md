@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -61,7 +61,6 @@ comment.hbs脚本负责为每个注释创建整体HTML。
 >[!NOTE]
 >
 >更可靠的复制形式是在包管理器中创建包并 [激活](/help/sites-administering/package-manager.md#replicating-packages) 它。 可以导出和存档包。
-
 
 在全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复]** 制 **[!UICONTROL ，然后单]**&#x200B;击激活树。
 
