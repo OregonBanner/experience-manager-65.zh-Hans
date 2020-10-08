@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
-source-git-commit: 33c3126fbba4b324941338ee4d2a418d216408cd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 2%
@@ -22,8 +22,8 @@ ht-degree: 2%
 
 在本节中，您将创建以下内容：
 
-* 用 **[于在](#createthepagetemplate)**示例网站中创建内容页面的模板。
-* 用 **[于呈现网站](#create-the-template-s-rendering-component)**页面的组件和脚本。
+* 用 **[于在](#createthepagetemplate)** 示例网站中创建内容页面的模板。
+* 用 **[于呈现网站](#create-the-template-s-rendering-component)** 页面的组件和脚本。
 
 ## 创建内容模板 {#create-the-content-template}
 
@@ -42,7 +42,7 @@ ht-degree: 2%
    * 标题: `An SCF Sandbox Play Template`
    * 描述: `An SCF Sandbox template for play pages`
    * 资源类型: `an-scf-sandbox/components/playpage`
-   * 排名： &lt;leave as default>
+   * 排名：&lt;leave as default>
 
    标签用于节点名称。
 
@@ -60,7 +60,7 @@ ht-degree: 2%
 
    要添加路径，请单击加号按 `+` 钮并 `/content(/.&ast;)?` 在显示的文本框中键入。 如果使用复制／粘贴，请确保没有前导或尾部空格。
 
-   注意： 允许路径属性的值是常规 *表达式*。 具有与表达式匹配的路径的内容页面可以使用模板。 在这种情况下，常规表达式符与/content文件夹的路 **径及其** 所有子页面相匹配。
+   注意：允许路径属性的值是常规 *表达式*。 具有与表达式匹配的路径的内容页面可以使用模板。 在这种情况下，常规表达式符与/content文件夹的路 **径及其** 所有子页面相匹配。
 
    当作者在下面创建页 `/content`面时， `playpage` 标题为“SCF沙箱页面模板”的模板将显示在可用模板的列表中。
 
@@ -88,7 +88,7 @@ ht-degree: 2%
 
 创建定 *义内容* 、渲染基于播放页面模板创建的任何 [页面的组件](#createthepagetemplate)。
 
-1. 在CRXDE Lite中，右键单击，然 **`/apps/an-scf-sandbox/components`** 后单击 **[!UICONTROL 创建>组件]**。
+1. 在CRXDE Lite中，右键单击， **`/apps/an-scf-sandbox/components`** 然后单 **[!UICONTROL 击创建>组件]**。
 1. 通过将节点的名称（标签）设 *置为* playpage，组件的路径为
 
    `/apps/an-scf-sandbox/components/playpage`
