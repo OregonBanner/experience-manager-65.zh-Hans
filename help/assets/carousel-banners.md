@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 20%
@@ -243,7 +243,8 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 >[!NOTE]
 >
 >请注意，在体验片段中嵌入查看器时，轮盘横幅中不支持社交媒体共享工具。
-要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
+>
+>要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
 
 在向图像添加热点或图像映射时，切记保存您的工作。 在当前创建／编辑会话中，页面右上角附近支持撤消和重做选项。
 
@@ -311,7 +312,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 
          >[!NOTE]
          请注意，在体验片段中嵌入查看器时，轮盘横幅中不支持社交媒体共享工具。
-要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
+         要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
    您还可以预览传送横幅的外观。 请参 [阅（可选）预览传送横幅](#optional-previewing-carousel-banners)。
