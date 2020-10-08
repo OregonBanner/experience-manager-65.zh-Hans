@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 98f70093-e786-4555-8aaa-d0df4c977dc0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
@@ -120,7 +120,7 @@ ht-degree: 3%
 
 使用向导创建的社区站点结构在选中时包括消息功能。 请参 `User Management` 阅社区站 [点控制台的设置](/help/communities/sites-console.md#user-management)。
 
-### 示例代码： 收到的消息通知 {#sample-code-message-received-notification}
+### 示例代码：收到的消息通知 {#sample-code-message-received-notification}
 
 社交消息功能将事件投放到操作 `send`中， `marking read`例如 `marking delete`。 可以捕获这些事件并对事件中包含的数据采取操作。
 
@@ -132,8 +132,8 @@ ht-degree: 3%
 1. 创建 `bundle node`具有 `/apps/engage/install` 任意名称的In，如：
 
    * 符号名称: `com.engage.media.social.messaging.MessagingNotification`
-   * 名称： 入门教程消息通知
-   * 描述： 用于在用户收到消息时向其发送电子邮件通知的示例服务
+   * 名称：入门教程消息通知
+   * 描述：用于在用户收到消息时向其发送电子邮件通知的示例服务
    * 包: `com.engage.media.social.messaging.notification`
 
 1. 导航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然后：
