@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 8%
@@ -122,7 +122,7 @@ ht-degree: 8%
 
 * **允许的文件类型**
 
-   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **仅当选中“允许文件**&#x200B;上传”时，最大附加图像文件大小才相关。 上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
 
@@ -174,7 +174,6 @@ ht-degree: 8%
 >
 >可能需要同时检查和 `AllowThreaded Replies` 启用 `Allow users to Delete Comments and Topics` 对主题的注释。
 
-
 #### “用户审核”选项卡 {#user-moderation-tab}
 
 在“用 **户审核** ”选项卡下，指定如何管理已发布的主题和回复（用户生成的内容）。 有关详细信息，请参 [阅调节用户生成的内容](/help/communities/moderate-ugc.md)。
@@ -213,7 +212,7 @@ ht-degree: 8%
 
 #### 标记字段选项卡 {#tag-field-tab}
 
-在“标 **记”字段** (Tag field)选项卡下 **，根据所选的命名空间，在“设置”(Settings)选项卡下允许的情况下，** 可以应用的标记会受到限制。
+在“标 **记”字段** (Tag field)选项卡下 **，根据所选的命名空间，在“设置”(Settings)选项卡下允许的** 情况下，可应用的标记会受到限制。
 
 * **允许的命名空间**
 
