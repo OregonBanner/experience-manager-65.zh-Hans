@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -33,7 +33,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >**自定义组件**:对于AEM Communities的许可客户，SRP API可供自定义组件的开发人员使用，以便访问UGC而不考虑底层拓扑。 请参 [阅SRP和UGC Essentials](srp-and-ugc.md)。
-
 
 另请参阅：
 
@@ -68,7 +67,6 @@ JCR和OAK通常都用于引用AEM存储库。
 >有关 [示例代码和其他详细信息](srp-and-ugc.md) ，请参阅SRP和UGC Essentials。
 >
 >请参 [阅使用SRP访问UGC](accessing-ugc-with-srp.md) ，了解编码时的最佳实践。
-
 
 ### ASRP {#asrp}
 
@@ -130,7 +128,6 @@ ACL检查使用一种实用程序方法，该方法返回一条路径，用于�
 >[!CAUTION]
 >
 >由于阴影节点具有多种用途，因此存在阴影 *节点* 并不表示组件是NER。
-
 
 ### 存储位置 {#storage-location}
 
