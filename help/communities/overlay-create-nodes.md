@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 6%
@@ -25,7 +25,6 @@ ht-degree: 6%
 >[!CAUTION]
 >
 >/libs文件夹的内容从不进行编辑，因为任何重新安装或升级都可能删除或替换/libs文件夹，而/apps文件夹的内容则保持不变。
-
 
 对作 [者实](../../help/sites-developing/developing-with-crxde-lite.md) 例使用CRXDE Lite，首先在/apps文件夹中创建一个路径，该路径与/libs文件夹中叠加的组件的路径相同。
 
@@ -82,9 +81,6 @@ ht-degree: 6%
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
->
-
 
 
 叠加的自 `Type`身(属 `sling:resourceType`性)必须是相对的自引用，这样在/apps中找不到的任何内容就会在/libs中查找。
