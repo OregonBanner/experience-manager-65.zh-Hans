@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
 translation-type: tm+mt
-source-git-commit: e84c9a99ce9ec0447a5fb3e0ca5ba76b41c888cd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 6%
@@ -126,7 +126,7 @@ ht-degree: 6%
 
    ![create-resource](assets/create-resource.png)
 
-成功创建资源将返回“资源”控制台，并选中新创建的资源。 从此控制台中，可以发布、添加学员和更改其他设置。
+成功创建资源将返回“资源”控制台，并选择新创建的资源。 从此控制台中，可以发布、添加学员和更改其他设置。
 
 要上传启用资源的新版本，建议创建新资源，然后从旧版本中取消登记成员并将他们登记到新版本。
 
@@ -198,7 +198,6 @@ ht-degree: 6%
 >[!NOTE]
 >
 >您只能选择与学习路径同级别的可用资源。 例如，对于在组中创建的学习路径，只有组级别资源可用；对于在社区站点中创建的学习路径，该站点中的资源可用于添加到学习路径。
-
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
