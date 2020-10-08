@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 translation-type: tm+mt
-source-git-commit: 570c970c328ded828680baeb1b04ab4361a36226
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -47,7 +47,6 @@ ht-degree: 1%
 >[!NOTE]
 >
 >如果不熟悉AEM，请视图有关基本 [操作的文档](../../help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
-
 
 ## 安装最新的Communities版本 {#install-latest-communities-release}
 
@@ -123,7 +122,6 @@ For more information see [Managing Users and User Groups](users.md).
 >
 >相反，稍后会将它们 [分配给成员组](enablement-create-site.md#assignuserstocommunityenablemembersgroup)。
 
-
 ### Riley Taylor —— 登记者 {#riley-taylor-enrollee}
 
 [创建将添加到](members.md#create-new-member) “学员”组（“社区滑雪课”组）的成员。
@@ -178,7 +176,6 @@ For more information see [Managing Users and User Groups](users.md).
 >[!NOTE]
 >
 >在创建社区站点期间，可以将现有成员和组添加到社区站点的成员组。
-
 
 ## 社区管理员角色 {#community-administrator-role}
 
