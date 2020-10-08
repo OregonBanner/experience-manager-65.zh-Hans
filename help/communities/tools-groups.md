@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 17088abc71bb820693259088c8a9b938a43cd9d3
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 3%
@@ -33,10 +33,9 @@ ht-degree: 3%
 >
 >创建社区站点的控 [制台](/help/communities/sites-console.md)、社 [区站点模板](/help/communities/sites.md)、社 [区组模板](/help/communities/tools-groups.md)[和社区功](/help/communities/functions.md) 能的控制台仅在作者环境中使用。
 
-
 ## 组模板控制台 {#group-templates-console}
 
-要在AEM Author环境中访问组模板控制台，请执行以下操作：
+要访问AEM作者环境中的组模板控制台，请执行以下操作：
 
 * 选择工 **具 |社区 |组模板** ，从全局导航。
 
@@ -83,7 +82,6 @@ ht-degree: 3%
 >嵌套组功能自Communities FP1 [起可用](/help/communities/communities.md#latestfeaturepack)。
 >
 >仍不允许将“组”函数添加为模板中的第一个或唯一函数。
-
 
 ![组模板编辑器](assets/template-editor.png)
 
