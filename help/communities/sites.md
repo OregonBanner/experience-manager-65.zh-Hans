@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 4%
@@ -25,7 +25,6 @@ ht-degree: 4%
 >[!NOTE]
 >
 >创建社区站点的控 [制台](sites-console.md)、社 [区站点模板](sites.md)、社 [区组模板](tools-groups.md)[和社区功](functions.md) 能的控制台仅在作者环境中使用。
-
 
 ## 站点模板控制台 {#site-templates-console}
 
@@ -85,7 +84,6 @@ ht-degree: 4%
 >
 >任何其他函数(如页 [面函数](functions.md#page-function))必须首先包含并列出。
 
-
 ![站点编辑器](assets/site-editor.png)
 
 ### 组功能的组模板 {#group-templates-for-groups-function}
@@ -95,7 +93,6 @@ ht-degree: 4%
 >[!CAUTION]
 >
 >“组”函 *数不* 能是 *站点结构中* 的第一个，也不能是唯一的函数。
-
 
 ![站点功能](assets/site-functions.png)
 
