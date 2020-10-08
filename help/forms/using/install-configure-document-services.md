@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '4295'
 ht-degree: 1%
@@ -553,8 +553,7 @@ DocAssurance服务可将使用权限应用于PDF文档。 要对PDF文档应用�
 
    >[!NOTE]
    >
-   >* 在生产环境中，将您的评估凭据替换为生产凭据。 请确保在更新过期或评估凭据之前删除旧的Reader扩展凭据。
-
+   >在生产环境中，将您的评估凭据替换为生产凭据。 请确保在更新过期或评估凭据之前删除旧的Reader扩展凭据。
 
 1. 单击 **[!UICONTROL “编辑用户]** 设置” **[!UICONTROL 页面上的“保存并关]** 闭”。
 
