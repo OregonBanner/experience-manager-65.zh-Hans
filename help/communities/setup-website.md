@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
@@ -96,7 +96,7 @@ ht-degree: 1%
 
    注意：如果使用CRXDE Lite创建类型的节 `cq:Page`点，则访问控制和复制不会设置为页面的默认设置。
 
-1. 在资源管理器窗格中，选择 **[!UICONTROL Designs]** 文件夹，然后单 **[!UICONTROL 击New]** > **[!UICONTROL New Page]**。
+1. 在资源管理器窗格中，选择 **[!UICONTROL 设计文]** 件夹，然后单 **[!UICONTROL 击“新]** 建” **[!UICONTROL >“]**&#x200B;新建页面”。
 
    输入：
 
