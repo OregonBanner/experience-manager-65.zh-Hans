@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 1%
@@ -103,7 +103,6 @@ ht-degree: 1%
 >[!NOTE]
 >
 >不应将默认为该名称的 `communities`mongoDB数据库设置为用于节点存储或数据(二 [进制)存储的数据库的名称](../../help/sites-deploying/data-store-config.md)。 另请参阅 [AEM 6.5中的存储元素](../../help/sites-deploying/storage-elements-in-aem-6.md)。
-
 
 ### MongoDB复制副本集 {#mongodb-replica-set}
 
@@ -206,7 +205,6 @@ cURL -u *签名* -d *data**reindex-url*
 >[!NOTE]
 >
 >如果要重新 [索引DSRP Solr](dsrp.md)，则URL **为/services/social/datastore/rdb/reindex**
-
 
 ### MSRP重新索引示例 {#msrp-reindex-example}
 
