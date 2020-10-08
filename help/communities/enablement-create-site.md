@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 99fb808013da18ed028d59c43deab5e815169e26
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1728'
 ht-degree: 2%
@@ -123,7 +123,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >[隧道服务](/help/communities/deploy-communities.md#tunnel-service-on-author) 允许选择仅在发布环境中存在的成员和组。
-
 
 ![启用角色](assets/site-admin.png)
 
@@ -316,7 +315,6 @@ Select **Create.**
 >
 >要禁用，只需用“x” - - `sling:match` 和“全部保存” `xlocalhost.4503/$` 预 **先添加属性值**。
 
-
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 #### 疑难解答：保存映射时出错 {#troubleshooting-error-saving-map}
@@ -340,7 +338,6 @@ Select **Create.**
 >[!NOTE]
 >
 >如果不熟悉AEM，请视图有关基本 [操作的文档](/help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](/help/sites-authoring/qg-page-authoring.md)。
-
 
 ### 添加目录 {#add-a-catalog}
 
