@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 translation-type: tm+mt
-source-git-commit: 65e2b98cfd980f17302b4751127e25827decec22
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 4%
@@ -109,5 +109,3 @@ ht-degree: 4%
 >[!NOTE]
 >
 >使用是可 `cq:designPath` 选的，与使用clientlibs无关， [而使用clientlibs本质上是必需的](develop-app.md#includeclientlibsintemplate)，因为SCF组件使用clientlibs [来管理](client-customize.md#clientlibs-for-scf) 其JS和CSS。
-
-
