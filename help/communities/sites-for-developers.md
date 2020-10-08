@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
-source-git-commit: e49acbc042d84ae970058b4e99ab6f980866db5a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 1%
@@ -55,11 +55,9 @@ ht-degree: 1%
 >
 >叠加路径中的所有节点只需为类型 `Folder`。
 
-
 >[!CAUTION]
 >
 >如果为自定义模板指定了名 *称sitepage.hbs*，则将自定义所有社区站点。
-
 
 ### 自定义站点模板示例 {#custom-site-template-example}
 
