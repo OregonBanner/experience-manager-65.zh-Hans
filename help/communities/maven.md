@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: f05d7c19e3284c0627e29b9590db4749be100229
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-AEM Communities文档的此部分还包括：
+AEM Communities文件本节除了：
 
 * [使用Apache Maven构建AEM项目](../../help/sites-developing/ht-projects-maven.md)。
 
-现在有两种“优步”工件可取代个别工件：
+现在有两种“优步”工件可以取代个别工件：
 
 * AEM [Communities API jar](#communities-api-jar-artifact)
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
@@ -59,7 +59,6 @@ AEM Communities文档的此部分还包括：
 >建议您与最新的Communities版本保持同步。
 >
 >访问最 [新版本](deploy-communities.md#latest-releases) ，确定最新版本。
-
 
 ## Maven依赖关系示例 {#maven-dependency-example}
 
