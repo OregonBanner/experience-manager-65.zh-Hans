@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
-source-git-commit: 6ab91667ad668abf80ccf1710966169b3a187928
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 2%
@@ -44,7 +44,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >如果不熟悉AEM，请视图有关基本 [操作的文档](../../help/sites-authoring/basic-handling.md) ，并 [阅读页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
-
 
 ## 安装最新的Communities版本 {#install-latest-communities-release}
 
@@ -95,7 +94,7 @@ See [Configuring Email](email.md).
    * 例如，用户名“admin”/密码“admin”
 
 * 在主控制台中，导航到 **[!UICONTROL 工具]** >操 **[!UICONTROL 作]** >安 **[!UICONTROL 全性]****[!UICONTROL >用]**&#x200B;户。
-* 从“编辑 **”菜单&#x200B;**，选择“添**[!UICONTROL 加用户”]**
+* 从“编辑 **”菜单** ，选择“添 **[!UICONTROL 加用户”]**
 
 * 在对话 `Create New User` 框中输入：
 
