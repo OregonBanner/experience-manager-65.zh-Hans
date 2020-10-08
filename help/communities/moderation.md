@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 18f401babef4cb2aad47e6e4cbb0500b0f8365e2
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 3%
@@ -62,7 +62,6 @@ ht-degree: 3%
 >
 >只有在所选SRP实现公共存储时，发布环境中的UGC才在作者中可见。 例如，默认存储为JSRP，它不是创作和发布的常用存储。 请参 [阅社区内容存储](/help/communities/working-with-srp.md)。
 
-
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
 ## 审核控制台UI {#moderation-console-ui}
@@ -109,12 +108,11 @@ ht-degree: 3%
 > 
 >内容区域具有 *无限滚动*，这意味着它允许您继续滚动直到内容结束。 即使在滚动时，工具栏仍保留在内容区域上方的固定可见位置。
 
-
 ### 滤镜边栏 {#ootbfilters}
 
 ![开放式滑轨](assets/open-filterrail.png)
 
-侧面板图标可打开筛选器边栏。 显示在内容区域左侧的筛选器边栏提供不同的过滤器符，每个边栏对内容区域中显示的引用UGC有立竿见影的效果。
+侧面板图标可打开筛选器边栏。 显示在内容区域左侧的筛选器边栏提供不同的过滤器符，每个边栏对内容区域中显示的引用UGC有即时影响。
 
 每个过滤器内 **的类别**&#x200B;是OR&#39;d一起的 **，不同类别内的过滤器是** AND&#39;d一起的。
 
@@ -125,7 +123,6 @@ ht-degree: 3%
 >[!NOTE]
 >
 >社区版主可以在审核控制台UI上为预定义的过滤器加书签。 当这些过滤器附加到URL的末尾(作为查询字符串参数)时，版主可以稍后返回已添加书签的过滤器，并共享这些链接。
-
 
 ![search图标](assets/searchicon.png)
 
@@ -154,7 +151,6 @@ ht-degree: 3%
 >管理员访问批量审核控制台时，将显示对UGC的所有引用，包括未通过站点创建向导 [创建的站点](/help/communities/sites-console.md)，如Geometrixx示例。
 >
 >当受信任的社区成员在发布时访问批量审核控制台时，只会显示对为该成员被授权审核的社区站点创建的UGC的引用，并且可以使用站点过滤器进行过滤。
-
 
 #### 内容类型 {#content-type}
 
@@ -205,7 +201,6 @@ ht-degree: 3%
 >[!NOTE]
 >
 >如果仅选择“未回答”状态，则审查方将看到除已回答问题外的所有内容（适用于所有内容类型）。 之所以如此，是因为在未回答的问题和其他内容（如论坛主题、博客文章或评论）的情况下，不存在负责回答问题的属性。
-
 
 ![状态](assets/statuses.png)
 
