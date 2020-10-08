@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 216cfb3e-777e-4773-afba-749debdca000
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 4%
@@ -34,7 +34,6 @@ ht-degree: 4%
 >
 >不支持匿名发布评论。 站点访客必须注册（成为会员）并登录才能参加。
 
-
 ### 向页面添加注释 {#adding-comments-to-a-page}
 
 要在创作模 `Comments` 式下将组件添加到页面，请使用组件浏览器来查找
@@ -52,7 +51,6 @@ ht-degree: 4%
 >[!NOTE]
 >
 >页面上 `Comments` 只能存在一个组件。 请注意，一些社区功能已经包含评论，如博客、日历、论坛、问题与解答和评论。
-
 
 ### 配置注释 {#configuring-comments}
 
