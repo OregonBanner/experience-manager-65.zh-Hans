@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 4%
@@ -34,7 +34,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 成员创建日历事件 |
+| POST | 成员创建日历事件 |
 | 添加 | 日历事件上的成员注释 |
 | 更新 | 会员的日历事件或评论已编辑 |
 | 删除 | 会员的日历事件或评论已被删除 |
@@ -43,7 +43,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 成员创建注释 |
+| POST | 成员创建注释 |
 | 添加 | 会员对评论的答复 |
 | 更新 | 已编辑会员的注释 |
 | 删除 | 会员的注释已删除 |
@@ -52,7 +52,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 成员创建文件夹 |
+| POST | 成员创建文件夹 |
 | 附加 | 成员上传文件 |
 | 更新 | 成员更新文件夹或文件 |
 | 删除 | 成员删除文件夹或文件 |
@@ -61,7 +61,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 会员创建论坛主题 |
+| POST | 会员创建论坛主题 |
 | 添加 | 会员对论坛主题的回复 |
 | 更新 | 会员的论坛主题或回复已编辑 |
 | 删除 | 会员的论坛主题或回复已被删除 |
@@ -70,7 +70,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 成员创建博客文章 |
+| POST | 成员创建博客文章 |
 | 添加 | 成员对博客文章的评论 |
 | 更新 | 编辑会员的博客文章或评论 |
 | 删除 | 已删除会员的博客文章或评论 |
@@ -79,7 +79,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 成员创建问题与答案问题 |
+| POST | 成员创建问题与答案问题 |
 | 添加 | 成员创建问题与答案 |
 | 更新 | 会员的问题与答案已编辑 |
 | 选择 | 已选择会员的答案 |
@@ -90,7 +90,7 @@ ht-degree: 4%
 
 | **动词** | **描述** |
 |---|---|
-| 发布 | 成员创建审阅 |
+| POST | 成员创建审阅 |
 | 更新 | 已编辑会员的审阅 |
 | 删除 | 会员的审阅已删除 |
 
@@ -121,7 +121,7 @@ ht-degree: 4%
 
 ## 自定义组件事件 {#events-for-custom-components}
 
-对于自定义组件， [必须扩展](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) d个SocialEvent抽象类，以记录组件 `actions`的事件，如同发生 `topic`。
+对于自定义组件， [必须扩展](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) d个SocialEvent抽象类，以记录组件 `actions`的事件与发生的 `topic`。
 
 自定义事件将覆盖该方 `getVerb()` 法，以便为每 `verb`个返回相应的 `action`。 为 `verb` 操作返回的内容可以是常用的(如 `POST`)或专用于组件的(如 `ADD RATING`)。 和之 *间存在* n- `actions`1关系 `verbs`。
 
@@ -129,13 +129,9 @@ ht-degree: 4%
 >
 >确保自定义扩展的注册级别低于产品中任何现有实施的级别。
 
-
 ### 自定义组件事件的伪代码 {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.事件.事件](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
-[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
-[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
-[com.adobe.granite.activitystreams.Vervipts](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
+[org.osgi.service.事件.事件](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);[com.adobe.granite.activitystreams.Vervipts](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
 package com.mycompany.recipe;
