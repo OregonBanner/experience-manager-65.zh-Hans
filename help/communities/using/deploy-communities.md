@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c0834e9b70266e8b678771510fb1756c8091ea8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 2%
@@ -74,7 +74,7 @@ ht-degree: 2%
 
          * UGC从不被复制。
          * UGC仅在输入它的AEM实例或群集上可见。
-      * 默认为JSRP
+      * 默认值为JSRP
 
    针对启 **[用功能](/help/communities/overview.md#enablement-community)**
 
@@ -329,7 +329,6 @@ AEM Communities有两个功能要求所有AEM服务器实例使用相同的加�
 >
 >如果已配置基于加密密钥的其他安全功能，则复制加密密钥可能会损坏配置。 要获得帮助， [请联系客户关怀](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)。
 
-
 #### 存储库复制 {#repository-replication}
 
 将关键材料存储在存储库中(如AEM 6.2及更早版本)，可通过在每个AEM实例的首次启动时指定以下系统属性（创建初始存储库）来保留：
@@ -339,7 +338,6 @@ AEM Communities有两个功能要求所有AEM服务器实例使用相同的加�
 >[!NOTE]
 >
 >验证作者上的复制代 [理是否正确配置](#replication-agents-on-author) ，这一点很重要。
-
 
 密钥材料存储在存储库中，将加密密钥从作者复制到其他实例的方式如下：
 
