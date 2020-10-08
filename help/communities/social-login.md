@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 42606e76742fe7698c4c186208e515ed22adc5a4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2787'
+ht-degree: 1%
 
 ---
 
@@ -71,7 +71,6 @@ ht-degree: 0%
 >
 >对于较旧的AEM版本，如果您在日志中遇到 **异常。无法从中提取令牌**，请升级到该AEM版本的最新CFP。
 
-
 有关Facebook Graph API版本信息，请参 [阅Facebook API更改日志](https://developers.facebook.com/docs/apps/changelog)。
 
 ### 创建Facebook应用程序 {#create-a-facebook-app}
@@ -93,7 +92,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >对于开发，http://localhost:4503将起作用。
-
 
 创建应用程序后，找到“应用 **[!UICONTROL 程序ID]** ”和“ **[!UICONTROL 应用程序机密]** ”设置。 配置Facebook云服务时需 [要此信息](#createafacebookcloudservice)。
 
@@ -130,7 +128,6 @@ ht-degree: 0%
 
    * Select **[!UICONTROL SAVE]**.
    * **[!UICONTROL 发布]**.
-
 
 
 
@@ -394,7 +391,6 @@ Facebook和Twitter的后续步骤相同：
 >[!CAUTION]
 >
 >请注意，不要将身份验证处理程序与AdobeGranite OAuth应用程序和提供者的 *Facebook或Twitter实例混淆*。
-
 
 ![chlimage_1-490](assets/chlimage_1-490.png)
 
