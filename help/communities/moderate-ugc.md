@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 391893f7cf83c018d29af14200c6f160b6d83bdd
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 1%
@@ -25,14 +25,14 @@ ht-degree: 1%
 
 社区内容也称为用户生成内容(UGC)，是当成员(在站点访客中签名)通过与以下社区组件之一交互从已发布的社区站点发布内容时创建的：
 
-* [博客](/help/communities/blog-feature.md): 成员发布博客文章或评论。
-* [日历](/help/communities/calendar.md): 成员会发布日历事件或评论。
-* [评论](/help/communities/comments.md): 成员会发布评论或回复评论。
+* [博客](/help/communities/blog-feature.md):成员发布博客文章或评论。
+* [日历](/help/communities/calendar.md):成员会发布日历事件或评论。
+* [评论](/help/communities/comments.md):成员会发布评论或回复评论。
 
-* [论坛](/help/communities/forum.md): 成员会发布新主题或回复主题。
-* [构思](/help/communities/ideation-feature.md): 成员会发布想法或评论。
-* [问题解答](/help/communities/working-with-qna.md): 成员可创建问题或回答问题。
-* [评论](/help/communities/reviews.md): 成员在对项目进行评级时发布评论。
+* [论坛](/help/communities/forum.md):成员会发布新主题或回复主题。
+* [构思](/help/communities/ideation-feature.md):成员会发布想法或评论。
+* [问题解答](/help/communities/working-with-qna.md):成员可创建问题或回答问题。
+* [评论](/help/communities/reviews.md):成员在对项目进行评级时发布评论。
 
 UGC的适度有助于识别积极贡献以及限制消极贡献（如垃圾邮件和谩骂性语言）。 UGC可以从多个环境中审核：
 
@@ -221,7 +221,7 @@ UGC预先审核后，在审核操作批准之前，发布的站点上不会显�
 
 1. 转 [到](https://localhost:4502/system/console/configMgr)，打开Web控制 `/system/console/configMgr`台。
 
-1. 找到 **AEM Communities自动协调** ，并对其进行编辑。
+1. 找到 **AEM Communities自动协调** ，并编辑它。
 1. 添加 **[!UICONTROL SpamProcess]** 项。
 
 ![垃圾邮件](assets/spamprocess.png)
@@ -229,7 +229,6 @@ UGC预先审核后，在审核操作批准之前，发布的站点上不会显�
 >[!NOTE]
 >
 >垃圾邮件检测只针对英语区域设置实施。
-
 
 ### 情绪 {#sentiment}
 
@@ -241,10 +240,10 @@ UGC预先审核后，在审核操作批准之前，发布的站点上不会显�
 
 /libs组件中定义的规则有：
 
-* 规则1: 如果没有正词和至少一个负词，请将值设置为1。
-* 规则2: 如果没有负词和至少一个正词，请将值设置为10。
-* 规则3: 如果负词多于正词，请将值设置为3。
-* 规则4: 如果正词多于负词，请将值设置为8。
+* 规则1:如果没有正词和至少一个负词，请将值设置为1。
+* 规则2:如果没有负词和至少一个正词，请将值设置为10。
+* 规则3:如果负词多于正词，请将值设置为3。
+* 规则4:如果正词多于负词，请将值设置为8。
 
 要覆盖或添加规则，请在/apps目录中按照默认规则的结构创建一组规则。 编辑情绪配置以标识规则的位置。
 
@@ -283,7 +282,7 @@ AEM communities提供 *观察词* analyzer作为评估情绪的过程 [步骤](#
 
 * **表词节点的显式路径**
 
-   包含指定默认观察字的默认 `positive` 和属 `negative` 性的节点的存储库位置。 Default is `/libs/settings/community/watchwords/default`.
+   包含指定默认观察字的默认和属 `positive` 性的 `negative` 节点的存储库位置。 Default is `/libs/settings/community/watchwords/default`.
 
 * **情绪规则**
 
