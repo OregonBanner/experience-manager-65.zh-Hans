@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
 translation-type: tm+mt
-source-git-commit: 4e2fa3b0a64ae2e959dad85e3a1bc4a1027a2eef
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 5%
@@ -35,12 +35,9 @@ ht-degree: 5%
 >
 >如果在社区站点创建后安装了SCORM，则必须重新创建安装SCORM前存在的任何支持资源。
 
-
-
 >[!NOTE]
 >
 >随着AEM 6.3的发 [布和的](deploy-communities.md#latestfeaturepack) “社区”功能包 [的推出](deploy-communities.md#latestfeaturepack) ,AEM 6.2 FP3和AEM 6.1 FP7(https://docs.adobe.com/content/docs/en/aem/6-1/deploy/communities.html#Latest支持功能包)不再 [][](mysql.md)需要MySQL数据库的支持。
-
 
 ## 术语 {#terminology}
 
@@ -249,8 +246,7 @@ ht-degree: 5%
 >
 >不应直接在要从学习路径引用的教育资源中登记学员。 学员只需登记到学习路径中。
 >
->如果某个成员登记到引用该资源的资源和学习路径中，则其分配将同时显示学习路径中的单个资源和资源。
-
+>如果某个成员登记到引用该资源的资源和学习路径中，则其分配将同时显示学习路径中的单一资源和资源。
 
 * **[!UICONTROL 社交设置]**
 
@@ -383,12 +379,11 @@ ht-degree: 5%
 
 * **[!UICONTROL 资源]**
 
-   从为当前社区站点创建的已发布 *支持资* 源中选择一个或多个资源。
+   从为当前社区站点创建的已发布 *启用资* 源中选择一个或多个资源。
 
 >[!NOTE]
 >
 >您只能选择与学习路径同级别的可用资源。 例如，对于在组中创建的学习路径，只有组级别资源可用；对于在社区站点中创建的学习路径，该站点中的资源可用于添加到学习路径。
-
 
 * 选择&#x200B;**[!UICONTROL 下一步]**。
 
@@ -411,7 +406,6 @@ ht-degree: 5%
 >从学习路径引用的启用资源不应列表同一受助者（学员）（如果有）。
 >
 >如果某个会员登记到启用资源和引用该资源的学习路径中，则其分配将同时显示学习路径中的单一资源和资源。
-
 
 ## 管理资源 {#managing-a-resource}
 
