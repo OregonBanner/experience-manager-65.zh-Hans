@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: 8738989c18c6f09452da95d0b9f2c05b0a2a1a81
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 1%
@@ -50,8 +50,8 @@ ht-degree: 1%
 >[!NOTE]
 >
 >可以授予对支持站点的匿名访问权，而不允许站点访客自行注册。
+>
 >如果启用资源设置为 `show in catalog` 且 `allow anonymous access`，则匿名站点访客可能会视图目录中的资源。
-
 
 ### 防止对JCR进行匿名访问 {#prevent-anonymous-access-on-jcr}
 
@@ -59,7 +59,7 @@ ht-degree: 1%
 
 要保护您的社区站点的内容免受匿名用户通过jcr内容和json访问，请执行以下步骤：
 
-1. 在AEM作者实例中，转至https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
+1. 在AEM作者实例上，转至https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html。
 
    >[!NOTE]
    >
@@ -209,7 +209,7 @@ ht-degree: 1%
 * 选择所 `Report` 有资源的摘要图标。
 * 选择一个资源，然后选 `Report` 择该资源上的报表的图标。
 
-请注意，显示AdobeAnalytics的数据可能为时过早，这可能需要1到12小时才能显示。 但是，基本的SCORM报告已可用。
+请注意，显示Adobe Analytics的数据可能为时过早，这可能需要1到12小时才能显示。 但是，基本的SCORM报告已可用。
 
 #### 滑雪课资源报告 {#ski-lessons-resource-report}
 
@@ -251,7 +251,7 @@ ht-degree: 1%
 
 * 在创作时，使用管理权限登录。
 * 导航到 **[!UICONTROL 社区]** >报 **[!UICONTROL 告]** > **[!UICONTROL 视图报告]**。
-* 从下 **拉菜单&#x200B;**（选择）中选择`Enablement Tutorial`站点。
+* 从下 **拉菜单** （选择）中选择 `Enablement Tutorial`站点。
 
 * 选择 **[!UICONTROL 内容类型]** (选 `all`择)。
 
