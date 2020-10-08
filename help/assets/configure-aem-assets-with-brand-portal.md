@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7c03ba5e2ec7954cca8b129f453919d151956df5
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2084'
 ht-degree: 9%
@@ -32,16 +32,14 @@ AEM Assets通过Adobe开发者控制台配置了品牌门户，该控制台为�
 >
 >从2020年4月6日起，不再支持通过传统OAuth网关进行配置，现已更改为Adobe开发人员控制台。
 
-
 >[!TIP]
 >
 >***仅限现有客户***
 >
 >建议继续使用现有的旧版OAuth网关配置。 如果您在旧版OAuth网关配置中遇到问题，请删除现有配置并通过Adobe开发人员控制台创建新配置。
 
-
-
 本帮助描述以下两个用例：
+
 * [新配置](#configure-new-integration-65):如果您是新的Brand Portal用户，并且希望使用Brand Portal配置您的AEM Assets作者实例，则可以通过Adobe开发人员控制台创建配置。
 * [升级配置](#upgrade-integration-65):如果您是在旧版OAuth网关上进行配置的现有Brand Portal用户，请删除现有配置并通过Adobe开发人员控制台创建新配置。
 
@@ -58,7 +56,6 @@ AEM Assets通过Adobe开发者控制台配置了品牌门户，该控制台为�
 * 具有最新Service Pack的正在运行的AEM Assets作者实例
 * 品牌门户租户URL
 * 对Brand Portal租户的IMS组织具有系统管理员权限的用户
-
 
 [下载并安装AEM 6.5](#aemquickstart)
 
@@ -94,12 +91,9 @@ AEM Assets通过Adobe开发者控制台配置了品牌门户，该控制台为�
 1. 在AEM Assets，使用IMS帐户和Brand Portal端点（组织URL）配置Brand Portal云服务。
 1. 通过将资产从AEM Assets发布到Brand Portal来测试配置。
 
-
 >[!NOTE]
 >
 >AEM Assets作者实例仅应配置一个Brand Portal租户。
-
-
 
 如果您是首次使用Brand Portal配置AEM Assets，请在列出的序列中执行以下步骤：
 1. [获取公共证书](#public-certificate)
@@ -269,7 +263,6 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![IMS 帐户配置](assets/create-new-integration6.png)
 
-
 1. Select the IMS account configuration and click **[!UICONTROL Check Health]**.
 
    在对 **[!UICONTROL 话框]** 中单击“检查”。 成功配置时，将显示一条消息，告 *示标记已成功检索*。
@@ -281,8 +274,6 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 >您只能有一个IMS配置。
 >
 >确保IMS配置通过运行状况检查。 如果配置未通过运行状况检查，则无效。 您必须删除它并创建新的有效配置。
-
-
 
 ### 配置云服务 {#configure-the-cloud-service}
 
@@ -326,11 +317,9 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![](assets/test-integration3.png)
 
-
    >[!NOTE]
    >
    >复制代理并行工作并平等地共享作业分配，从而将发布速度提高四倍于原始速度。 配置云服务后，无需进行额外配置即可启用默认激活的复制代理以启用多个资产的并行发布。
-
 
 1. To verify the connection between AEM Assets and Brand Portal, click on the **[!UICONTROL Test Connection]** icon.
 
