@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
-source-git-commit: 6be0aa7c3f6b21ad26221289a6cca2b4615ed3f4
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 2%
@@ -37,7 +37,6 @@ AEM Communities控制台(在全局导航面板的作者环境中提供)提供对
 >[!NOTE]
 >
 >在发布环境中，当已 [登录的](sites-console.md) 成员具 `Administration` 有相应权限时，社区站点将显示菜单项。
-
 
 ## 全局导航面板 {#global-navigation-panel}
 
