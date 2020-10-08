@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -32,7 +32,6 @@ ht-degree: 1%
 >每个站点页面只允许使用一个评论系统。
 >
 >许多Communities功能已经包括一个注释系统，其resourceType可以修改为引用扩展注释系统。
-
 
 ## 创建注释组件 {#create-the-comments-component}
 
@@ -164,7 +163,7 @@ ht-degree: 1%
 
    * **名称**: `css.txt`
    * **名称**: `js.txt`
-   * **名称**: customcommentsystem.js
+   * **名称**:customcommentsystem.js
 
 * 输入“customcommentsystem.js”作为 `js.txt`
 * 选择 **[!UICONTROL 全部保存]**
