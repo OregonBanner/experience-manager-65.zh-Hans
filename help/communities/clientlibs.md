@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f6aa95514a266a042c9bd1165634e30e80479ae7
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 需要Clientlibs才能使组件正常工作(JavaScript)和样式(CSS)。
 
-当某个功 [能存在社区功](/help/communities/functions.md) 能时，所有必需的组件和配置（包括所需的客户端库）都将出现在社区站点中。 仅当作者可以使用其他组件时，才需要添加其他客户端库。
+当某个功 [能存在社区功](/help/communities/functions.md) 能时，所有必需的组件和配置（包括必需的客户端库）都将出现在社区站点中。 仅当作者可以使用其他组件时，才需要添加其他客户端库。
 
 当缺少所需的clientlib时， [向页面添加Communities组件](/help/communities/author-communities.md) ，可能会导致javascript错误和意外外观。
 
@@ -90,7 +90,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >如果站点不是社区站点，则需要发现站点使用的客户端库的存在或位置。
-
 
 使用“ [AEM Communities入门](/help/communities/getting-started.md) ”示例(其 `site-name` 中为 *参与*)，在添加评论组件时，clientliblist的显示方式如下：
 
