@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb5317be52eec39b947ccb3c456d21d567ef2841
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-AEM Communities的消息传递功能允许登录的站点访客（成员）相互发送消息，当登录到站点时，这些消息可供访问。
+AEM Communities的消息功能使登录网站访客（成员）能够相互发送消息，当登录网站时，这些消息可供访问。
 
 通过在社区站点创建过程中选中一个框，为社区站 [点启用消息](/help/communities/sites-console.md)。
 
@@ -135,7 +135,6 @@ AEM Communities的消息传递功能允许登录的站点访客（成员）相�
 >
 >要允许除扩展名外的所有文件列入阻止列表扩展名，请使用“-**”**&#x200B;图标（再次）删除单个空条目，然后单击“保 **存”**。
 
-
 ## Group Messaging {#group-messaging}
 
 要允许注册用户向用户组批量发送直接消息，请确保在以 **下两个Messaging Operation** Services配置实例中 **启用组消息** :
@@ -143,11 +142,11 @@ AEM Communities的消息传递功能允许登录的站点访客（成员）相�
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
 
-**消息操作服务： 社交控制台**
+**消息操作服务：社交控制台**
 
 ![社交控制台服务](assets/social-console-op-service.png)
 
-**消息操作服务： 社交消息**
+**消息操作服务：社交消息**
 
 ![社交消息服务](assets/social-message-op-service.png)
 
