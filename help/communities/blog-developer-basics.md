@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 2%
@@ -30,7 +30,6 @@ ht-degree: 2%
 >[!NOTE]
 >
 >博客功能的基础结构是日志功能。
-
 
 ## 客户端必备工具 {#essentials-for-client-side}
 
