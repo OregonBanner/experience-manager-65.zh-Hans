@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: e5c2385c29e2d20d453e2d1496f7d459d1c55876
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2187'
 ht-degree: 0%
@@ -139,8 +139,7 @@ SQL Server还提供两种备份和恢复工具：
 
 >[!NOTE]
 >
->MySQL的默认二进制日志记录模式为“语句”，它与Content Services使用的表（已弃用）不兼容。 在此默认模式下使用二进制日志记录会导致Content Services（已弃用）失败。 如果您的系统包含Content Services（已弃用），请使用“混合”日志记录模式。 要启用“混合”日志记录，请将以下参数添加到my.ini file:*
-`binlog_format=mixed log-bin=logname`
+>MySQL的默认二进制日志记录模式为“语句”，它与Content Services使用的表（已弃用）不兼容。 在此默认模式下使用二进制日志记录会导致Content Services（已弃用）失败。 如果您的系统包含Content Services（已弃用），请使用“混合”日志记录模式。 要启用“混合”日志记录，请向my.ini文件添加以下参数： `binlog_format=mixed log-bin=logname`
 
 您可以使用mysqldump实用程序获得完整的数据库备份。 需要完整备份，但并不总是方便的。 它们生成大型备份文件并需要时间生成。 要执行增量备份，请确保按上一节所述，使用 `log-bin` -选项开始服务器。 每次MySQL服务器重新启动时，它都停止写入当前二进制日志，创建新日志，然后从此开始，新日志变成当前日志。 您可以使用命令手动强制切 `FLUSH LOGS SQL` 换。 第一次完全备份后，将使用mysqladmin实用程序和命令(该命令创建下 `flush-logs` 一个日志文件)进行后续增量备份。
 
