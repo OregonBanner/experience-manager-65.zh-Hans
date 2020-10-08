@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
@@ -111,7 +111,6 @@ ht-degree: 0%
 >
 >如果站点访客注册为一个开放社区站点的成员，则他们会自动成为同一发布环境下其他开放社区站点的成员。
 
-
 ### 发布组角色 {#publish-group-roles}
 
 | 如果组成员…… | 主角色 |
@@ -152,14 +151,13 @@ ht-degree: 0%
 >
 >将用户添加到社区站点的特权成员组将仅授予用户创建权限（如果用户也是同一社区站点的成员）。
 
-
 ## 创建社区成员 {#creating-community-members}
 
 ### 存储库位置 {#repository-location}
 
 为了使某些功能正常工作，需要创建具有相应权限的用户和用户组。
 
-在中创建成 `/home/users/community`员后，会继承为成员的用户档案授予读取权限的正确ACL。
+在中创建成员 `/home/users/community`后，会继承为成员的用户档案授予读取权限的正确ACL。
 
 同样，应在中创建自定义社区用户组（如特权成员组） `/home/groups/community`。
 
