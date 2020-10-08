@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 39ae3d8348b0c149c047c9fb3ac2eb673b610645
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4148'
 ht-degree: 0%
 
 ---
@@ -199,8 +199,10 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > * 如果使用静态模板，请在以下位置叠加head.jsp:/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp
-   > * 如果使用可编辑的模板，请在以下位置叠加aftemplatedpage.jsp:/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp
+   > * 如果使用静态模板，请在以下位置叠加head.jsp:
+      >   `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+   > * 如果使用可编辑的模板，请在以下位置叠加aftemplatedpage.jsp:
+      >   `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 
 1. 设置 [!DNL paramMap] 请求属性。 例如，在apps文件夹的。jsp文件中包含以下代码：
