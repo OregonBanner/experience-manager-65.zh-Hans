@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1b200f9dd5fc99b37bcc629be7a785e02e8320c0
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -23,12 +23,11 @@ ht-degree: 6%
 
 社区体验预期的功能类型是众所周知的。 社区功能可以作为社区功能提供。 本质上，它们是预先连接的一个或多个页面，用于实现社区功能，该功能不仅需要在创作模式下向页面添加组件。 它们是用于定义社区站点模板结构 [的构件块](/help/communities/sites.md) ，从中创建社 [区站点](/help/communities/sites-console.md)。
 
-创建社区站点后，可以使用标准AEM创作模式将内容添加到 [生成的页面](/help/sites-authoring/editing-content.md)。 社区功能控制台中提供了各种社区功能。
+创建社区站点后，可以使用标准AEM创作模式将内容添加到生 [成的页面](/help/sites-authoring/editing-content.md)。 社区功能控制台中提供了各种社区功能。
 
 >[!NOTE]
 >
 >社区站点的创 [建控制台](/help/communities/sites-console.md)、社 [区站点模板](/help/communities/sites.md)、 [社区组模板](/help/communities/tools-groups.md)，以 [及社区功能的创](/help/communities/functions.md) 建控制台仅在作者环境中使用。
-
 
 ## 社区功能控制台 {#community-functions-console}
 
@@ -40,7 +39,7 @@ ht-degree: 6%
 
 ## 预建函数 {#pre-built-functions}
 
-以下是随AEM Communities提供的功能的简要说明。 每个功能都包括一个或多个AEM页面，其中包含连接到功能中的社区组件，该功能可轻松融入社 [区站点模板中](/help/communities/sites.md)。
+以下是与AEM Communities一起提供的职能的简要说明。 每个功能都包括一个或多个AEM页面，其中包含连接到功能中的社区组件，该功能可轻松融入社 [区站点模板中](/help/communities/sites.md)。
 
 社区站点模板为社区站点提供了结构，包括登录名、用户用户档案、通知、消息、站点菜单、搜索、主题和品牌功能。
 
@@ -60,7 +59,7 @@ ht-degree: 6%
 
 * **URL**
 
-   (*必需*)用于生成URI的名称。 该名称必须符合AEM [和JCR实](/help/sites-developing/naming-conventions.md) 施的命名约定。
+   (*必需*)用于生成URI的名称。 该名称必须符合AEM和 [JCR实](/help/sites-developing/naming-conventions.md) 施的命名约定。
 
 例如，使用根据入门教程创建的 [站点](/help/communities/getting-started.md) (如果
 
@@ -87,7 +86,7 @@ ht-degree: 6%
 
 * **显示“我的活动”视图**
 
-   如果选中此选项，则活动页面将包含一个选项卡，过滤器活动基于当前成员在社区中生成的选项卡。 选中默认值。
+   如果选中此选项，则活动页面会包含一个选项卡，过滤器活动基于当前成员在社区中生成的选项卡。 选中默认值。
 
 * **显示“全部活动”视图**
 
@@ -234,7 +233,6 @@ ht-degree: 6%
 >
 >任何其他函数(如页 [面函数](#page-function))必须首先包含并列出。
 
-
 “组”功能使社区成员能够在发布环境的社区站点内创建子社区。
 
 根据 [设置](/help/communities/sites-console.md#groupmanagement) ，当社区站点模板中包含“组”功能时 [](/help/communities/sites.md)，这些组可以是公共的或私有的，并且可以配置一个或多个社区组模板以在实际创建社区组时(如从发布环境)提供模板选项。 社 [区组模板](/help/communities/tools-groups.md) ，指定为组页面（如论坛和日历）创建哪些社区功能。
@@ -292,7 +290,7 @@ ht-degree: 6%
 
 通栏功能是包含一个通栏组件 [的页面](/help/communities/enabling-leaderboard.md)。
 
-**注意**: 在从包含通栏功能的社区 *模板* 创建社区站点后，通栏组件需要进一步配置。 指定排行榜组件的 [规则](/help/communities/enabling-leaderboard.md#rules-tab)，具体取决于社 [区站点的得分](/help/communities/implementing-scoring.md) 和徽章配置。
+**注意**:在从包含通栏功能的社区 *模板* 创建社区站点后，通栏组件需要进一步配置。 指定排行榜组件的 [规则](/help/communities/enabling-leaderboard.md#rules-tab)，具体取决于社 [区站点的得分](/help/communities/implementing-scoring.md) 和徽章配置。
 
 添加到模板时，将打开以下对话框，其中指定模板的默认标题和URL名称以及默认显示设置：
 
@@ -317,7 +315,7 @@ ht-degree: 6%
 
 ### 页面功能 {#page-function}
 
-页面功能会向社区站点添加一个空白页面，该页面已连接到社区站点的功能中： 登录、菜单、通知、消息、主题和品牌。 内容将使用标准AEM创作模 [式添加到页面](/help/sites-authoring/editing-content.md)。
+页面功能会向社区站点添加一个空白页面，该页面已连接到社区站点的功能中：登录、菜单、通知、消息、主题和品牌。 内容将使用标准AEM创作模 [式添加到页面](/help/sites-authoring/editing-content.md)。
 
 添加到模板时，唯一的配置是标题 [和URL设置](#title-and-url-settings)。
 
@@ -353,7 +351,7 @@ QnA函数是一个页面，其中配 [置了QnA组件](/help/communities/working
 
 ## 创建社区功能 {#create-community-function}
 
-通过选择“社区功能”控制台顶部 `Create Community Function` 的图标，可以创建社区功能。 可以创建基于相同AEM Blueprint的多个函数，然后在作者编辑模式下打开这些函数进行唯一自定义。
+通过选择“社区功能”控制台顶部 `Create Community Function` 的图标，可以创建社区功能。 可以创建基于相同AEM Blueprint的多个函数，然后通过在作者编辑模式下打开进行唯一自定义。
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
@@ -401,7 +399,7 @@ QnA函数是一个页面，其中配 [置了QnA组件](/help/communities/working
 
 ### 配置组件 {#configuring-components}
 
-社区功能将作为AEM Blueprint的Live Copy实施，其详细信息将在多站点管 [理器下进行说明](/help/sites-administering/msm.md)。
+社区功能将作为AEM Blueprint的Live Copy实施，其详细信息将在多站点管 [理器下记录](/help/sites-administering/msm.md)。
 
 不仅可以创作页面内容，还可以配置组件。
 
