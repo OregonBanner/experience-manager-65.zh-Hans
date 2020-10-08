@@ -1,8 +1,8 @@
 ---
 title: 客户端自定义
 seo-title: 客户端自定义
-description: 在AEM Communities中自定义行为或外观客户端
-seo-description: 在AEM Communities中自定义行为或外观客户端
+description: 在AEM Communities自定义行为或外观客户端
+seo-description: 在AEM Communities自定义行为或外观客户端
 uuid: 57978c39-9a8a-4098-9001-c8bbe7ee786f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
-source-git-commit: efa6c7be93908b2f264da4689caa9c02912c0f0a
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 /apps目录是解析请求时首先搜索的位置，如果找不到，则使用位于/libs目录中的默认版本。
 
-不得修改/libs目录中的默认组件，因为以后的修补程序和升级可以在维护公共接口时以任何必要方式免费更改/libs目录。
+/libs目录中的默认组件绝不能修改，因为以后的修补程序和升级可以在维护公共接口时以任何必要方式免费更改/libs目录。
 
 这与扩展默 [认组件](#extensions) （其中希望修改特定用途）、创建组件的唯一路径以及依赖引用/libs目录中的原始默认组件作为超级资源类型不同。
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 1. 确定要更改的元素（例如，书写器区域、工具栏按钮、消息字体等）。
 1. 确定影响这些元素的CSS类／规则。
 1. 创建样式表文件(.css)。
-1. 将样式表包含在站点的客户端[库文件夹](#clientlibs-for-scf)(clientlibs)中，并确保它包含在模板和带ui:includeClientLib [的页面中](../../help/sites-developing/clientlibs.md)。
+1. 将样式表包含在站点的客户端库[文件夹](#clientlibs-for-scf)(clientlibs)中，并确保它包含在模板和页面中( [包含ui:includeClientLib](../../help/sites-developing/clientlibs.md))。
 
 1. 重新定义您在样式表中标识的(#2)CSS类和规则，并添加样式。
 
@@ -109,7 +109,6 @@ ht-degree: 0%
 >
 >虽然类 `scf-js` 不影响样式，但类名称可能在样式表中使用，但必须注意，由于它们控制元素的状态，可能会产生副作用。
 
-
 ## 扩展Javascript {#extending-javascript}
 
 要扩展组件Javascript实现，您需要：
@@ -120,7 +119,7 @@ ht-degree: 0%
 1. 扩展方法。
 1. 使用SCF.registerComponent()注册所有具有默认值或自定义对象和视图的方法。
 
-### forum.js: 论坛扩展示例- HBS  {#forum-js-sample-extension-of-forum-hbs}
+### forum.js:论坛扩展示例- HBS  {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -194,7 +193,7 @@ SCF的clientlibs对于两个变体遵循非常特定的命名模式，只有在�
 * 客户端文件夹节点： `/libs/social/forum/hbs/forum/clientlibs`
 * 类别属性： `cq.social.author.hbs.forum`
 
-注意： 虽然作者clientlibs从不嵌入其他库，但他们会列表其依赖关系。 嵌入到其他库时，依赖项不会自动拉入，还必须嵌入。
+注意：虽然作者clientlibs从不嵌入其他库，但他们会列表其依赖关系。 嵌入到其他库时，依赖项不会自动拉入，还必须嵌入。
 
 通过在“社区组件”指南中为每个SCF组件列出的clientlib中插入“author”，可以识别所需的 [作者clientlib](components-guide.md)。
 
@@ -202,8 +201,8 @@ SCF的clientlibs对于两个变体遵循非常特定的命名模式，只有在�
 
 每个站点在管理客户端库方面都有所不同。 各种因素包括：
 
-* 总体速度： 可能是希望网站能够响应，但第一页的加载速度会稍慢，这是可以接受的。 如果许多页面使用相同的Javascript，则各种Javascript可嵌入到一个clientlib中，并从要加载的第一页引用。 此次下载中的Javascript仍保持缓存状态，从而最大限度地减少后续页面的下载数据量。
-* 短时间到首页： 也许最好让第一页快速加载。 在这种情况下，Javascript位于多个小文件中，只在需要时引用。
+* 总体速度：可能是希望网站能够响应，但第一页的加载速度会稍慢，这是可以接受的。 如果许多页面使用相同的Javascript，则各种Javascript可嵌入到一个clientlib中，并从要加载的第一页引用。 此次下载中的Javascript仍保持缓存状态，从而最大限度地减少后续页面的下载数据量。
+* 短时间到首页：也许最好让第一页快速加载。 在这种情况下，Javascript位于多个小文件中，只在需要时引用。
 * 第一页加载与后续下载之间的平衡。
 
 | **[‹功能基本工具](essentials.md)** | **[服务器端自定义](server-customize.md)** |
