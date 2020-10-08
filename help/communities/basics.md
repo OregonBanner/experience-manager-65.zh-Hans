@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 translation-type: tm+mt
-source-git-commit: c77a353d43a3a6f33dffecf0b4e7672ed3e2dd3f
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 1%
@@ -37,7 +37,6 @@ ht-degree: 1%
 >有关一般创作信息，请视图 [页面创作快速指南](../../help/sites-authoring/qg-page-authoring.md)。
 >
 >如果不熟悉AEM，请视图有关基本操 [作的文档](../../help/sites-authoring/basic-handling.md)。
-
 
 ### 进入设计模式 {#entering-design-mode}
 
