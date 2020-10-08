@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 046da7a00be6073cb885b4e9774c48ab474e7e6d
+source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 1%
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 要保护您的社区站点的内容免受匿名用户通过jcr内容和json访问，请执行以下步骤：
 
-1. 在AEM Author实例上，转到https:// hostname:port/editor.html/content/site/sitename.html。
+1. 在AEM作者实例上，转到https:// hostname:port/editor.html/content/site/sitename.html。
 
    >[!NOTE]
    >
@@ -107,9 +107,6 @@ ht-degree: 1%
 >
 >* [社区组件](/help/communities/author-communities.md) （针对作者）
 >* [组件、功能和功能要件](/help/communities/essentials.md) （针对开发人员）
-
->
-
 
 
 ### 论坛链接 {#forum-link}
@@ -228,7 +225,7 @@ ht-degree: 1%
 
 指定用户名、电子邮件和密码后，选择 `Sign Up` 将创建用户并允许其签名。
 
-登录后，显示的第一个页面即 `Profile` 是其页面，可进行个性化。
+登录后，显示的第一页即为其页 `Profile` 面，他们可以个性化。
 
 ![配置文件](assets/profile.png)
 
