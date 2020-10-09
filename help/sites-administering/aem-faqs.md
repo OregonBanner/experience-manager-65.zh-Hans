@@ -8,9 +8,9 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 #### 如何启用无二进制分发？ {#how-do-i-enable-binary-less-distribution}
 
 要启用无二进制分发，请使用共享的Blob存储进行部署。
-使用 `useBinaryReferences` 您的代理正在使用的工厂PID()检查 `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*OSGI *配置中的属性。
+使用 `useBinaryReferences` 您的代理正在使用的工厂PID()检查 `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*OSGI* 配置中的属性。
 
 #### 如何在AEM站点控制台中导航页面层次结构时自定义错误消息？ {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
@@ -67,7 +67,7 @@ Adobe Experience Manager(AEM)6.4随SSL向导提供，并优惠一个用户界面
 
 要默认启用SSL，请默 [认参阅SSL](/help/sites-administering/ssl-by-default.md)。
 
-#### 从移动应用程序使用AEM的内容服务时，建议采用什么架构，最好是React Native? {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
+#### 从移动应用程序使用AEM的内容服务时，推荐使用什么架构，最好是React Native? {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
 
 内容服务基于Sling Models,AEM开发人员必须为导出的每个组件提供Sling Model pojo。
 
@@ -77,7 +77,7 @@ Adobe Experience Manager(AEM)6.4随SSL向导提供，并优惠一个用户界面
 
 [1][Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
-[2] Apache [Sling: Sling Models](https://sling.apache.org/documentation/bundles/models.html)
+[2] Apache [Sling:Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
 #### 如何禁用AEM 6.4调查弹出窗口？ {#how-to-disable-aem-survey-pop-up}
 
@@ -118,7 +118,7 @@ Adobe Experience Manager(AEM)6.5当前允许您一次上传最多2 GB的资源�
 
 #### 如何使用AEM 6.5实例配置资产分析？ {#how-to-configure-asset-insights-with-aem-instance}
 
-要为通过Adobe激活(DTM)部署的Experience Manager设置和配置资产分析，请参 [阅通过AEM Assets设置资产分析](https://helpx.adobe.com/experience-manager/kt/assets/using/asset-insights-tutorial-setup.html)。
+要为通过Adobe激活(DTM)部署的Experience Manager设置和配置资产分析，请参阅如 [何通过AEM Assets设置资产分析](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 #### 如何自定义管理控制台？ {#how-to-customize-admin-consoles}
 
