@@ -62,7 +62,8 @@ ht-degree: 0%
 >如果没有这种备份，备份可能是无用的（最坏情况）。
 >
 >[!NOTE]
-有关备份性能的详细信息，请阅读“备 [份性能](/help/sites-deploying/configuring-performance.md#backup-performance) ”部分。
+>
+>有关备份性能的详细信息，请阅读“备 [份性能](/help/sites-deploying/configuring-performance.md#backup-performance) ”部分。
 
 ### 备份软件安装 {#backing-up-your-software-installation}
 
@@ -74,13 +75,16 @@ ht-degree: 0%
 1. 从文件系 `<cq-installation-dir>` 统备份整个。
 
 >[!CAUTION]
-如果您运行的是第三方应用程序服务器，则其他文件夹可能位于不同的位置，并且可能还需要备份。 有关 [安装应用程序服务器的信息，请参阅如何与Application Server一起安装](/help/sites-deploying/application-server-install.md) AEM。 [](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
+>
+>如果您运行的是第三方应用程序服务器，则其他文件夹可能位于不同的位置，并且可能还需要备份。 有关 [安装应用程序服务器的信息，请参阅如何与Application Server一起安装](/help/sites-deploying/application-server-install.md) AEM。 [](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
 
 >[!CAUTION]
-支持文件数据存储的增量备份； 对其他组件（如Lucene索引）使用增量备份时，请确保已删除的文件也在备份中标记为已删除。
+>
+>支持文件数据存储的增量备份； 对其他组件（如Lucene索引）使用增量备份时，请确保已删除的文件也在备份中标记为已删除。
 
 >[!NOTE]
-磁盘镜像也可以用作备份机制。
+>
+>磁盘镜像也可以用作备份机制。
 
 ### 备份存储库 {#backing-up-your-repository}
 
@@ -132,7 +136,8 @@ CRX [文档的“备份和恢复](/help/sites-administering/backup-and-restore.m
 1. 单击 **清除** ，以启动该流程。
 
 >[!CAUTION]
-如果未还原存储库，则无法还原已清除的节点。 您应该处理配置，因此我们建议您始终在清除之前执行练习。
+>
+>如果未还原存储库，则无法还原已清除的节点。 您应该处理配置，因此我们建议您始终在清除之前执行练习。
 
 ### 分析控制台 {#analyzing-the-console}
 
@@ -180,7 +185,8 @@ AEM WCM记录详细日志。 解包并开始快速启动后，您可以找到登
 * 以前的日志文件不会被删除，因此您有责任定期清除旧日志文件以限制磁盘使用。
 
 >[!NOTE]
-如果您升级AEM安装，请注意，AEM不再使用的任何现有日志文件都将保留在磁盘上。 你可以不冒险地删除它们。 所有新日志条目都将写入新日志文件中。
+>
+>如果您升级AEM安装，请注意，AEM不再使用的任何现有日志文件都将保留在磁盘上。 你可以不冒险地删除它们。 所有新日志条目都将写入新日志文件中。
 
 ### 查找日志文件 {#finding-the-log-files}
 
@@ -223,7 +229,8 @@ AEM WCM记录详细日志。 解包并开始快速启动后，您可以找到登
 修订日志信息。
 
 >[!NOTE]
-**Download Full **包中不包含ImageServer和s7access日志，该包是从**system/console/status-Bundlelist **页生成的。 出于支持目的，如果您 [!DNL Dynamic Media] 有问题，请在联系客户支持时附加ImageServer和s7access日志。
+>
+>**Download Full **包中不包含ImageServer和s7access日志，该包是从**system/console/status-Bundlelist **页生成的。 出于支持目的，如果您 [!DNL Dynamic Media] 有问题，请在联系客户支持时附加ImageServer和s7access日志。
 
 ### 激活DEBUG日志级别 {#activating-the-debug-log-level}
 
@@ -232,7 +239,8 @@ AEM WCM记录详细日志。 解包并开始快速启动后，您可以找到登
 要激活记录器的调试日志级别，请在存储库中 `org.apache.sling.commons.log.level` 设置要调试的属性。 例如，开始 `/libs/sling/config/org.apache.sling.commons.log.LogManager` 配置全 [局Apache Sling日志](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)。
 
 >[!CAUTION]
-不要将调试日志级别的日志保留得比必需的更长，因为它会生成大量日志条目，从而占用资源。
+>
+>不要将调试日志级别的日志保留得比必需的更长，因为它会生成大量日志条目，从而占用资源。
 
 调试文件中的一行通常与DEBUG开始，然后提供日志级别、安装程序操作和日志消息。 例如：
 
@@ -251,7 +259,8 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 ### 创建自定义日志文件 {#create-a-custom-log-file}
 
 >[!NOTE]
-When working with Adobe Experience Manager there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
+>
+>When working with Adobe Experience Manager there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
 
 在某些情况下，您可能希望创建具有不同日志级别的自定义日志文件。 您可以通过以下方式在存储库中执行此操作：
 
@@ -266,7 +275,8 @@ When working with Adobe Experience Manager there are several methods of managing
 
    * 类型: `sling:OsgiConfig`
    >[!NOTE]
-   虽然不是技术要求，但最好使其独 `<*identifier*>` 一无二。
+   >
+   >虽然不是技术要求，但最好使其独 `<*identifier*>` 一无二。
 
 1. 在此节点上设置以下属性：
 
@@ -301,33 +311,38 @@ When working with Adobe Experience Manager there are several methods of managing
 
          `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
    >[!NOTE]
-   `org.apache.sling.commons.log.pattern` 支持最多六个参数。
+   >
+   >`org.apache.sling.commons.log.pattern` 支持最多六个参数。
 
    >{0}{1}类 `java.util.Date`型的时间戳{1}日志标记{2}当前线程的名称{3}记录器{4}的名称{5}日志消息
 
    >如果日志调用包含 `Throwable` 堆栈跟踪，则会附加到消息。
 
    >[!CAUTION]
-   org.apache.sling.commons.log.names必须具有值。
+   >
+   >org.apache.sling.commons.log.names必须具有值。
 
    >[!NOTE]
-   日志写入程序路径是相对于该位置 `crx-quickstart` 的。
-   因此，指定为：
-   `logs/thelog.log`
+   >
+   >日志写入程序路径是相对于该位置 `crx-quickstart` 的。
+   >因此，指定为：
+   >`logs/thelog.log`
 
    >写入：
-   `` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log。
-   以及指定为：
-   `../logs/thelog.log`
+   >`` ` ` `<*cq-installation-dir*>/``crx-quickstart/logs/thelog.log。
+   >以及指定为：
+   >`../logs/thelog.log`
 
    >写入到目录：
-   ` <*cq-installation-dir*>/logs/`
+   >` <*cq-installation-dir*>/logs/`
+
 &quot;(即，在&lt; ` `cq-*installation-dir*>/旁)`crx-quickstart/`
 
 1. 仅当需要新的写入程序时（即配置与默认写入程序不同时），此步骤才是必需的。
 
    >[!CAUTION]
-   仅当现有默认值不合适时，才需要新的日志记录写入程序配置。
+   >
+   >仅当现有默认值不合适时，才需要新的日志记录写入程序配置。
 
    >如果未配置显式编写器，则系统将根据默认值自动生成隐式编写器。
 
@@ -339,7 +354,8 @@ When working with Adobe Experience Manager there are several methods of managing
 
    * 类型: `sling:OsgiConfig`
    >[!NOTE]
-   虽然不是技术要求，但最好使其独 `<*identifier*>` 一无二。
+   >
+   >虽然不是技术要求，但最好使其独 `<*identifier*>` 一无二。
 
    在此节点上设置以下属性：
 
@@ -365,9 +381,10 @@ When working with Adobe Experience Manager there are several methods of managing
 
          值： 根据大小／日期指定控制文件旋转； 例如， `'.'yyyy-MM-dd`
    >[!NOTE]
-   `org.apache.sling.commons.log.file.size` 通过设置以下任一项控制日志文件的旋转：
-   * 最大文件大小
-   * 时间／日期计划
+   >
+   >`org.apache.sling.commons.log.file.size` 通过设置以下任一项控制日志文件的旋转：
+   >* 最大文件大小
+   >* 时间／日期计划
 
    指示何时创建新文件（以及根据名称模式重命名的现有文件）。
    * 可以使用数字指定大小限制。 如果未提供大小指示符，则将其视为字节数，或者您可以添加一个大小指示符 `KB`- `MB`、 `GB` 或（忽略大小写）。
@@ -455,10 +472,11 @@ OSGi事件还生成审计记录，可从AEM Web控制 **台的** “配置状态
    * **根据需要** ，对任何队列项强制重试。
 
    >[!CAUTION]
-   请勿将“测试连接”链接用于发布实例上的反向复制输出框。
-   如果对发件箱队列执行复制测试，则所有早于测试复制的项目都将通过每次反向复制进行重新处理。
-   如果队列中已存在此类项目，可以使用以下XPath JCR查询找到它们，并应将其删除。
-   `/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
+   >
+   >请勿将“测试连接”链接用于发布实例上的反向复制输出框。
+   >如果对发件箱队列执行复制测试，则所有早于测试复制的项目都将通过每次反向复制进行重新处理。
+   >如果队列中已存在此类项目，可以使用以下XPath JCR查询找到它们，并应将其删除。
+   >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
 同样，您可以开发一个解决方案来检测所有复制代理(位 `/etc/replication/author` 于或 `/etc/replication/publish`下)，然后检查代理(、)和基础队列( `enabled`、、)的状 `disabled`态 `active`和 `idle``blocked`状态。
 
@@ -469,7 +487,8 @@ OSGi事件还生成审计记录，可从AEM Web控制 **台的** “配置状态
 在收集信息以进行优化时使用的方法也可以用于进行监视。
 
 >[!NOTE]
-还可 [以检查可用于提高性能](/help/sites-deploying/configuring-performance.md#configuring-for-performance) 的特定配置。
+>
+>还可 [以检查可用于提高性能](/help/sites-deploying/configuring-performance.md#configuring-for-performance) 的特定配置。
 
 以下列表出现的常见性能问题，以及有关如何发现和消除这些问题的建议。
 
@@ -854,7 +873,8 @@ Percentage of the requests served within a certain time (ms)
 1. 开始您的AEM实例。
 
    >[!NOTE]
-   如果使用Java 5，则可以 `-Dcom.sun.management.jmxremote` 将参数添加到开始JVM的java命令行。 默认情况下，JMX在Java 6中处于启用状态。
+   >
+   >如果使用Java 5，则可以 `-Dcom.sun.management.jmxremote` 将参数添加到开始JVM的java命令行。 默认情况下，JMX在Java 6中处于启用状态。
 
 1. 运行以下任一操作：
 
@@ -1018,11 +1038,12 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 以下是一列表建议，说明您是否开始遇到某些性能问题，应检查哪些内容。 列表（不幸的是）并不完全全面。
 
 >[!NOTE]
-另请参阅以下文章以了解更多信息：
-* [线程转储](https://helpx.adobe.com/experience-manager/kb/TakeThreadDump.html)
-* [分析内存问题](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
-* [使用内置概要分析器进行分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
-* [分析慢速和阻止的进程](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+>
+>另请参阅以下文章以了解更多信息：
+>* [线程转储](https://helpx.adobe.com/experience-manager/kb/TakeThreadDump.html)
+>* [分析内存问题](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
+>* [使用内置概要分析器进行分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
+>* [分析慢速和阻止的进程](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
 
 
@@ -1115,5 +1136,6 @@ Java虚拟机(JVM)在调整方面已有显着改进（尤其是自Java 7以来�
 这将帮助您了解正在使用的内存量、GC算法的使用情况、运行它们需要多长时间，以及这对应用程序性能的影响。 如果没有这种情况，调音就只是“随机摆弄旋钮”。
 
 >[!NOTE]
-对于Oracle的VM，还有以下信息：
-[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>
+>对于Oracle的VM，还有以下信息：
+>[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)

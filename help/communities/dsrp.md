@@ -70,6 +70,7 @@ MySQL安装可以通过使用不同的数据库(模式)名称以及不同的连�
       >[!NOTE]
       >
       >默认存储配置现在存储在会议路径(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而不是etc路径(`/etc/socialconfig/srpc/defaultconfiguration`)中。 建议您按照迁移步 [骤执行](#zerodt-migration-steps) ，以使默认更新工作正常。
+
    ![dsrp-config](assets/dsrp-config.png)
 
 * Select **[!UICONTROL Database Storage Resource Provider (DSRP)]**
