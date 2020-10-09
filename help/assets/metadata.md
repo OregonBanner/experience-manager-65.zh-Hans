@@ -3,9 +3,9 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1413'
 ht-degree: 15%
 
 ---
@@ -135,8 +135,8 @@ For these reasons, [!DNL Assets] provides you with the right means of creating, 
 
 * XMP: used by [!DNL Assets] to store the extracted metadata within the repository.
 * ID3：适用于音频和视频文件。
-* Exif: 。
-* 其他／旧版： 从 [!DNL Microsoft Word]、 [!DNL PowerPoint][!DNL Excel]等等。
+* Exif:。
+* 其他／旧版：从 [!DNL Microsoft Word]、 [!DNL PowerPoint][!DNL Excel]等等。
 
 ### XMP {#xmp}
 
@@ -191,7 +191,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 * 相册- [!DNL Adobe Photoshop Album].
 * CQ - Used by [!DNL Experience Manager Assets].
 * DAM —— 使用方 [!DNL Experience Manager Assets]。
-* DEX - [Optima SC Description](http://www.optimasc.com/products/dex/index.html) explorer是用于Windows操作系统元数据和文件管理的工具集合。
+* DEX - [Optima SC Description explorer是用于Windows操作系统](http://www.optimasc.com/products/dex/index.html) （Windows操作系统）元数据和文件管理的工具集合。
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
 * LR - [!DNL Adobe Lightroom].
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
@@ -219,7 +219,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 ### Print-specific metadata {#print-specific-metadata}
 
 * PDF和PDF/X -Adobe PDF和第三方应用程序。
-* PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.prismstandard.org).
+* PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.idealliance.org/prism-metadata/).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` -分页文本的XMP元数据。
 
