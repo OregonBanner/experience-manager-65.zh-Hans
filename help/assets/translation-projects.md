@@ -3,9 +3,9 @@ title: 创建翻译项目
 description: 了解如何在中创建翻译项目 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1885'
 ht-degree: 16%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 16%
 
 要创建语言副本，请触发用户界面中“引用”边栏下可用的以下语言副本工作流 [!DNL Experience Manager] 之一。
 
-* **创建和翻译**: 在此工作流中，要翻译的资产会被复制到您要翻译的语言的语言根目录中。 此外，系统会根据您选择的选项，在“项目”控制台中为资产创建一个转换项目。 根据设置，可以手动启动翻译项目，也可以在创建翻译项目后允许自动运行。
+* **创建和翻译**:在此工作流中，要翻译的资产会被复制到您要翻译的语言的语言根目录中。 此外，系统会根据您选择的选项，在“项目”控制台中为资产创建一个转换项目。 根据设置，可以手动启动翻译项目，也可以在创建翻译项目后允许自动运行。
 
-* **更新语言副本**: 运行此工作流以翻译另一组资产，并将其包含在特定区域设置的语言副本中。 在这种情况下，已翻译的资产会添加到已包含先前已翻译资产的目标文件夹中。
+* **更新语言副本**:运行此工作流以翻译另一组资产，并将其包含在特定区域设置的语言副本中。 在这种情况下，已翻译的资产会添加到已包含先前已翻译资产的目标文件夹中。
 
 >[!NOTE]
 >
@@ -47,8 +47,6 @@ ht-degree: 16%
 1. 单击 **[!UICONTROL 底部的“创建]** ”和“翻译”。
 
 1. From the **[!UICONTROL Target Languages]** list, select the language for which you want to create a folder structure.
-
-   ![选择目标语](assets/target-language.png)
 
 1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 仅创建结构]**。
 
@@ -115,7 +113,7 @@ ht-degree: 16%
 
    ![视图资产属性页面中的已翻译元数据](assets/translated-metadata-asset-properties.png)
 
-   *图： 资产属性页面中的已翻译元数据。*
+   *图：资产属性页面中的已翻译元数据。*
 
    >[!NOTE]
    >
@@ -132,8 +130,6 @@ ht-degree: 16%
 
 1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
-   ![选择目标语](assets/target-language.png)
-
 1. 从“项 **[!UICONTROL 目]** ”列表中，选择 **[!UICONTROL 添加到现有翻译项目]** ，以在文件夹上运行翻译工作流。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
@@ -143,8 +139,6 @@ ht-degree: 16%
    >如果您选择“ **[!UICONTROL 添加到现有翻译项目]** ”选项，则只有在项目设置与预先存在的项目设置完全匹配时，您的翻译项目才会添加到预先存在的项目。 否则，将创建新项目。
 
 1. 从“现 **[!UICONTROL 有翻译项目]** ”列表中，选择要添加要翻译的资产的项目。
-
-   ![chlimage_1-78](assets/chlimage_1-78.png)
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。要翻译的资产将添加到目标文件夹。更新的文件夹列在&#x200B;**[!UICONTROL 语言副本]**&#x200B;部分下。
 
@@ -174,8 +168,6 @@ ht-degree: 16%
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
    系统会显示一条消息，通知翻译作业的开始。
-
-   ![chlimage_1-82](assets/chlimage_1-82.png)
 
 1. 要视图翻译作业的状态，请单击“翻译作业”拼贴底部的 **[!UICONTROL 省略号]** 。
 
@@ -210,8 +202,6 @@ ht-degree: 16%
 
 1. 在&#x200B;**[!UICONTROL 项目标题]**&#x200B;字段中，输入项目标题。
 
-   ![chlimage_1-87](assets/chlimage_1-87.png)
-
 1. 单击 **[!UICONTROL 开始]**。
 1. 导航到项目控制台。 翻译文件夹会被复制到项目控制台。
 
@@ -230,8 +220,6 @@ ht-degree: 16%
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    系统会显示一条消息，通知翻译作业的开始。
-
-   ![chlimage_1-92](assets/chlimage_1-92.png)
 
 1. 要视图翻译作业的状态，请单击“翻译作业”拼贴底部的 **[!UICONTROL 省略号]** 。
 
@@ -261,8 +249,6 @@ ht-degree: 16%
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
 1. 从“现 **[!UICONTROL 有翻译项目]** ”列表中，选择要添加要翻译的资产的项目。
-
-   ![选择项目](assets/select-a-project.png)
 
 1. 单击 **[!UICONTROL 开始]**。
 1. 请参阅添加到现 [有翻译项目中的步骤](translation-projects.md#add-to-existing-translation-project) 9-14以完成其余步骤。
