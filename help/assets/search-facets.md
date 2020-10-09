@@ -3,9 +3,9 @@ title: 搜索彩块化以筛选搜索结果
 description: 如何在中创建、修改和使用搜索彩块化 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2438'
 ht-degree: 28%
 
 ---
@@ -42,19 +42,13 @@ ht-degree: 28%
    >1. 保存更改。
 
 
-1. In the Edit Search Forms page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. For example, drag **[!UICONTROL Property Predicate]**.
+1. In the [!UICONTROL Edit Search Forms] page, drag a predicate from the **[!UICONTROL Select Predicate]** tab to the main pane. For example, drag **[!UICONTROL Property Predicate]**.
 
    ![按并移动谓词以自定义搜索过滤器](assets/drag_predicate.png)
 
    *图：按并移动谓词以自定义搜索过滤器。*
 
-1. 在设置选项卡中，输入谓词的字段标签、占位符文本和说明。 为要与谓词关联的元数据属性指定有效名称。
-
-   设置选项卡中的标题标签标识所选谓词的类型。
-
-   ![使用设置选项卡提供谓词的所需选项](assets/settings.png)
-
-   使用设置选项卡提供谓词的所需选项
+1. In the [!UICONTROL Settings] tab, enter a field label, placeholder text, and description for the predicate. 为要与谓词关联的元数据属性指定有效名称。 The header label in the [!UICONTROL Settings] tab identifies the type of the selected predicate.
 
 1. 在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中，为要与谓词关联的元数据属性指定有效名称。该名称是执行搜索时所依据的名称。例如，输入 `jcr:content/metadata/dc:description` 或 `./jcr:content/metadata/dc:description`。
 
@@ -154,17 +148,9 @@ The `jcr:title` property is a user-friendly name for the option that is displaye
 1. 配置此谓词的根标记路径属性，以在标记列表中填充各种标记。
 1. 选择&#x200B;**[!UICONTROL 显示“匹配所有标记”选项]**，以搜索包含您指定的所有标记的资产。
 
-   ![“标记”谓词的典型设置](assets/tags_predicate.png)
-
-   “标记”谓词的典型设置
-
 1. 在&#x200B;**[!UICONTROL 描述]**&#x200B;字段中，输入可选描述，然后单击&#x200B;**[!UICONTROL 完成]**。
 1. 导航到“搜索”面板。 The **[!UICONTROL Tags]** predicate is added to the Search panel.
 1. 指定要根据其搜索资产或从建议列表中进行选择的标记。
-
-   ![Experience Manager在键入标记名称时提供的建议](assets/tag-suggestion.png)
-
-   *图：Experience Manager在键入标记名称时提供的建议。*
 
 1. Select **[!UICONTROL Match all]** to search for matches that include all tags that you specify.
 
