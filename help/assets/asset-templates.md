@@ -3,9 +3,9 @@ title: 资产模板
 description: 了解资产模板 [!DNL Adobe Experience Manager Assets] 以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
@@ -50,17 +50,11 @@ ht-degree: 0%
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
 1. 提前上传一个或多个INDD模 [!DNL Experience Manager] 板并可用。 为您的宣传册选择一个模板，然后单击“下 **[!UICONTROL 一步”]**。
-
-   ![chlimage_1-103](assets/chlimage_1-308.png)
-
 1. 指定手册的名称和可选说明。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
 1. （可选）单击“ **[!UICONTROL 标记]** ”，然后为小册子选择一个或多个标记。 单击 **[!UICONTROL 确认]** ，以确认您的选择。
-
-   ![chlimage_1-106](assets/chlimage_1-310.png)
-
 1. 单击&#x200B;**[!UICONTROL 创建]**。对话框会确认新手册的制作。 单击 **[!UICONTROL 打开]** ，以编辑模式打开宣传册。
 
    <!--![chlimage_1-106](assets/.png) -->
@@ -92,41 +86,30 @@ ht-degree: 0%
 
    可编辑内容显示在右侧。 要在中编辑字段， [!DNL Experience Manager Assets]模板中的相应字段必须在中进行标记 [!DNL InDesign]。 换言之，它们应在中标为可编辑 [!DNL InDesign]。
 
-   ![chlimage_1-110](assets/chlimage_1-315.png)
-
    >[!NOTE]
    >
    >确保您的 [!DNL Experience Manager] 部署与集成， [!DNL InDesign Server] 以启用 [!DNL Experience Manager Assets] 从模板提取数据并 [!DNL InDesign] 使其可供编辑。 有关详细信息，请 [参阅将Experience Manager资产与InDesign Server集成](/help/assets/indesign.md)。
 
 1. 要修改可编辑字段中的文本，请单击可编辑字段列表中的文本字段，然后编辑该字段中的文本。
 
-   ![chlimage_1-191](assets/chlimage_1-316.png)
+   ![chlimage_1-111](assets/chlimage_1-316.png)
 
    您可以编辑文本属性，例如字体样式、颜色和大小，使用提供的选项。
 
 1. 单击 **[!UICONTROL 预览]** ，以预览文本更改。
 
-   ![视图更改](assets/view-changes.png)
-
-1. 要交换图像，请单击资 **[!UICONTROL 产查找器]**。
-
-   ![chlimage_1-113](assets/chlimage_1-318.png)
+1. 要交换图像，请单 **[!UICONTROL 击资产]**![查找器chlimage_1-113](assets/chlimage_1-318.png)。
 
 1. 从可编辑字段的列表中选择图像字段，然后将所需图像从资产选取器拖到可编辑字段。
 
-   ![chlimage_1-115](assets/chlimage_1-319.png)
+   ![chlimage_1-114](assets/chlimage_1-319.png)
 
    您还可以使用关键字、标记并根据图像的发布状态搜索图像。 您可以浏览存储 [!DNL Experience Manager Assets] 库并导航到所需图像的位置。
 
    ![chlimage_1-115](assets/chlimage_1-320.png)
 
 1. 单击 **[!UICONTROL 预览]** ，以预览图像。
-
-   ![视图更改](assets/view-changes.png)
-
 1. 要编辑多页宣传资料中的特定页面，请使用底部的页面导航器。
-
-   ![页面导航器](assets/page-navigator.png)
 
 1. 单击 **[!UICONTROL 工具栏]** 上的预览，以预览所有更改。 单击 **[!UICONTROL 完成]** ，以保存对宣传资料的编辑更改。
 
@@ -175,11 +158,7 @@ ht-degree: 0%
 
    您可以浏览存储库 [!DNL Experience Manager Assets] 或集合，导航到所需模板的位置，然后选择它们进行合并。
 
-   ![chlimage_1-124](assets/chlimage_1-329.png)
-
    您可以应用各种过滤器来搜索所需的模板。 例如，您可以根据文件类型或标记搜索模板。
-
-   ![chlimage_1-125](assets/chlimage_1-330.png)
 
 1. Click **[!UICONTROL Next]** from the toolbar.
 1. 在“预览 **[!UICONTROL 和重新排序]** ”屏幕中，根据需要重新排列模板，并预览要合并的模板选择。 然后，单击工 **[!UICONTROL 具栏]** 中的“下一步”。
