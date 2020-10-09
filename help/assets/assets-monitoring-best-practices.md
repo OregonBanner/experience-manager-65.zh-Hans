@@ -3,7 +3,7 @@ title: 监控部署的最 [!DNL Assets] 佳实践
 description: 监视部署部署部署在部署后 [!DNL Adobe Experience Manager] 的环境和性能的最佳实践。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 您应在开发的性能测试阶段或高负载情况下执行实时监视，以了解环境的性能特性。 通常，应使用一套工具执行实时监视。 以下是一些建议：
 
-* [可视VM](https://visualvm.java.net/):Visual VM使您能够视图详细的Java VM信息，包括CPU使用、Java内存使用。 此外，它还允许您对在部署上运行的代码进行采样和评估。
+* [可视VM](https://visualvm.github.io/):Visual VM使您能够视图详细的Java VM信息，包括CPU使用、Java内存使用。 此外，它还允许您对在部署上运行的代码进行采样和评估。
 * [顶部](https://man7.org/linux/man-pages/man1/top.1.html):顶部是打开仪表板的Linux命令，显示使用情况统计信息，包括CPU、内存和IO使用情况。 它提供了实例中所发生情况的高级概述。
 * [顶部](https://hisham.hm/htop/):Htop是一个交互式流程查看器。 除了Top可以提供的功能外，它还提供详细的CPU和内存使用。 Htop可以使用或安装在大多数Linux系 `yum install htop` 统上 `apt-get install htop`。
 
