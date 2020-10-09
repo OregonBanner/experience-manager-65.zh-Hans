@@ -3,9 +3,9 @@ title: '[!DNLAdobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: 6.5 Service [!DNL Adobe Experience Manager] Pack的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 359eb60c0ba3845d7aa0ca58488aa945a9f45aea
+source-git-commit: 117208c634613559bb13556e12f094add70006e2
 workflow-type: tm+mt
-source-wordcount: '11484'
+source-wordcount: '11487'
 ht-degree: 25%
 
 ---
@@ -153,7 +153,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括自2019年4月发�
 
 * 屏幕阅读器现在宣布控件上标签用于移动到日历日期选取器中的下一个和上一个月(NPR-32604)。
 
-* 星级图标现在可以使用键盘键(NPR-32513)获得焦点并具有操作性。
+* 星级图标现在可以使用键盘键(NPR-32513)获得焦点并具有可操作性。
 
 * 现在可通过选项卡（聚焦在音量滑块上）和箭头键（调整键盘上的音量）访问控制视频音量的功能(NPR-32065)。
 
@@ -836,7 +836,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
@@ -1259,7 +1259,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 #### 资产——已包含
 
-* Enabled Multi-Site Manager support for [!DNL Experience Manager Assets]. For more information, see [Reuse assets using MSM for Experience Manager Assets](https://helpx.adobe.com/experience-manager/6-5/help/assets/reuse-assets-using-msm.html). NPR-29199：适用于 CQ-4259922 的修补程序
+* Enabled Multi-Site Manager support for [!DNL Experience Manager Assets]. For more information, see [Reuse assets using MSM for Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html). NPR-29199：适用于 CQ-4259922 的修补程序
 
 #### 站点——包括
 
