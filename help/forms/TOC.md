@@ -3,20 +3,20 @@ cloud: experience-cloud
 product: adobe experience manager
 sub-product: 表单
 audience: end-user
-user-guide-title: AEM 6.5Forms用户指南
+user-guide-title: Adobe Experience Manager六点五Forms指南
 breadcrumb-title: Forms Guide
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '3700'
-ht-degree: 1%
+source-wordcount: '3702'
+ht-degree: 2%
 
 ---
 
-# AEM 6.5 - Forms User Guide {#forms}
+# Adobe Experience Manager六点五Forms指南 {#forms}
 
-+ [AEM 6.5Forms用户指南](home.md)
++ [AEM 6.5 Forms 用户指南](home.md)
 + 发行说明 {#release-notes-new-features}
    + [发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
    + [新增功能摘要](using/whats-new.md)
