@@ -3,10 +3,10 @@ title: 资产Digital Rights Management
 description: 了解如何在中管理授权资产的资产到期状态和信息 [!DNL Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 97d3edf155ddeabf3f39139c9079621c3627820b
 workflow-type: tm+mt
-source-wordcount: '1423'
-ht-degree: 6%
+source-wordcount: '1400'
+ht-degree: 5%
 
 ---
 
@@ -20,10 +20,6 @@ ht-degree: 6%
 资产到期是实施资产许可要求的有效方式。 它可确保发布的资产在过期后取消发布，这样不会发生任何违反许可的情况。 没有管理员权限的用户无法编辑、复制、移动、发布和下载过期的资产。
 
 您可以在控制台中的卡和视图 [!DNL Assets] 视图中列表资产的过期状态。
-
-![expired_flag_card](assets/expired_flag_card.png)
-
-*图：在卡视图中，卡上的标记指示已过期的资产。*
 
 ![expired_flag_列表](assets/expired_flag_list.png)
 
@@ -40,17 +36,11 @@ ht-degree: 6%
 您还可以在引用边栏中视图资产的 **[!UICONTROL 过期]** 状态。 它管理资产到期状态以及复合资产与引用的子资产、集合和项目之间的关系。
 
 1. 导航到要视图其引用网页和复合资产的资产。
-1. 选择资产，然后单击 [!DNL Experience Manager] 徽标。
-
-1. 从菜 **[!UICONTROL 单中选]** 择“引用”。
-
-   ![chlimage_1-146](assets/chlimage_1-146.png)
-
-   对于过期的资产，引用边栏的顶部会显 **[!UICONTROL 示资产已过期]** 。
+1. 选择资产，然后在左 **[!UICONTROL 边栏]** 中打开引用。 对于过期的资产，引 [!UICONTROL 用边栏] 顶部会显示资 **[!UICONTROL 产已过期的状]** 态。
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   如果资产已过期子资产，引用边栏会显示资产 **[!UICONTROL 已过期子资产的状态]**。
+   如果资产已过期子资产，则引 [!UICONTROL 用边栏] 会显示资产 **[!UICONTROL 已过期子资产的状态]**。
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -61,17 +51,11 @@ ht-degree: 6%
 1. 在控制 [!DNL Assets] 台中，单击工 **[!UICONTROL 具栏中]** 的“搜索”以显示“全局搜索”框。
 
 1. 将光标置于“全搜索”框中，按Enter键显示搜索结果页面。
-
-   ![chlimage_1-150](assets/chlimage_1-150.png)
-
-1. 单击 [!DNL Experience Manager] 徽标以显示搜索面板。
-1. Click the **[!UICONTROL Expiry Status]** option to expand it.
+1. 打开左边栏中的搜索面板。 Click the **[!UICONTROL Expiry Status]** option to expand it.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. 选择“ **[!UICONTROL 过期]**”。 过期的资产会显示在搜索结果中。
-
-   ![chlimage_1-153](assets/chlimage_1-153.png)
+1. 选择“ **[!UICONTROL 过期]**”。 筛选搜索结果后，只会显示过期的资产。
 
 当您选择过期 **[!UICONTROL 选项]** ，控制台将仅 [!DNL Assets] 显示复合资产引用的过期资产和子资产。 在子资产过期后，不会立即显示引用已过期子资产的复合资产。 相反，在下次运行调度程序时 [!DNL Experience Manager] 检测到它们引用了过期的子资产后，会显示这些子资产。
 
@@ -84,9 +68,7 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 1. 打开 [!DNL Experience Manager] Configuration Manager。
 1. 选择 **[!UICONTROL Adobe CQDAM到期通知]**。 默认情况下， **[!UICONTROL 系统会选择]** “基于时间的调度程序”，这将计划作业，以在特定时间检查资产是否已过期子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为过期。
 
-   ![chlimage_1-154](assets/chlimage_1-154.png)
-
-1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式“0 0 0 &amp;ast; &amp;ast; ?”会在 00 小时开始作业。
+1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式 `0 0 0 &ast; &ast; ?` 在00小时触发作业。
 1. 选择 **[!UICONTROL 发送电子邮件]** ，以在资产过期时接收电子邮件。
 
    >[!NOTE]
@@ -102,9 +84,6 @@ To enable the [!DNL Assets] console to display the referencing compound assets a
 控制 [!DNL Assets] 台可以显示资产的各种状态。 根据特定资产的当前状态，其卡片视图会显示一个标签，用于描述其状态，例如“已过期”、“已发布”、“已批准”、“被拒绝”等。
 
 1. 在用户 [!DNL Assets] 界面中，选择一个资产。
-
-   ![chlimage_1-155](assets/chlimage_1-155.png)
-
 1. Click **[!UICONTROL Publish]** from the toolbar. 如果工具栏上未显示 **发布** ，请单击工 **[!UICONTROL 具栏上的]** “更多”，然后找到发布选 **[!UICONTROL 项选项]**![](assets/do-not-localize/publish-globe.png) “发布”。
 1. 从菜 **[!UICONTROL 单中选择]** “发布”，然后关闭确认对话框。
 1. 退出选择模式。 资产的发布状态会显示在卡片视图中资产缩略图的底部。 在列表视图中，已发布列显示资产发布的时间。
