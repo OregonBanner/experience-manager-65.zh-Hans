@@ -1,18 +1,18 @@
 ---
-title: AEM 6.5 发行说明
-description: AEM发行说明涵盖有关最新版AEM的重要信息，包括新的受支持平台、已弃用和已删除的功能以及已知问题。
+title: Adobe Experience Manager6.5发行说明
+description: AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 19%
+source-wordcount: '374'
+ht-degree: 37%
 
 ---
 
 
-# AEM 6.5 发行说明
+# Adobe Experience Manager6.5发行说明
 
-AEM发行说明涵盖有关最新版AEM的重要信息，包括新的受支持平台、已弃用和已删除的功能以及已知问题。
+AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。
 
 ## 主要AEM文章
 
@@ -40,7 +40,7 @@ AEM发行说明涵盖有关最新版AEM的重要信息，包括新的受支持�
 ## 关键AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+* [调度程序用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
