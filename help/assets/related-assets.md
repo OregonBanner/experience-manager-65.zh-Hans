@@ -3,9 +3,9 @@ title: 相关资产
 description: 了解如何关联共享一些常见属性的数字资产。 还可在数字资产之间创建源源关系。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -44,8 +44,6 @@ ht-degree: 0%
    * 要关联派生文件，请从 **[!UICONTROL 列表]** 中选择“派生”。
    * 要在资产之间创建双向关系，请从列表 **[!UICONTROL 中选]** 择其他。
 
-   ![chlimage_1-276](assets/chlimage_1-276.png)
-
 1. 从选 **[!UICONTROL 择资产]** ，导航到要关联的资产所在的位置，然后选择它。
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
@@ -55,9 +53,7 @@ ht-degree: 0%
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. 要取消资产关联，请单击工 **[!UICONTROL 具栏]** 中的取消关联。
-
-   ![相关资产](assets/do-not-localize/link-unrelate-icon.png)
+1. 要取消资产的关联，请单击工 **[!UICONTROL 具栏中]**![的取消关](assets/do-not-localize/link-unrelate-icon.png) 联资产。
 
 1. 从删除关系对话框中选择要取消关联的 **[!UICONTROL 资产]** ，然后单击取 **[!UICONTROL 消关联]**。
 
@@ -75,13 +71,11 @@ ht-degree: 0%
 
 ![“资产属性”页显示要包括的转换相关资产的源文件](assets/asset-properties-source-asset.png)
 
-*图： 要包括以进行折算的相关资产的源资产。*
+*图：要包括以进行折算的相关资产的源资产。*
 
 1. 按照创建新翻译项目中的步骤，将源文件夹中的资 [产翻译为目标语言](translation-projects.md#create-a-new-translation-project)。 例如，在本例中，将您的资源翻译为法语。
 
 1. 从“项 [!UICONTROL 目] ”页面打开翻译文件夹。
-
-   ![chlimage_1-283](assets/chlimage_1-283.png)
 
 1. 单击项目拼贴以打开详细信息页面。
 
@@ -97,8 +91,4 @@ ht-degree: 0%
 
 1. 要验证是否已转换与源相关的资产，请单击源资产。
 
-   ![chlimage_1-287](assets/chlimage_1-287.png)
-
 1. 选择与源相关的资产，然后单击“在资 **[!UICONTROL 产中显示”]**。 此时会显示已转换的相关资产。
-
-   ![chlimage_1-288](assets/chlimage_1-288.png)
