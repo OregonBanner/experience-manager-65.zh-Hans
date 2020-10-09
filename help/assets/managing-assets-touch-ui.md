@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 179af622d9655d52f3d3462f77baaf3dc9310fd8
+source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
 workflow-type: tm+mt
-source-wordcount: '9613'
+source-wordcount: '9565'
 ht-degree: 7%
 
 ---
@@ -508,9 +508,6 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 单击资产以打开其页面。
 1. 在Experience Manager界面中，从 **[!UICONTROL 列表中]** 选择演绎版。
-
-   ![左边栏以打开菜单并选择演绎版选项](assets/renditions_menu.png)
-
 1. 在&#x200B;**[!UICONTROL 演绎版]**&#x200B;面板中，查看为资产生成的演绎版列表。
 
    ![“资产详细信息”页面上的演绎版面板](assets/renditions_panel.png)
@@ -666,10 +663,6 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
 在列表视图和列视图中，当 **[!UICONTROL 将指针]** 悬停在资产缩略图上时，将显示选择选项。
 
-![在列表视图中选择资产](assets/select_quick_in_listview.png)
-
-![在列视图中选择资产](assets/select_quick_in_columnview.png)
-
 在卡视图中，选 **[!UICONTROL 择]** 选项显示为快速操作。
 
 ![选择卡快速操作视图](assets/select_quick_action.png)
@@ -690,9 +683,7 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 
    * 选择资产，然后单击工 **[!UICONTROL 具栏]** 中的编辑。
    * 单击 **[!UICONTROL 卡视图]** 中资产上显示的编辑选项。
-   * 单击工具栏中的&#x200B;**[!UICONTROL 编辑]**。
-
-   ![工具栏中的编辑选项](assets/do-not-localize/edit_icon.png)
+   * 单击工 **[!UICONTROL 具栏]** 中的编辑 ![选项中的编辑](assets/do-not-localize/edit_icon.png)。
 
 1. 要裁剪图像，请单 **[!UICONTROL 击]**![裁剪选项以裁剪图像](assets/do-not-localize/crop.png)。
 
@@ -751,9 +742,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 1. 单击以 **[!UICONTROL 下任]** 一选项中的“注释”(Annotate)选项：
 
    * [快速操作](/help/assets/managing-assets-touch-ui.md#quick-actions)
-   * 在选择资产或导航到资产页面后，从工具栏中
-
-   ![注释选项](assets/annotate-option.png)
+   * 在选择资产或导航到资产页面后，从工具栏中访问。
 
 1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
 
@@ -768,8 +757,6 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    >对于非管理员用户，仅当用户在CRXDE的路径上具有读取权限时，才 `/home` 会显示建议。
 
 1. After adding the annotation, click **[!UICONTROL Add]** to save it. A notification for the annotation is sent to Aaron.
-
-   ![添加按钮以保存注释](assets/annotation-add.png)
 
    >[!NOTE]
    >
@@ -799,12 +786,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 1. 要视图已保存的资产注释，请导航到资产所在的位置，然后打开资产页面。
 
 1. 在Experience Manager界面中，选择时 **[!UICONTROL 间轴]**。
-
-   ![时间轴选项在Experience Manager中可用](assets/view-timeline.png)
-
 1. 从时间线的&#x200B;**[!UICONTROL 显示全部]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 注释]**&#x200B;以根据注释过滤结果。
-
-   ![在时间轴中显示所有列表](assets/timeline-show-all-option.png)
 
    单击“时间轴”面 **[!UICONTROL 板中]** 的注释以视图图像上的相应注释。
 
@@ -833,8 +815,6 @@ You can also add image maps using the image editor. For details, see [Adding Ima
    要仅打印审阅状态，请从时间轴中选择它。
 
 1. Click **[!UICONTROL Print]** from the toolbar.
-
-   ![工具栏中的打印选项](assets/do-not-localize/print.png)
 
 1. 从“打印”对话框中，选择您希望批注／审阅状态在PDF上显示的位置。 例如，如果希望在包含打印图像的页面的右上方打印注释／状态，请使用左 **上方的** 设置。 默认情况下为选中状态。
 
@@ -923,8 +903,6 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 
    * 单击“ **[!UICONTROL 在时间轴中]** 显示 [!UICONTROL 全部]”。
    * 单击“ **[!UICONTROL 版本]**”。 为资产创建的所有版本都列在左侧提要栏中。
-
-      ![ 从时间轴中选择版本选项](assets/versions_option.png)
 
    * 选择资产的特定版本，然后单击 **[!UICONTROL 预览版本]**。
 
