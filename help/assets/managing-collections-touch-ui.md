@@ -1,10 +1,10 @@
 ---
-title: Manage digital assets collections
-description: Learn tasks to manage Collections of assets, such as create, view, delete, edit, and download collections.
+title: 管理数字资产收藏集
+description: 了解管理资产集合的任务，如创建、视图、删除、编辑和下载集合。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: cedefb58919d7d215040e72b4cc41159161938a8
 workflow-type: tm+mt
 source-wordcount: '2178'
 ht-degree: 17%
@@ -14,13 +14,13 @@ ht-degree: 17%
 
 # 管理收藏集 {#managing-collections}
 
-A collection is a set of assets within [!DNL Adobe Experience Manager Assets]. 使用收藏集可在用户之间共享资产。该集合可以是静态集合或基于搜索结果的动态集合。
+收藏集是其中的一组资产 [!DNL Adobe Experience Manager Assets]。 使用收藏集可在用户之间共享资产。该集合可以是静态集合或基于搜索结果的动态集合。
 
 与文件夹不同，收藏集可以包含来自不同位置的资产。 您可以与分配了不同权限级别（包括查看、编辑等）的不同用户共享集合。
 
 您可以与一个用户共享多个收藏集。每个收藏集都包含对资产的引用。收藏集中会保持资产的引用完整性。
 
-Collections are of the following types, based on the way they collate assets:
+收藏集根据资产的整理方式分为以下类型：
 
 * 包含资产、文件夹和其他收藏集的静态引用列表的收藏集。
 
@@ -58,10 +58,10 @@ You can create a collection either with [static references](#creating-a-collecti
 
 ### 使用拖放区创建集合 {#create-collections-using-dropzone}
 
-您可以将资产从用户界 [!DNL Assets] 面拖到集合中。 You can also create a copy of a collection and drag the assets there.
+您可以将资产从用户界 [!DNL Assets] 面拖到集合中。 您还可以创建收藏集的副本并将资产拖动到该集合。
 
 1. 从用 [!DNL Assets] 户界面中，选择要添加到收藏集的资产。
-1. Drag the assets to the **[!UICONTROL Drop in Collection]** zone. Alternatively, click **[!UICONTROL To Collection]** from the toolbar.
+1. 将资产拖至“放 **[!UICONTROL 入收藏集”区]** 。 或者，也可 **[!UICONTROL 以单击工]** 具栏中的到集合。
 
    ![drop_in_collection](assets/drop_in_collection.png)
 
@@ -70,17 +70,17 @@ You can create a collection either with [static references](#creating-a-collecti
    If you want to add the assets to an existing collection, select it from the page, and click **[!UICONTROL Add]**. 默认情况下，将选择最近更新的集合。
 
 1. 在&#x200B;**[!UICONTROL 创建新收藏集]**&#x200B;对话框中，指定收藏集的名称。如果希望所有用户都可以访问该收藏集，请选择&#x200B;**[!UICONTROL 公共收藏集]**。
-1. Click **[!UICONTROL Continue]** to create the collection.
+1. 单击 **[!UICONTROL 继续]** ，以创建集合。
 
 ### Create a smart collection {#creating-a-smart-collection}
 
-智能收藏集使用搜索条件动态填充资产。 You can create a Smart Collection using only files and not folders or files and folders.
+智能收藏集使用搜索条件动态填充资产。 您只能使用文件（而不是文件夹、文件和文件夹）创建智能收藏集。
 
-To create a smart collection, follow the steps:
+要创建智能收藏集，请执行以下步骤：
 
-1. Navigate to the [!DNL Assets] user interface and click search.
+1. 导航到用 [!DNL Assets] 户界面并单击“搜索”。
 
-1. Type the search keyword in the Omnisearch box and press `Enter`. 打开过滤器面板并应用搜索筛选器。
+1. 在“Omnisearch”（全搜索）框中键入search关键字，然后按 `Enter`。 打开过滤器面板并应用搜索筛选器。
 
 1. 从“文件 **[!UICONTROL 和文件夹]** ”列表中，选 **[!UICONTROL 择“文件]**”。
 
@@ -134,10 +134,10 @@ Smart collections are built by saving a search so you can alter their content by
    ![edit_smart_collection对话框](assets/edit_smart_collectiondialog.png)
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。此时会出现&#x200B;**[!UICONTROL 编辑智能收藏集]**&#x200B;对话框。
-1. 单击 **[!UICONTROL 覆盖]** ，将原始智能收藏集替换为已编辑的收藏集。 Alternatively, select **[!UICONTROL Save As]** to save the edited collection separately.
+1. 单击 **[!UICONTROL 覆盖]** ，将原始智能收藏集替换为已编辑的收藏集。 或者，选择 **[!UICONTROL 另存为]** ，以单独保存已编辑的集合。
 1. In the confirmation dialog, Click **[!UICONTROL Save]** to complete the process.
 
-## 视图和编辑集合元数据 {#viewing-and-editing-collection-metadata}
+## 视图和编辑集合元数据 {#view-edit-collection-metadata}
 
 收藏集元数据由与收藏集相关的数据组成，其中包括添加的任何标记。
 
@@ -147,16 +147,16 @@ Smart collections are built by saving a search so you can alter their content by
 
 ## 批量编辑多个集合的元数据 {#editing-collection-metadata-in-bulk}
 
-You can edit the metadata of multiple collections simultaneously. This functionality helps you quickly replicate common metadata in multiple collections.
+您可以同时编辑多个集合的元数据。 此功能可帮助您快速复制多个集合中的常见元数据。
 
 1. 在“收藏集”控制台中，选择两个或更多收藏集。
 1. 在工具栏中，单击 **[!UICONTROL 属性]**。
 1. 在&#x200B;**[!UICONTROL 收藏集元数据]**&#x200B;页面中，根据需要编辑&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡下的元数据。
-1. To view the metadata properties for a specific collection, deselect the remaining collections in the collections list. 元数据编辑器字段会填充特定集合的元数据。
+1. 要视图特定集合的元数据属性，请在集合列表中取消选择其余的集合。 元数据编辑器字段会填充特定集合的元数据。
 
    >[!NOTE]
    >
-   >* In the [!UICONTROL Properties] page, you can remove collections from the list of collections by deselecting them. 收藏集列表默认选中所有收藏集。 [!DNL Experience Manager] 不会更新您删除的集合的元数据。
+   >* 在“属 [!UICONTROL 性] ”页面中，您可以通过取消选择集合从集合列表中删除集合。 收藏集列表默认选中所有收藏集。 [!DNL Experience Manager] 不会更新您删除的集合的元数据。
    >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
 
 
@@ -177,24 +177,24 @@ You can edit the metadata of multiple collections simultaneously. This functiona
 
 您可以从“收藏集”控制台中搜索收藏集。When you search with keywords in the Omnisearch box, [!DNL Assets] searches for collection names, metadata, and the tags added to the collections.
 
-如果您从顶级搜索集合，则搜索结果中只返回单个集合。 [!DNL Assets] 或收藏集中的文件夹被排除。 In all other cases (for example, within an individual collection or in a folder hierarchy), all relevant assets, folders, and collections are returned.
+如果您从顶级搜索集合，则搜索结果中只返回单个集合。 [!DNL Assets] 或收藏集中的文件夹被排除。 在所有其他情况下（例如，在单个收藏集或文件夹层次结构中），都会返回所有相关资产、文件夹和收藏集。
 
 ## 在集合中搜索 {#searching-within-collections}
 
 在收藏集控制台中，单击某个收藏集以将其打开。
 
-Within a collection, [!DNL Experience Manager] search is restricted to assets (and their tags and metadata) within the collection that you are viewing. When you search within a folder, all matching assets and child folders within the current folder are returned. When you search within a collection, only matching assets, folders, and other collections that are direct members of the collection are returned.
+Within a collection, [!DNL Experience Manager] search is restricted to assets (and their tags and metadata) within the collection that you are viewing. 当您在某个文件夹内进行搜索时，将返回当前文件夹中所有匹配的资产和子文件夹。 当您在收藏集中进行搜索时，只会返回与收藏集直接成员匹配的资产、文件夹和其他收藏集。
 
-## Edit collection settings {#editing-collection-settings}
+## 编辑集合设置 {#editing-collection-settings}
 
 您可以编辑集合设置（如标题和说明），或向集合添加成员。
 
-1. Select a collection, and click **[!UICONTROL Settings]** in the toolbar. Alternatively, use the **[!UICONTROL Settings]** quick action from the collection thumbnail.
+1. 选择一个集合，然后单 **[!UICONTROL 击工]** 具栏中的设置。 或者，也可以使 **[!UICONTROL 用集合]** 缩略图中的设置快速操作。
 1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
 1. 要保存更改，请单击“ **[!UICONTROL 保存]**”。
 
-## Delete a collection {#deleting-a-collection}
+## 删除集合 {#deleting-a-collection}
 
 1. 从收藏集控制台中，选择一个或多个收藏集，然后单击工具栏中的删除。
 
@@ -204,7 +204,7 @@ Within a collection, [!DNL Experience Manager] search is restricted to assets (a
    >
    >You can also delete smart collections by [deleting saved searches](#saved-searches).
 
-## Download a collection {#downloading-a-collection}
+## 下载集合 {#downloading-a-collection}
 
 当您下载收藏集时，会下载该收藏集中的整个资产层次结构，包括文件夹和子收藏集。
 
@@ -259,7 +259,7 @@ In the [!DNL Assets] user interface, you can search or filter assets based on ce
 
 ## 对集合执行工作流 {#running-a-workflow-on-a-collection}
 
-You can run a workflow for the assets within a collection. 如果集合包含嵌套集合，则该工作流也会运行在嵌套集合中的资产上。 但是，如果集合和嵌套集合包含重复资产，则此工作流仅对此类资产运行一次。
+您可以为集合中的资产运行工作流。 如果集合包含嵌套集合，则该工作流也会运行在嵌套集合中的资产上。 但是，如果集合和嵌套集合包含重复资产，则此工作流仅对此类资产运行一次。
 
 1. 打开 **[!UICONTROL 资产]** > **[!UICONTROL 收藏集]**。 要对特定集合执行工作流，请选择该工作流。
 1. Open **[!UICONTROL Timeline]** rail. 单击 ![V形图](assets/do-not-localize/chevron-up-icon.png) ，然后单 **[!UICONTROL 击开始工作流]**。
