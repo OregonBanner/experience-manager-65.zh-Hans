@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 37b3a553758ecd249a08e0d7d6e29becdcb018c2
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 这些规则可以包括添加元数据、智能裁剪图像或建立视频编码用户档案。 在AEM中，您可以创建三种类型的用户档案，下面的链接将详细介绍这些类型：
 
-* [元数据配置文件](/help/assets/metadata-profiles.md)
+* [元数据配置文件](/help/assets/metadata-config.md#metadata-profiles)
 * [图像配置文件](/help/assets/image-profiles.md)
 * [视频配置文件](/help/assets/video-profiles.md)
 
