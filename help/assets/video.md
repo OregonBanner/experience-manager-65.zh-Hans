@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 22%
@@ -740,7 +740,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 1. Near the upper-right corner of the page, click **[!UICONTROL Save.]**
 1. 将YouTube发布元数据用户档案应用于要上传视频的文件夹。 您需要同时设置元数据用户档案和视频用户档案。
 
-   请参阅 [元数据配置文件](/help/assets/metadata-profiles.md) 和视 [频配置文件](/help/assets/video-profiles.md)。
+   请参阅 [元数据配置文件](/help/assets/metadata-config.md#metadata-profiles) 和视 [频配置文件](/help/assets/video-profiles.md)。
 
 ### 将视频发布到您的 YouTube 频道 {#publishing-videos-to-your-youtube-channel}
 
