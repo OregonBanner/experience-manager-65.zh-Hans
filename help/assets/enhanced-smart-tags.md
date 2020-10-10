@@ -3,9 +3,9 @@ title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 892237699a4027e7dab406fd620cac220aa8b88b
+source-git-commit: 78a101cdf0b4762ff9a3e7320db464df5b96300d
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1587'
 ht-degree: 8%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 8%
 
 在后台，智能内容服务使用Adobe Sensei人工智能框架来根据您的标签结构和业务分类训练其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
 
-智能内容服务是托管在AdobeI/O上的云服务。 要在中使 [!DNL Adobe Experience Manager]用它，系统管理员必须将您 [!DNL Experience Manager] 的部署与AdobeI/O集成。
+智能内容服务是托管在AdobeI/O上的云服务。要在中使 [!DNL Adobe Experience Manager]用它，系统管理员必须将您的 [!DNL Experience Manager] 部署与AdobeI/O集成。
 
 总而言之，使用智能内容服务的主要步骤如下：
 
@@ -44,6 +44,7 @@ ht-degree: 8%
 
 * 具备拥有组织管理员权限的 Adobe ID 帐户。
 * 您的组织已启用智能内容服务。
+* 智能内容服务基础包只能添加到基础包和 [!DNL Sites] 加载项 [!DNL Assets] 已获得许可的部署。
 
 ## 入门 {#onboarding}
 
@@ -179,3 +180,7 @@ The Smart Content Service is available for purchase as an add-on to [!DNL Experi
 >[!NOTE]
 >
 >在随后的标记周期中，只有修改后的资产会再次使用经过新培训的标记进行标记。但是，如果标记工作流的上一个标记周期与当前标记周期之间的间隔超过24小时，即使资产未更改也会进行标记。 对于定期标记工作流，当时间间隔超过6个月时，将标记未更改的资产。
+
+## 提示和限制 {#tips-best-practices-limitations}
+
+* 智能内容服务的使用限制为每年最多200万张标记图像。 处理和标记的任何重复图像均计为标记图像。
