@@ -3,17 +3,17 @@ title: '元数据模式，用于定义中元数据属性页面的布局 [!DNL Ad
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8c481c9a5052ff057ae0857c2ac825cec2b26269
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
-source-wordcount: '2666'
-ht-degree: 13%
+source-wordcount: '3601'
+ht-degree: 11%
 
 ---
 
 
 # 元数据架构 {#metadata-schemas}
 
-组织会提出一个元数据模型，该模型增强了资产发现、使用、互操作性等。 正确的元数据应用程序对于维护元数据驱动的工作流和流程至关重要。 要遵守整个组织的元数据战略和标准，您可以使用元数据模式来帮助DAM用户进行调整。 [!DNL Adobe Experience Manager] 允许轻松、灵活地创建、维护和应用元数据模式。
+组织会提出一个元数据模型，它增强了资产发现、使用、互操作性等。 正确的元数据应用程序对于维护元数据驱动的工作流和流程至关重要。 要遵守整个组织的元数据战略和标准，您可以使用元数据模式来帮助DAM用户进行调整。 [!DNL Adobe Experience Manager] 允许轻松、灵活地创建、维护和应用元数据模式。
 
 在 [!DNL Adobe Experience Manager Assets]中，模式包含要填写的特定信息的特定字段。 它还包含布局信息，以用户友好的方式显示元数据字段。 元数据属性包括标题、描述、MIME类型、标记等。 您可以使用元数 [!UICONTROL 据模式Forms] ，修改现有模式或添加自定义元数据模式。
 
@@ -25,11 +25,11 @@ ht-degree: 13%
 
    ![资产属性的“基本”选项卡，其中无法更改资产类型](assets/asset-properties-basic-tab.png)
 
-*图： 资产属性上的“基[!UICONTROL 本”选项卡]。*
+*图：资产属性上的“基[!UICONTROL 本”选项卡]。*
 
-要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 请参 [阅编辑元数据模式](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) Forms以了解更多信息。 如果您修改MIME类型的元数据模式，则会修改资产和所有子类型的属性页面布局。 例如，修改jpeg模式时，只 `default/image` 会修改MIME类型资产的元数据布局（资产属性） `image/jpeg`。 但是，如果您编辑默认模式，则所做的更改将修改所有类型资产的元数据布局。
+要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 请参 [阅编辑元数据模式](/help/assets/metadata-schemas.md#edit-metadata-schema-forms) Forms，以了解更多信息。 如果您修改MIME类型的元数据模式，则会修改资产和所有子类型的属性页面布局。 例如，修改jpeg模式时，只 `default/image` 会修改MIME类型资产的元数据布局（资产属性） `image/jpeg`。 但是，如果您编辑默认模式，则所做的更改将修改所有类型资产的元数据布局。
 
-## 元数据架构表单 {#default-metadata-schema-forms}
+## Metadata Schema forms {#default-metadata-schema-forms}
 
 要视图表单或模板的列表，请在界面 [!DNL Experience Manager] 中导航到 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >元数 **[!UICONTROL 据模式]**。
 
@@ -39,9 +39,9 @@ ht-degree: 13%
 |---|---|---|
 | [!UICONTROL 默认] |  | 资产的基本元数据模式表单。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | <ul><li>[!UICONTROL dm_video]</li></ul> | 模式表单，用于Dynamic Media视频。 |
-|  | <ul><li>[!UICONTROL 图像]</li></ul> | 模式表单，用于MIME类型(如 `image/jpeg` 和 `image/png`)。 <br> 图 [!UICONTROL 像表单] 具有以下子表单模板： <ul><li> [!UICONTROL jpeg]: 模式子类型为jpeg的资产 [!UICONTROL 表单]。</li> <li>[!UICONTROL tiff]: 子类型为TIFF的资产的模式表单。</li></ul> |
-|  | <ul><li>[!UICONTROL 应用]</li></ul> | 模式表单，用于MIME类型如 `application/pdf` 和 `application/zip`。 <br>[!UICONTROL pdf]: 模式子类型为PDF的资产的表单。 |
+|  | <ul><li>[!UICONTROL dm_video]</li></ul> | Dynamic Media视频的模式表单。 |
+|  | <ul><li>[!UICONTROL 图像]</li></ul> | 模式表单，用于MIME类型(如 `image/jpeg` 和 `image/png`)。 <br> 图 [!UICONTROL 像表单] 具有以下子表单模板： <ul><li> [!UICONTROL jpeg]:模式子类型为jpeg的资产 [!UICONTROL 表单]。</li> <li>[!UICONTROL tiff]:子类型为TIFF的资产的模式表单。</li></ul> |
+|  | <ul><li>[!UICONTROL 应用]</li></ul> | 模式表单，用于MIME类型如 `application/pdf` 和 `application/zip`。 <br>[!UICONTROL pdf]:模式子类型为PDF的资产的表单。 |
 |  | <ul><li>[!UICONTROL 视频]</li></ul> | 模式表单，用于MIME类型(如 `video/avi` 和 `video/mp4`)。 |
 | [!UICONTROL 收藏集] |  | 集合的模式表单。 |
 | [!UICONTROL contentfragment] |  | [模式内容片段表单](/help/sites-developing/customizing-content-fragments.md)。 |
@@ -74,7 +74,7 @@ ht-degree: 13%
 
    ![用于自定义资产属性页面的元数据模式编辑器](assets/metadata-schema-editor.png)
 
-   *图： 元数[!UICONTROL 据模式表单编辑器]（包含可用选项卡）页面。*
+   *图：元数[!UICONTROL 据模式表单编辑器]（包含可用选项卡）页面。*
 
 1. To configure a component, select it and modify its properties in the **[!UICONTROL Settings]** tab.
 
@@ -85,14 +85,14 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 | 组件名称 | 描述 |
 | -------------------------------- | ----------------------------------------------------------------------------------- |
 | [!UICONTROL 章节标题] | 添加一列表常用组件的章节标题。 |
-| [!UICONTROL 单行文本] | 添加单行文本属性。 它存储为字符串。 |
-| [!UICONTROL 多值文本] | 添加多值文本属性。 它存储为字符串数组。 |
+| [!UICONTROL 单行文本] | 添加单行文本属性。它存储为字符串。 |
+| [!UICONTROL 多值文本] | 添加多值文本属性。它存储为字符串数组。 |
 | [!UICONTROL 数字] | 添加数字组件。 |
 | [!UICONTROL 日期] | 添加日期组件。 |
 | [!UICONTROL 下拉列表] | 添加下拉列表。 |
 | [!UICONTROL 标准标记] | 添加标记. |
 | [!UICONTROL 智能标记] | 通过自动添加元数据标记来增强搜索功能。 |
-| [!UICONTROL 隐藏字段] | 添加隐藏字段。 在保存资产时，它将作为POST参数发送。 |
+| [!UICONTROL 隐藏字段] | 添加隐藏字段。在保存资产时，它将作为POST参数发送。 |
 | [!UICONTROL 资产引用对象] | 将此组件添加到资产引用的资产的视图列表。 |
 | [!UICONTROL 资产引用] | 添加以显示引用资产的资产列表。 |
 | [!UICONTROL 产品引用] | 添加以显示与资产链接的产品的列表。 |
@@ -103,27 +103,27 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 要编辑表单上元数据组件的属性，请单击该组件以编辑设置选项卡中的以下全部或一部分 **[!UICONTROL 属性]** 。
 
-**字段标签**: 资产的属性页面上显示的元数据属性的名称。
+**字段标签**:资产的属性页面上显示的元数据属性的名称。
 
-**映射到属性**: 此属性指定资产节点在CRX存储库中保存的相对路径或名称。 它会开始 `./` 指示该路径位于资产的节点下。
+**映射到属性**:此属性指定资产节点在CRX存储库中保存的相对路径或名称。 它会开始 `./` 指示该路径位于资产的节点下。
 
 以下是此属性的有效值：
 
 * `./jcr:content/metadata/dc:title`：将该值作为属性 `dc:title` 存储在资产的元数据节点中。
 
-* `./jcr:created`: 存储资产的创建日期和时间。 它是受保护的属性。 如果配置这些属性，Adobe建议您将其标记为禁用编辑。
+* `./jcr:created`:存储资产的创建日期和时间。 它是受保护的属性。 如果配置这些属性，Adobe建议您将其标记为禁用编辑。
 
 要确保在元数据模式表单中正确显示组件，属性路径不应包含任何空格。
 
-* **占位符**: 使用此属性可指定与元数据属性相关的占位符文本。
-* **必需**: 使用此属性可在属性页面上将元数据属性标记为必需。
-* **禁用编辑**: 使用此属性可禁止对属性页面上的属性进行任何编辑。
-* **在只读模式下显示空字段**: 标记此属性可在属性页面上显示元数据属性，即使其没有值也是如此。 默认情况下，当元数据属性没有值时，不会在属性页面中列出该属性。
-* **显示订购列表**: 使用此属性可显示选项的有序列表。
-* **选择**: 使用此属性指定列表中的选项。
+* **占位符**:使用此属性可指定与元数据属性相关的占位符文本。
+* **必需**:使用此属性可在属性页面上将元数据属性标记为必需。
+* **禁用编辑**:使用此属性可禁止对属性页面上的属性进行任何编辑。
+* **在只读模式下显示空字段**:标记此属性可在属性页面上显示元数据属性，即使其没有值也是如此。默认情况下，当元数据属性没有值时，不会在属性页面中列出该属性。
+* **显示订购列表**:使用此属性可显示选项的有序列表。
+* **选择**:使用此属性指定列表中的选项。
 * **描述**：使用此属性可添加对元数据组件的简短描述。
-* **类**: 属性关联的对象类。
-* **删除**: 单击 [!UICONTROL 删除] ，以从模式表单中删除组件。
+* **类**:属性关联的对象类。
+* **删除**:单击 [!UICONTROL 删除] ，以从模式表单中删除组件。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 ![上下文元数据列表上选择的选项卡会显示在资产属性页面上](assets/contextual-metadata-asset-properties.png)
 
-*图： 资产属性页面中的上下文元数据。*
+*图：资产属性页面中的上下文元数据。*
 
 ### 在JSON文件中指定属性 {#specify-properties-in-json-file}
 
@@ -156,6 +156,114 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 Click `+` to add a tab on a schema form. By default, the new tab has the name `Unnamed-1`. You can modify the name from the **[!UICONTROL Settings]** tab. Click `X` to delete a tab.
 
 ![使用元数据模式编辑器添加或删除选项卡](assets/metadata-schema-form-new-tab.png)
+
+## 串联元数据 {#cascading-metadata}
+
+在捕获资产的元数据信息时，用户会在各种可用字段中提供信息。 您可以显示特定元数据字段或字段值，这些字段或字段值取决于在其他字段中选择的选项。 此类元数据的条件显示称为级联元数据。 换言之，您可以在特定元数据字段／值与一个或多个字段和／或其值之间创建依赖关系。
+
+使用元数据模式定义用于显示级联元数据的规则。 例如，如果您的元数据模式包含资产类型字段，则您可以根据用户选择的资产类型定义要显示的相关字段集。
+
+>[!CAUTION]
+>
+>内容片段不支持层叠元数据。
+
+以下是一些可定义级联元数据的使用案例：
+
+* 如果需要用户位置，则根据用户对国家／地区和州的选择显示相关城市名称。
+* 根据用户对产品列表的选择，在类别中加载相关品牌名称。
+* 根据在另一个字段中指定的值切换特定字段的可见性。 例如，如果用户希望将发运交付到其他地址，则显示单独的发运地址字段。
+* 根据在另一个字段中指定的值将字段指定为必填字段。
+* 根据在另一个字段中指定的值更改特定字段显示的选项。
+* 根据在其他字段中指定的值，在特定字段中设置默认元数据值。
+
+### 在 [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+
+请考虑您希望根据所选资产类型显示级联元数据的方案。 一些示例
+
+* 对于视频，显示适用的字段，如格式、编解码器、持续时间等。
+* 对于Word或PDF文档，显示页面计数、作者等字段。
+
+无论选择何种资产类型，均将版权信息显示为必填字段。
+
+1. 在界 [!DNL Experience Manager] 面中，转至 **[!UICONTROL 工具]** >资 **[!UICONTROL 产]** >元数 **[!UICONTROL 据模式]**。
+1. In the **[!UICONTROL Schema Forms]** page, select a schema form and then click **[!UICONTROL Edit]** from the toolbar to edit the schema.
+
+   ![select_form](assets/select_form.png)
+
+1. （可选）在元数据模式编辑器中，创建新字段以进行条件化。 在“设置”选项卡中指定名称和属 **[!UICONTROL 性路径]** 。
+
+   要创建新选项卡，请单 `+` 击以添加选项卡，然后添加元数据字段。
+
+   ![add_tab](assets/add_tab.png)
+
+1. 为资产类型添加下拉列表字段。 在“设置”选项卡中指定名称和属 **[!UICONTROL 性路径]** 。 添加可选描述。
+
+   ![asset_type_field](assets/asset_type_field.png)
+
+1. 键值对是提供给表单用户的选项。 您可以手动或从JSON文件提供键值对。
+
+   * 要手动指定值，请选择“手 **[!UICONTROL 动添加]**”，然后单 **[!UICONTROL 击“添加选项]** ”，然后指定选项文本和值。 例如，指定视频、PDF、Word和图像资产类型。
+
+   * 要动态从JSON文件中提取值，请选 **[!UICONTROL 择“通过JSON路径添加]** ”并提供JSON文件的路径。 [!DNL Experience Manager] 向用户显示表单时，实时获取键值对。
+
+   这两种选择是互斥的。 无法从JSON文件导入选项并手动编辑。
+
+   ![add_choice](assets/add_choice.png)
+
+   >[!NOTE]
+   >
+   >添加JSON文件时，键值对不会显示在元数据模式编辑器中，但在已发布的表单中可用。
+
+   >[!NOTE]
+   >
+   >添加选项时，如果单击“下拉框”字段，则界面会扭曲，选项的删除选项将停止工作。 保存更改前，不要单击下拉菜单。 如果您遇到此问题，请保存模式并再次打开它以继续编辑。
+
+1. （可选）添加其他必填字段。 例如，资产类型视频的格式、编解码器和持续时间。
+
+   同样，为其他资产类型添加从属字段。 例如，为文档资产（如PDF和Word文件）添加字段页数和作者。
+
+   ![video_dependent_fields](assets/video_dependent_fields.png)
+
+1. 要在资产类型字段和其他字段之间创建依赖关系，请选择相关字段并打开“规 **[!UICONTROL 则]** ”选项卡。
+
+   ![select_dependentfield](assets/select_dependentfield.png)
+
+1. Under **[!UICONTROL Requirement]**, choose the **[!UICONTROL Required, based on new rule]** option.
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 Click **[!UICONTROL Done]** to save the changes.
+
+   ![define_rule](assets/define_rule.png)
+
+   >[!NOTE]
+   >
+   >具有手动预定义值的下拉列表可与规则一起使用。 已配置JSON路径的下拉菜单不能与使用预定义值应用条件的规则一起使用。 如果这些值在运行时从JSON加载，则无法应用预定义的规则。
+
+1. 在“可 **[!UICONTROL 见性]**”下，根据新 **[!UICONTROL 规则选项选择“可见]** ”。
+
+1. Click **[!UICONTROL Add Rule]** and choose the **[!UICONTROL Asset Type]** field to create a dependency. 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 Click **[!UICONTROL Done]** to save the changes.
+
+   ![define_visibilityrule](assets/define_visibilityrule.png)
+
+   >[!NOTE]
+   >
+   >单击空格（或除值之外的任何位置）将重置这些值。 如果发生这种情况，请重新选择值。
+
+   >[!NOTE]
+   >
+   >您可以应用&#x200B;**[!UICONTROL 要求]**&#x200B;条件和&#x200B;**[!UICONTROL 可见性]**&#x200B;条件，二者相互独立。
+
+1. 同样，在“资产类型”字段中的值“视频”与其他字段（如编解码器和持续时间）之间创建依赖关系。
+1. 重复这些步骤，在“资产类型”字段中的文档资产(PDF和Word [!UICONTROL )与“页面计数] ”和“作者”等字段之 [!UICONTROL 间创建] 依 [!UICONTROL 赖关系]。
+1. 单击&#x200B;**[!UICONTROL 保存]**。将元数据模式应用到文件夹。
+
+1. 导航到您应用元数据模式的文件夹，然后打开资产的属性页面。 根据您在资产类型字段中的选择，系统会显示相关的层叠元数据字段。
+
+   ![视频资产的层叠元数据](assets/video_asset.png)
+
+   *图：为视频级联元数据。*
+
+   ![文档资产的级联元数据](assets/doc_type_fields.png)
+
+   *图：为文档级联元数据。*
 
 ## 删除元数据模式表单 {#delete-metadata-schema-forms}
 
@@ -229,7 +337,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
    ![文本字段已添加到元数据模式表单编辑器](assets/text-field-metadata-schema-editor.png)
 
-   *图： 文本字段已添加到元数据模式表单编辑器。*
+   *图：文本字段已添加到元数据模式表单编辑器。*
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据 **[!UICONTROL 模式Forms]** 页面。
 1. 单 **[!UICONTROL 击工具栏中的应用到文件夹]** ，以将自定义元数据应用到文件夹。
@@ -257,7 +365,7 @@ In this case, create a node at `/etc/dam/metadataeditor/mimetypemappings` in the
 
    ![在元数据模式表单编辑器的规则选项卡中选择必需，将必填字段添加到元数据表单](assets/mandatory-field-metadata-schema-editor.png)
 
-   *图： 元数据模式表单编辑器中的必填字段。*
+   *图：元数据模式表单编辑器中的必填字段。*
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在元数据 **[!UICONTROL 模式Forms]** 页面。 选择表单，然后单 **[!UICONTROL 击工具栏中的应用到文]** 件夹，以将自定义元数据应用到文件夹。
 
