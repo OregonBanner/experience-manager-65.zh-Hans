@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 translation-type: tm+mt
-source-git-commit: d14688b17f47a2b1c11833eac10413d58276f6be
+source-git-commit: b08149e00c418319ebacec71c56472ad4e8e1089
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 7%
@@ -24,7 +24,7 @@ ht-degree: 7%
 
 由于可能有不同的值，因此默认情况下不启用页面属性进行批量编辑。 必须明确允许（启用）它们。 在定义可批量编辑的页面属性时，您需要考虑某些含义，例如：
 
-* 某些字段通常是唯一的； 例如页面标题。 您必须决定何时启用这些字段进行批量编辑是否有意义。
+* 某些字段通常是唯一的；例如页面标题。 您必须决定何时启用这些字段进行批量编辑是否有意义。
 * 某些字段可能有多个值——这在渲染时需要有意义的表示。
 
    例如，一个复选框，其中指示“准备发布”。 在批量编辑之前，这可能有几个值（例如，就绪、正在审阅、正在进行）。
@@ -43,7 +43,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->也可以对资产进行批量编辑。 其操作大体相同，只有少数几点差别。有关完整的信息，请参阅[编辑多个资产的属性](/help/assets/managing-multiple-assets.md)。You can customize the fields in the Bulk Metadata editor for Assets using the [Schema editor](/help/assets/metadata-schemas.md).
+>也可以对资产进行批量编辑。 其操作大体相同，只有少数几点差别。有关完整的信息，请参阅[编辑多个资产的属性](/help/assets/metadata.md)。You can customize the fields in the Bulk Metadata editor for Assets using the [Schema editor](/help/assets/metadata-schemas.md).
 
 ## 启用字段 {#enabling-a-field}
 
@@ -64,7 +64,7 @@ ht-degree: 7%
 
 在页面组件上启用字段(*不在* 模板上):
 
-1. 使用CRXDE Lite（或等效的方法）打开页面组件。
+1. 使用CRXDE Lite（或等效方法）打开页面组件。
 
    例如：`/apps/core/wcm/components/page/v1/page`
 
