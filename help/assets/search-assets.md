@@ -4,7 +4,7 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c94220ca6e31716b6de4dac99dfb98ac1ba1faff
+source-git-commit: 421f18bef4b0dbcad74e91316eead70036c9750e
 workflow-type: tm+mt
 source-wordcount: '5955'
 ht-degree: 6%
@@ -436,7 +436,7 @@ ht-degree: 6%
 
 可以批量更新多个资产的公用元数据字段。 从搜索结果中，选择一个或多个资产。 单击 **[!UICONTROL 工具栏]** 中的属性，然后根据需要更新元数据。 完成 **[!UICONTROL 后，单击]** “保存并关闭”。 更新字段中以前存在的元数据将被覆盖。
 
-对于单个文件夹或集合中的可用资产，无需使用搜索功 [能即可批量更新元](/help/assets/managing-multiple-assets.md) 数据。 对于跨文件夹可用或符合通用标准的资产，通过搜索批量更新元数据会更快。
+对于单个文件夹或集合中的可用资产，无需使用搜索功 [能即可批量更新元](/help/assets/metadata.md) 数据。 对于跨文件夹可用或符合通用标准的资产，通过搜索批量更新元数据会更快。
 
 ### 智能收藏集 {#collections-1}
 
