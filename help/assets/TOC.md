@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: 资产指南
+user-guide-title: Assets 指南
 breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 45d7f741660bd8dd31cd454c034f562fc5394621
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '619'
 ht-degree: 40%
 
 ---
 
 
-# 资产指南 {#assets}
+# Assets 指南 {#assets}
 
 + [[!DNL Assets] 用户指南](home.md)
 + [Experience Manager6.5资产发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
@@ -23,6 +23,7 @@ ht-degree: 40%
 + 使用Experience Manager资产 {#using}
    + [资产主页体验](assets-home-page.md)
    + [搜索数字资产](search-assets.md)
+   + [使用资产元数据](metadata.md)
    + [多语言资源](multilingual-assets.md)
    + [在资 [!DNL Adobe Stock] 产中使用资产](aem-assets-adobe-stock.md)
    + [预览3D资产](previewing-3d-assets.md)
@@ -91,28 +92,24 @@ ht-degree: 40%
 + 管理资产 {#administer}
    + [支持的文件格式](assets-formats.md)
    + [搜索 Facet](search-facets.md)
-   + [管理资产的元数据](metadata.md)
+   + [了解元数据概念](metadata-concepts.md)
+   + [元数据功能的配置](metadata-config.md)
    + [XMP 写回到演绎版](xmp-writeback.md)
    + [资产链接共享](link-sharing.md)
    + [资产报表](asset-reports.md)
    + [增强型智能标记](enhanced-smart-tags.md)
    + [用户档案处理元数据、图像和视频](processing-profiles.md)
-   + [串联元数据](cascading-metadata.md)
    + [创建和配置资产编辑器页面](assets-finder-editor.md)
    + [资产大小调整指南](assets-sizing-guide.md)
-   + [元数据架构参考](meta-ref.md)
    + [翻译资产的最佳实践](best-practices-for-translating-assets-efficiently.md)
    + [资产性能调整指南](performance-tuning-guidelines.md)
-   + [如何添加或编辑元数据](meta-edit.md)
    + [资产迁移指南](assets-migration-guide.md)
-   + [XMP 元数据](xmp.md)
    + [资产网络注意事项](assets-network-considerations.md)
    + [资源和媒体库](medialibrary.md)
    + [使用PDF光栅器](aem-pdf-rasterizer.md)
    + [配置上传限制](configuring-asset-upload-restrictions.md)
    + [Experience Manager和Creative Cloud集成](aem-cc-integration-best-practices.md)
    + [与InDesign Server集成](indesign.md)
-   + [元数据配置文件](metadata-profiles.md)
    + [Digital Rights Management资产](drm.md)
    + [使用演示包获得资产洞察](touch-ui-using-demo-package-for-asset-insights.md)
    + [资产文件格式最佳实践](assets-file-format-best-practices.md)
@@ -120,14 +117,11 @@ ht-degree: 40%
    + [Camera Raw支持](camera-raw.md)
    + [使用Apache Tika检测MIME类型的资产](detect-asset-mime-type-with-tika.md)
    + [图像转码库](imaging-transcoding-library.md)
-   + [支持IPTC元数据](iptc-support.md)
    + [元数据架构](metadata-schemas.md)
    + [集合、片段和片段模板的多租户](multi-tenancy.md)
    + [为资产设置水印](watermarking.md)
-   + [批量元数据导入和导出](metadata-import-export.md)
    + [资产模板](asset-templates.md)
    + [与Creative Cloud共享文件夹的最佳实践](aem-cc-folder-sharing-best-practices.md)
-   + [文件夹元数据架构](folder-metadata-schema.md)
    + [管理智能标记](managing-smart-tags.md)
 + Brand Portal {#brandportal}
    + [使用 Brand Portal 配置 Assets](configure-aem-assets-with-brand-portal.md)
@@ -147,7 +141,6 @@ ht-degree: 40%
 + Manage Assets {#managing}
    + [管理数字资产](managing-assets-touch-ui.md)
    + [管理收藏集](managing-collections-touch-ui.md)
-   + [管理多个资产和收藏集](managing-multiple-assets.md)
    + [使用智能内容服务配置标记](config-smart-tagging.md)
    + [启用重复检测](duplicate-detection.md)
    + [组织数字资产](organize-assets.md)
