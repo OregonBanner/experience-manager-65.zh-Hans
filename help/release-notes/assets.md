@@ -2,7 +2,7 @@
 title: 发行说 [!DNL Adobe Experience Manager Assets] 明6.5。
 description: The new capabilities and enhancements to [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 41%
@@ -38,11 +38,11 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 ![预览Adobe Stock图像和许可从Experience Manager资产内部获得](assets/stock_image_preview_license_options.png)
 
-*图： 预览[!DNL Adobe Stock]图像和许可证，从[!DNL Experience Manager Assets]中。*
+*图：预览[!DNL Adobe Stock]图像和许可证，从[!DNL Experience Manager Assets]中。*
 
 ![在Experience Manager中搜索和过滤获得许可的Adobe Stock图像](assets/aem-search-filters2.jpg)
 
-*图： 在中搜索和筛选许[!DNL Adobe Stock]可的图像[!DNL Experience Manager]。*
+*图：在中搜索和筛选许[!DNL Adobe Stock]可的图像[!DNL Experience Manager]。*
 
 ### Dynamic references in [!DNL Adobe InDesign] {#dynamic-references-in-indesign}
 
@@ -62,7 +62,7 @@ For more info, see [Use Adobe Stock assets in Experience Manager Assets](/help/a
 
 ![将资产从部署拖 [!DNL Experience Manager] 动到其 [!DNL Sites] 他部署的页 [!DNL Experience Manager] 面](assets/connected-assets-drag-and-drop-only.gif)
 
-*图： 将资产从部署拖[!DNL Experience Manager]动到其他[!DNL Sites]部署的页面上的[!DNL Experience Manager]部署。*
+*图：将资产从部署拖[!DNL Experience Manager]动到其他[!DNL Sites]部署的页面上的[!DNL Experience Manager]部署。*
 
 ## Dynamic Media {#dynamic-media}
 
@@ -88,7 +88,7 @@ Manage your 360-video files directly in [!DNL Experience Manager] using the cutt
 
 ![在搜索 Facet 中查看未筛选搜索结果时的资产数量](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
-*图： 在搜索彩块化中查看未筛选搜索结果的资产数量。*
+*图：在搜索彩块化中查看未筛选搜索结果的资产数量。*
 
 ## 可用性增强功能 {#usability-enhancement}
 
@@ -96,13 +96,13 @@ Manage your 360-video files directly in [!DNL Experience Manager] using the cutt
 
 ![使用全选选项，只需单击一次即可选择所有加载的资产。](assets/select-all-in-aem-assets.gif)
 
-*图： 使用全选选项，只需单击一次即可选择所有加载的资产。*
+*图：使用全选选项，只需单击一次即可选择所有加载的资产。*
 
 ## 元数据增强功能 {#metadata-enhancements}
 
-[!DNL Assets] 允许您为资产文件夹创建元数据架构，这些架构定义了文件夹属性页面中显示的布局和元数据。您现在既可以将文件夹元数据架构分配给现有文件夹，也可以在创建新文件夹时分配。有关更多信息，请参阅[文件夹元数据架构](/help/assets/folder-metadata-schema.md)。
+[!DNL Assets] 允许您为资产文件夹创建元数据架构，这些架构定义了文件夹属性页面中显示的布局和元数据。您现在既可以将文件夹元数据架构分配给现有文件夹，也可以在创建新文件夹时分配。有关更多信息，请参阅[文件夹元数据架构](/help/assets/metadata-config.md#folder-metadata-schema)。
 
-指定级联元数据时，可以在运行时从 JSON 文件加载选项，而不是在表单中手动键入选项。有关更多信息，请参阅[级联元数据](/help/assets/cascading-metadata.md)。
+指定级联元数据时，可以在运行时从 JSON 文件加载选项，而不是在表单中手动键入选项。For more information, see [cascading metadata](/help/assets/metadata-schemas.md#cascading-metadata).
 
 ## 报告增强功能 {#reporting-enhancements}
 
