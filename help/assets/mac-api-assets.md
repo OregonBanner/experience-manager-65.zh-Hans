@@ -3,10 +3,10 @@ title: '[!DNL资产] HTTP API。'
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
 workflow-type: tm+mt
-source-wordcount: '1672'
-ht-degree: 1%
+source-wordcount: '1727'
+ht-degree: 0%
 
 ---
 
@@ -307,3 +307,9 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 * 200 —— 确定——如果文件夹已成功删除。
 * 412 - PREPOSITATION FAILED —— 如果找不到或访问根集合。
 * 500 —— 内部服务器错误——如果出现其他问题。
+
+## 提示和限制 {#tips-best-practices-limitations}
+
+* [HTTP API更新命名空间中的元](#update-asset-metadata) 数据属 `jcr` 性。 但是，Experience Manager用户界面会更新命名空间中的元数据属 `dc` 性。
+
+* 资产API不会返回完整的元数据。 在API中，命名空间是硬编码的，只返回这些代码。 如果您需要整个元数据，请查看资产路径 `/jcr_content/metadata.json`。
