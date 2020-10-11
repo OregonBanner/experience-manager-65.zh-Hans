@@ -6,10 +6,10 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 40%
+source-wordcount: '586'
+ht-degree: 38%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 40%
 # Assets 指南 {#assets}
 
 + [[!DNL Assets] 用户指南](home.md)
-+ [Experience Manager6.5资产发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
++ [[!DNL Experience Manager] 6.5资产发行说明](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/assets.html)
 + [关于DAM](assets.md)
 + [资产的最佳实践](best-practices-for-assets.md)
 + 使用Experience Manager资产 {#using}
-   + [资产主页体验](assets-home-page.md)
+   + [[!DNL Assets] 主页体验](assets-home-page.md)
    + [搜索数字资产](search-assets.md)
    + [使用资产元数据](metadata.md)
    + [多语言资源](multilingual-assets.md)
@@ -32,7 +32,7 @@ ht-degree: 40%
    + [处理资产](assets-workflow.md)
    + [添加图像映射](image-maps.md)
    + [使用MSM重用资源](reuse-assets-using-msm.md)
-   + [与站点连接的资产](use-assets-across-connected-assets-instances.md)
+   + [Connected Assets with [!DNL Sites]](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
    + [设置 Dynamic Media](administering-dynamic-media.md)
@@ -80,15 +80,15 @@ ht-degree: 40%
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产 {#extending}
-   + [自定义和扩展资产](extending-assets.md)
+   + [自定义和扩展 [!DNL Assets]](extending-assets.md)
    + [使用媒体处理程序和工作流处理资源](media-handlers.md)
    + [扩展搜索功能](searchx.md)
-   + [安装并配 [!DNL ImageMagick] 置为使用资产](best-practices-for-imagemagick.md)
+   + [安装和配 [!DNL ImageMagick] 置可与 [!DNL Assets]](best-practices-for-imagemagick.md)
    + [将资源与活动流集成](extending-activity-stream.md)
    + [扩展资产编辑器](asseteditorx.md)
-   + [资产 HTTP API](mac-api-assets.md)
-   + [资产HTTP API中的内容片段支持](assets-api-content-fragments.md)
-   + [资产代理开发](proxy.md)
+   + [[!DNL Assets] HTTP API](mac-api-assets.md)
+   + [HTTP API中的内 [!DNL Assets] 容片段支持](assets-api-content-fragments.md)
+   + [[!DNL Assets] 代理开发](proxy.md)
 + 管理资产 {#administer}
    + [支持的文件格式](assets-formats.md)
    + [搜索 Facet](search-facets.md)
@@ -102,14 +102,14 @@ ht-degree: 40%
    + [创建和配置资产编辑器页面](assets-finder-editor.md)
    + [资产大小调整指南](assets-sizing-guide.md)
    + [翻译资产的最佳实践](best-practices-for-translating-assets-efficiently.md)
-   + [资产性能调整指南](performance-tuning-guidelines.md)
-   + [资产迁移指南](assets-migration-guide.md)
-   + [资产网络注意事项](assets-network-considerations.md)
-   + [资源和媒体库](medialibrary.md)
+   + [[!DNL Assets] 性能调整指南](performance-tuning-guidelines.md)
+   + [[!DNL Assets] 迁移指南](assets-migration-guide.md)
+   + [[!DNL Assets] 网络注意事项](assets-network-considerations.md)
+   + [[!DNL Assets] 和媒体库](medialibrary.md)
    + [使用PDF光栅器](aem-pdf-rasterizer.md)
    + [配置上传限制](configuring-asset-upload-restrictions.md)
-   + [Experience Manager和Creative Cloud集成](aem-cc-integration-best-practices.md)
-   + [与InDesign Server集成](indesign.md)
+   + [[!DNL Experience Manager] and [!DNL Creative Cloud] 集成](aem-cc-integration-best-practices.md)
+   + [与 [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management资产](drm.md)
    + [使用演示包获得资产洞察](touch-ui-using-demo-package-for-asset-insights.md)
    + [资产文件格式最佳实践](assets-file-format-best-practices.md)
@@ -121,13 +121,13 @@ ht-degree: 40%
    + [集合、片段和片段模板的多租户](multi-tenancy.md)
    + [为资产设置水印](watermarking.md)
    + [资产模板](asset-templates.md)
-   + [与Creative Cloud共享文件夹的最佳实践](aem-cc-folder-sharing-best-practices.md)
+   + [与共享文件夹的最佳实践 [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
    + [管理智能标记](managing-smart-tags.md)
 + Brand Portal {#brandportal}
-   + [使用 Brand Portal 配置 Assets](configure-aem-assets-with-brand-portal.md)
-   + [将资产发布到 Brand Portal](brand-portal-publish-assets.md)
-   + [将文件夹发布到 Brand Portal](brand-portal-publish-folder.md)
-   + [将收藏集发布到 Brand Portal](brand-portal-publish-collection.md)
+   + [配 [!DNL Assets] 置 [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
+   + [将资产发布到 [!DNL Brand Portal]](brand-portal-publish-assets.md)
+   + [将文件夹发布到 [!DNL Brand Portal]](brand-portal-publish-folder.md)
+   + [将集合发布到 [!DNL Brand Portal]](brand-portal-publish-collection.md)
 + 内容片段 {#fragments}
    + [使用内容片段](content-fragments/content-fragments.md)
    + [管理内容片段](content-fragments/content-fragments-managing.md)
@@ -148,7 +148,6 @@ ht-degree: 40%
    + [创建翻译项目](translation-projects.md)
    + [准备要翻译的资产](preparing-assets-for-translation.md)
    + [从Experience Manager下载资源](download-assets-from-aem.md)
-   + [异步作业](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
    + [资产分析](touch-ui-asset-insights.md)
    + [通过DTM实现资产洞察](touch-ui-using-dtm-for-asset-insights.md)
