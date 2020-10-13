@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 410858ee7d1b8022070445937731644724a90155
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
 >6.5.3.0
 >
 >* **现在可以选择** “Externalizer域”。
+   >  **注意：** Externalizer域仅与发送到目标的体验片段的内容相关，而与元数据(如视图优惠内容)不相关。
 >
 >
 6.5.2.0:
@@ -136,7 +137,11 @@ AEM Experience Fragments可导出到Adobe Target的默认工作区，或导出�
 
    >[!CAUTION]
    >
-   >外部化器域是可选的。 当您希望导出的内容指向特定发布域时，将配置AEM *externalizer* 。 有关详细信息，请 [参阅配置AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
+   >外部化器域是可选的。
+   >
+   > 当您希望导出的内容指向特定发布域时，将配置AEM *externalizer* 。 有关详细信息，请 [参阅配置AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)。
+   >
+   > 另请注意，Externalizer域仅与发送到目标的体验片段的内容相关，而与元数据(如视图优惠内容)不相关。
 
    例如，对于文件夹：
 
