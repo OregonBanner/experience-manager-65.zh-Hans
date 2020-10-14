@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 7e9dcebc654e63e171e2baacfe53081f58676f8d
+source-git-commit: aef3579f4f608d442cbaf156b6f5f13ffda8ceed
 workflow-type: tm+mt
-source-wordcount: '2755'
+source-wordcount: '2760'
 ht-degree: 21%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->智能裁剪仅在Dynamic Media- Scene7模式下可用。
+>智能裁切仅在Dynamic Media -Scene7模式下可用。
 
 >[!IMPORTANT]
 >
->图像用户档案不适用于PDF文件。
+>图像用户档案不适用于PDF、GIF或INDD(Adobe InDesign)文件。
 
 ## Crop options {#crop-options}
 
@@ -34,7 +34,7 @@ ht-degree: 21%
 
 智能裁剪坐标取决于长宽比。 即，对于图像用户档案中的各种智能裁剪设置，如果长宽比对于图像用户档案中添加的尺寸是相同的，则会将相同的长宽比发送到Dynamic Media。 因此，Adobe建议您使用相同的裁剪区域。 这样做将确保不会影响图像用户档案中使用的不同尺寸。
 
-请注意，您创建的每个智能裁剪生成都需要额外的处理。 例如，添加五个以上的智能裁剪长宽比可能会导致资产摄取速度变慢。 它还可能增加系统的负载。 由于您可以在文件夹级别应用智能裁剪，因此Adobe建议您仅在需要智能裁剪的 *位置* 将其用于文件夹。
+请注意，您创建的每个智能裁剪生成都需要额外的处理。 例如，添加五个以上的智能裁剪长宽比可能会导致资产摄取速度变慢。 它还可能增加系统的负载。 由于您可以在文件夹级别应用智能裁剪，因此Adobe建议您仅在需要智能裁剪的 *位置* ，在文件夹上使用它。
 
 您有两个图像裁剪选项可供您选择。 您还可以选择自动创建颜色和图像色板。
 
@@ -52,20 +52,20 @@ ht-degree: 21%
     <ul>
      <li>值包括顶部、底部、左侧和右侧。</li>
      <li>左上角被视为0,0，并从那里计算像素裁剪。</li>
-     <li>裁剪起点： 左为X，上为Y</li>
-     <li>水平计算： 原始图像的水平像素尺寸减去“左”，然后减去“右”。</li>
-     <li>垂直计算： 垂直像素高度减去“顶部”，然后减去“底部”。</li>
-    </ul> <p>例如，假定您的图像为4000 x 3000像素。 您使用以下值： 顶部=250，底部=500，左侧=300，右侧=700。</p> <p>从左上角(300,250)，使用（4000-300-700、3000-250-500或3000,2250）的填充空间进行裁剪。</p> </td>
+     <li>裁剪起点：左为X，上为Y</li>
+     <li>水平计算：原始图像的水平像素尺寸减去“左”，然后减去“右”。</li>
+     <li>垂直计算：垂直像素高度减去“顶部”，然后减去“底部”。</li>
+    </ul> <p>例如，假定您的图像为4000 x 3000像素。 您使用以下值：顶部=250，底部=500，左侧=300，右侧=700。</p> <p>从左上角(300,250)，使用（4000-300-700、3000-250-500或3000,2250）的填充空间进行裁剪。</p> </td>
   </tr>
   <tr>
    <td>智能裁剪</td>
    <td>根据图像的可视焦点批量裁剪图像。</td>
-   <td><p>Smart Crop利用Adobe Sensei中人工智能的强大功能快速实现图像批量裁剪的自动化。 Smart Crop可自动检测并裁切到任何图像的焦点，以捕获预期的兴趣点，而不管屏幕大小。</p> <p>要使用智能裁剪，请 <strong>从“裁剪选项</strong> ”下拉列表中选择智能裁剪，然后在响应式图像裁剪的右侧，启用（打开）该功能。</p> <p>大、中和小的默认断点大小通常涵盖大多数图像在移动和平板电脑设备、桌面和横幅上使用的所有大小。 如果需要，可以编辑“大”、“中”和“小”的默认名称。</p> <p>要添加更多断点，请单击“添 <strong>加裁剪”</strong>; 要删除裁剪，请单击垃圾桶图标。</p> </td>
+   <td><p>Smart Crop利用Adobe Sensei人工智能的强大功能快速实现批量图像裁剪自动化。 Smart Crop可自动检测并裁切到任何图像的焦点，以捕获预期的兴趣点，而不管屏幕大小。</p> <p>要使用智能裁剪，请 <strong>从“裁剪选项</strong> ”下拉列表中选择智能裁剪，然后在响应式图像裁剪的右侧，启用（打开）该功能。</p> <p>大、中和小的默认断点大小通常涵盖大多数图像在移动和平板电脑设备、桌面和横幅上使用的所有大小。 如果需要，可以编辑“大”、“中”和“小”的默认名称。</p> <p>要添加更多断点，请单击“添 <strong>加裁剪”</strong>;要删除裁剪，请单击垃圾桶图标。</p> </td>
   </tr>
   <tr>
    <td>颜色和图像样本</td>
    <td>批量为每个图像生成一个图像样本。</td>
-   <td><p><strong>注意</strong>: Dynamic Media经典中不支持智能色板。</p> <p>从显示颜色或纹理的产品图像自动定位和生成高质量样本。</p> <p>要使用颜色和图像色板， <strong>请从</strong> “裁剪选项”下拉列表中选择“智能裁剪”，然后在“颜色和图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。</p> <p>虽然所有图像裁剪都可从演绎版边栏中使用，但只能通过复制URL功能使用色板。 请注意，必须使用您自己的查看组件在站点上呈现色板。 (这种情况的例外是传送横幅。 Dynamic Media为传送横幅中使用的色板提供查看组件。)</p> <p><strong>使用图像色板</strong></p> <p>图像样本的URL非常简单。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中， <code>:Swatch</code> 资产请求会附加到该资产请求。</p> <p><strong>使用色板</strong></p> <p>要使用色板，您需要 <code>req=userdata</code> 使用以下项：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media经典(Scene7)中的样本资产：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>下面是样本资产的相应 <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>答 <code>req=userdata</code> 复如下：</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>注意</strong>:Dynamic Media Classic不支持智能色板。</p> <p>从显示颜色或纹理的产品图像自动定位和生成高质量样本。</p> <p>要使用颜色和图像色板， <strong>请从</strong> “裁剪选项”下拉列表中选择“智能裁剪”，然后在“颜色和图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。</p> <p>虽然所有图像裁剪都可从演绎版边栏中使用，但只能通过复制URL功能使用色板。 请注意，必须使用您自己的查看组件在站点上呈现色板。 (这种情况的例外是传送横幅。 Dynamic Media为传送横幅中使用的色板提供查看组件。)</p> <p><strong>使用图像色板</strong></p> <p>图像样本的URL非常简单。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中， <code>:Swatch</code> 资产请求会附加到该资产请求。</p> <p><strong>使用色板</strong></p> <p>要使用色板，您需要 <code>req=userdata</code> 使用以下项：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media Classic(Scene7)中的样本资产：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>下面是样本资产的相应 <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>答 <code>req=userdata</code> 复如下：</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -98,12 +98,12 @@ In **[!UICONTROL Unsharp Mask]**, you have the following filtering options:
   </tr>
   <tr>
    <td>阈值</td>
-   <td><p>确定应用USM锐化滤镜时要忽略的对比度范围。 换句话说，此选项确定锐化的像素与周围区域必须存在多大的不同，才能被视为边缘像素并进行锐化。 要避免引入杂色，请尝试0到255之间的值。</p> </td>
+   <td><p>确定应用USM锐化滤镜时要忽略的对比度范围。换句话说，此选项确定锐化的像素与周围区域必须存在多大的不同，才能被视为边缘像素并进行锐化。 要避免引入杂色，请尝试0到255之间的值。</p> </td>
   </tr>
  </tbody>
 </table>
 
-锐化在锐化图像 [中有介绍](/help/assets/assets/s7_sharpening_images.pdf)。
+锐化在锐化图像( [/help/assets/assets/s7_sharpening_images.pdf])中有介绍。
 
 ## Creating Dynamic Media Image Profiles {#creating-image-profiles}
 
@@ -130,7 +130,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 ## 编辑或删除Dynamic Media图像用户档案 {#editing-or-deleting-image-profiles}
 
 1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
-1. 选择要编辑或删除的图像用户档案。 要编辑图像，请选择“ **[!UICONTROL 编辑图像处理用户档案”。]** 要删除图像，请选 **[!UICONTROL 择删除图像处理用户档案。]**
+1. 选择要编辑或删除的图像用户档案。要编辑图像，请选择“ **[!UICONTROL 编辑图像处理用户档案”。]** 要删除图像，请选 **[!UICONTROL 择删除图像处理用户档案。]**
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
@@ -167,9 +167,9 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 1. Tap **[!UICONTROL Apply Processing Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap/click **[!UICONTROL Apply.]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-#### 从“属性”将Dynamic Media图像用户档案应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
+#### 从属性将Dynamic Media图像用户档案应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
 
-1. 点按AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到要应用图像用户档案的文件夹。
+1. 点按AEM徽标，导航到 **[!UICONTROL 资产]** ，然后导航到您要应用图像用户档案的文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按 **[!UICONTROL 属性。]**
 1. 点按&#x200B;**[!UICONTROL 图像配置文件]**&#x200B;选项卡。从&#x200B;**[!UICONTROL 配置文件名称]**&#x200B;下拉列表中，选择配置文件，然后点按&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
@@ -177,7 +177,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 ### 全局应用Dynamic Media图像用户档案 {#applying-an-image-profile-globally}
 
-除了将用户档案应用到文件夹外，您还可以全局应用一个用户档案，以便上传到任何文件夹中的AEM资产的任何内容都已应用选定的。
+除了将用户档案应用到文件夹之外，您还可以全局应用一个用户档案，以便上传到任何文件夹中的AEM资产的任何内容都应用了选定的。
 
 您可以重新处理文件夹中的资产，该文件夹中已经有您稍后更改的现有视频用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
@@ -199,7 +199,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 >[!NOTE]
 >
->智能裁剪仅在Dynamic Media- Scene7模式下可用。
+>智能裁切仅在Dynamic Media -Scene7模式下可用。
 
 您可以手动重新对齐图像的智能裁剪窗口或调整其大小以进一步调整其焦点。
 
@@ -221,7 +221,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
    * 在页面的右上角附近，向左或向右拖动滑块条，分别增加或减少图像显示。
    * 在图像上，拖动角手柄以调整裁剪或色板的可查看区域的大小。
-   * 在图像上，将框／色板拖动到新位置。 您只能编辑图像色板； 色板是静态的。
+   * 在图像上，将框／色板拖动到新位置。 您只能编辑图像色板；色板是静态的。
    * 在图像上方，点按 **[!UICONTROL 还原]** ，以撤消所有编辑并恢复原始裁剪或色板。
 
 1. 在页面的右上角附近，点按保 **[!UICONTROL 存]**，然 **[!UICONTROL 后点]** 按关闭，以返回到资产文件夹。
@@ -283,7 +283,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 您可以从“工具”菜单中的文件夹删除图像配置文件；如果您在 **[!UICONTROL 文件夹中]** ，也可以从“属性”中 **[!UICONTROL 删除。]**&#x200B;本节将介绍这两种将图像配置文件从文件夹删除的方法。
 
-### 通过Dynamic Media用户界面将用户档案图像用户档案从文件夹删除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### 通过用户档案用户界面将Dynamic Media图像用户档案从文件夹删除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
 1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. 选择您要从一个或多个文件夹删除的图像配置文件。
@@ -293,7 +293,7 @@ See also [Best Practices for Organizing your Digital Assets for using Processing
 
 ### 通过属性将Dynamic Media图像用户档案从文件夹删除 {#removing-image-profiles-from-folders-via-properties}
 
-1. 点按AEM徽标，导 **[!UICONTROL 航资]** 产，然后导航到您要从中删除图像用户档案的文件夹。
+1. 点按AEM徽标并导 **[!UICONTROL 航]** “资产”，然后导航到您要从中删除图像用户档案的文件夹。
 1. 在文件夹中，点按复选标记以选择它，然后点按 **[!UICONTROL 属性。]**
 1. Select the **[!UICONTROL Image Profiles]** tab.
 1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close.]**
