@@ -8,17 +8,17 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 44%
+source-wordcount: '325'
+ht-degree: 42%
 
 ---
 
 
 # 应用 Dynamic Media 图像预设 {#applying-image-presets}
 
-图像预设使资产能够动态地传送不同大小、不同格式或具有其他动态生成的图像属性的图像。 在导出图像时，您可以选择预设，这也会根据管理员指定的规范重新设置图像的格式。
+图像预设使资产能够动态地传送不同大小、不同格式或具有其他动态生成的图像属性的图像。在导出图像时，您可以选择预设，这也会根据管理员指定的规范重新设置图像的格式。
 
 此外，您可以选择响应式图像预设（选择图像预设后，通过 **[!UICONTROL RESS]** 按钮指定）。
 
@@ -29,6 +29,10 @@ ht-degree: 44%
 >智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 有关更 [多信息](imaging-faq.md) ，请参阅智能成像。
 
 无论您何时预览图像，都可以对图像应用图像预设。
+
+>[!NOTE]
+>
+>在Dynamic Media -Scene7模式中，图像预设仅受图像资产支持。
 
 **应用Dynamic Media图像预设**
 
@@ -53,5 +57,5 @@ ht-degree: 44%
    >
    >如果资产&#x200B;*和*&#x200B;图像预设尚未发布，则 **[!UICONTROL URL]** 按钮（或 **[!UICONTROL URL]** 和 **[!UICONTROL RESS]** 按钮，如果适用）将不可用。
    >
-   >另请注意，图像预设会自动发布到Dynamic MediaS7服务器上。
+   >另请注意，图像预设会自动发布到Dynamic Media S7服务器上。
 
