@@ -3,10 +3,10 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '2436'
-ht-degree: 17%
+source-wordcount: '2423'
+ht-degree: 18%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 17%
 
    ![选择资产的属性以视图其元数据](assets/asset-metadata.png)
 
-   *图：在资产属性页面上编辑或添[!UICONTROL 加元]数据。*
+   *图：在资产属性页面上编辑或添 [!UICONTROL 加元] 数据。*
 
 1. Make edits to the metadata under the various tabs, as required, and when completed, click **[!UICONTROL Save]** from the toolbar to save your changes. Click **[!UICONTROL Close]** to return to the [!DNL Assets] web interface.
 
@@ -68,7 +68,7 @@ ht-degree: 17%
 * 将元数据属性更改为通用值
 * 添加或修改标记
 
-要自定义元数据属性页面，包括添加、修改和删除元数据属性，请使用模式编辑器。
+要自定义元数据属性页面，包括添加、修改和删除元数据属性，请使用 [模式编辑器](metadata-config.md#folder-metadata-schema)。
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ ht-degree: 17%
 
 您可以重新处理文件夹中的资产，该文件夹中已经有您稍后更改的现有视频用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-### Apply metadata profiles to folders from Profiles user interface {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+### Apply metadata profiles to folders from [!UICONTROL Profiles] user interface {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 请按照以下步骤应用元数据用户档案:
 
@@ -196,7 +196,7 @@ ht-degree: 17%
 1. 选择您要应用到一个或多个文件夹的元数据配置文件。
 1. Click **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and click **[!UICONTROL Done]**. 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-### 从“属性”将元数据用户档案应用到文件夹 {#applying-metadata-profiles-to-folders-from-properties}
+### 从“属性”将元数据用户档案应用到文 [!UICONTROL 件夹] {#applying-metadata-profiles-to-folders-from-properties}
 
 1. In the left rail, click **[!UICONTROL Assets]** then navigate to the folder that you want to apply a metadata profile to.
 1. 在文件夹中，单击复选标记以将其选中，然后单击“属 **[!UICONTROL 性”]**。
@@ -205,9 +205,11 @@ ht-degree: 17%
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-### 全局应用元数据用户档案 {#metadata-profile-global}
+<!-- TBD: Commenting as the topic in metadata-config.md is incomplete.
 
-有关详细信息，请参 [阅全局应用元数据用户档案的配置](/help/assets/metadata-config.md#apply-a-metadata-profile-globally)。
+### Apply metadata profile globally {#metadata-profile-global}
+
+For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
 ### Remove a metadata profile from folders {#removing-a-metadata-profile-from-folders}
 
