@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: fa3d5923784a8d89e2b440412d2b88790de3e39e
 workflow-type: tm+mt
-source-wordcount: '2781'
+source-wordcount: '2663'
 ht-degree: 3%
 
 ---
@@ -277,10 +277,6 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
    **生成记录文档** 选择此选项可将XDP文件用作定义记录文档的样式和外观的基本模板。 选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。
 
-   **[!UICONTROL 选择此选项可将XDP文件用作定义记录文档的样式和外观的基本模板。 选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。]**
-
-   **选择“Forms模板”作为基本模板以生成记录文档** 。选择此选项可将XDP文件用作基本模板来定义记录文档的样式和外观。 选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。
-
    >[!NOTE]
    >
    >在以下情况下，确保用于创建XFA表单的自适应表单和模式(数据模式)的模式相同：
@@ -380,8 +376,6 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 * 文档记录模板不支持富文本。 因此，静态自适应表单中或最终用户填写的信息中的任何富文本在记录文档中显示为纯文本。
 * 自适应表单中的文档片段不显示在记录文档中。 但是，支持自适应表单片段。
-* 记录文档仅用于打印目的。
-* 不支持在为基于XML文档的自适应表单生成的记录模式中进行内容绑定。
 * 不支持在为基于XML文档的自适应表单生成的记录模式中进行内容绑定。
 * 当用户请求呈现记录文档时，将根据区域设置的要求创建记录文档的本地化版本。 记录本地化与自适应表单本地化一起发生。 有关记录和自适应表单本地化的更多信息，请参 [阅使用AEM文档工作流本地化自适应表单和记录文档](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
