@@ -3,9 +3,9 @@ title: 下载资产
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '866'
 ht-degree: 6%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 6%
 
    ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download1.png)
 
-   *图：下载对话框选项。*
+   *图：下载对话框中的可用选项。*
 
 1. 在“下载”对话框中，选择所需的下载选项。
 
@@ -73,6 +73,7 @@ ht-degree: 6%
 
 >[!MORELIKETHIS]
 >
+>* [使用Brand Portal下载资源](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [下载受DRM保护的资源](drm.md)。
 >* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资源](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [从支持的Adobe应用程序中使用Adobe Creative Cloud资产链接下载资产](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)。
