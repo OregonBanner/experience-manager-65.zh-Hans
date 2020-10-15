@@ -3,7 +3,7 @@ title: 了解元数据概念
 description: 了解元数据的需求和类型，这些元数据可以更轻松地分类和组织资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2732'
 ht-degree: 36%
@@ -120,7 +120,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 * 相册- [!DNL Adobe Photoshop Album].
 * CQ - Used by [!DNL Experience Manager Assets].
 * DAM —— 使用方 [!DNL Experience Manager Assets]。
-* DEX - [Optima SC Description explorer是用于Windows操作系统](http://www.optimasc.com/products/dex/index.html) （Windows操作系统）元数据和文件管理的工具集合。
+* DEX - [Optima SC Description explorer是用于Windows操作系统](https://www.optimasc.com/products/dex/index.html) （Windows操作系统）元数据和文件管理的工具集合。
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
 * LR - [!DNL Adobe Lightroom].
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
