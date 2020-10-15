@@ -3,10 +3,10 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d2bc8c7c52084a415faaf8a5b68be7dc6fc461c4
+source-git-commit: c5972647d23b7e7bfd2fcd791648cb26de1fdb68
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 42%
+source-wordcount: '2247'
+ht-degree: 41%
 
 ---
 
@@ -194,4 +194,6 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 * If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
 * 由于一个或多个原因，从远程dam获取的资产可能无法发布到网页上。 它在远程服务器上不存在，缺少相应的权限来获取它，或者网络故障可能是原因。 确保资产未从远程DAM中删除。 确保拥有适当的权限，并满足先决条件。 重试将资产添加到页面并重新发布。 检查[异步作业列表](/help/sites-administering/asynchronous-jobs.md)，查看是否发生了资产获取错误。
-* 如果您无法从本地部署访问远程DAM [!DNL Sites] 部署，请确保允许跨站点Cookie。 如果跨站点Cookie被阻止，则两个部署 [!DNL Experience Manager] 可能无法验证。 例如，在 [!DNL Google Chrome] Incognito模式下，可能会阻止第三方cookie。 在 [!DNL Chrome]中，单击地址栏中的“眼睛”图标以允许使用cookie，或查看有关如 [何启用第三方cookie的帮助](https://support.google.com/chrome/answer/95647)。
+* 如果您无法从本地部署访问远程DAM [!DNL Sites] 部署，请确保允许跨站点Cookie。 如果跨站点Cookie被阻止，则两个部署 [!DNL Experience Manager] 可能无法验证。 例如，在 [!DNL Google Chrome] Incognito模式下，可能会阻止第三方cookie。 要允许在浏览 [!DNL Chrome] 器中使用Cookie，请单击地址栏中的“眼睛”图标，导航至“站点不工作”>“阻止”，选择“远程DAM URL”，并允许登录令牌Cookie。 或者，请参阅 [有关如何启用第三方Cookie的帮助](https://support.google.com/chrome/answer/95647)。
+
+![Chrome中的Incognito模式下的Cookie错误](assets/chrome-cookies-incognito-dialog.png)
