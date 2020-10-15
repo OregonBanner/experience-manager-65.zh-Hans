@@ -3,9 +3,9 @@ title: 元数据功能的配置和管理。
 description: 与元数据添 [!DNL Experience Manager Assets] 加和管理相关的配置和管理功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1953'
 ht-degree: 12%
 
 ---
@@ -109,7 +109,7 @@ To change the limit, access **[!UICONTROL Tools]** > **[!UICONTROL Operations]**
 1. 单击 **[!UICONTROL 工具栏中的]** “删除元数据”用户档案。
 1. In the dialog, click **[!UICONTROL Delete]** to confirm the delete operation. The metadata profile is deleted from the list.
 
-<!-- TBD: Revisit to find out the correct config. and update these steps.
+<!-- TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
 These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
@@ -269,7 +269,6 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your folder
 >[!MORELIKETHIS]
 >
 >* [元数据概念和理解](metadata-concepts.md)。
->* [编辑多个集合的元数据属性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
 >* [编辑多个集合的元数据属性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
 >* [在Experience Manager资产中导入和导出元数据](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [用户档案处理元数据、图像和视频](processing-profiles.md)。
