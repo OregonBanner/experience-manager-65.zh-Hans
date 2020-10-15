@@ -3,7 +3,7 @@ title: 使用媒体处理程序和工作流处理资源
 description: 了解媒体处理程序以及如何使用工作流对您的数字资产执行任务。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 3%
@@ -447,7 +447,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 * 使用ImageMagick和Ghostscript [实现EPS](https://www.imagemagick.org/script/index.php) 和 [AI转换](https://www.ghostscript.com/)。
 * 使用FFmpeg的FLV视 [频转码](https://ffmpeg.org/)。
 * 使用LAME进行MP3 [编码](https://lame.sourceforge.io/)。
-* 使用SOX进行音 [频处理](http://sox.sourceforge.net/)。
+* 使用SOX进行音 [频处理](https://sox.sourceforge.net/)。
 
 >[!NOTE]
 >
