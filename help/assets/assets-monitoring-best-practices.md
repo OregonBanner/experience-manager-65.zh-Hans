@@ -3,9 +3,9 @@ title: 监控部署的最 [!DNL Assets] 佳实践
 description: 监视部署部署部署在部署后 [!DNL Adobe Experience Manager] 的环境和性能的最佳实践。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1668'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 * [顶部](https://man7.org/linux/man-pages/man1/top.1.html):顶部是打开仪表板的Linux命令，显示使用情况统计信息，包括CPU、内存和IO使用情况。 它提供了实例中所发生情况的高级概述。
 * [顶部](https://hisham.hm/htop/):Htop是一个交互式流程查看器。 除了Top可以提供的功能外，它还提供详细的CPU和内存使用。 Htop可以使用或安装在大多数Linux系 `yum install htop` 统上 `apt-get install htop`。
 
-* [Iotop](https://guichaz.free.fr/iotop/):Iotop是磁盘IO使用情况的详细仪表板。 它显示描述使用磁盘IO的进程及其使用量的栏和表。 Iotop可以使用或安装在大多数Linux系 `yum install iotop` 统上 `apt-get install iotop`。
+* Iotop:Iotop是磁盘IO使用情况的详细仪表板。 它显示描述使用磁盘IO的进程及其使用量的栏和表。 Iotop可以使用或安装在大多数Linux系 `yum install iotop` 统上 `apt-get install iotop`。
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/):Iftop显示有关以太网／网络使用的详细信息。 Iftop显示使用以太网的实体的每个通信渠道统计信息以及它们使用的带宽量。 Iftop可以使用或安装在大多数Linux系 `yum install iftop` 统上 `apt-get install iftop`。
 
