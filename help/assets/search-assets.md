@@ -4,15 +4,15 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 421f18bef4b0dbcad74e91316eead70036c9750e
+source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
 workflow-type: tm+mt
-source-wordcount: '5955'
+source-wordcount: '5968'
 ht-degree: 6%
 
 ---
 
 
-# 在 [!DNL Adobe Experience Manager] {#search-assets-in-aem}
+# 在 [!DNL Adobe Experience Manager] {#assets-search-in-aem}
 
 [!DNL Adobe Experience Manager Assets] 提供强大的资产发现方法，帮助您实现更高的内容速度。 您的团队使用开箱即用的功能和自定义方法，通过无缝、智能的搜索体验缩短上市时间。 搜索资产对于数字资产管理系统的使用至关重要——无论是供创意人员进一步使用、供业务用户和营销人员对资产进行可靠管理，还是供DAM管理员管理。 简单、高级和自定义搜索，您可以通过用户界面或其 [!DNL Assets] 他应用程序和界面执行这些搜索，这些搜索有助于完成这些用例。
 
@@ -43,7 +43,7 @@ ht-degree: 6%
 
 ![了解Experience Manager资产搜索结果界面](assets/aem_search_results.png)
 
-*图：了解[!DNL Experience Manager Assets]搜索结果界面。*
+*图：了解 [!DNL Experience Manager Assets] 搜索结果界面。*
 
 **答：将搜索** 另存为智能收藏集。 **B.过滤器** 或谓词，以缩小搜索结果。 **C.显示文件** 、文件夹，或同时显示这两个文件。 **D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F. Omnisearch** 字段，其中包含用户提供的搜索关键字。 **G.选择** 加载的搜索结果。 **H.** 在总搜索结果中显示的搜索结果数。 **I.关闭** 搜索 **J.在卡视图** 和列表视图之间切换。
 
@@ -178,13 +178,13 @@ ht-degree: 6%
 | 图像高度 | height:lowerbound...上界 |
 | 人员 | person:John |
 
-属性 `path`、 `limit`、和不 `size`能与任 `orderby` 何其 *他属性* OR一起使用。
+不能将 `path`属性 `limit`、、和 `size`与任何其他属 `orderby``OR` 性一起使用运算符。
 
 用户生成的属性的关键字是属性编辑器中的字段标签，以小写形式显示，删除了空格。
 
 以下是复杂查询的一些搜索格式示例：
 
-* To display all assets with multiple facets fields (for example: title=John Doe and creator tool = Adobe Photoshop): `tiltle:"John Doe" creatortool:Adobe*`
+* To display all assets with multiple facets fields (for example: title=John Doe and creator tool = Adobe Photoshop): `title:"John Doe" creatortool:Adobe*`
 * To display all assets when the facets value is not a single word but a sentence (for example: title=Scott Reynolds): `title:"Scott Reynolds"`
 * To display assets with multiple values of a single property (for example: title=Scott Reynolds or John Doe): `title:"Scott Reynolds" OR "John Doe"`
 * To display assets with property values starting with a specific string (for example: title is Scott Reynolds): `title:Scott*`
@@ -285,6 +285,8 @@ ht-degree: 6%
 
 * **索引**:搜索结果中只返回已索引的元数据和资产。 为获得更好的覆盖和性能，请确保正确的索引并遵循最佳做法。 请参阅 [索引](#searchindex)。
 
+* 要从搜索结果中排除特定资产，请使 `excludedPath` 用Lucene索引中的属性。
+
 ## 一些说明搜索的示例 {#samples}
 
 使用关键字周围的多次语录可以按用户指定的确切顺序查找包含确切短语的资产。
@@ -328,7 +330,7 @@ ht-degree: 6%
 
 资产发现依赖于DAM内容（包括元数据）的索引。 更快、更准确的资源发现依赖于优化的索引和适当的配置。 请参 [阅搜索索引](/help/assets/performance-tuning-guidelines.md#search-indexes)、 [Oak查询和索引](/help/sites-deploying/queries-and-indexing.md)，以及 [最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 
-要从搜索结果中排除特定资产，请使 `excludedPath` 用Lucene索引上的属性。
+要从搜索结果中排除特定资产，请使 `excludedPath` 用Lucene索引中的属性。
 
 ### 视觉或相似性搜索 {#configvisualsearch}
 
@@ -438,7 +440,7 @@ ht-degree: 6%
 
 对于单个文件夹或集合中的可用资产，无需使用搜索功 [能即可批量更新元](/help/assets/metadata.md) 数据。 对于跨文件夹可用或符合通用标准的资产，通过搜索批量更新元数据会更快。
 
-### 智能收藏集 {#collections-1}
+### 智能收藏集 {#smart-collections}
 
 收藏集是一组有序的资产，可以包含来自不同位置的资产，因为收藏集只包含对这些资产的引用。 集合有以下两种类型：
 
@@ -457,13 +459,13 @@ ht-degree: 6%
 | 没有资产自动完成建议。 | 尚未对新上传的资产建立索引。 当您在Omnisearch栏中开始键入搜索关键字时，元数据不会立即作为建议可用。 | [!DNL Assets] 等到超时期（默认为一小时）到期后，运行后台作业为所有新上传或更新的资产索引元数据，然后将元数据添加到建议列表。 |
 | 无搜索结果. | <ul><li>与您的查询匹配的资产不存在。 </li><li> 在搜索查询前添加了空白。 </li><li> 不支持的元数据字段包含您搜索的关键字。</li><li> 在资产的非正常时间进行搜索。 </li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用智能标记或相似性搜索来改进搜索结果。 </li><li>[已知限制](#limitations)。</li><li>搜索时不会考虑所有元数据字段。 请参 [阅范围](#scope)。</li><li>稍后搜索或修改所需资产的按时和离时。</li></ul> |
 | 搜索筛选器或谓词不可用。 | <ul><li>未配置搜索筛选器。</li><li>登录时不提供此选项。</li><li>（不太可能）搜索选项未在您所使用的部署上进行自定义。</li></ul> | <ul><li>联系管理员以检查搜索自定义是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义项的权限／权限。</li><li>联系管理员并检查您所使用的部 [!DNL Assets] 署的可用自定义项。</li></ul> |
-| 在搜索视觉上相似的图像时，缺少期望的图像。 | <ul><li>图像在中不可用 [!DNL Experience Manager]。</li><li>图像未编制索引。 通常，在最近上传时。</li><li>图像未标记为智能图像。</li></ul> | <ul><li>将图像添加到 [!DNL Assets]。</li><li>请与管理员联系以重新索引存储库。 另外，请确保您使用的是适当的索引。</li><li>与管理员联系以智能标记相关资产。</li></ul> |
+| 在搜索视觉上相似的图像时，缺少期望的图像。 | <ul><li>图像在中不可用 [!DNL Experience Manager]。</li><li>图像未编制索引。 通常，在最近上传时。</li><li>图像未标记为智能图像。</li></ul> | <ul><li>将图像添加到 [!DNL Assets]。</li><li>请与管理员联系以重新为存储库编制索引。 另外，请确保您使用的是适当的索引。</li><li>与管理员联系以智能标记相关资产。</li></ul> |
 | 搜索视觉上相似的图像时，将显示不相关的图像。 | 视觉搜索行为。 | [!DNL Experience Manager] 显示尽可能多的潜在相关资产。 相关度较低的图像（如果有）会添加到结果中，但搜索级别较低。 当您向下滚动搜索结果时，匹配项的质量和搜索资产的相关性会降低。 |
 | 在选择并操作搜索结果时，不会对搜索的所有资产进行操作。 | “全 [!UICONTROL 选] ”选项仅选择卡视图中的前100个搜索结果和列表视图中的前200个搜索结果。 |  |
 
 >[!MORELIKETHIS]
 >
->* [Experience Manager搜索实施指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
+>* [[!DNL Experience Manager] 搜索实施指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [用于提升搜索结果的高级配置](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search-boost.html)
 >* [配置智能翻译搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
 
