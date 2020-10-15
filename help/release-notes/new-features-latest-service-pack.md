@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 9d549e19a22b06f010b99e5dfff1d4cef05a5bed
+source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
 workflow-type: tm+mt
-source-wordcount: '2518'
+source-wordcount: '2561'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 ### 在客户端预填自适应表单 {#prefill-merge-data-at-client}
 
 在您预填自适应表单时，服务器 [!DNL Experience Manager Forms] 会将数据与自适应表单合并，并将填写的表单发送给您。 默认情况下，数据合并操作在服务器上进行。
-您现在可以配置服 [!DNL Experience Manager Forms] 务器，在客户端而不是服务器上执行数据合并操作。 它显着缩短了预填和渲染自适应表单所需的时间。
+您现在可以配置服 [!DNL Experience Manager Forms] 务器 [在客户端而不是服务器执行数据合并](../../help/forms/using/prepopulate-adaptive-form-fields.md) 操作。 它显着缩短了预填和渲染自适应表单所需的时间。
 
 ### 通过双向SSL实现，在服务器上与RESTful API集成表单数据模型 {#fdm-integration-rest-apis-two-way-ssl}
 
@@ -87,7 +87,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 如果AcroForm包含文 [!DNL Adobe Sign] 本标记，则这些字段现在可识别并表示为 [!DNL Adobe Sign] 使用转换的自适应表单中的字段 [!DNL Automated Forms Conversion service]。 签署方可以在签署自适应表单时填写此类字段。
 
-### Support to convert colored PDF forms to adaptive forms {#colore-PDF-forms}
+### Support to convert colored PDF forms to adaptive forms {#colored-PDF-forms}
 
 您可以使用 [!DNL Automated Forms Conversion service] 将彩色PDF forms转换为自适应表单。
 
@@ -97,7 +97,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 ### 针对已翻译的自适应表单页面的增强缓存 {#enhanced-caching-translated-adaptive-forms}
 
-现在可以将区域设置指定为选择器，而不是URL参数。 它有助于在上缓存已翻译的自适应表 [!DNL Experience Manager Dispatcher]单。
+您现在可以在自 [适应表单URL中将区域设置指定为选择器，而不是在自适应表单URL中指定参数](../../help/forms/using/supporting-new-language-localization.md)。 它有助于在上缓存已翻译的自适应表 [!DNL Experience Manager Dispatcher]单。 在以前版本中无法缓存已翻译的自适应表单。 有关配置缓存以将区域设置用作自适应表单URL中的选择器的详细信息，请参 [阅在调度程序中配置自适应表单缓存](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
 ### 将表单数据模型服务的输出保存到变量 {#save-fdm-service-to-variable}
 
@@ -105,7 +105,9 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 ### 为文件附件组件附加多个文件 {#attach-multiple-files}
 
-您现在可以将多个文件附加到自 [!UICONTROL 适应表单的] “文件附件”组件。
+您现在可以 [将多个文件附](../../help/forms/using/introduction-forms-authoring.md) 加到自 [!UICONTROL 适应表单的] “文件附件”组件。
+
+
 
 ## 先前Experience Manager6.5 Service Pack的主要功能 {#key-features-previous-service-packs}
 
@@ -183,7 +185,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 #### 配 [!DNL Experience Manager Assets] 置 [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
+和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
 
 使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因您的版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) （使用Brand Portal）。
 
@@ -196,7 +198,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 * 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
 * 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
-For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军用格式的小时，mm是分钟。
+For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
 
 * 屏幕阅读器现在 `X` 会宣布删除选定标记的符号以及选定标记的数量。
 
