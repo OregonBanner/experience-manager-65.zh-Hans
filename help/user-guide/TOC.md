@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5用户指南
-user-guide-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
+user-guide-description: 概述了解、安装、管理和使用AEM 6.5的所有基本资源
 translation-type: tm+mt
 source-git-commit: 73fbf9c4f631e87132fbd9ef5cf769b4f8ce7a17
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 8%
+source-wordcount: '60'
+ht-degree: 6%
 
 ---
 
