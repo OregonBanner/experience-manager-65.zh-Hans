@@ -8,10 +8,10 @@ uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 translation-type: tm+mt
-source-git-commit: 0b3884301e09eba6860891f00a98508033d12ec8
+source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
 workflow-type: tm+mt
-source-wordcount: '2058'
-ht-degree: 7%
+source-wordcount: '2057'
+ht-degree: 8%
 
 ---
 
@@ -246,7 +246,7 @@ ht-degree: 7%
     <tbody> 
      <tr> 
       <td><b>折叠</b></td> 
-      <td><b>属性&lt;/b</td> 
+      <td><b>属性</b></td> 
       <td><b>值</b></td> 
      </tr> 
      <tr> 
