@@ -3,13 +3,13 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: Assets 指南
-breadcrumb-title: Assets Guide
-user-guide-description: Create, manage, deliver, and optimize digital assets.
+breadcrumb-title: Assets 指南
+user-guide-description: 创建、管理、交付和优化数字资产。
 translation-type: tm+mt
-source-git-commit: caaf8c99d08cd88eca7d464816111cfb9f61590c
+source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 38%
+source-wordcount: '585'
+ht-degree: 40%
 
 ---
 
@@ -28,6 +28,7 @@ ht-degree: 38%
    + [在资 [!DNL Adobe Stock] 产中使用资产](aem-assets-adobe-stock.md)
    + [预览3D资产](previewing-3d-assets.md)
    + [审核文件夹资产和收藏集](bulk-approval.md)
+   + [增强型智能标记](enhanced-smart-tags.md)
    + [时间轴中的活动流](activity-stream.md)
    + [处理资产](assets-workflow.md)
    + [添加图像映射](image-maps.md)
@@ -93,11 +94,12 @@ ht-degree: 38%
    + [支持的文件格式](assets-formats.md)
    + [搜索 Facet](search-facets.md)
    + [了解元数据概念](metadata-concepts.md)
-   + [元数据功能的配置](metadata-config.md)
+   + [配置元数据功能](metadata-config.md)
+   + [元数据架构](metadata-schemas.md)
    + [XMP 写回到演绎版](xmp-writeback.md)
    + [资产链接共享](link-sharing.md)
    + [资产报表](asset-reports.md)
-   + [增强型智能标记](enhanced-smart-tags.md)
+   + [配置用于标记的智能内容服务](config-smart-tagging.md)
    + [用户档案处理元数据、图像和视频](processing-profiles.md)
    + [创建和配置资产编辑器页面](assets-finder-editor.md)
    + [资产大小调整指南](assets-sizing-guide.md)
@@ -117,12 +119,10 @@ ht-degree: 38%
    + [Camera Raw支持](camera-raw.md)
    + [使用Apache Tika检测MIME类型的资产](detect-asset-mime-type-with-tika.md)
    + [图像转码库](imaging-transcoding-library.md)
-   + [元数据架构](metadata-schemas.md)
    + [集合、片段和片段模板的多租户](multi-tenancy.md)
    + [为资产设置水印](watermarking.md)
    + [资产模板](asset-templates.md)
    + [与共享文件夹的最佳实践 [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
-   + [管理智能标记](managing-smart-tags.md)
 + Brand Portal {#brandportal}
    + [配 [!DNL Assets] 置 [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
    + [将资产发布到 [!DNL Brand Portal]](brand-portal-publish-assets.md)
@@ -141,7 +141,6 @@ ht-degree: 38%
 + Manage Assets {#managing}
    + [管理数字资产](managing-assets-touch-ui.md)
    + [管理收藏集](managing-collections-touch-ui.md)
-   + [使用智能内容服务配置标记](config-smart-tagging.md)
    + [启用重复检测](duplicate-detection.md)
    + [组织数字资产](organize-assets.md)
    + [管理视频资产](managing-video-assets.md)
@@ -158,5 +157,4 @@ ht-degree: 38%
    + [管理复合资产](managing-linked-subassets.md)
    + [相关资产](related-assets.md)
    + [专用文件夹共享](private-folder.md)
-   + [智能内容服务的培训指南](smart-tags-training-guidelines.md)
    + [视频演绎版](video-renditions.md)
