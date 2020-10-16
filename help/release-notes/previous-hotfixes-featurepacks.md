@@ -1,11 +1,11 @@
 ---
-title: '[!DNLAdobe Experience Manager] 6.5以前的Service Pack发行说明。'
+title: '[!DNL Adobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: 6.5 Service [!DNL Adobe Experience Manager] Pack的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
 workflow-type: tm+mt
-source-wordcount: '11487'
+source-wordcount: '11483'
 ht-degree: 25%
 
 ---
@@ -693,7 +693,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 轮询资产 [!DNL Experience Manager] 的作业详细信息时，会显示异常(CQ-4283569)。
 
-### 站点 {#sites}
+### 站点
 
 * 如果LiveCopy继承中断，则Live Copy页面会显示语言复制链接，而不是LiveCopy链接(NPR-30980)。
 * 对于新的Blueprint，如果记录数超过40，则只显示前40个记录。 Blueprint显示其余记录的空行(NPR-31182)。
@@ -725,7 +725,7 @@ Remove one mention of this fix.
 
 * 在翻译作业中选择“到期日期”选项时，将显示两个日历弹出窗口(NPR-31270)。
 
-### 平台 {#platform}
+### 平台
 
 * Web控制台中的Mime类型选项无效(NPR-31108)。
 
@@ -745,7 +745,7 @@ Remove one mention of this fix.
 
 * 捆绑 `org.apache.sling.distribution.api` 包隐藏在配置管理器中，因此对自定义捆绑包不可用(NPR-31720)。
 
-### 项目 {#projects}
+### 项目
 
 * 切换日历视图不起作用(NPR-31271)。
 
@@ -836,7 +836,7 @@ Remove one mention of this fix.
 
 ## Adobe Experience Manager 6.5.2.0 {#experience-manager-6520}
 
-[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及关 [!DNL Adobe Experience Manager] 键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
+[!DNL Adobe Experience Manager] 6.5.2.0是一个重要版本，包含自2019年4月正式发布6.5以来发布的性能、稳定性、安全性以及 [!DNL Adobe Experience Manager] 关键客户修复和 **增强功能**。 它可安装在6. [!DNL Experience Manager] 5之上。
 
 该 Service Pack 的一些重要功能亮点包括：
 
@@ -854,7 +854,7 @@ Remove one mention of this fix.
 * 修复以确保 Asset UI 列视图仅显示特定租户的内容。
 * 修复以允许搜索结果中反映样式可折叠项的更改。
 
-### 资产 {#assets}
+### 资产
 
 **产品增强功能**
 
@@ -961,7 +961,7 @@ Remove one mention of this fix.
 
 * 从 6.3.3.2 升级到 6.5 的实例导致 OSGi 配置重复。NPR-30130：适用于 CQ-4274016 的修补程序
 
-### 集成 {#integration}
+### 集成
 
 * 重新启动实例之前，发布实例上显示的自定义内容错误。NPR-30377：适用于 CQ-4273706 的修补程序
 * 在网站中配置 Launch 时，库地址前面带有斜线 (\)，导致每次需要手动干预。NPR-30694：适用于 CQ-4275501 的修补程序
@@ -976,7 +976,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
 * Added &#39;Auto&#39; setting to `RenderAtClient` in `PDFFormRenderOptions` API for [!DNL Experience Manager] Forms OSGi.
 
-#### Forms 附加组件包 {#forms-add-on-package}
+#### Forms 附加组件包
 
 **后端集成**
 
@@ -1006,7 +1006,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 
 * 在浏览模式下使用 NonVisual Desktop Access 读取 HTML5 表单时，Chrome 浏览器会读取表单设计中每个可缩放矢量图形 (SVG) 前的“图形”。NPR-30449：适用于 CQ-4274732 的修补程序
 
-#### Forms JEE 安装程序 {#forms-jee-installer}
+#### Forms JEE 安装程序
 
 **表单 - 文档安全**
 
@@ -1021,7 +1021,7 @@ The key highlights for [!DNL Experience Manager] 6.5.2.0 forms are:
 * HTMLtoPDF服务在JMX控制台中不显示maxReuseCount。 NPR-30134、NPR-30304：适用于 CQ-4273763 的修补程序
 * Adding or editing a Web Service connection by invoking web services from [!DNL Experience Manager Forms] Workbench throws an error: ClassNotFoundException org.apache.axis.message.SOAPBodyElement. NPR-30105：适用于 CQ-4273217 的修补程序
 
-### 包含的功能包 {#feature-packs-included}
+### 包含的功能包
 
 >[!NOTE]
 >
