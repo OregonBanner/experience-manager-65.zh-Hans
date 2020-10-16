@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5经典UI创作用户指南
-user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
+user-guide-description: 本指南介绍在经典用户界面中在AEM中进行创作的概念。
 translation-type: tm+mt
 source-git-commit: 0b702f58ef7dc85df43bc6d34866dbf3d1100b5e
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 89%
+source-wordcount: '271'
+ht-degree: 84%
 
 ---
 
