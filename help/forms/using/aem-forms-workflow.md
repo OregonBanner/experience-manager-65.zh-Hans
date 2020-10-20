@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 149e505eb4dac0d9a56c53036ce1c6b8d16ad0f1
 workflow-type: tm+mt
 source-wordcount: '3065'
 ht-degree: 1%
@@ -136,7 +136,7 @@ AEM提供了直观的用户界面，以使用提供的工作流步骤创建工�
 >
 >您必须是fd-administrator组的成员才能创建和管理工作流应用程序。
 
-1. 在AEM创作实例上，转到 ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]**> Manage Workflow Application **[!UICONTROL (管]** 理工作流应用程 **[!UICONTROL 序)并点]**&#x200B;击Create Adobe。
+1. 在AEM创作实例上，转到 ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** ，然 **[!UICONTROL 后点按Create]** Adobe。
 1. 在“创建工作流应用程序”窗口中，为以下字段提供输入，然后点按 **创建**。 将创建新应用程序，并在“工作流应用程序”屏幕中列出。
 
 <table>
@@ -218,7 +218,7 @@ AEM Forms应用程序与AEM Forms服务器同步，允许您更改您帐户中�
 
 管理员（fd-administrators组的成员）可以将网络文件夹配置为在用户将文件（如PDF文件）放置到文件夹时运行预配置的工作流。 工作流完成后，它可以将结果文件保存到指定的输出文件夹。 这类文件夹称为“监视 [文件夹”](../../forms/using/watched-folder-in-aem-forms.md)。 请执行以下过程来配置监视的文件夹以启动工作流：
 
-1. 在AEM作者实例中，转 ![到tools-1](assets/tools-1.png) > **Forms****> Configure Watched Folder。** 将显示已配置的监视文件夹列表。
+1. 在AEM作者实例中，转 ![到tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL 配置监视文件夹]**。 将显示已配置的监视文件夹列表。
 1. 点按 **[!UICONTROL 新建]**。 将显示一列表字段。 指定以下字段的值，为工作流配置监视文件夹：
 
 <table>
