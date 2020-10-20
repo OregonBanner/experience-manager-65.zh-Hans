@@ -4,9 +4,9 @@ description: 有关配置、 [!DNL Experience Manager] 对硬件、软件和网�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cc61b8473fb919a963eb73c015efbc2f06197ee8
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2743'
 ht-degree: 0%
 
 ---
@@ -205,7 +205,7 @@ DAM [!UICONTROL 更新资产工作流] ，包含为任务配置的完整步骤�
 
 >[!CAUTION]
 >
->如果ImageMagick使用所有可用磁盘空间，则错误配置可能会使服务器不稳定。 使用ImageMagick处理大型文件所需的策略更改可能会影响 [!DNLEExperience Manager] 性能。 有关详细信息，请参 [阅安装和配置ImageMagick](/help/assets/best-practices-for-imagemagick.md)。
+>如果ImageMagick使用所有可用磁盘空间，则错误配置可能会使服务器不稳定。 使用ImageMagick处理大型文件所需的策略更改可能会影响 [!DNL Experience Manager] 性能。 有关详细信息，请参 [阅安装和配置ImageMagick](/help/assets/best-practices-for-imagemagick.md)。
 
 >[!NOTE]
 >
