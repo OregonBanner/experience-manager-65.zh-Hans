@@ -11,9 +11,9 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbd48b28798c1bb7c00175fc1faecfea5484b07b
+source-git-commit: 1718aac3d39662fb35336a4db3e3403641f9529a
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -118,9 +118,9 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * `mongo-host` 是MongoDB服务器IP（例如，127.0.0.1）
 
-* `mongo-port` 是MongoDB服务器端口(例如： 27017)
+* `mongo-port` 是MongoDB服务器端口(例如：27017)
 
-* `mongo-database-name` 表示数据库的名称(例如： aem-author)
+* `mongo-database-name` 表示数据库的名称(例如：aem-author)
 
 **在以下情况下，您可能还需要其他交换机：**
 
@@ -175,6 +175,10 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 ### 确定正确的升级开始命令 {#determining-the-correct-upgrade-start-command}
 
 要执行升级，开始AEM必须使用jar文件来调出实例。 要升级到6.5，另请参阅“延迟内容迁移”中的其他内容重 [组和迁移选项](/help/sites-deploying/lazy-content-migration.md) ，您可以使用升级命令进行选择。
+
+>[!IMPORTANT]
+>
+>如果运行的是Oracle Java 11（或Java的一般版本高于8），则在启动AEM时，需要向命令行添加其他交换机。 有关详细信息，请参 [阅Java 11注意事项](/help/sites-deploying/custom-standalone-install.md#java-considerations)。
 
 请注意，从开始脚本启动AEM不会开始升级。 大多数客户使用开始脚本开始AEM，并已自定义此开始脚本，以包括内存设置、安全证书等环境配置的交换机。 因此，我们建议按照以下过程确定正确的升级命令：
 
