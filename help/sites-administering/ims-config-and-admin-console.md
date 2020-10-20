@@ -1,8 +1,8 @@
 ---
 title: AdobeIMS对AEM [!DNL Admin Console] Managed Services的身份验证和支持
 seo-title: AdobeIMS对AEM [!DNL Admin Console] Managed Services的身份验证和支持
-description: 了解如何在AEM中使用[!DNLAdmin Console]。
-seo-description: 了解如何在AEM中使用[!DNLAdmin Console]。
+description: 了解如何使用 [!DNL Admin Console] 登AEM。
+seo-description: 了解如何使用 [!DNL Admin Console] 登AEM。
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 translation-type: tm+mt
-source-git-commit: 5a421c66930d8c7a9eb633c707b4b51d4549b303
+source-git-commit: a71c1e87dd5f01ba2584282e0960ca27d419adb0
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1726'
 ht-degree: 10%
 
 ---
