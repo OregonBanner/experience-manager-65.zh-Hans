@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
+source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 2%
@@ -81,7 +81,8 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 ### 通过双向SSL实现，在服务器上与RESTful API集成表单数据模型 {#fdm-integration-rest-apis-two-way-ssl}
 
-[!DNL Experience Manager Forms] 表单数据模型现在可以与服务器上的RESTful API集成，该服务器上实现了双向SSL。
+[!DNL Experience Manager Forms] 表单数据模型现 [在可以与服务器上实现双向SSL的RESTful API集成](../../help/forms/using/configure-data-sources.md)。
+
 
 ### 在自动化Forms [!DNL Adobe Sign] 转换服务中增加了对文本标记的支持 {#sign-integration-acroform-afcs}
 
@@ -185,7 +186,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 #### 配 [!DNL Experience Manager Assets] 置 [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
+和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
 
 使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因您的版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) （使用Brand Portal）。
 
