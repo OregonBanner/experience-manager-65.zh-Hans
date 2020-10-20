@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 6e7da5aa0a8ea224de256717ca37193dcf6577be
+source-git-commit: 4865d4fb666f58ea8abe9e438ea69e9272961c43
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 ### 使CDN缓存内容无效 {#invalidate-cdn-cached-content}
 
-您现在可以使用用户界面[!DNL  Dynamic Media] ，使内容投放网络(CDN)缓存的内容失效。 因此，更新的资产会立即可用，而不会等到缓存过期。 您可以通过以下方式使CDN失效：
+您现在可以使用 [!DNL Dynamic Media] 用户界面使内容投放网络(CDN)缓存内容失效。 因此，更新的资产会立即可用，而不会等到缓存过期。 您可以通过以下方式使CDN失效：
 
 * 创建CDN失效模板：选择资产和表单关联的基于模板的URL
 
@@ -198,7 +198,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 * 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
 * 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
-For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
+For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军用格式的小时，mm是分钟。
 
 * 屏幕阅读器现在 `X` 会宣布删除选定标记的符号以及选定标记的数量。
 
