@@ -1,12 +1,12 @@
 ---
-title: '[!DNLAdobe Experience Manager] 6.5 Service Pack发行说明。'
+title: '[!DNL Adobe Experience Manager] 6.5 Service Pack发行说明。'
 description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Service Pack 6.
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 74ab94126383d53dac5f55171266c66c28757969
+source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
 workflow-type: tm+mt
-source-wordcount: '4518'
+source-wordcount: '4530'
 ht-degree: 6%
 
 ---
@@ -39,15 +39,15 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 和的默认 `test` 选项 `aiprocess` 会从Dynamic Media `Thumbnail`中更新为以 `Rasterize` 前的默认选项，以确保用户只需创建缩略图并跳过页面提取和关键字提取。
 
-* 在客户端预填自适应表单。
+* [在客户端预填自适应表单](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client)。
 
-* 通过双向SSL实现，在服务器上与RESTful API形成数据模型集成。
+* [通过双向SSL实现，在服务器上与RESTful API形成数据模型集成](../../help/forms/using/configure-data-sources.md)。
 
-* 增强了已翻译的自适应表单页面的缓存。
+* [增强了已翻译的自适应表单页面的缓存](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* 支持自动化Forms转换服务中的Adobe Sign文本标记。
+* 自动化 [Forms转换服务中支持Adobe Sign文本标记](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。
 
-* Support to convert colored forms to adaptive forms using [!DNL Automated Forms Conversion service].
+* 支持使用 [将彩色表单转换为自适应表单](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) 。 [!DNL Automated Forms Conversion service]
 
 * 支持SMB 2和SMB 3协议。
 
@@ -152,13 +152,13 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
    ![标题中的帮助菜单](assets/Help_aem_header.png)
 
-   *图：[!UICONTROL 在“帮助”菜单]中[!UICONTROL 搜索]“帮助”。*
+   *图： [!UICONTROL 在“帮助”菜单] 中 [!UICONTROL 搜索] “帮助”。*
 
    * 如果在“User”选项下的“Impersonate as [!UICONTROL ”字段中输入了不] 正确的值 [!UICONTROL ，并且焦点会正确移] 动到文本字段(NPR-33804)，则显示错误消息。
 
    ![标题中的用户菜单](assets/User_aem_header.png)
 
-   *图：[!UICONTROL 在标题的]“用户[!UICONTROL ”菜单]中模拟为字段。*
+   *图： [!UICONTROL 在标题的] “用户 [!UICONTROL ”菜单] 中模拟为字段。*
 
 * 用户现在可以使用键盘更改焦点：
 
