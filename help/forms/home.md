@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager六点五Forms指南
-seo-title: AEM 6.5 Forms 用户指南
+title: Adobe Experience Manager 6.5 Forms 指南
+seo-title: AEM 6.5Forms指南
 description: 本指南涵盖所有AEM Forms任务，包括如何创建、管理、发布和更新数字表单。
 seo-description: 涵盖所有AEM Forms任务，包括如何创建、管理、发布和更新数字表单。
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 5b5937303dd543195b6c8300e6579a58e03a97d1
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 28%
+source-wordcount: '369'
+ht-degree: 30%
 
 ---
 
 
-# Adobe Experience Manager六点五Forms指南
+# Adobe Experience Manager 6.5 Forms 指南
 
 本指南涵盖所有AEM Forms任务，包括如何创建、管理、发布和更新数字表单。
 
@@ -31,8 +31,8 @@ ht-degree: 28%
 | [Assets 用户指南](/help/assets/home.md) | 了解如何创建、管理、交付和优化数字资产。 |
 | [Forms用户指南](/help/forms/home.md) | 本指南介绍如何创建、管理、发布和更新数字表单。 |
 | [社区用户指南](/help/communities/home.md) | 创建在线体验，如论坛、用户组、学习资源和其他社交功能。 |
-| [管理指南](/help/sites-administering/home.md) | 了解如何管理 AEM |
-| [创作指南](/help/sites-authoring/home.md) | 本指南介绍在AEM中进行创作的概念。 |
+| [Administering 指南](/help/sites-administering/home.md) | 了解如何管理 AEM |
+| [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍在AEM中进行创作的概念。 |
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介绍在经典用户界面中在AEM中进行创作的概念。 |
 | [Screens用户指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [部署用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
