@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 0%
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
-从此对话框中，您还可以配置视频组件的设计以及播放、 [!UICONTROL Flash]和 [!UICONTROL Advanced][!UICONTROL 的]参数。
+在此对话框中，您还可以配置视频组件的设计以及播放、 [!UICONTROL Flash][!UICONTROL 和高]级参数 。
 
 ## 安装FFmpeg并配置AEM {#install-ffmpeg}
 
-视频组件依赖第三方开源产品FFmpeg来转码视频。 已从https://ffmpeg.org/ [下载](https://ffmpeg.org/)。 安装FFmpeg后，将AEM配置为使用特定音频编解码器和特定运行时选项。
+视频组件依赖第三方开源产品FFmpeg来转码视频。 已从https://ffmpeg.org/ [下载](https://ffmpeg.org/)。 安装FFmpeg后，请配置AEM以使用特定的音频编解码器和特定的运行时选项。
 
 要在Windows上安装 **FFmpeg**，请执行以下步骤：
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 要在Mac OS X上 **安装FFmpeg**，请执行以下步骤：
 
-1. 安装Xcode，网址 [为developer.apple.com/xcode](hhttps://developer.apple.com/xcode/)。
+1. 安装Xcode，网址 [为developer.apple.com/xcode](https://developer.apple.com/xcode/)。
 1. 可在XQuartz [安装](https://www.xquartz.org) 以获取 [X11](https://support.apple.com/en-us/HT201341)。
 1. 安装MacPorts，网址 [为www.macports.org](https://www.macports.org/)。
 1. 在控制台中，执 `sudo port install ffmpeg` 行命令并按照屏幕上的说明操作。 确保将可执行文件 `FFmpeg` 的路径添加到系统 `PATH` 变量中。
@@ -78,4 +78,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->升级AEM实例时，不会保留对默认现成工作流模型(OOTB)所做的更改。 Adobe建议您在编辑修改的工作流模型之前先复制这些模型。 例如，在编辑DAM更新资 [!UICONTROL 产模型中的] FFmpeg转码步骤之前，复制OOTB DAM更新资产  模型，以挑选在升级前存在的视频用户档案名称。 然后，可以叠加节 `/apps` 点，让AEM检索对OOTB模型的自定义更改。
+>升级AEM实例时，不保留对默认现成工作流模型(OOTB)所做的更改。 Adobe建议您在编辑修改的工作流模型之前复制这些模型。 例如，在编辑DAM更新资 [!UICONTROL 产模型中的] FFmpeg转码步骤之前，复制OOTB DAM更新资产  模型，以挑选在升级前存在的视频用户档案名称。 然后，可以叠加节 `/apps` 点，让AEM检索对OOTB模型的自定义更改。
