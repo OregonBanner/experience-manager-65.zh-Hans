@@ -1,6 +1,6 @@
 ---
-title: OSGi组和权限上的AEM Forms
-seo-title: OSGi组和权限上的AEM Forms
+title: AEM Forms论OSGi集团与特权
+seo-title: AEM Forms论OSGi集团与特权
 description: 将用户分配到组以在OSGi上管理AEM Forms
 seo-description: 将用户分配到组以在OSGi上管理AEM Forms
 uuid: f269a206-356d-4cee-b449-05c5da87121a
@@ -11,7 +11,7 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 translation-type: tm+mt
-source-git-commit: dbb99875cc6f3c8810670ffe923756f7c13d4ace
+source-git-commit: 494551d3d886c1ed70d252a28b03cfa9d8e82a6a
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 1%
@@ -19,11 +19,11 @@ ht-degree: 1%
 ---
 
 
-# OSGi组和权限上的AEM Forms{#aem-forms-on-osgi-groups-and-privileges}
+# AEM Forms论OSGi集团与特权{#aem-forms-on-osgi-groups-and-privileges}
 
-您可以 [在AEM中](/help/sites-administering/user-group-ac-admin.md#group-administration) 创建组 [，并将策](/help/sites-administering/user-group-ac-admin.md#user-administration) 略和用户分配到这些组。 这些策略控制属于组的用户的权限。
+您可以 [创建组](/help/sites-administering/user-group-ac-admin.md#group-administration) ，并将策略 [和用户](/help/sites-administering/user-group-ac-admin.md#user-administration) 分配到AEM中的组。 这些策略控制属于组的用户的权限。
 
-安装AEM [Forms Add-on包后](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的组（如forms-user和forms-power-user）将自动可用于分配。 下表列表了用户根据组分配可对OSGi上的AEM Forms执行的任务:
+安装 [AEM Forms加载项包后](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的组（如表单用户和表单用户）将自动可供分配。 下表列表了用户可以根据组分配对OSGi上的AEM Forms执行的任务:
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ ht-degree: 1%
    <td>任务</td> 
   </tr>
   <tr>
-   <td>表单用户 <sup>[1]</sup></td> 
+   <td>表单用 <sup>户[1]</sup></td> 
    <td>
     <ul> 
      <li>创建、预览、发布和提交自适应表单</li> 
@@ -94,7 +94,7 @@ ht-degree: 1%
    <td>工作流用户</td> 
    <td>
     <ul> 
-     <li>使用AEM收件箱应用程序<br /><strong>注意： </strong>您必须具有cm-agent-users和workflow-users组分配，才能在AEM收件箱中访问Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件箱应用程序<br /><strong>注意： </strong>您必须具有cm-agent-users和workflow-users组分配才能访问AEM收件箱中的Interactive Communications Agent UI。</li> 
      <li>管理工作流实例</li> 
     </ul> </td> 
   </tr>
