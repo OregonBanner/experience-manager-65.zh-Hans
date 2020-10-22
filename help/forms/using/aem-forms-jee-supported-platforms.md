@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d97cc2ad393fc10ff545ae374180426eb1574ba9
+source-git-commit: 4e1f5d549df1db28a8679296afb4b758051d8f6c
 workflow-type: tm+mt
-source-wordcount: '3276'
+source-wordcount: '3298'
 ht-degree: 1%
 
 ---
@@ -264,7 +264,7 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
    <td>服务包和关键更新</td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7(Kernel 3.x)（64位）注</br><b>意：</b> Red Hat Enterprise Linux 6于2020年11月30日进入维护阶段，过渡进入延长寿命阶段。 Adobe建议使用Red Hat Enterprise Linux 7进行升级和新安装。</p> </td>
+   <td><p>Red Hat Enterprise Linux 7(Kernel 3.x)（64位）注</br><b>意：</b><a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6在2020年</a> 11月30日进入“维护结束”阶段，过渡进入“延长生命周期支持”阶段。 Adobe建议使用Red Hat Enterprise Linux 7进行升级和新安装。 现有安装可以在延长生命周期支持阶段使用Red Hat Enterprise Linux 6。</p> </td>
    <td><p>答：支持</p> </td>
    <td><p>次要版本、累积更新和关键更新</p> </td>
   </tr>
