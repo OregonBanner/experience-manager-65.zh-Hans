@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b9cc4df476ab95707284c4255f9cf35f257a1258
+source-git-commit: 18dcbf04bd88f63335ef36e2ec7ea81835e11b51
+workflow-type: tm+mt
+source-wordcount: '544'
+ht-degree: 82%
 
 ---
 
@@ -35,10 +38,6 @@ AEM 提供了两种环境：
 ![chlimage_1-132](assets/chlimage_1-132.png)
 
 在创作环境中，AEM 的功能通过两种 UI 来提供。对于发布环境，可以设计提供给用户使用的界面的整体外观。
-
->[!NOTE]
->
->AEM和调度程序用于发布此AEM文档。
 
 ### 创作环境 {#author-environment}
 
@@ -74,7 +73,7 @@ When ready, the AEM site&#39;s content is published to the **publish environment
 
 通常，发布环境位于内网与外网的“隔离区”中；换句话说，可用于 Internet，但不再处于内部网络的完全保护之下。
 
-如果 AEM 站点是一个[社区站点](/help/communities/overview.md)或包含[社区组件](/help/communities/author-communities.md)，则已登录的网站访客（成员）可以与社区功能交互。例如，他们可以发布到论坛、发布评论或关注其他成员。 可授予会员执行通常仅限于作者环境的活动的权限，例如创建新页面（社区组）、博客文章和审核其他会员的帖子。
+如果 AEM 站点是一个[社区站点](/help/communities/overview.md)或包含[社区组件](/help/communities/author-communities.md)，则已登录的网站访客（成员）可以与社区功能交互。例如，他们可以发布到论坛、发布评论或关注其他成员。 会员可以被授予执行通常仅限于作者环境的活动的权限，例如创建新页面（社区组）、博客文章和审核其他成员的帖子。
 
 >[!NOTE]
 >
@@ -89,7 +88,7 @@ When ready, the AEM site&#39;s content is published to the **publish environment
    >
    >
 * **复制**
-   >  这些是用于指示数据（例如，页面内容、文件、代码、用户评论）从一个环境到另一个的移动的技术术语；例如，在发布或反向复制用户注释时。
+   >  这些是用于指示数据（例如页面内容、文件、代码、用户评论）从一个环境到另一个的移动的技术术语；例如，在发布或反向复制用户注释时。
 >
 
 
