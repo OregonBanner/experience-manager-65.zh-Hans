@@ -3,15 +3,15 @@ title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: e124025295f29d6f3999dc52467301d48bceee75
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1525'
 ht-degree: 1%
 
 ---
 
 
-# 增强型智能标记 {#enhanced-smart-tags}
+# 了解、应用和管理智能标签 {#enhanced-smart-tags}
 
 处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 本质上，它包含一列表关键字，员工、合作伙伴和客户通常使用这些关键字来引用和搜索特定类别的数字资产。 使用分类控制的词汇标记资产可确保通过基于标签的搜索轻松识别和检索资产。
 
