@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '6050'
 ht-degree: 25%
@@ -223,7 +223,7 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 
 在创作环境中单击缩略图时，将显示“概览”对话框的预览。
 
-![chlimage_1-21](assets/chlimage_1-127.png)
+![chlimage_1-29](assets/chlimage_1-127.png)
 
 您可以选择创建自己的自定义交互式视频查看器预设。 您可以确定视频播放器的样式、交互式缩略图以及显示在视频末尾的缩略图网格视图。
 
@@ -237,14 +237,14 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 
 If you have already uploaded your video and thumbnail assets, proceed to [Adding interactivity to your video](#adding-interactivity-to-your-video).
 
-如果您上传了错误的视频或图像，或者您希望删除不再需要的已上传视频或图像，请参阅删 [除资产](/help/assets/managing-assets-touch-ui.md#deleting-assets)。
+如果您上传了错误的视频或图像，或者您希望删除不再需要的已上传视频或图像，请参阅删 [除资产](/help/assets/manage-assets.md#deleting-assets)。
 
 要上传视频及其关联的缩略图资产，请执行以下操作：
 
 1. 将视频和关联的缩略图资产上传到一个或多个所需的文件夹。
 
-   请参阅[上传资产](/help/assets/managing-assets-touch-ui.md)。
-请参阅[使用 FTP 作业计划功能上传资产](/help/assets/managing-assets-touch-ui.md)。
+   请参阅[上传资产](/help/assets/manage-assets.md)。
+请参阅[使用 FTP 作业计划功能上传资产](/help/assets/manage-assets.md)。
 
    现在，可以为视频添加交互性。
 
@@ -475,7 +475,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       在时间轴上，点按要分成两半的区段，然后点按工 **[!UICONTROL 具栏上的]** “拆分区段”。
 
       选择两个或多个段将禁用“拆 **[!UICONTROL 分段]** ”功能。
-   ![chlimage_1-133](assets/chlimage_1-135.png)
+   ![chlimage_1-135](assets/chlimage_1-135.png)
 
    将选定的10秒段分为两段，每段5秒。
 
