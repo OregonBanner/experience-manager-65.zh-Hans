@@ -12,7 +12,7 @@ discoiquuid: 59780112-6a9b-4de2-bf65-f026c8c74a31
 docset: aem65
 targetaudience: target-audience upgrader
 translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '2204'
 ht-degree: 0%
@@ -133,7 +133,7 @@ AEM Uberjar将所有AEM API作为Maven项目的单个依赖项包含在其中 `p
 
 ### 为现有资产生成资产ID {#generating-asset-ids-for-existing-assets}
 
-要为现有资产生成资产ID，请在将AEM实例升级到运行AEM 6.5时升级资产。这是启用资产分析功能 [所必需的](/help/assets/touch-ui-asset-insights.md)。 有关详细信息，请参 [阅添加嵌入代码](/help/assets/touch-ui-using-page-tracker.md#add-embed-code)。
+要为现有资产生成资产ID，请在将AEM实例升级到运行AEM 6.5时升级资产。这是启用资产分析功能 [所必需的](/help/assets/asset-insights.md)。 有关详细信息，请参 [阅添加嵌入代码](/help/assets/use-page-tracker.md#add-embed-code)。
 
 要升级资产，请在JMX控制台中配置“关联资产ID”包。 根据存储库中的资产数量， `migrateAllAssets` 可能需要很长时间。 我们的内部测试估计TarMK上的12.5万个资产大约需要1小时。
 
