@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '11828'
 ht-degree: 22%
@@ -71,7 +71,7 @@ ht-degree: 22%
       * 视图源视频和视频的编码演绎版及其关联的缩略图：
          [预览视频](managing-video-assets.md#upload-and-preview-video-assets) 或预 [览资产](previewing-assets.md)
          [查看视频演绎版](video-renditions.md)
-         [管理视频演绎版](managing-assets-touch-ui.md#managing-renditions)
+         [管理视频演绎版](manage-assets.md#managing-renditions)
 
       * [管理查看器预设](managing-viewer-presets.md)
       * [发布资产](publishing-dynamicmedia-assets.md)
@@ -81,16 +81,16 @@ ht-degree: 22%
          [查看视频演绎版属性](video-renditions.md)
 
       * 编辑视频的属性，如标题、描述和标记、自定义元数据字段：
-         [编辑视频属性](managing-assets-touch-ui.md#editing-properties)
+         [编辑视频属性](manage-assets.md#editing-properties)
 
       * [管理数字资产的元数据](metadata.md)
       * [元数据架构](metadata-schemas.md)
    * 审核和批准视频，在视频中添加注释，以及保持全面的版本控制
 
-      * [对视频添加注释](managing-video-assets.md#annotate-video-assets) 或对 [资产添加注释](managing-assets-touch-ui.md#annotating)
+      * [对视频添加注释](managing-video-assets.md#annotate-video-assets) 或对 [资产添加注释](manage-assets.md#annotating)
 
-      * [创建版本](managing-assets-touch-ui.md#asset-versioning)
-      * [将工作流应用于资产](assets-workflow.md) ，或 [参阅：启动资产工作流](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
+      * [创建版本](manage-assets.md#asset-versioning)
+      * [将工作流应用于资产](assets-workflow.md) ，或 [参阅：启动资产工作流](manage-assets.md#starting-a-workflow-on-an-asset)
 
       * [审核文件夹资产](bulk-approval.md)
       * [项目](../sites-authoring/projects.md)
@@ -1165,7 +1165,7 @@ Cost-efficient access to rapidly evolving technology.
    通常，您希望将章节VTT文件命名为与视频文件同名，并在其后添加章节。 通过这样做，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
 1. 在AEM中，上传您的WebVTT章节文件。
 
-   请参阅[上传资产](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+   请参阅[上传资产](/help/assets/manage-assets.md#uploading-assets)。
 
 1. 执行下列操作之一：
 
