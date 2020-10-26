@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 32%
@@ -29,7 +29,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/managing-assets-touch-ui.md)。
+>有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/manage-assets.md)。
 
 ## 快速开始:旋转集 {#quick-start-spin-sets}
 
@@ -77,13 +77,13 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    请参 [阅将旋转集关联到网页](/help/assets/linking-urls-to-yourwebapplication.md)[和嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-If you need to, you can [edit Spin Sets](#editing-spin-sets). In addition, you can view and modify [Spin Set properties](/help/assets/managing-assets-touch-ui.md#editing-properties).
+If you need to, you can [edit Spin Sets](#editing-spin-sets). In addition, you can view and modify [Spin Set properties](/help/assets/manage-assets.md#editing-properties).
 
 ## 上传旋转集的资产 {#uploading-assets-for-spin-sets}
 
 对于一维旋转集，一个项目至少需要8-12张照片；对于二维旋转集，一个项目至少需要16-24张照片。拍摄时必须定期进行，以给人以项目正在旋转和翻动的印象。例如，如果一维旋转集包含12个镜头，则对每个镜头将项目旋转30度(360/12)。
 
-You can upload images for the Spin Sets as you would [upload any other asset in AEM Assets](/help/assets/managing-assets-touch-ui.md).
+You can upload images for the Spin Sets as you would [upload any other asset in AEM Assets](/help/assets/manage-assets.md).
 
 ### 为旋转集捕获图像的指南 {#guidelines-for-shooting-spin-set-images}
 
