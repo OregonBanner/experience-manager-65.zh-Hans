@@ -3,7 +3,7 @@ title: Introduction to [!DNL Adobe Experience Manager Assets].
 description: 了解数字资产管理、其使用案例和 [!DNL Adobe Experience Manager Asset] 分支。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 678e91699523c22a7048bd7b344fa539b849ae8b
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 33%
@@ -55,21 +55,21 @@ ht-degree: 33%
 
 When working with digital assets in [!DNL Experience Manager], you need to understand the following terminology:
 
-* **集合**: 资产集合，基于物理位置（文件夹）、常用属性（保存的搜索文件夹）或用户选择（lightbox文件夹）。
+* **集合**:资产集合，基于物理位置（文件夹）、常用属性（保存的搜索文件夹）或用户选择（lightbox文件夹）。
 
-* **元数据**[!DNL Assets] 包含元数据； 例如，作者、到期日、DRM信息（数字版权管理）等。 元数据受访问控制。[!DNL Assets] 支持以下各种常见的现成元数据架构：
+* **元数据**[!DNL Assets] 包含元数据；例如，作者、到期日、DRM信息(Digital Rights Management)等。 元数据受访问控制。[!DNL Assets] 支持以下各种常见的现成元数据架构：
 
    * Dublin Core：包括作者、描述、日期、主题等。
    * IPTC：包括事件、模型、位置等。
-   * WCM: 包括页面属 [!UICONTROL 性、开] 始 [!UICONTROL 时间和结束]时间，等等。
+   * WCM:包括页面属 [!UICONTROL 性、开] 始 [!UICONTROL 时间和结束]时间，等等。
 
 * **标记**: [!DNL Assets] 可以标记和分类。 请参阅 [组织资产](/help/assets/organize-assets.md)。
 
-* **演绎版**: 演绎版是资产的二进制表示形式。 [!DNL Assets] 始终具有主要表示形式——已上载文件的表示形式。 它们可以采用创建的任何数量的其他表示形式，例如定制工作流程步骤或资产上传时创建的表示形式。演绎版可能大小不同、分辨率不同、添加了水印，或者更改了其他一些特性。
+* **演绎版**:演绎版是资产的二进制表示形式。 [!DNL Assets] 始终具有主要表示形式——已上载文件的表示形式。 它们可以采用创建的任何数量的其他表示形式，例如定制工作流程步骤或资产上传时创建的表示形式。演绎版可能大小不同、分辨率不同、添加了水印，或者更改了其他一些特性。
 
-* **版本**: 版本控制可创建数字资产在特定时间点的快照。 您可以将资产恢复至以前的版本。See [versioning in Assets](managing-assets-touch-ui.md#asset-versioning).
+* **版本**:版本控制可创建数字资产在特定时间点的快照。 您可以将资产恢复至以前的版本。See [versioning in Assets](manage-assets.md#asset-versioning).
 
-* **子资产**: 子资产是组成资产的资产，例如，文件中的图层 [!DNL Adobe Photoshop] 或PDF文件中的页面。 In [!DNL Assets], you can manage sub-assets as you would assets.
+* **子资产**:子资产是组成资产的资产，例如，文件中的图层 [!DNL Adobe Photoshop] 或PDF文件中的页面。 In [!DNL Assets], you can manage sub-assets as you would assets.
 
 ### How to work with assets {#how-to-work-with-assets}
 
@@ -78,8 +78,8 @@ When working with digital assets in [!DNL Experience Manager], you need to under
 您可以通过以下预配置任务执行工作流:
 
 * 将资产保存到存储库中，或从存储库中删除资产。
-* 提取和保存资产的元数据； 单个元数据项将保存为XMP。
-* 为资产生成演绎版和缩略图； 包括根据需要自动调整大小和裁剪。
+* 提取和保存资产的元数据；单个元数据项将保存为XMP。
+* 为资产生成演绎版和缩略图；包括根据需要自动调整大小和裁剪。
 * 在必要时转码资产。 例如，用于移动和Web使用的视频以每秒24帧的速率进行转码，下载每秒30帧的视频。 用于移动和Web的音频以128 Kbps的速率进行转码，用于下载的音频以192 Kbps的速率进行转码。
 
 当然，您也可以手动应用工作流。请参阅 [ Assets 媒体处理程序](/help/assets/media-handlers.md)，以获取默认工作流的列表。
