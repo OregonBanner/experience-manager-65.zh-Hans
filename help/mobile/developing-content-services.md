@@ -9,7 +9,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 2%
 
 ---
 
@@ -22,30 +25,29 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->“内容服务”功能仅用于预览目的。
+>Content Services功能仅记录为预览之用。
 >
 >随着6.3 GA Service Pack 1的发布，它可能会发生变化。
 
-AEM Mobile Content services是一项轻量级功能，用于请求由AEM管理的内容。 这为所有应用程序开发人员提供了一种高性能的方式来检索内容，而无需深入了解AEM的内容存储库(JCR)和Web框架(Sling)。 它允许请求应用程序与内容存储库分离。
+AEM Mobile内容服务是一项轻量级功能，用于请求由AEM管理的内容。 这为所有应用程序开发人员提供了一种高性能方式来检索内容，而无需深入了解AEM内容存储库(JCR)和Web框架(Sling)。 它允许请求的应用程序与内容存储库分离。
 
-Content services引入了几个新的AEM构造，使开发人员能够访问AEM管理的内容，而无需了解该内容的存储库结构。
+Content Services引入了几个新的AEM构造，使开发人员能够访问AEM托管内容，而无需了解该内容的存储库结构。
 
-为了保持灵活性，并通过在AEM管理的内容与使用该内容的移动应用程序之间提供一个抽象层，从而支持未来扩展，这些构造是必需的。 这允许AEM Content services在本机应用程序的内容要求与AEM内容存储库之间充当抽象层。
+通过在AEM托管内容和使用内容的移动应用程序之间提供抽象层，这些结构是保持灵活性和实现未来扩展所必需的。 这允许AEM Content Services在本机应用程序的内容要求和AEM内容存储库之间充当抽象层。
 
-内容服务可以将内容作为资产、打包的HTML(HTML/CSS/JS)或渠道无关内容提供。
+内容服务可以将内容作为资产、打包的HTML(HTML/CSS/JS)或独立于渠道的内容提供。
 
 >[!CAUTION]
 >
 >**前提条件:**
 >
->在开始使用Content Services之前，请确保启用Content services标记。 要在应用程序中创建和管理模型，您需要在配置浏览器中启用数据模型。
+>开始使用Content Services之前，请确保启用Content Services标志。 要在应用程序中启用模型的创建和管理，您需要在配置浏览器中启用数据模型。
 >
->有关详 **[细信息，请参阅管](/help/mobile/developing-content-services.md)**理内容服务。
+>有关 **[详细信息](/help/mobile/developing-content-services.md)** ，请参 [阅管理内](/help/sites-administering/configurations.md) 容服务和配置浏览器文档。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
-在配置浏览器中设置Content services标志并启用数据模型后，请参阅以下资源，以开始使用AEM Mobile Content Services，熟悉Content services概念，如模型管理、实体管理，然后是AEM Mobile Content services的内容交付／呈现。
+在配置浏览器中设置内容服务标志并启用数据模型后，请参阅以下资源，开始使用AEM Mobile内容服务，熟悉内容服务概念，如模型管理、实体管理，然后是AEM Mobile内容服务的内容投放/渲染。
 
 * 存储库中的模型
-* 渲染和交付
-
+* 渲染和投放
