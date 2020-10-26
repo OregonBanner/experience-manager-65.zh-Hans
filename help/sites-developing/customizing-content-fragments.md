@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2749'
 ht-degree: 1%
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 # 自定义和扩展内容片段{#customizing-and-extending-content-fragments}
 
-内容片段扩展了标准资产； 请参阅：
+内容片段扩展了标准资产；请参阅：
 
 * [有关内容片段的更多信息](/help/assets/content-fragments/content-fragments.md) ，请 [使用内容片段创建和管理内容片段](/help/sites-authoring/content-fragments.md) ，以及使用页面创作。
 
-* [管理资产](/help/assets/managing-assets-touch-ui.md) 、 [自定义和扩展资产](/help/assets/extending-assets.md) ，以了解有关标准资产的更多信息。
+* [管理资产](/help/assets/manage-assets.md) 、 [自定义和扩展资产](/help/assets/extending-assets.md) ，以了解有关标准资产的更多信息。
 
 ## 架构 {#architecture}
 
@@ -47,26 +47,26 @@ ht-degree: 1%
 
    * 用于定义包含结构化内容的内容片段。
    * 内容片段模型定义内容片段在创建时的结构。
-   * 片段引用模型； 因此，对模型所做的更改可能会／会影响任何从属片段。
+   * 片段引用模型；因此，对模型所做的更改可能会／会影响任何从属片段。
    * 模型是数据类型的构建。
    * 添加新变量等的函数必须相应更新片段。
 
    >[!CAUTION]
    >
-   >对现有内容片段模型的任何更改都可能影响相关片段； 这会导致这些片段中的孤立属性。
+   >对现有内容片段模型的任何更改都可能影响相关片段；这会导致这些片段中的孤立属性。
 
 * 内容片段模板：
 
    * 用于定义简单内容片段。
    * 模板可定义内容片段在创建时的（基本的、纯文本的）结构。
-   * 创建模板时，模板将复制到片段； 因此，对模板的进一步更改不会反映在现有片段中。
+   * 创建模板时，模板将复制到片段；因此，对模板的进一步更改不会反映在现有片段中。
    * 添加新变量等的函数必须相应更新片段。
    * [内容片段模板](/help/sites-developing/content-fragment-templates.md) 以与AEM生态系统中其他模板机制（如页面模板等）不同的方式操作。 因此，应单独考虑这些问题。
-   * 基于模板时，根据实际内容管理内容的MIME类型； 这意味着每个元素和变量都可以具有不同的MIME类型。
+   * 基于模板时，根据实际内容管理内容的MIME类型；这意味着每个元素和变量都可以具有不同的MIME类型。
 
 ### 与资产集成 {#integration-with-assets}
 
-内容片段管理(CFM)是以下AEM Assets的一部分：
+内容片段管理(CFM)是AEM Assets的一部分，作为：
 
 * 内容片段是资产。
 * 他们使用现有资产功能。
@@ -83,11 +83,9 @@ ht-degree: 1%
    * 元素数据存储在主控子节点下：
       `jcr:content/data/master`
 
-   * 变体存储在子节点下，子节点带有变体的名称：
-例如， `jcr:content/data/myvariation`
+   * 变体存储在子节点下，子节点带有变体的名称：例如， `jcr:content/data/myvariation`
 
-   * 每个元素的数据作为具有元素名称的属性存储在相应的子节点中：
-例如，元素的内容 `text` 作为属性存储在 `text` `jcr:content/data/master`
+   * 每个元素的数据作为具有元素名称的属性存储在相应的子节点中：例如，元素的内容 `text` 作为属性存储在 `text` `jcr:content/data/master`
 
 * 元数据和关联内容存储在 `jcr:content/metadata`下面，但标题和说明除外，它们不被视为传统元数据，并存储在 
 `jcr:content`
@@ -103,7 +101,7 @@ ht-degree: 1%
 
    * 第一个元素的变量（如果有）会映射到主资产的其他演绎版。
 
-* 其他元素（如果现有）会映射到主资产的子资产。
+* 其他元素（如果存在）会映射到主资产的子资产。
 
    * 这些附加元素的主要内容会映射到相应子资产的原始演绎版。
    * 任何其他元素的其他变体（如果适用）会映射到相应子资产的其他演绎版。
@@ -121,7 +119,7 @@ ht-degree: 1%
 #### 功能集成 {#feature-integration}
 
 * 内容片段管理(CFM)功能构建于资产核心之上，但应尽可能独立于它。
-* CFM为卡／列/列表视图中的项目提供其自己的实现； 这些插件可插入现有资产内容呈现实施。
+* CFM为卡／列/列表视图中的项目提供其自己的实现；这些插件可插入现有资产内容呈现实施。
 * 已扩展多个资产组件，以满足内容片段的需要。
 
 ### 在页面中使用内容片段 {#using-content-fragments-in-pages}
@@ -130,18 +128,18 @@ ht-degree: 1%
 >
 >现在 [建议使用内容片段](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 核心组件。 有关更 [多详细信息](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) ，请参阅开发核心组件。
 
-内容片段可以从AEM页面中引用，就像任何其他资产类型一样。 AEM提供内 [**容片段&#x200B;**核心组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)-一个[组件，允许您在页面中包含内容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您还可以扩展此内容片**&#x200B;段核心组&#x200B;**件。
+内容片段可以从AEM页面进行引用，就像任何其他资产类型一样。 AEM提供内 [**容片段** 核心组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) -一个 [组件，它允许您在页面上包含内容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您还可以扩展此内容片 **段核心组** 件。
 
-* 组件使用属 `fragmentPath` 性引用实际内容片段。 该 `fragmentPath` 财产的处理方式与其他资产类型的类似财产相同； 例如，当内容片段被移动到其他位置时。
+* 组件使用属 `fragmentPath` 性引用实际内容片段。 该 `fragmentPath` 财产的处理方式与其他资产类型的类似财产相同；例如，当内容片段被移动到其他位置时。
 
 * 组件允许您选择要显示的变量。
-* 此外，还可以选择一系列段落来限制输出； 例如，这可用于多列输出。
+* 此外，还可以选择一系列段落来限制输出；例如，这可用于多列输出。
 * 该组件允 [许中间内容](/help/sites-developing/components-content-fragments.md#in-between-content):
 
    * 在此组件中，您可以放置其他资产（图像等） 在引用片段的段落之间。
    * 对于中间内容，您需要：
 
-      * 注意不稳定的参考资料的可能性； 中间内容（在创作页面时添加）与它位于旁边的段落没有固定关系，在中间内容的位置之前插入新段落（在内容片段编辑器中）可能会丢失相对位置
+      * 注意不稳定的参考资料的可能性；中间内容（在创作页面时添加）与它位于旁边的段落没有固定关系，在中间内容的位置之前插入新段落（在内容片段编辑器中）可能会丢失相对位置
       * 考虑其他参数(如变化和段落过滤器)以避免搜索结果中出现误报
 
 >[!NOTE]
@@ -169,7 +167,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 >
 >属性和组件类型之间没有直接映射。
 >
->AEM只需获取可在段落上找到的第一个属性。 因此，您应当谨慎选择属性。
+>AEM只需使用可在段落上找到的第一个属性。 因此，您应当谨慎选择属性。
 
 ![screestop_2019-03-18at100941](assets/screenshot_2019-03-18at100941.png)
 
@@ -198,7 +196,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
    内容片段与AEM翻译工作 [流完全集成](/help/sites-administering/tc-manage.md)。 在建筑层面，这意味着：
 
-   * 内容片段的个别翻译实际上是单独的片段； 例如：
+   * 内容片段的个别翻译实际上是单独的片段；例如：
 
       * 它们位于不同的语言根下：
 
@@ -215,10 +213,10 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
          与
 
          `/content/dam/<path>/de/<to>/<fragment>`
-   * 除了基于规则的路径之外，内容片段的不同语言版本之间没有进一步的联系； 它们作为两个单独的片段处理，但UI提供了在语言变体之间导航的方法。
+   * 除了基于规则的路径之外，内容片段的不同语言版本之间没有进一步的联系；它们作为两个单独的片段处理，但UI提供了在语言变体之间导航的方法。
    >[!NOTE]
    >
-   >AEM翻译工作流程可用于 `/content`:
+   >AEM翻译工作流可用于 `/content`:
    >
    >    * 由于内容片段模型位于 `/conf`其中，因此此类转换中不包含这些模型。 您可以 [将UI字符串国际化](/help/sites-developing/i18n-dev.md)。
       >
@@ -239,7 +237,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
 ## 内容片段管理API —— 服务器端 {#the-content-fragment-management-api-server-side}
 
-您可以使用服务器端API访问您的内容片段； 请参阅：
+您可以使用服务器端API访问您的内容片段；请参阅：
 
 [com.adobe.cq.dam.cfm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
@@ -306,7 +304,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
    该界面为您提供了以下方法：
 
-   * 管理基本数据(例如，获取名称； get/set title/description)
+   * 管理基本数据(例如，获取名称；get/set title/description)
    * 访问元数据
    * 访问元素：
 
@@ -362,9 +360,9 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
 * `ContentFragment` 可适用于：
 
-   * `Resource` -基础Sling资源； 请注意，直接更新 `Resource` 基础需要重建对 `ContentFragment` 象。
+   * `Resource` -基础Sling资源；请注意，直接更新 `Resource` 基础需要重建对 `ContentFragment` 象。
 
-   * `Asset` -表示内 `Asset` 容片段的DAM抽象； 请注意，直接 `Asset` 更新需要重新构建对 `ContentFragment` 象。
+   * `Asset` -表示内 `Asset` 容片段的DAM抽象；请注意，直接 `Asset` 更新需要重新构建对 `ContentFragment` 象。
 
 * `ContentElement` 可适用于：
 
@@ -416,9 +414,9 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
 控制编辑会话的要求有：
 
-* 编辑可以跨多个视图（= HTML页）的内容片段应该是原子的。
-* 编辑也应是事 *务性*; 在编辑会话结束时，必须提交（保存）或回滚（取消）更改。
-* 边缘案件应妥善处理； 这些情况包括用户通过手动输入URL或使用全局导航离开页面的情况。
+* 编辑可跨多个视图（= HTML页）的内容片段应该是原子的。
+* 编辑也应是事 *务性*;在编辑会话结束时，必须提交（保存）或回滚（取消）更改。
+* 边缘案件应妥善处理；这些情况包括用户通过手动输入URL或使用全局导航离开页面的情况。
 * 应定期自动保存（每x分钟），以防止数据丢失。
 * 如果内容片段由两个用户同时编辑，则不应覆盖彼此的更改。
 
@@ -430,7 +428,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
    * 将创建内容片段的新版本。
    * 自动保存已启动。
-   * Cookie已设置； 这些定义了当前编辑的片段，并且有一个编辑会话处于打开状态。
+   * Cookie已设置；这些定义了当前编辑的片段，并且有一个编辑会话处于打开状态。
 
 * 完成会话
 
@@ -456,13 +454,13 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
 * 输入页面
 
-   * 检查编辑会话是否已存在； 检查相应的cookie。
+   * 检查编辑会话是否已存在；检查相应的cookie。
 
       * 如果存在，请验证当前正在编辑的内容片段的编辑会话是否已启动
 
          * 如果当前片段，则重新建立会话。
          * 否则，尝试取消对先前编辑的内容片段的编辑并删除cookie（之后不存在编辑会话）。
-      * 如果不存在编辑会话，请等待用户所做的第一次更改（请参阅下文）。
+      * 如果不存在编辑会话，请等待用户进行的第一次更改（请参阅下文）。
    * 检查页面上是否已引用内容片段，如果引用，则显示相应的信息。
 
 
@@ -477,7 +475,7 @@ Web控制台中可以为OSGi捆绑内 [容片段组](/help/sites-deploying/confi
 
 ## 示例 {#examples}
 
-### 示例： 访问现有内容片段 {#example-accessing-an-existing-content-fragment}
+### 示例：访问现有内容片段 {#example-accessing-an-existing-content-fragment}
 
 要实现此目标，您可以调整表示API的资源以：
 
@@ -495,7 +493,7 @@ if (fragmentResource != null) {
 }
 ```
 
-### 示例： 创建新内容片段 {#example-creating-a-new-content-fragment}
+### 示例：创建新内容片段 {#example-creating-a-new-content-fragment}
 
 要以编程方式创建新内容片段，您需要使用：
 
@@ -509,7 +507,7 @@ FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
-### 示例： 指定自动保存间隔 {#example-specifying-the-auto-save-interval}
+### 示例：指定自动保存间隔 {#example-specifying-the-auto-save-interval}
 
 可以使用配置管理器(ConfMgr)定义自动保存间隔（以秒为单位）:
 
@@ -517,9 +515,9 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 * 属性名称: `autoSaveInterval`
 * 类型: `Long`
 
-* 默认： `600` （10分钟）; 定义于 `/libs/settings/dam/cfm/jcr:content`
+* 默认： `600` （10分钟）;定义于 `/libs/settings/dam/cfm/jcr:content`
 
-如果要设置5分钟的自动保存间隔，您需要定义节点上的属性； 例如：
+如果要设置5分钟的自动保存间隔，您需要定义节点上的属性；例如：
 
 * 节点： `/conf/global/settings/dam/cfm/jcr:content`
 * 属性名称: `autoSaveInterval`
