@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 22%
@@ -30,7 +30,7 @@ ht-degree: 22%
 
 要启用内容片段模型，您需要：
 
-* 在配置管理器中启用内容片段模型
+* 在配置浏览器中启用内容片段 [模型](/help/sites-administering/configurations.md)
 * 将配置应用到您的资产文件夹
 
 ### 在Configuration Manager中启用内容片段模型 {#enable-content-fragment-models-in-configuration-manager}
@@ -81,11 +81,11 @@ ht-degree: 22%
 1. 导航到 **工具**、资 **产**，然后打 **开内容片段模型**。
 
 1. 导航到包含内容片段模型的文件夹。
-1. 打开编辑所需的 **模型**; 使用快速操作，或先选择模型，然后从工具栏中选择操作。
+1. 打开编辑所需的 **模型**;使用快速操作，或先选择模型，然后从工具栏中选择操作。
 
    打开模型编辑器后，将显示：
 
-   * 左： 字段已定义
+   * 左：字段已定义
    * 右侧：可用于创建字段的&#x200B;**数据类型**（可在创建字段后使用的&#x200B;**属性**）
 
    >[!NOTE]
