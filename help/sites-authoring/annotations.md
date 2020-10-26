@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 translation-type: tm+mt
-source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 98%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
 
 >[!NOTE]
 >
->根据您的要求，您还可以开发在添加、更新或删除注释时发送通知的工作流。
+>根据您的要求，您还可以开发一个工作流，用于在添加、更新或删除注释时发送通知。
 
 ## 注释 {#annotations}
 
@@ -49,8 +52,9 @@ source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
 >
 >您可以对各种资源添加注释：
 >
->* [对资产添加注释](/help/assets/managing-assets-touch-ui.md#annotating)
+>* [对资产添加注释](/help/assets/manage-assets.md#annotating)
 >* [对视频资产添加注释](/help/assets/managing-video-assets.md#annotate-video-assets)
+
 >
 
 
@@ -85,13 +89,15 @@ source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
    * 创建草图（线和形状）以突出显示组件的某个区域。
 
 
-      创建草图时，光标将变成十字线。您可以绘制多条不同的线。草图线反映注释颜色，可以是箭头、圆或椭圆。
+      创建草图时，光标将变成十字线。您可以绘制多条不同的线。草图线反映注释颜色，可为箭头、圆环或椭圆环。
    ![](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * 选择/更改颜色：
+
    ![](do-not-localize/chlimage_1-19.png)
 
    * 删除注释。
+
    ![](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. 单击/点按对话框外部可关闭注释对话框。将显示注释截断视图（第一个单词）及任何草图：
@@ -114,7 +120,7 @@ source-git-commit: 55a4c7eee6f1305fe84a22bc9b23cd77d73d414a
 
 >[!NOTE]
 >
->无法将注释添加到已由其他用户锁定的页面。
+>无法将注释添加到其他用户已锁定的页面。
 
 ### 注释指示器 {#annotation-indicator}
 
