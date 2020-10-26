@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ee2b13f2fc1f044f119ff54f332844d458663287
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,7 @@ AEM中的所有云服务配置都整合在AEM存储库 `/conf` 的文件夹中�
 要为云服务配置配置文件夹，请执行以下操作：
 
 1. 转到“工 **[!UICONTROL 具”>“常规”>“配置浏览器”]**。
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. 执行以下操作以启用云配置的全局文件夹，或跳过此步骤，为云服务配置创建和配置其他文件夹。
 
    1. 在配置浏 **[!UICONTROL 览器中]**，选择文 `global` 件夹并点 **[!UICONTROL 按属性]**。
