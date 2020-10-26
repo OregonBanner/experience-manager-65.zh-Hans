@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c71c24a291b728ab429b18a405123c96123cf617
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 11%
@@ -25,7 +25,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->内容片段随后用于创作页面； 请参 [阅使用内容片段进行页面创作](/help/sites-authoring/content-fragments.md)。
+>内容片段随后用于创作页面；请参 [阅使用内容片段进行页面创作](/help/sites-authoring/content-fragments.md)。
 
 ## 创建内容片段 {#creating-content-fragments}
 
@@ -35,7 +35,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->有关模 [板的更多信息](/help/sites-developing/customizing-content-fragments.md) ，请参阅开发内容片段； 用于简单内容片段。
+>有关模 [板的更多信息](/help/sites-developing/customizing-content-fragments.md) ，请参阅开发内容片段；用于简单内容片段。
 
 ### 创建内容片段 {#creating-a-content-fragment}
 
@@ -49,7 +49,7 @@ ht-degree: 11%
 
       * [模板](/help/sites-developing/content-fragment-templates.md) -例如简 **单片段**
 
-      * [模型](/help/assets/content-fragments/content-fragments-models.md) -用于创建需要结构化内容的片段； 例如 **Airport**
+      * [模型](/help/assets/content-fragments/content-fragments-models.md) -用于创建需要结构化内容的片段；例如 **Airport**
    * 将显示所有可用的模板和模型。
 
    选择后，使用 **下一** 步继续。
@@ -73,9 +73,9 @@ ht-degree: 11%
 
       * **名称**
 
-         名称； 将用于形成URL。
+         名称；将用于形成URL。
 
-         强制； 将自动从标题派生，但可以更新。
+         强制；将自动从标题派生，但可以更新。
 
 
 1. 选 **择创建** ，以完成操作，然后打开片段 **进行编辑** ，或返回控制台并执行完 **成**。
@@ -84,8 +84,8 @@ ht-degree: 11%
 
 在“资 **产** ”控制台中，您的内容片段可以执行一系列操作，其中一种操作为：
 
-* 工具栏； 选择片段后，所有适当的操作都可用。
-* 作为 [快速行动](/help/sites-authoring/basic-handling.md#quick-actions); 可用于单个片段卡的操作子集。
+* 工具栏；选择片段后，所有适当的操作都可用。
+* 作为 [快速行动](/help/sites-authoring/basic-handling.md#quick-actions);可用于单个片段卡的操作子集。
 
 ![cfm-6420-17](assets/cfm-6420-17.png)
 
@@ -93,7 +93,7 @@ ht-degree: 11%
 
 * **下载**
 
-   * 将片段另存为ZIP文件； 您可以定义是否包括元素、变量、元数据。
+   * 将片段另存为ZIP文件；您可以定义是否包括元素、变量、元数据。
 
 * **创建**
 * **签出**
@@ -120,7 +120,7 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->其中许多是 [资产和／或AEM桌面](/help/assets/managing-assets-touch-ui.md) 应用程序 [的标准操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。
+>其中许多是 [资产和／或AEM桌面](/help/assets/manage-assets.md) 应用程序 [的标准操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。
 
 ## 打开片段编辑器 {#opening-the-fragment-editor}
 
@@ -233,14 +233,14 @@ ht-degree: 11%
 
 ## 内容片段的时间轴 {#timeline-for-content-fragments}
 
-除了标准选项之外，时间 [轴还](/help/assets/managing-assets-touch-ui.md#timeline) 提供特定于内容片段的信息和操作：
+除了标准选项之外，时间 [轴还](/help/assets/manage-assets.md#timeline) 提供特定于内容片段的信息和操作：
 
 * 视图有关版本、注释和批注的信息
 * 版本操作
 
-   * **[还原到此版本](#reverting-to-a-version)**（选择现有片段，然后选择特定版本）
+   * **[还原到此版本](#reverting-to-a-version)** （选择现有片段，然后选择特定版本）
 
-   * **[与当前片段比较](#comparing-fragment-versions)**（先选择一个现有片段，然后选择一个特定版本）
+   * **[与当前片段比较](#comparing-fragment-versions)** （先选择一个现有片段，然后选择一个特定版本）
 
    * 添加标 **签** 和／或 **注释** （选择现有片段，然后选择特定版本）
 
@@ -291,7 +291,7 @@ ht-degree: 11%
    * 插入的文本——绿色
    * 替换文本——蓝色
 
-* 全屏图标允许您自行打开任一版本； 然后切换回并行视图
+* 全屏图标允许您自行打开任一版本；然后切换回并行视图
 * 您可以 **还原** 到特定版本
 * **完成** ，将返回控制台
 
@@ -321,8 +321,8 @@ ht-degree: 11%
 
 必须发布内容片段才能在发布环境中使用。 可以发布它们：
 
-* 创建后； 从“资 **产** ”控制台。
-* 当您发 [布使用片段的页面时](/help/sites-authoring/content-fragments.md#publishing); 片段将列在页面引用中。
+* 创建后；从“资 **产** ”控制台。
+* 当您发 [布使用片段的页面时](/help/sites-authoring/content-fragments.md#publishing);片段将列在页面引用中。
 
 >[!CAUTION]
 >
