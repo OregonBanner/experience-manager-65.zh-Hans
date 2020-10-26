@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 759d2dd8d12861757bf7f54b77d8d3ca170887fe
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 22%
@@ -29,7 +29,7 @@ ht-degree: 22%
 >
 >可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
 
-要建立关联，您首先需 [要将媒体资产添加到集合](/help/assets/managing-collections-touch-ui.md#adding-assets-to-a-collection)。 完成后，您可以：
+要建立关联，您首先需 [要将媒体资产添加到集合](/help/assets/manage-collections.md#adding-assets-to-a-collection)。 完成后，您可以：
 
 1. 打开片段，然后从侧面板中选择&#x200B;**关联的内容**。
 
@@ -38,7 +38,7 @@ ht-degree: 22%
 1. 选择&#x200B;**关联内容**&#x200B;或&#x200B;**关联集合**（根据需要，取决于是否已关联任何集合）。
 1. 选择所需的集合。
 
-   您可以选择将片段本身添加到所选集合； 艾滋病追踪。
+   您可以选择将片段本身添加到所选集合；艾滋病追踪。
 
    ![cfm-6420-04](assets/cfm-6420-04.png)
 
