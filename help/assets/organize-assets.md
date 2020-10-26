@@ -3,7 +3,7 @@ title: 组织您的数字资产
 description: 使用Experience Manager整理您的数字资产、图像、文件、文件夹等。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: bf49f515adb75bf4c0d50a53d0eaa7bb915389a9
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Microsoft Office和PDF文档的所有数字资源、元数据和内容都会被�
 
 ## 在文件夹中组织资产 {#organize-using-folders}
 
-组织资产的最基本方法是将这些资产保存到文件夹中。 它类似于在我们本地文件系统中组织文件夹中的文件。 有关如何创建和管理文件夹的更多信息，请参阅 [管理资产](managing-assets-touch-ui.md)。 如何命名文件和文件夹、如何排列子文件夹以及如何处理这些文件夹中的文件都会对处理这些资产的方式产生重大影响。 通过使用一致、适当的文件和文件夹命名策略以及良好的元数据实践，您可以充分利用数字资产存储库。
+组织资产的最基本方法是将这些资产保存到文件夹中。 它类似于在我们本地文件系统中组织文件夹中的文件。 有关如何创建和管理文件夹的更多信息，请参阅 [管理资产](manage-assets.md)。 如何命名文件和文件夹、如何排列子文件夹以及如何处理这些文件夹中的文件都会对处理这些资产的方式产生重大影响。 通过使用一致、适当的文件和文件夹命名策略以及良好的元数据实践，您可以充分利用数字资产存储库。
 
 * 在大多数情况下，您的数字资产存储库始终在增长。 因此，在内容创建周期的早期，务必定制元数据的使用、文件夹结构和文件命名。
 * 仅使用文件夹为数字资产强制实施一致的存储结构。 这种一致性有助于您更好地处理和管理资产。 例如，放置在以下类型文件夹中的资产可以帮助您使用相 [应的用户档案进行资产处理](processing-profiles.md):
@@ -53,7 +53,7 @@ Microsoft Office和PDF文档的所有数字资源、元数据和内容都会被�
 
 通过中的资 [!DNL Experience Manager Assets]产收藏集，您可以简化用户之间创建、编辑和共享资产的能力。 根据您使用收藏集的方式创建多种类型的收藏集，包括包含资产、文件夹和收藏集的静态引用列表的收藏集，以及根据搜索条件拉入资产的收藏集。  您还可以使用不同位置的资产创建收藏集，并与具有不同访问、查看和编辑权限级别的多个用户共享这些收藏集。
 
-有关详细信息，请参阅 [管理集合](managing-collections-touch-ui.md)
+有关详细信息，请参阅 [管理集合](manage-collections.md)
 
 <!-- TBD items: add screenshots where applicable
 Any hints/recommendations of when to use what method of organizing? Some examples of how organizing helps towards a better taxonomy and improved content velocity.
