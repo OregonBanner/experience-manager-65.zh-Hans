@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5944'
 ht-degree: 5%
@@ -237,7 +237,7 @@ Dynamic Media颜色管理允许您对资产进行颜色校正。 通过颜色校
 * 栅格化Adobe Illustrator文件(.AI)或Adobe Photoshop封装的Postscript文件(.EPS)。
 * 注意：视频用户档案和成像用户档案可分别用于定义视频和图像的处理。
 
-请参阅[上传资产](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+请参阅[上传资产](/help/assets/manage-assets.md#uploading-assets)。
 
 **配置资产处理**
 
@@ -428,7 +428,7 @@ spin-01-01
 
    您的凭据和登录是在设置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
-1. 在页面顶部附近的导航栏上，单击“设 **[!UICONTROL 置]”>“应[!UICONTROL 用程序设置]”[!UICONTROL >“批集预]设”>“批集预**&#x200B;设”。
+1. 在页面顶部附近的导航栏上，单击“设 **[!UICONTROL 置] ”>“应 [!UICONTROL 用程序设置] ” [!UICONTROL >“批集预] 设”>“批集预 **&#x200B;设”。
 
    请注 **[!UICONTROL 意]**,视图表单（如“详细信息”页面右上角所设置）是默认视图。
 
