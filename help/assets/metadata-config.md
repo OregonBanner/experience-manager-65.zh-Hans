@@ -3,7 +3,7 @@ title: 元数据功能的配置和管理。
 description: 与元数据添 [!DNL Experience Manager Assets] 加和管理相关的配置和管理功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 12%
@@ -269,7 +269,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your folder
 >[!MORELIKETHIS]
 >
 >* [元数据概念和理解](metadata-concepts.md)。
->* [编辑多个集合的元数据属性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
+>* [编辑多个集合的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)。
 >* [在Experience Manager资产中导入和导出元数据](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)。
 >* [用户档案处理元数据、图像和视频](processing-profiles.md)。
 >* [组织数字资产以使用处理用户档案的最佳实践](/help/assets/organize-assets.md)。
