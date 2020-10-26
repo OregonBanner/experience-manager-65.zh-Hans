@@ -3,7 +3,7 @@ title: 管理视频资产
 description: 在中上传、预览、批注和发布视频资产 [!DNL Adobe Experience Manager]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 10%
@@ -22,7 +22,7 @@ ht-degree: 10%
 [!DNL Adobe Experience Manager Assets] 为扩展名为MP4的视频资产生成预览。 如果资产的格式不是MP4，请安装FFmpeg包以生成预览。 FFmpeg创建OGG和MP4类型的视频演绎版。 您可以在用户界面中预览 [!DNL Assets] 再现。
 
 1. 在数字资产文件夹或子文件夹中，导航到要添加数字资产的位置。
-1. 要上传资产，请单击工 **[!UICONTROL 具栏]** 中的创建，然后选择 **[!UICONTROL 文件]**。 或者，在用户界面上拖动文件。 有关详 [细信息](managing-assets-touch-ui.md#uploading-assets) ，请参阅上传资产。
+1. 要上传资产，请单击工 **[!UICONTROL 具栏]** 中的创建，然后选择 **[!UICONTROL 文件]**。 或者，在用户界面上拖动文件。 有关详 [细信息](manage-assets.md#uploading-assets) ，请参阅上传资产。
 1. To preview a video in the Card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. 您只能在卡视图中暂停或播放视频。 “播 [!UICONTROL 放] ”和“ [!UICONTROL 暂停] ”选项在列表视图中不可用。
 
 1. 要预览资产详细信息页面中的视频，请单 **[!UICONTROL 击]** 卡上的编辑。 视频会在浏览器自带的视频播放器中播放。您可以播放视频，暂停视频，控制视频音量，以及将视频放大到全屏。
@@ -87,7 +87,7 @@ ht-degree: 10%
 
 >[!MORELIKETHIS]
 >
->* [管理Experience Manager资产中的数字资产](/help/assets/managing-assets-touch-ui.md)
->* [管理Experience Manager资产中的收藏集](/help/assets/managing-collections-touch-ui.md)
+>* [管理Experience Manager资产中的数字资产](/help/assets/manage-assets.md)
+>* [管理Experience Manager资产中的收藏集](/help/assets/manage-collections.md)
 >* [动态媒体视频文档](/help/assets/video.md)。
 
