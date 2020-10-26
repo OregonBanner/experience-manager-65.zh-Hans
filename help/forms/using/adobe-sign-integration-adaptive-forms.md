@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2e5cf93eb3ce47b65298b8de13c7d874d1989073
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,7 @@ Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善
 
 1. 在AEM Forms的创作实例中，导 **航到**![Tools](assets/hammer.png) **hammer** > **General**> Configuration Browser 。
 1. 在“配置 **[!UICONTROL 浏览器]** ”页面上，点 **[!UICONTROL 按创建]**。
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 1. 在创 **[!UICONTROL 建配置]** ，指定配置的标 **[!UICONTROL 题]** ，启用云 **[!UICONTROL 配置]**，然后点 **[!UICONTROL 按创]**&#x200B;建。 它为云服务创建配置容器。
 1. 导航到 **工具** 锤 ![>](assets/hammer.png) Cloud Services **>** Adobe Sign **，然后选** 择您在上述步骤中创建的配置容器。
 
