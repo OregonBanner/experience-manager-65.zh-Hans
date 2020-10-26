@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: 7a1da89805799f392f4397b1582bcc83d9bc67de
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 13%
@@ -44,7 +44,7 @@ See also [Embedding the Dynamic Media Video or Image viewer on a web page](embed
 
 
 
-有关发布集或资产的详细信息，请参阅发 [布资产。](managing-assets-touch-ui.md)
+有关发布集或资产的详细信息，请参阅发 [布资产。](manage-assets.md)
 
 ## HTTP/2投放Dynamic Media资产 {#http-delivery-of-dynamic-media-assets}
 
