@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 20%
@@ -180,7 +180,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 
 如果已上传要使用的图像，请前进到下一步创建传送 [集](#creating-carousel-sets)。 请注意，在启用Dynamic Media后，必须上传传送中使用的图像。
 
-要上传图像横幅，请参阅 [上传资产](/help/assets/managing-assets-touch-ui.md)。
+要上传图像横幅，请参阅 [上传资产](/help/assets/manage-assets.md)。
 
 ## 创建传送集 {#creating-carousel-sets}
 
@@ -224,6 +224,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
    >    * 按钮的样式。 用户点击每个点或数字即可在横幅中旋转。 您可以更改设置指示符按钮的显示位置（如果它们是数字或虚线样式）以及它们的大小。
    >    * 更改图像映射的高亮样式或用于热点的图标。
    >    * 在编辑查看器预设之前，请选择要将该预设作为基础的样式。 如果不这样做，则在您开始编辑查看器预设时，如果您决定更改其他预设，您将丢失所有更改。
+
    >
    >有关 [查看器编辑器的详细说明](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) 和详细信息，请参阅传送横幅的特殊注意事项。
 
@@ -258,8 +259,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 >但是，请注意，传送横幅支持图像上的图像地图，这些图像上也可能包含热点；交互式图像则不会。 如果要创建使用同一图像的交互式图像或传送横幅，请牢记这一点。 您可能希望改为使用同一图像的单独副本创建交互式图像和传送横幅。
 
 >[!NOTE]
->
->如果您正在使用热点编辑交互式图像并裁剪图像，则您的热点将被删除。
+如果您正在使用热点编辑交互式图像并裁剪图像，则您的热点将被删除。
 
 另请参阅[添加图像映射](/help/assets/image-maps.md)。
 
@@ -295,8 +295,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 
       * 如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到URL。
          >[!NOTE]
-         >
-         >如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+         如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
       * 如果您是独立客户，请在“HREF”文本字段中指定链接网页的完整URL路径。
 
@@ -312,10 +311,8 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
       * 指定体验片段在横幅上的显示方式，如同其宽度和高度一样。
 
          >[!NOTE]
-         >
-         >请注意，在体验片段中嵌入查看器时，轮盘横幅中不支持社交媒体共享工具。
-         >要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
-
+         请注意，在体验片段中嵌入查看器时，轮盘横幅中不支持社交媒体共享工具。
+         要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
    您还可以预览传送横幅的外观。 请参 [阅（可选）预览传送横幅](#optional-previewing-carousel-banners)。
@@ -330,8 +327,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 ## 编辑传送集 {#editing-carousel-sets}
 
 >[!NOTE]
->
->必须将非管理用户添加到 **[!UICONTROL dam-users组]** ，才能创建或编辑传送横幅。 如果您在创建或编辑时遇到问题，请咨询系统管理员，他可以将您添 **[!UICONTROL 加到dam用户组]** 。
+必须将非管理用户添加到 **[!UICONTROL dam-users组]** ，才能创建或编辑传送横幅。 如果您在创建或编辑时遇到问题，请咨询系统管理员，他可以将您添 **[!UICONTROL 加到dam用户组]** 。
 
 您可以对传送集执行各种编辑任务，如：
 
@@ -363,8 +359,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
    * 要删除整个传送集，请导航到传送集，将其选中，然后点按删 **[!UICONTROL 除。]**
 
    >[!NOTE]
-   >
-   >如果您正在使用热点编辑交互式图像并裁剪图像，则您的热点将被删除。
+   如果您正在使用热点编辑交互式图像并裁剪图像，则您的热点将被删除。
 
 ## （可选）预览传送横幅 {#optional-previewing-carousel-banners}
 
@@ -399,9 +394,8 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 您需要发布传送才能使用它。 发布传送集时，将激活URL和嵌入代码。 它还将传送发布到Dynamic Media云，该云与CDN集成，可进行可扩展且高性能的投放。
 
 >[!NOTE]
->
->如果您将现有的带热点的交互式图像用于传送横幅，则必须在发布传送横幅后单独发布该交互式图像。
->此外，如果您修改了在传送横幅中使用的预先存在的已发布交互式图像，则必须先发布交互式图像，然后才能将这些更改反映到传送横幅中。
+如果您将现有的带热点的交互式图像用于传送横幅，则必须在发布传送横幅后单独发布该交互式图像。
+此外，如果您修改了在传送横幅中使用的预先存在的已发布交互式图像，则必须先发布交互式图像，然后才能将这些更改反映到传送横幅中。
 
 有关 [如何发布传送横幅](/help/assets/publishing-dynamicmedia-assets.md) ，请参阅发布Dynamic Media资产。
 
@@ -410,8 +404,7 @@ See [Adding Dynamic Media Assets to pages.](/help/assets/adding-dynamic-media-as
 在上传横幅图像以创建传送、向横幅添加热点和／或图像映射并发布传送集后，您现在可以将其添加到现有网站页面。
 
 >[!NOTE]
->
->如果您是AEM Sites的客户，则可以通过将交互式媒体组件拖动到页面，将传送横幅直接添加到您的页面。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+如果您是AEM Sites的客户，则可以通过将交互式媒体组件拖动到页面，将传送横幅直接添加到您的页面。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 但是，如果您是独立的AEM assets客户，则可以按本节所述手动将传送横幅添加到您的网站登陆页。
 
