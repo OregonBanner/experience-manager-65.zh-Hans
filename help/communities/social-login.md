@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '2787'
+source-wordcount: '2803'
 ht-degree: 1%
 
 ---
@@ -110,6 +110,8 @@ ht-degree: 1%
 
    ![config-propertiespng](assets/config-propertiespng.png)
 
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
+
 1. **创建／编辑** Facebook云服务配置。
 
    ![fsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
@@ -182,7 +184,7 @@ AEM Communities提供程序扩展 [了AdobeGranite OAuth应用程序和提供程
       启用“字段”后，调用Facebook图形API时将包括以下字段。 必须允许在云服务配置中定义的范围内使用这些字段。 其他字段可能需要Facebook批准。 引用Facebook文档的“Facebook登录权限”部分。 作为参数添加的默认字段为：
 
       * id
-      * 名称
+      * name
       * first_name
       * last_name
       * 链接
@@ -259,6 +261,8 @@ Facebook和Twitter的后续步骤相同：
 1. 转至“工 **[!UICONTROL 具]** ”>“ **[!UICONTROL 常规]** ” **[!UICONTROL >“配]**&#x200B;置浏览器”。 选择上下文并编辑属性。 启用云配置（如果尚未启用）。
 
    ![twitterconfigpropping](assets/twitterconfigproppng.png)
+
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 1. 创建／编辑Twitter云服务配置。
 
@@ -459,7 +463,7 @@ Facebook和Twitter的后续步骤相同：
 
 在作者实例上，以管理权限登录：
 
-1. 从全局导航：选 **择工[具、CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md)。**
+1. 从全局导航：选 **择工 [具、CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md)。**
 1. 从ntBaseLucene的副本创建名为ntBaseLucene-oauth的索引：
 
    * 在节点下 `/oak:index`
