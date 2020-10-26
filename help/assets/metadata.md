@@ -3,7 +3,7 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: e49fa8ec19411648841b19bad4b8c1e0efcc1dc1
 workflow-type: tm+mt
 source-wordcount: '2423'
 ht-degree: 18%
@@ -163,7 +163,7 @@ ht-degree: 18%
 
 ## 编辑集合的元数据 {#collections-metadata}
 
-有关详细信息，请 [参阅视图和编辑集合元数据](/help/assets/managing-collections-touch-ui.md#view-edit-collection-metadata) , [以及批量编辑多个集合的元数据](/help/assets/managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)。
+有关详细信息，请 [参阅视图和编辑集合元数据](/help/assets/manage-collections.md#view-edit-collection-metadata) , [以及批量编辑多个集合的元数据](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk)。
 
 ## Apply a metadata profile to folders {#applying-a-metadata-profile-to-folders}
 
@@ -242,7 +242,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >[!MORELIKETHIS]
 >
 >* [元数据概念和理解](metadata-concepts.md)。
->* [编辑多个集合的元数据属性](managing-collections-touch-ui.md#editing-collection-metadata-in-bulk)
+>* [编辑多个集合的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)
 >* [在Experience Manager资产中导入和导出元数据](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
