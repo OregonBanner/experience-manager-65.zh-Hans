@@ -3,7 +3,7 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2c3836cb7e2275c30e88e8a750eafce24a05837a
+source-git-commit: 2fe2b5fcaff2b2f2402f0bc638a0df2afd335b31
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 41%
@@ -159,7 +159,7 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 ## Limitations and best practices {#tips-and-limitations}
 
-* 要了解资产使用情况，请在实 [例上配置](/help/assets/touch-ui-asset-insights.md) “资产分析” [!DNL Sites] 功能。
+* 要了解资产使用情况，请在实 [例上配置](/help/assets/asset-insights.md) “资产分析” [!DNL Sites] 功能。
 
 ### 权限和资产管理 {#permissions-and-managing-assets}
 
