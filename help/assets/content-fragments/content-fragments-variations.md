@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bccc937c1e1a349ab292a748c3c7b9d0c68b6199
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 16%
@@ -21,14 +21,14 @@ ht-degree: 16%
 
 # 变量 - 创作片段内容{#variations-authoring-fragment-content}
 
-[变体](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是内容片段的重要功能，因为它们允许您创建和编辑主内容的副本，以用于特定渠道和／或场景。
+[变量](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) 是内容片段的重要功能，因为它们允许您创建和编辑主控内容的副本，以用于特定渠道和／或场景。
 
 在“变 **量** ”选项卡中，您可以：
 
 * [输入片段](#authoring-your-content) ，然后
-* [创建和管理主](#managing-variations) 内容的 **各种**
+* [创建和管理主控](#managing-variations) 内容的 **各种**
 
-根据正在编辑的数据类型执行一系列其他操作； 例如：
+根据正在编辑的数据类型执行一系列其他操作；例如：
 
 * [将可视资产插入片段](#inserting-assets-into-your-fragment) （图像）
 * 在富文 [本](#rich-text)、纯文 [本和标记](#plain-text) 之间 [进行选](#markdown) 择，以进行编辑
@@ -38,18 +38,18 @@ ht-degree: 16%
 * [视图键统计](#viewing-key-statistics) （关于多行文本）
 * [总结文本](#summarizing-text)
 
-* [使变体与主内容同步](#synchronizing-with-master)
+* [使变量与主控内容同步](#synchronizing-with-master)
 
 >[!CAUTION]
 >
->在发布和／或引用片段后，当作者打开片段以再次进行编辑时，AEM将显示警告。 这将警告对片段所做的更改也会影响引用的页面。
+>在发布和／或引用片段后，当作者打开片段以再次进行编辑时，AEM将显示一条警告消息。 这将警告对片段所做的更改也会影响引用的页面。
 
 ## 创作内容 {#authoring-your-content}
 
-打开内容片段进行编辑时，默认 **情况下** ,“变量”选项卡将打开。 您可以在此为主视图或您拥有的任何变体创作内容。 您可以：
+打开内容片段进行编辑时，默认 **情况下** ,“变量”选项卡将打开。 您可以在此创作内容，以用于主控或您拥有的任何变体。 您可以：
 
 * 直接在“变量”(Variations)选 **项卡中进** 行编辑
-* 打开 [全屏编辑器](#full-screen-editor) :
+* 打开全 [屏编辑器](#full-screen-editor) :
 
    * 选择格 [式](#formats)
    * 查看更多编辑选项(富 [文本格式](#rich-text) )
@@ -90,7 +90,7 @@ ht-degree: 16%
 * [显示文本统计信息](#viewing-key-statistics)
 
 * [上传内容](#uploading-content)
-* [与主同步](#synchronizing-with-master) （编辑变体时）
+* [与主控同步](#synchronizing-with-master) （编辑变体时）
 * [总结文本](#summarizing-text)
 * [注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) 您的文本
 
@@ -113,16 +113,16 @@ ht-degree: 16%
 * 粗体
 * 斜体
 * 下划线
-* 对齐方式： 左，中，右
+* 对齐方式：左，中，右
 * 项目符号列表
 * 编号列表
-* 缩进： 增加，减少
+* 缩进：增加，减少
 * 创建／断开超链接
 * 打开全屏编辑器，其中提供以下格式选项：
 
    * 粘贴文本／从Word
    * 插入表
-   * 段落样式： 段落，标题1/2/3
+   * 段落样式：段落，标题1/2/3
    * [插入可视资源](#inserting-assets-into-your-fragment)
    * 搜索
    * 查找/替换
@@ -183,7 +183,7 @@ ht-degree: 16%
 
 >[!CAUTION]
 >
->内容片段必须具有作为祖先的有效语言（ISO代码）文件夹； 这用于确定要使用的语言模型。
+>内容片段必须具有作为祖先的有效语言（ISO代码）文件夹；这用于确定要使用的语言模型。
 >
 >例如， `en/` 在以下路径中：
 >
@@ -204,7 +204,7 @@ ht-degree: 16%
 
 
 
-1. 选择 **主** 或所需的变量。
+1. 选择 **主控** 或所需的变量。
 1. 打开全屏编辑器。
 
 1. 从工 **具栏中选择** “摘要”文本。
@@ -226,7 +226,7 @@ ht-degree: 16%
 
 要对片段添加注释：
 
-1. 选择 **主** 或所需的变量。
+1. 选择 **主控** 或所需的变量。
 1. 打开全屏编辑器。
 1. 选择一些文本。 “注 **释** ”图标将变为可用。
 
@@ -256,9 +256,9 @@ ht-degree: 16%
 
 ### 将资产插入片段 {#inserting-assets-into-your-fragment}
 
-要简化内容片段的创作过程，您可以直 [接将资产](/help/assets/managing-assets-touch-ui.md) （图像）添加到片段。
+要简化内容片段的创作过程，您可以直 [接将资产](/help/assets/manage-assets.md) （图像）添加到片段。
 
-它们将被添加到片段的段落序列中，并且没有任何格式； 在页面上使用／引 [用片段时，可以执行格式设置](/help/sites-authoring/content-fragments.md)。
+它们将添加到片段的段落序列中，而无需任何格式；在页面上使用／引 [用片段时，可以执行格式设置](/help/sites-authoring/content-fragments.md)。
 
 >[!CAUTION]
 >
@@ -296,7 +296,7 @@ ht-degree: 16%
 
 ### 创建变体 {#creating-a-variation}
 
-各种变量允许您 **获取** Master内容，并根据用途（如果需要）进行变化。
+各种变量允许您获取 **主控** 内容，并根据用途（如果需要）进行变化。
 
 要创建新变体，请执行以下操作：
 
@@ -308,7 +308,7 @@ ht-degree: 16%
 
    >[!NOTE]
    >
-   >创建新变体时，始终 **是** “主”被复制，而不是当前打开的变体。
+   >创建新变体时，始终 **主控** ，而不是当前打开的变体。
 
 ### 编辑变体 {#editing-a-variation}
 
@@ -347,13 +347,13 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->无法删除主 **视图**。
+>无法删除 **主控**。
 
-### 与主同步 {#synchronizing-with-master}
+### 与主控同步 {#synchronizing-with-master}
 
-**主** (Master)是内容片段的一个组成部分，根据定义，它包含内容的主副本，而变量包含该内容的个别更新和定制版本。 更新主视图时，这些更改可能也与变量相关，因此需要传播到它们。
+**主控** 是内容片段的一个组成部分，根据定义，它包含内容的主控副本，而变量包含该内容的个别更新和定制版本。 更新主控时，这些更改也可能与变量相关，因此需要传播到它们。
 
-编辑变体时，您有权访问用于将变体的当前元素与主元素同步的操作。 这允许您自动将对Master所做的更改复制到所需的变体。
+在编辑变体时，您有权访问将变体的当前元素与主控同步的操作。 这允许您自动将对主控所做的更改复制到所需的变量。
 
 >[!CAUTION]
 >
@@ -363,19 +363,19 @@ ht-degree: 16%
 >
 >同步仅适用于&#x200B;**多行文本**&#x200B;数据类型。
 >
->不提供将更改&#x200B;*从变体传输到&#x200B;**母版&#x200B;***选项。
+>不提供将更改&#x200B;*从变体传输到&#x200B;**母版***选项。
 
-1. 在片段编辑器中打开您的内容片段。 确保主 **页** 已编辑。
+1. 在片段编辑器中打开您的内容片段。 确保已 **编辑** 主控。
 1. 从以下任一位置选择特定变体，然后选择相应的同步操作：
 
-   * 操 **作下拉选** 择器——将当 **前元素与主元素同步**
+   * 操 **作下拉选** 择器——将当 **前元素与主控同步**
 
-   * 全屏编辑器的工具栏——与主 **设备同步**
+   * 全屏编辑器的工具栏——与 **主控同步**
 
-1. 主视图和变体将并排显示：
+1. 主控，变体将并排显示：
 
    * 绿色表示已添加（到变量）的内容
-   * 红色表示内容已删除（从变量中）
+   * 红色表示内容已删除（从变体中）
 
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
