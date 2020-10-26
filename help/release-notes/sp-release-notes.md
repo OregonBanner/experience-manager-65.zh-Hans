@@ -4,7 +4,7 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ba744c7f58ae7d359c13b11403921da0948c71a7
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
 source-wordcount: '4530'
 ht-degree: 6%
@@ -248,7 +248,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 ### 用户界面 {#ui-6560}
 
 * 卸载浏览器界面不显示所有作业主题(NPR-34308)。
-* 配置浏览器界面不显示所有配置(NPR-33644)。
+* 配 [置浏览器](/help/sites-administering/configurations.md) 界面不显示所有配置(NPR-33644)。
 * 搜索要模 `Esc` 拟的用户时按键时，“用 **[!UICONTROL 户]** ”对话框将关闭，而不是用户列表(NPR-34084)。
 
 ### 集成 {#integrations-6560}
