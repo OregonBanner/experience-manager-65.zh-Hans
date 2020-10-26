@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 38%
@@ -27,7 +27,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/managing-assets-touch-ui.md)。
+>有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/manage-assets.md)。
 
 ## 快速入门：混合媒体集 {#quick-start-mixed-media-sets}
 
@@ -67,7 +67,7 @@ ht-degree: 38%
 
    请参 [阅将混合媒体集关联到网页](/help/assets/linking-urls-to-yourwebapplication.md)[和嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-If you need to, you can edit [Mixed Media Sets](#editing-mixed-media-sets). In addition, you can view and modify [Mixed Media Set properties](/help/assets/managing-assets-touch-ui.md#editing-properties).
+If you need to, you can edit [Mixed Media Sets](#editing-mixed-media-sets). In addition, you can view and modify [Mixed Media Set properties](/help/assets/manage-assets.md#editing-properties).
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ If you need to, you can edit [Mixed Media Sets](#editing-mixed-media-sets). In a
 
 ## 编辑混合媒体集 {#editing-mixed-media-sets}
 
-You can perform a variety of editing tasks to assets in Mixed Media Sets directly in the user interface [as you would any asset in Assets](/help/assets/managing-assets-touch-ui.md). 您还可以在混合媒体集中执行下列操作：
+You can perform a variety of editing tasks to assets in Mixed Media Sets directly in the user interface [as you would any asset in Assets](/help/assets/manage-assets.md). 您还可以在混合媒体集中执行下列操作：
 
 * 将资产添加到混合媒体集。
 * 对混合媒体集中的资产重新排序。
