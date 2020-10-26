@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 1%
@@ -37,7 +37,7 @@ See also [Managing Viewer Presets](/help/assets/managing-viewer-presets.md).
 
 Both the aspect ratio and keyword criteria apply to panoramic assets for the asset details page and the `Panoramic Media` WCM component.
 
-要上传资产以用于全景图图像查看器，请参阅 [上传资产](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+要上传资产以用于全景图图像查看器，请参阅 [上传资产](/help/assets/manage-assets.md#uploading-assets)。
 
 ## 配置Dynamic Media Classic(Scene7) {#configuring-dynamic-media-classic-scene}
 
