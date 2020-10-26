@@ -4,7 +4,7 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '5968'
 ht-degree: 6%
@@ -35,7 +35,7 @@ ht-degree: 6%
 
 使用 **[!UICONTROL 过滤器]** 面板根据各种选项（谓词）筛选搜索结果，从而缩小搜索范围，如文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock授权。 您的管理员可以自定义“过滤器”面板，并使用搜索彩块化添加或删除搜索谓词。 “ [!UICONTROL 过滤器] ”面板中的“文 [!UICONTROL 件类] 型”筛选器包含混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
 
-[!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
+[!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/manage-collections.md)。
 
 ## 了解搜索界面 {#searchui}
 
@@ -222,7 +222,7 @@ ht-degree: 6%
 
 ### 搜索集合 {#collections}
 
-[!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/managing-collections-touch-ui.md)。
+[!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/manage-collections.md)。
 
 ## Asset selector {#assetpicker}
 
@@ -374,7 +374,7 @@ ht-degree: 6%
 
 ### 上传资产时提取文本 {#extracttextupload}
 
-您可以配 [!DNL Experience Manager] 置为在用户上传资产（如PSD或PDF文件）时从资产中提取文本。 [!DNL Experience Manager] 索引提取的文本，并帮助用户根据提取的文本搜索这些资产。 请参阅 [上传资产](/help/assets/managing-assets-touch-ui.md#uploading-assets)。
+您可以配 [!DNL Experience Manager] 置为在用户上传资产（如PSD或PDF文件）时从资产中提取文本。 [!DNL Experience Manager] 索引提取的文本，并帮助用户根据提取的文本搜索这些资产。 请参阅 [上传资产](/help/assets/manage-assets.md#uploading-assets)。
 
 如果文本提取对您的部署占用资源过多，请考虑禁 [用文本提取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
@@ -447,7 +447,7 @@ ht-degree: 6%
 * 资产、文件夹和其他收藏集的静态引用列表。
 * 动态列表（智能收藏集），它根据搜索条件填充收藏集中的资产。
 
-您可以根据搜索条件创建智能收藏集。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，选择&#x200B;**[!UICONTROL 文件]**，然后单击&#x200B;**[!UICONTROL 保存智能收藏集]**。请参阅[管理收藏集](/help/assets/managing-collections-touch-ui.md)。
+您可以根据搜索条件创建智能收藏集。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，选择&#x200B;**[!UICONTROL 文件]**，然后单击&#x200B;**[!UICONTROL 保存智能收藏集]**。请参阅[管理收藏集](/help/assets/manage-collections.md)。
 
 ## 对意外搜索结果和问题进行疑难解答 {#troubleshoot-unexpected-search-results-and-issues}
 
