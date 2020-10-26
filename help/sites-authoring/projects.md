@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 75%
@@ -82,7 +82,7 @@ ht-degree: 75%
 
 ### 资产收藏集 {#asset-collections}
 
-与资产类似，您可以直接将[资产收藏集](/help/assets/managing-collections-touch-ui.md)添加到项目中。您可以在资产中定义收藏集。
+与资产类似，您可以直接将[资产收藏集](/help/assets/manage-collections.md)添加到项目中。您可以在资产中定义收藏集。
 
 ![chlimage_1-72](assets/chlimage_1-72.png)
 
