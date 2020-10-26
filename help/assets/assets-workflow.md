@@ -3,7 +3,7 @@ title: 使用工作流处理资产
 description: 资产处理功能，可转换格式、创建演绎版、管理资产、验证资产和运行工作流。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ![部分默认工作流](assets/aem-default-workflows.png)
 
-*图：中提供的一些默认工作流[!DNL Experience Manager]。*
+*图：中提供的一些默认工作流 [!DNL Experience Manager]。*
 
 ## 应用工作流处理资产 {#applying-workflows-to-assets}
 
@@ -84,7 +84,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 将工作流应用于集合 {#applying-a-workflow-to-a-collection}
 
-请参 [阅对集合应用工作流](/help/assets/managing-collections-touch-ui.md#running-a-workflow-on-a-collection)。
+请参 [阅对集合应用工作流](/help/assets/manage-collections.md#running-a-workflow-on-a-collection)。
 
 ## 自动开始工作流以有条件地处理资产 {#auto-execute-workflow-on-some-assets}
 
