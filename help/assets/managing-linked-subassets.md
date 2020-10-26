@@ -3,7 +3,7 @@ title: 使用引用和多个页面管理复合资产
 description: 了解如何从中创建数字资产引用 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 0%
@@ -28,7 +28,7 @@ You can reference existing digital assets from within an [!DNL Adobe Illustrator
 1. 使用 [Experience Manager桌面应用](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，在本地文件系统上获取数字资产。 导航到要引用的资产的文件系统位置。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
-1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
+1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/manage-assets.md#uploading-assets) to the [!DNL Experience Manager] repository.
 
 1. 工作流完成后，转到资产的资产详细信息页面。 对现有数字资产的引用列在“引 **[!UICONTROL 用]** ”列的“ **[!UICONTROL 依赖项]** ”下。
 
@@ -72,7 +72,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
-1. Save in [!DNL Photoshop] file to the mounted drive or or [upload](/help/assets/managing-assets-touch-ui.md#uploading-assets) to the [!DNL Experience Manager] repository.
+1. Save in [!DNL Photoshop] file to the mounted drive or or [upload](/help/assets/manage-assets.md#uploading-assets) to the [!DNL Experience Manager] repository.
 1. After the workflow completes, the references to existing [!DNL Experience Manager] assets are listed in the asset details page.
 
    To view the referenced assets, close the [Rail](/help/sites-authoring/basic-handling.md#rail-selector) in the asset details page.
