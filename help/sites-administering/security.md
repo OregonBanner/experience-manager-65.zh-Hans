@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
 workflow-type: tm+mt
 source-wordcount: '5487'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 # 用户管理和安全{#user-administration-and-security}
 
-本章介绍如何配置和维护用户授权，并介绍身份验证和授权在AEM中的工作原理。
+本章介绍如何配置和维护用户授权，并描述身份验证和授权在AEM中工作的原理。
 
 ## AEM中的用户和用户组 {#users-and-groups-in-aem}
 
@@ -35,12 +35,12 @@ ht-degree: 2%
 
 ### 组 {#groups}
 
-组是用户和／或其他组的集合； 这些都称为组成员。
+组是用户和／或其他组的集合；这些都称为组成员。
 
 其主要目的是通过减少要更新的实体数来简化维护过程，因为对组所做的更改会应用于组的所有成员。 组通常反映：
 
-* 应用程序中的角色； 例如，有权浏览内容的人员，或有权提供内容的人员。
-* 您自己的组织； 当参与者被限制在内容树中的不同分支时，您可能希望扩展角色以区分来自不同部门的参与者。
+* 应用程序中的角色；例如，有权浏览内容的人员，或有权提供内容的人员。
+* 您自己的组织；当参与者被限制在内容树中的不同分支时，您可能希望扩展角色以区分来自不同部门的参与者。
 
 因此，组往往保持稳定，而用户来来去的频率更高。
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ### Built-in Users and Groups {#built-in-users-and-groups}
 
-AEM WCM会安装许多用户和用户组。 安装后首次访问安全控制台时，可以看到这些内容。
+AEM WCM安装许多用户和用户组。 安装后首次访问安全控制台时，可以看到这些内容。
 
 下表将每个项目与以下项目列表在一起：
 
@@ -66,10 +66,10 @@ AEM WCM会安装许多用户和用户组。 安装后首次访问安全控制台
    <td>推荐</td>
   </tr>
   <tr>
-   <td><p>管理员</p> <p>默认密码： 管理员</p> </td>
+   <td><p>管理员</p> <p>默认密码：管理员</p> </td>
    <td>用户</td>
    <td><p>具有完全访问权限的系统管理帐户。</p> <p>此帐户用于AEM WCM和CRX之间的连接。</p> <p>如果意外删除了此帐户，将在重新启动存储库（在默认设置中）时重新创建它。</p> <p>管理员帐户是AEM平台的一项要求。 因此，无法删除此帐户。</p> </td>
-   <td><p>Adobe强烈建议从默认值更改此用户帐户的密码。</p> <p>最好在安装时，尽管可以在安装后完成。</p> <p>注意： 不要将此帐户与CQ Servlet引擎的管理员帐户混淆。</p> </td>
+   <td><p>Adobe强烈建议将此用户帐户的密码从默认值更改。</p> <p>最好在安装时，尽管可以在安装后完成。</p> <p>注意：不要将此帐户与CQ Servlet引擎的管理员帐户混淆。</p> </td>
   </tr>
   <tr>
    <td><p>匿名</p> <p> </p> </td>
@@ -78,10 +78,10 @@ AEM WCM会安装许多用户和用户组。 安装后首次访问安全控制台
    <td>请避免删除或禁用此帐户，因为这将对作者实例的功能产生负面影响。 如果有安全要求要求您删除它，请确保首先正确测试它对您的系统的影响。</td>
   </tr>
   <tr>
-   <td><p>作者</p> <p>默认密码： 作者</p> </td>
+   <td><p>作者</p> <p>默认密码：作者</p> </td>
    <td>用户</td>
    <td><p>允许写入/content的作者帐户。 包含投稿人和冲浪者特权。</p> <p>可以用作Web主站点，因为它有权访问整个/content树。</p> <p>这不是内置用户，而是另一个geometrixx演示用户</p> </td>
-   <td><p>Adobe建议完全删除帐户或从默认值更改密码。</p> <p>最好在安装时，尽管可以在安装后完成。</p> </td>
+   <td><p>Adobe建议完全删除帐户，或者从默认帐户更改密码。</p> <p>最好在安装时，尽管可以在安装后完成。</p> </td>
   </tr>
   <tr>
    <td>管理员</td>
@@ -134,22 +134,22 @@ AEM WCM会安装许多用户和用户组。 安装后首次访问安全控制台
   <tr>
    <td>工作流用户</td>
    <td>组</td>
-   <td><p>参与工作流的用户必须是组工作流用户的成员。 这使他／她能够完全访问： /etc/workflow/instances，以便他或她可以更新工作流实例。</p> <p>该组包含在标准安装中，但您必须手动将用户添加到该组。</p> </td>
+   <td><p>参与工作流的用户必须是组工作流用户的成员。 这使他／她能够完全访问：/etc/workflow/instances，以便他或她可以更新工作流实例。</p> <p>该组包含在标准安装中，但您必须手动将用户添加到该组。</p> </td>
   </tr>
  </tbody>
 </table>
 
 ## AEM中的权限 {#permissions-in-aem}
 
-AEM使用ACL确定用户或用户组可以执行哪些操作以及在何处可以执行这些操作。
+AEM使用ACL确定用户或用户组可以执行哪些操作以及在何处执行这些操作。
 
 ### 权限和ACL {#permissions-and-acls}
 
 权限定义允许谁对资源执行哪些操作。 权限是访问控制评估 [的结果](#access-control-lists-and-how-they-are-evaluated) 。
 
-您可以通过选择或清除单个AEM操作的复选框，来更改授予／拒绝给定用户的 [权限](security.md#actions)。 复选标记表示允许执行操作。 没有复选标记表示操作被拒绝。
+您可以通过选择或清除单个AEM操作的复选框来更改授予／拒绝给定用户的 [权限](security.md#actions)。 复选标记表示允许执行操作。 没有复选标记表示操作被拒绝。
 
-复选标记位于网格中的位置还指示用户在AEM中的哪些位置（即哪些路径）中拥有哪些权限。
+复选标记位于网格中的位置还指示用户在AEM中的哪些位置（即哪些路径）拥有哪些权限。
 
 ### 操作 {#actions}
 
@@ -205,7 +205,7 @@ AEM使用ACL确定用户或用户组可以执行哪些操作以及在何处可�
 
 >[!NOTE]
 >
->AEM会自动为集合中的角色分配（所有者、编辑者、查看器）生成 [用户组](/help/assets/managing-collections-touch-ui.md)。 但是，手动添加此类组的ACL可能会在AEM中引入安全漏洞。 Adobe建议您避免手动添加ACL。
+>AEM会自动为集合中的角色分配（所有者、编辑者、查看器）生成用 [户组](/help/assets/manage-collections.md)。 但是，手动为此类组添加ACL可能会在AEM中引入安全漏洞。 Adobe建议您避免手动添加ACL。
 
 ### 访问控制列表及其评估方式 {#access-control-lists-and-how-they-are-evaluated}
 
@@ -217,9 +217,9 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各个页面的权限。
 >
 >示例中包含有ACL。 建议您查看并确定适合您的应用程序的内容。 要查看包含的ACL，请转至**CRXDE **，然后为以下节 **点选** 择“访问控制”选项卡：
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`: 允许所有人读取访问。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`: 允许所有人读取访问。
->`/home/users/geometrixx-outdoors`: 允许所有人访问和 `*/profile*` 读取
+>`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:允许所有人读取访问。
+>`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:允许所有人读取访问。
+>`/home/users/geometrixx-outdoors`:允许所有人访问和 `*/profile*` 读取
 >`*/social/relationships/following/*`。
 >
 >您的自定义应用程序可以设置对其他关系（如或） `*/social/relationships/friend/*` 的访问 `*/social/relationships/pending-following/*`权。
@@ -294,11 +294,11 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各个页面的权限。
 
    Adobe建议您使用“允许”而非“拒绝”查看 [最佳实践](#best-practices)。
 
-在修改任一权限之前，请确保您了解它们的工作方式和相互关联。 请参阅CRX文档以说明AEM WCM如何评 [估访问权限](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated) 以及设置访问控制列表的示例。
+在修改任一权限之前，请确保您了解它们的工作方式和相互关联。 请参阅CRX文档以说明AEM WCM如何评 [估访问权限](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated) ，以及设置访问控制列表的示例。
 
 ### 权限 {#permissions}
 
-用户和用户组有权访问AEM页面上的AEM功能。
+权限允许用户和用户组访问AEM页面上的AEM功能。
 
 通过展开／折叠节点按路径浏览权限，并可以跟踪到根节点的权限继承。
 
@@ -308,7 +308,7 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各个页面的权限。
 
 ### 查看详细权限信息 {#viewing-detailed-permission-information}
 
-除了网格视图外，AEM还提供了特定路径下选定用户／组的详细权限视图。 详细信息视图提供其他信息。
+除网格视图外，AEM还为给定路径下的选定用户／组提供详细的权限视图。 详细信息视图提供其他信息。
 
 除了查看信息外，您还可以将当前用户或用户组包含或排除在用户组之外。 请参 [阅添加权限时添加用户或用户组](#adding-users-or-groups-while-adding-permissions)。 此处所做的更改会立即反映在详细视图的上半部分。
 
@@ -346,13 +346,13 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 
 这意味着用户帐户可以指定其他可以使用其帐户操作的帐户。 换言之，如果允许用户-B模拟用户-A，则用户-B可以使用用户-A的完整帐户详细信息执行操作。
 
-这允许模拟者帐户完成任务，就像他们正在使用模拟的帐户一样； 例如，在缺勤期间或共享过多负荷的短期情况。
+这允许模拟者帐户完成任务，就像他们使用的是模拟的帐户一样；例如，在缺勤期间或共享过多负荷的短期情况。
 
 >[!NOTE]
 >
 >为了模拟以适用于非管理员用户，模拟者（在上述情况下，用户-B）需要在路径中具有“读取” `/home/users` 权限。
 >
->有关如何实现此操作的更多信息，请参 [阅AEM中的权限](/help/sites-administering/security.md#permissions-in-aem)。
+>有关如何实现此目的的详细信息，请参 [阅AEM中的权限](/help/sites-administering/security.md#permissions-in-aem)。
 
 >[!CAUTION]
 >
@@ -371,7 +371,7 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 | 规则 | 原因 |
 |--- |--- |
 | *使用组* | 避免按用户分配访问权限。 原因有几：<ul><li>用户比组多，因此组可以简化结构。</li><li>组帮助提供所有帐户的概述。</li> <li>对于组，继承更简单。</li><li>用户来来去。 群体是长期的。</li></ul> |
-| *积极* | 始终使用“允许”语句指定组的权利（尽可能）。 避免使用Deny语句。 按顺序评估组，并且对顺序的定义可以不同于用户。 换言之： 您可能几乎无法控制语句的实现和评估顺序。 如果仅使用“允许”语句，则顺序不重要。 |
+| *积极* | 始终使用“允许”语句指定组的权利（尽可能）。 避免使用Deny语句。 按顺序评估组，并且对顺序的定义可以不同于用户。 换言之：您可能几乎无法控制语句的实现和评估顺序。 如果仅使用“允许”语句，则顺序不重要。 |
 | *保持简单* | 在配置新安装时投入一些时间和思考将得到很好的回报。 应用清晰的结构将简化持续的维护和管理，确保您的当前同事和／或未来继任者都能轻松了解正在实施的内容。 |
 | *测试* | 使用测试安装来练习并确保您了解不同用户和组之间的关系。 |
 | *默认用户／用户组* | 始终在安装后立即更新默认用户和用户组，以帮助防止出现任何安全问题。 |
@@ -417,7 +417,7 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 | 属性 | 列表有关用户或用户组的信息，这些信息可以包含电子邮件信息、说明和名称信息。 还允许您更改用户的口令。 请参 [阅创建用户](#creating-users-and-groups)和用 [户组、修改用户和组属性](#modifying-user-and-group-properties) 以 [及更改用户密码](#changing-a-user-password)。 |
 | 组 | 列表选定用户或组所属的所有组。 您可以将选定的用户或用户组分配给其他用户组，或将其从用户组中删除。 请参 [阅组](#adding-users-or-groups-to-a-group)。 |
 | 成员 | 仅适用于组。 列表特定组的成员。 请参阅 [成员](#members-adding-users-or-groups-to-a-group)。 |
-| 权限 | 您可以为用户或用户组分配权限。 允许您控制以下内容：<ul><li>与特定页面／节点相关的权限。 请参阅 [设置权限](#setting-permissions)。 </li><li>与创建和删除页面以及修改层次结构相关的权限。 ??? 允许您 [分配权限](#settingprivileges)，如层次结构修改，它允许您创建和删除页面，</li><li>与复制权 [限相关的权](#setting-replication-privileges) 限（通常从创作到发布），根据路径。</li></ul> |
+| 权限 | 您可以为用户或用户组分配权限。 允许您控制以下内容：<ul><li>与特定页面／节点相关的权限。 请参阅 [设置权限](#setting-permissions)。 </li><li>与创建和删除页面以及修改层次结构相关的权限。???允许您 [分配权限](#settingprivileges)，如层次结构修改，它允许您创建和删除页面，</li><li>与复制权 [限相关的权](#setting-replication-privileges) 限（通常从创作到发布），根据路径。</li></ul> |
 | 模拟者 | 允许其他用户模拟该帐户。 当您需要用户代表其他用户时非常有用。 请参 [阅模拟用户](#impersonating-another-user)。 |
 | 首选项 | 设置 [用户组或用户的首选项](#setting-user-and-group-preferences)。 例如，语言首选项。 |
 
@@ -471,7 +471,7 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 要删除用户或用户组，请执行以下操作：
 
 1. 在“安 **全** ”控制台中，选择要删除的用户或组。 如果要删除多个项目，请按住Shift键单击或按住Ctrl键单击以选择这些项目。
-1. 单击 **编辑** ，然后选择删除。 AEM WCM会询问您是否要删除该用户或用户组。
+1. 单击 **编辑** ，然后选择删除。 AEM WCM会询问您是要删除用户还是删除用户组。
 1. 单击 **确定** ，或单击取消以取消您的操作。
 
 ### 修改用户和组属性 {#modifying-user-and-group-properties}
@@ -496,7 +496,7 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 >
 >无法使用安全控制台更改管理员密码。 要更改管理员帐户的口令，请使用Granite Operations [提供的](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) “用户”控制台。
 >
->如果您在JEE上使用AEM Forms，请勿使用下面的说明更改口令，而是使用JEE管理控制台(/adminui)上的AEM Forms更改口令。
+>如果您在JEE上使用AEM Forms，请不要使用下面的说明更改密码，而是使用JEE管理控制台(/adminui)中的AEM Forms更改密码。
 
 1. 在“安 **全** ”控制台中，多次单击要更改密码的用户名。
 1. 单击“ **属性** ”选项卡（如果尚未激活）。
@@ -504,12 +504,12 @@ With the [Impersonate functionality](/help/sites-authoring/user-properties.md#us
 
    ![cqsecurityuserpassword](assets/cqsecurityuserpassword.png)
 
-1. 输入新密码两次； 由于它们未以明文显示，因此这是为了确认——如果它们不匹配，系统会显示错误。
+1. 输入新密码两次；由于它们未以明文显示，因此这是为了确认——如果它们不匹配，系统会显示错误。
 1. 单击 **“设置** ”以激活帐户的新密码。
 
 ### 将用户或用户组添加到用户组 {#adding-users-or-groups-to-a-group}
 
-AEM优惠了三种将用户或组添加到现有组的不同方法：
+AEM优惠了三种将用户或用户组添加到现有用户组的不同方法：
 
 * 在用户组中时，可以添加成员（用户或用户组）。
 * 在成员中时，可以向组添加成员。
@@ -556,7 +556,7 @@ AEM优惠了三种将用户或组添加到现有组的不同方法：
 
 ### 从组中删除用户或用户组 {#removing-users-or-groups-from-groups}
 
-AEM优惠了三种从用户组中删除用户或用户组的不同方法：
+AEM优惠了三种从组中删除用户或用户组的不同方法：
 
 * 在组用户档案中时，可以删除成员（用户或组）。
 * 在成员用户档案下，可以从组中删除成员。
@@ -611,7 +611,7 @@ AEM优惠了三种从用户组中删除用户或用户组的不同方法：
 
 >[!NOTE]
 >
->Adobe引入了一个新的基于触屏UI的权限管理主体视图。 有关如何使用它的更多详细信息，请参 [阅此页](/help/sites-administering/touch-ui-principal-view.md)。
+>Adobe引入了新的基于触屏UI的权限管理主视图。 有关如何使用它的更多详细信息，请参 [阅此页](/help/sites-administering/touch-ui-principal-view.md)。
 
 本节介绍如何设置权限，包括复制权限。
 
@@ -639,7 +639,7 @@ AEM优惠了三种从用户组中删除用户或用户组的不同方法：
 >
 >* 对组应用的任何复制权限均适用于该组中的所有用户。
 >* 用户的复制权限将取代组的复制权限。
->* 允许复制权限的优先级高于拒绝复制权限。 请参 [阅AEM中的权限](#permissions-in-aem) ，以了解更多信息。
+>* 允许复制权限的优先级高于拒绝复制权限。 请参 [阅AEM中的](#permissions-in-aem) “权限”以了解更多信息。
 
 >
 
@@ -671,7 +671,7 @@ AEM优惠了三种从用户组中删除用户或用户组的不同方法：
 | 操作 | 它的用途 |
 |--- |--- |
 | 向右箭头键 | 在搜索结果中选择子节点 |
-| 向下箭头键 | 再次开始搜索。 |
+| 向下箭头键 | 开始搜索。 |
 | 输入（返回）键 | 选择子节点并将其加载到树网格中 |
 
 * 全文搜索——如果搜索字符串不与“/”开始，则对路径“/content”下的所有节点执行全文搜索。
@@ -740,7 +740,7 @@ AEM优惠了三种从用户组中删除用户或用户组的不同方法：
 
 权限注册机制反映在“存储库配置” **下的UI中**。
 
-新（自定义）权限的注册本身受必须在存储库级别授予的内置权限保护(在JCR中： 在ac mgt api中将“null”作为“absPath”参数传递，有关详细信息，请参阅jsr 333)。 默认情况 **下** ，管理员和所有管理员成员都具有该权限。
+新（自定义）权限的注册本身受必须在存储库级别授予的内置权限保护(在JCR中：在ac mgt api中将“null”作为“absPath”参数传递，有关详细信息，请参阅jsr 333)。 默认情况 **下** ，管理员和所有管理员成员都具有该权限。
 
 >[!NOTE]
 >
