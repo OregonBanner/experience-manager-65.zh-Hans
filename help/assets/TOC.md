@@ -6,7 +6,7 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、交付和优化数字资产。
 translation-type: tm+mt
-source-git-commit: 5599e0d4a3e52a4ad98b776b9178722c7ac47cbc
+source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 40%
@@ -113,7 +113,7 @@ ht-degree: 40%
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] 集成](aem-cc-integration-best-practices.md)
    + [与 [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management资产](drm.md)
-   + [使用演示包获得资产洞察](touch-ui-using-demo-package-for-asset-insights.md)
+   + [使用演示包获得资产洞察](use-demo-package-for-asset-insights.md)
    + [资产文件格式最佳实践](assets-file-format-best-practices.md)
    + [监视资产的最佳实践](assets-monitoring-best-practices.md)
    + [Camera Raw支持](camera-raw.md)
@@ -139,21 +139,21 @@ ht-degree: 40%
    + [内容片段——标记](content-fragments/content-fragments-markdown.md)
    + [为内容片段创建翻译项目](creating-translation-projects-for-content-fragments.md)
 + Manage Assets {#managing}
-   + [管理数字资产](managing-assets-touch-ui.md)
-   + [管理收藏集](managing-collections-touch-ui.md)
+   + [管理数字资产](manage-assets.md)
+   + [管理收藏集](manage-collections.md)
    + [启用重复检测](duplicate-detection.md)
    + [组织数字资产](organize-assets.md)
    + [管理视频资产](managing-video-assets.md)
    + [创建翻译项目](translation-projects.md)
    + [准备要翻译的资产](preparing-assets-for-translation.md)
    + [从Experience Manager下载资源](download-assets-from-aem.md)
-   + [Lightbox](touch-ui-light-box.md)
-   + [资产分析](touch-ui-asset-insights.md)
-   + [通过DTM实现资产洞察](touch-ui-using-dtm-for-asset-insights.md)
-   + [配置资产分析](touch-ui-configuring-asset-insights.md)
+   + [Lightbox](light-box.md)
+   + [资产分析](asset-insights.md)
+   + [通过DTM实现资产洞察](use-dtm-for-asset-insights.md)
+   + [配置资产分析](configure-asset-insights.md)
    + [登记和注销资产](check-out-and-submit-assets.md)
    + [将翻译云服务应用到文件夹](transition-cloud-services.md)
-   + [使用页面跟踪器并在网页中嵌入代码](touch-ui-using-page-tracker.md)
+   + [使用页面跟踪器并在网页中嵌入代码](use-page-tracker.md)
    + [管理复合资产](managing-linked-subassets.md)
    + [相关资产](related-assets.md)
    + [专用文件夹共享](private-folder.md)
