@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3954178cc660368a2b374bbb4d05d93d7309d4eb
+source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3218'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 8%
 * 提供模板，它们可以保留与从它们创建的任何页面的动态连接。 这可确保模板的任何更改都反映在页面本身中。
 * 使页面组件更加通用，这样无需自定义即可使用核心页面组件。
 
-借助可编辑的模板，可在组件中隔离制作页面的片段。 您可以在UI中配置组件的必要组合，从而无需为每个页面变体开发新的页面组件。
+借助可编辑的模板，可在组件中隔离制作页面的部分内容。 您可以在UI中配置组件的必要组合，从而无需为每个页面变体开发新的页面组件。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ ht-degree: 8%
 >[!NOTE]
 >
 >以下教程可能也会对在新项目中设置可编辑的页面模板感兴趣：
->[AEM Sites第2部分入门——创建基页和模板](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
+>[AEM Sites第2部分入门——创建基本页面和模板](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
 
 ## Creating a New Template {#creating-a-new-template}
 
@@ -81,7 +81,7 @@ ht-degree: 8%
 
    有关模板作者如何定义结构的详细信息，请参阅 [创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)。
 
-   有关结构的技术详细信息，请参 [阅此文档](/help/sites-developing/page-templates-editable.md#structure) 中的“结构”。
+   有关结构的技术详细信息，请参 [阅此文档](/help/sites-developing/page-templates-editable.md#structure) 中的结构。
 
    **策略**
 
@@ -175,12 +175,12 @@ ht-degree: 8%
 
 要创建新文件夹，您可以执行以下操作之一：
 
-* 以编程方式或使用CRXDE Lite
+* 以编程方式或通过CRXDE Lite
 * 使用配置浏览器
 
 ## 使用CRXDE Lite {#using-crxde-lite}
 
-1. 可以通过编程方式或使用CRXDE Lite为实例创建新文件夹（在/conf下）。
+1. 可以通过编程或CRXDE Lite为实例创建新文件夹（在/conf下）。
 
    必须使用以下结构：
 
@@ -201,7 +201,7 @@ ht-degree: 8%
 
    * 类型: `String`
 
-   * 值： 要显示在“模板”控制台中的标题(用于 **文件夹** )。
+   * 值：要显示在“模板”控制台中的标题(用于 **文件夹** )。
 
 1. 除 *了标准* 、创作权限和权限(例如， `content-authors`)，您现在需要为作者分配组并定义所需的访问权限(ACL)，以便在新文件夹中创建模板。
 
@@ -218,14 +218,16 @@ ht-degree: 8%
 1. 单击&#x200B;**创建**。
 1. 在创 **建配置** 对话框中，需要配置以下字段：
 
-   * **标题**: 提供配置文件夹的标题
-   * **可编辑模板**: 勾号，允许在此文件夹内创建可编辑的模板
+   * **标题**:提供配置文件夹的标题
+   * **可编辑模板**:勾号，允许在此文件夹内创建可编辑的模板
 
 1. Click **Create**
 
 >[!NOTE]
 >
 >在配置浏览器中，如果您希望在该文件夹内创建模板，可以编辑 **全局文件夹** ，并激活“可编辑模板”选项，但建议不要这样做。
+>
+>See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
 
 ### ACL和组 {#acls-and-groups}
 
@@ -235,7 +237,7 @@ We.Retail引用实 [施的模板文件夹](/help/sites-developing/we-retail.md) 
 
 #### 模板作者组 {#the-template-authors-group}
 
-该 `template-authors` 组是用于管理模板访问权限的组，AEM是标准组，但为空。 必须将用户添加到项目／站点的组。
+组 `template-authors` 是用于管理模板访问权限的组，它是AEM的标准组，但为空。 必须将用户添加到项目／站点的组。
 
 >[!CAUTION]
 >
@@ -426,7 +428,7 @@ We.Retail引用实 [施的模板文件夹](/help/sites-developing/we-retail.md) 
 如果已创建可用作其他模板基础的模板，则可以将此模板复制为模板类型。
 
 1. 创建模板，就像此处介绍的任何可 [编辑模板一样](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，它将作为模板类型的基础。
-1. 使用CRXDE Lite，将新创建的模板从节点复 `templates` 制到模板文 `template-types` 件夹下的 [节点](/help/sites-developing/page-templates-editable.md#template-folders)。
+1. 使用CRXDE Lite，将新创建的模板从节点 `templates` 复制到模板 `template-types` 文件夹下 [的节点](/help/sites-developing/page-templates-editable.md#template-folders)。
 1. 从模板文件夹下 `templates` 的节点中 [删除模板](/help/sites-developing/page-templates-editable.md#template-folders)。
 1. 在节点下的模板副本中，删 `template-types` 除所有属 `cq:template` 性 `cq:templateType``jcr:content` 和属性。
 
@@ -576,13 +578,13 @@ GITHUB上的代码
 
       * 定义属性：
 
-         * 名称： 状态
-         * 类型： 字符串
+         * 名称：状态
+         * 类型：字符串
          * 值: `enabled`
 
 1. **允许的模板**
 
-   * [在子分支的相应页面或根页 **面的&#x200B;**](/help/sites-authoring/templates.md#allowing-a-template-author)“页面属性”中定义允许的模板路径。
+   * [在子分支的相应页面或根页 **面的**](/help/sites-authoring/templates.md#allowing-a-template-author) “页面属性”中定义允许的模板路径。
    * 设置属性：
       `cq:allowedTemplates`
 在 
@@ -600,7 +602,7 @@ GITHUB上的代码
 * 具有对模板和模板类型中信息的引用。 这是通过具有以下属 `jcr:content` 性的节点实现的：
 
    * `cq:template`
-提供对实际模板的动态参考； 允许在实际页面上反映对模板所做的更改。
+提供对实际模板的动态参考；允许在实际页面上反映对模板所做的更改。
 
    * `cq:templateType`
 提供对模板类型的引用。
@@ -628,7 +630,7 @@ GITHUB上的代码
    * 页面组件将合并 `structure/jcr:content` 模板的树和页 `jcr:content` 面的树。
 
    * 页面组件将仅允许作者编辑已标记为可编辑的模板结构的节点（以及任何子节点）。
-   * 在页面上渲染组件时，该组件的相对路径将从节点中取 `jcr:content` 出； 随后将搜索模 `policies/jcr:content` 板节点下的同一路径。
+   * 在页面上渲染组件时，该组件的相对路径将从节点中取 `jcr:content` 出；随后将搜索模 `policies/jcr:content` 板节点下的同一路径。
 
       * 此 `cq:policy` 节点的属性指向实际的内容策略（即它包含该组件的设计配置）。
 
