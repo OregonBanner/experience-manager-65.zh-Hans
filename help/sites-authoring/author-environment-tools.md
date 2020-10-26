@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2451f4994a18b1566ea0efddbefcaa5bb8e41c99
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+workflow-type: tm+mt
+source-wordcount: '2239'
+ht-degree: 97%
 
 ---
 
 
 # 创作 - 环境和工具{#authoring-the-environment-and-tools}
 
-AEM的创作环境提供了各种用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
+AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
 
 ## 管理您的网站 {#managing-your-site}
 
@@ -46,7 +49,7 @@ AEM的创作环境提供了各种用于组织和编辑内容的机制。可以�
 
 在编辑页面时，**帮助**&#x200B;可从以下位置访问：
 
-* [**页面信息&#x200B;**](/help/sites-authoring/editing-page-properties.md#page-properties)选择器，这将显示幻灯片介绍（在您第一次访问编辑器时显示）。
+* [**页面信息**](/help/sites-authoring/editing-page-properties.md#page-properties)&#x200B;选择器，这将显示幻灯片介绍（在您第一次访问编辑器时显示）。
 * 适用于特定组件的[配置](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)对话框（使用对话工具栏中的 ? 图标）；这将根据上下文显示帮助。
 
 其他[与帮助相关的资源可以从控制台中访问](/help/sites-authoring/basic-handling.md#accessing-help)。
@@ -55,7 +58,7 @@ AEM的创作环境提供了各种用于组织和编辑内容的机制。可以�
 
 组件浏览器会显示当前页面上可用的所有组件。这些组件可拖动至相应的位置，然后进行编辑以添加您的内容。
 
-The components browser is a tab within the side panel (together with the [assets browser](/help/sites-authoring/author-environment-tools.md#assets-browser) and [content tree](/help/sites-authoring/author-environment-tools.md#content-tree)). 要打开（或关闭）侧面板，请使用工具栏左上方的图标：
+组件浏览器是侧面板中的一个选项卡（侧面板中还有[资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)和[内容树](/help/sites-authoring/author-environment-tools.md#content-tree)）。要打开（或关闭）侧面板，请使用工具栏左上方的图标：
 
 ![ateat-03](assets/ateat-03.png)
 
@@ -91,11 +94,13 @@ The components browser is a tab within the side panel (together with the [assets
 
       * 标准组件的图标是单色的。
       * 缩写始终由组件名称的前两个字符组成。
+
    从&#x200B;**组件**&#x200B;浏览器顶部的工具栏可以：
 
    * 按名称筛选组件。
    * 使用下拉选择框将显示内容限定为特定组。
-   有关组件的更详细说明，可以单击或点按&#x200B;**组件**&#x200B;浏览器中组件旁边的信息图标（如果有）。例如，对于&#x200B;**布局容器**：
+
+   有关组件的更多详细说明，您可以单击或点按&#x200B;**组件**&#x200B;浏览器（如果可用）中组件旁边的信息图标。例如，对于&#x200B;**布局容器**：
 
    ![ateat-06](assets/ateat-06.png)
 
@@ -125,7 +130,7 @@ The components browser is a tab within the side panel (together with the [assets
 
 * 段落系统中用于创建相应类型新组件的[占位符](/help/sites-authoring/editing-content.md#component-placeholder)。
 
-   * 例如，您可以将图像类型的资产拖动到段落系统上以创建图像组件。
+   * 例如，可以将图像类型的资产拖动到段落系统中，以创建图像组件。
 
 >[!NOTE]
 >
@@ -136,7 +141,7 @@ The components browser is a tab within the side panel (together with the [assets
 * 名称
 * 路径
 * 资产类型，例如图像、手稿、文档、视频、页面、段落和产品
-* 资源特征，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
+* 资源特性，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
 
    * 仅适用于某些资产类型
 
@@ -162,7 +167,7 @@ The components browser is a tab within the side panel (together with the [assets
 
    ![ateat-10](assets/ateat-10.png)
 
-如果您需要快速更改资产，可以直接从资产浏览器启动[资产编辑器](/help/assets/managing-assets-touch-ui.md)，方法是单击资产名称旁边显示的编辑图标。
+如果您需要快速更改资产，可以直接从资产浏览器启动[资产编辑器](/help/assets/manage-assets.md)，方法是单击资产名称旁边显示的编辑图标。
 
 ![](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -174,7 +179,7 @@ The components browser is a tab within the side panel (together with the [assets
 
 ![](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-打开侧面板时，它将（从左侧）滑开。Select the **Content Tree** tab if necessary. 打开该选项卡后，您会看到页面或模板的树视图表现形式，以便您更方便地了解其内容的层次构成方式。此外，您还可以更轻松地在复杂页面上的组件之间进行跳转。
+打开侧面板时，它将（从左侧）滑开。根据需要选择&#x200B;**内容树**&#x200B;选项卡。打开该选项卡后，您会看到页面或模板的树视图表现形式，以便您更方便地了解其内容的层次构成方式。此外，您还可以更轻松地在复杂页面上的组件之间进行跳转。
 
 ![ateat-11](assets/ateat-11.png)
 
@@ -188,7 +193,7 @@ The components browser is a tab within the side panel (together with the [assets
 
 >[!NOTE]
 >
->如果您正在移动设备上编辑页面（如果浏览器宽度小于1024px），则内容树不可用。
+>如果您正在浏览器宽度小于 1024 像素的移动设备上编辑页面，则内容树将不可用。
 
 单击组件将在页面编辑器中突出显示组件。可用的操作将取决于页面状态：
 
@@ -224,7 +229,7 @@ The components browser is a tab within the side panel (together with the [assets
 * 对引用组件的使用：借入和借出的内容
 * 对产品页面的引用（从“商务 - 产品”控制台实现）
 
-Open the required console, then navigate to the required resource and open **References** using:
+打开所需的控制台，然后导航到所需资源并使用以下方法打开&#x200B;**引用**：
 
 ![screen_shot_2018-03-22at153653](assets/screen_shot_2018-03-22at153653.png)
 
@@ -240,7 +245,7 @@ Open the required console, then navigate to the required resource and open **Ref
 
 * [对产品页面的引用](/help/sites-administering/generic.md#showing-product-references)（可以从“商务 - 产品”控制台实现）
 * [启动项](/help/sites-authoring/launches.md)，提供对相关启动项的访问权
-* [Live Copy显示](/help/sites-administering/msm.md) ，所有Live Copy的路径均基于所选资源。
+* [](/help/sites-administering/msm.md)Live Copy 显示基于选定资源的所有 Live Copy 的路径。
 * [Blueprint](/help/sites-administering/msm-best-practices.md)，提供详细信息和各种操作
 * [语言副本](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel)，提供详细信息和各种操作
 
@@ -252,7 +257,7 @@ Open the required console, then navigate to the required resource and open **Ref
 
 对于相应的资源（例如&#x200B;**站点**&#x200B;控制台中的页面或&#x200B;**资产**&#x200B;控制台中的资产），[可使用时间轴显示任何选定项目上的近期活动](/help/sites-authoring/basic-handling.md#timeline)。
 
-Open the required console, then navigate to the required resource and open **Timeline**, using:
+打开所需的控制台，然后导航到需要的资源并使用以下方法打开&#x200B;**时间轴**：
 
 ![ateat-15](assets/ateat-15.png)
 
@@ -262,7 +267,7 @@ Open the required console, then navigate to the required resource and open **Tim
 
 ## 页面信息 {#page-information}
 
-页面信息（均衡器图标）会打开一个菜单，其中还提供有关上次编辑和上次发布的详细信息。 根据页面、其站点和您的实例的特性，可用的选项可能会更多，也可能会更少：
+“页面信息”（均衡器图标）会打开一个菜单，其中也会提供有关上次编辑和上次发布的详细信息。根据页面、其站点和您的实例的特性，可用的选项可能会更多，也可能会更少：
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -281,7 +286,7 @@ Open the required console, then navigate to the required resource and open **Tim
 例如，在适当时，**页面信息**&#x200B;还有以下选项：
 
 * [提升启动项](/help/sites-authoring/launches-promoting.md)，如果该页面是启动项。
-* [如果管理员已启用此选项](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) ，则可在经 [典UI中打开](/help/sites-administering/enable-classic-ui-editor.md)
+* [如果管理员已启用](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 此选项，则在经 [典UI中打开](/help/sites-administering/enable-classic-ui-editor.md)
 
 另外，在适当时，**页面信息**&#x200B;还允许访问分析和建议。
 
@@ -290,7 +295,7 @@ Open the required console, then navigate to the required resource and open **Tim
 编辑页面时可以使用多种模式来执行不同的操作：
 
 * [编辑](/help/sites-authoring/editing-content.md) - 编辑页面内容时使用的模式。
-* [布局](/help/sites-authoring/responsive-layout.md) -允许您根据设备创建和编辑响应式布局（如果页面基于布局容器）
+* [布局](/help/sites-authoring/responsive-layout.md) - 允许您创建和编辑依赖于设备的响应式布局（如果页面基于布局容器）
 
 * [基架](/help/sites-authoring/scaffolding.md) - 帮助您创建大量结构相同但内容不同的页面。
 * [开发人员](/help/sites-developing/developer-mode.md) - 允许您执行各种操作（需要权限）。这些操作包括检查页面及其组件的技术详细信息。
@@ -316,6 +321,7 @@ Open the required console, then navigate to the required resource and open **Tim
 >* 某些模式需要相应的许可/权限才能访问。
 >* 由于空间限制，“开发人员”模式在移动设备上不可用。
 >* 使用[键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) (`Ctrl-Shift-M`) 可以在&#x200B;**预览**&#x200B;模式和当前选定的模式（例如，**编辑**、**布局**&#x200B;等）之间切换。
+
 >
 
 
@@ -345,7 +351,7 @@ Open the required console, then navigate to the required resource and open **Tim
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * 选择资源后，对话框右上角的&#x200B;**选择**&#x200B;按钮将变为活动状态。单击或点按以确认选择，或者单击或点按&#x200B;**取消**&#x200B;以中止操作。
-* 如果上下文允许选择多个资源，则选择一个资源也会激活&#x200B;**选择**&#x200B;按钮，但同时也会将选定资源的计数添加到窗口的右上角。单击数字旁边的 **X** 可取消选择所有资源。
+* 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **** ”按钮，但也会将选定资源的计数添加到窗口的右上角。 单击该 **数字旁边的** X可取消选择全部。
 * 在树中导航时，您的位置会反映在对话框顶部的痕迹导航中。还可使用这些痕迹导航在资源层次结构中快速跳转。
 * 您随时都可以使用对话框顶部的搜索字段。单击搜索字段中的 **X** 可清除搜索。
 * 要缩小搜索范围，您可以显示筛选器选项并按特定路径筛选结果。
