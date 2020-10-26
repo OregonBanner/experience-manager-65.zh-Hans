@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.5 Service Pack 6的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 750e3729a33718d54dca8b2514468d4a40910d4c
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 2%
@@ -186,7 +186,7 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 #### 配 [!DNL Experience Manager Assets] 置 [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获得IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
+和之间的授 [!DNL Experience Manager Assets] 权渠道 [!DNL Brand Portal] 已更改。 以前， [!DNL Brand Portal] 在经典UI中通过旧版OAuth网关进行配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在已通过 [!DNL Brand Portal] AdobeI/O进行配置，它为租户获取IMS令牌以进行授 [!DNL Brand Portal] 权。
 
 使用进行配 [!DNL Experience Manager Assets] 置的 [!DNL Brand Portal] 步骤因您的版本、 [!DNL Experience Manager] 是首次配置还是升级现有配置而异。 有关详 [细信息，请参阅配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html) （使用Brand Portal）。
 
@@ -194,12 +194,12 @@ Adobe Experience Manager6.5服务包每季度提供新功能、客户要求的�
 
 [!DNL Experience Manager Assets] 包括以下辅助功能增强：
 
-* 键盘上的箭头键可用于移动和平移缩放图像中的区域。 有关详细信息，请参阅 [仅使用键盘键预览资源](../assets/managing-assets-touch-ui.md#previewing-assets)。
+* 键盘上的箭头键可用于移动和平移缩放图像中的区域。 有关详细信息，请参阅 [仅使用键盘键预览资源](../assets/manage-assets.md#previewing-assets)。
 
 * 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
 * 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
-For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军用格式的小时，mm是分钟。
+For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
 
 * 屏幕阅读器现在 `X` 会宣布删除选定标记的符号以及选定标记的数量。
 
