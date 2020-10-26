@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
 workflow-type: tm+mt
 source-wordcount: '2076'
 ht-degree: 45%
@@ -23,7 +23,7 @@ ht-degree: 45%
 
 图像集由带有单词的横幅来指定 `IMAGESET`。 此外，如果图像集已发布，则横幅上会显示由 **[!UICONTROL World]** 图标指示的发布日期以及由铅笔图标指示的上次修改日期 **** 。
 
-![chlimage_1-135](assets/chlimage_1-339.png)
+![chlimage_1-133](assets/chlimage_1-339.png)
 
 在图像集中，您还可以通过创建图像集并添加缩略图来创建色板。
 
@@ -33,7 +33,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/managing-assets-touch-ui.md)。
+>有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/manage-assets.md)。
 
 ## 快速入门：图像集 {#quick-start-image-sets}
 
@@ -83,7 +83,7 @@ ht-degree: 45%
 
    请参 [阅将图像集链接到网页和嵌入视](/help/assets/linking-urls-to-yourwebapplication.md) 频查看器或图像查看器 [](/help/assets/embed-code.md)。
 
-要编辑图像集，请参阅编 [辑图像集。](#editing-image-sets) 此外，您还可以视图和编 [辑图像集属性](/help/assets/managing-assets-touch-ui.md#editing-properties)。
+要编辑图像集，请参阅编 [辑图像集。](#editing-image-sets) 此外，您还可以视图和编 [辑图像集属性](/help/assets/manage-assets.md#editing-properties)。
 
 如果您在创建集时遇到问题，请参阅Dynamic Media -Scene7模式 [疑难解答中的图像和集](/help/assets/troubleshoot-dms7.md#images-and-sets)。
 
@@ -91,7 +91,7 @@ ht-degree: 45%
 
 首先为图像集上传图像。由于用户可以在图像集查看器中缩放图像，因此在选择图像时，请考虑缩放因素。确保图像的最大尺寸至少为2000像素。图像集支持很多种图像文件格式，但建议使用无损的 TIFF、PNG 和 EPS 图像。
 
-You can upload images for Image Sets as you would [upload any other asset in Assets](/help/assets/managing-assets-touch-ui.md#uploading-assets).
+You can upload images for Image Sets as you would [upload any other asset in Assets](/help/assets/manage-assets.md#uploading-assets).
 
 ### 准备要上传的图像集资产 {#preparing-image-set-assets-for-upload}
 
