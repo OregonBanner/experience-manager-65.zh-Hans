@@ -1,12 +1,13 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Deploying 指南
 breadcrumb-title: Deploying 指南
 user-guide-description: 详细了解 Adobe Experience Manager 6.5 的安装、部署和架构，包括我们的 Adobe Managed Services 云部署。
 translation-type: tm+mt
-source-git-commit: cb07e24b01084f57ad46615cb463ad5a0329c181
+source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 18%
