@@ -1,12 +1,13 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
-user-guide-title: AEM 6.5 创作用户指南
+user-guide-title: AEM 6.5 Authoring 用户指南
 breadcrumb-title: Authoring 指南
 user-guide-description: 了解在 AEM 中创建内容和创作的主要概念。
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 92%
@@ -14,7 +15,7 @@ ht-degree: 92%
 ---
 
 
-# AEM 6.5 创作用户指南 {#authoring}
+# AEM 6.5 Authoring 用户指南 {#authoring}
 
 + [创作用户指南概述](home.md)
 + AEM创作的基本任务、工具和概念 {#essentials}
