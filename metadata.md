@@ -10,9 +10,10 @@ tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-video
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.zh-Hans
 solution: Experience Manager
+type: Documentation
 index: y
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 12%
