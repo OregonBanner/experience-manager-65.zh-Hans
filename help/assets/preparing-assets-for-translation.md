@@ -3,7 +3,7 @@ title: 准备要翻译的资产
 description: 创建语言根文件夹以准备资产进行翻译以支持多语言资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 1d3e908eafa1cdcbc6ef557da509f12cdd9418cc
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 1%
@@ -21,16 +21,16 @@ ht-degree: 1%
 
 您最初为其添加资产的语言副本是主要语言。 主语言是翻译成其他语言的源。 示例文件夹层次结构包括几个语言根：
 
-```
- /content
-  /- dam
-   |- en
-   |- fr
-   |- de
-   |- es
-   |- it
-   |- ja
-   |- zh
+```shell
+/content
+    /- dam
+        |- en
+        |- fr
+        |- de
+        |- es
+        |- it
+        |- ja
+        |- zh
 ```
 
 请执行以下步骤来准备要翻译的资产：
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 要创建语言根目录，请创建文件夹，并使用ISO语言代码作为“名称”属性的值。 创建语言根目录后，可以在语言根目录的任何级别创建语言副本。
 
-例如，示例层次结构的意大利语语言副本的根页面 `it` 为“名称”属性。 名称属性用作存储库中资产节点的名称，因此会确定资产的路径。 (`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
+例如，示例层次结构的意大利语语言副本的根页面 `it` 为“名称”属性。 名称属性用作存储库中资产节点的名称，因此会确定资产的路径。(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
 
 1. From the [!DNL Assets] console, click **[!UICONTROL Create]** and choose **[!UICONTROL Folder]** from the menu.
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 ## 视图语根 {#viewing-language-roots}
 
-[!DNL Experience Manager] 界面提供 **[!UICONTROL “引用]** ”面板，其中显示在中创建的语言根的列表 [!DNL Assets]。
+[!DNL Experience Manager] 界面提 **[!UICONTROL 供了]** “引用”面板，其中显示在中创建的语言根的列表 [!DNL Assets]。
 
 1. 在控制 [!DNL Assets] 台中，选择要为其创建语言副本的语言主要版本。
 1. 从左边栏中，选择“ **[!UICONTROL 引用]** ”选项以打开“ [!UICONTROL 引用] ”窗格。
