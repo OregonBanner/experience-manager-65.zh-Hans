@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: 0d5ee29141c897284f3f298d921f4f8528216f8f
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 1%
@@ -50,7 +50,7 @@ See also [Managing Viewer Presets](/help/assets/managing-viewer-presets.md).
 **要上传资产以用于360视频查看器，请执行以下操作：**
 
 1. 已创建专用于360视频资产的文件夹。
-1. [将自适应视频用户档案应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
+1. [将自适应视频用户档案应用到文件夹。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
 
    渲染360视频内容比标准非360视频内容对源视频分辨率和编码演绎版分辨率的要求更高。
 
@@ -96,7 +96,8 @@ See also [Editing Viewer Presets](/help/assets/managing-viewer-presets.md#editin
 
 如果您对360视频感到满意，可以发布该视频。
 
-请参阅[在网页上嵌入视频查看器或图像查看器](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)。请参阅[将 URL 关联到您的 Web 应用程序](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。
+请参阅[在网页上嵌入视频查看器或图像查看器。
+](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)请参阅[将 URL 关联到您的 Web 应用程序](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html)。请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。
 See [Adding Dynamic Media Assets to pages.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
 
 **预览360个视频**
