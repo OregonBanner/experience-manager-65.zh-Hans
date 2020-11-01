@@ -1,16 +1,15 @@
 ---
 title: 以Forms为中心的OSGi工作流 |处理用户数据
 seo-title: 以Forms为中心的OSGi工作流 |处理用户数据
-description: 'null'
-seo-description: 'null'
+description: 以Forms为中心的OSGi工作流 |处理用户数据
 uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 translation-type: tm+mt
-source-git-commit: 4e0709031aca030e50840811a9b3717f3cb20340
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ ht-degree: 0%
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-触发工作流时，将自动为工作流实例生成有效负荷。 每个工作流实例都分配有唯一实例ID和关联的有效负荷ID。 有效负荷包含与工作流实例关联的用户和表单数据的存储库位置。 此外，工作流实例的草稿和历史数据也存储在AEM存储库中。
+触发工作流时，将自动为工作流实例生成有效负荷。 为每个工作流实例分配一个唯一的实例ID和一个关联的有效负荷ID。 有效负荷包含与工作流实例关联的用户和表单数据的存储库位置。 此外，工作流实例的草稿和历史数据也存储在AEM存储库中。
 
 工作流实例的有效负荷、草稿和历史记录所在的默认存储库位置如下：
 
