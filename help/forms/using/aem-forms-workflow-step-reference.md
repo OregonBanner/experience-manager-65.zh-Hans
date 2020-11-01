@@ -4,13 +4,12 @@ seo-title: OSGi上以Forms为中心的工作流——步骤参考
 description: 基于OSGi步骤、以Forms为中心的工作流程允许您快速构建基于自适应表单的工作流。
 seo-description: 基于OSGi步骤、以Forms为中心的工作流程允许您快速构建基于自适应表单的工作流。
 uuid: 6f791c45-0e35-4c55-9106-5340caab94b7
-contentOwner: null
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: aff67332de7295936ea45e3f38cd204fd448a570
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
 source-wordcount: '7109'
 ht-degree: 0%
@@ -239,7 +238,7 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 * **表单数据模型路径**:浏览并选择服务器上存在的表单数据模型。
 
 * **服务**:所选表单数据模型提供的服务列表。
-* **服务输入>使用文字、变量或工作流元数据以及JSON文件提供输入数据**:服务可以有多个参数。 选择选项，以从工作流元数据属性、JSON对象、变量获取服务参数的值，或直接在提供的文本框中输入值：
+* **服务输入>使用文字、变量或工作流元数据以及JSON文件提供输入数据**:服务可以有多个参数。 选择选项，从工作流元数据属性、JSON对象、变量获取服务参数的值，或直接在提供的文本框中输入值：
 
    * **文字：** 当您知道要指定的确切值时，请使用此选项。 例如，srose@we.info。
    * **变量：** 使用该选项检索存储在变量中的值。
