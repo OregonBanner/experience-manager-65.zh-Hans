@@ -1,29 +1,31 @@
 ---
-title: 文档安全|处理用户数据
-seo-title: 文档安全|处理用户数据
-description: 'null'
-seo-description: 'null'
+title: 文档安全 |处理用户数据
+seo-title: 文档安全 |处理用户数据
+description: 文档安全 |处理用户数据
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 0%
 
 ---
 
 
-# 文档安全|处理用户数据 {#document-security-handling-user-data}
+# 文档安全 |处理用户数据 {#document-security-handling-user-data}
 
-AEM Forms文档安全性允许您创建、存储预定义的安全设置并将这些安全设置应用到文档。 它确保只有授权用户才能使用文档。 您可以使用策略保护文档。 策略是包含安全设置和授权用户列表的信息集合。 您可以将策略应用于一个或多个文档，并授权在AEM Forms JEE用户管理中添加的用户。
+AEM Forms文档安全允许您创建、存储和应用预定义的安全设置到文档。 它确保只有授权用户才能使用文档。 您可以使用策略保护文档。 策略是包含安全性设置和授权用户列表的信息集合。 您可以将策略应用于一个或多个文档，并授权在AEM FormsJEE用户管理中添加的用户。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-文档安全性存储与受保护文档相关的策略和数据，包括数据库中的用户数据，如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用户管理中存储的策略中授权用户的数据。 有关存储在用户管理中的数据的信息，请参 [阅表单用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+文档安全性存储与受保护文档相关的策略和数据，包括My Sql、Oracle、MS SQL Server和IBM DB2等数据库中的用户数据。 此外，在用户管理中存储的策略中授权用户的数据。 有关用户管理中存储的数据的信息，请参 [阅Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
-下表映射了文档安全性如何组织数据库表中的数据。
+下表映射了文档安全如何在数据库表中组织数据。
 
 <table>
  <tbody>
@@ -49,11 +51,11 @@ AEM Forms文档安全性允许您创建、存储预定义的安全设置并将�
   </tr>
   <tr>
    <td><p><code>EdcRevokationEntity</code></p> </td>
-   <td>存储有关撤销和恢复受保护文档的信息。</td>
+   <td>存储有关被保护文档撤销和恢复的信息。</td>
   </tr>
   <tr>
    <td><code>EdcMyPolicyListEntity</code></td>
-   <td>存储有关可以创建个人策略的用户的信息，这些策略显示在“策略”页的“我的策略”选项卡下。 </td>
+   <td>存储有关用户的信息，这些用户可以创建出现在“策略”页的“我的策略”选项卡下的个人策略。 </td>
   </tr>
   <tr>
    <td><code>EdcPolicyEntity</code></td>
@@ -61,7 +63,7 @@ AEM Forms文档安全性允许您创建、存储预定义的安全设置并将�
   </tr>
   <tr>
    <td><code>EdcPolicyXmlEntity</code></td>
-   <td>存储活动策略的XML文件。 策略XML包含对<sup></sup>与策略关联的用户的主ID的引用。 策略XML存储为Blob对象。</td>
+   <td>存储活动策略的XML文件。 策略XML包<sup></sup>含对与策略关联的用户的主体ID的引用。 策略XML存储为Blob对象。</td>
   </tr>
   <tr>
    <td><code>EdcPolicyArchiveEntity</code></td>
@@ -73,18 +75,18 @@ AEM Forms文档安全性允许您创建、存储预定义的安全设置并将�
   </tr>
   <tr>
    <td><code>EdcInvitedUserEntity</code></td>
-   <td>存储有关受邀用户的信息。</td>
+   <td>存储有关已邀请用户的信息。</td>
   </tr>
  </tbody>
 </table>
 
 ## 访问和删除用户数据 {#access-and-delete-user-data}
 
-您可以访问和导出数据库中用户的文档安全数据，并根据需要永久删除它。
+您可以访问和导出文档库中用户的数据安全数据，如果需要，还可以永久删除它。
 
-要从数据库中导出或删除用户数据，您需要使用数据库客户端连接到数据库，并根据用户的某些个人识别信息找出主体ID。 例如，要使用登录ID检索用户的主体ID，请在数据库上运行 `select` 以下命令。
+要从数据库导出或删除用户数据，您需要使用数据库客户端连接到数据库，并根据用户的某些个人身份信息查找主体ID。 例如，要使用登录ID检索用户的主体ID，请在数据库上运 `select` 行以下命令。
 
-在命 `select` 令中，将 `<user_login_id>` 其替换为要从数据库表检索其主ID的用户的登录 `EdcPrincipalUserEntity` ID。
+在命 `select` 令中，将 `<user_login_id>` 其替换为要从数据库表检索其主体ID的用户的登录 `EdcPrincipalUserEntity` ID。
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -94,11 +96,11 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 ### 导出用户数据 {#export-user-data}
 
-运行以下数据库命令，从数据库表中导出主体ID的用户数据。 在命 `select` 令中，替 `<principal_id>` 换为要导出其数据的用户的主ID。
+运行以下数据库命令，从数据库表中导出主体ID的用户数据。 在命 `select` 令中， `<principal_id>` 替换为要导出其数据的用户的主体ID。
 
 >[!NOTE]
 >
->以下命令在My SQL和IBM DB2数据库中使用数据库表名。 在Oracle和MS SQL数据库上运行这些命令时，请 `EdcPolicySetPrincipalEntity` 替换 `EdcPolicySetPrincipalEnt` 为命令。
+>以下命令在My SQL和IBM DB2数据库中使用数据库表名。 在Oracle和MS SQL数据库上运行这些命令时，请 `EdcPolicySetPrincipalEntity` 替换为 `EdcPolicySetPrincipalEnt` 命令中的命令。
 
 ```sql
 Select * from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -124,16 +126,16 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
->要从表中导出数 `EdcAuditEntity` 据，请使用将 [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) ( [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) )作为参数的EventExportEvents API，以根据、 `principalId``policyId``licenseId`、或导出审核数据。
+>要从表中导出 `EdcAuditEntity` 数据，请使用 [EventManager.exportEvents API，它将EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) 作为参数来导出基于、 [、](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)`principalId``policyId``licenseId`或的审核数据。
 
-要获取系统中某个用户的完整数据，您必须访问并从用户管理数据库中导出数据。 有关详细信息，请参阅 [表单用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+要获取系统中某个用户的完整数据，您必须访问并从用户管理数据库导出数据。 有关详细信息，请参阅 [Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
 ### 删除用户数据 {#delete-user-data}
 
-执行以下操作，从数据库表中删除主体ID的文档安全数据。
+请执行以下操作，从文档库表中删除主体ID的安全数据。
 
 1. 关闭AEM Forms服务器。
-1. 运行以下数据库命令以从数据库表中删除主体ID的数据，以实现文档安全。 在命 `Delete` 令中，替 `<principal_id>` 换为要删除其数据的用户的主ID。
+1. 运行以下数据库命令，从数据库表中删除主体ID的文档，以确保数据安全。 在命 `Delete` 令中， `<principal_id>` 替换为要删除其数据的用户的主体ID。
 
    ```sql
    Delete from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -149,16 +151,17 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   >要从表中删除数 `EdcAuditEntity` 据，请使用将 [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) ( [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) )作为参数的EventDeleteEvents `principalId`.deleteEvents API，以根据、、、或删除审核数据 `policyId``licenseId`。
+   >要从表中删除数 `EdcAuditEntity` 据，请使用 [EventManager.deleteEvents](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API，它将 [EventSearchFilter](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) 作为参数来删除基于、、 `principalId``policyId``licenseId`或的审核数据。
 
-1. 活动策略XML文件和归档策略XML文件分 `EdcPolicyXmlEntity` 别存储 `EdcPolicyArchiveEntity` 在数据库表中。 要从这些表中删除用户的数据，请执行以下操作：
+1. 活动策略XML文件和归档策略XML文件分别 `EdcPolicyXmlEntity` 存储在 `EdcPolicyArchiveEntity` 数据库表中。 要从这些表中删除用户的数据，请执行以下操作：
 
-   1. 打开或表中每行的XMLblob `EdcPolicyXMLEntity` 并 `EdcPolicyArchiveEntity` 提取XML文件。 XML文件与下面所示的文件类似。
+   1. 打开或表中每行的XML blob `EdcPolicyXMLEntity` 并 `EdcPolicyArchiveEntity` 提取XML文件。 XML文件与下面所示的文件类似。
    1. 编辑XML文件以删除主体ID的blob。
    1. 对另一个文件重复步骤1和2。
+
    >[!NOTE]
    >
-   >您必须删除主体ID标记中 `Principal` 的完整blob，否则策略XML可能损坏或无法使用。
+   >必须删除主体ID标记中 `Principal` 的完整blob，否则策略XML可能已损坏或无法使用。
 
    ```xml
    <ns2:Principal PrincipalNameType="USER">
@@ -187,24 +190,26 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    <ns2:Permission PermissionName="ns3:com.adobe.aps.pdf.printLow" Access="ALLOW"/>
    ```
 
-   除了直接从表中删除数 `EdcPolicyXmlEntity` 据外，还有两种方法可以实现此目的：
+   除了直接从表中删除数 `EdcPolicyXmlEntity` 据外，还有两种方法可以实现：
 
    **使用管理控制台**
 
-   1. 以管理员身份登录Forms JEE管理控制台，网址为https://[*server*]:[*port*]/adminui。
-   1. 导航到服 **[!UICONTROL 务>文档安全>策略集]**。
+   1. 以管理员身份登录FormsJEE管理控制台，网址为&#x200B;[*https://*] server [*:port*]/adminui。
+   1. 导航到 **[!UICONTROL 服务>文档安全>策略集]**。
    1. 打开策略集，并从策略中删除用户。
+
    **使用文档安全网页**
 
-   文档具有创建个人策略权限的安全用户可以从其策略中删除用户数据。 为此，请执行以下操作：
+   文档安全用户有权创建个人策略，可以从策略中删除用户数据。 为此，请执行以下操作：
 
-   1. 拥有个人策略的用户登录其文档安全网页https://[*server*]:[*port*]/edc。
-   1. 导航到“服 **[!UICONTROL 务”>“文档安全性”>“我的策略”]**。
-   1. 打开策略，并从策略中删除用户。
+   1. 拥有个人策略的用户登录其文档安全网页&#x200B;[*https://*] server [*:port*]/edc。
+   1. 导航到 **[!UICONTROL 服务>文档安全>我的策略]**。
+   1. 打开策略并从策略中删除用户。
+
    >[!NOTE]
    >
-   >管理员可以使用管理控制台在“服务”>“文档安全”>“我的策略”中搜索、访问和删除其他用户的个 **[!UICONTROL 人策略中的用户数据]** 。
+   >管理员可以使用管理控制台在“服务”>“文档安全”>“我的策略” **[!UICONTROL 中搜索、访问和删除其他用户的个人]** 策略中的用户数据。
 
-1. 从用户管理数据库中删除主体ID的数据。 有关详细步骤，请参阅表 [单用户管理|处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+1. 从用户管理数据库中删除主体ID的数据。 有关详细步骤，请参阅 [Forms用户管理 |处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 1. 开始AEM Forms服务器。
 
