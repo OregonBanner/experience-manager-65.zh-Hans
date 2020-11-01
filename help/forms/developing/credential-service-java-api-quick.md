@@ -1,8 +1,7 @@
 ---
 title: 凭据服务Java API QuickStart(SOAP)
 seo-title: 凭据服务Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 凭据服务Java API QuickStart(SOAP)
 uuid: a00eabfa-3a52-41dd-bcba-c60d00394384
 contentOwner: admin
 content-type: reference
@@ -10,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -22,9 +21,9 @@ ht-degree: 0%
 
 Java API快速开始(SOAP)可用于凭据服务。
 
-[快速开始（SOAP模式）: 使用Java API导入凭据](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API导入凭据](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[快速开始（SOAP模式）: 使用Java API删除凭据](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API删除凭据](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
@@ -36,7 +35,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 >
 >无法使用Web服务执行凭据服务操作。
 
-## 快速开始（SOAP模式）: 使用Java API导入凭据 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API导入凭据 {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
 下面的代码示例导入基于名为cred.p12 *的文件的凭据*。 用于导入凭据的别名值为 `Secure`。 (请参 [阅使用Trust Manager API导入凭据](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)。)
 
@@ -137,7 +136,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）: 使用Java API删除凭据 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API删除凭据 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
 下面的代码示例根据别名值安全删除凭 *据*。 (请参 [阅使用Trust Manager API删除凭据](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api)。)
 
