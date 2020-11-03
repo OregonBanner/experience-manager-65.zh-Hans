@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1825'
 ht-degree: 32%
 
 ---
@@ -29,7 +29,7 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/manage-assets.md)。
+>有关资产用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md)。
 
 ## 快速开始:旋转集 {#quick-start-spin-sets}
 
