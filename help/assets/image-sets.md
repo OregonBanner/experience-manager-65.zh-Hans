@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2072'
 ht-degree: 45%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 45%
 
 图像集由带有单词的横幅来指定 `IMAGESET`。 此外，如果图像集已发布，则横幅上会显示由 **[!UICONTROL World]** 图标指示的发布日期以及由铅笔图标指示的上次修改日期 **** 。
 
-![chlimage_1-133](assets/chlimage_1-339.png)
+![chlimage_1-135](assets/chlimage_1-339.png)
 
 在图像集中，您还可以通过创建图像集并添加缩略图来创建色板。
 
@@ -33,7 +33,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/manage-assets.md)。
+>有关资产用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md)。
 
 ## 快速入门：图像集 {#quick-start-image-sets}
 
