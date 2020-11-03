@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4803'
 ht-degree: 20%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 20%
    * [在AEM中向网站添加传送横幅](/help/assets/adding-dynamic-media-assets-to-pages.md) 如果您是AEM Sites客户，可以使用交互式媒体组件将传送集直接添加到AEM的页面。
 
 
-If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carousel-sets) 此外，您还可以视图和编 [辑传送集属性](https://docs.adobe.com/content/help/en/experience-manager-65/assets/managing/managing-assets-touch-ui.html#editing-properties)。
+If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carousel-sets) 此外，您还可以视图和编 [辑传送集属性](manage-assets.md#editing-properties)。
 
 ## 识别热点和图像映射变量 {#identifying-hotspot-and-image-map-variables}
 
