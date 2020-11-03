@@ -1,9 +1,9 @@
 ---
-title: '[!DNL资产] HTTP API。'
+title: '[!DNL Assets] HTTP API。'
 description: 使用中的HTTP API创建、读取、更新、删除和管理数字资产 [!DNL Adobe Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: add8be813ce377384ee4d90600f54a1455a1ab0d
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -183,7 +183,7 @@ HTTP [!DNL Assets] API包括以下功能：
 
 ### 在命名空间和之间同步元 `dc` 数据更 `jcr` 新 {#sync-metadata-between-namespaces}
 
-API方法更新命名空间中的元数据属 `jcr` 性。 使用触屏UI进行的更新更改了命名空间中的元数据属 `dc` 性。 要在命名空间和之间 `dc` 同步元 `jcr` 数据值，您可以创建工作流并配置Experience Manager以在资产编辑时执行该工作流。 使用ECMA脚本同步所需的元数据属性。 以下示例脚本将标题字符串同步在 `dc:title` 和之 `jcr:title`间。
+API方法更新命名空间中的元数据属 `jcr` 性。 使用用户界面进行的更新更改了命名空间中的元数据属 `dc` 性。 要在命名空间和之间 `dc` 同步元 `jcr` 数据值，您可以创建工作流并配置Experience Manager以在资产编辑时执行该工作流。 使用ECMA脚本同步所需的元数据属性。 以下示例脚本将标题字符串同步在 `dc:title` 和之 `jcr:title`间。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
