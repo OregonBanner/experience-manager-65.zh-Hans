@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1465'
 ht-degree: 38%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参 [阅使用触屏UI管理资产](/help/assets/manage-assets.md)。
+>有关资产用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md)。
 
 ## 快速入门：混合媒体集 {#quick-start-mixed-media-sets}
 
