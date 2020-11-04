@@ -3,9 +3,9 @@ title: 下载资产
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 6%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 6%
 
 要下载资产，请按照以下步骤操作：
 
-1. 在AEM的左上角，点按AEM徽标，然后在左边栏中，点按导 **[!UICONTROL 航]**。
-1. 在导航页面上，点按资 **[!UICONTROL 产]** >文 **[!UICONTROL 件。]**
+1. 在左上角，单击标志。 In the left rail, click **[!UICONTROL Navigation]**.
+1. 在导航页 [!UICONTROL 面] ，单击“资 **[!UICONTROL 产]** ”>“ **[!UICONTROL 文件”。]**
 1. 导航到包含要下载的资产的文件夹。
 1. 选择文件夹，或在文件夹中选择一个或多个资产。
-1. On the toolbar, tap **[!UICONTROL Download.]**
+1. 在工具栏中，单击“ **[!UICONTROL 下载”。]**
 
    ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download1.png)
 
@@ -44,7 +44,7 @@ ht-degree: 6%
    | **[!UICONTROL 智能裁剪]** | 选择此选项可从AEM中下载选定资产的所有智能裁剪演绎版。 系统会创建包含智能裁剪演绎版的zip文件，并将其下载到您的本地计算机。 |
    | **[!UICONTROL 动态演绎版]** | 选择此选项可实时生成一系列替代再现。 When you select this option, you also select the renditions that you want to create dynamically by selecting from the [Image Preset](image-presets.md) list. <br>此外，您还可以选择大小和度量单位、格式、色彩空间、分辨率以及任何可选的图像修饰符（如反转图像）。 此选项仅在您已启用的情况下才 [!DNL Dynamic Media] 可用。 |
 
-1. 在对话框中，点按下 **[!UICONTROL 载。]**.
+1. 在对话框中，单击“ **[!UICONTROL 下载”]**。
 
 当您选择要下载的文件夹时，将下载该文件夹下的完整资产层次结构。 要将您下载的每个资产（包括嵌套在父文件夹下的子文件夹中的资产）包含在单个文件夹中，请选 **[!UICONTROL 择为每个资产创建单独的文件夹]**。
 
