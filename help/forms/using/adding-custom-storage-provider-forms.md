@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Forms允许您将表单另存为草稿。 使用草稿功能，您可以维护一个进行中的表单，您可以从任何设备完成并稍后提交。
 
-默认情况下，AEM Forms将与表单的草稿和提交关联的用户数据存储在Publish实 `/content/forms/fp` 例的节点中。 此外，AEM Forms门户组件提供数据服务，您可以使用它自定义为草稿和提交存储用户数据的实现。 例如，您可以将用户数据存储在数据存储中。
+默认情况下，AEM Forms将与表单草稿和提交相关的用户数据存储在Publish实 `/content/forms/fp` 例的节点中。 此外，AEM Forms门户组件提供数据服务，您可以使用这些服务来自定义为草稿和提交文件存储用户数据的实施。 例如，您可以将用户数据存储在数据存储中。
 
 ## 前提条件  {#prerequisites}
 
@@ -96,6 +96,10 @@ public interface DraftDataService {
     public byte[] getAttachment (String attachmentID) throws FormsPortalException;
 }
 ```
+
+>[!NOTE]
+>
+>草稿ID字段长度的最小值为26个字符。 Adobe建议将草稿ID长度设置为26个或更多字符。
 
 ## 提交数据服务 {#submission-data-service}
 
@@ -184,7 +188,7 @@ public interface SubmitDataService {
 }
 ```
 
-表单门户使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成唯一ID。 您还可以生成自己的唯一ID。 您可以实现接口FPKeyGeneratorService，覆盖其方法，并开发自定义逻辑以为每个草稿和提交的表单生成一个自定义唯一ID。 此外，将自定义ID生成实现的服务等级设置为大于0。 它确保使用自定义实现而不是默认实现。
+Forms门户使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成唯一ID。 您还可以生成自己的唯一ID。 您可以实现接口FPKeyGeneratorService，覆盖其方法，并开发自定义逻辑以为每个草稿和提交的表单生成一个自定义唯一ID。 此外，将自定义ID生成实现的服务等级设置为大于0。 它确保使用自定义实现而不是默认实现。
 
 ```java
 public interface FPKeyGeneratorService {
