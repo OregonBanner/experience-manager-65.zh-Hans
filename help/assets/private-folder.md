@@ -3,10 +3,10 @@ title: 用于共享资产的专用文件夹
 description: 了解如何在中创建专用文件 [!DNL Adobe Experience Manager Assets] 夹并与其他用户共享该文件夹，以及为他们分配各种权限。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 7%
+source-wordcount: '572'
+ht-degree: 3%
 
 ---
 
@@ -47,11 +47,11 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >对于您向其共享文件夹的用户，您可以分配各种角色，例如“编辑者”‘、“所有者”或“查看者”。如果为用户分配了“所有者”角色，则用户对该文件夹具有“编辑者”权限。 此外，用户还可以与他人共享文件夹。 如果您分配了“编辑者”角色，则用户可以编辑您的专用文件夹中的资产。 如果您分配了查看器角色，则用户只能视图您的专用文件夹中的资产。
+   >You can assign various roles, such as `Editor`, `Owner`, or `Viewer` to the user with whom you share the folder. 如果您为用 `Owner` 户分配了角色，则用户对该文 `Editor` 件夹具有权限。 此外，用户还可以与他人共享文件夹。 If you assign an `Editor` role, the user can edit the assets in your private folder. 如果您分配了查看器角色，则用户只能视图您的专用文件夹中的资产。
 
    >[!NOTE]
    >
-   >专用文件夹至少有一个具有所有者角色的成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
+   >专用文件夹至少有一个具有角色的 `Owner` 成员。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须将其他用户添加为所有者。
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。Depending on the role you assign, the user is assigned a set of privileges on your private folder when the user logs in to [!DNL Assets].
 1. 单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭确认消息。
@@ -59,7 +59,7 @@ ht-degree: 7%
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
-1. 单击“通知”以打开通知列表。
+1. 单击 [!UICONTROL “通知] ”以打开通知列表。
 
    ![通知列表](assets/Assets-Notification.png)
 
@@ -83,4 +83,4 @@ ht-degree: 7%
 >
 >如果使用上述方法从用户界面删除文件夹，则关联的用户组也会被删除。
 >
->但是，在创作实例()的JMX中，可以使用方法从存储库中清 `clean` 除现有的冗余、未使用和自动生成的`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`用户组。
+>但是，可以使用创作实例()中JMX中的方法，将现有的冗余、未使 `clean` 用和自动生成的用户组从存储库中`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`删除。
