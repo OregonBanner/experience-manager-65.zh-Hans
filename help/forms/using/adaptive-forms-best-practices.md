@@ -1,16 +1,16 @@
 ---
 title: 使用自适应表单的最佳实践
 seo-title: 使用自适应表单的最佳实践
-description: 介绍设置AEM Forms项目、开发自适应表单和优化AEM Forms系统性能的最佳实践。
-seo-description: 介绍设置AEM Forms项目、开发自适应表单和优化AEM Forms系统性能的最佳实践。
+description: 解释设置AEM Forms项目、开发自适应表单和优化AEM Forms系统性能的最佳实践。
+seo-description: 解释设置AEM Forms项目、开发自适应表单和优化AEM Forms系统性能的最佳实践。
 uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 translation-type: tm+mt
-source-git-commit: d5efcec4a0397d99c899643ff13a883a0ed02c81
+source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
 workflow-type: tm+mt
-source-wordcount: '4249'
+source-wordcount: '4296'
 ht-degree: 0%
 
 ---
@@ -20,16 +20,16 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简单愉快的数字体验。 但是，它需要齐心协力来实施、构建、执行和维护一个高效和高效的AEM Forms生态系统。
+Adobe Experience Manager(AEM)表单可以帮助您将复杂的交易转变为简单、愉悦的数字体验。 但是，它需要协调一致地努力来实施、建立、执行和维护一个高效和富有成效的AEM Forms生态系统。
 
-本文档提供了管理员、作者和开发人员在使用AEM Forms（特别是自适应表单组件）时可从中受益的准则和建议。 它讨论从设置表单开发项目到配置、自定义、创作和优化AEM Forms的最佳实践。 这些最佳做法共同有助于AEM Forms生态系统的整体性能。
+本文档提供了管理员、作者和开发人员在与AEM Forms协作时可从中受益的准则和建议，尤其是自适应表单组件。 它讨论了从设置表单开发项目到配置、自定义、创作和优化AEM Forms的最佳实践。 这些最佳做法共同有助于AEM Forms生态系统的整体绩效。
 
-此外，以下是一般AEM最佳实践的推荐读取内容：
+此外，以下是一般AEM最佳实践的推荐读法：
 
-* [最佳实践： 部署和维护AEM](/help/sites-deploying/best-practices.md)
-* [最佳实践： 创作内容](/help/sites-authoring/best-practices.md)
-* [最佳实践： 管理AEM](/help/sites-administering/administer-best-practices.md)
-* [最佳实践： 开发解决方案](/help/sites-developing/best-practices.md)
+* [最佳实践：部署和维护AEM](/help/sites-deploying/best-practices.md)
+* [最佳实践：创作内容](/help/sites-authoring/best-practices.md)
+* [最佳实践：管理AEM](/help/sites-administering/administer-best-practices.md)
+* [最佳实践：开发解决方案](/help/sites-developing/best-practices.md)
 
 ## 设置和配置AEM Forms {#set-up-and-configure-aem-forms}
 
@@ -37,7 +37,7 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 
 简化和标准化的项目结构可以显着减少开发和维护工作。 Apache Maven是建立AEM项目时推荐的开放源码工具。
 
-* 使用Apache Maven `aem-project-archetype` 为AEM项目创建和管理结构。 它为您的AEM项目创建推荐的结构和模板。 此外，它还提供构建自动化和更改控制系统以帮助管理项目。
+* 使用Apache Maven `aem-project-archetype` 为AEM项目创建和管理结构。 它为AEM项目创建推荐的结构和模板。 此外，它还提供构建自动化和更改控制系统以帮助管理项目。
 
    * 使用maven命 `archetype:generate` 令生成初始结构。
    * 使用 `eclipse:eclipse` maven命令生成eclipse项目文件并将项目导入eclipse。
@@ -46,7 +46,7 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 
 * FileVault工具或VLT可帮助您将CRX或AEM实例的内容映射到文件系统。 它提供变更控制管理操作，如AEM项目内容的登记和注销。 请参 [阅如何使用VLT工具](/help/sites-developing/ht-vlttool.md)。
 
-* 如果您使用Eclipse集成开发环境，则可以使用AEM开发人员工具将Eclipse IDE与AEM实例无缝集成以创建AEM应用程序。 有关详细信息，请 [参阅适用于Eclipse的AEM开发人员工具](/help/sites-developing/aem-eclipse.md)。
+* 如果您使用Eclipse集成开发环境，则可以使用AEM开发人员工具将Eclipse IDE与AEM实例无缝集成以创建AEM应用程序。 有关详细信息，请 [参阅AEM Eclipse开发人员工具](/help/sites-developing/aem-eclipse.md)。
 
 * 请勿在/libs文件夹中存储任何内容或进行任何修改。 在/app文件夹中创建叠加以扩展或覆盖默认功能。
 
@@ -62,13 +62,13 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 
 设置AEM项目后，请定义用于创作和自定义自适应表单模板和组件的策略。
 
-* 自适应表单模板是一个专用的AEM页面，它定义自适应表单的结构和页眉和页脚信息。 模板具有预配置的自适应表单布局、样式和基本结构。 AEM Forms提供现成的模板和组件，您可以使用这些模板和组件创作自适应表单。 但是，您可以根据需要创建自定义模板和组件。 建议收集您在自适应表单中需要的其他模板和组件的要求。 有关详细信息，请 [参阅自定义自适应表单和组件](/help/forms/using/adaptive-forms-best-practices.md#customize-components)。
-* AEM Forms允许您根据以下表单模型创建自适应表单。 表单模型充当表单与AEM系统之间数据交换的接口，为自适应表单内外的数据流提供基于XML的结构。 此外，表单模型以模式和XFA约束的形式对自适应表单施加规则和约束。
+* 自适应表单模板是一个专门的AEM页面，它定义自适应表单的结构和页眉和页脚信息。 模板具有预配置的自适应表单布局、样式和基本结构。 AEM Forms提供现成的模板和组件，您可以使用这些模板和组件创作自适应表单。 但是，您可以根据需要创建自定义模板和组件。 建议收集您在自适应表单中需要的其他模板和组件的要求。 有关详细信息，请 [参阅自定义自适应表单和组件](/help/forms/using/adaptive-forms-best-practices.md#customize-components)。
+* AEM Forms允许您根据以下表单模型创建自适应表单。 表单模型充当表单与AEM系统之间数据交换的接口，并为自适应表单内外的数据流提供基于XML的结构。 此外，表单模型以模式和XFA约束的形式对自适应表单施加规则和约束。
 
-   * **无**: 使用此选项创建的自适应表单不使用任何表单模型。 从这种表单生成的数据XML具有带字段和相应值的平面结构。
-   * **XML或JSON模式**: XML和JSON模式表示组织中的后端系统生成或使用数据的结构。 您可以将模式与自适应表单关联，并使用其元素将动态内容添加到自适应表单。 模式的元素位于内容浏览器的“数据模型对象”选项卡中，用于创作自适应表单。 您可以拖放模式元素以构建表单。
-   * **XFA表单模板**: 如果您对基于XFA的HTML5表单有投资，它是理想的表单模型。 它提供了一种将基于XFA的表单转换为自适应表单的直接方法。 任何现有的XFA规则都将保留在关联的自适应表单中。 生成的自适应表单支持XFA构造，如验证、事件、属性和模式。
-   * **表单数据模型**: 如果您希望集成后端系统(如数据库、Web服务和AEM用户用户档案)来预填自适应表单并将提交的表单数据写入后端系统，则此表单模型是首选的。 表单数据模型编辑器允许您在表单数据模型中定义和配置实体和服务，您可以使用该模型创建自适应表单。 有关详细信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md)。
+   * **无**:使用此选项创建的自适应表单不使用任何表单模型。 从这种表单生成的数据XML具有带字段和相应值的平面结构。
+   * **XML或JSON模式**:XML和JSON模式表示组织中的后端系统生成或使用数据的结构。 您可以将模式与自适应表单关联，并使用其元素将动态内容添加到自适应表单。 模式的元素位于内容浏览器的“数据模型对象”选项卡中，用于创作自适应表单。 您可以拖放模式元素以构建表单。
+   * **XFA表单模板**:如果您对基于XFA的HTML5表单有投资，它是理想的表单模型。 它提供了一种将基于XFA的表单转换为自适应表单的直接方法。 任何现有的XFA规则都将保留在关联的自适应表单中。 生成的自适应表单支持XFA构造，如验证、事件、属性和模式。
+   * **表单数据模型**:如果您希望集成后端系统(如数据库、Web服务和AEM用户用户档案)以预填自适应表单并将提交的表单数据写入后端系统，则它是首选的表单模型。 表单数据模型编辑器允许您在表单数据模型中定义和配置实体和服务，您可以使用该模型创建自适应表单。 有关详细信息，请参阅 [AEM Forms数据集成](/help/forms/using/data-integration.md)。
 
 请务必仔细选择不仅符合您的要求，而且扩展您在XFA和XSD资产中的现有投资（如果有）的数据模型。 建议使用XSD模型创建表单模板，因为生成的XML包含由模式定义的XPATH的数据。 使用XSD模型作为表单数据模型的默认选择也有帮助，因为它将表单设计从后端系统分离出来，后端系统处理和消耗数据，并且由于表单字段的一到一映射，它改善了表单的性能。 此外，字段的BindRef可以作为XML中其数据值的XPATH。
 
@@ -78,7 +78,7 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 
 ### 自定义自适应表单和组件 {#customize-components}
 
-* AEM Forms提供现成的自适应表单模板，您可以使用这些模板创建自适应表单。 您还可以创建自己的模板。 AEM提供静态和可编辑的模板。
+* AEM Forms提供现成的自适应表单模板，您可以使用这些模板创建自适应表单。 您还可以创建自己的模板。 AEM提供静态和可编辑模板。
 
    * 静态模板由开发人员定义和配置。
    * 可编辑的模板由作者使用模板编辑器创建。 模板编辑器允许您定义模板中的基本结构和初始内容。 结构层中的任何修改都会反映在使用该模板的所有表单中。 初始内容可以包括预配置主题、预填服务、提交操作等。 但是，可以使用表单编辑器修改表单的这些设置。 有关详细信息，请参 [阅自适应表单模板](/help/forms/using/template-editor.md)。
@@ -90,7 +90,7 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 * 自适应表单提供面板布局，如响应式、选项卡式、折叠式和向导，以控制表单组件在面板中的布局方式。 您可以创建自定义面板布局并使它们可供表单作者使用。 有关详细信息，请参 [阅为自适应表单创建自定义布局组件](/help/forms/using/custom-layout-components-forms.md)。
 * 您还可以自定义特定的自适应表单组件，如字段和面板布局。
 
-   * 使用 [AEM的](/help/sites-developing/overlays.md) “叠加”功能修改组件的副本。 不建议修改默认组件。
+   * 使用 [AEM](/help/sites-developing/overlays.md) 的“叠加”功能可修改组件的副本。 不建议修改默认组件。
    * 要在/libs中自定义现成自适应表单组件的布局，除了默认布 [局外，还要创建自定](/help/forms/using/custom-layout-components-forms.md) 义布局组 [件，以创](/help/forms/using/layout-capabilities-adaptive-forms.md)建自定义布局。
    * 通过创建自定义构件或外观引入自定义交互活动。 不建议修改默认组件。 有关详细信息，请参阅 [外观框架](/help/forms/using/introduction-widgets.md)。
 
@@ -102,7 +102,7 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 
 * 使用提要栏中的对象浏览器快速访问表单层次结构中的深层字段。 您可以使用搜索框在表单或对象树中搜索对象，以便从一个对象导航到另一个对象。
 * 要在提要栏中的组件浏览器中视图和编辑组件的属性，请选择该组件，然 ![后单击cmppr-1](assets/cmppr-1.png)。 您还可以多次单击组件，在属性浏览器中视图其属性。
-* 使用键盘快捷键对表单执行快速操作。 请参 [阅AEM Forms键盘快捷键](/help/forms/using/keyboard-shortcuts.md)。
+* 使用键盘快捷键对表单执行快速操作。 请参阅 [AEM Forms键盘快捷键](/help/forms/using/keyboard-shortcuts.md)。
 
 * 建议仅在自适应表单页面中使用自适应表单组件。 这些组件对其父层次结构具有依赖关系。 因此，请勿在AEM页面中使用它们。
 
@@ -110,7 +110,7 @@ Adobe Experience Manager(AEM)表单可以帮助您将复杂的事务转变为简
 
 ### 在自适应表单中使用规则 {#using-rules-in-adaptive-forms}
 
-AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) ，允许您创建规则，将动态行为添加到自适应表单组件。 使用这些规则，您可以评估条件并触发对组件的操作，如显示或隐藏字段、计算值、动态更改下拉列表等。
+AEM Forms提供 [了规则编辑](/help/forms/using/rule-editor.md) 器，它允许您创建规则以向自适应表单组件添加动态行为。 使用这些规则，您可以评估条件并触发对组件的操作，如显示或隐藏字段、计算值、动态更改下拉列表等。
 
 规则编辑器提供了用于编写规则的可视编辑器和代码编辑器。 使用代码编辑器模式编写规则时，请考虑以下事项：
 
@@ -122,15 +122,15 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) ，允许您
 * 按相对唯一层次结构引用组件以避免任何冲突。 For example, `parentName.fieldName`.
 
 * 处理复杂或常用的规则时，请考虑将业务逻辑编写为单独的客户端库中的函数，您可以在自适应表单中指定和重用这些函数。 客户端库应为自包含库，除jQuery和Downloader.js外，不应具有任何外部依赖关系。 您还可以使用客户端库强制 [对已提交的表单](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 数据进行服务器端重新验证。
-* 自适应表单提供一组API，您可以使用这些API与自适应表单通信并对其执行操作。 一些关键API如下。 有关详细信息，请 [参阅自适应表单的JavaScript库API参考](https://adobe.com/go/learn_aemforms_documentation_63)。
+* 自适应表单提供一组API，您可以使用这些API与自适应表单通信并对其执行操作。 一些关键API如下。 有关详细信息，请参 [阅适应Forms的JavaScript库API参考](https://adobe.com/go/learn_aemforms_documentation_63)。
 
-   * `guideBridge.reset()`: 重置表单。
-   * `guideBridge.submit()`: 提交表单。
-   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`: 将焦点设置到字段。
-   * `guideBridge.validate(errorList, somExpression, focus)`: 验证表单。
-   * `guideBridge.getDataXML(options)`: 将表单数据获取为XML。
-   * `guideBridge.resolveNode(somExpression)`: 获取表单对象。
-   * `guideBridge.setProperty(somList, propertyName, valueList)`: 设置表单对象的属性。
+   * `guideBridge.reset()`:重置表单。
+   * `guideBridge.submit()`:提交表单。
+   * `guideBridge.setFocus(somExp, focusOption, runCompletionExp)`:将焦点设置到字段。
+   * `guideBridge.validate(errorList, somExpression, focus)`:验证表单。
+   * `guideBridge.getDataXML(options)`:将表单数据获取为XML。
+   * `guideBridge.resolveNode(somExpression)`:获取表单对象。
+   * `guideBridge.setProperty(somList, propertyName, valueList)`:设置表单对象的属性。
    * 此外，您还可以使用以下字段属性：
 
       * `field.value` 更改字段的值。
@@ -195,9 +195,9 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) ，允许您
 * 如果默认提交操作不符合您的用例，您可以编写自定义提交操作。 有关详细信息，请参 [阅编写自适应表单的自定义提交操作](/help/forms/using/custom-submit-action-form.md)。
 * 包括服务器端验证，以防止提交无效的数据。
 
-您可以在自适应表单中利用Adobe Sign的多签名体验。 在自适应表单中配置Adobe Sign时，请考虑以下事项。 有关详细信息， [请参阅在自适应表单中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md)。
+您可以采用自适应表单来利用Adobe Sign的多签名体验。 在自适应表单中配置Adobe Sign时，请考虑以下事项。 有关详细信息，请 [参阅在自适应表单中使用Adobe Sign](/help/forms/using/working-with-adobe-sign.md)。
 
-* 只有在所有签名者都对表单进行了签名后，才会提交启用Adobe Sign的自适应表单。 表单以“待签名”状态显示，直到所有签名者对表单进行签名。
+* Adobe Sign启用的自适应表单只有在所有签署者都已签署表单后才能提交。 Forms在表单由所有签名者签名之前一直处于“待签名”状态。
 * 您可以在提交时配置表单内签名体验或将签名者重定向到签名页面。
 * 根据需要配置顺序或并行签名体验。
 
@@ -207,9 +207,9 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) ，允许您
 
 * 根据自适应表单所基于的表单数据模型，您可以按如下方式为DoR配置模板：
 
-   * **XFA表单模板**: 将关联的XDP文件用作DoR模板。
-   * **XSD模式**: 使用与自适应表单使用的相同XML模式的关联XFA模板。
-   * **无**: 使用自动生成的DoR。
+   * **XFA表单模板**:将关联的XDP文件用作DoR模板。
+   * **XSD模式**:使用与自适应表单使用的相同XML模式的关联XFA模板。
+   * **无**:使用自动生成的DoR。
 
 * 直接从自适应表单编辑器的“记录”选项卡的“文档”中配置页眉、页脚、图像、颜色、字体等。
 * 使用 `DoRService` 以编程方式生成DoR。
@@ -228,7 +228,7 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) ，允许您
 
 有关详细信息，请 [参阅AEM Chrome插件——自适应表单](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)。
 
-Calvin SDK是供自适应表单开发者测试自适应表单的实用程序API。 Calvin SDK建立在Hobbes.js测 [试框架之上](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)。 您可以使用框架测试以下内容：
+Calvin SDK是供自适应Forms开发人员测试自适应Forms的实用程序API. Calvin SDK建立在Hobbes.js测 [试框架之上](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)。 您可以使用框架测试以下内容：
 
 * 自适应表单的再现体验
 * 自适应表单的预填体验
@@ -248,7 +248,7 @@ Calvin SDK是供自适应表单开发者测试自适应表单的实用程序API�
 
 ### 本地化自适应表单 {#localizing-adaptive-forms}
 
-AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有关信息，请参 [阅使用AEM翻译工作流程本地化自适应表单](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
+AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有关信息，请参 [阅使用AEM转换工作流程本地化自适应表单](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
 本地化自适应表单时的一些最佳实践如下：
 
@@ -258,7 +258,7 @@ AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有�
 
    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-* AEM Forms目前支持本地化适应表单内容，语言版本有英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、巴西葡萄牙语(pt-BR)、中文(zh-CN)、中国台湾地区(zh-TW)和韩语(ko-KR)。 但是，您可以在运行时为自适应表单添加新区域设置支持。 有关详细信息，请参 [阅支持自适应表单本地化的新语言环境](/help/forms/using/supporting-new-language-localization.md)。
+* AEM Forms目前支持本地化适应表单内容，语言版本有英语(en)、西班牙语(es)、法语(fr)、意大利语(it)、德语(de)、日语(ja)、巴西葡萄牙语(pt-BR)、中文(zh-CN)、中国台湾(zh-TW)和韩语(ko-KR)。 但是，您可以在运行时为自适应表单添加新区域设置支持。 有关详细信息，请参 [阅支持自适应表单本地化的新语言环境](/help/forms/using/supporting-new-language-localization.md)。
 
 ## 为生产准备表单项目 {#prepare-forms-project-for-production}
 
@@ -266,8 +266,8 @@ AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有�
 
 您可以配置位于安全区域中防火墙后的AEM Forms服务器的其他实例。 您可以将此实例用于：
 
-* **批处理**: 重负荷批量重复或计划的作业。 例如，打印语句、生成对应项以及使用文档服务（如PDF Generator、Output和Assembler）。
-* **存储PII数据**: 在处理服务器上保存PII数据。 如果您已使用自定义存储提供程序存储PII数据，则不需要此设置。
+* **批处理**:重负荷批量重复或计划的作业。 例如，打印语句、生成对应项以及使用文档服务（如PDF Generator、Output和Assembler）。
+* **存储PII数据**:在处理服务器上保存PII数据。 如果您已使用自定义存储提供程序存储PII数据，则不需要此设置。
 
 ### 将项目移至其他环境 {#moving-project-to-another-environment}
 
@@ -275,8 +275,8 @@ AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有�
 
 * 备份现有客户端库、自定义代码和配置。
 * 在新环境中按指定顺序手动部署产品包和修补程序。
-* 手动部署项目特定的代码包和捆绑包，并作为新AEM服务器上的单独包或捆绑包部署。
-* (仅&#x200B;*限JEE上的AEM Forms*)在Forms Workflow服务器上手动部署LCA和DSC。
+* 手动部署特定于项目的代码包和捆绑包，并作为单独的包或捆绑在新的AEM服务器上。
+* (仅&#x200B;*AEM Forms在JEE上*)在Forms Workflow服务器上手动部署LCA和DSC。
 * 使 [用导出](/help/forms/using/import-export-forms-templates.md) -导入功能将资产移至新环境。 您还可以配置复制代理并发布资产。
 * 升级时，请用新的API和功能替换所有已弃用的API和功能。
 
@@ -285,14 +285,14 @@ AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有�
 配置AEM以改进总体性能的一些最佳实践如下：
 
 * 从Felix控制台启用JavaScript和CSS的HTML客户端库压缩。 请参 [阅示例说明的Clientlibs](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)。
-* 在AEM调度程序上缓存 `/etc.clientlibs/fd` 所有客户端库和任何其他自定义客户端库，以提高已发布表单的响应性和安全性。 有关详细信息，请参阅 [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+* 在AEM dispatcher上缓存所 `/etc.clientlibs/fd` 有客户端库和任何其他自定义客户端库，以提高已发布表单的响应性和安全性。 有关详细信息，请参 [阅Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
 * 不缓存 `/content/forms/af/` 和 `/content/dam/formsanddocuments/*` 路径。 有关配置自适应表单缓存的详细信息，请参 [阅缓存自适应表单](/help/forms/using/configure-adaptive-forms-cache.md)。
 
 * 通过Web服务器压缩模块启用HTML。 有关详细信息，请参 [阅AEM Forms服务器的性能调整](/help/forms/using/performance-tuning-aem-forms.md)。
 * 增加大型表单的每个请求配置调用数。 请参 [阅优化大型和复杂表单的性能](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms)。
 * 创建 [由错误处理程序显示的自定义错误页](https://helpx.adobe.com/experience-manager/6-2/sites-developing/customizing-errorhandler-pages.html)。
-* 安全AEM Forms服务器。
+* 保护AEM Forms服务器。
 
    * 使用 `nosamplecontent` 运行模式确保生产服务器上没有部署示例内容和示例用户。 请参 [阅在生产就绪模式下运行AEM](/help/sites-administering/production-ready.md)。
 
@@ -303,17 +303,19 @@ AEM提供翻译工作流，您可以使用它来本地化自适应表单。 有�
 
 ### 为草稿和已提交的表单存储配置外部数据 {#external-storage}
 
-在生产环境中，建议不要将提交的表单数据存储在AEM存储库中。 Forms Portal Store、Store Content和Store PDF提交操作的默认实现将表单数据存储在AEM存储库中。 这些提交操作仅用于演示目的。 此外，默认情况下，“保存并恢复”和“自动保存”功能使用门户存储。 因此，请考虑以下建议：
+在生产环境中，建议不要将提交的表单数据存储在AEM存储库中。 Forms门户商店、商店内容和商店PDF提交操作的默认实施将表单数据存储在AEM存储库中。 这些提交操作仅用于演示目的。 此外，默认情况下，“保存并恢复”和“自动保存”功能使用门户存储。 因此，请考虑以下建议：
 
-* **存储草稿数据**: 如果您使用自适应表单的“草稿”功能，则应实现自定义服务提供接口(SPI)，以将草稿存储存储在更安全的环境中，如数据库。 有关详细信息，请参 [阅将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)。
+* **存储草稿数据**:如果您使用自适应表单的“草稿”功能，则应实现自定义服务提供接口(SPI)，以将草稿存储存储在更安全的环境中，如数据库。 有关详细信息，请参 [阅将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)。
 
-* **存储提交数据**: 如果您使用表单门户提交存储，则应实现自定义SPI以将提交数据存储在数据库中。 有关 [示例集成，请参阅将草稿和提交组件与数据库](/help/forms/using/integrate-draft-submission-database.md) 集成的示例。
+* **存储提交数据**:如果您使用表单门户提交存储，则应实现自定义SPI以将提交数据存储在数据库中。 有关 [示例集成，请参阅将草稿和提交组件与数据库](/help/forms/using/integrate-draft-submission-database.md) 集成的示例。
 
    您还可以编写自定义提交操作，在安全存储中存储表单数据和附件。 有关详 [细信息，请参阅编写自适应表单的自定](/help/forms/using/custom-submit-action-form.md) 义提交操作。
 
+* **草稿ID的长度**:将自适应表单另存为草稿时，将生成草稿ID以唯一标识草稿。 草稿ID字段长度的最小值为26个字符。 Adobe建议将草稿ID长度设置为26个或更多字符。
+
 ### 处理个人可识别信息 {#handling-personally-identifiable-information}
 
-组织面临的一个主要挑战是如何处理个人身份识别(PII)数据。 帮助您处理此类数据的一些最佳实践如下：
+组织面临的一个主要挑战是如何处理个人可识别(PII)数据。 帮助您处理此类数据的一些最佳实践如下：
 
 * 使用安全、外部存储（如数据库）存储草稿和提交的表单中的数据。 请参 [阅为草稿和提交的表单存储配置外部](/help/forms/using/adaptive-forms-best-practices.md#external-storage)。
 * 使用“条款和条件”表单组件在启用自动保存之前征得用户的明确同意。 在这种情况下，仅当用户同意“条款和条件”组件中的条件时，才启用自动保存。
