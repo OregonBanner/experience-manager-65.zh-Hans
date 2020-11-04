@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
 workflow-type: tm+mt
-source-wordcount: '6050'
+source-wordcount: '6056'
 ht-degree: 25%
 
 ---
@@ -89,7 +89,7 @@ Creating your own Interactive Video viewer preset is not required if you intend 
 1. **将交互式视频添加到您的网站或AEM中的您的网站**&#x200B;如果您使用AEM Sites、AEM电子商务，或同时使用二者，则可以通过将交互式媒体组件拖动到页面上，将交互式视频直接添加到AEM的网页。 See [Adding Dynamic Media Assets to Pages.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 使用嵌入代码或URL将交互式视频与您的网站体验相集成。 See [Integrating an interactive video with your website](#integrating-an-interactive-video-with-your-website).
 如果您使用第三方WCM（Web内容管理器），则必须将新的交互式视频与网站上使用的现有Quickview实现相集成。 请参 [阅将交互式视频与现有Quickview集成](#integrating-an-interactive-video-with-an-existing-quickview)。
-   [](/help/assets/adding-dynamic-media-assets-to-pages.md)
+   [将 Dynamic Media 资产添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## （可选）识别概览变量 {#optional-identifying-quickview-variables}
 
