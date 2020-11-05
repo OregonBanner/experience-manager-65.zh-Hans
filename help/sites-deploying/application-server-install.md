@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: 316e53720071da41cc4ac5ae62c280ad3804a8f4
+source-git-commit: 0a082d3cff66b82ef6de551a735a16a001446a1e
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 >`JAR` 以 `WAR` 及AEM是否在中发布文件类型。 这些格式正在进行质量保证，以满足Adobe承诺的支持级别。
 
 
-本节将告诉您如何与应用程序服务器一起安装Adobe Experience Manager(AEM)。 请查阅支 [持的平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) (Supported Platforms)部分，了解为各个应用程序服务器提供的特定支持级别。
+本节将告诉您如何将Adobe Experience Manager(AEM)与应用程序服务器一起安装。 请查阅支 [持的平台](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) (Supported Platforms)部分，了解为各个应用程序服务器提供的特定支持级别。
 
 介绍了以下应用程序服务器的安装步骤：
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您在WAR部署中使用Dynamic Media，请参阅动态 [媒体文档](/help/assets/config-dynamic.md#enabling-dynamic-media)。
+>如果您在WAR部署中使用Dynamic Media，请参阅 [Dynamic Media文档](/help/assets/config-dynamic.md#enabling-dynamic-media)。
 
 ## 一般说明 {#general-description}
 
@@ -57,11 +57,11 @@ AEM是一个要部署的战争文件。
 
 可以通过以下方式更改默认行为：
 
-* 运行模式： 在部署 `sling.run.modes` 之前，在AEM `WEB-INF/web.xml` war文件的文件中配置参数
+* 运行模式：在部署 `sling.run.modes` 之前，在AEM `WEB-INF/web.xml` war文件的文件中配置参数
 
-* sling.home: 在部署 `sling.home` 前在AEM `WEB-INF/web.xml`war文件的文件中配置参数
+* sling.home:在部署 `sling.home` 前在AEM `WEB-INF/web.xml`war文件的文件中配置参数
 
-* 上下文根： 重命名AEM war文件
+* 上下文根：重命名AEM war文件
 
 #### 发布安装 {#publish-installation}
 
@@ -88,8 +88,8 @@ AEM是一个要部署的战争文件。
 1. 将sling.home参数更改为其他路径（可以使用绝对路径和相对路径）。
 1. 将sling.run.modes更改为发布实例。
 1. 重新打包web.xml文件。
-1. 重命名war文件，使它们具有不同的名称： 例如，一个重命名为aemmauthor.war，另一个重命名为aempublish.war。
-1. 使用较高的内存设置，例如，对于默认AEM实例，请使用如： -Xmx3072m
+1. 重命名war文件，使它们具有不同的名称：例如，一个重命名为aemmauthor.war，另一个重命名为aempublish.war。
+1. 使用较高的内存设置，例如，对于默认AEM实例，请使用如：-Xmx3072m
 1. 部署两个Web应用程序。
 1. 部署后停止两个Web应用程序。
 1. 在作者实例和发布实例中，确保在sling.properties文件中，属性felix.service.urlhandlers=false设置为false（默认设置为true）。
@@ -105,7 +105,7 @@ AEM是一个要部署的战争文件。
 
 * 让基本身份验证头传递：
 
-   * 让AEM对用户进行身份验证的一种方法是禁用WebSphere服务器的全局管理安全性，这样做： 转至“安全”->“全局安全”并取消选中“启用管理安全”复选框，保存并重新启动服务器。
+   * 让AEM对用户进行身份验证的一种方法是禁用WebSphere服务器的全局管理安全性，这样做：转至“安全”->“全局安全”并取消选中“启用管理安全”复选框，保存并重新启动服务器。
 
 * 设置 `"JAVA_OPTS= -Xmx2048m"`
 * 如果要使用上下文根= /安装AEM，则必须先更改现有默认Web应用程序的上下文根
@@ -122,7 +122,7 @@ AEM是一个要部署的战争文件。
 
 * 部署AEM war文件
 
-   * 选择上下文根目录（如果要设置sling运行模式，则需要选择部署向导的详细步骤，然后在向导的步骤6中指定它）
+   * 选择上下文根目录（如果要设置部署向导的详细步骤，则需要设置sling运行模式，然后在向导的第6步中指定）
 
 * 开始AEM web应用程序
 
@@ -136,7 +136,7 @@ AEM是一个要部署的战争文件。
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-如果您使用deployment-scanner安装AEM web应用程序，则最好在实例的xml `deployment-timeout,` 文件中 `deployment-tiimeout` 增加该属性的设置(例如 `configuration/standalone.xml)`:
+如果您使用deployment-scanner安装AEM web应用程序，则最好在实例的xml `deployment-timeout,` 文件中 `deployment-timeout` 增加该属性的设置(例如 `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -245,7 +245,7 @@ AEM是一个要部署的战争文件。
       * 更改sling.run.modes参数以进行发布
       * 取消注释sling.home初始参数，根据需要设置此路径
       * 重复web.xml文件
-   * 如果您希望将AEM war文件作为根Web应用程序部署，请将其重命名为ROOT.war，如果您希望将aemauthor作为上下文根，则将其重命名为emauthor.war
+   * 如果您希望将AEM war文件作为根Web应用程序部署，请将其重命名为ROOT.war，如果您希望将aemauthor作为上下文根文件，则将其重命名为eamuthor.war
    * 将其复制到tomcat的webapps文件夹中
    * 等到AEM安装完毕
 
