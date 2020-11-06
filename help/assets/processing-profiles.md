@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 37b3a553758ecd249a08e0d7d6e29becdcb018c2
+source-git-commit: 141a1783f275c0b3587ebc374bde19a21e107409
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 6%
@@ -97,7 +97,7 @@ ht-degree: 6%
 **（可选）要调整重新处理工作流的批大小**
 
 1. In Experience Manager, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL Workflow > Models.]**
-1. 在“工作流模型”页面的卡片视图或列表视图中，选择 **[!UICONTROL Scene7:重新处理资产。]**
+1. 在“工作流模型”页面的卡片视图或列表视图中，选择 **[!UICONTROL Scene7:重新处理资产]**。
 
    ![工作流模型页面，带有Scene7:在卡视图中重新处理选定的资产工作流](/help/assets/assets-dm/reprocess-assets7.png)
 
@@ -117,9 +117,9 @@ ht-degree: 6%
 
    ![属性对话框](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. 在“批量上传到Scene7-步 **[!UICONTROL 骤属性”对话框的右上角]** ，单击“完 **[!UICONTROL 成”。]**
+1. 在“批量上传到Scene7-步 **[!UICONTROL 骤属性”对话框的右上角]** ，单击“ **[!UICONTROL 完成”]**。
 
-1. 在Scene7的右上角：重新处理资产工作流模型页面，单击 **[!UICONTROL 同步。]** 当您看到已 **[!UICONTROL 同步]**，工作流运行时模型将成功同步并准备好重新处理文件夹中的资产。
+1. 在Scene7的右上角：重新处理资产工作流模型页面，单击 **[!UICONTROL 同步]**。 当您看到已 **[!UICONTROL 同步]**，工作流运行时模型将成功同步并准备好重新处理文件夹中的资产。
 
    ![同步工作流模型](/help/assets/assets-dm/reprocess-assets1.png)
 
