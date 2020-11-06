@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
+source-git-commit: b4b500cc80c6d498baaabe3a6863a3843b904f9b
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '2085'
 ht-degree: 1%
 
 ---
@@ -60,11 +60,23 @@ Smart Imaging还可以与Adobe一流的高级CDN服务完全集成，从而增�
 
 ## 智能成像的工作原理是什么？ {#how-does-smart-imaging-work}
 
-Smart Imaging根据浏览器功能使用Adobe Sensei自动将图像转换为最佳格式、大小和质量：
+当用户请求图像时，我们会检查用户特征并根据使用中的浏览器转换为适当的图像格式。 以不降低视觉保真度的方式进行这些格式转换。 智能成像根据浏览器功能按以下方式自动将图像转换为不同格式。
 
-* 为Chrome、Firefox、Microsoft Edge、Android和Opera等浏览器自动转换为WebP。
-* 为Safari等浏览器自动转换为JPEG2000。
-* 为Internet Explorer 9+等浏览器自动转换为JPEG。
+* 自动转换为以下浏览器的WebP:
+   * 铬黄
+   * Firefox
+   * Microsoft Edge
+   * Safari 14.0 +
+      * 仅带iOS 14.0及更高版本和macOS BigSur及更高版本的Safari 14
+   * Android
+   * Opera
+* 对以下内容的传统浏览器支持：
+
+   | 浏览器 | 浏览器／操作系统版本 | 格式 |
+   | --- | --- | --- |
+   | Safari | iOS 14.0或更早版本 | JPEG2000 |
+   | Edge | 18或更早版本 | JPEGXR |
+   | Internet Explorer | 9+ | JPEGXR |
 * 对于不支持这些格式的浏览器，将提供最初请求的图像格式。
 
 如果原始图像大小小于智能成像生成的图像大小，则会显示原始图像。
@@ -90,11 +102,15 @@ Smart Imaging可与您现有的“图像预设”配合使用，如果请求的�
 
 ## 我是否必须更改任何URL、图像预设，或在我的网站上部署任何用于智能成像的新代码？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
-否. 智能成像可以无缝地与您的现有图像URL和图像预设配合使用。 此外，智能成像不要求您在网站上添加任何代码来检测用户的浏览器。 所有这些都是自动处理的。
+如果您在现有自定义域上配置智能成像，则智能成像可以与您的现有图像URL和图像预设无缝协作。 此外，智能成像不要求您在网站上添加任何代码来检测用户的浏览器。 所有这些都是自动处理的。
 
-<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
+如果您需要配置新的自定义域以使用智能成像，则需要更新URL以反映此自定义域。
 
 另外，请参 [阅我是否有资格使用智能成像？](#am-i-eligible-to-use-smart-imaging) 了解智能成像的先决条件。
+
+<!-- No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add any code on your website to detect a user's browser. All of this is handled automatically. -->
+
+<!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
 ## 智能成像是否可以与HTTPS一起使用？ HTTP/2如何？ {#does-smart-imaging-working-with-https-how-about-http}
 
@@ -177,6 +193,34 @@ Dynamic Media许可证不需要支付任何额外费用即可获得您的第一�
 并非所有图像都经过转换。 智能成像决定是否需要转换才能提高性能。 在某些情况下，如果没有预期的性能增益，或者格式不是JPEG或PNG，则不会转换图像。
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
+
+## 我如何知道性能的提高？ 是否有方法可以注意智能成像的优势？ {#performance-gain}
+
+**关于智能成像头**
+
+智能映像头值仅在非缓存请求到现在才起作用。 这样做是为了保持当前缓存的兼容性，并避免当通过缓存服务图像时需要计算。
+
+要使用智能成像头，您需要在请求中添`cache=off`加修饰符。 请参[阅Dynamic Media图像服务和渲染API中的缓存](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-cache.html)。
+
+使用示 `cache=off` 例（仅用于说明）:
+
+`https://domain.scene7.com/is/image/companyName/imageName?cache=off` 
+
+在使用此类请求后，在“响应标题”部分，您可以看到 `-x-adobe-smart-imaging` 标题。 查看以下高亮显示的 `-x-adobe-smart-imaging` 屏幕截图。
+
+![智能成像头](/help/assets/assets-dm/smart-imaging-header2.png) 
+
+此标题值表示：
+
+* Smart Imaging正在为公司提供帮助。
+* 正值(>=0)表示转换成功。 在这种情况下，将返回新图像（此处为webP）。
+* 负值(&lt;0)表示转换失败。 在这种情况下，将返回原始请求的图像（默认情况下为JPEG，如果未指定）。
+* 该值表示请求的图像与新图像之间的字节差。 在这种情况下，保存的字节为75048，对于一个映像，这大约为75 KB。 
+   * 负值表示请求的图像小于新图像。 我们确实显示了负大小差，但所提供的图像只是原始请求的图像
+
+**何时使用智能成像头？**
+
+智能映像响应头可用于调试目的，或在突出显示智能映像的优点时启用。 在正`cache=off`常情况下使用会显着影响加载时间。
 
 ## 是否可以关闭智能成像以请求任何请求？ {#turning-off-smart-imaging}
 
