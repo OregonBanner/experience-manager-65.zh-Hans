@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: b4b500cc80c6d498baaabe3a6863a3843b904f9b
+source-git-commit: 5a3045b89ba6bb32482926ea8d2c5533e5394d9a
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '1816'
 ht-degree: 1%
 
 ---
@@ -193,34 +193,6 @@ Dynamic Media许可证不需要支付任何额外费用即可获得您的第一�
 并非所有图像都经过转换。 智能成像决定是否需要转换才能提高性能。 在某些情况下，如果没有预期的性能增益，或者格式不是JPEG或PNG，则不会转换图像。
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
-
-## 我如何知道性能的提高？ 是否有方法可以注意智能成像的优势？ {#performance-gain}
-
-**关于智能成像头**
-
-智能映像头值仅在非缓存请求到现在才起作用。 这样做是为了保持当前缓存的兼容性，并避免当通过缓存服务图像时需要计算。
-
-要使用智能成像头，您需要在请求中添`cache=off`加修饰符。 请参[阅Dynamic Media图像服务和渲染API中的缓存](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-cache.html)。
-
-使用示 `cache=off` 例（仅用于说明）:
-
-`https://domain.scene7.com/is/image/companyName/imageName?cache=off` 
-
-在使用此类请求后，在“响应标题”部分，您可以看到 `-x-adobe-smart-imaging` 标题。 查看以下高亮显示的 `-x-adobe-smart-imaging` 屏幕截图。
-
-![智能成像头](/help/assets/assets-dm/smart-imaging-header2.png) 
-
-此标题值表示：
-
-* Smart Imaging正在为公司提供帮助。
-* 正值(>=0)表示转换成功。 在这种情况下，将返回新图像（此处为webP）。
-* 负值(&lt;0)表示转换失败。 在这种情况下，将返回原始请求的图像（默认情况下为JPEG，如果未指定）。
-* 该值表示请求的图像与新图像之间的字节差。 在这种情况下，保存的字节为75048，对于一个映像，这大约为75 KB。 
-   * 负值表示请求的图像小于新图像。 我们确实显示了负大小差，但所提供的图像只是原始请求的图像
-
-**何时使用智能成像头？**
-
-智能映像响应头可用于调试目的，或在突出显示智能映像的优点时启用。 在正`cache=off`常情况下使用会显着影响加载时间。
 
 ## 是否可以关闭智能成像以请求任何请求？ {#turning-off-smart-imaging}
 
