@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,10 @@ Adobe Sign为自适应表单启用电子签名工作流。 电子签名可改善
 
    >[!NOTE]
    >
-   >确保云服务配置页面的URL与HTTPS开始 **在一起**。 否则，为 [AEM Forms服](/help/sites-administering/ssl-by-default.md) 务器启用SSL。
+   >您可以执行步骤1-4，在容器中创建新配置容器并创建Adobe Sign配置，或使用工具锤 `global` 子> **** Cloud Services ![>](assets/hammer.png)**>** Adobe Sign中的现有文 ****&#x200B;件夹。 如果在新配置容器中创建配置，请确保在创建自适应表单时在“配 **[!UICONTROL 置容器]** ”字段中指定容器名称。
+
+   >[!NOTE]
+   确保云服务配置页面的URL与HTTPS开始 **在一起**。 否则，为 [AEM Forms服](/help/sites-administering/ssl-by-default.md) 务器启用SSL。
 
 1. 在配置页面上，点按创 **[!UICONTROL 建]** ，在AEM Forms创建Adobe Sign配置。
 1. 在“创 **[!UICONTROL 建Adobe Sign]** 配置”页 **[!UICONTROL 面的“常规]** ”选项卡中，指 **定配置的名** 称 **，然后点**&#x200B;按下一。 您可以选择指定标题并浏览以选择配置的缩略图。
