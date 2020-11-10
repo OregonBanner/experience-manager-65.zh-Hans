@@ -3,9 +3,9 @@ title: 下载资产
 description: 了解如何通过启 [!DNL Adobe Experience Manager] 用或禁用下载功能来下载资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '856'
 ht-degree: 6%
 
 ---
@@ -67,14 +67,14 @@ ht-degree: 6%
 
 通过 `Asset Download Servlet` 更新调度程序配置以阻止任何资 [!DNL Experience Manager] 产下载请求，可以在Publish实例上禁用该功能。 也可以直接通过OSGi控制台手动禁用servlet。
 
-1. 要通过调度程序配置阻止资产下载请求，请编 `dispatcher.any` 辑配置并向筛选器部分添 [加规则](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)。 `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. 要通过调度程序配置阻止资产下载请求，请编 `dispatcher.any` 辑配置并向筛选器部分添 [加规则](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)。 `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. 要在发布实例上禁用OSGi组件，请访问OSGi控制台 `http://[aem_server]:[port]/system/console/components`。 找到并 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` 单击“ **[!UICONTROL 禁用]**”。
 
 >[!MORELIKETHIS]
 >
->* [使用Brand Portal下载资源](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
+>* [使用Brand Portal下载资源](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [下载受DRM保护的资源](drm.md)。
->* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资源](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#download-assets)。
+>* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资源](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)。
 >* [从支持的Adobe应用程序中使用Adobe Creative Cloud资产链接下载资产](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)。
 
