@@ -3,9 +3,9 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2fe2b5fcaff2b2f2402f0bc638a0df2afd335b31
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2246'
 ht-degree: 41%
 
 ---
@@ -28,7 +28,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 在使用或配置此功能之前，请确保：
 
 * 用户是每个部署中相应用户组的一部分。
-* For [!DNL Adobe Experience Manager] deployment types, one of the supported criteria is met. [!DNL Experience Manager] 6.5与 [!DNL Assets] Cloud Service [!DNL Experience Manager] 一起使用。 有关详细信息，请参 [阅将Experience Manager作为Cloud Service的连接资产功能](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
+* For [!DNL Adobe Experience Manager] deployment types, one of the supported criteria is met. [!DNL Experience Manager] 6.5与 [!DNL Assets] Cloud Service [!DNL Experience Manager] 一起使用。 有关详细信息，请参 [阅将Experience Manager作为Cloud Service的连接资产功能](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)。
 
    |  | [!DNL Sites] 作为Cloud Service | [!DNL Experience Manager] 6.5 [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5内 [!DNL Sites] 部部署 |
    |---|---|---|---|
@@ -40,7 +40,7 @@ For the [!DNL Sites] authors, the remote assets are available as read-only local
 
 作者在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索的资产。 文档会添加到组 `Download` 件，图像会添加到组 `Image` 件。 Authors also add the remote assets in any custom [!DNL Experience Manager] component that extends the default `Download` or `Image` components. 支持的格式有：
 
-* **图像格式**:图像组件支 [持的格式](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html) 。 [!DNL Dynamic Media] 不支持图像。
+* **图像格式**:图像组件支 [持的格式](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 。 [!DNL Dynamic Media] 不支持图像。
 * **文档格式**:查看支 [持的文档格式](assets-formats.md#supported-document-formats)。
 
 ### 涉及的用户和组 {#users-and-groups-involved}
@@ -192,8 +192,8 @@ To configure Connected Assets and local [!DNL Sites] connectivity, follow these 
 
 要排除常见错误方案的故障，请执行以下步骤：
 
-* If you cannot search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
+* If you are unable to search for remote assets from the [!UICONTROL Content Finder], then ensure that the required roles and permissions are in place.
 * 由于一个或多个原因，从远程dam获取的资产可能无法发布到网页上。 它在远程服务器上不存在，缺少相应的权限来获取它，或者网络故障可能是原因。 确保资产未从远程DAM中删除。 确保拥有适当的权限，并满足先决条件。 重试将资产添加到页面并重新发布。 检查[异步作业列表](/help/sites-administering/asynchronous-jobs.md)，查看是否发生了资产获取错误。
-* 如果您无法从本地部署访问远程DAM [!DNL Sites] 部署，请确保允许跨站点Cookie。 如果跨站点Cookie被阻止，则两个部署 [!DNL Experience Manager] 可能无法验证。 例如，在 [!DNL Google Chrome] Incognito模式下，可能会阻止第三方cookie。 要允许在浏览 [!DNL Chrome] 器中使用Cookie，请单击地址栏中的“眼睛”图标，导航至“站点不工作”>“阻止”，选择“远程DAM URL”，并允许登录令牌Cookie。 或者，请参阅 [有关如何启用第三方Cookie的帮助](https://support.google.com/chrome/answer/95647)。
+* 如果无法从本地部署访问远程DAM部 [!DNL Sites] 署，请确保允许跨站点Cookie。 如果跨站点Cookie被阻止，则两个部署 [!DNL Experience Manager] 可能无法验证。 例如，在 [!DNL Google Chrome] Incognito模式下，可能会阻止第三方cookie。 要允许在浏览 [!DNL Chrome] 器中使用Cookie，请单击地址栏中的“眼睛”图标，导航至“站点不工作”>“阻止”，选择“远程DAM URL”，并允许登录令牌Cookie。 或者，请参阅 [有关如何启用第三方Cookie的帮助](https://support.google.com/chrome/answer/95647)。
 
    ![Chrome中的Incognito模式下的Cookie错误](assets/chrome-cookies-incognito-dialog.png)
