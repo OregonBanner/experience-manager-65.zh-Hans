@@ -3,9 +3,9 @@ title: 使用智能内容服务配置资产标记
 description: 了解如何使用智能内容服务在中配置智能标记 [!DNL Adobe Experience Manager]，以及增强智能标记功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2179'
 ht-degree: 27%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 27%
    <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
   -->
 
-* 安装最新 [Experience Manager服务包](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+* 安装最新 [Experience Manager服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 ## 使用 Adobe 开发人员控制台进行集成 {#integrate-adobe-io}
 
@@ -281,12 +281,12 @@ ht-degree: 27%
 
    * 无法识别图像中的细微差异。 比如，修身与普通衬衫。
    * 无法根据图像的微小图案／部分识别标记。 例如，T恤上的徽标。
-   * 中支持的区域设置 [!DNL Experience Manager] 支持标记。 有关列表语言，请参阅智 [能内容服务发行说明](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
+   * 中支持的区域设置 [!DNL Experience Manager] 支持标记。 有关列表语言，请参阅智 [能内容服务发行说明](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html)。
 
 * 要使用智能标记（常规或增强）搜索资产，请使 [!DNL Assets] 用全文搜索（全文搜索）。 智能标记没有单独的搜索谓词。
 
 >[!MORELIKETHIS]
 >
 >* [智能标记概述和培训方法](enhanced-smart-tags.md)
->* [有关如何配置智能标记的视频教程](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)
+>* [有关智能标签的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
 
