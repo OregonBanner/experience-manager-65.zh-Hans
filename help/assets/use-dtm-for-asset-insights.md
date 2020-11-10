@@ -3,10 +3,10 @@ title: 通过DTM实现资产洞察
 description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d13381d961f7663366b041168da369c0b01c9336
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 1%
+source-wordcount: '671'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 酒店免�
 
 >[!CAUTION]
 >
->AdobeDTM已弃用，支持Adobe Experience Platform Launch，并且很快将 [结束其使用](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建议您使 [用Launch进行资产分析](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>AdobeDTM已弃用， [!DNL Adobe Experience Platform Launch] 即将终 [止使用](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建议您 [ [!DNL Launch] 使用资产分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 执行这些步骤，通过DTM启用资产分析。
 
@@ -31,7 +31,7 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 酒店免�
 
    * 选择“ **[!UICONTROL Web属性]** ”选项卡，然后单 **[!UICONTROL 击“添加属性”]**。
 
-   * 根据需要更新字段，然后单击“创 **[!UICONTROL 建属性”]**。 请参阅 [文档](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
+   * 根据需要更新字段，然后单击“创 **[!UICONTROL 建属性”]**。 请参阅 [文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
 
    ![创建编辑Web属性](assets/Create-edit-web-property.png)
 
