@@ -3,9 +3,9 @@ title: 管 [!DNL Adobe Stock] 理资产
 description: 从内部搜索、提取、许 [!DNL Adobe Stock] 可和管理资产 [!DNL Adobe Experience Manager]。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1080'
 ht-degree: 13%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 13%
 
 ## 前提条件 {#prerequisites}
 
-集成需要企业 [Adobe Stock计划](https://stockenterprise.adobe.com/)。
+集成需要企业 [ [!DNL Adobe Stock] 计划](https://stockenterprise.adobe.com/)。
 
 ## 集成 [!DNL Experience Manager] 和 [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
@@ -52,7 +52,7 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->如果有多个配 [!DNL Adobe Stock] 置，请在“用户首选项”面板中选择所需的配置。 要从Experience Manager主页访问面板，请单击用户图标，然后单击“用户首 **[!UICONTROL 选项”]** > **[!UICONTROL “Stock配置”]**)。
+>如果有多个配 [!DNL Adobe Stock] 置，请在“用户首选项”面 [!UICONTROL 板中选择所] 需配置。 要从主页访问该面 [!DNL Experience Manager] 板，请单击用户图标，然后单 **[!UICONTROL 击“用户首]** 选项 **[!UICONTROL ”>“]** Stock配置”。
 
 ## 在以下位置使 [!DNL Adobe Stock] 用和管理资产 [!DNL Experience Manager] {#usemanage}
 
@@ -60,9 +60,9 @@ ht-degree: 13%
 
 在中授 [!DNL Adobe Stock] 权使用资产 [!DNL Experience Manager]后，即可像典型资产一样使用和管理资产。 在 [!DNL Experience Manager]中，用户可以搜索和预览资产；复制和发布资产；资产 [!DNL Brand Portal];通过桌面应用程序访问 [!DNL Experience Manager] 和使用资源；等等。
 
-![搜索Adobe Stock资源并从您的Adobe Experience Manager工作区过滤结果](assets/adobe-stock-search-results-workspace.png)
+![搜索资 [!DNL Adobe Stock] 产并从工作区筛选结 [!DNL Adobe Experience Manager] 果](assets/adobe-stock-search-results-workspace.png)
 
-*图：搜索资[!DNL Adobe Stock]产并从界面筛选[!DNL Experience Manager]结果。*
+*图：搜索资 [!DNL Adobe Stock] 产并从界面筛选 [!DNL Experience Manager] 结果。*
 
 **A.**[!DNL Adobe Stock] 搜索与提供 ID 的资产类似的资产。**B.** 搜索与您选择的形状或方向匹配的资产。**C.** 搜索一种或多种受支持的资产类型 **D.** 打开或折叠过滤器窗格 **E.** 在 中授权并保存选定的资产 [!DNL Experience Manager]**F.**[!DNL Experience Manager] 在 中保存带水印的资产 **G.**[!DNL Adobe Stock] 在 网站上浏览与选定资产类似的资产 **H.**[!DNL Adobe Stock] 在 网站上查看选定资产 **I.** 搜索结果中的选定资产数 **J.** 在卡片视图和列表视图之间切换
 
@@ -80,9 +80,9 @@ ht-degree: 13%
 >
 >Assets searched from [!DNL Adobe Stock] are just displayed in [!DNL Experience Manager]. [!DNL Adobe Stock] 只有在用户保存资产或 [!DNL Experience Manager] 许可证并保存资产 [后，才会](/help/assets/aem-assets-adobe-stock.md#saveassets) 将资 [产取回并存储在存储库中](/help/assets/aem-assets-adobe-stock.md#licenseassets)。 Assets that are already stored in [!DNL Experience Manager] are displayed and highlighted for ease of reference and access. Also, the [!DNL Stock] assets are saved with some additional metadata to indicate the source as [!DNL Stock].
 
-![以Experience Manager方式搜索过滤器，并在搜索结果中突出显示Adobe Stock资产](assets/aem-search-filters2.jpg)
+![在搜索结果中搜 [!DNL Experience Manager] 索资产 [!DNL Adobe Stock] 并突出显示其过滤器](assets/aem-search-filters2.jpg)
 
-*图：在搜索结果中搜[!DNL Experience Manager]索过滤器[!DNL Adobe Stock]并突出显示资产。*
+*图：在搜索结果中搜 [!DNL Experience Manager] 索过滤器 [!DNL Adobe Stock] 并突出显示资产。*
 
 ### 保存和视图所需的资产 {#saveassets}
 
@@ -98,9 +98,9 @@ ht-degree: 13%
 
 用户可以 [!DNL Adobe Stock] 使用其企业计划的配额来许可 [!DNL Adobe Stock] 资产。 当您授权许可资产时，资产会保存，但不带水印，并且可在中搜索和使用 [!DNL Experience Manager Assets]。
 
-![对话框用于在Adobe Stock资产中许可和保存Experience Manager资产](assets/aem-stock_licenseandsave.jpg)
+![用于许可和保存资 [!DNL Adobe Stock] 产的对话框 [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
 
-*图：允许并保存资产的[!DNL Adobe Stock]对话框[!DNL Experience Manager Assets]。*
+*图：允许并保存资产的 [!DNL Adobe Stock] 对话框 [!DNL Experience Manager Assets]。*
 
 ### 访问元数据和资产属性 {#access-metadata-and-asset-properties}
 
@@ -122,7 +122,7 @@ ht-degree: 13%
 
 >[!MORELIKETHIS]
 >
->* [有关将Adobe Stock资源与Experience Manager资源结合使用的视频教程](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
->* [Adobe Stock企业计划帮助](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
->* [Adobe Stock常见问题解答](https://helpx.adobe.com/stock/faq.html)
+>* [有关将资源 [!DNL Adobe Stock] 与 [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
+>* [[!DNL Adobe Stock] 企业计划帮助](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
+>* [[!DNL Adobe Stock] 常见问题解答](https://helpx.adobe.com/stock/faq.html)
 
