@@ -3,9 +3,9 @@ title: 使用引用和多个页面管理复合资产
 description: 了解如何从中创建数字资产引用 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]。 使用页面查看器功能可视图多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Besides eliminating redundancy, referencing the assets in [!DNL Adobe Creative C
 
 You can reference existing digital assets from within an [!DNL Adobe Illustrator] file.
 
-1. 使用 [Experience Manager桌面应用](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)，在本地文件系统上获取数字资产。 导航到要引用的资产的文件系统位置。
+1. 使用 [[!DNL Experience Manager] 桌面应用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)，在本地文件系统上获取数字资产。 导航到要引用的资产的文件系统位置。
 1. Drag the asset from the local folder to the [!DNL Illustrator] file.
 
 1. Save the [!DNL Illustrator] file to the mounted drive, or [upload](/help/assets/manage-assets.md#uploading-assets) to the [!DNL Experience Manager] repository.
@@ -68,7 +68,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 ## 将数字资产作为引用添加到 [!DNL Adobe Photoshop] {#refps}
 
-1. 使用 [!DNL Experience Manager] 桌面应用程序访 [!DNL Experience Manager Assets]问。 下载并显示本地文件系统上的资源。 使用中 [!UICONTROL 的“置入链接] ”功能 [!DNL Adobe Photoshop]。 请参 [阅将资源放入桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
+1. 使用 [!DNL Experience Manager] 桌面应用程序访 [!DNL Experience Manager Assets]问。 下载并显示本地文件系统上的资源。 使用中 [!UICONTROL 的“置入链接] ”功能 [!DNL Adobe Photoshop]。 请参 [阅将资源放入桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
 
    ![chlimage_1-87](assets/chlimage_1-261.png)
 
@@ -119,7 +119,7 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 工具栏、左边栏和页面查看器控件中提供以下选项：
 
-* **[!UICONTROL 桌面操作]** ，使用桌面应用程序打开或显示特定 [!DNL Experience Manager] 子资产。 如果您使用桌 [面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2) ，请了解如何配置 [!DNL Experience Manager] 桌面操作。
+* **[!UICONTROL 桌面操作]** ，使用桌面应用程序打开或显示特定 [!DNL Experience Manager] 子资产。 如果您使用桌 [面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2) ，请了解如何配置 [!DNL Experience Manager] 桌面操作。
 
 * **[!UICONTROL 属性]** 选项会打开 [!UICONTROL 特定子资] 产的属性页面。
 
@@ -135,8 +135,8 @@ This procedure is similar to [add digital assets as references in Adobe Illustra
 
 >[!MORELIKETHIS]
 >
->* [使用Adobe Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)
->* [在Adobe Experience Manager配置桌面操作](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [使用Adobe Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [在Adobe Experience Manager配置桌面操作](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [在Adobe Photoshop创建链接的智能对象](https://helpx.adobe.com/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [将图形置入Adobe InDesign](https://helpx.adobe.com/indesign/using/placing-graphics.html)
 
