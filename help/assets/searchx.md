@@ -3,9 +3,9 @@ title: 扩展搜索功能。
 description: 将搜索功能扩展 [!DNL Adobe Experience Manager Assets] 到默认值之外。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 19%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 19%
 
 >[!CAUTION]
 >
->自6. [!DNL Experience Manager] 4起，已弃用经典UI。 有关公告，请参 [阅已弃用和已删除的功能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建议使用触屏优化UI。 有关自定义，请参 [阅搜索彩块化](/help/assets/search-facets.md)。
+>自6. [!DNL Experience Manager] 4起，已弃用经典UI。 有关公告，请参 [阅已弃用和已删除的功能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)。 Adobe建议使用触屏优化UI。 有关自定义，请参 [阅搜索彩块化](/help/assets/search-facets.md)。
 
 ## 叠加 {#overlaying}
 
