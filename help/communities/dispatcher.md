@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 9ba00322588326df6fbcc02bdfba88491d39c289
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '680'
 ht-degree: 2%
 
 ---
@@ -92,8 +92,13 @@ OSGi配置 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （OS
 >[!NOTE]
 >
 >**属性名称示例**
->
 >显示的所有属性名称( **如/0050** 和/0170 ****)都应调整为适合现有的调度程序。任何配置文件。
+
+
+>[!CAUTION]
+>
+>有关使用Dispatcher [限制访问时的进一步注意事项](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) ，请参阅Dispatcher安全核对清单。 另外，请阅读AEM安 [全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) ，了解有关AEM安装的其他安全详细信息。
+
 
 应将以下条目添加到/filter部分的末尾，尤其是所有拒绝条目之后。
 
