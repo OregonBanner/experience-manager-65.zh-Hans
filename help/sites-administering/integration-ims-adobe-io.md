@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d12ebf77d2af389e0a3aea5c7f311c828ecd7c17
+source-git-commit: 26efba567985dcb89b2610935cab18943b7034b3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -231,6 +231,17 @@ ht-degree: 1%
 
    * **身份验证**:IMS
    * **租户ID**:adobeIMS租户ID
+
+      >[!NOTE]
+      >
+      >对于IMS，此值需要从目标本身中获取。 您可以登录目标并从URL提取租户ID。
+      >
+      >例如，如果URL为：
+      >
+      >`https://experience.adobe.com/#/@yourtenantid/target/activities`
+      >
+      >那你就用 `yourtenantid`。
+
    * **IMS配置**:选择IMS配置的名称
    * **API类型**:休息
    * **A4TAnalytics Cloud配置**:选择用于目标活动目标和指标的Analytics云配置。 如果您在定位内容时使用Adobe Analytics作为报告源，则需要此项。 如果看不到云配置，请参阅配置A4T [Analytics Cloud配置中的注释](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)。
