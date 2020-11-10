@@ -3,9 +3,9 @@ title: 文件夹共享 [!DNL Adobe Creative Cloud] 到最佳实践
 description: 配 [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 置与Adobe Creative Cloud(CC)用户交换文件夹。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->已停 [!DNL Experience Manager] 用“到 [!DNL Creative Cloud] 文件夹共享”功能。 Adobe强烈建议使用较新的功能，如 [Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) 或 [Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)。 了解有关Experience Manager和 [Creative Cloud集成最佳实践的更多信息](/help/assets/aem-cc-integration-best-practices.md)。
+>已停 [!DNL Experience Manager] 用“到 [!DNL Creative Cloud] 文件夹共享”功能。 Adobe强烈建议使用较新的功能，如 [Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) 或 [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)。 了解有关Experience Manager和 [Creative Cloud集成最佳实践的更多信息](/help/assets/aem-cc-integration-best-practices.md)。
 
 [!DNL Adobe Experience Manager] 可以配置为允许中的用户 [!DNL Assets] 与应用程序的用户共享文 [!DNL Adobe Creative Cloud] 件夹，这样，他们就可以在资产服务中作为共享 [!DNL Adobe Creative Cloud] 文件夹使用。 该功能可用于在创意团队和用户之间交换 [!DNL Assets] 文件，尤其是当创意用户无权访问部署时(他 [!DNL Assets] 们不在企业网络上)。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 集成包括以下元素：
 
 * **[!DNL Experience Manager Assets]** 部署在企业网络（托管服务或内部部署）中：此处启动文件夹共享。
-* **[!DNL Adobe Marketing Cloud Assets]核心服务**:在存储服务和服 [!DNL Experience Manager] 务之间 [!DNL Creative Cloud] 充当中介。 使用集成的组织的管理员需要在Marketing Cloud组织和部署之间建立信任关 [!DNL Assets] 系。 它们还定 [义了已批准的Creative Cloud协](https://docs.adobe.com/content/help/en/core-services/interface/assets/t-admin-add-cc-user.html)作者的列表 [!DNL Assets] ，用户也可以共享文件夹以增加安全性。
+* **[!DNL Adobe Marketing Cloud Assets]核心服务**:在存储服务和服 [!DNL Experience Manager] 务之间 [!DNL Creative Cloud] 充当中介。 使用集成的组织的管理员需要在Marketing Cloud组织和部署之间建立信任关 [!DNL Assets] 系。 它们还定 [义了已批准的Creative Cloud协](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)作者的列表 [!DNL Assets] ，用户也可以共享文件夹以增加安全性。
 
 * **[!DNL Creative Cloud]资产Web服务** (存储和 [!DNL Creative Cloud] 文件Web UI):这是特定Creative Cloud应用程序用户(与其共 [!DNL Assets] 享了文件夹)能够接受邀请并在其Creative Cloud帐户存储中查看该文件夹的位置。
 * **Creative Cloud桌面应用程序**:（可选）允许通过与资产存储同步，从创意用户的桌面直接访问共享文件夹/ [!DNL Creative Cloud] 文件。
