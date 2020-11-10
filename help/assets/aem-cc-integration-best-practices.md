@@ -3,10 +3,10 @@ title: 与Adobe Creative Cloud最佳做法集成
 description: 整合的最佳 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 实践，可简化资产转让工作流并实现高内容速度。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '3262'
-ht-degree: 16%
+source-wordcount: '3248'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->[!DNL Experience Manager] 目 [!DNL Creative Cloud] 标文件夹共享已弃用，本指南不再涵盖。 Adobe建议使用较新的功 [能(如Adobe资](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) 产链接 [](https://docs.adobe.com/content/help/zh-Hans/experience-manager-desktop-app/using/introduction.html) 或Experience Manager桌面应用程序 [!DNL Experience Manager])为创意用户提供对中管理的资产的访问权限。
+>[!DNL Experience Manager] 目 [!DNL Creative Cloud] 标文件夹共享已弃用，本指南不再涵盖。 Adobe建议使用较新的功 [能(如Adobe资](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) 产链接 [](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html) 或Experience Manager桌面应用程序 [!DNL Experience Manager])为创意用户提供对中管理的资产的访问权限。
 
 ## 创意人员、营销人员和DAM用户的协作需求 {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
@@ -36,10 +36,10 @@ ht-degree: 16%
 | 相关角色的价值主张 | Adobe产品 | 涉及的表面 |
 |---|---|---|
 | 创意用户无需离开 [!DNL Experience Manager]应用程序即可从中发现资源、打开和使用资 [!DNL Experience Manager]源、编辑更改并将其上传到，以 [!DNL Experience Manager]及将新文件上传 [!DNL Creative Cloud] 到中。 | [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
-| 商业用户简化了资产的打开和使用，编辑更改并将其上 [!DNL Experience Manager]传到桌面环境，以及将新 [!DNL Experience Manager] 文件上传到桌面。 他们使用通用集成在本机桌面应用程序中打开任何资产类型，包括非Adobe类型。 | [Experience Manager桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac桌面上的桌面应用程序 |
+| 商业用户简化了资产的打开和使用，编辑更改并将其上 [!DNL Experience Manager]传到桌面环境，以及将新 [!DNL Experience Manager] 文件上传到桌面。 他们使用通用集成在本机桌面应用程序中打开任何资产类型，包括非Adobe类型。 | [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac桌面上的桌面应用程序 |
 | 营销人员和商业用户可从内部发现、预览、许可、保存 [!DNL Adobe Stock] 和管理资产 [!DNL Experience Manager]。 授权和保存的资产提供精选元 [!DNL Adobe Stock] 数据以更好地进行管理。 | [Experience Manager和Adobe Stock整合](aem-assets-adobe-stock.md) | [!DNL Experience Manager] web界面 |
 
-本文主要介绍协作需求的前两个方面。作为一个用例，简要提及了资产的大规模分发和采购。对于此类需求解决方案，请考虑 Adobe Brand Portal 或 Asset Share Commons。Alternate solutions such as [Brand Portal](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/home.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/manage-assets.md) should be reviewed based on specific requirement.
+本文主要介绍协作需求的前两个方面。作为一个用例，简要提及了资产的大规模分发和采购。对于此类需求解决方案，请考虑 Adobe Brand Portal 或 Asset Share Commons。Alternate solutions such as [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html), solutions that can be built based on [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) components, [Link Share](/help/assets/link-sharing.md), using [Experience Manager Assets](/help/assets/manage-assets.md) should be reviewed based on specific requirement.
 
 ![Creative Cloud连接以Experience Manager，确定要使用的功能](assets/creative-connections-aem.png)
 
@@ -66,7 +66,7 @@ ht-degree: 16%
 
 要支持资产分发使用案例，应考虑其他解决方案：
 
-* [Brand Portal](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/home.html) ，用于通过可配置的SaaS加载项 [!DNL Experience Manager Assets] 发布资产。
+* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) ，用于通过可配置的SaaS加载项 [!DNL Experience Manager Assets] 发布资产。
 * 自定义解决方案是基于资 [产共享共享共享](https://adobe-marketing-cloud.github.io/asset-share-commons/) 共享代码库创建的。
 * [!DNL Experience Manager] [链接共享](/help/assets/link-sharing.md) ，以便使用链接临时共享资产。
 * [Experience Manager资产Web界面](/help/assets/manage-assets.md) ，具有由访问控制设置保护的外部用户 [!DNL Experience Manager] 区域，以及必要的IT/网络配置调整，使这些外部用户能够访问 [!DNL Experience Manager]。
@@ -87,7 +87,7 @@ ht-degree: 16%
 
 ### 使用和集成时 [!DNL Experience Manager] 的注 [!DNL Creative Cloud] 意事项 {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* 查看桌 [面应用程序最佳实践](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
+* 查看桌 [面应用程序最佳实践](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
 * 查看 [Adobe Stock集成](aem-assets-adobe-stock.md)
 * 请参阅 [Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
 
@@ -175,7 +175,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 使用以下策略提供对最终／批准资产的访问：
 
 * 如果资产链接不起作用，请使用桌面应用程序。
-* 使用 [Experience Manager资产品牌门户](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/home.html) ，将资产安全地分发给外部合作伙伴
+* 使用 [Experience Manager资产品牌门户](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) ，将资产安全地分发给外部合作伙伴
 * 使用基于资源共享的分发和采购门户的自 [定义实现](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * 使用在必要的网 [!DNL Experience Manager] 络基础架构中设置的访问控制(例如，VPN和IP允许列表)，使外部方能够访问DAM中的专用内容区域。 他们可以 [!DNL Experience Manager] 使用Web UI获取资产并将新内容上传到您的DAM。
 
@@ -207,7 +207,7 @@ Adobe资产链接优惠对此用例提供良好支持：
 
 您可以利用以下上传功能：
 
-* 要批量上传大型／分层文件夹，请使用提 [!DNL Experience Manager] 供文件夹上传功能 [的桌面应用](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#bulk-upload-assets) 程序。 您还可以上传分层文件夹结构。 [!DNL Assets] 在后台上传，因此它不绑定到Web浏览器会话
+* 要批量上传大型／分层文件夹，请使用提 [!DNL Experience Manager] 供文件夹上传功能 [的桌面应用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#upload-and-add-new-assets-to-aem) 程序。 您还可以上传分层文件夹结构。 [!DNL Assets] 在后台上传，因此它不绑定到Web浏览器会话
 * 要从单个文件夹上传几个文件，请直接将文件拖动到Web界面，或使用Web界面中的“创建” [!DNL Assets] 选项。
 * 根据您的业务要求，您还可以使用自定义上传程序。
 
@@ -224,7 +224,7 @@ Adobe资产链接优惠对此用例提供良好支持：
 >[!MORELIKETHIS]
 >
 >* [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
->* [Experience Manager桌面应用程序最佳实践](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
->* [Experience Manager品牌门户](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/brand-portal.html)
+>* [Experience Manager桌面应用程序最佳实践](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/archive/best-practices-for-v1.html)
+>* [Experience Manager品牌门户](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
 >* [Experience Manager和Adobe Stock整合](aem-assets-adobe-stock.md)
 
