@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c59726cc1e6656f16a237aac703f37f3f38a87f9
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '9565'
 ht-degree: 7%
@@ -879,7 +879,7 @@ You can also add image maps using the image editor. For details, see [Adding Ima
 * 上传文件名与同一位置相同的资产。 它可以是新资产或同一资产的已修改版本。
 * 在中编辑图 [!DNL Experience Manager] 像并保存更改。
 * 编辑资产的元数据。
-* 使用 [!DNL Experience Manager] 桌面应用程序签出现有资产、编辑资产并上 [传更改](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
+* 使用 [!DNL Experience Manager] 桌面应用程序签出现有资产、编辑资产并上 [传更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#edit-assets-upload-updated-assets)。
 
 您还可以通过工作流启用自动版本控制。 为资产创建版本时，元数据和演绎版会与该版本一起保存。 演绎版是相同图像的替代内容，例如，已上传JPEG文件的PNG演绎版。
 
