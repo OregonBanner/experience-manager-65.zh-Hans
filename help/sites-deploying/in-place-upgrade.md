@@ -11,7 +11,7 @@ topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1718aac3d39662fb35336a4db3e3403641f9529a
+source-git-commit: b8a532f45f531f36e04ff4b5f0cc2c9e729668bb
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -168,7 +168,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 1. 删除与S3连 `crx-quickstart/install` 接器的早期版本关联的任何JAR。
 
-1. 从https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/下载1.8.x S3连接器的最新版 [本](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)
+1. 从https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/下载1.10.x S3连接器的最新版 [本](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)
 
 1. 将包解压到临时文件夹，并将其内容复 `jcr_root/libs/system/install` 制到文 `crx-quickstart/install` 件夹。
 
