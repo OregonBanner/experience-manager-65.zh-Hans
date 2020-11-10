@@ -3,9 +3,9 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e49fa8ec19411648841b19bad4b8c1e0efcc1dc1
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '2423'
+source-wordcount: '2421'
 ht-degree: 18%
 
 ---
@@ -243,7 +243,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [元数据概念和理解](metadata-concepts.md)。
 >* [编辑多个集合的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)
->* [在Experience Manager资产中导入和导出元数据](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [在Experience Manager资产中导入和导出元数据](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
