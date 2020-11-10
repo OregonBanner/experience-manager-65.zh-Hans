@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ee527712b4d7f6ebf9ef2996de1405f6f9c3d335
+source-git-commit: 24ad36d3ff329885efff319404e0d5321e8ce46d
 workflow-type: tm+mt
-source-wordcount: '5964'
+source-wordcount: '5990'
 ht-degree: 5%
 
 ---
@@ -545,9 +545,7 @@ Granite工作流队列用于非临时工作流。 在Dynamic Media中，它用�
 
 1. 在“最 **[!UICONTROL 大并行作业]** ”字段中，将数字更改为所需值。
 
-   默认情况下，并行作业的最大数量取决于可用CPU核心的数量。 例如，在4核服务器上，它分配2个工作线程。 （介于0.0和1.0之间的值是基于比率的，或者任何大于1的数字将指定工作线程的数量。）
-
-   对于大多数用例，0.5默认设置已足够。
+   您可以增加最大并行作业，以充分支持将文件重量上传到Dynamic Media。 确切值取决于硬件容量。 在某些情况下（即初始迁移或一次性批量上传），您可以使用大值。 但是，请注意，使用大值（如内核数的2倍）可能会对其他并发活动产生负面影响。 因此，您应根据您的特定用例测试和调整值。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
