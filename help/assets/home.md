@@ -3,10 +3,10 @@ title: Assets 指南
 description: 本指南涵盖所有Experience Manager资产任务，如如何创建、管理、投放和优化数字资产。
 user-guide-title: Assets 指南
 translation-type: tm+mt
-source-git-commit: 1fa79a49ce3590fcba63e6e7d1a63586650251d2
+source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 21%
+source-wordcount: '330'
+ht-degree: 12%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
 
 * [Experience Manager入门](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Experience Manager6.5发行说明](/help/release-notes/home.md)
-* [近期文档更新](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
+* [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [安全核对清单](/help/sites-administering/security-checklist.md)
 
 ## [!DNL Experience Manager] 6.5指南
@@ -35,12 +35,12 @@ ht-degree: 21%
 | [Administering 指南](/help/sites-administering/home.md) | 了解如何管理Experience Manager。 |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍了在Experience Manager中进行创作的概念。 |
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介绍在经典用户界面中以Experience Manager进行创作的概念。 |
-| [Screens用户指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
+| [Screens用户指南](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [部署用户指南](/help/sites-deploying/home.md) | 本指南向您展示Experience Manager的基础知识。 |
 | [开发用户指南](/help/sites-developing/home.md) | 了解如何构建Experience Manager部署。 |
 | [管理用户指南](/help/managing/home.md) | 本指南介绍如何成功管理Experience Manager项目。 |
 | [移动用户指南](/help/mobile/home.md) | 本指南介绍如何为移动应用程序创建和管理内容。 |
-| [Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南向您展示如何与用户生成的内容共享 [!DNL Livefyre]。 |
+| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南向您展示如何与用户生成的内容共享 [!DNL Livefyre]。 |
 
 ## 关键资 [!DNL Experience Manager] 源
 
@@ -48,7 +48,7 @@ ht-degree: 21%
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager资产社区论坛](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [调度程序用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
-* [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
-* [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [调度程序用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+* [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
+* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
