@@ -1,40 +1,30 @@
 ---
-title: 使用布局模式调整组件大小
-seo-title: 使用布局模式调整组件大小
+title: 使用布局模式调整组件大小以用于自适应表单
 description: '使用布局模式下可用的响应式网格定义组件的位置 '
-seo-description: '使用布局模式下可用的响应式网格定义组件的位置 '
-uuid: 6b077ebe-caea-4ae3-b17a-be2dca94eeb3
-contentOwner: anujkapo
-topic-tags: interactive-communications, author
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 9e9aaf36-bb86-4954-83cc-fa6b3e80ae4b
-docset: aem65
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
 
 
-# 使用布局模式调整组件大小{#use-layout-mode-to-resize-components}
+# 使用布局模式调整组件大小 {#use-layout-mode-to-resize-components}
 
-自适应表单和交互式通信Web渠道创作界面使您能够使用布局模式调整组件大小。 在列内拖放蓝点，定义开始和终点以放置组件。 点击响应式网格中的组件后，将显示蓝点。 响应式网格由12个相等的列组成。 替代列中的白色和蓝色阴影区分一列与另一列。
+自适应表单创作界面允许您使用布局模式调整组件大小。 在列内拖放蓝点，定义开始和终点以放置组件。 点击响应式网格中的组件后，将显示蓝点。 响应式网格由12个相等的列组成。 替代列中的白色和蓝色阴影区分一列与另一列。
 
 您可以使用布局模式调整所有设备类型（如台式机、平板电脑、手机和其他较小设备）的组件大小。 平板电脑自动从桌面版本派生布局配置，而较小的设备从手机派生布局配置。 但是，您可以覆盖自动派生的配置以为每个设备类型定义不同的配置。
 
-如果您使用打印渠道创建Web, [将渠道作为主控的交互式通信](../../forms/using/create-interactive-communication.md) ，则可用于调整大小的组件还包括使用打印渠道在Web渠道中自动生成的子表单和字段。 Web渠道在“布局”模式下保留“打印渠道”元素的布局。
-
 ## 访问布局模式 {#access-layout-mode}
 
-从自 **适应表** 单顶部显示的下拉列表中选择“布局”，然后在“预览”选项旁边选择“交互通信创 **作”** 界面。 表单将以布局模式显示。
+从显 **示** 在自适应表单创作界面顶部的列表下拉框中选择布局，该界面位于 **预览选项** 旁。 表单将以布局模式显示。
 
 1. 登录到AEM作者实例，并导航到 **Adobe Experience Manager** > **Forms** > **Forms和文档**。
-1. [创建新表单](../../forms/using/create-interactive-communication.md) ，或打开现有的自适应表单或交互式通信。
+1. 新建或打开现有的自适应 [表单](../../forms/using/creating-adaptive-form.md)。
 1. 从显 **示** 在列表选项旁边顶部的下拉中选择 **预览** 。 表单将以布局模式显示。
 
-   ![交互式通信的布局模式](assets/layout_mode_ic_new.png)
+   ![布局模式](assets/layout_mode_ic_new.png)
 
 ## 调整组件大小 {#resize-components}
 
@@ -56,9 +46,9 @@ ht-degree: 0%
 
 ### 示例 {#example}
 
-**目标：** 您要插入表组件和图像组件，并在交互通信中将它们彼此平行放置。
+**目标：** 您要插入表组件和图像组件，并以自适应形式将它们并行放置。
 
-1. 在Web渠道中使用编辑模式插入表和图像组件。 图像组件显示在表组件之后。
+1. 在自适应表单中使用编辑模式插入表和图像组件。 图像组件显示在表组件之后。
 1. 切换到布局模式并点按表组件。 用于调整组件大小的蓝点显示在第1列和第12列。
 1. 将响应式网格的第12列的蓝点拖放到第6列。
 
