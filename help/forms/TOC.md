@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3716'
 ht-degree: 2%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 2%
       + [安装和配置数据捕获功能](using/installing-configuring-aem-forms-osgi.md)
       + [在OSGi上安装和配置以Forms为中心的工作流程](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [安装和配置交互通信](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [安装和配置自动化Forms转换服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [安装和配置Automated forms conversion服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Install AEM Forms on JEE {#jee-installation}
       + [支持AEM表单在JEE上的平台](using/aem-forms-jee-supported-platforms.md)
       + [在JEE上使用JBoss统包安装和部署AEM Forms](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
@@ -193,6 +193,7 @@ ht-degree: 2%
    + [印刷渠道和Web渠道](using/web-channel-print-channel.md)
    + [交互通信配置属性](using/interactive-communication-configuration-properties.md)
    + [生成多个交互式通信](using/generate-multiple-interactive-communication-using-batch-api.md)
+   + [使用布局模式调整组件大小](using/resize-using-layout-mode-interactive-communication.md)
 + 工作流 {#workflows}
    + [OSGi上以Forms为中心的工作流程](using/aem-forms-workflow.md)
    + [OSGi上以Forms为中心的工作流——步骤参考](using/aem-forms-workflow-step-reference.md)
