@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9a4ae73c08657195da2741cccdb196bd7f7142c9
+source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# 利用模式检测器评估升级复杂度{#assessing-the-upgrade-complexity-with-the-pattern-detector}
+# 利用模式检测器评估升级复杂度
 
 ## 概述 {#overview}
 
@@ -43,9 +43,10 @@ ht-degree: 1%
 >* 提高检测率
 >* 避免业务关键型实例出现任何缓慢
 
-
->同时，建议在登台环境上 **运行它** ，这些在用户应用程序、内容和配置方面尽可能接近生产应用程序。
 >
+>
+同时，建议在登台环境上 **运行它** ，这些在用户应用程序、内容和配置方面尽可能接近生产应用程序。
+
 可以使用多种方法检查图案检测器输出：
 
 * **通过Felix Inventory控制台：**
@@ -56,7 +57,6 @@ ht-degree: 1%
    ![screeston-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **通过基于反应文本或常规JSON界面**
-
 * **通过反应式JSON行界面，**可在每行中生成单独的JSON文档。
 
 下面介绍了这两种方法：
@@ -211,7 +211,8 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 ```
 
 >[!NOTE]
-建议的方法是将卷起的整个输出保存到文件中，然后通过或过滤 `jq` 信息 `grep` 类型对其进行处理。
+>
+>建议的方法是将卷起的整个输出保存到文件中，然后通过或过滤 `jq` 信息 `grep` 类型对其进行处理。
 
 ## 检测范围 {#scope}
 
@@ -224,5 +225,5 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 * rep：用户节点兼容性（在OAuth配置上下文中）
 
 >[!NOTE]
-请注意，模式检测器会尝试准确预测升级警告。 但是，在某些情况下，它可能会产生误报。
-
+>
+>请注意，模式检测器会尝试准确预测升级警告。 但是，在某些情况下，它可能会产生误报。
