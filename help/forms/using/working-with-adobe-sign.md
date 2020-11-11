@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f0038c1f88ea0047cbaae4fe49456a665aa67f10
+source-git-commit: 11f3e2f7cb742340388bc9421a3ea8f25deabec5
 workflow-type: tm+mt
-source-wordcount: '3904'
+source-wordcount: '3949'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,8 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 1. 从已配置的Adobe SignCloud Services列表中选择云服务。
 
    如果 **Adobe SignCloud Service** 列表为空，请按照 [使用AEM Forms文配置](../../forms/using/adobe-sign-integration-adaptive-forms.md) Adobe Sign来配置服务。
+
+   下拉列表列表“工具”>“Cloud Services”>“ `global` Adobe Sign”中文件 **[!UICONTROL 夹中存]** 在的 **[!UICONTROL 云服]**&#x200B;务。 此外，下拉列表还列表您在创建自适应表单时在配置容器字段中选 **[!UICONTROL 择的文件夹]** 中存在的云服务。
 
 1. 从“签名者可以签名”对 **话框中选择签** 名顺序。 Adobe Sign歌手可以按任 **意顺序** (依次为另一个签署方 **或同时** )签署自适应格式。
 
