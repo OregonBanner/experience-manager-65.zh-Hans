@@ -1,10 +1,10 @@
 ---
 cloud: experience-cloud
 solution-title: 学习和支持
-solution-hub-url: https://helpx.adobe.com/cn/support/experience-manager/6-5.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-65.html
 solution-icon: assets/experience-cloud-logo-24.png
 getting-started-title: 入门
-getting-started-url: https://helpx.adobe.com/experience-manager/tutorials.html
+getting-started-url: https://experienceleague.corp.adobe.com/docs/experience-manager-tutorials.html
 tutorials-title: 教程
 tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html
 mini-toc-levels: 2
@@ -13,10 +13,10 @@ solution: Experience Manager
 type: Documentation
 index: y
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 5f9fb08a59dd7cac5436b9c7836fb45de9cda007
 workflow-type: tm+mt
 source-wordcount: '155'
-ht-degree: 12%
+ht-degree: 9%
 
 ---
 
