@@ -4,17 +4,17 @@ description: 了解如何使用“过滤器”面 [!DNL Adobe Experience Manager
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 752f8a305f689a9aa1377533108d28c714da8afd
 workflow-type: tm+mt
-source-wordcount: '5968'
+source-wordcount: '5776'
 ht-degree: 6%
 
 ---
 
 
-# 在 [!DNL Adobe Experience Manager] {#assets-search-in-aem}
+# 在 [!DNL Adobe Experience Manager] {#search-assets-in-aem}
 
-[!DNL Adobe Experience Manager Assets] 提供强大的资产发现方法，帮助您实现更高的内容速度。 您的团队使用开箱即用的功能和自定义方法，通过无缝、智能的搜索体验缩短上市时间。 搜索资产对于数字资产管理系统的使用至关重要——无论是供创意人员进一步使用、供业务用户和营销人员对资产进行可靠管理，还是供DAM管理员管理。 简单、高级和自定义搜索，您可以通过用户界面或其 [!DNL Assets] 他应用程序和界面执行这些搜索，这些搜索有助于完成这些用例。
+[!DNL Adobe Experience Manager Assets] 提供强大的资产发现方法，帮助您实现更高的内容速度。 您的团队可以使用现成的功能和自定义方法，通过无缝、智能的搜索体验缩短上市时间。 搜索资产对于数字资产管理系统的使用至关重要——无论是供创意人员进一步使用、供业务用户和营销人员对资产进行可靠管理，还是供DAM管理员管理。 简单、高级和自定义搜索，您可以通过用户界面或其 [!DNL Assets] 他应用程序和界面执行这些搜索，这些搜索有助于完成这些用例。
 
 [!DNL Experience Manager Assets] 支持以下用例，本文介绍这些用例的用法、概念、配置、限制和疑难解答。
 
@@ -25,15 +25,15 @@ ht-degree: 6%
 | [搜索建议](#searchsuggestions) | [强制元数据](#mandatorymetadata) | [下载](#download) |
 | [了解搜索结果和行为](#searchbehavior) | [修改搜索彩块化](#searchfacets) | [批量元数据更新](#metadataupdates) |
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
-| [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果和疑难解答](#troubleshoot-unexpected-search-results-and-issues) |
+| [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果并排除故障](#unexpectedresults) |
 | [从其他解决方案和应用程序中搜索](#beyondomnisearch):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brandportal)</li><li>[Experience Manager桌面应用程序](#desktopapp)</li><li>[Adobe Stock图像](#adobestock)</li><li>[Dynamic Media资产](#dynamicmedia)</li></ul> |  |  |
 | [资产选择器](#assetpicker) |  |  |
 | [限制](#limitations) 和提 [示](#tips) |  |  |
 | [示例](#samples) |  |  |
 
-使用Web界面顶部的“全名搜索”字段搜索 [!DNL Experience Manager] 资产。 转到 **[!UICONTROL 资产]** >文 **[!UICONTROL 件]** , [!DNL Experience Manager]单击顶栏中的搜索，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键/（正斜杠）打开Omnisearch字段。 `Location:Assets` 已预先选择，以将搜索限制为DAM资产。 [!DNL Experience Manager] 在开始键入搜索关键字时提供建议。
+使用Web界面顶部的“全名搜索”字段 [!DNL Experience Manager] 搜索资产。 转至 **[!UICONTROL 资产]** >文 **[!UICONTROL 件]** , [!DNL Experience Manager]单击顶 ![栏中](assets/do-not-localize/search_icon.png) 的search_icon，输入搜索关键字，然后按返回键。 或者，使用关键字快 `/` 捷键（正斜杠）打开Omnisearch字段。 `Location:Assets` 已预先选择，以将搜索限制为DAM资产。 [!DNL Experience Manager] 在开始键入搜索关键字时提供建议。
 
-使用 **[!UICONTROL 过滤器]** 面板根据各种选项（谓词）筛选搜索结果，从而缩小搜索范围，如文件类型、文件大小、上次修改日期、资产状态、洞察数据和Adobe Stock授权。 您的管理员可以自定义“过滤器”面板，并使用搜索彩块化添加或删除搜索谓词。 “ [!UICONTROL 过滤器] ”面板中的“文 [!UICONTROL 件类] 型”筛选器包含混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
+使用 **[!UICONTROL 过滤器]** 面板可搜索资产、文件夹、标记和元数据。 您可以根据各种选项（谓词）筛选搜索结果，如文件类型、文件大小、上次修改日期、资产状态、分析数据和Adobe Stock授权许可。 您可以自定义过滤器面板，并使用搜索彩块化添加或删 [除搜索谓词](/help/assets/search-facets.md)。 “ [!UICONTROL 过滤器] ”面板中的“文 [!UICONTROL 件类] 型”筛选器包含混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
 
 [!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。 请参阅 [搜索集合](/help/assets/manage-collections.md)。
 
@@ -45,11 +45,11 @@ ht-degree: 6%
 
 *图：了解 [!DNL Experience Manager Assets] 搜索结果界面。*
 
-**答：将搜索** 另存为智能收藏集。 **B.过滤器** 或谓词，以缩小搜索结果。 **C.显示文件** 、文件夹，或同时显示这两个文件。 **D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F. Omnisearch** 字段，其中包含用户提供的搜索关键字。 **G.选择** 加载的搜索结果。 **H.** 在总搜索结果中显示的搜索结果数。 **I.关闭** 搜索 **J.在卡视图** 和列表视图之间切换。
+**答：将搜索** 另存为智能收藏集。 **B.过滤器** 或谓词，以缩小搜索结果。 **C.显示文件** 、文件夹，或同时显示这两个文件。 **D.** 单击“过滤器”以打开或关闭左边栏。**E.** 搜索位置为 DAM。**F. Omnisearch** 字段，其中包含用户提供的搜索关键字。 **G.选择** 加载的搜索结果。 **H.** 在总搜索结果中显示的搜索结果数。 **I.关闭** 搜索。 **J.在卡视图** 和列表视图之间切换。
 
 ### 动态搜索彩块化 {#dynamicfacets}
 
-您可以使用动态更新的搜索彩块化中预期搜索结果数量，更快地从搜索结果页面发现所需的资产。 预期的资产数量会在应用搜索筛选器之前进行更新。 查看筛选器的预期计数有助于您快速、高效地浏览搜索结果。 有关详细信息，请参阅 [在Experience Manager中搜索资产](search-assets.md)。
+您可以使用动态更新的搜索彩块化中预期搜索结果数量，更快地从搜索结果页面发现所需的资产。 预期的资产数量会在应用搜索筛选器之前进行更新。 查看筛选器的预期计数有助于您快速、高效地浏览搜索结果。
 
 ![在搜索彩块化中查看资产的大致数量，无需筛选搜索结果。](assets/asset_search_results_in_facets_filters.png)
 
@@ -59,7 +59,7 @@ ht-degree: 6%
 
 ### 基本搜索词和结果 {#searchbasics}
 
-您可以从OmniSearch字段运行关键字搜索。 关键字搜索不区分大小写，并且是全文搜索（在常用元数据字段中）。 如果搜索了多个关键字，则关键字之间的默认运算符是默 `AND` 认搜索，而是在资 `OR` 产被智能标记时。
+您可以从OmniSearch字段运行关键字搜索。 关键字搜索不区分大小写，并且是全文搜索（跨常用元数据字段）。 如果使用了多个关键字，则 `AND` 是关键字之间的默认运算符。
 
 结果按相关性排序，以最接近的匹配项开始。 对于多个关键字，更具相关性的结果是包含这两个术语的资产在其元数据中。 在元数据中，显示为智能标记的关键字的排名高于其他元数据字段中显示的关键字。 [!DNL Experience Manager] 允许赋予特定搜索词更高的权重。 此外，还可以提升 [特定搜索词的](#searchrank) 少数目标资产的排名。
 
@@ -116,11 +116,11 @@ ht-degree: 6%
 1. 在“搜 **[!UICONTROL 索提升]** ”框中，指定要提升图像搜索的关键字，然后单击“添 **[!UICONTROL 加”]**。 可以以相同方式指定多个关键字。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。您为此关键字提升的资产会显示在顶级搜索结果中。
 
-您可以通过提升目标关键字的搜索结果中某些资产的排名来利用此功能。 请观看下面的示例视频。 有关详细信息，请参 [阅Experience Manager搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search.html)。
+您可以通过提升目标关键字的搜索结果中某些资产的排名来利用此功能。 请观看下面的示例视频。 有关详细信息，请参 [阅搜索 [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
-*了解搜索结果的排名方式以及排名如何受影响。*
+*视频：了解搜索结果的排名方式以及排名如何受影响。*
 
 ## Advanced search {#scope}
 
@@ -202,11 +202,11 @@ ht-degree: 6%
 
 ### 在桌面应用程序 [!DNL Experience Manager] 中搜索资产 {#desktopapp}
 
-创意专业人士使用桌面应用程 [!DNL Experience Manager Assets] 序使本地桌面（Win或Mac）可轻松搜索和使用。 Creatives可以轻松地在Mac Finder或Windows资源管理器中显示所需的资产，在桌面应用程序中打开并在本地进行更改——这些更改将通过在存储库中创建 [!DNL Experience Manager] 的新版本保存回来。 应用程序支持使用一个或多个关键字、通配符 `*` 和运 `?` 算符进行基本 `AND` 搜索。 请参 [阅浏览、搜索和预览桌面应用程](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 序中的资产。
+创意专业人士使用桌面应用程 [!DNL Experience Manager Assets] 序使本地桌面（Win或Mac）可轻松搜索和使用。 Creatives可以轻松地在Mac Finder或Windows资源管理器中显示所需的资产，在桌面应用程序中打开并在本地进行更改——这些更改将通过在存储库中创建 [!DNL Experience Manager] 的新版本保存回来。 应用程序支持使用一个或多个关键字、通配符 `*` 和运 `?` 算符进行基本 `AND` 搜索。 请参 [阅浏览、搜索和预览桌面应用程](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) 序中的资产。
 
 ### 在 [!DNL Brand Portal] {#brandportal}
 
-业务线用户和营销人员使用Brand Portal与其扩展的内部团队、合作伙伴和经销商高效安全地共享获准的数字资产。 See [search assets on Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
+业务线用户和营销人员使用Brand Portal与其扩展的内部团队、合作伙伴和经销商高效安全地共享获准的数字资产。 See [search assets on Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
 
 ### 搜索图 [!DNL Adobe Stock] 像 {#adobestock-1}
 
@@ -259,8 +259,7 @@ ht-degree: 6%
 * 请勿在搜索查询中输入前导空格，否则搜索无效。
 * [!DNL Experience Manager] 在您从搜索结果中选择资产的属性，然后取消搜索后，可能会继续显示搜索词。 <!-- (CQ-4273540) -->
 * 在搜索文件夹或文件和文件夹时，无法对任何参数对搜索结果进行排序。
-* 如果按回车键时未在Omnisearch栏中键入任何内容， [!DNL Experience Manager] 则返回仅包含文件的列表，而不包含文件夹。 如果您在不使用关键字的情况下专门搜索文 [!DNL Experience Manager] 件夹，则不返回任何结果。
-* 使用 **[!UICONTROL 搜索页]** 面右上角的“全选”选项选择搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
+* 如果按回车键时未在搜索栏中键入内容， [!DNL Experience Manager] 则返回的列表仅为文件，而非文件夹。 如果您在不使用关键字的情况下专门搜索文 [!DNL Experience Manager] 件夹，则不返回任何结果。
 
 视觉搜索或相似性搜索具有以下限制：
 
@@ -277,8 +276,8 @@ ht-degree: 6%
 * 使用“分析”谓词，根据从各种Creative应用程序获取的资产使用情况统计信息搜索受支持的资产。 使用情况渠道按使用情况得分、展示次数、点击次数和显示资产的媒体类别进行分组。
 * 使用全 **[!UICONTROL 选复选框]** ，选择已搜索的资产。 [!DNL Experience Manager] 最初以卡视图显示100个资产，以列表视图显示200个资产。 滚动搜索结果时会加载更多资产。 您可以选择比加载的资产更多的资产。 选定资产的计数会显示在搜索结果页面的右上角。 您可以对所选内容进行操作，例如，下载选定的资产、批量更新选定资产的元数据属性，或将选定的资产添加到收藏集。 当选择的资产多于显示的资产数量时，将对所有选定的资产应用一个操作，或者出现一个对话框，显示所应用的资产数。 要对未加载的资产应用操作，请确保已明确选择所有资产。
 * 要搜索不包含强制元数据的资产，请参阅强制 [元数据](#mandatorymetadata)。
-* 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 *shoe12*)。
-* 全文搜索支持——和^等运算符。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用“笔记本——美容”而不是“笔记本——美容”。
+* 搜索使用所有元数据字段。 通常，搜索12等通用搜索会返回许多结果。 为获得更好的效果，请使用多次（非单引号），或确保数字与没有特殊字符的单词相邻(例如 `shoe12`)。
+* 全文搜索支持和等运 `-` 算符 `^`。 要将这些字母作为字符串文本搜索，请将搜索表达式括在多次引号中。 例如，使用 `"Notebook - Beauty"` 而非使 `Notebook - Beauty`用。
 * 如果搜索结果太多，请将所 [需资产的搜](#scope) 索范围限制为零。 当您了解如何更好地查找所需的资产（例如特定文件类型、特定位置、特定元数据等）时，它会发挥最佳作用。
 
 * **标记**:标记可帮助您更高效地对可以浏览和搜索的资产进行分类。 标记有助于将相应的分类传播到其他用户和工作流。 [!DNL Experience Manager] 优惠使用Adobe Sensei的人为智能服务自动标记资产的方法，这些服务通过使用和培训不断改进资产标记功能。 在搜索资产时，如果您的帐户启用了智能标记，则智能标记会被纳入其中。 它与内置的搜索功能配合使用。 查看 [搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以提 [升几个选定资产](#searchrank) 的搜索排名。
@@ -354,11 +353,11 @@ ht-degree: 6%
    保存更改。
 
 1. 访 `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` 问并添 `similarityTags` 加值为 `Boolean` 的类型属性 `true`。
-1. 将智能标记应用于存储库中的 [!DNL Experience Manager] 资产。 了解 [如何配置智能标记](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-technical-video-setup.html)。
+1. 将智能标记应用于存储库中的 [!DNL Experience Manager] 资产。
 1. 在CRXDE的节点 `/oak-index/damAssetLucene` 中，将属性 `reindex` 设置为 `true`。 保存更改。
 1. （可选）如果您具有自定义的搜索表单，则将节 `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` 点复制到 `/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 保存更改。
 
-有关信息，请参 [阅了解Experience Manager中的智能标记](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/metadata/smart-tags-feature-video-use.html)[以及如何管理智能标记](/help/assets/enhanced-smart-tags.md)。
+有关信息，请参 [阅了解Experience Manager中的智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)[以及如何管理智能标记](/help/assets/enhanced-smart-tags.md)。
 
 >[!CAUTION]
 >
@@ -403,16 +402,16 @@ ht-degree: 6%
 
 ## 使用资产搜索结果 {#aftersearch}
 
-您可以对您以Experience Manager搜索的资产执行以下操作：
+您可以对搜索过的资产执行以下操作 [!DNL Experience Manager]:
 
 * 视图元数据属性和其他信息。
 * 下载一个或多个资源。
 * 使用桌面操作在桌面应用程序中打开这些资产。
 * 创建智能收藏集。
 
-### 对搜索结果进行排序 {#sort}
+### 对搜索结果排序 {#sort}
 
-对搜索结果进行排序，以更快地发现所需的资产。 You can sort the search results in list view and only when you select **[[!UICONTROL Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Experience Manager Assets] 使用服务器端排序功能快速对某个文件夹或搜索查询的结果中的所有资产（无论数量多少）进行排序。 与客户端排序相比，服务器端排序提供更快、更准确的结果。
+对搜索结果进行排序，以更快地发现所需的资产。 You can sort the search results in list view and only when you select **[[!UICONTROL Files]](#searchui)** from the **[!UICONTROL Filters]** panel. [!DNL Assets] 使用服务器端排序功能快速对某个文件夹或搜索查询的结果中的所有资产（无论数量多少）进行排序。 与客户端排序相比，服务器端排序提供更快、更准确的结果。
 
 在列表视图中，您可以像对任意文件夹中的资产进行排序一样对搜索结果进行排序。 排序功能适用于这些列——名称、标题、状态、Dimension、大小、评级、使用情况、创建日期、修改日期、发布日期、工作流和检出。
 
@@ -449,7 +448,7 @@ ht-degree: 6%
 
 您可以根据搜索条件创建智能收藏集。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，选择&#x200B;**[!UICONTROL 文件]**，然后单击&#x200B;**[!UICONTROL 保存智能收藏集]**。请参阅[管理收藏集](/help/assets/manage-collections.md)。
 
-## 对意外搜索结果和问题进行疑难解答 {#troubleshoot-unexpected-search-results-and-issues}
+## 意外的搜索结果和问题 {#unexpectedresults}
 
 | 错误、问题、症状 | 可能的原因 | 可能的问题修复或理解 |
 |---|---|---|
@@ -465,7 +464,7 @@ ht-degree: 6%
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 搜索实施指南](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/search-tutorial-develop.html)
->* [用于提升搜索结果的高级配置](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/search-and-discovery/search-boost.html)
->* [配置智能翻译搜索](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
+>* [[!DNL Experience Manager] 搜索实施指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html)
+>* [用于提升搜索结果的高级配置](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)
+>* [配置智能翻译搜索](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
 
