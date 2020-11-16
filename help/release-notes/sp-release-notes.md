@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b23b66e9d57742f6771bc4b26753a47b334e06bc
+source-git-commit: c4e602a208fa5f66e79a5705a7f1f2f844fb23b5
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4574'
 ht-degree: 6%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * [增强了已翻译的自适应表单页面的缓存](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* 自动化 [Forms转换服务中支持Adobe Sign文本标记](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。
+* 在Automated forms conversion服 [务中支持Adobe Sign文本标记](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。
 
 * 支持使用 [将彩色表单转换为自适应表单](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) 。 [!DNL Automated Forms Conversion service]
 
@@ -258,6 +258,12 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 ### 集成 {#integrations-6560}
 
 * 长名称的活动未与 [!DNL Adobe Target] 同步(NPR-34254)。
+
+* 在创建新Adobe启动配置时选择属性会导致以下错误消息(NPR-33947):
+
+   ```javascript
+   GET http://hostname:Port/libs/cq/dtm-reactor/content/configurations/createcloudconfigwizard/jcr:content/body/items/form/items/wizard/items/general/items/fixedcolumns/items/container/items/general/items/property/data.html?query=&start=0&end=25&imsConfigurationId=Adobe%20Launch&companyId=&_charset_=utf-8 400 (Bad Request)
+   ```
 
 ### 翻译项目 {#translation-6560}
 
