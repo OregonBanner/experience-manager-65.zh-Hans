@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
+source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
+workflow-type: tm+mt
+source-wordcount: '2780'
+ht-degree: 74%
 
 ---
 
@@ -36,7 +39,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 配置 AEM 和 Adobe Campaign 后，您可以直接在 AEM 中创建电子邮件分发内容，然后在 Adobe Campaign 中对其进行处理。
 
-在AEM中创建Adobe Campaign内容时，必须先链接到Adobe Campaign服务，然后才能编辑内容以访问所有功能。
+在AEM中创建Adobe Campaign内容时，您必须先链接到Adobe Campaign服务，然后才能编辑内容以访问所有功能。
 
 以下是两种可能的情况：
 
@@ -58,15 +61,15 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
    >[!NOTE]
    >
-   >[仅 Geometrixx 中提供了电子邮件示例](/help/sites-developing/we-retail.md)。请从“包共享”下载示例Geometrixx内容。
+   >[仅 Geometrixx 中提供了电子邮件示例](/help/sites-developing/we-retail.md)。请从包共享下载示例Geometrixx内容。
 
    ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 1. 选择&#x200B;**创建**，然后选择&#x200B;**创建页面**。
 1. 选择您所连接到的 Adobe Campaign 所对应的可用模板之一，然后单击&#x200B;**下一步**。默认情况下，有两种模板可用：
 
-   * **Adobe Campaign经典电子邮件**:允许您先将内容添加到预定义的模板（两列），然后再将其发送到Adobe Campaign Classic进行分发。
-   * **Adobe Campaign Standard电子邮件**:允许您先将内容添加到预定义的模板（两列），然后再将其发送到Adobe Campaign Standard进行分发。
+   * **Adobe Campaign Classic电邮**:允许您在将内容发送到Adobe Campaign Classic进行投放之前，将内容添加到预定义的模板（两列）。
+   * **Adobe Campaign Standard电邮**:允许您在将内容发送到Adobe Campaign Standard进行投放之前，将内容添加到预定义的模板（两列）。
 
 1. Fill in the **Title** and optionally the **Description** and click **Create**. 标题将用作新闻稿/电子邮件的主题，除非您在编辑电子邮件时覆盖此标题。
 
@@ -91,7 +94,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
    ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 1. 从下拉列表中选择与您的 Adobe Campaign 实例相匹配的配置，然后单击&#x200B;**保存**&#x200B;以进行确认。
-1. 单击** Adobe Campaign**选项卡，可以查看电子邮件已应用到的模板。 如果您想要选择其他模板，则可以在编辑时从电子邮件中访问该模板。
+1. 您可以通过单击 **Adobe Campaign** 选项卡来查看电子邮件应用的模板。如果您想要选择其他模板，则可以在编辑时从电子邮件中访问该模板。
 
    If you would like to apply a specific email delivery template (from Adobe Campaign), other than the default mail template, in **Properties**, select the **Adobe Campaign** tab. 输入电子邮件分发模板在相关 Adobe Campaign 实例中的内部名称。
 
@@ -111,7 +114,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
    >
    >或者，也可以在&#x200B;**站点**&#x200B;选项卡中选择&#x200B;**查看属性**，从而选择云服务。
 
-1. 从下拉列表中选择与您的Adobe Campaign实例匹配的配置，删除您创建的第一个非Adobe Campaign配置，然后单击复选标记进行确认。
+1. 从下拉Adobe Campaign中选择与您的列表实例匹配的配置，删除您创建的第一个非Adobe Campaign配置，然后单击复选标记进行确认。
 1. 继续执行上述操作过程中的步骤 4，以选择模板并添加纯文本。
 
 ### 编辑电子邮件内容 {#editing-email-content}
@@ -148,7 +151,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 编辑内容时，您可以插入：
 
-* Adobe Campaign 上下文字段。这些字段可以插入文本中，并根据收件人的数据（例如名字、姓氏或目标维度的任何数据）进行调整。
+* Adobe Campaign 上下文字段。这些字段可以插入文本中，并根据收件人的数据(例如名、姓或目标维的任何数据)进行调整。
 * Adobe Campaign 个性化基块。这些是与收件人数据无关的预定义内容块，如品牌徽标或指向镜像页面的链接。
 
 有关营销活动组件的完整说明，请参阅 [Adobe Campaign 组件](/help/sites-authoring/adobe-campaign-components.md)。
@@ -157,6 +160,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 >
 >* 只会考虑 Adobe Campaign **配置文件**&#x200B;定位维度的字段。
 >* When viewing Properties from **Sites**, you do not have access to the Adobe Campaign context fields. 您可以在编辑时直接从电子邮件中访问这些字段。
+
 >
 
 
@@ -177,6 +181,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
    >
    >* 可用的上下文字段与 Adobe Campaign 中的&#x200B;**配置文件**&#x200B;定位维度相对应。
    >* See [Linking an AEM page to an Adobe Campaign email](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard).
+
    >
    >**对于 Adobe Campaign Classic：**
    >
@@ -221,7 +226,7 @@ source-git-commit: 6853306d217809e05dbef4968c75bfef9d048f1c
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-To approve content for Adobe Campaign, apply the workflow by selecting **Workflow** and selecting **Approve for Adobe Campaign** and click **Start Workflow**. 执行步骤并批准内容。 您也可以拒绝该内容，方法是在上一个工作流步骤中选择&#x200B;**拒绝**&#x200B;而不是&#x200B;**批准**。
+To approve content for Adobe Campaign, apply the workflow by selecting **Workflow** and selecting **Approve for Adobe Campaign** and click **Start Workflow**. 完成这些步骤并批准内容。 您也可以拒绝该内容，方法是在上一个工作流步骤中选择&#x200B;**拒绝**&#x200B;而不是&#x200B;**批准**。
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
@@ -259,11 +264,11 @@ Adobe Campaign Standard 允许您获取 AEM 中创建的内容并将其与以下
 ![chlimage_1-35](assets/chlimage_1-35a.png)
 
 >[!NOTE]
-如果新闻稿已链接到多个分发，则链接的分发数（但不显示每个ID）。
+如果新闻稿已链接到多个投放，则链接的投放数（但不显示每个ID）。
 
 要将 AEM 中创建的页面与 Adobe Campaign 中的电子邮件相链接，请执行以下操作：
 
-1. 基于特定于 AEM 的电子邮件模板创建新的电子邮件。Refer to [Creating emails in Adobe Campaign Standard](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html) for more information.
+1. 基于特定于 AEM 的电子邮件模板创建新的电子邮件。Refer to [Creating emails in Adobe Campaign Standard](https://helpx.adobe.com/cn/campaign/standard/channels/using/creating-an-email.html) for more information.
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -286,6 +291,7 @@ Adobe Campaign Standard 允许您获取 AEM 中创建的内容并将其与以下
    * AEM 中的内容批准状态。如果内容未获得批准，您可以对其进行同步，但是必须批准内容，之后才能发送分发。不过，您可以执行一些特定操作，例如发送证据或进行预览测试。
    * 内容的上次修改日期。
    * 已链接到分发的所有内容。
+
    >[!NOTE]
    默认情况下，已与分发同步的内容会处于隐藏状态。但是，您可以显示并使用这些内容。例如，如果您要将内容用作多次分发的模板，则可以显示该内容。
 
@@ -315,9 +321,8 @@ Adobe Campaign 允许您获取 AEM 中创建的内容并将其与以下项目同
 ![chlimage_1-39](assets/chlimage_1-39a.png)
 
 >[!NOTE]
-如果新闻稿已链接到多个分发，则链接的分发数（但不显示每个ID）。
-
->[!NOTE]
+如果新闻稿已链接到多个投放，则链接的投放数（但不显示每个ID）。
+[!NOTE]
 AEM 6.1 中已弃用以下工作流步骤：**发布到 Adobe Campaign**。这曾是 AEM 6.0 与 Adobe Campaign 集成中包含的一个步骤，现在已不再需要。
 
 要将 AEM 中创建的内容与 Adobe Campaign 中的分发同步，请执行以下操作：
@@ -341,6 +346,7 @@ AEM 6.1 中已弃用以下工作流步骤：**发布到 Adobe Campaign**。这�
    * AEM 中的内容批准状态。如果内容未获得批准，您可以对其进行同步，但是必须批准内容，之后才能发送分发。不过，您可以执行一些特定操作，例如发送 BAT 或进行预览测试。
    * 内容的上次修改日期。
    * 已链接到分发的所有内容。
+
    >[!NOTE]
    默认情况下，已与分发同步的内容会处于隐藏状态。但是，您可以显示并使用这些内容。例如，如果您要将内容用作多次分发的模板，则可以显示该内容。
 
