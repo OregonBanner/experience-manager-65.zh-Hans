@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 2fd0047d-d0f6-4289-98cf-454486f9cd61
 translation-type: tm+mt
-source-git-commit: 69226ffeb79e0b425b28456cbc64192432863f5d
+source-git-commit: 8e663a3c11523796a2bad15e9c088e484f2b573b
 workflow-type: tm+mt
 source-wordcount: '2780'
 ht-degree: 74%
@@ -53,7 +53,6 @@ ht-degree: 74%
 >[!NOTE]
 >
 >When adding email templates, be sure to add them under **/content/campaigns** to make them available.
-
 
 #### 创建新的电子邮件内容 {#creating-new-email-content-1}
 
@@ -133,7 +132,7 @@ ht-degree: 74%
    >
    >如果属性中的个性化字段在编辑器内呈灰显状态，请重新检查您的配置。
 
-   ![chlimage_1-21](assets/chlimage_1-21a.png)
+   ![chlimage_1-29](assets/chlimage_1-21a.png)
 
 1. Open the components panel on left side of screen and select **Adobe Campaign Newsletter** from the drop-down menu to find those components.
 
@@ -160,9 +159,6 @@ ht-degree: 74%
 >
 >* 只会考虑 Adobe Campaign **配置文件**&#x200B;定位维度的字段。
 >* When viewing Properties from **Sites**, you do not have access to the Adobe Campaign context fields. 您可以在编辑时直接从电子邮件中访问这些字段。
-
->
-
 
 
 要插入个性化，请执行以下操作：
