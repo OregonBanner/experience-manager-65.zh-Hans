@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
-source-wordcount: '4803'
+source-wordcount: '4802'
 ht-degree: 20%
 
 ---
@@ -134,7 +134,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 
 在最简单的情况下，产品 SKU 是概览 URL 中唯一的变量部分。在这种情况下，SKU值是您向横幅图像添加热点或图像映射时唯一需要的数据。
 
-但是，在复杂的情况下，概览 URL 除了 SKU 之外还有一些不同的可变元素，例如类别 ID、颜色代码、大小代码，等等。在这种情况下，每个元素都是热点或旋转横幅功能中图像映射数据定义中的单独变量。
+但是，在复杂的情况下，概览 URL 除了 SKU 之外还有一些不同的可变元素，例如类别 ID、颜色代码、大小代码，等等。在这种情况下，每个元素都是热点或旋转横幅功能中图像映射数据定义中的一个单独变量。
 
 请考虑以下快速视图URL及其生成的热点或图像映射变量示例：
 
@@ -255,8 +255,7 @@ If you need to edit Carousel Sets, see [editing Carousel Sets.](#editing-carouse
 >[!NOTE]
 >
 >当您在交互式图像或传送横幅 [中向图像](/help/assets/interactive-images.md) 添加热点时，热点信息会存储在相同的元数据位置——相对于图像的位置和控制板，而不管该位置是交互式图像还是传送横幅。 此功能意味着您可以在任一查看器中轻松重复使用同一图像及其定义的热点数据。
-
->但是，请注意，传送横幅支持图像上的图像地图，这些图像上也可能包含热点；交互式图像则不会。 如果要创建使用同一图像的交互式图像或传送横幅，请牢记这一点。 您可能希望改为使用同一图像的单独副本创建交互式图像和传送横幅。
+但是，请注意，传送横幅支持图像上的图像地图，这些图像上也可能包含热点；交互式图像则不会。 如果要创建使用同一图像的交互式图像或传送横幅，请牢记这一点。 您可能希望改为使用同一图像的单独副本创建交互式图像和传送横幅。
 
 >[!NOTE]
 如果您正在使用热点编辑交互式图像并裁剪图像，则您的热点将被删除。
