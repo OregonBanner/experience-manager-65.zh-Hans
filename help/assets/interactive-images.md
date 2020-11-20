@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '4334'
 ht-degree: 23%
@@ -246,7 +246,7 @@ If you have already uploaded the images that you want to use, advance to the nex
 >[!NOTE]
 >
 >当您在交互式图像或传送横幅中向图像添加热点时，无论热点是交互式图像还是传送横幅，热点信息都会存储在与图像位置相关的同一元数据位置。 此功能意味着您可以在任一查看器中轻松重复使用同一图像及其定义的热点数据。
-
+>
 >但是，请注意，传送横幅支持图像上的图像地图，这些图像上也可能包含热点；交互式图像则不会。 如果要创建使用同一图像的交互式图像或传送横幅，请牢记这一点。 您可能希望改为使用同一图像的单独副本创建交互式图像和传送横幅。
 >
 >另请参阅 [传送横幅](/help/assets/carousel-banners.md)。
