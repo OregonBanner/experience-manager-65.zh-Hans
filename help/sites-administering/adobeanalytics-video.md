@@ -1,8 +1,8 @@
 ---
-title: 为Adobe Adobe配置视频跟踪Analytics
-seo-title: 为Adobe Adobe配置视频跟踪Analytics
-description: 了解如何为SiteCatalyst配置视频跟踪。
-seo-description: 了解如何为SiteCatalyst配置视频跟踪。
+title: 为Adobe Analytics配置视频跟踪
+seo-title: 为Adobe Analytics配置视频跟踪
+description: 了解如何配置视频跟踪以进行SiteCatalyst。
+seo-description: 了解如何配置视频跟踪以进行SiteCatalyst。
 uuid: 5a862f05-abfa-42a2-ad40-4c1c32f1bd75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 1%
@@ -19,15 +19,15 @@ ht-degree: 1%
 ---
 
 
-# 为Adobe Adobe配置视频跟踪Analytics{#configuring-video-tracking-for-adobe-analytics}
+# 为Adobe Analytics配置视频跟踪{#configuring-video-tracking-for-adobe-analytics}
 
-有多种方法可用于跟踪视频事件，其中2种是旧版Adobe Analytics的旧版选项。 以下旧版选项为： 旧里程碑和旧秒。
+有几种方法可用于跟踪视频事件，其中2种是旧版Adobe Analytics的旧版选项。 以下旧版选项为：旧里程碑和旧秒。
 
 >[!NOTE]
 >
->在继续之前，请确保** **您有一个在AEM** 中上传的可播放视频**。
-
->要确保您的视频在页面上播放，请参 **[阅本教程](/help/sites-authoring/default-components-foundation.md#video)**，了解如何在AEM中转码视频文件。
+>在继续之前，请确保在AEM中上 **传了可** 播放的视频。
+>
+>要确保视频在页面上播放，请参阅本 **[教程](/help/sites-authoring/default-components-foundation.md#video)** ，了解如何在AEM中对视频文件进行转码。
 
 请按照以下过程使用每种方法设置视频跟踪框架。
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 1. 通过从Sidekick拖动视频组 **件** ，并将可播放视频 **添加为组件的资产** ，设置网页
 
-1. [创建AdobeAnalytics配置和框架](/help/sites-administering/adobeanalytics.md)。
+1. [创建Adobe Analytics配置和框架](/help/sites-administering/adobeanalytics.md)。
 
    * 下面各节中的示例将名称 **my-sc-configuration用于配置** ，并将 **视频用于** 框架。
 
@@ -52,13 +52,13 @@ ht-degree: 1%
    * [旧式里程碑](/help/sites-administering/adobeanalytics.md)
    * [旧秒](/help/sites-administering/adobeanalytics.md)
 
-1. 当您选择跟踪方法时，CQ变量的列表会相应地发生变化。 有关如何进一步配置组件并将CQ变量与AdobeAnalytics属性映射的信息，请参阅下面的部分。
+1. 当您选择跟踪方法时，CQ变量的列表会相应地发生变化。 有关如何进一步配置组件以及将CQ变量与Adobe Analytics属性映射的信息，请使用下面的部分。
 
 ## Milestones {#milestones}
 
 Milestones方法可跟踪有关视频的大多数信息，并且可高度自定义，且易于配置。
 
-要使用里程碑方法，请指定基于时间的跟踪偏移以定义里程碑。 当视频播放通过里程碑时，该页面将调用AdobeAnalytics来跟踪事件。 对于您定义的每个里程碑，组件会创建一个CQ变量，您可以将其映射到AdobeAnalytics属性。 这些CQ变量的名称使用以下格式：
+要使用里程碑方法，请指定基于时间的跟踪偏移以定义里程碑。 当视频播放通过里程碑时，该页面将调用Adobe Analytics来跟踪事件。 对于您定义的每个里程碑，组件会创建一个CQ变量，您可以将其映射到Adobe Analytics属性。 这些CQ变量的名称使用以下格式：
 
 ```shell
 eventdata.events.milestoneXX
@@ -78,11 +78,11 @@ XX后缀是定义里程碑的轨道偏移。 例如，指定4、8、16、20和28
  <tbody>
   <tr>
    <th>CQ变量</th>
-   <th>AdobeAnalytics地产</th>
+   <th>Adobe Analytics地产</th>
   </tr>
   <tr>
    <td>eventdata.videoName </td>
-   <td>如果在DAM中设置 <strong>，则映射到该</strong><strong>变量的变量将包含</strong>视频的用户友好名称(Title); 如果未设置此值，则将发送视 <strong>频的文</strong> 件名称。 播放视频时，只发送一次。</td>
+   <td>如果在DAM中设置 <strong>，则映射到该</strong><strong>变量的变量将包含</strong>视频的用户友好名称(Title);如果未设置此值，则将发送视 <strong>频的文</strong> 件名称。 播放视频时，仅发送一次。</td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -114,7 +114,7 @@ XX后缀是定义里程碑的轨道偏移。 例如，指定4、8、16、20和28
   </tr>
   <tr>
    <td>eventdata.a.contentType </td>
-   <td>发送到每个里程碑； 在AdobeAnalytics电话中显示为pev3，通常以“视频”的形式发送<br /> </td>
+   <td>发送到每个里程碑；在Adobe Analytics电话中显示为pev3，通常以“视频”的形式发送。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.a.media.name </td>
@@ -139,20 +139,20 @@ XX后缀是定义里程碑的轨道偏移。 例如，指定4、8、16、20和28
 
    偏移值必须是大于0的整数。 默认值为 `10,25,50,75`.
 
-1. 要将CQ变量映射到AdobeAnalytics属性，请将AdobeAnalytics属性从ContentFinder拖动到组件上CQ变量旁。
+1. 要将CQ变量映射到Adobe Analytics属性，请将Adobe Analytics属性从组件上CQ变量旁的ContentFinder拖动。
 
-   有关优化映射的信息，请参阅Adobe [Analytics指南中的测量视频](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 。
+   有关优化映射的信息，请参阅《Adobe Analytics [测量视频指南](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 》。
 
 1. [将框架](/help/sites-administering/adobeanalytics.md) 添加到页面。
-1. 要在预览模式 **下测试设置**，请播放视频，以获取Adobe Deation Calls的触发。
+1. 要在预览模式下 **测试设置**，请播放视频以获取Adobe Analytics呼叫并触发。
 
-AdobeAnalytics跟踪数据示例随后适用于使用4、8、16、20和24的跟踪偏移以及CQ变量的以下映射进行的里程碑跟踪：
+随后的Adobe Analytics跟踪数据示例适用于使用4、8、16、20和24的跟踪偏移以及CQ变量的以下映射进行的里程碑跟踪：
 
 <table>
  <tbody>
   <tr>
    <th>CQ 变量</th>
-   <th>AdobeAnalytics地产</th>
+   <th>Adobe Analytics地产</th>
   </tr>
   <tr>
    <td>eventdata.videoName </td>
@@ -225,19 +225,19 @@ AdobeAnalytics跟踪数据示例随后适用于使用4、8、16、20和24的跟�
 >
 >要查看对Adobe Analytics的调用，请使用适当的工具，如DigitalPulse Debugger或Fiddler。
 
-使用提供的示例调用Adobe DigitalPulse Debugger时，其外观应如下：
+使用提供的示例调用Adobe Analytics在使用DigitalPulse Debugger查看时应当如下：
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*这是对Adobe **Analytics**(Adobe )进行的第一次调用，其中包含以下值：*
+*这是对&#x200B;**Adobe Analytics的**第一次调用，其中包含以下值：*
 
-* *prop1和eVar1 for eventdata.a.media.name,*
-* *props2-4，以及eVar2和eVar3，它们包含contentType（视频）和segment(1:O:1-4)*
+* *prop1和eVar1(eventdata.a.media.name,*
+* *props2-4，以及包含contentType（视频）和segment(1:O:1-4)的eVar2和eVar3*
 * *事件3，映射到eventdata.事件.a.media.视图。*
 
-![chlimage_1-127](assets/chlimage_1-129.png)
+![chlimage_1-129](assets/chlimage_1-129.png)
 
-*这是Adobe **Analytics**打来的第三个电话：*
+*这是第三&#x200B;**次打给**Adobe Analytics:*
 
 * *prop1和eVar1包含a.media.name;*
 * *事件1，因为已查看区段*
@@ -249,9 +249,9 @@ AdobeAnalytics跟踪数据示例随后适用于使用4、8、16、20和24的跟�
 
 除里程碑是使用跟踪长度的百分比定义的以外，“非旧版里程碑”方法与“里程碑”方法类似。 共性如下：
 
-* 当视频播放通过里程碑时，该页面将调用AdobeAnalytics来跟踪事件。
-* 定 [义用于与Adobe Jove属性映射](#cqvars) 的CQ变量的静态集。
-* 对于您定义的每个里程碑，组件会创建一个CQ变量，您可以将其映射到AdobeAnalytics属性。
+* 当视频播放通过里程碑时，该页面将调用Adobe Analytics来跟踪事件。
+* 为 [与Adobe Analytics属性进行映射而定义](#cqvars) 的CQ变量的静态集。
+* 对于您定义的每个里程碑，组件会创建一个CQ变量，您可以将其映射到Adobe Analytics属性。
 
 这些CQ变量的名称使用以下格式：
 
@@ -274,12 +274,12 @@ eventdata.events.milestoneXX
 
    偏移值必须是大于0的整数。
 
-1. 要将CQ变量映射到AdobeAnalytics属性，请将AdobeAnalytics属性从ContentFinder拖动到组件上CQ变量旁。
+1. 要将CQ变量映射到Adobe Analytics属性，请将Adobe Analytics属性从组件上CQ变量旁的ContentFinder拖动。
 
-   有关优化映射的信息，请参阅Adobe [Analytics指南中的测量视频](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 。
+   有关优化映射的信息，请参阅《Adobe Analytics [测量视频指南](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 》。
 
 1. [将框架](/help/sites-administering/adobeanalytics.md) 添加到页面。
-1. 要在预览模式 **下测试设置**，请播放视频，以获取Adobe Deation Calls的触发。
+1. 要在预览模式下 **测试设置**，请播放视频以获取Adobe Analytics呼叫并触发。
 
 ## 旧式里程碑 {#legacy-milestones}
 
@@ -293,21 +293,21 @@ eventdata.events.milestoneXX
 
    * e.g.10,50,75,100
 
-   此外，发送给AdobeAnalytics的信息也不易定制； 只有3个变量可用于映射：
+   此外，发往Adobe Analytics的信息也不太可定制；只有3个变量可用于映射：
 
 <table>
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>如果在DAM中设置 <strong>，则映射到该</strong><strong>变量的变量将包含</strong>视频的用户友好名称(Title); 如果未设置标题，则将发送视 <strong>频的文</strong> 件名称。 播放视频时，只发送一次。<br /> </td>
+   <td>如果在DAM中设置 <strong>，则映射到该</strong><strong>变量的变量将包含</strong>视频的用户友好名称(Title);如果未设置标题，则将发送视 <strong>频的文</strong> 件名称。 播放视频时，仅发送一次。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>映射到此变量的变量将包含文件的名称。 播放视频时，只发送一次。</td>
+   <td>映射到此变量的变量将包含文件的名称。 播放视频时，仅发送一次。</td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
-   <td>映射到该变量的变量将包含文件在服务器上的路径。 播放视频时，只发送一次。</td>
+   <td>映射到该变量的变量将包含文件在服务器上的路径。 播放视频时，仅发送一次。</td>
   </tr>
  </tbody>
 </table>
@@ -320,7 +320,7 @@ eventdata.events.milestoneXX
 
    调用 **中的其余相关信息** ，将连接到一个名 **为pev3** 的变 **量中**。
 
-   **使用提供的示例** ，对Adobe Debugger的调用示例在使用DigitalPulse Debugger查看时应当如下：
+   **使用Digital** Pulse Debugger查看时，使用提供的示例调用Adobe Analytics的示例应当如下：
 
    ![lmilestones1](assets/lmilestones1.png)
 
@@ -340,7 +340,7 @@ eventdata.events.milestoneXX
 
 ## 旧秒 {#legacy-seconds}
 
-使用**传统秒**方法时，AdobeAnalytics调用每隔N秒被触发一次，其中N在“跟踪偏移”字段中指定。
+使用**传统秒**方法时，Adobe Analytics调用每第N秒被触发一次，其中N在“跟踪偏移”字段中指定。
 
 1. 将“轨道偏移”设置为任意秒数，
 
@@ -349,21 +349,21 @@ eventdata.events.milestoneXX
    >
    >“跟踪偏移”字段只接受大于0的整数
 
-   发送给Adobe Analytics的信息不易自定义。 只有3个变量可用于映射：
+   发送到Adobe Analytics的信息不太可定制。 只有3个变量可用于映射：
 
 <table>
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>如果在DAM中设置 <strong>，则映射到该</strong><strong>变量的变量将包含</strong>视频的用户友好名称(Title); 如果未设置标题，则将发送视 <strong>频的文</strong> 件名称。 播放视频时，只发送一次。<br /> </td>
+   <td>如果在DAM中设置 <strong>，则映射到该</strong><strong>变量的变量将包含</strong>视频的用户友好名称(Title);如果未设置标题，则将发送视 <strong>频的文</strong> 件名称。 播放视频时，仅发送一次。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
-   <td>映射到此变量的变量将包含文件的名称。 播放视频时，只发送一次。</td>
+   <td>映射到此变量的变量将包含文件的名称。 播放视频时，仅发送一次。</td>
   </tr>
   <tr>
    <td>eventdata.videoFilePath </td>
-   <td>映射到该变量的变量将包含文件在服务器上的路径。 播放视频时，只发送一次。</td>
+   <td>映射到该变量的变量将包含文件在服务器上的路径。 播放视频时，仅发送一次。</td>
   </tr>
  </tbody>
 </table>
@@ -376,11 +376,11 @@ eventdata.events.milestoneXX
 
    调用 **中的其余相关信息** ，将被关联到一个 **名为pev** 3的 **变量中**。
 
-   使用提供的示例调用Adobe DigitalPulse Debugger时，其外观应如下：
+   使用提供的示例调用Adobe Analytics在使用DigitalPulse Debugger查看时应当如下：
 
    ![秒](assets/lseconds.png)
 
-   *此调用与上述旧版里程碑调用类似。 请参见此处提供的有关pev3 **[的信息](/help/sites-administering/adobeanalytics.md)**。*
+   *此调用与上述旧版里程碑调用类似。 请参阅此处提供的有关pev3 **[的信息](/help/sites-administering/adobeanalytics.md)**。*
 
 **本教程中使用的参考：**
 
