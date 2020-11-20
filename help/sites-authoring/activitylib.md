@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f62d2d639499c128fd4cafa5f9c39307ae9a607d
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 85%
@@ -41,21 +41,25 @@ Activities are available in Targeting mode for [authoring targeted content](/hel
 * A/B - Adobe Target A/B 测试
 * AEM - Adobe Experience Manager 定位（由 contexthub 或 clientcontext 驱动）
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-115](assets/chlimage_1-114.png)
 
 >[!NOTE]
 >
 >可用的活动类型由以下因素决定：
-
+>
 >* 如果对 AEM 端上用来连接到 Adobe Target 的 Adobe Target 租户 (clientcode) 启用了 **xt_only** 选项，则您&#x200B;**只**&#x200B;能在 AEM 中创建 XT 活动。
    >
+   >
 * 如果&#x200B;**未**&#x200B;对 Adobe Target 租户 (clientcode) 启用 **xt_only** 选项，则可以在 AEM 中创建 XT 活动&#x200B;**和** A/B 活动。
-
+>
+>
 **另请注意：****xt_only** 选项是对特定 Target 租户 (clientcode) 应用的设置，只能直接在 Adobe Target 中进行修改。您无法在 AEM 中启用或禁用此选项。
 
 >[!CAUTION]
-You must secure the activity settings node **cq:ActivitySettings** on the publish instance so that it is inaccessible to normal users. 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
-See [Prerequisites for Integrating with Adobe Target](/help/sites-administering/target-requirements.md#securingtheactivitysettings) for detailed information.
+>
+>You must secure the activity settings node **cq:ActivitySettings** on the publish instance so that it is inaccessible to normal users. 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+>
+>See [Prerequisites for Integrating with Adobe Target](/help/sites-administering/target-requirements.md#securingtheactivitysettings) for detailed information.
 
 ## 使用“活动”控制台创建品牌 {#creating-a-brand-using-the-activities-console}
 
@@ -80,7 +84,7 @@ When you create a brand using the Activities console, it also appears in the [Of
 * **定位引擎：**&#x200B;将 [AEM](/help/sites-authoring/personalization.md#aem) 或 [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) 作为目标内容的引擎。
 
 * **选择 Target 配置：**（仅限 Adobe Target）此活动连接到 Adobe Target 的云配置。只有为定位引擎选择了 Adobe Target 时，才会显示此选项。
-* **活动类型： **活动类型- A/B测试或体验定位
+* **活动类型：**活动类型- A/B测试或体验定位
 * **目标：**（可选）活动描述。
 * **体验：**&#x200B;受众名称和您定位的营销区段之间的映射。
 * **流量百分比：**&#x200B;如果选择 A/B 测试，则可以更改每个体验的流量（百分比）。
@@ -89,8 +93,10 @@ When you create a brand using the Activities console, it also appears in the [Of
 * **目标量度：**&#x200B;如果选择 Adobe Target 作为定位引擎，则可向活动添加成功量度。需要一个成功量度。
 
 >[!NOTE]
-新的Adobe Target活动需要在目标内 ***容编辑器中*** （而不是在“活动”控制台中）创建 **** ，因为与Adobe Target的同步将失败。
-不过，您可以在该控制台中编辑现有的 Adobe Target 活动。
+>
+>新的Adobe Target活动需要在目标内 ***容编辑器中*** （而不是在“活动”控制台中）创建 **** ，因为与Adobe Target的同步将失败。
+>
+>不过，您可以在该控制台中编辑现有的 Adobe Target 活动。
 
 要添加活动，请执行以下操作：
 
@@ -110,6 +116,7 @@ When you create a brand using the Activities console, it also appears in the [Of
    1. 单击或点按&#x200B;**添加体验**，键入名称，然后单击或点按&#x200B;**确定**。
 
    1. 单击或点按&#x200B;**下一步**。
+
    如果您使用的是 Adobe Target A/B 测试，请执行以下操作：
 
    1. 单击或点按受众对话框中的铅笔图标，以选择受众。
@@ -134,14 +141,16 @@ When you create a brand using the Activities console, it also appears in the [Of
 1. 单击或点按&#x200B;**保存**。
 
    >[!NOTE]
-   创建活动后，您需要发布活动以使其可用。
+   >
+   >创建活动后，您需要发布活动以使其可用。
 
 ## 发布和取消发布活动 {#publishing-and-unpublishing-activities}
 
 您需要发布活动以使其可用。反之，您也可能希望取消发布活动，以使其不可用。
 
 >[!NOTE]
-取消发布活动时，除非刷新页面，否则活动的状态不会更改。
+>
+>取消发布活动时，除非刷新页面，否则活动的状态不会更改。
 
 要发布或取消发布活动，请执行以下操作：
 
@@ -177,6 +186,7 @@ When you create a brand using the Activities console, it also appears in the [Of
 
    * 禁用当前活动
    * 修改所有页面，并将目标内容替换为入选体验的实际内容。The content of the winning experience becomes part of the normal page **without** targeting.
+
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
    入选体验是在报表中生成较高提升度（基于转化率）的体验。
@@ -221,7 +231,10 @@ When AEM synchronizes an activity with Adobe Target, AEM includes a property of 
 要避免出现同步问题，请始终使用唯一的活动名称。如果活动同步失败，您可以删除 Adobe Target 中具有相同名称的营销活动，但前提是该营销活动未在使用中。
 
 >[!NOTE]
-When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. 在 Adobe Target 中删除营销活动时，不会删除 `thirdPartyId`。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免此问题，请为每个活动命名一个唯一的名称； 因此，活动名称不能在不同的活动类型中重新使用。
-如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
-如果在同步时遇到错误“请求失败。`thirdPartyId` 已存在”，请更改营销活动的名称，然后重新进行同步。
+>
+>When you create a campaign in Adobe Target, it assigns a property called `thirdPartyId t`o each campaign. 在 Adobe Target 中删除营销活动时，不会删除 `thirdPartyId`。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免此问题，请为每个活动命名一个唯一的名称；因此，活动名称不能在不同的活动类型中重新使用。
+>
+>如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
+>
+>如果在同步时遇到错误“请求失败。`thirdPartyId` 已存在”，请更改营销活动的名称，然后重新进行同步。
 
