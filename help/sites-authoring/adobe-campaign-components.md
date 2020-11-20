@@ -11,7 +11,10 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '2854'
+ht-degree: 76%
 
 ---
 
@@ -22,9 +25,9 @@ source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
 
 >[!CAUTION]
 >
->已弃用AEM电子邮件组件。 由于电子邮件的性质将内容和样式结合在一起，AEM提供的现成电子邮件组件对客户的重复使用有限，因为需要将自定义样式实施到项目所需的任何组件中。
+>AEM电子邮件组件已弃用。 由于电子邮件的性质将内容和样式合并，AEM现成提供的电子邮件组件对客户的重复使用有限，因为需要将自定义样式应用到项目所需的任何组件中。
 >
->可以在项目级别上实施电子邮件组件，已弃用的AEM电子邮件组件说明了如何实现这一点。 但是，这些已弃用的组件不应用于项目。
+>可在项目级别实施电子邮件组件，已弃用的AEM电子邮件组件说明了如何实现这一点。 但是，这些已弃用的组件不应用于项目。
 
 ## Adobe Campaign 新闻稿组件 {#adobe-campaign-newsletter-components}
 
@@ -87,10 +90,10 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 >[!NOTE]
 >
->就地编辑器在编辑时使用图像的原始大小和长宽比。您还可以指定高度和宽度属性。在保存编辑更改时，将应用属性中定义的任何大小和长宽比限制。
-
->根据您的实例，[页面设计](/help/sites-developing/designer.md)还可能会强制应用最小和最大限制；这些限制在项目实施过程中开发。
+>就地编辑器在编辑时使用图像的原始大小和长宽比。您还可以指定高度和宽度属性。在保存编辑更改时，将应用属性中定义的所有大小和长宽比限制。
 >
+>根据您的实例，[页面设计](/help/sites-developing/designer.md)还可能会强制应用最小和最大限制；这些限制在项目实施过程中开发。
+
 还有其他几个选项在全屏编辑模式下可用；例如，地图和缩放：
 
 ![](do-not-localize/chlimage_1-11.png)
@@ -120,8 +123,10 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 * **大小**&#x200B;设置图像的高度和宽度。
 
 >[!NOTE]
-您必须在&#x200B;**高级**&#x200B;选项卡的&#x200B;**替换文本**&#x200B;字段中输入相应的信息，否则无法保存图像，同时还会显示以下错误消息：
-`Validation failed. Verify the values of the marked fields.`
+>
+>您必须在&#x200B;**高级**&#x200B;选项卡的&#x200B;**替换文本**&#x200B;字段中输入相应的信息，否则无法保存图像，同时还会显示以下错误消息：
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 以下示例展示了所显示的图像（营销活动）组件。
@@ -138,13 +143,16 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 * **链接工具提示**&#x200B;添加其他有关如何使用链接的信息。
 
-* **链接类型**&#x200B;在下拉列表中，选择&#x200B;**自定义 URL** 或&#x200B;**自适应文档**。此字段为必填字段。如果选择“自定义 URL”，则可以提供链接 URL。如果选择“自适应文档”，则可以提供文档路径。
+* **LinkType**&#x200B;在下拉列表中，在 
+**自定义URL** 和自 **适应文档**。 此字段为必填字段。如果选择“自定义 URL”，则可以提供链接 URL。如果选择“自适应文档”，则可以提供文档路径。
 
 * **其他 URL 参数**&#x200B;添加任何其他 URL 参数。单击“添加项目”可添加多个项目。
 
 >[!NOTE]
-You must enter information in the **Link Type** field in the **URL Info** tab, or the component cannot save and you see the following error message:
-`Validation failed. Verify the values of the marked fields.`
+>
+>You must enter information in the **Link Type** field in the **URL Info** tab, or the component cannot save and you see the following error message:
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 以下示例展示了所显示的链接（营销活动）组件。
@@ -153,7 +161,7 @@ You must enter information in the **Link Type** field in the **URL Info** tab, o
 
 ### Scene7 Image Template (Campaign) {#scene-image-template-campaign}
 
-[Scene7图像模板是分层的](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) ，它们是分层的图像文件，其中的内容和属性可进行参数化以实现可变性。 通过&#x200B;**图像模板**&#x200B;组件，您可以在新闻稿中使用 Scene7 模板，并更改模板参数的值。此外，您还可以在参数中使用Adobe Campaign元数据变量，以便每个用户都能以个性化的方式体验图像。
+[Scene7图像模板](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) 是分层的图像文件，其中的内容和属性可进行参数化以实现可变性。 通过&#x200B;**图像模板**&#x200B;组件，您可以在新闻稿中使用 Scene7 模板，并更改模板参数的值。此外，您可以在参数中使用Adobe Campaign元数据变量，以便每个用户以个性化的方式体验图像。
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -211,8 +219,10 @@ You must enter information in the **Link Type** field in the **URL Info** tab, o
    * **大小**&#x200B;设置图像的高度和宽度。
 
 >[!NOTE]
-必须填写&#x200B;**高级**&#x200B;选项卡中的&#x200B;**替换文本**&#x200B;字段，否则将无法保存该组件，同时还会显示以下错误消息：
-`Validation failed. Verify the values of the marked fields.`
+>
+>必须填写&#x200B;**高级**&#x200B;选项卡中的&#x200B;**替换文本**&#x200B;字段，否则将无法保存该组件，同时还会显示以下错误消息：
+>
+>`Validation failed. Verify the values of the marked fields.`
 
 
 以下示例展示了所显示的文本与图像（营销活动）组件。
@@ -230,15 +240,19 @@ The Text &amp; Personalization (Campaign) component lets you enter a text block 
 在就地编辑器中，您可以添加文本、更改对齐方式、添加和删除链接、添加上下文字段或个性化基块，以及进入全屏模式。添加完文本/个性化后，选择复选标记可保存更改（或选择 x 可取消）。See [Inplace editing](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) for more information.
 
 >[!NOTE]
-* 可用的个性化字段取决于您的新闻稿所链接到的 Adobe Campaign 模板。
-* 从 ContextHub 中选择某个人物后，个性化字段会自动替换为选定配置文件中的数据。
+>
+>* 可用的个性化字段取决于您的新闻稿所链接到的 Adobe Campaign 模板。
+>* 从 ContextHub 中选择某个人物后，个性化字段会自动替换为选定配置文件中的数据。
 
+>
+>
 请参阅[插入个性化](/help/sites-authoring/campaign.md#inserting-personalization)。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
 >[!NOTE]
-只会考虑 **nms:seedMember** 架构或其某个扩展中定义的字段。链接到 **nms:seedMember** 的表的属性不可用。
+>
+>只会考虑 **nms:seedMember** 架构或其某个扩展中定义的字段。链接到 **nms:seedMember** 的表的属性不可用。
 
 ## Adobe Campaign 表单组件 {#adobe-campaign-form-components}
 
@@ -278,7 +292,7 @@ When you open a form that is configured to integrate with Adobe Campaign, you se
   <tr>
    <td><p>复选框（营销活动）</p> </td>
    <td><p>布尔型</p> </td>
-   <td><p>不再联系（通过任何渠道）</p> </td>
+   <td><p>不再联系(由任何渠道)</p> </td>
   </tr>
   <tr>
    <td><p>日期字段（营销活动）</p> <p>日期字段/HTML 5（营销活动）</p> </td>
@@ -287,12 +301,12 @@ When you open a form that is configured to integrate with Adobe Campaign, you se
   </tr>
   <tr>
    <td><p>数字字段（营销活动）</p> </td>
-   <td><p>数字（字节、短、长、双）</p> </td>
+   <td><p>数字(字节、短、长、多次)</p> </td>
    <td><p>年龄</p> </td>
   </tr>
   <tr>
    <td><p>选项字段（营销活动）</p> </td>
-   <td><p>字节，与值关联</p> </td>
+   <td><p>字节与相关值</p> </td>
    <td><p>性别</p> </td>
   </tr>
   <tr>
@@ -360,10 +374,10 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 除了[大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)之外，您还可以配置以下各项：
 
-* **约束** -约束下拉框您可以选择- **无或日** 期- **** 以添加日期的约束或不添加约束。 如果选择日期，则用户在字段中输入的答案必须采用日期格式。
+* **约束——约束** 下拉列表您可以 **选择** -无或 **日期-** 以添加日期约束或无约束。 如果选择日期，则用户在字段中输入的答案必须采用日期格式。
 
 * **约束消息**&#x200B;此外，您还可以添加一条约束消息，以告知用户如何以正确的格式输入回答。
-* **样式** -宽度通过单击或点按+和——图标或输入数字来调 **整字****** 段的宽度。
+* **样式** -宽度通过单击或点按+和图标或输入 **数字** , **调整字段** 的宽度。
 
 以下示例展示了所显示的调整了宽度的日期字段（营销活动）组件。
 
@@ -394,7 +408,7 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 ### Hidden Reconciliation Key (Campaign) {#hidden-reconciliation-key-campaign}
 
-隐藏的对帐密钥（营销活动）组件允许您将隐藏字段作为对帐密钥的一部分添加到表单。
+隐藏合并关键项(活动)组件允许您将隐藏字段作为合并关键项的一部分添加到表单。
 
 您可以在隐藏的对帐密钥（营销活动）组件中配置以下各项：
 
@@ -411,10 +425,10 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 除了[大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)之外，您还可以配置以下各项：
 
-* **约束** -约束下拉框您可以选择- **无或** 数字- **** 以添加数字约束或无约束。 如果选择数字，则用户在字段中输入的答案必须是数字。
+* **约束——约束** 下拉列表您可以选 **择** -无或 **数字-** 以添加数字约束或无约束。 如果选择数字，则用户在字段中输入的答案必须是数字。
 
 * **约束消息**&#x200B;此外，您还可以添加一条约束消息，以告知用户如何以正确的格式输入回答。
-* **样式** -宽度通过单击或点按+和——图标或输入数字，调 **整字****** 段的宽度。
+* **样式** -宽度通过单击或点按+和图标或输入 **数字** , **调整字段** 的宽度。
 
 以下示例展示了所显示的配置了宽度的数字字段（营销活动）组件。
 
@@ -439,7 +453,8 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 此组件在添加到表单后，会将所有可用的订阅显示为复选框，并允许用户选择所需的订阅。When users submit the form, this component subscribes the user to or unsubscribes the user from the selected services depending on the form action type (**Adobe Campaign: Subscribe to Services** or **Adobe Campaign: Unsubscribe from Services**).
 
 >[!NOTE]
-此组件不会核查用户已订阅/取消订阅的服务。
+>
+>此组件不会核查用户已订阅/取消订阅的服务。
 
 您可以在订阅核对清单（营销活动）组件中[配置大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)。（没有可用于此组件的 Adobe Campaign 配置。）
 
@@ -453,10 +468,10 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 除了[大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)之外，您还可以配置以下各项：
 
-* **约束** -约束下拉框您可以选择- **无、** Email **或** Name **** （无变音）-以添加电子邮件地址、名称或无约束的约束。 如果您选择电子邮件，则用户在字段中输入的回答必须是电子邮件地址。如果选择名称，则该名称必须是名称（不允许使用变音）。
+* **约束** -约束下拉 **菜单您可以选择** -无、 **电子邮件**&#x200B;或名称 **（无变音）** -添加电子邮件地址、名称或无约束的约束。 如果您选择电子邮件，则用户在字段中输入的回答必须是电子邮件地址。如果选择名称，则它必须是名称（不允许变音）。
 
 * **约束消息**&#x200B;此外，您还可以添加一条约束消息，以告知用户如何以正确的格式输入回答。
-* **样式** -宽度通过单击或点按+和——图标或输入数字来调 **整字****** 段的宽度。
+* **样式** -宽度通过单击或点按+和图标或输入 **数字** , **调整字段** 的宽度。
 
 以下示例展示了所显示的文本字段（营销活动）组件。
 
