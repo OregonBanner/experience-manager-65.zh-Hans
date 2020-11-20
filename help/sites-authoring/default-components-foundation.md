@@ -13,7 +13,7 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 071f4a292343f0ad52ca3700c95bf60f03c307cc
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
 workflow-type: tm+mt
 source-wordcount: '7287'
 ht-degree: 88%
@@ -29,7 +29,7 @@ ht-degree: 88%
 >
 >Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。These are part of the [We.Retail sample content](/help/sites-developing/we-retail.md) and can also be [installed separately and used for development](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html) by your administrator.
 >
->您可以使用AEM [现代化工具套件](https://opensource.adobe.com/aem-modernize-tools/) ，重新构建基于基础组件的站点以使用核心组件。
+>您可以使用AEM [Dimestronize Tools](https://opensource.adobe.com/aem-modernize-tools/) Suite重构您的基于Foundation Components的站点，以使用核心组件。
 
 基础组件专门为在创作标准网页内容时使用而设计。这些组件构成了适用于标准 AEM 安装的现成组件的子集。
 
@@ -198,7 +198,7 @@ Some are immediately available through component browser, various others are als
 手动或使用选择器指定一个路径。如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
 
-         * **页面**&#x200B;选择页面列表。 使用 
+         * **页面**&#x200B;选择页面列表。使用 
 `+` 以添加更多条目和上／下按钮来调整顺序。
       * **搜索选项**
 
@@ -265,7 +265,7 @@ Some are immediately available through component browser, various others are als
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)。
+>此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/content-fragment-component.html)。
 
 [内容片段](/help/sites-authoring/content-fragments.md)将作为独立于页面的资产来创建和管理。您随后可以在创作内容页面时使用这些片段及其变量。
 
@@ -307,7 +307,7 @@ Some are immediately available through component browser, various others are als
 
 * **外部**
 
-   * **目标应**&#x200B;用程序指定要集成的Web应用程序的URL; 例如：
+   * **目标应**&#x200B;用程序指定要集成的Web应用程序的URL;例如：
 
       ```
       https://en.wikipedia.org/wiki/Main_Page
@@ -390,18 +390,20 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!NOTE]
 >
->就地编辑器在编辑时使用图像的原始大小和长宽比。 您还可以指定高度和宽度属性。 在保存编辑更改时，将应用属性中定义的所有大小和长宽比限制。
-
->根据您的实例，[页面设计](/help/sites-developing/designer.md)还可能会强制应用最小和最大限制；这些限制在项目实施过程中开发。
+>就地编辑器在编辑时使用图像的原始大小和长宽比。您还可以指定高度和宽度属性。在保存编辑更改时，将应用属性中定义的所有大小和长宽比限制。
 >
+>根据您的实例，[页面设计](/help/sites-developing/designer.md)还可能会强制应用最小和最大限制；这些限制在项目实施过程中开发。
+
 还有其他几个选项在全屏编辑模式下可用；例如，地图和缩放：
 
 ![](do-not-localize/chlimage_1-16.png)
 
 >[!NOTE]
-无法使用 Internet Explorer 监控上传过程。
-Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
-
+>
+>无法使用 Internet Explorer 监控上传过程。
+>
+>Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
+>
 >See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
 
 加载图像后，您可以配置下列各项：
@@ -443,7 +445,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
    设置图像的高度和宽度。
 
 >[!NOTE]
-有些选项仅在全屏编辑器中可用。
+>
+>有些选项仅在全屏编辑器中可用。
 
 最终图像（带有&#x200B;**标题**&#x200B;和&#x200B;**说明**）可能如下所示：
 
@@ -456,12 +459,14 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
 >[!NOTE]
-此组件已通过 [HTML 模板语言 (HTL)](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) 进行了实施。
+>
+>此组件已通过 [HTML 模板语言 (HTL)](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) 进行了实施。
 
 ### 列表 {#list}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[列表核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[列表核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)。
 
 列表组件允许您配置用于显示列表的搜索条件：
 
@@ -535,7 +540,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 登录 {#login}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 此组件提供了“用户名”和“密码”字段。
 
@@ -592,7 +598,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 针对开发人员的 Adobe AIR API 参考 {#reference}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[内容片段核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/content-fragment-component.html)。
 
 使用&#x200B;**引用**&#x200B;组件可以从 AEM 网站的其他页面引用文本（在当前实例中）。引用的段落内容会像在当前页面上一样进行显示。当源段落发生更改时，此内容也将随之更新（可能需要刷新页面）。
 
@@ -625,7 +632,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 搜索 {#searching}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[快速搜索核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/quick-search.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[快速搜索核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/quick-search.html)。
 
 搜索组件会向您的页面添加搜索功能。
 
@@ -692,7 +700,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### Sitemap {#sitemap}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe recommends leveraging the [Navigation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html), [Language Navigation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html), and [Breadcrumb Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) instead.
+>
+>此基础组件已被弃用。Adobe recommends leveraging the [Navigation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html), [Language Navigation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html), and [Breadcrumb Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) instead.
 
 自动 Sitemap 列表，该列表（具有默认设置）列出了当前网站中的所有页面（作为活动链接）。例如，提取结果如下所示：
 
@@ -709,7 +718,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### Slideshow {#slideshow}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[轮播核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[轮播核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)。
 
 此组件允许您加载一系列将在您的页面上显示为幻灯片放映的图像。您可以添加或删除图像以及为每个图像指定标题。在“高级”下，您还可以指定显示区域的大小。
 
@@ -738,10 +748,12 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 表 {#table}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
 
 >[!NOTE]
-与&#x200B;**[文本](#text)**基础组件一样，**表**基础组件也基于[富文本编辑器](/help/sites-authoring/rich-text-editor.md)。
+>
+>与&#x200B;**[文本](#text)**&#x200B;基础组件一样，**表**&#x200B;基础组件也基于[富文本编辑器](/help/sites-authoring/rich-text-editor.md)。
 
 **表**&#x200B;组件经过预配置，让您可以构建和填写表，以及设置表的格式。使用对话框，您可以配置表，并通过以下任一方式创建内容：
 
@@ -785,10 +797,12 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 文本 {#text}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
 
 >[!NOTE]
-与&#x200B;**表**&#x200B;基础组件一样，**文本**&#x200B;基础组件也基于[富文本编辑器](/help/sites-authoring/rich-text-editor.md)。
+>
+>与&#x200B;**表**&#x200B;基础组件一样，**文本**&#x200B;基础组件也基于[富文本编辑器](/help/sites-authoring/rich-text-editor.md)。
 
 通过文本组件可以使用所见即所得 （WYSIWYG) 编辑器输入文本块，相应编辑器功能由[富文本编辑器](/help/sites-authoring/rich-text-editor.md)提供。通过精选的图标可以设置文本格式，包括字体特性、对齐方式、链接、列表和缩进。
 
@@ -812,7 +826,8 @@ When you open the **Configure** dialog, you can also set:
 ### 文本和图像 {#text-image}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[图像](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)和[文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[图像](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)和[文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)。
 
 文本和图像组件可添加文本块和图像。您也可以将文本和图像分开添加和编辑。有关详细信息，请参阅[文本](#text)组件和[图像](#image)组件。
 
@@ -859,7 +874,8 @@ When you open the **Configure** dialog, you can also set:
 ### 标题 {#title}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[标题核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[标题核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)。
 
 标题组件可以：
 
@@ -887,7 +903,8 @@ When you open the **Configure** dialog, you can also set:
 ### 视频 {#video}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 **视频**&#x200B;组件允许您在页面上放置一个预定义的现成视频元素。
 
@@ -906,10 +923,12 @@ When you open the **Configure** dialog, you can also set:
       视频固有的大小（宽 x 高，以像素为单位）将出现在“大小”（参阅上文）旁边的框中。如果要覆盖视频固有的尺寸，请在此处手动输入宽度和高度尺寸。单击&#x200B;**确定**&#x200B;关闭对话框。
 
 >[!NOTE]
-支持的格式包括：
-* `.mp4`
-* `Ogg`
-* `FLV` （Flash视频）
+>
+>支持的格式包括：
+>
+>* `.mp4`
+>* `Ogg`
+>* `FLV` (Flash视频)
 
 
 ## 列 {#columns}
@@ -941,12 +960,14 @@ When you open the **Configure** dialog, you can also set:
 ## 表单 {#form}
 
 >[!CAUTION]
-组件中的基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>组件中的基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 表单组件用于为访客创建表单以提交输入。表单和表单组件可用于收集用户反馈（例如，客户满意度调查问卷）和用户信息（例如，用户注册）等信息。
 
 >[!NOTE]
-请参阅 [AEM 表单帮助](/help/forms/home.md)，以获取有关 AEM 表单的信息。
+>
+>请参阅 [AEM 表单帮助](/help/forms/home.md)，以获取有关 AEM 表单的信息。
 
 表单是从多个不同组件中构建的：
 
@@ -967,7 +988,8 @@ When you open the **Configure** dialog, you can also set:
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
-有关开发和进一步自定义表单的信息，请参阅[开发表单](/help/sites-developing/developing-forms.md)页面。相关信息包括添加操作和约束，预载字段以及通过使用脚本调用服务的方式执行操作，等等。
+>
+>有关开发和进一步自定义表单的信息，请参阅[开发表单](/help/sites-developing/developing-forms.md)页面。相关信息包括添加操作和约束，预载字段以及通过使用脚本调用服务的方式执行操作，等等。
 
 ### （许多）表单组件的常规设置 {#settings-common-to-many-form-components}
 
@@ -992,7 +1014,8 @@ When you open the **Configure** dialog, you can also set:
    指示字段的大小和样式。
 
 >[!NOTE]
-您看到的字段差别很大，具体取决于各个组件。
+>
+>您看到的字段差别很大，具体取决于各个组件。
 
 这些选项卡为您提供必需的参数；具体的选项卡依各个组件类型而定，但可能包括：
 
@@ -1031,7 +1054,7 @@ When you open the **Configure** dialog, you can also set:
 
    * **必需的消息**
 
-      通知用户此字段为必填字段的消息； 必填字段还将标有星号和星号。
+      通知用户此字段为必填字段的消息；必填字段还将标有星号和星号。
 
    * **约束**
 
@@ -1056,7 +1079,8 @@ When you open the **Configure** dialog, you can also set:
 ### 表单（组件） {#form-component}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单容器核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-container.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单容器核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-container.html)。
 
 表单组件使用&#x200B;**表单开始**&#x200B;和&#x200B;**表单结尾**&#x200B;元素定义表单的开始和结尾。它们始终是成对的，以确保正确定义表单。
 
@@ -1065,7 +1089,8 @@ When you open the **Configure** dialog, you can also set:
 在表单开始和表单结尾之间，您可以添加表单组件，用于定义用户实际输入的字段。
 
 >[!NOTE]
-基础组件表单组件仅支持使用其他基础组件表单组件（按钮、文本、隐藏等）。不支持在基础组件表单中使用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)表单组件（反之亦然）。
+>
+>基础组件表单组件仅支持使用其他基础组件表单组件（按钮、文本、隐藏等）。不支持在基础组件表单中使用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)表单组件（反之亦然）。
 
 #### 表单开始 {#start-of-form}
 
@@ -1282,7 +1307,8 @@ When you open the **Configure** dialog, you can also set:
 ### 帐户名称 {#account-name}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-text.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-text.html)。
 
 此组件允许用户输入帐户名称：
 
@@ -1291,7 +1317,8 @@ When you open the **Configure** dialog, you can also set:
 ### 地址 {#address}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-text.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-text.html)。
 
 此组件允许您采用以下格式添加国际地址字段：
 
@@ -1302,7 +1329,8 @@ When you open the **Configure** dialog, you can also set:
 ### Captcha {#captcha}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字符串会随每次刷新而变。
 
@@ -1313,7 +1341,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 复选框组 {#checkbox-group}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-options.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-options.html)。
 
 通过复选框可以生成一个或多个复选框的列表，其中某些复选框可以同时选中。
 
@@ -1322,13 +1351,16 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 您可以指定各种参数，包括标题、说明和元素名称。您可以使用 + 和 - 按钮添加或删除项目，然后使用向上和向下箭头定位这些项目。
 
 >[!NOTE]
-使用&#x200B;**项目加载路径**，您可以预加载值的复选框组列表。
-请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
+>
+>使用&#x200B;**项目加载路径**，您可以预加载值的复选框组列表。
+>
+>请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
 ### 信用卡详细信息 {#credit-card-details}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 此组件允许您提供输入信用卡详细信息所需的字段。您可以对其进行配置，以指定接受的卡类型和所需的信息（例如，安全码）。
 
@@ -1337,7 +1369,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 下拉列表 {#dropdown-list}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-options.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-options.html)。
 
 可以配置下拉列表，为您提供一系列值供您选择：
 
@@ -1346,38 +1379,46 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 您可以指定标题以及要在列表中显示的项目。使用 + 和 - 按钮，可以添加或删除列表项目，然后使用向上和向下按钮定位这些项目。您可以指定是否允许用户从列表中选择多个项目，还可以指定用户首次打开列表时应自动选择的项目（初始值）。
 
 >[!NOTE]
-使用&#x200B;**项目加载路径**，您可以预载包含值的下拉列表。
-请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
+>
+>使用&#x200B;**项目加载路径**，您可以预载包含值的下拉列表。
+>
+>请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
 ### 文件上传 {#file-upload}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 文件上传组件为用户提供了选择和上传文件的途径。
 
 ![dc_form_fileupload](assets/dc_form_fileupload.png)
 
 >[!NOTE]
-您可以创建一个自定义上传组件来将文件上传至 Sling Servlet。有关信息，请参阅[将文件上传至 Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)。
+>
+>您可以创建一个自定义上传组件来将文件上传至 Sling Servlet。有关信息，请参阅[将文件上传至 Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)。
 
 ### 隐藏字段 {#hidden-field}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单隐藏核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-hidden.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单隐藏核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-hidden.html)。
 
 此组件允许您创建隐藏字段。隐藏字段可用于多种目的；例如，当您需要在提交表单后执行操作，或者在帖子处理期间需要使用隐藏数据时。
 
 ![dc_form_hiddenfield](assets/dc_form_hiddenfield.png)
 
 >[!NOTE]
-还可以自定义您的表单，以根据表单中其他字段的值显示或隐藏特定表单组件。当仅在特定条件下才需要表单字段时，更改表单字段的可见性很有用。
-请参阅[显示和隐藏表单组件](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)。
+>
+>还可以自定义您的表单，以根据表单中其他字段的值显示或隐藏特定表单组件。当仅在特定条件下才需要表单字段时，更改表单字段的可见性很有用。
+>
+>请参阅[显示和隐藏表单组件](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)。
 
 ### 图像按钮 {#image-button}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单按钮核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-button.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单按钮核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-button.html)。
 
 图像按钮允许您使用自己的图像和文本创建按钮：
 
@@ -1386,7 +1427,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 图像上传 {#image-upload}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 图像上传组件为用户提供了选择和上传图像文件的途径。
 
@@ -1395,7 +1437,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 链接字段 {#link-field}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 链接字段允许用户指定 URL：
 
@@ -1406,7 +1449,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 密码字段 {#password-field}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 此组件用于允许用户输入密码：
 
@@ -1415,7 +1459,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 密码重置 {#password-reset}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 此组件为用户提供了两个字段，分别用于：
 
@@ -1429,7 +1474,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 单选按钮组 {#radio-group}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-options.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单选项核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-options.html)。
 
 单选按钮组为您提供了一个或多个单选复选框列表，在任何特定时间都只能选择其中一个。
 
@@ -1438,13 +1484,16 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ![dc_form_radiogroupuse](assets/dc_form_radiogroupuse.png)
 
 >[!NOTE]
-使用&#x200B;**项目加载路径**，您可以预载包含值的单选按钮组。
-请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
+>
+>使用&#x200B;**项目加载路径**，您可以预载包含值的单选按钮组。
+>
+>请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
 ### 提交按钮 {#submit-button}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单按钮核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-button.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单按钮核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-button.html)。
 
 此组件允许您使用以下默认文本创建提交按钮：
 
@@ -1457,7 +1506,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 标记字段 {#tags-field}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
 此字段允许您选择标记：
 
@@ -1483,7 +1533,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### 文本字段 {#text-field}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-text.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单文本核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-text.html)。
 
 可以将标准文本字段配置为您需要的大小且消息中包含您自己的潜在客户：
 
@@ -1492,7 +1543,8 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ### Workflow Submit Button(s) {#workflow-submit-button-s}
 
 >[!CAUTION]
-此基础组件已被弃用。Adobe 建议改用[表单按钮核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-button.html)。
+>
+>此基础组件已被弃用。Adobe 建议改用[表单按钮核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/forms/form-button.html)。
 
 此组件允许您创建可在工作流中使用的提交按钮。
 
