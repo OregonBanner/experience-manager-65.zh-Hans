@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 88%
 
 ---
 
 
 # 创作 - 环境和工具 {#authoring-the-environment-and-tools}
 
-AEM的创作环境提供了各种用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
+AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
 
 ## 站点管理 {#site-administration}
 
@@ -96,11 +99,11 @@ AEM的创作环境提供了各种用于组织和编辑内容的机制。可以�
 
 此选项卡列出了所有产品。您在页面中创建了合适的段落（例如产品）后，可以拖曳项目并将其放置在段落中。
 
-![chlimage_1-114](assets/chlimage_1-114.png)
+![chlimage_1-115](assets/chlimage_1-114.png)
 
 ### 查找页面 {#finding-pages}
 
-此选项卡显示所有页面。双击任意页面以打开它进行编辑。
+此选项卡显示所有页面。多次-单击任何页面可打开它进行编辑。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -159,7 +162,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **选择**&#x200B;显示引用……AEM会打开“引用”窗口并显示哪些页面引用选定页面，包括其路径。
+1. Select **Show References...** AEM opens the References window and displays which pages refer to the selected page, including their paths.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -202,12 +205,11 @@ Sidekick 底部的图标行用于切换处理页面的模式：
 >[!NOTE]
 >
 >还有其他一些可用选项：
-
+>
 >* [基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
 >* [ClientContext](/help/sites-administering/client-context.md)
-* 网站 - 将打开“网站”控制台。
-* 重新加载 - 将刷新页面。
-
+>* 网站 - 将打开“网站”控制台。
+>* 重新加载 - 将刷新页面。
 
 
 ## 键盘快捷键 {#keyboard-shortcuts}
