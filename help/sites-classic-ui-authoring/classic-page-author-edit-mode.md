@@ -11,7 +11,10 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 translation-type: tm+mt
-source-git-commit: bec587e3722c4c2e5aebd2579a2a7acbf807587a
+source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+workflow-type: tm+mt
+source-wordcount: '6169'
+ht-degree: 88%
 
 ---
 
@@ -165,7 +168,8 @@ You can select a component and drag it to the required location on your page and
 手动或使用选择器指定一个路径。如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
 
-         * **页面**&#x200B;选择页面列表。使 `+` 用添加更多条目和向上／向下按钮调整顺序。
+         * **页面**&#x200B;选择页面列表。使用 
+`+` 以添加更多条目和上／下按钮来调整顺序。
       * **搜索选项**
 
          * **开始**
@@ -178,7 +182,8 @@ You can select a component and drag it to the required location on your page and
          * **QueryBuilder 谓词记号**
 可以使用“QueryBuilder 谓词记号”输入搜索查询。例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
-   * **排序依**&#x200B;据从 `jcr:title`下拉 `jcr:created`菜单中 `cq:lastModified`选择、 `cq:template` 、或选择。
+   * **按选择排**&#x200B;序 
+`jcr:title`、 `jcr:created`、 `cq:lastModified`或 `cq:template` 从下拉菜单。
 
    * **限制**
 您希望在传送中使用的最多项目数；这是可选项。
@@ -330,8 +335,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 >[!NOTE]
 无法使用 Internet Explorer 监控上传过程。
 Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
-
->See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
+See the [Certified Platforms](/help/release-notes/release-notes.md#certifiedplatforms) section for more information about HTML5 features used by AEM.
 
 加载图像后，您可以配置下列各项：
 
@@ -341,7 +345,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
 * **裁剪**
 
-   选择“裁剪”以裁剪图像。 可使用鼠标裁剪图像。
+   选择裁剪以裁剪图像。 可使用鼠标裁剪图像。
 
 * **旋转**
 
@@ -452,7 +456,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
 以下示例以显示子页面列表的方式展示了&#x200B;**列表**&#x200B;组件（设计由站点设计的自定义 CSS 定义来控制）。
 
-![dc_list_use](assets/dc_list_use.png)
+![dc_列表_use](assets/dc_list_use.png)
 
 ### 登录 {#login}
 
@@ -466,7 +470,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * 区域标签
 
-      输入字段的引入文本。
+      输入字段的导入文本。
 
    * 用户名标签
 
@@ -482,7 +486,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * 重定向到
 
-      您可以指定用户登录后应打开的网站上的页面。
+      您可以指定用户登录后应打开的网站页面。
 
 * 已登录
 
@@ -715,7 +719,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    您可在此左对齐或右对齐图像。默认为&#x200B;**左**&#x200B;对齐，图像位于左侧。
 
-* **图像属性** (高&#x200B;**级图像属性**)
+* **图像属性** (**高级图像属性**)
 
    允许您指定以下内容：
 
@@ -784,7 +788,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * **视频资产**
 
-      上传或拖放视频资产。
+      上传或删除视频资产。
 
    * **大小**
 
@@ -794,7 +798,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 支持的格式包括：
 * `.mp4`
 * `Ogg`
-* `FLV` （Flash视频）
+* `FLV` (Flash视频)
 
 
 
@@ -910,7 +914,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * **必填**
 
-      这取决于表单组件类型，但提供了一个或多个单击框以指示此字段或此字段的某些部分是必需的。
+      这取决于表单组件类型，但提供一个或多个单击框以指示该字段或该字段的某些部分是必需的。
 
    * **必需的消息**
 
@@ -1101,7 +1105,7 @@ The content path for any content that the form dumps. Enter a path that ends wit
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，可以将信息导出到。tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到。tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **通过上传存储内容**
 
          此选项与“存储内容” **选项相同**。
@@ -1216,7 +1220,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 此组件允许您创建隐藏字段。隐藏字段可用于多种目的；例如，当您需要在提交表单后执行操作，或者在帖子处理期间需要使用隐藏数据时。
 
-![dc_form_hidenfield](assets/dc_form_hiddenfield.png)
+![dc_form_hiddenfield](assets/dc_form_hiddenfield.png)
 
 >[!NOTE]
 还可以自定义您的表单，以根据表单中其他字段的值显示或隐藏特定表单组件。当仅在特定条件下才需要表单字段时，更改表单字段的可见性很有用。
