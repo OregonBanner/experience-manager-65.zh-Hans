@@ -1,5 +1,5 @@
 ---
-ttitle: Administering generic eCommerce
+title: 管理通用电子商务
 seo-title: 管理通用电子商务
 description: AEM通用解决方案提供了管理存储库中的商务信息的方法。
 seo-description: AEM通用解决方案提供了管理存储库中的商务信息的方法。
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9167cbe2-2efb-422d-b58b-0c24b9476fe6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1207cd54d9d605b7fbf606393cd33b5c19b603f4
+source-git-commit: 06d6696a5493f0e166e400bcd9a379b7be062c1e
 workflow-type: tm+mt
-source-wordcount: '3008'
+source-wordcount: '3011'
 ht-degree: 4%
 
 ---
@@ -80,7 +80,7 @@ AEM通用解决方案提供了管理存储库中的商务信息的方法（与�
 
    * **源**
 
-      要导入的文件； 您可以使用浏览器选择文件。
+      要导入的文件；您可以使用浏览器选择文件。
 
    * **增量导入**
 
@@ -120,7 +120,7 @@ AEM通用解决方案提供了管理存储库中的商务信息的方法（与�
 
    * **商业提供程序**
 
-      您的商务提供商 [的导入程序](/help/sites-administering/concepts.md#commerce-providers); 默认Geometrixx。
+      您的商务提供商 [的导入程序](/help/sites-administering/concepts.md#commerce-providers);默认Geometrixx。
 
    * **源文件**
 
@@ -148,7 +148,7 @@ AEM通用解决方案提供了管理存储库中的商务信息的方法（与�
 
    ![chlimage_1-14](do-not-localize/chlimage_1-14.png)
 
-1. 此时将打开向导。 使用 **基本** 和 **产品选项卡** ，输入新产 [品或产品变](/help/sites-administering/concepts.md#product-attributes) 型的产品属性。
+1. 将打开向导。 使用 **基本** 和 **产品选项卡** ，输入新产 [品或产品变](/help/sites-administering/concepts.md#product-attributes) 型的产品属性。
 
    >[!NOTE]
    >
@@ -401,7 +401,7 @@ The Image with Add to Cart Links component allows you to quickly add a product t
 
 1. 单击其中一个形状图标。
 
-   ![chlimage_1-21](do-not-localize/chlimage_1-21.png)
+   ![chlimage_1-29](do-not-localize/chlimage_1-21.png)
 
 1. 根据需要修改和移动形状。
 1. 单击形状。
@@ -502,14 +502,14 @@ The Image with Add to Cart Links component allows you to quickly add a product t
 
    例如，打开“标 **签／关键字** ”字段以选择活动，然后从“Geometrixx-户外”部分中选择“游泳”。
 
-1. 单击 **确定** ，以保存您的属性； 示例产品将显示在blueprint页 **面的“产品选择** 标准”下。
+1. 单击 **确定** ，以保存您的属性；示例产品将显示在blueprint页 **面的“产品选择** 标准”下。
 1. 单击“转 **出更改……**”，选择“转 **出”页和所有子页**，然后单击“下一 **步** ”, **再**&#x200B;单击转出。 成功完成转出后，状 **态** 指示符将显示为绿色。
-1. 您现在可以单击“ **关闭** ”并检查新目录部分； 例如，on和under:
+1. 您现在可以单击“ **关闭** ”并检查新目录部分；例如，on和under:
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
 
-1. 再次从Blueprint页面单击 **编辑Blueprint** ，在“属性” **对话框中打开** “生 **成的页面** ”选项卡。 在“横幅列表”字段中，选择要显示的图像； 例如， `summer.jpg`
-1. 单击 **确定** ，以保存您的属性； 横幅信息将显示在blueprint页 **面的“产品选择** 标准”下。
+1. 再次从Blueprint页面单击 **编辑Blueprint** ，在“属性” **对话框中打开** “生 **成的页面** ”选项卡。 在“横幅列表”字段中，选择要显示的图像；例如， `summer.jpg`
+1. 单击 **确定** ，以保存您的属性；横幅信息将显示在blueprint页 **面的“产品选择** 标准”下。
 1. 转出这些新更改。
 
 ### Rolling Out a Catalog {#rolling-out-a-catalog}
@@ -647,7 +647,7 @@ In order to make a voucher unavailable to customers, you can either:
 >
 >应记住，现成的AEM没有与订单相关的标准功能（如退货、更新订单状态、执行、生成装箱单）所需的操作。 它主要用作技术预览。
 >
->AEM的通用订单管理一直是基本的； 向导中可用的字段取决于scaffold:
+>AEM的通用订单管理一直是基本的；向导中可用的字段取决于scaffold:
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >如果创建自定义基架，则可以存储更多订单信息。
@@ -662,12 +662,12 @@ In order to make a voucher unavailable to customers, you can either:
 
 #### 创建订单信息——触屏优化UI {#creating-order-information-touch-optimized-ui}
 
-1. 使用“订 **单** ”控制台定位到所需位置。
+1. 使用“订 **单** ”控制台定位到所需的位置。
 1. 使用创 **建图** 标选择 **创建顺序**。
 
    ![](do-not-localize/chlimage_1-14.png)
 
-1. 此时将打开向导。 使用“基 **本**”、“ **内容**”、“ **付款”** 和“履行”标签 ****[](/help/sites-administering/concepts.md#order-information)输入有关新订单的信息。
+1. 将打开向导。 使用“基 **本**”、“ **内容**”、“ **付款”** 和“履行”标签 ****[](/help/sites-administering/concepts.md#order-information)输入有关新订单的信息。
 
 1. 选择 **创建** ，以保存信息。
 
