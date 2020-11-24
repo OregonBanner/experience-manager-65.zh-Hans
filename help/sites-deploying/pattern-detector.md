@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d510decba9b2af23bab54c78779f98a36a6172d4
+source-git-commit: ba7ac70858b7b2fd610d63355a22a69c3a7586e3
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '544'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ## 如何设置 {#how-to-set-up}
 
-模式检测器作为一个软件包单独 [发布](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65) ，它可处理任何源AEM版本（从6.1到6.5），目标是AEM 6.5升级。 可以使用包管理器 [安装它](/help/sites-administering/package-manager.md)。
+模式检测器作为一个软件包单独 [发布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) ，它可处理任何源AEM版本（从6.1到6.5），目标是AEM 6.5升级。 可以使用包管理器 [安装它](/help/sites-administering/package-manager.md)。
 
 ## 使用方法 {#how-to-use}
 
