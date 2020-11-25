@@ -7,9 +7,9 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、交付和优化数字资产。
 translation-type: tm+mt
-source-git-commit: caf5737a05a312308f817ac24a3800965d2c2555
+source-git-commit: 3443fe49e7eacbdacf7d21077f920d38b34daeae
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '588'
 ht-degree: 40%
 
 ---
@@ -43,6 +43,7 @@ ht-degree: 40%
    + [配置Dynamic Media -Scene7模式](config-dms7.md)
    + [配置Dynamic Media —— 混合模式](config-dynamic.md)
    + [Dynamic Media疑难解答-Scene7模式](troubleshoot-dms7.md)
+   + [中的辅助功能 [!DNL Dynamic Media]](accessibility-dm.md)
    + [从Dynamic Media —— 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
