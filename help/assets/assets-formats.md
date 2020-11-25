@@ -3,9 +3,9 @@ title: 支持的文件格式和MIME类型
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: c2c0f38d0c8e403264db05064d4423ef46880d9a
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1634'
 ht-degree: 22%
 
 ---
@@ -30,18 +30,18 @@ ht-degree: 22%
 | 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 编辑 | 元数据写回 | 分析 |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
-| TIFF | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| TIFF | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| BMP | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
-| PNM | ✓ | ✓ |  |  |  |  | ✓ |
-| PGM | ✓ | ✓ |  |  |  |  | ✓ |
-| PBM | ✓ | ✓ |  |  |  |  | ✓ |
-| PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD ‡ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
-| PICT |  |  |  |  |  |  | ✓ |
-| PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
+| BMP | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| PNM | ✓ | ✓ | − | − | − | − | ✓ |
+| PGM | ✓ | ✓ | − | − | − | − | ✓ |
+| PBM | ✓ | ✓ | − | − | − | − | ✓ |
+| PPM | ✓ | ✓ | − | − | − | − | ✓ |
+| PSD ‡ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | − | ✓ | − |
+| PICT | − | − | − | − | − | − | ✓ |
+| PSB | ✓ | ✓ | ✓ | ✓ | − | − | − |
 
 ‡合并的图像从PSD文件中提取。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
@@ -53,10 +53,10 @@ ht-degree: 22%
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| BMP | ✓ |  |  |  |  |
-| PSD ‡ | ✓ |  |  |  |  |
+| BMP | ✓ | − | − | − | − |
+| PSD ‡ | ✓ | − | − | − | − |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PICT | ✓ |  |  |  |  |
+| PICT | ✓ | − | − | − | − |
 
 ‡合并的图像从PSD文件中提取。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际图像，也可能不是实际图像。
 
@@ -78,12 +78,12 @@ See also [Working with 3D assets in Dynamic Media.](/help/assets/assets-3d.md)
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |  |
-| gLB | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| gLTF | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |  |
-| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| STL | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| USDz | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | − | − |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ | − | ✓ | − |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
 
 ## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
@@ -144,32 +144,32 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 | 格式 | 存储 | [元数据管理](metadata.md) | 全文<br> 提取 | [元数据提取](metadata.md) | Thumbnail<br> generation | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
-| DOC | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
-| DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
-| ODT | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| DOC | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| ODT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HTML | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
-| RTF | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
-| TXT | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
-| XLS | ✓ | ✓ | ✓ |  |  |  |  | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ |
-| ODS | ✓ | ✓ | ✓ |  |  |  |  |  |
-| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
-| ODP | ✓ | ✓ | ✓ |  |  |  |  |  |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |  |
-| PS | ✓ | ✓ |  |  |  |  |  |  |
-| QXP | ✓ | ✓ |  |  |  |  |  |  |
-| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |  |
+| HTML | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| RTF | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| TXT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| XLS | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| ODS | ✓ | ✓ | ✓ | − | − | − | − | − |
+| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| ODP | ✓ | ✓ | ✓ | − | − | − | − | − |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| PS | ✓ | ✓ | − | − | − | − | − | − |
+| QXP | ✓ | ✓ | − | − | − | − | − | − |
+| EPUB | ✓ | ✓ | − | ✓ | ✓ | − | − | − |
 
 ## Dynamic Media支持的文档格式 {#supported-document-formats-dynamic-media}
 
 | 格式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ |  |  |  |  |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ |  |  |  |  |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | − | − | − | − |
 
 除了上述功能之外，还要考虑以下事项：
 
@@ -183,45 +183,45 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 |  | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | FFmpeg转码 |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | − | * |
-| MIDI | ✓ | ✓ |  | − | * |
-| 3GP | ✓ | ✓ |  | − | * |
+| AAC | ✓ | ✓ | − | − | * |
+| MIDI | ✓ | ✓ | − | − | * |
+| 3GP | ✓ | ✓ | − | − | * |
 | MP3 | ✓ | ✓ | ✓ | − | * |
-| MPG | ✓ | ✓ |  | − | * |
-| OGA | ✓ | ✓ |  | − | * |
-| OGG | ✓ | ✓ |  | − | * |
-| RA | ✓ | ✓ |  | − | * |
-| WAV | ✓ | ✓ |  | − | * |
-| WMA | ✓ | ✓ |  | − | * |
-| DVI | ✓ | ✓ |  | * | * |
-| FLV | ✓ | ✓ |  | * | * |
-| M4V | ✓ | ✓ |  | * | * |
-| MPEG | ✓ | ✓ |  | * | * |
-| OGV | ✓ | ✓ |  | * | * |
-| MOV | ✓ | ✓ |  | * | * |
-| WMV | ✓ | ✓ |  | * | * |
-| SWF | ✓ | ✓ |  |  |  |
+| MPG | ✓ | ✓ | − | − | * |
+| OGA | ✓ | ✓ | − | − | * |
+| OGG | ✓ | ✓ | − | − | * |
+| RA | ✓ | ✓ | − | − | * |
+| WAV | ✓ | ✓ | − | − | * |
+| WMA | ✓ | ✓ | − | − | * |
+| DVI | ✓ | ✓ | − | * | * |
+| FLV | ✓ | ✓ | − | * | * |
+| M4V | ✓ | ✓ | − | * | * |
+| MPEG | ✓ | ✓ | − | * | * |
+| OGV | ✓ | ✓ | − | * | * |
+| MOV | ✓ | ✓ | − | * | * |
+| WMV | ✓ | ✓ | − | * | * |
+| SWF | ✓ | ✓ | − | − | − |
 
 ## Supported input video formats in Dynamic Media for transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | 视频文件扩展名 | 容器 | 推荐的视频编解码器 | 不支持的视频编解码器 |
 |---|---|---|---|
-| MP4 | MPEG-4 | H264/AVC（所有配置文件） |  |
+| MP4 | MPEG-4 | H264/AVC（所有配置文件） | − |
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
 | FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
 | WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft Screen (MSS2)、Microsoft Photo Story (WVP2) |
-| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 |  |
-| M4V | Apple iTunes | H264/AVC |  |
+| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | − |
+| M4V | Apple iTunes | H264/AVC | − |
 | AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3 (IV30)、MJPEG、Microsoft Video 1 (MS-CRAM) |
-| WebM | WebM | Google VP8 |  |
-| OGV, OGG | Ogg | Theora、VP3、Dirac |  |
-| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro |  |
-| MTS | AVCHD | H264/AVC |  |
-| MKV | Matroska | H264/AVC |  |
-| R3D, RM | Red Raw Video | MJPEG 2000 |  |
+| WebM | WebM | Google VP8 | − |
+| OGV, OGG | Ogg | Theora、VP3、Dirac | − |
+| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | − |
+| MTS | AVCHD | H264/AVC | − |
+| MKV | Matroska | H264/AVC | − |
+| R3D, RM | Red Raw Video | MJPEG 2000 | − |
 | RAM, RM | RealVideo | 不支持 | Real G2 (RV20)、Real 8 (RV30)、Real 10 (RV40) |
-| FLAC | Native Flac | 免费的无损音频编解码器 |  |
-| MJ2 | Motion JPEG2000 | Motion JPEG 2000编解码器 |  |
+| FLAC | Native Flac | 免费的无损音频编解码器 | − |
+| MJ2 | Motion JPEG2000 | Motion JPEG 2000编解码器 | − |
 
 ## Supported archive formats {#supported-archive-formats}
 
@@ -229,23 +229,23 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| RAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| JAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| RAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| TAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | ZIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## Other supported formats {#other-supported-formats}
 
-下表介绍了几种其他文件格式的通用DAM工作流的适用性。 所有文件均支持存储、版本控制、ACL、工作流、发布和元数据管理等常用DAM功能(Dynamic Media投放除外)。
+许多文件格式都支持常见的DAM功能，如存储、版本控制、ACL、工作流、发布和元数据管理( [!DNL Dynamic Media] 投放除外)。 下面介绍了这些功能对于一些特定文件格式的适用性。
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| SVG | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JavaScript(当配置有自己的投放域时) |  |  |  |  |  | ✓ |
+| JavaScript(当配置有自己的投放域时) | − | − | − | − | − | ✓ |
 
 ## Supported MIME types {#supported-mime-types}
 
@@ -313,6 +313,6 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 >[!MORELIKETHIS]
 >
->* [启用基于MIME类型的资产/Scene7上传作业参数支持](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [启用基于MIME类型的资产和Dynamic Media Classic上传作业参数支持](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
 >* [配置基于MIME类型的上传作业参数支持](config-dynamic.md)。
 
