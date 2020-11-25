@@ -1,8 +1,8 @@
 ---
-title: ASRP - Adobe存储资源提供商
-seo-title: ASRP - Adobe存储资源提供商
-description: 设置AEM Communities以将关系数据库用作其公用存储
-seo-description: 设置AEM Communities以将关系数据库用作其公用存储
+title: ASRP -Adobe存储资源提供程序
+seo-title: ASRP -Adobe存储资源提供程序
+description: 设置AEM Communities以将关系数据库用作其常用存储
+seo-description: 设置AEM Communities以将关系数据库用作其常用存储
 uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,19 +11,19 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cf2733ecee5c74b79b85267191fbdf3cbce9c98b
+source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
 
 
-# ASRP - Adobe存储资源提供商 {#asrp-adobe-storage-resource-provider}
+# ASRP -Adobe存储资源提供程序 {#asrp-adobe-storage-resource-provider}
 
 ## 关于ASRP {#about-asrp}
 
-当AEM Communities配置为使用ASRP作为其公用存储时，用户生成的内容(UGC)可从所有作者和发布实例进行访问，而无需同步或复制。
+将AEM Communities配置为使用ASRP作为其公用存储时，用户生成的内容(UGC)可从所有作者和发布实例访问，而无需同步或复制。
 
 另请参 [阅SRP选项的特性](/help/communities/working-with-srp.md#characteristics-of-srp-options) 和建 [议的拓扑](/help/communities/topologies.md)。
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 使用ASRP需要额外的许可证。
 
-要将AEM Communities站点配置为使用ASRP for UGC，请联系您的帐户代表，了解：
+要将您的AEM Communities站点配置为将ASRP用于UGC，请确保您具有以下各项：
 
 * 数据中心URL（ASRP端点的地址）
 * 使用者密钥
@@ -46,18 +46,18 @@ ht-degree: 0%
 
 存储 [配置控制台](/help/communities/srp-config.md) ，允许选择默认存储配置，该配置标识要使用的SRP实现。
 
-**在AEM Author实例上：**
+**在AEM作者实例上：**
 
-* 在全局导航中，导航到 **[!UICONTROL 工具>社区>存储配置]** ，然后 **[!UICONTROL 选择Adobe存储资源提供商(ASRP)]**。
+* 在全局导航中，导航到 **[!UICONTROL 工具>社区>存储配置]** ，然后选 **[!UICONTROL 择Adobe存储资源提供者(ASRP)]**。
 
 ![asrp-default](assets/asrp-default.png)
 
 以下信息来自供应过程：
 
-* **数据中心URL**: 下拉列表选择由您的客户代表标识的生产数据中心。
-* **默认报表包**: 输入默认报表包的名称。
-* **消费方密钥**: 输入消费方密钥。
-* **秘密**: 输入机密。
+* **数据中心URL**:下拉列表选择由您的客户代表标识的生产数据中心。
+* **默认报表包**:输入默认报表包的名称。
+* **消费方密钥**:输入消费方密钥。
+* **秘密**:输入机密。
 * 选择&#x200B;**提交**。
 
 准备发布实例：
@@ -69,13 +69,13 @@ ht-degree: 0%
 
 * 选择 **测试配置**。
 
-   对于每个作者实例和发布实例，从存储配置控制台测试与数据中心的连接。
+   对于每个作者实例和发布实例，请从存储配置控制台测试与数据中心的连接。
 
 * 通过将链接外部化，确保用户档案数据的站点URL可从数据中 [心路由](#externalize-links)。
 
 ### 复制加密密钥 {#replicate-the-crypto-key}
 
-消费方密钥和密钥已加密。 要正确加密／解密密钥，主Granite加密密钥在所有AEM实例上必须相同。
+消费方密钥和密钥已加密。 要正确加密／解密密钥，主Granite加密密钥必须在所有AEM实例上相同。
 
 请按照复制加 [密密钥中的说明](/help/communities/deploy-communities.md#replicate-the-crypto-key)。
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ### 时间同步 {#time-synchronization}
 
-要成功与ASRP端点进行身份验证，运行托管AEM Communities的计算机必须进行时间同步，如与网络 [时间协议(NTP)同步](https://www.ntp.org/)。
+要成功与ASRP端点进行身份验证，运行托管AEM Communities的计算机必须同步时间，如 [网络时间协议(NTP)](https://www.ntp.org/)。
 
 ### 发布配置 {#publishing-the-configuration}
 
@@ -95,11 +95,11 @@ ASRP必须被标识为所有作者实例和发布实例上的公用存储。
 
 要在发布环境中提供相同的配置，请执行以下操作：
 
-在AEM Author实例上：
+在AEM作者实例上：
 
 * 从主菜单导航到工 **[!UICONTROL 具>操作>复制]**。
 * 选择 **激活树**
-* **开始路径**: 浏览至 `/etc/socialconfig/srpc/`
+* **开始路径**:浏览至 `/etc/socialconfig/srpc/`
 * 取消选择 **仅已修改**
 * 选择激 **活**
 
@@ -124,17 +124,17 @@ ASRP必须被标识为所有作者实例和发布实例上的公用存储。
 
 ### 升级后UGC消失 {#ugc-disappears-after-upgrade}
 
-如果从现有AEM 6.0社交社区站点进行升级，请务必按照升 [级说明](/help/communities/upgrade.md#adobe-cloud-storage)，否则UGC将丢失。
+如果从现有的AEM 6.0社交社区站点升级，请务必按照升级 [说明进行](/help/communities/upgrade.md#adobe-cloud-storage)，否则UGC将丢失。
 
 ### 身份验证错误 {#authentication-errors}
 
-如果收到针对数据中心URL的身份验证错误，且AEM error.log包含有关过时时间戳的消息，则请验证是否正在进行时间同步。
+如果收到针对数据中心URL的身份验证错误，而AEM error.log包含有关过时时间戳的消息，则验证是否正在进行时间同步。
 
-使用诸如网络时间协 [议(NTP)之类的工具](https://www.ntp.org/) ，对所有AEM作者服务器和发布服务器进行时间同步。
+使用诸如网络时间协 [议(NTP)之类的工具](https://www.ntp.org/) ，对所有AEM作者和发布服务器进行时间同步。
 
 ### 搜索中不显示新内容 {#new-content-does-not-appear-in-searches}
 
-Adobe云存储基础架构使用最 *终的一致* 性来实现其扩展和性能目标。 因此，新内容不会立即可用，并且需要几秒钟时间才能在搜索结果中显示。
+Adobe云存储基础架构使 *用最终的一致* 性来实现其扩展和性能目标。 因此，新内容不会立即可用，并且需要几秒钟时间才能在搜索结果中显示。
 
 在监视影响最终一致性的时间间隔时，如果新内容在搜索中显示的时间超过几秒钟，请与您的帐户代表联系。
 
@@ -142,7 +142,7 @@ Adobe云存储基础架构使用最 *终的一致* 性来实现其扩展和性�
 
 通过检查存储选项的配置，确保ASRP已配置为默认提供程序。 默认情况下，存储资源提供程序为JSRP，而非ASRP。
 
-在所有创作和发布AEM实例上，重新访问存储配置控制台或检查AEM存储库。
+在所有作者实例和发布AEM实例上，重新访问存储配置控制台或检查AEM存储库。
 
 在JCR中， [if/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
