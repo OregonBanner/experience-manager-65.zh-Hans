@@ -3,10 +3,10 @@ title: 支持的文件格式和MIME类型
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c2c0f38d0c8e403264db05064d4423ef46880d9a
+source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 22%
+source-wordcount: '1615'
+ht-degree: 23%
 
 ---
 
@@ -237,7 +237,7 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 
 ## Other supported formats {#other-supported-formats}
 
-许多文件格式都支持常见的DAM功能，如存储、版本控制、ACL、工作流、发布和元数据管理( [!DNL Dynamic Media] 投放除外)。 下面介绍了这些功能对于一些特定文件格式的适用性。
+下面介绍了几种特定文件格式的常见DAM功能的适用性。
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 动态媒体投放 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
