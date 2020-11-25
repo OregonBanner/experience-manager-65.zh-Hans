@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1898'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 安装清单 {#installation-checklist}
 
-**对于AEM[平台](/help/sites-deploying/deploy.md#what-is-aem)**
+**对于AEM [平台](/help/sites-deploying/deploy.md#what-is-aem)**
 
 * 安装最 [新AEM 6.5更新](#aem64updates)
 
@@ -43,7 +43,7 @@ ht-degree: 1%
 * [复制加密密钥](#replicate-the-crypto-key)
 * 如果支持全球化， [则设置自动](/help/sites-administering/translation.md)翻译（提供示例设置供开发）
 
-**对于社[区功能](/help/communities/overview.md)**
+**对于社 [区功能](/help/communities/overview.md)**
 
 * 如果部署发 [布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm), [请标识主发布者](#primary-publisher)
 
@@ -75,7 +75,7 @@ ht-degree: 1%
          * UGC从未复制
          * UGC仅在输入它的AEM实例或群集上可见
 
-         * 默认值为JSRP
+         * 默认为JSRP
    针对启 **[用功能](/help/communities/overview.md#enablement-community)**
 
    * [安装和配置FFmpeg](/help/communities/ffmpeg.md)
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 ## Latest Releases {#latest-releases}
 
-AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 Communities的更 [新](/help/release-notes/release-notes.md#experiencemanagercommunities)，请 [参阅AEM 6.5发行说明](/help/release-notes/release-notes.md#communities-release-notes.html)。
+AEM 6.5 Communities GA包括Communities包。 要了解AEM 6.5 Communities的更 [新](/help/release-notes/release-notes.md#experiencemanagercommunities)，请 [参阅AEM 6.5发行说明](/help/release-notes/release-notes.md#communities-release-notes.html)。
 
 ### AEM 6.5更新 {#aem-updates}
 
@@ -122,7 +122,7 @@ AEM 6.5 Communities GA随Communities包一起提供。 要了解AEM 6.5 Communit
    * 例如，https://localhost:4502/system/console/bundles
    * 选择 **`Install/Update`**
    * 浏览……以选择从下载的ZIP存档中提取的捆绑包
-   * 检查Oracle *Corporation的MySQLcom.mysql.jdbc的JDBC驱动程序是否处于活动状态* ，如果未激活，请开始它（或检查日志）
+   * 检查 *Oracle公司的MySQLcom.mysql.jdbc的JDBC驱动程序是否处于活动状态* ，如果未激活，请开始它（或检查日志）
 
 1. 如果在配置JDBC后在现有部署上进行安装，则通过从Web控制台重新保存JDBC配置，将JDBC重新绑定到新连接器：
    * 例如，https://localhost:4502/system/console/configMgr
