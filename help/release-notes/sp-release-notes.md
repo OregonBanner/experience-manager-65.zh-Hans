@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '3787'
+source-wordcount: '3796'
 ht-degree: 5%
 
 ---
@@ -139,7 +139,7 @@ ht-degree: 5%
 
 [!DNL Adobe Experience Manager] 6.5.7.0修复 [!DNL Assets] 了以下问题并提供以下增强功能。
 
-* 对中的辅助功能进行了以下增强 [!DNL Experience Manager Assets]:
+* 对此版本中的辅助功能进行了 [!DNL Experience Manager Assets] 以下增强。 有关详细信息，请参阅 [中的辅助功能 [!DNL Assets]](/help/assets/accessibility.md)。
 
    * 使用键盘导航时间轴时， `Esc` 该键可折叠“ [!UICONTROL 显示全部] ”选项而不丢失焦点(CQ-4293598)。
    * 使用键盘Tab键导航时，从添加的标记中删除最后一个标记后，标记字段将保留焦点(NPR-35109)。
@@ -193,7 +193,7 @@ ht-degree: 5%
 
 #### [!DNL Dynamic Media] {#dynamic-media-6570}
 
-* 对(CQ-4290306)中的辅助功 [!DNL Dynamic Media] 能进行了以下主要增强。 有关详细信息，请参阅中的辅助功能 [!DNL Dynamic Media]。  <!-- TBD: link to DM content post GA -->
+* 对(CQ-4290306)中的辅助 [!DNL Dynamic Media] 功能进行了以下增强。 有关详细信息，请参 [阅中的辅助功能 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
 
    * 屏幕阅读器(JAWS,Narrator)在“嵌入大小”菜单选项(CQ-4290927)中为菜单项说明名称、角色和状态。
    * 用户可以使用键导航“电子邮 `Tab` 件”链接对话框(CQ-4290926)。
