@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
+source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2756'
 ht-degree: 3%
 
 ---
@@ -125,9 +125,7 @@ Adobe Analytics可以为AEM Communities配置，这样，当成员与支持的�
 
 如果使用 **现有报表包**，则可能需要在 [为社区站点激活Analytics框架之前修](#modifying-analytics-variable-mapping) 改变量映射。
 
-<!--
-Contact your account representative for any concerns regarding the variables dedicated to Communities.
--->
+有关专用于社区的变量的任何疑虑，请与您的客户代表联系。
 
 >[!CAUTION]
 >
