@@ -6,7 +6,7 @@ user-guide-title: Adobe Experience Manager6.5发行说明
 breadcrumb-title: 发行说明
 user-guide-description: 在发行说明中了解AEM 6.5的最新新增功能。
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 56551f31e87188cebc2754f6a2c756ae96164ed1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 29%
@@ -20,7 +20,7 @@ ht-degree: 29%
 + [一般发行说明](release-notes.md)
 + Service Pack Release Notes {#service-pack}
    + [新增功能](new-features-latest-service-pack.md)
-   + [Service Pack 6发行说明](sp-release-notes.md)
+   + [Service Pack 7发行说明](sp-release-notes.md)
    + [以前的Service Pack发行说明](previous-hotfixes-featurepacks.md)
 + [AEM Sites 发行说明](sites.md)
 + [AEM Assets 发行说明](assets.md)
