@@ -3,9 +3,9 @@ title: 中的辅助功能 [!DNL Experience Manager Assets]
 description: 了解辅助功能如何 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 帮助残障用户。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 00f5a6194c8c29d358f362441c155c9c2a52cac7
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
@@ -42,8 +42,7 @@ Possible topics to cover in this article are below.
 
 要阅读包含规范级别详细信息的报告，请参 [阅辅助功能符合性报告](https://www.adobe.com/accessibility/compliance.html) (ACR)页。
 
-<!-- TBD: Add link after release.
-To know how [!DNL Dynamic Media] is accessible, see [accessibility in [!DNL Dynamic Media]](/). -->
+要了解辅助 [!DNL Dynamic Media] 工具的辅助功能，请 [参阅中的辅助 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
 
 ## 辅助技术 {#at-support}
 
@@ -224,7 +223,8 @@ Review CQ-4282133 before adding - Close button in a coral-dialog wasn't accessib
 
 >[!MORELIKETHIS]
 >
->* [每个版本中增强功能的发行说明](/help/release-notes/new-features-latest-service-pack.md)。
+>* [中的辅助功能 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)。
+>* [每个Service Pack版本中增强功能的发行说明](/help/release-notes/new-features-latest-service-pack.md)。
 >* [[!DNL Adobe Experience Manager] 辅助功能指南](/help/managing/web-accessibility.md)。
 >* [Adobe解决方案的符合性报告(ACR)和VPAT列表](https://www.adobe.com/accessibility/compliance.html)。
 
