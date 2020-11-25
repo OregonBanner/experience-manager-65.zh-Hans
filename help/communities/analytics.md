@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: fd205cd6253991f527f87b9868d503f64a99a600
 workflow-type: tm+mt
-source-wordcount: '2760'
+source-wordcount: '2743'
 ht-degree: 3%
 
 ---
@@ -123,7 +123,11 @@ Adobe Analytics可以为AEM Communities配置，这样，当成员与支持的�
 
 如果使用 **新的报表包**，请注意，新的报表包可能只有4个evar和6个事件变量，而社区需要11个evar和7个事件变量。
 
-如果使用 **现有报表包**，则可能需要在 [为社区站点激活Analytics框架之前修](#modifying-analytics-variable-mapping) 改变量映射。 有关专用于社区的变量的任何疑虑，请与您的客户代表联系。
+如果使用 **现有报表包**，则可能需要在 [为社区站点激活Analytics框架之前修](#modifying-analytics-variable-mapping) 改变量映射。
+
+<!--
+Contact your account representative for any concerns regarding the variables dedicated to Communities.
+-->
 
 >[!CAUTION]
 >
@@ -241,7 +245,6 @@ For example, enter *communities*
 
       * 验证条目不包含前导空格。
       * 尝试其他数据中心。
-      * 联系您的客户代表。
 
 * 选择 **确定**。
 
