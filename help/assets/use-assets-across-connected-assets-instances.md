@@ -3,9 +3,9 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程部署中可 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 916b49572981115f6178c04f260ce63bcfc6d054
+source-git-commit: f0d91a32caa4d3b862d852028e3bc5547aeb8015
 workflow-type: tm+mt
-source-wordcount: '2251'
+source-wordcount: '2263'
 ht-degree: 41%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 41%
 
 ## 连接的资产概述 {#overview-of-connected-assets}
 
-When editing pages in [!UICONTROL Page Editor], the authors can seamlessly search, browse, and embed assets from a different [!DNL Assets] deployment. 管理员创建部署的一次性集成，其 [!DNL Sites] 他（远程）部署为 [!DNL Assets]。
+在页面编辑器 [!UICONTROL 中将页面编辑] (作为目标目标)时，作者可以从充当资产源的不同部署中无缝地 [!DNL Assets] 搜索、浏览和嵌入资产。 管理员创建具有功能的部署与具有功能的 [!DNL Experience Manager] 其 [!DNL Sites] 他部署的一次性 [!DNL Experience Manager] 集成 [!DNL Assets] 。
 
 For the [!DNL Sites] authors, the remote assets are available as read-only local assets. 该功能可支持一次无缝搜索和使用多个远程资产。To make many remote assets available on a [!DNL Sites] deployment in one-go, consider migrating the assets in bulk. 请参阅 [Experience Manager资产迁移指南](/help/assets/assets-migration-guide.md)。
 
