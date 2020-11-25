@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 34e41cf5984f5f69ae0ccead137fe4f180bd84ad
+source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2704'
 ht-degree: 1%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 1%
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* 用户可以在卡片和列视图中对数字资产进行排序。
+* [!DNL Assets] 并提供 [!DNL Dynamic Media] 多个辅助功能增强功能。 这些增强功能与键盘导航、屏幕阅读器的使用、启用辅助技术(AT)的类似增强功能相关。 请参阅 [[!DNL Assets] 增强](/help/release-notes/sp-release-notes.md#assets-6570) 和增 [[!DNL Dynamic Media] 强功能](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。
 
-* [!DNL Assets] 并提供 [!DNL Dynamic Media] 多个辅助功能增强功能。 这些增强功能与键盘导航、屏幕阅读器的使用、启用辅助技术(AT)的类似增强功能相关。 请参阅 [资产增强](/help/release-notes/sp-release-notes.md#assets-6570) 和增 [[!DNL Dynamic Media] 强功能](/help/release-notes/sp-release-notes.md#dynamic-media-6570)。 <!-- TBD: Add link to a11y article after go-live. Adding RN link for now. -->
+* 用户可以在卡片和列视图中对数字资产进行排序。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -165,7 +165,7 @@ ht-degree: 1%
 * 过滤器面板中的混合状态复选框（除非您选择所有嵌套的谓词，否则不会选择并遍历第一级复选框）可由屏幕阅读器读取。
 
 * 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
-For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军事格式的小时，mm是分钟。
+For example, `On Time (MM-DD-YYYY HH:mm)`. 这里，MM是两位数格式的月份，YYYY是年份，DD是两位数格式的日份，HH是24小时军用格式的小时，mm是分钟。
 
 * 屏幕阅读器会宣布删除选定标记(`X` 符号)和选定标记数的选项。
 
