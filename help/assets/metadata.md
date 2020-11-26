@@ -3,7 +3,7 @@ title: 在中管理数字资产的元数据 [!DNL Adobe Experience Manager]。
 description: 了解元数据的类型， [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 以及如何根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: d070f5dca569dfb90d3034b74c2940fd68d8ceab
 workflow-type: tm+mt
 source-wordcount: '2421'
 ht-degree: 18%
@@ -112,7 +112,7 @@ ht-degree: 18%
 1. 导航到用 [!DNL Assets] 户界面，然后单 **[!UICONTROL 击工]** 具栏中的创建。
 1. 从菜单中，选择元 **[!UICONTROL 数据]**。
 1. In the **[!UICONTROL Metadata Import]** page, click **[!UICONTROL Select File]**. 选择包含元数据的 CSV 文件。
-1. 指定以下参数。 请参阅metadata-import- [sample-file.csv上的示例CSV文件](assets/metadata-import-sample-file.csv)。
+1. 指定以下参数。 请参阅metadata-import- [sample-file.csv上的示例CSV文件](/help/assets/assets/metadata-import-sample-file.csv)。
 
    | 元数据导入参数 | 描述 |
    |:---|:---|
