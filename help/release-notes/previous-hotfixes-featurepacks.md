@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: 6.5 Service [!DNL Adobe Experience Manager] Pack的发行说明。
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 62a04c1d9f62a5a5fa6f97f415015001daa94747
+source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
 workflow-type: tm+mt
-source-wordcount: '14760'
+source-wordcount: '14804'
 ht-degree: 19%
 
 ---
@@ -326,6 +326,8 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 * 自适应表单具有一些开放的资源解析器。 这会导致提交失败。 出现间歇性问题(CQ-4299407)。
 
 * 首次打开字段配置时，不显示属性图标(CQ-4296284)。
+
+* 用户在提交自适应表单时可 `afPath`以编 `afSubmissionTime` 辑提 `signers`交元数据，如和。 要解决此问题，将从客户端的表单提交数据中删除元数据值。 用户可以使用 `FormSubmitInfo` 该对象从服务器检索这些值(NPR-33654)。
 
 **工作流**
 
@@ -1574,7 +1576,7 @@ The key highlights for [!DNL Experience Manager Forms] 6.5.1.0 are:
 
 **Forms - 通信管理**
 
-* [!DNL Experience Manager Forms] 6.5创建通信UI(CCR UI)无法打开使用6.3创 [!DNL Experience Manager Forms] 建的通信。CQ-4266392的修补程序
+* [!DNL Experience Manager Forms] 6.5创建通信UI(CCR UI)无法打开使用6. [!DNL Experience Manager Forms] 3创建的通信。CQ-4266392的修补程序
 * 如果 DDE 数据类型是数字类型，则 XDP 中的求和功能将不起作用。适用于 CQ-4227403 的修补程序
 * 内存中的字母缓存失效逻辑将被更新，因为当资产发布时，其最后修改时间不会更新。适用于 CQ-4250465 的修补程序
 * 无法发布文档片段、DD 和 Letters。适用于 CQ-4272893 的修补程序
