@@ -4,9 +4,9 @@ description: Release notes specific to [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0389508f7870dd2ce6ed7bfc5fb8a9bc88fedffb
+source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
 workflow-type: tm+mt
-source-wordcount: '3796'
+source-wordcount: '3789'
 ht-degree: 5%
 
 ---
@@ -145,7 +145,7 @@ ht-degree: 5%
    * 使用键盘Tab键导航时，从添加的标记中删除最后一个标记后，标记字段将保留焦点(NPR-35109)。
    * [!DNL Experience Manager] 组件现在包含要由屏幕阅读器使用的名称、角色和值的适当信息(NPR-34255)。
    * 删除“类型／大小”组合框、“链接”组合框、“语言”组合框或“文本”编辑框后，键盘焦点将返回到下一个或上一个用户界面元素或更相关的用户界面元素(CQ-4293585)。
-   * 将指针悬停在各种选项上时，将显示“选择”和“下载”等提示。 使用屏幕放大功能的用户可能因鼠标悬停显示的内容而难以查看文件缩略图。 现在，在使用键删除选项后，可以保 `Escape` 留焦点(CQ-4293554)。
+   * 将指针悬停在选项上时，将显示“选择”和“下载”等提示。 使用屏幕放大镜的用户可能看不到文件缩略图，因为这些提示。 现在，在使用键删除选项后，可以保留焦点 `Escape` 。 (CQ-4293554).
    * 从页面中出现的网格中选择网格单元格后，焦点将转移到屏幕上显示的操作栏(CQ-4282127)。
    * 可视用户可以区分普通文本和链接，因为主页中所有解决方案的链接都会显示视觉线索（下划线和V形图标） [!DNL Experience Manager] (CQ-4282072)。
 
@@ -405,7 +405,7 @@ Maven Central存储库中提供UberJar 6.5.7.0Experience Manager [版](https://r
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | 已 **[!UICONTROL 弃用AEM云服务选择]** -加入屏幕。 随着AEM和目标集成在AEM 6.5中更新以支持Target Standard API(通过AdobeIMS和I/O使用身份验证)，以及AdobeLaunch在指导页面以进行分析和个性化方面的作用日益增强，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、AdobeIMS身份验证和AdobeI/O集成。 |
+| 集成 | 已 **[!UICONTROL 弃用AEM云服务选择]** -加入屏幕。 随着AEM和目标集成在AEM 6.5中更新以支持Target Standard API(通过AdobeIMS和I/O使用身份验证)，以及AdobeLaunch在指导页面以进行分析和个性化方面的作用日益增强，选择加入向导的功能已变得无关紧要。 | 通过各自的AEM云服务配置系统连接、AdobeIMS身份验证和Adobe I/O集成。 |
 | 连接器 | 针对Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR Connector已在AEM 6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
