@@ -3,10 +3,10 @@ title: 支持的文件格式和MIME类型
 description: 支持的文件格式和MIME [!DNL Assets] and [!DNL Dynamic Media] 类型以及每种格式支持的功能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 83c5e92c55f374cc0a8f8bf0f4af3333893f4a59
+source-git-commit: eaff176bf3ffc197607b8eb39b15c1e945927f8e
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 23%
+source-wordcount: '1639'
+ht-degree: 22%
 
 ---
 
@@ -246,6 +246,10 @@ Adobe成像转码库是一款图像处理解决方案，可执行核心图像处
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript(当配置有自己的投放域时) | − | − | − | − | − | ✓ |
+
+>[!NOTE]
+>
+>上传和分发JavaScript文件可能是安全的，也可能不安全。 如果需要，可使用叠加阻止用户上传JS文件。
 
 ## Supported MIME types {#supported-mime-types}
 
