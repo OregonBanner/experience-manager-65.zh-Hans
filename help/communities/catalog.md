@@ -18,16 +18,16 @@ ht-degree: 1%
 ---
 
 
-# 目录功能 {#catalog-feature}
+# 目录功能{#catalog-feature}
 
-组 [`Enablement Assignments`](assignments.md) 件浏 `Enablement Catalog` 览器中“社区”组中的组件和组件是启用社 [区的组件](overview.md#enablement-community)。
+组件浏览器中“社区”组中的[`Enablement Assignments`](assignments.md)和`Enablement Catalog`组件是[启用社区](overview.md#enablement-community)的组件。
 
-该组 `Enablement Catalog` 件允许社区成员访问启用资 [源目录](resources.md)。 使用AEM标记是管理目录中启用资源列表的重要部分(请参阅标记 [启用资源](tag-resources.md))。
+`Enablement Catalog`组件允许社区成员访问[启用资源](resources.md)的目录。 使用AEM标记是管理目录中启用资源列表的重要部分（请参阅[标记启用资源](tag-resources.md)）。
 
-从Enablement [AEM Communities入门教程](getting-started-enablement.md) ，请参阅已发布站点体验部分中成员的任 [务和目录视图](enablement-published-site.md) 。
+从[Enablement](getting-started-enablement.md)的AEM Communities入门教程中，请参阅[体验发布站点](enablement-published-site.md)部分中成员的任务和目录视图。
 
 ## 附加信息 {#additional-information}
 
-有关详细信息，请参阅面向开 [发人员的](catalog-developer-essentials.md) “目录基本工具”页。
+有关开发人员的详细信息，请参阅[Catalog Essentials](catalog-developer-essentials.md)页面。
 
-创 [建社区站点](functions.md#catalog-function) 时，可以使用目 [录功能](sites-console.md)。
+创建[社区站点](sites-console.md)时，[目录函数](functions.md#catalog-function)可用。
