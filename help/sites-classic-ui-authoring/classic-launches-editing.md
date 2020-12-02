@@ -12,6 +12,9 @@ discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 99%
 
 ---
 
@@ -47,6 +50,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
       * **标题**
       * **起始日期**：这相当于启动日期
       * **生产就绪**
+
       有关这些字段的用途和交互的信息，请参阅[启动项 - 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)。
 
    * 在&#x200B;**图像**&#x200B;选项卡中，您可以上传图像文件。
@@ -54,7 +58,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 1. 单击&#x200B;**保存**。
 
-## 发现页面的启动状态 {#discovering-the-launch-status-of-a-page}
+## 发现页面的启动状态  {#discovering-the-launch-status-of-a-page}
 
 编辑页面的启动项时，有关该启动项的信息会显示在 Sidekick 的&#x200B;**版本控制**&#x200B;选项卡底部：
 
