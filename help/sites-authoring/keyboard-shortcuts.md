@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 translation-type: tm+mt
 source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 100%
 
 ---
 
@@ -30,7 +33,7 @@ source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
 | 位置 | 快捷键 | 描述 |
 |---|---|---|
 | 常规 | `Ctrl+Click` | 在桌面设备上进行多选 |
-| 控制台——列视图和内容视图 | `Right Arrow` | 向下导航您的网站结构/展开树节点 |
+| 控制台 - 列视图和内容视图 | `Right Arrow` | 向下导航您的网站结构/展开树节点 |
 |  | `Left Arrow` | 向上导航树结构/折叠树节点 |
 |  | `Down Arrow` | 在同一级别的页面列表中向下移动 |
 |  | `Up Arrow` | 在同一级别的页面列表中向上移动 |
@@ -38,7 +41,7 @@ source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
 |  | `Esc` | 在同一级别的页面列表中向上移动 |
 | 控制台 | `?` | 键盘快捷键帮助 |
 |  | `/` | 调用[搜索](/help/sites-authoring/search.md) |
-|  | `Alt+`&lt;`Number`> | Toggle which [rail selector](/help/sites-authoring/basic-handling.md#rail-selector) option to view |
+|  | `Alt+`&lt;`Number`> | 切换要查看的[边栏选择器](/help/sites-authoring/basic-handling.md#rail-selector)选项 |
 |  | ` | 隐藏边栏 |
 |  | `e` | 编辑 |
 |  | `p` | 属性 |
