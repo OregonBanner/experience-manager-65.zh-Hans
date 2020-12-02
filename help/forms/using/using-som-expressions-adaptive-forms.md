@@ -23,13 +23,13 @@ ht-degree: 0%
 
 您可以使用脚本对象模型(SOM)来引用特定文档对象模型(DOM)中的值、属性和方法。 DOM将内存对象和属性组织在树层次结构中。 SOM表达式引用字段／绘图元素和面板。
 
-下图描绘了自适应表单在向表单添加组件时转换为的节点结构。 例如，您可以在根面板中添加一个面板，并在该面板中添加一个在运行时转换为DOM的单选按钮。 自适应形式单选按钮字段的SOM表达式指定为 `guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`。
+下图描绘了自适应表单在向表单添加组件时转换为的节点结构。 例如，您可以在根面板中添加一个面板，并在该面板中添加一个在运行时转换为DOM的单选按钮。 自适应形式单选按钮字段的SOM表达式指定为`guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`。
 
 ![DOM树](assets/hierarchy.png)
 
 DOM树
 
-自适应表单中任何元素的SOM表达式由前缀 `guide[0].guide1[0]`。 组件在节点结构层次中的位置用于导出其SOM表达式。
+自适应表单中任何元素的SOM表达式由`guide[0].guide1[0]`前缀。 组件在节点结构层次中的位置用于导出其SOM表达式。
 
 ![具有两个单选按钮的DOM树](assets/hierarchy_radio_button.png)
 
@@ -47,4 +47,4 @@ DOM树
 
 使用面板工具栏提取SOM表达式
 
-GuideBridge中列出的 [某些API](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) 使用元素的SOM表达式。 例如，要以自适应形式将焦点置于特定字段，请将相应的SOM表达式传递 `getFocus`到API `guideBridge`。
+[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)中列出的某些API使用元素的SOM表达式。 例如，要以自适应形式将焦点置于特定字段，请将相应的SOM表达式传递至`guideBridge`中的`getFocus` API。
