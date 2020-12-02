@@ -1,8 +1,8 @@
 ---
 title: '概念 '
 seo-title: '概念 '
-description: 与AEM进行电子商务的一般概念。
-seo-description: 与AEM进行电子商务的一般概念。
+description: 与AEM的电子商务的一般概念。
+seo-description: 与AEM的电子商务的一般概念。
 uuid: 9a4cc154-d82b-43e0-a66c-3edf059e8b75
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -24,7 +24,7 @@ ht-degree: 1%
 集成框架提供了以下机制和组件：
 
 * 连接到eCommerce引擎
-* 将数据导入AEM
+* 将数据拉进AEM
 * 显示该数据并收集购物者的答复
 * 返回事务详细信息
 * 从两个系统中搜索数据
@@ -39,9 +39,9 @@ ht-degree: 1%
 >
 >电子商务框架可与以下对象一起使用：
 >
->* [马根托](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
->* [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
->* [Salesforce商务云](https://github.com/adobe/commerce-salesforce)
+>* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
+>* [SAPCommerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
+>* [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
 
 >
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->电 [子商务集成框](https://www.adobe.com/solutions/web-experience-management/commerce.html) 架是AEM Add-On。
+>[电子商务集成框架](https://www.adobe.com/solutions/web-experience-management/commerce.html)是AEM Add-On。
 >
 >您的销售代表可以根据相应的引擎提供完整的详细信息。
 
@@ -65,9 +65,9 @@ ht-degree: 1%
 >
 >它当前用于演示目的，或根据您的要求作为自定义实施的基本基础。
 
-要优化操作，AEM和电子商务引擎都专注于自己的专业领域。 信息在两者之间实时传输； 例如：
+为了优化操作，AEM和电子商务引擎都集中在自己的专业领域。 信息在两者之间实时传输；例如：
 
-* AEM可以：
+* AEM can:
 
    * 请求：
 
@@ -101,7 +101,7 @@ ht-degree: 1%
 >
 >具体详细信息取决于电子商务引擎和项目实施。
 
-为使用集成层提供了许多现成的AEM组件。 目前包括：
+提供了许多现成的AEM组件以使用集成层。 目前包括：
 
 * 产品信息
 * 购物车
@@ -120,11 +120,11 @@ ht-degree: 1%
 
 ![chlimage_1-5](assets/chlimage_1-5.png)
 
-### 实施 {#implementations}
+### 实现{#implementations}
 
 AEM eCommerce is implemented with an eCommerce engine:
 
-* 电子商务集成框架已构建为允许您将电子商务引擎轻松与AEM集成。 目的构建电子商务引擎控制产品数据、购物车、结帐和订单履行，而AEM控制数据显示和营销活动。
+* 电子商务集成框架已构建为允许您将电子商务引擎轻松与AEM集成。 目的构建的电子商务引擎控制产品数据、购物车、结帐和订单履行，而AEM控制数据显示和营销活动。
 
 
 >[!NOTE]
@@ -133,23 +133,23 @@ AEM eCommerce is implemented with an eCommerce engine:
 >
 >它当前用于演示目的，或根据您的要求作为自定义实施的基本基础。
 >
->在AEM中使用基于JCR的通用开发实现的AEM eCommerce为：
+>AEM eCommerce implemented in AEM using generic development based on JCR is:
 >
->* 用于说明API使用的独立AEM-native eCommerce示例。 这可用于控制产品数据、购物车和结帐以及现有的数据显示和营销活动。 在这种情况下，产品数据库存储在AEM（Adobe的JCR实施）本机的存 [储库](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)中。
+>* 用于说明API的使用的独立的AEM-native eCommerce示例。 这可用于控制产品数据、购物车和结帐以及现有的数据显示和营销活动。 在这种情况下，产品数据库存储在AEM的本机存储库中(Adobe[JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)的实现)。
 >
 >  
-标准AEM安装包含通用电子商务实 [施的基础知识](/help/sites-administering/generic.md)。
+标准AEM安装包含[通用eCommerce实现](/help/sites-administering/generic.md)的基础知识。
 
-### 商务提供商 {#commerce-providers}
+### 商务提供程序{#commerce-providers}
 
 将数据从商务引擎导入AEM eCommerce站点时，将使用商务提供程序为导入程序提供数据。 一个商务提供商可以支持多个导入器。
 
-商务提供商是自定义为以下任一项的AEM代码：
+商务提供商是AEM代码，自定义为：
 
 * 后端商务引擎的接口
 * 在JCR存储库顶部实施商务系统
 
-AEM当前提供两个商务提供程序示例：
+AEM目前提供两个商务提供商示例：
 
 * one for geometrixx-hybris
 * another for geometrixx-generic(JCR)
@@ -158,16 +158,16 @@ AEM当前提供两个商务提供程序示例：
 
 >[!NOTE]
 >
->geometrixx导入器使用CSV文件； 在模式实现的上方的注释中，提供了接受的客户（允许自定义属性）的描述。
+>geometrixx导入器使用CSV文件；在模式实现的上方的注释中，提供了接受的客户（允许自定义属性）的描述。
 
-ProductServices [Manager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html) 维护(通过 [OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings))ProductImporter和CatalogBlueprintImporter [接口的实](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html) 施列表 [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html) 。 这些属性列在导 **入程序向导的** “导入程序／商务提供程序”下拉字段中( `commerceProvider` 使用属性作为名称)。
+[ProductServicesManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductServicesManager.html)维护（通过[OSGi](/help/sites-deploying/configuring.md#osgi-configuration-settings)）[ProductImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/ProductImporter.html)和[CatalogBlueprintImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/commerce/pim/api/CatalogBlueprintImporter.html)接口的实现列表。 这些属性列在导入程序向导的&#x200B;**导入程序／商务提供程序**&#x200B;下拉字段中（使用`commerceProvider`属性作为名称）。
 
 当特定的导入程序／商务提供程序可从下拉菜单中访问时，必须在以下任一位置定义它需要的任何补充数据（取决于导入程序类型）:
 
 * `/apps/commerce/gui/content/catalogs/importblueprintswizard/importers`
 * `/apps/commerce/gui/content/products/importproductswizard/importers`
 
-相应文件夹下的文 `importers` 件夹必须与导入程序名称匹配； 例如：
+相应`importers`文件夹下的文件夹必须与导入程序名称匹配；例如：
 
 * `.../importproductswizard/importers/geometrixx/.content.xml`
 
@@ -198,27 +198,27 @@ ProductServices [Manager](https://helpx.adobe.com/experience-manager/6-5/sites/d
    * 检查他们的订单。
    * 预计订单履行。
 
-尽管实际位置取决于您的实施； 例如，generic或with an eCommerce engine:
+尽管实际位置取决于您的实施；例如，generic或with an eCommerce engine:
 
 ![chlimage_1-6](assets/chlimage_1-6.png)
 
 ## 产品 {#products}
 
-### 产品 数据与营销数据 {#product-data-versus-marketing-data}
+### 产品 数据与营销数据{#product-data-versus-marketing-data}
 
-#### 结构性与营销类别 {#structural-versus-marketing-categories}
+#### 结构性与营销类别{#structural-versus-marketing-categories}
 
-如果可以区分以下两个类别，则这允许您使用有意义的结构（节点树）创建清晰的 `cq:Page` URL，因此非常接近经典的AEM内容管理:
+如果可以区分以下两个类别，则这允许您用有意义的结构（`cq:Page`节点的树）明确URL，因此非常接近经典AEM内容管理:
 
 * *结构性*类别
 
-   定义产品 *的类别树*; 例如：
+   定义&#x200B;*什么是产品*&#x200B;的类别树；例如：
 
    `/products/mens/shoes/sneakers`
 
-* *营销* 类别
+* *营* 销类别
 
-   产品可属 *于的所有其他类别*; 例如：
+   所有其他类别a *产品可以属于*;例如：
 
    `/special-offers/christmas/shoes`)
 
@@ -231,9 +231,9 @@ ProductServices [Manager](https://helpx.adobe.com/experience-manager/6-5/sites/d
 * maintained directly in AEM(generic)。
 * maintained in eCommerce engine and made available in AEM.
 
-   根据数据类型，它会根据需要 [进行](#catalog-maintenance-data-synchronization) 同步，或直接进行访问； 例如，在每个页面请求中从ecommerce引擎检索产品价格等高波动性和关键数据，以确保它们始终处于最新状态。
+   根据数据类型，它根据需要为[synchronized](#catalog-maintenance-data-synchronization)，或直接访问；例如，在每个页面请求中从ecommerce引擎检索产品价格等高波动性和关键数据，以确保它们始终处于最新状态。
 
-无论哪种情况，在将产品数据输入／导入AEM后，都可以从“产品”控制台 **中查看** 。 此处是产品的卡和列表视图，显示以下信息：
+无论哪种情况，在将产品数据输入／导入AEM后，都可以从&#x200B;**产品**&#x200B;控制台中查看。 此处是产品的卡和列表视图，显示以下信息：
 
 * 图像
 * SKU代码
@@ -247,9 +247,9 @@ ProductServices [Manager](https://helpx.adobe.com/experience-manager/6-5/sites/d
 
 ![ecommerceproductvariants](assets/ecommerceproductvariants.png)
 
-### 产品属性 {#product-attributes}
+### 产品属性{#product-attributes}
 
-每个产品的各个属性可能取决于所使用的电子商务引擎和您的AEM实施。 在查看产品页面和／或编辑产品信息时，这些选项（视情况而定）可用，可包括：
+每个产品的各个属性可能取决于所使用的电子商务引擎和AEM实施。 在查看产品页面和／或编辑产品信息时，这些选项（视情况而定）可用，可包括：
 
 * **图像**
 
@@ -293,7 +293,7 @@ ProductServices [Manager](https://helpx.adobe.com/experience-manager/6-5/sites/d
 
    产品功能的更完整详细信息。
 
-### 产品资产 {#product-assets}
+### 产品资产{#product-assets}
 
 可以为单个产品保留一系列资产。 通常包括图像和视频。
 
@@ -301,37 +301,37 @@ ProductServices [Manager](https://helpx.adobe.com/experience-manager/6-5/sites/d
 
 A catalog groups product data together for both ease of management and representation to the shopper. 通常，目录根据语言、地理区域、品牌、季节、爱好、体育等属性进行结构化。
 
-### 目录结构 {#catalog-structure}
+### 目录结构{#catalog-structure}
 
-#### 多语言目录 {#catalogs-in-multiple-languages}
+#### 多语言目录{#catalogs-in-multiple-languages}
 
-AEM支持多语言的产品内容。 在请求数据时，集成框架从当前树中检索语言(例如，对于 `en_US` 下的页面 `/content/geometrixx-outdoors/en_US`)。
+AEM支持多种语言的产品内容。 在请求数据时，集成框架从当前树中检索语言（例如，`/content/geometrixx-outdoors/en_US`下的页面的`en_US`）。
 
-对于多语言商店，您可以单独导入每个语言树的目录(或通过MSM复制 [它](/help/sites-administering/msm.md))。
+对于多语言商店，可以单独导入每个语言树的目录（或通过[MSM](/help/sites-administering/msm.md)复制目录）。
 
-#### 多品牌目录 {#catalogs-for-multiple-brands}
+#### 多品牌目录{#catalogs-for-multiple-brands}
 
 与语言一样，大型跨国公司需要满足多个品牌的需求。
 
-#### 按标签列出的目录 {#catalogs-by-tags}
+#### Catalogs by Tags {#catalogs-by-tags}
 
 标记还可以用于将产品组合到目录中。 这些目录可用于更动态的目录，如季节性优惠。
 
-### 目录设置（初始导入） {#catalog-setup-initial-import}
+### 目录设置（初始导入）{#catalog-setup-initial-import}
 
-根据您的实施，您可以将基本目录所需的产品数据从以下位置导入到AEM:
+根据您的实施，您可以将基本目录所需的产品数据从以下位置导入AEM::
 
 * CSV文件（用于通用实现）
 * eCommerce engine
 
-### 目录维护（数据同步） {#catalog-maintenance-data-synchronization}
+### 目录维护（数据同步）{#catalog-maintenance-data-synchronization}
 
 产品数据的进一步变化将不可避免：
 
-* 对于通用实现，可以使用产品编辑器 [管理这些](/help/sites-administering/generic.md#editing-product-information)
-* 使用eCommerce引 [擎时，必须同步更改](#data-synchronization-with-an-ecommerce-engine-ongoing)
+* 对于通用实现，可以使用[产品编辑器](/help/sites-administering/generic.md#editing-product-information)管理这些组件
+* 使用[eCommerce引擎时，必须同步更改](#data-synchronization-with-an-ecommerce-engine-ongoing)
 
-#### 与电子商务引擎进行数据同步（持续） {#data-synchronization-with-an-ecommerce-engine-ongoing}
+#### 与eCommerce Engine（正在进行）{#data-synchronization-with-an-ecommerce-engine-ongoing}进行数据同步
 
 初次导入后，对产品数据的更改是不可避免的。
 
@@ -339,19 +339,19 @@ AEM支持多语言的产品内容。 在请求数据时，集成框架从当前�
 
 这取决于数据类型：
 
-* 周 [期同步与更改的数据馈送一起使用](/help/sites-developing/sap-commerce-cloud.md#product-synchronization-and-publishing)。
+* 将[周期同步与更改的数据供给一起使用。](/help/sites-developing/sap-commerce-cloud.md#product-synchronization-and-publishing)
 
    除此之外，您还可以为快速更新选择特定更新。
 
 * 从商务引擎中检索每个页面请求的高度易变性数据（如价格信息），以确保其始终处于最新状态。
 
-### 目录——性能和缩放 {#catalogs-performance-and-scaling}
+### 目录——性能和缩放{#catalogs-performance-and-scaling}
 
 从电子商务引擎(PIM)导入包含大量产品（通常超过100,000个）的大型目录可能会因节点数过多而影响系统。 如果产品具有关联的资产（如产品图像），则还可以减慢创作实例的速度。 这是由于这些资产的后处理需要占用大量CPU和内存。
 
 您可以选择各种策略来解决这些问题：
 
-* [Bucketing](#bucketing) —— 用于满足大量节点的需要
+* [Bucketing](#bucketing) -以满足大量节点
 * [将资产后处理卸载到专用实例](#offload-asset-post-processing-to-a-dedicated-instance)
 * [仅导入产品数据](#only-import-product-data)
 * [导入限制和批量保存](#import-throttling-and-batch-saves)
@@ -364,7 +364,7 @@ AEM支持多语言的产品内容。 在请求数据时，集成框架从当前�
 
 这些存储段采用引入到目录结构的幻像文件夹的形式，但可以进行配置，使其在公共URL中不明显。
 
-#### 将资产后处理卸载到专用实例 {#offload-asset-post-processing-to-a-dedicated-instance}
+#### 将资产后处理卸载到专用实例{#offload-asset-post-processing-to-a-dedicated-instance}
 
 此方案涉及设置两个作者实例：
 
@@ -378,7 +378,7 @@ AEM支持多语言的产品内容。 在请求数据时，集成框架从当前�
 
 ![架构图](assets/chlimage_1-8.png)
 
-#### 仅导入产品数据 {#only-import-product-data}
+#### 仅导入产品数据{#only-import-product-data}
 
 对于产品不包含要导入的资产（图像）的情况，您可以导入产品数据，而不会受资产后期处理的影响。
 
@@ -389,9 +389,9 @@ AEM支持多语言的产品内容。 在请求数据时，集成框架从当前�
 
 [Import throttling](/help/sites-deploying/scaling.md#import-throttling) and [batch saves](/help/sites-deploying/scaling.md#batch-saves) are two general [scaling](/help/sites-deploying/scaling.md) mechanisms that can help when importing large volumes of data.-->
 
-#### 性能测试 {#performance-testing}
+#### 性能测试{#performance-testing}
 
-必须在AEM eCommerce实施时考虑性能测试：
+必须考虑AEM eCommerce实施的性能测试：
 
 * 作者环境:
 
@@ -425,7 +425,7 @@ AEM支持多语言的产品内容。 在请求数据时，集成框架从当前�
 
 * 维护要求（备份、Tar PM优化、数据存储垃圾收集等）
 
-#### 性能——杂项 {#performance-miscellaneous}
+#### 性能——其他{#performance-miscellaneous}
 
 对于所有实施，可以记住以下几点：
 
@@ -455,13 +455,13 @@ AEM支持多语言的产品内容。 在请求数据时，集成框架从当前�
 * 在您的技术堆栈中，规划非常分工的内容访问模型和服务。 这是一般的最佳实践，但更重要的是，在优化阶段，您可以为读取频繁的数据添加应用程序缓存（并且您不想用它填充捆绑缓存）。
 
    例如，属性管理经常是缓存的一个好候选项，因为它涉及通过产品导入更新的数据。
-* 考虑使用 [代理页](/help/sites-administering/concepts.md#proxy-pages)。
+* 考虑使用[代理页](/help/sites-administering/concepts.md#proxy-pages)。
 
-### 目录章节页 {#catalog-section-pages}
+### 目录部分页{#catalog-section-pages}
 
 Catalog sections provide you with, for example:
 
-* 介绍（图像和／或文本）类别; 这也可用于横幅和Teaser以提升特殊优惠
+* 介绍（图像和／或文本）类别;这也可用于横幅和Teaser以提升特殊优惠
 * 链接到该类别中的单个产品
 * 链接到其他类别
 
@@ -469,42 +469,42 @@ Catalog sections provide you with, for example:
 
 ### 产品页面 {#product-pages}
 
-产品页面提供有关各个产品的全面信息。 还反映了动态更新； 例如，在eCommerce引擎上注册的价格更改。
+产品页面提供有关各个产品的全面信息。 还反映了动态更新；例如，在eCommerce引擎上注册的价格更改。
 
-产品页面是使用产品组件 **的** AEM页面； 例如，在“商务产 **品”模板** 中：
+产品页是使用&#x200B;**Product**&#x200B;组件的AEM页；例如，在&#x200B;**Commerce Product**&#x200B;模板中：
 
 ![ecommerce_nairobrunnergreen](assets/ecommerce_nairobirunnersgreen.png)
 
 产品组件提供：
 
-* 一般产品信息； 包括文本和图像。
-* 定价； 这通常在每次显示／刷新页面时从eCommerce引擎中检索。
-* 产品变体信息； 例如，颜色和大小。
+* 一般产品信息；包括文本和图像。
+* 定价；这通常在每次显示／刷新页面时从eCommerce引擎中检索。
+* 产品变体信息；例如，颜色和大小。
 
 此信息允许购物者在将项目添加到其购物篮时选择以下内容：
 
 * 颜色和大小变体
 * 数量
 
-#### 产品登陆页 {#product-landing-pages}
+#### 产品登陆页{#product-landing-pages}
 
-这些是主要提供静态信息的AEM页面； 例如，包含指向基础产品页面的链接的简介和概述。
+这些是AEM页面，主要提供静态信息；例如，包含指向基础产品页面的链接的简介和概述。
 
 ### 产品组件 {#product-component}
 
-产 **品组** 件可以添加到具有父页面并提供所需元数据（即指向和的路径）的任何 `cartPage` 页 `cartObject`面。 在演示站点Geometrixx Outdoors中，它由提供 `UserInfo.jsp`。
+可以将&#x200B;**Product**&#x200B;组件添加到具有父页面的任何页面，该页面提供所需的元数据（即到`cartPage`和`cartObject`的路径）。 在演示站点中，Geometrixx Outdoors由`UserInfo.jsp`提供。
 
-还可 **以根据您** 的个人要求自定义产品组件。
+**Product**&#x200B;组件也可以根据您的个人要求进行自定义。
 
-### 代理页 {#proxy-pages}
+### 代理页{#proxy-pages}
 
 代理页面用于简化存储库的结构并优化大型目录的存储。
 
-创建目录将使用每个产品的十个节点，因为它为每个产品提供可在AEM中更新和自定义的各个组件。 如果您的目录包含数百甚至数千个产品，则此大量节点可能会成为问题。 要避免任何问题，您可以使用代理页面创建目录。
+创建目录将使每个产品使用十个节点，因为它为每个产品提供可在AEM中更新和自定义的单独组件。 如果您的目录包含数百甚至数千个产品，则此大量节点可能会成为问题。 要避免任何问题，您可以使用代理页面创建目录。
 
-代理页使用双节点结构( `cq:Page` 和 `jcr:content`)，该结构不包含任何实际的产品内容。 在请求时，通过引用产品数据和模板页面生成内容。
+代理页使用双节点结构（`cq:Page`和`jcr:content`），它不包含任何实际的产品内容。 在请求时，通过引用产品数据和模板页面生成内容。
 
-然而，这是一种取舍。 您将无法在AEM中自定义您的产品信息，将使用为您的站点定义的标准模板。
+然而，这是一种取舍。 您将无法在AEM中自定义您的产品信息，将使用标准模板（为您的站点定义）。
 
 >[!NOTE]
 >
@@ -528,10 +528,10 @@ Vouchers are a tried and tested method of offering discounts to either attract s
 
 在AEM中：
 
-* A voucher is a page-based component that is created/ edited with the Websites console.
-* The **Voucher** component provides:
+* A voucher is a page-based component that is created / edited with the Websites console.
+* **凭证**&#x200B;组件提供：
 
-   * 凭证管理的呈现器； 这显示购物车中当前的所有凭证。
+   * 凭证管理的呈现器；这显示购物车中当前的所有凭证。
    * 用于管理（添加／删除）凭证的编辑对话框（表单）。
    * 添加／删除凭证至购物车／从购物车所需的操作。
 
@@ -539,7 +539,7 @@ Vouchers are a tried and tested method of offering discounts to either attract s
 
 >[!NOTE]
 >
->AEM使用术语 **优惠券**,this is synnoxynous with the term **Coupon**.
+>AEM使用术语&#x200B;**Voucher**，这与术语&#x200B;**Coupon**&#x200B;同义。
 
 ### 促销活动 {#promotions}
 
@@ -549,11 +549,11 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
 * 长期客户可享受所有订单的折扣。
 * 在明确定义的时间段内提供的销售价格。
 * 客户在其上一订单超过特定金额时收到凭证。
-* 购买product-X *的客户* ，可享受 *product-Y(对产品* )的折扣。
+* 购买&#x200B;*product-X*&#x200B;的客户在购买&#x200B;*product-Y*（对产品）时可享受折扣。
 
 促销通常不由产品信息经理维护，而是由营销经理维护：
 
-* 促销是使用网站控制台创建／编辑的基于页面的组件。 ``
+* 促销是使用网站控制台创建／编辑的基于页面的组件。 &quot;
 * 促销供应：
 
    * 优先级
@@ -567,10 +567,10 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
    * promotion administration的renderers和dialogs
    * 用于渲染和编辑特定于升级处理程序的配置参数的子组件
 
-在AEM中，促销活动也集成到 [活动管理](/help/sites-authoring/personalization.md):
+在AEM中，促销还集成到[活动管理](/help/sites-authoring/personalization.md)中：
 
-* 活动 [](/help/sites-authoring/personalization.md) ，指定打开／关闭时间
-* [活动](/help/sites-authoring/personalization.md) 中的体验 ** ，用于根据受众区段对资产（Teaserpages、促销等）进行分组，这些资产对应于
+* a [活动](/help/sites-authoring/personalization.md)指定开／关时间
+* [活动](/help/sites-authoring/personalization.md) ** 中的体验用于根据受众段对资产（Teaserpages、促销等）进行分组，这些资产对应于
 
 促销活动可以在体验中进行，也可以直接在活动中进行：
 
@@ -580,7 +580,7 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
 
    `/content/campaigns/geometrixx-outdoors/big-spender/ordervalueover100/free-shipping`
 
-   is in an experience, and so fires automatically when the segment() `ordervalueover100`resolves.
+   is in an experience, and so fires automatically when the segment(`ordervalueover100`)resolves.
 
 * 如果促销未在体验中显示(仅在活动中)，则无法自动将其应用于受众。 但是，如果Shopper enters a voucher into their cart and that voucher references the promotion，则仍可触发它。
 
@@ -588,15 +588,15 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
 
    `/content/campaigns/geometrixx-outdoors/article/10-bucks-off`
 
-   is outside and so never fires automatically(ie: 基于分段)。 但是，它被引用了，该凭证可在文章活动内的几个体验中找到。 将这些凭单代码输入购物车将导致升级触发。
+   is outside and so never fires automatically(ie:基于分段)。 但是，它被引用了，该凭证可在文章活动内的几个体验中找到。 将这些凭单代码输入购物车将导致升级触发。
 
 >[!NOTE]
 >
->[hybris promotions](https://www.hybris.com/modules/promotion) and [hybris vouchers](https://www.hybris.com/en/modules/voucher) cover everything that implements the shopping cart and is related to pricing. Promotion specific marketing content(such as banners, etc)is not part of the hybris promotion.
+>[hybris ](https://www.hybris.com/modules/promotion) promotion [和hybris voucherscover ](https://www.hybris.com/en/modules/voucher) everythings that implements the shopping cart and is related to pricing.Promotion specific marketing content(such as banners, etc)is not part of the hybris promotion.
 
 ## 个性化 {#personalization}
 
-### 客户注册和帐户 {#customer-registration-and-accounts}
+### 客户注册和帐户{#customer-registration-and-accounts}
 
 当购物者注册时，帐户详细信息需要在AEM和eCommerce引擎之间同步。 敏感数据是独立保存的，但用户档案是共享的：
 
@@ -611,21 +611,21 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
 1. 用户帐户仅在AEM中存在：
 
    1. 用户将在电子商务引擎中创建，其帐户ID和随机密码将存储在AEM中。
-   1. 随机密码是必需的，因为AEM会尝试在第一次调用时登录电子商务引擎（例如，当请求产品页面且电子商务引擎被引用以获取价格时）。 由于这是在AEM登录后发生的，因此密码不可用。
+   1. 随机密码是必需的，因为AEM会尝试在第一次调用时登录到电子商务引擎（例如，当请求产品页面且电子商务引擎引用价格时）。 由于这在AEM登录后发生，因此密码不可用。
 
 1. 用户帐户仅存在于电子商务引擎中：
 
-   1. 将在AEM中使用相同的帐户ID和密码创建帐户。
+   1. 帐户将在AEM中创建，并使用相同的帐户ID和密码。
 
-使用电子商务引擎时，AEM仅存储帐户ID和密码（可选）。 所有其他信息都存储在电子商务引擎中。
+使用电子商务引擎时，AEM仅存储帐户ID和密码（可选为用户组）。 所有其他信息都存储在电子商务引擎中。
 
 >[!NOTE]
 >
 >使用电子商务引擎时，您需要确保为登录AEM实例的用户创建的帐户被复制(例如，通过工作流)到与该引擎通信的任何其他AEM实例。
 >
->否则，这些其他AEM实例还将尝试为引擎中的相同用户创建帐户。 如果引擎发出信号， `DuplicateUidException` 这些操作将失败。
+>否则，这些其他AEM实例还将尝试为引擎中的相同用户创建帐户。 这些操作将失败，引擎中出现`DuplicateUidException`。
 
-### 客户注册 {#customer-sign-up}
+### 客户注册{#customer-sign-up}
 
 购物者必须注册才能访问购物车。 这需要注册（创建帐户），以便创建客户特定的帐户。
 
@@ -635,27 +635,27 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
 >
 >还支持匿名购物车和结帐。
 
-### 客户登录 {#customer-sign-in}
+### 客户登录{#customer-sign-in}
 
 注册后，购物者可以使用其帐户登录，以便跟踪其活动并完成其订单。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-### 单一登录 {#single-sign-on}
+### 单一登录{#single-sign-on}
 
 提供单点登录(SSO)，这样作者在AEM和电子商务系统中都是已知的，无需登录两次。
 
 ### myAccount {#myaccount}
 
-来自电子商务引擎的事务数据与有关购物者的个人信息相结合。 AEM使用其中一些数据作为用户档案数据。 AEM中表单的操作会将信息写回电子商务引擎。
+来自电子商务引擎的事务数据与有关购物者的个人信息相结合。 AEM将部分数据用作用户档案数据。 AEM中表单的操作会将信息写回电子商务引擎。
 
-有一个页面，允许您轻松管理帐户信息。 您可以通过单击geometrixx页 **面顶部的** “我的帐户”或导航到来访问该帐户 `/content/geometrixx-outdoors/en/user/account.html`。
+有一个页面，允许您轻松管理帐户信息。 您可以通过单击geometrixx页面顶部的&#x200B;**我的帐户**&#x200B;或导航到`/content/geometrixx-outdoors/en/user/account.html`来访问它。
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
 ### 通讯簿 {#address-book}
 
-您的站点需要存储一系列地址； 包括投放、帐单和替代地址。 这可以使用基于默认地址格式的表单实现，也可以使用AEM提供的通讯簿组件。
+您的站点需要存储一系列地址；包括投放、帐单和替代地址。 这可以基于默认地址格式使用表单实现，也可以使用AEM提供的通讯簿组件。
 
 此通讯簿组件允许您：
 
@@ -665,11 +665,11 @@ Promotions，连同vouchers, allow you to realize scenarios such as:
 
 您可以选择默认的地址。
 
-可通过单击通讯簿 **，或导航到，从“** 我的帐户 **”页** 面访问通讯簿 `/content/geometrixx-outdoors/en/user/account/address-book.html`组件。
+可通过单击&#x200B;**通讯簿**&#x200B;或导航到`/content/geometrixx-outdoors/en/user/account/address-book.html`，从&#x200B;**我的帐户**&#x200B;页面访问通讯簿组件。
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
-您可以单 **击“添加新地址。.** .”，在通讯簿中添加新地址。 它打开一个可填写的表单，然后单击“添加 **地址”**。
+您可以单击&#x200B;**添加新地址……**&#x200B;在通讯簿中添加新地址。 它打开一个可填写的表单，然后单击&#x200B;**添加地址**。
 
 >[!NOTE]
 >
@@ -679,20 +679,20 @@ The Address Book is used when you checkout your cart:
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
-地址将保留在下 `user_home/profile/addresses`面。
+地址会保留在`user_home/profile/addresses`下。
 例如，对于Alison Parker，它位于/home/users/geometrixx/aparker@geometrixx.info/用户档案/addresses下
 
-您可以选择您希望使用的默认地址，此信息将保留在购物者的用户档案中，而不是包含地址。 用户档案属性 `address.default` 设置为选定地址的值路径。
+您可以选择您希望使用的默认地址，此信息将保留在购物者的用户档案中，而不是包含地址。 用户档案属性`address.default`设置为选定地址的值路径。
 
-### 客户特定定价 {#customer-specific-pricing}
+### 客户特定定价{#customer-specific-pricing}
 
-电子商务引擎使用上下文（实质上是购物者信息）确定其所持的价格，然后将正确的信息提供回AEM。
+电子商务引擎使用上下文（实质上是购物者信息）来确定其所持的价格，然后将正确的信息提供回AEM。
 
-## 购物车和订单 {#shopping-cart-and-orders}
+## 购物车和订单{#shopping-cart-and-orders}
 
 当购物时，购物者将浏览产品页面并选择项目以将它们放入其购物车中。 当他们继续结帐时，可以下订单。
 
-### 匿名购物者 {#anonymous-shoppers}
+### 匿名购物者{#anonymous-shoppers}
 
 匿名客户可以：
 
@@ -702,9 +702,9 @@ The Address Book is used when you checkout your cart:
 
 >[!NOTE]
 >
->在结帐之前，可能需要根据您的实例地址信息或客户注册的配置进行操作。
+>在结帐之前，可能需要执行实例地址信息或客户注册的配置操作。
 
-### 注册购物者 {#registered-shoppers}
+### 注册购物者{#registered-shoppers}
 
 注册客户可以：
 
@@ -714,7 +714,7 @@ The Address Book is used when you checkout your cart:
 * 执行结帐以下单
 * 视图和跟踪以前的订单
 
-### 购物车内容概述 {#shopping-cart-content-overview}
+### 购物车内容概述{#shopping-cart-content-overview}
 
 购物车提供：
 
@@ -734,12 +734,12 @@ The Address Book is used when you checkout your cart:
 
 无论哪种情况，项目都会停留在购物车中（并且可以恢复），而不是登录／注销（但只是在同一台机器／浏览器上）。 例如：
 
-* 浏览为 `anonymous` 并将产品添加到购物车
-* 登录 `Allison Parker` 为——她的购物车为空
+* 浏览为`anonymous`并将产品添加到购物车
+* 以`Allison Parker`身份登录——她的购物车为空
 * 将产品添加到她的购物车
-* 注销——购物车将显示 `anonymous`
+* 注销——购物车将显示`anonymous`的产品
 
-* 重新登录 `Allison Parker` -她的产品已恢复
+* 以`Allison Parker`身份再次登录——恢复其产品
 
 >[!NOTE]
 >
@@ -747,7 +747,7 @@ The Address Book is used when you checkout your cart:
 
 >[!NOTE]
 >
->It is not recommended to test restoring the cart contents with the `admin` account, as this can conflict with the eCommerce engine( `admin` e. g. hybris)account.
+>不建议使用`admin`帐户测试恢复购物车内容，因为这可能与eCommerce engine（例如hybris）的`admin`帐户发生冲突。
 
 >[!NOTE]
 >
@@ -755,9 +755,9 @@ The Address Book is used when you checkout your cart:
 
 在结帐前，价格更改会在发生时反映（在两个系统中）。
 
-### 订单信息 {#order-information}
+### 订单信息{#order-information}
 
-根据您的订单相关实施信息在电子商务引擎或AEM中保留，AEM会呈现此信息。
+根据您的订单实施信息在电子商务引擎或AEM中保留，此信息由AEM提供。
 
 存储了各种信息，其中可以包括：
 
@@ -771,7 +771,7 @@ The Address Book is used when you checkout your cart:
 
 * **状态**
 
-   订单的状态； 例如，“已发运”。
+   订单的状态；例如，“已发运”。
 
 * **货币**
 
@@ -795,7 +795,7 @@ The Address Book is used when you checkout your cart:
 
 * **总计**
 
-   订单的总价值； 订购物品、税收和分批。
+   订单的总价值；订购的物品、税和垃圾。
 
 * **帐单地址**
 
@@ -815,7 +815,7 @@ The Address Book is used when you checkout your cart:
 
 * **配送方式**
 
-   运输方式； 例如，陆地、海洋或空气。
+   运输方式；例如，陆地、海洋或空气。
 
 * **跟踪号**
 
@@ -839,7 +839,7 @@ The Address Book is used when you checkout your cart:
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-### 订单跟踪 {#order-tracking}
+### 订单跟踪{#order-tracking}
 
 下订单后，购物者通常返回：
 
@@ -849,36 +849,36 @@ The Address Book is used when you checkout your cart:
 
 在收到订单投放后，购物者可能还希望视图一段时间内完成的订单的历史记录。
 
-订单履行和跟踪通常由电子商务引擎管理。 AEM可以使用订单历史记录组件显示信息，该组件显示所有相关详细信息，包括已应用的凭证和促销。 例如：
+订单履行和跟踪通常由电子商务引擎管理。 信息可由AEM使用订单历史记录组件显示，该组件显示所有相关详细信息，包括已应用的凭证和促销。 例如：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
 ## 签出 {#checkout}
 
-结帐是通过标准AEM表单实现的。 这使营销经理能够自定义营销内容的体验。
+结帐是使用标准AEM表单实现的。 这使营销经理能够自定义营销内容的体验。
 
-然后，电子商务会使用AEM表单的输入管理结帐过程。
+然后，电子商务使用AEM表单的输入管理结帐过程。
 
-### Payment Security {#payment-security}
+### 付款安全性{#payment-security}
 
-付款详细信息（包括信用卡信息）通常由电子商务引擎管理。 AEM将此类交易信息转发到引擎（从此处转发到付款处理服务）。
+付款详细信息（包括信用卡信息）通常由电子商务引擎管理。 AEM将此类交易信息转发给引擎（从此处转发给付款处理服务）。
 
 可实现支付卡行业(PCI)合规性。
 
-### 订单确认 {#confirmation-of-order}
+### 订单{#confirmation-of-order}的确认
 
-订单在屏幕上得到确认，并可通过订单跟踪 [进行跟踪](#order-tracking)。
+订单在屏幕上确认，可以使用[订单跟踪](#order-tracking)进行跟踪。
 
 ## 搜索 {#search-features}
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 
-由于AEM使用产品的标准页面，因此您可以使用标准搜索组件创建搜索页面。
+由于AEM将标准页面用于产品，因此您可以使用标准搜索组件创建搜索页面。
 
 如果您需要更彻底的实施，您可以：
 
 * 使用您需要的功能扩展默认搜索组件。
-* 在您的搜索页面中实 `CommerceService` 施搜索方法，然后在搜索页面上使用电子商务搜索组件。
+* 在`CommerceService`中实施搜索方法，然后在搜索页面上使用eCommerce搜索组件。
 
 使用电子商务引擎时，电子商务搜索API可以在电子商务引擎解决方案中完全实现，因此您可以使用现成提供的电子商务搜索组件。 多面搜索允许您搜索JCR和／或引擎：
 
