@@ -22,7 +22,7 @@ ht-degree: 3%
 
 在电子商务体验中使用默认的概览，弹出窗口中显示产品信息以推动购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据您使用的查看器，此功能允许用户单击热点、缩略图或图像映射以查看信息或相关内容。
 
-以下Dynamic Media查看器支持快速查看：
+Dynamic Media中的以下查看器支持快速查看：
 
 * 交互式图像（可单击的热点）
 * 交互式视频（视频播放期间可单击的缩略图图像）
@@ -82,13 +82,14 @@ ht-degree: 3%
 
 1. 您现在使用的查看器需要了解如何使用概览。
 
-   为此，查看器使用一个名为的处理程序 `QuickViewActive`。
+   为此，查看器使用一个名为`QuickViewActive`的处理函数。
 
-   **示**&#x200B;例假定您在网页上对交互式图像使用以下示例嵌入代码：
+   **示**
+例假定您在网页上对交互式图像使用以下示例嵌入代码：
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
-   处理函数通过以下方式加载到查看器 `setHandlers`:
+   处理函数使用`setHandlers`加载到查看器中：
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
@@ -105,16 +106,17 @@ ht-degree: 3%
    })
    ```
 
-   请访问以下 `setHandlers()` 页面，进一步了解方法：
+   有关`setHandlers()`方法的更多信息，请访问：
 
-   * 交互式图像查看器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
-   * 交互式视频查看器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
+   * 交互式图像查看器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
+   * 交互式视频查看器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. 您现在需要配置处理 `quickViewActivate` 程序。
+1. 您现在需要配置`quickViewActivate`处理程序。
 
-   处理 `quickViewActivate` 程序控制查看器中的Quickview。 该处理函数包含变量列表和函数调用，以便与Quickview一起使用。 嵌入代码为概览中设置的SKU变量提供映射，并提供示例函 `loadQuickView` 数调用。
+   `quickViewActivate`处理函数控制查看器中的Quickview。 该处理函数包含变量列表和函数调用，以便与Quickview一起使用。 嵌入代码为概览中设置的SKU变量以及示例`loadQuickView`函数调用提供映射。
 
-   **变量映**&#x200B;射将用于网页的变量映射到概览中包含的SKU值和通用变量：
+   **变量**
+映射将用于网页的变量映射到概览中包含的SKU值和通用变量：
 
    `var *variable1*= inData.*quickviewVariable*`
 
@@ -129,25 +131,26 @@ ht-degree: 3%
     var <i>variable3</i>= inData.<i>quickviewVariable3</i>
    ```
 
-   **函数调**&#x200B;用处理函数还需要函数调用才能使Quickview正常工作。 假定主机页面可以访问该函数。 嵌入代码提供示例函数调用：
+   **函数**
+调用处理函数还需要函数调用才能使Quickview正常工作。假定主机页面可以访问该函数。 嵌入代码提供示例函数调用：
 
    `loadQuickView(sku)`
 
-   示例函数调用假定该函数存 `loadQuickView()` 在且可访问。
+   示例函数调用假定函数`loadQuickView()`存在且可访问。
 
-   请访问以下 `quickViewActivate` 页面，进一步了解方法：
+   有关`quickViewActivate`方法的更多信息，请访问：
 
-   * 交互式图像查看器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
-   * 交互式视频查看器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
-   * 交互式视频查看器中的交互式数据支持： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
+   * 交互式图像查看器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
+   * 交互式视频查看器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
+   * 交互式视频查看器中的交互式数据支持：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
 1. 执行以下操作：
 
    * 取消嵌入代码的setHandlers部分的注释。
    * 映射Quickview中包含的任何其他变量。
 
-      * 如果要添 `loadQuickView(sku,*var1*,*var2*)` 加其他变量，请更新调用。
-   * 在查看器 `loadQuickView` 外的页面上创建简单的()函数。
+      * 如果要添加其他变量，请更新`loadQuickView(sku,*var1*,*var2*)`调用。
+   * 在查看器外的页面上创建一个简单的`loadQuickView`()函数。
 
       例如，以下内容会将sku值写入浏览器控制台：
 
@@ -163,8 +166,8 @@ ht-degree: 3%
 
 
 
-1. 您现在可以使用函数调用概览中的简单弹出窗口。 以下示例使用弹 `DIV` 出窗口。
-1. 按以下方式设 `DIV` 置弹出窗口的样式。 根据需要添加您自己的其他样式。
+1. 您现在可以使用函数调用概览中的简单弹出窗口。 以下示例使用`DIV`作为弹出窗口。
+1. 按以下方式设置弹出窗口`DIV`的样式。 根据需要添加您自己的其他样式。
 
    ```xml
    <style type="text/css">
@@ -176,9 +179,9 @@ ht-degree: 3%
    </style>
    ```
 
-1. 将弹出窗 `DIV` 口放在HTML页面的正文中。
+1. 将弹出窗口`DIV`放在HTML页面的正文中。
 
-   其中一个元素设置有ID，当用户调用概览时，ID会随sku值更新。 该示例还包括一个简单按钮，用于在弹出窗口可见后再次隐藏它。
+   其中一个元素设置有ID，当用户调用概览时，ID会与sku值一起更新。 该示例还包括一个简单按钮，用于在弹出窗口可见后再次隐藏它。
 
    ```xml
    <div id="quickview_div" >
@@ -189,7 +192,7 @@ ht-degree: 3%
    </div>
    ```
 
-1. 添加一个函数以更新弹出窗口中的sku值； 通过替换在步骤5中创建的简单函数使弹出窗口可见。 与以下内容集成：
+1. 添加一个函数以更新弹出窗口中的sku值；通过替换在步骤5中创建的简单函数使弹出窗口可见。 与以下内容集成：
 
    ```xml
    <script type="text/javascript">
@@ -200,23 +203,23 @@ ht-degree: 3%
    </script>
    ```
 
-1. 将测试HTML页面上传到Web服务器并打开。 当用户调用概览时， `DIV` 查看器将显示弹出窗口。
+1. 将测试HTML页面上传到Web服务器并打开。 当用户调用概览时，查看器将显示弹出窗口`DIV`。
 1. **如何以全屏模式显示自定义弹出窗口**
 
    某些查看器（如交互式视频查看器）支持以全屏模式显示。 但是，如前面的步骤所述，使用弹出窗口会导致它在全屏模式下显示在查看器后面。
 
-   要在标准和全屏模式下显示弹出窗口，请将弹出窗口附加到查看器容器。 要完成此操作，可使用第二个处理函数方法 `initComplete`。
+   要在标准和全屏模式下显示弹出窗口，请将弹出窗口附加到查看器容器。 要完成此操作，可使用第二个处理函数方法`initComplete`。
 
-   查看器 `initComplete` 初始化后，将调用处理器。
+   查看器初始化后将调用`initComplete`处理器。
 
    ```xml
    "initComplete":function() { code block }
    ```
 
-   请访问以下 `init()` 页面，进一步了解方法：
+   有关`init()`方法的更多信息，请访问：
 
-   * 交互式图像查看器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
-   * 交互式视频查看器： [https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
+   * 交互式图像查看器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
+   * 交互式视频查看器：[https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
 1. 要将上述步骤中介绍的弹出窗口附加到查看器，请使用以下代码：
 
@@ -260,9 +263,10 @@ ht-degree: 3%
 
    `*viewerInstance.*init()`
 
-   **示例**&#x200B;此示例使用交互式图像查看器。
+   **示**
+例此示例使用交互式图像查看器。
 
    `s7interactiveimageviewer.init()`
 
-   将查看器嵌入到主机页面后，请确保创建了查看器实例并加载了处理函数，然后使用调用查看器 `init()`。
+   将查看器嵌入到主机页面后，请确保创建了查看器实例并加载了处理函数，然后使用`init()`调用查看器。
 
