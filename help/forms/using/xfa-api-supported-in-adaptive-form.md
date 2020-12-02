@@ -31,7 +31,7 @@ ht-degree: 5%
 
 本文列表支持自适应表单中接受的XFA事件、属性和验证，并说明如何在自适应表单中覆盖它们。
 
-## 支持的XFA元素及其自适应表单映射 {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
+## 自适应表单{#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}中支持的XFA元素及其映射
 
 ### 字段 {#fields}
 
@@ -125,55 +125,55 @@ ht-degree: 5%
    <td><p>映射到自适应表单中的启用属性。 您可以使用访问表达式覆盖它。</p> </td>
   </tr>
   <tr>
-   <td><p>辅助功能： 角色 </p> </td>
+   <td><p>辅助功能：角色 </p> </td>
    <td><p>映射到自适应表单中的角色属性。</p> </td>
   </tr>
   <tr>
-   <td><p>辅助功能： speatPriority </p> </td>
+   <td><p>辅助功能：speatPriority </p> </td>
    <td><p>以自适应形式映射到speakPriority属性。</p> </td>
   </tr>
   <tr>
-   <td><p>辅助功能： speakText</p> </td>
+   <td><p>辅助功能：speakText</p> </td>
    <td><p>映射到自适应表单中的自定义辅助功能文本。</p> </td>
   </tr>
   <tr>
-   <td><p>辅助功能： 工具提示 </p> </td>
+   <td><p>辅助功能：工具提示 </p> </td>
    <td><p>映射到自适应表单中的简短描述属性。</p> </td>
   </tr>
   <tr>
-   <td><p>题注<em> （所有字段类型）</em></p> </td>
+   <td><p>题注<em>（所有字段类型）</em></p> </td>
    <td><p>映射到自适应表单中的“标题”属性。</p> </td>
   </tr>
   <tr>
-   <td><p>displayFormat<em> （所有字段类型）</em></p> </td>
+   <td><p>displayFormat<em>（所有字段类型）</em></p> </td>
    <td><p>以自适应形式映射到显示模式。</p> </td>
   </tr>
   <tr>
-   <td><p>rawValue<em> （所有字段类型）</em></p> </td>
+   <td><p>rawValue<em>（所有字段类型）</em></p> </td>
    <td><p>映射到自适应表单中的值属性。</p> </td>
   </tr>
   <tr>
-   <td><p>项目<em> (列表框、复选框)</em></p> </td>
+   <td><p>项<em>(列表框，复选框)</em></p> </td>
    <td><p>映射到自适应表单中的选项属性。 您可以使用“选项”表达式覆盖它。</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> （文本字段）</em></p> </td>
+   <td><p>maxChar<em>（文本字段）</em></p> </td>
    <td><p>映射到自适应表单中允许的最大字符数属性。</p> </td>
   </tr>
   <tr>
-   <td><p>多行<em> （文本字段）</em></p> </td>
+   <td><p>multiline<em>（文本字段）</em></p> </td>
    <td><p>映射到自适应表单中的允许多行属性。</p> </td>
   </tr>
   <tr>
-   <td><p>fracDigit<em> （数字字段，小数字字段）</em></p> </td>
+   <td><p>fracDigit<em>（数字字段，小数字字段）</em></p> </td>
    <td><p>映射到自适应表单中的Frac digits属性。</p> </td>
   </tr>
   <tr>
-   <td><p>leadDigit<em> （数字字段，小数字字段）</em></p> </td>
+   <td><p>leadDigit<em>（数字字段，小数字字段）</em></p> </td>
    <td><p>映射到自适应表单中的潜在客户数字属性。</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> (列表框)</em></p> </td>
+   <td><p>multiSelect<em>(列表框)</em></p> </td>
    <td><p>映射到自适应表单中的允许多个选择属性。</p> </td>
   </tr>
  </tbody>
@@ -228,7 +228,7 @@ ht-degree: 5%
  </tbody>
 </table>
 
-### 验证 {#validations}
+### 验证{#validations}
 
 下表捕获了XFA验证如何映射到自适应表单中的验证。
 
