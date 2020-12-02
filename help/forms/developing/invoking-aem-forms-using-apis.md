@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 使用API调用AEM Forms {#invoking-aem-forms-using-apis}
+# 使用API调用AEM Forms{#invoking-aem-forms-using-apis}
 
 Adobe Experience Manager Forms是基于J2EE的企业软件，它包含在共享基础架构中运行的服务。 服务操作通常会消耗或产生文档。 通过使用AEM Forms，您可以将表单工作流与电子表单、文档安全性和文档生成结合到一组集成且紧密结合的服务中。 这些服务可以从防火墙内外进行访问。
 
