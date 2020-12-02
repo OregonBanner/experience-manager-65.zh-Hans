@@ -12,6 +12,9 @@ discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 translation-type: tm+mt
 source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+workflow-type: tm+mt
+source-wordcount: '1590'
+ht-degree: 97%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
 这些步骤针对在 AEM 中创作页面内容时所需执行的主要操作，提供了相关的快速指南（简介）。
 
-该指南：
+他们：
 
 * 并不提供全面的介绍。
 * 但提供了详细文档的链接。
@@ -42,7 +45,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
 * 对文件夹中的页面重新排序
 
-   * This can be done in [List View](/help/sites-authoring/basic-handling.md#list-view). The changes will be applied and be visible in other views.
+   * 此操作可在[列表视图](/help/sites-authoring/basic-handling.md#list-view)中完成。更改将在其他视图中应用并可见。
 
 #### 页面创作 {#page-authoring}
 
@@ -61,6 +64,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 >
 >* [编辑页面时的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
+
 >
 
 
@@ -75,7 +79,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. Navigate up the tree using [the breadcrumb in the header](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs), which allows you to return to the selected location:
+1. 使用[标头中的痕迹导航](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)对树进行向上导航，这允许您返回到选定的位置：
 
    ![qgtap-01](assets/qgtap-01.png)
 
@@ -87,20 +91,20 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
 要[创建新的页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，请执行以下操作：
 
-1. [导航](#finding-your-page)到要创建新页面的位置。
+1. [导航到要创建新页面的位置。](#finding-your-page)
 1. 使用&#x200B;**创建**&#x200B;图标，然后从列表中选择&#x200B;**页面**：
 
    ![qgtap-02](assets/qgtap-02.png)
 
 1. 这将打开向导，逐步指导您收集[创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)时所需的信息。按照屏幕上的说明操作。
 
-### 选择页面以执行其他操作 {#selecting-your-page-for-further-action}
+### 选择页面以执行其他操作  {#selecting-your-page-for-further-action}
 
 您可以选择一个页面，以对其执行操作。选择页面后，工具栏将自动更新，以显示与该资源相关的操作。
 
 选择页面的方式取决于您在控制台中所使用的视图：
 
-1. 列视图:
+1. 列视图：
 
    * 点按/单击所需资源的缩略图 - 缩略图上将覆盖一个勾号，表示已选择该页面。
 
@@ -114,6 +118,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
       * 移动设备：点按并按住
       * 桌面：[快速操作](/help/sites-authoring/basic-handling.md#quick-actions) - 勾号图标：
+
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
    * 卡片上将覆盖一个勾号，表示已选择该页面。
@@ -121,7 +126,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
    >
    >进入选择模式后，**选择**&#x200B;图标（勾号）将变为&#x200B;**取消选择**&#x200B;图标（叉号）。
 
-### Quick Actions (Card View/Desktop Only) {#quick-actions-card-view-desktop-only}
+### 快速操作（仅限卡片视图/桌面）{#quick-actions-card-view-desktop-only}
 
 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)可用：
 
@@ -151,6 +156,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
       * 打开侧面板
       * 选择组件选项卡（[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)）
       * 将所需组件拖放到页面中。
+
       可以通过以下图标打开（或关闭）侧面板：
    ![](do-not-localize/screen_shot_2018-03-21at160738.png)
 
@@ -159,6 +165,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
       * 通过点按或单击打开组件工具栏。使用&#x200B;**编辑**（铅笔）图标打开对话框。
       * 通过点按住或慢速双击打开组件的就地编辑器。此时将显示可用的操作（对于某些组件，该选择将受到限制）。
       * 要查看所有可用的操作，请使用以下图标进入全屏模式：
+
    ![](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [配置现有组件的属性](/help/sites-authoring/editing-content.md#component-edit-dialog)
@@ -167,31 +174,33 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
    * 通过以下任一方式[移动组件](/help/sites-authoring/editing-content.md#moving-a-component)：
 
       * 将所需组件拖动到新位置。
-      * Open the component toolbar with either tap or click. Use the **Cut** then **Paste** icons where required.
+      * 通过点按或单击打开组件工具栏。根据需要依次使用&#x200B;**剪切**&#x200B;和&#x200B;**粘贴**&#x200B;图标。
    * [复制（并粘贴）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)组件：
 
-      * Open the component toolbar with either tap or click. Use the **Copy** then **Paste** icons as required.
+      * 通过点按或单击打开组件工具栏。根据需要依次使用&#x200B;**复制**&#x200B;和&#x200B;**粘贴**&#x200B;图标。
    >[!NOTE]
    >
    >您可以将组件&#x200B;**粘贴**&#x200B;到同一页面或其他页面。如果在剪切/复制操作之前粘贴到已打开的其他页面，则表明该页面需要刷新。
 
    * [删除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)组件：
 
-      * Open the component toolbar with either tap or click, then use the **Delete** icon.
+      * 通过点按或单击打开组件工具栏，然后使用&#x200B;**删除**&#x200B;图标。
    * 向页面[添加注释](/help/sites-authoring/annotations.md#annotations)：
 
       * 选择&#x200B;**注释**&#x200B;模式（对话气泡图标）。使用&#x200B;**添加注释**（加号）图标添加注释。使用右上方的 X 退出注释模式。
+
    ![](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [预览页面](/help/sites-authoring/editing-content.md#preview-mode)（用于查看页面在发布环境中的显示情况）
 
       * 从工具栏中选择&#x200B;**预览**。
    * 使用&#x200B;**编辑**&#x200B;下拉选择器返回编辑模式（或选择其他模式）。
+
    >[!NOTE]
    >
    >要使用内容中的链接导航，您必须使用[预览模式](/help/sites-authoring/editing-content.md#preview-mode)。
 
-### 编辑页面属性 {#editing-the-page-properties}
+### 编辑页面属性  {#editing-the-page-properties}
 
 [编辑页面属性](/help/sites-authoring/editing-page-properties.md)的方法（主要）有两种：
 
@@ -202,37 +211,41 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
       * 相应资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
       * [选择页面](#selectiingyourpageforfurtheraction)后显示的工具栏。
+
    ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
-   1. 此时将显示页面属性。 您可以进行需要的更新，然后使用“保存”保留这些更改
+   1. 将会显示页面属性。您可以进行需要的更新，然后使用“保存”保留这些更改
 
 
 * 在[编辑页面](#editing-your-page-content)时：
 
    1. 打开&#x200B;**页面信息**&#x200B;菜单。
    1. 选择&#x200B;**打开属性**&#x200B;以打开用于编辑属性的对话框。
+
    ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
-### Publishing Your Page (or Unpublishing) {#publishing-your-page-or-unpublishing}
+### 发布页面（或取消发布）{#publishing-your-page-or-unpublishing}
 
 [发布页面](/help/sites-authoring/publishing-pages.md)（和取消发布）的方法主要有两种：
 
 * 从&#x200B;**站点**&#x200B;控制台中：
 
    1. [导航](#finding-your-page)到要发布的页面。
-   1. Select the **Quick Publish** icon from either:
+   1. 从以下任一位置选择&#x200B;**快速发布**&#x200B;图标：
 
       * 相应资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
       * [选择页面](#selectiingyourpageforfurtheraction)后显示的工具栏（还可以访问[稍后发布](/help/sites-authoring/publishing-pages.md#main-pars-title-12)）。
+
    ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * 在[编辑页面](#editing-your-page-content)时：
 
    1. 打开&#x200B;**页面信息**&#x200B;菜单。
    1. 选择&#x200B;**发布页面**。
+
    ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
-* 从控制台取消发布页面只能通过&#x200B;**管理发布**&#x200B;选项来完成，此选项只在工具栏上可用（不能通过快速操作使用）。
+* 从控制台取消发布页面只能通过“管理发布 **** ”选项完成，该选项仅在工具栏上可用（不能通过快速操作）。
 
    **取消发布页面**&#x200B;选项仍可通过编辑器中的&#x200B;**页面信息**&#x200B;菜单使用。
 
@@ -240,33 +253,34 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
    请参阅[发布页面](/help/sites-authoring/publishing-pages.md#unpublishing-pages)以了解更多信息。
 
-### 移动、复制并粘贴或删除页面 {#move-copy-and-paste-or-delete-your-page}
+### 移动、复制并粘贴或删除页面  {#move-copy-and-paste-or-delete-your-page}
 
 这些操作全部可以通过以下项触发：
 
 1. [导航](#finding-your-page)到要移动、复制并粘贴或删除的页面。
-1. 通过以下任一方式，根据需要选择复制（然后再选择粘贴）、移动或删除图标：
+1. 使用以下任一方式根据需要选择复制（然后粘贴）、移动或删除图标：
 
    * 所需资源的[快速操作（仅限卡片视图/桌面）](#quick-actions-card-view-desktop-only)。
    * [选择页面](#selecting-your-page-for-further-action)后显示的工具栏。
+
    然后，取决于您的操作：
 
-   * 复制:
+   * 复制：
 
-      * 复制后，您将需要导航到新位置并进行粘贴：
-   * 移动:
+      * 复制后，您将需要导航到新位置并进行粘贴。
+   * 移动：
 
       * 将打开相应的向导来收集移动页面时所需的信息。按照屏幕上的说明操作。
-   * 删除:
+   * 删除：
 
       * 系统将要求您确认该操作。
    >[!NOTE]
    >
    >快速操作中并未提供“删除”操作。
 
-### Locking Your Page (then Unlocking) {#locking-your-page-then-unlocking}
+### 锁定页面（然后解锁）{#locking-your-page-then-unlocking}
 
-[锁定页面](/help/sites-authoring/editing-content.md#locking-a-page)可防止其他作者在您处理页面的同时也对其进行编辑。可以在下列位置找到“锁定”（和“解锁”）图标/按钮：
+[锁定页面](/help/sites-authoring/editing-content.md#locking-a-page) ，可阻止其他作者在您处理页面时对其进行处理。 可以找到“锁定”（和“解锁”）图标／按钮：
 
 * [选择页面](#selecting-your-page-for-further-action)后显示的工具栏。
 * 编辑页面时显示的[“页面信息”下拉菜单](#editing-the-page-properties)。
@@ -290,7 +304,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
 1. 点按/单击所需的引用类型，以显示更多详细信息并（视需要）执行进一步操作。
 
-### 创建页面版本 {#creating-a-version-of-your-page}
+### 创建页面版本  {#creating-a-version-of-your-page}
 
 要创建页面的[版本](/help/sites-authoring/working-with-page-versions.md)：
 
