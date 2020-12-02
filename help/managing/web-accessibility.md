@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Manager(AEM)和Web辅助功能指南
-description: Adobe Experience Manager(AEM)和Web辅助功能指南简介
+description: 介绍Adobe Experience Manager(AEM)和Web辅助功能准则
 translation-type: tm+mt
 source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 70%
 
 # AEM 和 Web 辅助功能规范{#aem-and-the-web-accessibility-guidelines}
 
-出于许多社会、经济和法律动因，需要确保 Web 内容尽可能设计地能够让任何目标受众访问，而无论他们具有任何缺陷或限制。因此，具有Adobe Experience Manager(AEM)的Web辅助功能是良好Web设计中一个日益重要的方面。
+出于许多社会、经济和法律动因，需要确保 Web 内容尽可能设计地能够让任何目标受众访问，而无论他们具有任何缺陷或限制。因此，Adobe Experience Manager(AEM)的Web可访问性是良好Web设计的一个日益重要的方面。
 
 创建具有AEM影响的可访问网站和内容：
 
@@ -24,7 +24,7 @@ ht-degree: 70%
 
 * 在实施网站设计时，模板开发人员还应注意到此类问题。
 
-Adobe Experience Manager works with the [guidelines](#wcag-accessibility-guidelines) provided by the [World Wide Web Consortium](#world-wide-web-consortium).
+Adobe Experience Manager与[万维网联盟](#world-wide-web-consortium)提供的[准则](#wcag-accessibility-guidelines)合作。
 
 >[!NOTE]
 >
@@ -48,9 +48,11 @@ WCAG 2.1 提供了[涵盖无障碍级别和如何符合这些级别的准则（�
 
 * [创建无障碍内容](/help/sites-authoring/creating-accessible-content.md)详细介绍了这些内容与 AEM 的关系。
 
-* [配置富文本编辑器以生成可访问站点](/help/sites-administering/rte-accessible-content.md)指南，了解管理员如何配置AEM以生成可访问内容。
+* [配置富文本编辑器以生成可访问的站](/help/sites-administering/rte-accessible-content.md)
+点有关管理员如何配置AEM以生成可访问内容的准则。
 
-* [创建可访问的](/help/forms/using/creating-accessible-adaptive-forms.md)自适应表单Adobe Experience Manager(AEM)包括许多功能，可增强不同功能用户的自适应表单的可用性。 该解决方案还帮助表单作者创建可访问的自适应表单。
+* [创建可访问](/help/forms/using/creating-accessible-adaptive-forms.md)
+的自适应表单AdobeExperience Manager(AEM)包含许多功能和功能，它们增强了不同功能用户的自适应表单的可用性。该解决方案还帮助表单作者创建可访问的自适应表单。
 
 >[!NOTE]
 >
