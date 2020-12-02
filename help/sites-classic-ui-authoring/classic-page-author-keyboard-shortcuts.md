@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '336'
+ht-degree: 91%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->In the following tables, for the key combinations in the **Shortcut** column, both Ctrl and Command keys work on macOS.
+>在下表中，对于&#x200B;**Shortcut**&#x200B;列中的组合键，Ctrl和Command键均适用于macOS。
 
 >[!NOTE]
 >
@@ -29,6 +32,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >* Windows：按住 Ctrl 并单击所需的组件。
 >* Mac：按住 Cmd 并单击所需的组件。
+
 >
 
 
@@ -45,22 +49,22 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td>编辑模式</td>
    <td><code>Ctrl-z</code></td>
-   <td>撤消最后一次更改。</td>
+   <td>撤消最后一次更改.</td>
   </tr>
   <tr>
    <td> </td>
    <td><code>Ctrl-y</code></td>
-   <td>重做最后一次更改。</td>
+   <td>重做最后一次更改.</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Shift-Click</code></strong></td>
-   <td>选择多个段落。</td>
+   <td>选择多个段落.</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Click</code></strong></td>
-   <td>选择多个段落。</td>
+   <td>选择多个段落.</td>
   </tr>
   <tr>
    <td> </td>
@@ -153,7 +157,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 在使用[控制台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)时，桌面用户也可以使用各种键盘快捷键。
 
-## 用于开发的键盘快捷键 {#keyboard-shortcuts-for-development}
+## 用于开发的键盘快捷键  {#keyboard-shortcuts-for-development}
 
 在使用页面编辑器时，还有其他键盘快捷键可供桌面开发人员使用。
 
@@ -166,7 +170,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td>编辑模式</td>
-   <td><br /> 在URL中设置以下后缀：然 <code>?debugClientLibs=true</code><br /> 后使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>在URL中设置以下后缀：<br /> <code>?debugClientLibs=true</code><br />然后使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>查看页面加载的计时统计数据。</td>
   </tr>
  </tbody>
