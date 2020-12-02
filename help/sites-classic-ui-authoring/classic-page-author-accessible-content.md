@@ -23,7 +23,7 @@ ht-degree: 94%
 
 >[!CAUTION]
 >
->由于经典UI在AEM 6.4中已弃用，因此本页中的内容尚未针对WCAG 2.1进行更新。
+>由于AEM 6.4中已弃用经典UI，因此尚未更新此页面上的内容以用于WCAG 2.1。
 >
 >有关AEM和WCAG 2.1的详细信息，请参阅以下页面：
 >
@@ -78,7 +78,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 [准则 1.1 替换文本：为所有非文本内容提供替换文本，以便使其可更改为人们需要的其他形式，如大印刷字体、盲文、语音、符号或更简单的语言。](https://www.w3.org/TR/WCAG20/#text-equiv)
 
-### 非文本内容 (1.1.1) {#non-text-content}
+### 非文本内容 (1.1.1)  {#non-text-content}
 
 * 成功标准 1.1.1
 * A 级
@@ -90,13 +90,13 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 另外的一个实用好处是，替换文本使非文本内容能够通过搜索引擎技术建立索引。
 
-#### 如何达到标准 - 非文本内容 (1.1.1) {#how-to-meet-non-text-content}
+#### 如何达到标准 - 非文本内容 (1.1.1)  {#how-to-meet-non-text-content}
 
 对于静态图形，基本的要求是为图形提供对等的替换文本。这可以在&#x200B;**替换文本**&#x200B;字段中完成：
 
 >[!NOTE]
 >
->一些现成的组件（如&#x200B;**轮播**&#x200B;和&#x200B;**幻灯片**&#x200B;放映）不提供向图像添加替代文本描述的方法。When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+>一些现成的组件（如&#x200B;**轮播**&#x200B;和&#x200B;**幻灯片**&#x200B;放映）不提供向图像添加替代文本描述的方法。为AEM实例实施这些版本时，开发团队需要配置这些组件以支持`alt`属性，以便作者可以将其添加到内容中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 **替换文本**&#x200B;字段显示在&#x200B;**图像**&#x200B;组件对话框的&#x200B;**高级**&#x200B;图像属性选项卡中：
 
@@ -114,7 +114,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 >[!NOTE]
 >
->In both of the above scenarios, the default **Alt Text** value is not visible in the **Advanced Image Properties** tab. To change the default value, simply enter a new value in the **Alt Text** field.
+>在以上两种情况下，默认的&#x200B;**替代文本**&#x200B;值在&#x200B;**高级图像属性**&#x200B;选项卡中不可见。要更改默认值，只需在&#x200B;**替代文本**&#x200B;字段中输入新值。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 说明性照片：
 
-   这些是人物、物体或地点的图像。 Think about the role of the photo in the page; an appropriate text equivalent is likely to be *Photo of[object ]*, but may be dependent on the surrounding text.
+   这些是人物、物体或地点的图像。 想想照片在页面中的作用；相应的对等文本可能是[object ]*的*&#x200B;照片，但可能取决于周围的文本。
 
 * 图标：
 
@@ -149,7 +149,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 图表和图形：
 
-   这些通常表示数值数据。 因此，替换文本的选择之一就是简要地总结图表或图形中表现出来的主要趋势。If necessary, also provide a more detailed description in text using the **Description** field in the **Advanced** image properties tab. 此外，还可以在页面或站点的其他位置以表形式提供源数据。
+   这些通常表示数值数据。 因此，替换文本的选择之一就是简要地总结图表或图形中表现出来的主要趋势。如有必要，还可以使用&#x200B;**高级**&#x200B;图像属性选项卡中的&#x200B;**说明**&#x200B;字段以文本形式提供更详细的说明。 此外，还可以在页面或站点的其他位置以表形式提供源数据。
 
    ![图形示例。下面是提供替代文本的最佳方法。](assets/chlimage_1-2a.jpeg)
 
@@ -173,7 +173,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * CAPTCHA:
 
-   A CAPTCHA is a *Completely Automated Public Turing test to tell Computers and Humans Apart*. 这是一项在网页中用于区分人类和恶意软件的安全检查，但同时也会妨碍网页的辅助功能。用户要想通过安全测试，必须按照要求描述自己所看到的这些图像。为这些图像提供替换文本显然是不可能的，因此需要思考出非图形的替代解决方案。
+   CAPTCHA是&#x200B;*完全自动化的公共图灵测试，用于告诉计算机和人类Apart*。 这是一项在网页中用于区分人类和恶意软件的安全检查，但同时也会妨碍网页的辅助功能。用户要想通过安全测试，必须按照要求描述自己所看到的这些图像。为这些图像提供替换文本显然是不可能的，因此需要思考出非图形的替代解决方案。
 
 
    W3C 提供了许多建议，例如：（这些方法各有优缺点。）
@@ -192,14 +192,14 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
    >
    >背景与前景文本之间应该有适当的对比度等级；这在[对比度（最小）(1.4.3)](#contrast-minimum) 中有更加详细的讨论。
 
-#### 更多信息 - 非文本内容 (1.1.1) {#more-information-non-text-content}
+#### 更多信息 - 非文本内容 (1.1.1)  {#more-information-non-text-content}
 
 * [了解成功标准 1.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 * [如何达到成功标准 1.1.1](https://www.w3.org/WAI/WCAG20/quickref/#text-equiv)
 * [W3C：用于提供实用替换文本的 HTML5 技术（草案）](https://dev.w3.org/html5/alt-techniques/)
 * [CAPTCHA 的 W3C 解释和替代方法](https://www.w3.org/TR/turingtest/)
 
-### 基于时间的媒体 (1.2) {#time-based-media}
+### 基于时间的媒体 (1.2)  {#time-based-media}
 
 [准则 1.2 基于时间的媒体：为基于时间的媒体提供替代内容。](https://www.w3.org/TR/WCAG20/#text-equiv)
 
@@ -214,7 +214,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
    * 预先录制的纯音频：对于预先录制的纯音频内容，提供了基于时间的媒体的替代内容，以呈现对等信息。
    * 预先录制的纯视频：对于预先录制的纯视频内容，要么提供了基于时间的媒体的替代内容，要么提供了音轨，以呈现对等信息。
 
-#### 用途 - 纯音频和纯视频（预先录制）(1.2.1) {#purpose-audio-only-and-video-only-pre-recorded}
+#### 用途 - 纯音频和纯视频（预先录制）(1.2.1)  {#purpose-audio-only-and-video-only-pre-recorded}
 
 以下用户可能会遇到音频和视频的无障碍问题：
 
@@ -226,7 +226,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 如果以不同的格式提供这些信息，如使用文本（或者对于无音频的视频，使用音频），则无法访问原始内容的用户便可以访问这些信息。
 
-#### 如何达到标准 - 纯音频和纯视频（预先录制）(1.2.1) {#how-to-meet-audio-only-and-video-only-pre-recorded}
+#### 如何达到标准 - 纯音频和纯视频（预先录制）(1.2.1)  {#how-to-meet-audio-only-and-video-only-pre-recorded}
 
 * 如果内容是预先录制的不含视频的音频（如播客）：
 
@@ -255,13 +255,13 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 * [了解成功标准 1.2.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 * [如何达到成功标准 1.2.1](https://www.w3.org/WAI/WCAG20/quickref/#media-equiv)
 
-### 字幕（预先录制）(1.2.2) {#captions-pre-recorded}
+### 字幕（预先录制）(1.2.2)  {#captions-pre-recorded}
 
 * 成功标准 1.2.2
 * A 级
 * 字幕（预先录制）：为同步媒体中所有预先录制的音频内容提供了字幕，除非该媒体是文本的替代媒体，且明确进行了相应标记。
 
-#### 用途 - 字幕（预先录制）(1.2.2) {#purpose-captions-pre-recorded}
+#### 用途 - 字幕（预先录制）(1.2.2)  {#purpose-captions-pre-recorded}
 
 耳聋或听力欠佳的用户无法或很难获取音频内容。字幕是讲话和非讲话音频的对等文本，在视频播放过程中会在相应的时间显示在屏幕上。这让无法听到音频的用户可以了解正在播放的内容。
 
@@ -269,7 +269,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 >
 >如果视频或动画所在的页面包含合适的对等文本或非文本内容（提供直接对等的信息），则不需要字幕。
 
-#### 如何达到标准 - 字幕（预先录制）(1.2.2) {#how-to-meet-captions-pre-recorded}
+#### 如何达到标准 - 字幕（预先录制）(1.2.2)  {#how-to-meet-captions-pre-recorded}
 
 字幕有以下两种形式：
 
@@ -282,24 +282,24 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 如果必须使用开放式字幕，应将文本嵌入到视频轨道中。可以使用能够将字幕覆盖到视频上的视频编辑应用程序来完成嵌入。
 
-#### 更多信息 - 字幕（预先录制）(1.2.2) {#more-information-captions-pre-recorded}
+#### 更多信息 - 字幕（预先录制）(1.2.2)  {#more-information-captions-pre-recorded}
 
 * [了解成功标准 1.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)：
 * [如何达到成功标准 1.2.2](https://www.w3.org/WAI/WCAG20/quickref/#media-equiv)
 * [W3C：同步的多媒体](https://www.w3.org/AudioVideo/)
 * [字幕、记录和音频描述 - WebAIM 文章](https://webaim.org/techniques/captions/)
 
-### 音频描述或替代媒体（预先录制）(1.2.3) {#audio-description-or-media-alternative-pre-recorded}
+### 音频描述或替代媒体（预先录制）(1.2.3)  {#audio-description-or-media-alternative-pre-recorded}
 
 * 成功标准 1.2.3
 * A 级
 * 音频描述或替代媒体（预先录制）：对于同步的媒体，为预先录制的视频内容提供了基于时间的媒体的替代内容或音频描述，除非该媒体是文本的替代媒体，且明确进行了相应标记。
 
-#### 用途 - 音频描述或替代媒体（预先录制）(1.2.3) {#purpose-audio-description-or-media-alternative-pre-recorded}
+#### 用途 - 音频描述或替代媒体（预先录制）(1.2.3)  {#purpose-audio-description-or-media-alternative-pre-recorded}
 
 如果视频或动画中的信息仅以可视形式呈现，或者音轨提供的信息不足以让用户了解视频或动画中正在播放的内容，则失明或患有视觉障碍的用户将会遇到辅助功能问题。
 
-#### 如何达到标准 - 音频描述或替代媒体（预先录制）(1.2.3) {#how-to-meet-audio-description-or-media-alternative-pre-recorded}
+#### 如何达到标准 - 音频描述或替代媒体（预先录制）(1.2.3)  {#how-to-meet-audio-description-or-media-alternative-pre-recorded}
 
 可以通过以下两种方式来达到该成功标准。任何一种方式都是可以接受的：
 
@@ -329,7 +329,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 * AA 级
 * 字幕（实时）：为同步媒体中的所有实时音频内容提供了字幕 。
 
-#### 用途 - 字幕（实时）(1.2.4) {#purpose-captions-live}
+#### 用途 - 字幕（实时）(1.2.4)  {#purpose-captions-live}
 
 该成功标准与[字幕（预先录制）](#captions-pre-recorded)的标准完全相同，因为其用途在于解决耳聋或听力欠佳的用户遇到的无障碍问题，两者的不同之处在于该成功标准需要处理网络直播等实时演示。
 
@@ -347,26 +347,26 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 * [了解成功标准 1.2.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-real-time-captions.html)
 * [如何达到成功标准 1.2.4](https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-real-time-captions)
 
-### 音频描述（预先录制）(1.2.5)  {#audio-description-pre-recorded}
+### 音频描述（预先录制）(1.2.5)   {#audio-description-pre-recorded}
 
 * 成功标准 1.2.5
 * AA 级
 * 音频描述（预先录制）：为同步媒体中的所有预先录制的视频内容提供了音频描述 。
 
-#### 用途 - 音频描述（预先录制）(1.2.5) {#purpose-audio-description-pre-recorded}
+#### 用途 - 音频描述（预先录制）(1.2.5)  {#purpose-audio-description-pre-recorded}
 
 该成功标准与[音频描述或替代媒体（预先录制）](#audio-description-or-media-alternative-pre-recorded)的标准完全相同，不同之处在于作者必须提供更加详细的音频描述才能符合 AA 级标准。
 
-#### 如何达到标准 - 音频描述（预先录制）(1.2.5) {#how-to-meet-audio-description-pre-recorded}
+#### 如何达到标准 - 音频描述（预先录制）(1.2.5)  {#how-to-meet-audio-description-pre-recorded}
 
 遵循[音频描述或替代媒体（预先录制）](#audio-description-or-media-alternative-pre-recorded)所提供的指南。
 
-#### 更多信息 - 音频描述（预先录制）(1.2.5) {#more-information-audio-description-pre-recorded}
+#### 更多信息 - 音频描述（预先录制）(1.2.5)  {#more-information-audio-description-pre-recorded}
 
 * [了解成功标准 1.2.5](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html)
 * [如何达到成功标准 1.2.5](https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc-only)
 
-### 适应性 (1.3) {#adaptable}
+### 适应性 (1.3)  {#adaptable}
 
 [准则 1.3 适应性：创建可用不同方式呈现的内容（例如更简单的布局），而不会丢失信息或结构。](https://www.w3.org/TR/WCAG20/#content-structure-separation)
 
@@ -382,7 +382,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 * A 级
 * 信息和关系：通过呈现传递的信息、结构和关系，可以采用编程方式进行确定或在文本中提供。
 
-#### 用途 - 信息和关系 (1.3.1) {#purpose-info-and-relationships}
+#### 用途 - 信息和关系 (1.3.1)  {#purpose-info-and-relationships}
 
 残障人士使用的许多辅助型技术都依赖结构性信息才能有效地显示或输出内容。此类结构性信息有多种形式，如页面标题、表行标题和列标题以及列表类型。举例来说，屏幕阅读器可以让用户从页面的一个标题导航到另一个标题。但是，如果页面内容仅仅在可视样式而非基本 HTML 中具有结构，则辅助型技术便无法获取结构性信息，从而限制它们辅助用户轻松浏览的能力。
 
@@ -400,7 +400,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 * **使用标题：**
 
-   As long as you have the accessibility features of the RTE enabled (see [AEM and Accessibility](/help/sites-administering/rte-accessible-content.md)), AEM offers 3 levels of page heading. You can use these to identify sections and subsections of content. Heading 1 is the highest level of heading, Heading 3 the lowest. The system administrator can configure the system to allow the use of more heading levels.
+   只要启用了RTE的辅助功能(请参阅[AEM和辅助功能](/help/sites-administering/rte-accessible-content.md)),AEM就会优惠3级页面标题。您可以使用这些组件来标识内容的章节和子章节。标题1是最高级别的标题，标题3是最低的。系统管理员可以配置系统以允许使用更多标题级别。
 
    下图显示了各类标题的示例。
 
@@ -411,7 +411,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
    使用 &lt;strong> 或 &lt;em> 元素表明要强调的内容。切勿在段落中使用标题突出显示文本。
 
    * 突出显示要强调的文本；
-   * Click on the **B** icon (for &lt;strong>) or the **I** icon (for &lt;em>) shown within the **Properties** panel (make sure that HTML is selected).
+   * 单击&#x200B;**属性**&#x200B;面板中显示的&#x200B;**B**&#x200B;图标（对于&lt;strong>）或&#x200B;**I**&#x200B;图标（对于&lt;em>）（确保已选择HTML）。
 
    >[!NOTE]
    >
@@ -424,10 +424,10 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 * **使用列表**：可以使用 HTML 指定三种不同类型的列表：
 
-   * The `<ul>` element is used for *unordered* lists (bulleted) lists. 单个列表项使用 `<li>` 元素进行标识。
+   * `<ul>`元素用于&#x200B;*无序*&#x200B;列表（项目符号）列表。 单个列表项使用 `<li>` 元素进行标识。
 
 
-      in the RTE, use the **Bulleted List** icon.
+      在RTE中，使用&#x200B;**项目符号列表**&#x200B;图标。
 
    * `<ol>` 元素用于表示&#x200B;*编号*&#x200B;列表。单个列表项使用 `<li>` 元素进行标识。
 
@@ -457,7 +457,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
    * `<th>` 元素的 `scope` 属性用于指示某个单元格表示特定行的标题，还是特定列的标题。在复杂的表中，即数据单元格可能与一个或多个标题相关联的情况下，类似的方法是使用标题和 id 属性。
 
    >[!NOTE]
-   By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+   默认情况下，这些元素和属性不直接可用，但系统管理员可以在&#x200B;**表属性**&#x200B;对话框中添加对这些值的支持（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
    添加&#x200B;**表**&#x200B;时，可以使用对话框配置&#x200B;**表属性**。
 
@@ -466,7 +466,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
    ![“表属性”对话框。](assets/chlimage_1-20a.png)
 
-   You can then use the **Cell properties** to choose whether the cell is a data or header cell and, if a header cell, whether it relates to a row or column or both:
+   然后，您可以使用&#x200B;**单元格属性**&#x200B;选择单元格是数据单元格还是标题单元格；如果单元格是标题单元格，则选择该单元格是与行还是列相关，还是与两者都相关：
 
    ![调用属性对话框；将某个行（通常是首行）设置为标题行。](assets/chlimage_1-21a.png)
 
@@ -523,7 +523,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 * A 级
 * 感官特性：为了解和使用内容而提供的说明不完全依赖于组件的感官特性，如形状、大小、可视位置、方向或声音。
 
-#### 用途 - 感官特性 (1.3.3) {#purpose-sensory-characteristics}
+#### 用途 - 感官特性 (1.3.3)  {#purpose-sensory-characteristics}
 
 设计者往往关注可视设计特征，如颜色、形状、文本样式，或者内容在展示信息时所在的绝对或相对位置。这些是在传递信息时采用的非常有效的设计技术，但是对于失明或患有视觉障碍的用户而言，可能无法获取此类信息，因为用户必须以可视方式来识别位置、颜色或形状等属性。
 
@@ -532,7 +532,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 >[!NOTE]
 有关颜色替代内容的要求，请参阅[使用颜色](#use-of-color)。
 
-#### 如何达到标准 - 感官特性 (1.3.3) {#how-to-meet-sensory-characteristics}
+#### 如何达到标准 - 感官特性 (1.3.3)  {#how-to-meet-sensory-characteristics}
 
 确保那些依赖页面内容的可视特性传递的任何信息都同时以替代格式呈现。
 
@@ -542,16 +542,16 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 >[!NOTE]
 如果用户在非可视上下文中可以理解使用的描述性词语的含义，则可以使用描述性词语。例如，使用&#x200B;*上面*&#x200B;和&#x200B;*下面*&#x200B;通常是可以接受的，因为它们分别表示特定内容项之前和之后的内容；在朗读内容时，这也是可以接受的。
 
-#### 更多信息 - 感官特性 (1.3.3) {#more-information-sensory-characteristics}
+#### 更多信息 - 感官特性 (1.3.3)  {#more-information-sensory-characteristics}
 
 * [了解成功标准 1.3.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
 * [如何达到成功标准 1.3.3](https://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-understanding)
 
-### 可辨别性 (1.4) {#distinguishable}
+### 可辨别性 (1.4)  {#distinguishable}
 
 [准则 1.4 可辨别性：使用户更容易看到和听到内容，包括将前景与背景分离开。](https://www.w3.org/TR/WCAG20/#visual-audio-contrast)
 
-### 使用颜色 (1.4.1)  {#use-of-color}
+### 使用颜色 (1.4.1)   {#use-of-color}
 
 * 成功标准 1.4.1
 * A 级
@@ -560,7 +560,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 >[!NOTE]
 此成功标准专门针对颜色感知。[适应性 (1.3)](#adaptable) 中涵盖其他形式的感知；包括以编程方式访问颜色和其他可视呈现编码。
 
-#### 用途 - 使用颜色 (1.4.1) {#purpose-use-of-color}
+#### 用途 - 使用颜色 (1.4.1)  {#purpose-use-of-color}
 
 颜色能够立竿见影地增强网页的美感，而且还有助于传递信息。但是，由于各种视觉障碍（从失明到色盲）的限制，部分用户无法辨认某些颜色。这就使颜色编码无法可靠地提供信息。
 
@@ -623,7 +623,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 >[!NOTE]
 此成功标准不适用于仅起装饰作用的文本。
 
-#### 如何达到标准 - 对比度（最小）(1.4.3) {#how-to-meet-contrast-minimum}
+#### 如何达到标准 - 对比度（最小）(1.4.3)  {#how-to-meet-contrast-minimum}
 
 确保文本与其背景之间有明显的对比度。对比度取决于相关文本的大小和样式：
 
@@ -637,7 +637,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 如果页面无法达到建议的对比度级别，则将需要提供一个链接以指向该页面的对等替代版本（不存在颜色对比度问题），或者允许用户根据自己的要求调整页面颜色方案的对比度。
 
-#### 更多信息 - 对比度（最小）(1.4.3) {#more-information-contrast-minimum}
+#### 更多信息 - 对比度（最小）(1.4.3)  {#more-information-contrast-minimum}
 
 * [了解成功标准 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 * [如何达到成功标准 1.4.3](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast)
@@ -654,20 +654,20 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 >[!NOTE]
 商标标志（属于徽标或品牌名称一部分的文本）被认为是必需的。
 
-#### 用途 - 文本的图像 (1.4.5) {#purpose-images-of-text}
+#### 用途 - 文本的图像 (1.4.5)  {#purpose-images-of-text}
 
 当需要文本的某种特定样式时，通常会使用文本的图像；例如，商标标志或从其他来源生成的文本（如纸质文档的扫描件）。但是，与以 HTML 呈现的文本和使用 CSS 设置格式的文本相比，文本的图像无法灵活地改变大小或外观，而这些改变可能正是患有视觉障碍或有阅读障碍的用户所必需的。
 
-#### 如何达到标准 - 文本的图像 (1.4.5) {#how-to-meet-images-of-text}
+#### 如何达到标准 - 文本的图像 (1.4.5)  {#how-to-meet-images-of-text}
 
 如果必须使用文本的图像，应使用 CSS 将文本的图像替换为 HTML 形式的对等文本，这样就可以对文本进行自定义。有关如何实现这一操作的示例，请参阅 [C30：使用 CSS 将文本替换为文本的图像并提供用于切换的用户界面控件](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30)。
 
-#### 更多信息 - 文本的图像 (1.4.5) {#more-information-images-of-text}
+#### 更多信息 - 文本的图像 (1.4.5)  {#more-information-images-of-text}
 
 * [了解成功标准 1.4.5](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-presentation.html)
 * [如何达到成功标准 1.4.5](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-text-presentation)
 
-## 准则 2：可操作 {#principle-operable}
+## 准则 2：可操作  {#principle-operable}
 
 [准则 2：可操作 - 用户界面组件和导航必须可以操作。](https://www.w3.org/TR/WCAG20/#operable)
 
@@ -687,11 +687,11 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 1. 通过软件定期更新或以流式传输至用户代理的内容，不需要保留或呈现在启动暂停和恢复呈现期间生成或收到的信息，因为这可能没有技术可行性，而且在许多情况下可能会误导这样做。
 1. 对于在预加载阶段或类似情况下出现的动画，如果所有用户在该阶段都无法进行交互，并且如果不指示进度可能会让用户感到困惑，或导致他们认为内容冻结或中断，则可以将此类动画视为必需内容。
 
-#### 用途 - 暂停、停止、隐藏 (2.2.2) {#purpose-pause-stop-hide}
+#### 用途 - 暂停、停止、隐藏 (2.2.2)  {#purpose-pause-stop-hide}
 
 某些用户可能会认为移动的内容会让人分心，而且难以将注意力集中在页面的其他部分。此外，如果用户无法跟上移动的文本，他们可能就很难阅读此类内容。
 
-#### 如何达到标准 - 暂停、停止、隐藏 (2.2.2) {#how-to-meet-pause-stop-hide}
+#### 如何达到标准 - 暂停、停止、隐藏 (2.2.2)  {#how-to-meet-pause-stop-hide}
 
 如果创建的网页包含移动、闪光或闪烁的内容，则可以采纳以下一项或多项建议，具体视内容的性质而定。
 
@@ -706,7 +706,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 * [了解成功标准 2.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 * [如何达到成功标准 2.2.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
 
-### 癫痫发作 (2.3) {#seizures}
+### 癫痫发作 (2.3)  {#seizures}
 
 [准则 2.3 癫痫发作：切勿设计会导致癫痫发作的内容。](https://www.w3.org/TR/WCAG20/#seizure)
 
@@ -723,7 +723,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 在某些情况下，闪光的内容会导致光敏性癫痫发作。此成功标准旨在让此类用户能够访问和体验所有内容，而无需担心闪光的内容。
 
-#### 如何达到标准 - 闪光三次或低于阈值 (2.3.1) {#how-to-meet-three-flashes-or-below-threshold}
+#### 如何达到标准 - 闪光三次或低于阈值 (2.3.1)  {#how-to-meet-three-flashes-or-below-threshold}
 
 应采取措施确保应用以下技术：
 
@@ -741,15 +741,15 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 * A 级
 * 页面带有标题：网页带有标题，以描述主题或用途。
 
-#### 用途 - 页面带有标题 (2.4.2) {#purpose-page-titled}
+#### 用途 - 页面带有标题 (2.4.2)  {#purpose-page-titled}
 
 此成功标准旨在帮助每个人（无论是否患有任何特定障碍缺陷）无需阅读整个页面即可快速识别网页内容。当在不同的浏览器选项卡中打开了多个网页时，这种方法格外有用，因为页面标题会显示在选项卡中，从而可以快速定位。
 
-#### 如何达到标准 - 页面带有标题 (2.4.2) {#how-to-meet-page-titled}
+#### 如何达到标准 - 页面带有标题 (2.4.2)  {#how-to-meet-page-titled}
 
 在 AEM 中创建新 HTML 页面时，可以指定页面标题。应确保标题能够充分描述页面内容，以便访客能够快速识别该页面的内容是否与自己的需求切实相关。
 
-You can also edit the page title when editing a page, which is accessible by **Sidekick** - **Page** tab - **Page Properties...**
+编辑页面时，您还可以编辑页面标题，可通过&#x200B;**Sidekick** - **页面**&#x200B;选项卡- **页面属性……访问该页面。**
 
 #### 更多信息 - 页面带有标题 (2.4.2) {#more-information-page-titled}
 
@@ -762,7 +762,7 @@ You can also edit the page title when editing a page, which is accessible by **S
 * A 级
 * 链接目的（在上下文中）：每个链接的目的可以通过单独的链接文本确定，也可以通过链接文本与其以编程方式确定的链接上下文一起确定，除非链接的目的对一般用户而言模糊不清。
 
-#### 用途 - 链接目的（在上下文中）(2.4.4) {#purpose-link-purpose-in-context}
+#### 用途 - 链接目的（在上下文中）(2.4.4)  {#purpose-link-purpose-in-context}
 
 对于所有用户（无论是否患有某方面的缺陷）而言，通过适当的链接文本清晰地指明链接方向至关重要。这有助于用户决定自己是否切实希望追踪某个链接。对于视力正常的用户而言，当页面上有多个链接时，有意义的链接文本极其有用（尤其当页面包含大量文本时），因为有意义的链接文本能够更加清晰地说明目标页面的功能。而对于使用辅助型技术的用户而言，由于此类技术能够在单个页面上生成包含所有链接的列表，因此这些用户可以更加轻松地在上下文中了解链接文本。
 
@@ -826,21 +826,21 @@ John Smith’s publications
 
 [准则 3：可理解 - 信息和用户界面操作必须可以理解。](https://www.w3.org/TR/WCAG20/#understandable)
 
-### 使文本内容可读且可理解 (3.1) {#make-text-content-readable-and-understandable}
+### 使文本内容可读且可理解 (3.1)  {#make-text-content-readable-and-understandable}
 
 [准则 3.1 可读：使文本内容可读且可理解。](https://www.w3.org/TR/WCAG20/#meaning)
 
-### 页面语言 (3.1.1) {#language-of-page}
+### 页面语言 (3.1.1)  {#language-of-page}
 
 * 成功标准 3.1.1
 * A 级
 * 页面语言：每个网页的默认人类语言都可以采用编程方式来确定。
 
-#### 用途 - 页面语言 (3.1.1) {#purpose-language-of-page}
+#### 用途 - 页面语言 (3.1.1)  {#purpose-language-of-page}
 
 此成功标准旨在确保能够正确呈现文本和其他语言内容。对于屏幕阅读器用户而言，这意味着确保内容发音正确；而对于可视浏览器用户而言，这则更可能意味着确保正确显示某些字符集。
 
-#### 如何达到标准 - 页面语言 (3.1.1) {#how-to-meet-language-of-page}
+#### 如何达到标准 - 页面语言 (3.1.1)  {#how-to-meet-language-of-page}
 
 要达到此成功标准，可以使用页面顶部 `<html>` 元素中的 `lang` 属性来识别网页的默认语言。例如：
 
@@ -860,13 +860,13 @@ John Smith’s publications
 * [如何达到成功标准 3.1.1](https://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-doc-lang-id)
 * 代码基于 ISO 639-1。[W3 Schools 站点](https://www.w3schools.com/tags/ref_language_codes.asp)提供了各种语言的更广泛代码列表。
 
-### 局部语言 (3.1.2)  {#language-of-parts}
+### 局部语言 (3.1.2)   {#language-of-parts}
 
 * 成功标准 3.1.2
 * AA 级
 * 局部语言：内容中每个段落或短语的人类语言可以采用编程方式来确定，但专有名词、术语、不确定语言的词语，以及周围文本的本地语言中包含的词语或短语除外。
 
-#### 用途 - 局部语言 (3.1.2) {#purpose-language-of-parts}
+#### 用途 - 局部语言 (3.1.2)  {#purpose-language-of-parts}
 
 此成功标准的用途与[页面语言](#language-of-page)的成功标准类似，不同之处在于此成功标准适用于在单个页面包含多语言内容的网页（例如，因为引用其他语言或者使用不常见的外来词而包含其他语言）。
 
@@ -876,7 +876,7 @@ John Smith’s publications
 * 屏幕阅读器准确地朗读不属于默认语言的词语。
 * Google Translate 等翻译工具准确地将内容从一种语言翻译成另外一种语言。
 
-#### 如何达到标准 - 局部语言 (3.1.2) {#how-to-meet-language-of-parts}
+#### 如何达到标准 - 局部语言 (3.1.2)  {#how-to-meet-language-of-parts}
 
 `lang` 属性可用于标识内容语言的更改。例如，引用的德语（ISO 639-1 代码“de”）可以采用以下方式表示：
 
@@ -898,14 +898,14 @@ John Smith’s publications
 >[!NOTE]
 如果包含使用不同语言的人名或城市，或者使用默认语言中常用的外来词或短语（如英语中的 *schadenfreude*），则不必遵循此成功标准。
 
-要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。或者，系统管理员可以在RTE中包含`lang`属性（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 #### 更多信息 - 局部语言 (3.1.2) {#more-information-language-of-parts}
 
 * [了解成功标准 3.1.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html)
 * [如何达到成功标准 3.1.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-meaning-other-lang-id)
 
-### 帮助用户避免和更正错误 (3.3) {#help-users-avoid-and-correct-mistakes}
+### 帮助用户避免和更正错误 (3.3)  {#help-users-avoid-and-correct-mistakes}
 
 [准则 3.3 辅助输入：帮助用户避免和更正错误。](https://www.w3.org/TR/WCAG20/#minimize-error)
 
@@ -915,7 +915,7 @@ John Smith’s publications
 * A 级
 * 标签或说明：当内容需要用户输入时，提供标签或说明。
 
-#### 用途 - 标签或说明 (3.3.2) {#purpose-labels-or-instructions}
+#### 用途 - 标签或说明 (3.3.2)  {#purpose-labels-or-instructions}
 
 在提升界面易用性的最佳实践中，一种基本的做法是提供说明来帮助用户完成表单。这种做法对于患有视觉障碍或认知障碍的用户而言特别有用，否则这类用户可能难以理解表单的布局以及要在特定的表单字段中提供的数据种类。
 
@@ -961,7 +961,7 @@ John Smith’s publications
 
 在功能非常有限的简单表单中，可以相应地标记 `Submit` 按钮，以将其用作相邻字段的标签（如 `Search`）。当很难找到用于提供标签文本的空间时，这种方法非常有用。
 
-#### 更多信息 - 标签或说明 (3.3.2) {#more-information-labels-or-instructions}
+#### 更多信息 - 标签或说明 (3.3.2)  {#more-information-labels-or-instructions}
 
 * [了解成功标准 3.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 * [如何达到成功标准 3.3.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-cues)
