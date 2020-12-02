@@ -12,6 +12,9 @@ discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 88%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 安装现成 AEM 实例后，Sidekick 中会提供一些可立即使用的组件。
 
-除了这些组件以外，还有其他一些组件可用。您可以使用设计模式[启用/禁用这类组件](#enabledisablecomponentsusingdesignmode)。When enabled and located on your page you can then use Design mode to [configure aspects of the component design](#configuringcomponentsusingdesignmode) by editing the attribute parameters.
+除了这些组件以外，还有其他一些组件可用。您可以使用设计模式[启用/禁用这类组件](#enabledisablecomponentsusingdesignmode)。启用并位于页面上后，您可以使用设计模式通过编辑属性参数来[配置组件设计的各个方面。](#configuringcomponentsusingdesignmode)
 
 >[!NOTE]
 >
@@ -47,7 +50,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    ![](do-not-localize/chlimage_1.png)
 
-1. Click **Edit** on the Paragraph system (**Design of par**).
+1. 单击段落系统上的&#x200B;**编辑**（**par**&#x200B;的设计）。
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
@@ -61,7 +64,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    ![](do-not-localize/sidekick-collapsed.png)
 
-## 配置组件的设计 {#configuring-the-design-of-a-component}
+## 配置组件的设计  {#configuring-the-design-of-a-component}
 
 在设计模式中，还可以配置单个组件的属性。每个组件都有其自身的参数，下面的示例说明了&#x200B;**图像**&#x200B;组件的配置方法：
 
@@ -71,7 +74,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 1. 您可以配置组件的设计。
 
-   For example, if you click **Edit** on the Image component (**Design of image**) you can configure the component specific parameters:
+   例如，如果单击图像组件（**图像设计**）上的&#x200B;**编辑**，则可以配置组件特定参数：
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
