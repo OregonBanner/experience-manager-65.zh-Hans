@@ -12,6 +12,9 @@ discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 100%
 
 ---
 
@@ -38,13 +41,13 @@ source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
 
 * **就地编辑** 文本和图像组件可以直接在网页上进行编辑，而无需打开对话框或明确的保存操作。
 
-* **[组件浏览器](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**在可编辑页面的左侧，可打开一个滑动浏览器；从此处可以将组件拖动到页面上，然后进行编辑。
+* **[组件浏览器](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)** 在可编辑页面的左侧，可打开一个滑动浏览器；从此处可以将组件拖动到页面上，然后进行编辑。
 
-* **[资产浏览器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)**在可编辑页面的左侧，可打开一个滑动浏览器；从此处可以将资产拖动到页面上；例如放置资产或创建指向其他页面的链接。
+* **[资产浏览器](/help/sites-authoring/author-environment-tools.md#assetsbrowsertouchoptimizedui)** 在可编辑页面的左侧，可打开一个滑动浏览器；从此处可以将资产拖动到页面上；例如放置资产或创建指向其他页面的链接。
 
 * **组件工具栏** 单击/点按或慢速双击/连按会显示相应的工具栏（单击/点按会显示就地编辑工具栏，慢速双击/连按会显示完整工具栏）。
 
-* **[响应式布局](/help/sites-authoring/responsive-layout.md)**由此提供的段落系统让您能够将组件放置在响应式网格内。
+* **[响应式布局](/help/sites-authoring/responsive-layout.md)** 由此提供的段落系统让您能够将组件放置在响应式网格内。
 
 * **在键入时搜索**
 在某些情况下（例如，编辑对话框中的路径选择），当通过 AEM 界面搜索内容时，将随着查询的键入动态显示匹配项。
