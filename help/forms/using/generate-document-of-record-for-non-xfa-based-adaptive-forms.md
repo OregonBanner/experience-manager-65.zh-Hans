@@ -30,22 +30,25 @@ ht-degree: 3%
 >
 >基于XFA的自适应表单不支持自动生成记录文档。 但是，您可以使用用于创建自适应表单的XDP作为记录文档。
 
-## 自适应表单类型及其记录文档 {#adaptive-form-types-and-their-documents-of-record}
+## 自适应表单类型及其记录文档{#adaptive-form-types-and-their-documents-of-record}
 
 创建自适应表单时，可以选择表单模型。 您的选择包括：
 
-* [表单模](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)板允许您为自适应表单选择XFA模板。 选择XFA模板时，可以使用关联的XDP文件文档记录，如上所述。
+* [表单](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)
+模板允许您为自适应表单选择XFA模板。选择XFA模板时，可以使用关联的XDP文件文档记录，如上所述。
 
-* [XML模式](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)允许您为自适应表单选择XML模式定义。 为自适应表单选择XML模式时，您可以：
+* [XML](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)
+架构允许您为自适应表单选择XML模式定义。为自适应表单选择XML模式时，您可以：
 
    * 关联XFA模板以文档记录。 确保关联的XFA模板使用与自适应表单相同的XML模式
    * 自动生成记录文档
 
-* 无允许您创建不带表单模型的自适应表单。 记录文档将自动为自适应表单生成。
+* 无
+允许您创建不带表单模型的自适应表单。 记录文档将自动为自适应表单生成。
 
-选择表单模型时，请使用“记录模板配置”文档下提供的选项配置记录文档。 See [Document of Record Template Configuration](#document-of-record-template-configuration).
+选择表单模型时，请使用“记录模板配置”文档下提供的选项配置记录文档。 请参阅[记录模板配置文档](#document-of-record-template-configuration)。
 
-## 自动生成记录文档 {#automatically-generated-document-of-record}
+## 自动生成记录文档{#automatically-generated-document-of-record}
 
 记录文档允许客户保留已提交表单的副本以便打印。 自动生成记录文档时，每次更改表单时，其记录文档会立即更新。 例如，您会删除选择“美国”作为其国家的客户的年龄字段。 当此类客户生成记录文档时，其在记录文档中看不到年龄字段。
 
@@ -57,27 +60,27 @@ ht-degree: 3%
 * 它允许您使用不同的基本模板尝试不同的样式和外观，并为记录文档选择最佳样式和外观。 样式外观是可选的，如果不指定样式，系统样式将设置为默认样式。
 * 它可确保表单的任何更改立即反映在记录文档中。
 
-## 要自动生成记录文档的组件 {#components-to-automatically-generate-a-document-of-record}
+## 要自动生成记录{#components-to-automatically-generate-a-document-of-record}文档的组件
 
 要为自适应表单生成记录文档，您需要以下组件：
 
-**自适应** 表单要为其生成记录文档的自适应表单。
+**自适** 应表单要为其生成记录文档的自适应表单。
 
-**在AEM Designer中创建的基本模板** （推荐）XFA模板（XDP文件）。 基本模板用于指定记录模板文档的样式和品牌信息。
+**在AEM Designer中创建** 的基本模板（推荐）XFA模板（XDP文件）。基本模板用于指定记录模板文档的样式和品牌信息。
 
-请参 [阅记录文档的基本模板](#base-template-of-a-document-of-record)
+请参阅记录文档的[基本模板](#base-template-of-a-document-of-record)
 
 >[!NOTE]
 >
 >记录文档的基本模板也称为记录文档的元模板。
 
-**从自适应表单** 生成的记录模板XFA模板（XDP文件）的文档。
+**从自适应** 表单生成的记录模板XFA模板（XDP文件）文档。
 
-See [Document of Record Template Configuration](#document-of-record-template-configuration).
+请参阅[记录模板配置文档](#document-of-record-template-configuration)。
 
-**表单数据** 用户在自适应表单中填写的信息。 它与记录模板的文档相结合，以生成记录文档。
+**表单** 数据用户在自适应表单中填写的信息。它与记录模板的文档相结合，以生成记录文档。
 
-## 自适应表单元素的映射 {#mapping-of-adaptive-form-elements}
+## 自适应表单元素{#mapping-of-adaptive-form-elements}的映射
 
 以下各节介绍自适应表单元素在记录文档中的显示方式。
 
@@ -106,73 +109,73 @@ See [Document of Record Template Configuration](#document-of-record-template-con
   <tr>
    <td>日期选取器</td>
    <td>日期／时间字段</td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>下拉列表</td>
    <td>下拉列表</td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>潦草签名</td>
    <td>签名涂写</td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>数值框</td>
    <td>数字字段</td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>密码框</td>
    <td>密码字段</td>
-   <td>false</td>
+   <td>假</td>
    <td> </td>
   </tr>
   <tr>
    <td>单选按钮</td>
    <td>单选按钮</td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>文本框</td>
    <td>文本字段</td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>重置按钮</td>
    <td>重置按钮</td>
-   <td>false</td>
+   <td>假</td>
    <td> </td>
   </tr>
   <tr>
    <td>提交按钮</td>
    <td><p>“电子邮件提交”按钮</p> <p>HTTP提交按钮</p> </td>
-   <td>false</td>
+   <td>假</td>
    <td> </td>
   </tr>
   <tr>
    <td>条款和条件</td>
    <td> </td>
-   <td>true</td>
+   <td>真</td>
    <td> </td>
   </tr>
   <tr>
    <td>文件附件</td>
    <td> </td>
-   <td>false</td>
+   <td>假</td>
    <td>记录模板文档中不可用。 仅在记录文档通过附件可用。</td>
   </tr>
  </tbody>
 </table>
 
-### 容器 {#containers}
+### 容器{#containers}
 
 <table>
  <tbody>
@@ -189,7 +192,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
  </tbody>
 </table>
 
-### 静态组件 {#static-components}
+### 静态组件{#static-components}
 
 | 自适应表单组件 | 相应的XFA组件 | 注释 |
 |---|---|---|
@@ -204,38 +207,38 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 自适应表单表组件（如页眉、页脚和行）映射到相应的XFA组件。 您可以将可重复面板映射到记录文档的表。
 
-## 记录文档的基本模板 {#base-template-of-a-document-of-record}
+## 记录{#base-template-of-a-document-of-record}文档的基本模板
 
 基本模板为记录文档提供样式和外观信息。 它允许您自定义自动生成的记录文档的默认外观。 例如，您要在标题中添加公司徽标，并在记录文档的页脚中添加版权信息。 基本模板的主控页用作记录模板文档的主控页。 主控页面可以包含可应用于记录文档的信息，如页眉、页脚和页码。 您可以使用基本模板将此类信息应用于记录文档，以自动生成记录文档。 使用基本模板可更改字段的默认属性。
 
-在设计基 [础模板时](#base-template-conventions) ，请遵循基础模板惯例。
+在设计基本模板时，请遵循[基本模板约定](#base-template-conventions)。
 
-## 基本模板约定 {#base-template-conventions}
+## 基本模板约定{#base-template-conventions}
 
 基本模板用于定义记录文档的页眉、页脚、样式和外观。 页眉和页脚可以包括公司徽标和版权文本等信息。 基本模板中的第一个主控页面将被复制并用作记录文档的主控页面，该记录包含页眉、页脚、页码或记录文档中所有页面中应显示的任何其他信息。 如果您使用的基本模板不符合基本模板惯例，则基本模板中的第一个主控页面仍用于记录模板的文档。 强烈建议您根据基本模板的惯例设计基本模板，并将其用于自动生成记录文档。
 
 **主控页面惯例**
 
-* 在基本模板中，您应将根子表单命名 `AF_METATEMPLATE` 为，将主控页面命名为 `AF_MASTERPAGE`。
+* 在基本模板中，您应将根子表单命名为`AF_METATEMPLATE`，将主控页面命名为`AF_MASTERPAGE`。
 
-* 主控页面的根子表 `AF_MASTERPAGE` 单下 `AF_METATEMPLATE` 具有名称，该页面具有提取页眉、页脚和样式信息的首选项。
+* 主控页面的名称`AF_MASTERPAGE`位于`AF_METATEMPLATE`根子表单下，该页面优先用于提取页眉、页脚和样式信息。
 
-* 如果 `AF_MASTERPAGE` 不存在，则使用基本模板中存在的第一个主控页面。
+* 如果`AF_MASTERPAGE`不存在，则使用基本模板中存在的第一个主控页面。
 
 **字段的样式约定**
 
-* 要对记录文档中的字段应用样式，基本模板会提供根子表单下子 `AF_FIELDSSUBFORM` 表单中的 `AF_METATEMPLATE` 字段。
+* 要对记录文档中的字段应用样式，基本模板会提供位于`AF_METATEMPLATE`根子表单下`AF_FIELDSSUBFORM`子表单中的字段。
 
-* 这些字段的属性将应用于记录文档中的字段。 这些字段应遵循命 `AF_<name of field in all caps>_XFO` 名规范。 例如，复选框的字段名称应为 `AF_CHECKBOX_XFO`。
+* 这些字段的属性将应用于记录文档中的字段。 这些字段应遵循`AF_<name of field in all caps>_XFO`命名约定。 例如，复选框的字段名称应为`AF_CHECKBOX_XFO`。
 
 要创建基本模板，请在AEM Designer中执行以下操作。
 
-1. 单击“ **文件”>“新建**”。
-1. 选择 **基于模板** 。
+1. 单击&#x200B;**文件>新建**。
+1. 选择&#x200B;**基于模板**&#x200B;选项。
 
-1. 选择 **Forms-记录文档** 类别。
-1. 选择 **DoR基本模板**。
-1. 单击 **下一** 步，然后提供所需的信息。
+1. 选择&#x200B;**Forms-记录文档**&#x200B;类别。
+1. 选择&#x200B;**DoR基本模板**。
+1. 单击&#x200B;**下一步**&#x200B;并提供所需的信息。
 
 1. （可选）修改要应用于记录文档中字段的字段的样式和外观。
 1. 保存表单。
@@ -258,24 +261,24 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 请执行以下步骤为自适应表单配置记录文档:
 
-1. 在AEM作者实例中，单击“ **Forms”>“Forms”和“文档”。**
-1. 选择一个表单，然后单击“ **视图属性**”。
-1. 在“属性”窗口中，点按 **表单模型**。
+1. 在AEM作者实例中，单击&#x200B;**Forms>Forms和文档。**
+1. 选择表单，然后单击&#x200B;**视图属性**。
+1. 在“属性”窗口中，点按&#x200B;**表单模型**。
 在创建表单时，还可以选择表单模型。
 
    >[!NOTE]
    >
-   >在“表单模型”选项卡中，确保从“选 **择自** ” **下拉框** 中选择“ **模式** ”或“无”。 **[!UICONTROL 基于XFA或将表单模板作为表单模型的自适应表单不支持记录文档。]**
+   >在表单模型选项卡中，确保从&#x200B;**从**&#x200B;下拉列表中选择&#x200B;**模式**&#x200B;或&#x200B;**无**。 **[!UICONTROL 基于XFA或将表单模板作为表单模型的自适应表单不支持记录文档。]**
 
 1. 在“表单模型”选项卡的“记录模板配置”部分的文档中，选择以下选项之一。
 
    **无** 如果不想为表单配置记录文档，请选择此选项。
 
-   **将表单模板关联为记录模板文档** 如果您有要用作记录文档的模板的XDP文件，请选择此选项。 选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。
+   **将表单模板关联为记录模** 板文档如果有要用作记录文档的模板的XDP文件，请选择此选项。选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。
 
    所选XDP文件将与自适应表单关联。
 
-   **生成记录文档** 选择此选项可将XDP文件用作定义记录文档的样式和外观的基本模板。 选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。
+   **生成记录** 文档选择此选项可将XDP文件用作定义记录文档的样式和外观的基本模板。选择此选项后，将显示AEM Forms存储库中的所有可用XDP文件。 选择适当的文件。
 
    >[!NOTE]
    >
@@ -284,19 +287,19 @@ See [Document of Record Template Configuration](#document-of-record-template-con
    >
    >
    >    * 自适应表单基于模式
-   >    * 您正在使 **用“关联表单模板”作为“记录模板文档** ”选项来记录文档
+   >    * 您正在使用&#x200B;**关联表单模板作为记录模板文档**&#x200B;选项来文档记录
 
 
-1. Click **Done.**
+1. 单击&#x200B;**完成。**
 
-## 在记录文档中自定义品牌信息 {#customize-the-branding-information-in-document-of-record}
+## 在记录{#customize-the-branding-information-in-document-of-record}的文档中自定义品牌信息
 
 在生成记录文档时，您可以在“记录”选项卡上更改记录文档的品牌信息。 “记录文档”选项卡包括徽标、外观、布局、页眉和页脚、免责声明，以及是否要包括未选中的复选框和单选按钮选项。
 
 要本地化您在“记录”选项卡的文档中输入的品牌信息，您需要确保正确设置浏览器的区域设置。 要自定义记录文档的品牌信息，请完成以下步骤：
 
-1. 在记录文档中选择一个面板（根面板），然后点按 ![配置](assets/configure.png)。
-1. 点按 ![dortab](assets/dortab.png)。 将显示“记录文档”选项卡。
+1. 在记录文档中选择一个面板（根面板），然后点按![configure](assets/configure.png)。
+1. 点按![dortab](assets/dortab.png)。 将显示“记录文档”选项卡。
 1. 选择默认模板或自定义模板以呈现记录文档。 如果选择默认模板，则记录文档的缩略图预览会显示在“模板”下拉框的下方。
 
    ![品牌模板](assets/brandingtemplate.png)
@@ -337,7 +340,7 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 1. 要保存品牌更改，请点按完成。
 
-## 记录文档中面板的表和列布局 {#table-and-column-layouts-for-panels-in-document-of-record}
+## 记录{#table-and-column-layouts-for-panels-in-document-of-record}文档下的面板的表和列布局
 
 您的自适应表单可能是一个包含多个表单字段的长表单。 您可能不想将记录文档另存为自适应表单的精确副本。 现在，您可以选择表格或列布局，将一个或多个自适应表单面板保存在记录PDF的文档中。
 
@@ -351,31 +354,31 @@ See [Document of Record Template Configuration](#document-of-record-template-con
 
 在记录文档的列布局中呈现的面板中的字段
 
-## 文档记录设置 {#document-of-record-settings}
+## 文档记录设置{#document-of-record-settings}
 
 记录文档设置允许您选择要包括在记录文档中的选项。 例如，银行在表单中接受姓名、年龄、社会保险号和电话号码。 表单生成银行帐号和分支详细信息。 您可以选择在记录文档中仅显示姓名、社会保险号、银行帐户和分支详细信息。
 
-组件的记录设置文档位于其属性下。 要访问某个组件的属性，请选择该组件，然后 ![单击](assets/cmppr.png) 叠加中的cmppr。 属性列在提要栏中，您可以在其中找到以下设置。
+组件的记录设置文档位于其属性下。 要访问某个组件的属性，请选择该组件，然后单击叠加中的![cmppr](assets/cmppr.png)。 属性列在提要栏中，您可以在其中找到以下设置。
 
 **字段级别设置**
 
-* **从记录文档中排除**:将属性设置为true将不包括记录文档中的字段。 这是名为的可脚本属性 `excludeFromDoR`。 其行为取决于隐藏 **的表单级别属性时** ，从DoR中排除字段。
+* **从记录文档中排除**:将属性设置为true将不包括记录文档中的字段。这是名为`excludeFromDoR`的可脚本属性。 其行为取决于隐藏的&#x200B;**表单级别属性时的**&#x200B;从DoR排除字段。
 
-* **将面板显示为表：** 如果面板中的字段少于6个，则设置属性会将面板显示为记录文档中的表。 仅适用于面板。
-* **从记录文档中排除标题：** 设置属性时，将不包括面板／表的标题(从记录文档)。 仅适用于面板和表。
-* **从记录文档中排除说明：** 设置属性不包括记录文档中对面板／表的描述。 仅适用于面板和表。
+* **将面板显示为表：如** 果面板中的字段少于6个，则设置属性会将面板显示为记录文档的表。仅适用于面板。
+* **从记录文档中排除标** 题：设置属性将面板／表的标题从记录文档中排除。仅适用于面板和表。
+* **从记录文档中排** 除描述：设置属性将面板／表的描述从记录文档中排除。仅适用于面板和表。
 
 **表单级别设置**
 
-* **在DoR中包含未绑定字段：** 设置属性时，将包含基于模式的自适应表单中未绑定的字段，该表单位于记录文档中。 默认情况下，为true。
-* **如果隐藏，则从DoR中排除字段：** 设置该属性将覆盖“从记录文档中排除”字段级别属性的行为（如果不为真）。 如果字段在提交表单时处于隐藏状态，则如果属性设置为true，则这些字段将从记录文档中排除，前提是未设置“从记录文档中排除”属性。
+* **在DoR中包括未绑定字段：** 设置属性时，在记录文档中包括基于模式的自适应表单的未绑定字段。默认情况下，为true。
+* **如果隐藏，则从DoR** 中排除字段：设置属性将覆盖“从记录文档中排除”字段级别属性的行为（如果不是）。如果字段在提交表单时处于隐藏状态，则如果属性设置为true，则这些字段将从记录文档中排除，前提是未设置“从记录文档中排除”属性。
 
-## 处理记录文档时的主要注意事项 {#key-considerations-when-working-with-document-of-record}
+## 处理记录{#key-considerations-when-working-with-document-of-record}文档时的主要注意事项
 
 处理自适应表单的记录文档时，请记住以下考虑事项和限制。
 
 * 文档记录模板不支持富文本。 因此，静态自适应表单中或最终用户填写的信息中的任何富文本在记录文档中显示为纯文本。
 * 自适应表单中的文档片段不显示在记录文档中。 但是，支持自适应表单片段。
 * 不支持在为基于XML文档的自适应表单生成的记录模式中进行内容绑定。
-* 当用户请求呈现记录文档时，将根据区域设置的要求创建记录文档的本地化版本。 记录本地化与自适应表单本地化一起发生。 有关记录和自适应表单本地化的更多信息，请参 [阅使用AEM文档工作流本地化自适应表单和记录文档](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
+* 当用户请求呈现记录文档时，将根据区域设置的要求创建记录文档的本地化版本。 记录本地化与自适应表单本地化一起发生。 有关记录和自适应表单本地化的详细信息，请参见[使用AEM转换工作流来本地化自适应表单和记录文档](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
 
