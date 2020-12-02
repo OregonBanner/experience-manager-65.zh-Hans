@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '455'
+ht-degree: 95%
 
 ---
 
@@ -37,12 +40,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    * 这种情况可能有几个原因，最常见的原因是本地浏览器或调度程序缓存问题，但有时也可能是复制队列的问题。
 
-* **解决方案**：
+* **解决方案**:
 
    * 这里列举了各种可能的情况：
    * 确认页面复制正确。检查页面状态，如有必要，检查复制队列的状态。
    * 清除本地浏览器中的缓存，然后再次访问页面。
-   * Add `?` to the end of the page URL. For example:
+   * 向页面 URL 的结尾处添加 `?`。例如：
 
       `http://localhost:4502/sites.html/content?`
 
@@ -68,7 +71,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **问题：**
 
-   * When using the **Find &amp; Replace** option it can happen that not all instances of the `find` term are replaced on a page.
+   * 使用&#x200B;**查找并替换**&#x200B;选项时，并非替换页面上的`find`术语的所有实例。
 
 * **原因**：
 
