@@ -12,6 +12,9 @@ discoiquuid: 968b9131-ccdf-4856-b504-bc1a44974980
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '1241'
+ht-degree: 86%
 
 ---
 
@@ -37,19 +40,19 @@ Search＆Promote 服务器上配置了一些 facet，这也是每个组件提供
   </tr>
   <tr>
    <td>横幅</td>
-   <td>显示横幅广告。 Banners are selected based on data gathered through Search&amp;Promote.<br /> </td>
+   <td>显示横幅广告。 横幅根据通过Search&amp;Promote收集的数据进行选择。<br /> </td>
   </tr>
   <tr>
    <td>痕迹导航</td>
-   <td>显示搜索关键字以及用户已应用于搜索结果的筛选器序列。</td>
+   <td>显示搜索关键字以及用户已应用于搜索结果的过滤器序列。</td>
   </tr>
   <tr>
    <td>复选框列表彩块化</td>
-   <td>用于选择facet以筛选搜索结果的复选框列表。</td>
+   <td>用于选择彩块化以筛选搜索结果的一列表复选框。</td>
   </tr>
   <tr>
    <td>下拉列表彩块化</td>
-   <td>用于筛选搜索结果的facet下拉列表。</td>
+   <td>用于筛选搜索结果的facet的下拉列表。</td>
   </tr>
   <tr>
    <td>链接列表彩块化</td>
@@ -80,20 +83,20 @@ Search＆Promote 服务器上配置了一些 facet，这也是每个组件提供
 
 **分页**&#x200B;组件使用户能够浏览搜索结果的多个页面。用户可以查看页数、移到下一页或上一页、选择要打开的页面，或将所有结果合并到一个页面。
 
-![schpageination](assets/srchpagination.png)
+![srpageing](assets/srchpagination.png)
 
 您可以在编辑模式下配置以下组件属性来控制运行时行为：
 
-* 隐藏单个结果页面：选择此选项可在搜索返回单个结果页时隐藏页面导航控件。
+* 隐藏单个结果页：选择此选项可在搜索返回单个结果页面时隐藏页面导航控件。
 * “隐藏第一个/最后一个”：选择此选项可阻止用户跳转到结果的第一页或最后一页。
 * “隐藏前一个/后一个”：确定用户是否可以浏览相对于当前页面的结果页面。
 * “隐藏查看全部”：确定用户是否可以将所有搜索结果合并到单个页面。通常，提供分页数据可以更有效地使用服务器资源。选择此选项可阻止在一个响应消息中传输较大数据集。
 
-### 允许按 facet 筛选结果 {#enabling-the-filtering-of-results-by-facets}
+### 允许按 facet 筛选结果  {#enabling-the-filtering-of-results-by-facets}
 
-您可以允许用户按 facet 筛选搜索结果。The **Checkbox List Facet**, **Dropdown Facet**, and **Link List Facet** components enable users to select one or more facets for filtering. 使用这些组件时，您还应包含&#x200B;**痕迹导航**&#x200B;组件。痕迹导航可指示当前使用的筛选器。
+您可以允许用户按 facet 筛选搜索结果。**复选框列表Facet**、**下拉Facet**&#x200B;和&#x200B;**链接列表Facet**&#x200B;组件使用户能够选择一个或多个facet进行筛选。 使用这些组件时，您还应包含&#x200B;**痕迹导航**&#x200B;组件。痕迹导航可指示当前使用的筛选器。
 
-The **Checkbox List Facet**, **Dropdown Facet**, and **Link List Facet** components each have the following properties that you configure in **Edit** mode:
+**复选框列表Facet**、**下拉Facet**&#x200B;和&#x200B;**链接列表Facet**&#x200B;组件均具有您在&#x200B;**编辑**&#x200B;模式下配置的以下属性：
 
 * **Facet 名称**：用于筛选器的 facet 名称。
 
@@ -101,13 +104,13 @@ The **Checkbox List Facet**, **Dropdown Facet**, and **Link List Facet** compone
 
 每个与搜索结果关联的 facet 都会显示一个复选框。当用户选择某个复选框时，页面将重新加载以显示更新的结果集。所有复选框均会保留在页面上，以便客户可以随时在筛选器中添加或删除 facet：
 
-![sandcheckboxcomp](assets/sandpcheckboxcomp.png)
+![sandpcheckboxcomp](assets/sandpcheckboxcomp.png)
 
 **下拉列表 Facet** 组件使客户能够从下拉列表中选择一个 facet 项目。当您希望客户一次只关注一个 facet 项目时，此组件非常有用。例如，“专栏”facet 有助于客户能够按性别缩小产品搜索范围。John 要搜索“牛仔裤”**，然后在男士专栏中进行筛选。
 
 下拉列表中填充了与所有搜索结果关联的 facet。在下拉列表中选择一个项目后，页面将重新加载以显示更新的结果集。下拉列表中的项目不会发生更改，以便客户可以随时切换 facet。
 
-![sanddropdowndepartment](assets/sandpdropdowndepartment.png)
+![沙滴管](assets/sandpdropdowndepartment.png)
 
 **链接列表 Facet** 组件使客户能够将焦点逐步缩小到归类为多个 facet 成员或 facet 的项目。
 
@@ -126,7 +129,7 @@ facet 成员显示为链接列表。每个链接的文本是与当前搜索结�
 * “分隔符”：定义用作各个痕迹导航之间的分隔符的字符或字符串。可以在“分隔符”字段中输入任何字符串。默认设置为“>”（不带引号）
 * “结尾分隔符”：定义要显示在痕迹导航末尾的字符或字符串。可以在“结尾分隔符”字段中输入任何字符串。默认设置为*空白*（即痕迹导航行的末尾不显示任何字符或字符串）
 
-### 添加搜索框 {#adding-search-boxes}
+### 添加搜索框  {#adding-search-boxes}
 
 “搜索”组件使客户能够执行关键字搜索。可将“搜索”组件添加到要提供搜索访问权限的每个页面。
 
@@ -147,4 +150,4 @@ facet 成员显示为链接列表。每个链接的文本是与当前搜索结�
 
 此图显示了在页面中添加的用于创建以下功能齐全的 Search&amp;Promote 结果页面的组件。
 
-![1328213789109](assets/1328213789109.png)![沙盒示例](assets/sandppageexample.png)
+![1328213789109](assets/1328213789109.png) ![沙盒示例](assets/sandppageexample.png)
