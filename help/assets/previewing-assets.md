@@ -17,7 +17,7 @@ ht-degree: 21%
 ---
 
 
-# 使用软件界面预览资产 {#previewing-assets}
+# 使用软件界面{#previewing-assets}预览资产
 
 您可以使用预览查看您上传的数字资产在客户自己的Web浏览器中查看时的外观。 预览时将使用为资产分配的默认嵌入式跨设备查看器。
 
@@ -30,16 +30,16 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->当您位于AEM的网页（站点）上时，无法在编辑模式下预览 **资产** 。 You need to go to **Preview** mode by clicking **Preview** in the upper right-hand corner of the page.
+>当您位于AEM的网页（站点）上时，无法在编辑模式下预览 **资产** 。 您需要通过单击页面右上角的&#x200B;**预览**，转至&#x200B;**预览**&#x200B;模式。
 
-To enable or disable viewer presets in the user interface, see [Managing Viewer Presets](/help/assets/managing-viewer-presets.md).
+要在用户界面中启用或禁用查看器预设，请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
 **使用软件界面预览资产**
 
-1. From **[!UICONTROL Adobe Experience Manager]**, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets]**, then **[!UICONTROL Files]** to access assets.
-1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View.]**
-1. （可选）使 **[!UICONTROL 用]** “类型”列按要预览的类型对资产进行排序。
-1. 在“标 **[!UICONTROL 题]** ”列下，单击要预览的资产的标题名称（而非缩略图图像）。
+1. 从&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;的&#x200B;**[!UICONTROL 导航]**&#x200B;页面，点按&#x200B;**[!UICONTROL 资产]**，然后点按&#x200B;**[!UICONTROL 文件]**&#x200B;以访问资产。
+1. 在页面的右上角附近，从&#x200B;**[!UICONTROL 视图]**&#x200B;下拉列表中，点按&#x200B;**[!UICONTROL 列表视图。]**
+1. （可选）使用&#x200B;**[!UICONTROL 类型]**&#x200B;列按要预览的类型对资产进行排序。
+1. 在&#x200B;**[!UICONTROL 标题]**&#x200B;列下，单击要预览的资产的标题名称（而非缩略图）。
 1. 根据您单击的资产类型，执行下列任一操作：
 
 
@@ -57,16 +57,16 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td>是</td>
       <td><p><strong>在维查看器中预览3D资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击 <strong>列表</strong> 中的查看器，然后选择维查看器。</li>
-      <li>Tap <strong>Reset</strong> to return the image to the original zoom.</li>
-      <li>点按 <strong>全屏</strong> ，以在显示设备上最大化查看器。</li>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>查看器</strong>，然后选择维查看器。</li>
+      <li>点按<strong>重置</strong>可将图像恢复为原始缩放。</li>
+      <li>点按<strong>全屏</strong>以最大化显示设备上的查看器。</li>
       </ul>
       <p><strong>导航3D场景</strong></p>
       <ul>
-      <li><p><strong>旋转3D相机</strong> -围绕3D场景和对象绕行视图。</p> 鼠标： 左键单击+拖动。 </p> 触摸屏： 按+拖动。</p></li>
-      <li><p><strong>平移相机</strong> -向左、向右、向上和向下平移视图。</p> 鼠标： 右键单击+拖动。 </p> 触摸屏： 双指按+拖动。</p></li>
-      <li><p><strong>缩放相机</strong> -缩放相机以在3D场景中移入和移出区域。</p> 鼠标： 滚轮。 </p> 触摸屏： 手指开合。</p></li>
-      <li><p><strong>重新进入相机</strong> -围绕3D场景和对象绕行视图。</p> 鼠标： 多次单击。 </p> 触摸屏： 多次点击。</li></ul></td>
+      <li><p><strong>旋转3D相机</strong> -围绕3D场景和对象绕行视图。</p> 鼠标：左键单击+拖动。 </p> 触摸屏：按+拖动。</p></li>
+      <li><p><strong>平移相机</strong> -向左、向右、向上和向下平移视图。</p> 鼠标：右键单击+拖动。 </p> 触摸屏：双指按+拖动。</p></li>
+      <li><p><strong>缩放相机</strong> -缩放相机以在3D场景中移入和移出区域。</p> 鼠标：滚轮。 </p> 触摸屏：手指开合。</p></li>
+      <li><p><strong>重新进入相机</strong> -围绕3D场景和对象绕行视图。</p> 鼠标：多次单击。 </p> 触摸屏：多次点击。</li></ul></td>
       </tr>
       <tr>
       <td><p>图像</p> </td>
@@ -74,11 +74,13 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td>是</td>
       <td><p><strong>在特定再现中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表 </strong>中的演绎版，然后选择要预览的特定演绎版。</li>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>演绎版</strong>，然后选择要预览的特定演绎版。</li>
       </ul> <p><strong>在特定查看器中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>查看器</strong>，然后选择要应用到资产的查看器。</li>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>图标可分别增大或减小所选图像的缩放比例。 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>多媒体</td>
@@ -86,10 +88,10 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td>是</td>
       <td><p><strong>在特定再现中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表 </strong>中的演绎版，然后选择要预览的特定演绎版。</li>
-      </ul> <p>选择分辨率更高的视频演绎版以进行预览可能会导致视频出现截断。 这是因为演绎版预览会在用于预览的嵌入式查看器的上下文中向您显示客户将看到的确切分辨率。</p> <p>当您在资产级别预览自适应视频集时，演绎版将分组为一个播放体验。 That is, the adaptive video is sized properly for viewing and played back using the best resolution in the context of your viewing device and connection speed.<br /> </p> <p><strong>在特定查看器中预览资产</strong></p>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>演绎版</strong>，然后选择要预览的特定演绎版。</li>
+      </ul> <p>选择分辨率更高的视频演绎版以进行预览可能会导致视频出现截断。 这是因为演绎版预览会在用于预览的嵌入式查看器的上下文中向您显示客户将看到的确切分辨率。</p> <p>当您在资产级别预览自适应视频集时，演绎版将分组为一个播放体验。 也就是说，自适应视频的大小调整得当，以便在观看设备和连接速度的上下文中使用最佳分辨率进行观看和回放。<br /> </p> <p><strong>在特定查看器中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>查看器</strong>，然后选择要应用到资产的查看器。</li>
       </ul> </td>
       </tr>
       <tr>
@@ -98,8 +100,10 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td>是</td>
       <td><p><strong>在特定查看器中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>查看器</strong>，然后选择要应用到资产的查看器。</li>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>图标可分别增大或减小所选图像的缩放比例。 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>旋转集</td>
@@ -107,8 +111,10 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td>是</td>
       <td><p><strong>在特定查看器中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>查看器</strong>，然后选择要应用到资产的查看器。</li>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>图标可分别增大或减小所选图像的缩放比例。 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>混合媒体集</td>
@@ -116,8 +122,10 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       <td>是</td>
       <td><p><strong>在特定查看器中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单 <strong>击列表</strong> 中的查看器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      <li>在页面的左上角附近，单击该图标以显示下拉列表。 单击列表中的<strong>查看器</strong>，然后选择要应用到资产的查看器。</li>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>图标可分别增大或减小所选图像的缩放比例。 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
       <tr>
       <td>旋转集</td>
@@ -129,34 +137,36 @@ To enable or disable viewer presets in the user interface, see [Managing Viewer 
       </ul> </td>
       </tr>
       <tr>
-      <td>360 Video<br /> </td>
+      <td>360视频<br /> </td>
       <td>是</td>
       <td>是</td>
       <td><p><strong>在特定再现中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，点按图标以显示下拉列表。 选择 <strong>演绎版</strong>，然后选择要预览的演绎版。</li>
+      <li>在页面的左上角附近，点按图标以显示下拉列表。 选择<strong>演绎版</strong>，然后选择要预览的演绎版。</li>
       </ul> <p><strong>在特定查看器中预览资产</strong></p>
       <ul>
-      <li>在页面的左上角附近，点按图标以显示下拉列表。 选 <strong>择查看</strong>器，然后选择要应用到资产的查看器。</li>
-      </ul> <p>Use the <strong>+</strong> and <strong>–</strong> icons to increase or decrease the zoom of the selected image, respectively. 单击<strong>重置</strong>可使图像恢复到原始缩放比例。<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。 当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。</p> </td>
+      <li>在页面的左上角附近，点按图标以显示下拉列表。 选择<strong>查看器</strong>，然后选择要应用到资产的查看器。</li>
+      </ul> <p>使用<strong>+</strong>和<strong>-</strong>图标可分别增大或减小所选图像的缩放比例。 单击<strong>重置</strong>可使图像恢复到原始缩放比例。
+<br /> 如果您在触摸屏上，请多次点击图像以逐步放大。当您达到最大缩放比例时，再连按两次图像可重置缩放状态。横向拖动图像可进行平移。
+</p> </td>
       </tr>
     </tbody>
     </table>
 
-## 使用键盘预览资源 {#keyboard-navigation-asset-preview}
+## 使用键盘{#keyboard-navigation-asset-preview}预览资产
 
 1. 在资产用户界面中，导航到包含要预览的资产的文件夹。
 
-1. 在文件夹中，按键 `<Tab>` 盘上的键或箭头键选择资产。
+1. 在文件夹中，按键盘上的`<Tab>`键或箭头键选择资产。
 
-1. 按 `<Enter>` 以在预览模式下打开选定的资产。
+1. 按`<Enter>`以预览模式打开选定的资产。
 
 1. 执行以下操作之一：
 
-   * 要放大，请 `<Tab>` 按将焦点移到放大(+)图标，然后按一 `<Enter>` 次或多次以增量方式放大。
+   * 要放大，请按`<Tab>`将焦点移到放大(+)图标，然后按`<Enter>`一次或多次以增量方式放大。
 
-   * 要缩小，请按 `<Tab>` 将焦点移到缩小(-)图标，然后按一 `<Enter>` 次或多次以增量方式缩小。
+   * 要缩小，请按`<Tab>`将焦点移到缩小(-)图标，然后按`<Enter>`一次或多次以增量方式缩小。
 
-   * 要水平或垂直移动 *缩放* 资产的视图，请按相应的箭头键。
+   * 要水平或垂直移动&#x200B;*缩放*&#x200B;资产的视图，请按相应的箭头键。
 
-   * 按 `<Shift>` + `<Tab>` 重置视图并将焦点放回资产。
+   * 按`<Shift>` + `<Tab>`重置视图并将焦点放回资产上。
