@@ -17,7 +17,7 @@ ht-degree: 5%
 ---
 
 
-# 使用JSON模式创建自适应表单{#creating-adaptive-forms-using-json-schema}
+# 使用JSON模式{#creating-adaptive-forms-using-json-schema}创建自适应表单
 
 ## 前提条件 {#prerequisites}
 
@@ -26,9 +26,9 @@ ht-degree: 5%
 * [创建自适应表单](../../forms/using/creating-adaptive-form.md)
 * [JSON模式](https://json-schema.org/)
 
-## 将JSON模式用作表单模型  {#using-a-json-schema-as-form-model}
+## 将JSON模式用作表单模型{#using-a-json-schema-as-form-model}
 
-AEM Forms支持使用现有JSON模式作为表单模型创建自适应表单。 此JSON模式表示组织中的后端系统生成或使用数据的结构。 您使用的JSON模式应符合 [v4规范](https://json-schema.org/draft-04/schema)。
+AEM Forms支持使用现有JSON模式作为表单模型创建自适应表单。 此JSON模式表示组织中的后端系统生成或使用数据的结构。 您使用的JSON模式应符合[v4规范](https://json-schema.org/draft-04/schema)。
 
 使用JSON模式的主要功能有：
 
@@ -82,33 +82,33 @@ JSON元素与自适应表单组件的映射如下：
     </ul> </td>
   </tr>
   <tr>
-   <td><p>{</p> <p>“类型”: "string",</p> <p>}</p> </td>
+   <td><p>{</p> <p>“类型”:"string",</p> <p>}</p> </td>
    <td><br /> <br /> 文本字段<br /> <br /> <br /> </td>
   </tr>
   <tr>
-   <td>数字属性<br /> </td>
-   <td>子类型设置为浮点的数字字段<br /> </td>
+   <td>number属性<br /> </td>
+   <td>子类型设置为float<br />的数字字段 </td>
   </tr>
   <tr>
-   <td>integer属性<br /> </td>
-   <td>子类型设置为整数的数字字段<br /> </td>
+   <td>整数属性<br /> </td>
+   <td>子类型设置为整数<br />的数字字段 </td>
   </tr>
   <tr>
    <td>布尔属性<br /> </td>
    <td>切换<br /> </td>
   </tr>
   <tr>
-   <td>object property<br /> </td>
+   <td>对象属性<br /> </td>
    <td>面板<br /> </td>
   </tr>
   <tr>
    <td>数组属性</td>
-   <td>最小和最大分别等于minItems和maxItems的可重复面板。 仅支持同质阵列。 因此，项目约束必须是对象而不是数组。<br /> </td>
+   <td>最小和最大分别等于minItems和maxItems的可重复面板。 仅支持同质阵列。 因此，项约束必须是对象而不是数组。<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 常见模式属性 {#common-schema-properties}
+### 常见模式属性{#common-schema-properties}
 
 自适应表单使用JSON模式中的可用信息映射每个生成的字段。 特别是：
 
@@ -124,7 +124,7 @@ JSON元素与自适应表单组件的映射如下：
 * 模式属性以自适应形式设置为验证模式(常规表达式)。
 * JSON模式文件的扩展名必须保留为。模式.json。 例如，&lt;filename>.模式.json。
 
-## 示例JSON模式 {#sample-json-schema}
+## 示例JSON模式{#sample-json-schema}
 
 以下是JSON模式的示例。
 
@@ -306,7 +306,7 @@ JSON元素与自适应表单组件的映射如下：
 }
 ```
 
-### 可重用模式定义 {#reusable-schema-definitions}
+### 可重用模式定义{#reusable-schema-definitions}
 
 定义密钥用于识别可重用模式。 可重用的模式定义用于创建片段。 它类似于在XSD中识别复杂类型。 下面给出了具有定义的示例JSON模式:
 
@@ -337,9 +337,9 @@ JSON元素与自适应表单组件的映射如下：
 
 上例定义了客户记录，其中每个客户同时具有发运地址和开单地址。 两个地址的结构相同——地址有街道地址、城市地址和州地址——因此最好不要重复地址。 它还使添加和删除字段变得很容易，以便将来进行任何更改。
 
-## JSON模式定义中的预配置字段 {#pre-configuring-fields-in-json-schema-definition}
+## 预配置JSON模式定义{#pre-configuring-fields-in-json-schema-definition}中的字段
 
-您可以使用 **aem:afProperties属性** ，预配置JSON模式字段以映射到自定义自适应表单组件。 下面列出了一个示例：
+您可以使用&#x200B;**aem:afProperties**&#x200B;属性预配置JSON模式字段以映射到自定义自适应表单组件。 下面列出了一个示例：
 
 ```json
 {
@@ -359,9 +359,9 @@ JSON元素与自适应表单组件的映射如下：
 }
 ```
 
-## 为表单对象配置脚本或表达式  {#configure-scripts-or-expressions-for-form-objects}
+## 为表单对象{#configure-scripts-or-expressions-for-form-objects}配置脚本或表达式
 
-JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并使用自适应表单脚本模型API。 您可以预配置表单对象，以 [评估表单表达式](../../forms/using/adaptive-form-expressions.md) ()事件。
+JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并使用自适应表单脚本模型API。 您可以预配置表单对象以对表单表达式[进行评估。](../../forms/using/adaptive-form-expressions.md)
 
 使用aem:afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，当触发初始化事件时，下面的代码设置电话字段的值并将值打印到日志：
 
@@ -381,13 +381,13 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-您应是表单功能用户 [组的成员](/help/forms/using/forms-groups-privileges-tasks.md) ，以配置表单对象的脚本或表达式。 下表列表了自适应表单组件支持的所有脚本事件。
+您应是[forms-power-user组](/help/forms/using/forms-groups-privileges-tasks.md)的成员，以配置表单对象的脚本或表达式。 下表列表了自适应表单组件支持的所有脚本事件。
 
 <table>
  <tbody>
   <tr>
    <th><strong></strong>组件\事件</th>
-   <th>initialize <br /> </th>
+   <th>初始化<br /> </th>
    <td>计算</td>
    <td>可见性</td>
    <td>验证</td>
@@ -586,11 +586,11 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
-在JSON中使用事件的一些示例是，在初始化事件时隐藏字段，在值提交事件时配置其他字段的值。 有关为脚本表达式创建事件的详细信息，请参阅自 [适应表单表达式](../../forms/using/adaptive-form-expressions.md)。
+在JSON中使用事件的一些示例是，在初始化事件时隐藏字段，在值提交事件时配置其他字段的值。 有关为脚本表达式创建事件的详细信息，请参阅[自适应表单表达式](../../forms/using/adaptive-form-expressions.md)。
 
 以下是上述示例的示例JSON代码。
 
-### 在初始化事件时隐藏字段 {#hiding-a-field-on-initialize-event}
+### 在初始化事件{#hiding-a-field-on-initialize-event}时隐藏字段
 
 ```json
 "name": {
@@ -603,7 +603,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-#### 在值提交事件中配置其他字段的值 {#configure-value-of-another-field-on-value-commit-event}
+#### 在值提交事件{#configure-value-of-another-field-on-value-commit-event}上配置另一个字段的值
 
 ```json
 "Income": {
@@ -627,7 +627,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-## 限制自适应表单组件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
+## 限制自适应表单组件{#limit-acceptable-values-for-an-adaptive-form-component}的可接受值
 
 您可以向JSON模式元素添加以下限制以限制自适应表单组件可接受的值：
 
@@ -704,7 +704,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
   <tr>
    <td><p><code>pattern</code></p> </td>
    <td><p>字符串</p> </td>
-   <td><p>指定字符的顺序。 如果字符符合指定的模式，则组件接受字符。</p> <p>模式属性映射到相应自适应表单组件的验证模式。</p> </td>
+   <td><p>指定字符的顺序。 如果字符符合指定的模式，则组件接受这些字符。</p> <p>模式属性映射到相应自适应表单组件的验证模式。</p> </td>
    <td>
     <ul>
      <li>映射到XSD模式的所有自适应表单组件 </li>
@@ -725,7 +725,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
-## 不支持的构造  {#non-supported-constructs}
+## 不支持的构造{#non-supported-constructs}
 
 自适应表单不支持以下JSON模式构造：
 
@@ -740,7 +740,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 在可重复的子表单中，必须使用完整的子表单。 如果只想选择字段，请使用整个结构并删除不需要的字段。
 
-**我在内容查找器中有一个很长的复杂结构。 如何找到特定元素？**
+**我在内容查找器中有一个很长的复杂结构。如何找到特定元素？**
 
 您有两种选择：
 
