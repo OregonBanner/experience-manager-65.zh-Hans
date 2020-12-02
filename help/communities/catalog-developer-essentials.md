@@ -24,11 +24,11 @@ ht-degree: 2%
 
 当包含在社区站点中时，目录功能允许社区成员浏览并选择目录中列出的支持资源。
 
-该组 [ 件 `enablement catalog` 允许社区成员访问](catalog.md) 启用资源目录 [](resources.md)。 使用AEM标记是管理目录中启用资源外观的重要部分。
+[ `enablement catalog`组件](catalog.md)允许社区成员访问[启用资源](resources.md)的目录。 使用AEM标记是管理目录中启用资源外观的重要部分。
 
-请参 [阅标记启用资源](tag-resources.md)。
+请参阅[标记Enablement Resources](tag-resources.md)。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -54,27 +54,27 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="catalog.md">目录功能</a></td>
+   <td>请参阅<a href="catalog.md">目录功能</a></td>
   </tr>
  </tbody>
 </table>
 
-## 服务器端必备工具 {#essentials-for-server-side}
+## 服务器端{#essentials-for-server-side}的必备工具
 
 ### 目录功能 {#catalog-function}
 
-包含目录功能的社区站 [点结构](functions.md#catalog-function)，包括已配置的 `enablement catalog` 组件。
+包含[目录函数](functions.md#catalog-function)的社区站点结构包括已配置的`enablement catalog`组件。
 
-### 预过滤器 {#pre-filters}
+### 预过滤器{#pre-filters}
 
 将目录功能添加到社区站点后，可以通过指定预过滤器来限制显示在目录中的启用资源和学习路径。 这是通过为站点设置目录资源实例的属性来完成的。
 
-使用Enablement Tutorial的 [示例](getting-started-enablement.md):
+使用[Enablement Tutorial](getting-started-enablement.md)的示例：
 
 * 论作者
-* 使用 [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
+* 使用[CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   * 例如 [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
+   * 例如[https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 
 * 导航到目录页上的目录资源
 
@@ -82,25 +82,25 @@ ht-degree: 2%
 
 * 添加子过滤器节点
 
-   * 选择节 `catalog`点
-   * 选择 **[!UICONTROL 创建节点]**
+   * 选择`catalog`节点
+   * 选择&#x200B;**[!UICONTROL 创建节点]**
 
       * 名称: `filters`
       * 类型: `nt:unstructured`
-      * 选择 **[!UICONTROL 全部保存]**
+      * 选择&#x200B;**[!UICONTROL 保存全部]**
 
-* 向节 `se_resource-tags` 点添加属 `filters` 性
+* 将`se_resource-tags`属性添加到`filters`节点
 
-   * 选择节 `filters` 点
+   * 选择`filters`节点
    * 添加多属性
 
       * 名称: `se_resource-tags`
       * 类型：字符串
-      * 值： *&lt;输入[TagID](#pre-filter-tagids)>*
-         * 选择多 **[!UICONTROL 个]**
-         * 选择添 **[!UICONTROL 加]**
+      * 值：*&lt;输入[TagID](#pre-filter-tagids)>*
+         * 选择&#x200B;**[!UICONTROL 多]**
+         * 选择&#x200B;**[!UICONTROL 添加]**
 
-            * 在弹出对话框中，选 `+` 择以添加其他预过滤器TagID
+            * 在弹出对话框中，选择`+`以添加其他预过滤器TagID
 
 * 重新发布社区站点
 
@@ -108,7 +108,7 @@ ht-degree: 2%
 
 #### 预过滤标记ID {#pre-filter-tagids}
 
-预过滤器 [TagID必须](../../help/sites-developing/framework.md#tagid) 与应用到启用资源的标记完全匹配。 这些属性在站 `resources` 点的文件夹中显示为属性值 `se_resource-tags`。
+预过滤器[TagID](../../help/sites-developing/framework.md#tagid)必须与应用到启用资源的标记完全匹配。 这些属性在站点的`resources`文件夹中显示为属性`se_resource-tags`的值。
 
 ![配置过滤器](assets/configure-catalog1.png)
 
