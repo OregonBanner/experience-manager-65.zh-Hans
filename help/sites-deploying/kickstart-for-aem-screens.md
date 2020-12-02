@@ -1,6 +1,6 @@
 ---
-title: （重定向）引题指南
-seo-title: （重定向）引题指南
+title: （重定向）引题启动指南
+seo-title: （重定向）引题启动指南
 description: 'null'
 seo-description: 'null'
 uuid: 745b98e6-54ba-44e2-8710-3332391d1ea0
@@ -10,9 +10,12 @@ noindex: true
 redirecttarget: /content/help/en/experience-manager/6-4/screens/using/kickstart-for-aem-screens
 translation-type: tm+mt
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+workflow-type: tm+mt
+source-wordcount: '11'
+ht-degree: 0%
 
 ---
 
 
-# （重定向）引题指南{#redirect-kickstart-guide}
+# （重定向）引题启动指南{#redirect-kickstart-guide}
 
