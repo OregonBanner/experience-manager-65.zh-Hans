@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# 内联条件，并在交互通信和字母中重复{#inline-condition-and-repeat-in-interactive-communications-and-letters}
+# 在Interactive Communications和字母中内联条件和重复{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
-## 内联条件 {#inline-conditions}
+## 内联条件{#inline-conditions}
 
 AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于与表单数据模型（在交互通信中）或数据字典（在字母中）关联的上下文或数据的文本。 内联条件根据条件评估为true或false显示特定内容。
 
@@ -32,15 +32,15 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 * [通信管理概述](/help/forms/using/cm-overview.md)
 * [交互通信中的文本](../../forms/using/texts-interactive-communications.md)
 
-### 示例：使用规则在交互式通信中条件化内联文本 {#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}
+### 示例：使用规则在交互通信{#example-using-rules-to-conditionalize-inline-text-in-interactive-communication}中条件化内联文本
 
 要在交互通信中对句子、段落或文本字符串进行条件化，可以在相应的文本文档片段中创建规则。 以下示例使用规则仅向交互通信的美国收件人显示免费电话号码。
 
-有关详细信息，请参阅在交互通信中以文本 [形式创建规则](../../forms/using/texts-interactive-communications.md)。
+有关详细信息，请参阅[交互通信中的文本](../../forms/using/texts-interactive-communications.md)中的文本创建规则。
 
 在交互通信中包含文本片段后，代理使用代理UI准备交互通信后，将评估收件人的（表单数据模型）数据，并且该文本仅显示给美国的收件人。
 
-### 示例：在字母中使用内联条件来呈现相应的地址  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### 示例：在字母中使用内联条件来呈现相应的地址{#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 通过在相应的文本模块中插入内联条件，可以在字母中插入内联条件。 以下示例使用两个条件在基于DD元素“性别”的信件中评估和显示相应的地址，即Sir或Ma&#39;am。 使用类似的步骤，您可以创建其他条件。
 
@@ -48,7 +48,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 >
 >如果您的现有资产包含旧条件／重复表达式（6.2 SP1 CFP 4之前），则资产将显示旧的条件语法并重复。 但是，旧条件／重复可以正常工作。 新条件／重复表达式和旧条件／重复表达式相互兼容，以创建新旧条件／重复的嵌套混合。
 
-1. 在相关文本模块中，选择要条件化的文本部分并点按 **条件**。
+1. 在相关文本模块中，选择要条件化的文本部分，然后点按&#x200B;**条件**。
 
    ![1_selecttext](assets/1_selecttext.png)
 
@@ -58,7 +58,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 
    >[!NOTE]
    >
-   >无法保存空或无效的条件表达式。 必须有有效的条件表达式才能 `${}` 保存表达式。
+   >无法保存空或无效的条件表达式。 `${}`内必须有有效的条件表达式才能保存表达式。
 
 1. 执行以下操作以构建一个条件，用于评估所选／条件化文本是否显示在字母中，然后点按复选标记以保存表达式:
 
@@ -68,13 +68,13 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
    ${DD_creditcard_Gender=="Male"}
    ```
 
-   有关创建表达式的详细信息，请参 **阅使用表达式生成器创建表达式和远** 程功能 [，在](../../forms/using/expression-builder.md)表达式生成器中。 表达式中指定的值必须支持数据字典中的元素。 有关详细信息，请参 [阅数据字典](../../forms/using/data-dictionary.md)。
+   有关创建表达式的详细信息，请参阅[表达式生成器](../../forms/using/expression-builder.md)中的&#x200B;**使用表达式生成器**&#x200B;创建表达式和远程功能。 表达式中指定的值必须支持数据字典中的元素。 有关详细信息，请参阅[数据字典](../../forms/using/data-dictionary.md)。
 
    插入条件后，您可以将鼠标悬停在条件左侧的手柄上以视图该条件。 您可以点击手柄以视图条件的弹出菜单，该菜单允许您编辑或删除条件。
 
    ![3_slaphandle](assets/3_hoverhandle.png) ![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
 
-1. 通过选择文本插入类似条 `Ma'am`件。
+1. 通过选择文本`Ma'am`插入类似条件。
 
    ```javascript
    ${DD_creditcard_Gender == "Female"}
@@ -85,7 +85,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
    * 在预览带有样本数据的字母时，根据相关数据字典创建的样本XML数据文件。
    * 附加到相关数据字典的XML数据文件。
 
-   有关详细信息，请参 [阅数据字典](../../forms/using/data-dictionary.md)。
+   有关详细信息，请参阅[数据字典](../../forms/using/data-dictionary.md)。
 
    ![5_leteroutput](assets/5_letteroutput.png)
 
@@ -95,7 +95,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 
 此外，您可以在重复构造中指定规则／条件，以条件化在交互通信／字母中呈现的信息／条目。
 
-### 示例：在交互通信中使用重复设置信用卡交易列表的格式、结构和显示 {#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 示例：在交互通信中使用重复设置信用卡交易列表的格式、结构和显示{#example-using-repeat-in-an-interactive-communication-to-format-structure-and-display-a-list-of-credit-card-transactions}
 
 以下示例介绍了在交互通信中使用重复来构造和呈现信用卡交易记录的步骤。
 
@@ -139,7 +139,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 
    ![screen_shot_2018-03-09at155516copy](assets/screen_shot_2018-03-09at155516copy.png)
 
-### 示例：在信函中重复使用格式、结构和显示信用卡交易列表 {#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}
+### 示例：在信件格式、结构和显示信用卡交易列表{#example-using-repeat-in-a-letter-to-format-structure-and-display-a-list-of-credit-card-transactions}中使用重复
 
 以下示例提供了使用重复来在信函中构造和呈现信用卡交易记录的步骤。 使用类似步骤，您可以在其他场景中使用重复。
 
@@ -172,7 +172,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 
    ![2_repeat_selecttext](assets/2_repeat_selecttext.png)
 
-1. 点按 **重复**。 出现“重复”对话框，其内嵌条件为空。
+1. 点按&#x200B;**重复**。 出现“重复”对话框，其内嵌条件为空。
 
    ![3_repeat_dialog](assets/3_repeat_dialog.png)
 
@@ -182,7 +182,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
    ${DD_creditcard_TransactionAmount > 0.5}
    ```
 
-   否则，如果您不需要选择性地呈现信息（此处的事务），请在对话框中删除以下内容，将条件保留为空： `${}`. 当重复表达式窗口为空（不需要重复时没有${}）或包含有效的重复条件时，将启用保存重复表达式。
+   否则，如果您不需要选择性地呈现信息（此处的事务），请在对话框中删除以下内容，将条件保留为空：`${}`。 当重复表达式窗口为空（不需要重复时没有${}）或包含有效的重复条件时，将启用保存重复表达式。
 
 1. 选择用于格式化动态文本的分隔符，然后点按复选标记以保存：
 
@@ -202,7 +202,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
    * 在预览带有样本数据的字母时，根据相关数据字典创建的样本XML数据文件。
    * 附加到相关数据字典的XML数据文件。
 
-   有关详细信息，请参 [阅数据字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
+   有关详细信息，请参阅[数据字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
 
    ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
 
@@ -212,9 +212,9 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
    >
    >您只能在创建或编辑相关文本模块时插入条件并重复上述操作。 在预览字母时，虽然可以编辑文本模块，但无法插入条件或重复。
 
-## 使用内联条件并重复——某些用例  {#using-inline-condition-and-repeat-some-use-cases}
+## 使用内联条件并重复——某些用例{#using-inline-condition-and-repeat-some-use-cases}
 
-### 在条件内重复 {#repeat-within-condition}
+### 在条件{#repeat-within-condition}中重复
 
 您可能需要在某个条件中使用重复。 Commendence Management允许您在内联条件构造中使用重复。
 
@@ -230,7 +230,7 @@ AEM Forms允许您在文本模块中使用内联条件，自动呈现取决于�
 * 重复项中的一个或多个条件
 * 条件和在条件或重复内重复的组合
 
-### 内联条件为空 {#empty-inline-condition}
+### 内联条件{#empty-inline-condition}为空
 
 您可能需要插入空的内联条件，稍后嵌入文本和DD元素。 通信管理允许您这样做。
 
