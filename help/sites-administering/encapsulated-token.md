@@ -36,7 +36,7 @@ ht-degree: 0%
 
 如果发布实例不可用，在该实例上经过身份验证的所有用户都将丢失其会话。 这是因为验证Cookie需要存储库访问。
 
-## 使用封装令牌的无状态身份验证 {#stateless-authentication-with-the-encapsulated-token}
+## 使用封装的令牌{#stateless-authentication-with-the-encapsulated-token}进行无状态身份验证
 
 水平可伸缩性的解决方案是使用AEM中新的封装令牌支持进行无状态身份验证。
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 >例如，如果根据封装令牌的工作方式在发布实例编号1上创建了新用户，则将在发布实例编号2上成功对其进行身份验证。 如果第二个发布实例上不存在该用户，则请求仍不成功。
 
 
-## 配置封装令牌 {#configuring-the-encapsulated-token}
+## 配置封装令牌{#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >只有在以下情况下，才能使用同步用户和依赖令牌身份验证（如SAML和OAuth）的所有身份验证处理程序才能使用封装的令牌：
@@ -61,47 +61,48 @@ ht-degree: 0%
 >* 会话粘滞已启用，或
    >
    >
-* 同步开始时，已在AEM中创建用户。 这意味着在处理函数在同步过程中创建用户时，将不 **支持封装** 的令牌。
+* 同步开始时，已在AEM中创建用户。 这意味着在同步过程中，如果处理程序&#x200B;**创建**&#x200B;用户，将不支持封装令牌。
 
 
 在配置封装令牌时，您需要考虑以下几点：
 
-1. 由于涉及密码，所有实例都需要具有相同的HMAC密钥。 自AEM 6.3起，关键材料不再存储在存储库中，而存储在实际的文件系统中。 考虑到这一点，复制密钥的最佳方法是将它们从源实例的文件系统复制到要复制密钥的目标实例的文件系统。 请参阅下面的“复制HMAC密钥”下的更多信息。
+1. 由于涉及密码，所有实例都需要具有相同的HMAC密钥。 自AEM 6.3以来，关键材料不再存储在存储库中，而存储在实际的文件系统中。 考虑到这一点，复制密钥的最佳方法是将它们从源实例的文件系统复制到要复制密钥的目标实例的文件系统。 请参阅下面的“复制HMAC密钥”下的更多信息。
 1. 需要启用封装令牌。 这可以通过Web控制台完成。
 
-### 复制HMAC密钥 {#replicating-the-hmac-key}
+### 复制HMAC密钥{#replicating-the-hmac-key}
 
-HMAC密钥作为存储库中的二进制 `/etc/key` 属性存在。 您可以通过按它旁边的 **视图** 链接单独下载它：
+HMAC密钥作为`/etc/key`的二进制属性存在于存储库中。 您可以通过按下视图旁的&#x200B;**链接**&#x200B;单独下载它：
 
 ![chlimage_1-35](assets/chlimage_1-35a.png)
 
 为了跨实例复制密钥，您需要：
 
 1. 访问AEM实例，通常是包含要复制的关键材料的作者实例；
-1. 在本地 `com.adobe.granite.crypto.file` 文件系统中找到捆绑包。 例如，在此路径下：
+1. 在本地文件系统中找到`com.adobe.granite.crypto.file`包。 例如，在此路径下：
 
    * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
-   每个 `bundle.info` 文件夹中的文件将标识捆绑名称。
+
+   每个文件夹中的`bundle.info`文件将标识捆绑名称。
 
 1. 导航到数据文件夹。 例如：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-1. 复制HMAC和主文件。
+1. 复制HMAC和主控文件。
 1. 然后，转到要将HMAC密钥重复到的目标实例，并导航到数据文件夹。 例如：
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. 粘贴之前复制的两个文件。
-1. [如果目标实例已运行](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) ，请刷新加密包。
+1. [如果目标](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 实例已运行，请刷新Crypto Bundle。
 
 1. 对要将密钥复制到的所有实例重复上述步骤。
 
-#### 启用封装令牌 {#enabling-the-encapsulated-token}
+#### 启用封装令牌{#enabling-the-encapsulated-token}
 
 复制HMAC密钥后，您可以通过Web控制台启用封装令牌：
 
-1. 将您的浏览器指向 `https://serveraddress:port/system/console/configMgr`
-1. 查找名为Day CRX令牌身 **份验证处理程序的条目** ，然后单击它。
-1. 在下面的窗口中，勾选启 **用封装的令牌支持框** ，然后按 **保存**。
+1. 将浏览器指向`https://serveraddress:port/system/console/configMgr`
+1. 查找名为&#x200B;**Day CRX令牌身份验证处理程序**&#x200B;的条目，然后单击它。
+1. 在以下窗口中，勾选&#x200B;**启用封装的令牌支持**&#x200B;框，然后按&#x200B;**保存**。
 
