@@ -21,21 +21,21 @@ ht-degree: 0%
 
 # 在HTML5表单中创建自定义外观{#create-custom-appearances-in-html-forms}
 
-您可以将自定义构件插入移动Forms。 您可以扩展现有的jQuery构件，或使用外观框架开发自己的自定义构件。 XFA引擎使用各种构件，有关详 [细信息，请参阅自适应和HTML5表单的](/help/forms/using/introduction-widgets.md) “外观框架”。
+您可以将自定义构件插入移动Forms。 您可以扩展现有的jQuery构件，或使用外观框架开发自己的自定义构件。 XFA引擎使用各种构件，有关详细信息，请参见[自适应和HTML5表单的外观框架](/help/forms/using/introduction-widgets.md)。
 
 ![默认和自定义构件的示例](assets/custom-widgets.jpg)
 
 默认和自定义构件的示例
 
-## 将自定义构件与HTML5表单集成 {#integrating-custom-widgets-with-html-forms}
+## 将自定义构件与HTML5表单{#integrating-custom-widgets-with-html-forms}集成
 
 ### 创建用户档案  {#create-a-profile-nbsp}
 
-您可以创建用户档案或选择现有用户档案来添加自定义构件。 有关创建用户档案的详细信息，请参阅 [创建自定义用户档案](/help/forms/using/custom-profile.md)。
+您可以创建用户档案或选择现有用户档案来添加自定义构件。 有关创建用户档案的详细信息，请参阅[创建自定义用户档案](/help/forms/using/custom-profile.md)。
 
-### 创建构件 {#create-a-widget}
+### 创建构件{#create-a-widget}
 
-HTML5表单提供构件框架的实现，可以扩展该框架以创建新构件。 该实现是一个jQuery *构件abstractWidget* ，可扩展以编写新构件。 只有扩展／覆盖下列功能，才能使新构件正常工作。
+HTML5表单提供构件框架的实现，可以扩展该框架以创建新构件。 该实现是一个jQuery构件&#x200B;*abstractWidget*，可扩展以编写新构件。 只有扩展／覆盖下列功能，才能使新构件正常工作。
 
 <table>
  <tbody>
@@ -49,7 +49,7 @@ HTML5表单提供构件框架的实现，可以扩展该框架以创建新构件
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>返回将HTML事件转换为XFA事件的映射。 <br /> {模糊<br /> :XFA_EXIT_事件<br /> , }<br /> 此示例说明模糊是HTML事件,XFA_EXIT_事件是相应的XFA事件。 </td>
+   <td>返回将HTML事件转换为XFA事件的映射。 <br /> {<br /> blur:XFA_EXIT_事件,<br /> }<br /> 此示例显示模糊是HTML事件,XFA_EXIT_事件是相应的XFA事件。 </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -70,7 +70,7 @@ HTML5表单提供构件框架的实现，可以扩展该框架以创建新构件
  </tbody>
 </table>
 
-要创建您自己的构件，请在上面创建的用户档案中包含对JavaScript文件的引用，该文件包含被覆盖的函数和新添加的函数。 例如，sliderNumericFieldWidget *是数字字段的* （构件）。 要在标题部分的用户档案中使用小部件，请包括以下行：
+要创建您自己的构件，请在上面创建的用户档案中包含对JavaScript文件的引用，该文件包含被覆盖的函数和新添加的函数。 例如，*sliderNumericFieldWidget*&#x200B;是数字字段的构件。 要在标题部分的用户档案中使用小部件，请包括以下行：
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
@@ -78,7 +78,7 @@ window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 
 ### 使用XFA脚本引擎注册自定义构件  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-在自定义构件代码准备就绪后，使用Form Bridge的API向脚本引擎注 `registerConfig`册构 [件](/help/forms/using/form-bridge-apis.md)。 它以widgetConfigObject为输入。
+在自定义构件代码准备就绪后，使用`registerConfig`用于[表单桥接器](/help/forms/using/form-bridge-apis.md)的API向脚本引擎注册构件。 它以widgetConfigObject为输入。
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig",
