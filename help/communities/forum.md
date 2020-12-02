@@ -35,33 +35,33 @@ ht-degree: 8%
 文档的本节介绍：
 
 * 将论坛功能添加到AEM站点。
-* 组件的配置 `Forum` 设置。
+* `Forum`组件的配置设置。
 
-### Adding a Forum to a Page {#adding-a-forum-to-a-page}
+### 将论坛添加到页面{#adding-a-forum-to-a-page}
 
-要在创作模 `Forum` 式下将组件添加到页面，请使用组件浏览器来查找
+要在创作模式下将`Forum`组件添加到页面，请使用组件浏览器查找
 
 * `Communities / Forum`
 
 并将其拖动到应显示论坛的页面上。
 
-有关必要的信息，请访 [问社区组件基础](/help/communities/basics.md)。
+有关必要的信息，请访问[社区组件基础知识](/help/communities/basics.md)。
 
-当包 [含所需的客户端库](/help/communities/essentials-forum.md#essentials-for-client-side) ，组件的显示 `Forum` 方式如下：
+当包含[必需的客户端库](/help/communities/essentials-forum.md#essentials-for-client-side)时，`Forum`组件的显示方式如下：
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
-### 配置论坛 {#configuring-a-forum}
+### 配置论坛{#configuring-a-forum}
 
-选择要访问的 `Forum` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
+选择要访问的已放置`Forum`组件，然后选择打开编辑对话框的`Configure`图标。
 
 ![chlimage_1-61](assets/chlimage_1-61.png)
 
 ![论坛——配置](assets/forum-config.png)
 
-#### “设置”选项卡 {#settings-tab}
+#### 设置选项卡{#settings-tab}
 
-在“设 **置** ”选项卡下，指定主题和回复的设置：
+在&#x200B;**设置**&#x200B;选项卡下，指定主题和回复的设置：
 
 * **允许附加缩略图**
 
@@ -94,7 +94,7 @@ ht-degree: 8%
 
 * **允许标记**
 
-   如果选中此项，则允许成员向其帖子中添加标记标签(请参 **阅标记字段** 选项卡)。 默认为未选中。
+   如果选中此项，则允许成员向其帖子中添加标记标签（请参阅&#x200B;**标记字段**&#x200B;选项卡）。 默认为未选中。
 
 * **允许文件上传**
 
@@ -102,7 +102,7 @@ ht-degree: 8%
 
 * **允许关注**
 
-   如果选中此项，则为论坛帖子提供以下功能，允许会员 [收到](/help/communities/notifications.md) 新帖子的通知。 默认为未选中。
+   如果选中此项，则为论坛帖子提供以下功能，允许新帖子[通知成员](/help/communities/notifications.md)。 默认为未选中。
 
 * **允许固定**
 
@@ -110,21 +110,22 @@ ht-degree: 8%
 
 * **允许专题内容**
 
-   如果选中，则可以将该想法标识为特色 [内容](/help/communities/featured.md)。 默认为未选中。
+   如果选中，则该想法可标识为[特色内容](/help/communities/featured.md)。 默认为未选中。
 
 * **允许电子邮件订阅**
 
-   如果选中此项，则允许成员通过电子邮件(订阅)通知[新帖](/help/communities/subscriptions.md)子。 需要 `Allow Following` 检查并配置电 [子邮件](/help/communities/email.md)。 默认为未选中。
+   如果选中此项，则允许通过电子邮件向成员通知新帖子([订阅](/help/communities/subscriptions.md))。 需要检查`Allow Following`并配置[电子邮件](/help/communities/email.md)。 默认为未选中。
 
 * **最大文件大小**
 
-   仅在选中时 `Allow File Uploads` 相关。 此字段将限制已上载文件的大小（以字节为单位）。 默认值为104857600(10 Mb)。
+   仅当选中`Allow File Uploads`时相关。 此字段将限制已上载文件的大小（以字节为单位）。 默认值为104857600(10 Mb)。
 
 * **允许的文件类型**
 
-   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅当选中`Allow File Uploads`时相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
-* **仅当选中“允许文件**&#x200B;上传”时，最大附加图像文件大小才相关。 上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
+* **最大附加图像文**
+件大小仅在选中“允许文件上传”时相关。上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
 
 * **允许主题回复**
 
@@ -144,7 +145,7 @@ ht-degree: 8%
 
 * **显示徽章**
 
-   如果选中，则使用会员的博 [客条目](/help/communities/implementing-scoring.md) ，显示已获得和分配的徽章。 默认为未选中。
+   如果选中，则使用成员的博客条目显示已获得的标记并分配了[标记](/help/communities/implementing-scoring.md)。 默认为未选中。
 
 * **允许拥有权限的成员**
 
@@ -168,15 +169,15 @@ ht-degree: 8%
 
 * **UI 提及模式**
 
-   在帖子中为注册用户标记（@提及）指定已允许的模式字符串。 For example `~{{familyName}}{{givenName}}`.
+   在帖子中为注册用户标记（@提及）指定已允许的模式字符串。 例如`~{{familyName}}{{givenName}}`。
 
 >[!NOTE]
 >
->可能需要同时检查和 `AllowThreaded Replies` 启用 `Allow users to Delete Comments and Topics` 对主题的注释。
+>可能需要检查`AllowThreaded Replies`和`Allow users to Delete Comments and Topics`以启用对主题的注释。
 
-#### “用户审核”选项卡 {#user-moderation-tab}
+#### “用户协调”选项卡{#user-moderation-tab}
 
-在“用 **户审核** ”选项卡下，指定如何管理已发布的主题和回复（用户生成的内容）。 有关详细信息，请参 [阅调节用户生成的内容](/help/communities/moderate-ugc.md)。
+在&#x200B;**用户协调**&#x200B;选项卡下，指定如何管理已发布的主题和回复（用户生成的内容）。 有关详细信息，请参阅[协调用户生成的内容](/help/communities/moderate-ugc.md)。
 
 * **拒绝帖子**
 
@@ -210,50 +211,50 @@ ht-degree: 8%
 
    输入主题或评论在隐藏之前必须标出的次数，以免公开视图。 如果设置为-1，则标记的主题或评论从不隐藏于公共视图。 否则，此数字必须大于或等于仲裁阈值。 默认值为5。
 
-#### 标记字段选项卡 {#tag-field-tab}
+#### 标记字段选项卡{#tag-field-tab}
 
-在“标 **记”字段** (Tag field)选项卡下 **，根据所选的命名空间，在“设置”(Settings)选项卡下允许的** 情况下，可应用的标记会受到限制。
+在&#x200B;**标记字段**&#x200B;选项卡下，如果允许在&#x200B;**设置**&#x200B;选项卡下应用的标记会根据所选命名空间进行限制。
 
 * **允许的命名空间**
 
-   如果在“设 `Allow Tagging` 置”选项卡下选中， **则相关** 。 可应用的标记仅限于所选命名空间类别内的标记。 命名空间的列表包括“标准标记”(默认命名空间)和“包括所有标记”。 默认值为“无”(none checked)，这意味着允许所有命名空间。
+   如果在&#x200B;**设置**&#x200B;选项卡下检查了`Allow Tagging`，则相关。 可应用的标记仅限于所选命名空间类别内的标记。 命名空间的列表包括“标准标记”(默认命名空间)和“包括所有标记”。 默认值为“无”(none checked)，这意味着允许所有命名空间。
 
 * **建议限制**
 
    输入要作为建议显示给论坛成员的标记数。 默认值为**-**1（无限制）。
 
-#### 翻译选项卡 {#translation-tab}
+#### 转换选项卡{#translation-tab}
 
-在“翻 **译** ”选项卡下，如果为社区站点启用了翻译，则可以设置翻译来翻译整个主题或选定的帖子。
+在&#x200B;**翻译**&#x200B;选项卡下，如果为社区站点启用翻译，则可以设置翻译来翻译整个主题或选定的帖子。
 
 * **全部翻译**
 
    如果选中，则论坛线程将转换为用户的首选语言。 默认为未选中。
 
-#### “排序设置”选项卡 {#sort-settings-tab}
+#### 排序设置选项卡{#sort-settings-tab}
 
-在“排 **序设置** ”选项卡下，指定显示已发布注释时的排序方式。
+在&#x200B;**排序设置**&#x200B;选项卡下，指定显示已发布注释时的排序方式。
 
 * **排序方式**
 
-   检查所有允许的排序选择： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Default is `Newest, Oldest, Last Updated`.
+   检查所有允许的排序选择：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 默认值为`Newest, Oldest, Last Updated`。
 
 * **设置为默认**
 
-   下拉以选择一个选中的排序选项作为默认值显示。 Default is `Newest`.
+   下拉以选择一个选中的排序选项作为默认值显示。 默认值为`Newest`。
 
 * **选择分析排序的时间选项**
 
-   下拉以选择以下选项之一： `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
+   下拉以选择以下选项之一：`All, Last 24 Hours, Last 7 Days, Last 30 Days`。
 
-   Default is `All`.
+   默认值为`All`。
 
 ### 附加信息 {#additional-information}
 
-有关详细信息，请参阅“论 [坛基础工具](/help/communities/essentials-forum.md) ”页面。
+有关开发人员的详细信息，请参阅[Forum Essentials](/help/communities/essentials-forum.md)页面。
 
-有关审核已发布的主题和评论，请参 [阅审核用户生成的内容](/help/communities/moderate-ugc.md)。
+有关已发布主题和注释的审核，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
 
-有关标记已发布的主题和评论，请参 [阅标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记已发布的主题和评论，请参阅[标记用户生成的内容](/help/communities/tag-ugc.md)。
 
-有关已发布主题和注释的翻译，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md)。
+有关已发布主题和注释的翻译，请参阅[翻译用户生成的内容](/help/communities/translate-ugc.md)。
