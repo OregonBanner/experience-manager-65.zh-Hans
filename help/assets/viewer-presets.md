@@ -16,20 +16,20 @@ ht-degree: 40%
 ---
 
 
-# Applying Dynamic Media viewer presets {#applying-viewer-presets}
+# 应用Dynamic Media查看器预设{#applying-viewer-presets}
 
-查看器预设是一组设置，用于确定用户如何在其计算机屏幕和移动设备上视图富媒体资产。 您可以将管理员创建的任何查看器预设应用到资产。
+查看器预设是一组设置，用于确定用户如何在其计算机屏幕和移动设备上视图富媒体资产。您可以将管理员创建的任何查看器预设应用到资产。
 
 如果您是管理员，并且需要管理、创建、排序或删除查看器预设，请参阅[管理查看器预设](managing-viewer-presets.md)。
 
-See also [Publishing Viewer Presets](managing-viewer-presets.md#publishing-viewer-presets).
+另请参阅[发布查看器预设](managing-viewer-presets.md#publishing-viewer-presets)。
 
 根据您使用的发布模式，您可能不需要发布查看器预设。
-查看器预设有任何问题，请参 [阅Dynamic Media疑难解答- Scene7](troubleshoot-dms7.md#viewers)。
+查看器预设的任何问题，请参阅[Dynamic Media疑难解答-Scene7](troubleshoot-dms7.md#viewers)。
 
-## Applying a Dynamic Media viewer preset to an asset {#applying-a-viewer-preset-to-an-asset}
+## 将Dynamic Media查看器预设应用于资产{#applying-a-viewer-preset-to-an-asset}
 
-1. Open the asset and in the left rail, and tap **[!UICONTROL Viewers.]**
+1. 打开资产并在左边栏中，点按&#x200B;**[!UICONTROL 查看器。]**
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
@@ -38,6 +38,6 @@ See also [Publishing Viewer Presets](managing-viewer-presets.md#publishing-viewe
 
 1. 从左窗格中选择一个查看器，将其应用到资产，如右窗格中所示。 您还可以[复制 URL 以共享](linking-urls-to-yourwebapplication.md)给其他用户。
 
-## Obtaining viewer preset URLs {#obtaining-viewer-preset-urls}
+## 获取查看器预设URL {#obtaining-viewer-preset-urls}
 
 要获取查看器预设的 URL，请参阅[将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md)。
