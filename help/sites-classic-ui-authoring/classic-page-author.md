@@ -1,8 +1,8 @@
 ---
 title: 创作页面
 seo-title: 创作页面
-description: 有两个关于使用AEM进行创作的概述。 (1)创作的首要步骤——针对新作者的简介，以及(2)页面创作快速指南——主要操作的快速指南（高级）。
-seo-description: 有两个关于使用AEM进行创作的概述。 (1)创作的首要步骤——针对新作者的简介，以及(2)页面创作快速指南——主要操作的快速指南（高级）。
+description: 使用AEM进行创作有两个概述。 (1)创作的第一步——新作者的简介，以及(2)页面创作快速指南——主要操作的快速指南（简介）。
+seo-description: 使用AEM进行创作有两个概述。 (1)创作的第一步——新作者的简介，以及(2)页面创作快速指南——主要操作的快速指南（简介）。
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 78%
 
 ---
 
 
 # 创作页面{#authoring-pages}
 
-以下内容概述了如何使用AEM进行创作：
+下面概述了如何使用AEM进行创作：
 
 * [创作的首要步骤 - 针对新作者的简介](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)
 
@@ -35,9 +38,11 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 * **就地编辑** 文本和图像组件可以直接在网页上进行编辑，而无需打开对话框或明确的保存操作。
 
-* **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**可编辑页面上显示的“检查器”浮动窗口。从此处可以将新组件拖动到页面上，并且可以执行特定于页面的操作。
+* **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
+可编辑页面上显示的“检查器”浮动窗口。从此处可以将新组件拖动到页面上，并且可以执行特定于页面的操作。
 
-* **[内容查找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**每个可创作页面左侧的内容查找器可让您快速访问各种资产，包括数字资产（如其他图像、Flash 元素和文档）、其他页面和段落。可以将这些项目拖动到页面上；例如放置资产或创建到其他页面的链接。
+* **[内容查找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
+每个可创作页面左侧的内容查找器可让您快速访问各种资产，包括数字资产（如其他图像、Flash 元素和文档）、其他页面和段落。可以将这些项目拖动到页面上；例如放置资产或创建到其他页面的链接。
 
 * **上下文菜单**
 右键单击屏幕上的大部分元素（例如，页面上的段落）会显示包含相应操作选项的上下文菜单。
