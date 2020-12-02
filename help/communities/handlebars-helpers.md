@@ -28,15 +28,15 @@ Handlebars Helpers（帮助器）是从Handlebars脚本调用的方法，用于�
 
 该实现包括客户端和服务器端定义。 开发者也可以创建定制帮助器。
 
-与AEM Communities一起交付的定制SCF帮助器在客户 [库中定义](../../help/sites-developing/clientlibs.md):
+随AEM Communities提供的自定义SCF帮助器在[客户端库](../../help/sites-developing/clientlibs.md)中定义：
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
->请务必安装最 [新的Communities功能包](deploy-communities.md#latestfeaturepack)。
+>请务必安装[最新的Communities功能包](deploy-communities.md#latestfeaturepack)。
 
-## 缩写 {#abbreviate}
+## 缩写{#abbreviate}
 
 返回符合maxWords和maxLength属性的缩写字符串的帮助程序。
 
@@ -90,7 +90,7 @@ Then abbreviate would return
 */
 ```
 
-## 内容加载更多 {#content-loadmore}
+## Content-loadmore {#content-loadmore}
 
 一个帮助程序，用于在div下添加两个跨距，一个用于全文，另一个用于较少的文本，能够在两个视图之间切换。
 
@@ -158,7 +158,7 @@ Then content-loadmore would return
 // returns "03-18-2015"
 ```
 
-## Equals {#equals}
+## 等于{#equals}
 
 帮助者根据等式条件返回内容。
 
@@ -184,7 +184,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-一个块帮助程序，它根据字符串分 [隔的模式列表](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) ，测试WCM模式的当前值。
+一个块辅助器，它根据字符串分隔的模式列表测试[WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html)的当前值。
 
 ### 参数 {#parameters-4}
 
@@ -194,7 +194,7 @@ Then content-loadmore would return
 
 * **模式**:字符串
 
-   （可选）要测试的WCM模式 [的逗号分隔列表](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) （如果已设置）。
+   （可选）要测试是否已设置的逗号分隔列表[WCM模式](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html)。
 
 ### 示例 {#example-2}
 
@@ -210,7 +210,7 @@ Then content-loadmore would return
 
 该助手会覆盖Handlebars助手&#39;i18n&#39;。
 
-另请参 [阅在JavaScript代码中国际化字符串](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code)。
+另请参阅[在JavaScript代码中国际化字符串](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code)。
 
 ### 参数 {#parameters-5}
 
@@ -233,15 +233,15 @@ Then content-loadmore would return
 {{i18n "hello" comment="greeting" default="bonjour"}}
 ```
 
-## Include {#include}
+## 包括{#include}
 
 帮助程序，用于将组件作为非现有资源包含在模板中。
 
-这允许以编程方式对资源进行自定义，比作为JCR节点添加的资源更容易。 请参 [阅添加或包括社区组件](scf.md#add-or-include-a-communities-component)。
+这允许以编程方式对资源进行自定义，比作为JCR节点添加的资源更容易。 请参阅[添加或包括社区组件](scf.md#add-or-include-a-communities-component)。
 
-只包含少数几个社区组件。 对于AEM 6.1，可包含的是评 [论](essentials-comments.md)、 [评级](rating-basics.md)[、](reviews-basics.md)评 [论](essentials-voting.md)和投票。
+只包含少数几个社区组件。 对于AEM 6.1，可包含的是[注释](essentials-comments.md)、[评级](rating-basics.md)、[评论](reviews-basics.md)和[投票](essentials-voting.md)。
 
-此帮助程序仅适用于服务器端，它提供与JSP脚本 [的cq:include](../../help/sites-developing/taglib.md) 类似的功能。
+此帮助程序仅适用于服务器端，它为JSP脚本提供类似于[cq:include](../../help/sites-developing/taglib.md)的功能。
 
 ### 参数 {#parameters-6}
 
@@ -249,9 +249,9 @@ Then content-loadmore would return
 
    （可选，除非提供相对路径）
 
-   使 `this` 用传递当前上下文。
+   使用`this`传递当前上下文。
 
-   使用 `this.id` 在获取资源，以 `id` 呈现请求的resourceType。
+   使用`this.id`获取位于`id`的资源，以呈现所请求的resourceType。
 
 * **resourceType**:字符串
 
@@ -275,13 +275,13 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-这将包括位于+ /comments的新 `this.id` 注释组件。
+这将包括位于`this.id` + /comments的新注释组件。
 
 ## IncludeClientLib {#includeclientlib}
 
 包含AEM html客户端库的帮助程序，它可以是js、css或主题库。 对于多个不同类型的包含项，例如js和css，此标记需要在Handlebars脚本中多次使用。
 
-此帮助程序仅在服务器端适用，它提供与JSP脚本 [ui:includeClientLib](../../help/sites-developing/taglib.md) 类似的功能。
+此帮助程序仅适用于服务器端，它为JSP脚本提供类似于[ui:includeClientLib](../../help/sites-developing/taglib.md)的功能。
 
 ### 参数 {#parameters-7}
 
@@ -448,19 +448,19 @@ var input = {{xss-jsString topic-title}}
 <a href="{{xss-validHref url}}">my link</a>
 ```
 
-## Handlebars.js基本概述 {#handlebars-js-basic-overview}
+## Handlebars.js基本概述{#handlebars-js-basic-overview}
 
-从Handlebars.js文档快速概 [述帮助程序功能](https://handlebarsjs.com/expressions.html):
+[Handlebars.js文档](https://handlebarsjs.com/expressions.html)中帮助程序函数的快速概述：
 
-* Handlebars帮助程序调用是一个简单的标识符 *(帮助* 程序的名称)，后跟零个或多个以空格分隔的参数。
+* Handlebars帮助程序调用是简单标识符（帮助程序的&#x200B;*名称*），后跟零个或多个空分参数。
 * 参数可以是简单的字符串、数字、布尔或JSON对象，也可以是键值对（散列参数）的可选序列作为最后一个参数。
 * 哈希参数中的键必须是简单标识符。
 * 哈希参数中的值是Handlebars表达式:简单标识符、路径或字符串。
-* Handlebars帮助者 `this`始终可以找到当前的情境。
+* 当前上下文`this`始终适用于Handlebars帮助器。
 * 上下文可以是字符串、数字、布尔值或JSON数据对象。
-* 可以将嵌套在当前上下文中的对象作为上下文进行传递， `this.url` 如 `this.id` 或（请参阅以下简单和块帮助器示例）。
+* 可以将嵌套在当前上下文中的对象作为上下文进行传递，如`this.url`或`this.id`（请参见以下简单和块帮助器示例）。
 
-* 块帮助程序是可以从模板中的任何位置调用的功能。 他们每次都可以调用模板块零次或多次，并具有不同的上下文。 它们包含{{#*name*}}和{{/name}*之*&#x200B;间的上下文。
+* 块帮助程序是可以从模板中的任何位置调用的功能。 他们每次都可以调用模板块零次或多次，并具有不同的上下文。 它们包含{{#*name*}}和{{/*name*}}之间的上下文。
 
 * Handlebars为名为“options”的助手提供最终参数。 特殊对象“选项”包括
 
@@ -471,7 +471,7 @@ var input = {{xss-jsString topic-title}}
 
 * 建议从帮助程序返回的HTML字符串内容是SafeString。
 
-### Handlebars.js文档中的简单帮助程序示例： {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.js文档中的简单帮助程序示例：{#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -493,9 +493,11 @@ template(context);
 
 将呈现：
 
-&lt;ul>&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>发布！&lt;/a>&lt;/li>&lt;/ul>
+&lt;ul>
+&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>发布！&lt;/a>&lt;/li>
+&lt;/ul>
 
-### Handlebars.js文档中的块帮助程序示例： {#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.js文档中的块帮助程序示例：{#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
@@ -515,15 +517,19 @@ var template = Handlebars.compile(source);
 template(data);
 ```
 
-将呈现：&lt;ul>&lt;li>&lt;a href=&quot;/people/1&quot;>Alan&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/people/2&quot;>Yehuda&lt;/a>&lt;/li>&lt;/ul>
+将呈现：
+&lt;ul>
+&lt;li>&lt;a href=&quot;/people/1&quot;>Alan&lt;/a>&lt;/li>
+&lt;li>&lt;a href=&quot;/people/2&quot;>耶胡达&lt;/a>&lt;/li>
+&lt;/ul>
 
 ## 自定义SCF Helpers {#custom-scf-helpers}
 
 必须在服务器端和客户端上实现自定义帮助器，特别是在传递数据时。 对于SCF，当服务器在请求页面时为给定组件生成HTML时，大多数模板都在服务器端编译和呈现。
 
-### 服务器端自定义帮助器 {#server-side-custom-helpers}
+### 服务器端自定义帮助器{#server-side-custom-helpers}
 
-要在服务器端实现和注册自定义SCF帮助程序，只需实现Java接 [口TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，将它设为 [OSGi服务](../../help/sites-developing/the-basics.md#osgi) ，并将它作为OSGi捆绑的一部分进行安装。
+要在服务器端实现和注册自定义SCF帮助程序，只需实现Java接口[TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，使其成为[OSGi服务](../../help/sites-developing/the-basics.md#osgi)并作为OSGi捆绑的一部分进行安装。
 
 例如：
 
@@ -569,9 +575,9 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >在登录用户的客户端上重新呈现该组件，如果找不到客户端帮助程序，该组件将消失。
 
-### 客户端自定义帮助器 {#client-side-custom-helpers}
+### 客户端自定义帮助器{#client-side-custom-helpers}
 
-客户端帮助程序是通过调用注册的Handlebars脚本 `Handlebars.registerHelper()`。
+客户端帮助程序是通过调用`Handlebars.registerHelper()`注册的Handlebars脚本。
 例如：
 
 ### custom-helpers.js {#custom-helpers-js}
@@ -592,11 +598,11 @@ function(Handlebars, SCF, $CQ) {
 必须将自定义客户端帮助器添加到自定义客户端库。
 clientlib必须：
 
-* 包含依赖项 `cq.social.scf`。
+* 包含对`cq.social.scf`的依赖关系。
 * 加载Handlebars后加载。
-* 包 [括](clientlibs.md)。
+* 包含[](clientlibs.md)。
 
-注意：SCF帮助器的定义请见 `/etc/clientlibs/social/commons/scf/helpers.js`。
+注意：SCF帮助器在`/etc/clientlibs/social/commons/scf/helpers.js`中定义。
 
 | **[‹功能基本工具](essentials.md)** | **[服务器端自定义](server-customize.md)** |
 |---|---|
