@@ -1,6 +1,6 @@
 ---
 title: Content Services
-seo-title: Content Services
+seo-title: 内容服务
 description: 'null'
 seo-description: 'null'
 uuid: 7bd09c91-3931-400b-bdfc-b064b9ca9668
@@ -43,7 +43,7 @@ Content Services引入了几个新的AEM构造，使开发人员能够访问AEM�
 >
 >开始使用Content Services之前，请确保启用Content Services标志。 要在应用程序中启用模型的创建和管理，您需要在配置浏览器中启用数据模型。
 >
->有关 **[详细信息](/help/mobile/developing-content-services.md)** ，请参 [阅管理内](/help/sites-administering/configurations.md) 容服务和配置浏览器文档。
+>有关详细信息，请参阅&#x200B;**[管理内容服务](/help/mobile/developing-content-services.md)**&#x200B;和[配置浏览器](/help/sites-administering/configurations.md)文档。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
