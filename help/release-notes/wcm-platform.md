@@ -10,24 +10,24 @@ ht-degree: 56%
 ---
 
 
-# AEM基础和存储库 {#aem-foundation-repository}
+# AEM Foundation和存储库{#aem-foundation-repository}
 
 ## 更改列表 {#list-of-changes}
 
 ### 存储库 {#repository}
 
 * Adobe Experience Manager 6.5 的基础建立在基于 OSGi 的框架（Apache Sling 和 Apache Felix）和 Java 内容存储库 (Apache Jackrabbit Oak 1.10.2) 的更新版本之上。
-* 有关已修复问题的概 [述，请参阅Apache Jackrabbit Oak Jira v. 1.10](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt). [0、Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt) 和 [Apache Jackrabbit Oak Jira v. 1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
+* 有关已修复问题的概述，请参阅[Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt)和[Apache Jackrabbit Oak Jira v.1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
 
 >[!CAUTION]
 >
->自 AEM 6.3 以后提供的新版 Oak Segment Tar 需要存储库迁移。如果要从旧版TarMK升级，或希望从其他类型的持久性切换新的段Tar，则此步骤是必需的。 For more information on what the benefits of the new Segment Tar are, see the [Migrating to Oak Segment Tar FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
+>自 AEM 6.3 以后提供的新版 Oak Segment Tar 需要存储库迁移。如果要从旧版TarMK升级，或希望从其他类型的持久性切换新的段Tar，则此步骤是必需的。 有关新的Segment Tar的优势的更多信息，请参见[迁移到Oak Segment Tar常见问题解答](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
 
 ### Java 支持 {#java-support}
 
 * 新增对 Java 11 及已支持的 Java 8 的支持.
 * 为获取最佳性能，请使用其他值覆盖默认的 GC 值。有关更多信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
-* Java 11和Java 8维护更新是通过Adobe在AEM相关项目中分发的，如果不能从Oracle公开获得，则通过客户使用进行分发。
+* Java 11和Java 8维护更新由Adobe分发，以便客户在AEM相关项目中进行使用，如果Oracle不公开提供。
 
 ### OSGI {#osgi}
 
@@ -35,7 +35,7 @@ ht-degree: 56%
 
 ### 项目和工作流 {#projects-and-workflows}
 
-* New Workflow Model editor introduced in 6.4 has been improved to include more operations like Copy and Publish, Variable support in Workflow steps and enhanced `OR` and `AND` splits.
+* 6.4中引入的新工作流模型编辑器已得到改进，包括更多操作，如复制和发布、工作流步骤中的变量支持以及增强的`OR`和`AND`拆分。
 
 ### 搜索 {#searching}
 
@@ -58,14 +58,14 @@ ht-degree: 56%
 
 >[!CAUTION]
 >
->Adobe不会进一步增强经典UI。 Experience Manager6.5包含经典UI，可实现向后兼容性。 Classic UI remains fully supported while being deprecated [Read more](/help/sites-deploying/ui-recommendations.md).
+>Adobe不会进一步增强经典UI。 Experience Manager6.5包含经典UI，可实现向后兼容性。 当[已弃用时，经典UI仍完全受支持。请阅读更多](/help/sites-deploying/ui-recommendations.md)。
 
 ### 升级 {#upgrade}
 
 * 升级过程在 6.5 中基本保持不变。
 * 我们继续支持 6.4 中引入的向后兼容性、升级复杂性评估和可持续升级功能。已针对这些需要的区域进行了特定于版本的更新。
 * Pattern Detector 包装已经简化，并且针对可用的源本版本，将有一个到 6.5 的包评估升级。
-* 有关升级过程的详细信息，请参阅 [升级文档](/help/sites-deploying/upgrade.md)。
+* 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
 
 ### Web 服务器 {#web-server}
 
