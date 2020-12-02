@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 91%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 内容分析使用 Web 分析和 SEO 推荐提供有关页面性能的信息。使用内容分析可决定如何修改页面，或了解以前所做的更改使性能发生何种变化。对于您创作的每个页面，您都可以打开内容分析来分析页面。
 
-![chlimage_1-311](assets/chlimage_1-311.png)
+![chlimage_1-310](assets/chlimage_1-311.png)
 
 “内容分析”页面的布局会根据您所用设备的屏幕尺寸和方向进行相应更改。
 
@@ -48,7 +51,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。See [Integrating with SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrating with Adobe Target](/help/sites-administering/target.md), and [Integrating with BrightEdge](/help/sites-administering/brightedge.md).
+>内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。请参阅[与SightCatalyst](/help/sites-administering/adobeanalytics.md)集成、[与Adobe Target](/help/sites-administering/target.md)集成以及[与BrightEdge](/help/sites-administering/brightedge.md)集成。
 
 ## “查看次数”报表{#the-views-report}
 
@@ -85,7 +88,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ## “&lt;营销活动名称> 活动”报表{#the-campaign-activity-report}
 
-对于页面处于激活状态的每个营销活动，均会显示一个名为“*&lt;营销活动名称>* 活动”的报表。此报告显示提供选件的每个区段的页面印象和转化率。
+对于页面处于激活状态的每个营销活动，均会显示一个名为“*&lt;营销活动名称>* 活动”的报表。该报表显示提供优惠的每个区段的页面展示次数和转换率。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
