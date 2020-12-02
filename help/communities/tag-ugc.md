@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# 标记用户生成的内容 {#tagging-user-generated-content}
+# 标记用户生成的内容{#tagging-user-generated-content}
 
 ## 概述 {#overview}
 
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 标记命名空间和分类对于这两个应用程序是相同的。
 
-## 社区功能 {#communities-features}
+## 社区功能{#communities-features}
 
 可配置为允许标记的AEM Communities功能包括：
 
@@ -38,23 +38,23 @@ ht-degree: 3%
 * [论坛](forum.md#configuretheaddedforum)
 * [问题与解答](working-with-qna.md)
 
-## 管理标记 {#administering-tags}
+## 管理标记{#administering-tags}
 
-请参 [阅管理标记](../../help/sites-administering/tags.md#tagging-console) ，以创建和管理标记命名空间和分类。
+请参阅[管理标记](../../help/sites-administering/tags.md#tagging-console)以创建和管理标记命名空间和分类。
 
-有关开 [发人员信息](tag.md) ，请参阅Tag Essentials。
+有关开发人员信息，请参阅[Tag Essentials](tag.md)。
 
-请参 [阅使用社交标记云](tagcloud.md) ，以向页面添加社交标记云组件，以便于使用应用的标记搜索已发布的UGC。
+请参阅[使用社交标记云](tagcloud.md)将社交标记云组件添加到页面以便于使用应用的标记搜索发布的UGC。
 
-### 标记权限 {#tag-permissions}
+### 标记权限{#tag-permissions}
 
 默认权限设置为不允许发布命名空间中的所有人读取标记环境。
 
 由于标记在发布环境应用于UGC，因此需要为社区成员启用读取权限，以便他们能够选择要应用的标记。
 
-请参 [阅设置标记权限](../../help/sites-administering/tags.md#setting-tag-permissions)。
+请参阅[设置标记权限](../../help/sites-administering/tags.md#setting-tag-permissions)。
 
-以下是管理员对组应用读取权限时CRXDE中显示 `/etc/tag/discussions` 的方式 `Community Engage Members`。
+以下是管理员对组`Community Engage Members`的`/etc/tag/discussions`应用读取权限时CRXDE中显示的方式。
 
 ![标记权限](assets/tag-permissions.png)
 
