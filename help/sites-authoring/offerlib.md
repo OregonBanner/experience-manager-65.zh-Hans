@@ -12,6 +12,9 @@ discoiquuid: 81102d77-e856-4c85-b932-f22de8ca6462
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+workflow-type: tm+mt
+source-wordcount: '884'
+ht-degree: 94%
 
 ---
 
@@ -25,22 +28,22 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 “选件”控制台按品牌组织选件。每个品牌都包含一个可在品牌的体验中使用的选件库。可使用文件夹定义用于在每个库中组织选件的层次结构。作者可以通过在逻辑文件夹结构中进行浏览来轻松查找选件。作者还可以通过标记和搜索工具查找选件。
 
-## 使用“选件”控制台添加品牌 {#add-a-brand-using-the-offers-console}
+## 使用“选件”控制台添加品牌  {#add-a-brand-using-the-offers-console}
 
 创建与您的选件关联的品牌。在“选件”控制台中打开品牌以访问其选件库，您可以在该库中创建文件夹和选件。
 
 使用“选件”控制台创建品牌时，该品牌也会显示在您可以添加和管理品牌活动的[“活动”控制台](/help/sites-authoring/activitylib.md)中。
 
-1. 在“导航”控制台中，单击或点按&#x200B;**个性化** > **选件**。
+1. 在导航控制台中，单击或点按&#x200B;**个性化** > **选件**。
 
    ![screen-shot_2019-03-05at124139-1](assets/screen-shot_2019-03-05at124139-1.png)
 
-1. Click or tap **Create** and then **Create** **Brand**.
+1. 单击或点按&#x200B;**创建**，然后单击&#x200B;**创建** **品牌**。
 1. 选择品牌模板，然后单击或点按&#x200B;**下一步**。
 1. 键入您希望品牌在“选件”控制台和“活动”控制台中显示的标题。（可选）键入或选择要与该品牌关联的一个或多个标记。
 1. 单击或点按&#x200B;**创建**。
 
-## 向选件库中添加文件夹 {#add-a-folder-to-an-offer-library}
+## 向选件库中添加文件夹  {#add-a-folder-to-an-offer-library}
 
 向品牌的选件库中添加文件夹以组织和存储选件。您可以在品牌下或其他文件夹下创建一个文件夹。
 
@@ -49,14 +52,14 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
    ![screen-shot_2019-03-05at124557](assets/screen-shot_2019-03-05at124557.png)
 
-1. Select **Folder** and click **Next**.
+1. 选择&#x200B;**文件夹**&#x200B;并单击&#x200B;**下一步**。
 1. 键入您希望文件夹在选件库中显示的标题，然后键入或选择标记。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
 1. 单击或点按&#x200B;**创建**。
 
-## 向选件库中添加选件 {#add-an-offer-to-an-offer-library}
+## 向选件库中添加选件  {#add-an-offer-to-an-offer-library}
 
 向品牌的选件库中添加选件，以便能够将其添加到品牌的体验中。添加选件时，您需要提供标题。您还可以将选件与一个或多个标记相关联以提高可搜索性。
 
@@ -69,7 +72,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 1. 选择&#x200B;**选件页面**&#x200B;模板，然后单击或点按&#x200B;**下一步**。
 1. 键入选件的标题，（可选）选择或键入要与该选件关联的一个或多个标记，然后单击或点按&#x200B;**创建**。
-1. In the confirmation dialog box, to open the offer for editing click or tap **Open Page**.
+1. 在确认对话框中，要打开要编辑的优惠，请单击或点按&#x200B;**打开页面**。
 
 ## 编辑选件 {#editing-an-offer}
 
@@ -80,7 +83,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 1. 在“选件”控制台中，单击或点按选件旁边的图标，然后单击或点按&#x200B;**编辑**。
 1. 按常规方式向选件中添加组件并编辑组件内容。
 
-## 删除选件 {#deleting-an-offer}
+## 删除选件  {#deleting-an-offer}
 
 不再需要某个选件时，可将其删除。如果您尝试删除的选件已用在某个体验中，系统会提示您确认删除。确认后，会删除选件，同时也会将其从体验中删除。
 
@@ -96,7 +99,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
    * 要删除该选件，同时也将其从体验中删除，请单击或点按&#x200B;**强制删除**。
    * 要保留该选件，请单击或点按&#x200B;**取消**。
 
-## 搜索选件 {#searching-for-offers}
+## 搜索选件  {#searching-for-offers}
 
 通过使用与标题匹配的关键字搜索任何品牌的选件。
 
@@ -106,5 +109,5 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 要搜索选件，请执行以下操作：
 
-1. 在“选件”控制台顶部，单击或点按放大镜图标。默认情况下，搜索仅限于选件。
+1. 在“选件”控制台顶部，单击或点按放大镜图标。默认情况下，搜索仅限于优惠。
 1. 输入关键字以搜索选件。从结果中进行选择。
