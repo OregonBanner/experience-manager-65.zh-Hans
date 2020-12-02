@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# 自定义HTML5表单的错误消息 {#customizing-error-messages-for-html-forms}
+# 自定义HTML5表单的错误消息{#customizing-error-messages-for-html-forms}
 
 在HTML5表单中，现成的错误消息和警告具有固定的位置和外观（字体和颜色），错误仅针对所选字段显示，只显示一个错误。
 
@@ -38,8 +38,8 @@ ht-degree: 0%
 
 要自定义错误消息的位置，请为每个错误和警告字段添加&lt;div>标记，在左侧或右侧放置&lt;div>标记，并在&lt;div>标记上应用css样式。 有关详细步骤，请参阅下面列出的步骤：
 
-1. 导航到文 `CustomErrorManager-1.0-SNAPSHOT`件夹并打开文 `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` 件夹。
-1. Open the `customErrorManager.js` file for editing. 文件 `markError` 中的函数接受以下参数：
+1. 导览至`CustomErrorManager-1.0-SNAPSHOT`文件夹并打开`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`文件夹。
+1. 打开`customErrorManager.js`文件进行编辑。 文件中的`markError`函数接受以下参数：
 
    |  |  |
    |---|---|
@@ -77,7 +77,7 @@ ht-degree: 0%
    ```
 
 1. 保存并关闭文件。
-1. 导览至文 `CustomErrorManager-1.0-SNAPSHOT` 件夹并创建jcr_root和META-INF文件夹的存档。 将存档重命名为CustomErrorManager-1.0-SNAPSHOT.zip。
+1. 导览至`CustomErrorManager-1.0-SNAPSHOT`文件夹并创建jcr_root和META-INF文件夹的存档。 将存档重命名为CustomErrorManager-1.0-SNAPSHOT.zip。
 1. 使用包管理器上传和安装包。
 
 ## 显示多个字段的错误消息  {#display-error-messages-for-multiple-fields-nbsp}
@@ -120,9 +120,9 @@ ht-degree: 0%
 
 ## 使用新用户档案渲染表单。  {#render-the-form-with-the-new-profile-nbsp}
 
-现成的html5表单使用默认用户档案: https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名称>
+现成的html5表单使用默认用户档案:https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名称>
 
-要视图包含自定义错误消息的表单，请呈现包含错误用户档案的表单： https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名称>
+要视图包含自定义错误消息的表单，请呈现包含错误用户档案的表单：https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdp的名称>
 
 >[!NOTE]
 >
