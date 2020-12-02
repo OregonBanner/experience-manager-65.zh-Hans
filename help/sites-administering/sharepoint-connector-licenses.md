@@ -12,17 +12,20 @@ discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 10%
 
 ---
 
 
-# SharePoint Connector许可、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
+# SharePoint连接器许可、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本节列出了与Day JCR Connector for MS SharePoint相关的所有许可、版权声明和免责声明。
+本节列表所有与Day JCR Connector for MS SharePoint相关的许可、版权声明和免责声明。
 
-## Connector第三方库概述 {#overview-of-connector-rd-party-libraries}
+## 连接器第三方库概述{#overview-of-connector-rd-party-libraries}
 
-下表列出了在SharePoint Connector核心库中使用的第三方库，以及它们所涵盖的许可、版权声明或免责声明：
+下表列表了SharePoint Connector核心库中使用的第三方库，以及其涵盖的许可、版权声明或免责声明：
 
 | 库 | 许可类型 |
 |---|---|
@@ -40,13 +43,13 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
 | 并发 | [并发](#concurrent) （公共域） |
-| geronimo-activation_1.1.spec | [Apache](#apache) |
+| geronimo-激活_1.1.spec | [Apache](#apache) |
 | geronimo-stax-api_1.0.spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
 | jackrabbit-jcr-commons | [Apache](#apache) |
 | jackrabbit-spi-commons | [Apache](#apache) |
-| 野兔小兔 | [Apache](#apache) |
+| 野兔大嘴 | [Apache](#apache) |
 | jaxen | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
@@ -56,14 +59,14 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 | stax-api | [Apache](#apache) |
 | wsdl4j | [Apache](#apache) |
 | wstx-asl | [Apache](#apache) |
-| xalan | [Apache](#apache) |
+| 扎兰 | [Apache](#apache) |
 | xbean | [Apache](#apache) |
 | xml-api | [Apache](#apache) （包含Public Domain和W3C软件许可涵盖的部分） |
 | XmlSchema | [Apache](#apache) |
 
-## CRX第三方库概述 {#overview-of-crx-rd-party-libraries}
+## CRX第三方库概述{#overview-of-crx-rd-party-libraries}
 
-下表列出了CRX中使用的第三方库，以及其涵盖的许可、版权声明或免责声明：
+下表列表了CRX中使用的第三方库，以及涵盖的许可、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -95,7 +98,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
-   <td>并发-1.3.4.jar</td>
+   <td>concurrent-1.3.4.jar</td>
    <td><a href="#concurrent">并发</a></td>
   </tr>
   <tr>
@@ -104,10 +107,10 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
   </tr>
   <tr>
    <td>hsqldb-1.8.0.4.jar</td>
-   <td><a href="#hypersonic-sql-group">高超音速SQL组</a></td>
+   <td><a href="#hypersonic-sql-group">Hypersonic SQL Group</a></td>
   </tr>
   <tr>
-   <td>jaxen-1.1 beta-6.jar</td>
+   <td>jaxen-1.1-beta-6.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -153,9 +156,9 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
  </tbody>
 </table>
 
-## CQSE第三方库概述 {#overview-of-cqse-rd-party-libraries}
+## CQSE第三方库概述{#overview-of-cqse-rd-party-libraries}
 
-下表列出了Parneiture Servlet engine中使用的第三方库，以及其涵盖的许可、版权声明或免责声明：
+下表列表了Ponnature Servlet引擎中使用的第三方库，以及其涵盖的许可、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -424,7 +427,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      limitations under the License.
 ```
 
-## 并发 {#concurrent}
+## 并发{#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -436,7 +439,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## 第JCR天 {#day-jcr}
+## 第JCR {#day-jcr}天
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
@@ -565,7 +568,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      implementations, and test suites thereof.
 ```
 
-## 高超音速SQL组 {#hypersonic-sql-group}
+## 高超音速SQL组{#hypersonic-sql-group}
 
 ```xml
      COPYRIGHTS AND LICENSES
@@ -1092,7 +1095,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      (LFI#95810/Form ID#011801)
 ```
 
-## W3C文档 {#w-c-document}
+## W3C文档{#w-c-document}
 
 ```xml
      This license came from: https://www.w3.org/Consortium/Legal/
@@ -1178,7 +1181,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
      (last updated by reagle on 1999/04/99.)
 ```
 
-## W3C软件 {#w-c-software}
+## W3C软件{#w-c-software}
 
 ```xml
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>
