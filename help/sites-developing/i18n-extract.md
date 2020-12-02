@@ -11,21 +11,24 @@ topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 0%
 
 ---
 
 
-# 提取字符串以进行翻译{#extracting-strings-for-translating}
+# 提取要翻译的字符串{#extracting-strings-for-translating}
 
-使用xgettext-maven-plugin从需要翻译的源代码中提取字符串。 Maven插件将字符串提取到您发送以供翻译的XLIFF文件。 字符串从以下位置提取：
+使用xgettext-maven-plugin从需要翻译的源代码中提取字符串。 Maven插件会将字符串提取到您发送以进行翻译的XLIFF文件。 字符串从以下位置提取：
 
 * Java源文件
 * Javascript源文件
 * SVN资源（JCR节点）的XML表示
 
-## 配置字符串提取 {#configuring-string-extraction}
+## 配置字符串提取{#configuring-string-extraction}
 
-配置xgettext-maven-plugin工具提取项目字符串的方式。
+配置xgettext-maven-plugin工具如何提取项目的字符串。
 
 ```xml
 /filter { }
@@ -45,30 +48,30 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 | 区域 | 描述 |
 |---|---|
-| /filter | 标识要解析的文件。 |
-| /parsers/vaultxml | 配置对Vault文件的解析。 标识包含外部字符串和本地化提示的JCR节点。 还标识要忽略的JCR节点。 |
+| /filter | 标识要分析的文件。 |
+| /parsers/vaultxml | 配置对保管库文件的解析。 标识包含外部字符串和本地化提示的JCR节点。 还标识要忽略的JCR节点。 |
 | /parsers/javascript | 标识将字符串外置的Javascript函数。 您无需更改此部分。 |
 | /parsers/regexp | 配置Java、JSP和ExtJS模板文件的解析。 您无需更改此部分。 |
 | /潜能 | 用于检测要国际化的字符串的公式。 |
 
-### 标识要解析的文件 {#identifying-the-files-to-parse}
+### 标识要分析的文件{#identifying-the-files-to-parse}
 
-i18n.any文件的/filter部分标识xgettext-maven-plugin工具解析的文件。 添加多个包含和排除规则，它们分别标识已解析和忽略的文件。 您应包括所有文件，然后排除不想解析的文件。 通常，您会排除不会对UI起作用的文件类型，或者排除定义UI但未翻译的文件。 包含和排除规则具有以下格式：
+i18n.any文件的/filter部分标识xgettext-maven-plugin工具解析的文件。 添加多个包含和排除规则，这些规则分别标识已解析和忽略的文件。 您应包括所有文件，然后排除您不想分析的文件。 通常，您会排除不会对UI起作用的文件类型，或者排除定义UI但未翻译的文件。 包含和排除规则具有以下格式：
 
 ```
 { /include "pattern" }
 { /exclude "pattern" }
 ```
 
-规则的模式部分用于匹配要包括或排除的文件的名称。 模式前缀指示您是匹配JCR节点（其在Vault中的表示）还是文件系统。
+规则的模式部分用于匹配要包括或排除的文件的名称。 模式前缀指示您是匹配JCR节点（其在Vault中的表示形式）还是文件系统。
 
 | 前缀 | 效果 |
 |---|---|
 | / | 指示JCR路径。 因此，此前缀与jcr_root目录下的文件匹配。 |
 | &amp;ast; | 指示文件系统上的常规文件。 |
-| 无 | 没有前缀，或以文件夹或文件名开头的模式，表示文件系统上的常规文件。 |
+| 无 | 没有前缀或以文件夹或文件名开头的模式表示文件系统上的常规文件。 |
 
-在模式中使用时，/字符表示子目录和&amp;ast;字符匹配全部。 下表列出了几个示例规则。
+在模式中使用时，/字符表示子目录和&amp;ast;字符匹配全部。 下表列表了几个示例规则。
 
 <table>
  <tbody>
@@ -97,7 +100,7 @@ i18n.any文件的/filter部分标识xgettext-maven-plugin工具解析的文件�
  </tbody>
 </table>
 
-### 提取字符串 {#extracting-the-strings}
+### 解压字符串{#extracting-the-strings}
 
 无POM:
 
@@ -131,13 +134,13 @@ mvn -N com.adobe.granite.maven:xgettext-maven-plugin:1.2.2:extract  -Dxgettext.v
 mvn xgettext:extract
 ```
 
-### 输出文件 {#output-files}
+### 输出文件{#output-files}
 
 * `raw.xliff`:提取字符串
-* `warn.log`:警告（如果有），如果 `CQ.I18n.getMessage()` API使用错误。 它们总是需要修复，然后重新运行。
+* `warn.log`:警告（如果有）, `CQ.I18n.getMessage()` 如果API使用不正确。它们总需要修复，然后重新运行。
 
 * `parserwarn.log`:分析器警告（如果有），例如js分析器发生问题
-* `potentials.xliff`:“潜在”候选项未提取，但可能是需要翻译的人类可读字符串（可以忽略，仍然会产生大量误报）
+* `potentials.xliff`:“潜在”候选项未被提取，但可能是需要翻译的人类可读字符串（可以忽略，仍会产生大量误报）
 * `strings.xliff`:要导入ALF的拼合xliff文件
 * `backrefs.txt`:允许快速查找给定字符串的源代码位置
 
