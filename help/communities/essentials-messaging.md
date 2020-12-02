@@ -23,7 +23,7 @@ ht-degree: 3%
 
 本页文档了使用消息组件在网站上包含消息传递功能的详细信息。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 **撰写消息**
 
@@ -47,7 +47,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td>请参阅 <a href="/help/communities/configure-messaging.md" target="_blank">配置消息</a></td>
+   <td>请参阅<a href="/help/communities/configure-messaging.md" target="_blank">配置消息</a></td>
   </tr>
   <tr>
    <td><strong>管理员配置</strong></td>
@@ -80,7 +80,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td>请参阅 <a href="/help/communities/configure-messaging.md" target="_blank">配置消息</a></td>
+   <td>请参阅<a href="/help/communities/configure-messaging.md" target="_blank">配置消息</a></td>
   </tr>
   <tr>
    <td><strong>管理员配置</strong></td>
@@ -89,19 +89,19 @@ ht-degree: 3%
  </tbody>
 </table>
 
-另请参阅 [客户端自定义](/help/communities/client-customize.md)
+另请参阅[客户端自定义](/help/communities/client-customize.md)
 
-## 服务器端必备工具 {#essentials-for-server-side}
+## 服务器端{#essentials-for-server-side}的必备工具
 
 * [配置消息传递](/help/communities/configure-messaging.md)
-* [SCF组件的消息](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) 、客户端API
-* [服务的消息](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) API
+* [用于SCF组](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) 件的消息客户端API
+* [服务](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) 的消息传递API
 * [消息终结点](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [服务器端自定义](/help/communities/server-customize.md)
 
 >[!CAUTION]
 >
->String参数不能 *包含* 以下MessageBuilder方法的尾随斜杠“/”:
+>字符串参数必须&#x200B;*不*&#x200B;包含以下MessageBuilder方法的尾随斜杠“/”:
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
@@ -118,34 +118,34 @@ ht-degree: 3%
 
 ### 社区站点 {#community-site}
 
-使用向导创建的社区站点结构在选中时包括消息功能。 请参 `User Management` 阅社区站 [点控制台的设置](/help/communities/sites-console.md#user-management)。
+使用向导创建的社区站点结构在选中时包括消息功能。 请参阅[社区站点控制台](/help/communities/sites-console.md#user-management)的`User Management`设置。
 
-### 示例代码：收到的消息通知 {#sample-code-message-received-notification}
+### 示例代码：收到的消息通知{#sample-code-message-received-notification}
 
-社交消息功能将事件投放到操作 `send`中， `marking read`例如 `marking delete`。 可以捕获这些事件并对事件中包含的数据采取操作。
+社交消息功能会为操作抛出事件，例如`send`、`marking read`、`marking delete`。 可以捕获这些事件并对事件中包含的数据采取操作。
 
-以下示例是事件处理程序，它监听 `message sent` 事件并使用向所有消息收件人发送电子邮件 `Day CQ Mail Service`。
+以下示例是事件处理函数，它监听`message sent`事件，并使用`Day CQ Mail Service`向所有消息收件人发送电子邮件。
 
 要试用服务器端示例脚本，您需要开发环境和构建OSGi捆绑包的能力：
 
-1. 以管理员身份登录 ` [CRXDE|Lite](https://localhost:4502/crx/de)`。
-1. 创建 `bundle node`具有 `/apps/engage/install` 任意名称的In，如：
+1. 以管理员身份登录到` [CRXDE|Lite](https://localhost:4502/crx/de)`。
+1. 在`/apps/engage/install`中创建具有任意名称的`bundle node`，如：
 
    * 符号名称: `com.engage.media.social.messaging.MessagingNotification`
    * 名称：入门教程消息通知
    * 描述：用于在用户收到消息时向其发送电子邮件通知的示例服务
    * 包: `com.engage.media.social.messaging.notification`
 
-1. 导航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然后：
+1. 导航到`/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`，然后：
 
-   1. 删除自 `Activator.java` 动创建的类。
-   1. 创建类 `MessageEventHandler.java`。
-   1. 将下面的代码复制并粘贴到 `MessageEventHandler.java`中。
+   1. 删除自动创建的`Activator.java`类。
+   1. 创建类`MessageEventHandler.java`。
+   1. 将下面的代码复制并粘贴到`MessageEventHandler.java`中。
 
-1. 单击“ **全部保存**”。
-1. 导航到 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`并添加代码中编写的所有导入语 `MessageEventHandler.java` 句。
+1. 单击&#x200B;**保存全部**。
+1. 导航到`/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`，并添加在`MessageEventHandler.java`代码中编写的所有import语句。
 1. 构建捆绑包。
-1. 确保 `Day CQ Mail Service`已配置OSGi服务。
+1. 确保已配置`Day CQ Mail Service`OSGi服务。
 1. 以演示用户身份登录，并向其他用户发送电子邮件。
 1. 收件人收到有关新消息的电子邮件。
 
