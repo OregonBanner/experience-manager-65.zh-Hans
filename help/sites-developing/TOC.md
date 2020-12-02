@@ -15,7 +15,7 @@ ht-degree: 13%
 ---
 
 
-# AEM 6.5 Developing 用户指南 {#developing}
+# AEM 6.5 Developing 用户指南  {#developing}
 
 + [开发用户指南概述](home.md)
 + 开发人员简介{#introduction}
@@ -41,7 +41,7 @@ ht-degree: 13%
    + [标记库](taglib.md)
    + 模板{#templates}
       + [模板](templates.md)
-      + [页面模板——可编辑 ](page-templates-editable.md)
+      + [页面模板——可编辑  ](page-templates-editable.md)
       + [页面模板——静态](page-templates-static.md)
       + [内容片段模板](content-fragment-templates.md)
       + [自适应模板渲染](templates-adaptive-rendering.md)
