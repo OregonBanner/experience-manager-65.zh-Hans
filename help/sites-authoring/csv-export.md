@@ -12,6 +12,9 @@ discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 86%
 
 ---
 
@@ -53,7 +56,7 @@ source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
 
 ![etc-01](assets/etc-01.png)
 
-The create **CSV Report** option is available when browsing the **Sites** console (in List view): it is an option of the **Create** drop down menu:
+在浏览&#x200B;**站点**&#x200B;控制台时，可以使用创建&#x200B;**CSV报告**&#x200B;选项(在列表视图中):它是&#x200B;**创建**&#x200B;下拉菜单的选项：
 
 ![etc-02](assets/etc-02.png)
 
