@@ -1,6 +1,6 @@
 ---
-title: 马根托
-seo-title: 马根托
+title: Magento
+seo-title: Magento
 description: 'null'
 seo-description: 'null'
 uuid: 2b816f8d-e654-41cf-8081-c9f41ddf7978
@@ -13,9 +13,12 @@ docset: aem65
 redirecttarget: https //www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md
 translation-type: tm+mt
 source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+workflow-type: tm+mt
+source-wordcount: '5'
+ht-degree: 0%
 
 ---
 
 
-# 马根托{#magento}
+# Magento{#magento}
 
