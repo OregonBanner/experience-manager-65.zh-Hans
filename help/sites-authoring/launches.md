@@ -12,6 +12,9 @@ discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+workflow-type: tm+mt
+source-wordcount: '827'
+ht-degree: 95%
 
 ---
 
@@ -40,7 +43,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 * [编辑启动项](/help/sites-authoring/launches-editing.md)
 * [提升启动项](/help/sites-authoring/launches-promoting.md)
 
-## 启动项 - 事件的顺序 {#launches-the-order-of-events}
+## 启动项 - 事件的顺序  {#launches-the-order-of-events}
 
 启动项允许您有效地为将来发布的一个或多个激活网页开发内容。
 
@@ -48,16 +51,17 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 * 创建源页面的副本：
 
-   * 该副本即是您的启动项。
-   * 顶层源页面称为&#x200B;**生产**。
+   * 副本是您的启动项。
+   * 顶级源页面称为&#x200B;**生产**。
 
       * 源页面可以从多个（不同的）分支中获取。
+
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-* 编辑启动项配置：
+* 编辑启动配置：
 
    * 在启动项中添加或删除页面和/或分支。
-   * 编辑启动项属性；如&#x200B;**标题**、**启动日期**、**生产就绪**&#x200B;标记。
+   * 编辑启动项属性；如标 **题**、启 **动日期**、生 **产就绪标记** 。
 
 * 您可以手动或自动提升和发布内容：
 
@@ -71,7 +75,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
       * **启动**（**起始**）**日期**&#x200B;字段：可在创建或编辑启动项时设置此字段。
 
       * **生产就绪**&#x200B;标记：只能在编辑启动项时设置此标记。
-      * 如果&#x200B;**生产就绪**&#x200B;标记已设置，则启动项将于指定的&#x200B;**启动**（**起始**）**日期**&#x200B;自动提升到生产页面。提升后，生产页面将会自动发布。\
+      * 如果&#x200B;**生产就绪**&#x200B;标记已设置，则启动项将于指定的&#x200B;**启动**（**起始**）**日期**&#x200B;自动提升到生产页面。升级后，生产页面会自动发布。\
          如果未设置日期，该标记将不起作用。
 
 
@@ -79,12 +83,14 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
    * 对源页面所做的更改会自动体现在启动副本中（如果进行了继承设置，即设置为 Live Copy）。
    * 可以在不中断这些自动更新或源页面的情况下对启动副本进行更改。
+
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
 * [创建嵌套启动项](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - 一个启动项嵌套在另一个启动项中：
 
    * 源是现有的启动项。
    * 您可以将[嵌套启动项提升](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)到任何目标；该目标可以是父启动项或顶层源页面（生产）。
+
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
    >[!CAUTION]
@@ -93,7 +99,7 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 >[!NOTE]
 >
->Creating and editing launches requires access rights to `/content/launches` - as with the default group `content-authors`.
+>创建和编辑启动项需要对`/content/launches`的访问权限——与默认组`content-authors`的权限相同。
 >
 >如果您遇到任何问题，请联系您的系统管理员。
 
@@ -103,9 +109,9 @@ source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
 
 * **工具**&#x200B;控制台：**工具**、**站点**、**启动项**。
 
-* Or directly with [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* 或直接使用[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
-## Launches in References (Sites Console) {#launches-in-references-sites-console}
+## 引用（站点控制台）中的启动项{#launches-in-references-sites-console}
 
 1. 在&#x200B;**站点**&#x200B;控制台中，导航到启动项的源。
 1. 打开&#x200B;**引用**&#x200B;边栏并选择源页面。
