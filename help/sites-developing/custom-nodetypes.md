@@ -1,8 +1,8 @@
 ---
 title: 自定义节点类型
 seo-title: 自定义节点类型
-description: AEM基于Sling，并且使用JCR存储库，该存储库具有两种提供的节点类型，但AEM还提供一系列自定义节点类型
-seo-description: AEM基于Sling，并且使用JCR存储库，该存储库具有两种提供的节点类型，但AEM还提供一系列自定义节点类型
+description: AEM基于Sling，并且使用JCR存储库，该存储库具有由二者提供的节点类型，但AEM还提供一系列自定义节点类型
+seo-description: AEM基于Sling，并且使用JCR存储库，该存储库具有由二者提供的节点类型，但AEM还提供一系列自定义节点类型
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -20,14 +20,14 @@ ht-degree: 9%
 
 # 自定义节点类型{#custom-node-types}
 
-由于AEM基于Sling并使用JCR存储库，因此这两个资源库提供的节点类型均可供使用：
+由于AEM基于Sling并且使用JCR存储库，因此这两个存储库提供的节点类型均可供使用：
 
 * [JCR节点类型](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling节点类型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
 除了这些。 AEM提供一系列自定义节点类型。
 
-## 审核 {#audit}
+## 审核{#audit}
 
 ### cq:AuditEvent {#cq-auditevent}
 
@@ -57,7 +57,7 @@ ht-degree: 9%
 
 ## 注释 {#comment}
 
-### cq：评论 {#cq-comment}
+### cq：评论{#cq-comment}
 
 **描述**
 
@@ -80,7 +80,7 @@ ht-degree: 9%
 
 **描述**
 
-定义节点的节点类 `commentattachment` 型
+定义`commentattachment`节点的节点类型
 
 **定义**
 
@@ -120,7 +120,7 @@ ht-degree: 9%
 * `- latitude (double)`
 * `- longitude (double)`
 
-### cq：跟踪 {#cq-trackback}
+### cq:Trackback {#cq-trackback}
 
 **描述**
 
@@ -202,7 +202,7 @@ ht-degree: 9%
 * `@node jcr:content` -新页面的默认内容。
 * `@node icon.png` -包含特征图标的文件。
 * `@node thumbnail.png` -包含特征缩略图的文件。
-* `@node workflows` -自动分配工作流配置。 配置将遵循以下结构：
+* `@node workflows` -自动分配工作流配置。配置将遵循以下结构：
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
@@ -237,7 +237,7 @@ ht-degree: 9%
 * `@prop dialogPath` -主对话框路径（对话框的替代路径）。
 * `@node design_dialog` -设计对话框。
 * `@prop cq:cellName` -设计单元格的名称。
-* `@prop cq:isContainer` -指示此组件是否为容器组件。 这会强制使用子组件的单元格名称而不是路径名称。 例如，它是 `parsys` 一个容器组件。 如果未定义此值，则根据是否存在进行检查 `cq:childEditConfig`。
+* `@prop cq:isContainer` -指示此组件是否为容器组件。这会强制使用子组件的单元格名称而不是路径名称。 例如，`parsys`是容器组件。 如果未定义此值，则根据存在`cq:childEditConfig`进行检查。
 * `@prop cq:noDecoration` -如果为true，则在包 `div` 含此组件时不会绘制装饰标签。
 * `@node cq:editConfig` -定义编辑栏参数的配置。
 * `@node cq:childEditConfig` -子组件继承的编辑配置。
@@ -248,7 +248,7 @@ ht-degree: 9%
 * `@prop allowedChildren` -常规表达式模式，用于确定允许作为子组件的组件的路径。
 * `@node virtual` -包含反映用于拖放组件的虚拟组件的子节点。
 * `@prop componentGroup` -组件组的名称，用于拖放组件。
-* `@node cq:infoProviders` -包含子节点，每个子节点都具有 `className` 引用的属性 `PageInfoProvider`。
+* `@node cq:infoProviders` -包含子节点，每个子节点都 `className` 有引用的属性 `PageInfoProvider`。
 
 **定义**
 
@@ -321,7 +321,7 @@ ht-degree: 9%
 
 配置组件的一个放置目标。 此节点的名称将用作拖放的ID。
 
-* `@prop accept` -此丢弃列表接受的mime类型目标; 例如， `["image/*"]`
+* `@prop accept` -此丢弃列表接受的mime类型目标;例如，  `["image/*"]`
 * `@prop groups` -接受源的拖放组列表。
 * `@prop propertyName` -用于存储引用的属性的名称。
 
@@ -418,7 +418,7 @@ DAM资产。
 `+ jcr:content (dam:AssetContent) = dam:AssetContent copy primary`
 `+ * (nt:base) = nt:base version`
 
-### dam：缩略图 {#dam-thumbnail}
+### dam：缩略图{#dam-thumbnail}
 
 **描述**
 
@@ -430,7 +430,7 @@ DAM资产。
    * `mixin`
    * `+ dam:thumbnails (nt:folder)`
 
-## 投放容器列表 {#delivery-container-list}
+## 投放容器列表{#delivery-container-list}
 
 ### cq:containerList {#cq-containerlist}
 
@@ -443,13 +443,13 @@ DAM资产。
 * `[cq:containerList]`
    * `mixin`
 
-## 投放页 {#delivery-page}
+## 投放页{#delivery-page}
 
 ### cq:Cq4PageAttributes {#cq-cq-pageattributes}
 
 **描述**
 
-`cq:attributes` 是ContentBus版本标签的节点类型。 此节点仅具有一系列属性； 其中三个是预定义的“created”、“csd”和“timestampe”。
+`cq:attributes` 是ContentBus版本标记的节点类型。此节点仅具有一系列属性；其中三个是预定义的“created”、“csd”和“timestampe”。
 
 * `@prop created (long) mandatory copy` -创建版本信息的时间戳，通常为签入先前版本的时间或页面创建时间。
 * `@prop csd (string) mandatory copy` - csd标准属性，页面节点的cq:csd属性的副本
@@ -468,13 +468,13 @@ DAM资产。
 
 **描述**
 
-节点类型 `cq:contentPage` 包含ContentBus内容页的属性和子节点定义。 仅当将此混合类型添加到类型的节点时， `cq:page`节点才会变为ContentBus内容页面。
+节点类型`cq:contentPage`包含ContentBus内容页的属性和子节点定义。 仅当将此混音类型添加到类型`cq:page`的节点时，节点才变为ContentBus内容页。
 
-中的项 `cq:Cq4ContentPage` 为：
+`cq:Cq4ContentPage`中的项为：
 
-* `@prop cq:csd` -页面的ContentBus CSD。
-* `@node cq:content` -页面内容。 如果页面节点处于“现有且无内容”或“已删除”状态，则此子节点不存在。
-* `@node cq:attributes` -页面属性的列表，以前称为版本标签。 对于cq:contentPage类型，此节点是必需的。 当页面为节点时，属性节点的版本化。
+* `@prop cq:csd` -页面的ContentBusCSD。
+* `@node cq:content` -页面内容。如果页面节点处于“现有且无内容”或“已删除”状态，则此子节点不存在。
+* `@node cq:attributes` -页面属性的列表，以前称为版本标签。对于cq:contentPage类型，此节点是必需的。 当页面为节点时，属性节点的版本化。
 
 **定义**
 
@@ -491,9 +491,9 @@ DAM资产。
 投票配置。
 
 * `@prop source (String) mandatory` -数据源URI，这是必需的，不能为空
-* `@prop target (String)` -目标位置，存储从数据源检索的数据。 这是可选的，默认为cq:PollConfig节点。
-* `@prop interval (Long)` -轮询数据源中新数据或更新数据的时间间隔（秒）。 这是可选的，默认为30分钟（1800秒）。
-* [创建自定义Adobe Experience Manager导入程序服务](https://helpx.adobe.com/experience-manager/using/polling.html)
+* `@prop target (String)` -目标位置，存储从数据源检索的数据。这是可选的，默认为cq:PollConfig节点。
+* `@prop interval (Long)` -轮询数据源中新数据或更新数据的时间间隔（秒）。这是可选的，默认为30分钟（1800秒）。
+* [为Adobe Experience Manager创建自定义数据导入程序服务](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **定义**
 
@@ -526,12 +526,12 @@ DAM资产。
 
 **定义**
 
-* `[cq:GeoLocation]
+* “[cq:GeoLocation]
    * `mixin`
    * `- latitude (double)`
    * `- longitude (double)`
 
-## 邮递员 {#mailer}
+## 邮递器{#mailer}
 
 ### cq:mailerMessage {#cq-mailermessage}
 
@@ -585,7 +585,7 @@ MailerService节点类型。 邮件服务器使用具有此混合的节点作为
 
 定义LiveSyncCancelled混音。 取消LiveCopy（受控）节点的LiveSync行为，由于其父节点之一，该节点可能与LiveRelation相关。
 
-* `@prop cq:isCancelledForChildren` -定义LiveSync是否被取消； 还有儿童。
+* `@prop cq:isCancelledForChildren` -定义LiveSync是否被取消；还有儿童。
 
 **定义**
 
@@ -657,12 +657,12 @@ Blueprint操作
 * `@prop cq:lastPublishedBy`-上次发布页面的用户（不再使用）。
 * `@prop cq:lastReplicated` -上次复制页面的日期。
 * `@prop cq:lastReplicatedBy` -上次复制页面的用户。
-* `@prop cq:lastReplicationAction` -复制操作： 激活或取消激活。
+* `@prop cq:lastReplicationAction` -复制操作：激活或取消激活。
 * `@prop cq:lastReplicationStatus` —复制状态（不再使用）。
 
 **定义**
 
-* `[cq:ReplicationStatus]
+* “[cq:ReplicationStatus]
    * `mixin`
    * `- cq:lastPublished (date) ignore`
    * `- cq:lastPublishedBy (string) ignore`
@@ -767,7 +767,7 @@ Blueprint操作
 
 ## 标记 {#tagging}
 
-### cq：标记 {#cq-tag}
+### cq：标记{#cq-tag}
 
 **描述**
 
@@ -819,7 +819,7 @@ Blueprint操作
 
 **描述**
 
-添加 `cq:userContent` 可由用户修改的子节点。 每个用户都有自己的 `cq:userContent/<userid>` 子节点，该子节点通常有mixin `cq:UserTaggable`。
+添加用户可以修改的`cq:userContent`子节点。 每个用户都有自己的`cq:userContent/<userid>`子节点，该子节点通常有mixin `cq:UserTaggable`。
 
 **定义**
 
@@ -827,13 +827,13 @@ Blueprint操作
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-扩展变体，更明确地定义树 `cq:userContent` 。
+扩展变体，更明确地定义`cq:userContent`树
 
 * `[cq:AllowsUserContent]`
    * `mixin`
    * `+ cq:userContent (cq:UserContent)`
 
-### cq：用户内容 {#cq-usercontent}
+### cq:UserContent {#cq-usercontent}
 
 **描述**
 
@@ -857,7 +857,7 @@ Blueprint操作
 
 * `[cq:UserData] > nt:unstructured, cq:UserTaggable`
 
-## 构件 {#widgets}
+## 构件{#widgets}
 
 ### cq:ClientLibraryFolder {#cq-clientlibraryfolder}
 
@@ -871,7 +871,7 @@ Blueprint操作
    * `- categories (string) multiple`
    * `- dependencies (string) multiple`
 
-### cq：构件 {#cq-widget}
+### cq：构件{#cq-widget}
 
 **描述**
 
@@ -897,7 +897,7 @@ Blueprint操作
    * `orderable`
    * `+ * (cq:Widget) = cq:Widget copy`
 
-### cq：对话框 {#cq-dialog}
+### cq:Dialog {#cq-dialog}
 
 **描述**
 
@@ -907,7 +907,7 @@ Blueprint操作
 
 * `[cq:Dialog] > cq:Widget orderable`
 
-### cq：面板 {#cq-panel}
+### cq:Panel {#cq-panel}
 
 **描述**
 
@@ -925,10 +925,10 @@ Blueprint操作
 
 **定义**
 
-* “[cq:TabPanel] > cq:Panel可订购”
+* “[cq:TabPanel] > cq:Panel可排序”
    * `- activeTab (long)`
 
-### cq:Field {#cq-field}
+### cq：字段{#cq-field}
 
 **描述**
 
@@ -941,9 +941,9 @@ Blueprint操作
    * `- value (string)`
    * `- ignoreData (boolean)`
 
-## 维基 {#wiki}
+## Wiki {#wiki}
 
-### wiki：主题 {#wiki-topic}
+### wiki：主题{#wiki-topic}
 
 **描述**
 
@@ -964,7 +964,7 @@ Blueprint操作
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki：用户 {#wiki-user}
+### wiki：用户{#wiki-user}
 
 **描述**
 
@@ -975,7 +975,7 @@ Wiki用户
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki：属性 {#wiki-properties}
+### wiki：属性{#wiki-properties}
 
 **描述**
 
@@ -989,7 +989,7 @@ Wiki属性
 
 ## 工作流 {#workflow}
 
-### cq：工作流 {#cq-workflow}
+### cq:Workflow {#cq-workflow}
 
 **描述**
 
@@ -1032,7 +1032,7 @@ Wiki属性
    * `- sling:resourceType (String) = "cq/workflow/components/workitem" mandatory autocreated`
    * `+ metaData (nt:unstructured)`
 
-### cq：有效负荷 {#cq-payload}
+### cq：有效负荷{#cq-payload}
 
 **描述**
 
@@ -1135,7 +1135,7 @@ Wiki属性
    * `- workflowId (String) // not compulsory as this node will already be attached to the workflow node`
    * `- nodeId (String)`
 
-### cq：等待 {#cq-wait}
+### cq：等待{#cq-wait}
 
 **描述**
 
