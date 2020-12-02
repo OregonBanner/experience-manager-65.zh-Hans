@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Adobe Experience Manager流畅体验利用AEM Sites、AEM Dynamic Media和AEM Assets等强大的功能集，为无头内容投放提供强大的解决方案。
 
-AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 完整的AEM Sites、资产和动态媒体解决方案提供强大的内容创作 [和投放以及AEM对混合用例的强大支持。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 [完整的AEM Sites、资产和Dynamic Media解决方案提供强大的内容创作和投放以及AEM对混合用例的强大支持。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
 下表定义AEM流体验的功能并链接到相关支持文档。
 
@@ -28,7 +28,7 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 完整�
 >
 >AEM流畅体验是AEM功能的子集。 这些表中链接的功能可能包括AEM中包含的附加功能，但不包括AEM流体验。
 
-## 存储库功能 {#repository-features}
+## 存储库功能{#repository-features}
 
 |  |
 |---|
@@ -37,13 +37,13 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 完整�
 | [图像再现](/help/assets/image-presets.md) |
 | [元数据和标签管理](/help/assets/metadata.md) |
 | [搜索](/help/assets/manage-assets.md) |
-| [收藏集](/help/assets/manage-assets.md) 和 [Lightbox](/help/assets/light-box.md) |
+| [收](/help/assets/manage-assets.md) 藏集和 [灯箱](/help/assets/light-box.md) |
 | [个人资料](/help/assets/processing-profiles.md) |
 | [版本控制](/help/assets/manage-assets.md) |
 | [重复检测](/help/assets/duplicate-detection.md) |
 | [智能标记](/help/assets/enhanced-smart-tags.md) |
 
-## 访问、API和投放功能 {#access-api-and-delivery-features}
+## 访问、API和投放功能{#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -56,7 +56,7 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 完整�
 | [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) |
 | [动态媒体](/help/assets/dynamic-media.md) |
 
-## 管理和集成功能 {#admin-and-integration-features}
+## 管理和集成功能{#admin-and-integration-features}
 
 |  |
 |---|
@@ -72,7 +72,7 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 完整�
 | [工作流](/help/sites-administering/workflows-starting.md) |
 | 连接（云服务） |
 
-## 分析和个性化 {#analytics-and-personalization}
+## 分析和个性化{#analytics-and-personalization}
 
 |  |
 |---|
