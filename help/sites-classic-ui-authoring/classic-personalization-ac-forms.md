@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3086a8a1-8d2e-455a-a055-91b07d31ea65
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1264'
+ht-degree: 62%
 
 ---
 
@@ -39,11 +42,11 @@ AEM 允许您在网站上创建和使用与 Adobe Campaign 交互的表单。可
 
 表单会根据用户自动进行更新。有关更多信息，请参阅[编辑表单内容](#editing-form-content)。
 
-## 启用模板 {#making-a-template-available}
+## 启用模板  {#making-a-template-available}
 
 您必须先在 AEM 应用程序中启用不同的模板，然后才能创建特定于 Adobe Campaign 的表单。
 
-To do this, see the [Templates documentation](/help/sites-developing/page-templates-static.md#templateavailability).
+为此，请参阅[模板文档](/help/sites-developing/page-templates-static.md#templateavailability)。
 
 首先，需检查创作和发布实例之间的连接，并确认 Adobe Campaign 正在运行。请参阅[与 Adobe Campaign Standard 集成](/help/sites-administering/campaignstandard.md)或[与 Adobe Campaign 6.1 集成](/help/sites-administering/campaignonpremise.md)。
 
@@ -56,80 +59,81 @@ To do this, see the [Templates documentation](/help/sites-developing/page-templa
 
 1. 在 siteadmin 中启动。
 1. 滚动浏览树结构以找到所选网站中要创建表单的位置。
-1. **选择**&#x200B;新建&#x200B;**>**&#x200B;新建页面…….
-1. Select either **Adobe Campaign Profile (AC 6.1)** or **Adobe Campaign Profile (ACS)** template and enter the page properties.
+1. 选择&#x200B;**新建** > **新建页面……**。
+1. 选择&#x200B;**Adobe Campaign用户档案(AC 6.1)**&#x200B;或&#x200B;**Adobe Campaign用户档案(ACS)**&#x200B;模板并输入页面属性。
 
    >[!NOTE]
    >
-   >If the template is not available, refer to the [Making a template available](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate) section.
+   >如果模板不可用，请参阅[使模板可用](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate)部分。
 
-1. Click **Create** to create the form.
+1. 单击&#x200B;**创建**&#x200B;以创建表单。
 
    ![chlimage_1-187](assets/chlimage_1-187.png)
 
    然后，您可以[编辑并配置表单的内容](#editing-form-content)。
 
-## 编辑表单内容 {#editing-form-content}
+## 编辑表单内容  {#editing-form-content}
 
 Adobe Campaign 的专用表单具有特定的组件。这些组件提供了一个选项，允许您将表单的每个字段链接到 Adobe Campaign 数据库中的字段。
 
 >[!NOTE]
 >
->If the desired template is not available, see [Making a template available](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate).
+>如果所需的模板不可用，请参阅[使模板可用](/help/sites-classic-ui-authoring/classic-personalization-ac.md#activatingatemplate)。
 
-此部分仅详细介绍了 Adobe Campaign 的特定链接。For more information on a more general overview of how to use forms in Adobe Experience Manager, see [Editmode components](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md).
+此部分仅详细介绍了 Adobe Campaign 的特定链接。有关如何在Adobe Experience Manager使用表单的更一般概述的详细信息，请参阅[Editmode组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)。
 
 1. 导航到要编辑的表单。
-1. **在工具箱中，选择“页**&#x200B;面&#x200B;**”>“**&#x200B;页面属性……”然后，转到弹 **出窗口的** “云服务”选项卡。
-1. Add the Adobe Campaign service by clicking **Add service**, and then selecting the configuration that corresponds to your Adobe Campaign instance in the service&#39;s drop down list. 在设置实例之间的连接时会执行此配置。For more information, see [Connecting AEM to Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign).
+1. 在工具箱中，选择&#x200B;**页面** > **页面属性……然后，**&#x200B;转到弹出窗口的&#x200B;**Cloud Services**&#x200B;选项卡。
+1. 单击&#x200B;**添加服务**，然后在服务的下拉Adobe Campaign中选择与Adobe Campaign实例对应的配置，以添加列表服务。 在设置实例之间的连接时会执行此配置。有关详细信息，请参阅[将AEM连接到Adobe Campaign](/help/sites-administering/campaignonpremise.md#connecting-aem-to-adobe-campaign)。
 
    >[!NOTE]
    >
    >如有必要，请通过单击挂锁图标来解锁配置，以便能够添加 Adobe Campaign 服务。
 
-1. Access the form&#39;s general parameters using the **Edit** button found at the start of the form. The **Form** tab allows you to select a thank you page to which the user will be redirected after having validated the form.
+1. 使用表单开始上的&#x200B;**编辑**&#x200B;按钮访问表单的常规参数。 **表单**&#x200B;选项卡允许您选择在验证表单后将用户重定向到的感谢页面。
 
-   The **Advanced** form allows you to select the type of form. The **Post Options** field gives you the choice between three types of Adobe Campaign forms:
+   **高级**&#x200B;表单允许您选择表单类型。 **发布选项**&#x200B;字段允许您选择三种类型的Adobe Campaign表单：
 
    * **Adobe Campaign: 保存配置文件**：允许您在 Adobe Campaign 中创建或更新收件人（默认值）。
    * **Adobe Campaign: 订阅服务**：允许您在 Adobe Campaign 中管理收件人的订阅。
    * **Adobe Campaign: 取消订阅服务**：允许您在 Adobe Campaign 中取消收件人的订阅。
-   The **Action Configuration** field lets you specify whether or not you would like to create the recipient profile in the Adobe Campaign database if it does not yet exist. To do this, check the **Create user if not existing** option.
+
+   通过&#x200B;**操作配置**&#x200B;字段，可以指定是否要在收件人用户档案库中创建Adobe Campaign（如果尚不存在）。 要执行此操作，请选中&#x200B;**如果用户不存在**&#x200B;选项。
 
 1. 通过将所选组件从工具箱拖放到表单中来添加它们。有关可用的 Adobe Campaign 特定组件的更多信息，请参阅 [Adobe 表单组件](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)。
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
-1. 双击已添加的字段以对其进行配置。The **Adobe Campaign** tab lets you link the field to a field in the Adobe Campaign recipient table. 您还可以指定字段是否为对帐密钥的一部分，对帐密钥允许识别 Adobe Campaign 数据库中已存在的收件人。
+1. 双击已添加的字段以对其进行配置。使用&#x200B;**Adobe Campaign**&#x200B;选项卡，可以将字段链接到Adobe Campaign收件人表中的字段。 您还可以指定字段是否为对帐密钥的一部分，对帐密钥允许识别 Adobe Campaign 数据库中已存在的收件人。
 
    >[!CAUTION]
    >
-   >The **Element Name** must be different for each form field. 如有必要，请更改名称。
+   >每个表单字段的&#x200B;**元素名称**&#x200B;必须不同。 如有必要，请更改名称。
    >
-   >Each form must contain an **Encrypted Primary Key** component in order to correctly manage recipients in the Adobe Campaign database.
+   >每个表单必须包含一个&#x200B;**已加密的主要密钥**&#x200B;组件，才能正确管理Adobe Campaign库中的收件人。
 
-1. Activate the page by selecting **Page** > **Activate Page** in the toolbox. 该页面会在您的站点上激活。您可以通过转到 AEM 发布实例来查看它。验证表单后，Adobe Campaign 数据库中的数据便会更新。
+1. 在工具箱中选择&#x200B;**Page** > **激活页面**&#x200B;来激活页面。 该页面会在您的站点上激活。您可以通过转到 AEM 发布实例来查看它。验证表单后，Adobe Campaign 数据库中的数据便会更新。
 
-## 测试表单 {#testing-a-form}
+## 测试表单  {#testing-a-form}
 
 创建表单并编辑表单内容后，您可能需要手动测试表单是否可以正常工作。
 
 >[!NOTE]
 >
->You must have an **Encryted Primary Key** component on each form. 在组件中，选择Adobe Campaign，以便只显示这些组件。
+>每个表单上必须有一个&#x200B;**已加密的主要密钥**&#x200B;组件。 在“组件”中，选择“Adobe Campaign”，以便只显示那些组件。
 >
 >在此过程中，虽然您手动输入了 EPK 编号，但实际上，用户可以在新闻稿中获得此页面的链接（无论是取消订阅、订阅还是更新配置文件）。EPK 会根据用户自动进行更新。
 >
->To create that link, you use the variable **Main resource identifier**(Adobe Campaign Standard) or **Encrypted identifier** (Adobe Campaign 6.1) (for example, in a **Text &amp; Personalization (Campaign)** component), which links to the epk in Adobe Campaign.
+>要创建该链接，请使用变量&#x200B;**主资源标识符**(Adobe Campaign Standard)或&#x200B;**加密标识符**(Adobe Campaign6.1)(例如，在&#x200B;**文本与个性化(活动)**&#x200B;组件中)，该变量链接到Adobe Campaign中的epk。
 
 为此，您需要手动获取 Adobe Campaign 配置文件的 EPK，然后将其附加到 URL：
 
 1. 要获取 Adobe Campaign 配置文件的已加密的主要密钥 (EPK)，请执行以下操作：
 
-   * In Adobe Campaign Standard - Navigate to **Profiles and Audiences** > **Profiles**, which lists the existing profiles. Make sure the table displays the **Main Resource Identifier** field in a column (This can be configured by clicking/tapping **Configure list**). 复制所需配置文件的主要资源标识符。
-   * In Adobe Campaign 6.11, go to **Profiles and Targets** >  **Recipients**, which lists the existing profiles. Make sure the table displays the **Encrypted identifier** field in a column (This can be configured by right-clicking on an entry and selecting **Configure list...**). 复制所需配置文件的已加密标识符。
+   * 在Adobe Campaign Standard-导航至&#x200B;**用户档案和受众** > **用户档案**，它列表现有用户档案。 确保表在列中显示&#x200B;**主要资源标识符**&#x200B;字段(可通过单击／点按&#x200B;**配置列表**&#x200B;来配置此字段)。 复制所需配置文件的主要资源标识符。
+   * 在Adobe Campaign6.11中，转至&#x200B;**用户档案和目标** > **收件人**，它列表现有用户档案。 确保表在列中显示&#x200B;**已加密标识符**&#x200B;字段(可通过右击某个条目并选择&#x200B;**配置列表...来配置此字段)。**)。 复制所需配置文件的已加密标识符。
 
-1. In AEM, open the form page on the publish instance and append the EPK from step 1 as a URL parameter: use the same name that you previously defined in the EPK component when authoring the form (for example: `?epk=...`)
+1. 在AEM中，在发布实例上打开表单页面，并将步骤1中的EPK附加为URL参数：使用您在创作表单时在EPK组件中定义的相同名称(例如：`?epk=...`
 1. 现在，表单可用于修改与链接的 Adobe Campaign 配置文件相关联的数据和订阅。修改某些字段并提交表单后，您可以在 Adobe Campaign 内验证相应数据是否已更新。
 
 验证表单后，Adobe Campaign 数据库中的数据便会更新。
