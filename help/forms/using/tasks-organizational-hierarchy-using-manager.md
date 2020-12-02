@@ -19,22 +19,22 @@ ht-degree: 0%
 ---
 
 
-# 使用Manager任务管理组织层次结构中的视图{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+# 使用Manager任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}管理组织层次结构中的视图
 
-在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人的任务（直接或间接报告），并对其执行各种操作。 任务位于AEM Forms工作区的待办事项选项卡中。 对一任务直接报表支持的操作包括：
+在AEM Forms工作区中，管理者现在可以访问分配给其层次结构中任何人的任务（直接或间接报告），并对其执行各种操作。 这些任务位于AEM Forms工作区的待办事项选项卡中。 对一任务直接报表支持的操作包括：
 
 **转发** 将任务从直接报告转发给任何用户。
 
-**索赔** 任务直接报告。
+**索** 赔直接报告的任务。
 
-**Claim &amp; Open** Claim是直接报表的任务，并在经理的待办列表中自动打开它。
+**Claim &amp;** OpenClaim是直接报告的任务，并在经理的待办列表中自动打开它。
 
-**拒绝** 拒绝由其他用户转发到直接报告的任务。 此选项适用于其他用户转发到直接报告的任务。
+**拒** 绝拒绝由其他用户转发到直接报告的任务。此选项适用于其他用户转发到直接报告的任务。
 
-AEM Forms将用户仅限于用户具有访问控制(ACL)的任务。 这样的检查可确保用户只能获取用户具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告，以满足其需求。
+AEM Forms限制用户仅访问用户具有访问控制(ACL)的任务。 这样的检查可确保用户只能获取用户具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义管理者的定义和直接报告以满足其需求。
 
-1. 创建DSC。 有关详细信息，请参阅《使用AEM Forms进行编程》指南中的“为AEM Forms [开发组件](https://www.adobe.com/go/learn_aemforms_programming_63) ”主题。
-1. 在DSC中，为层次管理定义新的SPI，以在AEM Forms用户中定义直接报表和层次。 以下是示例Java™代码片段。
+1. 创建DSC。 有关详细信息，请参阅《使用AEM Forms语进行编程》指南中的“为AEM Forms开发组件”主题。[](https://www.adobe.com/go/learn_aemforms_programming_63)
+1. 在DSC中，为层次管理定义新的SPI，以在AEM Forms用户中定义直接报告和层次。 以下是示例Java™代码片段。
 
    ```java
    public class MyHierarchyMgmtService
@@ -113,7 +113,7 @@ AEM Forms将用户仅限于用户具有访问控制(ACL)的任务。 这样的�
    </component>
    ```
 
-1. 通过Workbench部署DSC。 重新启动 `ProcessManagementTeamTasksService` 服务。
+1. 通过Workbench部署DSC。 重新启动`ProcessManagementTeamTasksService`服务。
 1. 您可能必须刷新浏览器或再次注销／登录用户。
 
 以下屏幕说明了如何访问一任务直接报告和可用的操作。
