@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
 workflow-type: tm+mt
 source-wordcount: '2523'
-ht-degree: 86%
+ht-degree: 93%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 86%
 
 网站结构可以被视为包含内容页面的树结构。这些内容页面的名称用于组成 URL，而标题则会在查看页面内容时显示出来。
 
-The following shows an example from the We.Retail site, where a hiking shorts page ( `desert-sky-shorts`) is accessed:
+下面显示了We.Retail站点的一个示例，在该示例中，可访问远足短裤页面(`desert-sky-shorts`):
 
 * 创作环境
    `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
@@ -43,7 +43,7 @@ The following shows an example from the We.Retail site, where a hiking shorts pa
 * 发布环境
    `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-Depending on the configuration of your instance, use of `/content` might be optional on the publish environment.
+根据实例的配置，在发布环境中使用`/content`可能是可选的。
 
 ```xml
  /content
@@ -105,7 +105,7 @@ Depending on the configuration of your instance, use of `/content` might be opti
 >
 >另请注意，某些浏览器（例如旧版本的 IE）只能接受一定长度的 URL，因此还有技术原因需缩短页面名称。
 
-When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and the JCR.
+创建新页面时，AEM将[根据AEM和JCR实行的惯例](/help/sites-developing/naming-conventions.md)验证页面名称。
 
 允许使用的字符最少包括：
 
@@ -165,7 +165,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 ### 组件 {#components}
 
-Components are the elements provided by AEM so that you can add specific types of content. AEM comes with a range of [out-of-the-box components](/help/sites-authoring/default-components-console.md) that provide comprehensive functionality. These include:
+组件是AEM提供的元素，以便您能够添加特定类型的内容。AEM附带一系列[现成组件](/help/sites-authoring/default-components-console.md)，它们提供全面的功能。这些包括：
 
 * 文本
 * 图像
@@ -185,7 +185,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
 除非已提前为您创建所有页面，否则必须先创建页面，然后才能开始创建内容：
 
-1. Open the Sites console (for example, [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)).
+1. 打开站点控制台(例如，[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))。
 1. 导航到要创建新页面的位置。
 1. 使用工具栏中的&#x200B;**创建**&#x200B;打开下拉选择器，然后从列表中选择&#x200B;**页**：
 
@@ -196,6 +196,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 选择要用于创建新页面的模板，然后单击/点按&#x200B;**下一步**&#x200B;以继续。
 
    * 单击/点按&#x200B;**取消**&#x200B;可中止该过程。
+
    ![caop-04](assets/caop-04.png)
 
 1. 在向导的最后一步中，您可以执行以下操作之一：
@@ -203,6 +204,7 @@ Components are the elements provided by AEM so that you can add specific types o
    * 使用三个选项卡输入您希望对新页面指定的[页面属性](/help/sites-authoring/editing-page-properties.md)，然后单击/点按&#x200B;**创建**&#x200B;以实际创建页面。
 
    * 使用&#x200B;**返回**&#x200B;以返回到模板选择步骤。
+
    关键字段为：
 
    * **标题**：
@@ -248,6 +250,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
+
    然后，选择&#x200B;**编辑**&#x200B;图标：
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
@@ -258,7 +261,7 @@ Components are the elements provided by AEM so that you can add specific types o
 >
 >只有在“预览”模式下才能通过页面编辑器导航到其他页面，因为在“编辑”模式下，链接不处于活动状态。
 
-### 复制和粘贴页面 {#copying-and-pasting-a-page}
+### 复制和粘贴页面  {#copying-and-pasting-a-page}
 
 您可以将页面及其所有子页面复制到一个新位置：
 
@@ -267,6 +270,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
+
    然后，选择&#x200B;**复制**&#x200B;页面图标：
 
    ![screen_shot_2018-03-22at105425](assets/screen_shot_2018-03-22at105425.png)
@@ -283,6 +287,7 @@ Components are the elements provided by AEM so that you can add specific types o
    您可以：
    * 选择&#x200B;**粘贴**&#x200B;页面图标本身：将在此位置创建原始页面和任何子页面的副本。
    * 选择下拉箭头以显示&#x200B;**粘贴（不含子项）**&#x200B;选项。将在此位置创建原始页面的副本；不会复制子页面。
+
    >[!NOTE]
    >
    >如果您将页面复制到某个位置，而该位置已经存在名称与原始名称相同的页面，则系统将通过附加一个编号来自动生成该名称的变体。例如，如果 `winter` 已存在，则 `winter` 将变为 `winter1`。
@@ -295,7 +300,7 @@ Components are the elements provided by AEM so that you can add specific types o
 
 >[!NOTE]
 >
->页面只能移动到允许使用该页面所基于的模板的位置。See [Template Availability](/help/sites-developing/templates.md#template-availability) for more information.
+>页面只能移动到允许使用该页面所基于的模板的位置。有关详细信息，请参阅[模板可用性](/help/sites-developing/templates.md#template-availability)。
 
 移动或重命名页面的过程基本相同，都由同一个向导来处理。通过此向导，您可以：
 
@@ -310,6 +315,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
    * [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)
    * [选择模式](/help/sites-authoring/basic-handling.md#navigatingandselectionmode)和工具栏
+
    然后，选择&#x200B;**移动**&#x200B;页面图标：
 
    ![screen_shot_2018-03-22at105534](assets/screen_shot_2018-03-22at105534.png)
@@ -321,6 +327,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
    * 指定移动页面后您希望页面使用的名称，然后单击/点按&#x200B;**下一步**&#x200B;以继续。
 
    * 单击/点按&#x200B;**取消**&#x200B;可中止该过程。
+
    ![caop-07](assets/caop-07.png)
 
    如果仅移动页面，则页面名称可以保持不变。
@@ -336,6 +343,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
       * 通过单击目标的缩略图选择目标。
       * 单击&#x200B;**下一步**&#x200B;以继续。
    * 使用&#x200B;**返回**&#x200B;以返回到页面名称指定步骤。
+
    >[!NOTE]
    >
    >默认情况下，将选择您正在移动/重命名的页面的父页面作为目标。
@@ -368,24 +376,24 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 #### 异步操作 {#asynchronous-actions}
 
-通常，页面移动或重命名操作会立即执行。 这被视为同步处理，在操作完成之前，会阻止UI中的进一步操作。
+通常，页面移动或重命名操作会立即执行。此过程被视为同步处理，在操作完成之前，会阻止 UI 中的进一步操作。
 
-但是，如果受影响的页数超过定义的限制，则将异步处理操作，使用户能够不受页面移动或重命名操作的阻碍地在UI中继续创作。
+但是，如果受影响的页数超过定义的限制，将异步处理操作，从而使用户能够不受页面移动或重命名操作的阻碍，在 UI 中继续创作。
 
-* 在上面 **的最后** 一步中单击“移动”时，AEM会检查配置的限制。
-* 如果受影响的页数低于限制，则执行同步操作。
-* 如果受影响的页数超过限制，则执行异步操作。
+* 在上面的最后一步中单击&#x200B;**移动**&#x200B;时，AEM 会检查配置的限制。
+* 如果受影响的页数低于限制，将执行同步操作。
+* 如果受影响的页数超过限制，将执行异步操作。
    * 用户必须定义何时应执行异步操作
-      * **现在** ，立即开始执行异步作业。
-      * **以后** ，用户可以定义异步作业何时开始。
+      * **现在**：立即开始执行异步作业。
+      * **稍后**：允许用户定义何时开始异步作业。
 
          ![异步页面移动](assets/asynchronous-page-move.png)
 
-异步作业的状态可在Async Jobs Status [**仪表板中在&#x200B;**Global Navigation -](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)> Tools**-**Asynchronous** Operations **-> Asynchronous Jobs中检查******。**
+可在&#x200B;[**异步作业状态**&#x200B;功能板](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)（位于&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**）中查看异步作业的状态
 
 >[!NOTE]
 >
->有关异步作业处理以及如何配置页面移动／重命名操作限制的更多信息，请参阅《管 [理用户指南](/help/sites-administering/asynchronous-jobs.md) 》中的“异步作业”文档。
+>有关异步作业处理以及如何配置页面移动／重命名操作限制的详细信息，请参阅《管理用户指南》中的[异步作业](/help/sites-administering/asynchronous-jobs.md)文档。
 
 >[!NOTE]
 >
@@ -418,7 +426,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 您可以在控制台中或者在编辑单个页面时[锁定/解锁页面](/help/sites-authoring/editing-content.md#locking-a-page)。关于页面是否已被锁定的信息也会显示在这两个位置。
 
-![screen_shot_2018-03-22at105713](assets/screen_shot_2018-03-22at105713.png)![screen_shot_2018-03-22at105720](assets/screen_shot_2018-03-22at105720.png)
+![screen_shot_2018-03-22at105713](assets/screen_shot_2018-03-22at105713.png) ![screen_shot_2018-03-22at105720](assets/screen_shot_2018-03-22at105720.png)
 
 ### 创建新文件夹 {#creating-a-new-folder}
 
@@ -433,6 +441,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 >* 只有在&#x200B;**站点**&#x200B;下或其他文件夹下才能直接创建文件夹。不能在页面下创建文件夹。
 >* 可以对文件夹执行移动、复制、粘贴、删除、发布、取消发布和查看/编辑属性等标准操作。
 >* 无法在 Live Copy 中选择文件夹。
+
 >
 
 
