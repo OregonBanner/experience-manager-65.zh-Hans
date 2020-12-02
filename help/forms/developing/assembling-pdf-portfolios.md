@@ -1,6 +1,6 @@
 ---
-title: 汇编PDF包
-seo-title: 汇编PDF包
+title: 汇编PDFPortfolio
+seo-title: 汇编PDFPortfolio
 description: 'null'
 seo-description: 'null'
 uuid: 1778c90b-9d26-466b-a7c7-401d737395e0
@@ -19,15 +19,15 @@ ht-degree: 0%
 ---
 
 
-# 汇编PDF包 {#assembling-pdf-portfolios}
+# 汇编PDFPortfolio{#assembling-pdf-portfolios}
 
-您可以使用Assembler Java和Web服务API组合PDF包。 一个包可以组合多种文档的不同类型，包括word文件、图像文件（例如jpeg文件）和PDF文档。 作品集的布局可以设置为不同的样式，如 *带预览的Grid*、 *在图像上* 或甚至 *Revolve*。
+您可以使用Assembler Java和Web服务API组合PDFPortfolio。 一个包可以组合多种文档的不同类型，包括word文件、图像文件（例如jpeg文件）和PDF文档。 作品集的布局可以设置为不同的样式，如具有预览&#x200B;*的* Grid、图像&#x200B;*上的*，甚至&#x200B;*绕转*。
 
-下图是具有“在图像样式上”布 *局的包的截屏* 。
+下图是具有&#x200B;*在图像*&#x200B;样式布局上的包的屏幕截图。
 
 ![ap_ap_portfolio](assets/ap_ap_portfolio.png)
 
-创建PDF包可以作为传递文档集的无纸替代方法。 使用AEM Forms，您可以通过使用结构化DDX文档调用Assembler服务来创建包。 以下DDX文档是创建PDF包的DDX文档的示例。
+创建PDFPortfolio可以作为传递一组文档的无纸替代方式。 使用AEM Forms，您可以通过使用结构化DDX文档调用Assembler服务来创建包。 以下DDX文档是创建PDF文档的DDXPortfolio的示例。
 
 ```xml
  <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -51,19 +51,19 @@ ht-degree: 0%
  </DDX>
 ```
 
-DXX文档必须包含 `Portfolio` 带有嵌套标记的 `Navigator` 标记。 请注意，仅当 `<Resource name="navigator/image.xxx" source="myImage.png"/>` 将标记指定 `myNavigator` 为onImage布局导航器时，才必须使用： `AdobeOnImage.nav`. 此标记允许Assembler服务选择要用作包背景的图像。 包含 `PackageFiles` 和标 `File` 记以定义打包文件的文件名和MIME类型。
+DXX文档必须包含一个`Portfolio`标记，该标记带有嵌套的`Navigator`标记。 请注意，仅当`myNavigator`被指定为onImage布局导航器时，`<Resource name="navigator/image.xxx" source="myImage.png"/>`才是必需的：`AdobeOnImage.nav`。 此标记允许Assembler服务选择要用作包背景的图像。 包括`PackageFiles`和`File`标记，以定义打包文件的文件名和MIME类型。
 
 >[!NOTE]
 >
->有关Assembler服务的详细信息，请参 [阅Services Reference forAEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有关Assembler服务的详细信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
 >[!NOTE]
 >
->有关DDX文档的详细信息，请参 [阅Assembler Service和DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>有关DDX文档的详细信息，请参阅[Assembler Service和DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)。
 
-## 步骤摘要 {#summary-of-steps}
+## 步骤{#summary-of-steps}的摘要
 
-要创建PDF包，请执行以下任务:
+要创建PDFPortfolio，请执行以下任务:
 
 1. 包括项目文件。
 1. 创建PDF Assembler客户端。
@@ -82,8 +82,8 @@ DXX文档必须包含 `Portfolio` 带有嵌套标记的 `Navigator` 标记。 �
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms时为必需)
-* jbossall-client.jar(在JBoss上部署AEM Forms时需要)
+* adobe-utilities.jar(如果AEM Forms部署在JBoss上，则为必需)
+* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必需)
 
 **创建PDF Assembler客户端**
 
@@ -91,13 +91,13 @@ DXX文档必须包含 `Portfolio` 带有嵌套标记的 `Navigator` 标记。 �
 
 **引用现有DDX文档**
 
-必须引用DDX文档来组合PDF包。 此DDX文档必须包 `Portfolio`含 `Navigator` 元素和 `PackageFiles` 元素。
+必须引用DDX文档才能组合PDFPortfolio。 此DDX文档必须包含`Portfolio`、`Navigator`和`PackageFiles`元素。
 
 **引用所需文档**
 
-要组合PDF包，请参考表示要组合的文档的所有文件。 例如，将DDX文档中指定的所有图像文件传递给Assembler服务。 请注意，这些文件在本节中指定的DDX文档中被引用： *myImage.png* 和 *saint_bernard.jpg*。
+要组合PDFPortfolio，请参考表示要组合的文档的所有文件。 例如，将DDX文档中指定的所有图像文件传递给Assembler服务。 请注意，这些文件在本节中指定的DDX文档中被引用：*myImage.png*&#x200B;和&#x200B;*saint_bernard.jpg*。
 
-汇编PDF包时，将NAV文件（导航器文件）传递给Assembler服务。 传递给Assembler服务的NAV文件取决于要创建的PDF包类型。 例如，要创建“ *在图像上* ”布局，请传递AdobeOnImage.nav文件。 可以在以下文件夹中找到NAV文件：
+汇编PDFPortfolio时，将NAV文件（导航器文件）传递给Assembler服务。 传递给Assembler服务的NAV文件取决于要创建的PDFPortfolio类型。 例如，要在图像&#x200B;*布局上创建*，请传递AdobeOnImage.nav文件。 可以在以下文件夹中找到NAV文件：
 
 `<Install folder>\Acrobat 9.0\Acrobat\Navigators`
 
@@ -105,7 +105,7 @@ DXX文档必须包含 `Portfolio` 带有嵌套标记的 `Navigator` 标记。 �
 
 >[!NOTE]
 >
->与汇编PDF包相关的快速开始使用AdobeOnImage.nav。
+>与汇编PDF开始相关的快速Portfolio使用AdobeOnImage.nav。
 
 **设置运行时选项**
 
@@ -113,17 +113,17 @@ DXX文档必须包含 `Portfolio` 带有嵌套标记的 `Navigator` 标记。 �
 
 **组合作品集**
 
-要组合PDF包，您需要调用该 `invokeDDX` 操作。 Assembler服务返回集合对象中的PDF包。
+要组合PDFPortfolio，请调用`invokeDDX`操作。 Assembler服务在集合对象中返回PDFPortfolio。
 
 **保存组合的包**
 
-PDF包在集合对象中返回。 对集合对象进行迭代，将PDF包另存为PDF文件。
+PDFPortfolio在集合对象中返回。 遍历集合对象，将PDFPortfolio另存为PDF文件。
 
 **另请参阅**
 
-[使用Java API组合PDF包](#assemble-a-pdf-portfolio-using-the-java-api)
+[使用Java API组合PDFPortfolio](#assemble-a-pdf-portfolio-using-the-java-api)
 
-[使用Web服务API组合PDF包](#assemble-a-pdf-portfolio-using-the-web-service-api)
+[使用Web服务API组合PDFPortfolio](#assemble-a-pdf-portfolio-using-the-web-service-api)
 
 [包括AEM FormsJava库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -131,9 +131,9 @@ PDF包在集合对象中返回。 对集合对象进行迭代，将PDF包另存�
 
 [以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## 使用Java API组合PDF包 {#assemble-a-pdf-portfolio-using-the-java-api}
+## 使用Java API {#assemble-a-pdf-portfolio-using-the-java-api}组合PDFPortfolio
 
-使用Assembler Service API(Java)组合PDF包：
+使用Assembler Service API(Java)汇编PDFPortfolio:
 
 1. 包括项目文件。
 
@@ -141,123 +141,123 @@ PDF包在集合对象中返回。 对集合对象进行迭代，将PDF包另存�
 
 1. 创建PDF Assembler客户端。
 
-   * 创建包 `ServiceClientFactory` 含连接属性的对象。
-   * 使用对 `AssemblerServiceClient` 象的构造函数并传递该对 `ServiceClientFactory` 象。
+   * 创建包含连接属性的`ServiceClientFactory`对象。
+   * 使用`AssemblerServiceClient`对象的构造函数创建`ServiceClientFactory`对象。
 
 1. 引用现有DDX文档。
 
-   * 通过 `java.io.FileInputStream` 使用DDX文档的构造函数并传递指定DDX文件位置的字符串值，创建一个表示该DDX文件的对象。
-   * 使用对 `com.adobe.idp.Document` 象的构造函数并传递该对 `java.io.FileInputStream` 象。
+   * 通过使用DDX文档的构造函数并传递一个指定DDX文件位置的字符串值，创建一个表示DDX文件的`java.io.FileInputStream`对象。
+   * 使用`com.adobe.idp.Document`对象的构造函数并传递`java.io.FileInputStream`对象，创建&lt;a0/>对象。
 
 1. 引用所需文档。
 
-   * 使用构 `java.util.Map` 造函数创建用于存储输入PDF文档的对 `HashMap` 象。
-   * 使用对 `java.io.FileInputStream` 象的构造函数创建对象。 传递所需NAV文件的位置(对于创建包所需的每个文件重复此任务)。
-   * 创建一 `com.adobe.idp.Document` 个对象并传 `java.io.FileInputStream` 递包含NAV文件的对象(对于创建包所需的每个文件重复此任务)。
-   * 通过调用对象的方 `java.util.Map` 法并传递以 `put` 下参数，向对象添加一个条目：
+   * 使用`HashMap`构造函数创建用于存储输入PDF文档的`java.util.Map`对象。
+   * 使用`java.io.FileInputStream`对象的构造函数创建&lt;a0/>对象。 传递所需NAV文件的位置(对于创建包所需的每个文件重复此任务)。
+   * 创建`com.adobe.idp.Document`对象并传递包含NAV文件的`java.io.FileInputStream`对象(对创建包所需的每个文件重复此任务)。
+   * 通过调用`put`方法并传递以下参数，向`java.util.Map`对象添加一个条目：
 
       * 表示键名称的字符串值。 此值必须与在DDX文档中指定的源元素值匹配。 (对创建包所需的每个文件重复此任务)。
-      * 包 `com.adobe.idp.Document` 含PDF文档的对象。 (对创建包所需的每个文件重复此任务)。
+      * 包含PDF文档的`com.adobe.idp.Document`对象。 (对创建包所需的每个文件重复此任务)。
 
 1. 设置运行时选项。
 
-   * 使用 `AssemblerOptionSpec` 其构造函数创建存储运行时选项的对象。
-   * 通过调用属于对象的方法，设置运行时选项以满足业务 `AssemblerOptionSpec` 要求。 例如，要指示Assembler服务在出现错误时继续处理作业，请调 `AssemblerOptionSpec` 用对象的 `setFailOnError` 方法并传递 `false`。
+   * 使用其构造函数创建存储运行时选项的`AssemblerOptionSpec`对象。
+   * 通过调用属于`AssemblerOptionSpec`对象的方法，设置运行时选项以满足业务要求。 例如，要指示Assembler服务在出现错误时继续处理作业，请调用`AssemblerOptionSpec`对象的`setFailOnError`方法并传递`false`。
 
 1. 组合个人信息。
 
-   调用对 `AssemblerServiceClient` 象的方 `invokeDDX` 法并传递以下必需值：
+   调用`AssemblerServiceClient`对象的`invokeDDX`方法并传递以下必需值：
 
-   * 表 `com.adobe.idp.Document` 示要使用的DDX文档的对象
-   * 包 `java.util.Map` 含构建PDF包所需文件的对象。
-   * 指定 `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 运行时选项（包括默认字体和作业日志级别）的对象
+   * 一个`com.adobe.idp.Document`对象，它表示要使用的DDX文档
+   * 一个`java.util.Map`对象，其中包含构建PDFPortfolio所需的文件。
+   * 一个`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`对象，它指定运行时选项，包括默认字体和作业日志级别
 
-   该方 `invokeDDX` 法返回一个 `com.adobe.livecycle.assembler.client.AssemblerResult` 对象，该对象包含已组合的PDF包和发生的任何异常。
+   `invokeDDX`方法返回一个`com.adobe.livecycle.assembler.client.AssemblerResult`对象，该对象包含已装配的PDFPortfolio和发生的任何异常。
 
 1. 保存组合的包。
 
-   要获取PDF包，请执行以下操作：
+   要获取PDFPortfolio，请执行以下操作：
 
-   * 调用 `AssemblerResult` 对象的方 `getDocuments` 法。 此方法返回一个 `java.util.Map` 对象。
-   * 遍历对象 `java.util.Map` ，直到找到生成的对 `com.adobe.idp.Document` 象。
-   * 调用对 `com.adobe.idp.Document` 象的方 `copyToFile` 法以提取PDF包。
+   * 调用`AssemblerResult`对象的`getDocuments`方法。 此方法返回`java.util.Map`对象。
+   * 对`java.util.Map`对象进行迭代，直到找到生成的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以提取PDFPortfolio。
 
 **另请参阅**
 
-[快速开始（SOAP模式）: 使用Java API组合PDF包](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[快速开始（SOAP模式）:使用Java API汇编PDFPortfolio](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [包括AEM FormsJava库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用Web服务API组合PDF包 {#assemble-a-pdf-portfolio-using-the-web-service-api}
+## 使用Web服务API {#assemble-a-pdf-portfolio-using-the-web-service-api}组合PDFPortfolio
 
-使用Assembler Service API（Web服务）组合PDF包：
+使用Assembler Service API（Web服务）汇编PDFPortfolio:
 
 1. 包括项目文件。
 
-   创建使用MTOM的Microsoft .NET项目。 请确保在设置服务引用时使用以下WSDL定义： `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   创建使用MTOM的Microsoft .NET项目。 请确保在设置服务引用时使用以下WSDL定义：`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >替换 `localhost` 为承载AEM Forms的服务器的IP地址。
+   >将`localhost`替换为承载AEM Forms的服务器的IP地址。
 
 1. 创建PDF Assembler客户端。
 
-   * 使用对象 `AssemblerServiceClient` 的默认构造函数创建对象。
-   * 使用构 `AssemblerServiceClient.Endpoint.Address` 造函数创建 `System.ServiceModel.EndpointAddress` 对象。 将指定WSDL的字符串值传递给AEM Forms服务(例如 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)。 您无需使用该属 `lc_version` 性。 此属性在您创建服务引用时使用。
-   * 通过获 `System.ServiceModel.BasicHttpBinding` 取字段的值创建对 `AssemblerServiceClient.Endpoint.Binding` 象。 将返回值转换为 `BasicHttpBinding`。
-   * 将对 `System.ServiceModel.BasicHttpBinding` 象的字段 `MessageEncoding` 设置为 `WSMessageEncoding.Mtom`。 此值确保使用MTOM。
+   * 使用其默认构造函数创建`AssemblerServiceClient`对象。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`AssemblerServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 您无需使用`lc_version`属性。 此属性在您创建服务引用时使用。
+   * 通过获取`AssemblerServiceClient.Endpoint.Binding`字段的值创建`System.ServiceModel.BasicHttpBinding`对象。 将返回值转换为`BasicHttpBinding`。
+   * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段 `AssemblerServiceClient.ClientCredentials.UserName.UserName`。
-      * 为字段分配相应的口令值 `AssemblerServiceClient.ClientCredentials.UserName.Password`。
-      * 为字段指 `HttpClientCredentialType.Basic` 定常量值 `BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 为字段指 `BasicHttpSecurityMode.TransportCredentialOnly` 定常量值 `BasicHttpBindingSecurity.Security.Mode`。
+      * 为字段`AssemblerServiceClient.ClientCredentials.UserName.UserName`指定AEM表单用户名。
+      * 为字段`AssemblerServiceClient.ClientCredentials.UserName.Password`分配相应的口令值。
+      * 将常量值`HttpClientCredentialType.Basic`指定到字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`指定到字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用现有DDX文档。
 
-   * 使用对 `BLOB` 象的构造函数创建对象。 该 `BLOB` 对象用于存储DDX文档。
-   * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个字符串值来创建对象，该字符串值表示DDX文档的文件位置以及打开文件的模式。
-   * 创建存储对象内容的字节数 `System.IO.FileStream` 组。 您可以通过获取对象的属性来确定字 `System.IO.FileStream` 节数组的大 `Length` 小。
-   * 通过调用对象的方法，用流数 `System.IO.FileStream` 据填充字节 `Read` 数组。 传递要读取的字节数组、开始位置和流长度。
-   * 通过 `BLOB` 将对象属性 `MTOM` 赋予字节数组的内容来填充对象。
+   * 使用`BLOB`对象的构造函数创建&lt;a0/>对象。 `BLOB`对象用于存储DDX文档。
+   * 通过调用`System.IO.FileStream`对象的构造函数并传递一个字符串值，该字符串值表示DDX文档的文件位置以及打开文件的模式。
+   * 创建存储`System.IO.FileStream`对象内容的字节数组。 通过获取`System.IO.FileStream`对象的`Length`属性，可以确定字节数组的大小。
+   * 通过调用`System.IO.FileStream`对象的`Read`方法，用流数据填充字节数组。 传递要读取的字节数组、开始位置和流长度。
+   * 通过为`MTOM`对象的&lt;a1/>属性指定字节数组的内容，填充`BLOB`对象。
 
 1. 引用所需文档。
 
-   * 对于每个输入文件，使用其构 `BLOB` 造函数创建一个对象。 该 `BLOB` 对象用于存储输入文件。
-   * 通过调 `System.IO.FileStream` 用对象的构造函数并传递一个字符串值来创建对象，该字符串值表示输入文件的文件位置以及打开文件的模式。
-   * 创建存储对象内容的字节数 `System.IO.FileStream` 组。 您可以通过获取对象的属性来确定字 `System.IO.FileStream` 节数组的大 `Length` 小。
-   * 通过调用对象的方法，用流数 `System.IO.FileStream` 据填充字节 `Read` 数组。 传递要读取的字节数组、开始位置和流长度。
-   * 通过 `BLOB` 为对象的字段 `MTOM` 指定字节数组的内容来填充对象。
-   * 创建对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 此集合对象用于存储创建PDF包所需的输入文件。
-   * 对于每个输入文件，创建一个 `MyMapOf_xsd_string_To_xsd_anyType_Item` 对象。
-   * 为对象的字段指定表示键名 `MyMapOf_xsd_string_To_xsd_anyType_Item` 的字符串 `key` 值。 此值必须与在DDX文档中指定的元素值匹配。 (对每个输入文件执行此任务。)
-   * 将存储 `BLOB` 输入文件的对象指定到该 `MyMapOf_xsd_string_To_xsd_anyType_Item` 对象的字 `value` 段。 (对每个输入的PDF任务执行此文档。)
-   * 将对 `MyMapOf_xsd_string_To_xsd_anyType_Item` 象添加到对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 调用 `MyMapOf_xsd_string_To_xsd_anyType` 对象的方 `Add` 法并传递对 `MyMapOf_xsd_string_To_xsd_anyType` 象。 (对每个输入的PDF任务执行此文档。)
+   * 对于每个输入文件，使用其构造函数创建一个`BLOB`对象。 `BLOB`对象用于存储输入文件。
+   * 通过调用其构造函数并传递一个字符串值来创建`System.IO.FileStream`对象，该字符串值表示输入文件的文件位置以及打开文件的模式。
+   * 创建存储`System.IO.FileStream`对象内容的字节数组。 通过获取`System.IO.FileStream`对象的`Length`属性，可以确定字节数组的大小。
+   * 通过调用`System.IO.FileStream`对象的`Read`方法，用流数据填充字节数组。 传递要读取的字节数组、开始位置和流长度。
+   * 通过为`MTOM`字段指定字节数组的内容，填充`BLOB`对象。
+   * 创建`MyMapOf_xsd_string_To_xsd_anyType`对象。 此集合对象用于存储创建PDFPortfolio所需的输入文件。
+   * 对于每个输入文件，创建一个`MyMapOf_xsd_string_To_xsd_anyType_Item`对象。
+   * 为`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`key`字段指定表示键名的字符串值。 此值必须与在DDX文档中指定的元素值匹配。 (对每个输入文件执行此任务。)
+   * 将存储输入文件的`BLOB`对象指定到`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 (对每个输入的PDF任务执行此文档。)
+   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 (对每个输入的PDF任务执行此文档。)
 
 1. 设置运行时选项。
 
-   * 使用 `AssemblerOptionSpec` 其构造函数创建存储运行时选项的对象。
-   * 通过为属于该对象的数据成员分配一个值，设置运行时选项以满足您的业务 `AssemblerOptionSpec` 要求。 例如，要指示Assembler服务在出现错误时继续处理作业，请 `false` 指定 `AssemblerOptionSpec` 对象的数据 `failOnError` 成员。
+   * 使用其构造函数创建存储运行时选项的`AssemblerOptionSpec`对象。
+   * 通过为属于`AssemblerOptionSpec`对象的数据成员分配一个值，设置运行时选项以满足您的业务要求。 例如，要指示Assembler服务在出现错误时继续处理作业，请将`false`分配给`AssemblerOptionSpec`对象的`failOnError`数据成员。
 
 1. 组合个人信息。
 
-   调用对 `AssemblerServiceClient` 象的方 `invokeDDX` 法并传递以下值：
+   调用`AssemblerServiceClient`对象的`invokeDDX`方法并传递以下值：
 
-   * 表 `BLOB` 示DDX文档的对象
-   * 包 `MyMapOf_xsd_string_To_xsd_anyType` 含所需文件的对象
-   * 指定 `AssemblerOptionSpec` 运行时选项的对象
+   * 表示DDX文档的`BLOB`对象
+   * 包含所需文件的`MyMapOf_xsd_string_To_xsd_anyType`对象
+   * 指定运行时选项的`AssemblerOptionSpec`对象
 
-   方 `invokeDDX` 法返回一 `AssemblerResult` 个对象，其中包含作业的结果和发生的任何异常。
+   `invokeDDX`方法返回一个`AssemblerResult`对象，该对象包含作业的结果和发生的任何异常。
 
 1. 保存组合的包。
 
-   要获取新创建的PDF包，请执行以下操作：
+   要获取新创建的PDFPortfolio，请执行以下操作：
 
-   * 访问对 `AssemblerResult` 象的字 `documents` 段，该字段是包含 `Map` 生成的PDF文档的对象。
-   * 对对象进行 `Map` 迭代以获得每个生成文档。 然后，将该阵列成员 `value` 转换为 `BLOB`。
-   * 通过访问PDF文档对象的属性提取表示PDF `BLOB` 的二进制 `MTOM` 数据。 这将返回可写入PDF文件的字节数组。
+   * 访问`AssemblerResult`对象的`documents`字段，该字段是一个`Map`对象，包含生成的PDF文档。
+   * 对`Map`对象进行迭代以获得每个生成文档。 然后，将该数组成员的`value`转换为`BLOB`。
+   * 通过访问PDF文档的`BLOB`对象的`MTOM`属性，提取表示PDF数据的二进制数据。 这将返回可写入PDF文件的字节数组。
 
 **另请参阅**
 
