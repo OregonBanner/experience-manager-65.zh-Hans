@@ -25,35 +25,35 @@ AEM Forms工作区为英语、法语、德语和日语提供开箱即用支持�
 
 要将AEM Forms工作区用户界面本地化为您选择的语言：
 
-* 本地化AEM Forms工作区文本。
+* 本地化AEM Forms工作区的文本。
 * 本地化折叠的类别、队列和流程。
 * 本地化日期选取器
 
-在执行上述步骤之前，请确保遵循AEM Forms工作区自 [定义的常规步骤中列出的步骤](../../forms/using/generic-steps-html-workspace-customization.md)。
+在执行上述步骤之前，请确保遵循[AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md)中列出的步骤。
 
 >[!NOTE]
 >
->要更改AEM Forms工作区登录屏幕的语言，请参 [阅创建新登录屏幕](../../forms/using/creating-new-login-screen.md)。
+>要更改AEM Forms工作区登录屏幕的语言，请参阅[创建新登录屏幕](../../forms/using/creating-new-login-screen.md)。
 
-## 文本本地化 {#localizing-text}
+## 本地化文本{#localizing-text}
 
-请执行以下步骤，添加对新语言和浏 *览器* 区域设置代码 *的支持*。
+执行以下步骤以添加对语言&#x200B;*New*&#x200B;和浏览器区域设置代码&#x200B;*nw*&#x200B;的支持。
 
-1. 登录到CRXDE Lite。
-CRXDE Lite的默认URL为 `https://'[server]:[port]'/lc/crx/de/index.jsp`。
-1. 导览至该位置 `apps/ws/locales` 并创建新文件夹 `nw.`
-1. 将文件从 `translation.json`位置复 `/apps/ws/locales/en-US` 制到位置 `/apps/ws/locales/nw` 。
-1. 导航到并 `/apps/ws/locales/nw` 打开以 `translation.json` 进行编辑。 对translation.json文件进行特定于区域设置的更改。
+1. 登录CRXDE Lite。
+CRXDE Lite的默认URL为`https://'[server]:[port]'/lc/crx/de/index.jsp`。
+1. 导览至位置`apps/ws/locales`并创建新文件夹`nw.`
+1. 将文件`translation.json`从位置`/apps/ws/locales/en-US`复制到位置`/apps/ws/locales/nw`。
+1. 导航到`/apps/ws/locales/nw`并打开`translation.json`进行编辑。 对translation.json文件进行特定于区域设置的更改。
 
    以下示例包含AEM Forms工作区英语和法语区域设置的translation.json文件。
 
-   ![translation_json_in_en](assets/translation_json_in_en.png) ![translation_json_in_fr](assets/translation_json_in_fr.png)
+   ![translation_json_in_](assets/translation_json_in_en.png) ![entranslation_json_in_fr](assets/translation_json_in_fr.png)
 
-## 将折叠的类别、队列和流程本地化 {#localizing-collapsed-categories-queues-and-processes}
+## 对折叠的类别、队列和进程进行本地化{#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需要开发包来本地化这些标题。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](introduction-customizing-html-workspace.md#building-html-workspace-code)
+AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需要开发包来本地化这些标题。 有关创建开发包的详细信息，请参阅[构建AEM Forms工作区代码。](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-在以下步骤中，假定新的本地化图像文 *件为*&#x200B;类别nw.png *、* Queue_nw.png *和* Processesnw.png。 建议的图像宽度为19px。
+在以下步骤中，假定新的本地化图像文件为&#x200B;*类别nw.png*、*Queuenw.png*&#x200B;和&#x200B;*Processesnw.png*。 建议的图像宽度为19px。
 
 >[!NOTE]
 >
@@ -63,8 +63,8 @@ AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需�
 
 执行以下步骤来本地化图像：
 
-1. 使用WebDAV客户端，将图像文件放 *置到/apps/ws/images文件夹* 。
-1. 导航到 */apps/ws/css*。 打 *开newStyle* .css进行编辑并添加以下条目：
+1. 使用WebDAV客户端，将图像文件放在&#x200B;*/apps/ws/images*&#x200B;文件夹中。
+1. 导航到&#x200B;*/apps/ws/css*。 打开&#x200B;*newStyle.css*&#x200B;进行编辑并添加以下条目：
 
    ```css
    #categoryListBar .content.nw {
@@ -80,9 +80,9 @@ AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需�
    }
    ```
 
-1. 执行Workspace Customization文章中列出的所 [有语义更改](../../forms/using/introduction-customizing-html-workspace.md) 。
-1. 导航到 *js/runtime/utility文件夹* ，然后打开 ** usersession.js文件进行编辑。
-1. 找到原始代码块中列出的代码并添加条 *件lang !== &#39;nw&#39;到* if语句：
+1. 执行[Workspace Customization](../../forms/using/introduction-customizing-html-workspace.md)文章中列出的所有语义更改。
+1. 导览至&#x200B;*js/runtime/utility*&#x200B;文件夹并打开&#x200B;*usersession.js*&#x200B;文件进行编辑。
+1. 找到原始代码块中列出的代码并添加条件&#x200B;*lang !== &#39;nw&#39;*&#x200B;到if语句：
 
    ```javascript
    // Orignal code
@@ -108,20 +108,20 @@ AEM Forms工作区使用图像显示类别、队列和进程的标题。 您需�
        }
    ```
 
-## 本地化日期选取器 {#localizing-date-picker}
+## 本地化日期选取器{#localizing-date-picker}
 
-您需要开发包来本地化 *datepicker* API。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code)。
+您需要开发包来本地化&#x200B;*datepicker* API。 有关创建开发包的详细信息，请参阅[构建AEM Forms工作区代码](introduction-customizing-html-workspace.md#building-html-workspace-code)。
 
-1. 下载并解 [压jQuery UI包](https://jqueryui.com/download/all/)，导 *航至&lt;解压jquery UI包>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n。
+1. 下载并解压[jQuery UI包](https://jqueryui.com/download/all/)，导航至&#x200B;*&lt;extracted jquery UI包>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n。
 1. 将区域设置代码的jquery.ui.datepicker-nw.js文件新复制到apps/ws/js/libs/jqueryui，并对文件进行特定于区域设置的更改。
-1. 导览至 `apps/ws/js` 并打开要 `jquery.ui.datepicker-nw.js` 编辑的文件。
-1. 在main.js文件中为文件创建别 `jquery.ui.datepicker-nw.js.` 名。为文件创建别名的代 `jquery.ui.datepicker-nw.js` 码为：
+1. 导航到`apps/ws/js`并打开`jquery.ui.datepicker-nw.js`文件进行编辑。
+1. 在main.js文件中为`jquery.ui.datepicker-nw.js.`创建别名。为`jquery.ui.datepicker-nw.js`文件创建别名的代码为：
 
    ```javascript
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
    ```
 
-1. 使用别 `jqueryuidatepickernw` 名将文件 `jquery.ui.datepicker-nw.js` 包含在使用datepicker的所有文件中。 日期选取器用于以下文件：
+1. 使用别名`jqueryuidatepickernw`将`jquery.ui.datepicker-nw.js`文件包含在使用datepicker的所有文件中。 日期选取器用于以下文件：
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
