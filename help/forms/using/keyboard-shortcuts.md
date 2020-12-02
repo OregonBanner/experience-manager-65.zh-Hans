@@ -17,11 +17,11 @@ ht-degree: 4%
 ---
 
 
-# AEM Forms键盘快捷键 {#aem-forms-keyboard-shortcuts}
+# AEM Forms键盘快捷键{#aem-forms-keyboard-shortcuts}
 
 本文列表了可用于Windows和Macintosh操作系统的Adaptive Form Editor、Theme Editor、Content Browser和Corressence Management的键盘快捷键。
 
-## 自适应表单编辑器 {#adaptiveformeditor}
+## 自适应表单编辑器{#adaptiveformeditor}
 
 | **操作** | **Windows上的快捷键** | **Mac OS上的快捷键** |
 |---|---|---|
@@ -71,7 +71,7 @@ ht-degree: 4%
 >
 >标有“&amp;ast;”的快捷键可与Mac OS上的Ctrl和Command键一起使用。
 
-## Content Browser  {#contentbrowser}
+## 内容浏览器{#contentbrowser}
 
 | **操作** | **Windows上的快捷键** | **Mac OS上的快捷键** |
 |---|---|---|
@@ -82,17 +82,17 @@ ht-degree: 4%
 | 在“Forms对象”树中选择下一个项 | 向下箭头 | 向下箭头 |
 | 在“Forms对象”树中选择上一个项 | 向上箭头 | 向上箭头 |
 
-[1替换] Ctrl + Windows向右箭头键和Command + Right Arrow键(Mac OS)。\
-[2] 替换Ctrl + Left Arrow（适用于Windows）和Command + Left Arrow（适用于Mac OS）。
+[1替] 换Ctrl + Windows向右箭头键和Command + Right Arrow(Mac OS)。\
+[2替] 换Ctrl + Windows向左箭头键和Command + Mac OS向左箭头键。
 
 ## 通信管理 {#correspondence-management}
 
 此部分列表了各种键盘和辅助功能快捷键，您可以在“对应管理”文本编辑器中使用这些快捷键。 您可以在以下情况下使用这些快捷键：
 
-* 创建或编辑文 [本资](texts-interactive-communications.md) 源
-* 在创建通信时点击相关的“编辑”图标( ![edittextmodule](assets/edittextmodule.png)) [后编辑文本模块](/help/forms/using/create-correspondence.md)。
+* 创建或编辑[Text](texts-interactive-communications.md)资产
+* 当[创建对应的](/help/forms/using/create-correspondence.md)时，在点击相关的“编辑”图标(![edittextmodule](assets/edittextmodule.png))后编辑文本模块。
 
-### 选择文本并移动光标 {#text-selection-and-moving-the-cursor-around}
+### 选择文本并移动光标绕{#text-selection-and-moving-the-cursor-around}
 
 <table> 
  <tbody>
@@ -129,7 +129,7 @@ ht-degree: 4%
   <tr>
    <td><p>将光标移到下一个单词的开头</p> </td> 
    <td><p>Ctrl+向右箭头键</p> </td> 
-   <td>Option+向右箭 <em><sup>头[1]</sup></em></td> 
+   <td>Option+向右箭头<em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
    <td><p>将光标移至上一个单词的开头</p> </td> 
@@ -210,7 +210,7 @@ ht-degree: 4%
 </table>
 
 
-### 文本对齐 {#text-alignment}
+### 文本对齐方式{#text-alignment}
 
 <table> 
  <tbody>
@@ -242,7 +242,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### 撤消和重做操作 {#undo-and-redo-actions}
+### 撤消和重做操作{#undo-and-redo-actions}
 
 <table> 
  <tbody>
@@ -264,7 +264,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### 更改字体大小 {#changing-font-size}
+### 更改字体大小{#changing-font-size}
 
 <table> 
  <tbody>
@@ -286,7 +286,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### 删除单词 {#deleting-a-word}
+### 删除单词{#deleting-a-word}
 
 <table> 
  <tbody>
@@ -308,7 +308,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### 复制和粘贴 {#copy-and-paste}
+### 复制并粘贴{#copy-and-paste}
 
 <table> 
  <tbody>
