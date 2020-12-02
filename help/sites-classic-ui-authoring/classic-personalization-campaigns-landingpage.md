@@ -12,6 +12,9 @@ discoiquuid: 061dee36-a3bb-4166-a9c1-3ab7e4de1d1d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '3381'
+ht-degree: 81%
 
 ---
 
@@ -35,9 +38,9 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 >[!CAUTION]
 >
->Because the Design Importer requires access to `/apps`, it will not work in containerized cloud environments where `/apps` is immutable.
+>由于设计导入程序需要访问`/apps`，因此它在`/apps`不可变的容器化云环境中无法工作。
 
-## What are Landing Pages? {#what-are-landing-pages}
+## 什么是登陆页?{#what-are-landing-pages}
 
 登陆页面是作为营销推广活动“端点”的单页或多页站点 - 例如电子邮件、广告标语/横幅、社交媒体等。登陆页面具有多种用途，但所有这些用途都有一个共同点，那就是只有让访客完成某一项任务，才算是登陆页面的成功。
 
@@ -52,7 +55,7 @@ AEM 中的登陆页面功能允许营销人员与各代理商的 Web 开发人�
 1. 将设计包导入到导入程序页面中。
 1. 修改并发布页面。
 
-### 桌面登录页面 {#desktop-landing-pages}
+### 桌面登录页面  {#desktop-landing-pages}
 
 AEM 中的示例登陆页面如下所示：
 
@@ -60,7 +63,7 @@ AEM 中的示例登陆页面如下所示：
 
 ### 移动登陆页面 {#mobile-landing-pages}
 
-登陆页面也可具有移动版本。To have a separate mobile version of the landing page the import design has to have two html files: *index.htm(l)* and *mobile.index.htm(l)*.
+登陆页面也可具有移动版本。要使登陆页具有单独的移动版本，导入设计必须包含两个html文件：*index.htm(l)*&#x200B;和&#x200B;*mobile.index.htm(l)*。
 
 登陆页面导入过程与普通登陆页面相同，登陆页面设计另有一个对应移动登陆页面的 html 文件。与桌面登陆页面 html 文件一样，该 html 文件也必须具有画布 `div` 及 `id=cqcanvas`，并且支持桌面登陆页面对应的所有可编辑组件。
 
@@ -72,7 +75,7 @@ AEM 中的示例登陆页面如下所示：
 >
 >如果桌面登陆页面被删除或取消激活，则移动登陆页面也会随之一起被删除或取消激活。
 
-## 登陆页面组件 {#landing-page-components}
+## 登陆页面组件  {#landing-page-components}
 
 要使导入的 HTML 部分可在 AEM 内编辑，您可以将登陆页面 HTML 里的内容直接映射至 AEM 组件。设计导入程序可根据默认设置理解以下组件：
 
@@ -134,22 +137,22 @@ AEM 中的示例登陆页面如下所示：
 
 该 CTA 组件可用于在登陆页面上添加文本链接。当用户单击该链接时即被引向组件属性中指定的目标 URL。它是“行动动员”组的一部分。
 
-![chlimage_1-29](assets/chlimage_1-29.png)
+![chlimage_1-21](assets/chlimage_1-29.png)
 
-**标签** 用户看到的文本。 您可以使用富文本编辑器来修改格式设置。
+**标** 签用户看到的文本。您可以使用富文本编辑器来修改格式设置。
 
-**目标URL** 输入用户单击文本后要访问的URI。
+**目标** URL输入您希望用户单击文本时要访问的URI。
 
-**渲染选项** 描述渲染选项。 选项如下：
+**渲染选** 项描述渲染选项。选项如下：
 
 * 在新浏览器窗口中加载页面
 * 在当前窗口中加载页面
 * 在父框架中加载页面
 * 取消所有框架，并在完整的浏览器窗口中加载页面
 
-**CSS** 在“样式”选项卡上，输入CSS样式表的路径。
+**在“** 样式”选项卡中，输入CSS样式表的路径。
 
-**ID** 在“样式”选项卡上，输入组件的ID以唯一标识它。
+**在样** 式选项卡中，输入组件的ID以唯一标识它。
 
 以下是一个点进率链接示例：
 
@@ -161,20 +164,20 @@ AEM 中的示例登陆页面如下所示：
 
 ![chlimage_1-31](assets/chlimage_1-31.png)
 
-**标签** 用户在图形中看到的文本。 您可以使用富文本编辑器来修改格式设置。
+**标** 签用户在图形中看到的文本。您可以使用富文本编辑器来修改格式设置。
 
-**目标URL** 输入用户单击图像后要访问的URI。
+**目标** URL输入您希望用户单击图像时要访问的URI。
 
-**渲染选项** 描述渲染选项。 选项如下：
+**渲染选** 项描述渲染选项。选项如下：
 
 * 在新浏览器窗口中加载页面
 * 在当前窗口中加载页面
 * 在父框架中加载页面
 * 取消所有框架，并在完整的浏览器窗口中加载页面
 
-**CSS** 在“样式”选项卡上，输入CSS样式表的路径。
+**在“** 样式”选项卡中，输入CSS样式表的路径。
 
-**ID** 在“样式”选项卡上，输入组件的ID以唯一标识它。
+**在样** 式选项卡中，输入组件的ID以唯一标识它。
 
 以下是一个图形链接示例：
 
@@ -195,9 +198,10 @@ CTA 潜在客户表单是由多个不同组件构成的：
 * **表单字段和元素**
 表单字段和元素可以包括文本框、单选按钮、图像等。用户通常在表单字段中完成操作，例如键入文本。有关更多信息，请参见单个表单元素。
 
-* **个人资料组**&#x200B;件与访客个人资料相关的个人资料组件用于社交协作以及需要访客个人信息的其他区域。
+* **用户档案**
+组件与用于社交协作的访客用户档案以及需要访客个性化的其他区域相关的配置文件组件。
 
-The preceding shows an example form; it is comprised of the **Lead Form** component (start and end), with **First Name** and **Email Id** fields used for input and a **Submit** field
+前面显示了一个示例表单；它由&#x200B;**潜在客户表单**&#x200B;组件(开始和结尾)组成，其中&#x200B;**名字**&#x200B;和&#x200B;**电子邮件ID**&#x200B;字段用于输入和&#x200B;**提交**&#x200B;字段
 
 在 Sidekick 中，有以下可供 CTA 潜在客户表单使用的组件：
 
@@ -230,39 +234,39 @@ The preceding shows an example form; it is comprised of the **Lead Form** compon
 
 下节介绍行动动员潜在客户表单的可用组件。
 
-**“关于** ”允许用户添加“关于”信息。
+**“关** 于”允许用户添加“关于”信息。
 
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
-**地址字段** 允许用户输入地址信息。 在配置该组件时，您必须在对话框中输入元素名称。元素名称即是表单元素的名称。该选项卡指示数据在存储库中的存储位置。
+**地址** 字段允许用户输入地址信息。在配置该组件时，您必须在对话框中输入元素名称。元素名称即是表单元素的名称。该选项卡指示数据在存储库中的存储位置。
 
 ![chlimage_1-36](assets/chlimage_1-36.png)
 
-**“出生日期** ”用户可以输入出生日期信息。
+**出生日** 期用户可以输入出生日期信息。
 
 ![chlimage_1-37](assets/chlimage_1-37.png)
 
-**电子邮件ID** 允许用户输入电子邮件地址（标识）。
+**电子邮** 件ID允许用户输入电子邮件地址（标识）。
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
-**名字** -为用户提供一个输入其名字的字段。
+**名字** 为用户提供一个输入其名字的字段。
 
 ![chlimage_1-39](assets/chlimage_1-39.png)
 
-**“性别** ”用户可以从下拉列表中选择其性别。
+**GederUsers** 可以从下拉式列表中选择其性别。
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
-**姓氏用户** 可以输入姓氏信息。
+**姓氏** 用户可以输入姓氏信息。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
-**潜在客户表单** 添加此组件可向登录页面添加潜在客户表单。 潜在客户表单会自动包含一个潜在客户表单的开头和潜在客户表单的结尾字段。其间，您还可以添加本节中介绍的潜在客户表单组件。
+**潜在** 客户表单添加此组件可向登陆页添加潜在客户表单。潜在客户表单会自动包含一个潜在客户表单的开头和潜在客户表单的结尾字段。其间，您还可以添加本节中介绍的潜在客户表单组件。
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 
-The Lead Form component defines both the start and end of a form using the **Form Start** and **Form End** elements. 它们始终是成对的，以确保正确定义表单。
+潜在客户表单组件使用&#x200B;**表单开始**&#x200B;和&#x200B;**表单结尾**&#x200B;元素定义表单的开始和结尾。 它们始终是成对的，以确保正确定义表单。
 
 在添加了潜在客户表单之后，即可以配置表单的开头或结尾，方法是单击相应工具栏中的&#x200B;**编辑**。
 
@@ -275,27 +279,27 @@ The Lead Form component defines both the start and end of a form using the **For
 **感谢页面**
 为感谢访客提供其意见而引用的页面。如果留空，表单将在提交后重新显示。
 
-**启动工作流** -确定提交潜在客户表单后将触发哪个工作流。
+**开始** 工作流确定提交潜在客户表单后将触发哪个工作流。
 
 ![chlimage_1-44](assets/chlimage_1-44.png)
 
-**发布选项** ：提供以下发布选项：
+**发布** 选项以下发布选项可用：
 
 * 创建潜在客户
 * 电子邮件服务: 创建订阅者并添加到列表 - 如果您当前使用的是 ExactTarget 之类的电子邮件服务提供商，则可以使用此选项。
-* 电子邮件服务：发送自动回复的电子邮件——如果您使用的是ExactTarget等电子邮件服务提供商，请使用此功能。
-* 电子邮件服务：将用户从列表中取消订阅——如果您使用的是ExactTarget等电子邮件服务提供商，则可使用。
+* 电子邮件服务：发送自动回复的电子邮件——如果您使用的是ExactTarget等电子邮件服务提供商，则可使用。
+* 电子邮件服务：使用户取消列表-如果您使用的是ExactTarget等电子邮件服务提供商，则使用此选项。
 * 使用户取消订阅
 
-**表单标识符** 表单标识符可唯一标识潜在客户表单。 单个页面上具有多个表单时，应使用表单标识符；请确保它们具有不同的标识符。
+**表单** 标识符表单标识符可唯一标识潜在客户表单。单个页面上具有多个表单时，应使用表单标识符；请确保它们具有不同的标识符。
 
-**加载路径** -用于将预定义值加载到潜在客户表单字段的节点属性的路径。
+**加载** 路径是用于将预定义值加载到潜在客户表单字段的节点属性的路径。
 
 这是指定库中节点的路径的可选字段。如果此节点具有与字段名称相匹配的属性，则表单上的相应字段将随这些属性的值预加载。如果不存在任何匹配，则字段将包含默认值。
 
-**客户端验证** 指示此表单是否需要客户端验证（始终进行服务器验证）。 这可以与表单Captcha组件结合实现。
+**客户端** 验证指示此表单是否需要客户端验证（始终进行服务器验证）。 这可以与FormsCaptcha组件结合使用。
 
-**验证资源类型** 如果您要验证整个潜在客户表单（而非单个字段），则定义表单验证资源类型。
+**验证资** 源类型如果您要验证整个潜在客户表单（而非单个字段），可定义表单验证资源类型。
 
 如果您要验证完整表单，还应包含以下任一内容：
 
@@ -305,7 +309,7 @@ The Lead Form component defines both the start and end of a form using the **For
 * 服务器端验证的脚本：
    ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
 
-**操作配置** 根据在发布选项中的选择，操作配置会发生更改。 例如，如果您选择创建潜在客户，则可以配置要将潜在客户添加到哪个列表。
+**操作** 配置根据发布选项中的选择，操作配置会发生更改。例如，如果您选择创建潜在客户，则可以配置要将潜在客户添加到哪个列表。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -335,13 +339,13 @@ The Lead Form component defines both the start and end of a form using the **For
 1. [准备要导入的 HTML。](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
 1. 导入设计包。
 
-### 使用设计导入程序 {#use-of-the-design-importer}
+### 使用设计导入程序  {#use-of-the-design-importer}
 
-由于页面导入涉及 HTML 准备、验证和页面测试，因此导入登陆页面应该是一项管理员任务。As an admin, the users performing the import need read, write, create, and delete permissions on `/apps`. 如果用户没有这些权限，则导入将失败。
+由于页面导入涉及 HTML 准备、验证和页面测试，因此导入登陆页面应该是一项管理员任务。作为管理员，执行导入的用户需要对`/apps`具有读取、写入、创建和删除权限。 如果用户没有这些权限，则导入将失败。
 
 >[!NOTE]
 >
->Because the design importer is intended as an admin tool requiring read, write, create, and delete permissions on `/apps`, Adobe does not recommend using the design importer in production.
+>由于设计导入程序是作为要求`/apps`读取、写入、创建和删除权限的管理工具，因此Adobe不建议在生产中使用设计导入程序。
 
 Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，可以由开发人员对导入进行测试和验证，并负责将代码部署到生产实例。
 
@@ -351,7 +355,7 @@ Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，�
 
 >[!NOTE]
 >
->By default, an Importer Page can only be created under campaigns, but you can also overlay this template in order to create a landing page under `/content/mysite`.
+>默认情况下，导入程序页面只能在活动下创建，但您也可以叠加此模板以在`/content/mysite`下创建登陆页。
 
 要创建新的登陆页面，请执行以下操作：
 
@@ -368,7 +372,7 @@ Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，�
 
 在导入设计包之前，需要准备 HTML。有关更多信息，请参阅[扩展和配置设计导入](/help/sites-administering/extending-the-design-importer-for-landingpages.md)。
 
-### 导入设计包 {#importing-the-design-package}
+### 导入设计包  {#importing-the-design-package}
 
 创建导入程序页面后，即可将设计包导入其中。有关创建设计包及其推荐结构的详细信息，请参阅[扩展和配置设计导入](/help/sites-administering/extending-the-design-importer-for-landingpages.md)中的说明。
 
@@ -379,7 +383,7 @@ Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，�
    ![chlimage_1-46](assets/chlimage_1-46.png)
 
 1. 将设计包拖放到拖放框中。请注意，当设计包被拖放到其上方时，箭头方向会发生更改。
-1. 执行拖放操作后，您会看到登陆页面替代了导入程序页面。您的HTML登录页面已成功导入。
+1. 执行拖放操作后，您会看到登陆页面替代了导入程序页面。您的HTML登陆页已成功导入。
 
    ![chlimage_1-2-1](assets/chlimage_1-2-1.png)
 
@@ -391,7 +395,7 @@ Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，�
 >
 >如果您在导入设计包时遇到问题，请参阅[疑难排解](/help/sites-administering/extending-the-design-importer-for-landingpages.md#troubleshooting)。
 
-## 处理登陆页面 {#working-with-landing-pages}
+## 处理登陆页面  {#working-with-landing-pages}
 
 登陆页面的设计和资产通常是由代理商的设计人员使用其惯用的工具创建的，如 Adobe Photoshop 或 Adobe Dreamweaver。在设计完成后，设计人员会向营销部门发送一个包含所有资产的 zip 文件。随后即由营销部门的联系人负责将 zip 文件放入 AEM，并发布相关内容。
 
@@ -417,21 +421,21 @@ Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，�
 
 要下载导入的设计包，请单击登陆页面工具栏中的&#x200B;**下载 Zip**。
 
-### 查看导入信息 {#viewing-import-information}
+### 查看导入信息  {#viewing-import-information}
 
 在经典用户界面中，您可以随时单击登陆页面顶部的蓝色感叹号来查看有关上次导入的信息。
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-如果导入的设计包存在某些问题，例如是关于某些包中并不存在的图像/脚本，或诸如此类的问题，则设计导入程序会以列表形式显示这些问题。在经典用户界面中，要查看问题列表，请单击登陆页面工具栏中的问题链接。In the following image, clicking on **Issues** link opens the Import Issues window.
+如果导入的设计包存在某些问题，例如是关于某些包中并不存在的图像/脚本，或诸如此类的问题，则设计导入程序会以列表形式显示这些问题。在经典用户界面中，要查看问题列表，请单击登陆页面工具栏中的问题链接。在下图中，单击&#x200B;**问题**&#x200B;链接可打开“导入问题”窗口。
 
 ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
 ### 重置登陆页面 {#resetting-a-landing-page}
 
-如果您想要在对登陆页面设计包进行更改后重新将其导入，则可以“清除”登陆页面，方法是在经典用户界面中单击登陆页面顶部的&#x200B;**清除**，或在触屏优化用户界面中单击设置菜单中的“清除”。这样做会删除导入的登录页面，并创建空的导入程序页面。
+如果您想要在对登陆页面设计包进行更改后重新将其导入，则可以“清除”登陆页面，方法是在经典用户界面中单击登陆页面顶部的&#x200B;**清除**，或在触屏优化用户界面中单击设置菜单中的“清除”。这样做会删除导入的登陆页并创建空白导入程序页面。
 
-在清除登陆页面时，您可以删除内容更改。If you click **No**, then the content changes are preserved, that is, the structure under `jcr:content/importer`is preserved and only the importer page component and the resources in `etc/design` are removed. Whereas, if you click **Yes**, the `jcr:content/importer` is also removed.
+在清除登陆页面时，您可以删除内容更改。如果单击&#x200B;**否**，则内容更改将保留，即保留`jcr:content/importer`下的结构，并且只删除导入程序页面组件和`etc/design`中的资源。 但是，如果单击&#x200B;**是**，则`jcr:content/importer`也会被删除。
 
 >[!NOTE]
 >
@@ -447,15 +451,15 @@ Adobe 建议在暂存实例上使用设计导入程序。在暂存实例上，�
 >
 >如果登陆页面上的组件无法编辑，则需要在[修改 HTML 文件](/help/sites-administering/extending-the-design-importer-for-landingpages.md)之后重新导入 zip 文件。这意味着在导入期间，不可编辑的部分不会转换为 AEM 组件。
 
-### 删除登陆页面 {#deleting-a-landing-page}
+### 删除登陆页面  {#deleting-a-landing-page}
 
 删除登陆页面的过程与删除普通 AEM 页面类似。
 
 唯一的例外是在删除桌面登陆页面时，也会删除对应的移动登陆页面（如果有），但反之则不然。
 
-### 发布登陆页面 {#publishing-a-landing-page}
+### 发布登陆页面  {#publishing-a-landing-page}
 
-您可以像发布普通页面一样发布登陆页面及其所有依赖关系。
+您可以像发布普通页面一样发布登陆页及其所有依赖项。
 
 >[!NOTE]
 >
