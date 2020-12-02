@@ -18,17 +18,17 @@ ht-degree: 0%
 ---
 
 
-# AEM Communities教育入门 {#getting-started-with-aem-communities-for-enablement}
+# Enablement {#getting-started-with-aem-communities-for-enablement}AEM Communities入门
 
 AEM Communities帮助品牌创建跨数字和亲临渠道的一致体验，方法是通过一系列支持资源、分配的内容和动态推荐来促进员工和客户的支持，所有这些都在社交社区中提供，以促进参与。
 
-下面是一个教程，介绍如何为演示 [或开发目的](overview.md#enablement-community) 快速设置支持社区。
+以下是关于为演示或开发目的快速设置[启用社区](overview.md#enablement-community)的教程。
 
-有关快速建立参与社区的教 [程](overview.md#engagement-community)，请访 [问AEM Communities入门](getting-started.md)。
+有关快速设置[参与社区](overview.md#engagement-community)的教程，请访问[AEM Communities](getting-started.md)入门。
 
 >[!NOTE]
 >
->本教程假定安装Communities [功能包1或更高](deploy-communities.md#latestfeaturepack) 版本。
+>本教程假定安装[Communities功能包1](deploy-communities.md#latestfeaturepack)或更高版本。
 
 * [初始设置](enablement-setup.md)
 
