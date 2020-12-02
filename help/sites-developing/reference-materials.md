@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# API指南 {#api-guides}
+# API指南{#api-guides}
 
 Adobe Experience Manager(AEM)为开发应用程序和扩展AEM提供了若干API。 以下列表提供AEM支持的API的文档：
 
@@ -32,7 +32,7 @@ Adobe Experience Manager(AEM)为开发应用程序和扩展AEM提供了若干API
 * [UI测试框架JavaScript API参考](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)
 * [编辑器核心JavaScript API参考](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
-AEM单页应用程序(SPA)编辑器SDK框架JavaScript API参考：
+AEM单页应用程序(SPA)Editor SDK框架JavaScript API参考：
 
 * [组件映射](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [页面模型管理器](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
@@ -45,11 +45,11 @@ AEM投放和内容管理API:
 
    * [JSON导出器](/help/sites-developing/json-exporter.md)
    * [为组件启用JSON导出](/help/sites-developing/json-exporter-components.md)
-   * 有关详 [细信息，请参阅《开发用户指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js) 》中的“组件”部分
+   * 有关详细信息，请参阅《开发用户指南》中的[组件部分](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)
 
-* **资产**:资产HTTP API允许对资产执行创建——读取——更新——删除(CRUD)操作，包括二进制、元数据、演绎版和注释。 请参 [阅AEM AssetsHTTP API](/help/assets/mac-api-assets.md)
+* **资产**:资产HTTP API允许对资产执行创建——读取——更新——删除(CRUD)操作，包括二进制、元数据、演绎版和注释。请参阅[AEM AssetsHTTP API](/help/assets/mac-api-assets.md)
 
-* **内容片段** (CF): [资产HTTP API和AEM AssetsAPI中](/help/assets/assets-api-content-fragments.md) 的 [CF支持——内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* **内容片段** (CF): [资产HTTP API和AEM Assets](/help/assets/assets-api-content-fragments.md) API中 [的CF支持——内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 
 以下外部资源仅供参考：
 
