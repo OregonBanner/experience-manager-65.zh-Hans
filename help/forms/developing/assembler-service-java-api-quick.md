@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Assembler Service Java API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
+# Assembler Service Java API QuickStart(SOAP){#assembler-service-java-api-quickstart-soap}
 
 Java API快速开始(SOAP)可用于Assembler服务
 
@@ -47,11 +47,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->“使用AEM Forms进行编程”中的快速开始基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+>“使用AEM Forms进行编程”中的快速开始基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 快速开始（SOAP模式）:使用Java API汇编PDF文档 {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}汇编PDF文档
 
-以下Java代码示例将两个名为map.pdf *的PDF源文档**和directions* .pdf合并为一个PDF文档。 单个PDF文档的名称 *为AssemblerResultPDF.pdf*。 DDX文档的名称 *为shell.xml*。 (请参 [阅以编程方式组合PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
+以下Java代码示例将名为&#x200B;*map.pdf*&#x200B;和&#x200B;*directions.pdf*&#x200B;的两个PDF源文档合并为一个PDF文档。 单个PDF文档的名称为&#x200B;*AssemblerResultPDF.pdf*。 DDX文档的名称为&#x200B;*shell.xml*。 (请参阅[以编程方式组合PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)。)
 
 ```java
  /*
@@ -193,9 +193,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API反汇编PDF文档 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}反汇编PDF文档
 
-以下Java代码示例拆解名为AssemblerResultPDF. *pdf的PDF文档*。 请注意，DDX文档的名称 *为shell_discremasure.xml*。 每个已拆卸的PDF文档均命名 `ResultPDF[Number].pdf`。 即，第一个已拆卸的PDF文档 *名为ResultPDF1.pdf。* 有关此代码 *示例中使用的shell_distrambler.xml* DDX文档的信息，请参 [阅以编程方式反汇编PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
+以下Java代码示例解析名为&#x200B;*AssemblerResultPDF.pdf*&#x200B;的PDF文档。 请注意，DDX文档的名称为&#x200B;*shell_distramblery.xml*。 每个已拆卸的PDF文档均命名为`ResultPDF[Number].pdf`。 即，第一个已拆卸的PDF文档名为&#x200B;*ResultPDF1.pdf。* 有关此代码 *示例中使用的* shell_distrambery.xmlDDX文档的信息，请参 [阅以编程方式反汇编PDF文档](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)。
 
 ```java
  /*
@@ -332,9 +332,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API汇编加密的PDF文档 {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}组合加密的PDF文档
 
-以下Java代码示例汇编了一个密码加密的PDF文档。 无抵押的PDF文档名 *为Loan.pdf*。 请注意，DDX文档的名称 *为shell_Encrypt.xml*。 加密的PDF文档名 *为AssemblerEncryptedPDF.pdf*。 (请参 [阅汇编加密的PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)。)
+以下Java代码示例汇编了一个密码加密的PDF文档。 无抵押的PDF文档名为&#x200B;*Loan.pdf*。 请注意，DDX文档的名称为&#x200B;*shell_Encrypt.xml*。 加密的PDF文档名为&#x200B;*AssemblerEncryptedPDF.pdf*。 (请参阅[汇编加密的PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)。)
 
 ```java
  /*
@@ -455,9 +455,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API将PDF文档与bates编号组合 {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}将PDF文档与bates编号组合在一起
 
-以下Java代码示例将具有唯一页面标识符的PDF文档（bates编号）组合在一起。 请注意，DDX文档的名称 *为shell_Bates.xml*。 从Assembler服务返回的PDF文档将保存为名为AssemblerResultBatesPDF. *pdf的PDF文件*。 (请参 [阅使用Bates编号汇编文档](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)。)
+以下Java代码示例将具有唯一页面标识符的PDF文档（bates编号）组合在一起。 请注意，DDX文档的名称为&#x200B;*shell_Bates.xml*。 从Assembler服务返回的PDF文档将保存为名为&#x200B;*AssemblerResultBatesPDF.pdf*&#x200B;的PDF文件。 (请参阅[使用Bates编号汇编文档](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)。)
 
 ```java
  /*
@@ -613,9 +613,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API汇编非交互式PDF文档 {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}组合非交互式PDF文档
 
-以下Java代码示例组装了一个非交互式PDF文档。 传递给Assembler服务的交互式PDF文档名 *为Loan.pdf*。 请注意，DDX文档的名称 *为shell_XFA.xml*。 非交互式PDF文档将保存为名为AssembleNonInteractivePDF. *pdf的PDF文件*。 (请参 [阅组合非交互式PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents)。)
+以下Java代码示例组装了一个非交互式PDF文档。 传递给Assembler服务的交互式PDF文档名为&#x200B;*Loan.pdf*。 请注意，DDX文档的名称为&#x200B;*shell_XFA.xml*。 非交互式PDF文档将保存为名为&#x200B;*AssembleNonInteractivePDF.pdf*&#x200B;的PDF文件。 (请参阅[组合非交互式PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents)。)
 
 ```java
  /*
@@ -737,9 +737,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API确定文档是否符合PDF/A规范 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}确定文档是否符合PDF/A规范
 
-以下Java代码示例确定输入的PDF文档符合PDF/A标准。 传递给Assembler服务的输入PDF文档名 *为Loan.pdf*。 DDX文档的名称为shell_PDFA.xml。 从Assembler服务返回的XML文档，它指定输入的PDF文档是否符合PDF/A规范，将另存为名为result.xml的XML文件。 有关此代码 *示例中使用的shell_PDFA* .xml DDX文档的信息，请参 [阅确定文档是否符合PDF/A规范](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)。
+以下Java代码示例确定输入的PDF文档符合PDF/A标准。 传递给Assembler服务的输入PDF文档名为&#x200B;*Loan.pdf*。 DDX文档的名称为shell_PDFA.xml。 从Assembler服务返回的XML文档，它指定输入的PDF文档是否符合PDF/A规范，将另存为名为result.xml的XML文件。 有关此代码示例中使用的&#x200B;*shell_PDFA.xml* DDX文档的信息，请参见[确定文档是否符合PDF/A-规范](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)。
 
 ```java
  /*
@@ -883,9 +883,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API验证DDX文档 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}验证DDX文档
 
-以下Java代码示例基于名为bookmarkDDX.xml的文件验 *证DDX文档*。 (请参 [阅验证DDX文档](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents)。)
+以下Java代码示例基于名为&#x200B;*bookmarkDDX.xml*&#x200B;的文件验证DDX文档。 (请参阅[验证DDX文档](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents)。)
 
 ```java
  /*
@@ -1014,9 +1014,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API将PDF文档与书签组合 {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}将PDF文档与书签组合
 
-以下Java代码示例汇编包含书签的PDF文档。 DDX文档的名称 *为bookmarkDDX.xml*。 描述要添加到PDF文档的书签XML文档的名称为bookmarks.xml。 结果PDF文档将保存为名为AssemblerResultBookmarks.pdf的PDF文件。 (请参 [阅将PDF文档与书签组合](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)。)
+以下Java代码示例汇编包含书签的PDF文档。 DDX文档的名称为&#x200B;*bookmarkDDX.xml*。 描述要添加到PDF文档的书签XML文档的名称为bookmarks.xml。 结果PDF文档将保存为名为AssemblerResultBookmarks.pdf的PDF文件。 (请参阅[用书签汇编PDF文档](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)。)
 
 ```java
  /*
@@ -1184,14 +1184,15 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API动态创建DDX文档 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}动态创建DDX文档
 
 以下Java代码示例动态创建分解PDF文档的DDX文档。 将为输入PDF文档中的每个1级书签创建新PDF文档。 此代码示例包含两种用户定义的方法：
 
-* `createDDX`:创建一 `org.w3c.dom.Document` 个对象，它表示发送到Assembler服务的DDX文档。 此用户定义的方法返回 `org.w3c.dom.Document` 对象。
-* `convertDDX`:将对象 `org.w3c.dom.Document` 转换为对 `com.adobe.idp.Document` 象。 此方法将对象 `org.w3c.dom.Document` 接受为输入参数并返回一个 `com.adobe.idp.Document` 对象。
+* `createDDX`:创建 `org.w3c.dom.Document` 一个对象，它表示发送到Assembler服务的DDX文档。此用户定义的方法返回`org.w3c.dom.Document`对象。
+* `convertDDX`:将对象 `org.w3c.dom.Document` 转换为对 `com.adobe.idp.Document` 象。此方法接受`org.w3c.dom.Document`对象作为输入参数并返回`com.adobe.idp.Document`对象。
 
-   在此快速开始中调用这两种方法。 (请参 [阅动态创建DDX文档](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。)”
+   在此快速开始中调用这两种方法。 (请参阅[动态创建DDX文档](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。)
+&quot;
 
 ```java
 /*
@@ -1380,9 +1381,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API汇编PDFPortfolio {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}汇编PDFPortfolio
 
-以下Java代码示例创建PDF包。 PDF包将保存为名为AssemblerResultPortfolio.pdf *的PDF文件*。 (请参 [阅汇编PDFPortfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios)。)
+以下Java代码示例创建PDF包。 PDF包将保存为名为&#x200B;*AssemblerResultPortfolio.pdf*&#x200B;的PDF文件。 (请参阅[汇编PDFPortfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios)。)
 
 ```java
  /*
@@ -1531,9 +1532,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API组合多个XDP片段 {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}组合多个XDP片段
 
-以下Java代码示例汇编基于以下XDP文件的XDP片段： *tuc018_template_frued.xdp*、 *tuc018_contact.xdp*&#x200B;和* tuc018_patient.xdp*。 包含所有片段的已装配XDP文档将另存为名为AssemblerResultXDP. *xdp的XDP文件*。 (请参 [阅组合多个XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)。)
+以下Java代码示例汇编基于以下XDP文件的XDP片段：*tuc018_template_frued.xdp*、*tuc018_contact.xdp*&#x200B;和* tuc018_patient.xdp*。 已装配的包含所有片段的XDP文档将保存为名为&#x200B;*AssemblerResultXDP.xdp*&#x200B;的XDP文件。 （请参阅[组合多个XDP片段](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)。）
 
 ```java
  /*
@@ -1684,9 +1685,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
  }
 ```
 
-## 快速开始（SOAP模式）:使用Java API编辑PDF文档 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}编辑PDF文档
 
-以下代码示例使用密文标记PDF文档 `PDFUtility`。
+以下代码示例使用`PDFUtility`编辑PDF文档。
 
 >[!NOTE]
 >
