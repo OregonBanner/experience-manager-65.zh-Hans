@@ -18,31 +18,31 @@ ht-degree: 1%
 ---
 
 
-# 表达式生成器中的远程功能{#remote-functions-in-expression-builder}
+# 表达式生成器中的远程函数{#remote-functions-in-expression-builder}
 
 使用表达式生成器，您可以创建表达式或条件，对数据字典或最终用户提供的数据值执行计算。 通信管理使用表达式评估的结果来选择资产，如文本、图像、列表和条件，并根据需要将其插入通信中。
 
-## 使用表达式构建器创建表达式和远程功能 {#creating-expressions-and-remote-functions-with-expression-builder}
+## 使用表达式生成器{#creating-expressions-and-remote-functions-with-expression-builder}创建表达式和远程功能
 
-表达式生成器在内部使用JSP EL库，因此表达式符合JSPEL语法。 有关详细信息，请参阅 [示例表达式](#exampleexpressions)。
+表达式生成器在内部使用JSP EL库，因此表达式符合JSPEL语法。 有关详细信息，请参阅[示例表达式](#exampleexpressions)。
 
 ![表达式生成器](assets/expressionbuilder.png)
 
-### 运营商 {#operators}
+### 运算符{#operators}
 
 可在表达式中使用的运算符位于表达式生成器的顶栏中。
 
-### 示例表达式 {#exampleexpressions}
+### 示例表达式{#exampleexpressions}
 
 下面是几个常用的JSP EL示例，您可以在通信管理解决方案中使用它们：
 
-* 要添加两个数字： ${number1 + number2}
-* 要连接两个字符串： ${str1} ${str2}
-* 要比较两个数字： ${age &lt; 18}
+* 要添加两个数字：${number1 + number2}
+* 要连接两个字符串：${str1} ${str2}
+* 要比较两个数字：${age &lt; 18}
 
-您可以在JSP EL规范中找 [到更多信息](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)。 客户端表达式管理器不支持JSP EL规范中的某些变量和函数，具体而言：
+您可以在[JSP EL规范](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)中找到更多信息。 客户端表达式管理器不支持JSP EL规范中的某些变量和函数，具体而言：
 
-* 在客户端评估的表达式的变 [] 量名称中，不支持集合索引和映射键（使用记号）。
+* 对于在客户端评估的表达式，变量名称中不支持集合索引和映射键（使用[]符号）。
 * 以下是表达式中使用的函数的参数类型或返回类型：
 
    * java.lang.String
@@ -67,23 +67,23 @@ ht-degree: 1%
    * java.util.Date
    * java.util.List
 
-### 远程功能 {#remote-function}
+### 远程函数{#remote-function}
 
 远程功能提供在表达式中使用自定义逻辑的功能。 您可以编写自定义逻辑以在表达式中作为Java中的方法使用，同样的函数也可以在表达式中使用。 可用的远程功能列在表达式编辑器左侧的“远程功能”选项卡下。
 
 ![remotefunction](assets/remotefunction.png)
 
-#### 添加自定义远程功能 {#adding-custom-remote-functions}
+#### 添加自定义远程函数{#adding-custom-remote-functions}
 
 您可以创建自定义捆绑包，以导出您自己的远程功能并在表达式内使用。 要创建用于导出您自己的远程功能的自定义包，请执行以下任务。 它演示了如何编写自定义函数来使其输入字符串大写。
 
 1. 为OSGi服务定义一个接口，其中包含要导出以供表达式管理器使用的方法。
 1. 在接口A上声明方法，并使用@ServiceMethod注释(com.adobe.exm.expeval.ServiceMethod)对它们进行注释。 表达式管理器忽略任何未加注释的方法。 ServiceMethod注释具有以下可选属性，也可以指定这些属性：
 
-   1. **已启用**: 确定是否启用此方法。 表达式管理器忽略禁用的方法。
-   1. **familyId**: 指定方法的族（组）。 如果为空，表达式管理器会假定该方法属于默认族。 没有从中选择函数的族（默认的族除外）的注册表。 表达式管理器通过对各个包导出的所有函数指定的所有系列ID进行合并，动态地创建注册表。 确保他们在此处指定的ID可合理读取，因为它也显示在表达式创作用户界面中。
-   1. **displayName**: 函数的可读名称。 此名称用于在创作用户界面中显示。 如果为空，表达式管理器将使用函数的前缀和local-name构造默认名称。
-   1. **描述**: 函数的详细描述。 此说明用于创作用户界面中的显示目的。 如果为空，表达式管理器将使用函数的前缀和local-name构造默认描述。
+   1. **已启用**:确定是否启用此方法。表达式管理器忽略禁用的方法。
+   1. **familyId**:指定方法的族（组）。如果为空，表达式管理器会假定该方法属于默认族。 没有从中选择函数的族（默认的族除外）的注册表。 表达式管理器通过对各个包导出的所有函数指定的所有系列ID进行合并，动态地创建注册表。 确保他们在此处指定的ID可合理读取，因为它也显示在表达式创作用户界面中。
+   1. **displayName**:函数的可读名称。此名称用于在创作用户界面中显示。 如果为空，表达式管理器将使用函数的前缀和local-name构造默认名称。
+   1. **描述**:函数的详细描述。此说明用于创作用户界面中的显示目的。 如果为空，表达式管理器将使用函数的前缀和local-name构造默认描述。
 
    ```java
    package mergeandfuse.com;
@@ -157,8 +157,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 以下是要使用的示例存档：
 
-* **GoodFunctions.jar.zip是包含示例** 远程函数定义的jar文件。 下载GoodFunctions.jar.zip文件并解压缩它以获取jar文件。
-* **GoodFunctions.zip是用于定义** 自定义远程函数和为其创建包的源代码包。
+* **GoodFunctions.jar.zip是包** 含示例远程函数定义的jar文件。下载GoodFunctions.jar.zip文件并解压缩它以获取jar文件。
+* **GoodFunctions.** zip是用于定义自定义远程函数和为其创建包的源代码包。
 
 GoodFunctions.jar.zip
 
