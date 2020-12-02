@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# 使用演示包进行资产分析 {#using-demo-package-for-asset-insights}
+# 使用资产分析演示包{#using-demo-package-for-asset-insights}
 
 使用演示包，您可以启用Adobe资产洞察来捕获示例网页中的数据并生成洞察。
 
-## [!DNL Use Experience Manager Assets] 通过示例网页获得洞察  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] 通过示例网页获得洞察   {#using-aem-assets-insights-with-sample-web-page}
 
-1. 按照配置资产分析中的说明 [配置资产分析](configure-asset-insights.md)。
+1. 使用[配置资产分析](configure-asset-insights.md)中的说明配置资产分析。
 1. 从下面下载示例资产包，并从CRXDE包管理器安装该包。
 
    [获取文件](assets/insightsdemo.zip)
@@ -34,4 +34,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >外部网页本身可 [!DNL Experience Manager] 以。
+   >外部网页本身可以是[!DNL Experience Manager]。
