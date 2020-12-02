@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 93%
 
 ---
 
@@ -24,6 +27,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
    >
 * 某些功能并不是在所有控制台中均可用，并且/或者某些控制台会提供额外功能。其他页面中会更详细地介绍有关具体控制台及其相关功能的特定信息。
 >* 用户在整个 AEM 环境中都可以使用各种键盘快捷键，尤其是在[使用控制台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)和[编辑页面](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)时。
+
 >
 
 
@@ -57,7 +61,7 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
   <tr>
    <td><strong>启动项</strong></td>
    <td>此控制台可帮助管理您的<a href="/help/sites-classic-ui-authoring/classic-launches.md">启动项</a>；通过这些启动项，可以为一个或多个已激活网页的将来版本开发内容。
-<br /> 注 <i>意：在触屏优化UI中，“站点”控制台中提供了大量相同的功能，同时还提供了“引用”边栏。</i><i>如果需要，可以从“工具”控制台中访问此控制台；选择“操作”，然后选择“启动项”。</i></td>
+<br /> <i>注意：在触屏优化UI中，“站点”控制台中提供了许多相同的功能，同时还提供了引用边栏。</i><i>如果需要，可以从“工具”控制台中访问此控制台；选择“操作”，然后选择“启动项”。</i></td>
   </tr>
   <tr>
    <td><strong>收件箱 </strong></td>
@@ -91,13 +95,13 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 * 左窗格
 
-   这显示了网站的树结构以及这些网站中的页面。
+   这会显示网站的树结构以及这些网站中的页面。
 
    还显示有关其他方面或 AEM 的信息，包括项目、Blueprint 和资产。
 
 * 右窗格
 
-   这将显示页面（在左侧窗格中选定的位置），并可用于执行操作。
+   这将显示页面（在左窗格中选定的位置），并可用于执行操作。
 
 从此处，可以使用工具栏、上下文菜单，或通过打开页面以执行进一步操作，来[管理您的页面](/help/sites-authoring/managing-pages.md)。
 
