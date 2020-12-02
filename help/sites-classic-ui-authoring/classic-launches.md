@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 4f62078d-b5b0-4eb9-bd9b-7647a093dec2
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 74%
 
 ---
 
@@ -23,12 +26,12 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->The theory behind launches is described in detail under [Launches](/help/sites-authoring/launches.md) in the standard authoring documentation.
+>在标准创作文档中的[启动项](/help/sites-authoring/launches.md)中详细描述了启动项的原理。
 >
->Information specific to using launches in the classic UI can be found in the following documentation together with [Creating Launches](/help/sites-classic-ui-authoring/classic-launches-creating.md), [Editing Launches](/help/sites-classic-ui-authoring/classic-launches-editing.md), and [Promoting Launches](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>有关在经典UI中使用启动项的特定信息，请参阅以下文档以及[创建启动项](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[编辑启动项](/help/sites-classic-ui-authoring/classic-launches-editing.md)和[提升启动项](/help/sites-classic-ui-authoring/classic-launches-promoting.md)。
 
 >[!CAUTION]
 >
 >无法在经典 UI 中对启动项使用多个源分支。
 
-The Launches console can be directly accessed with [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+“启动项”控制台可通过[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)直接访问
