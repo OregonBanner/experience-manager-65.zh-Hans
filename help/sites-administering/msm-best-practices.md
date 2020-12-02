@@ -24,12 +24,12 @@ ht-degree: 1%
 
 MSM是一个可配置的框架，用于自动进行内容部署。 实施通常涉及网站的主要部分，并且跨组织和地理位置。 因此，强烈建议在规划网站时像计划一样仔细地规划MSM实施：
 
-* 开始 **实施之前，请仔细规划结构** 和内容流。
+* 在开始实施之前，请仔细&#x200B;**规划结构和内容流**。
 * **自定义所需数量，但尽可能少。** 虽然MSM支持高度自定义（例如转出配置），但网站的性能、可靠性和可升级性的最佳实践是最大限度地减少自定义。
-* 尽早建 **立治理模** 式，并相应地培训用户，确保成功。 从视图的治理角度来说，最佳做法是尽 **可能减少本地内容制作者向其他本地用户** 及其各自的Live Copy分配／连接内容的权限。 这是因为不受管制的链式继承可以显着增加MSM结构的复杂性并降低其性能和可靠性。
+* 尽早建立&#x200B;**governance**&#x200B;模型，并相应地培训用户以确保成功。 从视图的治理角度来说，最佳做法是&#x200B;**最小化本地内容制作者拥有的将内容分配／连接到其他本地用户及其各自Live Copy的权限。**&#x200B;这是因为不受管制的链式继承可以显着增加MSM结构的复杂性并降低其性能和可靠性。
 
-* 一旦存在针对您的结构、内容流、自动化和管理的计划， **在开始实时实施之前，为您的系统**&#x200B;构建原型并进行彻底测试。
-* 请记住，Adobe咨 **询和领先的系统集成商在MSM的规划和实施内容自动化方面具有丰富的经验** ，因此他们可以帮助您开始使用MSM项目并贯穿整个实施过程。
+* 一旦您的结构存在计划，内容流、自动化和管理——在开始实时实施之前，为系统&#x200B;**建立原型并进行全面测试。**
+* 请记住，**Adobe咨询和领先的系统集成商**&#x200B;在MSM中具有深入的内容规划和实施自动化的经验，因此他们可以帮助您开始使用MSM项目并贯穿整个实施过程。
 
 >[!NOTE]
 >
@@ -44,30 +44,30 @@ MSM是一个可配置的框架，用于自动进行内容部署。 实施通常�
 
 >[!NOTE]
 >
->您还可以使用引 [用组件](/help/sites-authoring/default-components-foundation.md#reference) ，重用单个页面或段落。 但是，请牢记：
+>您还可以使用[引用组件](/help/sites-authoring/default-components-foundation.md#reference)重用单个页面或段落。 但是，请牢记：
 >
 >* MSM更灵活，允许对同步的内容和时间进行细致的控制。
->* [现在](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) ，在基础组件上推荐核心组件。
+>* [现在](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 推荐核心组件在基础组件之上。
 
 >
 
 
 
-## Live Copy源和Blueprint配置 {#live-copy-sources-and-blueprint-configurations}
+## Live Copy源和Blueprint配置{#live-copy-sources-and-blueprint-configurations}
 
-请记住，Live Copy可以使用常规页面 [或Blueprint配](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) 置 [创建](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)。 这两种情况都是有效的用例。
+请记住，可以使用[常规页面](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)或[蓝图配置](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)创建Live Copy。 这两种情况都是有效的用例。
 
 使用Blueprint配置的额外好处是：
 
-* 允许作者在Blueprint上使 **用** “转出”选项——将修改（显式）推送到继承自此Blueprint的Live Copy。
-* 允许作者使用创 **建站点**;这允许用户轻松选择语言并配置Live Copy的结构。
+* 允许作者在蓝图上使用&#x200B;**Rollout**&#x200B;选项——将修改（显式）推送到继承自此蓝图的Live Copy。
+* 允许作者使用&#x200B;**创建站点**;这允许用户轻松选择语言并配置Live Copy的结构。
 * 为与Blueprint有关系的Live Copy定义默认转出配置。
 
 如果未引用Blueprint配置，则只能从Live Copy本身启动转出，实质上是从源中提取内容。
 
 创建包含Live Copy的新站点时，创建蓝图配置是非常有利的，这可确保完整的MSM功能集可用。
 
-## 组件和容器同步 {#components-and-container-synchronization}
+## 组件和容器同步{#components-and-container-synchronization}
 
 通常，MSM中关于组件同步的转出规则为：
 
@@ -80,25 +80,25 @@ MSM是一个可配置的框架，用于自动进行内容部署。 实施通常�
 
 >[!NOTE]
 >
->将属性添 `cq:isContainer` 加到组件，以将其指定为容器。
+>将属性`cq:isContainer`添加到组件中，以将其指定为容器。
 
 ## 创建站点 {#create-site}
 
 请注意，AEM有两种主要方法可用于创建Live Copy:
 
-* When [creating a Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
+* 当[创建Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)时
 
    这可以视为更通用的方法，允许您从任何页面创建Live Copy。 Live Copy的内容结构与源完全匹配。
 
-* 创 [建站点时](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)
+* 当[创建站点](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)时
 
    这是一种更专业的方法，主要用于创建具有多语言结构的网站。
 
 以下是创建站点时要注意的几个注意事项：
 
-* 要创建新站点，您需要Blueprint [配置](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations)。
+* 要创建新站点，您需要[blueprint配置](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations)。
 * 要允许选择要在新站点中创建的语言路径，蓝图（源）中必须存在相应的语言根。
-* 将新 [站点创建为Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (使用 **创建**，然后 **使用站点**)后，此Live Copy的前两个级别为 **&#x200B;浅。 页面的子项不属于实时关系，但如果找到与触发器匹配的实时关系，则滚动仍将下降。
+* 将[新站点创建为Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)（使用&#x200B;**创建**，然后使用&#x200B;**站点**）后，此Live Copy的前两个级别为&#x200B;*浅*。 页面的子项不属于实时关系，但如果找到与触发器匹配的实时关系，则滚动仍将下降。
 
    它有助于避免：
 
@@ -106,13 +106,13 @@ MSM是一个可配置的框架，用于自动进行内容部署。 实施通常�
    * 手动将内容直接添加到语言根目录下，
    * 不会导致在转出时自动将新内容转移到Live Copy。
 
-## MSM和多语言网站 {#msm-and-multilingual-websites}
+## MSM和多语言网站{#msm-and-multilingual-websites}
 
 MSM可通过两种方式协助创建多语言网站：
 
 * 创建语言母版时。
 
-   * 虽然MSM本身 **不提供内容翻译**，但可以与提供内容翻译的第三方翻译连接器集成。 请注意：
+   * 虽然MSM本身&#x200B;**不提供内容转换**，但它可以与提供内容转换的第三方转换连接器集成。 请注意：
 
       * MSM允许您在页面和／或组件级别取消继承。 这有助于防止在下一个转出时覆盖已翻译的内容（来自Live Copy，含来自蓝图的尚未翻译的内容）。
       * 某些第三方翻译连接器可自动管理MSM继承。
@@ -125,17 +125,17 @@ MSM可通过两种方式协助创建多语言网站：
 
    * 例如，从法语主控到国家特定网站，如法国／法语、加拿大／法语、瑞士／法语。
 
-有关详细信息，请 [参阅翻译多语言站点的内容](/help/sites-administering/translation.md) 和翻 [译最佳实践](/help/sites-administering/tc-bp.md)。
+有关详细信息，请参阅[多语言站点的翻译内容](/help/sites-administering/translation.md)和[翻译最佳实践](/help/sites-administering/tc-bp.md)。
 
-## 结构更改和转出 {#structure-changes-and-rollouts}
+## 结构更改和转出{#structure-changes-and-rollouts}
 
 对蓝图／源树中内容结构的修改在Live Copy中反映的不同。 这取决于修改类型：
 
-* **在Blueprint** 中创建新页面将导致在使用标准转出配置转出后在Live Copy中创建相应的页面。
+* **在** Blueprint中创建新页面将导致在使用标准转出配置转出后在Live Copy中创建相应页面。
 
-* **在Blueprint中** ，删除页面将导致在使用标准转出配置转出后从Live Copy中删除相应页面。
+* **使** 用标准转出配置转出后，Blueprint中的删除页面将导致从Live Copy中删除相应页面。
 
-* **使用** 标准转出配置转 **出后** ，移动Blueprint中的页面不会导致相应页面被移动到Live Copy中：
+* **在** Blueprint中移动页面不 **** 会导致在转出后使用标准转出配置将相应页面移动到Live Copy:
 
    * 此行为的原因是页面移动隐式包括页面删除。 这可能会导致发布时出现意外行为，因为在作者上删除页面会在发布时自动停用相应内容。 这也可能对链接、书签等相关项目产生连锁效应。
    * 相应Live Copy页面中的内容继承将更新，以反映其源在蓝图中的新位置。
@@ -143,7 +143,7 @@ MSM可通过两种方式协助创建多语言网站：
 
 >[!NOTE]
 >
->此操作仅适用于“转 [出时”触发器](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/msm-sync.html#rollout-triggers)。
+>此操作仅适用于[转出触发器](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/msm-sync.html#rollout-triggers)。
 
 * 创建自定义转出配置：
 
@@ -167,20 +167,20 @@ MSM可通过两种方式协助创建多语言网站：
          这将确保Live Copy中未删除任何内容或从发布中取消激活任何内容。
 
 
-## 自定义转出 {#customizing-rollouts}
+## 自定义转出{#customizing-rollouts}
 
-MSM转出配置可高度自定义。 您应该知道，自动推广可能会产生深远的影响。 作为最佳实践，您应在 *之前* ，非常谨慎地进行规划，例如：
+MSM转出配置可高度自定义。 您应该知道，自动推广可能会产生深远的影响。 作为最佳实践，您应在之前仔细计划&#x200B;*very*，例如：
 
-* 自动推广；例如，使用 [onModify触发器](#onmodify),
-* 自定义 [节点类型／属性](#node-types-properties),
+* 自动推广；例如，对于[onModify触发器](#onmodify),
+* 自定义[节点类型／属性](#node-types-properties),
 * 开始后续工作流,
 * 和／或激活内容作为推广的一部分。
 
 ### onModify {#onmodify}
 
-使用转出 [触发器](/help/sites-administering/msm-sync.md#rollout-triggers)`onModify` 时，您应考虑：
+使用[转出触发器](/help/sites-administering/msm-sync.md#rollout-triggers) `onModify`时，您应考虑：
 
-* 使用触发器 `onModify` 实现自动转出可能会对创作性能产生负面影响，因为它们在每次页面修改后都 *会触发* 转出。
+* 使用`onModify`触发器实现自动转出可能会对创作性能产生负面影响，因为它们在每&#x200B;*页面修改后触发转出。*
 
 * 转出结果可能与预期结果不同：
 
@@ -189,13 +189,13 @@ MSM转出配置可高度自定义。 您应该知道，自动推广可能会产�
 
 * 如果同一资源的并发更新发生，使用此类转出配置可能会导致提交冲突。
 
-因此，建议您仅在自动转 *出启动*`onModify` 的好处超过任何潜在性能问题时使用触发器。
+因此，如果自动转出启动的益处超过任何潜在性能问题，建议您&#x200B;*仅*&#x200B;使用`onModify`触发器。
 
-### 节点类型／属性 {#node-types-properties}
+### 节点类型／属性{#node-types-properties}
 
 记住：
 
-* 除了自定义转出操作之外，MSM还允许您自定义正在转出的节点属性。 MSM [OSGi配置允许您排除从源](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization) - Live Copy复制到节点类型的情况。
+* 除了自定义转出操作之外，MSM还允许您自定义正在转出的节点属性。 [MSM OSGi配置允许您排除从源复制到Live Copy的节点类型](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization)。
 
 ## 更多信息 {#further-information}
 
