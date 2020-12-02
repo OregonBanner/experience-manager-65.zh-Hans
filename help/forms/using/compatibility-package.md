@@ -23,33 +23,33 @@ ht-degree: 6%
 
 ## 概述 {#overview}
 
-交互通信是在AEM Forms6.5中创建客户通信的默认和推荐方法。若要在AEM Forms6.5中继续使用字母，您需要安装最新的AEMFD [兼容性包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
+在AEM Forms6.5中，交互通信是创建客户通信的默认和推荐方法。若要在AEM Forms6.5中继续使用字母，您需要安装最新的[AEMFD兼容性软件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
 
-AEMFD兼容性软件包还允许 [您在AEM Forms6.5上使用AEM Forms6.4、6.3和6.2的以下资源：](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+AEMFD兼容性软件包还允许您[在AEM Forms6.5上使用AEM Forms6.4、6.3和6.2的以下资源：](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
 * 文档片段
 * 书信
 * 数据字典
 * 自适应表单已弃用的模板和页面
 
-有关详细信息，请 [参阅通过安装兼容性包使资产与AEM Forms6.5兼容](../../forms/using/compatibility-package.md#assetsmadecompatible)。
+有关详细信息，请参阅[通过安装兼容性软件包](../../forms/using/compatibility-package.md#assetsmadecompatible)使资产与AEM Forms6.5兼容。
 
-## 在AEM Forms6.5中增加对AEM Forms6.4、6.3和6.2资产的支持 {#add-support-for-aem-forms-and-assets-in-aem-forms}
+## 在AEM Forms6.5 {#add-support-for-aem-forms-and-assets-in-aem-forms}中增加对AEM Forms6.4、6.3和6.2资产的支持
 
 执行升级后，请执行以下操作以安装AEMFD兼容性包并使您的资源与6.5兼容：
 
-确保已预 [装AEM](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) Compatibility包。
+确保已预安装[AEM Compatibility包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
-1. 安装最新的6.5 [兼容性包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
+1. 安装最新的6.5 [兼容性软件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
-   有关上传和安装包的详细信息，请参 [阅如何使用包](/help/sites-administering/package-manager.md)。
+   有关上传和安装包的详细信息，请参阅[如何使用包](/help/sites-administering/package-manager.md)。
 
 1. 日志稳定后，重新启动服务器。
 1. 使用迁移实用程序使您的资源与6.5兼容。
 
-   有关详细信息，请参阅 [迁移实用程序](../../forms/using/migration-utility.md)。
+   有关详细信息，请参阅[迁移实用程序](../../forms/using/migration-utility.md)。
 
-## 通过安装兼容性包与AEM Forms6.5兼容的资源 {#assetsmadecompatible}
+## 通过安装兼容性软件包{#assetsmadecompatible}与AEM Forms6.5兼容的资源
 
 通过安装兼容性包，您可以使以下资源和模板与AEM Forms6.5兼容：
 
