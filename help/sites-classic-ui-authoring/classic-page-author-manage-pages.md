@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1935'
+ht-degree: 87%
 
 ---
 
@@ -46,7 +49,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-   Depending on the configuration of your instance, use of `/content` might be optional on the publish environment.
+   根据实例的配置，在发布环境中使用`/content`可能是可选的。
 
 ```xml
   /content
@@ -68,7 +71,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
     /...
 ```
 
-This structure can be viewed from the Websites console, which you can use to [navigate through the tree structure](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
+此结构可以从“网站”控制台中查看，您可以使用该控制台在树结构](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15)中导航。[
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -76,7 +79,7 @@ This structure can be viewed from the Websites console, which you can use to [na
 
 在创建新页面时，需填写以下两个关键字段：
 
-* **[标题](#title)**:
+* **[标题](#title)**：
 
    * 它会在控制台中向用户显示并在编辑中的页面内容顶部显示。
    * 此字段为必填字段。
@@ -86,21 +89,21 @@ This structure can be viewed from the Websites console, which you can use to [na
    * 用于生成 URI。
    * 此字段的用户输入是可选的。如果未指定，名称会从标题派生。
 
-When creating a new page, AEM will [validate the page name according to the conventions](/help/sites-developing/naming-conventions.md) imposed by AEM and JCR.
+创建新页面时，AEM将[根据AEM和JCR实行的惯例](/help/sites-developing/naming-conventions.md)验证页面名称。
 
-根据UI，实现和允许的字符列表略有不同（触屏优化UI的范围更广），但允许的最小值是：
+根据UI，允许的字符实现和列表会略有不同（触屏优化UI的范围更广），但允许的最小值是：
 
 * 从“a”到“z”
 * 从“A”到“Z”
 * 从“0”到“9”
 * _（下划线）
-* `-` （连字符／减号）
+* `-`（连字符/减号）
 
 如果您要确保名称能被接受/使用，就只能使用这些字符（如果您需要所有允许字符的完整详细信息，请参阅[命名惯例](/help/sites-developing/naming-conventions.md)）。
 
 #### 标题 {#title}
 
-如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**，并依据 AEM 和 JCR 实行的惯例[验证此名称](/help/sites-developing/naming-conventions.md)。在这两个 UI 中，包含无效字符的&#x200B;**标题**&#x200B;字段将被接受，不过派生的名称将把无效的字符替换掉。例如：
+如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**[，并依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)在这两个 UI 中，包含无效字符的&#x200B;**标题**&#x200B;字段将被接受，不过派生的名称将把无效的字符替换掉。例如：
 
 | 标题 | 派生的名称 |
 |---|---|
@@ -109,12 +112,12 @@ When creating a new page, AEM will [validate the page name according to the conv
 
 #### 名称 {#name}
 
-如果您在创建新页面时提供页面&#x200B;**名称**，AEM 将依据 AEM 和 JCR 实行的惯例[验证此名称](/help/sites-developing/naming-conventions.md)。
+如果您在创建新页面时提供页面&#x200B;**名称**[，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)
 
-In the Classic UI you **cannot enter invalid characters** in the **Name** field.
+在经典UI中，您不能在&#x200B;**名称**&#x200B;字段中输入无效字符&#x200B;**。**
 
 >[!NOTE]
->In the touch-enabled UI you **cannot submit invalid characters** in the **Name** field. 当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
+>在触屏优化UI中，您不能在&#x200B;**名称**&#x200B;字段中提交无效字符&#x200B;**。**&#x200B;当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
 
 >[!NOTE]
 >
@@ -141,7 +144,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
 ### 组件 {#components}
 
-组件是AEM提供的元素，以便您能够添加特定类型的内容。AEM附带一系列现成组件，它们提供了全面的功能；包括：
+组件是AEM提供的元素，以便您能够添加特定类型的内容。AEM附带一系列现成组件，它们提供全面的功能；包括：
 
 * 文本
 * 图像
@@ -149,7 +152,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 * 视频
 * 更多
 
-Once you have created and opened a page you can [add content using the components](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph), available from the [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
+创建并打开页面后，您可以[使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)添加内容。
 
 ## 管理页面 {#managing-pages}
 
@@ -195,7 +198,7 @@ Once you have created and opened a page you can [add content using the component
 
    >[!NOTE]
    >
-   >您也可以在编辑现有页面时创建页面。Using **Create Child Page **from the **Page** tab of the sidekick, will create a new page directly under the page being edited.
+   >您也可以在编辑现有页面时创建页面。使用Sidekick的&#x200B;**页面**&#x200B;选项卡中的**创建子页面**，将在正在编辑的页面下直接创建新页面。
 
 ### 打开页面进行编辑 {#opening-a-page-for-editing}
 
@@ -207,7 +210,7 @@ Once you have created and opened a page you can [add content using the component
 
 * 打开页面后，可通过单击超链接导航到站点中的其他页面（以对其进行编辑）。
 
-### 复制和粘贴页面 {#copying-and-pasting-a-page}
+### 复制和粘贴页面  {#copying-and-pasting-a-page}
 
 复制时，可以复制以下任一内容：
 
@@ -226,6 +229,7 @@ Once you have created and opened a page you can [add content using the component
 
    * **粘贴** - 粘贴页面以及所有子页面
    * **Shift + 粘贴** - 仅粘贴选定页面
+
    将在新位置粘贴页面。
 
    >[!NOTE]
@@ -291,7 +295,7 @@ AEM 还有一项功能是允许您更新指向重命名或被移动页面的内�
       重新发布引用页面；同样可为各个页面选择此操作。
    >[!NOTE]
    >
-   >如果页面已经激活，则移动页面会自动将其取消激活。By default, it will be reactivated when the move is complete, but this can changed by unchecking the **Republish** field for the page in the **Move** window.
+   >如果页面已经激活，则移动页面会自动将其取消激活。默认情况下，移动完成时将重新激活它，但可以取消选中&#x200B;**移动**&#x200B;窗口中页面的&#x200B;**重新发布**&#x200B;字段来更改。
 
 1. 单击&#x200B;**移动**。此时将需要进行确认。单击&#x200B;**确定**&#x200B;以确认。
 
@@ -328,7 +332,7 @@ AEM 还有一项功能是允许您更新指向重命名或被移动页面的内�
 >文件夹也需遵循在指定新文件夹名称时用到的[页面命名惯例](#page-naming-conventions)。
 
 1. 打开&#x200B;**网站**&#x200B;控制台并导航到所需的位置。
-1. ****&#x200B;在新 **增……菜单(单击“新建……”**&#x200B;旁边的箭头&#x200B;**)，选择“**&#x200B;新建文件夹……”。.
+1. 在&#x200B;**新建……**&#x200B;菜单(单击“新建”旁边的箭头……**)，选择“新建文件夹……”。**。****
 1. 此时将打开&#x200B;**创建文件夹**&#x200B;对话框。您可在此输入&#x200B;**名称**&#x200B;和&#x200B;**标题**：
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
