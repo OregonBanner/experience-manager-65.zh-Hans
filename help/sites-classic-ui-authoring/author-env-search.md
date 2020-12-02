@@ -12,6 +12,9 @@ discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 85%
 
 ---
 
@@ -43,11 +46,13 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 >
 >* [通配符](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [布尔运算符](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
+
    >
    >
 * [正则表达式](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [字段分组](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [Boosting](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
+
 >
 
 
@@ -76,7 +81,8 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
    * 定义应替换该词的词
    * 指示搜索是否应区分大小写
    * 指示是否应仅查找所有词（否则，还将查找子字符串）
-   Clicking **Preview** lists where the term has been found. You can select/clear specific instances to be replaced:
+
+   单击已找到词的&#x200B;**预览**&#x200B;列表。您可以选择／清除要替换的特定实例：
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
@@ -89,7 +95,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 * `jcr:text`
 * `text`
 
-The scope can be changed using the Apache Felix Web Management Console (for example, at `https://localhost:4502/system/console/configMgr`). 根据 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 需要选择并配置范围。
+使用Apache Felix Web管理控制台（例如，在`https://localhost:4502/system/console/configMgr`）可以更改范围。 选择`CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`并根据需要配置范围。
 
 >[!NOTE]
 >
