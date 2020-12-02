@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Application Manager Service JavaAPI快速开始(SOAP) {#application-manager-service-javaapi-quick-start-soap}
+# Application Manager Service JavaAPI快速开始(SOAP){#application-manager-service-javaapi-quick-start-soap}
 
 Java API快速开始(SOAP)可用于Application Manager服务。
 
@@ -33,11 +33,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的Java API(SOAP)快速开始基于Forms，如果您使用其他操作系统（如Unix），则使用适用操作系统支持的路径替换特定于窗口的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的Java API(SOAP)快速开始基于Forms，如果您使用其他操作系统（如Unix），则使用适用操作系统支持的路径替换特定于窗口的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API部署应用程序 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-deploying-applications-using-the-java-api}部署应用程序
 
-以下Java代码示例导入基于名为EncryptDocument.lca的现有LCA文件 *的应用程序*。
+以下Java代码示例导入基于名为&#x200B;*EncryptDocument.lca*&#x200B;的现有LCA文件的应用程序。
 
 ```java
  /*
@@ -137,9 +137,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API删除应用程序 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-removing-an-application-using-the-java-api}删除应用程序
 
-以下Java代码示例删除了名为EncryptDocument的应 *用程序*。
+以下Java代码示例删除了名为&#x200B;*EncryptDocument*&#x200B;的应用程序。
 
 ```java
  /*
