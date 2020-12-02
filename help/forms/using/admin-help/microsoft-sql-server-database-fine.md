@@ -18,19 +18,19 @@ ht-degree: 0%
 ---
 
 
-# Microsoft SQL Server数据库：微调配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
+# Microsoft SQL Server数据库：微调配置{#microsoft-sql-server-database-fine-tuning-the-configuration}
 
-使用Microsoft SQL Server时，应更改默认配置设置。 在Oracle Enterprise Manager中右键单击本地服务器以访问属性对话框。
+使用Microsoft SQL Server时，应更改默认配置设置。 右键单击“Oracle企业管理器”中的本地服务器以访问属性对话框。
 
-## 内存设置 {#memory-settings}
+## 内存设置{#memory-settings}
 
 将最小内存分配更改为尽可能大的数字。 如果数据库在单独的计算机上运行，请使用所有内存。 默认设置不会大幅分配内存，这会阻碍几乎任何数据库的性能。 在生产机器上分配内存时，您应该最积极。
 
-## 处理器设置 {#processor-settings}
+## 处理器设置{#processor-settings}
 
 修改处理器设置，最重要的是，选中“Boost SQL Server Priority On Windows”复选框，以使服务器使用尽可能多的周期。 “使用NT光纤”设置不那么重要，但您也可能希望选择它。
 
-## 数据库设置 {#database-settings}
+## 数据库设置{#database-settings}
 
 更改数据库设置。 最重要的设置是恢复间隔，它指定崩溃后等待恢复的最大时间。 默认设置为1分钟。 使用5到15分钟的较大值可提高性能，因为它使服务器有更多时间将数据库日志中的更改写入数据库文件。
 
