@@ -14,18 +14,18 @@ ht-degree: 0%
 ---
 
 
-# Protect代表其他用户创建文档 {#protect-a-document-on-behalf-of-another-user}
+# Protect代表另一个用户创建文档{#protect-a-document-on-behalf-of-another-user}
 
 AEM Forms文档安全Java SDK提供API，允许用户帐户代表其他用户保护文档，而不获得编辑文档的权限。 您可以在工作流程中使用API，也可以通过编程方式将其用作文档服务。 新API包括：
 
-* **protectDocument** 使用ProtectDocument API代表文档将策略应用到
+* **保** 护文档使用ProtectDocument API代表文档应用策略
 
    另一个用户帐户。 用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult protectDocument(文档inDoc、字符串documentName、字符串策略集名称、字符串策略名称、RMLocale区域设置、布尔bExactMatchForNames)
 
-* **createLicense** 使用CreateLicense API代表其他用户帐户为策略创建许可证。 PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
-* **protectDocumentWithCoverPage使用** ProtectDocumentWithCoverPage API应用策略并代表其他用户向文档添加封面。 用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult保护DocumentWithCoverPage(文档inDoc、String documentName、String policySetName、String policyName、文档coverDoc、布尔bExactMatchForNames)
+* **创** 建许可证使用CreateLicense API代表其他用户帐户为策略创建许可证。PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
+* **** protectDocumentWithCoverPage使用ProtectDocumentWithCoverPage API应用策略并代表其他用户向文档添加封面。用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult保护DocumentWithCoverPage(文档inDoc、String documentName、String policySetName、String policyName、文档coverDoc、布尔bExactMatchForNames)
 
-## 使用API代表其他用户保护文档 {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
+## 使用API代表其他用户保护文档{#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 
 执行以下步骤以代表其他用户保护文档，而不获得编辑文档的权限：
 
