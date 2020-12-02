@@ -286,11 +286,11 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 例如，在适当时，**页面信息**&#x200B;还有以下选项：
 
 * [提升启动项](/help/sites-authoring/launches-promoting.md)，如果该页面是启动项。
-* [如果管理员已启用](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 此选项，则在经 [典UI中打开](/help/sites-administering/enable-classic-ui-editor.md)
+* [在经典UI](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 中打开如果管理员 [启用了此选项](/help/sites-administering/enable-classic-ui-editor.md)
 
 另外，在适当时，**页面信息**&#x200B;还允许访问分析和建议。
 
-## 页面模式 {#page-modes}
+## 页面模式  {#page-modes}
 
 编辑页面时可以使用多种模式来执行不同的操作：
 
@@ -330,7 +330,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 在创作时，通常需要选择其他资源，例如在定义指向其他页面或资源的链接或者选择图像时。为了轻松选择路径，[路径字段](/help/sites-authoring/author-environment-tools.md#path-fields)提供了自动完成功能，并且还可通过[路径浏览器](/help/sites-authoring/author-environment-tools.md#path-browser)做出更可靠的选择。
 
-### 路径字段 {#path-fields}
+### 路径字段  {#path-fields}
 
 此处所用的说明示例是图像组件。有关使用和编辑组件的更多信息，请参阅[页面创作组件](/help/sites-authoring/default-components.md)。
 
