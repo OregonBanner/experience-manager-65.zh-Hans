@@ -18,15 +18,15 @@ ht-degree: 1%
 ---
 
 
-# 社区组基本工具  {#community-group-essentials}
+# 社区组基本工具{#community-group-essentials}
 
 社区组功能是允许来自发布和创作环境的授权用户在社区站点内动态创建子社区的功能。
 
-自“社区 [”功能包](deploy-communities.md#latestfeaturepack)1起，组可以嵌套在其他组中
+从社区[功能包1](deploy-communities.md#latestfeaturepack)开始，组可以嵌套在其他组中
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
-### 社区组成员列表 {#community-groups-member-list}
+### 社区组成员列表{#community-groups-member-list}
 
 <table>
  <tbody>
@@ -48,7 +48,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong>属性</strong></td>
-   <td>查看 <a href="creating-groups.md">社区组</a></td>
+   <td>请参阅<a href="creating-groups.md">社区组</a></td>
   </tr>
  </tbody>
 </table>
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端必备工具 {#essentials-for-server-side}
+## 服务器端{#essentials-for-server-side}的必备工具
 
 * [社区组API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
@@ -86,17 +86,17 @@ ht-degree: 1%
 
 * [服务器端自定义](server-customize.md)
 
-### 组函数 {#groups-function}
+### 组函数{#groups-function}
 
-包含“组”功能的社 [区站点结构](functions.md#groups-function) ，将支持从发布和 `community groups` 作者环境创建新站点。 创建的社区组将包 `community groups member list` 含一个将列表组成员的组件。
+包含[Groups函数](functions.md#groups-function)的社区站点结构将支持从发布和作者环境创建新的`community groups`。 创建的社区组将包含一个`community groups member list`组件，它将列表组成员。
 
-当该功 [能被添加到社区站点模板或嵌套在社区组模板中时](tools-groups.md)，可以为“组”功能配置一个或多 [个社区组模板，该模板提供社](sites.md) 区组页面的设计。
+当该功能被添加到[社区站点模板](sites.md)或嵌套在社区组模板中时，可以为“组”功能配置一个或多个提供社区组页面设计的[社区组模板](tools-groups.md)。
 
-加入多个社区组模板后，在为社区站点创建新社区组时向授权用户展示设计选项，如作者社区组 [部分](creating-groups.md) 所示。
+包含多个社区组模板导致在为社区站点创建新社区组时向授权用户呈现设计选择，如作者[社区组](creating-groups.md)一节中所示。
 
-### 嵌套组 {#nested-groups}
+### 嵌套组{#nested-groups}
 
-自Communities [FP1起](deploy-communities.md#latestfeaturepack)，组功能可以包含在组模板中，从而允许嵌套组（子社区）。
+从社区[FP1](deploy-communities.md#latestfeaturepack)开始，组功能可以包含在组模板中，从而允许嵌套组（子社区）。
 
 当社区站点或组模板包含“组”功能时，可以：
 
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 在创作环境中创建组时，必须先发布社区站点，然后发布组。 发布社区站点将发布组的页面，而不创建设置ACL的子社区成员组。 因此，在显式发布组之前，受限（秘密）组可以是可见的。
 
-## 链接和相关信息 {#links-and-related-information}
+## 链接和相关信息{#links-and-related-information}
 
 * [管理用户和用户组](users.md)
 * [社区组控制台](groups.md)
