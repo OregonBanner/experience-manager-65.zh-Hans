@@ -17,23 +17,23 @@ ht-degree: 1%
 ---
 
 
-# 在设计器中更改零页内容 {#changing-page-zero-content-in-designer}
+# 在Designer {#changing-page-zero-content-in-designer}中更改页面零内容
 
-默认情况下，当非Adobe PDF查看器（如或中的默认PDF查看器）无法读取PDF/ [!DNL Chrome] XFA [!DNL Firefox]表单的内容时，将显示“零页”内容。 默认的“Page Zero”消息如下所示。
+默认情况下，当非Adobe PDF查看器（如[!DNL Chrome]或[!DNL Firefox]中的默认PDF查看器）无法读取PDF/XFA表单的内容时，将显示“页面零”内容。 默认的“Page Zero”消息如下所示。
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] version of Designer允许您更改在“页码零”上显示的消息。 要更改“Page Zero”（零页）消息，请执行以下步骤：
+[!DNL AEM Forms] version of Designer允许您更改在“页码零”上显示的消息。要更改“Page Zero”（零页）消息，请执行以下步骤：
 
-1. 确保已安装 [!DNL AEM Forms] Designer版本。 您可以从设计人员的“关于”屏幕检查版本。
+1. 确保已安装[!DNL AEM Forms]版本的Designer。 您可以从设计人员的“关于”屏幕检查版本。
 
 1. 打开要更改其“零页”内容的表单。
 
-1. 单击“ **[!UICONTROL 文件]** ”>“ **[!UICONTROL 表单属性”]**。
+1. 单击&#x200B;**[!UICONTROL 文件]** > **[!UICONTROL 表单属性]**。
 
-1. 在“表 [!UICONTROL 单属性] ”对话框中，单 ![击加号](assets/plus.png) （加号图标）以添加自定义属性。
+1. 在[!UICONTROL 表单属性]对话框中，单击![加号](assets/plus.png)（加号图标）以添加自定义属性。
 
-1. 指定 **_pagezerocontent** 作为属性的名称。
+1. 指定&#x200B;**_pagezerocontent**&#x200B;作为属性名称。
 1. 以富文本格式添加新的“零页”消息作为值。 例如：
 
 
