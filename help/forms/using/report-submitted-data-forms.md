@@ -17,19 +17,19 @@ ht-degree: 5%
 ---
 
 
-# 用于在表单门户上处理已提交表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
+# 用于在表单门户{#apis-to-work-with-submitted-forms-on-forms-portal}上处理已提交表单的API
 
 AEM Forms提供了API，您可以用它查询通过表单门户提交的表单数据。 此外，您可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
 
 >[!NOTE]
 >
->将调用API的用户必须添加到审阅者组，如将提交的审阅 [者关联到表单中所述](/help/forms/using/adding-reviewers-form.md)。
+>将调用API的用户必须添加到审阅者组，如[将提交审阅者关联到表单](/help/forms/using/adding-reviewers-form.md)中所述。
 
-## GET/content/forms/portal/submission.review.json?func=getFormsFormsSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
+## GET/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
 返回所有合格表单的列表。
 
-### URL parameters {#url-parameters}
+### URL参数{#url-parameters}
 
 此API不需要其他参数。
 
@@ -63,7 +63,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 返回所有已提交表单的详细信息。 但是，可以使用URL参数限制结果。
 
-### URL parameters {#url-parameters-1}
+### URL参数{#url-parameters-1}
 
 在请求URL中指定以下参数：
 
@@ -79,23 +79,23 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>offset</code> （可选）</td>
-   <td>指定结果集索引中的起始点。 The default value is <strong>0</strong>.</td>
+   <td>指定结果集索引中的起始点。 默认值为<strong>0</strong>。</td>
   </tr>
   <tr>
    <td><code>limit</code> （可选）</td>
-   <td>限制结果数。 The default value is <strong>30</strong>.</td>
+   <td>限制结果数。 默认值为<strong>30</strong>。</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> （可选）</td>
-   <td>指定对结果进行排序的属性。 默认值为 <strong>jcr:lastModified</strong>，它根据上次修改的时间对结果排序。</td>
+   <td>指定对结果进行排序的属性。 默认值为<strong>jcr:lastModified</strong>，它根据上次修改的时间对结果进行排序。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> （可选）</td>
-   <td>指定排序结果的顺序。 默认值为desc <strong></strong>，它按降序对结果排序。 您可以指定 <code>asc</code> 按升序对结果进行排序。</td>
+   <td>指定排序结果的顺序。 默认值为<strong>desc</strong>，它按降序排序结果。 可以指定<code>asc</code>以升序方式对结果排序。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （可选）</td>
-   <td>指定要包含在结果中的表单属性的逗号分隔列表。 默认属性为：<br /><code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code> <code>owner</code></td>
+   <td>指定要包含在结果中的表单属性的逗号分隔列表。 默认属性为：<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> （可选）</td>
@@ -133,7 +133,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 
 向指定的提交实例添加注释。
 
-### URL parameters {#url-parameters-2}
+### URL参数{#url-parameters-2}
 
 在请求URL中指定以下参数：
 
@@ -164,7 +164,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 返回在指定的提交实例上发布的所有注释。
 
-### URL parameters {#url-parameters-3}
+### URL参数{#url-parameters-3}
 
 在请求URL中指定以下参数：
 
@@ -202,7 +202,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 更新指定已提交表单实例的指定属性的值。
 
-### URL parameters {#url-parameters-4}
+### URL参数{#url-parameters-4}
 
 在请求URL中指定以下参数：
 
