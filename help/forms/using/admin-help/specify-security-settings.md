@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3c017f9a-aa7f-4d12-ba8b-9fd92c029157
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
 
-# 指定安全设置 {#specify-security-settings}
+# 指定安全设置{#specify-security-settings}
 
-输出使您能够控制是否解析XML输入中的外部实体。 默认情况下，这些表单已解析，但您可以更改此行为以提高AEM表单系统的安全性。
+输出使您能够控制是否解析XML输入中的外部实体。 默认情况下，它们已解析，但您可以更改此行为以增加AEM表单系统的安全性。
 
 **防止处理包含对外部实体的引用的XML数据文件**
 
