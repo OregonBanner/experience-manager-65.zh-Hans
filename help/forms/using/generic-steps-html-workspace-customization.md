@@ -23,19 +23,19 @@ ht-degree: 1%
 
 执行任何自定义的一般步骤包括：
 
-1. 通过访问登录CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`。
-1. 如果文件夹不 `ws`存 `/apps`在，请创建名为的文件夹。 单击“ **[!UICONTROL 全部保存]**”。
-1. 浏览至 `/apps/ws`访问控制，然后导航到 **** 选项卡。
-1. 在 **[!UICONTROL 访问控制]** 列表 **[!UICONTROL 中]** ，单击+以添加新条目。 再次 **[!UICONTROL 单击]** +。
-1. 搜索并选 **择PERM_WORKSPACE_USER** Principal。
+1. 通过访问`https://'[server]:[port]'/lc/crx/de/index.jsp`登录CRXDE Lite。
+1. 在`/apps`处创建名为`ws`的文件夹（如果文件夹不存在）。 单击&#x200B;**[!UICONTROL 保存全部]**。
+1. 浏览至`/apps/ws`，然后导航到&#x200B;**[!UICONTROL 访问控制]**&#x200B;选项卡。
+1. 在&#x200B;**[!UICONTROL 访问控制]**&#x200B;列表中，单击&#x200B;**[!UICONTROL +]**&#x200B;以添加新条目。 再次单击&#x200B;**[!UICONTROL +]**。
+1. 搜索并选择&#x200B;**PERM_WORKSPACE_USER**&#x200B;主体。
 
    ![选择PERM_WORKSPACE_USER主体作为自定义HTML工作区的通用步骤的一部分](assets/perm_workspace_user.png)
 
-1. 授予 `jcr:read` 主体权限。
-1. 单击“ **[!UICONTROL 全部保存]**”。
-1. 将文件夹 `GET.jsp` 中的 `html.jsp`和文件 `/libs/ws`复制到文 `/apps/ws` 件夹。
-1. 复制文 `/libs/ws/locales` 件夹中的文 `/apps/ws` 件夹。 单击“ **[!UICONTROL 全部保存]**”。
-1. 如下所示，更新文件中的引用 `GET.jsp` 和相对路径，然后单击“全 **[!UICONTROL 部保存”]**。
+1. 为主体授予`jcr:read`权限。
+1. 单击&#x200B;**[!UICONTROL 保存全部]**。
+1. 将`/libs/ws`文件夹中的`GET.jsp`和`html.jsp`文件复制到`/apps/ws`文件夹。
+1. 复制`/apps/ws`文件夹中的`/libs/ws/locales`文件夹。 单击&#x200B;**[!UICONTROL 保存全部]**。
+1. 更新`GET.jsp`文件中的引用和相对路径，如下所示，然后单击&#x200B;**[!UICONTROL 保存所有]**。
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
@@ -43,11 +43,11 @@ ht-degree: 1%
 
 1. 对CSS自定义执行以下操作：
 
-   1. 导览至该文 `/apps/ws` 件夹，然后创建一个名为的新文 `css`件夹。
+   1. 导览至`/apps/ws`文件夹并创建一个名为`css`的新文件夹。
 
-   1. 在文件夹 `css`文件夹中，创建一个名为的新文 `newStyle.css`件。
+   1. 在`css`文件夹中，创建一个名为`newStyle.css`的新文件。
 
-   1. 打开 `/apps/ws/html`.jsp并从
+   1. 打开`/apps/ws/html`.jsp并从
 
    ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="css/style.css" />
@@ -80,24 +80,24 @@ ht-degree: 1%
 
 1. 执行以下操作：
 
-   1. 创建名为的文 `js`件夹 `/apps/ws`。 单击“ **[!UICONTROL 全部保存]**”。
+   1. 在`/apps/ws`创建名为`js`的文件夹。 单击&#x200B;**[!UICONTROL 保存全部]**。
 
-   1. 创建名为的文 `libs`件夹 `/apps/ws/js`。 单击“ **[!UICONTROL 全部保存]**”。
+   1. 在`/apps/ws/js`创建名为`libs`的文件夹。 单击&#x200B;**[!UICONTROL 保存全部]**。
 
-   1. 创建名为的文 `jqueryui`件夹 `/apps/ws/js/libs`。 单击“ **[!UICONTROL 全部保存]**”。
+   1. 在`/apps/ws/js/libs`创建名为`jqueryui`的文件夹。 单击&#x200B;**[!UICONTROL 保存全部]**。
 
-   1. 复制 `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` 到 `/apps/ws/js/libs/jqueryui`。 单击“ **[!UICONTROL 全部保存]**”。
+   1. 将`/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js`复制到`/apps/ws/js/libs/jqueryui`。 单击&#x200B;**[!UICONTROL 保存全部]**。
 
 1. 对HTML自定义执行以下操作：
 
-   1. 在下 `/apps/ws/js`面，创建一个名为的文 `runtime`件夹。 单击“ **[!UICONTROL 全部保存]**”。
+   1. 在`/apps/ws/js`下，创建一个名为`runtime`的文件夹。 单击&#x200B;**[!UICONTROL 保存全部]**。
 
-   1. 在下 `/apps/ws/js/runtime`面，创建一个名为的文 `templates`件夹。 单击“ **[!UICONTROL 全部保存]**”。
+   1. 在`/apps/ws/js/runtime`下，创建一个名为`templates`的文件夹。 单击&#x200B;**[!UICONTROL 保存全部]**。
 
-   1. 复制 `/libs/ws/js/main.js` 到 `/apps/ws/js/main.js`。
+   1. 将`/libs/ws/js/main.js`复制到`/apps/ws/js/main.js`。
 
-   1. 将/libs/ws/js/registry.js复制到 `/apps/ws/js/registry.js`。
+   1. 将/libs/ws/js/registry.js复制到`/apps/ws/js/registry.js`。
 
-1. 单击 **[!UICONTROL 全部保存]**、清除缓存并刷新AEM Forms工作区。
+1. 单击&#x200B;**[!UICONTROL 全部保存]**、清除缓存并刷新AEM Forms工作区。
 
-   访问URL `https://'[server]:[port]'/lc/ws` 并使用管理员／密码凭据登录。 浏览器将重定向到 `https://'[server]:[port]'/lc/apps/ws/index.html`。
+   访问URL `https://'[server]:[port]'/lc/ws`并使用管理员／密码凭据登录。 浏览器将重定向到`https://'[server]:[port]'/lc/apps/ws/index.html`。
