@@ -10,13 +10,16 @@ topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
 translation-type: tm+mt
 source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
+workflow-type: tm+mt
+source-wordcount: '1600'
+ht-degree: 1%
 
 ---
 
 
-# AEM 6.5中的站点存储库重组 {#sites-repository-restructuring-in-aem}
+# AEM 6.5 {#sites-repository-restructuring-in-aem}中的站点存储库重组
 
-如AEM 6.5页面中的父存储库重组中所述 [](/help/sites-deploying/repository-restructuring.md) ，升级到AEM 6.5的客户应使用此页面评估与影响AEM Sites Solution的存储库更改相关的工作成果。 某些更改需要在AEM 6.5升级过程中进行工作，而其他更改可能会延迟到将来升级。
+如AEM 6.5](/help/sites-deploying/repository-restructuring.md)中的父[存储库重组页所述，升级到AEM 6.5的客户应使用此页评估与影响AEM Sites解决方案的存储库更改相关的工作。 某些更改需要在AEM 6.5升级过程中进行工作，而其他更改可能会延迟到将来升级。
 
 **升级6.5版**
 
@@ -25,7 +28,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
 **在将来升级之前**
 
 * [Adobe Analytics客户端库](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-analytics-client-libraries)
-* [经典Microsoft word到网页设计](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
+* [经典Microsoft Word到网页设计](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#classic-microsoft-word-to-web-page-designs)
 * [移动设备模拟器配置](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#mobile-device-emulator-configurations)
 * [多站点管理器Blueprint配置](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
 * [多站点管理器转出配置](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#multi-site-manager-rollout-configurations)
@@ -33,18 +36,18 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
 * [页面基架](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-scaffolding)
 * [响应式网格更少](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#responsive-grid-less)
 * [静态模板设计](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#static-template-designs)
-* [Adobe Search and Promote集成客户端库](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
+* [Adobe搜索和提升集成客户端库](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
 * [Adobe Target集成客户端库](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-target-integration-client-libraries)
 * [WCM Foundation客户端库](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#wcm-foundation-client-libraries)
 
-## 升级6.5版 {#with-upgrade}
+## 升级6.5 {#with-upgrade}
 
 ### ContextHub 区段 {#contexthub-segments}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><code>/etc/segmentation/contexthub</code></td>
   </tr>
   <tr>
@@ -53,34 +56,34 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>如果任何新的或修改的ContextHub区段都希望在源代码控件中编辑而不是在AEM中编辑，则必须将其迁移到新位置：</p>
+   <td><p>如果任何新的或修改的ContextHub区段要在源代码控件中进行编辑而不是在AEM中进行编辑，则必须将其迁移到新位置：</p>
     <ol>
-     <li>将任何新的或修改过的ContextHub区段从先前位置复制到相应的新位置(/<code>apps</code>、 <code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)</li>
-     <li>将之前位置中对ContextHub区段的引用更新到新位置(、、、)中已迁移的ContextHub区<code>/apps</code>段 <code>/conf/global</code>的引 <code>/conf/&lt;tenant&gt;</code>用。</li>
-    </ol> <p>以下QueryBuilder查询将查找对ContextHub区段的所有引用，这些引用位于以前的位置。<br /> 可 <br /> 以通 <code class="code">path=/content
+     <li>将任何新的或修改的ContextHub区段从先前的位置复制到相应的新位置（/<code>apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）</li>
+     <li>将之前位置中对ContextHub区段的引用更新到新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)中迁移的ContextHub区段。</li>
+    </ol> <p>以下QueryBuilder查询将查找对ContextHub区段的所有引用，这些引用位于以前的位置。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> 过AEM QueryBuilder调试器UI <br /> 执行此操作 <a href="/help/sites-developing/querybuilder-api.md" target="_blank"></a>。 请注意，这是一个遍历查询，因此不要针对生产运行它，并确保根据需要调整遍历限制。</p> </td>
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> 可通过AEM QueryBuilder调 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">试器UI执行此操作</a>。请注意，这是遍历查询，因此不要针对生产运行它，并确保根据需要调整遍历限制。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>ContextHub区段会在 <strong>AEM &gt;个性化&gt;受众中以只读方式保留到先前的位置</strong>。</p> <p>如果ContextHub区段要在AEM中进行编辑，则必须将其迁移到新位置(<code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。 在AEM中创建的任何新ContentHub区段将保留到新位置(<code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)。</p> <p>AEM站点页面属性仅允许选择上一位置(<code>/etc</code>)或单个新位置(<code>/apps</code><code>/conf/global</code> 或 <code>/conf/&lt;tenant&gt;</code>)，因此必须相应地迁移ContextHub区段。</p> <p>可以删除AEM引用站点中任何未使用的ContextHub区段，但不能将其迁移到新位置：</p>
+   <td><p>ContextHub区段在<strong>AEM &gt;个性化&gt;受众</strong>中保留到先前位置显示为只读。</p> <p>如果要在AEM中编辑ContextHub区段，则必须将其迁移到新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。 在AEM中创建的任何新ContentHub区段将保留到新位置（<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>）。</p> <p>AEM Sites页面属性只允许选择上一位置(<code>/etc</code>)或单个新位置（<code>/apps</code>、<code>/conf/global</code>或<code>/conf/&lt;tenant&gt;</code>），因此必须相应地迁移ContextHub区段。</p> <p>可以删除AEM引用站点中任何未使用的ContextHub区段，但不能将其迁移到新位置：</p>
     <ul>
      <li>/etc/segmentation/geometrixx/</li>
      <li>/etc/segmentation/geometrixx-outdoors</li>
-    </ul> <p>注意：如果ClientContext正在使用，建议转换为ContextHub。</p> </td>
+    </ul> <p>注意：如果ClientContext正在使用，则建议转换为ContextHub。</p> </td>
   </tr>
  </tbody>
 </table>
 
-## 在将来升级之前 {#prior-to-upgrade}
+## 未来升级前{#prior-to-upgrade}
 
-### Adobe Analytics客户端库 {#adobe-analytics-client-libraries}
+### Adobe Analytics客户端库{#adobe-analytics-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/sitecatalyst</code></p> </td>
   </tr>
   <tr>
@@ -89,10 +92,10 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>对这些客户端库的任何自定义使用都应按类别引用客户端库，而不应按路径引用：</p>
+   <td><p>对这些客户端库的任何自定义使用都应按类别而非路径引用客户端库：</p>
     <ol>
-     <li>应更新对“上一位置”中路径的客户端库的任何引用，以使用 <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的客户端库引用框架</a>。</li>
-     <li>如果无法使用AEM的客户端库引用框架，则可以通过AEM的客户端库代理Servlet引用客户端库的绝对路径。
+     <li>应更新在“上一个位置”中按路径对客户端库的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM引用框架</a>的客户端库。</li>
+     <li>如果无法使用AEM客户端库引用框架，则客户端库的绝对路径可通过AEM客户端库代理servlet引用。
       <ul>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js</code></li>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/plugins.js</code></li>
@@ -104,7 +107,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访 <code>cq:ClientLIbraryFolder</code> 问每个节点并检查类别属性。</p>
+   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访问每个<code>cq:ClientLIbraryFolder</code>节点并检查类别属性。</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/plugins</code></li>
@@ -116,12 +119,12 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### 经典Microsoft word到网页设计 {#classic-microsoft-word-to-web-page-designs}
+### 经典Microsoft Word到网页设计{#classic-microsoft-word-to-web-page-designs}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><code>/etc/designs/wordDesign</code></td>
   </tr>
   <tr>
@@ -130,16 +133,16 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>适用于在SCM中管理的、在运行时不通过设计对话框写入的任何设计。</p>
+   <td><p>适用于以SCM管理的、在运行时不通过设计对话框写入的任何设计。</p>
     <ol>
-     <li>将设计从“上一位置”复制到“新位置”(<code>/apps</code>)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为客 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">户端库</a><code>allowProxy = true</code>。</li>
-     <li>更新对cq:designPath属性中“上一个位置”的引用。</li>
-     <li>更新引用“上一位置”的任何页面以使用新的“客户端库”类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则，以允许通过代理Servlet提供客 <code>/etc.clientlibs/</code> 户端库。</li>
+     <li>将设计从“上一个位置”复制到“新位置”(<code>/apps</code>)。</li>
+     <li>将设计中的任何CSS、JavaScript和静态资源转换为具有<code>allowProxy = true</code>的<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a>。</li>
+     <li>在cq:designPath属性中更新对“上一个位置”的引用。</li>
+     <li>更新引用上一个位置的任何页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
+     <li>更新AEM Dispatcher规则，允许通过<code>/etc.clientlibs/</code>代理servlet提供客户端库。</li>
     </ol> <p>对于任何未在SCM中管理的设计，以及通过设计对话框修改的运行时：</p>
     <ul>
-     <li>请勿将可创作的设计移出 <code>/etc</code>。</li>
+     <li>请勿将可创作设计移出<code>/etc</code>。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -149,12 +152,12 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### 移动设备模拟器配置 {#mobile-device-emulator-configurations}
+### 移动设备模拟器配置{#mobile-device-emulator-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/mobile</code></p> </td>
   </tr>
   <tr>
@@ -163,21 +166,26 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td>必须将任何新的移动设备模拟器配置迁移到新位置。
+   <td>任何新的移动设备模拟器配置都必须迁移到新位置。
     <ol>
-     <li>将任何新的移动设备模拟器配置从上一个位置复制到新位置(<code>/apps</code>、 <code>/conf/global</code>、 <code>/conf/&lt;tenant&gt;</code>)。</li>
-     <li>对于依赖于这些移动设备模拟器配置的任何AEM站点页面，请更新页面的 <span class="code">节 <code>
+     <li>将任何新的移动设备模拟器配置从上一位置复制到新位置(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)。</li>
+     <li>对于任何依赖这些移动设备模拟器配置的AEM Sites网页，请更新该页的<span class="code">
+       <code>
         jcr
-       </code><code>
+       </code>
+       <code>
         :content
-       </code></span> 点： <br /> [ <span class="code">cq:Page]/jcr:content@cq:       <code>
+       </code></span>节点：<br /> <span class="code">[cq:Page]/jcr:content@cq:
+       <code>
         deviceGroups
        </code> = String[ mobile/groups/responsive ]</span></li>
-     <li>对于依赖于这些移动设备模拟器配置的任何可编辑模板，请更新可编辑模板，指向 <span class="code"><code>
+     <li>对于任何依赖这些移动设备模拟器配置的可编辑模板，请更新可编辑模板，并指向<span class="code">
+       <code>
         cq
-       </code>:       到 <code>
+       </code>:
+       <code>
         deviceGroups
-       </code></span> 新位置。</li>
+       </code></span>到新位置。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -194,39 +202,39 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### 多站点管理器Blueprint配置 {#multi-site-manager-blueprint-configurations}
+### 多站点管理器Blueprint配置{#multi-site-manager-blueprint-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><code>/etc/blueprints</code></td>
   </tr>
   <tr>
    <td><strong>新位置</strong></td>
-   <td><p><code>/apps/msm</code> （客户Blueprint配置）</p> <p><code>/libs/msm</code> （Screens、Commerce的开箱即用Blueprint配置）</p> </td>
+   <td><p><code>/apps/msm</code> （客户蓝图配置）</p> <p><code>/libs/msm</code> （Screens、Commerce的开箱即用Blueprint配置）</p> </td>
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
    <td><p>必须将任何新的或修改的多站点管理器Blueprint配置迁移到新位置(<code>/apps</code>)。</p>
     <ol>
-     <li>将任何新的或修改的多站点管理器Blueprint配置从“上一个位置”复制到“新位置”(<code>/apps</code>)。</li>
-     <li>从“上一位置”中删除所有迁移的多站点管理器Blueprint配置。</li>
+     <li>将任何新的或已修改的多站点管理器Blueprint配置从上一位置复制到新位置(<code>/apps</code>)。</li>
+     <li>从上一个位置删除所有迁移的多站点管理器Blueprint配置。</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>所有AEM提供的多站点管理器Blueprint配置都位于中的新位置 <code>/libs</code>。</p> <p>内容不引用多站点管理器蓝色配置，因此没有要调整的内容引用。</p> </td>
+   <td><p><code>/libs</code>的“新位置”中存在所有AEM提供的多站点管理器Blueprint配置。</p> <p>内容不引用多站点管理器蓝色配置，因此没有要调整的内容引用。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 多站点管理器转出配置 {#multi-site-manager-rollout-configurations}
+### 多站点管理器转出配置{#multi-site-manager-rollout-configurations}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/msm/rolloutConfigs</code></p> </td>
   </tr>
   <tr>
@@ -235,25 +243,25 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>必须将任何新的或修改的多站点管理器转出配置迁移到新位置。</p>
+   <td><p>任何新的或修改的多站点管理器转出配置都必须迁移到新位置。</p>
     <ol>
-     <li>将任何新的或修改的多站点管理器转出配置从上一个位置复制到新位置(<code>/apps</code>)。</li>
-     <li>将AEM页面上的任何引用更新到“上一个位置”中的多站点管理器转出配置，以指向“新位置”（或）中的<code>/libs</code> 对应 <code>/apps</code>位置。</li>
+     <li>将任何新的或修改的多站点管理器转出配置从先前位置复制到新位置(<code>/apps</code>)。</li>
+     <li>将AEM页面上的任何引用更新为“上一个位置”中的“多站点管理器转出配置”，以指向“新位置”（<code>/libs</code>或<code>/apps</code>）中的对应项。</li>
     </ol> <p>从上一个位置删除迁移的多站点管理器转出配置。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>未能从上一个位置删除迁移的多站点管理器转出配置会导致向AEM作者显示重复的转出选项。</td>
+   <td>无法从上一个位置删除迁移的多站点管理器转出配置，结果将重复转出选项显示给AEM作者。</td>
   </tr>
  </tbody>
 </table>
 
-### 页面事件通知电子邮件模板 {#page-event-notification-e-mail-template}
+### 页面事件通知电子邮件模板{#page-event-notification-e-mail-template}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/notification/email/default/com.day.cq.wcm.core.page</code></p> </td>
   </tr>
   <tr>
@@ -271,34 +279,36 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>必须将任何新的或修改的页面事件通知电子邮件模板迁移到以下位置 <code>/apps</code>:</p>
+   <td><p>任何新的或修改的页面事件通知电子邮件模板都必须迁移到<code>/apps</code>下的新位置：</p>
     <ol>
      <li>将任何新的或修改的页面事件通知电子邮件模板从上一个位置复制到新位置(<code>/apps</code>)。</li>
-     <li>从上一个位置删除所有迁移的页面事件通知电子邮件模板。</li>
+     <li>从上一个位置删除任何迁移的页面事件通知电子邮件模板。</li>
     </ol> </td>
   </tr>
  </tbody>
 </table>
 
-### 页面基架 {#page-scaffolding}
+### 页面基架{#page-scaffolding}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><code>/etc/scaffolding</code></td>
   </tr>
   <tr>
    <td><strong>新位置</strong></td>
-   <td><p><span class="code">/libs/settings// <code>
+   <td><p><span class="code">/libs/settings/
+      <code>
        wcm
-      </code>template-types/scaffolding/scaffolding</span></p> <p><span class="code">/apps/settings/ <code>
+      </code>/template-types/scaffolding/scaffolding</span></p> <p><span class="code">/apps/settings/
+      <code>
        wcm
-      </code>template-types/scaffolding/scaffolding</span></p> </td>
+      </code>/template-types/scaffolding/scaffolding</span></p> </td>
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td>在“上一位置”下创建的基架使用旧版基架框架，无法迁移到“新位置”。 要与新位置对齐，必须使用支持的Scaffolding框架重新开发任何旧版Scaffolding。</td>
+   <td>在上一个位置下创建的基架使用旧的基架框架，无法迁移到新位置。 要与新位置对齐，必须使用支持的Scaffolding框架重新开发任何旧版Scaffolding。</td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
@@ -307,12 +317,12 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### 响应式网格更少 {#responsive-grid-less}
+### 响应式网格LESS {#responsive-grid-less}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><code>/etc/clientlibs/wcm/foundation/grid/grid_base.less</code></td>
   </tr>
   <tr>
@@ -321,24 +331,24 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>必须更新对自定义LESS文件中“上一位置”的任何引用，才能从“新位置”导入。</p>
+   <td><p>必须更新对自定义LESS文件中“上一个位置”的任何引用，以从“新位置”导入。</p>
     <ul>
      <li>更新引用“上一位置”中引用grid_base.less的任何自定义LESS文件以引用新位置。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>引用非现有文 <code>grid_base.less</code> 件会导致页面和模板编辑器的布局模式无效，并中断页面布局。</td>
+   <td>引用非现有<code>grid_base.less</code>文件会导致页面和模板编辑器的布局模式不起作用，以及页面布局中断。</td>
   </tr>
  </tbody>
 </table>
 
-### 静态模板设计 {#static-template-designs}
+### 静态模板设计{#static-template-designs}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><code>/etc/designs/&lt;custom-site&gt;</code></td>
   </tr>
   <tr>
@@ -347,31 +357,31 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>适用于在SCM中管理的、在运行时不通过设计对话框写入的任何设计。</p>
+   <td><p>适用于以SCM管理的、在运行时不通过设计对话框写入的任何设计。</p>
     <ol>
-     <li>将设计从“上一位置”复制到“新位置”(<code>/apps</code>)。</li>
-     <li>将设计中的任何CSS、JavaScript和静态资源转换为客 <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">户端库</a><code>allowProxy = true</code>。</li>
-     <li>通过 <code>cq:designPath</code> AEM &gt;站点&gt;自定义站点页面&gt;页面属性&gt;高级选项卡&gt;设计字段更新对属性中上一个位置的引用 <strong></strong>。</li>
-     <li>更新引用“上一位置”的任何页面以使用新的“客户端库”类别（这需要更新页面实施代码）。</li>
-     <li>更新AEM Dispatcher规则，以允许通过代理servlet提供客 <code>/etc.clientlibs/</code> 户端库。</li>
+     <li>将设计从“上一个位置”复制到“新位置”(<code>/apps</code>)。</li>
+     <li>将设计中的任何CSS、JavaScript和静态资源转换为具有<code>allowProxy = true</code>的<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">客户端库</a>。</li>
+     <li>通过<strong>AEM &gt;站点&gt;自定义站点页面&gt;页面属性&gt;高级选项卡&gt;设计字段</strong>更新对<code>cq:designPath</code>属性中的上一个位置的引用。</li>
+     <li>更新引用上一个位置的任何页面以使用新的客户端库类别（这需要更新页面实施代码）。</li>
+     <li>更新AEM Dispatcher规则，允许通过<code>/etc.clientlibs/</code>代理servlet提供客户端库。</li>
     </ol> <p>对于任何未在SCM中管理的设计，以及通过设计对话框修改的运行时：</p>
     <ul>
-     <li>请勿将可创作的设计移出 <code>/etc</code>。</li>
+     <li>请勿将可创作设计移出<code>/etc</code>。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td>建议使用可编辑模板构建AEM站点和页面，这些模板使用结构内容和策略代替设计。</td>
+   <td>建议的方法是使用可编辑模板构建AEM Sites和页面，这些模板使用结构内容和策略代替设计。</td>
   </tr>
  </tbody>
 </table>
 
-### Adobe Search and Promote集成客户端库 {#adobe-search-and-promote-integration-client-libraries}
+### Adobe搜索和提升集成客户端库{#adobe-search-and-promote-integration-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/searchpromote</code></p> </td>
   </tr>
   <tr>
@@ -380,10 +390,10 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>对这些客户端库的任何自定义使用都应按类别引用客户端库，而不应按路径引用。</p>
+   <td><p>对这些客户端库的任何自定义使用都应按类别而非路径引用客户端库。</p>
     <ol>
-     <li>应更新对“上一位置”中路径的客户端库的任何引用，以使用 <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的客户端库引用框架</a>。</li>
-     <li>如果无法使用AEM的客户端库引用框架，则可以通过AEM的客户端库代理servlet引用客户端库的绝对路径：</li>
+     <li>应更新在“上一个位置”中按路径对客户端库的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM引用框架</a>的客户端库。</li>
+     <li>如果无法使用AEM客户端库引用框架，则客户端库的绝对路径可通过AEM客户端库代理servlet引用：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/searchpromote/clientlibs/searchpromotei.js</code></li>
@@ -391,7 +401,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访问每个cq:ClientLiaryFolder节点并检查类别属性：</p>
+   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访问每个cq:ClientLIbraryFolder节点并检查类别属性：</p>
     <ul>
      <li><code>/libs/cq/searchpromote/clientlibs/searchpromote</code></li>
     </ul> </td>
@@ -399,12 +409,12 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### Adobe Target集成客户端库 {#adobe-target-integration-client-libraries}
+### Adobe Target集成客户端库{#adobe-target-integration-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/clientlibs/foundation/target</code></p> </td>
   </tr>
   <tr>
@@ -413,10 +423,10 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>对这些客户端库的任何自定义使用都应按类别引用客户端库，而不应按路径引用。</p>
+   <td><p>对这些客户端库的任何自定义使用都应按类别而非路径引用客户端库。</p>
     <ol>
-     <li>应更新对“上一位置”中路径的客户端库的任何引用，以使用 <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的客户端库引用框架</a>。</li>
-     <li>如果无法使用AEM的客户端库引用框架，则可以通过AEM的客户端库代理servlet引用客户端库的绝对路径：</li>
+     <li>应更新在“上一个位置”中按路径对客户端库的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM引用框架</a>的客户端库。</li>
+     <li>如果无法使用AEM客户端库引用框架，则客户端库的绝对路径可通过AEM客户端库代理servlet引用：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/testandtarget/clientlibs/testandtarget/testandtarget.js</code></li>
@@ -430,7 +440,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访问每个cq:ClientLiaryFolder节点并检查类别属性：</p>
+   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访问每个cq:ClientLIbraryFolder节点并检查类别属性：</p>
     <ul>
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/testandtarget</code></li>
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/atjs</code></li>
@@ -444,12 +454,12 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
  </tbody>
 </table>
 
-### WCM Foundation客户端库 {#wcm-foundation-client-libraries}
+### WCM Foundation客户端库{#wcm-foundation-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>上一位置</strong></td>
+   <td><strong>上一个位置</strong></td>
    <td><p><code>/etc/clientlibs/wcm/foundation</code></p> </td>
   </tr>
   <tr>
@@ -458,10 +468,10 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>对这些客户端库的任何自定义使用都应按类别引用客户端库，而不应按路径引用。</p>
+   <td><p>对这些客户端库的任何自定义使用都应按类别而非路径引用客户端库。</p>
     <ol>
-     <li>应更新对“上一位置”中路径的客户端库的任何引用，以使用 <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM的客户端库引用框架</a>。</li>
-     <li>如果无法使用AEM的客户端库引用框架，则可以通过AEM的客户端库代理Servlet引用客户端库的绝对路径。</li>
+     <li>应更新在“上一个位置”中按路径对客户端库的任何引用，以使用<a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM引用框架</a>的客户端库。</li>
+     <li>如果无法使用AEM客户端库引用框架，则客户端库的绝对路径可通过AEM客户端库代理servlet引用。</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/wcm/foundation/clientlibs/accessibility.css</code></li>
@@ -471,7 +481,7 @@ source-git-commit: d20ddba254c965e1b0c0fc84a482b7e89d4df5cb
   </tr>
   <tr>
    <td><strong>注释</strong></td>
-   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访 <code>cq:ClientLIbraryFolder</code> 问每个节点并检查类别属性：</p>
+   <td><p>从不支持编辑这些客户端库。</p> <p>要获取客户端库类别，请通过CRXDELite访问每个<code>cq:ClientLIbraryFolder</code>节点并检查类别属性：</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>
      <li><code>/libs/wcm/foundation/clientlibs/main</code></li>
