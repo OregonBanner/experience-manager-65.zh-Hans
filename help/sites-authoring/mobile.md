@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 89%
 
 ---
 
@@ -23,16 +26,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->要创建基于现有标准站点的移动站点，请创建标准站点的 Live Copy。(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
+>要创建基于现有标准站点的移动站点，请创建标准站点的 Live Copy。(请参阅[为不同渠道创建Live Copy](/help/sites-administering/msm-livecopy.md)。)
 >
->AEM开发人员可以创建新设备组。 (See [Creating Device Group Filters](/help/sites-developing/groupfilters.md).)
+>AEM 开发人员可以创建新设备组。(请参阅[创建设备组过滤器](/help/sites-developing/groupfilters.md)。)
 
 请使用以下过程来创作移动页面：
 
-1. From global navigation open the **Sites** console.
-1. Open the page **We.Retail** -> **United States** -> **English**.
+1. 从全局导航中打开&#x200B;**站点**&#x200B;控制台。
+1. 打开页面&#x200B;**We.Retail** -> **美国** -> **英语**。
 
-1. Switch to **Preview** mode.
+1. 切换到&#x200B;**预览**&#x200B;模式。
 1. 单击页面顶部的设备图标以切换到所需的模拟器。
 1. 将组件浏览器中的组件拖放到页面上。
 
