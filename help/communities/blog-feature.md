@@ -19,7 +19,7 @@ ht-degree: 6%
 ---
 
 
-# 博客功能 {#blog-feature}
+# 博客功能{#blog-feature}
 
 ## 简介 {#introduction}
 
@@ -32,11 +32,11 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 * 在发布端创建博客文章和评论
 * 富文本编辑
 * 内联图像（支持拖放）
-* 嵌入式社交网络内容([嵌入支持](/help/communities/blog-developer-basics.md#allowing-rich-media))
+* 嵌入式社交网络内容（[oEmbed支持](/help/communities/blog-developer-basics.md#allowing-rich-media)）
 * 草稿模式
 * 计划发布
-* 代表起草(特权 [成员](/help/communities/users.md#privileged-members-group) 可以代表其他社区成员创建内容)
-* [博客文章和评论的上下文](/help/communities/moderate-ugc.md) 、批量协调
+* 代表起草（[特权成员](/help/communities/users.md#privileged-members-group)可以代表其他社区成员创建内容）
+* [博客文章和评论的](/help/communities/moderate-ugc.md) 上下文和批量版本化
 
 文档的本节介绍：
 
@@ -45,11 +45,11 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 >[!NOTE]
 >
->组件 `Journal` 和 `Journal Sidebar` 标题 `Blog` 为和 `Blog Sidebar`。
+>组件`Journal`和`Journal Sidebar`的标题分别为`Blog`和`Blog Sidebar`。
 >
 >AEM 6.0及更早版本中的博客功能现已删除。 它基于模板，并且仅允许作者在创作环境中创建内容。
 
-## 将博客组件添加到页面 {#adding-blog-components-to-a-page}
+## 将博客组件添加到页面{#adding-blog-components-to-a-page}
 
 如果希望在创作模式下将博客添加到页面，请使用组件浏览器查找
 
@@ -58,23 +58,23 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 并将它们拖到应显示博客的页面上。
 
-有关必要的信息，请访 [问社区组件基础](/help/communities/basics.md)。
+有关必要的信息，请访问[社区组件基础知识](/help/communities/basics.md)。
 
-当包 [含所需的客户端库](/help/communities/blog-developer-basics.md#essentials-for-client-side) ，组件的显示 `Blog` 方式如下：
+当包含[必需的客户端库](/help/communities/blog-developer-basics.md#essentials-for-client-side)时，`Blog`组件的显示方式如下：
 
 ![add-blog-component](assets/add-blog-component.png)
 
-### 配置博客 {#configuring-blog}
+### 配置博客{#configuring-blog}
 
-选择要访问的 `Blog` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
+选择要访问的已放置`Blog`组件，然后选择打开编辑对话框的`Configure`图标。
 
 ![配置](assets/configure-new.png)
 
 ![博客设置](assets/blog-configure.png)
 
-#### “设置”选项卡 {#settings-tab}
+#### 设置选项卡{#settings-tab}
 
-在“设 **置** ”选项卡下，指定博客的基本功能：
+在&#x200B;**设置**&#x200B;选项卡下，指定博客的基本功能：
 
 * **允许附加缩略图**
 
@@ -136,7 +136,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **允许标记**
 
-   如果选中此项，则允许成员向其帖子中添加标记标签(请参 **阅标记字段** 选项卡)。 默认为未选中。
+   如果选中此项，则允许成员向其帖子中添加标记标签（请参阅&#x200B;**标记字段**&#x200B;选项卡）。 默认为未选中。
 
 * **允许文件上传**
 
@@ -144,11 +144,11 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **最大文件大小**
 
-   仅在选中时 `Allow File Uploads` 相关。 此字段将限制已上载文件的大小（以字节为单位）。 默认值为104857600(10 Mb)。
+   仅当选中`Allow File Uploads`时相关。 此字段将限制已上载文件的大小（以字节为单位）。 默认值为104857600(10 Mb)。
 
 * **允许的文件类型**
 
-   仅在选中时 `Allow File Uploads` 相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅当选中`Allow File Uploads`时相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上传那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **附加图像文件最大大小**
 
@@ -168,21 +168,21 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **允许关注**
 
-   如果选中此项，则为博客文章添加以下功能，允许成员 [收到](/help/communities/notifications.md) 新帖子的通知。 默认为未选中。
+   如果选中此项，则为博客文章添加以下功能，使成员能够收到新帖子的[通知](/help/communities/notifications.md)。 默认为未选中。
 
 * **允许电子邮件订阅**
 
-   如果选中此项，则允许成员通过电子邮件(订阅)通知[新帖](/help/communities/subscriptions.md)子。 需要 `Allow Following` 检查并配置电 [子邮件](/help/communities/email.md)。 默认为未选中。
+   如果选中此项，则允许通过电子邮件向成员通知新帖子([订阅](/help/communities/subscriptions.md))。 需要检查`Allow Following`并配置[电子邮件](/help/communities/email.md)。 默认为未选中。
 
 * **显示徽章**
 
-   如果选中，则使用会员的博 [客条目](/help/communities/implementing-scoring.md) ，显示已获得和分配的徽章。 默认为未选中。
+   如果选中，则使用成员的博客条目显示已获得的标记并分配了[标记](/help/communities/implementing-scoring.md)。 默认为未选中。
 
 * **不在列表页上获取回复**
 
 * **允许专题内容**
 
-   如果选中，则可以将该想法标识为特色 [内容](/help/communities/featured.md)。 默认为未选中。
+   如果选中，则该想法可标识为[特色内容](/help/communities/featured.md)。 默认为未选中。
 
 * **启用提及功能**
 
@@ -196,9 +196,9 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
    在帖子中为注册用户标记（@提及）指定已允许的模式字符串。 例如~{{familyName}}{{givenName}}。
 
-#### “用户审核”选项卡 {#user-moderation-tab}
+#### “用户协调”选项卡{#user-moderation-tab}
 
-在“用户 **审核** ”选项卡下，指定审核设置：
+在&#x200B;**用户审核**&#x200B;选项卡下，指定审核设置：
 
 * **拒绝帖子**
 
@@ -228,23 +228,23 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
    输入主题或评论在隐藏之前必须标出的次数，以免公开视图。 如果设置为-1，则标记的主题或评论从不隐藏于公共视图。 否则，此数字必须大于或等于仲裁阈值。 默认值为5。
 
-#### 标记字段选项卡 {#tag-field-tab}
+#### 标记字段选项卡{#tag-field-tab}
 
-在“标记 **字段** ”选项卡下，指定在“设置”选项卡上选中“允 **许标记** ”时可应用的 **标记** :
+在&#x200B;**标记字段**&#x200B;选项卡下，指定在&#x200B;**设置**&#x200B;选项卡上选中&#x200B;**允许标记**&#x200B;时可应用的标记：
 
 * **允许的命名空间**
 
-   如果在“设 `Allow Tagging` 置”选项卡下选中， **则相关** 。 可应用的标记仅限于所选命名空间类别内的标记。 命名空间的列表包括“标准标记”(默认命名空间)和“包括所有标记”。 默认值为“无”(none checked)，这意味着允许所有命名空间。
+   如果在&#x200B;**设置**&#x200B;选项卡下检查了`Allow Tagging`，则相关。 可应用的标记仅限于所选命名空间类别内的标记。 命名空间的列表包括“标准标记”(默认命名空间)和“包括所有标记”。 默认值为“无”(none checked)，这意味着允许所有命名空间。
 
 * **建议限制**
 
    输入要作为建议显示给论坛成员的标记数。 值-1表示没有限制。 默认值为0。
 
-### 配置博客提要栏 {#configuring-blog-sidebar}
+### 配置博客提要栏{#configuring-blog-sidebar}
 
-多次单击组件 `Blog Sidebar` 时，将打开一个编辑对话框。
+多次单击`Blog Sidebar`组件时，将打开一个编辑对话框。
 
-在“日志 **提要栏设置** ”选项卡下，指定存档的日期格式以及要在提要栏中显示的条目类型：
+在&#x200B;**日志提要栏设置**&#x200B;选项卡下，指定存档的日期格式以及要在提要栏中显示的条目类型：
 
 ![blog-component-sidebar](assets/blog-component-sidebar.png)
 
@@ -270,7 +270,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 * **Blopg组件路径**
 
-   *（可选）* 要从中列出博客文章的博客资源的位置。 如果留空，将使用同一页 `social/journal/components/hbs/journal` 面上显示的resourceType组件。
+   *（可选）* 要从中列出博客文章的博客资源的位置。如果留空，将使用资源类型`social/journal/components/hbs/journal`的组件，该组件显示在同一页面上。
 
    * 例如，`/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -278,7 +278,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
    要显示的博客文章数。 值-1表示无限制。 默认值为-1。
 
-## 站点访客体验 {#site-visitor-experience}
+## 站点访客体验{#site-visitor-experience}
 
 在发布环境中，博客功能将按创建的降序显示最新的博客文章，后跟较旧的博客文章。 博客提要栏允许站点访客应用过滤器来限制所显示博客文章的选择。
 
@@ -288,7 +288,7 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 其他功能取决于站点访客是版主、管理员、社区成员、特权成员还是匿名。
 
-### 使用文章 {#working-with-articles}
+### 使用文章{#working-with-articles}
 
 创建新博客文章时，可以选择：
 
@@ -298,15 +298,15 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 博客文章将显示在相应的选项卡（已发布、草稿或已计划）下，以供能够在发布时进行创作的成员使用。
 
-#### 版主和管理员 {#moderators-and-administrators}
+#### 版主和管理员{#moderators-and-administrators}
 
-当登录用户具有版主或管理员权限时，他们能够对发布到博 [客的所有博客文章](/help/communities/moderate-ugc.md) 和评论执行审核任务（如组件的配置所允许）。
+当登录用户具有审查方或管理员权限时，他们可以对所有博客文章和发布到博客的评论执行[审核任务](/help/communities/moderate-ugc.md)（组件配置允许）。
 
 ![版主页](assets/moderator-homepage.png)
 
 #### 成员 {#members}
 
-当登录用户是社区成员或特 [权成员](/help/communities/users.md#privileged-members-group) （取决于配置）时，他们可以选择 `New Article` 创建和发布新的博客文章。
+当登录用户是社区成员或[特权成员](/help/communities/users.md#privileged-members-group)（取决于配置）时，他们可以选择`New Article`创建并发布新的博客文章。
 
 具体而言，他们可以：
 
@@ -329,10 +329,10 @@ AEM Communities的博客功能已从创作活动转变为在发布环境中发�
 
 ## 附加信息 {#additional-information}
 
-有关详细信息，请参阅开发人 [员的“Blog](/help/communities/blog-developer-basics.md) Essentials”页面。
+有关开发人员的详细信息，请参阅[Blog Essentials](/help/communities/blog-developer-basics.md)页面。
 
-有关审核博客条目和评论，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md)。
+有关审核博客条目和评论，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
 
-有关标记博客条目和注释，请参 [阅标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记博客条目和注释，请参阅[标记用户生成的内容](/help/communities/tag-ugc.md)。
 
-有关博客条目和注释的翻译，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md)。
+有关博客条目和注释的翻译，请参阅[翻译用户生成的内容](/help/communities/translate-ugc.md)。
