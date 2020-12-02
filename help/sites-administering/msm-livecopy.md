@@ -14,13 +14,13 @@ ht-degree: 1%
 
 您可以从页面或蓝图配置创建Live Copy，然后可以管理继承和同步。
 
-## 管理Blueprint配置 {#managing-blueprint-configurations}
+## 管理Blueprint配置{#managing-blueprint-configurations}
 
 Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站。
 
 >[!NOTE]
 >
->Blueprint配置允许您将内容更改推送到Live Copy。 请参 [阅Live Copy —— 源、Blueprint和Blueprint配置](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)。
+>Blueprint配置允许您将内容更改推送到Live Copy。 请参阅[Live Copy - Source、Blueprint和Blueprint Configurations](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)。
 
 创建Blueprint配置时，您将选择一个模板，它定义Blueprint的内部结构。 默认的蓝图模板假定源网站具有以下特征：
 
@@ -34,78 +34,78 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 
 创建Blueprint配置后，您配置以下属性：
 
-* **名称**: 蓝图配置的名称。
-* **源路径**: 用作源(blueprint)的站点的根页面的路径。
+* **名称**:蓝图配置的名称。
+* **源路径**:用作源(blueprint)的站点的根页面的路径。
 * **描述**. （可选）蓝图配置的说明。 描述显示在创建站点时要选择的蓝图配置列表中。
 
-使用Blueprint配置时，您可以将其与转出配置关联，该转出配置确定如何同步源/Blueprint的Live Copy。 See [Specifying the Rollout Configurations To Use](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use).
+使用Blueprint配置时，您可以将其与转出配置关联，该转出配置确定如何同步源/Blueprint的Live Copy。 请参阅[指定要使用的转出配置](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)。
 
-### 创建Blueprint配置 {#creating-a-blueprint-configuration}
+### 创建Blueprint配置{#creating-a-blueprint-configuration}
 
 要创建Blueprint配置，请执行以下操作：
 
-1. [导航到](/help/sites-authoring/basic-handling.md#global-navigation) “工 **具** ”菜单，然后选择“ **站点** ”菜单。
-1. 选择 **Blueprint** ，打开Blueprint **配置控制台** :
+1. [导](/help/sites-authoring/basic-handling.md#global-navigation) 航至“工 **** 具”菜单，然后选择“ **** 大小”菜单。
+1. 选择&#x200B;**Blueprint**&#x200B;以打开&#x200B;**Blueprint Configurations**&#x200B;控制台：
 
    ![chlimage_1-209](assets/chlimage_1-209.png)
 
 1. 选择&#x200B;**创建**。
-1. 选择Blueprint模板，然后 **选择** “下一步”继续。
-1. 选择要用作蓝图的源页面； 然 **后** ，继续。
+1. 选择Blueprint模板，然后选择&#x200B;**Next**&#x200B;继续。
+1. 选择要用作蓝图的源页面；然后&#x200B;**Next**&#x200B;继续。
 1. 定义：
 
-   * **标题**: 蓝图的必填标题
-   * **描述**: 提供更多详细信息的可选描述。
+   * **标题**:蓝图的必填标题
+   * **描述**:提供更多详细信息的可选描述。
 
-1. **创建** 将根据您的规范创建蓝图配置。
+1. **Create** 将根据您的规范创建Blueprint配置。
 
-### 编辑或删除Blueprint配置 {#editing-or-deleting-a-blueprint-configuration}
+### 编辑或删除Blueprint配置{#editing-or-deleting-a-blueprint-configuration}
 
 您可以编辑或删除现有的Blueprint配置：
 
-1. [导航到](/help/sites-authoring/basic-handling.md#global-navigation) “工 **具** ”菜单，然后选择“ **站点** ”菜单。
-1. 选择 **Blueprint** ，打开Blueprint **配置控制台** :
+1. [导](/help/sites-authoring/basic-handling.md#global-navigation) 航至“工 **** 具”菜单，然后选择“ **** 大小”菜单。
+1. 选择&#x200B;**Blueprint**&#x200B;以打开&#x200B;**Blueprint Configurations**&#x200B;控制台：
 
    ![chlimage_1-210](assets/chlimage_1-210.png)
 
 1. 选择所需的Blueprint配置——相应的操作将在工具栏中变为可用：
 
-   * **属性**; 您可以使用它来视图，然后编辑配置的属性。
+   * **属性**;您可以使用它来视图，然后编辑配置的属性。
    * **删除**
 
    ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## 创建 Live Copy {#creating-a-live-copy}
 
-### 创建页面的Live Copy {#creating-a-live-copy-of-a-page}
+### 创建页面{#creating-a-live-copy-of-a-page}的Live Copy
 
 您可以创建任何页面或分支的Live Copy。 创建Live Copy时，可以指定用于同步内容的转出配置：
 
 * 所选转出配置将应用于Live Copy页面及其子页面。
-* 如果未指定任何转出配置，MSM将确定要使用的转出配置。 请参 [阅指定要使用的转出配置](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)。
+* 如果未指定任何转出配置，MSM将确定要使用的转出配置。 请参阅[指定要使用的转出配置](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)。
 
 您可以创建任何页面的Live Copy:
 
-* 由Blueprint配置引用 [的页面](#creating-a-blueprint-configuration)。
+* 由[blueprint配置](#creating-a-blueprint-configuration)引用的页面。
 * 以及与配置无连接的页面。
-* AEM还支持在其他Live Copy页面中创建Live Copy。
+* AEM还支持在其他Live Copy的页面中创建Live Copy。
 
-唯一的区别是，源/ **蓝图页** 上的Rollout命令的可用性取决于源是否被Blueprint配置引用：
+唯一的区别在于，源／蓝图页面上的&#x200B;**Rollout**&#x200B;命令的可用性取决于源是否被蓝图配置引用：
 
-* 如果从在Blueprint配置中引 **用的** 源页面创建Live Copy，则Rollout命令将在源/Blueprint页面上可用。
-* 如果从未在Blueprint配置中引 **用的** 源页面创建Live Copy，则Rollout命令将不在源/Blueprint页面上可用。
+* 如果从在Blueprint配置中引用的&#x200B;**为**&#x200B;的源页面创建Live Copy，则Rollout命令将在源/Blueprint页面上可用。
+* 如果您从未在Blueprint配置中引用&#x200B;**的源页面创建Live Copy，则Rollout命令在源/Blueprint页面上将不可用。**
 
 要创建Live Copy，请执行以下操作：
 
-1. 在站点 **控制台** ，选 **择创建**, **然后选择Live Copy**。
+1. 在&#x200B;**站点**&#x200B;控制台中，选择&#x200B;**创建**，然后选择&#x200B;**Live Copy**。
 
    ![chlimage_1-212](assets/chlimage_1-212.png)
 
-1. 选择源页面，然后单击或点按 **下一步**。 例如：
+1. 选择源页面，然后单击或点按&#x200B;**下一步**。 例如：
 
    ![chlimage_1-213](assets/chlimage_1-213.png)
 
-1. 指定Live Copy的目标路径（打开Live Copy的父文件夹／页面），然后单击或点按下 **一步**。
+1. 指定Live Copy的目标路径（打开Live Copy的父文件夹／页面），然后单击或点按&#x200B;**下一步**。
 
    ![chlimage_1-214](assets/chlimage_1-214.png)
 
@@ -115,24 +115,24 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 
 1. 输入：
 
-   * 页 **面的** “标题”。
-   * 一 **个名**，在URL中使用。
+   * a **页面的标题**。
+   * **名称**，在URL中使用。
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
-1. 使用“排 **除子页面** ”复选框：
+1. 使用&#x200B;**排除子页面**&#x200B;复选框：
 
-   * 已选择： 仅创建选定页面的Live Copy（浅Live Copy）
-   * 未选择： 创建包含选定页面的所有子代的Live Copy（深层Live Copy）
+   * 已选择：仅创建选定页面的Live Copy（浅Live Copy）
+   * 未选择：创建包含选定页面的所有子代的Live Copy（深层Live Copy）
 
-1. （可选）要指定一个或多个用于Live Copy的转出配置，请使 **用转出配置** 下拉列表选择它们； 选定的配置将显示在下拉选择器下。
-1. 单击或点按&#x200B;**创建**。此时将显示确认消息，您可以从此处选择“打 **开** ”或 **“完成**”。
+1. （可选）要指定一个或多个用于Live Copy的转出配置，请使用&#x200B;**转出配置**&#x200B;下拉列表选择它们；选定的配置将显示在下拉选择器下。
+1. 单击或点按&#x200B;**创建**。此时将显示一条确认消息，您可以从此处选择&#x200B;**打开**&#x200B;或&#x200B;**完成**。
 
-### 从Blueprint配置创建站点的Live Copy {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
+### 从Blueprint配置{#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}创建站点的Live Copy
 
-使用Blueprint配置创建Live Copy，以基于Blueprint（源）内容创建站点。 从Blueprint配置创建Live Copy时，选择要复制的Blueprint源的一个或多个语言分支，然后从语言分支中选择要复制的章节。 请参 [阅创建Blueprint配置](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)。
+使用Blueprint配置创建Live Copy，以基于Blueprint（源）内容创建站点。 从Blueprint配置创建Live Copy时，选择要复制的Blueprint源的一个或多个语言分支，然后从语言分支中选择要复制的章节。 请参阅[创建Blueprint配置](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)。
 
-如果在Live Copy中漏掉一些语言分支或章节，可以稍后添加； 请参 [阅在Live Copy中创建Live Copy（Blueprint配置）](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration)。
+如果在Live Copy中漏掉一些语言分支或章节，可以稍后添加；请参阅[在Live Copy中创建Live Copy（Blueprint配置）](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration)。
 
 >[!CAUTION]
 >
@@ -140,45 +140,45 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 
 创建站点时，请提供以下属性的值：
 
-* **初始语言**: 要包含在Live Copy中的Blueprint源的语言分支。
-* **初始章节**: 要包含在Live Copy中的Blueprint语言分支的子页面。
-* **目标路径**: Live Copy站点的根页面的位置。
-* **标题**: Live Copy站点的根页面的标题。
-* **名称**: （可选）存储Live Copy根页面的JCR节点的名称。 默认值基于标题。
-* **站点所有者**: （可选）
-* **Live Copy**: 选择此选项可与源站点建立实时关系。 如果不选择此选项，将创建Blueprint的副本，但随后不会与源同步。
-* **转出配置**: （可选）选择一个或多个转出配置以用于同步Live Copy。 默认情况下，转出配置从Blueprint继承； 有关 [详细信息，请参阅指定要使用的转出](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) 配置。
+* **初始语言**:要包含在Live Copy中的Blueprint源的语言分支。
+* **初始章节**:要包含在Live Copy中的Blueprint语言分支的子页面。
+* **目标路径**:Live Copy站点的根页面的位置。
+* **标题**:Live Copy站点的根页面的标题。
+* **名称**:（可选）存储Live Copy根页面的JCR节点的名称。默认值基于标题。
+* **站点所有者**:（可选）
+* **Live Copy**:选择此选项可与源站点建立实时关系。如果不选择此选项，将创建Blueprint的副本，但随后不会与源同步。
+* **转出配置**:（可选）选择一个或多个转出配置以用于同步Live Copy。默认情况下，转出配置从Blueprint继承；有关详细信息，请参阅[指定要使用的转出配置](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)。
 
 要从Blueprint配置创建站点的Live Copy，请执行以下操作：
 
-1. 在“站 **点** ”控制台中， **选择创**&#x200B;建，然后从下拉选 **择器中选** 择“站点”。
-1. 选择要用作Live Copy源的Blueprint配置，然后继续执行下 **一步**:
+1. 在&#x200B;**站点**&#x200B;控制台中，从下拉选择器中选择&#x200B;**创建**，然后选择&#x200B;**站点**。
+1. 选择要用作Live Copy源的Blueprint配置，然后继续执行&#x200B;**Next**:
 
    ![chlimage_1-216](assets/chlimage_1-216.png)
 
-1. 使用 **初始语言** 选择器指定Blueprint站点要用于Live Copy的语言。
+1. 使用&#x200B;**初始语言**&#x200B;选择器指定Blueprint站点要用于Live Copy的语言。
 
-   默认情况下，将选择所有可用语言。 要删除语言，请单击或点 **按** 该语言旁边显示的X。
+   默认情况下，将选择所有可用语言。 要删除语言，请单击或点按该语言旁边显示的&#x200B;**X**。
 
    例如：
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. 使用 **初始章** 节下拉菜单选择要包含在Live Copy中的Blueprint的各个部分。 同样，所有可用章节都默认包含在内，但可以删除。
-1. 为其余属性提供值，然后选择创 **建**。 在确认对话框中，选 **择** “完成”返回 **站点** 控制台， **或选择“打开站点** ”打开站点的根页面。
+1. 使用&#x200B;**初始章节**&#x200B;下拉框选择要包含在Live Copy中的Blueprint的各个部分。 同样，所有可用章节都默认包含在内，但可以删除。
+1. 为其余属性提供值，然后选择&#x200B;**创建**。 在确认对话框中，选择&#x200B;**完成**&#x200B;以返回到&#x200B;**站点**&#x200B;控制台，或选择&#x200B;**打开站点**&#x200B;以打开站点的根页面。
 
-### 在Live Copy中创建Live Copy（Blueprint配置） {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
+### 在Live Copy中创建Live Copy（Blueprint配置）{#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
 
 在现有Live Copy中创建Live Copy（使用Blueprint配置创建）时，可以插入最初创建Live Copy时未包含的任何语言副本或章节。
 
 ## 监视Live Copy {#monitoring-your-live-copy}
 
-### 查看Live Copy的状态 {#seeing-the-status-of-a-live-copy}
+### 查看Live Copy的状态{#seeing-the-status-of-a-live-copy}
 
 Live Copy页面的属性显示有关Live Copy的以下信息：
 
-* **来源**: Live Copy页面的源页面。
-* **状态**: Live Copy的同步状态。 状态包括Live Copy是否与源同步，以及上次同步发生的时间以及执行同步的人员。
+* **来源**:Live Copy页面的源页面。
+* **状态**:Live Copy的同步状态。状态包括Live Copy是否与源同步，以及上次同步发生的时间以及执行同步的人员。
 * **配置**:
 
    * 页面是否仍受Live Copy继承的约束。
@@ -187,8 +187,8 @@ Live Copy页面的属性显示有关Live Copy的以下信息：
 
 视图属性：
 
-1. 在“站 **点** ”控制台中，选择Live Copy页面并打开属性。
-1. Select the **Live Copy** tab.
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面并打开属性。
+1. 选择&#x200B;**Live Copy**&#x200B;选项卡。
 
    例如：
 
@@ -196,32 +196,32 @@ Live Copy页面的属性显示有关Live Copy的以下信息：
 
    >[!NOTE]
    >
-   >有关更多详细信息，另请参阅知 [识库文章Live Copy状态消息——最新／绿色／同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
+   >有关详细信息，另请参阅知识库文章[Live Copy状态消息——最新／绿色／同步](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)。
 
-### 查看Blueprint页的Live Copy {#seeing-the-live-copies-of-a-blueprint-page}
+### 查看Blueprint页面{#seeing-the-live-copies-of-a-blueprint-page}的Live Copy
 
-Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面的列表，这些页面使用当前(Blueprint)页面作为源。 使用此列表跟踪Live Copy。 列表显示在页 **面属性** 的Blueprint选 [项卡上](/help/sites-authoring/editing-page-properties.md)。
+Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面的列表，这些页面使用当前(Blueprint)页面作为源。 使用此列表跟踪Live Copy。 该列表显示在[页面属性](/help/sites-authoring/editing-page-properties.md)的&#x200B;**Blueprint**&#x200B;选项卡上。
 
 ![chlimage_1-219](assets/chlimage_1-219.png)
 
-## 同步Live Copy {#synchronizing-your-live-copy}
+## 正在同步Live Copy {#synchronizing-your-live-copy}
 
 ### Rolling Out a Blueprint {#rolling-out-a-blueprint}
 
-展开蓝图页面，将内容更改推送到Live Copy。 Rollout操 **作执行** 使用On Rollout触发器的 [转出配置](/help/sites-administering/msm-sync.md#rollout-triggers) 。
+展开蓝图页面，将内容更改推送到Live Copy。 **Rollout**&#x200B;操作执行使用[On Rollout](/help/sites-administering/msm-sync.md#rollout-triggers)触发器的转出配置。
 
 >[!NOTE]
 >
 >如果在Blueprint分支和从属Live Copy分支中创建了具有相同页面名称的新页面，则可能会发生冲突。
 >
->此类 [冲突需要在转出时进行处理和解决](/help/sites-administering/msm-rollout-conflicts.md)。
+>此类[冲突需要在转出](/help/sites-administering/msm-rollout-conflicts.md)时处理和解决。
 
 
-#### 从页面属性中展开Blueprint {#rolling-out-a-blueprint-from-page-properties}
+#### 从页面属性{#rolling-out-a-blueprint-from-page-properties}中滚动Blueprint
 
-1. 在“站 **点** ”控制台中，选择Blueprint中的页面并打开属性。
-1. Open the **Blueprint** tab.
-1. 选择 **转出**。
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Blueprint中的页面并打开属性。
+1. 打开&#x200B;**Blueprint**&#x200B;选项卡。
+1. 选择&#x200B;**转出**。
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
@@ -229,22 +229,22 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
 
-1. 指定是立即执行转出作业(**Now**)还是在其他日期／时间(以&#x200B;**后**)。
+1. 指定是否应立即执行转出作业(**Now**)或在其他日期／时间（**稍后**）。
 
    ![转出蓝图](assets/rollout-blueprint.png)
 
-转出将作为异步作业处理，并可以在“全局导航” [****->“异步工具](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)”->“异步工具**”>“操作”************->“作业状态”仪表板中选中。**
+转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)**
 
 >[!NOTE]
 >
 >异步转出处理需要AEM 6.5.3.0或更高版本。 在以前的版本中，页面会立即和同步处理。
 
-#### 从参考边栏中展开Blueprint {#roll-out-a-blueprint-from-the-reference-rail}
+#### 从参考边栏{#roll-out-a-blueprint-from-the-reference-rail}中展开Blueprint
 
-1. 在“站 **点** ”控制台中，选择Blueprint中的页面，然后打开“ **[引用](/help/sites-authoring/basic-handling.md#references)**”面板（从工具栏）。
-1. 从列表 **中选择** “Blueprint”选项，以显示与此页面关联的Blueprint。
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Blueprint中的页面，然后打开&#x200B;**[引用](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板（从工具栏中）。
+1. 从列表中选择&#x200B;**Blueprint**&#x200B;选项，以显示与此页面关联的Blueprint。
 1. 从列表中选择所需的蓝图。
-1. Click or tap **Rollout**.
+1. 单击或点按&#x200B;**转出**。
 1. 系统将要求您确认转出的详细信息：
 
    * **转出范围**:
@@ -253,33 +253,33 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
    * **计划**：
 
-      指定是立即执行转出作业(**Now**)还是在以后的日期／时间(以&#x200B;**后**)。
+      指定是立即执行转出作业(**Now**)还是在以后的日期／时间执行(**Later**)。
 
       ![chlimage_1-222](assets/rollout-live-copy.png)
 
-1. 确认这些详细信息后， **选择** “转出”以执行操作。
+1. 确认这些详细信息后，选择&#x200B;**转出**&#x200B;以执行操作。
 
-转出将作为异步作业处理，并可以在“全局导航” [****->“异步工具](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)”->“异步工具**”>“操作”************->“作业状态”仪表板中选中。**
+转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)**
 
 >[!NOTE]
 >
->异步转出处理需要AEM 6.5.3.0或更高版本。 在以前的版本中，除非选中“后台转出”选项，否则将立即 **同步处理页** 面。
+>异步转出处理需要AEM 6.5.3.0或更高版本。 在以前的版本中，页面会立即同步处理，除非选中&#x200B;**后台转出**&#x200B;选项。
 
-#### 从Live Copy概述中展示Blueprint {#roll-out-a-blueprint-from-the-live-copy-overview}
+#### 从Live Copy概述{#roll-out-a-blueprint-from-the-live-copy-overview}中推出Blueprint
 
-选 [择Blueprint页面后，Live Copy概述中也可以](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用转出操作。
+选择Blueprint页面后，[转出操作也可从Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)中使用。
 
-1. 打开Live [Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) ，然后选择Blueprint页面。
-1. Select **Rollout** from the toolbar.
+1. 打开[Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)并选择Blueprint页面。
+1. 从工具栏中选择&#x200B;**转出**。
 1. 指定页面和任何子页面，然后使用复选标记进行确认：
 
    ![chlimage_1-223](assets/chlimage_1-223.png)
 
-1. 指定是立即执行转出作业(**Now**)还是在其他日期／时间(以&#x200B;**后**)。
+1. 指定是否应立即执行转出作业(**Now**)或在其他日期／时间（**稍后**）。
 
    ![转出蓝图](assets/rollout-blueprint.png)
 
-转出将作为异步作业处理，并可以在“全局导航” [****->“异步工具](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)”->“异步工具**”>“操作”************->“作业状态”仪表板中选中。**
+转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)**
 
 >[!NOTE]
 >
@@ -289,36 +289,36 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 同步Live Copy页面，将内容更改从源提取到Live Copy。
 
-#### 从页面属性同步Live Copy {#synchronize-a-live-copy-from-page-properties}
+#### 从页面属性{#synchronize-a-live-copy-from-page-properties}同步Live Copy
 
 同步Live Copy以从源将更改拉入Live Copy。
 
 >[!NOTE]
 >
->同步会执行使用“转出时”触发 [器的转出](/help/sites-administering/msm-sync.md#rollout-triggers) 配置。
+>同步执行使用[On Rollout](/help/sites-administering/msm-sync.md#rollout-triggers)触发器的转出配置。
 
-1. 在“站 **点** ”控制台中，选择Live Copy页面并打开属性。
-1. Open the **Live Copy** tab.
-1. Click or tap **Synchronize**.
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面并打开属性。
+1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 单击或点按&#x200B;**同步**。
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
-   将请求确认，使用 **同步** 以继续。
+   将请求确认，使用&#x200B;**同步**&#x200B;继续。
 
-#### 从Live Copy概述同步Live Copy {#synchronize-a-live-copy-from-the-live-copy-overview}
+#### 从Live Copy概述{#synchronize-a-live-copy-from-the-live-copy-overview}同步Live Copy
 
-选 [择Live Copy页面后，Live Copy概述中也](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)会提供同步操作。
+选择Live Copy页面后， Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)中也提供了[同步操作。
 
-1. 打开Live [Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) ，然后选择Live Copy页面。
-1. Select **Synchronize** from the toolbar.
-1. 指定是否 **要包括** :
+1. 打开[Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)并选择Live Copy页面。
+1. 从工具栏中选择&#x200B;**同步**。
+1. 指定是否要包括以下内容后，确认对话框中的&#x200B;**Rollout**&#x200B;操作：
 
    * **页面和子页面**
    * **仅页面**
 
    ![chlimage_1-225](assets/chlimage_1-225.png)
 
-## 更改Live Copy内容 {#changing-live-copy-content}
+## 更改Live Copy内容{#changing-live-copy-content}
 
 要更改Live Copy内容，您可以：
 
@@ -335,20 +335,20 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 >
 >如果在Blueprint分支和从属Live Copy分支中创建了具有相同页面名称的新页面，则可能会发生冲突。
 >
->此类 [冲突需要在转出时进行处理和解决](/help/sites-administering/msm-rollout-conflicts.md)。
+>此类[冲突需要在转出](/help/sites-administering/msm-rollout-conflicts.md)时处理和解决。
 
 
-### 将组件添加到Live Copy页面 {#adding-components-to-a-live-copy-page}
+### 将组件添加到Live Copy页面{#adding-components-to-a-live-copy-page}
 
 随时将组件添加到Live Copy页面。 Live Copy及其段落系统的继承状态无法控制您添加组件的能力。
 
-当Live Copy页面与源页面同步时，添加的组件将保持不变。 另请参 [阅更改Live Copy页面上的组件顺序](#changing-the-order-of-components-on-a-live-copy-page)。
+当Live Copy页面与源页面同步时，添加的组件将保持不变。 另请参阅[更改Live Copy页面上的组件顺序](#changing-the-order-of-components-on-a-live-copy-page)。
 
 >[!NOTE]
 >
->本地对标记为容器的组件所做的更改不会被转出时Blueprint的内容覆盖。 See [MSM Best Practices](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) for more information.
+>本地对标记为容器的组件所做的更改不会被转出时Blueprint的内容覆盖。 有关详细信息，请参阅[MSM最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)。
 
-### 暂停页面的继承 {#suspending-inheritance-for-a-page}
+### 暂停页面{#suspending-inheritance-for-a-page}的继承
 
 创建Live Copy时，Live Copy配置将保存在复制页面的根页面上。 根页面的所有子页面都继承Live Copy配置。 Live Copy页面上的组件也继承Live Copy配置。
 
@@ -356,45 +356,45 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 >[!NOTE]
 >
->您还可以从 [Live Copy的蓝图中分](#detaching-a-live-copy) 离Live Copy以删除所有连接。 “分离”(Detach)操作是永久的且不可撤消的。
+>还可以从Live Copy](#detaching-a-live-copy)的蓝图中分离Live Copy[以删除所有连接。 “分离”(Detach)操作是永久的且不可撤消的。
 
-#### 将继承挂起到页面属性 {#suspending-inheritance-from-page-properties}
+#### 从页面属性{#suspending-inheritance-from-page-properties}挂起继承
 
 要暂停页面上的继承，请执行以下操作：
 
-1. 使用站点控制台的视图属性命令或 **使用页面工具栏** 上的页面信 **息** ，打开Live Copy **页面** 的属性。
-1. 单击或点按Live **Copy选项卡** 。
-1. Select **Suspend** from the toolbar. 然后，您可以选择以下任一选项：
+1. 使用&#x200B;**Sites**&#x200B;控制台的&#x200B;**视图属性**&#x200B;命令或使用页面工具栏上的&#x200B;**页面信息**&#x200B;打开Live Copy页面的属性。
+1. 单击或点按&#x200B;**Live Copy**&#x200B;选项卡。
+1. 从工具栏中选择&#x200B;**暂停**。 然后，您可以选择以下任一选项：
 
-   * **暂停**: 仅限当前页面
-   * **在子项中暂停**: 当前页面以及任何子页面
+   * **暂停**:仅限当前页面
+   * **在子项中暂停**:当前页面以及任何子页面
 
-1. 在确 **认对话** 框上选择暂停。
+1. 在确认对话框中选择&#x200B;**暂停**。
 
-#### 暂停Live Copy继承概述 {#suspending-inheritance-from-the-live-copy-overview}
+#### 暂停Live Copy的继承概述{#suspending-inheritance-from-the-live-copy-overview}
 
-选 [择Live Copy页面后，Live Copy概述中也可以](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用“暂停”操作。
+选择Live Copy页面后，Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)中也提供了[暂停操作。
 
-1. 打开Live [Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) ，然后选择Live Copy页面。
-1. Select **Suspend** from the toolbar.
+1. 打开[Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)并选择Live Copy页面。
+1. 从工具栏中选择&#x200B;**暂停**。
 1. 从以下位置选择相应的选项：
 
    * **暂停**
-   * **暂停（含子项）**
+   * **与子项一起暂停**
 
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
-1. 在暂停 **Live** Copy对话框 **中确认暂停** 操作：
+1. 在&#x200B;**暂停Live Copy**&#x200B;对话框中确认&#x200B;**暂停**&#x200B;操作：
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
-### 恢复页面的继承 {#resuming-inheritance-for-a-page}
+### 恢复页面{#resuming-inheritance-for-a-page}的继承
 
-暂停页面的Live Copy继承是临时操作。 暂停后，“ **恢复** ”操作变为可用，允许您恢复实时关系。
+暂停页面的Live Copy继承是临时操作。 暂停后，**恢复**&#x200B;动作变为可用，允许您恢复实时关系。
 
 重新启用继承时，页面不会自动与源同步。 如果需要，您可以请求同步，可以执行以下任一操作：
 
-* 在恢复/ **还原****对话框中** ; 例如：
+* 在&#x200B;**恢复**/**恢复**&#x200B;对话框中；例如：
 
    ![chlimage_1-228](assets/chlimage_1-228.png)
 
@@ -402,27 +402,27 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 >[!CAUTION]
 >
->重新启用继承时，页面不会自动与源同步。 如果需要，您可以手动请求同步； 在恢复或稍后恢复时。
+>重新启用继承时，页面不会自动与源同步。 如果需要，您可以手动请求同步；在恢复或稍后恢复时。
 
-#### 从页面属性恢复继承 {#resuming-inheritance-from-page-properties}
+#### 从页面属性{#resuming-inheritance-from-page-properties}恢复继承
 
-暂停 [后](#suspending-inheritance-from-page-properties) ,“ **恢复** ”操作将变为页面属性的工具栏：
+一旦[挂起](#suspending-inheritance-from-page-properties),**恢复**&#x200B;操作就会出现在页面属性的工具栏中：
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
 选中后，将显示对话框。 您可以根据需要选择同步，然后确认操作。
 
-#### 从Live Copy概述恢复Live Copy页面 {#resume-a-live-copy-page-from-the-live-copy-overview}
+#### 从Live Copy概述{#resume-a-live-copy-page-from-the-live-copy-overview}恢复Live Copy页面
 
-选 [择Live Copy页面后，Live Copy概述中](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)，也可以执行恢复操作。
+选择Live Copy页面后，还可以从Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)中执行[恢复操作。
 
-1. 打开 [Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) ，然后选择已挂起的Live Copy页面； 将显示为继 **承已取消**。
-1. Select **Resume** from the toolbar.
-1. 指示是否要在还原继承后同步页面，然后在恢复Live Copy对 **话框** 中确认 **恢复操作** 。
+1. 打开[Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)并选择已挂起的Live Copy页面；将显示为&#x200B;**继承已取消**。
+1. 从工具栏中选择&#x200B;**继续**。
+1. 指示是否要在还原继承后同步页面，然后在&#x200B;**恢复Live Copy**&#x200B;对话框中确认&#x200B;**恢复**&#x200B;操作。
 
-### 更改继承深度（浅／深） {#changing-inheritance-depth-shallow-deep}
+### 更改继承深度（浅／深）{#changing-inheritance-depth-shallow-deep}
 
-在现有Live Copy上，可以更改页面深度； 即是否包含子页面。
+在现有Live Copy上，可以更改页面深度；即是否包含子页面。
 
 * 切换到浅Live Copy:
 
@@ -430,7 +430,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
       * 子页面与Live Copy显式分离。 如果撤消，则无法保留对子项的进一步修改。
 
-      * 将删除任何子 `LiveRelationships` 体，即使存在嵌套 `LiveCopies`。
+      * 将删除任何子体`LiveRelationships`，即使存在嵌套`LiveCopies`。
 
 * 切换到深层Live Copy:
 
@@ -439,13 +439,13 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 * 切换到浅Live Copy，然后返回深层：
 
-   * 浅层Live Copy的所有子项都会被视为是手动创建的，因此会使用移走 `[oldname]_msm_moved name`。
+   * （以前）浅层Live Copy的所有子项均被视为已手动创建，因此使用`[oldname]_msm_moved name`移走。
 
 要指定或更改深度，请执行以下操作：
 
-1. 使用站点控制台的视图属性命令或 **使用页面工具栏** 上的页面信 **息** ，打开Live Copy **页面** 的属性。
-1. 单击或点按Live **Copy选项卡** 。
-1. 在“配 **置** ”部分，根据是否包含子 **页面，设置或清除Live Copy** “继承”选项：
+1. 使用&#x200B;**Sites**&#x200B;控制台的&#x200B;**视图属性**&#x200B;命令或使用页面工具栏上的&#x200B;**页面信息**&#x200B;打开Live Copy页面的属性。
+1. 单击或点按&#x200B;**Live Copy**&#x200B;选项卡。
+1. 在&#x200B;**配置**&#x200B;部分，根据是否包含子页面设置或清除&#x200B;**Live Copy继承**&#x200B;选项：
 
    * 选中——一个深层Live Copy（包含子页面）
    * 清除——浅层Live Copy（排除子页面）
@@ -454,11 +454,11 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
    >
    >切换到浅Live Copy将立即生效，并且不可撤消。
    >
-   >有关 [详细信息，请参阅](/help/sites-administering/msm.md#live-copies-composition) Live Copy —— 合成。
+   >有关详细信息，请参阅[Live Copy - Composition](/help/sites-administering/msm.md#live-copies-composition)。
 
-1. 单击或点按保 **存** ，以保留您的更新。
+1. 单击或点按&#x200B;**保存**&#x200B;以保留您的更新。
 
-### 取消组件的继承 {#cancelling-inheritance-for-a-component}
+### 取消组件{#cancelling-inheritance-for-a-component}的继承
 
 取消组件的Live Copy继承，以便组件不再与源组件同步。 如果需要，可以在以后启用继承。
 
@@ -472,21 +472,21 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
    ![chlimage_1-230](assets/chlimage_1-230.png)
 
-1. 在组件工具栏中，单击或点按取消 **继承** 图标。
+1. 在组件工具栏上，单击或点按&#x200B;**取消继承**&#x200B;图标。
 
    ![图像](do-not-localize/chlimage_1-8.png)
 
-1. 在“取消继承”对话框中，用“是”确认 **操作**。
+1. 在“取消继承”对话框中，使用&#x200B;**Yes**&#x200B;确认操作。
 
    组件工具栏将更新为包含所有（适当）编辑命令。
 
-### 为组件重新启用继承 {#re-enabling-inheritance-for-a-component}
+### 为组件{#re-enabling-inheritance-for-a-component}重新启用继承
 
-要为组件启用继承，请单击或点 **按组件工具栏上的** “重新启用继承”图标。
+要为组件启用继承，请单击或点按组件工具栏上的&#x200B;**重新启用继承**&#x200B;图标。
 
 ![图像](do-not-localize/chlimage_1-9.png)
 
-### 更改Live Copy页面上的组件顺序 {#changing-the-order-of-components-on-a-live-copy-page}
+### 更改Live Copy页面{#changing-the-order-of-components-on-a-live-copy-page}上的组件顺序
 
 如果Live Copy包含属于段落系统的组件，则该段落系统的继承遵循以下规则：
 
@@ -496,15 +496,15 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 >[!NOTE]
 >
->在段落系统上还原取消的继承时，组件的顺 **序不会自动从蓝图** 中恢复。 如果需要，可以手动请求同步。
+>在段落系统上还原取消的继承时，组件&#x200B;**的顺序不会自动从蓝图中还原**。 如果需要，可以手动请求同步。
 
 请按照以下过程取消段落系统的继承。
 
 1. 打开Live Copy页面。
 1. 将现有组件拖到页面上的新位置。
-1. 在“取消 **继承** ”对话框中，用“是”确 **认操作**。
+1. 在&#x200B;**取消继承**&#x200B;对话框中，使用&#x200B;**是**&#x200B;确认操作。
 
-### 覆盖Live Copy页面的属性 {#overriding-properties-of-a-live-copy-page}
+### 覆盖Live Copy页面{#overriding-properties-of-a-live-copy-page}的属性
 
 默认情况下，Live Copy页面的页面属性会从源页面继承（且不可编辑）。
 
@@ -522,20 +522,20 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 >
 >重新启用继承时，Live Copy页面属性不会自动与源属性同步。 如果需要，可以手动请求同步。
 
-1. 使用“站点”控制台的“视图属性” **选项或页面工具栏** 上的 **“页面信息”图标打开Live Copy** 页面 **** 的属性。
+1. 使用页面工具栏上的&#x200B;**站点**&#x200B;控制台的&#x200B;**视图属性**&#x200B;选项或&#x200B;**页面信息**&#x200B;图标打开Live Copy页面的属性。
 1. 要取消属性的继承，请单击或点按属性右侧显示的链接图标。
 
    ![图像](do-not-localize/chlimage_1-10.png)
 
-1. 在取消继 **承确认** 对话框中，单击或点 **按是**。
+1. 在&#x200B;**取消继承**&#x200B;确认对话框中，单击或点按&#x200B;**是**。
 
-### 还原Live Copy页面的属性 {#revert-properties-of-a-live-copy-page}
+### 还原Live Copy页面{#revert-properties-of-a-live-copy-page}的属性
 
-要为属性启用继承，请单击或点按属 **性旁边显示** 的“恢复继承”图标。
+要为属性启用继承，请单击或点按属性旁边显示的&#x200B;**还原继承**&#x200B;图标。
 
 ![图像](do-not-localize/chlimage_1-11.png)
 
-### 重置Live Copy页面 {#resetting-a-live-copy-page}
+### 重置Live Copy页面{#resetting-a-live-copy-page}
 
 将Live Copy页面重置为：
 
@@ -544,32 +544,32 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 重置会影响您对页面属性、段落系统和组件所做的更改。
 
-#### 从页面属性重置Live Copy页面 {#reset-a-live-copy-page-from-the-page-properties}
+#### 从页面属性{#reset-a-live-copy-page-from-the-page-properties}重置Live Copy页面
 
-1. 在“站 **点** ”控制台中，选择Live Copy页面，然后选择 **视图属性**。
-1. Open the **Live Copy** tab.
-1. Select **Reset** from the toolbar.
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面，然后选择&#x200B;**视图属性**。
+1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 从工具栏中选择&#x200B;**重置**。
 
    ![chlimage_1-233](assets/chlimage_1-233.png)
 
-1. 在“重 **置Live Copy** ”对话框中，使用重 **置确认**。
+1. 在&#x200B;**重置Live Copy**&#x200B;对话框中，使用&#x200B;**重置**&#x200B;进行确认。
 
-#### 从Live Copy概述重置Live Copy页面 {#reset-a-live-copy-page-from-the-live-copy-overview}
+#### 从Live Copy概述{#reset-a-live-copy-page-from-the-live-copy-overview}重置Live Copy页面
 
-选 [择Live Copy页面后，Live Copy概述中也](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)会提供重置操作。
+选择Live Copy页面后， Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)中也提供[重置操作。
 
-1. 打开Live [Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) ，然后选择Live Copy页面。
-1. Select **Reset** from the toolbar.
-1. 在重置 **Live** Copy对话 **框中确认重置操作** :
+1. 打开[Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)并选择Live Copy页面。
+1. 从工具栏中选择&#x200B;**重置**。
+1. 在&#x200B;**重置Live Copy**&#x200B;对话框中确认&#x200B;**重置**&#x200B;操作：
 
    ![chlimage_1-234](assets/chlimage_1-234.png)
 
-## 比较Live Copy页面与Blueprint页面 {#comparing-a-live-copy-page-with-a-blueprint-page}
+## 将Live Copy页面与Blueprint页面{#comparing-a-live-copy-page-with-a-blueprint-page}进行比较
 
-要跟踪您所做的更改，您可以在“引用”中视图 **Blueprint页** ，并将其与其Live Copy页面进行比较：
+要跟踪您所做的更改，可以在&#x200B;**引用**&#x200B;中视图Blueprint页面，并将其与其Live Copy页面进行比较：
 
-1. 在“站 **点** ”控制台 [中，导航到Blueprint或Live Copy页面并选择它](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. Open the **[References](/help/sites-authoring/basic-handling.md#references)**panel and select:
+1. 在&#x200B;**站点**&#x200B;控制台中，[导航到Blueprint或Live Copy页面，然后选择它](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
+1. 打开&#x200B;**[引用](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板并选择：
 
    * **Blueprint** （当选择Live Copy页面时）
    * **Live Copy** （当选择了Blueprint页面时）
@@ -595,15 +595,15 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 >
 >在分离Live Copy后，不能恢复Live Relationship。
 >
->要删除与以后重新启用的Live Relationship的选项，可以取 [消页面的Live](#suspending-inheritance-for-a-page) Copy继承。
+>要删除与以后重新启用的选项的Live Relationship，您可以[取消页面的Live Copy继承](#suspending-inheritance-for-a-page)。
 
-在使用Detach的树中的位置有以下 **含义**:
+使用&#x200B;**Detach**&#x200B;的树中的位置有含义：
 
 * **在LiveCopy的根页面上分离**
 
    在Live Copy的根页面上执行此操作时，将删除Blueprint的所有页面与其Live Copy之间的Live关系。
 
-   对Blueprint中页面的进一步更改(原 **样)不** 会影响Live Copy（原样）。
+   对Blueprint中的页面（原样）**的进一步更改不会**&#x200B;影响Live Copy（原样）。
 
 * **在LiveCopy的子页面上分离**
 
@@ -621,26 +621,26 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
    >[!NOTE]
    >
-   >有关 [此类情况的详细信息](/help/sites-administering/msm-rollout-conflicts.md) ，请参阅MSM转出冲突。
+   >请参阅[MSM转出冲突](/help/sites-administering/msm-rollout-conflicts.md)以了解此类情况的详细信息。
 
-### 从页面属性中分离Live Copy页面 {#detach-a-live-copy-page-from-the-page-properties}
+### 从页面属性{#detach-a-live-copy-page-from-the-page-properties}中分离Live Copy页面
 
 分离Live Copy:
 
-1. 在“站 **点** ”控制台中，选择Live Copy页面，然后单击或点按 **视图属性**。
-1. Open the **Live Copy** tab.
-1. 在工具栏中，选择 **分离**。
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面，然后单击或点按&#x200B;**视图属性**。
+1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 在工具栏上，选择&#x200B;**分离**。
 
    ![chlimage_1-236](assets/chlimage_1-236.png)
 
-1. 此时将显示确认对话框，选择 **分离** 以完成操作。
+1. 将显示确认对话框，选择&#x200B;**分离**&#x200B;以完成操作。
 
-### 在Live Copy概述中分离Live Copy页面 {#detach-a-live-copy-page-from-the-live-copy-overview}
+### 从Live Copy概述{#detach-a-live-copy-page-from-the-live-copy-overview}中分离Live Copy页面
 
-选 [择Live Copy页面后，Live Copy概述中也可以](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)使用分离操作。
+选择Live Copy页面后，还可以从Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)中执行[分离操作。
 
-1. 打开Live [Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview) ，然后选择Live Copy页面。
-1. Select **Detach** from the toolbar.
-1. 在分离 **Live** Copy对话框 **中确认分离操作** :
+1. 打开[Live Copy概述](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)并选择Live Copy页面。
+1. 从工具栏中选择&#x200B;**分离**。
+1. 在&#x200B;**分离Live Copy**&#x200B;对话框中确认&#x200B;**分离**&#x200B;操作：
 
    ![chlimage_1-237](assets/chlimage_1-237.png)
