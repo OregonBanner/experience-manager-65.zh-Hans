@@ -23,34 +23,34 @@ ht-degree: 3%
 
 复制代理是Adobe Experience Manager(AEM)的中心，它用于：
 
-* [将内容从作者](/help/sites-authoring/publishing-pages.md#activatingcontent) （激活）发布到发布环境。
+* [将内容从作](/help/sites-authoring/publishing-pages.md#activatingcontent) 者发布（激活）到发布环境。
 * 显式刷新Dispatcher缓存中的内容。
 * 将用户输入（例如，表单输入）从发布环境返回到作者环境(在作者环境的控制下)。
 
-请求将 [排队](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler) ，到相应的代理进行处理。
+请求将[排队](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler)发送到相应的代理以进行处理。
 
 >[!NOTE]
 >
 >用户用户档案（用户、用户组和用户）不会在创作和发布实例之间复制。
 >
->对于多个发布实例，启用用户同步后，用 [户数据将](/help/sites-administering/sync.md) “Sling分发”。
+>对于多个发布实例，启用[用户同步](/help/sites-administering/sync.md)时，用户数据是Sling分布的。
 
-## 从作者复制到发布 {#replicating-from-author-to-publish}
+## 从作者复制到发布{#replicating-from-author-to-publish}
 
 复制到发布实例或调度程序的步骤有：
 
 * 作者要求发布（激活）某些内容；可以通过手动请求或已预配置的自动触发器启动。
 * 请求将传递给相应的默认复制代理；环境可以具有多个默认代理，这些代理将始终为此类操作选择。
 * 复制代理“打包”内容并将其置于复制队列中。
-* 在“网站”选项卡 [中，为各个页面](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus) 设置彩色状态指示符。
+* 在“网站”选项卡中，为各个页面设置[彩色状态指示符](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus)。
 * 内容从队列中提取，并使用配置的协议传输到发布环境;通常为HTTP。
-* 发布环境中的servlet接收请求并发布接收的内容；默认servlet为 `https://localhost:4503/bin/receive`。
+* 发布环境中的servlet接收请求并发布接收的内容；默认servlet为`https://localhost:4503/bin/receive`。
 
 * 可以配置多个创作和发布环境。
 
-![chlimage_1-21](assets/chlimage_1-21.png)
+![chlimage_1-29](assets/chlimage_1-21.png)
 
-### 从发布复制到作者 {#replicating-from-publish-to-author}
+### 从发布复制到作者{#replicating-from-publish-to-author}
 
 某些功能允许用户在发布实例上输入数据。
 
@@ -60,16 +60,16 @@ ht-degree: 3%
 
 在其他情况下，如社区功能（例如论坛、博客、评论和评论），在发布环境中输入的用户生成内容(UGC)的数量难以通过复制在AEM实例之间高效同步。
 
-AEM [Communities](/help/communities/overview.md) 从不将复制用于UGC。 相反，社区的部署需要UGC的公用存储(请参阅社 [区内容存储](/help/communities/working-with-srp.md))。
+AEM [ Communities](/help/communities/overview.md)从不对UGC使用复制。 相反，社区的部署需要UGC的公用存储(请参阅[社区内容存储](/help/communities/working-with-srp.md))。
 
-### 复制——开箱即用 {#replication-out-of-the-box}
+### 复制——开箱即用{#replication-out-of-the-box}
 
 AEM标准安装中包含的we-retail网站可用于说明复制。
 
-要按照此示例操作并使用默认复制代理，您需要 [通过](/help/sites-deploying/deploy.md) :
+要按照此示例操作并使用默认复制代理，您需要[将AEM](/help/sites-deploying/deploy.md)与以下项安装：
 
-* 作者环境 `4502`
-* 端口上的发布环境 `4503`
+* 端口`4502`上的作者环境
+* 端口`4503`上的发布环境
 
 >[!NOTE]
 >
@@ -85,41 +85,45 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
 >
 >
-要检查代理或队列的状态，请使用“工具” **控制台** 。
->请参 [阅监视复制代理](#monitoring-your-replication-agents)。
+要检查代理或队列的状态，请使用&#x200B;**工具**控制台。
+>请参阅[监视复制代理](#monitoring-your-replication-agents)。
 
-#### 复制（创作到发布） {#replication-author-to-publish}
+#### 复制（创作到发布）{#replication-author-to-publish}
 
 1. 导航到创作环境上的支持页面。
    **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
 1. 编辑页面以添加新文本。
-1. **激活页面** ，以发布更改。
+1. **激活** 页面以发布更改。
 1. 打开发布环境上的支持页：
    **https://localhost:4503/content/we-retail/us/en/experience.html**
 1. 您现在可以看到您在作者中输入的更改。
 
 此复制操作由创作环境进行，具体操作如下：
 
-* **默认代理（发布）**此代理将内容复制到默认发布实例。
-有关此（配置和日志）的详细信息，可从创作环境的“工具”控制台访问；或：
+* **默认代理（发布）**
+此代理将内容复制到默认发布实例。有关此（配置和日志）的详细信息，可从创作环境的“工具”控制台访问；或：
 
    `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
-#### 复制代理——开箱即用 {#replication-agents-out-of-the-box}
+#### 复制代理——开箱即用{#replication-agents-out-of-the-box}
 
 标准AEM安装中提供以下代理：
 
-* [默认代理](#replication-author-to-publish)用于从作者复制到发布。
+* [默认](#replication-author-to-publish)
+代理用于从作者复制到发布。
 
-* 调度程序刷新用于管理调度程序缓存。 有关 [详细信息，请参阅从创作环境中使Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) Cache [失效和从Publishing实例中使Dispatcher Cache失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) 。
+* 调度程序刷新
+这用于管理调度程序缓存。 有关详细信息，请参阅“创作”环境](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)中的[“使调度程序缓存无效”和“使发布实例中的调度程序缓存无效”。[](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)
 
-* [反向复制](#reverse-replication-publish-to-author)用于从发布复制到作者。 反向复制不用于社区功能，如论坛、博客和评论。 由于未启用输出框，因此会有效禁用它。 使用反向复制需要自定义配置。
+* [反向复](#reverse-replication-publish-to-author)
+制用于从发布复制到作者。反向复制不用于社区功能，如论坛、博客和评论。 由于未启用输出框，因此会有效禁用它。 使用反向复制需要自定义配置。
 
-* 静态代理这是“将节点的静态表示存储到文件系统中的代理”。
-例如，使用默认设置时，内容页面和dam资产会以HTML `/tmp`或相应的资产格式存储在下面。 请参阅 `Settings` 配置 `Rules` 的选项卡和选项卡。
+* 静态代理
+这是“将节点的静态表示存储到文件系统中的代理”。
+例如，使用默认设置时，内容页面和dam资产会以`/tmp`的形式存储，或者以HTML或相应的资产格式存储。 有关配置，请参阅`Settings`和`Rules`选项卡。
 请求此属性，这样当直接从应用程序服务器请求页面时，内容就可以看到。 这是一个专用代理，并且（可能）大多数情况下都不需要。
 
-## 复制代理——配置参数 {#replication-agents-configuration-parameters}
+## 复制代理——配置参数{#replication-agents-configuration-parameters}
 
 从“工具”控制台配置复制代理时，对话框中有四个选项卡可用：
 
@@ -137,11 +141,11 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
    指示复制代理当前是否处于启用状态。
 
-   启用代理 **后** ，队列将显示为：
+   当代理&#x200B;**启用**&#x200B;时，队列将显示为：
 
-   * **在处理** 项目时处于活动状态。
-   * **队列** 为空时空闲。
-   * **当项目** 位于队列中但无法处理时，将被阻止；例如，当接收队列被禁用时。
+   * **处** 理项目时处于活动状态。
+   * **当** 队列为空时取消。
+   * **当项** 目在队列中但无法处理时阻止；例如，当接收队列被禁用时。
 
 * **序列化类型**
 
@@ -163,15 +167,15 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
    * 从作者环境收集和打包内容
    * 在发布环境中创建和写入内容
 
-   将此字段留空可使用系统用户帐户(sling中定义的帐户为管理员用户；默认情况下，此 `admin`为)。
+   将此字段留空可使用系统用户帐户(sling中定义的帐户为管理员用户；默认情况下，此值为`admin`)。
 
    >[!CAUTION]
    >
-   >对于创作环境上的代理 *，此帐* 户必须具有对要复制的所有路径的读取访问权限。
+   >对于创作环境上的代理，此帐户&#x200B;*必须*&#x200B;具有对要复制的所有路径的读取访问权限。
 
    >[!CAUTION]
    >
-   >对于发布环境上的代理，此 *帐户必* 须具有复制内容所需的创建／写入权限。
+   >对于发布环境上的代理，此帐户&#x200B;*必须*&#x200B;具有复制内容所需的创建／写入访问权限。
 
    >[!NOTE]
    >
@@ -193,7 +197,7 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
 * **别名更新**
 
-   选择此选项将启用对Dispatcher的别名或虚路径失效请求。 另请参阅 [配置调度程序刷新代理](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent)。
+   选择此选项将启用对Dispatcher的别名或虚路径失效请求。 另请参阅[配置调度程序刷新代理](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent)。
 
 #### 传输 {#transport}
 
@@ -203,12 +207,12 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
    例如：
 
-   * 默认代理可以复制到 `https://localhost:4503/bin/receive`
-   * 调度程序刷新代理可以复制到 `https://localhost:8000/dispatcher/invalidate.cache`
+   * 默认代理可以复制到`https://localhost:4503/bin/receive`
+   * 调度程序刷新代理可以复制到`https://localhost:8000/dispatcher/invalidate.cache`
 
    此处指定的协议（HTTP或HTTPS）将决定传输方法。
 
-   对于调度程序刷新代理，仅当使用基于路径的虚拟主机条目来区分场时，才使用URI属性，您使用此字段来目标场以使其失效。 例如，场#1的虚拟主机为， `www.mysite.com/path1/*` 场#2的虚拟主机为 `www.mysite.com/path2/*`。 您可以使用的URL `/path1/invalidate.cache` 目标第一个场， `/path2/invalidate.cache` 目标第二个场。
+   对于调度程序刷新代理，仅当使用基于路径的虚拟主机条目来区分场时，才使用URI属性，您使用此字段来目标场以使其失效。 例如，场#1的虚拟主机为`www.mysite.com/path1/*`，场#2的虚拟主机为`www.mysite.com/path2/*`。 可以使用`/path1/invalidate.cache`的URL目标第一个场，使用`/path2/invalidate.cache`目标第二个场。
 
 * **用户**
 
@@ -313,7 +317,7 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
 * **协议版本**
 
-   协议版本；例如 `1.0` HTTP/1.0。
+   协议版本；例如，`1.0`（对于HTTP/1.0）。
 
 #### 触发器 {#triggers}
 
@@ -347,90 +351,90 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
    选中后，代理将不强制对已激活的页面进行版本控制。
 
-## 配置复制代理 {#configuring-your-replication-agents}
+## 配置复制代理{#configuring-your-replication-agents}
 
-有关使用MSSL将复制代理连接到发布实例的信息，请参 [阅使用相互SSL复制](/help/sites-deploying/mssl-replication.md)。
+有关使用MSSL将复制代理连接到发布实例的信息，请参阅[使用相互SSL复制](/help/sites-deploying/mssl-replication.md)。
 
-### 从作者环境配置复制代理 {#configuring-your-replication-agents-from-the-author-environment}
+### 从创作环境{#configuring-your-replication-agents-from-the-author-environment}配置复制代理
 
-在创作环境的“工具”选项卡中，您可以配置驻留在创作环境(作&#x200B;**者上的代理**)或发布环境(发布时&#x200B;**的代理**)中的复制代理。 以下过程说明了作者环境的代理配置，但可用于两者。
+在创作环境的“工具”选项卡中，您可以配置位于创作环境（**作者**&#x200B;上的代理）或发布环境（**发布上的代理）中的复制代理。**&#x200B;以下过程说明了作者环境的代理配置，但可用于两者。
 
 >[!NOTE]
 >
->当调度程序处理创作或发布实例的HTTP请求时，来自复制代理的HTTP请求必须包含PATH头。 除了以下过程之外，还必须将PATH头添加到客户端头的调度程序列表。 (请参 [阅／客户端头（客户端头）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。 [](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+>当调度程序处理创作或发布实例的HTTP请求时，来自复制代理的HTTP请求必须包含PATH头。 除了以下过程之外，还必须将PATH头添加到客户端头的调度程序列表。 (请参阅[/clientheaders（客户端头）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。 [](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
 
 
-1. 访问AEM **中的** “工具”选项卡。
-1. 单击 **复制** （左窗格以打开文件夹）。
-1. 多次单 **击作者上的** “代理”（左窗格或右窗格）。
+1. 访问AEM中的&#x200B;**工具**&#x200B;选项卡。
+1. 单击&#x200B;**复制**（左窗格打开文件夹）。
+1. 多次-单击作者&#x200B;**上的**&#x200B;代理（左窗格或右窗格）。
 1. 单击相应的代理名称（即链接）以显示有关该代理的详细信息。
-1. 单击 **编辑** ，打开配置对话框：
+1. 单击&#x200B;**编辑**&#x200B;打开配置对话框：
 
    ![chlimage_1-22](assets/chlimage_1-22.png)
 
-1. 提供的值应足以用于默认安装。 如果进行了更改，请单 **击确** 定以保存它们(有关各个 [参数的详细信息，请参](#replication-agents-configuration-parameters) 阅复制代理——配置参数)。
+1. 提供的值应足以用于默认安装。 如果进行了更改，请单击&#x200B;**OK**&#x200B;以保存它们（有关各个参数的详细信息，请参见[复制代理——配置参数](#replication-agents-configuration-parameters)）。
 
 >[!NOTE]
 >
->AEM的标准安装指定 `admin` 为默认复制代理内传输凭据的用户。
+>AEM的标准安装指定`admin`作为默认复制代理内传输凭据的用户。
 >
 >此帐户应更改为具有复制所需路径的权限的站点特定复制用户帐户。
 
-### 配置反向复制 {#configuring-reverse-replication}
+### 配置反向复制{#configuring-reverse-replication}
 
 反向复制用于将发布实例上生成的用户内容返回到作者实例。 这通常用于调查和注册表单等功能。
 
-出于安全原因，大多数网络拓扑都不 *允许* “非军事区”（一个子网络，它将外部服务暴露给不受信任的网络，如Internet）的连接。
+出于安全原因，大多数网络拓扑不允许从&#x200B;*“非军事区”（一个子网络，它将外部服务暴露给不受信任的网络，如Internet）连接*。
 
 由于发布环境通常位于DMZ中，要将内容恢复到作者环境，必须从作者实例启动连接。 这是通过以下方式完成的：
 
-* 发 *布环境* 中放置内容的一个输出框。
+* 在放置内容的发布环境中，输入&#x200B;*outbox*。
 * 创作环境中的代理（发布），它定期轮询输出框以查找新内容。
 
 >[!NOTE]
 >
->对于AEM [Communities](/help/communities/overview.md)，复制不用于发布实例上用户生成的内容。 请参 [阅社区内容存储](/help/communities/working-with-srp.md)。
+>对于AEM [Communities](/help/communities/overview.md)，复制不用于发布实例上用户生成的内容。 请参阅[社区内容存储](/help/communities/working-with-srp.md)。
 
 为此，您需要：
 
-**创作环境中的反向复制代理** 。它充当活动组件，用于从发布环境的发件箱收集信息：
+**创作环境中的反向复制代** 理充当活动组件，从发布环境的发件箱中收集信息：
 
 如果要使用反向复制，请确保激活此代理。
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
-**发布环境（输出框）中的反向复制代理** 。这是被动元素，因为它充当“输出框”。 用户输入将放在此处，作者环境中的代理从中收集用户输入。
+**发布环境（输出框）中的反向复制代理** 。这是被动元素，因为它充当“输出框”。用户输入将放在此处，作者环境中的代理从中收集用户输入。
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-### 为多个发布实例配置复制 {#configuring-replication-for-multiple-publish-instances}
+### 为多个发布实例{#configuring-replication-for-multiple-publish-instances}配置复制
 
 >[!NOTE]
 >
 >仅复制内容——不复制用户数据(用户、用户组和用户用户档案)。
 >
->要在多个发布实例间同步用户数据，请启 [用用户同步](/help/sites-administering/sync.md)。
+>要在多个发布实例间同步用户数据，请启用[用户同步](/help/sites-administering/sync.md)。
 
 安装后，已配置默认代理，以将内容复制到运行于localhost端口4503的发布实例。
 
 要为其他发布实例配置内容复制，您需要创建并配置新的复制代理：
 
-1. 打开AEM **中的** “工具”选项卡。
-1. 选择 **复制**，然后 **在左面板中选** 择创作时的代理。
-1. 选择 **新建……**.
-1. 设置标 **题** 和名 **称**，然后选择 **复制代理**。
-1. 单击 **创建** ，以创建新代理。
+1. 打开AEM中的&#x200B;**工具**&#x200B;选项卡。
+1. 在左面板中选择&#x200B;**复制**，然后选择&#x200B;**作者**&#x200B;上的代理。
+1. 选择&#x200B;**新建……**。
+1. 设置&#x200B;**标题**&#x200B;和&#x200B;**名称**，然后选择&#x200B;**复制代理**。
+1. 单击&#x200B;**创建**&#x200B;以创建新代理。
 1. 多次-单击新代理项以打开配置面板。
-1. 单 **击编辑** -将打 **开代理设置** 对话框——序列化类 **型已定义为默认** ，但必须保持默认值。
+1. 单击&#x200B;**编辑** —— 将打开&#x200B;**代理设置**&#x200B;对话框- **序列化类型**&#x200B;已定义为默认值，但必须保持该状态。
 
-   * 在设置 **选项卡** :
+   * 在&#x200B;**设置**&#x200B;选项卡中：
 
-      * 激活 **已启用**。
+      * 激活&#x200B;**已启用**。
       * 输入&#x200B;**说明**.
-      * 将“重试 **延迟** ”设置为 `60000`。
+      * 将&#x200B;**重试延迟**&#x200B;设置为`60000`。
 
-      * 将序列化 **类型保留** 为 `Default`。
-   * 在“传 **输** ”选项卡中：
+      * 将&#x200B;**序列化类型**&#x200B;保留为`Default`。
+   * 在&#x200B;**传输**&#x200B;选项卡中：
 
       * 输入新发布实例所需的URI;例如，
          `https://localhost:4504/bin/receive`。
@@ -439,44 +443,44 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
       * 您可以根据需要配置其他参数。
 
 
-1. Click **OK** to save the settings.
+1. 单击&#x200B;**确定**&#x200B;以保存设置。
 
 然后，您可以在创作环境中通过更新和发布页面来测试操作。
 
 更新将显示在已配置为上述配置的所有发布实例上。
 
-如果遇到任何问题，可以检查创作实例上的日志。 根据所需的详细程度，您还可以使用上 **面的“代理设置** ” `Debug` 对话框将“ **日志级别** ”设置为。
+如果遇到任何问题，可以检查创作实例上的日志。 根据所需的详细程度，您还可以使用上述的&#x200B;**代理设置**&#x200B;对话框将&#x200B;**日志级别**&#x200B;设置为`Debug`。
 
 >[!NOTE]
 >
->这可以与使用代理用户 [ID结合使用](#agentuserid) ，以选择不同的内容，以便复制到单个发布环境。 对于每个发布环境:
+>这可以与使用[代理用户Id](#agentuserid)来选择不同的内容以复制到单个发布环境。 对于每个发布环境:
 >
 >1. 配置复制代理以复制到该发布环境。
 >1. 配置用户帐户；具有读取将复制到该特定发布环境的内容所需的访问权限。
->1. 将用户帐户分配 **为复制代理的** “代理用户ID”。
+>1. 将用户帐户分配为复制代理的&#x200B;**代理用户ID**。
 
 >
 
 
 
-### 配置调度程序刷新代理 {#configuring-a-dispatcher-flush-agent}
+### 配置调度程序刷新代理{#configuring-a-dispatcher-flush-agent}
 
 安装中包含默认代理。 但是，如果要定义新代理，则仍需要某些配置，这同样适用：
 
-1. 打开AEM **中的** “工具”选项卡。
-1. 单击“ **部署**”。
-1. 选择 **复制** ，然后 **选择发布代理**。
-1. 多次-单击调 **度程序刷新** 项以打开概述。
-1. 单击 **编辑** -将打 **开“代理设置** ”对话框：
+1. 打开AEM中的&#x200B;**工具**&#x200B;选项卡。
+1. 单击&#x200B;**部署**。
+1. 选择&#x200B;**复制**，然后选择发布&#x200B;**上的**&#x200B;代理。
+1. 多次-单击&#x200B;**调度程序刷新**&#x200B;项以打开概述。
+1. 单击&#x200B;**编辑** —— 将打开&#x200B;**代理设置**&#x200B;对话框：
 
-   * 在设置 **选项卡** :
+   * 在&#x200B;**设置**&#x200B;选项卡中：
 
-      * 激活 **已启用**。
+      * 激活&#x200B;**已启用**。
       * 输入&#x200B;**说明**.
-      * 保留序 **列化类** 型 `Dispatcher Flush`，或在创建新代理时将其设置为。
+      * 将&#x200B;**序列化类型**&#x200B;保留为`Dispatcher Flush`，或在创建新代理时将其设置为。
 
-      * （可选）选择“别 **名更新** ”，以启用对Dispatcher的别名或虚路径失效请求。
-   * 在“传 **输** ”选项卡中：
+      * （可选）选择&#x200B;**别名更新**&#x200B;以启用对Dispatcher的别名或虚路径失效请求。
+   * 在&#x200B;**传输**&#x200B;选项卡中：
 
       * 输入新发布实例所需的URI;例如，
          `https://localhost:80/dispatcher/invalidate.cache`。
@@ -484,50 +488,50 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
       * 输入用于复制的站点特定用户帐户。
       * 您可以根据需要配置其他参数。
 
-   对于调度程序刷新代理，仅当使用基于路径的虚拟主机条目来区分场时，才使用URI属性，您使用此字段来目标场以使其失效。 例如，场#1的虚拟主机为， `www.mysite.com/path1/*` 场#2的虚拟主机为 `www.mysite.com/path2/*`。 您可以使用的URL `/path1/invalidate.cache` 目标第一个场， `/path2/invalidate.cache` 目标第二个场。
+   对于调度程序刷新代理，仅当使用基于路径的虚拟主机条目来区分场时，才使用URI属性，您使用此字段来目标场以使其失效。 例如，场#1的虚拟主机为`www.mysite.com/path1/*`，场#2的虚拟主机为`www.mysite.com/path2/*`。 可以使用`/path1/invalidate.cache`的URL目标第一个场，使用`/path2/invalidate.cache`目标第二个场。
 
    >[!NOTE]
    >
-   >如果在建议的默认上下文以外的上下文中安装了AEM，则需要在“扩展 [”选项卡中](#extended) 配置 **HTTP头** 。
+   >如果在建议的默认上下文以外的上下文中安装了AEM，则需要在&#x200B;**扩展**&#x200B;选项卡中配置[HTTP头](#extended)。
 
 1. 单击&#x200B;**确定**&#x200B;以保存更改。
-1. 返回到工 **具** 选项卡，从此处 **激活调** 度程序刷新代理 **(** 发布&#x200B;**上的**&#x200B;代理)。
+1. 返回至&#x200B;**工具**&#x200B;选项卡，从此处可以&#x200B;**激活**&#x200B;调度程序刷新&#x200B;**代理（**&#x200B;发布时的代理）。****
 
-调度 **程序刷新** 复制代理在创作时不活动。 可以使用等效的URI在发布环境中访问同一页面；例如 `https://localhost:4503/etc/replication/agents.publish/flush.html`,
+**调度程序Flush**&#x200B;复制代理在创作时不活动。 可以使用等效的URI在发布环境中访问同一页面；例如，`https://localhost:4503/etc/replication/agents.publish/flush.html`。
 
-### 控制对复制代理的访问 {#controlling-access-to-replication-agents}
+### 控制对复制代理的访问{#controlling-access-to-replication-agents}
 
-对用于配置复制代理的页面的访问权限可以通过在节点上使用用户和／或组页面权限来 `etc/replication` 控制。
+对用于配置复制代理的页面的访问权限可以通过在`etc/replication`节点上使用用户和／或组页面权限来控制。
 
 >[!NOTE]
 >
 >设置此类权限不会影响复制内容的用户（例如，从“网站”控制台或Sidekick选项）。 复制框架在复制页面时不使用当前用户的“用户会话”访问复制代理。
 
-### 从CRXDE Lite配置复制代理 {#configuring-your-replication-agents-from-crxde-lite}
+### 从CRXDE Lite{#configuring-your-replication-agents-from-crxde-lite}配置复制代理
 
 >[!NOTE]
 >
->复制代理的创建仅在存储库位置 `/etc/replication` 受支持。 这是正确处理相关ACL的必需。 在树的其他位置创建复制代理可能会导致未经授权的访问。
+>复制代理仅在`/etc/replication`存储库位置受支持。 这是正确处理相关ACL的必需。 在树的其他位置创建复制代理可能会导致未经授权的访问。
 
 可以使用CRXDE Lite配置复制代理的各种参数。
 
-如果导航到 `/etc/replication` 以下三个节点：
+如果导航到`/etc/replication`，您可以看到以下三个节点：
 
 * `agents.author`
 * `agents.publish`
 * `treeactivation`
 
-两个保 `agents` 留配置信息有关相应环境，并且仅当该环境运行时才处于活动状态。 例如， `agents.publish` 将仅用于发布环境。 以下屏幕截图显示创作环境中的发布代理，它随AEM WCM提供：
+两个`agents`保存有关相应环境的配置信息，并且仅当该环境运行时才处于活动状态。 例如，`agents.publish`将仅用于发布环境。 以下屏幕截图显示创作环境中的发布代理，它随AEM WCM提供：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
-## 监视复制代理 {#monitoring-your-replication-agents}
+## 监视复制代理{#monitoring-your-replication-agents}
 
 要监视复制代理，请执行以下操作：
 
-1. 访问AEM **中的** “工具”选项卡。
+1. 访问AEM中的&#x200B;**工具**&#x200B;选项卡。
 1. 单击&#x200B;**复制**。
-1. 多次-单击相应环境（左窗格或右窗格）的座席链接；例如， **作者上的代理**。
+1. 多次-单击相应环境（左窗格或右窗格）的座席链接；例如，作者&#x200B;**上的代理。**
 
    结果窗口显示创作环境的所有复制代理的概述，包括其目标和状态。
 
@@ -541,11 +545,11 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
    * 查看任何复制的目标。
    * 查看复制队列当前是否处于活动状态（已启用）。
    * 查看队列中是否有项目。
-   * **刷新** 或清 **除** ，更新队列条目的显示；这有助于您查看进入和离开队列的项目。
+   * **刷** 新或清 **** 除以更新队列条目的显示；这有助于您查看进入和离开队列的项目。
 
-   * **视图日志** ：用于访问复制代理执行的任何操作的日志。
-   * **测试与目标** 实例的连接。
-   * **根据需要** ，对任何队列项强制重试。
+   * **视图** 登录以访问复制代理执行的任何操作的日志。
+   * **测试** 与目标实例的连接。
+   * **强制** 重试任何队列项（如果需要）。
 
    >[!CAUTION]
    >
@@ -560,7 +564,7 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
    >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
-## 批处理复制 {#batch-replication}
+## 批处理复制{#batch-replication}
 
 批处理复制不会复制单个页面或资产，而是等待触发这两个页面或资产的第一个阈值（基于时间或大小）。
 
@@ -568,27 +572,40 @@ AEM标准安装中包含的we-retail网站可用于说明复制。
 
 出版商将解包所有物品，保存它们并向作者报告。
 
-### 配置批处理复制 {#configuring-batch-replication}
+### 配置批处理复制{#configuring-batch-replication}
 
 1. 转到 `http://serveraddress:serverport/siteadmin`
-1. 按屏 **[!UICONTROL 幕上]** 方的“Tools（工具）”图标
-1. 从左侧导航边栏，转到复制——创 **[!UICONTROL 作时的代理]** ，然后单击 **[!UICONTROL 默认代理]**。
-   * 您还可以通过直接转到 `http://serveraddress:serverport/etc/replication/agents.author/publish.html`
-1. 按复 **[!UICONTROL 制队列]** 上方的“编辑”按钮。
-1. 在以下窗口中，转至“批 **[!UICONTROL 处理]** ”选项卡：
+1. 按屏幕上方的&#x200B;**[!UICONTROL 工具]**&#x200B;图标
+1. 从左侧导航边栏，转到&#x200B;**[!UICONTROL 复制——作者上的代理]**,多次单击&#x200B;**[!UICONTROL 默认代理]**。
+   * 您还可以通过直接转到`http://serveraddress:serverport/etc/replication/agents.author/publish.html`来访问默认的发布复制代理
+1. 按复制队列上方的&#x200B;**[!UICONTROL 编辑]**&#x200B;按钮。
+1. 在以下窗口中，转至&#x200B;**[!UICONTROL 批]**选项卡：
    ![批量复制](assets/batchreplication.png)
 1. 配置代理。
 
 ### 参数 {#parameters}
 
 * `[!UICONTROL Enable Batch Mode]` -启用或禁用批处理复制模式
-* `[!UICONTROL Max Wait Time]` -在启动批处理请求之前的最长等待时间（以秒为单位）。 默认为2秒。
+* `[!UICONTROL Max Wait Time]` -在启动批处理请求之前的最长等待时间（以秒为单位）。默认为2秒。
 * `[!UICONTROL Trigger Size]` -开始在此大小限制下进行批量复制
 
 ## 其他资源 {#additional-resources}
 
-有关疑难解答的详细信息，请阅读“复 [制疑难解答](/help/sites-deploying/troubleshoot-rep.md) ”页。
+有关疑难解答的详细信息，请阅读[复制问题疑难解答](/help/sites-deploying/troubleshoot-rep.md)页。
 
 有关其他信息，Adobe有一系列与复制相关的知识库文章：
 
-[](https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html)https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html[https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html https://helpx.adobe.com/experience-manager/kb/replication-stuck.html https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html https://helpx.adobe.com/experience-manager/kb/ACLReplication.html https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html](https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html)https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html[](https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html)[](https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html)[](https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html)[](https://helpx.adobe.com/experience-manager/kb/replication-stuck.html)[](https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html)[](https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html)[](https://helpx.adobe.com/experience-manager/kb/ACLReplication.html)[](https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html)[](https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html)https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html https://helpx.adobe.com/experience-manager/kb/replication-stuck.html https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html https://helpx.adobe.com/experience-manager/kb/ACLReplication.html https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html         
+[https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.](https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html)
+[htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.](https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html)
+[htmlhttps://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.](https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html)
+[htmlhttps://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.](https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html)
+[.](https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html)
+[htmlhttps://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication. ](https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html)
+[htmlhttps://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.](https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html)
+[ ](https://helpx.adobe.com/experience-manager/kb/replication-stuck.html)
+[htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationListener.](https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html)
+[ htmlhttps://helpx.adobe.com/experience-manager/kb/replication-stuck. ](https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html)
+[](https://helpx.adobe.com/experience-manager/kb/ACLReplication.html)
+[](https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html)
+[](https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html)
+htmlhttps://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5 htmlhttps://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues htmlhttps://helpx.adobe.com/experience-manager/kb/ACLReplication htmlhttps://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html https://helpx.adobe.com/experience-manager/kb/replication-stuck.html https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html https://helpx.adobe.com/experience-manager/kb/ACLReplication.html https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html
