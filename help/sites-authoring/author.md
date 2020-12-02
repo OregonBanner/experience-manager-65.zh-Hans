@@ -21,7 +21,7 @@ ht-degree: 82%
 
 # 创作{#authoring}
 
-## Concept of Authoring (and Publishing) {#concept-of-authoring-and-publishing}
+## 创作（和发布）的概念{#concept-of-authoring-and-publishing}
 
 AEM 提供了两种环境：
 
@@ -69,7 +69,7 @@ AEM 提供了两种环境：
 
 #### 发布环境 {#publish-environment}
 
-When ready, the AEM site&#39;s content is published to the **publish environment**. 在该环境中，根据设计界面的具体观感，目标受众可以使用网站页面。
+准备就绪后，AEM站点的内容将发布到&#x200B;**发布环境**。 在该环境中，根据设计界面的具体观感，目标受众可以使用网站页面。
 
 通常，发布环境位于内网与外网的“隔离区”中；换句话说，可用于 Internet，但不再处于内部网络的完全保护之下。
 
