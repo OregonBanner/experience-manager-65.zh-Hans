@@ -19,11 +19,11 @@ ht-degree: 1%
 ---
 
 
-# 更改界面上的字体{#changing-the-font-on-the-interface}
+# 更改接口上的字体{#changing-the-font-on-the-interface}
 
 您可以更改在AEM Forms工作区中显示的字体。 在用户界面的特定部分中使用的字体在样式表的相应部分中定义。 您可以选择性地更改用户界面上的字体。
 
-按照AEM Forms [工作区自定义的通用步骤](../../forms/using/generic-steps-html-workspace-customization.md) ，根据您的要求，按照自定义CSS、HTML或两者的步骤操作。
+按照[AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md)执行操作，并根据您的要求，执行自定义CSS、HTML或同时自定义CSS和／或HTML的步骤。
 
 1. 以现有样式更改或添加字体系列。
 1. 更改或添加HTML元素的行中字体系列。
@@ -31,10 +31,10 @@ ht-degree: 1%
 
 例如，要将顶部导航栏锚点文本的字体更改为Courier New，请执行以下步骤：
 
-1. 通过访问登录到CRXDE `https://'[server]:[port]'/lc/crx/de/index.jsp`Lite。
+1. 通过访问`https://'[server]:[port]'/lc/crx/de/index.jsp`登录CRXDE Lite。
 1. 执行下列操作之一：
 
-   1. 要更改现有样式的字体系列，请在newStyle.css文件（位于/apps/ws/css）中添加以下内容。
+   1. 要更改现有样式中的字体系列，请在newStyle.css文件（位于/apps/ws/css）中添加以下内容。
 
       ```css
       #topnav a {
@@ -42,7 +42,7 @@ ht-degree: 1%
       }
       ```
 
-   1. 要为HTML元素添加行中的字体系列，请将文 `/libs/ws/js/runtime/templates/appnavigation.html` 件复制到 `/apps/ws/js/runtime/templates/appnavigation.html`。
+   1. 要为HTML元素添加行中的字体系列，请将`/libs/ws/js/runtime/templates/appnavigation.html`文件复制到`/apps/ws/js/runtime/templates/appnavigation.html`。
 
       按如下方式更新/apps/ws/js/runtime/templates/appnavigation.html文件：
 
@@ -53,7 +53,7 @@ ht-degree: 1%
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      打开/apps/ws/js/registry.js文件进行编辑并替换为 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` 该文 `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`件。
+      打开/apps/ws/js/registry.js文件进行编辑，将`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`替换为`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`。
 
    1. 要添加定义字体系列的样式，请在新的Style.css文件（位于/apps/ws/css）中添加以下内容。
 
