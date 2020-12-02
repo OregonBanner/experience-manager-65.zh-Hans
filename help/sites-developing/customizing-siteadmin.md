@@ -21,15 +21,15 @@ ht-degree: 0%
 
 # 自定义网站控制台（经典UI）{#customizing-the-websites-console-classic-ui}
 
-## 将自定义列添加到网站(siteadmin)控制台 {#adding-a-custom-column-to-the-websites-siteadmin-console}
+## 将自定义列添加到网站(siteadmin)控制台{#adding-a-custom-column-to-the-websites-siteadmin-console}
 
-“网站管理”控制台可以扩展为显示自定义列。 该控制台基于JSON对象构建，可通过创建实现该界面的OSGI服务来扩展该 `ListInfoProvider` 对象。 此类服务将修改发送到客户端的JSON对象以构建控制台。
+“网站管理”控制台可以扩展为显示自定义列。 该控制台基于JSON对象构建，可通过创建实现`ListInfoProvider`接口的OSGI服务来扩展该对象。 此类服务将修改发送到客户端的JSON对象以构建控制台。
 
-此分步教程介绍如何通过实现界面在网站管理控制台中显示新 `ListInfoProvider` 列。 它包括以下步骤：
+此分步教程介绍如何通过实现`ListInfoProvider`接口在网站管理控制台中显示新列。 它包括以下步骤：
 
-1. [创建OSGI服务](#creating-the-osgi-service) ，并将包含该服务的捆绑包部署到AEM服务器。
-1. （可选） [通过发出JSON](#testing-the-new-service) 调用来请求用于构建控制台的JSON对象，来测试新服务。
-1. [通过扩展存储库中](#displaying-the-new-column) 控制台的节点结构来显示新列。
+1. [创建OSGI服](#creating-the-osgi-service) 务并将包含它的捆绑包部署到AEM服务器。
+1. （可选）[通过发出JSON调用来请求用于构建控制台的JSON对象，来测试新服务](#testing-the-new-service)。
+1. [通过扩展存](#displaying-the-new-column) 储库中控制台的节点结构来显示新列。
 
 >[!NOTE]
 >
@@ -42,9 +42,9 @@ ht-degree: 0%
 
 
 
-### 创建OSGI服务 {#creating-the-osgi-service}
+### 创建OSGI服务{#creating-the-osgi-service}
 
-该接 `ListInfoProvider` 口定义两种方法：
+`ListInfoProvider`接口定义两种方法：
 
 * `updateListGlobalInfo`，更新列表的全局属性，
 * `updateListItemInfo`，更新单个列表项。
@@ -57,13 +57,13 @@ ht-degree: 0%
 
 以下实施示例：
 
-* 为每个 *项* 添加带星号的属性，即 `true` 页面名称开始带有 *e*，否则 `false` 。
+* 为每个项目添加&#x200B;*星号*&#x200B;属性，如果页面名称开始&#x200B;*e*，则该属性为`true`，否则为`false`。
 
-* 添加一 *个星号* Count属性，该属性对于列表是全局的，并包含星号列表项的数量。
+* 添加&#x200B;*steredCount*&#x200B;属性，该属性是列表的全局属性，包含标记列表项的数量。
 
 要创建OSGI服务，请执行以下操作：
 
-1. 在CRXDE Lite中， [创建捆绑](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle)。
+1. 在CRXDE Lite中，[创建包](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle)。
 1. 添加以下示例代码。
 1. 构建捆绑包。
 
@@ -112,15 +112,15 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >[!CAUTION]
 >
 >* 您的实施应根据提供的请求和／或资源决定是否应将信息添加到JSON对象。
->* 如果 `ListInfoProvider` 实现定义了响应对象中已存在的属性，则其值将被您提供的属性覆盖。
+>* 如果`ListInfoProvider`实现定义了响应对象中已存在的属性，则其值将被您提供的属性覆盖。
 
 >
 >  
-您可以使用 [服务排名](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) ，管理多个实施的执行 `ListInfoProvider` 顺序。
+您可以使用[服务排名](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING)管理多个`ListInfoProvider`实现的执行顺序。
 
-### 测试新服务 {#testing-the-new-service}
+### 测试新服务{#testing-the-new-service}
 
-打开网站管理控制台并浏览您的站点时，浏览器将发出ajax调用，以获取用于构建控制台的JSON对象。 例如，当您浏览到文件夹 `/content/geometrixx` 时，以下请求将发送到AEM服务器以构建控制台：
+打开网站管理控制台并浏览您的站点时，浏览器将发出ajax调用，以获取用于构建控制台的JSON对象。 例如，当您浏览到`/content/geometrixx`文件夹时，以下请求将发送到AEM服务器以构建控制台：
 
 [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -133,31 +133,32 @@ public class StarredListInfoProvider implements ListInfoProvider {
 
 ![screen_shot_2012-02-13at163046](assets/screen_shot_2012-02-13at163046.png)
 
-### 显示新列 {#displaying-the-new-column}
+### 显示新列{#displaying-the-new-column}
 
-最后一步是通过覆盖使网站管理控制台的节点结构适应以显示所有Geometrixx页面的新属性 `/libs/wcm/core/content/siteadmin`。 按如下方式继续：
+最后一步是通过覆盖`/libs/wcm/core/content/siteadmin`来调整网站管理控制台的节点结构以显示所有Geometrixx页面的新属性。 按如下方式继续：
 
-1. 在CRXDE Lite中，使用类型的节点创 `/apps/wcm/core/content` 建节点结构以 `sling:Folder` 反映该结构 `/libs/wcm/core/content`。
+1. 在CRXDE Lite中，创建具有类型`sling:Folder`的节点的节点结构`/apps/wcm/core/content`以反映结构`/libs/wcm/core/content`。
 
-1. 复制节点 `/libs/wcm/core/content/siteadmin` 并将其粘贴到下 `/apps/wcm/core/content`面。
+1. 复制节点`/libs/wcm/core/content/siteadmin`并将其粘贴到`/apps/wcm/core/content`下。
 
-1. 将节点复 `/apps/wcm/core/content/siteadmin/grid/assets` 制到 `/apps/wcm/core/content/siteadmin/grid/geometrixx` 并更改其属性：
+1. 将节点`/apps/wcm/core/content/siteadmin/grid/assets`复制到`/apps/wcm/core/content/siteadmin/grid/geometrixx`并更改其属性：
 
-   * 删除页 **面文本**
+   * 删除&#x200B;**pageText**
 
-   * 将 **pathRegex** 设置为 `/content/geometrixx(/.*)?`此操作将使所有geometrixx网站的网格配置处于活动状态。
+   * 将&#x200B;**pathRegex**&#x200B;设置为`/content/geometrixx(/.*)?`
+这将使所有geometrixx网站的网格配置处于活动状态。
 
-   * 将 **storeProxySuffix设置为** `.pages.json`
+   * 将&#x200B;**storeProxySuffix**&#x200B;设置为`.pages.json`
 
-   * 编辑 **storeReaderFields** multivalued属性并添加 `starred` 值。
+   * 编辑&#x200B;**storeReaderFields**&#x200B;多值属性并添加`starred`值。
 
-   * 要激活MSM功能，请向多字符串属性storeReaderFields添加以下MSM **参数**:
+   * 要激活MSM功能，请将以下MSM参数添加到多字符串属性&#x200B;**storeReaderFields**&#x200B;中：
 
       * **msm:isSource**
       * **msm:isInBlueprint**
       * **msm:isLiveCopy**
 
-1. 使用以下 `starred` 属性添加一个 **节点(nt**:unstructured `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` )类型：
+1. 在`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`下面添加一个`starred`节点（类型为&#x200B;**nt:unstructured**），其属性如下：
 
    * **dataIndex**: `starred` 字符串类型
 
@@ -165,22 +166,21 @@ public class StarredListInfoProvider implements ListInfoProvider {
 
    * **xtype**: `gridcolumn` 字符串类型
 
-1. （可选）将不希望显示的列拖放到 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
+1. （可选）删除您不希望显示在`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`的列
 
-1. `/siteadmin` 是虚路径，默认情况下指 `/libs/wcm/core/content/siteadmin`向
-要将其重定向到您的siteadmin版本，请 `/apps/wcm/core/content/siteadmin` 在定义属 `sling:vanityOrder` 性时将其值定义为高于上定义的值 `/libs/wcm/core/content/siteadmin`。 默认值为300，因此任何较高的值都适合。
+1. `/siteadmin` 是虚路径，默认情况下指 `/libs/wcm/core/content/siteadmin`向要将其重定向到`/apps/wcm/core/content/siteadmin`上的siteadmin版本，请定义属性`sling:vanityOrder`，使其值高于在`/libs/wcm/core/content/siteadmin`上定义的值。 默认值为300，因此任何较高的值都适合。
 
 1. 转到“网站管理”控制台并导航到Geometrixx站点：
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx)。
 
-1. 新列名为Starded **** ，可用，按如下方式显示自定义信息：
+1. 名为&#x200B;**Stared**&#x200B;的新列可用，按如下方式显示自定义信息：
 
 ![screen_shot_2012-02-14at104602](assets/screen_shot_2012-02-14at104602.png)
 
 >[!CAUTION]
 >
->如果多个网格配置与pathRegex属性所定 **义的请求路径** 匹配，则将使用第一个网格配置，而不是最具体的网格配置，这意味着配置的顺序很重要。
+>如果多个网格配置与&#x200B;**pathRegex**&#x200B;属性定义的请求路径匹配，将使用第一个网格配置，而不是最具体的网格配置，这意味着配置的顺序很重要。
 
-### 示例包 {#sample-package}
+### 示例包{#sample-package}
 
-在包共享上自定义网站管理控 [制台包中，可以查看本教程](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) 的结果。
+本教程的结果可在包共享上的[自定义网站管理控制台](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin)包中找到。
