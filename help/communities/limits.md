@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# 会员缴费限制 {#member-contribution-limits}
+# 成员贡献限制{#member-contribution-limits}
 
 ## 概述 {#overview}
 
@@ -26,11 +26,11 @@ ht-degree: 1%
 
 如果会员人数有限，任何超出允许的缴费数量的员额都将发出警报，提示超出限额，并拒绝该员额。 然后，社区成员可以转到社区消息中心并与社区经理联系，后者可以在适当时取消限制。
 
-贡献限制可以从成员控制台 [单独启用](members.md) ，和／或配置为在站点访客成为新成员时自动启用。
+贡献限制可以从[成员控制台](members.md)单独启用，和／或配置为在站点访客成为新成员时自动启用。
 
 使用“成员”控制台，社区管理者可以随时主动删除某个成员的贡献限制，或者在成员向提出此类请求的社区管理者发送消息时主动删除该成员。
 
-## AEM Communities用户生成的内容贡献限制配置 {#aem-communities-user-generated-content-contribution-limits-configuration}
+## AEM Communities用户生成的内容贡献限制配置{#aem-communities-user-generated-content-contribution-limits-configuration}
 
 此OSGi配置：
 
@@ -42,18 +42,18 @@ ht-degree: 1%
 
 * 在主发布者上：
 * 以管理员权限登录。
-* 访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md)。
+* 访问[Web控制台](../../help/sites-deploying/configuring-osgi.md)。
 
-   * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 找到 `AEM Communities User Generated Content Contribution Limits Configuration`。
+* 找到`AEM Communities User Generated Content Contribution Limits Configuration`。
 * 选择编辑图标。
 
 ![配置限制](assets/configure-limits.png)
 
 * **[!UICONTROL 自动应用UGC贡献限制]**
 
-   如果选中此项，则在用户注册为社区成员时自动设置缴费限制。 这反映在社区成员的用户档案中，并可从成员控制台中启用/ [禁用](members.md)。 具有来自一域的电子邮允许列表件地址的新成员从不受限。
+   如果选中此项，则在用户注册为社区成员时自动设置缴费限制。 这反映在社区成员的用户档案中，并可从[成员控制台](members.md)启用／禁用。 具有来自一域的电子邮允许列表件地址的新成员从不受限。
 
    默认为未选中。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
    一个允许列表或多个电子邮件域的列表。 选择+图标以添加其他条目。
 
-   自动应用UGC贡献限允许列表制时，在域下具有电子邮件地址的用户不受影响。 例如，如果将域 `mycompany.com` 添加到域的列表，则始终不限制具有电子邮件地址 `me@mycompany.com` 的成员进行发布。
+   自动应用UGC贡献限允许列表制时，在域下具有电子邮件地址的用户不受影响。 例如，如果将域`mycompany.com`添加到域的列表，则电子邮件地址为`me@mycompany.com`的成员从不受发布限制。
 
    默认为空允许列表。
 
@@ -85,4 +85,4 @@ ht-degree: 1%
 
    默认值不是消息收件人。
 
-注意： 默认配置在1小时内限制10个帖子。
+注意：默认配置在1小时内限制10个帖子。
