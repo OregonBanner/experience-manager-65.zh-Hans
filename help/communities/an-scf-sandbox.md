@@ -19,16 +19,16 @@ ht-degree: 0%
 
 
 
-# 创建SCF沙箱  {#create-an-scf-sandbox}
+# 创建SCF沙箱{#create-an-scf-sandbox}
 
 
-自AEM 6.1 Communities起，快速创建沙箱的最简单方法是创建社区站点。 See [Getting Started with AEM Communities](getting-started.md).
+自AEM 6.1 Communities起，快速创建沙箱的最简单方法是创建社区站点。 请参阅[AEM Communities入门](getting-started.md)。
 
-另一个对开发人员有用的工 [具是“社区组件](components-guide.md)”指南，它允许探索社区组件和功能并快速为它们创建原型。
+对开发人员来说，还有一个有用的工具是[社区组件指南](components-guide.md)，它允许探索社区组件和功能并快速为它们创建原型。
 
-创建网站的练习对于理解AEM网站的结构（可能包括Communities功能）非常有用，同时还提供了一些简单的页面，用于探 [索与社交组件框架(SCF)的结合](scf.md)。
+创建网站的练习对于理解AEM网站的结构（可能包括Communities功能）非常有用，同时还提供了可探索与[社交组件框架(SCF)](scf.md)结合使用的简单页面。
 
-本教程主要针对AEM新手的开发人员，他们对使用SCF组件感兴趣。 它将逐步介绍如何创建SCF沙箱站点，与 [如何创建功能齐全的Internet网站教程类似](../../help/sites-developing/website.md) ，该网站侧重于站点结构，如导航、徽标、搜索、工具栏和列出子页面。
+本教程主要针对AEM新手的开发人员，他们对使用SCF组件感兴趣。 它将逐步完成SCF沙箱站点的创建过程，类似于[如何创建功能完备的Internet网站](../../help/sites-developing/website.md)的教程，该教程侧重于站点结构，如导航、徽标、搜索、工具栏和列出子页面。
 
 在创作实例上进行开发，而在发布实例上试验站点最好。
 
@@ -43,13 +43,13 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->本教程不创建具有使用“社区站点”控制台创建的功 [能的社区站点](sites-console.md)。 例如，本教程不介绍如何设置登录、自注册、社 [交登录](social-login.md)、消息、用户档案等。
+>本教程不创建具有使用[社区站点控制台](sites-console.md)创建的功能的社区站点。 例如，本教程不介绍如何设置登录、自注册、[社交登录](social-login.md)、消息、用户档案等。
 >
->如果首选的是简单的社区站点，请遵 [循创建示例页面教程](create-sample-page.md) 。
+>如果首选使用简单的社区站点，请按照[创建示例页面](create-sample-page.md)教程进行操作。
 
 ## 前提条件 {#prerequisites}
 
-本教程假定您安装了一个AEM作者和一个AEM发布实例，该实例具有最 [新版](deploy-communities.md#latest-releases) Communities。
+本教程假定您安装了一个AEM作者和一个AEM发布实例，该实例具有[最新版本](deploy-communities.md#latest-releases)的Communities。
 
 下面是刚接触AEM平台的开发人员的一些有用链接：
 
@@ -58,23 +58,23 @@ ht-degree: 0%
    * [基础知识](../../help/sites-developing/the-basics.md):面向网站和功能的开发人员。
    * [创作的最初步骤](../../help/sites-authoring/first-steps.md):创作页面内容。
 
-## 使用CRXDE Lite开发环境 {#using-crxde-lite-development-environment}
+## 使用CRXDE Lite开发环境{#using-crxde-lite-development-environment}
 
-AEM开发人员将大部分时间用在创作 [实例的](../../help/sites-developing/developing-with-crxde-lite.md) CRXDE Lite开发环境中。 CRXDE Lite提供对CRX存储库的较少受限访问。 经典UI工具和触屏优化UI控制台提供对CRX存储库特定部分的更结构化的访问。
+AEM开发人员在[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)开发环境中花费大量时间用于创作实例。 CRXDE Lite提供对CRX存储库的较少受限访问。 经典UI工具和触屏优化UI控制台提供对CRX存储库特定部分的更结构化的访问。
 
 使用管理权限登录后，可通过多种方式访问CRXDE Lite:
 
-1. 从全局导航中，选择导航 **[!UICONTROL 工具>CRXDE Lite]**。
+1. 在全局导航中，选择导航&#x200B;**[!UICONTROL 工具>CRXDE Lite]**。
 
    ![crxde-lite](assets/tools-crxde.png)
 
-2. 从经典 [UI欢迎页面](http://localhost:4502/welcome.html)，向下滚动并单 **[!UICONTROL 击右面]** 板中的“CRXDE Lite”。
+2. 从[经典UI欢迎页面](http://localhost:4502/welcome.html)向下滚动并单击右面板中的&#x200B;**[!UICONTROL CRXDE Lite]**。
 
    ![classic-ui-crxde](assets/classic-ui-crxde.png)
 
-3. 直接浏览 `CRXDE Lite`: `<server>:<port>/crx/de`
+3. 直接浏览至`CRXDE Lite`:`<server>:<port>/crx/de`
 
-   例如，在本地作者实例上： [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
+   例如，在本地作者实例上：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 要使用CRXDE Lite，您必须使用开发人员或管理员权限登录。 对于默认的localhost实例，您可以使用
 
@@ -82,7 +82,7 @@ AEM开发人员将大部分时间用在创作 [实例的](../../help/sites-devel
 * `password: admin`
 
 
-**请注意** ，此登录将超时，您需要使用CRXDe Lite工具栏右端的下拉菜单定期重新登录。
+**请** 注意此登录将超时，您需要使用CRXDe Lite工具栏右端的下拉菜单定期重新登录。
 
 如果未登录，您将无法导航JCR存储库或执行任何编辑／保存操作。
 
