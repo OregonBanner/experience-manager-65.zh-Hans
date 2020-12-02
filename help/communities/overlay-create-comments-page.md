@@ -18,13 +18,13 @@ ht-degree: 1%
 ---
 
 
-# “创建注释”页 {#create-comments-page}
+# 创建注释页{#create-comments-page}
 
-**[◆覆盖注释组件](overlay-comments.md)[创建节点](overlay-create-nodes.md)**
+**[◆覆盖注释组](overlay-comments.md) [件创建节点](overlay-create-nodes.md)**
 
-## 评论页 {#comments-page}
+## 注释页{#comments-page}
 
-“社 [区组件](components-guide.md) ”指南提供轻松体验覆盖评论组件的功能。
+[社区组件指南](components-guide.md)提供轻松体验覆盖注释组件的功能。
 
 视图创作实例上的页面：
 
@@ -32,4 +32,4 @@ ht-degree: 1%
 
 ![个评论](assets/comments.png)
 
-**[◆覆盖注释组件](overlay-comments.md)[创建节点](overlay-create-nodes.md)**
+**[◆覆盖注释组](overlay-comments.md) [件创建节点](overlay-create-nodes.md)**
