@@ -28,33 +28,33 @@ ht-degree: 6%
 文档的本节介绍：
 
 * 将文件库功能添加到AEM站点。
-* 组件的配置 `File Library` 设置。
+* `File Library`组件的配置设置。
 
-### 将文件库添加到页面 {#adding-a-file-library-to-a-page}
+### 将文件库添加到页面{#adding-a-file-library-to-a-page}
 
-要在创作模 `File Library` 式下将组件添加到页面，请找到该组件：
+要在创作模式下将`File Library`组件添加到页面，请找到该组件：
 
 * `Communities / File Library`
 
 并将其拖动到页面上的位置。
 
-有关必要的信息，请访 [问社区组件基础](/help/communities/basics.md)。
+有关必要的信息，请访问[社区组件基础知识](/help/communities/basics.md)。
 
-当包 [含所需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side) ，组件的显示 `File Library` 方式如下：
+当包含[必需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side)时，`File Library`组件的显示方式如下：
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
-### 配置文件库 {#configuring-file-library}
+### 配置文件库{#configuring-file-library}
 
-选择要访问的 `File Library` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
+选择要访问的已放置`File Library`组件，然后选择打开编辑对话框的`Configure`图标。
 
 ![chlimage_1-431](assets/chlimage_1-431.png)
 
 ![chlimage_1-432](assets/chlimage_1-432.png)
 
-#### “注释”选项卡 {#comments-tab}
+#### “注释”选项卡{#comments-tab}
 
-在“注 **释** ”选项卡下，指定是否显示已上载文件的注释以及如何显示：
+在&#x200B;**注释**&#x200B;选项卡下，指定是否显示已上载文件的注释以及如何显示这些注释：
 
 * **允许对文件发表评论**
 
@@ -62,7 +62,7 @@ ht-degree: 6%
 
 * **每页的评论数**
 
-   限制每页显示的注释数以及显示的回复数。 Default is **10**.
+   限制每页显示的注释数以及显示的回复数。 默认值为&#x200B;**10**。
 
 * **最大文件大小**
 
@@ -74,7 +74,7 @@ ht-degree: 6%
 
 * **允许的文件类型**
 
-   以逗号分隔的文件扩展名列表，以“点”分隔。 例如： .jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 未指定默认值，因此允许所有文件类型。
+   以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 未指定默认值，因此允许所有文件类型。
 
 * **富文本编辑器**
 
@@ -102,7 +102,7 @@ ht-degree: 6%
 
 * **允许关注**
 
-   如果选中此项，则为博客文章添加以下功能，允许成员 [收到](/help/communities/notifications.md) 新帖子的通知。 默认为未选中。
+   如果选中此项，则为博客文章添加以下功能，使成员能够收到新帖子的[通知](/help/communities/notifications.md)。 默认为未选中。
 
 * **启用提及功能**
 
@@ -120,9 +120,9 @@ ht-degree: 6%
 
    如果选中，则允许回复已发布的注释。 默认为未选中。
 
-#### “用户审核”选项卡 {#user-moderation-tab}
+#### “用户协调”选项卡{#user-moderation-tab}
 
-在“用户 **审核** ”选项卡下，配置审核评论（如果允许进行评论）:
+在&#x200B;**用户审核**&#x200B;选项卡下，配置审核注释（如果允许进行注释）:
 
 * **预审**
 
@@ -158,9 +158,9 @@ ht-degree: 6%
 
 * **标记限制**
 
-   输入评论在隐藏之前必须标出的次数，使其不受公共视图。 此数字必须大于或等于仲裁 **阈值**。 默认值为5。
+   输入评论在隐藏之前必须标出的次数，使其不受公共视图。 此数字必须大于或等于&#x200B;**调节阈值**。 默认值为5。
 
-### “排序设置”选项卡 {#sort-settings-tab}
+### 排序设置选项卡{#sort-settings-tab}
 
 排序方式
 
@@ -168,8 +168,8 @@ ht-degree: 6%
 
 ### 附加信息 {#additional-information}
 
-有关开发人员的详细信息， [请参阅“文件库](/help/communities/essentials-file-library.md) Essentials”页。
+有关开发人员的详细信息，请参阅[File Library Essentials](/help/communities/essentials-file-library.md)页面。
 
-有关审核已发布的主题和评论，请参 [阅审核用户生成的内容](/help/communities/moderate-ugc.md)。
+有关已发布主题和注释的审核，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
 
-有关标记已发布的主题和评论，请参 [阅标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记已发布的主题和评论，请参阅[标记用户生成的内容](/help/communities/tag-ugc.md)。
