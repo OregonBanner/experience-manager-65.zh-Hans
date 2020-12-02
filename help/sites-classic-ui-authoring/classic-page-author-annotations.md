@@ -12,6 +12,9 @@ content-type: reference
 discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 translation-type: tm+mt
 source-git-commit: c8a02ad9fc33e963d2c760840e70c40ede988054
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 95%
 
 ---
 
@@ -50,7 +53,7 @@ source-git-commit: c8a02ad9fc33e963d2c760840e70c40ede988054
 
 对将注释附加到的段落执行的任何复制、剪切或删除操作也会包含注释（包括相关草图）；对于复制或剪切操作，注释（和相关草图）的位置会保留其与原始段落的相对位置。
 
-还可以通过拖动注释的右下角来增大或减小注释的大小。
+通过拖动注释的右下角，还可以增大或减小注释的大小。
 
 为便于跟踪，页脚行将指示创建注释的用户以及日期。后续作者可以编辑同一注释（将更新页脚）或为同一段落创建新注释。
 
@@ -66,7 +69,7 @@ source-git-commit: c8a02ad9fc33e963d2c760840e70c40ede988054
 
 >[!NOTE]
 >
->无法将注释添加到已由其他用户锁定的页面。
+>无法将注释添加到其他用户已锁定的页面。
 
 ## 注释设计 {#annotation-sketches}
 
@@ -76,6 +79,7 @@ source-git-commit: c8a02ad9fc33e963d2c760840e70c40ede988054
 >
 >* 将不显示图标。
 >* 将不显示在其他浏览器中创建的现有草图。
+
 >
 
 
