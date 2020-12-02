@@ -35,7 +35,7 @@ ht-degree: 74%
 >
 >在使用此功能之前，您必须先将 AEM 配置为与 [Adobe Campaign](/help/sites-administering/campaignonpremise.md) 或 [Adobe Campaign Standard](/help/sites-administering/campaignstandard.md) 集成。
 
-## 通过 Adobe Campaign 发送电子邮件内容 {#sending-email-content-via-adobe-campaign}
+## 通过 Adobe Campaign 发送电子邮件内容  {#sending-email-content-via-adobe-campaign}
 
 配置 AEM 和 Adobe Campaign 后，您可以直接在 AEM 中创建电子邮件分发内容，然后在 Adobe Campaign 中对其进行处理。
 
@@ -48,15 +48,15 @@ ht-degree: 74%
 
 本文档提供了相关详细说明。
 
-### 创建新的电子邮件内容 {#creating-new-email-content}
+### 创建新的电子邮件内容  {#creating-new-email-content}
 
 >[!NOTE]
 >
->When adding email templates, be sure to add them under **/content/campaigns** to make them available.
+>添加电子邮件模板时，请务必在&#x200B;**/content/活动**&#x200B;下添加这些模板以使其可用。
 
 #### 创建新的电子邮件内容 {#creating-new-email-content-1}
 
-1. In AEM select **Sites** then **Campaigns**, then browse to where your email campaigns are managed. In the following example, the path is **Sites** > **Campaigns** > **Geometrixx Outdoors** > **Email Campaigns**.
+1. 在AEM中，选择&#x200B;**站点**，然后选择&#x200B;**活动**，然后浏览到管理电子邮件活动的位置。 在以下示例中，路径为&#x200B;**站点** > **活动** > **Geometrixx Outdoors** > **电子邮件活动**。
 
    >[!NOTE]
    >
@@ -70,9 +70,9 @@ ht-degree: 74%
    * **Adobe Campaign Classic电邮**:允许您在将内容发送到Adobe Campaign Classic进行投放之前，将内容添加到预定义的模板（两列）。
    * **Adobe Campaign Standard电邮**:允许您在将内容发送到Adobe Campaign Standard进行投放之前，将内容添加到预定义的模板（两列）。
 
-1. Fill in the **Title** and optionally the **Description** and click **Create**. 标题将用作新闻稿/电子邮件的主题，除非您在编辑电子邮件时覆盖此标题。
+1. 填写&#x200B;**标题**&#x200B;和（可选）**说明**，然后单击&#x200B;**创建**。 标题将用作新闻稿/电子邮件的主题，除非您在编辑电子邮件时覆盖此标题。
 
-### 选择 Adobe Campaign 云服务和模板 {#selecting-the-adobe-campaign-cloud-service-and-template}
+### 选择 Adobe Campaign 云服务和模板  {#selecting-the-adobe-campaign-cloud-service-and-template}
 
 要与 Adobe Campaign 集成，您需要将 Adobe Campaign 云服务添加到页面。通过执行此操作，您可以访问个性化设置和其他 Adobe Campaign 信息。
 
@@ -88,14 +88,14 @@ ht-degree: 74%
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
-1. Select **Edit** and then the **Cloud services** tab and scroll down to the bottom and click the + sign to add a configuration and then select **Adobe Campaign**.
+1. 选择&#x200B;**编辑**，然后选择&#x200B;**云服务**&#x200B;选项卡，向下滚动到底部，单击+符号添加配置，然后选择&#x200B;**Adobe Campaign**。
 
    ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 1. 从下拉列表中选择与您的 Adobe Campaign 实例相匹配的配置，然后单击&#x200B;**保存**&#x200B;以进行确认。
 1. 您可以通过单击 **Adobe Campaign** 选项卡来查看电子邮件应用的模板。如果您想要选择其他模板，则可以在编辑时从电子邮件中访问该模板。
 
-   If you would like to apply a specific email delivery template (from Adobe Campaign), other than the default mail template, in **Properties**, select the **Adobe Campaign** tab. 输入电子邮件分发模板在相关 Adobe Campaign 实例中的内部名称。
+   如果要在&#x200B;**属性**&#x200B;中应用特定电子邮件投放模板(来自Adobe Campaign)，而非默认邮件模板，请选择&#x200B;**Adobe Campaign**&#x200B;选项卡。 输入电子邮件分发模板在相关 Adobe Campaign 实例中的内部名称。
 
    所选的模板将决定可从 Adobe Campaign 中使用哪些个性化字段。
 
@@ -107,7 +107,7 @@ ht-degree: 74%
 
    ![chlimage_1-19](assets/chlimage_1-19a.png)
 
-1. Select **Cloud services** and click **+** to add a configuration. 选择任意可见配置（不论哪个均可）。单击或点按 **+** 符号以添加另一个配置，然后选择 **Adobe Campaign**。
+1. 选择&#x200B;**云服务**&#x200B;并单击&#x200B;**+**&#x200B;添加配置。 选择任意可见配置（不论哪个均可）。单击或点按 **+** 符号以添加另一个配置，然后选择 **Adobe Campaign**。
 
    >[!NOTE]
    >
@@ -124,7 +124,7 @@ ht-degree: 74%
 
    ![chlimage_1-20](assets/chlimage_1-20a.png)
 
-1. If you would like to change the subject of the email or add plain text for those users who will not view the email in HTML, select **Email** and add a subject and text. 选择页面图标，以自动从 HTML 生成纯文本版本。完成后，单击复选标记。
+1. 如果要更改电子邮件的主题或为那些不以HTML视图电子邮件的用户添加纯文本，请选择&#x200B;**电子邮件**&#x200B;并添加主题和文本。 选择页面图标，以自动从 HTML 生成纯文本版本。完成后，单击复选标记。
 
    您可以使用 Adobe Campaign 个性化字段对新闻稿进行个性化设置。要添加个性化字段，请单击显示 Adobe Campaign 徽标的按钮，以打开个性化字段选取器。您可以从所有可用于此新闻稿的字段中进行选择。
 
@@ -134,7 +134,7 @@ ht-degree: 74%
 
    ![chlimage_1-29](assets/chlimage_1-21a.png)
 
-1. Open the components panel on left side of screen and select **Adobe Campaign Newsletter** from the drop-down menu to find those components.
+1. 打开屏幕左侧的组件面板，从下拉菜单中选择&#x200B;**Adobe CampaignNewsletter**&#x200B;以查找这些组件。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
@@ -142,7 +142,7 @@ ht-degree: 74%
 
    ![chlimage_1-23](assets/chlimage_1-23a.png)
 
-   See [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md) for a detailed description of each component.
+   有关每个组件的详细说明，请参阅[Adobe Campaign组件](/help/sites-authoring/adobe-campaign-components.md)。
 
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
@@ -158,12 +158,12 @@ ht-degree: 74%
 >[!NOTE]
 >
 >* 只会考虑 Adobe Campaign **配置文件**&#x200B;定位维度的字段。
->* When viewing Properties from **Sites**, you do not have access to the Adobe Campaign context fields. 您可以在编辑时直接从电子邮件中访问这些字段。
+>* 从&#x200B;**Sites**&#x200B;查看属性时，您无权访问Adobe Campaign上下文字段。 您可以在编辑时直接从电子邮件中访问这些字段。
 
 
 要插入个性化，请执行以下操作：
 
-1. Insert a new **Newsletter** > **Text &amp; Personalization (Campaign)** component by dragging it onto the page.
+1. 将新&#x200B;**Newsletter** > **文本与个性化(活动)**&#x200B;组件拖动到页面上。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 
@@ -176,15 +176,15 @@ ht-degree: 74%
    >**对于 Adobe Campaign Standard：**
    >
    >* 可用的上下文字段与 Adobe Campaign 中的&#x200B;**配置文件**&#x200B;定位维度相对应。
-   >* See [Linking an AEM page to an Adobe Campaign email](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard).
+   >* 请参阅[将AEM页面链接到Adobe Campaign电子邮件](#linking-an-aem-page-to-an-adobe-campaign-email-adobe-campaign-standard)。
 
    >
    >**对于 Adobe Campaign Classic：**
    >
-   >* Available context fields are dynamically recovered from the Adobe Campaign **nms:seedMember** schema. 目标扩展数据是从包含与内容同步的分发的工作流中动态获取的。(See the [Synchronizing content created in AEM with a delivery from Adobe Campaign](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic) section).
+   >* 可用的上下文字段是从Adobe Campaign **nms:seedMember**&#x200B;模式动态恢复的。 目标扩展数据是从包含与内容同步的分发的工作流中动态获取的。(请参阅[将AEM中创建的内容与来自Adobe Campaign的投放同步](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)部分)。
       >
       >
-   * To add or hide personalization elements, see [Managing personalization fields and blocks](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks).
+   * 要添加或隐藏个性化元素，请参阅[管理个性化字段和块](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks)。
    >* **重要信息**：收件人表（或相应的联系人表）也必须包含所有种子表字段。
 
 
@@ -192,7 +192,7 @@ ht-degree: 74%
 
    ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-   插入上下文字段或个性化基块后，您可以预览新闻稿并对字段进行测试。See [Previewing a Newsletter](#previewing-a-newsletter).
+   插入上下文字段或个性化基块后，您可以预览新闻稿并对字段进行测试。请参阅[预览Newsletter](#previewing-a-newsletter)。
 
 ### 预览新闻稿 {#previewing-a-newsletter}
 
@@ -208,7 +208,7 @@ ht-degree: 74%
 
 1. 要预览个性化，请单击/点按工具栏中的相应图标以打开 ContextHub。现在，个性化字段标记已替换为选定人物的种子数据。请查看在 ContextHub 中切换人物时变量是如何调整的。
 
-   ![chlimage_1-29](assets/chlimage_1-29a.png)
+   ![chlimage_1-21](assets/chlimage_1-29a.png)
 
 1. 您可以查看来自 Adobe Campaign 的与当前选定人物关联的种子数据。为此，请单击/点按 ContextHub 栏中的 Adobe Campaign 模块。此时会打开一个对话框，其中显示了当前配置文件的所有种子数据。同样，在切换到其他人物时，这些数据会相应地调整。
 
@@ -216,13 +216,13 @@ ht-degree: 74%
 
 ### 在 AEM 中批准内容 {#approving-content-in-aem}
 
-内容完成后，您可以启动批准流程。Go to the **Workflow** tab of the toolbox and select the **Approve for Adobe Campaign** workflow.
+内容完成后，您可以启动批准流程。转到工具箱的&#x200B;**Workflow**&#x200B;选项卡，然后选择&#x200B;**批准Adobe Campaign**&#x200B;工作流。
 
 该现成的工作流包含两个步骤：修订然后批准，或者修订然后拒绝。不过，可以扩展并调整此工作流以适应更复杂的过程。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-To approve content for Adobe Campaign, apply the workflow by selecting **Workflow** and selecting **Approve for Adobe Campaign** and click **Start Workflow**. 完成这些步骤并批准内容。 您也可以拒绝该内容，方法是在上一个工作流步骤中选择&#x200B;**拒绝**&#x200B;而不是&#x200B;**批准**。
+要批准Adobe Campaign内容，请应用工作流，方法是选择&#x200B;**工作流**&#x200B;并选择&#x200B;**批准Adobe Campaign**，然后单击&#x200B;**开始工作流**。 完成这些步骤并批准内容。 您也可以拒绝该内容，方法是在上一个工作流步骤中选择&#x200B;**拒绝**&#x200B;而不是&#x200B;**批准**。
 
 ![chlimage_1-32](assets/chlimage_1-32a.png)
 
@@ -239,7 +239,7 @@ To approve content for Adobe Campaign, apply the workflow by selecting **Workflo
 >[!NOTE]
 未经批准的内容可以与 Adobe Campaign 中的分发同步，但无法执行分发。只有经过批准的内容才可以通过营销活动分发来发送。
 
-## 将 AEM 与 Adobe Campaign Standard 和 Adobe Campaign Classic 链接 {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
+## 将 AEM 与 Adobe Campaign Standard 和 Adobe Campaign Classic 链接  {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
 
 如何将 AEM 与 Adobe Campaign 链接或同步，取决于您使用的是基于订阅的 Adobe Campaign Standard，还是基于内部部署的 Adobe Campaign Classic。
 
@@ -264,7 +264,7 @@ Adobe Campaign Standard 允许您获取 AEM 中创建的内容并将其与以下
 
 要将 AEM 中创建的页面与 Adobe Campaign 中的电子邮件相链接，请执行以下操作：
 
-1. 基于特定于 AEM 的电子邮件模板创建新的电子邮件。Refer to [Creating emails in Adobe Campaign Standard](https://helpx.adobe.com/cn/campaign/standard/channels/using/creating-an-email.html) for more information.
+1. 基于特定于 AEM 的电子邮件模板创建新的电子邮件。有关详细信息，请参阅[在Adobe Campaign Standard创建电子邮件](https://helpx.adobe.com/cn/campaign/standard/channels/using/creating-an-email.html)。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 
@@ -272,10 +272,10 @@ Adobe Campaign Standard 允许您获取 AEM 中创建的内容并将其与以下
 
    ![chlimage_1-37](assets/chlimage_1-37a.png)
 
-1. Select **Link with an Adobe Experience Manager content** in the toolbar to access the list of contents available in AEM.
+1. 选择工具栏中的&#x200B;**链接Adobe Experience Manager内容**&#x200B;以访问AEM中可用的内容列表。
 
    >[!NOTE]
-   If the **Link with an Adobe Experience Manager** option does not appear in the action bar, check that the **Content editing mode** is correctly configured set to **Adobe Experience Manager** in the email properties.
+   如果操作栏中未显示&#x200B;**与Adobe Experience Manager链接**&#x200B;选项，请检查电子邮件属性中的&#x200B;**内容编辑模式**&#x200B;是否正确设置为&#x200B;**Adobe Experience Manager**。
 
    ![chlimage_1-38](assets/chlimage_1-38a.png)
 
@@ -301,7 +301,7 @@ Adobe Campaign Standard 允许您获取 AEM 中创建的内容并将其与以下
    您可以使用内容操作栏中的&#x200B;**删除与 Adobe Experience Manager 内容的链接**&#x200B;来取消电子邮件与 AEM 内容之间的链接。仅当内容已与分发链接时，此按钮才可用。要将其他内容与分发链接，您必须删除当前的内容链接，然后才能建立新链接。
    删除链接后，系统会保留本地内容，并可在 Adobe Campaign 中对其进行编辑。如果在对内容进行修改后重新链接该内容，则所有更改均会丢失。
 
-### 将 AEM 中创建的内容与 Adobe Campaign Classic 中的分发同步 {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
+### 将 AEM 中创建的内容与 Adobe Campaign Classic 中的分发同步  {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
 
 Adobe Campaign 允许您获取 AEM 中创建的内容并将其与以下项目同步：
 
@@ -323,14 +323,14 @@ AEM 6.1 中已弃用以下工作流步骤：**发布到 Adobe Campaign**。这�
 
 要将 AEM 中创建的内容与 Adobe Campaign 中的分发同步，请执行以下操作：
 
-1. Create a delivery or add a delivery activity to a campaign workflow by selecting the **Email delivery with AEM content (mailAEMContent)** delivery template.
+1. 通过选择&#x200B;**具有投放内容的电子邮件活动(mailAEMContent)**&#x200B;投放模板，创建投放或向活动工作流添加投放。
 
    ![chlimage_1-40](assets/chlimage_1-40a.png)
 
-1. Select **Synchronize** in the toolbar to access the list of contents available in AEM.
+1. 在工具栏中选择&#x200B;**同步**&#x200B;以访问AEM中可用的内容列表。
 
    >[!NOTE]
-   If the **Synchronize** option does not appear in the delivery&#39;s toolbar, check that the **Content editing mode** field is correctly configured in **AEM** by selecting **Properties** > **Advanced**.
+   如果&#x200B;**同步**&#x200B;选项未出现在投放的工具栏中，请通过选择&#x200B;**属性** > **高级**，检查&#x200B;**AEM**&#x200B;中是否正确配置了&#x200B;**内容编辑模式**&#x200B;字段。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
@@ -354,8 +354,8 @@ AEM 6.1 中已弃用以下工作流步骤：**发布到 Adobe Campaign**。这�
 
    >[!NOTE]
    * 将分发和内容同步后，Adobe Campaign 中的分发内容会变为只读。电子邮件主题及其内容将无法再修改。
-   * 将内容链接到 Adobe Campaign 中的分发后，如果在 AEM 中更新了该内容，则也会在分发分析过程中自动更新该内容。The synchronization can also be executed manually using the **Refresh content now** button.
-   * You can cancel synchronization between a delivery and AEM content using the **Desynchronize** button. 仅当内容已与分发同步时，此按钮才可用。要将其他内容与分发同步，您必须取消当前的内容同步，然后才能建立新链接。
+   * 将内容链接到 Adobe Campaign 中的分发后，如果在 AEM 中更新了该内容，则也会在分发分析过程中自动更新该内容。也可以使用&#x200B;**立即刷新内容**&#x200B;按钮手动执行同步。
+   * 可以使用&#x200B;**取消同步**&#x200B;按钮取消投放和AEM内容之间的同步。 仅当内容已与分发同步时，此按钮才可用。要将其他内容与分发同步，您必须取消当前的内容同步，然后才能建立新链接。
    * 如果取消同步，系统会保留本地内容，并可在 Adobe Campaign 中对其进行编辑。如果在对内容进行修改后重新同步该内容，则会丢失所有更改。
    * 对于周期性分发和连续分发，每次执行分发时系统都会停止与 AEM 内容的同步。
 
