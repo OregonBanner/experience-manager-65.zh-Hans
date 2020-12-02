@@ -18,17 +18,17 @@ ht-degree: 1%
 ---
 
 
-# 如何为演示设置MongoDB {#how-to-setup-mongodb-for-demo}
+# 如何为演示{#how-to-setup-mongodb-for-demo}设置MongoDB
 
 ## 简介 {#introduction}
 
-本教程介绍如何为一 [个作者](msrp.md) 实 *例和一个发* 布实例设置 *MSRP* 。
+本教程介绍如何为&#x200B;*一个author*&#x200B;实例和&#x200B;*一个publish*&#x200B;实例设置[MSRP](msrp.md)。
 
 通过此设置，可以从创作和发布环境访问社区内容，无需前进或反向复制用户生成的内容(UGC)。
 
-此配置适用于 *非生产环境* ，如开发和／或演示。
+此配置适用于&#x200B;*非生产*&#x200B;环境，如开发和／或演示。
 
-**生产&#x200B;*环境*应：**
+**生产 ** 环境应：**
 
 * 使用复制副本集运行MongoDB
 * 使用SolrCloud
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ### 安装MongoDB {#install-mongodb}
 
-* 从https://www.mongodb.org/下载MongoDB [](https://www.mongodb.org/)
+* 从[https://www.mongodb.org/](https://www.mongodb.org/)下载MongoDB
 
    * 操作系统选择：
 
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 ### 开始MongoDB {#start-mongodb}
 
-* &lt;mongo-install>/bin/mongod —dbpath &lt;mongo-dbpath>
+* &lt;mongo-install>/bin/mongod —dbpath  &lt;mongo-dbpath>
 
 这将使用默认端口27017开始MongoDB服务器。
 
@@ -72,9 +72,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果MongoDB在AEM后 *启动* ，请重 **新启** 动所有AEM **** 实例，以便它们能正确地连接到MongoDB。
+>如果在&#x200B;*AEM之后启动* MongoDB，则&#x200B;**重新启动**&#x200B;所有&#x200B;**AEM**&#x200B;实例，以便它们正确连接到MongoDB。
 
-### 演示制作选项：设置MongoDB复制副本集 {#demo-production-option-setup-mongodb-replica-set}
+### 演示制作选项：设置MongoDB副本集{#demo-production-option-setup-mongodb-replica-set}
 
 以下命令是在localhost上设置具有3个节点的复制副本集的示例：
 
@@ -96,7 +96,7 @@ ht-degree: 1%
 
 ### 安装Solr {#install-solr}
 
-* 从Apache Lucene下 [载Solr](https://archive.apache.org/dist/lucene/solr/):
+* 从[Apache Lucene](https://archive.apache.org/dist/lucene/solr/)下载Solr:
 
    * 适用于任何操作系统。
    * Solr版本7.0。
@@ -112,12 +112,12 @@ ht-degree: 1%
 
 要为演示配置Solr集合，需要做出以下两项决定（选择主文档的链接以了解详细信息）:
 
-1. 在独立或SolrCloud模式 [下运行Solr](msrp.md#solrcloudmode)。
-1. 安 [装标](msrp.md#installingstandardmls) 准 [或](msrp.md#installingadvancedmls) 高级多语言搜索(MLS)。
+1. 以独立模式或[SolrCloud模式](msrp.md#solrcloudmode)运行Solr。
+1. 安装[标准](msrp.md#installingstandardmls)或[高级](msrp.md#installingadvancedmls)多语言搜索(MLS)。
 
 ### 独立Solr {#standalone-solr}
 
-运行Solr的方法可能因安装版本和方式而异。 Solr参 [考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/) 是权威文档。
+运行Solr的方法可能因安装版本和方式而异。 [Solr参考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/)是权威文档。
 
 为简单起见，以4.10版为例，在独立模式下开始Solr:
 
@@ -126,7 +126,7 @@ ht-degree: 1%
 
 这将使用默认端口8983开始Solr HTTP服务器。 您可以浏览至Solr控制台，获取Solr控制台进行测试。
 
-* 默认Solr控制台： [http://localhost:8983/solr/](http://localhost:8983/solr/)
+* 默认Solr控制台：[http://localhost:8983/solr/](http://localhost:8983/solr/)
 
 >[!NOTE]
 >
@@ -139,38 +139,38 @@ ht-degree: 1%
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
-## 将MongoDB标识为常用商店 {#identify-mongodb-as-common-store}
+## 将MongoDB标识为公用存储{#identify-mongodb-as-common-store}
 
 如有必要，启动作者实例并发布AEM实例。
 
 如果AEM在启动MongoDB之前运行，则需要重新启动AEM实例。
 
-按照主文档页上的说明操作： [MSRP - MongoDB公用存储](msrp.md)
+按照主文档页上的说明操作：[MSRP - MongoDB公用存储](msrp.md)
 
 ## 测试 {#test}
 
 要测试和验证MongoDB公用商店，请发布发布实例的注释并将其视图到创作实例，并在MongoDB和Solr中视图UGC:
 
-1. 在发布实例上，浏览到“社区组 [件指南”页](http://localhost:4503/content/community-components/en/comments.html) ，然后选择“注释”组件。
+1. 在发布实例上，浏览至[社区组件指南](http://localhost:4503/content/community-components/en/comments.html)页面，然后选择评论组件。
 1. 登录以发布评论：
-1. 在注释文本输入框中输入文本，然后单击“发 **[!UICONTROL 布”]**
+1. 在注释文本输入框中输入文本，然后单击&#x200B;**[!UICONTROL 发布]**
 
    ![置评后](assets/post-comment.png)
 
-1. 只需视图创作实例 [上的评论](http://localhost:4502/content/community-components/en/comments.html) （可能仍以管理员／管理员身份登录）。
+1. 只需视图[作者实例](http://localhost:4502/content/community-components/en/comments.html)上的评论（可能仍以管理员／管理员身份登录）。
 
    ![视图注释](assets/view-comment.png)
 
-   注意：虽然作者在asipath下有JCR *节点* ，但这些节点是用于SCF框架的。 实际UGC不在JCR中，而在MongoDB中。
+   注意：虽然作者&#x200B;*asipath*&#x200B;下有JCR节点，但这些节点适用于SCF框架。 实际UGC不在JCR中，而在MongoDB中。
 
-1. 视图mongodb Communities中的 **[!UICONTROL UGC]** > **[!UICONTROL 集合]** >内 **[!UICONTROL 容]**
+1. 视图mongodb **[!UICONTROL Communities]** > **[!UICONTROL 集合]** > **[!UICONTROL 内容]**&#x200B;中的UGC
 
    ![ugc内容](assets/ugc-content.png)
 
 1. 视图Solr中的UGC:
 
-   * 浏览至Solr仪表板: [http://localhost:8983/solr/](http://localhost:8983/solr/)。
-   * 要选 `core selector` 择的用户 `collection1`。
+   * 浏览至Solr仪表板:[http://localhost:8983/solr/](http://localhost:8983/solr/)。
+   * 用户`core selector`可选择`collection1`。
    * 选择 `Query`.
    * 选择 `Execute Query`.
 
@@ -184,9 +184,9 @@ ht-degree: 1%
 
 1. 确保MSRP已配置为默认提供程序：
 
-   * 在所有作者实例和发布AEM实例上，重新访 [问存储配置控制台](srp-config.md) ，或检查AEM存储库：
+   * 在所有作者和发布AEM实例上，重新访问[存储配置控制台](srp-config.md)或检查AEM存储库：
 
-   * 在JCR中，如 [果/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) 不包含 [srpc节点，则表](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) 示存储提供程序是JSRP。
-   * 如果srpc节点存在并包含 [节点defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则defaultconfiguration的属性应将MSRP定义为默认提供程序。
+   * 在JCR中，如果[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)不包含[srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)节点，则表示存储提供程序是JSRP。
+   * 如果srpc节点存在并包含节点[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则defaultconfiguration的属性应将MSRP定义为默认提供程序。
 
 1. 确保在选择MSRP后重新启动AEM。
