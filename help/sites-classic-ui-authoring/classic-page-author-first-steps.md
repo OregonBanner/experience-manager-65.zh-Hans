@@ -40,11 +40,11 @@ ht-degree: 93%
 
 进行编辑之前，您需要[创建一个新页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page)。
 
-### 打开页面 {#opening-a-page}
+### 打开页面  {#opening-a-page}
 
 对于诸如编辑之类的许多操作，您需要[打开页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#opening-a-page-for-editing)才能执行。
 
-### 编辑页面 {#editing-a-page}
+### 编辑页面  {#editing-a-page}
 
 无论您的实例已有页面，还是您刚刚自行创建了一个新页面，您都可以通过下列方式[编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)：
 
@@ -58,11 +58,11 @@ ht-degree: 93%
 * [锁定页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)
 * [解锁页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#unlocking-a-page)
 
-### 发布页面 {#publishing-a-page}
+### 发布页面  {#publishing-a-page}
 
 完成页面编辑之后，您将需要[发布（或激活）页面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)，以便网站的访客可以使用该内容。
 
-## 其他操作 {#further-actions}
+## 其他操作  {#further-actions}
 
 除基本步骤之外，创作时还可以使用其他许多操作。
 
@@ -74,7 +74,7 @@ ht-degree: 93%
 
 [移动和重命名页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page)基本上可通过相同的操作完成。
 
-### 取消发布页面 {#unpublishing-a-page}
+### 取消发布页面  {#unpublishing-a-page}
 
 要使之前发布（或激活）的内容在您的公共网站上不可用，您需要[取消发布（或取消激活）页面](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)。
 
@@ -82,14 +82,14 @@ ht-degree: 93%
 
 如果不再需要某个页面，您可能想要[删除该页面](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#deleting-a-page)。
 
-### 设置页面属性 {#setting-the-page-properties}
+### 设置页面属性  {#setting-the-page-properties}
 
 每个[页面都有一些属性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)，通过定义这些属性可以确定各方面操作。
 
-### 创建一个页面版本 {#creating-a-version-of-a-page}
+### 创建一个页面版本  {#creating-a-version-of-a-page}
 
 您可以[为页面创建一个版本](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)，然后在必要时[还原到该版本](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick)。
 
-## 更多信息 {#more-information}
+## 更多信息  {#more-information}
 
 要访问有关创作的更多信息，可参阅[页面创作](/help/sites-classic-ui-authoring/classic-page-author.md)和[使用创作环境](/help/sites-classic-ui-authoring/author-env.md)。
