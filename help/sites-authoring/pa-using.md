@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 translation-type: tm+mt
 source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
 可使用页面分析数据评估页面内容的有效性。
 
-## 可从控制台中查看分析数据 {#analytics-visible-from-the-console}
+## 可从控制台中查看分析数据  {#analytics-visible-from-the-console}
 
 ![aa-10](assets/aa-10.png)
 
@@ -60,7 +63,7 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 >
 >当页面树包含与不同 Adobe Analytics 云配置关联的子项时，您无法为页面配置可用数据列。
 
-1. In List View, use the view selectors (right of toolbar), select **View Settings** and then **Add Custom Analytics Data**.
+1. 在列表视图中，使用视图选择器（工具栏右侧），选择&#x200B;**视图设置**，然后选择&#x200B;**添加自定义分析数据**。
 
    ![aa-15](assets/aa-15.png)
 
@@ -72,14 +75,14 @@ source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
 
 ### 从站点打开内容分析 {#opening-content-insights-from-sites}
 
-Open [Content Insight](/help/sites-authoring/content-insights.md) from the Sites console to further investigate page effectiveness.
+从“站点”控制台打开[内容分析](/help/sites-authoring/content-insights.md)以进一步调查页面有效性。
 
 1. 在站点控制台中，选择要查看“内容分析”的页面。
 1. 在工具栏上，单击“分析和建议”图标。
 
    ![](do-not-localize/chlimage_1-16a.png)
 
-## 可从页面编辑器 (Activity Map) 中查看分析数据 {#analytics-visible-from-the-page-editor-activity-map}
+## 可从页面编辑器 (Activity Map) 中查看分析数据  {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!NOTE]
 >
