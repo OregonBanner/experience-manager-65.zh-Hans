@@ -22,7 +22,7 @@ ht-degree: 40%
 + [关于DAM](assets.md)
 + [资产的最佳实践](best-practices-for-assets.md)
 + [中的辅助功能 [!DNL Assets]](accessibility.md)
-+ 使用Experience Manager资产 {#using}
++ 使用Experience Manager资产{#using}
    + [[!DNL Assets] 主页体验](assets-home-page.md)
    + [搜索数字资产](search-assets.md)
    + [使用资产元数据](metadata.md)
@@ -83,7 +83,7 @@ ht-degree: 40%
    + [通过Dynamic Media Classic使CDN缓存失效](invalidate-cdn-cache-dm-classic.md)
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
-+ 扩展资产 {#extending}
++ 扩展资产{#extending}
    + [自定义和扩展 [!DNL Assets]](extending-assets.md)
    + [使用媒体处理程序和工作流处理资源](media-handlers.md)
    + [扩展搜索功能](searchx.md)
@@ -93,7 +93,7 @@ ht-degree: 40%
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [HTTP API中的内 [!DNL Assets] 容片段支持](assets-api-content-fragments.md)
    + [[!DNL Assets] 代理开发](proxy.md)
-+ 管理资产 {#administer}
++ 管理资产{#administer}
    + [支持的文件格式](assets-formats.md)
    + [搜索 Facet](search-facets.md)
    + [了解元数据概念](metadata-concepts.md)
@@ -141,7 +141,7 @@ ht-degree: 40%
    + [内容片段 - 删除注意事项](content-fragments/content-fragments-delete.md)
    + [内容片段——标记](content-fragments/content-fragments-markdown.md)
    + [为内容片段创建翻译项目](creating-translation-projects-for-content-fragments.md)
-+ Manage Assets {#managing}
++ 管理资产{#managing}
    + [管理数字资产](manage-assets.md)
    + [管理收藏集](manage-collections.md)
    + [启用重复检测](duplicate-detection.md)
