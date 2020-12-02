@@ -19,17 +19,17 @@ ht-degree: 7%
 ---
 
 
-# 报告控制台 {#reports-console}
+# 报告控制台{#reports-console}
 
 ## 概述 {#overview}
 
-对于AEM Communities，有各种报告可以从作者环境以多种方式访问。
+对于AEM Communities，有各种报告可从作者环境以多种方式访问。
 
 总的来说，各种报告有：
 
 * [指定报表](#assignments-report)
 
-   对于支 [持社区](/help/communities/overview.md#enablement-community)，提供学员分配进度的概览，包括在实施SCORM标准时的关联得分。
+   对于[启用社区](/help/communities/overview.md#enablement-community)，提供学员分配进度的概览，包括在实施SCORM标准时的关联得分。
 
 * [查看次数报表](#views-report)
 
@@ -39,15 +39,15 @@ ht-degree: 7%
 
    按社区成员向任何社区站点提供各种类型的帖子图表。
 
-启 [用Adobe Analytics](/help/communities/sites-console.md#analytics)后，报告将包括一段时间内每个支持资源的视图、播放、评论和评级数。
+启用[Adobe Analytics](/help/communities/sites-console.md#analytics)时，报告将包括一段时间内每个启用资源的视图、播放、评论和评级数。
 
 表格报表可以以。csv格式导出，供后续处理。
 
-## 报告控制台 {#reporting-consoles}
+## 报告控制台{#reporting-consoles}
 
-### 社区站点报告 {#reports-for-community-sites}
+### 社区站点报告{#reports-for-community-sites}
 
-* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL 社区]** >报 **[!UICONTROL 告]**
+* 从全局导航：**[!UICONTROL 导航]** > **[!UICONTROL 社区]** > **[!UICONTROL 报告]**
 
 * 从以下选项中进行选择：
 
@@ -65,15 +65,15 @@ ht-degree: 7%
 
 ![报告](assets/reports1.png)
 
-### Enablement Resources和学习路径报告 {#reports-for-enablement-resources-and-learning-paths}
+### Enablement Resources和Learning Paths报告{#reports-for-enablement-resources-and-learning-paths}
 
-* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL 社区]** >资 **[!UICONTROL 源]**
+* 从全局导航：**[!UICONTROL 导航]** > **[!UICONTROL 社区]** > **[!UICONTROL 资源]**
 
 * 选择现有的支持社区站点：
 
-   * 选择 **报告** 图标以生成涵盖所有启用资源的报告。
+   * 选择&#x200B;**报告**&#x200B;图标以生成涵盖所有启用资源的报告。
    * 选择支持学习路径。
-   * 选择 **报表** 图标以生成以下报表：
+   * 选择&#x200B;**报表**&#x200B;图标以生成以下报表：
 
       * 包含的支持资源。
       * 分配给学习路径的学员数。
@@ -88,7 +88,7 @@ ht-degree: 7%
       * 评论数
       * 给定星级
 
-有关详细信息，请参 [阅“资源](/help/communities/resources.md#report) ”控制台的“报告”部分。
+有关详细信息，请参阅“资源”控制台的[报告部分](/help/communities/resources.md#report)。
 
 ## 指定报表 {#assignments-report}
 
@@ -114,7 +114,7 @@ ht-degree: 7%
 
    从分配给选定学员的启用资源中进行选择。
 
-选择 **生成** ，以创建报表：
+选择&#x200B;**生成**&#x200B;以创建报告：
 
 ![生成报表](assets/generate-assignment-report.png)
 
@@ -143,7 +143,7 @@ ht-degree: 7%
    * 过去 90 天
    * 去年
 
-选择 **[!UICONTROL 生成]** ，以创建报表。
+选择&#x200B;**[!UICONTROL 生成]**&#x200B;以创建报告。
 
 ![生成视图](assets/generate-views.png)
 
@@ -172,18 +172,18 @@ ht-degree: 7%
    * 过去 90 天
    * 去年
 
-选择 **[!UICONTROL 生成]** ，以创建报表。
+选择&#x200B;**[!UICONTROL 生成]**&#x200B;以创建报告。
 
 ![生成报表](assets/generate-posts-report.png)
 
 ## 疑难解答 {#troubleshooting}
 
-### 未列出社区站点 {#no-community-sites-listed}
+### 未列出社区站点{#no-community-sites-listed}
 
 如果未列出社区站点，请确保已为站点启用Adobe Analytics。 如果选择分配报告，请确保分配功能在社区站点的结构中。
 
-### 报告不在AEM作者实例中显示 {#reports-do-not-show-in-aem-author-instance}
+### AEM作者实例{#reports-do-not-show-in-aem-author-instance}中不显示报告
 
-如果报告未显示在AEM作者实例中，请检查自定义，如发布实例上的URL映射。 如果URL映射仅在社区站点的AEM发布实例上完成，请确保在站点趋势报告社交组件工厂配置的AEM **作者实例中已配置该** 。
+如果报告未显示在AEM作者实例中，请检查自定义，如发布实例上的URL映射。 如果URL映射仅在社区站点的AEM发布实例上完成，请确保已在&#x200B;**站点趋势报告社交组件工厂**&#x200B;配置的AEM作者实例中配置了该映射。
 
 ![AEM作者上的URL映射](assets/sitetrend.png)
