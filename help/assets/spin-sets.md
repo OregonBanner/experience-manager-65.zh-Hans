@@ -23,15 +23,15 @@ ht-degree: 32%
 
 旋转集模拟 360 度全方位查看体验。Dynamic Media 提供单轴旋转集，查看者可在该旋转集中旋转项目。另外，用户可以自由缩放和平移任何视图，只需几次简单的鼠标单击操作即可实现。这样，用户就可以从任何特定视角更仔细地检查项目。
 
-Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In addition, if the Spin Set is published, then the publish date, indicated by the **[!UICONTROL World]** icon is on the banner along with the last modification date, indicated by the **[!UICONTROL Pencil]** icon displays.
+旋转集由带有&#x200B;**[!UICONTROL SPINSET字样的横幅来指定。]**&#x200B;此外，如果旋转集已发布，则横幅上会显示由&#x200B;**[!UICONTROL World]**&#x200B;图标指示的发布日期以及由&#x200B;**[!UICONTROL 铅笔]**&#x200B;图标指示的上次修改日期。
 
 ![chlimage_1-](assets/chlimage_1-380.png)
 
 >[!NOTE]
 >
->有关资产用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md)。
+>有关资产用户界面的信息，请参阅[管理资产](/help/assets/manage-assets.md)。
 
-## 快速开始:旋转集 {#quick-start-spin-sets}
+## 快速开始:旋转集{#quick-start-spin-sets}
 
 要快速设置并运行旋转集，请执行以下步骤：
 
@@ -41,9 +41,9 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
 1. [创建旋转集。](#creating-spin-sets)
 
-   To create a Spin Set, select **[!UICONTROL Create > Spin Set]** and then name the set, choose the assets, and choose the order the images appear.
+   要创建旋转集，请选择&#x200B;**[!UICONTROL 创建>旋转集]**，然后命名旋转集，选择资产，然后选择图像的显示顺序。
 
-   See [Working with Selectors](/help/assets/working-with-selectors.md).
+   请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
    >[!NOTE]
    >
@@ -53,39 +53,39 @@ Spin Sets are designated by a banner with the word **[!UICONTROL SPINSET.]** In 
 
    管理员可以创建或修改旋转集查看器预设。要查看带有查看器预设的旋转集，请选择旋转集，然后在左边栏下拉菜单中，选择&#x200B;**查看器**。
 
-   See **[!UICONTROL Tools > Assets > Viewer Presets]** to create or edit viewer presets.
+   请参阅&#x200B;**[!UICONTROL 工具>资产>查看器预设]**&#x200B;以创建或编辑查看器预设。
 
-   See [Adding and editing viewer presets.](/help/assets/managing-viewer-presets.md)
+   请参阅[添加和编辑查看器预设。](/help/assets/managing-viewer-presets.md)
 
 1. [查看旋转集](#viewing-spin-sets)。
 
-   您可以通过三种不同的方式视图和访问通过批集预设创建的集。 (使用批集预设创建的集 *合* ，不显示在用户界面中。)
+   您可以通过三种不同的方式视图和访问通过批集预设创建的集。 （使用批集预设创建的集合，在用户界面中执行&#x200B;*不*&#x200B;操作。）
 
 1. [预览旋转集。](/help/assets/previewing-assets.md)
 
-   选择旋转集，之后您便可以进行预览。旋转该旋转集。您可以从左边栏下拉菜 **[!UICONTROL 单的]** “查看器”菜单中选择不同的查看器。
+   选择旋转集，之后您便可以进行预览。旋转该旋转集。您可以从左边栏下拉菜单中的&#x200B;**[!UICONTROL 查看器]**&#x200B;菜单中选择不同的查看器。
 
 1. [发布旋转集。](/help/assets/publishing-dynamicmedia-assets.md)
 
-   发布旋转集时，将会激活 URL 和嵌入字符串。此外，您必须发 [布查看器预设](/help/assets/managing-viewer-presets.md)。
+   发布旋转集时，将会激活 URL 和嵌入字符串。此外，您必须[发布查看器预设](/help/assets/managing-viewer-presets.md)。
 
-1. [将URL关联到Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md) , [或嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
+1. [将URL关联到您的Web](/help/assets/linking-urls-to-yourwebapplication.md) 应用程 [序或嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
    在发布旋转集后，AEM 资产会为该旋转集创建 URL 调用并将其激活。预览资产时，您可以复制这些 URL。或者，您也可以将这些 URL 嵌入到网站中。
 
-   Select the Spin Set, then in the left rail drop-down menu, select **[!UICONTROL Viewers.]**
+   选择旋转集，然后在左边栏下拉菜单中，选择&#x200B;**[!UICONTROL 查看器。]**
 
    请参 [阅将旋转集关联到网页](/help/assets/linking-urls-to-yourwebapplication.md)[和嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-If you need to, you can [edit Spin Sets](#editing-spin-sets). In addition, you can view and modify [Spin Set properties](/help/assets/manage-assets.md#editing-properties).
+如果需要，您可以[编辑旋转集](#editing-spin-sets)。 此外，还可以视图和修改[旋转集属性](/help/assets/manage-assets.md#editing-properties)。
 
 ## 上传旋转集的资产 {#uploading-assets-for-spin-sets}
 
 对于一维旋转集，一个项目至少需要8-12张照片；对于二维旋转集，一个项目至少需要16-24张照片。拍摄时必须定期进行，以给人以项目正在旋转和翻动的印象。例如，如果一维旋转集包含12个镜头，则对每个镜头将项目旋转30度(360/12)。
 
-You can upload images for the Spin Sets as you would [upload any other asset in AEM Assets](/help/assets/manage-assets.md).
+您可以像上传AEM Assets的任何其他资产一样，为旋转集上传图像。[](/help/assets/manage-assets.md)
 
-### 为旋转集捕获图像的指南 {#guidelines-for-shooting-spin-set-images}
+### 为旋转集{#guidelines-for-shooting-spin-set-images}捕获图像的指南
 
 以下是关于旋转集图像的一些最佳实践。一般而言，旋转集中的图像越多，图像的旋转效果越好。但是，在旋转集中包含很多图像也会使加载图像所需的时间变长。在拍摄用于旋转集的图像时，AEM 建议遵循以下准则：
 
@@ -103,7 +103,7 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 >
 >您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。**重要：** 批集由IPS（图像生产系统）创建，作为资产摄取的一部分，并且仅在Dynamic Media -Scene7模式下可用。
 >
->请参阅配置Dynamic Media -Scene7模式中的“创建批集预设以自动生成图 [像集和旋转集”](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。
+>请参阅[配置Dynamic Media -Scene7模式](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)中的“创建批集预设以自动生成图像集和旋转集”。
 
 
 >[!NOTE]
@@ -116,24 +116,24 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
    ![6_5_spinset_createpulldownmenu](assets/6_5_spinset-createpulldownmenu.png)
 
-1. 在旋转集编辑器的标题 **[!UICONTROL 字段中]** ，输入旋转集的名称。 该名称会显示在旋转集的横幅中。（可选）输入说明。
+1. 在旋转集编辑器的&#x200B;**[!UICONTROL 标题]**&#x200B;字段中，输入旋转集的名称。 该名称会显示在旋转集的横幅中。（可选）输入说明。
 
    ![6_5_spinset_spinseteditortitle](assets/6_5_spinset-spinseteditortitle.png)
 
    >[!NOTE]
    >
-   >创建旋转集时，您可以更改旋转集缩略图，或允许AEM根据旋转集中的资产自动选择缩略图。 To select a thumbnail, click **[!UICONTROL Change thumbnail]** and select any image (you can navigate to other folders to find images as well). If you have selected a thumbnail and then decide that you want AEM to generate one from the spin set, select **[!UICONTROL Switch to Automatic thumbnail.]**
+   >创建旋转集时，您可以更改旋转集缩略图，或允许AEM根据旋转集中的资产自动选择缩略图。 要选择缩略图，请单击&#x200B;**[!UICONTROL 更改缩略图]**&#x200B;并选择任何图像（您也可以导航到其他文件夹以查找图像）。 如果您已选择缩略图，然后决定要AEM从旋转集生成缩略图，请选择&#x200B;**[!UICONTROL 切换到自动缩略图。]**
 
 1. 执行以下操作之一：
 
-   * 在“旋转集编辑器”页面的左上角附近，点按添 **[!UICONTROL 加资产。]**
+   * 在“旋转集编辑器”页面的左上角附近，点按&#x200B;**[!UICONTROL 添加资产。]**
 
-   * 在“旋转集编辑器”页面的中间附近，点按 **[!UICONTROL 以打开资产选择器。]**
-   点按以选择要包含在旋转集中的资产。 选定资产上有一个复选标记图标。When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Select.]**
+   * 在“旋转集编辑器”页面的中间附近，点按&#x200B;**[!UICONTROL 点按以打开资产选择器。]**
+   点按以选择要包含在旋转集中的资产。 选定资产上有一个复选标记图标。完成后，在页面右上角附近，点按&#x200B;**[!UICONTROL 选择。]**
 
-   借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后点按工具栏上的&#x200B;**[!UICONTROL 过滤器]**&#x200B;图标。Change the view by tapping the View icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View.]**
+   借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后点按工具栏上的&#x200B;**[!UICONTROL 过滤器]**&#x200B;图标。点按视图图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图，以更改视图。]**
 
-   See [Working with Selectors](/help/assets/working-with-selectors.md).
+   请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
    ![chlimage_1-383](assets/chlimage_1-383.png)
 
@@ -147,33 +147,33 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
 1. （可选）执行以下操作之一：
 
-   * 要删除图像，请选择该图像，然后点按删 **[!UICONTROL 除资产。]**
+   * 要删除图像，请选择该图像，然后点按&#x200B;**[!UICONTROL 删除资产。]**
 
-   * To apply a preset, near the upper-right corner of the page, tap **[!UICONTROL Preset]**, then select a preset to apply to all the assets at once.
+   * 要应用预设，请点按页面右上角附近的&#x200B;**[!UICONTROL 预设]**，然后选择一个预设以一次应用于所有资产。
 
-1. Click **[!UICONTROL Save.]** Your newly created Spin Set appears in the folder you created it in.
+1. 单击&#x200B;**[!UICONTROL 保存。]**&#x200B;您新创建的旋转集显示在您创建时所用的文件夹中。
 
-## 查看旋转集 {#viewing-spin-sets}
+## 查看旋转集{#viewing-spin-sets}
 
-您可以在用户界面中创建旋转集，也可以使用批 [集预设自动创建](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)。 但是，使用批集预设创建的集 *不会* 显示在用户界面中。 您可以通过三种不同方式访问通过批集预设创建的集。 （即使您在用户界面中创建了旋转集，这些方法也可用）。
+您可以在用户界面中创建旋转集，也可以使用[批集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。 但是，使用批集预设创建的集合，在用户界面中不显示&#x200B;*。*&#x200B;您可以通过三种不同方式访问通过批集预设创建的集。 （即使您在用户界面中创建了旋转集，这些方法也可用）。
 
 >[!NOTE]
 >
->您还可以通过用户界面视图集，如编辑旋转 [集中所述](#editing-spin-sets)。
+>您还可以通过用户界面视图集，如[编辑旋转集](#editing-spin-sets)中所述。
 
 **视图旋转集**
 
-1. 打开单个资产的属性时。 属性指明所选资产是其成员(在“集 **[!UICONTROL 成员”下]**)。 单击集合的名称可查看整个集合。
+1. 打开单个资产的属性时。 属性指明所选资产是成员（位于&#x200B;**[!UICONTROL 集成员]**&#x200B;下）的组。 单击集合的名称可查看整个集合。
 
    ![chlimage_1-156](assets/chlimage_1-384.png)
 
-1. 来自任何集的成员图像。Select the **[!UICONTROL Sets]** menu to display the sets that the asset is a member of.
+1. 来自任何集的成员图像。选择&#x200B;**[!UICONTROL 集]**&#x200B;菜单以显示资产所属的集。
 
    ![chlimage_1-157](assets/chlimage_1-385.png)
 
-1. From search, you can Select **[!UICONTROL Filters]**, then expand **[!UICONTROL Dynamic Media]** and select **[!UICONTROL Sets.]**
+1. 在搜索中，您可以选择&#x200B;**[!UICONTROL 过滤器]**，然后展开&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;并选择&#x200B;**[!UICONTROL 集。]**
 
-   搜索会返回在UI中手动创建或通过批集预设自动创建的匹配集。 对于自动集，搜索查询使用与AEM搜索 `Starts with` 不同的搜索条件进行，后者基于使用搜索 `Contains` 条件进行。 将过滤器设 **[!UICONTROL 置为]** “集”是搜索自动集的唯一方法。
+   搜索会返回在UI中手动创建或通过批集预设自动创建的匹配集。 对于自动化集，搜索查询使用与AEM搜索不同的`Starts with`搜索条件进行，后者基于使用`Contains`搜索条件进行搜索。 将过滤器设置为&#x200B;**[!UICONTROL Sets]**&#x200B;是搜索自动集的唯一方法。
 
    ![chlimage_1-158](assets/chlimage_1-386.png)
 
@@ -191,30 +191,29 @@ You can upload images for the Spin Sets as you would [upload any other asset in 
 
 1. 执行下列任一操作：
 
-   * 将鼠标悬停在旋转集资产上，然后点按 **[!UICONTROL 编辑]** （铅笔图标）。
-   * 将鼠标悬停在旋转集资产上，点按 **[!UICONTROL 选择]** （复选标记图标），然后点按工 **[!UICONTROL 具栏]** 上的编辑。
+   * 将鼠标悬停在旋转集资产上，然后点按&#x200B;**[!UICONTROL 编辑]**（铅笔图标）。
+   * 将指针悬停在旋转集资产上，点按&#x200B;**[!UICONTROL 选择]**（复选标记图标），然后点按工具栏上的&#x200B;**[!UICONTROL 编辑]**。
 
-   * 点按旋转集资产，然后点按工 **[!UICONTROL 具栏]** 上的编辑（铅笔图标）。
+   * 点按旋转集资产，然后点按工具栏上的&#x200B;**[!UICONTROL 编辑]**（铅笔图标）。
 
 1. 要编辑旋转集，请执行以下任意操作：
 
    * 要对图像重新排序，请将图像拖到新位置（选择重新排序图标以移动项目）。
    * 要按升序或降序对项目排序，请单击列标题。
-   * To add an asset or update an existing asset, click **[!UICONTROL Add Asset.]** 导航到资产，选择它，然 **[!UICONTROL 后点]** 按右上角附近的选择。
-如果通过将缩略图替换为其他图像来删除AEM用的缩略图图像，则仍会显示原始资产。
-   * 要删除资产，请选择该资产，然后单击或点按删 **[!UICONTROL 除资产。]**
+   * 要添加资产或更新现有资产，请单击&#x200B;**[!UICONTROL 添加资产。]** 导航到资产，选择它，然后点 **** 按右上角附近的选择。如果通过将缩略图替换为其他图像来删除AEM用的缩略图图像，则仍会显示原始资产。
+   * 要删除资产，请选择该资产，然后单击或点按删除资产。****
    * 要应用预设，请点按或单击预设图标，然后选择预设。
-   * To delete an entire Spin Set, navigate to the Spin Set, select it, and select **[!UICONTROL Delete]**
+   * 要删除整个旋转集，请导航到该旋转集，将其选中，然后选择&#x200B;**[!UICONTROL 删除]**
 
    >[!NOTE]
    >
-   >You can edit the images in a Spin Set by navigating to the set, tap **[!UICONTROL Set Members]** in the left rail, and then tap the Pencil icon on an individual asset to open the editing window.
+   >您可以通过导航到旋转集来编辑旋转集中的图像，点按左边栏中的&#x200B;**[!UICONTROL 设置成员]**，然后点按单个资产上的铅笔图标以打开编辑窗口。
 
 1. 完成编辑后，单击&#x200B;**[!UICONTROL 保存]**。
 
 ## 预览旋转集 {#previewing-spin-sets}
 
-See [Previewing Assets](/help/assets/previewing-assets.md).
+请参阅[预览资产](/help/assets/previewing-assets.md)。
 
 ## 发布旋转集 {#publishing-spin-sets}
 
