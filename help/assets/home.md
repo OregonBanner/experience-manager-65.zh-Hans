@@ -13,9 +13,9 @@ ht-degree: 12%
 
 # Assets 指南
 
-本指南涵盖所 [!DNL Experience Manager Assets] 有任务，如如何创建、管理、交付和优化数字资产。
+本指南涵盖所有[!DNL Experience Manager Assets]任务，如如何创建、管理、投放和优化数字资产。
 
-## 关键文 [!DNL Experience Manager] 章
+## 关键[!DNL Experience Manager]文章
 
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
@@ -40,9 +40,9 @@ ht-degree: 12%
 | [开发用户指南](/help/sites-developing/home.md) | 了解如何构建Experience Manager部署。 |
 | [管理用户指南](/help/managing/home.md) | 本指南介绍如何成功管理Experience Manager项目。 |
 | [移动用户指南](/help/mobile/home.md) | 本指南介绍如何为移动应用程序创建和管理内容。 |
-| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南向您展示如何与用户生成的内容共享 [!DNL Livefyre]。 |
+| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南向您介绍如何与[!DNL Livefyre]共享用户生成的内容。 |
 
-## 关键资 [!DNL Experience Manager] 源
+## 键[!DNL Experience Manager]资源
 
 * [Experience Manager视频Tutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
