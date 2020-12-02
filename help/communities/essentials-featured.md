@@ -18,14 +18,14 @@ ht-degree: 5%
 ---
 
 
-# 特色内容基础  {#featured-content-essentials}
+# 特色内容基础工具{#featured-content-essentials}
 
 本页提供处理特色内容的基本信息。
 
 与将帖子固定到论坛顶部相比，此功能允许在社区站点的任何位置突出显示内容。
 
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -51,7 +51,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>查看 <a href="featured.md">特色内容</a></td>
+   <td>请参阅<a href="featured.md">特色内容</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,4 +60,4 @@ ht-degree: 5%
 
 ### 文件库功能 {#file-library-function}
 
-包含“特色内容”功能的社 [区站点结构](functions.md#featured-content-function)，包括已配置的 `featured content` 组件。
+包含[特色内容函数](functions.md#featured-content-function)的社区站点结构包括已配置的`featured content`组件。
