@@ -17,7 +17,7 @@ ht-degree: 5%
 ---
 
 
-# 交互通信概述 {#interactive-communications-overview}
+# 交互通信概述{#interactive-communications-overview}
 
 本文包括概述、示例用例、创建工作流程以及交互通信和字母之间的区别。
 
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 交互通信集中化和管理安全、个性化和交互式通信的创建、组合和投放，如业务通信、文档、声明、利益声明、营销邮件、帐单和欢迎套件。
 
-## 关键功能 {#key-capabilities}
+## 关键功能{#key-capabilities}
 
 以下是交互通信的主要功能：
 
@@ -36,19 +36,19 @@ ht-degree: 5%
 * 代理用户界面显示交互通信的打印和Web预览
 * 拖放组件可快速构建印刷和Web渠道
 
-## Interactive Communication creation  {#interactive-communication-creation}
+## 交互通信创建{#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
 ### 工作流 {#workflow}
 
-要创建交互式通信，请准备好 [交互式](#buildingblocks) 通信的构建模块，然后完成以下步骤：
+要创建交互式通信，请准备好[构建块](#buildingblocks)用于交互式通信，然后完成以下步骤：
 
-1. 选择创 [建交互式通信](/help/forms/using/create-interactive-communication.md)。
+1. 选择[创建交互式通信](/help/forms/using/create-interactive-communication.md)。
 
-1. 指定表 [单渠道模](/help/forms/using/data-integration.md)型、预填服务 [以及打印和Web模板](/help/forms/using/web-channel-print-channel.md)。 您可以选择从打印渠道生成Web渠道。
+1. 指定[表单渠道模型](/help/forms/using/data-integration.md)、预填服务以及[打印和Web数据模板](/help/forms/using/web-channel-print-channel.md)。 您可以选择从打印渠道生成Web渠道。
 
-1. 使用 [拖放界面](/help/forms/using/introduction-interactive-communication-authoring.md)，根据需要添加文档片段、图像、组件以打印和Web渠道交互通信。
+1. 使用[拖放接口](/help/forms/using/introduction-interactive-communication-authoring.md)，根据需要添加文档片段、图像、组件以打印和Web渠道交互通信。
 1. 为插入的组件配置属性，如：
 
    1. [图像](/help/forms/using/create-interactive-communication.md#step2)
@@ -57,7 +57,7 @@ ht-degree: 5%
    1. [文档片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 预览打印和Web渠道，并根据需要编辑交互式通信。
-1. 代理使用代理UI准备 [交互式通信](/help/forms/using/prepare-send-interactive-communication.md) ，以将其发送到收件人/后处理。
+1. 代理使用代理UI来准备交互式通信[，以将其发送到收件人/后期进程。](/help/forms/using/prepare-send-interactive-communication.md)
 
 ### 构建基块 {#buildingblocks}
 
@@ -67,11 +67,11 @@ ht-degree: 5%
 * [印刷和Web渠道模板](/help/forms/using/web-channel-print-channel.md)
 * [文档片段](/help/forms/using/document-fragments.md)
 * 图像
-* [主题](/help/forms/using/themes.md) :Web渠道
+* [](/help/forms/using/themes.md) Web渠道
 
-## 交互通信与通信管理 {#interactive-communications-vs-correspondence-management}
+## 交互通信与通信管理{#interactive-communications-vs-correspondence-management}
 
-交互通信是创建客户通信的默认和推荐方法。 要继续使用在AEM 6.3Forms和AEM 6.2Forms中创建的字母，您需要安 [装一个兼容包](/help/forms/using/compatibility-package.md)。 以下是交互通信和字母功能的比较。
+交互通信是创建客户通信的默认和推荐方法。 要继续使用在AEM 6.3Forms和AEM 6.2Forms中创建的字母，您需要[安装兼容包](/help/forms/using/compatibility-package.md)。 以下是交互通信和字母功能的比较。
 
 <table>
  <tbody>
