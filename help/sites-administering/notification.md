@@ -22,34 +22,34 @@ ht-degree: 1%
 
 AEM向用户发送电子邮件通知：
 
-* 已订阅页面事件，例如修改或复制。 “通 [知收件箱](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) ”部分介绍如何订阅此类事件。
+* 已订阅页面事件，例如修改或复制。 [通知收件箱](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)部分介绍如何订阅此类事件。
 
 * 已订阅论坛事件。
-* 必须在工作流中执行一个步骤。 参加 [者步骤](/help/sites-developing/workflows-step-ref.md#participant-step) (Participant Step)部分介绍如何在工作流中触发电子邮件通知。
+* 必须在工作流中执行一个步骤。 [参与者步骤](/help/sites-developing/workflows-step-ref.md#participant-step)部分介绍如何在工作流中触发电子邮件通知。
 
 先决条件：
 
 * 用户需要在其用户档案中定义有效的电子邮件地址。
-* 需 **要正确配置Day** CQ Mail Service。
+* **Day CQ邮件服务**&#x200B;需要正确配置。
 
 当用户收到通知时，他会收到一封电子邮件，其语言在用户档案中定义。 每种语言都有其自己的可自定义的模板。 可以为新语言添加新的电子邮件模板。
 
 >[!NOTE]
 >
->When working with AEM there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
+>与AEM合作时，有多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
 
-## 配置邮件服务 {#configuring-the-mail-service}
+## 配置邮件服务{#configuring-the-mail-service}
 
-要使AEM能够发送电子邮件， **Day CQ邮件服务** 需要正确配置。 您可以在Web控制台中视图配置。 When working with AEM there are several methods of managing the configuration settings for such services; see [Configuring OSGi](/help/sites-deploying/configuring-osgi.md) for more details and the recommended practices.
+要使AEM能够发送电子邮件，**Day CQ邮件服务**&#x200B;需要正确配置。 您可以在Web控制台中视图配置。 与AEM合作时，有多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
 
 以下约束适用：
 
-* SMTP服 **务器端口** 必须为25或更高。
+* **SMTP服务器端口**&#x200B;必须为25或更高。
 
-* SMTP服 **务器主机名** 不能为空。
-* “ **发件人”地址** 不得为空。
+* **SMTP服务器主机名**&#x200B;不能为空。
+* **&quot;From&quot;地址**&#x200B;不能为空。
 
-为了帮助您调试Day CQ邮 **件服务的问题**，您可以观看服务的日志：
+为了帮助您调试&#x200B;**Day CQ邮件服务**&#x200B;的问题，您可以观看服务日志：
 
 `com.day.cq.mailer.DefaultMailService`
 
@@ -57,47 +57,47 @@ AEM向用户发送电子邮件通知：
 
 ![chlimage_1-276](assets/chlimage_1-276.png)
 
-## 配置电子邮件通知渠道 {#configuring-the-email-notification-channel}
+## 配置电子邮件通知渠道{#configuring-the-email-notification-channel}
 
-当您订阅页面或论坛事件通知时，默认情况下会将发件人电子邮件地址设 `no-reply@acme.com` 置为。 您可以通过在Web控制台中配 **置通知电子邮件渠道** ，来更改此值。
+当您订阅页面或论坛事件通知时，默认情况下，发件人电子邮件地址将设置为`no-reply@acme.com`。 您可以通过在Web控制台中配置&#x200B;**通知电子邮件渠道**&#x200B;服务来更改此值。
 
-要配置发件人电子邮件地址，请向存储 `sling:OsgiConfig` 库添加节点。 请按照以下过程，直接使用CRXDE Lite添加节点：
+要配置发件人电子邮件地址，请向存储库添加`sling:OsgiConfig`节点。 请按照以下过程，直接使用CRXDE Lite添加节点：
 
-1. 在CRXDE Lite中，在应用程序文件夹下 `config` 添加一个名为的文件夹。
+1. 在CRXDE Lite中，在应用程序文件夹下添加一个名为`config`的文件夹。
 1. 在config文件夹中，添加一个名为：
 
-   `com.day.cq.wcm.notification.email.impl.EmailChannel` 类型 `sling:OsgiConfig`
+   `com.day.cq.wcm.notification.email.impl.EmailChannel` 类型  `sling:OsgiConfig`
 
-1. 向名 `String` 为的节点添加属性 `email.from`。 对于该值，指定要使用的电子邮件地址。
+1. 向名为`email.from`的节点添加`String`属性。 对于该值，指定要使用的电子邮件地址。
 
-1. 单击“ **全部保存**”。
+1. 单击&#x200B;**保存全部**。
 
 请按照以下过程定义内容包源文件夹中的节点：
 
-1. 在您的 `jcr_root/apps/*app_name*/config folder`文件中，创建一个名为 `com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
+1. 在`jcr_root/apps/*app_name*/config folder`中，创建一个名为`com.day.cq.wcm.notification.email.impl.EmailChannel.xml`的文件
 
 1. 添加以下XML以表示节点：
 
    `<?xml version="1.0" encoding="UTF-8"?> <jcr:root xmlns:sling="https://sling.apache.org/jcr/sling/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig" email.from="name@server.com"/>`
-1. 将属性()的 `email.from` 值替换 `name@server.com`为您的电子邮件地址。
+1. 将`email.from`属性(`name@server.com`)的值替换为您的电子邮件地址。
 
 1. 保存文件。
 
-## 配置工作流电子邮件通知服务 {#configuring-the-workflow-email-notification-service}
+## 配置工作流电子邮件通知服务{#configuring-the-workflow-email-notification-service}
 
-当您收到工作流电子邮件通知时，发件人电子邮件地址和主机URL前缀均设置为默认值。 您可以通过在Web控制台中配 **置Day CQ Workflow电子邮件通知服** 务来更改这些值。 如果这样做，建议保留存储库中的更改。
+当您收到工作流电子邮件通知时，发件人电子邮件地址和主机URL前缀均设置为默认值。 您可以通过在Web控制台中配置&#x200B;**Day CQ Workflow电子邮件通知服务**&#x200B;来更改这些值。 如果这样做，建议保留存储库中的更改。
 
 默认配置在Web控制台中如下所示：
 
 ![chlimage_1-277](assets/chlimage_1-277.png)
 
-### 页面通知的电子邮件模板 {#email-templates-for-page-notification}
+### 页面通知的电子邮件模板{#email-templates-for-page-notification}
 
 页面通知的电子邮件模板位于以下位置：
 
 `/etc/notification/email/default/com.day.cq.wcm.core.page`
 
-默认的英语模 `en.txt`板()定义如下：
+默认的英语模板(`en.txt`)定义如下：
 
 ```xml
 subject=[CQ Page Event Notification]: Page Event
@@ -116,7 +116,7 @@ footer=\n \
 This is an automatically generated message. Please do not reply.
 ```
 
-#### 为页面通知自定义电子邮件模板 {#customizing-email-templates-for-page-notification}
+#### 自定义页面通知的电子邮件模板{#customizing-email-templates-for-page-notification}
 
 为页面通知自定义英语电子邮件模板：
 
@@ -145,19 +145,19 @@ This is an automatically generated message. Please do not reply.
 * `${userId}`，触发事件的用户的ID。
 * `${modifications}`，以以下格式描述页面事件类型和页面路径：
 
-   &lt;page事件类型> => &lt;page path>
+   &lt;page event=&quot;&quot; type=&quot;&quot;> =>  &lt;page path=&quot;&quot;>
 
    例如：
 
    PageModified => /content/geometrixx/cn/products
 
-### 论坛通知的电子邮件模板 {#email-templates-for-forum-notification}
+### 论坛通知{#email-templates-for-forum-notification}的电子邮件模板
 
 论坛通知的电子邮件模板位于：
 
 `/etc/notification/email/default/com.day.cq.collab.forum`
 
-默认的英语模 `en.txt`板()定义如下：
+默认的英语模板(`en.txt`)定义如下：
 
 ```xml
 subject=[CQ Forum Notification]
@@ -174,7 +174,7 @@ footer=\n \
 This is an automatically generated message. Please do not reply.
 ```
 
-#### 为论坛通知自定义电子邮件模板 {#customizing-email-templates-for-forum-notification}
+#### 自定义论坛通知的电子邮件模板{#customizing-email-templates-for-forum-notification}
 
 要自定义论坛通知的英语电子邮件模板，请执行以下操作：
 
@@ -194,7 +194,7 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-其中 `<text_x>` 可以是静态文本和动态字符串变量的混合。
+其中`<text_x>`可以是静态文本和动态字符串变量的混合。
 
 以下变量可在论坛通知的电子邮件模板中使用：
 
@@ -202,7 +202,7 @@ This is an automatically generated message. Please do not reply.
 
 * `${forum.path}`, the path to the forum page.
 
-### 工作流通知的电子邮件模板 {#email-templates-for-workflow-notification}
+### 工作流通知{#email-templates-for-workflow-notification}的电子邮件模板
 
 工作流通知的电子邮件模板（英语）位于：
 
@@ -229,7 +229,7 @@ View the overview in your ${host.prefix}/aem/inbox\n \
 This is an automatically generated message. Please do not reply.
 ```
 
-#### 为工作流通知自定义电子邮件模板 {#customizing-email-templates-for-workflow-notification}
+#### 自定义工作流通知的电子邮件模板{#customizing-email-templates-for-workflow-notification}
 
 要自定义工作流事件通知的英语电子邮件模板，请执行以下操作：
 
@@ -251,11 +251,11 @@ subject=<text_1>
 
 >[!NOTE]
 >
->其中 `<text_x>` 可以是静态文本和动态字符串变量的混合。 项目的每行 `<text_x>` 都需要用反斜杠( `\`)结束，但最后一个实例除外，因为缺少反斜杠表示字符串变量 `<text_x>` 的结尾。
+>其中`<text_x>`可以是静态文本和动态字符串变量的混合。 `<text_x>`项的每行都需要用反斜杠(`\`)结束，但最后一个实例除外，因为缺少反斜杠表示`<text_x>`字符串变量的结尾。
 >
->有关模板格式的更多信息，请 [参阅Properties.load()方法的javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) 。
+>有关模板格式的详细信息，请参阅Properties.load()](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-)方法的[javadocs。
 
-该方法 `${payload.path.open}` 显示工作项的有效负荷路径。 例如，对于站点中的页面， `payload.path.open` 则类似于 `/bin/wcmcommand?cmd=open&path=…`。;这没有服务器名称，因此模板会优先使用它 `${host.prefix}`
+方法`${payload.path.open}`显示工作项的有效负荷路径。 例如，对于站点中的页面，则`payload.path.open`将类似于`/bin/wcmcommand?cmd=open&path=…`。;这是没有服务器名称的，因此模板会用`${host.prefix}`预先添加此名称。
 
 可以在电子邮件模板中使用以下变量：
 
@@ -287,11 +287,11 @@ subject=<text_1>
 * `${payload.path}`，有效负荷的路径
 * `${host.prefix}`，主机前缀，例如：http://localhost:4502
 
-### 为新语言添加电子邮件模板 {#adding-an-email-template-for-a-new-language}
+### 为新语言{#adding-an-email-template-for-a-new-language}添加电子邮件模板
 
 为新语言添加模板：
 
-1. 在CRXDE中，添加以下文 `<language-code>.txt` 件：
+1. 在CRXDE中，添加以下文件`<language-code>.txt`:
 
    * `/etc/notification/email/default/com.day.cq.wcm.core.page` :适用于页面通知
    * `/etc/notification/email/default/com.day.cq.collab.forum` :论坛通知
@@ -302,13 +302,13 @@ subject=<text_1>
 
 >[!NOTE]
 >
->用 `<language-code>` 作电子邮件模板文件名的代码必须是由AEM识别的小写字母语言代码。 对于语言代码，AEM依赖于ISO-639-1。
+>用作电子邮件模板文件名的`<language-code>`必须是由AEM识别的小写字母语言代码。 对于语言代码，AEM依赖于ISO-639-1。
 
-## 配置AEM Assets电子邮件通知 {#assetsconfig}
+## 配置AEM Assets电子邮件通知{#assetsconfig}
 
 当AEM Assets的集合被共享或取消共享时，用户可以收到AEM发送的电子邮件通知。 要配置电子邮件通知，请按照以下步骤操作。
 
-1. 按照配置邮件服务中的上述 [说明配置电子邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service)。
-1. 以管理员身份登录AEM。 单击 **工具** >操 **作** > Web **控制台** ，打开Web控制台配置。
-1. 编辑 **Day CQ DAM资源集合Servlet**。 选择“ **发送电子邮件**”。 单击&#x200B;**保存**。
+1. 按照上面的[配置邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service)中所述配置电子邮件服务。
+1. 以管理员身份登录AEM。 单击&#x200B;**工具** > **操作** > **Web控制台**&#x200B;以打开Web控制台配置。
+1. 编辑&#x200B;**Day CQ DAM资源集合Servlet**。 选择&#x200B;**发送电子邮件**。 单击&#x200B;**保存**。
 
