@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 动态填充下拉列表 {#dynamically-populating-drop-down-lists}
+# 动态填充下拉列表{#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
@@ -27,9 +27,9 @@ ht-degree: 0%
 * [创建自适应表单](../../forms/using/creating-adaptive-form.md)
 * [创作自适应表单](../../forms/using/introduction-forms-authoring.md)
 
-## 动态填充下拉列表的过程 {#procedure-to-dynamically-populate-drop-down-lists}
+## 动态填充下拉列表{#procedure-to-dynamically-populate-drop-down-lists}的过程
 
-请考虑您要根据在“国 **家** ”下拉列表中选择的值填充“状 **态** ”下拉列表的方案。 如果您在“国家／地 **区** ”下拉列表中选择 **了** “澳大利亚”，则“州”下拉列表将显示澳大利亚内的州。 以下过程介绍如何完成此任务。
+请考虑一种情况，您希望根据您在&#x200B;**国家／地区**&#x200B;下拉列表中选择的值填充&#x200B;**状态**&#x200B;下拉列表。 如果在&#x200B;**Country**&#x200B;下拉列表中选择Australia，则&#x200B;**State**&#x200B;下拉列表将显示Australia内的状态。 以下过程介绍如何完成此任务。
 
 1. 使用以下模块创建项目：
 
@@ -147,7 +147,7 @@ ht-degree: 0%
    }
    ```
 
-1. 在应用程序中的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节 `sling:resourceType` 点的参数与servlet指向的参数相同(/apps/populatedropdown)。
+1. 在应用程序中的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节点的`sling:resourceType`参数与servlet指向的参数(/apps/populatedropdown)相同。
 
    ![创建下拉节点](assets/dropdown-node.png)
 
@@ -156,7 +156,7 @@ ht-degree: 0%
 
    添加要在国家／地区列表中显示的国家／地区名称。 在“国家／地区”列表中，根据“国家／地区”列表中的国家／地区名称添加一个脚本以填充该脚本。
 
-   ![添加国家／地区](assets/country-dropdown.png)![名称添加脚本以填充国家／地区](assets/state-dropdown.png)![名和国家／地区名称下拉列表以收集](assets/2dropdowns.png)
+   ![添加国家](assets/country-dropdown.png) ![/地区名称添加脚本以填](assets/state-dropdown.png) ![充国家／地区名称和国家／地区下拉列表以收集](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
