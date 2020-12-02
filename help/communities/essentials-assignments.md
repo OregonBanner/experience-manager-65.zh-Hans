@@ -21,11 +21,11 @@ ht-degree: 11%
 
 # Assignments Essentials {#assignments-essentials}
 
-阅读以了解使用Enablement Community站点的任务功能的基 [本信息](/help/communities/overview.md#enablement-community) 。
+阅读以了解使用[启用社区](/help/communities/overview.md#enablement-community)站点的任务功能的基本信息。
 
 分配功能是将支持资源和学习路径分配给支持社区的成员。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -51,12 +51,12 @@ ht-degree: 11%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>查看 <a href="/help/communities/assignments.md">任务功能</a></td>
+   <td>请参阅<a href="/help/communities/assignments.md">任务功能</a></td>
   </tr>
  </tbody>
 </table>
 
-### 完成和成功状态 {#completion-and-success-status}
+### 完成和成功状态{#completion-and-success-status}
 
 “工作总揽”的报告和状态横幅中使用“完成”和“成功”状态。
 
@@ -82,11 +82,11 @@ ht-degree: 11%
 | 完成 | Pass |
 | 完成 | 失败 |
 
-## 服务器端必备工具 {#essentials-for-server-side}
+## 服务器端{#essentials-for-server-side}的必备工具
 
 ### 指定任务功能 {#assignments-function}
 
-包含“分配”功能的社区 [站点结构](/help/communities/functions.md#assignments-function)，包括已配置的 ` [assignments](/help/communities/assignments.md)` 组件。
+包含[分配函数](/help/communities/functions.md#assignments-function)的社区站点结构包括已配置的` [assignments](/help/communities/assignments.md)`组件。
 
 ### 参考API {#reference-apis}
 
@@ -94,5 +94,5 @@ ht-degree: 11%
 
 * [报告API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [报告AnalyticsAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
+* [报告分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
 
