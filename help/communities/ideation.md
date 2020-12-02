@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '111'
+ht-degree: 3%
 
 ---
 
 
 # Ideation Essentials {#ideation-essentials}
 
-本页提供了使用构思功能的基本信息，该功能与论坛类似，但能保存为草稿，并具有更协作的感觉。
+本页提供使用构思功能的基本信息，该功能与论坛类似，但能另存为草稿，并具有更协作的感觉。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -45,7 +48,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>查看 <a href="ideation-feature.md">构思功能</a></td>
+   <td>请参阅<a href="ideation-feature.md">构思功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -54,4 +57,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 构思功能 {#ideation-function}
 
-包括构思功能的社区站点结 [构](functions.md#ideation-function)，包括配置的组 `ideation` 件。
+包含[标识函数](functions.md#ideation-function)的社区站点结构包括配置的`ideation`组件。
