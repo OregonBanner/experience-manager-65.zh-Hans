@@ -18,59 +18,59 @@ ht-degree: 2%
 ---
 
 
-# 编辑应用程序元数据 {#editing-app-metadata}
+# 编辑应用程序元数据{#editing-app-metadata}
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md).
 
-“管 **理应用程序** ”拼贴和“管理应用程序”页面提供了一种视图和编辑应用程序元数据的方法。 应用程序元数据是向供应商商店发布应用程序的必需详细信息。 这可能包括常见元数据、iOS元数据和屏幕截图。 有关常见 [和iOS元数据的更多详细信息](/help/mobile/phonegap-app-details-tile.md) ，请参阅管理应用程序拼贴。
+**管理应用程序**&#x200B;拼贴和“管理应用程序”页面提供了视图和编辑应用程序元数据的方法。 应用程序元数据是向供应商商店发布应用程序的必需详细信息。 这可能包括常见元数据、iOS元数据和屏幕截图。 有关常见和iOS元数据的更多详细信息，请参阅[管理应用程序拼贴](/help/mobile/phonegap-app-details-tile.md)。
 
-## 编辑应用程序数据 {#editing-the-app-data}
+## 编辑应用程序数据{#editing-the-app-data}
 
 要编辑应用程序的元数据，请执行以下操作：
 
 1. 导航到应用程序的仪表板页。
 
-   ![chlimage_1-29](assets/chlimage_1-29.png)
+   ![chlimage_1-21](assets/chlimage_1-29.png)
 
-1. 要视图或编辑详细信息，请单击“...” 在“管理应用程序”拼 **贴的右下角** 。
+1. 要视图或编辑详细信息，请单击“...” 在&#x200B;**管理应用程序**&#x200B;拼贴的右下角。
 
 1. 在以下图所示的任意五个可用选项卡中输入或视图详细信息。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-## 编辑常见和IOS元数据 {#editing-common-and-ios-metadata}
+## 编辑常见和IOS元数据{#editing-common-and-ios-metadata}
 
 您可以编辑常见和IOS元数据：
 
-* 从应用程 **序说明** 页面中选择“高级”选项卡。
+* 从应用程序说明页面中选择&#x200B;**高级**&#x200B;选项卡。
 * 编辑或视图常见和IOS元数据。 有关更多详细信息，请参阅下图。
 
 ![chlimage_1-31](assets/chlimage_1-31.png) ![chlimage_1-32](assets/chlimage_1-32.png)
 
-## 添加和删除屏幕截图 {#add-and-remove-screenshots}
+## 添加和删除截屏{#add-and-remove-screenshots}
 
-您可以将应用程序屏幕截图包含到元数据汇总中。 某些供应商在将任何应用程序提交到其App Store时，都需要准确的屏幕截图。 资产中必须已存在这些图像。 请参 [阅资产选取器](../assets/search-assets.md#assetpicker) ，以上传屏幕截图。
+您可以将应用程序屏幕截图包含到元数据汇总中。 某些供应商在将任何应用程序提交到其App Store时，都需要准确的屏幕截图。 资产中必须已存在这些图像。 请参阅[资产选取器](../assets/search-assets.md#assetpicker)以上传屏幕截图。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-### 添加屏幕截图 {#add-screenshots}
+### 添加截屏{#add-screenshots}
 
 要将资产添加为屏幕截图，请执行以下操作：
 
-1. 在“管理应用程序”页 **面的编辑模式** ，单击“添加”（加号图标）。
-1. 选择资产，然后单 **击选** 择以添加资产。
+1. 在&#x200B;**管理应用程序**&#x200B;页面的编辑模式下，单击添加（加号图标）。
+1. 选择资产并单击&#x200B;**选择**&#x200B;以添加资产。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. 选择资产，然后单 **击选** 择以添加资产。
+1. 选择资产并单击&#x200B;**选择**&#x200B;以添加资产。
 
 >[!NOTE]
 >
 >屏幕截图必须与目标设备的屏幕分辨率匹配。
 
-### 删除屏幕截图 {#delete-screenshots}
+### 删除截屏{#delete-screenshots}
 
 删除屏幕截图：
 
