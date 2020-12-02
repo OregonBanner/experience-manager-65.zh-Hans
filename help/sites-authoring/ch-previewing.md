@@ -45,11 +45,11 @@ ContextHub 工具栏在“预览”模式下可用。该工具栏仅在创作实
 
    ![](do-not-localize/screen_shot_2018-03-23at093621.png)
 
-## UI 模块功能 {#ui-module-features}
+## UI 模块功能  {#ui-module-features}
 
 每个 UI 模块都提供了不同的功能集，但以下类型的功能是通用的。由于 UI 模块是可扩展的，因此您的开发人员可以根据需要实现其他功能。
 
-### 工具栏内容 {#toolbar-content}
+### 工具栏内容  {#toolbar-content}
 
 UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的数据。UI模块使用图标和标题来标识自己。
 
@@ -65,7 +65,7 @@ UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的�
 
 模块的弹出覆盖窗口可以包含表单元素，使您能够更改 ContextHub 存储区中的数据。如果页面内容由存储区数据决定，您可以使用表单并观察页面内容的更改。
 
-### 全屏模式 {#fullscreen-mode}
+### 全屏模式  {#fullscreen-mode}
 
 弹出覆盖窗口可以包含一个图标，单击或点按该图标会展开弹出窗口内容以覆盖整个浏览器窗口或屏幕。
 
