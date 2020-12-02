@@ -1,8 +1,8 @@
 ---
 title: 工具控制台
 seo-title: 工具控制台
-description: 了解整个AEM中的不同工具控制台。
-seo-description: 了解整个AEM中的不同工具控制台。
+description: 了解整个 AEM 中的不同工具控制台。
+seo-description: 了解整个 AEM 中的不同工具控制台。
 uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,16 @@ discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 translation-type: tm+mt
 source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
+workflow-type: tm+mt
+source-wordcount: '618'
+ht-degree: 44%
 
 ---
 
 
 # 工具控制台{#tools-consoles}
 
-The **Tools** consoles provide access to a number of specialized tools that help you administer your websites, digital assets and other aspects of your content repository. 工具控制台目前有两种类 **型** ，具体取决于您所使用的UI:
+**工具**&#x200B;控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。**工具**&#x200B;控制台目前有两种不同的版本，具体取决于您所使用的UI:
 
 * [工具——触屏优化UI](#tools-touch-optimized-ui)
 * [工具——经典UI](#tools-classic-ui)
@@ -27,7 +30,7 @@ The **Tools** consoles provide access to a number of specialized tools that help
 
 >[!NOTE]
 >
->可以从全局导航的“工 [具面板”访问这些控制台](/help/sites-authoring/basic-handling.md#tools-panel)。
+>可以从[“全局导航”的“工具”面板](/help/sites-authoring/basic-handling.md#tools-panel)访问这些控制台。
 
 >[!NOTE]
 >
@@ -37,7 +40,7 @@ The **Tools** consoles provide access to a number of specialized tools that help
  <tbody>
   <tr>
    <td>区域</td>
-   <td>Option</td>
+   <td>选项</td>
   </tr>
   <tr>
    <td>常规</td>
@@ -96,7 +99,7 @@ The **Tools** consoles provide access to a number of specialized tools that help
    <td>失败</td>
   </tr>
   <tr>
-   <td>操作</td>
+   <td>运营</td>
    <td> </td>
   </tr>
   <tr>
@@ -379,8 +382,8 @@ The **Tools** consoles provide access to a number of specialized tools that help
    <td>Client Context表示动态组合的用户数据集合。 此处保留默认和营销云配置。<br /> </td>
   </tr>
   <tr>
-   <td>云服务配置<br /> </td>
-   <td>保存与与Adobe Marketing cloud集成相关的配置。</td>
+   <td>Cloud Services配置<br /> </td>
+   <td>保存与集成Adobe Marketing Cloud相关的配置。</td>
   </tr>
   <tr>
    <td>云设置<br /> </td>
@@ -392,15 +395,15 @@ The **Tools** consoles provide access to a number of specialized tools that help
   </tr>
   <tr>
    <td>DAM </td>
-   <td>允许访问各种选项。</td>
+   <td>提供对各种选项的访问。</td>
   </tr>
   <tr>
    <td>功能板</td>
-   <td>允许您创建报告仪表板；这为定义显示统一数据的页面提供了一种可自定义的方式。</td>
+   <td>允许您创建报告仪表板;这为定义显示统一数据的页面提供了一种可自定义的方式。</td>
   </tr>
   <tr>
    <td>自定义文档</td>
-   <td>在扩展文档和联机帮助时使用。</td>
+   <td>用于扩展文档和联机帮助。</td>
   </tr>
   <tr>
    <td>fd</td>
@@ -408,11 +411,11 @@ The **Tools** consoles provide access to a number of specialized tools that help
   </tr>
   <tr>
    <td>表单提交</td>
-   <td>保存收到的表单提交的列表。</td>
+   <td>保留收到的表单提交的列表。</td>
   </tr>
   <tr>
    <td>导入器 </td>
-   <td>允许访问各种选项。</td>
+   <td>提供对各种选项的访问。</td>
   </tr>
   <tr>
    <td>外部链接检查程序</td>
@@ -420,11 +423,11 @@ The **Tools** consoles provide access to a number of specialized tools that help
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>帮助您创建为移动设备设计的网站。</td>
+   <td>帮助您创建专为移动设备设计的网站。</td>
   </tr>
   <tr>
    <td>包</td>
-   <td>指向包管理器的替代链接，其中显示已为AEM WCM加载的包。 与CRX的包管理器中显示的信息类似。</td>
+   <td>指向“包管理器”的替代链接，其中显示已为AEM WCM加载的包。 与CRX的包管理器中显示的信息相似。</td>
   </tr>
   <tr>
    <td>复制——复制代理</td>
@@ -439,19 +442,19 @@ The **Tools** consoles provide access to a number of specialized tools that help
    <td>使用基架，您可以创建一个表单（即基架），其中包含的字段反映您要用于页面的结构，然后使用此表单轻松创建基于此结构的页面。</td>
   </tr>
   <tr>
-   <td>安全性——自助服务配置 </td>
-   <td>允许您配置用户在创建帐户或重置口令时自动收到的电子邮件，以及确认已重置的口令。</td>
+   <td>安全性——自助配置 </td>
+   <td>允许您配置用户在创建帐户或重置口令时自动收到的电子邮件以及确认已重置的口令。</td>
   </tr>
   <tr>
    <td>分段</td>
-   <td>站点访客在访问站点时的兴趣和目标各不相同。了解这些目标并满足预期是在线营销活动的一个重要成功因素。Segmentation helps to achieve this by analyzing and characterizing a visitor's details.<br /> </td>
+   <td>站点访客在访问站点时的兴趣和目标各不相同。了解这些目标并满足预期是在线营销活动的一个重要成功因素。分段通过分析和表征访客的详细信息来帮助实现此目的。<br /> </td>
   </tr>
   <tr>
    <td>租户</td>
    <td>没有与此条目相关的活动功能。</td>
   </tr>
   <tr>
-   <td>trustore</td>
+   <td>信任库</td>
    <td>没有与此条目相关的活动功能。</td>
   </tr>
   <tr>
@@ -460,7 +463,7 @@ The **Tools** consoles provide access to a number of specialized tools that help
   </tr>
   <tr>
    <td>工作流</td>
-   <td>工作流控制页面或数字资产上支持任何编辑流程的一系列操作。</td>
+   <td>工作流可以控制页面或数字资产上支持任何编辑流程的一系列操作。</td>
   </tr>
  </tbody>
 </table>
