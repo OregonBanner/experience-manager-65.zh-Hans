@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 将Maven用于社区 {#using-maven-for-communities}
+# 使用Maven for Communities {#using-maven-for-communities}
 
 ## 概述 {#overview}
 
@@ -31,7 +31,7 @@ AEM Communities文件本节除了：
 * AEM [Communities API jar](#communities-api-jar-artifact)
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
-## 社区API Jar对象 {#communities-api-jar-artifact}
+## Communities API Jar对象{#communities-api-jar-artifact}
 
 以下是AEM CommunitiesAPI jar的GAV示例：
 
@@ -47,9 +47,9 @@ AEM Communities文件本节除了：
 确保指定的版本与为AEM Communities安装的Communities包版本相对应。 要验证已安装的版本号，请执行以下操作：
 
 1. 以管理权限登录。
-1. 浏览至 [包管理器](../../help/sites-administering/package-manager.md)。 例如， [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+1. 浏览至[包管理器](../../help/sites-administering/package-manager.md)。 例如，[http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-1. 找到包： `cq-socialcommunities-pkg-1.x.xxx`
+1. 找到包：`cq-socialcommunities-pkg-1.x.xxx`
 1. 从包名称中提取版本：
    * AEM 6.3的第一个版本是版本1.11.170。
    * 功能包版本为1.12.xxx。
@@ -58,9 +58,9 @@ AEM Communities文件本节除了：
 >
 >建议您与最新的Communities版本保持同步。
 >
->访问最 [新版本](deploy-communities.md#latest-releases) ，确定最新版本。
+>访问[最新版本](deploy-communities.md#latest-releases)部分，确定最新版本。
 
-## Maven依赖关系示例 {#maven-dependency-example}
+## Maven依赖关系示例{#maven-dependency-example}
 
 必须在Uber API jar之前指定Communities API jar。
 
