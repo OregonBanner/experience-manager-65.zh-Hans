@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Adobe Experience Manager数据保护和数据隐私法规的就绪性 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager数据保护和数据隐私法规准备情况{#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->有关Adobe对隐私问题的回应以及这对Adobe客户意味着什么的更多信息，请参 [阅Adobe隐私中心](https://www.adobe.com/privacy.html)。
+>有关Adobe对隐私问题的回应以及这对您作为Adobe客户意味着什么的详细信息，请参阅[Adobe隐私中心](https://www.adobe.com/privacy.html)。
 
 Adobe提供文档和过程（如果有API），让客户隐私管理员或AEM管理员处理数据保护和数据隐私请求并帮助客户遵守这些规定。 记录的过程将允许客户手动或通过调用API（如果可用）从外部门户或服务执行法规要求。
 
@@ -39,7 +39,7 @@ Adobe提供文档和过程（如果有API），让客户隐私管理员或AEM管
 >
 >来自其他Adobe点播服务的数据，连同任何相关的隐私请求，都需要对该服务采取相应的操作。
 >
->有关详细信息，请 [参阅Adobe隐私中心](https://www.adobe.com/privacy.html)。
+>有关详细信息，请参阅[Adobe的隐私中心](https://www.adobe.com/privacy.html)。
 
 ## 简介 {#introduction}
 
@@ -87,31 +87,31 @@ Adobe正在提供处理与Adobe Experience Manager的访问、删除和选择退
 
 ![数据保护和隐私](assets/data-protection-and-privacy-01.png)
 
-## Adobe Experience Manager和监管就绪性 {#aem-and-regulatory-readiness}
+## Adobe Experience Manager和监管就绪性{#aem-and-regulatory-readiness}
 
 有关AEM产品区域的法规文档，请参阅以下各节。
 
-## AEM基础 {#aem-foundation}
+## AEM Foundation {#aem-foundation}
 
-请参 [阅处理AEM Foundation的数据保护和隐私请求](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
+请参阅[处理AEM Foundation的数据保护和隐私请求](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)。
 
-## AEM选择加入聚合使用统计信息收集 {#aem-opting-into-aggregate-usage-statistics-collection}
+## AEM选择加入聚合使用统计信息集{#aem-opting-into-aggregate-usage-statistics-collection}
 
-请参 [阅汇总使用情况统计信息收集](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)。
+请参阅[汇总的使用情况统计信息集合](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)。
 
 ## AEM Sites {#aem-sites}
 
-请参 [阅AEM Sites-数据保护和隐私就绪性。](/help/sites-administering/gdpr-compliance-sites.md)
+请参阅[AEM Sites-数据保护和隐私就绪。](/help/sites-administering/gdpr-compliance-sites.md)
 
 ## AEM Commerce {#aem-commerce}
 
-请参 [阅AEM商务——数据保护和隐私就绪](/help/sites-administering/gdpr-compliance-commerce.md)。
+请参阅[AEM Commerce - Data Protection and Privacy Readiness](/help/sites-administering/gdpr-compliance-commerce.md)。
 
 ## AEM Mobile {#aem-mobile}
 
-请参 [阅AEM Mobile-数据保护和隐私就绪](/help/mobile/aem-mobile-gdpr-compliance.md)。
+请参阅[AEM Mobile-数据保护和隐私就绪](/help/mobile/aem-mobile-gdpr-compliance.md)。
 
-## AEM与Adobe Target和Adobe Analytics集成 {#aem-integration-with-adobe-target-adobe-analytics}
+## AEM与Adobe Target和Adobe Analytics集成{#aem-integration-with-adobe-target-adobe-analytics}
 
 Adobe Experience Manager的这些集成包括数据保护和隐私（例如，GDPR或CCPA）就绪服务。 Adobe Target或Adobe Analytics的个人数据不存储在与集成相关的AEM中。
 有关更多信息，请参阅：
@@ -122,7 +122,7 @@ Adobe Experience Manager的这些集成包括数据保护和隐私（例如，GD
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities赋予数据主体数据可移植性、访问权和通过开箱即用 [的API被遗忘的权利](/help/communities/user-ugc-management-service.md)。 这些API支持批量删除和批量导出用户生成的内容，并禁用通过其可授权ID标识的用户帐户。 但是，通过删除CRXDE Lite中的用户节点，可以实现用户帐户的永久删除，这就满足了从系统中轻松退出的需要。
+AEM Communities通过[现成API](/help/communities/user-ugc-management-service.md)赋予数据主体数据便携性、访问权和被遗忘权。 这些API支持批量删除和批量导出用户生成的内容，并禁用通过其可授权ID标识的用户帐户。 但是，通过删除CRXDE Lite中的用户节点，可以实现用户帐户的永久删除，这就满足了从系统中轻松退出的需要。
 
 此外，AEM Communities优惠隐私的设计是因为它的“批量审核”控制台，允许特权会员查找和删除用户的贡献和详细信息。 会员管理控制台允许限制到禁止参与者的程度。 此外，它授权数据主体删除由它们创作的稿件。
 
