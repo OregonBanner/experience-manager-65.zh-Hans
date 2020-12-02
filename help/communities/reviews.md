@@ -18,33 +18,33 @@ ht-degree: 2%
 ---
 
 
-# 使用审阅和审阅摘要（显示） {#using-reviews-and-reviews-summary-display}
+# 使用审阅和审阅摘要（显示）{#using-reviews-and-reviews-summary-display}
 
-该组 `Reviews` 件是可供使用 [的评](comments.md) 论 [和评级组](rating.md) 件的组合。
+`Reviews`组件是[Comments](comments.md)和[Rating](rating.md)组件的组合，随时可用。
 
-组 `Reviews Summary (Display)` 件提供组件的活动或关闭实例的摘要，以 `Reviews` 便在站点的其他位置显示。
+`Reviews Summary (Display)`组件提供`Reviews`组件的活动或关闭实例的摘要，用于显示站点的其他位置。
 
 >[!NOTE]
 >
 >不支持匿名发布审阅。 站点访客必须注册（成为会员）并登录才能参加。 已签名的访客可随时更新其审阅。
 
-## Adding a Review to a Page {#adding-a-review-to-a-page}
+## 向页面{#adding-a-review-to-a-page}添加评论
 
-要在创作 `Reviews` 模式下将组件添加到页面，请使用组件浏览器 `Communities / Reviews` 在页面上查找并将其拖动到相应位置，如相对于要供用户查看的功能的位置。
+要在创作模式下将`Reviews`组件添加到页面，请使用组件浏览器找到`Communities / Reviews`并将它拖动到页面上的位置，如相对于要供用户查看的功能的位置。
 
-有关必要的信息，请访 [问社区组件基础](basics.md)。
+有关必要的信息，请访问[社区组件基础知识](basics.md)。
 
-当包 [含所需的客户端库](reviews-basics.md#essentials-for-client-side) ，组件的显示 `Reviews` 方式即为此。
+当包含[必需的客户端库](reviews-basics.md#essentials-for-client-side)时，将显示`Reviews`组件。
 
 ![创建审阅](assets/create-review.png)
 
-## 配置审阅 {#configuring-reviews}
+## 配置审阅{#configuring-reviews}
 
-选择要访问的 `Reviews` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
+选择要访问的已放置`Reviews`组件，然后选择打开编辑对话框的`Configure`图标。
 
 ![configure-new](assets/configure-new.png)
 
-在“允 **[!UICONTROL 许的评级]** ”选项卡下，指定要向成员显示的评级的完整列表。 第一个评级应为总体／一般评级，因为它是提供组件平均评级的评 `Review Summary (Display)` 级。 默认配置中的后两个评级应被赋予不同的标题，而不是“Subrating 1”或“Subrating 2”。
+在&#x200B;**[!UICONTROL 允许评级]**&#x200B;选项卡下，指定要向成员显示的评级的完整列表。 第一个评级应为总体／一般评级，因为它是提供`Review Summary (Display)`组件的平均评级的评级。 默认配置中的后两个评级应被赋予不同的标题，而不是“Subrating 1”或“Subrating 2”。
 
 ![允许评级](assets/configure-review1.png)
 
@@ -54,9 +54,9 @@ ht-degree: 2%
 
    使用向上箭头、向下箭头和删除按钮可修改可见的选择。
 
-   单击 **[!UICONTROL “添加项]** ”以添加其他评级选择。
+   单击&#x200B;**[!UICONTROL 添加项目]**&#x200B;以添加其他评级选择。
 
-在“必 **[!UICONTROL 需评级]** ”选项卡下，从“允许评级”的列表 **[!UICONTROL 中重新输]** 入需要评级的“允许评级”项。 如果仅在“允许的评级”选项卡上指定了某个项目，则该项目在成员提交时可能会保持无标记状态。
+在&#x200B;**[!UICONTROL 必需评级]**&#x200B;选项卡下，从&#x200B;**[!UICONTROL 允许评级]**&#x200B;的列表中重新输入需要评级的项目。 如果仅在“允许的评级”选项卡上指定了某个项目，则该项目在成员提交时可能会保持无标记状态。
 
 在网站上，必需评级标有星号。 如果某个项目是必需的且未标记，则会向成员显示一条消息，并拒绝提交，直到所有必需的评级都被标记为止。
 
@@ -68,13 +68,13 @@ ht-degree: 2%
 
    使用向上箭头、向下箭头和删除按钮可修改可见的选择。
 
-   单击 **[!UICONTROL 添加项]** ，以添加其他响应选项。
+   单击&#x200B;**[!UICONTROL 添加项目]**&#x200B;以添加其他响应选项。
 
 >[!NOTE]
 >
->如果在“必需评级 **[!UICONTROL ”选项卡上输入了未在“允]** 许评级”选项卡上 **[!UICONTROL 指定的项]** ，则该项目不会包括在要评级的项中。
+>如果在&#x200B;**[!UICONTROL 允许评级]**&#x200B;选项卡中未指定的&#x200B;**[!UICONTROL 必需评级]**&#x200B;选项卡中输入了项，则该项不会包括在要评级的项中。
 
-在“审 **[!UICONTROL 阅]** ”选项卡下，指定如何处理审阅。
+在&#x200B;**[!UICONTROL 审阅]**&#x200B;选项卡下，指定如何处理审阅。
 
 ![审核](assets/configure-review3.png)
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 
 * **最大文件大小**
 
-   仅当选中“允 **[!UICONTROL 许文件上传]** ”时相关。 此字段限制已上载文件的大小（以字节为单位）。 默认值为10 MB。
+   仅当选中“允许文件上传”**[!UICONTROL 时相关。]**&#x200B;此字段限制已上载文件的大小（以字节为单位）。 默认值为10 MB。
 
 * **[!UICONTROL 最大消息长度]**
 
@@ -100,7 +100,7 @@ ht-degree: 2%
 
 * **[!UICONTROL 允许的文件类型]**
 
-   仅当选中“允 **[!UICONTROL 许文件上传]** ”时相关。 以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
+   仅当选中“允许文件上传”**[!UICONTROL 时相关。]**&#x200B;以逗号分隔的文件扩展名列表，以“点”分隔。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许指定那些未指定的文件类型。 默认值未指定，因此允许所有文件类型。
 
 * **[!UICONTROL 富文本编辑器]**
 
@@ -110,7 +110,7 @@ ht-degree: 2%
 
    如果选中，则包含主题的投票功能。 默认为未选中。
 
-在“用户 **[!UICONTROL 审核]** ”选项卡下，指定如何管理已发布的审阅。 有关详细信息，请参 [阅调节用户生成的内容](moderate-ugc.md)。
+在&#x200B;**[!UICONTROL 用户审核]**&#x200B;选项卡下，指定如何管理已发布的审阅。 有关详细信息，请参阅[协调用户生成的内容](moderate-ugc.md)。
 
 ![用户协调](assets/configure-review4.png)
 
@@ -148,19 +148,19 @@ ht-degree: 2%
 
 * **[!UICONTROL 标记限制]**
 
-   输入在对公共视图隐藏审阅之前必须标记其的次数。 此数字必须大于或等于仲裁 **[!UICONTROL 阈值]**。 默认值为5。
+   输入在对公共视图隐藏审阅之前必须标记其的次数。 此数字必须大于或等于&#x200B;**[!UICONTROL 调节阈值]**。 默认值为5。
 
-### 向页面添加审阅摘要（显示） {#adding-a-review-summary-display-to-a-page}
+### 向页面{#adding-a-review-summary-display-to-a-page}添加审阅摘要（显示）
 
-要在创作模 `Reviews Summary (Display)` 式下将组件添加到页面，请找到该组件
+要在创作模式下将`Reviews Summary (Display)`组件添加到页面，请找到该组件
 
 * `Communities / Reviews Summary (Display)`
 
 并将其拖动到要显示活动或已关闭审阅的摘要的页面上。
 
-有关必要的信息，请访 [问社区组件基础](basics.md)。
+有关必要的信息，请访问[社区组件基础知识](basics.md)。
 
-当包 [含所需的客户端库](reviews-basics.md#essentials-for-client-side) ，组件的显示 `Reviews Summary (Display)`方式即为此。
+当包含[必需的客户端库](reviews-basics.md#essentials-for-client-side)时，将显示`Reviews Summary (Display)`组件。
 
 ![审阅摘要](assets/configure-review5.png)
 
@@ -168,19 +168,19 @@ ht-degree: 2%
 >
 >“平均值”反映摘要审阅的“允许评级”选项卡上列出的第一个项目的投票。
 
-### 配置审阅摘要（显示） {#configuring-reviews-summary-display}
+### 配置审阅摘要（显示）{#configuring-reviews-summary-display}
 
-选择要访问的 `Reviews Summary (Display)` 已放置组件，然后选择打 `Configure` 开编辑对话框的图标。
+选择要访问的已放置`Reviews Summary (Display)`组件，然后选择打开编辑对话框的`Configure`图标。
 
 ![配置](assets/configure-new.png)
 
-在“审阅摘 **[!UICONTROL 要”选项卡下]** 。
+在&#x200B;**[!UICONTROL 查看摘要]**&#x200B;选项卡下
 
 ![审阅摘要](assets/configure-review6.png)
 
 * `Review Path`
 
-   输入或浏览到放置的组件实 `reviews`例进行总结，例如，如果添加到“Geometrixx互动”站 [点的网页](getting-started.md) ，路径将为：
+   输入或浏览至`reviews`组件的已放置实例以进行总结，例如，如果添加到[Geometrixx参与站点的网页，](getting-started.md)路径将为：
 
    `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
@@ -188,37 +188,37 @@ ht-degree: 2%
 
    如果选中，则包括条形图的显示，该条形图指示摘要审阅中每个星级的数量。 默认为未选中。
 
-### 更改为自定义审阅类型 {#changing-to-a-custom-review-type}
+### 更改为自定义审阅类型{#changing-to-a-custom-review-type}
 
 “审阅”组件使用评论系统。
 
 通过更改注释资源类型，注释系统将不再使用默认值生成注释实例，而是使用开发人员自定义（扩展）的实例。
 
-在确定自定义资源类型后，进入 [设计模式](../../help/sites-authoring/default-components-designmode.md) ,多次单击置入的组 `Comments` 件以打开一个包含其他选项卡的对话框。
+在确定自定义资源类型后，进入[设计模式](../../help/sites-authoring/default-components-designmode.md)并多次单击已放置的`Comments`组件以打开一个包含其他选项卡的对话框。
 
-在“资 **[!UICONTROL 源类型]** ”选项卡下，为组件的新实例指定自定义resourceType `Comments or Voting` :
+在&#x200B;**[!UICONTROL 资源类型]**&#x200B;选项卡下，为`Comments or Voting`组件的新实例指定自定义resourceType:
 
 ![评论投票](assets/configure-review7.png)
 
 * **[!UICONTROL 评论资源类型]**
 
-   导航到/apps中扩展组 `comment`件（单个注释）的resourceType。 For example, `/apps/social/commons/components/hbs/comments/comment`.
+   导航到/apps中扩展的`comment`组件（单个注释）的resourceType。 例如，`/apps/social/commons/components/hbs/comments/comment`。
 
    此资源将标识当访客发布评论时创建的UGC的resourceType。
 
 * **[!UICONTROL 投票资源类型]**
 
-   导航到/apps中扩展组 `voting`件的resourceType。 For example, `/apps/social/components/hbs/voting`.
+   导航到/apps中扩展`voting`组件的resourceType。 例如，`/apps/social/components/hbs/voting`。
 
    此资源将标识访客投票时创建的UGC的资源类型。
 
 * **[!UICONTROL 注释系统资源类型]**
 
-   导航到/apps中扩展组 `comments`件（注释系统）的resourceType。 除非页面模板在基础脚 [本中动](scf.md#add-or-include-a-communities-component) 态地包含评论系统，而不是作为资源（评论节点）添加到页面，否则将保留为空。 阅读有关{{include}}帮 [助程序的信息，了解更多](handlebars-helpers.md#include)。
+   导航到/apps中扩展的`comments`组件（注释系统）的resourceType。 除非页面模板[在基础脚本中动态地包括](scf.md#add-or-include-a-communities-component)注释系统，而不是作为资源（注释节点）添加到页面，否则保留为空。 阅读有关[{{include}} helper](handlebars-helpers.md#include)的详细信息。
 
-## 站点访客体验 {#site-visitor-experience}
+## 站点访客体验{#site-visitor-experience}
 
-### 版主和管理员 {#moderators-and-administrators}
+### 版主和管理员{#moderators-and-administrators}
 
 当登录用户具有审查方或管理员权限时，他们可以执行组件配置所允许的审核任务，而不管审阅的作者是谁。
 
@@ -239,8 +239,8 @@ ht-degree: 2%
 
 ## 附加信息 {#additional-information}
 
-有关详细信息，请参阅开发 [人员的](reviews-basics.md) “审阅基本工具”页。
+有关开发人员的详细信息，请参阅[Review Essentials](reviews-basics.md)页面。
 
-有关审核已发布的注释，请参 [阅审核用户生成的内容](moderate-ugc.md)。
+有关已发布注释的审核，请参阅[审核用户生成的内容](moderate-ugc.md)。
 
-有关已发布注释的翻译，请参阅 [翻译用户生成的内容](translate-ugc.md)。
+有关已发布注释的转换，请参阅[转换用户生成的内容](translate-ugc.md)。
