@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Clientlibs for Communities组件 {#clientlibs-for-communities-components}
+# 社区组件的Clientlibs {#clientlibs-for-communities-components}
 
 ## 简介 {#introduction}
 
@@ -27,71 +27,71 @@ ht-degree: 0%
 
 有关基本信息，请访问：
 
-* [使用客户端库](/help/sites-developing/clientlibs.md) ，它提供使用详细信息和调试工具
-* [用于SCF的客户端](/help/communities/client-customize.md#clientlibs) ，它在自定义SCF组件时提供有用信息
+* [使用客户端库，](/help/sites-developing/clientlibs.md) 它提供使用详细信息和调试工具
+* [SCF的客户端](/help/communities/client-customize.md#clientlibs) 库，它在自定义SCF组件时提供有用信息
 * [博客：AEM Client Libraries（示例说明）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
-## 为何需要Clientlibs {#why-clientlibs-are-required}
+## 为何需要Clientlibs{#why-clientlibs-are-required}
 
 需要Clientlibs才能使组件正常工作(JavaScript)和样式(CSS)。
 
-当某个功 [能存在社区功](/help/communities/functions.md) 能时，所有必需的组件和配置（包括必需的客户端库）都将出现在社区站点中。 仅当作者可以使用其他组件时，才需要添加其他客户端库。
+当某个功能存在[社区函数](/help/communities/functions.md)时，所有必需的组件和配置（包括所需的clientlibs）都将出现在社区站点中。 仅当作者可以使用其他组件时，才需要添加其他客户端库。
 
-当缺少所需的clientlib时， [向页面添加Communities组件](/help/communities/author-communities.md) ，可能会导致javascript错误和意外外观。
+当缺少所需的clientlibs时，[向页面](/help/communities/author-communities.md)添加Communities组件可能会导致javascript错误和意外外观。
 
-### 示例：无客户端库的置入审阅 {#example-placed-reviews-without-clientlibs}
+### 示例：没有Clientlibs的已放置审阅{#example-placed-reviews-without-clientlibs}
 
 ![置入审阅](assets/placed-reviews.png)
 
-### 示例：使用Clientlibs进行置入的审阅 {#example-placed-reviews-with-clientlibs}
+### 示例：Clientlibs{#example-placed-reviews-with-clientlibs}的置入审阅
 
 ![reviews-clientlibs](assets/reviews-clientlibs.png)
 
-## 识别所需的客户端库 {#identifying-required-clientlibs}
+## 识别所需的Clientlibs {#identifying-required-clientlibs}
 
 开发人员的基本功能信息可标识所需的客户端库。
 
-此外，从AEM实例浏览到“社区组件指 [南”](/help/communities/components-guide.md) ，还可以访问组件所需的clientlib类别列表。
+此外，从AEM实例浏览到[社区组件指南](/help/communities/components-guide.md)可访问组件所需的clientlib类别列表。
 
-例如，在“审阅”页面的最 [顶部](https://localhost:4502/content/community-components/en/reviews.html) ，列出的所需客户端库
+例如，在[“审阅”页面](https://localhost:4502/content/community-components/en/reviews.html)的最顶部列出所需的clientlibs
 
 * cq.ckeditor
 * cq.social.hbs.reviews
 
 ![clientlibs-reviews](assets/clientlibs-reviews.png)
 
-## 添加必需的客户端库 {#adding-required-clientlibs}
+## 添加必需的Clientlibs {#adding-required-clientlibs}
 
 当需要向页面添加社区组件时，如果组件尚不存在，则需要为该组件添加所需的客户端库。
 
-使 [用CRXDE|Lite](#using-crxde-lite) ，可修改社区站点页面的现有clientlibslist。
+使用[CRXDE|Lite](#using-crxde-lite)修改社区站点页面的现有clientlibslist。
 
-要使用CRXDE Lite为社区站点添加clientlib，请执 [行](/help/sites-developing/developing-with-crxde-lite.md):
+要使用[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)为社区站点添加clientlib，请执行以下操作：
 
-* 浏览 [到https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)。
-* 找到 `clientlibslist` 要添加组件的页面的节点：
+* 浏览至[https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)。
+* 找到要添加组件的页面的`clientlibslist`节点：
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* 选择 `clientlibslist` 节点后：
+* 选择`clientlibslist`节点后：
 
-   * 找到String属性[] 。 `scg:requiredClientLibs`
-   * 选择其 `Value` 以访问字符串数组对话框。
+   * 找到String[]属性`scg:requiredClientLibs`。
+   * 选择其`Value`以访问字符串数组对话框。
 
       * 如有必要，向下滚动。
       * 选择+以进入新的客户端库。
 
          * 重复此操作可添加更多客户端库。
 
-         * 选择 **确定**。
-   * 选择 **全部保存**。
+         * 选择&#x200B;**确定**。
+   * 选择&#x200B;**全部保存**。
 
 
 >[!NOTE]
 >
 >如果站点不是社区站点，则需要发现站点使用的客户端库的存在或位置。
 
-使用“ [AEM Communities入门](/help/communities/getting-started.md) ”示例(其 `site-name` 中为 *参与*)，在添加评论组件时，clientliblist的显示方式如下：
+使用[AEM Communities](/help/communities/getting-started.md)快速入门示例（其中`site-name`为&#x200B;*engage*），添加评论组件时，clientliblist的显示方式如下：
 
 ![审阅组件](assets/review-component.png)
 
