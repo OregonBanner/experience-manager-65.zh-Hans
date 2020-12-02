@@ -11,14 +11,17 @@ content-type: reference
 discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
 translation-type: tm+mt
 source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+workflow-type: tm+mt
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
 
-# 开发沙箱内容 {#develop-sandbox-content}
+# 开发沙箱内容{#develop-sandbox-content}
 
-**[添加Clientlibs](add-clientlibs.md)**
+**[添加客户端库](add-clientlibs.md)**
 
-此时，可以使用 [We-Retail社区、社区组件指南和功能要素在沙箱中探索社区功能](../../help/sites-developing/we-retail.md)，以 [供参考](components-guide.md)[](essentials.md) 。
+此时，可以使用[We-Retail Community](../../help/sites-developing/we-retail.md)、[社区组件指南](components-guide.md)和[功能要素](essentials.md)在沙箱中探索社区功能以供参考。
 
 
