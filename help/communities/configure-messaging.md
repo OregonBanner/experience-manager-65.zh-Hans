@@ -19,27 +19,27 @@ ht-degree: 3%
 ---
 
 
-# 消息功能 {#messaging-feature}
+# 消息功能{#messaging-feature}
 
 除了在论坛和评论中发生的公开可见的互动外，AEM Communities的消息功能还使社区成员能够更加私下地进行互动。
 
-创建社区站点时可 [以包含](/help/communities/overview.md#communitiessites) 此功能。
+创建[社区站点](/help/communities/overview.md#communitiessites)时，可以包含此功能。
 
 消息功能可以：
 
-**A** —— 向一个或多个社区成员发送消息
+**A** -向一个或多个社区成员发送消息
 
-**B** —— 批量向社区 [成员组发送直接消息](/help/communities/messaging.md#group-messaging)
+**B** -批量向社区成 [员组发送直接消息](/help/communities/messaging.md#group-messaging)
 
-**C** —— 发送包含附件的邮件
+**C** -发送包含附件的邮件
 
-**D** —— 转发消息
+**D** -转发消息
 
-**E** —— 回复邮件
+**E** -回复邮件
 
-**F** —— 删除消息
+**F** -删除消息
 
-**G** —— 恢复已删除的消息
+**G** -恢复已删除的消息
 
 ![消息部分](assets/messaging-section.png)
 
@@ -47,42 +47,42 @@ ht-degree: 3%
 
 要启用和修改消息功能，请参阅：
 
-* [为管理员配置](/help/communities/messaging.md) “消息传递”
-* [面向开发人员的](/help/communities/essentials-messaging.md) Messaging Essentials
+* [为管理](/help/communities/messaging.md) 员配置消息
+* [对开发人](/help/communities/essentials-messaging.md) 员来说消息基本
 
 >[!NOTE]
 >
->在作者编辑模式 `Compose Message, Message, or Message List` 下，不支 `Communities`持将组件（在组件组中）添加到页面。
+>不支持在作者编辑模式下将`Compose Message, Message, or Message List`组件（位于`Communities`组件组中）添加到页面。
 
-## 配置消息传递组件 {#configure-messaging-components}
+## 配置消息传递组件{#configure-messaging-components}
 
 为社区站点启用消息传递后，无需进一步配置即可设置该消息。 如果需要更改默认配置，则会提供该信息。
 
-### 配置消息列表（消息框） {#configure-message-list-message-box}
+### 配置消息列表（消息框）{#configure-message-list-message-box}
 
-要修改消息传递功能的收件箱 **、已发送**&#x200B;项目和废纸篓页面 **的邮件列表的配置**，请以作者编辑模式打 **开该**[](/help/communities/sites-console.md#authoring-site-content)网站。
+要修改消息功能&#x200B;**收件箱**、**已发送项**&#x200B;和&#x200B;**垃圾桶**&#x200B;页面的消息列表配置，请以[作者编辑模式](/help/communities/sites-console.md#authoring-site-content)打开站点。
 
-1. 在模 `Preview` 式中，选择 **消息链** 接以打开主消息页面。 然后，选择“收 **件箱**”、“ **已发送项目** ”或“废 **纸篓** ”来为该邮件列表配置组件。
+1. 在`Preview`模式中，选择&#x200B;**消息**&#x200B;链接以打开主消息页面。 然后，选择&#x200B;**收件箱**、**已发送项目**&#x200B;或&#x200B;**垃圾桶**&#x200B;来为该邮件列表配置组件。
 
-1. 在模 `Edit` 式中，选择页面上的组件。
-1. 要访问配置对话框，请通过选择图标取消继 `link` 承。
+1. 在`Edit`模式下，选择页面上的组件。
+1. 要访问配置对话框，请通过选择`link`图标来取消继承。
 取消继承后，可以选择配置图标以打开配置对话框。
 
-1. 配置完成后，必须通过选择图标来恢复继 `broken link` 承。
+1. 配置完成后，必须通过选择`broken link`图标来恢复继承。
 
 ![configure-message-列表](assets/configure-message-list.png)
 
-#### Basic tab {#basic-tab}
+#### 基本选项卡{#basic-tab}
 
 ![basic-tab-messagelist](assets/basic-tab-messagelist.png)
 
 * **服务选择器**
 
-   (*必需*)将此值设置为AEM Communities消息 **`serviceSelector.name`** 操作服 [务的属性值](/help/communities/messaging.md#messaging-operations-service)。
+   (*Required*)将此值设置为[AEM Communities消息操作服务](/help/communities/messaging.md#messaging-operations-service)中属性&#x200B;**`serviceSelector.name`**&#x200B;的值。
 
 * **合成页面**
 
-   (必&#x200B;*需*)成员单击按钮时要打开的 **`Reply`** 页面。 目标页面应包含合 **成消息** 。
+   （*必需*）当成员单击&#x200B;**`Reply`**&#x200B;按钮时要打开的页面。 目标页应包含&#x200B;**撰写消息**&#x200B;表单。
 
 * **答复/视图作为资源**
 
@@ -98,27 +98,27 @@ ht-degree: 3%
 
 * **文件夹路径**
 
-   (*必需*)引用AEM Communities消息 **业务服务中inbox.path** .name和 **insentims** [path.name设置](/help/communities/messaging.md#messaging-operations-service)的值。 为配置时， `Inbox`请使用inbox.path.name的值 **添加一个条目**。 为配置时， `Outbox`请使用sentitems.path.name的 **值添加一个条目**。 配置时， `Trash`添加两个同时具有这两个值的条目。
+   (*Required*)引用[AEM Communities消息传递操作服务](/help/communities/messaging.md#messaging-operations-service)中为&#x200B;**inbox.path.name**&#x200B;和&#x200B;**sentitems.path.name**&#x200B;设置的值。 为`Inbox`进行配置时，请使用&#x200B;**inbox.path.name**&#x200B;的值添加一个条目。 为`Outbox`进行配置时，请使用&#x200B;**sentitems.path.name**&#x200B;的值添加一个条目。 配置`Trash`时，添加两个同时具有这两个值的条目。
 
-#### 显示选项卡 {#display-tab}
+#### 显示选项卡{#display-tab}
 
 ![display-tab-message-列表](assets/display-tab-message-list.png)
 
 * **标记阅读按钮**
 
-   如果选中，则显示 `Read`一个按钮，允许消息标记为已读。
+   如果选中，则显示`Read`按钮，允许将消息标记为已读。
 
 * **标记未读按钮**
 
-   如果选中，则显 `Mark Unread` 示一个按钮，允许消息标记为已读。
+   如果选中，则显示`Mark Unread`按钮，允许将消息标记为已读。
 
 * **删除按钮**
 
-   如果选中，则显 `Delete` 示一个按钮，允许消息标记为已读。 如果同时选中，将重复 **`Message Options`** 删除功能。
+   如果选中，则显示`Delete`按钮，允许将消息标记为已读。 如果还选中&#x200B;**`Message Options`**，将重复删除功能。
 
 * **消息选项**
 
-   如果选中，则显 **`Reply`**&#x200B;示、 **`Reply All`**&#x200B;和 **`Forward`** 按钮，允 **`Delete`** 许重新发送或删除消息。 如果同时选中，将重复 **`Delete Button`** 删除功能。
+   如果选中，则显示&#x200B;**`Reply`**、**`Reply All`**、**`Forward`**&#x200B;和&#x200B;**`Delete`**&#x200B;按钮，允许重新发送或删除消息。 如果还选中&#x200B;**`Delete Button`**，将重复删除功能。
 
 * **每个页面的消息数**
 
@@ -130,33 +130,33 @@ ht-degree: 3%
 
 * **显示用户**
 
-   选择 **`Sender`** 还是 **`Recipients`** 确定是显示发送者还是收件人。
+   选择&#x200B;**`Sender`**&#x200B;或&#x200B;**`Recipients`**&#x200B;以确定是显示发件人还是收件人。
 
-### 配置起草消息 {#configure-compose-message}
+### 配置起草消息{#configure-compose-message}
 
-要修改合成消息页面的配置，请在作者编辑模 [式下打开站点](/help/communities/sites-console.md#authoring-site-content)。
+要修改合成消息页面的配置，请以[作者编辑模式](/help/communities/sites-console.md#authoring-site-content)打开站点。
 
-* 在模 `Preview` 式中，选择 **消息链** 接以打开主消息页面。 然后选择“新建消息”按钮以打开 `Compose Message` 页面。
+* 在`Preview`模式中，选择&#x200B;**消息**&#x200B;链接以打开主消息页面。 然后选择“新建消息”按钮以打开`Compose Message`页面。
 
-* 在模 `Edit` 式中，在包含消息正文的页面上选择主组件。
-* 要访问配置对话框，请通过选择图标取消继 `link` 承。
+* 在`Edit`模式中，选择包含邮件正文的页面上的主组件。
+* 要访问配置对话框，请通过选择`link`图标来取消继承。
 取消继承后，可以选择配置图标以打开配置对话框。
 
-* 配置完成后，必须通过选择图标来恢复继 `broken link` 承。
+* 配置完成后，必须通过选择`broken link`图标来恢复继承。
 
 ![config-compose](assets/config-compose-message.png)
 
-#### Basic tab {#basic-tab-1}
+#### 基本选项卡{#basic-tab-1}
 
 ![基本制表](assets/basic-tab-compose.png)
 
 * **重定向URL**
 
-   输入发送邮件后显示的页面URL。 For example, `../messaging.html`.
+   输入发送邮件后显示的页面URL。 例如，`../messaging.html`。
 
 * **取消 URL**
 
-   输入发送方取消消息时显示的页面URL。 For example, `../messaging.html`.
+   输入发送方取消消息时显示的页面URL。 例如，`../messaging.html`。
 
 * **邮件主题的最大长度**
 
@@ -168,35 +168,35 @@ ht-degree: 3%
 
 * **服务选择器**
 
-   (*必需*)将此值设置为AEM Communities消息 **`serviceSelector.name`** 操作服 [务的属性值](/help/communities/messaging.md#messaging-operations-service)。
+   (*Required*)将此值设置为[AEM Communities消息操作服务](/help/communities/messaging.md#messaging-operations-service)中属性&#x200B;**`serviceSelector.name`**&#x200B;的值。
 
-#### 显示选项卡 {#display-tab-1}
+#### 显示选项卡{#display-tab-1}
 
 ![显示——选项卡——合成](assets/display-tab-compose.png)
 
 * **显示主题字段**
 
-   如果选中，则显示 `Subject` 该字段并启用向邮件添加主题。 未选中默认值。
+   如果选中，则显示`Subject`字段并启用向邮件添加主题。 未选中默认值。
 
 * **主题标签**
 
-   输入要在字段旁边显示的 `Subject` 文本。 Default is `Subject`.
+   输入在`Subject`字段旁边显示的文本。 默认值为`Subject`。
 
 * **显示附加文件字段**
 
-   如果选中，则显示 `Attachment` 该字段并启用向邮件添加文件附件。 未选中默认值。
+   如果选中，则显示`Attachment`字段并启用向邮件添加文件附件。 未选中默认值。
 
 * **附加文件标签**
 
-   输入要在字段旁边显示的 `Attachment` 文本。 Default is **`Attach File`**.
+   输入在`Attachment`字段旁边显示的文本。 默认值为&#x200B;**`Attach File`**。
 
 * **显示内容字段**
 
-   如果选中，则显示 `Content` 字段并启用添加消息正文。 未选中默认值。
+   如果选中，则显示`Content`字段并启用添加消息正文。 未选中默认值。
 
 * **内容标签**
 
-   输入要在字段旁边显示的 `Content` 文本。 Default is **`Body`**.
+   输入在`Content`字段旁边显示的文本。 默认值为&#x200B;**`Body`**。
 
 * **使用富文本编辑器**
 
