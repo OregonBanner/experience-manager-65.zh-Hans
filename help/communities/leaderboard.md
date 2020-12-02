@@ -18,15 +18,15 @@ ht-degree: 5%
 ---
 
 
-# 排行榜基础 {#leaderboard-essentials}
+# Legrolboard Essentials {#leaderboard-essentials}
 
 本页提供了使用排行榜功能的基本信息。
 
-在将排行榜组件包含在页面之前，必须配置Communities [评分和标记](implementing-scoring.md)。
+在将排行榜组件包含在页面之前，必须配置[社区评分和标记](implementing-scoring.md)。
 
-请参阅 [评分和徽章基础](configure-scoring.md)。
+请参阅[Scorning and Badges Essentials](configure-scoring.md)。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -52,7 +52,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>查看 <a href="enabling-leaderboard.md">排行榜功能</a></td>
+   <td>请参阅<a href="enabling-leaderboard.md">通栏功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -61,4 +61,4 @@ ht-degree: 5%
 
 ### 文件库功能 {#file-library-function}
 
-一种包括通栏功能的社区 [站点结构](functions.md#leaderboard-function)，包括配置的 `leaderboard` 组件。
+包括[Lerboard功能](functions.md#leaderboard-function)的社区站点结构，包括配置的`leaderboard`组件。
