@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# SRP —— 社区内容存储 {#srp-community-content-storage}
+# SRP —— 社区内容存储{#srp-community-content-storage}
 
 ## 简介 {#introduction}
 
@@ -27,21 +27,21 @@ ht-degree: 0%
 
 与以前的版本不同，不会跨AEM实例反向／正向复制UGC。 相反，SRP使UGC能够直接从所有作者和发布实例中进行创建、读取、更新和删除(CRUD)操作，JSRP例外。
 
-以下是每 [个SRP选项的特点](#characteristics-of-srp-options)，这是选择适当SRP和基础部署时决策过程的关 [键信息](/help/communities/topologies.md)。
+以下是每个SRP选项](#characteristics-of-srp-options)的[特性，这是选择适当的SRP和[基础部署](/help/communities/topologies.md)时决策过程的关键信息。
 
-有关使用UGC的SRP的详细信息，请参阅 [存储资源提供程序概述](/help/communities/srp.md)。
+有关UGC使用SRP的详细信息，请参阅[存储资源提供程序概述](/help/communities/srp.md)。
 
 >[!NOTE]
 >
->SRP仅适用于社区内容。 它不影响站点内容的存储位置(节[点存储](/help/sites-deploying/data-store-config.md))，也不影响AEM实例之间用户注册、用户用户档案和用户组的安全处理(另请参阅 [管理用户数据](#managing-user-data))。
+>SRP仅适用于社区内容。 它不影响站点内容的存储位置（[节点存储](/help/sites-deploying/data-store-config.md)），也不影响AEM实例之间用户注册、用户用户档案和用户组的安全处理（另请参阅[管理用户数据](#managing-user-data)）。
 
 >[!CAUTION]
 >
->从AEM 6.1开始， [UGC从不复制](#ugc-never-replicated)。
+>自AEM 6.1起，[UGC从不复制](#ugc-never-replicated)。
 >
->当部署中不包括公用存储(如默认的 [JSRP](/help/communities/topologies.md#jsrp) 拓扑)时，UGC将仅在输入它的AEM发布或作者实例上可见。 仅当拓扑包含发布群集时，UGC才会在任何发布实例上可见。
+>当部署中不包括公共存储（如默认[ JSRP](/help/communities/topologies.md#jsrp)拓扑）时，UGC将仅在输入它的AEM publish或作者实例上可见。 仅当拓扑包含发布群集时，UGC才会在任何发布实例上可见。
 
-## SRP选项的特点 {#characteristics-of-srp-options}
+## SRP选项{#characteristics-of-srp-options}的特性
 
 [ASRP -Adobe存储资源提供程序](/help/communities/asrp.md)
 
@@ -107,7 +107,7 @@ JSRP:
 
 ## 配置SRP {#configuring-srp}
 
-根据基础部署指定默认存储选项是通过存储配 [置控制台](/help/communities/srp-config.md)。
+根据基础部署指定默认存储选项是通过[存储配置控制台](/help/communities/srp-config.md)进行的。
 
 有关每个选项的配置详细信息，请参阅：
 
@@ -120,7 +120,7 @@ JSRP:
 
 ## 附加信息 {#additional-information}
 
-### UGC从未复制 {#ugc-never-replicated}
+### UGC从未复制{#ugc-never-replicated}
 
 在创作环境中，作者创建页面内容并将其复制到发布环境。 当页面包含交互式AEM Communities功能（如评论、评论、论坛、博客或QnA）时，成员(在站点访客中签名)对发布实例的交互会导致用户生成的内容(UGC)进入发布环境。
 
@@ -130,14 +130,14 @@ JSRP:
 
 复制站点内容时，从不复制UGC。
 
-### 管理用户数据 {#managing-user-data}
+### 管理用户数据{#managing-user-data}
 
-社区还关注用 [*户*、 *用户组*&#x200B;和 *用户用户档案*](/help/communities/users.md)。 当拓扑为发布场时，在发布环境中创建和更新此用户相关数据时，需要为其他发布实例提供此 [数据](/help/sites-deploying/recommended-deploys.md#tarmk-farm)。
+社区还关注&#x200B;[*用户*、*用户组*&#x200B;和&#x200B;*用户用户档案*](/help/communities/users.md)。 当拓扑为[发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)时，当在发布环境中创建和更新此用户相关数据时，需要使其他发布实例可用。
 
-从AEM Communities6.1开始，与用户相关的数据使用Sling分发而不是复制进行同步。 有关详细信息，请 [访问用户同步](/help/communities/sync.md)。
+从AEM Communities6.1开始，与用户相关的数据使用Sling分发而不是复制进行同步。 有关详细信息，请访问[用户同步](/help/communities/sync.md)。
 
-### Upgrading to AEM Communities 6.5 {#upgrading-to-aem-communities}
+### 升级到AEM Communities6.5 {#upgrading-to-aem-communities}
 
 升级到AEM 6.5社区时，如果需要保留先前存在的UGC，则应根据AEM 5.6.1或AEM 6.0社区是使用Adobe点播存储还是内部部署存储UGC来采取步骤。
 
-有关详细信息， [请访问升级到AEM Communities6.5](/help/communities/upgrade.md)。
+有关详细信息，请访问[升级到AEM Communities6.5](/help/communities/upgrade.md)。
