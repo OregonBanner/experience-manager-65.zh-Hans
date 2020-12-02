@@ -1,6 +1,6 @@
 ---
-title: 如何在AEM中审核用户管理操作
-seo-title: 如何在AEM中审核用户管理操作
+title: 如何审计AEM中的用户管理操作
+seo-title: 如何审计AEM中的用户管理操作
 description: 了解如何在AEM中审核用户管理操作。
 seo-description: 了解如何在AEM中审核用户管理操作。
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
@@ -12,41 +12,45 @@ discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 1%
 
 ---
 
 
-# 如何在AEM中审核用户管理操作{#how-to-audit-user-management-operations-in-aem}
+# 如何审核AEM{#how-to-audit-user-management-operations-in-aem}中的用户管理操作
 
 ## 简介 {#introduction}
 
 AEM引入了记录权限更改的功能，以便以后可以审核这些更改。
 
-该增强功能允许对用户的权限和组分配执行审核CRUD（创建、读取、更新、删除）操作。 具体而言，它将记录：
+该增强功能允许对用户的权限和组分配执行审核CRUD（创建、读取、更新、删除）操作。 更具体地说，它将记录：
 
 * 新用户已创建
-* 添加到用户组的用户
+* 被添加到组的用户
 * 现有用户或用户组的权限更改
 
-默认情况下，这些条目将写入文 `error.log` 件。 为了简化监控，建议将它们重定向到单独的日志文件。 有关如何执行此操作的更多信息，请参阅以下段落。
+默认情况下，这些条目将写入`error.log`文件。 为了简化监控，建议将它们重定向到单独的日志文件。 有关如何执行此操作的更多信息，请参阅以下段落。
 
-## 将输出重定向到单独的日志文件 {#redirecting-the-output-to-a-separate-log-file}
+## 将输出重定向到单独的日志文件{#redirecting-the-output-to-a-separate-log-file}
 
-要将日志输出重定向到单独的日志文件，您需要创建新的 **Apache Sling日志记录器配置** 。 我们将在 `useraudit.log` 以下示例中用作单独文件的名称。
+要将日志记录输出重定向到单独的日志文件，您需要创建新的&#x200B;**Apache Sling日志记录器**&#x200B;配置。 我们将在以下示例中使用`useraudit.log`作为单独文件的名称。
 
-1. 通过浏览至https://serveraddress:serverport/system/console/configMgr，转到Web控 *制台*
-1. 搜索 **Apache Sling日志记录记录器配置**。 然后，按条目右侧的“+”以创建新的工厂配置。
+1. 浏览至&#x200B;*https://serveraddress:serverport/system/console/configMgr*，转到Web控制台
+1. 搜索&#x200B;**Apache Sling日志记录器配置**。 然后，按条目右侧的“+”以创建新工厂配置。
 1. 创建以下配置：
 
-   * **** 日志级别：信息
-   * **** 日志文件：logs/useraudit.log
-   * **** 消息模式：级别默认值
-   * **** 记录器：com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
-   要在 **Logger** （记录器）字段中输入这两个记录器，您需要输入第一个记录器的名称，然后按“+”按钮并输入第二个记录器的名称，以创建另一个字段。
+   * **日志级别：信** 息
+   * **日志文件：** logs/useraudit.log
+   * **消息模式：** 级别默认值
+   * **Logger:** com.adobe.granite.security.user.internal.audit、com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-## 示例输出 {#example-output}
+   要在&#x200B;**Logger**&#x200B;字段中输入两个记录器，您需要输入第一个记录器的名称，然后按“+”按钮并输入第二个记录器的名称，以创建另一个字段。
 
-如果配置正确，输出应如下：
+## 输出示例{#example-output}
+
+如果配置正确，输出应如下所示：
 
 ```xml
 19.05.2017 15:15:08.933 *INFO* [0:0:0:0:0:0:0:1 [1495196108932] POST /libs/granite/security/post/authorizables.html HTTP/1.1] com.adobe.granite.security.user.internal.servlets.AuthorizableServlet Create Group 'group1' operation initiated by User 'admin' (administrator)
