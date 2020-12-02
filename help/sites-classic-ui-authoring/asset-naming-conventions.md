@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 55e66c66-0120-4ed4-94c5-d65a434bb59b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '159'
+ht-degree: 89%
 
 ---
 
 
-# 资产的命名约定 testing{#naming-conventions-for-assets-testing}
+# 资产的命名约定 测试{#naming-conventions-for-assets-testing}
 
-Nodes in the repository are subject to naming conventions of the [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). 但是，Adobe Experience Manager 对资产节点的名称做了进一步约定。
+存储库中的节点受[Java内容存储库](/help/sites-developing/the-basics.md#java-content-repository)的命名约定的约束。 但是，Adobe Experience Manager 对资产节点的名称做了进一步约定。
 
 ## 经典 UI {#classic-ui}
 
