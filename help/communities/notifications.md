@@ -19,13 +19,13 @@ ht-degree: 1%
 ---
 
 
-# 社区通知 {#communities-notifications}
+# 社区通知{#communities-notifications}
 
 ## 概述 {#overview}
 
 AEM Communities提供通知部分，其中显示已登录社区成员感兴趣的事件。
 
-通知与活动 [和](/help/communities/essentials-activities.md)[订阅](/help/communities/subscriptions.md) 类似，它们可能来自：
+通知与[活动](/help/communities/essentials-activities.md)和[订阅](/help/communities/subscriptions.md)类似，因为它们可能来自：
 
 * 成员发布内容。
 * 选择跟随另一个成员的成员。
@@ -36,48 +36,48 @@ AEM Communities提供通知部分，其中显示已登录社区成员感兴趣�
 
 * 通知部分的链接始终显示在社区站点的标题中：
 
-   * 活动需 [要在社区站点](/help/communities/functions.md#activity-stream-function) 的结构中包含活动流函数。
-   * 订阅需 [要配置电子邮件](/help/communities/email.md)。
+   * 活动需要[活动流函数](/help/communities/functions.md#activity-stream-function)包含在社区站点的结构中。
+   * 订阅需要[配置email](/help/communities/email.md)。
 
 * 通知的实现是通过可扩展的可插拔渠道:
 
    * 活动仅在Web上可用。
    * 订阅仅可通过电子邮件使用。
 
-从Communities [FP1开始](/help/communities/deploy-communities.md#latestfeaturepack)，可用的通知渠道包括：
+从社区[FP1](/help/communities/deploy-communities.md#latestfeaturepack)开始，可用的通知渠道包括：
 
-* Web渠道，使用链接访 `Notifications` 问。
+* 使用`Notifications`链接访问的Web渠道。
 * 电子邮件渠道，在正确配置电子邮件时可用。
 
 未来的渠道是移动和桌面。
 
-### 要求 {#requirements}
+### 要求{#requirements}
 
 **配置电子邮件**
 
 必须配置电子邮件，以便电子邮件渠道通知正常工作。
 
-有关设置电子邮件的说明，请参阅 [配置电子邮件](/help/communities/analytics.md)。
+有关设置电子邮件的说明，请参阅[配置电子邮件](/help/communities/analytics.md)。
 
 **启用跟踪**
 
-必须配置组件以启用以下功能。 支持以下功能：博 [客](/help/communities/blog-feature.md)、论 [坛](/help/communities/forum.md)、QnA [、](/help/communities/working-with-qna.md)日历 [、、](/help/communities/calendar.md)、、 [](/help/communities/file-library.md)[](/help/communities/comments.md)、、和标。
+必须配置组件以启用以下功能。 允许以下功能：[blog](/help/communities/blog-feature.md)、[论坛](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[日历](/help/communities/calendar.md)、[文件库](/help/communities/file-library.md)和[注释](/help/communities/comments.md)。
 
 **注意**:
 
-* 社区站点模 [板和组](/help/communities/sites.md) 模 [板中使用的](/help/communities/tools-groups.md) 组件，可能已配置为遵循。
+* 在社区[站点模板](/help/communities/sites.md)和[组模板](/help/communities/tools-groups.md)中使用的组件可能已配置为遵循。
 
 * 成员用户档案已配置为允许其他成员遵循。
 
-## 来自以下的通知 {#notifications-from-following}
+## 来自以下的通知{#notifications-from-following}
 
 ![通知](assets/notifications.png)
 
-“跟 **[!UICONTROL 踪]** ”按钮提供了以活动、订阅和／或通知形式跟踪条目的方法。 每次选 **[!UICONTROL 择]** “跟随”按钮时，都可以打开或关闭选择。 仅 `Email Subscriptions` 在配置后才显示选择。
+**[!UICONTROL Follow]**&#x200B;按钮提供了一种方法，可以按活动、订阅和／或通知跟踪条目。 每次选择&#x200B;**[!UICONTROL “跟随”按钮时，都可以打开或关闭选择。]**`Email Subscriptions`选择仅在配置后出现。
 
-如果选择了以下任何方法，则按钮的文本将变为“以 **[!UICONTROL 下”]**。 为方便起见，可以选择 `Unfollow All` 关闭所有方法。
+如果选择了以下任何方法，则按钮的文本将变为&#x200B;**[!UICONTROL Following]**。 为方便起见，可以选择`Unfollow All`以关闭所有方法。
 
-将显 **[!UICONTROL 示]** “关注”按钮：
+将显示&#x200B;**[!UICONTROL Follow]**&#x200B;按钮：
 
 * 查看其他成员的用户档案时。
 * 在主功能页面上，如论坛、问题与解答和博客：
@@ -88,47 +88,47 @@ AEM Communities提供通知部分，其中显示已登录社区成员感兴趣�
 
    * 遵循该特定条目的所有活动。
 
-## 管理通知设置 {#managing-notification-settings}
+## 管理通知设置{#managing-notification-settings}
 
 通过从“通知”页面选择“通知设置”链接，每个成员都可以管理接收通知的方式。
 
 始终启用Web渠道。
 
-![notifications14](assets/notifications1.png)
+![通知14](assets/notifications1.png)
 
-电子邮件渠道依赖于电 [子邮件的正确配](/help/communities/email.md)置，它提供的设置与Web渠道的设置相同。
+电子邮件渠道基于电子邮件](/help/communities/email.md)的正确[配置，它提供与Web渠道相同的设置。
 
 电子邮件渠道默认为关闭状态。
 
-![notifications2](assets/notifications2.png)
+![通知2](assets/notifications2.png)
 
 成员可以打开它，但仍取决于配置电子邮件。
 
-![notifications3](assets/notifications3.png)
+![通知3](assets/notifications3.png)
 
 ## 查看通知 {#viewing-notifications}
 
-### Web通知 {#web-notifications}
+### Web通知{#web-notifications}
 
-向导 [创建的社区站点](/help/communities/sites-console.md) ，现在在横幅上 `Notifications` 方的站点标题栏中包含指向该功能的链接。 与消息不同，每个社区站点都会创建通知，而站点创建过程中必须启用消息。
+[创建的社区站点](/help/communities/sites-console.md)现在包含指向横幅上方站点标题栏中`Notifications`功能的链接。 与消息不同，每个社区站点都会创建通知，而站点创建过程中必须启用消息。
 
-访问已发布的站点时，选择链 `Notifications` 接将显示该成员的所有通知。
+访问已发布的站点时，选择`Notifications`链接将显示该成员的所有通知。
 
-![notifications4](assets/notifications4.png)
+![通知4](assets/notifications4.png)
 
-### 电子邮件通知 {#email-notifications}
+### 电子邮件通知{#email-notifications}
 
 启用电子邮件渠道后，成员会收到一封电子邮件，其中包含指向Web上内容的链接。
 
-![notifications5](assets/notifications5.png)
+![通知5](assets/notifications5.png)
 
-## 自定义电子邮件通知 {#customize-email-notifications}
+## 自定义电子邮件通知{#customize-email-notifications}
 
-组织可以通过覆盖模 [板](/help/communities/client-customize.md#overlays) (位于 **/libs/settings/community/templates/email/html)来自定义电子邮件通知**。
+组织可以通过[覆盖](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html**&#x200B;中的模板来自定义电子邮件通知。
 
-例如，要修改提及电子邮件通知（针对社区组件），请在您为其启用@mentions **支持的组件的模板中** ，添加动词提及的if ******** 条件。
+例如，要修改提及电子邮件通知（针对社区组件），请在启用了&#x200B;**@mentions**&#x200B;支持的组件的模板中为动词&#x200B;**提及**&#x200B;添加&#x200B;**if**&#x200B;条件。
 
-要在博客评论中修改@tunite的电子邮件通知模板，请将开箱即用模板放置到： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/cn**
+要在博客评论中修改@tunite的电子邮件通知模板，请将开箱即用模板置于：**/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 
 ```java
 {{#equals this.verb "mention"}}\
