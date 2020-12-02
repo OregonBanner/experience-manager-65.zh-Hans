@@ -21,11 +21,11 @@ ht-degree: 12%
 
 # 安装和配置Designer{#installing-and-configuring-designer}
 
-## Pre-requisites {#pre-requisites}
+## 先决条件{#pre-requisites}
 
-AEM Forms Designer installer requires the 32-bit version of [Visual C++ redistributable runtime package 2012](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads) and [Visual C++ redistributable runtime package 2013](https://support.microsoft.com/zh-cn/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). 确保在开始安装之前已安装上述可再发行运行时包。
+AEM Forms设计器安装程序需要32位版本的[Visual C++可再发行运行时包2012](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads)和[Visual C++可再发行运行时包2013](https://support.microsoft.com/zh-cn/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package)。 确保在开始安装之前已安装上述可再发行运行时包。
 
-## 安装设计器 {#install-designer}
+## 安装设计器{#install-designer}
 
 Designer可作为独立安装程序提供，并与WorkBench捆绑。 如果您使用Designer的独立安装程序，请执行以下步骤：
 
