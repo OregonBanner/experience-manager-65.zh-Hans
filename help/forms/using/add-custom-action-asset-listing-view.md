@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# 将自定义操作添加到资产列表视图{#add-custom-action-to-the-asset-listing-view}
+# 向资产列表视图添加自定义操作{#add-custom-action-to-the-asset-listing-view}
 
 ## 概述 {#overview}
 
@@ -39,17 +39,17 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
 * JavaScript
 * Java
 
-## 方案： 向字母列表用户界面添加命令以下载简单的字母PDF版本 {#addcommandtoletters}
+## 方案：向字母列表用户界面添加命令以下载字母{#addcommandtoletters}的平面PDF版本
 
 以下步骤将“下载简单PDF”命令添加到字母的资产列表视图，并允许用户下载所选字母的简单PDF。 使用这些步骤和相应的代码和参数，您可以为其他资产添加一些其他功能，如数据字典或文本。
 
 要自定义“通信管理”以允许用户下载简单的PDF字母，请完成以下步骤：
 
-1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
+1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`并以管理员身份登录。
 
 1. 在apps文件夹中，使用以下步骤创建一个名为items的文件夹，其路径／结构与选择文件夹中的items文件夹类似：
 
-   1. 右键单击以下路 **径的** “项目”文件夹，然后选择“ **叠加节点”**:
+   1. 右键单击以下路径中的&#x200B;**items**&#x200B;文件夹，然后选择&#x200B;**叠加节点**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
@@ -64,31 +64,31 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **路径：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
+      **路径** :/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
       **位置：** /apps/
 
-      **匹配节点类型：** 已选择
+      **匹配节点类型：选** 定
 
       ![叠加节点](assets/2_createnodedownloadflatpdf.png)
 
    1. 单击&#x200B;**确定**。文件夹结构将在应用程序文件夹中创建。
 
-      单击“ **全部保存**”。
+      单击&#x200B;**保存全部**。
 
-1. 在新创建的项目文件夹下，为特定资产中的自定义按钮／操作添加一个节点(示例： 下载FlatPDF)，步骤如下：
+1. 在新创建的项目文件夹下，为特定资产中的自定义按钮／操作添加一个节点(示例：下载FlatPDF)，步骤如下：
 
-   1. 右键单击项目文 **件夹** ，然后选择 **“创建** ” **>“**&#x200B;创建节点”。
+   1. 右键单击&#x200B;**items**&#x200B;文件夹并选择&#x200B;**创建** > **创建节点**。
 
-   1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
+   1. 确保“创建节点”对话框具有以下值，然后单击&#x200B;**确定**:
 
       **名称：** downloadFlatPDF（或要为此属性指定的名称）
 
-      **类型：** nt：非结构化
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处为downloadFlatPDF）。 CRX显示节点的属性。
 
-   1. 将以下属性添加到节点（此处为downloadFlatPDF），然后单击“全 **部保存**”:
+   1. 将以下属性添加到节点（此处为downloadFlatPDF），然后单击&#x200B;**保存全部**:
 
       <table>
         <tbody>
@@ -105,12 +105,12 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
         <tr>
         <td>foundation-collection-action</td>
         <td>字符串</td>
-        <td><p>{"目标": "。cq-manageasset-admin-childpages", "activeSelectionCount": "single","type": “LETTER”<br /> }ActiveSelectionCount <br /><br /><strong></strong> 可以是单个或多个，以允许对执行自定义操作的单个或多个资产进行选择。</p> <p><strong>类型</strong> 可以是以下一个或多个（逗号分隔多个条目）: 字母、文本、列表、条件、自动词</p> </td>
+        <td><p>{"目标":"。cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> <br /> <br /> <strong> activeSelectionCount</strong>可以是单个或多个，以允许选择执行自定义操作的单个或多个资产。</p> <p><strong>Typecan</strong> 是以下项的一个或多个（逗号分隔多个条目）:字母、文本、列表、条件、自动词</p> </td>
         </tr>
         <tr>
         <td>图标</td>
         <td>字符串</td>
-        <td>icon-download<br /><br /> Commanagement在命令／菜单左侧显示的图标。 有关可用的不同图标和设置，请参 <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">阅CoralUI图标文档</a>。<br /> </td>
+        <td>icon-download<br /> <br /> “对应管理”显示在命令／菜单左侧的图标。 有关可用的不同图标和设置，请参阅<a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI图标文档</a>。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -130,35 +130,35 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
         <tr>
         <td>文本</td>
         <td>字符串</td>
-        <td>下载简单PDF(或任何其他标签<br /> )资产列表 <br /> 界面中显示的命令</td>
+        <td>下载简单PDF（或任何其他标签）<br /> <br />资产列表界面中显示的命令</td>
         </tr>
         <tr>
         <td>页面</td>
         <td>字符串</td>
-        <td>下载所选字母的平面PDF(或任何其他标签/Alt文本<br /> )。标题是 <br /> Corresponce Management在用户悬停在自定义命令上时显示的替代文本。</td>
+        <td>下载所选字母的简单PDF（或任何其他标签/Alt文本）<br /> <br />标题是当用户悬停在自定义命令上时Corresponce Management显示的替代文本。</td>
         </tr>
         </tbody>
        </table>
 
 1. 在apps文件夹中，使用以下步骤创建一个名为js的文件夹，其路径／结构与管理文件夹中的项目文件夹类似：
 
-   1. 右键单击以 **下路径** 的js文件夹，然后选择 **叠加节点**:
+   1. 右键单击以下路径中的&#x200B;**js**&#x200B;文件夹，然后选择&#x200B;**叠加节点**:
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **路径：** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
+      **路径** :/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
       **位置：** /apps/
 
-      **匹配节点类型：** 已选择
+      **匹配节点类型：选** 定
 
-   1. 单击&#x200B;**确定**。文件夹结构将在应用程序文件夹中创建。 单击“ **全部保存**”。
+   1. 单击&#x200B;**确定**。文件夹结构将在应用程序文件夹中创建。 单击&#x200B;**保存全部**。
 
 1. 在js文件夹中，使用用于按钮操作处理的代码使用以下步骤创建一个名为formaction.js的文件：
 
-   1. 右键单击以下路 **径的** js文件夹，然后选择 **创建>创建文件**:
+   1. 右键单击以下路径的&#x200B;**js**&#x200B;文件夹，然后选择&#x200B;**创建>创建文件**:
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -169,7 +169,7 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js/formaction.js`
 
-      然后，在formaction.js文件（/apps分支下）的末尾附加以下代码，并单击“全部 **保存**:
+      然后，在formaction.js文件（/apps分支下）的末尾附加以下代码，并单击&#x200B;**保存全部**:
 
       ```javascript
       /* Action url for xml file to be added.*/
@@ -232,35 +232,35 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
 
 1. 在apps文件夹中，使用以下步骤创建一个名为items的文件夹，其路径／结构与actionhandlers文件夹中的items文件夹类似：
 
-   1. 右键单击以下路 **径的** “项目”文件夹，然后选择“ **叠加节点”**:
+   1. 右键单击以下路径中的&#x200B;**items**&#x200B;文件夹，然后选择&#x200B;**叠加节点**:
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
    1. 确保“叠加节点”对话框具有以下值：
 
-      **路径：** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **Path:** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
 
       **位置：** /apps/
 
-      **匹配节点类型：** 已选择
+      **匹配节点类型：选** 定
 
    1. 单击&#x200B;**确定**。文件夹结构将在应用程序文件夹中创建。
 
-   1. 单击“ **全部保存**”。
+   1. 单击&#x200B;**保存全部**。
 
-1. 在新创建的项目节点下，为特定资产中的自定义按钮／操作添加一个节点(示例： letterpdfdownloader)。
+1. 在新创建的项目节点下，为特定资产中的自定义按钮／操作添加一个节点(示例：letterpdfdownloader)。
 
-   1. 右键单击项目文件夹，然后选择“ **创建”>“创建节点**”。
+   1. 右键单击项目文件夹，然后选择&#x200B;**创建>创建节点**。
 
-   1. 确保“创建节点”对话框具有以下值，然后单击“确 **定”**:
+   1. 确保“创建节点”对话框具有以下值，然后单击&#x200B;**确定**:
 
-      **名称：** letterpdfdownloader（或要为此属性指定的名称）必须是唯一的。 如果在此处使用其他名称，也可在formaction.js文件的ACTION_URL变量中指定相同的名称。)
+      **名称：** letterpdfdownloader(或要为此属性指定的名称——必须是唯一的。如果在此处使用其他名称，也可在formaction.js文件的ACTION_URL变量中指定相同的名称。)
 
-      **类型：** nt：非结构化
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处为downloadFlatPDF）。 CRX显示节点的属性。
 
-   1. 将以下属性添加到节点（此处为letterpdfdownloader），然后单击“全 **部保存**”:
+   1. 将以下属性添加到节点（此处为letterpdfdownloader），然后单击&#x200B;**保存全部**:
 
       | **名称** | **类型** | **值** |
       |---|---|---|
@@ -270,18 +270,18 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. 右键单击以下路 **径的** admin文件夹，然后选择 **创建>创建文件**:
+   1. 右键单击以下路径的&#x200B;**admin**&#x200B;文件夹，然后选择&#x200B;**创建>创建文件**:
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-      将文件命名为POST.jsp。 （文件名只需为POST.jsp。）
+      将文件命名为POST.jsp。 (文件名只需为POST.jsp。)
 
-   1. 多次单 **击POST.jsp** 文件，在CRX中打开它。
-   1. 将以下代码添加到POST.jsp文件，然后单击“全 **部保存**”:
+   1. 多次-单击&#x200B;**POST.jsp**&#x200B;文件，以在CRX中打开它。
+   1. 将以下代码添加到POST.jsp文件，然后单击&#x200B;**保存全部**:
 
-      此代码特定于字母渲染服务。 对于任何其他资源，请将该资源的java库添加到此代码中。 有关AEM FormsAPI的详细信息，请参阅 [AEM FormsAPI](https://adobe.com/go/learn_aemforms_javadocs_63_en)。
+      此代码特定于字母渲染服务。 对于任何其他资源，请将该资源的java库添加到此代码中。 有关AEM FormsAPI的详细信息，请参阅[AEM FormsAPI](https://adobe.com/go/learn_aemforms_javadocs_63_en)。
 
-      有关AEM库的更多信息，请参阅AEM [组件](/help/sites-developing/components.md)。
+      有关AEM库的详细信息，请参阅AEM [组件](/help/sites-developing/components.md)。
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */
@@ -348,25 +348,25 @@ Corresponce Management解决方案允许您向“管理资产”用户界面添�
       %>
       ```
 
-## 使用自定义功能下载简单的字母PDF {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
+## 使用自定义功能{#download-flat-pdf-of-a-letter-using-the-custom-functionality}下载字母的平面PDF
 
 添加自定义功能下载字母的平面PDF后，您可以使用以下步骤下载所选字母的平面PDF版本：
 
-1. 转到 `https://'[server]:[port]'/[ContextPath]/projects.html` 并登录。
+1. 转到`https://'[server]:[port]'/[ContextPath]/projects.html`并登录。
 
-1. 选择“ **表单”>“字母**”。 通信管理列表系统中可用的信函。
-1. 单击 **选择** ，然后单击字母将其选中。
-1. 选择 **更多** > **&lt;下载平面PDF>** （使用本文中的说明创建的自定义功能）。 将显示“将信函下载为PDF”对话框。
+1. 选择&#x200B;**Forms>字母**。 通信管理列表系统中可用的信函。
+1. 单击&#x200B;**选择**，然后单击字母将其选中。
+1. 选择&#x200B;**更多** > **&lt;下载平面PDF>**（使用本文说明创建的自定义功能）。 将显示“将信函下载为PDF”对话框。
 
-   菜单项名称、功能和替代文本根据在方案中创建的自定义 [进行： 向字母列表用户界面添加一个命令，以下载简单的字母PDF版本。](#addcommandtoletters)
+   菜单项名称、功能和替代文本根据在[方案中创建的自定义项：向字母列表用户界面添加命令以下载简单的字母PDF版本。](#addcommandtoletters)
 
-   ![自定义功能： 下载简单PDF](assets/5_downloadflatpdf.png)
+   ![自定义功能：下载简单PDF](assets/5_downloadflatpdf.png)
 
 1. 在“以PDF形式下载信函”对话框中，选择要从中填充PDF中数据的相关XML。
 
    >[!NOTE]
    >
-   >在将字母下载为平面PDF之前，您可以使用“创建报告”选项创建包含字母中数据 **的XML** 文件。
+   >在将字母下载为平面PDF之前，可以使用&#x200B;**创建报告**&#x200B;选项创建包含字母中数据的XML文件。
 
    ![将信件下载为PDF](assets/6_downloadflatpdf.png)
 
