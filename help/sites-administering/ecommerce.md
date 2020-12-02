@@ -1,8 +1,8 @@
 ---
 title: 电子商务
 seo-title: 电子商务
-description: AEM eCommerce帮助营销人员跨网络、移动设备和社交接触点提供品牌化的个性化购物体验。
-seo-description: AEM eCommerce帮助营销人员跨网络、移动设备和社交接触点提供品牌化的个性化购物体验。
+description: AEM eCommerce帮助营销人员跨网络、移动和社交接触点提供品牌化、个性化的购物体验。
+seo-description: AEM eCommerce帮助营销人员跨网络、移动和社交接触点提供品牌化、个性化的购物体验。
 uuid: 75818c60-1cf1-4a91-94ce-d722563b661c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,22 +12,25 @@ discoiquuid: e972ee05-f0cb-40ca-9ae2-34395791c709
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 46610888fd61900c52b197e73a8a5850dc9c4c35
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 1%
 
 ---
 
 
 # 电子商务{#ecommerce}
 
-* [概念](/help/sites-administering/concepts.md)
-* [管理（通用）](/help/sites-administering/generic.md)
+* [概念 ](/help/sites-administering/concepts.md)
+* [管理（一般）](/help/sites-administering/generic.md)
 
-Adobe提供两个版本的Commerce Integration Framework:
+Adobe提供了两个版本的商务集成框架：
 
 <table>
  <tbody>
   <tr>
    <th><p> </p> </th>
-   <th><p>CIF上印</p> </th>
+   <th><p>CIF在预装</p> </th>
    <th><p>CIF云</p> </th>
   </tr>
   <tr>
@@ -45,7 +48,7 @@ Adobe提供两个版本的Commerce Integration Framework:
     </ul> </td>
    <td>
     <ul>
-     <li>马根托</li>
+     <li>Magento</li>
      <li>Java和Javascript</li>
      <li>JCR存储库中未存储商务数据</li>
     </ul> </td>
@@ -59,8 +62,8 @@ Adobe提供两个版本的Commerce Integration Framework:
    <td><p>产品目录</p> </td>
    <td>
     <ul>
-     <li>产品导入程序、编辑器、AEM中的缓存</li>
-     <li>包含AEM或代理页面的常规目录</li>
+     <li>产品导入程序，编辑器，在AEM中缓存</li>
+     <li>具有AEM或代理页的常规目录</li>
     </ul> </td>
    <td>
     <ul>
@@ -83,14 +86,14 @@ Adobe提供两个版本的Commerce Integration Framework:
     </ul> </td>
   </tr>
   <tr>
-   <td>标准化的数据模型</td>
+   <td>标准化数据模型</td>
    <td>否</td>
-   <td>是，Magento GraphQL架构</td>
+   <td>是，Magento图QL模式</td>
   </tr>
   <tr>
    <td>可用性</td>
-   <td><p>是. SAP Commerce Cloud(Extension updated to support AEM 6.4 and Hybris 5(default)and maintains compatibility with Hybris 4</p> <p>Salesforce Commerce Cloud（用于支持AEM 6.4的开放源连接器）</p> </td>
-   <td>是，通过GitHub通过开放源代码。 Magento Commerce(支持Magento 2.3.2（默认），并与Magento 2.3.1兼容)。</td>
+   <td><p>是. SAPCommerce Cloud(Extension updated to support AEM 6.4 and Hybris 5(default)and maintains compatibility with Hybris 4</p> <p>SalesforceCommerce Cloud(连接器开放源码支持AEM 6.4)</p> </td>
+   <td>是，通过GitHub开放源。 Magento Commerce(支持Magento2.3.2（默认），并兼容Magento2.3.1)。</td>
   </tr>
   <tr>
    <td>何时使用</td>
@@ -100,22 +103,22 @@ Adobe提供两个版本的Commerce Integration Framework:
  </tbody>
 </table>
 
-电子商务与产品信息管理(PIM)一起处理网站通过在线商店销售产品的活动：
+电子商务与产品信息管理(PIM)一起，处理网站的活动，重点通过在线商店销售产品：
 
 * 产品的创建、生命周期和过时
 * 价格管理
 * 交易管理
 * 管理整个目录
-* 实时和集中存储记录
+* 实时和集中的存储记录
 * Web界面
 
-AEM eCommerce帮助营销人员跨网络、移动设备和社交接触点提供品牌化的个性化购物体验。 AEM创作环境允许您根据目标访客上下文和销售战略自定义页面和组件；例如：
+AEM eCommerce帮助营销人员跨网络、移动和社交接触点提供品牌化、个性化的购物体验。 AEM创作环境允许您根据目标访客环境和销售战略自定义页面和组件；例如：
 
 * 产品页面
 * 购物车组件
 * 结帐组件
 
-该实施允许实时访问产品信息。 这可用于实施：
+该实施允许对产品信息进行实时访问。 这可用于强制：
 
 * 产品信息完整性
 * 定价
@@ -124,22 +127,23 @@ AEM eCommerce帮助营销人员跨网络、移动设备和社交接触点提供�
 
 >[!NOTE]
 >
->要将集成框架与外部电子商务提供商一起使用，您首先需要安装所需的包。 有关详细信息，请参 [阅部署电子商务](/help/sites-deploying/ecommerce.md)。
+>要将集成框架与外部电子商务提供商一起使用，您首先需要安装所需的包。 有关详细信息，请参阅[部署eCommerce](/help/sites-deploying/ecommerce.md)。
 >
->有关扩展电子商务功能的信息，请参 [阅开发电子商务](/help/sites-developing/ecommerce.md)。
+>有关扩展电子商务功能的信息，请参阅[开发电子商务](/help/sites-developing/ecommerce.md)。
 
-## 主要功能 {#main-features}
+## 主要功能{#main-features}
 
 AEM eCommerce提供：
 
-* 许多现 **成的AEM组件** ，用于说明可以为项目实现哪些功能：
+* 一些&#x200B;**现成的AEM组件**，用于说明可以为项目实现哪些目标：
 
-   * 产品展示
+   * 产品显示
    * 购物车
    * 结帐
    * 最近查看的产品
    * 优惠券
-   * 及其他
+   * 和其他
+
    ![](assets/chlimage_1-130.png)
 
    >[!NOTE]
@@ -148,29 +152,31 @@ AEM eCommerce提供：
 
 * **搜索** -使用以下任一方式：
 
-   * AEM搜索
-   * 电子商务系统的搜索
-   * 第三方搜索（如Search&amp;Promote）
+   * aem搜索
+   * 电子商务系统的探索
+   * 第三方搜索(如Search&amp;Promote)
    * 或其组合。
+
    ![](assets/chlimage_1-131.png)
 
-* 使用AEM功能在多 **个渠道(无论是整个浏览器窗口还是移动设备**)上展示您的内容。 这以访客需要的格式提供您的内容。
+* 使用AEM功能&#x200B;**在多个渠道**&#x200B;上展示您的内容，无论是整个浏览器窗口还是移动设备。 这以您的访客需要的格式提供您的内容。
 
    ![](assets/chlimage_1-132.png)
 
-* 能够基于 **AEM eCommerce框架开发您自己的集[成实施](#the-framework)**。
+* **根据[AEM eCommerce framework](#the-framework)**&#x200B;开发您自己的集成实现的能力。
 
-   当前可用的两个实现都基于相同的基础构建——在常规API（框架）之上。 实施新集成只涉及实施您的集成需要的功能。 前端组件可由任何新实现使用，因为它们使用接口（因此与实现无关）。
+   当前可用的两种实现都基于相同的基础构建——在常规API（框架）之上。 实施新集成只涉及实施您的集成需要的功能。 任何新的实现都可以使用前端组件，因为它们使用接口（因此与实现无关）。
 
-* 基于购物者数 **据和活动开发体验驱动型商务的可能性**。 这样您就可以实现许多场景：
+* 基于购物者数据和活动&#x200B;**开发**&#x200B;体验驱动型商务的可能性。 这使您能够实现许多场景：
 
    * 例如，当订单总额超过特定金额时，可能会降低运输成本。
-   * 另一个选项可能允许您提供使用个人资料数据的季节性推广信息（例如位置）。 然后，根据其他因素（如果需要），也可以高亮显示这些内容。
-   在以下示例中，一个teaser显示为购物车的内容小于$75:
+   * 另一种方式可能允许您提供使用优惠数据的季节性用户档案（例如位置）。 然后，根据其他因素，根据需要再次突出显示这些内容。
+
+   在以下示例中，一个Teaser显示为购物车的内容小于$75:
 
    ![](assets/chlimage_1-133.png)
 
-   当购物车内容超过$75时，可以更改此项：
+   当购物车内容超过$75时，可以更改此设置：
 
    ![](assets/chlimage_1-134.png)
 
@@ -180,19 +186,19 @@ AEM eCommerce提供：
    * 完整订单历史记录
    * 快速目录更新
 
-## 框架 {#the-framework}
+## 框架{#the-framework}
 
-“概 [念](/help/sites-administering/concepts.md) ”部分更详细地介绍了框架，但下面提供了框架的高级、高速视图：
+[概念](/help/sites-administering/concepts.md)部分更详细地介绍了框架，但下面提供了框架的高级、高速视图:
 
-### 什么？ {#what}
+### 什么？{#what}
 
-* 集成框架提供API、用于说明功能的一系列组件以及提供连接方法示例的若干扩展。
+* 集成框架提供API、用于说明功能的一系列组件以及提供连接方法示例的几个扩展。
 * 该框架提供了项目实施所需的基本结构。
 * 该框架是可扩展的。
-* 该框架不提供现成的可使用站点。 总是需要一定数量的开发工作来调整框架以符合您的规范。
+* 框架不提供现成的、随时可用的站点。 总是需要一定量的开发工作来调整框架，使其符合您的规范。
 
-### 为什么？ {#why}
+### 为什么？{#why}
 
 * 提供快速实现自定义电子商务站点所需的基本机制。
-* Tp提供了开发真实电子商务站点所需的灵活性。
+* 提供开发真实电子商务站点所需的灵活性。
 * 说明最佳实践。
