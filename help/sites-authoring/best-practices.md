@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 83%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 ## 资产 {#assets}
 
-以下主题介绍了有关资产的最佳实践，包括Dynamic media功能和Dynamic Media Classic集成：
+以下主题介绍了有关资产的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 
 <table>
  <tbody>
@@ -68,10 +71,10 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 |  |  |  |
 |---|---|---|
-| 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 提供用于创作页面的工具的概述。 |
-| 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供如何最好地组织页面（包括命名约定）的概述。 |
+| 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 概述用于创作页面的工具。 |
+| 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供如何最好地组织页面（包括命名惯例）的概述。 |
 
-## Forms {#forms}
+## 表单 {#forms}
 
 |  |  |  |
 |---|---|---|
