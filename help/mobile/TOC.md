@@ -14,17 +14,17 @@ ht-degree: 12%
 ---
 
 
-# AEM 6.5 Mobile 用户指南 {#mobile}
+# AEM 6.5 Mobile 用户指南  {#mobile}
 
 + [移动用户指南概述](home.md)
-+ Introduction to AEM Mobile {#introduction}
++ AEM Mobile简介{#introduction}
    + [AEM Mobile 入门](getting-started-aem-mobile.md)
    + [AEM Mobile点播](getting-started-aem-mobile-on-demand.md)
    + [移动应用程序](mobile-apps.md)
    + [AEMAdobe PhoneGap](getting-started-aem-mobile-phonegap.md)
    + [AEM Mobile- GDPR就绪性](aem-mobile-gdpr-compliance.md)
    + [开发移动应用程序](develop-mobile-apps.md)
-+ 创作On-Demand Services应用程序 {#authoring}
++ 创作On-Demand Services应用程序{#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [管理内容](mobile-apps-ondemand-manage-content-ondemand.md)
    + [发布取消发布内容](mobile-on-demand-publishing-unpublishing.md)
@@ -34,7 +34,7 @@ ht-degree: 12%
    + [上传共享资源](mobile-on-demand-shared-resources.md)
    + [云配置](mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
    + [管理横幅](mobile-on-demand-managing-banners.md)
-+ 开发点播服务应用程序 {#developing}
++ 开发On-Demand Services应用程序{#developing}
    + [AEM Mobile点播](aem-mobile-on-demand.md)
    + [应用程序模板和组件](app-templates-and-components1.md)
    + [内容属性和节点](content-properties.md)
@@ -48,7 +48,7 @@ ht-degree: 12%
    + [渲染和投放](rendering-and-delivery.md)
    + [Content Services](developing-content-services.md)
    + [内容投放](develop-content-as-a-service.md)
-+ 管理点播服务应用程序 {#administering}
++ 管理On-Demand Services应用程序{#administering}
    + [AEM Mobile点播](aem-mobile.md)
    + [AEM Mobile设置](aem-mobile-setup.md)
    + [配置用户和用户组](aem-mobile-configure-users.md)
@@ -57,7 +57,7 @@ ht-degree: 12%
    + [模型概述](model-management.md)
    + [空格和实体](spaces-and-entities.md)
    + [管理收藏集](mobile-on-demand-managing-collections.md)
-+ 创作Adobe PhoneGap企业 {#author-phonegap}
++ 创作Adobe PhoneGap企业{#author-phonegap}
    + [PhoneGap](phonegap.md)
    + [编辑应用程序元数据](phonegap-editmetadata.md)
    + [应用程序定义](phonegap-app-definitions.md)
@@ -66,7 +66,7 @@ ht-degree: 12%
    + [创作移动应用程序](phonegap-authoring-apps.md)
    + [管理应用程序拼贴](phonegap-app-details-tile.md)
    + [AEM Mobile内容个性化](phonegap-aem-mobile-content-personalization.md)
-+ 发展Adobe PhoneGap企业 {#developphonegap}
++ 开发Adobe PhoneGap企业{#developphonegap}
    + [PhoneGap](developing-in-phonegap.md)
    + [构建移动应用程序](building-app-mobile-phonegap.md)
    + [推送通知](phonegap-push-notifications.md)
@@ -87,7 +87,7 @@ ht-degree: 12%
    + [测试移动应用程序](develop-mobile-apps-testing.md)
    + [构建应用程序](phonegap-structure-an-app.md)
    + [使用Adobe移动分析跟踪应用程序性能](phonegap-intro-to-app-analytics.md)
-+ 管理Adobe PhoneGap企业 {#administering-phonegap}
++ 管理Adobe PhoneGap企业{#administering-phonegap}
    + [移动快速入门](phonegap-mobile-quickstart.md)
    + [通过AEM为Adobe PhoneGap企业管理内容](administer-phonegap.md)
    + [配置您的Adobe PhoneGap BuildCloud Service](configure-phonegap-build-cloud.md)
