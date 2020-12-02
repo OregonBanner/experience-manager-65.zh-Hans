@@ -18,11 +18,11 @@ ht-degree: 2%
 ---
 
 
-# Calendar Essentials {#calendar-essentials}
+# 日历基本信息{#calendar-essentials}
 
 此页提供有关使用日历功能的基本信息。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -49,14 +49,14 @@ ht-degree: 2%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅 <a href="calendar.md">使用日历</a></td>
+   <td>请参阅<a href="calendar.md">使用日历</a></td>
   </tr>
  </tbody>
 </table>
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端必备工具 {#essentials-for-server-side}
+## 服务器端{#essentials-for-server-side}的必备工具
 
 * [日历API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
@@ -66,18 +66,18 @@ ht-degree: 2%
 
 ### 日历功能 {#calendar-function}
 
-包含日历功能的社区站 [点结构](functions.md#calendar-function) 将具有已配置的 `calendar` 组件。 日历功能支持标识特 [权成员用户组](users.md#privileged-members-group)。
+包含[日历函数](functions.md#calendar-function)的社区站点结构将具有已配置的`calendar`组件。 日历功能支持标识[特权成员用户组](users.md#privileged-members-group)。
 
-### 访问日历帖子(UGC) {#accessing-calendar-posts-ugc}
+### 访问日历帖子(UGC){#accessing-calendar-posts-ugc}
 
-自AEM 6.1 Communities起，使用UGC的 [公用商店](working-with-srp.md) ，包括以程序方式访问UGC，而不管选择的存储选项（如ASRP、MSRP或JSRP）如何。
+自AEM 6.1社区起，对UGC使用[公用商店](working-with-srp.md)包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供程序概述](srp.md) -简介和存储库使用概述
-* [SRP和UGC Essentials](srp-and-ugc.md) - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) —— 编码指南
+* [存储资源提供者概述](srp.md) -简介和存储库使用概述
+* [SRP和UGC Essentials](srp-and-ugc.md)  - SRP实用程序方法和示例
+* [使用SRP访问UGC](accessing-ugc-with-srp.md) -编码指南
 * [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
 
