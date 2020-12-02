@@ -15,10 +15,10 @@ ht-degree: 92%
 ---
 
 
-# AEM 6.5 Authoring 用户指南 {#authoring}
+# AEM 6.5 Authoring 用户指南  {#authoring}
 
 + [创作用户指南概述](home.md)
-+ AEM创作的基本任务、工具和概念 {#essentials}
++ AEM创作{#essentials}的基本任务、工具和概念
    + [创作的首要步骤](first-steps.md)
    + [页面创作](page-authoring.md)
    + [页面创作快速指南](qg-page-authoring.md)
@@ -75,7 +75,7 @@ ht-degree: 92%
    + [将工作流应用于页面](workflows-applying.md)
    + [参与工作流](workflows-participating.md)
    + [使用项目工作流](projects-with-workflows.md)
-+ 页面性能 {#page-performance}
++ 页面性能{#page-performance}
    + [内容分析](content-insights.md)
    + [分析页面性能](ci-analyze.md)
    + [查看页面分析数据](pa-using.md)
@@ -90,7 +90,7 @@ ht-degree: 92%
    + [管理受众](managing-audiences.md)
    + [创建和管理选件](offerlib.md)
    + [了解分段](segmentation-overview.md)
-+ AEM和Adobe Campaign {#aem-adobe-campaign}
++ AEM和Adobe Campaign{#aem-adobe-campaign}
    + [使用 Adobe Campaign](adobe-campaign.md)
    + [使用 Adobe Campaign Classic 和 Adobe Campaign Standard](campaign.md)
    + [定位您的 Adobe Campaign](target-adobe-campaign.md)
