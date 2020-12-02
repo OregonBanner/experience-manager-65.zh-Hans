@@ -18,9 +18,9 @@ ht-degree: 7%
 ---
 
 
-# Configuring your Page for Bulk Editing of Page Properties {#configuring-your-page-for-bulk-editing-of-page-properties}
+# 配置页面以批量编辑页面属性{#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[批量编辑页面属性](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) ，允许您一次编辑多个页面的属性。
+[批量编辑页](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) 面属性允许您一次编辑多个页面的属性。
 
 由于可能有不同的值，因此默认情况下不启用页面属性进行批量编辑。 必须明确允许（启用）它们。 在定义可批量编辑的页面属性时，您需要考虑某些含义，例如：
 
@@ -43,9 +43,9 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->也可以对资产进行批量编辑。 其操作大体相同，只有少数几点差别。有关完整的信息，请参阅[编辑多个资产的属性](/help/assets/metadata.md)。You can customize the fields in the Bulk Metadata editor for Assets using the [Schema editor](/help/assets/metadata-schemas.md).
+>也可以对资产进行批量编辑。 其操作大体相同，只有少数几点差别。有关完整的信息，请参阅[编辑多个资产的属性](/help/assets/metadata.md)。您可以使用[模式编辑器](/help/assets/metadata-schemas.md)自定义资产批量元数据编辑器中的字段。
 
-## 启用字段 {#enabling-a-field}
+## 启用字段{#enabling-a-field}
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ ht-degree: 7%
 
 
 
-在页面组件上启用字段(*不在* 模板上):
+在页面组件上启用字段（模板上不是&#x200B;*）:*
 
 1. 使用CRXDE Lite（或等效方法）打开页面组件。
 
@@ -70,16 +70,16 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >此示例假定实例上已安装核心组件，即当实例与We.Retail示例内容一起运行时。 See the [Core Components documentation](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) for more information.
+   >此示例假定实例上已安装核心组件，即当实例与We.Retail示例内容一起运行时。 有关详细信息，请参阅[核心组件文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。
 
-1. 导航到定义中的必填 `cq:dialog` 字段。
+1. 导览至`cq:dialog`定义中的必填字段。
 1. 在字段节点上定义以下属性：
 
    * **名称**: `allowBulkEdit`
    * **类型**: `Boolean`
-   * **值**: `true`
+   * **值**:  `true`
 
-   例如，对于标准页面基 [础组件](/help/sites-authoring/default-components-foundation.md):
+   例如，对于标准页[foundation component](/help/sites-authoring/default-components-foundation.md):
 
    `/libs/foundation/components/page`
 
@@ -89,15 +89,15 @@ ht-degree: 7%
 
    >[!CAUTION]
    >
-   >您 ***不得*** 更改路径中的任 `/libs` 何内容。
+   >您&#x200B;***必须***&#x200B;不要更改`/libs`路径中的任何内容。
    >
-   >这是因为下次升级实 `/libs` 例时，内容会被覆盖（而应用修补程序或功能包时，内容很可能会被覆盖）。
+   >这是因为下次升级实例时，`/libs`的内容会被覆盖（当您应用修补程序或功能包时，很可能会被覆盖）。
    >
    >建议的配置和其他更改方法是：
    >
-   >    1. 在下面重新创建所需的项(即，当它存在 `/libs`时) `/apps`
-   >    1. 在 `/apps`
+   >    1. 在`/apps`下重新创建所需项（即，它存在于`/libs`中）
+   >    1. 在`/apps`中进行任何更改
 
 
-1. 选择 **全部保存** ，以保留更新。
+1. 选择&#x200B;**全部保存**&#x200B;以保留更新。
 
