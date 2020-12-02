@@ -12,11 +12,11 @@ ht-degree: 27%
 ---
 
 
-# Learn About AEM 6.5 Capabilities {#learn-about-aem-64-capabilities}
+# 了解AEM 6.5功能{#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是AdeobeExperience Manager内的一个内容管理系统，它为您提供了一个位置来跨网站、移动站点和现场屏幕创建、管理和提供数字体验，使其在全球范围内触手可及，且具有个人相关性和吸引力。 [了解更多](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) , [或深入了解一些新增视频功能教程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是AdeobeExperience Manager内的一个内容管理系统，它为您提供了一个位置来跨网站、移动站点和现场屏幕创建、管理和提供数字体验，使其在全球范围内触手可及，且具有个人相关性和吸引力。 [进一](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 步了 [解或深入学习我们新增的视频功能教程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -47,8 +47,8 @@ Screens是一项Adobe Experience Manager功能，允许您发布动态和交互�
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是一项全新的Adobe Experience Manager功能，它允许您访问网络上共享的所有内容，在您自己的网站上源源不断地创建新鲜、高质量的内容。 [了解更多](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) ，或 [直接跳入指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是一项全新的Adobe Experience Manager功能，它允许您访问网络上共享的所有内容，在您自己的网站上源源不断地创建新鲜、高质量的内容。 [了](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 解更 [多或直接进入指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
-## AEM基础 {#aem-foundation}
+## AEM Foundation {#aem-foundation}
 
-进一步了解 [Adobe Experience Manager6.5基础](/help/sites-deploying/home.md) 和我们的托管服务部署模型 [，或深入介绍此版本中的一些新功能的视频。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+进一步了解[Adobe Experience Manager6.5基础](/help/sites-deploying/home.md)和我们的托管服务部署模型，或深入了解本版本中功能的一些新视频介绍。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)[
