@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# How to Work With Packages{#how-to-work-with-packages}
+# 如何使用包{#how-to-work-with-packages}
 
 包允许导入和导出存储库内容。 例如，您可以使用包安装新功能、在实例之间传输内容以及备份存储库内容。
 
@@ -27,11 +27,11 @@ ht-degree: 1%
 
 * [包管理器](#package-manager)，用于管理本地AEM实例中的包。
 
-* [软件分发](#software-distribution)，一个集中服务器，它既包含公开可用的包，又包含您公司的私有包。 公共包可包含修补程序、新功能、文档等。
+* [软件分发](#software-distribution)，一个集中服务器，它既包含公开可用的包，又包含您公司的私有包。公共包可包含修补程序、新功能、文档等。
 
 可以在包管理器、软件分发和文件系统之间传输包。
 
-## 什么是包？ {#what-are-packages}
+## 什么是包？{#what-are-packages}
 
 包是一个zip文件，其中以文件系统序列化（称为“保管库”序列化）的形式存放存储库内容。 这为文件和文件夹提供了易于使用和编辑的表示形式。
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 * 从软件分发库下载包（如修补程序）
 * 将包上传到软件分发库的公司内部部分
 
-## 包信息 {#package-information}
+## 包信息{#package-information}
 
 包定义由各种类型的信息组成：
 
@@ -71,11 +71,11 @@ ht-degree: 1%
 * [打包屏幕截图](#package-screenshots)
 * [包图标](#package-icons)
 
-### 包设置 {#package-settings}
+### 包设置{#package-settings}
 
 您可以编辑各种“包设置”来定义包描述、相关错误、依赖关系和提供程序信息等方面。
 
-在创 **建或编辑** 包时 **，可通过“编辑**[”按钮使](#creating-a-new-package) 用“包设 [置”对话框，并](#viewing-and-editing-package-information) 提供三个用于配置的选项卡。 进行任何更改后，单击“ **确定** ”以保存这些更改。
+当[创建](#creating-a-new-package)或[编辑](#viewing-and-editing-package-information)包时，**包设置**&#x200B;对话框可通过&#x200B;**编辑**&#x200B;按钮使用，并提供三个用于配置的选项卡。 进行任何更改后，单击&#x200B;**确定**&#x200B;以保存这些更改。
 
 ![包编辑](assets/packagesedit.png)
 
@@ -129,14 +129,14 @@ ht-degree: 1%
      <li><strong>合并</strong></li>
      <li><strong>清除</strong></li>
      <li><strong>MergePreserve</strong></li>
-    </ul> <p>The default value is <strong>Ignore</strong>.</p> </td>
+    </ul> <p>默认值为<strong>忽略</strong>。</p> </td>
    <td>
     <ul>
      <li><strong>忽略</strong> -保留存储库中的ACL</li>
      <li><strong>覆盖</strong> -覆盖存储库中的ACL</li>
      <li><strong>合并</strong> -合并两组ACL</li>
      <li><strong>清除</strong> -清除ACL</li>
-     <li><strong>MergePreserve</strong> —— 通过添加内容中不存在的承担者的访问控制项，将内容中的访问控制与包中提供的合并</li>
+     <li><strong>合并保留</strong> -通过添加内容中不存在的承担者的访问控制项，将内容中的访问控制与包中提供的合并</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -151,12 +151,12 @@ ht-degree: 1%
 | 依赖于 | 列表依赖关系信息，当需要其他包时需要遵守这些信息才能让当前包按预期运行。 使用修补程序时，此字段很重要。 | groupId:name:version |
 | 替换 | 替换此包的已弃用包的列表。 在安装之前，请检查此包是否包含来自废弃包的所有必要内容，以便不覆盖任何内容。 | groupId:name:version |
 
-### 包过滤器 {#package-filters}
+### 包过滤器{#package-filters}
 
-过滤器标识要包含在包中的存储库节点。 筛 **选器定义** 指定以下信息：
+过滤器标识要包含在包中的存储库节点。 **过滤器定义**&#x200B;指定以下信息：
 
-* 要 **包含的内** 容的根路径。
-* **包含** 或排除根路径下的特定节点的规则。
+* 要包含的内容的&#x200B;**根路径**。
+* **包** 括或排除根路径下的特定节点的规则。
 
 过滤器可以包含零个或多个规则。 未定义规则时，包包含根路径下的所有内容。
 
@@ -177,14 +177,14 @@ ht-degree: 1%
    <td> 包括</td>
    <td>您可以定义路径，或使用常规表达式指定要包括的所有节点。<br /> <br /> 包含目录将：
     <ul>
-     <li>包括该 <i>目录</i> ，以及该目录中的所有文件和文件夹（即整个子树）</li>
-     <li><strong>不包含</strong> 指定根路径下的其他文件或文件夹</li>
+     <li>包括该目录<i>和</i>中的所有文件和文件夹（即整个子树）</li>
+     <li><strong>不</strong> 包括指定根路径下的其他文件或文件夹</li>
     </ul> </td>
    <td>/libs/sling/install(/)*)? </td>
   </tr>
   <tr>
    <td> 排除</td>
-   <td>可以指定路径或使用常规表达式来指定要排除的所有节点。<br /> <br /> 排除目录将排除该目 <i>录</i> 、该目录中的所有文件和文件夹（即整个子树）。<br /> </td>
+   <td>可以指定路径或使用常规表达式来指定要排除的所有节点。<br /> <br /> 排除目录将排除该目 <i></i> 录以及该目录中的所有文件和文件夹（即整个子树）。<br /> </td>
    <td>/libs/wcm/foundation/components(/)*)?</td>
   </tr>
  </tbody>
@@ -194,13 +194,13 @@ ht-degree: 1%
 >
 >一个包可以包含多个筛选器定义，以便将来自不同位置的节点轻松组合到一个包中。
 
-包过滤器最常在您首次创建包 [时进行定义](#creating-a-new-package)，但也可以在以后编辑它们（之后应重新构建包）。
+包过滤器通常在您首次[创建包](#creating-a-new-package)时进行定义，但以后也可以编辑它们（之后应重建包）。
 
-### 打包屏幕截图 {#package-screenshots}
+### 包屏幕截图{#package-screenshots}
 
 您可以将屏幕截图附加到包中，以直观呈现内容的外观；例如，提供新功能的截屏。
 
-### 包图标 {#package-icons}
+### 包图标{#package-icons}
 
 您还可以将图标附加到包中，以快速参考包中包含的内容的可视化演示。 然后，此列表会显示在包中，它可以帮助您轻松识别包或包类别。
 
@@ -220,30 +220,30 @@ ht-degree: 1%
 
 ![](do-not-localize/chlimage_1-29.png)
 
-## Package Manager {#package-manager}
+## 包管理器{#package-manager}
 
-包管理器管理本地AEM安装上的包。 分配了必 [要权限后](#permissions-needed-for-using-the-package-manager) ，您可以使用包管理器执行各种操作，包括配置、构建、下载和安装包。 要配置的关键元素包括：
+包管理器管理本地AEM安装上的包。 在为[分配了必要权限](#permissions-needed-for-using-the-package-manager)后，您可以使用包管理器执行各种操作，包括配置、构建、下载和安装包。 要配置的关键元素包括：
 
 * [包设置](#package-settings)
 * [包过滤器](#package-filters)
 
-### 使用包管理器所需的权限 {#permissions-needed-for-using-the-package-manager}
+### 使用包管理器{#permissions-needed-for-using-the-package-manager}所需的权限
 
 要授予用户创建、修改、上传和安装包的权利，您必须在以下位置为他们授予适当的权限：
 
 * **/etc/packages** （删除除外）
 * 包含包内容的节点
 
-有关 [更改权限](/help/sites-administering/security.md#setting-page-permissions) 的说明，请参阅设置权限。
+有关更改权限的说明，请参阅[设置权限](/help/sites-administering/security.md#setting-page-permissions)。
 
-### Creating a New Package {#creating-a-new-package}
+### 创建新包{#creating-a-new-package}
 
 要创建新包定义，请执行以下操作：
 
-1. 在AEM欢迎屏幕上，单 **击** “包”(或在“工具 **”控制台多次** 中 **，单击“**&#x200B;包”)。
+1. 在AEM欢迎屏幕上，单击&#x200B;**包**(或从&#x200B;**工具**&#x200B;控制台多次单击&#x200B;**包**)。
 
-1. 然后选择 **包管理器**。
-1. 单击“ **创建包**”。
+1. 然后选择&#x200B;**包管理器**。
+1. 单击&#x200B;**创建包**。
 
    >[!NOTE]
    >
@@ -268,7 +268,7 @@ ht-degree: 1%
    * **版本**
 
       用于指示版本的文本字段。 这将附加到包名称中，以构成zip文件的名称。
-   单击 **“确** 定”以创建包。
+   单击&#x200B;**确定**&#x200B;以创建包。
 
 1. AEM列表相应组文件夹中的新包。
 
@@ -282,52 +282,54 @@ ht-degree: 1%
    >
    >如果需要，您可以在以后的阶段返回此页。
 
-1. 单击 **“编辑** ”以编辑 [包设置](#package-settings)。
+1. 单击&#x200B;**编辑**&#x200B;以编辑[包设置](#package-settings)。
 
-   在此，您可以添加信息和／或定义某些设置；例如，这包括描述、图 [标](#package-icons)、相关错误和添加提供程序详细信息。
+   在此，您可以添加信息和／或定义某些设置；例如，这包括说明、[图标](#package-icons)、相关错误和添加提供程序详细信息。
 
-   编辑 **完设** 置后，单击“确定”。
+   编辑完设置后，单击&#x200B;**确定**。
 
-1. 根 **[据需要](#package-screenshots)** ，将截屏添加到包。 创建包时有一个实例可用，使用Sidekick中的包屏幕截图根据需要添 **加更多** 。
+1. 根据需要将&#x200B;**[截屏](#package-screenshots)**&#x200B;添加到包中。 创建包时有一个实例可用，如果需要，可使用Sidekick中的&#x200B;**包屏幕截图**&#x200B;添加更多实例。
 
-   通过多次单击“屏幕截图”区域中的图像组 **件** ，添加图像，然后单击“确 **定”来添加实际图像**。
+   通过多次单击&#x200B;**屏幕截图**&#x200B;区域中的图像组件，添加图像，然后单击&#x200B;**确定**，添加实际图像。
 
-1. 定义 **[包过滤器](#package-filters)** ，方法是从Sidekick中拖 **动过滤器定义的** 实例，然后多次单击以打开进行编辑：
+1. 定义&#x200B;**[包过滤器](#package-filters)**，方法是从Sidekick中拖动&#x200B;**过滤器定义**&#x200B;的实例，然后多次单击以打开进行编辑：
 
    ![包装过滤器](assets/packagesfilter.png)
 
    指定：
 
-   * **根路径**&#x200B;要打包的内容；这可以是子树的根。
-   * **规则**&#x200B;规则是可选的；对于简单的包定义，无需指定包括或排除规则。
+   * **根路**
+径要打包的内容；这可以是子树的根。
+   * **规**
+则规则是可选的；对于简单的包定义，无需指定包括或排除规则。
 
-      如果需要，您可以定 [**义Include****或Exclude** 规](#package-filters) 则，以准确定义包内容。
+      如果需要，您可以定义&#x200B;[**Include**&#x200B;或&#x200B;**Exclude**&#x200B;规则](#package-filters)来准确定义包内容。
 
-      使用+符号添 **加规则** ，或者使用——符号 **删除规则** 。 规则会根据规则的顺序应用，因此使用“上移”和“下移”按 **钮** ，根 **据需要** 定位它们。
-   然后，单 **击** “确定”以保存过滤器。
+      使用&#x200B;**+**&#x200B;符号添加规则，或者使用&#x200B;**-**&#x200B;符号删除规则。 根据规则的顺序应用规则，以便使用&#x200B;**Up**&#x200B;和&#x200B;**Down**&#x200B;按钮根据需要定位规则。
+   然后单击&#x200B;**确定**&#x200B;以保存过滤器。
 
    >[!NOTE]
    >
-   >您可以根据需要使用任意数量的筛选器定义，但必须谨慎确保它们不发生冲突。 使 **用预览** ，确认包内容将包含哪些内容。
+   >您可以根据需要使用任意数量的筛选器定义，但必须谨慎确保它们不发生冲突。 使用&#x200B;**预览**&#x200B;确认包内容。
 
-1. 要确认包的存放方式，您可以使用 **预览**。 这将执行构建过程的练习，并列表实际构建包时将添加到包的所有内容。
-1. 您现在可 [以构](#building-a-package) 建包。
+1. 要确认包将包含什么，您可以使用&#x200B;**预览**。 这将执行构建过程的练习，并列表实际构建包时将添加到包的所有内容。
+1. 您现在可以[构建](#building-a-package)您的包。
 
    >[!NOTE]
    >
    >此时不强制构建包，可在以后某个时间完成。
 
-### 构建包 {#building-a-package}
+### 构建包{#building-a-package}
 
-通常，在创建包定义的同时 [构建包](#creating-a-new-package)，但可以在以后的时间返回构建或重建包。 如果存储库中的内容已更改，则此功能可能很有用。
+通常，在[创建包定义](#creating-a-new-package)的同时构建包，但您可以在以后的某个时间返回构建或重建包。 如果存储库中的内容已更改，则此功能可能很有用。
 
 >[!NOTE]
 >
->在构建包之前，预览包的内容可能会很有用。 要执行此操作，请单击 **预览**。
+>在构建包之前，预览包的内容可能会很有用。 要执行此操作，请单击&#x200B;**预览**。
 
-1. 从“包管理器” **中打开包定义** （单击包图标或名称）。
+1. 从&#x200B;**包管理器**&#x200B;打开包定义（单击包图标或名称）。
 
-1. 单击“ **生成**”。 将显示一个对话框，要求您确认是否要构建包。
+1. 单击&#x200B;**Build**。 将显示一个对话框，要求您确认是否要构建包。
 
    >[!NOTE]
    >
@@ -335,21 +337,21 @@ ht-degree: 1%
 
 1. 单击&#x200B;**确定**。AEM将构建包，并按照其方式列出添加到包的所有内容。 完成AEM后，将显示确认，确认已构建包，并（关闭对话框时）更新包列表信息。
 
-### 重新打包包 {#rewrapping-a-package}
+### 重新打包{#rewrapping-a-package}
 
 构建包后，可以根据需要重新打包。
 
-重新打包会更改包信息- *而不* 更改包内容。 包信息是缩览图、描述等，换言之，您可以通过“包设置”对话框编辑的 **一切内容** (要打开此选项，请单击“ **编辑**”)。
+重新打包会更改包信息- *而不更改*&#x200B;包内容。 包信息是缩略图、说明等，换言之，您可以通过&#x200B;**包设置**&#x200B;对话框编辑的一切（要打开此信息，请单击&#x200B;**编辑**）。
 
 重新包装的主要用例是准备包装时。 例如，您可能有一个现有包，并决定与他人共享它。 要添加缩略图并添加说明。 您不必使用其所有功能重新创建整个包（可能需要一些时间，并且有可能使包不再与原始包相同），而是重新包装它，只需添加缩略图和说明。
 
-1. 从“包管理器” **中打开包定义** （单击包图标或名称）。
+1. 从&#x200B;**包管理器**&#x200B;打开包定义（单击包图标或名称）。
 
-1. 单击 **“编辑** ”，然后根 **[据需要更](#package-settings)** 新“包设置”。 单击&#x200B;**确定**&#x200B;进行保存。
+1. 单击&#x200B;**编辑**&#x200B;并根据需要更新&#x200B;**[包设置](#package-settings)**。 单击&#x200B;**确定**&#x200B;进行保存。
 
-1. 单击 **“重新**&#x200B;换行”，将显示一个对话框要求进行确认。
+1. 单击&#x200B;**重新打包**，将显示一个对话框要求确认。
 
-### 查看和编辑包信息 {#viewing-and-editing-package-information}
+### 查看和编辑包信息{#viewing-and-editing-package-information}
 
 要视图或编辑有关包定义的信息：
 
@@ -364,67 +366,67 @@ ht-degree: 1%
    >
    >可用的按钮取决于包是否已构建。
 
-1. 如果包已经构建，请单 **击**“内容”，将打开一个窗口并列表包的整个内容：
+1. 如果已构建包，请单击&#x200B;**内容**，将打开一个窗口并列表包的整个内容：
 
-### 查看包内容和测试安装 {#viewing-package-contents-and-testing-installation}
+### 查看包内容和测试安装{#viewing-package-contents-and-testing-installation}
 
 生成包后，您可以视图内容：
 
 1. 在包管理器中，导航到要视图的包。
 1. 单击要视图的包的包图标。 这将打开包页面，其中列出有关包定义的信息。
 
-1. 要视图内容，请 **单击**“内容”，此时将打开一个窗口并列表包的整个内容：
+1. 要视图内容，请单击&#x200B;**内容**，将打开一个窗口并列表包的整个内容：
 
    ![包内容](assets/packgescontents.png)
 
-1. 要执行安装的练习，请单击“测试 **安装”**。 确认操作后，将打开一个窗口并列表结果，就像执行了安装一样：
+1. 要执行安装的练习，请单击“测试安装”**。**&#x200B;确认操作后，将打开一个窗口并列表结果，就像执行了安装一样：
 
    ![packagestinstall](assets/packagestestinstall.png)
 
-### 将包下载到文件系统 {#downloading-packages-to-your-file-system}
+### 将包下载到文件系统{#downloading-packages-to-your-file-system}
 
-本节介绍如何使用包管理器将包从AEM下载到文 **件系统**。
+本节介绍如何使用&#x200B;**包管理器**&#x200B;将包从AEM下载到文件系统。
 
-1. 在AEM欢迎屏幕上，单击“ **包**”，然后选择 **“包管理器”**。
+1. 在AEM欢迎屏幕上，单击&#x200B;**包**，然后选择&#x200B;**包管理器**。
 1. 导航到要下载的包。
 
    ![包下载](assets/packagesdownload.png)
 
-1. 单击要下载的包的zip文件名称（带下划线）所形成的链接；例如 `export-for-offline.zip`,
+1. 单击要下载的包的zip文件名称（带下划线）所形成的链接；例如`export-for-offline.zip`。
 
    AEM将软件包下载到您的计算机（使用标准浏览器下载对话框）。
 
-### 从文件系统上传包 {#uploading-packages-from-your-file-system}
+### 从文件系统{#uploading-packages-from-your-file-system}上传包
 
 包上传允许您从文件系统将包上传到AEM包管理器。
 要上传包，请执行以下操作：
 
-1. 导航到包 **管理器**。 然后，转到要将包上载到的组文件夹。
+1. 导航到&#x200B;**包管理器**。 然后，转到要将包上载到的组文件夹。
 
    ![包上载按钮](assets/packagesuploadbutton.png)
 
-1. 单击“ **上传包”**。
+1. 单击&#x200B;**上传包**。
 
    ![packagesuploaddialog](assets/packagesuploaddialog.png)
 
    * **文件**
 
-      您可以直接键入文件名，或使用“浏 **览……** ”对话框从本地文件系统中选择所需的包(选择后，单击“ **确定**”)。
+      您可以直接键入文件名，或使用&#x200B;**浏览……**&#x200B;对话框，从本地文件系统中选择所需的包（选择后单击&#x200B;**确定**）。
 
    * **强制上传**
 
       如果具有此名称的包已存在，则可以单击此按钮强制上传（并覆盖现有包）。
-   单 **击** “确定”，以上传新包并在“包管理器”列表中列出。
+   单击&#x200B;**确定**，以上传新包并列在包管理器列表中。
 
    >[!NOTE]
    >
-   >要使内容可供AEM使用，请务必安 [装软件包](#installing-packages)。
+   >要使内容可供AEM使用，请确保[安装软件包](#installing-packages)。
 
-### 验证包 {#validating-packages}
+### 正在验证包{#validating-packages}
 
-在安装包之前，您可能希望验证其内容。 由于包可以修改ACL下 `/apps` 的叠加文件和／或添加、修改和删除ACL，因此在安装前验证这些更改通常很有用。
+在安装包之前，您可能希望验证其内容。 由于包可以修改`/apps`和／或添加、修改和删除ACL下叠加的文件，因此在安装前验证这些更改通常很有用。
 
-#### 验证选项 {#validation-options}
+#### 验证选项{#validation-options}
 
 验证机制可以检查包的以下特性：
 
@@ -438,11 +440,11 @@ ht-degree: 1%
 
    **检查的内容**
 
-   此验证检查所有JAR文件（OSGi捆绑包）的包，提取其 `manifest.xml` （其中包含所述OSGi捆绑包所依赖的版本化依赖关系），并验证AEM实例将所述依赖关系导出为正确的版本。
+   此验证检查包中所有JAR文件（OSGi捆绑包），提取其`manifest.xml`（其中包含所述OSGi捆绑包所依赖的版本化依赖关系），并验证AEM实例用正确的版本导出所述依赖关系。
 
    **报告方式**
 
-   AEM实例无法满足的任何版本化依赖项列在包管理 **器的活动** 日志中。
+   AEM实例无法满足的任何版本化依赖关系列在包管理器的&#x200B;**活动日志**&#x200B;中。
 
    **错误状态**
 
@@ -458,11 +460,11 @@ ht-degree: 1%
 
    此验证确定要安装的包是否包含已覆盖到目标AEM实例中的文件。
 
-   例如，给定现有叠加(位 `/apps/sling/servlet/errorhandler/404.jsp`于)，包含的 `/libs/sling/servlet/errorhandler/404.jsp`包，这样它将更改位于的现有文件 `/libs/sling/servlet/errorhandler/404.jsp`。
+   例如，给定`/apps/sling/servlet/errorhandler/404.jsp`处的现有叠加，即包含`/libs/sling/servlet/errorhandler/404.jsp`的包，这样它将更改`/libs/sling/servlet/errorhandler/404.jsp`处的现有文件。
 
    **报告方式**
 
-   包管理器的活动日志 **中介绍了** 任何此类叠加。
+   包管理器的&#x200B;**活动日志**&#x200B;中介绍了任何此类叠加。
 
    **错误状态**
 
@@ -470,7 +472,7 @@ ht-degree: 1%
 
    **错误解决**
 
-   要解决此问题，其中叠加文件的维护人员必须 `/apps` 查看中对叠加文件所做的更改，并根 `/libs` 据需要将更改合并到叠加()中，然后重新部署叠加 `/apps`文件。
+   要解决此问题，`/apps`中叠加文件的维护者必须查看`/libs`中叠加文件的更改，并根据需要将更改合并到叠加中(`/apps`)，然后重新部署叠加文件。
 
    >[!NOTE]
    >
@@ -484,7 +486,7 @@ ht-degree: 1%
 
    **报告方式**
 
-   这些权限在包管理器 **的活动** 日志中有介绍。
+   这些权限在包管理器的&#x200B;**活动日志**&#x200B;中有介绍。
 
    **错误状态**
 
@@ -498,7 +500,7 @@ ht-degree: 1%
    >
    >作为最佳实践，建议软件包不要影响AEM提供的ACL，因为这可能导致意外的产品行为。
 
-#### 执行验证 {#performing-validation}
+#### 正在执行验证{#performing-validation}
 
 可以通过两种不同的方式验证包：
 
@@ -511,14 +513,14 @@ ht-degree: 1%
 
 **通过包管理器进行包验证**
 
-1. 在打开包管理器 `https://<server>:<port>/crx/packmgr`
-1. 在列表中选择包，然后从标 **题中** ，选择更多， **然后从下拉** 菜单中选择“验证”。
+1. 打开`https://<server>:<port>/crx/packmgr`的包管理器
+1. 在列表中选择包，然后从标题中选择&#x200B;**更多**&#x200B;下拉列表，然后从下拉菜单中选择&#x200B;**验证**。
 
    >[!NOTE]
    >
    >这应在上传内容包后完成，但在安装该包之前完成。
 
-1. 在随后出现的模态对话框中，使用复选框选择验证类型，并通过单击验证开始 **验证**。 或者，单击 **取消**。
+1. 在随后出现的模态对话框中，使用复选框选择验证类型，并通过单击&#x200B;**验证**&#x200B;开始验证。 或者，单击&#x200B;**取消**。
 
 1. 然后运行所选验证。 结果显示在包管理器的活动日志中。
 
@@ -532,7 +534,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 >[!NOTE]
 >
->该参 `type` 数可以是以逗号分隔的无序列表，包括：
+>`type`参数可以是以逗号分隔的无序列表，包括：
 >
 >* `osgiPackageImports`
 >* `overlays`
@@ -540,7 +542,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 >
 >
-如果未传 `type` 递， `osgiPackageImports` 则默认值为。
+如果未传递，`type`的值将默认为`osgiPackageImports`。
 
 以下是使用cURL执行包验证的示例。
 
@@ -556,11 +558,11 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >
 >对验证HTTPPOST请求的响应将是JSON对象，验证结果为。
 
-### 安装包 {#installing-packages}
+### 安装包{#installing-packages}
 
 上传包后，您需要安装该内容。 要安装包内容并使其正常工作，它必须同时具备以下两种功能：
 
-* 加载到AEM(从 [文件系统上传](#uploading-packages-from-your-file-system) 或从软件 [分发下载](#software-distribution))
+* 加载到AEM（从您的文件系统[上传或从](#uploading-packages-from-your-file-system)软件分发[下载）](#software-distribution)
 
 * 已安装
 
@@ -571,11 +573,11 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >要查看包的内容或影响，您可以：
 >
 >* 无需修改任何内容即可对包执行测试安装：
-   >  打开包（单击包图标或名称），然后单击“测 **试安装”**。
+   >  打开包（单击包图标或名称），然后单击&#x200B;**测试安装**。
    >
    >
 * 请参阅包内容列表:
-   >  打开包，然后单击“ **内容**”。
+   >  打开包，然后单击&#x200B;**内容**。
 
 >
 
@@ -592,7 +594,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >如果您正在安装数字资产，则必须：
 >
 >* 首先，取消激活WorkflowLauncher。
-   >  使用OSGi控制台的“组件”菜单选项取消激活 `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl`。
+   >  使用OSGi控制台的“组件”菜单选项取消激活`com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl`。
    >
    >
 * 然后，在安装完成后，重新激活WorkflowLauncher。
@@ -602,29 +604,29 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 1. 在“包管理器”中，导航到要安装的包。
 
-   尚未 **安装** 的包的一侧会显示“安装”按钮。
+   **安装**&#x200B;按钮显示在尚未安装的包的一侧。
 
    >[!NOTE]
    >
-   >或者，也可以通过单击包的图标打开包，以访问该 **包的** “安装”按钮。
+   >或者，也可以通过单击软件包的图标打开软件包，以访问该软件包的&#x200B;**安装**&#x200B;按钮。
 
-1. 单击 **“安装** ”以开始安装。 对话框将请求确认并列表所有正在进行的更改。 完成后，单击 **对话框** 上的“关闭”。
+1. 单击&#x200B;**安装**&#x200B;以开始安装。 对话框将请求确认并列表所有正在进行的更改。 完成后，单击对话框上的&#x200B;**关闭**。
 
-   安装包 **后** ，软件包旁边将显示“Installed”字样。
+   安装软件包后，软件包旁边将显示“**已安装**”字样。
 
-### 基于文件系统的上传和安装 {#file-system-based-upload-and-installation}
+### 基于文件系统的上传和安装{#file-system-based-upload-and-installation}
 
-有一种替代方法可将包上传并安装到实例。 在文件系统中，您的jar和 `crx-quicksart` 文件旁边有一个文 `license.properties` 件夹。 您需要创建一个名为“”的 `install` 文件夹 `crx-quickstart`。 然后您将拥有这样的功能： `<aem_home>/crx-quickstart/install`
+有一种替代方法可将包上传并安装到实例。 在文件系统中，您的jar和`license.properties`文件旁边有一个`crx-quicksart`文件夹。 您需要在`crx-quickstart`下创建一个名为`install`的文件夹。 然后您将拥有这样的功能：`<aem_home>/crx-quickstart/install`
 
 在此安装文件夹中，您可以直接添加包。 它们将自动上传并安装在您的实例上。 完成后，您可以在包管理器中看到包。
 
-如果实例正在运行，则向文件夹添 `install` 加包将直接启动上传和实例安装。 如果实例未运行，您放入文件夹的包 `install` 将在启动时按字母顺序安装。
+如果实例正在运行，则向`install`文件夹添加包将直接启动上传和实例上的安装。 如果实例未运行，您放入`install`文件夹的包将在启动时按字母顺序安装。
 
 >[!NOTE]
 >
->您还可以在首次启动实例之前执行此操作。 为此，您需要手动创建文 `crx-quickstart` 件夹，在其下 `install` 创建文件夹，然后将包放在那里。 然后，当您首次启动实例时，将按字母顺序安装包。
+>您还可以在首次启动实例之前执行此操作。 为此，您需要手动创建`crx-quickstart`文件夹，在文件夹下创建`install`文件夹，然后将包放在该文件夹中。 然后，当您首次启动实例时，将按字母顺序安装包。
 
-### 卸载包 {#uninstalling-packages}
+### 正在卸载包{#uninstalling-packages}
 
 AEM允许您卸载包。 此操作会还原受在安装包之前立即创建的快照影响的存储库内容。
 
@@ -636,51 +638,51 @@ AEM允许您卸载包。 此操作会还原受在安装包之前立即创建的�
 
 1. 在包管理器中，导航到要卸载的包。
 1. 单击要卸载的包的包图标。
-1. 单 **击“** Uninstall”（卸载）从存储库中删除此包的内容。 对话框将请求确认并列表所有正在进行的更改。 完成后，单击 **对话框** 上的“关闭”。
+1. 单击&#x200B;**卸载**&#x200B;可从存储库中删除此包的内容。 对话框将请求确认并列表所有正在进行的更改。 完成后，单击对话框上的&#x200B;**关闭**。
 
-### 删除包 {#deleting-packages}
+### 删除包{#deleting-packages}
 
 要从“包管理器”列表中删除包，请执行以下操作：
 
 >[!NOTE]
 >
->不会删除包中已安装的文件/ **节点** 。
+>已从包中安装的文件／节点&#x200B;**未**&#x200B;被删除。
 
-1. 在“工 **具** ”控制台中，展 **开“包** ”文件夹，在右侧窗格中显示包。
+1. 在&#x200B;**工具**&#x200B;控制台中，展开&#x200B;**软件包**&#x200B;文件夹，在右窗格中显示软件包。
 
 1. 单击要删除的包，以突出显示它，然后：
 
-   * 单击工 **具栏** 菜单中的删除。
-   * 右键单击并选择“ **删除**”。
+   * 单击工具栏菜单中的&#x200B;**删除**。
+   * 右键单击并选择&#x200B;**删除**。
 
    ![包删除](assets/packagesdelete.png)
 
-1. AEM要求您确认是否要删除该包。 Click **OK** to confirm the deletion.
+1. AEM要求您确认是否要删除该包。 单击&#x200B;**确定**&#x200B;以确认删除。
 
 >[!CAUTION]
 >
->如果此包已安装，则不会 *删除* 已安 **装的内** 容。
+>如果此包已安装，则&#x200B;*已安装*&#x200B;的内容将&#x200B;**不**&#x200B;被删除。
 
-### 复制包 {#replicating-packages}
+### 正在复制包{#replicating-packages}
 
 复制包的内容以将其安装到发布实例：
 
-1. 在包 **管理器**，导航到要复制的包。
+1. 在&#x200B;**包管理器**&#x200B;中，导航到要复制的包。
 
 1. 单击要复制的包的图标或名称以展开它。
-1. 在工 **具栏** 的更多下拉菜单中，选择复 **制**。
+1. 在工具栏的&#x200B;**更多**&#x200B;下拉菜单中，选择&#x200B;**复制**。
 
 ## 包共享 {#package-share}
 
 包共享是公开提供的用于共享内容包的中央服务器。
 
-它已被“软件分 [发”所取代](#software-distribution)。
+它已被[软件分发](#software-distribution)替换。
 
-## 软件分发 {#software-distribution}
+## 软件分发{#software-distribution}
 
-[软件分发](https://downloads.experiencecloud.adobe.com) 是新的用户界面，旨在简化AEM包的搜索和下载。
+[软](https://downloads.experiencecloud.adobe.com) 件分发是新的用户界面，旨在简化AEM包的搜索和下载。
 
-有关详细信息，请查看软件 [分发文档](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)。
+有关详细信息，请查看[软件分发文档](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)。
 
 >[!CAUTION]
 >
