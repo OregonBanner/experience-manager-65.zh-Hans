@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 教程：创建您的第一个交互式通信 {#tutorial-create-your-first-interactive-communication}
+# 教程：创建您的第一个交互式通信{#tutorial-create-your-first-interactive-communication}
 
 了解如何创建您的第一个交互式通信。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 * 创建交互式通信
 * 测试和发布交互式通信
 
-## Use case {#use-case}
+## 用例{#use-case}
 
 旅程开始了如何学习使用案例：
 
@@ -50,11 +50,11 @@ ht-degree: 0%
 ## 前提条件 {#prerequisites}
 
 * 设置AEM作者实例。
-* 在作 [者实例上安装](/help/forms/using/installing-configuring-aem-forms-osgi.md) AEM Forms加载项
+* 在创作实例上安装[AEM Forms加载项](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 * 设置MYSQL数据库
-* 从数据库提供程序获取JDBC数据库驱动程序（JAR文件）。 本教程中的示例基于MySQL数据库，并使用Oracle的MySQL [JDBC数据库驱动程序](https://dev.mysql.com/downloads/connector/j/5.1.html)。
+* 从数据库提供程序获取JDBC数据库驱动程序（JAR文件）。 本教程中的示例基于MySQL数据库，并使用Oracle的[MySQL JDBC数据库驱动程序](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
-## 第1步：规划交互式通信 {#step-plan-the-interactive-communication}
+## 第1步：规划交互式通信{#step-plan-the-interactive-communication}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -72,11 +72,11 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/planning-interactive-communications.md)
 
-## Step 2: Create form data model {#step-create-form-data-model}
+## 第2步：创建表单数据模型{#step-create-form-data-model}
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-表单数据模型允许您将交互式通信连接到不同的数据源。 例如，AEM用户用户档案、RESTful Web服务、基于SOAP的Web服务、OData服务和关系型数据库。 表单模式模型是业务实体和在连接数据源中可用服务的统一数据表示。 您可以将表单数据模型与交互式通信结合使用，从连接的数据源检索数据。 有关表单数据模型的更多信息，请参 [阅AEM Forms数据集成](/help/forms/using/data-integration.md)。
+表单数据模型允许您将交互式通信连接到不同的数据源。 例如，AEM用户用户档案、RESTful Web服务、基于SOAP的Web服务、OData服务和关系型数据库。 表单模式模型是业务实体和在连接数据源中可用服务的统一数据表示。 您可以将表单数据模型与交互式通信结合使用，从连接的数据源检索数据。 有关表单数据模型的详细信息，请参阅[AEM Forms数据集成](/help/forms/using/data-integration.md)。
 
 **目标：**
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-form-data-model0.md)
 
-## 第3步：创建文档片段 {#step-create-document-fragments}
+## 第3步：创建文档片段{#step-create-document-fragments}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-document-fragments.md)
 
-## 第4步：创建模板 {#step-create-templates}
+## 第4步：创建模板{#step-create-templates}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -123,7 +123,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-templates-print-web.md)
 
-## 第5步：创建交互式通信 {#step-create-an-interactive-communication}
+## 第5步：创建交互通信{#step-create-an-interactive-communication}
 
 ![09-style-your-adaptive-form-small](assets/09-style-your-adaptive-form-small.png)
 
@@ -142,7 +142,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 
    [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-interactive-communication0.md)
 
-## 第6步：测试交互式通信 {#step-test-your-interactive-communication}
+## 第6步：测试交互通信{#step-test-your-interactive-communication}
 
 ![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
 
@@ -154,7 +154,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 * 创建测试用例
 * 运行测试用例
 
-## 第7步：发布交互通信 {#step-publish-your-interactive-communication}
+## 第7步：发布您的交互式通信{#step-publish-your-interactive-communication}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
