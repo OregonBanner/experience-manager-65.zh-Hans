@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 85%
 
 ---
 
@@ -23,5 +26,5 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!NOTE]
 >
->Although there is a Scaffolding [mode](/help/sites-authoring/author-environment-tools.md#page-modes) available, the maintenance and creation of scaffolds as well as creating new pages from scaffolds is done in the classic UI. 有关详细信息，请参阅经典 UI 创作文档中的[基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
+>尽管有可用的基架[mode](/help/sites-authoring/author-environment-tools.md#page-modes)，但基架的维护和创建以及从基架创建新页面都是在经典UI中完成的。 有关详细信息，请参阅经典 UI 创作文档中的[基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
 
