@@ -12,6 +12,9 @@ discoiquuid: 48936115-4be2-4b0c-81ce-d61e43e4535d
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '1379'
+ht-degree: 92%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 * 将页面恢复到之前的版本，例如，为了撤消您对页面所做的更改。
 * 将页面的当前版本与之前版本进行比较，并突出显示文本和图像中的差异。
 
-## 创建新版本 {#creating-a-new-version}
+## 创建新版本  {#creating-a-new-version}
 
 创建页面的新版本：
 
@@ -34,15 +37,15 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
    ![screen_shot_2012-02-14at40259pm](assets/screen_shot_2012-02-14at40259pm.png)
 
 1. 输入&#x200B;**评论**（可选）。
-1. To set a label to the version (optional), click the **More >>** button and set the **Label** to name the version. If the label is not set, the version is an automatically incremented number.
-1. Click **Create Version**. 页面上随即会显示一条灰显的消息；例如：
+1. 要设置版本的标签（可选），请单击&#x200B;**更多>>**&#x200B;按钮并设置&#x200B;**标签**&#x200B;来命名版本。如果未设置标签，则版本是自动递增的编号。
+1. 单击&#x200B;**创建版本**。 页面上随即会显示一条灰显的消息；例如：
 已为以下对象创建版本 1.2: 衬衫。
 
 >[!NOTE]
 >
 >激活页面时会自动创建版本。
 
-## 从 Sidekick 恢复某个页面版本 {#restoring-a-page-version-from-sidekick}
+## 从 Sidekick 恢复某个页面版本  {#restoring-a-page-version-from-sidekick}
 
 将页面恢复到之前的版本：
 
@@ -68,7 +71,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 1. 选择要恢复的版本，然后单击&#x200B;**恢复**。AEM 会恢复您选择的版本（或树）。
 
-### 从控制台恢复树 {#restoring-a-tree-from-the-console}
+### 从控制台恢复树  {#restoring-a-tree-from-the-console}
 
 此方法可用于恢复页面版本。还可用于恢复之前已删除的页面：
 
@@ -85,7 +88,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 将页面的当前版本与之前的版本进行比较：
 
 1. 在您的浏览器中，打开要将其与之前版本进行比较的页面。
-1. In the Sidekick, select the **Versioning** tab, then the **Restore Versio** n sub tab.
+1. 在Sidekick中，选择&#x200B;**版本控制**&#x200B;选项卡，然后选择&#x200B;**恢复版本** n子选项卡。
 
    ![screen_shot_2012-02-14at42949pm-1](assets/screen_shot_2012-02-14at42949pm-1.png)
 
@@ -95,11 +98,12 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
    * 删除的文本为红色并带有删划线。
    * 添加的文本为绿色并突出显示。
    * 添加或删除的图像会带有绿色边框。
+
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
 1. 在 Sidekick 中，选择&#x200B;**恢复版本**&#x200B;子选项卡，然后单击 **&lt;&lt; 返回**&#x200B;按钮以显示当前版本。
 
-## 时间扭曲 {#timewarp}
+## 时间扭曲  {#timewarp}
 
 时间扭曲是一项功能，旨在模拟过去特定时间某个页面的&#x200B;***已发布***&#x200B;状态。
 
@@ -116,7 +120,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 >
 >如果从存储库从删除了版本，那么时间扭曲无法显示正确的视图。此外，如果呈现网站的元素（如代码、css、图像等）已发生更改，则视图将与它原来的样子不一样，因为这些项不在存储库中。
 
-### 使用时间扭曲日历 {#using-the-timewarp-calendar}
+### 使用时间扭曲日历  {#using-the-timewarp-calendar}
 
 可以从 Sidekick 使用时间扭曲。
 
@@ -140,12 +144,13 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
    >[!NOTE]
    >
-   >您无法删除页面的旧版本。它仅供于查看。如果要恢复旧版本，则必须使用[恢复](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick)功能手动恢复。
+   >您无法删除页面的旧版本。旧版本仅供查看。如果要恢复旧版本，则必须使用[恢复](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick)功能手动恢复。
 
 1. 当您查看完此页面时，请单击：
 
    * “**退出时间扭曲**”可以退出并返回到当前的创作页面。
    * [显示时间轴](#using-the-timewarp-timeline)可查看时间轴。
+
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
 ### 使用时间扭曲时间线 {#using-the-timewarp-timeline}
@@ -167,6 +172,7 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 1. 选择并移动（拖住）时间轴可以在文档的时间轴上移动。
 
    * 所有时间轴指示已发布的版本。激活某个页面时，即开始使用新的线条。每次编辑此文档时，会显示新颜色。在以下示例中，红色线条表示该页面在初始绿色版本的时间段内进行了编辑，黄色线条表示该页面在红色版本的时间段内进行了编辑，等等。
+
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
 1. 单击:
@@ -176,16 +182,16 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 ### 时间扭曲限制 {#timewarp-limitations}
 
-时间扭曲会尽力在选定的时间点重制页面。 但是，由于AEM中内容的连续创作非常复杂，这并不总是可能。 使用时间扭曲时，应牢记这些限制。
+时间扭曲会尽量在选定的时刻重现页面。但是，由于在 AEM 中连续创作内容的过程非常复杂，并非总能实现这一点。在使用时间扭曲时，应牢记以下限制。
 
-* **时间扭曲基于已发布的页面工作** -时间扭曲仅在您之前已发布页面时才会完全正常工作。 如果没有，时间扭曲将在创作环境显示当前页面。
-* **时间扭曲使用页面版本** -如果您导航到已从存储库删除的页面，则如果该页面的旧版本仍在存储库中可用，则该页面将正确呈现。
-* **删除的版本影响时间扭曲** -如果从存储库中删除版本，则时间扭曲无法显示正确的视图。
+* **时间扭曲基于已发布的页面工作** - 仅当您之前已发布页面时，时间扭曲才会完全正常工作。如果没有，时间扭曲将在创作环境显示当前页面。
+* **时间扭曲使用页面版本** - 当您浏览到的页面已从存储库删除时，如果该页面的旧版本仍然位于存储库中，则该页面将会正常呈现。
+* **已删除的版本会影响时间扭曲** - 如果从存储库从删除了版本，那么时间扭曲无法显示正确的视图。
 
-* **时间扭曲是只读的** -您无法编辑页面的旧版本。 旧版本仅供查看。如果要恢复旧版本，则必须使用[恢复](#main-pars-title-1)功能手动恢复。
+* **时间扭曲为只读** - 您无法编辑页面的旧版本。旧版本仅供查看。如果要恢复旧版本，则必须使用[恢复](#main-pars-title-1)功能手动恢复。
 
-* **时间扭曲仅基于页面内容** -如果用于呈现网站的元素（如代码、css、资源／图像等）已发生更改，则视图将与其原来的样子不同，因为这些项目不在存储库中进行版本控制。
+* **时间扭曲仅基于页面内容** - 如果呈现网站的元素（如代码、css、资产/图像等）发生更改，则视图将与它原来的样子不同，因为这些项目不在存储库中进行版本控制。
 
 >[!CAUTION]
 >
->时间扭曲设计为一种工具，可帮助作者理解和创建其内容。 它不用作审计日志或用于法律目的。
+>时间扭曲是一种工具，可帮助作者理解和创建其内容。 而不是用作审查日志或用于法律目的。
