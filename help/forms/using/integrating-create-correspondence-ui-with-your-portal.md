@@ -1,8 +1,8 @@
 ---
-title: 将“创建对应UI”与自定义门户集成
-seo-title: 将“创建对应UI”与自定义门户集成
-description: 了解如何将创建对应的UI与自定义门户集成
-seo-description: 了解如何将创建对应的UI与自定义门户集成
+title: 将创建对应UI与自定义门户集成
+seo-title: 将创建对应UI与自定义门户集成
+description: 了解如何将创建通信UI与自定义门户集成
+seo-description: 了解如何将创建通信UI与自定义门户集成
 uuid: 68ef5bf2-b271-4c44-8840-6c495069164d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,17 +11,20 @@ discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 3%
 
 ---
 
 
-# 将“创建对应UI”与自定义门户集成{#integrating-create-correspondence-ui-with-your-custom-portal}
+# 将创建对应UI与自定义门户集成{#integrating-create-correspondence-ui-with-your-custom-portal}
 
 ## 概述 {#overview}
 
-本文详细介绍了如何将“创建通信解决方案”与您的环境集成。
+本文详细介绍了如何将“创建通信解决方案”与环境集成。
 
-## 基于URL的调用 {#url-based-invocation}
+## 基于URL的调用{#url-based-invocation}
 
 从自定义门户调用“创建对应”应用程序的一种方法是使用以下请求参数准备URL:
 
@@ -34,17 +37,17 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 >[!NOTE]
 >
->以这种方式调用不安全，因为通过在URL中显示相同（明显可见）的参数，将必要的参数作为GET请求传递。
+>以这种方式进行调用是不安全的，因为通过在URL中显示相同（清晰可见）的参数，将必需的参数作为GET请求传递。
 
 >[!NOTE]
 >
->在调用创建对应应用程序之前，请保存并上传数据，以在给定dataURL处调用创建对应UI。 这可以从自定义门户本身或通过另一个后端进程完成。
+>在调用创建对应应用程序之前，请保存并上传数据，以在给定的dataURL调用创建对应UI。 这可以从自定义门户本身或通过另一个后端进程完成。
 
-## 基于内联数据的调用 {#inline-data-based-invocation}
+## 内联基于数据的调用{#inline-data-based-invocation}
 
-调用“创建通信”应用程序的另一种（也是更安全的）方法是只点击https://&#39;[server]:port[&#39;/]contextPath[]/aem/forms/createcorrespondence.html上的URL，同时发送参数和数据以作为POST请求调用“创建通信”应用程序（将其隐藏在最终用户面前）。 这也意味着您现在可以在线传递Create Commerence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），这在以前的方法中是不可能的／理想的。
+调用“创建通信”应用程序的另一种（也更安全）方法是简单点击https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html的URL，同时发送参数和数据以作为POST请求调用“创建通信”应用程序（将它们隐藏在最终用户面前）。 这也意味着您现在可以内嵌（作为同一请求的一部分，使用cmData参数）传递Create Commendence应用程序的XML数据，这在以前的方法中是不可能的／理想的。
 
-### 用于指定字母的参数 {#parameters-for-specifying-letter}
+### 指定字母{#parameters-for-specifying-letter}的参数
 
 | **名称** | **类型** | **描述** |
 |---|---|---|
@@ -53,7 +56,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 表中的参数顺序指定用于加载字母的参数的首选项。
 
-### 用于指定XML数据源的参数 {#parameters-for-specifying-the-xml-data-source}
+### 用于指定XML数据源{#parameters-for-specifying-the-xml-data-source}的参数
 
 <table>
  <tbody>
@@ -70,7 +73,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
   <tr>
    <td>cmLetterInstanceId</td> 
    <td>字符串</td> 
-   <td>使用Letter实例中可用的xml数据。</td> 
+   <td>使用字母实例中可用的xml数据。</td> 
   </tr>
   <tr>
    <td>cmUseTestData</td> 
@@ -82,7 +85,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 表中的参数顺序指定用于加载XML数据的参数的首选项。
 
-### 其他参数 {#other-parameters}
+### 其他参数{#other-parameters}
 
 <table>
  <tbody>
@@ -94,7 +97,7 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
   <tr>
    <td>cmPreview<br /> </td> 
    <td>布尔型</td> 
-   <td>在预览模式下打开字母时为true<br /> </td> 
+   <td>在预览模式下打开字母为True<br /> </td> 
   </tr>
   <tr>
    <td>随机</td> 
@@ -104,4 +107,4 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
  </tbody>
 </table>
 
-如果对cmDataURL使用http或cq协议，则http/cq的URL应可匿名访问。
+如果对cmDataURL使用http或cq协议，则http/cq的URL应匿名访问。
