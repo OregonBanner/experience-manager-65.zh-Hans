@@ -17,13 +17,13 @@ ht-degree: 0%
 ---
 
 
-# 自定义任务操作 {#customizing-task-actions}
+# 自定义任务操作{#customizing-task-actions}
 
-AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作之前，请确保遵循AEM Forms工作区自 [定义的常规步骤中列出的步骤](/help/forms/using/generic-steps-html-workspace-customization.md)。
+AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作之前，请确保遵循[AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md)中列出的步骤。
 
-## 自定义文本样式 {#customizing-text-style}
+## 自定义文本样式{#customizing-text-style}
 
-要自定义文本样式，请在文件中添加以下代码 `/apps/ws/css/newStyle.css` 片段：
+要自定义文本样式，请在`/apps/ws/css/newStyle.css`文件中添加以下代码片段：
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -109,9 +109,9 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 }
 ```
 
-## 自定义图像 {#customizing-images}
+## 自定义图像{#customizing-images}
 
-要自定义图像，请在文件中添加以下代码 `/apps/ws/css/newStyle.css` 片断。 以下代码片断为锁定操作自 *定义图* 像：
+要自定义图像，请在`/apps/ws/css/newStyle.css`文件中添加以下代码片断。 以下代码片断为&#x200B;*lock*&#x200B;操作自定义图像：
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -132,15 +132,15 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 }
 ```
 
-## 仅显示用于操作的图像 {#showing-only-images-for-actions}
+## 仅显示动作{#showing-only-images-for-actions}的图像
 
-要仅显示动作的图像，请自定义路由动作中使用的图像。 有关详细信息，请参 [阅路由操作的图像](/help/forms/using/images-route-actions.md)。
+要仅显示动作的图像，请自定义路由动作中使用的图像。 有关详细信息，请参阅[路由操作的图像](/help/forms/using/images-route-actions.md)。
 
-### 任务列表任务操作弹出菜单 {#task-list-task-action-nbsp-pop-up-menu}
+### 任务列表任务操作弹出菜单{#task-list-task-action-nbsp-pop-up-menu}
 
-1. 您需要开发包来自定义AEM Forms工作区任务列表任务操作弹出菜单的项。 有关创建开发包的详细信息，请参 [阅构建AEM Forms工作区代码。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. 您需要开发包来自定义AEM Forms工作区任务列表任务操作弹出菜单的项。 有关创建开发包的详细信息，请参阅[构建AEM Forms工作区代码。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-1. 复制/libs/ws/js/runtime/templates/task.html以替 `/apps/ws/js/runtime/templates/task.html`换以下代码片段：
+1. 将/libs/ws/js/runtime/templates/task.html复制到`/apps/ws/js/runtime/templates/task.html`替换以下代码片段：
 
    ```html
    // Orignal code
@@ -213,7 +213,7 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
        </div>
    ```
 
-1. 从文件中删除分配给锚点标签的固定宽 `/apps/ws/css/newStyle.css` 度：
+1. 从`/apps/ws/css/newStyle.css`文件中删除分配给锚点标签的固定宽度：
 
    ```css
    .task .taskActionsPopUp ul{
@@ -263,12 +263,12 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
    }
    ```
 
-### 任务详细信息任务操作弹出菜单 {#task-details-task-action-pop-up-menu}
+### 任务详细信息任务操作弹出菜单{#task-details-task-action-pop-up-menu}
 
 执行以下步骤以自定义“详细信息”任务操作弹出菜单：
 
-* 将/libs/ws/js/runtime/templates/taskdetails.html文件复制到文 `/apps/ws/js/runtime/templates/` 件夹：
-* 将图标标签封装在锚点标签中而不是文本中。 例如，下面列 *出的新代* 码封装了锚点标签中的图标标签：
+* 将/libs/ws/js/runtime/templates/taskdetails.html文件复制到`/apps/ws/js/runtime/templates/`文件夹：
+* 将图标标签封装在锚点标签中而不是文本中。 例如，下面列出的&#x200B;*新代码*&#x200B;封装锚点标签中的图标标签：
 
 ```html
 // Original code
@@ -360,5 +360,5 @@ AEM Forms工作区允许用户自定义任务操作。 在自定义任务操作�
 ```
 
 * 打开/apps/ws/js/registry.js文件进行编辑。
-* 找到以下文本： `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
-* 将找到的文本替换为以下文本： `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
+* 找到以下文本：`text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
+* 将找到的文本替换为以下文本：`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
