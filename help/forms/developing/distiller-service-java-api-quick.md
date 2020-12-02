@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Distiller服务Java API快速开始(SOAP) {#distiller-service-java-api-quickstart-soap}
+# Distiller服务Java API快速开始(SOAP){#distiller-service-java-api-quickstart-soap}
 
 Java API快速开始(SOAP)可用于Distiller®服务：
 
@@ -27,11 +27,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的快速开始基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API将PostScript文件转换为PDF文档 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}将PostScript文件转换为PDF文档
 
-以下代码示例将名为Loan.ps *的PostScript文件转* 换为名为Loan. *pdf的PDF文件*。 (请参 [阅将PostScript转换为PDF文档](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)。)
+下面的代码示例将名为&#x200B;*Loan.ps*&#x200B;的PostScript文件转换为名为&#x200B;*Loan.pdf*&#x200B;的PDF文件。 (请参阅[将PostScript转换为PDF文档](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)。)
 
 ```java
  /*
