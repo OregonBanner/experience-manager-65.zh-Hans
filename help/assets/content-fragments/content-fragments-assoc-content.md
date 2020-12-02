@@ -21,15 +21,15 @@ ht-degree: 22%
 
 # 关联的内容{#associated-content}
 
-关联的内容提供了连接，这样，在将片段添加到内容页面时，资产（例如，资产）可以（可选）与片段一起使用。 这样，在页 [面上使用内容片段时，可提供一系列资产以供访问](/help/sites-authoring/content-fragments.md#using-associated-content)，同时还有助于缩短搜索相应资产所需的时间。
+关联的内容提供了连接，这样，在将片段添加到内容页面时，资产（例如，资产）可以（可选）与片段一起使用。 这通过[提供在页面](/help/sites-authoring/content-fragments.md#using-associated-content)上使用内容片段时可访问的资产范围提供了灵活性，同时还有助于缩短搜索相应资产所需的时间。
 
-## 添加关联内容 {#adding-associated-content}
+## 添加关联内容{#adding-associated-content}
 
 >[!NOTE]
 >
 >可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
 
-要建立关联，您首先需 [要将媒体资产添加到集合](/help/assets/manage-collections.md#adding-assets-to-a-collection)。 完成后，您可以：
+要建立关联，您首先需要[将媒体资产添加到集合](/help/assets/manage-collections.md#adding-assets-to-a-collection)。 完成后，您可以：
 
 1. 打开片段，然后从侧面板中选择&#x200B;**关联的内容**。
 
@@ -46,12 +46,12 @@ ht-degree: 22%
 
    ![cfm-6420-05](assets/cfm-6420-05.png)
 
-## 编辑关联内容 {#editing-associated-content}
+## 编辑关联内容{#editing-associated-content}
 
 关联集合后，您可以：
 
-* **删除** 关联。
-* **将资产** 添加到收藏集。
+* **删** 除关联。
+* **将资** 产添加到集合。
 * 选择资产以执行进一步操作。
 * 编辑资产.
 
