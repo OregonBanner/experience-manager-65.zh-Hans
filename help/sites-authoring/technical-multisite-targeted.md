@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 7dd851ab-3fa7-426e-89cb-08b67e9b5999
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 下图显示了如何构建目标内容的多站点支持。
 
-Areas appear underneath **/content/campaigns/&lt;brand>** and by default each brand has a master area, which is created automatically. 每个区域都包含自身的一组活动、体验和选件。
+区域显示在&#x200B;**/content/活动/&lt;brand>**&#x200B;下方，默认情况下，每个品牌都有一个主控区域，该区域将自动创建。 每个区域都包含自身的一组活动、体验和选件。
 
 ![chlimage_1-268](assets/chlimage_1-268.png)
 
