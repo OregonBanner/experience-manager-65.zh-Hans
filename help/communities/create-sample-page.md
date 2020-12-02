@@ -18,25 +18,25 @@ ht-degree: 2%
 ---
 
 
-# 创建示例页面 {#create-a-sample-page}
+# 创建示例页面{#create-a-sample-page}
 
 自AEM 6.1 Communities起，创建示例页面的最简单方法是创建一个简单的社区站点，该站点仅由页面功能组成。
 
-这将包括parsys组件，以便您能够启 [用组件进行创作](basics.md#accessing-communities-components)。
+这将包括parsys组件，这样您就可以[启用组件进行创作](basics.md#accessing-communities-components)。
 
-探索示例组件的另一种方法是使用“社区组件指南”中 [提供的功能](components-guide.md)。
+对示例组件进行探索的另一个选项是使用[社区组件指南](components-guide.md)中提供的功能。
 
-## 创建社区站点 {#create-a-community-site}
+## 创建社区站点{#create-a-community-site}
 
-这与创建新站点(如《AEM Communities入门》中所述) [非常相似](getting-started.md)。
+这与创建新站点(如[AEM Communities入门](getting-started.md)中所述)非常相似。
 
-主要区别在于本教程将创建一个仅包含页面功能的 [新社区站点模板](functions.md#page-function) ，以创建一个简单的社区站点，该站点没有其他功能（除了所有社区站点基本的预连线功能）。
+主要区别在于，本教程将创建一个仅包含[页面函数](functions.md#page-function)的新社区站点模板，以创建一个简单的社区站点，该站点没有其他功能（除了所有社区站点基本的预连线功能）。
 
-### 创建新站点模板 {#create-new-site-template}
+### 创建新站点模板{#create-new-site-template}
 
-要开始使用，请创建一个简 [单的社区站点模板](sites.md)。
+要开始，请创建一个简单的[社区站点模板](sites.md)。
 
-从创作实例的全局导航中，选 **[!UICONTROL 择工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 站点模板]**。
+从创作实例的全局导航中选择&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 站点模板]**。
 
 ![create-site-template](assets/create-site-template1.png)
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 * 结构
 
-   * 将函数 `Page` 拖动到Template Builder
+   * 将`Page`函数拖到Template Builder
    * 对于配置函数详细信息，输入
 
       * `Title`:单页
@@ -59,18 +59,18 @@ ht-degree: 2%
 
 ![站点模板编辑器结构](assets/site-template-editor1.png)
 
-* 选 **`Save`** 择配置
-* 选 **`Save`** 择站点模板
+* 为配置选择&#x200B;**`Save`**
+* 为站点模板选择&#x200B;**`Save`**
 
-### 创建新社区站点 {#create-new-community-site}
+### 新建社区站点{#create-new-community-site}
 
 现在，基于简单的站点模板创建一个新的社区站点。
 
-创建站点模板后，从全局导航中选择“社 **[!UICONTROL 区”>“站点]**”。
+创建站点模板后，从全局导航中选择&#x200B;**[!UICONTROL 社区>站点]**。
 
 ![创建社区站点](assets/create-community-site1.png)
 
-* 选择图 **`Create`** 标
+* 选择&#x200B;**`Create`**&#x200B;图标
 
 * 步骤 `1 - Site Template`
 
@@ -82,7 +82,7 @@ ht-degree: 2%
 
       * url = http://localhost:4502/content/sites/sample
 
-      * `Template`:选择 `Single Page Template`
+      * `Template`:选择  `Single Page Template`
 
       ![create-community-site-template](assets/create-community-site-template.png)
 
@@ -101,24 +101,24 @@ ht-degree: 2%
 
    ![创建社区站点](assets/create-community-site.png)
 
-## 发布站点 {#publish-the-site}
+## 发布站点{#publish-the-site}
 
 ![发布站点](assets/publish-site.png)
 
-从社区 [站点控制台](sites-console.md)，选择要发布站点的发布图标，默认情况下，该图标会发布到http://localhost:4503。
+从[社区站点控制台](sites-console.md)中，选择发布图标以发布站点，默认情况下，该图标会发布到http://localhost:4503。
 
-## 在编辑模式下打开作者网站 {#open-the-site-on-author-in-edit-mode}
+## 以编辑模式{#open-the-site-on-author-in-edit-mode}打开作者站点
 
 ![开放站点](assets/open-site.png)
 
 选择打开的站点图标以在编辑模式下视图站点。
 
-该URL将为 [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
+URL将为[http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
 
 ![作者站点](assets/author-site.png)
 
 在简单的主页下，您可以查看通过社区功能和模板预先连接的内容，并尝试添加和配置社区组件。
 
-## 视图发布站点 {#view-site-on-publish}
+## 发布视图站点{#view-site-on-publish}
 
-发布页面后，在发布实例上打 [开页面](http://localhost:4503/content/sites/sample/en.html) ，以匿名站点访客、登录成员或管理员的身份尝试这些功能。 除非管理员登录，否则在创作环境中可见的“管理”链接将不会显示在发布环境中。
+发布页面后，请在[发布实例](http://localhost:4503/content/sites/sample/en.html)上打开该页面，尝试以匿名站点访客、登录成员或管理员身份使用这些功能。 除非管理员登录，否则在创作环境中可见的“管理”链接将不会显示在发布环境中。
