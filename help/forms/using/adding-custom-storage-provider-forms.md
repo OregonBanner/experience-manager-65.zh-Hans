@@ -17,24 +17,24 @@ ht-degree: 0%
 ---
 
 
-# 草稿和提交组件的自定义存储 {#custom-storage-for-drafts-and-submissions-component}
+# 草稿和提交组件的自定义存储{#custom-storage-for-drafts-and-submissions-component}
 
 ## 概述 {#overview}
 
 AEM Forms允许您将表单另存为草稿。 使用草稿功能，您可以维护一个进行中的表单，您可以从任何设备完成并稍后提交。
 
-默认情况下，AEM Forms将与表单草稿和提交相关的用户数据存储在Publish实 `/content/forms/fp` 例的节点中。 此外，AEM Forms门户组件提供数据服务，您可以使用这些服务来自定义为草稿和提交文件存储用户数据的实施。 例如，您可以将用户数据存储在数据存储中。
+默认情况下，AEM Forms将与表单草稿和提交相关的用户数据存储在Publish实例的`/content/forms/fp`节点中。 此外，AEM Forms门户组件提供数据服务，您可以使用这些服务来自定义为草稿和提交文件存储用户数据的实施。 例如，您可以将用户数据存储在数据存储中。
 
 ## 前提条件  {#prerequisites}
 
-* 启用 [表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
-* 创建表 [单门户页面](/help/forms/using/creating-form-portal-page.md)
-* 为表 [单门户启用自适应表单](/help/forms/using/draft-submission-component.md)
-* 了解自 [定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 启用[表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
+* 创建[表单门户页面](/help/forms/using/creating-form-portal-page.md)
+* 为表单门户启用[自适应表单](/help/forms/using/draft-submission-component.md)
+* 了解自定义存储的[实现详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
-## 草稿数据服务 {#draft-data-service}
+## 草稿数据服务{#draft-data-service}
 
-要自定义草稿的用户存储，您需要实现该界面的所有方 `DraftDataService` 法。 以下示例代码描述这些方法和参数。
+要为草稿自定义用户存储，您需要实现`DraftDataService`接口的所有方法。 以下示例代码描述这些方法和参数。
 
 ```java
 /**
@@ -101,9 +101,9 @@ public interface DraftDataService {
 >
 >草稿ID字段长度的最小值为26个字符。 Adobe建议将草稿ID长度设置为26个或更多字符。
 
-## 提交数据服务 {#submission-data-service}
+## 提交数据服务{#submission-data-service}
 
-要自定义用户数据的提交存储，您需要实施该界面的所有方 `SubmitDataService` 法。 以下示例代码描述这些方法和参数。
+要自定义用户数据的提交存储，您需要实现`SubmitDataService`接口的所有方法。 以下示例代码描述这些方法和参数。
 
 ```java
 /**
