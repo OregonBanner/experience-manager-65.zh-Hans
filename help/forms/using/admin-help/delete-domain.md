@@ -11,16 +11,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 0%
 
 ---
 
 
-# 删除域 {#delete-a-domain}
+# 删除域{#delete-a-domain}
 
-使用“域管理”页可将现有域标记为过时的。
+使用“域管理”页可将现有域标记为已过时。
 
 如果创建的域与已删除的域同名，则删除的域及其包含的信息将恢复。 无法删除DefaultDom域。
 
-1. 在管理控制台中，单击 **[!UICONTROL 设置>用户管理>域管理]**。
-1. 选中要删除的域的复选框，单击“删 **[!UICONTROL 除]**”，然后单击“确 **[!UICONTROL 定”]**。
+1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>用户管理>域管理]**。
+1. 选中要删除的域的复选框，单击&#x200B;**[!UICONTROL 删除]**，然后单击&#x200B;**[!UICONTROL 确定]**。
 
