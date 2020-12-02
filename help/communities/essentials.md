@@ -18,15 +18,15 @@ ht-degree: 17%
 ---
 
 
-# 组件、功能和功能要件  {#component-function-and-feature-essentials}
+# 组件、函数和功能基本工具{#component-function-and-feature-essentials}
 
-AEM Communities功能要求站点访客成为成员并登录社 [区站点](overview.md#communitiessites) ，然后才能发布内容。 因此， [从中创建社区](sites.md)站点的社区站点模 [板](sites-console.md)，设计为包括登录功能以及用户用户档案、消息、搜索、协调和翻译。
+AEM Communities的功能要求站点访客成为成员并登录[社区站点](overview.md#communitiessites)才能发布内容。 因此，[社区站点模板](sites.md)被设计为包括登录功能以及用户用户档案、消息、搜索、仲裁和翻译。[](sites-console.md)
 
-当社区组功能包含在所选社区站点模板中时，社 [区站点将支持](functions.md#groups-function) 创建社区组的成员。
+当所选社区站点模板中包含[社区组功能](functions.md#groups-function)时，社区站点将支持创建社区组的成员。
 
 以下是社区组件、功能和功能的基本信息链接。
 
-## 基本组件 {#base-components}
+## 基本组件{#base-components}
 
 * [评论](essentials-comments.md)
 * [审核](reviews-basics.md)
@@ -37,11 +37,11 @@ AEM Communities功能要求站点访客成为成员并登录社 [区站点](over
    * [投票](essentials-voting.md)
    * *投票（不再可用）*
 
-## 具有函数的组件 {#components-with-functions}
+## 具有函数{#components-with-functions}的组件
 
 * [活动流](essentials-activities.md)
 * [指定任务](essentials-assignments.md)
-* [博客](blog-developer-basics.md) ( `Journal`)
+* [Blog](blog-developer-basics.md) ( `Journal`)
 
 * [日历](calendar-basics-for-developers.md)
 * [目录](catalog-developer-essentials.md)
@@ -70,10 +70,10 @@ AEM Communities功能要求站点访客成为成员并登录社 [区站点](over
 
 ## Javadocs {#javadocs}
 
-在 [线javadoc](../../help/sites-developing/reference-materials.md) 反映AEM 6.3版本中提供的API。
-社区API包含在 `com.adobe.cq.social.*` 包中。
+[在线javadocs](../../help/sites-developing/reference-materials.md)反映AEM 6.3版本中提供的API。
+社区API位于`com.adobe.cq.social.*`包中。
 
-对于每个功 [能包](deploy-communities.md#latestfeaturepack)，都提供一个javadocjar。 有关详细信息，请 [访问Maven for Communities](maven.md#javadocs)。
+对于每个[功能包](deploy-communities.md#latestfeaturepack)，都提供javadocjar。 有关详细信息，请访问[使用Maven for Communities](maven.md#javadocs)。
 
 ## 附加信息 {#additional-information}
 
