@@ -12,6 +12,9 @@ discoiquuid: b41de64a-7d27-4633-a8d5-ac91d47eb1bb
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 94%
 
 ---
 
@@ -86,7 +89,7 @@ source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
 
 1. 使用两个 Teaser 创建市场活动 -- 一个带有企业标记，一个没有企业标记。
 
-### 将内容推送给订阅者 {#pushing-content-to-subscribers}
+### 将内容推送给订阅者  {#pushing-content-to-subscribers}
 
 通过 MCM 中的新闻稿功能将所有更改内容推送到页面中。然后向订阅者推送更新内容。
 
