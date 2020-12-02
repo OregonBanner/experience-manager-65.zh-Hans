@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 75%
 
 ---
 
@@ -19,8 +22,8 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
 
-* See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, as well as to which content tags have been applied.
-* See [Tagging for Developers](/help/sites-developing/tags.md) for information about the tagging framework as well as including and extending tags in custom applications.
+* 有关创建和管理标记以及已应用哪些内容标记的信息，请参阅[管理标记](/help/sites-administering/tags.md)。
+* 请参阅[开发人员标记](/help/sites-developing/tags.md)，以了解有关标记框架以及在自定义应用程序中包括和扩展标记的信息。
 
 ## 使用标记的十大理由 {#ten-reasons-to-use-tagging}
 
@@ -37,11 +40,11 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 在设计站点的内容结构和资产的元数据架构时，请考虑使用标记提供的轻量级可行方法。
 
-## 应用标记 {#applying-tags}
+## 应用标记  {#applying-tags}
 
-In the author environment, authors may apply tags by accessing the page properties and entering one or more tags in the **Tags/Keywords** field.
+在创作环境中，作者可以通过访问页面属性并在&#x200B;**标记/关键字**&#x200B;字段中输入一个或多个标记来应用标记。
 
-To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Properties** window use the `Tags/Keywords` field pull-down to select from the list of tags permitted for the page. Tthe **Standard Tags** tab is the default namespace, which means there is no `namespace-string:` prefixed to the taxonomy.
+要应用[预定义标记](/help/sites-administering/tags.md)，请在&#x200B;**页面属性**&#x200B;窗口中使用`Tags/Keywords`字段下拉列表从页面允许的标记列表中进行选择。 **标准标记**&#x200B;选项卡是默认命名空间，这意味着分类前面没有`namespace-string:`前缀。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -57,7 +60,7 @@ To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Pr
 
 >[!NOTE]
 >
->激活页面时，会自动打开一个对话框，并允许您激活属于该页面的未激活标记。
+>激活页面时，会自动打开一个对话框，通过该对话框可以激活属于该页面的未激活标记。
 
 **取消激活**
 
@@ -65,17 +68,17 @@ To apply [pre-defined tags](/help/sites-administering/tags.md), in the **Page Pr
 
 ## 标记云 {#tag-clouds}
 
-标记云显示一组标记，用于当前页面、整个网站或最常访问的标记。 标记云是一种突出显示用户感兴趣的问题的方法。 用于显示标记的文本大小因其使用而异。
+标记云显示一组标记，用于当前页面、整个网站或最常访问的标记。 标记云是突出显示用户感兴趣的问题的一种方法。 用于显示标记的文本大小因标记的使用而异。
 
 [标记云](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud)组件（通用组件组）用于向页面添加标记云。
 
-## 搜索标记 {#searching-on-tags}
+## 搜索标记  {#searching-on-tags}
 
 您可以在创作和发布环境中搜索标记。
 
-### 使用搜索组件 {#using-search-component}
+### 使用搜索组件  {#using-search-component}
 
-Adding a [Search component](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) to a page provides a search capability which includes tags and can be used in both the author and publish environments.
+将[搜索组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search)添加到页面可提供搜索功能，该功能包括标记，并且可用于创作和发布环境。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
