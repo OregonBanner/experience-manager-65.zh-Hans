@@ -21,21 +21,21 @@ ht-degree: 11%
 
 # 元数据 - 片段属性{#metadata-fragment-properties}
 
-## 编辑属性／元数据 {#editing-properties-meta-data}
+## 编辑属性／元数据{#editing-properties-meta-data}
 
 您可以视图和编辑内容片段的元数据（属性）:
 
-1. 在“资 **产** ”控制台中，导航到内容片段的位置。
+1. 在&#x200B;**资产**&#x200B;控制台中，导航到内容片段的位置。
 1. 可以任选其一：
 
-   * 选择 [**视图** “属性”以打开对话框](/help/assets/manage-assets.md#editing-properties)。 打开进行查看后，您还可以进行编辑。
-   * 打开要 [编辑的内容片段](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)，然后从侧 **面板中选** 择“元数据”。
+   * 选择&#x200B;[**视图属性**&#x200B;以打开对话框](/help/assets/manage-assets.md#editing-properties)。 打开进行查看后，您还可以进行编辑。
+   * 打开用于编辑](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)的[内容片段，然后从侧面板中选择&#x200B;**元数据**。
 
    ![cfm-6420-06](assets/cfm-6420-06.png)
 
-1. 基 **本** 选项卡提供可视图或编辑的选项：
+1. **基本**&#x200B;选项卡提供了可进行视图或编辑的选项：
 
-   * 缩略图，您可以为其上 **传图像**
+   * 缩略图，可以&#x200B;**上传图像**
    * **标题**
    * **描述**
    * **标记**
