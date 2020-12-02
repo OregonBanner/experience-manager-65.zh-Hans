@@ -85,7 +85,7 @@ ht-degree: 89%
 
    允许您输入此页面的虚 URL，以便使用更短并且/或者含意更清楚的 URL。
 
-   For example, if the Vanity URL is set to `welcome`to the page identified by the path `/v1.0/startpage`for the website `http://example.com,` then `http://example.com/welcome`would be the vanity URL of `http://example.com/content/v1.0/startpage`
+   例如，如果对于网站`http://example.com,`，虚URL设置为路径`/v1.0/startpage`标识的页面`welcome`，则`http://example.com/welcome`将是`http://example.com/content/v1.0/startpage`的虚URL
 
    >[!CAUTION]
    >
@@ -96,7 +96,7 @@ ht-degree: 89%
    >* 不应设置为现有页面。
 
 
-   您还需要配置Dispatcher以启用对虚URL的访问。 有关 [详细信息，请参阅启用](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) “对虚URL的访问”。
+   您还需要配置Dispatcher以启用对虚URL的访问。 有关详细信息，请参阅[启用对虚URL的访问](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
 
 * **重定向虚 URL**
 
@@ -130,7 +130,7 @@ ht-degree: 89%
    >
    >例如：如果您为节点 `/content/we-retail/spanish` 定义别名 `latin-lang`，则可以通过 `/content/we-retail/latin-language` 访问此页面。
    >
-   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
+   >有关详细信息，请参阅[SEO和URL管理最佳实践](/help/managing/seo-and-url-management.md#localized-page-names)下的本地化页面名称。
 
 * **继承自 &lt;*路径*>**
 
@@ -154,7 +154,7 @@ ht-degree: 89%
 
    >[!CAUTION]
    >
-   >The **[Permissions](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** tab allows editing of CUG configurations based on the presence of the `granite:AuthenticationRequired` mixin. If page permissions are configured using deprecated CUG configurations, based on the presence of `cq:cugEnabled` property, a warning message will be shown under **Authentication Requirement** and the option will not be editable, nor will the [Permissions](/help/sites-authoring/editing-page-properties.md#permissions) be editable.
+   >**[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**&#x200B;选项卡允许根据存在`granite:AuthenticationRequired`混音来编辑CUG配置。 如果页面权限是使用已弃用的CUG配置配置的，则在存在`cq:cugEnabled`属性的情况下，在&#x200B;**身份验证要求**&#x200B;下将显示一条警告消息，该选项将不可编辑，[权限](/help/sites-authoring/editing-page-properties.md#permissions)也将不可编辑。
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
@@ -167,7 +167,7 @@ ht-degree: 89%
 
    指定导出配置。
 
-### 缩略图 {#thumbnail}
+### 缩略图  {#thumbnail}
 
 显示页面缩略图图像。您可以：
 
@@ -229,14 +229,14 @@ ht-degree: 89%
    * 查看[有效权限](/help/sites-administering/user-group-ac-admin.md)
    >[!CAUTION]
    >
-   >The **Permissions** tab allows editing of CUG configurations based on the presence of the `granite:AuthenticationRequired` mixin. 如果页面权限是使用已弃用的 CUG 配置来配置的，则在存在 `cq:cugEnabled` 属性的情况下，将会显示一条警告消息，且 CUG 权限将不可编辑，同时[高级](/help/sites-authoring/editing-page-properties.md#advanced)选项卡上的“身份验证要求”也将不可编辑。
+   >**权限**&#x200B;选项卡允许根据存在`granite:AuthenticationRequired`混音来编辑CUG配置。 如果页面权限是使用已弃用的 CUG 配置来配置的，则在存在 `cq:cugEnabled` 属性的情况下，将会显示一条警告消息，且 CUG 权限将不可编辑，同时[高级](/help/sites-authoring/editing-page-properties.md#advanced)选项卡上的“身份验证要求”也将不可编辑。
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
 
    >[!NOTE]
    >
-   >“权限”选项卡不允许创建空 CUG 组，这可用作拒绝每个用户访问的简单方式。为此，必须使用 CRX 资源管理器。See the document [User, Group and Access Rights Administration](/help/sites-administering/user-group-ac-admin.md) for more information.
+   >“权限”选项卡不允许创建空 CUG 组，这可用作拒绝每个用户访问的简单方式。为此，必须使用 CRX 资源管理器。有关详细信息，请参阅文档[用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md)。
 
 ### Blueprint {#blueprint}
 
@@ -244,13 +244,13 @@ ht-degree: 89%
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Blueprint 页面定义属性。控制将修改传播到 Live Copy 的情况。
 
-### Live Copy {#live-copy}
+### Live Copy  {#live-copy}
 
 * **Live Copy**
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Live Copy 页面定义属性。控制将从 Blueprint 中传播修改的情况。
 
-### 站点结构 {#site-structure}
+### 站点结构  {#site-structure}
 
 * 提供具有全站点功能的页面的链接，例如&#x200B;**注册页面**、**脱机页面**&#x200B;以及其他。
 
@@ -298,7 +298,7 @@ ht-degree: 89%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. 工具栏右侧还提供以下按钮：
+1. 选择&#x200B;**打开属性**，此时将打开一个可用于编辑属性的对话框，这些属性按相应的选项卡进行排序。 工具栏右侧还提供以下按钮：
 
    * **取消**
    * **保存并关闭**
