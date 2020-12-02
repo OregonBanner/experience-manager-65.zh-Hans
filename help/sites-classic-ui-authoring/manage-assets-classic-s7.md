@@ -33,7 +33,7 @@ ht-degree: 71%
 
 您可以将数字资产直接从 AEM 发布到 Scene7，也可以将数字资产从 Scene7 发布到 AEM。
 
-本文档介绍了如何将数字资产从 AEM 发布到 Scene7，以及从 Scene7 发布到 AEM。此外，还详细介绍了各种查看器。For information on configuring AEM for Scene7, see [Integrating Scene7 with AEM](/help/sites-administering/scene7.md).
+本文档介绍了如何将数字资产从 AEM 发布到 Scene7，以及从 Scene7 发布到 AEM。此外，还详细介绍了各种查看器。有关为Scene7配置AEM的信息，请参阅[将Scene7与AEM集成](/help/sites-administering/scene7.md)。
 
 另请参阅[添加图像映射](/help/assets/image-maps.md)。
 
@@ -43,7 +43,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->If Scene7 assets do not display properly, please make sure that Dynamic media is [disabled](/help/assets/config-dynamic.md#disabling-dynamic-media) and then refresh the page.
+>如果Scene7资源显示不正确，请确保Dynamic Media已[禁用](/help/assets/config-dynamic.md#disabling-dynamic-media)，然后刷新页面。
 
 ## 从资产手动发布到 Scene7 {#manually-publishing-to-scene-from-assets}
 
@@ -58,9 +58,9 @@ ht-degree: 71%
 
 如果资产位于 Scene7 目标文件夹中，要将其从“资产”控制台发布到 Scene7，请执行以下操作：
 
-1. In the AEM classic UI, click **Digital Assets** to access the digital asset manager.
+1. 在AEM经典UI中，单击&#x200B;**数字资产**&#x200B;以访问数字资产管理器。
 
-1. 从目标文件夹中选择要发布到 Scene7 的资产（一个或多个）或文件夹，然后单击鼠标右键并选择&#x200B;**发布到 Scene7**。Alternatively, you can select **Publish to Scene7** from the **Tools menu**.
+1. 从目标文件夹中选择要发布到 Scene7 的资产（一个或多个）或文件夹，然后单击鼠标右键并选择&#x200B;**发布到 Scene7**。或者，也可以从&#x200B;**工具菜单**&#x200B;中选择&#x200B;**发布到Scene7**。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -70,13 +70,13 @@ ht-degree: 71%
    >
    >如果资产没有位于 Scene7 同步文件夹中，则&#x200B;**发布到 Scene7** 选项在上述两个菜单中虽可见，但处于禁用状态。
 
-### 从资产发布 {#publishing-from-an-asset}
+### 从资产发布  {#publishing-from-an-asset}
 
 当资产位于 Scene7 同步文件夹中时，您可以手动发布资产。
 
 >[!NOTE]
 >
->If the asset is not located in the Scene7 synchronized folder, the link to **Publish to Scene7** will not appear.
+>如果资产未位于Scene7同步文件夹中，则不会显示指向&#x200B;**发布到Scene7**&#x200B;的链接。
 
 要直接从数字资产发布到 Scene7，请执行以下操作：
 
@@ -96,9 +96,9 @@ ht-degree: 71%
 
 ### 从 CQ 目标文件夹外部发布资产 {#publishing-assets-from-outside-the-cq-target-folder}
 
-Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Scene7。However, if you need to upload assets from a folder outside of the target folder, you can still do that by uploading them to an **ad-hoc** folder on Scene7.
+Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Scene7。但是，如果您需要从目标文件夹外的文件夹上传资产，您仍可以这样做，方法是将资产上传到Scene7的&#x200B;**ad-hoc**&#x200B;文件夹。
 
-要执行上述操作，您首先需要在要显示资产的页面上配置云配置。然后，将某个 Scene7 组件添加到该页面，并将资产拖放到该组件中。After the page properties are set for that page, a **Publish to Scene7** link appears that when selected triggers uploading to Scene7.
+要执行上述操作，您首先需要在要显示资产的页面上配置云配置。然后，将某个 Scene7 组件添加到该页面，并将资产拖放到该组件中。为该页面设置页面属性后，将显示&#x200B;**发布到Scene7**&#x200B;链接，当选择该链接时，会触发上传到Scene7的操作。
 
 >[!NOTE]
 >
@@ -111,16 +111,16 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 1. 在 Sidekick 中，单击&#x200B;**页面**&#x200B;图标，然后单击&#x200B;**页面属性**。
 
 1. 单击&#x200B;**云服务**，单击&#x200B;**添加服务**，然后选择 **Scene7**。
-1. In the **Adobe Scene7** drop-down list, select the desired configuration and click **OK**.
+1. 在&#x200B;**Adobe Scene7**&#x200B;下拉列表中，选择所需的配置并单击&#x200B;**确定**。
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 1. 在网页上，将 Scene7 组件添加到页面上的所需位置。
-1. 从内容查找器中，将相应的数字资产拖放到该组件中。You see a link to **Check Scene7 Publication Status**.
+1. 从内容查找器中，将相应的数字资产拖放到该组件中。您会看到一个链接，指向&#x200B;**检查Scene7出版物状态**。
 
    >[!NOTE]
    >
-   >If the digital asset is in the CQ target folder, then no link to **Check Scene7 Publication Status** appears. 资产只是放置在组件中。
+   >如果数字资产位于CQ目标文件夹中，则不会显示指向&#x200B;**检查Scene7出版物状态**&#x200B;的链接。 资产只是放置在组件中。
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -130,7 +130,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
    >
    >如果资产没有位于 Scene7 同步文件夹中，并且当前页面没有关联的 Scene7 云配置，则上传将会失败。
 
-## Scene7 组件 {#scene-components}
+## Scene7 组件  {#scene-components}
 
 可在 AME 中使用以下 Scene7 组件：
 
@@ -148,7 +148,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 >[!NOTE]
 >
->If you are creating and developing custom S7 viewers and using the Content Finder, you need to explicity add the **allowfullscreen** parameter.
+>如果您正在创建和开发自定义S7查看器，并使用内容查找器，则需要明确添加&#x200B;**allowfullscreen**&#x200B;参数。
 
 ### Flash 查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
 
@@ -156,7 +156,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 有关此项重大变更的更多信息，请参阅 [Flash 查看器生命周期终止常见问题解答](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html)。
 
-### 将 Scene7 组件添加到页面 {#adding-a-scene-component-to-a-page}
+### 将 Scene7 组件添加到页面  {#adding-a-scene-component-to-a-page}
 
 将 Scene7 组件添加到页面的过程与将任何其他组件添加到页面相同。以下部分详细介绍了 Scene7 组件。
 
@@ -166,7 +166,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 1. 如果没有可用的 Scene7 组件，请单击 Sidekick 中的标尺图标以进入&#x200B;**设计**&#x200B;模式，单击&#x200B;**编辑** parsys，然后选择所有 **Scene7** 组件，以使其变为可用。
 
-1. Return to **Edit** mode by clicking the pencil in the sidekick.
+1. 单击Sidekick中的铅笔，返回至&#x200B;**编辑**&#x200B;模式。
 
 1. 将某个组件从 Sidekick 中的 **Scene7** 组拖放到页面上的所需位置。
 
@@ -174,17 +174,17 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 1. 根据需要编辑该组件，然后单击&#x200B;**确定**&#x200B;以保存更改。
 
-### 在响应式网站中添加交互式查看体验 {#adding-interactive-viewing-experiences-to-a-responsive-website}
+### 在响应式网站中添加交互式查看体验  {#adding-interactive-viewing-experiences-to-a-responsive-website}
 
 如果您的资产具有响应式设计，则意味着您的资产会根据其显示的位置自行进行调整。利用响应式设计，可以在多种设备上有效地显示同一资产。
 
 在经典 UI 中，要在响应式网站中添加交互式查看体验，请执行以下操作：
 
-1. Log in to AEM, and ensure that you have [configured Adobe Scene7 Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) and that Scene7 components are available.
+1. 登录到AEM，并确保您已配置[Adobe Scene7Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，且Scene7组件可用。
 
    >[!NOTE]
    >
-   >如果Scene7 WCM组件不可用，请确保通过设计模式启用它们。
+   >如果Scene7WCM组件不可用，请确保通过设计模式启用它们。
 
 1. 在启用了 Scene7 组件的网站上，将&#x200B;**图像**&#x200B;查看器拖放到页面。
 1. 编辑该组件，并在 **Scene7 设置**&#x200B;选项卡中调整断点。
@@ -193,7 +193,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 1. 确认查看器可实现响应式大小调整，并且所有交互已针对台式机、平板电脑和移动设备进行了优化。
 
-### 所有 Scene7 组件的通用设置 {#settings-common-to-all-scene-components}
+### 所有 Scene7 组件的通用设置  {#settings-common-to-all-scene-components}
 
 虽然配置选项各有不同，但以下设置在所有 Scene7 组件中是通用的：
 
@@ -209,13 +209,13 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 按下 + 按钮时，HTML5 缩放组件会显示放大的图像。
 
-缩放工具位于资产底部。单击 **+** 可放大。单击 **-** 可缩小。Clicking the **x** or the reset zoom arrow brings the image back to the original size it was imported as. 单击对角线可进入全屏模式。单击&#x200B;**编辑**&#x200B;可配置该组件。With this component, you can configure [settings common to all Scene7 components](#settings-common-to-all-scene-components).
+缩放工具位于资产底部。单击 **+** 可放大。单击 **-** 可缩小。单击&#x200B;**x**&#x200B;或重置缩放箭头可将图像恢复为导入时的原始大小。 单击对角线可进入全屏模式。单击&#x200B;**编辑**&#x200B;可配置该组件。使用此组件，您可以配置所有Scene7组件](#settings-common-to-all-scene-components)通用的[设置。
 
 ![](do-not-localize/chlimage_1-3.png)
 
 ### 弹出 {#flyout}
 
-在 HTML5 弹出组件中，资产会分屏显示；左侧屏幕以指定大小显示资产；右侧屏幕则显示缩放部分。单击&#x200B;**编辑**&#x200B;可配置该组件。With this component, you can configure [settings common to all Scene7 components](/help/sites-administering/scene7.md#settingscommontoallscene7components).
+在 HTML5 弹出组件中，资产会分屏显示；左侧屏幕以指定大小显示资产；右侧屏幕则显示缩放部分。单击&#x200B;**编辑**&#x200B;可配置该组件。使用此组件，您可以配置所有Scene7组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)通用的[设置。
 
 >[!NOTE]
 >
@@ -227,51 +227,51 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 ### 图像 {#image}
 
-通过 Scene7 图像组件，您可以在图像中添加 Scene7 功能，包括 Scene7 修饰符、图像预设或查看器预设，以及锐化功能。Scene7 图像组件与 AEM 中具有特殊 Scene7 功能的其他图像组件类似。In this example, the image has the Scene7 URL modifier, **&amp;op_invert=1** applied.
+通过 Scene7 图像组件，您可以在图像中添加 Scene7 功能，包括 Scene7 修饰符、图像预设或查看器预设，以及锐化功能。Scene7 图像组件与 AEM 中具有特殊 Scene7 功能的其他图像组件类似。在此示例中，图像应用了Scene7URL修饰符&#x200B;**&amp;op_invert=1**。
 
 ![](do-not-localize/chlimage_1-4.png)
 
-**标题、替代文本** 在高级选项卡中，为图像添加一个标题，并为关闭了图形的用户添加替代文本。
+**标题、替代文** 本在高级选项卡中，为图像添加标题，为关闭图形的用户添加替代文本。
 
-**URL，打开方式** 您可以设置资产以打开链接。 设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
+**URL，打开** 位置您可以设置资产以打开链接。设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
-**查看器预设** 从下拉菜单中选择现有的查看器预设。 如果未显示您要查找的查看器预设，则可能需要将其显示出来。请参阅管理查看器预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
+**查看** 器预设从下拉菜单中选择现有的查看器预设。如果未显示您要查找的查看器预设，则可能需要将其显示出来。请参阅管理查看器预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
 
-**Scene7配置** 选择要用于从SPS中提取活动图像预设的Scene7配置。
+**Scene7** 配置选择要用于从SPS中获取活动图像预设的Scene7配置。
 
-**图像预设** 从下拉菜单中选择现有的图像预设。 如果未显示您要查找的图像预设，则可能需要将其显示出来。请参阅管理图像预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
+**图** 像预设从下拉菜单中选择现有的图像预设。如果未显示您要查找的图像预设，则可能需要将其显示出来。请参阅管理图像预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
 
-**输出格式** 选择图像的输出格式，例如jpeg。 根据所选的输出格式，您可能会有额外的配置选项。请参阅图像预设最佳实践。
+**输** 出格式选择图像的输出格式，例如jpeg。根据所选的输出格式，您可能会有额外的配置选项。请参阅图像预设最佳实践。
 
-**锐化** 选择要如何锐化图像。 图像预设最佳实践和锐化最佳实践中详细介绍了锐化。
+**锐** 化选择要如何锐化图像。图像预设最佳实践和锐化最佳实践中详细介绍了锐化。
 
-**URL修饰符** 您可以通过提供其他S7图像命令来更改图像效果。 相关内容在图像预设和命令参考中进行了介绍。
+**URL修** 饰符您可以通过提供其他S7图像命令来更改图像效果。相关内容在图像预设和命令参考中进行了介绍。
 
-**断点** 如果您的网站是响应式的，您需要调整断点。 断点之间必须使用逗号 (,) 分隔。
+**断** 点如果您的网站是响应式的，您需要调整断点。断点之间必须使用逗号 (,) 分隔。
 
 ### 图像模板 {#image-template}
 
 [Scene7 图像模板](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html)是已导入到 Scene7 的 Photoshop 分层内容，该组件中的内容和属性已进行参数化，以便提供可变性。通过&#x200B;**图像模板**&#x200B;组件，您可以在 AEM 中导入图像并对文本进行动态更改。此外，您还可以配置&#x200B;**图像模板**&#x200B;组件，以使用 Client Context 中的值，从而让每个客户获取个性化的图像体验。
 
-单击&#x200B;**编辑**&#x200B;可配置该组件。You can configure [settings common to all Scene7 components](/help/sites-administering/scene7.md#settingscommontoallscene7components) as well as other settings described in this section.
+单击&#x200B;**编辑**&#x200B;可配置该组件。您可以配置所有Scene7组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)通用的[设置以及本节中介绍的其他设置。
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-**文件引用、宽度** 、高度查看所有Scene7组件通用的设置。
+**文件引用、宽度、高** 度查看所有Scene7组件通用的设置。
 
 >[!NOTE]
 >
 >无法将 Scene7 URL 命令和参数直接添加到文件引用 URL。只能在组件 UI 的&#x200B;**参数**&#x200B;面板中定义这些命令和参数。
 
-**标题、替代文本** 在Scene7图像模板选项卡中，为图像添加一个标题，为关闭图形的用户添加替代文本。
+**标题、替代文** 本在“Scene7图像模板”选项卡中，为图像添加标题，为关闭图形的用户添加替代文本。
 
-**URL，打开方式** 您可以设置资产以打开链接。 设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
+**URL，打开** 位置您可以设置资产以打开链接。设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-**参数面板** 导入图像时，参数会预填充图像中的信息。 如果没有可以动态更改的内容，则此窗口将是空的。
+**参** 数面板导入图像时，参数会预填充图像中的信息。如果没有可以动态更改的内容，则此窗口将是空的。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -287,7 +287,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 #### 更改文本以反映 Client Context 值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-To link a field to a client context value, click **Select** to open the client-context menu, select the client context, and click **OK**. 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
+要将字段链接到Client Context值，请单击&#x200B;**选择**&#x200B;以打开Client Context菜单，选择Client Context，然后单击&#x200B;**确定**。 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -300,25 +300,25 @@ To link a field to a client context value, click **Select** to open the client-c
 要将 Scene7 图像模板组件设为可单击的链接，请执行以下操作：
 
 1. 在具有 Scene7 图像模板组件的页面上，单击&#x200B;**编辑**。
-1. 在 **URL** 字段中，输入用户单击图像后所转到的 URL。In the **Open in** field, select whether you want the target to open (a new window or same window).
+1. 在 **URL** 字段中，输入用户单击图像后所转到的 URL。在&#x200B;**在**&#x200B;中打开，选择要打开目标（新窗口还是同一窗口）。
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
 1. 单击&#x200B;**确定**。
 
-### 视频组件 {#video-component}
+### 视频组件  {#video-component}
 
-The Scene7 **Video** component (available from the Scene7 section of the sidekick) uses device and bandwidth detection to serve the right video to each screen. 此组件是一种 HTML5 视频播放器，它是可以跨渠道使用的单一查看器。
+Scene7 **视频**&#x200B;组件(可从Sidekick的Scene7部分获得)使用设备和带宽检测为每个屏幕提供正确的视频。 此组件是一种 HTML5 视频播放器，它是可以跨渠道使用的单一查看器。
 
 它可用于自适应视频集、单个MP4视频或单个F4V视频。
 
-有关视频在 Scene7 集成中的运行方式的更多信息，请参阅[视频](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)。In addition, see how [the **Scene7 video** component compares to the foundation **video** component](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md).
+有关视频在 Scene7 集成中的运行方式的更多信息，请参阅[视频](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)。此外，查看[**Scene7视频**&#x200B;组件与基础&#x200B;**视频**&#x200B;组件](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)的比较情况。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ### 视频组件的已知限制 {#known-limitations-for-the-video-component}
 
-Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下代理资产：
+AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下代理资产：
 
 * Scene7 编码视频呈现
 * Scene7 自适应视频集
@@ -327,7 +327,7 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ## Scene7 内容浏览器 {#scene-content-browser}
 
-使用 Scene7 内容浏览器，您可以在 AEM 中直接查看 Scene7 中的内容。To access the content browser, in the Content Finder, select **Scene7** in the touch-optimized user interface or the **S7** icon in the classic user interface. 这两种用户界面的功能是相同的。
+使用 Scene7 内容浏览器，您可以在 AEM 中直接查看 Scene7 中的内容。要访问内容浏览器，请在内容查找器中，选择触屏优化用户界面中的&#x200B;**Scene7**&#x200B;或经典用户界面中的&#x200B;**S7**&#x200B;图标。 这两种用户界面的功能是相同的。
 
 如果您有多个配置，默认情况下，AEM 会显示[默认配置](/help/sites-administering/scene7.md#configuring-a-default-configuration)。您可以直接在 Scene7 内容浏览器的下拉菜单中选择不同的配置。
 
@@ -335,14 +335,14 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 >
 >* 位于临时文件夹中的资产不会在 Scene7 内容浏览器中显示。
 >* [启用安全预览](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)后，在 Scene7 中已发布和已取消发布的资产都会在 Scene7 内容浏览器中显示。
->* If you do not see **Scene7** or the **S7** icon as an option in the content browser, you need to [configure Scene7 to work with AEM](/help/sites-administering/scene7.md).
+>* 如果内容浏览器中未显示&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;图标作为选项，则需要[将Scene7配置为与AEM](/help/sites-administering/scene7.md)一起使用。
 >* Scene7 内容浏览器支持以下视频：
    >   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
    >   * 单个MP4视频
    >   * 单个F4V视频
 
 
-### 浏览内容 {#browsing-content-in-the-classic-ui}
+### 浏览内容{#browsing-content-in-the-classic-ui}
 
 单击 **S7** 选项卡，可浏览 Scene7 中的内容。
 
@@ -374,11 +374,11 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 在任一 UI 中进行搜索时，您都可以按以下条件进行筛选（此处显示的是触屏优化 UI）：
 
-**输入关键字** 。您可以按名称搜索资产。 搜索时，您输入的关键字是文件名称的开头。例如，键入“swimming”一词后，将在该文件夹中查找任何以这些字母开头的资产文件名。键入搜索词后，请务必单击 Enter，这样才能查找资产。
+**输入** 关键字您可以按名称搜索资产。搜索时，您输入的关键字是文件名称的开头。例如，键入“swimming”一词后，将在该文件夹中查找任何以这些字母开头的资产文件名。键入搜索词后，请务必单击 Enter，这样才能查找资产。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-**文件夹** /路径显示的文件夹名称基于您选择的配置。 您可以向下选择更低级别的文件夹，方法是单击文件夹图标并选择一个子文件夹，然后单击复选标记以将其选中。
+**文件夹/** 路径显示的文件夹名称基于您选择的配置。您可以向下选择更低级别的文件夹，方法是单击文件夹图标并选择一个子文件夹，然后单击复选标记以将其选中。
 
 如果您输入了关键字并选择了文件夹，则 AEM 会搜索此文件夹及其所有子文件夹。但是，如果您在搜索时未输入任何关键字，则选择文件夹后，只会显示此文件夹中的资产，而不会包括所有子文件夹。
 
@@ -386,15 +386,15 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
-**资产类型** 选择Scene7可浏览Scene7内容。 仅当配置了 Scene7 时，此选项才可用。
+**资产类型选** 择Scene7可浏览Scene7内容。仅当配置了 Scene7 时，此选项才可用。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-**配置** 如果您在Cloud Service中定义了多个Scene7配置，则可以在此处选择它。 根据您选择的配置，文件夹会相应地进行更改。
+**配** 置如果您在Cloud Services中定义了多个Scene7配置，则可以在此处选择它。根据您选择的配置，文件夹会相应地进行更改。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**资产类型** 在Scene7浏览器中，您可以筛选结果以包含以下任一内容： 图像、模板、视频和自适应视频集。 如果您没有选择任何资产类型，则默认情况下，AEM 会搜索所有资产类型。
+**资产** 类型在Scene7浏览器中，您可以筛选结果以包含以下任一内容：图像、模板、视频和自适应视频集。如果您没有选择任何资产类型，则默认情况下，AEM 会搜索所有资产类型。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -408,6 +408,6 @@ Adobe DAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 
 
-**发布状态** 您可以根据发布状态筛选资产： 已取消发布或已发布。 如果您没有选择任何发布状态，则默认情况下，AEM 会搜索所有发布状态。
+**发布** 状态您可以根据发布状态筛选资产：已取消发布或已发布。如果您没有选择任何发布状态，则默认情况下，AEM 会搜索所有发布状态。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
