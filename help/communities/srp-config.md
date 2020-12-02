@@ -29,33 +29,33 @@ ht-degree: 5%
 * [社区内容商店](working-with-srp.md)
 * [推荐的拓扑](topologies.md)
 
-## 存储配置控制台 {#storage-configuration-console}
+## 存储配置控制台{#storage-configuration-console}
 
 ![jsrp配置](assets/jsrp-configuration.png)
 
 在创作环境中，访问存储配置控制台。
 
-* 从全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 存储配置]**
+* 从全局导航中，选择&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 存储配置]**
 
 要选择默认JCR以外的存储选项：
 
 * 选择选项
 * 正确配置
 
-   * 查看有关选择MSRP [的详细信息](msrp.md#select-msrp)
-   * 查看有关选择DSRP [的详细信息](dsrp.md#select-dsrp)
-   * 查看有关选择ASRP [的详细信息](asrp.md#select-asrp)
+   * 请参阅[选择MSRP](msrp.md#select-msrp)的详细信息
+   * 请参阅[选择DSRP](dsrp.md#select-dsrp)的详细信息
+   * 请参阅[选择ASRP](asrp.md#select-asrp)的详细信息
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
-### 关于JCR存储 {#about-jcr-storage}
+### 关于JCR存储{#about-jcr-storage}
 
 请注意，如果未进行任何选择，则默认值为AEM存储库JCR。
 
-JCR不是 *作者* 和发布环境共享的公用商店。 社区内容将仅在创建时的作者或发布环境中可见。
+JCR是&#x200B;*不*&#x200B;作者和发布环境共享的公用存储。 社区内容将仅在创建时的作者或发布环境中可见。
 
-请访 [问JCR商店](jsrp.md) ，以了解更多信息。
+请访问[JCR商店](jsrp.md)以了解详细信息。
 
 >[!NOTE]
 >
->缺少下的节 `srpc` 点 `/etc/socialconfig` 表示默认 [JCR存储](jsrp.md)。
+>在`/etc/socialconfig`下缺少节点`srpc`表示默认的[ JCR存储](jsrp.md)。
