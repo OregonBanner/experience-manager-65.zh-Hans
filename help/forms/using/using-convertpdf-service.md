@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# 转换PDF服务 {#convertpdf-service}
+# ConvertPDF Service {#convertpdf-service}
 
 ## 概述 {#overview}
 
@@ -30,17 +30,17 @@ ht-degree: 0%
 
 ## 配置服务的属性   {#properties}
 
-您可以在AEM控 **制台中使用** AEMFD ConvertPDF服务配置此服务的属性。 AEM控制台的默认URL为 `https://[host]:'port'/system/console/configMgr`。
+可以使用AEM控制台中的&#x200B;**AEMFD ConvertPDF服务**&#x200B;配置此服务的属性。 AEM控制台的默认URL为`https://[host]:'port'/system/console/configMgr`。
 
-## 使用服务 {#using-the-service}
+## 使用服务{#using-the-service}
 
 ConvertPDF服务提供以下两个API:
 
-* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**: 将PDF文档转换为PostScript文件。
+* **[toPS](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toPS)**:将PDF文档转换为PostScript文件。
 
-* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: 将PDF文档转换为图像文件。 支持的图像格式为JPEG、JPEG2000、PNG和TIFF。
+* **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**:将PDF文档转换为图像文件。支持的图像格式为JPEG、JPEG2000、PNG和TIFF。
 
-### 将toPS API与JSP或Servlet一起使用 {#using-tops-api-with-a-jsp-or-servlets}
+### 对JSP或Servlet {#using-tops-api-with-a-jsp-or-servlets}使用toPS API
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -84,7 +84,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### 将toImage API与JSP或Servlet一起使用 {#using-toimage-api-with-a-jsp-or-servlets}
+### 对JSP或Servlet {#using-toimage-api-with-a-jsp-or-servlets}使用toImage API
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -131,11 +131,13 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 %>
 ```
 
-### 将ConvertPDF服务与AEM工作流结合使用 {#using-convertpdf-service-with-aem-workflows}
+### 将ConvertPDF服务与AEM工作流{#using-convertpdf-service-with-aem-workflows}一起使用
 
 从工作流运行ConvertPDF服务与从JSP/Servlet运行类似。
 
-唯一的区别在于从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象自动检索ResourceResolver对象的实例。 当从工作流调用代码时，此自动机制不起作用。 对于工作流，将ResourceResolver对象的实例显式传递给文档类构造函数。 然后，文档对象使用提供的ResourceResolver对象从存储库读取内容。
+唯一的区别在于从JSP/Servlet运行服务，文档对象从ResourceResolverHelper对象自动检索ResourceResolver对象的实例。 这个自动机构
+从工作流调用代码时不工作。 对于工作流，将ResourceResolver对象的实例显式传递给文档类构造函数。 然后，文档对象使用
+提供了用于从存储库读取内容的ResourceResolver对象。
 
 以下工作流程示例将输入文档转换为PostScript文档。 代码以ECMAScript编写，文档作为工作流有效负荷传递：
 
