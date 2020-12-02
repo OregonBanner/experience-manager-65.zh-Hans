@@ -11,23 +11,26 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1fd28077-37a4-4cba-bbce-6d5b353f1e7d
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '169'
+ht-degree: 0%
 
 ---
 
 
-# 添加和删除用户名和密码凭据 {#adding-and-removing-user-name-and-password-credentials}
+# 添加和删除用户名和密码凭据{#adding-and-removing-user-name-and-password-credentials}
 
-在“信任存储管理”页中，当Forms服务收到具有SOAP级别安全性的请求时，您可以添加和删除其使用的用户名和密码凭据。
+在“信任存储管理”页中，当Forms服务收到具有SOAP级安全性的请求时，您可以添加和删除该服务使用的用户名和密码凭据。
 
-## 添加用户名和密码凭据 {#add-a-user-name-and-password-credential}
+## 添加用户名和密码凭据{#add-a-user-name-and-password-credential}
 
-1. 在管理控制台中，单击“设 **[!UICONTROL 置”>“信任存储管理”>“用户和密码凭据]** ”，然后单击“ **[!UICONTROL 添加]**”。
-1. 在“配置 **[!UICONTROL 文件名称]** ”框中，键入凭据的名称。
-1. 在“用 **[!UICONTROL 户名]** ”框中，键入唯一的用户名。
-1. 在“密 **[!UICONTROL 码]** ”框中，键入用户的密码，然后单击“确 **[!UICONTROL 定”]**。
+1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>信任存储管理>用户和密码凭据]**，然后单击&#x200B;**[!UICONTROL 添加]**。
+1. 在&#x200B;**[!UICONTROL 用户档案名称]**&#x200B;框中，键入凭据的名称。
+1. 在&#x200B;**[!UICONTROL 用户名]**&#x200B;框中，键入唯一的用户名。
+1. 在&#x200B;**[!UICONTROL 口令]**&#x200B;框中，键入用户的口令，然后单击&#x200B;**[!UICONTROL 确定]**。
 
-## 删除用户名和密码凭据 {#delete-a-user-name-and-password-credential}
+## 删除用户名和密码凭据{#delete-a-user-name-and-password-credential}
 
-1. 在管理控制台中，单击“ **[!UICONTROL 设置”>“信任存储管理”>“用户和密码凭据]**”。
-1. 选中要删除的凭据对应的复选框，单击“删 **[!UICONTROL 除]**”，然后单击“确 **[!UICONTROL 定”]**。
+1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>信任存储管理>用户和密码凭据]**。
+1. 选中要删除的凭据对应的复选框，单击&#x200B;**[!UICONTROL 删除]**，然后单击&#x200B;**[!UICONTROL 确定]**。
 
