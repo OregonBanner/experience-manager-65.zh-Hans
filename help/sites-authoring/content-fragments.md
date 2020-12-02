@@ -68,7 +68,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
    * 可以依赖为了相关性而进行管理的关联媒体内容。
    * 可以快速创建随机内容变量，同时仍然确保这些变量在片段中受到集中管理。
 
-## 将内容片段添加到您的页面 {#adding-a-content-fragment-to-your-page}
+## 将内容片段添加到您的页面  {#adding-a-content-fragment-to-your-page}
 
 1. 打开您的页面进行编辑。
 
@@ -144,7 +144,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 >
 >通常情况下，编辑片段源将会影响引用该内容片段的所有页面。
 
-### 添加中间内容 {#adding-in-between-content}
+### 添加中间内容  {#adding-in-between-content}
 
 当指定的内容片段被添加到页面时，在片段的每个 HTML 段落之间（和顶部/底部）会有一个&#x200B;**将组件拖动到此处**&#x200B;占位符。
 
@@ -184,7 +184,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 
 
-### 使用关联内容 {#using-associated-content}
+### 使用关联内容  {#using-associated-content}
 
 如果您有与[内容片段关联的](/help/assets/content-fragments/content-fragments-assoc-content.md)[内容](/help/assets/content-fragments/content-fragments.md) ，则这些资产将从侧面板（在将片段放置到内容页面后）中可用。 关联内容实际上是中间内容的[特殊内容源](#adding-in-between-content)。
 
@@ -204,7 +204,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 ### 插入到片段中的资产 {#assets-inserted-into-the-fragment}
 
-如果已在片段本身中插入资产（例如图像），则页面编辑器中用于编辑这些资产的选项会受到限制。 <!-- Removed link as it was a 404 on helpx -->
+如果已在片段本身中插入资产（例如图像），则页面编辑器中用于编辑这些资产的选项会受到限制。  <!-- Removed link as it was a 404 on helpx -->
 
 例如，您可以对图像执行以下操作
 
