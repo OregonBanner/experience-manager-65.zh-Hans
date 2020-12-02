@@ -9,13 +9,16 @@ topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 4%
 
 ---
 
 
-# 自适应表单关键字 {#adaptive-forms-keywords}
+# 自适应表单关键字{#adaptive-forms-keywords}
 
-自适应表单关键字是预定义的保留标识符，对自适应表单具有特殊含义。 您不能将这些关键字用作自适应表单中的标识符。 下表列出了作为自适应表单保留标识符的所有关键字。
+自适应表单关键字是预定义的保留标识符，对于自适应表单具有特殊意义。 您不能将这些关键字用作自适应表单中的标识符。 下表列表了作为自适应表单保留标识符的所有关键字。
 
 <table>
  <tbody>
@@ -55,7 +58,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <td><p>实例</p> </td>
   </tr>
   <tr>
-   <td><p>职位</p> </td>
+   <td><p>页面</p> </td>
    <td><p>resolveNode</p> </td>
    <td><p>syncXFAProps</p> </td>
   </tr>
@@ -80,7 +83,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <td><p>setAttribute</p> </td>
   </tr>
   <tr>
-   <td><p>formattedValue</p> </td>
+   <td><p>格式化值</p> </td>
    <td><p>xdpRef</p> </td>
    <td><p>getGuideProp</p> </td>
   </tr>
@@ -97,7 +100,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
   <tr>
    <td><p>editPictureClause</p> </td>
    <td><p>xsdRef</p> </td>
-   <td><p>名称</p> </td>
+   <td><p>name</p> </td>
   </tr>
   <tr>
    <td><p>mandatory</p> </td>
@@ -180,7 +183,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <td><p>enabledExp</p> </td>
   </tr>
   <tr>
-   <td><p>execCompletion</p> </td>
+   <td><p>执行完成</p> </td>
    <td><p>sectionId</p> </td>
    <td><p>setFocus</p> </td>
   </tr>
@@ -220,7 +223,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
    <td><p>sectionFields</p> </td>
   </tr>
   <tr>
-   <td><p>获取的服务</p> </td>
+   <td><p>已获取的FromService</p> </td>
    <td><p>repeatablePanelId</p> </td>
    <td><p>getSelectedIndex</p> </td>
   </tr>
@@ -237,4 +240,4 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
  </tbody>
 </table>
 
-除了上面列出的关键字之外，请避免使用与自适应表单JavaScript API [类似的名称](https://adobe.com/go/learn_aemforms_javascript_api_63)。
+除了上面列出的关键字之外，请避免使用与[自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)类似的名称。
