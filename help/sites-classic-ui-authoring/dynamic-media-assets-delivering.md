@@ -1,6 +1,6 @@
 ---
-title: 交付Dynamic media资产
-seo-title: 交付Dynamic media资产
+title: 传送 Dynamic Media 资产
+seo-title: 传送 Dynamic Media 资产
 description: 通过 Dynamic Media，您可以选择多种方式将 Dynamic Media 资产（视频和图像）传送到您的网站。
 seo-description: 通过 Dynamic Media，您可以选择多种方式将 Dynamic Media 资产（视频和图像）传送到您的网站。
 uuid: 88a3ceec-034d-43a6-8623-3ef8b926a338
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 79d426a6-bad5-4f6d-a027-ca935576bcb9
 translation-type: tm+mt
 source-git-commit: 87cafce93f4e7ed6db426fd425cd7b08c222070e
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 84%
 
 ---
 
 
-# Delivering Dynamic Media assets{#delivering-dynamic-media-assets}
+# 传送 Dynamic Media 资产{#delivering-dynamic-media-assets}
 
-如何交付Dynamic media资产（视频和图像）取决于网站的实施方式。
+如何交付Dynamic Media资产（视频和图像）取决于网站的实现方式。
 
 通过 Dynamic Media，您可以选择以下方式：
 
@@ -26,5 +29,5 @@ source-git-commit: 87cafce93f4e7ed6db426fd425cd7b08c222070e
 
 有关更多信息，请参阅下列主题：
 
-* [将Dynamic media资产添加到页面](/help/sites-classic-ui-authoring/dynamic-media-assets-adding-to-page.md)
+* [将 Dynamic Media 资产添加到页面](/help/sites-classic-ui-authoring/dynamic-media-assets-adding-to-page.md)
 
