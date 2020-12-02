@@ -33,7 +33,7 @@ ht-degree: 68%
 >
 >请参阅[项目用户角色](/help/sites-authoring/projects.md#user-roles-in-a-project)，了解如何将用户角色和工作流分配给特定类型的用户。
 
-## 了解产品照片拍摄工作流  {#exploring-product-photo-shoot-workflows}
+## 了解产品照片拍摄工作流   {#exploring-product-photo-shoot-workflows}
 
 创意项目提供了各种项目模板，可满足多种项目需求。**产品照片拍摄项目**&#x200B;模板可立即使用。此模板包含多个照片拍摄工作流，允许您发起并管理产品照片拍摄请求。它还包含一系列任务，使您能够通过相应的审核和批准流程获取产品的数字图像。
 
@@ -46,9 +46,9 @@ ht-degree: 68%
 >
 >在产品照片拍摄工作流的“上传拍摄列表”任务中上传的 CSV 文件的文件名应当为 shotlist.csv。
 
-## 创建产品照片拍摄项目 {#create-a-product-photo-shoot-project}
+## 创建产品照片拍摄项目  {#create-a-product-photo-shoot-project}
 
-1. In the **Projects** console, tap/click **Create** and then choose **Create Project** from the list.
+1. 在&#x200B;**项目**&#x200B;控制台中，点按／单击&#x200B;**创建**，然后从列表中选择&#x200B;**创建项目**。
 
    ![chlimage_1-132](assets/chlimage_1-132a.png)
 
@@ -61,13 +61,13 @@ ht-degree: 68%
    ![chlimage_1-134](assets/chlimage_1-134a.png)
 
 1. 点按/单击&#x200B;**创建**。此时会显示一条确认消息，通知您项目已创建。
-1. Tap/click **Done** to return to the **Projects** console. Alternatively, tap/click **Open** to view the assets within the photoshoot project.
+1. 点按／单击&#x200B;**完成**&#x200B;以返回到&#x200B;**项目**&#x200B;控制台。 或者，点按／单击&#x200B;**打开**&#x200B;以视图照片拍摄项目中的资产。
 
 ## 开始在产品照片拍摄项目中工作 {#starting-work-in-a-product-photo-shoot-project}
 
 要发起照片拍摄请求，请点按或单击某个项目，然后在项目详细信息页面中点按/单击&#x200B;**添加工作**，以启动某个工作流。
 
-![chlimage_1-135](assets/chlimage_1-135a.png)
+![chlimage_1-133](assets/chlimage_1-135a.png)
 
 产品照片拍摄项目包含以下现成的工作流：
 
@@ -102,7 +102,7 @@ ht-degree: 68%
 * 启动项目工作流：说明如何启动产品照片拍摄
 * 工作流任务详细信息：提供工作流中可用任务的详细信息
 
-## 跟踪项目进度 {#tracking-project-progress}
+## 跟踪项目进度  {#tracking-project-progress}
 
 您可以通过监测项目中的活动/已完成任务来跟踪项目进度。
 
@@ -131,12 +131,12 @@ ht-degree: 68%
 
 要配置&#x200B;**产品照片拍摄**&#x200B;工作流，请执行以下操作：
 
-1. Navigate to **Tools** > **Workflows**, and then tap the **Models** tile to open the **Workflow Models** page.
-1. Select the **Product Photo Shoot** workflow, and the tap the **Edit** icon from the toolbar to open it in edit mode.
+1. 导航到&#x200B;**工具** > **工作流**，然后点按&#x200B;**模型**&#x200B;拼贴以打开&#x200B;**工作流模型**&#x200B;页。
+1. 选择&#x200B;**产品照片拍摄**&#x200B;工作流，然后点按工具栏中的&#x200B;**编辑**&#x200B;图标以在编辑模式下打开它。
 
    ![chlimage_1-138](assets/chlimage_1-138a.png)
 
-1. In the **Product Photo Shoot Workflow** page, open a project task. 例如，打开&#x200B;**上传拍摄列表**&#x200B;任务。
+1. 在&#x200B;**产品照片拍摄工作流**&#x200B;页面中，打开项目任务。 例如，打开&#x200B;**上传拍摄列表**&#x200B;任务。
 
    ![chlimage_1-139](assets/chlimage_1-139a.png)
 
@@ -157,14 +157,14 @@ ht-degree: 68%
    * 照片拍摄审核
    * 移到生产
 
-   Perform a similar procedure to configure the tasks in the **Product Photo Shoot (Commerce Integration) workflow**.
+   执行类似过程以在&#x200B;**产品照片拍摄（商务集成）工作流**&#x200B;中配置任务。
 
 此部分介绍如何将产品信息管理与创意项目进行集成。
 
-## 启动项目工作流 {#starting-a-project-workflow}
+## 启动项目工作流  {#starting-a-project-workflow}
 
-1. Navigate to a Product Photo Shoot project, and tap/click the **Add Work** icon on the **Workflows** card.
-1. 选择&#x200B;**产品照片拍摄（商务集成）**&#x200B;工作流卡片，以启动产品照片拍摄（商务集成）工作流。If the product information isn&#39;t available under /etc/commerce, select the **Product Photo Shoot** workflow and start the Product Photo Shoot workflow.
+1. 导航到产品照片拍摄项目，然后点按／单击&#x200B;**工作流**&#x200B;卡上的&#x200B;**添加工作**&#x200B;图标。
+1. 选择&#x200B;**产品照片拍摄（商务集成）**&#x200B;工作流卡片，以启动产品照片拍摄（商务集成）工作流。如果/etc/commerce下不提供产品信息，请选择&#x200B;**产品照片拍摄**&#x200B;工作流并开始产品照片拍摄工作流。
 
    ![chlimage_1-140](assets/chlimage_1-140a.png)
 
@@ -181,15 +181,15 @@ ht-degree: 68%
 
 照片拍摄工作流包含若干任务。每项任务会根据为该任务定义的配置分配到相应的用户组。
 
-#### 创建拍摄列表任务 {#create-shot-list-task}
+#### 创建拍摄列表任务  {#create-shot-list-task}
 
 **创建拍摄列表**&#x200B;任务允许项目所有者选择需要图像的产品。系统会根据用户选择的选项，生成包含基本产品信息的 CSV 文件。
 
-1. In the project folder, tap/click the ellipses in the [Tasks Card](#tracking-project-progress) to view the task item in the workflow.
+1. 在项目文件夹中，点按／单击[任务卡](#tracking-project-progress)中的省略号，以视图工作流中的任务项。
 
    ![chlimage_1-143](assets/chlimage_1-143a.png)
 
-1. Select the **Create Shot List** task, and then tap/click the **Open** icon from the toolbar.
+1. 选择&#x200B;**创建拍摄列表**&#x200B;任务，然后点按／单击工具栏中的&#x200B;**打开**&#x200B;图标。
 
    ![chlimage_1-144](assets/chlimage_1-144a.png)
 
@@ -201,8 +201,8 @@ ht-degree: 68%
 
    ![chlimage_1-146](assets/chlimage_1-146a.png)
 
-1. Tap/click the **Add To Shotlist** icon to create a CSV file that contains a list of all such products. 此时会显示一条消息，确认已为选定的产品创建拍摄列表。单击&#x200B;**关闭**&#x200B;以完成此工作流。
-1. 创建拍摄列表后，会显示&#x200B;**查看拍摄列表**&#x200B;链接。To add more products to the shot list, tap/click **Add to Shot List**. 在这种情况下，数据会附加到最初创建的拍摄列表。
+1. 点按／单击&#x200B;**添加到拍摄列表**&#x200B;图标以创建包含所有此类产品的列表的CSV文件。 此时会显示一条消息，确认已为选定的产品创建拍摄列表。单击&#x200B;**关闭**&#x200B;以完成此工作流。
+1. 创建拍摄列表后，会显示&#x200B;**查看拍摄列表**&#x200B;链接。要向拍摄列表添加更多产品，请点按／单击&#x200B;**添加到拍摄列表**。 在这种情况下，数据会附加到最初创建的拍摄列表。
 
    ![chlimage_1-147](assets/chlimage_1-147a.png)
 
@@ -210,13 +210,13 @@ ht-degree: 68%
 
    ![chlimage_1-148](assets/chlimage_1-148a.png)
 
-   要编辑现有数据或添加新数据，请从工具栏中点按/单击&#x200B;**编辑**。Only the **Product **and **Description** fields are editable.
+   要编辑现有数据或添加新数据，请从工具栏中点按/单击&#x200B;**编辑**。只有**Product **和&#x200B;**Description**&#x200B;字段可编辑。
 
    ![chlimage_1-149](assets/chlimage_1-149a.png)
 
-   After you update the file, tap/click **Save** on toolbar to save the file.
+   更新文件后，点按／单击工具栏上的&#x200B;**保存**&#x200B;以保存文件。
 
-1. After adding the products, tap/click the **Complete** icon on the **Create Shot List **task details page to mark the task as completed. 您可以添加可选注释。
+1. 添加产品后，点按／单击**创建拍摄列表**任务详细信息页面上的&#x200B;**完成**&#x200B;图标，将任务标记为已完成。 您可以添加可选注释。
 
    任务完成后，项目中会发生以下更改：
 
@@ -226,7 +226,7 @@ ht-degree: 68%
 
    在产品照片拍摄（无商务集成）工作流中，上传拍摄列表是首要任务。点按/单击&#x200B;**上传拍摄列表**&#x200B;可上传 **shotlist.csv** 文件。该 CSV 文件应包含产品 ID。其他字段为选填字段。您可以使用这些信息将资产映射到产品。
 
-### “上传拍摄列表”任务 {#upload-shot-list-task}
+### “上传拍摄列表”任务  {#upload-shot-list-task}
 
 这是产品照片拍摄工作流中的一个任务。如果 AEM 中没有可用的产品信息，则需要执行此任务。在这种情况下，您需要通过 CSV 文件上传需要图像资产的产品列表。根据CSV文件中的详细信息，您可以将图像资产与产品进行映射。
 
@@ -238,52 +238,52 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->The name of images to be uploaded should start with &quot;**&lt;ProductId>_&quot;** where Product ID is referenced from the **Id** field in the *shotlist.csv* file. For example, for a product in the shot list with **Id 397122**, you can upload files with names **397122_highcontrast.jpg**, **397122_lowlight.png**, and so on.
+>要上传的图像的名称应以“**&lt;ProductId>_”**&#x200B;开始，其中产品ID引用自&#x200B;*shotlist.csv*&#x200B;文件中的&#x200B;**Id**&#x200B;字段。 例如，对于拍摄列表中具有&#x200B;**Id 397122**&#x200B;的产品，可以上传名称为&#x200B;**397122_highcontrast.jpg**、**397122_lowlight.png**&#x200B;的文件，依此类推。
 
-1. In the project folder, tap/click the ellipses in the [Tasks Card](#tracking-project-progress) to view the list of tasks in the workflow.
-1. Select the **Upload Shot List** task, and then tap/click the **Open** icon from the toolbar.
+1. 在项目文件夹中，点按／单击[任务卡](#tracking-project-progress)中的省略号，以视图工作流中任务的列表。
+1. 选择&#x200B;**上传拍摄列表**&#x200B;任务，然后点按／单击工具栏中的&#x200B;**打开**&#x200B;图标。
 
    ![chlimage_1-150](assets/chlimage_1-150a.png)
 
-1. Review the task details and then tap/click the **Upload Shot List** button.
+1. 查看任务详细信息，然后点按／单击&#x200B;**上传拍摄列表**&#x200B;按钮。
 
    ![chlimage_1-151](assets/chlimage_1-151a.png)
 
-1. Tap/click the **Upload Shot List** button to upload the CSV file with filename shotlist.csv. 工作流会将此文件识别为用于为下一任务提取产品数据的源文件。
-1. 以正确的格式上传包含产品信息的 CSV 文件。The **View Uploaded Assets** link appears under the card after the CSV file is uploaded.
+1. 点按／单击&#x200B;**上传拍摄列表**&#x200B;按钮，以上传文件名为shotlist.csv的CSV文件。 工作流会将此文件识别为用于为下一任务提取产品数据的源文件。
+1. 以正确的格式上传包含产品信息的 CSV 文件。上传CSV文件后，卡下将显示&#x200B;**视图上传的资产**&#x200B;链接。
 
    ![chlimage_1-152](assets/chlimage_1-152a.png)
 
-   Click the **Complete** icon to complete the task.
+   单击&#x200B;**完成**&#x200B;图标以完成任务。
 
-1. Tap/click the **Complete** icon to complete the task.
+1. 点按／单击&#x200B;**完成**&#x200B;图标以完成任务。
 
 ### “上传照片拍摄”任务{#upload-photo-shoot-task}
 
-If you are an Editor, you can upload shots for the products listed in the **shotlist.csv** file that is created or uploaded in the previous task.
+如果您是编辑者，则可以上传在&#x200B;**shotlist.csv**&#x200B;文件中列出的产品的照片，该文件是在上一个任务中创建或上传的。
 
-The name of images to be uploaded should begin with **&quot;&lt;productId>_&quot;** where Product ID is referenced from the **Id** field in the **shotlist.csv** file. 例如，对于拍摄列表中 **ID 为 397122** 的产品，您可以上传具有以下名称的文件：**397122_highcontrast.jpg**、**397122_lowlight.png**，等等。
+要上传的图像名称应以&#x200B;**&quot;&lt;productId>_&quot;**&#x200B;开头，其中产品ID引用自&#x200B;**shotlist.csv**&#x200B;文件中的&#x200B;**Id**&#x200B;字段。 例如，对于拍摄列表中 **ID 为 397122** 的产品，您可以上传具有以下名称的文件：**397122_highcontrast.jpg**、**397122_lowlight.png**，等等。
 
 您可以直接上传图像，也可以上传包含图像的 ZIP 文件。系统会根据图像的名称，将图像放置到&#x200B;**照片拍摄**&#x200B;文件夹中的相应产品文件夹内。
 
-1. Under the project folder, tap/click the ellipses in the [Task Card](#tracking-project-progress) to view the task item in the workflow.
-1. Select the **Upload Photo Shoot** task, and then tap/click the **Open** icon from the toolbar.
+1. 在项目文件夹下，点按／单击[任务卡](#tracking-project-progress)中的省略号，以视图工作流中的任务项。
+1. 选择&#x200B;**上传照片拍摄**&#x200B;任务，然后点按／单击工具栏中的&#x200B;**打开**&#x200B;图标。
 
    ![chlimage_1-153](assets/chlimage_1-153a.png)
 
-1. Tap/click **Upload Photo Shoot** and upload the photo shoot images.
+1. 点按／单击&#x200B;**上传照片拍摄**&#x200B;并上传照片拍摄图像。
 1. 点按/单击工具栏中的&#x200B;**完成**&#x200B;图标以完成任务。
 
-### “修饰照片拍摄”任务 {#retouch-photo-shoot-task}
+### “修饰照片拍摄”任务  {#retouch-photo-shoot-task}
 
 如果您拥有编辑权限，则可以执行“修饰照片拍摄”任务，以对上传到“照片拍摄”文件夹的图像进行编辑。
 
-1. Under the project folder, tap/click the ellipses in the [Task Card](#tracking-project-progress) to view the task item in the workflow.
-1. Select the **Retouch Photo Shoot** task, and then tap/click the **Open** icon from the toolbar.
+1. 在项目文件夹下，点按／单击[任务卡](#tracking-project-progress)中的省略号，以视图工作流中的任务项。
+1. 选择&#x200B;**修饰照片拍摄**&#x200B;任务，然后点按／单击工具栏中的&#x200B;**打开**&#x200B;图标。
 
    ![chlimage_1-154](assets/chlimage_1-154a.png)
 
-1. Tap/click the **View Uploaded Assets** link in the **Retouch Photo Shoot** page to browse the uploaded images.
+1. 点按／单击&#x200B;**修饰照片拍摄**&#x200B;页面中的&#x200B;**视图已上传资产**&#x200B;链接，以浏览已上传的图像。
 
    ![chlimage_1-155](assets/chlimage_1-155a.png)
 
@@ -297,12 +297,12 @@ The name of images to be uploaded should begin with **&quot;&lt;productId>_&quot
 
 在此任务中，您需要审核摄影师上传的照片拍摄图像，并将图像标记为已批准使用。
 
-1. Under the project folder, tap/click the ellipses in the [Task Card](#tracking-project-progress) to view the task item in the workflow.
-1. Select the **Review &amp; Approve** task, and then tap/click the **Open** icon from the toolbar.
+1. 在项目文件夹下，点按／单击[任务卡](#tracking-project-progress)中的省略号，以视图工作流中的任务项。
+1. 选择&#x200B;**审核和批准**&#x200B;任务，然后点按／单击工具栏中的&#x200B;**打开**&#x200B;图标。
 
    ![chlimage_1-157](assets/chlimage_1-157a.png)
 
-1. In the **Review &amp; Approve** page, assign the review task to role, for example Reviewers, and then tap/click **Review **to start reviewing the uploaded product images.
+1. 在&#x200B;**审核和批准**&#x200B;页面中，将审核任务分配给角色，例如审阅者，然后点按／单击**审核**以开始审核已上传的产品图像。
 
    ![chlimage_1-158](assets/chlimage_1-158a.png)
 
@@ -326,12 +326,12 @@ The name of images to be uploaded should begin with **&quot;&lt;productId>_&quot
 >[!NOTE]
 在产品照片拍摄工作流（无商务集成）中，已批准的图像与产品之间没有任何关联。
 
-### “移到生产”任务 {#move-to-production-task}
+### “移到生产”任务  {#move-to-production-task}
 
 此任务是将已批准的资产移到生产就绪文件夹，以使其变为可用。
 
-1. Under the project folder, tap/click the ellipses in the [Task Card](#tracking-project-progress) to view the task item in the workflow.
-1. Select the **Move to Production** task, and then tap/click the **Open** icon from the toolbar.
+1. 在项目文件夹下，点按／单击[任务卡](#tracking-project-progress)中的省略号，以视图工作流中的任务项。
+1. 选择&#x200B;**移到生产**&#x200B;任务，然后点按／单击工具栏中的&#x200B;**打开**&#x200B;图标。
 
    ![chlimage_1-160](assets/chlimage_1-160a.png)
 
@@ -339,31 +339,31 @@ The name of images to be uploaded should begin with **&quot;&lt;productId>_&quot
 
    ![chlimage_1-161](assets/chlimage_1-161a.png)
 
-1. Enter the path of the production-ready folder in the **Move To** field.
+1. 在&#x200B;**移动到**&#x200B;字段中输入生产就绪文件夹的路径。
 
    ![chlimage_1-162](assets/chlimage_1-162a.png)
 
-   Tap/click **Move to Production**. 关闭确认消息。资产随即会移到指定的路径，并且系统会根据文件夹层次结构自动为每个产品的已批准资产创建旋转集。
+   点按／单击&#x200B;**移动到生产**。 关闭确认消息。资产随即会移到指定的路径，并且系统会根据文件夹层次结构自动为每个产品的已批准资产创建旋转集。
 
 1. 点按/单击工具栏中的&#x200B;**完成**&#x200B;图标。最后一个步骤标记为完成后，工作流即已完成。
 
-## 查看 DAM 资产元数据 {#viewing-dam-asset-metadata}
+## 查看 DAM 资产元数据  {#viewing-dam-asset-metadata}
 
 批准资产后，资产会关联到相应的产品。现在，已批准资产的[“属性”页面](/help/assets/manage-assets.md#editing-properties)包含额外的&#x200B;**产品数据**（关联的产品信息）选项卡。此选项卡显示了产品详细信息、SKU 编号以及与资产关联的其他产品相关详细信息。点按/单击&#x200B;**编辑**&#x200B;图标，可更新资产属性。产品相关信息保持为只读状态。
 
 点按/单击出现的链接，可导航到与资产关联的产品控制台中的相应产品详细信息页面。
 
-## 自定义项目照片拍摄工作流 {#customizing-the-project-photo-shoot-workflows}
+## 自定义项目照片拍摄工作流  {#customizing-the-project-photo-shoot-workflows}
 
 您可以根据需要自定义项目照片拍摄工作流。这是一项基于角色的可选任务，执行此任务可设置项目中的变量值。随后，您可以使用配置的值来做出决策。
 
-1. Click/tap the AEM logo, and then navigate to **Tools** > **Workflow** > **Models** to open the Workflow Models page.
+1. 单击／点按AEM徽标，然后导航到&#x200B;**工具** > **工作流** > **模型**&#x200B;以打开“工作流模型”页。
 1. 选择&#x200B;**产品照片拍摄（商务集成）**&#x200B;工作流或&#x200B;**产品照片拍摄**&#x200B;工作流，然后单击/点按工具栏中的&#x200B;**编辑**，以在编辑模式下打开工作流。
 1. 在 Sidekick 中打开&#x200B;**项目**&#x200B;任务，然后将&#x200B;**创建基于角色的项目任务**&#x200B;步骤拖动到工作流。
 
    ![chlimage_1-163](assets/chlimage_1-163a.png)
 
-1. Open the **Role Based Task** step.
+1. 打开&#x200B;**基于角色的任务**&#x200B;步骤。
 1. 在&#x200B;**任务**&#x200B;选项卡中，提供任务的名称，此名称将显示在&#x200B;**任务**&#x200B;列表中。您还可以将任务分配给角色、设置默认优先级、提供说明并指定任务到期的时间。
 
    ![chlimage_1-164](assets/chlimage_1-164a.png)
@@ -372,12 +372,12 @@ The name of images to be uploaded should begin with **&quot;&lt;productId>_&quot
 
    ![chlimage_1-165](assets/chlimage_1-165a.png)
 
-1. After adding the options click **OK** to add the changes to the step.
+1. 添加选项后，单击&#x200B;**确定**&#x200B;以将更改添加到步骤。
 
    >[!NOTE]
-   Tapping/clicking **OK** does not save the changes in the workflow. To save changes in the workflow, tap/click **Save**.
+   点按／单击&#x200B;**确定**&#x200B;不会在工作流中保存更改。 要在工作流中保存更改，请点按／单击&#x200B;**保存**。
 
-1. Open the **Workflow** tasks from side kick, and add a **Goto** task.
+1. 从Sidekick打开&#x200B;**Workflow**&#x200B;任务，并添加&#x200B;**Goto**&#x200B;任务。
 1. 打开&#x200B;**跳转**&#x200B;任务，然后点按/单击&#x200B;**过程**&#x200B;选项卡。
 1. 在&#x200B;**脚本**&#x200B;框中指定以下代码：
 
@@ -402,17 +402,17 @@ The name of images to be uploaded should begin with **&quot;&lt;productId>_&quot
 ```
 
 >[!NOTE]
-For details around scripting in workflow steps, see [Defining a Rule for an OR Split](/help/sites-developing/workflows-models.md).
+有关工作流步骤中脚本的详细信息，请参阅[为OR Split定义规则](/help/sites-developing/workflows-models.md)。
 
 ![chlimage_1-166](assets/chlimage_1-166a.png)
 
-1. Tap/click **OK**.
+1. 点按／单击&#x200B;**确定**。
 
-1. Tap/click **Save** to save the workflow.
+1. 点按／单击&#x200B;**保存**&#x200B;以保存工作流。
 
    ![chlimage_1-167](assets/chlimage_1-167a.png)
 
-1. A new Project owner acceptance task now comes up after the [Move to Production task](#move-to-production-task) is completed and is assigned to the owner.
+1. [移至生产任务](#move-to-production-task)完成后，现在会出现新的项目所有者接受任务，并将其分配给所有者。
 
    所有者角色中的用户可以完成此任务，并从注释弹出框的列表中（从在工作流步骤配置中添加的操作列表中）选择一个操作。
 
@@ -421,5 +421,5 @@ For details around scripting in workflow steps, see [Defining a Rule for an OR S
    选择相应的选项，然后单击&#x200B;**完成**&#x200B;以在工作流中运行&#x200B;**跳转步骤**。
 
 >[!NOTE]
-When you start a server, the Project task list servlet caches the mappings between task types and URLs defined under `/libs/cq/core/content/projects/tasktypes`. You can then perform the usual overlay and add custom task types by placing them under `/apps/cq/core/content/projects/tasktypes`.
+开始服务器时，项目任务列表servlet将缓存任务类型与`/libs/cq/core/content/projects/tasktypes`下定义的URL之间的映射。 然后，可以执行常规叠加并通过将自定义任务类型放在`/apps/cq/core/content/projects/tasktypes`下来添加这些类型。
 
