@@ -1,6 +1,6 @@
 ---
 title: 为Adobe Experience Manager创建辅助内容（WCAG 2.1符合性）
-description: 使用AEM帮助残障人士访问和使用Web内容
+description: 使用AEM帮助使残障人士能够访问和使用Web内容
 translation-type: tm+mt
 source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
 workflow-type: tm+mt
@@ -53,7 +53,7 @@ ht-degree: 99%
 
 [准则 1.1 替换文本：为所有非文本内容提供替换文本，以便使其可更改为人们需要的其他形式，如大印刷字体、盲文、语音、符号或更简单的语言。](https://www.w3.org/TR/WCAG/#text-alternatives)
 
-### 非文本内容 (1.1.1) {#non-text-content}
+### 非文本内容 (1.1.1)  {#non-text-content}
 
 * 成功标准 1.1.1
 * A 级
@@ -65,15 +65,15 @@ ht-degree: 99%
 
 另外的一个实用好处是，替换文本使非文本内容能够通过搜索引擎技术建立索引。
 
-#### 如何达到标准 - 非文本内容 (1.1.1) {#how-to-meet-non-text-content}
+#### 如何达到标准 - 非文本内容 (1.1.1)  {#how-to-meet-non-text-content}
 
 对于静态图形，基本的要求是为图形提供对等的替换文本。这可以在&#x200B;**替换文本**&#x200B;字段中完成，例如，请参阅核心组件&#x200B;**[图像](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/image.html)**。
 
 >[!NOTE]
 >
->某些开箱即用的核心组件（例如&#x200B;**[轮播](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**）没有提供用于向单个图像添加替换文本描述的**替换文本&#x200B;**字段，尽管存在适用于整个组件的**标签&#x200B;**字段（**[辅助功能](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/carousel.html#accessibility-tab)**&#x200B;选项卡）。
+>某些开箱即用的核心组件（例如&#x200B;**[轮播](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**）没有提供用于向单个图像添加替换文本描述的&#x200B;**替换文本**&#x200B;字段，尽管存在适用于整个组件的&#x200B;**标签**&#x200B;字段（**[辅助功能](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/carousel.html#accessibility-tab)**&#x200B;选项卡）。
 >
->When implementing versions of these for your AEM instance, your development team will need to configure such components to support the `alt` attribute so that authors can add it to the content (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+>为AEM实例实施这些版本时，开发团队需要配置这些组件以支持`alt`属性，以便作者可以将其添加到内容中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 默认情况下，AEM 要求填写&#x200B;**替换文本**&#x200B;字段。如果图像是纯粹的装饰并且不需要替换文本，则可以选中&#x200B;**图像具有装饰性**&#x200B;选项。
 
@@ -110,7 +110,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 >
 >背景与前景文本之间应该有适当的对比度等级；这在[对比度（最小）(1.4.3)](#contrast-minimum) 中有更加详细的讨论。
 
-#### 更多信息 - 非文本内容 (1.1.1) {#more-information-non-text-content}
+#### 更多信息 - 非文本内容 (1.1.1)  {#more-information-non-text-content}
 
 * [了解成功标准 1.1.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
 * [如何达到成功标准 1.1.1](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content)
@@ -120,7 +120,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * [W3C: HTML5 Techniques for providing useful text alternatives (draft)](https://dev.w3.org/html5/alt-techniques/)
 -->
 
-### 基于时间的媒体 (1.2) {#time-based-media}
+### 基于时间的媒体 (1.2)  {#time-based-media}
 
 [准则 1.2 基于时间的媒体：为基于时间的媒体提供替代内容。](https://www.w3.org/TR/WCAG/#time-based-media)
 
@@ -243,7 +243,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * AA 级
 * 字幕（实时）：为同步媒体中的所有实时音频内容提供了字幕 。
 
-#### 用途 - 字幕（实时）(1.2.4) {#purpose-captions-live}
+#### 用途 - 字幕（实时）(1.2.4)  {#purpose-captions-live}
 
 该成功标准与[字幕（预先录制）](#captions-prerecorded)的标准完全相同，因为其用途在于解决耳聋或听力欠佳的用户遇到的辅助功能问题，两者的不同之处在于该成功标准需要处理网络直播等实时演示。
 
@@ -281,7 +281,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * [了解成功标准 1.2.5](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 * [如何达到成功标准 1.2.5](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-prerecorded)
 
-### 适应性 (1.3) {#adaptable}
+### 适应性 (1.3)  {#adaptable}
 
 [准则 1.3 适应性：创建可用不同方式呈现的内容（例如更简单的布局），而不会丢失信息或结构。](https://www.w3.org/TR/WCAG/#adaptable)
 
@@ -297,7 +297,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * A 级
 * 信息和关系：通过呈现传递的信息、结构和关系，可以采用编程方式进行确定或在文本中提供。
 
-#### 用途 - 信息和关系 (1.3.1) {#purpose-info-and-relationships}
+#### 用途 - 信息和关系 (1.3.1)  {#purpose-info-and-relationships}
 
 残障人士使用的许多辅助型技术都依赖结构性信息才能有效地显示或“理解”**&#x200B;内容。此类结构性信息有多种形式，如页面标题、表行标题和列标题以及列表类型。举例来说，屏幕阅读器可以让用户从页面的一个标题导航到另一个标题。但是，如果页面内容仅仅在可视样式而非基本 HTML 中具有结构，则辅助型技术便无法获取结构性信息，从而限制它们辅助用户轻松浏览的能力。
 
@@ -334,7 +334,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 
    >[!NOTE]
    >
-   >By default, these elements and attributes are not directly available, though it is possible for the system administrator to add support for these values in the **Table properties** dialog box (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
+   >默认情况下，这些元素和属性不直接可用，但系统管理员可以在&#x200B;**表属性**&#x200B;对话框中添加对这些值的支持（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
    要打开您可以在其中选择&#x200B;**表属性**&#x200B;选项卡的&#x200B;**表**&#x200B;对话框，请执行以下操作：
 
@@ -429,7 +429,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 * A 级
 * 感官特性：为了解和使用内容而提供的说明不完全依赖于组件的感官特性，如形状、大小、可视位置、方向或声音。
 
-#### 用途 - 感官特性 (1.3.3) {#purpose-sensory-characteristics}
+#### 用途 - 感官特性 (1.3.3)  {#purpose-sensory-characteristics}
 
 设计者往往关注可视设计特征，如颜色、形状、文本样式，或者内容在展示信息时所在的绝对或相对位置。在传达信息方面，这些可能是非常强大的设计技术（可以改善具有认知无障碍需求的视力正常用户的整体无障碍体验），但是失明或患有视觉障碍的用户可能无法访问需要视觉识别属性（例如位置、颜色或形状）的信息。
 
@@ -439,7 +439,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 >
 >有关颜色替代内容的要求，请参阅[使用颜色](#use-of-color)。
 
-#### 如何达到标准 - 感官特性 (1.3.3) {#how-to-meet-sensory-characteristics}
+#### 如何达到标准 - 感官特性 (1.3.3)  {#how-to-meet-sensory-characteristics}
 
 确保那些依赖页面内容的可视特性传递的任何信息都同时以替代格式呈现。
 
@@ -450,16 +450,16 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 >
 >如果用户在非可视上下文中可以理解使用的描述性词语的含义，则可以使用描述性词语。例如，使用&#x200B;*上面*&#x200B;和&#x200B;*下面*&#x200B;通常是可以接受的，因为它们分别表示特定内容项之前和之后的内容；在朗读内容时，这也是可以接受的。
 
-#### 更多信息 - 感官特性 (1.3.3) {#more-information-sensory-characteristics}
+#### 更多信息 - 感官特性 (1.3.3)  {#more-information-sensory-characteristics}
 
 * [了解成功标准 1.3.3](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
 * [如何达到成功标准 1.3.3](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)
 
-### 可辨别性 (1.4) {#distinguishable}
+### 可辨别性 (1.4)  {#distinguishable}
 
 [准则 1.4 可辨别性：使用户更容易看到和听到内容，包括将前景与背景分离开。](https://www.w3.org/TR/WCAG/#distinguishable)
 
-### 使用颜色 (1.4.1)  {#use-of-color}
+### 使用颜色 (1.4.1)   {#use-of-color}
 
 * 成功标准 1.4.1
 * A 级
@@ -469,7 +469,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 >
 >此成功标准专门针对颜色感知。[适应性 (1.3)](#adaptable) 中涵盖其他形式的感知；包括以编程方式访问颜色和其他可视呈现编码。
 
-#### 用途 - 使用颜色 (1.4.1) {#purpose-use-of-color}
+#### 用途 - 使用颜色 (1.4.1)  {#purpose-use-of-color}
 
 颜色能够立竿见影地增强网页的美感，而且还有助于传递信息。但是，由于各种视觉障碍（从失明到色盲）的限制，部分用户无法辨认某些颜色。这就使颜色编码无法可靠地提供信息。
 
@@ -541,7 +541,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 >
 >此成功标准不适用于仅起装饰作用的文本。
 
-#### 如何达到标准 - 对比度（最小）(1.4.3) {#how-to-meet-contrast-minimum}
+#### 如何达到标准 - 对比度（最小）(1.4.3)  {#how-to-meet-contrast-minimum}
 
 确保文本与其背景之间有明显的对比度。对比度取决于相关文本的大小和样式：
 
@@ -570,7 +570,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 
 如果页面无法达到建议的对比度级别，则将需要提供一个链接以指向该页面的对等替代版本（不存在颜色对比度问题），或者允许用户根据自己的要求调整页面颜色方案的对比度。
 
-#### 更多信息 - 对比度（最小）(1.4.3) {#more-information-contrast-minimum}
+#### 更多信息 - 对比度（最小）(1.4.3)  {#more-information-contrast-minimum}
 
 * [了解成功标准 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 * [如何达到成功标准 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)
@@ -606,20 +606,20 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 >
 >商标标志（属于徽标或品牌名称一部分的文本）被认为是必需的。
 
-#### 用途 - 文本的图像 (1.4.5) {#purpose-images-of-text}
+#### 用途 - 文本的图像 (1.4.5)  {#purpose-images-of-text}
 
 当需要文本的某种特定样式时，通常会使用文本的图像；例如，商标标志或从其他来源生成的文本（如纸质文档的扫描件）。但是，与以 HTML 呈现的文本和使用 CSS 设置格式的文本相比，文本的图像无法灵活地改变大小或外观，而这些改变可能正是患有视觉障碍或有阅读障碍的用户所必需的。
 
-#### 如何达到标准 - 文本的图像 (1.4.5) {#how-to-meet-images-of-text}
+#### 如何达到标准 - 文本的图像 (1.4.5)  {#how-to-meet-images-of-text}
 
 如果必须使用文本的图像，应使用 CSS 将文本的图像替换为 HTML 形式的对等文本，这样就可以对文本进行自定义。有关如何实现这一操作的示例，请参阅 [C30：使用 CSS 将文本替换为文本的图像并提供用于切换的用户界面控件](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30)。
 
-#### 更多信息 - 文本的图像 (1.4.5) {#more-information-images-of-text}
+#### 更多信息 - 文本的图像 (1.4.5)  {#more-information-images-of-text}
 
 * [了解成功标准 1.4.5](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html)
 * [如何达到成功标准 1.4.5](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text)
 
-## 准则 2：可操作 {#principle-operable}
+## 准则 2：可操作  {#principle-operable}
 
 [准则 2：可操作 - 用户界面组件和导航必须可以操作。](https://www.w3.org/TR/WCAG/#operable)
 
@@ -709,11 +709,11 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 1. 通过软件定期更新或以流式传输至用户代理的内容，不需要保留或呈现在启动暂停和恢复呈现期间生成或收到的信息，因为这可能没有技术可行性，而且在许多情况下可能会误导这样做。
 1. 对于在预加载阶段或类似情况下出现的动画，如果所有用户在该阶段都无法进行交互，并且如果不指示进度可能会让用户感到困惑，或导致他们认为内容冻结或中断，则可以将此类动画视为必需内容。
 
-#### 用途 - 暂停、停止、隐藏 (2.2.2) {#purpose-pause-stop-hide}
+#### 用途 - 暂停、停止、隐藏 (2.2.2)  {#purpose-pause-stop-hide}
 
 某些用户可能会认为移动的内容会让人分心，甚至让人觉得难受，而且难以将注意力集中在页面的其他部分。此外，如果用户无法跟上移动的文本，他们可能就很难阅读此类内容。
 
-#### 如何达到标准 - 暂停、停止、隐藏 (2.2.2) {#how-to-meet-pause-stop-hide}
+#### 如何达到标准 - 暂停、停止、隐藏 (2.2.2)  {#how-to-meet-pause-stop-hide}
 
 如果创建的网页包含移动、闪光或闪烁的内容，则可以采纳以下一项或多项建议，具体视内容的性质而定。
 
@@ -746,7 +746,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 
 在某些情况下，闪光的内容会导致光敏性癫痫发作。此成功标准旨在让此类用户能够访问和体验所有内容，而无需担心闪光的内容。
 
-#### 如何达到标准 - 闪光三次或低于阈值 (2.3.1) {#how-to-meet-three-flashes-or-below-threshold}
+#### 如何达到标准 - 闪光三次或低于阈值 (2.3.1)  {#how-to-meet-three-flashes-or-below-threshold}
 
 应采取措施确保应用以下技术：
 
@@ -789,11 +789,11 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 * A 级
 * 页面带有标题：网页带有标题，以描述主题或用途。
 
-#### 用途 - 页面带有标题 (2.4.2) {#purpose-page-titled}
+#### 用途 - 页面带有标题 (2.4.2)  {#purpose-page-titled}
 
 此成功标准旨在帮助每个人（无论是否患有任何特定障碍缺陷）无需阅读整个页面即可快速识别网页内容。当在不同的浏览器选项卡中打开了多个网页时，这种方法格外有用，因为页面标题会显示在选项卡中，从而可以快速定位。
 
-#### 如何达到标准 - 页面带有标题 (2.4.2) {#how-to-meet-page-titled}
+#### 如何达到标准 - 页面带有标题 (2.4.2)  {#how-to-meet-page-titled}
 
 在 AEM 中创建新 HTML 页面时，可以指定页面标题。应确保标题能够充分描述页面内容和用途，尤其是任何独特方面，以便访客能够快速识别该页面的内容是否与自己的需求切实相关。
 
@@ -829,7 +829,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 * A 级
 * 链接目的（在上下文中）：每个链接的目的可以通过单独的链接文本确定，也可以通过链接文本与其以编程方式确定的链接上下文一起确定，除非链接的目的对一般用户而言模糊不清。
 
-#### 用途 - 链接目的（在上下文中）(2.4.4) {#purpose-link-purpose-in-context}
+#### 用途 - 链接目的（在上下文中）(2.4.4)  {#purpose-link-purpose-in-context}
 
 对于所有用户（无论是否患有某方面的缺陷）而言，通过适当的链接文本清晰地指明链接方向至关重要。这有助于用户决定自己是否切实希望追踪某个链接。对于视力正常的用户而言，当页面上有多个链接时，有意义的链接文本极其有用（尤其当页面包含大量文本时），因为有意义的链接文本能够更加清晰地说明目标页面的功能。使用一些辅助型技术的用户可以在单个页面上生成所有链接的列表，如果链接文本是唯一的且可以提供有用信息，则用户可以轻松地脱离上下文理解链接文本。但是，如果链接无法提供足够的信息来准确描述链接目标位置，则患有认知障碍的视力正常用户可能会感到困惑。
 
@@ -957,21 +957,21 @@ John Smith’s publications
 
 [准则 3：可理解 - 信息和用户界面操作必须可以理解。](https://www.w3.org/TR/WCAG/#understandable)
 
-### 使文本内容可读且可理解 (3.1) {#make-text-content-readable-and-understandable}
+### 使文本内容可读且可理解 (3.1)  {#make-text-content-readable-and-understandable}
 
 [准则 3.1 可读：使文本内容可读且可理解。](https://www.w3.org/TR/WCAG/#readable)
 
-### 页面语言 (3.1.1) {#language-of-page}
+### 页面语言 (3.1.1)  {#language-of-page}
 
 * 成功标准 3.1.1
 * A 级
 * 页面语言：每个网页的默认人类语言都可以采用编程方式来确定。
 
-#### 用途 - 页面语言 (3.1.1) {#purpose-language-of-page}
+#### 用途 - 页面语言 (3.1.1)  {#purpose-language-of-page}
 
 此成功标准旨在确保能够正确呈现文本和其他语言内容。对于屏幕阅读器用户而言，这意味着确保内容发音正确；而对于可视浏览器用户而言，这则更可能意味着确保正确显示某些字符集。
 
-#### 如何达到标准 - 页面语言 (3.1.1) {#how-to-meet-language-of-page}
+#### 如何达到标准 - 页面语言 (3.1.1)  {#how-to-meet-language-of-page}
 
 要达到此成功标准，可以使用页面顶部 `<html>` 元素中的 `lang` 属性来识别网页的默认语言。例如：
 
@@ -993,13 +993,13 @@ John Smith’s publications
 * [如何达到成功标准 3.1.1](https://www.w3.org/WAI/WCAG21/quickref/#language-of-page)
 * 代码基于 ISO 639-1。[W3 Schools 站点](https://www.w3schools.com/tags/ref_language_codes.asp)提供了各种语言的更广泛代码列表。
 
-### 局部语言 (3.1.2)  {#language-of-parts}
+### 局部语言 (3.1.2)   {#language-of-parts}
 
 * 成功标准 3.1.2
 * AA 级
 * 局部语言：内容中每个段落或短语的人类语言可以采用编程方式来确定，但专有名词、术语、不确定语言的词语，以及周围文本的本地语言中包含的词语或短语除外。
 
-#### 用途 - 局部语言 (3.1.2) {#purpose-language-of-parts}
+#### 用途 - 局部语言 (3.1.2)  {#purpose-language-of-parts}
 
 此成功标准的用途与[页面语言](#language-of-page)的成功标准类似，不同之处在于此成功标准适用于在单个页面包含多语言内容的网页（例如，因为引用其他语言或者使用不常见的外来词而包含其他语言）。
 
@@ -1009,7 +1009,7 @@ John Smith’s publications
 * 屏幕阅读器朗读那些具有特殊字符或未使用在页面级别标识的默认语言的单词。
 * Google Translate 等翻译工具准确地将内容从一种语言翻译成另外一种语言。
 
-#### 如何达到标准 - 局部语言 (3.1.2) {#how-to-meet-language-of-parts}
+#### 如何达到标准 - 局部语言 (3.1.2)  {#how-to-meet-language-of-parts}
 
 `lang` 属性可用于标识内容语言的更改。例如，引用的德语（ISO 639-1 代码“de”）可以采用以下方式表示：
 
@@ -1033,7 +1033,7 @@ John Smith’s publications
 >
 >如果包含使用不同语言的人名或城市，或者使用默认语言中常用的外来词或短语（如英语中的 *schadenfreude*），则不必遵循此成功标准。
 
-要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。Alternatively the `lang` attribute can be included in the RTE by a system administrator (see [Adding Support for Additional HTML Elements and Attributes](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。或者，系统管理员可以在RTE中包含`lang`属性（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 #### 更多信息 - 局部语言 (3.1.2) {#more-information-language-of-parts}
 
@@ -1176,7 +1176,7 @@ John Smith’s publications
 * A 级
 * 标签或说明：当内容需要用户输入时，提供标签或说明。
 
-#### 用途 - 标签或说明 (3.3.2) {#purpose-labels-or-instructions}
+#### 用途 - 标签或说明 (3.3.2)  {#purpose-labels-or-instructions}
 
 在提升界面易用性的最佳实践中，一种基本的做法是提供说明来帮助用户完成表单。这种做法对于患有视觉障碍或认知障碍的用户而言特别有用，否则这类用户可能难以理解表单的布局以及要在特定的表单字段中提供的数据种类。
 
@@ -1213,7 +1213,7 @@ John Smith’s publications
 
 在功能非常有限的简单表单中，可以相应地标记 `Submit` 按钮，以将其用作相邻字段的标签（如 `Search`）。当很难找到用于提供标签文本的空间时，这种方法非常有用。
 
-#### 更多信息 - 标签或说明 (3.3.2) {#more-information-labels-or-instructions}
+#### 更多信息 - 标签或说明 (3.3.2)  {#more-information-labels-or-instructions}
 
 * [了解成功标准 3.3.2](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
 * [如何达到成功标准 3.3.2](https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions)
