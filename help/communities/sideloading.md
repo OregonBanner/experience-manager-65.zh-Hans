@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 组件侧传 {#component-sideloading}
+# 组件侧传{#component-sideloading}
 
 ## 概述 {#overview}
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 1. [将组件添加到DOM](#dynamically-add-component-to-dom)
 
-1. [使用以下两种方法](#sideload-by-invoking-scf) 之一侧传组件：
+1. [使用以下](#sideload-by-invoking-scf) 两种方法之一侧传组件：
 
 * [动态包含](#dynamic-inclusion)
    * 启动所有动态添加的组件
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->不支持 [对非现有资源](scf.md#add-or-include-a-communities-component) 进行侧传。
+>不支持对[非现有资源](scf.md#add-or-include-a-communities-component)进行侧传。
 
 ## 将组件动态添加到DOM {#dynamically-add-component-to-dom}
 
@@ -72,9 +72,9 @@ ht-degree: 0%
 </div>
 ```
 
-## 通过调用SCF进行侧传 {#sideload-by-invoking-scf}
+## 通过调用SCF {#sideload-by-invoking-scf}进行侧传
 
-### 动态包含 {#dynamic-inclusion}
+### 动态包含{#dynamic-inclusion}
 
 动态包含使用引导请求，这会导致SCF检查DOM并引导页面上找到的所有SCF组件。
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 `$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
-### 动态加载 {#dynamic-loading}
+### 动态加载{#dynamic-loading}
 
 动态加载提供对加载SCF组件的控制。
 
@@ -90,4 +90,4 @@ ht-degree: 0%
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-其 `someId` 中是属性的 `data-component-id` 值。
+其中`someId`是`data-component-id`属性的值。
