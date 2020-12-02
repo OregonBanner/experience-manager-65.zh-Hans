@@ -61,7 +61,7 @@ ht-degree: 7%
 * [AEM Mobile 入门](/help/mobile/getting-started-aem-mobile.md)
 * [什么是AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
-## 基本概念 {#basic-concepts}
+## 基本概念{#basic-concepts}
 
 ### 什么是 AEM? {#what-is-aem}
 
@@ -71,7 +71,7 @@ Adobe Experience Manager 是基于 Web 的客户端服务器系统，可用于�
 
 * **Web 应用程序服务器**:AEM可以以独立模式部署（它包括集成的Jetty Web服务器），也可以作为第三方应用程序服务器中的Web应用程序部署。
 * **Web 应用程序框架**:AEM整合了SlingWeb 应用程序框架，可简化REST风格的、面向内容的Web应用程序的编写。
-* **内容存储库**:AEM包含一个Java内容存储库(JCR)，它是一种专门为非结构化和半结构化数据设计的分层数据库。 存储库不仅存储面向用户的内容，还存储应用程序使用的所有代码、模板和内部数据。
+* **内容存储库**:AEM包含一个Java内容存储库(JCR)，它是一种专门为非结构化和半结构化数据设计的分层数据库。存储库不仅存储面向用户的内容，还存储应用程序使用的所有代码、模板和内部数据。
 
 在此基础上，AEM还优惠了许多应用程序级功能，用于管理：
 
@@ -85,18 +85,18 @@ Adobe Experience Manager 是基于 Web 的客户端服务器系统，可用于�
 
 最后，客户可以使用这些基础架构和应用程序级构建块创建自定义的解决方案，方法是构建自己的应用程序。
 
-AEM服务器基 **于Java** ，并运行于支持该平台的大多数操作系统上。 与AEM的所有客户端交互都通过Web **浏览器完成**。
+AEM服务器是&#x200B;**基于Java的**，并且运行于支持该平台的大多数操作系统上。 与AEM的所有客户端交互都通过&#x200B;**Web浏览器**&#x200B;完成。
 
-### 典型部署方案 {#typical-deployment-scenarios}
+### 典型部署方案{#typical-deployment-scenarios}
 
 在AEM术语中，“实例”是在服务器上运行的AEM的副本。 AEM安装通常至少涉及两个实例，通常运行在不同的计算机上：
 
-* **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。 内容准备就绪后，即会复制到发布实例。
+* **作者**:用于创建、上传和编辑内容以及管理网站的AEM实例。内容准备就绪后，即会复制到发布实例。
 * **发布**:为公众提供已发布内容的AEM实例。
 
 这些实例与已安装的软件完全相同。 它们仅通过配置区分。 此外，大多数安装都使用调度程序：
 
-* **调度程序**:静态Web服务器（Apache httpd、Microsoft IIS等） 增强了AEM调度程序模块。 它缓存由发布实例生成的网页以提高性能。
+* **调度程序**:静态Web服务器（Apache httpd、Microsoft IIS等）增强了AEM调度程序模块。 它缓存由发布实例生成的网页以提高性能。
 
 此设置有许多高级选项和详细说明，但大多数部署的核心是作者、发布和调度程序的基本模式。 首先，我们将关注一个相对简单的机构。 随后将讨论高级部署选项。
 
@@ -106,59 +106,59 @@ AEM服务器基 **于Java** ，并运行于支持该平台的大多数操作系�
 
 * **Managed Services-Adobe Experience Manager云经理**:AEM由Adobe Managed Services部署和管理。
 
-### On-premise {#on-premise}
+### 本地{#on-premise}
 
-您可以在公司环境的服务器上安装AEM。 典型安装实例包括：开发、测试和发布环境。 有关如何让AEM软 [件在本地安装](/help/sites-deploying/deploy.md#getting%20started) ，请参阅入门部分。
+您可以在公司环境的服务器上安装AEM。 典型安装实例包括：开发、测试和发布环境。 有关如何让AEM软件在本地安装它的基本详细信息，请参阅[入门](/help/sites-deploying/deploy.md#getting%20started)部分。
 
-要进一步了解典型的内部部署，请参阅推荐 [部署](/help/sites-deploying/recommended-deploys.md)。
+要进一步了解典型的本地部署，请参阅[推荐部署](/help/sites-deploying/recommended-deploys.md)。
 
-### Managed Services使用Cloud Manager {#managed-services-using-cloud-manager}
+### Managed Services使用云管理器{#managed-services-using-cloud-manager}
 
 AEMManaged Services是数字体验管理的完整解决方案。 它在云中提供体验投放解决方案的优势，同时保留预置部署的所有控制、安全和自定义优势。 AEMManaged Services通过在云上进行部署以及依靠Adobe的最佳实践和支持，使客户能够更快地启动产品。 组织和业务用户只需极少的时间即可吸引客户，推动市场份额增长，并专注于创建创新的营销活动，同时减轻IT负担。
 
 借助AEMManaged Services，客户可以实现以下优势：
 
-**缩短上市时间：** 借助Adobe Managed Services的灵活云基础架构，组织可以快速规划、启动和优化成功的数字体验。 Adobe无需额外资金、硬件或软件即可管理云架构，Adobe的客户成功工程师也可以帮助管理AEM架构、资源调配、自定义以连接到后端应用程序和上线最佳实践。
+**缩短上市时间：借助** Adobe Managed Services灵活的云基础架构，组织可以快速规划、发布和优化成功的数字体验。Adobe无需额外资金、硬件或软件即可管理云架构，Adobe的客户成功工程师也可以帮助管理AEM架构、资源调配、自定义以连接到后端应用程序和上线最佳实践。
 
-**更高的性能：** 通过四个服务可用性选项（99.5%、99.9%、99.95%和99.99%）为您的企业提供可靠的数字体验。 此外，它还允许自动备份和多模式灾难恢复模型，以帮助确保可靠性和应急管理。
+**更高的性** 能：通过四个服务可用性选项（99.5%、99.9%、99.95%和99.99%），为您的企业提供可靠的数字体验。此外，它还允许自动备份和多模式灾难恢复模型，以帮助确保可靠性和应急管理。
 
-**优化的IT成本：** 前瞻性指导和专业知识可帮助组织始终掌握AEM的最新版本。 Adobe白金维护和支持自动包括在AMS企业／基础的新部署中，提供技术专业知识和操作经验，帮助组织维护其任务关键型应用程序。 免费的基本分析或目标功能优惠额外价值，尤其是对分析和个性化需求有限的中端市场组织。
+**优化的IT成本：主** 动引导和专业知识可帮助组织始终掌握AEM的最新版本。Adobe白金维护和支持自动包括在AMS企业／基础的新部署中，提供技术专业知识和操作经验，帮助组织维护其任务关键型应用程序。 免费的基本分析或目标功能优惠额外价值，尤其是对分析和个性化需求有限的中端市场组织。
 
-**最高安全性：** 通过在受限访问设施、防火墙系统后或虚拟专用云中托管客户应用程序，确保企业级物理、网络和数据安全。 它包括具有强大数据存储加密、抗病毒和数据隔离功能的单租户虚拟机。
+**最高安全性：** 通过在受限访问设施、防火墙系统后或虚拟专用云中托管客户应用程序，确保企业级物理、网络和数据安全。它包括具有强大数据存储加密、抗病毒和数据隔离功能的单租户虚拟机。
 
-**云管理器**:Cloud Manager是Adobe Experience ManagerManaged Services服务的一部分，它是一个自助门户，使组织能够在云中自行管理Adobe Experience Manager。 它包括一流的连续集成和连续投放(CI/CD)管道，使IT团队和实施合作伙伴能够在不影响性能或安全性的情况下加快自定义或更新的投放。 Cloud Manager仅适用于Adobe托管服务客户。
+**云管理器**:Cloud Manager是Adobe Experience ManagerManaged Services服务的一部分，它是一个自助门户，使组织能够在云中自行管理Adobe Experience Manager。它包括一流的连续集成和连续投放(CI/CD)管道，使IT团队和实施合作伙伴能够在不影响性能或安全性的情况下加快自定义或更新的投放。 Cloud Manager仅适用于Adobe托管服务客户。
 
-要进一步了解Cloud Manager及其资源，请参阅《Cloud Manager [**用户指南》**](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)。
+要进一步了解Cloud Manager及其资源，请参阅&#x200B;[**Cloud Manager用户指南**](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)。
 
 ## 入门 {#getting-started}
 
 ### 前提条件 {#prerequisites}
 
-虽然生产实例通常在运行正式支持的操作系统的专用计算机上运行(请 [参阅技术要求](/help/sites-deploying/technical-requirements.md))，但Experience Manager服务器实际上将在支持Java Standard Edition [**8的任何系统上运行**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
+虽然生产实例通常运行在运行正式支持的操作系统的专用计算机上（请参阅[技术要求](/help/sites-deploying/technical-requirements.md)），但Experience Manager服务器实际运行在支持&#x200B;[**Java标准版8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)的任何系统上。
 
 为了熟悉和在AEM上进行开发，使用运行Apple OS X或Microsoft Windows或Linux的桌面版本的本地计算机上安装的实例非常常见。
 
-在客户端，AEM可与所有现代化的浏览器(**Microsoft Edge**、Internet Explorer **11、**Chrome** 51+ ****、**Firefox **47+、****** Safari 8+)在桌面和平板电脑操作系统上工作。 有关详 [细信息，请参阅](/help/sites-deploying/technical-requirements.md#supported-client-platforms) “支持的客户端平台”。
+在客户端，AEM可与桌面和平板电脑上的所有现代浏览器(**Microsoft Edge**、**Internet Explorer** 11、**Chrome **51+** **、**Firefox **47+、**Safari** 8+)一起使用系统。 有关详细信息，请参阅[支持的客户端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
 
-### 获取软件 {#getting-the-software}
+### 获取软件{#getting-the-software}
 
-Customers with a valid maintenance and support contract should have received a mail notification with a code and be able to download AEM from the [**Adobe Licensing Website**](https://licensing.adobe.com/). Business partners can request download access from [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
+具有有效维护和支持合同的客户应已收到包含代码的邮件通知，并能够从&#x200B;[**Adobe授权网站**](https://licensing.adobe.com/)下载AEM。 业务合作伙伴可以从&#x200B;[**spphelp@adobe.com**](mailto:spphelp@adobe.com)&#x200B;请求下载访问权。
 
 AEM软件包有两种形式：
 
-* **cq-quickstart-6.5.0.jar:** 独立的可执 *行程序* jar文件，包含启动和运行所需的一切。
+* **cq-quickstart-6.5.0.jar：一个独立的可** 执行文件 ** ，包含启动和运行所需的一切。
 
-* **cq-quickstart-6.5.0.war:** 用于 *部署* 在第三方应用程序服务器中的war文件。
+* **cq-quickstart-6.5.0.war：用于** 在第 ** 三方应用程序服务器中部署的warfile。
 
-在下一节中，我们将介绍独 **立安装**。 有关在应用程序服务器中安装AEM的详细信息，请参 [阅应用程序服务器安装](/help/sites-deploying/application-server-install.md)。
+在下一节中，我们将介绍&#x200B;**独立安装**。 有关在应用程序服务器中安装AEM的详细信息，请参阅[应用程序服务器安装](/help/sites-deploying/application-server-install.md)。
 
-### 默认本地安装 {#default-local-install}
+### 默认本地安装{#default-local-install}
 
 1. 在本地计算机上创建安装目录。 例如：
 
-   UNIX安装位置： **/opt/aem**
+   UNIX安装位置：**/opt/aem**
 
-   Windows安装位置： **`C:\Program Files\aem`**
+   Windows安装位置：**`C:\Program Files\aem`**
 
    同样，在桌面上直接将示例实例安装在文件夹中也很常见。 无论如何，我们通常将此位置称为：
 
@@ -166,7 +166,7 @@ AEM软件包有两种形式：
 
    *请注意，文件目录的路径必须只包含美国ASCII字符。*
 
-1. 将jar **和** **license **文件放在此目录中：
+1. 将&#x200B;**jar**&#x200B;和**license **文件放在此目录中：
 
    ```shell
    <aem-install>/
@@ -174,9 +174,9 @@ AEM软件包有两种形式：
        license.properties
    ```
 
-   如果您不提供文件， `license.properties` AEM将在启动时将浏览器重定 **向到** “欢迎”屏幕，您可以在该屏幕中输入许可证密钥。 如果您还没有许可证密钥，您需要从Adobe申请有效的许可证密钥。
+   如果不提供`license.properties`文件，AEM将在启动时将浏览器重定向到&#x200B;**欢迎**&#x200B;屏幕，您可以在该屏幕中输入许可证密钥。 如果您还没有许可证密钥，您需要从Adobe申请有效的许可证密钥。
 
-1. 要在GUI环境中开始实例，只需多次单击文 **`cq-quickstart-6.5.0.jar`** 件。
+1. 要在GUI环境中开始实例，只需多次单击&#x200B;**`cq-quickstart-6.5.0.jar`**&#x200B;文件。
 
    或者，您也可以从命令行启动AEM。 对于32位Java VM，请输入以下内容：
 
@@ -192,19 +192,19 @@ AEM软件包有两种形式：
 
 AEM需要几分钟时间才能解压缩jar文件、安装自己并开始。 上述过程导致：
 
-* aem **author实例**
-* 在localhost上运 **行**
-* 在端口4502 **上**
+* **AEM author**&#x200B;实例
+* 运行于&#x200B;**localhost**
+* 端口&#x200B;**4502**
 
 要访问实例，请将浏览器指向：
 
 **`https://localhost:4502`**
 
-创作实例中的结果将自动配置为连接到上 **的发布实例****`localhost:4503`**。
+创作实例的结果将自动配置为连接到&#x200B;**`localhost:4503`**&#x200B;上的&#x200B;**发布实例**。
 
-### 创作和发布安装 {#author-and-publish-installs}
+### 作者和发布安装{#author-and-publish-installs}
 
-只需在首次启动文 **件之前重** 命名文件，即可更改默认安装( **`localhost:4502`**`jar` 上的作者实例)。 命名模式为：
+只需在首次启动`jar`文件之前重命名该文件，即可更改&#x200B;**`localhost:4502`**&#x200B;上的&#x200B;**author**&#x200B;实例的默认安装。 命名模式为：
 
 **`cq-<instance-type>-p<port-number>.jar`**
 
@@ -212,13 +212,13 @@ AEM需要几分钟时间才能解压缩jar文件、安装自己并开始。 上�
 
 **`cq-author-p4502.jar`**
 
-并启动它将导致在上运行一个作者实例 **`localhost:4502`**。
+并启动它将导致在&#x200B;**`localhost:4502`**&#x200B;上运行作者实例。
 
 同样，重命名和启动文件
 
 **`cq-publish-p4503.jar`**
 
-将导致在上运行发布实例 **`localhost:4503`**。
+将导致在&#x200B;**`localhost:4503`**&#x200B;上运行发布实例。
 
 例如，您将在
 
@@ -231,9 +231,9 @@ AEM需要几分钟时间才能解压缩jar文件、安装自己并开始。 上�
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [运行模式](/help/sites-deploying/configure-runmodes.md)
 
-### 解压缩的安装目录 {#unpacked-install-directory}
+### 解压缩的安装目录{#unpacked-install-directory}
 
-首次启动快速启动jar时，它将将其解压缩到名为的新子目录下的同一目录中 `crx-quickstart`。 您最后应该有以下内容：
+首次启动快速启动jar时，它将将其解压缩到名为`crx-quickstart`的新子目录下的同一目录中。 您最后应该有以下内容：
 
 ```xml
 <aem-install>/
@@ -263,15 +263,15 @@ AEM需要几分钟时间才能解压缩jar文件、安装自己并开始。 上�
 
 >[!NOTE]
 >
->如果您使用的是symlinks，请查看symlink [的问题](https://helpx.adobe.com/experience-manager/kb/changing-symlink.html)。
+>如果您使用的是symlinks，请查看symlink](https://helpx.adobe.com/experience-manager/kb/changing-symlink.html)的[问题。
 
-### 启动和停止 {#starting-and-stopping}
+### 启动和停止{#starting-and-stopping}
 
 在AEM解压并首次启动后，多次单击安装目录中的jar文件只会开始实例，但不会重新安装它。
 
-要从GUI中停止实例，只需单击桌 **面应用程序窗口** 上的开／关开关。
+要从GUI停止实例，只需单击桌面应用程序窗口上的&#x200B;**开／关**&#x200B;开关。
 
-您还可以从命令行停止和开始AEM。 假定您已首次安装该实例，则命 **令行脚本** 位于此处：
+您还可以从命令行停止和开始AEM。 假定您已首次安装该实例，**命令行脚本**&#x200B;位于以下位置：
 
 **`<aem-install>/crx-quickstart/bin/`**
 
@@ -282,7 +282,7 @@ AEM需要几分钟时间才能解压缩jar文件、安装自己并开始。 上�
 * **`status`**:报告实例的状态
 * **`quickstart`**:用于配置开始信息（如果需要）。
 
-还有适用于Windows **`bat`** 的对等文件。 有关详细信息，请参阅：
+对于Windows，还有等效的&#x200B;**`bat`**&#x200B;文件。 有关详细信息，请参阅：
 
 * [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
 
@@ -299,7 +299,7 @@ AEM开始并自动将您的Web浏览器重定向到相应的页面，通常是�
 * [开发](/help/sites-developing/home.md)
 * [管理](/help/managing/best-practices.md)
 
-## 高级部署 {#advanced-deployment}
+## 高级部署{#advanced-deployment}
 
 以上部分应能让您充分理解AEM安装的基础知识。 但是，安装AEM的完整生产系统可能涉及的复杂性要大得多。 有关高级安装的完整信息，请参阅以下子页：
 
