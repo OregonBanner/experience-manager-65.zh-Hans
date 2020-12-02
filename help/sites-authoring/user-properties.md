@@ -12,6 +12,9 @@ discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '538'
+ht-degree: 99%
 
 ---
 
@@ -102,6 +105,7 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
    * [用于编辑页面的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
+
    此选项可启用键盘快捷键。默认情况下，这些键盘快捷键处于启用状态，但也可以将其禁用，例如，当用户要求使用特定辅助功能时。
 
 * **使用经典的创作体验**
