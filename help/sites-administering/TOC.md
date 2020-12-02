@@ -15,10 +15,10 @@ ht-degree: 16%
 ---
 
 
-# AEM 6.5 Administering 用户指南 {#administering}
+# AEM 6.5 Administering 用户指南  {#administering}
 
 + [管理用户指南概述](home.md)
-+ 站点功能 {#introduction}
++ 站点功能{#introduction}
    + [网站管理](msm-and-translation.md)
    + [异步作业](asynchronous-jobs.md)
    + [重用内容：多站点管理器和Live Copy](msm.md)
@@ -149,7 +149,7 @@ ht-degree: 16%
    + [与Adobe Marketing Cloud整合](marketing-cloud.md)
    + [手动配置与Adobe Target的集成](target-configuring.md)
    + [与Adobe Target整合的先决条件](target-requirements.md)
-   + [使用AdobeI/O与Adobe Target集成](integration-ims-adobe-io.md)
+   + [使用Adobe I/O与Adobe Target集成](integration-ims-adobe-io.md)
    + [Adobe分类](adobeanalytics-classifications.md)
    + [与AdobeSearch&amp;Promote集成](search-and-promote.md)
    + [解决方案集成](integration.md)
