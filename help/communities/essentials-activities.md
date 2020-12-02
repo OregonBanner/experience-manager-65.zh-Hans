@@ -19,25 +19,25 @@ ht-degree: 1%
 ---
 
 
-# 活动流基础 {#activity-stream-essentials}
+# 活动流基础知识{#activity-stream-essentials}
 
 已签名的社区成员的活动，例如发布到论坛或博客，被收集到流中，该流可以通过配置活动流组件以各种方式被过滤和显示。
 
 当社区成员关注感兴趣的帖子或其他社区成员时，跟踪功能会添加另一组活动。
 
-所有 [社区站点](/help/communities/overview.md#communitiessites) 都包含已登录成员的用户用户档案页，该用户活动页将以相同方式显示成员。
+所有[社区站点](/help/communities/overview.md#communitiessites)都包含已登录成员的用户用户档案页，该用户活动页将以相同方式显示成员。
 
 ## 概念 {#concepts}
 
-活动 *流* 是成员对单个内容线程（如论坛主题或博客）执行的最近活动的列表或最近活动的列表。
+*活动流*&#x200B;是成员对单个内容线程（如论坛主题或博客）执行的最近活动的列表或最近活动的列表。
 
 成员可以通过关注其他个人或内容来关注活动流。
 
-新 *闻源* ，是活动流的合并，其后是成员到单个流中。
+*新闻源*&#x200B;是活动流的合并，在成员后面是单个流。
 
-社 *[交图](/help/communities/essentials-socialgraph.md)*，捕获一个成员与另一个成员的以下关系。
+*[社交图](/help/communities/essentials-socialgraph.md)*&#x200B;捕获一个成员与另一个成员的以下关系。
 
-## 客户端必备工具 {#essentials-for-client-side}
+## 客户端{#essentials-for-client-side}的必备工具
 
 <table>
  <tbody>
@@ -63,14 +63,14 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>查看 <a href="/help/communities/activities.md">活动流功能</a></td>
+   <td>请参阅<a href="/help/communities/activities.md">活动流功能</a></td>
   </tr>
  </tbody>
 </table>
 
 * [客户端自定义](/help/communities/client-customize.md)
 
-## 服务器端必备工具 {#essentials-for-server-side}
+## 服务器端{#essentials-for-server-side}的必备工具
 
 * [活动流API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
@@ -80,4 +80,4 @@ ht-degree: 1%
 
 ### 活动流功能 {#activity-stream-function}
 
-一种包括活动流功能的 [社区站点结构](/help/communities/functions.md#activity-stream-function)，包括配置的 `activity streams` 组件。
+一种包含[活动流函数](/help/communities/functions.md#activity-stream-function)的社区站点结构，包括配置的`activity streams`组件。
