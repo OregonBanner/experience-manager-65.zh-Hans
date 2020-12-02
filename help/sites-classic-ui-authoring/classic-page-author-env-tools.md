@@ -105,7 +105,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 此选项卡显示所有页面。多次-单击任何页面可打开它进行编辑。
 
-![chlimage_1-115](assets/chlimage_1-115.png)
+![chlimage_1-114](assets/chlimage_1-115.png)
 
 ### 从其他页面引用段落 {#referencing-paragraphs-from-other-pages}
 
@@ -150,7 +150,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 >[!NOTE]
 >
->You can also use [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) search.
+>您还可以使用[SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)搜索。
 
 ## 显示引用 {#showing-references}
 
@@ -162,7 +162,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. Select **Show References...** AEM opens the References window and displays which pages refer to the selected page, including their paths.
+1. 选择&#x200B;**显示引用……** AEM打开“引用”窗口并显示哪些页面引用选定页面，包括其路径。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -175,7 +175,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
 其他[页面间关系可以在“网站”控制台中进行查看](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)。
 
-## 审查日志 {#audit-log}
+## 审查日志  {#audit-log}
 
 从 Sidekick 的&#x200B;**信息**&#x200B;选项卡中，可以访问&#x200B;**审核日志**。它列出了对当前页面执行的近期操作，例如：
 
@@ -183,7 +183,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
 ## 页面信息 {#page-information}
 
-The Website console also [provides information about the current status of the page](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) such as publication, modification, locked, livecopy, etc.
+网站控制台还[提供有关页面](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)当前状态的信息，如发布、修改、锁定、Live Copy等。
 
 ## 页面模式 {#page-modes}
 
