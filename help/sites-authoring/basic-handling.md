@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
 workflow-type: tm+mt
 source-wordcount: '2979'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -77,18 +77,18 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 全局导航有两个面板，它们由屏幕左侧的图标来表示：
 
-* **[导航](/help/sites-authoring/basic-handling.md#navigation-panel)**- 登录到 AEM 时由一个指南针图标
-* **[工具](/help/sites-authoring/basic-handling.md#tools-panel)**- 由一个锤子图标来表示
+* **[导航](/help/sites-authoring/basic-handling.md#navigation-panel)** - 登录到 AEM 时由一个指南针图标
+* **[工具](/help/sites-authoring/basic-handling.md#tools-panel)** - 由一个锤子图标来表示
 
 这些面板中的可用选项如下所述。
 
-### “导航”面板 {#navigation-panel}
+### “导航”面板  {#navigation-panel}
 
 导航面板提供对AEM控制台的访问：
 
 ![bh-01](assets/bh-01.png)
 
-浏览器选项卡的标题将更新，以反映您在控制台和内容中导航时的位置。
+当您在控制台和内容中导航时，浏览器选项卡的标题将更新以反映您的位置。
 
 在“导航”中，可用的控制台有：
 
@@ -205,7 +205,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
    ![screen_shot_2018-03-23at104126](assets/screen_shot_2018-03-23at104126.png)
 
-   仅在列表视图中可用。See [list view](#list-view) for more information.
+   仅在列表视图中可用。有关详细信息，请参阅[列表视图](#list-view)。
 
 * **创建**&#x200B;按钮
 
@@ -225,9 +225,9 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 * 键盘导航
 
-   只能使用键盘导航网站。 它使用TAB键(或OPT+ **TAB** )的标准浏 **览器功能在可聚焦的页面上的元素之间**&#x200B;移动 **。
+   您可以只使用键盘导航网站。它使用&#x200B;**TAB**&#x200B;键（或&#x200B;**OPT+TAB**）的标准浏览器功能在页面上&#x200B;*可聚焦*&#x200B;的元素之间移动。
 
-   在“站 **点** ”控制台中，添加了跳到 **主内容的选项**。 当您在标题选项 *中选* 项卡时，它会变得可见，并且允许您跳过（产品）工具栏中的标准元素并直接转到主内容，从而加快导航速度。
+   在 **Sites** 控制台中，添加了&#x200B;**跳至主要内容**&#x200B;的选项。当您&#x200B;*标签*&#x200B;遍历标题选项时，这将变得可见，并通过允许您跳过（产品）工具栏中的标准元素并直接转到主内容来加快导航速度。
 
    ![bh-30](assets/bh-30.png)
 
@@ -253,7 +253,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
    与在首次访问任何控制台时浏览[产品导航概述](/help/sites-authoring/basic-handling.md#product-navigation)一样，浏览此概述。
 
-   在[**页面信息&#x200B;**菜单中，可以随时通过选择**&#x200B;帮助&#x200B;**](/help/sites-authoring/author-environment-tools.md#accessing-help)来再次显示这些幻灯片。
+   在&#x200B;[**页面信息**&#x200B;菜单中，可以随时通过选择&#x200B;**帮助**](/help/sites-authoring/author-environment-tools.md#accessing-help)&#x200B;来再次显示这些幻灯片。
 
 * **“工具”控制台**
 
@@ -294,7 +294,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 >
 >各个可用图标根据相应控制台/功能/方案提供。
 
-## 快速操作 {#quick-actions}
+## 快速操作  {#quick-actions}
 
 在[卡片视图](#cardviewquickactions)中，某些操作以快速操作图标的形式呈现，同时也在工具栏中提供。快速操作图标一次只能用于一个项目，因此无需预先选择。
 
@@ -317,7 +317,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 >
 >默认情况下，AEM Assets 不会在 UI 中将资产的原始呈现版本显示为任何视图中的缩略图。如果您是管理员，可以使用叠加来配置 AEM Assets，以将原始呈现版本显示为缩略图。
 
-### 选择资源 {#selecting-resources}
+### 选择资源  {#selecting-resources}
 
 选择特定的资源取决于视图和设备的组合：
 
@@ -345,13 +345,13 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
    <td>卡片视图<br /> </td>
    <td>
     <ul>
-     <li>Desktop:<br /> Mouseover, then use the checkmark quick action</li>
+     <li>桌面：<br />鼠标悬停，然后使用复选标记快速操作</li>
      <li>移动设备：<br />按住卡片不动</li>
     </ul> </td>
    <td>
     <ul>
-     <li>Desktop:<br /> Click the card</li>
-     <li>Mobile device:<br /> Tap the card</li>
+     <li>桌面：<br />单击卡</li>
+     <li>移动设备：<br />点击卡</li>
     </ul> </td>
   </tr>
   <tr>
@@ -416,7 +416,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
    * 资源名称和 V 形标记在被点按或单击时将会突出显示。
 
-   ![bh-17](assets/bh-17.png)
+   ![bh-15](assets/bh-17.png)
 
    * 单击/点按的资源的子资源将在其右侧的列中显示。
    * 如果点按或单击的资源名称没有子资源，将在最后的列中显示其详细信息。
