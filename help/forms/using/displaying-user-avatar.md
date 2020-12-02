@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 显示用户头像 {#displaying-the-user-avatar}
+# 显示用户头像{#displaying-the-user-avatar}
 
 登录用户的头像显示在AEM Forms工作区的右上角。 此外，组织层次结构中直接报表的化身会显示在“管理者”视图中。 您可以配置AEM Forms工作区，从数据库（例如LDAP服务器）选择用户图像。
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >用户图像的支持宽高比为1:1。
 
-1. 使用下一步中提到的详细信息创建DSC。 有关详细信息，请参阅《使用AEM Forms进行编程》指南中的“为AEM Forms [开发组件](https://www.adobe.com/go/learn_aemforms_programming_63) ”主题。
+1. 使用下一步中提到的详细信息创建DSC。 有关详细信息，请参阅《使用AEM Forms语进行编程》指南中的“为AEM Forms开发组件”主题。[](https://www.adobe.com/go/learn_aemforms_programming_63)
 1. 在DSC中，定义一个新的SPI，它公开getCurrentUserImageUrl和getUserImageUrl方法，以获取AEM Forms用户的图像URL。 以下是示例Java™代码片段：
 
    ```java
@@ -84,5 +84,5 @@ ht-degree: 0%
    </component>
    ```
 
-1. 通过Workbench部署DSC。 重新启动 `ProcessManagementClientSessionService` 服务。
+1. 通过Workbench部署DSC。 重新启动`ProcessManagementClientSessionService`服务。
 1. 您可能必须刷新浏览器或再次注销／登录用户。
