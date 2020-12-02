@@ -45,11 +45,11 @@ ht-degree: 70%
 * **关闭**
 * **保存**
 
-## 全屏编辑 {#full-screen-editing}
+## 全屏编辑  {#full-screen-editing}
 
-For text-based components, tapping the full-screen mode from the toolbar ![](do-not-localize/screen_shot_2018-03-21at163236.png) opens the rich text editor and hides the rest of the page content.
+对于基于文本的组件，点击工具栏![](do-not-localize/screen_shot_2018-03-21at163236.png)中的全屏模式可打开富文本编辑器并隐藏页面内容的其余部分。
 
-全屏模式显示所有可用于创作的已配置选项。 The availability is options [depends on the configuration](/help/sites-administering/rich-text-editor.md).
+全屏模式显示所有可用于创作的已配置选项。 可用性是选项[取决于配置](/help/sites-administering/rich-text-editor.md)。
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
