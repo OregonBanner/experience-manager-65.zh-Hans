@@ -1,8 +1,8 @@
 ---
 title: 使用API在网页上列出表单
 seo-title: 使用API在网页上列出表单
-description: 以编程方式查询Forms Manager以检索已过滤的表单列表并在您自己的网页上显示。
-seo-description: 以编程方式查询Forms Manager以检索已过滤的表单列表并在您自己的网页上显示。
+description: 以编程方式查询Forms管理器以检索已过滤的表单列表并在您自己的网页上显示。
+seo-description: 以编程方式查询Forms管理器以检索已过滤的表单列表并在您自己的网页上显示。
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,13 +17,13 @@ ht-degree: 1%
 ---
 
 
-# 使用API在网页上列出表单 {#listing-forms-on-a-web-page-using-apis}
+# 使用API在网页上列出表单{#listing-forms-on-a-web-page-using-apis}
 
-AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检索一组满足搜索条件的表单。 您可以使用API根据各种过滤器搜索表单。 响应对象包含表单属性、属性和呈现表单的端点。
+AEM Forms提供基于REST的搜索API,Web开发人员可使用它查询和检索一组符合搜索条件的表单。 您可以使用API根据各种过滤器搜索表单。 响应对象包含表单属性、属性和呈现表单的端点。
 
-要使用REST API搜索表单，请使用下面描述的查询参数将GET请 `https://'[server]:[port]'/libs/fd/fm/content/manage.json` 求发送到服务器。
+要使用REST API搜索表单，请向位于`https://'[server]:[port]'/libs/fd/fm/content/manage.json`的服务器发送GET请求，其中包含如下所述的查询参数。
 
-## Query parameters {#query-parameters}
+## 查询参数{#query-parameters}
 
 <table>
  <tbody>
@@ -32,10 +32,10 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
    <td><strong>描述<br /> </strong></td>
   </tr>
   <tr>
-   <td>函数<br /> </td>
-   <td><p>指定要调用的函数。 要搜索表单，请将属性的 <code>func </code>值设置为 <code>searchForms</code>。</p> <p>例如， <code class="code">
+   <td>func<br /> </td>
+   <td><p>指定要调用的函数。 要搜索表单，请将<code>func </code>属性的值设置为<code>searchForms</code>。</p> <p>例如， <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此参数为必填。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong> <em>此参数为必填参数。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -53,9 +53,9 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
    <td>relation<br /> </td>
    <td>指定要与搜索结果一起提取的相关资产。 您可以选择以下选项之一来提取相关资产：
     <ul>
-     <li><strong>NO_RELATION</strong>: 请勿提取相关资产。</li>
-     <li><strong>立即</strong>: 获取与搜索结果直接相关的资产。</li>
-     <li><strong>全部</strong>: 直接及间接相关资产。</li>
+     <li><strong>NO_RELATION</strong>:请勿提取相关资产。</li>
+     <li><strong>立即</strong>:获取与搜索结果直接相关的资产。</li>
+     <li><strong>全部</strong>:直接及间接相关资产。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -78,9 +78,9 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>在上例中， </p>
     <ul>
-     <li><strong>name</strong>: 指定要搜索的属性的名称。</li>
-     <li><strong>值</strong>: 指定要搜索的属性的值。</li>
-     <li><strong>运算符</strong>: 指定搜索时要应用的运算符。 支持以下运算符：
+     <li><strong>name</strong>:指定要搜索的属性的名称。</li>
+     <li><strong>值</strong>:指定要搜索的属性的值。</li>
+     <li><strong>运算符</strong>:指定搜索时要应用的运算符。支持以下运算符：
       <ul>
        <li>EQ —— 等于 </li>
        <li>NEQ —— 不等于</li>
@@ -106,8 +106,8 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>name</strong>: 指定用于对搜索结果排序的属性的名称。</li>
-     <li><strong>条件</strong>: 指定结果的顺序。 顺序属性接受以下值：
+     <li><strong>name</strong>:指定用于对搜索结果排序的属性的名称。</li>
+     <li><strong>条件</strong>:指定结果的顺序。顺序属性接受以下值：
       <ul>
        <li>ASC —— 使用ASC按升序排列结果。<br /> </li>
        <li>DES —— 使用DES以降序排列结果。</li>
@@ -116,16 +116,16 @@ AEM Forms提供基于REST的搜索API,Web开发人员可以使用它查询和检
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>指定是否检索二进制内容。 该属 <code>includeXdp</code> 性适用于类型、类 <code>FORM</code>型 <code>PDFFORM</code>和类型的资产 <code>PRINTFORM</code>。</td>
+   <td>指定是否检索二进制内容。 <code>includeXdp</code>属性适用于<code>FORM</code>、<code>PDFFORM</code>和<code>PRINTFORM</code>类型的资产。</td>
   </tr>
   <tr>
    <td>资产类型</td>
-   <td>指定要从所有已发布资产中检索的资产类型。 使用管道(|)运算符指定多个资产类型。 有效的资产类型包括表单、PDFFORM、打印表单、资源和指南。</td>
+   <td>指定要从所有已发布资产中检索的资产类型。 使用管道(|)运算符指定多个资产类型。 有效的资产类型包括FORM、PDFFORM、PRINTFORM、RESOURCE和GUIDE。</td>
   </tr>
  </tbody>
 </table>
 
-## 示例请求 {#sample-request}
+## 示例请求{#sample-request}
 
 ```json
 func : searchForms
@@ -145,7 +145,7 @@ statements: [{"name":"name","value":"*Claim.xdp","operator":"CONTAINS"},
 orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 ```
 
-## 示例响应 {#sample-response}
+## 示例响应{#sample-response}
 
 ```json
 [
