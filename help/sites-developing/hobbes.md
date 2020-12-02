@@ -25,7 +25,7 @@ ht-degree: 1%
 >
 >从AEM 6.5开始，已弃用hobbes.js UI测试框架。 Adobe不打算对其进行进一步的增强，并建议客户使用Selenium自动化。
 >
->See [Deprecated and Removed Features](/help/release-notes/deprecated-removed-features.md).
+>请参阅[已弃用和已删除的功能](/help/release-notes/deprecated-removed-features.md)。
 
 AEM为AEM UI提供了自动化测试的框架。 使用框架，您可以直接在Web浏览器中编写和运行UI测试。 该框架提供了用于创建测试的javascript API。
 
@@ -33,24 +33,24 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
 
 >[!NOTE]
 >
->有关API的完整详 [细信息](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html) ，请参阅Hobbes.js文档。
+>有关API的完整详细信息，请参阅Hobbes.js [文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)。
 
-## 测试结构 {#structure-of-tests}
+## 测试结构{#structure-of-tests}
 
 在AEM中使用自动测试时，以下术语是重要的，需要了解：
 
-| 操作 | 操 **作** 是网页上的特定活动，如单击链接或按钮。 |
+| 操作 | **操作**&#x200B;是网页上的特定活动，如单击链接或按钮。 |
 |---|---|
-| 测试用例 | 测 **试案例** 是由一个或多个操作组成的特定情 **况**。 |
-| 测试套件 | 测 **试套件** 是一组相关测试用例， **它们一** 起测试特定的用例。 |
+| 测试用例 | **测试用例**&#x200B;是由一个或多个&#x200B;**动作**&#x200B;组成的特定情况。 |
+| 测试套件 | **测试套件**&#x200B;是一组相关的&#x200B;**测试用例**，它们一起测试特定用例。 |
 
-## 执行测试 {#executing-tests}
+## 正在执行测试{#executing-tests}
 
-### 查看测试套件 {#viewing-test-suites}
+### 查看测试套件{#viewing-test-suites}
 
 打开测试控制台，查看已注册的测试套件。 “Tests（测试）”面板包含测试套件及其测试用例的列表。
 
-通过全局导航->工 **具>操作->测试导航到工具控制台**。
+通过&#x200B;**全局导航->工具>操作->测试**&#x200B;导航到工具控制台。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -58,7 +58,7 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-### 运行单个测试套件 {#running-a-single-test-suite}
+### 运行单个测试套件{#running-a-single-test-suite}
 
 测试套件可以单独运行。 运行测试套件时，页面会随着测试用例及其操作的执行而发生更改，测试结果会在测试完成后显示。 图标表示结果。
 
@@ -76,7 +76,7 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 单击或点按“ **运行测试** ”按钮。
+1. 单击或点按&#x200B;**运行test**&#x200B;按钮。
 
    ![](do-not-localize/chlimage_1-4.png)
 
@@ -84,33 +84,33 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 点按或单击说明以打开“结果”面板，查看测试用例 **的结果** 。 点按或单击“结果”面板中的测试用例 **名称** ，将显示所有详细信息。
+1. 点按或单击说明以打开&#x200B;**Result**&#x200B;面板，查看测试用例的结果。 点按或单击&#x200B;**Result**&#x200B;面板中的测试用例名称会显示所有详细信息。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### 运行多个测试 {#running-multiple-tests}
+### 运行多个测试{#running-multiple-tests}
 
 测试套件按其在控制台中的显示顺序顺序执行。 您可以深入测试，查看详细结果。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. 在“Tests（测试）”面板上，点 **按或单击** “Run all tests(运行所有测试 **)”按钮，或** 者单击要运行的测试套件标题下的“Run tests（运行测试）”按钮。
+1. 在“Tests（测试）”面板上，点按或单击要运行的测试套件标题下的&#x200B;**运行所有测试**&#x200B;按钮或&#x200B;**运行测试**&#x200B;按钮。
 
    ![](do-not-localize/chlimage_1-5.png)
 
-1. 要视图每个测试用例的结果，请点按或单击测试用例的标题。 点按或单击“结果”面板中的测试名 **称** ，将显示所有详细信息。
+1. 要视图每个测试用例的结果，请点按或单击测试用例的标题。 点按或单击&#x200B;**Result**&#x200B;面板中的测试名称会显示所有详细信息。
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## 创建和使用简单的测试套件 {#creating-and-using-a-simple-test-suite}
+## 创建和使用简单测试套件{#creating-and-using-a-simple-test-suite}
 
-以下过程会指导您使用We.Retail内容创建和执 [行测试套件](/help/sites-developing/we-retail.md)，但您可以轻松修改测试以使用其他网页。
+以下过程会指导您使用[We.Retail内容](/help/sites-developing/we-retail.md)创建和执行测试套件，但您可以轻松修改测试以使用其他网页。
 
-有关创建自己的测试套件的完整详细信息，请 [参阅Hobbes.js API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)。
+有关创建您自己的测试套件的完整详细信息，请参阅[Hobbes.js API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)。
 
 1. 打开CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
-1. 右键单击文件夹， `/etc/clientlibs` 然后单击“ **创建”>“创建文件夹”**。 键入 `myTests` 名称，然后单击“确 **定”**。
-1. 右键单击文件夹， `/etc/clientlibs/myTests` 然后单击“ **创建”>“创建节点**”。 使用以下属性值，然后单击“确 **定”**:
+1. 右键单击`/etc/clientlibs`文件夹，然后单击&#x200B;**创建>创建文件夹**。 键入`myTests`作为名称，然后单击&#x200B;**确定**。
+1. 右键单击`/etc/clientlibs/myTests`文件夹，然后单击&#x200B;**创建>创建节点**。 使用以下属性值，然后单击&#x200B;**确定**:
 
    * 名称: `myFirstTest`
    * 类型: `cq:ClientLibraryFolder`
@@ -120,7 +120,7 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
    | 名称 | 类型 | 值 |
    |---|---|---|
    | `categories` | String[] | `granite.testing.hobbes.tests` |
-   | `dependencies` | String[] | `granite.testing.hobbes.testrunner` |
+   | `dependencies` | 字符串[] | `granite.testing.hobbes.testrunner` |
 
    >[!NOTE]
    >
@@ -130,23 +130,23 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
    >要测试自适应表单，请向类别和依赖项添加以下值。 例如：
    >
    >
-   >**类别**: `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
+   >**类别**:  `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
    >
    >
-   >**相关性**: `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
+   >**相关性**:  `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
-1. 单击“ **全部保存**”。
-1. 右键单击该节 `myFirstTest` 点，然后单 **击创建>创建文件**。 命名文件， `js.txt` 然后单 **击确定**。
-1. 在文件 `js.txt` 中，输入以下文本：
+1. 单击&#x200B;**保存全部**。
+1. 右键单击`myFirstTest`节点，然后单击&#x200B;**创建>创建文件**。 命名文件`js.txt`，然后单击&#x200B;**确定**。
+1. 在`js.txt`文件中，输入以下文本：
 
    ```
    #base=.
    myTestSuite.js
    ```
 
-1. 单击 **“全部保** 存”，然后关闭 `js.txt` 文件。
-1. 右键单击该节 `myFirstTest` 点，然后单 **击创建>创建文件**。 命名文件， `myTestSuite.js` 然后单 **击确定**。
-1. 将以下代码复制到文 `myTestSuite.js` 件，然后保存文件：
+1. 单击&#x200B;**保存全部**，然后关闭`js.txt`文件。
+1. 右键单击`myFirstTest`节点，然后单击&#x200B;**创建>创建文件**。 命名文件`myTestSuite.js`，然后单击&#x200B;**确定**。
+1. 将以下代码复制到`myTestSuite.js`文件，然后保存文件：
 
    ```
    new hobs.TestSuite("Experience Content Test Suite", {path:"/etc/clientlibs/myTests/myFirstTest/myTestSuite.js"})
@@ -161,4 +161,4 @@ AEM测试框架使用Hobbes.js，这是一个用Javascript编写的测试库。 
    );
    ```
 
-1. 导航到测 **试控** 制台以尝试测试套件。
+1. 导航到&#x200B;**Testing**&#x200B;控制台以尝试测试套件。
