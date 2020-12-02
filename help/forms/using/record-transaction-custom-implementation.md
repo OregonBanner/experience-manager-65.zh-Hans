@@ -17,15 +17,15 @@ ht-degree: 0%
 ---
 
 
-# 记录自定义实现的事务 {#record-a-transaction-for-custom-implementations}
+# 记录自定义实现的事务{#record-a-transaction-for-custom-implementations}
 
 使用TransactionRecorder API记录未自动作为事务处理的操作
 
-您可以使用自定义代码提交PDF表单，向最终用户发送代理UI预览URL以预览交互式通信，或使用自定义方法而不是使用随AEM Forms提供的提交方法提交表单。 以前提到的所有操作和AEM FormsAPI的自定义实现均不作为事务处理入账。 AEM Forms提供API, [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)，以记录此类操作（如事务）。
+您可以使用自定义代码提交PDF表单、向最终用户发送代理UI预览URL以预览交互式通信，或使用自定义方法而不是使用AEM Forms提供的提交方法提交表单。 以前提到的AEM FormsAPI的所有操作和自定义实现均不作为事务处理入账。 AEM Forms提供API[TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)来记录此类操作（如事务）。
 
-要记录事务，请编写标 [准sling servlet](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) ，并从客户端调用servlet以记录事务。 您可以使用AJAX或任何其他标准方法调用servlet。
+要记录事务，请编写[标准sling servlet](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html)并从客户端调用servlet以记录事务。 可以使用AJAX或任何其他标准方法调用servlet。
 
-## 示例服务器端代码 {#sample-server-sided-code}
+## 服务器端代码示例{#sample-server-sided-code}
 
 您可以使用以下示例代码从JAVA类使用自定义OSGi捆绑包运行TransactionRecorder API。
 
@@ -73,9 +73,9 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 }
 ```
 
-## 示例客户端代码 {#sample-client-side-code}
+## 示例客户端代码{#sample-client-side-code}
 
-您可以使用以下示例代码调用具有API的 `TransactionRecorder`servlet。
+您可以使用以下示例代码调用具有`TransactionRecorder`API的servlet。
 
 ```javascript
 $.ajax({
@@ -91,7 +91,7 @@ $.ajax({
 })
 ```
 
-## 相关文章 {#related-articles}
+## 相关文章{#related-articles}
 
 * [事务处理报表概览](/help/forms/using/transaction-reports-overview.md)
 * [查看和了解事务处理报表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
