@@ -19,11 +19,11 @@ ht-degree: 1%
 ---
 
 
-# AEM Forms论OSGi集团与特权{#aem-forms-on-osgi-groups-and-privileges}
+# AEM Forms关于OSGi组和权限{#aem-forms-on-osgi-groups-and-privileges}
 
-您可以 [创建组](/help/sites-administering/user-group-ac-admin.md#group-administration) ，并将策略 [和用户](/help/sites-administering/user-group-ac-admin.md#user-administration) 分配到AEM中的组。 这些策略控制属于组的用户的权限。
+您可以[创建组](/help/sites-administering/user-group-ac-admin.md#group-administration)并将策略和[用户](/help/sites-administering/user-group-ac-admin.md#user-administration)分配给AEM中的组。 这些策略控制属于组的用户的权限。
 
-安装 [AEM Forms加载项包后](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提到的组（如表单用户和表单用户）将自动可供分配。 下表列表了用户可以根据组分配对OSGi上的AEM Forms执行的任务:
+安装[AEM Forms加载项包](../../forms/using/installing-configuring-aem-forms-osgi.md)后，本文中提到的组（如forms-users和forms-power-user）将自动可供分配。 下表列表了用户可以根据组分配对OSGi上的AEM Forms执行的任务:
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ ht-degree: 1%
    <td>任务</td> 
   </tr>
   <tr>
-   <td>表单用 <sup>户[1]</sup></td> 
+   <td>forms-users <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>创建、预览、发布和提交自适应表单</li> 
@@ -94,7 +94,7 @@ ht-degree: 1%
    <td>工作流用户</td> 
    <td>
     <ul> 
-     <li>使用AEM收件箱应用程序<br /><strong>注意： </strong>您必须具有cm-agent-users和workflow-users组分配才能访问AEM收件箱中的Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件箱应用程序<br /> <strong>注意：</strong>您必须具有cm-agent-users和workflow-users组分配才能访问AEM收件箱中的Interactive Communications Agent UI。</li> 
      <li>管理工作流实例</li> 
     </ul> </td> 
   </tr>
