@@ -19,11 +19,11 @@ ht-degree: 0%
 ---
 
 
-# 社区工具 {#communities-tools}
+# 社区工具{#communities-tools}
 
 要访问“社区工具”控制台，请登录您的创作实例：
 
-* 从全局导航： **[!UICONTROL “工具]** ”>“ **[!UICONTROL 社区]**”。
+* 从全局导航：**[!UICONTROL 工具]** > **[!UICONTROL 社区]**。
 
    ![社区](assets/communities-home.png)
 
