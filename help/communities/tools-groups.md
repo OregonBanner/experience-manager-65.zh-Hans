@@ -21,31 +21,31 @@ ht-degree: 3%
 
 # 组模板 {#group-templates}
 
-“组模板”控制台与“站点模板” [控制台类似](/help/communities/sites.md) 。 这两者都是构建社区站点的一套预连接页面和功能的蓝图。 区别在于站点模板适用于主社区，而组模板适用于社区组，即嵌套在主社区中的子社区。
+组模板控制台与[站点模板](/help/communities/sites.md)控制台类似。 这两者都是构建社区站点的一套预连接页面和功能的蓝图。 区别在于站点模板适用于主社区，而组模板适用于社区组，即嵌套在主社区中的子社区。
 
-社区组通过包含“组”功能(可能不是模板中的第 [一个或仅](/help/communities/functions.md#groups-function) “组”功能)被并入站点模板中。
+通过包括[Groups函数](/help/communities/functions.md#groups-function)将社区组纳入站点模板中（该函数可能不是模板中的第一个也不是唯一的函数）。
 
-从“社区 [”功能包](/help/communities/deploy-communities.md#latestfeaturepack)1开始，可以通过将“组”功能包含在组模板中来嵌套组。
+从社区[功能包1](/help/communities/deploy-communities.md#latestfeaturepack)开始，可以通过在组模板中包含组功能来嵌套组。
 
 当采取操作创建新社区组时，将选择该组的模板（结构）。 选择取决于在添加到站点或组模板时如何配置组功能。
 
 >[!NOTE]
 >
->创建社区站点的控 [制台](/help/communities/sites-console.md)、社 [区站点模板](/help/communities/sites.md)、社 [区组模板](/help/communities/tools-groups.md)[和社区功](/help/communities/functions.md) 能的控制台仅在作者环境中使用。
+>创建[社区站点](/help/communities/sites-console.md)、[社区站点模板](/help/communities/sites.md)、[社区组模板](/help/communities/tools-groups.md)和[社区功能](/help/communities/functions.md)的控制台仅用于创作环境。
 
-## 组模板控制台 {#group-templates-console}
+## 组模板控制台{#group-templates-console}
 
 要访问AEM作者环境中的组模板控制台，请执行以下操作：
 
-* 选择工 **具 |社区 |组模板** ，从全局导航。
+* 选择&#x200B;**工具 |社区 |组模板，**。
 
-此控制台显示可从中创建社 [区站点](/help/communities/sites-console.md) 的模板，并允许创建新的组模板。
+此控制台显示可从中创建[社区站点](/help/communities/sites-console.md)的模板，并允许创建新组模板。
 
 ![社区组模板](assets/groups-template.png)
 
 ## 创建组模板 {#create-group-template}
 
-要开始创建新组模板，请选择 `Create`。
+要开始创建新组模板，请选择`Create`。
 
 这将显示包含3个子面板的站点编辑器面板：
 
@@ -79,7 +79,7 @@ ht-degree: 3%
 >
 >如果使用AEM 6.1 Communities FP4或更早版本，请勿将组功能添加到组模板。
 >
->嵌套组功能自Communities FP1 [起可用](/help/communities/communities.md#latestfeaturepack)。
+>嵌套组功能从Communities [FP1](/help/communities/communities.md#latestfeaturepack)开始可用。
 >
 >仍不允许将“组”函数添加为模板中的第一个或唯一函数。
 
@@ -87,18 +87,18 @@ ht-degree: 3%
 
 要添加社区功能，请按站点菜单链接的显示顺序从右侧向左拖动。 样式将在创建站点时应用于模板。
 
-例如，如果您想要论坛，请将论坛功能从库拖放到模板生成器下。 这将导致打开论坛配置对话框。 有关配置 [对话框](/help/communities/functions.md) ，请参阅函数控制台。
+例如，如果您想要论坛，请将论坛功能从库拖放到模板生成器下。 这将导致打开论坛配置对话框。 有关配置对话框的信息，请参见[函数控制台](/help/communities/functions.md)。
 
 根据此模板，继续拖放子社区站点（组）所需的任何其他社区功能。
 
 ![拖动函数](assets/dragfunctions.png)
 
-将所有所需的功能拖放到模板生成器区域并进行配置后， **选择** 右上角的“保存”。
+将所有所需的函数放入模板生成器区域并进行配置后，选择右上角的&#x200B;**保存**。
 
 ## 编辑组模板{#edit-group-template}
 
-在主组模板控制台中查 [看社区组时](#group-templates-console)，可以选择现有的组模板进行编辑。
+在主[组模板控制台](#group-templates-console)中查看社区组时，可以选择现有的组模板进行编辑。
 
-编辑组模板不会影响已通过模板创建的社区站点。 可以直接编 [辑社区站点](/help/communities/sites-console.md#modify-structure)的结构。
+编辑组模板不会影响已通过模板创建的社区站点。 可以直接[编辑社区站点](/help/communities/sites-console.md#modify-structure)的结构。
 
-此过程提供的面板与创 [建组模板相同](#create-group-template)。
+此过程提供与创建组模板[相同的面板。](#create-group-template)
