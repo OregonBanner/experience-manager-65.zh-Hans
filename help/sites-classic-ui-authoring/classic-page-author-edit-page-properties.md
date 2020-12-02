@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 96%
 
 ---
 
@@ -79,7 +82,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    允许您为此页面输入虚 URL。通过这种方式，您可以使用更短并且含意更清楚的 URL。
 
-   例如，如果虚URL设置为w, `elcome`则对于网站h，如果路径/ `v1.0/startpage`标识的页面 `ttp://example.com,` h，则h `ttp://example.com/welcome`应该是h的虚URL `ttp://example.com/content/v1.0/startpage`
+   例如，如果对于网站h `ttp://example.com,`，虚URL设置为w `elcome`，且路径/ `v1.0/startpage`标识的页面为h &lt;a2/>，则h `ttp://example.com/welcome`将是h `ttp://example.com/content/v1.0/startpage`的虚URL
 
    >[!CAUTION]
    >
@@ -131,7 +134,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    指定导出配置。
 
-### 缩略图 {#thumbnail}
+### 缩略图  {#thumbnail}
 
 * **页面缩略图**
 
@@ -153,7 +156,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 ### 个性化 {#personalization}
 
-* **个人信息**
+* **个性化**
 
    选择一个[品牌以指定定位的范围](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)。
 
@@ -169,13 +172,13 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Blueprint 页面定义属性。控制将修改传播到 Live Copy 的情况。
 
-### Live Copy {#live-copy}
+### Live Copy  {#live-copy}
 
 * **Live Copy**
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Live Copy 页面定义属性。控制将从 Blueprint 中传播修改的情况。
 
-### 站点结构 {#site-structure}
+### 站点结构  {#site-structure}
 
 * 提供具有全站点功能的页面的链接，例如&#x200B;**注册页面**、**脱机页面**&#x200B;以及其他。
 
