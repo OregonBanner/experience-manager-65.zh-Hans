@@ -18,19 +18,19 @@ ht-degree: 2%
 ---
 
 
-# 为社区配置Dispatcher {#configuring-dispatcher-for-communities}
+# 为社区配置调度程序{#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
-对AEM Communities来说，必须配置调度程序以确保社区站点正常 [运行](overview.md#community-sites)。 包括社区启用和社交登录等功能时，需要进行其他配置。
+对于AEM Communities，必须配置调度程序以确保[社区站点](overview.md#community-sites)正常工作。 包括社区启用和社交登录等功能时，需要进行其他配置。
 
 了解特定部署和站点设计的必要条件
 
-* Contact [Customer Care](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)
+* 联系[客户服务](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)
 
-另请参阅主 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+另请参阅主[调度程序文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
-## 调度程序缓存 {#dispatcher-caching}
+## 调度程序缓存{#dispatcher-caching}
 
 ### 概述 {#overview}
 
@@ -42,9 +42,9 @@ ht-degree: 2%
 
 当配置为支持调度程序缓存时，将在标头中添加一个基于TTL的“最大页面”过期，以确保调度程序缓存页面是最新的。
 
-### 要求 {#requirements}
+### 要求{#requirements}
 
-* 调度程序版本4.1.2或更高版本(请参 [阅安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) 以获取最新版本)
+* 调度程序4.1.2或更高版本（有关最新版本，请参阅[安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)）
 * [ACS AEM公共资源包](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更高版本
@@ -52,32 +52,32 @@ ht-degree: 2%
 
 ### 配置 {#configuration}
 
-OSGi配置 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （OSGi配置ACS共享资源——调度程序缓存控制标头- Max Age）设置在指定路径下显示的缓存页面的过期时间。
+OSGi配置&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**&#x200B;设置在指定路径下显示的缓存页面的过期时间。
 
-* 从Web控 [制台](../../help/sites-deploying/configuring-osgi.md)
+* 从[Web控制台](../../help/sites-deploying/configuring-osgi.md)
 
-   * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * 例如，[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 定位 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 找到`ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 选择“+”图标以创建新连接配置
 
    ![dispatcher](assets/dispatcher.png)
 
 * **滤镜图案**
 
-   *（必需）* “社区页面”的一个或多个路径。 For example, `/content/sites/engage/(.*)`.
+   *（必需）* 指向社区页面的一个或多个路径。例如，`/content/sites/engage/(.*)`。
 
 * **高速缓存控制最大时间**
 
-   *(必需* )要添加到“Cache Control（缓存控制）”标头的最大时间（以秒为单位）。 值必须大于零(0)。
+   *（必需）* 要添加到“Cache Control（缓存控制）”标头的最大时间（以秒为单位）。值必须大于零(0)。
 
-## 调度程序客户端头 {#dispatcher-client-headers}
+## 调度程序客户端标头{#dispatcher-client-headers}
 
-在的/clientheaders部分 `dispatcher.any`中，如果列出一组特定的标题，则必须包含这些标题， `"CSRF-Token"` 以使“启用” [功能正常工作](enablement.md) 。
+在`dispatcher.any`的/clientheaders部分，如果列出一组特定的标头，则必须包含`"CSRF-Token"`，这样[启用功能](enablement.md)才能正常工作。
 
-## 调度程序过滤器 {#dispatcher-filters}
+## 调度程序过滤器{#dispatcher-filters}
 
-文件的/filter部分在配 `dispatcher.any` 置对内容的 [访问- /filter中有介绍](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)。
+`dispatcher.any`文件的/filter部分在[配置内容访问- /filter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)中有说明。
 
 本节介绍Communities功能正常运行可能需要的条目。
 
@@ -92,12 +92,12 @@ OSGi配置 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （OS
 >[!NOTE]
 >
 >**属性名称示例**
->显示的所有属性名称( **如/0050** 和/0170 ****)都应调整为适合现有的调度程序。任何配置文件。
+>所显示的所有属性名称（如&#x200B;**/0050**&#x200B;和&#x200B;**/0170**）都应调整为适合现有调度程序。any配置文件。
 
 
 >[!CAUTION]
 >
->有关使用Dispatcher [限制访问时的进一步注意事项](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) ，请参阅Dispatcher安全核对清单。 另外，请阅读AEM安 [全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) ，了解有关AEM安装的其他安全详细信息。
+>有关使用Dispatcher限制访问时的进一步注意事项，请参阅[调度程序安全清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)。 另外，请阅读[AEM安全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html)，了解有关AEM安装的其他安全详细信息。
 
 
 应将以下条目添加到/filter部分的末尾，尤其是所有拒绝条目之后。
@@ -172,9 +172,9 @@ OSGi配置 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （OS
 /7001 { /type "allow" /glob "GET /libs/cq/security/userinfo.json?cq_ck=*"
 ```
 
-## 调度程序规则 {#dispatcher-rules}
+## 调度程序规则{#dispatcher-rules}
 
-的规则部分定 `dispatcher.any` 义应根据所请求的URL缓存哪些响应。 对于“社区”，规则部分用于定义不应缓存的内容。
+`dispatcher.any`的规则部分定义应根据所请求的URL缓存哪些响应。 对于“社区”，规则部分用于定义不应缓存的内容。
 
 ```shell
 # Never cache the client-side .social.json calls
@@ -201,9 +201,9 @@ OSGi配置 **ACS AEM Commons - Dispatcher Cache Control Header - Max Age** （OS
 
 第一个过滤器模式通常用于拒绝所有内容，以便以受控方式过滤器恢复访问。 当多个过滤器应用到请求时，应用的最后一个过滤器是有效的过滤器。
 
-## 示例调度程序。any {#sample-dispatcher-any}
+## 调度程序示例。any {#sample-dispatcher-any}
 
-以下是包含 `dispatcher.any` Communities /过滤器和/rules的示例文件。
+以下是包含Communities /过滤器和/rules的示例`dispatcher.any`文件。
 
 ```shell
 # Each farm configures a set of load balanced renders (i.e. remote servers)
