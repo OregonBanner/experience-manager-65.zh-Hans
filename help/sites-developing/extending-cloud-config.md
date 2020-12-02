@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 3%
 
 ---
 
@@ -23,22 +26,22 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 ## 概念 {#concepts}
 
-开发配置时使用的原则基于以下概念：
+在开发配置时采用的原则基于以下概念：
 
 * 服务／适配器用于检索配置。
-* 配置（例如属性／段落）从父项继承。
-* 按路径从分析节点引用。
-* 轻松扩展。
-* 具有灵活性，可满足更复杂的配置，如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 支持依赖项(例如 [Adobe Analytics插件需要](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) Adobe Analytics配置 [](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) )。
+* 配置（例如属性／段落）从父级继承。
+* 按路径引用自分析节点。
+* 易于扩展。
+* 具有灵活性以满足更复杂的配置，如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
+* 支持依赖项(例如，[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)插件需要[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)配置)。
 
 ## 结构 {#structure}
 
 配置的基本路径是：
 
-`/etc/cloudservices`.
+`/etc/cloudservices`。
 
-对于每种配置类型，都会提供一个模板和一个组件。这样，配置模板就可以满足自定义后的大多数需求。
+对于每种类型的配置，都会提供一个模板和一个组件。这样，配置模板可以在自定义后满足大多数需求。
 
 要为新服务提供配置，您需要：
 
@@ -51,15 +54,15 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
    * 配置模板
    * 配置组件
 
-模板和组件必须从基本模 `sling:resourceSuperType` 板继承：
+模板和组件必须从基本模板继承`sling:resourceSuperType`:
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-或基组件
+或基本组件
 
 `cq/cloudserviceconfigs/components/configpage`
 
-服务提供商还应提供服务页面：
+服务提供商还应提供服务页：
 
 `/etc/cloudservices/<service-name>`
 
@@ -69,7 +72,7 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-并定义指 `resourceType` 向自定义组件的组件。
+并定义指向自定义组件的`resourceType`。
 
 ```xml
 /libs/cq/analytics/templates/sitecatalyst
@@ -106,9 +109,9 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 `/etc/cloudservices/<service-name>`
 
-### 内容模型 {#content-model}
+### 内容模型{#content-model}
 
-内容模型存储为 `cq:Page` :
+内容模型存储为`cq:Page`，位于：
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -119,10 +122,10 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-配置存储在子节点下 `jcr:content`。
+配置存储在子节点`jcr:content`下。
 
-* 在对话框中定义的固定属性应直接存储在 `jcr:node` 上。
-* 动态元素(使 `parsys` 用或 `iparsys`)使用子节点存储组件数据。
+* 在对话框中定义的固定属性应直接存储在`jcr:node`上。
+* 动态元素（使用`parsys`或`iparsys`）使用子节点存储组件数据。
 
 ```xml
 /etc/cloudservices/service/config/jcr:content as nt:unstructured
@@ -135,36 +138,36 @@ propertyname
 
 ### API {#api}
 
-有关API的参考文档，请参 [阅com.day.cq.wcm.webservices支持](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
+有关API的参考文档，请参阅[com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
 
-### AEM集成 {#aem-integration}
+### AEM集成{#aem-integration}
 
-可用服务列在“页面 **属性”对话框******`foundation/components/page``wcm/mobile/components/page`（从或继承的任何页面）的“云服务”选项卡中。
+可用服务列在&#x200B;**页面属性**&#x200B;对话框的&#x200B;**Cloud Services**&#x200B;选项卡（从`foundation/components/page`或`wcm/mobile/components/page`继承的任何页面）中。
 
 该选项卡还提供：
 
 * 指向可启用服务的位置的链接
 * 从路径字段中选择配置（服务的子节点）
 
-#### 密码加密 {#password-encryption}
+#### 密码加密{#password-encryption}
 
 存储服务的用户凭据时，应加密所有密码。
 
-您可以通过添加隐藏的表单字段来实现这一点。 此字段的属性名 `@Encrypted` 称中应包含注释；例如，对于字 `password` 段，名称将写为：
+您可以通过添加隐藏的表单字段来实现这一点。 此字段的属性名称中应包含注释`@Encrypted`;例如，对于`password`字段，名称将写为：
 
 `password@Encrypted`
 
-然后，该属性将由自动加密(使用 `CryptoSupport` 服务) `EncryptionPostProcessor`。
+然后，该属性将由`EncryptionPostProcessor`自动加密（使用`CryptoSupport`服务）。
 
 >[!NOTE]
 >
->这与标准注释类 ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` 似。
+>这与标准` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)`注释类似。
 
 >[!NOTE]
 >
->默认情况下， `EcryptionPostProcessor` 仅加密 `POST` 对的请求 `/etc/cloudservices`。
+>默认情况下，`EcryptionPostProcessor`仅加密对`/etc/cloudservices`发出的`POST`请求。
 
-#### “服务”页的其他属性jcr:content Nodes {#additional-properties-for-service-page-jcr-content-nodes}
+#### “服务”页的其他属性jcr:content节点{#additional-properties-for-service-page-jcr-content-nodes}
 
 <table>
  <tbody>
@@ -174,7 +177,7 @@ propertyname
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>要自动包含在页面中的组件的引用路径。<br /> 这用于附加功能和JS包含。<br /> 这包括包含页面上的组件<br /> ( <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 通常在标记之前 <code>body</code> )。<br /> 对于Analytics和Target，我们使用它包含其他功能，如跟踪访客行为的JavaScript调用。</td>
+   <td>要自动包括在页面中的组件的引用路径。<br /> 它用于附加功能和JS包含。<br /> 这包括页面上包含的<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 组件(通常在标记之 <code>body</code> 前)。<br /> 在分析和目标方面，我们使用它包含其他功能，如跟踪访客行为的JavaScript调用。</td>
   </tr>
   <tr>
    <td>描述</td>
@@ -206,16 +209,16 @@ propertyname
   </tr>
   <tr>
    <td>可见</td>
-   <td>页面属性对话框中的可见性；默认情况下可见（可选）</td>
+   <td>页面属性对话框中的可见性；默认可见（可选）</td>
   </tr>
  </tbody>
 </table>
 
-### Use Cases {#use-cases}
+### 用例{#use-cases}
 
 这些服务默认提供：
 
-* [跟踪器片段](/help/sites-administering/external-providers.md) （Google、WebTrends等）
+* [跟踪器代](/help/sites-administering/external-providers.md) 码片段（Google、WebTrends等）
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 * [Search&amp;Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
@@ -223,5 +226,5 @@ propertyname
 
 >[!NOTE]
 >
->另请参阅 [创建自定义云服务](/help/sites-developing/extending-cloud-config-custom-cloud.md)。
+>另请参阅[创建自定义Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md)。
 
