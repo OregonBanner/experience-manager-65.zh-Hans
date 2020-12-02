@@ -48,8 +48,8 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
 * [AEM 社区论坛](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
-## Copyright, licenses, and disclaimers {#copyright-licenses-and-disclaimers}
+## 版权、许可和免责声明{#copyright-licenses-and-disclaimers}
 
-有关更多信息，请参 [阅https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/cn/legal/terms/enterprise-licensing.html)
+有关详细信息，请参阅[https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/cn/legal/terms/enterprise-licensing.html)
 
-Notice of third party licenses: [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
+第三方许可证通知：[https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
