@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# SocialUtils重构 {#socialutils-refactoring}
+# SocialUtils重构{#socialutils-refactoring}
 
-## 已弃用SocialUtils包 {#socialutils-package-deprecated}
+## 已弃用SocialUtils包{#socialutils-package-deprecated}
 
-AEM 6. `com.adobe.cq.social.ugcbase.SocialUtils` 1中已弃用该包。
+AEM 6.1中已弃用包`com.adobe.cq.social.ugcbase.SocialUtils`。
 
-下表列表了用于代替方法的 `SocialUtils` 方法。
+下表列表了用于代替`SocialUtils`方法的方法。
 
-## SocialResourceUtilities包  {#socialresourceutilities-package}
+## SocialResourceUtilities包{#socialresourceutilities-package}
 
 | com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities中的方法 |
 |---|
@@ -44,13 +44,13 @@ AEM 6. `com.adobe.cq.social.ugcbase.SocialUtils` 1中已弃用该包。
 | 字符串UGCToResourcePath（字符串ugcPath） | 更改了签名 |
 | 字符串UGCToResourcePath（字符串ugcPath，资源解析程序） | 新版 |
 
-| utilities. `com.adobe.cq.social.`resource.api.SocialResourceUtilities中的方法 |
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities中的方法 |
 |---|
 | SocialResourceProvider getSocialResourceProvider（资源资源） | 替换SocialResourceProvider getConfiguredProvider（资源资源） |
 
-## SCFUtilities包 {#scfutilities-package}
+## SCFUtilities包{#scfutilities-package}
 
-| 实用程序 `com.adobe.cq.social.`中的方法。scf.api.SCFUtilites |
+| `com.adobe.cq.social.`utilities.scf.api.SCFUtilites中的方法 |
 |---|
 | 字符串getAvatar(UserProperties userProperties) |
 | 字符串getAvatar(UserProperties userProperties, int size) |
@@ -60,7 +60,7 @@ AEM 6. `com.adobe.cq.social.ugcbase.SocialUtils` 1中已弃用该包。
 | 字符串getSocialProfileURL（字符串用户名，资源解析程序，页面） |
 | UserProperties getUserProperties(ResourceResolver, String userId) |
 
-## For Internal Use Only {#for-internal-use-only}
+## 仅供内部使用{#for-internal-use-only}
 
 | boolean canAddNode(Session session, String path) |
 |---|
@@ -79,7 +79,7 @@ AEM 6. `com.adobe.cq.social.ugcbase.SocialUtils` 1中已弃用该包。
 | boolean mayPost(ResourceResolver, Resource) |
 | 字符串prepareUserGeneratedContent（ResourceResolver，字符串路径） |
 
-## 方法不再可用 {#methods-no-longer-available}
+## 方法不再可用{#methods-no-longer-available}
 
 | Node createNode(ResourceResolver, String path, String nodeType) |
 |---|
