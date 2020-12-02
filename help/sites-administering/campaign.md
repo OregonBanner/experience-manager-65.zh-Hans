@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 24%
 
 ---
 
@@ -24,14 +27,14 @@ Adobe Campaign 是一套解决方案，允许您在所有在线渠道和离线�
 * Adobe Campaign 6.1，内部部署解决方案。
 * Adobe Campaign Standard，基于订阅的解决方案。
 
-本文档介绍如何将AEM与Adobe Campaign集成。 根据您是使用基于订阅的解决方案还是内部部署解决方案，集成步骤会稍有不同。
+本文档介绍如何将AEM与Adobe Campaign集成。 集成步骤将略有不同，具体取决于您使用的是基于订阅的解决方案还是预置解决方案。
 
-* [与Adobe Campaign 6.1集成](/help/sites-administering/campaignonpremise.md)
-* [与Adobe Campaign standard集成](/help/sites-administering/campaignstandard.md)
+* [与Adobe Campaign6.1集成](/help/sites-administering/campaignonpremise.md)
+* [与Adobe Campaign Standard集成](/help/sites-administering/campaignstandard.md)
 * [电子邮件模板的最佳实践](/help/sites-administering/best-practices-for-email-templates.md)
 * [Adobe Campaign集成疑难解答](/help/sites-administering/troubleshooting-campaignintegration.md)
 
 >[!NOTE]
 >
->要查看相关的AEM社区文章，请参阅：集 [成Adobe Experience manager和Adobe Campaign Standard以创建Newletter](https://helpx.adobe.com/experience-manager/using/aem_campaign.html)。
+>要查看相关的AEM社区文章，请参阅：[整合Adobe Experience Manager和Adobe Campaign Standard以创建Newletter](https://helpx.adobe.com/experience-manager/using/aem_campaign.html)。
 
