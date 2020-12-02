@@ -19,7 +19,7 @@ ht-degree: 3%
 ---
 
 
-# 外部提供商的分析 {#analytics-with-external-providers}
+# 外部提供者{#analytics-with-external-providers}的分析
 
 Analytics可为您提供有关网站使用情况的重要而有趣的信息。
 
@@ -28,13 +28,13 @@ Analytics可为您提供有关网站使用情况的重要而有趣的信息。
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-您还可以配置自己的通用分析 **代码片段实例** ，以定义新的服务配置。
+您还可以配置您自己的&#x200B;**通用分析代码片段**&#x200B;实例以定义新的服务配置。
 
 然后，通过添加到网页的少量代码片段来收集信息。 例如：
 
 >[!CAUTION]
 >
->脚本不能包含在标 `script` 记中。
+>脚本不能包含在`script`标记中。
 
 ```
 var _gaq = _gaq || [];
@@ -57,19 +57,19 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->Geometrixx-Outdoors演示站点已配置，因此页面属性中提供的属性将附加到相应脚本中的html源代码(就在 `</html>` 结束标记的上方) `js` 中。
+>Geometrixx-Outdoors演示站点已配置，因此页面属性中提供的属性将附加到相应`js`脚本中的html源代码（就在`</html>`结尾标签的上方）。
 >
->如果您自 `/apps` 己不继承默认的页面组件( `/libs/foundation/components/page`)，您（或您的开发人员）必须确保包括相应的脚本，例如，包括或 `js``cq/cloudserviceconfigs/components/servicescomponents`使用类似机制。
+>如果您自己的`/apps`不继承默认页面组件(`/libs/foundation/components/page`)，您（或您的开发人员）必须确保包含相应的`js`脚本，例如，通过包括`cq/cloudserviceconfigs/components/servicescomponents`或使用类似机制。
 >
 >如果没有此选项，则任何服务(通用、分析、目标等)都无法正常工作。
 
-## 使用通用代码片断创建新服务 {#creating-a-new-service-with-a-generic-snippet}
+## 使用通用代码片断{#creating-a-new-service-with-a-generic-snippet}创建新服务
 
 对于基本配置：
 
-1. Open the **Tools** console.
-1. 从左窗格展开 **Cloud Services配置**。
-1. 多次-单击“ **通用分析代码** ”(Generic Analytics Snippet)以打开页面：
+1. 打开&#x200B;**工具**&#x200B;控制台。
+1. 从左窗格展开&#x200B;**Cloud Services配置**。
+1. 多次-单击&#x200B;**通用分析片段**&#x200B;以打开页面：
 
    ![](assets/analytics_genericoverview.png)
 
@@ -77,24 +77,24 @@ _gaq.push(['_trackPageview']);
 
    ![](assets/analytics_addconfig.png)
 
-1. 单击 **创建**，将立即打开片段对话框——将相应的javascript片段粘贴到字段中：
+1. 单击&#x200B;**创建**，将立即打开代码片断对话框——将相应的javascript代码片断粘贴到字段中：
 
    ![](assets/analytics_snippet.png)
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
 
-## 在页面上使用新服务 {#using-your-new-service-on-pages}
+## 在页面{#using-your-new-service-on-pages}上使用新服务
 
 创建服务配置后，您现在需要配置所需的页面才能使用它：
 
 1. 导航到页面。
-1. 从Sidekick中 **打开页面** 属性，然后打开 **Cloud Services** 选项卡。
-1. 单击 **添加服务**，然后选择所需的服务；例如，通 **用分析代码段**:
+1. 从Sidekick打开&#x200B;**页面属性**，然后打开&#x200B;**Cloud Services**&#x200B;选项卡。
+1. 单击&#x200B;**添加服务**，然后选择所需的服务；例如&#x200B;**通用分析代码片段**:
 
    ![](assets/analytics_selectservice.png)
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
-1. 您将返回到“Cloud Services” **选项卡** 。 现 **在，通用分析片段** 随消息一起列出 `Configuration reference missing`。 使用下拉列表选择您的特定服务实例；例如google-analytics:
+1. 您将返回到&#x200B;**Cloud Services**&#x200B;选项卡。 **通用分析片段**&#x200B;现在随消息`Configuration reference missing`一起列出。 使用下拉列表选择您的特定服务实例；例如google-analytics:
 
    ![](assets/analytics_selectspecificservice.png)
 
