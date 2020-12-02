@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 translation-type: tm+mt
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 65%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 ## 资产 {#assets}
 
-以下主题介绍了有关资产的最佳实践，包括Dynamic media功能和Dynamic Media Classic集成：
+以下主题介绍了有关资产的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 
 <table>
  <tbody>
@@ -52,7 +55,7 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
   <tr>
    <td>动态图像处理</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">动态图像处理最佳实践</a></td>
-   <td><p>介绍在使用Dynamic media功能或与Dynamic Media Classic集成时，如何锐化图像以获得最佳效果，以及如何优化图像质量的最佳方式。 </p> </td>
+   <td><p>介绍在使用Dynamic Media功能或与Dynamic Media Classic集成时，如何锐化图像以获得最佳效果，以及如何以最佳方式优化图像质量。 </p> </td>
   </tr>
   <tr>
    <td>多语言资产</td>
@@ -66,10 +69,10 @@ source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 
 在管理和创作网站内容方面具有一些最佳实践，如下所述：
 
-创作：创作 [环境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) -提供有关如何创作页面的概述。
+创作：[创作环境和工具](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) —— 提供有关如何创作页面的概述。
 
-## Forms {#forms}
+## 表单 {#forms}
 
-自适应表单：使 [用自适应表单的最佳实践](/help/forms/using/adaptive-forms-best-practices.md) -介绍设置、创作和自定义自适应表单的最佳实践。
+自适应表单：[使用自适应表单的最佳实践](/help/forms/using/adaptive-forms-best-practices.md) —— 介绍设置、创作和自定义自适应表单的最佳实践。
 
-HTML5表单：设 [计HTML5表单的最佳实践](/help/forms/using/best-practices-for-html5-forms.md) -介绍处理HTML5表单布局和设计的最佳实践。
+HTML5表单：[设计HTML5表单的最佳实践](/help/forms/using/best-practices-for-html5-forms.md) —— 介绍处理HTML5表单布局和设计的最佳实践。
