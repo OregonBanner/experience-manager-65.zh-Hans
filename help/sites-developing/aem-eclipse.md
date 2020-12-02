@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 translation-type: tm+mt
 source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+workflow-type: tm+mt
+source-wordcount: '810'
+ht-degree: 1%
 
 ---
 
@@ -21,70 +24,70 @@ source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
 
 ## 概述 {#overview}
 
-AEM Developer Tools for Eclipse是一个Eclipse插件，它基于Apache License 2下发布的 [Eclipse插件for Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) 。
+AEM Developer Tools for Eclipse是一个基于Apache License 2下发布的[Eclipse plugin for Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html)的Eclipse插件。
 
-它提供了几个使AEM开发更轻松的功能：
+它优惠了几个使AEM开发更容易的功能：
 
 * 通过Eclipse Server Connector与AEM实例无缝集成。
 * 内容和OSGI包的同步。
-* 具有代码热交换功能的调试支持。
+* 通过代码热插拔功能支持调试。
 * 通过特定项目创建向导简单引导AEM项目。
 * 轻松编辑JCR属性。
 
-## 要求 {#requirements}
+## 要求{#requirements}
 
 在使用AEM开发人员工具之前，您需要：
 
-* 下载并安 [装适用于Java EE开发人员的Eclipse IDE](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar)。 AEM开发人员工具当前支持Eclipse Kepler或更高版本
+* 下载并安装[Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar)。 AEM开发人员工具当前支持EclipseKepler或更新版本
 
-* 可与AEM 5.6.1版或更高版本一起使用
-* 配置Eclipse安装，以确保通过编辑配置文件(如 `eclipse.ini` Eclipse常见问题中所述)至少拥有1GB [堆内存](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)。
-
->[!NOTE]
->
->在macOS上，您需要右键单击 **Eclipse.app** ，然后选择“显 **示包内容** ”以查找您的 `eclipse.ini`**。**
-
-## 如何安装Eclipse的AEM Developer Tools {#how-to-install-the-aem-developer-tools-for-eclipse}
-
-满足上述要求后 [](#requirements) ，您可以按如下方式安装插件：
-
-1. 浏览 [**AEM **Developer Tools网站](https://eclipse.adobe.com/aem/dev-tools/)。
-
-1. 复制安 **装链接**。
-
-   请注意，您也可以下载存档，而不是使用安装链接。 这允许脱机安装，但这样会错过自动更新通知。
-
-1. 在Eclipse中，打开“帮 **助** ”菜单。
-1. 单击“ **安装新软件”**。
-1. **单击**&#x200B;添加…….
-1. 在名 **称中** ，键入AEM Developer Tools。
-1. 在 **位置** ，复制安装URL。
-1. Click **Ok**.
-1. 检查 **AEM** 和 **Sling** 插件。
-1. 单击&#x200B;**下一步**。
-1. 单击&#x200B;**下一步**。
-1. 接受这些链接协议，然后单击“ **完成**”。
-1. 单击 **是** ，以重新启动Eclipse。
-
-## 如何导入现有项目 {#how-to-import-existing-projects}
+* 可与AEM 5.6.1或更高版本一起使用
+* 按照[Eclipse常见问题解答](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)中的说明，通过编辑`eclipse.ini`配置文件，配置Eclipse安装以确保至少拥有1 GB的堆内存。
 
 >[!NOTE]
 >
->请参 [阅从AEM下载Eclipse中的捆绑包时如何使用](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)。
+>在macOS上，您需要右键单击&#x200B;**Eclipse.app**，然后选择&#x200B;**显示包内容**&#x200B;以找到您的&#x200B;`eclipse.ini`**。**
 
-## AEM透视 {#the-aem-perspective}
+## 如何安装AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-适用于Eclipse的AEM开发工具随“透视图”一起提供，使您能够完全控制AEM项目和实例。
+满足上述[要求](#requirements)后，可以按如下方式安装插件：
+
+1. 浏览&#x200B;[**AEM**&#x200B;开发人员工具网站](https://eclipse.adobe.com/aem/dev-tools/)。
+
+1. 复制&#x200B;**安装链接**。
+
+   请注意，您也可以下载存档文件，而不是使用安装链接。 这允许脱机安装，但您会以这种方式错过自动更新通知。
+
+1. 在Eclipse中，打开&#x200B;**帮助**&#x200B;菜单。
+1. 单击&#x200B;**安装新软件**。
+1. 单击&#x200B;**添加……**。
+1. 在&#x200B;**名称**&#x200B;中，键入AEM Developer Tools。
+1. 在&#x200B;**位置**&#x200B;中，复制安装URL。
+1. 单击&#x200B;**确定**。
+1. 检查&#x200B;**AEM**&#x200B;和&#x200B;**Sling**&#x200B;插件。
+1. 单击&#x200B;**下一步**。
+1. 单击&#x200B;**下一步**。
+1. 接受这些链接协议，然后单击&#x200B;**完成**。
+1. 单击&#x200B;**是**&#x200B;以重新启动Eclipse。
+
+## 如何导入现有项目{#how-to-import-existing-projects}
+
+>[!NOTE]
+>
+>请参阅[从AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)下载Eclipse中的捆绑包时如何使用它。
+
+## AEM透视{#the-aem-perspective}
+
+AEM Development Tools for Eclipse附带一个透视图，它优惠您对AEM项目和实例的完全控制。
 
 ![chlimage_1-2](assets/chlimage_1-2a.jpeg)
 
-## 示例多模块项目 {#sample-multi-module-project}
+## 示例多模块项目{#sample-multi-module-project}
 
-适用于Eclipse的AEM开发人员工具附带一个多模块项目示例，它可以帮助您快速掌握Eclipse中的项目设置，并作为多个AEM功能的最佳实践指南。 [进一步了解Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
+AEM Developer Tools for Eclipse附带一个范例、多模块项目，它可以帮助您快速掌握Eclipse中的项目设置，并作为几个AEM功能的最佳实践指南。 [进一步了解Project Archetype](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)。
 
 按照以下步骤创建示例项目：
 
-1. 在“文 **件** >新建 **>项目** ”菜单中，浏览至“AEM示例”和“ ************ AEM模块多项目项目”部分的AEM和SELECT Section。
+1. 在&#x200B;**文件** > **新建** > **项目**&#x200B;菜单中，浏览至&#x200B;**AEM**&#x200B;部分并选择&#x200B;**AEM示例多模块项目**。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -96,11 +99,11 @@ AEM Developer Tools for Eclipse是一个Eclipse插件，它基于Apache License 
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-1. 选 **择com.adobe.granite.archetypes:示例——项目——原型：（最大数）** ，然后单击“下 **一步”**。
+1. 选择&#x200B;**com.adobe.granite.archetypes:示例——项目——原型：(highest number)**，然后单击&#x200B;**Next**。
 
    ![chlimage_1-71](assets/chlimage_1-71a.png)
 
-1. 为示例项 **目填写名**、 **组ID** 和 **对象ID** 。 您还可以选择设置一些高级属性。
+1. 为示例项目填写&#x200B;**名称**、**组id**&#x200B;和&#x200B;**项目id**。 您还可以选择设置一些高级属性。
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
@@ -114,28 +117,28 @@ AEM Developer Tools for Eclipse是一个Eclipse插件，它基于Apache License 
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-1. 单击“ **完成**”。 将创建项目结构。
+1. 单击&#x200B;**完成**。 将创建项目结构。
 
    >[!NOTE]
    >
-   >在全新安装中(更具体地说：当从未下载过依赖项时)，您可能会创建出包含错误的项目。 在这种情况下，请按照解决无效项目定义中 [所述的过程操作](#resolving-invalid-project-definition)。
+   >在新安装中(更具体地说：当从未下载依赖项时)，您可能会创建出错误的项目。 在这种情况下，请按照[解决无效项目定义](#resolving-invalid-project-definition)中描述的过程操作。
 
 ## 疑难解答 {#troubleshooting}
 
-### 解析无效的项目定义 {#resolving-invalid-project-definition}
+### 解析无效的项目定义{#resolving-invalid-project-definition}
 
-要解析无效的依赖关系和项目定义，请按如下步骤继续：
+要解析无效的依赖项，项目定义将按如下步骤进行：
 
 1. 选择所有创建的项目。
-1. 右键单击。 在菜单中， **选择** “更 **新项目”**。
-1. 选中 **强制更新快照／版本**。
-1. 单击&#x200B;**确定**。Eclipse会尝试下载所需的依赖关系。
+1. 右键单击。 在菜单&#x200B;**Maven**&#x200B;中，选择&#x200B;**更新项目**。
+1. 检查&#x200B;**强制更新快照／发行版**。
+1. 单击&#x200B;**确定**。Eclipse会尝试下载所需的依赖项。
 
-### 在JSP文件中启用标记库自动完成 {#enabling-tag-library-autocompletion-in-jsp-files}
+### 在JSP文件{#enabling-tag-library-autocompletion-in-jsp-files}中启用标记库自动完成
 
-标记库自动完成功能开箱即用，因为项目中添加了适当的依赖关系。 使用AEM Uber Jar时有一个已知问题，该问题不包括所需的tld和TagExtraInfo文件。
+标签库自动完成功能开箱即用，前提是向项目添加了适当的依赖关系。 使用AEM Uber Jar时有一个已知问题，它不包括所需的tld和TagExtraInfo文件。
 
-要解决该问题，请确保org.apache.sling.scripting.jsp.taglib对象位于AEM Uber Jar之前的类路径中。 对于Maven项目，将以下依赖关系放在pom.xml中的Uber Jar之前。
+要解决此问题，请确保org.apache.sling.scripting.jsp.taglib对象位于AEM Uber Jar之前的类路径中。 对于Maven项目，在pom.xml中将以下依赖项放在Uber Jar之前。
 
 ```xml
 <dependency>
@@ -145,19 +148,19 @@ AEM Developer Tools for Eclipse是一个Eclipse插件，它基于Apache License 
 </dependency>
 ```
 
-确保为AEM部署添加正确版本。
+确保为AEM的部署添加正确的版本。
 
-## More information {#more-information}
+## 更多信息{#more-information}
 
-适用于Eclipse网站的Apache Sling IDE正式工具集为您提供了有用的信息：
+适用于Eclipse网站的Apache Sling IDE官方工具为您提供有用的信息：
 
-* 本文 [**档是Eclipse **User Guide的Apache Sling IDE工具集](https://sling.apache.org/documentation/development/ide-tooling.html)，它将指导您了解AEM Development Tools支持的整体概念、服务器集成和部署功能。
-* 疑难 [解答部分](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)。
-* “已 [知问题”列表](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)。
+* 本文档将指导您了解AEM开发工具支持的总体概念、服务器集成和部署功能，其中&#x200B;[**Apache Sling IDE工具包，用于Eclipse**&#x200B;用户指南](https://sling.apache.org/documentation/development/ide-tooling.html)。
+* [疑难解答部分](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)。
+* [已知问题列表](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)。
 
-以下官方 [Eclipse](https://eclipse.org/) 文档可以帮助您设置环境：
+以下官方[Eclipse](https://eclipse.org/)文档可以帮助您设置环境:
 
 * [Eclipse快速入门](https://eclipse.org/users/)
 * [Eclipse Luna帮助系统](https://help.eclipse.org/luna/index.jsp)
-* [Maven集成(m2eclipse)](https://www.eclipse.org/m2e/)
+* [Maven Integration(m2eclipse)](https://www.eclipse.org/m2e/)
 
