@@ -12,6 +12,9 @@ discoiquuid: 48826f03-6731-49c5-a6c5-6e2fb718f912
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 90%
 
 ---
 
@@ -20,17 +23,17 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
 
 可创建启动项，以允许更新现有网页的新版本，以便将来激活。创建启动项时，需要指定标题和源页面：
 
-* The title appears in the **Sidekick**, from where authors can access them to work on them.
+* 标题显示在&#x200B;**Sidekick**&#x200B;中，作者可以从中访问这些标题以对其进行处理。
 * 默认情况下，源页面的子页面包含在启动项中。必要时，可只使用源页面。
 * 默认情况下，[Live Copy](/help/sites-administering/msm.md) 会在源页面发生更改时自动更新启动页面。您可以指定创建一个静态副本，以防止自动更改。
 
-或者，您可以选择指定&#x200B;**启动日期**（和时间），以便定义何时提升和激活启动页面。However the **Launch Date** only operates in combination with the **Production Ready** flag (see [Editing a Launch Configuration](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration)); for the actions to actually occur automatically, both must be set.
+（可选）您可以指定启 **动日期** （和时间）以定义何时提升和激活启动页面。 但是，启 **动日期仅与生产就绪标** 志结合使用(请 **参阅编辑启动配置**[](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration));要使动作实际自动发生，必须同时设置这两个操作。
 
 ## 创建启动项 {#creating-a-launch}
 
 可按照以下过程创建启动项。
 
-1. Open the Website administration page ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)).
+1. 打开网站管理页面([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))。
 1. 单击&#x200B;**新建...**，然后单击&#x200B;**新建启动项...**。
 1. 在&#x200B;**创建启动项**&#x200B;对话框中，指定以下属性的值：
 
@@ -39,11 +42,12 @@ source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
    * **不包括子页面**：选中此选项，可只为源页面（而非子页面）创建启动项。默认情况下，此选项处于未选中状态。
    * **保持同步**：选中此选项，可在源页面发生更改时自动更新启动页面的内容。此功能可通过将启动项设为 [Live Copy](/help/sites-administering/msm.md) 来实现。
    * **启动日期**：激活启动副本的日期和时间（取决于&#x200B;**生产就绪**&#x200B;标记；请参阅[启动项 - 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)）。
+
    ![chlimage_1-99](assets/chlimage_1-99a.png)
 
 1. 单击&#x200B;**创建**。
 
-## 删除启动项 {#deleting-a-launch}
+## 删除启动项  {#deleting-a-launch}
 
 您还可以删除启动项。
 
