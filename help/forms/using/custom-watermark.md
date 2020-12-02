@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# 字母PDF预览中的自定义水印{#custom-watermark-in-letter-pdf-preview}
+# 字母PDF预览{#custom-watermark-in-letter-pdf-preview}中的自定义水印
 
 ## 概述 {#overview}
 
@@ -26,18 +26,18 @@ ht-degree: 0%
 
 为防止未授权使用此预览，组织可以在PDF上加上水印。 默认水印为“预览”，它显示在PDF中。
 
-要在预览PDF中启用水印，请在Corresponce Management Configurations(位于 **[!UICONTROL https://&#39;]** server: **[!UICONTROL port]**[/system/console/configMgr)中选择Apply Watermark During][]Applicy Watermark(在预览期间应用水印)选项。
+要在预览PDF中启用水印，请在https://&#39;[服务器]:[端口]&#39;/system/console/configMgr的&#x200B;**[!UICONTROL 对应管理配置]**&#x200B;中选择&#x200B;**[!UICONTROL 在预览期间应用水印]**&#x200B;选项。
 
 ![default-watermark](assets/default-watermark.png)
 
 您可以使用以下步骤自定义水印的文本和外观：
 
-## 在“创建对应UI”中自定义PDF预览中的水印 {#customizewatermark-}
+## 在“创建对应UI {#customizewatermark-}”中自定义PDF预览中的水印
 
-1. 转到并 `https://'[server]:[port]'/[ContextPath]/crx/de` 以管理员身份登录。
-1. 在apps文件夹中，创建一个名为previewwatermark的 **[!UICONTROL 文件夹]** ，其路径／结构与libs文件夹中的previewwatermark文件夹类似：
+1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`并以管理员身份登录。
+1. 在apps文件夹中，创建一个名为&#x200B;**[!UICONTROL previewwatermark]**&#x200B;的文件夹，其路径／结构与libs文件夹中的previewwatermark文件夹类似：
 
-   1. 右键单击以下路 **径的** previewwatermark文件夹，然后选择 **“叠加节点”**:
+   1. 右键单击以下路径中的&#x200B;**previewwatermark**&#x200B;文件夹，然后选择&#x200B;**叠加节点**:
 
       `/libs/fd/cm/configFiles/previewwatermark`
 
@@ -45,9 +45,9 @@ ht-degree: 0%
 
       **路径：** /libs/fd/cm/configFiles/previewwatermark
 
-      **叠加位置：** /apps/
+      **叠加位置** :/apps/
 
-      **匹配节点类型：** 已检查
+      **匹配节点类型：已选** 中
 
       >[!NOTE]
       >
@@ -60,11 +60,11 @@ ht-degree: 0%
       >    * 安装功能包
 
 
-   1. 单击 **确定** ，然后单击 **全部保存**。 预 **[!UICONTROL 览水印]** 文件夹是在指定的路径中创建的。
+   1. 单击&#x200B;**确定**，然后单击&#x200B;**保存全部**。 在指定路径中创建&#x200B;**[!UICONTROL previewwatermark]**&#x200B;文件夹。
 
 
 
-1. 将ddx文件从“/libs/fd/cm/configFiles/previewwatermark”文件夹复制并粘贴到“/apps/fd/cm/configFiles/previewwatermark”文件夹，然后单击“全 **[!UICONTROL 部保存]**”。
+1. 将ddx文件从“/libs/fd/cm/configFiles/previewwatermark”文件夹复制并粘贴到“/apps/fd/cm/configFiles/previewwatermark”文件夹，然后单击&#x200B;**[!UICONTROL 保存全部]**。
 1. 在/apps/fd/cm/configFiles/previewwatermark/下的ddx文件中进行所需的更改。
 
    ```xml
@@ -82,11 +82,11 @@ ht-degree: 0%
    </DDX>
    ```
 
-   有关自定义水印外观、文本和对齐方式的信息，请参阅在Assembler Service和DDX Reference文档中添加和 [删除水印和背景](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) 。
+   有关自定义水印外观、文本和对齐方式的信息，请参阅[Assembler Service和DDX Reference](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)文档中的添加和删除水印和背景。
 
    >[!NOTE]
    >
    >在ddx文件中，对结果和源的引用应保持不更改为output.pdf和input.pdf。 不应更改文件ddx的名称。
 
-1. 单击“ **全部保存**”。
+1. 单击&#x200B;**保存全部**。
 
