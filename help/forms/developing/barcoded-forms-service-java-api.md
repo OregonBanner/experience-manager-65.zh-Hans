@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# BarcodedForms服务Java API快速开始(SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
+# BarcodedForms服务Java API快速开始(SOAP){#barcoded-forms-service-java-apiquick-start-soap}
 
 Java API快速开始(SOAP)可用于BarcodedForms服务：
 
@@ -27,11 +27,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->“使用AEM Forms进行编程”中的快速开始基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参 [阅设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>“使用AEM Forms进行编程”中的快速开始基于部署在JBoss Application Server和Microsoft Windows操作系统上的Forms服务器。 但是，如果您使用的是其他操作系统（如UNIX），请将Windows特定路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API解码条形码表单数据 {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
+## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}解码条形码表单数据
 
-以下Java代码对PDF表单中保存为Loan.pdf的表单数据进行解码。 解码后的数据将保存为名为extractedData.xml的XML文件。 此代码示例将对 `org.w3c.dom.Document` 象转换为 `com.adobe.idp.Document` 对象。 (请参 [阅解码条形码表单数据](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)。)
+以下Java代码对PDF表单中保存为Loan.pdf的表单数据进行解码。 解码后的数据将保存为名为extractedData.xml的XML文件。 此代码示例将`org.w3c.dom.Document`对象转换为`com.adobe.idp.Document`对象。 （请参阅[解码条形码表单数据](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)。）
 
 ```java
  /*
@@ -220,5 +220,5 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->在同一应用程 `org.w3c.dom.Document` 序逻辑中 `com.adobe.idp.Document` 同时使用对象和对象时，最好能完全限定两个对象。
+>在同一应用程序逻辑中同时使用`org.w3c.dom.Document`对象和`com.adobe.idp.Document`对象时，最好将这两个对象全部限定为可用。
 
