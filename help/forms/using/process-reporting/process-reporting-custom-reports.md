@@ -1,8 +1,8 @@
 ---
 title: 流程中的自定义报告报告
 seo-title: 流程中的自定义报告报告
-description: 您可以创建自定义报告，并将这些报告添加到JEE流程报告UI的AEM Forms。
-seo-description: 您可以创建自定义报告，并将这些报告添加到JEE流程报告UI的AEM Forms。
+description: 您可以创建自定义报告，并在JEE流程报告UI中将这些报告添加到AEM Forms。
+seo-description: 您可以创建自定义报告，并在JEE流程报告UI中将这些报告添加到AEM Forms。
 uuid: 81039fe8-d757-4c85-a1eb-88e4e6aa8500
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,22 +18,22 @@ ht-degree: 0%
 ---
 
 
-# 流程中的自定义报告报告{#custom-reports-in-process-reporting}
+# 进程中的自定义报告报告{#custom-reports-in-process-reporting}
 
 可以使用QueryBuilder的REST界面，或使用QueryBuilder API创建OSGi服务以创建自定义报表。
 
-## 构建自定义报告的一般步骤 {#generic-steps-to-build-a-custom-report}
+## 构建自定义报告{#generic-steps-to-build-a-custom-report}的一般步骤
 
 添加任何自定义报告之前，请执行以下模板过程：
 
-1. 在自定义报告中使用的数据必须在“流程”报告中可用。 要确保数据的可用性，请计划cron作业或在“流程 **[报告](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**”UI上使用“同步”选项。
-1. URL请求(封装所需的查询)必须返回相应的查询结果对象。 要创建查询，可使用QueryBuilder的 [REST界面](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) ，使用QueryBuilder API创建OSGi服务。 您可以创建动态或静态查询。
+1. 在自定义报告中使用的数据必须在“流程”报告中可用。 要确保数据的可用性，请计划cron作业或在“进程报告UI”上使用&#x200B;**[Sync](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)**&#x200B;选项。
+1. URL请求(封装所需的查询)必须返回相应的查询结果对象。 要创建查询，可使用[QueryBuilder](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)的REST接口使用QueryBuilder API创建OSGi服务。 您可以创建动态或静态查询。
 
 1. 创建自定义用户界面以显示结果。 您可以创建独立的用户界面，或将结果与现有的流程报告UI集成。
 
-## 使用QueryBuilder的REST界面 {#using-the-rest-interface-of-the-querybuilder}
+## 使用QueryBuilder {#using-the-rest-interface-of-the-querybuilder}的REST接口
 
-CRX QueryBuilder REST界面通过Java API和REST API显示资产共享查询生成器的功能。 在执行以下步骤 [之前，了解如何使用](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)CRX QueryBuilder REST界面：
+CRX QueryBuilder REST界面通过Java API和REST API显示资产共享查询生成器的功能。 在执行以下步骤之前，了解如何使用[CRX QueryBuilder REST接口](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html):
 
 1. 浏览到URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根据“流程查询”报告存储节点结构和节点属性创建。
@@ -50,7 +50,7 @@ CRX QueryBuilder REST界面通过Java API和REST API显示资产共享查询生�
 
 ## 使用查询生成器API创建服务  {#creating-a-service-using-query-builder-api-nbsp}
 
-使用查询构建器API创建服务的先决条件 [是创建和部署CQ OSGI包](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) , [以及使用查询构建器API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)。
+使用查询构建器API创建服务的先决条件是[使用查询构建器API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)创建和部署CQ OSGI包](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html)和[。
 
 1. 创建具有相应注释的OSGi服务。 要访问QueryBuilder，请使用：
 
@@ -66,7 +66,7 @@ CRX QueryBuilder REST界面通过Java API和REST API显示资产共享查询生�
     predicateGroup.setAllRequired(true);
    ```
 
-1. 向新创建的谓词组添加谓词。 JcrBoolPropertyPredicateEvaluator、JcrPropertyPredicateEvaluator [、JcrPropertyPredice](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)、 [RangePredicateEvaluator、](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)[](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)JcrBoolPropertyPredicateEvaluatator、谓谓谓语求值、谓语和谓语。
+1. 向新创建的谓词组添加谓词。 一些有用的谓词结构是[JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html)、[JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html)、[RangePropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html)、[DateRangePredicatePredicateEvecateEvaluatoratoreEEEEValuatora7/>和[TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html)。](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)
 
    对于静态报表，硬编码谓词；对于动态报表，从请求中提取谓词。
 
@@ -137,13 +137,13 @@ CRX QueryBuilder REST界面通过Java API和REST API显示资产共享查询生�
                        out.write(row.toString().getBytes());
    ```
 
-1. 使用 `org.apache.felix maven-bundle-plugin` 为servlet创建OSGi包。
+1. 使用`org.apache.felix maven-bundle-plugin`为servlet创建OSGi捆绑。
 
 1. 在CRX服务器上部署捆绑包。
 
-### 服务示例 {#service-example}
+### 服务示例{#service-example}
 
-以下服务示例计算每月、季度和年 **末处于****RUNNING和COMPLETE** 状态的进程的实例。
+以下服务示例计算每月、季度和年末处于&#x200B;**RUNNING**&#x200B;和&#x200B;**COMPLETE**&#x200B;状态的进程的实例。
 
 ```java
 package custom.reporting.service;
@@ -341,7 +341,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-要在服 `pom.xml`务上构建的示例文件为：
+在服务上构建的示例`pom.xml`文件为：
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -425,10 +425,10 @@ public class PeriodicProcessVolume {
 
 ## 创建单独的UI  {#creating-a-separate-ui-nbsp}
 
-创建用于显示结果的单独UI的先决条件是 [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)[、创建CRX节点](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) ，以及提供适 [当的访问权限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
+创建用于显示结果的单独UI的先决条件是[Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html)、[创建CRX节点](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)并提供相应的[访问权限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
 
-1. 在节点上创建CRX节 `/apps` 点并授予适当的访问权限。 (PERM_PROCESS_报告_USER)
-1. 在节点上定义呈 `/content` 示器。
+1. 在`/apps`节点上创建CRX节点并授予相应的访问权限。 (PERM_PROCESS_报告_USER)
+1. 在`/content`节点上定义呈示器。
 1. 将JSP或HTML文件添加到在步骤1中创建的节点。 您还可以添加CSS文件。
 
    ![包含JSP和CSS文件的示例节点](assets/nodewith_jsp_css_new.png)
@@ -633,18 +633,18 @@ response.setCharacterEncoding("utf-8");
 
 ## 在现有流程报告UI中集成报表UI  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-创建用于显示结果的单独UI的先决条件是 [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)[、创建CRX节点](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) ，以及提供适 [当的访问权限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
+创建用于显示结果的单独UI的先决条件是[Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、[创建CRX节点](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)并提供相应的[访问权限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)。
 
 1. 创建单独的UI。
-1. 在每个可插 `nt:unstructured` 入报告的节 `/content/process-reporting-runtime/custom-reports` 点处创建一个子节点。
+1. 在`/content/process-reporting-runtime/custom-reports`节点为每个可插拔报告创建一个子`nt:unstructured`节点。
 
-   * **id**—— 指定报表的唯一标识号。
-   * **name**—— 指定报表的名称。 名称显示在UI中。
-   * **link**—— 指定到单独UI的呈现器的相对链接。 链接创建为步骤1。
-   * **description**—— 指定报表的单行说明。 您可以将描述字段留空。
-   * **图标**-指定要以图形方式表示报表的图像。 您可以将图标字段留空。
+   * **id** —— 指定报表的唯一标识号。
+   * **name** —— 指定报表的名称。名称显示在UI中。
+   * **link** —— 指定到单独UI的呈现器的相对链接。链接创建为步骤1。
+   * **description** —— 指定报表的单行说明。您可以将描述字段留空。
+   * **图标**-指定要以图形方式表示报表的图像。您可以将图标字段留空。
 
-   ![节点的属性 ](assets/node_properties_new.png)
+   ![节点的属性  ](assets/node_properties_new.png)
 
    节点的属性
 
@@ -658,8 +658,8 @@ response.setCharacterEncoding("utf-8");
 
    自定义报告的结果屏幕
 
-## 示例包 {#sample-package}
+## 示例包{#sample-package}
 
-将包导 `sample-report-pkg-1.zip` 入以将文章中讨论的自定义报告和UI集成到流程管理UI中。
+导入`sample-report-pkg-1.zip`包，将文章中讨论的自定义报告和UI集成到流程管理UI中。
 
 [获取文件](assets/sample-report-pkg-1.zip)
