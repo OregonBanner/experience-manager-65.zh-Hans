@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 translation-type: tm+mt
 source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+workflow-type: tm+mt
+source-wordcount: '1795'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
 
 AEM 让您能够使用&#x200B;**布局容器**&#x200B;组件为页面实现响应式布局。
 
-由此提供的段落系统让您能够将组件放置在响应式网格内。此网格可以根据设备/窗口大小和格式重新安排布局。The component is used in conjunction with the [**Layout **mode](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode), which allows you to create and edit your responsive layout dependent on device.
+由此提供的段落系统让您能够将组件放置在响应式网格内。此网格可以根据设备/窗口大小和格式重新安排布局。此组件可与&#x200B;[**布局**&#x200B;模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)配合使用，让您能够根据设备创建和编辑响应式布局。
 
 布局容器：
 
@@ -38,15 +41,16 @@ AEM 让您能够使用&#x200B;**布局容器**&#x200B;组件为页面实现响�
 
 AEM 使用一组机制为页面实现响应式布局：
 
-* [**布局容器组件&#x200B;**](#adding-a-layout-container-and-its-content-edit-mode)（Layout Container组件）
+* [**布局容器**](#adding-a-layout-container-and-its-content-edit-mode)&#x200B;组件
 
-   This component is available in the [component browser](/help/sites-authoring/author-environment-tools.md#components-browser) and provides a grid-paragraph system to allow you to add and position components within a responsive grid. 您也可以将此组件设置为页面上的默认段落系统。
+   此组件在[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)中可用，而且提供了一个网格段落系统，让您能够在响应式网格内添加和放置组件。您也可以将此组件设置为页面上的默认段落系统。
 
-* [**布局模式&#x200B;**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
+* [**布局模式**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
 
-   Once the layout container is positioned on your page you can use the **Layout** mode to position content within the responsive grid.
+   将布局容器放置到页面上后，就可以使用&#x200B;**布局**&#x200B;模式在响应式网格内放置内容。
 
-* [**模拟器&#x200B;**](#selecting-a-device-to-emulate)模拟器让您能够创建并编辑响应式网站，这些网站可以根据设备/窗口大小，通过以交互方式调整组件大小来重新安排布局。随后，用户可以使用模拟器查看内容的呈现方式。
+* [**模拟器**](#selecting-a-device-to-emulate)
+模拟器让您能够创建并编辑响应式网站，这些网站可以根据设备/窗口大小，通过以交互方式调整组件大小来重新安排布局。随后，用户可以使用模拟器查看内容的呈现方式。
 
 通过这些响应式网格机制，您可以：
 
@@ -56,15 +60,15 @@ AEM 使用一组机制为页面实现响应式布局：
 * 为特定设备布局隐藏组件。
 * 实现列控件。
 
-根据您的项目，布局容器可用作页面的默认段落系统，或用作可通过组件浏览器（或两者）添加到页面的可用组件。
+根据您的项目，可以将布局容器用作您页面的默认段落系统，或用作可通过组件浏览器添加到页面中的组件（或同时用作两者）。
 
 >[!NOTE]
 >
->Adobe provides [GitHub documentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) of the responsive layout as a reference that can be given to front-end developers allowing them to use the AEM grid outside of AEM, for example when creating static HTML mock-ups for a future AEM site.
+>Adobe 提供了响应式布局的 [GitHub 文档](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)，前端开发人员可以参考该文档，以便在 AEM 之外使用 AEM 网格，例如在为将来的 AEM 站点创建静态 HTML 模型时。
 
 >[!NOTE]
 >
->通过对模板进行配置，可以启用上述机制。See [Configuring Responsive Layout](/help/sites-administering/configuring-responsive-layout.md) for further information.
+>通过对模板进行配置，可以启用上述机制。有关详细信息，请参阅[配置响应式布局](/help/sites-administering/configuring-responsive-layout.md)。
 
 ## 布局定义、设备模拟和断点 {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -72,7 +76,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 AEM 允许您根据设备的宽度定义布局：
 
-* 模拟器让您能够在各种设备上模拟这些布局。In addition to the device type, the orientation, selected by the **Rotate device** option, can impact the breakpoint selected as the width changes.
+* 模拟器让您能够在各种设备上模拟这些布局。除设备类型以外，通过&#x200B;**旋转设备**&#x200B;选项选择的方向也可能会因宽度的改变而影响所选的断点。
 * 断点是区分各种布局定义的分界点。
 
    * 断点可有效地定义任何使用特定布局的设备的最大宽度（以像素为单位）。
@@ -109,24 +113,29 @@ AEM 允许您根据设备的宽度定义布局：
    模拟器工具栏会显示其他布局选项：
 
    * **旋转设备** - 允许您将设备从垂直（纵向）方向旋转到水平（横向）方向，反之亦然。
+
    ![](do-not-localize/screen_shot_2018-03-23at084612.png) ![](do-not-localize/screen_shot_2018-03-23at084637.png)
 
    * **选择设备** - 从列表中定义要模拟的特定设备（请参阅下一步以了解详细信息）。
+
    ![](do-not-localize/screen_shot_2018-03-23at084743.png)
 
 1. 要选择特定设备进行模拟，您可以使用下列任一方法：
 
    * 使用“选择设备”图标并从下拉选择器中进行选择。
    * 点按/单击模拟器工具栏中的设备指示器。
+
    ![screen_shot_2018-03-23at084818](assets/screen_shot_2018-03-23at084818.png)
 
 1. 选择特定设备后，您可以：
 
-   * See the active marker for the selected device, such as **iPad.**
-   * See the active marker for the appropriate [breakpoint](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) such as **Tablet.**
+   * 查看选定设备的活动标记，如 **iPad。**
+   * 查看相应[断点](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)的活动标记，如&#x200B;**平板电脑**。
+
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
    * 蓝色虚线表示选定设备（此处为 **iPhone 6**）的“折页”**。
+
    ![screen_shot_2018-03-23at084947](assets/screen_shot_2018-03-23at084947.png)
 
    * 折页可被视为内容的分页符（不要与[断点](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)相混淆）。显示此线可方便地指明用户在滚动之前可在设备上看到的内容部分。
@@ -135,7 +144,7 @@ AEM 允许您根据设备的宽度定义布局：
 
 
 
-## Adding a Layout Container and its Content (Edit mode) {#adding-a-layout-container-and-its-content-edit-mode}
+## 添加布局容器及其内容（编辑模式）{#adding-a-layout-container-and-its-content-edit-mode}
 
 **布局容器**&#x200B;是一个段落系统，该系统：
 
@@ -145,14 +154,14 @@ AEM 允许您根据设备的宽度定义布局：
 
 >[!NOTE]
 >
->如果&#x200B;**布局容器**&#x200B;尚不可用，则必须明确地[为段落系统/页面激活布局容器](/help/sites-administering/configuring-responsive-layout.md)（例如，使用[**设计&#x200B;**模式激活](/help/sites-authoring/default-components-designmode.md)）。
+>如果&#x200B;**布局容器**&#x200B;尚不可用，则必须明确地[为段落系统/页面激活布局容器](/help/sites-administering/configuring-responsive-layout.md)（例如，使用&#x200B;[**设计**&#x200B;模式激活](/help/sites-authoring/default-components-designmode.md)）。
 
-1. **布局容器**&#x200B;在[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)中是标准组件。从此处，您可以将该组件拖放到页面上的所需位置，随后您将看到&#x200B;**将组件拖动到此处**&#x200B;占位符。
+1. 布局 **容器在组件浏览器中** ，可作为标准 [组件使用](/help/sites-authoring/author-environment-tools.md#components-browser)。 从此处，您可以将其拖动到页面上的所需位置，随后您将看到将组件拖动到 **此处占位符** 。
 1. 接下来，您可以向布局容器中添加组件。这些组件将存放实际的内容：
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)
 
-## Selecting and Taking Action on a Layout Container (Edit mode) {#selecting-and-taking-action-on-a-layout-container-edit-mode}
+## 选择布局容器并对其执行操作（编辑模式）{#selecting-and-taking-action-on-a-layout-container-edit-mode}
 
 与其他组件一样，您可以先选择布局容器，然后再对其执行剪切、复制、删除等操作（在&#x200B;**编辑**&#x200B;模式下）：
 
@@ -164,7 +173,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    ![screen_shot_2018-03-23at085357](assets/screen_shot_2018-03-23at085357.png)
 
-   You need to select the **Parent** option.
+   您需要选择&#x200B;**父项**&#x200B;选项。
 
    ![](do-not-localize/screen_shot_2018-03-23at085417.png)
 
@@ -175,26 +184,27 @@ AEM 允许您根据设备的宽度定义布局：
    * 级别最低的嵌套布局容器将显示黑色轮廓。
    * 级别次于最低的嵌套布局容器将显示深灰色轮廓。
    * 后续的每个容器将以灰色阴影逐渐变浅的方式显示。
+
    ![screen_shot_2018-03-23at085636](assets/screen_shot_2018-03-23at085636.png)
 
-1. 此时将突出显示整个网格及其内容。The action toolbar will be shown, from where you can select an action such as **Delete.**
+1. 此时将突出显示整个网格及其内容。在显示的操作工具栏中，您可以选择一项操作，例如&#x200B;**删除**。
 
    ![screen_shot_2018-03-23at085724](assets/screen_shot_2018-03-23at085724.png)
 
-## Defining Layouts (Layout mode) {#defining-layouts-layout-mode}
+## 定义布局（布局模式）{#defining-layouts-layout-mode}
 
 >[!NOTE]
 >
 >您可以为每个[断点](#layout-definitions-device-emulation-and-breakpoints)定义单独的布局（由模拟的设备类型和方向决定）。
 
-To configure the layout of a responsive grid implemented with the Layout Container you need to use the **Layout** mode.
+要为通过布局容器实施的响应式网格配置布局，您需要使用&#x200B;**布局**&#x200B;模式。
 
 可以通过两种方式启动&#x200B;**布局**&#x200B;模式。
 
-* By using the [mode menu in the toolbar](/help/sites-authoring/author-environment-tools.md#page-modes) and choosing **Layout** mode
+* 使用[工具栏中的模式菜单](/help/sites-authoring/author-environment-tools.md#page-modes)并选择&#x200B;**布局**&#x200B;模式
 
-   * Select the **Layout** mode just as you would switch to **Edit** mode or **Targeting** mode.
-   * **布局模式** (Layout **mode)将保持不变，直到您通过模式选择器选择** 其他模式，您才会离开布局模式。
+   * 像切换到&#x200B;**编辑**&#x200B;模式或&#x200B;**定位**&#x200B;模式一样，选择&#x200B;**布局**&#x200B;模式。
+   * **布局**&#x200B;模式会一直保持下去，直到您通过模式选择器选择其他模式后，才会离开&#x200B;**布局**&#x200B;模式。
 
 * 在[编辑单个组件时。](/help/sites-authoring/editing-content.md#edit-component-layout)
 
@@ -215,7 +225,7 @@ To configure the layout of a responsive grid implemented with the Layout Contain
 
    * **父项**
 
-      允许您选择整个布局容器组件以对整体执行操作。
+      允许您选择整个布局容器组件，以对整体执行操作。
 
    * **浮动到新行**
 
@@ -223,33 +233,40 @@ To configure the layout of a responsive grid implemented with the Layout Contain
 
    * **隐藏组件**
 
-      组件将变得不可见（可以从布局容器的工具栏中恢复）。
+      组件将变得不可见(可以从布局容器的工具栏中恢复)。
    ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
-* In **Layout** mode you can tap/click on the **Drag components here** to select the entire component. 此时将显示此模式的工具栏。
+* 在&#x200B;**布局**&#x200B;模式下，您可以点按/单击&#x200B;**将组件拖动到此处**&#x200B;来选择整个组件。此时将显示此模式的工具栏。
 
    根据布局组件的状态及属于该布局的组件，工具栏将具有不同的选项。例如：
 
-   * **父项** -选择父组件。
+   * **父项** - 选择父组件。
+
    ![](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **显示隐藏的组件** -显示所有或单个组件。 数字表示当前隐藏的组件数。计数器显示隐藏的组件数。
+   * **显示隐藏的组件** -显示所有或单个组件。数字表示当前隐藏的组件数。计数器显示隐藏的组件数。
+
    ![](do-not-localize/screen_shot_2018-03-23at091007.png)
 
-   * **还原断点布局** -还原到默认布局。这意味着不会强制使用自定义布局。
+   * **还原断点布局** - 还原到默认的布局。这意味着不再强制使用自定义布局。
+
    ![](do-not-localize/screen_shot_2018-03-23at091013.png)
 
-   * **浮动到新行** -如果间距允许，将组件向上移动一个位置。
+   * **浮动到新行** - 在间距允许的情况下将组件向上移动一个位置。
+
    ![screen_shot_2018-03-23at090829](assets/screen_shot_2018-03-23at090829.png)
 
-   * **隐藏组件** -隐藏当前组件。
+   * **隐藏组件** - 隐藏当前的组件。
+
    ![](do-not-localize/screen_shot_2018-03-23at090834.png)
 
    >[!NOTE]
    >
    >在以上示例中，浮动和隐藏操作之所以可用，是因为此布局容器嵌套在一个父布局容器内。
 
-   * **取消隐藏组件** 选择父组件会显示包含&#x200B;**显示隐藏的组件**&#x200B;选项的操作工具栏。在此示例中，隐藏了两个组件。
+   * **取消隐**
+藏组件选择父组件可显示包含 
+**显示隐藏** 组件选项。在此示例中，隐藏了两个组件。
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    选择&#x200B;**显示隐藏的组件**&#x200B;选项时，当前隐藏的组件将以蓝色显示在它们的原始位置。
