@@ -12,7 +12,7 @@ ht-degree: 15%
 ---
 
 
-# 在AEM中预览3D资产{#previewing-3d-assets-aem}
+# 在AEM{#previewing-3d-assets-aem}中预览3D资产
 
 Adobe Experience Manager支持将3D资产的上传、投放和交互预览作为创作流程的一部分。
 
@@ -20,14 +20,14 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
-## AEM中支持的3D预览格式 {#supported-3d-previewing-assets}
+## AEM {#supported-3d-previewing-assets}中支持的3D预览格式
 
 交互式3D预览支持以下文件格式：
 
 | 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
 |---|---|---|---|
 | GLB | 二进制GL传输 | 模型/gltf二进制 |  |
-| GLTF | GL传输格式 | model/gltf+json | 请参 **阅下** 面的说明。 |
+| GLTF | GL传输格式 | model/gltf+json | 请参阅下面的&#x200B;**注**。 |
 | OBJ | WaveFront 3D对象文件 | application/x-tgif |  |
 | STL | 光固化成形 | application/vnd.ms-pki.stl |  |
 | DN | Adobe Dimension | model/x-adobe-dn | 仅支持摄取；预览不可用。 |
@@ -42,7 +42,7 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
     material_0_baseColor.
     jpegmaterial_0_normal.jpeg
 
-## 在AEM中预览3D资产时的性能注意事项{#performance-3d-previewing-assets}
+## 在AEM{#performance-3d-previewing-assets}中预览3D资产时的性能注意事项
 
 在资产详细信息视图页中打开3D资产所花费的时间取决于若干因素，如带宽、图像复杂性和服务器延迟。
 
@@ -50,8 +50,8 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
 
 **预览AEM中的3D资产**
 
-1. 确保您已将 3D 资产上传到 AEM。See [Supported formats for 3D preview](#supported-3d-previewing-assets) and [Uploading assets](/help/assets/manage-assets.md#uploading-assets).
-1. 从AEM的导航页 **[!UICONTROL 面]** ，点按 **[!UICONTROL 资产>文件。]**
+1. 确保您已将 3D 资产上传到 AEM。请参阅[3D预览](#supported-3d-previewing-assets)和[上传资产](/help/assets/manage-assets.md#uploading-assets)支持的格式。
+1. 从AEM，在&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，点按&#x200B;**[!UICONTROL 资产>文件。]**
 
    ![导航页](/help/assets/assets-dm/navigation-assets.png)
 
@@ -77,7 +77,7 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
    * **重新输入相机**-将相机重新输入到3D场景中对象上的某个点。
       * _鼠标_:多次单击。
       * _触摸屏_:多次点击。
-   * **重置**-在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。 重置还会使相机更近或更远地移动，以便以合理的查看大小完整显示资产。
+   * **重置**-在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。重置还会使相机更近或更远地移动，以便以合理的查看大小完整显示资产。
    * **全屏模式**-要进入全屏模式，请点按页面右下角的全屏图标。
 
-1. When you are finished, near the upper-right corner of the page, tap **[!UICONTROL Close.]**
+1. 完成后，在页面右上角附近，点按&#x200B;**[!UICONTROL 关闭。]**
