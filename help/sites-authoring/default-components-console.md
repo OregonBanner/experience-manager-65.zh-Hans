@@ -12,6 +12,9 @@ discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 95%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
 
 组件控制台允许您浏览针对实例定义的所有组件，并查看每个组件的关键信息。
 
-It can be accessed from **Tools ->** **General ->** **Components**. 在该控制台中，卡片视图和列表视图均可用。由于组件没有树结构，因此列视图不可用。
+该控制台可从&#x200B;**工具** -> **常规** -> **组件**&#x200B;中访问。在控制台中，卡片视图和列表视图均可用。 由于组件没有树结构，因此列视图不可用。
 
 ![screen-shot_2019-03-05at113145](assets/screen-shot_2019-03-05at113145.png)
 
 >[!NOTE]
 >
->组件控制台显示系统中的所有组件。The [Component Browser](/help/sites-authoring/author-environment-tools.md#components-browser) shows components that are available to authors and hides any component groups that begin with a period ( `.`).
+>组件控制台显示系统中的所有组件。[组件浏览器](/help/sites-authoring/author-environment-tools.md#components-browser)显示可用于创作的组件，并隐藏任何以句点 (`.`) 开头的组件组。
 
 ## 搜索 {#searching}
 
@@ -53,7 +56,7 @@ It can be accessed from **Tools ->** **General ->** **Components**. 在该控制
       * 单击“资源超级类型”将转到该组件。
    >[!NOTE]
    >
-   >Because `/apps` is not editable at runtime, the Components Console is read-only.
+   >由于 `/apps` 在运行时不可编辑，因此组件控制台为只读。
 
 * **策略**
 
