@@ -42,7 +42,7 @@ ht-degree: 99%
 
 请参阅有关如何在这些情况下启动差异比较的相关主题。
 
-### 差异表示形式 {#presentation-of-differences}
+### 差异表示形式  {#presentation-of-differences}
 
 无论比较何种内容，差异的表示形式都保持相同。
 
@@ -75,7 +75,7 @@ ht-degree: 99%
 >
 >在比较语言副本时，会取消激活突出显示功能，因为在翻译中，所有内容都会发生更改，突出显示没有任何用处。
 
-### 全屏和退出 {#fullscreen-and-exiting}
+### 全屏和退出  {#fullscreen-and-exiting}
 
 为了集中查看特定内容，您可以单击并排差异比较任何一侧的全屏图标，以将其放大到整个浏览器窗口。
 
