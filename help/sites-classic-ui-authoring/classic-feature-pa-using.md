@@ -12,6 +12,9 @@ discoiquuid: 28529cae-6fbd-4879-a5b8-3ec8e1bcd586
 docset: aem65
 translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 87%
 
 ---
 
@@ -30,4 +33,4 @@ source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 
 >[!NOTE]
 >
->直接在控制台中显示站点分析数据仅在触屏优化 UI 中可用。See [Seeing Page Analytics Data](/help/sites-authoring/page-analytics-using.md) in the standard authoring documentation for details.
+>直接在控制台中显示站点分析数据仅在触屏优化 UI 中可用。有关详细信息，请参阅标准创作文档中的[查看页面分析数据](/help/sites-authoring/page-analytics-using.md)。
