@@ -12,52 +12,52 @@ docset: aem65
 translation-type: tm+mt
 source-git-commit: ade3747ba608164a792a62097b82c55626245891
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
 
 
-# 配置自适应表单缓存 {#configure-adaptive-forms-cache}
+# 配置自适应表单缓存{#configure-adaptive-forms-cache}
 
 缓存是一种缩短数据访问时间、减少延迟和提高输入／输出(I/O)速度的机制。 自适应表单缓存仅存储自适应表单的HTML内容和JSON结构，而不保存任何预填数据。 它有助于缩短在客户端上渲染自适应表单所需的时间。 它专门为自适应表单设计。
 
-## 在创作和发布实例中配置自适应表单缓存 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
+## 在作者和发布实例中配置自适应表单缓存{#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
-1. 请转至AEM Web控制台配置管理器(位 `https://[server]:[port]/system/console/configMgr`于)。
-1. 单击 **[!UICONTROL 自适应表单和交互式通信Web渠道配置]** ，以编辑其配置值。
-1. 在“编 [!UICONTROL 辑配置值] ”对话框中，在“Number of Adaptive Bidow [!DNL Forms] ”(自适应Forms)字段中指定AEM服务器实例可以缓存的 **[!UICONTROL 表单或文档的最]** 大数量。 默认值为 100。
+1. 转到位于`https://[server]:[port]/system/console/configMgr`的AEM Web控制台配置管理器。
+1. 单击&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道配置]**&#x200B;以编辑其配置值。
+1. 在[!UICONTROL 编辑配置值]对话框中，在&#x200B;**[!UICONTROL 自适应Forms]**&#x200B;字段中指定AEM [!DNL Forms]服务器实例可缓存的表单或文档的最大数量。 默认值为 100。
 
    >[!NOTE]
    >
-   >要禁用缓存，请将“Number of Adaptive Genative”(自适应Forms)字段中的值设 **置为0**。 在禁用或更改缓存配置时，将重置缓存并从缓存中删除所有表单和文档。
+   >要禁用缓存，请将“Number of Adaptive Began”(自适应Forms)字段中的值设置为&#x200B;**0**。 在禁用或更改缓存配置时，将重置缓存并从缓存中删除所有表单和文档。
 
    ![自适应表单HTML缓存的配置对话框](assets/cache-configuration-edit.png)
 
-1. Click **[!UICONTROL Save]** to save the configuration.
+1. 单击&#x200B;**[!UICONTROL 保存]**&#x200B;以保存配置。
 
 您的环境配置为使用缓存自适应表单和相关资产。
 
 
-## （可选）在调度程序上配置自适应表单缓存 {#configure-the-cache}
+## （可选）在调度程序{#configure-the-cache}处配置自适应表单缓存
 
 您还可以在调度程序上配置自适应表单缓存以提高性能。
 
-### Pre-requisites {#pre-requisites}
+### 先决条件{#pre-requisites}
 
-* 在客户端 [启用合并或预填数据选项](prepopulate-adaptive-form-fields.md#prefill-at-client) 。 它有助于合并预填表单的每个实例的唯一数据。
-* [为每个发布实例启用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。 它有助于为自适应表单获得更好的缓存性能。 刷新代理的默认URL为 `http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
+* 启用[在客户端](prepopulate-adaptive-form-fields.md#prefill-at-client)合并或预填数据选项。 它有助于合并预填表单的每个实例的唯一数据。
+* [为每个发布实例启用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。它有助于为自适应表单获得更好的缓存性能。 刷新代理的默认URL为`http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
 
-### 在调度程序上缓存自适应表单的注意事项 {#considerations}
+### 在调度程序{#considerations}上缓存自适应表单的注意事项
 
-* 使用自适应表单缓存时，请使 [!DNL Dispatcher] 用AEM缓存自适应表单的客户端库（CSS和JavaScript）。
+* 使用自适应表单缓存时，请使用AEM [!DNL Dispatcher]缓存自适应表单的客户端库（CSS和JavaScript）。
 * 在开发自定义组件时，在用于开发的服务器上保持禁用自适应表单缓存。
-* 未缓存扩展名的URL。 例如，具有模式模式的URL被缓存`/content/forms/[folder-structure]/[form-name].html` ，而缓存会忽略具有模式的 `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`URL。 因此，将URL与扩展一起使用可以从缓存中受益。
+* 未缓存扩展名的URL。 例如，对模式为`/content/forms/[folder-structure]/[form-name].html`的URL进行缓存，缓存会忽略模式为`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL。 因此，将URL与扩展一起使用可以从缓存中受益。
 * 本地化自适应表单的注意事项：
-   * 使用URL格 `http://host:port/content/forms/af/<afName>.<locale>.html` 式请求自适应表单的本地化版本，而不是 `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
-   * [禁用对格式为](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) URL使用浏览器区域 `http://host:port/content/forms/af/<adaptivefName>.html`设置。
-   * 当您使用URL格 `http://host:port/content/forms/af/<adaptivefName>.html`式并在 **[!UICONTROL 配置管理器中使用]** “浏览器区域设置”时，将提供自适应表单的非本地化版本。 非本地化语言是开发自适应表单时使用的语言。 未考虑为浏览器配置的区域设置（浏览器区域设置），并提供自适应表单的非本地化版本。
-   * 当您使用URL格 `http://host:port/content/forms/af/<adaptivefName>.html`式并在配 **[!UICONTROL 置管理器中启用]** “使用浏览器区域设置”时，将提供自适应表单的本地化版本（如果可用）。 本地化的自适应表单的语言基于为浏览器配置的区域设置（浏览器区域设置）。 它只能导 [致自适应表单的第一个实例缓存]。 要防止实例中出现问题，请参阅疑难 [解答](#only-first-insatnce-of-adptive-forms-is-cached)。
+   * 使用URL格式`http://host:port/content/forms/af/<afName>.<locale>.html`请求自适应表单的本地化版本，而不是`http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
+   * [禁用对格](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) 式URL使用浏览器 `http://host:port/content/forms/af/<adaptivefName>.html`锁定。
+   * 当您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，并且禁用配置管理器中的&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，将提供自适应表单的非本地化版本。 非本地化语言是开发自适应表单时使用的语言。 未考虑为浏览器配置的区域设置（浏览器区域设置），并提供自适应表单的非本地化版本。
+   * 当您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，并在配置管理器中启用&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，将提供自适应表单的本地化版本（如果有）。 本地化的自适应表单的语言基于为浏览器配置的区域设置（浏览器区域设置）。 它可能只导致[缓存自适应表单的第一个实例]。 要防止实例上出现问题，请参阅[疑难解答](#only-first-insatnce-of-adptive-forms-is-cached)。
 
 ### 在调度程序上启用缓存
 
@@ -94,8 +94,8 @@ ht-degree: 0%
 
    * 自适应表单将保留在缓存中，直到未发布表单的更新版本。
 
-   * 当自适应表单中引用的资源的较新版本发布时，受影响的自适应表单会自动失效。 引用资源的自动失效有一些例外。 有关异常的补救方法，请参 [阅疑难解答](#troubleshooting) 部分。
-1. [添加以下规则dispatcher.any或自定义规则文件](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。 它不包括不支持缓存的URL。 例如，交互通信。
+   * 当自适应表单中引用的资源的较新版本发布时，受影响的自适应表单会自动失效。 引用资源的自动失效有一些例外。 有关异常的解决方法，请参阅[疑难解答](#troubleshooting)部分。
+1. [添加以下规则dispatcher.any或自定义规则文件](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。它不包括不支持缓存的URL。 例如，交互通信。
 
    ```JSON
       /0000 {
@@ -129,27 +129,27 @@ ht-degree: 0%
       }
    ```
 
-您的AEM环境配置为缓存自适应表单。 它缓存所有类型的自适应表单。 如果在传送缓存的页面之前需要检查页面的用户访问权限，请参阅缓 [存安全内容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+您的AEM环境配置为缓存自适应表单。 它缓存所有类型的自适应表单。 如果在传送缓存的页面之前需要检查页面的用户访问权限，请参阅[缓存安全内容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
 
 ## 疑难解答 {#troubleshooting}
 
-### 某些包含图像或视频的自适应表单不会自动从调度程序缓存中失效 {#videos-or-images-not-auto-invalidated}
+### 某些包含图像或视频的自适应表单不会从调度程序缓存{#videos-or-images-not-auto-invalidated}自动失效
 
 #### 带有 OS 剪贴板 {#issue1}
 
 当您通过资产浏览器选择图像或视频并将它们添加到自适应表单，并且这些图像和视频在资产编辑器中进行编辑时，包含这些图像的自适应表单不会自动从调度程序缓存中失效。
 
-#### Solution {#Solution1}
+#### 解决方案{#Solution1}
 
 发布图像和视频后，显式取消发布和发布引用这些资产的自适应表单。
 
-### 某些包含内容片段或体验片段的自适应表单不会从调度程序缓存自动失效 {#content-or-experience-fragment-not-auto-invalidated}
+### 某些包含内容片段或体验片段的自适应表单不会从调度程序缓存{#content-or-experience-fragment-not-auto-invalidated}自动失效
 
 #### 带有 OS 剪贴板 {#issue2}
 
 当您向自适应表单中添加内容片段或体验片段并且这些资产被独立编辑和发布时，自适应表单包含这些资产不会自动从调度程序缓存中失效。
 
-#### Solution {#Solution2}
+#### 解决方案{#Solution2}
 
 发布更新的内容片段或体验片段后，显式取消发布并发布使用这些资产的自适应表单。
 
@@ -157,9 +157,9 @@ ht-degree: 0%
 
 #### 带有 OS 剪贴板 {#issue3}
 
-当自适应表单URL没有任何本地化信息，并且启 **[!UICONTROL 用配置管理器中的“使用浏览器区域设置]** ”时，将提供自适应表单的本地化版本，并且只缓存自适应表单的第一个实例，并将其发送给每个后续用户。
+当自适应表单URL没有任何本地化信息，并且启用配置管理器中的&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，将提供自适应表单的本地化版本，并且只缓存自适应表单的第一实例并将其发送给每个后续用户。
 
-#### Solution {#Solution3}
+#### 解决方案{#Solution3}
 
 请执行以下步骤以解决问题：
 
