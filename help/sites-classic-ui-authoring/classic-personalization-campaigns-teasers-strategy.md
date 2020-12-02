@@ -12,6 +12,9 @@ discoiquuid: 7f378b94-5233-4358-8d93-a7b3386df00b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+workflow-type: tm+mt
+source-wordcount: '1252'
+ht-degree: 89%
 
 ---
 
@@ -24,27 +27,27 @@ source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
 >
 >AEM 6.2 中已弃用 Teaser 组件。请改为使用 [Target 组件](/help/sites-authoring/content-targeting-touch.md)。
 
-* **品牌页面** ，存储在网站的“营销活动”部分。 品牌包含多个单独的营销活动。
-* **营销活动页面** ，存储在网站的“营销活动”部分中。 每个营销活动都有单独的页面，该页面包含 Teaser 定义。容器或概述页面也包含有关单独的 Teaser 页面的特定信息和统计数据。
+* **品** 牌页面存储在网站的活动部分。品牌包含多个单独的营销活动。
+* **活动** 页面存储在网站的活动部分中。每个营销活动都有单独的页面，该页面包含 Teaser 定义。容器或概述页面也包含有关单独的 Teaser 页面的特定信息和统计数据。
 
 AEM 中的 Teaser 由若干部分组成：
 
-* **Teaser页面存储在相应的系列活动页面下** ，其中包含每个特定系列活动可用的Teaser段落定义。 在显示 Teaser 段落时，需使用这些定义；包括内容变体，以及要用于选择变体和提升因子的区段。
-* **Teaser 组件**&#x200B;开箱即用，使用它可以在内容页面中创建特定 Teaser 段落的实例。您可以从 Sidekick 拖动 Teaser 组件，然后指定 Teaser 定义，以便创建自己的 Teaser 段落。**** 注意：Teaser组件已在AEM 6.2中弃用。请改用 [Target组件](/help/sites-authoring/content-targeting-touch.md) 。
+* **Teaser** 页面存储在相应的活动页面下，其中包含每个特定活动可用的Teaser段落定义。在显示 Teaser 段落时，需使用这些定义；包括内容变体，以及要用于选择变体和提升因子的区段。
+* **Teaser 组件**&#x200B;开箱即用，使用它可以在内容页面中创建特定 Teaser 段落的实例。您可以从 Sidekick 拖动 Teaser 组件，然后指定 Teaser 定义，以便创建自己的 Teaser 段落。**注意：** AEM 6.2中已弃用Teaser组件。请使用 [目标](/help/sites-authoring/content-targeting-touch.md) 组件。
 * **Teaser 段落**&#x200B;是内容页面中的实际 Teaser 实例。这些段落用于吸引特定访客区段访问其关注的内容。
 * 包含针对特定访客区段的营销活动内容的页面。通常，Teaser 段落将引导访客访问此类页面。
 
-## 战略 {#strategies}
+## 战略  {#strategies}
 
-When adding a teaser paragraph to a page you need to define the **Strategy**.
+在将Teaser段落添加到页面时，您需要定义&#x200B;**策略**。
 
 这适用于以下情况：由于几个 Teaser 的分配区段都成功解析，这几个 Teaser 都可供选择。**战略**&#x200B;随后指定用于选择显示的 Teaser 的额外标准：
 
 * **Clickstream 得分**，基于访客的 ClientContext 中包含的标记和相关标记点击量（显示包含各个标记的页面上的访客点击频率）。将比较 Teaser 页面上定义的标记的点击率。
-* **随机**，用于“随机”选择；使用为页面生成的随机因子，这可以通过Client Context [查看](/help/sites-administering/client-context.md)。
-* **已解析的区段列表中的第一个** 。 该顺序即为营销活动容器页面中 Teaser 的顺序。
+* **随机**，用于“随机”选择；使用为页面生成的随机因子，这可以在Client Context中 [看到](/help/sites-administering/client-context.md)。
+* **** 简化已解析段的列表。该顺序即为营销活动容器页面中 Teaser 的顺序。
 
-The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-factor) of the segment also has an impact on the selection. 该因子是添加到区段定义中的加权因子，用以提升/降低被选中的相对可能性。
+段的[提升因子](/help/sites-administering/campaign-segmentation.md#boost-factor)也会影响选择。 该因子是添加到区段定义中的加权因子，用以提升/降低被选中的相对可能性。
 
 各种选择条件的作用和相互关系可通过举例（这种方法还可用于确保所需受众看到 Teaser）得到最佳阐释。
 
@@ -71,7 +74,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
   </tr>
   <tr>
    <td>C1</td>
-   <td>T1</td>
+   <td>T3</td>
    <td>S1、S2</td>
    <td>企业、营销</td>
   </tr>
@@ -82,7 +85,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td><br /> </td>
   </tr>
   <tr>
-   <td>C1 </td>
+   <td>C3 </td>
    <td>T3</td>
    <td>S3、S4</td>
    <td><br /> </td>
@@ -100,7 +103,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td>营销</td>
   </tr>
   <tr>
-   <td>C1 </td>
+   <td>C3 </td>
    <td>T6</td>
    <td>S6</td>
    <td>企业<br /> </td>
@@ -110,7 +113,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
 
 那么，如果我们对访客应用此类内容，其中：
 
-* **S1**、 **S2** 和 **S6成功解析**
+* **S1**、 **S** 2 **和** S6成功解析
 
 * **营销**&#x200B;标记具有 3 次点击量
 * **企业**&#x200B;标记具有 6 次点击量
@@ -136,7 +139,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
   </tr>
   <tr>
    <td>C1</td>
-   <td>T1</td>
+   <td>T3</td>
    <td>S1、S2</td>
    <td>企业、营销</td>
    <td>是</td>
@@ -171,7 +174,7 @@ The [Boost Factor](/help/sites-administering/campaign-segmentation.md#boost-fact
    <td><br /> </td>
   </tr>
   <tr>
-   <td>C1 </td>
+   <td>C3 </td>
    <td>T5</td>
    <td>S1、S2、S6</td>
    <td>营销</td>
@@ -245,7 +248,7 @@ Teaser 页面/段落用于将特定访客区段定向到他们感兴趣的内容
 
    * **营销活动路径**&#x200B;保存单个 Teaser 页面的市场活动页面的路径；段准确确定显示哪个 Teaser。
 
-   * **[战略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)**用于在多个区段成功解析时进行选择的方法。
+   * **[战略](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#strategies)** 用于在多个区段成功解析时进行选择的方法。
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。根据您在 Teaser 上设置的区段和您当前登录的用户身份的个人资料，将会显示合适的内容：
