@@ -1,8 +1,8 @@
 ---
 title: 自定义欢迎控制台（经典UI）
 seo-title: 自定义欢迎控制台（经典UI）
-description: 欢迎控制台提供指向AEM中各控制台和功能的链接列表
-seo-description: 欢迎控制台提供指向AEM中各控制台和功能的链接列表
+description: 欢迎控制台提供指向AEM中各控制台和功能的列表链接
+seo-description: 欢迎控制台提供指向AEM中各控制台和功能的列表链接
 uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 9%
 
 ---
 
@@ -21,32 +24,32 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 >
 >本页面介绍经典 UI。
 >
->有关 [标准触屏优化UI的详细信息](/help/sites-developing/customizing-consoles-touch.md) ，请参阅自定义控制台。
+>有关标准触屏优化UI的详细信息，请参阅[自定义控制台](/help/sites-developing/customizing-consoles-touch.md)。
 
-欢迎控制台提供指向AEM中各种控制台和功能的链接列表。
+欢迎控制台提供指向AEM中各控制台和功能的列表链接。
 
 ![cq_welcomscreen](assets/cq_welcomescreen.png)
 
-可以配置可见的链接。 可为特定用户和／或用户组定义。 要执行的操作取决于目标类型（这与所在控制台的部分相关）:
+可以配置可见的链接。 可为特定用户和／或用户组定义。 要执行的操作取决于目标类型（它与控制台所在部分相关）:
 
-* [主控制台](#links-in-main-console-left-pane) -主控制台中的链接（左窗格）
-* [资源、文档和参考、功能](#links-in-sidebar-right-pane) -提要栏（右侧窗格）中的链接
+* [主控制台](#links-in-main-console-left-pane) -主控制台（左窗格）中的链接
+* [资源、文档和参考](#links-in-sidebar-right-pane) 、功能——提要栏（右窗格）中的链接
 
-## 主控制台中的链接（左窗格） {#links-in-main-console-left-pane}
+## 主控制台中的链接（左窗格）{#links-in-main-console-left-pane}
 
-这将列出AEM的主要控制台。
+这列表了AEM的主要控制台。
 
-![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
+![cq_welcomencreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 
-### 配置主控制台链接是否可见 {#configuring-whether-main-console-links-are-visible}
+### 配置主控制台链接是否可见{#configuring-whether-main-console-links-are-visible}
 
-节点级别权限决定链接是否可见。 相关节点包括：
+节点级别权限决定链接是否可见。 所讨论的节点有：
 
 * **网站:** `/libs/wcm/core/content/siteadmin`
 
 * **数字资产:** `/libs/wcm/core/content/damadmin`
 
-* **** 社区： `/libs/collab/core/content/admin`
+* **社区：** `/libs/collab/core/content/admin`
 
 * **营销活动:** `/libs/mcm/content/admin`
 
@@ -60,17 +63,17 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 例如：
 
-* 要限制对工具的访 **问**，请从
+* 要限制对&#x200B;**工具**&#x200B;的访问，请从
 
    `/libs/wcm/core/content/misc`
 
-有关如 [何设置所需权限的详细信息](/help/sites-administering/security.md) ，请参阅安全性部分。
+有关如何设置所需权限的详细信息，请参阅[安全部分](/help/sites-administering/security.md)。
 
-### 提要栏中的链接（右侧窗格） {#links-in-sidebar-right-pane}
+### 提要栏（右侧窗格）{#links-in-sidebar-right-pane}中的链接
 
-![cq_welcomencreensidebar](assets/cq_welcomescreensidebar.png)
+![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
-这些链接基于对以下路径下 *的节点* ，以及对节点的读取访问：
+这些链接基于对以下路径下节点的&#x200B;*和*&#x200B;读取访问的存在：
 
 `/libs/cq/core/content/welcome`
 
@@ -157,15 +160,15 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
  </tbody>
 </table>
 
-#### 配置侧栏链接是否可见 {#configuring-whether-sidebar-links-are-visible}
+#### 配置侧栏链接是否可见{#configuring-whether-sidebar-links-are-visible}
 
-通过删除对表示链接的节点的读取访问权限，可以从特定用户或用户组隐藏链接。
+通过删除对代表链接的节点的读取访问权，可以隐藏特定用户或用户组的链接。
 
 * 资源——删除对以下内容的访问权限：
 
    `/libs/cq/core/content/welcome/resources/<link-target>`
 
-* 文档——删除对以下内容的访问权限：
+* 文档——删除对以下内容的访问：
 
    `/libs/cq/core/content/welcome/docs/<link-target>`
 
@@ -175,38 +178,39 @@ source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 
 例如：
 
-* 要删除指向“报告”的链 **接**，请从
+* 要删除指向&#x200B;**报告**&#x200B;的链接，请删除
 
    `/libs/cq/core/content/welcome/resources/reports`
 
-* 要删除指向“包”的链 **接**，请从
+* 要删除到&#x200B;**软件包**&#x200B;的链接，请删除
 
    `/libs/cq/core/content/welcome/features/packages`
 
-有关如 [何设置所需权限的详细信息](/help/sites-administering/security.md) ，请参阅安全性部分。
+有关如何设置所需权限的详细信息，请参阅[安全部分](/help/sites-administering/security.md)。
 
-### 链接选择机制 {#link-selection-mechanism}
+### 链路选择机制{#link-selection-mechanism}
 
-使 `/libs/cq/core/components/welcome/welcome.jsp` 用中由 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)组成，它对具有以下属性的节点执行查询：
+在`/libs/cq/core/components/welcome/welcome.jsp`中，使用由[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)组成，它对具有以下属性的节点执行查询:
 
-* `jcr:mixinTypes` 值： `cq:Console`
+* `jcr:mixinTypes` 和值：  `cq:Console`
 
 >[!NOTE]
 >
->执行以下查询以查看现有列表：
+>执行以下查询以查看现有列表:
 >
 >* `select * from cq:Console`
+
 >
 
 
 
-当用户或用户组对包含混合的节点没有读取权限时 `cq:Console`，搜索将不检索该节点，因此该节点不会列在 `ConsoleUtil` 控制台中。
+当用户或用户组对混合`cq:Console`的节点没有读取权限时，该节点不会由`ConsoleUtil`搜索检索，因此它不会列在控制台中。
 
-### 添加自定义项 {#adding-a-custom-item}
+### 添加自定义项{#adding-a-custom-item}
 
-链 [接选择机制](#link-selection-mechanism) ，可用于将您自己的自定义项目添加到链接列表。
+[链接选择机制](#link-selection-mechanism)可用于向链接列表添加您自己的自定义项。
 
-通过将混音添加到构件或资源，将自定 `cq:Console` 义项目添加到列表中。 这是通过定义属性来实现的：
+通过将`cq:Console`混音添加到您的构件或资源，将您的自定义项目添加到列表。 这通过定义属性来完成：
 
-* `jcr:mixinTypes` 值： `cq:Console`
+* `jcr:mixinTypes` 和值：  `cq:Console`
 
