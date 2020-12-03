@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 730a690bcbf5935ca00ed69c27ce108cb2664c22
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '398'
 ht-degree: 3%
 
 ---
@@ -53,13 +53,13 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 1. 对存储库&#x200B;**(`org.apache.sling.jcr.webdav`)的** Apache Sling Simple WebDAV Access捆绑包将仅在&#x200B;**author**&#x200B;实例上可用。
 
 1. 新创建的用户需要在首次登录时更改口令。 这不适用于管理员用户。
-1. **为Apache** Java脚本处理程序 **生成禁用的调试信息**。
+1. **为Apache** Sling Java脚本处理程序 **生成禁用的调试信息**。
 
 1. **映射** 内容 **和生成** 调试信息已对Apache Sling JSP脚 **本处理程序禁用**。
 
 1. **Day CQ WCM过滤器**&#x200B;在&#x200B;**author**&#x200B;上设置为`edit`，在&#x200B;**publish**&#x200B;实例上设置为`disabled`。
 
-1. **AdobeGranite HTML库管** 理器配置了以下设置：
+1. **AdobeGranite HTML库管理器**&#x200B;配置了以下设置：
 
    1. **小型：** `enabled`
    1. **调试：** `disabled`
