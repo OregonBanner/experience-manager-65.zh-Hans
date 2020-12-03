@@ -3,9 +3,9 @@ title: 资产使用和共享报告
 description: ' [!DNL Adobe Experience Manager Assets] 中有关您的资产的报告，有助于您了解数字资产的使用情况、活动和共享。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 6016cefa9456d8f142347ff197b61b1614d55ab9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1131'
 ht-degree: 8%
 
 ---
@@ -152,3 +152,11 @@ ht-degree: 8%
 1. 打开&#x200B;**[!UICONTROL DAM报告清除服务]**&#x200B;配置。
 1. 在`scheduler.expression.name`字段中指定清除服务的频率（时间间隔）。 您还可以配置报告的年龄和数量阈值。
 1. 保存更改。
+
+## 疑难解答信息、提示和限制{#best-practices-and-limitations}
+
+* 如果报告中的某些报表或数字不可用或未达到预期，请确保[!UICONTROL Day CQ DAM事件记录器]服务已启用。
+
+* 删除不再需要的报告。 使用DAM报表清除服务中的配置选项配置要清除报表的标准。
+
+* 如果未生成磁盘使用情况报告，并且您正在使用[!DNL Dynamic Media]，请确保所有资产都正确继续。 要解析资产，请重新处理资产，然后再次生成报表。
