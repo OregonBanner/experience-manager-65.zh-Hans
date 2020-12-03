@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 Service Pack 7的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
+source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
 workflow-type: tm+mt
-source-wordcount: '4201'
+source-wordcount: '4243'
 ht-degree: 5%
 
 ---
@@ -309,6 +309,10 @@ ht-degree: 5%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] 在计划的Service Pack发布日期后一周内 [!DNL Experience Manager] 发布加载项包。
+
+>[!NOTE]
+>
+>[!DNL Experience Manager] Service Pack不包含修复 [!DNL Forms]。它们使用单独的[!DNL Forms]加载项包交付。 此外，还发布了一个累积安装程序，其中包含对JEE上的[!DNL Experience Manager Forms]的修复。 有关详细信息，请参阅[安装AEM Forms加载项](#install-aem-forms-add-on-package)和[在JEE](#install-aem-forms-jee-installer)上安装AEM Forms。
 
 **自适应表单**
 
