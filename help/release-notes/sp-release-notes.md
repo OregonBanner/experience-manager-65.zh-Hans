@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 Service Pack 7的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
+source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
 workflow-type: tm+mt
-source-wordcount: '3789'
+source-wordcount: '4201'
 ht-degree: 5%
 
 ---
@@ -38,6 +38,16 @@ ht-degree: 5%
 * 用户可以在卡片和列视图中对数字资产进行排序。
 
 * [!DNL Assets] 并提供 [!DNL Dynamic Media] 多种辅助功能增强。这些增强功能与键盘导航、屏幕阅读器的使用以及使用户能够使用类似的辅助技术(AT)相关。 请参阅[[!DNL Assets] 增强](#assets-6570)和[[!DNL Dynamic Media] 增强](#dynamic-media-6570)。
+
+* 表单数据模型HTTP客户端配置以优化性能。
+
+* 在布局模式下，每个组件都可以使用重置选项
+
+* [!DNL Experience Manager] 6.5 Service Pack 7Forms提高了以下产品的性能：
+
+   * 在提交自适应表单时验证服务器上的字段值。
+
+   * 使用[!DNL Automated Forms Conversion service]将PDF表单转换为自适应表单。
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.22.5。
 
@@ -299,6 +309,48 @@ ht-degree: 5%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] 在计划的Service Pack发布日期后一周内 [!DNL Experience Manager] 发布加载项包。
+
+**自适应表单**
+
+* 应用[!DNL Experience Manager] Service Pack 6(NPR-35126)后，无法使用经典UI编辑自适应表单。
+
+* 将PDF转换为自适应表单时，无法在选项卡式布局上使用表单数据模型为嵌套面板设置值。 此外，使用代码编辑器使用静态数组动态地设置单选按钮组值时，也存在问题(NPR-35062)。
+
+* 在自适应表单的文本字段组件中输入日文字符时，可指定的字符数超过35个字符的最大限制(NPR-35039)。
+
+* 自适应表单在提交表单后显示的&#x200B;**[!UICONTROL 感谢]**&#x200B;页面上显示不需要的参数，如`owner`和`status`(NPR-34989)。
+
+* [!UICONTROL Attachment]组件的[!UICONTROL 文件选择]对话框显示不支持的文件类型以及由于选择而导致自适应表单提交时出错(NPR-34970)。
+
+* 在[!DNL Experience Manager Sites]页面中插入一个自适应表单时，光标焦点会直接移到表单而不是表单之前的文本(NPR-34947)。
+
+* [!UICONTROL 使用] Data选项预览使用6.2数 [!DNL Experience Manager] 据XML文件预填自适应表单不能正常工作(NPR-35087)。
+
+* 更新自适应表单的数据字典时，该表单不会被翻译，因为自适应表单返回缓存值(NPR-34845)。
+
+* 由于缓存失效，片段以自适应形式加载需要更长的时间(NPR-34567)。
+
+* 标签导航对于自适应表单中的屏幕阅读器不能正常工作(NPR-34544)。
+
+**通信管理**
+
+* 无法将包含浮点类型的数字数据的XML标记值保存为草稿(NPR-35050)。
+
+* 从ES3迁移资产时，资产包括两个不可编辑的默认条件(NPR-34972)。
+
+* 编辑字母中的数据字典时，[!UICONTROL Lent Content]部分显示旋转的矩形，而不是有用信息(NPR-34853)。
+
+**交互式通信**
+
+* 安装[!DNL Forms]加载项包后可用的交互通信的转出配置名称，将重复标准转出配置名称(NPR-34976)。
+
+**文档安全**
+
+* 保存新的文档安全策略时，Experience ManagerForms会显示`Relative validity period is required`错误消息(NPR-34679)。
+
+* 保存新的文档安全策略时，Experience ManagerForms会显示`Invalid filed value.Numeric value is required`错误消息(NPR-34678)。
+
+* 文档安全无法保护PDF 2.0文档(CQ-4305851)。
 
 有关安全更新的信息，请参阅[Experience Manager安全公告页](https://helpx.adobe.com/security/products/experience-manager.html)。
 
