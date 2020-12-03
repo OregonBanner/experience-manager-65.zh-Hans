@@ -11,10 +11,10 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb9a4792f4d64f98805919f00bb62193a6a7dafc
+source-git-commit: c51ba167d9b3d37de649c59526e74d9728c677c6
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 99%
+source-wordcount: '579'
+ht-degree: 97%
 
 ---
 
@@ -61,10 +61,6 @@ ht-degree: 99%
 
 * 浅绿色 - 添加了组件
 * 粉红色 - 删除了组件
-* 蓝色 - 更改了组件
-* 蓝色 - 移动了组件
-
-请注意，发生更改和发生移动的颜色是相同的。
 
 **HTML 更改**
 
@@ -96,9 +92,7 @@ ht-degree: 99%
 在某些情况下，页面差异功能可能检测不到预期的差异。
 
 * 在比较版本和启动项时，差异不会考虑动态组件，如痕迹导航、菜单、产品列表或徽标（依赖站点结构呈现其内容的组件）。
-* 对于版本，差异不会重新创建访问控制策略和 Live Copy 关系。
-* 如果对图像进行了任何更改（如修改 alt、title 或 src 属性），则所做的更改将以蓝色突出显示。但是在某些情况下，图像的 src 属性采用 Base64 表示形式，即使两个图像看起来相同，它们也会因为 src 属性发生更改而被标记为不同。
-* 差异无法检测图像旋转。
+* 对于版本，差异不会重新创建访问控制策略和Live Copy关系。
 * 如果页面发生移动，将无法再使用移动前制作的任何版本执行差异。
 
    * 如果您遇到差异问题，请检查页面的[时间轴](/help/sites-authoring/basic-handling.md#timeline)以查看页面是否已被移动。
