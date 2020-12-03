@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+source-git-commit: c1b5df634eba0628c8d2e0b38b9c220cbee8ec62
 workflow-type: tm+mt
 source-wordcount: '2112'
 ht-degree: 0%
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 页面的内容结构存储在AEM中。 页面模型用于映射和实例化SPA组件。 SPA开发人员创建映射到AEM组件的SPA组件。 为此，他们使用资源类型(或AEM组件的路径)作为唯一键。
 
-SPA组件必须与页面模型保持同步，并随其内容的任何相应更改进行更新。 必须使用利用动态组件的模式来根据提供的页面模型结构动态实例化组件。
+SPA组件必须与页面模型同步，并相应地更新其内容。 必须使用利用动态组件的模式来根据提供的页面模型结构动态实例化组件。
 
 ### 元字段{#meta-fields}
 
