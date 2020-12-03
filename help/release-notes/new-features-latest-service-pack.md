@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
+source-git-commit: 55ef8af25887a59d9d13275645c1ec20f0c49380
 workflow-type: tm+mt
-source-wordcount: '2704'
+source-wordcount: '2807'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,23 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 在计划的Service Pack发布一周后，将提供 [!DNL Experience Manager] 附加包。[!DNL Experience Manager] 6.5 Service Pack 7(6.5.7.0)计划于2020年11月26日发布。
+>[!DNL Experience Manager Forms] 在计划的Service Pack发布一周后，将提供 [!DNL Experience Manager] 附加包。
+
+### 性能改进{#performance-improvements-forms}
+
+[!DNL Experience Manager] 6.5 Service Pack 7Forms提高了以下产品的性能：
+
+* 在提交自适应表单时验证服务器上的字段值。
+
+* 使用[!DNL Automated Forms Conversion service]将PDF表单转换为自适应表单。
+
+### 形成数据模型HTTP客户端配置以优化性能{#fdm-http-client-config}
+
+[!DNL Experience Manager Forms] 与RESTful web服务作为数据源集成时，表单数据模型现在包括用于性能优化的HTTP客户端配置。
+
+### 布局模式{#reset-option-layout-mode}中每个组件的重置选项可用性
+
+现在，您可以在自适应表单的布局模式下为每个组件使用重置选项。 为面板定义多列布局时，可以使用此功能在面板中重置各个组件。
 
 ## 先前[!DNL Experience Manager] 6.5 Service Pack {#key-features-previous-service-packs}中的主要功能
 
