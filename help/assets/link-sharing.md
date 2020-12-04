@@ -3,10 +3,10 @@ title: 使用链接共享资产
 description: 以URL的形式共享资产、文件夹和收藏集。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f6da1c69ea3b3c3f07e8ac10fd8e1e9c7208158
+source-git-commit: e36d08c9ea89e840aecde79ffdd911372c0c54ee
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 7%
+source-wordcount: '1056'
+ht-degree: 8%
 
 ---
 
@@ -57,9 +57,9 @@ ht-degree: 7%
    >
    >如果您输入的电子邮件ID不是您组织的成员，则单词[!UICONTROL 外部用户]前面会加上用户的电子邮件ID。
 
-1. 在&#x200B;**[!UICONTROL 主题]**&#x200B;字段中，输入主题行。
+1. 在&#x200B;**[!UICONTROL 主题]**&#x200B;框中，为您要共享的资产输入主题。
 
-1. 在&#x200B;**[!UICONTROL 消息]**&#x200B;字段中，输入可选消息。
+1. 在&#x200B;**[!UICONTROL 消息]**&#x200B;框中，输入可选消息。
 
 1. 在&#x200B;**[!UICONTROL Expiration]**&#x200B;字段中，指定链接停止工作的到期日期和时间。 默认情况下，过期日期设置为您共享链接后一周的时间。
 
@@ -69,9 +69,9 @@ ht-degree: 7%
 
 1. 单击&#x200B;**[!UICONTROL 共享]**。系统会显示一条消息，确认已通过电子邮件将链接共享给用户。
 
-1. 要视图共享的资产，请单击发送给用户的电子邮件中的链接。 共享资产显示在&#x200B;**[!UICONTROL Adobe Marketing Cloud]**&#x200B;页面中。
+1. 要视图共享的资产，请单击发送给用户的电子邮件中的链接。 共享资产显示在[!UICONTROL Adobe Marketing Cloud]页面中。
 
-   ![chlimage_1-260](assets/chlimage_1-545.png)
+   ![共享资源在Adobe Marketing Cloud可用](assets/chlimage_1-545.png)
 
 1. 要生成资产的预览，请单击共享的资产。 要关闭预览并返回至&#x200B;**[!UICONTROL Marketing Cloud]**&#x200B;页面，请单击工具栏中的&#x200B;**[!UICONTROL 返回]**。 如果已共享文件夹，请单击&#x200B;**[!UICONTROL 父文件夹]**&#x200B;返回父文件夹。
 
@@ -83,7 +83,7 @@ ht-degree: 7%
 
 1. 要下载共享的资产，请单击工具栏中的&#x200B;**[!UICONTROL 选择]**，单击资产，然后单击工具栏中的&#x200B;**[!UICONTROL 下载]**。
 
-   ![chlimage_1-262](assets/chlimage_1-547.png)
+   ![用于下载共享资产的工具栏选项](assets/chlimage_1-547.png)
 
 1. 要视图已作为链接共享的资产，请转到[!DNL Assets]用户界面，然后单击[!DNL Experience Manager]徽标。 选择&#x200B;**[!UICONTROL 导航]**。 在导航窗格中，选择&#x200B;**[!UICONTROL 共享链接]**&#x200B;以显示共享资产的列表。
 
