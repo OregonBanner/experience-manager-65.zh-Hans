@@ -53,7 +53,7 @@ Dynamic Media支持以下3D格式。
 
 在Dynamic Media中处理3D资产之前，请确保AEM管理员已在Dynamic Media -Scene7模式中启用并配置Dynamic MediaCloud Services。
 
-请参阅配置Dynamic Media -Scene7模式和[Dynamic Media -Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。](/help/assets/troubleshoot-dms7.md)
+请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) -Scene7模式和Dynamic Media -Scene7模 [式中的配置Dynamic MediaCloud Services。](/help/assets/troubleshoot-dms7.md)
 
 1. **上传3D资产**
 
