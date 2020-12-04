@@ -10,7 +10,7 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 11f3e2f7cb742340388bc9421a3ea8f25deabec5
+source-git-commit: 4abfda568fc15f225510c79635387142aefddc72
 workflow-type: tm+mt
 source-wordcount: '3949'
 ht-degree: 0%
@@ -215,7 +215,8 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 <!-- Remove when forms portal goes live
 >[!NOTE]
 >
->Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. -->
+>Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
+-->
 
 您的表单签名体验已就绪。 您可以预览表单以验证签名体验。 在已发布的表单上，当签署方收到通过电子邮件进行签名的表单时，将显示“Adobe Sign阻止”字段。 此体验也称为表外签名体验。 您还可以为第一个签署方配置表单内签名体验，有关详细步骤，请参阅[创建表单内签名体验](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)。
 
@@ -323,7 +324,7 @@ Adobe Sign有多个字段，可放置在自适应表单上。 这些字段接受
 
 **Adobe Sign块：** 您可以使用Adobe Sign块在自适应表单的任意位置添加Adobe Sign域。它还有助于为签名者分配特定字段。 默认情况下，当预览或发布自适应表单时，Adobe Sign块不可见。 这些块仅在签名文档中启用。 在签名文档中，只启用分配给签署方的字段。 Adobe Sign区块可以与第一个和后续签署者一起使用。
 
-**签名步骤组** 件：您可以使用签名步骤组件创建表单内签名体验。它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 它通常是表单的最后一个或倒数第二个部分，后跟摘要组件。
+**签名步骤组** 件：您可以使用签名步骤组件创建表单内签名体验。它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 通常是表单的最后一个或倒数第二个部分，后面是摘要组件。
 
 ## 故障诊断 {#troubleshoot}
 
