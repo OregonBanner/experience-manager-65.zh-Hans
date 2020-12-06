@@ -3,9 +3,9 @@ title: '[!DNL Assets] 大小调整指南'
 description: 确定有效指标以评估部署 [!DNL Adobe Experience Manager Assets]所需的基础架构和资源的最佳实践。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 1. 确定要加载到系统中的资产的大小和数量。
 1. 获取要上传到[!DNL Experience Manager]中的资产的代表性示例。 例如，如果您计划将PSD、JPG、AI和PDF文件加载到系统中，您需要每种文件格式的多个范例图像。 此外，这些范例应代表不同的文件大小和复杂的图像。
 1. 定义要使用的演绎版。
-1. 使用[!DNL ImageMagick]或[!DNL Adobe Creative Cloud]应用程序在[!DNL Experience Manager]中创建再现。 除了用户指定的演绎版之外，还可创建现成的演绎版。 对于实施Scene7的用户，可以使用IC二进制生成要以Experience Manager存储的PTIFF演绎版。
+1. 使用[!DNL ImageMagick]或[!DNL Adobe Creative Cloud]应用程序在[!DNL Experience Manager]中创建再现。 除了用户指定的演绎版之外，还可创建现成的演绎版。 对于实施Dynamic Media的用户，可以使用IC二进制生成要以Experience Manager存储的PTIFF演绎版。
 1. 如果您计划使用子资产，请为相应的文件类型生成子资产。
 1. 将输出图像、演绎版和子资产的大小与原始图像进行比较。 它允许您在加载系统时生成预期的增长因子。 例如，如果您在处理1 GB资产后生成合并大小为3 GB的演绎版和子资产，则演绎版增长系数为3。
 1. 确定在系统中维护资产版本的最长时间。
