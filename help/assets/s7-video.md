@@ -8,9 +8,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1586'
 ht-degree: 52%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 52%
 
 # 视频 {#video}
 
-资产提供了集中式视频资产管理功能，您可以将视频直接上传到资产，以便自动编码到Dynamic Media Classic(Scene7)，并直接从资产中访问Dynamic Media Classic视频以进行页面创作。
+资产提供了集中式视频资产管理功能，您可以将视频直接上传到资产，以便自动编码到Dynamic Media Classic，并直接从资产中访问Dynamic Media Classic视频以进行页面创作。
 
 动态媒体经典视频集成将优化视频的范围扩展到所有屏幕（自动设备和带宽检测）。
 
 * **[!UICONTROL Scene7视频]**&#x200B;组件可自动执行设备和带宽检测，以在台式机、平板电脑和移动设备上播放正确的格式和质量的视频。
-* Assets - 您可以包含自适应视频集，而不只是单个视频资产。自适应视频集是一个容器，其中包含在多种屏幕上无缝播放视频所需的所有视频演绎版。自适应视频集是同一个视频的一组版本，这些版本以不同的比特率和格式进行编码，例如 400 kbps、800 kbps 和 1000 kbps。使用自适应视频集以及 S7 视频组件，可在多种屏幕（包括台式机、iOS、Android、Blackberry 和 Windows 移动设备）上实现自适应视频流式传输。请参阅[有关自适应视频集的 Scene7 文档以了解更多信息](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)。
+* Assets - 您可以包含自适应视频集，而不只是单个视频资产。自适应视频集是一个容器，其中包含在多种屏幕上无缝播放视频所需的所有视频演绎版。自适应视频集是同一个视频的一组版本，这些版本以不同的比特率和格式进行编码，例如 400 kbps、800 kbps 和 1000 kbps。使用自适应视频集以及 S7 视频组件，可在多种屏幕（包括台式机、iOS、Android、Blackberry 和 Windows 移动设备）上实现自适应视频流式传输。
 
 ## 关于FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -60,11 +60,11 @@ Scene7 视频组件支持以下格式：
 1. 在 AEM 中，从内容查找器的&#x200B;**[!UICONTROL 电影]**&#x200B;选项卡的 WCM 中访问视频资产。
 1. 使用&#x200B;**[!UICONTROL Scene7视频]**&#x200B;或&#x200B;**[!UICONTROL 基础视频]**&#x200B;组件进行创作。
 
-### 如果您要将视频上传到 Scene7 {#if-you-are-uploading-your-video-to-scene}
+### 如果要将视频上传到Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 如果您不需要对资产使用工作流或进行版本控制，应将资产上传到 Scene7。下面是建议的工作流：
 
-1. 在Dynamic Media Classic中，[设置到Scene7（系统自动）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)的计划FTP上传和编码。
+1. 在Dynamic Media Classic中，[设置到Scene7（系统自动）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp)的计划FTP上传和编码。
 1. 在 AEM 中，从内容查找器的 **[!UICONTROL Scene7]** 选项卡的 WCM 中访问视频资产。
 1. 使用&#x200B;**[!UICONTROL Scene7视频]**&#x200B;组件进行创作。
 
@@ -85,7 +85,7 @@ Scene7 视频组件支持以下格式：
 
    >[!NOTE]
    >
-   >有关视频预设含义的详细信息，请参阅[Dynamic Media Classic文档](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)。
+   >有关视频预设含义的详细信息，请参阅[Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
    >
    >Adobe 建议您在配置通用预设时选择两个自适应视频集，或选择&#x200B;**[!UICONTROL 自适应视频编码]**&#x200B;选项。
 
