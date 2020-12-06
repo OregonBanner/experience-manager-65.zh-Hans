@@ -4,9 +4,9 @@ description: 了解如何使用“过滤器”面板在 [!DNL Adobe Experience M
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f5aa1d31f3b31e29073937e044c8fbac27138c4d
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '5769'
+source-wordcount: '5767'
 ht-degree: 6%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 6%
 | [限](#limitations) 制和提 [示](#tips) |  |  |
 | [示例](#samples) |  |  |
 
-使用[!DNL Experience Manager] Web界面顶部的Omnisearch字段搜索资产。 转至[!DNL Experience Manager]中的&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 文件]**，单击顶栏中的![search_icon](assets/do-not-localize/search_icon.png)，输入搜索关键字，然后按回车键。 或者，使用关键字快捷键`/`（正斜杠）打开Omnisearch字段。 `Location:Assets` 已预先选择，以将搜索限制为DAM资产。[!DNL Experience Manager] 在开始键入搜索关键字时提供建议。
+使用[!DNL Experience Manager] Web界面顶部的Omnisearch字段搜索资产。 转到[!DNL Experience Manager]中的&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 文件]**，单击顶栏中的![search_icon](assets/do-not-localize/search_icon.png)，输入搜索关键字，然后选择`Return`。 或者，使用关键字快捷键`/`（正斜杠）打开Omnisearch字段。 `Location:Assets` 已预先选择，以将搜索限制为DAM资产。[!DNL Experience Manager] 在开始键入搜索关键字时提供建议。
 
 使用&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板搜索资产、文件夹、标记和元数据。 您可以根据各种选项（谓词）筛选搜索结果，如文件类型、文件大小、上次修改日期、资产状态、分析数据和Adobe Stock授权许可。 您可以自定义“过滤器”面板，并使用[搜索彩块化](/help/assets/search-facets.md)添加或删除搜索谓词。 [!UICONTROL 过滤器]面板中的[!UICONTROL 文件类型]筛选器具有混合状态复选框。 因此，除非您选择所有嵌套的谓词（或格式），否则将部分选中第一级复选框。
 
@@ -259,7 +259,7 @@ ht-degree: 6%
 * 请勿在搜索查询中输入前导空格，否则搜索无效。
 * [!DNL Experience Manager] 在您从搜索结果中选择资产的属性，然后取消搜索后，可能会继续显示搜索词。  <!-- (CQ-4273540) -->
 * 在搜索文件夹或文件和文件夹时，无法对任何参数对搜索结果进行排序。
-* 如果按Return键而未在Omnisearch栏中键入内容，[!DNL Experience Manager]将返回仅包含文件的列表符，而不是文件夹。 如果您不使用关键字专门搜索文件夹，[!DNL Experience Manager]不会返回任何结果。
+* 如果选择`Return`而未在Omnisearch栏中键入内容，[!DNL Experience Manager]将返回仅包含文件而非文件夹的列表。 如果您不使用关键字专门搜索文件夹，[!DNL Experience Manager]不会返回任何结果。
 
 视觉搜索或相似性搜索具有以下限制：
 
