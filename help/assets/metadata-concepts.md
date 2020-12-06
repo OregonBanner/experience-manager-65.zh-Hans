@@ -3,9 +3,9 @@ title: 了解元数据概念
 description: 了解元数据的需求和类型，这些元数据可以更轻松地分类和组织资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2731'
 ht-degree: 36%
 
 ---
@@ -178,7 +178,7 @@ Exif的一个主要限制是一些常用的图像文件格式（如BMP、GIF或P
 | 描述 | 关于资产的详细信息。 |
 | format | 资产的文件格式、物理介质或尺寸。[!DNL Experience Manager] 用 `dc:format` 于表示资产的MIME类型。 |
 | 标识符 | 资产的唯一参考。 |
-| 语言 | 资产的语言（例如，en 表示英语）。 |
+| 语言 | 资产的语言（例如，`en`表示英语）。 |
 | publisher | 负责使资产进入可用状态的个人或公司。 |
 | relation | 相关的资产。 |
 | rights | 关于谁有权使用此资产的信息。 |
