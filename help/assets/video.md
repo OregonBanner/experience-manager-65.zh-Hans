@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '11828'
+source-wordcount: '11812'
 ht-degree: 22%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 22%
 >
 >在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media -Scene7模式或Dynamic Media —— 混合模式中启用并配置了Dynamic MediaCloud Services。
 >
->* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) -Scene7模式和Dynamic Media -Scene7模 [式中的配置Dynamic MediaCloud Services。](/help/assets/troubleshoot-dms7.md)
+>* 请参阅配置Dynamic Media -Scene7模式和[Dynamic Media -Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。](/help/assets/troubleshoot-dms7.md)
    >
    >
 * 请参阅配置Dynamic Media —— 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
@@ -146,7 +146,7 @@ Dynamic Media中的视频是一款端到端解决方案，它可轻松发布高�
 * 组织、浏览和搜索具有全面元数据支持的视频，以实现高效的视频资产管理。
 * 将自适应视频集交付到Web、桌面和移动设备，包括iPhone、iPad、Android、Blackberry和Windows手机。
 
-自适应视频流播放在多种 iOS 平台上受支持。请参阅《[Scene7 查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html)》。
+自适应视频流播放在多种 iOS 平台上受支持。请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
 
 Dynamic Media支持MP4 H.264视频的移动视频回放。您可以在以下位置找到支持此视频格式的Blackberry设备：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支持的视频格式。
 
@@ -162,7 +162,7 @@ Dynamic Media支持MP4 H.264视频的移动视频回放。您可以在以下位�
 
 请参阅[动态视频播放](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)范例。
 
-另请参阅《AEM Assets查看器参考指南》中的[Adobe Scene7和Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html)的查看器和[仅AEM资产的查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)。
+另请参阅[AEM Assets和Dynamic Media Classic的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)和[仅AEM资产的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
 ## 最佳实践：使用HTML5视频查看器{#best-practice-using-the-html-video-viewer}
 
@@ -174,7 +174,7 @@ Dynamic Media HTML5视频查看器预设是强大的视频播放器。您可以�
 
 通过将使用 HTML5 和 CSS 设计播放组件的功能、支持嵌入式播放的功能，以及根据浏览器的容量使用自适应和渐进式流播放的功能整合到单一播放器中，您可以扩大富媒体内容可以传送到的桌面和移动用户的范围，并确保简化视频体验。
 
-另请参阅《Scene7 查看器参考指南》中的“[关于 HTML5 查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)”。
+另请参阅[关于HTML5查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
 ### 使用HTML5视频查看器{#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}在桌面计算机和移动设备上播放视频
 
@@ -191,7 +191,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 渐进式视频通过在用户的桌面系统或移动设备上本地下载和存储视频来交付。
 
-下表介绍使用Scene7视频查看器在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
+下表介绍了使用Dynamic Media Video Viewer在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
 
 <table>
  <tbody>
@@ -404,7 +404,7 @@ VBR编码时间较长，但生成的结果最为有利；媒体文件的质量�
 |--- |--- |--- |--- |
 | 源 | 1920 x 1080 | 1 | 3 |
 | 编码 | 960 x 540 | 2 | 2 |
-| 编码 | 640 x 360 | 3 | 3 |
+| 编码 | 640 x 360 | 3 | 1 |
 | 编码 | 480 x 270 | 4 | 4 |
 
 ### 编码视频文件格式 {#encoded-video-file-format}
@@ -1005,9 +1005,9 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 如果您使用的是Dynamic Media提供的现成视频查看器，或者您基于现成视频查看器创建了自定义查看器预设，则无需执行任何其他步骤即可视图视频报告。但是，如果您基于Scene7HTML5查看器SDK创建了自己的视频查看器，请使用以下步骤确保视频查看器将跟踪事件发送到Dynamic Media视频报表。
 
-使用 Scene7 查看器参考和 Scene7 HTML5 查看器 SDK 创建您自己的视频查看器。
+使用Dynamic Media查看器参考和Scene7HTML5查看器SDK创建您自己的视频查看器。
 
-请参阅《[Scene7 查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)》。
+请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 <!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
