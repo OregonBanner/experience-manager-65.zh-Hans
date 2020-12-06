@@ -1,15 +1,15 @@
 ---
 title: 设置Dynamic Media
-description: 要设置Dynamic Media，您需要配置Dynamic Media并管理图像预设和查看器预设
+description: 要设置Dynamic Media，您需要配置Dynamic Media并管理图像预设和查看器预设。
 uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 17%
+source-wordcount: '254'
+ht-degree: 18%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->本文档描述了直接集成到AEM的Dynamic Media功能。 如果您使用集成到AEM中的Dynamic Media Classic(以前称为Scene7)，请参阅[Dynamic Media Classic集成文档](/help/sites-administering/scene7.md)。
+>本文档描述了直接集成到AEM的Dynamic Media功能。 如果您使用集成到AEM的Dynamic Media Classic，请参阅[Dynamic Media Classic集成文档](/help/sites-administering/scene7.md)。
 >
 >请参阅[双重使用方案](/help/sites-administering/scene7.md#dual-use-scenario)，以了解您可能希望将AEM与Dynamic Media Classic及Dynamic Media集成的时间。
 
