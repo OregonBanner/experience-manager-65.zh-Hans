@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 5a3045b89ba6bb32482926ea8d2c5533e5394d9a
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1820'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Smart Imaging还可以与Adobe一流的高级CDN服务完全集成，从而增�
 
 ## 是否存在与智能成像相关的许可成本？{#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-否. 您现有的Dynamic Media Classic(Scene7)或AEM Dynamic Media(作为Cloud Service，在Prem、AMS和AEM上)许可证中包含智能成像。
+否. 您现有的Dynamic Media Classic或Adobe Experience Manager- Dynamic Media(作为Cloud Service，在Prem、AMS和AEM上)许可证中包含智能成像。
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Dynamic Media许可证不需要支付任何额外费用即可获得您的第一�
 
 ## 如何验证智能成像是否按预期工作？ {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. 在您的帐户配置了智能成像后，请在浏览器上加载Dynamic Media Classic(Scene7)/Dynamic Media图像URL。
+1. 在您的帐户配置了智能成像后，请在浏览器上加载Dynamic Media Classic或Adobe Experience Manager- Dynamic Media图像URL。
 1. 在浏览器中单击&#x200B;**[!UICONTROL 视图>开发人员>开发人员工具]**，打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
 
 1. 确保在开发人员工具打开时禁用缓存。
