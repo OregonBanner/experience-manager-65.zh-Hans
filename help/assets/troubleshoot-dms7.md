@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media疑难解答-Scene7模式
-description: 对Dynamic Media在Scene7运行模式中进行故障诊断。
+description: 对Dynamic Media在Scene7模式下运行时进行故障诊断。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1285'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 * 任何AEM 6.4累积修复包(CFP)都是先在&#x200B;*之前安装的，后面是任何可用的Dynamic Media功能包。*
 * 安装可选功能包18912。
 
-   此可选功能包用于FTP支持，或者如果您要将资产从Dynamic Media Classic(Scene7)迁移到Dynamic Media。
+   此可选功能包用于FTP支持，或者如果您要将资产从Dynamic Media Classic迁移到Dynamic Media。
 
 * 导航到Cloud Services用户界面，确认预配的帐户显示在&#x200B;**[!UICONTROL 可用配置下。]**
 * 确保`Dynamic Media Asset Activation (scene7)`复制代理已启用。
@@ -255,7 +255,7 @@ ht-degree: 0%
       </ol> </li>
      <li>在“Cloud Services”下，导航到Dynamic Media配置页，然后打开Dynamic Media - S7配置的配置对话框。
       <ul>
-       <li>不进行更改，单击<strong>保存</strong>。 这会再次触发创建和同步示例资产、查看器预设CSS和图稿的逻辑。<br />  </li>
+       <li>不进行更改，单击<strong>保存</strong>。 这会再次触发逻辑以创建和同步示例资产、查看器预设CSS和图稿。<br />  </li>
       </ul> </li>
     </ol> </td>
   </tr>
