@@ -3,10 +3,10 @@ title: 搜索彩块化以筛选搜索结果
 description: 如何在 [!DNL Adobe Experience Manager]中创建、修改和使用搜索彩块化。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2438'
-ht-degree: 28%
+source-wordcount: '2424'
+ht-degree: 27%
 
 ---
 
@@ -38,15 +38,15 @@ ht-degree: 28%
    >
    >1. 在CRXDE中导航到`/conf/global/settings/dam/search/facets/assets/jcr:content/items`。
    >1. 删除&#x200B;**类型**&#x200B;节点。
-   >1. 从路径 */libs/settings/dam/search/facets/assets/jcr:content/items* 中，将&#x200B;**资产、目录、类型、排除路径**&#x200B;和 **searchtype** 节点复制到步骤 1 中提到的路径。
+   >1. 从路径`/libs/settings/dam/search/facets/assets/jcr:content/items`中，将节点`asset`、`directory`、`typeor`、`excludepaths`和`searchtype`复制到步骤1中提到的路径。
    >1. 保存更改。
 
 
 1. 在[!UICONTROL 编辑搜索Forms]页面中，将谓词从&#x200B;**[!UICONTROL 选择谓词]**&#x200B;选项卡拖至主窗格。 例如，拖动&#x200B;**[!UICONTROL 属性谓词]**。
 
-   ![按并移动谓词以自定义搜索过滤器](assets/drag_predicate.png)
+   ![选择并移动谓词以自定义搜索过滤器](assets/drag_predicate.png)
 
-   *图：按并移动谓词以自定义搜索过滤器。*
+   *图：选择并移动谓词以自定义搜索过滤器。*
 
 1. 在[!UICONTROL 设置]选项卡中，输入谓词的字段标签、占位符文本和说明。 为要与谓词关联的元数据属性指定有效名称。 [!UICONTROL 设置]选项卡中的标题标签标识所选谓词的类型。
 
