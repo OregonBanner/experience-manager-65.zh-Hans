@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 24%
@@ -50,7 +50,7 @@ CDN会缓存Dynamic Media资源以快速投放。 但是，当您对资产进行
    如果模板仅包含`<ID>`，则Dynamic Media会填入`https://<server>/is/image`，其中`<server>`是在“常规设置”中定义的发布服务器名称，而&lt;ID>是选定要失效的资产。
 
 1. 在页面的右下角，单击&#x200B;**[!UICONTROL 关闭。]**
-1. 在Dynamic Media Classic(Scene7)UI中，选择一个或多个资源，然后单击&#x200B;**[!UICONTROL 文件> Invalidate CDN。]** 您将看到一个列表，其中包含从您创建的模板和您选择的资产中生成的一个或多个URL。它使用“应用程序常规设置”下“已发布服务器名称”下列出的服务器URL。
+1. 在Dynamic Media Classic用户界面中，选择一个或多个资源，然后单击&#x200B;**[!UICONTROL 文件>使CDN失效。]** 您将看到一个列表，其中包含从您创建的模板和您选择的资产中生成的一个或多个URL。它使用“应用程序常规设置”下“已发布服务器名称”下列出的服务器URL。
 
    例如，在上一步中设置了CDN失效模板后，假定您选择了名为`Backpack_B`的单个图像资产图像。 单击&#x200B;**[!UICONTROL “文件”>“使CDN失效”]**&#x200B;时，会在CDN失效用户界面中生成以下URL:
 
