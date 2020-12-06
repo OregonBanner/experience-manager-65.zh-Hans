@@ -3,9 +3,9 @@ title: 批量迁移资产
 description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版并将其激活以发布实例。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1799'
 ht-degree: 8%
 
 ---
@@ -79,7 +79,7 @@ Adobe的Managed Services团队使用一种名为Glutton的工具将数据加载�
 
 ### 处理演绎版{#processing-renditions}
 
-在将资产加载到系统后，您需要通过[!UICONTROL DAM更新资产]工作流处理这些资产，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复并修改[!UICONTROL DAM更新资产]工作流以满足您的需求。 现成工作流程包含许多您可能不需要的步骤，如Scene7PTIFF生成或[!DNL InDesign Server]集成。
+在将资产加载到系统后，您需要通过[!UICONTROL DAM更新资产]工作流处理这些资产，以提取元数据并生成演绎版。 在执行此步骤之前，您需要重复并修改[!UICONTROL DAM更新资产]工作流以满足您的需求。 现成工作流包含许多您可能不需要的步骤，如Dynamic Media PTIFF生成或[!DNL InDesign Server]集成。
 
 根据需要配置工作流后，您有两个选项可用于执行该工作流：
 
