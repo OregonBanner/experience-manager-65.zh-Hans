@@ -4,9 +4,9 @@ description: 了解管理资产集合的任务，如创建、视图、删除、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2178'
+source-wordcount: '2176'
 ht-degree: 17%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 17%
 
 1. 导航到[!DNL Assets]用户界面并单击“搜索”。
 
-1. 在Omnisearch框中键入search关键字，然后按`Enter`。 打开过滤器面板并应用搜索筛选器。
+1. 在Omnisearch框中键入search关键字，然后选择`Enter`。 打开过滤器面板并应用搜索筛选器。
 
 1. 从&#x200B;**[!UICONTROL 文件和文件夹]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 文件]**。
 
@@ -120,7 +120,7 @@ ht-degree: 17%
 智能集合是通过保存搜索来构建的，因此您可以通过修改保存的搜索[的搜索参数来更改其内容。](#saved-searches)
 
 1. 在[!DNL Assets]用户界面中，单击工具栏中的搜索选项![搜索选项](assets/do-not-localize/search_icon.png)。
-1. 将光标置于“Omnisearch”（全搜索）框中，按Return键。
+1. 将光标置于Omnisearch框中，选择`Return`键。
 1. 在[!DNL Experience Manager]接口中，打开“过滤器”面板。
 1. 从&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表中，选择要修改的智能收藏集。“搜索”面板显示为保存的搜索配置的过滤器。
 
@@ -249,7 +249,7 @@ ht-degree: 17%
 要删除保存的搜索，请执行以下步骤：
 
 1. 在[!DNL Assets]用户界面中，单击搜索![搜索选项](assets/do-not-localize/search_icon.png)。
-1. 在“Omnisearch”（全搜索）字段中，按Return键。
+1. 将光标置于Omnisearch字段中，选择`Return`键。
 1. 在[!DNL Experience Manager]接口中，打开“过滤器”面板。
 1. 在&#x200B;**[!UICONTROL 保存的搜索]**&#x200B;列表中，单击要删除的智能收藏集旁边的&#x200B;**[!UICONTROL 删除]**。
 
