@@ -7,9 +7,9 @@ user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、交付和优化数字资产。
 translation-type: tm+mt
-source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 40%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 40%
    + [Dynamic Media 图像配置文件](image-profiles.md)
    + [智能图像处理](imaging-faq.md)
    + [视频](s7-video.md)
-   + [将Scene7功能添加到您的页面](scene7.md)
+   + [将Dynamic Media功能添加到页面](scene7.md)
    + [HTTP2 内容交付](http2.md)
    + [传送 Dynamic Media 资产](delivering-dynamic-media-assets.md)
    + [在 Dynamic Media 中激活热链接保护](hotlink-protection.md)
