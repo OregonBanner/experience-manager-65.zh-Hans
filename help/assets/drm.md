@@ -3,9 +3,9 @@ title: 资产Digital Rights Management
 description: 了解如何在 [!DNL Experience Manager]中管理授权资产的到期状态和信息。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 97d3edf155ddeabf3f39139c9079621c3627820b
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 5%
 
 1. 在[!DNL Assets]控制台中，单击工具栏中的&#x200B;**[!UICONTROL 搜索]**&#x200B;以显示“搜索”框。
 
-1. 将光标置于“全搜索”框中，按Enter键显示搜索结果页面。
+1. 将光标置于“搜索”框中，选择`Enter`键以显示搜索结果页。
 1. 打开左边栏中的搜索面板。 单击&#x200B;**[!UICONTROL Expiry Status]**&#x200B;选项以展开它。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -110,7 +110,7 @@ ht-degree: 5%
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
 1. 要根据资产的状态搜索资产，请单击&#x200B;**[!UICONTROL 搜索]** ![搜索选项](assets/do-not-localize/search_icon.png)以显示Omnisearch栏。
-1. 按返回并单击[!DNL Experience Manager]以显示搜索面板。
+1. 选择`Return`并单击[!DNL Experience Manager]以显示搜索面板。
 1. 在搜索面板中，单击&#x200B;**[!UICONTROL 发布状态]**&#x200B;并选择&#x200B;**[!UICONTROL 已发布]**&#x200B;以在[!DNL Assets]中搜索已发布的资产。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
