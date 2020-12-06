@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
 source-wordcount: '6623'
 ht-degree: 17%
@@ -227,7 +227,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
    * 使用核心事件启动扩展的按键Adobe作为触发器。
    * 将&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素的值发送到Adobe Analytics。
 
-现在，假定最终用户加载包含两个查看器的网页。 在&#x200B;*viewer1*&#x200B;中，它们放大到50%比例；然后，在&#x200B;*viewer2*&#x200B;中，它们放大到25%缩放。 在&#x200B;*viewer1*&#x200B;中，它们四处平移图像，最后按下键盘上的键。
+现在，假定最终用户加载包含两个查看器的网页。 在&#x200B;*viewer1*&#x200B;中，它们放大到50%比例；然后，在&#x200B;*viewer2*&#x200B;中，它们放大到25%缩放。 在&#x200B;*viewer1*&#x200B;中，查看器在周围平移图像，最后在键盘上选择一个键。
 
 最终用户的活动导致向Adobe Analytics发出以下两个跟踪调用：
 
