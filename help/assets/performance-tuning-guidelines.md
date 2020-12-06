@@ -4,9 +4,9 @@ description: 有关 [!DNL Experience Manager] 配置、对硬件、软件和网�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc61b8473fb919a963eb73c015efbc2f06197ee8
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2744'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 ### DAM更新资产配置{#dam-update-asset-configuration}
 
-[!UICONTROL DAM更新资产]工作流包含为任务配置的完整步骤套件，如Scene7PTIFF生成和[!DNL Adobe InDesign Server]集成。 但是，大多数用户可能不需要执行以下几个步骤。 Adobe建议您创建[!UICONTROL DAM更新资产]工作流模型的自定义副本，并删除任何不必要的步骤。 在这种情况下，请更新[!UICONTROL DAM更新资产]的启动器，以指向新型号。
+[!UICONTROL DAM更新资产]工作流包含为任务配置的完整步骤套件，如Dynamic Media PTIFF生成和[!DNL Adobe InDesign Server]集成。 但是，大多数用户可能不需要执行以下几个步骤。 Adobe建议您创建[!UICONTROL DAM更新资产]工作流模型的自定义副本，并删除任何不必要的步骤。 在这种情况下，请更新[!UICONTROL DAM更新资产]的启动器，以指向新型号。
 
 集中运行[!UICONTROL DAM更新资产]工作流可以大幅增加文件数据存储的大小。 通过Adobe进行的试验表明，如果在8小时内执行约5500个工作流，则数据存储大小可以增加约400 GB。
 
@@ -180,7 +180,7 @@ Adobe建议启用HTTPS，因为许多公司都有防火墙来监听HTTP通信，
 
 许多站点客户实现一个图像servlet，在请求图像时调整大小和裁切图像，这会给发布实例增加额外的负载。 但是，只要可以缓存这些图像，挑战就可以缓解。
 
-另一种方法是使用Scene7技术完全放弃图像处理。 此外，您还可以部署Brand Portal，它不仅负责从[!DNL Experience Manager]基础架构生成再现，还负责整个发布层。
+另一种方法是使用Dynamic Media技术完全移交图像处理。 此外，您还可以部署Brand Portal，它不仅负责从[!DNL Experience Manager]基础架构生成再现，还负责整个发布层。
 
 #### ImageMagick {#imagemagick}
 
