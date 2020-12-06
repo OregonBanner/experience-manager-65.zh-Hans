@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '9565'
+source-wordcount: '9562'
 ht-degree: 7%
 
 ---
@@ -66,7 +66,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
    ![创建选项以上传资产](assets/create-options.png)
 
-   要选择多个文件，请按Ctrl或Command键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
+   要选择多个文件，请选择`Ctrl`或`Command`键，然后在文件选取器对话框中选择资产。 使用iPad时，一次只能选择一个文件。
 
    您可以暂停上传大型资产（大于500 MB），稍后从同一页面恢复它。 单击上传开始时显示的进度栏旁边的&#x200B;**[!UICONTROL 暂停]**。
 
@@ -355,13 +355,13 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 在[!DNL Assets]用户界面中，使用`Tab`和箭头键导航到所需的资产。
 
-1. 按所需资产上的`Enter`键打开它。 您可以在预览模式下缩放资源。
+1. 选择所需资产上的`Enter`键以将其打开。 您可以在预览模式下缩放资源。
 
 1. 要放大资产，请执行以下操作：
    1. 使用`Tab`键将焦点移入放大选项。
    1. 使用`Enter`键可放大图像。
 
-   要缩小，请使用`Tab`键将焦点移到缩小选项，然后按`Enter`。
+   要缩小，请使用`Tab`键将焦点移到缩小选项，然后选择`Enter`。
 
 1. 使用`Shift` + `Tab`键将焦点移回图像上。
 
@@ -395,7 +395,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 要在特定持续时间后取消激活资产，请从&#x200B;**[!UICONTROL 关闭时间]**&#x200B;字段旁边的日期选取器中选择取消激活日期／时间。 取消激活日期应晚于资产的激活日期。 在[!UICONTROL 结束时间]后，资产及其演绎版无法通过[!DNL Assets] Web界面或通过HTTP API使用。
 
-1. 在&#x200B;**[!UICONTROL 标记]**&#x200B;字段中，选择一个或多个标记。 要添加自定义标记，请在框中键入标记名称，然后按Enter。 新标记保存在[!DNL Experience Manager]中。 [!DNL YouTube] 需要标记才能发布。请参阅[将视频发布到YouTube](video.md#publishing-videos-to-youtube)。
+1. 在&#x200B;**[!UICONTROL 标记]**&#x200B;字段中，选择一个或多个标记。 要添加自定义标记，请在框中键入标记名称，然后选择`Enter`。 新标记保存在[!DNL Experience Manager]中。 [!DNL YouTube] 需要标记才能发布。请参阅[将视频发布到YouTube](video.md#publishing-videos-to-youtube)。
 
    >[!NOTE]
    >
@@ -471,7 +471,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * 单击&#x200B;**[!UICONTROL 取消]**&#x200B;以停止该进程。
    >[!NOTE]
    >
-   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果您使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
+   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
    >* 重命名时，文件名中不允许有空格。
 
 
