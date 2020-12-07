@@ -29,7 +29,7 @@ ht-degree: 22%
 >
 >在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media -Scene7模式或Dynamic Media —— 混合模式中启用并配置了Dynamic MediaCloud Services。
 >
->* 请参阅配置Dynamic Media -Scene7模式和[Dynamic Media -Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。](/help/assets/troubleshoot-dms7.md)
+>* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) -Scene7模式和Dynamic Media -Scene7模 [式中的配置Dynamic MediaCloud Services。](/help/assets/troubleshoot-dms7.md)
    >
    >
 * 请参阅配置Dynamic Media —— 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
