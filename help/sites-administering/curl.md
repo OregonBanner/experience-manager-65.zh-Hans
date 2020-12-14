@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 translation-type: tm+mt
-source-git-commit: 4eb5f1c4aa6631d2570279eb1d4bf17a928e3b9f
+source-git-commit: f8abdd7ed0212d5ee0602e2573c184203f22d4a4
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '889'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 管理员通常需要自动操作或简化任何系统中的常见任务。 例如，在AEM中，管理用户、安装包和管理OSGi捆绑包是通常必须完成的任务。
 
-由于构建AEM的Sling框架具有RESTful性质，因此大多数任务都可简化为URL调用。 cURL可用于执行此类URL调用，并且对于AEM管理员来说可以是一个有用的工具。
+由于构建AEM的Sling框架具有RESTful性质，大多数任务都可通过URL调用完成。 cURL可用于执行此类URL调用，并且对于AEM管理员来说可以是一个有用的工具。
 
 ## 什么是cURL {#what-is-curl}
 
@@ -206,7 +206,7 @@ curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http:/
 #### 删除用户{#delete-a-user}
 
 ```shell
-curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser 
+curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/users/t/testuser
 ```
 
 #### 删除组{#delete-a-group}
