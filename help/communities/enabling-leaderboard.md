@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 9%
@@ -44,15 +44,15 @@ ht-degree: 9%
 
 首次放置到社区站点的页面时，组件的显示方式如下：
 
-![chlimage_1-8](assets/chlimage_1-8.png)
+![排行榜](assets/leaderboard.png)
 
 ### 配置通栏{#configuring-leaderboard}
 
 选择要访问的已放置`Leaderboard`组件，然后选择打开编辑对话框的`Configure`图标。
 
-![chlimage_1-9](assets/chlimage_1-9.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-10](assets/chlimage_1-10.png)
+![配置通栏](assets/configure-leaderboard.png)
 
 #### 设置选项卡{#settings-tab}
 
@@ -120,7 +120,7 @@ ht-degree: 9%
    * 徽章规则 = `/libs/settings/community/badging/rules//reference-badging`
    * 显示限制 = `10`
 
-![chlimage_1-11](assets/chlimage_1-11.png)
+![参加者排行榜](assets/participants-leaderboard.png)
 
 ### 示例：专家排行榜{#example-experts-leaderboard}
 
@@ -143,7 +143,7 @@ ht-degree: 9%
    * 徽章规则 = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 显示限制 = `10`
 
-![chlimage_1-12](assets/chlimage_1-12.png)
+![专家排行榜](assets/experts-leaderboard.png)
 
 ### 附加信息 {#additional-information}
 
