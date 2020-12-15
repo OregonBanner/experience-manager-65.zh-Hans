@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: a5040371-3bc2-43bc-a103-7175c4c6252d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: d38395b8f845686492a26329bb732a41f79c85c4
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 请注意注释需要的三个客户端库才能正常呈现和运行。 扩展注释引用的位置和[扩展注释&#39;客户端库](/help/communities/extend-create-components.md#create-a-client-library-folder)(`apps.custom.comments`)将需要包含这些注释。
 
-![chlimage_1-47](assets/chlimage_1-47.png)
+![comments-component1](assets/comments-component1.png)
 
 ### 向页面{#add-custom-comments-to-a-page}添加自定义注释
 
@@ -45,17 +45,17 @@ ht-degree: 0%
 
 #### 示例页面{#comments-clientlibs-on-sample-page}上的注释客户端库
 
-![chlimage_1-48](assets/chlimage_1-48.png)
+![comments-clientlibs-crxde](assets/comments-clientlibs-crxde.png)
 
 #### 作者：示例页面{#author-alt-comment-on-sample-page}上的Alt注释
 
-![chlimage_1-49](assets/chlimage_1-49.png)
+![替换注释](assets/alt-comment.png)
 
 #### 作者：示例页面注释节点{#author-sample-page-comments-node}
 
 通过查看示例页面`/content/sites/sample/en/jcr:content/content/primary/comments`的注释节点属性，可以验证CRXDE中的resourceType。
 
-![chlimage_1-50](assets/chlimage_1-50.png)
+![verify-comment-crxde](assets/verify-comment-crxde.png)
 
 #### 发布示例页面{#publish-sample-page}
 
@@ -67,8 +67,8 @@ ht-degree: 0%
 
 以下是aaron.mcdonald@mailinator.com发布评论：
 
-![chlimage_1-51](assets/chlimage_1-51.png)
+![publish-alt-comment](assets/publish-alt-comment.png)
 
-![chlimage_1-52](assets/chlimage_1-52.png)
+![publish-alt-comment1](assets/publish-alt-comment1.png)
 
 现在，扩展组件在默认外观上工作正常，是时候修改外观了。
