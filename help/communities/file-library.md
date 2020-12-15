@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9e941ce092f7d3248c11886d6bf1e54f2e726362
+source-git-commit: cdbe098ada0b6c50952284f92cc2063435034a38
 workflow-type: tm+mt
 source-wordcount: '753'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -42,15 +42,15 @@ ht-degree: 6%
 
 当包含[必需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side)时，`File Library`组件的显示方式如下：
 
-![chlimage_1-430](assets/chlimage_1-430.png)
+![file-library1](assets/file-library1.png)
 
 ### 配置文件库{#configuring-file-library}
 
 选择要访问的已放置`File Library`组件，然后选择打开编辑对话框的`Configure`图标。
 
-![chlimage_1-431](assets/chlimage_1-431.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-432](assets/chlimage_1-432.png)
+![file-library2](assets/file-library2.png)
 
 #### “注释”选项卡{#comments-tab}
 
