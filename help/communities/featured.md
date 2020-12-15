@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 4%
@@ -51,15 +51,15 @@ ht-degree: 4%
 
 当包含[必需的客户端库](essentials-featured.md#essentials-for-client-side)时，`Featured Content`组件的显示方式如下：
 
-![chlimage_1-13](assets/chlimage_1-13.png)
+![功能内容](assets/featuredcontent.png)
 
 ## 配置特色内容{#configuring-featured-content}
 
 选择要访问的已放置`Featured Content`组件，然后选择打开编辑对话框的`Configure`图标。
 
-![chlimage_1-14](assets/chlimage_1-14.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-15](assets/chlimage_1-15.png)
+![功能内容1](assets/featuredcontent1.png)
 
 ### 设置选项卡{#settings-tab}
 
@@ -83,13 +83,13 @@ ht-degree: 4%
 
 审查方视图发布内容时，他们有权访问上下文中的审核标志，该标志包括新的`Feature`标志。
 
-![chlimage_1-16](assets/chlimage_1-16.png)
+![站点访客体验](assets/site-visitor-experience.png)
 
 标记为功能后，模型标志变为`Unfeature`。
 
 包含`Featured Content`组件的页面现在将包含此帖子。
 
-![chlimage_1-17](assets/chlimage_1-17.png)
+![站点访客体验1](assets/site-visitor-experience1.png)
 
 `Read More` 是指向实际帖子的链接。
 
