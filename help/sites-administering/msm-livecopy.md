@@ -2,9 +2,9 @@
 title: 创建和同步Live Copy
 description: 了解如何创建和同步Live Copy。
 translation-type: tm+mt
-source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
+source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
 workflow-type: tm+mt
-source-wordcount: '4115'
+source-wordcount: '4114'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 1. [导](/help/sites-authoring/basic-handling.md#global-navigation) 航至“工 **** 具”菜单，然后选择“ **** 大小”菜单。
 1. 选择&#x200B;**Blueprint**&#x200B;以打开&#x200B;**Blueprint Configurations**&#x200B;控制台：
 
-   ![chlimage_1-209](assets/chlimage_1-209.png)
+   ![chlimage_1-209](assets/blueprint-configurations.png)
 
 1. 选择&#x200B;**创建**。
 1. 选择Blueprint模板，然后选择&#x200B;**Next**&#x200B;继续。
@@ -66,14 +66,12 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 1. [导](/help/sites-authoring/basic-handling.md#global-navigation) 航至“工 **** 具”菜单，然后选择“ **** 大小”菜单。
 1. 选择&#x200B;**Blueprint**&#x200B;以打开&#x200B;**Blueprint Configurations**&#x200B;控制台：
 
-   ![chlimage_1-210](assets/chlimage_1-210.png)
+   ![chlimage_1-210](assets/blueprint-configurations.png)
 
 1. 选择所需的Blueprint配置——相应的操作将在工具栏中变为可用：
 
    * **属性**;您可以使用它来视图，然后编辑配置的属性。
    * **删除**
-
-   ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## 创建 Live Copy {#creating-a-live-copy}
 
@@ -154,7 +152,7 @@ Blueprint配置标识要用作一个或多个Live Copy页面源的现有网站�
 1. 在&#x200B;**站点**&#x200B;控制台中，从下拉选择器中选择&#x200B;**创建**，然后选择&#x200B;**站点**。
 1. 选择要用作Live Copy源的Blueprint配置，然后继续执行&#x200B;**Next**:
 
-   ![chlimage_1-216](assets/chlimage_1-216.png)
+   ![chlimage_1-216](assets/blueprint-configuration-select.png)
 
 1. 使用&#x200B;**初始语言**&#x200B;选择器指定Blueprint站点要用于Live Copy的语言。
 
@@ -220,7 +218,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 #### 从页面属性{#rolling-out-a-blueprint-from-page-properties}中滚动Blueprint
 
 1. 在&#x200B;**站点**&#x200B;控制台中，选择Blueprint中的页面并打开属性。
-1. 打开&#x200B;**Blueprint**&#x200B;选项卡。
+1. 打开 **Blueprint** 选项卡。
 1. 选择&#x200B;**转出**。
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
@@ -298,7 +296,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 >同步执行使用[On Rollout](/help/sites-administering/msm-sync.md#rollout-triggers)触发器的转出配置。
 
 1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面并打开属性。
-1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 打开 **Live Copy** 选项卡。
 1. 单击或点按&#x200B;**同步**。
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
@@ -547,7 +545,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 #### 从页面属性{#reset-a-live-copy-page-from-the-page-properties}重置Live Copy页面
 
 1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面，然后选择&#x200B;**视图属性**。
-1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 打开 **Live Copy** 选项卡。
 1. 从工具栏中选择&#x200B;**重置**。
 
    ![chlimage_1-233](assets/chlimage_1-233.png)
@@ -628,7 +626,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 分离Live Copy:
 
 1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy页面，然后单击或点按&#x200B;**视图属性**。
-1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 打开 **Live Copy** 选项卡。
 1. 在工具栏上，选择&#x200B;**分离**。
 
    ![chlimage_1-236](assets/chlimage_1-236.png)
