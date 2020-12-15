@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 3%
@@ -217,7 +217,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 * 找到`AEM Communities ScormEngine Service`
 * 选择编辑图标
 
-   ![chlimage_1-337](assets/chlimage_1-337.png)
+   ![scrom-engine](assets/scrom-engine.png)
 
 * 验证以下参数值是否与[JDBC连接](#configurejdbcconnectionspool)配置一致：
    * **[!UICONTROL JDBC连接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngine* DB是SQL脚本中的默认数据库名称
