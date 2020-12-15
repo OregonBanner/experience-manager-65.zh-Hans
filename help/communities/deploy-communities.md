@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
+source-git-commit: 0e1ac02879ff09ab0e78d043450ef7114c868417
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 1%
@@ -222,7 +222,7 @@ AEM 6.5 Communities GA包括Communities包。 要了解对AEM 6.5 [Communities](
 
 因此，必须&#x200B;**编辑所有辅助发布实例的配置**&#x200B;以取消选中&#x200B;**`Primary Publisher`**&#x200B;复选框。
 
-![chlimage_1-411](assets/chlimage_1-411.png)
+![主发布者](assets/primary-publisher.png)
 
 对于发布场中的所有其他（辅助）发布实例：
 
@@ -266,11 +266,11 @@ AEM 6.5 Communities GA包括Communities包。 要了解对AEM 6.5 [Communities](
 
 #### 默认代理（发布）{#default-agent-publish}
 
-![chlimage_1-412](assets/chlimage_1-412.png)
+![default-agent-publish](assets/default-agent-publish.png)
 
 #### 反向复制代理（发布反向）{#reverse-replication-agent-publish-reverse}
 
-![chlimage_1-413](assets/chlimage_1-413.png)
+![反向复制代理](assets/reverse-replication-agent.png)
 
 ### 作者{#tunnel-service-on-author}上的隧道服务
 
@@ -293,7 +293,7 @@ AEM 6.5 Communities GA包括Communities包。 要了解对AEM 6.5 [Communities](
 * 选中&#x200B;**enable**&#x200B;框
 * 选择&#x200B;**保存**
 
-   ![chlimage_1-414](assets/chlimage_1-414.png)
+   ![隧道服务](assets/tunnel-service.png)
 
 ### 复制加密密钥{#replicate-the-crypto-key}
 
@@ -353,7 +353,7 @@ AEM Communities有两个功能要求所有AEM服务器实例使用相同的加�
 
 * [刷新Granite加密捆绑](#refresh-the-granite-crypto-bundle)
 
-   ![chlimage_1-415](assets/chlimage_1-415.png)
+   ![replicare-repository](assets/replicare-repository.png)
 
 #### 刷新Granite加密包{#refresh-the-granite-crypto-bundle}
 
@@ -364,7 +364,7 @@ AEM Communities有两个功能要求所有AEM服务器实例使用相同的加�
 * 找到`Adobe Granite Crypto Support`捆绑包(com.adobe.granite.crypto)
 * 选择&#x200B;**刷新**
 
-   ![chlimage_1-416](assets/chlimage_1-416.png)
+   ![花岗岩加密](assets/granite-crypto.png)
 
 * 稍后，将显示&#x200B;**Success**对话框：
    `Operation completed successfully.`
