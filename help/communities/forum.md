@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 8%
@@ -49,13 +49,13 @@ ht-degree: 8%
 
 当包含[必需的客户端库](/help/communities/essentials-forum.md#essentials-for-client-side)时，`Forum`组件的显示方式如下：
 
-![chlimage_1-60](assets/chlimage_1-60.png)
+![论坛——组件](assets/forum-component.png)
 
 ### 配置论坛{#configuring-a-forum}
 
 选择要访问的已放置`Forum`组件，然后选择打开编辑对话框的`Configure`图标。
 
-![chlimage_1-61](assets/chlimage_1-61.png)
+![configure-new](assets/configure-new.png)
 
 ![论坛——配置](assets/forum-config.png)
 
