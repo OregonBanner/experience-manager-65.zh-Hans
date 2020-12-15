@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 translation-type: tm+mt
-source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+source-git-commit: 7f1ae2d4ab361bc039c1098daa0ef944ec9df639
 workflow-type: tm+mt
-source-wordcount: '6722'
-ht-degree: 2%
+source-wordcount: '6648'
+ht-degree: 1%
 
 ---
 
@@ -43,15 +43,12 @@ ht-degree: 2%
 >[!NOTE]
 >
 >* 在配置性能优化后，请按照[Tough Day](/help/sites-developing/tough-day.md)中的步骤测试重载下的环境。
->* 另请参阅[性能调整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)。
-
->
-
+>* 另请参阅[性能调整提示。](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 
 ## 性能优化方法{#performance-optimization-methodology}
 
-CQ项目的性能优化方法可以用五个非常简单的规则来总结，这些规则可以遵循以避免开始的性能问题：
+AEM项目的性能优化方法可以归纳为五个非常简单的规则，这些规则可以遵循，以避免开始的性能问题：
 
 1. [优化计划](#planning-for-optimization)
 1. [模拟现实](#simulate-reality)
@@ -117,13 +114,13 @@ CQ项目的性能优化方法可以用五个非常简单的规则来总结，这
 
 * 在发布时衡量(没有与创作环境相关的间接费用)
 * 在服务器上测量（无网络开销）
-* 未缓存（无CQ输出缓存，无调度程序缓存）
+* 未缓存(没有AEM输出缓存，没有调度程序缓存)
 * 仅适用于具有多个依赖关系(HTML、JS、PDF...)的复杂项目
 * 系统上没有其他负载
 
 有些问题经常导致性能问题。 主要围绕：
 
-* 调度程序缓存效率低
+* 调度程序缓存效率低下
 * 在普通显示模板中使用查询。
 
 JVM和操作系统级别调整通常不会导致性能的大幅提升，因此应在优化周期的最后阶段执行。
@@ -132,9 +129,9 @@ JVM和操作系统级别调整通常不会导致性能的大幅提升，因此�
 
 在通常的性能优化练习中，您的最好朋友是：
 
-* `request.log`
-* 基于组件的定时
-* 最后，也不是最后一个java profiler。
+* 不为目标组件考虑 `request.log`
+* 基于组件的计时
+* 最后，但不是最后一个Java概要分析器。
 
 ### 加载和编辑数字资产时的性能{#performance-when-loading-and-editing-digital-assets}
 
@@ -151,7 +148,7 @@ JVM和操作系统级别调整通常不会导致性能的大幅提升，因此�
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
-* 进行编辑的时间范围（通常为工作日的时长，对于国际运营来说更多）。
+* 进行编辑的时间范围（通常为工作日的时长，对于国际操作则更多）。
 * 上传的图像的平均大小（以及每个图像生成的演绎版的大小）(MB)。
 * 确定平均数据率：
 
@@ -161,7 +158,7 @@ JVM和操作系统级别调整通常不会导致性能的大幅提升，因此�
 
 ## 性能监视{#performance-monitoring}
 
-性能（或缺乏性能）是用户首先注意到的事情之一，因此与任何具有用户界面的应用程序一样，性能至关重要。 要优化CQ安装的性能，您需要监视实例的各种属性及其行为。
+性能（或缺乏性能）是用户首先注意到的事情之一，因此与任何具有用户界面的应用程序一样，性能至关重要。 要优化AEM安装的性能，您需要监视实例的各种属性及其行为。
 
 有关如何执行性能监视的信息，请参见[监视性能](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance)。
 
@@ -169,15 +166,14 @@ JVM和操作系统级别调整通常不会导致性能的大幅提升，因此�
 
 一个基本的出发点是，当系统正常运行时，对系统有很好的了解。 除非您知道环境在正常运行时的“外观”和“行为”，否则在性能恶化时很难找到问题所在。 这意味着您应花一些时间调查系统在平稳运行时的运行情况，并确保收集性能信息是持续的任务。 这将为您提供在性能受到影响时进行比较的基础。
 
-下图说明了CQ内容请求可采用的路径，因此说明了影响性能的不同元素的数量。
+下图说明AEM内容请求可采用的路径，因此说明影响性能的不同元素的数量。
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 
 性能也是卷和容量之间的平衡：
 
-**卷** 系统处理和传送的输出量。
-
-**容** 量系统交付卷的能力。
+* **Volume**  —系统处理和传送的输出量。
+* **容量** -系统交付卷的能力。
 
 这可以在整个Web链的不同位置进行说明。
 
@@ -206,7 +202,7 @@ JVM和操作系统级别调整通常不会导致性能的大幅提升，因此�
 
 ## 性能{#configuring-for-performance}配置
 
-CQ（和／或基础CRX）的某些方面可以配置为优化性能。 以下是可能性和建议，在进行更改之前，您必须确定是否或如何使用相关功能。
+可以配置AEM（和／或基础存储库）的某些方面以优化性能。 以下是可能性和建议，在进行更改之前，您必须确定是否或如何使用相关功能。
 
 >[!NOTE]
 >
@@ -223,26 +219,28 @@ CQ（和／或基础CRX）的某些方面可以配置为优化性能。 以下�
 
 ### 并发工作流处理{#concurrent-workflow-processing}
 
-限制并发运行的工作流进程数以提高性能。 默认情况下，工作流引擎处理的工作流数与Java VM可用的处理器数相同。 当工作流步骤需要大量处理资源（RAM或CPU）时，并行运行其中几个工作流可能会对可用服务器资源产生高需求。
+限制并发运行的工作流进程数以提高性能。 默认情况下，工作流引擎处理的工作流数与Java VM可用的处理器数相同。 当工作流步骤需要大量处理资源（RAM或CPU）时，并行运行这些工作流中的若干个可能会对可用服务器资源提出高要求。
 
 例如，当上传图像（或通常为DAM资产）时，工作流会自动将图像导入DAM。 图像通常是高分辨率的，并且处理时可轻松消耗数百MB的堆。 并行处理这些图像会给存储子系统和垃圾收集器带来高负载。
 
 工作流引擎使用Apache Sling作业队列来处理和计划工作项处理。 默认情况下，已从Apache Sling作业队列配置服务工厂创建以下作业队列服务以处理工作流作业：
 
 * Granite工作流队列：大多数工作流步骤（如处理DAM资产的步骤）都使用Granite工作流队列服务。
-* Granite工作流外部进程作业队列：此服务用于特殊的外部工作流步骤，通常用于联系外部系统和轮询结果。 例如，InDesign媒体提取流程步骤将作为外部流程实施。 工作流引擎使用外部队列处理轮询。 (请参阅[com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。)
+* Granite工作流外部进程作业队列：此服务用于特殊的外部工作流步骤，这些步骤通常用于联系外部系统和轮询结果。 例如，InDesign媒体提取流程步骤将作为外部流程实施。 工作流引擎使用外部队列处理轮询。 (请参阅[com.day.cq.workflow.exec.WorkflowExternalProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。)
 
 配置这些服务以限制并发运行的工作流进程的最大数量。
 
-**注意：** 配置这些作业队列会影响所有工作流，除非您为特定工作流模型创建了作业队列(请参 [阅以下为特定工作流模型配](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) 置队列)。
+>[!NOTE]
+>
+>配置这些作业队列会影响所有工作流，除非您为特定工作流模型创建了作业队列（请参阅下面的[为特定工作流模型配置队列](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow)）。
 
-**存储库中的配置**
+#### 存储库{#configuration-in-the-repo}中的配置
 
 如果您使用sling:OsgiConfig节点](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)配置服务[，您需要找到现有服务的PID，例如：org.apache.sling.事件.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台发现PID。
 
-您需要配置名为queue.maxparallel的属性。
+您需要配置名为`queue.maxparallel`的属性。
 
-**Web控制台中的配置**
+#### Web控制台{#configuration-in-the-web-console}中的配置
 
 要使用Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)配置这些服务[，请在Apache Sling作业队列配置服务工厂下找到现有配置项。
 
@@ -254,30 +252,30 @@ CQ（和／或基础CRX）的某些方面可以配置为优化性能。 以下�
 
 当工作流模型执行时，它们会为特定主题创建Sling作业。 默认情况下，该主题与为常规Granite工作流队列或Granite工作流外部进程作业队列配置的主题相匹配：
 
-* com/adobe/granite/workflow/job&amp;ast;
-* com/adobe/granite/workflow/external/job&amp;ast;
+* `com/adobe/granite/workflow/job*`
+* `com/adobe/granite/workflow/external/job*`
 
-工作流模型生成的实际作业主题包括模型特定后缀。 例如，[!UICONTROL DAM更新资产]工作流模型生成具有以下主题的作业：
+工作流模型生成的实际作业主题包括模型特定后缀。 例如，**DAM更新资产**&#x200B;工作流模型生成具有以下主题的作业：
 
-com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model
+`com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model`
 
 因此，您可以为主题创建与工作流模型的作业主题匹配的作业队列。 配置队列的性能相关属性只影响生成与队列主题匹配的作业的工作流模型。
 
-以下过程以[!UICONTROL DAM更新资产]工作流为例，为工作流创建作业队列。
+以下过程以&#x200B;**DAM更新资产**&#x200B;工作流为例，为工作流创建作业队列。
 
-1. 执行要为其创建作业队列的工作流模型，以生成主题统计信息。 例如，向资产中添加一个图像以执行[!UICONTROL  DAM更新资产]工作流。
-1. 打开Sling作业控制台。 ([http://localhost:4502/system/console/slingevent](http://localhost:4502/system/console/slingevent))
+1. 执行要为其创建作业队列的工作流模型，以生成主题统计信息。 例如，向资产中添加一个图像以执行&#x200B;**DAM更新资产**&#x200B;工作流。
+1. 打开Sling作业控制台(`https://<host>:<port>/system/console/slingevent`)。
 1. 在控制台中发现与工作流相关的主题。 对于DAM更新资产，可找到以下主题：
 
-   * com/adobe/granite/workflow/external/job/etc/workflow/models/dam/update_asset/jcr_content/model
-   * com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model
-   * com/adobe/granite/workflow/job/etc/workflow/models/dam-xmp-writeback/jcr_content/model
+   * `com/adobe/granite/workflow/external/job/etc/workflow/models/dam/update_asset/jcr_content/model`
+   * `com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model`
+   * `com/adobe/granite/workflow/job/etc/workflow/models/dam-xmp-writeback/jcr_content/model`
 
 1. 为每个主题创建一个作业队列。 要创建作业队列，请为Apache Sling作业队列工厂服务创建工厂配置。
 
    工厂配置与[并发工作流处理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)中描述的Granite工作流队列相似，但“主题”属性与工作流作业的主题匹配。
 
-### CQ5 DAM资产同步服务{#cq-dam-asset-synchronization-service}
+### AEM DAM资产同步服务{#cq-dam-asset-synchronization-service}
 
 `AssetSynchronizationService`用于同步来自装载式存储库（包括LiveLink、Documentum等）的资产。 默认情况下，每300秒（5分钟）进行一次定期检查，因此，如果您不使用挂载式资料库，则可以禁用此服务。
 
@@ -292,8 +290,8 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 其他注意事项包括：
 
-* 在发布中将“进行中的”与“最终”分开
-* 将创作时的内部用户与发布时的外部访客/用户（例如代理、新闻代表、客户、学生等）分开。
+* 在发布时将作者的“在创作中的作品”与“最终作品”分开
+* 将创作时的内部用户与发布时的外部访客/用户（例如代理、新闻代表、客户、学生等）相分离。
 
 ## 质量保证最佳实践{#best-practices-for-quality-assurance}
 
@@ -301,7 +299,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 本节旨在对在&#x200B;*publish*&#x200B;环境上为性能测试专门定义测试概念时涉及的问题进行标准化概述。 这主要是QA工程师、项目经理和系统管理员感兴趣的。
 
-下面介绍了在&#x200B;*Publish*&#x200B;环境上对CQ应用程序进行性能测试的标准化方法。 这涉及以下5个阶段：
+下面介绍了在&#x200B;*Publish*&#x200B;环境上对AEM应用程序进行性能测试的标准化方法。 这涉及以下5个阶段：
 
 * [知识验证](#verification-of-knowledge)
 * [范围定义](#scope-definition)
@@ -316,7 +314,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 第一步是文档您需要了解的基础信息，然后才能开始测试：
 
 * 测试环境的架构
-* 详细列出需要测试的内部元素的应用程序地图（隔离和组合）
+* 详细列出需要测试的内部元素的应用程序图（隔离和组合）
 
 #### 测试架构{#test-architecture}
 
@@ -362,14 +360,14 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 根据以下原则。
 
-**组件断点**
+#### 组件断点{#component-breakpoints}
 
 * 每个组件在与性能相关时都有一个特定的断点。 这意味着组件在达到特定点之前可以显示良好的性能，之后性能会迅速下降。
 * 要获得应用程序的完整概述，您必须首先验证您的组件以确定何时到达每个断点。
 * 要查找断点，您可以执行负载测试，在一段时间内，增加用户数以创建不断增加的负载。 通过监视此负载和组件的响应，您将在到达组件的断点时遇到特定的性能行为。 该积分可以按每秒并发事务处理数以及并发用户数来限定（如果组件对此KPI敏感）。
 * 然后，此信息可以作为改进的基准，指示所使用的度量的效率，并帮助定义测试方案。
 
-**交易**
+#### 事务{#transactions}
 
 * 术语事务用于表示整个网页的请求，包括页面本身和所有后续调用；例如，页面请求、任何AJAX调用、图像和其他对象。**请求向下钻取**
 * 要完全分析每个请求，您可以表示调用堆栈的每个元素，然后合计每个请求的平均处理时间。
@@ -388,24 +386,24 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 在这两种情况下，当预定义的用户数使用系统时，您都可以定义每秒的预期事务处理数。
 
-| 组件 | 测试类型 | #用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 组件 | 测试类型 | 否. 用户数 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 主页单用户 | 平均 | 1 | 1 |  |  |
-|  | 峰 | 3 | 3 |  |  |
-| 主页100个用户 | 平均 | 100 | 3 |  |  |
+|  | 峰 | 1 | 3 |  |  |
+| 主页100个用户 | 平均 | 100 | 1 |  |  |
 |  | 峰 | 100 | 1 |  |
 
 #### 组合组件测试{#combined-component-tests}
 
 组合测试组件可更仔细地反映应用程序行为。 同样，必须测试平均和峰值条件。
 
-| 方案 | 组件 | #用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 方案 | 组件 | 否. 用户数 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
-| 混合平均 | 主页 | 10 | 3 |  |  |
+| 混合平均 | 主页 | 10 | 1 |  |  |
 |  | 搜索 | 10 | 3 |  |  |
 |  | 新闻 | 10 | 2 |  |  |
 |  | 事件 | 10 | 1 |  |  |
-|  | 激活 | 10 | 3 |  | 创作行为模拟。 |
+|  | 激活 | 10 | 1 |  | 创作行为模拟。 |
 | 混合峰 | 主页 | 100 | 5 |  |  |
 |  | 搜索 | 50 | 5 |  |  |
 |  | 新闻 | 100 | 10 |  |  |
@@ -416,7 +414,7 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 在网站发布后的头几天，您会发现兴趣级别会提高。 这可能比您测试的峰值还要大。 强烈建议测试“开始使用”场景，以确保系统能够满足此情况。
 
-| 方案 | 测试类型 | #用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 方案 | 测试类型 | 否. 用户数 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 向实时峰值迈进 | 主页 | 200 | 20 |  |  |
 |  | 搜索 | 100 | 10 |  |  |
@@ -429,28 +427,28 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 还必须测试错误情景，以确保系统能正确、适当地反应。 不仅在于错误本身的处理方式，还在于它可能对性能的影响。 例如：
 
 * 当用户尝试在搜索框中输入无效搜索词时会发生什么情况
-* 当搜索词如此一般以致返回过多结果时会发生什么情况
+* 当搜索词过于笼统以致返回过多结果时会发生什么情况
 
 在设计这些测试时，应记住并非所有方案都会定期发生。 但是，它们对整个系统的影响很重要。
 
-| 错误方案 | 错误类型 | #用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 错误方案 | 错误类型 | 否. 用户数 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 搜索组件过载 | 搜索全局通配符（星号） | 10 | 1 |  | 仅&amp;ast;&amp;ast;&amp;ast;。 |
 |  | 停止单词 | 20 | 2 |  | 搜索停止词。 |
-|  | 空字符串 | 10 | 1 |  | 搜索空字符串。 |
+|  | 空字符串 | 10 | 3 |  | 搜索空字符串。 |
 |  | 特殊字符 | 10 | 1 |  | 搜索特殊字符。 |
 
 #### 耐力测试{#endurance-tests}
 
 系统连续运行一段时间后才会遇到某些问题；不管是几个小时，甚至几天。 使用耐久性测试来测试在所需时间段内的恒定平均载荷。 然后可以分析任何性能退化。
 
-| 方案 | 测试类型 | #用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 方案 | 测试类型 | 否. 用户数 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
-| 耐力测试（72小时） | 主页 | 10 | 3 |  |  |
-|  | 搜索 | 10 | 1 |  |  |
+| 耐力测试（72小时） | 主页 | 10 | 1 |  |  |
+|  | 搜索 | 10 | 3 |  |  |
 |  | 新闻 | 20 | 2 |  |  |
-|  | 事件 | 10 | 3 |  |  |
-|  | 激活 | 1 | 1 |  | 创作行为模拟。 |
+|  | 事件 | 10 | 1 |  |  |
+|  | 激活 | 1 | 3 |  | 创作行为模拟。 |
 
 ### 优化{#optimization}
 
@@ -474,14 +472,14 @@ com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/
 
 ### 报告 {#reporting}
 
-需要持续的报告，以便让所有人了解情况；如之前在颜色编码中所述，架构图可用于此。
+需要持续的报告，以便让所有人了解状态，如之前在颜色编码中提到的，架构图可用于此。
 
 完成所有测试后，您将要报告：
 
 * 遇到任何严重错误
 * 仍需进一步调查的非关键问题
-* 在测试过程中所作的任何假设
-* 测试中提出的任何建议
+* 在测试过程中作出的任何假设
+* 测试中的任何建议
 
 ## 使用调度程序{#optimizing-performance-when-using-the-dispatcher}时优化性能
 
@@ -556,7 +554,7 @@ www.myCompany.com/pictures/gallery.christmas.1.html
 
 >[!NOTE]
 >
->此URL调用与gallery.html相同的页面和模板。 在模板定义中，您可以指定呈现页面的脚本，也可以对所有页面使用相同的脚本。
+>此URL调用与`gallery.html`相同的页面和模板。 在模板定义中，您可以指定呈现页面的脚本，也可以对所有页面使用相同的脚本。
 
 #### 按URL{#customize-by-url}进行自定义
 
@@ -574,7 +572,7 @@ www.myCompany.com/news/main.large.html
 >
 >对于大多数布局方面，也可以使用样式表和／或客户端脚本。 通常，这些功能在缓存方面非常有效。
 >
->这对于打印版本也很有用，在打印版本中，您可以使用URL，例如：&quot;
+>这对于打印版本也很有用，在打印版本中，您可以使用URL，例如：
 >
 >`www.myCompany.com/news/main.print.html`
 >
@@ -589,7 +587,7 @@ www.myCompany.com/news/main.large.html
 
    `<page file name>.<image file name>`
 
-例如，可将页面myPage.html的标题存储在文件myPage.title.gif中。 如果页面已更新，则会自动删除此文件，因此对页面标题所做的任何更改都会自动反映在缓存中。
+例如，可以在`file myPage.title.gif`中存储页面`myPage.html`的标题。 如果页面已更新，则会自动删除此文件，因此对页面标题所做的任何更改都会自动反映在缓存中。
 
 >[!NOTE]
 >
@@ -609,23 +607,24 @@ www.myCompany.com/news/main.large.html
 
 #### 个性化 {#personalization}
 
-调度程序无法缓存个性化数据，因此建议您将个性化限制在必要的位置。 说明原因：
+建议您将个性化限制在必要的位置。 说明原因：
 
 * 如果您使用可自由自定义的开始页，则每次用户请求该页面时，都必须合成该页面。
 * 相反，如果优惠10个不同的开始页，则可以缓存每个页，从而提高性能。
 
->[!NOTE]
->
->如果您个性化每个页面（例如，将用户名放入标题栏），则无法缓存该页面，这可能会对性能产生重大影响。
->
->但是，如果必须执行此操作，您可以：
->
->* 使用iFrames将页面拆分为一个部分，该部分对于所有用户是相同的，而另一部分对于用户的所有页面是相同的。 然后，可以缓存这两个部分。
->* 使用客户端JavaScript显示个性化信息。 但是，必须确保在用户关闭JavaScript时页面仍能正确显示。
+>[!TIP]
+>有关配置Dispatcher缓存的更多详细信息，请参见[AEM Dispatcher缓存教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)及其[缓存受保护内容一节。](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)
 
+如果您对每个页面进行个性化设置（例如，将用户的姓名放入标题栏），则会影响性能。
+
+>[!TIP]
+>有关缓存安全内容的信息，请参阅调度程序指南中的[缓存安全内容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)。
+
+关于将受限内容和公开内容混合到一页上，您可能希望考虑一种策略，该策略利用Dispatcher中的服务器端包括，或通过浏览器中的Ajax在客户端包括。
+
+>[!TIP]
 >
-
-
+>有关处理混合的公共和受限内容，请参阅[设置Sling Dynamic Include。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
 
 #### 粘性连接{#sticky-connections}
 
@@ -635,12 +634,12 @@ www.myCompany.com/news/main.large.html
 
 浏览器可以通过两种方式确定文件类型：
 
-1. 通过其扩展(例如，.html、.gif、.jpg等)
+1. 通过其扩展(例如，`.html`、`.gif`、`.jpg`等。)
 1. 按服务器随文件发送的MIME类型。
 
 对于大多数文件，MIME类型隐含在文件扩展名中。 i.e.:
 
-1. 通过其扩展(例如，.html、.gif、.jpg等)
+1. 通过其扩展(例如，`.html`、`.gif`、`.jpg`等。)
 1. 按服务器随文件发送的MIME类型。
 
 如果文件名没有扩展名，则显示为纯文本。
@@ -650,11 +649,11 @@ www.myCompany.com/news/main.large.html
 要确保正确缓存文件，请遵循以下准则：
 
 * 确保文件始终具有正确的扩展名。
-* 避免使用通用文件服务脚本，这些脚本具有URL，如download.jsp?file=2214。 重写脚本以使用包含文件规范的URL;对于上一个示例，它为download.2214.pdf。
+* 避免使用具有`download.jsp?file=2214`等URL的通用文件服务脚本。 重写脚本以使用包含文件规范的URL。 对于上一个示例，此值为`download.2214.pdf`。
 
 ## 备份性能{#backup-performance}
 
-本节介绍一系列基准测试，用于评估CQ备份的性能以及备份活动对应用程序性能的影响。 CQ备份在运行时对系统造成很大负载，我们会测量这一情况，以及尝试调制这些效果的备份延迟设置的影响。 其目标是优惠一些参考数据，这些参考数据是关于实际配置和生产数据量中备份的预期性能，并就如何估计计划系统的备份时间提供指导。
+本节介绍一系列基准测试，用于评估AEM备份的性能以及备份活动对应用程序性能的影响。 AEM备份在运行时对系统造成很大负载，我们会测量这一情况，以及尝试调制这些效果的备份延迟设置的影响。 其目标是优惠一些参考数据，这些参考数据是关于实际配置和生产数据量中备份的预期性能，并就如何估计计划系统的备份时间提供指导。
 
 ### 引用环境{#reference-environment}
 
@@ -667,72 +666,43 @@ www.myCompany.com/news/main.large.html
 * 硬件RAID控制器；RAID0+5阵列中有8个驱动器
 * VMware映像CPU x 2英特尔至强E5540 @ 2.53GHz
 * RedHat Linux 2.6.18-194.el5;Java 1.6.0_29
-* 运行CQ 5.5 GM的单作者实例。
+* 单作者实例
 
 此服务器上的磁盘子系统速度很快，它代表可能用于生产服务器的高性能RAID配置。 备份性能对磁盘性能可能很敏感，而此环境的结果反映了在非常快速的RAID配置上的性能。 VMWare映像配置为在RAID阵列上具有物理驻留在本地磁盘存储中的单个大磁盘卷。
 
-CQ配置将存储库和数据存储放在同一逻辑卷上，并与所有操作系统和CQ软件一起放置。 备份的目标目录也位于此逻辑文件系统中。
+AEM配置将存储库和数据存储放在同一逻辑卷上，并与所有操作系统和AEM软件一起放置。 备份的目标目录也位于此逻辑文件系统中。
 
 #### 数据卷{#data-volumes}
 
 下表说明了备份基准中使用的数据卷的大小。 首先安装初始基准内容，然后添加额外的已知数据量以增加备份内容的大小。 备份将以特定增量创建，以代表内容和一天内可能产生的内容的大幅增加。 内容（页面、图像、标记）的分发大致基于逼真的制作资产组合。 页面、图像和标记最多限制为800个子页面。 每个页面将包括标题、Flash、文本／图像、视频、幻灯片、表单、表、云和传送组件。 图像将从400个大小从37 kB到594 kB的唯一文件池上传。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>内容</strong></td>
-   <td><strong>节点</strong></td>
-   <td><strong>页面</strong></td>
-   <td><strong>图像</strong></td>
-   <td><strong>标记</strong></td>
-  </tr>
-  <tr>
-   <td>基本安装</td>
-   <td>6.961万</td>
-   <td>562</td>
-   <td>256</td>
-   <td>237</td>
-  </tr>
-  <tr>
-   <td>用于增量备份的小内容</td>
-   <td><br type="_moz" /> </td>
-   <td>+100</td>
-   <td>+2</td>
-   <td>+2</td>
-  </tr>
-  <tr>
-   <td>大型内容，可进行完整备份</td>
-   <td><br type="_moz" /> </td>
-   <td>+10,000</td>
-   <td>+100</td>
-   <td>+100</td>
-  </tr>
- </tbody>
-</table>
+|内容|节点|页面|图像|标记|
+||—||—||—|
+|基本安装|69 610|562|256|237|
+|用于增量备份的小内容||+100|+2|+2|
+|用于完整备份的大内容||+10 000|+100|+100||
 
-每次重复时都添加额外的内容集，重复备份基准。
+每次重复时添加的附加内容集会重复备份基准。
 
 #### 基准方案{#benchmark-scenarios}
 
-备份基准测试涵盖两种主要情况：在系统处于大负荷时进行备份，在系统空闲时进行备份。 尽管一般建议在CQ系统尽可能空闲时执行备份，但在某些情况下，必须在系统负载不足时运行备份。
+备份基准测试涵盖两种主要情况：在系统处于大负荷时进行备份，在系统空闲时进行备份。 尽管一般建议在AEM尽可能空闲时执行备份，但在某些情况下，必须在系统负载不足时运行备份。
 
-**在CQ** 上执行空闲状态备份时不会执行其他活动。
+* **空闲状态** -在AEM上执行备份时不使用其他活动。
+* **在“Load** - Backups（负载——备份）”下，当系统从联机进程负载不足80%时执行备份。备份延迟会有所不同，因此会看到对负载的影响。
 
-**在** LoadBackups下，当系统从联机进程负载不足80%时执行。备份延迟会有所不同，因此会看到对负载的影响。
-
-从CQ服务器日志获取备份时间和结果备份的大小。 通常建议在CQ空闲时（如半夜）安排非时备份。 此方案代表建议的方法。
+备份时间和结果备份的大小从AEM服务器日志中获取。 通常建议在AEM空闲时（如半夜）安排非时备份。 此方案代表建议的方法。
 
 加载将由页面创建／删除、遍历和查询组成，其中大部分加载来自页面遍历和查询。 添加和删除过多页面会不断增大工作区大小并阻止备份完成。 脚本将使用的加载分布为75%的页面遍历、24%的查询和1%的页面创建（单个级别没有嵌套子页面）。 在空闲系统上，每秒的峰值平均事务数是通过4个并发线程实现的，这是在负载下测试备份时使用的。
 
 负载对备份性能的影响可以通过此应用程序负载时和不时的性能差异来估计。 通过比较每小时事务处理中的方案吞吐量，以及在进行并发备份时，以及在使用不同的“备份延迟”设置时，备份对应用程序吞吐量的影响，可以发现备份对应用程序吞吐量的影响。
 
-**延迟** 设置对于多种情况，我们还使用10毫秒（默认）、1毫秒和0毫秒的值来更改备份延迟设置，以了解此设置如何影响备份性能。
-
-**备份** 类型所有备份都是存储库的外部备份，存储库创建到备份目录时不创建zip文件，但在比较中，tar命令直接使用的情况除外。由于增量备份不能创建到zip文件，或者以前的完全备份是zip文件，因此备份目录方法在生产情况下最常使用。
+* **延迟设置** -对于多种情况，我们还使用10毫秒（默认）、1毫秒和0毫秒的值来更改备份延迟设置，以了解此设置对备份性能的影响。
+* **备份类型** -所有备份都是存储库的外部备份，存储库创建到备份目录时不创建zip文件，但在比较中，tar命令直接使用的情况除外。由于增量备份不能创建到zip文件，或者以前的完全备份是zip文件，因此备份目录方法在生产情况下最常使用。
 
 ### 结果摘要{#summary-of-results}
 
-#### 备份时间和吞吐量{#backup-time-and-troughput}
+#### 备份时间和吞吐量{#backup-time-and-throughput}
 
 这些基准测试的主要结果是显示备份时间随着备份类型和数据总量的不同而如何变化。 下图显示了使用默认备份配置获得的备份时间，它是页总数的函数。
 
@@ -751,7 +721,7 @@ CQ配置将存储库和数据存储放在同一逻辑卷上，并与所有操作
 提供备份延迟参数以限制备份可能干扰生产工作负载的范围。 该参数指定等待时间（以毫秒为单位），该等待时间会逐个地分散到备份操作中。 整体效果部分取决于受影响的文件的大小。 以MB/秒为单位衡量备份性能提供了一种比较延迟对备份的影响的合理方法。
 
 * 与常规应用程序负载同时运行备份将对常规负载的吞吐量产生负面影响。
-* 影响可能很小，只有5%，或者可能非常显着，导致吞吐量下降75%，这可能比任何事情都更取决于应用程序。
+* 影响可能很小（只有5%）或非常显着，导致吞吐量下降75%，这可能比任何情况都更取决于应用程序。
 * 备份对CPU的负载并不大，因此与I/O密集型工作负载相比，对CPU密集型生产工作负载的影响更小。
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
@@ -764,4 +734,3 @@ CQ配置将存储库和数据存储放在同一逻辑卷上，并与所有操作
 
 * [管理——备份和恢复](/help/sites-administering/backup-and-restore.md)
 * [管理——容量和卷](/help/managing/best-practices-further-reference.md#capacity-and-volume)
-
