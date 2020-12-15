@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装模式和
 
 首次启动MySQL Workbench时（除非已用于其他用途），它尚不显示任何连接：
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![mysqlconnection](assets/mysqlconnection.png)
 
 ### 新连接设置{#new-connection-settings}
 
@@ -105,13 +105,13 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装模式和
 
 #### 新建社区连接{#new-communities-connection}
 
-![chlimage_1-105](assets/chlimage_1-105.png)
+![社区连接](assets/community-connection.png)
 
 ## 数据库设置{#database-setup}
 
 打开Communities连接以安装数据库。
 
-![chlimage_1-105](assets/chlimage_1-106.png)
+![install-database](assets/install-database.png)
 
 ### 获取SQL脚本{#obtain-the-sql-script}
 
@@ -124,9 +124,9 @@ SQL脚本从AEM存储库获取：
 1. 选择/libs/social/config/datastore/dsrp/模式文件夹
 1. 下载 `init-schema.sql`
 
-   ![chlimage_1-107](assets/chlimage_1-107.png)
+   ![database-模式-crxde](assets/database-schema-crxde.png)
 
-下载模式的一种方法是
+下载模式的一种方法是：
 
 * 为sql文件选择`jcr:content`节点
 * 注意，`jcr:data`属性的值是视图链接
@@ -143,10 +143,10 @@ SQL脚本从AEM存储库获取：
 
 在MySQL Workbench中
 
-* 从“文件”下拉菜单
-* 选择下载的`init_schema.sql`
+* 从“文件”下拉菜单中，选择&#x200B;**[!UICONTROL 打开SQL脚本]**&#x200B;选项
+* 选择下载的`init_schema.sql`脚本
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![select-sql-script](assets/select-sql-script.png)
 
 #### 第2步：执行SQL Script {#step-execute-sql-script}
 
@@ -154,13 +154,13 @@ SQL脚本从AEM存储库获取：
 
 在以下映像中，`init_schema.sql`文件已准备就绪可以执行：
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![execute-sql-script](assets/execute-sql-script.png)
 
 #### 刷新 {#refresh}
 
 执行脚本后，必须刷新`Navigator`的`SCHEMAS`部分，才能看到新数据库。 使用“模式”右侧的刷新图标：
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![refresh-模式](assets/refresh-schema.png)
 
 ## 配置JDBC连接{#configure-jdbc-connection}
 
@@ -179,7 +179,7 @@ SQL脚本从AEM存储库获取：
 * 找到`Day Commons JDBC Connections Pool`
 * 选择`+`图标以创建新连接配置。
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+   ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
 
 * 输入以下值：
 
