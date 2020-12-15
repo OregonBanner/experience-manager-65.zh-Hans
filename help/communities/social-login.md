@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 6d0ff6ae47688ba7f0e071bad40808fb3466246f
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 1%
@@ -391,13 +391,13 @@ Facebook和Twitter的后续步骤相同：
 * 选择以打开要编辑的配置。
 * 选择&#x200B;**[!UICONTROL 保存]**。
 
-![chlimage_1-489](assets/chlimage_1-489.png)
+![graniteauth](assets/graniteoauth.png)
 
 >[!CAUTION]
 >
 >请注意，不要将身份验证处理程序与&#x200B;*AdobeGranite OAuth应用程序和提供程序*&#x200B;的Facebook或Twitter实例混淆。
 
-![chlimage_1-490](assets/chlimage_1-490.png)
+![graniteauth1](assets/graniteoauth1.png)
 
 ### AdobeGranite OAuth应用程序和提供程序{#adobe-granite-oauth-application-and-provider}
 
@@ -414,7 +414,7 @@ Facebook和Twitter的后续步骤相同：
 
    * 找到&#x200B;**[!UICONTROL 客户端ID]**&#x200B;与&#x200B;**[!UICONTROL 应用程序ID]**&#x200B;匹配的实例。
 
-      ![chlimage_1-491](assets/chlimage_1-491.png)
+      ![graniteauth2](assets/graniteoauth2.png)
 
       除以下属性外，保留配置的其他属性：
 
@@ -493,7 +493,7 @@ Facebook和Twitter的后续步骤相同：
 
 * 对于&#x200B;**名称** `oauthid-123`，将&#x200B;*123*&#x200B;替换为Facebook ***应用ID***&#x200B;或Twitter ***消费者(API)密钥***，该密钥是&#x200B;**客户ID**[AdobeGranite OAuth应用程序和提供程序](social-login.md#adobe-granite-oauth-application-and-provider)配置。
 
-   ![chlimage_1-492](assets/chlimage_1-492.png)
+   ![graniteauth-crxde](assets/graniteoauth-crxde.png)
 
 有关其他信息和工具，请参阅[Oak查询和索引](../../help/sites-deploying/queries-and-indexing.md)。
 
