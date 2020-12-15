@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 418e7fad2d990f1a7cb3b69ab4c290ca1b7075ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -72,7 +72,7 @@ ht-degree: 1%
 1. 选择&#x200B;**[!UICONTROL 删除]**
 1. 选择&#x200B;**[!UICONTROL 保存全部]**
 
-![chlimage_1-70](assets/chlimage_1-70.png)
+![create-component](assets/create-component.png)
 
 ### 创建子注释组件{#create-the-child-comment-component}
 
@@ -83,7 +83,7 @@ ht-degree: 1%
 1. 导航到`/apps/custom/components/comments`节点
 1. 右键单击节点
 
-   * 选择**[!UICONTROL 创建] > **[!UICONTROL 组件……]**
+   * 选择&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 组件……]**
 
       * **标签**: *评论*
       * **标题**: *替换注释*
@@ -102,9 +102,9 @@ ht-degree: 1%
 1. 选择&#x200B;**[!UICONTROL 删除]**
 1. 选择&#x200B;**[!UICONTROL 保存全部]**
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![create-child-component](assets/create-child-component.png)
 
-![chlimage_1-72](assets/chlimage_1-72.png)
+![create-component-crxde](assets/create-component-crxde.png)
 
 ### 复制和修改默认HBS脚本{#copy-and-modify-the-default-hbs-scripts}
 
@@ -168,7 +168,7 @@ ht-degree: 1%
 * 输入“customcommentsystem.js”作为`js.txt`的内容
 * 选择&#x200B;**[!UICONTROL 保存全部]**
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![comments-clientlibs](assets/comments-clientlibs.png)
 
 ## 注册SCF型号和视图{#register-the-scf-model-view}
 
@@ -200,9 +200,9 @@ ht-degree: 1%
 
 为了在发布环境中体验扩展组件，必须复制自定义组件。
 
-一种方法是
+一种方法是：
 
-* 从全局导航
+* 从全局导航，
 
    * 选择&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]**
    * 选择&#x200B;**[!UICONTROL 激活树]**
