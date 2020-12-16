@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 4d21a61ed687caea2b1867d5321f75636f5310a3
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 1%
@@ -90,7 +90,7 @@ ht-degree: 1%
 
 下次成员登录时，将显示由第一个菜单项标识的主页。
 
-![chlimage_1-434](assets/chlimage_1-434.png)
+![enrolled-member](assets/enrolled-member.png)
 
 ### 指定任务 {#assignments}
 
@@ -106,11 +106,11 @@ ht-degree: 1%
 
 分配类型由卡左上角的图标表示。 道路的图像是用于学习路径，其中包含的支持资源数量。
 
-![chlimage_1-435](assets/chlimage_1-435.png)
+![赋值1](assets/assignment1.png)
 
 选择&#x200B;*滑雪课*&#x200B;将显示学习路径所引用的两个启动资源。
 
-![chlimage_1-436](assets/chlimage_1-436.png)
+![assignment2](assets/assignment2.png)
 
 选择&#x200B;*滑雪课1*&#x200B;将打开启用资源的详细信息页面。
 
@@ -118,7 +118,7 @@ ht-degree: 1%
 
 可在作者环境的“报告”部分记录与启用资源的交互。
 
-![chlimage_1-437](assets/chlimage_1-437.png)
+![assignment3](assets/assignment3.png)
 
 ### 滑雪目录{#ski-catalog}
 
@@ -126,7 +126,7 @@ ht-degree: 1%
 
 如果尚未直接或通过学习路径为成员分配启用资源，则可以与位于目录中的启用资源交互，并通过评论和评级提供反馈。
 
-![chlimage_1-438](assets/chlimage_1-438.png)
+![ski-catalog](assets/ski-catalog.png)
 
 ### 讨论 {#discussions}
 
@@ -138,7 +138,7 @@ ht-degree: 1%
 
 注意，除了内联仲裁，还有用于在社交媒体上共享主题或通过电子邮件发送主题的选项。
 
-![chlimage_1-439](assets/chlimage_1-439.png)
+![讨论](assets/discussions.png)
 
 ### 新增功能 {#what-s-new}
 
@@ -146,7 +146,7 @@ ht-degree: 1%
 
 仍以Sidney身份登录，选择`What's New`链接以显示活动。
 
-![chlimage_1-440](assets/chlimage_1-440.png)
+![whats-new-menu](assets/whats-new-menu.png)
 
 ## 受信任的社区成员{#trusted-community-member}
 
@@ -159,7 +159,7 @@ ht-degree: 1%
 
 登录后，请注意有一个新的菜单项`Administration`，它出现是因为该成员被授予版主角色。
 
-![chlimage_1-441](assets/chlimage_1-441.png)
+![可信成员主页](assets/trusted-member-homepage.png)
 
 主页由第一个菜单项“任务”标识。 Quinn是主持人和启用资源联系人，未登记到任何启用资源或学习路径中，因此没有任何可显示的内容。
 
@@ -171,7 +171,7 @@ ht-degree: 1%
 
 将指针悬停在评论卡上会显示审核操作。
 
-![chlimage_1-442](assets/chlimage_1-442.png)
+![管理](assets/administration.png)
 
 ## 关于作者的报告{#reports-on-author}
 
@@ -213,7 +213,7 @@ ht-degree: 1%
 
 #### 滑雪课资源报告{#ski-lessons-resource-report}
 
-![chlimage_1-443](assets/chlimage_1-443.png)
+![滑雪课报告](assets/ski-lessons-report.png)
 
 #### 滑雪课用户报告{#ski-lessons-user-report}
 
@@ -223,7 +223,7 @@ ht-degree: 1%
 * 打开卡`Ski Lessons`
 * 选择 `Report > User Report`
 
-![chlimage_1-444](assets/chlimage_1-444.png)
+![滑雪课用户报告](assets/ski-lessons-user-report.png)
 
 ### 报告控制台{#reports-console}
 
@@ -245,7 +245,7 @@ ht-degree: 1%
 
 * 选择&#x200B;**[!UICONTROL 生成]**
 
-![chlimage_1-445](assets/chlimage_1-445.png)
+![报告分配](assets/report-assignment.png)
 
 有关视图的报告：
 
@@ -259,6 +259,6 @@ ht-degree: 1%
 
 * 选择&#x200B;**[!UICONTROL 生成]**。
 
-![chlimage_1-446](assets/chlimage_1-446.png)
+![报告视图](assets/report-views.png)
 
 **[◆创建和分配启用资源](resource.md)**
