@@ -7,9 +7,9 @@ user-guide-title: AEM 6.5 Administering 用户指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 98180b630c991bc65ddfa275e0f8a97be3be6f7e
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '629'
 ht-degree: 16%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 16%
    + [配置视频组件](config-video.md)
    + [批量编辑器](bulk-editor.md)
    + [配置电子邮件通知](notification.md)
-   + [外部链接检查器](external-link-checker.md)
+   + [链接检查器](external-link-checker.md)
    + [AEM疑难解答](troubleshoot.md)
    + [管理对工作流的访问](workflows-managing.md)
    + [开始工作流](workflows-starting.md)
@@ -136,7 +136,7 @@ ht-degree: 16%
    + [与Adobe动态标签管理集成](dtm.md)
    + [选择加入Adobe Analytics和Adobe Target](opt-in.md)
    + [AEM门户和Portlet](aem-as-portal.md)
-   + [与Dynamic Media Classic集成(Scene7)](scene7.md)
+   + [与Dynamic Media经典(Scene7)集成](scene7.md)
    + [AEM Livefyre菜谱](aem-livefyre-recipes.md)
    + [集成问题疑难解答](troubleshooting-integration-issues.md)
    + [与BrightEdge Content Optimizer集成](brightedge.md)
