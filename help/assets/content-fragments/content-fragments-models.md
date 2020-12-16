@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 932601c849b3a1ddd196e6570a9cf05710cd3e6a
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 22%
+source-wordcount: '753'
+ht-degree: 21%
 
 ---
 
@@ -37,8 +37,12 @@ ht-degree: 22%
 
 要[创建新的内容片段模型](#creating-a-content-fragment-model),**必须首先使用配置管理器启用它们：**
 
+>[!CAUTION]
+>
+>子配置（嵌套在配置中的配置）不支持与内容片段一起使用。
+
 1. 导航到&#x200B;**工具**、**常规**，然后打开&#x200B;**配置浏览器**。
-1. 选择适合您的网站的位置。
+
 1. 使用&#x200B;**创建**&#x200B;打开对话框，其中：
 
    1. 指定&#x200B;**标题**。
@@ -47,6 +51,8 @@ ht-degree: 22%
    ![cfm-6420-09](assets/cfm-6420-09.png)
 
 1. 选择&#x200B;**创建**&#x200B;以保存定义。
+
+<!-- 1. Select the location appropriate to your website. -->
 
 ### 将配置应用于您的资产文件夹{#apply-the-configuration-to-your-assets-folder}
 
