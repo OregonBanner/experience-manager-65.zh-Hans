@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3133f712be1380ae98e18e63c9598d760d2e7595
+source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -51,7 +51,7 @@ ht-degree: 6%
 
 #### 配置功能详细信息 {#configuration-function-details}
 
-![chlimage_1-380](assets/chlimage_1-380.png)
+![title-url-details](assets/title-url-details.png)
 
 * **标题**
 
@@ -70,7 +70,7 @@ ht-degree: 6%
 
 页面的菜单链接显示为：
 
-![chlimage_1-381](assets/chlimage_1-381.png)
+![参与页面](assets/engage-page.png)
 
 ### 活动流功能 {#activity-stream-function}
 
@@ -80,7 +80,7 @@ ht-degree: 6%
 
 #### 配置功能详细信息 {#configuration-function-details-1}
 
-![chlimage_1-382](assets/chlimage_1-382.png)
+![函数详细信息](assets/function-details.png)
 
 * [标题和URL设置](#title-and-url-settings)
 
@@ -110,7 +110,7 @@ ht-degree: 6%
 
 添加到模板时，将打开以下对话框：
 
-![chlimage_1-383](assets/chlimage_1-383.png)
+![blog-component](assets/blog-component.png)
 
 * [标题和URL设置](#title-and-url-settings)
 
@@ -136,7 +136,7 @@ ht-degree: 6%
 
 添加到模板时，将打开以下对话框：
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![calendar-details](assets/calendar-details.png)
 
 * [标题和URL设置](#title-and-url-settings)
 
@@ -201,7 +201,7 @@ ht-degree: 6%
 
 #### 配置功能详细信息 {#configuration-function-details-2}
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![论坛——组件1](assets/forum-component1.png)
 
 * [标题和URL设置](#title-and-url-settings)
 
@@ -243,7 +243,7 @@ ht-degree: 6%
 
 添加到模板时，将打开以下对话框：
 
-![chlimage_1-386](assets/chlimage_1-386.png)
+![group-template-config](assets/group-template-config.png)
 
 * [标题和URL设置](#title-and-url-settings)
 
@@ -266,7 +266,7 @@ ht-degree: 6%
 
 添加到模板时，将打开以下对话框，其中指定模板的默认标题和URL名称以及默认显示设置：
 
-![chlimage_1-387](assets/chlimage_1-387.png)
+![理想函数](assets/ideation-function.png)
 
 * [标题和URL设置](#title-and-url-settings)
 
@@ -331,27 +331,27 @@ QnA函数是一个具有[QnA组件](/help/communities/working-with-qna.md)的页
 
 * **允许固定**
 
-   如果选中此选项，则论坛允许将主题回复固定到评论列表的开头。 选中默认值。
+   如果选中此选项，则论坛允许将主题回复固定到评论列表的开头。 已选择“默认”。
 
 * **允许拥有权限的成员**
 
-   如果选中，则QnA论坛仅允许特权成员通过允许选择[特权成员组](/help/communities/users.md#privileged-members-group)来发布问题。 如果未选择，则允许所有社区成员发布。 “默认”(Default)为取消选择。
+   如果选中，则QnA论坛只允许特权成员通过允许选择[特权成员组](/help/communities/users.md#privileged-members-group)来发布问题。 如果未选择，则允许所有社区成员发布。 “默认”处于取消选择状态。
 
 * **允许文件上传**
 
-   如果选择此选项，则问题与答案论坛将允许成员上传文件。 选中默认值。
+   如果选择此选项，则QnA论坛将包含成员上传文件的功能。 已选择“默认”。
 
 * **允许主题回复**
 
-   如果未选择，则问题与答案论坛允许对已发布的问题进行评论（答案），但不允许对答案进行答复。 选中默认值。
+   如果未选择，QnA论坛允许对已发布的问题进行评论（回答），但不允许对回答进行答复。 已选择“默认”。
 
 * **允许专题内容**
 
-   如果选择，则其内容标识为[特色内容](/help/communities/featured.md)。 选中默认值。
+   如果选中，则其内容标识为[特色内容](/help/communities/featured.md)。 已选择“默认”。
 
 ## 创建社区功能 {#create-community-function}
 
-通过选择“社区功能”控制台顶部的`Create Community Function`图标，可以创建社区功能。 可以创建基于相同AEM Blueprint的多个函数，然后通过在作者编辑模式下打开进行唯一自定义。
+通过选择位于“社区功能”控制台顶部的`Create Community Function`图标，可以创建社区功能。 可以创建基于相同AEM Blueprint的多个函数，然后以作者编辑模式打开以进行唯一自定义。
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
@@ -359,7 +359,7 @@ QnA函数是一个具有[QnA组件](/help/communities/working-with-qna.md)的页
 
 ![chlimage_1-391](assets/chlimage_1-391.png)
 
-在“社区函数名称”面板上，将配置名称、说明以及是否启用或禁用该函数：
+在“社区函数名称”面板上，配置了名称、说明以及是否启用了该函数：
 
 * **社区功能名称**
 
@@ -369,7 +369,7 @@ QnA函数是一个具有[QnA组件](/help/communities/working-with-qna.md)的页
 
    显示的函数描述。
 
-* **禁用／启用**
+* **已禁用／已启用**
 
    控制函数是否可引用的切换开关。
 
@@ -377,11 +377,11 @@ QnA函数是一个具有[QnA组件](/help/communities/working-with-qna.md)的页
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
-在`AEM Blueprint`面板上，可以选择作为社区函数基础实现的蓝图。
+在`AEM Blueprint`面板上，可以选择作为社区函数的基础实现的蓝图。
 
-社区功能是一个迷你站点，包括一个或多个页面，预先连接到社区站点，包括登录名、用户用户档案、通知、消息、站点菜单、搜索、主题和品牌功能。 创建函数后，可以[以作者编辑模式打开函数](#open-community-function)并自定义页面或组件设置。
+社区功能是一个微型网站，包括一个或多个页面，预先连接以包含在社区网站中，包括登录、用户配置文件、通知、消息、站点菜单、搜索、主题和品牌功能。 创建函数后，可以[以作者编辑模式打开函数](#open-community-function)并自定义页面或组件设置。
 
-由于社区函数被实现为[blueprint](/help/sites-administering/msm-livecopy.md#creatingablueprint)的[Live Copy](/help/sites-administering/msm.md#live-copies)，因此可以转出对影响从包含该函数的[社区站点模板](/help/communities/sites.md)或[社区组模板](/help/communities/tools-groups.md)创建的所有社区站点页面的函数所做的更改。 还可以将页面与其父蓝图取消关联以进行页面级别修改。
+由于社区函数是作为[blueprint](/help/sites-administering/msm-livecopy.md#creatingablueprint)的[活动副本](/help/sites-administering/msm.md#live-copies)实现的，因此可以转出对影响从包含该函数的[社区站点模板](/help/communities/sites.md)或[社区组模板](/help/communities/tools-groups.md)创建的所有社区站点页的函数所做的更改。 还可以将页面与其父蓝图取消关联以进行页面级修改。
 
 另请参阅[多站点管理器](/help/sites-administering/msm.md)。
 
@@ -389,26 +389,26 @@ QnA函数是一个具有[QnA组件](/help/communities/working-with-qna.md)的页
 
 ![chlimage_1-393](assets/chlimage_1-393.png)
 
-在“缩略图”面板上，可以上传图像以在[社区功能控制台](#community-functions-console)中显示。
+在“缩览图”面板上，可以上传一个图像以在[社区功能控制台](#community-functions-console)中显示。
 
 ## 打开社区功能 {#open-community-function}
 
 ![chlimage_1-394](assets/chlimage_1-394.png)
 
-选择`Open Community Function`图标以进入创作编辑模式以创作页面内容和修改功能组件的配置。
+选择`Open Community Function`图标以进入创作编辑模式，以创作页面内容并修改功能组件的配置。
 
 ### 配置组件 {#configuring-components}
 
-社区功能作为AEM Blueprint的Live Copy实现，其详细信息在[多站点管理器](/help/sites-administering/msm.md)下记录。
+社区功能以AEM Blueprint的Live Copy形式实现，详细信息记录在[ Multi Site Manager](/help/sites-administering/msm.md)下。
 
 不仅可以创作页面内容，还可以配置组件。
 
 如果在创建的社区站点的页面上配置组件，则可能需要取消[继承](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)来配置组件。 配置完成后，应重新建立继承。
 
-有关配置详细信息，请访问[Communities组件](/help/communities/author-communities.md)以获取作者信息。
+有关配置详细信息，请访问[社区组件](/help/communities/author-communities.md)以了解作者。
 
 ## 编辑社区功能 {#edit-community-function}
 
 ![chlimage_1-395](assets/chlimage_1-395.png)
 
-选择`Edit Community Function`图标以使用与创建社区函数](#create-community-function)相同的面板编辑该函数的属性，包括启用或禁用该函数。[
+选择`Edit Community Function`图标，使用与[创建社区函数](#create-community-function)相同的面板编辑该函数的属性，包括启用或禁用该函数。
