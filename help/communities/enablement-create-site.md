@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: e9d5a7acad04d841cbc7d62050163f3de998fab6
 workflow-type: tm+mt
 source-wordcount: '1728'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -70,9 +70,9 @@ ht-degree: 2%
 
 （可选）上传要在网站页面上显示的横幅图像。 横幅被固定到浏览器的左边缘，位于社区站点标题和菜单（导航链接）之间。 横幅高度会被裁剪为120像素。 横幅的大小不会调整为适合浏览器的宽度和120像素高。
 
-![chlimage_1-449](assets/chlimage_1-449.png)
+![站点品牌1](assets/site-branding1.png)
 
-![chlimage_1](assets/chlimage_1.jpeg)
+![site-branding2](assets/site-branding2.png)
 
 选择&#x200B;**下一步**。
 
@@ -130,7 +130,7 @@ ht-degree: 2%
 
 接受[协调](/help/communities/sites-console.md#moderation)用户生成内容(UGC)的默认全局设置。
 
-![chlimage_1-452](assets/chlimage_1-452.png)
+![协调1](assets/moderation1.png)
 
 #### 分析{#analytics}
 
@@ -138,7 +138,7 @@ ht-degree: 2%
 
 屏幕截图中显示的选择`Communities`是[配置文档中的框架示例。](/help/communities/analytics.md#aem-analytics-framework-configuration)
 
-![chlimage_1-454](assets/chlimage_1-454.png)
+![分析](assets/analytics.png)
 
 #### TRANSLATION {#translation}
 
@@ -147,7 +147,7 @@ ht-degree: 2%
 * 检查&#x200B;**允许机器翻译**
 * 使用默认设置
 
-![chlimage_1-456](assets/chlimage_1-456.png)
+![转换](assets/translation.png)
 
 #### ENABLEMENT {#enablement}
 
@@ -163,7 +163,7 @@ ht-degree: 2%
 * **Marketing Cloud组织**
 Id（可选）在启用报告中包含视频心跳分析时必 [需的](/help/communities/analytics.md#video-heartbeat-analytics) Adobe Analytics帐户ID。
 
-![chlimage_1-457](assets/chlimage_1-457.png)
+![启用](assets/enablement.png)
 
 选择&#x200B;**下一步**。
 
@@ -171,7 +171,7 @@ Id（可选）在启用报告中包含视频心跳分析时必 [需的](/help/co
 
 选择&#x200B;**创建。**
 
-![chlimage_1-458](assets/chlimage_1-458.png)
+![预览](assets/preview.png)
 
 完成该过程后，新站点的文件夹会显示在“社区”>“站点”控制台中。
 
@@ -218,11 +218,11 @@ Id（可选）在启用报告中包含视频心跳分析时必 [需的](/help/co
 
 选择“全球”图标以发布社区站点。
 
-![chlimage_1-465](assets/chlimage_1-465.png)
+![发布站点](assets/publish-site.png)
 
 将显示该网站已发布。
 
-![chlimage_1-466](assets/chlimage_1-466.png)
+![站点发布](assets/site-published.png)
 
 ## 社区用户和用户组{#community-users-user-groups}
 
@@ -251,7 +251,7 @@ Id（可选）在启用报告中包含视频心跳分析时必 [需的](/help/co
 
 * 选择&#x200B;**保存**
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![edit-group-settings](assets/edit-group-settings.png)
 
 ## 发布时的配置{#configurations-on-publish}
 
@@ -317,13 +317,13 @@ Id（可选）在启用报告中包含视频心跳分析时必 [需的](/help/co
 >
 >要禁用，只需用“x” - `xlocalhost.4503/$` —— 和&#x200B;**全部保存**&#x200B;预先添加`sling:match`属性值。
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![change-default-homepage](assets/change-default-homepage.png)
 
 #### 疑难解答：保存映射{#troubleshooting-error-saving-map}时出错
 
 如果无法保存更改，请确保节点名称为`localhost.4503`（带有“点”分隔符），而不是带有“冒号”分隔符的`localhost:4503`(因为`localhost`不是有效的命名空间前缀)。
 
-![chlimage_1-365](assets/chlimage_1-365.png)
+![错误映射](assets/error-map.png)
 
 #### 疑难解答：无法重定向{#troubleshooting-fail-to-redirect}
 
@@ -361,11 +361,11 @@ Id（可选）在启用报告中包含视频心跳分析时必 [需的](/help/co
 
 * 选择&#x200B;**保存**。
 
-![chlimage_1-299](assets/chlimage_1-299.png)
+![修改站点结构](assets/modify-site-structure.png)
 
 使用“职位”图标将“目录”功能移动到“工作总揽”之后的第二个职位。
 
-![chlimage_1-300](assets/chlimage_1-300.png)
+![move-catalog-func](assets/move-catalog-func.png)
 
 选择右上角的&#x200B;**保存**&#x200B;以将更改保存到社区站点。
 
