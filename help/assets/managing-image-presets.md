@@ -1,6 +1,6 @@
 ---
 title: 管理Dynamic Media图像预设
-description: 了解Dynamic Media图像预设并了解如何创建、修改和管理图像预设
+description: 了解Dynamic Media图像预设并学习如何创建、修改和管理图像预设
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,10 +10,10 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '3867'
-ht-degree: 23%
+source-wordcount: '3866'
+ht-degree: 28%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 23%
 
 图像预设使AEM Assets能够动态地传送不同大小、不同格式或具有动态生成的其他图像属性的图像。 每个图像预设都代表一组预定义的大小调整和格式设置命令，以用于显示图像。在创建图像预设时，您需要选择图像传送的大小。此外，还需要选择格式设置命令，以确保传送供查看的图像时，显示优化的图像外观。
 
-管理员可以创建用于导出资产的预设。在导出图像时，用户可以选择预设，此操作也会根据管理员指定的规范重新设置图像的格式。
+管理员可以创建用于导出资产的预设。在导出图像时，用户可以选择预设，此操作也将调整图像的格式，使其符合管理员指定的规范。
 
 您还可以创建响应式图像预设。如果对资产应用响应式图像预设，则资产会根据查看资产时所使用的设备或屏幕大小而相应发生更改。除了RGB或灰色外，您还可以将图像预设配置为在色彩空间中使用CMYK。
 
@@ -38,9 +38,9 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->在Dynamic Media -Scene7模式中，图像预设仅受图像资产支持。
+>在Dynamic Media-Scene7模式下，仅图像资产支持图像预设。
 
-您可以创建两种图像预设：一种是适用于桌面版本的 500 x 500 像素；一种是适用于移动版本的 150 x 150 像素。您可以创建两个图像预设，一个称为`Enlarge`，用于以500x500像素显示图像，另一个称为`Thumbnail`，用于以150 x 150像素显示图像。 要传送大小为`Enlarge`和`Thumbnail`的图像，AEM会查找“大图预设”和“缩略图预设”的定义。 然后，AEM会根据每个图像预设的大小和格式规范动态生成图像。
+您可以创建两种图像预设：一种是适用于桌面版本的 500 x 500 像素；一种是适用于移动版本的 150 x 150 像素。您可以创建两个图像预设，一个称为`Enlarge`，用于以500x500像素显示图像，另一个称为`Thumbnail`，用于以150 x 150像素显示图像。 要传送大小为`Enlarge`和`Thumbnail`的图像，AEM会查找“大图预设”和“缩略图预设”的定义。 然后，AEM 会根据每种“图像预设”的尺寸和格式规范，动态地生成相应的图像。
 
 如果图像在动态传送时大小大幅缩减，图像可能会丢失锐化和细节。由于这一原因，每个图像预设中都包含格式控制，以在传送图像时将其优化为特定大小。这些控制可确保图像在传送到网站或应用程序时具有锐化、清晰的效果。
 
@@ -56,9 +56,9 @@ ht-degree: 23%
 >
 >在您预览或传送资产时，您创建的任何图像预设也可作为动态演绎版使用。
 >
->在&#x200B;*Dynamic Media -Scene7模式*&#x200B;中，当图像预设自动发布时，您&#x200B;*不*&#x200B;需要发布图像预设。
+>在&#x200B;*Dynamic Media-Scene7模式*&#x200B;中，您&#x200B;*不*&#x200B;需要发布图像预设，因为图像预设会自动发布。
 >
->在&#x200B;*Dynamic Media - Hybrid模式*&#x200B;中，您需要手动发布图像预设。
+>在&#x200B;*Dynamic Media-混合模式*&#x200B;中，您需要手动发布图像预设。
 >
 >请参阅[发布图像预设。](#publishing-image-presets)
 
@@ -70,7 +70,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->本主题仅适用于Dynamic Media —— 混合模式。
+>本主题仅适用于Dynamic Media-混合模式。
 
 如果您希望支持摄取AI、EPS和PDF文件，以便生成这些文件格式的动态演绎版，您可能需要在创建图像预设之前查看以下信息。
 
@@ -85,7 +85,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 
 在打开资产时，您可以视图子资产或页面，点按内容菜单，然后选择&#x200B;**[!UICONTROL 子资产]**&#x200B;或&#x200B;**[!UICONTROL 页面。]** 子资产是真实资产。即，PDF页面由`Create Sub Asset`工作流组件提取。 然后，它们会作为`page1.pdf`、`page2.pdf`等存储在主资产下方。 在存储它们后，`DAM Update Asset`工作流会处理它们。
 
-要使用Dynamic Media预览和生成AI、EPS或PDF文件的动态演绎版，需要执行以下处理步骤：
+要使用Dynamic Media预览AI、EPS或PDF文件并生成动态演绎版，需要执行以下处理步骤：
 
 1. 在`DAM Update Asset`工作流中，`Rasterize PDF/AI Image Preview Rendition`流程组件使用配置的分辨率将原始资产的第一页栅格化为`cqdam.preview.png`再现。
 
@@ -162,7 +162,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 
 [!UICONTROL DAM更新资产]工作流中媒体提取流程组件参数中的ExtendScript路径。
 
-Dynamic Media集成使用以下脚本：
+以下脚本由Dynamic Media集成使用：
 
 <table>
  <tbody>
@@ -191,7 +191,7 @@ Dynamic Media集成使用以下脚本：
 
 ## 配置图像缩略图大小{#configuring-image-thumbnail-size}
 
-您可以通过在&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流中配置这些设置来配置缩略图的大小。 在工作流中，您可以通过两个步骤配置图像资产的缩略图大小。 尽管动态图像资产使用一个(**[!UICONTROL Dynamic Media Process Image Assets]**)，静态缩略图生成使用另一个（**[!UICONTROL 处理缩略图]**），或者当所有其他进程无法生成缩略图时，*两个*&#x200B;应具有相同的设置。
+您可以通过在&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流中配置这些设置来配置缩略图的大小。 在工作流中，您可以通过两个步骤配置图像资产的缩略图大小。 尽管动态图像资产使用一个(**[!UICONTROL Dynamic Media处理图像资产]**)，静态缩略图生成使用另一个（**[!UICONTROL 处理缩略图]**），或者当所有其他进程无法生成缩略图时，*两个*&#x200B;应具有相同的设置。
 
 在 **[!UICONTROL Dynamic Media 流程图像资产]**&#x200B;步骤中，缩略图由图像服务器生成，此配置与应用于&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤的配置无关。通过&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤生成缩略图是创建缩览图最耗时、内存占用最多的方法。
 
@@ -211,7 +211,7 @@ Dynamic Media集成使用以下脚本：
 **要配置图像缩略图大小**:
 
 1. 点按&#x200B;**[!UICONTROL 工具>工作流>模型> DAM更新资产>编辑。]**
-1. 点按&#x200B;**[!UICONTROL Dynamic Media Process Image Assets]**&#x200B;步骤，然后点按或单击&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。 根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定。]**
+1. 点按&#x200B;**[!UICONTROL Dynamic Media处理图像资产]**&#x200B;步骤，然后点按或单击&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。 根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定。]**
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
@@ -279,9 +279,9 @@ Dynamic Media集成使用以下脚本：
 
 ## 创建响应式图像预设{#creating-a-responsive-image-preset}
 
-要创建响应式图像预设，请执行[创建图像预设](#creating-image-presets)中的步骤。在&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口中输入高度和宽度时，请清除这些值并将它们留空。
+要创建响应式图像预设，请执行[创建图像预设](#creating-image-presets)中的步骤。在&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口中输入高度和宽度时，请清除这两个字段的值，并将其保留为空。
 
-将它们留空会告知AEM此图像预设是响应式的。您可以根据需要调整其他值。
+将这两个字段保留为空就是告诉 AEM 此图像预设为响应式。您可以视需要调整其他值。
 
 
 
@@ -291,9 +291,9 @@ Dynamic Media集成使用以下脚本：
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
->在Dynamic Media -Scene7模式中，图像预设和图像资产会自动发布。
+>在Dynamic Media-Scene7模式下，图像预设和图像资产会自动发布。
 >
->在Dynamic Media —— 混合模式中，您必须手动发布图像预设和图像资产。
+>在Dynamic Media-混合模式中，您必须手动发布图像预设和图像资产。
 
 ### 图像预设选项{#image-preset-options}
 
@@ -346,7 +346,7 @@ Dynamic Media集成使用以下脚本：
   </tr>
   <tr>
    <td><strong>锐化</strong></td>
-   <td>选择<strong>启用简单锐化</strong>选项，在进行所有缩放后对图像应用基本锐化滤镜。锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </td>
+   <td>选择<strong>启用简单锐化</strong>选项可在执行所有缩放操作后对图像应用基本锐化滤镜。锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </td>
   </tr>
  </tbody>
 </table>
@@ -387,10 +387,10 @@ Dynamic Media集成使用以下脚本：
   </tr>
   <tr>
    <td><strong>锐化类型</strong></td>
-   <td><p>选择“无”(<strong>)、“锐化”(<strong>)或“锐化”(<strong>)。</strong></strong></strong> </p>
+   <td><p>选择<strong>无</strong>、<strong>锐化</strong>或 <strong>USM 锐化</strong>。 </p>
     <ul>
      <li>选择<strong>无</strong>可禁用锐化。</li>
-     <li>选择<strong>锐化</strong>以在进行所有缩放后对图像应用基本锐化滤镜。锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </li>
+     <li>选择<strong>锐化</strong>可在执行所有缩放操作后对图像应用基本锐化滤镜。锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </li>
      <li>选择<strong> USM锐化</strong>可微调最终缩减采样图像的锐化滤镜效果。您可以控制效果的强度、效果的半径（以像素为单位）以及将被忽略的对比度阈值。此效果使用的选项与Photoshop的“USM锐化”滤镜相同。</li>
     </ul> <p>在 <strong>USM 锐化</strong>中，您可以设置以下选项：</p>
     <ul>
@@ -400,7 +400,7 @@ Dynamic Media集成使用以下脚本：
      <li><strong>应用至</strong> -确定是否将取消锐化应用于每种颜色或亮度。</li>
     </ul>
     <div>
-      有关“锐化”的信息，请参阅<a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/s7_sharpening_images.pdf">锐化图像</a>。
+      有关“锐化”的信息，请参阅<a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/sharpening_images.pdf">锐化图像</a>。
     </div> </td>
   </tr>
   <tr>
@@ -439,7 +439,7 @@ Dynamic Media集成使用以下脚本：
 
 除了“基本”和“高级”选项卡中提供的选项外，您还可以定义图像修饰符，以便在定义图像预设时有更多选择。“图像渲染”功能依赖于 Scene7 图像渲染 API 得以实现，该功能在《[HTTP 协议参考指南](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html)》中有详细定义。
 
-下面是一些基本示例，说明了可以使用图像修饰符进行哪些操作。
+下面的一些基本示例显示了可以使用图像修饰符实现的操作。
 
 >[!NOTE]
 >
@@ -496,11 +496,11 @@ Dynamic Media集成使用以下脚本：
 
 ## 发布Dynamic Media图像预设{#publishing-image-presets}
 
-如果运行的是Dynamic Media —— 混合模式，则必须手动发布图像预设。
+如果您运行的是Dynamic Media-混合模式，则必须手动发布图像预设。
 
-(如果您运行的是Dynamic Media -Scene7模式，则图像预设将自动为您发布；您无需完成这些步骤。)
+(如果您运行的是Dynamic Media-Scene7模式，则图像预设将自动为您发布；您无需完成这些步骤。)
 
-**要在Dynamic Media —— 混合模式中发布图像预设，请执行以下操作**:
+**要在Dynamic Media发布图像预设——混合模式**:
 
 1. 在AEM中，点按或单击AEM徽标以访问全局导航控制台，然后点按或单击工具图标，导航至&#x200B;**[!UICONTROL 资产>图像预设。]**
 1. 从图像预设列表中选择图像预设或多个图像预设，然后单击或点按&#x200B;**[!UICONTROL 发布。]**
@@ -512,5 +512,5 @@ Dynamic Media集成使用以下脚本：
 
 1. 在AEM中，点按或单击AEM徽标以访问全局导航控制台。
 1. 点按&#x200B;**[!UICONTROL 工具]**&#x200B;图标，然后导航到&#x200B;**[!UICONTROL 资产>图像预设。]**
-1. 选择预设，然后单击&#x200B;**[!UICONTROL 删除]**。 Dynamic Media会确认您是否要删除它。 点按&#x200B;**[!UICONTROL 删除]**&#x200B;以删除，或点按&#x200B;**[!UICONTROL 取消]**&#x200B;以中止操作。
+1. 选择预设，然后单击&#x200B;**[!UICONTROL 删除]**。 Dynamic Media确认您要删除它。 点按&#x200B;**[!UICONTROL 删除]**&#x200B;以删除，或点按&#x200B;**[!UICONTROL 取消]**&#x200B;以中止操作。
 
