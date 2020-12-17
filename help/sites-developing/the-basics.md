@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: d621a612556f0bea032444c2e07be101868b1905
+source-git-commit: 28fdb57f51a5bd97ce78b626db86f4a59de6f0be
 workflow-type: tm+mt
-source-wordcount: '3371'
+source-wordcount: '3386'
 ht-degree: 0%
 
 ---
@@ -162,10 +162,11 @@ Sling还允许JCR节点以外的其他资源，但这是一个高级功能。
 * 当需要“方法”(GET、POST)时，它将按照HTTP规范(如jobs.POST.esp)以大写形式指定（见下文）
 * 支持各种脚本引擎：
 
-   * `.esp, .ecma`:ECMAScript(JavaScript)页（服务器端执行）
-   * `.jsp`:Java服务器页（服务器端执行）
-   * `.java`:Java Servlet编译器（服务器端执行）
-   * `.jst`:JavaScript模板（客户端执行）
+   * HTL(HTML模板语言-Adobe Experience Manager首选的、推荐的HTML服务器端模板系统):`.html`
+   * ECMAScript(JavaScript)页（服务器端执行）:`.esp, .ecma`
+   * Java服务器页（服务器端执行）:`.jsp`
+   * Java Servlet编译器（服务器端执行）:`.java`
+   * JavaScript模板（客户端执行）:`.jst`
 
 AEM的给定实例支持的脚本引擎列表列在Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上。
 
