@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
 workflow-type: tm+mt
-source-wordcount: '3452'
+source-wordcount: '3533'
 ht-degree: 1%
 
 ---
@@ -287,6 +287,14 @@ newComponent (cq:Component)
 在具有ExtJS的经典UI中，通常在内容结构中具有给定构件的监听器。 在触屏优化UI中实现相同效果是不同的，因为JS监听器代码（或任何代码）在内容中不再定义。
 
 内容结构描述了语义结构；它不应（必须）暗示基础构件的性质。 如果内容结构中没有JS代码，则无需更改内容结构即可更改实施详细信息。 换言之，您无需触摸内容结构即可更改构件库。
+
+#### 检测对话框{#dialog-ready}的可用性
+
+如果您有自定义JavaScript，并且需要仅在对话框可用且准备就绪时执行，您应该侦听`dialog-ready`事件。
+
+当对话框加载（或重新加载）并准备使用时，将触发此事件，这意味着只要对话框的DOM中发生更改（创建／更新）。
+
+`dialog-ready` 可用于挂接JavaScript自定义代码，该代码对对话框或类似任务中的字段执行自定义。
 
 ### 字段验证{#field-validation}
 
