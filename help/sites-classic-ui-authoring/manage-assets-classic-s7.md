@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 81707b4d57f7f15106459b91f95b1bc6ec333bf4
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '3221'
-ht-degree: 71%
+source-wordcount: '3250'
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 71%
 
 [Adobe Scene7](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) 是一种托管的解决方案，用于管理和增强丰富的媒体资产，并将其发布和交付到 Web、移动设备、电子邮件及连接 Internet 的显示屏和打印设备。
 
-您可以在以下各种查看器中查看已发布到 Scene7 的 AEM 资产：
+您可以视图发布在Scene7的Experience Manager资产，其查看方式为：
 
 * 缩放
 * 弹出
@@ -31,13 +31,13 @@ ht-degree: 71%
 * 图像模板
 * 图像
 
-您可以将数字资产直接从 AEM 发布到 Scene7，也可以将数字资产从 Scene7 发布到 AEM。
+您可以将数字资产从Experience Manager直接发布到Scene7，还可以将数字资产从Scene7发布到Experience Manager。
 
-本文档介绍了如何将数字资产从 AEM 发布到 Scene7，以及从 Scene7 发布到 AEM。此外，还详细介绍了各种查看器。有关为Scene7配置AEM的信息，请参阅[将Scene7与AEM集成](/help/sites-administering/scene7.md)。
+本文档介绍如何将数字资产从Experience Manager发布到Scene7，反之亦然。 此外，还详细介绍了各种查看器。有关为Scene7配置Experience Manager的信息，请参阅[将Scene7与Experience Manager集成](/help/sites-administering/scene7.md)。
 
 另请参阅[添加图像映射](/help/assets/image-maps.md)。
 
-有关在 AEM 中使用视频组件的更多信息，请参阅以下内容：
+有关将视频组件与Experience Manager结合使用的更多信息，请参阅以下内容：
 
 * [视频](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
 
@@ -51,14 +51,14 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->从 AEM 发布到 Scene7 并不是同步的。单击&#x200B;**发布**&#x200B;后，您的资产可能需要几秒钟时间才能发布到 Scene7。
+>Experience Manager异步发布到Scene7。 单击&#x200B;**发布**&#x200B;后，您的资产可能需要几秒钟时间才能发布到 Scene7。
 
 
 ### 从“资产”控制台发布 {#publishing-from-the-assets-console}
 
 如果资产位于 Scene7 目标文件夹中，要将其从“资产”控制台发布到 Scene7，请执行以下操作：
 
-1. 在AEM经典UI中，单击&#x200B;**数字资产**&#x200B;以访问数字资产管理器。
+1. 在Experience Manager经典UI中，单击&#x200B;**数字资产**&#x200B;以访问数字资产管理器。
 
 1. 从目标文件夹中选择要发布到 Scene7 的资产（一个或多个）或文件夹，然后单击鼠标右键并选择&#x200B;**发布到 Scene7**。或者，也可以从&#x200B;**工具菜单**&#x200B;中选择&#x200B;**发布到Scene7**。
 
@@ -76,11 +76,11 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->如果资产未位于Scene7同步文件夹中，则不会显示指向&#x200B;**发布到Scene7**&#x200B;的链接。
+>如果资产没有位于 Scene7 同步文件夹中，则不会显示&#x200B;**发布到 Scene7** 链接。
 
 要直接从数字资产发布到 Scene7，请执行以下操作：
 
-1. 在 AEM 中，单击&#x200B;**数字资产**，以访问数字资产管理器。
+1. 在Experience Manager中，单击&#x200B;**数字资产**&#x200B;以访问数字资产管理器。
 
 1. 双击以打开某个资产。
 
@@ -92,7 +92,7 @@ ht-degree: 71%
 
    >[!NOTE]
    >
-   >如果资产未正确发布到 Scene7，则该链接会变为&#x200B;**发布失败**。如果资产已发布到 Scene7，则该链接会显示&#x200B;**重新发布到 Scene7**。使用重新发布功能，您可以在 AEM 中对资产进行更改，然后再重新发布。
+   >如果资产未正确发布到 Scene7，则该链接会变为&#x200B;**发布失败**。如果资产已发布到 Scene7，则该链接会显示&#x200B;**重新发布到 Scene7**。重新发布允许您在Experience Manager中对资产进行更改并重新发布。
 
 ### 从 CQ 目标文件夹外部发布资产 {#publishing-assets-from-outside-the-cq-target-folder}
 
@@ -106,7 +106,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 要发布位于 CQ 目标文件夹之外的资产，请执行以下操作：
 
-1. 在 AEM 经典 UI 中，单击&#x200B;**网站**，然后导航到要将数字资产（尚未发布到 Scene7）添加到的网页。（普通页面继承规则适用。）
+1. 在经典UI的Experience Manager中，单击&#x200B;**网站**，然后导航到要添加数字资产至尚未发布到Scene7的网页。 （普通页面继承规则适用。）
 
 1. 在 Sidekick 中，单击&#x200B;**页面**&#x200B;图标，然后单击&#x200B;**页面属性**。
 
@@ -116,7 +116,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 1. 在网页上，将 Scene7 组件添加到页面上的所需位置。
-1. 从内容查找器中，将相应的数字资产拖放到该组件中。您会看到一个链接，指向&#x200B;**检查Scene7出版物状态**。
+1. 从内容查找器中，将相应的数字资产拖放到该组件中。您随即会看到&#x200B;**检查 Scene7 发布状态**&#x200B;链接。
 
    >[!NOTE]
    >
@@ -124,7 +124,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
-1. 单击&#x200B;**检查 Scene7 发布状态**。如果资产未发布，AEM 会将资产发布到 Scene7。上传后，资产会被放置在临时文件夹中。默认情况下，该临时文件夹位于 **name_of_the_company/CQ5_adhoc**。您可以[根据需要配置此位置](#configuringtheadhocfolder)。
+1. 单击&#x200B;**检查 Scene7 发布状态**。如果资产未发布，Experience Manager会将资产发布到Scene7。 上传后，资产会被放置在临时文件夹中。默认情况下，该临时文件夹位于 **name_of_the_company/CQ5_adhoc**。您可以[根据需要配置此位置](#configuringtheadhocfolder)。
 
    >[!NOTE]
    >
@@ -132,7 +132,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 ## Scene7 组件  {#scene-components}
 
-可在 AME 中使用以下 Scene7 组件：
+以下Scene7部分在Experience Manager提供：
 
 * 缩放
 * 弹出（缩放）
@@ -144,7 +144,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 >
 >这些组件在默认情况下不可用，需要先在设计模式中选择这些组件才能使用。
 
-在设计模式中启用这些组件后，您可以将它们添加到页面，操作过程与添加任何其他 AEM 组件相同。尚未发布到 Scene7 的资产若满足以下条件便会发布到 Scene7：位于同步文件夹中，或位于具有 Scene7 云配置的页面上。
+在“设计”模式中使用这些组件后，您可以像添加任何其他Experience Manager组件一样将这些组件添加到页面。 尚未发布到 Scene7 的资产若满足以下条件便会发布到 Scene7：位于同步文件夹中，或位于具有 Scene7 云配置的页面上。
 
 >[!NOTE]
 >
@@ -162,7 +162,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 在经典 UI 中，要将 Scene7 组件/查看器添加到页面，请执行以下操作：
 
-1. 在 AEM 中，打开您要添加 Scene7 组件的页面。
+1. 在Experience Manager中，打开要添加Scene7组件的页面。
 
 1. 如果没有可用的 Scene7 组件，请单击 Sidekick 中的标尺图标以进入&#x200B;**设计**&#x200B;模式，单击&#x200B;**编辑** parsys，然后选择所有 **Scene7** 组件，以使其变为可用。
 
@@ -180,7 +180,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 在经典 UI 中，要在响应式网站中添加交互式查看体验，请执行以下操作：
 
-1. 登录到AEM，并确保您已配置[Adobe Scene7Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，且Scene7组件可用。
+1. 登录Experience Manager，并确保已配置[Adobe Scene7Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，且Scene7组件可用。
 
    >[!NOTE]
    >
@@ -227,7 +227,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 ### 图像 {#image}
 
-通过 Scene7 图像组件，您可以在图像中添加 Scene7 功能，包括 Scene7 修饰符、图像预设或查看器预设，以及锐化功能。Scene7 图像组件与 AEM 中具有特殊 Scene7 功能的其他图像组件类似。在此示例中，图像应用了Scene7URL修饰符&#x200B;**&amp;op_invert=1**。
+通过 Scene7 图像组件，您可以在图像中添加 Scene7 功能，包括 Scene7 修饰符、图像预设或查看器预设，以及锐化功能。Scene7图像组件与具有特殊Scene7功能的Experience Manager中的其他图像组件类似。 在此示例中，图像应用了Scene7URL修饰符&#x200B;**&amp;op_invert=1**。
 
 ![](do-not-localize/chlimage_1-4.png)
 
@@ -253,7 +253,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 ### 图像模板 {#image-template}
 
-[Scene7 图像模板](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html)是已导入到 Scene7 的 Photoshop 分层内容，该组件中的内容和属性已进行参数化，以便提供可变性。通过&#x200B;**图像模板**&#x200B;组件，您可以在 AEM 中导入图像并对文本进行动态更改。此外，您还可以配置&#x200B;**图像模板**&#x200B;组件，以使用 Client Context 中的值，从而让每个客户获取个性化的图像体验。
+[Scene7 图像模板](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html)是已导入到 Scene7 的 Photoshop 分层内容，该组件中的内容和属性已进行参数化，以便提供可变性。**图像模板**&#x200B;组件允许您导入图像并在Experience Manager中动态更改文本。 此外，您还可以配置&#x200B;**图像模板**&#x200B;组件，以使用 Client Context 中的值，从而让每个客户获取个性化的图像体验。
 
 单击&#x200B;**编辑**&#x200B;可配置该组件。您可以配置所有Scene7组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)通用的[设置以及本节中介绍的其他设置。
 
@@ -300,7 +300,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 要将 Scene7 图像模板组件设为可单击的链接，请执行以下操作：
 
 1. 在具有 Scene7 图像模板组件的页面上，单击&#x200B;**编辑**。
-1. 在 **URL** 字段中，输入用户单击图像后所转到的 URL。在&#x200B;**在**&#x200B;中打开，选择要打开目标（新窗口还是同一窗口）。
+1. 在 **URL** 字段中，输入用户单击图像后所转到的 URL。在&#x200B;**打开方式**&#x200B;字段中，选择您希望在新窗口中还是在同一窗口中打开目标。
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -312,7 +312,7 @@ Scene7 **视频**&#x200B;组件(可从Sidekick的Scene7部分获得)使用设备
 
 它可用于自适应视频集、单个MP4视频或单个F4V视频。
 
-有关视频在 Scene7 集成中的运行方式的更多信息，请参阅[视频](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)。此外，查看[**Scene7视频**&#x200B;组件与基础&#x200B;**视频**&#x200B;组件](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)的比较情况。
+有关视频在 Scene7 集成中的运行方式的更多信息，请参阅[视频](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)。此外，请参阅 [**Scene7 视频**&#x200B;组件与基础&#x200B;**视频**&#x200B;组件的对比](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -327,18 +327,18 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ## Scene7 内容浏览器 {#scene-content-browser}
 
-使用 Scene7 内容浏览器，您可以在 AEM 中直接查看 Scene7 中的内容。要访问内容浏览器，请在内容查找器中，选择触屏优化用户界面中的&#x200B;**Scene7**&#x200B;或经典用户界面中的&#x200B;**S7**&#x200B;图标。 这两种用户界面的功能是相同的。
+通过Scene7内容浏览器，您可以直接以Experience Manager方式从Scene7视图内容。 要访问内容浏览器，请在内容查找器中，选择触屏优化用户界面中的&#x200B;**Scene7**&#x200B;或经典用户界面中的&#x200B;**S7**&#x200B;图标。 这两种用户界面的功能是相同的。
 
-如果您有多个配置，默认情况下，AEM 会显示[默认配置](/help/sites-administering/scene7.md#configuring-a-default-configuration)。您可以直接在 Scene7 内容浏览器的下拉菜单中选择不同的配置。
+如果您有多个配置，则默认Experience Manager显示[默认配置](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以直接在 Scene7 内容浏览器的下拉菜单中选择不同的配置。
 
 >[!NOTE]
 >
 >* 位于临时文件夹中的资产不会在 Scene7 内容浏览器中显示。
 >* [启用安全预览](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)后，在 Scene7 中已发布和已取消发布的资产都会在 Scene7 内容浏览器中显示。
->* 如果内容浏览器中未显示&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;图标作为选项，则需要[将Scene7配置为与AEM](/help/sites-administering/scene7.md)一起使用。
+>* 如果内容浏览器中未显示&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;图标作为选项，则需要[配置Scene7以与Experience Manager](/help/sites-administering/scene7.md)一起使用。
 >* Scene7 内容浏览器支持以下视频：
    >   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
-   >   * 单个MP4视频
+   >   * 单个 MP4 视频
    >   * 单个F4V视频
 
 
@@ -359,7 +359,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 >WCM 的 Scene7 内容浏览器支持以下视频：
 >
 >* 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
->* 单个MP4视频
+>* 单个 MP4 视频
 >* 单个F4V视频
 
 >
@@ -368,7 +368,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ### 使用内容浏览器搜索 Scene7 资产 {#searching-for-scene-assets-with-the-content-browser}
 
-搜索 Scene7 资产类似于搜索 AEM 资产，但不同的是，搜索 Scene7 资产时，您实际看到的是 Scene7 系统中资产的远程视图，而并没有将其直接导入到 AEM。
+搜索Scene7资产与搜索Experience Manager资产类似，但搜索时您实际看到的是Scene7系统中资产的远程视图，而不是直接将资产导入Experience Manager。
 
 您可以使用经典 UI 或触屏优化 UI 来查看和搜索资产。根据所用的界面，搜索方式会略有不同。
 
@@ -380,9 +380,9 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 **文件夹/** 路径显示的文件夹名称基于您选择的配置。您可以向下选择更低级别的文件夹，方法是单击文件夹图标并选择一个子文件夹，然后单击复选标记以将其选中。
 
-如果您输入了关键字并选择了文件夹，则 AEM 会搜索此文件夹及其所有子文件夹。但是，如果您在搜索时未输入任何关键字，则选择文件夹后，只会显示此文件夹中的资产，而不会包括所有子文件夹。
+如果输入关键字并选择文件夹，Experience Manager会搜索该文件夹和任何子文件夹。 但是，如果您在搜索时未输入任何关键字，则选择文件夹后，只会显示此文件夹中的资产，而不会包括所有子文件夹。
 
-默认情况下，AEM 会搜索选中的文件夹及其所有子文件夹。
+默认情况下，Experience Manager会搜索所选文件夹和所有子文件夹。
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -394,7 +394,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**资产** 类型在Scene7浏览器中，您可以筛选结果以包含以下任一内容：图像、模板、视频和自适应视频集。如果您没有选择任何资产类型，则默认情况下，AEM 会搜索所有资产类型。
+**资产** 类型在Scene7浏览器中，您可以筛选结果以包含以下任一内容：图像、模板、视频和自适应视频集。如果您未选择任何资产类型，则默认情况下，Experience Manager会搜索所有资产类型。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -404,10 +404,10 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
    >
    >
 * 搜索视频时，您搜索的是单个视频呈现。结果会返回原始视频呈现（仅限 *.mp4）以及编码视频呈现。
-* 在搜索自适应视频集时，您正在搜索文件夹和所有子文件夹，但前提是您已向搜索添加了关键字。 如果您没有添加关键字，则 AEM 不会搜索子文件夹。
+* 在搜索自适应视频集时，您正在搜索文件夹和所有子文件夹，但前提是您已向搜索添加了关键字。 如果您尚未添加关键字，Experience Manager不会搜索子文件夹。
 
 
 
-**发布** 状态您可以根据发布状态筛选资产：已取消发布或已发布。如果您没有选择任何发布状态，则默认情况下，AEM 会搜索所有发布状态。
+**发布** 状态您可以根据发布状态筛选资产：已取消发布或已发布。如果未选择任何发布状态，则默认情况下，Experience Manager会搜索所有发布状态。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
