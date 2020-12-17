@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '2760'
-ht-degree: 21%
+source-wordcount: '2759'
+ht-degree: 23%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->智能裁切仅在Dynamic Media -Scene7模式下可用。
+>Smart Crop仅在Dynamic Media-Scene7模式下可用。
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ ht-degree: 21%
   <tr>
    <td>颜色和图像样本</td>
    <td>批量为每个图像生成一个图像样本。</td>
-   <td><p><strong>注意</strong>:Dynamic Media Classic不支持智能色板。</p> <p>从显示颜色或纹理的产品图像自动定位和生成高质量样本。</p> <p>要使用颜色和图像色板，请从“裁剪选项”下拉列表中选择<strong>智能裁剪</strong>，然后在“颜色和图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。</p> <p>虽然所有图像裁剪都可从演绎版边栏中使用，但只能通过复制URL功能使用色板。 请注意，必须使用您自己的查看组件在站点上呈现色板。 (这种情况的例外是传送横幅。 Dynamic Media为传送横幅中使用的色板提供查看组件。)</p> <p><strong>使用图像色板</strong></p> <p>图像样本的URL非常简单。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中<code>:Swatch</code>会附加到资产请求中。</p> <p><strong>使用色板</strong></p> <p>要使用色板，请使用以下命令发出<code>req=userdata</code>请求：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media Classic中的样本资产：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>下面是样本资产的相应<code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code>响应如下所示：</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>注意</strong>:Dynamic Media经典中不支持智能色板。</p> <p>从显示颜色或纹理的产品图像自动定位和生成高质量样本。</p> <p>要使用颜色和图像色板，请从“裁剪选项”下拉列表中选择<strong>智能裁剪</strong>，然后在“颜色和图像色板”的右侧，启用（打开）该功能。 在“宽度”和“高度”文本框中输入像素值。</p> <p>虽然所有图像裁剪都可从演绎版边栏中使用，但只能通过复制URL功能使用色板。 请注意，必须使用您自己的查看组件在站点上呈现色板。 (这种情况的例外是传送横幅。 Dynamic Media提供用于传送横幅的色板的查看组件。)</p> <p><strong>使用图像色板</strong></p> <p>图像样本的URL非常简单。 即：</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>其中<code>:Swatch</code>会附加到资产请求中。</p> <p><strong>使用色板</strong></p> <p>要使用色板，请使用以下命令发出<code>req=userdata</code>请求：</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例如，以下是Dynamic Media经典中的样本资产：</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>下面是样本资产的相应<code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code>响应如下所示：</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -103,7 +103,7 @@ ht-degree: 21%
  </tbody>
 </table>
 
-锐化在[锐化图像](/help/assets/assets/s7_sharpening_images.pdf)中有介绍。
+锐化在[锐化图像](/help/assets/assets/sharpening_images.pdf)中有介绍。
 
 ## 创建Dynamic Media图像用户档案{#creating-image-profiles}
 
@@ -111,7 +111,7 @@ ht-degree: 21%
 
 请参阅[处理元数据、图像和视频的用户档案](processing-profiles.md)。
 
-另请参阅[组织数字资产以使用处理用户档案的最佳实践](/help/assets/organize-assets.md)。
+另请参阅[组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md)。
 
 **创建Dynamic Media图像用户档案**
 
@@ -140,7 +140,7 @@ ht-degree: 21%
 
 当您将图像配置文件分配给文件夹之后，该文件夹中的所有子文件夹都会自动继承父文件夹的配置文件。这就意味着您只能为每个文件夹分配一个图像配置文件。因此，您在上传、存储、使用资产以及将资产存档的过程中，请妥善安排文件夹结构。
 
-如果您为文件夹分配了一个不同的图像配置文件，新配置文件就会取代之前的配置文件。此前存在的文件夹资产将保持不变。新用户档案将应用于稍后添加到该文件夹的资产。
+如果您为文件夹分配了一个不同的图像配置文件，新配置文件就会取代之前的配置文件。此前存在的文件夹资产将保持不变。此后添加到该文件夹的资产将会应用新的配置文件。
 
 在用户界面中，卡中显示的用户档案名称会指示已为其分配用户档案的文件夹。
 
@@ -158,7 +158,7 @@ ht-degree: 21%
 
 您可以重新处理文件夹中的资产，该文件夹中已经有您稍后更改的现有视频用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-#### 将Dynamic Media图像用户档案应用于用户档案用户界面{#applying-image-profiles-to-folders-from-profiles-user-interface}中的文件夹
+#### 将Dynamic Media图像用户档案应用到用户档案用户界面{#applying-image-profiles-to-folders-from-profiles-user-interface}中的文件夹
 
 1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具>资产>图像用户档案。]**
 1. 选择您要应用到一个或多个文件夹的图像配置文件。
@@ -167,7 +167,7 @@ ht-degree: 21%
 
 1. 点按&#x200B;**[!UICONTROL 将处理用户档案应用到文件夹]**，选择要用于接收新上传资产的一个或多个文件夹，然后点按／单击&#x200B;**[!UICONTROL 应用。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-#### 从属性{#applying-image-profiles-to-folders-from-properties}将Dynamic Media图像用户档案应用到文件夹
+#### 将Dynamic Media图像用户档案应用到属性{#applying-image-profiles-to-folders-from-properties}中的文件夹
 
 1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 资产]**，然后导航到要应用图像用户档案的文件夹。
 1. 在文件夹中，点按复选标记以选择它，然后点按&#x200B;**[!UICONTROL 属性。]**
@@ -181,7 +181,7 @@ ht-degree: 21%
 
 您可以重新处理文件夹中的资产，该文件夹中已经有您稍后更改的现有视频用户档案。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-**要全局应用Dynamic Media图像用户档案**:
+**要在全球应用Dynamic Media图像用户档案**:
 
 1. 执行下列操作之一：
 
@@ -199,7 +199,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->智能裁切仅在Dynamic Media -Scene7模式下可用。
+>Smart Crop仅在Dynamic Media-Scene7模式下可用。
 
 您可以手动重新对齐图像的智能裁剪窗口或调整其大小以进一步调整其焦点。
 
@@ -283,15 +283,15 @@ ht-degree: 21%
 
 您可以从“工具”菜单中的文件夹删除图像配置文件；如果您在 **[!UICONTROL 文件夹中]** ，也可以从“属性”中 **[!UICONTROL 删除。]**&#x200B;本节将介绍这两种将图像配置文件从文件夹删除的方法。
 
-### 通过用户档案用户界面{#removing-image-profiles-from-folders-via-profiles-user-interface}将Dynamic Media图像用户档案从文件夹删除
+### 通过Dynamic Media用户界面{#removing-image-profiles-from-folders-via-profiles-user-interface}将用户档案图像用户档案从文件夹删除
 
 1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具>资产>图像用户档案。]**
 1. 选择您要从一个或多个文件夹删除的图像配置文件。
 1. 点按&#x200B;**[!UICONTROL 从文件夹]**&#x200B;删除处理用户档案，选择一个或多个要用于从中删除用户档案的文件夹，然后点按&#x200B;**[!UICONTROL 删除。]**
 
-   您可以确认图像用户档案不再应用于文件夹，因为该名称不再显示在文件夹名称的下方。
+   如果图像配置文件的名称不再出现在文件夹名称的下方，则可以确定该图像配置文件不再应用于该文件夹。
 
-### 通过属性{#removing-image-profiles-from-folders-via-properties}从文件夹删除Dynamic Media图像用户档案
+### 通过属性{#removing-image-profiles-from-folders-via-properties}将Dynamic Media图像用户档案从文件夹删除
 
 1. 点按AEM徽标，然后导航&#x200B;**[!UICONTROL 资产]**，然后导航到您要从中删除图像用户档案的文件夹。
 1. 在文件夹中，点按复选标记以选择它，然后点按&#x200B;**[!UICONTROL 属性。]**
