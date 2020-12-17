@@ -1,6 +1,6 @@
 ---
 title: 将 Dynamic Media 资产添加到页面
-description: 如何在AEM中将Dynamic Media组件添加到页面
+description: 如何将Dynamic Media组件添加到Adobe Experience Manager的页面
 uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '3092'
-ht-degree: 31%
+source-wordcount: '3100'
+ht-degree: 30%
 
 ---
 
@@ -21,21 +21,21 @@ ht-degree: 31%
 
 要将Dynamic Media功能添加到您在网站上使用的资产中，您可以直接在页面上添加 **Dynamic Media**、 **Interactive Media**、 **Media**&#x200B;或 **** Video 360 Media全景组件。 为此，可进入布局模式并启用Dynamic Media组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic media组件是智能的——它们知道您添加的是图像还是视频，可用的配置选项会相应地发生更改。
 
-如果您使用 AEM 作为 WCM，则可以直接将 Dynamic Media 资产添加到页面。如果您为 WCM 使用第三方，请[链接](/help/assets/linking-urls-to-yourwebapplication.md)或[嵌入](/help/assets/embed-code.md)资产。有关响应式第三方网站，请参阅[将优化的图像交付到响应式网站](/help/assets/responsive-site.md)。
+如果您使用Dynamic Media作为WCM，请直接将Adobe Experience Manager资源添加到页面。 如果您为 WCM 使用第三方，请[链接](/help/assets/linking-urls-to-yourwebapplication.md)或[嵌入](/help/assets/embed-code.md)资产。有关响应式第三方网站，请参阅[将优化的图像交付到响应式网站](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
->您必须先发布资产，然后才能将其添加到AEM中的页面。 请参阅[发布Dynamic Media资产](/help/assets/publishing-dynamicmedia-assets.md)。
+>您必须先发布资产，然后才能以Experience Manager将其添加到页面。 请参阅[发布Dynamic Media资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
 ## 将Dynamic Media组件添加到页面{#adding-a-dynamic-media-component-to-a-page}
 
-向页面添加3D媒体、动态媒体、交互式媒体、全景媒体、智能裁剪视频或视频360媒体组件与向任何页面添加组件相同。 以下部分介绍了Dynamic Media组件。
+向页面添加3D媒体、Dynamic Media、交互式媒体、全景媒体、智能裁剪视频或视频360媒体组件与向任何页面添加组件相同。 以下各节介绍了Dynamic Media各组成部分。
 
-1. 在 AEM 中，打开您要添加 Dynamic Media 组件的页面。
+1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
 1. 在页面左侧的面板中（可能需要切换侧面板的显示），单击&#x200B;**[!UICONTROL 组件]**&#x200B;图标。
-1. 在&#x200B;**[!UICONTROL 组件]**&#x200B;标题下，在下拉列表中，选择&#x200B;**[!UICONTROL Dynamic Media。]**
+1. 在&#x200B;**[!UICONTROL 组件]**&#x200B;标题下，在下拉列表下，选择&#x200B;**[!UICONTROL Dynamic Media。]**
 
-   如果没有可用的Dynamic Media组件列表，您可能需要启用要使用的Dynamic Media组件。 请参阅[启用Dynamic Media组件](#enabling-dynamic-media-components)。
+   如果没有可用的列表Dynamic Media组件，您可能需要启用要使用的Dynamic Media组件。 请参阅[启用Dynamic Media组件](#enabling-dynamic-media-components)。
 
    ![6_5_360video_wcmcomponent](/help/assets/assets/6_5_360video_wcmcomponent.png)
 
@@ -47,11 +47,11 @@ ht-degree: 31%
 
 1. 根据您放到页面上的Dynamic Media组件，将打开一个配置对话框。 [根据需要设置组](/help/assets/adding-dynamic-media-assets-to-pages.md#dynamic-media-components) 件选项。
 
-   以下示例显示了Dynamic Media **[!UICONTROL Video 360 Media]**&#x200B;组件对话框以及查看器预设下拉列表中提供的选项。
+   以下示例显示了“Dynamic Media视频360媒体&#x200B;**[!UICONTROL ”组件对话框以及“查看器预设”下拉列表中提供的选项。]**
 
    ![视频360媒体组件](assets/6_5_360video_wcmcomponentviewerpreset.png)
 
-   Dynamic Media Video 360媒体组件。
+   Dynamic Media视频360媒体组件。
 
 1. 完成后，在对话框的右上角，点按复选标记以保存更改。
 
@@ -59,7 +59,7 @@ ht-degree: 31%
 
 如果没有可添加到页面的Dynamic Media组件，则可能意味着您需要首先启用要使用的组件。
 
-1. 在 AEM 中，打开您要添加 Dynamic Media 组件的页面。
+1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
 1. 在工具栏左侧，点按页面顶部附近的页面信息图标，然后点按下拉列表中的&#x200B;**[!UICONTROL 编辑模板]**。
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
@@ -76,13 +76,13 @@ ht-degree: 31%
 1. 滚动直到您看到&#x200B;**[!UICONTROL Dynamic Media。]**
 1. 点按&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;左侧的>图标以展开列表，选择要启用的Dynamic Media组件。
 
-   ![Dynamic Media组件列表](/help/assets/assets-dm/dm-components-select.png)
+   ![Dynamic Media部件列表](/help/assets/assets-dm/dm-components-select.png)
 
 1. 在&#x200B;**[!UICONTROL 布局容器]**&#x200B;页面的右上角附近，点按完成（复选标记）图标。
 
-1. 在工具栏右侧页面顶部附近的下拉列表中，点按&#x200B;**[!UICONTROL 初始内容]**，然后按[将Dynamic Media组件添加到页面](#adding-a-dynamic-media-component-to-a-page)。
+1. 在工具栏右侧页面顶部附近的下拉列表中，点按&#x200B;**[!UICONTROL 初始内容]**，然后按[将Dynamic Media组件按常规方式添加到页面](#adding-a-dynamic-media-component-to-a-page)。
 
-## 本地化Dynamic Media组件{#localizing-dynamic-media-components}
+## 将Dynamic Media组件定位{#localizing-dynamic-media-components}
 
 您可以通过以下两种方式之一本地化Dynamic Media组件：
 
@@ -98,7 +98,7 @@ ht-degree: 31%
 
 ## Dynamic Media 组件 {#dynamic-media-components}
 
-点按&#x200B;**[!UICONTROL 组件]**&#x200B;图标，然后在&#x200B;**[!UICONTROL Dynamic Media上进行筛选时，Dynamic Media组件可用。]**
+当您点按&#x200B;**[!UICONTROL 组件]**&#x200B;图标，然后在&#x200B;**[!UICONTROL Dynamic Media上进行筛选时，Dynamic Media组件可用。]**
 
 可用的Dynamic Media组件包括：
 
@@ -109,13 +109,13 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->这些组件默认不可用，在使用之前需要通过模板编辑器使用。 [在模板编辑器中](/help/sites-authoring/templates.md#editing-templates-template-authors)使用组件后，您可以像添加任何其他AEM组件一样将组件添加到页面。
+>这些组件默认不可用，在使用之前需要通过模板编辑器使用。 [在模板编辑器中](/help/sites-authoring/templates.md#editing-templates-template-authors)使用这些组件后，您可以像添加任何其他Experience Manager组件一样将组件添加到页面。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
 ### Dynamic Media 组件 {#dynamic-media-component}
 
-Dynamic Media组件是智能的。根据您添加的是图像还是视频，您有各种选项。 该组件支持图像预设、基于图像的查看器（例如图像集、旋转集、混合媒体集）和视频。此外，查看器是响应式的——屏幕大小会根据屏幕大小自动更改。 所有查看器都是 HTML5 查看器。
+Dynamic Media是聪明的。根据您添加的是图像还是视频，您有各种选项。 该组件支持图像预设、基于图像的查看器（例如图像集、旋转集、混合媒体集）和视频。此外，查看器是响应式的——屏幕大小会根据屏幕大小自动更改。 所有查看器都是 HTML5 查看器。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
 您还可以直接在组件中配置查看器预设、图像预设或图像格式。要使图像成为响应式图像，您可以设置断点，或应用响应式图像预设。
 
-您&#x200B;*必须*&#x200B;通过点按组件中的&#x200B;**[!UICONTROL 编辑]**&#x200B;图标，然后点按&#x200B;**[!UICONTROL Dynamic Media设置，来编辑以下Dynamic Media设置。]**
+您&#x200B;*必须*&#x200B;通过点按组件中的&#x200B;**[!UICONTROL 编辑]**&#x200B;图标，然后&#x200B;**[!UICONTROL Dynamic Media设置，编辑以下Dynamic Media设置。]**
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
@@ -332,18 +332,18 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
 如果未显示您要查找的查看器预设，请检查以确保其已发布。 您必须先发布查看器预设，然后才能使用它们。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
-### 使用HTTP/2投放Dynamic Media资产{#using-http-to-delivery-dynamic-media-assets}
+### 使用HTTP/2投放Dynamic Media资源{#using-http-to-delivery-dynamic-media-assets}
 
-HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 Dynamic Media资产的投放现在可以通过HTTP/2，从而提供更好的响应和加载时间。
+HTTP/2是新的、经过更新的Web协议，它改进了浏览器和服务器的通信方式。 它提供更快的信息传输，并减少所需的处理能力。 Dynamic Media资源的投放现在可以通过HTTP/2，从而提供更好的响应和加载时间。
 
-有关Dynamic Media帐户HTTP/2快速入门的完整详细信息，请参阅[内容的HTTP2投放](/help/assets/http2.md)。
+有关使用Dynamic Media帐户HTTP/2入门的完整详细信息，请参阅[内容](/help/assets/http2.md)的HTTP2投放。
 
 >[!MORELIKETHIS]
 >
->* [在AEM Dynamic Media中使用视频播放器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-player-feature-video-use.html)
->* [将交互式视频与AEM Dynamic Media结合使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-interactive-video-feature-video-use.html)
->* [使用AEM Dynamic Media了解资产查看器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-viewer-feature-video-understand.html)
->* [将自定义视频缩略图与AEM Dynamic Media结合使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-thumbnails-feature-video-use.html)
->* [使用AEM Dynamic Media了解颜色管理](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-color-management-technical-video-setup.html)
->* [将图像锐化与AEM Dynamic Media结合使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-image-sharpening-feature-video-use.html)
+>* [在AEMDynamic Media使用视频播放器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-player-feature-video-use.html)
+>* [与AEMDynamic Media使用交互式视频](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-interactive-video-feature-video-use.html)
+>* [借助AEMDynamic Media了解资产查看器](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-viewer-feature-video-understand.html)
+>* [将自定义视频缩略图与AEM Dynamic Media一起使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [借助AEMDynamic Media了解色彩管理](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-color-management-technical-video-setup.html)
+>* [在AEMDynamic Media中使用图像锐化](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-image-sharpening-feature-video-use.html)
 
