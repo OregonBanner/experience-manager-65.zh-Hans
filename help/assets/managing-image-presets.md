@@ -10,9 +10,9 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '3866'
+source-wordcount: '3828'
 ht-degree: 28%
 
 ---
@@ -400,7 +400,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
      <li><strong>应用至</strong> -确定是否将取消锐化应用于每种颜色或亮度。</li>
     </ul>
     <div>
-      有关“锐化”的信息，请参阅<a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/sharpening_images.pdf">锐化图像</a>。
+      有关“锐化”的信息，请参阅<a href="https://experienceleague.adobe.com/docs/dynamic-media-classic/assets/sharpening_images.pdf">锐化图像</a>。
     </div> </td>
   </tr>
   <tr>
@@ -420,7 +420,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
   </tr>
   <tr>
    <td><strong>图像修饰符</strong></td>
-   <td><p>除了UI中提供的常用图像设置之外，Dynamic Media还支持大量高级图像修改，您可以在<strong>图像修饰符</strong>字段中指定这些修改。 这些参数在<a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">图像服务器协议命令参考</a>中定义。</p> <p>重要：不支持API中列出的以下功能：</p>
+   <td><p>除了UI中提供的常用图像设置之外，Dynamic Media还支持大量高级图像修改，您可以在<strong>图像修饰符</strong>字段中指定这些修改。 这些参数在<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api">图像服务器协议命令参考</a>中定义。</p> <p>重要：不支持API中列出的以下功能：</p>
     <ul>
      <li>基本模板和文本渲染命令：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code>和 <code>textPs=</code></li>
      <li>本地化命令：<code>locale=</code>和 <code>req=xlate</code></li>
@@ -437,7 +437,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 
 ## 使用图像修饰符{#defining-image-preset-options-with-image-modifiers}定义图像预设选项
 
-除了“基本”和“高级”选项卡中提供的选项外，您还可以定义图像修饰符，以便在定义图像预设时有更多选择。“图像渲染”功能依赖于 Scene7 图像渲染 API 得以实现，该功能在《[HTTP 协议参考指南](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/c_http_protocol_reference.html)》中有详细定义。
+除了“基本”和“高级”选项卡中提供的选项外，您还可以定义图像修饰符，以便在定义图像预设时有更多选择。图像渲染依赖于[HTTP协议参考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api)中详细定义的图像渲染API。
 
 下面的一些基本示例显示了可以使用图像修饰符实现的操作。
 
@@ -445,7 +445,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 >
 >某些图像修饰符[不能用于AEM](#advanced-tab-options)。
 
-* [op_invert](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/r_op_invert.html)  —— 反转每个颜色分量以获得负片图像效果。
+* [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html#image-serving-api)  —— 反转每个颜色分量以获得负片图像效果。
 
    ```xml
    &op_invert=1
@@ -453,7 +453,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 
    ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
 
-* [op_blur](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/r_op_blur.html) - 向图像应用模糊滤镜。
+* [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html#image-serving-api) - 向图像应用模糊滤镜。
 
    ```xml
    &op_blur=7
@@ -469,7 +469,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 
    ![chlimage_1-80](assets/chlimage_1-501.png)
 
-* [op_brightness](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/r_op_brightness.html)  —— 降低或增加亮度。
+* [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html#image-serving-api)  —— 降低或增加亮度。
 
    ```xml
    &op_brightness=58
@@ -477,7 +477,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets方面，主要�
 
    ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
 
-* [opac](https://microsite.omniture.com/t2/help/en_US/s7/is_ir_api/is_api/http_ref/r_opac.html) - 调整图像不透明度。可用于降低前景不透明度。
+* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html#image-serving-api) - 调整图像不透明度。可用于降低前景不透明度。
 
    ```xml
    opac=29
