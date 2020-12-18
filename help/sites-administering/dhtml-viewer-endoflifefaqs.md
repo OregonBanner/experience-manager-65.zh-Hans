@@ -1,134 +1,134 @@
 ---
-title: DHTML 查看器生命周期结束常见问题解答
-seo-title: DHTML 查看器生命周期结束常见问题解答
-description: 自2014年1月31日起，Scene7的DHTML查看器平台将正式停用。 此通知为您提供常见问题解答，以便您能够为此过渡准备到我们新的HTML5查看器平台。
-seo-description: 自2014年1月31日起，Scene7的DHTML查看器平台将正式停用。 此通知为您提供常见问题解答，以便您能够为此过渡准备到我们新的HTML5查看器平台。
-uuid: a78c03b3-6513-42e1-881f-6a9551659769
+title: DHTML查看器寿命终止
+description: 自2014年1月31日起，DHTML查看器平台正式停止使用。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: d94244ac-a5f6-4c95-ab8c-26b41d25863f
 translation-type: tm+mt
-source-git-commit: 283802809d665cd979e2f1a4fa969b6ddc491ed6
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
 
-# DHTML 查看器生命周期结束常见问题解答{#dhtml-viewer-end-of-life-faqs}
+# DHTML查看器生命周期结束{#dhtml-viewer-end-of-life}
 
-自2014年1月31日起，Scene7的DHTML查看器平台将正式停用。 此通知为您提供常见问题解答，以便您能够为此过渡准备到我们新的HTML5查看器平台。
+自2014年1月31日起，DHTML查看器平台正式停止使用。
 
-**有什么变化？**
+有关最新支持的查看器，请参见[《Dynamic Media查看器参考指南》](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
-自2014年1月31日起，Scene7将正式终止对DHTML查看器平台的支持。
+<!-- OBSOLETE CONTENT **What is the change?**
 
-**生命终结意味着什么？**
+Effective January 31, 2014, Scene7 will officially end-of-life support for the DHTML viewer platform.
 
-寿命结束意味着Scene7将(1)不再向DHTML查看器平台添加任何功能增强功能(2)不再解决或发布DHTML查看器平台上的任何错误修复，并且(3)客户关怀将不再是与DHTML相关的查看器问题或问题的疑难解答或支持。
+**What does end-of-life mean?**
 
-**Scene7为何要做出这一改变？**
+End-of-life means that Scene7 will (1) no longer add any feature enhancements to the DHTML viewer platform (2) no longer address or release any bug fixes on the DHTML viewer platform and (3) customer care will no longer be troubleshooting or providing support for any DHTML-related viewer issues or questions.
 
-Web标准不断发展，DHTML是一种较旧的Web开发技术，正迅速被HTML5所取代。 作为平台，DHTML的最大局限性在于它无法创造HTML5现在可以一致、更轻松地支持跨浏览器的丰富体验。 例如，此类限制包括缺乏对以下产品的跨浏览器支持：
+**Why is Scene7 making this change?**
 
-* 自定义光标
-* 圆角
-* 动画（如页面翻转、放松）
-* 效果（如阴影、发光）
-* 完整的字体支持
-* 无插件视频播放
+Web standards are constantly evolving and DHTML is an older web development technology that is rapidly being replaced by HTML5. The biggest limitation to DHTML as a platform is that it is not capable of creating the richness of experience that HTML5 now can consistently and more easily support cross-browser. For example such limitations include lack of cross-browser support for:
 
-特定于Scene7DHTML查看器平台，基于JSP的解决方案和Javascript API未针对移动设备进行优化，以利用多触和手势功能。 尽管2011/2012年初发布的DHTML查看器针对移动设备进行了优化，但由于缺少基于SDK组件的灵活开发框架，它们很难进行自定义和维护。
+* Custom cursors
+* Rounded corners
+* Animations (such as page flipping, zoom easing)
+* Effects (such as shadows, glow)
+* Complete font support
+* Plugin-less video playback
 
-受DHTML的这些限制以及HTML5作为跨桌面和移动设备的新兴标准的快速行业吸引力的推动，Scene7已决定投资于基于HTML5的查看器平台。 这项投资将优惠我们的客户一个强大的平台，他们可以利用该平台构建更丰富、更具吸引力的交互式查看器，这些查看器可以触及使用多种屏幕的用户，包括桌面、iOS和Android设备。
+Specific to the Scene7 DHTML viewer platform, both the JSP-based solution and the Javascript APIs were not optimized for mobile devices to take advantage of multi-touch and gesture capabilities. And even though DHTML viewers which were released in 2011/early 2012 are optimized for mobile, they were difficult to customize and maintain due to the lack of a flexible SDK component-based development framework.
 
-**如何知道我的查看器是否使用DHTML平台？**
+Driven by these limitations on DHTML and rapid industry traction with HTML5 as an emerging standard across both desktop and mobile, Scene7 has decided to invest in an HTML5-based viewer platform. This investment will offer our customers a robust platform against which they can build richer, more engaging interactive viewers that can reach users on multiple screens including desktop, iOS and Android devices.
 
-要确定您的公司使用的查看器是DHTML，并因此受此更改影响，请检查：
+**How do I know if my viewer is using the DHTML platform?**
 
-1. 您的公司正在使用此表中列出的现成Scene7查看器，其中“查看器技术”被指定为“DHTML”:
+To determine if the viewer your company is using is DHTML and hence affected by this change, please check if:
 
-   [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000)
+1. Your company is using an out-of-box Scene7 viewer listed in this table where the "Viewer Technology" is designated as "DHTML":
 
-1. 您的公司正在使用根据本表中现成的Scene7查看器创建为新预设的查看器，其中“查看器技术”被指定为“DHTML”:
+    [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000)
 
-   [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000)
+1. Your company is using a viewer that was created as a new preset based off an out-of-box Scene7 viewer in this table where the "Viewer Technology" is designated as "DHTML":
 
-1. 公司正在使用从基于JSP的DHTML解决方案创建的自定义查看器：
+    [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html#WS1c46793299cf21d77e926d1613177f0a020-8000)
 
-   [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#JSP_Reference](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#JSP_Reference)
+1. Your company is using a custom viewer created from the JSP-based DHTML solution:
 
-1. 您的公司正在使用从Javascript API创建的自定义查看器：
+    [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#JSP_Reference](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#JSP_Reference)
 
-   [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#API_Reference](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#API_Reference)
+1. Your company is using a custom viewer created from the Javascript API:
 
-1. 您的公司正在使用使用DHTML多屏幕弹出API创建的自定义查看器：
+    [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#API_Reference](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#API_Reference)
 
-   [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Multi-screen_Flyout_Viewer](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Multi-screen_Flyout_Viewer)
+1. Your company is using a custom viewer created with the DHTML multi-screen flyout API:
 
-1. 您的公司正在使用使用DHTML桌面弹出API创建的自定义查看器：
+    [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Multi-screen_Flyout_Viewer](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Multi-screen_Flyout_Viewer)
 
-   [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Desktop_Flyout_Viewer](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Desktop_Flyout_Viewer)
+1. Your company is using a custom viewer created with the DHTML desktop flyout API:
 
-1. 您的公司正在使用DHTML查看器包中的设备检测库：
+    [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Desktop_Flyout_Viewer](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Desktop_Flyout_Viewer)
 
-   在您的代码中查找“sj_deviceDetect.js”的JS。
+1. Your company is using a device detection library that is part of the DHTML viewers package:
 
-   此代码已被新的JS设备检测代码替换：[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers)。
+   Look for JS include of "sj_deviceDetect.js" in your code.
 
-**什么是替换查看器平台？**
+   This has been replaced by new JS device detection code here: [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Detecting_devices_and_browsers) .
 
-DHTML的替代产品是Scene7HTML5查看器平台，包括：
+**What is the replacement viewer platform?**
 
-* HTML5开箱即用式查看器，在各种查看器类型（包括基本缩放、弹出缩放、图像集、样本集、多维旋转和混合媒体）上提供移动优化交互。 有关这些查看器的完整最新示例，请参阅：[https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
-* HTML5查看器SDK，支持针对HTML5支持的站点和设备（如iOS和Android）对Adobe Scene7查看器进行大量自定义，为品牌化查看器外观和交互性赋予最大的灵活性和创造性。 可重用性能优化组件的优势降低了查看器开发的总体成本并加快了自定义开发。
+The replacement for DHTML is the Scene7 HTML5 viewer platform, consisting of both:
 
-**HTML5查看器平台何时具备过渡DHTML查看器平台所需的功能？**
+* HTML5 out-of-box viewers featuring mobile optimized interactions across numerous viewer types including basic zoom, flyout zoom, image sets, swatch sets, multi-dimensional spin and mixed media. For full up-to-date examples of these viewers, please refer to: [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
+* HTML5 viewer SDK which enables extensive customization of Adobe Scene7 viewers for HTML5 supported sites and devices (such as iOS and Android), imparting the utmost flexibility and creativity to brand the viewer appearance and interactivity. The benefit of reusable performance-optimized components lower the overall cost of viewer development and accelerate custom development.
 
-Scene7于2011年秋发布了第一个HTML5查看器SDK，并发布了5.5版。自那以后，我们为该平台添加了许多功能，并扩展了对越来越多类型查看器的支持。 对于大多数常见的查看器要求，HTML5查看器平台可能已具备您需要立即迁移的功能。 我们每季度都发布此查看器平台，并继续大力投资。
+**When will the HTML5 viewer platform have the features I need to transition off the DHTML viewer platform?**
 
-要确定HTML5查看器平台现在能否满足查看器要求，请参阅以下文档：
+Scene7 released the first HTML5 viewer SDK in Fall 2011 with the launch of version 5.5. Since then, we have added numerous features to the platform and extended support for more and more types of viewers. For most common viewer requirements, the HTML5 viewer platform likely already has the features you need to migrate now. And we continue to aggressively invest in this viewer platform with releases every quarter.
 
-[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers) （适用于开箱即用查看器功能和自定义功能）
+To determine if your viewer requirements can be met today with the HTML5 viewer platform, please refer to the following documentation:
 
-[https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html) （访问SDK API文档）
+[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#About_HTML5_Viewers) (for out of box viewers features and customization capabilities)
 
-如果您仍不确定HTML5查看器SDK是否满足您的要求，请咨询我们的专业服务团队。
+[https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html) (to access the SDK API documentation)
 
-**如何将我的查看者过渡到HTML5平台？**
+If you are still unsure about whether or not the HTML5 viewer SDK can meet your requirements, please consult with our professional services team.
 
-要将观众过渡到HTML5平台，Scene7优惠了以下选项：
+**How do I transition my viewers over to the HTML5 platform?**
 
-1. 使用Scene7现成的HTML5查看器，其示例可在以下网址找到：[https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
-1. 在SPS应用程序设置下配置一个Scene7现成的HTML5查看器。 这将允许您自定义某些行为，如查看器大小、过渡、缩放行为等：[https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html)
-1. 通过修改CSS来更改可视设计（如按钮图稿、位置、透明度、背景颜色等），自定义Scene7现成HTML5查看器的外观：[https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers)
-1. 使用SDK从头开始创建自定义HTML5查看器，可从以下网址下载：[https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html)。 您可以与专业服务联系以构建自定义查看器，也可以由您自己的Web开发团队构建。
+To transition your viewers to the HTML5 platform, Scene7 offers the following options:
 
-**不支持HTML5的浏览器如何？**
+1. Use one of the Scene7 out-of-box HTML5 viewers, examples of which can be found here: [https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html](https://microsite.omniture.com/t2/help/en_US/s7/vlist/vlist.html)
+1. Configure one of the Scene7 out-of-box HTML5 viewers under the SPS application setup. This will allow you to customize certain behavior such as viewer size, transitions, zoom behavior, etc: [https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html](https://help.adobe.com/en_US/scene7/using/WS6E593DEA-7D81-4cd6-84B0-85E8BB274176.html)
+1. Customize look and feel of the Scene7 out-of-box HTML5 viewers by modifying CSS to change visual design such as button artwork, placement, transparency, background colors, etc: [https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers](https://microsite.omniture.com/t2/help/en_US/s7/viewers_ref/index.html#Customizing_HTML5_Viewers)
+1. Create a custom HTML5 viewer from scratch using the SDK which can be downloaded here: [https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html](https://help.adobe.com/en_US/scene7/using/WSd4272150f67705c11b002eec12fcba4dee6-8000.html). You can engage with professional services to build the custom viewer or have your own web development team build it.
 
-HTML5在许多移动设备和Web浏览器上都受支持，并且继续受到欢迎。 目前，尽管Internet Explorer 8或更低版本不支持HTML5，但Scene7已创新HTML5查看器平台，将支持扩展至IE 7和IE 8。 借助Scene7HTML5查看器平台，您可以通过单个开发平台触及绝大多数桌面和移动用户。
+**What about browsers that do not support HTML5?**
 
-HTML5 SDK版本2.2.1的当前系统要求为：
+HTML5 is supported across many mobile devices and web browsers, and continues to gain traction. Currently, even though HTML5 is not supported on Internet Explorer 8 or below, Scene7 has innovated our HTML5 viewer platform to extend support even to IE 7 and IE 8. With the Scene7 HTML5 viewer platform , you can reach the overwhelming majority of both desktop and mobile users with a single development platform.
 
-* Microsoft® Windows® XP或更高版本，Macintosh® OS X 10.6或更高版本
-* Firefox 17、Safari 5.1、Chrome 23、Internet Explorer 7或更高版本
-* iOS 3.2.2或更高版本
-* 在iPhone3或更高版本以及iPad1或更高版本（本机浏览器）上认证
-* Android OS 2.2或更高版本
+Current system requirements as of the HTML5 SDK version 2.2.1 are:
 
-要检查您的浏览器是否与我们的HTML5查看器平台兼容，请启动以下示例查看器：
+* Microsoft® Windows® XP or later, Macintosh® OS X 10.6 or later
+* Firefox 17, Safari 5.1, Chrome 23, Internet Explorer 7 or later
+* iOS 3.2.2 or later
+* Certified on iPhone3 or later and iPad1 or later (native browsers)
+* Android OS 2.2 or later
+
+To check if your browser is compatible with our HTML5 viewer platform, launch the following example viewer:
 
 [https://s7d1.scene7.com/s7viewers/html5/flyout.html?asset=Scene7SharedAssets/Sample%20Image](https://s7d1.scene7.com/s7viewers/html5/flyout.html?asset=Scene7SharedAssets/Sample%20Image)
 
-如果您通过悬停鼠标或将手指拖动到主图像上来查看放大的图像，则它是支持的浏览器／设备。
+If you see the zoomed-in image by hovering your mouse or dragging your finger over the main image, then it is a supported browser/device.
 
-**如果要借助现有DHTML查看器保持生产实时状态，有哪些选项？**
+**What options do I have if I want to stay live in production with my existing DHTML viewer?**
 
-尽管您仍可以与基于DHTML的查看器一起在生产环境中实时工作，但务必注意，2014年1月31日之后将不会进行任何增强、错误修复或客户关怀。 因此，我们强烈建议所有客户迁移到更强大的HTML5查看器平台。. 但是，如果您的业务状况在EOL日期之前阻止了此类迁移，您可以选择与专业服务部门签订合同，以延长支持的维护时间。 有关详细信息，请联系您的客户经理。
+Although you can still be live in production with DHTML-based viewers, it is important to note that there will be no enhancements, bug fixes nor customer care after January 31, 2014. Hence, we strongly advise all customers to migrate over to our more robust HTML5 viewer platform. . However, if your business situation prevents such a migration by the EOL date, you have the option to contract with professional services to extend the supported maintenance time period. For more information, please contact your account manager.
 
-**我应与谁联系以了解更多信息？**
+**Who do I contact for more information?**
 
-如果此常见问题解答未回答您的所有问题，请[使用Admin Console创建支持案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)或与Adobe客户经理联系。
+If this FAQ did not answer all of your questions, please [use the Admin Console to create a support case](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) or contact your Adobe account manager.
+ -->
