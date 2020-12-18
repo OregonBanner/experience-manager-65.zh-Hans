@@ -2,9 +2,9 @@
 title: 使用布局模式调整组件大小以用于自适应表单
 description: '使用布局模式下可用的响应式网格定义组件的位置 '
 translation-type: tm+mt
-source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
+source-git-commit: 77fef5a1926c733abdaf01a19d9fdfc37323566e
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,16 @@ ht-degree: 0%
 1. 在布局模式下，点按组件以调整大小。 蓝点显示在响应式网格的开始和末尾。
 1. 拖放蓝点以定义组件在响应式网格中的位置。
 
-   ![使用布局模式调整大小](assets/layout_mode_resize_new_updated.png)
+   ![使用布局模式调整大小](assets/layout_mode_resize_new_updated1.png)
 
    点按组件后显示的工具栏包含以下选项：
 
    * **父项：** 选择组件的父项。
    * **浮动到新行：如** 果同一行中有多个组件，请将组件移到下一行。
 
-   您可以使用&#x200B;**[!UICONTROL 还原断点布局]**（![还原断点](assets/reverttopreviouslypublishedversion.png)）选项撤消所有调整大小的更改，并将默认布局应用于包含已调整大小的组件的面板。 点按已调整大小的组件的父项以视图选项。
+   此外，还可以使用&#x200B;**[!UICONTROL 还原断点布局]**（![还原断点](assets/reverttopreviouslypublishedversion.png)）选项撤消所有调整大小的更改，并将默认布局应用到包含已调整大小组件的面板。 点按已调整大小的组件的父项以视图选项。
+
+   您可以点按组件，然后使用&#x200B;**[!UICONTROL 还原断点布局]**&#x200B;选项撤消所有调整大小的更改，并在组件级别应用默认布局。
 
    >[!NOTE]
    >
