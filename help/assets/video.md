@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media中的视频
-description: 了解如何在Dynamic Media中处理视频
+title: Dynamic Media视频
+description: 了解如何在Dynamic Media使用视频
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,30 +9,30 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f63e13486792f9975c84202b2cd3ddcf618ce0fc
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '11812'
+source-wordcount: '11277'
 ht-degree: 22%
 
 ---
 
 
-# Dynamic Media中的视频{#video}
+# Dynamic Media视频{#video}
 
 本节介绍如何在 Dynamic Media 中处理视频。
 
 ## 快速开始:视频{#quick-start-videos}
 
-以下工作流分步说明旨在帮助您快速设置并运行Dynamic Media中的自适应视频集。每个步骤之后都会交叉引用主题标题，您可以从中找到更多信息。
+以下工作流分步说明旨在帮助您快速设置并运行Dynamic Media的自适应视频集。每个步骤之后都会交叉引用主题标题，您可以从中找到更多信息。
 
 >[!NOTE]
 >
->在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media -Scene7模式或Dynamic Media —— 混合模式中启用并配置了Dynamic MediaCloud Services。
+>在Dynamic Media处理视频之前，请确保AEM管理员已在Dynamic Media-Scene7模式或Dynamic Media-混合模式中启用并配置了Dynamic MediaCloud Services。
 >
->* 请参 [阅配置Dynamic Media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) -Scene7模式和Dynamic Media -Scene7模 [式中的配置Dynamic MediaCloud Services。](/help/assets/troubleshoot-dms7.md)
+>* 请参阅配置Dynamic Media-Scene7模式和[Dynamic Media-Scene7模式疑难解答中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。](/help/assets/troubleshoot-dms7.md)
    >
    >
-* 请参阅配置Dynamic Media —— 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
+* 请参阅配置Dynamic Media-混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。
 
 >
 
@@ -117,13 +117,13 @@ ht-degree: 22%
 
 
 
-## 在Dynamic Media中处理视频{#working-with-video-in-dynamic-media}
+## 在Dynamic Media使用视频{#working-with-video-in-dynamic-media}
 
-Dynamic Media中的视频是一款端到端解决方案，它可轻松发布高质量自适应视频以跨多个屏幕（包括桌面、iOS、Android、Blackberry和Windows移动设备）进行流化。自适应视频集为同一视频的不同版本编码，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。桌面计算机或移动设备会检测可用带宽。
+Dynamic Media的视频是一款端到端的解决方案，可轻松发布高质量自适应视频，跨多个屏幕（包括桌面、iOS、Android、Blackberry和Windows移动设备）进行流播放。自适应视频集为同一视频的不同版本编码，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。桌面计算机或移动设备会检测可用带宽。
 
 例如，在 iOS 移动设备上，设备检测到 3G、4G 或 Wi-Fi 等带宽。设备会随之自动从自适应视频集内的各种视频比特率中选择正确的编码视频。然后，视频会在桌面设备、移动设备或平板电脑上进行流播放。
 
-此外，如果桌面或移动设备上的网络条件发生变化，设备会自动动态地切换视频质量。同时，如果客户在桌面上进入全屏模式，自适应视频集也会做出响应来使用较好的分辨率，从而改善客户的观看体验。使用自适应视频集可为在多个屏幕和设备上播放Dynamic Media视频的客户提供最佳播放方式。
+此外，如果桌面或移动设备上的网络条件发生变化，设备会自动动态地切换视频质量。同时，如果客户在桌面上进入全屏模式，自适应视频集也会做出响应来使用较好的分辨率，从而改善客户的观看体验。使用自适应视频集为在多个屏幕和设备上播放Dynamic Media视频的客户提供最佳播放方式。
 
 视频播放器用来确定在播放期间要播放或要选择的编码视频的逻辑基于以下算法：
 
@@ -146,9 +146,9 @@ Dynamic Media中的视频是一款端到端解决方案，它可轻松发布高�
 * 组织、浏览和搜索具有全面元数据支持的视频，以实现高效的视频资产管理。
 * 将自适应视频集交付到Web、桌面和移动设备，包括iPhone、iPad、Android、Blackberry和Windows手机。
 
-自适应视频流播放在多种 iOS 平台上受支持。请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
+自适应视频流播放在多种 iOS 平台上受支持。请参阅[《Dynamic Media查看器参考指南》](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
 
-Dynamic Media支持MP4 H.264视频的移动视频回放。您可以在以下位置找到支持此视频格式的Blackberry设备：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支持的视频格式。
+Dynamic Media支持MP4 H.264视频的移动视频播放。您可以在以下位置找到支持此视频格式的Blackberry设备：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支持的视频格式。
 
 请参阅下面的文档，以了解支持此视频格式的 Windows 设备：[Windows Phone 上支持的视频格式](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx)。
 
@@ -162,11 +162,11 @@ Dynamic Media支持MP4 H.264视频的移动视频回放。您可以在以下位�
 
 请参阅[动态视频播放](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)范例。
 
-另请参阅[AEM Assets和Dynamic Media Classic的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)和[仅AEM资产的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
+另请参阅[AEM Assets和Dynamic Media经典的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)和[仅AEM资产的查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)。
 
 ## 最佳实践：使用HTML5视频查看器{#best-practice-using-the-html-video-viewer}
 
-Dynamic Media HTML5视频查看器预设是强大的视频播放器。您可以使用它们避免许多与HTML5视频播放相关的常见问题以及与移动设备相关的问题，如缺少自适应流投放和桌面浏览器访问能力有限。
+Dynamic MediaHTML5视频查看器预设是功能强大的视频播放器。您可以使用它们避免许多与HTML5视频播放相关的常见问题以及与移动设备相关的问题，如缺少自适应流投放和桌面浏览器访问能力有限。
 
 在播放器的设计方面，您可以使用标准的 Web 开发工具设计视频播放器的所有功能。例如，您可以使用 HTML5 和 CSS 设计按钮、控件和自定义标识图像背景，从而帮助您向客户展示自定义的外观。
 
@@ -191,7 +191,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 渐进式视频通过在用户的桌面系统或移动设备上本地下载和存储视频来交付。
 
-下表介绍了使用Dynamic Media Video Viewer在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
+下表介绍使用Dynamic Media视频查看器在桌面计算机和移动设备上播放视频的设备、浏览器和方法。
 
 <table>
  <tbody>
@@ -263,9 +263,9 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
  </tbody>
 </table>
 
-## 动态媒体视频解决方案的架构{#architecture-of-dynamic-media-video-solution}
+## Dynamic Media视频解决方案的架构{#architecture-of-dynamic-media-video-solution}
 
-下图显示了通过DMGateway（在Dynamic Media Hybrid模式下）上传和编码并供公众使用的视频的整体创作工作流程。
+下图显示了通过DMGateway(在Dynamic Media混合模式下)上传和编码并供公众使用的视频的整体创作工作流程。
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
@@ -308,7 +308,7 @@ HLS是Apple自适应视频流播放的标准，可根据网络带宽容量自动
 
 在为主源视频文件选择或创建视频编码预设时，请确保该预设的宽高比与主源视频文件的宽高比相同。 宽高比是视频的宽度与高度的比率。
 
-要确定视频文件的长宽比，请获取该文件的元数据并记录该文件的宽度和高度（请参阅上面的“获取文件的元数据”）。 然后，使用此公式确定宽高比：
+要确定视频文件的长宽比，请获取该文件的元数据并记下该文件的宽度和高度（请参阅上面的“获取文件的元数据”）。 然后，使用此公式确定宽高比：
 
 宽度/高度 = 宽高比
 
@@ -417,9 +417,9 @@ Dynamic Media 建议使用 MP4 H.264 视频编码预设。由于 MP4 文件使�
 
 要将视频资产发布到YouTube，您需要设置带有标记的AEM Assets。 将这些标记与YouTube渠道关联。 如果视频资产的标签与YouTube渠道的标签匹配，则视频将发布到YouTube。 只要使用关联标记，发布到YouTube就会与视频的正常发布一起发生。
 
-YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media编码创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但在回放时需要查看器预设时，视频会处理。
+YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media编码创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但在回放时需要查看器预设时，视频会这样处理。
 
-当您绕过视频处理用户档案并直接发布到YouTube时，这只意味着AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您以动态媒体或dynamicmedia_scene7运行模式运行，则未编码的视频将不能用于任何Dynamic Media资产类型。
+当您绕过视频处理用户档案并直接发布到YouTube时，这只意味着AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您以dynamicmedia或dynamicmedia_scene7运行模式运行，则未编码的视频将不能用于任何Dynamic Media资源类型。
 
 将视频资产发布到YouTube服务器需要完成以下任务，以确保使用YouTube进行安全、安全的服务器到服务器身份验证：
 
@@ -588,7 +588,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 #### 在AEM 6.4和更高版本{#setting-up-youtube-in-aem-and-later}中设置YouTube
 
-1. 请确保以管理员身份登录到Dynamic Media实例。
+1. 请确保以管理员身份登录您的Dynamic Media实例。
 1. 在AEM的左上角，点按AEM徽标，然后在左边栏中，点按&#x200B;**[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube发布配置。]**
 1. 点按&#x200B;**[!UICONTROL global]**（请勿选择它）。
 
@@ -635,7 +635,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 #### 在AEM 6.4之前设置YouTube {#setting-up-youtube-in-aem-before}
 
-1. 请确保以管理员身份登录到Dynamic Media实例。
+1. 请确保以管理员身份登录您的Dynamic Media实例。
 
 1. 在AEM的左上角，点按AEM徽标，然后在左边栏中，点按&#x200B;**[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL 部署]** > **[!UICONTROL Cloud Services。]**
 1. 在YouTube的“第三方服务”标题下，点按&#x200B;**[!UICONTROL 立即配置。]**
@@ -748,9 +748,9 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->在Dynamic Media -Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 设置Dynamic Media -Scene7模式时，有两个发布选项可供选择：**[!UICONTROL 激活时立即]**&#x200B;或&#x200B;**[!UICONTROL 。]**
+>在Dynamic Media-Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 设置Dynamic Media-Scene7模式时，有两个发布选项可供选择：**[!UICONTROL 激活时立即]**&#x200B;或&#x200B;**[!UICONTROL 。]**
 >
->**[!UICONTROL 立即]** 发布意味着上传的资产在与IPS同步后会自动发布到投放系统。虽然Dynamic Media是如此，但YouTube则并非如此。 要发布到YouTube，您必须通过AEM作者进行发布。
+>**[!UICONTROL 立即]** 发布意味着上传的资产在与IPS同步后会自动发布到投放系统。尽管Dynamic Media是如此，但YouTube并非如此。 要发布到YouTube，您必须通过AEM作者进行发布。
 
 >[!NOTE]
 >
@@ -790,7 +790,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 ### 将 YouTube URL 关联到您的 Web 应用程序 {#linking-youtube-urls-to-your-web-application}
 
-您可以在发布视频后获取Dynamic Media生成的YouTube URL字符串。 在复制该 YouTube URL 时，它会进入“剪贴板”，以便您能够视需要将其粘贴到网站或应用程序中的页面。
+您可以在发布视频后获得由Dynamic Media生成的YouTube URL字符串。 在复制该 YouTube URL 时，它会进入“剪贴板”，以便您能够视需要将其粘贴到网站或应用程序中的页面。
 
 >[!NOTE]
 >
@@ -960,7 +960,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 >[!NOTE]
 >
->视频报告仅在运行Dynamic Media —— 混合模式时可用。
+>视频报表仅在运行Dynamic Media-混合模式时可用。
 
 视频报表显示指定时间段内的多个聚合量度，帮助您监控*已发布*单个和聚合视频是否按预期效果呈现。以下顶级指标数据是整个网站中所有已发布视频的汇总数据：
 
@@ -984,7 +984,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 默认情况下，在您首次进入视频报表时，报表会显示从当月的第一个开始到当月的当日结束的视频数据。但是，您可以通过指定您自己的日期范围来覆盖默认日期范围。下次输入视频报表时，将使用您指定的日期范围。
 
-为使视频报表正常工作，在配置Dynamic MediaCloud Services时会自动创建报表包ID。同时，报表包ID将推送到发布服务器，以便在预览资产时可用于复制URL功能。但是，这要求已设置发布服务器。如果未设置发布服务器，您仍可以进行发布以查看视频报告，但是，您需要返回Dynamic Media云配置并点按&#x200B;**[!UICONTROL 确定。]**
+为使视频报表正常工作，在配置Dynamic MediaCloud Services时会自动创建报表包ID。同时，报表包ID将推送到发布服务器，以便在预览资产时可用于复制URL功能。但是，这要求已设置发布服务器。如果未设置发布服务器，您仍可以进行发布以查看视频报告，但您需要返回Dynamic Media云配置并点按确定。]****[!UICONTROL 
 
 要查看视频报表，请执行以下操作：
 
@@ -1001,66 +1001,67 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件将发布到You
 
 1. 在列出顶级已发布视频的表中，点按视频名称以播放视频，还可以查看该视频的受众保留（流失）报表。
 
-### 查看基于使用 Scene7 HMTL5 查看器 SDK 创建的视频查看器的视频报表 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+<!-- OBSOLETE CONTENT ### Viewing video reports based on a video viewer that you created using the Scene7 HMTL5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-如果您使用的是Dynamic Media提供的现成视频查看器，或者您基于现成视频查看器创建了自定义查看器预设，则无需执行任何其他步骤即可视图视频报告。但是，如果您基于Scene7HTML5查看器SDK创建了自己的视频查看器，请使用以下步骤确保视频查看器将跟踪事件发送到Dynamic Media视频报表。
+If you are using an out-of-box video viewer provided by Dynamic Media, or if you created a custom viewer preset based off of an out-of-box video viewer, then no additional steps are required to view video reports. However, if you have created your own video viewer based off the Scene7 HTML5 Viewer SDK, then use the following steps to ensure the your video viewer is sending tracking events to Dynamic Media Video Reports.
 
-使用Dynamic Media查看器参考和Scene7HTML5查看器SDK创建您自己的视频查看器。
+Use the Dynamic Media Viewers Reference and the Scene7 HTML5 Viewers SDK to create your own video viewers.
 
-请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
+See [Dynamic Media Viewers Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). -->
 
-<!-- Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
+<!-- OBSOLETE CONTENT Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
 See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-要查看基于使用 Scene7 HMTL5 查看器 SDK 创建的视频查看器的视频报表，请执行以下操作：
+<!-- OBSOLETE CONTENT To view Video Reports based on a video viewer that you created using the Scene7 HTML5 Viewer SDK:
 
-1. 导航到任意已发布的视频资产。
-1. 在资产页面的左上角附近，从下拉列表卡中选择&#x200B;**[!UICONTROL 查看器。]**
-1. 选择任意视频查看器预设，并复制嵌入代码。
-1. 在嵌入代码中，找到包含以下内容的代码行：
+1. Navigate to any published video asset.
+1. Near the upper-left corner of the asset's page, from the drop-down list, select **[!UICONTROL Viewers.]**
+1. Select any video viewer preset and copy the embed code.
+1. In the embed code, find the line with the following:
 
    `videoViewer.setParam("config2", "<value>");`
 
-   `config2`参数在HTML5查看器中启用跟踪。 它还是一个特定于公司的预设，其中包含视频报告的配置信息以及特定于客户的Adobe Analytics配置。
+   The `config2` parameter enables tracking in HTML5 Viewers. It is also a company-specific preset that contains the configuration information for Video Reporting, and for customer-specific Adobe Analytics configurations.
 
-   在**嵌入代码**和副本**URL **函数中都可以找到config2参数的正确值。在复制**URL **命令的URL中，要查找的参数为`&config2=<value>`。 该值几乎总是 `companypreset`，但在某些情况下，也可以是 `companypreset-1`、`companypreset-2` 等。
+   The correct value for the config2 parameter is found in both the **Embed Code **and in the copy **URL **function. In the URL from the copy **URL **command, the parameter to look for is `&config2=<value>` . The value is almost always `companypreset`, but in some instances it can also be `companypreset-1`, `companypreset-2`, and so forth.
 
-1. 在您的自定义视频查看器代码中，通过执行以下操作，将 AppMeasurementBridge.jsp 添加到查看器页面：
+1. In your custom video viewer code, add AppMeasurementBridge .jsp to the viewer page by doing the following:
 
-   * 首先，确定您是否需要`&preset`参数。
-如果`config2`参数为`companypreset`，则不*not *need `&preset=parameter`。
-如果`config2`是其他任何参数，则将预设参数设置为与`config2`参数相同。 例如，如果`config2=companypreset-2`，则将`&param2=companypreset-2`添加到AppMeasurmentBridge.jsp URL。
+    * First, determine if you need the `&preset` parameter.
+      If the `config2` parameter is `companypreset`, you do *not *need `&preset=parameter`.
+      If `config2` is anything else, set the preset parameter the same as the `config2` parameter. For example, if `config2=companypreset-2`, add `&param2=companypreset-2` to the AppMeasurmentBridge.jsp URL.
 
-   * 然后，添加AppMeasurementBridge.jsp脚本：
+    * Then, add the AppMeasurementBridge.jsp script:
       `<script language="javascript" type="text/javascript" src="https://s7d1.scene7.com/s7viewers/AppMeasurementBridge.jsp?company=robindallas&preset=companypreset-2"></script>`
 
-1. 通过执行以下操作，创建 TrackingManager 组件：
+1. Create the TrackingManager component by doing the following:
 
-   * 在调用`s7sdk.Utils.init();`后，通过添加以下内容，创建一个TrackingManager实例以跟踪事件:
+    * After calling `s7sdk.Utils.init();` create a TrackingManager instance to track events by adding the following:
       `var trackingManager = new s7sdk.TrackingManager();`
 
-   * 通过执行以下操作，将组件连接到 TrackingManager：
-在 `s7sdk.Event.SDK_READY` 事件处理程序中，将您要跟踪的组件连接到 TrackingManager。
-例如，如果组件为`videoPlayer`，则添加
+    * Connect components to TrackingManager by doing the following:
+      In the `s7sdk.Event.SDK_READY` event handler, attach the component you want to track to the TrackingManager.
+      For example, if the component is `videoPlayer`, add
       `trackingManager.attach(videoPlayer);`
-将组件附加到trackingManager。要在一个页面上跟踪多个查看器，可使用多个跟踪管理器组件。
+      to attach the component to the trackingManager. To track multiple viewers on a page, use multiple tracking mangaer components.
 
-   * 通过添加以下内容创建AppMeasurementBridge对象：
+    * Create the AppMeasurementBridge object by adding the following:
 
       ```
       var appMeasurementBridge = new AppMeasurementBridge(); appMeasurementBridge.setVideoPlayer(videoPlayer);
       ```
 
-   * 通过添加以下内容添加跟踪功能：
+    * Add the tracking function by adding the following:
 
       ```
       trackingManager.setCallback(appMeasurementBridge.track,
        appMeasurementBridge);
       ```
-   appMeasurementBridge对象具有内置的跟踪功能。但是，您可以提供自己的功能来支持多个跟踪系统或其他功能。
 
-   有关详细信息，请参阅&#x200B;*Scene7HTML5查看器SDK用户指南*&#x200B;中的&#x200B;*使用TrackingManager组件*，可从[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)下载。
+   The appMeasurementBridge object has a built-in track function. However, you can provide your own to support multiple tracking systems or other functionality.
+
+   For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## 向视频{#adding-captions-to-video}添加字幕
 
@@ -1072,9 +1073,9 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 >
 >您使用的视频播放器必须支持字幕的显示。
 
-Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
+Dynamic Media有能力将字幕文件转换为JSON（JavaScript对象表示法）格式。 此转换意味着您可以将JSON文本作为视频的隐藏但完整的记录嵌入到网页中。 然后，搜索引擎可以爬网和索引内容，使视频更容易被发现，并为客户提供有关视频内容的更多详细信息。
 
-有关在URL中使用JSON函数的详细信息，请参阅&#x200B;*Scene7图像服务API帮助*&#x200B;中的[服务静态（非图像）内容](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html)。
+有关在URL中使用JSON函数的详细信息，请参阅&#x200B;*Dynamic Media图像服务和渲染API帮助*&#x200B;中的[服务静态（非图像）内容](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)。
 
 要向视频添加字幕或字幕，请执行以下操作：
 
@@ -1084,7 +1085,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
 
    请参阅[WebVTT:Web视频文本跟踪格式](https://dev.w3.org/html5/webvtt/)。
 
-   您可以使用免费和高级工具及服务在Dynamic Media外创作字幕／子标题文件。 例如，要创建不带样式的简单视频题注文件，您可以使用以下免费的在线题注创作和编辑工具：
+   您可以使用免费和高级工具及服务在Dynamic Media以外创作字幕／子标题文件。 例如，要创建不带样式的简单视频题注文件，您可以使用以下免费的在线题注创作和编辑工具：
 
    [WebVTT字幕制作器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -1129,7 +1130,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
 >
 >使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器确实支持章节标记，但使用第三方视频播放器可能不支持。
 
-如果需要，您可以使用章节而不是使用视频查看器预设创建自定义视频查看器并为其添加品牌。 有关创建具有章节导航的HTML5查看器的说明，请参阅《Adobe Scene7查看器SDK for HTML5指南》中类`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`下的标题“使用修饰符自定义行为”。 可从[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html)下载Adobe Scene7查看器SDK。
+<!-- OBSOLETE CONTENT If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 为视频创建章节列表的方法与创建字幕的方法非常相似。 即，创建一个WebVTT文件。 但是，请注意，此文件必须与您也可能使用的任何WebVTT题注文件分开；不能将字幕和章节合并到一个WebVTT文件中。
 
@@ -1199,7 +1200,7 @@ Cost-efficient access to rapidly evolving technology.
      </tbody>
    </table>
 
-## 关于Dynamic Media中的视频缩略图-Scene7模式{#about-video-thumbnails-in-dynamic-media-scene-mode}
+## 关于Dynamic Media-Scene7模式中的视频缩略图{#about-video-thumbnails-in-dynamic-media-scene-mode}
 
 视频缩略图是视频帧或向客户展示视频的图像资产的缩小版本。 缩略图应用于鼓励客户点击视频。
 
@@ -1211,7 +1212,7 @@ AEM中的所有视频都必须具有关联的缩略图；不能删除缩略图�
 
 只有在将视频用户档案应用到视频所在的文件夹后，才能自定义视频缩略图。
 
-另请参阅[关于Dynamic Media中的视频缩略图——混合模式](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
+另请参阅[关于Dynamic Media的视频缩略图——混合模式](#about-video-thumbnails-in-dynamic-media-hybrid-mode)。
 
 ### 添加自定义视频缩略图{#adding-a-custom-video-thumbnail}
 
@@ -1247,17 +1248,17 @@ T **要添加自定义视频缩略图**,
 1. 在“更改缩略图”页面上，点按&#x200B;**[!UICONTROL 保存更改。]**
 1. 在视频的“属性”页面的右上角，点按&#x200B;**[!UICONTROL 保存并关闭。]**
 
-## 关于Dynamic Media中的视频缩略图——混合模式{#about-video-thumbnails-in-dynamic-media-hybrid-mode}
+## 关于Dynamic Media的视频缩略图——混合模式{#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-您可以从Dynamic Media自动生成的十张缩略图中选择一张，以将其添加到视频中。 在AEM Sites、AEM Mobile或AEM Screens的创作环境中，当视频资产与Dynamic Media组件一起使用时，视频播放器会显示您选择的缩略图。 缩略图用作最能代表整个视频内容的静态图片，并进一步鼓励用户单击“播放”按钮。
+您可以从Dynamic Media自动生成的十张缩略图中选择一张，以便添加到您的视频中。 在AEM Sites、AEM Mobile或AEM Screens的创作环境中将视频资产与Dynamic Media组件一起使用时，视频播放器会显示您的选定缩略图。 缩略图用作最能代表整个视频内容的静态图片，并进一步鼓励用户单击“播放”按钮。
 
-根据视频的总时间，Dynamic Media将以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例捕获十张（默认）缩略图图像。 十个缩览图将保留，这意味着如果您稍后决定选择其他缩略图，则无需重新生成该系列。 您预览十个缩略图图像，然后选择要用于视频的图像。 如果要更改为默认值，则可以使用CRXDE Lite配置生成缩略图的时间间隔。 例如，如果您只想从视频中生成一系列四张均匀间隔的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
+根据视频的总时间，Dynamic Media在视频中以1%、11%、21%、31%、41%、51%、61%、71%、81%和91%的比例捕获十张（默认）缩略图。 十个缩览图将保留，这意味着如果您稍后决定选择其他缩略图，则无需重新生成该系列。 您预览十个缩略图图像，然后选择要用于视频的图像。 如果要更改为默认值，则可以使用CRXDE Lite配置生成缩略图的时间间隔。 例如，如果您只想从视频中生成一系列四张均匀间隔的缩略图，可以将间隔时间配置为24%、49%、74%和99%。
 
 理想情况下，在上传视频后但在网站上发布视频之前，您可以随时添加视频缩略图。
 
 如果您愿意，您可以选择上传自定义缩略图来代表您的视频，而不是使用Dynamic Media生成的缩略图。 例如，您可以创建自定义缩略图图像，该图像具有视频的标题、引人注目的开始图像或从视频捕获的非常特定的图像。 您上传的自定义视频缩略图图像的最大分辨率应为1280 x 720像素（最小宽度为640像素）且不应大于2MB。
 
-另请参阅[关于Dynamic Media中的视频缩略图-Scene7模式](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
+另请参阅[关于Dynamic Media-Scene7模式中的视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
 ### 添加视频缩略图{#adding-a-video-thumbnail}
 
@@ -1278,7 +1279,7 @@ T **要添加视频缩略图**,
 
    视频的缩略图图像将更新为使用您选择的缩略图。 如果您稍后决定更改缩略图图像，则可返回&#x200B;**[!UICONTROL 更改缩略图]**&#x200B;页面并选择一个新页面。
 
-   如果您配置了新的默认时间间隔，或者上传了新视频以替换现有视频，则需要Dynamic Media重新生成缩略图。
+   如果您配置了新的默认时间间隔，或者上传了新视频以替换现有视频，则需要让Dynamic Media重新生成缩略图。
 
    请参阅[配置生成视频缩略图的默认时间间隔](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)。
 
