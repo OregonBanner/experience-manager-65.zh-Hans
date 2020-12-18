@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 19ee2722bc73f67b77cc08dd2a634328ba5269ec
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,27 @@ REST风格的Web服务可在Swagger定义文件中使用JSON格式的[Swagger规
    如果选择&#x200B;**[!UICONTROL 相互身份验证]**&#x200B;作为身份验证类型，请参阅[针对RESTful和SOAP Web服务的基于证书的相互身份验证](#mutual-authentication)。
 
 1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;以创建RESTful服务的云配置。
+
+### 形成数据模型HTTP客户端配置以优化性能{#fdm-http-client-configuration}
+
+[!DNL Experience Manager Forms] 当与RESTful web服务集成作为数据源时，将形成数据模型，包括用于性能优化的HTTP客户端配置。请执行以下步骤来配置表单数据模型HTTP客户端：
+
+1. 以管理员身份登录到[!DNL Experience Manager Forms]作者实例，然后转到[!DNL Experience Manager] Web控制台包。 默认URL为[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
+
+1. 点按&#x200B;**[!UICONTROL 表单数据模型Http客户端配置以获取REST数据源]**。
+
+1. 在[!UICONTROL 表单数据模型REST数据源的Http客户端配置]对话框中：
+
+   * 在&#x200B;**[!UICONTROL 总数]**&#x200B;字段中指定表单数据模型与RESTful Web服务之间允许的连接的最大数量。 默认值为20个连接。
+
+   * 在&#x200B;**[!UICONTROL 基于每个路由的连接限制]**&#x200B;字段中指定每个路由允许的最大连接数。 默认值为2个连接。
+
+   * 在&#x200B;**[!UICONTROL 保持活动]**&#x200B;字段中指定持续HTTP连接保持活动的持续时间。 默认值为15秒。
+
+   * 在&#x200B;**[!UICONTROL 连接超时]**&#x200B;字段中，指定[!DNL Experience Manager Forms]服务器等待连接建立的持续时间。 默认值为10秒。
+
+   * 在&#x200B;**[!UICONTROL 套接字超时]**&#x200B;字段中指定两个数据包之间不活动的最长时间段。 默认值为30秒。
+
 
 ## 配置SOAP Web服务{#configure-soap-web-services}
 
