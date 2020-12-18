@@ -1,6 +1,6 @@
 ---
 title: 交互式图像
-description: 了解如何在Dynamic Media中处理交互式图像
+description: 了解如何在Dynamic Media使用交互式图像
 uuid: 0bdb73f7-6ce9-4cdf-b6b5-a4d3d4e19a23
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '4334'
-ht-degree: 23%
+source-wordcount: '4330'
+ht-degree: 24%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 23%
 
 交互式图像步骤：
 
-1. **（可选）识别热点变量** -如果您使用AEM Assets和Dynamic Media独立版本，可通过识别现有Quickview实施中使用的动态变量来开始，以便您在创建交互式图像时输入热点数据。请参阅[（可选）识别热点变量](#optional-identifying-hotspot-variables)。
+1. **（可选）识别热点变量** -如果您使用AEM Assets和Dynamic Media独立版本，可以通过识别现有Quickview实施中使用的动态变量来开始，以便您在创建交互式图像时输入热点数据。请参阅[（可选）识别热点变量](#optional-identifying-hotspot-variables)。
 但是，如果您使用AEM Sites、AEM eCommerce或二者，则不必执行此步骤。
 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
 
@@ -63,7 +63,7 @@ ht-degree: 23%
 
 1. **将交互式图像添加到您的网站或您在AEMI中的网站**
 (如果您使用AEM Sites、AEM eCommerce，或同时使用两者)，则可以通过将交互式媒体组件拖动到页面上，将交互式图像直接添加到AEM的网页。请参阅[将Dynamic Media资产添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
-如果您使用AEM Assets和Dynamic Media独立版本，则必须将嵌入代码复制到您的网站上，然后将其与现有Quickview集成。请参阅[将交互式图像与您的网站集成](#integrating-an-interactive-image-with-your-website)。
+如果您使用AEM Assets和Dynamic Media独立版本，则必须在您的网站上复制嵌入代码，然后将其与现有Quickview集成。请参阅[将交互式图像与您的网站集成](#integrating-an-interactive-image-with-your-website)。
 如果您使用第三方WCM（Web内容管理器），则必须将新的交互式视频与网站上使用的现有Quickview实现相集成。 请参阅[将交互式图像与现有Quickview](#integrating-an-interactive-image-with-an-existing-quickview)集成。
 
 ## （可选）识别热点变量{#optional-identifying-hotspot-variables}
@@ -112,7 +112,7 @@ ht-degree: 23%
 
 在最简单的情况下，Quickview URL中唯一的变量部分是产品SKU。 在这种情况下，SKU 值就是您将热点添加到横幅图像时唯一需要提供的数据。
 
-但是，在复杂情况下，除SKU外，Quickview URL还具有不同的可变元素，如类别ID、颜色代码、大小代码等。 在这种情况下，在 AEM 资产的交互式购物图像功能中，每个元素都是热点数据定义中的一个独立变量。
+但是，在复杂情况下，除SKU外，Quickview URL还具有不同的可变元素，如类别ID、颜色代码、大小代码等。 在这种情况下，在 AEM Assets 的交互式购物图像功能中，每个元素都是热点数据定义中的一个独立变量。
 
 请考虑以下Quickview URL示例及其生成的热点变量：
 
@@ -178,11 +178,11 @@ ht-degree: 23%
 
 依据上述分析，您可以在热点中使用 `categoryId` 和 `SKU`。
 
-现在，您便可以使用 AEM 资产中的交互式购物图像功能，上传图像横幅并向其添加热点。
+现在，您便可以使用 AEM Assets 中的交互式购物图像功能，上传图像横幅并向其添加热点。
 
 ## （可选）创建交互式图像查看器预设{#optional-creating-an-interactive-image-viewer-preset}
 
-您可以选择使用 AEM 资产默认附带的名为 `Shoppable_Banner` 的现成交互式图像查看器预设。或者，您也可以创建自己的自定义查看器预设，以便与交互式图像配合使用。
+您可以选择使用 AEM Assets 默认附带的名为 `Shoppable_Banner` 的现成交互式图像查看器预设。或者，您也可以创建自己的自定义查看器预设，以便与交互式图像配合使用。
 
 在创建自定义交互式图像查看器预设时，您可以确定图像横幅上热点的外观。 在创建查看器预设的过程中，您可以选择使用预定义图像库中提供的热点图形。
 
@@ -366,7 +366,7 @@ ht-degree: 23%
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
 ```
 
-集成过程很简单，只需删除 `IMG` 标记并将其替换为从 AEM 资产中复制的嵌入代码即可。您可以通过下面的 URL 查看最终效果，即页面上会显示带有三个圆形热点的交互式购物图像：
+集成过程很简单，只需删除 `IMG` 标记并将其替换为从 AEM Assets 中复制的嵌入代码即可。您可以通过下面的 URL 查看最终效果，即页面上会显示带有三个圆形热点的交互式购物图像：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html)
 
@@ -376,9 +376,9 @@ ht-degree: 23%
 
 要面向交互式环境对购物交互式图像进行“裁剪”，您可以将交互式图像配置属性 `ZoomView.iscommand` 添加到路径中 － 其中 `ZoomView` 是要调用的组件，而 `iscommand` 是您所应用的“裁剪”图像服务命令。
 
-请参阅 [ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 配置属性。
+请参阅 [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 配置属性。
 
-请参阅[裁剪](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html)图像服务命令。
+请参阅[裁剪](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html)图像服务命令。
 
 您现在可以将交互式图像与网站上的现有概览相集成。
 
@@ -402,7 +402,7 @@ ht-degree: 23%
 
 这些调用并非独立的公共 API 调用（可以由网页逻辑从任意步骤进行调用）。相反，这些调用属于链式调用，即，每个后续步骤都隐藏在前一步的最后阶段（回调）。
 
-如果用交互式购物图像来替换第 1 步的操作以及第 2 步的部分操作，则与此同时，当用户单击购物图像中的热点时，查看器就会处理此类用户交互。查看器会向网页返回一个事件，其中包含之前添加到 AEM 资产中的所有热点数据。
+如果用交互式购物图像来替换第 1 步的操作以及第 2 步的部分操作，则与此同时，当用户单击购物图像中的热点时，查看器就会处理此类用户交互。查看器会向网页返回一个事件，其中包含之前添加到 AEM Assets 中的所有热点数据。
 
 在此类事件处理程序中，前端代码会执行下列操作：
 
