@@ -4,7 +4,7 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 Service Pack 7的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
 source-wordcount: '4243'
 ht-degree: 5%
@@ -39,9 +39,9 @@ ht-degree: 5%
 
 * [!DNL Assets] 并提供 [!DNL Dynamic Media] 多种辅助功能增强。这些增强功能与键盘导航、屏幕阅读器的使用以及使用户能够使用类似的辅助技术(AT)相关。 请参阅[[!DNL Assets] 增强](#assets-6570)和[[!DNL Dynamic Media] 增强](#dynamic-media-6570)。
 
-* 表单数据模型HTTP客户端配置以优化性能。
+* [表单数据模型HTTP客户端](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration) 配置以优化性能。
 
-* 在布局模式下，每个组件都可以使用重置选项
+* [在布局模式下，每个组](../../help/forms/using/resize-using-layout-mode.md#resize-components) 件都可以使用重置选项
 
 * [!DNL Experience Manager] 6.5 Service Pack 7Forms提高了以下产品的性能：
 
@@ -507,7 +507,7 @@ B.使用包管理器](https://helpx.adobe.com/cn/experience-manager/aem-previous
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证将失败。 CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
-   * 通过购物横幅查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
+   * 通过Shoppable Banner查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
 
 ## 包含{#osgi-bundles-and-content-packages-included}的OSGi捆绑包和内容包
 
