@@ -10,9 +10,9 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '4346'
+source-wordcount: '4265'
 ht-degree: 23%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 23%
 
 查看器预设是一组设置，用于确定用户如何在其计算机屏幕和移动设备上视图富媒体资产。如果您是管理员，则可以创建查看器预设。可对一组查看器配置选项进行设置。例如，可更改查看器显示大小或缩放行为。
 
-有关创建和自定义您自己的HTML5查看器预设的说明，请参阅&#x200B;*Adobe Scene7HTML5查看器SDK*。 SDK可在嵌入在SDK中的IS发布服务器上使用。 每个库版本都包含自己的SDK文档。
+<!-- OBSOLETE CONTENT  For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. The SDK is available on the IS publish server embedded in the SDK itself. Each library version has its own SDK documentation included.
 
-路径: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
-例如，3.5 SDK:[https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
+Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
+For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html) -->
 
-另请参阅[Adobe查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
+请参阅[《Dynamic Media查看器参考指南》](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 本节介绍如何创建、编辑和管理查看器预设。 无论您何时对资产进行预览，您都可以将查看器预设应用到资产。 请参阅[应用查看器预设](#applying-a-viewer-preset-to-an-asset)。
 
@@ -39,7 +39,7 @@ ht-degree: 23%
 
 所有现成查看器都支持键盘辅助功能。
 
-另请参阅[键盘辅助功能和导航](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
+另请参阅[键盘辅助功能和导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
 ## 管理查看器预设 {#managing-viewer-presets-1}
 
@@ -64,7 +64,7 @@ ht-degree: 23%
 
 ### 查看器预设系统兼容性{#viewer-preset-system-compatibility}
 
-Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容：
+Dynamic Media附带的所有现成查看器预设都与以下系统完全兼容：
 
 * 台式机
 * Apple iPhone
@@ -117,7 +117,7 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
     <ul>
      <li>宽高比为2:1。</li>
      <li>使用关键字<code>equirectangular</code>、<code>spherical</code>和<code>panorama</code>、<code>spherical </code>和<code>panoramic</code>进行标记。 请参阅<a href="/help/sites-authoring/tags.md">使用标记</a>。</li>
-    </ul> <p>长宽比和关键字条件均适用于资产详细信息页面和“全景媒体”WCM组件的全景资产。</p> <p><strong>重要说明</strong>:此查看器仅在Dynamic Media -Scene7模式下可用。</p> </td>
+    </ul> <p>长宽比和关键字条件均适用于资产详细信息页面和“全景媒体”WCM组件的全景资产。</p> <p><strong>重要说明</strong>:此查看器仅在Dynamic Media-Scene7模式下可用。</p> </td>
   </tr>
   <tr>
    <td><strong>智能裁剪视频</strong><br /> </td>
@@ -129,7 +129,7 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
   </tr>
   <tr>
    <td><strong>360视频</strong></td>
-   <td><p>使用360/VR视频查看器渲染等长形视频，实现房间、财产、位置、景观或医疗过程的沉浸式观看体验。</p> <p>在平面显示器上播放时，用户可以控制观看角度；在移动设备上播放通常利用其内置的陀螺仪控件。</p> <p>查看器包含对360个视频资源投放的本机支持。 默认情况下，查看或回放不需要任何其他配置。 您可以使用标准视频扩展（如。mp4、.mkv和。mov）交付360视频。 最常见的编解码器是H.264。</p> <p><strong>重要说明</strong>:此查看器仅在Dynamic Media -Scene7模式下可用。</p> </td>
+   <td><p>使用360/VR视频查看器渲染等长形视频，实现房间、财产、位置、景观或医疗过程的沉浸式观看体验。</p> <p>在平面显示器上播放时，用户可以控制观看角度；在移动设备上播放通常利用其内置的陀螺仪控件。</p> <p>查看器包含对360个视频资源投放的本机支持。 默认情况下，查看或回放不需要任何其他配置。 您可以使用标准视频扩展（如。mp4、.mkv和。mov）交付360视频。 最常见的编解码器是H.264。</p> <p><strong>重要说明</strong>:此查看器仅在Dynamic Media-Scene7模式下可用。</p> </td>
   </tr>
   <tr>
    <td><strong>视频</strong></td>
@@ -158,11 +158,11 @@ Dynamic Media附带的所有现成查看器预设均与以下系统完全兼容�
 
 有关查看器支持的Web浏览器和操作系统版本的信息，可以查看查看器发行说明。
 
-请参阅[查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)的目录中的“查看器发行说明”。
+请参阅[查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)的目录中的“查看器发行说明”。
 
 >[!NOTE]
 >
->Dynamic Media中的所有现成查看器预设均已激活（开启），但您必须发布它们。
+>Dynamic Media的所有现成查看器预设都已激活（开启），但您必须发布它们。
 >请参阅[发布查看器预设](#publishing-viewer-presets)。
 >
 >您创建和添加的任何新查看器预设都必须同时激活*和*已发布。
@@ -438,13 +438,13 @@ AEM在从&#x200B;**[!UICONTROL 详细信息视图>查看器查看资产时显示
 
       通过可视编辑器，您可以查看特定属性对样式的影响。 只需设置或调整任何属性，即可使用编辑器左侧的范例即时查看它对查看器有何影响。
 
-      [查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)中的任何“自定义&#x200B;*`<viewer name>`*&#x200B;查看器”帮助主题中介绍了每种类型的查看器预设的CSS样式属性。 例如，如果要创建类型为`Mixed_Media`的查看器预设，请参阅[自定义混合媒体查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html)以了解列表和每个属性的说明。
+      [查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)中的任何“自定义&#x200B;*`<viewer name>`*&#x200B;查看器”帮助主题中介绍了每种类型的查看器预设的CSS样式属性。 例如，如果要创建类型为`Mixed_Media`的查看器预设，请参阅[自定义混合媒体查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html)以了解列表和每个属性的说明。
 
    * 如果您在单独的CSS文件中定义了样式设置，则可以将CSS文件上传到AEM Assets。 点按&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单下的&#x200B;**[!UICONTROL 导入CSS]**（可能需要向上滚动可视编辑器才能看到它），以查找已上传的CSS文件并将其与查看器预设关联。
 
       导入CSS文件时，可视编辑器会检查CSS是否使用正确的查看器标记。 例如，如果要创建缩放查看器，则必须使用父查看器元素上定义的查看器类名`.s7mixedmediaviewer`定义导入的所有CSS规则。
 
-      只要正确定义给定查看器的CSS标记，就可以导入任意手工CSS。 (CSS标记在[查看器参考指南](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)中的任何“自定义&#x200B;*&lt;查看器名称>*&#x200B;查看器”帮助主题中均有介绍。 例如，如果要阅读有关缩放查看器的CSS标记，请参阅[自定义缩放查看器](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。) 但是，可视编辑器可能不理解某些CSS值。 在这种情况下，可视编辑器会尝试覆盖错误，以便CSS仍可正常工作。
+      只要正确定义给定查看器的CSS标记，就可以导入任意手工CSS。 (CSS标记在[查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)中的任何“自定义&#x200B;*&lt;查看器名称>*&#x200B;查看器”帮助主题中均有介绍。 例如，如果要阅读有关缩放查看器的CSS标记，请参阅[自定义缩放查看器](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)。) 但是，可视编辑器可能不理解某些CSS值。 在这种情况下，可视编辑器会尝试覆盖错误，以便CSS仍可正常工作。
    >[!NOTE]
    >
    >如果您希望直接在其原始表单中编辑 CSS，请点按“选定类型”下拉菜单下的&#x200B;**[!UICONTROL 显示/隐藏 CSS]**（您可能需要向上滚动可视编辑器才能看到此选项）。
@@ -460,7 +460,7 @@ AEM在从&#x200B;**[!UICONTROL 详细信息视图>查看器查看资产时显示
 
    可视编辑器中的许多组件都有与其关联的详细说明。 当您展开组件以显示其关联的参数时，这些说明会显示在蓝色框中。
 
-   有些“查看器类型”具有的组件允许您在 **[!UICONTROL IS 命令]**&#x200B;文本字段中指定“图像提供”命令。有关可使用的命令列表，请参阅[图像提供 API 参考](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)。
+   有些“查看器类型”具有的组件允许您在 **[!UICONTROL IS 命令]**&#x200B;文本字段中指定“图像提供”命令。有关可使用的命令列表，请参阅[图像提供 API 参考](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)。
 
    >[!NOTE]
    >
@@ -549,7 +549,7 @@ AEM在从&#x200B;**[!UICONTROL 详细信息视图>查看器查看资产时显示
 
 ## 发布查看器预设{#publishing-viewer-presets}
 
-激活（或打开“打开”）查看器预设的状态意味着查看器预设在Dynamic Media组件、交互式媒体组件中以及每次视图资产时都可见。
+激活（或打开“打开”）查看器预设的状态意味着查看器预设可在Dynamic Media组件、交互式媒体组件中以及每次视图资产时都可见。
 
 但是，要传送* *包含查看器预设的资产，还必须发布查看器预设。 必须激活*和*已发布所有查看器预设，才能获取资产的URL或嵌入代码。 您必须激活并发布Dynamic media附带的所有现成查看器预设。 您创建和添加的自定义查看器预设将自动激活，但也必须发布。
 
