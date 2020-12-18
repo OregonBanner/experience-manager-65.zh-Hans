@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1c633e87d773f864c65320d3ce658f61271d086d
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
-source-wordcount: '2807'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
@@ -52,11 +52,11 @@ ht-degree: 1%
 
 ### 形成数据模型HTTP客户端配置以优化性能{#fdm-http-client-config}
 
-[!DNL Experience Manager Forms] 与RESTful web服务作为数据源集成时，表单数据模型现在包括用于性能优化的HTTP客户端配置。
+[!DNL Experience Manager Forms] 与RESTful web服务作为数据源集成时，表单数据模型现在包括用于性能优化的HTTP客户端配置。请参阅[配置数据源](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration)。
 
 ### 布局模式{#reset-option-layout-mode}中每个组件的重置选项可用性
 
-现在，您可以在自适应表单的布局模式下为每个组件使用重置选项。 为面板定义多列布局时，可以使用此功能在面板中重置各个组件。
+现在，您可以在自适应表单的布局模式下为每个组件使用重置选项。 为面板定义多列布局时，可以使用此功能在面板中重置各个组件。 请参阅[使用布局模式调整组件大小](../../help/forms/using/resize-using-layout-mode.md#resize-components)。
 
 ## 先前[!DNL Experience Manager] 6.5 Service Pack {#key-features-previous-service-packs}中的主要功能
 
@@ -211,11 +211,11 @@ ht-degree: 1%
 
 您现在可以选择使用[!UICONTROL 快速发布]或[!UICONTROL 管理发布]向导，选择性地将资产发布或取消发布到[!DNL Experience Manager]或[!DNL Dynamic Media]。 您还可以在文件夹级别设置`Publish`或`Unpublish`模式。
 
-#### Dynamic Media的智能成像{#smart-imaging}
+#### Dynamic Media智能成像{#smart-imaging}
 
 智能成像使用每个用户独特的查看特性自动提供为其体验优化的正确图像，从而获得更好的性能和参与度。 智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 请参阅[智能成像](../assets/imaging-faq.md)。
 
-#### Dynamic Media视频用户档案中的智能裁剪(6.5.3.0){#smart-crop-video}
+#### Dynamic Media(6.5.3.0){#smart-crop-video}视频用户档案中的智能裁剪
 
 视频智能裁剪是视频用户档案中的一项可选功能，它使用Adobe Sensei人工智能的强大功能自动检测和裁剪您上传的任何自适应视频或渐进视频中的焦点，而不管其大小。 请参阅[关于在视频用户档案中使用智能裁剪](../assets/video-profiles.md)。
 
