@@ -1,6 +1,6 @@
 ---
 title: 应用 Dynamic Media 图像预设
-description: 了解如何在Dynamic Media中应用图像预设
+description: 了解如何在Dynamic Media应用图像预设
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
-source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '324'
 ht-degree: 42%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->在Dynamic Media -Scene7模式中，图像预设仅受图像资产支持。
+>在Dynamic Media-Scene7模式下，仅图像资产支持图像预设。
 
 **应用Dynamic Media图像预设**
 
@@ -57,5 +57,5 @@ ht-degree: 42%
    >
    >如果资产&#x200B;*和*&#x200B;图像预设尚未发布，则 **[!UICONTROL URL]** 按钮（或 **[!UICONTROL URL]** 和 **[!UICONTROL RESS]** 按钮，如果适用）将不可用。
    >
-   >另请注意，图像预设会自动发布到Dynamic Media S7服务器上。
+   >另请注意，图像预设会自动发布到Dynamic Media服务器上。
 
