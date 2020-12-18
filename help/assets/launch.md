@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 71e827dc17fd1c36230cb8d26b68d7f41c584e60
 workflow-type: tm+mt
 source-wordcount: '6605'
 ht-degree: 17%
@@ -34,7 +34,7 @@ ht-degree: 17%
 * Adobe启动与Dynamic Media查看器的集成在AEM创作节点中无效。 在WCM页面发布之前，您无法看到任何跟踪。
 * “弹出”操作模式不支持Adobe启动与Dynamic Media查看器的集成，在该模式下，查看器URL使用“资产详细信息”页面上的“URL”按钮获取。
 * Adobe启动集成不能与传统查看器分析集成同时使用（通过`config2=`参数）。
-* 视频跟踪支持仅限于核心回放跟踪，如[跟踪概述](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)中所述。 特别是，不支持QoS、广告、章节／段或错误跟踪。
+* 视频跟踪支持仅限于“核心播放”跟踪，如[跟踪概述](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)中所述。 特别是，不支持QoS、广告、章节／段或错误跟踪。
 * 使用&#x200B;*Dynamic Media查看器*&#x200B;扩展的存储元素不支持数据元素的数据持续时间配置。 存储持续时间必须设置为&#x200B;**[!UICONTROL 无]**。
 
 ### 集成{#use-cases-for-the-integration}的用例
@@ -141,7 +141,7 @@ Adobe启动中的以下示例配置演示了如何在加载查看器时跟踪资
 
 在进行正确配置后，您向“站点”页面添加的任何Dynamic Media查看器(使用Dynamic Media支持的WCM组件)会自动跟踪到Adobe Analytics或Adobe Analytics的视频数据，或者同时跟踪到这两个数据。
 
-<!-- To be reviewed and updated:
+<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
@@ -153,9 +153,9 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 在进行正确配置后，您可以使用Dynamic Media查看器向网页添加Adobe启动支持。
 
-请参阅[添加启动嵌入代码](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch)，进一步了解如何使用Adobe启动库嵌入代码。
+请参阅[添加启动嵌入代码](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch)，了解有关如何使用Adobe启动库嵌入代码的更多信息。
 
-<!-- To be reviewed and updated:
+<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
 See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
 -->
 
@@ -164,29 +164,29 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 1. 准备网页以嵌入Dynamic Media查看器。
 1. 首先登录Adobe启动，获取Adobe启动库的嵌入代码(请参阅[配置Adobe启动](#configuring-adobe-launch-for-the-integration))。
 1. 单击&#x200B;**[!UICONTROL 属性]**，然后单击&#x200B;**[!UICONTROL 环境]**&#x200B;选项卡。
-1. 提取与网页环境相关的环境级别。 然后，在&#x200B;**[!UICONTROL 安装]**&#x200B;列中，单击框图标。
-1. **[!UICONTROL 在“Web安装说]** 明”对话框中，复制完整的Adobe启动库嵌入代码以及周围的 `<script/>` 标记。
+1. 选取与网页环境相关的环境级别。 然后，在&#x200B;**[!UICONTROL Install]**&#x200B;列中，单击框图标。
+1. **[!UICONTROL 在“Web安装说]** 明”对话框中，复制完整的Adobe启动库嵌入代码以及周围的 `<script/>` 标签。
 
-## Dynamic Media查看器扩展{#reference-guide-for-the-dynamic-media-viewers-extension}的参考指南
+## Dynamic Media查看器扩展{#reference-guide-for-the-dynamic-media-viewers-extension}参考指南
 
 ### 关于Dynamic Media查看器配置{#about-the-dynamic-media-viewers-configuration}
 
-如果以下所有条件均满足，则Dynamic Media查看器扩展将自动与Adobe启动库集成：
+如果以下所有条件都满足，则Dynamic Media查看器扩展会自动与Adobe启动库集成：
 
-* Adobe启动库全局对象(`_satellite`)显示在页面上。
+* Adobe启动库全局对象(`_satellite`)位于页面上。
 * Dynamic Media查看器扩展函数`_dmviewers_v001()`在`_satellite`上定义。
 
-* `config2=` 未指定查看器参数，这意味着查看器不使用传统Analytics集成。
+* `config2=` 未指定viewer参数，这表示viewer不使用旧版Analytics集成。
 
-此外，还有一个选项，可通过在查看器的配置中指定`launch=0`参数，在查看器中显式禁用Adobe启动集成。 此参数的默认值为`1`。
+此外，还有一个选项，可通过在查看器配置中指定`launch=0`参数，在查看器中显式禁用Adobe启动集成。 此参数的默认值为`1`。
 
 ### 配置Dynamic Media查看器扩展{#configuring-the-dynamic-media-viewers-extension}
 
 Dynamic Media查看器扩展的唯一配置选项是&#x200B;**[!UICONTROL 为音频和视频启用Adobe媒体分析]**。
 
-当您选中（启用或“开启”）此选项，并且如果安装并正确配置了Adobe媒体分析音频和视频扩展，则视频回放指标将发送到Adobe Analytics音频和视频解决方案。 禁用此选项将关闭视频跟踪。
+选中（启用或“打开”）此选项，如果安装并正确配置了Adobe媒体分析音频和视频扩展，视频播放指标将发送到Adobe Analytics音频和视频解决方案。 禁用此选项可关闭视频跟踪。
 
-请注意，如果启用此选项&#x200B;*而未*&#x200B;安装Adobe媒体分析音频和视频扩展，则此选项无效。
+请注意，如果启用此选项&#x200B;*，而未安装“音频和视频Adobe媒体分析”扩展*，则此选项无效。
 
 ![image2019-7-22_12-4-23](assets/image2019-7-22_12-4-23.png)
 
@@ -201,64 +201,63 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
 
-请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)，了解每个查看器类型所支持事件的列表;转到特定查看器部分，然后单击“支持Adobe Analytics跟踪”子部分。 目前，Dynamic Media查看器参考指南不文档事件参数。
+请参阅[《Dynamic Media查看器参考指南》](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)，了解每种查看器类型支持的事件列表；转到特定查看器部分，然后单击“支持Adobe Analytics跟踪”子部分。 目前，《Dynamic Media查看器参考指南》不记录事件参数。
 
-现在，我们来考虑Dynamic Media查看器&#x200B;*数据元素*&#x200B;的生命周期。 在页面上发生相应的Dynamic Media查看器事件后，将填充此类数据元素的值。 例如，如果数据元素指向&#x200B;**[!UICONTROL LOAD]**&#x200B;事件及其“asset”参数，则此类数据元素的值将在查看器首次运行LOAD事件后接收有效数据。 如果数据元素指向&#x200B;**[!UICONTROL ZOOM]**&#x200B;事件及其“scale”参数，则此类数据元素的值将保持为空，直到查看器首次发送&#x200B;**[!UICONTROL ZOOM]**&#x200B;事件。
+现在，让我们考虑一下Dynamic Media查看器&#x200B;*数据元素*&#x200B;的生命周期。 在页面上发生相应的Dynamic Media查看器事件后，将填充此类数据元素的值。 例如，如果Data Element指向&#x200B;**[!UICONTROL LOAD]**&#x200B;事件及其&quot;asset&quot;参数，则此类Data Element的值将在查看器首次运行LOAD事件后接收有效数据。 如果Data元素指向&#x200B;**[!UICONTROL ZOOM]**&#x200B;事件及其&quot;scale&quot;参数，则此类Data元素的值将保持为空，直到查看者首次发送&#x200B;**[!UICONTROL ZOOM]**&#x200B;事件。
 
 同样，当查看器在页面上发送相应事件时，数据元素的值也会自动更新。即使在规则配置中未指定特定事件，也会发生值更新。例如，如果为 ZOOM 事件的“scale”参数定义了数据元素 **[!UICONTROL ZoomScale]**，但“规则”配置中唯一存在的规则由 **[!UICONTROL LOAD]** 事件触发，则每当用户在查看器中运行缩放时，**[!UICONTROL ZoomScale]** 的值仍会更新。
 
 任何Dynamic media查看器在网页上都有唯一标识符。 数据元素会跟踪值本身以及已填充该值的查看器。 这意味着，如果同一页面上有多个查看器，并且有一个指向 **[!UICONTROL LOAD]** 事件及其“asset”参数的 **[!UICONTROL AssetName]** Data Element，则 **[!UICONTROL AssetName]** Data Element将保留与页面上加载的每个查看器关联的资产名称集合。
 
-数据元素返回的确切值取决于上下文。 如果在由Dynamic Media查看器事件触发的规则中请求数据元素，则为启动该规则的查看器返回数据元素值。 而且，如果在由事件从某些其他Adobe启动扩展触发的规则中请求数据元素，则数据元素的值是查看器中最后一个更新此数据元素的值。
+数据元素返回的确切值取决于上下文。 如果在由Dynamic Media查看器事件触发的规则中请求数据元素，则为启动该规则的查看器返回数据元素值。 而且，如果在由某个事件从其他Adobe启动扩展触发的规则中请求数据元素，则数据元素的值是查看器中最后一个更新此数据元素的值。
 
 **请考虑以下示例设置**:
 
-* 网页上有两个Dynamic Media缩放查看器；我们将它们称为&#x200B;*viewer1*&#x200B;和&#x200B;*viewer2*。
+* 一个网页，有两个Dynamic Media的缩放查看器；我们将它们称为&#x200B;*viewer1*&#x200B;和&#x200B;*viewer2*。
 
 * **[!UICONTROL ZoomScaleData]** 元素指向 **** ZOOMevent及其“scale”参数。
-* **[!UICONTROL TrackPanRule，具]** 有以下各项：
+* **[!UICONTROL 具]** 有以下内容的TrackPanRule:
 
-   * 使用Dynamic Media查看器&#x200B;**[!UICONTROL PAN]**&#x200B;事件作为触发器。
+   * 将Dynamic Media查看器&#x200B;**[!UICONTROL PAN]**&#x200B;事件用作触发器。
    * 将&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素的值发送到Adobe Analytics。
 
-* 
-   * **[!UICONTROL TrackKeyRule]** 包含以下内容：
+* **[!UICONTROL 具]** 有以下内容的TrackKeyRule:
 
-   * 使用核心事件启动扩展的按键Adobe作为触发器。
+   * 使用核心Adobe启动扩展中的按键事件作为触发器。
    * 将&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素的值发送到Adobe Analytics。
 
-现在，假定最终用户加载包含两个查看器的网页。 在&#x200B;*viewer1*&#x200B;中，它们放大到50%比例；然后，在&#x200B;*viewer2*&#x200B;中，它们放大到25%缩放。 在&#x200B;*viewer1*&#x200B;中，查看器在周围平移图像，最后在键盘上选择一个键。
+现在，假设最终用户使用两个查看器加载网页。 在&#x200B;*viewer1*&#x200B;中，它们放大到50%缩放；然后，在&#x200B;*viewer2*&#x200B;中，它们放大到25%缩放。 在&#x200B;*viewer1*&#x200B;中，它们平移图像，最后在键盘上选择一个键。
 
 最终用户的活动导致向Adobe Analytics发出以下两个跟踪调用：
 
-* 第一次调用是因为当用户在&#x200B;*viewer1*&#x200B;中平移时触发&#x200B;**[!UICONTROL TrackPan]**&#x200B;规则。 该调用将50%作为&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素的值发送，因为数据元素将知道规则是由&#x200B;*viewer1*&#x200B;触发的，并提取相应的缩放值；
-* 第二次调用是因为当用户按下键盘上的键时，将触发&#x200B;**[!UICONTROL TrackKey]**&#x200B;规则。 该调用以&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素的值发送25%，因为该规则不是由查看器触发的。 因此，数据元素返回最新值。
+* 第一次调用是因为当用户在&#x200B;*viewer1*&#x200B;中平移时触发了&#x200B;**[!UICONTROL TrackPan]**&#x200B;规则。 该调用将50%作为&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素的值发送，因为数据元素将知道规则由&#x200B;*viewer1*&#x200B;触发并获取相应的缩放值；
+* 第二次调用是因为当用户按下键盘上的键时，触发了“**[!UICONTROL TrackKey]**&#x200B;规则”。 该调用将25%作为值&#x200B;**[!UICONTROL ZoomScale]**&#x200B;数据元素发送，因为该规则不是由查看者触发的。 因此，Data元素返回最新值。
 
-上述设置的示例还影响“数据元素”值的寿命。 由Dynamic Media查看器管理的数据元素值存储在Adobe启动库代码中，即使查看器本身已放置在网页上也是如此。 这意味着，如果存在由非Dynamic Media查看器扩展触发并引用此类数据元素的规则，则数据元素将返回最后一个已知值，即使该查看器不再出现在网页上。
+上面设置的示例还影响“数据元素”值的寿命。 由Dynamic Media查看器管理的Adobe元素值存储在启动库代码中，即使查看器本身已放置在网页上。 这意味着，如果存在由非Dynamic Media查看器扩展触发并引用此类数据元素的规则，则数据元素将返回最后一个已知值，即使查看器不再存在于网页上。
 
-无论如何，由Dynamic Media查看器驱动的数据元素的值不会存储在本地存储或服务器上；而是仅保留在客户端Adobe启动库中。 当网页重新加载时，此类数据元素的值会消失。
+无论如何，由Dynamic Media查看器驱动的数据元素的值不会存储在本地存储或服务器上；相反，它们只保留在客户端Adobe启动库中。 重新加载网页时，此类数据元素的值会消失。
 
-通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html?lang=en#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的存储元素仅支持&#x200B;**[!UICONTROL 无]**&#x200B;的数据持续时间选项。 在用户界面中可以设置任何其他值，但在本例中未定义数据元素行为。 扩展自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
+通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html?lang=en#create-a-data-element)。 但是，使用“Dynamic Media查看器”扩展的数据元素仅支持&#x200B;**[!UICONTROL “无”]**&#x200B;的存储持续时间选项。 在用户界面中可以设置任何其他值，但在本例中未定义“数据元素”行为。 扩展自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
 
 ### 关于Dynamic Media查看器扩展{#about-rules-in-the-dynamic-media-viewers-extension}中的规则
 
-在规则编辑器中，扩展将为事件编辑器添加新的配置选项。 此外，还提供了一个选项，用于在“操作”编辑器中手动引用事件参数，作为一个简单选项，而不是使用预配置的数据元素。
+在规则编辑器中，扩展为事件编辑器添加了新的配置选项。 还提供了一个选项，可将动作编辑器中的事件参数手动引用为简短选项，而不是使用预配置的数据元素。
 
 #### 关于事件编辑器{#about-the-events-editor}
 
 在事件编辑器中，Dynamic Media 查看器扩展会添加一个新的&#x200B;**[!UICONTROL 事件类型]**，称为&#x200B;**[!UICONTROL 查看器事件]**。
 
-选中后，事件编辑器将呈现下拉式&#x200B;**[!UICONTROL Dynamic Media查看器事件]**，其中列出Dynamic Media查看器支持的所有可用事件。
+选中后，事件编辑器将呈现下拉式&#x200B;**[!UICONTROL Dynamic Media查看器事件]**，列出Dynamic Media查看器支持的所有可用事件。
 
 ![image2019-8-2_15-13-1](assets/image2019-8-2_15-13-1.png)
 
-#### 关于操作编辑器{#about-the-actions-editor}
+#### 关于动作编辑器{#about-the-actions-editor}
 
 “Dynamic Media查看器”扩展允许您使用Dynamic Media查看器的事件参数映射到Adobe Analytics扩展的“设置变量”编辑器中的分析变量。
 
-执行此操作的最简单方法是完成以下两步过程：
+最简单的方法是完成以下两步过程：
 
-* 首先，定义一个或多个数据元素，其中每个数据元素表示Dynamic Media查看器事件的参数。
+* 首先，定义一个或多个数据元素，其中每个数据元素都表示Dynamic Media查看器事件的参数。
 * 最后，在Adobe Analytics扩展的“设置变量”编辑器中，单击“数据元素”选取器图标（三个堆叠的磁盘）以打开“选择数据元素”对话框，然后从中选择一个数据元素。
 
 ![image2019-7-10_20-41-52](assets/image2019-7-10_20-41-52.png)
@@ -269,16 +268,16 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 ![image2019-7-12_19-2-35](assets/image2019-7-12_19-2-35.png)
 
-请注意，使用事件元素与直接数据参数引用之间有重要区别。 对于数据元素，触发“设置变量”操作的事件无关紧要，触发规则的事件可能与动态查看器无关（如从核心扩展中单击网页）。 但是，在使用直接参数引用时，务必确保触发规则的事件与它引用的事件参数对应。
+请注意，使用Data Elements和direct事件参数引用之间有重要区别。 对于数据元素，触发“设置变量”动作的事件与哪个事件无关，触发规则的事件可能与Dynamic Viewer无关（就像从核心扩展中在网页上单击鼠标一样）。 但是，在使用直接参数引用时，确保触发规则的事件与它引用的事件参数对应很重要。
 
 例如，如果规 `%event.detail.dm.LOAD.asset%` 则是由Dynamic Media Viewer扩展的 **[!UICONTROL LOAD]** 事件触发的，则引用将返回正确的资产名称。 但是，对于任何其他事件，它都会返回一个空值。
 
-下表列表了Dynamic Media查看器事件及其支持的参数：
+下表列出了Dynamic Media查看器事件及其支持的参数：
 
 <table>
  <tbody>
   <tr>
-   <td>查看器事件名</td>
+   <td>查看器事件名称</td>
    <td>参数引用</td>
   </tr>
   <tr>
@@ -404,20 +403,20 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
  </tbody>
 </table>
 
-## 配置所有集成项{#configuring-all-the-integration-pieces}
+## 配置所有集成块{#configuring-all-the-integration-pieces}
 
 **开始之前**
 
-如果您尚未完成此操作，Adobe建议您在本节之前仔细查看所有文档，以了解完整集成。
+如果您尚未完成此操作，Adobe建议您在本节之前仔细查看所有文档，以便您了解完整的集成。
 
-本节介绍将Dynamic Media查看器与Adobe Analytics和Adobe Analytics音频和视频集成所需的配置步骤。 虽然在Adobe启动中可能将Dynamic Media查看器扩展用于其他用途，但本文档未介绍此类情形。
+本节介绍将Dynamic Media查看器与Adobe Analytics和Adobe Analytics音频和视频集成所需的配置步骤。 虽然在Adobe启动中可能将Dynamic Media查看器扩展用于其他用途，但本文档未涵盖此类情形。
 
 您将在以下Adobe产品中配置集成：
 
-* Adobe Analytics-您将配置跟踪变量和报表。
-* Adobe启动——您将定义一个属性、一个或多个规则以及一个或多个数据元素，以启用查看器跟踪。
+* Adobe Analytics-您将配置跟踪变量和报告。
+* Adobe启动——您将定义属性、一个或多个规则以及一个或多个数据元素以启用查看器跟踪。
 
-此外，如果此集成解决方案与AEM Sites一起使用，则还需要进行以下配置：
+此外，如果此集成解决方案与AEM Sites一起使用，还需要完成以下配置：
 
 * Adobe I/O控制台——为Adobe启动创建集成。
 * AEM作者节点- IMS配置和Adobe启动云配置。
@@ -428,52 +427,52 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 配置Adobe Analytics后，将为集成设置以下内容：
 
-* 报告套件就位并处于选定状态。
+* “报告套件”已就位并处于选中状态。
 * 分析变量可用于接收跟踪数据。
-* 报告可用于视图Adobe Analytics内收集的数据。
+* 有报告可查看Adobe Analytics内收集的数据。
 
 另请参阅[分析实施指南](https://experienceleague.adobe.com/docs/analytics/implementation/home.html)。
 
-**为集成配置Adobe Analytics**:
+**要配置Adobe Analytics进行集成**:
 
-1. 开始，从Experience Cloud[主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)访问Adobe Analytics。 在菜单栏中，单击页面右上角附近的“解决方案”图标（三个圆点乘以三个圆点表），然后单击&#x200B;**[!UICONTROL Analytics]**。
+1. 首先从Experience Cloud[主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)访问Adobe Analytics。 在菜单栏上，单击页面右上角附近的“解决方案”图标（一个三乘三个点表），然后单击&#x200B;**[!UICONTROL Analytics]**。
 
    ![2019-07-22_18-08-47](assets/2019-07-22_18-08-47.png)
 
-   您现在将选择一个报表包。
+   您现在将选择一个报告套件。
 
-### 选择报表包{#selecting-a-report-suite}
+### 选择报告套件{#selecting-a-report-suite}
 
 1. 在 Adobe Analytics 页面的右上角附近，在&#x200B;**[!UICONTROL 搜索报告]**&#x200B;字段的右侧，从下拉列表中选择正确的报表包。如果有多个可用报表包，并且您不确定要使用哪个报表包，请与 Adobe Analytics 管理员联系，帮助您选择要使用的报表包。
 
-   在下图中，用户创建了一个名为&#x200B;*DynamicMediaViewersExtensionDoc*&#x200B;的报表包，并从下拉列表中将其选中。 报告套件名称仅供说明；最终选择的报表包名称将有所不同。
+   在下图中，用户创建了名为&#x200B;*DynamicMediaViewersExtensionDoc*&#x200B;的报告套件，并从下拉列表中将其选中。 报告套件名称仅供说明；最终选择的报表包名称将不同。
 
-   如果没有可用的报表包，则您或您的Adobe Analytics管理员必须创建一个报表包，然后才能继续进行配置。
+   如果没有可用的报告套件，您或您的Adobe Analytics管理员必须创建一个报告套件，然后才能继续进行配置。
 
    请参阅[报告和报告套件](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites)和[创建报告套件](https://experienceleague.adobe.com/docs/analytics/admin/admin-console/create-report-suite.html#admin-console)。
 
-   在Adobe Analytics，报表包在&#x200B;**[!UICONTROL 管理>报表包]**&#x200B;下进行管理。
+   在Adobe Analytics，报告套件在&#x200B;**[!UICONTROL 管理员>报告套件]**&#x200B;下管理。
 
    ![2019-07-22_18-09-49](assets/2019-07-22_18-09-49.png)
 
-   你现在设置Adobe Analytics变量。
+   你现在将设置Adobe Analytics变量。
 
 ### 设置Adobe Analytics变量{#setting-up-adobe-analytics-variables}
 
-1. 您现在将指定一个或多个要用于跟踪网页上的Adobe Analytics查看器行为的Dynamic Media变量。
+1. 您现在将指定一个或多个要用于跟踪网页上“Adobe Analytics查看者”行为的“Dynamic Media”变量。
 
-   可以使用Adobe Analytics支持的任何类型的变量。 关于变量类型(如自定义流量[props]、转换[eVar])的决定应由您的Analytics实施的特定需求驱动。
+   可以使用Adobe Analytics支持的任何类型的变量。 有关变量类型的决定(如Custom Traffic [props]、Conversion [eVar])应由Analytics实现的特定需求驱动。
 
-   请参阅[prop和eVars的概述](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html#vars)。
+   请参阅[props和eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html#vars)概述。
 
-   就本文档而言，将仅使用自定义流量(props)变量，因为在网页上执行操作后几分钟内，这些变量便会显示在分析报告中。
+   在本文档中，仅使用自定义流量(props)变量，因为在网页上执行操作后几分钟内，Analytics Report中就会提供这些变量。
 
-   要启用新的自定义流量变量，请在工具栏的Adobe Analytics，单击&#x200B;**[!UICONTROL 管理>报表包]**。
+   要启用新的自定义流量变量，请在工具栏上的Adobe Analytics，单击&#x200B;**[!UICONTROL 管理员>报告套件]**。
 
 1. 在&#x200B;**[!UICONTROL 报表包管理器]**&#x200B;页面上，选择正确的报表，然后在工具栏中，单击&#x200B;**[!UICONTROL 编辑设置 > 流量 > 流量变量]**。
-1. 在这里，选取未使用的变量，为它提供一个描述性名称(**[!UICONTROL 查看器资产(prop 30)]**)，并在“已启用”列中将组合框更改为“已启用”。
+1. 在此处，选取未使用的变量，为它指定一个描述性名称(**[!UICONTROL 查看器资源(prop 30)]**)，并在“已启用”列中将组合框更改为“已启用”。
 
-   以下屏幕截图是自定义流量变量(**[!UICONTROL prop30]**)的示例，用于跟踪查看器使用的资产名称：
+   以下屏幕截图是自定义流量变量(**[!UICONTROL prop30]**)的示例，用于跟踪查看者使用的资源名称：
 
    ![image2019-6-26_23-6-59](assets/image2019-6-26_23-6-59.png)
 
@@ -483,7 +482,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 1. 通常，在Adobe Analytics设置报告是由特定项目需求驱动的。 因此，详细的报告设置超出了此集成的范围。
 
-   但是，在&#x200B;**[设置Adobe Analytics变量](#setting-up-adobe-analytics-variables)**&#x200B;中设置自定义流量变量后，您应该知道自定义流量报告在Adobe Analytics会自动变为可用。
+   但是，在&#x200B;**[设置Adobe Analytics变量](#setting-up-adobe-analytics-variables)**&#x200B;中设置自定义流量变量后，Custom Traffic报告在Adobe Analytics自动可用已足够了。
 
    例如，可从&#x200B;**[!UICONTROL 自定义流量 > 自定义流量 21 - 30 > 查看器资产 (prop 30)]**&#x200B;下的“报告”菜单中获得&#x200B;**[!UICONTROL 查看器资产 (prop 30)]**&#x200B;的报告。
 
@@ -495,22 +494,22 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 配置Adobe启动后，将为集成设置以下内容：
 
-* 创建新属性以将您的所有配置保持一致。
-* 扩展的安装和设置。 属性中安装的所有扩展的客户端代码一起编译为一个库。 此库稍后由网页使用。
-* 数据元素和规则的配置。 此配置定义从Dynamic Media查看器捕获哪些数据、何时触发跟踪逻辑以及在Adobe Analytics发送查看器数据的位置。
-* 发布库。
+* 创建新属性以保持所有配置一致。
+* 扩展的安装和设置。 属性中安装的所有扩展的客户端代码一起编译到一个库中。 此库稍后由网页使用。
+* 数据元素和规则的配置。 此配置定义从Dynamic Media查看器捕获哪些数据、何时触发跟踪逻辑以及在Adobe Analytics向何处发送查看器数据。
+* 库的发布。
 
-**为集成配置Adobe启动**:
+**要配置Adobe启动以进行集成**:
 
-1. 开始，从Experience Cloud[主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)访问Adobe启动。 在菜单栏上，单击页面右上角附近的“解决方案”图标（三x三个圆点表），然后单击&#x200B;**[!UICONTROL 启动]**。
+1. 首先从Adobe[主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)访问Experience Cloud启动。 在菜单栏上，单击页面右上角附近的“解决方案”图标（3 x 3个点表），然后单击&#x200B;**[!UICONTROL 启动]**。
 
-   您还可以[直接打开Adobe启动](https://launch.adobe.com/)。
+   还可以[直接](https://launch.adobe.com/)打开Adobe启动。
 
    ![image2019-7-8_15-38-44](assets/image2019-7-8_15-38-44.png)
 
 ### 在Adobe启动{#creating-a-property-in-adobe-launch}中创建属性
 
-Adobe启动中的属性是将所有设置放在一起的命名配置。 将生成配置设置库并将其发布到不同的环境级别（开发、暂存和生产）。
+“Adobe启动”中的属性是将所有设置保持在一起的命名配置。 将生成配置设置库并发布到不同的环境级别（开发、暂存和生产）。
 
 另请参阅[创建启动属性](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-mobile-android-apps-with-launch/configure-launch/launch-create-a-property.html#configure-launch)。
 
@@ -527,15 +526,15 @@ Adobe启动中的属性是将所有设置放在一起的命名配置。 将生�
 
 ### 安装和设置扩展{#installing-and-setup-of-extensions}
 
-Adobe启动中的所有可用扩展都列在&#x200B;**[!UICONTROL 扩展>目录]**&#x200B;下。
+“Adobe启动”中的所有可用扩展都列在&#x200B;**[!UICONTROL 扩展>目录]**&#x200B;下。
 
-要安装扩展，请单击&#x200B;**[!UICONTROL 安装]**。 如果需要，请执行一次扩展配置，然后单击&#x200B;**[!UICONTROL 保存]**。
+要安装扩展，请单击&#x200B;**[!UICONTROL 安装]**。 如果需要，请执行一次性扩展配置，然后单击“保存”**[!UICONTROL “]**”。
 
 在需要时，必须安装和配置以下扩展：
 
 * （必需）*Experience CloudID服务*扩展
 
-无需任何其他配置，接受任何建议的值。 完成后，请确保单击&#x200B;**[!UICONTROL 保存]**。
+无需其他配置，接受任何建议的值。 完成后，请确保单击&#x200B;**[!UICONTROL 保存]**。
 
 请参阅[Experience CloudID服务扩展](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html#extensions-ref)。
 
@@ -551,17 +550,17 @@ Adobe启动中的所有可用扩展都列在&#x200B;**[!UICONTROL 扩展>目录]
 
 ![image2019-7-8_16-47-40](assets/image2019-7-8_16-47-40.png)
 
-*仅当您计划使用视频跟踪时，才配置以下项目：*
+*仅当您计划使用视频跟踪时，才配置以下项：*
 
-在&#x200B;**[!UICONTROL 安装扩展]**&#x200B;页面上，展开&#x200B;**[!UICONTROL 常规]**，然后指定跟踪服务器。 跟踪服务器遵循模板`<trackingNamespace>.sc.omtrdc.net`，其中`<trackingNamespace>`是在供应电子邮件中获取的信息。
+在&#x200B;**[!UICONTROL 安装扩展]**&#x200B;页上，展开&#x200B;**[!UICONTROL 常规]**，然后指定跟踪服务器。 跟踪服务器遵循模板`<trackingNamespace>.sc.omtrdc.net`，其中`<trackingNamespace>`是在供给电子邮件中获取的信息。
 
 单击&#x200B;**[!UICONTROL 保存]**。
 
 请参阅[Adobe Analytics扩展](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html#extensions-ref)。
 
-* (可选；仅当需要视频跟踪时才需要)*Adobe音频和视频媒体分析*&#x200B;扩展
+* (可选；（仅当需要视频跟踪时才需要）*音频和视频Adobe媒体分析*&#x200B;扩展
 
-填写跟踪服务器字段。 *Adobe媒体分析音频和视频扩展的跟踪服务器与用于Adobe Analytics的跟踪服务器不同。*&#x200B;它遵循模板`<trackingNamespace>.hb.omtrdc.net`，其中`<trackingNamespace>`是供应电子邮件中的信息。
+填写跟踪服务器字段。 *音频和视频Adobe媒体分析扩展的跟踪服务器与Adobe Analytics使用的跟踪服务器不同。*&#x200B;它遵循模板`<trackingNamespace>.hb.omtrdc.net`，其中`<trackingNamespace>`是来自供给电子邮件的信息。
 
 所有其他字段都是可选字段。
 
@@ -571,36 +570,36 @@ Adobe启动中的所有可用扩展都列在&#x200B;**[!UICONTROL 扩展>目录]
 
 选择&#x200B;**[!UICONTROL 启用 Adobe Analytics for Video]** 以启用（打开）视频检测信号跟踪。
 
-请注意，在编写本文时，仅当创建Adobe启动属性用于开发时，*Dynamic Media查看器*&#x200B;扩展才可用。
+请注意，在编写本文时，仅当为开发创建Adobe启动属性时，*Dynamic Media查看器*&#x200B;扩展才可用。
 
-请参阅[在Adobe启动](#creating-a-property-in-adobe-launch)中创建属性。
+请参阅[在Adobe启动中创建属性](#creating-a-property-in-adobe-launch)。
 
-安装和安装这些扩展后，“扩展”>“安装”区域至少会列出以下五个扩展（如果您没有跟踪视频，则至少列出四个）。
+安装和安装扩展后，“扩展”>“已安装”区域中至少将列出以下五个扩展（如果未跟踪视频，则列出四个扩展）。
 
 ![image2019-7-22_12-7-36](assets/image2019-7-22_12-7-36.png)
 
 ### 设置数据元素和规则{#setting-up-data-elements-and-rules}
 
-在Adobe启动中，创建跟踪Dynamic Media查看器所需的数据元素和规则。
+在“Adobe启动”中，创建跟踪Dynamic Media查看器所需的数据元素和规则。
 
-有关使用事件启动进行跟踪的概述，请参阅集成](#how-data-and-event-tracking-works-in-the-integration)中的[数据和Adobe跟踪的工作方式。
+请参阅集成](#how-data-and-event-tracking-works-in-the-integration)中的[数据和事件跟踪的工作方式，了解使用Adobe启动跟踪的概述。
 
-请参阅[示例配置](#sample-configuration)以了解Adobe启动中的示例配置，该配置演示如何在加载查看器时跟踪资产名称。
+请参阅[示例配置](#sample-configuration)以了解Adobe启动中的示例配置，该配置演示了如何在加载查看器时跟踪资源名称。
 
-有关扩展功能的详细信息，请参阅[配置Dynamic Media查看器扩展](#configuring-the-dynamic-media-viewers-extension)。
+请参阅[配置Dynamic Media查看器扩展](#configuring-the-dynamic-media-viewers-extension)以详细了解扩展的功能。
 
 ### 发布库{#publishing-a-library}
 
-要在Adobe启动配置（包括设置的属性、扩展、规则和数据元素）中进行更改，您需要&#x200B;*发布*&#x200B;此类更改*。*在Adobe启动中发布是从属性配置下的发布选项卡执行的。
+要更改Adobe启动配置（包括设置的属性、扩展、规则和数据元素），您需要&#x200B;*发布*&#x200B;此类更改*。*在“Adobe启动”中发布是从“属性”配置下的“发布”选项卡执行的。
 
-Adobe启动可能具有多个开发环境、一个分阶段环境和一个生产环境。 默认情况下，AEM中的Adobe启动云配置将AEM作者节点指向Adobe启动的阶段环境，并将AEM发布节点指向Adobe启动的生产环境。 此安排意味着，使用默认的AEM设置，必须将Adobe启动库发布到临时环境，以便在AEM作者中使用它，然后将其发布到生产环境，以便在发布中使用它。
+Adobe启动可能具有多个开发环境、一个分阶段环境和一个生产环境。 默认情况下，AEM中的Adobe启动云配置将AEM作者节点指向Adobe启动的舞台环境，并将AEM发布节点指向Adobe启动的生产环境。 此安排意味着，使用默认的AEM设置，有必要将Adobe启动库发布到暂存环境，以便在AEM创作中使用它，然后将其发布到生产环境中，以便在AEM发布中使用它。
 
-有关环境启动环境的详细信息，请参阅[Adobe](https://experienceleague.adobe.com/docs/launch/using/reference/publish/environments/environments.html#environment-types)。
+有关Adobe启动环境的详细信息，请参阅[环境](https://experienceleague.adobe.com/docs/launch/using/reference/publish/environments/environments.html#environment-types)。
 
 发布库涉及以下两个步骤：
 
 * 通过将所有必要的更改（新更改和更新）包含到库中来添加和构建新库。
-* 将库向上移动到不同的环境级别（从开发到暂存和生产）
+* 将库移动到不同的环境级别（从开发到暂存和生产）
 
 #### 添加和构建新库{#adding-and-building-a-new-library}
 
@@ -610,17 +609,17 @@ Adobe启动可能具有多个开发环境、一个分阶段环境和一个生产
 
    ![image2019-7-15_14-43-17](assets/image2019-7-15_14-43-17.png)
 
-1. 在“创建新库”页的&#x200B;**[!UICONTROL 名称]**&#x200B;字段中，输入新库的描述性名称。 例如，
+1. 在“创建新库”页面的&#x200B;**[!UICONTROL 名称]**&#x200B;字段中，输入新库的描述性名称。 例如，
 
    *DynamicMediaViewersLib*
 
-   从环境下拉列表中，选择环境级别。 最初，只有“开发”级别可供选择。 在页面左下侧附近，单击&#x200B;**[!UICONTROL 添加所有更改的资源]**。
+   从“环境”下拉列表中，选择“环境”级别。 最初，只有“开发”级别可供选择。 在页面左下侧附近，单击&#x200B;**[!UICONTROL 添加所有更改的资源]**。
 
    ![image2019-7-15_14-49-41](assets/image2019-7-15_14-49-41.png)
 
 1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 保存并构建以进行开发]**。
 
-   在几分钟内创建并准备使用库。
+   几分钟内即会创建库并准备使用。
 
    ![image2019-7-15_15-3-34](assets/image2019-7-15_15-3-34.png)
 
@@ -629,21 +628,21 @@ Adobe启动可能具有多个开发环境、一个分阶段环境和一个生产
    >下次更改 Adobe Launch 配置时，转到&#x200B;**[!UICONTROL 属性]**&#x200B;配置下的&#x200B;**[!UICONTROL 发布]**&#x200B;选项卡，然后单击之前创建的库。
    >
    >
-   >在库发布屏幕中，单击&#x200B;**[!UICONTROL 添加所有更改的资源]**，然后单击&#x200B;**[!UICONTROL 保存并构建以进行开发]**。
+   >在库发布屏幕中，单击&#x200B;**[!UICONTROL 添加所有更改的资源]**，然后单击&#x200B;**[!UICONTROL 保存并构建以供开发]**。
 
-#### 通过环境级别向上移动库{#moving-a-library-up-through-environment-levels}
+#### 在环境级别{#moving-a-library-up-through-environment-levels}中上移库
 
-1. 添加新库后，它最初位于“开发”环境。 要将其移至临时环境级别（与“已提交”列对应），请在库的下拉菜单中单击&#x200B;**[!UICONTROL 提交以供批准]**。
+1. 添加新库后，它最初位于开发环境中。 要将其移至“暂存”环境级别（与“已提交”列相对应），请从库的下拉菜单中，单击“提交以供审批”**[!UICONTROL 。]**
 
    ![image2019-7-15_15-52-37](assets/image2019-7-15_15-52-37.png)
 
 1. 在确认对话框中，单击&#x200B;**[!UICONTROL 提交]**。
 
-   在库移至“已提交”列后，从库的下拉菜单中，单击&#x200B;**[!UICONTROL 生成以进行暂存]**。
+   在库移至“已提交”列后，从库的下拉菜单中，单击&#x200B;**[!UICONTROL 构建以进行暂存]**。
 
    ![image2019-7-15_15-54-37](assets/image2019-7-15_15-54-37.png)
 
-1. 按照类似的过程将库从暂存环境移动到生产环境（即已发布列）。
+1. 按照类似的过程将库从暂存环境移动到生产环境（即“已发布”列）。
 
    首先，从下拉菜单中，单击&#x200B;**[!UICONTROL 批准发布]**。
 
@@ -653,28 +652,28 @@ Adobe启动可能具有多个开发环境、一个分阶段环境和一个生产
 
    ![image2019-7-15_16-8-9](assets/image2019-7-15_16-8-9.png)
 
-   有关Adobe启动中发布过程的详细信息，请参阅[发布](https://experienceleague.adobe.com/docs/launch/using/reference/publish/overview.html#reference)。
+   请参阅[发布](https://experienceleague.adobe.com/docs/launch/using/reference/publish/overview.html#reference)以了解有关Adobe启动中发布过程的详细信息。
 
 ## 为集成配置Adobe Experience Manager{#configuring-adobe-experience-manager-for-the-integration}
 
 前提条件:
 
-* AEM同时运行作者实例和发布实例。
-* AEM作者节点在Dynamic Media-Scene7运行模式(dynamicmedia_s7)中设置
+* AEM同时运行Author和Publish实例。
+* AEM author节点在Dynamic Media-Scene7运行模式(dynamicmedia_s7)中设置
 * Dynamic MediaWCM组件在AEM Sites启用。
 
-AEM配置包含以下两个主要步骤：
+AEM配置由以下两个主要步骤组成：
 
 * AEM IMS的配置
-* 配置Adobe启动云。
+* 配置AdobeLaunch Cloud。
 
 ### 配置AEM IMS {#configuring-aem-ims}
 
-1. 在AEM作者中，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL 安全>AdobeIMS配置]**。
+1. 在AEM作者中，单击“工具”图标（锤），然后单击&#x200B;**[!UICONTROL “安全性”>“AdobeIMS配置”]**。
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
-1. 在“AdobeIMC配置”页的左上角附近，单击&#x200B;**[!UICONTROL 创建]**。
+1. 在“AdobeIMC配置”页面左上角附近，单击&#x200B;**[!UICONTROL 创建]**。
 1. 在 **[!UICONTROL Adobe IMS 技术帐户配置]**&#x200B;页面的&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中，单击 **[!UICONTROL Adobe Launch]**。
 1. 启用&#x200B;**[!UICONTROL 创建新证书]**，然后在文本字段中为证书输入任何有意义的值。 例如，*AdobeLaunchIMSCert*。 单击&#x200B;**[!UICONTROL 创建证书]**。
 
@@ -694,9 +693,9 @@ AEM配置包含以下两个主要步骤：
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. 在新的浏览器选项卡中，导航至[Adobe I/O控制台](https://console.adobe.io/integrations)。
+1. 在新的浏览器选项卡中，导航到[Adobe I/O控制台](https://console.adobe.io/integrations)。
 
-1. 在&#x200B;**[!UICONTROL Adobe I/O控制台集成]**&#x200B;页面的右上角附近，单击&#x200B;**[!UICONTROL 新建集成]**。
+1. 在右上角附近的&#x200B;**[!UICONTROL Adobe I/O控制台集成]**&#x200B;页面中，单击&#x200B;**[!UICONTROL 新集成]**。
 1. 在&#x200B;**[!UICONTROL 创建新集成]**&#x200B;对话框中，确保选中&#x200B;**[!UICONTROL 访问 API]** 单选按钮，然后单击&#x200B;**[!UICONTROL 继续]**。
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
@@ -711,20 +710,20 @@ AEM配置包含以下两个主要步骤：
 
    * 在&#x200B;**[!UICONTROL 说明]**&#x200B;字段中，输入集成的说明。
 
-   * 在&#x200B;**[!UICONTROL 公钥证书]**&#x200B;区域，上传您之前在这些步骤中下载的公钥文件(*.crt)。
+   * 在&#x200B;**[!UICONTROL 公钥证书]**&#x200B;区域中，上传您之前在这些步骤中下载的公钥文件(*.crt)。
 
    * 在&#x200B;**[!UICONTROL 为Experience Platform LaunchAPI]**&#x200B;选择角色标题下，选择&#x200B;**[!UICONTROL 管理员]**。
 
-   * 在&#x200B;**[!UICONTROL 为Experience Platform LaunchAPI]**&#x200B;选择一个或多个产品用户档案标题下，选择名为&#x200B;**[!UICONTROL 启动- &lt;your_公司名称>]**&#x200B;的产品用户档案。
+   * 在&#x200B;**[!UICONTROL 为Experience Platform LaunchAPI]**&#x200B;选择一个或多个产品配置标题下，选择名为&#x200B;**[!UICONTROL Launch - &lt;your_company_name>]**&#x200B;的产品配置。
 
    ![2019-07-25_13-49-18](assets/2019-07-25_13-49-18.png)
 
 1. 单击&#x200B;**[!UICONTROL 创建集成]**。
-1. 在&#x200B;**[!UICONTROL 已创建集成]**&#x200B;页面上，单击&#x200B;**[!UICONTROL 继续获取集成详细信息]**。
+1. 在&#x200B;**[!UICONTROL 已创建集成]**&#x200B;页面上，单击&#x200B;**[!UICONTROL 继续集成详细信息]**。
 
    ![2019-07-25_14-16-33](assets/2019-07-25_14-16-33.png)
 
-1. 将显示“集成详细信息”页，****&#x200B;与以下内容类似：
+1. 此时会显示“集成详细信息”页面，****&#x200B;类似于：
 
    >[!NOTE]
    >
@@ -742,7 +741,7 @@ AEM配置包含以下两个主要步骤：
 
    AdobeIMS技术帐户配置——证书页。
 
-1. **[!UICONTROL 帐户]**&#x200B;页面有五个字段，需要您使用上一步“集成详细信息”页面中的信息填写这些字段。
+1. “**[!UICONTROL 帐户]**”页包含五个字段，需要您使用上一步中“集成详细信息”页面中的信息填写这些字段。
 
    ![2019-07-25_20-42-45](assets/2019-07-25_20-42-45.png)
 
@@ -751,10 +750,10 @@ AEM配置包含以下两个主要步骤：
 1. 在&#x200B;**[!UICONTROL 帐户]**&#x200B;页面上，填写以下字段：
 
    * **[!UICONTROL 标题]** -输入描述性帐户标题。
-   * **[!UICONTROL 授权服务器]** -返回到您之前打开的“集成详细信息”页。单击&#x200B;**[!UICONTROL JWT]**&#x200B;选项卡。 复制不带路径的服务器名称，如下所示高亮显示。
+   * **[!UICONTROL 授权服务器]** -返回您之前打开的“集成详细信息”页。单击&#x200B;**[!UICONTROL JWT]**&#x200B;选项卡。 复制不带路径的服务器名称，如下所示。
 
-（示例服务器名称仅供说明之用）   返回到&#x200B;**[!UICONTROL 帐户]**&#x200B;页面，然后将名称粘贴到相应的字段中。例如，`https://ims-na1.adobelogin.com/`
-（示例服务器名称仅供说明之用）
+（示例服务器名称仅用于说明目的）   返回到&#x200B;**[!UICONTROL 帐户]**&#x200B;页面，然后将名称粘贴到相应的字段中。例如，`https://ims-na1.adobelogin.com/`
+（示例服务器名称仅用于说明目的）
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
 
@@ -772,7 +771,7 @@ AEM配置包含以下两个主要步骤：
 
    返回到&#x200B;**[!UICONTROL 帐户]**&#x200B;页面，然后将密钥粘贴到相应的字段中。
 
-1. **[!UICONTROL 有效负荷]** -返回到“集成详细信息”页。从&#x200B;**[!UICONTROL JWT]**&#x200B;选项卡的JWT有效负荷字段中，复制整个JSON对象代码。
+1. **[!UICONTROL 有效负荷]** -返回到“集成详细信息”页。从&#x200B;**[!UICONTROL JWT]**&#x200B;选项卡的JWT负载字段中，复制整个JSON对象代码。
 
    返回到&#x200B;**[!UICONTROL 帐户]**&#x200B;页面，然后将代码粘贴到相应的字段中。
 
@@ -780,25 +779,25 @@ AEM配置包含以下两个主要步骤：
 
    集成详细信息页- JWT选项卡
 
-   已填写所有字段的“帐户”页面的外观将类似于以下内容：
+   “帐户”页面（已填写所有字段）将类似于：
 
    ![2019-07-25_22-08-30](assets/2019-07-25_22-08-30.png)
 
 1. 在&#x200B;**[!UICONTROL 帐户]**&#x200B;页面的右上角附近，单击&#x200B;**[!UICONTROL 创建]**。
 
-   配置AEM IMS后，您现在在&#x200B;**[!UICONTROL AdobeIMS配置]**&#x200B;下列出了新的IMSAccount。
+   配置了AEM IMS后，您现在将在&#x200B;**[!UICONTROL AdobeIMS配置]**&#x200B;下列出一个新的IMSAccount。
 
    ![image2019-7-15_14-17-54](assets/image2019-7-15_14-17-54.png)
 
-## 为集成配置Adobe启动云{#configuring-adobe-launch-cloud-for-the-integration}
+## 为集成{#configuring-adobe-launch-cloud-for-the-integration}配置AdobeLaunch Cloud
 
-1. 在AEM作者的左上角附近，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL Cloud Services>Adobe启动配置]**。
+1. 在AEM作者中，在左上角附近，单击“工具”图标（锤），然后单击&#x200B;**[!UICONTROL Cloud Services>Adobe启动配置]**。
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 
 1. 在&#x200B;**[!UICONTROL Adobe启动配置]**&#x200B;页面的左侧面板中，选择要应用Adobe启动配置的AEM站点。
 
-   仅供说明，**[!UICONTROL We.Retail]**&#x200B;站点在以下屏幕截图中处于选中状态。
+   仅出于说明目的，在以下屏幕截图中选择了&#x200B;**[!UICONTROL We.Retail]**&#x200B;站点。
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
@@ -807,25 +806,25 @@ AEM配置包含以下两个主要步骤：
 
    * **[!UICONTROL 标题]** -输入描述性配置标题。例如，`We.Retail Launch cloud configuration`。
 
-   * **[!UICONTROL 关联AdobeIMS配置]** -选择您之前在配置AEM IMS时创 [建的IMS配置](#configuring-aem-ims)。
+   * **[!UICONTROL 关联AdobeIMS配置]** -选择您之前在配置AEM IMS中创 [建的IMS配置](#configuring-aem-ims)。
 
-   * **[!UICONTROL 公司]** -从“ **** 公司”下拉列表中，选择您的Experience Cloud公司。列表会自动填充。
+   * **[!UICONTROL 公司]** -从“公 **** 司”下拉列表中，选择您的Experience Cloud公司。列表会自动填充。
 
-   * **[!UICONTROL 属性]** -从“属性”下拉列表卡中，选择您之前创建的Adobe启动属性。列表会自动填充。
-   完成所有字段后，您的&#x200B;**[!UICONTROL “常规”]**&#x200B;页面将与以下内容类似：
+   * **[!UICONTROL 属性]** -从“属性”下拉列表中，选择您以前创建的Adobe启动属性。列表会自动填充。
+   完成所有字段后，**[!UICONTROL “常规”]**&#x200B;页面将类似于：
 
    ![image2019-7-15_14-34-23](assets/image2019-7-15_14-34-23.png)
 
-1. 在左上角附近，单击&#x200B;**[!UICONTROL 下一步]**。
+1. 在左上角附近，单击&#x200B;**[!UICONTROL 下一个]**。
 1. 在&#x200B;**[!UICONTROL 创建 Adobe Launch 配置]**&#x200B;窗口的&#x200B;**[!UICONTROL 测试]**&#x200B;页面（第 2/3 页）中，填写以下字段：
 
    在&#x200B;**[!UICONTROL 库 URI]** 字段中，查看 Adobe Launch 库的测试版本的位置。AEM 会自动填充此字段。
 
-   仅供说明，此步骤将使用部署到AdobeCDN的Adobe启动库。
+   仅出于说明目的，此步骤将使用部署到AdobeCDN的Adobe启动库。
 
    >[!NOTE]
    >
-   >检查以确保自动填充的库URI（统一资源标识符）格式不正确。 如有必要，请修复它，使URI表示协议相对URI。 就是多次正斜杠开始.
+   >检查以确保自动填充的库URI（统一资源标识符）的格式不正确。 如有必要，请修复它，使URI表示协议相对URI。 也就是说，它从双正斜杠开始。
    >
    >
    >例如：`//assets.adobetm.com/launch-xxxx`。
@@ -834,20 +833,20 @@ AEM配置包含以下两个主要步骤：
 
    ![image2019-7-15_15-21-8](assets/image2019-7-15_15-21-8.png)
 
-1. 在右上角附近，单击&#x200B;**[!UICONTROL 下一步]**。
+1. 在右上角附近，单击&#x200B;**[!UICONTROL Next]**。
 1. 如有需要，在&#x200B;**[!UICONTROL 创建 Adobe Launch 配置]**&#x200B;窗口的&#x200B;**[!UICONTROL 生产]**&#x200B;页面（第 3/3 页）中，修复自动填充的生产 URI，类似于在上一个&#x200B;**[!UICONTROL 测试]**&#x200B;页面中的操作。
 1. 在右上角附近，单击&#x200B;**[!UICONTROL 创建]**。
 
    您的新Adobe启动云配置现已创建并列在您的网站旁边，如下例所示：
 
-1. 选择新的Adobe启动云配置（选中配置标题后，将在其左侧显示复选标记）。 在工具栏上，单击&#x200B;**[!UICONTROL 发布]**。
+1. 选择新的Adobe启动云配置（选中配置标题时，其左侧会出现复选标记）。 在工具栏上，单击&#x200B;**[!UICONTROL 发布]**。
 
    ![image2019-7-15_15-47-6](assets/image2019-7-15_15-47-6.png)
 
 目前，AEM作者不支持将Dynamic Media查看器与AdobeLaunch集成。
 
-但是，AEM publish节点支持它。 使用Adobe启动云配置的默认设置，AEM publish使用Adobe启动的生产环境。 因此，在测试过程中，每次必须将Adobe启动库更新从开发推送到生产环境。
+但是，AEM发布节点支持它。 使用AdobeLaunch Cloud配置的默认设置，AEM publish使用AdobeLaunch的生产环境。 因此，在测试期间，必须每次将Adobe启动库更新从开发推送到生产环境。
 
-通过在上述Adobe发布的Adobe启动云配置中指定AEM启动库的开发或临时URL，可以解决此限制。 这样做会使AEM发布节点使用Adobe启动库的开发或暂存版本。
+通过在上述AEM发布的Adobe启动云配置中指定Adobe启动库的开发或暂存URL，可以解决此限制。 这样，AEM发布节点就会使用Adobe启动库的开发或暂存版本。
 
-有关设置Adobe启动云配置的详细信息，请参阅[通过Adobe I/O将AEM与Adobe启动集成](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)。
+请参阅[将AEM与Adobe启动集成通过Adobe I/O](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)，了解有关设置Adobe启动云配置的更多信息。
