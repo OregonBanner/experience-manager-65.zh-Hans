@@ -2,9 +2,9 @@
 title: 发行说明 [!DNL Adobe Experience Manager Assets] 6.5。
 description: 对 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]的新功能和增强。
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 41%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 41%
 
 ![在Adobe Photoshop搜索资产](assets/asset_search_photoshop.png)
 
-### [!DNL Adobe Stock] 集成  {#stock}
+### [!DNL Adobe Stock] 集成 {#stock}
 
 您的组织可以在[!DNL Experience Manager Assets]中使用其[!DNL Adobe Stock]企业计划，确保许可资产广泛适用于您的创意和营销项目。 您可以使用[!DNL Experience Manager]的强大DAM功能快速查找、预览和许可以Experience Manager保存的[!DNL Adobe Stock]资源。
 
@@ -68,7 +68,7 @@ ht-degree: 41%
 
 [!DNL Dynamic Media] 提供增强的富媒体创作和投放 [!DNL Experience Manager Assets] 功能，以推动身临其境和个性化的前沿体验。通过上传单个高质量主控资产，并使用我们的高级云渲染和查看器，您可以实时传送任意组合的演绎版以支持组织的媒体战略。
 
-有关新增[!DNL Dynamic Media]功能的详细信息，请参阅[Dynamic Media发行说明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
+有关新[!DNL Dynamic Media]功能的详细信息，请参见[Dynamic Media发行说明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
 
 ### 360视频支持{#video-support}
 
@@ -80,7 +80,7 @@ ht-degree: 41%
 
 ### 辅助功能增强功能 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。有关其他详细信息，请参阅 [Dynamic Media 查看器发行说明](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)。
+[!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。有关其他详细信息，请参阅 [Dynamic Media 查看器发行说明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 ## 搜索体验增强功能  {#experience-enhancement-for-searching}
 
