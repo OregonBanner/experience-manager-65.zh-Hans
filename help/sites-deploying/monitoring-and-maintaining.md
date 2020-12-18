@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9f22cb618d487a2b02dc17149d11b81a9e9e27be
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '5895'
+source-wordcount: '5891'
 ht-degree: 0%
 
 ---
@@ -203,13 +203,13 @@ AEM WCM记录详细日志。 解包并开始快速启动后，您可以找到登
    * `error.log`
 此处会注册错误消息（严重性级别不同）。
 
-   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
 此日志仅在启用时 [!DNL Dynamic Media] 使用。它提供用于分析内部ImageServer进程行为的统计和分析信息。
 
    * `request.log`
 每个访问请求都在此处注册，并随响应一起注册。
 
-   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
 此日志仅在启用时 [!DNL Dynamic Media] 使用。s7access日志记录通过`/is/image`和`/is/content`向[!DNL Dynamic Media]发出的每个请求。
 
    * `stderr.log`
@@ -1165,7 +1165,7 @@ Java虚拟机(JVM)在调整方面已有显着改进（尤其是自Java 7以来�
 * 然后使用JConsole连接到JVM;请参阅：
    ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
 
-这将帮助您了解正在使用的内存量、GC算法的使用情况、运行它们需要多长时间，以及这对应用程序性能的影响。 如果没有这种情况，调音就只是“随机地捏弄旋钮”。
+这将帮助您了解正在使用的内存量、GC算法的使用情况、运行它们需要多长时间，以及这对应用程序性能的影响。 如果没有这种情况，调音就只是“随机摆弄旋钮”。
 
 >[!NOTE]
 >
