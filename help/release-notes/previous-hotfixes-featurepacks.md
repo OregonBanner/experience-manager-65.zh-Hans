@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的发行说明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
+source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
 workflow-type: tm+mt
-source-wordcount: '14804'
+source-wordcount: '14953'
 ht-degree: 19%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 提供了新的公司设置来反映[!DNL Dynamic Media]连接器的状态。
 
-* `test`和`aiprocess`的默认选项会从Dynamic Media中的`Rasterize`更新为`Thumbnail`，以确保用户只需创建缩略图并跳过页面提取和关键字提取。
+* `test`和`aiprocess`的默认选项将从以前在Dynamic Media的`Rasterize`更新为`Thumbnail`，以确保用户只需创建缩略图并跳过页面提取和关键字提取。
 
 * [在客户端预填自适应表单](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client)。
 
@@ -95,6 +95,15 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 * 在浏览模式下，NVDA不解说从“类型／大小”菜单选项中选择的值。 视觉焦点不在所选元素上。 依赖屏幕阅读器的用户无法使用浏览模式(CQ-4294993)。
 * 创建网页时，用户可以选择[!UICONTROL 内容页面]模板。 在[!UICONTROL 社交媒体]选项卡中，用户选择[!UICONTROL 首选XF变量]。 要在NVDA浏览模式下选择体验片段，用户无法使用键盘键(CQ-4292669)。
 * 已将handlebars库更新为更安全的v4.7.3(NPR-34484)。
+* [!DNL Experience Manager Sites]组件中的多个跨站点脚本实例(NPR-33925)。
+* 创建新文件夹时的文件夹名称字段易受存储的跨站点脚本攻击(GRANITE-30094)。
+* [!UICONTROL 欢迎]页面和路径完成模板上的搜索结果易受跨站点脚本攻击(NPR-33719、NPR-33718)。
+* 在非结构化节点上创建二进制属性会导致在二进制属性对话框中进行跨站点脚本(NPR-33717)。
+* 在CRX DE接口上使用[!UICONTROL 访问控制测试]选项时进行跨站点脚本编写(NPR-33716)。
+* 向客户端发送信息时，用户输入不会针对各种组件进行适当编码(NPR-33695)。
+* 在Experience Manager收件箱的日历视图中跨站点脚本(NPR-33545)。
+* 以`childrenlist.html`结尾的URL显示HTML页而不是404响应。 此类URL易受跨站点脚本攻击(NPR-33441)。
+
 
 ### [!DNL Assets] {#assets-6560}
 
@@ -201,7 +210,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 * 安装[!DNL Experience Manager] 6.5 Service Pack 5或[!DNL Experience Manager] 6.5上的先前版本(NPR-34532)时，将删除资产自定义工作流模型（在`/var/workflow/models/dam`中创建）的运行时副本。 要检索运行时副本，请使用HTTP API将工作流模型的设计时副本与运行时副本同步：
    `<designModelPath>/jcr:content.generate.json`。
 
-**Dynamic Media中修复的问题**
+**在Dynamic Media修复的问题**
 
 * 如果用户在创建视频用户档案后在编辑中定义编码设置，则会从视频用户档案中删除智能裁剪设置(CQ-4299177)。
 
@@ -219,7 +228,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 当将图像用户档案添加到具有多个长宽比（例如，11）的文件夹时，智能裁剪功能会出错而失败(NPR-34082)。
 
-* 当用户向下滚动[!UICONTROL 工作流存档]页面[!UICONTROL 工作流]选项卡(位于[!UICONTROL 工具]中， [!DNL Adobe Experience Manager]配置了Dynamic Media Scene7(CQ-4299727))时，将触发DAM更新资产工作流。
+* 当用户向下滚动到[!UICONTROL Workflow Archive]页面&lt;a2/>Workflow]选项卡的[!UICONTROL Tools](使用Dynamic Media·Scene7(CQ-4299727)配置的[!DNL Adobe Experience Manager]中时，将触发DAM更新资产工作流。[!UICONTROL 
 
 * [!UICONTROL 查看器预设编辑器]的“行为”]选项卡中的符号未本地化(CQ-4299026)。[!UICONTROL 
 
@@ -281,6 +290,8 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 通过admin console添加的社区组的现有用户将在社区组控制台中进行任何修改时从用户列表中删除(NPR-34315)。
 
+* `TagFilterServlet`会泄露潜在敏感数据(NPR-33868)。
+
 <!--
 * Tag filters are vulnerable to sensitive information disclosure (NPR-33868).
 -->
@@ -329,6 +340,8 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 用户在提交自适应表单时可以编辑提交元数据，如`afPath`、`afSubmissionTime`和`signers`。 要解决此问题，将从客户端的表单提交数据中删除元数据值。 用户可以使用`FormSubmitInfo`对象从服务器检索这些值(NPR-33654)。
 
+* 向客户端发送信息时，用户输入未针对[!DNL Forms]组件进行适当编码(NPR-33611)。
+
 **工作流**
 
 * 当工作流审批者上传附件时，附件将重命名为`undefined`(NPR-33699)。
@@ -351,7 +364,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 将内容从[!DNL Microsoft Word]文档复制粘贴到字母中的文本文档片段会导致格式问题(NPR-33536)。
 
-**文档服务**
+**Document Services**
 
 * 使用Output和Forms服务从XDP文件生成PDF文件时，会导致缺少文本和文本重叠(NPR-34237、CQ-4299331)。
 
@@ -391,7 +404,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 改进了[!DNL Adobe Experience Manager Assets]用户界面流中的异常处理。
 
-* 要获取Dynamic Media Scene7的发布URL，将新方法`getRemoteAssetPublishURL`添加到`com.day.cq.dam.api.s7dam.scene7.ImageUrlApi`接口。
+* 要获取Dynamic Media·Scene7的发布URL，将新方法`getRemoteAssetPublishURL`添加到`com.day.cq.dam.api.s7dam.scene7.ImageUrlApi`接口。
 
 * [根据](#assets-6550) Web内 [!DNL Adobe Experience Manager Assets] 容辅助功能准则(WCAG)，辅助功能得到增强。
 
@@ -557,7 +570,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 在打开包含超过10,000个资源的智能集合时，会在日志中观察到遍历警告(NPR-32980)。
 
-* 在[!DNL Adobe Experience Manager]中使用Dynamic Media Scene7运行模式将资产从一个文件夹移到另一个文件夹时，资产名称将更改为小写(NPR-32995)。
+* 在[!DNL Adobe Experience Manager]中使用Dynamic MediaScene7运行模式将资源从一个文件夹移到另一个文件夹时，资源名称将更改为小写(NPR-32995)。
 
 * 在从搜索结果导航到其属性，然后返回搜索结果删除该资产后，无法删除已搜索的资产(NPR-32998)。
 
@@ -571,7 +584,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 在具有智能裁剪用户档案的文件夹下打开PDF的演绎版边栏的日志中会出现异常(CQ-4294201)。
 
-* 如果在与Dynamic Media Demia Scene7运行模式(CQ-4294200)Experience Manager时，默认情况下禁用[!UICONTROL Dynamic Media同步模式]，则不发布图像预设。
+* 如果在与Dynamic MediaScene7运行模式Experience Manager时，默认禁用[!UICONTROL Dynamic Media同步模式]，则不发布图像预设(CQ-4294200)。
 
 * 批量上传时的资产处理会卡住，而工作流实例会显示DAM更新资产的卡住实例(CQ-4293916)。
 
@@ -589,9 +602,9 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
    * 将大型二进制文件上传到Dynamic Media图像处理服务器需要太长的时间。
 
-   * Experience Manager缩略图生成时间因Dynamic MediaScene7体系结构而增加。
+   * 由于Dynamic Media·Scene7的架构，Experience Manager缩略图生成时间增加。
 
-* 对于拥有大量资产的客户，动态媒体Scene7迁移问题失败(CQ-4279206)。
+* Dynamic MediaScene7迁移问题对于资产数量较大的客户失败(CQ-4279206)。
 
 * 如果使用`setVideo`，则视频360查看器的布局将被破坏，并且视频使用`video= modifier`向下移动(CQ-4263201)。
 
@@ -667,7 +680,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 >[!NOTE]
 >
->Experience Manager服务包不包含[!DNL Forms]的修复。 它们是通过单独的 Forms 附加组件包交付的。此外，还发布了包含针对AEM Forms的JEE修复的累积安装程序。 有关详细信息，请参阅[安装Experience ManagerForms加载项](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)和[在JEE](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)上安装Experience ManagerForms。
+>Experience Manager服务包不包含[!DNL Forms]的修复。 它们是通过单独的 Forms 附加组件包交付的。此外，发布了一个累计安装程序，其中包含 JEE 上对 AEM Forms 的修复。有关详细信息，请参阅[安装Experience ManagerForms加载项](/help/release-notes/sp-release-notes.md#install-aem-forms-add-on-package)和[在JEE](/help/release-notes/sp-release-notes.md#install-aem-forms-jee-installer)上安装Experience ManagerForms。
 
 * 通信管理：在目标区的资产顺序在提交信件(NPR-33359、NPR-33153)后混乱。
 * 适应性Forms:当用户编辑自适应表单时，[!UICONTROL 页面信息]菜单中可用的[!UICONTROL 开始工作流]选项不起作用(NPR-33004)。
@@ -703,7 +716,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.10.8。
 
-* 您现在可以将选择性内容子树同步到&#x200B;*Dynamic Media -Scene7模式*，而不是所有`content/dam`中的可用模式。
+* 您现在可以将选择性内容子树同步到&#x200B;*Dynamic Media-Scene7模式*，而不是所有`content/dam`中的可用模式。
 
 * 与SOAP Web服务的表单数据模型集成现在支持元素上的选择组或属性。
 
@@ -759,7 +772,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 在资产收集页面上触发工作流的按钮被禁用(NPR-32471)。
 
-* 在使用Dynamic Media Scene7配置(NPR-32440)的Experience Manager下将资源从一个文件夹移到另一个文件夹时，将在SPS(Scene7出版系统)中创建一个无名称的文件夹。
+* 在SPS(Scene7出版系统)中创建无名称的文件夹，同时使用Dynamic MediaScene7配置将资源从一个文件夹移到另一个文件夹(NPR-32440)。
 
 * 将所有资产（使用全选，然后移动）移动到包含已发布资产的文件夹的操作会失败，并显示错误(NPR-32366)。
 
@@ -791,11 +804,11 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 触屏UI搜索（通过Omnisearch完成）结果页自动向上滚动并丢失用户的滚动位置(NPR-31307)。
 
-* PDF资产的资产详细信息页面不显示操作按钮，但在Dynamic MediaScene7运行模式(CQ-4286705)上运行的Experience Manager中，“到集合”和“添加演绎版”按钮除外。
+* PDF资产的资产详细信息页面不显示操作按钮，但Dynamic Media·Scene7运行模式(CQ-4286705)上运行的Experience Manager中的“到集合”和“添加演绎版”按钮除外。
 
 * 通过Scene7的批量上传过程处理资产需要太长的时间(CQ-4286445)。
 
-* 当用户未在Dynamic Media Client中的“设置编辑器”中进行任何更改时，“保存”按钮不会导入“远程设置”(CQ-4285690)。
+* 当用户在Dynamic Media客户端中未对集编辑器进行任何更改时，保存按钮不会导入远程集(CQ-4285690)。
 
 * 当支持的3D模型被引入Experience Manager时，3D资产缩略图不会提供相关信息(CQ-4283701)。
 
@@ -803,7 +816,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 资产的详细信息页面上会观察到在3D查看器中预览的已上传3D模型的容器高度不正确(CQ-4283309)。
 
-* 在IE 11中Experience ManagerDynamic Media Hybrid模式(CQ-4255590)下，旋转式编辑器未打开。
+* 在Experience ManagerDynamic Media混合模式(CQ-4255590)的IE 11中，旋转式编辑器不打开。
 
 * 键盘焦点卡在Chrome和Safari浏览器的“下载”对话框的“电子邮件”下拉菜单中(NPR-32067)。
 
