@@ -1,8 +1,8 @@
 ---
 title: 在客户端呈现Forms
 seo-title: 在客户端呈现Forms
-description: 'null'
-seo-description: 'null'
+description: 通过使用Acrobat或Adobe Reader的客户端渲染功能，优化PDF内容的投放并提高Forms服务处理网络负载的能力
+seo-description: 通过使用Acrobat或Adobe Reader的客户端渲染功能，优化PDF内容的投放并提高Forms服务处理网络负载的能力
 uuid: 09bcc23d-28b0-473a-87f1-bc17e87620f4
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 translation-type: tm+mt
-source-git-commit: ab401a8007f6ea85c0e52169091ce7a38b3dbe5c
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
