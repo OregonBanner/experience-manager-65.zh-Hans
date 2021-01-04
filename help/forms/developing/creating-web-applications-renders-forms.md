@@ -1,8 +1,8 @@
 ---
 title: 创建呈现Forms的Web 应用程序
 seo-title: 创建呈现Forms的Web 应用程序
-description: 'null'
-seo-description: 'null'
+description: 创建一个基于Web的应用程序，它使用Java servlet调用Forms服务并渲染表单。 Java servlet用作返回表单的Forms服务与客户端Web浏览器之间的链接。
+seo-description: 创建一个基于Web的应用程序，它使用Java servlet调用Forms服务并渲染表单。 Java servlet用作返回表单的Forms服务与客户端Web浏览器之间的链接。
 uuid: 00de10c5-79bd-4d8a-ae18-32f1fd2623bf
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
