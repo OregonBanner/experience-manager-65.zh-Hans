@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 1%
