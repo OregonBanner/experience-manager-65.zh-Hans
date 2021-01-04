@@ -1,8 +1,8 @@
 ---
 title: 管理用户
 seo-title: 管理用户
-description: 'null'
-seo-description: 'null'
+description: 使用用户管理API创建客户端应用程序，这些应用程序可以管理角色、权限和承担者（可以是用户或用户组）以及验证用户身份。
+seo-description: 使用用户管理API创建客户端应用程序，这些应用程序可以管理角色、权限和承担者（可以是用户或用户组）以及验证用户身份。
 uuid: 68d8a0bc-6e3d-4286-ba5c-534dcf58cb84
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '6191'
+source-wordcount: '6243'
 ht-degree: 0%
 
 ---
@@ -870,7 +870,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>客户端应用程序请求AEM Forms执行同步操作。</p></td>
   </tr>
   <tr>
