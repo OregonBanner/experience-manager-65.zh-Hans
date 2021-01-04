@@ -1,8 +1,8 @@
 ---
 title: 任务管理器服务Java API快速启动(SOAP)
 seo-title: 任务管理器服务Java API快速启动(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用任务管理器服务分配任务、锁定任务、检索分配给用户的任务、从任务检索表单数据、修改表单数据、检索文件附件和检索任务信息。
+seo-description: 使用任务管理器服务分配任务、锁定任务、检索分配给用户的任务、从任务检索表单数据、修改表单数据、检索文件附件和检索任务信息。
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
