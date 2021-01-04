@@ -1,8 +1,8 @@
 ---
 title: 用户管理器Java API快速开始(SOAP)
 seo-title: 用户管理器Java API快速开始(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用User Manager API添加用户、删除用户、创建用户组、管理用户和用户组、管理角色和权限、以编程方式同步用户以及以编程方式管理首选项节点。
+seo-description: 使用User Manager API添加用户、删除用户、创建用户组、管理用户和用户组、管理角色和权限、以编程方式同步用户以及以编程方式管理首选项节点。
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于文档（如果您使用其他操作系统，如Unix），则使用适用操作系统支持的路径替换特定于Windows的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的快速开始基于文档，如果您使用其他操作系统（如Unix），则使用适用操作系统支持的路径替换特定于Windows的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
 ## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-adding-users-using-the-java-api}添加用户
 
