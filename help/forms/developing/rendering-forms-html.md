@@ -1,8 +1,8 @@
 ---
 title: 将Forms渲染为HTML
 seo-title: 将Forms渲染为HTML
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服务以HTML形式呈现表单，以响应来自Web浏览器的HTTP请求。 您可以使用Java API和Web服务API将表单呈现为HTML。
+seo-description: 使用Forms服务以HTML形式呈现表单，以响应来自Web浏览器的HTTP请求。 您可以使用Java API和Web服务API将表单呈现为HTML。
 uuid: bd8edb6f-333b-4ceb-9877-618f5377f56f
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4174'
 ht-degree: 0%
 
 ---
