@@ -1,8 +1,8 @@
 ---
 title: LiveCycleProcess Java API(SOAP)快速开始
 seo-title: LiveCycleProcess Java API(SOAP)快速开始
-description: 'null'
-seo-description: 'null'
+description: '使用LiveCycleProcess Java API(SOAP)快速开始可搜索进程实例、挂起进程实例、开始挂起的进程实例、终止进程实例、清除进程数据和检索作业状态。 '
+seo-description: 使用LiveCycleProcess Java API(SOAP)快速开始可搜索进程实例、挂起进程实例、开始挂起的进程实例、终止进程实例、清除进程数据和检索作业状态。
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
