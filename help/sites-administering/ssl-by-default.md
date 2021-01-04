@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### 生成要与向导{#generating-a-private-key-certificate-pair-to-use-with-the-wizard}一起使用的私钥／证书对
 
-在下面，您将找到一个示例，用于创建SSL向导可使用的DER格式的自签名证书。
+在下面，您将找到一个示例，用于创建SSL向导可使用的DER格式的自签名证书。 根据操作系统安装OpenSSL，打开OpenSSL命令提示符，并将目录更改为要在其中生成私钥／证书的文件夹。
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 1. 然后，使用私钥生成证书签名请求(CSR):
 
    ```shell
-   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj '/CN=localhost'
+   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
 1. 生成SSL证书并使用私钥对其进行签名。 在此示例中，将从现在起一年过期：
