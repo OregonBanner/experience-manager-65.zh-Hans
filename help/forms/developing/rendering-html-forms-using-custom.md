@@ -1,8 +1,8 @@
 ---
 title: 使用自定义CSS文件渲染HTMLForms
 seo-title: 使用自定义CSS文件渲染HTMLForms
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服务引用自定义CSS文件来渲染HTML表单，以响应来自Web浏览器的HTTP请求。 您可以使用Java API和Web服务API渲染使用CSS文件的HTML表单。
+seo-description: 使用Forms服务引用自定义CSS文件来渲染HTML表单，以响应来自Web浏览器的HTTP请求。 您可以使用Java API和Web服务API渲染使用CSS文件的HTML表单。
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: fcbe1d860410e215cb7c438f94579e0b14d262a5
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
