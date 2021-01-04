@@ -1,8 +1,8 @@
 ---
 title: PDF实用程序服务Java APIQ快速开始(SOAP)
 seo-title: PDF实用程序服务Java APIQ快速开始(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用PDF实用程序服务将PDF文档转换为XDP文档，将XDP文档转换为PDF文档，检索PDF文档属性，设置PDF文档的保存样式，并清理PDF文档。
+seo-description: 使用PDF实用程序服务将PDF文档转换为XDP文档，将XDP文档转换为PDF文档，检索PDF文档属性，设置PDF文档的保存样式，并清理PDF文档。
 uuid: 96bb2bd5-b274-43d4-a664-49cc1c526b3f
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
