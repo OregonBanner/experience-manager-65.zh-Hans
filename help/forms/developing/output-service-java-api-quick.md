@@ -1,8 +1,8 @@
 ---
 title: 输出服务Java API快速开始(SOAP)
 seo-title: 输出服务Java API快速开始(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用输出服务Java API快速开始(SOAP)创建PDF文档，创建基于应用程序XDP文件的PDF文档，创建PDF/A文档，将文档传递到输出服务，将位于AEM Forms存储库中的文档传递到输出服务，创建基于片段的PDF文档，打印到文件，发送打印流到网络打印机，创建多个PDF文件，创建搜索规则，转换PDF文档。
+seo-description: 使用输出服务Java API快速开始(SOAP)创建PDF文档，创建基于应用程序XDP文件的PDF文档，创建PDF/A文档，将文档传递到输出服务，将位于AEM Forms存储库中的文档传递到输出服务，创建基于片段的PDF文档，打印到文件，发送打印流到网络打印机，创建多个PDF文件，创建搜索规则，转换PDF文档。
 uuid: 34cb1fc7-50a9-4db8-aed1-dbd3480d1323
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
