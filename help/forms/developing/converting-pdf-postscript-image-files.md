@@ -1,8 +1,8 @@
 ---
 title: 将PDF转换为Postscript和图像文件
 seo-title: 将PDF转换为Postscript和图像文件
-description: 'null'
-seo-description: 'null'
+description: 使用“转换PDF”服务，使用Java API和Web服务API将PDF文档转换为PostScript以及多种图像格式（JPEG、JPEG 2000、PNG和TIFF）。
+seo-description: 使用“转换PDF”服务，使用Java API和Web服务API将PDF文档转换为PostScript以及多种图像格式（JPEG、JPEG 2000、PNG和TIFF）。
 uuid: 07da0391-7180-4197-aaa6-ae753d753b84
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2772'
+source-wordcount: '2832'
 ht-degree: 0%
 
 ---
