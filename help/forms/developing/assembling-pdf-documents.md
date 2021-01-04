@@ -1,8 +1,8 @@
 ---
 title: 汇编PDF文档
 seo-title: 汇编PDF文档
-description: 'null'
-seo-description: 'null'
+description: 使用Assembler服务将多个PDF文档合并为一个PDF文档，或将一个PDF文档反汇编为多个PDF文档。
+seo-description: 使用Assembler服务将多个PDF文档合并为一个PDF文档，或将一个PDF文档反汇编为多个PDF文档。
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3dd2b0d3-6023-490a-9b17-e29cc21c1b9d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
