@@ -10,7 +10,7 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a69e0354b5599ab555df650858f8f3200e21d2b8
+source-git-commit: f3b5b22c1d5573492867aef60457413ad5cf419f
 workflow-type: tm+mt
 source-wordcount: '3145'
 ht-degree: 3%
@@ -158,11 +158,11 @@ SchemaXML和JSON模式表示组织中后端系统生成或使用数据的结构�
    <td>添加一个字段，用于列表使用文件附件组件上传的所有附件。</td>
   </tr>
   <tr>
-   <td>页脚<br /> </td>
+   <td>标题<br /> </td>
    <td>添加页面标题，该标题通常包括公司徽标、表单标题和摘要。<br /> </td>
   </tr>
   <tr>
-   <td>标题</td>
+   <td>页脚</td>
    <td>添加页脚，页脚通常包括版权信息和指向其他页面的链接。 </td>
   </tr>
   <tr>
