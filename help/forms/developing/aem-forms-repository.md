@@ -1,8 +1,8 @@
 ---
 title: 使用AEM Forms存储库
 seo-title: 使用AEM Forms存储库
-description: 'null'
-seo-description: 'null'
+description: 管理AEM Forms存储库，以使用Java API和Web服务API创建文件夹、写入、列表、读取、更新和搜索资源。 此外，了解如何创建资源关系、锁定和删除资源。
+seo-description: 管理AEM Forms存储库，以使用Java API和Web服务API创建文件夹、写入、列表、读取、更新资源和搜索资源。 此外，了解如何创建资源关系、锁定和删除资源。
 uuid: 6ead49f9-ca0d-4ee4-86a6-0a9ced6ec4f8
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '9076'
+source-wordcount: '9143'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 文件夹（资源集合）用于按有组织的分组存储对象（文件或资源）。 文件夹可以包含资源和其他文件夹，也称为子文件夹。 资源一次只能存储在一个文件夹中。
 
-文件从文件夹继承访问控制列表(ACL)，子文件夹从父文件夹继承ACL。 因此，在创建子文件夹之前，父文件夹必须存在。 通过IDE，您只能逐个文件夹进行交互，而不能逐个文件进行交互。 您不能对文件夹进行版本化，也无需这样做；文件夹不包含数据本身。 相反，它只是包含数据的资源的容器。 默认的ACL是系统级权限，这意味着用户必须具有系统级权限（读取、写入、遍历、管理ACL），直到有人授予他们特定文件夹的权限。 ACL仅在IDE中有效。
+文件从文件夹继承访问控制列表(ACL)，子文件夹从父文件夹继承ACL。 因此，在创建子文件夹之前，父文件夹必须存在。 通过IDE，您只能逐个文件夹进行交互，而不能逐个文件进行交互。 您不能对文件夹进行版本化，也无需这样做；文件夹不包含数据本身。 相反，它只是包含数据的资源的容器。 默认的ACL是系统级权限，这意味着用户必须具有系统级权限（读取、写入、遍历、管理ACL），直到有人授予他们特定文件夹的权限。 ACL只适用于IDE。
 
 >[!NOTE]
 >
