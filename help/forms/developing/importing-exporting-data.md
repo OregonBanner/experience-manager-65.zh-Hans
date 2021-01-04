@@ -1,8 +1,8 @@
 ---
 title: 导入和导出数据
 seo-title: 导入和导出数据
-description: 'null'
-seo-description: 'null'
+description: 使用表单数据集成服务将数据导入PDF表单，并使用Java API和Web服务API从PDF表单导出数据。
+seo-description: 使用表单数据集成服务将数据导入PDF表单，并使用Java API和Web服务API从PDF表单导出数据。
 uuid: 94ccb6f2-6e5f-43ea-a954-9a4402871a17
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2742'
+source-wordcount: '2796'
 ht-degree: 0%
 
 ---
