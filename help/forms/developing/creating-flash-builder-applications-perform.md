@@ -1,8 +1,8 @@
 ---
 title: 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序
 seo-title: 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序
-description: 'null'
-seo-description: 'null'
+description: 使用Flash Builder创建客户端应用程序，该应用程序使用HTTP令牌执行单点登录(SSO)身份验证。 对用户进行一次操作身份验证，然后使用该身份验证执行多个AEM Forms操作。
+seo-description: 使用Flash Builder创建客户端应用程序，该应用程序使用HTTP令牌执行单点登录(SSO)身份验证。 对用户进行一次操作身份验证，然后使用该身份验证执行多个AEM Forms操作。
 uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
