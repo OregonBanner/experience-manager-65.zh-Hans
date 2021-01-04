@@ -1,8 +1,8 @@
 ---
 title: 加密和解密PDF文档
 seo-title: 加密和解密PDF文档
-description: 'null'
-seo-description: 'null'
+description: 使用加密服务加密和解密文档。 加密服务任务包括用口令加密PDF文档、用证书加密PDF文档、从PDF文档删除基于口令的加密、从PDF文档删除基于证书的加密、解锁PDF文档以便执行其他服务操作以及确定安全PDF文档的加密类型。
+seo-description: 使用加密服务加密和解密文档。 加密服务任务包括用口令加密PDF文档、用证书加密PDF文档、从PDF文档删除基于口令的加密、从PDF文档删除基于证书的加密、解锁PDF文档以便执行其他服务操作以及确定安全PDF文档的加密类型。
 uuid: 4e4e2716-c21f-4bfe-ae7a-7e91442414ef
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '8118'
+source-wordcount: '8244'
 ht-degree: 0%
 
 ---
