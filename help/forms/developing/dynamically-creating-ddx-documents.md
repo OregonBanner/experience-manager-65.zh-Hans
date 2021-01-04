@@ -1,8 +1,8 @@
 ---
 title: 动态创建DDX文档
 seo-title: 动态创建DDX文档
-description: 'null'
-seo-description: 'null'
+description: 使用Java API和Web服务API动态创建DDX文档。 动态创建DDX文档使您能够在DDX文档中使用在运行时获得的值。
+seo-description: 使用Java API和Web服务API动态创建DDX文档。 动态创建DDX文档使您能够在DDX文档中使用在运行时获得的值。
 uuid: b73e8069-6c9f-4517-a0ae-f3d503191d2d
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2185'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 **保存已拆卸的PDF文档**
 
-所有已拆卸的PDF文档都会在集合对象中返回。 对集合对象进行迭代，并将每个PDF文档另存为PDF文件。
+所有已拆卸的PDF文档都会返回到集合对象中。 对集合对象进行迭代，并将每个PDF文档另存为PDF文件。
 
 **另请参阅**
 
