@@ -1,8 +1,8 @@
 ---
 title: 渲染交互式PDF forms
 seo-title: 渲染交互式PDF forms
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms，从用户收集信息。 您可以使用Forms服务使用Java API和Web服务API渲染交互式表单。
+seo-description: 使用Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms，从用户收集信息。 您可以使用Forms服务使用Java API和Web服务API渲染交互式表单。
 uuid: df2a4dc8-f19e-49de-850f-85a204102631
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
