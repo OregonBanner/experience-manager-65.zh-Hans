@@ -1,8 +1,8 @@
 ---
 title: 使用条形码表单
 seo-title: 使用条形码表单
-description: 'null'
-seo-description: 'null'
+description: 使用Java API和Web服务API对PDF表单或包含条形码的图像中的数据进行解码。
+seo-description: 使用Java API和Web服务API对PDF表单或包含条形码的图像中的数据进行解码。
 uuid: e56c3c94-384d-401f-b418-dd34cdc57eda
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1931'
 ht-degree: 0%
 
 ---
