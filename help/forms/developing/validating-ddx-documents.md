@@ -1,8 +1,8 @@
 ---
 title: 验证DDX文档
 seo-title: 验证DDX文档
-description: 'null'
-seo-description: 'null'
+description: 使用Java API和Web服务API以编程方式验证DDX文档。
+seo-description: 使用Java API和Web服务API以编程方式验证DDX文档。
 uuid: da668170-d2e9-4fff-aef5-432a856bd0bd
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
