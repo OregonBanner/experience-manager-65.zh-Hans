@@ -1,8 +1,8 @@
 ---
 title: 使用CustomToolbars渲染HTMLForms
 seo-title: 使用CustomToolbars渲染HTMLForms
-description: 'null'
-seo-description: 'null'
+description: 使用Forms服务自定义使用HTML表单呈现的工具栏。 您可以使用Java API和Web服务API呈现具有自定义工具栏的HTML表单。
+seo-description: 使用Forms服务自定义使用HTML表单呈现的工具栏。 您可以使用Java API和Web服务API呈现具有自定义工具栏的HTML表单。
 uuid: b9c9464e-ff19-4051-a39b-4ec71c512d10
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2370'
 ht-degree: 0%
 
 ---
