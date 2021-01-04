@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -110,6 +110,6 @@ AEM平台使用一个节点存储，将站点内容从作者复制到发布，�
 
    基本上，站点内容存储在节点存储中。 对于资产，可以配置数据存储以存储二进制数据。 对于Communities，必须配置公用存储来选择SRP。
 
-* [存储6.3中的元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
+* [存储元素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
    描述两个节点存储实现：Tar和MongoDB。
