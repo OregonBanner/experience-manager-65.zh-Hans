@@ -1,8 +1,8 @@
 ---
 title: 将文档传递到FormsService
 seo-title: 将文档传递到FormsService
-description: 'null'
-seo-description: 'null'
+description: '将包含表单设计的com.adobe.idp.文档对象传递给Forms服务。 Forms服务呈现位于com.adobe.idp.文档对象中的表单设计。 '
+seo-description: 将包含表单设计的com.adobe.idp.文档对象传递给Forms服务。 Forms服务呈现位于com.adobe.idp.文档对象中的表单设计。
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
