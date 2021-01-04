@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
+source-git-commit: 3202866bd38779a9784e44ab470152df61c585f5
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -97,9 +97,9 @@ ASRP必须被标识为所有作者实例和发布实例上的公用存储。
 
 在AEM作者实例上：
 
-* 从主菜单导航到&#x200B;**[!UICONTROL 工具>操作>复制]**。
+* 从主菜单导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 复制]**
 * 选择&#x200B;**激活树**
-* **开始路径**:浏览至  `/etc/socialconfig/srpc/`
+* **开始路径**:浏览至  `/conf/global/settings/communities/srpc/`
 * 取消选择&#x200B;**仅已修改**
 * 选择&#x200B;**激活**
 
@@ -144,8 +144,8 @@ Adobe云存储基础架构使用&#x200B;*最终一致性*&#x200B;来实现其扩
 
 在所有作者实例和发布AEM实例上，重新访问存储配置控制台或检查AEM存储库。
 
-在JCR中，如果[/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
+在JCR中，如果[/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
-* 不包含[srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)节点，它表示存储提供程序是JSRP。
-* 如果srpc节点存在并包含节点[defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则默认配置的属性将ASRP定义为默认提供程序。
+* 不包含[srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp)节点，它表示存储提供程序是JSRP。
+* 如果srpc节点存在并且包含[defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration)节点，则默认配置的属性将ASRP定义为默认提供程序。
 
