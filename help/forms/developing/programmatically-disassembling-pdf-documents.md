@@ -1,8 +1,8 @@
 ---
 title: 以编程方式反汇编PDF文档
 seo-title: 以编程方式反汇编PDF文档
-description: 'null'
-seo-description: 'null'
+description: 使用Assembler服务，使用Java API和Web服务API将单个PDF文档反汇编为多个PDF文档。
+seo-description: 使用Assembler服务，使用Java API和Web服务API将单个PDF文档反汇编为多个PDF文档。
 uuid: d71cc044-e948-4b7a-b598-b041723b69e9
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
