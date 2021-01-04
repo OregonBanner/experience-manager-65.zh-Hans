@@ -1,8 +1,8 @@
 ---
 title: 签名服务Java API QuickStart(SOAP)
 seo-title: 签名服务Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 使用签名服务向PDF文档添加签名字段、检索签名字段名称、修改签名字段、对PDF文档进行数字签名、对基于XFA的表单进行数字签名、验证PDF文档、验证数字签名、验证多个数字签名以及删除数字签名。
+seo-description: 使用签名服务向PDF文档添加签名字段、检索签名字段名称、修改签名字段、对PDF文档进行数字签名、对基于XFA的表单进行数字签名、验证PDF文档、验证数字签名、验证多个数字签名以及删除数字签名。
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
