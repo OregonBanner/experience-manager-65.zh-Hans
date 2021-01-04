@@ -1,8 +1,8 @@
 ---
 title: 以编程方式管理端点
 seo-title: 以编程方式管理端点
-description: 'null'
-seo-description: 'null'
+description: 使用Endpoint Registry服务添加EJB端点、添加SOAP端点、添加监视文件夹端点、添加电子邮件端点、添加远程处理端点、添加任务管理器端点、修改端点、删除端点和检索端点连接器信息。
+seo-description: 使用Endpoint Registry服务添加EJB端点、添加SOAP端点、添加监视文件夹端点、添加电子邮件端点、添加远程处理端点、添加任务管理器端点、修改端点、删除端点和检索端点连接器信息。
 uuid: 5dc50946-3323-4c5d-a43b-31c1c980bd04
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '10781'
+source-wordcount: '10849'
 ht-degree: 1%
 
 ---
