@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的发行说明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
+source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
 workflow-type: tm+mt
 source-wordcount: '14953'
 ht-degree: 19%
@@ -66,7 +66,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
    ![用于说明经典UI中缺少菜单的问题的屏幕截图](assets/33949_missing_menu.png)
 
 * [!DNL Content Fragment]不能用作`TemplatedResource`，因为它在`ContentFragmentUsePojo`中失败(NPR-33911)。
-* 同步和异步移动操作可能会导致并发传输导致的错误。 页面移动操作仅限于同步移动。 它可防止页面的并发移动(NPR-33875)。
+* 同步和异步移动操作可能会导致并发传输导致的错误。 页面移动操作仅限于异步移动。 它可防止页面的并发移动(NPR-33875)。
 * [!UICONTROL 将内] 容从“作者”复制到“发布”实例的“管理发布”操作失败并生成JavaScript错误(NPR-33872)。
 * 当选择多个页面或资产以创建版本时，将仅为上次选择的页面或资产创建新版本(NPR-33866)。
 * 将包含Live Copy的Blueprint页面移到另一个文件夹。 将文件夹移到原始文件夹时，移动操作将失败且没有任何错误(NPR-33864)。
