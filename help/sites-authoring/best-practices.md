@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 83%
+source-wordcount: '302'
+ht-degree: 72%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 83%
 
 ## 资产 {#assets}
 
-以下主题介绍了有关资产的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
+有关资产(包括Dynamic Media功能和Dynamic Media经典集成)的最佳实践，请参阅以下主题：
 
 <table>
  <tbody>
@@ -55,7 +55,7 @@ ht-degree: 83%
   <tr>
    <td>动态图像处理</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">动态图像处理最佳实践</a></td>
-   <td><p>介绍当您使用 Dynamic Media 功能或与 Scene7 集成时，如何锐化图像以获得最佳效果，以及优化图像质量的最佳方法是什么。 </p> </td>
+   <td><p>介绍如何锐化图像以获得最佳效果，以及在使用Dynamic Media功能或与Dynamic Media经典集成时优化图像质量的最佳方法。 </p> </td>
   </tr>
   <tr>
    <td>多语言资产</td>
