@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '1005'
+ht-degree: 1%
 
 ---
 
@@ -72,22 +72,15 @@ AEM提供了与Adobe Analytics和Adobe Target集成的简单选择程序。 以�
 
 有关详细信息，请参阅[选择加入Adobe Analytics和Adobe Target。](/help/sites-administering/opt-in.md)
 
-## 与Scene7集成{#integrating-with-scene}
+## 与AdobeDynamic Media经典{#integrating-with-scene}集成
 
-[Adobe Scene7](https://www.adobe.com/products/scene7.html) 是用于发布、管理、增强和交付动态营销资产以及丰富的可视销售到Web、移动、电子邮件、社交媒体、连接Internet的显示屏和印刷品的托管解决方案。
+AdobeDynamic Media经典是用于发布、管理、增强和交付动态营销资产以及丰富的可视销售到Web、移动、电子邮件、社交媒体、连接Internet的显示屏和印刷品的托管解决方案。
 
-在AEM中，您可以直接将数字资产从AEM发布到Scene7，也可以将数字资产从Scene7发布到AEM。
+在AEM中，您可以直接将数字资产从AEM发布到Dynamic Media经典，还可以将数字资产从Dynamic Media经典发布到AEM。
 
-此外，您还可以通过各种查看器视图发布在Scene7的AEM资产：
+此外，您还可以在各种查看器（如基本缩放和视频）中视图发布在Dynamic Media经典中的AEM资产。
 
-* 基本缩放
-* DHTML 弹出缩放
-* Flash 弹出缩放
-* 视频
-* Flash 模板
-* 图像模板
-
-有关AEM如何与Scene7集成的详细信息，请参见[与Scene7文档集成](/help/sites-administering/scene7.md)。
+有关AEM如何与Dynamic Media经典集成的更多信息，请参阅[与Dynamic Media经典集成](/help/sites-administering/scene7.md)文档。
 
 ## 与Adobe动态标签管理集成{#integrating-with-adobe-dynamic-tag-management}
 
