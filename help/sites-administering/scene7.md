@@ -1,6 +1,6 @@
 ---
-title: 与Dynamic Media经典(Scene7)集成
-seo-title: 与Dynamic Media经典(Scene7)集成
+title: 与Dynamic Media经典集成
+seo-title: 与Dynamic Media经典集成
 description: 了解如何将AEM与Dynamic Media经典相集成。
 seo-description: 了解如何将AEM与Dynamic Media经典相集成。
 uuid: b014d643-1cc1-47f3-a79c-7f6f9e45637a
@@ -10,17 +10,17 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '5485'
+source-wordcount: '5464'
 ht-degree: 1%
 
 ---
 
 
-# 与Dynamic Media经典(Scene7)集成{#integrating-with-dynamic-media-classic-scene}
+# 与Dynamic Media经典{#integrating-with-dynamic-media-classic-scene}集成
 
-[Adobe](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) Dynamic MediaClassics是一种托管解决方案，用于管理、增强、发布富媒体资产并将富媒体资产交付到Web、移动、电子邮件以及连接Internet的显示屏和印刷品。
+AdobeDynamic Media经典是用于管理、增强、发布和将富媒体资产交付到Web、移动、电子邮件以及连接Internet的显示屏和印刷品的托管解决方案。
 
 要使用Dynamic Media经典，您需要配置云配置，以便Dynamic Media经典和AEM Assets能够相互交互。 本文档介绍如何配置AEM和Dynamic Media经典。
 
@@ -331,39 +331,39 @@ Adobe建议您通过让根文件夹仅指向子文件夹而不是整个公司来
 
    >[!CAUTION]
    >
-   >根据Dynamic Media经典文件夹的大小，导入根文件夹可能需要很长时间。 此外，Dynamic Media经典数据可能超过AEM存储。 确保导入的文件夹正确。 导入过多的数据会停止系统。
+   >根据Dynamic Media经典文件夹的大小，导入根文件夹可能需要很长时间。 此外，Dynamic Media经典数据可能超过AEM存储。 确保导入的文件夹正确。 导入过多数据可能会停止系统。
 
    ![chlimage_1-298](assets/chlimage_1-298.png)
 
-1. 单击&#x200B;**[!UICONTROL 确定。]** AEM会保存您的配置。
+1. 单击&#x200B;**[!UICONTROL 确定。]** AEM保存您的配置。
 
 >[!NOTE]
 >
->如果要重新连接：
+>如果您正在重新连接：
 >
->* 在发布时重新连接到Dynamic Media经典版时，您可能需要在发布时重置密码，或重新连接时无法工作。 这不是作者实例的问题。
->* 如果修改地区、公司名称等值，则必须重新连接到Dynamic Media经典。 如果配置选项已修改但未保存，AEM仍错误地指示配置有效。 确保重新连接。
+>* 在发布时重新连接到Dynamic Media经典时，可能需要在发布时重置密码，或重新连接将无法工作。 这不是创作实例的问题。
+>* 如果修改区域、公司名称等值，则必须重新连接到Dynamic Media经典。 如果配置选项已修改但未保存，AEM仍错误地指示配置有效。 确保重新连接。
 
 >
 
 
 
-### 启用Adobe CQDynamic Media经典Dam侦听器{#enabling-the-adobe-cq-scene-dam-listener}
+### 启用Adobe CQDynamic Media经典Dam监听器{#enabling-the-adobe-cq-scene-dam-listener}
 
-必须启用Adobe CQDynamic Media经典Dam侦听器，默认情况下禁用该侦听器。
+必须启用Adobe CQDynamic Media经典Dam监听器，默认情况下禁用它。
 
 要启用它，请执行以下操作：
 
-1. 点按[!UICONTROL 工具]图标，然后导航至&#x200B;**[!UICONTROL 操作> Web Console。]** Web控制台即会打开。
-1. 导航到&#x200B;**[!UICONTROL Adobe CQDynamic Media经典Dam侦听器]**，然后选中&#x200B;**[!UICONTROL 启用]**&#x200B;复选框。
+1. 点按[!UICONTROL 工具]图标，然后导航到&#x200B;**[!UICONTROL 操作> Web控制台。]** Web控制台将打开。
+1. 导航到&#x200B;**[!UICONTROL Adobe CQDynamic Media经典Dam监听器]**&#x200B;并选中&#x200B;**[!UICONTROL 已启用]**&#x200B;复选框。
 
    ![chlimage_1-299](assets/chlimage_1-299.png)
 
 1. 点按&#x200B;**[!UICONTROL 保存。]**
 
-### 将可配置超时添加到Dynamic Media经典上传工作流{#adding-configurable-timeout-to-scene-upload-workflow}
+### 向Dynamic Media经典上传工作流{#adding-configurable-timeout-to-scene-upload-workflow}添加可配置超时
 
-当AEM实例配置为通过Dynamic Media经典(Scene7)处理视频编码时，默认情况下，任何上载作业都有35分钟超时。 要适应运行时间可能较长的视频编码作业，可以配置此设置：
+默认情况下，当AEM实例配置为通过Dynamic Media经典处理视频编码时，任何上传作业都会出现35分钟超时。 要适应可能运行时间较长的视频编码作业，可以配置此设置：
 
 1. 导航到&#x200B;**http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl**。
 
@@ -373,32 +373,32 @@ Adobe建议您通过让根文件夹仅指向子文件夹而不是整个公司来
 
    >[!NOTE]
    >
-   >最佳做法：大多数资源最多在几分钟内收录（例如，图像）。 但在某些情况下（例如，视频较大），超时值应增加到7200秒（2小时）以容纳较长的处理时间。 否则，此Dynamic Media经典上传作业在JCR元数据中标记为&#x200B;**[!UICONTROL UploadFailed]**。
+   >最佳实践：大多数资源最多只需几分钟即可摄取（例如，图像）。 但在某些情况下（例如，视频较大），超时值应增加到7200秒（2小时）以适应较长的处理时间。 否则，此Dynamic Media经典上传作业在JCR元数据中标记为&#x200B;**[!UICONTROL UploadFailed]**。
 
 1. 点按&#x200B;**[!UICONTROL 保存。]**
 
-### 来自AEM Assets的奥图普洛特{#autouploading-from-aem-assets}
+### 从AEM Assets偷渡{#autouploading-from-aem-assets}
 
-从AEM 6.3.2开始，现在为您配置了AEM Assets，以便您上传到数字资产管理器的任何数字资产，如果这些资产位于CQ目标文件夹中，则会自动更新到Dynamic Media经典。
+从AEM 6.3.2开始，现在已为您配置AEM Assets，这样，如果资产位于CQ目标文件夹中，您上传到数字资产管理器的任何数字资产都将自动更新至Dynamic Media经典。
 
-将资源添加到AEM Assets后，它会自动上传并发布到Dynamic Media经典。
+将资产添加到AEM Assets后，会自动上传并发布到Dynamic Media经典。
 
 >[!NOTE]
 >
->从AEM Assets自动上载到Dynamic Media经典的最大文件大小为500 MB。
+>从AEM Assets自动上传到Dynamic Media经典的最大文件大小为500 MB。
 
-配置来自AEM Assets的自动绘图：
+从AEM Assets配置自动绘图：
 
-1. 点按AEM图标并导航至&#x200B;**[!UICONTROL 部署>Cloud Services]**，然后在Dynamic Media标题下的可用配置下点按&#x200B;**[!UICONTROL dms7(Dynamic Media]**)
-1. 点按&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，选中&#x200B;**[!UICONTROL 启用自动上载]**&#x200B;复选框，然后点按&#x200B;**[!UICONTROL 确定。]** 您现在需要配置DAM Asset工作流程，以包括上载到Dynamic Media经典版。
+1. 点按AEM图标并导航到&#x200B;**[!UICONTROL 部署>Cloud Services]**，然后在Dynamic Media标题下的可用配置下，点按&#x200B;**[!UICONTROL dms7(Dynamic Media]**)
+1. 点按&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，选中&#x200B;**[!UICONTROL 启用自动上传]**&#x200B;复选框，然后点按&#x200B;**[!UICONTROL 确定。]** 您现在需要配置DAM资产工作流，以包括上传到Dynamic Media经典。
 
    >[!NOTE]
    >
-   >请参阅[配置推送到Dynamic MediaClassic的资源的状态（已发布／未发布），以了解有关将资源推送到未发布状态中的Dynamic MediaClassic的信息。](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)
+   >请参阅[配置推送到Dynamic Media经典](#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)的资产的状态（已发布／未发布），以了解有关将资产推送到未发布状态的Dynamic Media经典的信息。
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
-1. 导航回AEM欢迎页，然后点按&#x200B;**[!UICONTROL 工作流程。]** 多次单击 **DAM更新资** 产流以打开它。
+1. 导航回AEM欢迎页面，然后点按&#x200B;**[!UICONTROL 工作流。]** 多次单击 **DAM更新资** 产流以打开它。
 1. 在Sidekick中，导航到&#x200B;**[!UICONTROL Workflow]**&#x200B;组件，然后选择&#x200B;**[!UICONTROL Dynamic Media经典。]** 将 **[!UICONTROL Dynamic Media]** 类拖到工作流中，然后点 **[!UICONTROL 按保存。]** 添加到“AEM Assets”文件夹中的资产将自动上传到“Dynamic Media经典”。
 
    ![chlimage_1-301](assets/chlimage_1-301.png)
