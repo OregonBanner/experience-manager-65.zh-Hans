@@ -1,19 +1,17 @@
 ---
 title: 视频
 seo-title: 视频
-description: Assets 提供了集中式视频资产管理功能，您可以将视频直接上传到 Assets 以自动编码为 Scene7，并直接从 Assets 访问 Scene7 视频以进行页面创作。
-seo-description: Assets 提供了集中式视频资产管理功能，您可以将视频直接上传到 Assets 以自动编码为 Scene7，并直接从 Assets 访问 Scene7 视频以进行页面创作。
-uuid: 46da7a0d-d17b-4716-a304-ce5496421b5a
+description: 资产提供了集中式视频资产管理功能，您可以将视频直接上传到资产，以便自动编码到Dynamic Media经典，并直接从资产访问Dy视频以进行页面创作。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '1735'
-ht-degree: 43%
+source-wordcount: '1698'
+ht-degree: 39%
 
 ---
 
@@ -24,8 +22,8 @@ ht-degree: 43%
 
 Dynamic Media经典视频集成将优化视频的范围扩展到所有屏幕（自动设备和带宽检测）。
 
-* Dynamic Media经典(Scene7)视频组件可自动执行设备和带宽检测，以跨桌面、平板电脑和移动设备播放格式和质量正确的视频。
-* Assets - 您可以包含自适应视频集，而不只是单个视频资产。自适应视频集是一个容器，其中包含在多种屏幕上无缝播放视频所需的所有视频演绎版。自适应视频集是同一个视频的一组版本，这些版本以不同的比特率和格式进行编码，例如 400 kbps、800 kbps 和 1000 kbps。使用自适应视频集以及 S7 视频组件，可在多种屏幕（包括台式机、iOS、Android、Blackberry 和 Windows 移动设备）上实现自适应视频流式传输。请参阅[有关自适应视频集的 Scene7 文档以了解更多信息](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)。
+* Dynamic Media经典视频组件可自动执行设备和带宽检测，以跨桌面、平板电脑和移动设备播放格式正确且质量正确的视频。
+* Assets - 您可以包含自适应视频集，而不只是单个视频资产。自适应视频集是一个容器，其中包含在多种屏幕上无缝播放视频所需的所有视频演绎版。自适应视频集是同一个视频的一组版本，这些版本以不同的比特率和格式进行编码，例如 400 kbps、800 kbps 和 1000 kbps。使用自适应视频集以及 S7 视频组件，可在多种屏幕（包括台式机、iOS、Android、Blackberry 和 Windows 移动设备）上实现自适应视频流式传输。有关详细信息，请参阅[关于自适应视频集的Dynamic Media经典文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html#video)。
 
 ## 关于FFMPEG和Dynamic Media经典{#about-ffmpeg-and-scene}
 
@@ -66,7 +64,7 @@ Dynamic Media经典视频组件支持以下格式：
 
 如果您不需要资产的工作流或版本控制，您应将资产上传到Dynamic Media经典。 下面是建议的工作流：
 
-1. 在Dynamic Media经典中，[设置到Dynamic Media经典（系统自动）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)的计划FTP上传和编码。
+1. 在Dynamic Media经典桌面应用程序中，[设置到Dynamic Media经典（系统自动）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)的计划FTP上传和编码。
 1. 在AEM中，访问内容查找器的&#x200B;**[!UICONTROL Dynamic Media经典]**&#x200B;选项卡中WCM中的视频资产。
 1. 使用Dynamic Media经典视频组件进行创作。
 
@@ -85,7 +83,7 @@ Dynamic Media经典视频组件支持以下格式：
 
    >[!NOTE]
    >
-   >有关视频预设含义的详细信息，请参阅[Dynamic Media经典文档](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)。
+   >有关视频预设含义的更多信息，请参阅[视频预设，以对视频文件进行编码](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files)。
    >
    >Adobe 建议您在配置通用预设时选择两个自适应视频集，或选择&#x200B;**[!UICONTROL 自适应视频编码]**&#x200B;选项。
 
@@ -112,7 +110,7 @@ Dynamic Media经典视频组件支持以下格式：
 
 ### 基础视频组件与Dynamic Media经典视频组件{#foundation-video-component-versus-scene-video-component}
 
-使用AEM时，您可以访问站点中提供的视频组件和Dynamic Media经典(Scene7)视频组件。 这些组件不能交换使用。
+使用AEM时，您可以访问站点中提供的视频组件和Dynamic Media经典视频组件。 这些组件不能交换使用。
 
 Dynamic Media经典视频组件仅适用于Dynamic Media经典视频。 基础组件可处理从AEM（使用ffmpeg）和Dynamic Media经典视频存储的视频。
 
@@ -131,7 +129,7 @@ Dynamic Media经典视频组件仅适用于Dynamic Media经典视频。 基础�
 
 ### AEM视频与Dynamic Media经典视频比较{#aem-video-and-scene-video-comparison}
 
-下表简单地比较了 AEM 基础视频组件与 Scene7 视频组件所支持的功能：
+下表提供了AEM Foundation Video组件与Dynamic Media经典视频组件之间受支持功能的高级比较：
 
 |  | AEM 基础视频 | Dynamic Media经典视频 |
 |---|---|---|
@@ -154,7 +152,7 @@ Dynamic Media经典视频组件仅适用于Dynamic Media经典视频。 基础�
 1. 在 AEM 中，转到&#x200B;**[!UICONTROL 工具]**，然后选择&#x200B;**[!UICONTROL 配置控制台。]** 在配置控制台中，导航 **[!UICONTROL 树中]** ，导 **[!UICONTROL 航到]** “工具 **[!UICONTROL ”>“资]** 产”>“视频配置文件”。
 1. 创建新的Dynamic Media经典视频用户档案。 在&#x200B;**[!UICONTROL 新建……]**&#x200B;菜单，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择“Dynamic Media经典视频用户档案”模板。 为新的视频用户档案页命名，然后单击“创建”。]****[!UICONTROL 
 
-   ![chlimage_1-135](assets/chlimage_1-133.png)
+   ![chlimage_1-133](assets/chlimage_1-133.png)
 
 1. 编辑新的视频配置文件。首先选择云配置。然后，选择在云配置中选定的相同编码预设。
 
@@ -162,8 +160,8 @@ Dynamic Media经典视频组件仅适用于Dynamic Media经典视频。 基础�
 
    | 属性 | 描述 |
    |---|---|
-   | Dynamic Media经典(Scene7)云配置 | 用于编码预设的云配置。 |
-   | Dynamic Media经典(Scene7)编码预设 | 要映射此视频用户档案的编码预设。 |
+   | Dynamic Media经典云配置 | 用于编码预设的云配置。 |
+   | Dynamic Media经典编码预设 | 要映射此视频用户档案的编码预设。 |
    | HTML5 视频类型 | 此属性允许设置HTML5视频源元素的type属性的值。 此信息并非由Dynamic Media经典编码预设提供，而是为使用HTML5视频元素正确呈现视频所必需的。 提供了通用格式列表，但是通用格式可被其他格式覆盖。 |
 
    对要在视频组件中使用的云配置中选定的所有编码预设重复此步骤。
@@ -185,7 +183,7 @@ Dynamic Media经典视频组件仅适用于Dynamic Media经典视频。 基础�
 
 #### 核对清单  {#checklist}
 
-1. 创建Dynamic Media经典(Scene7)云配置。 确保已设置视频编码预设，且导入程序正在运行。
+1. 创建Dynamic Media经典云配置。 确保已设置视频编码预设，且导入程序正在运行。
 1. 为云配置中选定的每个视频编码预设创建Dynamic Media经典视频用户档案。
 1. 必须激活视频配置文件。
 1. 配置页面上基础视频组件的设计。
