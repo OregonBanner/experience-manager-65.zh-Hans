@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 88%
@@ -62,7 +62,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 * [图像](#finding-images)
 * [文档](#finding-documents)
 * [电影](#finding-movies)
-* [Scene 7 媒体浏览器](/help/sites-administering/scene7.md#scene7contentbrowser)
+* [Dynamic Media浏览器](/help/sites-administering/scene7.md#scene7contentbrowser)
 * [](#products) [页面](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
@@ -85,7 +85,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 您在页面中创建了 Download 段落后，可以拖曳项目并将其放置在段落中。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![chlimage_1-192](assets/chlimage_1-112.png)
 
 ### 查找电影 {#finding-movies}
 
@@ -99,7 +99,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 此选项卡列出了所有产品。您在页面中创建了合适的段落（例如产品）后，可以拖曳项目并将其放置在段落中。
 
-![chlimage_1-115](assets/chlimage_1-114.png)
+![chlimage_1-114](assets/chlimage_1-114.png)
 
 ### 查找页面 {#finding-pages}
 
