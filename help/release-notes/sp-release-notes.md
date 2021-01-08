@@ -4,10 +4,10 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 Service Pack 7的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
+source-git-commit: fa8d8c9a001b56006f1c0a30eb5a342754e63573
 workflow-type: tm+mt
-source-wordcount: '4243'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -351,8 +351,6 @@ ht-degree: 5%
 **文档安全**
 
 * 保存新的文档安全策略时，Experience ManagerForms会显示`Relative validity period is required`错误消息(NPR-34679)。
-
-* 保存新的文档安全策略时，Experience ManagerForms会显示`Invalid filed value.Numeric value is required`错误消息(NPR-34678)。
 
 * 文档安全无法保护PDF 2.0文档(CQ-4305851)。
 
