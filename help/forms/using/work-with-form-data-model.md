@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: ba42f1e85216f6be4ae0dd90891e1b2d1d559bd8
 workflow-type: tm+mt
 source-wordcount: '4148'
 ht-degree: 0%
@@ -69,7 +69,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >除了数据模型对象和服务外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 有关详细信息，请参阅[使用OData服务的导航属性](#navigation-properties-odata)。
+   >除了数据模型对象和服务外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 有关详细信息，请参阅[使用OData服务的导航属性](#work-with-navigation-properties-of-odata-services)。
 
 1. 点按&#x200B;**[!UICONTROL 保存]**&#x200B;以保存表单模型对象。
 
@@ -146,7 +146,7 @@ ht-degree: 0%
    >除了数据模型对象和服务外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 将OData服务数据源添加到表单数据模型时，表单数据模型中有可用于数据模型对象中所有导航属性的服务。 您可以使用此服务读取相应数据模型对象的导航属性。
    >
    >
-   >有关使用服务的详细信息，请参阅[使用OData服务的导航属性](#navigation-properties-odata)。
+   >有关使用服务的详细信息，请参阅[使用OData服务的导航属性](#work-with-navigation-properties-of-odata-services)。
 
 1. 切换&#x200B;**[!UICONTROL 顶级对象]**&#x200B;以指定数据模型对象是否为顶级模型对象。
 
@@ -244,7 +244,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >除了数据模型对象和服务外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 在表单数据模型中添加关联时，可以使用这些导航属性。 有关详细信息，请参阅[使用OData服务的导航属性](#navigation-properties-odata)。
+   >除了数据模型对象和服务外，OData服务元数据文档还包括定义两个数据模型对象之间的关联的导航属性。 在表单数据模型中添加关联时，可以使用这些导航属性。 有关详细信息，请参阅[使用OData服务的导航属性](#work-with-navigation-properties-of-odata-services)。
 
    此时将打开添加关联对话框。
 
