@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
+source-git-commit: 01c30e78d1f89e8c07abeb0ac19af38722010dd0
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2428'
 ht-degree: 0%
 
 ---
@@ -107,6 +107,14 @@ AEM Forms在组件浏览器的提要栏中提供一个表组件，允许您在�
    同样，带有向下箭头的列标题表示以降序显示列中的值。
 
    您还可以在&#x200B;**预览**&#x200B;模式下对表进行更改，然后再次单击列标题以对列值进行排序。
+
+## 设置表{#set-column-width}的列宽
+
+执行以下步骤来设置表的列宽：
+
+1. 在&#x200B;**[!UICONTROL 内容]**&#x200B;选项卡中，点按&#x200B;**[!UICONTROL 表]**&#x200B;组件，然后点按配置（![配置](assets/configure-icon.svg)）图标。
+
+1. 在&#x200B;**[!UICONTROL 列宽]**&#x200B;字段中输入以逗号分隔的值列表，以指定表中每列的比例宽度。 例如，对于包含3列的表，在&#x200B;**[!UICONTROL 列宽]**&#x200B;字段中指定2,4,6作为值会导致将第一列的列宽设置为2/12，将第二列设置为4/12，将第三列设置为6/12。 2/12表示第一列的宽度是表宽度的六分之一。 同样，4/12将第二列宽度设置为表宽度的三分之一，6/12将第三列宽度设置为表宽度的一半。
 
 ## 配置表样式{#configure}
 
