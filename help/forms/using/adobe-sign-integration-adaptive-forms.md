@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
+source-git-commit: c451948c43004d084bc3fce7a2c6ad99381f1ea8
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,9 @@ ht-degree: 0%
    **na1** 指默认数据库共享。
 
    您可以修改数据库共享的值。 重新启动服务器，以便能够使用数据库共享的新值。
+
+   >[!NOTE]
+   确保您的作者和发布实例配置指向同一个共享。 如果为组织创建多个Adobe Sign配置，请确保所有配置都使用相同的分卡。
 
 1. 指定步骤8中编写的&#x200B;**客户端ID**(也称为应用程序 ID)和&#x200B;**客户端机密**。 选择&#x200B;**[!UICONTROL “为附件启用Adobe Sign”选项]**，将附加到自适应表单的文件追加到发送以供签名的相应[!DNL Adobe Sign]文档。
 
