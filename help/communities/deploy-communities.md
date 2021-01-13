@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
+source-git-commit: c0530f7d280406e31d4813a179bc10756773d389
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 1%
@@ -41,8 +41,8 @@ ht-degree: 1%
 
 * 如果未使用默认端口(4502、4503)，则[配置复制代理](#replication-agents-on-author)
 * [复制加密密钥](#replicate-the-crypto-key)
-* 如果支持全球化，则设置自动翻译[
-（提供开发的示例设置）](/help/sites-administering/translation.md)
+* 如果支持全球化，则设置自动翻译](/help/sites-administering/translation.md)
+（提供开发的示例设置）[
 
 **对于社 [区功能](/help/communities/overview.md)**
 
@@ -274,7 +274,7 @@ AEM 6.5 Communities GA包括Communities包。 要了解对AEM 6.5 [Communities](
 
 ### 作者{#tunnel-service-on-author}上的隧道服务
 
-当使用作者环境创建站点[、](/help/communities/sites-console.md)修改站点属性[或](/help/communities/sites-console.md#modifying-site-properties)管理社区成员[时，必须访问在发布环境中注册的成员（用户），而不是访问在作者上注册的用户。](/help/communities/members.md)
+当使用作者环境创建站点](/help/communities/sites-console.md)、[修改站点属性](/help/communities/sites-console.md#modifying-site-properties)或[管理社区成员](/help/communities/members.md)时，必须访问在发布环境中注册的成员（用户），而不是访问在作者上注册的用户。[
 
 隧道服务使用作者上的复制代理提供此访问。
 
