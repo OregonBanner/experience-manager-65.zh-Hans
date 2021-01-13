@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
+source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 1%
 
 ---
 
@@ -23,6 +23,14 @@ ht-degree: 0%
 通过[视频组件](/help/sites-authoring/default-components-foundation.md#video)，您可以在页面上放置一个预定义的现成(OOTB)视频资产。
 
 为了进行正确的转码，管理员单独安装FFmpeg。 请参阅[安装FFmpeg并配置AEM](#install-ffmpeg)。 管理员还[配置视频用户档案](#configure-video-profiles)以用于HTML5元素。
+
+>[!CAUTION]
+>
+>此基础组件已被弃用。Adobe建议改用[核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html)。
+
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
 
 ## 配置视频用户档案{#configure-video-profiles}
 
