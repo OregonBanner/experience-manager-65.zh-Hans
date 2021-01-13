@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 428d675bd254c18651c1188de26b706b5ad3d55c
+source-git-commit: 4d95d0e38acc54e1ebbb9f9e31761205533e99f9
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,7 @@ ht-degree: 0%
 
 * 建议在基于XFA的自适应表单上使用基于XSD模式的自适应表单，以配置大型表单上的延迟加载。 在基于XFA的自适应表单中由于延迟加载实现而带来的性能增益相对小于基于XSD的自适应表单中的增益。
 * 请勿在自适应表单中对片段配置延迟加载，该表单使用&#x200B;**[!UICONTROL 响应式-everything，在一个页面上不使用根面板的导航]**&#x200B;布局。 由于响应式布局配置，所有片段以自适应形式同时加载。 它还会导致性能降低。
+* 建议不要在自适应表单中对第一个片段配置延迟加载。
 * 建议不要在加载自适应表单时呈现的第一个面板中对片段配置延迟加载。
 * 片段层次结构中最多支持两个级别的延迟加载。
 * 确保标记为全局的字段在自适应表单中是唯一的。
@@ -83,8 +84,8 @@ ht-degree: 0%
 为延迟加载面板开发脚本时要注意的要点如下：
 
 * 确保在延迟加载片段的字段上使用的初始化和计算脚本本质上是无幂的。 幂等脚本是那些即使在多次执行之后也具有相同效果的脚本。
-* 使用字段的全局可用属性使位于延迟加载面板中的字段值可用于表单的所有其他面板。
-* 不要转发延迟面板中字段的引用值，无论字段是否在片段之间全局标记。
-* 使用面板重置功能，通过使用以下单击表达式重置面板上所有可见的内容。\
-   guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;):&quot;navigablePanel&quot;})。resetData()
+* 使用字段的全局可用属性使位于延迟加载面板中的字段的值可用于表单的所有其他面板。
+* 不要向惰性面板内字段的引用值前进，不管字段是否在片段之间全局标记。
+* 使用面板重置功能，可通过以下单击表达式重置面板上所有可见内容。\
+   guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;:&quot;navigablePanel&quot;})。resetData()
 
