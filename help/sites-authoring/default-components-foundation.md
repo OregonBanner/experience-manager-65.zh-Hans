@@ -13,10 +13,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
 workflow-type: tm+mt
-source-wordcount: '7287'
-ht-degree: 88%
+source-wordcount: '7364'
+ht-degree: 87%
 
 ---
 
@@ -336,6 +336,10 @@ ht-degree: 88%
 >
 >此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
 
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
+
 Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Flash 资产拖动到组件上，也可以使用对话框：
 
 * **Flash**
@@ -547,6 +551,10 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 >
 >此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
 
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
+
 此组件提供了“用户名”和“密码”字段。
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
@@ -582,6 +590,10 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
       用于指示用户已登录的文本。
 
 ### 订单状态 {#order-status}
+
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
 
 * **标题**
 
@@ -723,7 +735,11 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[轮播核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)。
+>此基础组件已被弃用。Adobe 建议改用[轮播核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)。
+
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
 
 此组件允许您加载一系列将在您的页面上显示为幻灯片放映的图像。您可以添加或删除图像以及为每个图像指定标题。在“高级”下，您还可以指定显示区域的大小。
 
@@ -908,7 +924,11 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
+>此基础组件已被弃用。Adobe建议改用[核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html)。
+
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
 
 **视频**&#x200B;组件允许您在页面上放置一个预定义的现成视频元素。
 
@@ -971,7 +991,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!NOTE]
 >
->请参阅 [AEM 表单帮助](/help/forms/home.md)，以获取有关 AEM 表单的信息。
+>请参阅 [AEM Forms 帮助](/help/forms/home.md)，以获取有关 AEM Forms 的信息。
 
 表单是从多个不同组件中构建的：
 
@@ -1335,6 +1355,10 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 >[!CAUTION]
 >
 >此基础组件已被弃用。Adobe 建议改用[核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)。
+
+>[!CAUTION]
+>
+>无需进行大量项目级自定义，此组件不再开箱即用。
 
 Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字符串会随每次刷新而变。
 
