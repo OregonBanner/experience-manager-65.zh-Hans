@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 0a6f50457efda42a9d496c0c9202cb7d7b8f6eb9
 workflow-type: tm+mt
-source-wordcount: '4718'
+source-wordcount: '4974'
 ht-degree: 1%
 
 ---
@@ -608,6 +608,39 @@ AEM中的组件受3个不同层次的约束：
 * 要查找`cq:editConfig`的子节点，例如，可以搜索`cq:dropTargets`，该节点类型为`cq:DropTargetConfig`;您可以在**查询**中使用CRXDE Lite工具，并使用以下XPath查询字符串进行搜索：
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
+
+### 组件占位符{#component-placeholders}
+
+组件必须始终呈现作者可见的某些HTML，即使组件没有内容也是如此。 否则，它可能会从编辑器的界面中以可视方式消失，从而使其在技术上存在，但在页面和编辑器中不可见。 在这种情况下，作者将无法选择空组件并与其交互。
+
+因此，当页面在页面编辑器中呈现时（当WCM模式为`edit`或`preview`时），组件应呈现占位符，只要它们不呈现任何可见输出。
+占位符的典型HTML标记如下：
+
+```HTML
+<div class="cq-placeholder" data-emptytext="Component Name"></div>
+```
+
+呈现上述占位符HTML的典型HTL脚本如下：
+
+```HTML
+<div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
+     data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
+```
+
+在上一个示例中，`isEmpty`是一个变量，仅当组件没有内容且作者不可见时，它才为true。
+
+为避免重复，Adobe建议组件实施者为这些占位符使用HTL模板，[与核心组件提供的模板类似。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+
+然后，使用以下HTL行完成在上一个链接中使用模板的操作：
+
+```HTML
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
+```
+
+在上一个示例中，`model.text`是仅当内容包含内容且可见时才为true的变量。
+
+在核心组件[中可以看到此模板的示例用法，如标题组件。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
 ### 使用cq:EditConfig属性{#configuring-with-cq-editconfig-properties}进行配置
 
