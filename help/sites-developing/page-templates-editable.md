@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
-source-wordcount: '3218'
+source-wordcount: '3285'
 ht-degree: 8%
 
 ---
@@ -130,6 +130,16 @@ ht-degree: 8%
 
    有关使用可编辑模板创建页面的技术详细信息，请参阅此文档中的[生成内容页面](/help/sites-developing/page-templates-editable.md#resultant-content-pages)。
 
+>[!TIP]
+>
+>切勿在模板中输入任何需要国际化的信息。出于内部化目的，建议使用核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
+
+>[!NOTE]
+>
+>模板是简化页面创建工作流程的强大工具。 但是，过多的模板可能会使作者不堪重负，并使页面创建变得混乱。 一个不错的经验法则是将模板数量保持在100以下。
+>
+>Adobe不建议具有1000个以上的模板，因为这可能会影响性能。
+
 >[!NOTE]
 >
 >编辑器客户端库假定内容页面中存在`cq.shared`命名空间，如果不存在，则将导致JavaScript错误`Uncaught TypeError: Cannot read property 'shared' of undefined`。
@@ -137,10 +147,6 @@ ht-degree: 8%
 >所有示例内容页面都包含`cq.shared`，因此基于这些页面的任何内容都会自动包含`cq.shared`。 但是，如果您决定从头开始创建您自己的内容页面而不基于示例内容，则必须确保包含`cq.shared`命名空间。
 >
 >有关详细信息，请参阅[使用客户端库](/help/sites-developing/clientlibs.md)。
-
->[!CAUTION]
->
->切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。
 
 ## 模板文件夹{#template-folders}
 
@@ -214,7 +220,7 @@ ht-degree: 8%
 
 1. 转至&#x200B;**全局导航** -> **工具** > **配置浏览器**。
 
-   现有文件夹列在左侧，包括&#x200B;**globa** l文件夹。
+   现有文件夹列在左侧，包括&#x200B;**global**&#x200B;文件夹。
 
 1. 单击&#x200B;**创建**。
 1. 在&#x200B;**创建配置**&#x200B;对话框中，需要配置以下字段：
