@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 0a6f50457efda42a9d496c0c9202cb7d7b8f6eb9
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
 source-wordcount: '4974'
 ht-degree: 1%
@@ -224,7 +224,7 @@ AEM组件的结构强大而灵活，主要考虑事项有：
    * 建议颜色为rgb(112, 112, 112)> #707070
    * 标准组件图标的背景是透明的。
    * 仅支持`.png`和`.svg`文件。
-   * 如果通过Eclipse插件从文件系统导入，则文件名需要替换为`_cq_icon.png`或`_cq_icon.svg`。
+   * 如果通过Eclipse插件从文件系统导入，则文件名需要转义为`_cq_icon.png`或`_cq_icon.svg`。
    * `.png` 如果两者都 `.svg` 存在，就会先行
 
 如果组件上没有找到上述属性（`cq:icon`、`abbreviation`、`cq:icon.png`或`cq:icon.svg`）:
