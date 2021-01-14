@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 27276945a0bdb20410f4c0e98868ea5ce1c09a47
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
@@ -99,7 +99,7 @@ AEM现在优惠了两种用于创建页面的基本模板类型：
 >
 有关示例，请参阅We.Retail:`/content/we-retail/jcr:content`
 >
->属性`allowedPaths`、`allowedParents`和`allowedChildren`也可以放在模板上，以定义更复杂的规则。 但是，如果可能，如果需要进一步限制允许的模板，则在站点的子部分上进一步定义&#x200B;*属性会更简单。*`cq:allowedTemplates`
+>属性`allowedPaths`、`allowedParents`和`allowedChildren`也可以放在模板上，以定义更复杂的规则。 但是，如果可能，如果需要进一步限制允许的模板，则在站点的子部分上进一步定义`cq:allowedTemplates`属性会更简单。**
 >
 >另一个优势是，作者可以在&#x200B;**页面属性**&#x200B;的&#x200B;**高级**&#x200B;选项卡中更新`cq:allowedTemplates`属性。 其他模板属性无法使用（标准）UI进行更新，因此需要开发人员为每次更改维护规则和代码部署。
 
