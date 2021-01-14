@@ -11,10 +11,10 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f1c932a5937e8a115e2849935b8f5ea5c2613d
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
-source-wordcount: '4833'
-ht-degree: 96%
+source-wordcount: '4901'
+ht-degree: 95%
 
 ---
 
@@ -148,7 +148,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。
+>切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。出于内部化目的，建议使用核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
 
 ### 创建模板文件夹 - 管理员 {#creating-a-template-folder-admin}
 
@@ -208,6 +208,12 @@ ht-degree: 96%
 1. 在&#x200B;**模板控制台**&#x200B;中，选择相应的模板。
 1. 从工具栏或快速选项中选择&#x200B;**查看属性**&#x200B;以打开对话框。
 1. 此时您可以查看或编辑模板属性。
+
+>[!NOTE]
+>
+>模板是简化页面创建工作流程的强大工具。 但是，过多的模板可能会使作者不堪重负，并使页面创建变得混乱。 一个不错的经验法则是将模板数量保持在100以下。
+>
+>Adobe不建议具有1000个以上的模板，因为这可能会影响性能。
 
 >[!NOTE]
 >
