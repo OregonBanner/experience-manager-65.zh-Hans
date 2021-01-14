@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 741ba6f6ef3270414c0ddabb1a1d02d5c436b7d9
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 内容处置过滤器是一种安全功能，可防止SVG文件受到XSS攻击。
 
-安装后，过滤器将阻止访问所有资产。 例如，您无法在线视图pdf。 本节将介绍如何根据需要配置过滤器。
+安装后，过滤器将阻止访问所有资产。 例如，您无法在线视图PDF。 本节将介绍如何根据需要配置过滤器。
 
 ## 配置内容处置筛选器{#configure-content-disposition-filter}
 
