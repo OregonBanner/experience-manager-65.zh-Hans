@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2815'
 ht-degree: 1%
 
 ---
@@ -164,11 +164,11 @@ ht-degree: 1%
 
 * 由[!DNL Adobe Dimension]提供支持的3D Web查看器，可交互视图已发布的3D资源。
 
-* 使用[!DNL Sites] WCM组件在[!DNL Experience Manager Sites]页面上发布和视图常见3D资产。
+* 使用[!DNL Sites] WCM组件在[!DNL Experience Manager Sites]页面上发布和视图常见的3D资产。
 
 #### 使用[!DNL Brand Portal](6.5.4.0){#configure-assets-bp}配置[!DNL Experience Manager Assets]
 
-[!DNL Experience Manager Assets]和[!DNL Brand Portal]之间的授权渠道已更改。 以前，[!DNL Brand Portal]通过旧版OAuth网关在经典UI中配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在配置为通 [!DNL Brand Portal] 过Adobe I/O，后者为您的租户购买IMS令牌以进行 [!DNL Brand Portal] 授权。
+[!DNL Experience Manager Assets]和[!DNL Brand Portal]之间的授权渠道已更改。 以前，[!DNL Brand Portal]通过旧版OAuth网关在经典UI中配置，该网关使用JWT令牌交换获取IMS访问令牌进行授权。 [!DNL Experience Manager Assets] 现在配置为 [!DNL Brand Portal] 通过 [!DNL Adobe I/O]，后者为租户获取IMS令牌以进行 [!DNL Brand Portal] 授权。
 
 根据您的[!DNL Experience Manager]版本，以及您是首次配置还是升级现有配置，配置[!DNL Experience Manager Assets]的步骤会有所不同。 [!DNL Brand Portal]有关详细信息，请参阅[使用Brand Portal配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)。
 
