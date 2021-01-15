@@ -2,10 +2,10 @@
 title: Adobe Experience Manager6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 translation-type: tm+mt
-source-git-commit: 1e6feac534fe990d614997c4bd3ab999a4a8d479
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 43%
+source-wordcount: '1719'
+ht-degree: 41%
 
 ---
 
@@ -29,12 +29,12 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| Creative Cloud集成 | AEM到Creative Cloud文件夹共享在AEM 6.2中引入，旨在让创意用户能够访问AEM中的资产，以便他们能够在CC应用程序中打开这些资产并上传新文件，或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM 资产。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 有关更多详细信息，请查阅AEM和Creative Cloud集成最佳实践。 |
+| Creative Cloud集成 | AEM到Creative Cloud文件夹共享在AEM 6.2中引入，旨在让创意用户能够访问AEM中的资产，以便他们能够在CC应用程序中打开这些资产并上传新文件，或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM Assets。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 有关更多详细信息，请查阅AEM和Creative Cloud集成最佳实践。 |
 | 资产 | `AssetDownloadServlet`默认情况下，对发布实例禁用 有关更多详细信息，请参阅 [AEM 安全核对清单](/help/sites-administering/security-checklist.md)。 | [AEM 安全核对清单](/help/sites-administering/security-checklist.md)中描述的配置。 |
 | 资产 | 如果用户对`/content/dam/collections`没有足够的（读和写）权限，则用户无法创建集合。 | 遵循用户的访问控制设置并确保具有适当的权限。 |
 | Adobe Search &amp; Promote | 已弃用与Adobe Search&amp;Promote的集成。 Adobe 不打算进一步增强 Search &amp; Promote 集成。请注意，Search &amp; Promote 集成在弃用期间仍完全受支持。 |  |
 | DTM 标记管理器 | 已弃用与 DTM (Dynamic Tag Manager) 的集成。 | 切换为使用 Adobe Experience Platform Launch 作为标记管理器。 |
-| Adobe Target | 为 AEM 新增了一项功能，可以在 AEM 6.5 中通过基于 Adobe I/O 的 Adobe Target Standard API (Rest API) 连接到 Adobe Target 服务，与此同时，弃用 Target Classic API (XML) 方法。 | 将集成重新配置为[使用新API](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html)。 |
+| Adobe Target | 在AEM 6.5中添加了使用基于[!DNL Adobe I/O]的Adobe Target标准API(Rest API)连接到Adobe Target服务的AEM功能，已弃用目标经典API(XML)方式。 | 将集成重新配置为[使用新API](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html)。 |
 | Adobe Target | 已弃用在AEM中使用与Adobe Target的基于`mbox.js`的集成。 | 切换到使用`at.js` 1.x。 |
 | 商务 | [CIF REST](https://github.com/adobe/commerce-cif-api) 于2018年作为一套微服务提供，以实现AEM和商务引擎之间的集成。Adobe在2018年年中获得Magento后，Adobe决定改变其做法，原因有二。 Magento有自己的一组商务API（REST和GraphQL），维护两组API不是好做法。 市场趋势表明客户正转向GraphQL，因为它是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，将Magento的GraphQL API作为真相的来源。 Adobe不打算再投资CIF REST。 强烈建议客户使用替换解决方案。 | 对于AEM-Magento集成，切换到[AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype)和[AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)。 请参阅AEM和Magento集成[（使用Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)）。 我们的产品路线图支持与新方法进行第三方(Magento除外)集成。 |
 | 组件 (AEM Sites) | Adobe不打算对存储在`/libs/foundation/components`中的大多数基础组件进行进一步增强。 在组件文件夹中查找`cq:deprecated`和`cq:deprecatedReason`属性。 AEM 6.5包含基础组件，从早期版本升级的客户可以按原样继续使用它们。 此外，即使已弃用，也完全支持基础组件。 | Adobe建议将核心组件用于将来的项目。 现有站点可以原样保留，或使用[AEM Demistorence Tools Suite](https://github.com/adobe/aem-modernize-tools)重新调整站点以使用核心组件。 |
