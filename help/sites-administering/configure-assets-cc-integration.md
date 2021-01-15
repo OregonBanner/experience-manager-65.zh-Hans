@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 82a8e807-a2df-4fe3-a68c-2dabc9328eca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1410'
 ht-degree: 3%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 3%
 
 # 配置AEM Assets与Experience Cloud和Creative Cloud{#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}的集成
 
-如果您是Adobe Experience Cloud客户，则可以将Adobe Experience Manager(AEM)资产内的资产与Adobe Creative Cloud同步，反之亦然。 您还可以将资产与Experience Cloud同步，反之亦然。 您可以通过Adobe I/O设置此同步。
+如果您是Adobe Experience Cloud客户，则可以将Adobe Experience Manager资产内的资产与Adobe Creative Cloud同步，反之亦然。 您还可以将资产与Experience Cloud同步，反之亦然。 可以通过[!DNL Adobe I/O]设置此同步。
 
 设置此集成的工作流是：
 
-1. 在Adobe I/O使用公共网关创建身份验证并获得应用程序 ID。
+1. 在[!DNL Adobe I/O]中使用公共网关创建身份验证并获取应用程序 ID。
 1. 使用用户档案在AEM Assets实例上创建应用程序 ID。
 1. 使用此配置将您在AEM Assets的资产与Creative Cloud同步。
 
@@ -115,7 +115,7 @@ ht-degree: 3%
 
 ## 启用同步{#enable-synchronization}
 
-1. 使用过程[的最后一步中提到的以下方法之一显示公钥。向Marketing Cloud](/help/sites-administering/configure-assets-cc-integration.md#add-a-new-configuration-to-marketing-cloud)添加新配置。 单击&#x200B;**[!UICONTROL 显示公钥]**。
+1. 使用过程[的最后一步中提到的下列方法之一显示公钥向Marketing Cloud](/help/sites-administering/configure-assets-cc-integration.md#add-a-new-configuration-to-marketing-cloud)添加新配置。 单击&#x200B;**[!UICONTROL 显示公钥]**。
 
    ![chlimage_1-52](assets/chlimage_1-52.png)
 
@@ -149,7 +149,7 @@ ht-degree: 3%
 
 ## 在AEM Assets和Marketing Cloud之间交换资产{#exchange-assets-between-aem-assets-and-marketing-cloud}
 
-1. 登录 AEM 资产。
+1. 登录 AEM Assets。
 1. 在“资产”控制台中，创建一个文件夹，并将一些资产上传到该文件夹。 例如，创建文件夹&#x200B;**mc-demo**&#x200B;并将资产上传到该文件夹。
 1. 选择文件夹，然后单击&#x200B;**共享** ![assets_share](assets/assets_share.png)。
 1. 从菜单中，选择&#x200B;**[!UICONTROL Adobe Marketing Cloud]**&#x200B;并单击&#x200B;**[!UICONTROL 共享]**。 系统会显示一条消息，通知已与Marketing Cloud共享文件夹。
