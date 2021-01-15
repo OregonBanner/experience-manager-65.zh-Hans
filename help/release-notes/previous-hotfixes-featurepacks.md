@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前的Service Pack发行说明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的发行说明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '14953'
+source-wordcount: '14944'
 ht-degree: 19%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 支持Automated forms conversion服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)中的[Adobe Sign文本标记。
 
-* 支持使用](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)将彩色表单转换为自适应表单[。[!DNL Automated Forms Conversion service]
+* 支持使用[!DNL Automated Forms Conversion service]将彩色表单转换为自适应表单](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)。[
 
 * 支持SMB 2和SMB 3协议。
 
@@ -197,7 +197,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 对资产执行批量操作时，会出现错误“Request-URI过长”，如批量元数据编辑(NPR-33723)。
 
-* 出现JavaScript错误，如果上传的JSON文件有空格或特殊字符，则用户无法选择或删除[!UICONTROL Dropdown]字段中由[!UICONTROL 通过JSON路径]功能添加的选项（如果NPR-3371）2)。][!UICONTROL 
+* 出现JavaScript错误，如果上传的JSON文件有空格或特殊字符，则用户无法选择或删除[!UICONTROL Dropdown]字段中由[!UICONTROL 通过JSON路径]功能添加的选项（如果NPR-3371）2)。
 
 * 当使用[!DNL desktop app]或[!DNL Adobe Asset Link]中的[!UICONTROL 打开]选项更新资产时，资产的静态演绎版不会更新，并同步回[!DNL Adobe Experience Manager](CQ-4296279)。
 
@@ -228,7 +228,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 当将图像用户档案添加到具有多个长宽比（例如，11）的文件夹时，智能裁剪功能会出错而失败(NPR-34082)。
 
-* 当用户向下滚动到[!UICONTROL Workflow Archive]页面&lt;a2/>Workflow]选项卡的[!UICONTROL Tools](使用Dynamic Media·Scene7(CQ-4299727)配置的[!DNL Adobe Experience Manager]中时，将触发DAM更新资产工作流。[!UICONTROL 
+* 当用户向下滚动到[!UICONTROL Workflow Archive]页面[!UICONTROL Workflow]选项卡的[!UICONTROL Tools](使用Dynamic Media·Scene7(CQ-4299727)配置的[!DNL Adobe Experience Manager]中时，将触发DAM更新资产工作流。
 
 * [!UICONTROL 查看器预设编辑器]的“行为”]选项卡中的符号未本地化(CQ-4299026)。[!UICONTROL 
 
@@ -454,7 +454,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 **Experience Manager资源中的辅助功能增强**
 
-* 现在，可以将键盘焦点放在[!UICONTROL Comments]列表和[!UICONTROL 在[!UICONTROL Timeline]资产面板(NPR-33424)中创建]版本注释下的可单击选项上。
+* 现在，可以将键盘焦点放在[!UICONTROL Comments]列表和[!UICONTROL 在[!UICONTROL Timeline]资产面板(NPR-33424)中创建]版本注释下的可单击选项上。][!UICONTROL 
 
 * 现在，可以访问资产的[!UICONTROL 视图设置]选项，并使用键盘键更改[!UICONTROL 视图设置]对话框中的设置(NPR-33420)。
 
@@ -464,7 +464,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 可单击的元素（如注释卡、版本更新、组合框和菜单的V形图标）现在可以使用键盘进行集中处理并与之交互(NPR-33514)。
 
-* [!UICONTROL 分析视图符]上的分析图标（用于使用、展示和点击）的功能（或操作目的）现在由屏幕阅读器正确宣布(NPR-33513)。
+* [!UICONTROL Insights视图]上的洞察图标（用于使用、展示和点击）的功能（或操作目的）现在由屏幕阅读器正确宣布(NPR-33513)。
 
 * 只读表单字段（例如资产[!UICONTROL 属性]的“基本”选项卡]上禁用的字段）现在可使用键盘(NPR-33493, CQ-4273031)聚焦。[!UICONTROL 
 
@@ -498,7 +498,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 现在，当列表视图表中的行处于键盘焦点时，会向屏幕阅读器用户传达这些行可选择的信息。 当指针悬停在行上时，屏幕阅读器会宣布该信息(NPR-33234)。
 
-* 现在，屏幕阅读器可访问用于删除[!UICONTROL Basic]选项卡中[!UICONTROL Tags]字段下的[!UICONTROL Tags&lt;a3/>字段下的每个选定标记的选项（具有[!UICONTROL x]）。]
+* 现在，屏幕阅读器可访问用于删除[!UICONTROL Basic]选项卡中[!UICONTROL Tags]字段下的[!UICONTROL Tags]字段下的每个选定标记的选项（具有[!UICONTROL x]）。
 
 * 日历日期选取器现在可通过屏幕阅读器用户和视力正常的键盘用户使用键盘进行聚焦和操作(NPR-33200)。
 
@@ -633,7 +633,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 * 当发布具有Adobe Target组件的页面时，将清除内部缓存(NPR-33162)。
 * 在[!DNL Windows Internet Explorer] 11(NPR-33111)上，与Adobe Target的整合不起作用。
 * 配置Adobe Target时，在选择报告源时，[!UICONTROL 公司]和[!UICONTROL 报告包]字段不显示(NPR-32502)。
-* 使用Adobe I/O导出[!DNL Experience Fragments]时，源产品等元数据不会导出到Adobe Target(NPR-32159)。
+* 使用[!DNL Adobe I/O]导出[!DNL Experience Fragments]时，源产品等元数据不会导出到Adobe Target(NPR-32159)。
 * 本地Experience Manager管理组中的授权IMS用户无法创建或修改IMS配置(NPR-33045)。
 * Adobe启动配置页面不显示所有记录(NPR-33011)。
 * 由于JavaScript错误(NPR-32996)，内容作者组中的用户无法编辑Adobe Target组件的属性。
@@ -704,7 +704,7 @@ Adobe Experience Manager6.5.4.0是一个重要更新，包括新功能、主要�
 
 Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包括：
 
-* Adobe Experience Manager资产现在通过Adobe I/O控制台配置了Brand Portal。
+* Adobe Experience Manager资产现在通过[!DNL Adobe I/O]控制台配置了Brand Portal。
 
 * 新的[生成可打印输出](../forms/using/aem-forms-workflow-step-reference.md)步骤现已对Adobe Experience Manager Forms工作流可用。
 
@@ -868,7 +868,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 ### Brand Portal {#assets-brand-portal-6540}
 
-* Brand Portal用户在升级到Adobe I/O(Experience Manager6.5.4)时无法将贡献文件夹资产发布到[!DNL Assets](CQDOC-15655)。 要立即修复Experience Manager6.5.4，建议[下载修补程序](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)并安装在创作实例上。
+* 在升级到Experience Manager6.5.4上的[!DNL Adobe I/O](CQDOC-15655)时，Brand Portal用户无法将贡献文件夹资产发布到[!DNL Assets]。 要立即修复Experience Manager6.5.4，建议[下载修补程序](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)并安装在创作实例上。
 
 * 元数据模式弹出值在资产属性中不可见(CQ-4283287)。
 
@@ -1406,7 +1406,7 @@ Remove one mention of this fix.
 
 #### 表单 - 文档服务 {#forms-document-services-1}
 
-* 在`PDFFormRenderOptions` OSGi的&lt;a1/> API中，将“Auto”设置添加到`RenderAtClient`。 [!DNL Experience Manager Forms]NPR-30759：适用于 CQ-4278193 的修补程序
+* 在`PDFFormRenderOptions` OSGi的[!DNL Experience Manager Forms] API中，将“Auto”设置添加到`RenderAtClient`。 NPR-30759：适用于 CQ-4278193 的修补程序
 
 ## Adobe Experience Manager 6.5.1.0 {#experience-manager-6510}
 
