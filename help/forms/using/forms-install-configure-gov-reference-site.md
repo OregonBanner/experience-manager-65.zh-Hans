@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4742'
+source-wordcount: '4743'
 ht-degree: 1%
 
 ---
@@ -465,7 +465,7 @@ AEM Forms分析数据在离线时可用，如果`we-gov-forms.ui.analytics-<vers
 
 要使用AdobeForms安装和配置AEM Forms，转换工具用户必须具有以下各项。
 
-1. 访问AdobeIO。
+1. 去Adobe I/O。
 
 1. 创建与AdobeForms转换服务集成的权限。
 
