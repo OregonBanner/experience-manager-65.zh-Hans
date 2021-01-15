@@ -3,9 +3,9 @@ title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e124025295f29d6f3999dc52467301d48bceee75
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1514'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 了解、应用和管理智能标记{#enhanced-smart-tags}
 
-处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 本质上，它包含一列表关键字，员工、合作伙伴和客户通常使用这些关键字来引用和搜索特定类别的数字资产。 使用分类控制的词汇标记资产可确保通过基于标签的搜索轻松识别和检索资产。
+处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 本质上，它包含一列表关键字，员工、合作伙伴和客户通常使用这些关键字来引用和搜索特定类别的数字资产。 使用分类控制的词汇标记资产可确保轻松识别和检索资产。
 
 与自然语言词汇相比，基于业务分类标记数字资产有助于使其与公司的业务保持一致，并确保最相关的资产出现在搜索中。
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 在后台，智能内容服务使用Adobe Sensei人工智能框架来根据您的标签结构和业务分类训练其图像识别算法。 然后，此内容智能用于对另一组资产应用相关标记。
 
-智能内容服务是在Adobe I/O托管的云服务。要在[!DNL Adobe Experience Manager]中使用它，系统管理员必须将您的[!DNL Experience Manager]部署与Adobe I/O集成。
+智能内容服务是托管在[!DNL Adobe I/O]上的云服务。 要在[!DNL Adobe Experience Manager]中使用它，系统管理员必须将[!DNL Experience Manager]部署与[!DNL Adobe I/O]集成。
 
 总而言之，使用智能内容服务的主要步骤如下：
 
@@ -38,15 +38,15 @@ ht-degree: 1%
 
 ## 前提条件 {#prerequisites}
 
-在使用智能内容服务之前，请确保在Adobe I/O创建以下集成：
+在使用智能内容服务之前，请确保在[!DNL Adobe I/O]上创建集成：
 
 * 具备拥有组织管理员权限的 Adobe ID 帐户。
 * 您的组织已启用智能内容服务。
-* 智能内容服务基础包只能添加到[!DNL Sites]基础包和[!DNL Assets]加载项已获得许可的部署中。
+* 智能内容服务基础包只能添加到[!DNL Adobe Experience Manager Sites]基础包和[!DNL Assets]加载项已获得许可的部署中。
 
 ## 入门 {#onboarding}
 
-智能内容服务可作为[!DNL Experience Manager]的加载项购买。 购买后，系统会向组织的管理员发送一封电子邮件，其中含有指向Adobe I/O的链接。
+智能内容服务可作为[!DNL Experience Manager]的加载项购买。 购买后，系统会向组织的管理员发送一封电子邮件，其中包含指向[!DNL Adobe I/O]的链接。
 
 管理员可以通过链接将智能内容服务与[!DNL Experience Manager]集成。 要将服务与[!DNL Experience Manager Assets]集成，请参阅[配置智能标记](config-smart-tagging.md)。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 ## 使用智能标记{#understandsearch}了解[!DNL Experience Manager]搜索结果
 
-默认情况下，[!DNL Experience Manager]搜索将搜索词与`AND`子句组合。 使用智能标记不会更改此默认行为。 使用智能标记可添加额外的`OR`子句，以查找应用智能标记中的任何搜索词。 例如，考虑搜索`woman running`。 默认情况下，元数据中仅包含`woman`或`running`关键字的资产不会显示在搜索结果中。 但是，使用智能标记标记的资产会显示在此类搜索查询中。 `woman``running`搜索结果是，
+默认情况下，[!DNL Experience Manager]搜索将搜索词与`AND`子句组合。 使用智能标记不会更改此默认行为。 使用智能标记可添加额外的`OR`子句来查找与智能标记相关的任何搜索词。 例如，考虑搜索`woman running`。 默认情况下，元数据中仅包含`woman`或`running`关键字的资产不会显示在搜索结果中。 但是，使用智能标记标记的资产会显示在此类搜索查询中。 `woman``running`搜索结果是，
 
 * 元数据中具有`woman`和`running`关键字的资产。
 
@@ -82,8 +82,8 @@ ht-degree: 1%
 首先显示与元数据字段中所有搜索词匹配的搜索结果，然后显示与智能标记中任何搜索词匹配的搜索结果。 在上例中，搜索结果的近似显示顺序为：
 
 1. 各个元数据字段中`woman running`的匹配项。
-1. smart标记中`woman running`的匹配项。
-1. smart标记中`woman`或`running`的匹配项。
+1. 智能标记中`woman running`的匹配项。
+1. 智能标记中`woman`或`running`的匹配项。
 
 >[!CAUTION]
 >
@@ -140,7 +140,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->在随后的标记周期中，只有修改后的资产会再次使用经过新培训的标记进行标记。但是，如果标记工作流的上一个标记周期与当前标记周期之间的间隔超过24小时，即使资产未更改也会进行标记。 对于定期标记工作流，当时间间隔超过6个月时，将标记未更改的资产。
+>在随后的标记周期中，只有已修改的资产会再次使用经过新培训的标记进行标记。 但是，如果标记工作流的上一个标记周期与当前标记周期之间的间隔超过24小时，则即使是未更改的资产也会被标记。 对于定期标记工作流，当时间间隔超过六个月时，将标记未更改的资产。
 
 ## 创建或审核应用的智能标记{#manage-smart-tags}
 
