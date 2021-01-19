@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 模板用于创建页面并定义可在所选范围内使用的组件。 模板是节点的层次结构，其结构与要创建的页面相同，但没有任何实际内容。
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 * [创建和添加模板和组件](/help/mobile/mobile-ondemand-app-templates.md)
 * [使用内容属性导出内容](/help/mobile/on-demand-content-properties-exporting.md)
 * [最佳实践](/help/mobile/best-practices-aem-mobile.md)
-* [开发AEM Mobile内容服务](//help/mobile/developing-content-services.md)
+* [开发AEM Mobile内容服务](/help/mobile/developing-content-services.md)
 
 ### 其他资源 {#additional-resources}
 
