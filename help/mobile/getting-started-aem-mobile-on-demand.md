@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ AEM开发人员在使用AEM Mobile On-demand Services创建应用程序时负责
 * [应用程序模板和组件](/help/mobile/app-templates-and-components1.md)
 * [内容同步的移动设备](/help/mobile/mobile-ondemand-contentsync.md)
 * [内容属性和导出内容](/help/mobile/on-demand-content-properties-exporting.md)
-* [开发AEM Mobile内容服务](//help/mobile/developing-content-services.md)
+* [开发AEM Mobile内容服务](/help/mobile/developing-content-services.md)
 
 要开始了解开发人员的角色和职责，请参阅[为AEM Mobile On-demand Services开发AEM内容](/help/mobile/aem-mobile-on-demand.md)。
 
