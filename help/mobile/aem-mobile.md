@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: administering-on-demand-services-app
 discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ AEM管理员在使用AEM Mobile On-demand Services创建应用程序时负责以
 
 * [配置用户和用户组](/help/mobile/aem-mobile-configure-users.md)
 * [使用预检预览](/help/mobile/aem-mobile-manage-ondemand-services.md)
-* [管理内容服务](//help/mobile/developing-content-services.md)
+* [管理内容服务](/help/mobile/developing-content-services.md)
 
 ## 其他资源 {#additional-resources}
 
