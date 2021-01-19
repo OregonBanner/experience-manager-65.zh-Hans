@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
-source-git-commit: 741ba6f6ef3270414c0ddabb1a1d02d5c436b7d9
+source-git-commit: bb50e530f0d015c0e7d06650157e3e3994082483
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -34,5 +34,4 @@ ht-degree: 0%
 
 * 排除的资源路径：排除资源的列表，必须将每个资源路径指定为绝对和完全限定的路径。 不支持前缀匹配／通配符。
 
-* 为所有资源路径启用：此标志控制是否对所有路径启用此过滤器，排除资源路径定义的排除路径除外。 将此设置为“true”会导致忽略内容处置路径。 将覆盖独立于配置的资源路径，其中包含名为“jcr:data”或“jcr:content jcr:data”的属性。
-
+* 为所有资源路径启用：此标志控制是否对所有路径启用此过滤器，排除资源路径定义的排除路径除外。 将此设置为“true”会导致忽略内容处置路径。 与配置无关，只涵盖包含名为“jcr:data”或“jcr:content/jcr:data”的属性的资源路径。
