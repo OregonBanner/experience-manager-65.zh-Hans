@@ -4,10 +4,10 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 Service Pack 7的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
 workflow-type: tm+mt
-source-wordcount: '4274'
-ht-degree: 5%
+source-wordcount: '4255'
+ht-degree: 6%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 5%
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本 | 6.5.7.0 |
+| 版本号 | 6.5.7.0 |
 | 类型 | Service Pack 版本 |
-| 日期 | 2020年11月26日 |
+| 日期 | 2020 年 11 月 26 日 |
 | 下载 URL | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.7.zip) |
 
 <!-- TBD: Update the SD link when SP7 is available. -->
@@ -30,8 +30,6 @@ ht-degree: 5%
 [!DNL Adobe Experience Manager] 6.5.7.0是一项重要更新，包括自2019年4月发布6.5版以来发布的新功能、关键客户请求的增强功能以及性能、稳定性和安全性改进。[!DNL Adobe Experience Manager] 6.5上安装了Service Pack。
 
 [!DNL Adobe Experience Manager] 6.5.7.0中引入的主要功能和增强功能包括：
-
-* 使用[!UICONTROL 名称]、[!UICONTROL 上次修改日期、]和[!UICONTROL 上次转出日期]属性对可用于转出的Live Copy页面进行排序。
 
 * 将页面移动和MSM转出作为异步操作执行，以减少它们对运行时性能的影响。
 
@@ -308,7 +306,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 在计划的Service Pack发布日期后一周内 [!DNL Experience Manager] 发布加载项包。
+>[!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
 
 >[!NOTE]
 >
@@ -378,7 +376,7 @@ ht-degree: 5%
 
 1. 从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.7.zip)下载服务包。
 
-1. 打开包管理器，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。 要了解更多信息，请参阅[包管理器](/help/sites-administering/package-manager.md)。
+1. 打开包管理器，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。要了解更多信息，请参阅[包管理器](/help/sites-administering/package-manager.md)。
 
 1. 选择软件包，然后单击&#x200B;**[!UICONTROL 安装]**。
 
@@ -414,14 +412,14 @@ B.使用包管理器](https://helpx.adobe.com/cn/experience-manager/aem-previous
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] 在计划的Service Pack发布日期后一周内 [!DNL Experience Manager] 发布加载项包。
+>[!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
 
 >[!NOTE]
 >
 >如果您未使用 AEM Forms，请跳过。Adobe Experience Manager Forms的修复通过单独的附加包提供。
 
 1. 确保已安装Adobe Experience Manager服务包。
-1. 下载操作系统[AEM Forms版本](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)中列出的相应Forms加载项包。
+1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)中列出的相应 Forms 附加组件包。
 1. 按照[安装Forms加载项包](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中的说明安装AEM Forms加载项包。
 
 >[!NOTE]
@@ -531,5 +529,5 @@ B.使用包管理器](https://helpx.adobe.com/cn/experience-manager/aem-previous
 >* [[!DNL Experience Manager] 6.5发行说明](/help/release-notes/release-notes.md)
 >* [[!DNL Experience Manager] 产品页面](https://www.adobe.com/cn/marketing/experience-manager.html)
 >* [[!DNL Experience Manager] 6.5文档](https://experienceleague.adobe.com/docs/experience-manager-65.html)
->* 订阅[Adobe优先级产品更新](https://www.adobe.com/subscription/priority-product-update.html)
+>* 订阅 [Adobe 产品更新早知道](https://www.adobe.com/subscription/priority-product-update.html)
 
