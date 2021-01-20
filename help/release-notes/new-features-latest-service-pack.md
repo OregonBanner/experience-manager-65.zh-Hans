@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2770'
 ht-degree: 1%
 
 ---
@@ -21,10 +21,6 @@ ht-degree: 1%
 本文重点介绍最新6.5 Service Pack中包含的功能、前6.5 Service Pack中包含的[主要功能以及自上一个Service Pack](#key-releases-since-last-sp)发行版以来的[关键AEM发行版。](#key-features-previous-service-packs)
 
 ## Adobe [!DNL Experience Manager Sites] {#aem-sites}
-
-### 对可用于转出{#sort-livecopy-pages}的Live Copy页面进行排序
-
-您现在可以使用[!UICONTROL 名称]、[!UICONTROL 上次修改日期]和[!UICONTROL 上次转出日期]属性对可用于转出的Live Copy页面进行排序。 页面的[!UICONTROL 上次转出日期]是此版本中引入的新属性。
 
 ### 页面移动和MSM转出作为异步操作的可用性{#page-moves-msm-asynchronous}
 
