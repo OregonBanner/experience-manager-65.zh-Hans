@@ -1,16 +1,14 @@
 ---
 title: 使用规则集转换URL
 description: 您可以在Dynamic Media部署规则集以转换URL。 规则集是用脚本语言（如JavaScript）编写的指令集，用于评估XML数据，并在数据满足某些条件时采取某些操作。
-uuid: 9fed0c83-67b7-4483-a9b4-322e6a483449
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: abcff903-204b-4ab6-87d8-6f0ce63d7b41
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '762'
 ht-degree: 5%
 
 ---
@@ -61,9 +59,7 @@ ht-degree: 5%
 
 **部署XML规则集：**
 
-1. 登录您的Dynamic Media经典帐户：
-
-   [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. 登录到[Dynamic Media经典桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)。
 
    您的凭据和登录是在设置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
@@ -74,7 +70,7 @@ ht-degree: 5%
    * 在&#x200B;**[!UICONTROL 打开]**&#x200B;对话框中，浏览至规则集文件(XML)。
    * 选择文件，然后单击&#x200B;**[!UICONTROL 打开]**。
    * 在&#x200B;**[!UICONTROL 上传]**&#x200B;页面的右侧，为规则集文件选择目标文件夹。
-   * 在页面底部附近，确保选中“上载后发布&#x200B;**[!UICONTROL ”。]**
+   * 在页面底部附近，确保选中“上载后发布&#x200B;]**”。**[!UICONTROL 
    * 在页面的右下角，单击&#x200B;**[!UICONTROL 提交上传]**。
    * 在全局导航栏上，单击&#x200B;**[!UICONTROL 作业]**&#x200B;以检查上传作业的状态。 当&#x200B;**[!UICONTROL 作业]**&#x200B;页面上的&#x200B;**[!UICONTROL 状态]**&#x200B;列显示上载完成时，请继续执行后续步骤。
 
