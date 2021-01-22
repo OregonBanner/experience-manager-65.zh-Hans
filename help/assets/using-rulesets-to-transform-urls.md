@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '763'
 ht-degree: 5%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 5%
 
 1. 登录到[Dynamic Media经典桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)。
 
-   您的凭据和登录是在设置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
+   您的凭据和登录详细信息是在设置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
 
 1. 通过执行以下操作上传规则集文件：
 
