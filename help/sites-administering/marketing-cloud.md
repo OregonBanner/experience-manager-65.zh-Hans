@@ -1,18 +1,14 @@
 ---
 title: 与Adobe Marketing Cloud整合
-seo-title: 与Adobe Marketing Cloud整合
-description: 了解如何将AEM与Adobe Marketing Cloud集成。
-seo-description: 了解如何将AEM与Adobe Marketing Cloud集成。
-uuid: 36d71dd3-7fb0-4237-99d3-4fbb2e162e7b
+description: 了解如何将Adobe Experience Manager与Adobe Marketing Cloud整合。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '998'
 ht-degree: 1%
 
 ---
@@ -26,7 +22,7 @@ ht-degree: 1%
 
 * Adobe Analytics公司为营销人员提供有关在线战略和营销计划的可操作实时情报。
 * Adobe Target使营销人员能够持续提高其在线内容与其客户的相关性，从而提高转化率。
-* Adobe Scene7通过一个托管环境实现媒体管理自动化、简化Web发布并增强Web体验。
+* AdobeDynamic Media经典可以在一个托管环境中实现媒体管理自动化、简化Web发布并增强Web体验。
 * Adobe动态标签管理为营销人员提供了直观的工具，可快速、轻松地管理数量不限的Adobe和第三方标签。
 * AdobeSearch&amp;Promote使营销人员能够控制和优化其网站上的搜索结果。
 * Adobe Campaign允许您直接在Adobe Experience Manager管理电子邮件投放内容。
@@ -76,11 +72,11 @@ AEM提供了与Adobe Analytics和Adobe Target集成的简单选择程序。 以�
 
 AdobeDynamic Media经典是用于发布、管理、增强和交付动态营销资产以及丰富的可视销售到Web、移动、电子邮件、社交媒体、连接Internet的显示屏和印刷品的托管解决方案。
 
-在AEM中，您可以直接将数字资产从AEM发布到Dynamic Media经典，还可以将数字资产从Dynamic Media经典发布到AEM。
+在Adobe Experience Manager，您可以直接从Adobe Experience Manager发布数字资产到Dynamic Media经典，还可以从Dynamic Media经典发布数字资产到Adobe Experience Manager。
 
-此外，您还可以在各种查看器（如基本缩放和视频）中视图发布在Dynamic Media经典中的AEM资产。
+此外，您还可以在各种查看器（如“基本缩放”和“视频”）中视图发布在“Dynamic Media经典”中的Adobe Experience Manager资源。
 
-有关AEM如何与Dynamic Media经典集成的更多信息，请参阅[与Dynamic Media经典集成](/help/sites-administering/scene7.md)文档。
+有关Adobe Experience Manager如何与Dynamic Media经典集成的更多信息，请参阅[与Dynamic Media经典集成](/help/sites-administering/scene7.md)文档。
 
 ## 与Adobe动态标签管理集成{#integrating-with-adobe-dynamic-tag-management}
 
@@ -94,7 +90,7 @@ Audience Manager集成在AEM 6.3中已被删除。
 
 ## 与Search&amp;Promote{#integrating-with-search-promote}集成
 
-[AdobeSearch&amp;](https://www.omniture.com/en/products/conversion/search-and-promote) Promote使营销人员能够优化访客在网站和移动站点上浏览、查找、比较和选择相关产品和内容的方式。企业可以根据业务目标和访客意图轻松宣传优先项目，并通过基于KPI的触发器或指标实现销售和促销活动自动化。
+AdobeSearch&amp;Promote使营销人员能够优化访客在网站和移动站点上浏览、查找、比较和选择相关产品和内容的方式。 企业可以根据业务目标和访客意图轻松宣传优先项目，并通过基于KPI的触发器或指标实现销售和促销活动自动化。
 
 AdobeSearch&amp;Promote是一个可靠、可扩展的托管站点搜索应用程序，可扩展至数百万个页面或产品，适用于从零售到新闻网站等访问量很大的在线业务。 它优惠了前所未有的营销人员控制和基于指标的相关度。
 
@@ -106,7 +102,7 @@ AdobeSearch&amp;Promote是一个可靠、可扩展的托管站点搜索应用程
 
 有关AEM如何与Adobe Campaign集成的信息，请参阅[与Adobe Campaign集成](/help/sites-administering/campaignstandard.md)。
 
-## 与Livefyre{#integrating-with-livefyre}集成
+## 与 Livefyre 集成 {#integrating-with-livefyre}
 
 了解AEM和Livefyre:
 
