@@ -10,9 +10,9 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '4265'
+source-wordcount: '4335'
 ht-degree: 23%
 
 ---
@@ -22,12 +22,12 @@ ht-degree: 23%
 
 查看器预设是一组设置，用于确定用户如何在其计算机屏幕和移动设备上视图富媒体资产。如果您是管理员，则可以创建查看器预设。可对一组查看器配置选项进行设置。例如，可更改查看器显示大小或缩放行为。
 
-<!-- OBSOLETE CONTENT  For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. The SDK is available on the IS publish server embedded in the SDK itself. Each library version has its own SDK documentation included.
+有关创建和自定义您自己的HTML5查看器预设的说明，请参阅AdobeDynamic Media *HTML5查看器SDK API文档*。 SDK可在嵌入在SDK中的IS发布服务器上使用。 每个库版本都包含自己的SDK文档。
 
-Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
-For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html) -->
+路径: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
+例如，3.10 SDK:[https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-请参阅[《Dynamic Media查看器参考指南》](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
+另请参阅[《AdobeDynamic Media查看器参考指南》](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
 
 本节介绍如何创建、编辑和管理查看器预设。 无论您何时对资产进行预览，您都可以将查看器预设应用到资产。 请参阅[应用查看器预设](#applying-a-viewer-preset-to-an-asset)。
 
@@ -488,7 +488,7 @@ AEM在从&#x200B;**[!UICONTROL 详细信息视图>查看器查看资产时显示
   </tr>
   <tr>
    <td>区段</td>
-   <td><p><code>Segment </code>是现成的交互式视频查看器预设<code>Shoppable_Video_light</code>和<code>Shoppable_Video_dark</code>以及您自己创建的任何交互式视频查看器预设的默认显示模式。</p> <p>在此模式中，当分配给视频区段的缩略图数少于显示面板中的可见点数时，下一个或上一个子区段的缩略图不会<i>被拉入，以填充面板中的任何空白点。 </i>即保留分配给特定视频段的色板的显示。</p> </td>
+   <td><p><code>Segment </code>是现成的交互式视频查看器预设<code>Shoppable_Video_light</code>和<code>Shoppable_Video_dark</code>以及您自己创建的任何交互式视频查看器预设的默认显示模式。</p> <p>在此模式中，当分配给视频区段的缩略图数少于显示面板中的可见点数时，下一个或上一个子区段的缩略图不会</i>被拉入，以填充面板中的任何空白点。 <i>即保留分配给特定视频段的色板的显示。</i></p> </td>
   </tr>
   <tr>
    <td>连续</td>
