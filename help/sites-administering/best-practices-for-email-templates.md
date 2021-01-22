@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1130'
 ht-degree: 1%
 
 ---
@@ -157,7 +157,7 @@ AEM附带了多个现成的模板和组件，供您创建活动新闻稿。 您�
 | 文本与个性化 | /libs/mcm/活动/components/personalization |
 | 文本图像 | /libs/mcm/活动/components/textimage |
 | 链接 | /libs/mcm/活动/components/reference |
-| Scene7 图像模板 | /libs/mcm/活动/s7image |
+| Dynamic Media经典(前Scene7)图像模板 | /libs/mcm/活动/s7image |
 | 目标引用 | /libs/mcm/活动/components/reference |
 
 >[!NOTE]
