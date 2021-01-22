@@ -4,9 +4,9 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '9562'
+source-wordcount: '9590'
 ht-degree: 7%
 
 ---
@@ -50,7 +50,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!NOTE]
 >
->在Dynamic Media -Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
+>在Dynamic Media-Scene7模式下，您只能上传文件大小为2 GB或更小的资源。
 
 您可以选择将资产上传到文件夹，无论是否分配了处理用户档案。
 
@@ -157,19 +157,23 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 >[!NOTE]
 >
->在Dynamic Media -Scene7模式下，您只能上传文件大小为2 GB或更小的资产。
+>在Dynamic Media-Scene7模式下，您只能上传文件大小为2 GB或更小的资源。
 
 >[!NOTE]
 >
->要在Dynamic Media -Scene7模式下通过FTP上传资产，请在[!DNL Experience Manager]创作实例上安装功能包18912。 联系[Adobe客户服务中心](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参阅[安装功能包18912以实现批量资产迁移](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media-Scene7模式下通过FTP上传资产，请在[!DNL Experience Manager]创作实例上安装功能包18912。 联系[Adobe客户服务中心](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)获取FP-18912并完成FTP帐户的设置。 有关详细信息，请参阅[安装功能包18912以实现批量资产迁移](/help/assets/bulk-ingest-migrate.md)。
 >
->如果您使用FTP上传资产，则会忽略在[!DNL Experience Manager]中指定的上传设置。 而是使用在Dynamic Media Classic中定义的文件处理规则。
+>如果您使用FTP上传资产，则会忽略在[!DNL Experience Manager]中指定的上传设置。 而是使用在Dynamic Media经典中定义的文件处理规则。
 
 **使用FTP上传资产**
 
 1. 使用您选择的FTP客户端，使用您从供应电子邮件收到的FTP用户名和密码登录到FTP服务器。 在FTP客户端中，将文件或文件夹上传到FTP服务器。
-1. [使用从供应电子邮件](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) 接收的凭据登录到Dynamic Media Classic。在全局导航栏上，单击&#x200B;**[!UICONTROL 上传]**。
 
+1. 打开[Dynamic Media经典桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然后登录您的帐户。
+
+   您的凭据和登录是在设置时由Adobe提供的。 如果您没有此信息，请与技术支持联系。
+
+1. 在全局导航栏上，单击&#x200B;**[!UICONTROL 上传]**。
 1. 在上传页面左上角附近，单击&#x200B;**[!UICONTROL 通过FTP]**&#x200B;选项卡。
 1. 在页面左侧，选择要从中上传文件的FTP文件夹；在页面的右侧，选择目标文件夹。
 1. 在页面右下角附近，单击&#x200B;**[!UICONTROL 作业选项]**，然后根据您选择的文件夹中的资产设置所需的选项。
@@ -178,12 +182,12 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
    >[!NOTE]
    >
-   >当您通过FTP上传资产时，您在Dynamic Media Classic(S7)中设置的上传作业选项优先于在[!DNL Experience Manager]中设置的资产处理参数。
+   >通过FTP上传资产时，您在Dynamic Media经典(S7)中设置的上传作业选项优先于在[!DNL Experience Manager]中设置的资产处理参数。
 
 1. 在“上传作业选项”对话框的右下角，单击&#x200B;**[!UICONTROL 保存]**。
 1. 在上传页面的右下角，单击&#x200B;**[!UICONTROL 提交上传]**。
 
-   要视图上传的进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页面显示上传的进度。 您可以继续在[!DNL Experience Manager]中工作，并随时返回Dynamic Media Classic中的“作业”页面以查看正在进行的作业。
+   要视图上传的进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页面显示上传的进度。 您可以继续在[!DNL Experience Manager]中工作，并随时返回Dynamic Media经典中的“作业”页面以查看正在进行的作业。
 要取消正在进行的上载作业，请单击“持续时间”旁边的**[!UICONTROL 取消]**。
 
 #### 上传作业选项{#upload-job-options}
@@ -205,7 +209,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 |  | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成电子目录、设置分辨率和选择色彩空间。<br> 请注意，中不支持eCatalog [!DNL Experience Manager]。<br> 请参 [阅设置PDF上传选项](#setting-pdf-upload-options)。 |
 |  | Illustrator选项 | 您可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率和选择色彩空间。<br> 请参 [阅设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
 |  | EVideo选项 | 您可以通过选择视频预设对视频文件进行转码。<br> 请参 [阅设置eVideo上传选项](#setting-evideo-upload-options)。 |
-|  | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置／批集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
+|  | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media经典的“应用程序设置／批量集预设”页面中创建预设。<br> 请参 [阅将批集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
 
 #### 在上传时设置图像编辑选项{#setting-image-editing-options-at-upload}
 
@@ -252,7 +256,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您要上传大
 
 Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时，可以从文件自动创建图像模板（在“上传”屏幕上选择[!UICONTROL “创建模板]”选项）。
 
-如果您使用PSD文件创建模板，Dynamic Media会使用图层从PSD文件创建多个图像；它为每个图层创建一个图像。
+Dynamic Media用图层从PSD文件创建多幅图像；它为每个图层创建一个图像。
 
 使用上述的[!UICONTROL 裁剪选项]和[!UICONTROL 颜色用户档案选项]，以及Photoshop上传选项。
 
@@ -471,7 +475,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
    * 单击&#x200B;**[!UICONTROL 取消]**&#x200B;以停止该进程。
    >[!NOTE]
    >
-   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
+   >* 您可以为资产指定相同的名称，前提是新位置中没有使用该名称的资产。但是，如果您将资产移动到存在同名资产的位置，则应使用其他名称。 如果您使用相同的名称，系统将自动生成该名称的变体。 例如，如果您的资产的名称为“Square”，系统会为其副本生成名称“Square1”。
    >* 重命名时，文件名中不允许有空格。
 
 
@@ -487,7 +491,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    * 根据新的详细信息指定要调整的引用，然后单击&#x200B;**[!UICONTROL 移动]**&#x200B;以继续。
 
-   * 从&#x200B;**[!UICONTROL Adjust]**&#x200B;列中，选择／取消选择对资产的引用。
+   * 在&#x200B;**[!UICONTROL 调整]**&#x200B;列中，选择/取消选择对资产的引用。
    * 单击&#x200B;**[!UICONTROL 返回]**&#x200B;返回至&#x200B;**[!UICONTROL 选择目标]**&#x200B;屏幕。
 
    * 单击&#x200B;**[!UICONTROL 取消]**&#x200B;以停止移动操作。
