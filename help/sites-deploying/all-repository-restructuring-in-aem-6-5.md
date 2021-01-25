@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+source-git-commit: 838e194f699b0832839c80f4ba9503c9d5a15945
 workflow-type: tm+mt
 source-wordcount: '2721'
 ht-degree: 2%
@@ -85,7 +85,7 @@ ht-degree: 2%
    <td><strong>重组指导</strong></td>
    <td><p>任何新的或修改的工作流模型都必须迁移到/conf/global/workflow/models。</p>
     <ol>
-     <li>将修改后的工作流模型部署到本地AEM 6.4开发实例中，以便它们存在于“上一个”位置。</li>
+     <li>将修改后的工作流模型部署到本地AEM 6.5开发实例中，这样它们就存在于上一个位置。</li>
      <li>使用AEM Workflow Model Editor编辑工作流模型，其地址为AEM &gt;工具&gt;工作流&gt;模型。</li>
      <li>迁移修改的AEM提供的工作流模型时
       <ol>
