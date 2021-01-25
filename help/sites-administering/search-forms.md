@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 13%
@@ -392,7 +392,7 @@ ht-degree: 13%
 
 * **选项路径**
 
-   用户可以使用谓词设置选项卡中的路径浏览器选择路径。 选择&#x200B;**+**&#x200B;图标后，将选择添加到有效选项列表（如果需要，将&#x200B;**-**&#x200B;图标删除）。
+   用户可以使用谓词设置选项卡中的路径浏览器选择路径。 选择&#x200B;**+**&#x200B;图标后，将选择添加到有效选项列表（然后根据需要删除&#x200B;**-**&#x200B;图标）。
 
    这些选项是用户创建的内容节点，其结构如下：
 
@@ -414,7 +414,7 @@ ht-degree: 13%
 
 ### 创建／打开自定义配置{#creating-opening-a-customized-configuration}
 
-1. 导航到&#x200B;**工具**、**操作**、**搜索Forms**。
+1. 导航到&#x200B;**工具**、**常规**、**搜索Forms**。
 
 1. 选择要自定义的配置。
 1. 使用&#x200B;**编辑**&#x200B;图标打开要更新的配置。
