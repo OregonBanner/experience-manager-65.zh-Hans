@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 Service Pack 7的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: eec0e8f466c4a228b16ee2c1249052bfc3250dec
 workflow-type: tm+mt
-source-wordcount: '4255'
+source-wordcount: '4302'
 ht-degree: 6%
 
 ---
@@ -465,6 +465,8 @@ B.使用包管理器](https://helpx.adobe.com/cn/experience-manager/aem-previous
 | 连接器 | 针对Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR Connector已在AEM 6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
+
+* 如果由于锁定的组件注册表计时器而在[!DNL Experience Manager]响应中遇到问题，请[安装此包](https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr/2.1.20)。 这些问题的解决方案计划在下一个[Experience Manager服务包版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-on-prem-managed-services)中包含。
 
 * 在安装Experience Manager6.5.7.0时，忽略`error.log`文件中的以下错误：
 
