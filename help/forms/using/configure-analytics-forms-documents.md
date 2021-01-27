@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 5aa2fe48578633cbe5e4324f9e956e1dbbdab8af
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1533'
 ht-degree: 1%
 
 ---
@@ -111,7 +111,7 @@ AEM Forms与Adobe Analytics集成，使您能够捕获和跟踪已发布表单�
 Cloud Service配置是关于您的Adobe Analytics帐户的信息。 此配置使Adobe Experience Manager(AEM)能够连接到Adobe Analytics。 为您使用的每个Analytics帐户创建单独的配置。
 
 1. 以管理员身份登录到AEM作者实例。
-1. 在左上角，单击&#x200B;**Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **部署** > **Cloud Services**。
+1. 在左上角，单击&#x200B;**Adobe Experience Manager** > **工具** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **旧Cloud Services**。
 1. 找到&#x200B;**Adobe Analytics**&#x200B;图标。 单击&#x200B;**显示配置**，然后继续单击&#x200B;**[+]**&#x200B;添加新配置。
 
    如果您是首次使用的用户，请单击&#x200B;**立即配置**。
