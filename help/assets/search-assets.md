@@ -1,12 +1,12 @@
 ---
-title: 在 [!DNL Adobe Experience Manager]中搜索数字资产和图像。
+title: 在 [!DNL Adobe Experience Manager]中搜索数字资产和图像
 description: 了解如何使用“过滤器”面板在 [!DNL Adobe Experience Manager] 中查找所需的资产，以及如何使用在搜索中显示的资产。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: 38ef8d8bd574933fdc57d7475831518f9d7f293e
 workflow-type: tm+mt
-source-wordcount: '5767'
+source-wordcount: '5716'
 ht-degree: 6%
 
 ---
@@ -155,28 +155,28 @@ ht-degree: 6%
 您可以根据特定元数据字段的确切值（如标题、描述和作者）搜索资产。 GQL全文搜索功能只获取元数据值与搜索查询完全匹配的资产。 属性的名称（例如作者、标题等）和值区分大小写。
 
 | 元数据字段 | Facet值和用法 |
-| ----------------------------------------- | ------------------------------------- |
-| 标题 | title:John |
-| 创建者 | creator:John |
-| 位置 | 位置：NA |
-| 描述 | description:&quot;Sample Image&quot; |
-| 创建程序工具 | creatortool:&quot;Adobe Photoshop CC2020&quot; |
-| 版权所有者 | copyrightowner:&quot;Adobe Systems&quot; |
-| 参与者 | contributor:John |
-| 使用条款 | usageterms:&quot;CopyRights Reserved&quot; |
-| 创建时间 | created:YYYY-MM-DDTHH |
-| 过期日期 | expires:YYYY-MM-DDTHH |
-| 开始时间 | ontime:YYYY-MM-DDTHH |
-| 结束时间 | offtime:YYYY-MM-DDTHH |
-| 时间范围（过期日期、开始时间、结束时间） | facet字段：lowerbound...上界 |
+| ----------------------------------------- | --------------------------------------- |
+| 标题 | `title:John` |
+| 创建者 | `creator:John` |
+| 位置 | `location:NA` |
+| 描述 | `description:"Sample Image"` |
+| 创建者工具 | `creatortool:"Adobe Photoshop CC 2020"` |
+| 版权所有者 | `copyrightowner:"Adobe Systems"` |
+| 参与者 | `contributor:John` |
+| 使用条款 | `usageterms:"CopyRights Reserved"` |
+| 创建时间 | `created`:YYYY-MM-DDTHH |
+| 过期日期 | `expires`:YYYY-MM-DDTHH |
+| 开始时间 | `ontime`:YYYY-MM-DDTHH |
+| 结束时间 | `offtime`:YYYY-MM-DDTHH |
+| 时间范围（过期日期、开始时间、结束时间） | `facet field`:lowerbound...上界 |
 | 路径 | /content/dam/&lt;folder name> |
-| PDF 标题 | pdftitle:&quot;Adobe Document&quot; |
-| 主题 | subject:&quot;Training&quot; |
-| 标记 | tags:&quot;Location And Travel&quot; |
-| 类型 | type:&quot;image\png&quot; |
-| 图像宽度 | width:lowerbound..上界 |
-| 图像高度 | height:lowerbound...上界 |
-| 人员 | person:John |
+| PDF 标题 | `pdftitle`:&quot;Adobe文档&quot; |
+| 主题 | `subject:"Training"` |
+| 标记 | `tags:"Location And Travel"` |
+| 类型 | `type:"image\png"` |
+| 图像宽度 | `width`:lowerbound..上界 |
+| 图像高度 | `height`:lowerbound..上界 |
+| 人员 | `person:John` |
 
 不能将属性`path`、`limit`、`size`和`orderby`与任何其他属性一起使用`OR`运算符。
 
@@ -198,7 +198,7 @@ ht-degree: 6%
 
 ### 从“Adobe资产链接”面板{#aal}搜索资产
 
-使用Adobe资源链接，创意专业人士现在可以访问存储在[!DNL Experience Manager Assets]中的内容，而无需离开受支持的Adobe Creative Cloud应用程序。 创意人员可以使用[!DNL Adobe Creative Cloud apps]中的应用程序内面板无缝地浏览、搜索、注销和登记资产：[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]。 资产链接还允许用户搜索视觉效果相似的结果。 可视搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户找到美学上相似的图像。 请参阅使用Adobe资产链接搜索和浏览资产[。](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)
+使用Adobe资源链接，创意专业人士现在可以访问存储在[!DNL Experience Manager Assets]中的内容，而无需离开受支持的Adobe Creative Cloud应用程序。 创意人员可以使用[!DNL Adobe Creative Cloud apps]中的应用程序内面板无缝地浏览、搜索、注销和登记资产：[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]。 资产链接还允许用户搜索视觉效果相似的结果。 可视搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户找到美学上相似的图像。 请参阅使用Adobe资产链接搜索和浏览资产](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)。[
 
 ### 在[!DNL Experience Manager]桌面应用程序{#desktopapp}中搜索资产
 
@@ -239,12 +239,12 @@ ht-degree: 6%
 | 名称 | 值 | 示例 | 用途 |
 |---|---|---|---|
 | 资源后缀(B) | 作为URL中资源后缀的文件夹路径：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 要启动资产选择器并选择特定文件夹（例如，选择了文件夹`/content/dam/we-retail/en/activities`）,URL应采用以下形式：[https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | 如果在启动资产选择器时需要选择特定文件夹，请将其作为资源后缀进行传递。 |
-| 模式 | 单个，多个 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 在多个模式下，您可以使用资产选择器同时选择多个资产。 |
-| 对话框 | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框的形式打开资产选择器。 仅当您通过Granite路径字段启动资产选择器并将其配置为pickerSrc URL时，此选项才适用。 |
-| 根 | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | 使用此选项可指定资产选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接／间接）。 |
-| viewmode | 搜索 |  | 要在搜索模式下启动资产选择器，请使用资产类型和mimetype参数。 |
-| assettype | 图像，文档，多媒体，存档 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 使用此选项可根据传递的值筛选资产类型。 |
-| mimetype | 资产的mimetype(s)(`/jcr:content/metadata/dc:format`)（还支持通配符） | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它根据MIME类型筛选资产 |
+| `mode` | 单个，多个 | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 在多个模式下，您可以使用资产选择器同时选择多个资产。 |
+| `dialog` | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框的形式打开资产选择器。 仅当您通过Granite路径字段启动资产选择器并将其配置为pickerSrc URL时，此选项才适用。 |
+| `root` | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities) | 使用此选项可指定资产选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接／间接）。 |
+| `viewmode` | 搜索 |  | 要在搜索模式下启动资产选择器，请使用资产类型和mimetype参数。 |
+| `assettype` | 图像、文档、多媒体、存档。 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 使用此选项可根据提供的值筛选资产类型。 |
+| `mimetype` | 资产的MIME类型(`/jcr:content/metadata/dc:format`)（也支持通配符）。 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | 使用它可以根据MIME类型筛选资产。 |
 
 要访问资产选择器接口，请转至`https://[aem_server]:[port]/aem/assetpicker`。 导航到所需的文件夹，然后选择一个或多个资产。 或者，从搜索框中搜索所需的资产，根据需要应用筛选器，然后选择它。
 
@@ -263,7 +263,7 @@ ht-degree: 6%
 
 视觉搜索或相似性搜索具有以下限制：
 
-* 视觉搜索最适合于较大的存储库。 尽管没有获得最佳结果所需的最少图像数，但与几个图像匹配的质量可能不如来自大型存储库的匹配质量好。
+* 视觉搜索在大型存储库中效果最佳。 尽管没有获得最佳结果所需的最少图像数，但与几个图像的匹配质量不如来自大型存储库的匹配质量好。
 * 不能更改模型或训练[!DNL Experience Manager]以查找类似图像。 例如，向少数资产添加或删除智能标记不会更改模型。 资产会从视觉上相似的搜索结果中排除。
 
 在以下情况下，搜索功能可能存在性能限制：
@@ -297,8 +297,8 @@ ht-degree: 6%
 **使用星号通配符搜索**:要扩大搜索范围，请在搜索单词之前或之后使用星号来匹配任意数量的字符。例如，搜索不带星号的运行不会返回包含该单词任何变体（包括在元数据中）的资产。 星号可替换任意数量的字符。 例如，
 
 * `run` 返回具有完全运行关键字的资产
-* `run*` 返回资产，包括流动、流动、失控等。
-* `*run` 返回结束、重新运行等。
+* `run*` 返回 `running`资产 `run`, `runaway`包括、等等。
+* `*run` 返回 `outrun`资产 `rerun`等等。
 * `*run*` 返回所有可能的组合。
 
 ![通过示例说明在资产搜索中使用星号通配符](assets/search_with_asterisk_run.gif)
@@ -455,7 +455,7 @@ ht-degree: 6%
 | 搜索元数据缺失的资产时结果不正确。 | 在搜索缺少必需元数据的资产时，[!DNL Experience Manager]可能会显示一些具有有效元数据的资产。 结果基于索引元数据属性。 | 更新元数据后，需要重新编制索引以反映资产元数据的正确状态。 请参阅[必需元数据](metadata-schemas.md#define-mandatory-metadata)。 |
 | 搜索结果太多。 | 广泛的搜索参数。 | 请考虑限制搜索范围[](#scope)。 使用智能标记可能会为您带来超出预期的搜索结果。 请参阅[使用智能标记的搜索行为](#withsmarttags)。 |
 | 不相关或部分相关的搜索结果。 | 搜索行为会随智能标记而改变。 | 了解[搜索在智能标记](#withsmarttags)后的变化。 |
-| 没有资产自动完成建议。 | 尚未对新上传的资产建立索引。 当您在Omnisearch栏中开始键入搜索关键字时，元数据不会立即作为建议可用。 | [!DNL Assets] 等到超时期（默认为一小时）到期后，运行后台作业为所有新上传或更新的资产索引元数据，然后将元数据添加到建议列表。 |
+| 没有资产自动完成建议。 | 尚未对新上传的资产建立索引。 当您在Omnisearch栏中开始键入搜索关键字时，元数据不会立即作为建议可用。 | [!DNL Experience Manager] 等到超时期（默认为一小时）到期后，运行后台作业为所有新上传或更新的资产索引元数据，然后将元数据添加到建议列表。 |
 | 无搜索结果. | <ul><li>与您的查询匹配的资产不存在。 </li><li> 在搜索查询前添加了空白。 </li><li> 不支持的元数据字段包含您搜索的关键字。</li><li> 在资产的非正常时间进行搜索。 </li></ul> | <ul><li>使用其他关键字进行搜索。 或者，使用智能标记或相似性搜索来改进搜索结果。 </li><li>[已知限制](#limitations)。</li><li>搜索时不会考虑所有元数据字段。 请参阅[范围](#scope)。</li><li>稍后搜索或修改所需资产的按时和离时。</li></ul> |
 | 搜索筛选器或谓词不可用。 | <ul><li>未配置搜索筛选器。</li><li>登录时不提供此选项。</li><li>（不太可能）搜索选项未在您所使用的部署上进行自定义。</li></ul> | <ul><li>联系管理员以检查搜索自定义是否可用。</li><li>联系管理员以检查您的帐户是否具有使用自定义项的权限／权限。</li><li>联系管理员并检查您正在使用的[!DNL Assets]部署的可用自定义项。</li></ul> |
 | 在搜索视觉上相似的图像时，缺少期望的图像。 | <ul><li>映像在[!DNL Experience Manager]中不可用。</li><li>图像未编制索引。 通常，在最近上传时。</li><li>图像未标记为智能图像。</li></ul> | <ul><li>将图像添加到[!DNL Assets]。</li><li>请与管理员联系以重新为存储库编制索引。 另外，请确保您使用的是适当的索引。</li><li>与管理员联系以智能标记相关资产。</li></ul> |
