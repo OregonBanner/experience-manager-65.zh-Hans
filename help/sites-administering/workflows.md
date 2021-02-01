@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5a99daa208d1d109d2736525fdca3accdcfb4dd1
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 0%
+source-wordcount: '788'
+ht-degree: 2%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 您的组织已建立的业务流程可以表示为工作流。 例如，发布网站内容的过程通常包括由不同的利益相关方批准和注销等步骤。 这些过程可以作为AEM工作流实施并应用于内容页面和资产。
 
-* [开始工作流](/help/sites-administering/workflows-starting.md)
+* [启动工作流](/help/sites-administering/workflows-starting.md)
 * [管理工作流实例](/help/sites-administering/workflows-administering.md)
-* [管理对工作流的访问](/help/sites-administering/workflows-managing.md)
+* [管理对工作流的访问权限](/help/sites-administering/workflows-managing.md)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ AEM提供了许多有用的工作流模型。 此外，您组织中的开发人�
 * **正在运行**:工作流实例正在运行。
 * **已完成**:工作流实例已成功结束。
 
-* **暂停**:工作流实例已挂起。
+* **暂停**:将工作流标记为已挂起。但是，请参阅下面有关此状态的已知问题的警告说明。
 * **中止**:工作流实例已终止。
 * **STALE**:工作流实例的进度要求执行后台作业，但在系统中找不到该作业。当执行工作流时出错时，可能会发生这种情况。
 
@@ -107,7 +107,12 @@ AEM提供了许多有用的工作流模型。 此外，您组织中的开发人�
 
 根据当前状态，当需要干预工作流实例的正常进度时，您可以对运行工作流实例执行以下操作：
 
-* **暂停**:暂时停止执行工作流。当您不希望工作流继续进行时（例如维护），挂起在特殊情况下很有用。 暂停会将工作流状态更改为“暂停”。
+* **暂停**:暂停会将工作流状态更改为“暂停”。请参阅下面的警告：
+
+>[!CAUTION]
+>
+>将工作流状态标记为“暂停”存在已知问题。 在此状态下，可以对收件箱中挂起的工作流项目执行操作。
+
 * **继续**:在暂停的同一执行点使用相同的配置重新启动暂停的工作流。
 * **终止**:结束工作流执行并将状态更改为 **ABORTED**。无法重新启动中止的工作流实例。
 
