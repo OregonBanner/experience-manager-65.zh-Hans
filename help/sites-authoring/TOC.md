@@ -5,12 +5,12 @@ solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Authoring 用户指南
 breadcrumb-title: Authoring 指南
-user-guide-description: 了解在 AEM 中创建内容和创作的主要概念。
+user-guide-description: 了解在 AEM 中创建内容、进行编辑创作的主要概念。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '284'
-ht-degree: 92%
+source-wordcount: '291'
+ht-degree: 90%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 92%
    + [使用工作流](workflows.md)
    + [将工作流应用于页面](workflows-applying.md)
    + [参与工作流](workflows-participating.md)
-   + [使用项目工作流](projects-with-workflows.md)
+   + [使用项目工作流](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html)
 + 页面性能{#page-performance}
    + [内容分析](content-insights.md)
    + [分析页面性能](ci-analyze.md)
