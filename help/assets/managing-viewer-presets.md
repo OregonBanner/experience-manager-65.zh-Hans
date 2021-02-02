@@ -10,7 +10,7 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: fff2c39561f54436f8e5613ac648cb91af888c66
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 23%
@@ -55,7 +55,7 @@ ht-degree: 23%
 
 不同的网页有不同的需求。 例如，有时您希望网页提供链接，在单独的浏览器窗口中打开HTML5查看器。 在其他情况下，可能需要将HTML5查看器直接嵌入到托管页面。 在后一种情况下，网页可能具有静态布局。 或者，它可能是“响应式”的，并在不同设备或不同浏览器窗口大小下以不同方式显示。 为了满足这些需求，Dynamic Media附带的所有预定义现成HTML5查看器都支持静态网页和响应式设计网页。
 
-有关如何将响应式查看器嵌入到网页上的更多信息，请参阅中的[响应式图像库](https://experienceleague.corp.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html)。
+有关如何将响应式查看器嵌入到网页上的更多信息，请参阅中的[响应式图像库](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html)。
 
 >[!NOTE]
 >
