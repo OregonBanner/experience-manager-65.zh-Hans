@@ -6,9 +6,9 @@ user-guide-title: AEM 6.5 Mobile 用户指南
 breadcrumb-title: Mobile 指南
 user-guide-description: 创建和管理移动应用程序的内容。
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '331'
 ht-degree: 12%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 12%
    + [移动应用程序的页面模板](phonegap-apps-arch-page-templates.md)
    + [配置Adobe TargetCloud Service](aem-mobile-configuring-cloud-service.md)
    + [单页应用程序](phonegap-single-page-applications.md)
-   + [存储库中的模型](administer-mobile-apps.md)
+   + [存储库中的模型](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/administering/administer-mobile-apps.html)
    + [启动AEM PhoneGap](starting-aem-phonegap-app.md)
    + [测试移动应用程序](develop-mobile-apps-testing.md)
    + [构建应用程序](phonegap-structure-an-app.md)
