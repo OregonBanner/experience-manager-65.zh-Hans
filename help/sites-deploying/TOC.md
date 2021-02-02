@@ -7,9 +7,9 @@ user-guide-title: AEM 6.5 Deploying 指南
 breadcrumb-title: Deploying 指南
 user-guide-description: 详细了解 Adobe Experience Manager 6.5 的安装、部署和架构，包括我们的 Adobe Managed Services 云部署。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '352'
 ht-degree: 18%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 18%
    + [自定义独立安装](custom-standalone-install.md)
    + [命令行启动和停止](command-line-start-and-stop.md)
    + [在AEM 6中配置节点存储和数据存储](data-store-config.md)
-   + [修订清理](revision-cleanup.md)
+   + [修订版清理](revision-cleanup.md)
    + [Oak查询和索引](queries-and-indexing.md)
    + [如何使用TarMK Cold Standby运行AEM](tarmk-cold-standby.md)
    + [AEM 6.5中的RDBMS支持](rdbms-support-in-aem.md)
@@ -55,7 +55,7 @@ ht-degree: 18%
    + [卸载作业](offloading.md)
    + [单一登录](single-sign-on.md)
    + [资源映射](resource-mapping.md)
-   + [启用HTTP Over SSL](/help/sites-administering/ssl-by-default.md)
+   + [启用HTTP Over SSL](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html)
    + [一致性和遍历检查](consistency-check.md)
    + [性能指南](performance-guidelines.md)
    + [性能优化](configuring-performance.md)
@@ -84,7 +84,7 @@ ht-degree: 18%
    + [AEM 6.5中的常见存储库重组](all-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的站点存储库重组](sites-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的资产存储库重组](assets-repository-restructuring-in-aem-6-5.md)
-   + [AEM 6.5中的Dynamic Media存储库重组](dynamicmedia-repository-restructuring-in-aem-6-5.md)
+   + [Dynamic Media6.5中的存储库重组](dynamicmedia-repository-restructuring-in-aem-6-5.md)
    + [Forms6.5中的存储库重组](forms-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的电子商务存储库重组](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [6.5中的AEM Communities库重组](communities-repository-restructuring-in-aem-6-5.md)
