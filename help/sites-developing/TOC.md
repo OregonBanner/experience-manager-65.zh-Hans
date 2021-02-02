@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 Developing 用户指南
 breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 13%
+source-wordcount: '905'
+ht-degree: 16%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 13%
    + 查询生成器{#query-builder}
       + [为查询生成器实施自定义谓词计算器](implementing-custom-predicate-evaluator.md)
       + [查询生成器谓词引用](querybuilder-predicate-reference.md)
-      + [查询生成器API](querybuilder-api.md)
+      + [查询生成器 API](querybuilder-api.md)
    + 标记{#tagging}
       + [标记](tags.md)
       + [AEM Tagging Framework](framework.md)
@@ -74,7 +74,7 @@ ht-degree: 13%
       + [使用SAPCommerce Cloud进行开发](sap-commerce-cloud.md)
 + 组件{#components}
    + [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-   + [样式系统](/help/sites-authoring/style-system.md)
+   + [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [组件概述](components.md)
    + [AEM组件——基础知识](components-basics.md)
    + [开发AEM组件](developing-components.md)
@@ -82,7 +82,7 @@ ht-degree: 13%
    + [内容服务的JSON导出程序](json-exporter.md)
    + [为组件启用JSON导出](json-exporter-components.md)
    + [图像编辑器](image-editor.md)
-   + [装饰标签](decoration-tag.md)
+   + [修饰标记](decoration-tag.md)
    + [使用隐藏条件](hide-conditions.md)
    + [配置多个就地编辑器](multiple-inplace-editors.md)
    + [开发人员模式](developer-mode.md)
@@ -101,13 +101,13 @@ ht-degree: 13%
       + [开发Forms（经典UI）](developing-forms.md)
 + 无外设体验管理{#headless}
    + [具有AEM的无头和混合](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-   + [为组件启用JSON导出](json-exporter-components.md)
+   + [为组件启用JSON导出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 单页应用程序{#spas}
       + [SPA简介和演练](spa-walkthrough.md)
       + [SPA WKND教程](spa-wknd.md)
       + [SPA AEM入门——反应](spa-getting-started-react.md)
       + [SPA AEM入门——角度](spa-getting-started-angular.md)
-      + [为SPA实施React Component](spa-implementing-react-component.md)
+      + [为 SPA 实施 React 组件](spa-implementing-react-component.md)
       + [SPA深海潜水](spa-deep-dives.md)
       + [SPA编辑器概述](spa-overview.md)
       + [为AEM开发SPA](spa-architecture.md)
@@ -118,9 +118,9 @@ ht-degree: 13%
       + [SPA和Adobe Experience Platform Launch集成](spa-launch.md)
       + [SPA和服务器端渲染](spa-ssr.md)
       + [SPA参考材料](spa-reference-materials.md)
-   + [HTTP API](/help/assets/mac-api-assets.md)
-   + [内容片段](/help/assets/content-fragments/content-fragments.md)
-   + [体验片段](/help/sites-authoring/experience-fragments.md)
+   + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
+   + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+   + [体验片段](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
    + [了解AEM中的内容片段和内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 开发工具{#devtools}
    + [开发工具](dev-tools.md)
@@ -136,7 +136,7 @@ ht-degree: 13%
    + [如何使用代理服务器工具](ht-proxy-server.md)
    + [AEM Brackets扩展](aem-brackets.md)
    + [AEM Developer Tools for Eclipse](aem-eclipse.md)
-   + [AEM Repo工具](aem-repo-tool.md)
+   + [AEM Repo 工具](aem-repo-tool.md)
 + 个性化{#personlization}
    + [ContextHub](contexthub.md)
    + [配置Context Hub](ch-configuring.md)
@@ -165,7 +165,7 @@ ht-degree: 13%
       + [以编程方式与工作流交互](workflows-program-interaction.md)
       + [工作流步骤参考](workflows-step-ref.md)
       + [工作流最佳实践](workflows-best-practices.md)
-      + [工作流进程参考](workflows-process-ref.md)
+      + [工作流过程参考](workflows-process-ref.md)
       + [AEM工作流中的变量](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [扩展多站点管理器](extending-msm.md)
    + 跟踪和分析{#extending-analytics}
@@ -181,12 +181,12 @@ ht-degree: 13%
       + [创建自定义表单映射](extending-campaign-form-mapping.md)
       + [使用Adobe Campaign表单组件创建自定义AEM页面模板](extending-campaign-custom-template.md)
       + [请求分析脚本](analyze-request.md)
-   + [将服务与JMX控制台集成](jmx-integration.md)
-   + [开发批量编辑器](dev-bulk-editor.md)
+   + [将服务与JMX控制台集成](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html)
+   + [开发批量编辑器](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html)
    + 扩展经典UI{#extending-classic-ui}
       + [自定义网站控制台（经典UI）](customizing-siteadmin.md)
       + [自定义欢迎控制台（经典UI）](customizing-the-welcome-console.md)
-      + [开发报告](dev-reports.md)
+      + [开发报告](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html)
 + 测试{#testing}
    + [规划](planning.md)
    + [需要哪些测试环境?](test-environments.md)
@@ -199,10 +199,10 @@ ht-degree: 13%
    + [下一个版本……](the-next-release.md)
    + [检查列表](checklists.md)
    + [苦日](tough-day.md)
-   + [测试UI](hobbes.md)
+   + [测试UI](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
 + 最佳实践{#bestpractices}
    + [最佳实践概述](best-practices.md)
-   + [AEM开发指南和最佳实践](dev-guidelines-bestpractices.md)
+   + [AEM开发指南和最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html)
    + [开发最佳实践](development-practices.md)
    + [内容架构](content-architecture.md)
    + [软件架构](software-architecture.md)
