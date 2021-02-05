@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ade3747ba608164a792a62097b82c55626245891
+source-git-commit: 2d54d115529126162c92e9943a188d05159535f9
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,6 @@ ht-degree: 0%
 ### 先决条件{#pre-requisites}
 
 * 启用[在客户端](prepopulate-adaptive-form-fields.md#prefill-at-client)合并或预填数据选项。 它有助于合并预填表单的每个实例的唯一数据。
-* [为每个发布实例启用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。它有助于为自适应表单获得更好的缓存性能。 刷新代理的默认URL为`http://[server]:[port]]/etc/replication/agents.publish/flush.html`。
 
 ### 在调度程序{#considerations}上缓存自适应表单的注意事项
 
@@ -63,7 +62,7 @@ ht-degree: 0%
 
 执行以下列出的步骤，在调度程序上启用和配置缓存自适应表单：
 
-1. 打开环境的每个发布实例的以下URL并配置复制代理：
+1. 为环境的每个发布实例打开以下URL，并[为环境的发布实例启用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
 1. [将以下内容添加到调度程序。any文件](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
@@ -143,17 +142,7 @@ ht-degree: 0%
 
 发布图像和视频后，显式取消发布和发布引用这些资产的自适应表单。
 
-### 某些包含内容片段或体验片段的自适应表单不会从调度程序缓存{#content-or-experience-fragment-not-auto-invalidated}自动失效
-
-#### 带有 OS 剪贴板 {#issue2}
-
-当您向自适应表单中添加内容片段或体验片段并且这些资产被独立编辑和发布时，自适应表单包含这些资产不会自动从调度程序缓存中失效。
-
-#### 解决方案{#Solution2}
-
-发布更新的内容片段或体验片段后，显式取消发布并发布使用这些资产的自适应表单。
-
-### 只缓存自适应表单的第一个实例{#only-first-insatnce-of-adptive-forms-is-cached}
+### 只缓存自适应表单的第一个实例{#only-first-instance-of-adaptive-forms-is-cached}
 
 #### 带有 OS 剪贴板 {#issue3}
 
