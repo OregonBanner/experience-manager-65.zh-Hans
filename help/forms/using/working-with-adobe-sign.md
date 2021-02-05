@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77c3624a780bd0d2e3bb3e82004cce73e5b66b32
+source-git-commit: fd9ee8e4eb35bd5d303d7bbdd9660a94c54925ff
 workflow-type: tm+mt
-source-wordcount: '3827'
+source-wordcount: '3859'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,8 @@ ht-degree: 0%
 * 以匿名或登录用户身份对表单进行签名
 * 动态签名流程(与AEM [!DNL Forms]工作流程集成)
 * 通过知识库、电话和社交用户档案进行身份验证
+
+了解使用Adobe Sign语与自适应表单](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)的最佳实践，以创建更好的签名体验。[
 
 ## 前提条件 {#prerequisites}
 
@@ -327,7 +329,7 @@ ht-degree: 0%
 
 **Adobe Sign块：** 您可以使用 [!UICONTROL Adobe Sign] 块在自适 [!UICONTROL 应表单] 的任意位置添加Adobe信号字段。它还有助于为签名者分配特定字段。 当预览或发布自适应表单时[!UICONTROL Adobe Sign]块在默认情况下不可见。 这些块仅在签名文档中启用。 在签名文档中，只启用分配给签署方的字段。 [!UICONTROL Adobe] 信号块可以与第一个和后续签名者一起使用。
 
-**签名步骤组** 件：您可以使用签名步骤组件创建表单内签名体验。它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 它通常是表单的最后一个或倒数第二个部分，后跟摘要组件。
+**签名步骤组** 件：您可以使用签名步骤组件创建表单内签名体验。它仅允许第一个签署方在填写表单时进行签名。 呈现包含签名步骤组件的部分时，将显示表单的可签名PDF版本。 通常是表单的最后一个或倒数第二个部分，后面是摘要组件。
 
 ## 故障诊断 {#troubleshoot}
 
@@ -357,5 +359,5 @@ ht-degree: 0%
 ## 相关文章{#related-articles}
 
 * [将Adobe Sign与AEM Forms整合](../../forms/using/adobe-sign-integration-adaptive-forms.md)
-* [以自适应形式使用Adobe Sign](../../forms/using/working-with-adobe-sign.md)
+* [将Adobe Sign与自适应表单结合使用的最佳实践](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)
 * [将Adobe Sign与AEM Forms结合使用（视频）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
