@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '541'
-ht-degree: 56%
+ht-degree: 62%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 56%
 
 >[!CAUTION]
 >
->自 AEM 6.3 以后提供的新版 Oak Segment Tar 需要存储库迁移。如果要从旧版TarMK升级，或希望从其他类型的持久性切换新的段Tar，则此步骤是必需的。 有关新的Segment Tar的优势的更多信息，请参见[迁移到Oak Segment Tar常见问题解答](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
+>自 AEM 6.3 以后提供的新版 Oak Segment Tar 需要存储库迁移。如果要从旧版本的 TarMK 升级或想要从其他类型的持久性切换新的 Tar 区段，那么必须执行此步骤。有关新的Segment Tar的优势的更多信息，请参见[迁移到Oak Segment Tar常见问题解答](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
 
 ### Java 支持 {#java-support}
 
@@ -31,7 +31,7 @@ ht-degree: 56%
 
 ### OSGI {#osgi}
 
-* 添加了OSGi Promies和Converter实用程序库。
+* 添加了 OSGi Promises 和 Converter 实用程序库.
 
 ### 项目和工作流 {#projects-and-workflows}
 
@@ -51,7 +51,7 @@ ht-degree: 56%
 对 UI 进行了各种增强，使其更高效，更易于使用。
 
 * AEM 6.5 为用户和组引入了新的权限管 UI，使其更易于查看和配置整套权限和限制，而无需转至 CRXDE。
-* 列视图现在也只加载屏幕上可见的条目，并且仅在用户开始滚动时加载更多条目。列表视图和卡片视图已在 6.0 之后的版本中实现了此功能（在 6.4 中进行了改进）。
+* 列视图现在也只加载屏幕上可见的条目，并且仅在用户开始滚动时加载更多条目。列表视图和卡片视图已在 6.0 之后的版本中实现了此功能（在 6.4 中进行了改进）.
 * 列视图现在包括页面/资产的工作流状态（如果适用）.
 * 全选操作是一种快速方法，可以对同一文件夹中的所有页面/资产执行操作.
 * 全选操作会尝试对所有页面/资源执行操作，而不仅仅是加载的页面/资源。如果操作未升级以处理批量操作，则会显示警告。
