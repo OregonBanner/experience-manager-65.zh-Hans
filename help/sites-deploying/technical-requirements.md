@@ -374,17 +374,17 @@ Adobe Experience Manager的所有元素（实例、调度程序）都可以安�
 * `localhost`的默认情况将解释为IPv4和IPv6网络安装
 例如`https://localhost:4502`
 
-### AEM Dynamic Media Add-on {#requirements-for-aem-dynamic-media-add-on}的要求
+### AEMDynamic Media加载项{#requirements-for-aem-dynamic-media-add-on}的要求
 
-AEM Dynamic Media默认处于禁用状态。 请参阅此处[启用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)。
+AEMDynamic Media默认处于禁用状态。 请参阅此处[启用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)。
 
 启用Dynamic Media后，将适用以下附加技术要求。
 
 >[!NOTE]
 >
->如果您使用Dynamic Media —— 混合模式，则这些系统要求&#x200B;**仅**&#x200B;适用；Dynamic Media —— 混合模式具有嵌入式图像服务器，该服务器仅在某些操作系统上得到认证。
+>如果您使用Dynamic Media-混合模式，这些系统要求&#x200B;**仅**&#x200B;适用；Dynamic Media-混合模式具有嵌入式图像服务器，该服务器仅在某些操作系统上得到认证。
 >
->对于运行Dynamic Media -Scene7模式（即&#x200B;**dynamicmedia_scene7**&#x200B;运行模式）的Dynamic Media客户，没有其他系统要求；系统要求与AEM相同。 动态媒体-Scene7模式体系架构使用基于云的图像服务，而不是嵌入在AEM中的服务。
+>对于运行Dynamic Media-Scene7模式（即&#x200B;**dynamicmedia_scene7**&#x200B;运行模式）的Dynamic Media客户，没有其他系统要求；系统要求与AEM相同。 Dynamic Media-Scene7模式体系结构使用基于云的图像服务，而不是嵌入在AEM中的服务。
 
 #### 硬件{#hardware}
 
