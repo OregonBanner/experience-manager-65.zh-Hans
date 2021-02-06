@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 33%
+ht-degree: 39%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 33%
 
 ## 什么是AEM社区？{#what-is}
 
-AEM社区在全世界有成千上万的成员。 这些成员既包括 Experience Manager 新手，也包括经验丰富的专业开发人员和管理员。我们可以帮助您解决从AEM功能问题到开发问题的所有问题。 我们将与内部和外部专业用户定期举行专家会议，也会帮您制作各种样本、文章和教程。
+AEM社区在全世界有成千上万的成员。 这些成员既包括 Experience Manager 新手，也包括经验丰富的专业开发人员和管理员。我们时刻准备着帮您解答各种问题，包括关于 AEM 功能的问题和开发问题。我们将与内部和外部专业用户定期举行专家会议，也会帮您制作各种样本、文章和教程。
 
 [立即加入社区，访问最精炼的内容、认识最优秀的人士、学习最实用的知识。](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager) 它对所有人开放。如果你对AEM感兴趣，不客气。今天过来！
 
