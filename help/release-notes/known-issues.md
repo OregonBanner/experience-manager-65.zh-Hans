@@ -14,7 +14,7 @@ ht-degree: 44%
 
 此页面列出了于 2019 年 4 月发布的 Adobe Experience Manager 6.5 中存在的已知问题列表。
 
-如果您需要了解有关已知问题的更多信息，请[联系支持人员](https://helpx.adobe.com/cn/support/experience-manager.html)。
+如果您需要了解有关已知问题的更多信息，请[联系支持人员](https://helpx.adobe.com/support/experience-manager.html)。
 
 ## 平台 {#platform}
 
