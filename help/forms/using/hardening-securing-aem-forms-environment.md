@@ -77,7 +77,7 @@ AEM Forms高度可定制，可在多种不同的环境中工作。 某些建议�
     </ul> </td> 
   </tr>
   <tr>
-   <td>Forms门户 </td> 
+   <td>Forms Portal </td> 
    <td>
     <ul> 
      <li>/content/forms/portal/</li> 
