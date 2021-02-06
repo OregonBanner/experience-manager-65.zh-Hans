@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 25%
+ht-degree: 27%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 25%
 
 ## 简介 {#introduction}
 
-| [首要步骤](https://helpx.adobe.com/experience-manager/get-started.html) | [功能视频](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html) | [发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html) |
+| [首要步骤](https://helpx.adobe.com/cn/experience-manager/get-started.html) | [功能视频](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html) | [发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html) |
 |:-:|:-:|:-:|
 | 探索AEM入门教程和文章 | 精选视频，突出显示6.5新增功能 | 了解AEM 6.5的新增功能 |
 
