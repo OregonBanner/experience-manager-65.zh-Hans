@@ -364,7 +364,7 @@ Adobe Experience Manager6.5.6.0中引入的主要功能和增强功能包括：
 
 * 将内容从[!DNL Microsoft Word]文档复制粘贴到字母中的文本文档片段会导致格式问题(NPR-33536)。
 
-**Document Services**
+**文档服务**
 
 * 使用Output和Forms服务从XDP文件生成PDF文件时，会导致缺少文本和文本重叠(NPR-34237、CQ-4299331)。
 
@@ -464,7 +464,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 可单击的元素（如注释卡、版本更新、组合框和菜单的V形图标）现在可以使用键盘进行集中处理并与之交互(NPR-33514)。
 
-* [!UICONTROL Insights视图]上的洞察图标（用于使用、展示和点击）的功能（或操作目的）现在由屏幕阅读器正确宣布(NPR-33513)。
+* [!UICONTROL 分析视图符]上的分析图标（用于使用、展示和点击）的功能（或操作目的）现在由屏幕阅读器正确宣布(NPR-33513)。
 
 * 只读表单字段（例如资产[!UICONTROL 属性]的“基本”选项卡]上禁用的字段）现在可使用键盘(NPR-33493, CQ-4273031)聚焦。[!UICONTROL 
 
@@ -526,7 +526,7 @@ Adobe Experience Manager6.5.5.0是一项重要更新，包括新功能、关键�
 
 * 屏幕阅读器现在宣布控件上标签用于移动到日历日期选取器中的下一个和上一个月(NPR-32604)。
 
-* 星级图标现在可以使用键盘键(NPR-32513)获得焦点并具有操作性。
+* 星级图标现在可以使用键盘键(NPR-32513)获得焦点并具有可操作性。
 
 * 现在可通过选项卡（聚焦在音量滑块上）和箭头键（调整键盘上的音量）访问控制视频音量的功能(NPR-32065)。
 
@@ -852,7 +852,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 处理LiveFyre相关项目时显示错误消息(FYR-12420)。
 
-* ReportSuitesServlet易受SSRF(NPR-32156)的攻击。
+* ReportSuitesServlet 容易遭受服务器端请求伪造 (SSRF) 攻击 (NPR-32156)。
 
 ### WCM模板编辑器{#wcm-template-editor-6540}
 
@@ -862,7 +862,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 
 * 选择叠加，然后选择响应式网格将组件拖动到此处时会出现错误(CQ-4283342)。
 
-### 活动定位{#campaign-targeting-6540}
+### 营销活动定位 {#campaign-targeting-6540}
 
 * 目标云配置失败，错误get mbox请求失败(CQ-4279880)。
 
@@ -1073,7 +1073,7 @@ Adobe Experience Manager6.5.4.0中引入的一些主要功能和增强功能包�
 * 当用户在菜单的描述属性中添加日语或韩语字符时，该菜单显示日语和韩语文本的扭曲字符(NPR-31331)。
 * 富文本编辑器(RTE)不允许将嵌入的表作为列表项插入(NPR-30879)。
 * 开箱即用，基架式富文本编辑器(RTE)。 意外地将内嵌字体大小应用于元素(NPR-31284)。
-* 当用户专注于左边栏字段并使用键盘快捷键粘贴内容时，它会粘贴页面编辑器剪贴板的内容，而不是从左边栏字段复制的内容(NPR-31172)。
+* 如果用户的焦点位于左侧边栏字段并使用键盘快捷方式粘贴内容，则会粘贴页面编辑器剪贴板的内容，而不是从左侧边栏字段复制的内容 (NPR-31172)。
 * 当用户向多字段添加“文件上传”字段时，图像路径存储在组件节点而不是多字段节点中(NPR-30882)。
 * `ResponsiveGridExporter` API不返回`com.day.cq.wcm.foundation.model.impl.export.AllowedComponentsExporter`接口。 `com.day.cq.wcm.foundation.model.impl`包声明为私有包(NPR-31398)。
 
@@ -1313,11 +1313,11 @@ Remove one mention of this fix.
 * 关闭[!DNL Experience Manager Assets]搜索UI不会将左边栏重置为内容选择，阻止用户随后第二次打开过滤器边栏。 NPR-30509：适用于 CQ-4274716 的修补程序
 * 多租户环境:[!DNL Experience Manager Assets] UI顶部导航不可用，并引发JavaScript错误。 NPR-30104：适用于 GRANITE-26344 的修补程序
 
-### 翻译  {#translation-6520}
+### 翻译 {#translation-6520}
 
 * 翻译问题 - 只有少数组件使用机器翻译进行了翻译。NPR-30079：适用于 CQ-4273764 的修补程序
 
-### 平台  {#platform-6520}
+### 平台 {#platform-6520}
 
 * [!DNL Experience Manager] 默认邮件发送程序无法通过 TLS v1.2 向远程 SMTP 服务器发送电子邮件。NPR-30476：适用于 GRANITE-26605 的修补程序
 
@@ -1326,7 +1326,7 @@ Remove one mention of this fix.
 * dam:folderThumbnailPaths 值未刷新，并且在删除文件夹内的资产后，还显示旧版缩略图。NPR-30424：适用于 CQ-4273667 的修补程序
 * 完成“移动”选项后，资产的“标题”和“名称”保持不变。NPR-30647：适用于 CQ-4276265 的修补程序
 
-### 社区  {#communities-6520}
+### 社区 {#communities-6520}
 
 * “用户同步诊断”完全中断，无法工作。NPR-30004、NPR-29943：适用于 CQ-4270287、CQ-4271348 的修补程序
 
@@ -1583,7 +1583,7 @@ Remove one mention of this fix.
 * 从工作区中提交带有变音字符的内容失败。适用于 CQ-4263172 的修补程序
 * 在升级的设置中，如果打开了工作流进行编辑，则监视文件夹用户界面 (UI) 中会显示错误而不是工作流名称。适用于 CQ-4238579 的修补程序
 
-**Forms - 管理**
+**表单 - 管理**
 
 * 上传 xsd 或 schema.json 以外的扩展名时，上传不会发生，并且不会生成任何错误消息。适用于 CQ-4266716 的修补程序
 
@@ -1630,7 +1630,7 @@ Remove one mention of this fix.
 
 ### 包含的功能包
 
-#### 资产——已包含
+#### 资产 -包括
 
 * 为[!DNL Experience Manager Assets]启用多站点管理器支持。 有关详细信息，请参阅[将资产使用MSM重用于Experience Manager资产](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html)。 NPR-29199：适用于 CQ-4259922 的修补程序
 
