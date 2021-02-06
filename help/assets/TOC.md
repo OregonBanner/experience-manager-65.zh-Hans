@@ -10,12 +10,12 @@ translation-type: tm+mt
 source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 40%
+ht-degree: 43%
 
 ---
 
 
-# Assets 指南 {#assets}
+# Assets 指南  {#assets}
 
 + [[!DNL Assets] 用户指南](home.md)
 + [[!DNL Experience Manager] 6.5资产发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
@@ -28,7 +28,7 @@ ht-degree: 40%
    + [使用资产元数据](metadata.md)
    + [多语言资源](multilingual-assets.md)
    + [在资 [!DNL Adobe Stock] 产中使用资产](aem-assets-adobe-stock.md)
-   + [预览3D资产](previewing-3d-assets.md)
+   + [预览 3D 资产](previewing-3d-assets.md)
    + [审核文件夹资产和收藏集](bulk-approval.md)
    + [增强型智能标记](enhanced-smart-tags.md)
    + [时间轴中的活动流](activity-stream.md)
@@ -40,11 +40,11 @@ ht-degree: 40%
    + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
    + [设置 Dynamic Media](administering-dynamic-media.md)
    + [使用 Dynamic Media](dynamic-media.md)
-   + [配置Dynamic Media -Scene7模式](config-dms7.md)
-   + [配置Dynamic Media —— 混合模式](config-dynamic.md)
-   + [Dynamic Media疑难解答-Scene7模式](troubleshoot-dms7.md)
-   + [Dynamic Media中的辅助功能](accessibility-dm.md)
-   + [从Dynamic Media —— 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
+   + [配置 Dynamic Media - Scene7 模式](config-dms7.md)
+   + [配置Dynamic Media-混合模式](config-dynamic.md)
+   + [Dynamic Media-Scene7模式疑难解答](troubleshoot-dms7.md)
+   + [Dynamic Media 中的辅助功能](accessibility-dm.md)
+   + [从Dynamic Media迁移——混合模式到Dynamic Media- S7模式](migrate-from-hybrid-to-dms7.md)
    + [管理 Dynamic Media 资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [管理 Dynamic Media 查看器预设](managing-viewer-presets.md)
@@ -55,7 +55,7 @@ ht-degree: 40%
    + [Dynamic Media 图像配置文件](image-profiles.md)
    + [智能图像处理](imaging-faq.md)
    + [视频](s7-video.md)
-   + [将Dynamic Media功能添加到页面](scene7.md)
+   + [将Dynamic Media功能添加到您的页面](scene7.md)
    + [HTTP2 内容交付](http2.md)
    + [传送 Dynamic Media 资产](delivering-dynamic-media-assets.md)
    + [在 Dynamic Media 中激活热链接保护](hotlink-protection.md)
@@ -64,7 +64,7 @@ ht-degree: 40%
    + [全景图像](panoramic-images.md)
    + [混合媒体集](mixed-media-sets.md)
    + [旋转集](spin-sets.md)
-   + [Dynamic Media中的视频](video.md)
+   + [Dynamic Media视频](video.md)
    + [传送横幅](carousel-banners.md)
    + [交互式图像](interactive-images.md)
    + [交互式视频](interactive-videos.md)
@@ -78,9 +78,9 @@ ht-degree: 40%
    + [将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md)
    + [使用规则集转换 URL](using-rulesets-to-transform-urls.md)
    + [发布 Dynamic Media 资产](publishing-dynamicmedia-assets.md)
-   + [在Dynamic Media中使用选择性发布](selective-publishing.md)
+   + [使用 Dynamic Media 中的“选择性发布”功能](selective-publishing.md)
    + [通过Dynamic Media使CDN缓存失效](invalidate-cdn-cache-dynamic-media.md)
-   + [通过Dynamic Media Classic使CDN缓存失效](invalidate-cdn-cache-dm-classic.md)
+   + [通过Dynamic Media经典使CDN缓存失效](invalidate-cdn-cache-dm-classic.md)
    + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产{#extending}
