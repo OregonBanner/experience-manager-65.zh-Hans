@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '2150'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -16,10 +16,10 @@ ht-degree: 65%
 
 | 产品 | [!DNL Adobe Experience Manager] |
 |---|---|
-| 版本 | 6.5 |
+| 版本号 | 6.5 |
 | 类型 | 主要版本 |
 | 公开发行日期 | 2019 年 4 月 8 日 |
-| 推荐的更新 | 请参阅[AEM最近更新](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)。 |
+| 推荐的更新 | 请参阅[AEM最近更新](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。 |
 
 ### 相关事项 {#trivia}
 
@@ -57,15 +57,15 @@ ht-degree: 65%
 
 对 UI 进行了各种增强，使其更高效，更易于使用。
 
-* 针对用户和用户组的新权限管理UI。
-* 列视图现在也只加载屏幕上可见的条目，并且仅在用户开始滚动时加载更多条目。列表视图和卡片视图已在 6.0 之后的版本中实现了此功能（在 6.4 中进行了改进）。
+* 用户和组的新权限管理 UI.
+* 列视图现在也只加载屏幕上可见的条目，并且仅在用户开始滚动时加载更多条目。列表视图和卡片视图已在 6.0 之后的版本中实现了此功能（在 6.4 中进行了改进）.
 * 列视图现在包括页面/资产的工作流状态（如果适用）.
 * [全选](/help/sites-authoring/basic-handling.md#select-all)操作是一种快速方法，可以对同一文件夹中的所有页面/资产执行操作.
 * [全选](/help/sites-authoring/basic-handling.md#select-all)操作会尝试对所有页面/资源执行操作，而不仅仅是加载的页面/资源。如果未升级操作以处理批量操作，则会显示警告对话框。
 
 >[!CAUTION]
 >
->Adobe 不打算进一步增强经典 UI。AEM 6.5 包含经典 UI，从早期发行版升级的客户可以继续按原样使用它。请注意，经典 UI 在弃用期间仍完全受支持。[阅读更多](/help/sites-deploying/ui-recommendations.md)。
+>Adobe 不打算进一步增强经典 UI。AEM 6.5 包含经典 UI，从早期发行版升级的客户可以继续按原样使用它。请注意，经典 UI 在弃用期间仍完全受支持。[了解更多](/help/sites-deploying/ui-recommendations.md)。
 
 #### 搜索和索引{#indexing-and-search}
 
@@ -91,7 +91,7 @@ ht-degree: 65%
 SPA 支持首先作为 AEM 6.4 SP2 的一部分发布，在 AEM 6.5 中，其增加了以下功能：
 
 * 使用“模板编辑器”来编辑和配置 SPA 的 AEM 可编辑部分
-* 使用多站点管理创建国家／地区、特许经营或白色标签的SPA体验
+* 使用“多站点管理”来创建国家/地区、获特许权的机构或白标 SPA 体验
 
 #### 无头内容管理 {#headless-content-management}
 
@@ -122,7 +122,7 @@ AEM 能够以不同的格式并且从堆栈的不同级别提供内容。自 200
 * 通过使用动态占位符，按照数据触发内容的位置或配置进行个性化。
 * 通过将 Adobe Analytics 集成到 AEM Screens 播放器驱动的统一分析
 
-有关对AEM Screens进行更改的详细信息——请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
+有关对AEM Screens进行更改的详细信息——请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
 
 ### [!DNL Experience Manager Assets] {#experience-manager-assets}
 
@@ -140,7 +140,7 @@ AEM 6.5 引入了以下功能和增强功能，以提高 AEM 用户、DAM 角色
 
 #### 连接的资产 {#connected-assets}
 
-互联资产功能针对的是具有许多AEM Sites部署的较大部署，这些部署需要利用AEM Assets中部署的资产。 它允许改善对集中管理的资产的管理，同时允许为各种站点部署提供高效的资产。
+互联资产功能针对的是具有许多AEM Sites部署的较大部署，这些部署需要利用AEM Assets中部署的资产。 它允许围绕集中管理的资产改进管理，同时允许为各种站点部署高效地提供资产。
 
 ### Dynamic Media {#dynamic-media}
 
