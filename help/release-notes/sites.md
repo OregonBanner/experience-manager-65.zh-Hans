@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 63%
+ht-degree: 72%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 63%
 * Clientlib Manager:使Google Closure Compiler默认为JavaScript客户端的微型化（旧默认为Yahoo YUI），并将Google Closure Compiler更新为v20190121版
 * 模板编辑器和策略
 
-   * 为使用JS SDK的单页应用程序创建和编辑模板(也称为SPA Editor)
+   * 为使用 JS SDK（也称为 SPA 编辑器）的单页应用程序创建和编辑模板
 
 * 引用站点 We.Retail 4.0，请参阅 [Github 以查看发行说明](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)。
 * 用于升级现有站点以利用最新编辑器功能的工具包，请参阅[Github存储库](https://github.com/adobe/aem-modernize-tools)
@@ -83,19 +83,19 @@ ht-degree: 63%
 * 改进了[体验片段](/help/sites-authoring/experience-fragments.md)的索引，现在可通过搜索正在使用它们的页面查找它们的内容
 * 通过[导出到 Target](/help/sites-administering/experience-fragments-target.md) 选项，您现在可以将体验片段作为 JSON（默认为 HTML）或两者发送
 
-## 翻译  {#translation}
+## 翻译 {#translation}
 
 * 使用项目母版简化了翻译项目创建过程
-* 默认情况下，将翻译作业设置为批准状态，从而简化翻译项目的执行
+* 通过默认将翻译作业设置为已批准状态，简化了翻译项目执行过程
 * 允许使用第三方翻译记忆库中的更改更新翻译页面
 * 允许以 JSON 格式导出翻译作业
-* 更新Microsoft Translation集成以使用V3 API
+* 更新了 Microsoft Translation 集成以使用 V3 API
 
 ## 多站点管理 (MSM) {#multi-site-management-msm}
 
-* 对于使用PushOnModify的转出配置，更好地处理页面移动操作以避免状态不一致
+* 对于使用 PushOnModify 的转出配置，优化了页面移动操作的处理以避免出现不一致的状态
 * 现在，在活动副本结构中创建新页面将会默认创建一个独立页面
-* 在使用JS SDK的单页应用程序中使用MSM功能(也称为SPA Editor)
+* 可在使用 JS SDK（也称为 SPA 编辑器）的单页应用程序中使用 MSM 功能
 
 ## 启动项 {#launches}
 
@@ -135,4 +135,4 @@ ht-degree: 63%
 * 序列渠道中按流量计费的播放
 * 使用源文件（例如 Excel 表格）自动创建项目结构
 
-有关对AEM Screens进行更改的详细信息——请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
+有关对AEM Screens进行更改的详细信息——请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
