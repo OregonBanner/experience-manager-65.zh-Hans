@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 12%
+ht-degree: 20%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
 
-* [Experience Manager入门](https://helpx.adobe.com/experience-manager/get-started.html)
+* [Experience Manager入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
 * [Experience Manager6.5发行说明](/help/release-notes/home.md)
 * [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [安全核对清单](/help/sites-administering/security-checklist.md)
