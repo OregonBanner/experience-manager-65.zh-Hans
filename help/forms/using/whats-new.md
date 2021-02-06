@@ -79,7 +79,7 @@ ht-degree: 0%
 
 #### 在AEM Sites单页应用程序中嵌入自适应表单或交互通信{#embed-an-adaptive-form-or-interactive-communcation-in-aem-sites-single-page-applications}
 
-AEM Forms允许您在AEM Sites单页应用程序(SPA)中无缝嵌入自适应表单[或交互通信。 ](../../forms/using/embed-adaptive-form-aem-sites-spa.md)嵌入的自适应表单和交互式通信功能完全正常，用户无需离开页面即可填写和提交表单。 它帮助用户保持在网页上其他元素的上下文中，并同时与自适应表单或交互式通信进行交互。
+AEM Forms允许您在AEM Sites单页应用程序(SPA)中无缝嵌入自适应表单](../../forms/using/embed-adaptive-form-aem-sites-spa.md)或交互通信。 [嵌入的自适应表单和交互式通信功能完全正常，用户无需离开页面即可填写和提交表单。 它帮助用户保持在网页上其他元素的上下文中，并同时与自适应表单或交互式通信进行交互。
 
 #### 对自适应表单表的列排序{#sort-columns-of-adaptive-form-tables}
 
@@ -91,7 +91,7 @@ AEM Forms允许您在AEM Sites单页应用程序(SPA)中无缝嵌入自适应表
 
 #### 将复选框动态添加到自适应表单{#add-check-boxes-to-the-adaptive-form-dynamically}
 
-您现在可以定义规则以根据自定义函数、表单对象或对象属性将复选框动态添加到自适应表单[。](../../forms/using/rule-editor.md#setpropertyrule)
+您现在可以定义规则以根据自定义函数、表单对象或对象属性将复选框动态添加到自适应表单](../../forms/using/rule-editor.md#setpropertyrule)。[
 
 ## AEM 工作流 {#aem-workflows}
 
