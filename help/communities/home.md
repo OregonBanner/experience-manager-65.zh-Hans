@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
 workflow-type: tm+mt
 source-wordcount: '389'
-ht-degree: 26%
+ht-degree: 29%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 26%
 
 ## 主要AEM文章
 
-* [AEM 快速入门](https://helpx.adobe.com/experience-manager/get-started.html)
+* [AEM 快速入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
 * [AEM 6.5 发行说明](/help/release-notes/home.md)
 * [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM 安全核对清单](/help/sites-administering/security-checklist.md)
@@ -34,7 +34,7 @@ ht-degree: 26%
 | [Administering 指南](/help/sites-administering/home.md) | 了解如何管理 AEM |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍在AEM中进行创作的概念。 |
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介绍在经典用户界面中在AEM中进行创作的概念。 |
-| [Screens用户指南](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
+| [Screens用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [部署用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [开发用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [管理用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
