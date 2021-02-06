@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 workflow-type: tm+mt
 source-wordcount: '439'
-ht-degree: 44%
+ht-degree: 49%
 
 ---
 
@@ -51,11 +51,11 @@ AEM 在组织中具有多种用途，且内容广泛，足以为整个公司提�
 
 ## AEM {#deployments}的建议部署
 
-MicroKernel 用作持久性管理器，了解这些是成功实施 AEM 的关键。请根据您的实例目的和所考虑的部署类型，选择符合您需求的部署。[了解他们在最常见的AEM设置中的推荐用途。](/help/sites-deploying/recommended-deploys.md)
+MicroKernel 用作持久性管理器，了解这些是成功实施 AEM 的关键。请根据您的实例目的和所考虑的部署类型，选择符合您需求的部署。[了解它们在最常见的 AEM 设置中的推荐用法。](/help/sites-deploying/recommended-deploys.md)
 
 ## AEM安全清单{#security-checklist}
 
-安全性是您在安装 AEM 时需要考虑的重要因素。[了解确保部署AEM时安装安全所需的各种步骤和措施。](/help/sites-administering/security-checklist.md) 清单应从上到下应用。
+安全性是您在安装 AEM 时需要考虑的重要因素。[了解确保部署AEM时安装安全所需的各种步骤和措施。](/help/sites-administering/security-checklist.md)应自上而下应用核对清单。
 
 ## AEM常见问题解答{#faq}
 
