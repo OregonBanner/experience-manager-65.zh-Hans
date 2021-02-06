@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 workflow-type: tm+mt
 source-wordcount: '317'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
@@ -38,8 +38,8 @@ ht-degree: 17%
 本教程实现利用了AEM的许多强大功能。 站点将通过以下方式实现：
 
 * [HTL](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
-* [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
-* [触屏UI](/help/sites-developing/touch-ui-concepts.md)
+* [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
+* [触屏 UI](/help/sites-developing/touch-ui-concepts.md)
 * [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [可编辑的模板](/help/sites-developing/page-templates-editable.md)
 
