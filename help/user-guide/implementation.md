@@ -20,7 +20,7 @@ ht-degree: 38%
 
 ## AEM {#core-components-for-aem}的核心组件
 
-[使用可扩展的核心组件让作者轻松创建内容。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
+[使用可扩展的 Core Components 让作者轻松创建内容。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 
 ## AEM {#htl-for-aem}的HTL（HTML模板语言）
 
