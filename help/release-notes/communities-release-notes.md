@@ -5,14 +5,14 @@ translation-type: tm+mt
 source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 61%
+ht-degree: 69%
 
 ---
 
 
 # AEM Communities发行说明{#aem-communities-release-notes}
 
-继续阅读以了解自 6.4 发行版以后对 AEM Communities 所做的改进。要更详细地了解新增功能，请参阅[AEM 6.5 Communities用户指南](https://helpx.adobe.com/cn/experience-manager/6-4/communities/user-guide.html)。
+继续阅读以了解自 6.4 发行版以后对 AEM Communities 所做的改进。要了解有关新功能的更多详细信息，请参阅 [AEM 6.5 Communities 用户指南](https://helpx.adobe.com/cn/experience-manager/6-4/communities/user-guide.html)。
 
 要获得最新版本，请参阅文档的[部署社区](https://helpx.adobe.com/in/experience-manager/6-4/help/communities/deploy-communities.html#LatestReleases)部分。
 
@@ -21,7 +21,7 @@ ht-degree: 61%
 ### 对社区互动的增强功能 {#enhancements-to-community-engagement}
 
 **@Mentions支**
-持AEM Communities现在允许注册用户在用户生成的内容中标记（提及）其他注册成员以引起其注意。然后通知标记（提及）的成员，并在通知中包含指向相应用户生成的内容的深层链接。但是，用户可以选择禁用／启用Web和电子邮件通知。
+持AEM Communities现在允许注册用户在用户生成的内容中标记（提及）其他注册成员以引起其注意。然后通知标记（提及）的成员，并在通知中包含指向相应用户生成的内容的深层链接。但是，用户可以选择禁用/启用 Web 和电子邮件通知。
 
 ![@Mentions 支持](assets/at-mentions.png)
 
@@ -31,7 +31,7 @@ ht-degree: 61%
 
 **组消息传递**
 
-现在，已注册的社区成员可以通过单个电子邮件合成将私聊信息批量发送到组，而不是将相同的邮件分别发送给组成员。要允许[组消息](/help/communities/configure-messaging.md)，请启用[消息操作服务](/help/communities/messaging.md#group-messaging)的两个实例。
+现在，已注册的社区成员可以通过单个电子邮件合成将私聊信息批量发送到组，而不是将相同的邮件分别发送给组成员。要允许[组消息传递](/help/communities/configure-messaging.md)，请启用 [Messaging Operations Service](/help/communities/messaging.md#group-messaging) 的两个实例。
 
 ![组消息](assets/group-messaging.png)
 
