@@ -109,7 +109,7 @@ Adobe建议定义自定义错误处理程序页面，尤其是404和500 HTTP响�
 
 ### 完整的调度程序安全清单{#complete-dispatcher-security-checklist}
 
-AEM Dispatcher是您基础架构的关键组成部分。 Adobe强烈建议您完成[调度程序安全核对清单](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)。
+AEM Dispatcher是您基础架构的关键组成部分。 Adobe强烈建议您完成[调度程序安全核对清单](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/security-checklist.html)。
 
 >[!CAUTION]
 >
