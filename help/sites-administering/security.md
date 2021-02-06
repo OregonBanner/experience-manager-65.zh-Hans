@@ -220,7 +220,7 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各个页面的权限。
 >`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:允许所有人读取访问。
 >`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:允许所有人读取访问。
 >`/home/users/geometrixx-outdoors`:允许所有人访问`*/profile*`和
->`*/social/relationships/following/*`。
+>`*/social/relationships/following/*`.
 >
 >您的自定义应用程序可以设置对其他关系（如`*/social/relationships/friend/*`或`*/social/relationships/pending-following/*`）的访问权限。
 >
@@ -596,7 +596,7 @@ AEM优惠了三种从组中删除用户或用户组的不同方法：
 
 1. 导览至要删除权限的路径，然后单击&#x200B;**详细信息**。 详细信息窗口的下半部分提供有关谁对该页面具有权限的信息。
 
-   ![chlimage_1-115](assets/chlimage_1-114.png)
+   ![chlimage_1-114](assets/chlimage_1-114.png)
 
 1. 选中&#x200B;**成员**&#x200B;列中要具有该路径权限的成员的复选框。 清除要删除其权限的成员的复选框。 您对单元格进行更改时，单元格中会出现一个红色三角形。
 1. 单击&#x200B;**确定**&#x200B;以保存您的更改。
