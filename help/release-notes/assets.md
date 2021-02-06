@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
 source-wordcount: '897'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 41%
 
 [!DNL Experience Manager Assets Brand Portal] 可帮助您轻松获取及有效控制已批准的资产，并在设备间安全地将该资产分发给外部供应商/代理商和内部企业用户。它有助于提高资产共享的效率、加快资产的上市时间，并消除不合规使用和未授权访问的风险。
 
-有关更多信息，请参阅 [Brand Portal 中的新增功能](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)。
+有关更多信息，请参阅 [Brand Portal 中的新增功能](https://helpx.adobe.com/cn/experience-manager/brand-portal/using/whats-new.html)。
 
 ## 连接的资产 {#connectedassets}
 
