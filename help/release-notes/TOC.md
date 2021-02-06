@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 56551f31e87188cebc2754f6a2c756ae96164ed1
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 29%
+ht-degree: 34%
 
 ---
 
@@ -29,4 +29,4 @@ ht-degree: 29%
 + [已弃用和已删除的功能](deprecated-removed-features.md)
 + [已知问题](known-issues.md)
 + [AEM Foundation和Repository](wcm-platform.md)
-+ [触屏UI功能状态](touch-ui-features-status.md)
++ [触屏 UI 功能状态](touch-ui-features-status.md)
