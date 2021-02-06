@@ -1,16 +1,16 @@
 ---
-title: 触屏UI功能状态
+title: 触屏 UI 功能状态
 description: 特定于 [!DNL Adobe Experience Manager] 触屏优化UI的发行说明。
 translation-type: tm+mt
 source-git-commit: d938f52766154b68df2f6db2c8c49a0ad97e7e6d
 workflow-type: tm+mt
 source-wordcount: '1063'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
 
-# 触屏UI功能状态{#touch-ui-feature-status}
+# 触屏 UI 功能状态 {#touch-ui-feature-status}
 
 从AEM 6.4开始[经典UI已弃用](../release-notes/deprecated-removed-features.md)。 Adobe不会进一步增强经典UI，并鼓励用户利用触屏优化UI中提供的强大新功能。
 
@@ -103,15 +103,15 @@ ht-degree: 14%
 | 锁定／解锁页面 | 完成 |  |
 | 发布页面 | 完成 |  |
 | 取消发布页面 | 完成 |  |
-| 复制页面 | 已删除 | 使用站点管理员复制页面[。](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) |
-| 移动页面 | 已删除 | 使用站点管理员移动页面[。](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) |
-| 删除页面 | 已删除 | 使用站点管理员删除页面[。](/help/sites-authoring/managing-pages.md#deleting-a-page) |
+| 复制页面 | 已删除 | 使用站点管理员复制页面](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page)。[ |
+| 移动页面 | 已删除 | 使用站点管理员移动页面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)。[ |
+| 删除页面 | 已删除 | 使用站点管理员删除页面](/help/sites-authoring/managing-pages.md#deleting-a-page)。[ |
 | 显示引用 | 已删除 | 使用站点管理员查看[详细参考列表](/help/sites-authoring/author-environment-tools.md#references)。 |
 | 审查日志 | 已删除 | 使用站点管理员和[打开活动边栏](/help/sites-authoring/author-environment-tools.md#events-timeline)。 |
 | 创建版本 | 已删除 | 使用站点管理员[创建新版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)。 |
-| 恢复版本 | 已删除 | 使用站点管理员恢复版本[。](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) |
-| 切换启动项 | 已删除 | 使用站点管理员在启动项[之间切换。](/help/sites-authoring/launches-promoting.md) |
-| 翻译页面 | 已删除 | 使用站点管理员将页面添加到翻译项目[。](/help/sites-administering/tc-manage.md) |
+| 恢复版本 | 已删除 | 使用站点管理员恢复版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)。[ |
+| 切换启动项 | 已删除 | 使用站点管理员在启动项](/help/sites-authoring/launches-promoting.md)之间切换。[ |
+| 翻译页面 | 已删除 | 使用站点管理员将页面添加到翻译项目](/help/sites-administering/tc-manage.md)。[ |
 | 时间扭曲（选择日期／时间，浏览站点，视图而定） | 完成 |  |
 | 设置权限 | 完成 |  |
 | Client Context UI | 已替换 | 将使用[ContextHub](/help/sites-authoring/ch-previewing.md) UI。 |
