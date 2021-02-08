@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: 31f546400f4c3335953d05b1df9394445b5feb56
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 75%
+source-wordcount: '2707'
+ht-degree: 76%
 
 ---
 
@@ -30,7 +30,11 @@ ht-degree: 75%
 
 本部分提供有关已安装转出配置、其所使用的同步操作以及如何在需要时创建自定义配置的信息。
 
-### 转出触发器  {#rollout-triggers}
+>[!CAUTION]
+>
+>建议更新或更改现成（已安装）转出配置&#x200B;**不**。 如果对自定义实时操作有要求，则应在自定义转出配置中添加该操作。
+
+### 转出触发器 {#rollout-triggers}
 
 每个转出配置都使用一个可执行转出的转出触发器。转出配置可以使用以下触发器之一：
 
@@ -222,7 +226,7 @@ ht-degree: 75%
   </tr>
   <tr>
    <td>PageMoveAction</td>
-   <td><p>当页面在 Blueprint 中移动时将应用 PageMoveAction。</p> <p>该操作会将（相关的）LiveCopy 页面从移动前的位置复制到移动后的位置，而不是移动页面。</p> <p>PageMoveAction 不会更改位于移动前位置的 LiveCopy 页面。因此，对于连续的 RolloutConfigurations，它具有不带 Blueprint 的 LiveRelationhip 的状态。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM页面移动操</a> 作服务以指定要排除的节点类型、段落项和页面属性。 </p> <p>此操作必须是转出配置中包含的唯一同步操作。</p> </td>
+   <td><p>当页面在 Blueprint 中移动时将应用 PageMoveAction。</p> <p>该操作会将（相关的）LiveCopy 页面从移动前的位置复制到移动后的位置，而不是移动页面。</p> <p>PageMoveAction 不会更改位于移动前位置的 LiveCopy 页面。因此，对于连续的 RolloutConfigurations，它具有不带 Blueprint 的 LiveRelationhip 的状态。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 页面移动操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> <p>此操作必须是转出配置中包含的唯一同步操作。</p> </td>
    <td><p>prop_referenceUpdate：（布尔）设置为 true 以更新引用。默认值为 true。</p> <p> </p> </td>
   </tr>
   <tr>
@@ -263,7 +267,7 @@ ht-degree: 75%
 
 ### 从同步中排除属性和节点类型  {#excluding-properties-and-node-types-from-synchronization}
 
-您可以配置多个支持相应同步操作的 OSGi 服务，以便它们不会影响特定的节点类型和属性。例如，与AEM的内部功能相关的许多属性和子节点不应包含在Live Copy中。 只应复制与页面用户相关的内容。
+您可以配置多个支持相应同步操作的 OSGi 服务，以便它们不会影响特定的节点类型和属性。例如，许多与 AEM 内部功能相关的属性和子节点不应包含在 Live Copy 中。只应复制与页面用户相关的内容。
 
 与AEM合作时，有多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
 
@@ -376,7 +380,7 @@ MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖�
 
 1. 使用&#x200B;**站点**&#x200B;控制台选择 Live Copy 页面。
 1. 从工具栏中选择&#x200B;**属性**。
-1. 打开&#x200B;**Live Copy**&#x200B;选项卡。
+1. 打开 **Live Copy** 选项卡。
 
    **配置**&#x200B;部分将显示页面继承的转出配置。
 
@@ -398,9 +402,9 @@ MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖�
 
 请注意，Blueprint 页面的子页面将继承该配置。在配置要使用的转出配置时，可能会覆盖页面从其父页面继承的配置。
 
-1. 使用&#x200B;**站点**&#x200B;控制台选择Blueprint的根页面。
+1. 使用&#x200B;**站点**&#x200B;控制台选择 Blueprint 的根页面。
 1. 从工具栏中选择&#x200B;**属性**。
-1. 打开&#x200B;**Blueprint**&#x200B;选项卡。
+1. 打开 **Blueprint** 选项卡。
 1. 使用下拉选择器选择一个或多个&#x200B;**转出配置**。
 1. 使用&#x200B;**保存**&#x200B;持久存储您的更新。
 
@@ -411,7 +415,7 @@ MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖�
 * **Day CQ WCM Live Relationship Manager** 服务 PID 为 
 `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
-使用[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[存储库节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)配置服务。
+使用 [Web 控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[存储库节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)配置服务。
 
 * 在 Web 控制台中，要配置的属性名称是默认转出配置。
 * 使用存储库节点，要配置的属性名称为`liverelationshipmgr.relationsconfig.default`。
