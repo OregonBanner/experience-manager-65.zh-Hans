@@ -1,12 +1,12 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets]简介。'
+title: ' [!DNL Adobe Experience Manager Assets] 简介'
 description: 了解什么是数字资产管理、其使用案例和 [!DNL Adobe Experience Manager Asset] 产品。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 130a03c821fd2a1e9ecda70039241720052a8920
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 39%
+source-wordcount: '868'
+ht-degree: 38%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 39%
 
 在确定是将图像放入DAM存储库还是使用图像组件时，请考虑图像生命周期：
 
-* 如果图像具有与页面相同的生命周期，请使用图像组件。
+* 如果图像的生命周期与页面相同，请使用图像组件。
 * 如果图像具有单独的生命周期，例如，如果您使用图像两次或在 WCM 之外使用图像，则使用 [!DNL Assets].
 
 ## 什么是数字资产？{#what-are-digital-assets}
@@ -67,11 +67,11 @@ ht-degree: 39%
 
 * **演绎版**:演绎版是资产的二进制表示形式。[!DNL Assets] 始终具有主要表示形式——已上载文件的表示形式。它们可以采用创建的任何数量的其他表示形式，例如定制工作流程步骤或资产上传时创建的表示形式。演绎版可能大小不同、分辨率不同、添加了水印，或者更改了其他一些特性。
 
-* **版本**:版本控制可创建数字资产在特定时间点的快照。您可以将资产恢复至以前的版本。请参阅Assets](manage-assets.md#asset-versioning)中的[版本控制。
+* **版本**:版本控制可创建数字资产在特定时间点的快照。您可以将资产恢复至以前的版本。请参阅 [!DNL Assets]](manage-assets.md#asset-versioning)中的[版本控制。
 
 * **子资产**:子资产是组成资产的资产，例如，PDF文件中 [!DNL Adobe Photoshop] 的图层或页面。在[!DNL Assets]中，您可以像管理资产一样管理子资产。
 
-### 如何使用资产{#how-to-work-with-assets}
+### 如何使用数字资产{#how-to-work-with-assets}
 
 您可以对资产或收藏集执行操作。这些操作包括创建或修改资产、收藏集和演绎版。您对资产执行的许多基本操作——上传、删除、更新、保存子资产——都会触发预配置工作流。 这些属性在[!DNL Assets]中自动打开，在[!DNL Assets]媒体处理程序中有详细说明。
 
@@ -82,8 +82,13 @@ ht-degree: 39%
 * 为资产生成演绎版和缩略图；包括根据需要自动调整大小和裁剪。
 * 在必要时转码资产。 例如，供移动设备和 Web 使用的视频将以 24 帧/秒的速率转码，供下载的视频将以 30 帧/秒的速率转码。用于移动和Web的音频以128 Kbps的速率进行转码，用于下载的音频以192 Kbps的速率进行转码。
 
-当然，您也可以手动应用工作流。请参阅 [ Assets 媒体处理程序](/help/assets/media-handlers.md)，以获取默认工作流的列表。
+当然，您也可以手动应用工作流。请参阅 [ Assets 媒体处理程序](media-handlers.md)，以获取默认工作流的列表。
 
-## [!DNL Experience Manager Assets] 和  [!DNL MediaLibrary] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] 和  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-有关差异的信息，请参阅[资产和媒体库](/help/assets/medialibrary.md)。
+有关差异的信息，请参阅[资产和媒体库](medialibrary.md)。
+
+>[!MORELIKETHIS]
+>
+>* [Experience Manager资产作为现代DAM](https://www.youtube.com/embed/PBwQqZgC-yo)
+
