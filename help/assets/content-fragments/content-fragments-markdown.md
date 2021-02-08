@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b193f28c-46c2-4eab-bbb8-578530f80ba5
 docset: aem65
 translation-type: tm+mt
-source-git-commit: afed13a2f832b91d0df825d1075852cc84443646
+source-git-commit: 08bf8f42898446f2e5cca1fde55ceb84710a1e30
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -195,24 +195,25 @@ ht-degree: 4%
 
 反斜杠转义可用于以下字符：
 
-    `\ backslash`
+    ` \ backslash`
 
-    “倒钩”
+    `` ` backtick``
 
-    `* asterisk`
+    ` * asterisk`
 
-    `_ underscore`
+    ` _ underscore`
 
-    `{} curly braces`
+    ` {} curly braces`
 
-    `[] square brackets`
+    ` [] square brackets`
 
-    `() parentheses`
+    ` () parentheses`
 
-    `# hash mark`
+    ` # hash mark`
 
-    `+ plus sign`
+    ` + plus sign`
 
-    `- minus sign (hyphen)`
+    ` - minus sign (hyphen)`
 
-    `. dot`
+    ` . dot`
+
