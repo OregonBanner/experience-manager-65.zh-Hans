@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4e1f5d549df1db28a8679296afb4b758051d8f6c
+source-git-commit: c9c407ea7c0bff3d15934552cd709bec7f24e857
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3318'
 ht-degree: 1%
 
 ---
@@ -165,6 +165,11 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
    <td><p>支持</p> </td>
   </tr>
   <tr>
+   <td><p>Microsoft SQL Server 2019</p> </td>
+   <td><p>存储库微内核</p> </td>
+   <td><p>支持</p> </td>
+  </tr>
+  <tr>
    <td>IBM DB2 11.1</td>
    <td>存储库微内核</td>
    <td>R:受限支持</td>
@@ -207,6 +212,12 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
    <td>Microsoft SQL Server<br /> </td>
    <td><p>Microsoft® SQL Server JDBC驱动程序6.2.1.0<br /> </p> <p>sqljdbc6.jar</p> </td>
    <td><p>随AEM Forms一起安装JEE。</p> </td>
+  </tr>
+  <tr>
+  <tr>
+   <td>Microsoft SQL Server<br /> </td>
+   <td><p>Microsoft® SQL Server JDBC驱动程序8.2.2<br /> </p> <p>sqljdbc8.jar</p> </td>
+   <td><p>从Microsoft网站下载。</p> </td>
   </tr>
   <tr>
    <td>Oracle</td>
@@ -367,7 +378,7 @@ Adobe Experience Manager Forms需要运行Java虚拟机，该虚拟机由Java开
  <tbody>
   <tr>
    <td><strong>产品<br /> </strong></td>
-   <td><strong>版本</strong></td>
+   <td><strong>版本号</strong></td>
   </tr>
   <tr>
    <td>EMC Documentum</td>
@@ -704,7 +715,7 @@ AEM Forms应用程序可用于以下平台：
 
 >[!NOTE]
 >
->Adobe将在2020年底[停止更新和分发Flash Player。](https://theblog.adobe.com/adobe-flash-update/)
+>Adobe将在2020年底](https://theblog.adobe.com/adobe-flash-update/)停止更新和分发Flash Player。[
 
 ### Adobe文档Security Extension for Microsoft Office {#adobe-rights-management-extension-for-microsoft-office}
 
