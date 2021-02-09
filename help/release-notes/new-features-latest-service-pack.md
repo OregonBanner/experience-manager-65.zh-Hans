@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7的新增功能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2780'
 ht-degree: 1%
 
 ---
@@ -53,6 +53,10 @@ ht-degree: 1%
 ### 布局模式{#reset-option-layout-mode}中每个组件的重置选项可用性
 
 现在，您可以在自适应表单的布局模式下为每个组件使用重置选项。 为面板定义多列布局时，可以使用此功能在面板中重置各个组件。 请参阅[使用布局模式调整组件大小](../../help/forms/using/resize-using-layout-mode.md#resize-components)。
+
+### 支持Microsoft SQL Server 2019
+
+[!DNL Experience Manager Forms] 现在支持Microsoft SQL Server 2019。
 
 ## 先前[!DNL Experience Manager] 6.5 Service Pack {#key-features-previous-service-packs}中的主要功能
 
