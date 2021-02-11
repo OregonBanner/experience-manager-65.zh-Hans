@@ -2,9 +2,9 @@
 title: 创建和同步Live Copy
 description: 了解如何创建和同步Live Copy。
 translation-type: tm+mt
-source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
+source-git-commit: 1725f19d0676680ae89ad7ea39fa3ae1deaeb8a3
 workflow-type: tm+mt
-source-wordcount: '4114'
+source-wordcount: '4170'
 ht-degree: 1%
 
 ---
@@ -231,7 +231,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
    ![转出蓝图](assets/rollout-blueprint.png)
 
-转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)**
+转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。**](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
 
 >[!NOTE]
 >
@@ -257,7 +257,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
 1. 确认这些详细信息后，选择&#x200B;**转出**&#x200B;以执行操作。
 
-转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)**
+转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。**](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 
    ![转出蓝图](assets/rollout-blueprint.png)
 
-转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)**
+转出将作为异步作业处理，并可以在&#x200B;**全局导航** -> **工具** -> **操作** -> **作业**&#x200B;的&#x200B;[**仪表板中检查。**](asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
 
 >[!NOTE]
 >
@@ -355,6 +355,10 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 >[!NOTE]
 >
 >还可以从Live Copy](#detaching-a-live-copy)的蓝图中分离Live Copy[以删除所有连接。 “分离”(Detach)操作是永久的且不可撤消的。
+
+>[!NOTE]
+>
+>如果组件被标记为容器，取消和挂起操作不会应用于其子组件。 另请参阅[MSM最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)以了解详细信息。
 
 #### 从页面属性{#suspending-inheritance-from-page-properties}挂起继承
 
@@ -459,6 +463,10 @@ Blueprint页面（在Blueprint配置中引用）为您提供了Live Copy页面�
 ### 取消组件{#cancelling-inheritance-for-a-component}的继承
 
 取消组件的Live Copy继承，以便组件不再与源组件同步。 如果需要，可以在以后启用继承。
+
+>[!NOTE]
+>
+>如果组件被标记为容器，取消和挂起操作不会应用于其子组件。 另请参阅[MSM最佳实践](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)以了解详细信息。
 
 >[!NOTE]
 >
