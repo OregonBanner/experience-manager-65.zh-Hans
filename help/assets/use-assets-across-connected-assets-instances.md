@@ -3,7 +3,7 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署中可用的资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f0d91a32caa4d3b862d852028e3bc5547aeb8015
+source-git-commit: d05dc3af0a885e51758194783e773695086d7956
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 41%
@@ -32,7 +32,7 @@ ht-degree: 41%
 
    |  | [!DNL Sites] 作为Cloud Service | [!DNL Experience Manager] 6.5  [!DNL Sites] on AMS. | [!DNL Experience Manager] 6.5内 [!DNL Sites] 部部署 |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]作为Cloud Service** | 支持 | 支持 | 支持 |
+   | **[!DNL Experience Manager Assets]as a[!DNL Cloud Service]** | 支持 | 支持 | 支持 |
    | **[!DNL Experience Manager]6.5  [!DNL Assets] on AMS.** | 支持 | 支持 | 支持 |
    | **[!DNL Experience Manager]6.5内 [!DNL Assets] 部部署** | 不支持 | 不支持 | 不支持 |
 
@@ -51,7 +51,7 @@ ht-degree: 41%
 |---|---|---|---|---|
 | [!DNL Sites] 管理员 | 本地 | [!DNL Experience Manager] `administrators` | `admin` | 设置[!DNL Experience Manager]并配置与远程[!DNL Assets]部署的集成。 |
 | DAM 用户 | 本地 | `Authors` | `ksaner` | 用于查看和复制在 `/content/DAM/connectedassets/` 上获取的资产。 |
-| [!DNL Sites] 作者 | 本地 | `Authors` (在远程DAM上具有读访问权，在本地具有作者访问权 [!DNL Sites]) | `ksaner` | 最终用户是[!DNL Sites]作者，他们使用此集成来提高其内容速度。 作者使用[!UICONTROL 内容查找器]在远程DAM中搜索和浏览资产，并在本地网页中使用所需的图像。 使用的 DAM 用户的 `ksaner` 凭据。 |
+| [!DNL Sites] 作者 | 本地 | <ul><li>`Authors` (在远程DAM上具有读访问权，在本地具有作者访问权 [!DNL Sites]) </li> <li>`dam-users` 在本地  [!DNL Sites]</li></ul> | `ksaner` | 最终用户是[!DNL Sites]作者，他们使用此集成来提高其内容速度。 作者使用[!UICONTROL 内容查找器]在远程DAM中搜索和浏览资产，并在本地网页中使用所需的图像。 使用的 DAM 用户的 `ksaner` 凭据。 |
 | [!DNL Assets] 管理员 | 远程 | [!DNL Experience Manager] `administrators` | `admin` 在远程  [!DNL Experience Manager] | 配置跨源资源共享 (CORS)。 |
 | DAM 用户 | 远程 | `Authors` | `ksaner` 在远程  [!DNL Experience Manager] | 远程[!DNL Experience Manager]部署上的作者角色。 使用[!UICONTROL 内容查找器]在已连接资产中搜索和浏览资产。 |
 | DAM 分发人员（技术用户） | 远程 | [!DNL Sites] `Authors` | `ksaner` 在远程  [!DNL Experience Manager] | [!DNL Experience Manager]本地服务器（不是[!DNL Sites]作者角色）使用此远程部署用户代表[!DNL Sites]作者获取远程资产。 此角色与上述两个 `ksaner` 角色不同，它属于另一个不同的用户组。 |
