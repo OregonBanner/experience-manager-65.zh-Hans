@@ -3,10 +3,10 @@ title: 创建翻译项目
 description: 了解如何在 [!DNL Adobe Experience Manager]中创建翻译项目。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: 534a3d75ebb6a6d297354cce4840bdc1dfa25707
 workflow-type: tm+mt
-source-wordcount: '1885'
-ht-degree: 16%
+source-wordcount: '1878'
+ht-degree: 17%
 
 ---
 
@@ -19,13 +19,11 @@ ht-degree: 16%
 
 * **更新语言副本**:运行此工作流以翻译另一组资产，并将其包含在特定区域设置的语言副本中。在这种情况下，已翻译的资产会添加到已包含先前已翻译资产的目标文件夹中。
 
->[!NOTE]
+>[!PREREQUISITES]
 >
->仅当翻译服务提供商支持二进制文件的翻译时，资产二进制文件才进行翻译。
+>* 创建翻译项目的用户是组`projects-administrators`的成员。
+>* 翻译服务提供商支持二进制的翻译。
 
->[!NOTE]
->
->如果您为复杂资产（如PDF和[!DNL Adobe InDesign]文件）启动翻译工作流，则不会提交其子资产或演绎版（如果有）进行翻译。
 
 ## 创建和翻译工作流{#create-and-translate-workflow}
 
@@ -40,17 +38,14 @@ ht-degree: 16%
 使用“ **[!UICONTROL 仅创建结构]** ”选项可在目标语言根目录中创建目标文件夹层次结构，以匹配源语言根目录中源文件夹的层次结构。 在这种情况下，源资产会复制到目标文件夹。 但是，不会生成翻译项目。
 
 1. 在[!DNL Assets]接口中，选择要在目标语言根中创建结构的源文件夹。
+
 1. 打开&#x200B;**[!UICONTROL 引用]**&#x200B;窗格，然后单击&#x200B;**[!UICONTROL 副本]**&#x200B;下的&#x200B;**[!UICONTROL 语言副本]**。
 
-   ![chlimage_1-57](assets/chlimage_1-57.png)
+   ![语言副本](assets/translation-language-copies.png)
 
-1. 单击底部的&#x200B;**[!UICONTROL 创建并翻译]**。
-
-1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
+1. 单击&#x200B;**[!UICONTROL 创建并翻译]**。 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
 1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 仅创建结构]**。
-
-   ![chlimage_1-60](assets/chlimage_1-60.png)
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。目标语的新结构列在&#x200B;**[!UICONTROL 语言副本]**&#x200B;下。
 
@@ -87,7 +82,7 @@ ht-degree: 16%
 
    ![语言副本](assets/lang-copy2.png)
 
-1. 要导航到文件夹，请选择语言副本，然后单击“资产&#x200B;**[!UICONTROL 中显示”。]**
+1. 要导航到文件夹，请选择语言副本，然后单击“资产&#x200B;]**中显示”。**[!UICONTROL 
 
    ![显示资产](assets/reveal-in-assets.png)
 
@@ -109,7 +104,7 @@ ht-degree: 16%
 
    有关作业状态的详细信息，请参阅[监视翻译作业的状态](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 导航到[!DNL Assets] UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
+1. 导航到[!DNL Assets]用户界面，然后打开每个已翻译资产的[!UICONTROL 属性]页面，以视图已翻译的元数据。
 
    ![视图资产属性页面中的已翻译元数据](assets/translated-metadata-asset-properties.png)
 
@@ -117,7 +112,7 @@ ht-degree: 16%
 
    >[!NOTE]
    >
-   >此功能适用于资产和文件夹。 选择资产而非文件夹后，系统会复制到语言根目录下的整个文件夹层次结构，为资产创建语言副本。
+   >此功能适用于资产和文件夹。 选择资产而不是文件夹后，系统会复制整个文件夹层次结构（直至语言根目录），为资产创建语言副本。
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project}
 
@@ -131,8 +126,6 @@ ht-degree: 16%
 1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
 1. 从“项 **[!UICONTROL 目]** ”列表中，选择 **[!UICONTROL 添加到现有翻译项目]** ，以在文件夹上运行翻译工作流。
-
-   ![chlimage_1-77](assets/chlimage_1-77.png)
 
    >[!NOTE]
    >
@@ -149,15 +142,11 @@ ht-degree: 16%
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. 单击&#x200B;**翻译作业**&#x200B;拼贴底部的省略号，以视图翻译工作流中的资产。 转换作业列表还显示资产元数据和标记的条目。 这些条目指示资产的元数据和标记也会被翻译。
+1. 单击&#x200B;**翻译作业**&#x200B;拼贴底部的省略号，以视图翻译工作流中的资产。 翻译作业列表还会显示资产元数据和标记条目。这些条目指示资产的元数据和标记也会被翻译。
 
    >[!NOTE]
    >
    >如果删除标记或元数据的条目，则不会为任何资产转换标记或元数据。
-
-   >[!NOTE]
-   >
-   >如果使用机器翻译，则资产二进制文件不会进行翻译。
 
    >[!NOTE]
    >
@@ -175,7 +164,7 @@ ht-degree: 16%
 
    有关详细信息，请参阅[监视翻译作业的状态](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 翻译完成后，状态将变为“准备审阅”。 导航到[!DNL Assets] UI，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
+1. 翻译完成后，状态将变为“准备审阅”。 导航到[!DNL Assets]用户界面，然后打开每个已翻译资产的“属性”页面，以视图已翻译的元数据。
 
 ## 更新语言副本 {#update-language-copies}
 
@@ -197,8 +186,6 @@ ht-degree: 16%
 1. 单击底部的&#x200B;**[!UICONTROL 更新语言副本]**。
 
 1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 创建新的翻译项目]**。
-
-   ![chlimage_1-86](assets/chlimage_1-86.png)
 
 1. 在&#x200B;**[!UICONTROL 项目标题]**&#x200B;字段中，输入项目标题。
 
@@ -227,7 +214,7 @@ ht-degree: 16%
 
    有关作业状态的详细信息，请参阅[监视翻译作业的状态](../sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)。
 
-1. 导航到[!DNL Assets]用户界面，然后打开每个已翻译资产的“属性”页面以视图已翻译的元数据。
+1. 导航到[!DNL Assets]用户界面，然后打开每个已翻译资产的“属性”页面，以视图已翻译的元数据。
 
 ### 添加到现有翻译项目 {#add-to-existing-translation-project-1}
 
@@ -279,7 +266,7 @@ ht-degree: 16%
 
 1. 要视图已翻译的元数据，请导航到[!DNL Assets]控制台，然后打开每个已翻译资产的[!UICONTROL 属性]页面。
 
->[!MORELIKETHIS]
->
->* [有效翻译元数据的提示](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)。
+## 提示和限制{#tips-limitations}
 
+* 如果您为复杂资产（如PDF和[!DNL Adobe InDesign]文件）启动翻译工作流，则不会提交其子资产或演绎版（如果有）进行翻译。
+* 如果使用机器翻译，则资产二进制文件不会进行翻译。
