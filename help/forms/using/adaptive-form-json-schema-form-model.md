@@ -1,17 +1,13 @@
 ---
-title: 使用JSON模式创建自适应表单
-seo-title: 使用JSON模式创建自适应表单
-description: 自适应表单可以使用JSON模式作为表单模型，从而允许您利用现有JSON模式创建自适应表单。
-seo-description: 自适应表单可以使用JSON模式作为表单模型，从而允许您利用现有JSON模式创建自适应表单。
-uuid: bdeaeae8-65a3-4c46-b27d-fe68481e31f1
-topic-tags: develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 375ba8fc-3152-4564-aec5-fcff2a95cf4c
-docset: aem65
+title: 如何使用JSON模式创建自适应Forms?
+description: 了解如何使用JSON模式作为表单模型创建自适应表单。 您可以使用现有JSON模式创建自适应表单。 通过JSON模式范例深入挖掘，在JSON模式定义中预配置字段，限制自适应表单组件的可接受值，以及学习不支持的构造。
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner, Imtermediate
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 37ab98c9c78af452887c32101287b6d7f18d9d91
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1448'
 ht-degree: 5%
 
 ---
@@ -21,14 +17,14 @@ ht-degree: 5%
 
 ## 前提条件 {#prerequisites}
 
-使用JSON模式作为表单模型创作自适应表单需要基本了解JSON模式。 建议在本文之前阅读以下内容。
+使用JSON模式创作自适应表单作为表单模型需要基本了解JSON模式。 建议在本文之前阅读以下内容。
 
-* [创建自适应表单](../../forms/using/creating-adaptive-form.md)
+* [创建自适应表单](creating-adaptive-form.md)
 * [JSON模式](https://json-schema.org/)
 
 ## 将JSON模式用作表单模型{#using-a-json-schema-as-form-model}
 
-AEM Forms支持使用现有JSON模式作为表单模型创建自适应表单。 此JSON模式表示组织中的后端系统生成或使用数据的结构。 您使用的JSON模式应符合[v4规范](https://json-schema.org/draft-04/schema)。
+[!DNL Adobe Experience Manager Forms] 支持使用现有JSON模式作为表单模型创建自适应表单。此JSON模式表示组织中的后端系统生成或使用数据的结构。 您使用的JSON模式应符合[v4规范](https://json-schema.org/draft-04/schema)。
 
 使用JSON模式的主要功能有：
 
@@ -82,7 +78,7 @@ JSON元素与自适应表单组件的映射如下：
     </ul> </td>
   </tr>
   <tr>
-   <td><p>{</p> <p>“类型”:"string",</p> <p>}</p> </td>
+   <td><p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>}</code></p> </td>
    <td><br /> <br /> 文本字段<br /> <br /> <br /> </td>
   </tr>
   <tr>
@@ -112,16 +108,16 @@ JSON元素与自适应表单组件的映射如下：
 
 自适应表单使用JSON模式中的可用信息映射每个生成的字段。 特别是：
 
-* 标题属性用作自适应表单组件的标签。
-* description属性设置为自适应表单组件的长描述。
-* 默认属性用作自适应表单字段的初始值。
-* maxLength属性设置为文本字段组件的maxlength属性。
-* “数字”框组件使用minimum、maximum、exclusiveMinimum和exclusiveMaximum属性。
-* 为了支持DatePicker组件的范围，还提供了其他JSON模式属性minDate和maxDate。
-* minItems和maxItems属性用于限制可从面板组件添加或删除的项目／字段数。
-* readOnly属性设置自适应表单组件的只读属性。
-* 必需属性将自适应表单字段标记为必需字段，而在面板（其中类型为对象）的情况下，最终提交的JSON数据的字段具有与该对象对应的空值。
-* 模式属性以自适应形式设置为验证模式(常规表达式)。
+* `title`属性用作自适应表单组件的标签。
+* `description`属性设置为自适应表单组件的长描述。
+* `default`属性用作自适应表单字段的初始值。
+* 将`maxLength`属性设置为文本字段组件的`maxlength`属性。
+* `minimum`、`maximum`、`exclusiveMinimum`和`exclusiveMaximum`属性用于数字框组件。
+* 为了支持`DatePicker component`其他JSON模式属性`minDate`和`maxDate`的范围。
+* `minItems`和`maxItems`属性用于限制可从面板组件添加或删除的项目／字段数。
+* `readOnly`属性设置自适应表单组件的`readonly`属性。
+* `required`属性将自适应表单字段标记为必填字段，而在面板（其中类型为对象）中，最终提交的JSON数据的字段具有与该对象对应的空值。
+* `pattern`属性以自适应形式设置为验证模式(常规表达式)。
 * JSON模式文件的扩展名必须保留为。模式.json。 例如，&lt;filename>.模式.json。
 
 ## 示例JSON模式{#sample-json-schema}
@@ -361,7 +357,7 @@ JSON元素与自适应表单组件的映射如下：
 
 ## 为表单对象{#configure-scripts-or-expressions-for-form-objects}配置脚本或表达式
 
-JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并使用自适应表单脚本模型API。 您可以预配置表单对象以对表单表达式[进行评估。](../../forms/using/adaptive-form-expressions.md)
+JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，并使用自适应表单脚本模型API。 您可以预配置表单对象以对表单表达式](adaptive-form-expressions.md)进行评估。[
 
 使用aem:afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，当触发初始化事件时，下面的代码设置电话字段的值并将值打印到日志：
 
@@ -381,7 +377,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-您应是[forms-power-user组](/help/forms/using/forms-groups-privileges-tasks.md)的成员，以配置表单对象的脚本或表达式。 下表列表了自适应表单组件支持的所有脚本事件。
+您应是[forms-power-user组](forms-groups-privileges-tasks.md)的成员，以配置表单对象的脚本或表达式。 下表列表了自适应表单组件支持的所有脚本事件。
 
 <table>
  <tbody>
@@ -485,7 +481,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
    <td><img alt="" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
-   <td>下拉列表</td>
+   <td>下拉面板</td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
@@ -586,9 +582,9 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
-在JSON中使用事件的一些示例是，在初始化事件时隐藏字段，在值提交事件时配置其他字段的值。 有关为脚本表达式创建事件的详细信息，请参阅[自适应表单表达式](../../forms/using/adaptive-form-expressions.md)。
+在JSON中使用事件的一些示例是，在初始化事件时隐藏字段，在值提交事件时配置其他字段的值。 有关为脚本表达式创建事件的详细信息，请参阅[自适应表单表达式](adaptive-form-expressions.md)。
 
-以下是上述示例的示例JSON代码。
+以下是前面提到的示例的JSON代码示例。
 
 ### 在初始化事件{#hiding-a-field-on-initialize-event}时隐藏字段
 
@@ -711,13 +707,13 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
     </ul> </td>
   </tr>
   <tr>
-   <td>maxItems</td>
+   <td><code>maxItems</code></td>
    <td>字符串</td>
    <td>指定数组中最大项数。 最大项目必须等于或大于零。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>minItems</td>
+   <td><code>minItems</code></td>
    <td>字符串</td>
    <td>指定数组中最小项数。 最小项目必须等于或大于零。</td>
    <td> </td>
