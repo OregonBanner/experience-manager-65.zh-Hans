@@ -3,7 +3,7 @@ title: 使用页面跟踪器并在网页中嵌入代码
 description: 了解如何在网站代码中包含页面跟踪器和嵌入JavaScript代码，使Adobe Analytics能够捕获围绕资源的使用数据。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
+source-git-commit: fc433851c24f9049e7ba6dfada24d6e552eb6d05
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 <!DOCTYPE html>
 <html>
     <head>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/sitecatalyst/appmeasurement.js"></script>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/foundation/assetinsights/pagetracker.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/sitecatalyst/appmeasurement.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/assetinsights/pagetracker.js"></script>
             <script type="text/javascript">
                                 assetAnalytics.attrTrackable = 'trackable';
                 assetAnalytics.defaultTrackable = false;
                 assetAnalytics.attrAssetID = 'aem-asset-id';
-                assetAnalytics.assetImpressionPollInterval = 200; // interval in millis
+                assetAnalytics.assetImpressionPollInterval = 200; // interval in milliseconds
                 assetAnalytics.charsLimitForGET = 2000; // bytes
                 assetAnalytics.dispatcher.init("assetstesting","xxxx","xxx","list1","eVar3","event8","event7");
             </script>
@@ -65,8 +65,8 @@ ht-degree: 0%
 
 ```xml
  <head>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/sitecatalyst/appmeasurement.js"></script>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/foundation/assetinsights/pagetracker.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/sitecatalyst/appmeasurement.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/foundation/assetinsights/pagetracker.js"></script>
             <script type="text/javascript">
                                 assetAnalytics.attrTrackable = 'trackable';
                 assetAnalytics.defaultTrackable = false;
