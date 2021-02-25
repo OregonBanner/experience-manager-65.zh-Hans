@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1876'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Smart Imaging技术应用Adobe Sensei AI功能并与现有的“图像预设”�
 
 >[!NOTE]
 >
->客户必须使用与Adobe Experience Manager Dynamic Media捆绑的CDN（内容交付网络），才能从智能成像中受益。
+>此功能要求您使用与Adobe Experience Manager Dynamic Media绑定的现成CDN。 此功能不支持任何其他自定义CDN。
 
 Smart Imaging还可以从与Adobe一流的高级CDN服务完全集成而带来的性能提升中受益。 此服务可找到服务器、网络和对点之间的最佳Internet路由。 它找到的路由具有最低的延迟和最低的数据包丢失率，而不是使用Internet上的默认路由。
 
