@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: b4795930c87fa30d7c7ab60a50bc6f40da4f97d2
+source-git-commit: c3fddf28c0f2f5377fff7561d29f073cc847c3ca
 workflow-type: tm+mt
-source-wordcount: '6418'
+source-wordcount: '6450'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,13 @@ ht-degree: 1%
 
 # 以编程方式{#using-aem-document-services-programmatically}使用AEM 文档 Services
 
-本文档中的示例和示例可帮助您了解和使用OSGi环境上的AEM Forms上的AEM 文档服务。 有关AEM Forms在JEE环境上的示例和示例，请参阅[在JEE上使用AEM Forms进行编程](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=en#programming-aem-forms-jee)
+本文档中的示例和示例可帮助您了解和使用OSGi环境上的AEM Forms上的AEM 文档服务。 有关AEM Forms JEE环境的示例和示例，请参阅
+
+* [签名服务Java API快速开始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
+
+* [加密服务Java API快速开始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
+
+* [Acrobat Reader扩展服务Java API快速开始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
 
 ## 先决条件 {#prerequisite}
 
