@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -22,4 +22,6 @@ ht-degree: 0%
 
 [Adobe](https://helpx.adobe.com/support.html) 支持可以在CDN(内容投放网络)级别配置推荐人过滤器，以便只向列表域允许的网站上的网站提供Dynamic Media内容。
 
-热链接保护要求您使用Adobe的绑定CDN。 要激活热链接保护，管理员必须创建支持票证以请求对您的Dynamic Media帐户进行配置更改。 激活热链接保护无需额外费用。
+>[!NOTE]
+>
+>热链接保护要求您使用Adobe的绑定CDN。 要激活热链接保护，管理员必须创建支持票证以请求对您的Dynamic Media帐户进行配置更改。 激活热链路保护无需额外费用。
