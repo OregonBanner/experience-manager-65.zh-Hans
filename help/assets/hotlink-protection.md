@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->热链接保护要求您使用Adobe的绑定CDN。 要激活热链接保护，管理员必须创建支持票证以请求对您的Dynamic Media帐户进行配置更改。 激活热链路保护无需额外费用。
+>此功能要求您使用与Adobe Experience Manager Dynamic Media绑定的现成CDN。 此功能不支持任何其他自定义CDN。 要激活热链接保护，管理员必须创建一个Adobe Customer Care支持票证，以请求对您的Dynamic Media帐户进行配置更改。 激活热链路保护无需额外费用。
