@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Adobe 很高兴地宣布推出 HTTP/2 内容交付功能，这意味着性能将
 
 >[!NOTE]
 >
->客户必须使用与Adobe Experience Manager Dynamic Media捆绑的CDN（内容交付网络），才能从HTTP/2内容投放中受益。
+>此功能要求您使用与Adobe Experience Manager Dynamic Media绑定的现成CDN。 此功能不支持任何其他自定义CDN。
 
 ## 什么是HTTP/2?{#what-is-http}
 
