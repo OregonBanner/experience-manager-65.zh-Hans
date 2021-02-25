@@ -7,9 +7,9 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '6083'
+source-wordcount: '6072'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 5%
 >* [缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 >* [热链接保护](/help/assets/hotlink-protection.md)
 >* [HTTP/2 内容交付](/help/assets/http2.md)
->* [将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch集成](/help/assets/launch.md)
 >* 在CDN级别重定向URL
 >* Akamai ChinaCDN(在中国实现最佳投放)
 
@@ -419,7 +418,7 @@ spin-01-01
  spin-03-12
 ```
 
-通过此信息，您可以按如下方式创建批集类型菜谱：
+通过此信息，可以按如下方式创建批集类型菜谱：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
