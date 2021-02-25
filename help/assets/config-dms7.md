@@ -7,9 +7,9 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '6123'
+source-wordcount: '6083'
 ht-degree: 5%
 
 ---
@@ -31,14 +31,15 @@ ht-degree: 5%
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!IMPORTANT]
+>[!NOTE]
 >
->未将捆绑的CDN与Experience Manager Dynamic Media一起使用的客户不会从以下功能中受益：
->* [智能图像处理](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/imaging-faq.html?lang=en#dynamicmedia)
->* [缓存失效](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en#dynamicmedia)
->* [热链接保护](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/hotlink-protection.html?lang=en#dynamicmedia)
->* [HTTP/2 内容交付](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/http2faq.html?lang=en#dynamicmedia)
->* [将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch集成](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/launch.html?lang=en#dynamicmedia)
+>以下功能列表要求您使用与Adobe Experience Manager - Dynamic Media捆绑的现成CDN。 这些功能不支持任何其他自定义CDN。
+>
+>* [智能图像处理](/help/assets/imaging-faq.md)
+>* [缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>* [热链接保护](/help/assets/hotlink-protection.md)
+>* [HTTP/2 内容交付](/help/assets/http2.md)
+>* [将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch集成](/help/assets/launch.md)
 >* 在CDN级别重定向URL
 >* Akamai ChinaCDN(在中国实现最佳投放)
 
@@ -418,7 +419,7 @@ spin-01-01
  spin-03-12
 ```
 
-通过此信息，可以按如下方式创建批集类型菜谱：
+通过此信息，您可以按如下方式创建批集类型菜谱：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
