@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '720'
 ht-degree: 17%
 
 ---
@@ -20,7 +20,7 @@ Dynamic Media资源由CDN(内容投放网络)缓存，以便快速投放。 但�
 
 >[!NOTE]
 >
->客户必须使用与Adobe Experience Manager Dynamic Media捆绑的CDN，以从CDN缓存失效中受益。
+>此功能要求您使用与Adobe Experience Manager Dynamic Media绑定的现成CDN。 此功能不支持任何其他自定义CDN。
 
 >[!IMPORTANT]
 >
