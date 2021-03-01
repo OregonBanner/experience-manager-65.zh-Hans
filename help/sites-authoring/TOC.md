@@ -90,7 +90,7 @@ ht-degree: 88%
    + [管理受众](managing-audiences.md)
    + [创建和管理选件](offerlib.md)
    + [了解分段](segmentation-overview.md)
-+ AEM和Adobe Campaign{#aem-adobe-campaign}
++ AEM和Adobe Campaign {#aem-adobe-campaign}
    + [使用 Adobe Campaign](adobe-campaign.md)
    + [使用 Adobe Campaign Classic 和 Adobe Campaign Standard](campaign.md)
    + [定位您的 Adobe Campaign](target-adobe-campaign.md)
