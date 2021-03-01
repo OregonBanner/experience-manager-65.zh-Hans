@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1f40c099518bc9d296026d8cfac5b6291e41a846
+source-git-commit: 02937bb85792e2ae9dcdeee3b860f800812a4461
 workflow-type: tm+mt
-source-wordcount: '6634'
+source-wordcount: '6627'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 要了解有关扩展的更多信息，请参阅《Adobe用户指南》中的[Experience Platform Launch扩展](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/overview.html#adobe-extension)。
 
-**本文档面向哪些人员：** 站点管理员、Experience Manager平台上的开发人员以及操作人员。
+**本主题适用于以下人员：** 站点管理员、Experience Manager平台上的开发人员以及操作人员。
 
 ### 集成{#limitations-of-the-integration}的限制
 
@@ -405,7 +405,7 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
 
 **开始之前**
 
-如果您尚未这样做，Adobe建议您仔细查看本节之前的所有文档，以了解完整的集成。
+Adobe建议您仔细查看本节之前的所有文档，以了解完整的集成。
 
 本节介绍将Dynamic Media查看器与Adobe Analytics和Adobe Analytics音频和视频集成所需的配置步骤。 虽然可能将Dynamic Media查看器扩展用于Experience Platform Launch中的其他用途，但本文档不涵盖此类情形。
 
@@ -468,7 +468,7 @@ Dynamic Media查看器扩展允许您使用Dynamic Media查看器的事件参数
    要启用新的自定义流量变量，请在工具栏的Adobe Analytics中，单击&#x200B;**[!UICONTROL 管理>报表包]**。
 
 1. 在&#x200B;**[!UICONTROL 报表包管理器]**&#x200B;页面上，选择正确的报表，然后在工具栏中，单击&#x200B;**[!UICONTROL 编辑设置>流量>流量变量]**。
-1. 在这里，选取一个未使用的变量，为它提供一个描述性名称(**[!UICONTROL 查看器资产(prop 30)]**)，并在“已启用”列中将组合框更改为“已启用”。
+1. 在这里，选择一个未使用的变量，为它提供一个描述性名称(**[!UICONTROL 查看器资产(prop 30)]**)，并在“已启用”列中将组合框更改为“已启用”。
 
    以下屏幕截图是自定义流量变量(**[!UICONTROL prop30]**)的示例，用于跟踪查看器使用的资产名称：
 
@@ -597,7 +597,7 @@ platform launch可能具有多个开发环境、一个暂存环境和一个生�
 发布库涉及以下两个步骤：
 
 * 将所有必要的更改（新更改和更新）包含到库中，以添加和构建新库。
-* 通过不同的环境级别（从开发到暂存和生产）向上移动库
+* 通过不同的环境级别（从开发到暂存和生产）向上移动库。
 
 #### 添加和构建新库{#adding-and-building-a-new-library}
 
@@ -677,7 +677,7 @@ AEM配置包含以下两个主要步骤：
 
    将显示以下信息消息：
 
-   *要检索有效的访问令牌，新证书的公钥将添加到Adobe I/O！上的技术帐户*。
+   *要检索有效的访问令牌，新证书的公钥将添加到Adobe I/O上的技术帐户！*
 
    要关闭“信息”对话框，请单击&#x200B;**[!UICONTROL 确定]**。
 
@@ -733,7 +733,7 @@ AEM配置包含以下两个主要步骤：
 
 1. 返回之前打开的 **[!UICONTROL Adobe IMS 技术帐户配置]**&#x200B;页面。在页面的右上角，单击&#x200B;**[!UICONTROL 下一步]**&#x200B;以在 **[!UICONTROL Adobe IMS 技术帐户配置]**&#x200B;窗口中打开&#x200B;**[!UICONTROL 帐户]**&#x200B;页面。
 
-   (如果您意外地稍早关闭了页面，请返回Experience Manager作者，然后单击&#x200B;**[!UICONTROL 工具>安全>AdobeIMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**。在&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中，选择&#x200B;**[!UICONTROL Experience Platform Launch]**。 在&#x200B;**[!UICONTROL 证书]**&#x200B;下拉列表中，选择之前创建的证书的名称。)
+   (如果您以前关闭了页面，请返回Experience Manager作者，然后单击&#x200B;**[!UICONTROL 工具>安全>AdobeIMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**。在&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中，选择&#x200B;**[!UICONTROL Experience Platform Launch]**。 在&#x200B;**[!UICONTROL 证书]**&#x200B;下拉列表中，选择之前创建的证书的名称。)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
