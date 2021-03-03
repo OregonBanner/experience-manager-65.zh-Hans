@@ -12,10 +12,10 @@ discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 6f1f4fbaf9ee4b5ab073a27a58cb040c76230ebd
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 99%
+source-wordcount: '551'
+ht-degree: 93%
 
 ---
 
@@ -29,7 +29,14 @@ ht-degree: 99%
 1. [从“引用”（“站点”控制台）中访问启动项](/help/sites-authoring/launches.md#launches-in-references-sites-console)以显示可用的操作。
 1. 选择&#x200B;**转到页面**&#x200B;以打开要编辑的页面。
 
-### 编辑基于 Live Copy 的启动页面  {#editing-launch-pages-subject-to-a-live-copy}
+>[!NOTE]
+>
+>不允许您在启动项中移动页面。 尝试此操作将触发警告消息：
+>
+>* 警告：此页面是启动项的源。 不允许移动页面。
+
+
+### 编辑基于 Live Copy 的启动页面 {#editing-launch-pages-subject-to-a-live-copy}
 
 如果您的启动项基于 [Live Copy](/help/sites-administering/msm.md)，那么您将会：
 
