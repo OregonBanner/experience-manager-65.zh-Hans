@@ -11,9 +11,9 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
+source-git-commit: 06cb3a7cdd9b6de00aff67c66327abadce3e0920
 workflow-type: tm+mt
-source-wordcount: '3207'
+source-wordcount: '3205'
 ht-degree: 1%
 
 ---
@@ -512,13 +512,12 @@ AEM Dynamic Media默认为禁用状态。 请参阅此处启用Dynamic Media](/h
 
 ### AEM Forms Designer {#requirements-for-aem-forms-designer}的要求
 
-* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft Windows 10
+* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server或Microsoft® Windows® 10
 * 1 GHz或更快的处理器，支持PAE、NX和SSE2。
 * 32位需要1 GB内存，64位操作系统需要2 GB内存
 * 32位为16 GB磁盘空间，64位操作系统为20 GB磁盘空间
 * 图形内存 — 128 MB GPU（建议使用256 MB）
 * 2.35 GB可用硬盘空间
-* DVD-ROM驱动器
 * 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
