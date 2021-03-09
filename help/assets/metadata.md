@@ -3,10 +3,10 @@ title: 在 [!DNL Adobe Experience Manager]中管理您的数字资产的元数�
 description: 了解元数据的类型，以及如何 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4ca77c7de6113127b123645a1955aaa70a91c1f3
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '2384'
-ht-degree: 20%
+source-wordcount: '2388'
+ht-degree: 19%
 
 ---
 
@@ -78,11 +78,11 @@ ht-degree: 20%
 1. 选择要编辑其通用属性的资产。
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 属性]**&#x200B;以打开选定资产的属性页面。
 1. 在各种选项卡下修改选定资产的元数据属性。
-1. 要视图特定资产的元数据编辑器，请在列表中取消选择其余的资产。 元数据编辑器字段会填充特定资产的元数据。
+1. 要视图特定资产的元数据编辑器，请取消在列表中选择其余资产。 元数据编辑器字段会填充特定资产的元数据。
 
    >[!NOTE]
    >
-   >* 在“属性”页面中，您可以通过取消选择资产来从资产列表中删除资产。 资产列表会默认选择所有资产。 您从列表中删除的资产的元数据不会更新。
+   >* 在“属性”页面中，您可以通过取消选择从资产列表中删除资产。 资产列表会默认选择所有资产。 您从列表中删除的资产的元数据不会更新。
    >* 在资产列表的顶部，选中&#x200B;**[!UICONTROL 标题]**&#x200B;附近的复选框，可在选择资产和清除列表之间切换。
 
 
