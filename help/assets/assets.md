@@ -3,17 +3,17 @@ title: ' [!DNL Adobe Experience Manager Assets] 简介'
 description: 了解什么是数字资产管理、其使用案例和 [!DNL Adobe Experience Manager Asset] 产品。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 130a03c821fd2a1e9ecda70039241720052a8920
+source-git-commit: b851bfb2758db60e960afd4720d04202934c18bc
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 38%
+source-wordcount: '874'
+ht-degree: 37%
 
 ---
 
 
-# 关于[!DNL Adobe Experience Manager Assets]作为DAM解决方案{#administering-assets}
+# 将[!DNL Adobe Experience Manager Assets]作为DAM解决方案{#administering-assets}
 
-[!DNL Assets] 是一种数字资产管理(DAM)工具，它是该平台的一 [!DNL Experience Manager] 个组成部分，使您的企业能够管理和分发数字资产。组织内的用户可以管理、存储和访问多种类型的数字资产，如图像、视频、文档、音频剪辑、3D文件和富媒体，以用于Web、印刷和数字分发。
+[!DNL Assets] 是一种数字资产管理(DAM)工具，是该平台不可或缺的一 [!DNL Experience Manager] 部分，使您的企业能够管理和分发数字资产。组织内的用户可以管理、存储和访问多种类型的数字资产，如图像、视频、文档、音频剪辑、3D文件和富媒体，以便在Web上使用、以印刷形式使用和进行数字分发。
 
 ## 什么是数字资产管理？{#what-is-digital-asset-management}
 
@@ -43,44 +43,44 @@ ht-degree: 38%
 
 ## 什么是数字资产？{#what-are-digital-assets}
 
-资产是指数字文档、图像、视频或音频（或其一部分），可以具有多个演绎版，并可以具有子资产（例如，photoshop文件中的图层、PowerPoint文件中的幻灯片、pdf中的页面、ZIP中的文件）。
+资产是指数字文档、图像、视频或音频（或其一部分），可以具有多个演绎版，并且可以具有子资产（例如，photoshop文件中的图层、PowerPoint文件中的幻灯片、pdf中的页面、ZIP中的文件）。
 
 资产本质上是一个具有元数据、演绎版和子资产的二进制文件。有关详细信息，请参阅 [DAM 性能指南](/help/sites-deploying/assets-performance-sizing.md)。
 
 >[!CAUTION]
 >
->上传和／或编辑大量资产（尤其是图像）可能会影响[!DNL Experience Manager]部署的性能。
+>上传和/或编辑大量资产（尤其是图像）会影响[!DNL Experience Manager]部署的性能。
 
 ### [!DNL Experience Manager Assets] 术语  {#aem-assets-terminology}
 
-在[!DNL Experience Manager]中处理数字资产时，您需要了解以下术语：
+在[!DNL Experience Manager]中使用数字资产时，您需要了解以下术语：
 
-* **集合**:资产集合，基于物理位置（文件夹）、常用属性（保存的搜索文件夹）或用户选择（lightbox文件夹）。
+* **集合**:资产集合，基于物理位置（文件夹）、常用属性（保存的搜索文件夹）或用户选择（Lightbox文件夹）。
 
-* **元数** [!DNL Assets] 据包元数据；例如，作者、到期日、DRM信息(Digital Rights Management)等。元数据受访问控制。[!DNL Assets] 支持以下各种常见的现成元数据架构：
+* **元数** [!DNL Assets] 据包含元数据；例如，作者、到期日、DRM信息(Digital Rights Management)等。元数据受访问控制。[!DNL Assets] 支持以下各种常见的现成元数据架构：
 
    * Dublin Core：包括作者、描述、日期、主题等。
    * IPTC：包括事件、模型、位置等。
-   * WCM:包括页面属性、[!UICONTROL 开启时间]和[!UICONTROL 结束时间]等。
+   * WCM:包括页面属性、[!UICONTROL 开机时间]和[!UICONTROL 关机时间]等。
 
-* **标记**: [!DNL Assets] 可以标记和分类。请参阅[组织资产](/help/assets/organize-assets.md)。
+* **标记**: [!DNL Assets] 可以被标记和分类。请参阅[组织资产](/help/assets/organize-assets.md)。
 
-* **演绎版**:演绎版是资产的二进制表示形式。[!DNL Assets] 始终具有主要表示形式——已上载文件的表示形式。它们可以采用创建的任何数量的其他表示形式，例如定制工作流程步骤或资产上传时创建的表示形式。演绎版可能大小不同、分辨率不同、添加了水印，或者更改了其他一些特性。
+* **演绎版**:演绎版是资产的二进制表示形式。[!DNL Assets] 始终具有主要表示形式 — 已上载文件的表示形式。它们可以采用创建的任何数量的其他表示形式，例如定制工作流程步骤或资产上传时创建的表示形式。演绎版可能大小不同、分辨率不同、添加了水印，或者更改了其他一些特性。
 
 * **版本**:版本控制可创建数字资产在特定时间点的快照。您可以将资产恢复至以前的版本。请参阅 [!DNL Assets]](manage-assets.md#asset-versioning)中的[版本控制。
 
-* **子资产**:子资产是组成资产的资产，例如，PDF文件中 [!DNL Adobe Photoshop] 的图层或页面。在[!DNL Assets]中，您可以像管理资产一样管理子资产。
+* **子资产**:子资产是组成资产的资产，例如，文件中的图层或 [!DNL Adobe Photoshop] PDF文件中的页面。在[!DNL Assets]中，您可以像管理资产一样管理子资产。
 
 ### 如何使用数字资产{#how-to-work-with-assets}
 
-您可以对资产或收藏集执行操作。这些操作包括创建或修改资产、收藏集和演绎版。您对资产执行的许多基本操作——上传、删除、更新、保存子资产——都会触发预配置工作流。 这些属性在[!DNL Assets]中自动打开，在[!DNL Assets]媒体处理程序中有详细说明。
+您可以对资产或收藏集执行操作。这些操作包括创建或修改资产、收藏集和演绎版。您对资产执行的许多基本操作 — 上传、删除、更新、保存子资产 — 都会触发预配置的工作流。 在[!DNL Assets]中会自动打开这些设备，在[!DNL Assets]媒体处理程序中有详细说明。
 
 您可以通过以下预配置任务执行工作流:
 
-* 将资产保存到存储库中，或从存储库中删除资产。
-* 提取和保存资产的元数据；单个元数据项将保存为XMP。
-* 为资产生成演绎版和缩略图；包括根据需要自动调整大小和裁剪。
-* 在必要时转码资产。 例如，供移动设备和 Web 使用的视频将以 24 帧/秒的速率转码，供下载的视频将以 30 帧/秒的速率转码。用于移动和Web的音频以128 Kbps的速率进行转码，用于下载的音频以192 Kbps的速率进行转码。
+* 将资产保存到存储库中，或从中删除资产。
+* 提取和保存资产的元数据；单个元数据项目将保存为XMP。
+* 生成资产的演绎版和缩略图；包括根据需要自动调整大小和裁剪。
+* 在必要时转码资产。 例如，供移动设备和 Web 使用的视频将以 24 帧/秒的速率转码，供下载的视频将以 30 帧/秒的速率转码。用于移动和Web的音频以128 Kbps的速率转码，用于下载的音频以192 Kbps的速率转码。
 
 当然，您也可以手动应用工作流。请参阅 [ Assets 媒体处理程序](media-handlers.md)，以获取默认工作流的列表。
 
@@ -90,5 +90,6 @@ ht-degree: 38%
 
 >[!MORELIKETHIS]
 >
->* [Experience Manager资产作为现代DAM](https://www.youtube.com/embed/PBwQqZgC-yo)
+>* [视频简介 — 将资产Experience Manager为现代DAM](https://www.youtube.com/watch?v=PBwQqZgC-yo)
+>* [了解元数据概念](/help/assets/metadata-concepts.md)
 
