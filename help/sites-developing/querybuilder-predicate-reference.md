@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
-source-git-commit: 571a48790c4977e97abec24fe88407b5b6376108
+source-git-commit: 7a96ff5cdd187291efe108d1171782bcbecfaeb0
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 3%
@@ -100,7 +100,7 @@ contentfragment它可以与任何值一起使用来检查内容片段。
 
 * **操作**
 
-   &quot; `equals`&quot;表示精确匹配，&quot; `!=`&quot;表示不相等比较，&quot; `greater`&quot;表示属性1大于属性2,&quot; `>=`&quot;表示属性1大于或等于属性2。 默认值为 &quot; `equals`&quot;.
+   “`equals`”表示精确匹配，“`!=`”表示不相等比较，“`greater`”表示属性1大于属性2，“`>=`”表示属性1大于或等于属性2。 默认值为 &quot;`equals`&quot;.
 
 ### daterange {#daterange}
 
@@ -370,7 +370,7 @@ JCR节点名称上的匹配项。
 
 * **操作**
 
-   “ `equals`”(对于exactmatch(default))，“ `unequals`”（对于不相等的比较），“ `like`”（对于使用`jcr:like` xpath函数），“ `not`”（对于不匹配），“ ”(例如 &quot; `not(@prop)`&quot;（在xpath中，值参数将被忽略）或&quot; `exists`&quot;（用于存在检查）（值可以为true — 属性，默认值 — 或false — 与&quot; `not`&quot;相同）
+   “`equals`”（对于exactmatch，默认值），“`unequals`”（对于不相等的比较），“`like`”（对于使用`jcr:like` xpath函数，可选），“ `not`”（对于不匹配），“ ”(例如 “`not(@prop)`”（在xpath中，值参数将被忽略）或“`exists`”（对于存在检查，值可以是true — 属性必须存在，默认值 — 或false — 与“`not`”相同）
 
 * **深度**
 
