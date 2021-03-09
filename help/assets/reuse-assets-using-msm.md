@@ -4,10 +4,10 @@ description: 跨从父资产派生并链接到父资产的多个页面/文件夹
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7eb569c86c45daa8b175f924b211693a5d5dde58
+source-git-commit: 5c9907bf475796c5bbb61d6fcaf43730f9e79777
 workflow-type: tm+mt
-source-wordcount: '3373'
-ht-degree: 10%
+source-wordcount: '3366'
+ht-degree: 9%
 
 ---
 
@@ -70,7 +70,7 @@ MSM在源资产及其Live Copy之间保持实时关系，以便：
 
 1. 选择源资产或文件夹。 在工具栏中，单击&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL Live Copy]**。
 
-   ![从Experience Manager界面创建Live Copy](assets/create_lc1.png)
+   ![从界面创建Live  [!DNL Experience Manager] Copy](assets/create_lc1.png)
 
    *图：从界面创建 [!DNL Experience Manager] Live Copy。*
 
@@ -82,7 +82,7 @@ MSM在源资产及其Live Copy之间保持实时关系，以便：
 
 1. 在[!DNL Experience Manager]接口中，从右上角单击&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL Live Copy]**。
 
-   ![从Experience Manager界面创建Live Copy](assets/create_lc2.png)
+   ![从界面创建Live  [!DNL Experience Manager] Copy](assets/create_lc2.png)
 
    *图：从界面创建 [!DNL Experience Manager] Live Copy。*
 
@@ -106,7 +106,7 @@ MSM在源资产及其Live Copy之间保持实时关系，以便：
 
 >[!TIP]
 >
->要检查几个单独Live Copy的状态，请使用第一种方法检查[!UICONTROL 属性]页。 要检查多个Live Copy的状态，请使用第二种方法检查&#x200B;**[!UICONTROL 关系状态]**&#x200B;页。
+>要检查几个单独Live Copy的状态，请使用第一种方法检查&#x200B;**[!UICONTROL 属性]**&#x200B;页。 要检查多个Live Copy的状态，请使用第二种方法检查&#x200B;**[!UICONTROL 关系状态]**&#x200B;页。
 
 ### Live Copy的信息和状态{#statuslcasset}
 
@@ -189,8 +189,9 @@ MSM在源资产及其Live Copy之间保持实时关系，以便：
 您可以从源资产启动转出操作，并更新全部或几个选择的Live Copy。
 
 1. 选择Live Copy资产或文件夹。 单击工具栏中的&#x200B;**[!UICONTROL 属性]**。 或者，使用键盘快捷键`p`。
-1. 单击 **[!UICONTROL Live Copy 源]**。单击顶部工具栏中的&#x200B;**[!UICONTROL 转出]**。
-1. 选择要更新的Live Copy。 单击&#x200B;**[!UICONTROL 转出]**。 要转出对子资产所做的更新，请选择&#x200B;**[!UICONTROL 转出源和所有子资产]**。
+1. 单击 **[!UICONTROL Live Copy 源]**。单击工具栏中的&#x200B;**[!UICONTROL 转出]**。
+1. 选择要更新的Live Copy。 单击&#x200B;**[!UICONTROL 转出]**。
+1. 要转出对子资产所做的更新，请选择&#x200B;**[!UICONTROL 转出源和所有子资产]**。
 
    ![将源的修改转出为几个或所有Live Copy](assets/livecopy_rollout_page.png)
 
