@@ -3,7 +3,7 @@ title: ' [!DNL Experience Manager Assets]中的辅助功能'
 description: 了解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的辅助功能如何帮助残障用户。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 2%
@@ -95,7 +95,7 @@ Possible topics to cover in this article are below.
 | 已选择资产或文件夹 | `e` | 编辑选定的资产。 |
 | 已选择资产或文件夹 | `m` | 移动选定的资产。 |
 | 已选择资产或文件夹 | `Ctrl + c` | 复制选定的资产。 |
-| 已选择资产或文件夹 | `Esc` | 取消选择所选内容。 |
+| 已选择资产或文件夹 | `Esc` | 取消选择。 |
 | 对话框打开并处于焦点 | `Esc` | 的双曲余切值。 |
 | 在DAM中的文件夹内 | `Ctrl + v` | 粘贴复制的资产。 |
 | [!DNL Assets] 控制台 | `Ctrl + A` | 选择所有资产。 |
