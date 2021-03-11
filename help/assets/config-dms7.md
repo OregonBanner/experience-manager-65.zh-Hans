@@ -1,15 +1,15 @@
 ---
 title: 配置 Dynamic Media - Scene7 模式
-description: 有关如何配置Dynamic Media - Scene7模式的信息。
+description: 了解如何配置Dynamic Media - Scene7模式。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
+source-git-commit: 99293a13fcdf06f37d9747683f7c32ebd9246d18
 workflow-type: tm+mt
-source-wordcount: '6072'
+source-wordcount: '6138'
 ht-degree: 5%
 
 ---
@@ -65,11 +65,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 >
 >如果您在兼容模式下运行Experience Manager实例（即已安装兼容性打包），则无需运行这些命令。
 
-对于所有具有或没有兼容性包的升级，您都可以通过运行以下Linux curl命令复制Dynamic Media最初附带的默认现成查看器预设：
+对于所有具有或没有兼容性包的升级，您都可以通过运行以下Linux® curl命令复制Dynamic Media最初附带的默认现成查看器预设：
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
-要将您从`/etc`创建的任何自定义查看器预设和配置迁移到`/conf`，请运行以下Linux curl命令：
+要将您从`/etc`创建的任何自定义查看器预设和配置迁移到`/conf`，请运行以下Linux® curl命令：
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets.migratedmcontent.json`
 
@@ -106,7 +106,10 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL 发布资产]**  — 您可以从以下三个选项中进行选择：
       * **[!UICONTROL 即]** 时意味着上传资产时，系统会立即收录资产并提供URL/Embed。发布资产不需要用户干预。
-      * **[!UICONTROL 激]** 活后，即在提供URL/嵌入链接之前，您必须先显式发布资产。
+      * **[!UICONTROL 激]** 活后，即在提供URL/嵌入链接之前，您必须先显式发布资产。<br><!-- CQDOC-17478, Added March 9, 2021-->从Experience Manager 6.5.8开始，Experience Manager Publish实例反映的是Dynamic Media元数据值准确无误，如仅在“激活 `dam:scene7Domain` 时” `dam:scene7FileStatus` 和“ **[!UICONTROL 激活]** 时”发布模式中。要启用此功能，请安装Service Pack 8，然后重新启动Experience Manager。 转至Sling Config Manager。 查找`Scene7ActivationJobConsumer Component`的配置或创建新配置)。 选中复选框&#x200B;**[!UICONTROL 在Dynamic Media发布]**&#x200B;后复制元数据，然后点按&#x200B;**[!UICONTROL 保存]**。
+
+         ![“在Dynamic Media发布后复制元数据”复选框](assets-dm/replicate-metadata-setting.png)
+
       * **[!UICONTROL 选择]** 性发布此选项可让您控制在Dynamic Media中发布的文件夹。它允许您使用智能裁剪或动态演绎版等功能，或确定仅在Experience Manager中发布哪些文件夹以进行预览。 这些相同的资产&#x200B;*不*&#x200B;已发布到Dynamic Media，以便在公共域中进行投放。<br>您可以在Dynamic Media云配置中 **[!UICONTROL 在此]** 处设置此选项，或者，如果您愿意，也可以选择在文件夹属性中的文件夹级别设置 **[!UICONTROL 此选项]**。<br>请参阅[使用 Dynamic Media 中的“选择性发布”功能。](/help/assets/selective-publishing.md)<br>如果您稍后更改此配置，或稍后在文件夹级别更改它，则这些更改仅影响您从该点向前上传的新资产。在您从&#x200B;**[!UICONTROL 快速发布]**&#x200B;或&#x200B;**[!UICONTROL 管理发布]**&#x200B;对话框手动更改文件夹中现有资产的发布状态之前，这些资产将保持原样。
    * **[!UICONTROL 安全预览服务器]**  — 允许您指定指向安全再现预览服务器的URL路径。也就是说，在生成再现后，Experience Manager可以安全访问和预览远程Dynamic Media再现(不会将二进制文件发送回Experience Manager实例)。
 除非您有特殊安排来使用您自己的公司服务器或特殊服务器，否则Adobe建议您按指定的方式保留此设置。
@@ -116,7 +119,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL Dynamic Media 同步模式]**
       * **[!UICONTROL 默认情况下启用]**  — 默认情况下，配置将应用于所有文件夹，除非您专门为排除标记文件夹。  <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 默认情况下禁用]**  — 在显式标记选定的文件夹以同步到Dynamic Media之前，此配置不会应用于任何文件夹。要将选定的文件夹标记为同步到Dynamic Media，请选择一个资产文件夹，然后在工具栏中点按&#x200B;**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉列表中，从以下三个选项中进行选择。 完成后，点按&#x200B;**[!UICONTROL 保存。]** *记住：如果您选择了“同步所有内容”，则这三个&#x200B;**选项将**不可用。* 另请参 [阅在Dynamic Media的文件夹级别使用选择性发布。](/help/assets/selective-publishing.md)
-         * **[!UICONTROL 继承]**  — 文件夹中没有显式同步值；相反，该文件夹会从其父文件夹之一或云配置中的默认模式继承同步值。通过工具提示显示继承的详细状态。
+         * **[!UICONTROL 继承]**  — 文件夹中没有显式同步值；相反，该文件夹会从其父文件夹之一或云配置中的默认模式继承同步值。通过工具提示显示继承的节目的详细状态。
          * **[!UICONTROL 为子文件夹启用]**  — 包括此子树中的所有内容以同步到Dynamic Media。特定于文件夹的设置将覆盖云配置中的默认模式。
          * **[!UICONTROL 对子文件夹禁用]**  — 将此子树中的所有内容从同步到Dynamic Media中排除。
 
@@ -588,7 +591,7 @@ Scene7上传连接设置将Experience Manager资源同步到Dynamic Media Classi
   <tr>
    <td> </td>
    <td><strong>筛选器</strong></td>
-   <td><strong>Mime 类型</strong></td>
+   <td><strong>MIME类型</strong></td>
    <td><strong>演绎版</strong></td>
   </tr>
   <tr>
