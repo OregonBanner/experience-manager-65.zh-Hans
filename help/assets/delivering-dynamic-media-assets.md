@@ -1,6 +1,6 @@
 ---
 title: 传送 Dynamic Media 资产
-description: 了解如何交付动态媒体资产
+description: 了解如何交付Dynamic Media资产
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,30 +9,30 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eacfe8a79d155dddde8908d05b05790d048b0c5
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 23%
+ht-degree: 16%
 
 ---
 
 
 # 传送 Dynamic Media 资产{#delivering-dynamic-media-assets}
 
-您如何投放动态媒体资产（视频和图像）取决于网站的实施方式。
+您如何提供Dynamic Media资产（视频和图像）取决于网站的实施方式。
 
 通过 Dynamic Media，您可以选择以下方式：
 
-* 如果您的网站托管在 AEM 上，您会希望将 Dynamic Media 资产直接添加到您的页面。
+* 如果您的网站托管在AEM上，则您希望将Dynamic Media资产直接添加到您的页面。
 * 如果您的网站不在AEM上，您可以选择：
 
    * 将视频或图像嵌入您的网站。
    * 将URL关联到您的Web应用程序。当您希望以弹出窗口或模态窗口的形式传送视频播放器时，可使用链接。
-   * 如果您的站点是响应式的，您可以[传送优化的图像。](/help/assets/responsive-site.md)
+   * 如果您的站点是响应式的，则您可以[传送优化的图像。](/help/assets/responsive-site.md)
 
 >[!NOTE]
 >
->智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 有关详细信息，请参阅[智能成像](/help/assets/imaging-faq.md)。
+>智能成像功能可以与您现有的图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 有关详细信息，请参阅[智能成像](/help/assets/imaging-faq.md)。
 
 有关更多信息，请参阅下列主题：
 
@@ -46,8 +46,8 @@ ht-degree: 23%
 * [使用规则集转换URL](/help/assets/using-rulesets-to-transform-urls.md)
 
 
-## HTTP/2投放Dynamic Media资产{#http-delivery-of-dynamic-media-assets}
+## HTTP/2投放Dynamic Media资源{#http-delivery-of-dynamic-media-assets}
 
-AEM现在支持通过HTTP/2投放所有Dynamic Media内容（图像和视频）。 即，图像或视频的已发布URL或嵌入代码可与接受托管资产的任何应用程序集成。 随后，将通过HTTP/2协议传送已发布的资产。 此投放方法改进了浏览器和服务器通信的方式，使所有Dynamic Media资源的响应和加载时间都更好。
+AEM现在支持通过HTTP/2投放所有Dynamic Media内容（图像和视频）。 即，图像或视频的已发布URL或嵌入代码可与接受托管资产的任何应用程序集成。 然后，通过HTTP/2协议传送已发布的资产。 此投放方法改进了浏览器和服务器通信的方式，使您的所有Dynamic Media资源都能得到更好的响应和加载时间。
 
-请参阅[HTTP/2投放内容常见问题](/help/sites-administering/scene7-http2faq.md)以了解更多信息。
+有关详细信息，请参阅[HTTP/2内容常见问题解答投放](/help/sites-administering/scene7-http2faq.md)。
