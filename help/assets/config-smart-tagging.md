@@ -3,9 +3,9 @@ title: 使用智能内容服务配置资产标记
 description: 了解如何使用智能内容服务在 [!DNL Adobe Experience Manager]中配置智能标记和增强智能标记。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
+source-git-commit: 178b1433de1d6b1e20527755414a494d4291935e
 workflow-type: tm+mt
-source-wordcount: '2172'
+source-wordcount: '2170'
 ht-degree: 26%
 
 ---
@@ -20,10 +20,7 @@ ht-degree: 26%
 * [使用 Adobe 开发人员控制台进行集成](#integrate-adobe-io).
 * [培训智能内容服务](#training-the-smart-content-service)。
 
-   <!-- TBD: This link will update soon after the new articles goes live on docs.adobe.com. Change it when new URL is available.
-  -->
-
-* 安装最新的[Experience Manager服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+* 安装最新的[[!DNL Experience Manager]  Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 ## 使用 Adobe 开发人员控制台进行集成 {#integrate-adobe-io}
 
