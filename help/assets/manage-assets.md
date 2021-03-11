@@ -4,7 +4,7 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
+source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
 workflow-type: tm+mt
 source-wordcount: '9590'
 ht-degree: 7%
@@ -340,7 +340,7 @@ Photoshop 文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 * 如果目标位置存在同名的文件夹，则ZIP文件中的资产会解压缩到现有文件夹中。
 * 如果您取消提取，则不会删除已提取的资产。
 * 不能同时选择两个ZIP文件并解压。 一次只能提取一个ZIP存档。
-* 上传ZIP存档时，如果上传对话框显示500服务器错误，请在安装最新的服务包后重试。
+* 上传ZIP存档时，如果上传对话框显示500服务器错误，请在安装[最新Service Pack](/help/release-notes/sp-release-notes.md)后重试。
 
 ## 预览资产{#previewing-assets}
 
