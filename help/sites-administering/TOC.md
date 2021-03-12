@@ -7,9 +7,9 @@ user-guide-title: AEM 6.5 Administering 用户指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 translation-type: tm+mt
-source-git-commit: fd7a32c1070a0560ca744db041cf809f28672b33
+source-git-commit: ac2f3d69fd20d7779120a194c698d6f0dd6e6a84
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '675'
 ht-degree: 18%
 
 ---
@@ -97,6 +97,7 @@ ht-degree: 18%
    + [权限管理的主视图](touch-ui-principal-view.md)
    + [内容处置筛选器](content-disposition-filter.md)
    + [AEM 6.5中的自定义用户组映射](/help/sites-administering/cug-mapping.md)
+   + [相同的站点Cookie支持](same-site-cookie-support.md)
 + 个性化 {#personalization}
    + [个性化](personalization.md)
    + [配置ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
