@@ -3,7 +3,7 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署上的可用资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d17749cb8e923848f8f81360c03b9afba7989ae2
+source-git-commit: 8714a76843231650555e84d3670ecad0bfec2566
 workflow-type: tm+mt
 source-wordcount: '2754'
 ht-degree: 29%
@@ -225,4 +225,4 @@ ht-degree: 29%
 
 * 如果未检索远程引用并导致错误消息，请检查站点部署是否可用，并检查网络连接问题。 稍后重试以进行检查。 [!DNL Assets] 部署尝试两次建立与部署的 [!DNL Sites] 连接，然后报告失败。
 
-![重试资产远程引用失败](assets/reference-report-failure.png)
+   ![重试资产远程引用失败](assets/reference-report-failure.png)
