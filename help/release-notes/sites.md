@@ -2,10 +2,10 @@
 title: AEM Sites 发行说明
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 Sites。
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 23656e023a9a0bfc335655f9cfb0530aa917b3ef
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 72%
+source-wordcount: '872'
+ht-degree: 68%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 72%
 
 * Core Components 2.3.2+，请参阅 [Github 以查看发行说明](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases)。
 * 布局容器的网格系统，请参阅 [Github](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid)。
-* Clientlib Manager:使Google Closure Compiler默认为JavaScript客户端的微型化（旧默认为Yahoo YUI），并将Google Closure Compiler更新为v20190121版
+* Clientlib管理器：使Google Closure Compiler默认为JavaScript clientlibs的微化（旧默认为Yahoo YUI），并将Google Closure Compiler更新为v20190121版
 * 模板编辑器和策略
 
    * 为使用 JS SDK（也称为 SPA 编辑器）的单页应用程序创建和编辑模板
@@ -56,7 +56,7 @@ ht-degree: 72%
 
 >[!CAUTION]
 >
->AEM包含jQuery库的版本1.12.4，可提供与现有自定义代码的最大兼容性。 Adobe 已对其进行了修改以解决已知的安全问题。
+>AEM包含版本1.12.4的jQuery库，可提供与现有自定义代码的最大兼容性。 Adobe 已对其进行了修改以解决已知的安全问题。
 
 ## 站点管理  {#site-administration}
 
@@ -106,24 +106,30 @@ ht-degree: 72%
 
 * 已将 ContextHub 数据层和客户端规则引擎 JavaScript 更新为默认使用 jQuery 3。
 
-## AEM和Adobe Target{#aem-amp-adobe-target}
+## AEM和Adobe Target {#aem-amp-adobe-target}
 
 >[!CAUTION]
 >
->在 AEM 6.5 发布时，AEM 不支持 at.js 2.x。请使用最新版本的 at.js 1.x。
+>当前：
+>
+>* 如果您在AEM活动控制台中将Adobe Target用作定位引擎，则仅支持`at.js 1.x`。
+   >
+   >
+* 如果您使用Experience Fragment导出到目标并在目标控制台中运行活动，则`at.js. 1.x`和`at.js 2.x`都受支持。
 
-* Adobe Target 集成现在可以使用 Target Standard API。较早版本的AEM使用目标经典HTTP API，现已弃用。
-* 包含Adobe Target`mbox.js`版本63。 Adobe强烈建议将实现切换到`at.js` v1.x。
-* `at.js` 版本1.5.0现已包含在内。Adobe建议您使用[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html)将`at.js` v1.x配置到站点中。
 
-## AEM和Adobe Analytics{#aem-amp-adobe-analytics}
+* Adobe Target 集成现在可以使用 Target Standard API。早期版本的AEM使用目标 Classic HTTP API，现已弃用。
+* 包含Adobe Target `mbox.js`版本63。 Adobe强烈建议将实现切换到`at.js` v1.x。
+* `at.js` 现在包含版本1.5.0。Adobe建议您使用[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html)将`at.js` v1.x设置到站点中。
 
-* `s_code.js` 包含H.27.5。Adobe建议将实施切换到`AppMeasurement.js`
+## AEM和Adobe Analytics {#aem-amp-adobe-analytics}
+
+* `s_code.js` 包含H.27.5。Adobe建议您将实现切换到`AppMeasurement.js`
 * `AppMeasurement.js` 包含v1.8.0。Adobe建议使用[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html)将AppMeasurement.js配置到站点中。
 
-## AEM和商务{#aem-commerce}
+## AEM and Commerce {#aem-commerce}
 
-自AEM 6.4以来，对商务集成框架的改进速度更快。[单击此处了解更多信息。](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html)
+自AEM 6.4以来，对Commerce Integration Framework的改进在更短的发布周期上。 [此处了解更多信息](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/docs.html)。
 
 ## Communities 加载项 {#communities-add-on}
 
@@ -131,8 +137,8 @@ ht-degree: 72%
 
 ## Screens 加载项  {#screens-add-on}
 
-* 使用启动项规划标牌内容的未来内容更改
+* 使用启动项计划标牌内容的未来内容更改
 * 序列渠道中按流量计费的播放
 * 使用源文件（例如 Excel 表格）自动创建项目结构
 
-有关对AEM Screens进行更改的详细信息——请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
+有关对AEM Screens的更改的详细信息 — 请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)中的“发行说明”。
