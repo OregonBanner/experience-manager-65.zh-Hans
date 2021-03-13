@@ -3,9 +3,9 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署上的可用资源。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8714a76843231650555e84d3670ecad0bfec2566
+source-git-commit: 8df7e4403c6664b52573cd4479b3a6a08d2cb6fa
 workflow-type: tm+mt
-source-wordcount: '2754'
+source-wordcount: '2717'
 ht-degree: 29%
 
 ---
@@ -106,13 +106,15 @@ ht-degree: 29%
    >
    >在作者获取资产时，将会获取该资产在远程 部署中可用的所有演绎版。如果要为获取的资产创建更多演绎版，请跳过此配置步骤。将触发[!UICONTROL  DAM更新资产]工作流，并创建更多演绎版。 这些再现仅在本地[!DNL Sites]部署中可用，而在远程DAM部署中不可用。
 
-1. 将[!DNL Sites]部署添加为[!DNL Assets]部署上的CORS配置中允许的来源。
+1. 将[!DNL Sites]部署添加为[!DNL Assets]部署上的CORS配置中允许的来源。 有关详细信息，请参阅[了解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。
 
-   1. 使用管理员凭据登录。 搜索 `Cross-Origin`. 访问&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 运营]** > **[!UICONTROL Web 控制台]**。
+<!-- TBD: See if these steps are not required.
+    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   1. 要为[!DNL Sites]部署创建CORS配置，请单击&#x200B;**[!UICONTROL AdobeGranite跨来源资源共享策略]**&#x200B;旁边的“资产添加”选项![“添加图标](assets/do-not-localize/assets_add_icon.png)”。
+    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
-   1. 在字段&#x200B;**[!UICONTROL 允许的来源]**&#x200B;中，输入本地[!DNL Sites]的URL，即`https://[local_sites]:[port]`。 保存配置。
+    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
+-->
 
 您可以检查已配置的[!DNL Sites]部署与[!DNL Assets]部署之间的连接。
 
@@ -173,7 +175,7 @@ ht-degree: 29%
 1. 在[!DNL Assets]控制台中选择资产，然后单击工具栏中的&#x200B;**[!UICONTROL 属性]**。
 1. 单击&#x200B;**[!UICONTROL 引用]**&#x200B;选项卡。 有关在[!DNL Assets]部署中使用资产的信息，请参阅&#x200B;**[!UICONTROL 本地引用]**。 请参阅**[!UICONTROL 远程引用]，以在[!DNL Sites]部署中使用“已连接资产”功能获取资产时使用资产。
 
-   ![资产属性中的远程引用](assets/connected-assets-remote-reference.png)
+   ![“资产属性”页中的远程引用](assets/connected-assets-remote-reference.png)
 
 1. [!DNL Sites]页的引用显示每个本地[!DNL Sites]的引用总数。 查找所有引用并显示引用的总数可能需要一些时间。
 1. 引用的列表是交互式的，DAM用户可以单击引用以打开引用页面。 如果由于某种原因无法获取远程引用，则显示通知，通知用户失败。
@@ -223,6 +225,6 @@ ht-degree: 29%
 
    ![Chrome中的Cookie错误](assets/chrome-cookies-incognito-dialog.png)
 
-* 如果未检索远程引用并导致错误消息，请检查站点部署是否可用，并检查网络连接问题。 稍后重试以进行检查。 [!DNL Assets] 部署尝试两次建立与部署的 [!DNL Sites] 连接，然后报告失败。
+* 如果未检索远程引用并导致错误消息，请检查[!DNL Sites]部署是否可用，并检查网络连接问题。 稍后重试以进行检查。 [!DNL Assets] 部署尝试两次建立与部署的 [!DNL Sites] 连接，然后报告失败。
 
    ![重试资产远程引用失败](assets/reference-report-failure.png)
