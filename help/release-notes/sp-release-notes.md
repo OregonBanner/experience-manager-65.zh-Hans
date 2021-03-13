@@ -4,7 +4,7 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 8的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d96730eed6447815c40307a8d60b6ffc9ff45c2e
+source-git-commit: 89b037fbde6003ccf86336c4467df415e233986b
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 5%
@@ -36,7 +36,7 @@ ht-degree: 5%
 
 * 使用[已连接资产功能](/help/assets/use-assets-across-connected-assets-instances.md)时，您现在可以视图使用该资产的所有[!DNL Sites]页面的列表。 资产的[!UICONTROL 属性]页面中提供了对资产的这些引用。 这使管理员、营销人员和图书管理员能够对资产使用情况进行完整的视图，从而实现更好的跟踪、管理和品牌一致性。
 
-* 删除在网页中引用的资产时，[!DNL Experience Manager]会显示警告。 您可以强制删除引用的资产，或者检查并修改资产[!DNL Properties]页面中显示的引用。 单击引用可打开本地和远程[!DNL Sites]页。
+* 删除在网页中引用的资产时，[!DNL Experience Manager] [会显示警告](/help/assets/use-assets-across-connected-assets-instances.md#asset-usage-references)。 您可以强制删除引用的资产，或者检查并修改资产[!DNL Properties]页面中显示的引用。 单击引用可打开本地和远程[!DNL Sites]页。
 
 * 使用[!UICONTROL Name]、[!UICONTROL 上次修改日期、]和[!UICONTROL 上次转出日期]属性对可转出的Live Copy页面进行排序。
 
