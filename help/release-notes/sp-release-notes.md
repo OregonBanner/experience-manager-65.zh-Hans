@@ -4,10 +4,10 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 8的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 89b037fbde6003ccf86336c4467df415e233986b
+source-git-commit: 60764db23115e7f548a82a67955331da2b858973
 workflow-type: tm+mt
-source-wordcount: '2822'
-ht-degree: 5%
+source-wordcount: '2812'
+ht-degree: 4%
 
 ---
 
@@ -208,7 +208,7 @@ ht-degree: 5%
 
 A.当服务器联机可用时，将软件包放入`../crx-quickstart/install`文件夹中。 软件包会自动安装。
 
-B.使用包管理器](https://helpx.adobe.com/cn/experience-manager/aem-previous-versions.html)中的[HTTP API。 使用`cmd=install&recursive=true`以安装嵌套的包。
+B.使用包管理器](/help/sites-administering/package-manager.md#package-share)中的[HTTP API。 使用`cmd=install&recursive=true`以安装嵌套的包。
 
 >[!NOTE]
 >
