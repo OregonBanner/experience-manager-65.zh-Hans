@@ -3,10 +3,10 @@ title: 在 [!DNL Adobe Experience Manager]中管理您的数字资产的元数�
 description: 了解元数据的类型，以及如何 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 根据资产的元数据自动组织和处理资产。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: 31dcf48691fa849f757579e2e57dc3a9c2bbbbee
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 19%
+source-wordcount: '2340'
+ht-degree: 20%
 
 ---
 
@@ -78,21 +78,15 @@ ht-degree: 19%
 1. 选择要编辑其通用属性的资产。
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 属性]**&#x200B;以打开选定资产的属性页面。
 1. 在各种选项卡下修改选定资产的元数据属性。
-1. 要视图特定资产的元数据编辑器，请取消在列表中选择其余资产。 元数据编辑器字段会填充特定资产的元数据。
-
-   >[!NOTE]
-   >
-   >* 在“属性”页面中，您可以通过取消选择从资产列表中删除资产。 资产列表会默认选择所有资产。 您从列表中删除的资产的元数据不会更新。
-   >* 在资产列表的顶部，选中&#x200B;**[!UICONTROL 标题]**&#x200B;附近的复选框，可在选择资产和清除列表之间切换。
-
-
-1. 要为资产选择其他元数据模式，请单击工具栏中的&#x200B;**[!UICONTROL 设置]**，然后选择所需的模式。
-1. 保存更改。
+1. 要视图特定资产的元数据，请在列表中取消选择其余资产。 如果您取消在[!UICONTROL 属性]页面上选择一些资产，则不会更新此类资产的元数据。
+1. 要为资产选择其他元数据模式，请单击工具栏中的&#x200B;**[!UICONTROL 设置]**，然后选择模式。 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 1. 要将新元数据与现有元数据追加到包含多个值的字段中，请选择&#x200B;**[!UICONTROL 追加模式]**。如果不选中此选项，则新元数据将替换字段中的现有元数据。单击&#x200B;**[!UICONTROL 提交]**。
 
-   >[!CAUTION]
-   >
-   >对于单值字段，即使选择&#x200B;**[!UICONTROL 追加模式]**，新元数据也不会追加到字段中的现有值中。
+![元数据模式批量应用于多个资产](assets/metadata-schema-bulk-edit.gif)
+
+>[!CAUTION]
+>
+>对于单值字段，即使选择&#x200B;**[!UICONTROL 追加模式]**，新元数据也不会追加到字段中的现有值中。
 
 ## 导入元数据{#import-metadata}
 
