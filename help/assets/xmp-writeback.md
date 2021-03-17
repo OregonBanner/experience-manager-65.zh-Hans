@@ -3,17 +3,19 @@ title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有演绎版或特定演绎版。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: 7faa6638eff422599450946a257e53970d25189c
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 8%
+source-wordcount: '784'
+ht-degree: 5%
 
 ---
 
 
 # XMP 写回到演绎版 {#xmp-writeback-to-renditions}
 
-[!DNL Adobe Experience Manager Assets]中的XMP写回功能会将资产元数据更改复制到资产的演绎版。 当您在[!DNL Experience Manager Assets]中或在上传资产时更改资产的元数据时，更改最初存储在CRXDe的资产节点内。 XMP写回功能会将元数据更改传播到资产的所有演绎版或特定演绎版。
+[!DNL Adobe Experience Manager Assets]中的此XMP写回功能会将元数据更改复制到原始资产的演绎版。 当您从资产中更改资产的元数据时，或在上传资产时，更改最初存储在资产层次结构的元数据节点中。
+
+XMP写回功能允许您将元数据更改传播到资产的所有演绎版或特定演绎版。 该功能仅回写那些使用`jcr`命名空间的元数据属性，即，将回写名为`dc:title`的属性，但不写名为`mytitle`的属性。
 
 考虑将标题为`Classic Leather`的资产的[!UICONTROL Title]属性修改为`Nylon`的方案。
 
@@ -23,11 +25,9 @@ ht-degree: 8%
 
 ![metadata_stored](assets/metadata_stored.png)
 
-但是，[!DNL Experience Manager Assets]不会自动将任何元数据更改传播到资产的演绎版。
+但是，[!DNL Experience Manager Assets]不会自动将任何元数据更改传播到资产的演绎版。 请参阅[如何启用XMP写回](#enable-xmp-writeback)。
 
-XMP写回功能允许您将元数据更改传播到资产的所有演绎版或特定演绎版。 但是，这些更改不会存储在资产层次结构中的元数据节点下。此功能而是会将更改嵌入到演绎版的二进制文件中。
-
-## 启用XMP写回{#enabling-xmp-writeback}
+## 启用XMP写回{#enable-xmp-writeback}
 
 要在上传资产时启用元数据更改将传播到资产的演绎版，请在Configuration Manager中修改&#x200B;**[!UICONTROL Adobe CQ DAM Rendition Maker]**&#x200B;配置。
 
@@ -47,7 +47,7 @@ XMP写回功能允许您将元数据更改传播到资产的所有演绎版或�
 1. 在“模型”页中，打开&#x200B;**[!UICONTROL DAM元数据写回]**&#x200B;工作流模型。
 1. 在“ **[!UICONTROL DAM元数据写回]** ”属性页中，打开“ **[!UICONTROL XMP写回进程”步骤]** 。
 1. 在[!UICONTROL 步骤属性]对话框中，单击&#x200B;**[!UICONTROL 进程]**&#x200B;选项卡。
-1. 在&#x200B;**参数**&#x200B;框中，添加`rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然后单击&#x200B;**确定**。
+1. 在&#x200B;**参数**&#x200B;框中，添加`rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`，然后单击&#x200B;**[!UICONTROL 确定]**。
 
    ![step_properties](assets/step_properties.png)
 
