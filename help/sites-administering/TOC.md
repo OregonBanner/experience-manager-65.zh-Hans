@@ -7,9 +7,9 @@ user-guide-title: AEM 6.5 Administering 用户指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 translation-type: tm+mt
-source-git-commit: ac2f3d69fd20d7779120a194c698d6f0dd6e6a84
+source-git-commit: c56e93b99553993e1c144c2ad2cb1299c9894812
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '662'
 ht-degree: 18%
 
 ---
@@ -114,7 +114,6 @@ ht-degree: 18%
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAPCommerce Cloud](sap-commerce-cloud.md)
    + [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
-   + [AEM Commerce - GDPR就绪](gdpr-compliance-commerce.md)
 + 集成 {#integration}
    + [与第三方服务集成](third-party-services.md)
    + [与 Salesforce 集成](salesforce.md)
@@ -163,8 +162,7 @@ ht-degree: 18%
    + [MSM最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR就绪](gdpr-compliance-sites.md)
    + [处理AEM Foundation的GDPR请求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
-   + [AEM Commerce - GDPR就绪](https://experienceleague.adobe.com/docs/experience-manager-65/administering/ecommerce/gdpr-compliance-commerce.html)
-+ 内容管理 {#contentmanagement}
+   + [AEM Commerce - GDPR就绪](gdpr-compliance-commerce.md)
    + [如何使用包](package-manager.md)
    + [管理标记](tags.md)
    + [页面导出器](page-exporter.md)
