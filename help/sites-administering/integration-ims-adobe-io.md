@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07f354ccfb8741f0de4fc85ba1575ead3b8ea6e4
+source-git-commit: 498896dccf80065195cc945b01cb8d037b8f6dab
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -231,7 +231,7 @@ ht-degree: 1%
 1. 在&#x200B;**Adobe Target设置**&#x200B;选项卡中输入详细信息：
 
    * **身份验证**:IMS
-   * **租户ID**:AdobeIMS租户ID。另请参见下面的[租户ID和客户端代码](#tenant-client)部分。
+   * **租户ID**:AdobeIMS租户ID。另请参阅[租户ID和客户端代码](#tenant-client)部分。
 
       >[!NOTE]
       >
@@ -242,7 +242,7 @@ ht-degree: 1%
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >然后使用`yourtenantid`。
-   * **客户端代码**:请参阅 [下面的租户ID和客](#tenant-client) 户端代码部分。
+   * **客户端代码**:请参阅 [租户ID和客户端](#tenant-client) 代码部分。
    * **IMS配置**:选择IMS配置的名称
    * **API类型**:休息
    * **A4T Analytics Cloud配置**:选择用于目标活动目标和量度的Analytics云配置。如果您在定位内容时使用Adobe Analytics作为报告源，则需要此选项。 如果看不到云配置，请参阅[配置A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)中的注意事项。
