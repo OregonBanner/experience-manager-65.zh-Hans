@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 8的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2c6d11f63420040a500bbb75f1146c29f64bdcc5
+source-git-commit: f52fc643c30babab68bcf122eb3d91da5ce37a24
 workflow-type: tm+mt
-source-wordcount: '2883'
+source-wordcount: '3015'
 ht-degree: 1%
 
 ---
@@ -37,6 +37,22 @@ ht-degree: 1%
 >[!NOTE]
 >
 >计划的[!DNL Experience Manager] Service Pack版本发布一周后，将提供[!DNL Experience Manager Forms]的附加程序包。
+
+### 根据规则{#show-hide-captcha}在自适应表单中显示或隐藏CAPTCHA组件
+
+您现在可以在自适应表单提交或用户操作时验证CAPTCHA。 您还可以添加条件以验证用户操作的CAPTCHA，并基于规则在自适应表单中显示或隐藏CAPTCHA组件。
+
+### 添加自定义CAPTCHA服务{#add-custom-captcha-services}
+
+[!DNL Experience Manager Forms] 提供开箱即用支持，以将Google reCAPTCHA（需要Google reCAPTCHA API的单独许可证）用作CAPTCHA验证服务。您还可以使用自定义CAPTCHA服务验证CAPTCHA。
+
+### 其他增强功能 {#other-enhancements-forms-6580}
+
+* 改进了[!DNL Experience Manager Forms]日期选取器组件的可访问性。
+
+* 增加了使用PrintChannel API以PCL格式生成交互式通信的支持。
+
+* 执行PDFG转换时，您现在可以启用或禁用[!DNL Experience Manager Forms]注册表更改以生成自定义书签。
 
 ## 以前[!DNL Experience Manager] 6.5 Service Pack {#key-features-previous-service-packs}中的主要功能
 
