@@ -4,10 +4,10 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 8的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 60764db23115e7f548a82a67955331da2b858973
+source-git-commit: dfaa25ea72e50b60b8a40883ffb0241c131cc846
 workflow-type: tm+mt
-source-wordcount: '2812'
-ht-degree: 4%
+source-wordcount: '3352'
+ht-degree: 5%
 
 ---
 
@@ -168,6 +168,56 @@ ht-degree: 4%
 >
 >[!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
 
+**自适应表单**
+
+* 当您将具有可重复行的表插入到在自适应表单中具有多个实例的可重复面板时，该表始终会添加到该面板的第一个实例(NPR-35635)。
+
+* 在自适应表单中成功验证一次后，当制表符焦点再次到达CAPTCHA组件时，[!DNL Experience Manager Forms]将显示`Provide Captcha phrase to proceed`错误消息(NPR-35539)。
+
+**交互式通信**
+
+* 当您提交已翻译的表单时，提交的消息将以英语显示，但不会翻译为相应的语言(NPR-35808)。
+
+* 当您在附加的XDP或文档片段中包含隐藏条件时，交互通信无法加载(NPR-35745)。
+
+**通信管理**
+
+* 编辑字母时，具有条件的模块加载时间较长(NPR-35325)。
+
+* 当您从左侧导航窗格中选择一个未包含在字母中的资产，然后选择下一个资产时，不会从之前选择的资产中删除蓝色突出显示(NPR-35851)。
+
+* 编辑字母中的文本字段时，[!DNL Experience Manager Forms]会显示`Text Edit Failed`错误消息(CQ-4313770)。
+
+**工作流**
+
+* 当您尝试在iOS的[!DNL Experience Manager Forms]移动应用程序上打开自适应表单时，应用程序会停止响应(CQ-4314825)。
+
+* HTML工作区中的[!UICONTROL To-do]选项卡显示HTML字符(NPR-35298)。
+
+**XMLFM**
+
+* 使用输出服务生成XML文档时，某些XML文件(CQ-4311341、CQ-4313893)会出现`OutputServiceException`错误。
+
+* 将上标属性应用于项目符号的第一个字符时，项目符号的大小会变小(CQ-4306476)。
+
+* 使用输出服务生成的PDF forms不包括边框(CQ-4312564)。
+
+**设计人员**
+
+* 在[!DNL Experience Manager Forms] Designer中打开XDP文件时，将在与XDP文件(CQ-4309427、CQ-4310865)相同的文件夹中生成designer.log文件。
+
+**HTML5 表单**
+
+* 当您在[!DNL Safari] Web浏览器中为[!DNL iOS 14.1 or 14.2]选择自适应表单中的复选框时，不显示其他字段(NPR-35652)。
+
+**Forms管理**
+
+* 没有确认消息指示XDP文件成功批量上传到CRX存储库(NPR-35546)。
+
+**Document Security**
+
+* 针对AdminUI上的[!UICONTROL 编辑策略]选项报告了多个问题(NPR-35747)。
+
 有关安全更新的信息，请参阅[Experience Manager安全公告页](https://helpx.adobe.com/security/products/experience-manager.html)。
 
 ## 安装6.5.8.0 {#install}
@@ -223,6 +273,32 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 1. OSGi bundle `org.apache.jackrabbit.oak-core`是版本1.22.3或更高版本(使用Web控制台：`/system/console/bundles`)。
 
 要了解经认证可与此版本一起使用的平台，请参阅[技术要求](/help/sites-deploying/technical-requirements.md)。
+
+### 安装Adobe Experience Manager Forms加载项包{#install-aem-forms-add-on-package}
+
+>[!NOTE]
+>
+>如果您不使用Experience Manager Forms，则跳过。 Experience Manager Forms中的修复在计划的[!DNL Experience Manager] Service Pack版本发布后一周内通过单独的附加程序包交付。
+
+1. 确保已安装Adobe Experience Manager Service Pack。
+1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)中列出的相应 Forms 附加组件包。
+1. 按照[安装Forms加载项包](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述安装AEM Forms加载项包。
+
+>[!NOTE]
+>
+>AEM 6.5.8.0包含新版[AEM Forms兼容性包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用的是旧版AEM Forms兼容程序包并更新到AEM 6.5.8.0，请在安装Forms Add-On程序包后安装该程序包的最新版本。
+
+### 在JEE {#install-aem-forms-jee-installer}上安装Adobe Experience Manager Forms
+
+>[!NOTE]
+>
+>如果您未在 JEE 上使用 AEM Forms，请跳过。Adobe Experience Manager Forms中的JEE修复通过单独的安装程序提供。
+
+有关在JEE上安装Experience Manager Forms的累积安装程序和部署后配置的信息，请参阅[发行说明](jee-patch-installer-65.md)。
+
+>[!NOTE]
+>
+>在JEE上安装Experience Manager Forms的累积安装程序后，请安装最新的Forms加载项包，从`crx-repository\install`文件夹中删除Forms加载项包，然后重新启动服务器。
 
 ### UberJar {#uber-jar}
 
