@@ -5,29 +5,30 @@ description: Protect代表其他用户创建文档
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
 
 
-# Protect代表另一个用户创建文档{#protect-a-document-on-behalf-of-another-user}
+# Protect代表其他用户{#protect-a-document-on-behalf-of-another-user}
 
-AEM Forms文档安全Java SDK提供API，允许用户帐户代表其他用户保护文档，而不获得编辑文档的权限。 您可以在工作流程中使用API，也可以通过编程方式将其用作文档服务。 新API包括：
+AEM Forms 文档 Security Java SDK提供API，允许用户帐户代表其他用户保护文档，而不获得编辑文档的权限。 您可以在工作流进程中或以编程方式将API用作文档服务。 新API包括：
 
-* **保** 护文档使用ProtectDocument API代表文档应用策略
+* **** protectDocument使用ProtectDocument API代表文档
 
-   另一个用户帐户。 用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult protectDocument(文档inDoc、字符串documentName、字符串策略集名称、字符串策略名称、RMLocale区域设置、布尔bExactMatchForNames)
+   另一个用户帐户。 用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult protectDocument(文档 inDoc、String documentName、String policySetName、String policyName、RMLocale区域设置、布尔bExactMatchForNames)
 
-* **创** 建许可证使用CreateLicense API代表其他用户帐户为策略创建许可证。PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
-* **** protectDocumentWithCoverPage使用ProtectDocumentWithCoverPage API应用策略并代表其他用户向文档添加封面。用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult保护DocumentWithCoverPage(文档inDoc、String documentName、String policySetName、String policyName、文档coverDoc、布尔bExactMatchForNames)
+* **创** 建许可证使用CreateLicense API代表其他用户帐户为策略创建许可证。PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
+* **** protectDocumentWithCoverPage使用ProtectDocumentWithCoverPage API来应用策略并代表其他用户向文档添加封面。用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult protectDocumentWithCoverPage(文档inDoc、String documentName、String policySetName、String policyName、文档 coverDoc、布尔bExactMatchForNames)
 
-## 使用API代表其他用户保护文档{#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
+## 使用API代表其他用户{#using-the-apis-to-protect-a-document-on-behalf-of-another-user}保护文档
 
-执行以下步骤以代表其他用户保护文档，而不获得编辑文档的权限：
+请执行以下步骤以代表其他用户保护文档，而不获得编辑文档的权限：
 
 1. 创建策略集。 例如，PolicySet1。
 1. 在新创建的策略集中创建策略。 例如，PolicySet1中的Policy1。
