@@ -1,24 +1,25 @@
 ---
 title: 自适应表单关键字
 seo-title: 自适应表单关键字
-description: 您不能在自适应表单中将这些保留字用作标识符。
-seo-description: 您不能在自适应表单中将这些保留字用作标识符。
+description: 您不能将这些保留字用作自适应表单中的标识符。
+seo-description: 您不能将这些保留字用作自适应表单中的标识符。
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
+feature: 自适应表单
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 4%
+source-wordcount: '225'
+ht-degree: 5%
 
 ---
 
 
 # 自适应表单关键字{#adaptive-forms-keywords}
 
-自适应表单关键字是预定义的保留标识符，对于自适应表单具有特殊意义。 您不能将这些关键字用作自适应表单中的标识符。 下表列表了作为自适应表单保留标识符的所有关键字。
+自适应表单关键字是预定义的保留标识符，对自适应表单具有特殊意义。 您不能将这些关键字用作自适应表单中的标识符。 下表列表了作为自适应表单保留标识符的所有关键字。
 
 <table>
  <tbody>
@@ -78,12 +79,12 @@ ht-degree: 4%
    <td><p>子项</p> </td>
   </tr>
   <tr>
-   <td><p>value</p> </td>
+   <td><p>选定</p> </td>
    <td><p>autoSaveInfo</p> </td>
    <td><p>setAttribute</p> </td>
   </tr>
   <tr>
-   <td><p>格式化值</p> </td>
+   <td><p>formattedValue</p> </td>
    <td><p>xdpRef</p> </td>
    <td><p>getGuideProp</p> </td>
   </tr>
@@ -183,7 +184,7 @@ ht-degree: 4%
    <td><p>enabledExp</p> </td>
   </tr>
   <tr>
-   <td><p>执行完成</p> </td>
+   <td><p>execCompletion</p> </td>
    <td><p>sectionId</p> </td>
    <td><p>setFocus</p> </td>
   </tr>
@@ -223,7 +224,7 @@ ht-degree: 4%
    <td><p>sectionFields</p> </td>
   </tr>
   <tr>
-   <td><p>已获取的FromService</p> </td>
+   <td><p>获取的FromService</p> </td>
    <td><p>repeatablePanelId</p> </td>
    <td><p>getSelectedIndex</p> </td>
   </tr>
@@ -240,4 +241,4 @@ ht-degree: 4%
  </tbody>
 </table>
 
-除了上面列出的关键字之外，请避免使用与[自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)类似的名称。
+除上面列出的关键字外，请避免使用与[自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)类似的名称。
