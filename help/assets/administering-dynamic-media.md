@@ -5,10 +5,11 @@ uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '257'
 ht-degree: 13%
 
 ---
