@@ -6,10 +6,12 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
+feature: 查看器
+role: 业务从业者，管理员，开发人员，数据工程师，数据架构师
 translation-type: tm+mt
-source-git-commit: 0a4708800e00eb34042e6979eb0703ca7816c7e1
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '6627'
+source-wordcount: '6636'
 ht-degree: 8%
 
 ---
