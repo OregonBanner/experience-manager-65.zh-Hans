@@ -1,17 +1,18 @@
 ---
-title: 启用重复资产检测
-description: 了解如何在Experience Manager中启用重复资产检测。
+title: 启用重复资源检测
+description: 了解如何在Experience Manager中启用重复资源检测。
 contentOwner: AG
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
 
-# 启用重复资产检测{#enable-detection-of-duplicate-assets}
+# 启用对重复资源{#enable-detection-of-duplicate-assets}的检测
 
 如果您尝试上传[!DNL Adobe Experience Manager Assets]中存在的资产，重复检测功能会将其标识为重复。 重复检测默认为禁用。 要启用该功能，请执行以下步骤：
 
@@ -23,9 +24,9 @@ ht-degree: 0%
 
    *图：在servlet中选择检测重复选项。*
 
-检测重复功能现在在[!DNL Assets]中启用。 当用户尝试上传[!DNL Experience Manager]中存在的资产时，系统会检查是否存在冲突并指示它。 资产使用存储在`jcr:content/metadata/dam:sha1`的SHA-1哈希进行标识，这意味着无论文件名如何，都会检测重复资产。
+检测重复功能现在在[!DNL Assets]中启用。 当用户尝试上传[!DNL Experience Manager]中存在的资产时，系统会检查是否存在冲突并指示它。 资产使用存储在`jcr:content/metadata/dam:sha1`的SHA-1哈希进行标识，这意味着无论文件名如何，都会检测到重复资产。
 
 >[!MORELIKETHIS]
 >
->* [重复现有存储库中的资产（社区成员的教程）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
+>* [重复现有存储库中的资产（来自社区成员的教程）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
 
