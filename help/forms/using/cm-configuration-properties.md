@@ -1,17 +1,18 @@
 ---
 title: 对应管理配置属性
 seo-title: 对应管理配置属性
-description: 本主题介绍如何使用特定于解决方案的配置来修改资产书写器。 本主题详细介绍了您可以编辑的属性及其描述、默认值和可接受值。
-seo-description: 本主题介绍如何使用特定于解决方案的配置来修改资产书写器。 本主题详细介绍了您可以编辑的属性及其描述、默认值和可接受值。
+description: 本主题介绍了如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍了您可以编辑的属性及其说明、默认值和可接受值。
+seo-description: 本主题介绍了如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍了您可以编辑的属性及其说明、默认值和可接受值。
 uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '879'
 ht-degree: 3%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 3%
 
 要配置这些属性，请在浏览器中打开以下URL:`https://<server>:<port>/<contextPath>/system/console/configMgr`并选择&#x200B;**对应管理配置**。
 
-Corresponcement Management具有以下配置属性：
+Correspondence Management具有以下配置属性：
 
 <table>
  <tbody>
@@ -39,33 +40,33 @@ Corresponcement Management具有以下配置属性：
   </tr>
   <tr>
    <td>最小宽度数</td>
-   <td>使用除罗马数字之外的编号列表时，要应用于项目符号／编号字段的最小宽度</td>
-   <td>8毫米</td>
+   <td>在使用除罗马字数之外的编号列表时，要应用于项目符号/编号字段的最小宽度</td>
+   <td>8.0毫米</td>
    <td>任意数字</td>
   </tr>
   <tr>
    <td><p>罗马数字最小宽度</p> </td>
-   <td><p>使用罗马数字时，要应用于项目符号／编号字段的最小宽度</p> </td>
+   <td><p>使用罗马字数字时，要应用于项目符号/数字字段的最小宽度</p> </td>
    <td><p>12.7毫米</p> </td>
    <td><p>任意数字</p> </td>
   </tr>
   <tr>
    <td>再现类型</td>
-   <td>创建对应应用程序用于呈现字母预览的再现类型。 </td>
+   <td>“创建对应”应用程序用于呈现字母预览的再现类型。 </td>
    <td>HTML再现</td>
    <td>HTML再现/PDF再现</td>
   </tr>
   <tr>
    <td><p>启用CCR PDF突出显示</p> </td>
-   <td><p>在“创建对应”应用程序中启用PDF高亮显示</p> </td>
+   <td><p>在“创建通信”应用程序中启用PDF高亮显示</p> </td>
    <td><p>true</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>目标高亮类型</p> </td>
    <td><p>目标高亮类型（在“创建对应”应用程序中）</p> </td>
-   <td><p>边界</p> </td>
-   <td><p>边框／填充／无</p> </td>
+   <td><p>边框</p> </td>
+   <td><p>边框/填充/无</p> </td>
   </tr>
   <tr>
    <td><p>目标高亮颜色</p> </td>
@@ -74,14 +75,14 @@ Corresponcement Management具有以下配置属性：
    <td><p>格式为R;G;B的任何RGB颜色</p> </td>
   </tr>
   <tr>
-   <td><p>内容突出显示类型</p> </td>
-   <td><p>创建对应应用程序中的内容突出显示类型</p> </td>
-   <td><p>填充</p> </td>
-   <td><p>边框／填充／无</p> </td>
+   <td><p>内容高亮类型</p> </td>
+   <td><p>“创建对应”应用程序中的内容高亮类型</p> </td>
+   <td><p>Fill</p> </td>
+   <td><p>边框/填充/无</p> </td>
   </tr>
   <tr>
    <td><p>内容高亮颜色</p> </td>
-   <td><p>创建对应应用程序中的内容高亮颜色</p> </td>
+   <td><p>“创建对应”应用程序中的内容高亮颜色</p> </td>
    <td><p>210;225;245</p> </td>
    <td><p>格式为R;G;B的任何RGB颜色</p> </td>
   </tr>
@@ -89,7 +90,7 @@ Corresponcement Management具有以下配置属性：
    <td><p>字段高亮类型</p> </td>
    <td><p>创建对应应用程序中的字段高亮类型</p> </td>
    <td><p>填充</p> </td>
-   <td><p>边框／填充／无</p> </td>
+   <td><p>边框/填充/无</p> </td>
   </tr>
   <tr>
    <td><p>字段高亮颜色</p> </td>
@@ -106,7 +107,7 @@ Corresponcement Management具有以下配置属性：
   <tr>
    <td><p>PDF文档参数名称</p> </td>
    <td><p>PDF文档在后期处理中的参数名称</p> </td>
-   <td><p>inPDFDoc</p> </td>
+   <td><p>inPDFoc</p> </td>
    <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
@@ -116,39 +117,39 @@ Corresponcement Management具有以下配置属性：
    <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
-   <td><p>XDP文档参数名称</p> </td>
+   <td><p>XDP文档参数名</p> </td>
    <td><p>发送到后处理的XDP文档的参数名称</p> </td>
    <td><p>inXDPDoc</p> </td>
    <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>重定向URL参数名称</p> </td>
-   <td><p>从后期进程发送的重定向URL的参数名称此值可以是任何字符串变量名称</p> </td>
+   <td><p>从帖子进程发送的重定向URL的参数名称此值可以是任何字符串变量名称</p> </td>
    <td><p>redirectURL</p> </td>
    <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>PDF提交类型</p> </td>
-   <td><p>PDF提交类型（通过“创建对应”应用程序提交时生成的PDF类型）</p> </td>
+   <td><p>PDF提交类型（通过“创建通信”应用程序提交时生成的PDF类型）</p> </td>
    <td><p>nonInteractive</p> </td>
-   <td><p>交互／非交互</p> </td>
+   <td><p>交互式/非交互式</p> </td>
   </tr>
   <tr>
    <td><p>优化数据字典实例</p> </td>
    <td><p>支持优化数据字典实例b/w服务器和客户端的传输</p> </td>
-   <td><p>真</p> </td>
+   <td><p>true</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>自动更正不一致 </p> </td>
-   <td><p>启用后，它会自动处理信件分配中可能出现的不一致</p> </td>
-   <td><p>真</p> </td>
+   <td><p>启用后，它会自动处理信函分配中可能的不一致</p> </td>
+   <td><p>true</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>使用配置的数据格式</p> </td>
    <td><p>控制是否使用配置的数据编辑格式和数据显示格式</p> </td>
-   <td><p>真</p> </td>
+   <td><p>true</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
@@ -165,85 +166,85 @@ Corresponcement Management具有以下配置属性：
   </tr>
   <tr>
    <td><p>在发布时管理信函实例</p> </td>
-   <td><p>启用／禁用管理信函功能（仅适用于发布服务器）</p> </td>
+   <td><p>启用/禁用管理信函功能（仅适用于发布服务器）</p> </td>
    <td><p>false</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用审核</p> </td>
-   <td><p>启用／禁用审核功能。 如果为false，则将禁用所有操作的审核日志</p> </td>
+   <td><p>启用/禁用审核功能。 如果为false，则所有操作的审核日志都将被禁用</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用读审核</p> </td>
-   <td><p>启用／禁用资产读取的审核功能</p> </td>
+   <td><p>启用/禁用资产读取的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用创建审核</p> </td>
-   <td><p>启用／禁用资产创建的审核功能</p> </td>
+   <td><p>启用/禁用资产创建的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用更新审核</p> </td>
-   <td><p>启用／禁用资产更新的审核功能</p> </td>
+   <td><p>启用/禁用资产更新的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用还原审核</p> </td>
-   <td><p>启用／禁用资产还原的审核功能</p> </td>
+   <td><p>启用/禁用资产还原的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用发布审核</p> </td>
-   <td><p>启用／禁用资产发布的审核功能</p> </td>
+   <td><p>启用/禁用资产发布的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用“另存为草稿审核”</p> </td>
-   <td><p>启用／禁用保存信函草稿的审核功能</p> </td>
+   <td><p>启用/禁用保存信函草稿的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用提交审核</p> </td>
-   <td><p>启用／禁用信函提交的审核功能</p> </td>
+   <td><p>启用/禁用信件提交的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用电子邮件审核</p> </td>
-   <td><p>启用／禁用电子邮件发送的审核功能</p> </td>
+   <td><p>启用/禁用电子邮件的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用打印审核</p> </td>
-   <td><p>启用／禁用用于打印信件的审核功能</p> </td>
+   <td><p>启用/禁用打印信件的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>启用自定义投放审核</p> </td>
-   <td><p>启用／禁用自定义字母投放的审核功能</p> </td>
+   <td><p>启用/禁用自定义投放字母的审核功能</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>附件文档参数名称</p> </td>
-   <td><p>发送给后处理的附件文档的参数名称</p> </td>
+   <td><p>发送到帖子流程的附件文档的参数名称</p> </td>
    <td><p>inAttachmentDocs</p> </td>
    <td><p>任何字符串变量名称</p> </td>
   </tr>
   <tr>
    <td><p>CM用户根</p> </td>
-   <td><p>包含所有Corresponce Management用户资产的文件夹的URL</p> </td>
+   <td><p>包含所有Correspondence Management用户资源的文件夹的URL</p> </td>
    <td><p>—</p> </td>
    <td><p>有效的文件夹位置</p> </td>
   </tr>
@@ -255,19 +256,19 @@ Corresponcement Management具有以下配置属性：
   </tr>
   <tr>
    <td><p>启用字母缓存</p> </td>
-   <td><p>启用／禁用字母缓存。</p> <p>更改此值将导致清理<code>in-memory </code>缓存。</p> </td>
-   <td><p>真</p> </td>
+   <td><p>启用/禁用字母缓存。</p> <p>更改此值将导致清理<code>in-memory </code>缓存。</p> </td>
+   <td><p>true</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
    <td><p>数据元素排序</p> </td>
-   <td><p>在创建对应界面时，按照字母中的顺序保持数据元素排序</p> </td>
-   <td><p>真</p> </td>
+   <td><p>按照Letter中的顺序，在创建通信界面中保持数据元素排序</p> </td>
+   <td><p>true</p> </td>
    <td><p>true/false</p> </td>
   </tr>
   <tr>
-   <td><p>支持重装</p> </td>
-   <td><p>启用／禁用服务器端呈现的字母中的重新加载支持。</p> <p>禁用此选项将提高字母渲染性能。</p> </td>
+   <td><p>支持重新加载</p> </td>
+   <td><p>启用/禁用服务器端呈现的字母中的重新加载支持。</p> <p>禁用此功能将提高字母渲染性能。</p> </td>
    <td><p>假</p> </td>
    <td><p>true/false</p> <p> </p> </td>
   </tr>
@@ -279,19 +280,19 @@ Corresponcement Management具有以下配置属性：
   </tr>
   <tr>
    <td>远程保存</td>
-   <td>在指定的处理作者上保存字母实例。</td>
+   <td>将字母实例保存到指定的处理作者上。</td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>兼容性选项</td>
-   <td>格式配置的兼容性选项：configvalue以逗号分隔。</td>
+   <td>格式configname:configvalue的兼容性选项以逗号分隔。</td>
    <td>acm.compatibilityOptions</td>
    <td> </td>
   </tr>
   <tr>
    <td><p>调试目录 </p> <p> </p> </td>
-   <td>用于调试的文件系统文件夹位置。 如果目录不是<code>exists</code>，则不会生成调试转储。</td>
+   <td>用于调试的文件系统文件夹位置。 如果目录不<code>exists</code>，则不会生成调试转储。</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>
