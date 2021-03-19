@@ -1,61 +1,62 @@
 ---
-title: 升级到AEM 6.5Forms
-seo-title: 升级到AEM 6.5Forms
-description: 您可以从AEM 6.3Forms和AEM 6.4Forms直接升级到AEM 6.5Forms。
-seo-description: 您可以从AEM 6.3Forms和AEM 6.4Forms直接升级到AEM 6.5Forms。
+title: 升级到 AEM 6.5 Forms
+seo-title: 升级到 AEM 6.5 Forms
+description: 您可以从AEM 6.3 Forms和AEM 6.4 Forms直接升级到AEM 6.5 Forms。
+seo-description: 您可以从AEM 6.3 Forms和AEM 6.4 Forms直接升级到AEM 6.5 Forms。
 uuid: 7a38cd72-2d01-4af7-b6a3-00dc34c4f02b
 content-type: reference
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
+role: 管理员
 translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '233'
+ht-degree: 5%
 
 ---
 
 
-# 升级到AEM 6.5Forms{#upgrade-to-aem-forms}
+# 升级到 AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5Forms包含若干新功能和增强功能，可简化表单和通信的创建、管理和用户体验。 要了解AEM 6.5Forms的所有新增功能和增强功能，请参阅[新增功能摘要文档](../../forms/using/whats-new.md)。
+AEM 6.5 Forms包含若干新增功能和增强功能，可简化表单和通信的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅[新增功能摘要文档](../../forms/using/whats-new.md)。
 
-您可以升级现有LiveCycle或AEM Forms安装，以获得AEM 6.5Forms提供的新功能和增强功能，同时保持现有数据、流程和资产不变。 升级时，还会保留元数据和进程的状态。 您可以选择升级途径开始升级。
+您可以升级现有LiveCycle或AEM Forms安装，以获得AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、过程和资源不变。 升级时，还会保留元数据和进程的状态。 您可以选择升级途径以开始升级。
 
-下图显示了OSGi上AEM Forms的可用升级路径：
+下图显示了OSGi上的AEM Forms的可用升级路径：
 
 ![](do-not-localize/osgi-upgrade-path.png)
 
 您可以从以下位置执行直接升级：
 
-* AEM 6.3FormsOSGi
-* AEM 6.4FormsOSGi
+* AEM 6.3 Forms on OSGi
+* AEM 6.4 Forms on OSGi
 
 您还可以从
 
-* AEM 6.0FormsOSGi
-* AEM 6.1FormsOSGi
-* AEM 6.2FormsOSGi
+* AEM 6.0 Forms on OSGi
+* AEM 6.1 Forms on OSGi
+* AEM 6.2 Forms on OSGi
 
-下图显示了JEE上AEM Forms的可用升级路径：
+下图显示了AEM Forms on JEE的可用升级路径：
 
 ![](do-not-localize/jee-upgrade-6-5.png)
 
 您可以从以下位置执行直接升级：
 
-* AEM 6.3FormsJEE
-* AEM 6.4FormsJEE
+* AEM 6.3 Forms on JEE
+* AEM 6.4 Forms on JEE
 
 您还可以从
 
-* LiveCycleES2
-* LiveCycleES3
-* LiveCycleES4 SP1
-* AEM 6.0FormsJEE
-* AEM 6.1FormsJEE
-* AEM 6.2FormsJEE
+* LiveCycle ES2
+* LiveCycle ES3
+* LiveCycle ES4 SP1
+* AEM 6.0 Forms on JEE
+* AEM 6.1 Forms on JEE
+* AEM 6.2 Forms on JEE
 
 <!--
 [Work in Progress]
