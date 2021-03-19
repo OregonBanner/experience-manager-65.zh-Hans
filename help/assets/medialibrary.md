@@ -2,10 +2,11 @@
 title: 比较 [!DNL Assets] 和媒体库产品
 description: 比较 [!DNL Experience Manager Assets] 和媒体库功能并了解差异。
 contentOwner: AG
+role: 架构师、领导者
 translation-type: tm+mt
-source-git-commit: 82c2df0e53e8ef595ad158ef46089d6e4964ca26
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '610'
 ht-degree: 1%
 
 ---
