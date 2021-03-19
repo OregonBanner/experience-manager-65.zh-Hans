@@ -1,11 +1,12 @@
 ---
 title: 配置资产上传限制
-description: '限制用户可以上传的资产（文件）类型 '
+description: '限制用户可上传的资产（文件）类型 '
 contentOwner: AG
+role: 开发人员、管理员、架构师
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '193'
 ht-degree: 15%
 
 ---
