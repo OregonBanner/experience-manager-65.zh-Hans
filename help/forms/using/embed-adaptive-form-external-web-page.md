@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
+feature: 自适应表单
 translation-type: tm+mt
-source-git-commit: 3ca71b73444589096dee46c38daded043c9232b1
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '992'
 ht-degree: 2%
 
 ---
