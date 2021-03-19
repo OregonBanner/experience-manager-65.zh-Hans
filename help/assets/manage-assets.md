@@ -3,10 +3,11 @@ title: 管理您的数字资产
 description: 了解资产管理任务，如上传、下载、编辑、搜索、删除、注释以及版本化数字资产。
 contentOwner: AG
 mini-toc-levels: 1
+role: 业务从业者
 translation-type: tm+mt
-source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '9590'
+source-wordcount: '9592'
 ht-degree: 7%
 
 ---
