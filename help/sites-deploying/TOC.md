@@ -6,10 +6,13 @@ audience: end-user
 user-guide-title: AEM 6.5 Deploying 指南
 breadcrumb-title: Deploying 指南
 user-guide-description: 详细了解 Adobe Experience Manager 6.5 的安装、部署和架构，包括我们的 Adobe Managed Services 云部署。
+feature-set: Experience Manager Sites
+feature: 部署
+role: 架构师
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '354'
 ht-degree: 18%
 
 ---
