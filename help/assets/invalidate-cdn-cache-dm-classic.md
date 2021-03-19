@@ -5,11 +5,13 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+feature: Dynamic Media Classic
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 17%
+source-wordcount: '726'
+ht-degree: 16%
 
 ---
 
