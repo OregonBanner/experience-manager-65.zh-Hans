@@ -1,7 +1,7 @@
 ---
 title: 基础组件
 seo-title: 基础组件
-description: 'null'
+description: 基础组件
 seo-description: 'null'
 uuid: 3caf9123-ae58-4590-af2f-57ef076daf7f
 contentOwner: User
@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '7364'
+source-wordcount: '7365'
 ht-degree: 87%
 
 ---
@@ -25,15 +25,15 @@ ht-degree: 87%
 
 >[!CAUTION]
 >
->大多数基础组件现在已在AEM 6.5中弃用。有关详细信息，请参阅[发行说明](/help/release-notes/deprecated-removed-features.md)。
+>大多数基础组件现在在AEM 6.5中已弃用。有关详细信息，请参阅[发行说明](/help/release-notes/deprecated-removed-features.md)。
 >
->Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。这些是[We.Retail示例内容](/help/sites-developing/we-retail.md)的一部分，也可以是[单独安装，由管理员用于开发。](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html)
+>Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。这些是[We.Retail示例内容](/help/sites-developing/we-retail.md)的一部分，也可以由管理员单独安装[并用于开发](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html)。
 >
->您可以使用[AEM Dimestronize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/)重新构建基于Foundation Components的站点以使用核心组件。
+>您可以使用[AEM Distemenze Tools Suite](https://opensource.adobe.com/aem-modernize-tools/)重新调整基于Foundation Components的站点以使用核心组件。
 
 基础组件专门为在创作标准网页内容时使用而设计。这些组件构成了适用于标准 AEM 安装的现成组件的子集。
 
-有些组件可通过组件浏览器直接访问，还有一些组件则可通过使用[设计模式](/help/sites-authoring/default-components-designmode.md)（如果页面基于静态模板）或通过[编辑模板](/help/sites-authoring/templates.md)（如果页面基于可编辑的模板）来使用。
+有些组件可通过组件浏览器直接使用，而其他各种组件也可通过以下方式使用：使用[设计模式](/help/sites-authoring/default-components-designmode.md)（如果页面基于静态模板）或通过[编辑模板](/help/sites-authoring/templates.md)（如果页面基于可编辑的模板）。
 
 支持使用基础组件，但它们大部分已被弃用并被核心组件取代，核心组件提供了更大的可扩展性和灵活性。
 
@@ -199,8 +199,8 @@ ht-degree: 87%
       * **固定列表选项**
 
          * **页**
-面选择一列表页面。使用 
-`+` 以添加更多条目和上／下按钮来调整顺序。
+面选择页面列表。使用 
+`+` 添加更多条目，并使用向上/向下按钮调整顺序。
       * **搜索选项**
 
          * **开始**
@@ -338,7 +338,7 @@ ht-degree: 87%
 
 >[!CAUTION]
 >
->无需进行大量项目级自定义，此组件不再开箱即用。
+>如果不进行大规模项目级自定义，该组件不再需要开箱即用。
 
 Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Flash 资产拖动到组件上，也可以使用对话框：
 
@@ -398,7 +398,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!NOTE]
 >
->就地编辑器在编辑时使用图像的原始大小和长宽比。您还可以指定高度和宽度属性。在保存编辑更改时，将应用属性中定义的所有大小和长宽比限制。
+>就地编辑器在编辑时使用图像的原始大小和长宽比。您还可以指定高度和宽度属性。在保存编辑更改时，将应用属性中定义的所有大小和宽高比限制。
 >
 >根据您的实例，[页面设计](/help/sites-developing/designer.md)还可能会强制应用最小和最大限制；这些限制在项目实施过程中开发。
 
@@ -412,7 +412,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 >
 >Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
 >
->有关AEM使用的HTML5功能的更多信息，请参见[认证平台](/help/release-notes/release-notes.md#certifiedplatforms)部分。
+>有关AEM使用的HTML5功能的更多信息，请参阅[认证平台](/help/release-notes/release-notes.md#certifiedplatforms)部分。
 
 加载图像后，您可以配置下列各项：
 
@@ -422,7 +422,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 * **裁剪**
 
-   选择裁剪以裁剪图像。 可使用鼠标裁剪图像。
+   选择“裁剪”可裁剪图像。 可使用鼠标裁剪图像。
 
 * **旋转**
 
@@ -490,7 +490,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **子项** of（父页面）
 
-            手动或使用选择器指定一个路径。 如果将此选项留空，则使用当前页面作为父页面。
+            手动或使用选择器指定路径。 如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
 
          * **页面**
@@ -509,13 +509,13 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **QueryBuilder 谓词记号**
 
-            您可以使用QueryBuilder谓词记号输入搜索查询。 例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
+            您可以使用“QueryBuilder谓词记号”输入搜索查询。 例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 
 
             有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
       * **标记**
 
-         指定&#x200B;**父页面**、**标记／关键字**&#x200B;和所需的匹配条件。
+         指定&#x200B;**父页面**、**标记/关键字**&#x200B;和所需的匹配条件。
    * **显示方式**
 
       希望列出项目的方式；包括链接、Teaser 和新闻。
@@ -553,7 +553,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->无需进行大量项目级自定义，此组件不再开箱即用。
+>如果不进行大规模项目级自定义，该组件不再需要开箱即用。
 
 此组件提供了“用户名”和“密码”字段。
 
@@ -593,7 +593,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->无需进行大量项目级自定义，此组件不再开箱即用。
+>如果不进行大规模项目级自定义，该组件不再需要开箱即用。
 
 * **标题**
 
@@ -607,7 +607,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **类型/大小**
 
-      从提供的选择中进行选择。
+      从提供的选区中进行选择。
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -659,7 +659,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **节点类型**
 
-      如果搜索限制为特定节点类型，则将其列表到此处；例如，`cq:Page`。
+      如果搜索仅限于特定节点类型，请在此处列表它们；例如，`cq:Page`。
 
    * **搜索路径**
 
@@ -739,7 +739,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->无需进行大量项目级自定义，此组件不再开箱即用。
+>如果不进行大规模项目级自定义，该组件不再需要开箱即用。
 
 此组件允许您加载一系列将在您的页面上显示为幻灯片放映的图像。您可以添加或删除图像以及为每个图像指定标题。在“高级”下，您还可以指定显示区域的大小。
 
@@ -749,7 +749,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **新幻灯片**
 
-      可以使用&#x200B;**添加**（和&#x200B;**删除**）按钮指定幻灯片选项。
+      可以使用&#x200B;**添加**（和&#x200B;**删除**）按钮指定幻灯片选择。
 
    * **标题**
 
@@ -759,7 +759,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **大小**
 
-      以像素为单位指定宽度和高度。
+      指定宽度和高度（以像素为单位）。
 
 幻灯片放映组件随后会在较短的时间内按顺序重复显示每个图像，然后淡入到下一张幻灯片：
 
@@ -928,7 +928,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->无需进行大量项目级自定义，此组件不再开箱即用。
+>如果不进行大规模项目级自定义，该组件不再需要开箱即用。
 
 **视频**&#x200B;组件允许您在页面上放置一个预定义的现成视频元素。
 
@@ -940,7 +940,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **视频资产**
 
-      上传或删除视频资产。
+      上传或删除您的视频资产。
 
    * **大小**
 
@@ -1074,11 +1074,11 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **必填**
 
-      这取决于表单组件类型，但提供一个或多个单击框以指示该字段或该字段的某些部分是必需的。
+      这取决于表单组件类型，但会提供一个或多个单击框以指示此字段或此字段的某些部分是必需的。
 
    * **必需的消息**
 
-      通知用户此字段为必填字段的消息；必填字段还将标有星号和星号。
+      通知用户此字段为必填字段的消息；必填字段还将标有星号。
 
    * **约束**
 
@@ -1242,7 +1242,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，可以将信息导出到`.tsv`（制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到`.tsv`（制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **邮件**
 
          * **从**
@@ -1278,10 +1278,10 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到。tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到.tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **通过上传存储内容**
 
-         其选项与&#x200B;**存储内容**&#x200B;相同。
+         此选项与&#x200B;**存储内容**&#x200B;具有相同的选项。
 
       * **取消订阅者的订阅**
 
@@ -1358,7 +1358,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->无需进行大量项目级自定义，此组件不再开箱即用。
+>如果不进行大规模项目级自定义，该组件不再需要开箱即用。
 
 Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字符串会随每次刷新而变。
 
