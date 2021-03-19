@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
+feature: 移动设备表单
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # 优化HTML5表单{#optimizing-html-forms}
 
-HTML5表单以HTML5格式呈现表单。 生成的输出可能很大，具体取决于表单大小和表单中的图像等因素。 要优化数据传输，建议的方法是使用提供请求的Web服务器压缩HTML响应。 此方法可减小响应大小、网络流量以及在服务器和客户端计算机之间传输数据所需的时间。
+HTML5表单以HTML5格式呈现表单。 生成的输出可能会很大，具体取决于表单大小和表单中的图像等因素。 要优化数据传输，建议的方法是使用从中提供请求的Web服务器压缩HTML响应。 此方法可减小响应大小、网络流量以及在服务器和客户端计算机之间传输数据所需的时间。
 
 本文介绍使用JBoss为Apache Web Server 2.0 32位启用压缩所需的步骤。
 
@@ -29,13 +30,13 @@ HTML5表单以HTML5格式呈现表单。 生成的输出可能很大，具体取
 
 获取适用于您的操作系统的Apache Web服务器软件：
 
-* 对于Windows，从Apache HTTP Server项目站点下载Apache Web服务器。
+* 对于Windows，请从Apache HTTP Server项目站点下载Apache Web服务器。
 * 对于Solaris 64位，请从Sunfreeware for Solaris网站下载Apache Web服务器。
-* 对于Linux,Apache Web服务器预安装在Linux系统上。
+* 对于Linux，Apache Web服务器预安装在Linux系统上。
 
 Apache可以使用HTTP或AJP协议与JBoss通信。
 
-1. 在&#x200B;*APACHE_HOME/conf/httpd.conf*&#x200B;文件中取消以下模块配置的注释。
+1. 取消&#x200B;*APACHE_HOME/conf/httpd.conf*&#x200B;文件中的以下模块配置注释。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
