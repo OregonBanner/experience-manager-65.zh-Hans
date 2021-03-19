@@ -1,16 +1,18 @@
 ---
 title: 应用 Dynamic Media 图像预设
-description: 了解如何在Dynamic Media应用图像预设
+description: 了解如何在Dynamic Media中应用图像预设
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
+feature: 图像预设
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '329'
 ht-degree: 42%
 
 ---
@@ -26,13 +28,13 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->智能成像可以与现有图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 有关详细信息，请参阅[智能成像](imaging-faq.md)。
+>智能成像功能可以与您现有的图像预设配合使用，并在投放的最后一毫秒使用智能功能根据浏览器或网络连接速度进一步减小图像文件大小。 有关详细信息，请参阅[智能成像](imaging-faq.md)。
 
 无论您何时预览图像，都可以对图像应用图像预设。
 
 >[!NOTE]
 >
->在Dynamic Media-Scene7模式下，仅图像资产支持图像预设。
+>在Dynamic Media - Scene7模式中，图像预设仅支持图像资产。
 
 **应用Dynamic Media图像预设**
 
@@ -43,7 +45,7 @@ ht-degree: 42%
    >* 静态演绎版显示在窗格的上半部分。 动态演绎版显示在下半部分。您只能对动态演绎版使用 URL 来显示图像。**[!UICONTROL URL]** 按钮仅在选择动态演绎版的情况下才会显示。而 **[!UICONTROL RESS]** 按钮则仅在选择响应式图像预设的情况下才会显示。
       >
       >
-   * 当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示大量演绎版。 您可以增加可查看的预设数。请参阅[增加显示](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)的图像预设数。
+   * 当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示大量的演绎版。 您可以增加可查看的预设数。请参阅[增加显示](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)的图像预设数。
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
