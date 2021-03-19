@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
+role: 开发人员
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2153'
 ht-degree: 0%
 
 ---
@@ -61,7 +62,7 @@ ht-degree: 0%
 
 `<DDXProcessorSetting name="checkpoint" value="2000" />`
 
-可以将此元素添加为`DDX`元素的子元素或`PDF result`元素的子元素。 此设置的默认值为0（零），它关闭了检查点，DDX的行为就像`DDXProcessorSetting`元素不存在一样。 如果遇到`OutOfMemory`错误，您可能需要将该值设置为一个整数，通常介于500到5000之间。 小的检查点值导致更频繁的检查点。
+可以将此元素添加为`DDX`元素的子元素或`PDF result`元素的子元素。 此设置的默认值为0（零），它关闭了检查点，DDX的行为与`DDXProcessorSetting`元素不存在一样。 如果遇到`OutOfMemory`错误，您可能需要将该值设置为一个整数，通常介于500到5000之间。 小的检查点值导致更频繁的检查点。
 
 ## 步骤{#summary-of-steps}的摘要
 
