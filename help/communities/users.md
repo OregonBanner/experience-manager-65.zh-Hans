@@ -1,19 +1,20 @@
 ---
 title: 管理用户和用户组
 seo-title: 管理用户和用户组
-description: AEM Communities用户可以自行注册和编辑用户档案
-seo-description: AEM Communities用户可以自行注册和编辑用户档案
+description: AEM Communities用户可以自行注册和编辑其用户档案
+seo-description: AEM Communities用户可以自行注册和编辑其用户档案
 uuid: aeba424e-ea7e-4da5-b94f-ea8af4caa7d2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
+role: 管理员
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2183'
-ht-degree: 0%
+source-wordcount: '2184'
+ht-degree: 1%
 
 ---
 
@@ -22,29 +23,29 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-在AEM Communities，在发布环境中，用户可以自行注册并编辑其用户档案。 如果具有相应的权限，则还可以：
+在AEM Communities中，在发布环境中，用户可以自行注册和编辑其用户档案。 如果拥有适当的权限，他们还可以：
 
 * 在社区站点中创建子社区（请参阅[社区组](creating-groups.md)）。
 
-* [版](moderation.md) 本用户生成的内容(UGC)。
+* [审](moderation.md) 核用户生成的内容(UGC)。
 
-* 成为[启用资源](resources.md)联系人。
+* 是[启用资源](resources.md)联系人。
 
-* 具有[特权](#privileged-members-group)可创建博客、日历、QnA和论坛的条目。
+* 具有[权限](#privileged-members-group)可为博客、日历、问题与解决方案创建条目。
 
-在发布环境中注册的用户通常称为&#x200B;*社区成员（成员）*，以在创作环境中区分他们与&#x200B;*用户*。
+在发布环境中注册的用户通常称为&#x200B;*社区成员（成员）*，以区分他们与创作环境中的&#x200B;*用户*。
 
-通过将成员分配给在从创作环境创建[或[修改](sites-console.md#modifying-site-properties)社区站点时动态创建的[成员（用户）组](#publish-group-roles)中的一个，授予权限。 ](sites-console.md)当从作者环境工作时，通过[隧道服务](#tunnel-service)从发布环境查看成员。
+通过将成员分配给在从创作环境创建的[创建的](sites-console.md)或[修改的](sites-console.md#modifying-site-properties)社区站点时动态创建的[成员（用户）组之一，授予权限。 ](#publish-group-roles)从作者环境工作时，通过[隧道服务](#tunnel-service)从发布环境可见成员。
 
-根据设计，在发布环境中创建的成员和成员组不应显示在作者环境中。 在创作环境中创建的用户和用户组也同样希望保留在创作环境中。
+根据设计，在发布环境中创建的成员和成员组不应显示在创作环境中。 在创作环境中创建的用户和用户组也同样希望保留在创作环境中。
 
-当创作用户和发布成员来自相同的用户列表（如从同一LDAP目录同步）时，在创作和发布环境中，他们不被视为具有相同权限和组成员关系的同一用户。 成员和用户的角色必须根据需要分别在发布和创作时设置。
+当创作用户和发布成员来自相同的用户列表（如从同一LDAP目录同步）时，他们在创作和发布环境中不被视为具有相同权限和组成员关系的同一用户。 成员和用户的角色必须在发布时和作者（视情况而定）分别建立。
 
-对于[发布场](topologies.md)，在一个发布实例上进行的注册和修改需要与其它发布实例同步，以便它们能够访问同一用户数据。 有关详细信息，请参阅[用户同步](sync.md)，其中包括描述[当时发生的情况的部分……](sync.md#what-happens-when)。
+对于[发布场](topologies.md)，在一个发布实例上进行的注册和修改需要与其它发布实例同步，以便它们能够访问相同的用户数据。 有关详细信息，请参阅[用户同步](sync.md)，其中包含描述[发生时……的部分](sync.md#what-happens-when)。
 
 ### 贡献限制 {#contribution-limits}
 
-为了防止垃圾邮件，可以限制成员发布内容的频率。 此外，可以自动限制新登记成员的捐款。
+为了防止垃圾邮件，可以限制成员发布内容的频率。 此外，可自动限制新登记成员的捐款。
 
 有关详细信息，请参阅[成员贡献限制](limits.md)。
 
@@ -52,9 +53,9 @@ ht-degree: 0%
 
 创建新社区站点时，将使用唯一的id(uid)和权限动态创建新用户组，这些权限适用于在创作环境（请参阅[作者组角色](#author-group-roles)）或发布环境（请参阅[发布组角色](#publish-group-roles)）中管理社区站点所需的各种管理功能。
 
-在[社区站点创建](sites-console.md#step13asitetemplate)期间，根据给定站点的名称生成组的名称。 唯一id可避免同一服务器上名称相似的社区站点和社区组的命名冲突。
+在[社区站点创建](sites-console.md#step13asitetemplate)期间，根据给定站点的名称生成组名。 唯一ID可避免同一服务器上同名社区站点和社区组的命名冲突。
 
-例如，如果标题为“We.Retail Engage”的站点的站点名称为“*engage*”，则创建的用户组之一是：
+例如，如果对于标题为“We.Retail Engage”的站点，站点名称为“*engage*”，则创建的用户组之一是：
 
 * 社区&#x200B;*参与*&#x200B;成员
 
@@ -62,90 +63,90 @@ ht-degree: 0%
 
 ### 隧道服务{#tunnel-service}
 
-使用作者环境创建站点](sites-console.md)、[修改站点属性](sites-console.md#modifying-site-properties)和[管理社区成员和成员组](members.md)时，必须访问在发布环境中注册的用户和用户组。[
+使用创作环境[创建站点](sites-console.md)、[修改站点属性](sites-console.md#modifying-site-properties)和[管理社区成员和成员组](members.md)时，必须访问在发布环境中注册的用户和用户组。
 
 隧道服务使用作者上的复制代理提供此访问。
 
 * 有关详细信息，请参阅部署页上的[配置说明](deploy-communities.md#tunnel-service-on-author)。
 
-[“社区成员”和“组”控制台](members.md)仅用于管理仅在发布环境中注册的用户（成员）和用户组（成员组）。
+[“社区成员”和“组”控制台](members.md)的唯一目的是管理仅在发布环境中注册的用户（成员）和用户组（成员组）。
 
 要管理在创作环境中注册的用户和用户组，请使用[安全控制台](../../help/sites-administering/security.md)
 
 ### 作者组角色{#author-group-roles}
 
-| 如果组成员…… | 主角色 |
+| 如果组成员…… | 主要角色 |
 |---|---|
-| 管理员 | 管理员组由系统管理员组成，这些管理员具有社区管理员的所有功能以及管理社区管理员组的能力。 |
-| 社区管理员 | 社区管理员组自动成为所有社区站点以及在该站点上创建的任何社区组的成员。 社区管理员组的初始成员是管理员组。 在创作环境中，社区管理员可以创建社区站点、管理站点、管理成员（他们可以禁止社区成员）以及审核内容。 |
+| 管理员 | 管理员组由系统管理员组成，这些系统管理员具有社区管理员的所有功能以及管理社区管理员组的功能。 |
+| 社区管理员 | “社区管理员”组自动成为所有社区站点和在该站点上创建的任何社区组的成员。 社区管理员组的初始成员是管理员组。 在创作环境中，社区管理员可以创建社区站点、管理站点、管理成员（他们可以禁止社区成员）以及审核内容。 |
 | 社区&lt;*站点名称*> Sitecontentmanager | 社区站点内容管理器能够执行传统的AEM创作、内容创建和修改社区站点的页面。 |
 | 社区支持经理 | 社区Enablement Managers组由可分配用于管理社区站点的Enablement Managers组的用户组成。 |
-| 社区&lt;*站点名称* > Siteenablementmanagers | 社区站点启用管理器组由已分配用于管理社区站点启用[资源](resources.md)的用户组成。 |
-| 无 | 匿名网站访客不能访问作者环境。 |
+| 社区&lt;*站点名称* > Siteenablementmanager | 社区站点启用管理器组由分配了管理社区站点启用[资源](resources.md)的用户组成。 |
+| 无 | 匿名网站访客可能无法访问作者环境。 |
 
 ### 系统管理员{#system-administrators}
 
-管理员组的成员是系统管理员，他们能够为作者和发布环境执行AEM安装的初始设置。
+管理员组的成员是系统管理员，他们可以为创作和发布环境执行AEM安装的初始设置。
 
-出于演示和开发目的，管理员组的用户ID为&#x200B;*admin*，密码为&#x200B;*admin*。
+出于演示和开发目的，管理员组的成员的用户ID为&#x200B;*admin* ，密码为&#x200B;*admin*。
 
 对于生产环境，应修改默认管理员组。
 
-请务必按照[安全清单](../../help/sites-administering/security-checklist.md)进行操作。
+请务必遵循[安全清单](../../help/sites-administering/security-checklist.md)。
 
 ## 发布环境 {#publish-environment}
 
 ### 成为成员{#becoming-a-member}
 
-在发布环境中，根据社区站点的[设置](sites-console.md#user-management)，站点访客可以成为社区成员：
+在发布环境中，根据社区站点的[设置](sites-console.md#user-management)，站点访客可能成为社区成员：
 
 * 当社区站点为私有（已关闭）时：
-   * 按邀请
+   * 通过邀请
    * 按管理员的操作
 
-* 当社区站点公开时（打开）:
-   * 通过自助注册
+* 当社区站点为公共站点时（打开）：
+   * 通过自行注册
    * 通过Facebook和Twitter进行社交登录
 
 >[!NOTE]
 >
->如果站点访客注册为一个开放社区站点的成员，则他们会自动成为同一发布环境下其他开放社区站点的成员。
+>如果站点访客注册为一个开放社区站点的成员，则它们会自动成为同一发布环境上其他开放社区站点的成员。
 
 ### 发布组角色{#publish-group-roles}
 
-| 如果组成员…… | 主角色 |
+| 如果组成员…… | 主要角色 |
 |---|---|
-| 社区&lt;*站点名称*&#x200B;成员 | 社区站点成员是注册用户。 他们可以登录、修改用户档案、加入一个开放的社区组、向社区发布内容、向其他成员发送消息以及遵循站点活动。 |
-| 社区&lt;*站点名称*>版主 | 社区站点审查方是可信的社区成员，可以批量审核发布内容的页面上的UGC，也可以使用审核控制台审核，也可以在上下文中审核内容。 |
-| 社区&lt;*站点名称*> &lt;*组名称*&#x200B;成员 | 社区组成员是已加入开放社区组或已受邀加入封闭社区组的社区成员。 他们具有站点内该社区组的成员能力。 |
-| 社区&lt;*站点名称*&#x200B;组管理员 | 社区站点组管理员是受信任的社区成员，被指定在社区站点中创建和管理子社区（组）。 包括提供上下文协调的功能。 |
+| 社区&lt;*站点名称*>成员 | 社区站点成员是注册用户。 他们可以登录、修改用户档案、加入一个开放的社区组、向社区发布内容、向其他成员发送消息以及遵循站点活动。 |
+| 社区&lt;*站点名称*>版主 | 社区站点审查方是可信的社区成员，能够在发布内容的页面上使用审核控制台批量审核UGC或在上下文中审核UGC。 |
+| 社区&lt;*站点名称*>&lt;*组名称*>成员 | 社区组成员是已加入开放社区组或已受邀加入封闭社区组的社区成员。 他们拥有站点内该社区组成员的能力。 |
+| 社区&lt;*站点名称*>组管理员 | 社区站点组管理员是一个受信任的社区成员，分配该成员在社区站点中创建和管理子社区（组）。 其中包括提供上下文审核的功能。 |
 | *特权成员安全组* | 为限制内容创建而手动创建和维护的用户组。 请参阅[特权成员组](#privileged-members-group)。 |
 | 无 | 发现网站的匿名网站访客可能会视图和搜索允许匿名访问的社区网站。 要参与和发布内容，用户必须自行注册（如果允许）并成为社区成员。 |
 
 ### 将成员分配到发布组角色{#assigning-members-to-publish-group-roles}
 
-当[在创作环境中创建社区站点](sites-console.md)或[修改站点属性时，](sites-console.md#modifying-site-properties)成员可以被分配到发布环境中执行的各种角色，如主持人、组管理员、资源联系人或特权成员。
+当[在创作环境中创建社区站点](sites-console.md)或[修改站点属性时，](sites-console.md#modifying-site-properties)成员可以被分配在发布环境中执行的各种角色，如主持人、组管理员、资源联系人或特权成员。
 
-[启用隧道服](sync.md#accessingpublishusersfromauthor) 务会导致分配选择从发布时的成员而不是作者的用户显示。
+[启用隧道服](sync.md#accessingpublishusersfromauthor) 务会导致从发布时的成员（而不是创作时的用户）显示分配选项。
 
-所选成员将自动分配给[相应的组](#publish-group-roles)，并且当社区站点被（重新）发布时，将包括其成员资格。
+所选成员将自动分配给[相应的组](#publish-group-roles)，并且在社区站点（重新）发布时，将包括其成员身份。
 
 ### 拥有权限的成员组 {#privileged-members-group}
 
-特权成员安全组的目的是限制为特定社区功能创建内容的权限子集为社区站点的成员。
+特权成员安全组的目的是将某些社区功能的内容的创建限制到社区站点成员的特权子集。
 
 特权成员组是使用[社区组控制台](members.md)创建和管理的成员组。
 
-创建特权成员组并启用[隧道服务](sync.md#accessingpublishusersfromauthor)后，可以[修改](sites-console.md#modify-structure)现有社区站点的结构，以将其社区功能的配置编辑为“允许特权成员”并添加所创建的组。
+在创建特权成员组并启用[隧道服务](sync.md#accessingpublishusersfromauthor)后，现有社区站点的结构可以[modified](sites-console.md#modify-structure)编辑其社区功能的配置以“允许特权成员”并添加创建的组。
 
 允许指定一个或多个特权成员组的社区功能包括：
 
-* [博客功能](functions.md#blog-function) -限制创建新文章。
-* [日历函数](functions.md#calendar-function) -限制创建新事件。
-* [论坛功能](functions.md#forum-function) -限制创建新主题。
-* [问题与答案](functions.md#qna-function) -限制创建新问题的创建。
+* [博客功能](functions.md#blog-function)  — 限制创建新文章。
+* [日历功能](functions.md#calendar-function)  — 限制创建新事件。
+* [论坛功能](functions.md#forum-function)  — 限制创建新主题的创建。
+* [问题与答案](functions.md#qna-function)  — 限制创建新问题的创建。
 
-当社区功能未得到保护（未分配特权成员组）时，将允许所有社区站点成员创建功能内容(文章、事件、主题、问题)。
+当未保护社区功能（未分配特权成员组）时，允许所有社区站点成员创建功能内容(文章、事件、主题、问题)。
 
 >[!NOTE]
 >
@@ -161,7 +162,7 @@ ht-degree: 0%
 
 同样，应在`/home/groups/community`中创建自定义社区用户组（如特权成员组）。
 
-使用[社区成员和组控制台](members.md)将在这些路径中创建用户和组。
+使用[“社区成员”和“组”控制台](members.md)将在这些路径中创建用户和组。
 
 要指定自定义路径，需要使用经典安全UI，可通过[https://&lt;server>:&lt;port>/useradmin](http://localhost:4503/useradmin)访问。
 
@@ -189,24 +190,24 @@ ht-degree: 0%
 
 ### 控制台 {#consoles}
 
-只有在创作环境中提供四个单独的控制台：
+有四个单独的控制台仅在创作环境中可用：
 
-| 控制台 | 工具、安全性、用户 | 工具、安全性、组 | 社区、成员 | 社区、组 |
+| console | 工具、安全性、用户 | 工具、安全性、组 | 社区、成员 | 社区、组 |
 |----------|-----------------------|------------------------|------------------------------------------------------------|------------------------------------------------------------|
 | 管理 | 创作用户 | 作者用户组 | 发布时的成员 | 发布时的成员组 |
-| reader | 管理员权限 | 管理员权限 | 管理权限，隧道服务，用户同步发布场 | 管理权限，隧道服务，用户同步发布场 |
+| reamer | 管理权限 | 管理权限 | 管理权限，隧道服务，用户同步发布场 | 管理权限，隧道服务，用户同步发布场 |
 
 ### 社区Enablement Manager角色{#community-enablement-manager-role}
 
-通常，[启用社区](overview.md#enablement-community)不允许站点访客自行注册，因为每个成员都有相关费用。 在创作站点创建过程中，由分配了`enablement manager` [的[角色](#author-group-roles)的用户（添加为组`Community <site-name> Siteenablementmanagers`的成员）管理启动学习者和资源。 ](sites-console.md#enablement)`enablement manager`还负责将学习资源](resources.md)分配给创作社区成员。[
+通常，[启用社区](overview.md#enablement-community)不允许站点访客自行注册，因为每个成员都有相关成本。 在作者（添加为组`Community <site-name> Siteenablementmanagers`的成员）创建站点](sites-console.md#enablement)期间，由分配`enablement manager` [  ](#author-group-roles)的[角色的用户管理启用学员和资源。 `enablement manager`还负责将学习资源](resources.md)分配给创作社区成员。[
 
 只有全局`Community Enablement Managers`组成员的用户才能被选择为特定社区站点的`enablement manager`。
 
 要创建可以分配`Community Site Enablement Manager`角色的用户，请使用经典UI安全控制台来指定路径：
 
-在作者实例上：
+在作者实例中：
 
-1. 以管理员权限登录，浏览至经典UI安全控制台。
+1. 使用管理员权限登录，浏览到经典UI安全控制台。
 
    例如，[http://localhost:4502/useradmin](http://localhost:4502/useradmin)
 
@@ -217,14 +218,14 @@ ht-degree: 0%
 
    ![create-community-user](assets/create-community-user.png)
 
-* 在左窗格中，搜索新创建的用户，然后选择以在右窗格中显示。
+* 在左窗格中，搜索新创建的用户并选择在右窗格中显示。
 
    ![社区用户](assets/view-community-user.png)
 
 在左边窗格中：
 
 1. 清除搜索框，然后选择&#x200B;**[!UICONTROL 隐藏用户]**。
-2. 找到并将`community-enablementmanagers`拖动到右窗格中显示的新用户的&#x200B;**[!UICONTROL 组]**&#x200B;选项卡。
+2. 找到并将`community-enablementmanagers`拖动到右侧窗格中显示的新用户的&#x200B;**[!UICONTROL 组]**&#x200B;选项卡。
 
    ![分配组](assets/assign-group.png)
 
@@ -236,7 +237,7 @@ ht-degree: 0%
 
 ### LDAP集成{#ldap-integration}
 
-AEM支持使用LDAP验证用户以及创建用户帐户。 这在[使用AEM 6](../../help/sites-administering/ldap-config.md)配置LDAP中有详细介绍。
+AEM支持使用LDAP验证用户身份以及创建用户帐户。 这在[使用AEM 6](../../help/sites-administering/ldap-config.md)配置LDAP中有详细介绍。
 
 以下是特定于社区成员和成员组的一些配置详细信息。
 
@@ -257,11 +258,11 @@ AEM支持使用LDAP验证用户以及创建用户帐户。 这在[使用AEM 6](.
 
    * 没有特别说明
 
-这会导致用户自动被分配到社区站点的成员组，存储库位置为`/home/users/community`和`/home/groups/community`，这样，用户就继承了相应的权限，可以看到彼此的用户档案。
+这会导致用户被自动分配给社区站点的成员组，存储库位置为`/home/users/community`和`/home/groups/community`，以便他们继承相应的权限来查看彼此的用户档案。
 
-* `User auto membership`值应为`rep:authorizableId`属性，而不是用户档案的`givenName`（显示名称）。
+* `User auto membership`值应为`rep:authorizableId`属性，而不是用户档案中的`givenName`（显示名称）。
 
-## 在AEM实例之间同步用户{#synchronizing-users-among-aem-instances}
+## 在AEM实例{#synchronizing-users-among-aem-instances}之间同步用户
 
 使用[发布场](topologies.md)时，通过将用户首先导入一个实例和使用户同步](sync.md)能够将用户分发到其他发布实例，确保用户在每个发布实例上具有相同的路径。[
 
@@ -271,12 +272,12 @@ AEM支持使用LDAP验证用户以及创建用户帐户。 这在[使用AEM 6](.
 
 ## 关于社区组{#about-community-groups}
 
-讨论组时，有两个不同的主题：
+在讨论组时，有两个不同的主题：
 
 * **[社区组](overview.md#communitygroups)**
 
-   社区组是在社区站点的发布环境中可以创建的子社区，支持社区组的创建。 创建社区组会生成更多添加到网站的页面，并以类似于其父社区站点的方式进行管理。 有关详细信息，请访问[开发人员的社区组基本工具](essentials-groups.md)和作者的[社区组](creating-groups.md)。
+   社区组是在社区站点的发布环境中可以创建的子社区，支持社区组的创建。 创建社区组会生成更多添加到网站的页面，并以类似于其父社区站点的方式进行管理。 有关详细信息，请访问[Community Group Essentials](essentials-groups.md)（对于开发人员）和[Community Group](creating-groups.md)（对于作者）。
 
 * **[成员组](../../help/sites-administering/security.md)**
 
-   成员组是成员可能属于的组，并通过“组”控制台进行管理。 本页讨论的大部分内容都集中在成员组。 为社区站点自动创建的成员组（前缀为&#x200B;*`Community`*）可称为社区组，因此必须考虑讨论的上下文。
+   成员组是成员可能属于的组，并通过“组”控制台进行管理。 本页讨论的大部分内容都集中在成员组。 自动为社区站点创建的成员组（前缀为&#x200B;*`Community`*）可称为社区组，因此必须考虑讨论的上下文。
