@@ -1,18 +1,19 @@
 ---
 title: LiveCycleProcess Java API(SOAP)快速开始
 seo-title: LiveCycleProcess Java API(SOAP)快速开始
-description: '使用LiveCycleProcess Java API(SOAP)快速开始可搜索进程实例、挂起进程实例、开始挂起的进程实例、终止进程实例、清除进程数据和检索作业状态。 '
-seo-description: 使用LiveCycleProcess Java API(SOAP)快速开始可搜索进程实例、挂起进程实例、开始挂起的进程实例、终止进程实例、清除进程数据和检索作业状态。
+description: '使用LiveCycleProcess Java API(SOAP)快速开始可搜索进程实例、挂起进程实例、开始挂起进程实例、终止进程实例、清除进程数据和检索作业状态。 '
+seo-description: 使用LiveCycleProcess Java API(SOAP)快速开始可搜索进程实例、挂起进程实例、开始挂起进程实例、终止进程实例、清除进程数据和检索作业状态。
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
+role: 开发人员
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -22,25 +23,25 @@ ht-degree: 0%
 
 Java API(SOAP)快速开始可用于进程。 *进程实例*&#x200B;是由调用方法（如调用API）或从Workspace中启动的特定进程的实例。
 
-[快速开始（SOAP模式）:使用Java API搜索进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API搜索进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API挂起进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API挂起进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API启动挂起的进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API启动挂起的进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API终止进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API终止进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API清除流程数据](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API清除进程数据](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API检索作业的状态](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API检索作业的状态](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->如果您使用的是其他操作系统，如Unix，则位于AEM Forms编程中的快速开始基于Forms，将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 （请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+>使用AEM Forms进行编程中的快速开始基于Forms（如果您使用的是其他操作系统，如Unix），则使用适用操作系统支持的路径替换特定于窗口的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 （请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}搜索进程实例
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}搜索进程实例
 
 以下Java代码示例搜索基于&#x200B;*MortgageLoan - Prebuilt*&#x200B;进程的进程实例。
 
@@ -158,9 +159,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}挂起进程实例
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}挂起进程实例
 
-以下Java代码示例挂起进程实例。 要成功挂起进程实例，您需要在使用调用API调用长寿命进程时获得的进程调用标识符。
+以下Java代码示例暂停进程实例。 要成功挂起进程实例，您需要在使用调用API调用长寿命进程时获得的进程调用标识符。
 
 ```java
  /*
@@ -250,9 +251,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}启动挂起的进程实例
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}启动挂起的进程实例
 
-以下Java代码示例开始一个挂起的进程实例。
+以下Java代码示例开始了一个挂起的进程实例。
 
 ```java
  /*
@@ -338,7 +339,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}终止进程实例
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}终止进程实例
 
 以下Java代码示例终止标识符值为756c22860a242fb101ec7a5bc0977fd6的进程实例。
 
@@ -429,7 +430,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}清除进程数据
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}清除进程数据
 
 以下Java代码从名为&#x200B;*SecureDocument*&#x200B;的进程中清除数据。 过滤器用于指定清除那些名为&#x200B;*inValue*&#x200B;的进程变量大于200的进程实例的数据。
 
@@ -536,9 +537,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}检索作业的状态
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}检索作业的状态
 
-以下代码示例检索10个AEM Forms作业的状态。
+下面的代码示例检索10个AEM Forms作业的状态。
 
 ```java
  /*
