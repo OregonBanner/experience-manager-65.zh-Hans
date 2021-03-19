@@ -1,40 +1,41 @@
 ---
 title: 草稿和提交组件的自定义存储
 seo-title: 草稿和提交组件的自定义存储
-description: 了解如何自定义草稿和提交的用户存储。
-seo-description: 了解如何自定义草稿和提交的用户存储。
+description: 了解如何自定义草稿和提交的用户数据的存储。
+seo-description: 了解如何自定义草稿和提交的用户数据的存储。
 uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
+feature: Forms Portal
 translation-type: tm+mt
-source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 0%
+source-wordcount: '357'
+ht-degree: 1%
 
 ---
 
 
-# 草稿和提交组件的自定义存储{#custom-storage-for-drafts-and-submissions-component}
+# 草稿和提交组件{#custom-storage-for-drafts-and-submissions-component}的自定义存储
 
 ## 概述 {#overview}
 
-AEM Forms允许您将表单另存为草稿。 使用草稿功能，您可以维护一个进行中的表单，您可以从任何设备完成并稍后提交。
+AEM Forms允许您将表单另存为草稿。 草稿功能允许您维护进行中的表单，您可以从任何设备完成并稍后提交。
 
-默认情况下，AEM Forms将与表单草稿和提交相关的用户数据存储在Publish实例的`/content/forms/fp`节点中。 此外，AEM Forms门户组件提供数据服务，您可以使用这些服务来自定义为草稿和提交文件存储用户数据的实施。 例如，您可以将用户数据存储在数据存储中。
+默认情况下，AEM Forms会将与表单草稿和提交关联的用户数据存储在Publish实例的`/content/forms/fp`节点中。 此外，AEM Forms门户组件还提供数据服务，您可以使用这些服务自定义为草稿和提交存储用户数据的实现。 例如，您可以将用户数据存储在数据存储中。
 
 ## 前提条件  {#prerequisites}
 
 * 启用[表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
 * 创建[表单门户页面](/help/forms/using/creating-form-portal-page.md)
-* 为表单门户启用[自适应表单](/help/forms/using/draft-submission-component.md)
+* 为表单门户](/help/forms/using/draft-submission-component.md)启用[自适应表单
 * 了解自定义存储的[实现详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿数据服务{#draft-data-service}
 
-要为草稿自定义用户存储，您需要实现`DraftDataService`接口的所有方法。 以下示例代码描述这些方法和参数。
+要自定义草稿用户数据的存储，您需要实现`DraftDataService`接口的所有方法。 下面的示例代码描述了这些方法和参数。
 
 ```java
 /**
@@ -103,7 +104,7 @@ public interface DraftDataService {
 
 ## 提交数据服务{#submission-data-service}
 
-要自定义用户数据的提交存储，您需要实现`SubmitDataService`接口的所有方法。 以下示例代码描述这些方法和参数。
+要为提交自定义用户数据的存储，您需要实现`SubmitDataService`接口的所有方法。 下面的示例代码描述了这些方法和参数。
 
 ```java
 /**
@@ -188,7 +189,7 @@ public interface SubmitDataService {
 }
 ```
 
-Forms门户使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成唯一ID。 您还可以生成自己的唯一ID。 您可以实现接口FPKeyGeneratorService，覆盖其方法，并开发自定义逻辑以为每个草稿和提交的表单生成一个自定义唯一ID。 此外，将自定义ID生成实现的服务等级设置为大于0。 它确保使用自定义实现而不是默认实现。
+Forms门户使用通用唯一标识符(UUID)概念为每个草稿和提交的表单生成唯一ID。 您还可以生成您自己的唯一ID。 您可以实现接口FPKeyGeneratorService、覆盖其方法并开发自定义逻辑，以为每个草稿和提交的表单生成一个自定义唯一ID。 另外，将自定义ID生成实现的服务等级设置为大于0。 它确保使用自定义实现而不是默认实现。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -207,7 +208,7 @@ public interface FPKeyGeneratorService {
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 
-要使用上述注释，请将以下内容导入您的项目：
+要使用上述注释，请将以下注释导入您的项目：
 
 ```java
 import org.apache.felix.scr.annotations.Properties;
