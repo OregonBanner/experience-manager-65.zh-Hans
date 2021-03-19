@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 6d75c7b1-9c0e-47f3-bdb1-61acf16b97f9
+role: 开发人员
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
@@ -47,34 +48,34 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关Assembler服务的详细信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有关汇编程序服务的详细信息，请参阅[AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)服务参考。
 
 >[!NOTE]
 >
->有关DDX文档的详细信息，请参阅[Assembler Service和DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>有关DDX文档的详细信息，请参阅[汇编程序服务和DDX参考](https://www.adobe.com/go/learn_aemforms_ddx_63)。
 
-## 步骤{#summary-of-steps}的摘要
+## 步骤{#summary-of-steps}摘要
 
 要组合加密的PDF文档，请执行以下步骤：
 
 1. 包括项目文件。
-1. 创建PDF Assembler客户端。
+1. 创建PDF汇编程序客户端。
 1. 引用现有DDX文档。
 1. 引用不安全的PDF文档。
 1. 设置运行时选项。
 1. 加密文档。
 1. 保存加密的PDF文档。
 
-**包括项目文件**
+**包含项目文件**
 
-在开发项目中包含必要的文件。 如果要使用Java创建客户端应用程序，请包含必要的JAR文件。 如果您使用Web服务，请确保包含代理文件。
+在开发项目中包含必要的文件。 如果您使用Java创建客户端应用程序，请包含必要的JAR文件。 如果您使用Web服务，请确保包含代理文件。
 
 必须将以下JAR文件添加到项目的类路径中：
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(在JBoss上部署AEM Forms时为必需)
+* adobe-utilities.jar(在JBoss上部署AEM Forms时必需)
 * jbossall-client.jar(如果在JBoss上部署了AEM Forms，则为必需)
 
 如果AEM Forms部署在JBoss以外的受支持的J2EE应用程序服务器上，则必须将adobe-utilities.jar和jbossall-client.jar文件替换为特定于AEM Forms部署在的J2EE应用程序服务器的JAR文件。 有关所有AEM Forms JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
