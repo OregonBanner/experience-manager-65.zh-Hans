@@ -6,10 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 99293a13fcdf06f37d9747683f7c32ebd9246d18
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '6138'
+source-wordcount: '6141'
 ht-degree: 5%
 
 ---
@@ -421,7 +422,7 @@ spin-01-01
  spin-03-12
 ```
 
-通过此信息，可以按如下方式创建批集类型菜谱：
+通过此信息，您可以按如下方式创建批集类型菜谱：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
