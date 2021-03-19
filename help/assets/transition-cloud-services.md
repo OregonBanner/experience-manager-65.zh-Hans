@@ -2,22 +2,23 @@
 title: 将翻译云服务应用到文件夹
 description: 将翻译云服务应用到文件夹
 contentOwner: AG
+role: 管理员
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 43%
+source-wordcount: '386'
+ht-degree: 44%
 
 ---
 
 
-# 将翻译云服务应用于文件夹{#applying-translation-cloud-services-to-folders}
+# 将翻译云服务应用到文件夹{#applying-translation-cloud-services-to-folders}
 
 [!DNL Adobe Experience Manager] 允许您从您选择的翻译提供商那里使用基于云的翻译服务，以确保根据您的要求翻译您的资产。
 
 您可以将翻译云服务直接应用到您的资产文件夹，以便在翻译工作流中使用。
 
-## 应用转换服务{#applying-the-translation-services}
+## 应用翻译服务{#applying-the-translation-services}
 
 将翻译云服务直接应用到您的资产文件夹，无需在创建或更新翻译工作流时配置翻译服务。
 
@@ -35,7 +36,7 @@ ht-degree: 43%
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. 在工具栏中，单击&#x200B;**[!UICONTROL 保存]**，然后单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭对话框。转换服务将应用于文件夹。
+1. 在工具栏中，单击&#x200B;**[!UICONTROL 保存]**，然后单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭对话框。翻译服务将应用于文件夹。
 
 ## 应用自定义转换连接器{#applying-custom-translation-connector}
 
@@ -47,7 +48,7 @@ ht-degree: 43%
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. 单击&#x200B;**[!UICONTROL Configure now]**&#x200B;链接以打开&#x200B;**[!UICONTROL Create Configuration]**&#x200B;对话框。
+1. 单击&#x200B;**[!UICONTROL Configure now]**&#x200B;链接以打开&#x200B;**[!UICONTROL 创建配置]**&#x200B;对话框。
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
