@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
+feature: 语言复制
 translation-type: tm+mt
-source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '3453'
+source-wordcount: '3455'
 ht-degree: 1%
 
 ---
@@ -170,11 +171,11 @@ AEM会检测是否正在为内容的初始翻译创建翻译项目，或是更�
 
 1. 单击或点按添加和页面/资产。
 
-   ![chlimage_1-247](assets/chlimage_1-247.png)
+   ![chlimage_1-248](assets/chlimage_1-247.png)
 
 1. 选择要添加的分支的最上方项目，然后单击或点按复选标记图标。 您可以进行多选。
 
-   ![chlimage_1-248](assets/chlimage_1-248.png)
+   ![chlimage_1-247](assets/chlimage_1-248.png)
 
 1. 或者，您也可以选择搜索图标，轻松查找要添加到翻译作业的页面或资产。
 
