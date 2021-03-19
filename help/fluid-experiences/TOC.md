@@ -2,17 +2,19 @@
 sub-product: AEM流畅体验
 user-guide-title: AEM流畅体验
 breadcrumb-title: 流畅的体验指南
-user-guide-description: AEM流畅体验利用AEM Sites、AEMDynamic Media和AEM Assets等强大的功能集，为无头内容投放提供强大的解决方案。
+user-guide-description: AEM流畅体验利用AEM Sites、AEM Dynamic Media和AEM Assets的强大功能集，为无外设内容投放提供强大的解决方案。
 index: n
+feature-set: Experience Manager Sites
+role: 领导者，架构师，开发人员，数据架构师，数据工程师，管理员，业务从业者
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '51'
 ht-degree: 0%
 
 ---
 
 
-# AEM流畅体验{#aem-fluid-experiences}
+# AEM Fluid Experiences {#aem-fluid-experiences}
 
 + [功能列表](/help/fluid-experiences/feature-list.md)
