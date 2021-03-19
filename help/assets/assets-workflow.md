@@ -2,10 +2,12 @@
 title: 使用工作流处理资产
 description: 资产处理功能，可转换格式、创建演绎版、管理资产、验证资产和运行工作流。
 contentOwner: AG
+feature: 工作流、演绎版
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '966'
 ht-degree: 3%
 
 ---
