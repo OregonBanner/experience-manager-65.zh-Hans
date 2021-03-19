@@ -5,11 +5,14 @@ audience: end-user
 user-guide-title: AEM 6.5 Communities 用户指南
 breadcrumb-title: Communities 指南
 user-guide-description: 创建在线体验，如论坛、用户组、学习资源和其他社交功能。
+feature-set: Experience Manager
+feature: 社区
+role: 业务从业者
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 11%
+source-wordcount: '504'
+ht-degree: 12%
 
 ---
 
