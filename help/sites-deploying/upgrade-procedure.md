@@ -1,8 +1,8 @@
 ---
 title: 升级过程
 seo-title: 升级过程
-description: 了解升级AEM所需遵循的过程。
-seo-description: 了解升级AEM所需遵循的过程。
+description: 了解升级AEM需要遵循的过程。
+seo-description: 了解升级AEM需要遵循的过程。
 uuid: 81126a70-c082-4f01-a1ad-7152182da88b
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -11,10 +11,11 @@ content-type: reference
 discoiquuid: 5c035d4c-6e03-48b6-8404-800b52d659b8
 docset: aem65
 targetaudience: target-audience upgrader
+feature: 升级
 translation-type: tm+mt
-source-git-commit: 5f8198f0fd6c335708f2b771848b2e66dfc242b3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,9 +25,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->由于大多数AEM升级都是就地执行的，因此升级过程将需要作者层停机。 通过遵循这些最佳实践，可以最小化或消除发布层停机时间。
+>由于大多数AEM升级是就地执行的，因此升级过程将需要作者层停机。 通过遵循这些最佳做法，可以将发布层停机时间减至最少或消除。
 
-升级AEM环境时，您需要考虑升级作者环境或发布环境之间的方法差异，以最大限度地减少作者和最终用户的停机时间。 本页概述了升级AEM 6.x版本上当前运行的AEM拓扑的高级过程。由于创作层和发布层以及基于Mongo和TarMK的部署之间的流程不同，因此每个层和微内核都列在单独的部分中。 执行部署时，我们建议先升级您的创作环境，确定成功与否，然后继续访问发布环境。
+在升级AEM环境时，您需要考虑升级作者环境或发布环境之间的方法差异，以便最大限度地减少作者和最终用户的停机时间。 本页概述了升级当前在AEM 6.x版本上运行的AEM拓扑的高级过程。由于创作层和发布层以及基于Mongo和TarMK的部署之间的过程不同，因此每个层和微内核都已在单独的部分列出。 在执行部署时，我们建议先升级您的创作环境，确定成功与否，然后继续执行发布环境。
 
 <!--
 >[!IMPORTANT]
@@ -38,7 +39,7 @@ ht-degree: 0%
 
 ### 启动拓扑{#starting-topology}
 
-此部分假定的拓扑由在TarMK上运行的具有冷备用的作者服务器组成。 从作者服务器复制到TarMK发布场。 虽然此处未说明，但此方法也可用于使用卸载的部署。 在作者实例上禁用复制代理后以及重新启用它们之前，请确保在新版本上升级或重新构建卸载实例。
+此部分假定的拓扑由在TarMK上运行的具有冷备用的作者服务器组成。 从作者服务器复制到TarMK发布场。 虽然此处未说明，但此方法也可用于使用卸载的部署。 请确保在Author实例上禁用复制代理后并在重新启用它们之前升级或重新构建新版本上卸载的实例。
 
 ![tarmk_starting_topology](assets/tarmk_starting_topology.jpg)
 
@@ -73,7 +74,7 @@ ht-degree: 0%
 
 1. 开始创作实例
 
-1. 开始待机实例。
+1. 开始Standby实例。
 
 ### 如果失败（回滚）{#if-unsuccessful-rollback}
 
@@ -81,13 +82,13 @@ ht-degree: 0%
 
 1. 开始Cold Standby实例作为新的主实例
 
-1. 从Cold Standby重建作者环境。
+1. 从冷待机中重新构建作者环境。
 
 ## MongoMK作者群集{#mongomk-author-cluster}
 
 ### 启动拓扑{#starting-topology-1}
 
-此部分假定的拓扑由至少包含两个AEM作者实例的MongoMK作者群集组成，该实例由至少两个MongoMK数据库支持。 所有作者实例共享一个数据存储。 这些步骤应同时适用于S3和文件数据存储。 从作者服务器复制到TarMK发布场。
+此部分的假定拓扑由包含至少两个AEM作者实例的MongoMK作者群集组成，这些实例由至少两个MongoMK数据库支持。 所有作者实例共享一个数据存储。 这些步骤应同时适用于S3和File数据存储。 从作者服务器复制到TarMK发布场。
 
 ![mongo拓扑](assets/mongo-topology.jpg)
 
@@ -97,7 +98,7 @@ ht-degree: 0%
 
 1. 停止内容创作
 1. 克隆数据存储以进行备份
-1. 停止除一个AEM作者实例外的所有实例，即您的主作者
+1. 停止除一个AEM作者实例（主作者）外的所有实例
 1. 从副本集（主Mongo实例）中删除除一个MongoDB节点外的所有节点
 1. 更新主作者上的`DocumentNodeStoreService.cfg`文件以反映您的单个成员复制副本集
 1. 重新启动主作者，以确保它正确重新启动
@@ -117,13 +118,13 @@ ht-degree: 0%
 
 ![mongo-secondaries](assets/mongo-secondaries.jpg)
 
-1. 创建新的6.5作者实例，它们与升级的Mongo实例连接
+1. 创建新的6.5作者实例，并连接到升级的Mongo实例
 
 1. 重建从群集中删除的MongoDB节点
 
-1. 更新`DocumentNodeStoreService.cfg`文件以反映完整的副本集
+1. 更新`DocumentNodeStoreService.cfg`文件以反映完整的复制副本集
 
-1. 重新启动作者实例，一次一个
+1. 重新启动Author实例，一次一个
 
 1. 删除克隆的数据存储。
 
@@ -149,7 +150,7 @@ ht-degree: 0%
 
 ### TarMK发布场{#tarmk-publish-farm-1}
 
-此部分的假定拓扑由两个TarMK发布实例组成，前面是Dispatcher，后面是负载平衡器。 从作者服务器复制到TarMK发布场。
+此部分假定的拓扑由两个TarMK发布实例组成，前面是Dispatcher，后面是负载平衡器。 从作者服务器复制到TarMK发布场。
 
 ![tarmk-pub-farmv5](assets/tarmk-pub-farmv5.png)
 
@@ -171,12 +172,12 @@ ht-degree: 0%
 
 ![upgrade-publish1](assets/upgrade-publish1.png)
 
-1. 启用通信以发布2
+1. 启用流量以发布2
 1. 停止发布1的流量
 1. 停止Publish 1实例
 1. 将Publish 1实例替换为Publish 2的副本
 1. 如果需要&#x200B;*，请更新调度程序或Web模块*
-1. 刷新Publish 1的调度程序缓存
+1. 刷新发布1的调度程序缓存
 1. 开始发布1
 1. QA通过防火墙后的调度程序验证Publish 1
 
@@ -189,15 +190,15 @@ ht-degree: 0%
 1. 刷新Publish 2的调度程序缓存
 1. 开始发布2
 1. QA通过防火墙后的调度程序验证Publish 2
-1. 启用通信以发布2
+1. 启用流量以发布2
 
 ## 最终升级步骤{#final-upgrade-steps}
 
-1. 启用通信以发布1
+1. 启用流量以发布1
 1. QA通过公共URL执行最终验证
 1. 从“作者”环境启用复制代理
-1. 恢复内容创作
+1. 继续内容创作
 1. 执行[升级后检查](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)。
 
-![最终](assets/final.jpg)
+![final](assets/final.jpg)
 
