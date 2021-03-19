@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
+role: 开发人员
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '19044'
+source-wordcount: '19045'
 ht-degree: 0%
 
 ---
@@ -1762,7 +1763,7 @@ ResourceRepositoryClient
 
 **生成多个PDF文件**
 
-在引用包含多个数据记录和设置运行时选项的有效XML数据源后，可以调用输出服务，这会导致它生成多个文件。 在生成多个记录时，`OutputResult`对象的`getGeneratedDoc`方法返回`null`。
+引用包含多个数据记录和设置运行时选项的有效XML数据源后，可以调用输出服务，这会导致它生成多个文件。 在生成多个记录时，`OutputResult`对象的`getGeneratedDoc`方法返回`null`。
 
 **检索操作结果**
 
