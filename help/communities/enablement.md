@@ -1,6 +1,6 @@
 ---
-title: 配置Enablement Features
-seo-title: 配置Enablement Features
+title: 配置启用功能
+seo-title: 配置启用功能
 description: 在社区中配置启用功能
 seo-description: 在社区中配置启用功能
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
+role: 管理员
 translation-type: tm+mt
-source-git-commit: ce21755263a2e8a3f0e97acb7f586e32cedde83a
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 1%
 
 启用功能提供了创建[启用社区](overview.md#enablement-community)的能力。
 
-* 此功能需要额外的许可才能用于生产环境。
+* 此功能需要在生产环境中使用额外的许可。
 
 使用支持功能需要：
 
@@ -32,15 +33,15 @@ ht-degree: 1%
 
 * **SCORM**
 
-   可共享内容对象参考模型(SCORM)是电子教学标准和规范的集合。 SCORM还定义如何将内容打包到可转让的ZIP文件中。
+   可共享内容对象参考模型(SCORM)是电子教学标准和规范的集合。 SCORM还定义如何将内容打包到可传输的ZIP文件中。
 
 * **MySQL**
 
-   MySQL是关系报告库，主要用于SCORM跟踪和Enablement数据，以及用于跟踪视频进度的表。 SCORM for enablement功能包需要MySQL JDBC驱动程序。
+   MySQL是一个关系数据库，主要用于SCORM跟踪和报告数据（用于启用）以及用于跟踪视频进度的表。 SCORM for enablement功能包需要MySQL JDBC驱动程序。
 
 * **FFmpeg**
 
-   FFmpeg是用于转换音频和视频并实现流化的解决方案，安装后用于对[视频资产](../../help/sites-authoring/default-components-foundation.md#video)进行正确转码。 对于Enablement Communities，它在创作环境中用于获取已上传资源的元数据，并在列出资源时生成要显示的缩略图。
+   FFmpeg是用于转换和流式传输音频和视频的解决方案，安装后用于对[视频资产](../../help/sites-authoring/default-components-foundation.md#video)进行正确转码。 对于Enablement Communities，在创作环境中使用它获取已上传资源的元数据，并在列出资源时生成要显示的缩略图。
 
 设置：
 
@@ -48,11 +49,11 @@ ht-degree: 1%
 
    对于启用社区，只能为`Community Enablement Managers`用户组的成员分配`Community Site Enablement Manager`的角色，其权限可能包括发布环境中的内容创建、分配和成员管理。
 
-可选配置：
+以下项的可选配置：
 
 * **Adobe Analytics**
 
-   与Adobe Analytics的集成添加了全面的报告功能，并支持将视频心跳添加到Analytics。
+   与Adobe Analytics的集成增加了全面的报告功能，并支持将视频心率添加到Analytics中。
 
 * **Dispatcher**
 
@@ -62,11 +63,11 @@ ht-degree: 1%
 
 每个步骤都链接到提供必要详细信息的文档。
 
-**在所有作者／发布实例上：**
+**在所有作者/发布实例上：**
 
 1. **[为MySQL安装JDBC驱动程序](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   使用Web控制台（捆绑包）:*http://localhost:4502/system/console/bundles*
+   使用Web控制台（捆绑包）：*http://localhost:4502/system/console/bundles*
 
    在安装SCORM包之前安装&#x200B;**
 
@@ -89,7 +90,7 @@ ht-degree: 1%
 
 1. **[安装FFmpeg](ffmpeg.md)**
 
-**在所有作者／发布实例上：**
+**在所有作者/发布实例上：**
 
 1. **[配置JDBC连接池](mysql.md#configure-jdbc-connections)**
 
@@ -103,15 +104,15 @@ ht-degree: 1%
 
    使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
-**在创作实例上：**
+**在创作实例中：**
 
-1. （*可选*）**[配置分析服务](analytics.md)**
+1. （*可选*）**[配置Analytics服务](analytics.md)**
 
    使用工具、部署、Cloud Services控制台：*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[配置FFmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
-   使用工作流／模型控制台
+   使用工作流/模型控制台
 
 1. **[启用隧道服务](deploy-communities.md#tunnel-service-on-author)**
 
