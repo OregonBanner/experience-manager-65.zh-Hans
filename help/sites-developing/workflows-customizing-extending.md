@@ -1,7 +1,7 @@
 ---
 title: 扩展工作流功能
 seo-title: 扩展工作流功能
-description: 'null'
+description: 扩展工作流功能
 seo-description: 'null'
 uuid: 9f4ea2a8-8b21-4e7c-ac73-dd37d9ada111
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3587'
+source-wordcount: '3589'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 您还可以[与项目和脚本中的工作流进行交互](/help/sites-developing/workflows-program-interaction.md)。
 
-## 工作流步骤组件——基础知识{#workflow-step-components-the-basics}
+## 工作流步骤组件 — 基础知识{#workflow-step-components-the-basics}
 
 工作流步骤组件定义创建工作流模型时步骤的外观和行为：
 
@@ -38,27 +38,27 @@ ht-degree: 1%
 * 用于配置组件属性的编辑对话框。
 * 在运行时执行的服务或脚本。
 
-与[所有组件](/help/sites-developing/components.md)一样，工作流步骤组件继承自为`sling:resourceSuperType`属性指定的组件。 下图显示了构成所有工作流步骤组件基础的`cq:component`节点的层次结构。 该图还包括&#x200B;**流程步骤**、**参与者步骤**&#x200B;和&#x200B;**动态参与者步骤**&#x200B;组件，因为它们是开发自定义步骤组件最常见的（和基本的）起点。
+与[所有组件](/help/sites-developing/components.md)一样，工作流步骤组件继承自为`sling:resourceSuperType`属性指定的组件。 下图显示了构成所有工作流步骤组件基础的`cq:component`节点的层次结构。 该图还包括&#x200B;**处理步骤**、**参与者步骤**&#x200B;和&#x200B;**动态参与者步骤**&#x200B;组件，因为它们是开发自定义步骤组件的最常见（和基本）起点。
 
 ![aem_wf_componentinherit](assets/aem_wf_componentinherit.png)
 
 >[!CAUTION]
 >
->您&#x200B;***必须***&#x200B;不要更改`/libs`路径中的任何内容。
+>***必须***&#x200B;不更改`/libs`路径中的任何内容。
 >
->这是因为下次升级实例时，`/libs`的内容会被覆盖（当您应用修补程序或功能包时，很可能会被覆盖）。
+>这是因为下次升级实例时，将覆盖`/libs`的内容（当应用修补程序或功能包时，很可能会覆盖）。
 >
->建议的配置和其他更改方法是：
+>对配置和其他更改的建议方法是：
 >
->1. 重新创建所需项(即，它存在于`/libs`的`/apps`下
+>1. 重新创建所需项(即，它存在于`/apps`下的`/libs`中
 >2. 在`/apps`中进行任何更改
 
 
-`/libs/cq/workflow/components/model/step`组件是&#x200B;**流程步骤**、**参与者步骤**&#x200B;和&#x200B;**动态参与者步骤**&#x200B;的最接近的共同祖先，它们都继承以下项：
+`/libs/cq/workflow/components/model/step`组件是&#x200B;**流程步骤**、**参与者步骤**&#x200B;和&#x200B;**动态参与者步骤**&#x200B;的最近共同祖先，它们都继承了以下项目：
 
 * `step.jsp`
 
-   将步骤组件添加到模型时，`step.jsp`脚本将呈现其标题。
+   `step.jsp`脚本在将步骤组件添加到模型时呈现其标题。
 
    ![wf-22-1](assets/wf-22-1.png)
 
@@ -66,46 +66,46 @@ ht-degree: 1%
 
    包含以下选项卡的对话框：
 
-   * **常见**:以编辑标题和说明。
+   * **常见**:。
    * **高级**:用于编辑电子邮件通知属性。
 
    ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
    >[!NOTE]
    >
-   >当步骤组件的编辑对话框的选项卡与此默认外观不匹配时，该步骤组件已定义脚本、节点属性或覆盖这些继承选项卡的对话框选项卡。
+   >当步骤组件的编辑对话框的选项卡与此默认外观不匹配时，该步骤组件已定义了覆盖这些继承选项卡的脚本、节点属性或对话框选项卡。
 
 ### ECMA脚本{#ecma-scripts}
 
-ECMA脚本中提供以下对象（取决于步骤类型）:
+ECMA脚本中提供以下对象（取决于步骤类型）：
 
 * [WorkItemwork ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) Item
-* [WorkflowSession](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) workflowSession
-* [WorkflowData](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) workflowData
+* [WorkflowSessionworkflow ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) Session
+* [WorkflowDataworkflowData](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) 
 * `args`:数组。
 
-* `sling`:访问其他OSGI服务。
+* `sling`:访问其他osgi服务。
 * `jcrSession`
 
 ### MetaDataMaps {#metadatamaps}
 
-您可以使用工作流元数据保留工作流生命周期中所需的信息。 工作流步骤的一个常见要求是保留数据以供将来在工作流中使用，或检索保留的数据。
+您可以使用工作流元数据来保留工作流生命周期中所需的信息。 工作流步骤的一个常见要求是保留数据以供将来在工作流中使用，或检索保留的数据。
 
-有三种类型的MetaDataMap对象——用于`Workflow`、`WorkflowData`和`WorkItem`对象。 它们都具有相同的预期用途——存储元数据。
+有三种类型的MetaDataMap对象 — 用于`Workflow`、`WorkflowData`和`WorkItem`对象。 它们都有相同的目标 — 存储元数据。
 
-WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时使用。
+WorkItem有其自己的MetaDataMap，只能在该工作项（例如步骤）运行时使用。
 
 `Workflow`和`WorkflowData`元数据映射均在整个工作流中共享。 对于这些情况，建议仅使用`WorkflowData`元数据映射。
 
 ## 创建自定义工作流步骤组件{#creating-custom-workflow-step-components}
 
-工作流步骤组件可以以与任何其他组件[相同的方式创建。](/help/sites-developing/components.md)
+工作流步骤组件可以以与任何其他组件](/help/sites-developing/components.md)相同的方式创建。[
 
-要继承其中一个（现有）基本步骤组件，请将以下属性添加到`cq:Component`节点：
+要继承某个（现有）基本步骤组件，请向`cq:Component`节点添加以下属性：
 
 * 名称: `sling:resourceSuperType`
 * 类型: `String`
-* 值：解析到基本组件的以下路径之一：
+* 值：解析为基本组件的以下路径之一：
 
    * `cq/workflow/components/model/process`
    * `cq/workflow/components/model/participant`
@@ -113,11 +113,11 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 
 ### 指定步骤实例{#specifying-the-default-title-and-description-for-step-instances}的默认标题和说明
 
-请按照以下过程在&#x200B;**Common**&#x200B;选项卡上为&#x200B;**Title**&#x200B;和&#x200B;**Description**&#x200B;字段指定默认值。
+使用以下过程为&#x200B;**Common**&#x200B;选项卡上的&#x200B;**Title**&#x200B;和&#x200B;**Description**&#x200B;字段指定默认值。
 
 >[!NOTE]
 >
->当满足以下两个要求时，该字段值将出现在步骤实例中：
+>当满足以下两个要求时，该字段值将显示在步骤实例中：
 >
 >* 该步骤的编辑对话框将标题和说明存储在以下位置：>
 >* `./jcr:title`
@@ -125,9 +125,9 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 
 >
 >  
-当编辑对话框使用`/libs/cq/flow/components/step/step`组件实现的公用选项卡时，满足此要求。
+当编辑对话框使用`/libs/cq/flow/components/step/step`组件实现的“常用”选项卡时，满足此要求。
 >
->* 该组件的步骤组件或祖代不会覆盖`/libs/cq/flow/components/step/step`组件实现的`step.jsp`脚本。
+>* 步骤组件或组件的祖代不会覆盖`/libs/cq/flow/components/step/step`组件实现的`step.jsp`脚本。
 
 
 1. 在`cq:Component`节点下，添加以下节点：
@@ -146,16 +146,16 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 
 1. 将以下名称的`String`属性添加到`cq:formParameters`节点：
 
-   * `jcr:title`:该值将填充“公 **** 用”选项卡的“标 **** 题”字段。
-   * `jcr:description`:该值将填充“公 **** 用”选项卡的“说 **** 明”字段。
+   * `jcr:title`:该值将填充“公 **** 用”选项卡的“字 **** 幕”字段。
+   * `jcr:description`:该值将填充“公 **** 用”(Common)选项卡的“ **** 描述”(Description)字段。
 
 ### 在工作流元数据{#saving-property-values-in-workflow-metadata}中保存属性值
 
 >[!NOTE]
 >
->请参阅[保持和访问数据](#persisting-and-accessing-data)。 特别是，有关在运行时访问属性值的信息，请参见[在运行时访问对话框属性值](#accessing-dialog-property-values-at-runtime)。
+>请参阅[保持和访问数据](#persisting-and-accessing-data)。 特别是，有关在运行时访问属性值的信息，请参见[在Runtime](#accessing-dialog-property-values-at-runtime)访问对话框属性值。
 
-`cq:Widget`项的名称属性指定存储小部件值的JCR节点。 当工作流步骤组件对话框中的构件将值存储在`./metaData`节点下时，该值将添加到工作流`MetaDataMap`中。
+`cq:Widget`项的name属性指定存储Widget值的JCR节点。 当工作流步骤组件对话框中的构件将值存储在`./metaData`节点下时，该值将添加到工作流`MetaDataMap`。
 
 例如，对话框中的文本字段是具有以下属性的`cq:Widget`节点：
 
@@ -165,11 +165,11 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 | `name` | `String` | `./metaData/subject` |
 | `fieldLabel` | `String` | `Email Subject` |
 
-在此文本字段中指定的值将添加到工作流实例的` [MetaDataMap](#metadatamaps)`对象，并与`subject`键关联。
+在此文本字段中指定的值将添加到工作流实例的` [MetaDataMap](#metadatamaps)`对象中，并与`subject`键关联。
 
 >[!NOTE]
 >
->当密钥为`PROCESS_ARGS`时，该值可通过`args`变量在ECMA脚本实现中随时可用。 在这种情况下，name属性的值为`./metaData/PROCESS_ARGS.`
+>当密钥为`PROCESS_ARGS`时，该值可通过`args`变量在ECMA脚本实现中随时使用。 在这种情况下，name属性的值为`./metaData/PROCESS_ARGS.`
 
 ### 覆盖步骤实现{#overriding-the-step-implementation}
 
@@ -179,7 +179,7 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 * 参与者步骤：为生成的工作项分配的用户的ID。
 * 动态参与者步骤：选择为工作项分配的用户ID的服务或ECMA脚本。
 
-要将组件集中在特定工作流方案中使用，请在设计中配置关键功能，并删除模型开发者对其进行更改的能力。
+要将组件集中在特定工作流方案中使用，请在设计中配置关键功能，并删除模型开发人员更改它的功能。
 
 1. 在cq:component节点下，添加以下节点：
 
@@ -203,18 +203,18 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 
    * `PROCESS`:实现步骤行为的服务的ECMA脚本或PID的路径。
    * `PARTICIPANT`:为工作项分配的用户的ID。
-   * `DYNAMIC_PARTICIPANT`:指向ECMA脚本的路径或选择用户分配工作项的服务的PID。
+   * `DYNAMIC_PARTICIPANT`:ECMA脚本的路径或选择用户分配工作项的服务的PID。
 
-1. 要删除模型开发人员更改属性值的能力，请覆盖组件super类型的对话框。
+1. 要删除模型开发人员更改属性值的功能，请覆盖组件super类型的对话框。
 
 ### 将Forms和对话框添加到参加者步骤{#adding-forms-and-dialogs-to-participant-steps}
 
-自定义您的参加者步骤组件，以提供[表单参加者步骤](/help/sites-developing/workflows-step-ref.md#form-participant-step)和[对话框参加者步骤](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)组件中的功能：
+自定义您的参与者步骤组件，以提供[表单参与者步骤](/help/sites-developing/workflows-step-ref.md#form-participant-step)和[对话参与者步骤](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)组件中提供的功能：
 
-* 在用户打开生成的工作项时向其展示表单。
+* 在用户打开生成的工作项时向其演示表单。
 * 在用户完成生成的工作项时向用户显示自定义对话框。
 
-对新组件执行以下过程（请参阅[创建自定义工作流步骤组件](#creating-custom-workflow-step-components)）:
+对新组件执行以下过程（请参阅[创建自定义工作流步骤组件](#creating-custom-workflow-step-components)）：
 
 1. 在`cq:Component`节点下，添加以下节点：
 
@@ -242,15 +242,15 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 
 ### 配置工作流步骤运行时行为{#configuring-the-workflow-step-runtime-behavior}
 
-在`cq:Component`节点下，添加`cq:EditConfig`节点。 在该节点下添加一个`nt:unstructured`节点（必须命名为`cq:formParameters`），并在该节点中添加以下属性：
+在`cq:Component`节点下，添加`cq:EditConfig`节点。 在下面添加一个`nt:unstructured`节点（必须命名为`cq:formParameters`），并在该节点中添加以下属性：
 
 * 名称: `PROCESS_AUTO_ADVANCE`
 
    * 类型: `Boolean`
    * 值:
 
-      * 当设置为`true`时，工作流将运行该步骤并继续——这是默认值，也建议
-      * 当`false`时，工作流将运行并停止；这需要额外处理，因此建议使用`true`
+      * 当设置为`true`时，工作流将运行该步骤并继续 — 这是默认值，也建议
+      * 当`false`时，工作流将运行并停止；这需要额外处理，因此建议`true`
 
 * 名称: `DO_NOTIFY`
 
@@ -261,13 +261,13 @@ WorkItem有自己的MetaDataMap，只能在该工作项（如步骤）运行时�
 
 ### 后续工作流步骤{#persisting-data-for-subsequent-workflow-steps}的数据保持
 
-您可以使用工作流元数据保留工作流生命周期中以及步骤之间所需的信息。 工作流步骤的一个常见要求是保留数据以供将来使用，或从先前步骤中检索保留的数据。
+您可以使用工作流元数据来保留工作流生命周期中所需的信息以及步骤之间的信息。 工作流步骤的一个常见要求是保留数据以供将来使用，或从先前步骤中检索保留的数据。
 
 工作流元数据存储在[`MetaDataMap`](#metadatamaps)对象中。 Java API提供[`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)方法以返回提供相应`MetaDataMap`对象的[`WorkflowData`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html)对象。 此`WorkflowData` `MetaDataMap`对象可用于步骤组件的OSGi服务或ECMA脚本。
 
 #### Java {#java}
 
-`WorkflowProcess`实现的执行方法将传递给`WorkItem`对象。 使用此对象可获取当前工作流实例的`WorkflowData`对象。 以下示例向工作流`MetaDataMap`对象中添加一个项，然后记录每个项。 (“mykey”、“My Step Value”)项可用于工作流中的后续步骤。
+将`WorkflowProcess`实现的执行方法传递给`WorkItem`对象。 使用此对象可获得当前工作流实例的`WorkflowData`对象。 下面的示例向工作流`MetaDataMap`对象中添加一个项，然后记录每个项。 (“mykey”、“My Step Value”)项可用于工作流中的后续步骤。
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {
@@ -287,7 +287,7 @@ public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) th
 
 #### ECMA 脚本 {#ecma-script}
 
-`graniteWorkItem`变量是当前`WorkItem` Java对象的ECMA脚本表示形式。 因此，您可以使用`graniteWorkItem`变量获取工作流元数据。 以下ECMA脚本可用于实现&#x200B;**处理步骤**，以向工作流`MetaDataMap`对象添加一个项，然后记录每个项。 这些项目随后便可用于工作流中的后续步骤。
+`graniteWorkItem`变量是当前`WorkItem` Java对象的ECMA脚本表示形式。 因此，您可以使用`graniteWorkItem`变量来获取工作流元数据。 以下ECMA脚本可用于实现&#x200B;**处理步骤**，以向工作流`MetaDataMap`对象添加项，然后记录每个项。 然后，这些项目便可以用于工作流中的后续步骤。
 
 >[!NOTE]
 >
@@ -309,7 +309,7 @@ while (iterator.hasNext()){
 
 ### 在运行时{#accessing-dialog-property-values-at-runtime}访问对话框属性值
 
-工作流实例的`MetaDataMap`对象可用于在工作流的整个生命周期中存储和检索数据。 对于工作流步骤组件实现，`MetaDataMap`对于在运行时检索组件属性值尤为有用。
+工作流实例的`MetaDataMap`对象对于在整个工作流生命周期中存储和检索数据很有用。 对于工作流步骤组件实现，`MetaDataMap`对于在运行时检索组件属性值尤为有用。
 
 >[!NOTE]
 >
@@ -323,7 +323,7 @@ while (iterator.hasNext()){
 
 ### 示例：检索进程步骤组件{#example-retrieving-the-arguments-of-the-process-step-component}的参数
 
-**进程步骤**&#x200B;组件的编辑对话框包括&#x200B;**参数**&#x200B;属性。 **Arguments**&#x200B;属性的值存储在工作流元数据中，并与`PROCESS_ARGS`键相关联。
+**处理步骤**&#x200B;组件的编辑对话框包含&#x200B;**参数**&#x200B;属性。 **Arguments**&#x200B;属性的值存储在工作流元数据中，并与`PROCESS_ARGS`键关联。
 
 在下图中，**Arguments**&#x200B;属性的值为`argument1, argument2`:
 
@@ -331,7 +331,7 @@ while (iterator.hasNext()){
 
 #### Java {#java-1}
 
-以下Java代码是`WorkflowProcess`实现的`execute`方法。 该方法将值记录在与`PROCESS_ARGS`键关联的`args` `MetaDataMap`中。
+以下Java代码是`WorkflowProcess`实现的`execute`方法。 该方法在`args` `MetaDataMap`中记录与`PROCESS_ARGS`键关联的值。
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {
@@ -366,7 +366,7 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 >本节介绍如何使用流程步骤的参数。 该信息也适用于动态参加者选择器。
 
 >[!NOTE]
->有关在工作流元数据中存储组件属性的另一个示例，请参阅示例：创建记录器工作流步骤。 此示例提供一个对话框，它将元数据值与PROCESS_ARGS以外的键相关联。
+>有关在工作流元数据中存储组件属性的另一个示例，请参阅示例：创建记录器工作流步骤。 此示例包含一个将元数据值与PROCESS_ARGS以外的键关联的对话框。
 
 ### 脚本和进程参数{#scripts-and-process-arguments}
 
@@ -376,17 +376,17 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 
 ## 开发进程步骤实现{#developing-process-step-implementations}
 
-当在工作流的过程中启动进程步骤时，这些步骤会向OSGi服务发送请求或执行ECMA脚本。 开发执行工作流所需操作的服务或ECMA脚本。
+当在工作流的过程中启动进程步骤时，这些步骤向OSGi服务发送请求或执行ECMA脚本。 开发执行工作流所需操作的服务或ECMA脚本。
 
 >[!NOTE]
 >
->有关将“进程步骤”组件与服务或脚本关联的信息，请参阅[进程步骤](/help/sites-developing/workflows-step-ref.md#process-step)或[覆盖步骤实现](#overriding-the-step-implementation)。
+>有关将您的进程步骤组件与服务或脚本关联的信息，请参阅[进程步骤](/help/sites-developing/workflows-step-ref.md#process-step)或[覆盖步骤实现](#overriding-the-step-implementation)。
 
 ### 使用Java类{#implementing-a-process-step-with-a-java-class}实现进程步骤
 
-要将进程步骤定义为OSGI服务组件（Java捆绑）:
+要将进程步骤定义为OSGI服务组件（Java包）：
 
-1. 创建捆绑包并将其部署到OSGI容器。 请参阅有关创建具有[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)或[Eclipse](/help/sites-developing/howto-projects-eclipse.md)的捆绑的文档。
+1. 创建捆绑包并将其部署到OSGI容器。 请参阅有关创建包的文档，包含[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)或[Eclipse](/help/sites-developing/howto-projects-eclipse.md)。
 
    >[!NOTE]
    >
@@ -397,14 +397,14 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
    >需要将包名称添加到`maven-bundle-plugin`配置的`<*Private-Package*>`部分。
 
 1. 添加SCR属性`process.label`并根据需要设置值。 这将是使用通用&#x200B;**进程步骤**&#x200B;组件时列出的进程步骤的名称。 请参阅以下示例。
-1. 在&#x200B;**模型**&#x200B;编辑器中，使用通用&#x200B;**流程步骤**&#x200B;组件将流程步骤添加到工作流。
-1. 在编辑对话框（位于&#x200B;**进程步骤**&#x200B;中）中，转到&#x200B;**进程**&#x200B;选项卡，然后选择您的进程实现。
+1. 在&#x200B;**模型**&#x200B;编辑器中，使用通用&#x200B;**流程步骤**&#x200B;组件将流程步骤添加到工作流中。
+1. 在编辑对话框（位于&#x200B;**处理步骤**）中，转到&#x200B;**处理**&#x200B;选项卡并选择您的进程实现。
 1. 如果在代码中使用参数，请设置&#x200B;**进程参数**。 例如：错误。
-1. 保存步骤和工作流模型（模型编辑器的左上角）的更改。
+1. 保存对步骤和工作流模型（模型编辑器的左上角）所做的更改。
 
-Java方法（分别实现可执行Java方法的类）注册为OSGI服务，使您能够在运行时随时添加方法。
+Java方法分别将实现可执行Java方法的类注册为OSGI服务，使您能够在运行时随时添加方法。
 
-当有效负荷是页面时，以下OSGI组件将属性`approved`添加到页面内容节点：
+当有效负荷为页面时，以下OSGI组件会将属性`approved`添加到页面内容节点：
 
 ```java
 package com.adobe.example.workflow.impl.process;
@@ -474,9 +474,9 @@ public class MyProcess implements WorkflowProcess {
 
 ECMA脚本使脚本开发人员能够实施进程步骤。 脚本位于JCR存储库中，并从中执行。
 
-下表列表了可立即用于处理脚本的变量，从而提供对工作流Java API对象的访问。
+下表列表了可立即用于处理脚本的变量，提供对工作流Java API对象的访问。
 
-| Java类 | 脚本变量名称 | 描述 |
+| Java类 | 脚本变量名 | 描述 |
 |---|---|---|
 | `com.adobe.granite.workflow.exec.WorkItem` | `graniteWorkItem` | 当前步骤实例。 |
 | `com.adobe.granite.workflow.WorkflowSession` | `graniteWorkflowSession` | 当前步骤实例的工作流会话。 |
@@ -499,7 +499,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 }
 ```
 
-以下脚本检查有效负荷是否为图像（`.png`文件），从它创建黑白图像，并将其另存为同级节点。
+以下脚本检查有效负荷是否为图像（`.png`文件），从中创建黑白图像，并将其另存为同级节点。
 
 ```
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -533,21 +533,21 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 要使用脚本：
 
-1. 创建脚本(例如，CRXDE Lite)并将其保存在`/apps/myapp/workflow/scripts`下的存储库中
-1. 要指定在&#x200B;**进程步骤**&#x200B;编辑对话框中标识脚本的标题，请将以下属性添加到脚本的`jcr:content`节点：
+1. 创建脚本(例如，使用CRXDE Lite)并将其保存在`/apps/myapp/workflow/scripts`下的存储库中
+1. 要指定在&#x200B;**处理步骤**&#x200B;编辑对话框中标识脚本的标题，请将以下属性添加到脚本的`jcr:content`节点：
 
    | 名称 | 类型 | 值 |
    |---|---|---|
    | `jcr:mixinTypes` | `Name[]` | `mix:title` |
    | `jcr:title` | `String` | 要在编辑对话框中显示的名称。 |
 
-1. 编辑&#x200B;**进程步骤**&#x200B;实例并指定要使用的脚本。
+1. 编辑&#x200B;**处理步骤**&#x200B;实例并指定要使用的脚本。
 
-## 开发参加者选择器{#developing-participant-choosers}
+## 开发参与者选择器{#developing-participant-choosers}
 
 您可以为&#x200B;**动态参与者步骤**&#x200B;组件开发参与者选择器。
 
-当在工作流期间启动&#x200B;**动态参与者步骤**&#x200B;组件时，该步骤需要确定可以将生成的工作项分配到的参与者。 要执行此操作，请执行以下任一步骤：
+在工作流期间启动&#x200B;**动态参与者步骤**&#x200B;组件时，该步骤需要确定可以将生成的工作项分配到的参与者。 要执行此操作，请执行以下任一步骤：
 
 * 向OSGi服务发送请求
 * 执行ECMA脚本以选择参加者
@@ -558,15 +558,15 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 >
 >有关将&#x200B;**动态参与者步骤**&#x200B;组件与服务或脚本关联的信息，请参阅[动态参与者步骤](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step)或[覆盖步骤实现](#persisting-and-accessing-data)。
 
-### 使用Java类{#developing-a-participant-chooser-using-a-java-class}开发参加者选择器
+### 使用Java类{#developing-a-participant-chooser-using-a-java-class}开发参与者选择器
 
-要将参与者步骤定义为OSGI服务组件（Java类）:
+要将参与者步骤定义为OSGI服务组件（Java类），请执行以下操作：
 
 1. OSGI组件需要使用其`getParticipant()`方法实现`ParticipantStepChooser`接口。 请参阅下面的示例代码。
 
    创建捆绑包并将其部署到OSGI容器。
 
-1. 添加SCR属性`chooser.label`并根据需要设置值。 这将是使用&#x200B;**动态参与者步骤**&#x200B;组件列出参加者选择者的名称。 请参阅示例：
+1. 添加SCR属性`chooser.label`并根据需要设置值。 这将是使用&#x200B;**动态参与者步骤**&#x200B;组件列出参与者选择器的名称。 请参阅示例：
 
    ```java
    package com.adobe.example.workflow.impl.process;
@@ -622,13 +622,13 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 ### 使用ECMA脚本{#developing-a-participant-chooser-using-an-ecma-script}开发参加者选择器
 
-您可以创建一个ECMA脚本，该脚本选择分配了&#x200B;**参与者步骤**&#x200B;生成的工作项的用户。 脚本必须包含一个名为`getParticipant`的函数，该函数不需要参数，并返回一个`String`，该&lt;a1/>包含用户或组的ID。
+您可以创建一个ECMA脚本，该脚本将选择分配了&#x200B;**参与者步骤**&#x200B;生成的工作项的用户。 脚本必须包含一个名为`getParticipant`的函数，该函数不需要参数，并返回一个包含用户或组ID的`String`。
 
 脚本位于JCR存储库中，并从中执行。
 
 下表列表了变量，这些变量提供对脚本中工作流Java对象的即时访问。
 
-| Java类 | 脚本变量名称 |
+| Java类 | 脚本变量名 |
 |---|---|
 | `com.adobe.granite.workflow.exec.WorkItem` | `graniteWorkItem` |
 | `com.adobe.granite.workflow.WorkflowSession` | `graniteWorkflowSession` |
@@ -650,8 +650,8 @@ function getParticipant() {
 }
 ```
 
-1. 创建脚本(例如，CRXDE Lite)并将其保存在`/apps/myapp/workflow/scripts`下的存储库中
-1. 要指定在&#x200B;**进程步骤**&#x200B;编辑对话框中标识脚本的标题，请将以下属性添加到脚本的`jcr:content`节点：
+1. 创建脚本(例如，使用CRXDE Lite)并将其保存在`/apps/myapp/workflow/scripts`下的存储库中
+1. 要指定在&#x200B;**处理步骤**&#x200B;编辑对话框中标识脚本的标题，请将以下属性添加到脚本的`jcr:content`节点：
 
    | 名称 | 类型 | 值 |
    |---|---|---|
@@ -662,7 +662,7 @@ function getParticipant() {
 
 ## 处理工作流包{#handling-workflow-packages}
 
-[工作](/help/sites-authoring/workflows-applying.md#specifying-workflow-details-in-the-create-workflow-wizard) 流包可以传递到工作流进行处理。工作流包包含对资源（如页面和资产）的引用。
+[工作流](/help/sites-authoring/workflows-applying.md#specifying-workflow-details-in-the-create-workflow-wizard) 包可以传递到工作流进行处理。工作流包包含对页面和资产等资源的引用。
 
 >[!NOTE]
 >
@@ -681,7 +681,7 @@ function getParticipant() {
 * `ResourceCollectionUtil`:用于检索ResourceCollection对象。
 * `ResourceCollectionManager`:创建和检索集合。将实现部署为OSGi服务。
 
-以下示例Java类演示如何获取包资源：
+下面的Java类示例演示如何获取包资源：
 
 ```java
 package com.adobe.example;
@@ -787,7 +787,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 ## 示例：创建自定义步骤{#example-creating-a-custom-step}
 
-开始创建自定义步骤的一种简单方法是从以下位置复制现有步骤：
+开始创建您自己的自定义步骤的简单方法是从以下位置复制现有步骤：
 
 `/libs/cq/workflow/components/model`
 
@@ -815,7 +815,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    `/apps/cq/workflow/components/model/myCustomStep`
 
-   下面是我们的示例自定义步骤的结果：
+   以下是自定义步骤示例的结果：
 
    ![wf-34](assets/wf-34.png)
 
@@ -841,11 +841,11 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `cq:icon`
 
-      用于为步骤指定[Coral图标](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)。
+      用于为步骤指定[珊瑚图标](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)。
 
    * `componentGroup`
 
-      必须是以下项之一：
+      必须为以下项之一：
 
       * 协作工作流
       * DAM 工作流
@@ -856,11 +856,11 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    ![wf-35](assets/wf-35.png)
 
-1. 您现在可以打开一个工作流模型进行编辑。 在步骤浏览器中，您可以进行筛选，以查看&#x200B;**我的自定义步骤**:
+1. 您现在可以打开工作流模型进行编辑。 在步骤浏览器中，您可以进行筛选，以查看&#x200B;**我的自定义步骤**:
 
    ![wf-34](assets/wf-36.png)
 
-   将&#x200B;**我的自定义步骤**&#x200B;拖到模型上会显示卡：
+   将&#x200B;**我的自定义步骤**&#x200B;拖动到模型上会显示卡：
 
    ![wf-37](assets/wf-37.png)
 
@@ -870,28 +870,28 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 #### 定义步骤配置对话框{#defining-the-step-configure-dialog}
 
-在[创建基本步骤](#creating-the-basic-step)后，按如下方式定义步骤&#x200B;**配置**&#x200B;对话框：
+在[创建基本步骤](#creating-the-basic-step)之后，按如下方式定义步骤&#x200B;**配置**&#x200B;对话框：
 
-1. 按如下方式在节点`cq:editConfig`上配置属性：
+1. 在节点`cq:editConfig`上配置以下属性：
 
    **权益物业：**
 
    * `cq:inherit`
 
-      如果设置为`true`，则您的步骤组件将继承您在`sling:resourceSuperType`中指定的步骤的属性。
+      设置为`true`时，您的步骤组件将继承您在`sling:resourceSuperType`中指定的步骤的属性。
 
    * `cq:disableTargeting`
 
       根据需要设置。
    ![wf-39](assets/wf-39.png)
 
-1. 按如下方式在节点`cq:formsParameter`上配置属性：
+1. 在节点`cq:formsParameter`上配置以下属性：
 
    **权益物业：**
 
    * `jcr:title`
 
-      在模型映射中和&#x200B;**我的自定义——步骤属性**&#x200B;配置对话框的&#x200B;**标题**&#x200B;字段中设置步骤卡的默认标题。
+      在模型映射中和&#x200B;**我的自定义 — 步骤属性**&#x200B;配置对话框的&#x200B;**标题**&#x200B;字段中设置步骤卡上的默认标题。
 
    * 您还可以定义自己的自定义属性。
 
@@ -899,7 +899,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 1. 在节点`cq:listeners`上配置属性。
 
-   `cq:listener`节点及其属性允许您在触屏优化UI模型编辑器中设置对事件做出响应的事件处理函数；例如，将步骤拖动到模型页面或编辑步骤属性。
+   `cq:listener`节点及其属性允许您设置事件处理函数，这些处理函数在触屏优化UI模型编辑器中对事件做出响应；例如，将步骤拖动到模型页面或编辑步骤属性。
 
    **利息物业：**
 
@@ -908,9 +908,9 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
    * `afteredit: CQ.workflow.flow.Step.afterEdit`
    * `afterinsert: CQ.workflow.flow.Step.afterInsert`
 
-   此配置对于编辑器的正常工作至关重要。 在大多数情况下，此配置不得更改。
+   此配置对于编辑器的正常运行至关重要。 在大多数情况下，此配置不得更改。
 
-   但是，将`cq:inherit`设置为true（在`cq:editConfig`节点上，请参见上文）可以继承此配置，无需在步骤定义中显式地包含它。 如果没有继承，则您需要添加此节点并包含以下属性和值。
+   但是，将`cq:inherit`设置为true（在`cq:editConfig`节点上，请参阅上面的内容）允许您继承此配置，无需将其显式包含在步骤定义中。 如果没有继承，则您需要添加此节点，其中包含以下属性和值。
 
    在此示例中，已激活继承，因此我们可以删除`cq:listeners`节点，并且该步骤仍可正常工作。
 
@@ -1037,11 +1037,11 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 >[!NOTE]
 >
->经典UI模型编辑器对话框仍可用于标准的触屏优化UI编辑器。
+>经典UI模型编辑器对话框仍可与标准的触屏优化UI编辑器一起使用。
 >
->如果要将经典UI步骤对话框升级到标准UI对话框，尽管AEM有[对话框转换](/help/sites-developing/dialog-conversion.md)工具。 转换后，某些情况下仍可对对话框进行手动改进。
+>如果要将经典UI步骤对话框升级到标准UI对话框，则AEM具有[对话框转换](/help/sites-developing/dialog-conversion.md)工具。 转换后，某些情况下仍可对对话框进行手动改进。
 >
->* 如果升级的对话框为空，您可以查看`/libs`中的功能与如何提供解决方案的示例类似的对话框。 例如：
+>* 如果升级的对话框为空，您可以查看`/libs`中的对话框，这些对话框的功能与如何提供解决方案的示例类似。 例如：
    >
    >
 * `/libs/cq/workflow/components/model`
@@ -1052,4 +1052,4 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 >
 >  
-您不得修改`/libs`中的任何内容，只需将它们作为示例使用即可。 如果要利用任何现有步骤，请将它们复制到`/apps`，然后在此进行修改。
+您不得修改`/libs`中的任何内容，只需将它们用作示例。 如果要利用任何现有步骤，请将它们复制到`/apps`并在此处修改它们。
