@@ -2,10 +2,12 @@
 title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
+feature: 智能标记，搜索
+role: 业务从业者
 translation-type: tm+mt
-source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1602'
 ht-degree: 1%
 
 ---
