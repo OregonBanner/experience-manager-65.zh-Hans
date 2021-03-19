@@ -3,10 +3,11 @@ title: 使用MSM重复使用资源
 description: 跨从父资产派生并链接到父资产的多个页面/文件夹使用资产。 资产与主副本保持同步，单击几下即可从父资产接收更新。
 contentOwner: AG
 mini-toc-levels: 1
+role: 业务从业者，管理员，架构师
 translation-type: tm+mt
-source-git-commit: 5c9907bf475796c5bbb61d6fcaf43730f9e79777
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '3366'
+source-wordcount: '3370'
 ht-degree: 9%
 
 ---
