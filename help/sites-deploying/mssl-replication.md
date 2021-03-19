@@ -9,45 +9,46 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
+feature: 配置
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 2%
+source-wordcount: '1457'
+ht-degree: 3%
 
 ---
 
 
-# 使用互相SSL进行复制{#replicating-using-mutual-ssl}
+# 使用互相SSL{#replicating-using-mutual-ssl}进行复制
 
 配置AEM，以便创作实例上的复制代理使用相互SSL(MSSL)与发布实例连接。 使用MSSL，复制代理和发布实例上的HTTP服务使用证书来相互验证。
 
-为复制配置MSSL涉及执行以下步骤：
+配置复制的MSSL涉及执行以下步骤：
 
 1. 创建或获取创作和发布实例的私钥和证书。
 1. 在创作和发布实例上安装密钥和证书：
 
    * 作者：作者的私钥和发布的证书。
-   * 发布：Publish的私钥和作者的证书。 证书与通过复制代理验证的用户帐户相关联。
+   * 发布：Publish的私钥和作者证书。 证书与通过复制代理验证的用户帐户关联。
 
-1. 在发布实例上配置基于码头的HTTP服务。
+1. 在Publish实例上配置基于Jetty的HTTP服务。
 1. 配置复制代理的传输和SSL属性。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-必须确定执行复制的用户帐户。 在发布实例上安装受信任的作者证书时，该证书与此用户帐户相关联。
+必须确定执行复制的用户帐户。 在发布实例上安装受信任的作者证书时，该证书与此用户帐户关联。
 
 ## 获取或创建MSSL {#obtaining-or-creating-credentials-for-mssl}的凭据
 
-对于作者实例和发布实例，您需要私钥和公共证书：
+您需要创作和发布实例的私钥和公共证书：
 
 * 私钥必须包含在pkcs#12或JKS格式中。
-* 证书必须以pkcs#12或JKS格式包含。 此外，还可以向Granite Truststore添加“CER”格式的证书。
+* 证书必须包含在pkcs#12或JKS格式中。 此外，还可向Granite Truststore添加以“CER”格式包含的证书。
 * 证书可以自签名或由公认的CA签名。
 
 ### JKS格式{#jks-format}
 
-生成JKS格式的私钥和证书。 私钥存储在KeyStore文件中，证书存储在TrustStore文件中。 使用[Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html)可同时创建两者。
+生成JKS格式的私钥和证书。 私钥存储在KeyStore文件中，证书存储在TrustStore文件中。 使用[Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html)创建两者。
 
 使用Java `keytool`创建私钥和凭据，请执行以下步骤：
 
@@ -86,7 +87,7 @@ ht-degree: 2%
 
 ### pkcs#12格式{#pkcs-format}
 
-以pkcs#12格式生成私钥和证书。 使用[openSSL](https://www.openssl.org/)生成它们。 请按照以下过程生成私钥和证书请求。 要获取证书，请使用您的私钥对请求进行签名（自签名证书），或将请求发送到CA。 然后，生成包含私钥和证书的pkcs#12存档。
+以pkcs#12格式生成私钥和证书。 使用[openSSL](https://www.openssl.org/)生成它们。 请按照以下过程生成私钥和证书请求。 要获取证书，请使用您的私钥（自签名证书）对请求进行签名，或将请求发送到CA。 然后，生成包含私钥和证书的pkcs#12存档。
 
 1. 打开命令行窗口或终端。 要创建私钥，请使用下表中的选项值输入以下命令：
 
@@ -123,7 +124,7 @@ ht-degree: 2%
    | -in | author_request.csr | publish_request.csr |
    | -out | author.cer | publish.cer |
 
-1. 要将私钥和签名证书添加到pkcs#12文件，请使用下表中的选项值输入以下命令：
+1. 要将私钥和已签名证书添加到pkcs#12文件，请使用下表中的选项值输入以下命令：
 
    ```shell
    openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certificate.cer -inkey keyname.key -out pkcs12_archive.pfx -name "alias"
@@ -149,7 +150,7 @@ ht-degree: 2%
 
 1. 打开创作实例的“用户管理”页。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 要打开用户帐户的属性，请单击或点按您的用户名。
-1. 如果“帐户设置”区域中显示“创建密钥存储”链接，请单击该链接。 配置口令，然后单击“确定”。
+1. 如果“帐户设置”区域中显示“创建密钥存储”链接，请单击该链接。 配置密码，然后单击“确定”。
 1. 在“帐户设置”区域，单击“管理密钥库”。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
@@ -159,8 +160,8 @@ ht-degree: 2%
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
 1. 单击“选择密钥存储文件”，然后浏览并选择author.keystore文件或author.pfx文件（如果使用pkcs#12），然后单击“打开”。
-1. 输入密钥存储的别名和密码。 输入私钥的别名和口令，然后单击“提交”。
-1. 关闭“密钥存储管理”对话框。
+1. 输入密钥存储的别名和密码。 输入私钥的别名和密码，然后单击“提交”。
+1. 关闭“KeyStore管理”对话框。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
@@ -169,7 +170,7 @@ ht-degree: 2%
 1. 打开创作实例的“用户管理”页。 ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. 要打开用户帐户的属性，请单击或点按您的用户名。
 1. 如果“帐户设置”区域中显示“创建TrustStore”链接，请单击该链接，为TrustStore创建口令，然后单击“确定”。
-1. 在“帐户设置”区域，单击“管理信任商店”。
+1. 在“帐户设置”区域，单击“管理信任存储”。
 1. 单击“从CER文件添加证书”。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
@@ -179,7 +180,7 @@ ht-degree: 2%
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## 在发布{#install-private-key-and-truststore-on-publish}时安装私钥和TrustStore
+## 在发布{#install-private-key-and-truststore-on-publish}上安装私钥和TrustStore
 
 在发布实例上安装以下项目：
 
@@ -192,19 +193,19 @@ ht-degree: 2%
 
 1. 打开发布实例的“用户管理”页。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 要打开用户帐户的属性，请单击或点按您的用户名。
-1. 如果“帐户设置”区域中显示“创建密钥存储”链接，请单击该链接。 配置口令，然后单击“确定”。
+1. 如果“帐户设置”区域中显示“创建密钥存储”链接，请单击该链接。 配置密码，然后单击“确定”。
 1. 在“帐户设置”区域，单击“管理密钥库”。
 1. 单击“从密钥存储文件添加私钥”。
 1. 单击“选择密钥存储文件”，然后浏览并选择publish.keystore文件或publish.pfx文件（如果使用pkcs#12），然后单击“打开”。
-1. 输入密钥存储的别名和密码。 输入私钥的别名和口令，然后单击“提交”。
-1. 关闭“密钥存储管理”对话框。
+1. 输入密钥存储的别名和密码。 输入私钥的别名和密码，然后单击“提交”。
+1. 关闭“KeyStore管理”对话框。
 
 ### 安装作者证书{#install-the-author-certificate}
 
 1. 打开发布实例的“用户管理”页。 ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. 找到用于执行复制请求的用户帐户，然后单击或点按用户名。
 1. 如果“帐户设置”区域中显示“创建TrustStore”链接，请单击该链接，为TrustStore创建口令，然后单击“确定”。
-1. 在“帐户设置”区域，单击“管理信任商店”。
+1. 在“帐户设置”区域，单击“管理信任存储”。
 1. 单击“从CER文件添加证书”。
 1. 确保已选择“将证书映射到用户”选项。 单击“选择证书文件”，选择author.cer，然后单击“打开”。
 1. 单击“提交”，然后关闭“TrustStore管理”对话框。
@@ -218,13 +219,13 @@ ht-degree: 2%
 | Web控制台上的属性名称 | OSGi属性名称 | 值 |
 |---|---|---|
 | 启用HTTPS | org.apache.felix.https.enable | true |
-| 启用HTTPS以使用Granite KeyStore | org.apache.felix.https.use.granite.keystore | 真 |
+| 启用HTTPS以使用Granite KeyStore | org.apache.felix.https.use.granite.keystore | true |
 | HTTPS 端口 | org.osgi.service.http.port.secure | 8443（或其他所需端口） |
 | 客户端证书 | org.apache.felix.https.clientcertificate | &quot;需要客户端证书&quot; |
 
 ## 在作者{#configure-the-replication-agent-on-author}上配置复制代理
 
-在创作实例上配置复制代理，以在连接到发布实例时使用HTTPS协议。 有关配置复制代理的完整信息，请参见[配置复制代理](/help/sites-deploying/replication.md#configuring-your-replication-agents)。
+在创作实例上配置复制代理，以在连接到发布实例时使用HTTPS协议。 有关配置复制代理的完整信息，请参阅[配置复制代理](/help/sites-deploying/replication.md#configuring-your-replication-agents)。
 
 要启用MSSL，请根据下表在“传输”选项卡上配置属性：
 
@@ -255,7 +256,7 @@ ht-degree: 2%
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
-配置复制代理后，测试连接以确定MSSL配置是否正确。
+配置复制代理后，请测试连接以确定MSSL配置是否正确。
 
 ```xml
 29.08.2014 14:02:46 - Create new HttpClient for Default Agent
