@@ -1,18 +1,19 @@
 ---
 title: 用户管理器Java API快速开始(SOAP)
 seo-title: 用户管理器Java API快速开始(SOAP)
-description: 使用User Manager API添加用户、删除用户、创建用户组、管理用户和用户组、管理角色和权限、以编程方式同步用户以及以编程方式管理首选项节点。
-seo-description: 使用User Manager API添加用户、删除用户、创建用户组、管理用户和用户组、管理角色和权限、以编程方式同步用户以及以编程方式管理首选项节点。
+description: 使用User Manager API可以添加用户、删除用户、创建用户组、管理用户和用户组、管理角色和权限、以编程方式同步用户以及以编程方式管理首选项节点。
+seo-description: 使用User Manager API可以添加用户、删除用户、创建用户组、管理用户和用户组、管理角色和权限、以编程方式同步用户以及以编程方式管理首选项节点。
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
+role: 开发人员
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -22,27 +23,27 @@ ht-degree: 0%
 
 Java API快速开始(SOAP)可用于用户管理器API。
 
-[快速开始（SOAP模式）:使用Java API添加用户](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API添加用户](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API删除用户](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API删除用户](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API创建组](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API创建组](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API管理用户和用户组](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API管理用户和用户组](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API管理角色和权限](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API管理角色和权限](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API以编程方式同步用户](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API以编程方式同步用户](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
 
-[快速开始（SOAP模式）:使用Java API以编程方式管理首选项节点](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
+[快速开始（SOAP模式）：使用Java API以编程方式管理首选项节点](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->使用AEM表单进行编程中的快速开始基于文档，如果您使用其他操作系统（如Unix），则使用适用操作系统支持的路径替换特定于Windows的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>使用AEM表单进行编程中的快速开始基于文档（如果您使用的是其他操作系统，如Unix），则使用适用操作系统支持的路径替换特定于Windows的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-adding-users-using-the-java-api}添加用户
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-adding-users-using-the-java-api}添加用户
 
 下面的代码示例将名为Wendy Blue的用户添加到AEM Forms。 （请参阅[添加用户](/help/forms/developing/users.md#adding-users)。）
 
@@ -160,9 +161,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-deleting-users-using-the-java-api}删除用户
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-deleting-users-using-the-java-api}删除用户
 
-以下代码示例从AEM Forms删除名为Wendy Blue的用户。 （请参阅[删除用户](/help/forms/developing/users.md#deleting-users)。）
+以下代码示例从AEM Forms中删除名为Wendy Blue的用户。 （请参阅[删除用户](/help/forms/developing/users.md#deleting-users)。）
 
 ```java
  /*
@@ -256,9 +257,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}管理用户和用户组
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}管理用户和用户组
 
-下面的代码示例查找本地用户和该用户所属的本地组。 （请参阅[管理用户和用户组](/help/forms/developing/users.md#managing-users-and-groups)。）
+下面的代码示例查找一个本地用户和该用户所属的本地组。 （请参阅[管理用户和用户组](/help/forms/developing/users.md#managing-users-and-groups)。）
 
 ```java
  /*
@@ -380,9 +381,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}管理角色和权限
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}管理角色和权限
 
-下面的代码示例将服务用户角色分配给主体，打印主体具有的角色，然后从主体中删除该角色。 为此快速开始调用了两个服务：目录管理器服务和授权管理器服务。（请参阅[管理角色和权限](/help/forms/developing/users.md#managing-roles-and-permissions)。）
+下面的代码示例将“服务用户”角色分配给一个主体，打印该主体具有的角色，然后从主体中删除该角色。 为此快速开始调用了两个服务：目录管理器服务和AuthorizationManager服务。（请参阅[管理角色和权限](/help/forms/developing/users.md#managing-roles-and-permissions)。）
 
 ```java
  /*
@@ -523,9 +524,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}以编程方式同步用户
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}以编程方式同步用户
 
-以下Java代码示例使用用户管理API同步用户。 （请参阅[以编程方式同步用户](/help/forms/developing/users.md#programmatically-synchronizing-users)。）
+以下Java代码示例使用用户管理API来同步用户。 （请参阅[以编程方式同步用户](/help/forms/developing/users.md#programmatically-synchronizing-users)。）
 
 ```java
  /*
@@ -632,7 +633,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick_start_soap_mode_adding_users_using_the_java_api-1}添加用户
+## 快速开始（SOAP模式）：使用Java API {#quick_start_soap_mode_adding_users_using_the_java_api-1}添加用户
 
 下面的代码示例将名为Wendy Blue的用户添加到AEM Forms。 （请参阅[添加用户](/help/forms/developing/users.md#adding-users)。）
 
@@ -750,7 +751,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-creating-groups-using-the-java-api}创建组
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-creating-groups-using-the-java-api}创建组
 
 下面的代码示例创建一个名为AdobeGroup的组到AEM Forms。 （请参阅[创建组](/help/forms/developing/users.md#creating-groups)。）
 
@@ -1005,7 +1006,7 @@ public class ManagePreferences {
 }
 ```
 
-## 快速开始（SOAP模式）:使用Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}以编程方式管理首选项节点
+## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}以编程方式管理首选项节点
 
 以下Java代码模型通过使用用户管理API管理首选项节点（请参阅[以编程方式管理首选项节点](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)）
 
