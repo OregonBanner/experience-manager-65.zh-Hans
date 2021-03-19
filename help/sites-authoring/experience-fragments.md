@@ -1,7 +1,7 @@
 ---
 title: 体验片段
 seo-title: 体验片段
-description: 'null'
+description: 体验片段
 seo-description: 'null'
 uuid: 9a1d12ef-5690-4a2e-8635-a710775efa39
 contentOwner: User
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5c88d9cfdd6238961aa46d36ebc1206a5d0507e0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1398'
 ht-degree: 96%
 
 ---
@@ -333,7 +333,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
       * 引用列表.
    * **社交媒体状态**
 
-      * 社交媒体变体的详细信息。
+      * 社交媒体变体的详细信息.
 
 
 
