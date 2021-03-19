@@ -1,8 +1,8 @@
 ---
 title: 语言复制向导
 seo-title: 语言复制向导
-description: 了解如何在AEM中使用语言复制向导。
-seo-description: 了解如何在AEM中使用语言复制向导。
+description: 了解如何使用AEM中的语言复制向导。
+seo-description: 了解如何使用AEM中的语言复制向导。
 uuid: a6168f5d-cce7-48bd-a898-171319621460
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,11 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
+feature: 语言复制
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 # 语言复制向导{#language-copy-wizard}
 
-语言副本向导是一种指导式体验，用于创建和指导多语言内容结构。 现在创建语言副本更简单、更快捷。
+语言复制向导是一种用于创建和说明多语言内容结构的指导体验。 现在创建语言副本更简单、更快捷。
 
 >[!NOTE]
 >
@@ -29,7 +30,7 @@ ht-degree: 0%
 
 要访问此向导：
 
-1. 在站点中，选择一个页面，然后点按／单击创建。
+1. 在站点中，选择一个页面，然后点按/单击创建。
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
@@ -37,17 +38,17 @@ ht-degree: 0%
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
-1. 在向导的&#x200B;**选择源**&#x200B;步骤中，可以添加／删除页面。 您还可以选择包括或排除子页面。
+1. 通过向导的&#x200B;**选择源**&#x200B;步骤，可以添加/删除页面。 您还可以选择包括或排除子页面。
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. **Next**&#x200B;按钮将显示向导的&#x200B;**配置**&#x200B;步骤。 您可以在此添加／删除语言并选择翻译方法。
+1. **下一步**&#x200B;按钮将显示向导的&#x200B;**配置**&#x200B;步骤。 您可以在此处添加/删除语言并选择翻译方法。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
    >[!NOTE]
    >
-   >默认情况下，只有一个翻译设置。 要能够选择其他设置，您必须先配置云配置。 请参阅[配置翻译集成框架](/help/sites-administering/tc-tic.md)。
+   >默认情况下，只有一个翻译设置。 要能够选择其他设置，您必须首先配置云配置。 请参阅[配置翻译集成框架](/help/sites-administering/tc-tic.md)。
 
 1. **Next**&#x200B;按钮将显示向导的&#x200B;**Translate**&#x200B;步骤。 在此，您可以选择仅创建结构、创建新翻译项目或添加到现有翻译项目。
 
@@ -57,7 +58,7 @@ ht-degree: 0%
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. **创建**&#x200B;按钮将结束向导。
+1. **创建**&#x200B;按钮可结束向导。
 
    ![chlimage_1-14](assets/chlimage_1-14.jpeg)
 
