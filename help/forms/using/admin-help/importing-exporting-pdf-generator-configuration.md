@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e25c1b35-73eb-4353-8e39-a2d4cdccd101
+feature: PDF 生成器
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->无法通过导入自定义本机2pdfconfig.xml文件来更改PDF Generator的超时设置。 该文件中的超时设置仅供参考，并显示PDF生成器中的当前设置。 要更改超时设置，请参阅[安装和部署AEM表单](https://www.adobe.com/go/learn_aemforms_installJBoss_63)中的“设置PDF Generator性能参数”。
+>无法通过导入自定本机2pdfconfig.xml文件来更改PDF生成器的超时设置。 该文件中的超时设置仅用于提供信息，并显示PDF生成器中的当前设置。 要更改超时设置，请参阅[安装和部署AEM表单](https://www.adobe.com/go/learn_aemforms_installJBoss_63)中的“设置PDF生成器性能参数”。
 
 ## 导出当前配置文件{#export-your-current-configuration-file}
 
@@ -50,11 +51,11 @@ ht-degree: 0%
 
 ## 转换AutoCAD文件{#convert-all-layers-within-autocad-files}中的所有图层
 
-默认情况下，PDF Generator仅将AutoCAD文件的默认图层转换为PDF，而不是将文件中的所有图层转换为PDF。 要转换所有图层，请按照以下过程操作。
+默认情况下，PDF生成器仅将AutoCAD文件的默认图层转换为PDF，而不是将文件中的所有图层转换为PDF。 要转换所有图层，请按照以下步骤操作。
 
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“配置文件”>“导出配置”。
 1. 选择“下载整个配置”，然后单击“下载”。
-1. 在文本编辑器中，打开下载的文件，在`PDFMaker`标记中的`AutoCAD`标记下添加文本`convertAllPages="true"`。
+1. 在文本编辑器中，打开下载的文件，并在`PDFMaker`标记中的`AutoCAD`标记下添加文本`convertAllPages="true"`。
 1. 在管理控制台中，单击“服务”>“PDF生成器”>“配置文件”>“导入配置”。
 1. 选择“导入现有配置文件”，指定更新的文件，然后单击“导入”。
 
