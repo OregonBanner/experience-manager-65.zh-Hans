@@ -5,16 +5,19 @@ audience: end-user
 user-guide-title: AEM 6.5 Mobile 用户指南
 breadcrumb-title: Mobile 指南
 user-guide-description: 创建和管理移动应用程序的内容。
+feature-set: Experience Manager Sites
+feature: 移动设备
+role: 业务从业者
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 12%
+source-wordcount: '334'
+ht-degree: 13%
 
 ---
 
 
-# AEM 6.5 Mobile 用户指南  {#mobile}
+# AEM 6.5 Mobile 用户指南 {#mobile}
 
 + [移动用户指南概述](home.md)
 + AEM Mobile简介{#introduction}
