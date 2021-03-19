@@ -1,6 +1,6 @@
 ---
-title: 将创建对应UI与自定义门户集成
-seo-title: 将创建对应UI与自定义门户集成
+title: 将Create Correspondence UI与您的自定义门户集成
+seo-title: 将Create Correspondence UI与您的自定义门户集成
 description: 了解如何将创建通信UI与自定义门户集成
 seo-description: 了解如何将创建通信UI与自定义门户集成
 uuid: 68ef5bf2-b271-4c44-8840-6c495069164d
@@ -9,50 +9,51 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 3%
+source-wordcount: '434'
+ht-degree: 4%
 
 ---
 
 
-# 将创建对应UI与自定义门户集成{#integrating-create-correspondence-ui-with-your-custom-portal}
+# 将Create Correspondence UI与自定义门户{#integrating-create-correspondence-ui-with-your-custom-portal}集成
 
 ## 概述 {#overview}
 
-本文详细介绍了如何将“创建通信解决方案”与环境集成。
+本文详细介绍了如何将创建通信解决方案与您的环境集成。
 
 ## 基于URL的调用{#url-based-invocation}
 
-从自定义门户调用“创建对应”应用程序的一种方法是使用以下请求参数准备URL:
+从自定义门户调用Create Correspondence应用程序的一种方法是使用以下请求参数准备URL:
 
 * 字母模板的标识符（使用cmLetterId参数）。
 
 * 从所需数据源获取的XML数据的URL（使用cmDataUrl参数）。
 
 例如，自定义门户会将URL准备为\
-`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，这可以是门户上链接的href。
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`，可能是门户上链接的href。
 
 >[!NOTE]
 >
->以这种方式进行调用是不安全的，因为通过在URL中显示相同（清晰可见）的参数，将必需的参数作为GET请求传递。
+>以这种方式调用是不安全的，因为通过在URL中显示相同（明显可见）的参数作为GET请求传递。
 
 >[!NOTE]
 >
->在调用创建对应应用程序之前，请保存并上传数据，以在给定的dataURL调用创建对应UI。 这可以从自定义门户本身或通过另一个后端进程完成。
+>在调用Create Corresponence应用程序之前，请保存并上传数据，以在给定的dataURL上调用Create Corresponence UI。 这可以从自定义门户本身或通过其他后端进程完成。
 
-## 内联基于数据的调用{#inline-data-based-invocation}
+## 基于内联数据的调用{#inline-data-based-invocation}
 
-调用“创建通信”应用程序的另一种（也更安全）方法是简单点击https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html的URL，同时发送参数和数据以作为POST请求调用“创建通信”应用程序（将它们隐藏在最终用户面前）。 这也意味着您现在可以内嵌（作为同一请求的一部分，使用cmData参数）传递Create Commendence应用程序的XML数据，这在以前的方法中是不可能的／理想的。
+调用“创建通信”应用程序的另一种（也是更安全的）方法是直接点击https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html上的URL，同时发送参数和数据以作为POST请求调用“创建通信”应用程序（将它们隐藏在最终用户面前）。 这也意味着您现在可以随行传递Create Correndence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），这在以前的方法中是不可能的/理想的。
 
-### 指定字母{#parameters-for-specifying-letter}的参数
+### 用于指定字母{#parameters-for-specifying-letter}的参数
 
 | **名称** | **类型** | **描述** |
 |---|---|---|
 | cmLetterInstanceId | 字符串 | 字母实例的标识符。 |
-| cmLetterId | 字符串 | 字母模板的名称。 |
+| cmLetterId | 字符串 | Letter模板的名称。 |
 
 表中的参数顺序指定用于加载字母的参数的首选项。
 
@@ -73,7 +74,7 @@ ht-degree: 3%
   <tr>
    <td>cmLetterInstanceId</td> 
    <td>字符串</td> 
-   <td>使用字母实例中可用的xml数据。</td> 
+   <td>使用Letter实例中可用的xml数据。</td> 
   </tr>
   <tr>
    <td>cmUseTestData</td> 
@@ -97,7 +98,7 @@ ht-degree: 3%
   <tr>
    <td>cmPreview<br /> </td> 
    <td>布尔型</td> 
-   <td>在预览模式下打开字母为True<br /> </td> 
+   <td>如果在预览模式<br />中打开字母，则为true </td> 
   </tr>
   <tr>
    <td>随机</td> 
@@ -107,4 +108,4 @@ ht-degree: 3%
  </tbody>
 </table>
 
-如果对cmDataURL使用http或cq协议，则http/cq的URL应匿名访问。
+如果您对cmDataURL使用http或cq协议，则http/cq的URL应可匿名访问。
