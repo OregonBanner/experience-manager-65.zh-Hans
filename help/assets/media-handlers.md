@@ -2,10 +2,11 @@
 title: 使用媒体处理程序和工作流处理资源
 description: 了解媒体处理程序以及如何使用工作流对您的数字资产执行任务。
 contentOwner: AG
+role: 业务从业者
 translation-type: tm+mt
-source-git-commit: a6758adf5ac8992e27c13b87ae65c83b5b8695c7
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2161'
+source-wordcount: '2163'
 ht-degree: 3%
 
 ---
@@ -134,7 +135,7 @@ package my.own.stuff; /** * @scr.component inherit="true" * @scr.service */ publ
 
 请参阅[开发工具](../sites-developing/dev-tools.md)以安装并设置带有[!DNL Maven]插件的Eclipse，以及设置[!DNL Maven]项目所需的依赖项。
 
-执行以下步骤后，将TXT文件上载到[!DNL Experience Manager]时，将提取该文件的元数据并生成两个带水印的缩略图。
+执行以下步骤后，将TXT文件上载到[!DNL Experience Manager]时，将提取该文件的元数据并生成两个带有水印的缩略图。
 
 1. 在Eclipse中，创建`myBundle` [!DNL Maven]项目：
 
