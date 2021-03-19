@@ -1,30 +1,31 @@
 ---
-title: 通过DTM实现资产洞察
-description: 了解如何使用Adobe动态标签管理(DTM)启用资产分析。
+title: 通过DTM启用资产分析
+description: 了解如何使用Adobe Dynamic Tag Management(DTM)启用资产分析。
 contentOwner: AG
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
 
 
-# 通过DTM{#enable-asset-insights-through-dtm}启用资产分析
+# 通过DTM {#enable-asset-insights-through-dtm}启用资产分析
 
-Adobe动态标签管理是一种激活数字营销工具的工具。 酒店免费提供给Adobe Analytics客户。 您可以自定义跟踪代码，使第三方CMS解决方案能够使用资产分析，也可以使用DTM插入资产分析标记。 只支持并提供图像洞察。
+Adobe动态标签管理是一种激活数字营销工具的工具。 免费提供给Adobe Analytics客户。 您可以自定义跟踪代码，使第三方CMS解决方案能够使用资产分析，也可以使用DTM插入资产分析标记。 只支持并提供图像分析。
 
 >[!CAUTION]
 >
->AdobeDTM已弃用，但支持[!DNL Adobe Experience Platform Launch]，很快将达到[寿命结束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建议您[使用 [!DNL Launch] 获得资产洞察](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>Adobe DTM已弃用，改为[!DNL Adobe Experience Platform Launch]，很快将达到[寿命结束](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建议您[使用 [!DNL Launch] 来获取资产分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
-执行这些步骤，通过DTM启用资产分析。
+执行这些步骤以通过DTM启用资产分析。
 
-1. 单击Experience Manager标志，然后转至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 洞察配置]**。
+1. 单击Experience Manager徽标，然后转至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 分析配置]**。
 1. [使用DTMExperience Manager配置Cloud Service](/help/sites-administering/dtm.md)
 
-   登录[https://dtm.adobe.com](https://dtm.adobe.com/)并访问用户用户档案中的&#x200B;**[!UICONTROL 帐户设置]**&#x200B;后，API令牌应可用。 从资产分析的角度来看，不需要执行此步骤，因为Experience Manager站点与资产分析的集成仍在进行中。
+   登录[https://dtm.adobe.com](https://dtm.adobe.com/)并访问用户用户档案中的&#x200B;**[!UICONTROL 帐户设置]**&#x200B;后，API令牌应可用。 从资产分析的角度看，不需要执行此步骤，因为Experience Manager站点与资产分析的集成仍在进行中。
 
 1. 登录[https://dtm.adobe.com](https://dtm.adobe.com/)，然后根据需要选择公司。
 1. 创建或打开现有Web属性
@@ -43,24 +44,24 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 酒店免�
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
-1. 单击Experience Manager标志，然后转至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]**。
-1. 单击&#x200B;**[!UICONTROL 洞察页面跟踪器]**，复制跟踪器代码，然后将其粘贴到您在步骤6中打开的“脚本”对话框中。 保存更改。
+1. 单击Experience Manager徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]**。
+1. 单击&#x200B;**[!UICONTROL 分析页面跟踪器]**，复制跟踪器代码，然后将其粘贴到您在步骤6中打开的“脚本”对话框中。 保存更改。
 
    >[!NOTE]
    >
-   >* `AppMeasurement.js` 。它预计可通过DTM的Adobe Analytics工具获得。
-   >* 将删除对`assetAnalytics.dispatcher.init()`的调用。 一旦DTM的Adobe Analytics工具完成加载，该函数将被调用。
+   >* `AppMeasurement.js` 。预计可通过DTM的Adobe Analytics工具获得。
+   >* 将删除对`assetAnalytics.dispatcher.init()`的调用。 DTM的Adobe Analytics工具完成加载后，应调用该函数。
    >* 根据资产分析页面跟踪器的托管位置(例如Experience Manager、CDN等)，脚本源的来源可能需要更改。
    >* 对于托管Experience Manager的页面跟踪器，源应使用调度程序实例的主机名指向发布实例。
 
 
-1. 访问 `https://dtm.adobe.com`. 单击web属性中的&#x200B;**[!UICONTROL 概述]**，然后单击&#x200B;**[!UICONTROL 添加工具]**&#x200B;或打开现有的Adobe Analytics工具。 创建工具时，可将&#x200B;**[!UICONTROL 配置方法]**&#x200B;设置为&#x200B;**[!UICONTROL 自动]**。
+1. 访问 `https://dtm.adobe.com`. 单击Web属性中的&#x200B;**[!UICONTROL 概述]**，然后单击&#x200B;**[!UICONTROL 添加工具]**&#x200B;或打开现有Adobe Analytics工具。 创建工具时，可以将&#x200B;**[!UICONTROL 配置方法]**&#x200B;设置为&#x200B;**[!UICONTROL 自动]**。
 
    ![添加Adobe Analytics工具](assets/Add-Adobe-Analytics-Tool.png)
 
-   根据需要选择暂存／生产报表包。
+   根据需要选择暂存/生产报表包。
 
-1. 展开&#x200B;**[!UICONTROL 库管理]**，并确保将&#x200B;**[!UICONTROL 在]**&#x200B;加载库设置为&#x200B;**[!UICONTROL 页顶部]**。
+1. 展开&#x200B;**[!UICONTROL 库管理]**，并确保将&#x200B;**[!UICONTROL 在]**&#x200B;加载库设置为&#x200B;**[!UICONTROL 页首]**。
 
    ![chlimage_1-61](assets/chlimage_1-197.png)
 
@@ -106,11 +107,11 @@ Adobe动态标签管理是一种激活数字营销工具的工具。 酒店免�
    })();
    ```
 
-   * DTM中的页面加载规则只包含`pagetracker.js`代码。 任何`assetAnalytics`字段都被视为默认值的覆盖。 默认情况下，它们不是必需的。
-   * 确保`_satellite.getToolsByType('sc')[0].getS()`已初始化且`assetAnalytics,dispatcher.init`可用后，代码调用`assetAnalytics.dispatcher.init()`。 因此，您可以跳过在步骤11中添加它。
-   * 如分析页面跟踪器代码（**[!UICONTROL 工具>资产>洞察页面跟踪器]**）中的注释所示，当页面跟踪器未创建`AppMeasurement`对象时，前三个参数(RSID、跟踪服务器和访客命名空间)将不起作用。 而是传递空字符串以突出显示它。\
-      其余参数与“分析配置”页（**[!UICONTROL 工具>资产>分析配置]**）中配置的参数相对应。
-   * 通过查询`satelliteLib`所有可用的SiteCatalyst引擎来检索AppMeasurement对象。 如果配置了多个标记，请相应地更改数组选择器的索引。 阵列中的条目按DTM界面中可用的SiteCatalyst工具进行排序。
+   * DTM中的页面加载规则仅包含`pagetracker.js`代码。 任何`assetAnalytics`字段都被视为默认值的替代。 默认情况下，它们不是必需的。
+   * 在确保`_satellite.getToolsByType('sc')[0].getS()`已初始化且`assetAnalytics,dispatcher.init`可用后，代码调用`assetAnalytics.dispatcher.init()`。 因此，您可以跳过在步骤11中添加它。
+   * 如“分析页面跟踪器”代码（**[!UICONTROL “工具”>“资产”>“分析页面跟踪器”]**）中的注释所示，当“页面跟踪器”未创建`AppMeasurement`对象时，前三个参数(RSID、跟踪服务器和访客命名空间)将不起作用。 而是传递空字符串以突出显示此项。\
+      其余参数与“分析配置”页（**[!UICONTROL 工具>资产>分析配置]**）中的配置相对应。
+   * 通过查询`satelliteLib`以获取所有可用的SiteCatalyst引擎，可检索AppMeasurement对象。 如果配置了多个标签，请相应地更改数组选择器的索引。 数组中的条目按DTM界面中可用的SiteCatalyst工具排序。
 
 1. 保存并关闭“代码编辑器”窗口，然后在“工具”配置中保存更改。
-1. 在&#x200B;**[!UICONTROL 批准]**&#x200B;选项卡中，批准两个待批准。 DTM标记已准备好插入网页。 有关如何在网页中插入DTM标记的详细信息，请参阅[在自定义页面模板中集成DTM](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/)。
+1. 在&#x200B;**[!UICONTROL 批准]**&#x200B;选项卡中，批准两个待批准。 DTM标记已准备好插入网页。 有关如何在网页中插入DTM标签的详细信息，请参阅[在自定义页面模板中集成DTM](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/)。
