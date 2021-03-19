@@ -1,11 +1,12 @@
 ---
 title: AEM流畅体验功能列表
-description: 流畅的体验功能列表
+description: 流畅体验功能列表
 index: n
+feature: 创作
 translation-type: tm+mt
-source-git-commit: 33abb544c5f12f7d7a44fc326f07fe9b53ebc9d3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '351'
 ht-degree: 8%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 8%
 
 # AEM流畅体验功能列表{#aem-fluid-experiences-feature-list}
 
-Adobe Experience Manager流畅体验利用AEM Sites、AEM Dynamic Media和AEM Assets等强大的功能集，为无头内容投放提供强大的解决方案。
+Adobe Experience Manager流畅体验利用AEM Sites、AEM Dynamic Media和AEM Assets的强大功能集，为无外设内容投放提供强大的解决方案。
 
-AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 [完整的AEM Sites、资产和Dynamic Media解决方案提供强大的内容创作和投放以及AEM对混合用例的强大支持。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences与经典AEM不同，只解决了无头投放用例。 [完整的AEM Sites、资产和Dynamic Media解决方案提供强大的内容创作和投放以及对混合用例的AEM强大支持。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
-下表定义AEM流体验的功能并链接到相关支持文档。
+下表定义了AEM流体体验的功能并链接到相关支持文档。
 
 * [存储库](#repository-features)
 * [访问、API和投放](#access-api-and-delivery-features)
@@ -26,7 +27,7 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 [完整
 
 >[!NOTE]
 >
->AEM流畅体验是AEM功能的子集。 这些表中链接的功能可能包括AEM中包含的附加功能，但不包括AEM流体验。
+>AEM流畅体验是AEM功能的子集。 这些表中链接的功能可能包括AEM中包含的其他功能，但不包括AEM流体体验。
 
 ## 存储库功能{#repository-features}
 
@@ -34,10 +35,10 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 [完整
 |---|
 | [内容存储库](/help/assets/manage-assets.md) |
 | [资产类型](/help/assets/assets-formats.md) |
-| [图像再现](/help/assets/image-presets.md) |
+| [图像演绎版](/help/assets/image-presets.md) |
 | [元数据和标签管理](/help/assets/metadata.md) |
 | [搜索](/help/assets/manage-assets.md) |
-| [收](/help/assets/manage-assets.md) 藏集和 [灯箱](/help/assets/light-box.md) |
+| [收](/help/assets/manage-assets.md) 集和 [灯箱](/help/assets/light-box.md) |
 | [个人资料](/help/assets/processing-profiles.md) |
 | [版本控制](/help/assets/manage-assets.md) |
 | [重复检测](/help/assets/duplicate-detection.md) |
@@ -51,10 +52,10 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 [完整
 | [结构化内容模型](/help/assets/content-fragments/content-fragments.md) |
 | [内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
 | [体验片段](/help/sites-authoring/experience-fragments.md) |
-| 结构化内容的HTTP API（读取） |
+| 结构化内容的HTTP API（读） |
 | 结构化内容(CRUD)的HTTP API |
 | [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) |
-| [动态媒体](/help/assets/dynamic-media.md) |
+| [Dynamic Media](/help/assets/dynamic-media.md) |
 
 ## 管理和集成功能{#admin-and-integration-features}
 
@@ -82,10 +83,10 @@ AEM流畅体验与经典AEM不同，它只解决了无头投放用例。 [完整
 
 ## 了解更多信息 {#learn-more}
 
-* [无头用例的流畅体验](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM内容服务：什么，为什么，如何？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [使用Content Services](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
+* [无外设使用案例的流畅体验](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
+* [AEM内容服务：什么，为什么，怎样？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
+* [使用内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 * [开发移动应用程序](https://docs.adobe.com/content/help/en/experience-manager-64/mobile/developing/developing-content-services.html)
 * [第三方访问常见问题解答](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
-* [随处提供流畅的体验](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
+* [无处不在的流畅体验](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
 * [使用Sling API](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
