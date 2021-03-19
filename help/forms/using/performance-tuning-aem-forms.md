@@ -1,51 +1,52 @@
 ---
-title: AEM Forms服务器的性能调整
-seo-title: AEM Forms服务器的性能调整
-description: 要使AEM Forms以最佳方式运行，您可以微调缓存设置和JVM参数。 此外，使用Web服务器可以增强AEM Forms部署的性能。
-seo-description: 要使AEM Forms以最佳方式运行，您可以微调缓存设置和JVM参数。 此外，使用Web服务器可以增强AEM Forms部署的性能。
+title: AEM Forms 服务器性能优化
+seo-title: AEM Forms 服务器性能优化
+description: 要使AEM Forms达到最佳性能，您可以微调缓存设置和JVM参数。 此外，使用Web服务器可以增强AEM Forms部署的性能。
+seo-description: 要使AEM Forms达到最佳性能，您可以微调缓存设置和JVM参数。 此外，使用Web服务器可以增强AEM Forms部署的性能。
 uuid: bf23b62c-7559-4726-8f4e-cc8b1457e501
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
+role: 管理员
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 0%
+source-wordcount: '928'
+ht-degree: 2%
 
 ---
 
 
-# AEM Forms服务器的性能调整{#performance-tuning-of-aem-forms-server}
+# AEM Forms 服务器性能优化{#performance-tuning-of-aem-forms-server}
 
 本文讨论您可以实施的战略和最佳实践，以减少瓶颈并优化AEM Forms部署的性能。
 
 ## 缓存设置{#cache-settings}
 
-您可以使用AEM Web配置控制台中的&#x200B;**移动Forms配置**&#x200B;组件，配置和控制AEM Forms的缓存策略：
+您可以使用AEM Web配置控制台中的&#x200B;**Mobile Forms配置**&#x200B;组件配置和控制AEM Forms的缓存策略，网址为：
 
-* (AEM FormsOSGi)`https://'[server]:[port]'/system/console/configMgr`
-* (AEM FormsJEE)`https://'[server]:[port]'/lc/system/console/configMgr`
+* (AEM Forms on OSGi)`https://'[server]:[port]'/system/console/configMgr`
+* (AEM Forms on JEE)`https://'[server]:[port]'/lc/system/console/configMgr`
 
 缓存的可用选项如下：
 
-* **无**:强制不缓存任何对象。实际上，这将会降低性能，并由于缺少缓存而要求高内存可用性。
-* **保守派**:指示仅缓存呈现表单之前生成的中间伪像，如包含内联片段和图像的模板。
+* **无**:强制不缓存任何对象。实际上，这将会降低性能，并由于缺少缓存而需要高内存可用性。
+* **保守**:指示仅缓存呈现表单之前生成的中间伪像，如包含内联片段和图像的模板。
 * **咄咄逼人**:强制缓存几乎所有可缓存的内容，包括呈现的HTML内容，以及“保守”缓存级别中的所有伪像。它可产生最佳性能，但也会消耗更多内存来存储缓存的伪像。 激进的缓存策略意味着在缓存渲染的内容时，您在渲染表单时将获得持续的时间性能。
 
-AEM Forms的默认缓存设置可能不足以实现最佳性能。 因此，建议使用以下设置：
+AEM Forms的默认缓存设置可能不够好，无法获得最佳性能。 因此，建议使用以下设置：
 
 * **缓存策略**:攻击性
-* **缓存大小** （根据表单数量）:根据需要
+* **缓存大小** （表单数）：根据需要
 * **最大对象大小**:根据需要
 
 ![移动Forms配置](assets/snap.png)
 
 >[!NOTE]
 >
->如果使用AEM Dispatcher缓存自适应表单，它还会缓存自适应表单，该表单包含带有预填充数据的表单。 如果此类表单从AEM Dispatcher缓存提供，则可能导致向用户提供预填或过时的数据。 因此，使用AEM Dispatcher缓存不使用预填数据的自适应表单。 此外，调度程序缓存不会自动使缓存片段失效。 因此，请勿使用它缓存表单片段。 对于此类表单和片段，请使用[自适应表单缓存](../../forms/using/configure-adaptive-forms-cache.md)。
+>如果您使用AEM Dispatcher缓存自适应表单，它还会缓存包含带有预填充数据的表单的自适应表单。 如果此类表单从AEM Dispatcher缓存中提供，则可能会导致向用户提供预填或过时的数据。 因此，使用AEM Dispatcher缓存不使用预填数据的自适应表单。 此外，调度程序缓存不会自动使缓存片段失效。 因此，请不要使用它缓存表单片段。 对于此类表单和片段，请使用[自适应表单缓存](../../forms/using/configure-adaptive-forms-cache.md)。
 
 ## JVM参数{#jvm-parameters}
 
@@ -60,19 +61,19 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->建议的设置适用于Windows 2008 R2 8 Core和Oracle热点1.7（64位）JDK，并应根据系统配置进行放大或缩小。
+>建议的设置适用于Windows 2008 R2 8 Core和Oracle HotSpot 1.7（64位）JDK，应根据您的系统配置进行放大或缩小。
 
 ## 使用Web服务器{#using-a-web-server}
 
-自适应表单和HTML5表单以HTML5格式呈现。 生成的输出可能很大，具体取决于表单大小和表单中的图像等因素。 要优化数据传输，建议的方法是使用提供请求的Web服务器压缩HTML响应。 此方法可减小响应大小、网络流量以及在服务器和客户端计算机之间传输数据所需的时间。
+自适应表单和HTML5表单以HTML5格式呈现。 生成的输出可能会很大，具体取决于表单大小和表单中的图像等因素。 要优化数据传输，建议的方法是使用从中提供请求的Web服务器压缩HTML响应。 此方法可减小响应大小、网络流量以及在服务器和客户端计算机之间传输数据所需的时间。
 
-例如，执行以下步骤以使用JBoss在Apache Web Server 2.0 32位上启用压缩：
+例如，执行以下步骤以使用JBoss对Apache Web Server 2.0 32位启用压缩：
 
 >[!NOTE]
 >
 >以下说明不适用于除Apache Web Server 2.0 32位服务器之外的任何服务器。 有关特定于任何其他服务器的步骤，请参阅相应的产品文档。
 
-以下步骤演示了在Apache Web Server上启用压缩所需的更改
+以下步骤演示了启用Apache Web Server压缩所需的更改
 
 **获取适用于您的操作系统的Apache Web服务器软件**
 
@@ -80,9 +81,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 * Solaris 64位：从Sunfreeware for Solaris网站下载Apache Web服务器。
 * Linux:Apache Web服务器预装在Linux系统上。
 
-Apache可以使用HTTP协议与CRX进行通信。 这些配置是用于使用HTTP进行优化的。
+Apache可以使用HTTP协议与CRX通信。 这些配置是用于使用HTTP进行优化的。
 
-1. 在`APACHE_HOME/conf/httpd.conf`文件中取消以下模块配置的注释。
+1. 取消`APACHE_HOME/conf/httpd.conf`文件中的以下模块配置注释。
 
    ```shell
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -138,13 +139,13 @@ Apache可以使用HTTP协议与CRX进行通信。 这些配置是用于使用HTT
    </Location>
    ```
 
-   要访问crx服务器，请使用`https://'server':80`，其中`server`是运行Apache服务器的服务器的名称。
+   要访问crx服务器，请使用`https://'server':80`，其中`server`是Apache服务器正在运行的服务器的名称。
 
-## 在运行AEM Forms{#using-an-antivirus-on-server-running-aem-forms}的服务器上使用防病毒软件
+## 在运行AEM Forms {#using-an-antivirus-on-server-running-aem-forms}的服务器上使用防病毒
 
-在运行防病毒软件的服务器上可能会遇到性能降低的问题。 始终打开防病毒（访问扫描）软件会扫描系统的所有文件。 它会降低服务器速度，并影响AEM Forms的性能。
+在运行防病毒软件的服务器上可能会遇到性能降低的问题。 始终打开防病毒（访问扫描）软件可扫描系统的所有文件。 它可能会降低服务器速度，并影响AEM Forms的性能。
 
-要提高性能，您可以指示防病毒软件从始终处于（访问）扫描状态中排除以下AEM Forms文件和文件夹：
+要提高性能，您可以指示防病毒软件从始终处于（访问）扫描中排除以下AEM Forms文件和文件夹：
 
 * AEM安装目录。 如果无法排除完整目录，请排除以下内容：
 
@@ -156,9 +157,9 @@ Apache可以使用HTTP协议与CRX进行通信。 这些配置是用于使用HTT
 
    * (Jboss)[AEM安装目录]\jboss\standalone\tmp
    * (Weblogic)\Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
-   * (Websphere)\项目Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
+   * (Websphere)\项目 Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
-* **(AEM Forms仅限JEE)** 全局文档存储(GDS)目录。默认位置为：
+* **(仅AEM Forms on JEE)全** 局文档存储(GDS)目录。默认位置为：
 
    * (JBoss)[appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
    * (WebLogic)[appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
@@ -166,14 +167,14 @@ Apache可以使用HTTP协议与CRX进行通信。 这些配置是用于使用HTT
 
 * **(仅AEM Forms在JEE上)** AEM Forms服务器日志和临时目录。默认位置为：
 
-   * 服务器日志- [AEM Forms安装目录]\Adobe\AEM forms\[app-server]\server\all\logs
-   * 临时目录- [AEM Forms安装目录]\temp
+   * 服务器日志 — [AEM Forms安装目录]\Adobe\AEM forms\[app-server]\server\all\logs
+   * 临时目录 — [AEM Forms安装目录]\temp
 
 >[!NOTE]
 >
->* 如果对GDS和临时目录使用不同的位置，请打开位于`https://'[server]:[port]'/adminui`的AdminUI，导航至&#x200B;**“主页”>“设置”>“核心系统设置”>“核心配置”**&#x200B;以确认使用的位置。
+>* 如果您对GDS和临时目录使用不同的位置，请在`https://'[server]:[port]'/adminui`打开AdminUI，导航到&#x200B;**“主页”>“设置”>“核心系统设置”>“核心配置”**&#x200B;以确认使用的位置。
 
-* 如果AEM Forms服务器在排除建议的目录后运行速度较慢，则也排除Java可执行文件(java.exe)。
+* 如果AEM Forms服务器在排除建议的目录后也执行慢速操作，则也排除Java可执行文件(java.exe)。
 
 
 
