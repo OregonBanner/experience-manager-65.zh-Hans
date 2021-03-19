@@ -2,10 +2,12 @@
 title: ' [!DNL Assets]的最佳实践'
 description: 通过确定并遵守依赖于部署和配置的最佳实践，提高负载下的系统稳定性和性能。
 contentOwner: AG
+feature: 资产管理
+role: 架构师、管理员
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
