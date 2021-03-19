@@ -1,7 +1,7 @@
 ---
 title: 发布页面
 seo-title: 发布页面
-description: 'null'
+description: 发布页面
 seo-description: 'null'
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1612'
 ht-degree: 88%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 88%
    >
    >
 * **复制**
-   >  这些是描述数据（例如，页面内容、文件、代码、用户注释）从一个环境移动到另一个的技术术语，例如在发布或反向复制用户注释时。
+   >  这些是描述数据（例如，页面内容、文件、代码、用户评论）从一个环境移动到另一个的技术术语，例如在发布或反向复制用户评论时。
 >
 
 
@@ -145,7 +145,7 @@ ht-degree: 88%
 
    单击&#x200B;**下一步**&#x200B;以继续。
 
-1. 在“管理发布”向导的下一步&#x200B;**范围**&#x200B;中，您可以定义发布／取消发布的范围，如包括子页面和／或包括引用。
+1. 在“管理发布”向导的下一步&#x200B;**范围**&#x200B;中，您可以定义发布/取消发布的范围，如包括子页面和/或包括引用。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -181,7 +181,7 @@ ht-degree: 88%
 
    **已发布引用**&#x200B;对话框显示所选内容的引用。 默认情况下，这些引用全部处于选中状态并将进行发布/取消发布，但您可以取消选择它们，以便将它们排除在操作之外。
 
-   单击&#x200B;**完成**&#x200B;保存更改，或单击&#x200B;**取消**&#x200B;取消选择并返回向导。
+   单击&#x200B;**完成**&#x200B;以保存更改，或单击&#x200B;**取消**&#x200B;以取消选择并返回到向导。
 
    返回到向导后，**引用**&#x200B;列将进行相应的更新，以反映您选择的要发布或取消发布的引用。
 
@@ -195,7 +195,7 @@ ht-degree: 88%
 
    >[!NOTE]
    >
-   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。有关详细信息，请参阅本页](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)上的[前一条关于发布权限的说明以及[管理对工作流的访问](/help/sites-administering/workflows-managing.md)和[将工作流应用于页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)。
+   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。有关详细信息，请参阅本页](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)上的[上一条关于发布权限的说明，以及[管理对工作流的访问](/help/sites-administering/workflows-managing.md)和[将工作流应用到页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)。
 
    资源将按触发的工作流分组，并且每组都提供了用于执行以下操作的选项：
 
@@ -262,7 +262,7 @@ ht-degree: 88%
 
    请记住，您还可以通过&#x200B;**已发布引用**&#x200B;选项查看要发布的引用。
 
-1. [按正常方式继续“管](#manage-publication) 理发布”向导，以完成发布或取消发布树。
+1. [按正规方式继续管理发](#manage-publication) 布向导，以完成树的发布或取消发布。
 
 ## 确定发布状态 {#determining-publication-status}
 
