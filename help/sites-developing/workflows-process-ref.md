@@ -1,7 +1,7 @@
 ---
-title: 工作流进程参考
-seo-title: 工作流进程参考
-description: 'null'
+title: 工作流过程参考
+seo-title: 工作流过程参考
+description: 工作流过程参考
 seo-description: 'null'
 uuid: de367aa8-4580-4810-b665-2a7b521e36ca
 contentOwner: User
@@ -10,42 +10,42 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: dbdf981f-791b-4ff7-8ca8-039d0bdc9c92
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 0%
+source-wordcount: '1143'
+ht-degree: 2%
 
 ---
 
 
-# 工作流进程引用{#workflow-process-reference}
+# 工作流过程参考{#workflow-process-reference}
 
 AEM提供了几个可用于创建工作流模型的流程步骤。 也可以为内置步骤未涵盖的任务添加自定义流程步骤（请参阅[创建工作流模型](/help/sites-developing/workflows-models.md)）。
 
 ## 进程特性{#process-characteristics}
 
-对于每个过程步骤，描述了以下特征。
+对于每个过程步骤，描述了以下特点。
 
 ### Java类或ECMA路径{#java-class-or-ecma-path}
 
 进程步骤由Java类或ECMAScript定义。
 
-* 对于Java类进程，提供完全限定的类名称。
+* 对于Java类进程，提供完全限定的类名。
 * 对于ECMAScript处理脚本的路径。
 
 ### 有效负荷 {#payload}
 
-有效负荷是工作流实例对其起作用的实体。 有效负荷由启动工作流实例的上下文隐式选择。
+有效负荷是工作流实例对其执行操作的实体。 有效负荷由启动工作流实例的上下文隐式选择。
 
-例如，如果工作流应用于AEM页&#x200B;*P*，则随着工作流的推进，会逐步传递&#x200B;*P*，每个步骤都可以选择以某种方式作用在&#x200B;*P*&#x200B;上。
+例如，如果工作流应用于AEM页面&#x200B;*P*，则随着工作流的推进，会逐步传递&#x200B;*P*，每个步骤都可以选择以某种方式作用在&#x200B;*P*&#x200B;上。
 
-在最常见的情况下，有效负荷是存储库中的JCR节点(例如AEM页面或资产)。 JCR节点有效负荷作为JCR路径或JCR标识符(UUID)的字符串传递。 在某些情况下，有效负荷可以是JCR属性（作为JCR路径传递）、URL、二进制对象或通用Java对象。 对有效负荷起作用的单个进程步骤通常预期某种类型的有效负荷，或根据有效负荷类型采取不同的操作。 对于下面描述的每个过程，将说明预期的有效负荷类型（如果有）。
+在最常见的情况下，有效负荷是存储库中的JCR节点(例如，AEM页面或资产)。 JCR节点负载作为字符串传递，该字符串是JCR路径或JCR标识符(UUID)。 在某些情况下，有效负荷可能是JCR属性（作为JCR路径传递）、URL、二进制对象或通用Java对象。 对有效负荷采取行动的单个进程步骤通常会期望某种类型的有效负荷，或根据有效负荷类型采取不同的措施。 对于下面描述的每个进程，将说明预期的有效负荷类型（如果有）。
 
 ### 参数 {#arguments}
 
 某些工作流进程接受管理员在设置工作流步骤时指定的参数。
 
-在工作流编辑器的&#x200B;**属性**&#x200B;窗格中，参数作为单个字符串输入在“进程参数”**属性中。**&#x200B;对于下面描述的每个过程，参数字符串的格式以简单的EBNF语法进行描述。 例如，以下指示参数字符串由一个或多个逗号分隔的对组成，其中每对都由名称（即字符串）和值(以多次冒号分隔)组成：
+在工作流编辑器的&#x200B;**属性**&#x200B;窗格的&#x200B;**进程参数**&#x200B;属性中，参数以单个字符串形式输入。 对于下面描述的每个过程，参数字符串的格式用简单的EBNF语法进行描述。 例如，以下指示参数字符串由一个或多个逗号分隔的对组成，其中每对都由名称（即字符串）和值(以多次冒号分隔)组成：
 
 ```
     args := name '::' value [',' name '::' value]*
@@ -56,7 +56,7 @@ AEM提供了几个可用于创建工作流模型的流程步骤。 也可以为�
 
 ### 超时 {#timeout}
 
-在此超时期后，工作流步骤不再可操作。 某些工作流进程会遵守超时，而其他工作流进程则不适用并会被忽略。
+在此超时期后，工作流步骤不再可操作。 某些工作流进程会遵守超时，而对于其他工作流进程，则不会应用超时，会被忽略。
 
 ### 权限 {#permissions}
 
@@ -68,24 +68,24 @@ AEM提供了几个可用于创建工作流模型的流程步骤。 也可以为�
 * `jcr:lockManagement`
 * `crx:replicate`
 
-如果该权限集不足于您的`WorkflowProcess`实现，则必须使用具有所需权限的会话。
+如果该权限集不足以实现`WorkflowProcess`，则必须使用具有所需权限的会话。
 
-为此，建议的方法是使用使用所需权限子集（但最少）创建的服务用户。
+为此，建议的方法是使用创建的服务用户所需权限子集，但权限子集最少。
 
 >[!CAUTION]
 >
->如果从AEM 6.2之前的版本升级，则可能需要更新实施。
+>如果您是从AEM 6.2之前的版本升级，则可能需要更新您的实施。
 >
->在以前的版本中，管理员会话被传递到`WorkflowProcess`实现，然后可以拥有对存储库的完全访问权，而无需定义特定ACL。
+>在以前版本中，管理会话已传递到`WorkflowProcess`实现，然后可以拥有对存储库的完全访问权限，而无需定义特定ACL。
 >
->权限现在定义为以上（[权限](#permissions)）。 同样，更新实现的推荐方法也是如此。
+>权限现在定义为上面（[权限](#permissions)）。 同样，更新实现的推荐方法也是如此。
 >
->当代码更改不可行时，还提供短期解决方案用于向后兼容：
+>当代码更改不可行时，还有一个短期解决方案可用于向后兼容性：
 >
->* 使用Web控制台(`/system/console/configMgr`找到&#x200B;**AdobeGranite工作流配置服务**
+>* 使用Web控制台(`/system/console/configMgr`)找到&#x200B;**AdobeGranite工作流配置服务**
    >
    >
-* 启用&#x200B;**工作流进程传统模式**
+* 启用&#x200B;**工作流进程旧模式**
 >
 >
 这将恢复为向`WorkflowProcess`实施提供管理会话的旧行为，并再次提供对整个存储库的无限制访问。
@@ -96,26 +96,26 @@ AEM提供了几个可用于创建工作流模型的流程步骤。 也可以为�
 
 ### AbsoluteTimeAutoAdvancer（绝对时间自动提前器）{#absolutetimeautoadvancer-absolute-time-auto-advancer}
 
-`AbsoluteTimeAutoAdvancer`（绝对时间自动提前器）进程对&#x200B;**AutoAdvancer**&#x200B;的行为相同，只是它在给定时间和日期超时，而不是在给定时间长度后超时。
+`AbsoluteTimeAutoAdvancer`（绝对时间自动提前器）进程与&#x200B;**AutoAdvancer**&#x200B;的行为相同，只是它在给定时间和日期而不是在给定时间长度之后超时。
 
 * **Java类**:  `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
 * **有效负荷**:没有。
 * **参数**:没有。
-* **超时**:到达设置的时间和日期时，进程超时。
+* **超时**:到达设置的时间和日期时，处理超时。
 
-### AutoAdvancer（自动提前器）{#autoadvancer-auto-advancer}
+### AutoAdvancer(Auto Advancer){#autoadvancer-auto-advancer}
 
-`AutoAdvancer`进程会自动将工作流前进到下一步。 如果有多个可能的下一步（例如，如果存在OR拆分），则此进程将沿&#x200B;*默认路由*&#x200B;推进工作流，如果已指定，则不会进行工作流高级。
+`AutoAdvancer`进程会自动将工作流前进到下一步。 如果有多个可能的下一步（例如，如果有OR拆分），则此进程将沿&#x200B;*默认路由*&#x200B;推进工作流，如果已指定，则不高级工作流。
 
 * **Java类**:  `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
 
 * **有效负荷**:没有。
 * **参数**:没有。
-* **超时**:在设定的时间长度后，处理超时。
+* **超时**:在设置的时间长度后处理超时。
 
 ### ProcessAssembler(Process Assembler){#processassembler-process-assembler}
 
-`ProcessAssembler`进程在一个工作流步骤中按顺序执行多个子进程。 要使用`ProcessAssembler`，请在工作流中创建此类型的单个步骤，并设置其参数以指示要执行的子进程的名称和参数。
+`ProcessAssembler`进程在一个工作流步骤中按顺序执行多个子进程。 要使用`ProcessAssembler`，请在您的工作流中创建一个此类型的步骤，并设置其参数以指示要执行的子进程的名称和参数。
 
 * **Java类**:  `com.day.cq.workflow.impl.process.ProcessAssembler`
 
@@ -133,13 +133,13 @@ AEM提供了几个可用于创建工作流模型的流程步骤。 也可以为�
         listitem := /* A string */
 ```
 
-* **超时**:受人尊重。
+* **超时**:受人尊敬。
 
 例如：
 
 * 从资产中提取元数据。
-* 创建三个指定大小的三个缩略图。
-* 根据资产创建JPEG图像，假定资产最初既不是GIF也不是PNG（在这种情况下，不会创建JPEG）。
+* 创建三个指定大小的缩览图。
+* 从资产创建JPEG图像，假定资产最初既不是GIF也不是PNG（在这种情况下，不会创建JPEG）。
 * 设置资产的上次修改日期。
 
 ```shell
@@ -155,9 +155,9 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 >[!CAUTION]
 >
->您&#x200B;***必须***&#x200B;不要更改`/libs`路径中的任何内容。
+>***必须***&#x200B;不更改`/libs`路径中的任何内容。
 >
->这是因为下次升级实例时，`/libs`的内容会被覆盖（应用修补程序或功能包时，可能会被覆盖）。
+>这是因为下次升级实例时，将覆盖`/libs`的内容（应用修补程序或功能包时，可能会覆盖）。
 
 ### 删除 {#delete}
 
@@ -181,7 +181,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ### rule-false {#rule-false}
 
-这是一个在`check()`方法上返回`false`的空进程。
+这是一个空进程，它在`check()`方法上返回`false`。
 
 * **ECMAScript路径**:  `/libs/workflow/scripts/rule-false.ecma`
 
@@ -201,7 +201,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ### urlcaller {#urlcaller}
 
-这是一个调用给定URL的简单工作流程。 通常，URL将是对执行简单任务的JSP（或其他Servlet等效项）的引用。 此过程仅应在开发和演示时使用，而不应在生产环境中使用。 参数指定URL、登录名和口令。
+这是一个调用给定URL的简单工作流程。 通常，URL将引用执行简单任务的JSP（或其他Servlet等效项）。 此过程仅应在开发和演示期间使用，而不应在生产环境中使用。 参数指定URL、登录名和口令。
 
 * **ECMAScript路径**:  `/libs/workflow/scripts/urlcaller.ecma`
 
@@ -246,7 +246,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 该步骤在下列情况下并无影响：
 
-* 有效负荷已解锁
+* 已解锁有效负荷
 * 有效负荷节点不包含jcr:content子节点
 
 ## 版本控制进程{#versioning-processes}
@@ -255,7 +255,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 ### CreateVersionProcess {#createversionprocess}
 
-创建工作流有效负荷的新版本(AEM页面或DAM资产)。
+创建工作流有效负荷(AEM页面或DAM资产)的新版本。
 
 * **Java类**:  `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
