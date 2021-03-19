@@ -2,11 +2,13 @@
 title: Assets 指南
 description: 本指南涵盖所有Experience Manager资产任务，如如何创建、管理、交付和优化数字资产。
 user-guide-title: Assets 指南
+feature: 资产管理
+role: 业务从业者、架构师、管理员
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 20%
+source-wordcount: '327'
+ht-degree: 19%
 
 ---
 
