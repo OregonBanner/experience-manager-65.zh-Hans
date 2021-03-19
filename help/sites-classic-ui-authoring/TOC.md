@@ -4,11 +4,14 @@ product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5经典UI创作用户指南
-user-guide-description: 本指南介绍在经典用户界面中在AEM中进行创作的概念。
+user-guide-description: 本指南涵盖在经典用户界面中的AEM中进行创作的概念。
+feature-set: Experience Manager Sites
+feature: 创作
+role: 业务从业者
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '274'
 ht-degree: 84%
 
 ---
@@ -78,7 +81,7 @@ ht-degree: 84%
    + [Adobe Campaign 组件](classic-personalization-ac-components.md)
    + [定位您的 Adobe Campaign](classic-personalization-ac-target.md)
    + [在 AEM 中创建 Adobe Campaign 表单](classic-personalization-ac-forms.md)
-+ 在经典UI中创作资产{#assets}
++ 经典UI中的资产创作{#assets}
    + [处理资产](classicui-assets.md)
    + [传送 Dynamic Media 资产](dynamic-media-assets-delivering.md)
    + [将 Dynamic Media 资产添加到页面](dynamic-media-assets-adding-to-page.md)
