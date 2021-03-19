@@ -1,7 +1,7 @@
 ---
 title: 内容投放
 seo-title: 内容投放
-description: 'null'
+description: 内容投放
 seo-description: 'null'
 uuid: 1e7bea34-ca50-41ed-8295-fa182c27fa69
 contentOwner: User
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe建议对需要基于单页应用程序框架的客户端渲染（例如，React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md).
+>Adobe建议对需要单页应用程序框架的客户端渲染（例如，React）的项目使用SPA Editor。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-移动应用程序应能够根据需要使用AEM中的任何和所有内容来提供目标应用程序体验。
+移动应用程序应能够根据需要使用AEM中的任何和所有内容来提供有针对性的应用程序体验。
 
-这包括使用资产、站点内容、CaaS内容（无线）以及可能具有其自身结构的自定义内容。
+这包括使用资产、网站内容、CaaS内容（无线）和可能具有其自身结构的自定义内容。
 
 >[!NOTE]
 >
->**Over-the-Air Content** 可通过ContentSync处理程序从以上任何一种方式获得。它可用于通过zip对包和投放进行批处理，以及维护更新或这些包。
+>**Over-the-Air Contentcan** 可以通过ContentSync处理函数从以上任何位置获得。它可用于通过zip对包和投放进行批处理，以及维护更新或这些包。
 
 内容服务提供的材料有三种主要类型：
 
@@ -43,23 +43,23 @@ ht-degree: 0%
 
 资产收藏集是包含对其他收藏集的引用的AEM构造。
 
-资产集合可以通过内容服务公开。 在请求中调用资产集合会返回资产的列表对象，包括其URL。 资产可通过URL访问。 URL在对象中提供。 例如：
+资产集合可以通过内容服务公开。 在请求中调用资产集合会返回资产列表的对象，包括其URL。 资产可通过URL访问。 URL在对象中提供。 例如：
 
 * 页面实体返回包含图像引用的JSON（页面对象）。 图像引用是一个URL，用于获取图像的资产二进制文件。
-* 请求列表文件夹中的资产将返回JSON，其中包含有关该文件夹中所有实体的详细信息。 那列表是个对象。 JSON具有URL引用，用于获取该文件夹中每个资产的二进制资产。
+* 请求列表文件夹中的资产将返回JSON，其中包含有关该文件夹中所有实体的详细信息。 该列表是对象。 JSON包含URL引用，用于获取该文件夹中每个资产的资产二进制文件。
 
 ### 资产优化{#asset-optimization}
 
-Content Services的一个关键价值是能够返回为设备优化的资产。 这降低了本地设备存储需求并提高了应用程序性能。
+Content Services的一个关键价值是能够返回为设备优化的资产。 这减少了本地设备存储需求并提高了应用程序性能。
 
-资产优化将基于API请求中提供的信息成为服务器端功能。 在可能的情况下，应缓存资产演绎版，这样类似的请求就不需要重新生成资产演绎版。
+资产优化将基于API请求中提供的信息成为服务器端功能。 应尽可能缓存资产演绎版，这样类似的请求就不需要重新生成资产演绎版。
 
 ### 资产工作流{#assets-workflow}
 
 资产工作流如下所示：
 
-1. AEM开箱即用中的资产引用
-1. 创建给定模型的资产引用实体
+1. 现成AEM中提供的资产引用
+1. 创建资产引用实体（给定其模型）
 1. 编辑实体
 
    1. 选择资产或资产收集
@@ -71,11 +71,11 @@ Content Services的一个关键价值是能够返回为设备优化的资产。 
 
 ### 管理资产 {#managing-assets}
 
-内容服务提供对AEM托管资产的访问，这些资产可能不通过其他AEM内容引用。
+Content Services提供对AEM托管资产的访问，这些资产可能不会通过其他AEM内容引用。
 
 #### 现有托管资产{#existing-managed-assets}
 
-现有的AEM Sites和资产用户正在使用AEM Assets管理其面向所有渠道的所有数字材料。 他们正在开发本机移动应用程序，需要使用由AEM Assets管理的多个资源。 例如徽标、背景图像、按钮图标等。
+现有AEM Sites和Assets用户正在使用AEM Assets管理所有渠道的所有数字材料。 他们正在开发本机移动应用程序，需要使用由AEM Assets管理的多个资源。 例如徽标、背景图像、按钮图标等。
 
 目前，这些资源分布在资产存储库周围。 应用程序需要引用的文件位于：
 
@@ -87,10 +87,10 @@ Content Services的一个关键价值是能够返回为设备优化的资产。 
 
 #### 访问CS资产实体{#accessing-cs-asset-entities}
 
-现在，让我们暂且搁置通过API提供页面的步骤(它将在AEM UI描述中介绍)，并假定页面已完成。 资产实体已创建并添加到“appImages”空间。 为组织目的，在空间下创建了其他文件夹。 因此，资产实体存储在AEM JCR中为：
+现在，让我们暂且搁置通过API使页面可用的步骤(AEM UI描述将介绍该页面)，并假设页面已完成。 资产实体已创建并添加到“appImages”空间。 为了组织目的，在空间下创建了其他文件夹。 因此，资产实体存储在AEM JCR中，如下所示：
 
 * /content/entities/appImages/logos/logo_light
-* /content/entities/appImages/logos/logo_dark
+* /content/entities/appImages/logo/logo_dark
 * /content/entities/appImages/bkgnd/gray_blue
 * /content/entities/appImages/icons/cart
 * /content/entities/appImages/icons/home
@@ -103,46 +103,46 @@ Content Services的一个关键价值是能够返回为设备优化的资产。 
 
 ![chlimage_1-156](assets/chlimage_1-156.png)
 
-#### 获取图像{#getting-an-image}
+#### 获取映像{#getting-an-image}
 
-JSON为每个图像提供由内容服务生成的URL，用于图像。
+JSON为每个图像提供由Content Services生成的URL，用于图像。
 
 要获取“购物车”映像的二进制文件，将再次使用客户端库。
 
 ## 打包的HTML内容{#packaged-html-content}
 
-需要维护内容布局的客户需要HTML内容。 这对于使用Web容器（如Cordova Webview）显示内容的本机应用程序很有用。
+需要维护内容布局的客户需要HTML内容。 这对于使用Web容器（如Cordova Web视图）显示内容的本机应用程序很有用。
 
 AEM Content Services将能够通过API向移动应用程序提供HTML内容。 希望将AEM内容显示为HTML的客户将创建指向AEM内容源的HTML页面实体。
 
-考虑以下选项：
+将考虑以下选项：
 
-* **Zip文件：** 要在设备上正确显示，请尽可能使用页面的所有引用材料- css、JavaScript、资源等。-将包含在具有响应的单个压缩文件中。 HTML页面中的引用将被调整为使用这些文件的相对路径。
+* **Zip文件：** 要在设备上正确显示，页面的所有引用材料（css、JavaScript、资源等）都有最大可能。 — 将包含在包含响应的单个压缩文件中。 将调整HTML页中的引用以使用指向这些文件的相对路径。
 * **流：** 从AEM获取所需文件的清单。然后使用该清单请求所有文件（HTML、CSS、JS等） 和后续请求。
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
 ## 渠道独立内容{#channel-independent-content}
 
-渠道独立内容是一种展示AEM内容结构（如页面）的方式，无需担心布局、组件或其他渠道特定信息。
+渠道无关内容是一种展示AEM内容构造（如页面）的方式，无需担心布局、组件或其他渠道特定信息。
 
-这些内容实体是使用内容模型生成的，用于将AEM结构转换为JSON格式。 生成的JSON数据包含与内容数据相关的信息，该信息与AEM存储库相分离。 这包括返回元数据和AEM资产引用链接以及内容结构（包括实体层次结构）之间的关系。
+这些内容实体是使用内容模型生成的，用于将AEM结构转换为JSON格式。 生成的JSON数据包含有关内容数据的信息，这些数据与AEM存储库分离。 这包括返回元数据和AEM资产引用链接以及内容结构（包括实体层次结构）之间的关系。
 
-### 管理渠道独立内容{#managing-channel-independent-content}
+### 管理渠道无关内容{#managing-channel-independent-content}
 
-内容可以通过多种方式访问应用程序。
+内容可通过多种方式访问应用程序。
 
-1. GET内容通过AEM Over-the-Air实现ZIPS
+1. GET内容通过AEM Over-the-Air
 
-   * 内容同步处理程序可以直接更新zip包或通过调用现有内容呈示器来更新zip包
+   * 内容同步处理程序可以直接更新zip包，也可以通过调用现有内容呈示器来更新zip包
 
       * 平台处理程序
       * AEMM处理程序
       * 自定义处理函数
 
-1. 通过内容呈示器直接GET内容
+1. GET内容直接通过内容呈示器
 
    * 现成默认Sling渲染器
-   * AEM Mobile/内容服务内容渲染器
-   * 自定义渲染
+   * AEM Mobile/Content Services内容渲染器
+   * 自定渲染
 
