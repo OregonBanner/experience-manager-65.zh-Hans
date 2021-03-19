@@ -7,10 +7,11 @@ page-status-flag: de-activated
 uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
+feature: 自适应表单
 translation-type: tm+mt
-source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2059'
 ht-degree: 8%
 
 ---
@@ -22,16 +23,16 @@ ht-degree: 8%
 
 ![](do-not-localize/08-style_your_adaptiveformmain.png)
 
-本教程是[创建第一个自适应表单](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的一个步骤。 建议按照时间顺序按照系列来了解、执行和演示完整的教程用例。
+本教程是[创建您的第一个自适应表单](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的一个步骤。 建议按照时间顺序按照该系列进行操作，以了解、执行和演示完整的教程用例。
 
 ## 关于教程{#about-the-tutorial}
 
-您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用随自适应表单编辑器提供的现成主题，或创建您自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在手机、平板电脑或桌面上打开的同一自适应表单提供不同的外观。 使用主题编辑器不需要任何CSS或LESS知识，但是是需要的。
+您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用随自适应表单编辑器提供的现成主题，也可以创建您自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的同一自适应表单提供不同的外观。 使用主题编辑器不需要任何先前的CSS或LESS知识，但是是需要它。
 
-在教程结束时，您将学习：
+在教程结束前，您将学习：
 
 * 将开箱即用主题应用于自适应表单
-* 使用主题编辑器创建自适应表单的主题
+* 使用主题编辑器为自适应表单创建主题
 * 设置单个组件的样式
 * 奖励部分：在自定义主题中使用Web字体
 
@@ -41,7 +42,7 @@ ht-degree: 8%
 
 ## 开始{#before-you-start}之前
 
-在您的本地机器上下载标题样式和徽标图像，如下所示。 `shipping-address-add-update-form`自适应表单的标题使用标题样式和徽标图像。 标题样式图像显示在标题的右侧。
+在本地机器上下载标题样式和徽标图像，如下所示。 `shipping-address-add-update-form`自适应表单的标题使用标题样式和徽标图像。 标题样式图像显示在标题的右侧。
 
 [获取文件](assets/header-style.png)
 
@@ -49,14 +50,14 @@ ht-degree: 8%
 
 ## 第1步：将主题应用于自适应表单{#step-apply-a-theme-to-your-adaptive-form}
 
-自适应表单编辑器提供多种现成主题。 如果您计划不为自适应表单使用自定义样式，则还可以使用现成的主题发布自适应表单。 主题独立于自适应表单。 您可以将同一主题应用于多个自适应表单。 要将主题应用于自适应表单，请执行以下操作：
+自适应表单编辑器提供多种开箱即用的主题。 如果您计划不为自适应表单使用自定义样式，则还可以使用现成的主题发布自适应表单。 主题独立于自适应表单。 您可以将同一主题应用于多个自适应表单。 将主题应用于自适应表单：
 
 1. 打开自适应表单进行编辑。
 
    [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-1. 打开&#x200B;**[!UICONTROL 自适应表单容器]**&#x200B;的属性。 在属性浏览器中，导航到&#x200B;**[!UICONTROL 基本]** > **[!UICONTROL 自适应表单主题]**。 **[!UICONTROL 自适应表单主题]**&#x200B;字段列表所有现成的和自定义的主题。 默认情况下，将应用画布主题。
-1. 从&#x200B;**[!UICONTROL 自适应表单主题]**&#x200B;字段中选择一个主题。 例如，**调查主题**。 点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以应用所选主题。
+1. 打开&#x200B;**[!UICONTROL 自适应表单容器]**&#x200B;的属性。 在属性浏览器中，导航到&#x200B;**[!UICONTROL 基本]** > **[!UICONTROL 自适应表单主题]**。 **[!UICONTROL 自适应表单主题]**&#x200B;字段列表所有现成和自定义主题。 默认情况下，将应用画布主题。
+1. 从&#x200B;**[!UICONTROL 自适应表单主题]**&#x200B;字段中选择主题。 例如，**调查主题**。 点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以应用所选主题。
 
    ![具有默认主题的自适应表单](assets/default-adaptive-form.png)
 
@@ -68,15 +69,15 @@ ht-degree: 8%
 
 ## 第2步：更新自适应表单{#step-update-your-adaptive-form}
 
-上面显示的设计需要更改现有自适应表单的占位符文本和徽标。 执行以下步骤以进行所需的更改：
+上面显示的设计要求更改现有自适应表单的占位符文本和徽标。 请执行以下步骤以进行所需的更改：
 
-1. 更改标题的现有徽标和文本。 删除标志：
+1. 更改标题的现有徽标和文本。 要删除标志：
 
    1. 在表单编辑器中打开表单。
 
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
-   1. 点按[!UICONTROL header]组件中的徽标图像，然后点按![cmppr](assets/cmppr.png) **[!UICONTROL 属性]**。 在[!UICONTROL image]属性中，点按X以删除现有标志图像。
+   1. 点按[!UICONTROL header]组件中的徽标图像，然后点按![cmppr](assets/cmppr.png) **[!UICONTROL 属性]**。 在[!UICONTROL image]属性中，点按X以删除现有徽标图像。
    1. 点按&#x200B;**[!UICONTROL upload]**，选择logo.png，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)以保存更改。 图像已下载到[开始](/help/forms/using/style-your-adaptive-form.md#before-you-start)部分之前。
    1. 点按标题文本`We.Retail`，然后点按![aem_6_3_edit](assets/aem_6_3_edit.png) **[!UICONTROL edit]**。 将标题文本更改为`we retail`。 仅对`we retail`中的`we`应用粗体格式。
 
@@ -89,31 +90,31 @@ ht-degree: 8%
    1. 删除&#x200B;**[!UICONTROL 标题]**&#x200B;字段的内容，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
    1. 对表单中的所有文本框、数字框和电子邮件字段重复前三个步骤。
 
-      ![更新的自适应表单](assets/updated-adaptive-form.png)
+      ![updated-adaptive-form](assets/updated-adaptive-form.png)
 
-## 第3步：为自适应表单创建自定义主题{#step-create-a-custom-theme-for-your-adaptive-form}
+## 第3步：为自适应表单{#step-create-a-custom-theme-for-your-adaptive-form}创建自定义主题
 
-可以使用[主题编辑器](/help/forms/using/themes.md)创建自定义主题。 主题编辑器是功能强大的WYSIWYG编辑器。 将CSS应用于自适应表单的各个组件是一种可视方法。 它为自适应表单的组件和面板提供了更精细的控制。
+可以使用[主题编辑器](/help/forms/using/themes.md)创建自定义主题。 主题编辑器是功能强大的WYSIWYG编辑器。 将CSS应用于自适应表单的各种组件是一种可视方法。 它为自适应表单的组件和面板提供了更精细的控件。
 
-主题是独立的实体，如自适应表单。 它包含自适应表单的组件和面板的样式(CSS)。 样式包括CSS属性，如背景颜色、状态颜色、透明度、对齐方式和大小。 应用主题时，指定的样式将应用于自适应表单的相应组件。
+主题是与自适应表单类似的单独实体。 它包含自适应表单的组件和面板的样式(CSS)。 样式包括CSS属性，如背景颜色、状态颜色、透明度、对齐方式和大小。 应用主题时，指定的样式将应用于自适应表单的相应组件。
 
 在本教程中，您将设置页眉和页脚、文本和数字组件、附件组件和按钮的样式。 让我们开始创建主题：
 
 ### 创建主题{#create-a-theme}
 
 1. 登录到AEM作者实例，然后导航到&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主题]**。 默认URL为[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
-1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;并选择&#x200B;**[!UICONTROL 主题]**。 将显示[!UICONTROL 创建主题]页，其中包含创建主题所需的字段。 **[!UICONTROL 标题]**&#x200B;和&#x200B;**[!UICONTROL 名称]**&#x200B;字段是必填字段：
+1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;并选择&#x200B;**[!UICONTROL 主题]**。 将显示[!UICONTROL 创建主题]页，其中包含创建主题所需的字段。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;字段为必填字段：
 
-   * **标题：** 指定主题的标题。例如，**全局主题。** 标题可帮助您从主题的列表中识别主题。
-   * **名称：** 指定主题的名称。例如，**Global-Theme。** 在存储库中创建具有指定名称的节点。当您开始键入标题时，将自动生成名称字段的值。 您可以更改建议的值。 名称字段只能包含字母数字字符、连字符和下划线。 所有无效输入都替换为连字符。
+   * **标题：** 指定主题的标题。例如，**全局主题。** 标题可帮助您从主题列表中识别主题。
+   * **名称：** 指定主题的名称。例如，**Global-Theme。** 将在存储库中创建具有指定名称的节点。当您开始键入标题时，将自动生成名称字段的值。 您可以更改建议的值。 名称字段只能包含字母数字字符、连字符和下划线。 所有无效输入都替换为连字符。
 
-1. 点按&#x200B;**[!UICONTROL 创建]**。将创建一个主题并显示一个用于打开表单进行编辑的对话框。 点按&#x200B;**[!UICONTROL 打开]**&#x200B;以在新选项卡中打开新创建的主题。 主题在主题编辑器中打开。 对于样式，主题编辑器使用AEM [!DNL Forms]附带的现成自适应表单。
+1. 点按&#x200B;**[!UICONTROL 创建]**。将创建一个主题，并显示一个用于打开表单进行编辑的对话框。 点按&#x200B;**[!UICONTROL 打开]**&#x200B;以在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM [!DNL Forms]附带的现成自适应表单。
 
    有关使用主题编辑器UI的信息，请参阅[关于主题编辑器](/help/forms/using/themes.md#aboutthethemeeditor)。
 
 1. 点按&#x200B;**[!UICONTROL 主题选项]** ![主题选项](assets/theme-options.png) > **[!UICONTROL 配置]**。 在&#x200B;**[!UICONTROL 预览表单]**&#x200B;字段中，选择&#x200B;**shipping-add-update-form**&#x200B;自适应表单，点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，点按&#x200B;**[!UICONTROL 保存]**。 现在，主题编辑器已配置为使用您自己的自适应表单而不是默认的自适应表单。 点按&#x200B;**[!UICONTROL 取消]**&#x200B;以返回主题编辑器。
 
-   ![自定主题](assets/custom-theme.png)
+   ![custom-theme](assets/custom-theme.png)
 
    **图：带** *有shipping-add-update-form自适应表单的主题编辑器*
 
@@ -123,9 +124,9 @@ ht-degree: 8%
 
 ### 样式页眉和页脚{#style-header-and-footer}
 
-页眉和页脚为自适应表单提供了一致且独特的外观。 通常，页眉包含组织的徽标和名称，页脚包含版权信息，并且这些信息在组织的多种形式中保持不变。 要设置shipping-add-update-form自适应表单的页眉和页脚的样式，请执行以下操作：
+页眉和页脚为自适应表单提供了一致和独特的外观。 通常，页眉包含组织的徽标和名称，页脚包含版权信息，并且这些信息在组织的多种形式中保持不变。 要设置shipping-add-update-form自适应表单的页眉和页脚的样式，请执行以下操作：
 
-1. 在“选择器”面板中导航&#x200B;**[!UICONTROL Header]** > **[!UICONTROL Text]**&#x200B;选项。 “选择器”面板位于主题编辑器的左侧。 如果该面板不可见，请点按![切换侧面板](assets/toggle-side-panel.png)切换侧面板。
+1. 在“选择器”面板中导航&#x200B;**[!UICONTROL Header]** > **[!UICONTROL Text]**&#x200B;选项。 “选择器”面板位于主题编辑器的左侧。 如果该面板不可见，请点按![ toggle-side-panel](assets/toggle-side-panel.png)“切换侧面板”。
 
 1. 在&#x200B;**[!UICONTROL Text]**&#x200B;折叠面板中设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -135,10 +136,10 @@ ht-degree: 8%
    | 字体颜色 | FFFFFF |
    | 字体大小 | 54px |
 
-1. 点按[!UICONTROL 头]构件，然后点按&#x200B;**[!UICONTROL 头]**。 用于设置标题构件样式的选项显示在左侧。 展开&#x200B;**[!UICONTROL Dimension和位置]**&#x200B;折叠面板，将&#x200B;**[!UICONTROL 高度]**&#x200B;设置为`120px`，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
-1. 展开头构件的&#x200B;**[!UICONTROL Background]**&#x200B;折叠面板，将&#x200B;**[!UICONTROL Background Color]**&#x200B;设置为`F6921E.`
+1. 点按[!UICONTROL 头]构件，然后点按&#x200B;**[!UICONTROL 头]**。 用于设置标题Widget样式的选项显示在左侧。 展开&#x200B;**[!UICONTROL Dimension和位置]**&#x200B;折叠面板，将&#x200B;**[!UICONTROL Height]**&#x200B;设置为`120px`，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 展开标题Widget的&#x200B;**[!UICONTROL Background]**&#x200B;折叠面板，将&#x200B;**[!UICONTROL Background Color]**&#x200B;设置为`F6921E.`
 
-   将指针悬停在&#x200B;**[!UICONTROL 图像和渐变]** > **[!UICONTROL +添加]**&#x200B;上，点按&#x200B;**[!UICONTROL 图像]**。 设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+   将鼠标悬停在&#x200B;**[!UICONTROL 图像和渐变]** > **[!UICONTROL +添加]**&#x200B;上，点按&#x200B;**[!UICONTROL 图像]**。 设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
    | 属性 | 值 |
    |---|---|
@@ -146,7 +147,7 @@ ht-degree: 8%
    | 位置 | 右下 |
    | 并排显示 | 不重复 |
 
-1. 在主题编辑器中，点按标题中的标志，然后点按&#x200B;**[!UICONTROL 标题标志]**。 展开“Dimension和位置”折叠面板，设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 在主题编辑器中，点按标题中的徽标，然后点按&#x200B;**[!UICONTROL 标题徽标]**。 展开“Dimension和位置”折叠面板，设置以下属性并点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
    <table> 
     <tbody> 
@@ -174,9 +175,9 @@ ht-degree: 8%
 
 ### 设置数据捕获组件的样式，并将背景应用于自适应表单{#style-the-data-capture-component-and-apply-a-background-to-the-adaptive-form}
 
-您可以在自适应表单中使用多个组件来捕获数据。 例如，文本框和数字框。 您可以为所有数据捕获组件提供相同的样式，或为每个组件提供单独的样式。 在本教程中，相同的样式将应用于数字框（客户ID、邮政编码）和文本框（客户ID、名称、送货地址、状态、电子邮件）。 设置数据捕获组件的样式：
+您可以在自适应表单中使用多个组件来捕获数据。 例如，文本框和数字框。 您可以提供与所有数据捕获组件相同的样式，或为每个组件提供单独的样式。 在本教程中，相同的样式将应用于数字框（客户ID、邮政编码）和文本框（客户ID、名称、发运地址、状态、电子邮件）。 要设置数据捕获组件的样式，请执行以下操作：
 
-1. 点按&#x200B;**[!UICONTROL 客户ID]**&#x200B;字段，然后点按&#x200B;**[!UICONTROL 字段构件]**&#x200B;选项。 设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
+1. 点按&#x200B;**[!UICONTROL 客户ID]**&#x200B;字段，然后点按&#x200B;**[!UICONTROL 字段小部件]**&#x200B;选项。 设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
    <table> 
     <tbody> 
@@ -214,7 +215,7 @@ ht-degree: 8%
      <tr> 
       <td>文本</td> 
       <td>字体大小</td> 
-      <td>18px</td> 
+      <td>18 px</td> 
      </tr> 
      <tr> 
       <td>Dimension和位置</td> 
@@ -236,9 +237,9 @@ ht-degree: 8%
 
    ![](do-not-localize/responsive-panel-container.png)
 
-### 设置按钮{#style-the-buttons}的样式
+### 设置按钮的样式{#style-the-buttons}
 
-您可以使用自定义主题将相同的样式应用于自适应表单的所有按钮，并[内联样式](/help/forms/using/inline-style-adaptive-forms.md)将样式应用于特定按钮。 设置按钮样式：
+您可以使用自定义主题将相同的样式应用于自适应表单的所有按钮，并[内联样式](/help/forms/using/inline-style-adaptive-forms.md)将样式应用于特定按钮。 设置按钮的样式：
 
 1. 点按&#x200B;**[!UICONTROL 提交]**&#x200B;按钮并点按&#x200B;**[!UICONTROL 按钮]**&#x200B;选项。 设置以下属性，然后点按![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
@@ -283,25 +284,25 @@ ht-degree: 8%
      <tr> 
       <td>文本</td> 
       <td>字体大小</td> 
-      <td>18px</td> 
+      <td>18 px</td> 
      </tr> 
     </tbody> 
    </table>
 
-1. [将自定义主题](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)“全局主题”应用于您的自适应表单。如果样式未反映在自适应表单上，请清除浏览器缓存，然后重试。
+1. [将自定义主题](/help/forms/using/style-your-adaptive-form.md#step-apply-a-theme-to-your-adaptive-form)“全局主题”应用到自适应表单。如果样式未反映在自适应表单上，请清除浏览器缓存，然后重试。
 
    ![style-data-capture-components](assets/style-data-capture-components.png)
 
 ## 第4步：设置单个组件{#step-style-individual-components}的样式
 
-某些样式仅适用于特定组件。 此类组件采用自适应表单编辑器设置样式。
+某些样式仅应用于特定组件。 这些组件采用自适应表单编辑器设置样式。
 
 1. 打开自适应表单进行编辑。 [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/change-billing-shipping-address.html)
 1. 在顶栏上，选择&#x200B;**[!UICONTROL 样式]**&#x200B;选项。
 
    ![样式选项](assets/style-option.png)
 
-1. 点按&#x200B;**[!UICONTROL 连接]**&#x200B;按钮并点按![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 在&#x200B;**[!UICONTROL Dimension和Position]**&#x200B;折叠面板中设置以下属性：
+1. 点按&#x200B;**[!UICONTROL 附加]**&#x200B;按钮并点按![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 在&#x200B;**[!UICONTROL Dimension和Position]**&#x200B;折叠面板中设置以下属性：
 
    | 属性 | 值 |
    |---|---|
@@ -332,7 +333,7 @@ ht-degree: 8%
       <td>边距</td> 
       <td> 
        <ul> 
-        <li>左：10px</li> 
+        <li>左：10 px</li> 
        </ul> </td> 
      </tr> 
      <tr> 
@@ -357,7 +358,7 @@ ht-degree: 8%
      <tr> 
       <td>边框</td> 
       <td>边框宽度</td> 
-      <td>1px</td> 
+      <td>1 px</td> 
      </tr> 
      <tr> 
       <td>边框</td> 
@@ -387,7 +388,7 @@ ht-degree: 8%
      <tr> 
       <td>文本</td> 
       <td>字体大小</td> 
-      <td>18px</td> 
+      <td>18 px</td> 
      </tr> 
      <tr> 
       <td>文本</td> 
@@ -436,24 +437,24 @@ ht-degree: 8%
     </tbody> 
    </table>
 
-   ![steed-adaptive-form-1](assets/styled-adaptive-form-1.png)
+   ![自适应格式–1](assets/styled-adaptive-form-1.png)
 
 ## 第5步：奖励部分：在自定义主题{#step-bonus-section-using-web-fonts-in-a-custom-theme}中使用Web字体
 
-您可以使用各种字体来设计自适应表单。 在查看自适应表单的所有设备可能没有用于设计自适应表单的字体。 您可以使用Web字体服务将所需的字体交付到目标设备。
+您可以使用各种字体来设计自适应表单。 查看自适应表单的所有设备可能没有用于设计自适应表单的字体。 您可以使用Web字体服务将所需的字体交付到目标设备。
 
 [!DNL Adobe Fonts] 是web字体服务。您可以配置和使用带有自适应表单的服务。 要在自适应表单中使用[!DNL Adobe Fonts]:
 
 >[!NOTE]
 >
->![typekit-to-adobe-](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] fontsis现在称为Adobe Fonts，包含在Creative Cloud和其他订阅中。[了解更多](https://fonts.adobe.com/).
+>![typekit-to-adobe-fontsis现在](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] 称为Adobe Fonts，随Creative Cloud和其他订阅提供。[了解更多](https://fonts.adobe.com/)。
 
-1. 创建[Adobe Fonts](https://typekit.com/)帐户，创建工具包，将字体MyriadPro添加到工具包，发布工具包，并获取工具包ID。 需要在自适应表单中使用[!DNL Adobe Fonts]（Web字体）。
-1. 在AEM [!DNL Forms]服务器中，导航至![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** ![锤子](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**。 现在，打开一个配置文件夹。 如果某个配置已可用，请单击&#x200B;**[!UICONTROL 创建]**&#x200B;按钮以创建新实例。
+1. 创建[Adobe Fonts](https://typekit.com/)帐户，创建工具包，将字体Myriad Pro添加到工具包，发布工具包，并获取工具包ID。 需要在自适应表单中使用[!DNL Adobe Fonts]（Web字体）。
+1. 在AEM [!DNL Forms]服务器中，导航到![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** ![锤子](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**。 现在，打开一个配置文件夹。 如果某个配置已可用，请单击&#x200B;**[!UICONTROL 创建]**&#x200B;按钮以创建新实例。
 
-   在“创建配置”对话框中，指定配置的&#x200B;**标题**，然后单击&#x200B;**[!UICONTROL 创建]**。 您将被重定向到配置页面。 在显示的[!UICONTROL 编辑组件]对话框中，提供&#x200B;**工具包ID**&#x200B;并单击&#x200B;**[!UICONTROL 确定]**。
+   在“创建配置”对话框中，为配置指定&#x200B;**标题**，然后单击&#x200B;**[!UICONTROL 创建]**。 您将被重定向到配置页面。 在出现的[!UICONTROL 编辑组件]对话框中，提供&#x200B;**工具包ID**&#x200B;并单击&#x200B;**[!UICONTROL 确定]**。
 
-1. 将主题配置为使用[!DNL Adobe Fonts]配置。 在创作实例中，打开主题编辑器中的&#x200B;**[!UICONTROL 全局主题]**。 在主题编辑器中，导航到&#x200B;**[!UICONTROL 主题选项]** ![主题选项](assets/theme-options.png) > **[!UICONTROL 配置]**。 在&#x200B;**[!UICONTROL Adobe Fonts配置]**&#x200B;字段中，选择工具包，然后单击&#x200B;**[!UICONTROL 保存]**。
+1. 配置主题以使用[!DNL Adobe Fonts]配置。 在创作实例中，在主题编辑器中打开&#x200B;**[!UICONTROL 全局主题]**。 在主题编辑器中，导航到&#x200B;**[!UICONTROL 主题选项]** ![主题选项](assets/theme-options.png) > **[!UICONTROL 配置]**。 在&#x200B;**[!UICONTROL Adobe Fonts配置]**&#x200B;字段中，选择工具包，然后单击&#x200B;**[!UICONTROL 保存]**。
 
    添加到&#x200B;**[!UICONTROL Adobe Fonts]**&#x200B;的字体可在所有组件的&#x200B;**[!UICONTROL Text]**&#x200B;折叠面板中进行选择。
 
