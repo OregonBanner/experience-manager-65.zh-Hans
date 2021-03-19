@@ -1,6 +1,6 @@
 ---
 title: 交互式视频
-description: 了解如何在Dynamic Media中处理交互式视频和购物视频
+description: 了解如何在Dynamic Media中使用交互式视频和购物视频
 uuid: c3ff6839-fff5-4709-8163-5c4245b80e6d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,11 +8,13 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
+feature: 交互式视频
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '6056'
-ht-degree: 25%
+source-wordcount: '6061'
+ht-degree: 26%
 
 ---
 
@@ -29,17 +31,17 @@ ht-degree: 25%
 
 要查看交互式购物视频的实际操作情况，请单击[实时演示](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)，滚动到页面上的&#x200B;**[!UICONTROL 购物媒体]**&#x200B;标题，然后单击购物视频。
 
-* 在播放过程中，当视频中使用产品时，相同的产品以缩略图的形式显示在右侧。
+* 在播放过程中，当视频中使用产品时，相同的产品以缩略图图像的形式显示在右侧。
 
-* 单击缩略图以暂停视频并打开产品的概览。 例如，单击视频中的KitchenAid缩览图图像，体验混色器的360度旋转视图，或放大以查看混色器详细信息。
+* 单击缩略图以暂停视频并打开产品的概览。 例如，单击视频中的KitchenAid缩览图图像可体验混合器的360度旋转视图，或放大以查看混合器详细信息。
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
-![交互式购物视频中的帧](assets/chlimage_1-126.png) *交互式购物视频中的视频帧捕获。*
+![交互式购物视频中的帧 — ](assets/chlimage_1-126.png) *从交互式购物视频中捕获的视频帧。*
 
 >[!NOTE]
 >
->如果您创建交互式视频以在用户单击缩略图时启动网页，某些设备将阻止打开弹出网页。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点按&#x200B;**[!UICONTROL 设置]** > **Safari** > **阻止弹出窗口**，然后将控件滑动到&#x200B;**[!UICONTROL 关闭]**。 现在，当您播放交互式视频并单击缩略图时，如果要打开弹出窗口，将提示您。 如果您接受，则将打开网页。
+>如果您创建交互式视频以在用户单击缩略图时启动网页，则某些设备将阻止打开弹出式网页。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点按&#x200B;**[!UICONTROL 设置]** > **Safari** > **阻止弹出窗口**，然后将控件滑动到&#x200B;**[!UICONTROL 关闭]**。 现在，当您播放交互式视频并单击缩略图时，系统会提示您是否要打开弹出窗口。 如果您接受，将打开网页。
 
 ### 观看如何创建交互式视频{#watch-how-interactive-videos-are-created}
 
@@ -48,10 +50,10 @@ ht-degree: 25%
 
 ### Adobe 客户成功网络研讨会 {#adobe-customer-success-webinar}
 
-“使用AEM Assets的交互式视频、链接共享和YouTube共享”网络研讨会教您如何使用交互式视频和其他功能将转化驱动的事件绑定到视频营销内容中。
+“在AEM Assets中使用交互式视频、链接共享和YouTube共享”网络研讨会教您如何使用交互式视频和其他功能将转化驱动的事件绑定到视频营销内容中。
 
 >[!NOTE]
-[在 AEM 资产中使用交互式视频、链接共享和 YouTube 共享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/).
+[在 AEM Assets 中使用交互式视频、链接共享和 YouTube 共享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
 
 ## 快速入门：交互式视频 {#quick-start-interactive-videos}
 
@@ -63,53 +65,53 @@ ht-degree: 25%
 
 **示例**&#x200B;有助于说明在您的网站上集成交互式视频的步骤。
 
-完成上一个示例部分中的教程后，具有完全集成的交互式视频的最终演示网页将如下所示：
+当您完成上一个示例部分中的教程后，具有完全集成的交互式视频的最终演示网页将如下所示：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
 
 交互式视频步骤：
 
-1. **（可选）通过识别现有** Quickview实施所使用的动态变量来识别Quickview变量-开始。在创建交互式视频时，可以使用变量将产品缩略图映射到相应的产品概览。 请参阅[（可选）识别概览变量](#optional-identifying-quickview-variables)。
-   *请注意，仅当以下所有情况均为真时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您对AEM does *not*&#x200B;的实施使用eCommerce integration framework从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）将产品数据拉入AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
+1. **（可选）识别概览变量**  — 通过识别现有概览实施所使用的动态变量来识别开始。在创建交互式视频时，可以使用变量将产品缩略图映射到相应的产品概览。 请参阅[（可选）识别Quickview变量](#optional-identifying-quickview-variables)。
+   *请注意，仅当以下所有条件均为真时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
 
-1. **（可选）创建交互式视频查看器预设** -自定义组成播放器的各种组件的外观和行为，如视频浏览条和交互式缩略图。如果您打算改用现成的交互式视频查看器预设`Shoppable_Video_Light`或`Shoppable_Video_Dark`，则无需创建自己的交互式视频查看器预设。
+1. **（可选）创建交互式视频查看器预设**  — 自定义组成播放器的各种组件的外观和行为，如视频浏览条和交互式缩略图。如果您打算使用现成的交互式视频查看器预设`Shoppable_Video_Light`或`Shoppable_Video_Dark`，则无需创建您自己的交互式视频查看器预设。
 请参阅[创建新查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（这是可选的）和[创建交互式查看器预设的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
 
-1. **上传视频及其关联的图像资产** -上传您要实现交互的视频和关联图像。请参阅[上传视频及其关联的缩略图资产](#uploading-a-video-and-its-associated-thumbnail-assets)。
+1. **上传视频及其关联的图像资产**  — 上传您要实现交互的视频和关联的图像。请参阅[上传视频及其关联的缩略图资产](#uploading-a-video-and-its-associated-thumbnail-assets)。
 
 
-1. **为视频添加交互性** -为视频添加一个或多个时间段。然后，将这些时间段内的图像缩略图关联起来。 将每个图像缩略图分配给操作，如超链接、概览或体验片段。
+1. **为视频添加交互性**  — 向视频添加一个或多个时间段。然后，将这些时间段中的图像缩略图关联起来。 将每个图像缩略图分配给操作，如超链接、概览或体验片段。
 (请注意，如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。)
-最后，发布交互式视频资源。 发布会创建嵌入代码或URL，您最终将将该嵌入代码或URL复制并应用于您的网站登陆页。请参阅[向视频添加交互性](#adding-interactivity-to-your-video)。
+最后，发布交互式视频资产。 发布后会创建嵌入代码或URL，您最终会将该嵌入代码或URL复制并应用到您的网站登陆页。请参阅[向视频添加交互性](#adding-interactivity-to-your-video)。
 请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **将交互式视频添加到您的网站或您在AEMI中的网站**
-(如果您使用AEM Sites、AEM eCommerce，或同时使用两者)，则可以通过将交互式媒体组件拖动到页面上，将交互式视频直接添加到AEM的网页中。请参阅[将Dynamic Media资产添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
-使用嵌入代码或URL将交互式视频与您的网站体验相集成。请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
-如果您使用第三方WCM（Web内容管理器），则必须将新的交互式视频与网站上使用的现有Quickview实现相集成。 请参阅[将交互式视频与现有Quickview](#integrating-an-interactive-video-with-an-existing-quickview)集成。
+1. **将交互式视频添加到您的网站或您在AEMI中的网**
+站如果您使用AEM Sites或AEM eCommerce，或同时使用两者，则可以通过将交互式媒体组件拖动到页面上，将交互式视频直接添加到AEM的网页中。请参阅[将Dynamic Media资产添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
+使用嵌入代码或URL将交互式视频集成到您的网站体验。请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
+如果您使用第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有Quickview实施相集成。 请参阅[将交互式视频与现有Quickview](#integrating-an-interactive-video-with-an-existing-quickview)集成。
    [将 Dynamic Media 资产添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## （可选）识别Quickview变量{#optional-identifying-quickview-variables}
 
 >[!NOTE]
-仅当满足以下条件时，才需要此任务:
-* 您希望通过触发Quickviews向视频添加交互性。
-* 您对AEM的实施does *not*&#x200B;使用eCommerce integration framework从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）将产品数据拉入AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
+只有在以下情况下才需要此任务:
+* 您希望通过触发Quickviews来为视频添加交互性。
+* 您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
 
 如果您的AEM实施使用电子商务，则可以跳过此任务并继续到下一个任务。
 
-开始，识别现有Quickview实施所使用的动态变量，以便在交互式视频创建过程中将产品缩略图映射到相应的产品Quickview。
+开始，您可以识别现有Quickview实施所使用的动态变量，以便在交互式视频创建过程中将产品缩略图映射到相应的产品Quickview。
 
-在将时间区段添加到视频时，您需要为添加到区段的每个缩略图分配一个 SKU 及其他任何变量。以后会使用这些变量显示正确的Quickview产品。
+在将时间区段添加到视频时，您需要为添加到区段的每个缩略图分配一个 SKU 及其他任何变量。以后会使用这些变量来显示正确的Quickview产品。
 
 必须准确地识别唯一触发产品概览所需的变量，这一点很重要。
 
-有时，可能需要向负责现有Quickview实施的IT专家咨询。 他们可能知道在系统中识别概览所需的最少数据集。 但在大多数情况下，可能只需简单地分析前端代码的现有行为即可。
+有时可能需要向负责现有Quickview实施的IT专家咨询。 他们可能了解在系统中识别Quickview所需的最少数据集。 但在大多数情况下，可能只需简单地分析前端代码的现有行为即可。
 
-大多数Quickview实施都采用以下模式：
+大多数Quickview实施采用以下模式：
 
 * 用户在网站上激活用户界面元素。例如，单击“Quickview”按钮。
-* 如果需要，网站会向后端发送Ajax请求以加载概览数据或内容。
+* 如果需要，网站会向后端发送Ajax请求以加载Quickview数据或内容。
 * Quickview数据将转换为准备在网页上呈现的内容。
 * 最后，前端代码以可视形式将这些内容呈现在屏幕上。
 
@@ -125,13 +127,13 @@ ht-degree: 25%
 
 在浏览器中打开网络监视时，在页面上触发概览。
 
-现在，在网络日志中找到Quickview Ajax URL，并复制记录的URL供将来分析。 在大多数情况下，当您触发Quickview时，会向服务器发出大量请求。 通常，Quickview Ajax URL是列表中最早的URL之一。 它有复杂的查询字符串部分或路径，其响应MIME类型为`text/html`、`text/xml`或`text/javascript`。
+现在，在网络日志中找到Quickview Ajax URL，并复制记录的URL以供将来分析。 在大多数情况下，触发Quickview时，会有许多请求发送到服务器。 通常，Quickview Ajax URL是列表中第一个。 它具有复杂的查询字符串部分或路径，其响应MIME类型为`text/html`、`text/xml`或`text/javascript`。
 
-在此过程中，访问网站的不同区域(具有不同的产品类别和类型)非常重要。 其原因是，Quickview URL可能具有特定网站类别通用的部分，但仅在您访问网站的其他区域时更改。
+在此过程中，访问网站中具有不同产品类别和类型的不同区域非常重要。 原因是，Quickview URL可能具有特定网站类别的通用部分，但仅在您访问网站的其他区域时更改。
 
-在最简单的情况下，Quickview URL中唯一的变量部分是产品SKU。 在这种情况下，产品SKU值是向AEM交互式视频中的某个时间段添加缩略图时唯一需要的数据。
+在最简单的情况下，Quickview URL中唯一的变量部分是产品SKU。 在这种情况下，产品SKU值是向AEM中交互式视频中的某个时间区段添加缩略图时唯一需要的数据。
 
-但是，在复杂情况下，Quickview URL除了产品SKU之外还具有不同的可变元素，如类别ID、颜色代码等。 在这种情况下，AEM的缩略图数据定义中的每个此类元素都会成为单独的变量。
+但是，在复杂情况下，Quickview URL除了产品SKU之外还具有不同的可变元素，如类别ID、颜色代码等。 在这种情况下，每个此类元素都会在AEM的缩略图数据定义中成为一个单独的变量。
 
 请考虑以下Quickview URL及其生成的缩略图变量示例：
 
@@ -145,7 +147,7 @@ ht-degree: 25%
       <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>URL中唯一的变量部分是<code>productId=</code>查询字符串参数的值，它显然是SKU值。 因此，我们的缩略图只需要填入<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>等值的SKU字段。</p> </td>
+    </ul> <p>URL中唯一的变量部分是<code>productId=</code>查询字符串参数的值，很明显它是SKU值。 因此，我们的缩略图只需在SKU字段中填充<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>等值即可。</p> </td>
   </tr>
   <tr>
     <td><p>单个 SKU，位于 URL 路径中。</p> </td>
@@ -154,7 +156,7 @@ ht-degree: 25%
       <li><p><code>https://server/product/6422350843</code></p> </li>
       <li><p><code>https://server/product/1607745002</code></p> </li>
       <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>变量部分位于路径的最后一部分，它成为AEM缩略图的SKU值：<strong><code>6422350843</code></strong>、<strong><code>1607745002</code></strong>、<strong><code>0086724882</code></strong>。</p> </td>
+    </ul> <p>变量部分位于路径的最后一部分，并成为AEM缩略图的SKU值：<strong><code>6422350843</code></strong>、<strong><code>1607745002</code></strong>、<strong><code>0086724882</code></strong>。</p> </td>
   </tr>
   <tr>
     <td><p>SKU 和类别 ID，位于查询字符串中。</p> </td>
@@ -175,11 +177,11 @@ ht-degree: 25%
 
 **示例**
 
-将上述方法应用于我们的示例网站时，我们的网页包含许多产品缩略图，每个缩略图都有一个“SEE MORE”按钮：
+将上述方法应用于示例网站时，我们的网页中包含许多产品缩略图，每个缩略图都包含“查看更多”按钮：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
-在激活页面上可用的所有产品概览后，您将获得向后端发出的概览请求的以下列表:
+在激活页面上所有可用的产品概览后，您将获得对向后端发出的概览请求的以下列表:
 
 * datafeed/candles-233396346.json
 * datafeed/candles-233978050.json
@@ -202,18 +204,18 @@ ht-degree: 25%
 * datafeed/glassware-233916550.json
 * datafeed/glassware-233916597.json
 
-通过查看这些服务器调用，您会发现只有请求路径中存在产品特定信息。 您还注意到查询字符串根本未使用，并且涉及两种不同类型的数据：
+查看这些服务器调用，您会发现只有请求路径中存在产品特定信息。 您还会注意到，查询字符串根本未使用，并且涉及两种不同类型的数据段：
 
-* 第一种是蜡烛，垫子，家具，玻璃器皿。 您可以称此为“产品类别”。
-* 第二种类型是产品代码，如233916597。 您可以假定它是“产品SKU”。
+* 第一种是蜡烛，垫子，家具和玻璃器皿。 您可以称此为“产品类别”。
+* 第二种类型是产品代码，如233916597。 您可以假设它为“产品SKU”。
 
 根据此信息，整个Quickview URL具有以下模式：
 
 `/datafeed/$categoryId$-$SKU$.json`
 
-根据此分析，您可以得出以下两个变量作为缩略图：`categoryId`和`SKU`。
+基于此分析，您得出的结论是，您可以对缩略图使用以下两个变量：`categoryId`和`SKU`。
 
-您现在可以上传视频及其关联的缩略图资产。
+现在，您便可以上传视频及其关联的缩略图资产了。
 
 ## （可选）创建交互式视频查看器预设{#optional-creating-an-interactive-video-viewer-preset}
 
@@ -221,11 +223,11 @@ ht-degree: 25%
 
 在创作环境中单击缩略图时，将显示“概览”对话框的预览。
 
-![chlimage_1-29](assets/chlimage_1-127.png)
+![chlimage_1-21](assets/chlimage_1-127.png)
 
-您可以选择创建自己的自定义交互式视频查看器预设。 您可以确定视频播放器的样式、交互式缩略图以及显示在视频末尾的缩略图网格视图。
+您可以选择创建自己的自定义交互式视频查看器预设。 您可以确定视频播放器的样式、交互式缩略图以及显示在视频末尾的缩略图网格视图等。
 
-交互式视频查看器预设能够准确地呈现您添加的视频和所有时间轴区段。在预览模式下单击产品缩略图时，它还使用默认概览示例，这样您就可以在发布前测试其交互性。
+交互式视频查看器预设能够准确地呈现您添加的视频和所有时间轴区段。当您在预览模式下单击产品缩略图时，它还会使用一个默认概览示例，以便您在发布前可以测试其交互性。
 
 保存查看器预设后，“查看器预设”页面中的查看器预设状态将自动设置为 **开**。此状态表明查看器预设在 Dynamic Media 组件中可见，预览视频时也可见。另请确保手动发布新查看器预设。
 
@@ -235,7 +237,7 @@ ht-degree: 25%
 
 如果您已经上传了视频和缩略图资产，请继续执行[向视频添加交互性](#adding-interactivity-to-your-video)。
 
-如果您上传了错误的视频或图像，或者希望删除不再需要的上传视频或图像，请参阅[删除资产](/help/assets/manage-assets.md#deleting-assets)。
+如果您上传了错误的视频或图像，或者想要删除不再需要的已上传视频或图像，请参阅[删除资产](/help/assets/manage-assets.md#deleting-assets)。
 
 要上传视频及其关联的缩略图资产，请执行以下操作：
 
@@ -250,19 +252,19 @@ ht-degree: 25%
 
 您可以使用“创建交互式视频”页面上的就地可视编辑器，向视频添加时间轴区段。
 
-在添加时间轴区段后，您可以在每个区段内添加缩略图。对于添加的每个缩略图，您可以分别应用一个操作。例如，您可以将概览应用到缩略图，也可以为其分配超链接或体验片段。
+在添加时间轴区段后，您可以在每个区段内添加缩略图。对于添加的每个缩略图，您可以分别应用一个操作。例如，您可以将Quickview应用到缩略图，也可以为其分配超链接或体验片段。
 
 请参阅[体验片段](/help/sites-authoring/experience-fragments.md)。
 
 >[!NOTE]
-请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
+请注意，当您将查看器嵌入体验片段时，交互式视频中不支持社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 此类查看器预设使您能够成功地将其嵌入到体验片段中。
 
 >[!NOTE]
-如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
-在当前创建／编辑会话中，页面右上角附近支持撤消和重做选项。
+在当前创建/编辑会话中，页面右上角附近支持撤消和重做选项。
 
-保存交互式视频后，视频会立即打开到预览。您可以从中选择交互式视频查看器预设并播放视频，大致了解交互式视频将如何呈现给客户。
+在保存交互式视频后，视频会立即在预览中打开。从中，您可以选择交互式视频查看器预设并播放视频，大致了解交互式视频将如何呈现给客户。
 
 要为视频添加交互性，请执行以下操作：
 
@@ -271,9 +273,9 @@ ht-degree: 25%
 
    * 将鼠标悬停在图像上，然后点按&#x200B;**[!UICONTROL 选择]**（复选标记图标）。 在工具栏中，点按&#x200B;**[!UICONTROL 编辑。]**
 
-   * 将鼠标悬停在图像上，然后点按&#x200B;**[!UICONTROL 更多操作]**（三个点图标）**[!UICONTROL 编辑。]**
+   * 将鼠标悬停在图像上，然后点按&#x200B;**[!UICONTROL 更多操作]**（三个点图标）**[!UICONTROL >编辑。]**
 
-   * 点按图像以在“详细信息”视图页中将其打开。 在工具栏中，点按&#x200B;**[!UICONTROL 编辑。]**
+   * 点按图像以在“详细信息”视图页中打开它。 在工具栏中，点按&#x200B;**[!UICONTROL 编辑。]**
 
 1. 在“创建交互式视频”页面中，执行以下任一操作：
 
@@ -283,7 +285,7 @@ ht-degree: 25%
 
       对于您添加的每个时间区段，您可以向其分配一个或多个缩略图，然后将这些缩略图链接到Quickview产品页面供客户购买，或链接到网页以了解更多信息。
 
-   * 点按&#x200B;**[!UICONTROL 播放]**&#x200B;按钮开始播放视频。当要突出显示的特定产品、服务或详细信息进入视图时，点按&#x200B;**[!UICONTROL 暂停。]**&#x200B;点按&#x200B;**[!UICONTROL 添加区段。]**
+   * 点按&#x200B;**[!UICONTROL 播放]**&#x200B;按钮开始播放视频。当您要突出显示的特定产品、服务或详细信息进入视图时，点按&#x200B;**[!UICONTROL 暂停。]**&#x200B;点按&#x200B;**[!UICONTROL 添加区段。]**
 
       继续播放视频，并在您要添加区段的时间轴点处暂停视频，直到视频结束。
 
@@ -291,13 +293,13 @@ ht-degree: 25%
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
-   根据视频的长度，“区段持续时间”默认为以下值：
+   根据视频的长度，区段持续时间默认为以下值：
 
    <table>
       <tbody>
         <tr>
         <td><strong>如果视频长度为……</strong></td>
-        <td><strong>“区段持续时间”设置默认为……</strong></td>
+        <td><strong>区段持续时间设置默认为……</strong></td>
         </tr>
         <tr>
         <td>3分钟或更多</td>
@@ -324,25 +326,25 @@ ht-degree: 25%
 
    视频时间轴使用的屏幕空间与它可用的屏幕空间一样多。 因此，在调整浏览器大小时，您添加的区段会保持其正确的宽度。
 
-   为了说明这一点，以下三个屏幕截图使用同一个视频。 请注意，每个区段的宽度会根据时间轴比例设置而改变。
+   为说明这一点，以下三个屏幕截图使用同一视频。 请注意，每个区段的宽度会根据时间轴缩放设置而改变。
 
    ![chlimage_1-23](assets/chlimage_1-129.png)
 
    屏幕截图A
 
-   以上屏幕截图A显示了29秒产品视频的默认视图。 时间轴比例设置为默认的5秒。
+   屏幕截图上面显示了29秒产品视频的默认视图。 时间轴缩放设置为默认的5秒。
 
    ![chlimage_1-130](assets/chlimage_1-130.png)
 
    屏幕截图B
 
-   在上面的屏幕截图B中，时间轴缩放滑块从默认的5秒到3秒拖动。 请注意，单个时间轴比例时间戳现在都以3秒的间隔设置。
+   在上面的屏幕截图B中，将时间轴缩放滑块从默认的5秒到3秒拖动。 请注意，现在以3秒间隔设置单个时间轴缩放时间戳。
 
    ![chlimage_1-25](assets/chlimage_1-131.png)
 
    屏幕截图C
 
-   在上面的屏幕截图C中，“时间轴缩放”设置被移动到8秒。 请注意，包含产品缩略图的区段已缩小。 如果您有较长的视频并且希望能够看到通常适合页面宽度的更多区段的概述，以这种方式进行缩小很有用。
+   在上面的截屏C中，时间轴缩放设置已移动到8秒。 注意包含产品缩略图的细分已收缩。 如果您的视频较长，并且希望能够看到通常适合页面宽度的更多区段的概述，以这种方式缩小很有用。
 
 1. （可选）执行以下操作之一：
 
@@ -350,7 +352,7 @@ ht-degree: 25%
 
 
 
-      选择一个区段，然后拖动前导或尾部蓝色椭圆以分别调整开始或结束时间。 显示的视频帧会根据您的调整，移动到视频中的相应时间。时间轴区段的移动会受到时间轴中任意相邻区段的限制。最少允许区段有一秒钟的时长。
+      选择一个段，然后拖动前导或尾部蓝色椭圆以分别调整开始或结束时间。 显示的视频帧会根据您的调整，移动到视频中的相应时间。时间轴区段的移动会受到时间轴中任意相邻区段的限制。最少允许区段有一秒钟的时长。
 
 
 
@@ -358,7 +360,7 @@ ht-degree: 25%
 
 
       * 点按前导蓝色椭圆，将视频直接搜索到该区段的开头。
-      * 点按尾部蓝色椭圆，将视频直接搜索到该段的末尾。
+      * 点按尾部蓝色椭圆，将视频直接搜索到该区段的末尾。
       * 点按整个区段，使视频播放返回到该区段的开头。
 
    ![chlimage_1-26](assets/chlimage_1-132.png)
@@ -367,14 +369,14 @@ ht-degree: 25%
 
    * 删除区段
 
-      选择时间轴上的最后一个区段，然后点按工具栏中的&#x200B;**[!UICONTROL 删除区段。]** 如果选择了两个或多个段，则会禁用“删除段”功能。
+      选择时间轴上的最后一个区段，然后点按工具栏中的&#x200B;**[!UICONTROL 删除区段。]** 如果选择了两个或多个区段，则会禁用“删除区段”功能。
 
       您只能删除最后一个区段。例如，如果要删除时间轴上的所有区段，则必须始终选择最后一个区段，然后点按&#x200B;**[!UICONTROL 删除区段。]**
 
 
-1. 选择要将一个或多个缩略图关联到的时间区段。
+1. 选择您要为其关联一个或多个缩略图的时间区段。
 1. 在视频右侧，点按&#x200B;**[!UICONTROL 内容]**&#x200B;选项卡。
-1. 在“内容”选项卡下，点按&#x200B;**[!UICONTROL 选择资产]**，然后浏览并选择您要用于视频的所有图像资产。 选定的资产会添加到“内容”选项卡的“资产选择器”面板。
+1. 在“内容”选项卡下，点按&#x200B;**[!UICONTROL 选择资产]**，然后浏览并选择您要用于视频的所有图像资产。 选定的资产将添加到“内容”选项卡的“资产选择器”面板。
 
 1. 在“内容”选项卡下的资产选择器中，执行下列任一操作：
 
@@ -382,13 +384,13 @@ ht-degree: 25%
       <tbody>
         <tr>
         <td>将缩略图关联到选定的时间轴区段</td>
-        <td><p>点按右侧资产选择器面板中的图像。</p> <p>您可以向时间轴区段中添加任意所需数量的缩略图。对于您选择的每个图像，资产选择器中相应图像的上方便会出现一个对勾标记。</p> </td>
+        <td><p>点按右侧“资产选择器”面板中的图像。</p> <p>您可以向时间轴区段中添加任意所需数量的缩略图。对于您选择的每个图像，资产选择器中相应图像的上方便会出现一个对勾标记。</p> </td>
         </tr>
         <tr>
         <td>将缩略图从选定的时间轴区段中删除</td>
         <td><p>执行以下操作之一：</p>
           <ul>
-          <li>在资产选择器面板中，点按带有复选标记的图像以取消选择它。 图像资产将从时间轴区段中删除。<br /> </li>
+          <li>在“资源选择器”面板中，点按带有复选标记的图像以取消选择它。 图像资产将从时间轴区段中删除。<br /> </li>
           <li>在选定的时间轴区段中，点按一幅图像，然后点按工具栏中的<strong>删除产品</strong>。</li>
           </ul> </td>
         </tr>
@@ -397,7 +399,7 @@ ht-degree: 25%
 
    ![资产选取器](assets/chlimage_1-133.png)
 
-   点击资产选择器面板中的图像会将其添加到选定的时间轴区段。
+   点击“资产选择器”面板中的图像会将其添加到选定的时间轴区段。
 
 1. 在某个时间轴区段内选择一个缩略图，然后点按&#x200B;**[!UICONTROL 操作]**&#x200B;选项卡。
 1. 执行以下操作之一：
@@ -405,22 +407,22 @@ ht-degree: 25%
     <tbody> 
       <tr> 
       <td>将所选缩略图与概览相关联</td> 
-      <td><p>在“操作类型”下，点按<strong>Quickview</strong>。</p> <p>如果您是AEM Sites和电子商务客户：</p> 
+      <td><p>在“操作类型”下，点按<strong>Quickview</strong>。</p> <p>如果您是AEM Sites和Ecommerce客户：</p> 
        <ul> 
-       <li>请注意，“SKU 值”文本字段会预先填充选定产品的 SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。当图像与AEM Commerce中的产品关联时，会自动填充该字段。</li> 
+       <li>请注意，“SKU 值”文本字段会预先填充选定产品的 SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。当图像与AEM Commerce中的产品关联时，会自动填充此字段。</li> 
        <li>如果预填充的SKU不正确，请点按或单击产品选取器图标（放大镜）以打开选择产品页面。 点按或单击要使用的产品，然后点按页面右上角的复选标记，以返回到交互式视频编辑器。</li> 
-       </ul> <p> 如果您是<em>不是</em>AEM Sites或电子商务客户</p> 
+       </ul> <p> 如果您是<em>不是</em>AEM Sites或Ecommerce客户</p> 
        <ul> 
        <li>请参阅<a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">识别热点变量</a>。您需要定义这些变量。 </li> 
        <li>默认情况下，此SKU字段使用图像资产的文件名，但不带扩展名。 如果您的基于 SKU 的文件遵循标准的命名规范，则通常不需要进行任何额外的编辑。 </li> 
-       <li>否则，请编辑默认值并输入正确的SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），即您优惠的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充概览模板的变量部分，以便系统能够将点击的图像与特定SKU的概览相关联。</li> 
+       <li>否则，请编辑默认值并输入正确的SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），即您所优惠的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充Quickview模板的变量部分，以便系统能够将点按的图像与特定SKU的Quickview关联。</li> 
        </ul> <p>（可选）如果您需要在概览中使用其他变量来进一步标识产品，请点按<strong>添加常规变量</strong>。 在文本字段中，指定其他变量。 例如，<code>category=Womens</code> 就是一个添加的变量。</p> <p> </p> </td> 
       </tr> 
       <tr> 
       <td>将选定的缩略图与超链接相关联</td> 
-      <td><p>在“操作类型”下，点按<strong>超链接</strong>，然后执行下列操作之一：</p> 
+      <td><p>在“操作类型”下，点按<strong>超链接</strong>，然后执行以下操作之一：</p> 
        <ul> 
-       <li>如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到网页。 请注意，如果您的交互式内容包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。</li> 
+       <li>如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到网页。 请注意，如果您的交互式内容包含带有相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。</li> 
        <li>如果您是独立的Dynamic Media客户，请在“HREF”文本字段中指定链接网页的完整URL路径。</li> 
        </ul> <p>请确保指定是在新的浏览器选项卡还是在当前的选项卡中打开链接。</p> </td> 
       </tr> 
@@ -428,18 +430,18 @@ ht-degree: 25%
       <td>将所选缩略图与体验片段关联</td> 
       <td><p>在操作类型下，点按<strong>体验片段</strong>，然后执行以下操作：<p> 
        <ul> 
-       <li>如果您是AEM Sites客户，请点按或单击搜索图标（放大镜）以打开体验片段页面。 点按或单击要使用的体验片段，然后点按页面右上角的<strong>选择</strong>以返回到上一页上的“操作”面板。<br /> 请参 <a href="/help/sites-authoring/experience-fragments.md">阅体验片段</a>。</li> 
+       <li>如果您是AEM Sites客户，请点按或单击搜索图标（放大镜）以打开体验片段页面。 点按或单击要使用的体验片段，然后点按页面右上角的<strong>选择</strong>以返回到上一页的“操作”面板。<br /> 请参 <a href="/help/sites-authoring/experience-fragments.md">阅体验片段</a>。</li> 
       </ul> 
        <ul> 
-       <li>指定体验片段在视频中的显示方式，如同其宽度和高度一样。</li>
-       </ul><strong>注意</strong>:请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。</p></tr>&lt;&gt; 
+       <li>指定体验片段在视频中显示的宽度和高度。</li>
+       </ul><strong>注意</strong>:请注意，当您将查看器嵌入体验片段时，交互式视频中不支持社交媒体共享工具。要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 此类查看器预设使您能够成功地将其嵌入到体验片段中。</p></tr>&lt;&gt; 
       <tr> 
       <td>编辑已分配给缩略图的操作</td> 
       <td>在某个时间轴区段内，点按其文本标签右侧带有链式链接的缩略图。该链式链接表示已向该缩略图分配操作。点按<strong>操作</strong>选项卡以进行更改。</td> 
       </tr> 
       <tr> 
       <td>更改缩略图的文本标签</td> 
-      <td><p>默认情况下，文本标签使用缩略图的<code>Title</code>元数据字段。 如果<code>Title</code>不存在，则会改用缩略图的文件名，但不使用扩展名。</p> <p>要更改缩略图的文本标签，请在<strong>操作</strong>选项卡下，直接在显示的图像资产下，输入所需的文本。 请参阅下面的插图。</p> <p>请注意，新文本标签仅供视频播放器本身以及时间轴区段中显示的缩略图文本使用。标签更改不会影响缩略图的“标题”元数据字段及其文件名。</p> </td> 
+      <td><p>默认情况下，文本标签使用缩略图的<code>Title</code>元数据字段。 如果<code>Title</code>不存在，则会改用缩略图的文件名，但不使用扩展名。</p> <p>要更改缩略图的文本标签，请在<strong>操作</strong>选项卡中，直接在显示的图像资产下方输入所需的文本。 请参阅下面的插图。</p> <p>请注意，新文本标签仅供视频播放器本身以及时间轴区段中显示的缩略图文本使用。标签更改不会影响缩略图的“标题”元数据字段及其文件名。</p> </td> 
       </tr> 
       <tr> 
       <td>还原所做的更改</td> 
@@ -459,30 +461,30 @@ ht-degree: 25%
 
 1. （可选）执行下列操作之一：
 
-   * **[!UICONTROL 合并区段]** -您可以将两个相邻的区段（无论是否分配了产品缩略图）合并到一个区段中。
+   * **[!UICONTROL 合并区段]**  — 您可以将两个相邻的区段（无论是否分配了产品缩略图）合并到一个区段中。
 
       在时间轴上，点按要合并到一个中的两个或多个连续段。 请注意，下图中的两个选定段上没有蓝色椭圆拖动手柄。
 
       点按工具栏上的&#x200B;**[!UICONTROL 合并区段]**。
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
-   将两个选定的五个第二段合并为一个十个第二段。
+   将两个选定的五个秒段合并为一个十秒段。
 
-   * **[!UICONTROL 拆分段]** -您可以将单个段分为两个等时段的段。如果已为区段分配了产品缩略图，则缩略图会合并到左侧区段中。
+   * **[!UICONTROL 拆分区段]**  — 您可以将单个区段分为两个等时段区段。如果已为区段分配了产品缩略图，则缩略图会合并到左侧区段中。
 
       在时间轴上，点按要分成两半的区段，然后点按工具栏上的&#x200B;**[!UICONTROL 拆分区段]**。
 
-      选择两个或多个段会禁用&#x200B;**[!UICONTROL 拆分段]**&#x200B;功能。
-   ![chlimage_1-133](assets/chlimage_1-135.png)
+      选择两个或多个段将禁用&#x200B;**[!UICONTROL 拆分段]**&#x200B;功能。
+   ![chlimage_1-135](assets/chlimage_1-135.png)
 
-   将选定的10秒段分为两段，每段5秒。
+   将选定的10秒段拆分为两段，每段5秒。
 
 1. 在&#x200B;**[!UICONTROL 创建交互式视频]**&#x200B;页面的右上角附近，将显示与视频一起使用的当前选定查看器预设的名称。 点按名称以选择其他查看器预设。
 
    例如，`Shoppable_Video_light` 查看器预设能够让您在播放视频时，在视频旁边留出一个白色显示区域。该显示区域用于在播放视频时，显示可点击的缩略图。`Shoppable_Video_dark` 查看器预设则能够让您在播放视频时，在视频旁边留出一个黑色显示区域。
 
 
-   如果您创建了自己的交互式视频查看器预设，您还会在预设列表中看到该查看器预设，您可以从中进行选择。
+   如果您创建了自己的交互式视频查看器预设，您还将在预设列表中看到该预设，您可以从中进行选择。
 
    完成后，点按&#x200B;**[!UICONTROL 保存。]**
 
@@ -491,14 +493,14 @@ ht-degree: 25%
 
 1. 发布交互式视频。发布后会创建嵌入代码或 URL，最后您需要将该嵌入代码或 URL 复制并粘贴到您的网站体验。
 
-   如果您使用Quickviews添加交互性，则只使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+   如果使用Quickviews添加交互性，则仅使用嵌入代码；如果您是通过超链接的网页添加交互性的，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
    请参阅[发布资产](publishing-dynamicmedia-assets.md)。
 
    >[!NOTE]
-   要使用Quickviews发布购物视频，请确保还从您的商务区域单独发布每个视频的相关图像资产。
+   要发布带有Quickviews的购物视频，请确保还从您的商务区域单独发布每个视频的相关图像资产。
 
-   在添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站登录页面。请参阅[将交互式视频与您的网站集成。](#integrating-an-interactive-video-with-your-website)
+   在添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站登录页面。请参阅[将交互式视频集成到您的网站。](#integrating-an-interactive-video-with-your-website)
 
 ## 发布交互式视频资源{#publishing-interactive-video-assets}
 
@@ -508,7 +510,7 @@ ht-degree: 25%
 
 现在，在上传视频、向视频添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站。
 
-如果您是AEM Sites的客户，则可以通过将交互式媒体组件拖动到页面来添加交互式视频。 请参阅[将Dynamic Media资产添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
+如果您是AEM Sites客户，则可以通过将交互式媒体组件拖动到页面来添加交互式视频。 请参阅[将Dynamic Media资产添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 如果您是独立的AEM Assets客户，则可以按本节所述手动将交互式视频添加到您的网站。
 
@@ -516,17 +518,17 @@ ht-degree: 25%
 
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-如果您使用Quickviews添加交互性，则只使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(特别是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
+如果使用Quickviews添加交互性，则仅使用嵌入代码；如果您是通过超链接的网页添加交互性的，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容包含与相对URL(尤其是指向AEM Sites页面的链接)的链接，则无法使用基于URL的链接方法。
 
 1. 在目标网页代码中，找到静态视频所在的位置。
 
-1. 删除静态视频，并将其代码原封不动地替换为您从 AEM 资产中复制的嵌入代码或 URL。
+1. 删除静态视频，并将其代码原封不动地替换为您从 AEM Assets 中复制的嵌入代码或 URL。
 
 由于复制的嵌入代码是为响应式环境设计的，因此该代码应该会自动地适应之前由静态视频所占用的区域。
 
 >[!NOTE]
 至此，如果您只是通过超链接的网页添加交互性，您就已经完成了所有操作。
-但是，如果您为触发概览而添加了任何交互性，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与您现有的Quickviews集成。 在这种情况下，您现在需要将交互式视频与网站上的现有Quickviews相集成。
+但是，如果您添加任何交互性以触发概览，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与您现有的Quickviews集成。 在这种情况下，您现在需要将交互式视频与您网站上的现有Quickview集成。
 
 **示例**
 
@@ -561,22 +563,22 @@ ht-degree: 25%
 </script>
 ```
 
-集成过程很简单，只需删除视频嵌入代码并将其替换为AEM中的交互式视频嵌入代码。 您可以在以下URL查看结果。 虽然它在页面上显示交互式视频，但尚未与现有概览相集成：
+集成过程很简单，只需删除视频嵌入代码，然后将其替换为AEM中的交互式视频嵌入代码即可。 您可以在以下URL查看结果。 尽管该视频在页面上显示交互式视频，但尚未与现有的概览相集成：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
 
 ## 将交互式视频与现有Quickview {#integrating-an-interactive-video-with-an-existing-quickview}集成
 
 >[!NOTE]
-此任务仅在您是独立的AEM Assets客户时适用。
+此任务仅在您是独立AEM Assets客户时适用。
 
-该过程的最后一步是将交互式视频与网站上使用的现有Quickview实现相集成。 但是，没有任何一种集成解决方案是在所有情况下都适用的。每个Quickview实施都是独一无二的。 因此，需要一种最可能需要前端IT人员协助的特定方法。
+此过程的最后一步是将交互式视频与网站上使用的现有Quickview实现相集成。 但是，没有任何一种集成解决方案是在所有情况下都适用的。每个Quickview实施都是独一无二的。 因此，需要一种最可能需要前端IT人员协助的具体方法。
 
-现有Quickview实现通常表示在网页上按以下顺序发生的一系列相互关联的操作：
+现有的Quickview实现通常表示按以下顺序在网页上发生的一系列相互关联的操作：
 
 1. 用户在网站的用户界面上触发一个元素。
 1. 前端代码根据在步骤1中触发的用户界面元素获取Quickview URL。
-1. 前端代码使用步骤2中获取的URL发送AJAX请求。
+1. 前端代码使用在步骤2中获取的URL发送AJAX请求。
 1. 后端逻辑将相应的概览数据或内容返回到前端代码。
 1. 前端代码加载Quickview数据或内容。
 1. （可选）前端代码将加载的Quickview数据转换为HTML表示形式。
@@ -584,17 +586,17 @@ ht-degree: 25%
 
 这些调用并非独立的公共 API 调用（可以由网页逻辑从任意步骤进行调用）。相反，这些调用属于链式调用，即，每个后续步骤都隐藏在前一步的最后阶段（回调）。
 
-在替换步骤1和部分步骤2的同时，当用户单击交互式视频中的缩略图时，查看器将处理此类用户交互。 查看器将返回一个事件到网页，其中包含之前添加到AEM的所有缩略图数据。
+当用户单击交互式视频中的缩略图时，交互式视频将替换第1步和第2步的部分内容，此时，查看者将处理此类用户交互。 查看器将返回一个事件到网页，其中包含之前添加到AEM的所有缩略图数据。
 
-在这种事件处理程序中，前端代码执行以下操作：
+在此类事件处理程序中，前端代码执行以下操作：
 
 * 监听交互式视频发出的事件。
-* 根据缩略图数据构建概览URL。
+* 根据缩略图数据构建Quickview URL。
 * 触发从后端加载概览并在屏幕上显示概览的过程。
 
-此外，交互式视频查看器支持全屏操作模式。 最终用户通过单击缩略图而不离开全屏来触发Quickview。 要实现此功能，请更改前端代码，以便将Quickview模态对话框附加到查看器的容器。 请勿添加文档BODY或查看器处于全屏模式时不可用的其他网页元素。 执行此作业的代码需要听取在页面上加载查看器后发送的另一个查看器回调。
+此外，交互式视频查看器支持全屏操作模式。 最终用户通过单击缩略图而不离开全屏来触发Quickview。 要实现此功能，请更改前端代码，以便将Quickview模态对话框附加到查看器的容器。 请勿添加文档BODY或查看器处于全屏模式时不可用的其他网页元素。 执行此作业的代码需要侦听在查看器加载到页面上后发送的另一个查看器回调。
 
-AEM返回的嵌入代码已具有现成的事件处理程序。 它被注释掉，如下面突出显示的代码片段所示：
+AEM返回的嵌入代码已经有一个现成的事件处理程序。 它被注释掉，如下面突出显示的代码片断所示：
 
 ```xml
 <style type="text/css">
@@ -641,11 +643,11 @@ AEM返回的嵌入代码已具有现成的事件处理程序。 它被注释掉�
 </script>
 ```
 
-因此，只需取消上面突出显示的代码片断的注释，并将虚拟处理程序主体替换为特定网页的特定代码。
+因此，只需取消上面突出显示的代码片断的注释，并用特定网页的代码替换伪处理程序主体。
 
-标准嵌入代码中存在两个默认回调处理函数：`quickViewActivate`和`initComplete`。 在查看器中单击缩略图时，将触发`quickViewActivate`处理函数。 使用它将查看器与Quickview激活逻辑集成。 当查看器加载到页面中时，`initComplete`处理函数只触发一次。 此处理函数用于调整网页DOM中的Quickview对话框位置。
+标准嵌入代码中存在两个默认回调处理函数：`quickViewActivate`和`initComplete`。 在查看器中单击缩略图时，将触发`quickViewActivate`处理函数。 使用它将查看器与Quickview激活逻辑集成。 当查看器加载到页面时，`initComplete`处理函数只触发一次。 此处理函数用于调整网页DOM中的Quickview对话框位置。
 
-构建Quickview URL的过程与识别本主题前面介绍的缩略图变量的过程相反。 使用我们之前标识的Quickview URL示例，您可以了解在各种情况下如何构建Quickview URL:
+构建Quickview URL的过程与识别本主题前面介绍的缩略图变量的过程相反。 使用我们之前确定的Quickview URL示例，您可以了解在各种情况下如何构建Quickview URL:
 
 <table>
   <tbody>
@@ -676,7 +678,7 @@ AEM返回的嵌入代码已具有现成的事件处理程序。 它被注释掉�
   </tbody>
 </table>
 
-触发Quickview URL并激活Quickview面板的最后一步很可能需要IT部门的前端IT人员的协助。 他们最了解如何通过适当的步骤准确地触发Quickview实施，并拥有现成的Quickview URL。
+触发Quickview URL并激活Quickview面板的最后一步操作极有可能需要IT部门的前端IT人员的协助。 他们最了解如何通过拥有现成的Quickview URL，从正确的步骤准确触发Quickview实施。
 
 您可以了解如何将这些步骤应用到演示网站，以将交互式视频与概览代码完全集成。 在本主题的前面，Quickview URL的结构如下所示：
 
@@ -684,7 +686,7 @@ AEM返回的嵌入代码已具有现成的事件处理程序。 它被注释掉�
 /datafeed/$CategoryId$-$SKU$.json
 ```
 
-使用`categoryId`和`sku`对象中的`inData`字段（通过查看器的代码传递给处理程序），可以轻松地在`quickViewActivate`处理程序中重建此URL，如下所示：
+使用`categoryId`和`sku`对象中的`inData`字段在`quickViewActivate`处理函数中重建此URL非常简单，这些字段通过查看器的代码传递给处理函数，如下所示：
 
 ```xml
 var sku=inData.sku;
@@ -692,24 +694,24 @@ var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-演示网站使用简单的`loadQuickView()`函数调用来触发概览对话框。 此函数只使用一个参数，即Quickview数据URL。 因此，集成交互式视频所需的最后一步是向`quickViewActivate`处理函数添加以下代码行：
+演示网站使用简单的`loadQuickView()`函数调用触发Quickview对话框。 此函数只采用一个参数，即Quickview数据URL。 因此，集成交互式视频所需的最后一步是向`quickViewActivate`处理函数添加以下代码行：
 
 ```xml
 loadQuickView(quickViewUrl);
 ```
 
-最后，确保将Quickview对话框附加到查看器的容器元素。 默认嵌入代码提供实现此功能的示例步骤。 要获取对查看器容器元素的引用，可使用以下几行代码：
+最后，确保您的Quickview对话框已附加到查看器的容器元素。 默认嵌入代码提供实现此功能的示例步骤。 要获取对查看器的容器元素的引用，可使用以下几行代码：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
 var inner_container = document.getElementById(sdkContainerId);
 ```
 
-其中`inner_container`是对查看器所管理的`DIV`元素的引用。 您希望该对话框是该`DIV`的子项。
+其中`inner_container`是对查看器所管理的`DIV`元素的引用。 您希望对话框是该`DIV`的子项。
 
-实际定位模态对话框元素并将其附加到上述容器的步骤是特定的。 同样，您可以向熟悉所需Quickview实施的前端开发人员寻求帮助。
+实际定位模态对话框元素并将其附加到上述容器的步骤具体情况。 同样，您可以向熟悉所需Quickview实施的前端开发人员寻求帮助。
 
-在示例网站中，Quickview模态对话框被实现为`DIV` ，其中quickview模态ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
+对于示例网站，Quickview模态对话框将实现为`DIV` ，其中quickview模态ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -766,4 +768,4 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 ## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-请参阅[使用概览创建自定义弹出窗口](/help/assets/custom-pop-ups.md)。
+请参阅[使用快速视图创建自定义弹出窗口](/help/assets/custom-pop-ups.md)。
