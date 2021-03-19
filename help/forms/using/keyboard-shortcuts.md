@@ -1,17 +1,18 @@
 ---
 title: AEM Forms键盘快捷键
 seo-title: AEM Forms键盘快捷键
-description: 本文列表了可用于Windows和Macintosh操作系统的Adaptive Form Editor、Theme Editor、Content Browser和Corressence Management的键盘快捷键。
-seo-description: 本文列表了可与自适应表单编辑器、主题编辑器、内容浏览器和对应管理一起使用的键盘快捷键。
+description: 本文列表了可与Windows和Macintosh操作系统的自适应表单编辑器、主题编辑器、内容浏览器和通信管理一起使用的键盘快捷键。
+seo-description: 本文列表了可与Adaptive Form Editor、Theme Editor、Content Browser和Correspondence Management一起使用的键盘快捷键。
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
+feature: 自适应表单
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1174'
 ht-degree: 4%
 
 ---
@@ -19,32 +20,32 @@ ht-degree: 4%
 
 # AEM Forms键盘快捷键{#aem-forms-keyboard-shortcuts}
 
-本文列表了可用于Windows和Macintosh操作系统的Adaptive Form Editor、Theme Editor、Content Browser和Corressence Management的键盘快捷键。
+本文列表了可与Windows和Macintosh操作系统的自适应表单编辑器、主题编辑器、内容浏览器和通信管理一起使用的键盘快捷键。
 
 ## 自适应表单编辑器{#adaptiveformeditor}
 
 | **操作** | **Windows上的快捷键** | **Mac OS上的快捷键** |
 |---|---|---|
-| 打开所选自适应表单组件的属性浏览器 | Alt+Enter | Alt+Return |
-| 关闭所选自适应表单组件的属性浏览器 | Ctrl+Alt+W | Command+Alt+W |
-| 在所选自适应表单组件的属性浏览器中保存更改 | Ctrl+S | Command+S |
-| 编辑所选自适应表单组件的规则 | Ctrl+Alt+Enter | Command+Alt+Return |
+| 打开所选自适应表单组件的“属性”浏览器 | Alt+Enter | Alt+Return |
+| 关闭选定自适应表单组件的属性浏览器 | Ctrl+Alt+W | Command+Alt+W |
+| 在属性浏览器中保存所选自适应表单组件的更改 | Ctrl+S | Command+S |
+| 所选自适应表单组件的编辑规则 | Ctrl+Alt+Enter | Command+Alt+Return |
 | 在预览和当前选定的模式（例如，编辑、基架等）之间切换 | Ctrl+Shift+M | Ctrl+Shift+M&amp;ast; |
 | 撤消最后一次更改 | Ctrl+Z | Ctrl+Z&amp;ast; |
 | 重做最后一次更改 | Ctrl+Y | Ctrl+Y&amp;ast; |
 | 选择多个组件 | Shift+单击 | Shift+单击 |
 | 复制所选组件 | Ctrl-C | Ctrl-C&amp;ast; |
-| 剪切所选组件。 剪切组件粘贴到新位置后才会消失。 | Ctrl-X | Ctrl-X&amp;ast; |
+| 剪切选定的组件。 剪切组件粘贴到新位置之前不会消失。 | Ctrl-X | Ctrl-X&amp;ast; |
 | 粘贴组件 | Ctrl+V | Ctrl+V |
 | 删除所选组件 | Ctrl+Del | Ctrl+Del&amp;ast; |
 | 删除所选组件 | Ctrl+Backspace | Ctrl+Backspace&amp;ast; |
-| 在预览模式下使用富文本编辑器组件时使文本变为粗体 | Ctrl+B | Ctrl+B&amp;ast; |
-| 在预览模式下使用富文本编辑器组件时，将文本设置为斜体 | Ctrl+I | Ctrl+I&amp;ast; |
-| 在预览模式下使用富文本编辑器组件时使文本变为粗体 | Ctrl+U | Ctrl+U&amp;ast; |
+| 在预览模式下使用富文本编辑器组件时使文本变粗 | Ctrl+B | Ctrl+B&amp;ast; |
+| 在预览模式下使用富文本编辑器组件时为文本设置斜体 | Ctrl+I | Ctrl+I&amp;Amp;ast; |
+| 在预览模式下使用富文本编辑器组件时使文本变粗 | Ctrl+U | Ctrl+U&amp;ast; |
 
 >[!NOTE]
 >
->标有“&amp;ast;”的快捷键可与Mac OS上的Ctrl和Command键一起使用。
+>标有“&amp;ast；”的快捷键可与Mac OS上的Ctrl和Command键一起使用。
 
 >[!NOTE]
 >
@@ -62,35 +63,35 @@ ht-degree: 4%
 | **操作** | **Windows上的快捷键** | **Mac OS上的快捷键** |
 |---|---|---|
 | 在主题中打开选定组件的属性浏览器 | Alt+Enter | Alt+Return |
-| 关闭主题中所选组件的属性浏览器 | Ctrl+Alt+W | Command+Alt+W |
+| 关闭主题中选定组件的属性浏览器 | Ctrl+Alt+W | Command+Alt+W |
 | 撤消最后一次更改 | Ctrl+Z | Ctrl+Z&amp;ast; |
 | 重做最后一次更改 | Ctrl+Y | Ctrl+Y&amp;ast; |
 | 在主题中选定组件的属性浏览器中保存更改 | Ctrl+S | Ctrl+S&amp;ast; |
 
 >[!NOTE]
 >
->标有“&amp;ast;”的快捷键可与Mac OS上的Ctrl和Command键一起使用。
+>标有“&amp;ast；”的快捷键可与Mac OS上的Ctrl和Command键一起使用。
 
 ## 内容浏览器{#contentbrowser}
 
 | **操作** | **Windows上的快捷键** | **Mac OS上的快捷键** |
 |---|---|---|
-| 聚焦时，展开内容浏览器的“表单对象”树中的所有折叠项 | Ctrl+A可选择所有折叠项，后跟向右箭头可展开 | 按Command+A选择所有相应字符，然后按向右箭头展开 |
-| 聚焦时，折叠内容浏览器的“表单对象”树中的所有折叠项 | Ctrl+A可选择所有折叠项，后跟向左箭头可折叠 | 按Command+A选择所有折叠项，然后按向左箭头折叠 |
+| 当焦点集中时，展开内容浏览器的“表单对象”树中的所有折叠 | Ctrl+A可选择所有折叠项，后跟向右箭头可展开 | Command+A选择所有折叠项，然后按向右箭头展开 |
+| 当焦点位于内容浏览器的“表单对象”树中时，折叠所有折叠 | Ctrl+A可选择所有折叠项，后跟向左箭头可折叠 | Command+A选择所有折叠项，后跟向左箭头可折叠 |
 | 在表单对象树中展开选定的折叠面板 | 向右箭头 | 向右箭头 |
-| 在表单对象树中折叠选定的折叠面板 | 向左箭头 | 向左箭头 |
-| 在“Forms对象”树中选择下一个项 | 向下箭头 | 向下箭头 |
-| 在“Forms对象”树中选择上一个项 | 向上箭头 | 向上箭头 |
+| 折叠表单对象树中选定的折叠面板 | 向左箭头 | 向左箭头 |
+| 在Forms对象树中选择下一个项目 | 向下箭头 | 向下箭头 |
+| 在“Forms对象”树中选择上一个项目 | 向上箭头 | 向上箭头 |
 
-[1替] 换Ctrl + Windows向右箭头键和Command + Right Arrow(Mac OS)。\
-[2替] 换Ctrl + Windows向左箭头键和Command + Mac OS向左箭头键。
+[1替] 换Ctrl + Right Arrow（适用于Windows）和Command + Right Arrow（适用于Mac OS）。\
+[2] 替换Ctrl + Left Arrow（适用于Windows）和Command + Left Arrow（适用于Mac OS）。
 
 ## 通信管理 {#correspondence-management}
 
-此部分列表了各种键盘和辅助功能快捷键，您可以在“对应管理”文本编辑器中使用这些快捷键。 您可以在以下情况下使用这些快捷键：
+此部分列表了各种键盘和辅助工具快捷键，您可以在Correspondence Management文本编辑器中使用这些快捷键。 您可以在以下情况下使用这些快捷键：
 
 * 创建或编辑[Text](texts-interactive-communications.md)资产
-* 当[创建对应的](/help/forms/using/create-correspondence.md)时，在点击相关的“编辑”图标(![edittextmodule](assets/edittextmodule.png))后编辑文本模块。
+* 在[创建通信](/help/forms/using/create-correspondence.md)时，点击相关的“编辑”图标(![edittextmodule](assets/edittextmodule.png))后编辑文本模块。
 
 ### 选择文本并移动光标绕{#text-selection-and-moving-the-cursor-around}
 
@@ -112,17 +113,17 @@ ht-degree: 4%
    <td>Command+Shift+向左箭头键</td> 
   </tr>
   <tr>
-   <td><p>将选定内容扩展到段落的开头</p> </td> 
+   <td><p>将选区扩展到段落开头</p> </td> 
    <td><p>Ctrl+Shift+向上箭头键</p> </td> 
    <td>Command+Shift+向上箭头键</td> 
   </tr>
   <tr>
    <td><p>将选定内容扩展到段落末尾</p> </td> 
-   <td><p>Ctrl+Shift+向下箭头键</p> </td> 
-   <td>Command+Shift+向下箭头键</td> 
+   <td><p>Ctrl+Shift+向下箭头</p> </td> 
+   <td>Command+Shift+向下箭头</td> 
   </tr>
   <tr>
-   <td><p>在文本编辑器中选择所有文本</p> </td> 
+   <td><p>选择文本编辑器中的所有文本</p> </td> 
    <td><p>Ctrl+A</p> </td> 
    <td>Command+A</td> 
   </tr>
@@ -137,12 +138,12 @@ ht-degree: 4%
    <td>Option+向左箭头键</td> 
   </tr>
   <tr>
-   <td><p>将光标移到下一个段落。</p> </td> 
-   <td><p>Ctrl+向下箭头键</p> </td> 
+   <td><p>将光标移到下一段落。</p> </td> 
+   <td><p>Ctrl+向下箭头</p> </td> 
    <td>Option+向下箭头</td> 
   </tr>
   <tr>
-   <td><p>将光标移至上一段落。</p> </td> 
+   <td><p>将光标移动到上一段落。</p> </td> 
    <td><p>Ctrl+向上箭头键</p> </td> 
    <td>Option+向上箭头键</td> 
   </tr>
@@ -152,7 +153,7 @@ ht-degree: 4%
    <td>Shift+向左箭头键</td> 
   </tr>
   <tr>
-   <td><p>在前向逐个选择文本</p> </td> 
+   <td><p>在正向逐个选择文本</p> </td> 
    <td><p>Shift+向右箭头键</p> </td> 
    <td>Shift+向右箭头键</td> 
   </tr>
@@ -162,24 +163,24 @@ ht-degree: 4%
    <td>Shift+向上键</td> 
   </tr>
   <tr>
-   <td><p>沿前向逐个选择文本</p> </td> 
-   <td><p>Shift+向下键</p> </td> 
+   <td><p>在前向逐个选择文本</p> </td> 
+   <td><p>Shift+Down键</p> </td> 
    <td>Shift+向下键</td> 
   </tr>
   <tr>
-   <td><p>选择文本，直到从当前页面位置开始</p> </td> 
+   <td><p>从当前页面位置开始，选择文本</p> </td> 
    <td><p>Shift+Page Up</p> </td> 
    <td>Fn+Shift+向上箭头键</td> 
   </tr>
   <tr>
    <td><p>选择文本，直到从页面的结束位置结束</p> </td> 
    <td><p>Shift+Page Down</p> </td> 
-   <td>Fn+Shift+向下箭头键</td> 
+   <td>Fn+Shift+向下箭头</td> 
   </tr>
   <tr>
-   <td><p>将光标移到页面末尾</p> </td> 
+   <td><p>将光标移动到页尾</p> </td> 
    <td><p>Page Down</p> </td> 
-   <td>Fn+向下箭头键</td> 
+   <td>Fn+向下箭头</td> 
   </tr>
   <tr>
    <td><p>将光标移至页面开始</p> </td> 
@@ -187,9 +188,9 @@ ht-degree: 4%
    <td>Fn+向上箭头键</td> 
   </tr>
   <tr>
-   <td><p>从当前位置选择文本到结尾（模块的结尾）</p> </td> 
+   <td><p>从当前位置选择文本到结束（模块）</p> </td> 
    <td><p>Shift+Ctrl+End</p> </td> 
-   <td>Command+Shift+向下箭头键<br /> </td> 
+   <td>Command+Shift+向下箭头<br /> </td> 
   </tr>
   <tr>
    <td><p>从当前位置选择文本到开始（模块的）</p> </td> 
@@ -197,12 +198,12 @@ ht-degree: 4%
    <td>Command+Shift+向上箭头键</td> 
   </tr>
   <tr>
-   <td><p>将光标移到开始位置</p> </td> 
+   <td><p>将光标移动到起始位置</p> </td> 
    <td><p>Ctrl+Home</p> </td> 
    <td>Command+向上箭头键</td> 
   </tr>
   <tr>
-   <td><p>将光标移到结束位置</p> </td> 
+   <td><p>将光标移动到结束位置</p> </td> 
    <td><p>Ctrl+End</p> </td> 
    <td>Command+向下箭头</td> 
   </tr>
@@ -210,7 +211,7 @@ ht-degree: 4%
 </table>
 
 
-### 文本对齐方式{#text-alignment}
+### 文本对齐{#text-alignment}
 
 <table> 
  <tbody>
@@ -220,7 +221,7 @@ ht-degree: 4%
    <th><strong>Mac OS上的快捷键</strong></th> 
   </tr>
   <tr>
-   <td><p>使段落中心对齐</p> </td> 
+   <td><p>使段落居中对齐</p> </td> 
    <td><p>Ctrl+E</p> </td> 
    <td>Ctrl+Command+E</td> 
   </tr>
@@ -235,7 +236,7 @@ ht-degree: 4%
    <td>Ctrl+Command+R</td> 
   </tr>
   <tr>
-   <td><p>使段落变为两端对齐</p> </td> 
+   <td><p>使段落为两端对齐</p> </td> 
    <td><p>Ctrl+J</p> </td> 
    <td>Ctrl+Command+J</td> 
   </tr>
@@ -254,7 +255,7 @@ ht-degree: 4%
   <tr>
    <td><p>撤消 </p> </td> 
    <td><p>Ctrl+Z</p> </td> 
-   <td>Command+Z/Ctrl+Command+Z</td> 
+   <td>Command+Z / Ctrl+Command+Z</td> 
   </tr>
   <tr>
    <td><p>重做 </p> </td> 
@@ -335,7 +336,7 @@ ht-degree: 4%
  </tbody>
 </table>
 
-### 格式化 {#formatting}
+### 格式 {#formatting}
 
 <table> 
  <tbody>
