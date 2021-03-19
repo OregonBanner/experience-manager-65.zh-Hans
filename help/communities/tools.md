@@ -10,11 +10,12 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
+role: 管理员
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 0%
+source-wordcount: '113'
+ht-degree: 1%
 
 ---
 
@@ -27,15 +28,15 @@ ht-degree: 0%
 
    ![社区](assets/communities-home.png)
 
-* [站点模板](sites.md) -用于创建和管理站点模板的控制台。
+* [站点模板](sites.md)  — 用于创建和管理站点模板的控制台。
 
-* [组模板](tools-groups.md) -用于创建和管理组模板的控制台。
+* [组模板](tools-groups.md)  — 用于创建和管理组模板的控制台。
 
-* [社区功能](functions.md) -用于创建和管理社区功能的控制台。
+* [社区功能](functions.md)  — 用于创建和管理社区功能的控制台。
 
-* [存储配置](srp-config.md) -用于配置和选择默认SRP的 [控制台](working-with-srp.md)。
+* [存储配置](srp-config.md)  — 用于配置和选择默认SRP的 [控制台](working-with-srp.md)。
 
-* [组件指南](components-guide.md) -打开一个交互站点，该站点允许对SCF组件的工作方式以及配置或自定义它们的方式进行试验。
+* [组件指南](components-guide.md)  — 打开一个交互式站点，该站点允许对SCF组件的工作方式以及配置或自定义它们的方式进行试验。
 
-* [标记](badges.md) -可从中添加自定义标记以用于评分和标记 [规则的控制台](implementing-scoring.md)
+* [标记](badges.md)  — 可从中添加自定义标记以用于评分和标记规 [则的控制台](implementing-scoring.md)
 
