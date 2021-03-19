@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
+feature: 通信管理
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 
 您可以在“管理资产”和“创建对应UI”中自定义文本编辑器，以添加更多字体和字体大小。 这些字体包括英语和非英语字体，如日语字体。
 
-您可以进行自定义以在字体设置中更改以下内容：
+您可以自定义以在字体设置中更改以下内容：
 
 * 字体系列和大小
 * 高度和字母间距等属性
@@ -41,7 +42,7 @@ ht-degree: 0%
 要通过编辑tbxeditor-config.xml文件自定义字体，请执行以下操作：
 
 1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`并以管理员身份登录。
-1. 在apps文件夹中，使用以下步骤创建一个名为config的文件夹，其路径／结构与config文件夹类似，该文件夹位于libs/fd/cm/config中：
+1. 在apps文件夹中，使用以下步骤创建一个名为config的文件夹，其路径/结构与config文件夹类似，该文件夹位于libs/fd/cm/config:
 
    1. 右键单击以下路径中的项目文件夹，然后选择&#x200B;**叠加节点**:
 
@@ -55,26 +56,26 @@ ht-degree: 0%
 
       **位置：** /apps/
 
-      **匹配节点类型：选** 定
+      **匹配节点类型：已选** 定
 
       ![叠加节点](assets/2.png)
 
-   1. 单击&#x200B;**确定**。文件夹结构将在应用程序文件夹中创建。
+   1. 单击&#x200B;**确定**。文件夹结构将在apps文件夹中创建。
 
    1. 单击&#x200B;**保存全部**。
 
-1. 使用以下步骤在新创建的配置文件夹中创建tbxeditor-config.xml文件的副本：
+1. 使用以下步骤在新创建的config文件夹中创建tbxeditor-config.xml文件的副本：
 
    1. 右键单击libs/fd/cm/config处的tbxeditor-config.xml文件，然后选择&#x200B;**复制**。
    1. 右键单击以下文件夹，然后选择&#x200B;**粘贴：**
 
       `apps/fd/cm/config`
 
-   1. 默认情况下，粘贴的文件的名称为`copy of tbxeditor-config.xml.`将文件重命名为`tbxeditor-config.xml`，然后单击&#x200B;**全部保存**。
+   1. 默认情况下，粘贴的文件的名称为`copy of tbxeditor-config.xml.`将文件重命名为`tbxeditor-config.xml`并单击&#x200B;**保存全部**。
 
-1. 在apps/fd/cm/config中打开tbxeditor-config.xml文件，然后进行所需的更改。
+1. 在apps/fd/cm/config处打开tbxeditor-config.xml文件，然后进行所需的更改。
 
-   1. 多次在apps/fd/cm/config处单击tbxeditor-config.xml文件。 文件将打开。
+   1. 多次 — 单击apps/fd/cm/config处的tbxeditor-config.xml文件。 文件将打开。
 
       ```xml
       <editorConfig>
@@ -161,9 +162,9 @@ ht-degree: 0%
       </editorConfig>
       ```
 
-   1. 在文件中进行所需的更改，以更改字体设置中的以下内容：
+   1. 在文件中进行所需的更改，以在字体设置中更改以下内容：
 
-      * 添加或删除字体系列和字号
+      * 添加或删除字体系列和大小
       * 高度和字母间距等属性
       * 字体系列和大小、高度、字母间距和日期格式的默认值
       * 项目符号缩进
@@ -177,20 +178,20 @@ ht-degree: 0%
 
 ## 将自定义字体添加到客户端计算机{#addcustomfonts}
 
-当您在“对应管理”文本编辑器中访问字体时，它需要存在于您用来访问“对应管理”的客户端机器中。 要在文本编辑器中使用自定义字体，您首先需要在客户端计算机上安装同一字体。
+当您在Correspondence Management文本编辑器中访问字体时，字体需要存在于您用来访问Correspondence Management的客户端机器中。 要在文本编辑器中使用自定义字体，您首先需要在客户端计算机上安装相同的字体。
 
 有关安装字体的详细信息，请参阅以下内容：
 
 * [在Windows上安装或卸载字体](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Mac基础知识：字体簿](https://support.apple.com/en-us/HT201749)
+* [Mac基础：字体簿](https://support.apple.com/en-us/HT201749)
 
 ## 访问字体自定义{#access-font-customizations}
 
-在CRX中的tbxeditor-config.xml文件中对字体进行了更改并在用于访问AEM Forms的客户端计算机上安装了所需的字体后，这些更改将显示在文本编辑器中。
+在CRX中对tbxeditor-config.xml文件中的字体进行了更改，并在用于访问AEM Forms的客户端计算机上安装了所需的字体后，更改将显示在文本编辑器中。
 
-例如，在[中添加的Sazanami Mincho Medium字体通过在CRX](#customizefonts)过程中编辑tbxeditor-config.xml文件来自定义字体，在文本编辑器UI中显示如下：
+例如，在[中添加的Sazanami Mincho Medium字体通过在CRX](#customizefonts)过程中编辑tbxeditor-config.xml文件来自定义字体，在文本编辑器UI中显示如下内容：
 
-![萨扎纳米孔特文](assets/sazanamiminchointext.png)
+![萨扎纳米金](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >
