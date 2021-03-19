@@ -11,28 +11,29 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
+role: 管理员
 translation-type: tm+mt
-source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1679'
 ht-degree: 2%
 
 ---
 
 
-# 社区组控制台{#community-groups-console}
+# 社区组控制台 {#community-groups-console}
 
-当社区站点的[模板结构](/help/communities/sites-console.md#step1)包括[组函数](/help/communities/functions.md#groups-function)时，“组”控制台提供创建社区组的权限。
+当社区站点的[模板结构](/help/communities/sites-console.md#step1)包含[组函数](/help/communities/functions.md#groups-function)时，“组”控制台提供创建社区组的访问权限。
 
-* AEM Communities支持在其他群体内嵌套群体。 当新组](/help/communities/tools-groups.md)的[结构包含组函数时，可以进行组嵌套。
+* AEM Communities支持在其他组内嵌套组。 当新组](/help/communities/tools-groups.md)的[结构包含组函数时，可以进行组嵌套。
 * 仅对于作者环境，存在与站点创建向导类似的组创建向导。
-* 在发布环境下，成员是否可以创建组，在将组功能添加到社区站点结构或社区组结构时，可以配置该组。
+* 在向社区站点结构或社区组结构添加“组”功能时，可配置成员是否可以在发布环境中创建组。
 
 在包含的三个组模板中，只有`Reference Group`模板在其结构中包含组函数。
 
 社区组的不同方面包括：
 
-* **创建**:可以在作者上和发布实例上创建新组（可选）。
+* **创建**:可以在作者上（也可以在发布实例上）创建新组。
 * **控制**:组可以是开放的或秘密的。
 * **嵌套**:组可以包含零个或多个组。
 
@@ -54,17 +55,17 @@ ht-degree: 2%
 
 * 在创作时，使用管理员权限登录。
 * 从全局导航：**[!UICONTROL 社区]** > **[!UICONTROL 站点]**。
-* 选择现有社区站点文件夹以将其打开。
-* 在文件夹内选择社区站点的实例。
+* 选择一个现有社区站点文件夹以将其打开。
+* 在文件夹中选择社区站点的实例。
 
-   * 社区站点的结构必须包括组功能。
-   * 这些屏幕快照来自[在发布](/help/communities/published-site.md)上创建组后的入门教程。
+   * 社区站点的结构必须包含组功能。
+   * 这些屏幕快照来自[在发布](/help/communities/published-site.md)上创建组之后的“入门”教程。
 
-   ![创建组](assets/create-group.png)
+   ![create-group](assets/create-group.png)
 
 * 选择&#x200B;**Groups文件夹**&#x200B;以将其打开。
 
-   打开后，将显示所有现有组，无论是在作者创建还是发布创建。
+   打开后，将显示所有现有用户组（无论是在作者创建还是发布创建）。
 
    通过此“组”控制台，可以创作新组。
 
@@ -79,7 +80,7 @@ ht-degree: 2%
 * **社区组标题**
 
    组的显示标题。
-标题显示在组的已发布站点上。
+标题将显示在组的已发布站点上。
 
 * **社区组描述**
 
@@ -88,19 +89,19 @@ ht-degree: 2%
 * **社区组根路径**
 
    组的根路径。
-默认根站点是父站点，但根站点可以移动到网站中的任意位置。 不建议更改它。
+默认的根是父站点，但可以将根移动到网站中的任何位置。 不建议更改它。
 
 * **其他可用的社区组语言菜** 单
 
-   使用下拉列表选择可用的社区组语言。 该菜单显示创建父社区站点时使用的所有语言。 用户可以在这些语言中进行选择，在此单步中创建多语言环境的用户组。 在相应社区站点的“组”控制台中以多种指定语言创建同一组。
+   使用下拉列表选择可用的社区组语言。 该菜单显示创建父社区站点时使用的所有语言。 用户可以在这些语言中进行选择，以便通过这一步骤在多个区域设置中创建组。 在相应社区站点的“组”控制台中，以多种指定语言创建同一组。
 
 * **社区组名称**
 
-   组的根页面的名称，该页面显示在URL中。
+   URL中显示的组根页面的名称。
 
-   * 多次检查名称，因为创建组后该名称不易更改。
-   * 基本URL将显示在`Community Group Name`下。
-   * 对于有效的URL，附加“.html”
+   * 多次选中该名称，因为创建组后该名称不易更改。
+   * 基本URL将显示在`Community Group Name`下方。
+   * 对于有效的URL，请附加“.html”
       *例如*, `https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **社区组模** 板菜单
@@ -113,11 +114,11 @@ ht-degree: 2%
 
 ![社区组主题](assets/communitygrouptheme.png)
 
-该框架使用[TwitterBootstrap](https://twitterbootstrap.org/)为站点引入响应式、灵活的设计。 可以选择预加载的Bootstrap主题之一来设置所选社区组模板的样式，也可以上传Bootstrap主题。
+该框架使用[TwitterBootstrap](https://twitterbootstrap.org/)为站点引入响应式灵活设计。 可以选择多个预加载的Bootstrap主题之一来设置所选社区组模板的样式，也可以上传Bootstrap主题。
 
-选中后，主题将用不透明的蓝色复选标记覆盖。
+选择后，主题将用不透明的蓝色复选标记覆盖。
 
-可以选择与父站点的主题不同的主题。
+可以选择与父站点主题不同的主题。
 
 发布社区站点后，可以[编辑属性](#modifyinggroupproperties)并选择其他主题。
 
@@ -125,28 +126,28 @@ ht-degree: 2%
 
 ![社区组品牌](assets/community-group-branding.png)
 
-社区站点品牌是显示为每个页面顶部标题的图像。 可以显示组的横幅，该横幅不同于其他网站页面。
+社区站点品牌是每个页面顶部显示为标题的图像。 可以显示与其他网站页面不同的群组横幅。
 
 图像的大小应与浏览器中页面的预期显示大小相同，高度应为120像素。
 
 创建或选择图像时，请牢记：
 
 * 图像高度将从图像的上边缘裁剪为120像素
-* 图像已固定到浏览器窗口的左边缘
+* 图像被固定到浏览器窗口的左边缘
 * 图像不会调整大小，因此当图像宽度为：
 
    * 小于浏览器的宽度，图像将水平重复。
-   * 图像的宽度大于浏览器的宽度后，图像将被裁剪。
+   * 图像的宽度大于浏览器的宽度，将显示为被裁剪。
 
 ### 第3步：设置{#step-settings}
 
-**协调**
+**审核**
 
 ![选择社区组成员角色](assets/group-admin.png)
 
 **社区组版主**
 
-默认情况下，继承父社区站点的版主列表。
+默认情况下，父社区站点的版主列表是继承的。
 
 可以添加特定于组的版主。 搜索成员(从发布环境)以将其添加为版主
 
@@ -160,29 +161,29 @@ ht-degree: 2%
 
 **会员资格**
 
-通过会员资格设置，可以选择三种保护社区组的方式之一。
+通过成员资格设置，可以选择三种保护社区组的方式之一。
 
-![社区——组成员](assets/community-group-membership.png)
+![社区 — 组成员](assets/community-group-membership.png)
 
 * **可选成员资格**
 
-   如果选择，则社区组为公共组。 站点成员可以加入组并发布内容，而无需明确加入组。 选中默认值。
+   如果选择，则社区组为公共组。 站点成员可以加入组并发布信息，无需明确加入组。 已选择默认值。
 
 * **必需成员资格**
 
-   如果选中，则社区组为打开的组。 社区站点成员可以视图组的内容，但需要加入组才能发布内容。 通过选择发布环境中的`Join`按钮加入成员。 未选择默认值。
+   如果选择，则社区组为打开的组。 社区站点成员可以视图组的内容，但需要加入组才能发布内容。 通过选择发布环境中的`Join`按钮加入成员。 未选择默认值。
 
 * **受限制的成员资格**
 
-   如果选中，则社区组是机密组。 必须明确邀请社区成员。 邀请的成员将输入搜索框中。 以后可以使用作者环境的[成员和组控制台](/help/communities/members.md)添加成员。 未选择默认值。
+   如果选择，则社区组为机密组。 必须明确邀请社区成员。 邀请的成员将输入搜索框中。 以后可以使用作者环境[成员和组控制台](/help/communities/members.md)添加成员。 未选择默认值。
 
 **缩略图**
 
-![社区组缩略图](assets/community-group-thumbnail.png)
+![community-group-thumbnail](assets/community-group-thumbnail.png)
 
-缩略图是创作和发布时组要显示的图像。
+缩略图是创作和发布时要为组显示的图像。
 
-组图像的最佳大小是支持的图像格式（如JPG或PNG）的170 x 90像素。
+组图像的最佳大小是170 x 90像素，采用支持的图像格式（如JPG或PNG）。
 
 如果未添加图像，则显示默认图像。
 
@@ -190,35 +191,35 @@ ht-degree: 2%
 
 ### 第4步：创建组{#step-create-group}
 
-![社区创建组](assets/community-create-group.png)
+![community-create-group](assets/community-create-group.png)
 
-如果需要调整，请使用&#x200B;**返回**&#x200B;按钮进行调整。
+如果需要进行任何调整，请使用&#x200B;**返回**&#x200B;按钮进行调整。
 
-选择并启动&#x200B;**创建**&#x200B;后，创建组的过程将无法中断。
+选择并启动&#x200B;**创建**&#x200B;后，创建组的过程便无法中断。
 
-完成该过程后，新子社区站点（组）的卡片将显示在“社区站点组”控制台中，作者可以从该控制台添加页面内容，管理员也可以修改站点的属性。
+完成该过程后，新子社区站点（组）的卡片将显示在“社区站点组”控制台中，作者可以从中添加页面内容，管理员可以修改站点的属性。
 
 ![创建社区组](assets/create-community-groups.png)
 
 >[!NOTE]
 >
->按照[步骤1中的指定，组以所有语言创建：社区组模板](/help/communities/groups.md#step-community-group-template)，位于相应社区站点的“社区组”控制台中，其中包含其他可用社区组语言。
+>按照[步骤1中的指定，组将以所有语言创建：在相应社区站点的“社区组”控制台中，使用“其他可用社区组语言”中的社区组模板](/help/communities/groups.md#step-community-group-template)。
 
 ## 作者组内容{#author-group-content}
 
 ![开放站点](assets/open-site.png)
 
-可以使用与任何其他AEM页面相同的工具创作组的页面内容。 要打开组进行创作，请选择将鼠标悬停在组卡上时显示的“打开站点”图标。
+可使用与任何其他AEM页面相同的工具创作组的页面内容。 要打开组进行创作，请选择将鼠标悬停在组卡上时显示的“打开站点”图标。
 
 ## 修改组属性{#modify-group-properties}
 
-在社区组创建过程中指定的现有子社区站点的属性可以通过选择将鼠标悬停在组卡上时显示的“编辑站点”图标进行修改：
+通过选择将鼠标悬停在组卡上时显示的编辑站点图标，可以修改在社区组创建过程中指定的现有子社区站点的属性：
 
 ![edit-site](assets/edit-site.png)
 
 以下属性的详细信息与[组创建](#group-creation)部分中提供的说明相符。 无论是在发布环境还是作者环境中创建，都可以修改任何嵌套组。
 
-![社区组——基本](assets/community-group-basic.png)
+![社区 — 组 — 基本](assets/community-group-basic.png)
 
 ### 修改基本{#modify-basic}
 
@@ -235,10 +236,10 @@ BASIC面板允许修改
 
 ### 修改结构{#modify-structure}
 
-通过“结构”面板，可修改最初根据从作者或发布环境创建子社区站点时所选的社区组模板创建的结构。 在该面板中，可以：
+通过“结构”面板，可修改最初根据从作者或发布环境创建子社区站点时选择的社区组模板创建的结构。 在该面板中，可以：
 
-* 将额外的[社区函数](/help/communities/functions.md)拖放到站点结构中。
-* 在站点结构中社区功能的实例上：
+* 将其他[社区函数](/help/communities/functions.md)拖放到站点结构中。
+* 在站点结构中社区功能的实例中：
 
    * **`Gear icon`**
 编辑设置，包括显示标题、URL和特权 [成员组](/help/communities/users.md#privilegedmembersgroups)。
@@ -253,11 +254,11 @@ BASIC面板允许修改
 >
 >虽然可以更改显示标题而不会产生副作用，但不建议编辑属于社区站点的社区功能的URL名称。
 >
->例如，重命名URL不会移动现有UGC，因此具有“丢失”UGC的效果。
+>例如，重命名URL不会移动现有UGC，因此会产生“losing”UGC的效果。
 
 >[!CAUTION]
 >
->组函数必须&#x200B;*不是*&#x200B;是&#x200B;*的第一个函数，也不是站点结构中唯一的*&#x200B;函数。
+>组函数必须&#x200B;*不*&#x200B;是站点结构中的&#x200B;*或唯一*&#x200B;函数。
 >
 >必须首先包含并列出任何其他函数，如[页函数](/help/communities/functions.md#page-function)。
 
@@ -267,7 +268,7 @@ BASIC面板允许修改
 
 ### 修改设计{#modify-design}
 
-DESIGN面板允许修改主题：
+“设计”面板允许修改主题：
 
 * [社区组主题](#community-group-theme)
 * [社区组品牌](#community-group-branding)
@@ -284,11 +285,11 @@ DESIGN面板允许修改主题：
 
 ### 修改缩略图{#modify-thumbnail}
 
-[THUMBNAIL](#thumbnail)面板允许上传图像，以将社区组表示到发布环境以及创作环境中社区站点的“组”控制台中的站点访客。
+通过[THUMBNAIL](#thumbnail)面板，可上传图像以将社区组表示到发布环境以及创作环境中社区站点的“组”控制台中的站点访客。
 
 ## 发布组{#publish-the-group}
 
-![发布站点](assets/publish-site.png)
+![publish-site](assets/publish-site.png)
 
 新建或修改社区组后，可以通过选择`Publish Site`图标来发布（激活）该组。
 
@@ -300,12 +301,12 @@ DESIGN面板允许修改主题：
 >
 >父社区站点和父组应已发布。
 >
->社区站点和嵌套组应以自上而下的方式发布。
+>社区站点和嵌套用户组应以自上而下的方式发布。
 
 ## 删除组{#delete-the-group}
 
 ![删除图标](assets/deleteicon.png)
 
-通过选择“删除组”图标，从社区组控制台中删除组，该图标将鼠标悬停在组上方时显示。
+通过选择删除组图标（将鼠标悬停在组上方时显示），从社区组控制台中删除组。
 
 这将删除与组关联的所有项目，例如，将永久删除组的所有内容，并从系统中删除用户成员资格。
