@@ -2,10 +2,12 @@
 title: ' [!DNL Experience Manager Assets]中的辅助功能'
 description: 了解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的辅助功能如何帮助残障用户。
 contentOwner: AG
+feature: 资产管理
+role: 业务从业者、架构师、领导者
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1925'
 ht-degree: 2%
 
 ---
