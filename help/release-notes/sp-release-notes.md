@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 8的发�
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: dfaa25ea72e50b60b8a40883ffb0241c131cc846
+source-git-commit: fb1423b7ae110b8a3cf8e0e389394e9266157a9f
 workflow-type: tm+mt
-source-wordcount: '3352'
+source-wordcount: '3360'
 ht-degree: 5%
 
 ---
@@ -349,9 +349,10 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 * 安装Experience Manager 6.5.x.x时，可能会显示以下错误和警告消息：
    * “当Adobe Target集成在Experience Manager中使用Target Standard API（IMS身份验证）进行配置时，将Experience Fragments导出到目标会导致创建错误的优惠类型。 而不是“体验片段”/源“Adobe Experience Manager”类型，Target 会创建若干个“HTML”/源“Adobe Target Classic”类型的选件。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
-   * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证会失败。 CQ-4274424
+   * 当使用SUM、MAX和MIN等聚合函数时，Adaptive Form服务器端验证会失败(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 通过Shoppable Banner查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :等待注册更改完成未注册的超时。
 
 ## 包含{#osgi-bundles-and-content-packages-included}的OSGi包和内容包
 
