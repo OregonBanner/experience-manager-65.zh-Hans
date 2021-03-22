@@ -1,109 +1,90 @@
 ---
-title: 比较 [!DNL Assets] 和媒体库产品
-description: 比较 [!DNL Experience Manager Assets] 和媒体库功能并了解差异。
+title: 用于数字资源管理的媒体库产品。
+description: '[!DNL Experience Manager Assets] 和媒体库，以便进行资源管理。'
 contentOwner: AG
 role: 架构师、领导者
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 10e5ca2fb6e108a7201e6114b61b3d0266ff80d2
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 1%
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
 
-# [!DNL Experience Manager Assets] 与媒 [!DNL Experience Manager] 体库  {#aem-assets-vs-aem-medialibrary}
+<!--
 
-[!DNL Adobe Experience Manager Assets] 是平台不可或缺的 [!DNL Experience Manager] 部分。这种顺畅的集成被视为[!DNL Experience Manager]的主要优势，可确保内容管理的一致性和内容作者的高工作效率。
+Define Media Lib
+Define req for it
+Define use cases
+Define what is not included
 
-## [!DNL Assets]是什么？{#what-is-aem-assets}
+-->
 
-[!DNL Assets] 是一项功能， [!DNL Experience Manager] 允许您在基于Web的存储库中管理数字资产(图像、视频、文档、音频剪辑等)。[!DNL Assets] 包括元数据支持、演绎版、资产查找器和管理界面。
+# 使用媒体库进行基本资源管理{#manage-assets-using-media-library}
 
-## 什么是[!DNL Experience Manager]媒体库？{#what-is-the-aem-media-library}
+[!DNL Adobe Experience Manager] 平台提供了不同的数字资产管理功能。媒体库允许用户将少量资产上传到存储库、搜索和使用网页中的资产，并完成对资产的简单资产管理任务。
 
-[!DNL Experience Manager]媒体库是[!DNL Experience Manager] WCM内容存储库中存储图像和其他共享资源的指定部分。 媒体库为WCM提供基本的数字资产管理功能。
+媒体库是一个轻量级数字资产管理(DAM)解决方案，随[!DNL Adobe Experience Manager Sites]许可证提供。 [!DNL Sites] 是Web内容管理(WCM)产品。媒体库可用于所有Experience Manager功能。
 
-## 从不属于WCM的[!DNL Assets]中可以得到什么？{#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
+[!DNL Adobe Experience Manager Assets] 许可证可单独购买。[!DNL Experience Manager Assets] 允许通过企业用例、元数据、模式、搜索和用户界面的自定义设置以及媒体库提供之外的许多其他功能，对资产进行强大处理。
 
-只有[!DNL Assets]的客户才能使用的独特功能有：
+## 许可要求{#avail-media-library-license}
 
-* 能够提取和编辑除标题、标记和描述之外的元数据。
-* [!DNL Assets]管理员，可从欢迎屏幕中找到。
-* 所有与数字资产管理相关的工作流步骤，如上传和摄取、删除、子资产处理、元数据管理和处理用户档案。
-* 包空间中包含`dam`的库。
+拥有[!DNL Sites]许可证的客户有权使用媒体库。 它适用于[!DNL Experience Manager]的所有组件。
 
-使用这些功能需要有效的许可证[!DNL Assets]。
+媒体库作为站点的一部分进行安装。 除站点许可和安装之外，无需任何其他许可或包。
 
-## [!DNL Assets]是否可作为单独的包提供？{#is-aem-assets-available-as-a-separate-package}
+## [!DNL Assets] 与媒体库  {#assets-and-media-library}
 
-否. 为了简化安装和部署，所有[!DNL Experience Manager]应用程序和加载项都在一个包中提供，并包含所有功能。 这并不意味着您有权使用包中的所有功能。
+Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Experience Manager]在一个包中提供。 但是，尚未购买资产许可证的用户无权使用高级DAM功能。 如果没有资产许可证，则仅提供媒体库DAM功能。
 
-## 我想编辑数字资产的元数据。 我需要[!DNL Assets]吗？{#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
+如果您希望防止意外使用您未获得许可的[!DNL Assets]功能，请从[!DNL Experience Manager]中删除所有特定于[!DNL Assets]的工作流、组件、分类、选项和[!DNL Assets]管理员。 这样做可防止用户意外使用您未授权的[!DNL Assets]功能。
 
-如果您计划编辑除标题、描述和标记之外的元数据，则需要许可[!DNL Assets]。
+## 可用于媒体库用户{#media-library-features}的功能
 
-## 我想在我的网站上使用类别谓词。 我需要[!DNL Assets]吗？{#i-want-to-use-the-category-predicate-on-my-website-do-i-need-aem-assets}
+媒体库广泛涵盖以下用例：
 
-是，类别谓词是[!DNL Assets]的一部分，需要[!DNL Assets]许可证。
+* 为使用[!DNL Adobe Experience Manager Sites]创建的网页提供基本的DAM功能。
+* 使用[!DNL Adobe Experience Manager Forms]创建的自适应表单和通信。
+* 使用[!DNL Adobe Experience Manager Screens]创建的数字屏幕体验。
+* [!DNL Assets] 用于无头操作的HTTP REST API。
 
-## 我想在导入时自动调整图像大小。 我需要[!DNL Assets]吗？{#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
 
-否. 调整静态图像的大小和自动工作流驱动的转换以及管理再现的功能是[!DNL Experience Manager]媒体库的一部分。 这些功能不需要[!DNL Assets]许可证。
+<!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
-## 我想使用自定义的图像组件调整图像大小。 我需要[!DNL Assets]吗？{#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
+* Basic metadata properties
+* Tag management
+* Version control
+* Static renditions
+* Projects, tasks, workflow authoring
+* Activity stream (timeline)
+* Query Builder (API)
+* Marketing Cloud integration
+* User interface customization and extension
+* Comments and annotation
+-->
 
-图像组件是WCM的一部分。 图像组件（但也由[!DNL Assets]）使用的图形库是[!DNL Experience Manager]平台的一部分，不需要[!DNL Assets]许可证。
+使用媒体库可以完成以下特定任务:
 
-## 如果我未授权[!DNL Assets]，如何阻止我的用户使用[!DNL Assets]?{#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
+* 创建文件夹以组织资产。
+* 上传资产。
+* 发布资产。
+* 编辑、移动和复制资产。
+* 浏览、筛选和搜索（包括相似性搜索）资产。
+* 默认情况下，添加和编辑资产[!UICONTROL 属性]页面的[!UICONTROL 基本]选项卡中提供的元数据字段。<!-- excluding Smart Tags -->
+* 添加和删除静态演绎版。
+* 下载文件夹、资产和资产演绎版。
+* 创建资产版本。
+* 为资产创建和执行审核任务。
+* 注释资产。
+* 通过内容查找器将资产添加到[!DNL Sites]页面。
+* 用法 [!DNL Content Fragments].
 
-您可以从[!DNL Experience Manager]中删除所有[!DNL Assets]特定工作流、组件、分类、选项和[!DNL Assets]管理员。 这样做可防止用户意外使用您未授权的[!DNL Assets]功能。
+<!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
+-->
 
-## 我要向页面添加图像，并要裁切这些图像和调整其大小。 我需要[!DNL Assets]吗？{#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
-
-在此用例中，无需购买[!DNL Assets]，即使使用媒体库也不需要在网站上使用图像，因为智能图像组件允许将图像直接上传到页面。
-
-## 详细列表[!DNL Assets]与媒体库{#listoffeatures}中提供的功能
-
-[!DNL Experience Manager Assets]
-
-* 收藏集和Lightbox
-* 高级元数据属性和管理
-* Adobe资产链接(连接到企业版Creative Cloud)
-* [!DNL Experience Manager] 桌面应用程序
-* 处理配置文件
-* [!DNL Adobe InDesign Server] 集成
-* 资产模板和目录制作者框架
-* [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和集 [!DNL Adobe InDesign] 成
-* 多语言资产管理
-* PIM集成
-* 权限管理
-* Camera Raw支持
-* 搜索彩块化管理和配置
-* 预建的DAM工作流（例如，照片拍摄）
-* 资产报告和分析称为“洞察”
-* 3D资源管理
-* 连接的资产
-* Brand Portal
-* 自助访问
-* 浏览、搜索和下载
-* 集合和文件夹共享
-* 管理工具和界面
-* 智能标记
-* 视觉搜索
-
-**媒体库**
-
-* 基本元数据属性
-* 标签管理
-* 版本控制
-* 静态演绎版
-* 项目，任务，工作流创作
-* 活动流（时间轴）
-* 查询 Builder(API)
-* Marketing Cloud集成
-* UI自定义和扩展
-* 注释和注释
+[!DNL Experience Manager Assets] 满足您在文档主页中可以浏览的许多其他DAM使 [[!DNL Assets] 用案例](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html)。上面未列出的任何用例不适用于媒体库。
 
 >[!MORELIKETHIS]
 >
