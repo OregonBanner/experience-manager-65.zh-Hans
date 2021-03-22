@@ -1,12 +1,12 @@
 ---
-title: 用于数字资源管理的媒体库产品。
+title: 将媒体库用于基本数字资产管理
 description: '[!DNL Experience Manager Assets] 和媒体库，以便进行资源管理。'
 contentOwner: AG
 role: 架构师、领导者
 translation-type: tm+mt
-source-git-commit: 10e5ca2fb6e108a7201e6114b61b3d0266ff80d2
+source-git-commit: 31dc984d9cd93f7024229fd6773878eebfdadc57
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Expe
 * 使用[!DNL Adobe Experience Manager Screens]创建的数字屏幕体验。
 * [!DNL Assets] 用于无头操作的HTTP REST API。
 
-
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
 * Basic metadata properties
@@ -65,7 +64,7 @@ Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Expe
 * Comments and annotation
 -->
 
-使用媒体库可以完成以下特定任务:
+要使用媒体库功能，可以使用默认的[!DNL Experience Manager]用户界面。 媒体库是[!DNL Experience Manager Sites]安装的一部分，不需要任何单独的接口或加载项。 使用现有界面，媒体库用户有权完成以下任务:
 
 * 创建文件夹以组织资产。
 * 上传资产。
