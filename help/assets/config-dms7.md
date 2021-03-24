@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: ef975961ddcd6910b5fba2dea7e9302921f45055
 workflow-type: tm+mt
-source-wordcount: '6141'
+source-wordcount: '6154'
 ht-degree: 5%
 
 ---
@@ -498,7 +498,11 @@ spin-01-01
 
 #### 更新预定义的作业参数以处理不同的文件格式
 
-您可以调整作业参数，以便在上传文件时加快处理速度。 例如，如果您上传的是PSD文件，但不想将它们作为模板进行处理，则可以将图层提取设置为false（关闭）。 在这种情况下，调整的作业参数将显示为`process=None&createTemplate=false`。
+您可以调整作业参数，以便在上传文件时加快处理速度。 例如，如果您上传PSD文件，但不想将它们作为模板进行处理，则可以将图层提取设置为false（关闭）。 在这种情况下，调整的作业参数如下所示：`process=None&createTemplate=false`。
+
+如果确实要打开模板创建，请使用以下参数：`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`。
+
+<!-- REMOVED BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
 
 Adobe建议对PDF、PostScript®和PSD文件使用以下“调整”作业参数：
 
@@ -510,9 +514,11 @@ Adobe建议对PDF、PostScript®和PSD文件使用以下“调整”作业参数
 | ---| ---|
 | PDF | `pdfprocess=Thumbnail&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` |
 | PostScript® | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Thumbnail&airesolution=150&aicolorspace=Auto&aialpha=false` |
-| PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
+| PSD | `process=None&layerNaming=AppendName&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
-要更新任何这些参数，请按照[启用基于MIME类型的资产/Dynamic Media经典上传作业参数support](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)中的步骤操作。
+<!-- CQDOC-17657 for PSD entry in table above -->
+
+要更新任何这些参数，请按照[启用基于MIME类型的资产/Dynamic Media经典上传作业参数support](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)中的步骤操作。
 
 #### 更新Granite临时工作流队列{#updating-the-granite-transient-workflow-queue}
 
