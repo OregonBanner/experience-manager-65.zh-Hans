@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: ef975961ddcd6910b5fba2dea7e9302921f45055
+source-git-commit: d700510efb340598a7931647164e22d574884569
 workflow-type: tm+mt
-source-wordcount: '5511'
+source-wordcount: '5517'
 ht-degree: 1%
 
 ---
@@ -351,7 +351,7 @@ Adobe建议您通过让根文件夹仅指向子文件夹而不是整个公司来
 
 启用Adobe CQ Dynamic Media Classic Dam侦听器，默认情况下处于禁用状态。
 
-要启用它，请执行以下操作：
+要启用Adobe CQ Dynamic Media Classic Dam侦听器：
 
 1. 点按[!UICONTROL 工具]图标，然后导航到&#x200B;**[!UICONTROL 操作> Web Console]**。 Web控制台将打开。
 1. 导航到&#x200B;**[!UICONTROL Adobe CQ Dynamic Media Classic Dam监听器]**&#x200B;并选中&#x200B;**[!UICONTROL 已启用]**&#x200B;复选框。
