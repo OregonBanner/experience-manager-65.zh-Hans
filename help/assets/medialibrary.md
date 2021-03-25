@@ -4,9 +4,9 @@ description: '[!DNL Experience Manager Assets] 和媒体库，以便进行资源
 contentOwner: AG
 role: 架构师、领导者
 translation-type: tm+mt
-source-git-commit: 31dc984d9cd93f7024229fd6773878eebfdadc57
+source-git-commit: 15c525746a613eb33cd09b7ff476f43aa18b146b
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Define what is not included
 
 # 使用媒体库进行基本资源管理{#manage-assets-using-media-library}
 
-[!DNL Adobe Experience Manager] 平台提供了不同的数字资产管理功能。媒体库允许用户将少量资产上传到存储库、搜索和使用网页中的资产，并完成对资产的简单资产管理任务。
+[!DNL Adobe Experience Manager] 平台提供了不同的资产管理功能。媒体库允许用户将少量资产上传到存储库、搜索和使用网页中的资产，并完成对资产的简单资产管理任务。
 
 媒体库是一个轻量级数字资产管理(DAM)解决方案，随[!DNL Adobe Experience Manager Sites]许可证提供。 [!DNL Sites] 是Web内容管理(WCM)产品。媒体库可用于所有Experience Manager功能。
 
@@ -37,11 +37,11 @@ Define what is not included
 
 ## [!DNL Assets] 与媒体库  {#assets-and-media-library}
 
-Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Experience Manager]在一个包中提供。 但是，尚未购买资产许可证的用户无权使用高级DAM功能。 如果没有资产许可证，则仅提供媒体库DAM功能。
+Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Experience Manager]在一个包中提供。 但是，尚未购买资产许可证的用户无权使用高级DAM功能。 没有“资源”许可证，只有[媒体库功能](#use-media-library)可用。
 
 如果您希望防止意外使用您未获得许可的[!DNL Assets]功能，请从[!DNL Experience Manager]中删除所有特定于[!DNL Assets]的工作流、组件、分类、选项和[!DNL Assets]管理员。 这样做可防止用户意外使用您未授权的[!DNL Assets]功能。
 
-## 可用于媒体库用户{#media-library-features}的功能
+## 使用媒体库{#use-media-library}
 
 媒体库广泛涵盖以下用例：
 
@@ -71,7 +71,7 @@ Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Expe
 * 发布资产。
 * 编辑、移动和复制资产。
 * 浏览、筛选和搜索（包括相似性搜索）资产。
-* 默认情况下，添加和编辑资产[!UICONTROL 属性]页面的[!UICONTROL 基本]选项卡中提供的元数据字段。<!-- excluding Smart Tags -->
+* 在元数据字段中添加值并编辑这些值，但“智能标记”字段除外。默认情况下，这些值位于资产[!UICONTROL 属性]页面的[!UICONTROL 基本]选项卡中。
 * 添加和删除静态演绎版。
 * 下载文件夹、资产和资产演绎版。
 * 创建资产版本。
@@ -83,10 +83,15 @@ Experience Manager资产提供企业级DAM功能。 资产功能通过[!DNL Expe
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
 -->
 
-[!DNL Experience Manager Assets] 满足您在文档主页中可以浏览的许多其他DAM使 [[!DNL Assets] 用案例](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html)。上面未列出的任何用例不适用于媒体库。
+>[!IMPORTANT]
+>
+>许多高级DAM使用案例由[!DNL Experience Manager Assets]完成。 媒体库许可允许您使用媒体库仅履行列出的使用案例。 如果未列出用例，请勿将其与媒体库许可证一起使用。 如果您有任何查询，请与Adobe客户关怀联系。
+
+<!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
 >[!MORELIKETHIS]
 >
+>* [中的DAM功能 [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html)
 >* [[!DNL Experience Manager] 6.5 Managed Services产品说明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
 >* [[!DNL Experience Manager] 6.5内部部署产品说明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
 
