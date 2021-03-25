@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 543f59a82e869e7d004d994014e0bd586b013b02
+source-git-commit: 6f4cbacb89a891ea8193ca2f495aba353bea6b1a
 workflow-type: tm+mt
-source-wordcount: '6133'
+source-wordcount: '6154'
 ht-degree: 5%
 
 ---
@@ -422,7 +422,7 @@ spin-01-01
  spin-03-12
 ```
 
-通过此信息，您可以按如下方式创建批集类型菜谱：
+通过此信息，可以按如下方式创建批集类型菜谱：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
@@ -518,7 +518,7 @@ Adobe建议对PDF、PostScript®和PSD文件使用以下“调整”作业参数
 
 <!-- CQDOC-17657 for PSD entry in table above -->
 
-<!-- To update any of these parameters, follow the steps in [Enabling MIME type-based Assets/Dynamic Media Classic upload job parameter support](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support). -->
+要更新任何这些参数，请按照[启用基于MIME类型的资产/Dynamic Media经典上传作业参数support](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)中的步骤操作。
 
 #### 更新Granite临时工作流队列{#updating-the-granite-transient-workflow-queue}
 
