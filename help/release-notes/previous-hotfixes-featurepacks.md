@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5先前的Service Pack发行说明'
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack的发行说明。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 131e564e4ed50c4f08412ba39c62f15b9c362b8c
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '17898'
+source-wordcount: '17912'
 ht-degree: 16%
 
 ---
@@ -36,6 +36,8 @@ ht-degree: 16%
    * 使用[!DNL Automated Forms Conversion service]将PDF表单转换为自适应表单。
 
 * 支持[!DNL Experience Manager Forms]中的[!DNL Microsoft SQL Server] 2019。
+
+* 支持[!DNL Microsoft] SQL Server 2016 Always On Availability组，用于OSGi部署的高可用性。
 
 * 内置存储库 (Apache Jackrabbit Oak) 已更新至版本 1.22.5。
 
@@ -336,7 +338,7 @@ ht-degree: 16%
 
 * Interactive Communication的转出配置名称（安装[!DNL Forms] add-on包后可用）重复标准转出配置名称(NPR-34976)。
 
-**Document Security**
+**文档安全**
 
 * 保存新的文档安全策略时，Experience Manager Forms将显示`Relative validity period is required`错误消息(NPR-34679)。
 
