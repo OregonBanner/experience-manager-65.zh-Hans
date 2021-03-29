@@ -9,11 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
-feature: 升级
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 8d6818d0f2d90482f930f8e98682670ed6d0dd28
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2724'
 ht-degree: 2%
 
 ---
@@ -72,7 +71,7 @@ ht-degree: 2%
 
 ### 工作流模型 {#workflow-models}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -121,7 +120,7 @@ ht-degree: 2%
 
 ### 工作流实例 {#workflow-instances}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -147,7 +146,7 @@ ht-degree: 2%
 
 ### 工作流启动器 {#workflow-launchers}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -178,7 +177,7 @@ ht-degree: 2%
 
 ### 工作流脚本{#workflow-scripts}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -213,7 +212,7 @@ ht-degree: 2%
 
 ### ContextHub 配置 {#contexthub-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -244,7 +243,7 @@ ht-degree: 2%
 
 ### 经典Cloud Services设计{#classic-cloud-services-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -283,7 +282,7 @@ ht-degree: 2%
 
 ### 经典仪表板设计{#classic-dashboards-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -322,7 +321,7 @@ ht-degree: 2%
 
 ### 经典报表设计{#classic-reports-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -361,7 +360,7 @@ ht-degree: 2%
 
 ### 默认设计{#default-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -400,7 +399,7 @@ ht-degree: 2%
 
 ### Adobe DTM JavaScript端点{#adobe-dtm-javascript-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -423,7 +422,7 @@ ht-degree: 2%
 
 ### Adobe DTM Web-Hook端点{#adobe-dtm-web-hook-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -446,7 +445,7 @@ ht-degree: 2%
 
 ### 收件箱任务{#inbox-tasks}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -473,7 +472,7 @@ ht-degree: 2%
 
 ### 多站点管理器Blueprint配置{#multi-site-manager-blueprint-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong><em></em>上一个位置</strong></td>
@@ -500,7 +499,7 @@ ht-degree: 2%
 
 ### AEM项目仪表板小工具配置{#aem-projects-dashboard-gadget-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -530,7 +529,7 @@ ht-degree: 2%
 
 ### 复制通知电子邮件模板{#replication-notification-e-mail-template}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -563,7 +562,7 @@ ht-degree: 2%
 
 ### 标记 {#tags}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -597,7 +596,7 @@ ht-degree: 2%
 
 ### 翻译云服务 {#translation-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -642,7 +641,7 @@ ht-degree: 2%
 
 ### 翻译语言{#translation-languages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -673,7 +672,7 @@ ht-degree: 2%
 
 ### 翻译规则{#translation-rules}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -704,7 +703,7 @@ ht-degree: 2%
 
 ### 翻译构件客户端库{#translation-widget-client-library}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -749,9 +748,11 @@ ht-degree: 2%
 | **重组指导** | 无需执行任何操作。 |
 | **注释** | 树激活Web控制台现在可通过&#x200B;**工具>部署>复制>激活树**&#x200B;提供。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### 供应商转换连接器Cloud Services{#vendor-translation-connector-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -798,7 +799,7 @@ ht-degree: 2%
 
 ### 工作流通知电子邮件模板{#workflow-notification-email-templates}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
@@ -830,7 +831,7 @@ ht-degree: 2%
 
 ### 工作流包{#workflow-packages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>上一个位置</strong></td>
