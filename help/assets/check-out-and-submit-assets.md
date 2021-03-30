@@ -1,12 +1,12 @@
 ---
-title: 签入和签出资源以进行编辑
+title: 在 [!DNL Assets]中签入和签出文件
 description: 了解如何签出要编辑的资产，并在更改完成后重新签入。
 contentOwner: AG
-role: 业务从业者
+role: 商务从业人员
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: eb87d77e1366786e8574f84590dfe9a3303efda0
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,7 @@ ht-degree: 0%
 ## 签出资产{#checking-out-assets}
 
 1. 从[!DNL Assets]用户界面中，选择要签出的资产。 您还可以选择要签出的多个资产。
-1. 在工具栏中，单击&#x200B;**[!UICONTROL 结帐]**。
-**[!UICONTROL Checkout]**&#x200B;选项切换为&#x200B;**[!UICONTROL Checkin]**。
+1. 在工具栏中，单击&#x200B;**[!UICONTROL 结帐]**。 **[!UICONTROL Checkout]**&#x200B;选项切换为&#x200B;**[!UICONTROL Checkin]**。
 要验证其他用户是否可以编辑您注销的资产，请以其他用户身份登录。 您签出的资产的缩略图上会显示锁定符号。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -33,7 +32,7 @@ ht-degree: 0%
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   您可以单击&#x200B;**[!UICONTROL 视图属性]**&#x200B;来编辑已锁定资产的元数据。
+   要编辑锁定资产的元数据，请单击&#x200B;**[!UICONTROL 视图属性]**。
 
 1. 单击&#x200B;**[!UICONTROL 编辑]**&#x200B;以在编辑模式下打开资产。
 
@@ -64,6 +63,6 @@ ht-degree: 0%
 
 >[!MORELIKETHIS]
 >
->* [了解Experience Manager桌面应用程序中的登记和注销](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
->* [了解资产中存回和取出的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [了解登记和注销Indesktop应 [!DNL Experience Manager] 用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
+>* [了解签入和签出的视频教程 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
