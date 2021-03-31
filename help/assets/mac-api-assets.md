@@ -3,10 +3,11 @@ title: '[!DNL Assets] HTTP API。'
 description: 使用 [!DNL Adobe Experience Manager Assets]中的HTTP API创建、读取、更新、删除和管理数字资产。
 contentOwner: AG
 role: 开发人员
+feature: API，资源HTTP API，开发人员工具
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1734'
 ht-degree: 1%
 
 ---
