@@ -3,10 +3,11 @@ title: 了解元数据概念
 description: 了解元数据的需求和类型，这些元数据可以更轻松地分类和组织资产。
 contentOwner: AG
 role: 业务从业者，管理员
+feature: 元数据
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '2734'
+source-wordcount: '2735'
 ht-degree: 37%
 
 ---
@@ -48,7 +49,7 @@ ht-degree: 37%
 
 两种基本类型的元数据是技术性元数据和描述性元数据。
 
-技术性元数据对于处理数字资产的软件应用程序而言非常有用，因此不应该手动维护。[!DNL Experience Manager Assets] 而其他软件会自动确定技术性元数据，并且修改资产时，元数据可能会发生更改。资产的可用技术性元数据主要取决于资产的文件类型。技术元数据的一些示例包括：
+技术性元数据对于处理数字资产的软件应用程序而言非常有用，因此不应该手动维护。[!DNL Experience Manager Assets] 而其他软件会自动确定技术性元数据，并且在修改资产时，元数据可能会发生更改。资产的可用技术性元数据主要取决于资产的文件类型。技术元数据的一些示例包括：
 
 * 文件的大小。
 * Dimension（高度和宽度）。
