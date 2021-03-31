@@ -3,10 +3,11 @@ title: 将媒体库用于基本数字资产管理
 description: '[!DNL Experience Manager Assets] 和媒体库，以便进行资源管理。'
 contentOwner: AG
 role: 架构师、领导者
+feature: 资产管理
 translation-type: tm+mt
-source-git-commit: 15c525746a613eb33cd09b7ff476f43aa18b146b
+source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
