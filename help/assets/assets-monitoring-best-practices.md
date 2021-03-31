@@ -3,10 +3,11 @@ title: 监视 [!DNL Assets] 部署的最佳实践
 description: 监控部署后 [!DNL Adobe Experience Manager] 部署的环境和性能的最佳实践。
 contentOwner: AG
 role: 管理员、架构师
+feature: 资产管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1672'
 ht-degree: 1%
 
 ---
