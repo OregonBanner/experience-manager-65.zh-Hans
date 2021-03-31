@@ -3,10 +3,11 @@ title: '[!DNL Assets] 调整指南'
 description: 确定有效指标以评估部署 [!DNL Adobe Experience Manager Assets]所需的基础架构和资源的最佳实践。
 contentOwner: AG
 role: 架构师、管理员
+feature: 资产管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
