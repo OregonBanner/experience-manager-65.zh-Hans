@@ -3,10 +3,11 @@ title: 文件夹共享到 [!DNL Adobe Creative Cloud] 最佳实践
 description: 配置 [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 以与Adobe Creative Cloud(CC)用户交换文件夹。
 contentOwner: AG
 role: 业务从业者，管理员
+feature: 协作
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
