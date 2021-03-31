@@ -3,10 +3,11 @@ title: '元数据模式，用于定义 [!DNL Adobe Experience Manager Assets]中
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
 role: 业务从业者，管理员
+feature: 元数据
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '3604'
+source-wordcount: '3605'
 ht-degree: 14%
 
 ---
