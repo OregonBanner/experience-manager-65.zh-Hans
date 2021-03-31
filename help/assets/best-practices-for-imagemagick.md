@@ -3,10 +3,11 @@ title: 安装和配置ImageMagick
 description: 了解ImageMagick软件、如何安装它、设置命令行处理步骤以及使用它编辑、合成和从图像生成缩览图。
 contentOwner: AG
 role: 管理员
+feature: 演绎版，开发人员工具
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
