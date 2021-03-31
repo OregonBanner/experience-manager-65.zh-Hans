@@ -3,10 +3,11 @@ title: 处理支持的文件格式的最佳实践
 description: 使用 [!DNL Experience Manager Assets]处理各种受支持文件类型的最佳实践。
 contentOwner: AG
 role: 管理员
+feature: 资源管理，开发人员工具
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您正在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，则如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户服务中心。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳做法，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超30000 x 23000像素的高分辨率PSB文件。
+>如果您正在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，则如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户服务中心。 与Adobe客户服务代表合作，为您的AMS部署实施这些最佳做法，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超30000 x 23000像素的高分辨率PSB文件。
 
 ## [!DNL Adobe Camera Raw] 库  {#adobe-camera-raw-library}
 
