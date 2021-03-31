@@ -3,10 +3,11 @@ title: 将 [!DNL Assets] 与活动流集成
 description: 描述 [!DNL Experience Manager] 的录制功能，以及如何将其配置为录制特定事件。
 contentOwner: AG
 role: 开发人员
+feature: 资产管理
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '270'
 ht-degree: 1%
 
 ---
