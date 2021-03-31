@@ -3,10 +3,11 @@ title: 搜索彩块化以筛选搜索结果
 description: 如何在 [!DNL Adobe Experience Manager]中创建、修改和使用搜索彩块化。
 contentOwner: AG
 role: 管理员、开发人员
+feature: 搜索
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2427'
 ht-degree: 27%
 
 ---
