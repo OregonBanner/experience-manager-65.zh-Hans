@@ -3,10 +3,11 @@ title: Digital Rights Management资产
 description: 了解如何在 [!DNL Experience Manager]中管理已许可资产的资产到期状态和信息。
 contentOwner: AG
 role: 业务从业者，管理员
+feature: DRM，资产管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1404'
 ht-degree: 5%
 
 ---
