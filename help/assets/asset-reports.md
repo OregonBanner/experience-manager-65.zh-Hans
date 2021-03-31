@@ -3,10 +3,11 @@ title: 有关资产使用和共享情况的报告
 description: ' [!DNL Adobe Experience Manager Assets] 中有关您的资产的报告，有助于您了解数字资产的使用、活动和共享。'
 contentOwner: AG
 role: 业务从业者，管理员
+feature: 资产报表，资产管理
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1146'
 ht-degree: 7%
 
 ---
