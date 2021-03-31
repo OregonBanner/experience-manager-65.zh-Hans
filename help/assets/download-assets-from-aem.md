@@ -2,11 +2,12 @@
 title: 下载资产
 description: 了解如何从 [!DNL Adobe Experience Manager] 下载资产以及启用或禁用下载功能。
 contentOwner: AG
-role: 业务从业者
+role: 商务从业人员
+feature: 资产管理，资产分发
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '862'
 ht-degree: 8%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->收件人封电子邮件必须是`dam-users`组的成员，才能访问电子邮件中的ZIP下载链接。 要能够下载资产，成员必须具有启动工作流的权限，以触发资产下载。
+>收件人封电子邮件必须是`dam-users`组的成员才能访问电子邮件中的ZIP下载链接。 要能够下载资产，成员必须具有启动工作流的权限，以触发资产下载。
 
 无法下载图像集、旋转集、混合媒体集和传送集等资产类型。
 
