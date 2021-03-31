@@ -10,9 +10,9 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: 自适应表单
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7a3f54d90769708344e6751756b2a12ac6c962d7
 workflow-type: tm+mt
-source-wordcount: '1794'
+source-wordcount: '2078'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,24 @@ AEM Forms中提供以下键盘快捷键。
 | 移到上一个面板 | Alt+向左箭头键 |
 | 重置表单中的已填写数据 | Alt+R |
 | 提交表单 | Alt+S |
+
+此外，Adaptive Forms中的&#x200B;**[!UICONTROL 日期选取器]**&#x200B;组件还有各种键盘快捷键。 要启用快捷键，请点按&#x200B;**[!UICONTROL 日期选取器]**&#x200B;组件，然后点按![配置](assets/configure-icon.svg)以打开属性。 在&#x200B;**[!UICONTROL 图案]**&#x200B;部分中，使用&#x200B;**[!UICONTROL 类型]**&#x200B;和&#x200B;**[!UICONTROL 图案]**&#x200B;下拉列表选择显示图案。 保存属性以启用&#x200B;**[!UICONTROL 日期选取器]**&#x200B;组件的快捷键的使用。
+
+以下键盘快捷键可用于自适应Forms中的日期选取器组件：
+
+| 操作 | 键盘快捷键 |
+|---|---|
+| <ul><li>当选项卡焦点突出显示日历图标时，显示日期选取器组件选项</li><li>当选项卡焦点突出显示选项时，执行单击事件</li> | 空格或Enter |
+| 隐藏日期选取器组件选项 | Esc |
+| <ul><li>在日期选取器组件中可用的选项中向前移动光标。</li><li>当日期输入字段处于活动状态时，在日历图标上设置制表符焦点</li> | 选项卡· |
+| 在日期选取器组件中可用的选项中向后移动光标 | Shift+Tab |
+| <ul><li>当选项卡焦点高亮显示日期输入字段时，显示日期选取器组件选项</li><li>在日期选取器组件中可用的日历中向下移动光标</li> | 向下箭头 |
+| 在日期选取器组件中可用的日历中将光标向上移动 | 向上箭头 |
+| 在日期选取器组件中可用的日历中向后移动光标 | 向左箭头 |
+| 在日期选取器组件中可用的日历中向前移动光标 | 向右箭头 |
+| 对日历中左右导航箭头之间可用的题注执行操作 | Shift +向上箭头键 |
+| 对日历中可用的向右导航箭头图标![向右箭头](assets/right-navigation-icon.svg)执行操作 | Shift +向左箭头键 |
+| 对日历中可用的向左导航箭头图标![向左箭头](assets/left-navigation-icon.svg)执行操作 | Shift +向右箭头键 |
 
 ## 使用辅助工具查找剩余的辅助功能问题
 
