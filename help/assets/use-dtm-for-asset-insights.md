@@ -3,10 +3,11 @@ title: 通过DTM启用资产分析
 description: 了解如何使用Adobe Dynamic Tag Management(DTM)启用资产分析。
 contentOwner: AG
 role: 业务从业者，管理员
+feature: 资产分析，资产报表
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
