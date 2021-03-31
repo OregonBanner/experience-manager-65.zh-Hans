@@ -3,10 +3,11 @@ title: 将 [!DNL Assets] 与 [!DNL InDesign Server]集成
 description: 了解如何将 [!DNL Adobe Experience Manager Assets] 与 [!DNL Adobe InDesign Server]集成。
 contentOwner: AG
 role: 管理员
+feature: 发布
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
