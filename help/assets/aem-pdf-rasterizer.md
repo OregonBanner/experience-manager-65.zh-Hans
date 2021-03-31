@@ -3,10 +3,11 @@ title: 使用PDF栅格化器生成再现
 description: 使用Adobe PDF Rasterizer库生成高质量的缩览图和再现。
 contentOwner: AG
 role: 开发人员、管理员
+feature: 开发人员工具，再现
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
