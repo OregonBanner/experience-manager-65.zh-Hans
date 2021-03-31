@@ -3,10 +3,11 @@ title: 网络注意事项和要求
 description: 讨论设计 [!DNL Adobe Experience Manager Assets] 部署时的网络注意事项。
 contentOwner: AG
 role: 架构师、管理员
+feature: Developer Tools
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
