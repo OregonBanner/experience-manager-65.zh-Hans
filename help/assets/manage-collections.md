@@ -3,11 +3,12 @@ title: 管理数字资产收藏集
 description: 了解管理资产集合的任务，如创建、视图、删除、编辑和下载集合。
 contentOwner: AG
 mini-toc-levels: 1
-role: 业务从业者
+role: 商务从业人员
+feature: 收藏集，资产管理
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2185'
 ht-degree: 17%
 
 ---
