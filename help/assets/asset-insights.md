@@ -2,11 +2,12 @@
 title: 资产分析
 description: 了解资产分析功能如何让您跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用情况统计数据。
 contentOwner: AG
-role: 业务从业者
+role: 业务从业者，管理员
+feature: 资产分析，资产报表
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '736'
 ht-degree: 8%
 
 ---
