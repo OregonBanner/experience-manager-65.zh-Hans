@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、交付和优化数字资产。
-feature-set: Experience Manager Assets
+feature-set: Experience Manager Assets, Experience Manager, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9619609d0d48e9304032dd8e3220868d5e804920
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 43%
@@ -41,7 +41,7 @@ ht-degree: 43%
    + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
    + [设置 Dynamic Media](administering-dynamic-media.md)
    + [使用 Dynamic Media](dynamic-media.md)
-   + [配置 Dynamic Media - Scene7 模式](config-dms7.md)
+   + [配置 Dynamic Media — Scene7 模式](config-dms7.md)
    + [配置Dynamic Media — 混合模式](config-dynamic.md)
    + [疑难解答Dynamic Media - Scene7模式](troubleshoot-dms7.md)
    + [Dynamic Media 中的辅助功能](accessibility-dm.md)
