@@ -4,9 +4,9 @@ description: 了解如何从 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], an
 contentOwner: AG
 role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: e6a0cab17d203183cc4169563179060338596cc3
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1381'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 引用会根据引用资产的路径、文档ID和实例ID进行解析。
 
-## 在[!DNL Adobe Illustrator] {#refai}中添加数字资产作为引用
+## [!DNL Adobe Illustrator]:将数字资产添加为参考  {#refai}
 
 您可以从[!DNL Adobe Illustrator]文件中引用现有数字资产。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    *图：资产详细信息中的资产引用。*
 
-## 在[!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}中添加数字资产作为引用
+## [!DNL Adobe InDesign]:将数字资产添加为参考  {#add-aem-assets-as-references-in-adobe-indesign}
 
 要从[!DNL InDesign]文件中引用数字资产，请将资产拖动到[!DNL InDesign]文件或将[!DNL InDesign]文件导出为ZIP存档。
 
@@ -55,6 +55,8 @@ ht-degree: 0%
 >
 >如果[!DNL InDesign Server]为代理，[!DNL InDesign]文件的预览将嵌入到其XMP元数据中。 在这种情况下，缩略图提取不是显式必需的。 但是，如果[!DNL InDesign Server]未代理，则必须显式提取[!DNL InDesign]文件的缩览图。
 
+上传INDD文件时，通过查询存储库中具有`xmpMM:InstanceID`和`xmpMM:DocumentID`属性的资产来获取引用。
+
 ### 通过拖动资产{#create-references-by-dragging-aem-assets}创建引用
 
 此过程类似于[在Adobe Illustrator](#refai)中添加数字资产作为引用。
@@ -62,12 +64,12 @@ ht-degree: 0%
 ### 通过导出ZIP文件{#create-references-to-aem-assets-by-exporting-a-zip-file}创建对资产的引用
 
 1. 执行[创建工作流模型](/help/sites-developing/workflows-models.md)中的步骤以创建新工作流。
-1. 使用[!DNL Adobe InDesign]的“包”功能导出文档。 [!DNL Adobe InDesign] 可将文档和关联的资产作为包导出。在这种情况下，导出的文件夹包含一个Links文件夹，其中包含[!DNL InDesign]文件中的子资产。
+1. 使用[!DNL Adobe InDesign]的[包功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)导出文档。 [!DNL Adobe InDesign] 可将文档和关联的资产作为包导出。在这种情况下，导出的文件夹包含`Links`文件夹，其中包含[!DNL InDesign]文件中的子资产。 `Links`文件夹与INDD文件位于同一文件夹中。
 1. 创建ZIP文件并将其上传到[!DNL Experience Manager]存储库。
 1. 开始`Unarchiver`工作流。
 1. 该工作流完成后，“链接”文件夹中的引用会自动作为子资产进行引用。 要视图引用的资产的列表，请导航到[!DNL InDesign]资产的资产详细信息页面，然后关闭[边栏](/help/sites-authoring/basic-handling.md#rail-selector)。
 
-## 在[!DNL Adobe Photoshop] {#refps}中添加数字资产作为引用
+## [!DNL Adobe Photoshop]:将数字资产添加为参考  {#refps}
 
 1. 使用[!DNL Experience Manager]桌面应用程序访问[!DNL Experience Manager Assets]。 下载并显示本地文件系统上的资源。 使用[!DNL Adobe Photoshop]中的[!UICONTROL 放置链接的]功能。 请参阅[将资源放入桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)。
 
