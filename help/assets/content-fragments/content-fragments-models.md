@@ -9,10 +9,12 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
+feature: 内容片段
+role: 业务从业者，管理员
 translation-type: tm+mt
-source-git-commit: 932601c849b3a1ddd196e6570a9cf05710cd3e6a
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 21%
 
 ---
@@ -26,12 +28,12 @@ ht-degree: 21%
 
 >[!CAUTION]
 >
->如果不启用&#x200B;**内容片段模型**，则创建&#x200B;**选项将不可用于创建新模型。**
+>如果未启用&#x200B;**内容片段模型**，则&#x200B;**创建**&#x200B;选项将不可用于创建新模型。
 
 要启用内容片段模型，您需要：
 
-* 在[配置浏览器](/help/sites-administering/configurations.md)中启用内容片段模型
-* 将配置应用到您的资产文件夹
+* 在[配置浏览器](/help/sites-administering/configurations.md)中启用内容片段模型的使用
+* 将配置应用到您的Assets文件夹
 
 ### 在Configuration Manager {#enable-content-fragment-models-in-configuration-manager}中启用内容片段模型
 
@@ -39,7 +41,7 @@ ht-degree: 21%
 
 >[!CAUTION]
 >
->子配置（嵌套在配置中的配置）不支持与内容片段一起使用。
+>不支持与内容片段一起使用子配置（嵌套在配置中的配置）。
 
 1. 导航到&#x200B;**工具**、**常规**，然后打开&#x200B;**配置浏览器**。
 
@@ -54,7 +56,7 @@ ht-degree: 21%
 
 <!-- 1. Select the location appropriate to your website. -->
 
-### 将配置应用于您的资产文件夹{#apply-the-configuration-to-your-assets-folder}
+### 将配置应用到您的资产文件夹{#apply-the-configuration-to-your-assets-folder}
 
 当为内容片段模型启用配置&#x200B;**global**&#x200B;时，用户创建的任何模型都可以用于任何资产文件夹中。
 
@@ -68,7 +70,7 @@ ht-degree: 21%
 
    >[!CAUTION]
    >
-   >如果[未启用内容片段模型的使用](#enable-content-fragment-models)，则&#x200B;**创建**&#x200B;选项将不可用。
+   >如果未启用[对内容片段模型的使用](#enable-content-fragment-models)，则&#x200B;**创建**&#x200B;选项将不可用。
 
 1. 指定&#x200B;**模型标题**。您还可以根据需要添加&#x200B;**描述**。
 
@@ -78,7 +80,7 @@ ht-degree: 21%
 
 ## 定义内容片段模型{#defining-your-content-fragment-model}
 
-内容片段模型有效地定义所生成内容片段的结构。 使用模型编辑器，您可以添加和配置必填字段：
+内容片段模型有效地定义了生成的内容片段的结构。 使用模型编辑器，您可以添加和配置必填字段：
 
 >[!CAUTION]
 >
@@ -87,11 +89,11 @@ ht-degree: 21%
 1. 导航到&#x200B;**工具**、**资产**，然后打开&#x200B;**内容片段模型**。
 
 1. 导航到包含内容片段模型的文件夹。
-1. 打开&#x200B;**Edit**&#x200B;所需的型号；使用快速操作，或先选择模型，然后从工具栏中选择操作。
+1. 打开&#x200B;**Edit**&#x200B;所需的模型；使用快速操作，或先选择模型，然后从工具栏中选择操作。
 
    打开模型编辑器后，将显示：
 
-   * 左：字段已定义
+   * left:字段已定义
    * 右侧：可用于创建字段的&#x200B;**数据类型**（可在创建字段后使用的&#x200B;**属性**）
 
    >[!NOTE]
@@ -106,7 +108,7 @@ ht-degree: 21%
 
    ![cfm-6420-11](assets/cfm-6420-11.png)
 
-   * 将字段添加到模型后，右面板将显示可为该特定数据类型定义的&#x200B;**属性**。 您可以在此处定义该字段的必需内容。 例如：
+   * 将字段添加到模型后，右侧面板将显示可为该特定数据类型定义的&#x200B;**属性**。 您可以在此处定义该字段的必需内容。 例如：
 
    ![cfm-6420-13](assets/cfm-6420-13.png)
 
@@ -123,7 +125,7 @@ ht-degree: 21%
 
 1. **删除字段**
 
-   选择所需字段，然后单击／点按垃圾桶图标。 系统将要求您确认该操作。
+   选择所需字段，然后单击/点按垃圾桶图标。 系统将要求您确认该操作。
 
    ![cf-32](assets/cf-32.png)
 
@@ -141,14 +143,14 @@ ht-degree: 21%
 1. 导航到&#x200B;**工具**、**资产**，然后打开&#x200B;**内容片段模型**。
 
 1. 导航到包含内容片段模型的文件夹。
-1. 从工具栏中选择您的型号，然后选择&#x200B;**删除**。
+1. 选择您的型号，然后从工具栏中选择&#x200B;**删除**。
 
    >[!NOTE]
-   如果模型被引用，则会发出警告。 采取适当措施。
+   如果模型被引用，则会给出警告。 采取适当行动。
 
 ## 发布内容片段模型{#publishing-a-content-fragment-model}
 
-内容片段模型需要在发布任何相关内容片段时／之前发布。
+内容片段模型需要在发布任何相关内容片段时/之前发布。
 
 要发布内容片段模型，请执行以下操作：
 
@@ -158,5 +160,5 @@ ht-degree: 21%
 1. 从工具栏中选择您的型号，然后选择&#x200B;**发布**。
 
    >[!NOTE]
-   如果发布的内容片段尚未发布模型，则将显示一个选择列表来指示此情况，并且该模型将随片段一起发布。
+   如果您发布的内容片段尚未发布模型，则将显示一个选择列表来指示此情况，并且模型将随片段一起发布。
 
