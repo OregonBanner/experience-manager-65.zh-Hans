@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: experience manager
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.5发行说明
@@ -9,7 +9,7 @@ feature-set: Experience Manager
 feature: 发行信息
 role: 领导者，架构师，开发人员，数据架构师，数据工程师，管理员，业务从业者
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 32%
