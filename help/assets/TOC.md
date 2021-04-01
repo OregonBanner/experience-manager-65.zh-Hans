@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
 audience: end-user
@@ -8,7 +8,7 @@ breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、交付和优化数字资产。
 feature-set: Experience Manager Assets, Experience Manager, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 9619609d0d48e9304032dd8e3220868d5e804920
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 43%
