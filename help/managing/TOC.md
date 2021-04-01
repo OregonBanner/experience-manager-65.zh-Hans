@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Managing 用户指南
@@ -7,12 +7,12 @@ breadcrumb-title: Managing 指南
 user-guide-description: 了解如何管理 AEM 项目。
 feature-set: Experience Manager Sites
 feature: 部署
-role: 业务从业者
+role: 商务从业人员
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 60%
+ht-degree: 62%
 
 ---
 
