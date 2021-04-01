@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 sub-product: 表单
 solution: Experience Manager, Experience Manager Forms
@@ -8,12 +8,12 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 feature-set: Experience Manager Forms
-role: 业务从业者
+role: 商务从业人员
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '3720'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -119,7 +119,7 @@ ht-degree: 3%
       + [Forms Portal](using/forms-portal-handling-user-data.md)
       + [通信管理](using/correspondence-management-handling-user-data.md)
       + [与Adobe Sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
-      + [Document Security](/help/forms/using/document-security-handling-user-data.md)
+      + [文档安全](/help/forms/using/document-security-handling-user-data.md)
    + 硬化AEM Forms环境{#hardening-aem-forms-environment}
       + [在OSGi环境上强化和保护AEM表单](using/hardening-securing-aem-forms-environment.md)
       + [JEE上AEM Forms的一般安全注意事项](using/general-security-considerations.md)
