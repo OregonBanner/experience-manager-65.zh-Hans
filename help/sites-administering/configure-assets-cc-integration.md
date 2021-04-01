@@ -5,9 +5,9 @@ contentOwner: AG
 feature: 资产管理
 role: 业务从业者、架构师、管理员
 translation-type: tm+mt
-source-git-commit: 4cc8e60694e2aea74dfedd0bbcb8d47a208d45d1
+source-git-commit: a9c9194ac1d163be3ab642ab5a6323de02d67363
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1002'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 在后端，AEM服务器使用网关对您的用户档案进行身份验证，然后在资产和Experience Cloud之间同步数据。
 
->[!CAUTION]
+>[!NOTE]
 >
 >此功能在AEM Assets中已弃用。 在[AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)中查找替换项。 如果您有任何查询，请[与Adobe客户服务部门](https://www.adobe.com/account/sign-in.supportportal.html)联系。
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 1. 在&#x200B;**[!UICONTROL 创建配置]**&#x200B;对话框中，指定新配置的标题和名称，然后单击&#x200B;**[!UICONTROL 创建]**。
 
-   ![命名新配置以集成AEM Assets和CC](assets/chlimage_1-51.png)
+   ![命名新配置以集成AEM Assets和CC](assets/aem-ec-integration-config1.png)
 
 1. 在&#x200B;**[!UICONTROL 租户URL]**&#x200B;字段中，指定AEM Assets的URL。 在过去，如果URL定义为`https://<tenant_id>.marketing.adobe.com`，则将其更改为`https://<tenant_id>.experiencecloud.adobe.com`。
 
@@ -95,8 +95,6 @@ ht-degree: 2%
 ## 启用同步{#enable-synchronization}
 
 1. 使用过程[的最后一步中提到的以下方法之一显示公钥，向Experience Cloud](#add-a-new-configuration)添加新配置。 单击&#x200B;**[!UICONTROL 显示公钥]**。
-
-   ![chlimage_1-52](assets/chlimage_1-52.png)
 
 1. 复制公钥并将其粘贴到您在[中创建应用程序](#create-an-application)的应用程序的配置接口的&#x200B;**[!UICONTROL 公钥]**&#x200B;字段中。
 
@@ -118,7 +116,7 @@ ht-degree: 2%
 ## 将用户添加到Experience Cloud{#add-users-to-experience-cloud}
 
 1. 使用管理员凭据登录到Experience Cloud。
-1. 在边栏中，转到&#x200B;**[!UICONTROL 管理]**，然后单击/点按&#x200B;**[!UICONTROL 启动企业仪表板]**。
+1. 在边栏中，转到&#x200B;**[!UICONTROL 管理]**，然后单击&#x200B;**[!UICONTROL 启动企业仪表板]**。
 1. 在边栏中，单击&#x200B;**[!UICONTROL 用户]**&#x200B;以打开&#x200B;**[!UICONTROL 用户管理]**&#x200B;页面。
 1. 在工具栏中，单击&#x200B;**添加** ![ aem_assets_add_icon](assets/aem_assets_add_icon.png)。
 1. 添加一个或多个用户，以便让用户能够与Creative Cloud共享资产。
