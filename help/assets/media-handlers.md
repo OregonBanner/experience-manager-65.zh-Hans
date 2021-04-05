@@ -4,14 +4,14 @@ description: 了解媒体处理程序以及如何使用工作流对您的数字�
 contentOwner: AG
 role: 商务从业人员
 feature: 工作流，演绎版
+exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 3%
 
 ---
-
 
 # 使用媒体处理程序和工作流{#processing-assets-using-media-handlers-and-workflows}处理资源
 
@@ -46,6 +46,8 @@ ht-degree: 3%
 | [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
 | [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
 | [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | 回退，以防找不到其他处理函数从资产中提取数据 |
+
+{style=&quot;table-layout:auto&quot;}
 
 所有处理函数都执行以下任务:
 
