@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: 交互式通信
+exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 92092e1c050c9264c19e3cd9da9b240607af7bab
 workflow-type: tm+mt
-source-wordcount: '6122'
+source-wordcount: '6212'
 ht-degree: 1%
 
 ---
-
 
 # 创建交互通信{#create-an-interactive-communication}
 
@@ -611,3 +611,23 @@ Web渠道创作界面便于将面板中的组件分组，以便能够同时对�
 
    ![content_tree_grouping](assets/content_tree_grouping.png)
 
+## 打印渠道{#output-format-print-channel}的输出格式
+
+使用PrintChannel API为交互式通信的打印渠道定义输出格式。 如果不定义输出格式，AEM Forms将生成PDF格式的输出。
+
+```javascript
+//options for rendering print channel of a multi-channel document
+PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
+PrintDocument printDocument = printChannel.render(renderOptions);
+```
+
+要以任何其他格式生成输出，请指定输出格式类型。 有关支持的输出格式类型的列表，请参阅[PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html)。
+
+例如，您可以使用以下示例将PCL定义为交互式通信的输出格式：
+
+```javascript
+//options for rendering print channel of a multi-channel document
+PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
+renderOptions.setRenderFormat(PrintConfig.HP_PCL_5e);
+PrintDocument printDocument = printChannel.render(renderOptions);
+```
