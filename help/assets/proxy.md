@@ -3,14 +3,14 @@ title: '[!DNL Assets] 代理开发'
 description: 代理是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] 代理、支持的操作、代理组件以及如何开发自定义代理工作程序。
 contentOwner: AG
 role: 管理员、架构师
+exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Assets] 代理开发  {#assets-proxy-development}
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 代理是一个特定的（有时是单独的）Experience Manager实例，它使用代理Worker作为处理作业和创建结果的处理器。 代理工作器可用于各种任务。 对于[!DNL Assets]代理，此代理可用于加载资产以在资产中呈现。 例如，[IDS代理worker](indesign.md)使用[!DNL Adobe InDesign]服务器处理要在资产中使用的文件。
 
-当代理是单独的[!DNL Experience Manager]实例时，这有助于减少Experience Manager创作实例的负载。 默认情况下，[!DNL Assets]在同一JVM（通过代理外部化）中执行资产处理任务，以减少Experience Manager创作实例的负载。
+当代理是单独的[!DNL Experience Manager]实例时，这有助于减少[!DNL Experience Manager]创作实例的负载。 默认情况下，[!DNL Assets]在同一JVM（通过代理外部化）中执行资产处理任务，以减少[!DNL Experience Manager]创作实例的负载。
 
 ## 代理（HTTP访问）{#proxy-http-access}
 
@@ -104,7 +104,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
  proxyJobService.removeJob(jobId);
 ```
 
-### 云服务配置 {#cloud-service-configurations}
+### Cloud Service配置{#cloud-service-configurations}
 
 >[!NOTE]
 >
