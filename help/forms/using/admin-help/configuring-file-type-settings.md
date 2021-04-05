@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF 生成器
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 3bb12f6323398971ec315f49611a39977bd548a2
 workflow-type: tm+mt
-source-wordcount: '6148'
+source-wordcount: '6171'
 ht-degree: 0%
 
 ---
@@ -515,6 +515,8 @@ NOTE to WRITER: Unfinished sentence above.
 **[!UICONTROL 启用高级标记]**:添加高级标签以增强辅助功能。
 
 **[!UICONTROL 将所有样式转换为书签]**:将Word文档中的所有样式转换为PDF文档中的书签。
+
+**[!UICONTROL 将指定样式转换为书签]**:将您在具有级别的样式中定 **[!UICONTROL 义的样]** 式转换为PDF文档中的书签。
 
 **[!UICONTROL 带色阶的样式]**:指定Word文档中的哪些样式将转换为PDF文档中的书签。还指定书签的级别。 要使用此功能，请取消选择&#x200B;**[!UICONTROL 将所有样式转换为书签]**&#x200B;选项，并以以下格式指定样式名称：
 
