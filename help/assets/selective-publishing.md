@@ -6,15 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
+feature: 发布
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '2937'
+source-wordcount: '2935'
 ht-degree: 4%
 
 ---
-
 
 # 在Dynamic Media {#selective-publish-configure-folder}中的文件夹级别配置选择性发布
 
@@ -263,4 +264,3 @@ ht-degree: 4%
 未同步到Dynamic Media但在其上触发了Dynamic Media发布操作的资产会导致以下错误消息和解决方案：
 
 ![选择性发布错误](/help/assets/assets-dm/selective-publish-error.png)
-
