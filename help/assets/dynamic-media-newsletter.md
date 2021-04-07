@@ -4,15 +4,16 @@ description: 'Experience League的Dynamic Media新闻快讯是每月新闻快讯
 keywords: Dynamic Media;newsletter；产品更新；提示与技巧；事件；客户成功；博客；博客；图像；视频；功能；功能
 contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
+feature: 协作，Dynamic Media Classic
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
-
 
 # ![Dynamic Media Newsletter徽标](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
