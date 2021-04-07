@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
+feature: 发布
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 14%
 
 ---
-
 
 # 发布 Dynamic Media 资产 {#publishing-dynamic-media-assets}
 
