@@ -5,15 +5,16 @@ uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
+feature: 配置
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '255'
 ht-degree: 13%
 
 ---
-
 
 # 设置Dynamic Media {#setting-up-dynamic-media}
 
@@ -43,3 +44,4 @@ ht-degree: 13%
 >**如果要升级：**
 >
 >* 启动并运行AEM后，您上传的任何资产都会自动启用Dynamic Media（除非系统管理员明确禁用了它）。 如果您是AEM的升级实例并且是Dynamic Media的新实例，您可能需要重新处理您的资源以启用Dynamic Media。
+
