@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
+feature: 配置
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1275'
 ht-degree: 22%
 
 ---
-
 
 # 将 URL 关联到您的 Web 应用程序 {#linking-urls-to-your-web-application}
 
