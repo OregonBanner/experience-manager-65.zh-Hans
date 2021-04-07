@@ -5,15 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator,Developer
+exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
+feature: 配置，规则集
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '765'
 ht-degree: 5%
 
 ---
-
 
 # 使用规则集转换URL {#using-rulesets-to-transform-urls}
 
@@ -84,4 +85,3 @@ ht-degree: 5%
    规则集条件将应用于对实时Dynamic Media图像服务器的请求。
 
    如果您对规则集文件进行了更改，则在您重新上传和重新发布更新的规则集文件时，会立即应用更改。
-
