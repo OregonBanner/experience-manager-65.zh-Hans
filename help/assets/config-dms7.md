@@ -1,22 +1,23 @@
 ---
-title: 配置 Dynamic Media - Scene7 模式
+title: 配置 Dynamic Media — Scene7 模式
 description: 了解如何配置Dynamic Media - Scene7模式。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
+feature: 配置，Scene7模式
 translation-type: tm+mt
-source-git-commit: 6f4cbacb89a891ea8193ca2f495aba353bea6b1a
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '6154'
 ht-degree: 5%
 
 ---
 
-
-# 配置 Dynamic Media - Scene7 模式{#configuring-dynamic-media-scene-mode}
+# 配置 Dynamic Media — Scene7 模式{#configuring-dynamic-media-scene-mode}
 
 如果您使用为不同环境（如开发、升级和生产）设置的Adobe Experience Manager，请为这些环境中的每个配置Dynamic MediaCloud Services。
 
@@ -422,7 +423,7 @@ spin-01-01
  spin-03-12
 ```
 
-通过此信息，可以按如下方式创建批集类型菜谱：
+通过此信息，您可以按如下方式创建批集类型菜谱：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
