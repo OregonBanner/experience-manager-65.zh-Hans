@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
+exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 95%
+source-wordcount: '854'
+ht-degree: 92%
 
 ---
-
 
 # 启动项{#launches}
 
@@ -99,9 +99,16 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->创建和编辑启动项需要对`/content/launches`的访问权限——与默认组`content-authors`的权限相同。
+>创建和编辑启动项需要对`/content/launches`的访问权限 — 与默认组`content-authors`的访问权限相同。
 >
 >如果您遇到任何问题，请联系您的系统管理员。
+
+>[!CAUTION]
+>
+>不支持对启动页面上的组件进行重新排序。
+>
+>提升页面时，将反映任何内容更改，但组件位置不会更改。
+
 
 ### “启动项”控制台{#the-launches-console}
 
@@ -111,7 +118,7 @@ ht-degree: 95%
 
 * 或直接使用[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
-## 引用（站点控制台）中的启动项{#launches-in-references-sites-console}
+## 引用（“站点”控制台）{#launches-in-references-sites-console}中的启动项
 
 1. 在&#x200B;**站点**&#x200B;控制台中，导航到启动项的源。
 1. 打开&#x200B;**引用**&#x200B;边栏并选择源页面。
