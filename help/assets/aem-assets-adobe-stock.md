@@ -3,15 +3,15 @@ title: 管理 [!DNL Adobe Stock] 资产
 description: 从 [!DNL Adobe Experience Manager]中搜索、提取、许可和管理 [!DNL Adobe Stock] 资产。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 feature: 搜索，Adobe Stock
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
+exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1091'
 ht-degree: 13%
 
 ---
-
 
 # 在[!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}中使用[!DNL Adobe Stock]资产
 
@@ -35,11 +35,11 @@ ht-degree: 13%
 
 1. 在[!DNL Experience Manager]用户界面中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL AdobeIMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 云解决方案]** > **[!UICONTROL Adobe Stock]**。
 1. 重用现有证书或选择&#x200B;**[!UICONTROL 创建新证书]**。
-1. 单击&#x200B;**[!UICONTROL 创建证书]**。创建后，下载公钥。 单击&#x200B;**[!UICONTROL 下一步]**。
-1. 将下载的公钥添加到您的[!DNL Adobe Developer Console]服务帐户。 单击&#x200B;**[!UICONTROL 下一步]**。使[!UICONTROL AdobeIMS技术帐户配置]屏幕保持打开状态，以便很快提供值。
+1. 单击&#x200B;**[!UICONTROL 创建证书]**。创建后，下载公钥。 单击&#x200B;**[!UICONTROL 下一步]**。使[!UICONTROL AdobeIMS技术帐户配置]屏幕保持打开状态，以便很快提供所需的值。
 1. 访问[Adobe开发者控制台](https://console.adobe.io)。 确保您的帐户对需要集成的组织具有管理员权限。
-1. 单击&#x200B;**[!UICONTROL 创建新项目]**，然后单击&#x200B;**[!UICONTROL 添加API]**。 从可供您使用的API列表中选择&#x200B;**[!UICONTROL Adobe Stock]**。 选择[!UICONTROL OAUTH 2.0 Web]。 配置并复制显示的各种值。
-1. 在[!DNL Experience Manager]中，提供标题为&#x200B;**[!UICONTROL Title]**、**[!UICONTROL Authorization Server]**、**[!UICONTROL API密钥]**、**[!UICONTROL Client Secret]**&#x200B;和&#x200B;**[!UICONTROL Payload]**&#x200B;的字段中的值。 有关这些值的详细信息，请参见[JWT身份验证快速开始](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)。
+1. 单击&#x200B;**[!UICONTROL 创建新项目]**，然后单击&#x200B;**[!UICONTROL 添加API]**。 从可供您使用的API列表中选择&#x200B;**[!UICONTROL Adobe Stock]**。 选择[!UICONTROL OAUTH 2.0 Web]。
+1. 提供&#x200B;**[!UICONTROL 默认重定向URI]**&#x200B;和&#x200B;**[!UICONTROL 重定向URI模式]**&#x200B;值。 单击&#x200B;**[!UICONTROL 保存配置的 API]**。复制生成的ID和机密。
+1. 在[!UICONTROL AdobeIMS技术帐户配置]屏幕中，在标题为&#x200B;**[!UICONTROL Title]**、**[!UICONTROL 授权服务器]**、**[!UICONTROL API密钥]**、**[!UICONTROL 客户端密钥]**&#x200B;和&#x200B;**[!UICONTROL 有效负荷]**。 有关这些值的详细信息，请参阅[JWT身份验证快速开始](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)。
 
 <!-- TBD: Update the URL to update the terminology when AIO team updates their documentation URL. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
