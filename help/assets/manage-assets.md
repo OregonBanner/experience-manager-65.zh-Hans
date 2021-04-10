@@ -3,16 +3,16 @@ title: 管理您的数字资产
 description: 了解资产管理任务，如上传、下载、编辑、搜索、删除、注释以及版本化数字资产。
 contentOwner: AG
 mini-toc-levels: 1
-role: 商务从业人员
+role: Business Practitioner
 feature: 资产管理，搜索
+exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: d88962cb4018b0b60f61006510f416478d119cb5
 workflow-type: tm+mt
-source-wordcount: '9595'
-ht-degree: 7%
+source-wordcount: '9652'
+ht-degree: 6%
 
 ---
-
 
 # 管理您的数字资产{#manage-digital-assets}
 
@@ -585,48 +585,33 @@ Photoshop 文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
 请参阅[从Experience Manager](/help/assets/download-assets-from-aem.md)下载资产。
 
-## 发布资产{#publishing-assets}
+## 发布或取消发布资产{#publish-assets}
 
->[!NOTE]
->
->有关Dynamic Media的详细信息，请参阅[发布Dynamic Media资产。](/help/assets/publishing-dynamicmedia-assets.md)
+在[!DNL Experience Manager]作者上传、处理或编辑您的资产后，您会将该资产发布到发布服务器。 发布后，资产将公开可用。 取消发布操作从发布服务器中删除了资产，但未从创作服务器中删除。
 
-1. 导航到要发布的资产/文件夹所在的位置。
+有关特定于[!DNL Dynamic Media]的信息，请参阅[发布 [!DNL Dynamic Media] 资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. 从资产卡中选择&#x200B;**[!UICONTROL 发布]**&#x200B;快速操作，或选择资产并单击工具栏中的&#x200B;**[!UICONTROL 快速发布]**&#x200B;选项。
-1. 如果资产引用了其他资产，向导中便会列出这些引用。仅显示自上次发布/取消发布后未发布或已修改的引用。 选择要发布的引用。
+1. 导航到要发布或要从发布环境（取消发布）中删除的资产或资产文件夹的位置。
 
-   >[!NOTE]
-   >
-   >空文件夹（属于您已发布的文件夹的一部分）不会发布。
+1. 选择要取消发布的资产或文件夹，然后单击工具栏中的&#x200B;**[!UICONTROL 管理发布]** ![管理发布选项](assets/do-not-localize/globe-publication.png)选项。 或者，要快速发布，请从工具栏中选择&#x200B;**[!UICONTROL 快速发布]**&#x200B;选项。 如果要发布的文件夹包含空文件夹，则不会发布空文件夹。
 
-1. 单击&#x200B;**[!UICONTROL 发布]**&#x200B;以确认资产的激活。
-
->[!CAUTION]
->
->如果您发布的资产正在处理，则仅会发布原始内容。 缺少再现。 等待处理完成，然后在处理完成后发布或重新发布资产。
-
-## 取消发布资产{#unpublishing-assets}
-
-1. 导航到要从发布环境（取消发布）中删除的资产/资产文件夹的位置。
-
-1. 选择要取消发布的资产/文件夹，然后单击工具栏中的&#x200B;**[!UICONTROL 管理发布]** ![管理发布选项](assets/do-not-localize/globe-publication.png)选项。
-
-1. 从列表中选择&#x200B;**[!UICONTROL 取消发布]**&#x200B;操作。
+1. 根据需要选择&#x200B;**[!UICONTROL Publish]**&#x200B;或&#x200B;**[!UICONTROL Unpublish]**&#x200B;选项。
 
    ![取消发布操作](assets/unpublish_action.png)
+   *图：发布和取消发布选项以及计划选项。*
 
-1. 要稍后取消发布资产，请选择&#x200B;**[!UICONTROL 稍后取消发布]**，然后选择取消发布资产的日期。
-1. 计划一个资产在发布环境中不再可用的日期。
-1. 如果资产引用了其他资产，请选择您要取消发布的引用。单击&#x200B;**[!UICONTROL 取消发布]**。
-1. 在确认对话框中，单击：
+1. 选择&#x200B;**[!UICONTROL Now]**&#x200B;立即对资产执行操作，或选择&#x200B;**[!UICONTROL 稍后]**&#x200B;计划操作。 如果选择&#x200B;**[!UICONTROL 稍后]**&#x200B;选项，请选择日期和时间。 单击&#x200B;**[!UICONTROL 下一步]**。
 
-   * **** 取消以停止操作
-   * **[!UICONTROL 取]** 消发布，以确认在指定日期已取消发布资产(在发布环境中不再可用)。
+1. 发布时，如果资产引用了其他资产，向导中便会列出这些引用。 仅显示自上次发布后未发布或修改的引用。 选择要发布的引用。
 
-   >[!NOTE]
-   >
-   >取消发布复杂资产时，仅取消发布该资产。请避免取消发布引用，因为可能其他已发布的资产也引用了这些内容。
+1. 取消发布时，如果资产引用了其他资产，请选择您要取消发布的引用。 单击&#x200B;**[!UICONTROL 取消发布]**。 在确认对话框中，单击&#x200B;**[!UICONTROL 取消]**&#x200B;以停止操作，或单击&#x200B;**[!UICONTROL 取消发布]**&#x200B;以确认资产将在指定日期取消发布。
+
+了解与发布或取消发布资产或文件夹相关的以下限制和提示：
+
+* [!UICONTROL 管理发布]选项仅对具有复制权限的用户帐户可用。
+* 取消发布复杂资产时，仅取消发布该资产。请避免取消发布引用，因为其他已发布的资产可能会引用这些内容。
+* 未发布空文件夹。
+* 如果您发布的资产正在处理，则仅会发布原始内容。 缺少再现。 等待处理完成，然后在处理完成后发布或重新发布资产。
 
 ## 已关闭的用户组 {#closed-user-group}
 
