@@ -2,16 +2,16 @@
 title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署上的可用资源。
 contentOwner: AG
-role: 业务从业者、管理员、领导者
+role: Business Practitioner, Administrator, Leader
 feature: 连接的资产、用户和组
+exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 48e5b55a1d79fef6172f684cb65a4137113fb7fb
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2739'
 ht-degree: 29%
 
 ---
-
 
 # 在 中，使用连接的资产共享 DAM 资产 [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
@@ -42,7 +42,7 @@ ht-degree: 29%
 
 作者在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索的资产。 文档会添加到`Download`组件，图像会添加到`Image`组件。 作者还可以在扩展默认`Download`或`Image`组件的任何自定义[!DNL Experience Manager]组件中添加远程资源。 支持的格式有：
 
-* **图像格式**:图像组件支 [持](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) 的格式。[!DNL Dynamic Media] 不支持图像。
+* **图像格式**:图像组件支 [持](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 的格式。[!DNL Dynamic Media] 不支持图像。
 * **文档格式**:请参阅支 [持的文档格式](assets-formats.md#supported-document-formats)。
 
 ### 涉及的用户和组 {#users-and-groups-involved}
@@ -110,17 +110,12 @@ ht-degree: 29%
 
 1. 将[!DNL Sites]部署添加为[!DNL Assets]部署上的CORS配置中允许的来源。 有关详细信息，请参阅[了解CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)。
 
-<!-- TBD: See if these steps are not required.
-    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-
-    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
-
-    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
--->
+1. 配置[同一站点Cookie支持](/help/sites-administering/same-site-cookie-support.md)。
 
 您可以检查已配置的[!DNL Sites]部署与[!DNL Assets]部署之间的连接。
 
-![已配置已连接资产的连接测试  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+![已配置已连接资产的连接测 [!DNL Sites]](assets/connected-assets-multiple-config.png)
+*试图：已配置已连接资产的连接测试 [!DNL Sites]。*
 
 ## 使用远程资产 {#use-remote-assets}
 
@@ -177,7 +172,7 @@ ht-degree: 29%
 1. 在[!DNL Assets]控制台中选择资产，然后单击工具栏中的&#x200B;**[!UICONTROL 属性]**。
 1. 单击&#x200B;**[!UICONTROL 引用]**&#x200B;选项卡。 有关在[!DNL Assets]部署中使用资产的信息，请参阅&#x200B;**[!UICONTROL 本地引用]**。 请参阅**[!UICONTROL 远程引用]，以在[!DNL Sites]部署中使用“已连接资产”功能获取资产时使用资产。
 
-   ![“资产属性”页中的远程引用](assets/connected-assets-remote-reference.png)
+   ![资产属性页中的远程引用](assets/connected-assets-remote-reference.png)
 
 1. [!DNL Sites]页的引用显示每个本地[!DNL Sites]的引用总数。 查找所有引用并显示引用的总数可能需要一些时间。
 1. 引用的列表是交互式的，DAM用户可以单击引用以打开引用页面。 如果由于某种原因无法获取远程引用，则显示通知，通知用户失败。
@@ -222,11 +217,13 @@ ht-degree: 29%
 要排除常见错误，请执行以下步骤：
 
 * 如果您无法从[!UICONTROL 内容查找器]中搜索远程资产，请确保所需的角色和权限都到位。
-* 由于一个或多个原因，从远程大坝获取的资产可能无法发布到网页上。 它不存在于远程服务器上，缺少相应的获取权限，或者网络故障可能是原因。 确保未从远程DAM中删除资产。 请确保适当的权限到位并满足先决条件。 重试将资产添加到页面并重新发布。 检查[异步作业列表](/help/sites-administering/asynchronous-jobs.md)，查看是否发生了资产获取错误。
-* 如果无法从本地[!DNL Sites]部署访问远程DAM部署，请确保允许跨站点Cookie。 如果跨站点Cookie被阻止，则[!DNL Experience Manager]的两个部署可能无法进行身份验证。 例如，在Incognito模式下，[!DNL Google Chrome]可能会阻止第三方Cookie。 要允许[!DNL Chrome]浏览器中的Cookie，请单击地址栏中的“眼睛”图标，导航到“站点不工作”>“阻止”，选择“远程DAM URL”，然后允许登录令牌Cookie。 或者，请参阅有关[如何启用第三方Cookie的帮助](https://support.google.com/chrome/answer/95647)。
 
-   ![Chrome中的Cookie错误](assets/chrome-cookies-incognito-dialog.png)
+* 由于一个或多个原因，从远程DAM获取的资产可能无法发布到网页上。 它不存在于远程服务器上，缺少相应的获取权限，或者网络故障可能是原因。 确保未从远程DAM中删除资产。 请确保适当的权限到位并满足先决条件。 重试将资产添加到页面并重新发布。 检查[异步作业列表](/help/sites-administering/asynchronous-jobs.md)，查看是否发生了资产获取错误。
+
+* 如果您无法从本地[!DNL Sites]部署访问远程DAM部署，请确保允许跨站点Cookie，并配置[同一站点Cookie支持](/help/sites-administering/same-site-cookie-support.md)。 如果跨站点Cookie被阻止，则[!DNL Experience Manager]的部署可能无法进行身份验证。 例如，在Incognito模式下，[!DNL Google Chrome]可能会阻止第三方Cookie。 要允许[!DNL Chrome]浏览器中的Cookie，请单击地址栏中的“眼睛”图标，导航至&#x200B;**Site Not Working** > **Blocked**，选择远程DAM URL，并允许登录令牌Cookie。 或者，请参阅[如何启用第三方Cookie](https://support.google.com/chrome/answer/95647)。
+
+   ![Chrome浏览器中的Incognito模式中出现Cookie错误](assets/chrome-cookies-incognito-dialog.png)
 
 * 如果未检索远程引用并导致错误消息，请检查[!DNL Sites]部署是否可用，并检查网络连接问题。 稍后重试以进行检查。 [!DNL Assets] 部署尝试两次建立与部署的 [!DNL Sites] 连接，然后报告失败。
 
-   ![重试资产远程引用失败](assets/reference-report-failure.png)
+   ![无法检索资产远程引用](assets/reference-report-failure.png)
