@@ -7,9 +7,9 @@ role: Business Practitioner
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 translation-type: tm+mt
-source-git-commit: d88962cb4018b0b60f61006510f416478d119cb5
+source-git-commit: 46b11d0b59d748f2035e7ed46dc8caeef79d48c0
 workflow-type: tm+mt
-source-wordcount: '9652'
+source-wordcount: '9798'
 ht-degree: 6%
 
 ---
@@ -925,4 +925,24 @@ CUG是限制访问您的资产的额外方式。 您还可以为文件夹配置�
 * 一个收藏集可以包含来自不同位置的资产，因为它们只包含对这些资产的引用。 每个收藏集都保持资产的引用完整性。
 * 您可以与具有不同权限级别（包括编辑、查看等）的多个用户共享集合。
 
-有关集合管理的详细信息，请参阅[管理集合](/help/assets/manage-collections.md)。
+要了解集合管理的详细信息，请参阅[管理集合](/help/assets/manage-collections.md)。
+
+## 在桌面应用程序或Adobe资产链接{#hide-expired-assets-via-acp-api}中查看资产时隐藏已过期的资产
+
+[!DNL Experience Manager] 桌面应用程序允许从Windows或Mac桌面访问DAM存储库。Adobe Asset Link允许从支持的[!DNL Creative Cloud]桌面应用程序中访问资产。
+
+在[!DNL Experience Manager]用户界面中浏览资产时，不会显示过期的资产。 要防止在从桌面应用程序和资产链接浏览资产时查看、搜索和获取过期的资产，管理员可以执行以下配置。 此配置适用于所有用户，而不考虑管理员权限。
+
+执行以下CURL命令。 确保对访问资产的用户在`/conf/global/settings/dam/acpapi/`上具有读取访问权限。 默认情况下，属于`dam-user`组的用户具有该权限。
+
+```curl
+curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/global/settings/dam/acpapi/configuration/_jcr_content' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'jcr:title=acpapiconfig' \
+--data-urlencode 'hideExpiredAssets=true' \
+--data-urlencode 'hideExpiredAssets@TypeHint=Boolean' \
+--data-urlencode 'jcr:primaryType=nt:unstructured' \
+--data-urlencode '../../jcr:primaryType=sling:Folder'
+```
+
+要了解更多信息，请参阅如何[使用桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)浏览DAM资产和[如何使用Adobe资产链接](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)。
