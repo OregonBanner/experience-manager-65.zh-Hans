@@ -2,16 +2,16 @@
 title: 与Adobe Creative Cloud最佳做法集成
 description: 集成 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 以简化资产传输工作流并实现高内容速度的最佳实践。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 协作，Adobe资产链接，Experience Manager桌面应用程序
+role: Business Practitioner, Administrator
+feature: 协作，Adobe资产链接，桌面应用程序
+exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: c4cfb709162ca8f8f6e8508516c39542347c6bc4
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3254'
 ht-degree: 15%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] 和集 [!DNL Creative Cloud] 成最佳实践  {#aem-and-creative-cloud-integration-best-practices}
 
