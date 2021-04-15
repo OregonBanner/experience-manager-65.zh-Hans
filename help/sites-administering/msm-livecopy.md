@@ -2,14 +2,14 @@
 title: 创建和同步Live Copy
 description: 了解如何创建和同步Live Copy。
 feature: 多站点管理器
+exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 05dc73448d6902ccdbc92782fff39ef1a6339056
 workflow-type: tm+mt
-source-wordcount: '4173'
+source-wordcount: '4174'
 ht-degree: 1%
 
 ---
-
 
 # 创建和同步Live Copy{#creating-and-synchronizing-live-copies}
 
@@ -240,7 +240,7 @@ Blueprint页面（在Blueprint配置中引用）为您提供了使用当前(Blue
 
 #### 从参考边栏{#roll-out-a-blueprint-from-the-reference-rail}中推出Blueprint
 
-1. 在&#x200B;**站点**&#x200B;控制台中，选择Blueprint中的页面，然后打开&#x200B;**[引用](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板（从工具栏中）。
+1. 在&#x200B;**站点**&#x200B;控制台中，选择Live Copy中的页面，然后打开&#x200B;**[引用](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板（从工具栏中）。
 1. 从列表中选择&#x200B;**Blueprint**&#x200B;选项，以显示与此页关联的Blueprint。
 1. 从列表中选择所需的蓝图。
 1. 单击或点按&#x200B;**转出**。
