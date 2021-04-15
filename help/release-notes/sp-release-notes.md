@@ -5,9 +5,9 @@ docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
+source-git-commit: 9b23e9d5bbdbdde864ce71f434d6536439067f82
 workflow-type: tm+mt
-source-wordcount: '3418'
+source-wordcount: '3413'
 ht-degree: 5%
 
 ---
@@ -158,7 +158,7 @@ ht-degree: 5%
 * 从[!UICONTROL Administrators]字段删除[!UICONTROL All Users]并不实际从后端删除它们(NPR-35592、NPR-35611)。
 * 当输入的文本为部分匹配时，[!UICONTROL 合成消息]组件不返回任何结果(NPR-35666)。
 
-* 在尝试通过选择&#x200B;**添加标记**&#x200B;将标记添加到新博客时，会注意到某些性能影响。 要提高性能，请安装[cqTagLucene-0.0.1.zip修补程序](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)，以解决标记建议问题。 可以从[!DNL Software Distribution]下载修补程序。
+* 在尝试向新博客添加标记时，选择&#x200B;**[!UICONTROL 添加标记]**&#x200B;可能会注意到一些性能影响和速度变慢。 要提高性能，请安装[cqTagLucene-0.0.1.zip修补程序](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)（可从[!DNL Software Distribution]获得）。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
