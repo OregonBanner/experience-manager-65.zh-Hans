@@ -3,14 +3,14 @@ title: '[!DNL Experience Manager] 6.5 service pack发行说明'
 description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 8的发行说明
 docset: aem65
 mini-toc-levels: 1
+exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: fb1423b7ae110b8a3cf8e0e389394e9266157a9f
+source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
 workflow-type: tm+mt
-source-wordcount: '3360'
+source-wordcount: '3418'
 ht-degree: 5%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] 6.5 service pack发行说明  {#aem-service-pack-release-notes}
 
@@ -154,9 +154,11 @@ ht-degree: 5%
 
 * 在将页面结构添加到社区组时，痕迹导航中的[!UICONTROL Group]标题将更改为第一个[!UICONTROL Page]的标题(NPR-35803)。
 * 与版主不同，标准社区成员无法访问和编辑任何帖子草稿(NPR-35339)。
-* 使用DSRPReindexServlet中断访问控制和拒绝服务，将社区站点拖到索引完成之前(NPR-35591)。
+* `DSRPReindexServlet`的访问控制和拒绝服务中断，导致社区站点瘫痪，直到索引完成(NPR-35591)。
 * 从[!UICONTROL Administrators]字段删除[!UICONTROL All Users]并不实际从后端删除它们(NPR-35592、NPR-35611)。
 * 当输入的文本为部分匹配时，[!UICONTROL 合成消息]组件不返回任何结果(NPR-35666)。
+
+* 在尝试通过选择&#x200B;**添加标记**&#x200B;将标记添加到新博客时，会注意到某些性能影响。 要提高性能，请安装[cqTagLucene-0.0.1.zip修补程序](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)，以解决标记建议问题。 可以从[!DNL Software Distribution]下载修补程序。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
@@ -214,7 +216,7 @@ ht-degree: 5%
 
 * 没有确认消息指示XDP文件成功批量上传到CRX存储库(NPR-35546)。
 
-**Document Security**
+**文档安全**
 
 * 针对AdminUI上的[!UICONTROL 编辑策略]选项报告了多个问题(NPR-35747)。
 
