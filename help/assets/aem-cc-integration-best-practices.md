@@ -3,7 +3,7 @@ title: 与Adobe Creative Cloud最佳做法集成
 description: 集成 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 以简化资产传输工作流并实现高内容速度的最佳实践。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: 协作，Adobe资产链接，桌面应用程序
+feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 translation-type: tm+mt
 source-git-commit: c4cfb709162ca8f8f6e8508516c39542347c6bc4

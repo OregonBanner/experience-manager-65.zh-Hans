@@ -2,8 +2,8 @@
 title: 活动时间轴视图中的数字资产流
 description: 本文介绍如何在时间轴上显示资产的活动日志。
 contentOwner: AG
-feature: 资产管理
-role: 业务从业者，管理员
+feature: Asset Management
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

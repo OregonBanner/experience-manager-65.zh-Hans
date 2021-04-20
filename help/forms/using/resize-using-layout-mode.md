@@ -1,7 +1,7 @@
 ---
 title: 使用布局模式调整组件大小以用于自适应表单
 description: '使用布局模式下可用的响应式网格定义组件的位置 '
-feature: 自适应表单
+feature: Adaptive Forms
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

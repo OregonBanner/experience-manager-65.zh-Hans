@@ -2,8 +2,8 @@
 title: 用于共享资产的专用文件夹
 description: 了解如何在 [!DNL Adobe Experience Manager Assets] 中创建专用文件夹并与其他用户共享该文件夹，并为他们分配各种权限。
 contentOwner: AG
-role: 商务从业人员
-feature: 协作
+role: Business Practitioner
+feature: Collaboration
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

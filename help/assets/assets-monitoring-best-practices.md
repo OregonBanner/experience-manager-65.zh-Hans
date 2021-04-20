@@ -2,8 +2,8 @@
 title: 监视 [!DNL Assets] 部署的最佳实践
 description: 监控部署后 [!DNL Adobe Experience Manager] 部署的环境和性能的最佳实践。
 contentOwner: AG
-role: 管理员、架构师
-feature: 资产管理
+role: Administrator, Architect
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

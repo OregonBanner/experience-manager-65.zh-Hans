@@ -2,7 +2,7 @@
 title: 自定义和扩展 [!DNL Assets]
 description: 了解如何自定义和扩展资产共享和资产编辑器，它们为用户提供了专门定制的界面和功能集。
 contentOwner: AG
-role: 开发人员
+role: Developer
 feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c

@@ -2,7 +2,7 @@
 title: '[!DNL Assets] 代理开发'
 description: 代理是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] 代理、支持的操作、代理组件以及如何开发自定义代理工作程序。
 contentOwner: AG
-role: 管理员、架构师
+role: Administrator, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
 source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537

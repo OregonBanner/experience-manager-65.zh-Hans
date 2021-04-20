@@ -2,8 +2,8 @@
 title: 使用链接共享资产
 description: 将资产、文件夹和收藏集共享为URL。
 contentOwner: AG
-role: 商务从业人员
-feature: 链接共享，资产管理
+role: Business Practitioner
+feature: Link Sharing,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

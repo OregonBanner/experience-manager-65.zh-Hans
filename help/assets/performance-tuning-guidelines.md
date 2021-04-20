@@ -3,8 +3,8 @@ title: 性能调整 [!DNL Assets]。
 description: 有关 [!DNL Experience Manager] 配置、更改硬件、软件和网络组件以消除瓶颈和优化 [!DNL Experience Manager Assets]性能的建议和指导。
 contentOwner: AG
 mini-toc-levels: 1
-role: 架构师、管理员
-feature: 资产管理
+role: Architect, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

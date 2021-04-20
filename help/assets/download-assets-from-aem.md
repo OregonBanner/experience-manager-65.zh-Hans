@@ -2,8 +2,8 @@
 title: 下载资产
 description: 了解如何从 [!DNL Adobe Experience Manager] 下载资产以及启用或禁用下载功能。
 contentOwner: AG
-role: 商务从业人员
-feature: 资产管理，资产分发
+role: Business Practitioner
+feature: Asset Management,Asset Distribution
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

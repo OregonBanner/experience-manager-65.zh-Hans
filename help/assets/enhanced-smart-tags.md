@@ -2,8 +2,8 @@
 title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
-feature: 智能标记，搜索
-role: 业务从业者
+feature: Smart Tags, Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

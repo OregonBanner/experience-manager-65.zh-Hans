@@ -2,8 +2,8 @@
 title: 元数据功能的配置和管理。
 description: 配置和管理与元数据添加和管理相关的 [!DNL Experience Manager Assets] 功能。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 元数据
+role: Business Practitioner, Administrator
+feature: Metadata
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

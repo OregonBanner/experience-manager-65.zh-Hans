@@ -2,8 +2,8 @@
 title: '[!DNL Assets] 主页体验'
 description: 个性化 [!DNL Experience Manager Assets] 主页，获得丰富的欢迎屏幕体验，包括有关资产的近期活动的快照。
 contentOwner: AG
-feature: 开发人员工具、资产管理
-role: 管理员，业务从业者
+feature: Developer Tools, Asset Management
+role: Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: 批量迁移资源
 description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版以及激活资产以发布实例。
 contentOwner: AG
-role: 架构师、管理员
-feature: 迁移、演绎版、资产管理
+role: Architect, Administrator
+feature: Migration,Renditions,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

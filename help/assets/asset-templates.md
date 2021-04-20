@@ -2,8 +2,8 @@
 title: 资产模板
 description: 了解 [!DNL Adobe Experience Manager Assets] 中的资产模板以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
-role: 商务从业人员
-feature: 资源管理，开发人员工具
+role: Business Practitioner
+feature: Asset Management,Developer Tools
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

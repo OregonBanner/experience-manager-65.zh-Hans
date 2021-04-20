@@ -2,8 +2,8 @@
 title: 使用智能内容服务配置资产标记
 description: 了解如何使用智能内容服务在 [!DNL Adobe Experience Manager]中配置智能标记和增强智能标记。
 contentOwner: AG
-role: 管理员
-feature: 标记，智能标记
+role: Administrator
+feature: Tagging,Smart Tags
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

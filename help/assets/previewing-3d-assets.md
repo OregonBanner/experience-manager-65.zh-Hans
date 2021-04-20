@@ -3,8 +3,8 @@ title: 预览 3D 资产
 description: 了解如何预览3D资源
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D资产
-role: 商务从业人员
+feature: 3D Assets
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

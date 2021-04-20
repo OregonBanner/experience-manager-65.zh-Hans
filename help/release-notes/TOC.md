@@ -6,8 +6,8 @@ user-guide-title: Adobe Experience Manager 6.5发行说明
 breadcrumb-title: 发行说明
 user-guide-description: 在发行说明中了解AEM 6.5的最新新增功能。
 feature-set: Experience Manager
-feature: 发行信息
-role: 领导者，架构师，开发人员，数据架构师，数据工程师，管理员，业务从业者
+feature: Release Information
+role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt

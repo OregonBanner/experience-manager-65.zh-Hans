@@ -2,7 +2,7 @@
 title: AEM流畅体验功能列表
 description: 流畅体验功能列表
 index: n
-feature: 创作
+feature: Authoring
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

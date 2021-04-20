@@ -2,8 +2,8 @@
 title: 处理支持的文件格式的最佳实践
 description: 使用 [!DNL Experience Manager Assets]处理各种受支持文件类型的最佳实践。
 contentOwner: AG
-role: 管理员
-feature: 资源管理，开发人员工具
+role: Administrator
+feature: Asset Management,Developer Tools
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

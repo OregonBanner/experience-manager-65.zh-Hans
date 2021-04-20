@@ -2,8 +2,8 @@
 title: 将翻译云服务应用到文件夹
 description: 将翻译云服务应用到文件夹
 contentOwner: AG
-role: 管理员
-feature: 翻译
+role: Administrator
+feature: Translation
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

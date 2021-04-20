@@ -2,8 +2,8 @@
 title: 将水印添加到您的数字资产
 description: 了解如何使用水印功能向资源添加数字水印。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 资产管理
+role: Business Practitioner, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

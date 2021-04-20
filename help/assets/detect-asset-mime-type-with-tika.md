@@ -2,8 +2,8 @@
 title: 使用Apache Tika检测MIME类型的资产
 description: 启用Apache Tika可帮助 [!DNL Experience Manager Assets] 在上载操作（而非文件扩展名）期间检测内容流中的MIME类型资产。
 contentOwner: AG
-role: 管理员、架构师
-feature: 元数据，开发人员工具，资产管理
+role: Administrator, Architect
+feature: Metadata,Developer Tools,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

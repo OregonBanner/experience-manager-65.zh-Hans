@@ -2,8 +2,8 @@
 title: 相关资产
 description: 了解如何关联共享一些常见属性的数字资产。 还可以在数字资产之间创建源源关系。
 contentOwner: AG
-role: 商务从业人员
-feature: 协作，资产管理
+role: Business Practitioner
+feature: Collaboration,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

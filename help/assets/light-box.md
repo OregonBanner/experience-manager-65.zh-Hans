@@ -2,8 +2,8 @@
 title: Lightbox作为您的个人图像库
 description: 了解Lightbox作为Adobe Experience Manager资产中的个人图像库]。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 开发人员工具，再现
+role: Business Practitioner, Administrator
+feature: Developer Tools,Renditions
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

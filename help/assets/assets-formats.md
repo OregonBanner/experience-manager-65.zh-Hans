@@ -2,8 +2,8 @@
 title: 支持的文件格式和MIME类型
 description: ' [!DNL Assets] and [!DNL Dynamic Media] 支持的文件格式和MIME类型以及每种格式支持的功能。'
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 资产管理，演绎版
+role: Business Practitioner, Administrator
+feature: Asset Management,Renditions
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

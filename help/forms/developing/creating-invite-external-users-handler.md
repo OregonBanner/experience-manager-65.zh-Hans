@@ -1,7 +1,7 @@
 ---
 title: 创建邀请外部用户处理程序
 description: 创建邀请外部用户处理程序
-role: 开发人员
+role: Developer
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

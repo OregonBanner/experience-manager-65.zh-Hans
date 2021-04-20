@@ -2,8 +2,8 @@
 title: 启用重复资源检测
 description: 了解如何在Experience Manager中启用重复资源检测。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 资产管理，资产报表
+role: Business Practitioner, Administrator
+feature: Asset Management,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

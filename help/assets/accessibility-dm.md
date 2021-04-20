@@ -4,8 +4,8 @@ description: 了解Dynamic Media和Dynamic Media查看器中的辅助功能支�
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: 辅助功能
-role: 业务从业者，管理员
+feature: Accessibility
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

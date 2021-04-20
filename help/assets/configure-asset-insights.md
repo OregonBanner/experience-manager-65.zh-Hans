@@ -2,8 +2,8 @@
 title: 配置资产分析以获得分析。
 description: 在 [!DNL Adobe Experience Manager Assets]中配置资产分析。
 contentOwner: AG
-role: 架构师、管理员
-feature: 资产分析，资产报表
+role: Architect, Administrator
+feature: Asset Insights,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

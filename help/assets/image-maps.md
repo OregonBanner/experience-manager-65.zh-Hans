@@ -2,8 +2,8 @@
 title: 添加具有超链接的图像映射
 description: 了解如何向图像添加具有超链接的图像映射。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 资产管理
+role: Business Practitioner, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

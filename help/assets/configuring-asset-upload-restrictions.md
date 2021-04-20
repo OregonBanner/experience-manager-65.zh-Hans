@@ -2,8 +2,8 @@
 title: 配置资产上传限制
 description: '限制用户可上传的资产（文件）类型 '
 contentOwner: AG
-role: 开发人员、管理员、架构师
-feature: 资产管理，上传
+role: Developer, Administrator, Architect
+feature: Asset Management,Upload
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

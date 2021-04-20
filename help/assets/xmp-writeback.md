@@ -2,8 +2,8 @@
 title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有演绎版或特定演绎版。
 contentOwner: AG
-role: 业务从业者，管理员
-feature: 元数据
+role: Business Practitioner, Administrator
+feature: Metadata
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: 配置AEM Assets与Experience Cloud的集成
 description: 了解如何配置AEM Assets与Experience Cloud的集成。
 contentOwner: AG
-feature: 资产管理
-role: 业务从业者、架构师、管理员
+feature: Asset Management
+role: Business Practitioner, Architect, Administrator
 translation-type: tm+mt
 source-git-commit: a9c9194ac1d163be3ab642ab5a6323de02d67363
 workflow-type: tm+mt
