@@ -3,26 +3,26 @@ title: 预览 3D 资产
 description: 了解如何预览3D资源
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D Assets
+feature: 3D资产
 role: Business Practitioner
+exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 16%
+source-wordcount: '553'
+ht-degree: 15%
 
 ---
 
+# 在Adobe Experience Manager中预览3D资源{#previewing-3d-assets-aem}
 
-# 在AEM{#previewing-3d-assets-aem}中预览3D资产
+Experience Manager支持在创作过程中上传、投放和交互式预览3D资产。
 
-Adobe Experience Manager支持在创作过程中上传、投放和交互式预览3D资产。
-
-AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器提供了各种控件，其中包括一组交互式相机控件，可让您对 3D 资产执行绕行、缩放和平移操作。
+交互式3D查看器可从Experience Manager中的资产详细信息页面访问。 该查看器提供了各种控件，其中包括一组交互式相机控件，可让您对 3D 资产执行绕行、缩放和平移操作。
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/assets-3d.md). -->
 
-## AEM {#supported-3d-previewing-assets}中支持的3D预览格式
+## Experience Manager {#supported-3d-previewing-assets}中支持的3D预览格式
 
 交互式3D预览支持以下文件格式：
 
@@ -35,7 +35,9 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
 | DN | Adobe Dimension | model/x-adobe-dn | 仅支持摄取；预览不可用。 |
 | USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | 仅支持摄取；预览不可用。 |
 
-**注意**:如果材料未在gLTF模型的预览下呈现，请确保它们的名称正确，并位于与模型 `textures` 相同的根文件夹中的一个文件夹中，如下所示：
+>[!NOTE]
+>
+>如果材料未在gLTF模型的预览中呈现，请确保它们的命名正确，并且位于与模型相同的根文件夹中的`textures`文件夹中，如下所示：
 
     资产(文件
     夹)model.
@@ -44,16 +46,17 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
     material_0_baseColor.
     jpegmaterial_0_normal.jpeg
 
-## 在AEM{#performance-3d-previewing-assets}中预览3D资产时的性能注意事项
+## 在Experience Manager{#performance-3d-previewing-assets}中预览3D资产时的性能注意事项
 
 在资产详细信息视图页中打开3D资产所花费的时间取决于若干因素，如带宽、图像复杂性和服务器延迟。
 
 此外，在以交互方式操作相机时，还要考虑客户端计算机的功能，如工作站、笔记本或移动触控设备。 具备良好图形功能的相当强大的系统可以使交互式 3D 查看体验更流畅、更舒适。
 
-**在AEM中预览3D资产**
+**要在Experience Manager中预览3D资产：**
 
-1. 确保您已将 3D 资产上传到 AEM。请参阅[支持的3D预览格式](#supported-3d-previewing-assets)和[上传资产](/help/assets/manage-assets.md#uploading-assets)。
-1. 从AEM，在&#x200B;**[!UICONTROL Navigation]**&#x200B;页面上，点按&#x200B;**[!UICONTROL 资产>文件。]**
+1. 确保您已将3D资产上传到Experience Manager。
+请参阅[支持的3D预览格式](#supported-3d-previewing-assets)和[上传资产](/help/assets/manage-assets.md#uploading-assets)。
+1. 从Experience Manager，在&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，点按&#x200B;**[!UICONTROL 资产>文件。]**
 
    ![导航页面](/help/assets/assets-dm/navigation-assets.png)
 
@@ -62,24 +65,19 @@ AEM 中的资产详细信息页面提供了交互式 3D 查看器。该查看器
    ![3D卡选择](/help/assets/assets-dm/3d-card-select.png)
    _在卡片视图中，点按要预览的3D资产的卡片。_
 
-1. 点按3D资产的卡片，以在资产详细信息视图页面中打开它。
+1. 点按3D资产的卡片。
 
    ![交互式3D预览](/help/assets/assets-dm/3d-preview.png)
    _在资产详细信息预览页面中对3D资产进行交互式视图。_
 1. 在3D资产的资产详细信息视图页面上，执行下列任一操作：
-   * **旋转相机** — 围绕3D场景和对象绕行视图。
-      * _鼠标_:单击左键并拖动。
-      * _触摸屏_:单指按住并拖动。
-   * **平移相机** — 向左、向右、向上或向下平移视图。
-      * _鼠标_:右键单击并拖动。
-      * _触摸屏_:用两指按住并拖动。
-   * **缩放相机** — 缩放相机以移入和移出3D场景的区域。
-      * _鼠标_:滚轮。
-      * _触摸屏_:两指捏。
-   * **重新输入相机** — 将相机重新输入到3D场景中对象上的某个点。
-      * _鼠标_:多次单击。
-      * _触摸屏_:多次点击。
-   * **重置** — 在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。重置还会将相机移近或远离资产，以便以合理的查看大小完整显示资产。
-   * **全屏模式** — 要进入全屏模式，请点按页面右下角的全屏图标。
+
+   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
+   | --- | --- | --- | --- |
+   | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 单击左键并拖动。 | 单指按住并拖动。 |
+   | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击并拖动。 | 用两指按住并拖动。 |
+   | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏。 |
+   | **重新输入您的相机** | 将相机重新调整到3D场景中对象上的某个点。 | 双击. | 多次点击。 |
+   | **重置** | 在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。 重置还会将相机移近或远离资产，以便以合理的查看大小完整显示资产。 |  |  |
+   | **全屏模式** | 要进入全屏模式，请点按页面右下角的全屏图标。 |  |  |
 
 1. 完成后，在页面右上角附近，点按&#x200B;**[!UICONTROL 关闭。]**
