@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
-feature: Configuration,Scene7 mode
+feature: 配置，Scene7模式
 translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '6154'
 ht-degree: 5%
@@ -423,7 +423,7 @@ spin-01-01
  spin-03-12
 ```
 
-通过此信息，您可以按如下方式创建批集类型菜谱：
+通过此信息，可以按如下方式创建批集类型菜谱：
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
