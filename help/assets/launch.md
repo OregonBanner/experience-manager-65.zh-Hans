@@ -6,16 +6,16 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
-feature: Viewers
+feature: 查看器
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
+exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 4b1b9fb014594a67e8db271cc02bc54b29e24896
 workflow-type: tm+mt
-source-wordcount: '6636'
+source-wordcount: '6602'
 ht-degree: 8%
 
 ---
-
 
 # 将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch{#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}集成
 
@@ -43,11 +43,13 @@ ht-degree: 8%
 
 与Experience Platform Launch集成的主要用例是同时使用AEM Assets和AEM Sites的客户。 在这些情况下，您可以在AEM作者节点和Experience Platform Launch之间设置标准集成，然后将您的站点实例与Experience Platform Launch属性关联。 之后，添加到“站点”页面的任何Dynamic Media WCM组件都将跟踪来自查看器的数据和事件。
 
-请参阅[关于跟踪AEM Sites](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersinAEMSites)中的Dynamic Media查看器。
+请参阅[跟踪AEM Sites](#tracking-dynamic-media-viewers-in-aem-sites)中的Dynamic Media查看器。
 
 集成支持的次要用例是那些仅使用AEM Assets或Dynamic Media Classic的客户。 在这种情况下，您可以获得查看器的嵌入代码并将其添加到网站页面。 然后，从Experience Platform Launch获取Experience Platform Launch库生产URL，然后手动将其添加到网页代码。
 
-请参阅[关于使用嵌入代码](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode)跟踪Dynamic Media查看器。
+请参阅[使用嵌入代码](#tracking-dynamic-media-viewers-using-embed-code)跟踪Dynamic Media查看器。
+
+<!-- Path on internal wiki [About tracking Dynamic Media viewers using embed code](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode). -->
 
 ## 数据和事件跟踪在集成{#how-data-and-event-tracking-works-in-the-integration}中的工作方式
 
