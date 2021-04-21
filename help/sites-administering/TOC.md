@@ -6,11 +6,10 @@ audience: admin-user
 user-guide-title: AEM 6.5 Administering 用户指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
-feature-set: Experience Manager Sites,Experience Manager Assets,Experience Manager
-feature: Administering
+feature: 管理
 role: Administrator
 translation-type: tm+mt
-source-git-commit: b8970a8b2f7063a9bc5f7882ffa3598cabdef548
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 18%
