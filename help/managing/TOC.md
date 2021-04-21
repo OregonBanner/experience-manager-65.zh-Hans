@@ -5,14 +5,13 @@ audience: end-user
 user-guide-title: AEM 6.5 Managing 用户指南
 breadcrumb-title: Managing 指南
 user-guide-description: 了解如何管理 AEM 项目。
-feature-set: Experience Manager Sites
-feature: Deploying
+feature: 部署
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 62%
+source-wordcount: '73'
+ht-degree: 61%
 
 ---
 
