@@ -7,16 +7,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
-feature: 3D Assets,Asset Management
+feature: 3D资产，资产管理
 role: Business Practitioner, Administrator
+exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
 workflow-type: tm+mt
-source-wordcount: '2319'
-ht-degree: 4%
+source-wordcount: '2291'
+ht-degree: 5%
 
 ---
-
 
 # 在Dynamic Media中使用3D资源{#working-with-three-d-assets-dm}
 
@@ -24,11 +24,11 @@ Dynamic Media让您能够上传、管理、视图和交付3D资产，成为沉�
 
 * 单击发布（使用工具栏上的&#x200B;**[!UICONTROL 快速发布]**）3D资产以生成URL。
 * 借助以Adobe Dimension为后盾的高质量交互式维查看器预设，优化了查看3D资产的支持。
-* 3D Media WCM组件可让您轻松将3D资产添加到AEM Sites页面。
+* 3D Media WCM组件可让您轻松将3D资产添加到Adobe Experience Manager Sites页面。
 
 在Dynamic Media中使用3D资产不需要任何其他配置。
 
-![3d](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
+![鞋](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
@@ -53,7 +53,7 @@ Dynamic Media支持以下3D格式。
 >
 >3D资源在Dynamic Media — 混合模式中不受支持。
 
-在Dynamic Media中处理3D资源之前，请确保您的AEM管理员已在Dynamic Media - Scene7模式下启用并配置了Dynamic MediaCloud Services。
+在Dynamic Media中处理3D资源之前，请确保您的Experience Manager管理员已在Dynamic Media - Scene7模式下启用并配置了Dynamic MediaCloud Services。
 
 请参阅配置Dynamic Media - Scene7模式和[Dynamic Media - Scene7模式疑难解答中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。](/help/assets/troubleshoot-dms7.md)
 
@@ -91,7 +91,7 @@ Dynamic Media支持以下3D格式。
 
 交互式3D查看器包括一组交互式相机控件，这些控件可让您绕行、缩放和平移3D资源。
 
-请注意，在“资产详细信息”页面视图中打开3D资产所花费的时间取决于多个因素。 这些因素包括如下几项：
+在“资产详细信息”页面视图中打开3D资产所需的时间取决于多个因素。 这些因素包括如下几项：
 
 * 服务器的带宽。
 * 服务器延迟
@@ -109,32 +109,26 @@ Dynamic Media支持以下3D格式。
 
 另请参阅[使用软件界面预览资产](/help/assets/previewing-assets.md)。
 
-**从资产详细信息页面视图3D资产并与之交互**
+**要从资产详细信息页面视图3D资产并与之交互，请执行以下操作：**
 
-1. 确保您已将 3D 资产上传到 AEM。
+1. 确保您已将3D资产上传到Experience Manager。
 
    请参阅[上传要在Dynamic Media中使用的3D资产。](/help/assets/manage-assets.md#uploading-assets)
 
-1. 从AEM，在&#x200B;**[!UICONTROL Navigation]**&#x200B;页面上，点按&#x200B;**[!UICONTROL 资产>文件。]**
+1. 从Experience Manager，在&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，点按&#x200B;**[!UICONTROL 资产>文件。]**
 1. 在页面右上角附近，从&#x200B;**[!UICONTROL 视图]**&#x200B;下拉列表中，点按&#x200B;**[!UICONTROL 卡视图。]**
 1. 导航到要查看的 3D 资产。
-1. 点按3D资产的卡片，以在资产详细信息页面中将其打开。
+1. 点按3D资产的卡片。
 1. 在3D资产的详细信息视图页面上，执行下列任一操作：
 
-   * **旋转相机**  — 围绕3D场景和对象绕行视图。
-      * _鼠标_:单击左键并拖动。
-      * _触摸屏_:单指按住并拖动。
-   * **平移相机**  — 向左、向右、向上或向下平移视图。
-      * _鼠标_:右键单击并拖动。
-      * _触摸屏_:用两指按住并拖动。
-   * **缩放相机**  — 缩放相机以移入和移出3D场景的区域。
-      * _鼠标_:滚轮。
-      * _触摸屏_:两指捏。
-   * **重新输入您的相机**  — 将您的相机重新输入到3D场景中对象上的某个点。
-      * _鼠标_:多次单击。
-      * _触摸屏_:多次点击。
-   * **重置**  — 在页面右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。重置还会将相机移近或远离资产，以便以合理的查看大小完整显示资产。
-   * **全屏模式**  — 要进入全屏模式，请点按页面右下角的全屏图标。
+   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
+   | --- | --- | --- | --- |
+   | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 单击左键并拖动。 | 单指按住并拖动。 |
+   | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击并拖动。 | 用两指按住并拖动。 |
+   | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏。 |
+   | **重新输入您的相机** | 将相机重新调整到3D场景中对象上的某个点。 | 双击. | 多次点击。 |
+   | **重置** | 在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。 重置还会将相机移近或远离资产，以便以合理的查看大小完整显示资产。 |  |  |
+   | **全屏模式** | 要进入全屏模式，请点按页面右下角的全屏图标。 |  |  |
 
 1. 在该页面的右上角，点按&#x200B;**[!UICONTROL 关闭]**&#x200B;以返回到“资产”页面。
 
@@ -148,7 +142,7 @@ Dynamic Media支持以下3D格式。
 
 另请参阅[使用软件界面预览资产。](/help/assets/previewing-assets.md)
 
-**视图3D媒体组件中的3D资源并与之交互**
+**要视图3D媒体组件中的3D资源并与之交互，请执行以下操作：**
 
 1. 当网页处于&#x200B;**[!UICONTROL 编辑]**&#x200B;模式时，请执行以下任一操作：
 
@@ -160,20 +154,14 @@ Dynamic Media支持以下3D格式。
 
 1. 在&#x200B;**[!UICONTROL 预览]**&#x200B;模式下，执行下列任一操作：
 
-   * **旋转相机**  — 围绕3D场景和对象绕行视图。
-      * _鼠标_:单击左键并拖动。
-      * _触摸屏_:单指按住并拖动。
-   * **平移相机**  — 向左、向右、向上或向下平移视图。
-      * _鼠标_:右键单击并拖动。
-      * _触摸屏_:用两指按住并拖动。
-   * **缩放相机**  — 缩放相机以移入和移出3D场景的区域。
-      * _鼠标_:滚轮。
-      * _触摸屏_:两指捏。
-   * **重新输入您的相机**  — 将您的相机重新输入到3D场景中对象上的某个点。
-      * _鼠标_:多次单击。
-      * _触摸屏_:多次点击。
-   * **重置**  — 在页面右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。重置还会将相机移近或远离资产，以便以合理的查看大小完整显示资产。
-   * **全屏模式**  — 要进入全屏模式，请点按页面右下角的全屏图标。
+   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
+   | --- | --- | --- | --- |
+   | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 单击左键并拖动。 | 单指按住并拖动。 |
+   | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击并拖动。 | 用两指按住并拖动。 |
+   | **缩放相机** | 在3D场景中移入和移出区域。 | 滚轮。 | 两指捏。 |
+   | **重新输入您的相机** | 将相机重新调整到3D场景中对象上的某个点。 | 双击. | 多次点击。 |
+   | **重置** | 在页面的右下角附近，点按重置图标以将视图目标点恢复到3D资产的中心。 重置还会将相机移近或远离资产，以便以合理的查看大小完整显示资产。 |  |  |
+   | **全屏模式** | 要进入全屏模式，请点按页面右下角的全屏图标。 |  |  |
 
 ## 关于使用3D媒体组件{#working-with-three-d-media-component}
 
@@ -183,7 +171,6 @@ Dynamic Media包含一个Dynamic Media 3D媒体组件，您可以在AEM Sites中
 * [将3D媒体组件添加到网页](#adding-the-three-d-media-component-to-a-web-page)
    * [可选 — 配置3D媒体组件](#configuring-the-three-d-component)
 * [将3D资产分配给3D媒体组件](#assigning-a-three-d-asset-to-the-component)
-
 
 ## 将3D媒体组件添加到页面模板{#adding-three-d-media-component-to-page-template}
 
@@ -203,7 +190,7 @@ Dynamic Media包含一个Dynamic Media 3D媒体组件，您可以在AEM Sites中
 
 ## 将3D媒体组件添加到网页{#adding-the-three-d-media-component-to-a-web-page}
 
-如果您使用Adobe Experience Manager作为Web内容管理系统，则可以通过3D媒体组件将3D资源添加到网页。
+如果您将Experience Manager用作Web内容管理系统，则可以通过3D媒体组件将3D资产添加到网页。
 
 另请参阅[将Dynamic Media资产添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
@@ -262,13 +249,13 @@ Dynamic Media接受Dynamic Media中支持的各种3D文件格式为&#x200B;*stat
 
 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，资产名称正下方和日期和时间左侧会显示一个小地球图标，指示资产已发布。 在&#x200B;**[!UICONTROL 列表视图]**&#x200B;中，**[!UICONTROL 已发布]**&#x200B;列显示已发布的资产和未发布的资产。
 
-如果您使用AEM作为WCM，请使用此发布方法直接在您的网页上添加Dynamic Media 3D资源。
+如果您使用Experience Manager作为WCM，请使用此发布方法将Dynamic Media 3D资源直接添加到您的网页中。
 
 另请参阅[发布Dynamic Media资源。](publishing-dynamicmedia-assets.md)
 
 另请参阅[发布页面。](/help/sites-authoring/publishing-pages.md)
 
-**发布静态Dynamic Media 3D资源**
+**要发布静态Dynamic Media 3D资产，请执行以下操作：**
 
 1. 打开3D资产（GLB、OBJ或STL文件格式），在资产详细信息页面中视图它。
 1. 在工具栏中，点按&#x200B;**[!UICONTROL 快速发布。]**
@@ -280,7 +267,7 @@ Dynamic Media接受Dynamic Media中支持的各种3D文件格式为&#x200B;*stat
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
-1. 点按&#x200B;**[!UICONTROL 原始。]** 发布（或“激活”）3D资产后，如果 **** 满足以下所有3D资产条件，则URL按钮将显示在页面左下角附近：
+1. 点按&#x200B;**[!UICONTROL 原始]**。 发布（或“激活”）3D资产后，如果满足以下所有3D资产条件，则&#x200B;**[!UICONTROL URL]**&#x200B;按钮将显示在页面左下角附近：
    * 3D资产是支持的格式（GLB、OBJ、STL和USDZ）。
    * 3D资源已被引入Dynamic Media Image Production System(IPS)。
    * 将发布3D资产。
@@ -291,7 +278,7 @@ Dynamic Media接受Dynamic Media中支持的各种3D文件格式为&#x200B;*stat
 
 ### 使用Dimensional Viewer {#alternate-publish-methods}发布Dynamic Media 3D资源的替代方法
 
-如果您&#x200B;*不*&#x200B;使用AEM作为WCM，请使用以下两种方法发布Dynamic Media 3D资产。
+如果您&#x200B;*不*&#x200B;使用Experience Manager作为WCM，请使用以下两种方法发布Dynamic Media 3D资产。
 
 * **[!UICONTROL URL]**  — 使 **** 用URL如果您使用第三方Web内容管理系统，并且希望使用Dimensional查看器将Dynamic Media 3D资产链接到您的网页。
 
