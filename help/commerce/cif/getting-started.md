@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '681'
 ht-degree: 2%
 
 ---
@@ -28,17 +28,17 @@ AEM内容和商务入门是一个分两步的过程：
 
 2. 将AEM与您的商业解决方案连接
 
-### 安装适用于AEM 6.5的AEM Content and Commerce Add-on
+### 安装适用于AEM 6.5 {#install-add-on}的AEM Content and Commerce add-on
 
 从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装AEM Commerce Add-On for AEM 6.5。
 
 开始并安装所需的AEM 6.5 Service Pack。 我们建议安装上一个可用的Service Pack。
 
-    >[!NOTE]
-    >
-    >这将由AEM Managed Service客户的CSE完成。
+>[!NOTE]
+>
+>这将由AEM Managed Service客户的CSE完成。
 
-### 将AEM连接到您的商务系统
+### 将AEM连接到您的商务系统{#connect}
 
 AEM可以连接到任何具有AEM的可访问GraphQL端点的商务系统。 这些端点通常是公开可用的，也可以通过专用VPN或本地连接进行连接，具体取决于各个项目设置。
 
