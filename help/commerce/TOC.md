@@ -4,7 +4,7 @@ user-guide-title: AEM Commerce
 breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用和管理Experience Manager商务。
 translation-type: tm+mt
-source-git-commit: 59c9f513c80bfd453493ec1b26adf18c6a3ca4eb
+source-git-commit: 96bb4904818e7f3f64613c810eeb48f223e287c7
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 18%
@@ -33,7 +33,7 @@ ht-degree: 18%
       + [自定义CIF组件](cif/customizing/customize-cif-components.md)
       + [使用CIF目录选择器](cif/customizing/use-cif-pickers.md)
 + [迁移](cif/migration.md)
-+ [发行说明] {#release-notes}
++ 发行说明 {#release-notes}
    + [2021](cif/release-notes/release-notes-2021.md)
    + [2020](cif/release-notes/release-notes-2020.md)
    + [2019](cif/release-notes/release-notes-2019.md)
