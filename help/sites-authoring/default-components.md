@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
+exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 92%
+ht-degree: 97%
 
 ---
-
 
 # 组件{#components}
 
@@ -59,9 +59,9 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 * [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) - 核心组件提供了灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
 
-* [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。创建[社区站点](/help/communities/overview.md)时，会包含其中的许多组件。
+* [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。创建[社区站点](/help/communities/overview.md)时，会包含许多这些组件。
 
-* [电子商务](/help/sites-administering/ecommerce.md) - AEM中的电子商务功能还包括一系列组件。实际用途取决于所使用的商务引擎。
+* [电子商务](/help/commerce/cif-classic/administering/ecommerce.md) - AEM 中的电子商务功能也包含一系列组件。实际用途取决于所使用的商业引擎。
 
 ### 配置组件 {#configuring-components}
 
@@ -69,4 +69,3 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 * 如果您的页面基于建议的现代化可编辑的模板，则可以通过[编辑模板](/help/sites-authoring/templates.md)来启用/禁用这些组件及编辑特定组件的参数。
 * 如果您的页面基于静态模板，则可以使用[设计模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components)启用/禁用这些组件及编辑特定组件的参数。
-
