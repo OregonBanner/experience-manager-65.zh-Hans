@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
-feature: Interactive Images
+feature: 交互式图像
 role: Business Practitioner, Administrator
+exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '4335'
+source-wordcount: '4332'
 ht-degree: 24%
 
 ---
-
 
 # 交互式图像{#interactive-images}
 
@@ -49,7 +49,7 @@ ht-degree: 24%
 
 1. **（可选）识别热点变量**  — 如果您使用AEM Assets和Dynamic Media独立版本，可通过识别现有Quickview实施中使用的动态变量来进行开始，以便您在创建交互式图像时输入热点数据。请参阅[（可选）识别热点变量](#optional-identifying-hotspot-variables)。
 但是，如果您使用AEM Sites或AEM eCommerce，或同时使用两者，则不需要执行此步骤。
-请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
+请参阅AEM Assets](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 1. **（可选）创建交互式图像查看器预设**  — 自定义用于表示热点的图形图像。如果您打算使用名为`Shoppable_Banner`的现成交互式图像查看器预设，则无需创建您自己的交互式图像查看器预设。
 请参阅[（可选）创建交互式图像查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
@@ -75,7 +75,7 @@ ht-degree: 24%
 >只有在以下情况下才需要此任务:
 >
 >* 您希望通过触发Quickviews向图像添加交互性。
->* 您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
+>* 您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 >
 >
