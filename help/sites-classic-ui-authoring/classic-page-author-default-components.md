@@ -10,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
+exl-id: 9e0a01da-7940-47aa-8604-788d74e5daa0
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 81%
+ht-degree: 85%
 
 ---
-
 
 # 组件{#components}
 
@@ -37,11 +37,10 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
    用于创建标准页面内容的组件主要包含在&#x200B;**General**、**Columns**&#x200B;和&#x200B;**Forms**&#x200B;组中。
 
-* [电子商务](/help/sites-administering/ecommerce.md)
+* [电子商务](/help/commerce/cif-classic/administering/ecommerce.md)
 
-   AEM中的电子商务功能还包含一系列组件，它们包含在&#x200B;**Commerce**&#x200B;组中。 实际用途取决于所使用的商务引擎。
+   AEM中的电子商务功能还包含一系列组件，它们位于&#x200B;**Commerce**&#x200B;组中。 实际用途取决于所使用的商业引擎。
 
 ## 使用设计模式配置组件 {#using-design-mode-to-configure-components}
 
 除了作者可在标准安装中通过 Sidekick 访问的组件以外，还有各种其他组件。您可以使用[设计模式](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components)启用/禁用这些组件，并编辑特定组件的参数。
-
