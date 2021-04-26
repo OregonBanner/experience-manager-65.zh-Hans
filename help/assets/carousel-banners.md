@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
-feature: Carousel Banners
+feature: 传送横幅
 role: Business Practitioner, Administrator
+exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '4807'
+source-wordcount: '4804'
 ht-degree: 20%
 
 ---
-
 
 # 传送横幅{#carousel-banners}
 
@@ -57,7 +57,7 @@ ht-degree: 20%
 
    >[!NOTE]
    >
-   >如果您是AEM Sites或Ecommerce客户，则可以使用内置功能导航到产品页面并查找产品目录中的现有外观。 您无需手动输入热点或图像映射变量。 请参阅有关[设置eCommerce](/help/sites-administering/generic.md)的信息。
+   >如果您是AEM Sites或Ecommerce客户，则可以使用内置功能导航到产品页面并查找产品目录中的现有外观。 您无需手动输入热点或图像映射变量。 请参阅有关[设置eCommerce](/help/commerce/cif-classic/administering/generic.md)的信息。
    >
    >
    >如果您是AEM Assets和Dynamic Media的客户，您将手动输入热点和图像映射的数据，然后将发布的URL或嵌入代码集成到您的第三方内容管理系统。
@@ -104,7 +104,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->如果您是AEM Sites和/或AEM Ecommerce客户，请跳过此步骤。 您无需手动识别热点或图像映射变量；您可以使用与Ecommerce的集成进行产品集成。 请参阅有关[设置eCommerce](/help/sites-administering/generic.md)的信息。 此外，您还可以使用交互式组件并将其添加到网页。
+>如果您是AEM Sites和/或AEM Ecommerce客户，请跳过此步骤。 您无需手动识别热点或图像映射变量；您可以使用与Ecommerce的集成进行产品集成。 请参阅有关[设置eCommerce](/help/commerce/cif-classic/administering/generic.md)的信息。 此外，您还可以使用交互式组件并将其添加到网页。
 >
 >如果您是AEM Assets或媒体客户，则需发布URL或嵌入代码，然后与第三方内容管理系统集成，并手动识别热点和图像映射。
 
