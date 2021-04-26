@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
+exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
 translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 1%
 
 ---
-
 
 # 开发AEM组件{#developing-aem-components}
 
@@ -26,8 +26,8 @@ AEM组件用于保存、格式化和渲染网页上提供的内容。
 
 * 创作页面[时，组件允许作者编辑和配置内容。](/help/sites-authoring/default-components.md)
 
-   * 例如，在构建[Commerce](/help/sites-administering/ecommerce.md)站点时，组件可以从目录中收集和呈现信息。
-有关详细信息，请参阅[开发电子商务](/help/sites-developing/ecommerce.md)。
+   * 例如，在构建[Commerce](/help/commerce/cif-classic/administering/ecommerce.md)站点时，组件可以从目录中收集和呈现信息。
+有关详细信息，请参阅[开发电子商务](/help/commerce/cif-classic/developing/ecommerce.md)。
 
    * 在构建[Communities](/help/communities/author-communities.md)站点时，组件可以向访客提供信息并从其中收集信息。
 有关详细信息，请参阅[开发社区](/help/communities/communities.md)。
