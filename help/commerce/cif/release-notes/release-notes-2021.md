@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: 2d0b52dbf85e1fbe91c09a8366744aa77f25cd73
+source-git-commit: 1a6d713e74056333b18ed68f58876c2a75d535b8
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 10%
+source-wordcount: '498'
+ht-degree: 11%
 
 ---
 
@@ -27,13 +27,11 @@ ht-degree: 10%
 
 | 组件 | 版本号 | 详细信息 |
 |:-------|:-----:|---------------------:|
-| CIF附加 | v2021.04.22 | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIF附加 | v021.04.22 | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF核心组件 | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF韦尼亚参考站 | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新增功能 {#what-is-new-april}
-
-* **CIF加载项现可通过 [Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。旧的AEM CIF连接器正进入维护模式，不应再使用。 请迁移到新的CIF加载项。**
 
 * 支持类别UID — 这将解锁对类别ID使用字符串的系统的第三方商务集成
 
