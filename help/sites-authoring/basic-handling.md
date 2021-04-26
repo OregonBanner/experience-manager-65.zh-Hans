@@ -10,14 +10,14 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
+exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 translation-type: tm+mt
-source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 95%
 
 ---
-
 
 # 基本操作{#basic-handling}
 
@@ -84,7 +84,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 ### “导航”面板  {#navigation-panel}
 
-导航面板提供对AEM控制台的访问：
+通过导航面板可访问AEM控制台：
 
 ![bh-01](assets/bh-01.png)
 
@@ -100,7 +100,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
   </tr>
   <tr>
    <td>资产<br /> </td>
-   <td>通过这些控制台，您可以导入和<a href="/help/assets/home.md">管理数字资产</a>，如图像、视频、文档和音频文件。随后，这些资产便可由同一 AEM 实例上运行的任何网站使用。 </td>
+   <td>通过这些控制台，您可以导入和<a href="/help/assets/home.md">管理数字资产</a>，如图像、视频、文档和音频文件。随后，这些资产便可以由在同一 AEM 实例中运行的任何网站使用。 </td>
   </tr>
   <tr>
    <td>社区</td>
@@ -108,7 +108,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
   </tr>
   <tr>
    <td>商务</td>
-   <td>此控制台可用于管理与<a href="/help/sites-administering/ecommerce.md">商务</a>站点有关的产品、产品目录和订单。</td>
+   <td>此控制台可用于管理与<a href="/help/commerce/cif-classic/administering/ecommerce.md">商务</a>站点有关的产品、产品目录和订单。</td>
   </tr>
   <tr>
    <td>体验片段</td>
@@ -227,7 +227,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
    您可以只使用键盘导航网站。它使用&#x200B;**TAB**&#x200B;键（或&#x200B;**OPT+TAB**）的标准浏览器功能在页面上&#x200B;*可聚焦*&#x200B;的元素之间移动。
 
-   在 **Sites** 控制台中，添加了&#x200B;**跳至主要内容**&#x200B;的选项。当您&#x200B;*标签*&#x200B;遍历标题选项时，这将变得可见，并通过允许您跳过（产品）工具栏中的标准元素并直接转到主内容来加快导航速度。
+   在 **Sites** 控制台中，添加了&#x200B;**跳至主要内容**&#x200B;的选项。当您&#x200B;*tab*&#x200B;浏览标题选项时，该选项会变得可见，并且允许您跳过（产品）工具栏中的标准元素并直接转到主内容，从而加快导航速度。
 
    ![bh-30](assets/bh-30.png)
 
@@ -345,7 +345,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
    <td>卡片视图<br /> </td>
    <td>
     <ul>
-     <li>桌面：<br />鼠标悬停，然后使用复选标记快速操作</li>
+     <li>桌面：<br />悬停鼠标，然后使用复选标记快速操作</li>
      <li>移动设备：<br />按住卡片不动</li>
     </ul> </td>
    <td>
@@ -416,7 +416,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
    * 资源名称和 V 形标记在被点按或单击时将会突出显示。
 
-   ![bh-15](assets/bh-17.png)
+   ![bh-17](assets/bh-17.png)
 
    * 单击/点按的资源的子资源将在其右侧的列中显示。
    * 如果点按或单击的资源名称没有子资源，将在最后的列中显示其详细信息。
@@ -567,7 +567,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 * 特定的控制台还具有其他一些功能。例如，在“站点”控制台中，您可以：
 
-   * [保存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)。
+   * [保存版本](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui).
    * [建立工作流](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail).
 
 这些选项可通过&#x200B;**评论**&#x200B;字段旁边的 V 形标记访问。
@@ -593,4 +593,3 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 这将打开一个与[搜索](/help/sites-authoring/search.md)类似的面板，其中已设置相应的位置筛选器，允许您进一步筛选希望查看的内容。
 
 ![bh-29](assets/bh-29.png)
-
