@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
-feature: Asset Management
+feature: 资产管理
 role: Business Practitioner, Administrator
+exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '11745'
+source-wordcount: '11752'
 ht-degree: 22%
 
 ---
-
 
 # Dynamic Media中的视频{#video}
 
@@ -277,7 +277,7 @@ HLS是苹果的自适应视频流播放标准，可根据网络带宽容量自�
 
 ## 视频编码的最佳实践 {#best-practices-for-encoding-videos}
 
-如果您已启用Dynamic Media并设置视频云服务，则&#x200B;**Dynamic Media编码视频**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已启用Dynamic Media并设置视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流会自动生效。 (如果您未使用Dynamic Media,**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。)
+如果您已启用Dynamic Media并设置视频云服务，则&#x200B;**Dynamic Media编码视频**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已启用Dynamic Media并设置视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 (如果您未使用Dynamic Media,**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。)
 
 以下是关于源视频文件编码的最佳实践提示。
 
@@ -404,9 +404,9 @@ VBR编码时间较长，但产生最有利的结果；媒体文件的质量优�
 
 | 视频类型 | 宽度 x 高度 | 宽度比 | 高度比 |
 |--- |--- |--- |--- |
-| 源 | 1920 x 1080 | 1 | 1 |
+| 源 | 1920 x 1080 | 1 | 3 |
 | 编码 | 960 x 540 | 2 | 2 |
-| 编码 | 640 x 360 | 3 | 3 |
+| 编码 | 640 x 360 | 3 | 1 |
 | 编码 | 480 x 270 | 4 | 4 |
 
 ### 编码视频文件格式 {#encoded-video-file-format}
@@ -417,18 +417,18 @@ Dynamic Media 建议使用 MP4 H.264 视频编码预设。由于 MP4 文件使�
 
 您可以将内部部署AEM视频资产直接发布到之前创建的YouTube渠道。
 
-要将视频资产发布到YouTube，您需要设置包含标记的AEM Assets。 将这些标记与YouTube渠道关联。 如果视频资产的标记与YouTube渠道的标记匹配，则视频会发布到YouTube。 只要使用关联的标记，发布到YouTube时就会与视频的正常发布一起发生。
+要将视频资产发布到YouTube，您需要使用标记设置AEM Assets。 将这些标记与YouTube渠道关联。 如果视频资产的标记与YouTube渠道的标记匹配，则视频将发布到YouTube。 只要使用关联标记，发布到YouTube与视频的正常发布一起进行。
 
-YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media编码已创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但是在回放时需要查看器预设时，视频会这样做。
+YouTube进行自己的编码。 因此，上传到AEM的原始视频文件将发布到YouTube，而不是Dynamic Media编码已创建的任何视频再现。 虽然不需要使用Dynamic Media处理视频，但是在回放时需要查看器预设时，视频会这样做。
 
-当您绕过视频处理用户档案并直接发布到YouTube时，这只意味着AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您在dynamicmedia或dynamicmedia_scene7运行模式下运行，则未编码的视频将不能与任何Dynamic Media资源类型一起使用。
+当您绕过视频处理用户档案并直接发布到YouTube时，这只意味着您在AEM资产中的视频资产可能无法获得可查看的缩略图。 这也意味着，如果您在dynamicmedia或dynamicmedia_scene7运行模式下运行，则未编码的视频将不能与任何Dynamic Media资源类型一起使用。
 
-将视频资产发布到YouTube服务器需要完成以下任务，以确保使用YouTube进行安全、安全的服务器对服务器身份验证：
+将视频资源发布到YouTube服务器需要完成以下任务，以确保使用YouTube进行安全、安全的服务器到服务器身份验证：
 
 1. [配置Google Cloud设置](#configuring-google-cloud-settings)
 1. [创建YouTube渠道](#creating-a-youtube-channel)
 1. [添加用于发布的标记](#adding-tags-for-publishing)
-1. [启用YouTube发布复制代理](#enabling-the-youtube-publish-replication-agent)
+1. [启用YouTube Publish复制代理](#enabling-the-youtube-publish-replication-agent)
 1. [在AEM中设置YouTube](#setting-up-youtube-in-aem)
 1. [（可选）自动设置已上传视频的默认YouTube属性](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [将视频发布到您的 YouTube 频道](#publishing-videos-to-your-youtube-channel)
@@ -439,11 +439,11 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 ### 配置Google Cloud设置{#configuring-google-cloud-settings}
 
-要发布到YouTube，您需要一个Google帐户。 如果你有GMAIL账户，那么你已经有了Google账户；如果您没有Google帐户，您可以轻松创建一个。 您需要此帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务并直接转到[创建YouTube渠道](#creating-a-youtube-channel)。
+要发布到YouTube，您需要Google帐户。 如果你有GMAIL账户，那么你已经有了Google账户；如果您没有Google帐户，您可以轻松创建一个。 您需要此帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务并直接转到[创建YouTube渠道](#creating-a-youtube-channel)。
 
 与Google Cloud一起使用的帐户和用于YouTube的Google帐户不需要相同。
 
-请注意，Google会定期更改其用户界面。 因此，将视频发布到YouTube的步骤可能与下面介绍的内容略有不同。 当您尝试检查视频是否上传到YouTube时，此警告也适用于YouTube。
+请注意，Google会定期更改其用户界面。 因此，将视频发布到YouTube的步骤可能与下面介绍的步骤略有不同。 当您尝试检查是否将视频上传到YouTube时，此警告同样适用。
 
 >[!NOTE]
 >
@@ -468,7 +468,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 1. 在“新建项目”对话框的“项目名称”字段中，键入新项目的名称。
 
-   请注意，您的项目ID基于您的项目名称。 因此，请谨慎选择项目名称；创建后无法更改。 此外，当您稍后在AEM中设置YouTube时，还需要再次输入同一项目ID;你可能想把它写下来。
+   请注意，您的项目ID基于您的项目名称。 因此，请谨慎选择项目名称；创建后无法更改。 此外，当您稍后在AEM中设置YouTube时，将需要再次输入相同的项目ID;你可能想把它写下来。
 
 1. 单击&#x200B;**[!UICONTROL 创建。]**
 
@@ -480,8 +480,8 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. 在“API和服务”页面顶部附近，点按&#x200B;**[!UICONTROL 启用API和服务。]**
-1. 在“API库”页的左侧，在&#x200B;**[!UICONTROL 类别]**&#x200B;下，点按&#x200B;**[!UICONTROL YouTube。]** 在页面的右侧，点按 **[!UICONTROL YouTube数据API。]**
-1. 在YouTube数据API v3页上，点按&#x200B;**[!UICONTROL 启用。]**
+1. 在“API库”页的左侧，在&#x200B;**[!UICONTROL 类别]**&#x200B;下，点按&#x200B;**[!UICONTROL YouTube。]** 在页面的右侧，点按 **[!UICONTROL YouTube Data API。]**
+1. 在YouTube Data API v3页上，点按&#x200B;**[!UICONTROL 启用。]**
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
@@ -491,7 +491,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 1. 在&#x200B;**[!UICONTROL 向项目]**&#x200B;页面添加凭据，步骤1中，执行以下操作：
 
-   * 从&#x200B;**[!UICONTROL 您正在使用哪个API?]** 下拉列表，选 **[!UICONTROL 择YouTube Data API v3。]**
+   * 从&#x200B;**[!UICONTROL 您正在使用哪个API?]** 下拉列表，选择 **[!UICONTROL YouTube Data API v3。]**
 
    * 从&#x200B;**[!UICONTROL 将从何处调用API?]** 下拉列表，选 **[!UICONTROL 择Web服务器（例如node.js、Tomcat）]**
 
@@ -526,7 +526,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 1. 在显示给用户的&#x200B;**[!UICONTROL 产品名称]**&#x200B;标题下，在文本字段中，输入您希望在同意屏幕上显示的内容。
 
-   当AEM管理员向YouTube进行身份验证时，会向他们显示同意屏幕；AEM将与YouTube联系以获得许可。
+   当AEM管理员向YouTube进行身份验证时，将向其显示同意屏幕；AEM将与YouTube联系以获得许可。
 
 1. 单击&#x200B;**[!UICONTROL 继续。]**
 1. 在“将凭据添加到项目”页的步骤4中，在&#x200B;**[!UICONTROL 下载凭据]**&#x200B;标题下，点按&#x200B;**[!UICONTROL 下载。]**
@@ -535,29 +535,29 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 1. 保存`client_id.json`文件。
 
-   稍后在Adobe Experience Manager中设置YouTube时，您将需要此下载的json文件。
+   稍后在Adobe Experience Manager中设置YouTube时，您需要此下载的json文件。
 
 1. 单击&#x200B;**[!UICONTROL 完成。]**
 
-   从Google帐户注销。 您现在将创建一个YouTube渠道。
+   从Google帐户注销。 您现在将创建YouTube渠道。
 
 ### 创建YouTube渠道{#creating-a-youtube-channel}
 
-将视频发布到YouTube需要您拥有一个或多个渠道。 如果已创建YouTube渠道，则可跳过此任务并转到[添加用于发布的标记](/help/assets/video.md#adding-tags-for-publishing)。
+将视频发布到YouTube需要您具有一个或多个渠道。 如果已创建YouTube渠道，则可以跳过此任务，转到[添加用于发布的标记](/help/assets/video.md#adding-tags-for-publishing)。
 
 >[!CAUTION]
 >
->请确保已在YouTube *中设置一个或多个渠道,*&#x200B;之前，在AEM的“YouTube设置”下添加渠道(请参阅下面的[在AEM](#setting-up-youtube-in-aem)中设置YouTube)。 如果您未能这样做，则系统不会向您发出任何警告，警告您没有现有渠道。 但是，添加渠道时仍会发生Google身份验证，但无法选择发送视频的渠道。
+>请确保已在AEM的“YouTube设置”下添加渠道之前&#x200B;*在YouTube*&#x200B;中设置一个或多个渠道(请参阅下面的[在AEM](#setting-up-youtube-in-aem)中设置YouTube)。 如果您未能这样做，则系统不会向您发出任何警告，警告您没有现有渠道。 但是，添加渠道时仍会发生Google身份验证，但无法选择发送视频的渠道。
 
 要创建YouTube渠道，请执行以下操作：
 
 1. 转到[https://www.youtube.com](https://www.youtube.com/)并使用您的Google帐户凭据登录。
-1. 在YouTube页面的右上角，单击您的用户档案图片（也可能显示为纯色圆圈中的字母），然后单击&#x200B;**[!UICONTROL YouTube设置]**（圆齿轮图标）。
+1. 在YouTube页面的右上角，单击您的用户档案图片（也可能显示为纯色圆中的字母），然后单击&#x200B;**[!UICONTROL YouTube设置]**（圆齿轮图标）。
 1. 在“概述”页面的“其他功能”标题下，单击&#x200B;**[!UICONTROL 查看所有我的渠道或创建新渠道。]**
 1. 在“渠道”页面上，单击&#x200B;**[!UICONTROL 创建新渠道。]**
 1. 在“品牌帐户”页面的“品牌帐户名称”字段中，输入业务名称或您选择要发布视频资产的任何其他渠道名称，然后单击&#x200B;**[!UICONTROL 创建。]**
 
-   记住在此处输入的名称，因为在AEM中设置YouTube时，您需要再次输入该名称。
+   请记住在此处输入的名称，因为在AEM中设置YouTube时，您需要再次输入它。
 
 1. （可选）如有必要，请添加更多渠道。
 
@@ -565,13 +565,13 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 ### 添加用于发布{#adding-tags-for-publishing}的标记
 
-要将视频发布到YouTube，AEM会将标记关联到一个或多个YouTube渠道。 要添加用于发布的标记，请参阅[管理标记](/help/sites-administering/tags.md)。
+要将视频发布到YouTube,AEM会将标记关联到一个或多个YouTube渠道。 要添加用于发布的标记，请参阅[管理标记](/help/sites-administering/tags.md)。
 
 或者，如果您打算使用AEM中的默认标记，则可以跳过此任务并转到[启用YouTube发布复制代理](#enabling-the-youtube-publish-replication-agent)。
 
-### 启用YouTube发布复制代理{#enabling-the-youtube-publish-replication-agent}
+### 启用YouTube Publish复制代理{#enabling-the-youtube-publish-replication-agent}
 
-启用YouTube发布复制代理后，如果要测试与Google Cloud帐户的连接，请点按&#x200B;**[!UICONTROL 测试连接。]** 浏览器选项卡显示连接结果。如果已添加YouTube渠道，则这些的列表将作为测试的一部分显示。
+启用YouTube发布复制代理后，如果要测试与Google Cloud帐户的连接，请点按&#x200B;**[!UICONTROL 测试连接。]** 浏览器选项卡显示连接结果。如果已添加YouTube渠道，则测试中将显示这些的列表。
 
 1. 在AEM的左上角，单击AEM徽标，然后在左边栏中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 作者代理。]**
 1. 在“作者代理”页面上，单击&#x200B;**[!UICONTROL YouTube发布(youtube)。]**
@@ -598,7 +598,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 1. 在“创建 YouTube 配置”页面的“Google Cloud Platform 设置”下的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
    您在最初配置Google Cloud设置时指定了项目ID。
-保持“创建YouTube配置”页面打开；你马上就会回来。
+使“创建YouTube配置”页保持打开状态；你马上就会回来。
 
    ![6_5_youtubepublish-createyoutuconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -615,7 +615,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    如果需要，您可以根据需要添加说明。
 
 1. 点按&#x200B;**[!UICONTROL 添加。]**
-1. 将显示YouTube/Google身份验证。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
+1. YouTube/Google身份验证显示。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
 
    * 输入与上述Google项目ID和JSON文本关联的Google用户名和密码。
    * 根据您的帐户有多少渠道，您会看到两个或多个项目。 选择渠道。 不要选择电子邮件地址；它不是渠道。
@@ -635,18 +635,18 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
    现在，您可以将视频发布到YouTube渠道。
 
-#### 在AEM 6.4 {#setting-up-youtube-in-aem-before}之前设置YouTube
+#### 在6.4 {#setting-up-youtube-in-aem-before}之前的AEM中设置YouTube
 
 1. 请确保以管理员身份登录到Dynamic Media实例。
 
 1. 在AEM的左上角，点按AEM徽标，然后在左边栏中，点按&#x200B;**[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL 部署]** > **[!UICONTROL Cloud Services。]**
-1. 在“第三方服务”标题下的YouTube下，点按&#x200B;**[!UICONTROL 立即配置。]**
+1. 在“第三方服务”标题的YouTube下，点按&#x200B;**[!UICONTROL 立即配置。]**
 1. 在“创建配置”对话框中，在相应的字段中输入标题（必填）和名称（可选）。
 1. 点按&#x200B;**[!UICONTROL 创建。]**
 1. 在“YouTube 帐户设置”对话框的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
    您在最初[配置Google Cloud设置](/help/assets/video.md#configuring-google-cloud-settings)时指定了项目ID。
-保持“YouTube帐户设置”对话框处于打开状态；你马上就会回来。
+使“YouTube帐户设置”对话框保持打开状态；你马上就会回来。
 
 1. 使用纯文本编辑器，打开您之前在“配置Google Cloud”设置中下载和保存的JSON文件。
 1. 选择并复制整个JSON文本。
@@ -661,7 +661,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    如果需要，您可以根据需要添加说明。
 
 1. 点按&#x200B;**[!UICONTROL 确定。]**
-1. 将显示YouTube/Google身份验证。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
+1. YouTube/Google身份验证显示。 如果您尚未登录Google Cloud帐户，请跳过此步骤。
 
    * 输入与上述Google项目ID和JSON文本关联的Google用户名和密码。
    * 根据您的帐户有多少渠道，您会看到两个或多个项目。 选择渠道。 不要选择电子邮件地址；它不是渠道。
@@ -693,7 +693,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 1. 单击&#x200B;**[!UICONTROL 默认值。]** （请勿在“默认”左侧的选择框中添加复选标记。）
 1. 在&#x200B;**[!UICONTROL default]**&#x200B;页面上，选中&#x200B;**[!UICONTROL video]**&#x200B;左侧的框，然后单击&#x200B;**[!UICONTROL 编辑。]**
 1. 在“元数据模式编辑器”页面上，单击&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡。
-1. 在“YouTube发布”标题下，单击&#x200B;**[!UICONTROL YouTube类别。]**
+1. 在YouTube发布标题下，单击&#x200B;**[!UICONTROL YouTube类别。]**
 1. 在页面右侧的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡下，执行以下操作：
 
    * 在&#x200B;**[!UICONTROL 映射到属性]**文本字段中，选择并复制值。
@@ -702,7 +702,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    * 在&#x200B;**[!UICONTROL Choices]**下，选择并复制您要使用的默认值（如“人物和博客”或“科学与技术”）。
 将复制的值粘贴到打开的文本编辑器中。 您以后将在创建元数据处理用户档案时需要此值。 使文本编辑器保持打开状态。
 
-1. 在“YouTube发布”标题下，单击&#x200B;**[!UICONTROL YouTube隐私。]**
+1. 在YouTube发布标题下，单击&#x200B;**[!UICONTROL YouTube隐私。]**
 1. 在页面右侧的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡下，执行以下操作：
 
    * 在&#x200B;**[!UICONTROL 映射到属性]**文本字段中，选择并复制值。
@@ -723,10 +723,10 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    * （可选）将标记为&#x200B;**[!UICONTROL Section Header]**&#x200B;的组件拖到左侧，并将其放置到表单区域中。
    * （可选）单击&#x200B;**[!UICONTROL 字段标签]**&#x200B;以选择组件。
    * （可选）在页面右侧的“设置”选项卡的“字段标签”文本字段中，输入`YouTube Publishing`。
-   * 单击&#x200B;**[!UICONTROL 构建表单]**&#x200B;选项卡，然后拖动标有&#x200B;**[!UICONTROL 多值文本]**&#x200B;的组件，将其放在您刚刚创建的&#x200B;**[!UICONTROL YouTube发布]**&#x200B;标题下。
+   * 单击&#x200B;**[!UICONTROL 构建表单]**&#x200B;选项卡，然后拖动标有&#x200B;**[!UICONTROL 多值文本]**&#x200B;的组件，将其放在您刚刚创建的&#x200B;**[!UICONTROL YouTube Publishing]**&#x200B;标题下。
 
    * 单击&#x200B;**[!UICONTROL 字段标签]**&#x200B;以选择组件。
-   * 在页面右侧的“设置”选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单上的相应字段中。 将选择值粘贴到默认值字段中。
+   * 在页面右侧的“设置”选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单中其各自的字段中。 将选择值粘贴到默认值字段中。
 
 1. 通过执行以下操作，将复制的YouTube隐私值添加到用户档案:
 
@@ -737,7 +737,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    * 单击&#x200B;**[!UICONTROL 构建表单]**&#x200B;选项卡，然后拖动标有&#x200B;**[!UICONTROL 多值文本]**&#x200B;的组件，将其放在您刚刚创建的&#x200B;**[!UICONTROL YouTube隐私]**&#x200B;标题下。
 
    * 单击&#x200B;**[!UICONTROL 字段标签]**&#x200B;以选择组件。
-   * 在页面右侧的“设置”选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单上的相应字段中。 将选择值粘贴到默认值字段中。
+   * 在页面右侧的“设置”选项卡下，将您之前复制的YouTube发布值（字段标签值和映射到属性值）粘贴到表单中其各自的字段中。 将选择值粘贴到默认值字段中。
 
 1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 保存。]**
 1. 将YouTube发布元数据用户档案应用到您要上传视频的文件夹。 您需要同时设置元数据用户档案和视频用户档案。
@@ -752,11 +752,11 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 >
 >在Dynamic Media - Scene7模式下运行时，请注意，立即发布不会自动发布到YouTube。 设置Dynamic Media - Scene7模式时，有两个发布选项可供选择：**[!UICONTROL 激活时立即]**&#x200B;或&#x200B;**[!UICONTROL 。]**
 >
->**[!UICONTROL “立]** 即发布”表示上传的资源在与IPS同步后会自动发布到投放系统。尽管Dynamic Media的情况确实如此，但YouTube的情况并非如此。 要发布到YouTube，您必须通过AEM作者方式进行发布。
+>**[!UICONTROL “立]** 即发布”表示上传的资源在与IPS同步后会自动发布到投放系统。尽管Dynamic Media是如此，但YouTube并非如此。 要发布到YouTube，您必须通过AEM作者方式进行发布。
 
 >[!NOTE]
 >
->要从YouTube发布内容，AEM使用&#x200B;**[!UICONTROL 发布到YouTube]**&#x200B;工作流，可监视进度并视图任何故障信息。
+>要从YouTube发布内容，AEM使用&#x200B;**[!UICONTROL 发布到YouTube]**&#x200B;工作流，它允许您监视进度并视图任何故障信息。
 >
 >请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 >
@@ -778,7 +778,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
    另请参阅[将出版物管理与AEM Sites一起使用](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)。
 
-   您可以选择验证已发布到YouTube渠道上的视频。
+   您可以选择验证已发布的YouTube渠道。
 
 ### （可选）验证已发布到 YouTube 上的视频{#optional-verifying-the-published-video-on-youtube}
 
@@ -800,21 +800,21 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 要将 YouTube URL 关联到您的 Web 应用程序，请执行以下操作：
 
-1. 导航到要复制其URL的&#x200B;*YouTube已发布*&#x200B;视频资产，然后选择它。
+1. 导航到要复制其URL的&#x200B;*YouTube published*&#x200B;视频资产，然后选择它。
 
-   请记住，YouTube URL仅可用于将视频资产复制到YouTube之前的&#x200B;**&#x200B;之后的&#x200B;*。*
+   请记住，YouTube URL仅可用于在您先将视频资产&#x200B;*发布*&#x200B;复制到YouTube *之后复制*。
 
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 属性。]**
 1. 单击&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡。
-1. 在“YouTube发布”标题下的YouTube URL列表中，选择URL文本并将其复制到您的Web浏览器，以预览资产或添加到您的Web内容页面。
+1. 在YouTube发布标题的YouTube URL列表下，选择URL文本并将其复制到您的Web浏览器，以预览资产或添加到您的Web内容页面。
 
 ### 取消发布视频以将其从 YouTube 中删除 {#unpublishing-videos-to-remove-them-from-youtube}
 
-在AEM中取消发布视频资产时，该视频会从YouTube中删除。
+在AEM中取消发布视频资产时，该视频将从YouTube中删除。
 
 >[!CAUTION]
 >
->如果您直接从YouTube中删除视频，AEM不会察觉并继续表现为视频仍发布到YouTube。 始终通过AEM从YouTube取消发布视频资产。
+>如果直接从YouTube中删除视频，AEM不会察觉并继续表现为视频仍发布到YouTube。 始终通过AEM从YouTube取消发布视频资产。
 
 >[!NOTE]
 >
@@ -824,7 +824,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 要取消发布视频以将其从 YouTube 中删除，请执行以下操作：
 
-1. 导航到要从YouTube渠道取消发布的视频资产。
+1. 导航到要从YouTube渠道中取消发布的视频资产。
 1. 在资产选择模式下，选择一个或多个已发布的视频资产。
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 管理发布。]** 您可能需要点按三个圆点图标(...)工具栏上，查看&#x200B;**[!UICONTROL 管理发布。]**
 1. 在“管理发布”页面上，点按&#x200B;**[!UICONTROL 取消发布。]**
@@ -837,7 +837,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
 ### 监视进度{#monitoring-progress}
 
-要监视进度（包括编码失败/YouTube发布），请执行以下操作：
+要监视进度(包括编码失败/YouTube发布):
 
 1. 视图资源文件夹中的视频编码进度：
 
@@ -853,11 +853,11 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. 视图资产详细信息的进度。 点按或单击资产时，请打开下拉菜单，然后选择&#x200B;**[!UICONTROL 时间轴。]** 要将其缩小到工作流活动（如编码或YouTube发布），请选择 **[!UICONTROL 工作流。]**
+1. 视图资产详细信息的进度。 点按或单击资产时，请打开下拉菜单，然后选择&#x200B;**[!UICONTROL 时间轴。]** 要将其缩小为工作流活动(如编码或YouTube发布)，请选择 **[!UICONTROL 工作流。]**
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
-   任何工作流信息（如编码）都会显示在时间轴中。 对于YouTube发布，工作流时间轴还包括YouTube渠道和YouTube视频URL的名称。 此外，发布完成后，您会在工作流时间轴中看到任何失败通知。
+   任何工作流信息（如编码）都会显示在时间轴中。 对于YouTube发布，工作流时间轴还包含YouTube渠道和YouTube视频URL的名称。 此外，发布完成后，您会在工作流时间轴中看到任何失败通知。
 
    >[!NOTE]
    >
@@ -922,7 +922,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 >
 >您可能需要管理权限才能访问&#x200B;**[!UICONTROL 工具]**&#x200B;菜单。
 
-如何配置通知取决于您是希望通知用于编码作业还是YouTube发布作业：
+如何配置通知取决于您是希望对编码作业通知还是YouTube发布作业：
 
 * 对于编码作业，您可以访问位于&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**&#x200B;的所有AEM工作流电子邮件通知的配置页，并通过搜索&#x200B;**[!UICONTROL Day CQ Workflow电子邮件通知服务。]** 请参 [阅在AEM中配置电子邮件通知](/help/sites-administering/notification.md)。您可以相应地选中或清除&#x200B;**[!UICONTROL Notify on Abort]**&#x200B;或&#x200B;**[!UICONTROL Notify on Complete]**&#x200B;的复选框。
 
@@ -931,7 +931,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 1. 在AEM中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型。]**
 1. 在“工作流模型”页面上，选择&#x200B;**[!UICONTROL 发布到YouTube]**，然后点按工具栏上的&#x200B;**[!UICONTROL 编辑]**。
 1. 在“发布到YouTube”工作流页面的右上角附近，点按&#x200B;**[!UICONTROL 编辑。]**
-1. 将鼠标指针悬停在YouTube上传组件上，然后点击一次以显示内联工具栏。
+1. 将鼠标指针悬停在YouTube上载组件上，然后点按一次以显示内联工具栏。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
@@ -939,7 +939,7 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
 
    ![6_5_publishtoyoutubeworkflow-configuration图标](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
-1. 在YouTube上传过程 — 步骤属性对话框中，点按&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡。
+1. 在“YouTube上载进程 — 步骤属性”对话框中，点按&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡。
 
    ![6_5_publishtoyoutubeworkflow-arguments-tab](assets/6_5_publishtoyoutubeworkflow-arguments-tab.png)
 
@@ -949,11 +949,11 @@ YouTube会进行自己的编码。 因此，上传到AEM的原始视频文件将
    * 发布失败
    * 发布完成 — 包括有关渠道和URL的信息
 
-   清除复选框意味着您不会从YouTube发布工作流中收到指定的电子邮件通知。
+   清除复选框意味着您不会从YouTube发布工作流中接收指定的电子邮件通知。
 
    >[!NOTE]
    >
-   >这些电子邮件特定于YouTube，是通用工作流电子邮件通知的附加内容。 因此，您可能会收到两组电子邮件通知 — 在&#x200B;**[!UICONTROL Day CQ Workflow电子邮件通知服务]**&#x200B;中提供的通用通知，以及一组特定于YouTube的通知，具体取决于您的配置设置。
+   >这些电子邮件特定于YouTube，是通用工作流电子邮件通知的附加内容。 因此，您可能会收到两组电子邮件通知 — **[!UICONTROL Day CQ Workflow电子邮件通知服务]**&#x200B;中提供的通用通知，以及一组特定于YouTube的通知，具体取决于您的配置设置。
 
 1. 完成后，在对话框右上角附近，点按&#x200B;**[!UICONTROL 完成]**&#x200B;图标（复选标记）。
 1. 在“发布到YouTube”工作流页面的右上角附近，点按&#x200B;**[!UICONTROL 同步。]**
@@ -1133,7 +1133,7 @@ Dynamic Media能够将题注文件转换为JSON（JavaScript对象表示法）�
 >
 >使用的视频播放器必须支持使用章节标记。 Dynamic Media视频播放器确实支持章节标记，但使用第三方视频播放器可能不支持。
 
-如果需要，您可以创建自定义视频查看器并添加章节，而不是使用视频查看器预设。 有关使用章节导航创建您自己的HTML5查看器的说明，请在Adobe HTML5查看器SDK API中，参考类`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`下的标题“使用修饰符自定义行为”。 请参阅[HTML5查看器SDK API]((https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html))文档。
+如果需要，您可以创建自定义视频查看器并添加章节，而不是使用视频查看器预设。 有关使用章节导航创建您自己的HTML5查看器的说明，请在Adobe HTML5查看器SDK API中，参考类`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`下的标题“使用修饰符自定义行为”。 请参阅[HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)文档。
 
 <!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
@@ -1329,4 +1329,3 @@ T **要添加自定义视频缩略图**,
 1. 成功上传并发布图像后，请点按“更改缩略图”页面中的&#x200B;**[!UICONTROL 保存更改。]**
 
    自定义缩略图会添加到您的视频中。
-
