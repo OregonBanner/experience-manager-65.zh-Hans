@@ -9,9 +9,9 @@ user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: 开发
 role: Developer
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '910'
 ht-degree: 16%
 
 ---
@@ -70,10 +70,6 @@ ht-degree: 16%
    + [将服务与JMX控制台集成](jmx-integration.md)
    + [开发批量编辑器](dev-bulk-editor.md)
    + [开发报告](dev-reports.md)
-   + 电子商务{#ecommerce}
-      + [电子商务](ecommerce.md)
-      + [开发（通用）](generic.md)
-      + [使用SAPCommerce Cloud进行开发](sap-commerce-cloud.md)
 + 组件{#components}
    + [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
    + [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
