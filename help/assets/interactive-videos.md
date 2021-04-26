@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
-feature: Interactive Videos
+feature: 交互式视频
 role: Business Practitioner, Administrator
+exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '6061'
+source-wordcount: '6058'
 ht-degree: 26%
 
 ---
-
 
 # 交互式视频{#interactive-videos}
 
@@ -72,7 +72,7 @@ ht-degree: 26%
 交互式视频步骤：
 
 1. **（可选）识别概览变量**  — 通过识别现有概览实施所使用的动态变量来识别开始。在创建交互式视频时，可以使用变量将产品缩略图映射到相应的产品概览。 请参阅[（可选）识别Quickview变量](#optional-identifying-quickview-variables)。
-   *请注意，仅当以下所有条件均为真时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
+   *请注意，仅当以下所有条件均为真时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 1. **（可选）创建交互式视频查看器预设**  — 自定义组成播放器的各种组件的外观和行为，如视频浏览条和交互式缩略图。如果您打算使用现成的交互式视频查看器预设`Shoppable_Video_Light`或`Shoppable_Video_Dark`，则无需创建您自己的交互式视频查看器预设。
 请参阅[创建新查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（这是可选的）和[创建交互式查看器预设的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
@@ -96,7 +96,7 @@ ht-degree: 26%
 >[!NOTE]
 只有在以下情况下才需要此任务:
 * 您希望通过触发Quickviews来为视频添加交互性。
-* 您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/sites-administering/concepts.md)中的[电子商务概念。
+* 您的AEM实施does *not*&#x200B;使用eCommerce integration framework将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）提取到AEM。 请参阅AEM Assets](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 如果您的AEM实施使用电子商务，则可以跳过此任务并继续到下一个任务。
 
