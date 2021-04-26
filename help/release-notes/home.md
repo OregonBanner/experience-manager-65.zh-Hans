@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Manager 6.5发行说明
 description: AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。
+exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 translation-type: tm+mt
-source-git-commit: 90ab21c4a25fa1a2dcdf04af61fd30982cae7aae
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 42%
+source-wordcount: '384'
+ht-degree: 41%
 
 ---
-
 
 # Adobe Experience Manager 6.5发行说明
 
@@ -34,6 +34,7 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 | [部署用户指南](/help/sites-deploying/home.md) | 本指南向您介绍AEM的基础知识。 |
 | [开发用户指南](/help/sites-developing/home.md) | 了解如何构建您的AEM实例。 |
 | [管理用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
+| [商务用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [移动用户指南](/help/mobile/home.md) | 本指南介绍如何为移动应用程序创建和管理内容。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南向您介绍如何与Livefyre共享用户生成的内容。 |
 
