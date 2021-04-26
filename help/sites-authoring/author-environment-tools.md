@@ -10,14 +10,14 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
+exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2239'
 ht-degree: 97%
 
 ---
-
 
 # 创作 - 环境和工具{#authoring-the-environment-and-tools}
 
@@ -243,7 +243,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 * 使用&#x200B;**引用**&#x200B;组件的借入和借出内容的实例，您可以从此处导航至正在引用/引用的页面
 
-* [对产品页面的引用](/help/sites-administering/generic.md#showing-product-references)（可以从“商务 - 产品”控制台实现）
+* [对产品页面的引用](/help/commerce/cif-classic/administering/generic.md#showing-product-references)（可以从“商务 - 产品”控制台实现）
 * [启动项](/help/sites-authoring/launches.md)，提供对相关启动项的访问权
 * [](/help/sites-administering/msm.md)Live Copy 显示基于选定资源的所有 Live Copy 的路径。
 * [Blueprint](/help/sites-administering/msm-best-practices.md)，提供详细信息和各种操作
@@ -286,7 +286,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 例如，在适当时，**页面信息**&#x200B;还有以下选项：
 
 * [提升启动项](/help/sites-authoring/launches-promoting.md)，如果该页面是启动项。
-* [在经典UI](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 中打开如果管理员 [启用了此选项](/help/sites-administering/enable-classic-ui-editor.md)
+* [在经典UI中打](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 开如果管理员已 [启用此选项](/help/sites-administering/enable-classic-ui-editor.md)
 
 另外，在适当时，**页面信息**&#x200B;还允许访问分析和建议。
 
