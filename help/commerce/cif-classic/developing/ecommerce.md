@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 5%
+source-wordcount: '151'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +47,3 @@ eCommerce API由包提供：
 
 有关详细信息，请参阅[API文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)。
 
->[!NOTE]
->
->有关详细描述构建电子商务提供程序的所有步骤的完整文章，请参阅[创建自定义Adobe Experience Manager 6.2电子商务提供程序](https://helpx.adobe.com/cn/experience-manager/using/ecommerce62.html)。
