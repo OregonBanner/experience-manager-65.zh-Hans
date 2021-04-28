@@ -2,10 +2,10 @@
 title: AEM Content and Commerce
 description: AEM Content and Commerce自助资源和文档链接
 translation-type: tm+mt
-source-git-commit: 7b03772e3c7f185cb107c6576e2423275c1a6ccc
+source-git-commit: 809789d268deb4d77bbb5101265a1a0d7268b748
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 31%
+source-wordcount: '337'
+ht-degree: 29%
 
 ---
 
@@ -13,6 +13,11 @@ ht-degree: 31%
 # AEM Content and Commerce {#commerce-guide}
 
 本页列表了有关AEM Commerce的自助资源。
+
+>[!NOTE]
+>
+>有关将AEM作为Cloud Service的AEM内容和商务，请参阅[AEM内容和商务](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)。
+
 
 ## 关键商务文章{#key-articles}
 
