@@ -9,15 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
-feature: Multi Site Manager
+feature: 多站点管理器
+exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1667'
 ht-degree: 1%
 
 ---
-
 
 # MSM最佳实践{#msm-best-practices}
 
@@ -68,6 +68,10 @@ MSM是一个可配置的框架，用于自动进行内容部署。 实施通常�
 如果未引用Blueprint配置，则只能从Live Copy本身启动推出，实际上是从源中提取内容。
 
 使用Live Copy创建新站点时，创建蓝图配置是非常有利的，可以确保完整MSM功能集的可用性。
+
+>[注意!]
+>
+> 请注意，“权限”选项卡中的CUG无法从Blueprint中转出到Live Copy。 请在配置Live Copy时针对此进行规划。
 
 ## 组件和容器同步{#components-and-container-synchronization}
 
@@ -207,4 +211,3 @@ MSM转出配置可高度自定义。 您应该知道，自动推广可能会产�
 * [Live Copy概述控制台](/help/sites-administering/msm-livecopy-overview.md)
 * [配置 Live Copy 同步](/help/sites-administering/msm-sync.md)
 * [MSM转出冲突](/help/sites-administering/msm-rollout-conflicts.md)
-
