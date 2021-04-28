@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2566'
 ht-degree: 2%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 ## 客户端库和ui.frontend模块{#introduction-to-client-libraries}
 
-负责呈现店面主题/样式的CSS和JavaScript在AEM中由[Client library](/help/sites-developing/clientlibs.md)或clientlibs管理。 客户端库提供一种机制，用于在项目代码中组织CSS和Javascript，然后交付到页面上。
+负责呈现店面主题/样式的CSS和JavaScript在AEM中由[客户端库](/help/sites-developing/clientlibs.md)或clientlibs管理。 客户端库提供一种机制，用于在项目代码中组织CSS和Javascript，然后交付到页面上。
 
 可以通过添加和覆盖由这些客户端库管理的CSS，将品牌特定样式应用于AEM CIF核心组件。 了解客户端库的结构和页面包含方式至关重要。
 
@@ -164,7 +164,7 @@ ht-degree: 2%
 
    ![在ui.apps中编译的站点CSS](../assets/style-cif-component/comiled-css-ui-apps.png)
 
-   这将复制`site.css`文件到`ui.apps`项目中。 它现在是名为`clientlib-site`且类别为`venia.site`的clientlibrary的一部分。 文件是`ui.apps`模块的一部分后，即可将其部署到AEM。
+   这会将`site.css`文件复制到`ui.apps`项目中。 它现在是名为`clientlib-site`的客户端库的一部分，其类别为`venia.site`。 文件是`ui.apps`模块的一部分后，即可将其部署到AEM。
 
    >[!NOTE]
    >
@@ -174,7 +174,7 @@ ht-degree: 2%
 
    ![其他客户端库](../assets/style-cif-component/other-clientlibs.png)
 
-   这些客户端库不由`ui.frontend`模块管理。 而是这些客户端库包含由Adobe提供的CSS和JavaScript依赖项。 这些clientlibraries的定义位于每个文件夹下的`.content.xml`文件中。
+   这些客户端库不由`ui.frontend`模块管理。 而是这些客户端库包含由Adobe提供的CSS和JavaScript依赖项。 这些客户端库的定义位于每个文件夹下的`.content.xml`文件中。
 
    **clientlib-base**  — 这是一个空客户端库，它只嵌入AEM核心组件中必 [需的依赖项](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。类别为`venia.base`。
 
@@ -225,7 +225,7 @@ ht-degree: 2%
 
    ![查看已发布的项目](../assets/style-cif-component/view-as-published.png)
 
-   此操作将在未加载任何AEM作者javascript的情况下打开页面，就像在发布的站点上一样。 请注意，url中附加了查询参数`?wcmmode=disabled`。 在开发CSS和Javascript时，最好使用此参数来简化页面，而无需AEM作者提供的任何内容。
+   此操作将在未加载任何AEM作者javascript的情况下打开页面，就像在发布的站点上一样。 请注意，url中附加了查询参数`?wcmmode=disabled`。 在开发CSS和Javascript时，最好使用此参数来简化页面，而无需AEM作者提供任何内容。
 
 1. 视图页面源，您应该能够识别包含的多个客户端库：
 
@@ -275,18 +275,18 @@ ht-degree: 2%
 
    ![页面策略 — 登陆页](../assets/style-cif-component/page-policy-properties.png)
 
-   在右侧，您可以看到一个客户端库&#x200B;**类别**&#x200B;列表，这些客户端库将包含在使用此模板的所有页面上。
+   在右侧，您可以看到一个客户端库列表&#x200B;**类别**，这些客户端库将包含在使用此模板的所有页面上。
 
    * `venia.dependencies`  — 提供任何依赖的 `venia.site` 供应商库。
    * `venia.site`  — 这是模块生 `clientlib-site` 成的 `ui.frontend` 类别。
 
-   请注意，其他模板使用相同的策略，**内容页**、**登陆页**&#x200B;等……通过重新使用相同的策略，我们可以确保所有页面都包含相同的客户端库。
+   请注意，其他模板使用相同的策略，**内容页**、**登陆页**&#x200B;等。 通过重新使用相同的策略，我们可以确保所有页面都包含相同的客户端库。
 
    使用“模板”和“页面策略”管理包含客户端库的好处在于，您可以根据模板更改策略。 例如，您可能在同一AEM实例中管理两个不同的品牌。 每个品牌将有其自己的独特样式或&#x200B;*theme*，但基库和代码将相同。 另一个示例是，如果您有一个较大的客户端库，而您只想在某些页面上显示它，则可以为该模板制定唯一的页面策略。
 
 ## 本地Webpack开发{#local-webpack-development}
 
-在上一个练习中，对`ui.frontend`模块中的Sass文件进行了更新，然后在执行Maven构建之后，更改将部署到AEM。 接下来，我们将研究如何利用webpack-dev-server快速开发前端样式。
+在上一个练习中，对`ui.frontend`模块中的Sass文件进行了更新，然后在执行Maven构建后，更改将部署到AEM。 接下来，我们将研究如何利用webpack-dev-server快速开发前端样式。
 
 webpack-dev-server代理来自AEM本地实例的图像和某些CSS/JavaScript，但允许开发人员修改`ui.frontend`模块中的样式和JavaScript。
 
@@ -328,7 +328,7 @@ webpack-dev-server代理来自AEM本地实例的图像和某些CSS/JavaScript，
 
    >[!CAUTION]
    >
-   > 如果出现与Sass相关的错误，请停止服务器并运行命令`npm rebuild node-sass`，然后重复上述步骤。 如果项目`aem-cif-guides-venia/pom.xml`中指定了不同版本的`npm`和`node`，则可能发生这种情况。
+   > 如果出现与Sass相关的错误，请停止服务器并运行命令`npm rebuild node-sass`，然后重复上述步骤。 如果您在项目`aem-cif-guides-venia/pom.xml`中指定了不同版本的`npm`和`node`，则可能会发生这种情况。
 
 1. 在与AEM登录实例浏览器相同的新选项卡中导航到[http://localhost:8080/](http://localhost:8080/)。 您应通过webpack-dev-server看到Venia主页:
 
