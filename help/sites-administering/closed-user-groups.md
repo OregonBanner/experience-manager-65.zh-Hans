@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
-feature: Security
+feature: 安全
 translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '6891'
+source-wordcount: '6886'
 ht-degree: 0%
 
 ---
@@ -773,7 +773,7 @@ Apache Jackrabbit FileVault的导入机制已调整为处理`PrincipalSetPolicy`
 
 这两个元素均在`cq:Page`下创建。 在当前设计中，MSM仅处理位于`cq:PageContent`(`jcr:content`)节点下的节点和属性。
 
-因此，CUG组无法从Blueprint回滚到Live Copy。 在设置Live Copy时，请相应地对此进行规划。
+因此，无法从Blueprint中将CUG组转出到Live Copy。 请在配置Live Copy时针对此进行规划。
 
 ## 使用新CUG实施{#changes-with-the-new-cug-implementation}进行更改
 
@@ -834,7 +834,7 @@ CUG授权模型允许单独开启访问控制管理和权限评估：
 
 #### 排除登录路径{#property-for-excluding-login-path}的属性
 
-mixin类型定义一个名为`granite:loginPath`的可选属性，该属性基本上与`cq:cugLoginPage`属性相对应。 与之前的实现不同，只有在其声明节点类型为所述混音时，登录路径属性才会得到尊重。 在不设置mixin类型的情况下添加具有该名称的属性将不起作用，不会向验证器报告新要求或对登录路径的排除。
+mixin类型定义一个名为`granite:loginPath`的可选属性，该属性基本上与`cq:cugLoginPage`属性相对应。 与之前的实现不同，只有在其声明节点类型为所述混合时，登录路径属性才会得到尊重。 在不设置mixin类型的情况下添加具有该名称的属性将不起作用，不会向验证器报告新要求或对登录路径的排除。
 
 #### 身份验证要求的权限{#privilege-for-authentication-requirement}
 
