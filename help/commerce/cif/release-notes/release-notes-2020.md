@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: c859aa89e481e852302e9cda0adf2acc04d68a55
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 10%
+source-wordcount: '1324'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 * 更新了维尼亚参考店面，以对页脚使用Experience Fragment。 商业用户可以使用AEM创作工具编辑页脚。
 
-### 改进内容 {#what-is-improved-november}
+### {#what-is-improved-november}的改进
 
 * 结帐组件得到改进，可让购物者能够进入目的地国家，以允许美国以外的帐单/送货地址。
 
@@ -48,7 +48,7 @@ ht-degree: 10%
 
 * CIF核心组件通过发送商务数据扩展为Adobe客户端数据层的水合物。 Adobe Client Data Layer是收集数据并将数据传送到数字分析和报告服务器的标准化方法。 有关详细信息，请参阅[Adobe客户端数据层](https://github.com/adobe/adobe-client-data-layer/wiki)。
 
-* 产品详细信息和产品列表页面已扩展，可自动填充从Magento管理员UI中配置的SEO元数据（例如标题、元描述、元关键字）
+* 产品详细信息和产品列表页面已扩展，可自动填充从Magento管理员UI中配置的SEO元数据（如标题、元描述、元关键字）
 
 * 修复了商务Teaser组件错误。
 
@@ -120,7 +120,7 @@ ht-degree: 10%
 
 * CIF云配置用户界面支持发布/取消发布操作。
 
-### 改进内容 {#what-is-improved-july}
+### {#what-is-improved-july}的改进
 
 * 登录组件已移至用户下拉框，便于访问。
 
@@ -146,7 +146,7 @@ ht-degree: 10%
 
 * 增加了服务用户映射，作为安全要求的一部分，以确保通过服务用户访问/conf，而不是直接操作ACL。 CIF核心组件现在必须使用服务用户访问配置。
 
-### 改进内容 {#what-is-improved-june}
+### {#what-is-improved-june}的改进
 
 * 产品列表页和搜索结果页显示项目总数。 Number of items is updated when shopper applied过滤器。
 
@@ -174,7 +174,7 @@ ht-degree: 10%
 
 * 在创建云配置时自动创建产品绑定。
 
-### 改进内容
+### 改进功能
 
 * 云配置扩展为显示“创建文件夹”操作。
 
@@ -192,7 +192,7 @@ ht-degree: 10%
 
 * 统一和简化CIF连接器的配置设置。 有关更多详细信息，请查看[入门](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)或[新建AEM CIF项目设置](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
 
-### 改进内容 {#what-is-improved-april}
+### {#what-is-improved-april}的改进
 
 * 购物车和结帐流程扩展以支持注册购物者。
 
@@ -218,9 +218,9 @@ ht-degree: 10%
 
 * 在类别选取器中添加了搜索支持。
 
-* 目录列表组件中的分页可支持大型目录集。
+* 类别 列表组件中的分页支持大型目录集。
 
-### 改进内容 {#what-is-improved-february}
+### {#what-is-improved-february}的改进
 
 * 购物车经过增强，可显示折扣。
 
@@ -248,7 +248,7 @@ ht-degree: 10%
 
 * 可用的通用相关产品组件。
 
-### 改进内容 {#what-is-improved-january}
+### {#what-is-improved-january}的改进
 
 * 支持在产品teaser上显示CTA按钮。
 
@@ -256,6 +256,6 @@ ht-degree: 10%
 
 * 用于在产品列表组件中隐藏/显示标题/横幅的选项。
 
-* 应用于“产品传送”组件的拖放功能。
+* 应用于产品传送组件的拖放功能。
 
 * 应用了多个错误修复。
