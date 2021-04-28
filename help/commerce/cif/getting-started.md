@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '682'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ AEM内容和商务入门是一个分两步的过程：
 
 2. 将AEM与您的商业解决方案连接
 
-### 安装适用于AEM 6.5 {#install-add-on}的AEM Content and Commerce add-on
+### 安装适用于AEM 6.5的AEM Content and Commerce Add-On {#install-add-on}
 
 从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装AEM Commerce Add-On for AEM 6.5。
 
@@ -38,7 +38,7 @@ AEM内容和商务入门是一个分两步的过程：
 >
 >这将由AEM Managed Service客户的CSE完成。
 
-### 将AEM连接到您的商务系统{#connect}
+### 将AEM连接到您的Commerce System {#connect}
 
 AEM可以连接到任何具有AEM的可访问GraphQL端点的商务系统。 这些端点通常是公开可用的，也可以通过专用VPN或本地连接进行连接，具体取决于各个项目设置。
 
@@ -50,11 +50,11 @@ AEM可以连接到任何具有AEM的可访问GraphQL端点的商务系统。 这
 
 AEM Content and Commerce Add-On和CIF核心组件使用AEM服务器端和客户端连接。 默认情况下，客户端CIF核心组件和CIF附加创作工具会连接到`/api/graphql`。 如有需要，可通过CIFCloud Service配置来调整此值（见下文）。
 
-CIF加载项在`/api/graphql`处提供GraphQL代理servlet，该GraphQL代理servlet可选用于[本地开发](develop.md)。 对于生产部署，强烈建议通过AEM Dispatcher或其他网络层（如CDN）设置商务GraphQL端点的反向代理。
+CIF Add-On在`/api/graphql`处提供GraphQL代理servlet，它可以选择用于[本地开发](develop.md)。 对于生产部署，强烈建议通过AEM Dispatcher或其他网络层（如CDN）设置商务GraphQL端点的反向代理。
 
 ## 配置商店和目录{#catalog}
 
-加载项和[CIF核心组件](https://github.com/adobe/aem-core-cif-components)可用于连接到不同商店(或商店视图等)的多个AEM站点结构。 默认情况下，CIF加载项部署时会使用连接到Adobe Commerce的默认商店和目录(Magento)的默认配置。
+Add-On和[CIF核心组件](https://github.com/adobe/aem-core-cif-components)可用于连接到不同商务商店(或商店视图等)的多个AEM站点结构。 默认情况下，CIF Add-On部署时会使用连接到Adobe Commerce的默认商店和目录(Magento)的默认配置。
 
 此配置可通过CIFCloud Service配置按以下步骤调整：
 
