@@ -9,22 +9,22 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
 # 高级URL配置{#url}
 
-[AEM CIF核心组](https://github.com/adobe/aem-core-cif-components) 件提供高级配置，以自定义产品和类别页面的URL。许多实施将自定义这些URL以用于搜索引擎优化(SEO)目的。  以下视频详细说明了如何配置`UrlProvider`服务和[Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)的功能，以自定义产品和类别页面的URL。
+[AEM CIF核心组](https://github.com/adobe/aem-core-cif-components) 件提供高级配置，以自定义产品和类别页面的URL。许多实施将自定义这些URL以用于搜索引擎优化(SEO)目的。 以下视频详细说明了如何配置`UrlProvider`服务和[Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)的功能，以自定义产品和类别页面的URL。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## 配置 {#configuration}
 
-要根据SEO要求配置`UrlProvider`服务，并需要项目必须为“CIF URL提供程序配置”配置提供OSGI配置，并按如下所述配置服务。
+要根据SEO要求配置`UrlProvider`服务并需要项目必须为“CIF URL提供程序配置”配置提供OSGI配置，并按如下所述配置服务。
 
 >[!NOTE]
 >
@@ -74,5 +74,5 @@ ht-degree: 3%
 ## 其他资源
 
 * [Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM资源映射](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [AEM资源映射](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
