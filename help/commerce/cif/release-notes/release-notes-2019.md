@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: c2fb9af056fa4be13cfd7e60e8a44485e8712c0b
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '973'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 8%
 
 * Braintree支付支持在AEM Venia商店前面添加。
 
-### 改进内容 {#what-is-improved-november}
+### {#what-is-improved-november}的改进
 
 * 类别/产品拾取器在多商店设置中增强为对指定的Magento商店视图的尊重。
 
@@ -53,7 +53,7 @@ ht-degree: 8%
 
 * 基于React的客户端组件，用于帐户管理。 此版本支持以下功能：登录、忘记密码和创建帐户。
 
-### 改进内容 {#what-is-improved-october}
+### {#what-is-improved-october}的改进
 
 * 产品详细信息和产品列表组件已得到增强，可显示虚拟数据，以便当这些组件放置在模板/页面上时，为作者提供布局的预览。
 
@@ -77,7 +77,7 @@ ht-degree: 8%
 
 * 结帐组件包括地址表单、付款选择和送货方式选择。
 
-### 改进内容 {#what-is-improved-september}
+### {#what-is-improved-september}的改进
 
 * 产品Teaser和产品传送组件支持产品变体。
 
@@ -105,7 +105,7 @@ ht-degree: 8%
 
 * 允许作者将作品放在AEM页面上并链接到AEM页面、产品详细信息页面、产品列表页面或外部链接的按钮。
 
-### 改进内容 {#what-is-improved-august}
+### {#what-is-improved-august}的改进
 
 * Magento存储配置从OSGi移动到AEM产品控制台，以使集成设置更便于创作。
 
@@ -131,7 +131,7 @@ ht-degree: 8%
 
 * 服务器端特色类别列表，用于在AEM页面上显示类别列表。
 
-### 改进内容 {#what-is-improved-july}
+### {#what-is-improved-july}的改进
 
 * 产品控制台中显示对Magento 2.3.2的支持以及与产品属性相关的错误修复。
 
