@@ -3,9 +3,9 @@ title: AEM - Commerce Integration using Commerce Integration Framework常见问�
 description: AEM - Commerce Integration using Commerce Integration Framework常见问题解答
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45,aece1190-9530-4060-9b08-022da7068987
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -64,11 +64,11 @@ CIF提供搜索栏和搜索结果组件。 搜索栏组件会向商务解决方�
 
 ## 13.是否有办法用商业文本增强产品数据？ 你从哪儿做的？ 在AEM中还是在商务解决方案中？
 
-我们建议在AEM中管理与营销相关的数据和内容。 使用内容片段的其他属性装饰您的商务解决方案中的产品数据，或为不结构化的内容创建体验片段并将其与您的产品链接。
+我们建议在AEM中管理与营销相关的数据和内容。 使用内容片段的其他属性来装饰您的商务解决方案中的产品数据，或为非结构化内容创建体验片段并将其与您的产品链接。
 
 ## 14.如何确保整个表示层使用AEM时的PCI兼容性？
 
-建议采用抽象的支付方式。 这使得浏览器客户端与支付网关提供商直接通信，以便Adobe或商务解决方案都不持有或传递持卡人数据。 此方法只需要3级PCI兼容性。 但是，还有其他一些事项需要考虑完全符合PCI规范，例如员工如何与系统和数据交互。 有关MagentoPCI兼容性的详细信息，请参阅<https://magento.com/pci-compliance>
+我们建议采用抽象的支付方式。 这使得浏览器客户端与支付网关提供商直接通信，以便Adobe或商务解决方案都不持有或传递持卡人数据。 此方法只需要3级PCI兼容性。 但是，还有其他一些事项需要考虑完全符合PCI规范，例如员工如何与系统和数据交互。 有关MagentoPCI兼容性的详细信息，请参阅<https://magento.com/pci-compliance>
 
 ## 15.如果我使用AEM和Magento云版本，此联合解决方案是否符合PCI标准？
 
