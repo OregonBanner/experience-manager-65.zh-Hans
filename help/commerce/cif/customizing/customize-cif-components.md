@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '2549'
+source-wordcount: '2541'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 1. 添加必要的OSGi配置以将您的AEM实例连接到Magento实例，或将配置添加到新创建的项目。
 
-1. 此时，您应该拥有连接到Magento实例的店面的工作版本。 导航到`US` > `Home`页，网址为：[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
+1. 此时，您应拥有连接到Magento实例的店面的工作版本。 导航到`US` > `Home`页，网址为：[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
 
    您应该看到店面当前使用Venia主题。 展开店面的主菜单时，您应会看到各种类别，表示连接Magento正在工作。
 
@@ -196,7 +196,7 @@ Sling Models是作为Java实现的，可在生成的项目的&#x200B;**core**&#x
 
    ![核心位置IDE](../assets/customize-cif-components/core-location-ide.png)
 
-   `MyProductTeaser.java` 是扩展CIF ProductTeaser接口的Java [](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) 接口。
+   `MyProductTeaser.java` 是扩展CIF ProductTeaser接口的 [](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) Java接口。
 
    已经添加了名为`isShowBadge()`的新方法，以在产品被视为“New”时显示徽章。
 
@@ -494,8 +494,8 @@ AEM组件的一个常见扩展是修改组件生成的标记。 通过覆盖组�
 
 ## 其他资源 {#additional-resources}
 
-- [AEM原型](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
+- [AEM原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 - [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)
 - [自定义AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
-- [自定义核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html)
-- [AEM Sites入门](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+- [自定义核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
+- [AEM Sites入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
