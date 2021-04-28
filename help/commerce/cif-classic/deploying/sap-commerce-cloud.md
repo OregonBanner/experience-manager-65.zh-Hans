@@ -7,7 +7,7 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 2%
@@ -203,7 +203,7 @@ The hybris extension of the eCommerce Integration Framework has been updated to 
    * 用户名：管理
    * 密码：nimda
 
-1. 在侧栏导航中，浏览&#x200B;**System**&#x200B;和&#x200B;**Tools**。 然后选择&#x200B;**导入**&#x200B;以打开&#x200B;**向导：CSV Import**&#x200B;窗口。
+1. 在侧栏导航中，展开&#x200B;**System**&#x200B;和&#x200B;**Tools**。 然后选择&#x200B;**导入**&#x200B;以打开&#x200B;**向导：CSV Import**&#x200B;窗口。
 1. 在&#x200B;**配置**&#x200B;选项卡中，**上载**&#x200B;以下&#x200B;**导入文件**:
 
    [获取文件](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
