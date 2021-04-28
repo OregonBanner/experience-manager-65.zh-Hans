@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: 1a6d713e74056333b18ed68f58876c2a75d535b8
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 11%
 
 | 组件 | 版本号 | 详细信息 |
 |:-------|:-----:|---------------------:|
-| CIF附加 | v021.04.22 | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIF附加 | 2021.04.22 | [软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF核心组件 | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF韦尼亚参考站 | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -57,7 +57,7 @@ ht-degree: 11%
 
 * 支持Magento 2.4.2
 
-### 改进内容
+### 改进功能
 
 * 改进了内容驱动页面产品详细信息组件的可重用性
 
@@ -77,11 +77,11 @@ ht-degree: 11%
 
 * 产品体验管理：使用Experience Fragments单独丰富产品目录页面。
 
-* 可显示链接资产和体验片段的扩展产品控制台属性，包括快速导航到相关内容的操作。
+* 可显示链接的资产和体验片段的扩展产品控制台属性，包括快速导航到相关内容的操作。
 
-### 改进内容  {#what-is-improved-february}
+### {#what-is-improved-february}的改进
 
-* 增强的客户端数据层，包含产品图像url和类别信息
+* 增强的客户端数据层，包含产品图像url和类别信息。
 
 * 多个错误修复。
 
@@ -97,7 +97,7 @@ ht-degree: 11%
 
 * 产品体验管理：资产和体验片段的新“商务”属性选项卡。 通过此选项卡，您可以将资产和体验片段关联到产品和类别。 该选项卡还显示链接的商务对象的实时数据以及用于在产品控制台中显示详细信息的链接。
 
-### 改进内容  {#what-is-improved-january}
+### {#what-is-improved-january}的改进
 
 * 在验证后将用户数据发送到Adobe客户端数据层。
 
