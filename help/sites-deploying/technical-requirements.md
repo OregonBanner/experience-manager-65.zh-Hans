@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
+exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 translation-type: tm+mt
-source-git-commit: 06cb3a7cdd9b6de00aff67c66327abadce3e0920
+source-git-commit: 97182f9a7b5fa5f96106fed59eeecf866c6d34ff
 workflow-type: tm+mt
 source-wordcount: '3205'
 ht-degree: 1%
 
 ---
-
 
 # 技术要求{#technical-requirements}
 
@@ -228,7 +228,7 @@ Adobe Experience Manager与以下服务器平台配合使用，用于生产环�
 1. Linux Kernel 2.6、3.x和4.x包含Red Hat分发的衍生产品，包括Red Hat Enterprise Linux、CentOS、Oracle Linux和Amazon Linux。 AEM Forms加载项功能仅在CentOS 7和Red Hat Enterprise Linux 7上受支持。
 1. AEM Forms仅在Ubuntu 16.04 LTS上受支持
 1. Adobe Managed Services支持的Linux分发
-1. 升级到6.5的客户支持Microsoft Windows生产部署，且无生产使用。 新部署可应AEM Sites和Assets的要求而定。
+1. 升级到6.5的客户和非生产用的客户支持Microsoft Windows生产部署。 新部署可应AEM Sites和Assets的要求而定。
 1. AEM Forms在Microsoft Window Server上受支持，但不受支持级别R限制
 
 ### 虚拟和云计算环境{#virtual-cloud-computing-environments}
