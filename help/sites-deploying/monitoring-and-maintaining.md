@@ -77,7 +77,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->如果您运行的是第三方应用程序服务器，则其他文件夹可能位于不同的位置，并且可能还需要备份。 有关安装应用程序服务器的信息，请参见[如何与应用程序服务器一起安装AEM。 ](/help/sites-deploying/application-server-install.md)[](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
+>如果您运行的是第三方应用程序服务器，则其他文件夹可能位于不同的位置，并且可能还需要备份。 有关安装应用程序服务器的信息，请参见[如何与应用程序服务器一起安装AEM。 ](/help/sites-deploying/application-server-install.md)
 
 >[!CAUTION]
 >
