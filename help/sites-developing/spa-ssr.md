@@ -10,14 +10,14 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
+exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
-
 
 # SPA和服务器端渲染{#spa-and-server-side-rendering}
 
@@ -64,7 +64,9 @@ SSR通常在以下任一问题有明确的“是”时提供一些值：
 
 >[!NOTE]
 >
->Adobe建议为每个AEM环境（创作、发布、舞台等）使用一个单独的Adobe I/O Runtime实例。
+>Adobe建议每个环境（舞台、生产、测试等）使用单独的Adobe I/O Runtime工作区。 这允许使用部署到不同环境的不同版本的单个应用程序的典型系统开发生命周期(SDLC)模式。 有关详细信息，请参阅Project Firefly Applications](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md)的文档[CI/CD。
+>
+>每个实例（创作、发布）不需要单独的工作区，除非每个实例类型的运行时实现存在差异。
 
 ## 远程渲染器配置{#remote-renderer-configuration}
 
