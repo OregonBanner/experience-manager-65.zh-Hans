@@ -1,17 +1,17 @@
 ---
-title: '元数据模式，用于定义 [!DNL Adobe Experience Manager Assets]中元数据属性页面的布局。 '
+title: '元数据模式定义元数据属性页的布局 '
 description: 元数据模式定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据模式、编辑元数据模式，以及如何将元数据模式应用于资产。
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: Metadata
+role: Business Practitioner,Administrator
+feature: 元数据
+exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+source-git-commit: ae0c8bda918e2e8a7a6a32e0228d1a2410b283d9
 workflow-type: tm+mt
-source-wordcount: '3605'
-ht-degree: 14%
+source-wordcount: '3571'
+ht-degree: 15%
 
 ---
-
 
 # 元数据架构 {#metadata-schemas}
 
@@ -27,9 +27,9 @@ ht-degree: 14%
 
    ![资产属性的“基本”选项卡，其中无法更改资产类型](assets/asset-properties-basic-tab.png)
 
-*图：资产属性上的“基 [!UICONTROL 本”选项卡]。*
+   *图：资产属性上的“基 [!UICONTROL 本”选项卡]。*
 
-要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 有关详细信息，请参阅[编辑元数据模式Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms)。 如果您修改了MIME类型的元数据模式，则资产和所有子类型的属性页面布局都会被修改。 例如，修改`default/image`下的jpeg模式只会修改MIME类型为`image/jpeg`的资产的元数据布局（资产属性）。 但是，如果您编辑默认模式，则所做的更改会修改所有类型资产的元数据布局。
+   要修改资产的MIME类型，请使用自定义元数据模式表单或修改现有表单。 有关详细信息，请参阅[编辑元数据模式Forms](#edit-metadata-schema-forms)。 如果您修改了MIME类型的元数据模式，则资产和所有子类型的属性页面布局都会被修改。 例如，修改`default/image`下的jpeg模式只会修改MIME类型为`image/jpeg`的资产的元数据布局（资产属性）。 但是，如果您编辑默认模式，则所做的更改会修改所有类型资产的元数据布局。
 
 ## 元数据模式表单{#default-metadata-schema-forms}
 
@@ -113,7 +113,7 @@ ht-degree: 14%
 
 * `./jcr:content/metadata/dc:title`：将该值作为属性 `dc:title` 存储在资产的元数据节点中。
 
-* `./jcr:created`:存储资产的创建日期和时间。它是受保护的属性。 如果配置这些属性，Adobe建议您将它们标记为“禁用编辑”。
+* `./jcr:created`:存储资产的创建日期和时间。它是受保护的属性。 如果配置这些属性，Adobe建议您将它们标记为“禁用编辑”。 否则，在保存资产的属性时，会出现“资产修改失败”错误。
 
 要确保在元数据模式表单中正确显示组件，属性路径不应包含任何空格。
 
@@ -301,7 +301,7 @@ ht-degree: 14%
 [!DNL Assets] 映射以下MIME类型和模式表单：
 
 | 架构表单 | MIME类型 |
-| --------------------------- | --------------------------------------------------- |
+|---|---|
 | image/jpeg | image/pjpeg |
 | image/tiff | image/x-tiff |
 | application/pdf | application/postscript |
@@ -326,9 +326,7 @@ ht-degree: 14%
 
 只有上传到应用此模式的文件夹的资产才符合在变体元数据模式中定义的修改后的元数据。 [!DNL Assets] 在应用原始模式的其他文件夹中，继续与在原始模式中定义的元数据保持一致。
 
-资产的元数据继承基于应用于层次结构中第一级文件夹的模式。 换句话说，如果文件夹中不包含子文件夹，则文件夹中的资产会继承应用于该文件夹的模式的元数据。
-
-您可以在子文件夹中应用其他模式。 子文件夹中的资产将继承直接子文件夹的元数据模式。 如果子文件夹级别未应用模式或同一模式，则其资产会从父文件夹继承模式。
+资产的元数据继承基于应用于层次结构中顶级文件夹的模式。 同一模式会应用于子文件夹或由子文件夹继承。 如果在子文件夹级别应用了其他模式，则继承将停止。
 
 1. 在[!DNL Experience Manager]接口中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 元数据模式]**。 此时会显示&#x200B;**[!UICONTROL 元数据架构表单]**&#x200B;页面。
 1. 选中表单前的复选框（例如默认元数据表单），然后单击&#x200B;**[!UICONTROL 复制]**&#x200B;并将其另存为自定义表单。 指定表单的自定义名称，例如`my_default`。 或者，您也可以创建自定义表单。
