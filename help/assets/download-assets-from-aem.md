@@ -3,15 +3,14 @@ title: 下载资产
 description: 了解如何从 [!DNL Adobe Experience Manager] 下载资产以及启用或禁用下载功能。
 contentOwner: AG
 role: Business Practitioner
-feature: Asset Management,Asset Distribution
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: 资产管理，资产分发
+exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
+source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '891'
 ht-degree: 8%
 
 ---
-
 
 # 从[!DNL Adobe Experience Manager] {#download-assets-from-aem}下载资源
 
@@ -64,6 +63,8 @@ ht-degree: 8%
    enabled=B"true"
    asset.download.prezip.maxcontentsize=I"102400"
    ```
+
+默认情况下，对于`GET`请求下载文件，[!DNL Experience Manager]对ZIP存档的下载大小强制实施50 MB的限制。 通过`POST`请求或用户界面启动的下载不受此限制的影响。
 
 ## 禁用资源下载servlet {#disable-asset-download-servlet}
 
