@@ -11,11 +11,10 @@ content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
-feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: 安全
+source-git-commit: 1c6ee9b547fd0870feb510e35ffdcb8e3f857f18
 workflow-type: tm+mt
-source-wordcount: '2842'
+source-wordcount: '2873'
 ht-degree: 0%
 
 ---
@@ -26,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->还有[的更多信息，说明由开放Web 应用程序安全项目(OWASP)](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)发布的最危险的安全威胁。
+>[开放Web 应用程序安全项目(OWASP)](https://owasp.org/www-project-top-ten/)发布的有关最危险安全威胁的进一步信息。
 
 >[!NOTE]
 >
@@ -332,11 +331,9 @@ Sling是&#x200B;*以内容为中心*。 这意味着，当每个(HTTP)请求以J
 
 **缓解由资产下载Servlet引起的DoS**
 
-AEM中的默认资产下载Servlet允许经过身份验证的用户发出任意大小的并发下载请求，以创建对他们可见的资产的ZIP文件，这些文件可能会使服务器和/或网络过载。
+默认的资产下载servlet允许经过身份验证的用户发出任意大型的并发下载请求，以创建资产的ZIP文件。 创建大型ZIP存档可能会使服务器和网络过载。 要减轻由此行为导致的潜在拒绝服务(DoS)风险，默认情况下，在[!DNL Experience Manager]发布实例上禁用`AssetDownloadServlet` OSGi组件。 默认情况下，在[!DNL Experience Manager]作者实例上启用此选项。
 
-为了减轻由此功能导致的潜在DoS风险，默认情况下，对于最新AEM版本上的发布实例，`AssetDownloadServlet` OSGi组件处于禁用状态。
-
-如果您的设置要求启用资产下载服务器，请参阅[此文章](/help/assets/download-assets-from-aem.md)以了解详细信息。
+如果您不需要下载功能，则在创作和发布部署中禁用servlet。 如果您的设置要求启用资产下载功能，请参阅[此文章](/help/assets/download-assets-from-aem.md)以了解详细信息。 此外，您还可以定义部署可支持的最大下载限制。
 
 ### 禁用WebDAV {#disable-webdav}
 
