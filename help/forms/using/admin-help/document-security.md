@@ -10,15 +10,14 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
-feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 文档安全
+exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
+source-git-commit: 76201cc58f2d3f7d65f867801fcb95f5390baada
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2560'
 ht-degree: 0%
 
 ---
-
 
 # 关于文档安全{#about-document-security}
 
@@ -223,6 +222,10 @@ ht-degree: 0%
 * 视图策略和文档事件，用于策略集中的任何策略或文档
 * 撤销对文档的访问权限
 * 切换文档的策略。
+
+>[!NOTE]
+>
+>可以从数据库检索最多1000个策略集名称。
 
 策略集是由有权这样做的管理员和策略集协调员在文档安全管理网页中创建和删除的。
 
