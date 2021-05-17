@@ -12,9 +12,9 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: 文档安全
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: 76201cc58f2d3f7d65f867801fcb95f5390baada
+source-git-commit: ffba6ecf6c3d75a71c3e6f970fd9a20ce467492d
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2562'
 ht-degree: 0%
 
 ---
@@ -225,7 +225,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->可以从数据库检索最多1000个策略集名称。
+>使用`getAllPolicysetnames()` API可从数据库检索最多1000个策略集名称。
 
 策略集是由有权这样做的管理员和策略集协调员在文档安全管理网页中创建和删除的。
 
