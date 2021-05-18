@@ -10,15 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 配置
+exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
+source-git-commit: d9565be9183bd4485036d99869585a79999be54b
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2719'
 ht-degree: 0%
 
 ---
-
 
 # 如何使用TarMK Cold Standby{#how-to-run-aem-with-tarmk-cold-standby}运行AEM
 
@@ -55,7 +54,7 @@ Tar Micro Kernel的冷备用容量允许一个或多个备用AEM实例连接到�
 
 ## 其他特征{#other-characteristics}
 
-### 稳健性{#robustness}
+### 鲁棒性 {#robustness}
 
 数据流设计用于自动检测和处理连接和网络相关问题。 所有数据包都与校验和捆绑在一起，一旦连接或损坏数据包发生问题，将触发重试机制。
 
@@ -282,7 +281,7 @@ Cold Standby服务提供以下OSGi设置：
 
 * **允许的IP范围(`primary.allowed-client-ip-ranges`):**  — 主要允许连接的IP范围。
 * **安全(`secure`)：启** 用SSL加密。要利用此设置，必须在所有实例中启用它。
-* **待机读取超时(`standby.readtimeout`)：从** 待机实例发出的请求超时（以毫秒为单位）。建议的超时设置为43200000。 通常建议您将超时值设置为至少12小时。
+* **待机读取超时(`standby.readtimeout`)：从** 待机实例发出的请求超时（以毫秒为单位）。使用的默认值是60000（1分钟）。
 
 * **备用自动清`standby.autoclean`理():** 如果存储的大小在同步周期上增加，请调用清除方法。
 
@@ -410,4 +409,3 @@ Adobe建议定期运行维护，以防止随着时间的推移存储库出现过
    >[!NOTE]
    >
    >如果您未使用共享数据存储，垃圾收集首先必须在主数据库上运行，然后在备用数据库上运行。
-
