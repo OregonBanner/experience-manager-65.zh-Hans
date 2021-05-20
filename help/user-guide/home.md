@@ -1,24 +1,23 @@
 ---
 title: AEM 6.5用户指南中心
 seo-title: AEM 6.5用户指南中心
-description: 概述了解、安装、管理和使用AEM 6.5的所有基本资源
-seo-description: 概述了解、安装、管理和使用AEM 6.5的所有基本资源
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+description: 概述了了解、安装、管理和使用AEM 6.5的所有基本资源
+seo-description: 概述了了解、安装、管理和使用AEM 6.5的所有基本资源
+exl-id: 51788662-6214-408e-98d9-692950c366be
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 27%
 
 ---
 
-
-# AEM 6.5用户指南集线器{#aem-64-user-guide}
+# AEM 6.5用户指南中心{#aem-64-user-guide}
 
 ## 简介 {#introduction}
 
 | [首要步骤](https://helpx.adobe.com/cn/experience-manager/get-started.html) | [功能视频](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html) | [发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes.html) |
 |:-:|:-:|:-:|
-| 探索AEM入门教程和文章 | 精选视频，突出显示6.5新增功能 | 了解AEM 6.5的新增功能 |
+| 了解有关AEM快速入门的教程和文章 | 精选视频，重点介绍6.5的新增功能 | 了解AEM 6.5的新增功能 |
 
 ## 用户指南和资源{#user-guides-and-resources}
 
@@ -36,14 +35,14 @@ ht-degree: 27%
 
 ## 联系人选项{#contact-options}
 
-支持代表可通过以下方式获得协助支持：
+支持代表可通过以下方式获得辅助支持：
 
 * Web:Experience Manager支持门户
 * 电话：[查找您所在区域的电话号码。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
 
 >[!NOTE]
 >
->不确定您是否是&#x200B;**支持委托**? 了解此[用户类型是否适用于您](https://helpx.adobe.com/experience-cloud/supported-users.html)，并了解我们的[企业支持条款](https://helpx.adobe.com/support/programs/enterprise-support-terms.html)。
+>不确定您是否是&#x200B;**支持委托**? 了解此[用户类型是否适用于您](https://helpx.adobe.com/experience-cloud/supported-users.html)，并了解我们的[企业支持术语](https://helpx.adobe.com/support/programs/enterprise-support-terms.html)。
 
 ## 社区 {#community}
 
