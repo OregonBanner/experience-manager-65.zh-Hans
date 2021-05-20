@@ -1,34 +1,33 @@
 ---
 title: 用于在表单门户上处理已提交表单的API
 seo-title: 用于在表单门户上处理已提交表单的API
-description: AEM Forms提供了API，您可以使用它来查询表单门户中提交的表单数据并对其执行操作。
-seo-description: AEM Forms提供了API，您可以使用它来查询表单门户中提交的表单数据并对其执行操作。
+description: AEM Forms提供了API，您可以使用这些API来查询在表单门户中提交的表单数据并对其执行操作。
+seo-description: AEM Forms提供了API，您可以使用这些API来查询在表单门户中提交的表单数据并对其执行操作。
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish, developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 feature: Forms Portal
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: a685889e-5d24-471c-926d-dbb096792bc8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 5%
 
 ---
 
+# 用于处理表单门户上提交的表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-# 用于在表单门户{#apis-to-work-with-submitted-forms-on-forms-portal}上处理已提交表单的API
-
-AEM Forms提供了API，您可以使用它来查询通过表单门户提交的表单数据。 此外，您还可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
+AEM Forms提供了API，您可以使用这些API查询通过表单门户提交的表单数据。 此外，您还可以使用本文档中介绍的API发布评论或更新已提交表单的属性。
 
 >[!NOTE]
 >
->必须将将调用API的用户添加到审阅者组，如[将提交审阅者关联到表单](/help/forms/using/adding-reviewers-form.md)中所述。
+>必须按照[将提交审阅人关联到表单](/help/forms/using/adding-reviewers-form.md)中所述，将调用API的用户添加到审阅人组。
 
-## GET /content/forms/portal/submission.review.json?func=getFormsFormsSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
+## GET/content/forms/portal/submission.review.json?func=getFormsFormsSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
-返回所有合格表单的列表。
+返回所有符合条件的表单的列表。
 
 ### URL参数{#url-parameters}
 
@@ -60,9 +59,9 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
+## GET/content/forms/portal/submission.review.json?func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
 
-返回所有已提交表单的详细信息。 但是，可以使用URL参数来限制结果。
+返回所有已提交表单的详细信息。 但是，您可以使用URL参数来限制结果。
 
 ### URL参数{#url-parameters-1}
 
@@ -80,27 +79,27 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>offset</code> （可选）</td>
-   <td>指定结果集索引中的起始点。 默认值为<strong>0</strong>。</td>
+   <td>在结果集的索引中指定起点。 默认值为<strong>0</strong>。</td>
   </tr>
   <tr>
    <td><code>limit</code> （可选）</td>
-   <td>限制结果数。 默认值为<strong>30</strong>。</td>
+   <td>限制结果数量。 默认值为<strong>30</strong>。</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> （可选）</td>
-   <td>指定对结果排序的属性。 默认值为<strong>jcr:lastModified</strong>，它根据上次修改时间对结果排序。</td>
+   <td>指定对结果进行排序的属性。 默认值为<strong>jcr:lastModified</strong>，该值会根据上次修改时间对结果进行排序。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> （可选）</td>
-   <td>指定对结果排序的顺序。 默认值为<strong>desc</strong>，它按降序排序结果。 可以指定<code>asc</code>以按升序对结果排序。</td>
+   <td>指定对结果进行排序的顺序。 默认值为<strong>desc</strong>，该值会按降序排序结果。 您可以指定<code>asc</code>以升序方式对结果排序。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （可选）</td>
-   <td>指定要包含在结果中的表单属性的逗号分隔列表。 默认属性为：<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
+   <td>指定要包含在结果中的表单属性列表（以逗号分隔）。 默认属性为：<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> （可选）</td>
-   <td>在表单属性中搜索指定值并返回具有匹配值的表单。 默认值为 <strong>""</strong>.</td>
+   <td>在表单属性中搜索指定的值，并返回具有匹配值的表单。 默认值为 <strong>""</strong>.</td>
   </tr>
  </tbody>
 </table>
@@ -130,7 +129,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 {"total":1,"items":[{"formName":"form2","formPath":"/content/dam/formsanddocuments/forms-review/form2","submitID":"1403037413508500","formType":"af","jcr:lastModified":"2015-11-05T17:52:32.243+05:30","owner":"admin"}]}
 ```
 
-## POST /content/forms/portal/submission.review.json?func=addComment {#post-content-forms-portal-submission-review-json-func-addcomment-br}
+## POST/content/forms/portal/submission.review.json?func=addComment {#post-content-forms-portal-submission-review-json-func-addcomment-br}
 
 向指定的提交实例添加注释。
 
@@ -161,9 +160,9 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET/content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
-返回在指定的提交实例上发布的所有注释。
+返回在指定的提交实例上发布的所有评论。
 
 ### URL参数{#url-parameters-3}
 
@@ -199,9 +198,9 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 [{"owner":"fr1","comment":"API test comment","time":1446726988250}]
 ```
 
-## POST /content/forms/portal/submission.review.json?func=updateSubmission {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
+## POST/content/forms/portal/submission.review.json?func=updateSubmission {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
 
-更新指定已提交表单实例的指定属性的值。
+更新指定提交表单实例的指定属性的值。
 
 ### URL参数{#url-parameters-4}
 
@@ -215,7 +214,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ### 响应 {#response-4}
 
-返回一个JSON对象，其中包含已发布更新的相关信息。
+返回包含有关已发布更新的信息的JSON对象。
 
 ### 示例 {#example-4}
 
@@ -230,4 +229,3 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSub
 ```json
 {"formName":"form2","owner":"admin","jcr:lastModified":1446727516593,"path":"/content/forms/fp/admin/submit/metadata/1403037413508500.html","submitID":"1403037413508500","status":"submitted"}
 ```
-
