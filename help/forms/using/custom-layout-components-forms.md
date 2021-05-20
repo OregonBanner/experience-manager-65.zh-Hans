@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # 为自适应表单创建自定义布局组件{#creating-custom-layout-components-for-adaptive-forms}
 
 ## 先决条件 {#prerequisite}
 
-了解布局，使您能够创建／使用自定义布局。 请参阅[更改面板布局](../../forms/using/layout-capabilities-adaptive-forms.md)。
+了解布局，它允许您创建/使用自定义布局。 请参阅[更改面板布局](../../forms/using/layout-capabilities-adaptive-forms.md)。
 
 ## 自适应表单面板布局组件{#adaptive-form-panel-layout-component}
 
@@ -30,9 +29,9 @@ ht-degree: 0%
 
 ## 创建自定义面板布局{#creating-a-custom-panel-layout}
 
-1. 导览至位置`/crx/de`。
+1. 导航到`/crx/de`位置。
 1. 将面板布局从位置`/libs/fd/af/layouts/panel`（例如`tabbedPanelLayout`）复制到`/apps`（例如`/apps/af-custom-layout`）。
-1. 重命名您复制到`customPanelLayout`的布局。 更改节点`qtip`和`jcr:description`的属性。 例如，将它们更改为`Custom layout - Toggle tabs`。
+1. 将复制的布局重命名为`customPanelLayout`。 更改节点`qtip`和`jcr:description`的属性。 例如，将它们更改为`Custom layout - Toggle tabs`。
 
 qtip
 
@@ -43,7 +42,7 @@ qtip
 >将属性`guideComponentType`设置为值`fd/af/layouts/panel`可确定布局为面板布局。
 
 1. 将新布局下的文件`tabbedPanelLayout.jsp`重命名为customPanelLayout.jsp。
-1. 要引入新的样式和行为，请在`etc`节点下创建一个客户端库。 例如，在/etc/af-custom-layout-clientlib位置创建节点client-library。 让节点具有类别属性af.panel.custom。 它具有以下。css和。js文件：
+1. 要引入新样式和行为，请在`etc`节点下创建客户端库。 例如，在/etc/af-custom-layout-clientlib位置，创建节点client-library。 让节点具有类别属性af.panel.custom。 它具有以下.css和.js文件：
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -115,9 +114,9 @@ qtip
    });
    ```
 
-1. 要增强外观和行为，可以包含`client library`。
+1. 要增强外观和行为，您可以包含`client library`。
 
-   此外，更新。jsp文件中包含的脚本的路径。 例如，按如下方式更新`customPanelLayout.jsp`文件：
+   此外，还更新.jsp文件中包含脚本的路径。 例如，按如下方式更新`customPanelLayout.jsp`文件：
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -202,10 +201,10 @@ qtip
    </div>
    ```
 
-1. 在“创作”模式下打开自适应表单。 您定义的面板布局将添加到用于配置面板布局的列表。
+1. 在创作模式下打开自适应表单。 您定义的面板布局将添加到用于配置面板布局的列表。
 
-   ![“自定义面板”布局显示在面板布局列](assets/auth-layt.png) ![表中自适应表单的屏幕截图，使用自定义面](assets/s1.png) ![板布局演示自定义布局的切换功能的屏幕截图](assets/s2.png)
+   ![自定义面板布局显示在面板布局列表使用自定](assets/auth-layt.png) ![义面板布局的自适应表单的屏幕截图演示自定](assets/s1.png) ![义布局的切换功能的屏幕截图](assets/s2.png)
 
-自定义面板布局和使用它的自适应表单的示例ZIP。
+自定义面板布局和使用该布局的自适应表单的示例ZIP。
 
 [获取文件](assets/af-custom-layout.zip)
