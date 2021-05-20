@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 934eda2a-bd3b-4018-86dc-dbb01d246386
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 93%
 
 ---
-
 
 # 企业 DevOps{#enterprise-devops}
 
@@ -33,7 +32,7 @@ DevOps 旨在避免出现以下问题：
 
 ## 环境 {#environments}
 
-Adobe Experience Manager(AEM)部署通常由多个环境组成，用于不同级别的不同用途：
+Adobe Experience Manager(AEM)部署通常包含多个环境，用于不同级别上的不同目的：
 
 * [开发](#development)
 * [质量保证](#quality-assurance)
@@ -63,7 +62,7 @@ Adobe Experience Manager(AEM)部署通常由多个环境组成，用于不同级
 
 ### 质量保证 {#quality-assurance}
 
-质量保证团队使用此环境全面[测试](/help/sites-developing/test-plan.md)您的新系统；设计和功能。 它应同时具有创作和发布环境（包含适当的内容），并提供所有必要的服务以启用完整的测试套件。
+质量保证团队使用此环境来全面[测试](/help/sites-developing/test-plan.md)您的新系统；设计和功能。 它应同时具有创作和发布环境（包含适当的内容），并提供所有必要的服务以启用完整的测试套件。
 
 ### 暂存 {#staging}
 
@@ -84,7 +83,7 @@ Adobe Experience Manager(AEM)部署通常由多个环境组成，用于不同级
 
 根据项目的规模，该环境通常包含多个作者和/或发布实例。在较低的级别上，存储库也可群集到多个实例。
 
-#### 创作 {#author}
+#### 作者 {#author}
 
 创作实例通常位于内部防火墙之后。这是您和您的同事将在其中执行创作任务的环境，例如：
 
@@ -119,7 +118,7 @@ Adobe Experience Manager(AEM)部署通常由多个环境组成，用于不同级
 
 代码（例如，自定义的 Web 应用程序功能和设计模板）通常是通过在不同的内容存储库之间导出和导入包来传输的。在需要的地方，可以将此复制配置为一个自动流程。
 
-AEM项目经常触发代码部署：
+AEM项目通常会触发代码部署：
 
 * 自动：用于传输到开发和 QA 环境。
 * 手动：以更加可控的方式部署到暂存和生产环境，通常手动进行；但如果需要，也可以配置为自动。
@@ -141,6 +140,6 @@ AEM项目经常触发代码部署：
 可以在以下位置传输内容：
 
 * 在不同环境之间 - 通过导出和导入包。
-* 在不同实例之间——通过直接复制([AEM复制](/help/sites-deploying/replication.md))内容（使用HTTP或HTTPS连接）。
+* 在不同实例之间 — 通过直接复制([AEM复制](/help/sites-deploying/replication.md))内容（使用HTTP或HTTPS连接）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)
