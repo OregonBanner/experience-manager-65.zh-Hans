@@ -1,8 +1,8 @@
 ---
-title: 任务 Manager Service Java API QuickStart(SOAP)
-seo-title: 任务 Manager Service Java API QuickStart(SOAP)
-description: 使用任务 Manager服务分配任务、锁定任务、检索分配给用户的任务、从任务检索表单数据、修改表单数据、检索文件附件和检索任务信息。
-seo-description: 使用任务 Manager服务分配任务、锁定任务、检索分配给用户的任务、从任务检索表单数据、修改表单数据、检索文件附件和检索任务信息。
+title: 任务管理器服务Java API快速启动(SOAP)
+seo-title: 任务管理器服务Java API快速启动(SOAP)
+description: 使用任务管理器服务来分配任务、锁定任务、检索分配给用户的任务、从任务中检索表单数据、修改表单数据、检索文件附件和检索任务信息。
+seo-description: 使用任务管理器服务来分配任务、锁定任务、检索分配给用户的任务、从任务中检索表单数据、修改表单数据、检索文件附件和检索任务信息。
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
 contentOwner: admin
 content-type: reference
@@ -10,46 +10,45 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
 
+# 任务管理器服务Java API快速启动(SOAP){#task-manager-service-java-api-quickstart-soap}
 
-# 任务 Manager Service Java API快速开始(SOAP){#task-manager-service-java-api-quickstart-soap}
+任务管理器服务提供以下快速入门。
 
-以下快速开始可用于任务管理器服务。
+[快速入门（SOAP模式）：使用Java API分配任务](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[快速开始（SOAP模式）：使用Java API分配任务](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API锁定任务](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[快速开始（SOAP模式）：使用Java API锁定任务](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索分配给用户的任务](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[快速开始（SOAP模式）：检索使用Java API分配给用户的任务](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API从任务检索表单数据](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[快速开始（SOAP模式）：使用Java API从任务检索表单数据](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API修改表单数据](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[快速开始（SOAP模式）：使用Java API修改表单数据](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API从任务中检索文件附件](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[快速开始（SOAP模式）：使用Java API从任务检索文件附件](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
-
-[快速开始（SOAP模式）：使用Java API检索任务信息](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索任务信息](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->不能使用Web服务API搜索分配给用户的任务。 原因是您无法调用`taskList`方法，这是执行此任务所必需的方法调用。
+>您无法使用Web服务API搜索分配给用户的任务。 原因是您无法调用`taskList`方法，这是执行此任务所必需的方法调用。
 
 >[!NOTE]
 >
->“使用AEM Forms进行编程”中的“快速开始”基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统，如UNIX，请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>位于“使用AEM Forms进行编程”中的“快速入门”基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}分配任务
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}分配任务
 
-以下Java代码示例将任务分配给名为Tony Blue的用户。
+以下Java代码示例为名为Tony Blue的用户分配任务。
 
 ```java
  /*
@@ -180,7 +179,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-locking-tasks-using-the-java-api}锁定任务
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-locking-tasks-using-the-java-api}锁定任务
 
 以下Java代码示例锁定与任务标识符值2对应的任务。
 
@@ -269,9 +268,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）：检索使用Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}分配给用户的任务
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}检索分配给用户的任务
 
-以下Java代码示例检索分配给名为&#x200B;*tony blue*&#x200B;的用户的所有任务。 请注意，此用户是在连接属性中指定的。 将显示有关返回任务的信息，如其标识符值和说明。
+以下Java代码示例检索分配给名为&#x200B;*tony blue*&#x200B;的用户的所有任务。 请注意，此用户是在连接属性中指定的。 将显示有关返回任务的信息，如其标识符值和描述。
 
 ```java
  /*
@@ -395,7 +394,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  }
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}从任务检索表单数据
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}从任务中检索表单数据
 
 以下Java代码示例从标识符值为304的任务中检索表单数据。 表单数据将写入名为&#x200B;*FormData.xml*&#x200B;的XML文件，该文件位于C:\Adobe。
 
@@ -501,7 +500,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}修改表单数据
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}修改表单数据
 
 以下Java代码示例使用位于&#x200B;*FormData.xml*&#x200B;文件中的数据更新表单。
 
@@ -611,9 +610,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}从任务检索文件附件
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}从任务中检索文件附件
 
-以下Java代码示例检索文件附件。 每个文件附件都保存为TXT文件。
+以下Java代码示例可检索文件附件。 每个文件附件都另存为TXT文件。
 
 ```java
  /*
@@ -715,9 +714,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}检索任务信息
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}检索任务信息
 
-以下Java代码示例检索基于名为&#x200B;*MortgageLoan - Prebuilt*&#x200B;的进程的所有任务。 将检查每个返回任务的状态，以确保它是已完成的任务。 检索并显示完成任务的用户名称和任务完成日期等信息。
+以下Java代码示例检索基于名为&#x200B;*MortgageLoan - Prebuilt*&#x200B;的进程的所有任务。 检查每个返回任务的状态，以确保该任务已完成。 系统会检索并显示完成任务的用户名称和完成任务的日期等信息。
 
 ```java
  /*
@@ -869,4 +868,3 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
      }
  
 ```
-
