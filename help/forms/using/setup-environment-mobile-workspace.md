@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: e6b01ade-7ea3-42a7-872d-cc35a3d2782a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 1d1f9db2-83cf-4612-ac8c-d2638c3bbaea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
-
 
 # 为AEM Forms应用程序设置环境{#set-up-environment-for-aem-forms-app}
 
@@ -27,22 +26,22 @@ ht-degree: 0%
 
 * Microsoft Windows 10
 * Microsoft Visual Studio 2015
-* 适用于Apache Cordova的Microsoft Visual Studio工具
+* 适用于Apache Cordova的Microsoft Visual Studio Tools
 
 ## 对于iOS设备{#for-ios-devices}
 
 * 运行Mac OS X 10.9.5或更高版本的基于Intel的Apple Mac
 * iOS SDK 8.4或更高版本
 * Xcode版本：适用于OS X或更高版本的Xcode 6.4
-* iOS开发人员企业项目的会员资格
+* iOS开发人员企业计划的会员资格
 * 用于分发内部iOS应用程序的企业证书
 * 带iOS 8.4或更高版本的Apple iPad
 
 ## 对于Android设备{#for-android-devices}
 
-* 可从[https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)下载的Android Development Toolkit（ADT捆绑包）
-* 如果环境在MAC系统上设置，则ADT应安装在“Applications”（应用程序）文件夹中。
-* 如果ADT安装在MAC上的任何其他位置，或者环境是在Windows系统上设置的，则需要在`local.properties`文件中更新ADT SDK路径，该文件位于解压缩的源存档`mobileworkspace-src.zip`中的`src\android`文件夹中。 在此文件中，将`sdk.dir`变量指向桌面上的ADT SDK位置。
+* Android开发工具包（ADT包），可从[https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)下载
+* 如果在MAC系统上设置了环境，则应将ADT安装在Applications文件夹中。
+* 如果ADT安装在MAC上的任何其他位置，或者如果环境是在Windows系统上设置的，则需要在`local.properties`文件中更新ADT SDK路径，该文件位于提取的源存档`mobileworkspace-src.zip`的`src\android`文件夹中。 在此文件中，将`sdk.dir`变量指向桌面上的ADT SDK位置。
 
 >[!NOTE]
 >
