@@ -9,25 +9,24 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 5271feb9-70c6-4c82-8ac7-34a63d80e3aa
-translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+exl-id: 863900c3-5fe8-41a3-a151-466d0c62eeea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
-
 # 命名约定{#naming-conventions}
 
 ## Java包名称{#hyphens-in-java-package-name}中的连字符
 
-为Java类创建位置时，请注意，包名称必须与存储库文件夹位置的名称匹配，路径中的任何连字符必须正确转义。
+在为Java类创建位置时，请注意，包名称必须与存储库文件夹位置的名称匹配，且路径中的任意连字符会被正确转义。
 
-在AEM开发中，建议在存储库项目名称中使用连字符，但连字符在Java包名称中是非法的。
+在AEM开发中，建议在存储库项目名称中使用连字符，但在Java包名称中，连字符是非法的。
 
-基础CRX平台必须能够区分实际的下划线`_ `和连字符`-`。 因此，在JCR中，连字符必须用其unicode值(u002d)替换，并用下划线`_`转义。
+基础CRX平台必须能够区分实际的下划线`_ `和连字符`-`。 因此，在JCR中，连字符必须替换为其unicode值(u002d)，并使用下划线`_`进行转义。
 
 例如，如果存储库路径为&#x200B;**/apps/my-example/component/info/Info.java**，则包名称应为`java package apps.my_002dexample.component.info;`
 
-请注意，下划线同样必须转义，这样`_`就变为`_005f`。
+请注意，下划线必须同样进行转义，以便`_`变为`_005f`。
