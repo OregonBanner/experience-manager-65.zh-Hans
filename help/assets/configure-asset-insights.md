@@ -3,19 +3,18 @@ title: 配置资产分析以获得分析。
 description: 在 [!DNL Adobe Experience Manager Assets]中配置资产分析。
 contentOwner: AG
 role: Architect, Administrator
-feature: Asset Insights,Asset Reports
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: 资产分析，资产报表
+exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 7%
+source-wordcount: '253'
+ht-degree: 6%
 
 ---
 
-
 # 配置资产分析{#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] 从中获取第三方网站使用的数字资产的使用数据 [!DNL Adobe Analytics]要使资产分析能够检索此数据并生成洞察，请首先配置该功能以与Adobe Analytics集成。
+[!DNL Adobe Experience Manager Assets] 从中获取第三方网站使用的数字资产的使用数据 [!DNL Adobe Analytics]要使资产分析能够检索此数据并生成洞察，请首先配置该功能以与[!DNL Adobe Analytics]集成。 要使用此功能，请单独购买[!DNL Adobe Analytics]许可证。 [!DNL Managed Services]上的客户会收到与[!DNL Experience Manager]绑定的[!DNL Analytics]许可证。 请参阅[Managed Services产品说明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
