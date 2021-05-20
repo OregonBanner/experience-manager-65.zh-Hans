@@ -10,14 +10,13 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 44%
 
 ---
-
 
 # 社区组件 {#communities-components}
 
@@ -29,21 +28,21 @@ ht-degree: 44%
 
 * [AEM Communities概述](/help/communities/overview.md)
 * [AEM Communities 快速入门](/help/communities/getting-started.md)
-* [AEM Communities教育入门](/help/communities/getting-started-enablement.md)
+* [AEM Communities启用入门](/help/communities/getting-started-enablement.md)
 
 >[!NOTE]
 >
->如果不熟悉创作环境，请视图有关[基本操作](/help/sites-authoring/basic-handling.md)和[页面创作快速指南的文档。](/help/sites-authoring/qg-page-authoring.md)
+>如果不熟悉创作环境，请查看有关[基本操作](/help/sites-authoring/basic-handling.md)和[页面创作快速指南的文档](/help/sites-authoring/qg-page-authoring.md)。
 
 ## 可用社区组件{#available-communities-components}
 
-下表列表了在组件浏览器(Sidekick)中启用时作者可见的社区组件。
+下表列出了在组件浏览器(Sidekick)中启用后，作者可看到的社区组件。
 
 另请参阅交互式[社区组件指南](/help/communities/components-guide.md)。
 
 >[!NOTE]
 >
->阅读[社区组件基础知识](/help/communities/basics.md)，因为它包含使用社区组件进行创作所需的信息。
+>请阅读[社区组件基础知识](/help/communities/basics.md) ，因为它包含使用社区组件进行创作所需的信息。
 
 | **组件标题** | **功能** |
 |---|---|
@@ -84,9 +83,8 @@ ht-degree: 44%
 
 ## 相关社区文档{#related-communities-documentation}
 
-* 访问[部署社区](/help/communities/deploy-communities.md)以了解建议的部署。
+* 访问[部署Communities](/help/communities/deploy-communities.md)以了解建议的部署。
 
-* 访问[管理社区站点](/help/communities/administer-landing.md)，了解如何创建社区站点、配置社区站点模板、管理社区内容、管理成员和配置消息。
+* 访问[管理社区站点](/help/communities/administer-landing.md) ，了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
 
-* 访问[开发社区](/help/communities/communities.md)，了解社交组件框架(SCF)和自定义社区组件和功能。
-
+* 访问[开发社区](/help/communities/communities.md) ，了解社交组件框架(SCF)和自定义社区组件和功能。
