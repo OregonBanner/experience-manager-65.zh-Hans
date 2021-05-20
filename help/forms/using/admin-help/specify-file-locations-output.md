@@ -9,30 +9,29 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 460bbb31-8187-469c-8102-b310093b6c03
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 620c69d6-4fe1-46d6-b5d4-3b562142e547
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 1%
 
 ---
 
-
 # 指定输出{#specify-file-locations-for-output}的文件位置
 
-您可以指定“输出”在其中查找它需要的特定类型文件的位置。
+您可以指定“输出”在何处查找它需要的特定类型的文件。
 
-1. 在管理控制台中，单击“服务”>“输出”。
+1. 在管理控制台中，单击服务>输出。
 1. 在位置下，指定相应的选项。
 1. 单击保存。
 
 ## 位置设置{#locations-settings}
 
-**内容根URI:** 从中检索表单的存储库的URI或绝对位置。此值与通过API指定的sForm参数组合，以构建到检索的表单的绝对路径。 此值可以引用可通过HTTP访问的目录或Web位置。
+**内容根URI:** 从中检索表单的存储库的URI或绝对位置。此值与通过API指定的sForm参数结合使用，以构建检索到的表单的绝对路径。 此值可引用可使用HTTP访问的目录或Web位置。
 
-默认值为空字符串。
+默认值是空字符串。
 
-**XCI配置文件：** 输出服务用于渲染的XCI配置文件的相对或绝对位置。对于相对值，假定XCI文件驻留在AEM表单可部署的EAR文件中。
+**XCI配置文件：** 输出服务用于渲染的XCI配置文件的相对或绝对位置。对于相对值，假定XCI文件位于AEM Forms可部署的EAR文件中。
 
 默认值为 `com/adobe/formServer/PA/pa_output.xci`.
 
@@ -48,5 +47,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如果您使用临时清理实用程序，请注意，删除这些目录不会影响功能，但在创建新缓存之前，它会在短时间内显着影响性能。 要避免此问题，请在清除AEM forms temp目录时不要删除这些目录。
-
+>如果您使用的是临时清理实用程序，请注意，删除这些目录不会影响功能，但在创建新缓存之前，这会在短时间内对性能产生重大影响。 要避免出现此问题，请在清除AEM表单临时目录时不要删除这些目录。
