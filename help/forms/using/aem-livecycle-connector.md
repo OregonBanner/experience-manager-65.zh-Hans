@@ -1,69 +1,68 @@
 ---
 title: 将AEM Forms与AdobeLiveCycle
 seo-title: 将AEM Forms与AdobeLiveCycle
-description: AEM LiveCycle connector允许您从AEM应用程序和工作流中开始LiveCycle ES4 文档 Services。
-seo-description: AEM LiveCycle connector允许您从AEM应用程序和工作流中开始LiveCycle ES4 文档 Services。
+description: AEMLiveCycle连接器允许您从AEM应用程序和工作流中启动LiveCycleES4 Document Services。
+seo-description: AEMLiveCycle连接器允许您从AEM应用程序和工作流中启动LiveCycleES4 Document Services。
 uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
 
-
 # 将AEM Forms与AdobeLiveCycle{#connecting-aem-forms-with-adobe-livecycle}连接
 
-Adobe Experience Manager(AEM)LiveCycle连接器允许从AEM Web应用程序和工作流中无缝调用Adobe LiveCycle ES4 文档服务。 LiveCycle提供了富客户端SDK，它允许客户端应用程序使用Java API开始LiveCycle服务。 AEM LiveCycle Connector可在OSGi环境中使用这些API简化工作。
+Adobe Experience Manager(AEM)LiveCycle连接器允许从AEM web应用程序和工作流中无缝调用AdobeLiveCycleES4 Document Services。 LiveCycle提供了富客户端SDK，该SDK允许客户端应用程序使用Java API启动LiveCycle服务。 AEMLiveCycle连接器在OSGi环境中使用这些API简化了操作。
 
 ## 将AEM服务器连接到AdobeLiveCycle{#connecting-aem-server-to-adobe-livecycle}
 
-AEM LiveCycle Connector是[AEM Forms add-on包](/help/forms/using/installing-configuring-aem-forms-osgi.md)的一部分。 安装AEM Forms加载项包后，请执行以下步骤，将LiveCycle服务器的详细信息添加到AEM Web Console。
+AEMLiveCycle连接器是[AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md)的一部分。 安装AEM Forms附加组件包后，请执行以下步骤，将LiveCycle服务器的详细信息添加到AEM Web Console。
 
-1. 在AEM Web控制台配置管理器中，找到Adobe LiveCycle客户端SDK配置组件。
+1. 在AEM Web控制台配置管理器中，找到AdobeLiveCycle客户端SDK配置组件。
 1. 单击组件可编辑配置服务器URL、用户名和密码。
-1. 查看设置并单击&#x200B;**保存**。
+1. 查看设置并单击&#x200B;**Save**。
 
-尽管这些属性是自解释的，但重要的属性如下：
+尽管这些属性不言自明，但重要属性如下：
 
-* **服务器URL**  — 指定LiveCycle服务器的URL。如果希望LiveCycle和AEM通过https通信，请使用以下JVM开始AEM
+* **服务器URL**  — 指定指向LiveCycle服务器的URL。如果希望LiveCycle和AEM通过https进行通信，请使用以下JVM启动AEM
 
    ```java
    argument
     -Djavax.net.ssl.trustStore=<<em>path to LC keystore</em>>
    ```
 
-   。
+   选项。
 
-* **Username** — 指定用于在AEM和LiveCycle之间建立通信的帐户的用户名。该帐户是具有LiveCycle文档服务权限的开始用户帐户。
+* **用户名** — 指定用于在AEM和LiveCycle之间建立通信的帐户的用户名。该帐户是具有启动Document Services权限的LiveCycle用户帐户。
 * **密码** — 指定密码。
-* **服务名**  — 指定使用“用户名”和“密码”字段中提供的用户凭据启动的服务。默认情况下，启动LiveCycle服务时不会传递凭据。
+* **服务名称**  — 指定使用“用户名”和“密码”字段中提供的用户凭据开始的服务。默认情况下，启动LiveCycle服务时不会传递凭据。
 
-## 正在启动文档服务{#starting-document-services}
+## 启动文档服务{#starting-document-services}
 
-客户端应用程序可以使用Java API、Web服务、远程处理和REST以编程方式开始LiveCycle服务。 对于Java客户端，应用程序可以使用LiveCycle SDK。 LiveCycle SDK提供了用于远程启动这些服务的Java API。 例如，要将Microsoft Word文档转换为PDF，客户端开始生成PDFService。 调用流包含以下步骤：
+客户端应用程序可以使用Java API、Web服务、远程处理和REST以编程方式启动LiveCycle服务。 对于Java客户端，应用程序可以使用LiveCycleSDK。 LiveCycleSDK提供了用于远程启动这些服务的Java API。 例如，要将Microsoft Word文档转换为PDF，客户端将启动GeneratePDFService。 调用流程包含以下步骤：
 
 1. 创建ServiceClientFactory实例。
-1. 每个服务都提供一个客户端类。 要开始服务，请创建服务的客户端实例。
-1. 开始服务并处理结果。
+1. 每个服务都提供一个客户端类。 要启动服务，请创建服务的客户端实例。
+1. 启动服务并处理结果。
 
-AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务，从而简化了流程。 LiveCycle连接器提供以下功能：
+AEMLiveCycle连接器将这些客户端实例公开为OSGi服务（可使用标准OSGi方式访问），从而简化了流程。 LiveCycle连接器提供以下功能：
 
 * 作为OSGi服务的客户端实例：打包为OSGI包的客户端列在[文档服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)部分。 每个客户端jar在OSGi服务注册表中将客户端实例注册为OSGi服务。
 * 用户凭据传播：连接到LiveCycle服务器所需的连接详细信息在中央位置进行管理。
-* ServiceClientFactory服务：要开始进程，客户端应用程序可以访问ServiceClientFactory实例。
+* ServiceClientFactory服务：要启动进程，客户端应用程序可以访问ServiceClientFactory实例。
 
-### 从OSGi Service Registry {#starting-via-service-references-from-osgi-service-registry}通过Service References启动
+### 从OSGi服务注册表{#starting-via-service-references-from-osgi-service-registry}中通过服务引用启动
 
-要从AEM中开始公开的服务，请执行以下步骤：
+要从AEM中启动公开的服务，请执行以下步骤：
 
-1. 确定主要依赖关系。 在maven pom.xml文件中向所需的客户端jar添加依赖关系。 至少应将依赖关系添加到adobe-livecycle-client和adobe-usermanager-clientJar中。
+1. 确定Maven依赖关系。 在maven pom.xml文件中，向所需的客户端jar添加依赖项。 至少应将依赖项添加到adobe-livecycle-client和adobe-usermanager-client Jar中。
 
    ```xml
    <dependency>
@@ -83,7 +82,7 @@ AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务，从�
    </dependency>
    ```
 
-   要开始服务，请为服务添加相应的Maven依赖关系。 有关依赖项的列表，请参阅[文档服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)。 例如，对于“生成PDF”服务，添加以下依赖关系：
+   要启动服务，请为服务添加相应的Maven依赖项。 有关依赖项列表，请参阅[文档服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)。 例如，对于“生成PDF”服务，添加以下依赖项：
 
    ```xml
    <dependency>
@@ -93,7 +92,7 @@ AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务，从�
    </dependency>
    ```
 
-1. 获取服务引用。 获取服务实例的句柄。 如果编写的是Java类，则可以使用声明服务注释。
+1. 获取服务引用。 获取服务实例的句柄。 如果您正在编写Java类，则可以使用声明性服务批注。
 
    ```java
    import com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient;
@@ -117,7 +116,7 @@ AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务，从�
                );
    ```
 
-   以上代码段开始GeneratePdfServiceClient的createPDF API将文档转换为PDF。 可以使用以下代码在JSP中执行类似的调用。 主要区别在于以下代码使用Sling ScriptHelper访问GeneratePdfServiceClient。
+   以上代码片段将启动GeneratePdfServiceClient的createPDF API，以将文档转换为PDF。 您可以使用以下代码在JSP中执行类似的调用。 主要区别在于以下代码使用Sling ScriptHelper访问GeneratePdfServiceClient。
 
    ```jsp
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
@@ -139,7 +138,7 @@ AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务，从�
 
 ### 通过ServiceClientFactory {#starting-via-serviceclientfactory}启动
 
-在某些情况下，需要ServiceClientFactory类。 例如，您需要ServiceClientFactory调用进程。
+在某些情况下， ServiceClientFactory类是必需的。 例如，您需要ServiceClientFactory才能调用进程。
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.ServiceClientFactoryProvider;
@@ -155,15 +154,15 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 ## RunAs支持{#runas-support}
 
-LiveCycle中几乎每个文档服务都需要身份验证。 您可以使用以下任意选项来开始这些服务，而无需在代码中提供显式凭据：
+LiveCycle中几乎每个文档服务都需要身份验证。 您可以使用以下任意选项来启动这些服务，而无需在代码中提供明确的凭据：
 
 ### 允许列表配置{#allowlist-configuration}
 
-LiveCycle客户端SDK配置包含有关服务名的设置。 此配置是服务的列表，调用逻辑使用开箱即用的管理员凭据。 例如，如果将DirectoryManager服务（用户管理API的一部分）添加到此列表，则任何客户端代码都可以直接使用该服务，而调用层会作为发送到LiveCycle服务器的请求的一部分自动传递配置的凭据
+LiveCycle客户端SDK配置包含有关服务名称的设置。 此配置是一个服务列表，调用逻辑会开箱即用地使用管理员凭据。 例如，如果将DirectoryManager服务（用户管理API的一部分）添加到此列表，则任何客户端代码都可以直接使用该服务，而调用层会自动将配置的凭据作为发送到LiveCycle服务器的请求的一部分传递
 
 ### RunAsManager {#runasmanager}
 
-作为集成的一部分，提供了新的服务RunAsManager。 它允许您以编程方式控制调用LiveCycle服务器时使用的凭据。
+作为集成的一部分，提供了新服务RunAsManager 。 它允许您以编程方式控制在调用LiveCycle服务器时使用的凭据。
 
 ```java
 import com.adobe.livecycle.dsc.clientsdk.security.PasswordCredential;
@@ -216,7 +215,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 
 ## 文档服务列表{#document-services-list}
 
-### Adobe LiveCycle Client SDK API包{#adobe-livecycle-client-sdk-api-bundle}
+### AdobeLiveCycle客户端SDK API包{#adobe-livecycle-client-sdk-api-bundle}
 
 提供以下服务：
 
@@ -241,7 +240,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle客户端SDK包{#adobe-livecycle-client-sdk-bundle}
+### AdobeLiveCycle客户端SDK包{#adobe-livecycle-client-sdk-bundle}
 
 提供以下服务：
 
@@ -258,7 +257,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle TaskManager客户端包{#adobe-livecycle-taskmanager-client-bundle}
+### AdobeLiveCycleTaskManager客户端包{#adobe-livecycle-taskmanager-client-bundle}
 
 提供以下服务：
 
@@ -279,7 +278,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Workflow客户端包{#adobe-livecycle-workflow-client-bundle}
+### AdobeLiveCycle Workflow客户端包{#adobe-livecycle-workflow-client-bundle}
 
 提供以下服务：
 
@@ -295,7 +294,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle PDF Generator Client bundle {#adobe-livecycle-pdf-generator-client-bundle}
+### Adobe LiveCycle PDF Generator客户端包{#adobe-livecycle-pdf-generator-client-bundle}
 
 提供以下服务：
 
@@ -311,7 +310,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Application Manager客户端包{#adobe-livecycle-application-manager-client-bundle}
+### AdobeLiveCycle应用程序管理器客户端包{#adobe-livecycle-application-manager-client-bundle}
 
 提供以下服务：
 
@@ -329,7 +328,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Assembler客户端包{#adobe-livecycle-assembler-client-bundle}
+### AdobeLiveCycle汇编程序客户端包{#adobe-livecycle-assembler-client-bundle}
 
 提供以下服务：
 
@@ -361,7 +360,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Forms Client bundle {#adobe-livecycle-forms-client-bundle}
+### Adobe LiveCycle Forms客户端包{#adobe-livecycle-forms-client-bundle}
 
 提供以下服务：
 
@@ -377,7 +376,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Output Client bundle {#adobe-livecycle-output-client-bundle}
+### Adobe LiveCycle Output客户端包{#adobe-livecycle-output-client-bundle}
 
 提供以下服务：
 
@@ -393,7 +392,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Reader Extensions Client bundle {#adobe-livecycle-reader-extensions-client-bundle}
+### Adobe LiveCycle Reader Extensions客户端包{#adobe-livecycle-reader-extensions-client-bundle}
 
 提供以下服务：
 
@@ -409,7 +408,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Rights Manager Client包{#adobe-livecycle-rights-manager-client-bundle}
+### AdobeLiveCycle权限管理器客户端包{#adobe-livecycle-rights-manager-client-bundle}
 
 提供以下服务：
 
@@ -431,7 +430,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Signatures Client Bundle {#adobe-livecycle-signatures-client-bundle}
+### AdobeLiveCycle签名客户端包{#adobe-livecycle-signatures-client-bundle}
 
 提供以下服务：
 
@@ -447,7 +446,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Truststore客户端包{#adobe-livecycle-truststore-client-bundle}
+### AdobeLiveCycleTruststore客户端包{#adobe-livecycle-truststore-client-bundle}
 
 提供以下服务：
 
@@ -466,7 +465,7 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
 </dependency>
 ```
 
-### Adobe LiveCycle Repository Client Bundle {#adobe-livecycle-repository-client-bundle}
+### AdobeLiveCycle存储库客户端包{#adobe-livecycle-repository-client-bundle}
 
 提供以下服务：
 
