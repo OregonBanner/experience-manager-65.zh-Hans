@@ -1,25 +1,24 @@
 ---
-title: 自适应表单关键字
-seo-title: 自适应表单关键字
-description: 您不能将这些保留字用作自适应表单中的标识符。
-seo-description: 您不能将这些保留字用作自适应表单中的标识符。
+title: 自适应表单关键词
+seo-title: 自适应表单关键词
+description: 您不能在自适应表单中将这些保留字用作标识符。
+seo-description: 您不能在自适应表单中将这些保留字用作标识符。
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 自适应表单
+exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 5%
 
 ---
 
+# 自适应表单关键词{#adaptive-forms-keywords}
 
-# 自适应表单关键字{#adaptive-forms-keywords}
-
-自适应表单关键字是预定义的保留标识符，对自适应表单具有特殊意义。 您不能将这些关键字用作自适应表单中的标识符。 下表列表了作为自适应表单保留标识符的所有关键字。
+自适应表单关键字是预定义的保留标识符，对自适应表单具有特殊含义。 您不能在自适应表单中将这些关键词用作标识符。 下表列出了作为自适应表单保留标识符的所有关键词。
 
 <table>
  <tbody>
@@ -74,7 +73,7 @@ ht-degree: 5%
    <td><p>getElement</p> </td>
   </tr>
   <tr>
-   <td><p>占位符文本</p> </td>
+   <td><p>placeholderText</p> </td>
    <td><p>autoSaveStartExpression</p> </td>
    <td><p>子项</p> </td>
   </tr>
@@ -184,18 +183,18 @@ ht-degree: 5%
    <td><p>enabledExp</p> </td>
   </tr>
   <tr>
-   <td><p>execCompletion</p> </td>
+   <td><p>execComplete</p> </td>
    <td><p>sectionId</p> </td>
    <td><p>setFocus</p> </td>
   </tr>
   <tr>
-   <td><p>completionExp</p> </td>
+   <td><p>completeExp</p> </td>
    <td><p>sectionTitle</p> </td>
    <td><p>activeInstance</p> </td>
   </tr>
   <tr>
    <td><p>completionExpReq</p> </td>
-   <td><p>completionScript</p> </td>
+   <td><p>completeScript</p> </td>
    <td><p>activePart</p> </td>
   </tr>
   <tr>
@@ -205,7 +204,7 @@ ht-degree: 5%
   </tr>
   <tr>
    <td><p>instanceManager</p> </td>
-   <td><p>completionAfterMessage</p> </td>
+   <td><p>completeAfterMessage</p> </td>
    <td><p>isFirstPart</p> </td>
   </tr>
   <tr>
@@ -224,7 +223,7 @@ ht-degree: 5%
    <td><p>sectionFields</p> </td>
   </tr>
   <tr>
-   <td><p>获取的FromService</p> </td>
+   <td><p>已获取的FromService</p> </td>
    <td><p>repeatablePanelId</p> </td>
    <td><p>getSelectedIndex</p> </td>
   </tr>
@@ -241,4 +240,4 @@ ht-degree: 5%
  </tbody>
 </table>
 
-除上面列出的关键字外，请避免使用与[自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)类似的名称。
+除了上面列出的关键字外，请避免使用与[自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)类似的名称。
