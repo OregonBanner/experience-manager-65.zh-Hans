@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
-translation-type: tm+mt
-source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
+exl-id: 76b76e0e-531b-4f80-be70-68532ef81a7f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 4%
 
 ---
 
-
 # 特色内容功能{#featured-content-feature}
 
 ## 简介 {#introduction}
 
-特色内容功能为发布环境中的登录站点访客（社区成员）提供了一个区域，用于突出显示以下内容：
+特色内容功能在发布环境中为登录网站访客（社区成员）提供了一个区域，用于突出显示以下内容：
 
 * [博客](blog-feature.md)
 * [日历](calendar.md)
@@ -30,40 +29,40 @@ ht-degree: 4%
 * [构思](ideation-feature.md)
 * [问题与解答](working-with-qna.md)
 
-一旦将内容标记为特色，它将列在此组件中，该组件可能会放在容易引起社区成员注意的特定登陆页或区域中。
+将内容标记为特有内容后，它将列在此组件中，该组件可能会放置在特定的登陆页面或容易引起社区成员注意的区域中。
 
-每个组件可能允许或禁止功能显示内容。
+每个组件可能允许或不允许功能显示内容。
 
-文档的本节介绍：
+文档的此部分描述：
 
 * 向社区站点添加特色内容。
 * `Featured Content`组件的配置设置。
 
-## 将特色内容添加到页面{#adding-featured-content-to-a-page}
+## 向页面{#adding-featured-content-to-a-page}添加特色内容
 
-要在创作模式下将`Featured Content`组件添加到页面，请使用组件浏览器查找
+要在创作模式下向页面添加`Featured Content`组件，请使用组件浏览器找到
 
 * `Communities / Featured Content`
 
 并将其拖动到应显示特色内容的页面上。
 
-有关必要的信息，请访问[社区组件基础知识](basics.md)。
+有关必要信息，请访问[社区组件基础知识](basics.md)。
 
-当包含[必需的客户端库](essentials-featured.md#essentials-for-client-side)时，`Featured Content`组件的显示方式如下：
+当包含[所需的客户端库](essentials-featured.md#essentials-for-client-side)时，将显示`Featured Content`组件：
 
 ![功能内容](assets/featuredcontent.png)
 
 ## 配置特色内容{#configuring-featured-content}
 
-选择要访问的已放置`Featured Content`组件，然后选择打开编辑对话框的`Configure`图标。
+选择要访问的已放置的`Featured Content`组件，然后选择`Configure`图标以打开编辑对话框。
 
 ![configure-new](assets/configure-new.png)
 
-![功能内容1](assets/featuredcontent1.png)
+![featuredcontent1](assets/featuredcontent1.png)
 
-### 设置选项卡{#settings-tab}
+### “设置”选项卡{#settings-tab}
 
-在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡下，确定要显示的内容：
+在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡下，识别要显示的内容：
 
 * **[!UICONTROL 显示名称]**
 
@@ -71,30 +70,30 @@ ht-degree: 4%
 
 * **[!UICONTROL 专题内容的位置]**
 
-   *（必需）浏* 览到包含可能具有功能的内容的页面（该页面的组件必须配置为允许特色内容）。例如，`/content/sites/engage/en/forum`。
+   *（必需）* 浏览到包含可能具有功能的内容的页面（该页面的组件必须配置为允许具有功能的内容）。例如，`/content/sites/engage/en/forum`。
 
 * **[!UICONTROL 显示限制]**
 
    要显示的特色内容的最大数量。 默认值为5。
 
-## 站点访客体验{#site-visitor-experience}
+## 网站访客体验{#site-visitor-experience}
 
-将内容标记为特色内容需要审查方权限。
+要将内容标记为特色内容的功能需要审核者权限。
 
-审查方视图发布内容时，他们有权访问上下文中的审核标志，该标志包括新的`Feature`标志。
+审核者查看发布的内容时，有权访问上下文内审核标记，该标记包含新的`Feature`标记。
 
-![站点访客体验](assets/site-visitor-experience.png)
+![site-visitor-experience](assets/site-visitor-experience.png)
 
-标记为功能后，模型标志变为`Unfeature`。
+标记为功能后，建模标记将变为`Unfeature`。
 
-包含`Featured Content`组件的页面现在将包含此帖子。
+现在，包含`Featured Content`组件的页面将包含此帖子。
 
-![站点访客体验1](assets/site-visitor-experience1.png)
+![site-visitor-experience1](assets/site-visitor-experience1.png)
 
 `Read More` 是指向实际帖子的链接。
 
 ## 附加信息 {#additional-information}
 
-有关开发人员的详细信息，请参阅[特色内容](essentials-featured.md)页面。
+有关更多信息，请参阅[特色内容](essentials-featured.md)页面，供开发人员使用。
 
-有关标记特色内容，请参阅[协调用户生成的内容](moderate-ugc.md)。
+要将内容标记为特有，请参阅[审核用户生成的内容](moderate-ugc.md)。
