@@ -1,46 +1,45 @@
 ---
 title: 自定义草稿和提交数据服务
 seo-title: 自定义草稿和提交数据服务
-description: AEM Forms，默认情况下，将草稿和提交的自适应表单存储在Publish实例的默认节点中。 但是，您可以配置AEM Forms的草稿和提交数据服务，以自定义草稿和提交的自适应表单的存储。
-seo-description: AEM Forms，默认情况下，将草稿和提交的自适应表单存储在Publish实例的默认节点中。 但是，您可以配置AEM Forms的草稿和提交数据服务，以自定义草稿和提交的自适应表单的存储。
+description: AEM Forms默认情况下，会将草稿和提交的自适应表单存储在Publish实例的默认节点中。 但是，您可以配置AEM Forms的草稿和提交数据服务，以自定义草稿和提交的自适应表单的存储。
+seo-description: AEM Forms默认情况下，会将草稿和提交的自适应表单存储在Publish实例的默认节点中。 但是，您可以配置AEM Forms的草稿和提交数据服务，以自定义草稿和提交的自适应表单的存储。
 uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
-
 # 自定义草稿和提交数据服务{#customizing-draft-and-submission-data-services}
 
 ## 概述 {#overview}
 
-AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户提供了维护在制品表单的选项。 用户随后可以从任何设备随时填写和提交表单。
+AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户提供了用于维护正在进行表单的选项。 然后，用户可以随时从任何设备填写并提交表单。
 
-默认情况下，AEM Forms将与草稿和提交关联的用户数据存储在`/content/forms/fp`节点的Publish实例中。
+默认情况下，AEM Forms会将与草稿和提交相关联的用户数据存储在`/content/forms/fp`节点的Publish实例中。
 
-但是，AEM Forms门户组件提供数据服务，允许您自定义为草稿和提交内容存储用户数据的实施。 例如，可以将数据存储在组织中当前实施的数据存储中。
+但是，AEM Forms门户组件提供了数据服务，允许您自定义存储草稿和提交用户数据的实施。 例如，您可以将数据存储在您组织中当前实施的数据存储中。
 
-要自定义用户数据的存储，您需要实施[Draft Data](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p)和[ Submission Data](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p)服务。
+要自定义用户数据的存储，您需要实施[草稿数据](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p)和[提交数据](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p)服务。
 
 ## 前提条件 {#prerequisites}
 
 * 启用[Forms门户组件](/help/forms/using/enabling-forms-portal-components.md)
-* 创建[表单门户页面](/help/forms/using/creating-form-portal-page.md)
+* 创建[forms门户页面](/help/forms/using/creating-form-portal-page.md)
 * 为表单门户启用[自适应表单](/help/forms/using/draft-submission-component.md)
-* 了解自定义存储的[实现详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 了解自定义存储的[实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## 草稿数据服务{#draft-data-service}
 
-要自定义用户草拟数据的存储，您需要为`DraftAFDataService`接口的所有方法提供实现。
+要自定义用户草稿数据的存储，您需要为`DraftAFDataService`界面的所有方法提供实施。
 
-接口的以下代码示例提供了方法及其参数的说明：
+接口的以下代码示例中提供了方法及其参数的描述：
 
 ```java
 public interface DraftAFDataService {
@@ -85,9 +84,9 @@ public interface DraftAFDataService {
 
 ## 提交数据服务{#submission-data-service}
 
-要自定义用户提交数据的存储，您需要为`SubmittedAFDataService`接口的所有方法提供实现。
+要自定义用户提交数据的存储，您需要为`SubmittedAFDataService`界面的所有方法提供实施。
 
-接口的以下代码示例提供了方法及其参数的说明：
+接口的以下代码示例中提供了方法及其参数的描述：
 
 ```java
 public interface SubmittedAFDataService {
@@ -131,4 +130,3 @@ public interface SubmittedAFDataService {
 
 }
 ```
-
