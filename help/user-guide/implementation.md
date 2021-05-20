@@ -1,16 +1,15 @@
 ---
 title: AEM 6.5实施用户指南
 seo-title: AEM 6.5实施用户指南
-description: 如何实施AEM 6.5的概述
-seo-description: 如何实施AEM 6.5的概述
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+description: 如何实施AEM 6.5概述
+seo-description: 如何实施AEM 6.5概述
+exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 38%
 
 ---
-
 
 # AEM 6.5实施用户指南{#aem-65-implementation-user-guides}
 
@@ -24,12 +23,12 @@ ht-degree: 38%
 
 ## AEM {#htl-for-aem}的HTL（HTML模板语言）
 
-[使用HTML模板语言为AEM进行开发。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
+[使用HTML模板语言为AEM开发。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 
-## AEM的云管理器{#cloud-manager-for-aem}
+## AEM Cloud Manager {#cloud-manager-for-aem}
 
 [了解如何将Cloud Manager与AEM结合使用。](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 
 ## 调度程序配置{#dispatcher-configuration}
 
-[使用AEM配置调度程序](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+[使用AEM配置Dispatcher](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
