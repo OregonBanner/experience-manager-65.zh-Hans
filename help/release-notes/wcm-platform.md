@@ -1,14 +1,13 @@
 ---
-title: AEM基础和存储库
+title: AEM Foundation和存储库
 description: Adobe Experience Manager平台和存储库的发行说明。
-translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+exl-id: 06938419-392b-432d-ba0c-ba444b3e141c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '541'
 ht-degree: 62%
 
 ---
-
 
 # AEM Foundation和存储库{#aem-foundation-repository}
 
@@ -17,17 +16,17 @@ ht-degree: 62%
 ### 存储库 {#repository}
 
 * Adobe Experience Manager 6.5 的基础建立在基于 OSGi 的框架（Apache Sling 和 Apache Felix）和 Java 内容存储库 (Apache Jackrabbit Oak 1.10.2) 的更新版本之上。
-* 有关已修复问题的概述，请参阅[Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt)和[Apache Jackrabbit Oak Jira v.1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
+* 有关已修复问题的概述，请参阅[Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt)和[Apache Jackrabbit Oak Jira v. 1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt)。
 
 >[!CAUTION]
 >
->自 AEM 6.3 以后提供的新版 Oak Segment Tar 需要存储库迁移。如果要从旧版本的 TarMK 升级或想要从其他类型的持久性切换新的 Tar 区段，那么必须执行此步骤。有关新的Segment Tar的优势的更多信息，请参见[迁移到Oak Segment Tar常见问题解答](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
+>自 AEM 6.3 以后提供的新版 Oak Segment Tar 需要存储库迁移。如果要从旧版本的 TarMK 升级或想要从其他类型的持久性切换新的 Tar 区段，那么必须执行此步骤。有关新区段Tar具有哪些好处的更多信息，请参阅[迁移到Oak区段Tar常见问题解答](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar)。
 
 ### Java 支持 {#java-support}
 
 * 新增对 Java 11 及已支持的 Java 8 的支持.
 * 为获取最佳性能，请使用其他值覆盖默认的 GC 值。有关更多信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
-* Java 11和Java 8维护更新由Adobe分发，以便客户在AEM相关项目中进行使用，如果Oracle不公开提供。
+* Java 11和Java 8维护更新由Adobe分发，以便客户在与AEM相关的项目中使用(如果未从Oracle公开提供)。
 
 ### OSGI {#osgi}
 
@@ -35,11 +34,11 @@ ht-degree: 62%
 
 ### 项目和工作流 {#projects-and-workflows}
 
-* 6.4中引入的新工作流模型编辑器已得到改进，包括更多操作，如复制和发布、工作流步骤中的变量支持以及增强的`OR`和`AND`拆分。
+* 6.4中引入的新工作流模型编辑器已得到改进，可包含更多操作，如复制和发布、工作流步骤中的变量支持以及增强的`OR`和`AND`拆分。
 
 ### 搜索 {#searching}
 
-* 在 Oak 中搜索现在支持动态 Facet。例如，资产搜索中的筛选器边栏会显示估计的结果量。
+* 在 Oak 中搜索现在支持动态 Facet。例如，资产搜索中的过滤器边栏会显示预计的结果量。
 * 扩展了 QueryBuilder 以提供包含动态 Facet 的结果.
 
 ### 安全 {#security}
@@ -54,11 +53,11 @@ ht-degree: 62%
 * 列视图现在也只加载屏幕上可见的条目，并且仅在用户开始滚动时加载更多条目。列表视图和卡片视图已在 6.0 之后的版本中实现了此功能（在 6.4 中进行了改进）.
 * 列视图现在包括页面/资产的工作流状态（如果适用）.
 * 全选操作是一种快速方法，可以对同一文件夹中的所有页面/资产执行操作.
-* 全选操作会尝试对所有页面/资源执行操作，而不仅仅是加载的页面/资源。如果操作未升级以处理批量操作，则会显示警告。
+* 全选操作会尝试对所有页面/资源执行操作，而不仅仅是加载的页面/资源。如果未将操作升级为处理批量操作，则会显示警告。
 
 >[!CAUTION]
 >
->Adobe不会进一步增强经典UI。 Experience Manager6.5包含经典UI，可实现向后兼容性。 当[已弃用时，经典UI仍完全受支持。请阅读更多](/help/sites-deploying/ui-recommendations.md)。
+>Adobe将不会进一步增强经典UI。 Experience Manager6.5包含经典UI，可实现向后兼容性。 经典UI在被弃用时仍完全受支持[阅读更多](/help/sites-deploying/ui-recommendations.md)。
 
 ### 升级 {#upgrade}
 
@@ -69,4 +68,4 @@ ht-degree: 62%
 
 ### Web 服务器 {#web-server}
 
-* 快速启动分发将Eclipse Jetty 9.4.15用作servlet引擎(AEM 6.4随9.3.22一起提供)。
+* 快速入门分发版使用Eclipse Jetty 9.4.15作为servlet引擎(AEM 6.4随9.3.22一起提供)。
