@@ -1,18 +1,17 @@
 ---
 title: WCAG 2.1 快速指南
 description: WCAG 2.1 快速指南
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1770'
 ht-degree: 99%
 
 ---
 
-
 # WCAG 2.1 快速指南{#quick-guide-to-wcag}
 
-Adobe Experience Manager(AEM)的开发目的是最大限度地遵守Web内容辅助功能准则。
+Adobe Experience Manager(AEM)的开发旨在最大限度地遵守Web内容无障碍准则。
 
 [Web 无障碍准则 (WCAG) 版本 2.1](https://www.w3.org/TR/WCAG/) 是由[万维网联盟 (W3C)](https://www.w3.org/) 根据其 [Web 无障碍倡议 (WAI)](https://www.w3.org/WAI/) 制定的国际公认准则。
 
