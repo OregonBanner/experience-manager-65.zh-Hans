@@ -1,57 +1,56 @@
 ---
-title: OSGi事件社区组件
-seo-title: OSGi事件社区组件
-description: OSGi事件被发送，可触发异步监听器
-seo-description: OSGi事件被发送，可触发异步监听器
+title: 社区组件的OSGi事件
+seo-title: 社区组件的OSGi事件
+description: 发送可触发异步侦听器的OSGi事件
+seo-description: 发送可触发异步侦听器的OSGi事件
 uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 8049d797-e758-44c2-a89b-51d2b2fca8dc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 4%
 
 ---
 
-
-# 社区组件{#osgi-events-for-communities-components}的OSGi事件
+# 社区组件的OSGi事件{#osgi-events-for-communities-components}
 
 ## 概述 {#overview}
 
-当成员与社区功能交互时，会发送可触发异步监听器的OSGi事件，如通知或游戏化（评分和徽章）。
+当成员与社区功能交互时，会发送可触发异步侦听器的OSGi事件，如通知或游戏化（评分和徽章）。
 
-组件的[SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)实例将`topic`发生的事件记录为`actions`。 SocialEvent包括返回与操作关联的`verb`的方法。 `actions`和`verbs`之间存在&#x200B;*n-1*&#x200B;关系。
+组件的[SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)实例将`topic`发生的事件记录为`actions`。 SocialEvent包括一种方法，用于返回与操作关联的`verb`。 `actions`和`verbs`之间存在&#x200B;*n-1*&#x200B;关系。
 
-对于发布中提供的社区组件，下表描述了为每个可用`topic`定义的`verbs`。
+对于版本中提供的社区组件，下表描述了为每个`topic`可用组件定义的`verbs`。
 
 ## 主题和动词{#topics-and-verbs}
 
 [日](calendar-basics-for-developers.md)
-历组 `topic`件社交活动= com/adobe/cq/social/calendar
+历组 `topic`件SocialEvent = com/adobe/cq/social/calendar
 
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建日历事件 |
-| 添加 | 日历事件上的成员注释 |
-| 更新 | 会员的日历事件或评论已编辑 |
-| 删除 | 会员的日历事件或评论已被删除 |
+| 添加 | 日历事件中的成员评论 |
+| 更新 | 编辑会员的日历事件或评论 |
+| 删除 | 会删除成员的日历事件或评论 |
 
-[注](essentials-comments.md)
-释组 `topic`件社交活动= com/adobe/cq/social/comment
+[评](essentials-comments.md)
+论组 `topic`件SocialEvent = com/adobe/cq/social/comment
 
 | **动词** | **描述** |
 |---|---|
-| POST | 成员创建注释 |
-| 添加 | 会员对评论的答复 |
-| 更新 | 已编辑会员的注释 |
-| 删除 | 会员的注释已删除 |
+| POST | 成员创建评论 |
+| 添加 | 成员对评论的答复 |
+| 更新 | 编辑会员的评论 |
+| 删除 | 会员评论已删除 |
 
 [文件](essentials-file-library.md)
-库组 `topic`件SocialEvent= com/adobe/cq/social/fileLibrary
+库 `topic`ComponentSocialEvent = com/adobe/cq/social/fileLibrary
 
 | **动词** | **描述** |
 |---|---|
@@ -61,90 +60,90 @@ ht-degree: 4%
 | 删除 | 成员删除文件夹或文件 |
 
 [论](essentials-forum.md)
-坛组 `topic`件社交活动= com/adobe/cq/social/forum
+坛组 `topic`件SocialEvent = com/adobe/cq/social/forum
 
 | **动词** | **描述** |
 |---|---|
-| POST | 会员创建论坛主题 |
-| 添加 | 会员对论坛主题的回复 |
-| 更新 | 会员的论坛主题或回复已编辑 |
-| 删除 | 会员的论坛主题或回复已被删除 |
+| POST | 成员创建论坛主题 |
+| 添加 | 成员对论坛主题的答复 |
+| 更新 | 编辑会员的论坛主题或回复 |
+| 删除 | 会员的论坛主题或回复将被删除 |
 
-[日志](blog-developer-basics.md)
-组 `topic`件社交活动= com/adobe/cq/social/日志
+[日](blog-developer-basics.md)
+记帐组 `topic`件SocialEvent = com/adobe/cq/social/journal
 
 | **动词** | **描述** |
 |---|---|
-| POST | 成员创建博客文章 |
-| 添加 | 成员对博客文章的评论 |
+| POST | 会员创建博客文章 |
+| 添加 | 会员对博客文章的评论 |
 | 更新 | 编辑会员的博客文章或评论 |
-| 删除 | 已删除会员的博客文章或评论 |
+| 删除 | 会员的博客文章或评论会被删除 |
 
-[问题与](qna-essentials.md)
-组件社 `topic` 交事件= com/adobe/cq/social/qna
+[QnA ](qna-essentials.md)
+ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 
 | **动词** | **描述** |
 |---|---|
-| POST | 成员创建问题与答案问题 |
-| 添加 | 成员创建问题与答案 |
-| 更新 | 会员的问题与答案已编辑 |
+| POST | 成员创建QnA问题 |
+| 添加 | 成员创建QnA答案 |
+| 更新 | 编辑会员的问题解答问题或答案 |
 | 选择 | 已选择会员的答案 |
-| 取消选择 | 会员的答案已取消选择 |
-| 删除 | 会员的问题与答案已删除 |
+| 取消选择 | 已取消选择会员的答案 |
+| 删除 | 成员的问题解答问题或答案将被删除 |
 
-[审](reviews-basics.md)
-阅组 `topic`件社交活动= com/adobe/cq/social/review
+[查](reviews-basics.md)
+看ComponentSocialEvent  `topic`= com/adobe/cq/social/review
 
 | **动词** | **描述** |
 |---|---|
 | POST | 成员创建审阅 |
-| 更新 | 已编辑会员的审阅 |
+| 更新 | 编辑会员的审阅 |
 | 删除 | 会员的审阅已删除 |
 
 [评](rating-basics.md)
-级组 `topic`件社交活动= com/adobe/cq/social/tally
+分组 `topic`件SocialEvent = com/adobe/cq/social/tally
 
 | **动词** | **描述** |
 |---|---|
-| 添加等级 | 会员的内容已评级 |
-| 删除等级 | 会员的内容已降级 |
+| 添加评级 | 会员的内容已被评级 |
+| 删除评级 | 会员的内容已被降级 |
 
-[投](essentials-voting.md)
-票组 `topic`件社交活动= com/adobe/cq/social/tally
+[投票](essentials-voting.md)
+组件 `topic`SocialEvent = com/adobe/cq/social/tally
 
 | **动词** | **描述** |
 |---|---|
-| 添加投票 | 会员的内容已投票 |
+| 添加投票 | 会员的内容已投票通过 |
 | 删除投票 | 会员的内容已被否决 |
 
-**支持协调**
-的组 `topic`件SocialEvent= com/adobe/cq/social/仲裁
+**启用审核**
+的组 `topic`件SocialEvent = com/adobe/cq/social/moderation
 
 | **动词** | **描述** |
 |---|---|
 | 拒绝 | 会员的内容被拒绝 |
 | 不当标志 | 会员的内容已标记 |
-| 取消标记为不适当 | 会员的内容未标记 |
-| 接受 | 会员的内容由审查方批准 |
-| 关闭 | 会员关闭对编辑和回复的注释 |
-| 打开 | 会员重新打开注释 |
+| 不标记为不适当 | 会员的内容未标记 |
+| 接受 | 会员的内容由审核者批准 |
+| 关闭 | 成员关闭对编辑和回复的评论 |
+| 打开 | 会员重新打开评论 |
 
-## 自定义组件{#events-for-custom-components}的事件
+## 自定义组件{#events-for-custom-components}事件
 
-对于自定义组件，[SocialEvent抽象类](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)必须进行扩展，以将组件的事件记录为`topic`发生的`actions`。
+对于自定义组件，必须扩展[SocialEvent抽象类](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) ，以将组件的事件记录为`topic`发生的`actions`事件。
 
-自定义事件将覆盖方法`getVerb()`，以便为每个`action`返回相应的`verb`。 为操作返回的`verb`可以是常用的（如`POST`）或专用于组件的（如`ADD RATING`）。 在`actions`和`verbs`之间存在&#x200B;*n-1*&#x200B;关系。
+自定义事件将覆盖方法`getVerb()`，以便为每个`action`返回适当的`verb`。 为操作返回的`verb`可以是一个常用的（如`POST`），也可以是一个专门用于组件的（如`ADD RATING`）。 `actions`和`verbs`之间存在&#x200B;*n-1*&#x200B;关系。
 
 >[!NOTE]
 >
->确保自定义扩展的注册级别低于产品中任何现有实施的级别。
+>确保使用低于产品中任何现有实施的排名来注册自定义扩展。
 
 ### 自定义组件事件{#pseudo-code-for-custom-component-event}的伪代码
 
-[org.osgi.service.事件.事件](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
+[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
 [com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
 [com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
-[com.adobe.granite.activitystreams.Vervipts](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
+[com.adobe.granite.activitystreams.Verbts](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
 package com.mycompany.recipe;
@@ -240,11 +239,11 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 }
 ```
 
-## 过滤活动流数据{#sample-eventlistener-to-filter-activity-stream-data}的示例EventListener
+## 过滤活动流数据{#sample-eventlistener-to-filter-activity-stream-data}的EventListener示例
 
-可以侦听事件以修改活动流中显示的内容。
+可以侦听事件，以修改活动流中显示的内容。
 
-以下伪代码示例将从DELETE流中删除“注释”组件的事件。
+以下伪代码示例将从活动流中删除“注释”组件的DELETE事件。
 
 ### EventListener {#pseudo-code-for-eventlistener}的伪代码
 
@@ -337,4 +336,3 @@ public class CommentDeleteEventActivityFilter implements ActivityStreamProviderE
 
 }
 ```
-
