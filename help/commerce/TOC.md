@@ -2,12 +2,11 @@
 sub-product: AEM Content and Commerce
 user-guide-title: AEM Content and Commerce
 breadcrumb-title: Commerce 指南
-user-guide-description: 了解如何使用和管理AEM内容与商务。
-translation-type: tm+mt
+user-guide-description: 了解如何使用和管理 AEM Content and Commerce。
 source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 17%
+ht-degree: 38%
 
 ---
 
@@ -24,19 +23,19 @@ ht-degree: 17%
    + [入门](cif/getting-started.md)
    + 管理 {#administering}
       + [多商店设置](cif/configuring/multi-store-setup.md)
-      + [多模板使用](cif/configuring/multi-template-usage.md)
+      + [使用多模板](cif/configuring/multi-template-usage.md)
       + [为SEO配置URL](cif/configuring/advanced-url-configuration.md)
       + [缓存选项](cif/configuring/caching.md)
    + 开发 {#developing}
       + [使用AEM进行开发](cif/develop.md)
       + [样式CIF组件](cif/customizing/style-cif-component.md)
       + [自定义CIF组件](cif/customizing/customize-cif-components.md)
-      + [使用CIF目录选择器](cif/customizing/use-cif-pickers.md)
+      + [使用CIF目录选取器](cif/customizing/use-cif-pickers.md)
 + [迁移](cif/migration.md)
 + 发行说明 {#release-notes}
-   + [2021](cif/release-notes/release-notes-2021.md)
-   + [2020](cif/release-notes/release-notes-2020.md)
-   + [2019](cif/release-notes/release-notes-2019.md)
+   + [2021年](cif/release-notes/release-notes-2021.md)
+   + [2020年](cif/release-notes/release-notes-2020.md)
+   + [2019年](cif/release-notes/release-notes-2019.md)
 + [常见问题解答](cif/faq.md)
 + 经典CIF {#classic}
    + 部署{#deploying}
@@ -49,5 +48,5 @@ ht-degree: 17%
       + [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
    + 开发 {#developing}
       + [电子商务](/help/commerce/cif-classic/developing/ecommerce.md)
-      + [开发（通用）](/help/commerce/cif-classic/developing/generic.md)
-      + [使用SAPCommerce Cloud进行开发](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
+      + [开发（一般）](/help/commerce/cif-classic/developing/generic.md)
+      + [使用SAP进行开发Commerce Cloud](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
