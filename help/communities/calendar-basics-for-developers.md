@@ -1,6 +1,6 @@
 ---
-title: Calendar Essentials
-seo-title: Calendar Essentials
+title: 日历要点
+seo-title: 日历要点
 description: 日历功能概述
 seo-description: 日历功能概述
 uuid: 14ff7a83-b2a7-4f7e-8ee7-88f336329a1a
@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
-translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 2%
 
 ---
 
+# 日历要点{#calendar-essentials}
 
-# 日历基本信息{#calendar-essentials}
+本页提供了有关使用日历功能的基本信息。
 
-此页提供有关使用日历功能的基本信息。
-
-## 客户端{#essentials-for-client-side}的必备工具
+## 客户端{#essentials-for-client-side}的要点
 
 <table>
  <tbody>
@@ -56,7 +55,7 @@ ht-degree: 2%
 
 * [客户端自定义](client-customize.md)
 
-## 服务器端{#essentials-for-server-side}的必备工具
+## 服务器端{#essentials-for-server-side}的要点
 
 * [日历API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
@@ -66,18 +65,17 @@ ht-degree: 2%
 
 ### 日历功能 {#calendar-function}
 
-包含[日历函数](functions.md#calendar-function)的社区站点结构将具有已配置的`calendar`组件。 日历功能支持标识[特权成员用户组](users.md#privileged-members-group)。
+包含[日历函数](functions.md#calendar-function)的社区站点结构将具有配置的`calendar`组件。 日历函数支持标识[特权成员用户组](users.md#privileged-members-group)。
 
 ### 访问日历帖子(UGC){#accessing-calendar-posts-ugc}
 
-自AEM 6.1社区起，对UGC使用[公用商店](working-with-srp.md)包括对UGC的程序化访问，而不管选择的存储选项（如ASRP、MSRP或JSRP）。
+自AEM 6.1 Communities起，使用[用于UGC的公共存储](working-with-srp.md)包括对UGC的编程访问，而不考虑所选的存储选项（如ASRP、MSRP或JSRP）。
 
 **UGC在存储库中的位置和格式可能会发生更改，但不会发出警告**。
 
 请参阅：
 
-* [存储资源提供者概述](srp.md) -简介和存储库使用概述
+* [存储资源提供程序概述](srp.md)  — 简介和存储库使用概述
 * [SRP和UGC Essentials](srp-and-ugc.md)  - SRP实用程序方法和示例
-* [使用SRP访问UGC](accessing-ugc-with-srp.md) -编码指南
-* [SocialUtils重构](socialutils.md) -将已弃用的实用程序方法映射到当前SRP实用程序方法
-
+* [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则
+* [SocialUtils重构](socialutils.md)  — 将已弃用的实用程序方法映射到当前SRP实用程序方法
