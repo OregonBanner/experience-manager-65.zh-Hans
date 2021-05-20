@@ -3,17 +3,16 @@ title: 资产分析
 description: 了解资产分析功能如何让您跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用情况统计数据。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Insights,Asset Reports
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: 资产分析，资产报表
+exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 8%
+source-wordcount: '756'
+ht-degree: 7%
 
 ---
 
-
-# 资产分析 {#asset-insights}
+# 资产分析{#asset-insights}
 
 通过资产分析功能，您可以跟踪第三方网站、营销活动和Adobe创意解决方案中使用的图像的用户评级和使用统计信息。 它有助于获得有关其性能和受欢迎程度的洞察。
 
@@ -21,7 +20,7 @@ ht-degree: 8%
 
 要从网站获取图像的使用情况统计信息，[!DNL Assets]必须在网站代码中包含图像的嵌入代码。
 
-要让资产分析显示资产的使用情况统计信息，请首先配置该功能以从Adobe Analytics获取报告数据。 有关详细信息，请参阅[配置资产分析](/help/assets/configure-asset-insights.md)。
+要让资产分析显示资产的使用情况统计信息，请首先配置该功能以从Adobe Analytics获取报告数据。 有关详细信息，请参阅[配置资产分析](/help/assets/configure-asset-insights.md)。 要使用此功能，请单独购买[!DNL Adobe Analytics]许可证。 [!DNL Managed Services]上的客户会收到与[!DNL Experience Manager]绑定的[!DNL Analytics]许可证。 请参阅[Managed Services产品说明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
