@@ -1,21 +1,20 @@
 ---
-title: 以表单为中心的AEM工作流在OSGi和AEM FormsJEE工作流上的操作和功能
-description: 以表单为中心的AEM工作流在OSGi和AEM FormsJEE工作流上的操作和功能
+title: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
+description: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
 contentOwner: khsingh
-translation-type: tm+mt
-source-git-commit: dfa5a0dbfdd2c63ea0ec66d805e8b452baa3d0ac
+exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 22%
 
 ---
 
-
-# OSGi和AEM FormsJEE工作流上以表单为中心的AEM工作流的操作和功能{#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+# OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能{#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
 ## AEM收件箱和HTML工作区{#aem-inbox-and-html-workspace}
 
-您可以使用AEM收件箱在OSGi上运行和监视以Forms为中心的AEM工作流。 而HTML Workspace允许您运行和监视AEM FormsJEE工作流。 下表帮助您了解AEM收件箱中针对OSGi上以Forms为中心的AEM工作流的各种重要操作，以及AEM FormsJEE工作流的HTML Workspace中的这些重要操作。
+您可以使用AEM收件箱在OSGi上运行和监控以Forms为中心的AEM工作流。 而HTML工作区则允许您运行和监视AEM Forms JEE工作流。 下表可帮助您了解以AEM为中心的AEM Workflows on OSGi和AEM Forms JEE Workflows的HTML Workspace中的各种重要操作。
 
 <table>
  <tbody>
@@ -75,12 +74,12 @@ ht-degree: 22%
    <td>不支持</td>
   </tr>
   <tr>
-   <td>队列(共享的个人队列，来自队列的声明任务)</td>
+   <td>队列（共享的个人队列，从队列中声明任务）</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>办公室外通知</td>
+   <td>离职通知</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -97,16 +96,16 @@ ht-degree: 22%
  </tbody>
 </table>
 
-## OSGi和AEM FormsJEE工作流上以表单为中心的AEM工作流{#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+## OSGi和AEM Forms JEE工作流上以表单为中心的AEM工作流{#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为中心的AEM工作流具有不同的功能集。 下表帮助您了解在OSGi上以表单为中心的AEM工作流和在JEE工作流上以AEM Forms为中心的OSGi中提供的重要功能：
+OSGi和AEM Forms JEE工作流(JEE流程管理上的AEM Forms)上以表单为中心的AEM工作流具有一组不同的功能。 下表可帮助您了解OSGi上以表单为中心的AEM工作流和JEE上的AEM Forms工作流中提供的重要功能：
 
 <table>
  <tbody>
   <tr>
    <td>功能</td>
    <td>OSGi<br />上以表单为中心的AEM工作流 </td>
-   <td>AEM Forms·吉工作流</td>
+   <td>AEM Forms JEE工作流</td>
   </tr>
   <tr>
    <td>自适应表单</td>
@@ -134,7 +133,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>到期日后超时任务</td>
+   <td>在到期日期后超时任务</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -144,7 +143,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>动态选择被分派人 </td>
+   <td>动态选择受让人 </td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -155,18 +154,18 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
   </tr>
   <tr>
    <td>电子签名(Adobe Sign)</td>
-   <td>支持<sup>[1]</sup></td>
-   <td>支持<sup>[5]</sup></td>
+   <td>支持的<sup>[1]</sup></td>
+   <td>支持的<sup>[5]</sup></td>
   </tr>
   <tr>
    <td>管理任务和表单应用程序</td>
-   <td>支持<sup>[2]</sup><br /> </td>
-   <td>支持<sup>[2]</sup></td>
+   <td>支持的<sup>[2]</sup><br /> </td>
+   <td>支持的<sup>[2]</sup></td>
   </tr>
   <tr>
    <td>文档服务</td>
-   <td>支持<sup>[3]</sup></td>
-   <td>支持<sup>[3]</sup></td>
+   <td>支持的<sup>[3]</sup></td>
+   <td>支持的<sup>[3]</sup></td>
   </tr>
   <tr>
    <td>将完成的任务渲染为自适应表单或PDF文档</td>
@@ -189,7 +188,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>或，然后拆分</td>
+   <td>或和拆分</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -200,11 +199,11 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
   </tr>
   <tr>
    <td>在工作流结束时发送电子邮件</td>
-   <td>支持<sup>[7]</sup></td>
+   <td>支持的<sup>[7]</sup></td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>从工作流调用Web服务</td>
+   <td>从工作流中调用Web服务</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -239,8 +238,8 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>不支持</td>
   </tr>
   <tr>
-   <td>轮询／计划服务</td>
-   <td>现成可用</td>
+   <td>轮询/计划服务</td>
+   <td>开箱即用</td>
    <td>需要自定义实施</td>
   </tr>
   <tr>
@@ -254,7 +253,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>PDF Generator Service</td>
+   <td>PDF生成器服务</td>
    <td>支持</td>
    <td>支持</td>
   </tr>
@@ -269,7 +268,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>文档保障</td>
+   <td>文档保证</td>
    <td>支持</td>
    <td>支持 </td>
   </tr>
@@ -284,7 +283,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>  
   <tr>
-   <td>HTML5Forms，交互式PDF forms，表单集</td>
+   <td>HTML5 Forms、交互式PDF forms、表单集</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
@@ -309,7 +308,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持 </td>
   </tr>
   <tr>
-   <td>用自定义名称保存草稿</td>
+   <td>使用自定义名称保存草稿</td>
    <td>不支持 </td>
    <td>支持 </td>
   </tr>
@@ -324,7 +323,7 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>经理视图</td>
+   <td>管理器视图</td>
    <td>不支持</td>
    <td>支持<br /> </td>
   </tr>
@@ -349,17 +348,17 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td>支持</td>
   </tr>
   <tr>
-   <td>更改任务超时时的标题</td>
+   <td>更改任务超时的标题</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>关于任务委派和任务索赔的电子邮件</td>
+   <td>关于任务委派和任务声明的电子邮件</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>不相交组之间的委派</td>
+   <td>在不相交的组之间委派</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>
@@ -386,20 +385,20 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
  </tbody>
 </table>
 
-1. 您可以在OSGi上使用以表单为中心的AEM工作流来签署已填写的自适应表单。 OSGi上以表单为中心的AEM工作流支持表单外签名。 不支持[形式签名](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)体验。
+1. 您可以在OSGi上使用以表单为中心的AEM工作流来签署已填充的自适应表单。 OSGi上以表单为中心的AEM工作流支持表单外签名。 不支持[表单内签名](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)体验。
 
-1. 您需要访问AEM收件箱才能在AEM FormsOSGi上运行和监视以表单为中心的工作流，以及运行和监视AEM FormsJEE工作流的HTML Workspace。
-1. 本地AEM Forms文档服务适用于OSGi上以表单为中心的AEM工作流和JEE工作流上的AEM Forms。 AEM Workflow在OSGi和AEM FormsJEE（流程管理）工作流上对以表单为中心的AEM工作流使用本机文档服务。
-1. AEM FormsJEE工作流只能呈现自适应表单。 它不支持将自适应表单渲染为PDF文档。
-1. AEM forms JEE工作流没有单独步骤用于Adobe Sign。 您需要为AEM forms JEE工作流启用Adobe Sign自适应表单。 有关详细信息，请参阅[Adobe Sign文档](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
-1. 可以使用[调用表单数据模型服务](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p)步骤调用Web服务并从第三方应用程序发布或检索数据。
-1. 您可以使用[发送电子邮件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step)步骤发送电子邮件。
+1. 您需要访问AEM收件箱才能在AEM Forms OSGi上运行和监视以表单为中心的工作流，以及运行和监视AEM Forms JEE工作流的HTML工作区。
+1. 本机AEM Forms文档服务适用于OSGi上以表单为中心的AEM工作流和JEE工作流上的AEM Forms。 AEM Workflow使用本机文档服务在OSGi和AEM Forms JEE（流程管理）工作流上以表单为中心的AEM Workflows。
+1. AEM Forms JEE工作流只能渲染自适应表单。 它不支持将自适应表单渲染为PDF文档。
+1. AEM forms JEE工作流没有单独的Adobe Sign步骤。 您需要启用Adobe Sign的AEM Forms JEE工作流自适应表单。 有关更多详细信息，请参阅[Adobe Sign文档](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
+1. 可以使用[调用表单数据模型服务](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p)步骤来调用Web服务，并发布或检索来自第三方应用程序的数据。
+1. 您可以使用[发送电子邮件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step)步骤来发送电子邮件。
 
-## AEM Inbox和AEM Forms应用程序功能之间的区别{#differences-between-aem-inbox-and-aem-forms-app-features}
+## AEM收件箱和AEM Forms应用程序功能之间的差异{#differences-between-aem-inbox-and-aem-forms-app-features}
 
-启动以Forms为中心的工作流的两种主要方法是使用[AEM收件箱](../../forms/using/manage-applications-inbox.md)和AEM Forms应用程序。 但是，AEM Inbox和AEM Forms应用程序的功能不同。 AEM Inbox只能用于[以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md)，而AEM Forms应用程序可用于以Forms为中心的工作流和流程管理。
+启动以Forms为中心的工作流的两种主要方法是：使用[AEM Inbox](../../forms/using/manage-applications-inbox.md)和AEM Forms应用程序。 但是，AEM收件箱和AEM Forms应用程序的功能有所不同。 AEM收件箱仅适用于[以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md)，而AEM Forms应用程序则适用于以Forms为中心的工作流以及流程管理。
 
-下表列表了AEM Inbox和AEM Forms应用程序的功能：
+下表列出了AEM收件箱和AEM Forms应用程序的功能：
 
 <table>
  <tbody>
@@ -429,17 +428,17 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
    <td><p>不支持</p> </td>
   </tr>
   <tr>
-   <td><p>添加任务层附件</p> </td>
+   <td><p>添加任务级附件</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>查看任务层附件</p> </td>
+   <td><p>查看任务级附件</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>添加字段级附件</p> </td>
+   <td><p>添加字段级别附件</p> </td>
    <td><p>支持</p> </td>
    <td><p>支持</p> </td>
   </tr>
@@ -455,4 +454,3 @@ OSGi和AEM FormsJEE工作流(JEE流程管理方面的AEM Forms)上以表单为�
   </tr>
  </tbody>
 </table>
-
