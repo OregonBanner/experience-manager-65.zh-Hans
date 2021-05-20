@@ -8,32 +8,31 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 0%
 
 ---
 
-
 # 创建自定义自适应表单主题{#creating-custom-adaptive-form-themes}
 
 >[!CAUTION]
 >
->AEM Forms提供[主题编辑器](/help/forms/using/themes.md)功能，用于创建和修改自适应表单[主题](/help/forms/using/themes.md)。 只有从没有[主题编辑器](/help/forms/using/themes.md)的版本升级，并且已在使用Less/CSS文件（预主题编辑器方法）创建的主题中投资，才应执行本文中列出的步骤。
+>AEM Forms提供了[主题编辑器](/help/forms/using/themes.md)创建和修改自适应表单[主题](/help/forms/using/themes.md)的功能。 仅当您从没有[主题编辑器](/help/forms/using/themes.md)的版本升级，并且已对使用Less/CSS文件（预主题编辑器方法）创建的主题进行了现有投资时，才应执行本文中列出的步骤。
 
 ## 前提条件 {#prerequisites}
 
-* 了解LESS(Leaner CSS)框架
-* 如何在Adobe Experience Manager建立客户库
+* LESS（精简版CSS）框架知识
+* 如何在Adobe Experience Manager中创建客户端库
 * [创建自适应表](/help/forms/using/custom-adaptive-forms-templates.md) 单模板以使用您创建的主题
 
 ## 自适应表单主题{#adaptive-form-theme}
 
-**自适应表单主题**&#x200B;是AEM客户端库，用于定义自适应表单的样式（外观）。
+**自适应表单主题**&#x200B;是一个AEM客户端库，用于定义自适应表单的样式（外观）。
 
-创建&#x200B;**自适应模板**&#x200B;并将主题应用到模板。 然后，使用此自定义模板创建&#x200B;**自适应表单**。
+创建&#x200B;**自适应模板**&#x200B;并将主题应用于模板。 然后，使用此自定义模板创建&#x200B;**自适应表单**。
 
 ![自适应表单和客户端库](assets/hierarchy.png)
 
@@ -41,12 +40,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用AEM对象（如节点、属性和文件夹）的示例名称介绍了以下过程。
+>使用AEM对象（如节点、属性和文件夹）的示例名称描述了以下过程。
 >
 >如果使用名称执行这些步骤，则生成的模板应类似于以下快照：
 
-![森林主题自适应表](assets/thumbnail.png)
-**单快照图** *：森林主题范例*
+![林主题自适应表单](assets/thumbnail.png)
+**快照图：** *林主题示例*
 
 1. 在`/apps`节点下创建类型为`cq:ClientLibraryFolder`的节点。
 
@@ -54,28 +53,28 @@ ht-degree: 0%
 
    `/apps/myAfThemes/forestTheme`
 
-1. 将多值字符串属性`categories`添加到节点并适当设置其值。
+1. 向节点添加多值字符串属性`categories`并相应地设置其值。
 
    例如，将属性设置为：`af.theme.forest`。
 
    ![CRX存储库快照](assets/3-2.png)
 
-1. 将两个文件夹`less`和`css`以及一个文件`css.txt`添加到在步骤1中创建的节点：
+1. 向步骤1中创建的节点添加两个文件夹（`less`和`css`）以及一个文件(`css.txt`):
 
-   * `less` 文件夹：包含 `less` 用于定义变量和 `less` 用 `less mixins` 于管理。css样式的变量文件。
+   * `less` 文件夹：包含 `less` 用于定义变量和 `less` 用 `less mixins` 于管理.css样式的变量文件。
 
-      此文件夹由`less`变量文件、`less` mixin文件和`less`文件组成，这些文件使用mixin和变量定义样式。 然后，所有这些较少的文件都以样式。less导入。
+      此文件夹由`less`变量文件、`less` mixin文件、`less`文件组成，这些文件使用mixin和变量定义样式。 然后，所有这些较少的文件都将以styles.less的形式导入。
 
-   * `css`文件夹：包含。css文件，您可在其中定义要在主题中使用的静态样式。
+   * `css`文件夹：包含.css文件，您可以在其中定义要在主题中使用的静态样式。
 
-   **变量文件更少**:这些是文件，您可在其中定义或覆盖用于定义CSS样式的变量。
+   **变量文件较少**:这些文件是您在其中定义或覆盖定义CSS样式时使用的变量的文件。
 
-   自适应表单提供在以下。less文件中定义的OOTB变量：
+   自适应表单提供在以下.less文件中定义的OOTB变量：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
-   自适应表单还提供以下定义的第三方变量：
+   自适应表单还提供以下内容中定义的第三方变量：
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
 
@@ -85,7 +84,7 @@ ht-degree: 0%
    >
    >导入较少预处理器的文件时，在import语句中指定文件的相对路径。
 
-   覆盖变量示例：
+   覆盖变量的示例：
 
    ```css
    @button-background-color: rgb(19, 102, 44);
@@ -95,22 +94,22 @@ ht-degree: 0%
    @button-font-color: #ffffff;
    ```
 
-   要覆盖`less`变量：
+   要覆盖`less`变量，请执行以下操作：
 
    1. 导入默认自适应表单变量：
 
       `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
-   1. 然后导入包含被覆盖变量的较少文件。
+   1. 然后，导入包含被覆盖变量的较少文件。
 
-   新变量定义示例：
+   示例新变量定义：
 
    ```css
    @button-focus-bg-color: rgb(40, 208, 90);
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **少混音文件：** 您可以定义接受变量作为参数的函数。这些函数的输出是生成的样式。 在不同的样式中使用这些混音，以避免重复CSS样式。
+   **少混合文件：** 您可以定义接受变量作为参数的函数。这些函数的输出是生成的样式。 在不同样式中使用这些混合，以避免重复CSS样式。
 
    自适应表单提供在以下位置定义的OOTB混合：
 
@@ -120,7 +119,7 @@ ht-degree: 0%
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
 
-   混音定义示例：
+   混合定义示例：
 
    ```css
    .rounded-corners (@radius) {
@@ -136,11 +135,11 @@ ht-degree: 0%
    }
    ```
 
-   **Styles.less File：使** 用此文件包含客户端库中需要使用的所有较少文件（变量、混合、样式）。
+   **Styles.less文件：** 使用此文件可包含您在客户端库中需要使用的所有较少文件（变量、混合、样式）。
 
    在以下示例`styles.less`文件中，可以按任意顺序放置import语句。
 
-   导入以下。less文件的语句是必填的：
+   必须使用用于导入以下.less文件的语句：
 
    * `globalvariables.less`
    * `layoutvariables.less`
@@ -175,7 +174,7 @@ ht-degree: 0%
    }
    ```
 
-   `css.txt`包含要下载库的。css文件的路径。
+   `css.txt`包含要为库下载的.css文件的路径。
 
    例如：
 
@@ -195,9 +194,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >styles.less文件不是必需的。 这意味着，如果您尚未定义任何自定义样式、变量或混合，则无需创建此文件。
+   >styles.less文件不是必填文件。 这意味着，如果您未定义任何自定义样式、变量或混合，则无需创建此文件。
    >
-   >但是，如果不在css.txt文件中创建style.less文件，则需要取消以下行的注释：
+   >但是，如果不创建style.less文件，则需要在css.txt文件中取消注释以下行：
    >
    >**`#base=less`**
    >
@@ -213,26 +212,25 @@ ht-degree: 0%
 
    例如，`/apps/myAfCustomizations/myAfPages/forestPage`
 
-   1. 添加`sling:resourceSuperType`属性，将其值设置为`fd/af/components/page/base`。
+   1. 添加`sling:resourceSuperType`属性，并将其值设置为`fd/af/components/page/base`。
 
       ![CRX存储库快照](assets/1-2.png)
 
-   1. 要使用页面中的主题，您需要向节点添加一个覆盖文件library.jsp。
+   1. 要在页面中使用主题，您需要向节点添加覆盖文件library.jsp。
 
-      然后，导入在本文的“要创建自适应表单主题”部分中创建的主题。
+      然后，导入在创建本文自适应表单主题部分中创建的主题。
 
-      以下示例代码片段导入`af.theme.forest`主题。
+      以下代码片段示例导入了`af.theme.forest`主题。
 
       ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
       <cq:includeClientLib categories="af.theme.forest"/>
       ```
 
-   1. **可选**:在自定义页面中，根据需要覆盖header.jsp、footer.jsp和body.jsp。
+   1. **可选**:在自定义页中，根据需要覆盖header.jsp、footer.jsp和body.jsp。
 
 1. 创建自定义模板(例如：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`)，其jcr:content指向在上一步中创建的自定义页面(例如：`myAfCustomizations/myAfPages/forestPage)`。
 
    ![CRX存储库快照](assets/2-1.png)
 
-1. 使用在上一步中创建的模板创建自适应表单。 自适应表单的外观由本文“要创建自适应表单主题”部分中创建的主题定义。
-
+1. 使用在上一步中创建的模板创建自适应表单。 自适应表单的外观由本文创建自适应表单主题部分中创建的主题定义。
