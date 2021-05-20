@@ -9,34 +9,33 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-
 # 动态填充下拉列表{#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
-* [创建OSGI包](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [创建OSGi包](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
 * [开发AEM组件](/help/sites-developing/components.md)
 * [创建自适应表单](../../forms/using/creating-adaptive-form.md)
 * [创作自适应表单](../../forms/using/introduction-forms-authoring.md)
 
-## 动态填充下拉列表{#procedure-to-dynamically-populate-drop-down-lists}的过程
+## 动态填充下拉列表的过程{#procedure-to-dynamically-populate-drop-down-lists}
 
-请考虑一种情况，您希望根据您在&#x200B;**国家／地区**&#x200B;下拉列表中选择的值填充&#x200B;**状态**&#x200B;下拉列表。 如果在&#x200B;**Country**&#x200B;下拉列表中选择Australia，则&#x200B;**State**&#x200B;下拉列表将显示Australia内的状态。 以下过程介绍如何完成此任务。
+假设您想要根据在&#x200B;**国家/地区**&#x200B;下拉列表中选择的值填充&#x200B;**状态**&#x200B;下拉列表。 如果在&#x200B;**Country**&#x200B;下拉列表中选择Australia，则&#x200B;**State**&#x200B;下拉列表会显示Australia内的状态。 以下过程介绍如何完成此任务。
 
 1. 使用以下模块创建项目：
 
-   * 包含用于填充下拉列表的逻辑的绑定，本例中为servlet。
-   * 内容，它嵌入。jar文件并具有下拉资源。 Servlet指向此资源。
+   * 包中包含用于填充下拉列表的逻辑的包，在本例中为servlet。
+   * 内容，该内容嵌入了.jar文件并具有下拉资源。 Servlet指向此资源。
 
-1. 根据请求参数Country编写servlet，该参数返回包含国家／地区内状态名称的数组。
+1. 根据请求参数Country编写Servlet，该参数将返回一个包含国家/地区内状态名称的数组。
 
    ```java
    @Component(metatype = false)
@@ -147,16 +146,16 @@ ht-degree: 0%
    }
    ```
 
-1. 在应用程序中的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节点的`sling:resourceType`参数与servlet指向的参数(/apps/populatedropdown)相同。
+1. 在应用程序的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节点的`sling:resourceType`参数与Servlet指向的参数(/apps/populatedropdown)相同。
 
    ![创建下拉节点](assets/dropdown-node.png)
 
-1. 打包内容节点并将。jar文件嵌入到特定位置（例如/apps/myfolder/demo/install/）。 在服务器上部署同一文件。
-1. 创建一个自适应表单并向其添加两个下拉列表：国家／地区和州。 国家列表可以包含国家名称。 “状态”列表可以动态填充您在第一个列表中选择的国家／地区的状态名称。
+1. 将内容节点打包并将.jar文件嵌入到特定位置（例如/apps/myfolder/demo/install/）。 在服务器上部署同一文件。
+1. 创建一个自适应表单，并向其添加两个下拉列表（国家/地区和州）。 国家/地区列表可以包括国家/地区的名称。 “州”列表可以动态填充您在第一个列表中选择的国家/地区的州名称。
 
-   添加要在国家／地区列表中显示的国家／地区名称。 在“国家／地区”列表中，根据“国家／地区”列表中的国家／地区名称添加一个脚本以填充该脚本。
+   添加要在国家/地区列表中显示的国家/地区名称。 在“州”列表中，添加一个脚本，以根据“国家/地区”列表中国家/地区的名称来填充该脚本。
 
-   ![添加国家](assets/country-dropdown.png) ![/地区名称添加脚本以填](assets/state-dropdown.png) ![充国家／地区名称和国家／地区下拉列表以收集](assets/2dropdowns.png)
+   ![添加国家/](assets/country-dropdown.png) ![地区名称添加用于填充州名](assets/state-dropdown.png) ![称的脚本国家/地区和州下拉列表以收集](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(
@@ -174,6 +173,6 @@ ht-degree: 0%
    .responseText);
    ```
 
-包含具有上述代码的示例自适应表单(demo/AFdemo)的内容包。
+内容包，其中包含一个实施了上述代码的示例自适应表单(demo/AFdemo)。
 
 [获取文件](assets/dropdown-demo-content-1.0.1-snapshot.zip)
