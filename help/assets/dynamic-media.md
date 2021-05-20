@@ -1,6 +1,6 @@
 ---
 title: 使用 Dynamic Media
-description: 了解如何使用Dynamic Media为在Web、移动和社交网站上消费提供资产。
+description: 了解如何使用Dynamic Media交付资产以在Web、移动设备和社交网站上使用。
 uuid: 4dc0f436-d20e-4e8b-aeff-5515380fa44d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,8 +9,7 @@ content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: Business Practitioner, Administrator
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
-feature: Collaboration,Asset Management
-translation-type: tm+mt
+feature: 协作，资产管理
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '442'
@@ -20,7 +19,7 @@ ht-degree: 43%
 
 # 使用 Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media 有助于按需提供丰富的产品销售和市场营销可视资产，还能根据 Web、移动设备、社交网站等不同销售渠道的各种需求自动调整资产供应情况。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)Dynamic Media使用一组主要源资源，通过其全球、可扩展、性能优化的网络实时生成和交付多种形式的丰富内容。
+[Dynamic Media 有助于按需提供丰富的产品销售和市场营销可视资产，还能根据 Web、移动设备、社交网站等不同销售渠道的各种需求自动调整资产供应情况。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)Dynamic Media使用一组主源资产，通过其全球、可扩展、性能优化的网络，实时生成并传送多种丰富内容变体。
 
 Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和视频。Dynamic Media 以独特的方式整合 Adobe Experience Manager 数字资产管理（资产）解决方案的工作流，从而简化了数字营销活动管理流程。
 
@@ -51,17 +50,17 @@ Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和�
 
 >[!NOTE]
 >
->要了解使用Dynamic Media与将Dynamic Media Classic与AEM集成之间的差异，请参阅[Dynamic Media Classic与Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)的集成。
+>要了解使用Dynamic Media与将Dynamic Media Classic与AEM集成之间的差异，请参阅[Dynamic Media Classic集成与Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
 
-## Dynamic Media enabled与Dynamic Media disabled {#dynamic-media-on-versus-dynamic-media-off}
+## Dynamic Media启用与Dynamic Media禁用{#dynamic-media-on-versus-dynamic-media-off}
 
-您可以通过以下特征判断是否启用了Dynamic Media:
+您可以通过以下特征判断Dynamic Media是否已启用（打开）：
 
-* 在下载或预览资产时，可以使用动态演绎版。
-* 图像集、旋转集和混合媒体集均可用。
+* 下载或预览资产时，可以使用动态演绎版。
+* 可以使用图像集、旋转集、混合媒体集。
 * 创建了 PTIFF 演绎版。
 
-单击图像资产时，Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media)时资产的视图会有所不同。 Dynamic Media使用HTML5点播查看器。
+单击图像资产时，Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media)会显示不同的资产视图。 Dynamic Media使用按需HTML5查看器。
 
 ### 动态演绎版{#dynamic-renditions}
 
@@ -77,16 +76,16 @@ Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和�
 
 ### PTIFF演绎版{#ptiff-renditions}
 
-已启用Dynamic Media的资产包括`pyramid.tiffs`。
+启用Dynamic Media的资产包括`pyramid.tiffs`。
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
 ### 资产视图更改 {#asset-views-change}
 
-启用Dynamic Media后，可以单击`+`和`-`按钮进行放大和缩小。您还可以单击/点按以放大特定区域。“还原”可使您恢复到原始版本，并可以通过单击对角箭头使图像全屏显示。Dynamic Media启用的项如下所示：
+启用Dynamic Media后，您可以通过单击`+`和`-`按钮来放大和缩小。您还可以单击/点按以放大特定区域。还原后，您可以转到原始版本，并通过单击对角箭头来使图像全屏显示。Dynamic Media启用如下所示：
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-禁用Dynamic Media后，您可以放大和缩小并恢复到原始大小：
+禁用Dynamic Media后，您可以放大和缩小并还原到原始大小：
 
 ![chlimage_1-362](assets/chlimage_1-362.png)
