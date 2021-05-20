@@ -1,40 +1,39 @@
 ---
 title: 将Maven用于社区
 seo-title: 将Maven用于社区
-description: AEM Uber API jar
-seo-description: AEM Uber API jar
+description: AEM Uber API Jar
+seo-description: AEM Uber API Jar
 uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
-translation-type: tm+mt
-source-git-commit: 5e7cc6ab82ba450b9be7c97266ec4c81b18fe3d2
+exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
-
-# 使用Maven for Communities {#using-maven-for-communities}
+# 为社区使用Maven {#using-maven-for-communities}
 
 ## 概述 {#overview}
 
-AEM Communities文件本节除了：
+AEM Communities文档的此部分除以外：
 
 * [使用Apache Maven构建AEM项目](../../help/sites-developing/ht-projects-maven.md)。
 
-只有一种“uber”藏物可以取代个别藏物：
+只有一个“uber”藏物可以取代单个藏物：
 
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
 >[!NOTE]
 >
->从AEM 6.4开始，不显式发布Communities API。 所有社区API现在都包含在Uber jar中。
+>从AEM 6.4开始，不会明确发布社区API。 现在，所有社区API都包含在Uber Jar中。
 >
->建议您与最新的Communities版本保持同步。
+>建议与最新的Communities版本保持同步。
 >
 >请参阅[最新版本](deploy-communities.md#latest-releases)部分以标识最新版本。
 
@@ -51,7 +50,7 @@ AEM Communities文件本节除了：
 
 >[!NOTE]
 >
->请参阅[AEM Uber jar存储库](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)以识别最新的Uber jar伪像。
+>请参阅[AEM Uber Jar存储库](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)以识别最新的Uber Jar对象。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:
