@@ -1,8 +1,8 @@
 ---
 title: SEO 和 URL 管理最佳实践
 seo-title: SEO 和 URL 管理最佳实践
-description: 了解SEO最佳实践和建议，以便在AEM实施时实现这些目标。
-seo-description: 了解SEO最佳实践和建议，以便在AEM实施时实现这些目标。
+description: 了解SEO最佳实践以及在AEM实施中实现这些最佳实践的建议。
+seo-description: 了解SEO最佳实践以及在AEM实施中实现这些最佳实践的建议。
 uuid: 943e76c4-bd88-4b52-bb43-db375eb89d23
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -10,18 +10,17 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 7c8f2cec-870b-41a8-8d98-70e29b495587
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c623724df8d849f4cc01f5dc134c775dc24dafc7
+exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3119'
 ht-degree: 98%
 
 ---
 
-
 # SEO 和 URL 管理最佳实践{#seo-and-url-management-best-practices}
 
-搜索引擎优化 (SEO) 已成为许多营销人员关注的重点。因此，需要解决许多AEM项目的SEO问题。
+搜索引擎优化 (SEO) 已成为许多营销人员关注的重点。因此，需要解决许多AEM项目中的SEO问题。
 
 本文档首先介绍了一些 [SEO 最佳实践](#seo-best-practices)以及在 AEM 实施上实现这些最佳实践的建议。然后，本文档更深入地介绍了第一节中提出的一些更加[复杂的实施步骤](#aem-configurations)。
 
@@ -400,4 +399,3 @@ Disallow: /
 * [https://www.internetmarketingninjas.com/blog/search-engine-optimization/301-redirects/](https://www.internetmarketingninjas.com/blog/search-engine-optimization/301-redirects/)
 * [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/dispatcher/redirectTester](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/dispatcher/redirectTester)
 * [https://adobe-consulting-services.github.io/](https://adobe-consulting-services.github.io/)
-
