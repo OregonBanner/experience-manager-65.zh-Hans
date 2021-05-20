@@ -12,18 +12,17 @@ discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 feature: Brand Portal
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '373'
 ht-degree: 44%
 
 ---
 
-
 # 将资产发布到 Brand Portal {#publish-assets-to-brand-portal}
 
-作为Adobe Experience Manager(AEM)资产管理员，您可以将资产和文件夹发布到组织的AEM Assets Brand Portal实例(或将发布工作流计划到以后的日期/时间)。 但是，您必须首先使用 Brand Portal 配置 AEM Assets。有关详细信息，请参阅[使用 Brand Portal 配置 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
+作为Adobe Experience Manager(AEM)Assets管理员，您可以将资产和文件夹发布到您组织的AEM Assets Brand Portal实例（或将发布工作流安排到稍后的日期/时间）。 但是，您必须首先使用 Brand Portal 配置 AEM Assets。有关详细信息，请参阅[使用 Brand Portal 配置 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
 复制成功后，您可以将资产、文件夹和收藏集发布到Brand Portal。 要将资产发布到Brand Portal，请执行以下步骤：
 
@@ -31,7 +30,7 @@ ht-degree: 44%
 >
 >Adobe 建议实施错峰发布，最好在非高峰时段发布，这样 AEM 作者就不会占用过多的资源。
 
-1. 从“资产”控制台中，选择要发布的资产/文件夹，然后单击工具栏中的&#x200B;**[!UICONTROL 快速发布]**&#x200B;选项。
+1. 从资产控制台中，选择要发布的资产/文件夹，然后单击工具栏中的&#x200B;**[!UICONTROL 快速发布]**&#x200B;选项。
 
    或者，选择要发布到Brand Portal的资产。
 
@@ -49,7 +48,7 @@ ht-degree: 44%
 
 * 在工具栏中，选择&#x200B;**[!UICONTROL 管理发布]**。
 
-   1. 然后，从&#x200B;**[!UICONTROL 操作]**&#x200B;中选择&#x200B;**[!UICONTROL 发布到品牌门户]**，从&#x200B;**[!UICONTROL 计划]**&#x200B;中选择&#x200B;**[!UICONTROL 现在]**。 单击&#x200B;**[!UICONTROL 下一步]**。
+   1. 然后，从&#x200B;**[!UICONTROL Action]**&#x200B;中选择&#x200B;**[!UICONTROL Publish to Brand Portal]**，从&#x200B;**[!UICONTROL Scheduling]**&#x200B;中选择&#x200B;**[!UICONTROL Now]**。 单击&#x200B;**[!UICONTROL 下一步]**。
 
    2. 在&#x200B;**[!UICONTROL 范围]**&#x200B;中，确认您的选择，然后单击&#x200B;**[!UICONTROL 发布到Brand Portal]**。
 
@@ -59,9 +58,9 @@ ht-degree: 44%
 
 要计划在稍后的日期或时间将资产发布到 Brand Portal，请执行以下操作：
 
-1. 选择要发布的资产/文件夹后，从顶部的工具栏中选择&#x200B;**[!UICONTROL 管理发布]**。
+1. 选择要发布的资产/文件夹后，从顶部工具栏中选择&#x200B;**[!UICONTROL 管理发布]** 。
 
-1. 在&#x200B;**[!UICONTROL 管理发布]**&#x200B;页面上，从&#x200B;**[!UICONTROL 操作]**&#x200B;中选择&#x200B;**[!UICONTROL 发布到品牌门户]**，然后从&#x200B;**[!UICONTROL 计划]**&#x200B;中选择&#x200B;**[!UICONTROL 稍后]**。
+1. 在&#x200B;**[!UICONTROL 管理发布]**&#x200B;页面上，从&#x200B;**[!UICONTROL 操作]**&#x200B;中选择&#x200B;**[!UICONTROL 发布到Brand Portal]**，然后从&#x200B;**[!UICONTROL 计划]**&#x200B;中选择&#x200B;**[!UICONTROL 稍后]**。
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
@@ -73,7 +72,6 @@ ht-degree: 44%
 
    ![publishworkflow](assets/publishworkflow.png)
 
-现在，登录Brand Portal以查看已发布的资产是否在Brand Portal界面上可用。
+现在，登录Brand Portal ，查看已发布的资产在Brand Portal界面上是否可用。
 
 ![bp_landing_page](assets/bp_landing_page.png)
-
