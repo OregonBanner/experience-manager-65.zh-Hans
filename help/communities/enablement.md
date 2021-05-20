@@ -10,38 +10,37 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b635e2ed-4637-4b2f-a746-ec8dc7541bab
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
 
-
-# 配置Enablement Features {#configuring-enablement-features}
+# 配置启用功能{#configuring-enablement-features}
 
 ## 概述 {#overview}
 
-启用功能提供了创建[启用社区](overview.md#enablement-community)的能力。
+启用功能提供创建[启用社区](overview.md#enablement-community)的功能。
 
-* 此功能需要在生产环境中使用额外的许可。
+* 此功能需要额外的许可才能在生产环境中使用。
 
-使用支持功能需要：
+使用启用功能需要满足以下条件：
 
 安装：
 
 * **SCORM**
 
-   可共享内容对象参考模型(SCORM)是电子教学标准和规范的集合。 SCORM还定义如何将内容打包到可传输的ZIP文件中。
+   可共享内容对象引用模型(SCORM)是用于电子学习的标准和规范的集合。 SCORM还定义如何将内容打包到可传输的ZIP文件中。
 
 * **MySQL**
 
-   MySQL是一个关系数据库，主要用于SCORM跟踪和报告数据（用于启用）以及用于跟踪视频进度的表。 SCORM for enablement功能包需要MySQL JDBC驱动程序。
+   MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用数据，以及用于跟踪视频进度的表。 SCORM for enablement feature pack需要MySQL JDBC驱动程序。
 
 * **FFmpeg**
 
-   FFmpeg是用于转换和流式传输音频和视频的解决方案，安装后用于对[视频资产](../../help/sites-authoring/default-components-foundation.md#video)进行正确转码。 对于Enablement Communities，在创作环境中使用它获取已上传资源的元数据，并在列出资源时生成要显示的缩略图。
+   FFmpeg是用于转换和流式传输音频和视频的解决方案，安装后，将用于对[视频资产](../../help/sites-authoring/default-components-foundation.md#video)进行正确转码。 对于启用社区，可在创作环境中使用该变量来获取已上传资源的元数据，并生成在列出资源时要显示的缩略图。
 
 设置：
 
@@ -49,25 +48,25 @@ ht-degree: 1%
 
    对于启用社区，只能为`Community Enablement Managers`用户组的成员分配`Community Site Enablement Manager`的角色，其权限可能包括发布环境中的内容创建、分配和成员管理。
 
-以下项的可选配置：
+可选配置：
 
 * **Adobe Analytics**
 
-   与Adobe Analytics的集成增加了全面的报告功能，并支持将视频心率添加到Analytics中。
+   与Adobe Analytics的集成添加了全面的报表功能，并支持将视频心率添加到Analytics。
 
 * **Dispatcher**
 
 ## 配置步骤{#configuration-steps}
 
-以下是支持社区所需的步骤。
+以下是启用社区所需的步骤。
 
-每个步骤都链接到提供必要详细信息的文档。
+每个步骤都链接到文档，其中提供了必需的详细信息。
 
-**在所有作者/发布实例上：**
+**在所有创作/发布实例上：**
 
 1. **[为MySQL安装JDBC驱动程序](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   使用Web控制台（捆绑包）：*http://localhost:4502/system/console/bundles*
+   使用Web控制台（包）：*http://localhost:4502/system/console/bundles*
 
    在安装SCORM包之前安装&#x200B;**
 
@@ -86,11 +85,11 @@ ht-degree: 1%
 
    使用MySQL Workbench
 
-**在承载作者实例的同一服务器上：**
+**在托管创作实例的同一服务器上：**
 
 1. **[安装FFmpeg](ffmpeg.md)**
 
-**在所有作者/发布实例上：**
+**在所有创作/发布实例上：**
 
 1. **[配置JDBC连接池](mysql.md#configure-jdbc-connections)**
 
@@ -104,7 +103,7 @@ ht-degree: 1%
 
    使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
 
-**在创作实例中：**
+**在创作实例上：**
 
 1. （*可选*）**[配置Analytics服务](analytics.md)**
 
@@ -120,9 +119,9 @@ ht-degree: 1%
 
 1. **[创建社区管理员](users.md#creating-community-members)**
 
-   对于作者环境，请使用经典UI安全控制台：*http://localhost:4502/useradmin*
+   对于创作环境，请使用经典UI安全控制台：*http://localhost:4502/useradmin*
 
-   创建路径= /home/users/community的用户
+   使用路径= /home/users/community创建用户
 
    * 将成员添加到以下组：
 
@@ -131,4 +130,4 @@ ht-degree: 1%
 
 ## Dispatcher {#dispatcher}
 
-当部署包括[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)时，为了使启用功能正常工作，`clientheader`和`filter`部分需要修改。 请参阅[配置Dispatcher for Communities](dispatcher.md#enablement)。
+当部署包含[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)时，为了使启用功能正常工作，`clientheader`和`filter`部分需要进行修改。 请参阅[为Communities配置Dispatcher](dispatcher.md#enablement)。
