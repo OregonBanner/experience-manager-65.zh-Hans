@@ -1,37 +1,36 @@
 ---
-title: 设置用于Acrobat Reader DC扩展的超时值
-seo-title: 设置用于Acrobat Reader DC扩展的超时值
-description: 了解如何设置超时值以用于Acrobat Reader DC扩展。
-seo-description: 了解如何设置超时值以用于Acrobat Reader DC扩展。
+title: 设置超时值以用于Acrobat Reader DC扩展
+seo-title: 设置超时值以用于Acrobat Reader DC扩展
+description: 了解如何设置超时值以与Acrobat Reader DC扩展一起使用。
+seo-description: 了解如何设置超时值以与Acrobat Reader DC扩展一起使用。
 uuid: d6d072a0-0a30-417a-98b1-df8b4ff8f911
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a9aeeb89-45e9-4d5d-aa25-8145c89b64f2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0a55aab3-14a3-41ad-8533-dc2cd116a848
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
+# 设置超时值以用于Acrobat Reader DC扩展{#setting-timeout-values-for-use-with-acrobat-reader-dc-extensions}
 
-# 设置用于Acrobat Reader DC扩展{#setting-timeout-values-for-use-with-acrobat-reader-dc-extensions}的超时值
-
-在Acrobat Reader DC扩展中处理许多PDF文件时，请确保正确设置以下超时值以防止作业超时和失败：
+在Acrobat Reader DC扩展中处理多个PDF文件时，请确保正确设置了以下超时值，以防止作业超时和失败：
 
 **文档处理超时**
 
-此值可在管理控制台中设置。 单击“设置”>“核心系统设置”>“配置”，然后为“默认文档处理超时”指定一个值。
+此值可以在管理控制台中设置。 单击设置>核心系统设置>配置，然后为默认文档处理超时指定一个值。
 
-**用户管理器AEM表单超** 时：可通过编辑config.xml文件设置此值。在管理控制台中，单击“设置”>“用户管理”>“配置”>“导入和导出配置文件”，然后单击“导出”。 打开导出的config.xml文件并编辑以下行：
+**用户管理器AEM表单超时：** 此值可以通过编辑config.xml文件来设置。在管理控制台中，单击设置>用户管理>配置>导入和导出配置文件，然后单击导出。 打开导出的config.xml文件并编辑以下行：
 
 &lt;entry key=&quot;assertionValidityInMinutes&quot; value=&quot;600&quot; />
 
 &lt;entry key=&quot;SessionTimeout&quot; value=&quot;600&quot; />
 
-保存，然后将config.xml文件导入管理控制台。
+保存并将config.xml文件导入回管理控制台。
 
-**应用程序服务器会话超** 时：可以在应用程序服务器上设置此值。有关详细信息，请参阅随应用程序服务器提供的文档。
+**应用程序服务器会话超时：** 此值可以在应用程序服务器上设置。有关更多信息，请参阅随应用程序服务器提供的文档。
