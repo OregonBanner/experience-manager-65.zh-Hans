@@ -5,35 +5,34 @@ description: Protect代表其他用户创建文档
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
-feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 文档安全
+exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
 
 ---
 
+# Protect代表其他用户{#protect-a-document-on-behalf-of-another-user}创建文档
 
-# Protect代表其他用户{#protect-a-document-on-behalf-of-another-user}
+AEM Forms Document Security Java SDK提供了API，允许用户帐户代表其他用户保护文档，而不获取编辑文档的权限。 您可以在工作流流程中或以编程方式将API用作文档服务。 新的API包括：
 
-AEM Forms 文档 Security Java SDK提供API，允许用户帐户代表其他用户保护文档，而不获得编辑文档的权限。 您可以在工作流进程中或以编程方式将API用作文档服务。 新API包括：
+* **** protectDocumentUseProtectDocument API代表对文档应用策略
 
-* **** protectDocument使用ProtectDocument API代表文档
+   另一个用户帐户。 用于应用策略的用户帐户的权限仍然仅限于保护文档。 它没有获得打开和查看文档的权限。 RMSecureDocumentResult protectDocument（Document inDoc， String documentName， String policySetName， String policyName， RMLocale区域设置，布尔值bExactMatchForNames）
 
-   另一个用户帐户。 用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult protectDocument(文档 inDoc、String documentName、String policySetName、String policyName、RMLocale区域设置、布尔bExactMatchForNames)
-
-* **创** 建许可证使用CreateLicense API代表其他用户帐户为策略创建许可证。PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
-* **** protectDocumentWithCoverPage使用ProtectDocumentWithCoverPage API来应用策略并代表其他用户向文档添加封面。用于应用策略的用户帐户的权限仍限于保护文档。 它没有获得开放和视图文档的权利。 RMSecureDocumentResult protectDocumentWithCoverPage(文档inDoc、String documentName、String policySetName、String policyName、文档 coverDoc、布尔bExactMatchForNames)
+* **** createLicenseUse创建许可证API，以代表其他用户帐户为策略创建许可证。PublishLicenseDTO createLicense(String policyId， String documentName， boolean logSecureDocEvent)
+* **** protectDocumentWithCoverPageUseProtectDocumentWithCoverPage API来应用策略并代表其他用户向文档添加封面。用于应用策略的用户帐户的权限仍然仅限于保护文档。 它没有获得打开和查看文档的权限。 RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc， String documentName， String policySetName， String policyName， Document coverDoc， boolean bExactMatchForNames)
 
 ## 使用API代表其他用户{#using-the-apis-to-protect-a-document-on-behalf-of-another-user}保护文档
 
-请执行以下步骤以代表其他用户保护文档，而不获得编辑文档的权限：
+执行以下步骤以代表其他用户保护文档，而不获得编辑文档的权限：
 
 1. 创建策略集。 例如，PolicySet1。
 1. 在新创建的策略集中创建策略。 例如，PolicySet1中的Policy1。
-1. 创建具有角色Rights Management最终用户的用户。 例如，User1。 为新创建的用户提供使用Policy1保护的视图文档的权限。
-1. 创建新角色。 例如，Role1。 为新创建的角色提供服务调用权限。 创建具有新创建角色的用户。 例如，User2.您可以使用User2或管理员创建SDK连接并调用protectDocument服务。
+1. 创建具有角色Rights Management最终用户的用户。 例如，User1。 为新创建的用户提供查看使用Policy1保护的文档的权限。
+1. 创建新角色。 例如，Role1。 为新创建的角色提供服务调用权限。 创建具有新创建角色的用户。 例如， User2.您可以使用User2或管理员创建SDK连接并调用protectDocument服务。
 
    现在，您可以运行以下示例代码以保护文档，而无需向保护文档的用户提供编辑文档的权限：
 
@@ -151,4 +150,3 @@ AEM Forms 文档 Security Java SDK提供API，允许用户帐户代表其他用�
    }
    }
    ```
-
