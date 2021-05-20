@@ -1,29 +1,28 @@
 ---
-title: 从自适应表单调用表单数据模型服务的API
-seo-title: 从自适应表单调用表单数据模型服务的API
-description: 解释了可从自适应表单字段中调用以WSDL编写的Web服务的invokeWebServices API。
-seo-description: 解释了可从自适应表单字段中调用以WSDL编写的Web服务的invokeWebServices API。
+title: 用于从自适应表单调用表单数据模型服务的API
+seo-title: 用于从自适应表单调用表单数据模型服务的API
+description: 说明可用于从自适应表单字段中调用以WSDL编写的Web服务的invokeWebServices API。
+seo-description: 说明可用于从自适应表单字段中调用以WSDL编写的Web服务的invokeWebServices API。
 uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 自适应表单
+exl-id: cf037174-3153-486f-85b1-c974cd5a1ace
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-
 # 从自适应表单{#api-to-invoke-form-data-model-service-from-adaptive-forms}调用表单数据模型服务的API
 
 ## 概述 {#overview}
 
-AEM Forms使表单作者能够从自适应表单字段中调用表单数据模型中配置的服务，从而进一步简化和增强表单填写体验。 要调用数据模型服务，您可以在可视编辑器中创建规则，或使用[规则编辑器](/help/forms/using/rule-editor.md)的代码编辑器中的`guidelib.dataIntegrationUtils.executeOperation` API指定JavaScript。
+AEM Forms允许表单作者通过从自适应表单字段中调用在表单数据模型中配置的服务，进一步简化和增强表单填充体验。 要调用数据模型服务，您可以在可视编辑器中创建规则，或在[规则编辑器](/help/forms/using/rule-editor.md)的代码编辑器中使用`guidelib.dataIntegrationUtils.executeOperation` API指定JavaScript。
 
-本文档侧重于使用`guidelib.dataIntegrationUtils.executeOperation` API调用服务来编写JavaScript。
+本文档重点介绍如何使用`guidelib.dataIntegrationUtils.executeOperation` API编写JavaScript以调用服务。
 
 ## 使用API {#using-the-api}
 
@@ -33,7 +32,7 @@ AEM Forms使表单作者能够从自适应表单字段中调用表单数据模�
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-`guidelib.dataIntegrationUtils.executeOperation` API的结构指定有关服务操作的详细信息。 结构的语法如下所示。
+`guidelib.dataIntegrationUtils.executeOperation` API的结构指定了有关服务操作的详细信息。 结构的语法如下所示。
 
 ```javascript
 var operationInfo = {
@@ -51,7 +50,7 @@ outputFieldN
 }
 ```
 
-API结构指定有关服务操作的以下详细信息。
+API结构指定了有关服务操作的以下详细信息。
 
 <table>
  <tbody>
@@ -61,11 +60,11 @@ API结构指定有关服务操作的以下详细信息。
   </tr>
   <tr>
    <td><code>operationInfo</code></td>
-   <td>用于指定表单数据模型标识符、操作标题和操作名称的结构</td>
+   <td>指定表单数据模型标识符、操作标题和操作名称的结构</td>
   </tr>
   <tr>
    <td><code>formDataModelId</code></td>
-   <td>指定表单数据模型的存储库路径，包括其名称</td>
+   <td>指定表单数据模型的存储库路径（包括其名称）</td>
   </tr>
   <tr>
    <td><code>operationName</code></td>
@@ -85,7 +84,7 @@ API结构指定有关服务操作的以下详细信息。
   </tr>
   <tr>
    <td><code>failure</code></td>
-   <td>如果成功回调函数无法根据输入参数显示输出值，则显示错误消息。 它是用作回调函数的可选参数。<br /> </td>
+   <td>如果成功回调函数无法根据输入参数显示输出值，则显示一条错误消息。 它是用作回调函数的可选参数。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -94,7 +93,7 @@ API结构指定有关服务操作的以下详细信息。
 
 以下示例脚本使用`guidelib.dataIntegrationUtils.executeOperation` API调用在`employeeAccount`表单数据模型中配置的`getAccountById`服务操作。
 
-`getAccountById`操作将`employeeID`表单字段中的值作为`empId`参数的输入，并返回相应员工的员工姓名、帐号和帐户余额。 输出值将填充到指定的表单字段中。 例如，`name`参数中的值填充在`fullName`表单元素中，而`account`表单元素中`accountNumber`参数的值填充在表单元素中。
+`getAccountById`操作将`employeeID`表单字段中的值作为`empId`参数的输入，并返回相应员工的员工姓名、帐号和帐户余额。 输出值将填充在指定的表单字段中。 例如，`name`参数中的值填充在`fullName`表单元素中，而`accountNumber`参数的值填充在`account`表单元素中。
 
 ```javascript
 var operationInfo = {
@@ -114,7 +113,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 
 ## 将API与回调函数{#using-the-api-callback}一起使用
 
-您还可以使用带回调函数的`guidelib.dataIntegrationUtils.executeOperation` API调用表单数据模型服务。 API语法如下所示：
+您还可以使用带回调函数的`guidelib.dataIntegrationUtils.executeOperation` API来调用表单数据模型服务。 API语法如下所示：
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
@@ -122,15 +121,15 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, c
 
 回调函数可以具有`success`和`failure`回调函数。
 
-### 包含成功和失败回调函数的示例脚本{#callback-function-success-failure}
+### 具有成功和失败回调函数的示例脚本{#callback-function-success-failure}
 
 以下示例脚本使用`guidelib.dataIntegrationUtils.executeOperation` API调用在`employeeOrder`表单数据模型中配置的`GETOrder`服务操作。
 
-`GETOrder`操作将`Order ID`表单字段中的值作为`orderId`参数的输入，并返回`success`回调函数中的订单量值。  如果`success`回调函数不返回订单量，则`failure`回调函数将显示`Error occured`消息。
+`GETOrder`操作将`Order ID`表单字段中的值作为`orderId`参数的输入，并返回`success`回调函数中的订单数量值。  如果`success`回调函数未返回订单数量，则`failure`回调函数会显示`Error occured`消息。
 
 >[!NOTE]
 >
-> 如果使用`success`回调函数，则输出值不会填充指定的表单字段。
+> 如果使用`success`回调函数，则输出值不会填充在指定的表单字段中。
 
 ```javascript
 var operationInfo = {
