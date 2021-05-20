@@ -1,42 +1,41 @@
 ---
-title: Acrobat Reader DC扩展服务Java API快速开始(SOAP)
-seo-title: Acrobat Reader DC扩展服务Java API快速开始(SOAP)
-description: 使用Acrobat Reader DC扩展服务将使用权限应用于PDF文档，从PDF文档删除使用权限，以及检索有关用于将使用权限应用于名为LoanUsageRights.pdf的启用权限的PDF文档的凭据的信息。
-seo-description: 使用Acrobat Reader DC扩展服务将使用权限应用于PDF文档，从PDF文档删除使用权限，以及检索有关用于将使用权限应用于名为LoanUsageRights.pdf的启用权限的PDF文档的凭据的信息。
+title: Acrobat Reader DC扩展服务Java API快速入门(SOAP)
+seo-title: Acrobat Reader DC扩展服务Java API快速入门(SOAP)
+description: 使用Acrobat Reader DC扩展服务可对PDF文档应用使用权限，从PDF文档中删除使用权限，并检索有关用于对名为LoanUsageRights.pdf的启用权限的PDF文档应用使用权限的凭据的信息。
+seo-description: 使用Acrobat Reader DC扩展服务可对PDF文档应用使用权限，从PDF文档中删除使用权限，并检索有关用于对名为LoanUsageRights.pdf的启用权限的PDF文档应用使用权限的凭据的信息。
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
 content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
+# Acrobat Reader DC扩展服务Java API快速入门(SOAP){#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-# Acrobat Reader DC扩展服务Java API快速开始(SOAP){#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+以下快速入门可用于Acrobat Reader DC扩展服务。
 
-以下快速开始可用于Acrobat Reader DC扩展服务。
-
-[快速开始（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
 [从PDF文档中删除使用权限](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[快速开始（SOAP模式）：使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置为SOAP。
 
 >[!NOTE]
 >
->“使用AEM Forms进行编程”中的快速开始基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统，如UNIX，请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是另一台J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>位于“使用AEM Forms进行编程”中的“快速入门”基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}应用使用权限
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}应用使用权限
 
-以下Java代码示例将使用权限应用于名为&#x200B;*Loan.pdf*&#x200B;的PDF文档。 启用权限的PDF文档将保存为名为&#x200B;*LoanUsageRights.pdf*&#x200B;的PDF文件。 以下使用权限已应用于此PDF文档:`enabledComments`、`enabledFormFillIn`和`enabledDigitalSignatures`。 (请参阅[将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例将使用权限应用于名为&#x200B;*Loan.pdf*&#x200B;的PDF文档。 启用权限的PDF文档将另存为名为&#x200B;*LoanUsageRights.pdf*&#x200B;的PDF文件。 以下使用权限将应用于此PDF文档：`enabledComments`、`enabledFormFillIn`和`enabledDigitalSignatures`。 （请参阅[将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。）
 
 
 ```java
@@ -146,9 +145,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
   
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}从PDF文档中删除使用权限
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}从PDF文档中删除使用权限
 
-以下Java代码示例从名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档中删除使用权限。 (请参阅[从PDF文档中删除使用权限](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例从名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档中删除了使用权限。 （请参阅[从PDF文档中删除使用权限](/help/forms/developing/assigning-usage-rights.md)。）
 
 ```java
  /* 
@@ -246,9 +245,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速开始（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}检索凭据信息
+## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}检索凭据信息
 
-以下Java代码示例检索有关用于将使用权限应用于名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档的凭据的信息。 （请参阅[检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。）
+以下Java代码示例检索有关用于将使用权限应用到名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档的凭据的信息。 （请参阅[检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。）
 
 ```java
  /* 
@@ -356,4 +355,3 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  } 
  
 ```
-
