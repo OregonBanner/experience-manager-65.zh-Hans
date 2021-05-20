@@ -3,14 +3,13 @@ title: AEM 6.5其他资源
 seo-title: AEM 6.5其他资源
 description: AEM 6.5发行说明、认证和其他资源
 seo-description: AEM 6.5发行说明、认证和其他资源
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+exl-id: d254d976-f547-4074-b8ad-fe4814184f30
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 8%
 
 ---
-
 
 # AEM 6.5其他资源{#aem-64-additional-resources}
 
@@ -25,7 +24,7 @@ ht-degree: 8%
 
 ## 类和证书{#classes-and-certification}
 
-[通过亲临和虚拟课堂服务扩大您的学习范围。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
+[通过面对面课程和虚拟课堂服务，扩展您的学习。](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)
 
 ## GDPR 就绪 {#gdpr-readiness}
 
@@ -33,4 +32,4 @@ ht-degree: 8%
 
 ## Experience League {#experience-leauge}
 
-[视图Experience LeagueAEM的学习资源。](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#dashboard)
+[在Experience League中查看AEM的学习资源。](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#dashboard)
