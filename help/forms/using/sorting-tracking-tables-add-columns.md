@@ -1,25 +1,24 @@
 ---
 title: 自定义跟踪表
 seo-title: 自定义跟踪表
-description: 如何自定义在AEM Forms工作区的跟踪选项卡中显示的任务表中显示用户进程详细信息。
-seo-description: 如何自定义在AEM Forms工作区的跟踪选项卡中显示的任务表中显示用户进程详细信息。
+description: 如何自定义在任务表(显示在AEM Forms工作区的跟踪选项卡中)中显示的用户进程详细信息的显示。
+seo-description: 如何自定义在任务表(显示在AEM Forms工作区的跟踪选项卡中)中显示的用户进程详细信息的显示。
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 2%
 
 ---
 
-
 # 自定义跟踪表{#customize-tracking-tables}
 
-AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程实例的详细信息。 要视图跟踪表，请首先在左窗格中选择进程名称，以在中间窗格中查看其实例的列表。 选择一个进程实例，在右窗格中看到由此实例生成的任务表。 默认情况下，表列显示以下任务属性(任务模型中的相应属性在括号中给出):
+AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程实例的详细信息。 要查看跟踪表，请首先在左窗格中选择一个进程名称，以在中间窗格中查看其实例列表。 选择一个进程实例，以在右侧窗格中查看由此实例生成的任务列表。 默认情况下，表列显示以下任务属性（任务模型中的相应属性在括号中给出）：
 
 * ID ( `taskId`)
 * 名称 ( `stepName`)
@@ -29,7 +28,7 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
 * 完成时间(`completeTime`)
 * 所有者 ( `currentAssignment.queueOwner`)
 
-任务模型中可用于显示在任务表中的其余属性为：
+任务模型中可显示在任务表中的其余属性包括：
 
 <table>
  <tbody>
@@ -80,12 +79,12 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
   </tr>
   <tr>
    <td><p>displayName</p> </td>
-   <td><p>outOfficeUserId</p> </td>
+   <td><p>outOfOfficeUserId</p> </td>
    <td><p>summaryUrl</p> </td>
   </tr>
   <tr>
    <td><p>forwardGroupId</p> </td>
-   <td><p>outOfficeUserName</p> </td>
+   <td><p>outOfOfficeUserName</p> </td>
    <td><p>supportsSave</p> </td>
   </tr>
   <tr>
@@ -116,11 +115,11 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
  </tbody>
 </table>
 
-对于任务表中的以下自定义项，您需要在源代码中进行语义更改。 请参阅[自定义AEM Forms工作区](/help/forms/using/introduction-customizing-html-workspace.md)的简介，了解如何使用工作区SDK进行语义更改并从更改的源构建精简的包。
+对于任务表中的以下自定义，您需要在源代码中进行语义更改。 请参阅[自定义AEM Forms工作区](/help/forms/using/introduction-customizing-html-workspace.md)简介，了解如何使用工作区SDK进行语义更改，以及如何从更改的源构建缩小的包。
 
 ## 更改表列及其顺序{#changing-table-columns-and-their-order}
 
-1. 要修改表中显示的任务属性及其顺序，请配置文件/ws/js/runtime/templates/processinstancehistory.html:
+1. 要修改表中显示的任务属性及其顺序，请配置文件/ws/js/runtime/templates/processinstancehistory.html :
 
    ```html
    <table>
@@ -154,11 +153,11 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    </table>
    ```
 
-## 对跟踪表{#sorting-a-tracking-table}排序
+## 对跟踪表{#sorting-a-tracking-table}进行排序
 
-要在单击列标题时对任务列表表进行排序：
+要在单击列标题时对任务列表表进行排序，请执行以下操作：
 
-1. 在文件`js/runtime/views/processinstancehistory.js`中为`.fixedTaskTableHeader th`注册一个单击处理程序。
+1. 在文件`js/runtime/views/processinstancehistory.js`中为`.fixedTaskTableHeader th`注册一个点击处理程序。
 
    ```javascript
    events: {
@@ -168,7 +167,7 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    }
    ```
 
-   在处理函数中，调用`js/runtime/util/history.js`的`onTaskTableHeaderClick`函数。
+   在处理程序中，调用`js/runtime/util/history.js`的`onTaskTableHeaderClick`函数。
 
    ```javascript
    onTaskTableHeaderClick: function (event) {
@@ -176,11 +175,11 @@ AEM Forms工作区中的跟踪选项卡用于显示涉及登录用户的进程�
    }
    ```
 
-1. 在`js/runtime/util/history.js`中显示`TaskTableHeaderClick`方法。
+1. 在`js/runtime/util/history.js`中公开`TaskTableHeaderClick`方法。
 
-   该方法从单击任务中查找事件属性，对该属性的任务列表进行排序，并使用排序的任务列表呈现任务表。
+   方法从点击事件中查找任务属性，对该属性中的任务列表进行排序，并呈现带有排序任务列表的任务表。
 
-   通过提供比较器函数，使用任务列表集合上的“骨干”排序功能进行排序。
+   通过提供比较器函数，使用任务列表集合上的骨干排序函数进行排序。
 
    ```javascript
        return {
