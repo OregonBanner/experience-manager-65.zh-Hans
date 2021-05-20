@@ -3,29 +3,28 @@ title: 添加具有超链接的图像映射
 description: 了解如何向图像添加具有超链接的图像映射。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: 资产管理
+exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-
 # 添加图像映射{#adding-image-maps}
 
-图像映射允许您添加一个或多个超链接区域，这些区域的功能与其他超链接类似。
+图像映射允许您添加一个或多个与其他超链接功能类似的超链接区域。
 
 1. 执行以下任一操作以打开&#x200B;**[!UICONTROL 就地图像编辑器]**:
 
-   * 使用快速操作，单击&#x200B;**[!UICONTROL 卡片]**&#x200B;视图中资产上显示的&#x200B;**[!UICONTROL 编辑]**。 在“列表”视图中，选择资产，然后单击工具栏中的&#x200B;**[!UICONTROL 编辑]**&#x200B;选项。
+   * 使用快速操作，单击&#x200B;**[!UICONTROL 卡片]**&#x200B;视图中资产上显示的&#x200B;**[!UICONTROL 编辑]**。 在列表视图中，选择资产，然后单击工具栏中的&#x200B;**[!UICONTROL 编辑]**&#x200B;选项。
 
       >[!NOTE]
       >
       >快速操作在&#x200B;**[!UICONTROL 列表]**&#x200B;视图中不可用。
 
-   * 在&#x200B;**[!UICONTROL 卡片]**&#x200B;或&#x200B;**[!UICONTROL 列表]**&#x200B;视图中，选择资产并单击工具栏上的&#x200B;**[!UICONTROL 编辑]**。
+   * 在&#x200B;**[!UICONTROL 卡片]**&#x200B;或&#x200B;**[!UICONTROL 列表]**&#x200B;视图中，选择资产，然后单击工具栏上的&#x200B;**[!UICONTROL 编辑]**。
    * 单击资产页面中的&#x200B;**[!UICONTROL 编辑]**。
 
       ![编辑选项](assets/do-not-localize/edit_icon.png)
@@ -35,16 +34,16 @@ ht-degree: 0%
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. 单击热点，然后输入URL和Alt文本。 在&#x200B;**[!UICONTROL 目标]**&#x200B;列表中，指定要显示图像映射的位置，例如同一选项卡、新选项卡或iFrame。 例如，输入`https://www.adobe.com`作为URL，输入`Adobe website`作为替代文本，然后从&#x200B;**[!UICONTROL 目标]**&#x200B;列表中指定&#x200B;**[!UICONTROL 新建选项卡]**，以使图像映射在新选项卡中打开。
+1. 单击热点，然后输入URL和替换文本。 从&#x200B;**[!UICONTROL Target]**&#x200B;列表中，指定您希望在何处显示图像映射，例如同一选项卡、新选项卡或iFrame。 例如，输入`https://www.adobe.com`作为URL，输入`Adobe website`作为替换文本，并从&#x200B;**[!UICONTROL Target]**&#x200B;列表中指定&#x200B;**[!UICONTROL 新选项卡]** ，以便在新选项卡中打开图像映射。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. 单击&#x200B;**[!UICONTROL 确认]**，然后单击工具栏中的&#x200B;**[!UICONTROL 完成]** ![选择检查完成](assets/do-not-localize/check-ok-done-icon.png)以保存更改。
+1. 单击&#x200B;**[!UICONTROL Confirm]**，然后单击&#x200B;**[!UICONTROL Finish]** ![从工具栏中选择选中done](assets/do-not-localize/check-ok-done-icon.png)以保存更改。
 
-   要删除图像映射，请单击热点并单击&#x200B;**[!UICONTROL 删除]** ![删除](assets/do-not-localize/delete-solid-line.png)。
+   要删除图像映射，请单击热点并单击&#x200B;**[!UICONTROL Delete]** ![delete](assets/do-not-localize/delete-solid-line.png)。
 
-1. 要视图图像映射，请导航到资产详细信息页面，然后将光标悬停在图像上。
+1. 要查看图像映射，请导航到资产详细信息页面，并将光标悬停在图像上。
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   如果启用了Dynamic Media选项，请导航到资产编辑器，然后单击&#x200B;**[!UICONTROL 映射]**&#x200B;以视图所有已应用的图像映射。
+   如果启用了Dynamic Media选项，请导航到资产编辑器并单击&#x200B;**[!UICONTROL Map]**&#x200B;以查看所有应用的图像映射。
