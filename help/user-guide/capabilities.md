@@ -4,7 +4,6 @@ seo-title: AEM 6.5功能用户指南
 description: AEM 6.5基本功能概述
 seo-description: AEM 6.5基本功能概述
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '157'
@@ -16,15 +15,15 @@ ht-degree: 31%
 
 ## AEM Foundation {#aem-foundation}
 
-[了解有关Adobe Experience Manager 6.5安装、部署和架构的更多信息](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
+[进一步了解Adobe Experience Manager 6.5的安装、部署和架构](/help/sites-deploying/home.md)，包括我们的Adobe Managed Services云部署。
 
 [了解如何管理AEM项目](/help/managing/home.md)。
 
 ## AEM Sites {#aem-sites}
 
-[了解在AEM中创建内容和创作的主要概念](/help/sites-authoring/home.md)。
+[了解在AEM中创建内容和进行创作的关键概念](/help/sites-authoring/home.md)。
 
-[了解管理AEM](/help/sites-administering/home.md)。
+[了解如何管理AEM](/help/sites-administering/home.md)。
 
 ## AEM Assets {#aem-assets}
 
@@ -36,7 +35,7 @@ ht-degree: 31%
 
 ## AEM Screens {#aem-screens}
 
-[了解用于发布动态互动体验的数字标牌解决方案。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+[了解用于发布动态和交互式体验的数字标牌解决方案。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## AEM Commerce {#aem-commerce}
 
