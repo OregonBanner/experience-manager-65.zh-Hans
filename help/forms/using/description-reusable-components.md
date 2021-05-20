@@ -1,28 +1,27 @@
 ---
-title: 可重用组件的描述
-seo-title: 可重用组件的描述
-description: 包含文件名和依赖项的可重复使用组件的完整列表，可帮助您将AEM Forms工作区组件集成到您的Web应用程序中。
-seo-description: 包含文件名和依赖项的可重复使用组件的完整列表，可帮助您将AEM Forms工作区组件集成到您的Web应用程序中。
+title: 可重用组件描述
+seo-title: 可重用组件描述
+description: 可重用组件的完整列表，包含文件名和依赖项，可帮助您将AEM Forms工作区组件集成到Web应用程序中。
+seo-description: 可重用组件的完整列表，包含文件名和依赖项，可帮助您将AEM Forms工作区组件集成到Web应用程序中。
 uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 9%
 
 ---
 
+# 可重用组件{#description-of-reusable-components}的描述
 
-# 可重用组件{#description-of-reusable-components}的说明
+AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-components-web.md)组件组成，这些组件组织在CRX™中的特定[文件夹结构](/help/forms/using/folder-structure.md)中。 每个组件在文件夹结构中指定的位置都有模型、视图和模板文件，JavaScript™依赖于其他组件文件，组件侦听的事件以及在AEM Forms工作区中触发这些事件的JavaScript对象。 此处提供了包含组成文件名和依赖项的可重用组件的完整列表。
 
-AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-components-web.md)组件组成，这些组件在CRX™中以特定的[文件夹结构](/help/forms/using/folder-structure.md)组织。 每个组件在文件夹结构中指定的位置都有模型、视图和模板文件，JavaScript™依赖于其他组件文件，组件监听的事件以及在AEM Forms工作区触发这些事件的JavaScript对象。 此处提供具有组成文件名和相关性的可重用组件的完整列表。
-
-## TaskList {#tasklist}
+## 任务列表 {#tasklist}
 
 <table>
  <tbody>
@@ -42,7 +41,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>需要组件</p></td>
    <td>
     <ul>
-     <li><p>用户搜索</p></li>
+     <li><p>UserSearch</p></li>
      <li><p>任务</p></li>
      <li><p>团队任务</p></li>
     </ul></td>
@@ -56,12 +55,12 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
     </ul></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>filterSelected —— 任务列表模型</p></li>
-     <li><p>删除——任务列表模型</p></li>
-     <li><p>updateQueue —— 任务列表模型</p></li>
+     <li><p>filterSelected - tasklist模型</p></li>
+     <li><p>移除 — 任务列表模型</p></li>
+     <li><p>updateQueue - tasklist模型</p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -69,7 +68,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->只要您从自定义应用程序为此组件触发filterSelected事件，此组件可以独立于AEM Forms工作区使用。
+>如果您从自定义应用程序中触发此组件的filterSelected事件，则此组件可以独立于AEM Forms工作区使用。
 
 ## 任务 {#task}
 
@@ -96,15 +95,15 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td>
     <ul>
      <li><p>任务列表模型</p></li>
-     <li><p>任务操作实用程序</p></li>
+     <li><p>taskactions实用程序</p></li>
     </ul></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>submitComplete -任务模型</p></li>
-     <li><p>拒绝-任务模型</p></li>
+     <li><p>submitComplete — 任务模型</p></li>
+     <li><p>拒绝 — 任务模型</p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -112,7 +111,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->工作区调用TaskList模型的fetchTasks函数，为此组件创建任务模型。
+>工作区调用TaskList模型的fetchTasks函数，以便为此组件创建任务模型。
 
 ## FilterList {#filterlist}
 
@@ -139,14 +138,14 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>已获取——任务列表模型 </p></li>
-     <li><p>删除——任务列表模型 </p></li>
-     <li><p>updateQueue —— 任务列表模型 </p></li>
-     <li><p>refreshedQueue —— 任务列表模型 </p></li>
-     <li><p>filterSelected —— 任务列表模型</p></li>
+     <li><p>已获取 — 任务列表模型 </p></li>
+     <li><p>移除 — 任务列表模型 </p></li>
+     <li><p>updateQueue - tasklist模型 </p></li>
+     <li><p>refresedQueue - tasklist模型 </p></li>
+     <li><p>filterSelected - tasklist模型</p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -172,15 +171,15 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>JS依赖关系</p> </td>
    <td>
     <ul>
-     <li><p>字段：队列：{ name, qid, isDefault, type}</p> </li>
-     <li><p>字段：查询:字符串</p> </li>
+     <li><p>字段：队列：{ name， qid， isDefault， type}</p> </li>
+     <li><p>字段：查询：字符串</p> </li>
      <li><p>字段：parentView:过滤器列表视图</p> </li>
      <li><p>字段：parentModel:任务列表模型</p> </li>
      <li><p>字段：实用程序</p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>事件聆听</p> </td>
+   <td><p>事件侦听</p> </td>
    <td><p>NA</p> </td>
   </tr>
  </tbody>
@@ -211,13 +210,13 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>已获取——任务列表模型 </p></li>
-     <li><p>删除——任务列表模型 </p></li>
-     <li><p>updateQueue —— 任务列表模型 </p></li>
-     <li><p>teamQueuesReched —— 任务列表模型 </p></li>
+     <li><p>已获取 — 任务列表模型 </p></li>
+     <li><p>移除 — 任务列表模型 </p></li>
+     <li><p>updateQueue - tasklist模型 </p></li>
+     <li><p>teamQueuesIchated - tasklist模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -247,16 +246,16 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>JS依赖关系</p> </td>
    <td>
     <ul>
-     <li><p>扩展：过滤器视图</p> </li>
-     <li><p>字段：队列：{ name, qid, isDefault, type }</p> </li>
-     <li><p>字段：查询:字符串</p> </li>
-     <li><p>字段：parentView:过滤器列表视图</p> </li>
-     <li><p>字段：parentModel:任务列表模型</p> </li>
+     <li><p>扩展：过滤视图</p> </li>
+     <li><p>字段：queue :{ name， qid， isDefault， type }</p> </li>
+     <li><p>字段：查询：字符串</p> </li>
+     <li><p>字段：parentView :过滤器列表视图</p> </li>
+     <li><p>字段：parentModel :任务列表模型</p> </li>
      <li><p>字段：实用程序</p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>事件聆听</p> </td>
+   <td><p>事件侦听</p> </td>
    <td><p>NA</p> </td>
   </tr>
  </tbody>
@@ -264,9 +263,9 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->TeamFilter获取指示已从TaskList组件中选择哪个任务的事件。 尽管这些组件共享模型类，但没有其他依赖关系。
+>TeamFilter会获取事件，指示从TaskList组件中选择了哪个任务。 尽管这些组件共享模型类，但没有其他依赖项。
 
-## TaskDetails {#taskdetails}
+## 任务详细信息 {#taskdetails}
 
 <table>
  <tbody>
@@ -284,47 +283,47 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>需要组件</p> </td>
-   <td><p>大多数实用程序类</p> </td>
+   <td><p>大多数实用工具类</p> </td>
   </tr>
   <tr>
    <td><p>JS依赖关系</p> </td>
    <td>
     <ul>
      <li><p>processinstancehistory.html</p> </li>
-     <li><p>formrendering实用程序</p> </li>
+     <li><p>窗体渲染实用程序</p> </li>
      <li><p>注释实用程序</p> </li>
      <li><p>附件实用程序</p> </li>
-     <li><p>任务操作实用程序</p> </li>
+     <li><p>taskactions实用程序</p> </li>
      <li><p>历史实用程序</p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td>
     <ul>
-     <li><p>forwarded -任务模型</p> </li>
-     <li><p>共享-任务模型</p> </li>
-     <li><p>已咨询-任务模型</p> </li>
-     <li><p>拒绝-任务模型</p> </li>
-     <li><p>废弃-任务模型</p> </li>
-     <li><p>已解锁-任务模型</p> </li>
-     <li><p>锁定-任务模型</p> </li>
-     <li><p>索赔-任务模型</p> </li>
-     <li><p>更改：已选定任务——任务列表模型</p> </li>
-     <li><p>change:formUrl -任务模型</p> </li>
-     <li>attachmentURLFechetd -任务模型</li>
+     <li><p>转发 — 任务模型</p> </li>
+     <li><p>共享 — 任务模型</p> </li>
+     <li><p>已咨询 — 任务模型</p> </li>
+     <li><p>被拒绝 — 任务模型</p> </li>
+     <li><p>放弃 — 任务模型</p> </li>
+     <li><p>已解锁 — 任务模型</p> </li>
+     <li><p>锁定 — 任务模型</p> </li>
+     <li><p>已声明 — 任务模型</p> </li>
+     <li><p>更改：已选择任务 — 任务列表模型</p> </li>
+     <li><p>change:formUrl — 任务模型</p> </li>
+     <li>attachmentURLFeched — 任务模型</li>
     </ul>
     <ul>
-     <li>newAttachment -任务模型</li>
-     <li><p>taskHistoryRecated -任务模型</p> </li>
-     <li>prepareForSubmitComplete -任务模型</li>
-     <li><p>submitComplete -任务模型</p> </li>
+     <li>newAttachment — 任务模型</li>
+     <li><p>taskHistoryIchated — 任务模型</p> </li>
+     <li>prepareForSubmitComplete — 任务模型</li>
+     <li><p>submitComplete — 任务模型</p> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-## CategoryList {#categorylist}
+## 类别列表 {#categorylist}
 
 <table>
  <tbody>
@@ -338,7 +337,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>模板</p></td>
-   <td><p>startprocess.html（在route文件夹中）</p></td>
+   <td><p>startprocess.html（在路由文件夹中）</p></td>
   </tr>
   <tr>
    <td><p>需要组件</p></td>
@@ -348,15 +347,15 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>JS依赖关系</p></td>
    <td>
     <ul>
-     <li><p>favoritecategoryfactory模型</p></li>
-     <li><p>allcategoryfactory模型</p></li>
+     <li><p>favoritecategorfactory模型</p></li>
+     <li><p>allcategorfactory模型</p></li>
     </ul></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>allStartpointsRecited - categorylist模型 </p></li>
+     <li><p>allStartpointsIcated - categorylist模型 </p></li>
      <li><p>add - categorylist模型 </p></li>
     </ul></td>
   </tr>
@@ -365,7 +364,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->此组件使用一些其他组件(如StartPointList、StartPoint和任务)的模型类。 除此依赖关系外，CategoryList还可以单独使用。
+>此组件使用某些其他组件（如StartPointList、StartPoint和Task）的模型类。 除此依赖项外， CategoryList还可单独使用。
 
 ## 类别 {#category}
 
@@ -391,17 +390,17 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>JS依赖关系</p></td>
    <td>
     <ul>
-     <li><p>categorylist模型</p></li>
+     <li><p>类别列表模型</p></li>
      <li><p>startpointlist模型</p></li>
     </ul></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>更改-类别模型 </p></li>
-     <li><p>childrenRected -类别模型 </p></li>
-     <li><p>类别：选定——类别列表模型 </p></li>
+     <li><p>已更改 — 类别模型 </p></li>
+     <li><p>childrenIcketed — 类别模型 </p></li>
+     <li><p>类别：选定 — 类别列表模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -421,7 +420,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>模板</p></td>
-   <td><p>startprocess.html（在route文件夹中）</p></td>
+   <td><p>startprocess.html（在路由文件夹中）</p></td>
   </tr>
   <tr>
    <td><p>需要组件</p></td>
@@ -432,9 +431,9 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td>
     <ul>
      <li><p>类别模型</p></li>
-     <li><p>favoritecategoryfactory模型</p></li>
-     <li><p>allcategoryfactory模型</p></li>
-     <li><p>起点视图</p></li>
+     <li><p>favoritecategorfactory模型</p></li>
+     <li><p>allcategorfactory模型</p></li>
+     <li><p>startpoint视图</p></li>
      <li><p>startpointlist模型</p></li>
      <li><p>起点模型</p></li>
      <li><p>任务模型</p></li>
@@ -444,11 +443,11 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
     </ul></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>类别：选定——类别列表模型 </p></li>
-     <li><p>allStartpointsRecited - categorylist模型 </p></li>
+     <li><p>类别：选定 — 类别列表模型 </p></li>
+     <li><p>allStartpointsIcated - categorylist模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -456,7 +455,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->StartPointList和CategoryList组件共享模型类，因此前者取决于后者。 CategoryList访问显示类别开始点的相关信息。 要单独使用StartPointList，请模拟CategoryList中的事件触发器。
+>StartPointList和CategoryList组件共享模型类，因此前者取决于后者。 CategoryList访问有关显示哪个类别起点的信息。 要单独使用StartPointList，请模拟CategoryList中的事件触发器。
 
 ## StartPoint {#startpoint}
 
@@ -483,8 +482,8 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>任务模型</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
-   <td><p>更改——起始点模型 </p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
+   <td><p>更改 — 起点模型 </p></td>
   </tr>
  </tbody>
 </table>
@@ -509,8 +508,8 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>需要组件</p> </td>
    <td>
     <ul>
-     <li><p>大多数实用程序类</p> </li>
-     <li><p>用户搜索</p> </li>
+     <li><p>大多数实用工具类</p> </li>
+     <li><p>UserSearch</p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -518,31 +517,31 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td>
     <ul>
      <li><p>类别模型</p> </li>
-     <li><p>favoritecategoryfactory模型</p> </li>
-     <li><p>allcategoryfactory模型</p> </li>
-     <li><p>formrendering实用程序</p> </li>
+     <li><p>favoritecategorfactory模型</p> </li>
+     <li><p>allcategorfactory模型</p> </li>
+     <li><p>窗体渲染实用程序</p> </li>
      <li><p>注释实用程序</p> </li>
      <li><p>附件实用程序</p> </li>
-     <li><p>任务操作实用程序</p> </li>
+     <li><p>taskactions实用程序</p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td>
     <ul>
-     <li><p>类别：选定——类别列表模型</p> </li>
-     <li><p>change:invocedTask - startpointlist模型</p> </li>
-     <li><p>change:formUrl -任务模型</p> </li>
-     <li><p>起点：已选——起始点列表模型</p> </li>
-     <li><p>forwarded -任务模型</p> </li>
-     <li><p>废弃-任务模型</p> </li>
-     <li><p>已解锁-任务模型</p> </li>
-     <li><p>锁定-任务模型</p> </li>
-     <li>attachmentURLFechetd -任务模型</li>
-     <li>newAttachment -任务模型</li>
-     <li>prepareForSubmitComplete -任务模型 </li>
-     <li><p>submitComplete -任务模型</p> </li>
-     <li><p>allStartpointsRecited - categorylist模型</p> </li>
+     <li><p>类别：选定 — 类别列表模型</p> </li>
+     <li><p>change:invikedTask - startpointlist模型</p> </li>
+     <li><p>change:formUrl — 任务模型</p> </li>
+     <li><p>startpoint:selected - startpointlist模型</p> </li>
+     <li><p>转发 — 任务模型</p> </li>
+     <li><p>放弃 — 任务模型</p> </li>
+     <li><p>已解锁 — 任务模型</p> </li>
+     <li><p>锁定 — 任务模型</p> </li>
+     <li>attachmentURLFeched — 任务模型</li>
+     <li>newAttachment — 任务模型</li>
+     <li>prepareForSubmitComplete — 任务模型 </li>
+     <li><p>submitComplete — 任务模型</p> </li>
+     <li><p>allStartpointsIcated - categorylist模型</p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -550,7 +549,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->StartProcess和StartPointList组件共享模型类。 此组件变得相关，您从StartPointList中选择一个起点。
+>StartProcess和StartPointList组件共享模型类。 从StartPointList中选择起始点时，此组件会变得相关。
 
 ## ProcessNameList {#processnamelist}
 
@@ -566,7 +565,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>模板</p></td>
-   <td><p>tracking.html（在route文件夹中）</p></td>
+   <td><p>tracking.html（在路由文件夹中）</p></td>
   </tr>
   <tr>
    <td><p>需要组件</p></td>
@@ -574,15 +573,15 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>JS依赖关系</p></td>
-   <td><p>processname模型</p></td>
+   <td><p>过程名称模型</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>添加——进程名列表模型 </p></li>
-     <li><p>已提取：进程名称——进程名列表模型 </p></li>
-     <li><p>更改——进程名列表模型 </p></li>
+     <li><p>add - processnamelist模型 </p></li>
+     <li><p>已获取：processnames -processnamelist模型 </p></li>
+     <li><p>更改 — 流程名称列表模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -590,7 +589,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->ProcessNameList不依赖于其他组件。 但是，在内部它取决于ProcessInstanceList模型类，而ProcessInstanceList模型类又取决于其他组件。 因此，ProcessNameList使用许多模型类，如ProcessInstanceList、ProcessInstance、TaskList、Teamtask和任务。 除了这些依赖关系外，ProcessNameList还可以单独使用。
+>ProcessNameList不依赖于其他组件。 但是，在内部它取决于ProcessInstanceList模型类，而ProcessInstanceList模型类又取决于其他组件。 因此，ProcessNameList使用许多模型类，如ProcessInstanceList、ProcessInstance、TaskList、Teamtask和Task。 除了这些依赖关系外，ProcessNameList还可以单独使用。
 
 ## ProcessName {#processname}
 
@@ -614,11 +613,11 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>JS依赖关系</p></td>
-   <td><p>processinstancelist模型</p></td>
+   <td><p>过程实例列表模型</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
-   <td><p>change - processname模型 </p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
+   <td><p>更改 — processname模型 </p></td>
   </tr>
  </tbody>
 </table>
@@ -637,7 +636,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>模板</p></td>
-   <td><p>tracking.html（在route文件夹中）</p></td>
+   <td><p>tracking.html（在路由文件夹中）</p></td>
   </tr>
   <tr>
    <td><p>需要组件</p></td>
@@ -645,14 +644,14 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>JS依赖关系</p></td>
-   <td><p>processname模型</p></td>
+   <td><p>过程名称模型</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>processname:selected - processnamelist模型 </p></li>
-     <li><p>进程名称：已获取实例——进程名列表模型 </p></li>
+     <li><p>processname:selected -processnamelist模型 </p></li>
+     <li><p>processname:instanceceated - processnamelist模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -660,7 +659,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->ProcessInstanceList需要ProcessNameList中的事件，用于指示用于读取和显示实例的进程名称。 要单独使用ProcessInstanceList，请单独模拟事件触发器。
+>ProcessInstanceList需要ProcessNameList中的一个事件，该事件指示用于获取和显示实例的进程名称。 要单独使用ProcessInstanceList，请单独模拟事件触发器。
 
 ## ProcessInstance {#processinstance}
 
@@ -672,7 +671,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>查看</p></td>
-   <td><p>processnamelist.js中的进程名</p></td>
+   <td><p>processnamelist.js中的processname</p></td>
   </tr>
   <tr>
    <td><p>模板</p></td>
@@ -687,8 +686,8 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>任务列表模型</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
-   <td><p>change - processinstance模型 </p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
+   <td><p>更改 — 处理实例模型 </p></td>
   </tr>
  </tbody>
 </table>
@@ -717,17 +716,17 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>JS依赖关系</p></td>
    <td>
     <ul>
-     <li><p>processname模型</p></li>
+     <li><p>过程名称模型</p></li>
      <li><p>历史实用程序</p></li>
     </ul></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>processname:selected - processnamelist模型 </p></li>
-     <li><p>processinstance:selected - processinstancelist模型 </p></li>
-     <li><p>tasksReacted - processinstance模型 </p></li>
+     <li><p>processname:selected -processnamelist模型 </p></li>
+     <li><p>processinstance:selected -processinstancelist模型 </p></li>
+     <li><p>tasksIgated - processinstance模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -735,7 +734,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->ProcessInstanceHistory需要ProcessInstanceList中的事件，指示将显示哪个进程实例的历史记录。 除此依赖关系外，组件还可以单独使用。
+>ProcessInstanceHistory需要ProcessInstanceList中的事件，以指示要显示哪个进程实例的历史记录。 除此依赖关系外，组件还可以单独使用。
 
 ## OutofOffice {#outofoffice}
 
@@ -755,20 +754,20 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>需要组件</p> </td>
-   <td><p>用户搜索</p> </td>
+   <td><p>UserSearch</p> </td>
   </tr>
   <tr>
    <td><p>JS依赖关系</p> </td>
    <td><p>用户搜索视图</p> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td>
     <ul>
-     <li><p>outOfficeSettingsIchated - outoffice模型</p> </li>
-     <li><p>outOfficeSettingsSaved - outofice模型</p> </li>
-     <li><p>processesRiched - outofice模型</p> </li>
-     <li><p>principalSelected —— 主搜索视图</p> </li>
+     <li><p>outOfficeSettingsItched - outoffice模型</p> </li>
+     <li><p>outOfficeSettingsSaved - outfofice模型</p> </li>
+     <li><p>processesIchated - outoffice模型</p> </li>
+     <li><p>principalSelected - principalsearch视图</p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -776,7 +775,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
 
 >[!NOTE]
 >
->OutofOffice可单独使用。
+>OutofOffice可以独立使用。
 
 ## ShareQueue {#sharequeue}
 
@@ -796,23 +795,23 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>需要组件</p> </td>
-   <td><p>用户搜索</p> </td>
+   <td><p>UserSearch</p> </td>
   </tr>
   <tr>
    <td><p>JS依赖关系</p> </td>
    <td><p>用户搜索视图</p> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td>
     <ul>
-     <li><p>queueAccessGrated - sharequeue模型</p> </li>
+     <li><p>queueAccessGreaded - sharequeue模型</p> </li>
      <li><p>queueAccessRequested - sharequeue模型</p> </li>
-     <li><p>grantedUsersRected - sharequeue模型</p> </li>
-     <li>accessibleUsersReached - sharequeue模型</li>
+     <li><p>grandedUsersIchated - sharequeue模型</p> </li>
+     <li>accessibleUsersIched - sharequeue模型</li>
      <li><p>queueAccessRevoded - sharequeue模型</p> </li>
      <li><p>queueAccessRemoved - sharequeue模型</p> </li>
-     <li><p>principalSelected —— 主搜索视图</p> </li>
+     <li><p>principalSelected - principalsearch视图</p> </li>
     </ul> </td>
   </tr>
  </tbody>
@@ -847,11 +846,11 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
    <td>
     <ul>
-     <li><p>preferencesRecated —— 怀疑模型 </p></li>
-     <li><p>settingUpdated - uisetings模型 </p></li>
+     <li><p>preferencesIcated — 提交模型 </p></li>
+     <li><p>settingUpdated - uisettings模型 </p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -886,7 +885,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p></td>
   </tr>
   <tr>
-   <td><p>事件聆听</p></td>
+   <td><p>事件侦听</p></td>
    <td><p>NA</p></td>
   </tr>
  </tbody>
@@ -921,11 +920,11 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td>
     <ul>
-     <li>userImageUrlRected - userinfo模型</li>
-     <li>sessionRextended - userinfo model <br /> </li>
+     <li>userImageUrlIcated - userinfo模型</li>
+     <li>sessionRextended - userinfo模型<br /> </li>
      <li>sessionExpired - userinfo模型 </li>
     </ul> </td>
   </tr>
@@ -961,8 +960,8 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p></td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p></td>
-   <td><p>newWsError - wserror模型 </p></td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p></td>
+   <td><p>newWsError — 错误模型 </p></td>
   </tr>
  </tbody>
 </table>
@@ -992,11 +991,11 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td>
     <ul>
-     <li>principalSearchd - principalsearch模型</li>
-     <li>outOfOfficeInfoIched —— 用户搜索模型</li>
+     <li>principalSearch - principalsearch模型</li>
+     <li>outOfOfficeInfoIched - usersearch模型</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -1027,8 +1026,8 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>NA</p> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
-   <td><p>templateReched- search模板模型</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
+   <td><p>templateIcked-searchtemplate模型</p> </td>
   </tr>
  </tbody>
 </table>
@@ -1047,7 +1046,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
   </tr>
   <tr>
    <td><p>模板</p> </td>
-   <td><p>tracking.html（在route文件夹中）</p> </td>
+   <td><p>tracking.html（在路由文件夹中）</p> </td>
   </tr>
   <tr>
    <td><p>需要组件</p> </td>
@@ -1058,8 +1057,8 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td><p>searchtemplate模型</p> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
-   <td><p>更改-searchtemplatelist模型</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
+   <td><p>更改 — searchtemplatelist模型</p> </td>
   </tr>
  </tbody>
 </table>
@@ -1089,7 +1088,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td>NA<br /> </td>
   </tr>
   <tr>
-   <td><p>事件听取(事件名称——触发器)</p> </td>
+   <td><p>侦听的事件（事件名称 — 触发器）</p> </td>
    <td><p>searchTemplate:selected - searchtemplate模型</p> </td>
   </tr>
  </tbody>
