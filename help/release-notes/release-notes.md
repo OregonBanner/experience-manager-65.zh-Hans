@@ -1,16 +1,15 @@
 ---
-title: ' [!DNL Adobe Experience Manager] 6.5的一般发行说明'
+title: ' [!DNL Adobe Experience Manager] 6.5的常规发行说明'
 description: '[!DNL Adobe Experience Manager] 6.5 说明概述了发行信息、新增功能、安装方式以及详细的更改列表。'
-translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 68%
 
 ---
 
-
-# [!DNL Adobe Experience Manager] 6.5{#general-release-notes-for-adobe-experience-manager}的一般发行说明
+# [!DNL Adobe Experience Manager] 6.5{#general-release-notes-for-adobe-experience-manager}的常规发行说明
 
 ## 发行信息 {#release-information}
 
@@ -19,39 +18,39 @@ ht-degree: 68%
 | 版本号 | 6.5 |
 | 类型 | 主要版本 |
 | 公开发行日期 | 2019 年 4 月 8 日 |
-| 推荐的更新 | 请参阅[AEM最近更新](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)。 |
+| 推荐的更新 | 请参阅[AEM近期更新](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)。 |
 
 ### 相关事项 {#trivia}
 
-此版本[!DNL Adobe Experience Manager]的发布周期从2018年4月4日开始，经历了23次质量保证和错误修复循环，于2019年3月28日结束。 此版本中修复的客户相关问题（包括增强功能和新增功能）总数为 1345。
+此版本[!DNL Adobe Experience Manager]的发布周期从2018年4月4日开始，经过23次质量保证和错误修复迭代，于2019年3月28日结束。 此版本中修复的客户相关问题（包括增强功能和新增功能）总数为 1345。
 
-[!DNL Adobe Experience Manager] 6.5自2019年4月8日起推出。
+[!DNL Adobe Experience Manager] 6.5自2019年4月8日起正式发布。
 
 ![AEM 6.5 登录屏幕](/help/assets/assets/aem65-login-v4.png)
 
 ## 新增功能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5是升级到6.4 [!DNL Adobe Experience Manager] 代码库的版本。它提供了一些新功能和增强功能、重要的客户修复、高优先级的客户增强功能，以及针对产品稳定性的一般错误修复。它还包括最多SP4的[!DNL Adobe Experience Manager] 6.4 Service Pack发行版。
+[!DNL Adobe Experience Manager] 6.5是6.4代码库 [!DNL Adobe Experience Manager] 的升级版本。它提供了一些新功能和增强功能、重要的客户修复、高优先级的客户增强功能，以及针对产品稳定性的一般错误修复。它还包括[!DNL Adobe Experience Manager] 6.4 Service Pack版本，最高配置为SP4。
 
-以下列表提供了概述——而后续页面则列表完整详细信息。
+下面的列表提供了概述 — 而后续页面则列出了完整的详细信息。
 
 ### [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
 [AEM Foundation](/help/release-notes/wcm-platform.md) 中提供了完整的更改列表。
 
-[!DNL Adobe Experience Manager] 6.5的平台以基于OSGi的框架（Apache Sling和Apache Felix）的更新版本和Java内容存储库为基础构建：阿帕奇·杰克拉布特·橡木1.10.2
+[!DNL Adobe Experience Manager] 6.5的平台基于基于OSGi的框架（Apache Sling和Apache Felix）和Java内容存储库的更新版本而构建：阿帕奇·杰克拉布特橡1.10.2。
 
 快速入门使用 Eclipse Jetty 9.4.15 作为 servlet 引擎。
 
 #### Java 支持   {#java-support}
 
 * 新增对 Java 11 及已支持的 Java 8 的支持.
-* 为获取最佳性能，请使用其他值覆盖默认的 GC 值。有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
-* Java 11和Java 8维护更新由Adobe分发，以便客户在AEM相关项目中进行使用，如果Oracle不公开提供。
+* 为获取最佳性能，请使用其他值覆盖默认的 GC 值。有关更多信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
+* Java 11和Java 8维护更新由Adobe分发，以便客户在与AEM相关的项目中使用(如果未从Oracle公开提供)。
 
 #### Java 开发 {#java-development}
 
-* 现在有[两个版本的Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)，一个推荐版本，其中包含未标记为停用的公共接口，以及一个包含已标记为停用的接口。
+* 现在有[两个版本的Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)，一个推荐的版本，其中包含未标记为弃用的公共接口，另一个版本包含标记为弃用的接口。
 
 #### 用户界面 {#user-interface}
 
@@ -69,7 +68,7 @@ ht-degree: 68%
 
 #### 搜索和索引{#indexing-and-search}
 
-* 在 Oak 中搜索现在支持动态 Facet。例如，资产搜索中的筛选器边栏会显示估计的结果量。
+* 在 Oak 中搜索现在支持动态 Facet。例如，资产搜索中的过滤器边栏会显示预计的结果量。
 * 扩展了 QueryBuilder 以提供包含动态 Facet 的结果.
 
 #### 升级 {#upgrade}
@@ -82,7 +81,7 @@ ht-degree: 68%
 
 ### [!DNL Experience Manager] 站点 {#experience-manager-sites}
 
-[AEM Sites和加载项](/help/release-notes/sites.md)中更改的完整列表。
+[AEM Sites和加载项](/help/release-notes/sites.md)中的更改的完整列表。
 
 #### 托管单页应用程序 {#managed-single-page-apps}
 
@@ -122,17 +121,17 @@ AEM 能够以不同的格式并且从堆栈的不同级别提供内容。自 200
 * 通过使用动态占位符，按照数据触发内容的位置或配置进行个性化。
 * 通过将 Adobe Analytics 集成到 AEM Screens 播放器驱动的统一分析
 
-有关对AEM Screens进行更改的详细信息——请参阅[《AEM Screens用户指南》](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
+有关对AEM Screens所做更改的更多详细信息 — 请参阅[AEM Screens用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)中的发行说明。
 
 ### [!DNL Experience Manager Assets] {#experience-manager-assets}
 
-[AEM 6.5资产发行说明中更改的完整列表](/help/release-notes/assets.md)。
+[AEM 6.5 Assets发行说明](/help/release-notes/assets.md)中的完整更改列表。
 
 AEM 6.5 引入了以下功能和增强功能，以提高 AEM 用户、DAM 角色以及相关的创意和营销角色的生产力。
 
 #### 与 Adobe Creative Cloud 集成  {#integration-with-adobe-creative-cloud}
 
-引入了 [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)（一种面向使用 Adobe Creative Cloud 应用程序（包括 Photoshop、Illustrator 和 InDesign）的创意用户的应用程序内体验，简化了创意人员和营销人员在内容创建过程中的协作。AEM桌面应用程序继续支持使用任何文件类型和任何桌面应用程序处理AEM桌面上资源的用户的需求。
+引入了 [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)（一种面向使用 Adobe Creative Cloud 应用程序（包括 Photoshop、Illustrator 和 InDesign）的创意用户的应用程序内体验，简化了创意人员和营销人员在内容创建过程中的协作。AEM桌面应用程序继续支持用户使用任何文件类型和任何桌面应用程序从桌面上的AEM处理资产。
 
 此外，AEM 与 Adobe Stock 集成，可帮助直接从 AEM Web UI 中查找、预览、许可和保存 Adobe Stock 资产。
 
@@ -140,7 +139,7 @@ AEM 6.5 引入了以下功能和增强功能，以提高 AEM 用户、DAM 角色
 
 #### 连接的资产 {#connected-assets}
 
-互联资产功能针对的是具有许多AEM Sites部署的较大部署，这些部署需要利用AEM Assets中部署的资产。 它允许围绕集中管理的资产改进管理，同时允许为各种站点部署高效地提供资产。
+“连接的资产”功能针对的是具有许多AEM Sites部署的较大部署，这些部署需要从中央AEM Assets DAM部署中利用资产。 它允许围绕集中管理的资产改进管理，同时允许为各种站点部署高效地提供资产。
 
 ### Dynamic Media {#dynamic-media}
 
@@ -148,10 +147,10 @@ Dynamic Media 在 AEM Assets 中提供了增强的富媒体创作和交付，以
 
 新增功能包括：
 
-* 支持360视频和VR头盔
+* 支持360视频和VR耳机
 * 自定义视频缩略图
 * 增强的辅助功能支持
-* 热链接保护
+* 热连接保护
 
 #### 用户体验和搜索 {#user-experience-and-search}
 
@@ -170,7 +169,7 @@ AEM 6.5 Forms 中引入了一些新增功能和增强功能。主要功能包括
 * 对自适应表单和交互式通信表格进行排序
 * 自动验证表单数据模型中的输入数据
 
-有关新增功能和改进功能以及文档资源的信息，请参见AEM 6.5Forms](/help/forms/using/whats-new.md)中新增功能和增强功能的[摘要。
+有关新增和改进功能及文档资源的信息，请参阅AEM 6.5 Forms中的[新增功能和增强功能摘要](/help/forms/using/whats-new.md)。
 
 ### [!DNL Experience Manager Communities] {#communitiesreleasenotes}
 
@@ -178,7 +177,7 @@ AEM 6.5 为 Communities 添加了一些新增功能和增强功能。此版本�
 
 * 在创作用户生成的内容时支持注册的成员标记 (@mention)。
 * 现在支持向成员组直接批量发送消息。
-* 在批量审核 UI 中开发并添加了自定义筛选器。演示按标签过滤的[示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)可用作开发类似自定义过滤器的基础。
+* 在批量审核 UI 中开发并添加了自定义筛选器。演示按标记进行筛选的[示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)可用作开发类似自定义筛选器的基础。
 * 在批量审核中提供了一个改进了 UI 的新列表视图。
 * 可以为不同的社区站点和嵌套组分配多个单独的管理员，而不是单个社区管理员。
 * AEM 6.5 Communities的启用功能支持[(SCORM)2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)引擎。
@@ -195,7 +194,7 @@ AEM 6.5 为 Communities 添加了一些新增功能和增强功能。此版本�
 
 Adobe 正在使用以客户为中心的开发模型，借助该模型，客户可以在规范、开发和测试期间对开发流程的所有阶段做出贡献。我们衷心感谢在这一流程中做出贡献的所有客户和合作伙伴。
 
-Adobe 实施了多种规程和流程来对以客户为中心的错误解决方案和增强请求开发进行收集、优先级排序和跟踪。[Adobe Marketing Cloud支持门户](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)与Adobe增强和缺陷跟踪系统集成。 在可能的情况下，客户关怀可以识别并解决客户问题。升级到 R&amp;D 时，将捕获所有客户信息，并将这些信息用于确定优先级和报告。在开发过程中，优先考虑付费支持、担保问题和客户付费增强。
+Adobe 实施了多种规程和流程来对以客户为中心的错误解决方案和增强请求开发进行收集、优先级排序和跟踪。[Adobe Marketing Cloud支持门户](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html)与Adobe增强和缺陷跟踪系统集成。 在可能的情况下，客户关怀可以识别并解决客户问题。升级到 R&amp;D 时，将捕获所有客户信息，并将这些信息用于确定优先级和报告。在开发过程中，优先考虑付费支持、被担保人问题和客户付费增强功能。
 
 这一确定优先级的流程已经产生了 750 多个以客户为中心的更改，并已在 AEM 6.5 中进行了修复。
 
@@ -205,7 +204,7 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 
 * 独立快速入门：`cq-quickstart-6.5.0.jar`。
 * 应用程序服务器快速启动：`cq-quickstart-6.5.0.war`。
-* 用于各种Web服务器和平台的调度程序4.3.2或更高版本。 请参阅[下载链接](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)
+* 适用于各种Web服务器和平台的Dispatcher 4.3.2或更高版本。 请参阅[下载链接](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)
 * 用于 Eclipse IDE 的插件（[了解更多并下载](/help/sites-developing/aem-eclipse.md)）
 
 * 用于 Brackets 代码编辑器的扩展（[了解更多并下载](/help/sites-developing/aem-brackets.md)）
@@ -239,7 +238,7 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 **表单**
 
 * [用于 AEM Forms 功能的软件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)
-* [AEM FormsOSGi客户端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [AEM Forms OSGi客户端SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
 
 ## 语言 {#languages}
 
@@ -266,11 +265,11 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 
 ## 支持的平台 {#supported-platforms}
 
-查找受支持平台的完整矩阵，包括[AEM 6.5技术要求](/help/sites-deploying/technical-requirements.md)的支持级别。
+查找支持的平台的完整矩阵，包括[AEM 6.5技术要求](/help/sites-deploying/technical-requirements.md)上的支持级别。
 
 >[!NOTE]
 >
->Oracle公司已经转向OracleJava SE产品的长期支持(LTS)模式。 Java 9和10是Oracle公司发布的非LTS版本。请参见[OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html)。 Adobe支持Java的LTS发行版，只运行AEM生产。 建议将Java 11与AEM 6.5一起使用。
+>Oracle已转为使用OracleJava SE产品的长期支持(LTS)模型。 Java 9和10是按Oracle列出的非LTS版本。请参阅[OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html)。 Adobe支持LTS版本的Java，以便仅在生产中运行AEM。 Java 11是要与AEM 6.5一起使用的推荐版本。
 
 ## 已弃用和已删除的功能 {#deprecated-and-removed-features}
 
@@ -282,12 +281,12 @@ Adobe 不断评估产品中的功能，以便随着时间的推移，计划使�
 
 [已知问题列表](/help/release-notes/known-issues.md)
 
-### 产品下载和支持（受限网站）  {#product-download-and-support-restricted-sites}
+### 产品下载和支持（受限站点）{#product-download-and-support-restricted-sites}
 
-以下站点仅对客户可用。 如果您是客户并且需要访问，请联系您的 Adobe 客户经理。
+以下网站仅供客户使用。 如果您是客户并且需要访问，请联系您的 Adobe 客户经理。
 
 * [产品下载：licensing.adobe.com](https://licensing.adobe.com/).
 
-* 有关[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上其他功能的产品更新、修补程序和软件包。
+* 产品更新、修补程序和软件包，以获取[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上的其他功能。
 
-* [通过Admin Console提供客户支持](https://adminconsole.adobe.com/)。有关详细信息，请参阅[新Adobe客户支持体验](https://docs.adobe.com/content/help/en/customer-one/using/home.html)。
+* [通过Admin Console提供客户支持](https://adminconsole.adobe.com/)。有关更多信息，请参阅[新Adobe客户支持体验](https://docs.adobe.com/content/help/en/customer-one/using/home.html)。
