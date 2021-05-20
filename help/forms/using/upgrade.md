@@ -10,53 +10,52 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '232'
 ht-degree: 5%
 
 ---
 
-
 # 升级到 AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5 Forms包含若干新增功能和增强功能，可简化表单和通信的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅[新增功能摘要文档](../../forms/using/whats-new.md)。
+AEM 6.5 Forms包含一些新增功能和增强功能，可简化表单和信函的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅[新增功能摘要文档](../../forms/using/whats-new.md)。
 
-您可以升级现有LiveCycle或AEM Forms安装，以获得AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、过程和资源不变。 升级时，还会保留元数据和进程的状态。 您可以选择升级途径以开始升级。
+您可以升级现有LiveCycle或AEM Forms安装，以获取AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、流程和资产完好无损。 升级时，还会保留元数据和进程状态。 您可以选择升级路径以开始升级。
 
-下图显示了OSGi上的AEM Forms的可用升级路径：
+下图显示了OSGi上AEM Forms的可用升级路径：
 
 ![](do-not-localize/osgi-upgrade-path.png)
 
 您可以从以下位置执行直接升级：
 
-* AEM 6.3 Forms on OSGi
+* OSGi上的AEM 6.3 Forms
 * AEM 6.4 Forms on OSGi
 
 您还可以从
 
-* AEM 6.0 Forms on OSGi
-* AEM 6.1 Forms on OSGi
+* OSGi上的AEM 6.0 Forms
+* OSGi上的AEM 6.1 Forms
 * AEM 6.2 Forms on OSGi
 
-下图显示了AEM Forms on JEE的可用升级路径：
+下图显示了JEE上AEM Forms的可用升级路径：
 
 ![](do-not-localize/jee-upgrade-6-5.png)
 
 您可以从以下位置执行直接升级：
 
-* AEM 6.3 Forms on JEE
-* AEM 6.4 Forms on JEE
+* AEM 6.3 JEE上的Forms
+* AEM 6.4 JEE上的Forms
 
 您还可以从
 
-* LiveCycle ES2
-* LiveCycle ES3
-* LiveCycle ES4 SP1
+* LiveCycleES2
+* LiveCycleES3
+* LiveCycleES4 SP1
 * AEM 6.0 Forms on JEE
 * AEM 6.1 Forms on JEE
-* AEM 6.2 Forms on JEE
+* AEM 6.2 JEE上的Forms
 
 <!--
 [Work in Progress]
