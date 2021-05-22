@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '582'
 ht-degree: 43%
 
 ---
@@ -124,7 +124,6 @@ ht-degree: 43%
    + [收藏集、片段和代码片段模板的多租户](multi-tenancy.md)
    + [对资产添加水印](watermarking.md)
    + [资产模板](asset-templates.md)
-   + [与 [!DNL Creative Cloud]共享文件夹的最佳实践](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
    + [使用 [!DNL Brand Portal]配置 [!DNL Assets] ](configure-aem-assets-with-brand-portal.md)
    + [将资产发布到 [!DNL Brand Portal]](brand-portal-publish-assets.md)
