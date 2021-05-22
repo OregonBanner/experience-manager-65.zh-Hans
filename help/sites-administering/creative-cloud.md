@@ -10,38 +10,40 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 7699c08b-a5b8-4f8b-8856-113d09349f49
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 525b11fbb60fc3568ecc028562ffbf174b8e4c37
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 18%
+source-wordcount: '80'
+ht-degree: 12%
 
 ---
 
 
-# 与Adobe Creative Cloud{#folder-sharing-with-adobe-creative-cloud}共享文件夹
+# 与Adobe Creative Cloud共享文件夹{#folder-sharing-with-adobe-creative-cloud}
 
 >[!CAUTION]
 >
->已弃用AEM到Creative Cloud文件夹共享功能。 强烈建议客户使用较新的功能，如[Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)或[AEM桌面应用程序](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html)。 请阅读[AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)了解更多信息。
+>AEM到Creative Cloud文件夹共享功能已弃用。 强烈建议客户使用较新的功能，如[Adobe资产链接](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)或[AEM桌面应用程序](https://helpx.adobe.com/cn/experience-manager/desktop-app/aem-desktop-app.html)。 请参阅[AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)，以了解更多信息。
 
-Adobe Experience Manager(AEM)资产允许您与Adobe Creative Cloud用户共享包含资产的文件夹。 有关如何配置Adobe Marketing Cloud以与Adobe Creative Cloud共享资产的详细信息，请参阅[配置资产-Creative Cloud集成](/help/sites-administering/configure-assets-cc-integration.md)。
+<!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 
-1. 在“资产”控制台中，选择要与Creative Cloud共享的文件夹。
+Adobe Experience Manager (AEM) Assets lets you share folders containing assets with Adobe Creative Cloud users. For details on how to configure Adobe Marketing Cloud to let you share assets with Adobe Creative Cloud, see [Configuring Assets-Creative Cloud integration](/help/sites-administering/configure-assets-cc-integration.md).
+
+1. In the Assets console, select a folder to share with Creative Cloud.
 
    ![](assets/chlimage_1-139.png)
 
-1. 在工具栏中，单击&#x200B;**共享**。
+1. From the toolbar, click **Share**.
 
    ![](assets/chlimage_1-140.png)
 
-1. 在列表中，选择&#x200B;**Adobe Creative Cloud**&#x200B;选项。
+1. From the list, select the **Adobe Creative Cloud** option.
 
    ![](assets/chlimage_1-141.png)
 
-1. 在&#x200B;**Creative Cloud共享**&#x200B;页面中，添加要与其共享文件夹的用户，然后单击&#x200B;**保存**。
+1. In the **Creative Cloud Sharing** page, add the user to share the folder with and then click **Save**.
 
    ![](assets/chlimage_1-142.png)
 
-1. 单击&#x200B;**确定**&#x200B;以关闭确认消息。
-1. 使用您与其共享文件夹的用户的凭证，登录到 Creative Cloud。此时共享的文件夹便可在 Creative Cloud 中使用。
+1. Click **Ok** to close the confirmation message.
+1. Log on to Creative Cloud with the credentials of the user you shared the folder with. The shared folder is available in Creative Cloud.
+-->
