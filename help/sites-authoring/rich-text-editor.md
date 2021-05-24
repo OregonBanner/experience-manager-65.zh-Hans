@@ -8,14 +8,13 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
-translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 70%
 
 ---
-
 
 # 使用富文本编辑器创作内容 {#use-rich-text-editor-to-author-content}
 
@@ -47,9 +46,9 @@ ht-degree: 70%
 
 ## 全屏编辑  {#full-screen-editing}
 
-对于基于文本的组件，点击工具栏![](do-not-localize/screen_shot_2018-03-21at163236.png)中的全屏模式可打开富文本编辑器并隐藏页面内容的其余部分。
+对于基于文本的组件，从工具栏![](do-not-localize/screen_shot_2018-03-21at163236.png)中点按全屏模式会打开富文本编辑器，并隐藏页面内容的其余部分。
 
-全屏模式显示所有可用于创作的已配置选项。 可用性是选项[取决于配置](/help/sites-administering/rich-text-editor.md)。
+全屏模式显示可用于创作的所有已配置选项。 可用性取决于配置](/help/sites-administering/rich-text-editor.md)。[
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
