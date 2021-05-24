@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
-translation-type: tm+mt
-source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 100%
 
 ---
-
 
 # 控制台的键盘快捷键{#keyboard-shortcuts-for-consoles}
 
@@ -96,4 +95,3 @@ AEM 为一些常用功能（编辑、属性、复制/粘贴、显示各种侧边
 >[!NOTE]
 >
 >列视图和内容树的导航快捷键始终处于激活状态。
-
