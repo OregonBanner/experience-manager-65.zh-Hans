@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 188434543403fab48f79be06356b86e132e2888a
+exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 97%
 
 ---
-
 
 # 处理页面版本{#working-with-page-versions}
 
@@ -41,7 +40,7 @@ ht-degree: 97%
 1. 打开&#x200B;**时间轴**&#x200B;列。
 1. 单击/点按评论字段旁边的箭头以显现以下选项：
 
-   ![screen-shot_2019-03-05at112335](assets/screen-shot_2019-03-05at112335.png)
+   ![screenshot_2019-03-05at112335](assets/screen-shot_2019-03-05at112335.png)
 
 1. 选择&#x200B;**另存为版本**。
 1. 根据需要输入&#x200B;**标签**&#x200B;和&#x200B;**评论**。
@@ -92,7 +91,7 @@ ht-degree: 97%
 1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。 将列出所选页面的页面版本。
 1. 选择要还原到的版本。将显示可能的选项：
 
-   ![screen-shot_2019-03-05at112505](assets/screen-shot_2019-03-05at112505.png)
+   ![screenshot_2019-03-05at112505](assets/screen-shot_2019-03-05at112505.png)
 
 1. 选择“**还原到此版本**”。将恢复到所选版本，并在时间轴中更新信息。
 
@@ -105,7 +104,7 @@ ht-degree: 97%
 1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。
 1. 将列出页面版本。选择要预览的版本：
 
-   ![screen-shot_2019-03-05at112505-1](assets/screen-shot_2019-03-05at112505-1.png)
+   ![screenshot_2019-03-05at112505-1](assets/screen-shot_2019-03-05at112505-1.png)
 
 1. 选择&#x200B;**预览**。该页面将显示在新选项卡中。
 
@@ -125,11 +124,11 @@ ht-degree: 97%
 1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。
 1. 将列出页面版本。选择要进行比较的版本：
 
-   ![screen-shot_2019-03-05at112505-2](assets/screen-shot_2019-03-05at112505-2.png)
+   ![screenshot_2019-03-05at112505-2](assets/screen-shot_2019-03-05at112505-2.png)
 
 1. 选择&#x200B;**与当前比较**。此时将打开[页面差异](/help/sites-authoring/page-diff.md)，并显示存在的差异。
 
-## 时间扭曲  {#timewarp}
+## 时间扭曲 {#timewarp}
 
 时间扭曲是一项功能，旨在模拟过去特定时间某个页面的&#x200B;*已发布*&#x200B;状态。
 
@@ -172,4 +171,4 @@ ht-degree: 97%
 
 >[!CAUTION]
 >
->时间扭曲是一种工具，可帮助作者理解和创建其内容。 而不是用作审查日志或用于法律目的。
+>时间扭曲旨在作为一种工具，帮助作者理解和创建其内容。 而不是用作审查日志或用于法律目的。
