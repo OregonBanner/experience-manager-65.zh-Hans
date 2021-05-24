@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 85%
 
 ---
-
 
 # 基架{#scaffolding}
 
@@ -26,5 +25,4 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->尽管有可用的基架[mode](/help/sites-authoring/author-environment-tools.md#page-modes)，但基架的维护和创建以及从基架创建新页面都是在经典UI中完成的。 有关详细信息，请参阅经典 UI 创作文档中的[基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
-
+>尽管有可用的基架[模式](/help/sites-authoring/author-environment-tools.md#page-modes)，但是基架的维护和创建以及从基架创建新页面都是在经典UI中完成的。 有关详细信息，请参阅经典 UI 创作文档中的[基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)。
