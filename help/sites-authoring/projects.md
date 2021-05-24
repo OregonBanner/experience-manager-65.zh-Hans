@@ -2,7 +2,7 @@
 title: 项目
 seo-title: 项目
 description: 通过“项目”，您可以将资源分组到一个实体中，该实体的通用共享环境使您能够轻松管理项目
-seo-description: 项目 您可以将资源分组到一个实体中，该实体的通用共享环境使您能够轻松管理项目
+seo-description: 通过“项目”，您可以将资源分组到一个实体中，该实体的通用共享环境使您能够轻松管理项目
 uuid: 4b5b9d78-d515-46af-abe2-882da0a1c8ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: projects
 content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
-translation-type: tm+mt
-source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
+exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1399'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
-
 
 # 项目{#projects}
 
@@ -25,7 +24,7 @@ ht-degree: 85%
 
 >[!CAUTION]
 >
->对于项目中的用户，要在使用项目功能(如创建项目、创建任务/工作流、查看和管理团队)时查看其他用户/组，这些用户需要对&#x200B;**/home/users**&#x200B;和&#x200B;**/home/groups**&#x200B;具有读取权限。 实现此功能的最简单方法是向&#x200B;**projects-users**&#x200B;组授予对&#x200B;**/home/users**&#x200B;和**/home/groups**的读取权限。
+>对于项目中的用户，要在使用“项目”功能（如创建项目、创建任务/工作流、查看和管理团队）时查看其他用户/组，这些用户需要具有对&#x200B;**/home/users**&#x200B;和&#x200B;**/home/groups**&#x200B;的读取权限。 实现此操作的最简单方法是向&#x200B;**projects-users**&#x200B;组授予对&#x200B;**/home/users**&#x200B;和**/home/groups**的读取权限。
 
 作为用户，您可以执行以下操作：
 
@@ -41,11 +40,11 @@ ht-degree: 85%
 * [使用项目工作流](/help/sites-authoring/projects-with-workflows.md)
 * [创意项目和 PIM 集成](/help/sites-authoring/managing-product-information.md)
 
-## “项目”控制台  {#projects-console}
+## “项目”控制台{#projects-console}
 
 在“项目”控制台中，您可以访问和管理 AEM 中的项目。
 
-![screen-shot_2019-03-05at125110](assets/screen-shot_2019-03-05at125110.png)
+![screenshot_2019-03-05at125110](assets/screen-shot_2019-03-05at125110.png)
 
 * 选择&#x200B;**时间轴**，然后选择一个项目可查看其时间轴。
 * 单击/点按&#x200B;**选择**&#x200B;可进入选择模式。
@@ -86,9 +85,9 @@ ht-degree: 85%
 
 ![chlimage_1-72](assets/chlimage_1-72.png)
 
-单击&#x200B;**添加收藏集**&#x200B;并从列表中选择相应的收藏集，可添加收藏集。
+通过单击添加收藏集 **并从列表中选择** 相应的收藏集来添加收藏集。
 
-### 体验  {#experiences}
+### 体验 {#experiences}
 
 **体验**&#x200B;拼贴允许您将移动设备应用程序、网站或出版物添加到项目中。
 
@@ -126,7 +125,7 @@ ht-degree: 85%
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 
-单击&#x200B;**翻译作业**&#x200B;卡底部的省略号，以视图翻译工作流中的资产。 翻译作业列表还会显示资产元数据和标记条目。这些条目指示资产的元数据和标记也会被翻译。
+单击&#x200B;**翻译作业**&#x200B;卡片底部的省略号，以查看翻译工作流中的资产。 翻译作业列表还会显示资产元数据和标记条目。这些条目指示资产的元数据和标记也会被翻译。
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
@@ -148,7 +147,7 @@ ht-degree: 85%
 
 此工作流在[创建登陆页面工作流](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)中进行了介绍。
 
-### 电子邮件  {#emails}
+### 电子邮件 {#emails}
 
 **电子邮件**&#x200B;拼贴可帮助您管理电子邮件请求。它会启动请求电子邮件工作流。
 
@@ -182,8 +181,8 @@ ht-degree: 85%
 
 AEM 提供了四种不同的现成模板：
 
-* 简单项目 — 任何不适合其他类别的项目的参考示例（全部捕获）。 它包括三个基本角色（所有者、编辑者和观察者）和四个工作流（项目批准、请求启动项、请求登陆页面和请求电子邮件）。
-* 媒体项目 — 与媒体相关的活动的参考示例项目。 它包括几个与媒体相关的项目角色（摄影师、编辑者、撰稿人、设计师、所有者和观察者）。此外，它还包括两个与媒体内容相关的工作流 - 请求复制（用于请求和查看文本）和产品照片拍摄（用于管理与产品相关的照片）。
+* 简单项目 — 任何不适合其他类别（全包）的项目的参考示例。 它包括三个基本角色（所有者、编辑者和观察者）和四个工作流（项目批准、请求启动项、请求登陆页面和请求电子邮件）。
+* 媒体项目 — 与媒体相关的活动的引用示例项目。 它包括几个与媒体相关的项目角色（摄影师、编辑者、撰稿人、设计师、所有者和观察者）。此外，它还包括两个与媒体内容相关的工作流 - 请求复制（用于请求和查看文本）和产品照片拍摄（用于管理与产品相关的照片）。
 * [产品照片拍摄项目](/help/sites-authoring/managing-product-information.md)  — 用于管理与电子商务相关的产品照片的参考示例。它包括以下角色：摄影师、编辑者、修图师、所有者、创意总监、社交媒体营销人员、营销经理、审阅者和观察者。
 * [翻译项目](/help/sites-administering/translation.md) - 用于管理翻译相关活动的参考示例。它包括三个基本角色（所有者、编辑者和观察者）。此外，它还包括两个可在工作流用户界面中访问的工作流。
 
@@ -233,7 +232,7 @@ AEM 提供了四种不同的现成模板：
     </ul> </td>
    <td>
     <ul>
-     <li>DAM用户组（可创建项目）</li>
+     <li>DAM用户组（能够创建项目）</li>
      <li>项目管理员组（能够创建项目和移动资产）</li>
     </ul> </td>
   </tr>
