@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 99%
 
 ---
-
 
 # 通过内容片段进行页面创作{#page-authoring-with-content-fragments}
 
@@ -94,7 +93,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
    >
    >
    >    * [响应式布局](/help/sites-authoring/responsive-layout.md)
-   >    * [编辑页面内容](/help/sites-authoring/editing-content.md)
+   * [编辑页面内容](/help/sites-authoring/editing-content.md)
 
 
 ### 选择元素或变量 {#selecting-the-element-or-variation}
@@ -119,8 +118,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
    * 如果片段是通过适当的模板创建的，将有可选择的元素可用。
 
    >[!NOTE]
-   >
-   >有哪些元素可用取决于所使用的模板。
+   有哪些元素可用取决于所使用的模板。
 
 * **变量**
 
@@ -141,8 +139,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 您可以打开片段源，以使用组件工具栏中的&#x200B;**编辑**&#x200B;图标编辑（资产）。这将允许您[编辑和管理内容片段](/help/assets/content-fragments/content-fragments.md)。
 
 >[!CAUTION]
->
->通常情况下，编辑片段源将会影响引用该内容片段的所有页面。
+通常情况下，编辑片段源将会影响引用该内容片段的所有页面。
 
 ### 添加中间内容  {#adding-in-between-content}
 
@@ -157,30 +154,21 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 * 使用[关联内容](#using-associated-content)作为中间内容的源。
 
 >[!CAUTION]
->
->中间内容是页面内容。它不会存储在内容片段中。
+中间内容是页面内容。它不会存储在内容片段中。
 
 ![cfm-6420-02](assets/cfm-6420-02.png)
 
 >[!NOTE]
->
->您还可以[在片段本身中插入可视资产（图像）](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
->
->在片段本身中插入的可视资产会附加到片段中的前一段落后面。这意味着无法在可视资产与前一段落之间放置中间内容。
+您还可以[在片段本身中插入可视资产（图像）](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)。
+在片段本身中插入的可视资产会附加到片段中的前一段落后面。这意味着无法在可视资产与前一段落之间放置中间内容。
 
 >[!CAUTION]
->
->在将中间内容添加到页面上的内容片段之后，更改基础内容片段的结构（例如在内容片段编辑器中）可能会导致错误/意外的结果。
->
->在发生此问题时，中间内容会按原样保留：
->
->* 中间组件在片段流的组件序列中具有一个绝对位置。即使片段中段落的内容发生更改，此位置也不会变化。
->
->  
-这可能使其看起来像是相对位置发生了更改一样，因为中间段落与它们旁边的（片段）段落之间没有上下文关系。
->* 除非两个段落结构产生冲突；在这种情况下，将不会显示中间内容（尽管它在内部依然存在）。
+在将中间内容添加到页面上的内容片段之后，更改基础内容片段的结构（例如在内容片段编辑器中）可能会导致错误/意外的结果。
+在发生此问题时，中间内容会按原样保留：
+* 中间组件在片段流的组件序列中具有一个绝对位置。即使片段中段落的内容发生更改，此位置也不会变化。
 
->
+这可能使其看起来像是相对位置发生了更改一样，因为中间段落与它们旁边的（片段）段落之间没有上下文关系。
+* 除非两个段落结构产生冲突；在这种情况下，将不会显示中间内容（尽管它在内部依然存在）。
 
 
 
@@ -189,12 +177,10 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 如果您有与[内容片段关联的](/help/assets/content-fragments/content-fragments-assoc-content.md)[内容](/help/assets/content-fragments/content-fragments.md) ，则这些资产将从侧面板（在将片段放置到内容页面后）中可用。 关联内容实际上是中间内容的[特殊内容源](#adding-in-between-content)。
 
 >[!NOTE]
->
->可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
+可以通过多种方法向片段和/或页面中添加[可视资产（例如图像）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)。
 
 >[!NOTE]
->
->如果您在一个页面中拥有多个内容片段，**关联内容**&#x200B;选项卡将显示适用于所有片段的资产。
+如果您在一个页面中拥有多个内容片段，**关联内容**&#x200B;选项卡将显示适用于所有片段的资产。
 
 在将具有关联内容的片段添加到页面之后，将会在侧面板中打开一个新的选项卡（**关联内容**）。
 
@@ -221,4 +207,3 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 * 可于[在资产控制台中创建片段](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment)之后发布的片段。
 * 如果在当前发布的页面中使用了&#x200B;*未发布的片段*，那么也可以在这一时候发布该片段。
-
