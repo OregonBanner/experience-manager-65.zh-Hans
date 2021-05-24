@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 88%
 
 ---
-
 
 # 发布页面 {#publishing-pages}
 
@@ -40,7 +39,7 @@ ht-degree: 88%
    >
    >
 * **复制**
-   >  这些是描述数据（例如，页面内容、文件、代码、用户评论）从一个环境移动到另一个的技术术语，例如在发布或反向复制用户评论时。
+   >  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户评论）从一个环境移动到另一个环境（例如在发布或反向复制用户评论时）的移动。
 >
 
 
@@ -102,7 +101,7 @@ ht-degree: 88%
 * [快速发布](/help/sites-authoring/publishing-pages.md#quick-publish)
 * [管理发布](/help/sites-authoring/publishing-pages.md#manage-publication)
 
-#### 快速发布  {#quick-publish}
+#### 快速发布 {#quick-publish}
 
 **快速发布**&#x200B;适用于一些简单的情况，可立即发布选定的页面，而无需进行任何进一步的交互。正因为这一点，任何未发布的引用也将被自动发布。
 
@@ -112,7 +111,7 @@ ht-degree: 88%
 
    ![pp-02](assets/pp-02.png)
 
-1. 在“快速发布”对话框中，单击&#x200B;**发布**&#x200B;以确认发布，或单击&#x200B;**取消**&#x200B;以取消。 请记住，任何未发布的引用也将被自动发布。
+1. 在“快速发布”对话框中，单击&#x200B;**Publish**&#x200B;以确认发布，或单击&#x200B;**Cancel**&#x200B;以取消发布。 请记住，任何未发布的引用也将被自动发布。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -195,7 +194,7 @@ ht-degree: 88%
 
    >[!NOTE]
    >
-   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。有关详细信息，请参阅本页](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)上的[上一条关于发布权限的说明，以及[管理对工作流的访问](/help/sites-administering/workflows-managing.md)和[将工作流应用到页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)。
+   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。有关详细信息，请参阅此页面](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)上有关发布权限的[前一注释，以及[管理对工作流的访问](/help/sites-administering/workflows-managing.md)和[将工作流应用到页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)。
 
    资源将按触发的工作流分组，并且每组都提供了用于执行以下操作的选项：
 
@@ -216,7 +215,7 @@ ht-degree: 88%
 * [从页面编辑器中](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [从站点控制台中](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
 
-### 从编辑器中取消发布  {#unpublishing-from-the-editor}
+### 从编辑器中取消发布 {#unpublishing-from-the-editor}
 
 在编辑页面时，如果您希望取消发布该页面，请选择&#x200B;**页面信息**&#x200B;菜单中的&#x200B;**取消发布页面**，这与[发布页面](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)非常类似。
 
@@ -262,7 +261,7 @@ ht-degree: 88%
 
    请记住，您还可以通过&#x200B;**已发布引用**&#x200B;选项查看要发布的引用。
 
-1. [按正规方式继续管理发](#manage-publication) 布向导，以完成树的发布或取消发布。
+1. [按照标准继续“管理发](#manage-publication) 布”向导，以完成发布或取消发布树的过程。
 
 ## 确定发布状态 {#determining-publication-status}
 
@@ -270,7 +269,7 @@ ht-degree: 88%
 
 * 在[站点控制台上的资源概述信息](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中
 
-   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
+   ![screenshot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
    站点控制台的[卡片](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)和[列表](/help/sites-authoring/basic-handling.md#list-view)视图中将显示发布状态。
 
