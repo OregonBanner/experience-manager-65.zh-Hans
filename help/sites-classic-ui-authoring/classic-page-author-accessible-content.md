@@ -10,38 +10,33 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
-translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '9241'
 ht-degree: 94%
 
 ---
 
-
 # 创建辅助内容（WCAG 2.0 符合性）{#creating-accessible-content-wcag-conformance}
 
 >[!CAUTION]
 >
->由于AEM 6.4中已弃用经典UI，因此尚未更新此页面上的内容以用于WCAG 2.1。
+>由于AEM 6.4中已弃用经典UI，因此WCAG 2.1未更新此页面上的内容。
 >
 >有关AEM和WCAG 2.1的详细信息，请参阅以下页面：
 >
 >* [AEM 和 Web 辅助功能规范](/help/managing/web-accessibility.md)
->* [WCAG 2.1 快速指南](/help/managing/qg-wcag.md)
->* [创建无障碍内容（WCAG 2.1 合规性）](/help/sites-authoring/creating-accessible-content.md)
+* [WCAG 2.1 快速指南](/help/managing/qg-wcag.md)
+* [创建无障碍内容（WCAG 2.1 合规性）](/help/sites-authoring/creating-accessible-content.md)
 
 
 WCAG 2.0 包含一系列非技术层面的准则及成功标准，旨在确保残障人士能够访问并使用 Web 内容。
 
 >[!NOTE]
->
->另请参阅：
->
->* 我们的 [WCAG 2.0 快速指南](/help/managing/qg-wcag.md)，以进一步了解详细信息
->* [配置富文本编辑器以创建辅助内容](/help/sites-administering/rte-accessible-content.md)
-
->
+另请参阅：
+* 我们的 [WCAG 2.0 快速指南](/help/managing/qg-wcag.md)，以进一步了解详细信息
+* [配置富文本编辑器以创建辅助内容](/help/sites-administering/rte-accessible-content.md)
 
 
 
@@ -56,17 +51,12 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 以下部分介绍 [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)以及[符合](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html) A 级和 AA 级的相关成功标准。
 
 >[!NOTE]
->
->鉴于某些类型的内容无法满足所有的 AAA 级成功标准，因此不建议将该级别作为整体策略目标。
+鉴于某些类型的内容无法满足所有的 AAA 级成功标准，因此不建议将该级别作为整体策略目标。
 
 >[!NOTE]
->
->在此文档中，我们将使用：
->
->* [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)的简称。
->* [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)中使用的编号，以便与 WCAG 网站进行交叉引用。
-
->
+在此文档中，我们将使用：
+* [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)的简称。
+* [WCAG 2.0 准则](https://www.w3.org/TR/WCAG20/#guidelines)中使用的编号，以便与 WCAG 网站进行交叉引用。
 
 
 
@@ -95,8 +85,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 对于静态图形，基本的要求是为图形提供对等的替换文本。这可以在&#x200B;**替换文本**&#x200B;字段中完成：
 
 >[!NOTE]
->
->一些现成的组件（如&#x200B;**轮播**&#x200B;和&#x200B;**幻灯片**&#x200B;放映）不提供向图像添加替代文本描述的方法。为AEM实例实施这些版本时，开发团队需要配置这些组件以支持`alt`属性，以便作者可以将其添加到内容中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
+一些现成的组件（如&#x200B;**轮播**&#x200B;和&#x200B;**幻灯片**&#x200B;放映）不提供向图像添加替代文本描述的方法。在为AEM实例实施这些版本时，开发团队将需要配置这些组件以支持`alt`属性，以便作者可以将其添加到内容中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 **替换文本**&#x200B;字段显示在&#x200B;**图像**&#x200B;组件对话框的&#x200B;**高级**&#x200B;图像属性选项卡中：
 
@@ -110,15 +99,13 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 资产:
 
-   图像会从数字资产存储库添加。 如果将某幅图像从数字资产存储库拖放到网页上，则该图像的&#x200B;**标题**&#x200B;和&#x200B;**替换文本**&#x200B;值将从该图像的元数据中获取。
+   从数字资产存储库添加图像。 如果将某幅图像从数字资产存储库拖放到网页上，则该图像的&#x200B;**标题**&#x200B;和&#x200B;**替换文本**&#x200B;值将从该图像的元数据中获取。
 
 >[!NOTE]
->
->在以上两种情况下，默认的&#x200B;**替代文本**&#x200B;值在&#x200B;**高级图像属性**&#x200B;选项卡中不可见。要更改默认值，只需在&#x200B;**替代文本**&#x200B;字段中输入新值。
+在以上两种情况下，默认的&#x200B;**替换文本**&#x200B;值在&#x200B;**高级图像属性**&#x200B;选项卡中不可见。要更改默认值，只需在&#x200B;**替换文本**&#x200B;字段中输入新值即可。
 
 >[!NOTE]
->
->如果图像仅起装饰作用（请参阅[创建有效的替换文本](#creating-good-text-alternatives)），则可以使用空格键在&#x200B;**替换文本**&#x200B;字段中输入空格。这将创建空的 `alt` 属性，以便提示屏幕阅读器忽略该图像。
+如果图像仅起装饰作用（请参阅[创建有效的替换文本](#creating-good-text-alternatives)），则可以使用空格键在&#x200B;**替换文本**&#x200B;字段中输入空格。这将创建空的 `alt` 属性，以便提示屏幕阅读器忽略该图像。
 
 #### 创建有效的替换文本 {#creating-good-text-alternatives}
 
@@ -141,7 +128,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 说明性照片：
 
-   这些是人物、物体或地点的图像。 想想照片在页面中的作用；相应的对等文本可能是[object ]*的*&#x200B;照片，但可能取决于周围的文本。
+   这些是人、物体或地点的图像。 想想照片在页面中的作用；相应的对等文本可能是[对象&#x200B;]*的照片，但可能取决于周围的文本。*
 
 * 图标：
 
@@ -149,7 +136,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 图表和图形：
 
-   这些通常表示数值数据。 因此，替换文本的选择之一就是简要地总结图表或图形中表现出来的主要趋势。如有必要，还可以使用&#x200B;**高级**&#x200B;图像属性选项卡中的&#x200B;**说明**&#x200B;字段以文本形式提供更详细的说明。 此外，还可以在页面或站点的其他位置以表形式提供源数据。
+   这些通常表示数值数据。 因此，替换文本的选择之一就是简要地总结图表或图形中表现出来的主要趋势。如有必要，还可以使用&#x200B;**Advanced**&#x200B;图像属性选项卡中的&#x200B;**Description**&#x200B;字段以文本形式提供更详细的描述。 此外，还可以在页面或站点的其他位置以表形式提供源数据。
 
    ![图形示例。下面是提供替代文本的最佳方法。](assets/chlimage_1-2a.jpeg)
 
@@ -162,18 +149,17 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
    ```
 
    >[!NOTE]
-   >
-   >以上代码片段仅用于说明操作顺序。建议使用&#x200B;**图像**&#x200B;组件（而非上述示例所使用的 `img src` 引用）。
+   以上代码片段仅用于说明操作顺序。建议使用&#x200B;**图像**&#x200B;组件（而非上述示例所使用的 `img src` 引用）。
 
    在 AEM 中，可以结合使用 **Alt 文本**&#x200B;和图像配置对话框中的&#x200B;**描述**&#x200B;字段来实现这一点 - 请参阅[如何处理非文本内容 (1.1.1)](#how-to-meet-non-text-content)。
 
-* 地图、图表、流程图：
+* 映射、图、流程图：
 
    对于提供空间数据的图形(例如， 要支持描述对象或进程之间的关系)，请确保以文本格式提供关键消息。对于映射，提供等效完整文本可能不太现实，但如果提供映射来作为帮助相关人员找到特定位置的一种方法，则映射图像的替代文本可以简短地指示为“X 映射”**，然后在页面其他位置的文本中或者通过&#x200B;**图像**&#x200B;组件&#x200B;**高级**&#x200B;选项卡中的&#x200B;**描述**&#x200B;字段提供该特定位置的说明。
 
-* CAPTCHA:
+* 验证码：
 
-   CAPTCHA是&#x200B;*完全自动化的公共图灵测试，用于告诉计算机和人类Apart*。 这是一项在网页中用于区分人类和恶意软件的安全检查，但同时也会妨碍网页的辅助功能。用户要想通过安全测试，必须按照要求描述自己所看到的这些图像。为这些图像提供替换文本显然是不可能的，因此需要思考出非图形的替代解决方案。
+   CAPTCHA是&#x200B;*Completely Automated Public Turing test to tell Computers and Humans Apart*的测试。 这是一项在网页中用于区分人类和恶意软件的安全检查，但同时也会妨碍网页的辅助功能。用户要想通过安全测试，必须按照要求描述自己所看到的这些图像。为这些图像提供替换文本显然是不可能的，因此需要思考出非图形的替代解决方案。
 
 
    W3C 提供了许多建议，例如：（这些方法各有优缺点。）
@@ -184,13 +170,12 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 
 * 背景图像：
 
-   这些属性是使用层叠样式表(CSS)而不是HTML实现的。 这就意味着无法指定替换文本值。因此，背景图像不应提供重要的文本信息——如果提供，则这些信息还必须在页面的文本中提供。
+   这些操作是使用层叠样式表(CSS)而不是HTML实现的。 这就意味着无法指定替换文本值。因此，背景图像不应提供重要的文本信息 — 如果提供，则这些信息还必须在页面文本中提供。
 
    尽管如此，当图像无法显示时，也应务必显示替代背景。
 
    >[!NOTE]
-   >
-   >背景与前景文本之间应该有适当的对比度等级；这在[对比度（最小）(1.4.3)](#contrast-minimum) 中有更加详细的讨论。
+   背景与前景文本之间应该有适当的对比度等级；这在[对比度（最小）(1.4.3)](#contrast-minimum) 中有更加详细的讨论。
 
 #### 更多信息 - 非文本内容 (1.1.1)  {#more-information-non-text-content}
 
@@ -241,14 +226,12 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
    * 或者，指向以常用的音频格式（如 MP3）呈现的对等音频描述。
 
 >[!NOTE]
->
->如果音频或视频内容是作为替代内容提供的，且被它们替代的内容已经以其他格式存在于网页上，则无需遵循上述要求。例如，如果某段视频是用来介绍一系列文本说明的，那么就无需为这段视频提供替代内容，因为文本说明已经起到了替代视频的作用。
+如果音频或视频内容是作为替代内容提供的，且被它们替代的内容已经以其他格式存在于网页上，则无需遵循上述要求。例如，如果某段视频是用来介绍一系列文本说明的，那么就无需为这段视频提供替代内容，因为文本说明已经起到了替代视频的作用。
 
 在 AEM 网页中插入多媒体（尤其是 Flash 内容）的方式与插入图像类似。但是，多媒体内容与静态图像相比还是更为复杂，而且在控制多媒体的播放方式时有各种不同的设置和选项。
 
 >[!NOTE]
->
->如果将多媒体与信息性内容结合使用，则也必须创建替代内容的链接。例如，要加入文本记录，应创建一个用于显示记录的 HTML 页面，然后在音频内容旁边或下方添加一个链接。
+如果将多媒体与信息性内容结合使用，则也必须创建替代内容的链接。例如，要加入文本记录，应创建一个用于显示记录的 HTML 页面，然后在音频内容旁边或下方添加一个链接。
 
 #### 更多信息 - 纯音频和纯视频（预先录制）(1.2.1) {#more-information-audio-only-and-video-only-pre-recorded}
 
@@ -266,8 +249,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 耳聋或听力欠佳的用户无法或很难获取音频内容。字幕是讲话和非讲话音频的对等文本，在视频播放过程中会在相应的时间显示在屏幕上。这让无法听到音频的用户可以了解正在播放的内容。
 
 >[!NOTE]
->
->如果视频或动画所在的页面包含合适的对等文本或非文本内容（提供直接对等的信息），则不需要字幕。
+如果视频或动画所在的页面包含合适的对等文本或非文本内容（提供直接对等的信息），则不需要字幕。
 
 #### 如何达到标准 - 字幕（预先录制）(1.2.2)  {#how-to-meet-captions-pre-recorded}
 
@@ -366,7 +348,7 @@ Web 内容通常依据三个符合性级别进行分级：A 级（最低）、AA
 * [了解成功标准 1.2.5](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html)
 * [如何达到成功标准 1.2.5](https://www.w3.org/WAI/WCAG20/quickref/#qr-media-equiv-audio-desc-only)
 
-### 适应性 (1.3)  {#adaptable}
+### 适应性 (1.3) {#adaptable}
 
 [准则 1.3 适应性：创建可用不同方式呈现的内容（例如更简单的布局），而不会丢失信息或结构。](https://www.w3.org/TR/WCAG20/#content-structure-separation)
 
@@ -400,7 +382,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 * **使用标题：**
 
-   只要启用了RTE的辅助功能(请参阅[AEM和辅助功能](/help/sites-administering/rte-accessible-content.md)),AEM就会优惠3级页面标题。您可以使用这些组件来标识内容的章节和子章节。标题1是最高级别的标题，标题3是最低的。系统管理员可以配置系统以允许使用更多标题级别。
+   只要启用了RTE的辅助功能(请参阅[AEM和辅助功能](/help/sites-administering/rte-accessible-content.md)),AEM就会提供3个级别的页面标题。您可以使用这些参数标识内容的章节和子章节。标题1是最高级别的标题，标题3是最低级别的标题。系统管理员可以配置系统以允许使用更多标题级别。
 
    下图显示了各类标题的示例。
 
@@ -411,20 +393,18 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
    使用 &lt;strong> 或 &lt;em> 元素表明要强调的内容。切勿在段落中使用标题突出显示文本。
 
    * 突出显示要强调的文本；
-   * 单击&#x200B;**属性**&#x200B;面板中显示的&#x200B;**B**&#x200B;图标（对于&lt;strong>）或&#x200B;**I**&#x200B;图标（对于&lt;em>）（确保已选择HTML）。
+   * 单击&#x200B;**B**&#x200B;图标（表示&lt;strong>）或&#x200B;**属性**&#x200B;面板中显示的&#x200B;**I**&#x200B;图标（表示&lt;em>）（确保已选择HTML）。
 
    >[!NOTE]
-   >
-   >标准 AEM 安装中的 RTE（富文本编辑器）设置为：
-   >
-   >* 使用 &lt;b> 表示 &lt;strong>
+   标准 AEM 安装中的 RTE（富文本编辑器）设置为：
+   * 使用 &lt;b> 表示 &lt;strong>
    * 使用 &lt;i> 表示 &lt;em>
 
    尽管两种形式效果相同，但是最好使用 &lt;strong> 和 &lt;em>，因为从语义上来讲，它们才是正确的 HTML 标记。开发团队在开发项目实例时，可以将 RTE 配置为使用 &lt;strong> 和 &lt;em>（而非 &lt;b> 和 &lt;i>）。
 
 * **使用列表**：可以使用 HTML 指定三种不同类型的列表：
 
-   * `<ul>`元素用于&#x200B;*无序*&#x200B;列表（项目符号）列表。 单个列表项使用 `<li>` 元素进行标识。
+   * `<ul>`元素用于&#x200B;*未排序*&#x200B;列表（项目符号）列表。 单个列表项使用 `<li>` 元素进行标识。
 
 
       在RTE中，使用&#x200B;**项目符号列表**&#x200B;图标。
@@ -457,7 +437,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
    * `<th>` 元素的 `scope` 属性用于指示某个单元格表示特定行的标题，还是特定列的标题。在复杂的表中，即数据单元格可能与一个或多个标题相关联的情况下，类似的方法是使用标题和 id 属性。
 
    >[!NOTE]
-   默认情况下，这些元素和属性不直接可用，但系统管理员可以在&#x200B;**表属性**&#x200B;对话框中添加对这些值的支持（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
+   默认情况下，这些元素和属性并非直接可用，但系统管理员可以在&#x200B;**表属性**&#x200B;对话框中添加对这些值的支持（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
    添加&#x200B;**表**&#x200B;时，可以使用对话框配置&#x200B;**表属性**。
 
@@ -466,7 +446,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
    ![“表属性”对话框。](assets/chlimage_1-20a.png)
 
-   然后，您可以使用&#x200B;**单元格属性**&#x200B;选择单元格是数据单元格还是标题单元格；如果单元格是标题单元格，则选择该单元格是与行还是列相关，还是与两者都相关：
+   然后，可以使用&#x200B;**单元格属性**&#x200B;来选择单元格是数据单元格还是标题单元格，如果是标题单元格，则选择该单元格是与行或列相关，还是与两者都相关：
 
    ![调用属性对话框；将某个行（通常是首行）设置为标题行。](assets/chlimage_1-21a.png)
 
@@ -547,7 +527,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 * [了解成功标准 1.3.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
 * [如何达到成功标准 1.3.3](https://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-understanding)
 
-### 可辨别性 (1.4)  {#distinguishable}
+### 可辨别性 (1.4) {#distinguishable}
 
 [准则 1.4 可辨别性：使用户更容易看到和听到内容，包括将前景与背景分离开。](https://www.w3.org/TR/WCAG20/#visual-audio-contrast)
 
@@ -706,7 +686,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 * [了解成功标准 2.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 * [如何达到成功标准 2.2.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
 
-### 癫痫发作 (2.3)  {#seizures}
+### 癫痫发作 (2.3) {#seizures}
 
 [准则 2.3 癫痫发作：切勿设计会导致癫痫发作的内容。](https://www.w3.org/TR/WCAG20/#seizure)
 
@@ -749,7 +729,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。可在 RTE（富文
 
 在 AEM 中创建新 HTML 页面时，可以指定页面标题。应确保标题能够充分描述页面内容，以便访客能够快速识别该页面的内容是否与自己的需求切实相关。
 
-编辑页面时，您还可以编辑页面标题，可通过&#x200B;**Sidekick** - **页面**&#x200B;选项卡- **页面属性……访问该页面。**
+您还可以在编辑页面时编辑页面标题，可通过&#x200B;**Sidekick** - **页面**&#x200B;选项卡 — **页面属性……访问该设置。**
 
 #### 更多信息 - 页面带有标题 (2.4.2) {#more-information-page-titled}
 
@@ -898,7 +878,7 @@ John Smith’s publications
 >[!NOTE]
 如果包含使用不同语言的人名或城市，或者使用默认语言中常用的外来词或短语（如英语中的 *schadenfreude*），则不必遵循此成功标准。
 
-要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。或者，系统管理员可以在RTE中包含`lang`属性（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
+要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。或者，也可以由系统管理员将`lang`属性包含在RTE中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 #### 更多信息 - 局部语言 (3.1.2) {#more-information-language-of-parts}
 
@@ -953,9 +933,9 @@ John Smith’s publications
 
 * 复选框或单选按钮：
 
-   标签将紧靠字段的右侧。
+   标签将紧靠字段右侧放置。
 
-* 所有其他表单组件（例如文本框、组合框）:
+* 所有其他表单组件（例如，文本框和组合框）：
 
    标签放在紧靠字段上方或左侧的位置。
 
@@ -965,4 +945,3 @@ John Smith’s publications
 
 * [了解成功标准 3.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 * [如何达到成功标准 3.3.2](https://www.w3.org/WAI/WCAG20/quickref/#qr-minimize-error-cues)
-
