@@ -1,22 +1,21 @@
 ---
 title: 功能板
 seo-title: 功能板
-description: 了解如何创建、配置和开发新的AEM仪表板。
-seo-description: 了解如何创建、配置和开发新的AEM仪表板。
+description: 了解如何创建、配置和开发新的AEM功能板。
+seo-description: 了解如何创建、配置和开发新的AEM功能板。
 uuid: 3eadbba2-0ce1-41be-a9f8-e6cafa109893
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
-translation-type: tm+mt
-source-git-commit: 69dfd6b41b32cb9131fd90fd7039a0c224889db5
+exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '846'
 ht-degree: 58%
 
 ---
-
 
 # 功能板{#dashboards}
 
@@ -26,7 +25,7 @@ ht-degree: 58%
 >
 >AEM 功能板是基于每位用户创建的，因此用户只能访问他们自己的功能板。
 >
->但是，[仪表板模板](#creating-a-dashboard-template)可用于共享通用配置和仪表板布局。
+>但是，[功能板模板](#creating-a-dashboard-template)可用于共享常用配置和功能板布局。
 
 ![chlimage_1-22](assets/chlimage_1-22.jpeg)
 
@@ -37,7 +36,7 @@ ht-degree: 58%
 要创建新的功能板，可按照以下步骤进行操作：
 
 1. 在&#x200B;**工具**&#x200B;区域中，单击&#x200B;**配置控制台**。
-1. 在树中，多次-单击&#x200B;**仪表板**。
+1. 在树中，双击&#x200B;**功能板**。
 1. 单击&#x200B;**新建功能板**。
 1. 键入&#x200B;**标题**（例如“我的功能板”）和&#x200B;**名称**。
 1. 单击&#x200B;**创建**。
@@ -70,11 +69,11 @@ ht-degree: 58%
 
 ### 概述 {#overview}
 
-仪表板组件只是常规[AEM组件](/help/sites-developing/developing-components-samples.md)。 本节介绍随 AEM 一起推出的报表组件。
+功能板组件只是常规的[AEM组件](/help/sites-developing/developing-components-samples.md)。 本节介绍随 AEM 一起推出的报表组件。
 
 ### 网站分析报表组件  {#web-analytics-reporting-components}
 
-AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administering/adobeanalytics.md)数据的多个度量。 这些组件在&#x200B;**功能板**&#x200B;区域下方的 Sidekick 中列出。
+AEM附带一组组件，这些组件可渲染[SiteCatalyst](/help/sites-administering/adobeanalytics.md)数据的多个量度。 这些组件在&#x200B;**功能板**&#x200B;区域下方的 Sidekick 中列出。
 
 每个报表组件提供至少三个选项卡：
 
@@ -89,11 +88,11 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 
 **基本**&#x200B;选项卡提供对以下配置条目的访问权：
 
-**标** 题仪表板上显示的标题。
+**** 标题功能板上显示的标题。
 
-**请求** 类型请求数据的方式。
+**请** 求类型请求数据的方式。
 
-**SiteCatalyst配置(** 可选)要用于连接到SiteCatalyst的配置。如果未提供，则认为该配置是在功能板页面上进行配置的（通过页面属性）。
+**SiteCatalyst配置（可选）** 要用于连接到SiteCatalyst的配置。如果未提供，则认为该配置是在功能板页面上进行配置的（通过页面属性）。
 
 **报表包ID（可选）** 要用于生成图形的SiteCatalyst报表包。
 
@@ -105,9 +104,9 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 >
 >若设置一个较大的日期范围，会降低功能板的响应能力。
 
-**日** 期从获取数据的绝对或相对日期。
+**从** 中获取数据的绝对或相对日期。
 
-**日** 期至获取数据的绝对或相对日期。
+**Date To** Absolute或相对日期，从中获取数据。
 
 每个组件还定义特定设置。
 
@@ -115,29 +114,29 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**日** 期粒度X轴的时间单位（如日、小时）。
+**X轴** 的日期粒度时间单位（例如，日、小时）。
 
-**** 指标要显示的事件的列表。
+**** 量度要显示的事件列表。
 
-**元** 素分解图形中度量数据的元素列表。
+**** 元素用于划分图表中量度数据的元素列表。
 
 #### 排名列表报表 {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-**元** 素分解图形中度量数据的元素。
+**** 元素：用于划分图表中量度数据的元素。
 
-**** 指标要显示的事件。
+**** 量度要显示的事件。
 
-**否. of top items**&#x200B;报告显示的项数。
+**否. 排名最前的项目**&#x200B;报表显示的项目数。
 
 #### 排名报表 {#ranked-report}
 
 ![chlimage_1-28](assets/chlimage_1-28a.png)
 
-**** 指标要显示的事件。
+**** 量度要显示的事件。
 
-**元** 素分解图形中度量数据的元素。
+**** 元素：用于划分图表中量度数据的元素。
 
 #### 热门网站区域报表 {#top-site-section-report}
 
@@ -145,17 +144,17 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 
 ![chlimage_1-21](assets/chlimage_1-29a.png)
 
-**否. of top items**&#x200B;报告中显示的节数。
+**否. 排名最前的项目**&#x200B;报表中显示的节数。
 
 #### 趋势报表 {#trended-report}
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**日** 期粒度X轴的时间单位（如日、小时）。
+**X轴** 的日期粒度时间单位（例如，日、小时）。
 
-**** 指标要显示的事件。
+**** 量度要显示的事件。
 
-**元** 素分解图形中度量数据的元素。
+**** 元素：用于划分图表中量度数据的元素。
 
 ## 扩展功能板 {#extending-dashboard}
 
@@ -163,13 +162,13 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 
 功能板是普通页面 (`cq:Page`)，因此任何组件都可用于构建功能板。
 
-默认组件组`Dashboard`包含分析报告组件，默认情况下，这些组件在模板上处于启用状态。
+有一个默认的组件组`Dashboard` ，其中包含分析报表组件，默认情况下，该组件组在模板中处于启用状态。
 
 ### 创建功能板模板 {#creating-a-dashboard-template}
 
 模板定义新功能板的默认内容。您可以使用多个模板来创建不同类型的功能板。
 
-仪表板模板的创建方式与其他页面模板类似，只是它们存储在`/libs/cq/dashboards/templates/`下。 请参阅[创建内容页面模板](/help/sites-developing/website.md#creating-the-contentpage-template)部分。
+功能板模板的创建方式与其他页面模板类似，只是它们存储在`/libs/cq/dashboards/templates/`下。 请参阅[创建内容页面模板](/help/sites-developing/website.md#creating-the-contentpage-template)部分。
 
 >[!NOTE]
 >
@@ -181,7 +180,7 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-顶级作者组件存储在`/apps/geometrixx-outdoors/components/reporting`的存储库中，由以下组件组成：
+顶级创作组件存储在位于`/apps/geometrixx-outdoors/components/reporting`的存储库中，由以下组成：
 
 1. 一个 `jsp` 文件，它可读取数据并定义 `html` 占位符。
 
@@ -191,7 +190,7 @@ AEM随附一组组件，这些组件渲染了[SiteCatalyst](/help/sites-administ
 
 以下Javascript文件在`geout.reporting.topauthors` [客户端库](/help/sites-developing/clientlibs.md)中定义为组件本身的子项。
 
-[QueryBuilder](/help/sites-developing/querybuilder-api.md)用于将存储库查询为读取`cq:AuditEvent`节点。 查询结果是一个可从其中提取作者投稿的 JSON 对象。
+[QueryBuilder](/help/sites-developing/querybuilder-api.md)用于查询存储库以读取`cq:AuditEvent`节点。 查询结果是一个可从其中提取作者投稿的 JSON 对象。
 
 #### top_authors.js {#top-authors-js}
 
@@ -256,4 +255,3 @@ String reportletTitle = properties.get("title", "Top Authors");
      <div id="authors-list"></div>
 </html>
 ```
-
