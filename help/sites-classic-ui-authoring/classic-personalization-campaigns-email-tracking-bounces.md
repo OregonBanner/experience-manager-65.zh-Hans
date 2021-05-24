@@ -9,26 +9,25 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: fde9027b-9057-48c3-ae34-3f3258c5b371
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 6cda0a68-0df9-44e7-ae4f-9951411af6dd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 79%
 
 ---
 
-
 # 跟踪弹回的电子邮件{#tracking-bounced-emails}
 
 >[!NOTE]
 >
->Adobe不打算进一步增强对AEM SMTP服务发送的打开／弹回电子邮件的跟踪。
+>Adobe不打算进一步增强对AEM SMTP服务发送的打开/弹回电子邮件的跟踪。
 >
 >建议[利用Adobe Campaign及其AEM集成](/help/sites-administering/campaign.md)。
 
 您向多位用户发送新闻稿时，列表中通常会存在一些无效的电子邮件地址。发送到这些地址的新闻稿会弹回。AEM 能够管理这些弹回的邮件，并可在超出配置的弹回计数后停止向这些地址发送新闻稿。默认情况下，弹回率设置为 3，但您可对其进行配置。
 
-要将 AEM 设置为跟踪弹回的电子邮件，您需要对 AEM 进行设置，使其对接收弹回电子邮件的现有邮箱（通常是您指定的从中发送新闻稿的“发件人”电子邮件地址）进行轮询。AEM 会对此收件箱进行轮询并会导入轮询配置中指定路径下的所有电子邮件。随后将触发一个工作流以搜索用户内的退回电子邮件地址，并相应地更新用户的bounceCounter属性值。 超出配置的最大退回次数时，将会从 Newsletter 列表中删除该用户。
+要将 AEM 设置为跟踪弹回的电子邮件，您需要对 AEM 进行设置，使其对接收弹回电子邮件的现有邮箱（通常是您指定的从中发送新闻稿的“发件人”电子邮件地址）进行轮询。AEM 会对此收件箱进行轮询并会导入轮询配置中指定路径下的所有电子邮件。然后，会触发一个工作流，以搜索用户中的退回电子邮件地址，并相应地更新用户的bounceCounter属性值。 超出配置的最大退回次数时，将会从 Newsletter 列表中删除该用户。
 
 ## 配置 Feed Importer  {#configuring-the-feed-importer}
 
@@ -55,7 +54,7 @@ Feed Importer 允许您将外部源的内容多次导入到您的存储库中。
 
    **POP3 配置属性：**
 
-   `pop3.leave.on.server`:定义是否在服务器上保留消息。设置为 true 会将邮件保留在服务器上，设置为 false 则不会保留。默认设置为 true。
+   `pop3.leave.on.server`:定义是否将消息保留在服务器上。设置为 true 会将邮件保留在服务器上，设置为 false 则不会保留。默认设置为 true。
 
    **POP3 示例：**
 
@@ -69,7 +68,7 @@ Feed Importer 允许您将外部源的内容多次导入到您的存储库中。
 
    `imap.flag.SEEN`:将新的/未查看的消息设置为 false，将已读消息设置为 true
 
-   有关标记的完整列表，请参见[https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html)。
+   有关标记的完整列表，请参阅[https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html)。
 
    **IMAP 示例：**
 
@@ -86,7 +85,7 @@ Feed Importer 允许您将外部源的内容多次导入到您的存储库中。
 
 配置新闻稿服务：
 
-1. 在位于`<host>:<port>/system/console/configMgr`的OSGi控制台中，导航至&#x200B;**MCM Newsletter**。
+1. 在位于`<host>:<port>/system/console/configMgr`的OSGi控制台中，导航到&#x200B;**MCM Newsletter**。
 
 1. 配置服务并在结束时保存更改。
 
