@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d6f55d2c-e7a9-4421-918c-6000c6961776
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 77%
 
 ---
-
 
 # 配置帐户环境{#configuring-your-account-environment}
 
@@ -25,8 +24,8 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 使用[帐户设置](#account-settings)和[用户首选项](#user-preferences)，可以定义以下选项和首选项：
 
-* **编辑工具栏** 选择是否要使用全局编辑工具栏。此工具栏（显示在浏览器窗口顶部）为您提供 
-**复制**、剪 **切、**&#x200B;粘贴 **、删** **** 除按钮，以便与该页面上的段落组件配合使用：
+* **编辑工具栏** 选择是否要使用全局编辑工具栏。此工具栏（显示在浏览器窗口的顶部）为您提供 
+**复制**、 **剪切**、 **粘贴**、删除按钮，以便与该页面上的段落组件一起使用： **** 
 
    * 需要时显示（默认）
    * 始终显示
@@ -34,8 +33,8 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 * **模拟为** 借助[模拟为](/help/sites-administering/security.md#impersonating-another-user)功能，用户可以代表其他用户工作。
 
-* **语**
-言创作环境的UI所使用的语言。从可用列表中选择所需的语言。
+* ****
+语言创作环境UI所使用的语言。从可用列表中选择所需的语言。
 
 * **窗口管理** 选择下列任何一项：
 
