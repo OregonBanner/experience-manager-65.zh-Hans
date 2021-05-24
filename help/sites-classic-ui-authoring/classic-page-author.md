@@ -1,26 +1,25 @@
 ---
 title: 创作页面
 seo-title: 创作页面
-description: 使用AEM进行创作有两个概述。 (1)创作的第一步——新作者的简介，以及(2)页面创作快速指南——主要操作的快速指南（简介）。
-seo-description: 使用AEM进行创作有两个概述。 (1)创作的第一步——新作者的简介，以及(2)页面创作快速指南——主要操作的快速指南（简介）。
+description: 有两个关于使用AEM进行创作的概述。 (1)作者的首要步骤 — 新作者的简介，以及(2)页面创作快速指南 — 主要操作的快速指南（概要）。
+seo-description: 有两个关于使用AEM进行创作的概述。 (1)作者的首要步骤 — 新作者的简介，以及(2)页面创作快速指南 — 主要操作的快速指南（概要）。
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: a3606d72-1bd8-4886-9285-6457dae66486
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 78%
 
 ---
 
-
 # 创作页面{#authoring-pages}
 
-下面概述了如何使用AEM进行创作：
+以下内容概述了如何使用AEM进行创作：
 
 * [创作的首要步骤 - 针对新作者的简介](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)
 
@@ -49,4 +48,3 @@ ht-degree: 78%
 
 * **在键入时搜索**
 在某些情况下（例如，编辑对话框中的路径选择），当通过 AEM 界面搜索内容时，将随着查询的键入动态显示匹配项。
-
