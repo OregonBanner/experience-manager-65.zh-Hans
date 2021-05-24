@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 317093bce043ff2aaa5b5ceb8499f057fa9fa24b
+exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 86%
 
 ---
-
 
 # 导出到 CSV{#export-to-csv}
 
@@ -42,7 +41,7 @@ ht-degree: 86%
       * 工作流
    * 翻译
       * 已翻译
-   * 分析
+   * Analytics
       * 页面查看次数
       * 独特访客
       * 页面停留时间
@@ -56,7 +55,7 @@ ht-degree: 86%
 
 ![etc-01](assets/etc-01.png)
 
-在浏览&#x200B;**站点**&#x200B;控制台时，可以使用创建&#x200B;**CSV报告**&#x200B;选项(在列表视图中):它是&#x200B;**创建**&#x200B;下拉菜单的选项：
+在浏览&#x200B;**Sites**&#x200B;控制台（在“列表”视图中）时，可以使用创建&#x200B;**CSV报表**&#x200B;选项：它是&#x200B;**创建**&#x200B;下拉菜单的一个选项：
 
 ![etc-02](assets/etc-02.png)
 
