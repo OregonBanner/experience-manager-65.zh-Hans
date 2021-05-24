@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
-translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 92%
 
 ---
-
 
 # 响应式布局{#responsive-layout}
 
@@ -68,7 +67,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 >[!NOTE]
 >
->通过对模板进行配置，可以启用上述机制。有关详细信息，请参阅[配置响应式布局](/help/sites-administering/configuring-responsive-layout.md)。
+>通过对模板进行配置，可以启用上述机制。有关更多信息，请参阅[配置响应式布局](/help/sites-administering/configuring-responsive-layout.md)。
 
 ## 布局定义、设备模拟和断点 {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -225,15 +224,15 @@ AEM 允许您根据设备的宽度定义布局：
 
    * **父项**
 
-      允许您选择整个布局容器组件，以对整体执行操作。
+      允许您选择整个布局容器组件以对整体执行操作。
 
    * **浮动到新行**
 
-      组件将移至新行，具体取决于网格中的可用空间。
+      组件将被移动到新行，具体取决于网格内的可用空间。
 
    * **隐藏组件**
 
-      组件将变得不可见(可以从布局容器的工具栏中恢复)。
+      组件将变得不可见（可以从布局容器的工具栏中恢复）。
    ![screen_shot_2018-03-23at090246](assets/screen_shot_2018-03-23at090246.png)
 
 * 在&#x200B;**布局**&#x200B;模式下，您可以点按/单击&#x200B;**将组件拖动到此处**&#x200B;来选择整个组件。此时将显示此模式的工具栏。
@@ -244,7 +243,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    ![](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **显示隐藏的组件** -显示所有或单个组件。数字表示当前隐藏的组件数。计数器显示隐藏的组件数。
+   * **显示隐藏的组件**  — 显示所有或各个组件。数字表示当前隐藏的组件数量。计数器显示隐藏的组件数量。
 
    ![](do-not-localize/screen_shot_2018-03-23at091007.png)
 
@@ -266,7 +265,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    * **取消隐**
 藏组件选择父组件可显示包含 
-**显示隐藏** 组件选项。在此示例中，隐藏了两个组件。
+**显示隐藏的** 组件选项。在此示例中，隐藏了两个组件。
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    选择&#x200B;**显示隐藏的组件**&#x200B;选项时，当前隐藏的组件将以蓝色显示在它们的原始位置。
@@ -274,4 +273,3 @@ AEM 允许您根据设备的宽度定义布局：
    ![screen_shot_2018-03-23at091224](assets/screen_shot_2018-03-23at091224.png)
 
    选择&#x200B;**全部恢复**&#x200B;将取消隐藏所有隐藏的组件。
-
