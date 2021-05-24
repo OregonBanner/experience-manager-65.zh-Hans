@@ -2,27 +2,26 @@
 title: 内容分析
 seo-title: 内容分析
 description: 内容分析使用 Web 分析和 SEO 推荐提供有关页面性能的信息
-seo-description: 内容分析 使用Web分析和SEO推荐提供有关页面性能的信息
+seo-description: 内容分析 提供有关使用Web分析和SEO推荐执行页面性能的信息
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 91%
+ht-degree: 94%
 
 ---
-
 
 # 内容分析{#content-insight}
 
 内容分析使用 Web 分析和 SEO 推荐提供有关页面性能的信息。使用内容分析可决定如何修改页面，或了解以前所做的更改使性能发生何种变化。对于您创作的每个页面，您都可以打开内容分析来分析页面。
 
-![chlimage_1-310](assets/chlimage_1-311.png)
+![chlimage_1-311](assets/chlimage_1-311.png)
 
 “内容分析”页面的布局会根据您所用设备的屏幕尺寸和方向进行相应更改。
 
@@ -51,7 +50,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。请参阅[与SightCatalyst](/help/sites-administering/adobeanalytics.md)集成、[与Adobe Target](/help/sites-administering/target.md)集成以及[与BrightEdge](/help/sites-administering/brightedge.md)集成。
+>内容分析报表要求您的管理员将 AEM 与 SiteCatalyst、Target 和 BrightEdge 集成在一起。请参阅[与SightCatalyst集成](/help/sites-administering/adobeanalytics.md)、[与Adobe Target集成](/help/sites-administering/target.md)和[与BrightEdge集成](/help/sites-administering/brightedge.md)。
 
 ## “查看次数”报表{#the-views-report}
 
@@ -88,7 +87,7 @@ ht-degree: 91%
 
 ## “&lt;营销活动名称> 活动”报表{#the-campaign-activity-report}
 
-对于页面处于激活状态的每个营销活动，均会显示一个名为“*&lt;营销活动名称>* 活动”的报表。该报表显示提供优惠的每个区段的页面展示次数和转换率。
+对于页面处于激活状态的每个营销活动，均会显示一个名为“*&lt;营销活动名称>* 活动”的报表。该报表显示了为其提供选件的每个区段的页面展示次数和转化次数。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
@@ -99,4 +98,3 @@ ht-degree: 91%
 该报表使您能够创建任务，以便做出改进来提高页面可查找性。推荐指示已创建相关任务来实施推荐。请参阅[为 SEO 推荐分配任务](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)。
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
-
