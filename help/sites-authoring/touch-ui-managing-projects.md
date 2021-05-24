@@ -1,22 +1,21 @@
 ---
 title: 管理项目
 seo-title: 管理项目
-description: 通过“项目”，您可以将资源分组到一个可以在“项目”控制台中访问和管理的实体中，从而组织项目
-seo-description: 通过“项目”，您可以将资源分组到一个可以在“项目”控制台中访问和管理的实体中，从而组织项目
+description: 通过“项目”，您可以将资源分组到一个实体中来组织项目，该实体可以在“项目”控制台中进行访问和管理
+seo-description: 通过“项目”，您可以将资源分组到一个实体中来组织项目，该实体可以在“项目”控制台中进行访问和管理
 uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
-translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1057'
-ht-degree: 77%
+ht-degree: 83%
 
 ---
-
 
 # 管理项目{#managing-projects}
 
@@ -38,7 +37,7 @@ ht-degree: 77%
 
 >[!CAUTION]
 >
->对于项目中的用户，要使用“项目”功能(如创建项目、创建任务/工作流、查看和管理团队)查看其他用户／组，这些用户需要具有对&#x200B;**/home/users**&#x200B;和&#x200B;**/home/groups**&#x200B;的读取权限。 实现此功能的最简单方法是向&#x200B;**projects-users**&#x200B;组授予对&#x200B;**/home/users**&#x200B;和&#x200B;**/home/groups**&#x200B;的读取权限。
+>对于项目中的用户，要在使用“项目”功能（如创建项目、创建任务/工作流、查看和管理团队）时查看其他用户/组，这些用户需要具有对&#x200B;**/home/users**&#x200B;和&#x200B;**/home/groups**&#x200B;的读取权限。 满足这一要求的最简单方法是向&#x200B;**项目用户**&#x200B;组授予 **/home/users** 和 **/home/groups** 的读取权限。
 
 ## 创建项目 {#creating-a-project}
 
@@ -52,11 +51,11 @@ AEM 提供了以下现成的模板，供您在创建项目时进行选择：
 从项目到项目，创建项目的过程相同。 项目类型之间的差异包括可用的用户角 [色](/help/sites-authoring/projects.md) 和工 [作流](/help/sites-authoring/projects-with-workflows.md)。  要创建新项目，请执行以下操作：
 
 1. 在“ **项目**”中，点按／单 **击创建** ，以打开创 **建项目向导** :
-1. 选择模板。开箱即用：简单项目、媒体项目、[翻译项目](/help/sites-administering/tc-manage.md)和[产品照片拍摄产品](/help/sites-authoring/managing-product-information.md)，然后单击&#x200B;**下一个**。
+1. 选择模板。现成可用的模板有简单项目、媒体项目、[翻译项目](/help/sites-administering/tc-manage.md)和[产品照片拍摄项目](/help/sites-authoring/managing-product-information.md)；选择模板后，单击&#x200B;**下一步**。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-1. 定义&#x200B;**标题**&#x200B;和&#x200B;**说明**，并根据需要添加&#x200B;**缩略图**&#x200B;图像。 您还可以添加或删除用户以及他们所属的组。此外，也可单击&#x200B;**高级**&#x200B;以添加 URL 中使用的名称。
+1. 定义&#x200B;**标题**&#x200B;和&#x200B;**描述**&#x200B;并根据需要添加&#x200B;**缩略图**&#x200B;图像。 您还可以添加或删除用户以及他们所属的组。此外，也可单击&#x200B;**高级**&#x200B;以添加 URL 中使用的名称。
 
    ![chlimage_1-257](assets/chlimage_1-257.png)
 
@@ -77,7 +76,7 @@ AEM 提供了以下现成的模板，供您在创建项目时进行选择：
    >
    >有关可与项目关联的项目拼贴的详细说明，请参阅[项目拼贴](/help/sites-authoring/projects.md#project-tiles)。
 
-1. 点按/单击&#x200B;**创建**。您的资源已链接到您的项目，从现在开始，您可以从您的项目访问它。
+1. 点按/单击&#x200B;**创建**。您的资源随即会链接到项目，从现在开始，您便可以从项目中访问该资源。
 
 ### 删除项目或资源链接 {#deleting-a-project-or-resource-link}
 
@@ -103,7 +102,7 @@ AEM 提供了以下现成的模板，供您在创建项目时进行选择：
 
 要向拼贴中添加一些项，请执行以下操作：
 
-1. 在&#x200B;**项目**&#x200B;中，导航到项目并单击要向其添加项目的拼贴上的添加+图标。
+1. 在&#x200B;**项目**&#x200B;中，导航到项目，然后单击要将项目添加到的拼贴上的添加+图标。
 
    ![chlimage_1-259](assets/chlimage_1-259.png)
 
@@ -133,13 +132,13 @@ AEM 提供了以下现成的模板，供您在创建项目时进行选择：
 
 ### 查看项目时间轴 {#viewing-a-project-timeline}
 
-项目时间轴提供了项目中的资产上次使用时间的相关信息。要视图项目时间轴，请单击／点按&#x200B;**时间轴**，然后进入选择模式并选择项目。 资产会显示在左侧窗格中。单击／点按&#x200B;**时间轴**&#x200B;以返回至&#x200B;**项目**&#x200B;控制台。
+项目时间轴提供了项目中的资产上次使用时间的相关信息。要查看项目时间轴，请单击/点按&#x200B;**时间轴**，然后进入选择模式并选择项目。 资产会显示在左侧窗格中。单击/点按&#x200B;**时间轴**&#x200B;以返回到&#x200B;**项目**&#x200B;控制台。
 
 ![chlimage_1-264](assets/chlimage_1-264.png)
 
 ### 查看活动/不活动的项目 {#viewing-active-inactive-projects}
 
-要在活动项目和非活动项目之间切换，请在&#x200B;**项目**&#x200B;控制台中，单击&#x200B;**切换活动项目**。 如果该图标旁边显示有复选标记，则显示的是活动的项目。
+要在活动项目和不活动项目之间进行切换，请在&#x200B;**项目**&#x200B;控制台中，单击&#x200B;**切换活动项目**。 如果该图标旁边显示有复选标记，则显示的是活动的项目。
 
 ![chlimage_1-265](assets/chlimage_1-265.png)
 
@@ -158,10 +157,9 @@ AEM 提供了以下现成的模板，供您在创建项目时进行选择：
    >[!NOTE]
    如果该拼贴不在您的项目中，您可能需要添加它。请参阅[添加拼贴](#adding-items-to-a-tile)。
 
-1. 点按／单击&#x200B;**编辑**。
+1. 点按/单击&#x200B;**编辑**。
 1. 将选择器从&#x200B;**活动**&#x200B;更改为&#x200B;**不活动**（反之亦然）。
 
    ![chlimage_1-267](assets/chlimage_1-267.png)
 
 1. 点按/单击&#x200B;**完成**&#x200B;以保存更改。
-
