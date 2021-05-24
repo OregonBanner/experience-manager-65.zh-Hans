@@ -10,27 +10,26 @@ topic-tags: content
 content-type: reference
 discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 37%
 
 ---
 
-
 # 经典UI标记控制台{#classic-ui-tagging-console}
 
-此部分用于经典UI标记控制台。
+此部分适用于经典UI标记控制台。
 
 触屏优化UI标记控制台位于[此处](/help/sites-administering/tags.md#tagging-console)。
 
 要访问经典UI标记控制台，请执行以下操作：
 
 * 在作者
-* 以管理权限登录
+* 使用管理权限登录
 * 浏览到控制台
-例如[https://localhost:4502/tagging](https://localhost:4502/tagging)
+例如， [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
 ![](assets/managing_tags_usingthetagasministrationconsole.png)
 
@@ -46,17 +45,17 @@ ht-degree: 37%
 
    ![](assets/creating_tags_andnamespacesinnewnamespace.png)
 
-1. 在两种情况下，输入
+1. 在这两种情况下，输入
 
    * **标题**
 (
-*必需*)标记的显示标题。虽然可以输入任何字符，
+*必需*)标记的显示标题。虽然可以输入任意字符，
 建议不要使用这些特殊字符：
 
-      * `colon (:)` -命名空间分隔符
-      * `forward slash (/)` -子标签分隔符
+      * `colon (:)`  — 命名空间分隔符
+      * `forward slash (/)`  — 子标记分隔符
 
-      如果输入这些字符，则不会显示这些字符。
+      如果输入，则不会显示这些字符。
 
    * **名称**
 (
@@ -64,7 +63,7 @@ ht-degree: 37%
 
    * **描述**
 (
-*可选*)标记的说明。
+*可选*)标记的描述。
 
    * 选择&#x200B;**创建**
 
@@ -80,7 +79,7 @@ ht-degree: 37%
 
 1. 在右侧窗格中，选择要删除的标记。
 1. 单击&#x200B;**删除**。
-1. 单击&#x200B;**是**&#x200B;以关闭对话框。
+1. 单击&#x200B;**Yes**&#x200B;以关闭对话框。
 
    标记不应再列出。
 
@@ -97,7 +96,7 @@ ht-degree: 37%
 
 ## 移动标记 {#moving-tags}
 
-要帮助标记管理员和开发人员清理分类或重命名标记ID，可以将标记移动到新位置：
+为帮助标记管理员和开发人员清理分类或重命名标记ID，可以将标记移动到新位置：
 
 1. 打开 **Tagging** 控制台。
 1. 选择标记并在顶部工具栏（或上下文菜单）中单击“**移动...**”。
@@ -114,7 +113,7 @@ ht-degree: 37%
 
 >[!NOTE]
 >
->作者不应移动标记或重命名标记ID。 必要时，作者只应[更改标记标题](#editing-tags)。
+>作者不应移动标记或重命名标记ID。 如有必要，作者只应[更改标记标题](#editing-tags)。
 
 ## 合并标记 {#merging-tags}
 
@@ -143,14 +142,14 @@ ht-degree: 37%
 
 ## 管理不同语言的标记  {#managing-tags-in-different-languages}
 
-标记的可选`title`属性可以翻译为多种语言。 然后，可以根据用户语言或页面语言显示标记`titles`。
+标记的可选`title`属性可以翻译成多种语言。 然后，可以根据用户语言或页面语言显示标记`titles`。
 
 ### 用多种语言定义标记标题 {#defining-tag-titles-in-multiple-languages}
 
-以下过程说明如何将标签&#x200B;**Animals**&#x200B;的`title`翻译为英语、德语和法语：
+以下过程说明如何将标记&#x200B;**Animals**&#x200B;的`title`翻译为英语、德语和法语：
 
 1. 转到&#x200B;**Tagging**&#x200B;控制台。
-1. 编辑&#x200B;**Tags**>**Stock Photography**&#x200B;下面的&#x200B;**Animals**&#x200B;标签。
+1. 编辑&#x200B;**Animals**&#x200B;下&#x200B;**Tags** > **Stock Photography**&#x200B;的标记。
 1. 添加以下语言的翻译：
 
    * **英语**：Animals
@@ -163,26 +162,26 @@ ht-degree: 37%
 
 ![](assets/edit_tag.png)
 
-Tagging控制台使用用户语言设置，因此对于Animal标记，将为用户属性中将语言设置为法语的用户显示“Animaux”。
+标记控制台使用用户语言设置，因此对于Animal标记，会为在用户属性中将语言设置为法语的用户显示“Animaux”。
 
-要向对话框添加新语言，请参阅&#x200B;**开发人员标记**&#x200B;部分中的[向编辑标记对话框添加新语言](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog)部分。
+要向对话框中添加新语言，请参阅&#x200B;**面向开发人员的标记**&#x200B;部分中的[向编辑标记对话框](/help/sites-developing/building.md#adding-a-new-language-to-the-edit-tag-dialog)添加新语言一节。
 
 ### 以指定语言{#displaying-tag-titles-in-page-properties-in-a-specified-language}在页面属性中显示标记标题
 
 默认情况下，页面属性中的标记`titles`以页面语言显示。 页面属性中的标记对话框有一个语言字段，用于以其他语言显示标记`titles`。 以下过程介绍如何以法语显示标记`titles`:
 
-1. 请参阅上一节，将法语翻译添加到&#x200B;**Tags** > **Stock Photography**&#x200B;下的&#x200B;**Animals**。
+1. 请参阅上一节，将法语翻译添加到&#x200B;**Tags** > **Stock Photography**&#x200B;下方的&#x200B;**Animals**&#x200B;中。
 1. 打开英语分支的 **Geometrixx** 站点中的&#x200B;**产品**&#x200B;页面的页面属性。
-1. 打开&#x200B;**标记／关键字**&#x200B;对话框（通过选择“标记／关键字”显示区域右侧的下拉菜单），并从右下角的下拉菜单中选择&#x200B;**法语**&#x200B;语言。
-1. 使用左右箭头滚动，直到能够选择&#x200B;**图片库**&#x200B;选项卡
+1. 打开&#x200B;**标记/关键字**&#x200B;对话框（通过选择“标记/关键字”显示区域右侧的下拉菜单），然后从右下角的下拉菜单中选择&#x200B;**法语**&#x200B;语言。
+1. 使用左 — 右箭头滚动，直到能够选择&#x200B;**照片库**&#x200B;选项卡
 
-   选择&#x200B;**Animals**(**Animaux**)标签，在对话框外进行选择以关闭它，然后将标签添加到页面属性。
+   选择&#x200B;**Animals**(**Animaux**)标记，然后在对话框外部选择以将其关闭，并将标记添加到页面属性中。
 
    ![](assets/french_tag.png)
 
-默认情况下，页面属性对话框根据页面语言显示标记`titles`。
+默认情况下，页面属性对话框会根据页面语言显示标记`titles`。
 
-通常，如果页面语言可用，则标记的语言会从页面语言中获取。 当在其他情况下（例如在表单或对话框中）使用[ `tag`构件](/help/sites-developing/building.md#tagging-on-the-client-side)时，标记语言取决于上下文。
+通常，如果页面语言可用，则会从页面语言中获取标记的语言。 当在其他情况下（例如在表单或对话框中）使用[ `tag`小组件](/help/sites-developing/building.md#tagging-on-the-client-side)时，标记语言取决于上下文。
 
 >[!NOTE]
 >
