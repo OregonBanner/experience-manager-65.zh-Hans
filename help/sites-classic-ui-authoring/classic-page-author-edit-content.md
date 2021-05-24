@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
+exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 97%
 
 ---
-
 
 # 编辑页面内容{#editing-page-content}
 
@@ -31,7 +30,7 @@ ht-degree: 97%
 >
 >如果您遇到任何问题，我们建议您与系统管理员联系。
 
-## Sidekick  {#sidekick}
+## Sidekick {#sidekick}
 
 在创作页面时，Sidekick 是一项重要工具。创作页面时 Sidekick 将处于浮动状态，所以始终可见。
 
@@ -63,7 +62,7 @@ ht-degree: 97%
 
 * [基架](/help/sites-authoring/scaffolding.md)
 
-* [客户端上下文](/help/sites-administering/client-context.md)
+* [Client Context](/help/sites-administering/client-context.md)
 
 ## 插入组件 {#inserting-a-component}
 
@@ -263,7 +262,7 @@ AEM 允许您锁定页面，以便其他人无法修改页面内容。当您对�
 * 撤消：Ctrl+Z (Windows) 或 Cmd+Z (Mac)
 * 重做：Ctrl+Y (Windows) 或 Cmd+Y (Mac)
 
-当您对一个或多个段落的删除、添加或迁移操作执行撤消或重做时，受影响的段落会闪烁加亮显示（默认行为）。
+当您撤消或重做对一个或多个段落执行的删除、添加或重新定位操作时，受影响的段落会闪烁并高亮显示（默认行为）。
 
 >[!NOTE]
 >
