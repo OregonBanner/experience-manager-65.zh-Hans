@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
-translation-type: tm+mt
-source-git-commit: cf0c80928bc9f6cfcf472fc5c75215b3812e2c7c
+exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 97%
 
 ---
-
 
 # 分析页面性能{#analyzing-page-performance}
 
@@ -34,7 +33,7 @@ ht-degree: 97%
    >
    >仅在已将 AEM 配置为[与 Adobe Analytics 集成](/help/sites-administering/adobeanalytics-connect.md)时，才会显示页面的分析和推荐。
 
-   ![screen-shot_2019-03-05at115319](assets/screen-shot_2019-03-05at115319.png)
+   ![screenshot_2019-03-05at115319](assets/screen-shot_2019-03-05at115319.png)
 
 ### 更改报表时间段 {#changing-the-reporting-period}
 
@@ -111,4 +110,3 @@ ht-degree: 97%
    **注意：**&#x200B;创建的任务还包括应用 SEO 推荐的页面路径。
 
 1. 单击或点按“完成”以关闭“任务已创建”消息。
-
