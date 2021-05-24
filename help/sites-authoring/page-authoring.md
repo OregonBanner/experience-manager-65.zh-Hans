@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 100%
 
 ---
-
 
 # 创作页面{#authoring-pages}
 
@@ -51,4 +50,3 @@ ht-degree: 100%
 
 * **在键入时搜索**
 在某些情况下（例如，编辑对话框中的路径选择），当通过 AEM 界面搜索内容时，将随着查询的键入动态显示匹配项。
-
