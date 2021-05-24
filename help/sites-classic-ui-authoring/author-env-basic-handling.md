@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 93%
 
 ---
-
 
 # 基本操作{#basic-handling}
 
@@ -56,12 +55,12 @@ ht-degree: 93%
   </tr>
   <tr>
    <td><strong>数字资产</strong><br /> </td>
-   <td>通过这些控制台，您可以导入和<a href="/help/sites-classic-ui-authoring/classicui-assets.md">管理数字资产</a>，如图像、视频、文档和音频文件。随后，这些资产便可由同一 AEM 实例上运行的任何网站使用。 </td>
+   <td>通过这些控制台，您可以导入和<a href="/help/sites-classic-ui-authoring/classicui-assets.md">管理数字资产</a>，如图像、视频、文档和音频文件。随后，这些资产便可以由在同一 AEM 实例中运行的任何网站使用。 </td>
   </tr>
   <tr>
    <td><strong>启动项</strong></td>
    <td>此控制台可帮助管理您的<a href="/help/sites-classic-ui-authoring/classic-launches.md">启动项</a>；通过这些启动项，可以为一个或多个已激活网页的将来版本开发内容。
-<br /> <i>注意：在触屏优化UI中，“站点”控制台中提供了许多相同的功能，同时还提供了引用边栏。</i><i>如果需要，可以从“工具”控制台中访问此控制台；选择“操作”，然后选择“启动项”。</i></td>
+<br /> <i>注意：在触屏优化UI中，“站点”控制台中与“引用”边栏中的功能大致相同。</i><i>如果需要，可以从“工具”控制台中访问此控制台；选择“操作”，然后选择“启动项”。</i></td>
   </tr>
   <tr>
    <td><strong>收件箱 </strong></td>
@@ -101,7 +100,7 @@ ht-degree: 93%
 
 * 右窗格
 
-   这将显示页面（在左窗格中选定的位置），并可用于执行操作。
+   这会显示页面（在左窗格中选定的位置），并可用于执行操作。
 
 从此处，可以使用工具栏、上下文菜单，或通过打开页面以执行进一步操作，来[管理您的页面](/help/sites-authoring/managing-pages.md)。
 
@@ -236,4 +235,3 @@ ht-degree: 93%
 经典 UI 使用大家熟知的机制进行导航和启动操作，包括单击和双击。根据当前位置，还将显示一系列上下文菜单（通常使用鼠标右键打开）：
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
-
