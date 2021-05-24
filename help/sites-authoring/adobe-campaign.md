@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0954fd5f-cd70-4f2f-85e9-df1c7a3037e1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
-
 
 # 使用 Adobe Campaign{#working-with-adobe-campaign}
 
@@ -40,4 +39,3 @@ Adobe Campaign 是一套解决方案，允许您在所有在线渠道和离线�
 
 * [创建自定义扩展](/help/sites-developing/extending-campaign-extensions.md)
 * [创建自定义表单映射](/help/sites-developing/extending-campaign-form-mapping.md)
-
