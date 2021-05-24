@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 85%
 
 ---
-
 
 # 在设计模式中配置组件{#configuring-components-in-design-mode}
 
@@ -34,9 +33,9 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->设计模式仅适用于存储为(`/etc`)下的内容的设计配置。
+>设计模式仅适用于存储为(`/etc`)下内容的设计配置。
 >
->从AEM 6.4开始，建议将设计作为配置数据存储在`/apps`下，以支持连续部署方案。 存储在`/apps`下的设计在运行时不可编辑，非管理员用户将无法使用设计模式来管理此类模板。
+>从AEM 6.4开始，建议在`/apps`下将设计存储为配置数据，以支持连续部署方案。 在`/apps`下存储的设计在运行时不可编辑，此类模板的非管理员用户将无法使用设计模式。
 
 这涉及到添加或删除在页面的段落系统中允许使用的组件。段落系统 (`parsys`) 本身是一个复合组件，其中包含其他段落组件。段落系统允许作者向页面中添加不同类型的组件，并包含所有其他段落组件。每个段落类型表示为一个组件。
 
@@ -92,7 +91,7 @@ ht-degree: 85%
 
    **允许的组件**
 
-   在&#x200B;**允许的组件**&#x200B;选项卡上，您可以定义可用于parsys的组件。
+   在&#x200B;**允许的组件**&#x200B;选项卡上，您可以定义哪些组件可用于parsys。
 
    * 这些组件按其组件组分组，各组可以展开和折叠。
    * 可以通过选中组名称选择整个组，通过取消选中全部取消选择。
@@ -154,7 +153,7 @@ ht-degree: 85%
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-   使用**删除**图标从多条目对话框列表中删除条目。
+   使用**删除**图标可从多条目对话框列表中删除条目。
 
    ![](do-not-localize/screen_shot_2018-03-22at103809.png)
 
@@ -163,4 +162,3 @@ ht-degree: 85%
    ![](do-not-localize/screen_shot_2018-03-22at103816.png)
 
 1. 单击或点按&#x200B;**完成**&#x200B;图标以保存并关闭对话框。
-
