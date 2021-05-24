@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
-translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '644'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
-
 
 # 查看页面分析数据{#seeing-page-analytics-data}
 
@@ -63,19 +62,19 @@ ht-degree: 92%
 >
 >当页面树包含与不同 Adobe Analytics 云配置关联的子项时，您无法为页面配置可用数据列。
 
-1. 在列表视图中，使用视图选择器（工具栏右侧），选择&#x200B;**视图设置**，然后选择&#x200B;**添加自定义分析数据**。
+1. 在列表视图中，使用视图选择器（工具栏右侧），选择&#x200B;**查看设置**，然后选择&#x200B;**添加自定义Analytics数据**。
 
    ![aa-15](assets/aa-15.png)
 
 1. 在站点控制台中选择要向作者公开的量度，然后单击&#x200B;**添加**。
 
-   显示的列从Adobe Analytics检索。
+   将从 Adobe Analytics 中检索显示的列。
 
    ![aa-16](assets/aa-16.png)
 
 ### 从站点打开内容分析 {#opening-content-insights-from-sites}
 
-从“站点”控制台打开[内容分析](/help/sites-authoring/content-insights.md)以进一步调查页面有效性。
+从“站点”控制台中打开[内容分析](/help/sites-authoring/content-insights.md) ，以进一步调查页面有效性。
 
 1. 在站点控制台中，选择要查看“内容分析”的页面。
 1. 在工具栏上，单击“分析和建议”图标。
@@ -158,4 +157,3 @@ ht-degree: 92%
    * 显示顶部（获胜方或失败方）
    * 排除最低值 %
    * 自动更新（数据和时间段）
-
