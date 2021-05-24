@@ -10,20 +10,19 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
+exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3250'
 ht-degree: 62%
 
 ---
 
-
 # 将 Scene7 功能添加到您的页面{#adding-scene-features-to-your-page}
 
 [Adobe Scene7](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) 是一种托管的解决方案，用于管理和增强丰富的媒体资产，并将其发布和交付到 Web、移动设备、电子邮件及连接 Internet 的显示屏和打印设备。
 
-您可以视图发布在Scene7的Experience Manager资产，其查看方式为：
+您可以在各种查看器中查看在Scene7中发布的Experience Manager资产：
 
 * 缩放
 * 弹出
@@ -31,7 +30,7 @@ ht-degree: 62%
 * 图像模板
 * 图像
 
-您可以将数字资产从Experience Manager直接发布到Scene7，还可以将数字资产从Scene7发布到Experience Manager。
+您可以将数字资产从Experience Manager直接发布到Scene7，也可以将数字资产从Scene7发布到Experience Manager。
 
 本文档介绍如何将数字资产从Experience Manager发布到Scene7，反之亦然。 此外，还详细介绍了各种查看器。有关为Scene7配置Experience Manager的信息，请参阅[将Scene7与Experience Manager集成](/help/sites-administering/scene7.md)。
 
@@ -43,7 +42,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->如果Scene7资源显示不正确，请确保Dynamic Media已[禁用](/help/assets/config-dynamic.md#disabling-dynamic-media)，然后刷新页面。
+>如果Scene7资产显示不正确，请确保Dynamic Media [disabled](/help/assets/config-dynamic.md#disabling-dynamic-media)，然后刷新页面。
 
 ## 从资产手动发布到 Scene7 {#manually-publishing-to-scene-from-assets}
 
@@ -51,7 +50,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Experience Manager异步发布到Scene7。 单击&#x200B;**发布**&#x200B;后，您的资产可能需要几秒钟时间才能发布到 Scene7。
+>Experience Manager会异步发布到Scene7。 单击&#x200B;**发布**&#x200B;后，您的资产可能需要几秒钟时间才能发布到 Scene7。
 
 
 ### 从“资产”控制台发布 {#publishing-from-the-assets-console}
@@ -60,7 +59,7 @@ ht-degree: 62%
 
 1. 在Experience Manager经典UI中，单击&#x200B;**数字资产**&#x200B;以访问数字资产管理器。
 
-1. 从目标文件夹中选择要发布到 Scene7 的资产（一个或多个）或文件夹，然后单击鼠标右键并选择&#x200B;**发布到 Scene7**。或者，也可以从&#x200B;**工具菜单**&#x200B;中选择&#x200B;**发布到Scene7**。
+1. 从目标文件夹中选择要发布到 Scene7 的资产（一个或多个）或文件夹，然后单击鼠标右键并选择&#x200B;**发布到 Scene7**。或者，您也可以从&#x200B;**工具菜单**&#x200B;中选择&#x200B;**发布到Scene7**。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -92,13 +91,13 @@ ht-degree: 62%
 
    >[!NOTE]
    >
-   >如果资产未正确发布到 Scene7，则该链接会变为&#x200B;**发布失败**。如果资产已发布到 Scene7，则该链接会显示&#x200B;**重新发布到 Scene7**。重新发布允许您在Experience Manager中对资产进行更改并重新发布。
+   >如果资产未正确发布到 Scene7，则该链接会变为&#x200B;**发布失败**。如果资产已发布到 Scene7，则该链接会显示&#x200B;**重新发布到 Scene7**。重新发布允许您在Experience Manager中对资产进行更改，然后重新发布资产。
 
 ### 从 CQ 目标文件夹外部发布资产 {#publishing-assets-from-outside-the-cq-target-folder}
 
-Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Scene7。但是，如果您需要从目标文件夹外的文件夹上传资产，您仍可以这样做，方法是将资产上传到Scene7的&#x200B;**ad-hoc**&#x200B;文件夹。
+Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Scene7。但是，如果您需要从目标文件夹以外的文件夹上传资产，您仍然可以这样做，方法是将资产上传到Scene7上的&#x200B;**ad-hoc**&#x200B;文件夹。
 
-要执行上述操作，您首先需要在要显示资产的页面上配置云配置。然后，将某个 Scene7 组件添加到该页面，并将资产拖放到该组件中。为该页面设置页面属性后，将显示&#x200B;**发布到Scene7**&#x200B;链接，当选择该链接时，会触发上传到Scene7的操作。
+要执行上述操作，您首先需要在要显示资产的页面上配置云配置。然后，将某个 Scene7 组件添加到该页面，并将资产拖放到该组件中。为该页面设置页面属性后，会显示一个&#x200B;**发布到Scene7**&#x200B;链接，选择该链接后，将触发上传到Scene7。
 
 >[!NOTE]
 >
@@ -106,12 +105,12 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 要发布位于 CQ 目标文件夹之外的资产，请执行以下操作：
 
-1. 在经典UI的Experience Manager中，单击&#x200B;**网站**，然后导航到要添加数字资产至尚未发布到Scene7的网页。 （普通页面继承规则适用。）
+1. 在经典UI的Experience Manager中，单击&#x200B;**网站**，然后导航到要将数字资产添加到但尚未发布到Scene7的网页。 （普通页面继承规则适用。）
 
 1. 在 Sidekick 中，单击&#x200B;**页面**&#x200B;图标，然后单击&#x200B;**页面属性**。
 
 1. 单击&#x200B;**云服务**，单击&#x200B;**添加服务**，然后选择 **Scene7**。
-1. 在&#x200B;**Adobe Scene7**&#x200B;下拉列表中，选择所需的配置并单击&#x200B;**确定**。
+1. 在&#x200B;**Adobe Scene7**&#x200B;下拉列表中，选择所需的配置，然后单击&#x200B;**确定**。
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -120,7 +119,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
    >[!NOTE]
    >
-   >如果数字资产位于CQ目标文件夹中，则不会显示指向&#x200B;**检查Scene7出版物状态**&#x200B;的链接。 资产只是放置在组件中。
+   >如果数字资产位于CQ目标文件夹中，则不会显示指向&#x200B;**检查Scene7发布状态**&#x200B;的链接。 资产只是放置在组件中。
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -132,7 +131,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 ## Scene7 组件  {#scene-components}
 
-以下Scene7部分在Experience Manager提供：
+Experience Manager中提供了以下Scene7组件：
 
 * 缩放
 * 弹出（缩放）
@@ -144,11 +143,11 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 >
 >这些组件在默认情况下不可用，需要先在设计模式中选择这些组件才能使用。
 
-在“设计”模式中使用这些组件后，您可以像添加任何其他Experience Manager组件一样将这些组件添加到页面。 尚未发布到 Scene7 的资产若满足以下条件便会发布到 Scene7：位于同步文件夹中，或位于具有 Scene7 云配置的页面上。
+在设计模式下使组件可用后，您可以像任何其他Experience Manager组件一样将组件添加到页面。 尚未发布到 Scene7 的资产若满足以下条件便会发布到 Scene7：位于同步文件夹中，或位于具有 Scene7 云配置的页面上。
 
 >[!NOTE]
 >
->如果您正在创建和开发自定义S7查看器，并使用内容查找器，则需要明确添加&#x200B;**allowfullscreen**&#x200B;参数。
+>如果要创建和开发自定义S7查看器，并使用内容查找器，则需要明确添加&#x200B;**allowfullscreen**&#x200B;参数。
 
 ### Flash 查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
 
@@ -166,7 +165,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 1. 如果没有可用的 Scene7 组件，请单击 Sidekick 中的标尺图标以进入&#x200B;**设计**&#x200B;模式，单击&#x200B;**编辑** parsys，然后选择所有 **Scene7** 组件，以使其变为可用。
 
-1. 单击Sidekick中的铅笔，返回至&#x200B;**编辑**&#x200B;模式。
+1. 通过单击Sidekick中的铅笔，返回到&#x200B;**编辑**&#x200B;模式。
 
 1. 将某个组件从 Sidekick 中的 **Scene7** 组拖放到页面上的所需位置。
 
@@ -180,11 +179,11 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 在经典 UI 中，要在响应式网站中添加交互式查看体验，请执行以下操作：
 
-1. 登录Experience Manager，并确保已配置[Adobe Scene7Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，且Scene7组件可用。
+1. 登录Experience Manager，并确保已配置[的Adobe Scene7Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)，并且Scene7组件可用。
 
    >[!NOTE]
    >
-   >如果Scene7WCM组件不可用，请确保通过设计模式启用它们。
+   >如果Scene7 WCM组件不可用，请确保通过设计模式启用它们。
 
 1. 在启用了 Scene7 组件的网站上，将&#x200B;**图像**&#x200B;查看器拖放到页面。
 1. 编辑该组件，并在 **Scene7 设置**&#x200B;选项卡中调整断点。
@@ -209,65 +208,65 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 按下 + 按钮时，HTML5 缩放组件会显示放大的图像。
 
-缩放工具位于资产底部。单击 **+** 可放大。单击 **-** 可缩小。单击&#x200B;**x**&#x200B;或重置缩放箭头可将图像恢复为导入时的原始大小。 单击对角线可进入全屏模式。单击&#x200B;**编辑**&#x200B;可配置该组件。使用此组件，您可以配置所有Scene7组件](#settings-common-to-all-scene-components)通用的[设置。
+缩放工具位于资产底部。单击 **+** 可放大。单击 **-** 可缩小。单击&#x200B;**x**&#x200B;或重置缩放箭头可将图像恢复为导入时的原始大小。 单击对角线可进入全屏模式。单击&#x200B;**编辑**&#x200B;可配置该组件。使用此组件，可以配置所有Scene7组件通用的[设置](#settings-common-to-all-scene-components)。
 
 ![](do-not-localize/chlimage_1-3.png)
 
 ### 弹出 {#flyout}
 
-在 HTML5 弹出组件中，资产会分屏显示；左侧屏幕以指定大小显示资产；右侧屏幕则显示缩放部分。单击&#x200B;**编辑**&#x200B;可配置该组件。使用此组件，您可以配置所有Scene7组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)通用的[设置。
+在 HTML5 弹出组件中，资产会分屏显示；左侧屏幕以指定大小显示资产；右侧屏幕则显示缩放部分。单击&#x200B;**编辑**&#x200B;可配置该组件。使用此组件，可以配置所有Scene7组件通用的[设置](/help/sites-administering/scene7.md#settingscommontoallscene7components)。
 
 >[!NOTE]
 >
 >如果弹出组件使用自定义大小，则系统会使用该自定义大小，并禁用该组件的响应设置。
 >
->如果您的弹出组件使用默认大小(如设计视图中的设置)，则会使用默认大小，组件将拉伸以适应页面布局大小，同时启用组件的响应式设置。 但是，请注意，组件的响应式设置存在限制。 在弹出组件中使用响应设置时，您不应该将弹出组件延伸到整个页面。否则，弹出窗口可能会超出页面的右边框。
+>如果您的弹出组件使用在设计视图中设置的默认大小，则会使用默认大小，该组件会在启用组件响应设置的情况下拉伸以适应页面布局大小。 但是，请注意，组件的响应设置存在限制。 在弹出组件中使用响应设置时，您不应该将弹出组件延伸到整个页面。否则，弹出窗口可能会超出页面的右边框。
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
 ### 图像 {#image}
 
-通过 Scene7 图像组件，您可以在图像中添加 Scene7 功能，包括 Scene7 修饰符、图像预设或查看器预设，以及锐化功能。Scene7图像组件与具有特殊Scene7功能的Experience Manager中的其他图像组件类似。 在此示例中，图像应用了Scene7URL修饰符&#x200B;**&amp;op_invert=1**。
+通过 Scene7 图像组件，您可以在图像中添加 Scene7 功能，包括 Scene7 修饰符、图像预设或查看器预设，以及锐化功能。Scene7图像组件与Experience Manager中具有特殊Scene7功能的其他图像组件类似。 在此示例中，图像应用了Scene7 URL修饰符&#x200B;**&amp;op_invert=1**。
 
 ![](do-not-localize/chlimage_1-4.png)
 
-**标题、替代文** 本在高级选项卡中，为图像添加标题，为关闭图形的用户添加替代文本。
+**标题替换文** 本在高级选项卡中，为图像添加标题，为关闭图形的用户添加替换文本。
 
-**URL，打开** 位置您可以设置资产以打开链接。设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
+**URL，打开** 您可以设置资产来打开链接。设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
-**查看** 器预设从下拉菜单中选择现有的查看器预设。如果未显示您要查找的查看器预设，则可能需要将其显示出来。请参阅管理查看器预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
+**查看** 器预设从下拉菜单中选择一个现有的查看器预设。如果未显示您要查找的查看器预设，则可能需要将其显示出来。请参阅管理查看器预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
 
-**Scene7** 配置选择要用于从SPS中获取活动图像预设的Scene7配置。
+**Scene7** 配置选择要从SPS中获取活动图像预设的Scene7配置。
 
-**图** 像预设从下拉菜单中选择现有的图像预设。如果未显示您要查找的图像预设，则可能需要将其显示出来。请参阅管理图像预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
+**图像** 预设从下拉菜单中选择一个现有的图像预设。如果未显示您要查找的图像预设，则可能需要将其显示出来。请参阅管理图像预设。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
 
-**输** 出格式选择图像的输出格式，例如jpeg。根据所选的输出格式，您可能会有额外的配置选项。请参阅图像预设最佳实践。
+**输出** 格式选择图像的输出格式，例如jpeg。根据所选的输出格式，您可能会有额外的配置选项。请参阅图像预设最佳实践。
 
-**锐** 化选择要如何锐化图像。图像预设最佳实践和锐化最佳实践中详细介绍了锐化。
+**** 锐化选择要锐化图像的方式。图像预设最佳实践和锐化最佳实践中详细介绍了锐化。
 
 **URL修** 饰符您可以通过提供其他S7图像命令来更改图像效果。相关内容在图像预设和命令参考中进行了介绍。
 
-**断** 点如果您的网站是响应式的，您需要调整断点。断点之间必须使用逗号 (,) 分隔。
+**** 断点如果您的网站是响应式的，您需要调整断点。断点之间必须使用逗号 (,) 分隔。
 
 ### 图像模板 {#image-template}
 
 [Scene7 图像模板](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html)是已导入到 Scene7 的 Photoshop 分层内容，该组件中的内容和属性已进行参数化，以便提供可变性。**图像模板**&#x200B;组件允许您导入图像并在Experience Manager中动态更改文本。 此外，您还可以配置&#x200B;**图像模板**&#x200B;组件，以使用 Client Context 中的值，从而让每个客户获取个性化的图像体验。
 
-单击&#x200B;**编辑**&#x200B;可配置该组件。您可以配置所有Scene7组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)通用的[设置以及本节中介绍的其他设置。
+单击&#x200B;**编辑**&#x200B;可配置该组件。您可以配置所有Scene7组件通用的[设置](/help/sites-administering/scene7.md#settingscommontoallscene7components)以及此部分中描述的其他设置。
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-**文件引用、宽度、高** 度查看所有Scene7组件通用的设置。
+**文件引用、宽度、高** 度请参阅所有Scene7组件通用的设置。
 
 >[!NOTE]
 >
 >无法将 Scene7 URL 命令和参数直接添加到文件引用 URL。只能在组件 UI 的&#x200B;**参数**&#x200B;面板中定义这些命令和参数。
 
-**标题、替代文** 本在“Scene7图像模板”选项卡中，为图像添加标题，为关闭图形的用户添加替代文本。
+**标题、替** 换文本在Scene7图像模板选项卡中，为图像添加标题，为关闭图形的用户添加替换文本。
 
-**URL，打开** 位置您可以设置资产以打开链接。设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
+**URL，打开** 您可以设置资产来打开链接。设置 URL，并在打开方式中指示是要在同一窗口中还是在新窗口中打开该 URL。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -287,7 +286,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 #### 更改文本以反映 Client Context 值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-要将字段链接到Client Context值，请单击&#x200B;**选择**&#x200B;以打开Client Context菜单，选择Client Context，然后单击&#x200B;**确定**。 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
+要将字段链接到客户端上下文值，请单击&#x200B;**选择**&#x200B;以打开客户端上下文菜单，选择客户端上下文，然后单击&#x200B;**确定**。 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -308,7 +307,7 @@ Adobe 建议您只从 Scene7 目标文件夹内部的资产将资产发布到 Sc
 
 ### 视频组件  {#video-component}
 
-Scene7 **视频**&#x200B;组件(可从Sidekick的Scene7部分获得)使用设备和带宽检测为每个屏幕提供正确的视频。 此组件是一种 HTML5 视频播放器，它是可以跨渠道使用的单一查看器。
+Scene7 **视频**&#x200B;组件(可从Sidekick的Scene7部分获取)使用设备和带宽检测为每个屏幕提供正确的视频。 此组件是一种 HTML5 视频播放器，它是可以跨渠道使用的单一查看器。
 
 它可用于自适应视频集、单个MP4视频或单个F4V视频。
 
@@ -327,15 +326,15 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ## Scene7 内容浏览器 {#scene-content-browser}
 
-通过Scene7内容浏览器，您可以直接以Experience Manager方式从Scene7视图内容。 要访问内容浏览器，请在内容查找器中，选择触屏优化用户界面中的&#x200B;**Scene7**&#x200B;或经典用户界面中的&#x200B;**S7**&#x200B;图标。 这两种用户界面的功能是相同的。
+通过Scene7内容浏览器，您可以直接在Experience Manager中查看Scene7中的内容。 要访问内容浏览器，请在内容查找器中，选择触屏优化用户界面中的&#x200B;**Scene7**&#x200B;或经典用户界面中的&#x200B;**S7**&#x200B;图标。 这两种用户界面的功能是相同的。
 
-如果您有多个配置，则默认Experience Manager显示[默认配置](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以直接在 Scene7 内容浏览器的下拉菜单中选择不同的配置。
+如果您有多个配置，则默认情况下Experience Manager会显示[默认配置](/help/sites-administering/scene7.md#configuring-a-default-configuration)。 您可以直接在 Scene7 内容浏览器的下拉菜单中选择不同的配置。
 
 >[!NOTE]
 >
 >* 位于临时文件夹中的资产不会在 Scene7 内容浏览器中显示。
 >* [启用安全预览](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)后，在 Scene7 中已发布和已取消发布的资产都会在 Scene7 内容浏览器中显示。
->* 如果内容浏览器中未显示&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;图标作为选项，则需要[配置Scene7以与Experience Manager](/help/sites-administering/scene7.md)一起使用。
+>* 如果在内容浏览器中未看到&#x200B;**Scene7**&#x200B;或&#x200B;**S7**&#x200B;图标作为选项，则需要[配置Scene7以使用Experience Manager](/help/sites-administering/scene7.md)。
 >* Scene7 内容浏览器支持以下视频：
    >   * 自适应视频集：一种容器，包含在多种屏幕上实现无缝播放所需的所有视频呈现
    >   * 单个 MP4 视频
@@ -368,33 +367,33 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 ### 使用内容浏览器搜索 Scene7 资产 {#searching-for-scene-assets-with-the-content-browser}
 
-搜索Scene7资产与搜索Experience Manager资产类似，但搜索时您实际看到的是Scene7系统中资产的远程视图，而不是直接将资产导入Experience Manager。
+搜索Scene7资产与搜索Experience Manager资产类似，不同之处在于，在搜索资产时，您实际上会在Scene7系统中看到资产的远程视图，而不是直接将资产导入Experience Manager。
 
 您可以使用经典 UI 或触屏优化 UI 来查看和搜索资产。根据所用的界面，搜索方式会略有不同。
 
 在任一 UI 中进行搜索时，您都可以按以下条件进行筛选（此处显示的是触屏优化 UI）：
 
-**输入** 关键字您可以按名称搜索资产。搜索时，您输入的关键字是文件名称的开头。例如，键入“swimming”一词后，将在该文件夹中查找任何以这些字母开头的资产文件名。键入搜索词后，请务必单击 Enter，这样才能查找资产。
+**输入** 关键词您可以按名称搜索资产。搜索时，您输入的关键字是文件名称的开头。例如，键入“swimming”一词后，将在该文件夹中查找任何以这些字母开头的资产文件名。键入搜索词后，请务必单击 Enter，这样才能查找资产。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
 **文件夹/** 路径显示的文件夹名称基于您选择的配置。您可以向下选择更低级别的文件夹，方法是单击文件夹图标并选择一个子文件夹，然后单击复选标记以将其选中。
 
-如果输入关键字并选择文件夹，Experience Manager会搜索该文件夹和任何子文件夹。 但是，如果您在搜索时未输入任何关键字，则选择文件夹后，只会显示此文件夹中的资产，而不会包括所有子文件夹。
+如果输入关键字并选择文件夹，则Experience Manager会搜索该文件夹和任何子文件夹。 但是，如果您在搜索时未输入任何关键字，则选择文件夹后，只会显示此文件夹中的资产，而不会包括所有子文件夹。
 
-默认情况下，Experience Manager会搜索所选文件夹和所有子文件夹。
+默认情况下，Experience Manager会搜索选定的文件夹和所有子文件夹。
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
-**资产类型选** 择Scene7可浏览Scene7内容。仅当配置了 Scene7 时，此选项才可用。
+**资产类** 型选择Scene7可浏览Scene7内容。仅当配置了 Scene7 时，此选项才可用。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-**配** 置如果您在Cloud Services中定义了多个Scene7配置，则可以在此处选择它。根据您选择的配置，文件夹会相应地进行更改。
+**** 配置如果您在Cloud Services中定义了多个Scene7配置，则可以在此处选择该配置。根据您选择的配置，文件夹会相应地进行更改。
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**资产** 类型在Scene7浏览器中，您可以筛选结果以包含以下任一内容：图像、模板、视频和自适应视频集。如果您未选择任何资产类型，则默认情况下，Experience Manager会搜索所有资产类型。
+**资产** 类型在Scene7浏览器中，您可以筛选结果以包含以下任一项：图像、模板、视频和自适应视频集。如果您未选择任何资产类型，则默认情况下，Experience Manager会搜索所有资产类型。
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -404,7 +403,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
    >
    >
 * 搜索视频时，您搜索的是单个视频呈现。结果会返回原始视频呈现（仅限 *.mp4）以及编码视频呈现。
-* 在搜索自适应视频集时，您正在搜索文件夹和所有子文件夹，但前提是您已向搜索添加了关键字。 如果您尚未添加关键字，Experience Manager不会搜索子文件夹。
+* 在搜索自适应视频集时，您正在搜索文件夹和所有子文件夹，但前提是您向搜索添加了关键字。 如果您未添加关键词，则Experience Manager不会搜索子文件夹。
 
 
 
