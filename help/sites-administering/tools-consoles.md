@@ -10,23 +10,22 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 44%
 
 ---
 
-
 # 工具控制台{#tools-consoles}
 
-**工具**&#x200B;控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。**工具**&#x200B;控制台目前有两种不同的版本，具体取决于您所使用的UI:
+**工具**&#x200B;控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。目前，根据您所使用的UI，有两种类型的&#x200B;**工具**&#x200B;控制台：
 
-* [工具——触屏优化UI](#tools-touch-optimized-ui)
-* [工具——经典UI](#tools-classic-ui)
+* [工具 — 触屏优化UI](#tools-touch-optimized-ui)
+* [工具 — 经典UI](#tools-classic-ui)
 
-## 工具——触屏优化UI {#tools-touch-optimized-ui}
+## 工具 — 触屏优化UI {#tools-touch-optimized-ui}
 
 >[!NOTE]
 >
@@ -34,7 +33,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->由于UI中的卡提供了有关每个选项用途的详细信息，因此此表只提供了有关树中功能位置的快速参考。
+>由于UI中的卡片提供了有关每个选项用途的详细信息，因此此表仅提供有关树中功能位置的快速参考。
 
 <table>
  <tbody>
@@ -48,7 +47,7 @@ ht-degree: 44%
   </tr>
   <tr>
    <td> </td>
-   <td>CRXDE LITE</td>
+   <td>CRXDE Lite</td>
   </tr>
   <tr>
    <td> </td>
@@ -365,7 +364,7 @@ ht-degree: 44%
  </tbody>
 </table>
 
-## 工具——经典UI {#tools-classic-ui}
+## 工具 — 经典UI {#tools-classic-ui}
 
 <table>
  <tbody>
@@ -379,11 +378,11 @@ ht-degree: 44%
   </tr>
   <tr>
    <td>Client Context配置<br /> </td>
-   <td>Client Context表示动态组合的用户数据集合。 此处保留默认和营销云配置。<br /> </td>
+   <td>Client Context表示动态组合的用户数据集合。 此处保留了默认和marketing cloud配置。<br /> </td>
   </tr>
   <tr>
    <td>Cloud Services配置<br /> </td>
-   <td>保存与集成Adobe Marketing Cloud相关的配置。</td>
+   <td>保留与与Adobe Marketing Cloud集成相关的配置。</td>
   </tr>
   <tr>
    <td>云设置<br /> </td>
@@ -391,7 +390,7 @@ ht-degree: 44%
   </tr>
   <tr>
    <td>商务</td>
-   <td>提供对导入器和各种产品数据的访问。</td>
+   <td>提供对导入程序和各种产品数据的访问权限。</td>
   </tr>
   <tr>
    <td>DAM </td>
@@ -399,11 +398,11 @@ ht-degree: 44%
   </tr>
   <tr>
    <td>功能板</td>
-   <td>允许您创建报告仪表板;这为定义显示统一数据的页面提供了一种可自定义的方式。</td>
+   <td>用于创建报表功能板；这为定义显示统一数据的页面提供了一种可自定义的方式。</td>
   </tr>
   <tr>
    <td>自定义文档</td>
-   <td>用于扩展文档和联机帮助。</td>
+   <td>在扩展文档和在线帮助时使用。</td>
   </tr>
   <tr>
    <td>fd</td>
@@ -411,15 +410,15 @@ ht-degree: 44%
   </tr>
   <tr>
    <td>表单提交</td>
-   <td>保留收到的表单提交的列表。</td>
+   <td>保存收到的表单提交列表。</td>
   </tr>
   <tr>
-   <td>导入器 </td>
+   <td>导入程序 </td>
    <td>提供对各种选项的访问。</td>
   </tr>
   <tr>
    <td>外部链接检查程序</td>
-   <td>外部链接检查器。</td>
+   <td>外部链接检查程序。</td>
   </tr>
   <tr>
    <td>移动设备</td>
@@ -427,44 +426,43 @@ ht-degree: 44%
   </tr>
   <tr>
    <td>包</td>
-   <td>指向“包管理器”的替代链接，其中显示已为AEM WCM加载的包。 与CRX的包管理器中显示的信息相似。</td>
+   <td>包管理器的替代链接，用于显示为AEM WCM加载的包。 与CRX的包管理器中显示的信息类似。</td>
   </tr>
   <tr>
-   <td>复制——复制代理</td>
-   <td>用于在发布页面时将数据从作者复制到发布，或通过反向复制将用户注释从发布环境返回到作者。</td>
+   <td>复制 — 复制代理</td>
+   <td>用于在发布页面时将数据从创作复制到发布，或通过反向复制将数据从发布环境返回给创作的用户评论。</td>
   </tr>
   <tr>
    <td>报告</td>
-   <td>AEM提供一系列自定义报告，允许您创建自定义报告和／或开发您自己的报告。</td>
+   <td>AEM提供一系列自定义报表，允许您创建自定义报表和/或开发您自己的报表。</td>
   </tr>
   <tr>
    <td>默认页面基架</td>
    <td>使用基架，您可以创建一个表单（即基架），其中包含的字段反映您要用于页面的结构，然后使用此表单轻松创建基于此结构的页面。</td>
   </tr>
   <tr>
-   <td>安全性——自助配置 </td>
-   <td>允许您配置用户在创建帐户或重置口令时自动收到的电子邮件以及确认已重置的口令。</td>
+   <td>安全 — 自助服务配置 </td>
+   <td>允许您配置用户在创建帐户或重置密码时自动收到的电子邮件，以及确认已重置的密码。</td>
   </tr>
   <tr>
    <td>分段</td>
-   <td>站点访客在访问站点时的兴趣和目标各不相同。了解这些目标并满足预期是在线营销活动的一个重要成功因素。分段通过分析和表征访客的详细信息来帮助实现此目的。<br /> </td>
+   <td>站点访客在访问站点时的兴趣和目标各不相同。了解这些目标并满足预期是在线营销活动的一个重要成功因素。分段可通过分析访客的详细信息并描述其特征来帮助实现这一点。<br /> </td>
   </tr>
   <tr>
    <td>租户</td>
    <td>没有与此条目相关的活动功能。</td>
   </tr>
   <tr>
-   <td>信任库</td>
+   <td>truststore</td>
    <td>没有与此条目相关的活动功能。</td>
   </tr>
   <tr>
-   <td>版本控制——清除版本</td>
+   <td>版本控制 — 清除版本</td>
    <td>允许您根据需要清除页面版本。</td>
   </tr>
   <tr>
    <td>工作流</td>
-   <td>工作流可以控制页面或数字资产上支持任何编辑流程的一系列操作。</td>
+   <td>工作流可控制页面或数字资产上支持任何编辑流程的一系列操作。</td>
   </tr>
  </tbody>
 </table>
-
