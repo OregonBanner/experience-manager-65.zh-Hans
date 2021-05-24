@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 96%
 
 ---
-
 
 # 电子邮件营销{#e-mail-marketing}
 
@@ -133,7 +132,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->在发送新闻稿之前，请检查位于`https://localhost:4502/system/console/configMgr`的Day CQ Link Externalizer的OSGi配置。
+>在发送新闻稿之前，请检查`https://localhost:4502/system/console/configMgr`处的Day CQ Link Externalizer的OSGi配置。
 >
 >默认情况下，参数的值为 `localhost:4502`，并且如果运行实例的端口发生更改，将无法完成操作。
 
@@ -221,7 +220,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->在发送新闻稿之前，请检查位于`https://localhost:4502/system/console/configMgr`的Day CQ Link Externalizer的OSGi配置。
+>在发送新闻稿之前，请检查`https://localhost:4502/system/console/configMgr`处的Day CQ Link Externalizer的OSGi配置。
 >
 >默认情况下，参数的值为 `localhost:4502`，并且如果运行实例的端口发生更改，将无法完成操作。
 
