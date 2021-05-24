@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 95%
 
 ---
-
 
 # 解决 AEM 中有关创作方面的问题{#troubleshooting-aem-when-authoring}
 
@@ -71,7 +70,7 @@ ht-degree: 95%
 
 * **问题：**
 
-   * 使用&#x200B;**查找并替换**&#x200B;选项时，并非替换页面上的`find`术语的所有实例。
+   * 使用&#x200B;**查找并替换**&#x200B;选项时，可能并非页面上替换了`find`术语的所有实例。
 
 * **原因**：
 
@@ -87,4 +86,3 @@ ht-degree: 95%
    * 可使用“**Web 控制台**”通过 **Day CQ WCM 查找替换 Servlet** 的配置来更改这些定义；例如，在
 
       `http://localhost:4502/system/console/configMgr`
-
