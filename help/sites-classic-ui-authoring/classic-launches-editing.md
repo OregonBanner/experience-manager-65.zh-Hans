@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 99%
 
 ---
-
 
 # 编辑启动项{#editing-launches}
 
@@ -68,4 +67,3 @@ ht-degree: 99%
 * **生产就绪**&#x200B;标记的状态（橙色=未设置；绿色=已设置）。
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
-
