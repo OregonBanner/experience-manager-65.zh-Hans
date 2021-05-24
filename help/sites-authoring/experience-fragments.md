@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 96%
 
 ---
-
 
 # 体验片段{#experience-fragments}
 
@@ -160,7 +159,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
    ![xf-01](assets/xf-01.png)
 
-1. 导览至所需的文件夹，然后选择&#x200B;**创建**。
+1. 导航到所需的文件夹，然后选择&#x200B;**创建**。
 
    ![xf-02](assets/xf-02.png)
 
@@ -224,7 +223,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
    * **描述**
    * **变体标记**
 
-   ![xf-08](assets/xf-06.png)
+   ![xf-06](assets/xf-06.png)
 
 1. 使用&#x200B;**完成**（勾选图标）确认，新的变体将显示在面板中：
 
@@ -338,9 +337,9 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 
 
-## 纯 HTML 呈现版本 {#the-plain-html-rendition}
+## 纯 HTML 演绎版 {#the-plain-html-rendition}
 
-使用 URL 中的 `.plain.` 选择器，您可以从浏览器中访问纯 HTML 呈现版本。
+可使用 URL 中的 `.plain.` 选择器从浏览器访问纯 HTML 演绎版。
 
 >[!NOTE]
 虽然这可以直接从浏览器获得，[但主要目的是允许其他应用程序（例如，第三方 Web 应用程序、自定义移动实现）仅使用 URL 直接访问体验片段的内容](/help/sites-developing/experience-fragments.md#the-plain-html-rendition)。
