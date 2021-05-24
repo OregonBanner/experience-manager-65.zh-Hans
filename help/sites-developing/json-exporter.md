@@ -1,44 +1,43 @@
 ---
 title: 内容服务的JSON导出程序
 seo-title: 内容服务的JSON导出程序
-description: AEM Content Services设计为在AEM关注网页之外对内容进行投放和描述。 它们使用标准化方法向非传统AEM网页的渠道提供内容投放，这些方法可供任何客户使用。
-seo-description: AEM Content Services设计为在AEM关注网页之外对内容进行投放和描述。 它们使用标准化方法向非传统AEM网页的渠道提供内容投放，这些方法可供任何客户使用。
+description: AEM Content Services旨在对AEM中/从中提供的内容的描述和交付进行归纳，使其不仅仅限于网页。 它们使用可供任何客户使用的标准化方法，将内容交付到非传统AEM网页的渠道。
+seo-description: AEM Content Services旨在对AEM中/从中提供的内容的描述和交付进行归纳，使其不仅仅限于网页。 它们使用可供任何客户使用的标准化方法，将内容交付到非传统AEM网页的渠道。
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
-translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '495'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
+# 内容服务的JSON导出程序{#json-exporter-for-content-services}
 
-# 内容服务的JSON导出器{#json-exporter-for-content-services}
+AEM Content Services旨在对AEM中/从中提供的内容的描述和交付进行归纳，使其不仅仅限于网页。
 
-AEM Content Services设计为在AEM关注网页之外对内容进行投放和描述。
-
-它们使用标准化方法向非传统AEM网页的渠道提供内容投放，这些方法可供任何客户使用。 这些渠道可以包括：
+它们使用可供任何客户使用的标准化方法，将内容交付到非传统AEM网页的渠道。 这些渠道可以包括：
 
 * [单页应用程序](spa-walkthrough.md)
-* 本机移动应用程序
-* aem以外的其他渠道和触点
+* 本机移动设备应用程序
+* AEM外部的其他渠道和接触点
 
-对于使用结构化内容的内容片段，您可以通过使用JSON导出器以JSON数据模型格式交付AEM页的内容来提供内容服务。 然后，您自己的应用程序可以使用它。
+对于使用结构化内容的内容片段，您可以使用JSON导出程序以JSON数据模型格式交付(y)AEM页面的内容，从而提供内容服务。 然后，您自己的应用程序就可以使用此功能。
 
 >[!NOTE]
 >
->自核心组件](https://docs.adobe.com/content/docs/en/core-components/v1.html)的[版本1.1.0以来，此处描述的功能可用于所有核心组件。
+>自[核心组件](https://docs.adobe.com/content/docs/en/core-components/v1.html)版本1.1.0以来，此处描述的功能适用于所有核心组件。
 
-## 包含内容片段核心组件{#json-exporter-with-content-fragment-core-components}的JSON导出器
+## 包含内容片段核心组件{#json-exporter-with-content-fragment-core-components}的JSON导出程序
 
-使用AEM JSON导出器，您可以以JSON数据模型格式提供(y)AEM页面的内容。 然后，您自己的应用程序可以使用它。
+使用AEM JSON导出程序，您可以以JSON数据模型格式交付(y)AEM页面的内容。 然后，您自己的应用程序就可以使用此功能。
 
-在AEM中，投放是使用选择器`model`和`.json`扩展实现的。
+在AEM中，使用选择器`model`和`.json`扩展来实现投放。
 
 `.model.json`
 
@@ -52,13 +51,13 @@ AEM Content Services设计为在AEM关注网页之外对内容进行投放和描
 
    ![chlimage_1-112](assets/chlimage_1-192.png)
 
-您也可以通过专门定位结构化内容片段来提供其内容。
+您也可以通过专门定位结构化内容片段来交付其内容。
 
-这是使用片段的整个路径（通过`jcr:content`）完成的；例如，带有后缀（如）。
+使用片段的整个路径（通过`jcr:content`）完成此操作；例如，带有后缀（如）。
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
-您的页面可以包含单个内容片段或多种类型的组件。 您还可以使用列表组件等机制自动搜索相关内容。
+您的页面可以包含一个内容片段或多种类型的多个组件。 您还可以使用列表组件等机制自动搜索相关内容。
 
 * 例如，URL，如：
 
@@ -76,7 +75,7 @@ AEM Content Services设计为在AEM关注网页之外对内容进行投放和描
 
    >[!NOTE]
    >
-   >虽然不是标准实现，但支持[多个选择器，](json-exporter-components.md#multiple-selectors)但`model`必须是第一个选择器。
+   >虽然不是标准实施，但支持[多个选择器，](json-exporter-components.md#multiple-selectors)但`model`必须是第一个选择器。
 
 ### 更多信息 {#further-information}
 
@@ -86,11 +85,11 @@ AEM Content Services设计为在AEM关注网页之外对内容进行投放和描
 
    * [资产 HTTP API](/help/assets/mac-api-assets.md)
 
-* Sling Models:
+* Sling 模型:
 
-   * [Sling模型——自130年起将模型类与资源类型关联](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling模型 — 自130年起将模型类与资源类型关联](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
-* AEM with JSON:
+* 包含JSON的AEM:
 
    * [以JSON格式获取页面信息](/help/sites-developing/pageinfo.md)
 
@@ -98,11 +97,10 @@ AEM Content Services设计为在AEM关注网页之外对内容进行投放和描
 
 有关更多详细信息，请参阅：
 
-* 资产用户指南](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)中的[内容片段主题
+* Assets用户指南中的[内容片段主题](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
-* [使用内容片段进行创作](/help/sites-authoring/content-fragments.md)
+* [使用内容片段创作](/help/sites-authoring/content-fragments.md)
 * [为组件启用JSON导出](/help/sites-developing/json-exporter-components.md)
 
-* [核心](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 组件和内 [容片段组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
-
+* [核心](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 组件和内容 [片段组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
