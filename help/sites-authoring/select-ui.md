@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: e418d330-f234-411d-8cad-3fd9906dcbee
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '756'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
-
 
 # 选择您的 UI{#selecting-your-ui}
 
@@ -41,13 +40,13 @@ ht-degree: 83%
 >
 >切换到经典 UI 的各种选项无法立即开箱即用，必须对您的实例进行专门配置。
 >
->有关详细信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md)。
+>有关更多信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 。
 
 >[!NOTE]
 >
 >对于从以前版本升级而来的实例，页面创作将继续使用经典 UI。
 >
->升级后，页面创作不会自动切换到触屏优化UI，但您可以使用&#x200B;**WCM创作UI模式服务**（`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)进行配置。 请参阅[编辑器的 UI 重写](#ui-overrides-for-the-editor)。
+>升级后，页面创作不会自动切换到触屏优化UI，但您可以使用&#x200B;**WCM创作UI模式服务**（`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)对此进行配置。 请参阅[编辑器的 UI 重写](#ui-overrides-for-the-editor)。
 
 ## 配置实例的默认 UI {#configuring-the-default-ui-for-your-instance}
 
@@ -61,7 +60,7 @@ ht-degree: 83%
 
 该设置可能会被会话设置所重写。
 
-## 将当前会话切换为经典 UI  {#switching-to-classic-ui-for-the-current-session}
+## 为当前会话{#switching-to-classic-ui-for-the-current-session}切换到经典UI
 
 使用触屏优化 UI 时，桌面用户可能想要还原到经典（仅限桌面）UI。将当前会话切换到经典 UI 的方法有多种。
 
@@ -72,7 +71,7 @@ ht-degree: 83%
    >用于切换到经典 UI 的该选项无法立即开箱即用，必须对您的实例进行专门配置。
    >
    >
-   >有关详细信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md)。
+   >有关更多信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 。
 
    如果启用该选项，那么每当您将鼠标悬停在适用的控制台上时，都会显示一个图标（一个显示器符号），点按/单击它将在经典 UI 中打开相应的位置。
 
@@ -82,7 +81,7 @@ ht-degree: 83%
 
 * **URL**
 
-   经典UI可以使用欢迎屏幕`welcome.html`的URL进行访问。例如：
+   经典UI可使用`welcome.html`欢迎屏幕的URL访问。例如：
 
    `https://localhost:4502/welcome.html`
 
@@ -99,7 +98,7 @@ ht-degree: 83%
 >
 >用于切换到经典 UI 的该选项无法立即开箱即用，必须对您的实例进行专门配置。
 >
->有关详细信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md)。
+>有关更多信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md) 。
 
 如果已启用，**打开经典 UI** 将可从&#x200B;**页面信息**&#x200B;对话框中访问：
 
@@ -111,10 +110,10 @@ ht-degree: 83%
 
 * 创作页面时：
 
-   * 当使用URL中的`cf#`访问页面时，会强制使用经典编辑器。 例如：
+   * 在URL中使用`cf#`访问页面时，会强制使用经典编辑器。 例如：
       `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * 当在URL中使用`/editor.html`或使用触控设备时，会强制使用触屏启用编辑器。 例如：
+   * 在URL中使用`/editor.html`或使用触控设备时，会强制使用触屏启用编辑器。 例如：
       `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何强制操作都是临时的，而且仅对浏览器会话有效
