@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 93%
 
 ---
-
 
 # 使用 ContextHub 数据预览页面{#previewing-pages-using-contexthub-data}
 
@@ -70,4 +69,3 @@ UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的�
 弹出覆盖窗口可以包含一个图标，单击或点按该图标会展开弹出窗口内容以覆盖整个浏览器窗口或屏幕。
 
 ![](do-not-localize/chlimage_1-18.png)
-
