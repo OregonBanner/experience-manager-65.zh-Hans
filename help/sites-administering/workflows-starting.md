@@ -1,26 +1,25 @@
 ---
 title: 启动工作流
 seo-title: 启动工作流
-description: 了解如何在AEM中开始工作流。
-seo-description: 了解如何在AEM中开始工作流。
+description: 了解如何在AEM中启动工作流。
+seo-description: 了解如何在AEM中启动工作流。
 uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
-translation-type: tm+mt
-source-git-commit: 967018907e32e5916df72ff16dfc7bc06f8dbed8
+exl-id: 84a1964c-4121-4763-b946-9eee6093747d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 4%
 
 ---
 
-
 # 启动工作流{#starting-workflows}
 
-在管理工作流时，您可以使用各种方法开始它们：
+在管理工作流时，您可以使用多种方法启动工作流：
 
 * 手动：
 
@@ -29,32 +28,30 @@ ht-degree: 4%
 
 * 自动：
 
-   * 响应节点变化；[使用Launcher](#workflows-launchers)。
+   * 响应节点变化；[使用启动器](#workflows-launchers)。
 
 >[!NOTE]
 >
->作者也可使用其他方法；有关完整详细信息，请参阅：
+>作者还可以使用其他方法；有关完整详细信息，请参阅：
 >
 >* [将工作流应用于页面](/help/sites-authoring/workflows-applying.md)
->* [如何将工作流应用于DAM资产](/help/assets/assets-workflow.md)
->* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
->* [翻译项目](/help/sites-administering/tc-manage.md)
-
->
+* [如何将工作流应用到DAM资产](/help/assets/assets-workflow.md)
+* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
+* [翻译项目](/help/sites-administering/tc-manage.md)
 
 
 
 ## 工作流模型 {#workflow-models}
 
-您可以根据“工作流模型”控制台上列出的某个模型](/help/sites-administering/workflows.md#workflow-models-and-instances)开始工作流[。 唯一的必需信息是有效负荷，但也可以添加标题和/或评论。
+您可以根据“工作流模型”控制台中列出的模型之一](/help/sites-administering/workflows.md#workflow-models-and-instances)启动工作流[。 唯一的必需信息是有效负载，不过也可以添加标题和/或注释。
 
 ## 工作流启动器{#workflows-launchers}
 
-工作流启动器监视内容存储库中的更改，以启动取决于已更改节点的位置和资源类型的工作流。
+工作流启动器可监视内容存储库中的更改，以根据已更改节点的位置和资源类型来启动工作流。
 
-使用&#x200B;**Launcher**&#x200B;可以：
+使用&#x200B;**Launcher**，您可以：
 
-* 查看已为特定节点启动的工作流。
+* 请参阅已为特定节点启动的工作流。
 * 选择在创建/修改/删除特定节点/节点类型时要启动的工作流。
 * 删除现有的工作流到节点关系。
 
@@ -70,52 +67,51 @@ ht-degree: 4%
 * `/var/mobile`
 * `/var/statistics`
 
-   * 异常：对`/var/statistics/tracking` *do*&#x200B;下节点的更改导致工作流启动。
+   * 例外：对`/var/statistics/tracking` *do*&#x200B;下的节点所做的更改会导致工作流启动。
 
-标准安装中包含各种定义。 这些功能适用于数字资产管理和社交协作任务:
+标准安装中包含各种定义。 这些功能可用于数字资产管理和社交协作任务：
 
 ![wf-100](assets/wf-100.png)
 
-## 批处理{#workflow-packages-for-batch-processing}的工作流包
+## 用于批量处理的工作流包{#workflow-packages-for-batch-processing}
 
-工作流包是可以作为负载传递到工作流以进行处理的包，允许处理多个资源。
+工作流包是可以作为有效负载传递到工作流以进行处理的包，允许处理多个资源。
 
 工作流包：
 
 * 包含指向一组资源（如页面、资产）的链接。
-* 保存包信息，如创建日期、创建包的用户和简短描述。
-* 是使用专用的页面模板定义的；这些页面允许用户指定包中的资源。
+* 包含包信息，如创建日期、创建包的用户和简短描述。
+* 使用专用页面模板进行定义；此类页面允许用户指定资源包中的资源。
 * 可多次使用。
-* 可以由用户在工作流实例实际运行时更改（添加或删除资源）。
+* 当工作流实例实际运行时，用户（添加或删除资源）可能会进行更改。
 
-## 从“模型”控制台{#starting-a-workflow-from-the-models-console}启动工作流
+## 从模型控制台{#starting-a-workflow-from-the-models-console}启动工作流
 
-1. 使用&#x200B;**工具**、**工作流**、**模型**&#x200B;导航到&#x200B;**模型**&#x200B;控制台。
-1. 选择工作流(根据控制台视图);如果需要，您还可以使用搜索（左上方）：
+1. 使用&#x200B;**工具**、**工作流**&#x200B;和&#x200B;**模型**&#x200B;导航到&#x200B;**模型**&#x200B;控制台。
+1. 选择工作流（根据控制台视图）；您还可以根据需要使用搜索（左上方）：
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
-   >
-   >**[临时](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;指示器显示不会为其保留工作流历史记录的工作流。
+   **[临时](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;指示器显示不保留工作流历史记录的工作流。
 
-1. 从工具栏中选择&#x200B;**开始工作流**。
-1. 此时将打开“运行工作流”对话框，您可以在其中指定：
+1. 从工具栏中选择&#x200B;**启动工作流**。
+1. 此时将打开运行工作流对话框，允许您指定：
 
    * **有效负荷**
 
-      这可以是页面、节点、资产、包等资源。
+      这可以是页面、节点、资产、资源包等资源。
 
    * **标题**
 
-      帮助识别此实例的可选标题。
+      用于帮助标识此实例的可选标题。
 
    * **注释**
 
-      可选注释，用于帮助指示此实例的详细信息。
+      可选注释可帮助指示此实例的详细信息。
    ![wf-104](assets/wf-104.png)
 
-## 创建启动程序配置{#creating-a-launcher-configuration}
+## 创建启动器配置{#creating-a-launcher-configuration}
 
 1. 使用&#x200B;**工具**、**工作流**&#x200B;和&#x200B;**启动器**&#x200B;导航到&#x200B;**工作流启动器**&#x200B;控制台。
 1. 选择&#x200B;**创建**，然后选择&#x200B;**添加启动器**&#x200B;以打开对话框：
@@ -124,26 +120,26 @@ ht-degree: 4%
 
    * **事件类型**
 
-      将启动工作流的事件类型:
+      将启动工作流的事件类型：
 
       * 创建时间
       * 修改时间
       * 已删除
    * **节点类型**
 
-      工作流启动程序应用于的节点类型。
+      工作流启动器应用到的节点类型。
 
    * **路径**
 
-      工作流启动程序应用的路径。
+      工作流启动器应用到的路径。
 
    * **运行模式**
 
-      工作流启动器应用于的服务器类型。 选择&#x200B;**作者**、**发布**&#x200B;或&#x200B;**作者与发布**。
+      工作流启动器应用的服务器类型。 选择&#x200B;**创作**、**发布**&#x200B;或&#x200B;**创作和发布**。
 
    * **条件**
 
-      节点值的条件列表，在评估后，确定是否启动工作流。 例如，以下条件会导致当节点的属性名具有值User时启动工作流：
+      节点值的条件列表，在评估后，这些条件将确定是否启动了工作流。 例如，当节点的属性名称值为User时，以下条件会导致启动工作流：
 
       name==User
 
@@ -157,7 +153,7 @@ ht-degree: 4%
 
    * **工作流模型**
 
-      在定义的条件下的Nodetype和/或路径上发生事件类型时要启动的工作流。
+      在定义的条件下的节点类型和/或路径上发生事件类型时要启动的工作流。
 
    * **描述**
 
@@ -165,24 +161,24 @@ ht-degree: 4%
 
    * **激活**
 
-      控制是否激活了工作流启动器：
+      控制是否激活工作流启动器：
 
       * 选择&#x200B;**启用**&#x200B;以在满足配置属性时启动工作流。
-      * 选择&#x200B;**在工作流不应执行时禁用**（即使在配置属性被满足时也不是如此）。
+      * 当工作流不应执行时（即使配置属性得到满足也不会），请选择&#x200B;**禁用**。
    * **排除列表**
 
-      它指定在确定是否应触发工作流时要排除（即忽略）的任何JCR事件。
+      这可指定在确定是否应触发工作流时要排除的任何JCR事件（即忽略）。
 
-      此启动器属性是以逗号分隔的项目列表:&quot;
+      此启动器属性是以逗号分隔的项目列表：&quot;
 
-      * `property-name` 忽略在 `jcr` 指定属性名称上触发的任何事件。&quot;
-      * `event-user-data:<*someValue*>` 忽略包含通过 `*<someValue*`API `user-data` 设置的 [ `ObservationManager` >](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)。
+      * `property-name` 忽略在 `jcr` 指定的属性名称上触发的任何事件。&quot;
+      * `event-user-data:<*someValue*>` 忽略包含通过 `*<someValue*`API `user-data` 设置的 [ `ObservationManager` >](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)的任何事件。
 
       例如：
 
       `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
 
-      此功能可用于通过添加排除项来忽略由另一个工作流进程触发的任何更改：
+      此功能可用于通过添加排除项来忽略其他工作流进程触发的任何更改：
 
       `event-user-data:changedByWorkflowProcess`
 
@@ -190,10 +186,10 @@ ht-degree: 4%
 
 
 
-1. 选择&#x200B;**创建**&#x200B;以创建启动器并返回控制台。
+1. 选择&#x200B;**创建**，以创建启动器并返回到控制台。
 
-   发生相应事件后，将触发启动程序并启动工作流。
+   发生相应事件后，将触发启动器并启动工作流。
 
 ## 管理启动器配置{#managing-a-launcher-configuration}
 
-创建启动器配置后，您可以使用相同的控制台选择该实例，然后选择&#x200B;**视图属性**（并编辑它们）或&#x200B;**删除**。
+创建启动器配置后，可以使用相同的控制台选择实例，然后选择&#x200B;**查看属性**（并编辑它们）或&#x200B;**删除**。
