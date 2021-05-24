@@ -1,14 +1,13 @@
 ---
-title: 为Adobe Experience Manager创建辅助内容（WCAG 2.1符合性）
-description: 使用AEM帮助使残障人士能够访问和使用Web内容
-translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+title: 为Adobe Experience Manager创建无障碍内容（WCAG 2.1符合性）
+description: 使用AEM帮助残障人士访问和使用Web内容
+exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '13956'
 ht-degree: 99%
 
 ---
-
 
 # 创建无障碍内容（WCAG 2.1 合规性）{#creating-accessible-content-wcag-conformance}
 
@@ -25,7 +24,7 @@ ht-degree: 99%
 此外，请参阅：
 * [WCAG 2.1 快速指南](/help/managing/qg-wcag.md)。
 * [Adobe 解决方案的“无障碍合规性”报告](https://www.adobe.com/accessibility/compliance.html)。
-* [配置富文本编辑器以生成辅助内容](/help/sites-administering/rte-accessible-content.md)
+* [配置富文本编辑器以生成无障碍内容](/help/sites-administering/rte-accessible-content.md)
 
 准则依据三个合规性级别进行分级：A 级（最低）、AA 级以及 AAA 级（最高）。以下是各个级别的简要定义：
 
@@ -73,7 +72,7 @@ ht-degree: 99%
 >
 >某些开箱即用的核心组件（例如&#x200B;**[轮播](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)**）没有提供用于向单个图像添加替换文本描述的&#x200B;**替换文本**&#x200B;字段，尽管存在适用于整个组件的&#x200B;**标签**&#x200B;字段（**[辅助功能](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/components/carousel.html#accessibility-tab)**&#x200B;选项卡）。
 >
->为AEM实例实施这些版本时，开发团队需要配置这些组件以支持`alt`属性，以便作者可以将其添加到内容中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
+>在为AEM实例实施这些版本时，开发团队将需要配置这些组件以支持`alt`属性，以便作者可以将其添加到内容中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 默认情况下，AEM 要求填写&#x200B;**替换文本**&#x200B;字段。如果图像是纯粹的装饰并且不需要替换文本，则可以选中&#x200B;**图像具有装饰性**&#x200B;选项。
 
@@ -281,7 +280,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * [了解成功标准 1.2.5](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 * [如何达到成功标准 1.2.5](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-prerecorded)
 
-### 适应性 (1.3)  {#adaptable}
+### 适应性 (1.3) {#adaptable}
 
 [准则 1.3 适应性：创建可用不同方式呈现的内容（例如更简单的布局），而不会丢失信息或结构。](https://www.w3.org/TR/WCAG/#adaptable)
 
@@ -334,7 +333,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 
    >[!NOTE]
    >
-   >默认情况下，这些元素和属性不直接可用，但系统管理员可以在&#x200B;**表属性**&#x200B;对话框中添加对这些值的支持（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
+   >默认情况下，这些元素和属性并非直接可用，但系统管理员可以在&#x200B;**表属性**&#x200B;对话框中添加对这些值的支持（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
    要打开您可以在其中选择&#x200B;**表属性**&#x200B;选项卡的&#x200B;**表**&#x200B;对话框，请执行以下操作：
 
@@ -455,7 +454,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 * [了解成功标准 1.3.3](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
 * [如何达到成功标准 1.3.3](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)
 
-### 可辨别性 (1.4)  {#distinguishable}
+### 可辨别性 (1.4) {#distinguishable}
 
 [准则 1.4 可辨别性：使用户更容易看到和听到内容，包括将前景与背景分离开。](https://www.w3.org/TR/WCAG/#distinguishable)
 
@@ -1033,7 +1032,7 @@ John Smith’s publications
 >
 >如果包含使用不同语言的人名或城市，或者使用默认语言中常用的外来词或短语（如英语中的 *schadenfreude*），则不必遵循此成功标准。
 
-要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。或者，系统管理员可以在RTE中包含`lang`属性（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
+要添加包含相应语言的 span 元素，可以在 RTE 的源代码编辑模式下手动编辑 HTML 标记，以将其写成如上显示的方式。或者，也可以由系统管理员将`lang`属性包含在RTE中（请参阅[添加对其他HTML元素和属性的支持](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)）。
 
 #### 更多信息 - 局部语言 (3.1.2) {#more-information-language-of-parts}
 
