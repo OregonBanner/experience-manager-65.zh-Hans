@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 968b9131-ccdf-4856-b504-bc1a44974980
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: cf5849c7-1c6a-46d8-9cc4-f1f20a507a0c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 86%
 
 ---
-
 
 # 将 Search&amp;Promote 功能添加到您的页面{#adding-search-promote-features-to-your-page}
 
@@ -40,35 +39,35 @@ Search＆Promote 服务器上配置了一些 facet，这也是每个组件提供
   </tr>
   <tr>
    <td>横幅</td>
-   <td>显示横幅广告。 横幅根据通过Search&amp;Promote收集的数据进行选择。<br /> </td>
+   <td>显示横幅广告。 横幅的选择基于通过Search&amp;Promote收集的数据。<br /> </td>
   </tr>
   <tr>
    <td>痕迹导航</td>
-   <td>显示搜索关键字以及用户已应用于搜索结果的过滤器序列。</td>
+   <td>显示搜索关键词以及用户应用于搜索结果的过滤器序列。</td>
   </tr>
   <tr>
    <td>复选框列表彩块化</td>
-   <td>用于选择彩块化以筛选搜索结果的一列表复选框。</td>
+   <td>用于选择Facet以筛选搜索结果的复选框列表。</td>
   </tr>
   <tr>
    <td>下拉列表彩块化</td>
-   <td>用于筛选搜索结果的facet的下拉列表。</td>
+   <td>用于筛选搜索结果的Facet的下拉列表。</td>
   </tr>
   <tr>
    <td>链接列表彩块化</td>
-   <td>用于筛选搜索结果的facet链接列表。</td>
+   <td>用于筛选搜索结果的Facet链接列表。</td>
   </tr>
   <tr>
    <td>分页</td>
-   <td>用于在搜索结果的页面中导航的控件。</td>
+   <td>用于浏览搜索结果页面的控件。</td>
   </tr>
   <tr>
    <td>结果</td>
-   <td>显示关键字搜索的结果。</td>
+   <td>显示关键词搜索的结果。</td>
   </tr>
   <tr>
    <td>搜索</td>
-   <td>向页面添加搜索字段。</td>
+   <td>向页面中添加搜索字段。</td>
   </tr>
  </tbody>
 </table>
@@ -83,20 +82,20 @@ Search＆Promote 服务器上配置了一些 facet，这也是每个组件提供
 
 **分页**&#x200B;组件使用户能够浏览搜索结果的多个页面。用户可以查看页数、移到下一页或上一页、选择要打开的页面，或将所有结果合并到一个页面。
 
-![srpageing](assets/srchpagination.png)
+![分页](assets/srchpagination.png)
 
 您可以在编辑模式下配置以下组件属性来控制运行时行为：
 
-* 隐藏单个结果页：选择此选项可在搜索返回单个结果页面时隐藏页面导航控件。
+* 隐藏单个结果页面：选择此选项可在搜索返回单个结果页面时隐藏页面导航控件。
 * “隐藏第一个/最后一个”：选择此选项可阻止用户跳转到结果的第一页或最后一页。
 * “隐藏前一个/后一个”：确定用户是否可以浏览相对于当前页面的结果页面。
 * “隐藏查看全部”：确定用户是否可以将所有搜索结果合并到单个页面。通常，提供分页数据可以更有效地使用服务器资源。选择此选项可阻止在一个响应消息中传输较大数据集。
 
 ### 允许按 facet 筛选结果  {#enabling-the-filtering-of-results-by-facets}
 
-您可以允许用户按 facet 筛选搜索结果。**复选框列表Facet**、**下拉Facet**&#x200B;和&#x200B;**链接列表Facet**&#x200B;组件使用户能够选择一个或多个facet进行筛选。 使用这些组件时，您还应包含&#x200B;**痕迹导航**&#x200B;组件。痕迹导航可指示当前使用的筛选器。
+您可以允许用户按 facet 筛选搜索结果。**复选框列表Facet**、**下拉列表Facet**&#x200B;和&#x200B;**链接列表Facet**&#x200B;组件允许用户选择一个或多个Facet进行筛选。 使用这些组件时，您还应包含&#x200B;**痕迹导航**&#x200B;组件。痕迹导航可指示当前使用的筛选器。
 
-**复选框列表Facet**、**下拉Facet**&#x200B;和&#x200B;**链接列表Facet**&#x200B;组件均具有您在&#x200B;**编辑**&#x200B;模式下配置的以下属性：
+**复选框列表Facet**、**下拉列表Facet**&#x200B;和&#x200B;**链接列表Facet**&#x200B;组件各自具有您在&#x200B;**编辑**&#x200B;模式下配置的以下属性：
 
 * **Facet 名称**：用于筛选器的 facet 名称。
 
@@ -104,7 +103,7 @@ Search＆Promote 服务器上配置了一些 facet，这也是每个组件提供
 
 每个与搜索结果关联的 facet 都会显示一个复选框。当用户选择某个复选框时，页面将重新加载以显示更新的结果集。所有复选框均会保留在页面上，以便客户可以随时在筛选器中添加或删除 facet：
 
-![sandpcheckboxcomp](assets/sandpcheckboxcomp.png)
+![沙盒组件](assets/sandpcheckboxcomp.png)
 
 **下拉列表 Facet** 组件使客户能够从下拉列表中选择一个 facet 项目。当您希望客户一次只关注一个 facet 项目时，此组件非常有用。例如，“专栏”facet 有助于客户能够按性别缩小产品搜索范围。John 要搜索“牛仔裤”**，然后在男士专栏中进行筛选。
 
@@ -116,13 +115,13 @@ Search＆Promote 服务器上配置了一些 facet，这也是每个组件提供
 
 facet 成员显示为链接列表。每个链接的文本是与当前搜索结果关联的 facet 成员的名称。当客户单击 facet 链接时，页面将重新加载以显示更新的结果集。链接列表会相应地更新，以便能够进一步缩小焦点。
 
-![andplinklistcomp](assets/sandplinklistcomp.png)
+![andlinklistcomp](assets/sandplinklistcomp.png)
 
 当从不同类型的 Search&amp;Promote 组件应用筛选器时，列表中的链接也会发生更改。使用多种类型的筛选器组件可以提供有效的筛选器组合。
 
 **痕迹导航**&#x200B;组件使客户能够按照应用筛选器的顺序查看当前应用于搜索结果的筛选器。客户可以单击痕迹导航中的项目以还原到该筛选器组合。
 
-![痕迹导航组件](assets/sandpbreadcrumbcomp.png)
+![沙带结构组件](assets/sandpbreadcrumbcomp.png)
 
 您可以在编辑模式下配置痕迹导航的以下属性，以便自定义该组件的外观：
 
@@ -142,7 +141,7 @@ facet 成员显示为链接列表。每个链接的文本是与当前搜索结�
 
 ### 添加横幅 {#adding-banners}
 
-横幅组件会根据客户的Search&amp;Promote搜索显示横幅广告。 Search&amp;Promote 服务器上的逻辑会确定要显示的横幅。例如，搜索牛仔裤可能会显示与时装相关的横幅。在男士专栏中进行筛选可以进一步优化横幅的选择。
+横幅组件根据客户的Search&amp;Promote搜索显示横幅广告。 Search&amp;Promote 服务器上的逻辑会确定要显示的横幅。例如，搜索牛仔裤可能会显示与时装相关的横幅。在男士专栏中进行筛选可以进一步优化横幅的选择。
 
 “横幅”组件提供了一个名为“横幅面积”的可配置属性。在编辑模式下，选择其中一个属性值可指定横幅的显示方式。Search&amp;Promote 服务会确定您可以从中选择的值列表。
 
