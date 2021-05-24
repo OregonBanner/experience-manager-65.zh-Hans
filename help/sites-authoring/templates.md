@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
+exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '4901'
 ht-degree: 95%
 
 ---
-
 
 # 创建页面模板{#creating-page-templates}
 
@@ -46,7 +45,7 @@ ht-degree: 95%
 
 >[!CAUTION]
 >
->使用&#x200B;**模板控制台**&#x200B;创建的页面和模板不能与经典UI一起使用，因此不支持这样的使用。
+>使用&#x200B;**模板控制台**&#x200B;创建的页面和模板不适用于经典UI，因此不支持此类使用。
 
 ## 开始之前 {#before-you-start}
 
@@ -111,7 +110,7 @@ ht-degree: 95%
    * 此类模板[由开发人员提供](/help/sites-developing/page-templates-static.md)，因此不能由作者创建或编辑。
    * 可复制此类模板，以创建新页面，但是创建之后，页面与模板之间不存在动态连接（即使已注册模板名称来获取相关信息）。
    * 可使用[设计模式](/help/sites-authoring/default-components-designmode.md)来保留设计属性。
-   * 由于编辑静态模板是开发人员的专享任务，请参阅开发人员文档[页面模板——静态](/help/sites-developing/page-templates-static.md)以了解更多信息。
+   * 由于编辑静态模板是开发人员的专有任务，因此有关详细信息，请参阅开发人员文档[页面模板 — 静态](/help/sites-developing/page-templates-static.md) 。
 
 按照定义，“模板”控制台和模板编辑器只允许创建和编辑可编辑的模板。因此，本文档将专门重点介绍可编辑的模板。
 
@@ -211,9 +210,9 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->模板是简化页面创建工作流程的强大工具。 但是，过多的模板可能会使作者不堪重负，并使页面创建变得混乱。 一个不错的经验法则是将模板数量保持在100以下。
+>模板是简化页面创建工作流程的强大工具。 但是，太多的模板可能会使作者不堪重负，并使页面创建令人困惑。 经验法则是将模板数量保持在100以下。
 >
->Adobe不建议具有1000个以上的模板，因为这可能会影响性能。
+>Adobe不建议拥有1000个以上的模板，因为这可能会影响性能。
 
 >[!NOTE]
 >
@@ -279,7 +278,7 @@ ht-degree: 95%
    >如果&#x200B;**允许的模板**&#x200B;列表为空，则树会向上追溯，直到找到值/列表。
    >
    >
-   >请参阅[模板可用性](/help/sites-developing/templates.md#template-availability) —— 允许的模板原则保持不变。
+   >请参阅[模板可用性](/help/sites-developing/templates.md#template-availability) — 对允许的模板适用的原则与此相同。
 
 1. 单击&#x200B;**保存**，以保存对页面属性所做的更改。
 
