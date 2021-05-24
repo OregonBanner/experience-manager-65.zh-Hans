@@ -11,7 +11,6 @@ topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-translation-type: tm+mt
 source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
 source-wordcount: '854'
@@ -43,7 +42,7 @@ ht-degree: 92%
 * [编辑启动项](/help/sites-authoring/launches-editing.md)
 * [提升启动项](/help/sites-authoring/launches-promoting.md)
 
-## 启动项 - 事件的顺序  {#launches-the-order-of-events}
+## 启动项 - 事件的顺序 {#launches-the-order-of-events}
 
 启动项允许您有效地为将来发布的一个或多个激活网页开发内容。
 
@@ -99,15 +98,15 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->创建和编辑启动项需要对`/content/launches`的访问权限 — 与默认组`content-authors`的访问权限相同。
+>创建和编辑启动项需要具有`/content/launches`的访问权限 — 与默认组`content-authors`的访问权限相同。
 >
 >如果您遇到任何问题，请联系您的系统管理员。
 
 >[!CAUTION]
 >
->不支持对启动页面上的组件进行重新排序。
+>不支持在Launch页面上对组件进行重新排序。
 >
->提升页面时，将反映任何内容更改，但组件位置不会更改。
+>提升页面时，将反映任何内容更改，但组件位置不会发生更改。
 
 
 ### “启动项”控制台{#the-launches-console}
@@ -118,14 +117,14 @@ ht-degree: 92%
 
 * 或直接使用[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
-## 引用（“站点”控制台）{#launches-in-references-sites-console}中的启动项
+## 引用（站点控制台）{#launches-in-references-sites-console}中的启动项
 
 1. 在&#x200B;**站点**&#x200B;控制台中，导航到启动项的源。
 1. 打开&#x200B;**引用**&#x200B;边栏并选择源页面。
 1. 选择&#x200B;**启动项**，此时将列出现有的启动项：
 
-   ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
+   ![screenshot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
 
 1. 点按/单击相应的启动项，此时将显示可执行的操作列表：
 
-   ![screen-shot_2019-03-05at121952-1](assets/screen-shot_2019-03-05at121952-1.png)
+   ![screenshot_2019-03-05at121952-1](assets/screen-shot_2019-03-05at121952-1.png)
