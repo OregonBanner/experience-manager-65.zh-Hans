@@ -10,21 +10,20 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 52cb99353ae33c8097b6b5bd29f6c040df30b42d
+exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 84%
 
 ---
 
-
 # 使用标记{#using-tags}
 
 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
 
-* 有关创建和管理标记以及已应用哪些内容标记的信息，请参阅[管理标记](/help/sites-administering/tags.md)。
-* 请参阅[开发人员标记](/help/sites-developing/tags.md)，以了解有关标记框架以及在自定义应用程序中包括和扩展标记的信息。
+* 请参阅[管理标记](/help/sites-administering/tags.md) ，以了解有关创建和管理标记以及已对哪些内容应用标记的信息。
+* 请参阅[面向开发人员的标记](/help/sites-developing/tags.md) ，以了解有关标记框架以及在自定义应用程序中包括和扩展标记的信息。
 
 ## 使用标记的十大理由 {#ten-reasons-to-use-tagging}
 
@@ -45,7 +44,7 @@ ht-degree: 84%
 
 在创作环境中，作者可以通过访问页面属性并在&#x200B;**标记/关键字**&#x200B;字段中输入一个或多个标记来应用标记。
 
-要应用[预定义标记](/help/sites-administering/tags.md)，请在&#x200B;**页面属性**&#x200B;窗口中使用&#x200B;**标记**&#x200B;字段和&#x200B;**选择标记**&#x200B;窗口。 **标准标记**&#x200B;选项卡是默认的命名空间，这意味着分类前面没有 `namespace-string:` 前缀。
+要应用预定义的[标记](/help/sites-administering/tags.md)，请在&#x200B;**页面属性**&#x200B;窗口中使用&#x200B;**标记**&#x200B;字段和&#x200B;**选择标记**&#x200B;窗口。 **标准标记**&#x200B;选项卡是默认的命名空间，这意味着分类前面没有 `namespace-string:` 前缀。
 
 ![选择“标记”窗口；使用X按钮取消选择当前选定的标记](assets/chlimage_1-41.png)
 
