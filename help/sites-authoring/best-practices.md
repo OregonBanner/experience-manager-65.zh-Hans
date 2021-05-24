@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 72%
 
 ---
-
 
 # 最佳实践{#best-practices}
 
@@ -38,7 +37,7 @@ ht-degree: 72%
 
 ## 资产 {#assets}
 
-有关资产(包括Dynamic Media功能和Dynamic Media经典集成)的最佳实践，请参阅以下主题：
+以下主题介绍了有关资产(包括Dynamic Media功能和Dynamic Media Classic集成)的最佳实践：
 
 <table>
  <tbody>
@@ -55,7 +54,7 @@ ht-degree: 72%
   <tr>
    <td>动态图像处理</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">动态图像处理最佳实践</a></td>
-   <td><p>介绍如何锐化图像以获得最佳效果，以及在使用Dynamic Media功能或与Dynamic Media经典集成时优化图像质量的最佳方法。 </p> </td>
+   <td><p>介绍在使用Dynamic Media功能或与Dynamic Media Classic集成时，如何锐化图像以获得最佳效果，以及如何以最佳方式优化图像质量。 </p> </td>
   </tr>
   <tr>
    <td>多语言资产</td>
@@ -71,8 +70,8 @@ ht-degree: 72%
 
 |  |  |  |
 |---|---|---|
-| 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 概述用于创作页面的工具。 |
-| 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供如何最好地组织页面（包括命名惯例）的概述。 |
+| 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 提供页面创作工具的概述。 |
+| 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供有关如何对页面进行最佳组织的概述，包括命名约定。 |
 
 ## 表单 {#forms}
 
