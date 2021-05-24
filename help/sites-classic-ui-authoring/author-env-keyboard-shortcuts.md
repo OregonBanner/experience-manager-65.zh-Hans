@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: b6e42b9d-9e27-4f22-8543-442d03af48f3
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8cc9200e-981d-468f-b2bd-cd44e9a02bb5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 100%
 
 ---
-
 
 # 控制台的键盘快捷键{#keyboard-shortcuts-for-consoles}
 
@@ -27,8 +26,10 @@ ht-degree: 100%
 >在桌面设备上进行多选：
 >
 >* Windows：**按住 Ctrl** **并单击**&#x200B;所需的组件。
->
->* Mac：**按住 Cmd** **并单击**&#x200B;所需的组件。
+   >
+   >
+* Mac：**按住 Cmd** **并单击**&#x200B;所需的组件。
+
 >
 
 
