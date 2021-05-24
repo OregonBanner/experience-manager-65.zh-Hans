@@ -10,20 +10,19 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 48826f03-6731-49c5-a6c5-6e2fb718f912
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 8ab21067-c19a-4faa-8bf0-cd9f21f6df70
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 90%
+ht-degree: 92%
 
 ---
-
 
 # 创建启动项{#creating-launches}
 
 可创建启动项，以允许更新现有网页的新版本，以便将来激活。创建启动项时，需要指定标题和源页面：
 
-* 标题显示在&#x200B;**Sidekick**&#x200B;中，作者可以从中访问这些标题以对其进行处理。
+* 标题会显示在&#x200B;**Sidekick**&#x200B;中，作者可以从中访问这些标题以对其进行处理。
 * 默认情况下，源页面的子页面包含在启动项中。必要时，可只使用源页面。
 * 默认情况下，[Live Copy](/help/sites-administering/msm.md) 会在源页面发生更改时自动更新启动页面。您可以指定创建一个静态副本，以防止自动更改。
 
@@ -33,7 +32,7 @@ ht-degree: 90%
 
 可按照以下过程创建启动项。
 
-1. 打开网站管理页面([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))。
+1. 打开网站管理页面 ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))。
 1. 单击&#x200B;**新建...**，然后单击&#x200B;**新建启动项...**。
 1. 在&#x200B;**创建启动项**&#x200B;对话框中，指定以下属性的值：
 
@@ -59,4 +58,3 @@ ht-degree: 90%
    >[!CAUTION]
    >
    >在删除嵌套启动项时，应先删除较低的级别。
-
