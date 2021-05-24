@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4dc4a518c212555b7833ac27de02087a403d3517
+exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 85%
 
 ---
-
 
 # 搜索{#searching}
 
@@ -33,7 +32,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
 
-通过搜索面板，您可以在所有网站页面中进行搜索。它包含以下字段和构件：
+通过搜索面板，您可以在所有网站页面中进行搜索。它包含用于以下内容的字段和小组件：
 
 * **全文**：搜索指定的文本
 * **修改于以下日期之后/之前**：仅搜索在特定日期之间更改过的页面
@@ -82,7 +81,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
    * 指示搜索是否应区分大小写
    * 指示是否应仅查找所有词（否则，还将查找子字符串）
 
-   单击已找到词的&#x200B;**预览**&#x200B;列表。您可以选择／清除要替换的特定实例：
+   单击&#x200B;**Preview**&#x200B;列出了找到该术语的位置。您可以选择/清除要替换的特定实例：
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
