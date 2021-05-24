@@ -11,7 +11,6 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2239'
@@ -141,7 +140,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 * 名称
 * 路径
 * 资产类型，例如图像、手稿、文档、视频、页面、段落和产品
-* 资源特性，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
+* 资产特性，如方向（纵向、横向、正方形）和样式（颜色、单色、灰度）
 
    * 仅适用于某些资产类型
 
@@ -286,7 +285,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 例如，在适当时，**页面信息**&#x200B;还有以下选项：
 
 * [提升启动项](/help/sites-authoring/launches-promoting.md)，如果该页面是启动项。
-* [在经典UI中打](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 开如果管理员已 [启用此选项](/help/sites-administering/enable-classic-ui-editor.md)
+* [在经典UI中](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 打开如果管理员 [已启用此选项](/help/sites-administering/enable-classic-ui-editor.md)
 
 另外，在适当时，**页面信息**&#x200B;还允许访问分析和建议。
 
