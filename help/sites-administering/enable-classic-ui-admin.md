@@ -10,24 +10,23 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 954c1d5b06b54d59f523483ce5c1af36c2083a76
+exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 1%
 
 ---
 
-
 # Admin Console{#admin-consoles}
 
-默认情况下，已禁用通过管理员控制台切换到经典UI的功能。 因此，将鼠标移过某些控制台图标时看到的弹出图标（允许访问经典UI）不再显示。
+默认情况下，通过管理控制台切换到经典UI的功能已被禁用。 因此，将鼠标悬停在某些控制台图标上时显示的允许访问经典UI的弹出图标将不再显示。
 
-每个在`/libs/cq/core/content/nav`中具有经典UI版本的控制台都可以单独重新启用，这样，将鼠标移过控制台图标时，**经典UI**&#x200B;选项会再次弹出。
+每个在`/libs/cq/core/content/nav`中具有经典UI版本的控制台都可以单独重新启用，以便将鼠标悬停在控制台图标上时，再次弹出&#x200B;**经典UI**&#x200B;选项。
 
-在此示例中，我们将重新为站点控制台启用经典UI。
+在此示例中，我们将为站点控制台重新启用经典UI。
 
-1. 使用CRXDE Lite，找到要重新启用经典UI的管理控制台对应的节点。 它们位于：
+1. 使用CRXDE Lite，找到与要为其重新启用经典UI的Admin Console对应的节点。 它们位于：
 
    `/libs/cq/core/content/nav`
 
@@ -35,22 +34,22 @@ ht-degree: 1%
 
    [ `https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
-1. 选择要重新启用经典UI的控制台对应的节点。 对于我们的示例，我们将重新启用“站点”控制台的经典UI。
+1. 选择与要为其重新启用经典UI的控制台对应的节点。 例如，我们将为站点控制台重新启用经典UI。
 
    `/libs/cq/core/content/nav/sites`
 
-1. 使用&#x200B;**叠加节点**&#x200B;选项创建叠加；例如：
+1. 使用&#x200B;**覆盖节点**&#x200B;选项创建覆盖；例如：
 
    * **路径**: `/apps/cq/core/content/nav/sites`
    * **覆盖位置**: `/apps/`
    * **匹配节点类型**:活动（选中复选框）
 
-1. 将以下布尔属性添加到叠加的节点：
+1. 将以下布尔属性添加到所覆盖的节点：
 
    `enableDesktopOnly = {Boolean}true`
 
-1. “**经典UI**”选项在管理控制台中再次作为弹出选项可用。
+1. **经典UI**&#x200B;选项在管理控制台中再次作为弹出窗口选项可用。
 
    ![](assets/syui-01-2019-02-27-15-16-55.png)
 
-对要重新启用经典UI版本访问权限的每个控制台重复这些步骤。
+对要为其重新启用经典UI版本访问权限的每个控制台重复这些步骤。
