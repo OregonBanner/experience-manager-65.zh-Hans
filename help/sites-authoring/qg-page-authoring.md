@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
-translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 97%
 
 ---
-
 
 # 页面创作快速指南{#quick-guide-to-authoring-pages}
 
@@ -63,9 +62,7 @@ ht-degree: 97%
 >有许多键盘快捷键可帮助您更轻松地创作体验。
 >
 >* [编辑页面时的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
->* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
-
->
+* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
 
 
 
@@ -123,8 +120,7 @@ ht-degree: 97%
 
    * 卡片上将覆盖一个勾号，表示已选择该页面。
    >[!NOTE]
-   >
-   >进入选择模式后，**选择**&#x200B;图标（勾号）将变为&#x200B;**取消选择**&#x200B;图标（叉号）。
+   进入选择模式后，**选择**&#x200B;图标（勾号）将变为&#x200B;**取消选择**&#x200B;图标（叉号）。
 
 ### 快速操作（仅限卡片视图/桌面）{#quick-actions-card-view-desktop-only}
 
@@ -179,8 +175,7 @@ ht-degree: 97%
 
       * 通过点按或单击打开组件工具栏。根据需要依次使用&#x200B;**复制**&#x200B;和&#x200B;**粘贴**&#x200B;图标。
    >[!NOTE]
-   >
-   >您可以将组件&#x200B;**粘贴**&#x200B;到同一页面或其他页面。如果在剪切/复制操作之前粘贴到已打开的其他页面，则表明该页面需要刷新。
+   您可以将组件&#x200B;**粘贴**&#x200B;到同一页面或其他页面。如果在剪切/复制操作之前粘贴到已打开的其他页面，则表明该页面需要刷新。
 
    * [删除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)组件：
 
@@ -197,8 +192,7 @@ ht-degree: 97%
    * 使用&#x200B;**编辑**&#x200B;下拉选择器返回编辑模式（或选择其他模式）。
 
    >[!NOTE]
-   >
-   >要使用内容中的链接导航，您必须使用[预览模式](/help/sites-authoring/editing-content.md#preview-mode)。
+   要使用内容中的链接导航，您必须使用[预览模式](/help/sites-authoring/editing-content.md#preview-mode)。
 
 ### 编辑页面属性  {#editing-the-page-properties}
 
@@ -275,8 +269,7 @@ ht-degree: 97%
 
       * 系统将要求您确认该操作。
    >[!NOTE]
-   >
-   >快速操作中并未提供“删除”操作。
+   快速操作中并未提供“删除”操作。
 
 ### 锁定页面（然后解锁）{#locking-your-page-then-unlocking}
 
@@ -300,7 +293,7 @@ ht-degree: 97%
 
    此时会显示引用类型列表：
 
-   ![screen-shot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
+   ![screenshot_2019-03-05at114412](assets/screen-shot_2019-03-05at114412.png)
 
 1. 点按/单击所需的引用类型，以显示更多详细信息并（视需要）执行进一步操作。
 
@@ -314,7 +307,7 @@ ht-degree: 97%
 
 1. 点按/单击“时间轴”列右下方的向上箭头以显示其他按钮，包括&#x200B;**另存为版本**。
 
-   ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
+   ![screenshot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
 1. 选择&#x200B;**另存为版本**，然后再选择&#x200B;**创建**。
 
