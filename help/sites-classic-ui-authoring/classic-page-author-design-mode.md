@@ -10,20 +10,19 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '541'
-ht-degree: 88%
+ht-degree: 92%
 
 ---
-
 
 # 在设计模式中配置组件{#configuring-components-in-design-mode}
 
 安装现成 AEM 实例后，Sidekick 中会提供一些可立即使用的组件。
 
-除了这些组件以外，还有其他一些组件可用。您可以使用设计模式[启用/禁用这类组件](#enabledisablecomponentsusingdesignmode)。启用并位于页面上后，您可以使用设计模式通过编辑属性参数来[配置组件设计的各个方面。](#configuringcomponentsusingdesignmode)
+除了这些组件以外，还有其他一些组件可用。您可以使用设计模式[启用/禁用这类组件](#enabledisablecomponentsusingdesignmode)。在启用这类组件并且它们显示在页面上后，您可以使用设计模式通过编辑属性参数来[配置组件设计的特性。 ](#configuringcomponentsusingdesignmode)
 
 >[!NOTE]
 >
@@ -50,7 +49,7 @@ ht-degree: 88%
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 单击段落系统上的&#x200B;**编辑**（**par**&#x200B;的设计）。
+1. 单击段落系统（**段落设计**）上的&#x200B;**编辑**。
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
@@ -74,7 +73,7 @@ ht-degree: 88%
 
 1. 您可以配置组件的设计。
 
-   例如，如果单击图像组件（**图像设计**）上的&#x200B;**编辑**，则可以配置组件特定参数：
+   例如，如果单击图像组件（**图像设计**）上的&#x200B;**编辑**，则可以配置组件特定的参数：
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
