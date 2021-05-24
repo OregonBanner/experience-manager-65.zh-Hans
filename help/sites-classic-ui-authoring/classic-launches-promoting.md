@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 3013adc3-bec6-4ecc-aefd-f8df2b86dfef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 91%
 
 ---
-
 
 # 提升启动项{#promoting-launches}
 
@@ -34,8 +33,8 @@ ht-degree: 91%
 1. 在 Sidekick 的&#x200B;**页面**&#x200B;选项卡上，单击&#x200B;**提升启动项**。
 1. 指定要提升的页面：
 
-   * （默认）要仅提升当前页面，请选择&#x200B;**将页面更改提升到生产版本**。
-   * 要同时提升当前页面的子页面，请选择&#x200B;**包含子页面**。
+   * （默认）要仅提升当前页面，请选择&#x200B;**将页面更改提升至生产版本**。
+   * 要同时提升当前页面的子页面，请选择&#x200B;**Include Sub Pages**。
    * 要提升启动项中的所有页面，请选择&#x200B;**将全面启动项提升至生产版本**。
 
 1. 要向工作流包中添加生产页面，请选择&#x200B;**添加到工作流包**，然后选择该工作流包。
@@ -54,4 +53,3 @@ ht-degree: 91%
 例如，您可以在作者提升启动页面时自动生成页面激活请求。配置工作流启动器，以在包节点被修改时启动请求激活工作流。
 
 ![chlimage_1-136](assets/chlimage_1-136.png)
-
