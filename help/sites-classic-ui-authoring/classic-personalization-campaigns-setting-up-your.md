@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 19ad4751-1d5d-49de-b76b-3501b3e98e62
 docset: aem65
-translation-type: tm+mt
-source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2289'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
-
 
 # 设置您的营销活动{#setting-up-your-campaign}
 
@@ -39,15 +38,15 @@ ht-degree: 94%
 * 如果创建新闻稿：
 
    1. [创建新闻稿体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience)。
-   1. [向新闻稿中添加内容](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)。
-   1. [对新闻稿进行个性化设置](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)。
+   1. [向新闻稿中添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+   1. [对新闻稿进行个性化设置。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
    1. [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
    1. 向订阅者或潜在客户[发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
 
 * 如果创建 Adobe Target（以前称为 Test&amp;Target）选件：
 
    1. [创建 Adobe Target 选件体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)。
-   1. [与 Adobe Target 集成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)。
+   1. [与 Adobe Target 集成。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
 >
@@ -93,7 +92,7 @@ ht-degree: 94%
 
 配置以下可控制行为的营销活动属性：
 
-* **优先级：**&#x200B;该营销活动相对于其他营销活动的优先级。当多个活动同时打开时，具有最高优先级的活动将控制访客体验。
+* **优先级：**&#x200B;该营销活动相对于其他营销活动的优先级。如果同时开启了多个营销活动，则具有最高优先级的营销活动会控制访客体验。
 * **“开始时间”和“结束时间”：**&#x200B;这两个属性可控制营销活动对访客体验的控制时间段。“开始时间”属性控制营销活动开始控制体验的时间。“结束时间”属性控制营销活动停止控制体验的时间。
 * **图像：**&#x200B;在 AEM 中表示营销活动的图像。
 * **云服务：**&#x200B;与营销活动集成的云服务配置。（请参阅[与 Adobe Marketing Cloud 集成](/help/sites-administering/marketing-cloud.md)。）
@@ -113,7 +112,7 @@ ht-degree: 94%
 创建新体验的步骤取决于体验类型：
 
 * [创建 Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
-* [创建新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
+* [创建 Newsletter](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
 * [创建 Adobe Target 选件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetoffer)
 
 >[!NOTE]
@@ -133,14 +132,14 @@ ht-degree: 94%
 
 * [新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)：
 
-   * [向新闻稿中添加内容](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)。
-   * [对新闻稿进行个性化设置](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)。
+   * [向新闻稿中添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+   * [对新闻稿进行个性化设置。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
    * 向订阅者或潜在客户[发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
    * [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
 
 * [Adobe Target 选件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
-   * [与 Adobe Target 集成](/help/sites-administering/target.md)。
+   * [与 Adobe Target 集成。](/help/sites-administering/target.md)
 
 ### 添加新触点 {#adding-a-new-touchpoint}
 
@@ -150,7 +149,7 @@ ht-degree: 94%
 
 1. 单击&#x200B;**添加触点...**&#x200B;打开对话框。指定您要添加的体验：
 
-   ![chlimage_1-29](assets/chlimage_1-21.png)
+   ![chlimage_1-21](assets/chlimage_1-21.png)
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
 
@@ -239,7 +238,7 @@ ht-degree: 94%
    >CSV 列表中的第一行为预定义标签，必须严格按以下示例写入：
    >
    >
-   >`email,givenName,familyName` -例如，如 `givenname`果编写为，系统将无法识别它。
+   >`email,givenName,familyName`  — 例如，如 `givenname`果写为，系统将无法识别。
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
