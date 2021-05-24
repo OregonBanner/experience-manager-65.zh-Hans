@@ -1,8 +1,8 @@
 ---
-title: SharePoint Connector许可、版权声明和免责声明
-seo-title: SharePoint Connector许可、版权声明和免责声明
-description: 了解SharePoint Connector许可、版权声明和免责声明。
-seo-description: 了解SharePoint Connector许可、版权声明和免责声明。
+title: SharePoint连接器许可证、版权声明和免责声明
+seo-title: SharePoint连接器许可证、版权声明和免责声明
+description: 了解SharePoint连接器许可证、版权声明和免责声明。
+seo-description: 了解SharePoint连接器许可证、版权声明和免责声明。
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,32 +10,31 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 10%
 
 ---
 
+# SharePoint连接器许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-# SharePoint连接器许可、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
-
-本节列表所有与Day JCR Connector for MS SharePoint相关的许可、版权声明和免责声明。
+本节列出了所有必须与Day JCR Connector for MS SharePoint相关的许可证、版权声明和免责声明。
 
 ## 连接器第三方库概述{#overview-of-connector-rd-party-libraries}
 
-下表列表了SharePoint Connector核心库中使用的第三方库，以及其涵盖的许可、版权声明或免责声明：
+下表列出了SharePoint Connector核心库内使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
 | 库 | 许可类型 |
 |---|---|
 | annogen | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
-| 公理 | [Apache](#apache) |
+| 公理dom | [Apache](#apache) |
 | axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
-| Backport-util-并发 | 公共域 |
+| Backport-util-concurrent | 公共域 |
 | commons-codec | [Apache](#apache) |
 | commons-collections | [Apache](#apache) |
 | commons-fileupload | [Apache](#apache) |
@@ -43,30 +42,30 @@ ht-degree: 10%
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
 | 并发 | [并发](#concurrent) （公共域） |
-| geronimo-激活_1.1.spec | [Apache](#apache) |
-| geronimo-stax-api_1.0.spec | [Apache](#apache) |
+| geronimo-activation_1.1_spec | [Apache](#apache) |
+| geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
 | jackrabbit-jcr-commons | [Apache](#apache) |
 | jackrabbit-spi-commons | [Apache](#apache) |
-| 野兔大嘴 | [Apache](#apache) |
-| jaxen | BSD |
+| jackrabbit-spi | [Apache](#apache) |
+| 亚申 | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
-| 尼特 | [Apache](#apache) |
+| 尼特希 | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
 | wsdl4j | [Apache](#apache) |
 | wstx-asl | [Apache](#apache) |
-| 扎兰 | [Apache](#apache) |
+| 沙兰 | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-api | [Apache](#apache) （包含Public Domain和W3C软件许可涵盖的部分） |
+| xml-api | [Apache](#apache) （包含公共域和W3C软件许可证涵盖的部分） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX第三方库概述{#overview-of-crx-rd-party-libraries}
 
-下表列表了CRX中使用的第三方库，以及涵盖的许可、版权声明或免责声明：
+下表列出了CRX中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -107,15 +106,15 @@ ht-degree: 10%
   </tr>
   <tr>
    <td>hsqldb-1.8.0.4.jar</td>
-   <td><a href="#hypersonic-sql-group">Hypersonic SQL Group</a></td>
+   <td><a href="#hypersonic-sql-group">高超音速SQL组</a></td>
   </tr>
   <tr>
-   <td>jaxen-1.1-beta-6.jar</td>
+   <td>jaxen-1.1 beta-6.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
    <td>jcr-1.0.jar</td>
-   <td><a href="#day-jcr">第JCR天</a></td>
+   <td><a href="#day-jcr">日JCR</a></td>
   </tr>
   <tr>
    <td>jdom-1.0.jar</td>
@@ -134,7 +133,7 @@ ht-degree: 10%
    <td><a href="#pdfbox">PDFBox</a></td>
   </tr>
   <tr>
-   <td>poi-2.5.1天。jar</td>
+   <td>poi-2.5.1天.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -158,7 +157,7 @@ ht-degree: 10%
 
 ## CQSE第三方库概述{#overview-of-cqse-rd-party-libraries}
 
-下表列表了Ponnature Servlet引擎中使用的第三方库，以及其涵盖的许可、版权声明或免责声明：
+下表列出了公报Servlet引擎内使用的第三方库，以及涉及这些库的许可证、版权声明或免责声明：
 
 <table>
  <colgroup>
@@ -203,7 +202,7 @@ ht-degree: 10%
    <td><a href="#sun-servlet">Sun Servlet</a></td>
   </tr>
   <tr>
-   <td>xml-apis-2.0.2.jar</td>
+   <td>xml-api-2.0.2.jar</td>
    <td><a href="#apache">Apache</a></td>
   </tr>
   <tr>
@@ -427,7 +426,7 @@ ht-degree: 10%
      limitations under the License.
 ```
 
-## 并发{#concurrent}
+## 并发 {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -439,7 +438,7 @@ ht-degree: 10%
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## 第JCR {#day-jcr}天
+## 日JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
@@ -1291,4 +1290,3 @@ database. Title to copyright in this software, database and any associated
 documentation shall at all times remain with Princeton University and
 LICENSEE agrees to preserve same.
 ```
-
