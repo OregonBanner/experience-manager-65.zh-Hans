@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
-translation-type: tm+mt
-source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 96%
 
 ---
-
 
 # 使用营销活动管理器{#working-with-the-marketing-campaign-manager}
 
@@ -55,7 +54,7 @@ ht-degree: 96%
 
 功能板显示了四个窗格，分别为您提供了有关（潜在客户）列表、区段、报表和营销活动的概述。可以在此处访问这些内容的基本功能。
 
-![mcm_仪表板](assets/mcm_dashboard.png)
+![mcm_dashboard](assets/mcm_dashboard.png)
 
 ### 潜在客户 {#leads}
 
@@ -99,7 +98,7 @@ ht-degree: 96%
 
 要访问现有营销活动，请在 MCM 中单击&#x200B;**营销活动**。
 
-![screen_shot_2012-02-21at1106pm](assets/screen_shot_2012-02-21at11106pm.png)
+![screen_shot_2012-02-21at11106pm](assets/screen_shot_2012-02-21at11106pm.png)
 
 * **在左侧窗格中**：列出了所有品牌和营销活动。单击一次品牌可以同时：
 
@@ -160,7 +159,7 @@ ht-degree: 96%
 
    您可以在此处：
 
-   * 创建&#x200B;**新……**&#x200B;体验；例如，Adobe Target优惠、teaser和newsletter。
+   * 创建&#x200B;**新建……**&#x200B;体验；例如，Adobe Target选件、Teaser和新闻稿。
    * **编辑**&#x200B;特定的 Teaser 页面或新闻稿的详细信息（也可以使用双击）。
    * 为特定的 Teaser 页面或新闻稿定义&#x200B;**属性...**。
    * **模拟**&#x200B;体验（Teaser 页面或新闻稿）的外观。当模拟的页面打开时，您可以打开 sidekick 以切换到该页面的编辑模式。
