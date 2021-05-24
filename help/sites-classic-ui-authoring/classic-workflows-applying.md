@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 86%
 
 ---
-
 
 # 将工作流应用于页面{#applying-workflows-to-pages}
 
@@ -54,9 +53,8 @@ ht-degree: 86%
 1. 打开网站控制台。
 1. 打开所需的页面。
 1. 从 Sidekick 中选择“工作流”选项卡。
-1. 展开&#x200B;**工作流**&#x200B;对话框，允许您选择&#x200B;**工作流**，并可选地输入&#x200B;**工作流标题**&#x200B;和&#x200B;**注释**。
+1. 展开&#x200B;**工作流**&#x200B;对话框，允许您选择&#x200B;**工作流**，并选择输入&#x200B;**工作流标题**&#x200B;和&#x200B;**注释**。
 
-   ![工作流启动sidekick](assets/workflowstartsidekick.png)
+   ![workflowstartsidekick](assets/workflowstartsidekick.png)
 
 1. 单击&#x200B;**启动工作流**&#x200B;以启动新工作流实例，并将您配置的属性和当前页面作为有效负荷。现在，工作流即处于运行状态。
-
