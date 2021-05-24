@@ -1,7 +1,7 @@
 ---
-title: 在We.Retail中试用内容片段
-seo-title: 在We.Retail中试用内容片段
-description: 在We.Retail中试用内容片段
+title: 在We.Retail中尝试内容片段
+seo-title: 在We.Retail中尝试内容片段
+description: 在We.Retail中尝试内容片段
 seo-description: 'null'
 uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
@@ -9,30 +9,29 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 21%
 
 ---
 
+# 在We.Retail{#trying-out-content-fragments-in-we-retail}中尝试内容片段
 
-# 正在We.Retail{#trying-out-content-fragments-in-we-retail}中尝试内容片段
-
-内容片段允许您创建渠道中性内容，以及(可能特定于渠道的)变量。 **We.Retail** (在AEM的现成实例中提供)提供了Lofotenas的Arctic Surfing片段 **的基** 本示例。这说明：
+内容片段允许您创建渠道中性内容，以及（可能特定于渠道的）变量。 **We.Retail** (在AEM的现成实例中提供)提供了Lofoten中北极 **冲浪** 片段的基本示例。这说明：
 
 * Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创建和管理](/help/assets/content-fragments/content-fragments.md)。这允许您创建渠道中性内容，以及各种（特定于渠道的）变量。
 
    * 请参阅[在We.Retail](#where-to-find-content-fragments-in-we-retail)中查找内容片段资产的位置
 
-* 然后，在创作](/help/sites-authoring/content-fragments.md)内容页面时，您可以[使用这些片段及其变量。
+* 然后，在创作内容页面时，您可以[使用这些片段及其变体。](/help/sites-authoring/content-fragments.md)
 
-   * 请参阅[Where Content Fragments are Used in We.Retail](#where-content-fragments-are-used-in-we-retail)
+   * 请参阅[We.Retail](#where-content-fragments-are-used-in-we-retail)中使用内容片段的位置
 
 有关创建、管理、使用和开发内容片段的完整文档：
 
-* 请参阅[详细信息](#further-information)
+* 请参阅[更多信息](#further-information)
 
 >[!NOTE]
 >
@@ -45,19 +44,19 @@ ht-degree: 21%
 >
 体验片段可以包含内容片段形式的内容，反之则不行。
 
-## 在We.Retail {#where-to-find-content-fragments-in-we-retail}中查找内容片段的位置
+## 在We.Retail {#where-to-find-content-fragments-in-we-retail}中的何处查找内容片段
 
-We.Retail中有几个示例内容片段；通过&#x200B;**资产**、**文件**、**We.Retail**、**英语**、**体验**&#x200B;进行导航。
+We.Retail中有几个示例内容片段；通过&#x200B;**Assets**、**文件**、**We.Retail**、**英语**、**体验**&#x200B;导航。
 
-这包括Lofoten的&#x200B;**北极冲浪**、一段片段以及相关的视觉资产：
+这包括&#x200B;**Roctic Surfing in Lofoten**、一个片段以及相关的可视资产：
 
-* 通过&#x200B;**资产**、**文件**、**We.Retail**、**英语**、**体验**、**Lofoten**&#x200B;中的艺术冲浪：
+* 通过&#x200B;**Assets**、**Files**、**We.Retail**、**English**、**Experiences**、**Lofoten中的艺术冲浪**&#x200B;进行导航：
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
 ![cf-44](assets/cf-44.png)
 
-您可以选择并编辑Lofoten **中的**&#x200B;北极冲浪片段：
+您可以选择和编辑Lofoten **中的**&#x200B;北极冲浪片段：
 
 * [http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten](http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten)
 
@@ -65,21 +64,21 @@ We.Retail中有几个示例内容片段；通过&#x200B;**资产**、**文件**�
 
 <!--![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
-* **[变](/help/assets/content-fragments/content-fragments-variations.md)** 量，包括 [标记](/help/assets/content-fragments/content-fragments-markdown.md)
+* **[](/help/assets/content-fragments/content-fragments-variations.md)** 变量，包括 [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
 * **[关联的内容](/help/assets/content-fragments/content-fragments-assoc-content.md)**
 * **[元数据](/help/assets/content-fragments/content-fragments-metadata.md)**
 
 ![cf-46](assets/cf-46.png)
 
-## We.Retail {#where-content-fragments-are-used-in-we-retail}中使用内容片段的位置
+## 其中，We.Retail {#where-content-fragments-are-used-in-we-retail}中使用内容片段
 
-要说明使用内容片段](/help/sites-authoring/content-fragments.md)创作[页面，下面提供了几个示例页面，例如：
+为了说明使用内容片段](/help/sites-authoring/content-fragments.md)进行页面创作时，下面提供了几个示例页面，例如：[
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 
-例如，Lofoten **中的**&#x200B;北极冲浪内容片段在“站点”页中引用：
+例如，“站点”页面中引用了“Lofoten **北极冲浪”内容片段：**
 
-* 通过&#x200B;**Sites**、**We.Retail**、**语言硕士**、**英语**、**体验**&#x200B;进行导航。 然后，在Lofoten **中打开**&#x200B;北极冲浪以进行编辑：
+* 通过&#x200B;**Sites**、**We.Retail**、**语言硕士**、**英语**、**Experience**&#x200B;进行导航。 然后，打开Lofoten中的&#x200B;**北极冲浪**&#x200B;进行编辑：
 
    * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 
@@ -87,7 +86,7 @@ We.Retail中有几个示例内容片段；通过&#x200B;**资产**、**文件**�
 
 ## 更多信息 {#further-information}
 
-有关详细信息，请参阅：
+有关更多详细信息，请参阅：
 
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
 
@@ -97,11 +96,10 @@ We.Retail中有几个示例内容片段；通过&#x200B;**资产**、**文件**�
 
    * 在创作页面时使用内容片段。
 
-* [开发AEM — 内容片段组件](/help/sites-developing/components-content-fragments.md)
+* [开发AEM — 内容片段的组件](/help/sites-developing/components-content-fragments.md)
 
-   * 内容片段组件概述。
+   * 内容片段的组件概述。
 
 * [开发和扩展内容片段](/help/sites-developing/customizing-content-fragments.md)
 
-   * 帮助您开发和扩展内容片段的信息。
-
+   * 此信息可帮助您开发和扩展内容片段。
