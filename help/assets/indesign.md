@@ -5,9 +5,9 @@ contentOwner: AG
 role: Administrator
 feature: 发布
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3c1a30f36222c319c354afa408555982bfe2804e
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1565'
 ht-degree: 4%
 
 ---
@@ -113,7 +113,9 @@ ht-degree: 4%
 
 * **扩展脚本**:您可以在此处指定不同的脚本组合。如果您希望在[!DNL InDesign Server]上执行自己的脚本，请在`/apps/settings/dam/indesign/scripts`保存脚本。
 
-有关[!DNL Adobe InDesign]脚本的信息，请参阅[InDesign开发人员文档](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)
+<!-- TBD: Hiding this link since ADC is not available anymore. 
+For information about [!DNL Adobe InDesign] scripts, see [InDesign developer documentation](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+-->
 
 >[!CAUTION]
 >
