@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d1741525-a475-4a76-bd16-55318023495e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 92%
 
 ---
-
 
 # 营销活动管理{#campaign-management}
 
@@ -40,16 +39,16 @@ ht-degree: 92%
 在AEM中，品牌是顶级单位，并构成 
 **营销活动**.
 
-* **营**
-销活动活动是单个 
+* ****
+营销活动营销活动是单个 
 **体验**.
 
-* **体**
-验重点内容构成各种体验，呈现给访客 
+* ****
+体验重点内容构成各种体验，呈现在 
 **触点**. 有若干类型的体验：
 
    * **Teaser**
-      [Teaser页面／段](#teasers) 落用于将特定访客 **** 段定向到关注其兴趣的内容。
+      [Teaser页面/段](#teasers) 落用于将特定访客区段 **** 定向到他们感兴趣的内容。
 
       Teaser 页面可以：
 
@@ -96,4 +95,3 @@ ht-degree: 92%
    可以从各种位置（标记为&#x200B;**营销活动**）或使用 URL 来访问它，例如：
 
    `http://localhost:4502/libs/mcm/content/admin.html`
-
