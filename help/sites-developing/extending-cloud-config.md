@@ -9,31 +9,30 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 3%
 
 ---
 
-
 # 云服务配置{#cloud-service-configurations}
 
-配置被设计为提供用于存储服务配置的逻辑和结构。
+配置旨在提供用于存储服务配置的逻辑和结构。
 
 您可以扩展现有实例以创建您自己的配置。
 
-## 概念 {#concepts}
+## 概念  {#concepts}
 
-在开发配置时采用的原则基于以下概念：
+在开发配置时使用的原则基于以下概念：
 
-* 服务／适配器用于检索配置。
-* 配置（例如属性／段落）从父级继承。
-* 按路径引用自分析节点。
+* 服务/适配器用于检索配置。
+* 配置（如属性/段落）从父级继承。
+* 按路径从分析节点引用。
 * 易于扩展。
-* 具有灵活性以满足更复杂的配置，如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 支持依赖项(例如，[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)插件需要[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)配置)。
+* 灵活地满足更复杂的配置需求，例如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
+* 支持依赖项(例如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)插件需要[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)配置)。
 
 ## 结构 {#structure}
 
@@ -41,11 +40,11 @@ ht-degree: 3%
 
 `/etc/cloudservices`。
 
-对于每种类型的配置，都会提供一个模板和一个组件。这样，配置模板可以在自定义后满足大多数需求。
+对于每种类型的配置，都将提供一个模板和一个组件。这样，配置模板就可以在自定义后满足大多数需求。
 
 要为新服务提供配置，您需要：
 
-* 创建服务页面
+* 创建服务页
 
    `/etc/cloudservices`
 
@@ -58,11 +57,11 @@ ht-degree: 3%
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-或基本组件
+或基元
 
 `cq/cloudserviceconfigs/components/configpage`
 
-服务提供商还应提供服务页：
+服务提供商还应提供服务页面：
 
 `/etc/cloudservices/<service-name>`
 
@@ -105,13 +104,13 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /libs/cq/analytics/components/generictrackerpage
 ```
 
-在设置模板和组件后，您可以通过在以下位置添加子页面来添加配置：
+设置模板和组件后，您可以通过在下添加子页面来添加配置：
 
 `/etc/cloudservices/<service-name>`
 
 ### 内容模型{#content-model}
 
-内容模型存储为`cq:Page`，位于：
+内容模型将存储为`cq:Page`，位于：
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -124,7 +123,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 配置存储在子节点`jcr:content`下。
 
-* 在对话框中定义的固定属性应直接存储在`jcr:node`上。
+* 修复了对话框中定义的属性应直接存储在`jcr:node`上。
 * 动态元素（使用`parsys`或`iparsys`）使用子节点存储组件数据。
 
 ```xml
@@ -142,18 +141,18 @@ propertyname
 
 ### AEM集成{#aem-integration}
 
-可用服务列在&#x200B;**页面属性**&#x200B;对话框的&#x200B;**Cloud Services**&#x200B;选项卡（从`foundation/components/page`或`wcm/mobile/components/page`继承的任何页面）中。
+**页面属性**&#x200B;对话框的&#x200B;**Cloud Services**&#x200B;选项卡（任何从`foundation/components/page`或`wcm/mobile/components/page`继承的页面）中列出了可用服务。
 
-该选项卡还提供：
+选项卡还提供：
 
-* 指向可启用服务的位置的链接
+* 可在其中启用服务的位置的链接
 * 从路径字段中选择配置（服务的子节点）
 
 #### 密码加密{#password-encryption}
 
 存储服务的用户凭据时，应加密所有密码。
 
-您可以通过添加隐藏的表单字段来实现这一点。 此字段的属性名称中应包含注释`@Encrypted`;例如，对于`password`字段，名称将写为：
+您可以通过添加隐藏的表单字段来实现此目的。 该字段的属性名称中应包含注释`@Encrypted`;例如，对于`password`字段，名称将写为：
 
 `password@Encrypted`
 
@@ -161,13 +160,13 @@ propertyname
 
 >[!NOTE]
 >
->这与标准` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)`注释类似。
+>这类似于标准` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)`注释。
 
 >[!NOTE]
 >
 >默认情况下，`EcryptionPostProcessor`仅加密对`/etc/cloudservices`发出的`POST`请求。
 
-#### “服务”页的其他属性jcr:content节点{#additional-properties-for-service-page-jcr-content-nodes}
+#### 服务页jcr:content节点{#additional-properties-for-service-page-jcr-content-nodes}的其他属性
 
 <table>
  <tbody>
@@ -177,11 +176,11 @@ propertyname
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>要自动包括在页面中的组件的引用路径。<br /> 它用于附加功能和JS包含。<br /> 这包括页面上包含的<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 组件(通常在标记之 <code>body</code> 前)。<br /> 在分析和目标方面，我们使用它包含其他功能，如跟踪访客行为的JavaScript调用。</td>
+   <td>要自动包含在页面中的组件的引用路径。<br /> 此插件可用于其他功能和JS包含项。<br /> 这包括包含的页面上的组<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 件(通常在标记之 <code>body</code> 前)。<br /> 对于Analytics和Target，我们使用此功能包含其他功能，例如用于跟踪访客行为的JavaScript调用。</td>
   </tr>
   <tr>
    <td>描述</td>
-   <td>服务的简短说明。<br /> </td>
+   <td>服务的简短描述。<br /> </td>
   </tr>
   <tr>
    <td>descriptionExtended</td>
@@ -193,7 +192,7 @@ propertyname
   </tr>
   <tr>
    <td>selectableChildren</td>
-   <td>用于在页面属性对话框中显示配置的筛选器。</td>
+   <td>在“页面属性”对话框中显示配置的过滤器。</td>
   </tr>
   <tr>
    <td>serviceUrl</td>
@@ -209,16 +208,16 @@ propertyname
   </tr>
   <tr>
    <td>可见</td>
-   <td>页面属性对话框中的可见性；默认可见（可选）</td>
+   <td>页面属性对话框的可见性；默认可见（可选）</td>
   </tr>
  </tbody>
 </table>
 
 ### 用例{#use-cases}
 
-这些服务默认提供：
+默认提供以下服务：
 
-* [跟踪器代](/help/sites-administering/external-providers.md) 码片段（Google、WebTrends等）
+* [跟踪器片段](/help/sites-administering/external-providers.md) （Google、WebTrends等）
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 * [Search&amp;Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
@@ -227,4 +226,3 @@ propertyname
 >[!NOTE]
 >
 >另请参阅[创建自定义Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md)。
-
