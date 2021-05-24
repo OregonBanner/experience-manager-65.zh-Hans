@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1935'
-ht-degree: 87%
+ht-degree: 89%
 
 ---
-
 
 # 创建和组织页面{#creating-and-organizing-pages}
 
@@ -89,9 +88,9 @@ ht-degree: 87%
    * 用于生成 URI。
    * 此字段的用户输入是可选的。如果未指定，名称会从标题派生。
 
-创建新页面时，AEM将[根据AEM和JCR实行的惯例](/help/sites-developing/naming-conventions.md)验证页面名称。
+创建新页面时，AEM将根据AEM和JCR实行的惯例](/help/sites-developing/naming-conventions.md)验证页面名称。[
 
-根据UI，允许的字符实现和列表会略有不同（触屏优化UI的范围更广），但允许的最小值是：
+实施和允许使用的字符列表因UI而略有不同（触屏UI更为广泛），但最低允许使用的字符数为：
 
 * 从“a”到“z”
 * 从“A”到“Z”
@@ -114,10 +113,10 @@ ht-degree: 87%
 
 如果您在创建新页面时提供页面&#x200B;**名称**[，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)
 
-在经典UI中，您不能在&#x200B;**名称**&#x200B;字段中输入无效字符&#x200B;**。**
+在经典UI中，**无法在**&#x200B;名称&#x200B;**字段中输入无效字符**。
 
 >[!NOTE]
->在触屏优化UI中，您不能在&#x200B;**名称**&#x200B;字段中提交无效字符&#x200B;**。**&#x200B;当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
+>在触屏UI中，您&#x200B;**无法在**&#x200B;名称&#x200B;**字段中提交无效的字符**。 当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
 
 >[!NOTE]
 >
@@ -144,7 +143,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
 ### 组件 {#components}
 
-组件是AEM提供的元素，以便您能够添加特定类型的内容。AEM附带一系列现成组件，它们提供全面的功能；包括：
+组件是AEM提供的元素，旨在让您能够添加特定类型的内容。AEM附带一系列功能完备的现成组件；这包括：
 
 * 文本
 * 图像
@@ -152,7 +151,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 * 视频
 * 更多
 
-创建并打开页面后，您可以[使用[sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)提供的组件](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)添加内容。
+创建并打开页面后，您可以[使用](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)组件添加内容，该组件可从[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)中获取。
 
 ## 管理页面 {#managing-pages}
 
@@ -198,7 +197,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
    >[!NOTE]
    >
-   >您也可以在编辑现有页面时创建页面。使用Sidekick的&#x200B;**页面**&#x200B;选项卡中的**创建子页面**，将在正在编辑的页面下直接创建新页面。
+   >您也可以在编辑现有页面时创建页面。使用Sidekick的&#x200B;**Page**&#x200B;选项卡中的**创建子页面**，将在正在编辑的页面下直接创建新页面。
 
 ### 打开页面进行编辑 {#opening-a-page-for-editing}
 
@@ -295,7 +294,7 @@ AEM 还有一项功能是允许您更新指向重命名或被移动页面的内�
       重新发布引用页面；同样可为各个页面选择此操作。
    >[!NOTE]
    >
-   >如果页面已经激活，则移动页面会自动将其取消激活。默认情况下，移动完成时将重新激活它，但可以取消选中&#x200B;**移动**&#x200B;窗口中页面的&#x200B;**重新发布**&#x200B;字段来更改。
+   >如果页面已经激活，则移动页面会自动将其取消激活。默认情况下，页面将在移动完成后重新激活，但通过取消选中&#x200B;**移动**&#x200B;窗口中页面的&#x200B;**重新发布**&#x200B;字段，可以更改这一行为。
 
 1. 单击&#x200B;**移动**。此时将需要进行确认。单击&#x200B;**确定**&#x200B;以确认。
 
@@ -332,10 +331,9 @@ AEM 还有一项功能是允许您更新指向重命名或被移动页面的内�
 >文件夹也需遵循在指定新文件夹名称时用到的[页面命名惯例](#page-naming-conventions)。
 
 1. 打开&#x200B;**网站**&#x200B;控制台并导航到所需的位置。
-1. 在&#x200B;**新建……**&#x200B;菜单(单击“新建”旁边的箭头……**)，选择“新建文件夹……”。**。****
+1. 在&#x200B;**新建...** 菜单（单击&#x200B;**新建...** 旁边的箭头）中，选择&#x200B;**新建文件夹...**。
 1. 此时将打开&#x200B;**创建文件夹**&#x200B;对话框。您可在此输入&#x200B;**名称**&#x200B;和&#x200B;**标题**：
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
 1. 选择&#x200B;**创建**&#x200B;以创建文件夹。
-
