@@ -1,19 +1,18 @@
 ---
 title: 智能成像
 description: 智能成像功能可应用每位用户独特的观看特性，自动为其体验优化的正确图像提供服务，从而提高性能和参与度。
-uuid: c11e52ba-8d64-4dc5-b30a-fc10c2b704e5
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
-feature: 资产管理
+feature: 资产管理，演绎版
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 8d27457ad88cb84e670e78bab4c40da36fcfc629
+source-git-commit: fde3cb4a2461ca80f410f360fd5d56f359cec149
 workflow-type: tm+mt
-source-wordcount: '1912'
-ht-degree: 2%
+source-wordcount: '2626'
+ht-degree: 1%
 
 ---
 
@@ -41,6 +40,53 @@ Smart Imaging还通过与Adobe一流的高级CDN服务完全集成而带来的�
 |  |  |  |  | 平均= 51% |
 
 与上述内容类似，Adobe还使用实时客户网站的7009 URL进行测试。 他们平均可以进一步优化JPEG的38%文件大小。 对于具有WebP格式的PNG，他们平均可进一步优化31%的文件大小。 这种优化是由于智能成像的能力而实现的。
+
+在移动网络上，挑战因以下两个因素而加剧：
+
+* 多种不同外形规格和高分辨率显示器的设备。
+* 网络带宽受限。
+
+在图像方面，目标是尽可能高效地提供最优质的图像。
+
+### 关于设备像素比例优化 {#dpr}
+
+设备像素比率(DPR)（也称为CSS像素比率）是设备的物理像素与逻辑像素之间的关系。 特别是随着视网膜屏幕的出现，现代移动设备的像素分辨率正以快速的速度增长。
+
+启用“设备像素比率”优化后，图像将以屏幕的本机分辨率呈现，从而使其看起来清晰。
+
+打开智能成像DPR配置可根据请求所提供的显示器的像素密度自动调整请求的图像。 目前，显示屏的像素密度来自Akamai CDN标头值。
+
+| 图像URL中允许的值 | 描述 |
+|---|---|
+| `dpr=off` | 在单个图像URL级别关闭DPR优化。 |
+| `dpr=on,dprValue` | 使用自定义值覆盖由智能成像检测的DPR值（由任何客户端逻辑或其他方式检测）。 `dprValue`的允许值是大于0的任意数字。 指定的值1.5、2或3是典型值。 |
+
+>[!NOTE]
+>
+>* 即使关闭公司级别DPR设置，您也可以使用`dpr=on,dprValue`。
+>* 由于DPR优化，当生成的图像大于MaxPix Dynamic Media设置时，始终通过保持图像的宽高比来识别MaxPix宽度。
+
+
+| 请求的图像大小 | DPR值 | 传送的图像大小 |
+|---|---|---|
+| 816x500 | 1 | 816x500 |
+| 816x500 | 2 | 1632x1000 |
+
+另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
+
+### 关于网络带宽优化{#network-bandwidth-optimization}
+
+打开网络带宽可根据实际网络带宽自动调整提供的图像质量。 对于较差的网络带宽，即使DPR优化已打开，DPR优化也会自动关闭。
+
+如有需要，贵公司可以通过在图像的URL后附加`network=off` ，在单个图像级别选择退出网络带宽优化。
+
+| 图像URL中允许的值 | 描述 |
+|---|---|
+| `network=off` | 在单个图像URL级别关闭网络优化。 |
+
+>[!NOTE]
+>
+>DPR和网络带宽值基于检测到的捆绑CDN的客户端值。 这些值有时不准确。 例如，DPR=2的iPhone5和DPR=3的iPhone12，都显示DPR=2。 但是，对于高分辨率设备，发送DPR=2比发送DPR=1要好。 即将推出：Adobe正在使用客户端代码来准确确定最终用户的DPR。
 
 ## 最新的“智能成像”功能有哪些主要优势？{#what-are-the-key-benefits-of-smart-imaging}
 
@@ -134,13 +180,23 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 要查找您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的公司帐户或帐户。
 
-点按&#x200B;**[!UICONTROL 设置>应用程序设置>常规设置]**。 查找标有&#x200B;**[!UICONTROL Published Server Name]**&#x200B;的字段。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求转移到您自己的自定义域作为此过渡的一部分。
+点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**&#x200B;查找标有&#x200B;**[!UICONTROL 已发布服务器名称]**&#x200B;的字段。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求转移到您自己的自定义域作为此过渡的一部分。
 
 使用Dynamic Media许可证，您的第一个自定义域无需额外付费。
 
 ## 为我的帐户启用“智能成像”的过程是什么？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
 启动使用智能成像的请求；它不会自动启用。
+
+默认情况下，对于Dynamic Media公司帐户，会禁用（关闭）智能成像DPR和网络优化。 如果要启用（打开）其中一个或两个现成增强功能，请按如下所述创建一个支持案例。
+
+智能成像DPR和网络优化的发布计划如下：
+
+| 区域 | 目标日期 |
+|---|---|
+| 北美 | 2021年5月24日 |
+| 欧洲、中东、非洲 | 2021年6月25日 |
+| 亚太 | 2021年7月19日 |
 
 1. [使用Admin Console创建支持案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. 在支持案例中提供以下信息：
@@ -150,7 +206,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       要查找您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的公司帐户或帐户。
 
-      单击&#x200B;**[!UICONTROL 设置 > 应用程序设置 > 常规设置]**。
+      单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 
       查找标有&#x200B;**[!UICONTROL Published Server Name.]**&#x200B;的字段
    1. 确认您通过Adobe使用CDN，而不是通过直接关系进行管理。
@@ -158,7 +214,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       要查找您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的公司帐户或帐户。
 
-      单击&#x200B;**[!UICONTROL 设置 > 应用程序设置 > 常规设置]**。
+      单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 
       查找标有&#x200B;**[!UICONTROL Published Server Name]**&#x200B;的字段。 如果您当前使用的是通用Dynamic Media Classic域，则可以在此过渡中请求转移到您自己的自定义域。
    1. 指示您是否还需要智能成像才能通过HTTP/2运行。
@@ -189,7 +245,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 ## 如何验证智能成像是否按预期工作？{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. 在您的帐户配置了智能成像后，请在浏览器上加载Dynamic Media Classic或Adobe Experience Manager - Dynamic Media图像URL。
-1. 在浏览器中单击&#x200B;**[!UICONTROL 查看>开发人员>开发人员工具]**&#x200B;以打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
+1. 在浏览器中单击&#x200B;**[!UICONTROL 查看]** > **[!UICONTROL 开发人员]** > **[!UICONTROL 开发人员工具]**&#x200B;以打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
 
 1. 确保在开发人员工具打开时禁用缓存。
 
@@ -209,6 +265,10 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 是. 您可以通过向URL添加修饰符`bfc=off`来关闭智能成像。
 
+## 我是否可以请求在公司级别关闭DPR和网络优化？{#dpr-companylevel-turnoff}
+
+是. 要在贵公司禁用DPR和网络优化，请创建一个支持案例，如本主题前面所述。
+
 ## 提供了哪些“调整”功能？ 是否可以定义任何设置或行为？ (#tuning-settings)
 
 目前，您可以选择启用或禁用“智能成像”。 没有其他调整可用。
@@ -217,6 +277,14 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 当前的智能映像中没有这种配置功能。
 
-## 有时，JPEG图像会返回到Chrome，而不是WebP图像。 为什么？ (#jpeg-webp)
+## 有时，JPEG图像会返回到Chrome，而不是WebP图像。 为什么会发生这种变化？ (#jpeg-webp)
 
 “智能成像”可确定转换是否有益。 仅当转换导致文件大小更小且质量相当时，才会返回新图像。
+
+## 智能成像DPR优化如何与Adobe Experience Manager Sites组件和Dynamic Media查看器一起使用？
+
+* Experience Manager站点核心组件默认配置以进行DPR优化。 为避免因服务器端智能成像DPR优化而出现超大图像，应始终将`dpr=off`添加到Experience Manager站点核心组件Dynamic Media图像中。
+* 默认情况下，为了优化DPR，配置了Dynamic Media Foundation组件，以避免因服务器端智能成像DPR优化而出现过大的图像，将始终向Dynamic Media Foundation组件图像中添加`dpr=off`。 即使客户在DM Foundation组件中取消选择DPR优化，服务器端智能成像DPR也不会生效。 总之，在DM Foundation组件中，DPR优化仅基于DM Foundation组件级别设置生效。
+* 任何查看器端DPR优化都与服务器端智能成像DPR优化协同工作，并且不会导致图像过大。 换言之，无论DPR由查看器处理（例如仅在启用了缩放功能的查看器中的主视图），都不会触发服务器端智能成像DPR值。 同样，无论查看器元素（如色板和缩略图）没有DPR处理，都会触发服务器端智能成像DPR值。
+
+另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
