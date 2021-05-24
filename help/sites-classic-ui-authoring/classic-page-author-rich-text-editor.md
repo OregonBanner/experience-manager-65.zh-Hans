@@ -6,14 +6,13 @@ contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7bf6657a8fd7677ab15e0f91324a065b684e2f92
+exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 77%
 
 ---
-
 
 # 富文本编辑器 {#rich-text-editor}
 
@@ -57,7 +56,7 @@ ht-degree: 77%
 
 ## 富文本编辑器的功能  {#features-of-the-rich-text-editor}
 
-富文本编辑器提供了一系列功能，这些[取决于单个组件的配置](/help/sites-administering/rich-text-editor.md)。这些功能可用于触屏优化UI和经典UI。
+富文本编辑器提供了一系列功能，这些功能[取决于单个组件的配置](/help/sites-administering/rich-text-editor.md)。这些功能同时适用于触屏优化UI和经典UI。
 
 ### 基本字符格式 {#basic-character-formats}
 
@@ -106,7 +105,7 @@ ht-degree: 77%
 * 剪切 (Ctrl-X)
 * 复制 (Ctrl-C)
 * 粘贴
-这是组件的默认粘贴机制(Ctrl-V);安装现成版本后，它配置为从Word]粘贴[!UICONTROL 。
+这是组件的默认粘贴机制(Ctrl-V);安装现成版本后，此插件将配置为从Word]粘贴[!UICONTROL 。
 
 * 粘贴为文本：去除所有样式和格式，仅粘贴纯文本。
 
@@ -126,7 +125,7 @@ AEM 会按时间顺序保留您在当前组件中过去 50 次操作的记录。
 >
 >50 次是默认的任务数量。您的安装可以使用不同的值。
 
-### 对齐 {#alignment}
+### 对齐方式 {#alignment}
 
 ![](do-not-localize/cq55_rte_alignment.png)
 
@@ -152,13 +151,13 @@ AEM 会按时间顺序保留您在当前组件中过去 50 次操作的记录。
 
 只需将光标置于列表中，然后选择其他样式即可更改列表样式。子列表也可以具有不同于包含列表的样式。在创建子列表（通过缩进）后，即可应用样式。
 
-![cq55_rte_列表_use](assets/cq55_rte_lists_use.png)
+![cq55_rte_lits_use](assets/cq55_rte_lists_use.png)
 
 ### 链接 {#links}
 
 ![](do-not-localize/cq55_rte_links.png)
 
-通过突出显示所需文本，然后单击超链接图标，可生成指向URL（在您的网站中或外部位置）的链接：
+通过突出显示所需文本并单击超链接图标，可生成指向URL（在您的网站内或外部位置）的链接：
 
 ![](do-not-localize/chlimage_1-9.png)
 
@@ -169,20 +168,20 @@ AEM 会按时间顺序保留您在当前组件中过去 50 次操作的记录。
 您可以：
 
 * 直接键入URI
-* 使用站点地图选择网站中的页面
-* 输入URI，然后附加目标锚点；例如，`www.TargetUri.org#AnchorName`
-* 仅输入锚点（用于引用“当前页面”）;例如，`#anchor`
+* 使用网站地图在您的网站中选择页面
+* 输入URI，然后附加目标锚点；例如`www.TargetUri.org#AnchorName`
+* 仅输入锚点（引用“当前页面”）；例如，`#anchor`
 * 在内容查找器中搜索页面，然后将页面图标拖放到“超链接”对话框中
 
 >[!NOTE]
 >
->URI 可以使用为您的安装配置的任何协议作为前缀。在标准安装中，这些是`https://`、`ftp://`和`mailto:`。 将拒绝并非为您的安装配置的协议，并将其标记为无效。
+>URI 可以使用为您的安装配置的任何协议作为前缀。在标准安装中，这些参数分别为`https://`、`ftp://`和`mailto:`。 将拒绝并非为您的安装配置的协议，并将其标记为无效。
 
 要中断链接，请将光标置于链接文本中的任意位置并单击[!UICONTROL 取消链接]图标：
 
 ![](do-not-localize/chlimage_1-10.png)
 
-### 锚点  {#anchors}
+### 锚点 {#anchors}
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
@@ -220,7 +219,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 >[!NOTE]
 >
->AEM 还提供了用于进行更详细图像配置的专用组件。例如，**Image**&#x200B;和&#x200B;**Text Image**&#x200B;组件可用。
+>AEM 还提供了用于进行更详细图像配置的专用组件。例如，可以使用&#x200B;**图像**&#x200B;和&#x200B;**文本图像**&#x200B;组件。
 
 ### 拼写检查 {#spelling-checker}
 
@@ -242,7 +241,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 * 作为&#x200B;**表**&#x200B;组件
 
-   ![chlimage_1-106](assets/chlimage_1-105.png)
+   ![chlimage_1-105](assets/chlimage_1-105.png)
 
 * 从&#x200B;**文本**&#x200B;组件中
 
@@ -250,7 +249,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
    >[!NOTE]
    >
-   >尽管RTE中有可用的表，但在创建表时，建议使用&#x200B;**表**&#x200B;组件。
+   >尽管RTE中提供了表，但在创建表时，建议使用&#x200B;**Table**&#x200B;组件。
 
 在&#x200B;**文本**&#x200B;和&#x200B;**表**&#x200B;组件中，可通过单击表中的上下文菜单（通常是鼠标右键按钮）使用表功能；例如：
 
@@ -292,7 +291,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 >[!NOTE]
 >
->一些单元格属性（如“宽度”和“高度”）可以定义为像素或百分比。
+>一些单元格属性（如宽度和高度）可以定义为像素或百分比。
 
 >[!CAUTION]
 >
@@ -309,9 +308,9 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 * **宽度**
 * **高度**
 * **水平对齐** - 左对齐、居中对齐或右对齐
-* **垂直对齐** -顶部、中间、底部或基线
-* **单元格类型**-数据或标题
-* **应用于：** 单个单元格、整行、整列
+* **垂直对齐**  — 顶部、中间、底部或基线
+* **单元格类型** — 数据或标题
+* **应用到：** 单个单元格、整行、整列
 
 #### 添加或删除行 {#add-or-delete-rows}
 
@@ -337,7 +336,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 #### 合并单元格 {#merge-cells}
 
-![cq55_rte_](assets/cq55_rte_cellmerge.png) ![cellmergeq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_rte_cellmergecq](assets/cq55_rte_cellmerge.png) ![55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * 如果您选择了一组单元格，可以将这些单元格合并为一个。
 * 如果您只选择了一个单元格，可以将其与右侧或下方的单元格合并。
@@ -369,7 +368,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-使用该选项从&#x200B;**[!UICONTROL Text]**&#x200B;组件中删除表。
+使用选项可从&#x200B;**[!UICONTROL Text]**&#x200B;组件中删除表。
 
 ### 特殊字符 {#special-characters}
 
