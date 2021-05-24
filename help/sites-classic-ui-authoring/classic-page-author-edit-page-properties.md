@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 96%
 
 ---
-
 
 # 编辑页面属性{#editing-page-properties}
 
@@ -82,7 +81,7 @@ ht-degree: 96%
 
    允许您为此页面输入虚 URL。通过这种方式，您可以使用更短并且含意更清楚的 URL。
 
-   例如，如果对于网站h `ttp://example.com,`，虚URL设置为w `elcome`，且路径/ `v1.0/startpage`标识的页面为h &lt;a2/>，则h `ttp://example.com/welcome`将是h `ttp://example.com/content/v1.0/startpage`的虚URL
+   例如，如果对于网站h `ttp://example.com,`，将路径/ `v1.0/startpage`标识的页面的虚URL设置为w `elcome`，则h `ttp://example.com/welcome`将为h `ttp://example.com/content/v1.0/startpage`的虚URL
 
    >[!CAUTION]
    >
@@ -134,7 +133,7 @@ ht-degree: 96%
 
    指定导出配置。
 
-### 缩略图  {#thumbnail}
+### 缩略图 {#thumbnail}
 
 * **页面缩略图**
 
@@ -190,9 +189,8 @@ ht-degree: 96%
 
 1. 打开要编辑的页面。
 
-1. 在 Sidekick 中，打开“**页面**”选项卡，然后选择“**页面属性...**”
+1. 在 Sidekick 中，打开&#x200B;**页面**&#x200B;选项卡，然后选择&#x200B;**页面属性...**。
 
    这会打开一个包含多个选项卡的对话框。
 
 1. 进行所需的更改，然后单击“**确定**”以保存。
-
