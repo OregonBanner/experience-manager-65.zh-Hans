@@ -10,18 +10,17 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 611743cc4144f99968845093b3903fe7df8bf9d9
+exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 84%
 
 ---
 
-
 # 将工作流应用于页面{#applying-workflows-to-pages}
 
-创作时，您可以调用工作流以在页面上执行操作；还可以应用多个工作流。
+在创作时，您可以调用工作流以在页面上执行操作；也可以应用多个工作流。
 
 在应用工作流时，您需要指定以下信息：
 
@@ -62,11 +61,11 @@ ht-degree: 84%
 
 ### 从“站点”工具栏启动工作流  {#starting-a-workflow-from-the-sites-toolbar}
 
-您可以从&#x200B;**站点**&#x200B;控制台的工具栏开始工作流：
+您可以从&#x200B;**Sites**&#x200B;控制台的工具栏启动工作流：
 
 1. 导航到所需的页面并选择该页面。
 
-1. 现在，您可以从工具栏的&#x200B;**创建**&#x200B;选项中选择&#x200B;**工作流**。
+1. 从工具栏的&#x200B;**创建**&#x200B;选项中，您现在可以选择&#x200B;**工作流**。
 
    ![screen_shot_2019-03-06at121237pm](assets/screen_shot_2019-03-06at121237pm.png)
 
@@ -76,10 +75,10 @@ ht-degree: 84%
 
 您可以从&#x200B;**时间轴**&#x200B;中启动要应用于所选资源的工作流。
 
-1. [选择资](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 源并打 [开时](/help/sites-authoring/basic-handling.md#timeline) 间轴（或打开时间轴，然后选择资源）。
+1. [选择资](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) 源并打 [开时间轴](/help/sites-authoring/basic-handling.md#timeline) （或打开时间轴，然后选择资源）。
 1. 可以使用评论字段中的箭头显示&#x200B;**启动工作流**：
 
-   ![screen-shot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
+   ![screenshot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
 
 1. **创建工作流**&#x200B;向导将帮助您[指定工作流详细信息](#specifying-workflow-details-in-the-create-workflow-wizard)。
 
@@ -117,7 +116,7 @@ ht-degree: 84%
 
 1. 在&#x200B;**范围**&#x200B;步骤中，您可以选择：
 
-   * **添加** 内容以打开路 [径浏](/help/sites-authoring/author-environment-tools.md#path-browser) 览器并选择其他资源；在浏览器中时，单击／点 **** 按选择以将内容添加到工作流实例。
+   * **添加** 内容以打开路径浏 [览](/help/sites-authoring/author-environment-tools.md#path-browser) 器并选择其他资源；在浏览器中，单击/点按选 **** 择，以将内容添加到工作流实例。
 
    * 现有资源以查看其他操作：
 
