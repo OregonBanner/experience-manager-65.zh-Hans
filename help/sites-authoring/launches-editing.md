@@ -11,14 +11,13 @@ topic-tags: site-features
 discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 6f1f4fbaf9ee4b5ab073a27a58cb040c76230ebd
+exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 93%
 
 ---
-
 
 # 编辑启动项{#editing-launches}
 
@@ -31,7 +30,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->不允许您在启动项中移动页面。 尝试此操作将触发警告消息：
+>不允许在启动项中移动页面。 尝试此操作将触发警告消息：
 >
 >* 警告：此页面是启动项的源。 不允许移动页面。
 
@@ -60,7 +59,7 @@ Live copy用于将源分 *支中的**内容同步到启动分支* （以使启�
 1. 打开&#x200B;**[引用](/help/sites-authoring/basic-handling.md#references)**&#x200B;面板，然后选择&#x200B;**启动项**。
 1. 选择您的特定启动项，然后选择&#x200B;**和源比较**：
 
-   ![screen-shot_2019-03-05at121952](assets/screen-shot_2019-03-05at121952.png)
+   ![screenshot_2019-03-05at121952](assets/screen-shot_2019-03-05at121952.png)
 
 1. 此时将并列打开两个页面（启动页面和源页面）。
 
@@ -110,4 +109,4 @@ Live copy用于将源分 *支中的**内容同步到启动分支* （以使启�
 
 从“引用”选项卡中选择特定启动项时，将会显示状态（请参阅[“引用”（“站点”控制台）中的启动项](/help/sites-authoring/launches.md#launches-in-references-sites-console)）。
 
-![screen-shot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)
+![screenshot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)
