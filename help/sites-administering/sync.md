@@ -11,8 +11,7 @@ content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
-feature: Security
-translation-type: tm+mt
+feature: 安全
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '2437'
@@ -24,37 +23,37 @@ ht-degree: 2%
 
 ## 简介 {#introduction}
 
-当部署为[发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)时，成员需要能够登录并查看其任何发布节点上的数据。
+当部署为[publish farm](/help/sites-deploying/recommended-deploys.md#tarmk-farm)时，成员需要能够登录并查看其任何发布节点上的数据。
 
-在创作环境中，不需要在发布环境中创建的用户和用户组（用户数据）。
+创作环境中不需要在发布环境中创建的用户和用户组（用户数据）。
 
-在创作环境中创建的大多数用户数据都打算保留在创作环境中，而不是复制到发布实例。
+在创作环境中创建的大多数用户数据都打算保留在创作环境中，而不会复制到发布实例。
 
-在一个发布实例上进行的注册和修改需要与其它发布实例同步，以便它们能够访问相同的用户数据。
+对一个发布实例进行的注册和修改需要与其他发布实例同步，以便它们能够访问相同的用户数据。
 
-从AEM 6.1开始，启用用户同步后，将自动同步场中的发布实例中的用户数据，而不是在作者身上创建。
+自AEM 6.1起，启用用户同步后，将在场中的发布实例中自动同步用户数据，而不会在创作时创建。
 
 ## Sling分发{#sling-distribution}
 
-用户数据及其[ACL](/help/sites-administering/security.md)存储在[Oak Core](/help/sites-deploying/platform.md)中，即Oak JCR下方的层，并使用[Oak API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html)进行访问。 由于更新不频繁，使用[Sling内容分发](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md)（Sling分发）将用户数据同步到其他发布实例是合理的。
+用户数据及其[ACL](/help/sites-administering/security.md)存储在[Oak Core](/help/sites-deploying/platform.md)（Oak JCR下的层）中，并使用[Oak API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/oak/api/package-tree.html)进行访问。 如果不经常更新，则使用[Sling内容分发](https://github.com/apache/sling/blob/trunk/contrib/extensions/distribution/README.md)（Sling分发）将用户数据与其他发布实例同步是合理的。
 
 与传统复制相比，使用Sling分发进行用户同步的好处有：
 
-* *用户*、用 *户配置* 文件和 *在发布* 时创建的用户组不是在作者
+* *在发布时创*&#x200B;建的用 *户* 、用户 *配置文* 件和用户组不会在创作时创建
 
-* Sling分发在jcr事件中设置属性，使得在发布端事件监听器中操作成为可能，而无需考虑无限的复制循环
-* Sling分发仅将用户数据发送到非原始发布实例，从而消除了不必要的流量
-* [同](/help/sites-administering/security.md) 步中包含用户节点中的ACLset
+* Sling分发会在jcr事件中设置属性，从而能够在发布端事件侦听器中执行操作，而无需考虑无限复制循环
+* Sling分发仅将用户数据发送到非原始发布实例，从而消除不必要的流量
+* [](/help/sites-administering/security.md) 同步中包含用户节点中的ACLsset
 
 >[!NOTE]
 >
->如果需要会话，建议使用SSO解决方案或使用粘性会话，并在客户切换到其他发布者时让其登录。
+>如果需要会话，建议使用单点登录(SSO)解决方案或使用置顶会话，并在客户切换到其他发布者时让其登录。
 
 >[!CAUTION]
 >
->不支持&#x200B;***administrators***&#x200B;组的同步，即使启用了用户同步时也是如此。 相反，“导入差异”失败将记录在错误日志中。
+>即使启用了用户同步，也不支持&#x200B;***administrators***&#x200B;组的同步。 错误日志中将记录“导入差异”失败。
 >
->因此，当部署是发布场时，如果将用户添加到***administrators**&#x200B;组或从中删除用户，则必须在每个发布实例上手动进行修改。
+>因此，当部署为发布场时，如果将用户添加到***administrators**&#x200B;组或从中删除用户，则必须在每个发布实例上手动进行修改。
 
 ## 启用用户同步{#enable-user-sync}
 
@@ -64,17 +63,17 @@ ht-degree: 2%
 >
 >启用用户同步涉及修改&#x200B;*现有* OSGi配置。
 >
->不应因启用用户同步而添加新配置。
+>由于启用了用户同步，因此不应添加新配置。
 
-用户同步依赖于作者环境来管理用户数据分发，即使用户数据不是在作者身上创建的。 许多（但并非全部）配置都发生在创作环境中，每个步骤都清楚地标识是在创作还是发布时执行。
+用户同步依赖于创作环境来管理用户数据分发，即使用户数据不是在创作时创建的。 许多配置（但并非全部）都在创作环境中进行，每个步骤都可明确地确定是在创作环境还是发布环境中执行配置。
 
-以下是启用用户同步所需的步骤，后面是[疑难解答](#troubleshooting)部分：
+以下是启用用户同步所需的步骤，然后是[疑难解答](#troubleshooting)部分：
 
 ### 前提条件 {#prerequisites}
 
-1. 如果用户和用户组已在某个发布者上创建，建议在配置和启用用户同步之前，[手动将用户数据同步](#manually-syncing-users-and-user-groups)到所有发布者。
+1. 如果已在一个发布者上创建了用户和组，则建议在配置和启用用户同步之前，[手动将](#manually-syncing-users-and-user-groups)用户数据同步到所有发布者。
 
-启用用户同步后，仅会同步新创建的用户和用户组。
+启用用户同步后，仅同步新创建的用户和组。
 
 1. 确保已安装最新代码：
 
@@ -88,12 +87,12 @@ ht-degree: 2%
 * **在作者**
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 定位`Apache Sling Distribution Agent - Sync Agents Factory`
+      * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   * 找到`Apache Sling Distribution Agent - Sync Agents Factory`
 
-      * 选择要打开进行编辑的现有配置（铅笔图标）
+      * 选择要打开以进行编辑的现有配置（铅笔图标）
 验证`name`:**`socialpubsync`**
 
       * 选中`Enabled`复选框
@@ -102,24 +101,24 @@ ht-degree: 2%
 
 ![](assets/chlimage_1-20.png)
 
-### 2.创建授权用户{#createauthuser}
+### 2.创建授权用户 {#createauthuser}
 
 **配置**
-权限此授权用户将在步骤3中用于配置创作时的Sling分发。
+权限此授权用户将在步骤3中用于配置作者上的Sling分发。
 
 * **在每个发布实例上**
 
    * 使用管理员权限登录
    * 访问[安全控制台](/help/sites-administering/security.md)
 
-      * 例如，[https://localhost:4503/useradmin](https://localhost:4503/useradmin)
+      * 例如， [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
    * 创建新用户
 
       * 例如，`usersync-admin`
    * 将此用户添加到&#x200B;**`administrators`**&#x200B;用户组
    * [将此用户的ACL添加到/home](#howtoaddacl)
 
-      * `Allow jcr:all` 有限制  `rep:glob=*/activities/*`
+      * `Allow jcr:all` 限制  `rep:glob=*/activities/*`
 
 
 
@@ -128,7 +127,7 @@ ht-degree: 2%
 >必须创建新用户。
 >
 >* 分配的默认用户为&#x200B;**`admin`**。
->* 不使用`communities-user-admin user.`
+>* 请勿使用`communities-user-admin user.`
 
 >
 
@@ -138,41 +137,41 @@ ht-degree: 2%
 
 * 访问CRXDE Lite
 
-   * 例如，[https://localhost:4503/crx/de](https://localhost:4503/crx/de)
+   * 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de)
 
 * 选择`/home`节点
-* 在右侧窗格中，选择`Access Control`选项卡
-* 选择`+`按钮以添加ACL项
+* 在右窗格中，选择`Access Control`选项卡
+* 选择`+`按钮以添加ACL条目
 
-   * **主要**: *搜索为用户同步创建的用户*
+   * **主体**: *搜索为用户同步创建的用户*
    * **类型**: `Allow`
    * **权限**:  `jcr:all`
-   * **** 限制代表：glob:  `*/activities/*`
+   * **** 限制rep:glob:  `*/activities/*`
    * 选择&#x200B;**确定**
 
-* 选择&#x200B;**保存全部**
+* 选择&#x200B;**全部保存**
 
 ![](assets/chlimage_1-21.png)
 
 另请参阅
 
 * [访问权限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
-* 疑难解答部分[在响应处理过程中修改操作异常](#modify-operation-exception-during-response-processing)。
+* 疑难解答章节[在响应处理期间修改操作异常](#modify-operation-exception-during-response-processing)。
 
-### 3.AdobeGranite分发 — 加密密码传输机密提供程序{#adobegraniteencpasswrd}
+### 3.AdobeGranite分发 — 加密密码传输密钥提供程序 {#adobegraniteencpasswrd}
 
 **配置权限**
 
-在所有发布实例上创建了授权用户**`administrators`**用户组成员后，作者必须将该授权用户标识为具有从作者同步用户数据到发布的权限。
+在所有发布实例上创建了授权用户(**`administrators`**用户组的成员)后，该授权用户必须在创作时被标识为具有从创作同步到发布的用户数据的权限。
 
 * **在作者**
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 定位`com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
-   * 选择要打开进行编辑的现有配置（铅笔图标）
+      * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   * 找到`com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
+   * 选择要打开以进行编辑的现有配置（铅笔图标）
 验证`property name`:**`socialpubsync-publishUser`**
 
    * 将用户名和密码设置为在步骤2中发布时创建的[授权用户](#createauthuser)
@@ -186,38 +185,38 @@ ht-degree: 2%
 
 **启用用户同步**
 
-* **在发布时**:
+* **发布时**:
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
-   * 定位`Apache Sling Distribution Agent - Queue Agents Factory`
+      * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   * 找到`Apache Sling Distribution Agent - Queue Agents Factory`
 
-      * 选择要打开进行编辑的现有配置（铅笔图标）
+      * 选择要打开以进行编辑的现有配置（铅笔图标）
 验证`Name`:`socialpubsync-reverse`
 
       * 选中`Enabled`复选框
       * 选择`Save`
-   * **重复**
+   * **对每个发**实例重复执行
 
 
 
 ![](assets/chlimage_1-23.png)
 
-### 5. Adobe Social同步 — 差异观察器工厂{#diffobserver}
+### 5.Adobe Social同步 — 差异观察器工厂 {#diffobserver}
 
 **启用组同步**
 
 * **在每个发布实例上**:
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
-   * 定位&#x200B;**`Adobe Social Sync - Diff Observer Factory`**
+      * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   * 找到&#x200B;**`Adobe Social Sync - Diff Observer Factory`**
 
-      * 选择要打开进行编辑的现有配置（铅笔图标）
+      * 选择要打开以进行编辑的现有配置（铅笔图标）
 
          验证 `agent name`: `socialpubsync-reverse`
 
@@ -227,21 +226,21 @@ ht-degree: 2%
 
 ![](assets/screen-shot_2019-05-24at090809.png)
 
-### 6. Apache Sling分发触发器 — 计划触发器工厂{#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### 6. Apache Sling Distribution Trigger — 计划触发器工厂{#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 **（可选）修改轮询间隔**
 
-默认情况下，作者每30秒对更改进行轮询。 要更改此间隔：
+默认情况下，作者每30秒对更改进行一次轮询。 要更改此间隔，请执行以下操作：
 
 * **在作者**
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 定位`Apache Sling Distribution Trigger - Scheduled Triggers Factory`
+      * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   * 找到`Apache Sling Distribution Trigger - Scheduled Triggers Factory`
 
-      * 选择要打开进行编辑的现有配置（铅笔图标）
+      * 选择要打开以进行编辑的现有配置（铅笔图标）
 
          * 验证 `Name`: `socialpubsync-scheduled-trigger`
       * 将`Interval in Seconds`设置为所需的间隔
@@ -251,9 +250,9 @@ ht-degree: 2%
 
 ![](assets/chlimage_1-24.png)
 
-## 为多个发布实例配置{#configure-for-multiple-publish-instances}
+## 配置多个发布实例{#configure-for-multiple-publish-instances}
 
-默认配置针对单个发布实例。 由于启用用户同步的原因是同步多个发布实例（如发布场），因此需要将其他发布实例添加到同步代理工厂。
+默认配置适用于单个发布实例。 由于启用用户同步的原因是同步多个发布实例（如发布场），因此需要将其他发布实例添加到同步代理工厂。
 
 ### 7. Apache Sling Distribution Agent — 同步代理工厂{#apache-sling-distribution-agent-sync-agents-factory-1}
 
@@ -262,25 +261,25 @@ ht-degree: 2%
 * **在作者**
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-      * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * 定位`Apache Sling Distribution Agent - Sync Agents Factory`
+      * 例如， [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   * 找到`Apache Sling Distribution Agent - Sync Agents Factory`
 
-      * 选择要打开进行编辑的现有配置（铅笔图标）
+      * 选择要打开以进行编辑的现有配置（铅笔图标）
 验证`Name`:`socialpubsync`
 
 
 ![](assets/chlimage_1-25.png)
 
-* **导出**
-器端点每个发布者应有一个导出器端点。例如，如果有2个发布者，localhost:4503和4504，则应有2个条目：
+* **导出程**
+序端点每个发布程序应有一个导出程序端点。例如，如果有2个发布者，localhost:4503和4504，则应有2个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **导入**
-程序终结点每个发布者都应有一个导入程序终结点。例如，如果有2个发布者，localhost:4503和4504，则应有2个条目：
+程序端点每个发布程序应有一个导入程序端点。例如，如果有2个发布者，localhost:4503和4504，则应有2个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
@@ -291,47 +290,47 @@ ht-degree: 2%
 
 **（可选）同步其他JCR节点**
 
-如果有自定义数据需要在多个发布实例之间同步，则：
+如果需要在多个发布实例之间同步自定义数据，则：
 
 * **在每个发布实例上**:
 
    * 使用管理员权限登录
-   * 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+   * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，`https://localhost:4503/system/console/configMgr`
-   * 定位`AEM Communities User Sync Listener`
-   * 选择要打开进行编辑的现有配置（铅笔图标）
+   * 找到`AEM Communities User Sync Listener`
+   * 选择要打开以进行编辑的现有配置（铅笔图标）
 验证`Name`:`socialpubsync-scheduled-trigger`
 
 
 ![](assets/chlimage_1-26.png)
 
 * **节点**
-类型这是要同步的节点类型的列表。除sling:Folder之外的任何节点类型都需要在此列出（sling:folder是单独处理的）。
-要同步的节点类型的默认列表:
+类型这是要同步的节点类型列表。除sling:Folder以外的任何节点类型都需要在此处列出（sling:folder是单独处理的）。
+要同步的节点类型的默认列表：
 
    * rep:User
    * nt:unstructured
-   * nt：资源
+   * nt:resource
 
 * **可忽**
-略属性这是在检测到任何更改时将忽略的属性列表。对这些属性所做的更改可能会作为其他更改的副作用而进行同步（因为同步始终处于节点级别），但对这些属性所做的更改本身不会触发同步。
+略属性这是在检测到任何更改时将忽略的属性列表。对这些属性所做的更改可能会作为其他更改的副作用进行同步（因为同步始终位于节点级别），但对这些属性所做的更改本身不会触发同步。
 要忽略的默认属性：
 
    * cq:lastModified
 
 * **可忽略**
-的节点在同步过程中将完全忽略的子路径。这些子路径下的任何内容将随时同步。
+的节点子路径，在同步过程中将完全忽略该子路径。这些子路径下的任何内容将随时进行同步。
 要忽略的默认节点：
 
    * .tokens
    * 系统
 
-* **分布**
-式文件夹大多数sling:Folders会被忽略，因为不需要同步。此处列出了少数例外。
+* **分布式**
+文件夹最多sling：文件夹被忽略，因为不需要同步。此处列出了少数例外。
 要同步的默认文件夹
 
-   * 细分/评分
+   * 区段/评分
    * 社交/关系
    * 活动
 
@@ -339,21 +338,21 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->如果Sling ID在两个或多个发布实例之间匹配，则用户组同步将失败。
+>如果Sling ID在两个或更多发布实例之间匹配，则用户组同步将失败。
 
-如果Sling ID对于发布场中的多个发布实例是相同的，则用户组将不会同步。
+如果发布场中多个发布实例的Sling ID相同，则不会同步用户组。
 
-要验证所有Sling ID值是否不同，请在每个发布实例中：
+要验证所有Sling ID值是否都不同，请在每个发布实例上：
 
-1. 浏览至`http://<host>:<port>/system/console/status-slingsettings`
+1. 浏览`http://<host>:<port>/system/console/status-slingsettings`
 1. 检查&#x200B;**Sling ID**&#x200B;的值
 
 ![](assets/chlimage_1-27.png)
 
 如果发布实例的Sling ID与任何其他发布实例的Sling ID匹配，则：
 
-1. 停止具有匹配Sling ID的发布实例之一
-1. crx-quickstart/launchpad/felix目录中
+1. 停止一个具有匹配Sling ID的发布实例
+1. 在crx-quickstart/launchpad/felix目录中
 
    * 搜索并删除名为&#x200B;*sling.id.file*&#x200B;的文件
 
@@ -363,22 +362,22 @@ ht-degree: 2%
       * 例如，在Windows系统上：
          `use windows explorer and search for *sling.id.file*`
 
-1. 开始发布实例
+1. 启动发布实例
 
-   * 启动时，会分配新的Sling ID
+   * 启动时，会为其分配一个新的Sling ID
 
 1. 验证&#x200B;**Sling ID**&#x200B;现在是唯一的
 
 重复这些步骤，直到所有发布实例都具有唯一的Sling ID。
 
-## Vault Package Builder工厂{#vault-package-builder-factory}
+## 电子仓库包生成器工厂{#vault-package-builder-factory}
 
-为了使更新正确同步，必须修改用户同步的Vault包生成器：
+为了正确同步更新，需要修改保险库包生成器以进行用户同步：
 
 * 在每个AEM发布实例上
-* 访问[ Web控制台](/help/sites-deploying/configuring-osgi.md)
+* 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
-   * 例如，[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   * 例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
 * 找到`Apache Sling Distribution Packaging - Vault Package Builder Factory`
 
@@ -395,32 +394,32 @@ ht-degree: 2%
    * 要用新节点覆盖现有rep:policy节点，请添加第三个包过滤器：
 
       * `/home/users|+.*/rep:policy`
-   * 要防止策略被分发，请设置
+   * 防止策略被分发，
 
       * `Acl Handling:` `IGNORE`
 
 
-![Vault Package Builder工厂](assets/vault-package-builder-factory.png)
+![保管库包生成器工厂](assets/vault-package-builder-factory.png)
 
-## 当…… {#what-happens-when}
+## ... {#what-happens-when}时会发生什么情况
 
-### 发布{#user-self-registers-or-edits-profile-on-publish}时用户自注册或编辑用户档案
+### 用户在发布{#user-self-registers-or-edits-profile-on-publish}时自注册或编辑配置文件
 
-根据设计，在发布环境（自注册）中创建的用户和用户档案不会显示在创作环境中。
+根据设计，在发布环境中创建的用户和配置文件（自注册）不会显示在创作环境中。
 
-当拓扑为[发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)且用户同步已正确配置时，使用Sling分发在发布场中同步*user *和&#x200B;*用户用户档案*。
+当拓扑为[发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)且用户同步配置正确时，使用Sling分发在发布场中同步*user *和&#x200B;*用户配置文件*。
 
-### 用户或用户组是使用安全控制台{#users-or-user-groups-are-created-using-security-console}创建的
+### 使用安全控制台{#users-or-user-groups-are-created-using-security-console}创建用户或组
 
 根据设计，在发布环境中创建的用户数据不会显示在创作环境中，反之亦然。
 
-当使用[用户管理和安全](/help/sites-administering/security.md)控制台在发布环境中添加新用户时，用户同步会将新用户及其组成员身份与其他发布实例同步（如果需要）。 用户同步还将同步通过安全控制台创建的用户组。
+如果使用[用户管理和安全](/help/sites-administering/security.md)控制台在发布环境中添加新用户，则用户同步会将新用户及其组成员资格与其他发布实例同步（如果需要）。 用户同步还将同步通过安全控制台创建的用户组。
 
 ## 疑难解答 {#troubleshooting}
 
 ### 如何使用户同步脱机{#how-to-take-user-sync-offline}
 
-要使用户同步脱机，[删除发布者](#how-to-remove-a-publisher)或[手动同步数据](#manually-syncing-users-and-user-groups)，分发队列必须为空且安静。
+要离开用户同步，要[删除发布者](#how-to-remove-a-publisher)或[手动同步数据](#manually-syncing-users-and-user-groups)，分发队列必须为空且安静。
 
 要检查分发队列的状态，请执行以下操作：
 
@@ -435,7 +434,7 @@ ht-degree: 2%
 
       * 查找挂起的包（尚未安装）
 
-         * 以模式`socialpubsync-vlt*`命名
+         * 使用模式`socialpubsync-vlt*`命名
          * 由`communities-user-admin`创建
 
 
@@ -443,47 +442,47 @@ ht-degree: 2%
 
 * 在作者
 
-   * *取消选中[`Enabled`复选框的Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)
+   * *取消选中`Enabled`复选框，显示[Apache Sling Distribution Agent — 同步代理工厂](#apache-sling-distribution-agent-sync-agents-factory)
 
-完成任务后，要重新启用用户同步：
+任务完成后，要重新启用用户同步，请执行以下操作：
 
 * 在作者
 
-   * 选中[Apache Sling Distribution Agent - Sync Agent Factory](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`复选框
+   * 选中[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`复选框
 
 ### 使用同步诊断 {#user-sync-diagnostics}
 
-“用户同步诊断”工具用于检查配置并尝试识别任何问题。
+“用户同步诊断”是一个工具，用于检查配置并尝试识别任何问题。
 
-在创作时，只需通过&#x200B;**工具、操作、诊断、用户同步诊断从主控制台导航。**
+在创作时，只需从主控制台导航到&#x200B;**工具、操作、诊断、用户同步诊断。**
 
-只需进入“User Sync Diagnostics（用户同步诊断）”控制台，就会显示结果。
+只需进入用户同步诊断控制台，即会显示结果。
 
 这是未启用用户同步时显示的内容：
 
 ![](assets/chlimage_1-28.png)
 
-#### 如何为发布者{#how-to-run-diagnostics-for-publishers}运行诊断
+#### 如何为发布者运行诊断程序{#how-to-run-diagnostics-for-publishers}
 
-当从作者环境运行诊断时，传递/失败结果将包含一个[INFO]部分，其中显示已配置发布实例的列表以进行确认。
+从创作环境运行诊断时，传递/失败结果将包含一个[INFO]部分，其中显示已配置的发布实例列表以进行确认。
 
-该列表中包含每个发布实例的URL，该实例将运行该实例的诊断。 url参数`syncUser`将附加到诊断URL中，其值设置为在[步骤2](#createauthuser)中创建的&#x200B;*授权同步用户*。
+列表中包含每个发布实例的URL，该实例将运行该实例的诊断。 url参数`syncUser`会附加到诊断URL中，其值设置为在[步骤2](#createauthuser)中创建的&#x200B;*授权同步用户*。
 
-**注意**:在启动URL之前，授 *权的* sync用户必须已登录到该发布实例。
+**注意**:在启动URL之前，授权 *的同* 步用户必须已登录到该发布实例。
 
 ![](assets/chlimage_1-29.png)
 
-### 未正确添加{#configuration-improperly-added}的配置
+### 配置添加不正确{#configuration-improperly-added}
 
-当用户同步失败时，最常见的问题是额外的配置&#x200B;*已添加*。 相反，*existing *default配置应已&#x200B;*edited*。
+当用户同步失败时，最常见的问题是附加配置为&#x200B;*added*。 相反， *现有*默认配置应该已进行&#x200B;*edited*。
 
-以下是编辑后默认配置在Web控制台中的显示方式的视图。 如果出现多个实例，应删除添加的配置。
+以下是编辑后默认配置在Web控制台中的显示方式。 如果出现多个实例，则应删除添加的配置。
 
-#### (author)一个Apache Sling Distribution Agent — 同步代理工厂{#author-one-apache-sling-distribution-agent-sync-agents-factory}
+#### （作者）一个Apache Sling Distribution Agent — 同步代理工厂{#author-one-apache-sling-distribution-agent-sync-agents-factory}
 
 ![](assets/chlimage_1-30.png)
 
-#### (author)一个Apache Sling Distribution Transport凭据 — 基于用户凭据的DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
+#### （作者）一个Apache Sling Distribution Transport凭据 — 基于用户凭据的DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
 
 ![](assets/chlimage_1-31.png)
 
@@ -495,11 +494,11 @@ ht-degree: 2%
 
 ![](assets/chlimage_1-33.png)
 
-#### (author)一个Apache Sling分发触发器 — 计划触发器工厂{#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
+#### （作者）一个Apache Sling Distribution Trigger — 计划触发器工厂{#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 ![](assets/chlimage_1-34.png)
 
-### 在响应处理{#modify-operation-exception-during-response-processing}期间修改操作异常
+### 在响应处理过程中修改操作异常{#modify-operation-exception-during-response-processing}
 
 如果日志中显示以下内容：
 
@@ -507,13 +506,13 @@ ht-degree: 2%
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-然后验证部分[2。 正确遵循了“创建授权用户](#createauthuser)”。
+然后验证部分[2。 正确遵循了创建授权用户](#createauthuser)。
 
-本节介绍如何创建在所有发布实例上存在的授权用户，并在作者的“机密提供者”OSGi配置中识别这些用户。 默认情况下，用户为`admin`。
+本节介绍如何创建一个位于所有发布实例上的授权用户，并在创作的“密钥提供程序”OSGi配置中标识该用户。 默认情况下，用户为`admin`。
 
-授权用户应成为&#x200B;**`administrators`**&#x200B;用户组的成员，不应更改该用户组的权限。
+授权用户应成为&#x200B;**`administrators`**&#x200B;用户组的成员，该组的权限不应更改。
 
-授权用户应对所有发布实例明确具有以下权限和限制：
+授权用户应在所有发布实例上明确具有以下权限和限制：
 
 | **路径** | **jcr:all** | **rep:glob** |
 |---|---|---|
@@ -533,9 +532,9 @@ ht-degree: 2%
 
 ### 用户组同步失败{#user-group-sync-failed}
 
-如果Sling ID在两个或多个发布实例之间匹配，则用户组同步将失败。
+如果Sling ID在两个或更多发布实例之间匹配，则用户组同步将失败。
 
-请参见第[9节。 唯一Sling ID](#unique-sling-id)
+请参见[9节。 唯一Sling ID](#unique-sling-id)
 
 ### 手动同步用户和用户组{#manually-syncing-users-and-user-groups}
 
@@ -548,22 +547,22 @@ ht-degree: 2%
 
          * 过滤器选项卡：添加过滤器：根路径：`/home`
          * 高级选项卡：交流处理：`Overwrite`
-   * [导出包](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
+   * [导出资源包](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
 
 * 在其他发布实例上：
 
-   * [导入包](/help/sites-administering/package-manager.md#installing-packages)
+   * [导入资源包](/help/sites-administering/package-manager.md#installing-packages)
 
-要配置或启用用户同步，请转至步骤1:[Apache Sling Distribution Agent - Sync Agent Factory](#apache-sling-distribution-agent-sync-agents-factory)
+要配置或启用用户同步，请转到步骤1:[Apache Sling Distribution Agent — 同步代理工厂](#apache-sling-distribution-agent-sync-agents-factory)
 
-### 当发布者变为不可用{#when-a-publisher-becomes-unavailable}
+### 当发布者变得不可用时{#when-a-publisher-becomes-unavailable}
 
-当发布实例不可用时，如果它将来会恢复联机状态，则不应删除它。 更改将排队等待发布者，一旦它恢复联机，将处理更改。
+当发布实例不可用时，如果它将来恢复为联机，则不应将其删除。 更改将排入发布者的队列，一旦它重新联机，将处理更改。
 
-如果发布实例永远不会恢复联机，如果它永久脱机，则必须删除它，因为队列累积将导致在创作环境中明显占用磁盘空间。
+如果发布实例永远不会恢复为联机状态，如果它永久处于脱机状态，则必须删除该实例，因为队列累积将导致在创作环境中显着占用磁盘空间。
 
-当发布者关闭时，创作日志将出现与以下内容类似的异常：
+当发布者关闭时，创作日志将出现类似以下内容的例外：
 
 ```
 28.01.2016 15:57:48.475 ERROR
@@ -579,11 +578,11 @@ ht-degree: 2%
 
 * 作者：
 
-   * [使用户脱机同步](#how-to-take-user-sync-offline)
+   * [使用户同步脱机](#how-to-take-user-sync-offline)
    * 按照[步骤7](#apache-sling-distribution-agent-sync-agents-factory)从两个服务器列表中删除发布者：
 
       * `Exporter Endpoints`
       * `Importer Endpoints`
    * 重新启用用户同步
 
-      * 选中[Apache Sling Distribution Agent - Sync Agent Factory](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`复选框
+      * 选中[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)的`Enabled`复选框
