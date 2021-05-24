@@ -1,14 +1,13 @@
 ---
 title: 异步作业
 description: Adobe Experience Manager 通过异步完成某些资源密集型任务来优化性能。
-translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 98%
 
 ---
-
 
 # 异步操作 {#asynchronous-operations}
 
@@ -144,9 +143,9 @@ AEM 每天 01:00 运行清除作业，以删除已完成的已超过一天的异
 >[!MORELIKETHIS]
 >
 >* [创建和组织页面](/help/sites-authoring/managing-pages.md)
->* [创建和同步Live Copy](/help/sites-administering/msm-livecopy.md)
->* [在Experience Manager中配置电子邮件](/help/sites-administering/notification.md)。
->* [导入资产元数据](/help/assets/metadata.md#import-metadata)。
->* [导出资产元数据](/help/assets/metadata.md#export-metadata)。
->* [使用“连接的资产”从远程部署中共享 DAM 资产](/help/assets/use-assets-across-connected-assets-instances.md)。
+* [创建和同步Live Copy](/help/sites-administering/msm-livecopy.md)
+* [在Experience Manager中配置电子邮件](/help/sites-administering/notification.md)。
+* [导入资产元数据](/help/assets/metadata.md#import-metadata)。
+* [导出资产元数据](/help/assets/metadata.md#export-metadata)。
+* [使用“连接的资产”从远程部署中共享 DAM 资产](/help/assets/use-assets-across-connected-assets-instances.md)。
 
