@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 48936115-4be2-4b0c-81ce-d61e43e4535d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 92%
 
 ---
-
 
 # 处理页面版本{#working-with-page-versions}
 
@@ -37,7 +36,7 @@ ht-degree: 92%
    ![screen_shot_2012-02-14at40259pm](assets/screen_shot_2012-02-14at40259pm.png)
 
 1. 输入&#x200B;**评论**（可选）。
-1. 要设置版本的标签（可选），请单击&#x200B;**更多>>**&#x200B;按钮并设置&#x200B;**标签**&#x200B;来命名版本。如果未设置标签，则版本是自动递增的编号。
+1. 要为版本设置标签（可选），请单击&#x200B;**更多>>**&#x200B;按钮，然后设置&#x200B;**标签**&#x200B;以命名版本。如果未设置标签，则版本是自动递增的编号。
 1. 单击&#x200B;**创建版本**。 页面上随即会显示一条灰显的消息；例如：
 已为以下对象创建版本 1.2: 衬衫。
 
@@ -93,7 +92,7 @@ ht-degree: 92%
    ![screen_shot_2012-02-14at42949pm-1](assets/screen_shot_2012-02-14at42949pm-1.png)
 
 1. 选择要进行比较的版本，然后单击&#x200B;**差异**&#x200B;按钮。
-1. 当前版本与选定版本之间的差异显示如下：
+1. 当前版本与选定版本之间的差异将如下所示：
 
    * 删除的文本为红色并带有删划线。
    * 添加的文本为绿色并突出显示。
@@ -103,7 +102,7 @@ ht-degree: 92%
 
 1. 在 Sidekick 中，选择&#x200B;**恢复版本**&#x200B;子选项卡，然后单击 **&lt;&lt; 返回**&#x200B;按钮以显示当前版本。
 
-## 时间扭曲  {#timewarp}
+## 时间扭曲 {#timewarp}
 
 时间扭曲是一项功能，旨在模拟过去特定时间某个页面的&#x200B;***已发布***&#x200B;状态。
 
@@ -194,4 +193,4 @@ ht-degree: 92%
 
 >[!CAUTION]
 >
->时间扭曲是一种工具，可帮助作者理解和创建其内容。 而不是用作审查日志或用于法律目的。
+>时间扭曲旨在作为一种工具，帮助作者理解和创建其内容。 而不是用作审查日志或用于法律目的。
