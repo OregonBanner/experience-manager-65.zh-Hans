@@ -11,14 +11,13 @@ topic-tags: site-features
 discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 92%
 
 ---
-
 
 # 提升启动项{#promoting-launches}
 
@@ -35,7 +34,7 @@ ht-degree: 92%
 
 >[!CAUTION]
 >
->不能并行提升单个启动项。这意味着，在同一次启动中同时执行两个提升操作可能会导致错误- `Launch could not be promoted`（以及日志中的冲突错误）。
+>不能并行提升单个启动项。这意味着在同一次启动中同时执行两个提升操作可能会导致错误 — `Launch could not be promoted`（以及日志中的冲突错误）。
 
 >[!CAUTION]
 >
@@ -60,7 +59,7 @@ ht-degree: 92%
 
    * **站点**&#x200B;控制台：
 
-      1. 打开[引用边栏](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然后使用[选择模式](/help/sites-authoring/basic-handling.md)选择所需的源页面（或选择并打开引用边栏，顺序不重要）。 此时将显示所有引用。
+      1. 打开[引用边栏](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然后使用[选择模式](/help/sites-authoring/basic-handling.md)选择所需的源页面（或者选择并打开引用边栏，顺序不重要）。 此时将显示所有引用。
 
       1. 选择&#x200B;**启动项**（例如“启动项 (1)”）以显示特定启动项的列表。
       1. 选择特定的启动项以显示可用的操作。
@@ -73,7 +72,7 @@ ht-degree: 92%
 
 1. 在第一步中，您可以指定：
 
-   * **目标**
+   * **Target**
 
       * **提升后删除启动项**
    * **范围**
@@ -85,7 +84,7 @@ ht-degree: 92%
 
    例如，当选择仅提升已修改的页面时：
 
-   ![launches-pd-06](assets/launches-pd-06.png)
+   ![launchs-pd-06](assets/launches-pd-06.png)
 
    >[!NOTE]
    >
@@ -119,7 +118,7 @@ ht-degree: 92%
 
 1. 输入所需的详细信息：
 
-   * **目标**
+   * **Target**
 
       * **提升目标**&#x200B;您可以提升到任意源。
 
