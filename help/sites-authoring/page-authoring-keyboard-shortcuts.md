@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
-translation-type: tm+mt
-source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 91%
 
 ---
-
 
 # 编辑页面时的键盘快捷键{#keyboard-shortcuts-when-editing-pages}
 
@@ -44,7 +43,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->&amp;ast;用户开始以预览模式与页面进行交互后，`Ctrl-Shift-m`快捷键便不再可用。 用户必须单击顶部编辑器栏或返回到“编辑”模式，才能使该快捷键再次变为可用。
+>&amp;ast;用户开始在预览模式下与页面进行交互后，`Ctrl-Shift-m`快捷键便不再可用。 用户必须单击顶部编辑器栏或返回到“编辑”模式，才能使该快捷键再次变为可用。
 
 在使用[控制台](/help/sites-authoring/keyboard-shortcuts.md)时，桌面用户也可以使用各种键盘快捷键。
 
