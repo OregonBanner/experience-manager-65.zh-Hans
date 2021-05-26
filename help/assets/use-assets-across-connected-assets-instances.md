@@ -5,18 +5,18 @@ contentOwner: AG
 role: Business Practitioner, Administrator, Leader
 feature: 连接的资产、用户和组
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 9e99d25a15aee56721112e2afd4b570ba7854bd7
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2742'
 ht-degree: 29%
 
 ---
 
 # 在 中，使用连接的资产共享 DAM 资产 [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和用于创建这些网站的数字资产可能驻留在不同的部署中。一个原因可能是在地理上分散的现有部署中需要协同工作。 另一个原因可能是收购导致母公司希望结合使用的异构基础架构。
+在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和用于创建这些网站的数字资产可能驻留在不同的部署中。一个原因可能是地理上分散的现有部署需要协同工作。 另一个原因可能是收购导致了母公司希望结合使用的不同基础架构，包括不同的[!DNL Experience Manager]版本。
 
-用户可以在[!DNL Experience Manager Sites]中创建网页。 [!DNL Experience Manager Assets] 是数字资产管理(DAM)系统，用于为网站提供所需的资产。[!DNL Experience Manager] 现在，通过集成和支持上述 [!DNL Sites] 用 [!DNL Assets]例。
+“连接的资产”功能通过集成[!DNL Experience Manager Sites]和[!DNL Experience Manager Assets]支持上述用例。 用户可以在[!DNL Sites]中创建网页，这些网页将使用单独的[!DNL Assets]部署中的数字资产。
 
 ## 连接的资产概述 {#overview-of-connected-assets}
 
@@ -188,8 +188,8 @@ ht-degree: 29%
 * 本地资产与远程部署中的原始资产不同步。在 DAM 部署上所具有的任何编辑、删除或撤销权限均不会传播到下游。
 * 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。不允许进行其他编辑。
 * 本地获取的资产只能用于创作。不能应用资产更新工作流，也不能编辑元数据。
-* 仅支持图像和列出的文档格式。[!DNL Dynamic Media]不支持 资产、内容片段和体验片段。
-* [!DNL Experience Manager] 不会获取元数据架构。这意味着可能无法显示所有获取的元数据。 如果架构已单独更新，则会显示所有属性。
+* 仅支持图像和列出的文档格式。[!DNL Dynamic Media] 不支持 [!DNL Content Fragments]资产、 [!DNL Experience Fragments] 和。
+* [!DNL Experience Manager] 不会获取元数据架构。这意味着可能无法显示所有获取的元数据。 如果在[!DNL Sites]部署中单独更新了架构，则会显示所有元数据属性。
 * 所有[!DNL Sites]作者都对获取的副本具有读取权限，即使作者无法访问远程DAM部署。
 * 没有支持自定义集成的 API。
 * 该功能支持无缝搜索和使用远程资产。为了能够在本地部署中一次使用许多远程资产，请考虑批量迁移这些资产。请参阅 [Assets 迁移指南](assets-migration-guide.md)。
@@ -199,8 +199,8 @@ ht-degree: 29%
 
 * [!DNL Assets] 支持在 [!DNL Adobe Managed Services] 上部署。
 * [!DNL Sites] 一次可以连接 [!DNL Assets] 到单个存储库。
-* [!DNL Assets]的许可证用作远程存储库。
-* [!DNL Sites]的一个或多个许可证用作本地创作部署。
+* [!DNL Assets]的许可证需要用作远程存储库。
+* 需要[!DNL Sites]的一个或多个许可证用作本地创作部署。
 
 ### 使用 {#usage}
 
