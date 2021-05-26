@@ -53,19 +53,16 @@ ht-degree: 2%
 >
 >* [](/help/sites-administering/msm.md) MSM管理语言边界内将已翻译内容从Blueprint(例如全局主控)部署到Live Copy（例如本地站点）。
 >* AEM的[翻译](/help/sites-administering/translation.md)集成功能与第三方翻译管理服务一起管理语言并将内容翻译成这些不同的语言。
-
 >
->
-对于更高级的用例，也可以跨语言母版使用MSM。
+>对于更高级的用例，也可以跨语言母版使用MSM。
 
 >[!NOTE]
 >
 >对于所有用例，建议阅读以下最佳实践：
 >
 >* [MSM最佳实践](/help/sites-administering/msm-best-practices.md);特别是：
-   >
-   >   
-   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
+>
+>   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
    * [MSM和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 * [翻译最佳实践](/help/sites-administering/tc-bp.md)
 
