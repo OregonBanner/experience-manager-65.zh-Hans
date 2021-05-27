@@ -63,6 +63,6 @@ ht-degree: 2%
 >* [MSM最佳实践](/help/sites-administering/msm-best-practices.md);特别是：
 >
 >   * [创建站点](/help/sites-administering/msm-best-practices.md#create-site)
-   * [MSM和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
-* [翻译最佳实践](/help/sites-administering/tc-bp.md)
+>   * [MSM和多语言网站](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>* [翻译最佳实践](/help/sites-administering/tc-bp.md)
 
