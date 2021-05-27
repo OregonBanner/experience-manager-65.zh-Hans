@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2980'
 ht-degree: 95%
 
 ---
@@ -192,7 +192,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 * 痕迹导航
 
-   ![bh-05](assets/bh-05.png)
+   ![bh-03](assets/bh-05.png)
 
    痕迹导航位于边栏中间，且始终显示当前选定项的描述，它允许您在特定控制台内导航。在站点控制台中，您可以导航浏览网站的各个级别。
 
@@ -287,7 +287,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
 
 由于某些窗口存在空间限制，因此工具栏的长度可能很快就会超过可用空间。如果发生此情况，将会显示额外的选项。单击或点按省略号（三个点或 **...**）会打开一个下拉选择器，其中包含所有其余的操作。例如，在&#x200B;**站点**&#x200B;控制台中选择了一个页面之后：
 
-![bh-12](assets/bh-12.png)
+![“操作”工具栏](assets/bh-12.png)
 
 >[!NOTE]
 各个可用图标根据相应控制台/功能/方案提供。
