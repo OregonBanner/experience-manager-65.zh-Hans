@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: a7f8e98729dd27f6976d3289a51f22435fced585
 workflow-type: tm+mt
-source-wordcount: '9796'
+source-wordcount: '9775'
 ht-degree: 6%
 
 ---
@@ -811,10 +811,6 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
    ![从“打印”对话框中选择要在PDF上显示的注释/审阅状态位置](assets/Print-annotation-dialog.png)
 
    您可以根据希望在打印的 PDF 中显示批注/状态的位置选择其他设置。如果希望批注/状态显示在与打印资产不同的页面中，请选择&#x200B;**[!UICONTROL 下一页]**。
-
-   >[!NOTE]
-   >
-   >长批注可能无法在PDF文件中正确呈现。 为了获得最佳渲染效果，Adobe建议您将注释限制为50个词。
 
 1. 单击&#x200B;**[!UICONTROL Print]**。 根据您在步骤 2 中选择的选项，生成的 PDF 会在指定位置显示批注/状态。例如，如果您选择使用&#x200B;**左上角**&#x200B;设置打印批注和审阅状态，则生成的输出将类似于此处描述的 PDF 文件。
 
