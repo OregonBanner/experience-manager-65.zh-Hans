@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4d5f7057178ea0a1f00ea363b76dacdfb714b5e3
 workflow-type: tm+mt
-source-wordcount: '1094'
-ht-degree: 97%
+source-wordcount: '1487'
+ht-degree: 69%
 
 ---
 
@@ -64,9 +64,23 @@ ht-degree: 97%
 
    将会打开时间轴，并且其信息会更新以指示新版本。
 
-## 还原到某个页面版本 {#reverting-to-a-page-version}
+## 恢复版本{#reinstating-versions}
 
-创建了版本之后，即可以根据需要还原到该版本。
+创建页面版本后，可使用多种方法恢复以前的版本：
+
+* **从[时间轴](/help/sites-authoring/basic-handling.md#timeline)边栏还原到此版本**&#x200B;选项
+
+   恢复选定页面的先前版本。
+
+* **操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)顶部[操作工具栏**&#x200B;中的“恢复”选项
+
+   * **恢复版本**
+
+      恢复当前选定文件夹中指定页面的版本；这还可以包括恢复之前已删除的页面。
+
+   * **恢复树**
+
+      在指定的日期和时间恢复整个树的版本；这可以包括之前已删除的页面。
 
 >[!NOTE]
 >
@@ -76,26 +90,81 @@ ht-degree: 97%
 >
 >1. 为任意页面创建版本。
 >1. 初始的标签和版本节点名称将表示为 1.0、1.1、1.2，以此类推。
->1. 恢复第一个版本；即 1.0。
+>1. 恢复第一版；即1.0。
 >1. 再次创建新版本。
 >1. 此时生成的标签和节点名称将表示为 1.0.0、1.0.1、1.0.2，以此类推。
 
->
 
+### 还原到版本{#revert-to-a-version}
 
-
-还原到之前的版本：
+要&#x200B;**还原**&#x200B;选定页面到之前的版本：
 
 1. 导航以显示要还原到之前版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
 1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。 将列出所选页面的页面版本。
 1. 选择要还原到的版本。将显示可能的选项：
 
-   ![screenshot_2019-03-05at112505](assets/screen-shot_2019-03-05at112505.png)
+   ![还原到此版本](assets/screen-shot_2019-03-05at112505.png)
 
 1. 选择“**还原到此版本**”。将恢复到所选版本，并在时间轴中更新信息。
 
-## 预览版本  {#previewing-a-version}
+### 恢复版本 {#restore-version}
+
+此方法可用于还原当前文件夹中指定页面的版本；这还可能包括恢复之前已删除的页面：
+
+1. 导航到所需的文件夹，然后选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。[
+
+1. 从顶部的[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**恢复**，然后选择&#x200B;**恢复版本**。
+
+   >[!NOTE]
+   >
+   >如果，则：
+   >
+   >* 您选择了单个页面，且该页面从未包含任何子页面，
+   >* 或者文件夹中的任何页面都没有版本，
+
+   >
+   >然后，显示内容将为空，因为没有适用的版本。
+
+1. 将列出可用版本：
+
+   ![恢复版本 — 文件夹中所有页面的列表](/help/sites-authoring/assets/versions-restore-version-01.png)
+
+1. 对于特定页面，使用&#x200B;**RESTORE TO VERSION**&#x200B;下的下拉选择器为该页面选择所需的版本。
+
+   ![还原版本 — 选择版本](/help/sites-authoring/assets/versions-restore-version-02.png)
+
+1. 在主显示屏中，选择要还原的所需页面：
+
+   ![恢复版本 — 选择页](/help/sites-authoring/assets/versions-restore-version-03.png)
+
+1. 选择&#x200B;**恢复**，以恢复选定页面的选定版本，作为当前版本。
+
+>[!NOTE]
+>
+>您选择所需页面和相关版本的顺序可互换。
+
+### 恢复树 {#restore-tree}
+
+此方法可用于在指定的日期和时间还原树的版本；这可能包括之前已删除的页面：
+
+1. 导航到所需的文件夹，然后选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。[
+
+1. 从顶部的[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**Restore**，然后选择&#x200B;**Restore Tree**。 将显示树的最新版本：
+
+   ![恢复树](/help/sites-authoring/assets/versions-restore-tree-02.png)
+
+1. 使用&#x200B;**Date**&#x200B;最新版本中的日期和时间选择器，选择树的其他版本 — 要恢复的版本。
+
+1. 根据需要设置标记&#x200B;**保留的未版本化页面**:
+
+   * 如果处于活动状态（已选中），则任何非版本化页面都将得到维护，且不会受到恢复的影响。
+
+   * 如果不活动（未选中），则将删除任何未版本化的页面，因为这些页面在版本化树中不存在。
+
+1. 选择&#x200B;**恢复**，以恢复树的选定版本为&#x200B;*当前*&#x200B;版本。
+
+## 预览版本 {#previewing-a-version}
 
 您可以预览特定版本：
 
