@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 48a5f9ffb33ae09f5d4e6e57cf66b871a9ff6981
+source-git-commit: f0398d63aa7d9c994c56217cce52b3fb4de04769
 workflow-type: tm+mt
-source-wordcount: '3294'
+source-wordcount: '3292'
 ht-degree: 1%
 
 ---
@@ -413,15 +413,15 @@ Experience ManagerForms包括以下辅助功能增强功能：
 <!-- TBD: Check if the wider team released anything in FY21.
 -->
 
-## 自[!DNL Adobe Experience Manager] 6.5 SP7 {#key-releases-since-last-sp}以来的关键版本
+## 自[!DNL Adobe Experience Manager] 6.5 SP8 {#key-releases-since-last-sp}以来的关键版本
 
-在2020年11月26日至2021年2月25日期间，除了Service Pack和累积修补程序包之外，Adobe还发布了以下内容：
+在2021年2月25日至2021年5月27日期间，除了Service Pack之外，Adobe还发布了以下内容：
 
-* [!DNL Adobe Experience Manager] as aCloud Service [2020.11.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-11-0.html)、 [2020.12.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-12-0.html)和 [2021.1.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date)。
+* [!DNL Adobe Experience Manager] as aCloud Service [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html)、 [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html)和 [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date)。
 
-* [[!DNL Experience Manager] 桌面应用程序2.1(2.1.0.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
+* [[!DNL Experience Manager] 桌面应用程序2.1(2.1.2.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager Screens:功能包202011](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202011.html)
+* [Experience Manager Screens:功能包202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html?lang=en)
 
 >[!MORELIKETHIS]
 >
