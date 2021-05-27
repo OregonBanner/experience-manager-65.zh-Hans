@@ -1,17 +1,17 @@
 ---
-title: ' [!DNL Experience Manager] 6.5 Service Pack 8的新增功能'
-description: ' [!DNL Experience Manager] 6.5 Service Pack 8的新增功能'
+title: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
+description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 48a5f9ffb33ae09f5d4e6e57cf66b871a9ff6981
 workflow-type: tm+mt
-source-wordcount: '3041'
+source-wordcount: '3294'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 Service Pack 8 {#aem-whats-new-service-pack}的新增功能
+# [!DNL Adobe Experience Manager] 6.5 Service Pack 9 {#aem-whats-new-service-pack}的新增功能
 
 ![Whats-new](assets/whatsnew.jpeg)
 
@@ -21,15 +21,57 @@ ht-degree: 1%
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
-### 对可用于转出的Live Copy页面进行排序{#sort-livecopy-pages}
+### 能够恢复已删除的页面和树{#ability-to-restore-pages-tree}
 
-您现在可以使用[!UICONTROL 名称]、[!UICONTROL 上次修改日期]和[!UICONTROL 上次转出日期]属性对可供转出的Live Copy页面进行排序。 页面的[!UICONTROL 上次转出日期]是此版本中引入的新属性。
+现在，您可以在[!DNL Experience Manager Sites]页面上恢复已删除的页面和整个树视图。
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* 现在，使用[连接的资产功能](/help/assets/use-assets-across-connected-assets-instances.md)时，您可以查看使用该资产的所有[!DNL Sites]页面的列表。 资产的[!UICONTROL 属性]页面中提供了对资产的这些引用。 这允许管理员、营销人员和管理员全面了解资产使用情况，从而实现更好的跟踪、管理和品牌一致性。
+* 更新了与香港、澳门和台湾有关的中文地点和地区的名称，以使其符合中国社会和政治观点。
 
-* 删除网页中引用的资产时， [!DNL Experience Manager]会显示警告。 您可以强制删除引用的资产，或检查并修改资产[!DNL Properties]页面中显示的引用。 单击引用可打开本地和远程[!DNL Sites]页。
+* 引入了可选配置，以便从[!DNL Adobe Experience Manager]在ACP API响应中对电子邮件ID进行小写。
+
+   ![配置为从AEM响应ACP中使用小写电子邮件ID](assets/email-lowcase-config.png)
+
+* 根据WCAG，不同位置的文本和图标的对比度（含背景）会得到增强，以便视力和颜色感知受限的用户能够访问该对比度。 有关更多信息，请参阅Assets](sp-release-notes.md#assets-accessibility-6590)中的[辅助功能增强。
+
+### Dynamic Media {#assets-dynamic-media}
+
+* [在以下方面，](sp-release-notes.md#assets-accessibility-6590) Dynamic Media更易于访问：
+
+   * 易于使用键盘键。
+   * 各种编辑器中文本、占位符文本和控件的对比度（与背景）。
+   * 屏幕阅读器的辅助功能和旁白。
+
+* 智能成像DPR（设备像素比）和网络带宽优化使您能够高效地交付最佳质量的图像；在具有高分辨率显示器和网络带宽受限的设备上。 有关更多信息，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
+
+   >[!NOTE]
+   >
+   >上述“智能成像”增强功能的发布时间表是：
+   >
+   >* 2021年5月24日，北美，
+      >
+      >
+   * 欧洲、中东和非洲2021年6月25日，
+      >
+      >
+   * 亚太2021年7月19日。
+
+
+* 在Dynamic Media交付（fmt URL修饰符）中引入了对下一代图像格式AVIF的支持。 有关更多信息，请参阅[图像提供和渲染api fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
+
+   >[!NOTE]
+   >
+   >AVIF支持的发布时间表为：
+   >
+   >* 北美2021年5月10日，
+      >
+      >
+   * 欧洲、中东和非洲2021年5月24日，
+      >
+      >
+   * 亚太2021年6月24日。
+
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -37,25 +79,13 @@ ht-degree: 1%
 >
 >[!DNL Experience Manager Forms]的附加组件包将在计划的[!DNL Experience Manager] Service Pack版本发布后的一周内提供。
 
-### 在基于规则{#show-hide-captcha}的自适应表单中显示或隐藏CAPTCHA组件
-
-现在，您可以在自适应表单提交或用户操作时验证CAPTCHA。 您还可以添加条件以在用户操作上验证CAPTCHA，并基于规则在自适应表单中显示或隐藏CAPTCHA组件。
-
-### 添加自定义CAPTCHA服务{#add-custom-captcha-services}
-
-[!DNL Experience Manager Forms] 提供开箱即用的支持，以将Google reCAPTCHA（需要单独的Google reCAPTCHA API许可证）用作CAPTCHA验证服务。您还可以使用自定义CAPTCHA服务来验证CAPTCHA。
-
-### 其他增强功能 {#other-enhancements-forms-6580}
-
-* 改进了[!DNL Experience Manager Forms]日期选取器组件的辅助功能。
-
-* 添加了对使用PrintChannel API生成PCL格式的交互式通信的支持。
-
-* 执行PDFG转换时，现在可以启用或禁用[!DNL Experience Manager Forms]注册表更改以生成自定义书签。
-
 ## 以前的[!DNL Experience Manager] 6.5 Service Pack {#key-features-previous-service-packs}中的主要功能
 
 ### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
+
+#### 对可用于转出的Live Copy页面(6.5.8.0){#sort-livecopy-pages}进行排序
+
+您现在可以使用[!UICONTROL 名称]、[!UICONTROL 上次修改日期]和[!UICONTROL 上次转出日期]属性对可供转出的Live Copy页面进行排序。 页面的[!UICONTROL 上次转出日期]是此版本中引入的新属性。
 
 #### 页面移动和MSM转出作为异步操作(6.5.7.0){#page-moves-msm-asynchronous}的可用性
 
@@ -108,6 +138,10 @@ ht-degree: 1%
 * 改进了对不完整或无效URL的处理。 此类URL可能会减慢模板编辑器的速度。
 
 ### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
+
+* 现在，使用[连接的资产功能](/help/assets/use-assets-across-connected-assets-instances.md)时，您可以查看使用该资产的所有[!DNL Sites]页面的列表。 资产的[!UICONTROL 属性]页面中提供了对资产的这些引用。 这允许管理员、营销人员和管理员全面了解资产使用情况，从而实现更好的跟踪、管理和品牌一致性(6.5.8.0)。
+
+* 删除网页中引用的资产时， [!DNL Experience Manager]会显示警告。 您可以强制删除引用的资产，或检查并修改资产[!DNL Properties]页面中显示的引用。 单击引用将打开本地和远程[!DNL Sites]页面(6.5.8.0)。
 
 * [!DNL Assets] 和提供 [!DNL Dynamic Media] 了多个辅助功能增强功能。这些增强功能与键盘导航、屏幕阅读器的使用以及启用辅助技术(AT)的类似增强功能相关。 请参阅[[!DNL Assets] 增强功能](/help/release-notes/sp-release-notes.md#assets-6570)和[[!DNL Dynamic Media] 增强功能](/help/release-notes/sp-release-notes.md#dynamic-media-6570)(6.5.7.0)
 
@@ -175,7 +209,7 @@ ht-degree: 1%
 
 使用[!DNL Brand Portal]配置[!DNL Experience Manager Assets]的步骤因您的[!DNL Experience Manager]版本以及您是首次配置还是升级现有配置而异。 有关详细信息，请参阅[使用Brand Portal配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)。
 
-#### 辅助功能增强(6.5.4.0){#accessibility-enhancements}
+#### 辅助功能增强(6.5.4.0){#accessibility-enhancements-6540}
 
 [!DNL Experience Manager Assets] 包括以下辅助功能增强功能：
 
@@ -223,6 +257,22 @@ ht-degree: 1%
 视频智能裁剪 — 视频配置文件中提供的可选功能 — 是一款工具，可使用Adobe Sensei中人工智能的强大功能，自动检测和裁剪您上传的任何自适应视频或渐进式视频中的焦点，而不论其大小。 请参阅[关于在视频配置文件中使用智能裁剪](../assets/video-profiles.md)。
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
+
+#### 根据规则(6.5.8.0){#show-hide-captcha}在自适应表单中显示或隐藏CAPTCHA组件
+
+现在，您可以在自适应表单提交或用户操作时验证CAPTCHA。 您还可以添加条件以在用户操作上验证CAPTCHA，并基于规则在自适应表单中显示或隐藏CAPTCHA组件。
+
+#### 添加自定义CAPTCHA服务(6.5.8.0){#add-custom-captcha-services}
+
+[!DNL Experience Manager Forms] 提供开箱即用的支持，以将Google reCAPTCHA（需要单独的Google reCAPTCHA API许可证）用作CAPTCHA验证服务。您还可以使用自定义CAPTCHA服务来验证CAPTCHA。
+
+#### 其他增强功能(6.5.8.0){#other-enhancements-forms-6580}
+
+* 改进了[!DNL Experience Manager Forms]日期选取器组件的辅助功能。
+
+* 添加了对使用PrintChannel API生成PCL格式的交互式通信的支持。
+
+* 执行PDFG转换时，现在可以启用或禁用[!DNL Experience Manager Forms]注册表更改以生成自定义书签。
 
 #### 性能改进(6.5.7.0){#performance-improvements-forms}
 
