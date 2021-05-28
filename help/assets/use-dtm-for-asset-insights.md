@@ -5,20 +5,20 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 资产分析，资产报表
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%
 
 ---
 
-# 通过DTM {#enable-asset-insights-through-dtm}启用资产分析
+# 通过DTM启用资产分析{#enable-asset-insights-through-dtm}
 
 Adobe动态标签管理是一款可激活您的数字营销工具的工具。 该服务免费提供给Adobe Analytics客户。 您可以自定义跟踪代码，以启用第三方CMS解决方案来使用资产分析，也可以使用DTM插入资产分析标记。 仅支持并提供图像分析。
 
 >[!CAUTION]
 >
->AdobeDTM已弃用，支持[!DNL Adobe Experience Platform Launch]，并且很快将结束[生命周期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建议您[使用 [!DNL Launch] 进行资产分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>AdobeDTM已弃用，支持[!DNL Adobe Experience Platform Launch]，并且很快将结束[生命周期](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobe建议您[对资产分析](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)使用 [!DNL Launch] 。
 
 执行这些步骤以通过DTM启用资产分析。
 
