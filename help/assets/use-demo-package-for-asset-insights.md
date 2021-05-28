@@ -1,11 +1,11 @@
 ---
 title: 资产分析使用演示包
-description: 使用演示包启用Adobe资产分析，以从中捕获数据并为网页生成分析。
+description: 使用演示包，可启用Adobe资产分析，以从中捕获数据并为网页生成分析。
 contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 资产分析，资产报表
 exl-id: 13947513-da76-43e1-ae01-abd24a59752a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 2%
