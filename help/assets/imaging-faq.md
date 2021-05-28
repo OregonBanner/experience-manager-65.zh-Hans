@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 资产管理，演绎版
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: fde3cb4a2461ca80f410f360fd5d56f359cec149
+source-git-commit: d407162e18f85f4fee0596581f004f8cf4c99458
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '1917'
 ht-degree: 1%
 
 ---
@@ -41,52 +41,51 @@ Smart Imaging还通过与Adobe一流的高级CDN服务完全集成而带来的�
 
 与上述内容类似，Adobe还使用实时客户网站的7009 URL进行测试。 他们平均可以进一步优化JPEG的38%文件大小。 对于具有WebP格式的PNG，他们平均可进一步优化31%的文件大小。 这种优化是由于智能成像的能力而实现的。
 
-在移动网络上，挑战因以下两个因素而加剧：
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 On the mobile web, the challenges are compounded by two factors:
 
-* 多种不同外形规格和高分辨率显示器的设备。
-* 网络带宽受限。
+* Large variety of devices with different form factors and high-resolution displays.
+* Constrained network bandwidth.
 
-在图像方面，目标是尽可能高效地提供最优质的图像。
+In terms of images, the goal is to serve the best quality images as efficiently as possible.
 
-### 关于设备像素比例优化 {#dpr}
+### About device pixel ratio optimization {#dpr}
 
-设备像素比率(DPR)（也称为CSS像素比率）是设备的物理像素与逻辑像素之间的关系。 特别是随着视网膜屏幕的出现，现代移动设备的像素分辨率正以快速的速度增长。
+Device pixel ratio (DPR) &ndash; also known as CSS pixel ratio &ndash; is the relation between a device’s physical pixels and logical pixels. Especially with the advent of retina screens, the pixel resolution of modern mobile devices is growing at a fast rate.
 
-启用“设备像素比率”优化后，图像将以屏幕的本机分辨率呈现，从而使其看起来清晰。
+Enabling Device Pixel Ratio optimization renders the image at the native resolution of the screen which makes it look crisp.
 
-打开智能成像DPR配置可根据请求所提供的显示器的像素密度自动调整请求的图像。 目前，显示屏的像素密度来自Akamai CDN标头值。
+Turning on Smart Imaging DPR configuration automatically adjusts the requested image based on pixel density of the display the request is being served from. Currently, the pixel density of the display comes from Akamai CDN header values.
 
-| 图像URL中允许的值 | 描述 |
+| Permitted values in the URL of an image | Description |
 |---|---|
-| `dpr=off` | 在单个图像URL级别关闭DPR优化。 |
-| `dpr=on,dprValue` | 使用自定义值覆盖由智能成像检测的DPR值（由任何客户端逻辑或其他方式检测）。 `dprValue`的允许值是大于0的任意数字。 指定的值1.5、2或3是典型值。 |
+| `dpr=off` | Turn off DPR optimization at an individual image URL level.| 
+| `dpr=on,dprValue` | Override the DPR value detected by Smart Imaging, with a custom value (as detected by any client-side logic or other means). Permitted value for `dprValue` is any number greater than 0. Specified values of 1.5, 2, or 3 are typical. |
 
 >[!NOTE]
 >
->* 即使关闭公司级别DPR设置，您也可以使用`dpr=on,dprValue`。
->* 由于DPR优化，当生成的图像大于MaxPix Dynamic Media设置时，始终通过保持图像的宽高比来识别MaxPix宽度。
+>* You can use `dpr=on,dprValue` even if the company level DPR setting as off.
+>* Owing to DPR optimization, when the resultant image is greater than the MaxPix Dynamic Media setting, MaxPix width is always recognized by maintaining the image's aspect ratio.
 
-
-| 请求的图像大小 | DPR值 | 传送的图像大小 |
+| Requested Image size | DPR value | Delivered image size |
 |---|---|---|
 | 816x500 | 1 | 816x500 |
 | 816x500 | 2 | 1632x1000 |
 
-另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
+See also [When working with images](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) and [When working with Smart Crop](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop).
 
-### 关于网络带宽优化{#network-bandwidth-optimization}
+### About network bandwidth optimization {#network-bandwidth-optimization}
 
-打开网络带宽可根据实际网络带宽自动调整提供的图像质量。 对于较差的网络带宽，即使DPR优化已打开，DPR优化也会自动关闭。
+Turning on Network Bandwidth automatically adjusts the image quality that is served based on actual network bandwidth. For poor network bandwidth, DPR optimization is automatically turned off, even if it is already on.
 
-如有需要，贵公司可以通过在图像的URL后附加`network=off` ，在单个图像级别选择退出网络带宽优化。
+If desired, your company can opt out of network bandwidth optimization at the individual image level by appending `network=off` to the URL of the image.
 
-| 图像URL中允许的值 | 描述 |
+| Permitted value in the URL of an image | Description |
 |---|---|
-| `network=off` | 在单个图像URL级别关闭网络优化。 |
+| `network=off` | Turns off network optimization at an individual image URL level. |
 
 >[!NOTE]
 >
->DPR和网络带宽值基于检测到的捆绑CDN的客户端值。 这些值有时不准确。 例如，DPR=2的iPhone5和DPR=3的iPhone12，都显示DPR=2。 但是，对于高分辨率设备，发送DPR=2比发送DPR=1要好。 即将推出：Adobe正在使用客户端代码来准确确定最终用户的DPR。
+>DPR and network bandwidth values are based on the detected client-side values of the bundled CDN. These values are sometimes inaccurate. For example, iPhone5 with DPR=2 and iPhone12 with DPR=3, both show DPR=2. Still, for high-resolution devices, sending DPR=2 is better than sending DPR=1. Coming soon: Adobe is working on client-side code to accurately determine an end user's DPR. -->
 
 ## 最新的“智能成像”功能有哪些主要优势？{#what-are-the-key-benefits-of-smart-imaging}
 
@@ -188,15 +187,15 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 启动使用智能成像的请求；它不会自动启用。
 
-默认情况下，对于Dynamic Media公司帐户，会禁用（关闭）智能成像DPR和网络优化。 如果要启用（打开）其中一个或两个现成增强功能，请按如下所述创建一个支持案例。
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 By default, Smart Imaging DPR and network optimization is disabled (turned off) for a Dynamic Media company account. If you want to enable (turn on) one or both of these out-of-the-box enhancements, create a support case as described below.
 
-智能成像DPR和网络优化的发布计划如下：
+The release schedule for Smart Imaging DPR and network optimization is as follows:
 
-| 区域 | 目标日期 |
+| Region | Target date |
 |---|---|
-| 北美 | 2021年5月24日 |
-| 欧洲、中东、非洲 | 2021年6月25日 |
-| 亚太 | 2021年7月19日 |
+| North America | 24 May 2021 | 
+| Europe, Middle East, Africa | 25 Jun 2021 | 
+| Asia-Pacific | 19 Jul 2021 | -->
 
 1. [使用Admin Console创建支持案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. 在支持案例中提供以下信息：
@@ -265,9 +264,9 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 是. 您可以通过向URL添加修饰符`bfc=off`来关闭智能成像。
 
-## 我是否可以请求在公司级别关闭DPR和网络优化？{#dpr-companylevel-turnoff}
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 ## Can I request DPR and network optimization to be turned off at the company level? {#dpr-companylevel-turnoff}
 
-是. 要在贵公司禁用DPR和网络优化，请创建一个支持案例，如本主题前面所述。
+Yes. To disable DPR and network optimization at your company, create a support case as described earlier in this topic. -->
 
 ## 提供了哪些“调整”功能？ 是否可以定义任何设置或行为？ (#tuning-settings)
 
@@ -281,10 +280,10 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 “智能成像”可确定转换是否有益。 仅当转换导致文件大小更小且质量相当时，才会返回新图像。
 
-## 智能成像DPR优化如何与Adobe Experience Manager Sites组件和Dynamic Media查看器一起使用？
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 ## How does Smart Imaging DPR optimization work with Adobe Experience Manager Sites components and Dynamic Media viewers?
 
-* Experience Manager站点核心组件默认配置以进行DPR优化。 为避免因服务器端智能成像DPR优化而出现超大图像，应始终将`dpr=off`添加到Experience Manager站点核心组件Dynamic Media图像中。
-* 默认情况下，为了优化DPR，配置了Dynamic Media Foundation组件，以避免因服务器端智能成像DPR优化而出现过大的图像，将始终向Dynamic Media Foundation组件图像中添加`dpr=off`。 即使客户在DM Foundation组件中取消选择DPR优化，服务器端智能成像DPR也不会生效。 总之，在DM Foundation组件中，DPR优化仅基于DM Foundation组件级别设置生效。
-* 任何查看器端DPR优化都与服务器端智能成像DPR优化协同工作，并且不会导致图像过大。 换言之，无论DPR由查看器处理（例如仅在启用了缩放功能的查看器中的主视图），都不会触发服务器端智能成像DPR值。 同样，无论查看器元素（如色板和缩略图）没有DPR处理，都会触发服务器端智能成像DPR值。
+* Experience Manager Sites Core Components are configured by default for DPR optimization. To avoid oversized images owing to server-side Smart Imaging DPR optimization, `dpr=off` is always added to Experience Manager Sites Core Components Dynamic Media images.
+* Given Dynamic Media Foundation Component is configured by default for DPR optimization, to avoid oversized images owing to server-side Smart Imaging DPR optimization, `dpr=off` is always added to Dynamic Media Foundation Component images. Even if customer deselects DPR optimization in DM Foundation Component, server-side Smart Imaging DPR does not kick in. In summary, in the DM Foundation Component, DPR optimization comes into effect based on DM Foundation Component level setting only.
+* Any viewer side DPR optimization works in tandem with server-side Smart Imaging DPR optimization, and does not result in over-sized images. In other words, wherever DPR is handled by the viewer, such as the main view only in a zoom-enabled viewer, the server-side Smart Imaging DPR values are not triggered. Likewise, wherever viewer elements, such as swatches and thumbnails, do not have DPR handling, the server-side Smart Imaging DPR value is triggered.
 
-另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
+See also [When working with images](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) and [When working with Smart Crop](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop). -->
