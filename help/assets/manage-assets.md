@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: a7f8e98729dd27f6976d3289a51f22435fced585
+source-git-commit: d06e60baac692c92358244944226b77d5dad4022
 workflow-type: tm+mt
 source-wordcount: '9775'
 ht-degree: 6%
