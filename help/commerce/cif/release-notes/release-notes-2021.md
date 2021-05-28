@@ -1,10 +1,10 @@
 ---
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: 99636664a49da3ac5d236db5a1185ad6659ee255
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 10%
+source-wordcount: '648'
+ht-degree: 9%
 
 ---
 
@@ -14,13 +14,37 @@ ht-degree: 10%
 
 请查看下表中的最低系统要求，了解您当前使用的CIF版本或计划将来使用的CIF版本。
 
-**CIF附加组件现在可通过 [Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)获取。旧AEM CIF连接器将进入维护模式，不应再使用。 请迁移到新的CIF附加组件。**
+**在4月版中，我们使用[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上提供的CIF附加组件替换了GitHub上的CIF连接器。 切换到附加组件对项目有极大好处：
+
+* 大多数新功能将立即在AEM 6.5上可用（无需再等待功能端口）
+* 可轻松升级到新的附加版本
+* 准备Cloud Service
+
+旧AEM CIF连接器将进入维护模式，不应再使用。 请将CIF连接器更换为新的CIF附加组件。 对于大多数项目来说，只需简单地替换包即可。 **
 
 | 组件 | 系统要求 |
 |:-------|:-----:|
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 发行日期：2021年5月
+
+| 组件 | 版本号 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.05.26 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
+| CIF核心组件 | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
+| CIF Venia参考网站 | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
+
+### 新增功能 {#what-is-new-may}
+
+* 产品控制台属性中对关联内容的分页支持
+
+### 错误修复 {#bug-fixes-may}
+
+* 产品属性的资产选项卡中未显示资产缩略图
+
+* 痕迹导航会重置产品控制台中的预览数据
 
 ## 发行日期：2021年4月
 
