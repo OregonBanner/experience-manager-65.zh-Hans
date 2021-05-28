@@ -8,9 +8,9 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -93,17 +93,9 @@ Adobe Experience Manager(AEM)6.4随SSL向导一起提供，并提供用于配置
 
 如果用户上传影片文件在资产节点下没有删除权限，则删除区块节点会失败，并且会重新启动上传。
 
-#### 一次可使用AEM 6.4操作的数字资产的最大数量是多少？{#what-is-the-maximum-number-of-digital-assets-that-can-be-operated-with-aem-at-a-time}
-
-Adobe Experience Manager(AEM)6.5当前允许您一次上传多达2 GB的资产。
-
-有关可以使用AEM 6.5操作的资产最大数量的其他信息，请参阅[资产大小调整指南](/help/assets/assets-sizing-guide.md)。
-
 #### 创建语言副本时，OOTB配置的默认设置是什么？{#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-通过经典UI创建语言副本时，资产不会移到新语言层次结构下，而是会从语言主控中使用。
-
-然而，当您通过触屏UI（**引用** -> **更新语言副本**）创建语言副本时，会使用新语言创建新的DAM文件夹，并且资产会从此处引用。
+当您通过触屏UI（**引用** -> **更新语言副本**）创建语言副本时，将使用新语言创建新的DAM文件夹，并且资产会从此处引用。
 
 这是OOTB配置的默认设置。 在翻译配置中，您可以设置&#x200B;**翻译页面资产** = **不翻译**。
 对于AEM 6.4,**工具** > **Cloud Services** > **翻译云服务**。
@@ -115,10 +107,6 @@ Adobe Experience Manager(AEM)6.5当前允许您一次上传多达2 GB的资产�
 作为解决方法，您还可以在每次重新启动AEM后，通过UI或通过`curl`命令（示例如下）手动禁用组件。
 
 `curl -u admin:$(pass CQ_Admin) 'https://localhost:4502/system/console/components/com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporter' --data 'action=disable'`
-
-#### 如何使用AEM 6.5实例配置资产分析？{#how-to-configure-asset-insights-with-aem-instance}
-
-要为通过Adobe激活(DTM)部署的Experience Manager设置和配置资产分析，请参阅如何[使用AEM Assets设置资产分析](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 #### 如何自定义管理控制台？{#how-to-customize-admin-consoles}
 
@@ -136,20 +124,8 @@ AEM提供了各种机制，允许您自定义创作实例的控制台和页面�
 
 “简单搜索”实施是2017年Summit lab AEM Search Demystified中的材料。
 
-#### AEM Assets和AEM MediaLibrary之间有何区别？{#what-is-the-difference-between-aem-assets-and-aem-medialibrary}
-
-AEM Assets是AEM Platform上的一个应用程序，它允许我们的客户在基于web的存储库中管理其数字资产（图像、视频、文档和音频剪辑），而AEM Media Library是AEM WCM内容存储库的指定部分，图像和其他共享资源都存储在该存储库中。
-
-有关更多信息，请参阅[AEM Assets与AEM MediaLibrary](/help/assets/medialibrary.md)。
-
 #### 是否可以为WordPress构建插件，以允许客户访问Adobe资产选取器以选择图像？{#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
 
 是的，使用WordPress的客户可以使用Adobe资产选取器从其AEM Assets服务器中选择图像，以将其添加到其WordPress网站上的帖子。
 
 有关更多信息，请参阅[资产选择器](../assets/search-assets.md#assetpicker)。
-
-#### 是否可以在AEM Assets中扩展搜索彩块化以添加其他谓词？{#is-it-possible-to-extend-the-search-facets-in-aem-assets-to-add-additional-predicates}
-
-在企业范围内部署的Adobe Experience Manager(AEM)Assets能够存储许多资产。 您可以向默认表单中添加谓词，也可以使用包含您选择的Facet的自定义表单。
-
-请参阅[搜索彩块化](/help/assets/search-facets.md)以了解更多信息。
