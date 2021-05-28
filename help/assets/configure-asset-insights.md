@@ -5,16 +5,16 @@ contentOwner: AG
 role: Architect, Administrator
 feature: 资产分析，资产报表
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 6%
 
 ---
 
 # 配置资产分析{#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] 从获取第三方网站使用的数字资产的使用情况数 [!DNL Adobe Analytics]据。要启用资产分析以检索此数据并生成分析，请首先配置该功能以与[!DNL Adobe Analytics]集成。 要使用此功能，请单独购买[!DNL Adobe Analytics]许可证。 [!DNL Managed Services]上的客户将收到与[!DNL Experience Manager]捆绑在一起的[!DNL Analytics]许可证。 请参阅[Managed Services产品说明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
+[!DNL Adobe Experience Manager Assets] 从获取第三方网站使用的数字资产的使用情况数 [!DNL Adobe Analytics]据。要使资产分析能够检索此数据并生成分析，请首先配置该功能以与[!DNL Adobe Analytics]集成。 要在内部部署安装中使用此功能，请单独购买[!DNL Adobe Analytics]许可证。 [!DNL Managed Services]上的客户将收到与[!DNL Experience Manager]捆绑在一起的[!DNL Analytics]许可证。 请参阅[Managed Services产品说明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)。
 
 >[!NOTE]
 >
