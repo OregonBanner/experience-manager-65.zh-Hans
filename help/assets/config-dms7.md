@@ -9,9 +9,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
 workflow-type: tm+mt
-source-wordcount: '6154'
+source-wordcount: '6156'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 5%
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >以下功能列表要求您使用与Adobe Experience Manager - Dynamic Media捆绑在一起的现成CDN。 这些功能不支持任何其他自定义CDN。
 >
@@ -48,8 +48,8 @@ ht-degree: 5%
 
 [默认情况下，Dynamic Media 处于禁用状态。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)要利用Dynamic Media功能，您必须启用它。
 
->[!NOTE]
-Dynamic Media - Scene7模式仅适用于Experience Manager创作实例。 因此，必须在Experience Manager创作实例上配置`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager发布实例。*
+>[!WARNING]
+Dynamic Media - Scene7模式仅适用于&#x200B;*Experience Manager创作实例*。 因此，必须在Experience Manager创作实例上配置`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager发布实例。*
 
 要启用Dynamic Media，您必须在终端窗口中输入以下命令，从命令行中使用`dynamicmedia_scene7`运行模式启动Experience Manager（使用的示例端口为4502）：
 
@@ -86,9 +86,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**在Cloud Services中创建Dynamic Media配置**
+**要在Cloud Services中创建Dynamic Media配置，请执行以下操作：**
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按工具图标，然后点按&#x200B;**[!UICONTROL Cloud Services> Dynamic Media配置]**。
+1. 在Experience Manager创作模式下，点按Experience Manager徽标以访问全局导航控制台，然后点按工具图标，然后点按&#x200B;**[!UICONTROL Cloud Services> Dynamic Media配置]**。
 1. 在 Dynamic Media 配置浏览器页面的左侧窗格中，点按&#x200B;**[!UICONTROL 全局]**（请勿点按或选择&#x200B;**[!UICONTROL 全局]**&#x200B;左侧的文件夹图标），然后点按&#x200B;**[!UICONTROL 创建]**。
 1. 在&#x200B;**[!UICONTROL 创建Dynamic Media配置]**&#x200B;页面上，输入标题、Dynamic Media帐户电子邮件地址、密码，然后选择您所在的区域。 此信息通过配置电子邮件中的Adobe提供给您。 如果您未收到电子邮件，请联系Adobe客户关怀。
 
