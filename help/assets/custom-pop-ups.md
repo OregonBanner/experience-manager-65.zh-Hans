@@ -12,16 +12,16 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: 查看器
 role: Business Practitioner, Administrator
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1090'
 ht-degree: 3%
 
 ---
 
 # 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-默认的概览用于电子商务体验，其中会显示一个弹出窗口，其中包含产品信息以促进购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据您使用的查看器，此功能允许用户单击热点、缩略图图像或图像映射以查看信息或相关内容。
+默认的概览用于电子商务体验，其中会显示一个弹出窗口，其中包含产品信息以促进购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据查看器，用户可以通过此功能点按热点、缩略图图像或图像映射来查看信息或相关内容。
 
 Dynamic Media中的以下查看器支持概览：
 
@@ -31,7 +31,7 @@ Dynamic Media中的以下查看器支持概览：
 
 虽然每个查看器的功能不同，但在所有三个受支持的查看器中，创建概览的过程都是相同的。
 
-**使用概览创建自定义弹出窗口**
+**要使用概览创建自定义弹出窗口，请执行以下操作：**
 
 1. 为上传的资产创建概览。
 
@@ -41,7 +41,7 @@ Dynamic Media中的以下查看器支持概览：
     <tbody>
     <tr>
     <td><strong>您使用的查看器</strong></td>
-    <td><strong>完成这些步骤以创建概览</strong></td>
+    <td><strong>如果要创建概览，请完成这些步骤</strong></td>
     </tr>
     <tr>
     <td>交互式图像</td>
@@ -64,7 +64,7 @@ Dynamic Media中的以下查看器支持概览：
     <tbody>
     <tr>
     <td><strong>您使用的查看器</strong><br /> </td>
-    <td><strong>完成这些步骤以将查看器与您的网站集成</strong></td>
+    <td><strong>如果要将查看器与您的网站集成，请完成这些步骤</strong></td>
     </tr>
     <tr>
     <td>交互式图像</td>
@@ -81,12 +81,12 @@ Dynamic Media中的以下查看器支持概览：
     </tbody>
    </table>
 
-1. 现在，您使用的查看器需要知道如何使用概览。
+1. 您当前使用的查看器必须知道如何使用概览。
 
-   为此，查看器使用名为`QuickViewActive`的处理程序。
+   查看器使用名为`QuickViewActive`的处理程序。
 
    ****
-示例假设您在网页上对交互式图像使用了以下示例嵌入代码：
+示例假定您在网页上对交互式图像使用以下示例嵌入代码：
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
@@ -94,7 +94,7 @@ Dynamic Media中的以下查看器支持概览：
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
-   **使用上面的示例嵌入代码示例，我们具有以下代码：**
+   **使用上面的示例嵌入代码示例，可使用以下代码：**
 
    ```xml
    s7interactiveimageviewer.setHandlers({
@@ -112,9 +112,9 @@ Dynamic Media中的以下查看器支持概览：
    * 交互式图像查看器：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * 交互式视频查看器：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. 您现在需要配置`quickViewActivate`处理程序。
+1. 现在必须配置`quickViewActivate`处理程序。
 
-   `quickViewActivate`处理程序控制查看器中的概览。 处理程序包含变量列表和函数调用以与概览一起使用。 嵌入代码提供了在概览中设置的SKU变量的映射，以及示例`loadQuickView`函数调用。
+   `quickViewActivate`处理程序控制查看器中的概览。 处理程序包含变量列表和函数调用以与概览一起使用。 嵌入代码为概览中设置的SKU变量提供了映射，并提供了一个示例`loadQuickView`函数调用。
 
    **用**
 于网页的变量mappingMap变量到概览中包含的SKU值和通用变量：
@@ -182,7 +182,7 @@ Dynamic Media中的以下查看器支持概览：
 
 1. 将弹出窗口`DIV`放置在HTML页面的正文中。
 
-   其中一个元素会设置一个ID，当用户调用概览时，该ID会随SKU值进行更新。 该示例还包含一个简单按钮，用于在弹出窗口可见后再次隐藏该弹出窗口。
+   其中一个元素会使用ID进行设置，当用户调用概览时，该ID将随SKU值进行更新。 该示例还包含一个简单按钮，用于在弹出窗口可见后再次隐藏该弹出窗口。
 
    ```xml
    <div id="quickview_div" >
@@ -193,7 +193,7 @@ Dynamic Media中的以下查看器支持概览：
    </div>
    ```
 
-1. 添加函数以更新弹出窗口中的SKU值；通过替换在步骤5中创建的简单函数，使弹出窗口可见。 ，具有以下特点：
+1. 添加函数，以便您能够更新弹出窗口中的SKU值；通过替换在步骤5中创建的简单函数，使弹出窗口可见。 ，具有以下特点：
 
    ```xml
    <script type="text/javascript">
@@ -209,9 +209,9 @@ Dynamic Media中的以下查看器支持概览：
 
    某些查看器（例如交互式视频查看器）支持以全屏模式显示。 但是，如果按照前面步骤中所述使用弹出窗口，则在全屏模式下，该弹出窗口会显示在查看器后面。
 
-   要在标准模式和全屏模式下显示弹出窗口，请将弹出窗口附加到查看器容器。 要实现此目的，可以使用第二个处理程序方法`initComplete`。
+   要在标准模式和全屏模式下显示弹出窗口，请将弹出窗口附加到查看器容器。 使用第二个处理程序方法`initComplete`。
 
-   查看器初始化后，将调用`initComplete`处理程序。
+   在查看器初始化后，将调用`initComplete`处理程序。
 
    ```xml
    "initComplete":function() { code block }
@@ -234,14 +234,14 @@ Dynamic Media中的以下查看器支持概览：
    }
    ```
 
-   在上面的代码中，我们已执行以下操作：
+   在上述代码中，已完成以下操作：
 
-   * 已识别我们的自定义弹出窗口。
+   * 已识别自定义弹出窗口。
    * 已从DOM中将其删除。
    * 已识别查看器容器。
    * 已将弹出窗口附加到查看器容器。
 
-1. 现在，您的整个setHandlers代码应当类似于以下内容（使用了交互式视频查看器）：
+1. 您的整个setHandlers代码会类似于以下内容（使用了交互式视频查看器）：
 
    ```xml
    s7interactivevideoviewer.setHandlers({
