@@ -10,10 +10,10 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 55%
+source-wordcount: '1448'
+ht-degree: 48%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 55%
 
 优化图像质量可能会是一个很耗时的过程，因为渲染可接受的效果涉及到很多因素。在某种程度上，效果带有主观性，因为每个人对图像质量都会有不同的看法。结构化试验是关键所在。
 
-AEM包含100多个Dynamic Media图像交付命令，用于调整和优化图像以及渲染结果。以下准则可帮助您使用一些基本的命令和最佳实践来简化流程并快速获得良好结果。
+Adobe Experience Manager包含100多个Dynamic Media图像交付命令，用于调整和优化图像以及渲染结果。 以下准则可以帮助您通过使用一些基本的命令和最佳实践，简化操作过程，并快速获得最佳效果。
 
 ## 图像格式的最佳实践 (`&fmt=`) {#best-practices-for-image-format-fmt}
 
 * 如果要以良好的质量以及可管理的大小和权重来传送图像，JPG 或 PNG 是最佳选择。
 * 如果 URL 中未提供任何格式命令，Dynamic Media 图像传送将默认采用 JPG 格式。
-* JPG 的压缩比率为 10:1，通常生成的图像文件较小。PNG 的压缩比率约为 2:1，但有一些情况除外，例如当图像中包含白色背景时。但是，通常 PNG 文件大于 JPG 文件。
+* JPG 的压缩比率为 10:1，通常生成的图像文件较小。PNG的压缩比率约为2:1，但有时除外，例如当图像包含白色背景时。 但是，通常 PNG 文件大于 JPG 文件。
 * JPG 采用有损压缩，这意味着在压缩过程中图像元素（像素）会有所丢失。PNG 则采用无损压缩。
 * 通常情况下，JPG 在压缩摄影图像时保真度会比合成图像更高，具有清晰的边缘和对比度。
 * 如果您的图像包含透明度，请使用 PNG，因为 JPG 不支持透明度。
@@ -45,14 +45,14 @@ AEM包含100多个Dynamic Media图像交付命令，用于调整和优化图像�
 
 ## 图像锐化的最佳实践 {#best-practices-for-image-sharpening}
 
-在控制网站中的图像时，图像锐化是最复杂的方面，很容易出现多种错误。请参阅以下有用资源，花时间详细了解一下 AEM 中锐化和 USM 锐化的工作原理：
+在控制网站中的图像时，图像锐化是最复杂的方面，很容易出现多种错误。请花时间参阅以下有用资源，详细了解Experience Manager中锐化和USM锐化的工作方式：
 
-最佳实践白皮书[在AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中锐化图像也适用于AEM。
+最佳实践白皮书[在AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中锐化图像，该白皮书也适用于Experience Manager。
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
 
-通过 AEM，可以在摄取、传送或同时在这两个过程中锐化图像。但是，在大多数情况下，应只使用一种方法锐化图像，而不要同时使用两种方法。通常，在传送过程中通过 URL 锐化图像可实现最佳效果。
+通过Experience Manager，您可以在摄取、交付或同时在两者中锐化图像。 但是，通常只使用一种或另一种方法锐化图像，但不同时使用这两种方法。 通常，在传送过程中通过 URL 锐化图像可实现最佳效果。
 
 有两种可用的图像锐化方法：
 
@@ -71,11 +71,11 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
          此参数确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素，而滤镜会锐化这些像素。 **[!UICONTROL threshold]**&#x200B;参数有助于避免过度锐化颜色相似的区域，如肤色。 例如，阈值为12时，会忽略肤色亮度的细微变化，以避免添加“杂色”，同时仍会为高对比度区域添加边缘对比度，如睫毛与皮肤相遇的地方。
       有关如何设置这三个参数的更多信息，包括使用滤镜方面的最佳实践，请参阅以下资源：
 
-      AEM有关锐化图像的帮助主题。
+      Experience Manager有关锐化图像的帮助主题。
 
       最佳实践白皮书[在AdobeDynamic Media Classic中锐化图像](/help/assets/assets/sharpening_images.pdf)。
 
-   * AEM还允许您控制第四个参数：单色(0,1)。 此参数确定是否使用值0分别将USM锐化应用于每个颜色组件，或者使用值1将USM锐化应用于图像亮度/强度。
+   * Experience Manager还允许您控制第四个参数：单色(0,1)。 此参数确定是否使用值0分别将USM锐化应用于每个颜色组件，或者使用值1将USM锐化应用于图像亮度/强度。
 
 
 作为最佳实践，应首先开始设置 USM 锐化 radius 参数。您可以先使用以下 radius 设置：
@@ -123,8 +123,8 @@ jpegSize是一个有用的参数，可确保在将图像传送到内存有限的
 
 如果锐化效果仍然不能让您满意，请按小数位递增的方式增大 radius。对于每次递增，重新将 amount 从 1.75 逐渐增加至 4。重复此过程，直至达到所需效果。尽管采用上述值是创意工作室已经验证过的方法，但请记住，您也可以从其他值开始设置，并遵循其他策略。关于效果是否能让您满意，这是个主观性问题，因此进行结构化的试验很关键。
 
-在您试验的过程中，以下一般建议对于优化工作流也很有帮助：
+在您进行实验时，以下常规建议可能会有助于进一步优化工作流：
 
 * 直接在URL上实时尝试并测试不同的参数。
-* 作为最佳实践，请记住，可以将Dynamic Media图像提供命令分组到图像预设中。 图像预设基本上就是具有自定义预设名称（如`$thumb_low$`和`&product_high$`）的URL命令宏。 URL 路径中的自定义预设名称会调用这些预设。这类功能可帮助您针对网站中图像的不同使用模式来管理命令和质量设置，并缩短 URL 的整体长度。
-* AEM 还提供了更高级的图像质量调整方法，例如在摄取时应用锐化图像。对于高级用例，如果可以选择进一步调整和优化渲染结果， [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)可以帮助您了解自定义的洞察和最佳实践。
+* 作为最佳实践，请记住，可以将Dynamic Media图像提供命令分组到图像预设中。 图像预设基本上就是具有自定义预设名称（如`$thumb_low$`和`&product_high$`）的URL命令宏。 URL路径中的自定义预设名称会调用这些预设。 这类功能可帮助您针对网站中图像的不同使用模式来管理命令和质量设置，并缩短 URL 的整体长度。
+* Experience Manager还提供了更高级的图像质量调整方法，例如在摄取时应用锐化图像。 对于有可优化渲染结果的选项的高级用例， [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)可以帮助您了解自定义的洞察和最佳实践。
