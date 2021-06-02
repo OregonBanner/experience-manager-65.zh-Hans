@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: 组件，发布
-source-git-commit: 8199702fe778f11cc2a953979a4ccfdcef3f1154
+source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
 workflow-type: tm+mt
 source-wordcount: '3210'
 ht-degree: 21%
@@ -173,13 +173,12 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 * **[!UICONTROL 优化高分辨率设备]**  — 选中（默认）复选框以允许DPR（设备像素比）优化。
 
    仅当满足以下条件时，才会显示&#x200B;**[!UICONTROL 优化高分辨率设备]**&#x200B;选项：
+
    * 在“预设类型”下，选择&#x200B;**[!UICONTROL 图像预设]**，并从“**[!UICONTROL 图像预设]**”下拉列表中选择&#x200B;**[!UICONTROL RESS_IP]**。
 
    ![图像预设中的设备像素比率设置](/help/assets/assets-dm/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
-
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL 标题]**  — 更改图像的标题。
 
@@ -255,9 +254,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
    ![用于智能裁剪的设备像素比设置](/help/assets/assets-dm/dpr-smartcrop.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
-
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL 标题]**  — 更改智能裁剪图像的标题。
 
