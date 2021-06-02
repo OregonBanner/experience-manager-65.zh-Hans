@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 68928e251203f67faef498dc22f6d57ea141e748
+source-git-commit: 0f70c011cc192df0650c3ec666bae2c26653b444
 workflow-type: tm+mt
-source-wordcount: '3389'
+source-wordcount: '3391'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,9 @@ ht-degree: 3%
 
 * 支持新用户使用邮件程序配置服务的刷新令牌刷新访问令牌。
 
-* 支持邮件程序配置服务的SMTP XOAUTH2机制。
+* 支持[!DNL SMTP XOAUTH2]机制，用于邮件程序配置服务。
+
+* 支持[!DNL MongoDB]版本4.2和4.4。
 
 * 与香港、澳门和台湾有关的名称的出现次数将根据适用于中国地区和地区的新命名约定进行更新。
 
