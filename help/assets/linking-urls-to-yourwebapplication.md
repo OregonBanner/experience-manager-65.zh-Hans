@@ -10,10 +10,10 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: Business Practitioner, Administrator
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 配置
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1275'
-ht-degree: 22%
+ht-degree: 26%
 
 ---
 
@@ -67,25 +67,25 @@ ht-degree: 22%
 
 1. 根据您选择的资产，执行以下操作之一：
 
-   * 如果您选择了图像，请在下拉菜单中，点按&#x200B;**[!UICONTROL 演绎版。]**
+   * 如果您选择了图像，请在下拉菜单中，点按&#x200B;**[!UICONTROL 演绎版]**。
 
       在&#x200B;**[!UICONTROL Dynamic]**&#x200B;标题下，点按预设名称，以在右侧框架中查看其演绎版。 您可能需要滚动“演绎版”列表才能看到“动态”标题。
 
-      在左边栏的底部，点按&#x200B;**[!UICONTROL URL。]**
+      在左边栏的底部，点按 **[!UICONTROL URL]**。
 
       ![chlimage_1-270](assets/chlimage_1-270.png)
 
-   * 如果您在下拉菜单中选择了旋转集、图像集、轮播集或视频，请点按&#x200B;**[!UICONTROL 查看器。]**
+   * 如果您在下拉菜单中选择了旋转集、图像集、轮播集或视频，请点按&#x200B;**[!UICONTROL 查看器]**。
 
       在左边栏中，点按查看器预设名称。在单独的页面中打开该集或视频的预览。
 
-      在左边栏的底部，点按&#x200B;**[!UICONTROL URL。]**
+      在左边栏中，点按底部的 **[!UICONTROL URL]**。
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. 选择相应的文本并将其复制到 Web 浏览器中，以预览资产或将其添加到您的 Web 内容页面。
 
-   要退出URL窗口，请点按&#x200B;**[!UICONTROL X]**&#x200B;或点按&#x200B;**[!UICONTROL 关闭。]**
+   要退出URL窗口，请点按&#x200B;**[!UICONTROL X]**&#x200B;或点按&#x200B;**[!UICONTROL 关闭]**。
 
 ## 获取静态资产{#obtaining-a-url-for-a-static-asset}的URL
 
@@ -123,8 +123,8 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
 ## 获取已发布视频呈现版本{#obtaining-a-video-url-for-a-published-video-rendition}的视频URL
 
-1. 在AEM中，导航到&#x200B;**[!UICONTROL 工具>部署>云>Cloud Services。]**
-1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;页面上，向下滚动到&#x200B;**[!UICONTROL Dynamic MediaCloud Services]**&#x200B;标题，然后点按&#x200B;**[!UICONTROL 显示配置。]**
+1. 在AEM中，导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**。
+1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
 
 1. 在&#x200B;**[!UICONTROL Dynamic Media云设置]**&#x200B;页面的&#x200B;**[!UICONTROL 视频服务URL]**&#x200B;下，向下复制整个URL路径。 在稍后的步骤中，您将需要复制的URL路径。
@@ -139,7 +139,7 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
    例如，如果注册ID为`87654321|MyCompany`，则客户名称将为`MyCompany`。
 
-1. 在页面的左上角附近，点按&#x200B;**[!UICONTROL Cloud Services]**，然后点按Experience Manager徽标，并导航到&#x200B;**[!UICONTROL 常规>CRXDE Lite。]**
+1. 在页面的左上角附近，点按&#x200B;**[!UICONTROL Cloud Services]**，然后点按Experience Manager徽标，并导航到&#x200B;**[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 从JCR（Java内容存储库）中向下复制整个视频呈现路径。
 
    例如，视频的呈现路径可能如下所示：
@@ -160,8 +160,8 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
 ## 获取自适应流播放(HLS){#obtaining-a-video-url-for-adaptive-streaming-hls}的视频URL
 
-1. 在AEM中，导航到&#x200B;**[!UICONTROL 工具>部署>云>Cloud Services。]**
-1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;页面上，向下滚动到&#x200B;**[!UICONTROL Dynamic MediaCloud Services]**&#x200B;标题，然后点按&#x200B;**[!UICONTROL 显示配置。]**
+1. 在AEM中，导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**。
+1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
 1. 在&#x200B;**[!UICONTROL Dynamic MediaCloud Services设置]**&#x200B;页面上，执行以下操作：
 
