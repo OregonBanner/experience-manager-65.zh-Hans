@@ -9,7 +9,7 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 资产管理，演绎版
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: d407162e18f85f4fee0596581f004f8cf4c99458
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1917'
 ht-degree: 1%
@@ -207,7 +207,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
       单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 
-      查找标有&#x200B;**[!UICONTROL Published Server Name.]**&#x200B;的字段
+      查找标有&#x200B;**[!UICONTROL Published Server Name]**&#x200B;的字段。
    1. 确认您通过Adobe使用CDN，而不是通过直接关系进行管理。
    1. 验证您使用的是专用域（如`images.company.com`或`mycompany.scene7.com`），而不是通用域（如`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com`）。
 
