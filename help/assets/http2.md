@@ -10,9 +10,9 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: Business Practitioner, Administrator
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 发布，配置
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '732'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ HTTP/2改进了浏览器和服务器的通信方式，允许更快地传输信�
 
 以下网站以简短而简单的方式介绍了HTTP/2及其好处：
 
-[https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
+[关于HTTP/2您必须了解的信息](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
 ## 迁移到HTTP/2进行内容交付有哪些主要优势？{#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -62,7 +62,7 @@ Adobe自己的测试产生了以下结果：
 
 启动切换到HTTP/2的请求；它不会自动为您完成。
 
-1. 要切换到HTTP/2，请启动Adobe客户关怀请求。 请参阅[访问AEM支持门户](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)。
+1. 要切换到HTTP/2，请启动Adobe客户关怀请求。 请参阅[访问Adobe Experience Manager支持门户](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)。
 
    1. 在支持请求中提供以下信息：
 
