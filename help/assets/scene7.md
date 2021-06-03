@@ -10,7 +10,7 @@ discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '2863'
 ht-degree: 26%
@@ -88,7 +88,7 @@ AEM中提供了以下Dynamic Media Classic组件：
 
 1. 在AEM中，打开要添加Dynamic Media Classic(Scene7)组件的页面。
 
-1. 如果没有可用的Dynamic Media Classic组件，请单击&#x200B;**[!UICONTROL 设计]**&#x200B;模式，点按任何带蓝色边框的组件，点按&#x200B;**[!UICONTROL 父项]**&#x200B;图标，然后点按&#x200B;**[!UICONTROL 配置]**&#x200B;图标。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，选择所有Dynamic Media Classic组件以使其可用，然后单击&#x200B;**[!UICONTROL 确定。]**
+1. 如果没有可用的Dynamic Media Classic组件，请单击&#x200B;**[!UICONTROL 设计]**&#x200B;模式，点按任何带蓝色边框的组件，点按&#x200B;**[!UICONTROL 父项]**&#x200B;图标，然后点按&#x200B;**[!UICONTROL 配置]**&#x200B;图标。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，选择所有Dynamic Media Classic组件以使其可用，然后单击&#x200B;**[!UICONTROL 确定]**。
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -211,7 +211,7 @@ AEM中提供了以下Dynamic Media Classic组件：
 
 #### 动态更改文本 {#changing-text-dynamically}
 
-要动态更改文本，请在字段中输入新文本，然后单击&#x200B;**[!UICONTROL 确定。]**&#x200B;在此示例中，**[!UICONTROL 价格]**&#x200B;现在为 50 美元，运费为 99 美分。
+要动态更改文本，请在字段中输入新文本，然后单击&#x200B;**[!UICONTROL 确定]**。在此示例中，**[!UICONTROL 价格]**&#x200B;现在为 50 美元，运费为 99 美分。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -221,7 +221,7 @@ AEM中提供了以下Dynamic Media Classic组件：
 
 #### 更改文本以反映 Client Context 值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-要将字段链接到客户端上下文值，请点按&#x200B;**[!UICONTROL 选择]**&#x200B;以打开客户端上下文菜单，选择客户端上下文，然后点按&#x200B;**[!UICONTROL 确定。]**&#x200B;在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
+要将字段链接到客户端上下文值，请点按&#x200B;**[!UICONTROL 选择]**&#x200B;以打开客户端上下文菜单，选择客户端上下文，然后点按&#x200B;**[!UICONTROL 确定]**。 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -231,12 +231,12 @@ AEM中提供了以下Dynamic Media Classic组件：
 
 #### 使Dynamic Media Classic图像模板成为链接{#making-the-scene-image-template-a-link}
 
-1. 在具有Dynamic Media Classic **[!UICONTROL 图像模板]**&#x200B;组件的页面上，点按&#x200B;**[!UICONTROL 编辑。]**
+1. 在具有Dynamic Media Classic **[!UICONTROL 图像模板]**&#x200B;组件的页面上，点按&#x200B;**[!UICONTROL 编辑]**。
 1. 在&#x200B;**[!UICONTROL URL]**&#x200B;字段中，输入用户点按图像时转到的URL。 在&#x200B;**[!UICONTROL 打开方式]**&#x200B;字段中，选择您希望在新窗口中还是在同一窗口中打开目标。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 点按&#x200B;**[!UICONTROL 确定。]**
+1. 点按&#x200B;**[!UICONTROL 确定]**。
 
 ### 视频组件 {#video-component}
 
@@ -347,6 +347,6 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 
 
-**[!UICONTROL 发布状态]**  — 您可以根据发布状态筛选资产： **** Unpublishedor已发 **[!UICONTROL 布。]** 如果未选择任何发布 **[!UICONTROL 状态]**，则默认情况下AEM会搜索所有发布状态。
+**[!UICONTROL 发布状态]**  — 您可以根据发布状态筛选资产： **** Unpublishedor  **[!UICONTROL Published]**。如果未选择任何&#x200B;**[!UICONTROL 发布状态]**，则默认情况下，AEM会搜索所有发布状态。
 
 ![chlimage_1-248](assets/chlimage_1-247.png)
