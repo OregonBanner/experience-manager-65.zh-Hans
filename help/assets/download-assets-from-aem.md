@@ -5,7 +5,7 @@ contentOwner: AG
 role: Business Practitioner
 feature: 资产管理，资产分发
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 8%
@@ -22,13 +22,13 @@ ht-degree: 8%
 
 无法下载资产类型图像集、旋转集、混合媒体集和轮播集。
 
-要下载资产，请执行以下步骤：
+**要下载资产，请执行以下步骤：**
 
 1. 单击左上角的徽标。 在左边栏中，单击&#x200B;**[!UICONTROL 导航]**。
-1. 在[!UICONTROL 导航]页面上，单击&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL 文件。]**
+1. 在[!UICONTROL 导航]页面上，单击&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 文件]**。
 1. 导航到包含要下载的资产的文件夹。
 1. 选择文件夹，或在文件夹中选择一个或多个资产。
-1. 在工具栏中，单击&#x200B;**[!UICONTROL 下载。]**
+1. 在工具栏上，单击&#x200B;**[!UICONTROL 下载]**。
 
    ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download1.png)
 
@@ -45,7 +45,7 @@ ht-degree: 8%
    | **[!UICONTROL 智能裁剪]** | 选择此选项可从AEM中下载选定资产的所有智能裁剪演绎版。 系统会创建一个包含智能裁剪呈现版本的zip文件，并将其下载到您的本地计算机。 |
    | **[!UICONTROL 动态演绎版]** | 选择此选项可实时生成一系列替代演绎版。 当您选择此选项时，您还可以通过从[图像预设](image-presets.md)列表中选择要动态创建的演绎版。 <br>此外，您还可以选择大小和单位、格式、色彩空间、分辨率以及任何可选的图像修饰符（如反转图像）。仅当您启用了[!DNL Dynamic Media]时，此选项才可用。 |
 
-1. 在对话框中，单击&#x200B;**[!UICONTROL Download.]**。
+1. 在对话框中，单击&#x200B;**[!UICONTROL Download]**..
 
 选择要下载的文件夹时，该文件夹下面的整个资产层次结构都会被下载。要在单个文件夹中包含您下载的每个资产（包括嵌套在父文件夹下的子文件夹中的资产），请选择&#x200B;**[!UICONTROL 为每个资产创建单独的文件夹]**。
 
