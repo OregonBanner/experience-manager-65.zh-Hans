@@ -10,10 +10,10 @@ discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: Business Practitioner, Administrator
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: 视频
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 52%
+source-wordcount: '1589'
+ht-degree: 49%
 
 ---
 
@@ -74,7 +74,7 @@ Scene7 视频组件支持以下格式：
 
 要配置通用预设，请执行以下操作：
 
-1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，导航到您的&#x200B;**[!UICONTROL Scene7]**&#x200B;配置，然后单击&#x200B;**[!UICONTROL 编辑。]**
+1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;中，导航到 **[!UICONTROL Scene7]** 配置，然后单击&#x200B;**[!UICONTROL 编辑]**。
 1. 选择&#x200B;**[!UICONTROL 视频]**&#x200B;选项卡。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -95,7 +95,7 @@ Scene7 视频组件支持以下格式：
 
 ## 更新查看器和编码预设  {#updating-viewer-and-encoding-presets}
 
-如果由于Scene7中的预设已更新，您需要更新AEM中视频的查看器和编码预设，请导航到云配置中的Scene7配置，然后单击&#x200B;**[!UICONTROL 更新查看器和编码预设。]**
+如果由于Scene7中的预设已更新，您需要更新Experience Manager中视频的查看器和编码预设，请导航到云配置中的Scene7配置，然后单击&#x200B;**[!UICONTROL 更新查看器和编码预设]**。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -112,9 +112,9 @@ Scene7 视频组件支持以下格式：
 
 ## 基础视频组件与 Scene7 视频组件 {#foundation-video-component-versus-scene-video-component}
 
-使用 AEM 时，您有权访问 Sites 中提供的视频组件以及 Scene7 视频组件。这些组件不能交换使用。
+使用Experience Manager时，您可以同时访问站点中可用的视频组件和Scene7视频组件。 这些组件不能交换使用。
 
-Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 中存储的视频（使用 FFMPEG）以及 Scene7 视频。
+Scene7 视频组件仅适用于 Scene7 视频。基础组件可处理从Experience Manager（使用ffmpeg）和Scene7视频存储的视频。
 
 下表说明了何时应使用何种组件：
 
@@ -122,13 +122,13 @@ Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 
 
 >[!NOTE]
 >
->S7 视频组件使用现成的通用视频配置文件。但是，您可以通过在Scene7中执行以下操作之一，来获取基于HTML5的视频播放器以供AEM使用：复制现成HTML5视频播放器的嵌入代码，并将其放在您的AEM页面中。
+>S7 视频组件使用现成的通用视频配置文件。但是，您可以在Scene7中执行以下操作之一，以获取基于HTML5的视频播放器供Experience Manager使用：复制现成HTML5视频播放器的嵌入代码，并将其放入Experience Manager页面。
 
 ## AEM 视频组件 {#aem-video-component}
 
-虽然建议使用 Scene7 视频组件来查看 Scene7 视频，但是为了确保内容的完整性，此部分介绍了如何在 AEM 中将 Scene7 视频与基础视频组件结合使用。
+即使建议使用Scene7视频组件来查看Scene7视频，为了内容完整起见，本节仍介绍如何将Scene7视频与Experience Manager中的基础视频组件结合使用。
 
-### AEM 视频与 Scene7 视频的比较  {#aem-video-and-scene-video-comparison}
+### AEM 视频与 Scene7 视频的比较 {#aem-video-and-scene-video-comparison}
 
 下表简单地比较了 AEM 基础视频组件与 Scene7 视频组件所支持的功能：
 
@@ -150,9 +150,9 @@ Scene7 视频组件仅适用于 Scene7 视频。而基础组件则适用于 AEM 
 >
 >必须激活新的视频配置文件以及对其所做的更改，才能进行发布。
 
-1. 在AEM中，点按&#x200B;**[!UICONTROL 工具] > [!UICONTROL 配置控制台]**。
-1. 在&#x200B;**[!UICONTROL 配置控制台]**&#x200B;中，导航到导航树中的&#x200B;**[!UICONTROL 工具> DAM >视频配置文件]**。
-1. 创建一个新的 S7 视频配置文件。在&#x200B;**[!UICONTROL 新建……]**&#x200B;菜单，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择Scene7视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建。]**
+1. 在AEM中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 配置控制台]**。
+1. 在&#x200B;**[!UICONTROL 配置控制台]**&#x200B;中，导航到导航树中的&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL DAM]** > **[!UICONTROL 视频配置文件]**。
+1. 创建一个新的 S7 视频配置文件。在&#x200B;**[!UICONTROL New]**.菜单中，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择Scene7视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
