@@ -10,10 +10,10 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
 workflow-type: tm+mt
 source-wordcount: '1448'
-ht-degree: 48%
+ht-degree: 49%
 
 ---
 
@@ -64,18 +64,19 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
       * **[!UICONTROL amount]** （0-5，效果的强度。）
       * **[!UICONTROL radius]** (0-250，在锐化的对象周围绘制的“锐化线”宽度（以像素为单位）。
 
-         请记住，半径和量参数彼此相对工作。减少半径可通过增加量来补偿。半径允许进行更精细的控制，因为较低值仅锐化边缘像素，而较高值锐化较宽范围的像素。
+      请记住，半径和量参数彼此相对工作。减少半径可通过增加量来补偿。半径允许进行更精细的控制，因为较低值仅锐化边缘像素，而较高值锐化较宽范围的像素。
 
       * **[!UICONTROL 阈值]** （0-255，效果的敏感度。）
 
-         此参数确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素，而滤镜会锐化这些像素。 **[!UICONTROL threshold]**&#x200B;参数有助于避免过度锐化颜色相似的区域，如肤色。 例如，阈值为12时，会忽略肤色亮度的细微变化，以避免添加“杂色”，同时仍会为高对比度区域添加边缘对比度，如睫毛与皮肤相遇的地方。
-      有关如何设置这三个参数的更多信息，包括使用滤镜方面的最佳实践，请参阅以下资源：
+             此参数确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素，而滤镜会锐化这些像素。 **[!UICONTROL threshold]**参数有助于避免过度锐化颜色相似的区域，如肤色。 例如，阈值为12时，会忽略肤色亮度的细微变化，以避免添加“杂色”，同时仍会为高对比度区域添加边缘对比度，如睫毛与皮肤相遇的地方。
+         
+         有关如何设置这三个参数的更多信息，包括使用滤镜方面的最佳实践，请参阅以下资源：
 
-      Experience Manager有关锐化图像的帮助主题。
+         Experience Manager有关锐化图像的帮助主题。
 
-      最佳实践白皮书[在AdobeDynamic Media Classic中锐化图像](/help/assets/assets/sharpening_images.pdf)。
+         最佳实践白皮书[在AdobeDynamic Media Classic中锐化图像](/help/assets/assets/sharpening_images.pdf)。
 
-   * Experience Manager还允许您控制第四个参数：单色(0,1)。 此参数确定是否使用值0分别将USM锐化应用于每个颜色组件，或者使用值1将USM锐化应用于图像亮度/强度。
+      * Experience Manager还允许您控制第四个参数：单色(0,1)。 此参数确定是否使用值0分别将USM锐化应用于每个颜色组件，或者使用值1将USM锐化应用于图像亮度/强度。
 
 
 作为最佳实践，应首先开始设置 USM 锐化 radius 参数。您可以先使用以下 radius 设置：
