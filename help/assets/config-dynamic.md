@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 配置，混合模式
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
 workflow-type: tm+mt
 source-wordcount: '7843'
 ht-degree: 1%
@@ -259,16 +259,18 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 创建PTIFF的默认内存限制为跨所有工作流的3 GB。 例如，您可以在其他工作流暂停时处理一个需要3 GB内存的映像，也可以并行处理10个每个需要300 MB内存的映像。
 内存限制是可配置的，并适合系统资源可用性和正在处理的图像内容类型。 如果您拥有许多大型资产，并且系统上具有足够的内存，则可以提高此限制以确保并行处理图像。
 超过最大内存限制的映像将被拒绝。
-要更改PTIFF创建的内存限制，请导航至&#x200B;**[!UICONTROL 工具>操作> Web控制台> Adobe CQ Scene7 PTiffManager]**，然后更改&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
+要更改PTIFF创建的内存限制，请导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]**，然后更改&#x200B;**[!UICONTROL maxMemory]**&#x200B;值。
 
 ### 设置身份验证{#setting-up-authentication}
 
 在作者上设置复制身份验证，以便将图像复制到Dynamic Media图像交付服务。 首先获取KeyStore，然后将其保存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;用户下，并对其进行配置。 在配置过程中，公司管理员收到了一封欢迎电子邮件，其中包含KeyStore文件和必要的凭据。 如果您未收到此信息，请联系Adobe客户关怀团队。
 
-**设置身份验证**
+**要设置身份验证，请执行以下操作：**
 
 1. 如果您还没有KeyStore文件和密码，请联系Adobe客户关怀团队，以获取该文件和密码。 此信息是配置的必要部分。 它会将密钥关联到您的帐户。
+
 1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用户]**。
+
 1. 在“用户管理”页面上，导航到&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;用户，然后点按以打开。
 
    ![dm复制](assets/dm-replication.png)
@@ -818,7 +820,7 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 要配置Dynamic Media图像服务器设置，请执行以下操作：
 
 1. 在Experience Manager的左上角，点按&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
-1. 在Adobe Experience Manager Web控制台配置页面上，点按&#x200B;**[!UICONTROL OSGi >配置]** ，以列出当前在Experience Manager中运行的所有包。
+1. 在Adobe Experience Manager Web控制台配置页面上，点按&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL Configuration]** ，以列出Experience Manager中当前运行的所有包。
 
    Dynamic Media交付服务器位于列表中的以下名称下：
 
