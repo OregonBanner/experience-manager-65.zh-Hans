@@ -10,10 +10,10 @@ discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 feature: 查看器预设
 role: Business Practitioner, Administrator
 exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 41%
+ht-degree: 46%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 41%
 
 ## 将Dynamic Media查看器预设应用到资产{#applying-a-viewer-preset-to-an-asset}
 
-1. 打开资产并在左边栏中，然后点按&#x200B;**[!UICONTROL 查看器。]**
+1. 打开资产，并点按左边栏中的&#x200B;**[!UICONTROL 查看器]**。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
    * 选择查看器预设后，将显示 **[!UICONTROL URL]** 和&#x200B;**[!UICONTROL 嵌入]**&#x200B;按钮。
-   * 当您在资产的&#x200B;**[!UICONTROL 详细信息视图中选择查看器时，系统会显示大量查看器预设。]**&#x200B;您可以增加可查看的预设数。请参阅[增加显示的查看器预设数量](managing-viewer-presets.md)。
+   * 当您在资产的&#x200B;**[!UICONTROL 详细信息视图]**&#x200B;中选择查看器时，系统会显示大量查看器预设。您可以增加可查看的预设数。请参阅[增加显示的查看器预设数量](managing-viewer-presets.md)。
 
 1. 从左窗格中选择一个查看器，以将其应用到资产，如右窗格中所示。 您还可以[复制 URL 以共享](linking-urls-to-yourwebapplication.md)给其他用户。
 
