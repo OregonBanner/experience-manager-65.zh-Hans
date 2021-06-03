@@ -8,7 +8,7 @@ content-type: reference
 feature: CDN缓存，Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 16%
@@ -35,7 +35,7 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付。 
 
    您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请联系技术支持。
 
-1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL 设置>应用程序设置>常规设置。]**
+1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 1. 在“应用程序常规设置”页面的“服务器”组标题下，找到&#x200B;**[!UICONTROL CDN失效模板]**&#x200B;文本框。
 
 1. 指定用于使CDN（内容交付网络）缓存失效的模板。
@@ -46,8 +46,8 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付。 
 
    如果模板仅包含`<ID>`，则Dynamic Media将填写`https://<server>/is/image` ，其中`<server>`是在“常规设置”中定义的发布服务器名称，&lt;ID>是选定要失效的资产。
 
-1. 在页面的右下角，单击&#x200B;**[!UICONTROL 关闭。]**
-1. 在Dynamic Media Classic用户界面中，选择一个或多个资产，然后单击&#x200B;**[!UICONTROL 文件>无效CDN 。]** 您会看到从您创建的模板和您选择的资产生成的一个或多个URL的列表。它使用“应用程序常规设置”下“已发布的服务器名称”下列出的服务器URL。
+1. 在页面的右下角，单击&#x200B;**[!UICONTROL 关闭]**。
+1. 在Dynamic Media Classic用户界面中，选择一个或多个资产，然后单击&#x200B;**[!UICONTROL 文件]** > **[!UICONTROL 无效CDN]**。 您会看到从您创建的模板和您选择的资产生成的一个或多个URL的列表。 它使用“应用程序常规设置”下“已发布的服务器名称”下列出的服务器URL。
 
    例如，在上一步中设置CDN失效模板后，假设您选择了一个名为`Backpack_B`的图像资产图像。 点按&#x200B;**[!UICONTROL 文件>无效CDN]**&#x200B;时，会在CDN失效用户界面中生成以下URL:
 
@@ -57,7 +57,7 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付。 
 
    单击&#x200B;**[!UICONTROL 继续]**&#x200B;后，将显示一个指示器，用于估算清除缓存需要多长时间。
 
-   如果您选择了多个资产，然后点按&#x200B;**[!UICONTROL 文件>无效CDN]**，则每个资产都会在保存的&#x200B;**[!UICONTROL 模板URL中引用。]** 因此，您可以定义CDN无 **[!UICONTROL 效模]** 板，以引用网站上引用的每个URL图像预设（如产品详细信息和搜索结果）。然后，当您从缓存中选择一个或多个要失效的图像时，URL 会自动填充该界面。
+   如果您选择了多个资产，然后点按&#x200B;**[!UICONTROL 文件>无效CDN]**，则每个资产都会在保存的&#x200B;**[!UICONTROL 模板URL]**&#x200B;中引用。 因此，您可以定义&#x200B;**[!UICONTROL CDN无效模板]** ，以引用网站上引用的每个URL图像预设（如产品详细信息和搜索结果）。 然后，当您从缓存中选择一个或多个要失效的图像时，URL 会自动填充该界面。
 
    >[!NOTE]
    >
