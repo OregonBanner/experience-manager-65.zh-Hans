@@ -8,9 +8,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1699'
 ht-degree: 39%
 
 ---
@@ -71,7 +71,7 @@ Dynamic Media Classic视频组件支持以下格式：
 
 **要配置通用预设，请执行以下操作**:
 
-1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，导航到您的&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;配置，然后单击&#x200B;**[!UICONTROL 编辑。]**
+1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，导航到您的&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;配置，然后单击&#x200B;**[!UICONTROL 编辑]**。
 1. 选择&#x200B;**[!UICONTROL 视频]**&#x200B;选项卡。
 
    >[!NOTE]
@@ -148,8 +148,8 @@ Dynamic Media Classic视频组件仅适用于Dynamic Media Classic视频。 基�
 >
 >必须激活新的视频配置文件以及对其所做的更改，才能进行发布。
 
-1. 在 AEM 中，转到&#x200B;**[!UICONTROL 工具]**，然后选择&#x200B;**[!UICONTROL 配置控制台。]** 在配置控制台中，导航到导 **[!UICONTROL 航树中的工具]**  >  **[!UICONTROL 资产]**  >  **[!UICONTROL 视]** 频配置文件。
-1. 创建新的Dynamic Media Classic视频配置文件。 在&#x200B;**[!UICONTROL 新建……]**&#x200B;菜单，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择Dynamic Media Classic视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建。]**
+1. 在Experience Manager中，转到&#x200B;**[!UICONTROL 工具]**，然后选择&#x200B;**[!UICONTROL 配置控制台]**。 在配置控制台中，导航到导航树中的&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
+1. 创建新的Dynamic Media Classic视频配置文件。 在&#x200B;**[!UICONTROL New]**&#x200B;中。 菜单，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择Dynamic Media Classic视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
