@@ -9,9 +9,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
+source-git-commit: 90737593086c680f0a948f5b9cab6e58767b6373
 workflow-type: tm+mt
-source-wordcount: '6156'
+source-wordcount: '6153'
 ht-degree: 5%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 ## 在Scene7模式下启用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
 
-[默认情况下，Dynamic Media 处于禁用状态。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)要利用Dynamic Media功能，您必须启用它。
+[默认情况下，Dynamic Media 处于禁用状态。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)要利用Dynamic Media功能，您必须启用它。
 
 >[!WARNING]
 Dynamic Media - Scene7模式仅适用于&#x200B;*Experience Manager创作实例*。 因此，必须在Experience Manager创作实例上配置`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager发布实例。*
@@ -76,7 +76,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 功能包18912的安装是&#x200B;*可选*。
 
-功能包18912允许您通过FTP批量摄取资产，或在Experience Manager上将资产从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media -Scene7模式。 它可从[Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)获得。
+功能包18912允许您通过FTP批量摄取资产，或在Experience Manager上将资产从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media -Scene7模式。 它可从[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)获得。
 
 有关更多信息，请参阅[安装批量资产迁移功能包18912](/help/assets/bulk-ingest-migrate.md)。
 
@@ -88,7 +88,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 **要在Cloud Services中创建Dynamic Media配置，请执行以下操作：**
 
-1. 在Experience Manager创作模式下，点按Experience Manager徽标以访问全局导航控制台，然后点按工具图标，然后点按&#x200B;**[!UICONTROL Cloud Services> Dynamic Media配置]**。
+1. 在“Experience Manager创作”模式下，点按Experience Manager徽标以访问全局导航控制台，然后点按工具图标，然后点按&#x200B;**[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置]**。
 1. 在 Dynamic Media 配置浏览器页面的左侧窗格中，点按&#x200B;**[!UICONTROL 全局]**（请勿点按或选择&#x200B;**[!UICONTROL 全局]**&#x200B;左侧的文件夹图标），然后点按&#x200B;**[!UICONTROL 创建]**。
 1. 在&#x200B;**[!UICONTROL 创建Dynamic Media配置]**&#x200B;页面上，输入标题、Dynamic Media帐户电子邮件地址、密码，然后选择您所在的区域。 此信息通过配置电子邮件中的Adobe提供给您。 如果您未收到电子邮件，请联系Adobe客户关怀。
 
@@ -109,7 +109,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
          ![“在Dynamic Media发布后复制元数据”复选框](assets-dm/replicate-metadata-setting.png)
 
-      * **[!UICONTROL 选择]** 性发布此选项允许您控制在Dynamic Media中发布的文件夹。它允许您使用智能裁剪或动态演绎版等功能，或确定哪些文件夹在Experience Manager中仅发布以进行预览。 这些相同的资产是在Dynamic Media中发布的&#x200B;*not*，以便在公共域中交付。<br>您可以在此处的Dynamic Media云配置中 **[!UICONTROL 设置]** 此选项，或者根据需要，也可以在文件夹的属性 **[!UICONTROL 中选择在文件夹级别设置此]**&#x200B;选项。<br>请参阅[使用 Dynamic Media 中的“选择性发布”功能。](/help/assets/selective-publishing.md)<br>如果您稍后更改此配置，或稍后在文件夹级别更改此配置，则这些更改仅会影响您从此时上传的新资产。文件夹中现有资产的发布状态将保持原样，直到您从&#x200B;**[!UICONTROL 快速发布]**&#x200B;或&#x200B;**[!UICONTROL 管理发布]**&#x200B;对话框中手动更改它们为止。
+      * **[!UICONTROL 选择]** 性发布此选项允许您控制在Dynamic Media中发布的文件夹。它允许您使用智能裁剪或动态演绎版等功能，或确定哪些文件夹在Experience Manager中仅发布以进行预览。 这些相同的资产是在Dynamic Media中发布的&#x200B;*not*，以便在公共域中交付。<br>您可以在此处的Dynamic Media云配置中 **[!UICONTROL 设置]** 此选项，或者根据需要，也可以在文件夹的属性 **[!UICONTROL 中选择在文件夹级别设置此]**&#x200B;选项。<br>请参 [阅使用Dynamic Media中的“选择性发布”功能](/help/assets/selective-publishing.md)。<br>如果您稍后更改此配置，或稍后在文件夹级别更改此配置，则这些更改仅会影响您从此时上传的新资产。文件夹中现有资产的发布状态将保持原样，直到您从&#x200B;**[!UICONTROL 快速发布]**&#x200B;或&#x200B;**[!UICONTROL 管理发布]**&#x200B;对话框中手动更改它们为止。
    * **[!UICONTROL 安全预览服务器]**  — 允许您指定安全演绎版预览服务器的URL路径。也就是说，在生成演绎版后，Experience Manager可以安全地访问和预览远程Dynamic Media演绎版(不会将二进制文件发送回Experience Manager实例)。
 除非您有使用自己公司服务器或特殊服务器的特殊安排，否则Adobe建议您按指定的方式保留此设置。
 
@@ -117,7 +117,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL Dynamic Media 同步模式]**
       * **[!UICONTROL 默认启用]**  — 默认情况下，配置将应用于所有文件夹，除非您专门标记文件夹以进行排除。  <!-- you can then deselect the folders that you do not want the configuration applied to.-->
-      * **[!UICONTROL 默认禁用]**  — 在您明确标记选定的文件夹以同步到Dynamic Media之前，不会将配置应用于任何文件夹。要将选定的文件夹标记为同步到Dynamic Media，请选择一个资产文件夹，然后在工具栏中，点按&#x200B;**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉列表中，从以下三个选项中进行选择。 完成后，点按&#x200B;**[!UICONTROL Save]**。 *请记住：如果您选择“同步所有内容”，则这三&#x200B;**个选项**将不可用。* 另请参阅 [在Dynamic Media的文件夹级别使用选择性发布。](/help/assets/selective-publishing.md)
+      * **[!UICONTROL 默认禁用]**  — 在您明确标记选定的文件夹以同步到Dynamic Media之前，不会将配置应用于任何文件夹。要将选定的文件夹标记为同步到Dynamic Media，请选择一个资产文件夹，然后在工具栏中，点按&#x200B;**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉列表中，从以下三个选项中进行选择。 完成后，点按&#x200B;**[!UICONTROL Save]**。 *请记住：如果您选择“同步所有内容”，则这三&#x200B;**[!UICONTROL 个选项]**将不可用。* 另请参阅 [在Dynamic Media的文件夹级别使用选择性发布](/help/assets/selective-publishing.md)。
          * **[!UICONTROL 继承]**  — 文件夹上没有明确的同步值；相反，文件夹会从其上级文件夹之一继承同步值，或继承云配置中的默认模式。通过工具提示，显示继承的节目的详细状态。
          * **[!UICONTROL 为子文件夹启用]**  — 包含此子树中要同步到Dynamic Media的所有内容。特定于文件夹的设置会覆盖云配置中的默认模式。
          * **[!UICONTROL 对子文件夹禁用]**  — 将此子树中的所有内容从同步到Dynamic Media。
@@ -131,7 +131,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。 您的凭据和登录详细信息由Adobe在配置时提供。 如果您没有此信息，请联系技术支持。
 
-   * 在页面右上方的导航栏中，点按&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。
+   * 在页面右上方的导航栏上，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。
 
    * 在“图像服务器发布”页面的“发布上下文”下拉列表中，选择&#x200B;**[!UICONTROL 测试图像服务]**。
    * 对于客户端地址筛选器，点按&#x200B;**[!UICONTROL 添加]**。
@@ -171,7 +171,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 “发布设置”设置可确定默认情况下如何从Dynamic Media交付资产。 如果未指定任何设置，Dynamic Media会根据发布设置中定义的默认设置来传送资产。 例如，如果请求传送的图像不包含分辨率属性，则会生成一个具有默认对象分辨率设置的图像。
 
-要配置发布设置，请执行以下操作：在Dynamic Media Classic中，点按&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。
+要配置发布设置，请执行以下操作：在Dynamic Media Classic中，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。
 
 “图像服务器”屏幕为传送图像建立了默认设置。 有关每个设置的说明，请参阅UI屏幕。
 
@@ -181,11 +181,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * **[!UICONTROL 目录字段的默认值]** — 这些设置与图像的分辨率和默认缩略图类型有关。
 * **[!UICONTROL 色彩管理属性]**  — 这些设置确定使用的ICC颜色配置文件。
 * **[!UICONTROL 兼容性属性]**  — 为了向后兼容，此设置允许文本层中的前导和尾随段落与版本3.6中的段落一样进行处理。
-* **[!UICONTROL 本地化支持]**  — 这些设置允许您管理多个区域设置属性。它还允许您指定区域设置映射字符串，以便定义要在查看器中支持各种工具提示的语言。 有关设置&#x200B;**[本地化支持]**&#x200B;的更多信息，请参阅[设置资产本地化时的注意事项](https://help.adobe.com/en_US/scene7/using/WS997f1dc4cb0179f034e07dc31412799d19a-8000.html)。
+* **[!UICONTROL 本地化支持]**  — 这些设置允许您管理多个区域设置属性。它还允许您指定区域设置映射字符串，以便定义要在查看器中支持各种工具提示的语言。 有关设置&#x200B;**[本地化支持]**&#x200B;的更多信息，请参阅[设置资产本地化时的注意事项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets)。
 
 #### 配置应用程序常规设置{#configuring-application-general-settings}
 
-要打开“应用程序常规设置”页面，请在Dynamic Media Classic全局导航栏中，点按&#x200B;**[!UICONTROL 设置>应用程序设置>常规设置]**。
+要打开“应用程序常规设置”页面，请在Dynamic Media Classic全局导航栏中，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 
 **[!UICONTROL 服务器]**  — 在进行帐户配置时，Dynamic Media会自动为您的公司提供分配的服务器。这些服务器用于为您的网站和应用程序构建URL字符串。 这些URL调用特定于您的帐户。 请勿更改任何服务器名称，除非Adobe客户关怀部门明确指示执行此操作。
 
@@ -248,7 +248,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
 **要编辑支持格式的MIME类型，请执行以下操作：**
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具>常规>CRXDE Lite]**。
+1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左边栏中，导航到以下内容：
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -275,7 +275,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
 **要为不支持的格式添加MIME类型，请执行以下操作：**
 
-1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具>操作> Web控制台]**。
+1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -293,7 +293,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
 1. 在刚刚添加的空文本字段中键入`DWG=image/vnd.dwg`。
 
-   示例`DWG=image/vnd.dwg`仅供说明之用。 您在此处添加的MIME类型可以是任何其他不支持的格式。
+   示例`DWG=image/vnd.dwg`仅用于演示目的。 您在此处添加的MIME类型可以是任何其他不支持的格式。
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
@@ -302,7 +302,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
    此时，您可以关闭已打开Adobe Experience Manager Web Console配置页面的浏览器选项卡。
 
 1. 返回到具有打开的Experience Manager控制台的浏览器选项卡。
-1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具>常规>CRXDE Lite]**。
+1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -329,7 +329,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
 上传文件时，Dynamic Media会自动创建一个文件集，其中包含与活动预设中定义的命名约定相匹配的所有文件。
 
-**配置默认命名**
+##### 配置默认命名
 
 创建默认命名约定，以在任何批集预设方法中使用该命名约定。 在批量集预设定义中选择的默认命名约定可能是贵公司批量生成集所需的全部命名约定。 将创建批集预设，以使用您定义的默认命名约定。 如果公司定义的默认命名存在例外，您可以为特定内容集创建任意数量的批量集预设，并使用所需的替代自定义命名约定。
 
@@ -345,7 +345,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
    您的凭据和登录详细信息由Adobe在配置时提供。 如果您没有此信息，请联系技术支持。
 
-1. 在页面顶部附近的导航栏中，点按&#x200B;**[!UICONTROL 设置>应用程序设置>批集预设>默认命名]**。
+1. 在页面顶部附近的导航栏中，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 批集预设]** > **[!UICONTROL 默认命名]**。
 1. 选择&#x200B;**[!UICONTROL 查看表单]**&#x200B;或&#x200B;**[!UICONTROL 查看代码]**，以指定要查看的方式并输入有关每个元素的信息。
 
    您可以选中&#x200B;**[!UICONTROL 查看代码]**&#x200B;复选框，以查看在表单选择旁边生成的正则表达式值。 如果表单视图因任何原因限制您，则您可以输入或更改这些值以帮助定义命名约定的元素。 如果无法在表单视图中分析您的值，则表单字段将变为不活动。
@@ -364,7 +364,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
    * 点按&#x200B;**[!UICONTROL 另存为]**，然后键入预设的名称。
    * 如果正在编辑现有预设，请点按&#x200B;**[!UICONTROL 保存]**。
 
-**创建批集预设**
+##### 创建批集预设
 
 Dynamic Media使用批量集预设将资产组织为一组图像（替代图像、颜色选项、360旋转），以便在查看器中显示。 批集预设会随Dynamic Media中的资产上传流程自动运行。
 
@@ -378,7 +378,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
    您的凭据和登录详细信息由Adobe在配置时提供。 如果您没有此信息，请联系技术支持。
 
-1. 在页面顶部附近的导航栏中，点按&#x200B;**[!UICONTROL 设置>应用程序设置>批集预设>批集预设]**。
+1. 在页面顶部附近的导航栏中，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 批集预设]** > **[!UICONTROL 批集预设]**。
 
    **[!UICONTROL 查看表单]**（如“详细信息”页面右上角所设置）是默认视图。
 
@@ -387,7 +387,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 1. 在“批集类型”下拉菜单中，选择预设类型。
 1. 执行下列操作之一：
 
-   * 如果您使用之前在&#x200B;**[!UICONTROL 应用程序设置>批量集预设>默认命名]**&#x200B;下设置的默认命名约定，请展开&#x200B;**[!UICONTROL 资产命名约定]**，然后在“文件命名”下拉列表中，点按&#x200B;**[!UICONTROL 默认]**。
+   * 如果您使用之前在&#x200B;**[!UICONTROL 应用程序设置]** > **[!UICONTROL 批量集预设]** > **[!UICONTROL 默认命名]**&#x200B;下设置的默认命名约定，请展开&#x200B;**[!UICONTROL 资产命名约定]**，然后在“文件命名”下拉列表中，点按&#x200B;**[!UICONTROL 默认]**。
 
    * 要在设置预设时定义新的命名约定，请展开&#x200B;**[!UICONTROL 资产命名约定]**，然后在“文件命名”下拉列表中，点按&#x200B;**[!UICONTROL Custom]**。
 
@@ -404,7 +404,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
    激活预设可确保在您将资产上传到Dynamic Media时，会应用批量集预设来生成资产集。
 
-**创建批量集预设以自动生成2D旋转集**
+##### 创建批量集预设以自动生成2D旋转集
 
 您可以使用批集类型&#x200B;**[!UICONTROL 多轴旋转集]**&#x200B;创建可自动生成2D旋转集的方法。 图像分组使用行和列正则表达式，以便图像资产在多维数组中的相应位置中正确对齐。 在多轴旋转集中，没有必须具有的最小或最大行数或列数。
 
@@ -424,9 +424,9 @@ spin-01-01
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
-旋转集的共享资产名称部分的分组将添加到&#x200B;**Match**&#x200B;字段（高亮显示）。 资产名称中包含行和列的变量部分将分别添加到 **行** 和 **列字段** 。
+旋转集的共享资产名称部分的分组将添加到&#x200B;**[!UICONTROL Match]**&#x200B;字段（高亮显示）。 资产名称中包含行和列的变量部分将分别添加到 **[!UICONTROL 行]** 和 **[!UICONTROL 列字段]** 。
 
-上传和发布旋转集后，您可以激活&#x200B;**上传作业选项**&#x200B;对话框中&#x200B;**批集预设**&#x200B;下方 2D 旋转集方法的名称。
+上传和发布旋转集后，您可以激活&#x200B;**[!UICONTROL 上传作业选项]**&#x200B;对话框中&#x200B;**[!UICONTROL 批集预设]**&#x200B;下方 2D 旋转集方法的名称。
 
 **要创建批量集预设以自动生成2D旋转集，请执行以下操作：**
 
@@ -434,7 +434,7 @@ spin-01-01
 
    您的凭据和登录详细信息由Adobe在配置时提供。 如果您没有此信息，请联系技术支持。
 
-1. 在页面顶部附近的导航栏中，点按&#x200B;**[!UICONTROL 设置] > [!UICONTROL 应用程序设置] > [!UICONTROL 批集预设] > [!UICONTROL 批集预设]**。
+1. 在页面顶部附近的导航栏中，点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 批集预设]** > **[!UICONTROL 批集预设]**。
 
    **[!UICONTROL 查看表单]**（如“详细信息”页面右上角所设置）是默认视图。
 
@@ -469,7 +469,7 @@ spin-01-01
 
    `\w+-\w+-C(\d+)`
 
-   上述示例仅供说明之用。 您可以根据需要创建正则表达式。
+   上述示例仅供演示之用。 您可以根据需要创建正则表达式。
 
    >[!NOTE]
    如果行和列正则表达式的组合无法确定资产在多维旋转集数组中的位置，则不会将资产添加到该集。 还记录错误。
@@ -591,41 +591,17 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
 如果您使用Dynamic Media进行成像或视频，或者同时使用视频或视频，则可以按原样使用Adobe提供的默认过滤器。 默认情况下，以下过滤器处于活动状态：
 
-<table>
- <tbody>
-  <tr>
-   <td> </td>
-   <td><strong>筛选器</strong></td>
-   <td><strong>Mime类型</strong></td>
-   <td><strong>演绎版</strong></td>
-  </tr>
-  <tr>
-   <td>Dynamic Media图像交付</td>
-   <td><p>过滤图像</p> <p>筛选集</p> <p> </p> </td>
-   <td><p>以<strong>image/</strong>开头</p> <p>包含<strong>application/</strong>，以<strong>set</strong>结尾。</p> </td>
-   <td>现成的“滤镜图像”（适用于单个图像资产，包括交互式图像）和“滤镜集”（适用于旋转集、图像集、混合媒体集和轮播集）将：
-    <ul>
-     <li>从复制中排除原始图像和静态图像演绎版。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>Dynamic Media视频交付</td>
-   <td>filter-video</td>
-   <td>以<strong>video/</strong>开头</td>
-   <td>现成的“filter-video”将：
-    <ul>
-     <li>从复制中排除原始视频和静态缩略图呈现。<br /> <br /> </li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+|  | 筛选器 | Mime类型 | 演绎版 |
+| --- | --- | --- | --- |
+| Dynamic Media图像交付 | filter-image<br>filter-sets | 以&#x200B;**image/**<br>&#x200B;开头包含&#x200B;**applications/**，以&#x200B;**set**&#x200B;结尾。 | 现成的“filter-images”(适用于单个图像资产（包括交互式图像）和“filter-sets”（适用于旋转集、图像集、混合媒体集和轮播集）将：<br>·从复制中排除原始图像和静态图像演绎版。 |
+| Dynamic Media视频交付 | filter-video | 以&#x200B;**video/**&#x200B;开头 | 现成的“筛选视频”将：<br>·从复制中排除原始视频和静态缩略图呈现。 |
 
 >[!NOTE]
 过滤器应用于MIME类型，并且不能特定于路径。
 
 #### 为复制自定义资产筛选器{#customizing-asset-filters-for-replication}
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具>常规>CRXDE Lite]**。
+1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左侧文件夹树中，导航到`/etc/replication/agents.author/publish/jcr:content/damRenditionFilters`以查看过滤器。
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
@@ -648,31 +624,16 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
    可用于筛选复制字符的字符包括：
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>要使用的字符</strong></td>
-   <td><strong>如何筛选用于复制的资产</strong></td>
-  </tr>
-  <tr>
-   <td>*</td>
-   <td>通配符</td>
-  </tr>
-  <tr>
-   <td>+</td>
-   <td>包括用于复制的资产。</td>
-  </tr>
-  <tr>
-   <td>-</td>
-   <td>从复制中排除资产。</td>
-  </tr>
- </tbody>
-</table>
+   | 要使用的字符 | 如何筛选用于复制的资产 |
+   | --- | --- |
+   | * | 通配符 |
+   | + | 包括用于复制的资产 |
+   | - | 从复制中排除资产 |
 
-导航至 `content/dam/<locate your asset>/jcr:content/renditions`.
+   导航至 `content/dam/<locate your asset>/jcr:content/renditions`.
 
-下图是资产演绎版的示例。
+   下图是资产演绎版的示例。
 
-![chlimage_1-4](assets/chlimage_1-4.png)
+   ![chlimage_1-4](assets/chlimage_1-4.png)
 
-如果只想复制原件，则输入`+original`。
+   如果只想复制原件，则输入`+original`。
