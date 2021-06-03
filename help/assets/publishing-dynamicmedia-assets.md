@@ -10,7 +10,7 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: Business Practitioner, Administrator
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: 发布
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 14%
@@ -19,7 +19,7 @@ ht-degree: 14%
 
 # 发布 Dynamic Media 资产 {#publishing-dynamic-media-assets}
 
-要发布Dynamic Media资产，请选择已上传的资产，然后点按&#x200B;**[!UICONTROL 发布]**&#x200B;或&#x200B;**[!UICONTROL 快速发布。]** 发布Dynamic Media资产后，您便可以通过URL或在页面上嵌入代码，将这些资产包含在网页中。
+要发布Dynamic Media资产，请选择已上传的资产，然后点按&#x200B;**[!UICONTROL 发布]**&#x200B;或&#x200B;**[!UICONTROL 快速发布]**。 发布Dynamic Media资产后，您便可以通过URL或在页面上嵌入代码，将这些资产包含在网页中。
 
 您还可以立即发布上传的资产，无需任何用户干预。 请参阅[配置Dynamic Media - Scene7模式。](config-dms7.md)
 或者，您也可以使用文件夹级别的选择性发布功能，将资产有选择地发布到Dynamic Media或AEM中，两者 **[!UICONTROL 相互]** 排斥。请参阅[使用 Dynamic Media 中的“选择性发布”功能](/help/assets/selective-publishing.md)。
