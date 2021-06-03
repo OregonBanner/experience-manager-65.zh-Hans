@@ -11,7 +11,7 @@ docset: aem65
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 21%
@@ -38,7 +38,7 @@ ht-degree: 21%
 **使用软件界面预览资产**
 
 1. 从&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;的&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，点按&#x200B;**[!UICONTROL Assets]**，然后点按&#x200B;**[!UICONTROL Files]**&#x200B;以访问资产。
-1. 在页面的右上角附近，从&#x200B;**[!UICONTROL 视图]**&#x200B;下拉列表中，点按&#x200B;**[!UICONTROL 列表视图。]**
+1. 在页面的右上角附近，从&#x200B;**[!UICONTROL 视图]**&#x200B;下拉列表中，点按&#x200B;**[!UICONTROL 列表视图]**。
 1. （可选）使用&#x200B;**[!UICONTROL 类型]**&#x200B;列按要预览的类型对资产进行排序。
 1. 在&#x200B;**[!UICONTROL 标题]**&#x200B;列下，单击要预览的资产的标题名称（而非缩略图图像）。
 1. 根据您单击的资产类型，执行以下任一操作：
