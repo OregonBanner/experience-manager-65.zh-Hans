@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: f0398d63aa7d9c994c56217cce52b3fb4de04769
+source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3727'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,13 @@ ht-degree: 1%
 [!DNL Adobe Experience Manager] 6.5 Service Pack每季度提供新功能、客户请求的增强功能以及性能、稳定性和安全性改进。每季度提供的服务使访问和采用新功能和创新变得轻松。
 
 本文重点介绍最新Service Pack中包含的功能、前6.5 Service Pack中包含的[关键功能以及自上一个Service Pack](#key-releases-since-last-sp)版本以来的[关键版本。](#key-features-previous-service-packs)
+
+>[!NOTE]
+>
+>从AEM Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了OpenJDK内部版本的[!DNL Azul Zulu] ，该版本符合Java SE的标准。
+>[!DNL Azul Zulu] JDK的支持也通过Adobe提供给[!DNL Experience Manager]客户。
+>您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载相关版本的[!DNL Azul Zulu JDKs]。
+>由Oracle分发的AdobeJava技术的使用权限将在2022年12月底之前过期。 [!DNL Experience Manager] 我们鼓励客户在此日期之前规划并实 [!DNL Azul Zulu] 施对JDK的使用。有关[!DNL Oracle Java]技术和[!DNL Azul Zulu]技术使用的更多信息，请参阅相关的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -78,6 +85,36 @@ ht-degree: 1%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms]的附加组件包将在计划的[!DNL Experience Manager] Service Pack版本发布后的一周内提供。
+
+### 支持[!DNL Azul Zulu OpenJDK] {#support-azul-zulu}
+
+现在，您可以在OSGi部署中使用[!DNL Azul Zulu]内部版本[!DNL OpenJDK]来开发和运行应用程序，[!DNL Experience Manager Forms]为。 有关更多信息，请参阅[Experience Manager6.5 Service Pack 9发行说明](sp-release-notes.md)和[技术要求](../sites-deploying/technical-requirements.md)。
+
+### 能够使用[!UICONTROL 分配任务] {#group-notification-email}向组发送通知电子邮件
+
+您现在可以使用“分配任务”工作流步骤向组电子邮件地址发送通知电子邮件。
+
+### 能够在修改源交互式通信{#retrieve-draft-after-source-modifications}后检索交互式通信草稿
+
+现在，在对源交互式通信进行更改后，您可以检索另存为草稿的交互式通信。
+
+### 设置自定义域名，以加载、渲染和验证reCAPTCHA服务{#set-custom-domain-name-recaptcha}
+
+reCAPTCHA服务使用`https://www.recaptcha.net/`作为默认域。 现在，您可以修改设置以设置`https://www.google.com/`或任何用于加载、渲染和验证reCAPTCHA服务的自定义域名。
+
+### [!UICONTROL 调用表单数据模型服务]工作流步骤{#input-data-enhancements-fdm}的输入数据增强
+
+在[!UICONTROL 调用表单数据模型服务]工作流步骤中选择表单数据模型和服务时，需为输入数据指定服务参数。
+
+如果选择[!UICONTROL 相对于负载]选项以将文件作为服务参数附加，则现在可以指定包含该文件的文件夹路径，而不是实际的文件名。 定义文件夹名称（而不是文件附件名称）可让您重复使用工作流模型。 不要将工作流模型限制为单个文件附件名称。
+
+### 能够在记录文档模板{#use-multiple-master-pages-dor-template}中使用多个主控页面
+
+现在，您可以在记录文档模板中使用多个主控页面。 因此，您现在可以在模板的标题页面和其他页面上具有不同的页眉、页脚、字体、徽标信息。
+
+### 记录文档{#support-page-breaks-dor}中的支持分页符
+
+您现在可以向记录文档添加分页符。 因此，如果某个面板在页面中损坏，您可以添加一个分页符，以将该面板移动到记录文档中的新页面。
 
 ## 以前的[!DNL Experience Manager] 6.5 Service Pack {#key-features-previous-service-packs}中的主要功能
 
