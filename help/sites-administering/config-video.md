@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 exl-id: 9c97f99e-d6ef-4817-8b2a-201ab22f2b38
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%
@@ -81,7 +81,7 @@ ht-degree: 1%
    >
    >叠加并编辑整个配置文件节点，而不仅仅是需要修改的属性。 此类资源不会通过SlingResourceMebarer进行解析。
 
-4. 如果更改了其中任一属性，请单击&#x200B;**[!UICONTROL 全部保存。]**
+4. 如果更改了其中任一属性，请单击&#x200B;**[!UICONTROL Save All]**。
 
 >[!NOTE]
 >
