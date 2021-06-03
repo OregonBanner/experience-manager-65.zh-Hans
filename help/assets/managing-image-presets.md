@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 图像预设
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '3830'
-ht-degree: 28%
+source-wordcount: '3831'
+ht-degree: 29%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 28%
 
 ## 管理Dynamic Media图像预设{#managing-image-presets-1}
 
-您可以在AEM中管理图像预设，方法是点按或单击AEM徽标以访问全局导航控制台，然后点按或单击工具图标，然后导航到&#x200B;**[!UICONTROL Assets >图像预设。]**
+您可以在AEM中管理图像预设，方法是点按或单击AEM徽标以访问全局导航控制台，然后点按或单击工具图标，然后导航到&#x200B;**[!UICONTROL Assets >图像预设]**。
 
 ![6_5_tools-assets-imagepresets](assets/6_5_tools-assets-imagepresets.png)
 
@@ -80,11 +80,11 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 * Adobe Illustrator文档由包含多层的单个页面组成。 每个层都作为PNG子资产提取，位于主Illustrator资产下。
 * PDF文档由一个或多个页面组成。 每个页面都作为单页PDF子资产提取，位于主多页PDF文档下。
 
-子资产由`Create Sub Asset process`组件在整个`DAM Update Asset`工作流中创建。 要在工作流中查看此流程组件，请点按&#x200B;**[!UICONTROL 工具>工作流>模型> DAM更新资产>编辑。]**
+子资产由`Create Sub Asset process`组件在整个`DAM Update Asset`工作流中创建。 要在工作流中查看此流程组件，请点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新资产]** > **[!UICONTROL 编辑]**。
 
 另请参阅[查看多页文件的页面](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)。
 
-在打开资产时，您可以查看子资产或页面，点按内容菜单，然后选择&#x200B;**[!UICONTROL 子资产]**&#x200B;或&#x200B;**[!UICONTROL 页面。]** 子资产是真实资产。即，PDF页面由`Create Sub Asset`工作流组件提取。 然后，它们将作为`page1.pdf`、`page2.pdf`等存储在主资产下方。 存储完这些值后，`DAM Update Asset`工作流会处理它们。
+在打开资产时，您可以查看子资产或页面，点按内容菜单，然后选择&#x200B;**[!UICONTROL 子资产]**&#x200B;或&#x200B;**[!UICONTROL 页面]**。 子资产是真实资产。 即，PDF页面由`Create Sub Asset`工作流组件提取。 然后，它们将作为`page1.pdf`、`page2.pdf`等存储在主资产下方。 存储完这些值后，`DAM Update Asset`工作流会处理它们。
 
 要使用Dynamic Media预览AI、EPS或PDF文件并生成动态呈现，需要执行以下处理步骤：
 
@@ -105,7 +105,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 可通过`DAM Update Asset`工作流访问`Rasterize PDF/AI Image Preview Rendition`流程组件选项。
 
-点按左上角的Adobe Experience Manager，导航到&#x200B;**[!UICONTROL 工具>工作流>模型。]** 在工作流模型页面中，选择 **[!UICONTROL DAM更新资产]**，然后点按工具栏中的 **[!UICONTROL 编辑。]** 在DAM更 [!UICONTROL 新资产] 工作流页面上，双击流程组 `Rasterize PDF/AI Image Preview Rendition` 件以打开其步骤属性对话框。
+点按左上角的Adobe Experience Manager，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。 在“工作流模型”页面中，选择&#x200B;**[!UICONTROL DAM更新资产]**，然后在工具栏中点按&#x200B;**[!UICONTROL 编辑]**。 在[!UICONTROL DAM更新资产]工作流页面上，双击`Rasterize PDF/AI Image Preview Rendition`流程组件以打开其步骤属性对话框。
 
 #### 栅格化PDF/AI图像预览呈现版本选项{#rasterize-pdf-ai-image-preview-rendition-options}
 
@@ -203,7 +203,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 >* EPS 文件的缩略图大小可在 **[!UICONTROL EPS 缩略图]**&#x200B;步骤中“缩略图”的&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡下进行配置。
    >
    >
-* 视频的缩略图大小在&#x200B;**[!UICONTROL FFmpeg缩略图]**&#x200B;步骤的&#x200B;**[!UICONTROL Process]**&#x200B;选项卡的&#x200B;**[!UICONTROL Arguments.]**&#x200B;下进行配置
+* 可在&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡下的&#x200B;**[!UICONTROL 流程]**&#x200B;选项卡中，通过 **[!UICONTROL FFmpeg 缩略图]**&#x200B;步骤配置视频的缩略图大小。
 
 >
 
@@ -211,12 +211,12 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 **要配置图像缩略图大小**:
 
-1. 点按&#x200B;**[!UICONTROL 工具>工作流>模型> DAM更新资产>编辑。]**
-1. 点按&#x200B;**[!UICONTROL Dynamic Media处理图像资产]**&#x200B;步骤，然后点按或单击&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。 根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定。]**
+1. 点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]** > **[!UICONTROL DAM更新资产]** > **[!UICONTROL 编辑]**。
+1. 点按&#x200B;**[!UICONTROL Dynamic Media处理图像资产]**&#x200B;步骤，然后点按或单击&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。 根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定]**。
 
    ![6_5_dynamicmediaprocessimageassets-thumbnailstab](assets/6_5_dynamicmediaprocessimageassets-thumbnailstab.png)
 
-1. 点按&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤，然后点按&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定。]**
+1. 点按&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤，然后点按&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡。根据需要更改缩略图大小，然后点按&#x200B;**[!UICONTROL 确定]**。
 
    >[!NOTE]
    >
@@ -226,7 +226,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 ### 增加或减少显示{#increasing-or-decreasing-the-number-of-image-presets-that-display}的Dynamic Media图像预设数
 
-在预览资产时，您创建的图像预设可以作为动态演绎版使用。 从&#x200B;**[!UICONTROL 详细信息视图>演绎版查看资产时，AEM会显示各种动态演绎版。]** 您可以增加或减少显示的演绎版限制。
+在预览资产时，您创建的图像预设可以作为动态演绎版使用。 从&#x200B;**[!UICONTROL 详细信息视图>演绎版]**&#x200B;查看资产时，AEM会显示各种动态演绎版。 您可以增加或减少显示的演绎版限制。
 
 **要增加或减少显示的Dynamic Media图像预设数**:
 
@@ -241,7 +241,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
    ![chlimage_1-495](assets/chlimage_1-495.png)
 
 1. 在limit属性中，将数字更改为所需的数字，例如`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
-1. 点按&#x200B;**[!UICONTROL 全部保存。]**
+1. 点按&#x200B;**[!UICONTROL 保存全部]**。
 
 ## 创建Dynamic Media图像预设{#creating-image-presets}
 
@@ -263,8 +263,8 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 **要创建Dynamic Media图像预设，请执行以下操作**:
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具>资产>图像预设。]**
-1. 单击&#x200B;**[!UICONTROL 创建。]**&#x200B;此时将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具>资产>图像预设]**。
+1. 单击&#x200B;**[!UICONTROL 创建]**。此时将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
 
@@ -304,7 +304,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 * **[!UICONTROL 启用简单锐化]** - 请勿选择&#x200B;**[!UICONTROL 启用简单锐化]**（此锐化滤镜提供的控制度低于“钝化蒙版”设置）。
 
-* **[!UICONTROL 锐化：重新取样模式]**  — 选择 **[!UICONTROL 两次立方。]**
+* **[!UICONTROL 锐化：重新取样模式]**  — 选择 **[!UICONTROL 两次立方]**。
 
 #### “基本”选项卡选项{#basic-tab-options}
 
@@ -488,11 +488,11 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 ## 编辑图像预设{#modifying-image-presets}
 
-1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具>资产>图像预设。]**
+1. 在AEM中，点按AEM徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**。
 
    ![6_5_imagepreset-editpreset](assets/6_5_imagepreset-editpreset.png)
 
-1. 选择一个预设，然后单击&#x200B;**[!UICONTROL 编辑。]**&#x200B;此时将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
+1. 选择预设，然后单击&#x200B;**[!UICONTROL 编辑]**。将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
 1. 进行更改，然后单击&#x200B;**[!UICONTROL 保存]**&#x200B;以保存更改，或单击&#x200B;**[!UICONTROL 取消]**&#x200B;以取消更改。
 
 ## 发布Dynamic Media图像预设{#publishing-image-presets}
@@ -503,14 +503,14 @@ Adobe Illustrator的文件格式是PDF的变体。 在AEM Assets，主要区别�
 
 **要在Dynamic Media — 混合模式中发布图像预设，请执行以下操作**:
 
-1. 在AEM中，点按或单击AEM徽标以访问全局导航控制台，然后点按或单击工具图标，然后导航到&#x200B;**[!UICONTROL Assets >图像预设。]**
-1. 从图像预设列表中选择一个或多个图像预设，然后单击或点按&#x200B;**[!UICONTROL 发布。]**
+1. 在AEM中，点按或单击AEM徽标以访问全局导航控制台，然后点按或单击工具图标，然后导航到&#x200B;**[!UICONTROL Assets]** > **[!UICONTROL 图像预设]**。
+1. 从图像预设列表中选择一个或多个图像预设，然后单击或点按&#x200B;**[!UICONTROL 发布]**。
 1. 发布图像预设后，状态将从未发布更改为已发布。
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
 ## 删除Dynamic Media图像预设{#deleting-image-presets}
 
-1. 在AEM中，点按或单击AEM徽标以访问全局导航控制台。
-1. 点按&#x200B;**[!UICONTROL 工具]**&#x200B;图标，然后导航到&#x200B;**[!UICONTROL 资产>图像预设。]**
+1. 在Experience Manager中，点按或单击AEM徽标以访问全局导航控制台。
+1. 点按&#x200B;**[!UICONTROL 工具]**&#x200B;图标，然后导航到&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**。
 1. 选择预设，然后单击&#x200B;**[!UICONTROL 删除]**。 Dynamic Media会向您确认是否要删除它。 点按&#x200B;**[!UICONTROL 删除]**&#x200B;以删除，或点按&#x200B;**[!UICONTROL 取消]**&#x200B;以中止。
