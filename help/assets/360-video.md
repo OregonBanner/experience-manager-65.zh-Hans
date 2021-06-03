@@ -11,7 +11,7 @@ docset: aem65
 feature: 360 VR 视频
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 **要上传资产以与360视频查看器一起使用，请执行以下操作：**
 
 1. 创建了专用于360视频资产的文件夹。
-1. [将自适应视频配置文件应用到该文件夹。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
+1. [将自适应视频配置文件应用到该文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
 
    与标准非360视频内容相比，渲染360视频内容对源视频分辨率和编码呈现分辨率提出了更高的要求。
 
@@ -99,9 +99,8 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 如果您对360视频满意，可以发布该视频。
 
-请参阅[在网页上嵌入视频查看器或图像查看器。
-](/help/assets/embed-code.md)请参阅[将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
-请参阅[将Dynamic Media Assets添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
+请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。请参阅[将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
+请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **要预览360个视频，请执行以下操作：**
 
@@ -111,7 +110,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
    点按360视频资产，以便预览视频。
 
-1. 在预览页面的左上角附近，点按下拉列表，然后选择&#x200B;**[!UICONTROL 查看器。]**
+1. 在预览页面的左上角附近，点按下拉列表，然后选择&#x200B;**[!UICONTROL 查看器]**。
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
@@ -122,13 +121,13 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
    ![6_5_360video-preview-video360-socialA 360 ](assets/6_5_360video-preview-video360-social.png)*视频屏幕截图。*
 
-   * 从查看器列表中，点按&#x200B;**[!UICONTROL Video360VR。]**
+   * 从查看器列表中，点按&#x200B;**[!UICONTROL Video360VR]**。
 
       虚拟现实(VR)视频是使用虚拟现实耳机访问的沉浸式视频内容。 与普通视频一样，在视频被录制或捕获时，您会在开始时使用360度摄像机创建VR视频。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR视频屏幕截图。*
 
-1. 在预览页面的右上角附近，点按&#x200B;**[!UICONTROL 关闭。]**
+1. 在预览页面的右上角附近，点按&#x200B;**[!UICONTROL 关闭]**。
 
 ## 发布360视频{#publishing-video}
 
@@ -137,4 +136,4 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 有关如何发布360视频的详细信息，请参阅[发布Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md)。
 另请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 另请参阅[将URL关联到Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
-另请参阅[将Dynamic Media Assets添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
+另请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
