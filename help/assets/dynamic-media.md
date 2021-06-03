@@ -10,22 +10,22 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: Business Practitioner, Administrator
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: 协作，资产管理
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 43%
+source-wordcount: '424'
+ht-degree: 45%
 
 ---
 
 # 使用 Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media 有助于按需提供丰富的产品销售和市场营销可视资产，还能根据 Web、移动设备、社交网站等不同销售渠道的各种需求自动调整资产供应情况。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)Dynamic Media使用一组主源资产，通过其全球、可扩展、性能优化的网络，实时生成并传送多种丰富内容变体。
+[Dynamic Media 有助于按需提供丰富的产品销售和市场营销可视资产，还能根据 Web、移动设备、社交网站等不同销售渠道的各种需求自动调整资产供应情况。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)Dynamic Media使用一组主源资产，通过其全球、可扩展、性能优化的网络，实时生成并传送多种丰富内容变体。
 
 Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和视频。Dynamic Media 以独特的方式整合 Adobe Experience Manager 数字资产管理（资产）解决方案的工作流，从而简化了数字营销活动管理流程。
 
->[!NOTE]
+<!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
->[使用Adobe Experience Manager和Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html)上提供了社区文章。
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
 ## Dynamic Media 的功能 {#what-you-can-do-with-dynamic-media}
 
@@ -50,7 +50,7 @@ Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和�
 
 >[!NOTE]
 >
->要了解使用Dynamic Media与将Dynamic Media Classic与AEM集成之间的差异，请参阅[Dynamic Media Classic集成与Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
+>要了解使用Dynamic Media与将Dynamic Media Classic与Adobe Experience Manager集成之间的差异，请参阅[Dynamic Media Classic集成与Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
 
 ## Dynamic Media启用与Dynamic Media禁用{#dynamic-media-on-versus-dynamic-media-off}
 
