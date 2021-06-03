@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 52%
@@ -43,7 +43,7 @@ ht-degree: 52%
 
 ## Dynamic Media 组件 {#dynamic-media-components}
 
-[!UICONTROL 动态] 媒体和 [!UICONTROL 交] 互式媒体可在Sidekick下的  Dynamic Media **[!UICONTROL 下找到。]**&#x200B;对于任何交互式资产（例如交互式视频、交互式图像或传送集），请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。对于所有其他Dynamic Media组件，请使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;组件。
+[!UICONTROL 动态] 媒体和  交互式媒体可在Sidekick下  的Dynamic Media **[!UICONTROL 下找到]**。对于任何交互式资产（例如交互式视频、交互式图像或传送集），请使用&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。对于所有其他Dynamic Media组件，请使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;组件。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
