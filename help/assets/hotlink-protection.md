@@ -10,7 +10,7 @@ discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 role: Business Practitioner, Administrator
 exl-id: 698e8bdb-9b31-49ab-8560-26b05109bb23
 feature: 配置
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
