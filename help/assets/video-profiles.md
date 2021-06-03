@@ -11,10 +11,10 @@ docset: aem65
 feature: 视频配置文件
 role: Business Practitioner, Administrator
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '3709'
-ht-degree: 33%
+source-wordcount: '3704'
+ht-degree: 36%
 
 ---
 
@@ -158,11 +158,11 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 **要为自适应流播放创建视频配置文件**,
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 单击或点按&#x200B;**[!UICONTROL 创建]**&#x200B;以添加新的视频配置文件。
 
 1. 输入配置文件的名称和描述。
-1. 在创建/编辑视频编码预设页面中，点按&#x200B;**[!UICONTROL 添加视频编码预设。]**
+1. 在创建/编辑视频编码预设页面中，点按&#x200B;**[!UICONTROL 添加视频编码预设]**。
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
 点按每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 1. 在“视频大小”标题下，确保选中&#x200B;**[!UICONTROL 保持宽高比]**。
@@ -170,7 +170,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 1. 执行下列操作之一：
 
-   * 在&#x200B;**[!UICONTROL 宽度]**&#x200B;字段中，输入&#x200B;**[!UICONTROL auto。]** 在“高 **** 度”字段中，输入像素值。
+   * 在&#x200B;**[!UICONTROL Width]**&#x200B;字段中，输入&#x200B;**[!UICONTROL auto]**。 在&#x200B;**[!UICONTROL Height]**&#x200B;字段中，输入以像素为单位的值。
 
    * 要帮助您可视化视频大小，请点按&#x200B;**[!UICONTROL Height]**&#x200B;右侧的信息图标(i)以打开“大小计算器”页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;设置所需的视频尺寸（由蓝框表示）。 完成后，点按右上角的 **[!UICONTROL X]**。
 
@@ -181,7 +181,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    * 继续下一步。
 
 1. （可选）要向将应用此配置文件的视频添加视频智能裁剪，请执行以下操作：
-   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，点按&#x200B;**[!UICONTROL 新增。]**
+   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，点按&#x200B;**[!UICONTROL 新增]**。
    * 在“名称”字段中，键入裁剪比例的名称，以帮助您轻松识别它。
    * 从&#x200B;**[!UICONTROL 裁剪比率]**&#x200B;下拉列表中，选择要使用的比率。
 
@@ -211,17 +211,17 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 **要为渐进式流播放创建视频配置文件，请执行以下操作：**
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;以添加新的视频配置文件。
 1. 输入配置文件的名称和描述。
-1. 在创建/编辑视频编码预设页面中，点按&#x200B;**[!UICONTROL 添加视频编码预设。]**
+1. 在创建/编辑视频编码预设页面中，点按&#x200B;**[!UICONTROL 添加视频编码预设]**。
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
 点按每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
-1. （可选）在“视频大小”标题下，取消选中&#x200B;**[!UICONTROL 保持宽高比。]**
+1. （可选）在“视频大小”标题下，取消选中&#x200B;**[!UICONTROL 保持宽高比]**。
 1. 执行以下操作：
-   * 在&#x200B;**[!UICONTROL Width]**&#x200B;字段中，输入&#x200B;**[!UICONTROL auto.]**
+   * 在&#x200B;**[!UICONTROL Width]**&#x200B;字段中，输入&#x200B;**[!UICONTROL auto]**。
    * 在&#x200B;**[!UICONTROL Height]**字段中，输入以像素为单位的值。
-要帮助您可视化视频大小，请点按“高度”的信息图标以打开**[!UICONTROL 大小计算器]**&#x200B;页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面可进一步按需设置视频尺寸（蓝框）。 完成后，在对话框的右上角，点按&#x200B;**[!UICONTROL X.]**
+要帮助您可视化视频大小，请点按“高度”的信息图标以打开**[!UICONTROL 大小计算器]**&#x200B;页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面可进一步按需设置视频尺寸（蓝框）。 完成后，在对话框的右上角，点按&#x200B;**[!UICONTROL X]**。
 1. （可选）执行以下操作之一：
 
    * 点按&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，并确保选中&#x200B;**[!UICONTROL 使用默认值]**&#x200B;复选框（推荐）。
@@ -237,7 +237,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 1. （可选）要向将应用此配置文件的视频添加视频智能裁剪，请执行以下操作：
 
-   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，点按&#x200B;**[!UICONTROL 新增。]**
+   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，点按&#x200B;**[!UICONTROL 新增]**。
    * 在“名称”字段中，键入裁剪比例的名称，以帮助您轻松识别它。
    * 从&#x200B;**[!UICONTROL 裁剪比率]**&#x200B;下拉列表中，选择要使用的比率。
 
@@ -256,7 +256,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 **要使用自定义添加的视频编码参数**:
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在CRXDE Lite页面的左侧资源管理器面板中，导航到以下内容：
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
@@ -308,11 +308,11 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 ![chlimage_1-516](assets/chlimage_1-516.png)
 
-1. 在页面的右下角附近，点按&#x200B;**[!UICONTROL 添加。]**
+1. 在页面的右下角附近，点按&#x200B;**[!UICONTROL 添加]**。
 1. 执行下列操作之一：
 
    * 重复步骤3和4，以向视频编码配置文件中添加其他参数。
-   * 在页面的左上角附近，点按&#x200B;**[!UICONTROL 全部保存。]**
+   * 在页面的左上角附近，点按&#x200B;**[!UICONTROL 全部保存]**。
 
 1. 在CRXDE Lite页面的左上角，点按&#x200B;**[!UICONTROL Back Home]**&#x200B;图标以返回到AEM。
 
@@ -328,22 +328,22 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 **要编辑视频配置文件**:
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL 编辑。]**
+1. 在工具栏中，点按&#x200B;**[!UICONTROL 编辑]**。
 1. 在“视频编码配置文件”页面上，根据需要编辑名称和描述。
 1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。点按信息图标以获取自适应流播放的说明。 （如果正在编辑渐进式视频配置文件，请勿选中此复选框。）
 1. 在“视频编码预设”标题下，添加、编辑或删除构成该配置文件的视频编码预设。
 
    点按“基本”和“高级”选项卡上每个选项旁 **[!UICONTROL 边的信息图标]****** ，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 
-1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save.]**
+1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save]**。
 
 ### 复制视频配置文件{#copying-a-video-encoding-profile}
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL Copy.]**
+1. 在工具栏中，点按&#x200B;**[!UICONTROL 复制]**。
 1. 在“视频编码配置文件”页面上，输入配置文件的新名称。
 1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 点按信息图标以获取自适应流播放的说明。 （如果要复制渐进式视频配置文件，请勿选中此复选框。）
 
@@ -352,14 +352,14 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
    点按基本和高级选项卡上每个选项旁边的信息图标，以了解推荐的设置和说明。
 
-1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save.]**
+1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save]**。
 
 ### 删除视频配置文件{#deleting-a-video-encoding-profile}
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个或多个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL 删除。]**
-1. 点按&#x200B;**[!UICONTROL 确定。]**
+1. 在工具栏中，点按&#x200B;**[!UICONTROL 删除]**。
+1. 点按&#x200B;**[!UICONTROL 确定]**。
 
 ## 将视频配置文件应用到文件夹{#applying-a-video-profile-to-folders}
 
@@ -377,7 +377,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 ### 将视频配置文件应用到特定文件夹{#applying-video-profiles-to-specific-folders}
 
-您可以从“工具”菜单中将视频配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”。]**&#x200B;本节将介绍这两种将视频配置文件应用到文件夹的方法。
+您可以从“工具”菜单中将视频配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”]**。 本节将介绍这两种将视频配置文件应用到文件夹的方法。
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
@@ -385,16 +385,15 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 #### 通过Profiles用户界面{#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}将视频配置文件应用到文件夹
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 选择您要应用到一个或多个文件夹的视频配置文件。
-1. 点按&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按&#x200B;**[!UICONTROL 应用。]**&#x200B;在&#x200B;**[!UICONTROL 卡片视图中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。]**
-您可以 [监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
+1. 点按&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按&#x200B;**[!UICONTROL 应用]**。 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
 #### 从“属性” {#applying-video-profiles-to-folders-from-properties}将视频配置文件应用到文件夹
 
 1. 点按或单击AEM徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到要将视频配置文件应用到的文件夹。
-1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性。]**
-1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
+1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
 您可以监 [视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
@@ -405,9 +404,9 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 另请参阅[编辑文件夹中的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-**要全局应用视频配置文件**,
+**要全局应用视频配置文件，请执行以下操作：**
 
-* 导航到CRXDE Lite到以下节点：`/content/dam/jcr:content`。 添加属性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`并点按&#x200B;**[!UICONTROL 全部保存。]**
+* 导航到CRXDE Lite到以下节点：`/content/dam/jcr:content`。 添加属性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`并点按&#x200B;**[!UICONTROL 保存全部]**。
 
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * 您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
@@ -422,18 +421,18 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 当您将视频配置文件从文件夹删除之后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。但是，此前对文件夹中的文件所做的处理均予以保留。
 
-您可以从“工具”菜单中将视频配置文件从文件夹删除 **** ，如果您在文件夹中，也可以从“文件夹设 **[!UICONTROL 置”中删除。]**&#x200B;本节将介绍这两种将视频配置文件从文件夹删除的方法。
+您可以从“工具”菜单中将视频配置文件从文件夹删除 **** ，如果您在文件夹中，也可以从“文件夹设 **[!UICONTROL 置”中删除]**。 本节将介绍这两种将视频配置文件从文件夹删除的方法。
 
 ### 通过Profiles用户界面{#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}将视频配置文件从文件夹删除
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件。]**
+1. 点按 AEM 徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 选择您要从一个或多个文件夹删除的视频配置文件。
-1. 点按&#x200B;**[!UICONTROL 从文件夹删除配置文件]**，然后选择一个或多个要从中删除配置文件的文件夹，然后点按&#x200B;**[!UICONTROL 删除。]**
+1. 点按&#x200B;**[!UICONTROL 从文件夹删除配置文件]**，并选择一个或多个要从中删除配置文件的文件夹，然后点按&#x200B;**[!UICONTROL 删除]**。
 
    如果视频配置文件的名称不再出现在文件夹名称的下方，则可以确定该视频配置文件不再应用于该文件夹。
 
 ### 通过属性{#removing-video-profiles-from-folders-by-way-of-properties}将视频配置文件从文件夹删除
 
 1. 点按或单击AEM徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到您要从中删除视频配置文件的文件夹。
-1. 在文件夹上，点按或单击复选标记以将其选中，然后点按或单击&#x200B;**[!UICONTROL 属性。]**
-1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存并关闭。]**&#x200B;如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
+1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
