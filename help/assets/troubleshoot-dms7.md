@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: 疑难解答
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 1%
@@ -32,7 +32,7 @@ ht-degree: 1%
 
    此可选功能包适用于FTP支持，或者如果您要将资产从Dynamic Media Classic迁移到Dynamic Media。
 
-* 导航到Cloud Services用户界面，并确认已配置的帐户显示在&#x200B;**[!UICONTROL 可用配置下。]**
+* 导航到Cloud Services用户界面，并确认已配置的帐户显示在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下。
 * 确保已启用`Dynamic Media Asset Activation (scene7)`复制代理。
 
    此复制代理位于“创作代理”下。
