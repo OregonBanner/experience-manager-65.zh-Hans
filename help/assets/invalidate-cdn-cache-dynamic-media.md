@@ -8,7 +8,7 @@ content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN缓存
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付给�
 
 *第1部分（共2部分）：创建CDN失效模板*
 
-1. 在Experience Manager6.5.6或更高版本中，点按&#x200B;**[!UICONTROL 工具>资产> CDN失效。]**
+1. 在Experience Manager6.5.6或更高版本中，点按&#x200B;**[!UICONTROL 工具>资产> CDN失效]**。
 
    ![CDN验证功能](/help/assets/assets-dm/cdn-invalidation-template2.png)
 
@@ -46,12 +46,12 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付给�
 
    ![CDN失效模板 — 创建](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
-1. 在&#x200B;**[!UICONTROL CDN失效模板]**&#x200B;页面的右上角，点按&#x200B;**[!UICONTROL Save]**，然后点按&#x200B;**[!UICONTROL 确定。]**<br>
+1. 在&#x200B;**[!UICONTROL CDN失效模板]**&#x200B;页面的右上角，点按&#x200B;**[!UICONTROL Save]**，然后点按&#x200B;**[!UICONTROL OK]**。<br>
 
    *第2部分：设置CDN失效选项*
    <br>
 
-1. 在Experience Manager为Cloud Service时，点按&#x200B;**[!UICONTROL 工具>资产> CDN失效。]**
+1. 在作为Experience Manager的Cloud Service中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL CDN失效]**。
 
    ![CDN验证功能](/help/assets/assets-dm/cdn-invalidation-path2.png)
 
@@ -71,7 +71,7 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付给�
    | **[!UICONTROL 添加资产]** | 使用资产选取器选择要失效的资产。 您可以选择已发布或未发布的资产。<br>CDN上的缓存基于URL，而不是基于资产。因此，您必须了解您网站上的完整URL。 确定这些URL后，可以将其添加到模板中。 然后，您可以选择并添加这些资产，并在一个步骤中使URL失效。 <br>将此选项与CDN中 **[!UICONTROL 与资产关联的图像预设]**&#x200B;结合使用，或与 **[!UICONTROL 基于模板失效]**&#x200B;结合使用，或与这两者结合使用。 |
    | **[!UICONTROL 添加 URL]** | 手动向要使其CDN缓存失效的Dynamic Media资产添加或粘贴完整URL路径。 如果未在2的&#x200B;***第1部分中创建CDN失效模板，请使用此选项：创建CDN失效模板***，并且只有少数资产要失效。<br>**重要信息：** 您添加的每个URL都必须位于其自身的行中。<br>您一次最多可以使1000个URL失效。如果&#x200B;**[!UICONTROL Add URL]**&#x200B;文本字段中的URL数大于1000，则无法点按&#x200B;**[!UICONTROL Next]**。 在这种情况下，您必须点按选定资产右侧的&#x200B;**[!UICONTROL X]**&#x200B;或手动添加的URL，以将其从失效列表中删除。<br>在CDN失效模板或此添加URL文本字段中，指定图像智能裁剪 **[!UICONTROL 的]** URL。 |
 
-1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL Next。]**
+1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL Next]**。
 1. 在&#x200B;**[!UICONTROL CDN失效 — Confirm]**&#x200B;页面的&#x200B;**[!UICONTROL URL]**&#x200B;列表框中，您可以看到从之前创建的CDN失效模板生成的一个或多个URL以及您刚才添加的资产列表。
 
    例如，使用前面步骤中显示的CDN失效模板示例，假设您添加了一个名为`spinset`的资产。 点按&#x200B;**[!UICONTROL 工具>资产> CDN失效]**&#x200B;时，它会在&#x200B;**[!UICONTROL CDN失效 — Confirm]**&#x200B;用户界面中生成以下五个生成的URL:
@@ -91,7 +91,7 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付给�
 | *无法检索选定资产的URL。* | 如果满足以下任何情况，则发生：<br> — 未找到Dynamic Media配置。<br> — 检索用于读取Dynamic Media配置的服务用户时出现异常。<br>- Dynamic Media配置中缺少用于构成URL的发布服务器或公司根目录。 |
 | *某些URL定义不正确。更正并重新提交。* | 如果IPS CDN缓存失效API返回错误，导致URL引荐到其他公司，则发生。 或者，如果URL无效，与IPS `cdnCacheInvalidation` API完成的验证相同。 |
 | *无法使CDN缓存失效。* | 在CDN缓存失效请求因任何其他原因失败时发生。 |
-| *输入的URL无效。* | 如果&#x200B;**[!UICONTROL CDN失效 — 确认]**&#x200B;页面中不存在URL，然后点按&#x200B;**[!UICONTROL 提交。]** |
+| *输入的URL无效。* | 如果&#x200B;**[!UICONTROL CDN失效 — 确认]**&#x200B;页面中不存在URL，然后点按&#x200B;**[!UICONTROL 提交]**，则会发生。 |
 
 
 <!--  | I do not want to create a template. | Near the upper-right corner of the page, tap **[!UICONTROL Cancel]**, then continue with ***Part 2: Working with CDN Invalidation***. Note that while you are not required to create a template to use CDN Invalidation, Adobe recommends that you create one, especially if you have numerous assets that you need to update immediately, on a regular basis. The template is used at the time you set CDN invalidation options. | -->
