@@ -11,7 +11,7 @@ docset: aem65
 feature: 全景图像，资产管理
 role: Business Practitioner, Administrator
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 1%
@@ -46,11 +46,11 @@ ht-degree: 1%
 
 1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
-1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器。]**
-1. 在“图像服务器发布”页面上，从顶部附近的&#x200B;**[!UICONTROL 发布上下文]**&#x200B;下拉菜单中，选择&#x200B;**[!UICONTROL 图像服务。]**
+1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。
+1. 在“图像服务器发布”页面上，从顶部附近的&#x200B;**[!UICONTROL 发布上下文]**&#x200B;下拉菜单中，选择&#x200B;**[!UICONTROL 图像服务]**。
 
-1. 在同一图像服务器发布页面上，找到标题&#x200B;**[!UICONTROL 请求属性。]**
-1. 在“请求属性”标题下，找到&#x200B;**[!UICONTROL 回复图像大小限制。]** 然后，在关联的“宽度”和“高度”字段中，增加全景图像允许的最大图像大小。
+1. 在同一图像服务器发布页面上，找到标题&#x200B;**[!UICONTROL 请求属性]**。
+1. 在“请求属性”标题下，找到&#x200B;**[!UICONTROL 回复图像大小限制]**。 然后，在关联的“宽度”和“高度”字段中，增加全景图像允许的最大图像大小。
 
    Dynamic Media Classic的限制为25,000,000像素。 宽高比为2:1的图像的最大允许大小为7000 x 3500。 但是，对于典型的桌面屏幕，4096 x 2048像素就足够了。
 
@@ -60,14 +60,14 @@ ht-degree: 1%
 
 1. 在“请求属性”标题下，执行以下操作：
 
-   * 将请求模糊处理模式设置为&#x200B;**[!UICONTROL Disabled。]**
-   * 将“请求锁定模式”设置为“**[!UICONTROL 已禁用”。]**
+   * 将“请求模糊处理模式”设置为&#x200B;**[!UICONTROL Disabled]**。
+   * 将“请求锁定模式”设置为&#x200B;**[!UICONTROL Disabled]**。
 
    在AEM中使用`Panoramic Media` WCM组件时，需要使用这些设置。
 
-1. 在“图像服务器发布”页面底部的左侧，单击&#x200B;**[!UICONTROL 保存。]**
+1. 在“图像服务器发布”页面底部的左侧，单击&#x200B;**[!UICONTROL Save]**。
 
-1. 单击右下角的&#x200B;**[!UICONTROL 关闭。]**
+1. 单击右下角的&#x200B;**[!UICONTROL 关闭]**。
 
 ### 对全景媒体WCM组件{#troubleshooting-the-panoramic-media-wcm-component}进行故障诊断
 
