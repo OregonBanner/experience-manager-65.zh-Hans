@@ -11,7 +11,7 @@ docset: aem65
 feature: 图像集，资产管理
 role: Business Practitioner, Administrator
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2085'
 ht-degree: 37%
@@ -40,13 +40,13 @@ ht-degree: 37%
 
 **要快速设置并运行图像集，请执行以下操作：**
 
-1. [为多个视图上传主源图像。](#uploading-assets-in-image-sets)
+1. [为多个视图上传主源图像](#uploading-assets-in-image-sets)。
 
    首先为图像集上传图像。选择图像时，请记住客户可以在图像集查看器中缩放图像。 确保图像的最大尺寸至少为2000像素，以优化缩放详细信息。 Dynamic Media每幅可渲染多达2500万像素的图像。 例如，您可以使用5000 x 50000万像素图像或任何其他大小组合，最多2500万像素。
 
    Adobe Experience Manager Assets支持多种图像文件格式，但建议使用无损的TIFF、PNG和EPS图像。
 
-1. [创建图像集。](#creating-image-sets)
+1. [创建图像集](#creating-image-sets)。
 
    在图像集中，用户在图像集查看器中单击缩略图图像。
 
@@ -59,7 +59,7 @@ ht-degree: 37%
 
    请参阅[准备要上传的图像集资产和上传文件](#uploading-assets-in-image-sets)。
 
-   请参阅[使用选择器。](/help/assets/working-with-selectors.md)
+   请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
 1. 根据需要添加[图像集查看器预设](/help/assets/managing-viewer-presets.md)。
 
@@ -68,11 +68,11 @@ ht-degree: 37%
    如果要创建或编辑查看器预设，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**。
 
 1. （可选）[查看使用批集预设创建的图像集](/help/assets/image-sets.md#viewing-image-sets)。
-1. [预览图像集。](/help/assets/previewing-assets.md)
+1. [预览图像集](/help/assets/previewing-assets.md)。
 
    选择图像集后，您便可以预览该图像集。单击缩略图图标，以便在选定的查看器中检查图像集。 您可以从左边栏下拉菜单的&#x200B;**[!UICONTROL 查看器]**&#x200B;菜单中选择不同的查看器。
 
-1. [发布图像集。](/help/assets/publishing-dynamicmedia-assets.md)
+1. [发布图像集](/help/assets/publishing-dynamicmedia-assets.md)。
 
    发布图像集时，会激活URL和嵌入代码。 此外，您还必须[发布您创建的任何自定义查看器预设](/help/assets/managing-viewer-presets.md)。 现成的查看器预设已发布。
 
@@ -84,7 +84,7 @@ ht-degree: 37%
 
    请参 [阅将图像集链接到网页和嵌入视](/help/assets/linking-urls-to-yourwebapplication.md) 频查看器或图像查看器 [](/help/assets/embed-code.md)。
 
-要编辑图像集，请参阅[编辑图像集。](#editing-image-sets) 此外，您还可以查看和编辑图 [像集属性](/help/assets/manage-assets.md#editing-properties)。
+要编辑图像集，请参阅[编辑图像集](#editing-image-sets)。 此外，您还可以查看和编辑[图像集属性](/help/assets/manage-assets.md#editing-properties)。
 
 如果您在创建集时遇到问题，请参阅[疑难解答Dynamic Media - Scene7模式](/help/assets/troubleshoot-dms7.md#images-and-sets)中的图像和集。
 
@@ -148,7 +148,7 @@ ht-degree: 37%
 
    借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择过滤器，然后点按工具栏上的&#x200B;**[!UICONTROL 过滤器]**&#x200B;图标。点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 
-   请参阅[使用选择器。](/help/assets/working-with-selectors.md)
+   请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
    ![6_5_imageset-addassets](assets/6_5_imageset-addingassets.png)
 
