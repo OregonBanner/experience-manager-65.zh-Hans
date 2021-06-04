@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 28%
+source-wordcount: '483'
+ht-degree: 29%
 
 ---
 
@@ -52,10 +52,12 @@ Linux导航到相应的目录，然后从命令提示符下键入
 1. 阅读“Pre-Installation Summary”信息，然后单击 **[!UICONTROL Install]**。
 1. 安装完成后，单击 **[!UICONTROL Next]** 以将快速修补程序更新应用到已安装的文件。
 
-1. 在单击“完成”之前，请取消选择“开始配置管理器”选项。 在使用&#x200B;**ConfigurationManager.exe**&#x200B;或&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;运行配置管理器之前，请在以下文件中导航到&#x200B;*&lt;AEMForms_Install_Dir>\configurationManager\bin*&#x200B;目录，并将&#x200B;**axis.jar**&#x200B;更新为&#x200B;**axis-1.4.1.jar**:
+1. 在单击“完成”之前，请取消选择“开始配置管理器”选项。 在使用&#x200B;**ConfigurationManager.exe**&#x200B;或&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;运行配置管理器之前，请导航到&#x200B;*&lt;AEMForms_Install_Dir>\configurationManager\bin*&#x200B;目录，并使用以下重命名操作更新`ConfigurationManager.lax`和`ConfigurationManager_IPv6.lax`文件：
 
-   * ConfigurationManager.lax
-   * ConfigurationManager_IPv6.lax
+   * `axis.jar` 到 `axis-1.4.1.1.jar`
+   * `serializer-2.7.1.jar` 到 `serializer-2.7.2.jar`
+   * `xalan-2.7.1.jar` 到 `xalan-2.7.2.jar`
+   * `xercesImpl-2.9.1.jar` 到 `xercesImpl-2.12.0.jar`
 
 1. 默认情况下，“开始配置管理器”(Start Configuration Manager)复选框处于选中状态。 单击 **[!UICONTROL Done]** 以运行配置管理器。
 
