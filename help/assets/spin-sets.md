@@ -11,10 +11,10 @@ docset: aem65
 feature: 旋转集，资产管理
 role: Business Practitioner, Administrator
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1829'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -36,11 +36,11 @@ ht-degree: 37%
 
 要快速设置并运行旋转集，请执行以下步骤：
 
-1. [上传多个视图的图像。](#uploading-assets-for-spin-sets)
+1. [为多个视图上传图像](#uploading-assets-for-spin-sets)。
 
    对于一维旋转集，您至少需要一个项目8-12张拍照；对于二维旋转集，您至少需要16-24张拍照。必须定期拍摄这些照片，以给人以项目正在旋转和被翻动的印象。例如，如果一维旋转集包含12张照片，则对于每张照片，将项目旋转30度(360/12)。
 
-1. [创建旋转集。](#creating-spin-sets)
+1. [创建旋转集](#creating-spin-sets)。
 
    要创建旋转集，请选择&#x200B;**[!UICONTROL 创建>旋转集]**，然后命名旋转集，选择资产，然后选择图像的显示顺序。
 
@@ -56,17 +56,17 @@ ht-degree: 37%
 
    请参阅&#x200B;**[!UICONTROL 工具>资产>查看器预设]**&#x200B;以创建或编辑查看器预设。
 
-   请参阅[添加和编辑查看器预设。](/help/assets/managing-viewer-presets.md)
+   请参阅[添加和编辑查看器预设](/help/assets/managing-viewer-presets.md)。
 
 1. [查看旋转集](#viewing-spin-sets)。
 
    您可以通过三种不同方式查看和访问通过批集预设方式创建的集。 （使用批集预设创建的集，请在用户界面中显示&#x200B;*不*。）
 
-1. [预览旋转集。](/help/assets/previewing-assets.md)
+1. [预览旋转集](/help/assets/previewing-assets.md)。
 
    选择旋转集，之后您便可以进行预览。旋转该旋转集。您可以从左边栏下拉菜单的&#x200B;**[!UICONTROL 查看器]**&#x200B;菜单中选择不同的查看器。
 
-1. [发布旋转集。](/help/assets/publishing-dynamicmedia-assets.md)
+1. [发布旋转集](/help/assets/publishing-dynamicmedia-assets.md)。
 
    发布旋转集时，将会激活 URL 和嵌入字符串。此外，您还必须[发布查看器预设](/help/assets/managing-viewer-presets.md)。
 
@@ -142,7 +142,7 @@ ht-degree: 37%
 
    如有必要，请将资产的重新排序图标拖动到资产文件名右侧，以在设置的列表中对图像进行重新排序。
 
-   ![通过将旋转集中的第11帧拖动到新位置，对其重新排序。](assets/6_5_spinset-reorderassets.png)
+   ![通过将旋转集中的第11帧拖动到新位置，对其重新排序](assets/6_5_spinset-reorderassets.png)。
 
    通过将旋转集中的第11帧拖动到新位置，对其重新排序。
 
@@ -162,7 +162,7 @@ ht-degree: 37%
 >
 >您还可以通过用户界面查看集，如[编辑旋转集](#editing-spin-sets)中所述。
 
-**查看旋转集**
+**要查看旋转集，请执行以下操作：**
 
 1. 打开单个资产的属性时。 属性指示所选资产是的成员（位于&#x200B;**[!UICONTROL 集的成员]**&#x200B;下）。 单击集的名称可查看整个集。
 
@@ -188,7 +188,7 @@ ht-degree: 37%
 * 应用查看器预设。
 * 删除旋转集。
 
-**编辑旋转集**
+**要编辑旋转集，请执行以下操作：**
 
 1. 执行以下任一操作：
 
