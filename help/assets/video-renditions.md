@@ -6,7 +6,7 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 5%
@@ -33,7 +33,7 @@ AEM资产在客户端为这些演绎版提供播放支持。
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-要为DM编码的呈现版本配置代理服务器，请[配置Dynamic Media云服务。](config-dynamic.md)
+要为DM编码的演绎版配置代理服务器，请[配置Dynamic Media云服务](config-dynamic.md)。
 
 要使用所需的参数生成视频演绎版，请[创建相应的视频配置文件](video-profiles.md)。
 
