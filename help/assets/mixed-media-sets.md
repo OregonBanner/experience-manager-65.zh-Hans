@@ -11,7 +11,7 @@ docset: aem65
 feature: 混合媒体集，资产管理
 role: Business Practitioner, Administrator
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 45%
@@ -38,11 +38,11 @@ ht-degree: 45%
 
    首先为混合媒体集上传图像和视频。 如有必要，请创 [建图像集](/help/assets/image-sets.md)[和旋转集](/help/assets/spin-sets.md)。 由于用户可以在混合媒体集查看器中缩放图像，因此在选择图像时，请考虑缩放因素。 确保图像的最大尺寸至少为2000像素。
 
-1. [创建混合媒体集。](#creating-mixed-media-sets)
+1. [创建混合媒体集](#creating-mixed-media-sets)。
 
    要创建混合媒体集，请从“资产”页面中，点按创建 **[!UICONTROL >混合媒体集]** ，然后命名该集，选择资产，然后选择图像的显示顺序。
 
-   请参阅[使用选择器。](/help/assets/working-with-selectors.md)
+   请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
 1. 根据需要设置[混合媒体查看器预设](/help/assets/managing-viewer-presets.md)。
 
@@ -50,13 +50,13 @@ ht-degree: 45%
 
    请参阅&#x200B;**[!UICONTROL 工具>资产>查看器预设]**&#x200B;以创建或编辑查看器预设。
 
-   请参阅[添加和编辑查看器预设。](/help/assets/managing-viewer-presets.md)
+   请参阅[添加和编辑查看器预设](/help/assets/managing-viewer-presets.md)。
 
-1. [预览混合媒体集。](#previewing-mixed-media-sets)
+1. [预览混合媒体集](#previewing-mixed-media-sets)。
 
    选择混合媒体集，之后您便可以进行预览。单击缩略图图标可在选定的查看器中检查混合媒体集。您可以从左边栏下拉菜单的&#x200B;**[!UICONTROL 查看器]**&#x200B;菜单中选择不同的查看器。
 
-1. [发布混合媒体集。](#publishing-mixed-media-sets)
+1. [发布混合媒体集](#publishing-mixed-media-sets)。
 
    发布混合媒体集时，将会激活 URL 和嵌入字符串。此外，您还必须[发布查看器预设](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)。
 
@@ -86,7 +86,7 @@ ht-degree: 45%
 
 在将资产添加到资产集时，资产会按字母数字顺序自动添加。 您可以在添加资产后手动对资产重新排序或排序。
 
-**创建混合媒体集**
+**要创建混合媒体集，请执行以下操作：**
 
 1. 在 Assets 中，导航到要创建混合媒体集的位置，单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 混合媒体集]**。您还可以从包含资产的文件夹中创建旋转集。此时将显示混合媒体集编辑器。
 
@@ -132,7 +132,7 @@ ht-degree: 45%
 * 应用查看器预设。
 * 更改默认缩略图。
 
-**编辑混合媒体集**
+**要编辑混合媒体集，请执行以下操作：**
 
 1. 执行以下任一操作：
 
