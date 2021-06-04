@@ -10,10 +10,10 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: Business Practitioner, Administrator
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: 发布
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 14%
 
 要发布Dynamic Media资产，请选择已上传的资产，然后点按&#x200B;**[!UICONTROL 发布]**&#x200B;或&#x200B;**[!UICONTROL 快速发布]**。 发布Dynamic Media资产后，您便可以通过URL或在页面上嵌入代码，将这些资产包含在网页中。
 
-您还可以立即发布上传的资产，无需任何用户干预。 请参阅[配置Dynamic Media - Scene7模式。](config-dms7.md)
-或者，您也可以使用文件夹级别的选择性发布功能，将资产有选择地发布到Dynamic Media或AEM中，两者 **[!UICONTROL 相互]** 排斥。请参阅[使用 Dynamic Media 中的“选择性发布”功能](/help/assets/selective-publishing.md)。
+您还可以立即发布上传的资产，无需任何用户干预。 请参阅[配置Dynamic Media - Scene7模式](config-dms7.md)。
+或者，您也可以使用文件夹级别的**[!UICONTROL 选择性发布]** ，将资产有选择地发布到相互排斥的Dynamic Media或AEM。 请参阅[使用Dynamic Media中的“选择性发布”](/help/assets/selective-publishing.md)。
 
 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，资产名称的正下方以及日期和时间的左侧会显示一个小地球图标，指示资产已发布。 在&#x200B;**[!UICONTROL 列表视图]**&#x200B;中，**[!UICONTROL 已发布]**&#x200B;列显示已发布的资产和未发布的资产。
 
@@ -45,7 +45,7 @@ ht-degree: 14%
 
 
 
-有关发布集或资产的详细信息，请参阅[发布资产。](manage-assets.md)
+有关发布集或资产的详细信息，请参阅[发布资产](manage-assets.md)。
 
 ## HTTP/2交付Dynamic Media资产{#http-delivery-of-dynamic-media-assets}
 
