@@ -8,7 +8,7 @@ content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN缓存
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付给�
 
 >[!IMPORTANT]
 >
->以下步骤仅适用于Adobe Experience Manager 6.5 Service Pack 6(Experience Manager6.5.6)或更高版本中的Dynamic Media - Scene7模式。 此CDN失效功能还要求您使用与Experience ManagerDynamic Media捆绑在一起的现成CDN;不支持任何其他自定义CDN。<br>如果您在Experience Manager6.5、Service Pack 5(Experience Manager6.5.5)或更早版本中使用Dynamic Media，请按照通过Dynamic Media  [Classic使CDN缓存失效中的步骤操作。](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>以下步骤仅适用于Adobe Experience Manager 6.5 Service Pack 6(Experience Manager6.5.6)或更高版本中的Dynamic Media - Scene7模式。 此CDN失效功能还要求您使用与Experience ManagerDynamic Media捆绑在一起的现成CDN;不支持任何其他自定义CDN。<br>如果您在Experience Manager6.5、Service Pack 5(Experience Manager6.5.5)或更早版本中使用Dynamic Media，请按照 [通过Dynamic Media Classic使CDN缓存失效](/help/assets/invalidate-cdn-cache-dm-classic.md)中的步骤操作。
 
 另请参阅[Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)中的缓存概述。
 
