@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '5517'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Experience Manager用户可以在两个解决方案之间进行选择，以与Dy
 * 将资产直接上传到Dynamic Media Classic，然后通过&#x200B;**Dynamic Media Classic**&#x200B;内容浏览器访问，以进行页面创作或
 * 上传到Experience Manager资产，然后启用自动发布到Dynamic Media Classic的功能；您可以通过&#x200B;**Assets**&#x200B;内容浏览器访问页面创作
 
-您用于此集成的组件位于[设计模式的&#x200B;**Dynamic Media Classic**&#x200B;组件区域。](/help/sites-authoring/author-environment-tools.md#page-modes)
+您用于此集成的组件位于[设计模式](/help/sites-authoring/author-environment-tools.md#page-modes)的&#x200B;**Dynamic Media Classic**&#x200B;组件区域。
 
 ### Experience ManagerDynamic Media {#aem-dynamic-media}
 
@@ -423,8 +423,8 @@ Dynamic Media Classic资产仍可通过安全预览使用。 只有在Experience
 
 在将资产推送到Dynamic Media Classic而不发布之前，您必须先设置以下内容：
 
-1. [使用Admin Console创建支持案例。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 在您的支持案例中，请求为您的Dynamic Media Classic帐户启用安全预览。
-1. 按照[设置Dynamic Media Classic帐户的安全预览的说明进行操作。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. [使用Admin Console创建支持案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。在您的支持案例中，请求为您的Dynamic Media Classic帐户启用安全预览。
+1. 按照[设置Dynamic Media Classic帐户安全预览](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)的说明操作。
 
 这些步骤与在Dynamic Media Classic中创建任何安全测试设置时所遵循的步骤相同。
 
