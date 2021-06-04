@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: aca444f6-418a-4c01-ae19-663b4e04fab9
 docset: aem65
 exl-id: 15f45978-a983-49a0-91cf-c7610fc37eef
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 为Search&amp;Promote服务配置的默认URL为`https://searchandpromote.omniture.com/px/`。 要使用其他服务，请使用OSGi控制台指定其他URL。
 
-1. 打开OSGi控制台，然后单击配置选项卡。 ([https://localhost:4502/system/console/configMgr.](https://localhost:4502/system/console/configMgr))
+1. 打开OSGi控制台，然后单击配置选项卡。 ([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
 1. 单击Day CQSearch&amp;Promote配置项。
 1. 在“远程服务器URI”框中输入URL，然后单击“保存”。
 
