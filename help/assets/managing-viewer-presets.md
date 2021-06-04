@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: 查看器预设
 role: Business Practitioner, Administrator
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
-source-wordcount: '4338'
+source-wordcount: '4339'
 ht-degree: 23%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 23%
 >[!NOTE]
 >
 >请注意，在首次使用所有现成查看器之前，必须先发布这些查看器。
->请参阅[发布查看器预设。](#publishing-viewer-presets)
+>请参阅[发布查看器预设]。(#publishing-viewer-presets)
 
 ### 查看器预设系统兼容性{#viewer-preset-system-compatibility}
 
