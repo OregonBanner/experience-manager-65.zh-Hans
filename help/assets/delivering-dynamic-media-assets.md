@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: 资产管理，演绎版
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 14%
@@ -29,7 +29,7 @@ ht-degree: 14%
 
    * 在您的网站上嵌入视频或图像。
    * 将URL关联到您的Web应用程序。当您希望将视频播放器作为弹出窗口或模式窗口进行传送时，请使用链接。
-   * 如果您的网站是响应式的，您可以[传送优化的图像。](/help/assets/responsive-site.md)
+   * 如果您的网站是响应式的，您可以[传送优化的图像](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
