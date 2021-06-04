@@ -11,18 +11,18 @@ docset: aem65
 feature: 交互式视频
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
-source-wordcount: '6058'
-ht-degree: 26%
+source-wordcount: '6050'
+ht-degree: 20%
 
 ---
 
 # 交互式视频{#interactive-videos}
 
-您可以轻松创建交互式视频（也称为购物视频），从而直接从视频促进转化。 客户在视频播放器一侧的面板中与视频进行交互，根据视频展示的内容，相关的服务、信息或产品缩略图会滚动到客户的视线中。客户可以点按缩略图并直接链接到相应的服务，也可以将项目添加到购物车以立即购买，或者链接到某个网页以了解更多信息。
+您可以轻松创建交互式视频（也称为购物视频），以直接从视频促进转化。 客户在视频播放器一侧的面板中与视频进行交互，根据视频展示的内容，相关的服务、信息或产品缩略图会滚动到客户的视线中。客户可以点按缩略图并直接链接到相应的服务，也可以将项目添加到购物车以立即购买，或者链接到某个网页以了解更多信息。
 
-视频结束时，所有提供项目的可视汇总会显示出来以发出行动动员。客户还有其他机会点按所需的项目。像这样的可操作特定体验能够提高客户的参与度和转化率。
+视频结束时，所有提供项目的可视汇总会显示出来以发出行动动员。客户还有其他机会点按所需的项目。诸如此类的可操作和特定体验可以提高客户参与度和转化率。
 
 另请参阅[交互式图像](/help/assets/interactive-images.md)。
 
@@ -32,7 +32,7 @@ ht-degree: 26%
 
 * 在播放过程中，由于视频中使用了产品，因此相同的产品会以缩略图的形式显示在右侧。
 
-* 单击缩略图可暂停视频并打开产品概览。 例如，单击视频中的KitchenAid缩略图图像可体验混合器的360度旋转视图，或放大以查看混合器详细信息。
+* 如果要暂停视频并打开产品概览，请单击缩略图。 例如，单击视频中的KitchenAid缩略图图像可体验混合器的360度旋转视图，或放大以查看混合器详细信息。
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
@@ -40,20 +40,20 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->如果您创建交互式视频以在用户单击缩略图时启动网页，则某些设备将阻止打开弹出网页。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点按&#x200B;**[!UICONTROL 设置]** > **Safari** > **阻止弹出窗口**，然后将控件滑动到&#x200B;**[!UICONTROL 关闭]**。 现在，当您播放交互式视频并单击缩略图时，如果要打开弹出窗口，系统会提示您。 如果接受，则会打开网页。
+>如果创建交互式视频以在用户单击缩略图时启动网页，则某些设备会阻止弹出网页打开。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点按&#x200B;**[!UICONTROL 设置]** > **Safari** > **阻止弹出窗口**，然后将控件滑动到&#x200B;**[!UICONTROL 关闭]**。 现在，当您播放交互式视频并单击缩略图时，如果要打开弹出窗口，系统会提示您。 如果接受，则会打开网页。
 
 ### 观看如何创建交互式视频{#watch-how-interactive-videos-are-created}
 
-观看有关[如何创建交互式视频](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)的 7 分 30 秒视频演练[](https://outv.omniture.com?v=s4NHQ2dzqd7hIqWjeG2sIdyNWsTWyupA)。
-（虽然视频演练使用 Assets（按需）进行标记，但 AEM Assets 中的交互式视频仍适用这些原则和步骤。）
+播放有关如何创建交互式视频的演练](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)（7分30秒）。
+[尽管视频演练使用Assets（按需）进行标记，但Adobe Experience Manager Assets中的交互式视频仍适用这些原则和步骤。
 
 ### Adobe 客户成功网络研讨会 {#adobe-customer-success-webinar}
 
-“在AEM Assets中使用交互式视频、链接共享和YouTube共享”网络研讨会将向您讲授如何使用交互式视频和其他功能，将转化驱动的事件绑定到视频营销内容中。
+“在Experience Manager资产中使用交互式视频、链接共享和YouTube共享”网络研讨会将向您讲授如何使用交互式视频和其他功能，将转化驱动的事件绑定到您的视频营销内容中。
 
 >[!NOTE]
 >
->[在 AEM Assets 中使用交互式视频、链接共享和 YouTube 共享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
+>[在Experience Manager资产中使用交互式视频、链接共享和YouTube共享](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
 
 ## 快速入门：交互式视频 {#quick-start-interactive-videos}
 
@@ -72,22 +72,21 @@ ht-degree: 26%
 交互式视频步骤：
 
 1. **（可选）识别概览变量**  — 首先，识别现有概览实施所使用的动态变量。在创建交互式视频时，您可以使用变量将产品缩略图映射到其相应的产品概览。 请参阅[（可选）识别概览变量](#optional-identifying-quickview-variables)。
-   *请注意，仅当以下所有内容均为true时，才需要执行此步骤*:·您希望通过触发概览来增加视频的交互性。·您对AEM的实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）中提取到AEM中。 请参阅AEM Assets](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
+   *仅当满足以下所有条件时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)拉入Experience Manager。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 1. **（可选）创建交互式视频查看器预设**  — 自定义构成播放器的各种组件的外观和行为，如视频清理器和交互式缩略图。如果您打算改用现成的交互式视频查看器预设`Shoppable_Video_Light`或`Shoppable_Video_Dark`，则无需创建您自己的交互式视频查看器预设。
-请参阅[创建新查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（这是可选的）和[创建交互式查看器预设的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
+请参阅[创建新查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（可选）和[创建交互式查看器预设的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
 
 1. **上传视频及其关联的图像资产**  — 上传您希望进行交互的视频和关联的图像。请参阅[上传视频及其关联的缩略图资产](#uploading-a-video-and-its-associated-thumbnail-assets)。
 
 
 1. **为视频添加交互性**  — 向视频添加一个或多个时间区段。然后，关联这些时间区段中的图像缩略图。 将每个图像缩略图分配给操作，如超链接、概览或体验片段。
-(请注意，如果您的交互式内容具有包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。)
-最后，发布交互式视频资产。 发布后会创建嵌入代码或URL，您最终会将该嵌入代码或URL复制并应用于您的网站登录页面。请参阅[向视频添加交互性](#adding-interactivity-to-your-video)。
+(如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。)
+最后，发布交互式视频资产。 发布后会创建嵌入代码或URL，您最终会将该嵌入代码或URL复制并应用到您的网站登录页面。 请参阅[为视频添加交互性](#adding-interactivity-to-your-video)。
 请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **在AEMI中将交互式视频添加到您的网站或您的网站**
-如果您使用AEM Sites或AEM eCommerce，或者同时使用这两者，则可以通过将交互式媒体组件拖动到页面上，将交互式视频直接添加到AEM中的网页。请参阅[将Dynamic Media Assets添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
-使用嵌入代码或URL将交互式视频与您的网站体验相集成。请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
+1. **在Experience Manager中将交互式视频添加到您的网站或您的网站**  — 如果您使用Experience Manager站点或电子商务，或者同时使用这两者，则可以将交互式视频添加到网页。将交互式媒体组件拖动到页面上的Experience Manager。 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+使用嵌入代码或URL将交互式视频与您的网站体验相集成。 请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
 如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有概览实施相集成。 请参阅[将交互式视频与现有概览](#integrating-an-interactive-video-with-an-existing-quickview)集成。
    [将 Dynamic Media 资产添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
@@ -98,21 +97,21 @@ ht-degree: 26%
 >仅当满足以下条件时，才需要执行此任务：
 >
 >* 您希望通过触发概览来为视频添加交互性。
->* 您的AEM实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案（如IBM Websphere Commerce、Elastic Path、hybris或Intershop）拉入AEM。 请参阅AEM Assets](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
+>* 您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)拉入Experience Manager。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 >
 >
-如果您的AEM实施使用电子商务，则可以跳过此任务并继续执行下一项任务。
+如果您的Experience Manager实施使用电子商务，则可以跳过此任务并继续执行下一项任务。
 
 首先，识别现有概览实施所使用的动态变量，以便您能够在交互式视频创建过程中将产品缩略图映射到其相应产品概览。
 
-在将时间区段添加到视频时，您需要为添加到区段的每个缩略图分配一个 SKU 及其他任何变量。此类变量稍后用于显示正确的概览产品。
+在向视频添加时间区段时，您需要为添加到区段的每个缩略图分配一个SKU（库存单位）和任何其他变量。 此类变量稍后用于显示正确的概览产品。
 
 必须准确地识别唯一触发产品概览所需的变量，这一点很重要。
 
-有时，咨询负责现有概览实施的IT专家可能已足够。 他们可能知道在系统中识别概览所需的最少数据集。 但在大多数情况下，可能只需简单地分析前端代码的现有行为即可。
+有时，只需咨询负责现有概览实施的IT专家即可。 他们可能知道系统中用于标识概览的最少数据集。 但是，也可以简单地分析前端代码的现有行为。
 
-大多数概览实施都使用以下模式：
+大多数概览实施都使用以下范例：
 
 * 用户在网站上激活用户界面元素。例如，单击“概览”按钮。
 * 如果需要，网站会向后端发送Ajax请求以加载概览数据或内容。
@@ -131,13 +130,13 @@ ht-degree: 26%
 
 在浏览器中打开网络监控时，会触发页面上的概览。
 
-现在，在网络日志中找到Quickview Ajax URL，并复制记录的URL以供将来分析。 在大多数情况下，当您触发概览时，会向服务器发送大量请求。 通常，Quickview Ajax URL是列表中最先使用的URL之一。 它具有复杂的查询字符串部分或路径，其响应MIME类型为`text/html`、`text/xml`或`text/javascript`。
+现在，在网络日志中找到Quickview Ajax URL，并复制记录的URL以供将来分析。 通常，触发概览时，会向服务器发送大量请求。 通常，Quickview Ajax URL是列表中最先使用的URL之一。 它具有复杂的查询字符串部分或路径，其响应MIME类型为`text/html`、`text/xml`或`text/javascript`。
 
-在此过程中，访问网站中具有不同产品类别和类型的不同区域非常重要。 原因是概览URL的某些部分可能与给定网站类别相同，但只有在您访问网站的其他区域时才会发生更改。
+在此过程中，访问网站中具有不同产品类别和类型的不同区域非常重要。 原因是概览URL可能包含给定网站类别的通用部分，但仅当您访问网站的其他区域时才会发生更改。
 
-在最简单的情况下，概览URL中唯一的变量部分是产品SKU。 在这种情况下，产品SKU值是向AEM中交互式视频的时间区段添加缩略图所需的唯一数据段。
+在最简单的情况下，概览URL中唯一的变量部分是产品SKU。 在这种情况下，产品SKU值是向交互式视频中的时间区段添加缩略图所需的唯一数据段，该Experience Manager中包含缩略图。
 
-但是，在复杂的情况下，除了产品SKU之外，概览URL还具有不同的可变元素，例如类别ID、颜色代码等。 在这种情况下，在AEM的缩略图数据定义中，每个此类元素都会成为一个单独的变量。
+但是，在复杂的情况下，除了产品SKU之外，概览URL还具有不同的可变元素，例如类别ID、颜色代码和大小代码。 在这种情况下，每个此类元素都会在Experience Manager的缩略图数据定义中成为单独的变量。
 
 请考虑以下概览URL及其生成的缩略图变量示例：
 
@@ -151,7 +150,7 @@ ht-degree: 26%
       <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>URL中唯一的变量部分是<code>productId=</code>查询字符串参数的值，很明显它是SKU值。 因此，我们的缩略图只需在SKU字段中填充<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>等值即可。</p> </td>
+    </ul> <p>URL中唯一的变量部分是<code>productId=</code>查询字符串参数的值，很明显它是SKU值。 因此，您的缩略图只需在SKU字段中填充<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>等值即可。</p> </td>
   </tr>
   <tr>
     <td><p>单个 SKU，位于 URL 路径中。</p> </td>
@@ -160,7 +159,7 @@ ht-degree: 26%
       <li><p><code>https://server/product/6422350843</code></p> </li>
       <li><p><code>https://server/product/1607745002</code></p> </li>
       <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>变量部分位于路径的最后一部分，它将变为AEM缩略图的SKU值：<strong><code>6422350843</code></strong>、<strong><code>1607745002</code></strong>、<strong><code>0086724882</code></strong>。</p> </td>
+    </ul> <p>变量部分位于路径的最后一部分，它变为Experience Manager缩略图的SKU值：<strong><code>6422350843</code></strong>、<strong><code>1607745002</code></strong>、<strong><code>0086724882</code></strong>。</p> </td>
   </tr>
   <tr>
     <td><p>SKU 和类别 ID，位于查询字符串中。</p> </td>
@@ -169,7 +168,7 @@ ht-degree: 26%
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>在这种情况下，URL 中有两个可变部分。SKU存储在<code>prodId</code>参数中，类别ID存储在<code>category=</code>参数中。</p> <p>因此，缩略图定义是成对存在的。 即，一个 SKU 值对应一个额外的变量 <code>categoryId</code>。生成的各对如下所示：</p>
+    </ul> <p>在这种情况下，URL 中有两个可变部分。SKU存储在<code>prodId</code>参数中，类别ID存储在<code>category=</code>参数中。</p> <p>因此，缩略图定义是成对存在的。 即，SKU值和一个名为<code>categoryId</code>的额外变量。 生成的各对如下所示：</p>
     <ul>
       <li>SKU为<code>305466</code>, <code>categoryId</code>为 <code>1100004</code></li>
       <li>SKU为<code>310181</code>, <code>categoryId</code>为 <code>1100004</code></li>
@@ -181,7 +180,7 @@ ht-degree: 26%
 
 **示例**
 
-将上述方法应用于我们的示例网站后，我们的网页中包含许多产品缩略图，每个缩略图中都有一个“查看更多”按钮：
+将上述方法应用于示例网站后，您的网页中会包含多个产品缩略图，每个缩略图中都有一个“查看更多”按钮：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
@@ -208,7 +207,7 @@ ht-degree: 26%
 * datafeed/glassware-233916550.json
 * datafeed/glassware-233916597.json
 
-通过查看这些服务器调用，您会发现特定于产品的信息仅存在于请求路径中。 您还会注意到查询字符串根本不被使用，并且涉及两种不同类型的数据段：
+查看服务器调用时，您会看到特定于产品的信息仅存在于请求路径中。 您还会注意到查询字符串根本不被使用，并且涉及两种不同类型的数据段：
 
 * 第一种是蜡烛、垫子、家具和玻璃器皿。 您可以将此类别称为“产品”。
 * 第二种类型是产品代码，如233916597。 您可以假定它是“产品SKU”。
@@ -262,17 +261,17 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
+>在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。 要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。
 
 >[!NOTE]
 >
->如果您的交互式内容具有包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。
+>如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
 
 在当前创建/编辑会话期间，支持页面右上角附近的撤消和重做选项。
 
-保存交互式视频后，该视频会立即打开到“预览”中。从此处，您可以选择交互式视频查看器预设并播放视频，以大致了解它将如何显示给客户。
+在保存交互式视频后，视频会立即在“预览”中打开。从此处，您可以选择交互式视频查看器预设并播放视频，以大致了解它如何显示给客户。
 
-要为视频添加交互性，请执行以下操作：
+**为视频添加交互性：**
 
 1. 在“资产”视图中，导航到您上传的要实现交互的视频。
 1. 执行下列操作之一：
@@ -281,23 +280,23 @@ ht-degree: 26%
 
    * 将鼠标悬停在图像上，然后点按&#x200B;**[!UICONTROL 更多操作]**（三个圆点图标）**[!UICONTROL >编辑]**。
 
-   * 点按图像以在“详细信息视图”页面中将其打开。 在工具栏中，点按&#x200B;**[!UICONTROL 编辑]**。
+   * 点按图像，以便在“详细信息视图”页面中将其打开。 在工具栏中，点按&#x200B;**[!UICONTROL 编辑]**。
 
 1. 在“创建交互式视频”页面中，执行以下任一操作：
 
-   * 点按&#x200B;**[!UICONTROL 播放]**&#x200B;按钮以开始播放视频。当视频中出现您要突出显示的特定产品、服务或详细信息时，点按工具栏中的&#x200B;**[!UICONTROL 添加区段]**。重复上述步骤，直到视频结束。
+   * 要开始播放视频，请点按&#x200B;**[!UICONTROL 播放]**&#x200B;按钮。 当视频中出现您要突出显示的特定产品、服务或详细信息时，点按工具栏中的&#x200B;**[!UICONTROL 添加区段]**。重复上述步骤，直到视频结束。
 
 
 
-      对于您添加的每个时间区段，您可以为其分配一个或多个缩略图，然后将这些缩略图关联到概览产品页面以供客户购买，或关联到网页以了解更多信息。
+      对于您添加的每个时间区段，向其分配一个或多个缩略图，然后将这些缩略图关联到概览产品页面以供客户购买，或关联到网页以了解更多信息。
 
-   * 点按&#x200B;**[!UICONTROL 播放]**&#x200B;按钮以开始播放视频。当视频中出现您要突出显示的特定产品、服务或详细信息时，点按&#x200B;**[!UICONTROL 暂停]**。点按&#x200B;**[!UICONTROL 添加区段]**。
+   * 要开始播放视频，请点按&#x200B;**[!UICONTROL 播放]**&#x200B;按钮。 当视频中出现您要突出显示的特定产品、服务或详细信息时，点按&#x200B;**[!UICONTROL 暂停]**。点按&#x200B;**[!UICONTROL 添加区段]**。
 
 
 
       继续播放视频，并在您要添加区段的时间轴点处暂停视频，直到视频结束。
 
-1. （可选）向左拖动&#x200B;**[!UICONTROL 时间轴缩放滑块]**&#x200B;上的栏可放大（向右拖动则缩小），从而控制您看到的已添加区段的详细信息量。
+1. （可选）向左拖动&#x200B;**[!UICONTROL 时间轴缩放滑块]**&#x200B;上的栏可放大（向右拖动则缩小），以便控制已添加区段的显示详细信息量。
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -367,9 +366,9 @@ ht-degree: 26%
       可使用以下导航快捷方式快速地查看和微调视频区段：
 
 
-      * 点按蓝色前导椭圆，将视频直接搜寻到该区段的开头。
-      * 点按尾随的蓝色椭圆，以将视频直接搜寻到该区段的结尾。
-      * 点按整个区段，使视频播放返回到该区段的开头。
+      * 要直接将视频搜寻到该区段的开头，请点按前导的蓝色椭圆。
+      * 要直接将视频搜寻到该区段的结尾，请点按尾随的蓝色椭圆。
+      * 要将视频播放返回到该区段的开头，请点按整个区段。
 
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
@@ -415,22 +414,22 @@ ht-degree: 26%
     <tbody> 
       <tr> 
       <td>将选定的缩略图图像与概览相关联</td> 
-      <td><p>在操作类型下，点按<strong>Quickview</strong>。</p> <p>如果您是AEM Sites和Ecommerce客户：</p> 
+      <td><p>在操作类型下，点按<strong>Quickview</strong>。</p> <p>如果您是Experience Manager站点和电子商务客户：</p> 
        <ul> 
-       <li>请注意，“SKU 值”文本字段会预先填充选定产品的 SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。当图像与AEM Commerce中的产品关联时，将自动填充该参数。</li> 
-       <li>如果预填充的SKU不正确，请点按或单击产品选取器图标（放大镜）以打开选择产品页面。 点按或单击要使用的产品，然后点按页面右上角的复选标记，以返回到交互式视频编辑器。</li> 
-       </ul> <p> 如果您是<em>not</em>AEM Sites或Ecommerce客户</p> 
+       <li>请注意，“SKU 值”文本字段会预先填充选定产品的 SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。当图像与Experience Manager商务中的产品关联时，将自动填充此值。</li> 
+       <li>如果预填充的SKU不正确，请点按或单击产品选取器图标（放大镜）以打开选择产品页面。 点按或单击要使用的产品，然后点按页面右上角的复选标记，以便您可以返回到交互式视频编辑器。</li> 
+       </ul> <p> 如果您是<em>not</em>Experience Manager站点或电子商务客户</p> 
        <ul> 
-       <li>请参阅<a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">识别热点变量</a>。您需要定义这些变量。 </li> 
-       <li>默认情况下，此SKU字段会使用图像资产的文件名（不带扩展名）。 如果您的基于 SKU 的文件遵循标准的命名规范，则通常不需要进行任何额外的编辑。 </li> 
+       <li>请参阅<a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">识别热点变量</a>。必须定义变量。  </li> 
+       <li>默认情况下，此SKU字段会使用图像资产的文件名（不带扩展名）。 如果您基于SKU的文件遵循标准命名约定，则此文件名通常不需要进行任何其他编辑。 </li> 
        <li>否则，请编辑默认值并输入正确的SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充概览模板的变量部分，以便系统能够将点按的图像与特定SKU的概览相关联。</li> 
-       </ul> <p>（可选）如果您需要在概览中使用其他变量来进一步识别产品，请点按<strong>添加常规变量</strong>。 在文本字段中，指定其他变量。 例如，<code>category=Womens</code> 就是一个添加的变量。</p> <p> </p> </td> 
+       </ul> <p>（可选）如果快速视图中存在其他必须用来进一步标识产品的变量，请点按<strong>添加常规变量</strong>。 在文本字段中，指定一个额外的变量。 例如，<code>category=Womens</code> 就是一个添加的变量。</p> <p> </p> </td> 
       </tr> 
       <tr> 
       <td>将选定的缩略图与超链接相关联</td> 
       <td><p>在操作类型下，点按<strong>超链接</strong>，然后执行下列操作之一：</p> 
        <ul> 
-       <li>如果您是AEM Sites客户，请点按站点选择器图标（文件夹）以导航到网页。 请注意，如果您的交互式内容具有包含相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。</li> 
+       <li>如果您是Experience Manager站点客户，请点按站点选择器图标（文件夹）以导航到网页。 如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。</li> 
        <li>如果您是独立的Dynamic Media客户，请在“HREF”文本字段中，指定链接网页的完整URL路径。</li> 
        </ul> <p>请确保指定是在新的浏览器选项卡还是在当前的选项卡中打开链接。</p> </td> 
       </tr> 
@@ -438,21 +437,21 @@ ht-degree: 26%
       <td>将选定的缩略图图像与体验片段关联</td> 
       <td><p>在操作类型下，点按<strong>体验片段</strong>，然后执行以下操作：<p> 
        <ul> 
-       <li>如果您是AEM Sites客户，请点按或单击搜索图标（放大镜）以打开体验片段页面。 点按或单击要使用的体验片段，然后点按页面右上角的<strong>选择</strong>以返回到上一页上的“操作”面板。<br /> 请参阅 <a href="/help/sites-authoring/experience-fragments.md">体验片段</a>。</li> 
+       <li>如果您是Experience Manager站点客户，请点按或单击搜索图标（放大镜）以打开体验片段页面。 点按或单击要使用的体验片段，然后点按页面右上角的<strong>选择</strong>，以返回到上一页面上的“操作”面板。<br /> 请参阅 <a href="/help/sites-authoring/experience-fragments.md">体验片段</a>。</li> 
       </ul> 
        <ul> 
-       <li>指定将在视频中显示的体验片段的宽度和高度。</li>
-       </ul><strong>注意</strong>:请注意，在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。</p></tr>&lt;&gt; 
+       <li>指定您希望在视频中显示的体验片段的宽度和高度。</li>
+       </ul><strong>注意</strong>:在体验片段中嵌入查看器时，不支持交互式视频中的社交媒体共享工具。要解决此问题，您可以使用或创建没有社交媒体共享工具的查看器预设。 通过此类查看器预设，您可以成功将其嵌入到体验片段中。</p></tr>&lt;&gt; 
       <tr> 
       <td>编辑已分配给缩略图的操作</td> 
-      <td>在某个时间轴区段内，点按其文本标签右侧带有链式链接的缩略图。该链式链接表示已向该缩略图分配操作。点按<strong>操作</strong>选项卡以进行更改。</td> 
+      <td>在某个时间轴区段内，点按其文本标签右侧带有链式链接的缩略图。该链式链接表示已向该缩略图分配操作。点按<strong>操作</strong>选项卡，以便进行更改。</td> 
       </tr> 
       <tr> 
       <td>更改缩略图的文本标签</td> 
-      <td><p>默认情况下，文本标签使用缩略图的<code>Title</code>元数据字段。 如果<code>Title</code>不存在，则会使用缩略图的文件名，但不使用扩展名。</p> <p>要更改缩略图的文本标签，请在<strong>操作</strong>选项卡的显示图像资产的正下方，输入所需的文本。 请参阅下面的插图。</p> <p>请注意，新文本标签仅供视频播放器本身以及时间轴区段中显示的缩略图文本使用。标签更改不会影响缩略图的标题元数据字段及其文件名。</p> </td> 
+      <td><p>默认情况下，文本标签使用缩略图的<code>Title</code>元数据字段。 如果<code>Title</code>不存在，则会使用缩略图的文件名，但不使用扩展名。</p> <p>要更改缩略图的文本标签，请在<strong>操作</strong>选项卡的显示图像资产的正下方，输入所需的文本。 请参阅下面的屏幕截图。</p> <p>新文本标签仅供视频播放器本身以及时间轴区段中显示的缩略图文本使用。 标签更改不会影响缩略图的标题元数据字段及其文件名。</p> </td> 
       </tr> 
       <tr> 
-      <td>还原所做的更改</td> 
+      <td>还原更改：</td> 
       <td>在页面的右上角附近，点按<strong>撤消</strong>或<strong>重做</strong>。</td> 
       </tr> 
     </tbody> 
@@ -471,12 +470,12 @@ ht-degree: 26%
 
    * **[!UICONTROL 合并区段]**  — 您可以将两个相邻的区段（无论是否分配了产品缩略图）合并到一个区段中。
 
-      在时间轴上，点按要合并到一个中的两个或多个连续区段。 请注意，下图中的两个选定区段上没有蓝色的椭圆拖动手柄。
+      在时间轴上，点按要合并到一个中的两个或多个连续区段。 下面屏幕截图中的两个选定区段上没有蓝色的椭圆拖动手柄。
 
       点按工具栏上的&#x200B;**[!UICONTROL 合并区段]** 。
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
-   将两个选定的五秒段合并为一个十秒段。
+   将两个选定的五秒区段合并为一个十秒区段。
 
    * **[!UICONTROL 拆分区段]**  — 您可以将一个区段划分为两个等时的区段。如果已将产品缩略图分配给区段，则缩略图会合并到左侧区段中。
 
@@ -487,22 +486,21 @@ ht-degree: 26%
 
    将选定的10秒区段拆分为两个区段，每个区段为5秒。
 
-1. 在&#x200B;**[!UICONTROL 创建交互式视频]**&#x200B;页面的右上角附近，将显示当前选定的与视频一起使用的查看器预设的名称。 点按名称以选择其他查看器预设。
+1. 在&#x200B;**[!UICONTROL 创建交互式视频]**&#x200B;页面的右上角附近，将显示当前选定的与视频一起使用的查看器预设的名称。 如果要选择其他查看器预设，请点按名称。
 
-   例如，`Shoppable_Video_light` 查看器预设能够让您在播放视频时，在视频旁边留出一个白色显示区域。该显示区域用于在播放视频时，显示可点击的缩略图。`Shoppable_Video_dark` 查看器预设则能够让您在播放视频时，在视频旁边留出一个黑色显示区域。
+   例如，`Shoppable_Video_light`查看器预设允许您在视频旁边播放一个白色显示区域的视频。 该显示区域用于在播放视频时，显示可点击的缩略图。`Shoppable_Video_dark`查看器预设允许您在视频旁边播放带有黑色显示区域的视频。
 
-
-   如果您创建了自己的交互式视频查看器预设，则还将在可供选择的预设列表中看到该预设。
+   如果您创建了自己的交互式视频查看器预设，则会在可供选择的预设列表中看到该预设。
 
    完成后，点按&#x200B;**[!UICONTROL Save]**。
 
    >[!NOTE]
    >
-   >在保存交互式视频时，会自动保存 `.vtt` 一个关联的文件。 文 `.vtt` 件将保存到位于资 `_VTT` 产根目录的文 **[!UICONTROL 件夹]**。 要在网站上正确播放交互式视频，必须填写文件和文件夹。 因此，请勿移动、编辑或删除文件夹 `_VTT` 或其内容。
+   >在保存交互式视频时，会自动保存 `.vtt` 一个关联的文件。 `.vtt`文件将保存到&#x200B;**[!UICONTROL Assets]**&#x200B;根目录的`_VTT`文件夹中。 要在网站上正确播放交互式视频，必须填写文件和文件夹。 因此，请勿移动、编辑或删除文件夹 `_VTT` 或其内容。
 
-1. 发布交互式视频。发布后会创建嵌入代码或 URL，最后您需要将该嵌入代码或 URL 复制并粘贴到您的网站体验。
+1. 发布交互式视频。发布后会创建嵌入代码或URL，您最终会将该嵌入代码或URL复制并粘贴到您的网站体验中。
 
-   如果您使用概览添加交互性，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。
+   如果您使用概览添加交互性，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
 
    请参阅[发布资产](publishing-dynamicmedia-assets.md)。
 
@@ -510,7 +508,7 @@ ht-degree: 26%
    >
    >要发布带有概览的购物视频，请确保您还会从商务区域单独发布每个视频的相关图像资产。
 
-   在添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站登录页面。请参阅[将交互式视频与您的网站集成。](#integrating-an-interactive-video-with-your-website)
+   在添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站登录页面。请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
 
 ## 发布交互式视频资产{#publishing-interactive-video-assets}
 
@@ -520,27 +518,26 @@ ht-degree: 26%
 
 现在，在上传视频、向视频添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站。
 
-如果您是AEM Sites客户，则可以通过将交互式媒体组件拖动到您的页面来添加交互式视频。 请参阅[将Dynamic Media Assets添加到页面。](/help/assets/adding-dynamic-media-assets-to-pages.md)
+如果您是Experience Manager站点客户，则可以通过将交互式媒体组件拖动到您的页面来添加交互式视频。 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
-如果您是独立的AEM Assets客户，则可以按照此部分中的所述，手动将交互式视频添加到您的网站。
+如果您是独立的Experience Manager资产客户，则可以按照此部分中的所述，手动将交互式视频添加到您的网站。
 
 1. 复制已发布的交互式视频的嵌入代码或 URL。
 
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-如果您使用概览添加交互性，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向AEM Sites页面的链接，则无法使用基于URL的链接方法。
+如果您使用概览添加交互性，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
 
 1. 在目标网页代码中，找到静态视频所在的位置。
 
-1. 删除静态视频，并将其代码原封不动地替换为您从 AEM Assets 中复制的嵌入代码或 URL。
-
-由于复制的嵌入代码是为响应式环境设计的，因此该代码应该会自动地适应之前由静态视频所占用的区域。
+1. 删除静态视频，并将该代码原样替换为您从Experience Manager资产中复制的嵌入代码或URL。
+复制的嵌入代码是为响应式环境设置的，以便自动适应之前由静态视频占用的区域。
 
 >[!NOTE]
 >
 >至此，如果您只是通过超链接的网页添加交互性，您就已经完成了所有操作。
 >
->但是，如果您通过触发概览来添加任何交互性，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与您现有的概览相集成。 在这种情况下，您现在需要将交互式视频与网站上的现有概览相集成。
+>但是，如果您为触发概览而添加了任何交互性，则交互式视频旁边的缩略图仅用于显示目的；它们尚未与您现有的概览相集成。 在这种情况下，您现在必须将交互式视频与网站上的现有概览相集成。
 
 **示例**
 
@@ -548,7 +545,7 @@ ht-degree: 26%
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
-请注意，它是标准视频嵌入代码：
+请注意，嵌入代码是标准代码：
 
 ```xml
 <style type="text/css">
@@ -575,7 +572,7 @@ ht-degree: 26%
 </script>
 ```
 
-集成过程很简单，只需删除视频嵌入代码并将其替换为从AEM中的交互式视频嵌入代码即可。 您可以在以下URL上查看结果。 虽然该视频在页面上显示交互式视频，但尚未与现有概览相集成：
+集成过程很简单，只需删除视频嵌入代码并将其替换为从Experience Manager中插入的交互式视频嵌入代码即可。 您可以在以下URL上查看结果。 虽然该视频在页面上显示交互式视频，但尚未与现有概览相集成：
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
 
@@ -583,9 +580,9 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->此任务仅在您是独立的AEM Assets客户时才适用。
+>此任务仅在您是独立Experience Manager资产客户时才适用。
 
-此过程的最后一步是将交互式视频与网站上使用的现有概览实施相集成。 但是，没有任何一种集成解决方案是在所有情况下都适用的。每个概览实施都是唯一的。 因此，需要一种最可能需要前端IT人员协助的具体方法。
+此过程的最后一步是将交互式视频与网站上使用的现有概览实施相集成。 但是，没有任何一种集成解决方案是在所有情况下都适用的。每个概览实施都是唯一的。 因此，需要一种具体的方法，需要前端IT人员的协助。
 
 现有的概览实施通常表示在网页上发生的一系列相互关联的操作，这些操作按以下顺序发生：
 
@@ -597,9 +594,9 @@ ht-degree: 26%
 1. 或者，前端代码会将加载的概览数据转换为HTML表示形式。
 1. 前端代码显示一个模态对话框或面板，并将 HTML 内容呈现在屏幕上以供最终用户查看。
 
-这些调用并非独立的公共 API 调用（可以由网页逻辑从任意步骤进行调用）。相反，这些调用属于链式调用，即，每个后续步骤都隐藏在前一步的最后阶段（回调）。
+这些调用不表示独立的公共API调用，网页逻辑可从任意步骤中调用这些调用。 相反，这些调用属于链式调用，即，每个后续步骤都隐藏在前一步的最后阶段（回调）。
 
-在交互式视频替换步骤1和部分步骤2的同时，当用户单击交互式视频内的缩略图时，此类用户交互由查看者处理。 查看器会向网页返回一个事件，其中包含之前添加到AEM的所有缩略图数据。
+在交互式视频替换步骤1和部分步骤2的同时，当用户单击交互式视频内的缩略图时，此类用户交互由查看者处理。 查看器会向网页返回一个事件，其中包含之前添加到Experience Manager的所有缩略图数据。
 
 在此类事件处理程序中，前端代码会执行以下操作：
 
@@ -607,9 +604,9 @@ ht-degree: 26%
 * 根据缩略图数据构建概览URL。
 * 触发从后端加载概览并在屏幕上呈现概览以供显示的过程。
 
-此外，交互式视频查看器支持全屏操作模式。 最终用户通过单击缩略图而不离开全屏来触发概览。 要实现此功能，请更改前端代码，以便将“快速查看”模式对话框附加到查看器的容器。 请勿添加文档BODY或查看器处于全屏模式时不可用的其他网页元素。 执行此作业的代码需要侦听在查看器加载到页面上后发送的另一个查看器回调。
+此外，交互式视频查看器支持全屏操作模式。 最终用户通过单击缩略图而不离开全屏来触发概览。 要实现此功能，请更改前端代码，以便将“快速查看”模式对话框附加到查看器的容器。 请勿添加文档BODY或查看器处于全屏模式时不可用的其他网页元素。 执行此作业的代码必须监听在页面上加载的查看器之后发送的一个或多个查看器回调。
 
-AEM返回的嵌入代码已拥有一个现成的事件处理程序。 如以下高亮显示的代码片段所示，该代码片段被注释掉：
+由Experience Manager返回的嵌入代码已拥有一个现成的事件处理程序。 如以下高亮显示的代码片段所示，该代码片段被注释掉：
 
 ```xml
 <style type="text/css">
@@ -660,7 +657,7 @@ AEM返回的嵌入代码已拥有一个现成的事件处理程序。 如以下�
 
 标准嵌入代码中存在两个默认回调处理程序：`quickViewActivate`和`initComplete`。 在查看器中单击缩略图时，将触发`quickViewActivate`处理程序。 使用它将查看器与概览激活逻辑集成。 当查看器加载到页面时，`initComplete`处理程序只触发一次。 此处理程序用于调整网页DOM中的“快速查看”对话框位置。
 
-构建概览URL的过程与识别本主题前面介绍的缩略图变量的过程相反。 使用我们之前识别的概览URL示例，您可以了解在每种情况下如何构建概览URL:
+构建概览URL的过程与识别本主题前面介绍的缩略图变量的过程相反。 使用之前已识别的概览URL示例，您可以了解在每种情况下如何构建概览URL:
 
 <table>
   <tbody>
@@ -707,7 +704,7 @@ var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-演示网站使用简单的`loadQuickView()`函数调用触发“概览”对话框。 此函数仅采用一个参数，即概览数据URL。 因此，集成交互式视频所需的最后一步是将下面一行代码添加到`quickViewActivate`处理程序：
+演示网站使用简单的`loadQuickView()`函数调用触发“概览”对话框。 此函数仅采用一个参数，即概览数据URL。 因此，集成交互式视频的最后一步是将下面一行代码添加到`quickViewActivate`处理程序：
 
 ```xml
 loadQuickView(quickViewUrl);
@@ -722,7 +719,7 @@ var inner_container = document.getElementById(sdkContainerId);
 
 其中，`inner_container`是对查看器管理的`DIV`元素的引用。 您希望该对话框是该`DIV`的子项。
 
-实际找到模态对话框元素并将其附加到上述容器的步骤是特定于大小写的。 再次重申，您可以向熟悉所需Quickview实施的前端开发人员寻求帮助。
+实际找到模态对话框元素并将其附加到上述容器的步骤具体因大小写而异。 再次重申，您可以向熟悉所需Quickview实施的前端开发人员寻求帮助。
 
 对于示例网站，“快速视图”模式对话框将实施为`DIV` ，并且其快速视图模式ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
 
@@ -779,6 +776,6 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
 
-## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
+## 使用概览{#using-quickviews-to-create-custom-pop-ups}创建自定义弹出窗口
 
 请参阅[使用概览创建自定义弹出窗口](/help/assets/custom-pop-ups.md)。
