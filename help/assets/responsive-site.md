@@ -10,10 +10,10 @@ discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 35%
 
 如果您的网站位于第三方WCM上，则使用此功能很有意义。 但是，如果您的网站改为位于AEM上，则域外图像服务器会呈现该图像并将其提供给网页。
 
-另请参阅[在网页上嵌入视频查看器。](embed-code.md)
+另请参阅[将视频查看器嵌入网页](embed-code.md)。
 
-另请参阅[将 URL 关联到您的 Web 应用程序。](linking-urls-to-yourwebapplication.md)
+另请参阅[将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md)。
 
-**要为响应式网站提供优化的图像，请执行以下操作**:
+**要为响应式网站传送优化的图像，请执行以下操作：**
 
 1. 导航到您要为其提供响应代码的图像，然后在下拉菜单中，点按&#x200B;**[!UICONTROL 演绎版]**。
 
