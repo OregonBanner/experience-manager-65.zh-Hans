@@ -9,7 +9,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: 发布
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2935'
 ht-degree: 4%
@@ -38,10 +38,10 @@ ht-degree: 4%
 
 在文件夹中配置选择性发布后，可以执行以下任一操作：
 
-* [使用管理发布有选择地将资产发布到Dynamic Media或AEM。](#selective-publish-manage-publication)
-* [使用管理发布可选择性地从Dynamic Media或AEM中取消发布资产。](#selective-unpublish-manage-publication)
-* [使用快速发布将资产发布到Dynamic Media或AEM。](#quick-publish-aem-dm)
-* [通过搜索结果有选择地发布或取消发布资产。](#selective-publish-unpublish-search-results)
+* [使用管理发布可选择性地将资产发布到Dynamic Media或AEM](#selective-publish-manage-publication)。
+* [使用管理发布可选择性地从Dynamic Media或AEM中取消发布资产](#selective-unpublish-manage-publication)。
+* [使用快速发布将资产发布到Dynamic Media或AEM](#quick-publish-aem-dm)。
+* [通过搜索结果有选择地发布或取消发布资产](#selective-publish-unpublish-search-results)。
 
 **在Dynamic Media中在文件夹级别配置选择性发布**
 
@@ -186,7 +186,7 @@ ht-degree: 4%
 
 搜索结果可以跨具有不同Dynamic Media发布设置的资产文件夹显示资产。 如果您从搜索结果中选择了一个或多个资产，并且这些资产具有不同的Dynamic Media发布模式设置，则您可以从工具栏中触发&#x200B;**[!UICONTROL 管理发布]** ，以发布或取消发布。
 
-另请参阅[搜索AEM中的资产。](/help/assets/search-assets.md)
+另请参阅[搜索AEM](/help/assets/search-assets.md)中的资产。
 
 **通过搜索结果有选择地发布或取消发布资产**
 
