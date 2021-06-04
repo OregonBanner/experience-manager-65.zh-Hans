@@ -11,7 +11,7 @@ docset: aem65
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '11748'
 ht-degree: 24%
@@ -30,7 +30,7 @@ ht-degree: 24%
 >
 >在Dynamic Media中处理视频之前，请确保AEM管理员已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中启用并配置了Dynamic MediaCloud Services。
 >
->* 请参阅配置Dynamic Media - Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[Dynamic Media - Scene7模式疑难解答。](/help/assets/troubleshoot-dms7.md)
+>* 请参阅配置Dynamic Media - Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[Dynamic Media - Scene7模式疑难解答](/help/assets/troubleshoot-dms7.md)。
    >
    >
 * 请参阅配置Dynamic Media — 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
@@ -356,7 +356,7 @@ VBR需要较长的编码时间，但会产生最有利的结果；媒体文件�
 
 ### 分辨率 {#resolution}
 
-**分辨率**以像素为单位描述视频文件的高度和宽度。大多数源视频以高分辨率存储（例如，1920 x 1080）。 出于流播放目的，源视频会压缩为较小的分辨率（640 x 480或更低）。
+**分辨率**&#x200B;以像素为单位描述视频文件的高度和宽度。大多数源视频以高分辨率存储（例如，1920 x 1080）。出于流播放目的，源视频会压缩至较低分辨率（640 x 480 或更低）。
 
 分辨率和数据率是两个相互关联、密不可分的因素，它们决定着视频质量。为保持同等的视频质量，视频文件的像素数越高（分辨率越高），数据率就必须越高。例如，考虑分辨率分别为 320 x 240 和 640 x 480 的视频文件的每帧像素数：
 
@@ -548,7 +548,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 >
 >确保在AEM的“YouTube设置”下添加渠道之前，您已在YouTube *中设置一个或多个渠道(请参阅下面的在AEM](#setting-up-youtube-in-aem)中设置YouTube)。*[如果您未能执行此操作，则不会向您提供任何现有渠道的警告。 但是，添加渠道时仍会发生Google身份验证，但是没有选项可选择发送视频的渠道。
 
-要创建YouTube渠道，请执行以下操作：
+**要创建YouTube渠道，请执行以下操作：**
 
 1. 转到[https://www.youtube.com](https://www.youtube.com/)，然后使用您的Google帐户凭据登录。
 1. 在YouTube页面的右上角，单击您的配置文件图片（可能还会以彩色圆形显示为字母），然后单击&#x200B;**[!UICONTROL YouTube设置]**（圆齿轮图标）。
@@ -761,7 +761,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 >
 >有关更详细的进度信息，您可以在复制下监视YouTube日志。 但请注意，此类监控需要管理员访问权限。
 
-要将视频发布到您的 YouTube 频道，请执行以下操作：
+**要将视频发布到您的 YouTube 频道，请执行以下操作：**
 
 1. 在AEM中，导航到要发布到YouTube渠道的视频资产。
 1. 选择视频资产（自适应视频集）。
@@ -797,7 +797,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 >
 >只有在将视频资产发布到 YouTube 后，才可复制其 YouTube URL。
 
-要将 YouTube URL 关联到您的 Web 应用程序，请执行以下操作：
+**要将 YouTube URL 关联到您的 Web 应用程序，请执行以下操作：**
 
 1. 导航到要复制其URL的&#x200B;*YouTube已发布*&#x200B;视频资产，然后选择该资产。
 
@@ -821,7 +821,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 >
 >请参阅[监视视频编码和 YouTube 发布进度](#monitoring-video-encoding-and-youtube-publishing-progress)。
 
-要取消发布视频以将其从 YouTube 中删除，请执行以下操作：
+**要取消发布视频以将其从 YouTube 中删除，请执行以下操作：**
 
 1. 导航到要从YouTube渠道中取消发布的视频资产。
 1. 在资产选择模式下，选择一个或多个已发布的视频资产。
@@ -836,7 +836,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 
 ### 监控进度{#monitoring-progress}
 
-要监视进度(包括编码失败/YouTube发布)，请执行以下操作：
+**要监视进度(包括编码失败/YouTube发布)，请执行以下操作：**
 
 1. 在资产文件夹中查看视频编码进度：
 
@@ -987,7 +987,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 
 为了使视频报表正常工作，在配置Dynamic MediaCloud Services时会自动创建报表包ID。同时，报表包ID会被推送到发布服务器，以便在预览资产时，该ID可用于复制URL功能。但是，这要求发布服务器已经设置。如果未设置发布服务器，您仍可以发布以查看视频报表，但是，您将需要返回到Dynamic Media云配置，然后点按&#x200B;**[!UICONTROL 确定]**。
 
-要查看视频报表，请执行以下操作：
+**要查看视频报表，请执行以下操作：**
 
 1. 点按 AEM 左上角的 AEM 徽标，然后点按左边栏中的&#x200B;**[!UICONTROL 工具]**（锤子图标）> **[!UICONTROL Assets]** > **[!UICONTROL 视频报表]**。
 1. 在“视频报表”页面中，执行以下任一操作：
@@ -1008,7 +1008,7 @@ YouTube自行编码。 因此，上传到AEM的原始视频文件会发布到You
 
 使用[AdobeDynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)和[HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)创建您自己的视频查看器。
 
-要根据您使用HTML5查看器SDK API创建的视频查看器查看视频报表，请执行以下操作：
+**要根据您使用HTML5查看器SDK API创建的视频查看器查看视频报表，请执行以下操作：**
 
 1. 导航到任意已发布的视频资产。
 1. 在资产页面的左上角附近，从下拉列表中选择&#x200B;**[!UICONTROL 查看器]**。
@@ -1311,7 +1311,7 @@ AEM中的所有视频都必须具有关联的缩略图；不替换缩略图，�
 1. 点按&#x200B;**[!UICONTROL 确定]**&#x200B;以返回到“属性”选项卡。
 1. 在CRXDE Lite页面的左上角附近，点按&#x200B;**[!UICONTROL 全部保存]**，然后点按左上角的“返回主页”图标以返回到AEM。
 
-   请参阅[添加视频缩略图。](#adding-a-video-thumbnail)
+   请参阅[添加视频缩略图](#adding-a-video-thumbnail)。
 
 ### 添加自定义视频缩略图{#adding-a-custom-video-thumbnail-1}
 
