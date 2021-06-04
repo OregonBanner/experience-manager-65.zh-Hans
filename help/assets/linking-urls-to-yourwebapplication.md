@@ -10,7 +10,7 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: Business Practitioner, Administrator
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 配置
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 26%
@@ -21,7 +21,7 @@ ht-degree: 26%
 
 您的网站和应用程序通过URL调用访问Dynamic Media服务。 在您发布资产后，Dynamic Media 会激活引用该资产的 URL 字符串。您可以将这些 URL 粘贴到 Web 浏览器中以进行测试。
 
-仅当&#x200B;*未*&#x200B;使用AEM作为WCM时，才链接到URL。 当您希望将视频播放器作为弹出窗口或模式窗口进行传送时，会使用“链接”与“嵌入”两种方式。 如果您使用AEM作为WCM，请[直接在页面上添加资产。](adding-dynamic-media-assets-to-pages.md)
+仅当&#x200B;*未*&#x200B;使用AEM作为WCM时，才链接到URL。 当您希望将视频播放器作为弹出窗口或模式窗口进行传送时，会使用“链接”与“嵌入”两种方式。 如果您使用AEM作为WCM，请[直接在页面](adding-dynamic-media-assets-to-pages.md)中添加资产。
 
 要将这些URL字符串放置在网页和应用程序中，请从Dynamic Media复制它们。
 
@@ -29,13 +29,13 @@ ht-degree: 26%
 >
 >URL字符串仅可用于资产的动态演绎版。当前，它们不适用于DAM(而非Dynamic Media服务器)中的静态资产。对于静态的演绎版，不会显示URL按钮。
 
-另请参阅[在网页上嵌入视频查看器或图像查看器。](embed-code.md)
+另请参阅[在网页上嵌入视频查看器或图像查看器](embed-code.md)。
 
-另请参阅[将 YouTube URL 关联到您的 Web 应用程序。](video.md)
+另请参阅[将YouTube URL关联到您的Web应用程序](video.md)。
 
-另请参阅[为响应式网站传送优化的图像。](responsive-site.md)
+另请参阅[为响应式网站传送优化的图像](responsive-site.md)。
 
-另请参阅[上传资产。](manage-assets.md#uploading-assets)
+另请参阅[上传资产](manage-assets.md#uploading-assets)。
 
 ## 获取资产{#obtaining-a-url-for-an-asset}的URL
 
