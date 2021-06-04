@@ -11,7 +11,7 @@ docset: aem65
 feature: 视频配置文件
 role: Business Practitioner, Administrator
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '3704'
 ht-degree: 36%
@@ -42,7 +42,7 @@ Dynamic Media 附带预定义的自适应视频编码配置文件。此现成配
 >
 >在搜索资产时元数据很有用。缩略图是在编码过程中生成的静态视频图像。 AEM系统需要这些参数，并在用户界面中使用这些参数，以帮助您在“卡片”视图、“搜索结果”视图和“资产列表”视图中以可视方式识别视频。 当您点按编码视频的演绎版图标（画板）时，可以看到生成的缩略图。
 
-创建完视频配置文件后，可将其应用到一个或多个文件夹。 请参阅[将视频配置文件应用到文件夹。](#applying-a-video-profile-to-folders)
+创建完视频配置文件后，可将其应用到一个或多个文件夹。 请参阅[将视频配置文件应用到文件夹](#applying-a-video-profile-to-folders)。
 
 要为其他资产类型定义高级处理参数，请参阅[配置资产处理](/help/assets/config-dms7.md#configuring-asset-processing)。
 
