@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 52%
+source-wordcount: '1668'
+ht-degree: 32%
 
 ---
 
 # 将 Dynamic Media 资产添加到页面{#adding-dynamic-media-assets-to-pages}
 
-要将Dynamic Media功能添加到您在网站上使用的资产中，您可以直接在页面上添加&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。 要执行此操作，请进入[!UICONTROL 设计]模式并启用Dynamic Media组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic Media和交互式媒体组件是智能的 — 它们知道您添加的是图像还是视频，可用的选项会相应地发生更改。
+要将Dynamic Media功能添加到您在网站上使用的资产中，您可以直接在页面上添加&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。 进入&#x200B;**[!UICONTROL 设计]**&#x200B;模式并启用Dynamic Media组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic Media和交互式媒体组件是智能的 — 它们知道您添加的是图像还是视频，可用的选项会相应地发生更改。
 
-如果您使用 AEM 作为 WCM，则可以直接将 Dynamic Media 资产添加到页面。
+如果您使用Dynamic Media作为WCM，则可以直接将Adobe Experience Manager资产添加到页面。
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 52%
 
 要将 Dynamic Media 组件/查看器添加到页面，请执行以下操作：
 
-1. 在 AEM 中，打开您要添加 Dynamic Media 组件的页面。
+1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
 1. 如果没有可用的Dynamic Media组件，请单击[!UICONTROL Sidekick]中的标尺以进入&#x200B;**[!UICONTROL Design]**&#x200B;模式，单击&#x200B;**[!UICONTROL Edit]** parsys，然后选择&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;以使Dynamic Media组件可用。
 
    >[!NOTE]
@@ -38,7 +38,7 @@ ht-degree: 52%
 
 1. 通过单击[!UICONTROL Sidekick]中的铅笔图标，返回到&#x200B;**[!UICONTROL 编辑]**&#x200B;模式。
 1. 将&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件从Sidekick中的&#x200B;**[!UICONTROL 其他]**&#x200B;组拖动到所需位置的页面上。
-1. 单击&#x200B;**[!UICONTROL 编辑]**&#x200B;以打开该组件。
+1. 单击&#x200B;**[!UICONTROL 编辑]**&#x200B;以便组件打开。
 1. [](#dynamic-media-component)根据需要编辑该组件，然后单击&#x200B;**[!UICONTROL 确定]**&#x200B;以保存更改。
 
 ## Dynamic Media 组件 {#dynamic-media-components}
@@ -49,7 +49,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->这些组件在默认情况下不可用，需要先在设计模式中选择这些组件才能使用。[在设计模式中启用这些组件后](/help/sites-authoring/default-components-designmode.md)，您可以将它们添加到页面，操作过程与添加任何其他 AEM 组件相同。
+>默认情况下，这些组件不可用，在使用之前必须在设计模式下选择这些组件。 [在设计模式下提供这些组件后](/help/sites-authoring/default-components-designmode.md)，您可以像添加任何其他Experience Manager组件一样，将组件添加到页面。
 
 ### Dynamic Media 组件 {#dynamic-media-component}
 
@@ -70,7 +70,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 [!UICONTROL Dynamic Media]组件允许您添加动态图像，包括图像集、旋转集和混合媒体集。 您可以缩放图像，并在适当的情况下在旋转集内旋转图像，或从其他类型的集合中选择图像。
 
-您还可以直接在组件中配置查看器预设、图像预设或图像格式。要使图像成为响应式图像，您可以设置断点，或应用响应式图像预设。
+您还可以直接在组件中配置查看器预设、图像预设或图像格式。要使图像具有响应性，您可以设置断点或应用响应式图像预设。
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
@@ -82,19 +82,19 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 >
 >默认情况下，Dynamic media图像组件是自适应的。 如果要使其变为固定大小，请在&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡的组件中，使用&#x200B;**[!UICONTROL Width]**&#x200B;和&#x200B;**[!UICONTROL Height]**&#x200B;属性设置它。
 
-**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择一个现有的查看器预设。如果未显示您要查找的查看器预设，则可能需要将其显示出来。请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
+**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择一个现有的查看器预设。如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
 
-如果您查看的是图像集、旋转集或混合媒体集，这是唯一可用的选项。显示的查看器预设也是智能的 — 仅显示相关的查看器预设。
+仅当您查看图像集、旋转集或混合媒体集时，此选项才可用。 显示的查看器预设是智能的。 也就是说，只显示相关的查看器预设。
 
-**[!UICONTROL 图像预设]**  — 从下拉菜单中选择一个现有的图像预设。如果未显示您要查找的图像预设，则可能需要将其显示出来。请参阅[管理图像预设](/help/assets/managing-image-presets.md)。如果您正在使用图像预设，则无法选择查看器预设，反之亦然。
-
-如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
-
-**[!UICONTROL 图像修饰符]**  — 您可以通过提供其他图像命令来更改图像效果。有关这些内容的介绍，请参见[管理图像预设](/help/assets/managing-viewer-presets.md)和[命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)。
+**[!UICONTROL 图像预设]**  — 从下拉菜单中选择一个现有的图像预设。如果您要查找的图像预设不可见，则必须使其可见。 请参阅[管理图像预设](/help/assets/managing-image-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
 
 如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
 
-**[!UICONTROL 断点]**  — 如果您在响应式网站上使用此资产，则需要添加页面断点。图像断点之间需要使用逗号 (,) 进行分隔。当图像预设中未定义高度或宽度时，可以使用此选项。
+**[!UICONTROL 图像修饰符]**  — 您可以通过提供其他图像命令来更改图像效果。[管理图像预设](/help/assets/managing-viewer-presets.md)和[命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中介绍了这些命令。
+
+如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
+
+**[!UICONTROL 断点]**  — 如果您在响应式网站上使用此资产，则必须添加页面断点。图像断点之间用逗号分隔(,)。 当图像预设中未定义高度或宽度时，可以使用此选项。
 
 如果您查看的是图像集、旋转集或混合媒体集，则此选项不可用。
 
@@ -114,7 +114,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 #### 使用视频{#when-working-with-video}时
 
-使用[!UICONTROL Dynamic Media]组件将动态视频添加到您的网页。 编辑该组件时，您可以选择使用预定义的视频查看器预设，以在页面上播放视频。
+使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;组件将动态视频添加到您的网页。 编辑组件时，您可以选择使用预定义的视频查看器预设来在页面上播放视频。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
@@ -124,7 +124,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 >
 >默认情况下，Dynamic Media 视频组件为自适应组件。如果要使其变为固定大小，请在组件的&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡中使用&#x200B;**[!UICONTROL Width]**&#x200B;和&#x200B;**[!UICONTROL Height]**&#x200B;设置它。
 
-**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的视频查看器预设。如果未显示您要查找的查看器预设，则可能需要将其显示出来。请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
+**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择现有的视频查看器预设。如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
 您可以通过单击组件中的&#x200B;**[!UICONTROL 编辑]**&#x200B;来编辑以下[!UICONTROL 高级]设置。
 
@@ -134,7 +134,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 #### 如何安全传输视频 {#how-to-delivery-secure-video}
 
-在 AEM 6.2 中，如果您安装了 [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)，则可以控制是通过安全的 SSL 连接 (HTTPS) 还是不安全的连接 (HTTP) 来传输视频。默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反之，如果网页通过 HTTP 加载，则视频也会通过 HTTP 进行传输。在大多数情况下，此默认行为不会产生问题，故而无需更改任何配置。不过，您可以通过以下方法覆盖此默认行为，以强制使用安全的视频传输方式：将 `VideoPlayer.ssl=on` 附加到 URL 路径末尾或嵌入式代码片段的其他查看器配置参数列表中。
+在Experience Manager6.2中，安装[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)时，您可以控制是通过安全SSL连接(HTTPS)还是不安全连接(HTTP)来传送视频。 默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反之，如果网页是HTTP，则视频会通过HTTP传送。 通常，此默认行为是正常的，无需进行任何配置更改。 但是，您可以覆盖此默认行为。 将`VideoPlayer.ssl=on`附加到URL路径的末尾或嵌入代码片段中其他查看器配置参数的列表。 任一操作都会强制确保视频传输安全。
 
 有关视频安全传输和在 URL 路径中使用 `VideoPlayer.ssl` 配置属性的更多信息，请参阅《查看器参考指南》中的[视频安全传输](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)。除了视频查看器之外，安全视频交付也适用于混合媒体查看器和交互式视频查看器。
 
@@ -148,7 +148,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 您可以通过在组件中单击&#x200B;**[!UICONTROL 编辑]**，来编辑以下&#x200B;**[!UICONTROL 常规]**&#x200B;设置。
 
-**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择一个现有的查看器预设。如果未显示您要查找的查看器预设，则可能需要将其显示出来。查看器预设必须先发布，然后才能使用。请参阅管理查看器预设。
+**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择一个现有的查看器预设。如果您要查找的查看器预设不可见，则必须使其可见。 查看器预设必须先发布，然后才能使用。请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
 **[!UICONTROL 标题]**  — 更改视频的标题。
 
