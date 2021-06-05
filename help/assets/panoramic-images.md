@@ -11,9 +11,9 @@ docset: aem65
 feature: 全景图像，资产管理
 role: Business Practitioner, Administrator
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -42,11 +42,11 @@ ht-degree: 1%
 
 ## 配置Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
-要使全景图像查看器在AEM中正常工作，您必须将全景图像查看器预设与特定于Dynamic Media Classic和Dynamic Media Classic的元数据同步，以便查看器预设在JCR中进行更新。 要实现此目的，请按照以下方式配置Dynamic Media Classic:
+要使全景图像查看器在Adobe Experience Manager中正常工作，请将全景图像查看器预设与特定于Dynamic Media Classic和Dynamic Media Classic的元数据同步，以便查看器预设在JCR中进行更新。 要完成此同步，请按如下方式配置Dynamic Media Classic:
 
 1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
-1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。
+1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。
 1. 在“图像服务器发布”页面上，从顶部附近的&#x200B;**[!UICONTROL 发布上下文]**&#x200B;下拉菜单中，选择&#x200B;**[!UICONTROL 图像服务]**。
 
 1. 在同一图像服务器发布页面上，找到标题&#x200B;**[!UICONTROL 请求属性]**。
@@ -56,14 +56,14 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >仅支持位于允许的最大图像大小范围内的图像。 对超过大小限制的图像的请求将导致403响应。
+   >仅支持位于允许的最大图像大小范围内的图像。 对大小超过限制的图像的请求会导致403响应。
 
 1. 在“请求属性”标题下，执行以下操作：
 
    * 将“请求模糊处理模式”设置为&#x200B;**[!UICONTROL Disabled]**。
    * 将“请求锁定模式”设置为&#x200B;**[!UICONTROL Disabled]**。
 
-   在AEM中使用`Panoramic Media` WCM组件时，需要使用这些设置。
+   在Experience Manager中使用`Panoramic Media` WCM组件时，需要使用这些设置。
 
 1. 在“图像服务器发布”页面底部的左侧，单击&#x200B;**[!UICONTROL Save]**。
 
@@ -71,13 +71,13 @@ ht-degree: 1%
 
 ### 对全景媒体WCM组件{#troubleshooting-the-panoramic-media-wcm-component}进行故障诊断
 
-如果您将图像放入WCM中的全景媒体组件中，并且组件占位符折叠，则可能需要对以下问题进行故障诊断：
+如果将图像放入WCM中的全景媒体组件中，并且组件占位符折叠，则对以下问题进行故障诊断：
 
-* 如果遇到403禁止错误，则可能是由于请求的图像大小过大所致。 查看[配置Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)中的&#x200B;**[!UICONTROL 回复图像大小限制]**&#x200B;设置。
+* 如果您遇到403禁止错误，可能是由于请求的图像大小太大所致。 查看[配置Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)中的&#x200B;**[!UICONTROL 回复图像大小限制]**&#x200B;设置。
 
 * 对于资产上显示的“锁定无效”或页面上显示的“解析错误”，请选中请求模糊处理模式和请求锁定模式以确保已禁用这些模式。
 * 对于受污染的画布错误，请为图像资产的先前请求设置规则集定义文件路径和无效CTN 。
-* 如果图像请求的大小超过支持的限制后图像质量变得很低，请检查&#x200B;**[!UICONTROL JPEG编码属性>质量]**&#x200B;设置是否不为空。 **[!UICONTROL Quality]**&#x200B;字段的典型设置为`95`。 您可以在“图像服务器发布”页面上找到该设置。 要访问该页面，请参阅[配置Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
+* 如果图像请求的大小超过支持的限制后图像质量变低，请检查&#x200B;**[!UICONTROL JPEG编码属性>质量]**&#x200B;设置是否不为空。 **[!UICONTROL Quality]**&#x200B;字段的典型设置为`95`。 您可以在“图像服务器发布”页面上找到该设置。 要访问该页面，请参阅[配置Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)。
 
 ## 预览全景图像{#previewing-panoramic-images}
 
