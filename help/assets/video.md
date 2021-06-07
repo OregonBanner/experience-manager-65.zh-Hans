@@ -11,9 +11,9 @@ docset: aem65
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
 workflow-type: tm+mt
-source-wordcount: '11655'
+source-wordcount: '11657'
 ht-degree: 19%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 19%
 
 ## 在Dynamic Media中处理视频{#working-with-video-in-dynamic-media}
 
-Dynamic Media中的视频是一个端到端解决方案，可轻松发布高质量自适应视频，以便在多个屏幕(包括桌面设备、iOS、Android™、Blackberry和Windows移动设备)上进行流播放。自适应视频集是同一视频的一组版本，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。台式计算机或移动设备会检测可用带宽。
+Dynamic Media中的视频是一个端到端解决方案，可轻松发布高质量自适应视频，以便在多个屏幕(包括桌面设备、iOS、Android™、BlackBerry®和Windows移动设备)上进行流播放。自适应视频集是同一视频的一组版本，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。台式计算机或移动设备会检测可用带宽。
 
 例如，在 iOS 移动设备上，设备检测到 3G、4G 或 Wi-Fi 等带宽。设备会随之自动从自适应视频集内的各种视频比特率中选择正确的编码视频。然后，视频会在桌面设备、移动设备或平板电脑上进行流播放。
 
@@ -145,11 +145,11 @@ Dynamic Media中的视频是一个端到端解决方案，可轻松发布高质�
 
 * 所有HTML5视频查看器中的视频字幕。
 * 组织、浏览和搜索具有全面元数据支持的视频，以实现高效的视频资产管理。
-* 将自适应视频集交付到Web和桌面，以及移动设备，包括iPhone、iPad、Android、Blackberry和Windows Phone。
+* 将自适应视频集交付到Web和桌面，以及移动设备，包括iPhone、iPad、Android™、BlackBerry®和Windows Phone。
 
 各种iOS平台支持自适应视频流播放。 请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)。
 
-Dynamic Media支持为MP4 H.264视频播放移动设备视频。您可以在以下位置找到支持此视频格式的Blackberry设备：[Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支持的视频格式。
+Dynamic Media支持为MP4 H.264视频播放移动设备视频。您可以在以下位置找到支持此视频格式的BlackBerry®设备：[BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支持的视频格式。
 
 您可以在以下位置找到支持此视频格式的Windows设备：[Windows Phone 8支持的媒体编解码器](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))
 
@@ -239,17 +239,17 @@ HLS是Apple的自适应视频流播放标准，可根据网络带宽容量自动
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>Chrome（Android 6或更早版本）</td>
+   <td>Chrome(Android™ 6或更早版本)</td>
    <td>渐进式下载。</td>
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>Chrome（Android 7或更高版本）</td>
+   <td>Chrome(Android™ 7或更高版本)</td>
    <td>HLS</td>
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>Android（默认浏览器）</td>
+   <td>Android™（默认浏览器）</td>
    <td>渐进式下载。</td>
   </tr>
   <tr>
@@ -264,7 +264,7 @@ HLS是Apple的自适应视频流播放标准，可根据网络带宽容量自动
   </tr>
   <tr>
    <td>移动设备</td>
-   <td>黑莓</td>
+   <td>BlackBerry®</td>
    <td>HLS</td>
   </tr>
  </tbody>
@@ -602,7 +602,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 1. 在“创建 YouTube 配置”页面的“Google Cloud Platform 设置”下的&#x200B;**[!UICONTROL 应用程序名称]**&#x200B;字段中，输入 Google 项目 ID。
 
    您在之前最初配置Google Cloud设置时指定了项目ID。
-保持打开创建YouTube配置页面；你稍后会回到它。
+保持打开创建YouTube配置页面；稍后，你将返回到它。
 
    ![6_5_youtubepublish-createyoutuconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -1038,7 +1038,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 1. 通过执行以下操作，创建 TrackingManager 组件：
 
-   * 调用`s7sdk.Util.init();`后，通过添加以下内容，创建一个TrackingManager实例以跟踪事件：
+   * 在调用`s7sdk.Util.init();`之后，通过添加以下内容创建一个TrackingManager实例以跟踪事件：
 
       `var trackingManager = new s7sdk.TrackingManager();`
 
@@ -1211,7 +1211,7 @@ Cost-efficient access to rapidly evolving technology.
 
 视频缩略图是视频帧或向客户展示视频的图像资产的缩小版本。 缩略图可鼓励客户单击视频。
 
-Experience Manager中的所有视频都必须具有关联的缩略图；不替换缩略图，就无法删除缩略图。 默认情况下，当您将视频上传到Experience Manager时，第一帧将用作缩略图。 但是，您可以自定义缩略图以用于品牌策略或视觉搜索，例如。 自定义视频缩略图时，您既可以播放视频并在要使用的帧上暂停，也可以选择已上传并在数字资产管理器中&#x200B;*已发布的*&#x200B;图像资产。
+Experience Manager中的所有视频都必须具有关联的缩略图；不替换缩略图，就无法删除缩略图。 默认情况下，当您将视频上传到Experience Manager时，第一帧将用作缩略图。 但是，您可以自定义缩略图以用于品牌策略或视觉搜索，例如。 自定义视频缩略图时，您可以播放视频并暂停要使用的帧。 或者，您也可以选择已上传的图像资产，并在数字资产管理器中选择&#x200B;*已发布的*。
 
 您从视频中选择的自定义视频缩略图图像不会提取并保存在DAM中，作为单独且不重复的资产。 但是，您从现有图像资产中选择的自定义视频缩略图会保存到JCR。 与以下示例路径一样，选定资产的路径存储在视频资产的节点下：
 
