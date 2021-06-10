@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 2e01bb0b16728a8073e5de47deb88de69486d408
+source-git-commit: f62c675af34a4b11cc152eafb7bc561f8b6890a9
 workflow-type: tm+mt
-source-wordcount: '3877'
+source-wordcount: '3857'
 ht-degree: 4%
 
 ---
@@ -22,17 +22,15 @@ ht-degree: 4%
 | 日期 | 2021 年 5 月 27 日 |
 | 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9.zip) |
 
-<!-- TBD: Update the SD link when SP8 is available. Same link is duplicated below in install -->
-
 ## [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}中包含的内容
 
 [!DNL Adobe Experience Manager] 6.5.9.0包含自2019年4月6.5版发布以来发布的新功能、客户请求的关键增强功能以及性能、稳定性和安全性改进。[!DNL Adobe Experience Manager] 6.5上安装了Service Pack。
 
 [!DNL Adobe Experience Manager] 6.5.9.0中引入的主要功能和增强功能包括：
 
-* AEM Sites Dynamic Media Foundation组件现在允许在使用响应式图像预设或智能裁剪时打开或关闭针对高分辨率设备的优化功能。
+* [!DNL Experience Manager Sites] Dynamic Media Foundation组件现在允许在使用响应式图像预设或智能裁剪时打开或关闭针对高分辨率设备的优化功能。
 
-* 为了提高性能，将hidden=false条件从JCR查询移到QueryBuilder计算器。 要验证隐藏的谓词是否在更改后正常工作，Adobe Experience Manager会检查界面上是否未显示任何隐藏文件夹。
+* 为了提高性能，将hidden=false条件从JCR查询移到QueryBuilder计算器。 要验证隐藏的谓词是否在更改后正常工作，Experience Manager会检查界面上是否未显示任何隐藏文件夹。
 
 * 能够在[!DNL Experience Manager Sites]页面上恢复已删除的页面和树。
 
@@ -94,9 +92,9 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->从AEM Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了OpenJDK内部版本的[!DNL Azul Zulu] ，该版本符合Java SE的标准。
+>从Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了[!DNL Azul Zulu]版本的OpenJDK，该版本符合Java SE的标准。
 >[!DNL Azul Zulu] JDK的支持也通过Adobe提供给[!DNL Experience Manager]客户。
->您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载相关版本的[!DNL Azul Zulu JDKs]。
+>您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载[!DNL Azul Zulu] JDK的相关版本。
 >由Oracle分发的AdobeJava技术的使用权限将在2022年12月底之前过期。 [!DNL Experience Manager] 我们鼓励客户在此日期之前规划并实 [!DNL Azul Zulu] 施对JDK的使用。有关[!DNL Oracle Java]技术和[!DNL Azul Zulu]技术使用的更多信息，请参阅相关的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
 
 以下是[!DNL Experience Manager] 6.5.9.0版中提供的修复列表。
@@ -212,7 +210,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 * 具有只读权限的网站作者可以在资产上使用智能裁剪功能，并编辑智能裁剪演绎版。 但是，具有只读权限的用户必须无法在Sites开发实例中编辑资产属性(CQ-4316450)。
 
-* 即使AEM实例设置为Dynamic Media模式，视频注释也不适用于未启用Dynamic Media配置的文件夹路径(CQ-4314950)。
+* 视频注释不适用于文件夹路径[!DNL where Dynamic]。即使在[!DNL Dynamic Media]模式下设置了[!DNL Experience Manager]实例，媒体配置也未启用(CQ-4314950)。
 
 * 当资产标题具有双字节、多字节、高ASCII、西里尔文、代理对、希伯来语、阿拉伯语和GB18030字符时，资产标题将带有问号(?) (CQ-4311872).
 
@@ -261,7 +259,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 * `resourceresolver` Sling包导致`Sling:alias`查询失败(NPR-35335)。
 
-* 在AEM中设置SSL时，上下文路径将被删除(NPR-35294)。
+* 在Experience Manager中设置SSL时，上下文路径将被删除(NPR-35294)。
 
 * 长时间运行的会话后，会返回`SegmentNotFound`异常(NPR-36405)。
 
@@ -275,11 +273,11 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 ### 项目 {#projects-6590}
 
-* 无法保存项目的属性，因为项目的JCR路径未解析，原因是项目路径中附加了额外的正斜杠(/)(NPR-36191)。
+* 无法保存项目的属性，因为项目的JCR路径未解析，原因是项目路径中附加了额外的正斜杠(`/`)(NPR-36191)。
 
 ### 屏幕 {#screens-6590}
 
-* [!DNL Experience Manager Screens] 如果使用自定义2FA身份验证处理程序，则播放器无法进行身份验证(NPR-35854)。
+* [!DNL Experience Manager Screens] 如果使用自定义的双重身份验证处理程序，则播放器无法进行身份验证(NPR-35854)。
 
 ### 商务 {#commerce-6590}
 
@@ -291,7 +289,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 * 为具有人工翻译的项目选择自动批准选项后，作业状态显示为`Unknown`(NPR-35981)。
 
-* 在翻译页面时，体验片段的引用路径不会更新为目标体验片段引用路径(NPR-35911)。
+* 翻译页面时，[!DNL Experience Fragments]的引用路径不会更新到目标[!DNL Experience Fragment]引用路径(NPR-35911)。
 
 * 在父页面和子页面中进行更改并发送父页面进行翻译时，子页面也会被错误翻译(NPR-35896)。
 
@@ -303,12 +301,12 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 ### 工作流 {#workflow-6590}
 
-* 对收件箱中可用的项目单击完成、委派或打开操作时，没有显示提示表示这些操作已完成(NPR-36317)。
+* 对收件箱中可用的项目单击完成、委派或打开操作后，看不到完成这些操作的任何可见线索(NPR-36317)。
 
 ### [!DNL Communities] {#communities-6590}
 
-* 在垃圾邮件过滤中，系统会占用100%的JAVA堆空间，从而导致AEM服务器停机(NPR-36316、NPR-36493)。
-* 在论坛中，源自SearchCommentSocialComponentListProvider的JCR会话数据被泄露(NPR-36235)。
+* 在垃圾邮件过滤中，系统会占用100%的Java堆空间，从而导致Experience Manager服务器无响应(NPR-36316、NPR-36493)。
+* 在论坛中，源自`SearchCommentSocialComponentListProvider`的JCR会话数据会被泄露(NPR-36235)。
 * 打开特定收件箱消息会反映所有分页不正确的消息以及其他问题(NPR-35917)。
 
 ### [!DNL Brand Portal] {#brandportal-6590}
@@ -364,7 +362,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 * 在AdminUI中选择“端点管理”时， [!DNL Experience Manager Forms]会显示`endpoint registry failure`错误消息(CQ-4320249)。
 
-有关安全更新的信息，请参阅[Experience Manager安全公告页面](https://helpx.adobe.com/security/products/experience-manager.html)。
+有关安全更新的信息，请参阅[[!DNL Experience Manager] 安全公告页面](https://helpx.adobe.com/security/products/experience-manager.html)。
 
 ## 安装 6.5.9.0 {#install}
 
@@ -400,7 +398,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 **自动安装**
 
-在工作实例上自动安装Adobe Experience Manager 6.5.9.0有两种方法：
+在工作实例上自动安装[!DNL Experience Manager] 6.5.9.0的方法有两种：
 
 A.当服务器联机时，将包放入`../crx-quickstart/install`文件夹中。 包会自动安装。
 
@@ -473,7 +471,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用。 随着Experience Manager6.5中更新了Experience Manager和Adobe Target集成，以支持Adobe Target Standard API(该API使用通过AdobeIMS和I/O进行身份验证)，以及Launch在检测Experience Manager页面以进行分析和个性化方面日益发挥的作用，选择加入向导在功能上已变得无关紧要。 | 通过相应的Experience Manager云服务配置系统连接、AdobeIMS身份验证和[!DNL Adobe I/O]集成。 |
+| 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用。 随着Experience Manager6.5中更新了Experience Manager和Adobe Target集成，以支持Adobe Target Standard API(通过AdobeIMS和[!DNL Adobe I/O]进行身份验证)，以及Launch在检测Experience Manager页面以进行分析和个性化方面日益发挥的作用，选择加入向导在功能上已变得无关紧要。 | 通过相应的[!DNL Experience Manager]云服务配置系统连接、AdobeIMS身份验证和[!DNL Adobe I/O]集成。 |
 | 连接器 | 适用于Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR Connector已在Experience Manager6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
@@ -484,7 +482,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 要检索运行时副本，Adobe建议使用HTTP API将自定义工作流模型的设计时间副本与其运行时副本同步：
    `<designModelPath>/jcr:content.generate.json`。
 
-* 如果层次结构中的文件夹在[!DNL Experience Manager Assets]中重命名，并且包含资产的嵌套文件夹已发布到[!DNL Brand Portal]，则在再次发布根文件夹之前，文件夹的标题不会在[!DNL Brand Portal]中更新。
+* 如果层级结构中的文件夹在[!DNL Assets]中重命名，并且包含资产的嵌套文件夹发布到[!DNL Brand Portal]，则在重新发布根文件夹之前，文件夹的标题不会在[!DNL Brand Portal]中更新。
 
 * 当用户首次选择在自适应表单中配置字段时，用于保存配置的选项不会显示在属性浏览器中。 选择在同一编辑器中配置自适应表单的其他一些字段可解决此问题。
 
