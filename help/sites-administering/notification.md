@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2a866e82a059184ea86f22646e4a20406ad109e8
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '2097'
 ht-degree: 1%
 
 ---
@@ -310,3 +310,156 @@ subject=<text_1>
 1. 按照上文[配置邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service)中所述配置电子邮件服务。
 1. 以管理员身份登录AEM。 单击&#x200B;**工具** > **操作** > **Web控制台**&#x200B;以打开Web控制台配置。
 1. 编辑&#x200B;**Day CQ DAM资源收集Servlet**。 选择&#x200B;**发送电子邮件**。 单击&#x200B;**保存**。
+
+## 设置OAuth {#setting-up-oauth}
+
+AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守安全的电子邮件要求。
+
+您可以为多个电子邮件提供商配置OAuth，如下所述。
+
+### Gmail {#gmail}
+
+1. 在`https://console.developers.google.com/projectcreate`创建项目
+1. 选择您的项目，然后转到&#x200B;**API和服务** - **功能板 — 凭据**
+1. 根据您的要求配置OAuth同意屏幕
+1. 在下面的更新屏幕中，添加以下两个范围：
+   * `https://mail.google.com/`
+   * `https://www.googleapis.com//auth/gmail.send`
+1. 添加作用域后，返回到左侧菜单中的&#x200B;**凭据**，然后转到&#x200B;**创建凭据** - **OAuth客户端ID** - **桌面应用程序**
+1. 将打开一个包含客户端ID和客户端密钥的新窗口。
+1. 保存这些凭据。
+
+**AEM端配置**
+
+>[!NOTE]
+>
+>Adobe托管服务客户可以与其客户服务工程师合作，对生产环境进行这些更改。
+
+首先，配置邮件服务：
+
+1. 转到`http://serveraddress:serverport/system/console/configMgr`以打开AEM Web控制台
+1. 查找，然后单击&#x200B;**Day CQ Mail Service**
+1. 添加以下设置：
+   * SMTP 服务器主机名: `smtp.gmail.com`
+   * SMTP服务器端口：`25`或`587`，具体取决于要求
+   * 选中&#x200B;**SMPT使用StarTLS**&#x200B;和&#x200B;**SMTP需要StarTLS**&#x200B;的复选框
+   * 检查&#x200B;**OAuth流**&#x200B;并单击&#x200B;**保存**。
+
+接下来，按照以下步骤配置SMTP OAuth提供程序：
+
+1. 转到`http://serveraddress:serverport/system/console/configMgr`以打开AEM Web控制台
+1. 查找，然后单击&#x200B;**CQ邮件程序SMTP OAuth2提供程序**
+1. 按如下方式填写所需信息：
+   * 授权URL:`https://accounts.google.com/o/oauth2/auth`
+   * 令牌URL:`https://accounts.google.com/o/oauth2/token`
+   * 范围：`https://www.googleapis.com/auth/gmail.send`和`https://mail.google.com/`。 通过按每个已配置范围右侧的&#x200B;**+**&#x200B;按钮，可添加多个范围。
+   * 客户端ID和客户端密钥：使用您检索到的值配置这些字段，如上段所述。
+   * 刷新令牌 URL: `https://accounts.google.com/o/oauth2/token`
+   * 刷新令牌到期：从
+1. 单击&#x200B;**保存**。
+
+<!-- clarify refresh token expiry, currrently not present in the UI -->
+
+配置完毕后，设置应如下所示：
+
+![oauth smtp提供程序](assets/oauth-smtpprov2.png)
+
+现在，激活OAuth组件。 您可以通过以下方式执行此操作：
+
+1. 通过访问以下URL，转到组件控制台：`http://serveraddress:serverport/system/console/components`
+1. 查找以下组件
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
+1. 按组件左侧的播放图标
+
+   ![组件](assets/oauth-components-play.png)
+
+最后，通过以下方式确认配置：
+
+1. 转到发布实例的地址，并以管理员身份登录。
+1. 在浏览器中打开新选项卡，然后转到`http://serveraddress:serverport/services/mailer/oauth2/authorize`。 这会将您重定向到SMTP提供程序的页面（在此例中为Gmail）。
+1. 登录并同意授予所需权限
+1. 同意后，令牌将存储在存储库中。 您可以通过直接访问发布实例上的此URL，在`accessToken`下访问该URL:`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth2 `
+1. 对每个发布实例重复上述步骤
+
+<!-- clarify if the ip/server address in the last procedure is that of the publish instance -->
+
+### Microsoft Outlook {#microsoft-outlook}
+
+1. 转到[https://portal.azure.com/](https://portal.azure.com/)并登录。
+1. 在搜索栏中搜索&#x200B;**Azure Active Directory**&#x200B;并单击结果。 或者，您也可以直接浏览到[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+1. 单击&#x200B;**应用程序注册** - **新建注册**
+
+   ![](assets/oauth-outlook1.png)
+
+1. 根据您的要求填写信息，然后单击&#x200B;**Register**
+1. 转到新创建的应用程序，然后选择&#x200B;**API权限**
+1. 转到&#x200B;**Add Permission** - **Graph Permission** - **Delegated Permissions**
+1. 选择您的应用程序的以下权限，然后单击&#x200B;**添加权限**:
+   * `SMTP.Send`
+   * `Mail.Read`
+   * `Mail.Send`
+   * `openid`
+   * `offline_access`
+1. 转到&#x200B;**Authentication** - **添加平台** - **Web**，在&#x200B;**重定向Url**&#x200B;部分中，添加以下用于重定向OAuth代码的URL，然后按&#x200B;**Configure**:
+   * `http://localhost:4503/services/mailer/oauth2/token`
+1. 对每个发布实例重复上述步骤
+1. 根据您的要求配置设置
+1. 接下来，转到&#x200B;**Certificates and Secrets**，单击&#x200B;**New client secret**，然后按照屏幕上的步骤创建密钥。 请务必注意此密码，供以后使用
+1. 在左窗格中按&#x200B;**Overview**，并复制&#x200B;**应用程序（客户端）ID**&#x200B;和&#x200B;**目录（租户）ID**&#x200B;的值，以供以后使用
+
+要重新查看，您需要以下信息在AEM端为邮件程序服务配置OAuth2:
+
+* 身份验证URL，将使用租户ID构建。 它将具有以下表单：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* 令牌URL，将使用租户ID构建。 它将具有以下表单：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 刷新URL，将使用租户ID构建。 它将具有以下表单：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 客户端ID
+* 客户端密钥
+
+**AEM端配置**
+
+接下来，将OAuth2设置与AEM集成：
+
+1. 通过浏览到`http://serveraddress:serverport/system/console/configMgr`，转到本地实例的Web控制台
+1. 查找并单击&#x200B;**Day CQ Mail Service**
+1. 添加以下设置：
+   * SMTP 服务器主机名: `smtp.office365.com`
+   * SMTP用户：您的用户名采用电子邮件格式
+   * “发件人”地址：邮件发送者发送的邮件的“发件人：”字段中使用的电子邮件地址
+   * SMTP服务器端口：`25`或`587`，具体取决于要求
+   * 选中&#x200B;**SMPT使用StarTLS**&#x200B;和&#x200B;**SMTP需要StarTLS**&#x200B;的复选框
+   * 检查&#x200B;**OAuth流**&#x200B;并单击&#x200B;**保存**。
+1. 查找，然后单击&#x200B;**CQ邮件程序SMTP OAuth2提供程序**
+1. 按如下方式填写所需信息：
+   * 按照[此过程结束时的](#microsoft-outlook)所述，通过构建授权URL、令牌URL和刷新令牌URL来填写它们
+   * 客户端ID和客户端密钥：使用如上所述的检索值配置这些字段。
+   * 将以下作用域添加到配置中：
+      * openid
+      * offline_access
+      * `https://outlook.office365.com/Mail.Send`
+      * `https://outlook.office365.com/Mail.Read`
+      * `https://outlook.office365.com/SMTP.Send`
+   * 身份验证代码重定向Url:`http://localhost:4503/services/mailer/oauth2/token`
+   * 刷新令牌URL:此URL的值应与上面的令牌URL的值相同
+1. 单击&#x200B;**保存**。
+
+配置完毕后，设置应如下所示：
+
+![](assets/oauth-outlook-smptconfig.png)
+
+现在，激活OAuth组件。 您可以通过以下方式执行此操作：
+
+1. 通过访问以下URL，转到组件控制台：`http://serveraddress:serverport/system/console/components`
+1. 查找以下组件
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
+1. 按组件左侧的播放图标
+
+![组件2](assets/oauth-components-play.png)
+
+最后，通过以下方式确认配置：
+
+1. 转到发布实例的地址，并以管理员身份登录。
+1. 在浏览器中打开新选项卡，然后转到`http://serveraddress:serverport/services/mailer/oauth2/authorize`。 这会将您重定向到SMTP提供程序的页面（在此例中为Gmail）。
+1. 登录并同意授予所需权限
+1. 同意后，令牌将存储在存储库中。 您可以通过直接访问发布实例上的此URL，在`accessToken`下访问该URL:`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth2 `
