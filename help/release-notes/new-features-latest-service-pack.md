@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
+source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
 workflow-type: tm+mt
-source-wordcount: '3727'
+source-wordcount: '3726'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 >
 >从AEM Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了OpenJDK内部版本的[!DNL Azul Zulu] ，该版本符合Java SE的标准。
 >[!DNL Azul Zulu] JDK的支持也通过Adobe提供给[!DNL Experience Manager]客户。
->您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载相关版本的[!DNL Azul Zulu JDKs]。
+>您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载[!DNL Azul Zulu] JDK的相关版本。
 >由Oracle分发的AdobeJava技术的使用权限将在2022年12月底之前过期。 [!DNL Experience Manager] 我们鼓励客户在此日期之前规划并实 [!DNL Azul Zulu] 施对JDK的使用。有关[!DNL Oracle Java]技术和[!DNL Azul Zulu]技术使用的更多信息，请参阅相关的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
@@ -244,7 +244,7 @@ reCAPTCHA服务使用`https://www.recaptcha.net/`作为默认域。 现在，您
 
 [!DNL Experience Manager Assets]和[!DNL Brand Portal]之间的授权通道已更改。 以前， [!DNL Brand Portal]是通过旧版OAuth网关在经典UI中配置的，该网关使用JWT令牌交换获取IMS访问令牌以进行授权。 [!DNL Experience Manager Assets] 现在使用 [!DNL Brand Portal] 通 [!DNL Adobe I/O]过进行配置，以获取IMS令牌以授权租户 [!DNL Brand Portal] 。
 
-使用[!DNL Brand Portal]配置[!DNL Experience Manager Assets]的步骤因您的[!DNL Experience Manager]版本以及您是首次配置还是升级现有配置而异。 有关详细信息，请参阅[使用Brand Portal配置Experience Manager资产](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)。
+使用[!DNL Brand Portal]配置[!DNL Experience Manager Assets]的步骤因您的[!DNL Experience Manager]版本以及您是首次配置还是升级现有配置而异。 有关详细信息，请参阅[使用Brand Portal配置Experience Manager资产](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)。
 
 #### 辅助功能增强(6.5.4.0){#accessibility-enhancements-6540}
 
