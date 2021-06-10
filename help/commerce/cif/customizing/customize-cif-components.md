@@ -10,9 +10,9 @@ audience: developer
 feature: 商务集成框架
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: b132fc30e9ab77da24557c5d644a255173dc23c2
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2587'
 ht-degree: 1%
 
 ---
@@ -335,6 +335,10 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖�
 
 在本例中，我们要在Teaser顶部渲染一个横幅，以指示产品基于自定义属性为“生态友好”。 [自定义组件标记](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup)的设计模式实际上是所有AEM组件的标准模式，而不仅仅是AEM CIF核心组件的标准模式。
 
+>[!NOTE]
+>
+> 如果您使用CIF产品和类别选取器（如此Product Teaser或CIF页面组件）自定义组件，请确保为组件对话框包含所需的`cif.shell.picker` clientlib。 有关详细信息，请参阅[CIF产品和类别选取器的使用](use-cif-pickers.md)。
+
 1. 在IDE中，导航并展开`ui.apps`模块，然后展开文件夹层次结构以：`ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser`并检查`.content.xml`文件。
 
    ![产品Teaser ui.apps](../assets/customize-cif-components/product-teaser-ui-apps-ide.png)
@@ -498,3 +502,4 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖�
 - [自定义AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
 - [自定义核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
 - [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+- [CIF产品和类别选取器的用法](use-cif-pickers.md)
