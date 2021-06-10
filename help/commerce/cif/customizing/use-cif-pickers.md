@@ -7,9 +7,9 @@ version: cloud-service
 activity: develop
 audience: developer
 feature: 商务集成框架
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: d84993e704096eabe85c4d4d61e24096d15ae9bd
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,9 @@ AEM Content &amp; Commerce Authoring提供了一套创作工具，可帮助AEM�
 
 此外，还支持标准图表字段属性，如`name`、`fieldLabel`或`fieldDescription`。
 
-`cifproductfield`组件需要cif.shell.picker clientlib。 要向对话框中添加clientlib，您可以使用extraClientlibs属性。
+>[!CAUTION]
+>
+>`cifproductfield`组件需要`cif.shell.picker` clientlib。 要向对话框中添加clientlib，您可以使用extraClientlibs属性。
 
 `cifproductfield`的完整工作示例可在[CIF核心组件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml)项目中找到。 另请参阅AEM核心组件文档的[自定义对话框](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs)。
 
@@ -68,6 +70,8 @@ AEM Content &amp; Commerce Authoring提供了一套创作工具，可帮助AEM�
 
 此外，还支持标准图表字段属性，如`name`、`fieldLabel`或`fieldDescription`。
 
-与`cifproductfield`组件相同，`cifcategoryfield`组件还需要cif.shell.picker clientlib。 要向对话框中添加clientlib，可以使用`extraClientlibs`属性。 请参阅AEM核心组件文档的[自定义对话框](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) 。
+>[!CAUTION]
+>
+>与`cifproductfield`组件相同，`cifcategoryfield`组件也需要`cif.shell.picker` clientlib。 要向对话框中添加clientlib，可以使用`extraClientlibs`属性。 请参阅AEM核心组件文档的[自定义对话框](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) 。
 
 `cifcategoryfield`的完整工作示例可在[CIF核心组件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml)项目中找到。
