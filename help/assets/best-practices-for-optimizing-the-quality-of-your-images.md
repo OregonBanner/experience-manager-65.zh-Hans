@@ -10,7 +10,7 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 49%
@@ -81,10 +81,10 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
 作为最佳实践，应首先开始设置 USM 锐化 radius 参数。您可以先使用以下 radius 设置：
 
-* **[!UICONTROL 网站]**:0.2-0.3像素
-* **[!UICONTROL 照片打印(250-300 ppi)]**:0.3-0.5像素
-* **[!UICONTROL 胶印(266-300 ppi)]**:0.7-1.0像素
-* **[!UICONTROL 画布打印(150 ppi)]**:1.5-2.0像素
+* **[!UICONTROL 网站]**  - 0.2-0.3像素
+* **[!UICONTROL 照片打印(250-300 ppi)]** - 0.3-0.5像素
+* **[!UICONTROL 胶印(266-300 ppi)]** - 0.7-1.0像素
+* **[!UICONTROL 画布打印(150 ppi)]** - 1.5-2.0像素
 
 将 amount 从 1.75 逐渐增加至 4。如果锐化仍未达到您需要的效果，请将 radius 增加 0.1，然后再次将 amount 从 1.75 逐渐增加至 4。根据需要，重复上述步骤。
 
