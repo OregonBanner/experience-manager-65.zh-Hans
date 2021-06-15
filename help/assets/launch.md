@@ -9,9 +9,9 @@ docset: aem65
 feature: 查看器
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 4b1b9fb014594a67e8db271cc02bc54b29e24896
+source-git-commit: 22a181e77a563ee3590cd661507f4dfeaf9d14da
 workflow-type: tm+mt
-source-wordcount: '6602'
+source-wordcount: '6616'
 ht-degree: 8%
 
 ---
@@ -40,11 +40,11 @@ ht-degree: 8%
 
 ### 集成{#use-cases-for-the-integration}的用例
 
-与Experience Platform Launch集成的主要用例是同时使用AEM Assets和AEM Sites的客户。 在这些情况下，您可以在AEM创作节点和Experience Platform Launch之间设置标准集成，然后将您的Sites实例与Experience Platform Launch属性关联。 之后，添加到站点页面的任何Dynamic Media WCM组件都将跟踪查看器中的数据和事件。
+与Experience Platform Launch集成的主要用例是同时使用Adobe Experience Manager Assets和Adobe Experience Manager Sites的客户。 在这些情况下，您可以在Experience Manager创作节点和Experience Platform Launch之间设置标准集成，然后将您的Sites实例与Experience Platform Launch属性相关联。 之后，添加到站点页面的任何Dynamic Media WCM组件都将跟踪查看器中的数据和事件。
 
-请参阅[在AEM Sites中跟踪Dynamic Media查看器](#tracking-dynamic-media-viewers-in-aem-sites)。
+请参阅Experience Manager站点](#tracking-dynamic-media-viewers-in-aem-sites)中的[跟踪Dynamic Media查看器。
 
-集成支持的次要用例是那些仅使用AEM Assets或Dynamic Media Classic的客户。 在这种情况下，您将获取查看器的嵌入代码，并将其添加到网站页面。 然后，从Experience Platform Launch中获取Experience Platform Launch库生产URL，并手动将其添加到网页代码中。
+集成支持的次要用例是那些仅使用Experience Manager资产或Dynamic Media Classic的客户。 在这种情况下，您将获取查看器的嵌入代码，并将其添加到网站页面。 然后，从Experience Platform Launch中获取Experience Platform Launch库生产URL，并手动将其添加到网页代码中。
 
 请参阅[使用嵌入代码](#tracking-dynamic-media-viewers-using-embed-code)跟踪Dynamic Media查看器。
 
@@ -72,7 +72,7 @@ Dynamic Media查看器扩展会自动保持其数据元素的值处于最新状�
 
 定义数据元素后，可以使用数据元素选取器小组件在Experience Platform LaunchUI的其他位置使用数据元素。 特别是，为Dynamic Media查看器跟踪目的定义的数据元素被规则中Adobe Analytics扩展的Set Variables Action（设置变量操作）引用（请参阅下文）。
 
-请参阅[数据元素](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html#reference)。
+请参阅[数据元素](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html)。
 
 #### 关于Experience Platform Launch{#about-rules-in-adobe-launch}中的规则
 
@@ -98,7 +98,7 @@ Experience Platform Launch中的规则是一个不可知的配置，它定义了
 
 *Set Variables*&#x200B;操作后必须跟一个&#x200B;*Send Beacon*&#x200B;操作。 *Send Beacon*&#x200B;操作会实际将数据发送到分析跟踪服务器。 *Set Variables*&#x200B;和&#x200B;*Send Beacon*&#x200B;这两个操作均来自Adobe Analytics扩展。
 
-请参阅[Rules](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html#reference)。
+请参阅[Rules](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html)。
 
 #### 示例配置{#sample-configuration}
 
@@ -136,21 +136,21 @@ Experience Platform Launch中的以下示例配置演示了如何在查看器加
 
 ## 使用Dynamic Media查看器扩展{#using-the-dynamic-media-viewers-extension}
 
-如[集成的用例](#use-cases-for-the-integration)中所述，可以在AEM Sites中使用新的Experience Platform Launch集成和使用嵌入代码来跟踪Dynamic Media查看器。
+如[集成的用例](#use-cases-for-the-integration)中所述，可以在Experience Manager站点中使用新的Experience Platform Launch集成并使用嵌入代码来跟踪Dynamic Media查看器。
 
-### 在AEM Sites中跟踪Dynamic Media查看器{#tracking-dynamic-media-viewers-in-aem-sites}
+### 在Experience Manager站点{#tracking-dynamic-media-viewers-in-aem-sites}中跟踪Dynamic Media查看器
 
-要在AEM Sites中跟踪Dynamic Media查看器，必须执行[配置所有集成块](#configuring-all-the-integration-pieces)部分下列出的所有步骤。 具体而言，您必须创建IMS配置和Experience Platform Launch云配置。
+要在Experience Manager站点中跟踪Dynamic Media查看器，必须执行[配置所有集成块](#configuring-all-the-integration-pieces)部分下列出的所有步骤。 具体而言，您必须创建IMS配置和Experience Platform Launch云配置。
 
 在进行正确配置后，您使用Dynamic Media支持的WCM组件将任何添加到站点页面的Dynamic Media查看器自动跟踪到Adobe Analytics或Adobe Analytics for Video的数据，或同时跟踪这两者的数据。
 
-<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
+<!-- To be reviewed and updated although this is found live in the Experience ManageraaCS version:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
 ### 使用嵌入代码{#tracking-dynamic-media-viewers-using-embed-code}跟踪Dynamic Media查看器
 
-未使用AEM Sites或将Dynamic Media查看器嵌入到AEM Sites以外的网页或两者兼有的客户，仍可以使用Experience Platform Launch集成。
+未使用Experience Manager站点或将Dynamic Media查看器嵌入Experience Manager站点以外的网页或两者兼有的客户，仍可以使用Experience Platform Launch集成。
 
 完成[配置Adobe Analytics](#configuring-adobe-analytics-for-the-integration)和[配置Experience Platform Launch](#configuring-adobe-launch-for-the-integration)部分中的配置步骤。 但是，不需要执行与Experience Manager相关的配置步骤。
 
@@ -158,11 +158,11 @@ See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe
 
 请参阅[添加Platform launch嵌入代码](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch) ，以了解有关如何使用Experience Platform Launch库嵌入代码的更多信息。
 
-<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
-See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
+<!-- To be reviewed and updated although this is found live in the Experience ManageraaCS version:
+See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of Experience Manager Dynamic Media.
 -->
 
-**要使用嵌入代码跟踪Dynamic Media查看器**，请执行以下操作：
+**要使用嵌入代码跟踪Dynamic Media查看器，请执行以下操作：**
 
 1. 为嵌入Dynamic Media查看器准备网页。
 1. 首先登录到Experience Platform Launch，以获取Experience Platform Launch库的嵌入代码(请参阅[配置Experience Platform Launch](#configuring-adobe-launch-for-the-integration))。
@@ -214,7 +214,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 数据元素返回的确切值取决于上下文。 如果在由Dynamic Media查看器事件触发的规则中请求数据元素，则会为启动该规则的查看器返回数据元素值。 而且，数据元素是在由来自其他一些Platform launch扩展的事件触发的规则中请求的。 此时，数据元素的值来自上次更新此数据元素的查看器。
 
-**请考虑以下示例设置**:
+**请考虑以下示例设置：**
 
 * 具有两个Dynamic Media缩放查看器的网页：*viewer1*&#x200B;和&#x200B;*viewer2*。
 
@@ -240,7 +240,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 无论如何，由Dynamic Media查看器驱动的数据元素的值都不会存储在本地存储或服务器上；而是仅在客户端Experience Platform Launch库中保留。 此类数据元素的值在网页重新加载时消失。
 
-通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html?lang=en#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的数据元素仅支持存储持续时间选项&#x200B;**[!UICONTROL None]**。 在用户界面中可以设置任何其他值，但在这种情况下，不会定义数据元素行为。 扩展可自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
+通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html?lang=en#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的数据元素仅支持存储持续时间选项&#x200B;**[!UICONTROL None]**。 在用户界面中可以设置任何其他值，但在这种情况下，不会定义数据元素行为。 扩展可自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
 
 ### 关于Dynamic Media查看器扩展{#about-rules-in-the-dynamic-media-viewers-extension}中的规则
 
@@ -436,9 +436,9 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
 另请参阅[Analytics实施指南](https://experienceleague.adobe.com/docs/analytics/implementation/home.html)。
 
-**要为集成配置Adobe Analytics**，请执行以下操作：
+**要为集成配置Adobe Analytics，请执行以下操作：**
 
-1. 首先，从Experience Cloud[主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)访问Adobe Analytics。 在菜单栏中，单击页面右上角附近的“解决方案”图标（一个三个圆点对齐的表），然后单击&#x200B;**[!UICONTROL Analytics]**。
+1. 首先，从Experience Cloud[主页](https://experience.adobe.com/#/home)访问Adobe Analytics。 在菜单栏中，单击页面右上角附近的“解决方案”图标（一个三个圆点对齐的表），然后单击&#x200B;**[!UICONTROL Analytics]**。
 
    ![2019-07-22_18-08-47](assets/2019-07-22_18-08-47.png)
 
@@ -448,13 +448,13 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
 1. 在 Adobe Analytics 页面的右上角附近，在&#x200B;**[!UICONTROL 搜索报告]**&#x200B;字段的右侧，从下拉列表中选择正确的报表包。如果有多个可用报表包，并且您不确定要使用哪个报表包，请与 Adobe Analytics 管理员联系，帮助您选择要使用的报表包。
 
-   在下图中，用户创建了一个名为&#x200B;*DynamicMediaViewersExtensionDoc*&#x200B;的报表包，并将其从下拉列表中选择。 报表包名称仅用于说明目的。 最终选择的报表包名称由您来决定。
+   在以下屏幕截图中，用户创建了名为&#x200B;*DynamicMediaViewersExtensionDoc*&#x200B;的报表包，并将其从下拉列表中选择。 报表包名称仅是示例名称。 最终选择的报表包名称由您来决定。
 
    如果没有可用的报表包，则您或您的Adobe Analytics管理员必须先创建一个报表包，然后才能继续进行配置。
 
-   请参阅[报表和报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites)和[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/admin-console/create-report-suite.html#admin-console)。
+   请参阅[报表和报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites)和[创建报表包](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html)。
 
-   在Adobe Analytics中，报表包在&#x200B;**[!UICONTROL 管理员>报表包]**&#x200B;下进行管理。
+   在Adobe Analytics中，报表包在&#x200B;**[!UICONTROL 管理员]** > **[!UICONTROL 报表包]**&#x200B;下进行管理。
 
    ![2019-07-22_18-09-49](assets/2019-07-22_18-09-49.png)
 
@@ -470,10 +470,10 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
    就本文档而言，将仅使用自定义流量(prop)变量，因为在网页上发生操作后几分钟内，Analytics报表中就会提供这些变量。
 
-   要启用新的自定义流量变量，请在工具栏的Adobe Analytics中，单击&#x200B;**[!UICONTROL 管理员>报表包]**。
+   要启用新的自定义流量变量，请在工具栏的Adobe Analytics中，单击&#x200B;**[!UICONTROL 管理员]** > **[!UICONTROL 报表包]**。
 
-1. 在&#x200B;**[!UICONTROL 报表包管理器]**&#x200B;页面上，选择正确的报表，然后在工具栏中，单击&#x200B;**[!UICONTROL 编辑设置>流量>流量变量]**。
-1. 在该变量中，选择一个未使用的变量，为其提供一个描述性名称(**[!UICONTROL 查看器资产(prop 30)]**)，并在“已启用”列中将组合框更改为“已启用”。
+1. 在&#x200B;**[!UICONTROL 报表包管理器]**&#x200B;页面上，选择正确的报表，然后在工具栏中，单击&#x200B;**[!UICONTROL 编辑设置]** > **[!UICONTROL 流量]** > **[!UICONTROL 流量变量]**。
+1. 选择一个未使用的变量，为其指定描述性名称(**[!UICONTROL 查看器资产(prop 30)]**)，然后在“已启用”列中将组合框更改为“已启用”。
 
    以下屏幕截图是用于跟踪查看器所使用的资产名称的自定义流量变量(**[!UICONTROL prop30]**)示例：
 
@@ -487,7 +487,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
    但是，在[设置Adobe Analytics变量](#setting-up-adobe-analytics-variables)中设置自定义流量变量后，您已足以知道自定义流量报表在Adobe Analytics中自动可用。
 
-   例如，可从&#x200B;**[!UICONTROL 自定义流量 > 自定义流量 21 - 30 > 查看器资产 (prop 30)]**&#x200B;下的“报告”菜单中获得&#x200B;**[!UICONTROL 查看器资产 (prop 30)]**&#x200B;的报告。
+   例如，可从&#x200B;**[!UICONTROL 自定义流量]** > **[!UICONTROL 自定义流量21-30]** > **[!UICONTROL 查看器资产(prop 30)]**&#x200B;下的“报告”菜单中获取&#x200B;**[!UICONTROL 查看器资产(prop 30)]**&#x200B;的报告。
 
    在查看器资产(prop 30)创 **[!UICONTROL 建后直接访问此报告]** ，不显示任何数据；在整合的这一阶段，人们就会期待它。
 
@@ -502,9 +502,9 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 * 数据元素和规则的配置。 此配置定义要从Dynamic Media查看器捕获哪些数据、何时触发跟踪逻辑以及在Adobe Analytics中发送查看器数据的位置。
 * 发布库。
 
-**要配置集成的Experience Platform Launch**，请执行以下操作：
+**要配置集成的Experience Platform Launch，请执行以下操作：**
 
-1. 首先，从Experience Cloud[主页](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/)访问Experience Platform Launch。 在菜单栏中，单击页面右上角附近的“解决方案”图标（三对三个圆点表），然后单击&#x200B;**[!UICONTROL Launch]**。
+1. 首先，从Experience Cloud[主页](https://experience.adobe.com/#/home)访问Experience Platform Launch。 在菜单栏中，单击页面右上角附近的“解决方案”图标（三对三个圆点表），然后单击&#x200B;**[!UICONTROL Launch]**。
 
    您还可以直接[打开Experience Platform Launch](https://launch.adobe.com/)。
 
@@ -529,13 +529,13 @@ Experience Platform Launch中的属性是将所有设置保持在一起的命名
 
 ### 安装和设置扩展{#installing-and-setup-of-extensions}
 
-Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL Extensions > Catalog]**&#x200B;下。
+Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL Extensions]** > **[!UICONTROL Catalog]**&#x200B;下。
 
 要安装扩展，请单击&#x200B;**[!UICONTROL Install]**。 如果需要，请执行一次性扩展配置，然后单击&#x200B;**[!UICONTROL Save]**。
 
 如有必要，必须安装和配置以下扩展：
 
-* （必需）*Experience CloudID服务*扩展
+* （必需）*Experience CloudID服务*&#x200B;扩展。
 
 无需其他配置，接受任何建议的值。 完成后，请确保单击&#x200B;**[!UICONTROL Save]**。
 
@@ -543,7 +543,7 @@ Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL
 
 * （必需）*Adobe Analytics*&#x200B;扩展
 
-要配置此扩展，您需要在Adobe Analytics中&#x200B;**[!UICONTROL 管理员>报表包]**&#x200B;下的&#x200B;**[!UICONTROL 报表包ID]**&#x200B;列标题下找到报表包ID。
+要配置此扩展，您需要在Adobe Analytics中&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL 报表包]**&#x200B;列标题下的&#x200B;**[!UICONTROL 报表包ID]**&#x200B;列标题下找到报表包ID。
 
 (仅出于演示目的，在以下屏幕截图中使用&#x200B;**[!UICONTROL DynamicMediaViewersExtensionDoc]**&#x200B;报表包的报表包ID。 此 ID 在之前的[选择报表包](#selecting-a-report-suite)中创建并使用。)
 
@@ -597,7 +597,7 @@ Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL
 
 platform launch可能具有多个开发环境、一个暂存环境和一个生产环境。 默认情况下，Experience Manager中的Platform launch云配置将Experience Manager创作节点指向Platform launch的暂存环境。 Experience Manager发布节点指向Platform launch的生产环境。 这种安排意味着，使用默认的Experience Manager设置，必须将Platform launch库发布到暂存环境。 这样，您便可以在Experience Manager作者中使用它。 然后，您可以将其发布到生产环境，以便用于Experience Manager发布。
 
-有关Experience Platform Launch环境的更多信息，请参阅[Environments](https://experienceleague.adobe.com/docs/launch/using/reference/publish/environments/environments.html#environment-types) 。
+有关Experience Platform Launch环境的更多信息，请参阅[Environments](https://experienceleague.adobe.com/docs/launch/using/publish/environments/environments.html#environment-types) 。
 
 发布库涉及以下两个步骤：
 
@@ -655,24 +655,24 @@ platform launch可能具有多个开发环境、一个暂存环境和一个生�
 
    ![image2019-7-15_16-8-9](assets/image2019-7-15_16-8-9.png)
 
-   请参阅[发布](https://experienceleague.adobe.com/docs/launch/using/reference/publish/overview.html#reference) ，以了解有关Experience Platform Launch中发布过程的更多信息。
+   请参阅[发布](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) ，以了解有关Experience Platform Launch中发布过程的更多信息。
 
 ## 为集成{#configuring-adobe-experience-manager-for-the-integration}配置Adobe Experience Manager
 
 前提条件:
 
-* AEM同时运行创作实例和发布实例。
-* AEM创作节点在Dynamic Media - Scene7运行模式下设置(dynamicmedia_s7)
-* Dynamic Media WCM组件在AEM Sites中已启用。
+* Experience Manager同时运行创作实例和发布实例。
+* Experience Manager创作节点在Dynamic Media - Scene7运行模式下设置(dynamicmedia_s7)
+* Dynamic Media WCM组件在Experience Manager站点中启用。
 
-AEM配置包含以下两个主要步骤：
+Experience Manager配置包含以下两个主要步骤：
 
-* AEM IMS的配置
+* Experience ManagerIMS的配置
 * 配置Experience Platform Launch云。
 
-### 配置AEM IMS {#configuring-aem-ims}
+### 配置Experience ManagerIMS {#configuring-aem-ims}
 
-1. 在AEM作者中，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL 安全>AdobeIMS配置]**。
+1. 在Experience Manager作者中，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL 安全]** > **[!UICONTROL AdobeIMS配置]**。
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
@@ -738,7 +738,7 @@ AEM配置包含以下两个主要步骤：
 
 1. 返回之前打开的 **[!UICONTROL Adobe IMS 技术帐户配置]**&#x200B;页面。在页面的右上角，单击&#x200B;**[!UICONTROL 下一步]**&#x200B;以在 **[!UICONTROL Adobe IMS 技术帐户配置]**&#x200B;窗口中打开&#x200B;**[!UICONTROL 帐户]**&#x200B;页面。
 
-   (如果您之前关闭了页面，请返回Experience Manager作者，然后单击&#x200B;**[!UICONTROL 工具>安全>AdobeIMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**。在&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中，选择&#x200B;**[!UICONTROL Experience Platform Launch]**。 在&#x200B;**[!UICONTROL 证书]**&#x200B;下拉列表中，选择之前创建的证书的名称。)
+   (如果您之前关闭了页面，请返回Experience Manager作者，然后单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL AdobeIMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**。在&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中，选择&#x200B;**[!UICONTROL Experience Platform Launch]**。 在&#x200B;**[!UICONTROL 证书]**&#x200B;下拉列表中，选择之前创建的证书的名称。)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
@@ -755,8 +755,8 @@ AEM配置包含以下两个主要步骤：
    * **[!UICONTROL 标题]**  — 输入描述性帐户标题。
    * **[!UICONTROL 授权服务器]**  — 返回到您之前打开的“集成详细信息”页面。单击&#x200B;**[!UICONTROL JWT]**&#x200B;选项卡。 复制服务器名称（不带路径），如下所示。
 
-（示例服务器名称仅供说明之用）   返回到&#x200B;**[!UICONTROL 帐户]**&#x200B;页面，然后将名称粘贴到相应的字段中。例如，`https://ims-na1.adobelogin.com/`
-（示例服务器名称仅供说明之用）
+（仅服务器名称为示例）   返回到&#x200B;**[!UICONTROL 帐户]**&#x200B;页面，然后将名称粘贴到相应的字段中。例如，`https://ims-na1.adobelogin.com/`
+（仅服务器名称为示例）
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
 
@@ -788,19 +788,19 @@ AEM配置包含以下两个主要步骤：
 
 1. 在&#x200B;**[!UICONTROL 帐户]**&#x200B;页面的右上角附近，单击&#x200B;**[!UICONTROL 创建]**。
 
-   配置AEM IMS后，您现在的&#x200B;**[!UICONTROL AdobeIMS配置]**&#x200B;下列出了新的IMSAccount。
+   配置了Experience ManagerIMS后，您现在的&#x200B;**[!UICONTROL AdobeIMS配置]**&#x200B;下列出了新的IMSAccount。
 
    ![image2019-7-15_14-17-54](assets/image2019-7-15_14-17-54.png)
 
 ## 为集成{#configuring-adobe-launch-cloud-for-the-integration}配置Experience Platform Launch云
 
-1. 在AEM作者中，在左上角附近，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL Cloud Services>Experience Platform Launch配置]**。
+1. 在Experience Manager作者中，在左上角附近，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL Cloud Services]** > **[!UICONTROL Experience Platform Launch配置]**。
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 
-1. 在&#x200B;**[!UICONTROL Experience Platform Launch配置]**&#x200B;页面的左侧面板中，选择要对其应用Experience Platform Launch配置的AEM站点。
+1. 在&#x200B;**[!UICONTROL Experience Platform Launch配置]**&#x200B;页面的左侧面板中，选择要对其应用Experience Platform Launch配置的Experience Manager站点。
 
-   仅出于插图目的，下面的屏幕截图中选择了&#x200B;**[!UICONTROL We.Retail]**&#x200B;网站。
+   仅出于示例目的，会在以下屏幕截图中选择&#x200B;**[!UICONTROL We.Retail]**&#x200B;网站。
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
@@ -809,7 +809,7 @@ AEM配置包含以下两个主要步骤：
 
    * **[!UICONTROL 标题]**  — 输入描述性配置标题。例如，`We.Retail Launch cloud configuration`。
 
-   * **[!UICONTROL 关联的AdobeIMS配置]**  — 选择您之前在配置AEM IMS中创 [建的IMS配置](#configuring-aem-ims)。
+   * **[!UICONTROL 关联的AdobeIMS配置]**  — 选择您之前在配置Experience ManagerIMS中创建 [的IMS配置](#configuring-aem-ims)。
 
    * **[!UICONTROL 公司]**  — 从“ **** 公司”下拉列表中，选择您的Experience Cloud公司。列表会自动填充。
 
@@ -821,9 +821,9 @@ AEM配置包含以下两个主要步骤：
 1. 在左上角附近，单击&#x200B;**[!UICONTROL 下一步]**。
 1. 在&#x200B;**[!UICONTROL 创建Experience Platform Launch配置]**&#x200B;窗口的&#x200B;**[!UICONTROL 测试]**&#x200B;页面（第2/3页）中，填写以下字段：
 
-   在&#x200B;**[!UICONTROL 库URI]**&#x200B;字段中，检查Experience Platform Launch库的暂存版本的位置。 AEM 会自动填充此字段。
+   在&#x200B;**[!UICONTROL 库URI]**&#x200B;字段中，检查Experience Platform Launch库的暂存版本的位置。 Experience Manager会自动填充此字段。
 
-   此步骤仅供说明之用，它使用部署到AdobeCDN的Experience Platform Launch库。
+   例如，此步骤仅用于使用已部署到AdobeCDN的Experience Platform Launch库。
 
    >[!NOTE]
    >
@@ -846,10 +846,10 @@ AEM配置包含以下两个主要步骤：
 
    ![image2019-7-15_15-47-6](assets/image2019-7-15_15-47-6.png)
 
-目前，AEM作者不支持将Dynamic Media查看器与Experience Platform Launch集成。
+目前，Experience Manager作者不支持将Dynamic Media查看器与Experience Platform Launch集成。
 
 但是，Experience Manager发布节点支持此功能。 使用“Platform launch云配置”的默认设置，Experience Manager发布节点使用Experience Platform Launch的生产环境。 因此，在测试期间，每次必须将Experience Platform Launch库更新从开发推送到生产环境。
 
 可以绕过此限制。 在上面Platform launch发布节点的Platform launch云配置中，指定Experience Manager库的开发或暂存URL。 这样做会使Experience Manager发布节点使用Platform launch库的开发或暂存版本。
 
-请参阅[通过 [!DNL Adobe I/O]](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html)将AEM与Experience Platform Launch集成，以了解有关设置Experience Platform Launch云配置的更多信息。
+请参阅[通过 [!DNL Adobe I/O]](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)将Experience Manager与Experience Platform Launch集成，以了解有关设置Experience Platform Launch云配置的更多信息。
