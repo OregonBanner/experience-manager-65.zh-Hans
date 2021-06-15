@@ -11,7 +11,7 @@ docset: aem65
 feature: 360 VR 视频
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 1%
@@ -82,8 +82,8 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **属性类型**:双精度
-   * **值**:浮点长宽比，默认为2.0。
+   * **属性类型**  — 双精度类型
+   * **值**  — 浮点长宽比，默认为2.0。
 
 设置此属性后，该属性会立即对现有视频和新上传的视频生效。
 
