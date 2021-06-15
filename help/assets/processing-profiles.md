@@ -11,10 +11,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 feature: 工作流，资产管理，演绎版
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '1374'
-ht-degree: 9%
+source-wordcount: '1379'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 9%
 
 配置文件是用于将哪些选项应用于已上传到文件夹的资产的方法。 例如，您可以指定特定的元数据配置文件和视频编码配置文件，并将这些配置文件应用到您上传的视频资产。您还可以指定特定的图像配置文件，并将配置文件应用到图像资产，以便对图像资产进行适当的裁剪。
 
-这些规则可以包括添加元数据、智能裁剪图像或创建视频编码配置文件。 在AEM中，您可以创建三种类型的用户档案，以下链接详细介绍了这些用户档案：
+这些规则可以包括添加元数据、智能裁剪图像或创建视频编码配置文件。 在Adobe Experience Manager中，您可以创建三种类型的用户档案，以下链接详细介绍了这些用户档案：
 
 * [元数据配置文件](/help/assets/metadata-config.md#metadata-profiles)
 * [图像配置文件](/help/assets/image-profiles.md)
@@ -32,7 +32,8 @@ ht-degree: 9%
 
 创建元数据、图像或视频配置文件后，您需要将其分配给一个或多个文件夹，以用作新上传资产的目标。
 
-有关在AEM Assets中使用用户档案的一个重要概念是，将用户档案分配给文件夹。 配置文件中包括元数据配置文件形式的设置，以及视频配置文件或图像配置文件。 这些设置会处理文件夹及其任何子文件夹的内容。 因此，您如何为文件和文件夹命名、如何排列子文件夹、如何处理这些文件夹中的文件，都会极大地影响配置文件对这些资产的处理。通过使用一致、适当的文件和文件夹命名策略，以及良好的元数据实践，您可以充分利用数字资产集合，并确保通过正确的配置文件处理正确的文件。
+有关在Experience Manager资产中使用配置文件的一个重要概念是，将配置文件分配给文件夹。 配置文件中包括元数据配置文件形式的设置，以及视频配置文件或图像配置文件。 这些设置会处理文件夹及其任何子文件夹的内容。 因此，您如何命名文件和文件夹、如何排列子文件夹以及如何处理这些文件夹中的文件，都会对配置文件处理这些资产的方式产生重大影响。
+通过使用一致且适当的文件和文件夹命名策略以及良好的元数据实践，您可以充分利用数字资产收藏集，并确保使用正确的配置文件处理正确的文件。
 
 >[!NOTE]
 >
@@ -44,35 +45,36 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->仅适用于AEM 6.4.6.0或更高版本中的&#x200B;*Dynamic Media - Scene7模式*。
+>仅适用于Experience Manager6.4.6.0或更高版本中的&#x200B;*Dynamic Media - Scene7模式*。
 
 您可以重新处理文件夹中的资产，该文件夹中已有您稍后更改的现有处理配置文件。
 
 例如，假定您创建了图像配置文件并将其分配给文件夹。 您上传到文件夹的任何图像资产都会自动将图像配置文件应用到这些资产。 但是，之后您决定向用户档案添加新的智能裁剪比例。 现在，您只需运行&#x200B;*Scene7即可，而不必再次选择资产并将其重新上传到文件夹：重新处理资产*&#x200B;工作流。
 
-您可以对首次处理失败的资产运行重新处理工作流。 因此，即使您未编辑处理配置文件或应用了处理配置文件，您仍可以随时对资产文件夹运行重新处理工作流。
+您可以对首次处理失败的资产运行重新处理工作流。 因此，即使您未编辑处理配置文件或应用了处理配置文件，您仍然可以随时对资产文件夹运行重新处理工作流。
 
-您可以（可选）从默认的50个资产（最多1000个资产）调整重新处理工作流的批大小。 运行&#x200B;_Scene7时：在文件夹上重新处理资产_&#x200B;工作流，会将资产分批分组，然后发送到Dynamic Media服务器进行处理。 处理后，整个批处理集中每个资产的元数据都会在AEM中更新。 如果批次大小非常大，您可能会遇到处理延迟问题。 或者，如果批次大小过小，则可能会导致到Dynamic Media服务器的往返次数过多。
+您可以（可选）从默认的50个资产（最多1000个资产）调整重新处理工作流的批大小。 运行&#x200B;_Scene7时：在文件夹上重新处理资产_&#x200B;工作流，会将资产分批分组，然后将其发送到Dynamic Media服务器进行处理。 处理后，整个批处理集中每个资产的元数据都会在Experience Manager时更新。 如果批次大小较大，则处理过程可能会延迟。 或者，如果批次大小过小，则可能会导致到Dynamic Media服务器的往返次数过多。
 
 请参阅[调整重新处理工作流的批处理大小](#adjusting-load)。
 
 >[!NOTE]
 >
->如果您正在将资产从Dynamic Media Classic批量迁移到AEM，则必须在Dynamic Media服务器上启用迁移复制代理。 迁移完成后，请确保禁用代理。
+>如果您要将资产从Dynamic Media Classic批量迁移到Experience Manager，则必须在Dynamic Media服务器上启用迁移复制代理。 迁移完成后，请确保禁用代理。
 >
 >必须在Dynamic Media服务器上禁用迁移发布代理，以便重新处理工作流按预期工作。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
-**要重新处理文件夹中的资产**:
-1. 在AEM的资产页面中，导航到一个资产文件夹，该文件夹中的资产分配了处理配置文件，您要对其应用&#x200B;**Scene7:重新处理资产**&#x200B;工作流，
+**要重新处理文件夹中的资产，请执行以下操作：**
+
+1. 在Experience Manager中，从“资产”页面中，导航到一个资产文件夹，该文件夹中的资产分配了处理配置文件，您要对其应用&#x200B;**[!UICONTROL Scene7:重新处理资产]**&#x200B;工作流，
 
    如果文件夹已经分配了处理配置文件，则卡片视图中文件夹名称的正下方会显示配置文件的名称。
 
 1. 选择文件夹。
 
    * 工作流会递归地考虑选定文件夹中的所有文件。
-   * 如果主选定文件夹中存在一个或多个包含资产的子文件夹，则工作流将重新处理文件夹层次结构中的每个资产。
+   * 如果主选定文件夹中存在一个或多个包含资产的子文件夹，则工作流会重新处理文件夹层次结构中的每个资产。
    * 作为最佳实践，您应避免在资产超过1000个的文件夹层次结构上运行此工作流。
 
 1. 在页面的左上角附近，从下拉列表中，单击&#x200B;**[!UICONTROL 时间轴]**。
@@ -88,11 +90,11 @@ ht-degree: 9%
 
 1. 单击&#x200B;**[!UICONTROL 开始]**，然后单击&#x200B;**[!UICONTROL 确认]**。
 
-   要监视工作流或检查其进度，请从AEM主控制台页面中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]**。 在工作流实例页面上，选择一个工作流。 在菜单栏上，单击&#x200B;**[!UICONTROL 打开历史记录]**。 您还可以从同一工作流实例页面中终止、暂停或重命名选定的工作流。
+   要监控工作流或检查其进度，请从Experience Manager主控制台页面中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]**。 在工作流实例页面上，选择一个工作流。 在菜单栏上，单击&#x200B;**[!UICONTROL 打开历史记录]**。 您还可以从同一工作流实例页面中终止、暂停或重命名选定的工作流。
 
 ### 调整重新处理工作流的批处理大小{#adjusting-load}
 
-（可选）重新处理工作流中的默认批大小为每个作业50个资产。 此最佳批处理大小受平均资产大小和运行重新处理的资产的MIME类型的约束。 值越高，表示在单个重新处理作业中将包含许多文件。 因此，处理横幅会在AEM资产上停留较长时间。 但是，如果平均文件大小为1 MB或更小，则建议将该值增加到几百，但最大不超过1000。 如果平均文件大小为数百MB，则Adobe建议您将批处理大小减少到10。
+（可选）重新处理工作流中的默认批大小为每个作业50个资产。 此最佳批处理大小受平均资产大小和运行重新处理的资产的MIME类型的约束。 值越高，表示您在一个重新处理作业中拥有许多文件。 因此，处理横幅会在Experience Manager资产上停留较长时间。 但是，如果平均文件大小较小（1 MB或更小），则Adobe建议您将值增加到100，但最多不超过1000。 如果文件平均大小较大（如数百MB），则Adobe建议您将批处理大小减少到10。
 
 **（可选）要调整重新处理工作流的批大小，请执行以下操作：**
 
@@ -142,5 +144,5 @@ ht-degree: 9%
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
 1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
-1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main AEM console
+1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
