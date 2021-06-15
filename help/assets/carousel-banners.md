@@ -11,9 +11,9 @@ docset: aem65
 feature: 传送横幅
 role: Business Practitioner, Administrator
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '4734'
+source-wordcount: '4740'
 ht-degree: 9%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 9%
 
 创建和修改促销横幅中特有的内容可能非常耗时，这会限制您快速发布新内容或使其更具针对性的能力。 传送横幅可让您快速创建或修改旋转横幅。 您可以添加交互性（如链接到产品详细信息或相关资源的热点），并将其交付到任何屏幕，从而更快地将新促销内容推向市场。
 
-轮播横幅由带有&#x200B;**[!UICONTROL CAROUSELSET]**&#x200B;字样的横幅来指定：
+轮播横幅由带有&#x200B;**[!UICONTROL CAROUSELSET]**&#x200B;字样的横幅来指定
 
 ![chlimage_1-438](assets/chlimage_1-438.png)
 
@@ -48,7 +48,7 @@ ht-degree: 9%
 
 ## 快速入门：传送横幅{#quick-start-carousel-banners}
 
-要快速设置并运行图像集，请执行以下操作：
+要使用传送横幅快速启动并运行，请执行以下操作：
 
 1. [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables) (仅适用于使用Experience Manager资产+ Dynamic Media的客户)
 
@@ -56,7 +56,7 @@ ht-degree: 9%
 
    >[!NOTE]
    >
-   >如果您是Experience Manager站点或电子商务客户，则可以使用内置功能导航到产品页面并查找产品目录中的现有SKU。 您无需手动输入热点或图像映射变量。 请参阅有关[设置eCommerce](/help/commerce/cif-classic/administering/generic.md)的信息。
+   >如果您是Experience Manager站点或电子商务客户，则可以使用内置功能导航到产品页面并查找产品目录中的现有SKU（库存单位）。 您无需手动输入热点或图像映射变量。 请参阅有关[设置eCommerce](/help/commerce/cif-classic/administering/generic.md)的信息。
    >
    >
    >如果您是Experience Manager资产和Dynamic Media客户，则需要手动输入热点和图像映射的数据，然后将发布的URL或嵌入代码与第三方内容管理系统相集成。
