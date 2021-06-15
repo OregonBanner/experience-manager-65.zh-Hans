@@ -9,7 +9,7 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 资产管理，演绎版
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1917'
 ht-degree: 1%
@@ -220,7 +220,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
 1. Adobe客户关怀团队会根据请求提交的顺序将您添加到智能成像客户等待列表。
 1. 当Adobe准备好处理您的请求时，支持您与您联系以协调并设置目标日期。
-1. **可选**:在将新功能推送到生产之前，您可以选择在暂存环境中测试智能成像。
+1. **可选**  — 在Adobe将新功能推送到生产之前，您可以选择在暂存环境中测试智能成像。
 1. 客户关怀团队在完成后会通知您。
 1. 为了最大限度地提高智能成像的性能，Adobe建议将生存时间(TTL)设置为24小时或更长。 TTL定义CDN缓存资产的时长。 要更改此设置，请执行以下操作：
 
