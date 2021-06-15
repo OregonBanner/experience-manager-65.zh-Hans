@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 配置，混合模式
-source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '7843'
 ht-degree: 1%
@@ -211,7 +211,7 @@ Dynamic Media默认未启用。 但是，如果您之前已启用Dynamic Media�
 
 要在启用Dynamic Media后禁用它，请删除`-r dynamicmedia`运行模式标志。
 
-**在启用Dynamic Media后禁用它**
+**要在启用Dynamic Media后将其禁用，请执行以下操作：**
 
 1. 在命令行中，启动快速启动时，可以执行以下任一操作：
 
@@ -229,7 +229,7 @@ Dynamic Media默认未启用。 但是，如果您之前已启用Dynamic Media�
 
 ## （可选）将Dynamic Media预设和配置从6.3迁移到6.5零停机时间{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-如果您将Experience ManagerDynamic Media从6.3升级到6.5（现在包括零停机时间部署的功能），则必须运行以下curl命令。 该命令会将您的所有预设和配置从`/etc`迁移到`/conf`CRXDE Lite中。
+如果您要将Experience Manager- Dynamic Media从6.3升级到6.5（现在包括零停机时间部署的功能），则必须运行以下curl命令。 该命令会将您的所有预设和配置从`/etc`迁移到`/conf`CRXDE Lite中。
 
 >[!NOTE]
 如果您在兼容模式下运行Experience Manager实例（即，您已安装兼容包），则无需运行这些命令。
@@ -373,7 +373,8 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**解决方案**:检查是 `KeyStore` 否保存 **到dynamic-media-** replicationuser并提供了正确的密码。
+**解决方案：**
+检查是 `KeyStore` 否保存 **到dynamic-media-** replicationuser并提供了正确的密码。
 
 #### 问题：无法解密密钥 — 无法解密数据{#problem-could-not-decrypt-key-could-not-decrypt-data}
 
@@ -389,7 +390,8 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 17.06.2016 19:00:16 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1466215216662, userId='admin', revision='null'}. java.lang.SecurityException: java.security.UnrecoverableKeyException: Could not decrypt key: Could not decrypt data.
 ```
 
-**解决方案**:检查密码。复制代理中保存的密码与用于创建密钥库的密码不同。
+**解决方案：**
+检查密码。复制代理中保存的密码与用于创建密钥库的密码不同。
 
 #### 问题：InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
 
@@ -409,7 +411,8 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
         at com.scene7.is.catalog.service.publish.atomic.PublishingServiceHttp.executePost(PublishingServiceHttp.scala:195)
 ```
 
-**解决方案**:确保“Experience Manager作者”上的Java™进程将系统属性设 `-Djavax.net.ssl.trustStore=` 置为有效的truststore。
+**解决方案：**
+确保“Experience Manager作者”上的Java™进程将系统属性 `-Djavax.net.ssl.trustStore=` 设置为有效的truststore。
 
 #### 问题：KeyStore未设置或未初始化{#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
@@ -427,7 +430,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 02.08.2016 14:37:44 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470173864834, userId='admin', revision='null'}. com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised key store for user dynamic-media-replication
 ```
 
-**解决方案**：
+**解决方案：**
 
 1. 导航到“用户管理”页面：
    `localhost:4502/libs/granite/security/content/useradmin.html`
@@ -584,8 +587,8 @@ dam/dm/presets/analytics/jcr:content/userdata`
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **通过Experience Manager中的视频报告工具检查Video Analytics预设。点按**
-工具 **[!UICONTROL >资产>视频报告]**
+   * **通过Experience Manager中的视频报告工具检查Video Analytics预**
+设点按 **[!UICONTROL 工具]**  >  **[!UICONTROL 资产]**  >  **[!UICONTROL 视频报告]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -815,7 +818,7 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 >[!NOTE]
 Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您可以选择通过配置Dynamic Media Image Server以满足特定规范或要求来微调安装。
 
-**先决条件**: ** 在配置Dynamic Media Image Server之前，请确保您的Windows®虚拟机包含Microsoft® Visual C++库的安装。运行Dynamic Media Image Server时需要这些库。 您可以在此处[下载Microsoft® Visual C++ 2010 Redistributable Package(x64)](https://www.microsoft.com/en-us/download/details.aspx?id=26999)。
+**先决条件**  -  ** 在配置Dynamic Media Image Server之前，请确保Windows®的VM包含Microsoft® Visual C++库的安装。运行Dynamic Media Image Server时需要这些库。 您可以在此处[下载Microsoft® Visual C++ 2010 Redistributable Package(x64)](https://www.microsoft.com/en-us/download/details.aspx?id=26999)。
 
 要配置Dynamic Media图像服务器设置，请执行以下操作：
 
@@ -891,7 +894,7 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 
 默认清单允许您配置用于生成Dynamic Media投放响应的默认清单。 您可以微调质量（JPEG质量、分辨率、重新取样模式）、缓存（过期），并阻止渲染太大的图像(defaultpix、defaultthumbpix、maxpix)。
 
-默认清单配置的位置取自&#x200B;**[!UICONTROL Adobe CQ Scene7 PlatformServer]**&#x200B;包的&#x200B;**[!UICONTROL 目录根]**&#x200B;默认值。 默认情况下，此值位于&#x200B;**[!UICONTROL 工具>常规>CRXDE Lite]**&#x200B;中的以下路径：
+默认清单配置的位置取自&#x200B;**[!UICONTROL Adobe CQ Scene7 PlatformServer]**&#x200B;包的&#x200B;**[!UICONTROL 目录根]**&#x200B;默认值。 默认情况下，此值位于&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**&#x200B;中的以下路径
 
 `/conf/global/settings/dam/dm/imageserver/`
 
@@ -998,9 +1001,9 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
 
 安装功能包后，请配置相应的默认颜色配置文件，以在请求RGB或CMYK图像数据时启用颜色校正。
 
-**配置默认颜色配置文件**
+**要配置默认颜色配置文件，请执行以下操作：**
 
-1. 在&#x200B;**[!UICONTROL 工具>常规>CRXDE Lite]**&#x200B;中，导航到`/conf/global/settings/dam/dm/imageserver/jcr:content`，其中包含默认的Adobe Color配置文件。
+1. 在&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**&#x200B;中，导航到包含默认Adobe Color配置文件的`/conf/global/settings/dam/dm/imageserver/jcr:content`。
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
