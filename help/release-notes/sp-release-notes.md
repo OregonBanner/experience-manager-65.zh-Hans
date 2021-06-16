@@ -4,7 +4,7 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f62c675af34a4b11cc152eafb7bc561f8b6890a9
+source-git-commit: 0ed031e8be43633caf6d9916542b6650e3dfd327
 workflow-type: tm+mt
 source-wordcount: '3857'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 | 版本号 | 6.5.9.0 |
 | 类型 | Service Pack 版本 |
 | 日期 | 2021 年 5 月 27 日 |
-| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9.zip) |
+| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip) |
 
 ## [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}中包含的内容
 
@@ -384,7 +384,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 1. 在安装之前，请拍摄[!DNL Experience Manager]实例的快照或新备份。
 
-1. 从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9.zip)下载Service Pack。
+1. 从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip)下载Service Pack。
 
 1. 打开包管理器，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。要了解更多信息，请参阅[包管理器](/help/sites-administering/package-manager.md)。
 
