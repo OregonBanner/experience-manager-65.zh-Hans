@@ -11,9 +11,9 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '7912'
+source-wordcount: '7911'
 ht-degree: 0%
 
 ---
@@ -850,7 +850,7 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以便传�
 
 >[!NOTE]
 >
->在此上下文中，“附加”一词表示`appmon.[applicationname].addition.[locale]`.xml&#39;文件的内容。 此类文件指定对话XML文件的覆盖和添加。
+>在此上下文中，“附加”一词表示`appmon.[applicationname].addition.[locale].xml`文件的内容。 此类文件指定对话XML文件的覆盖和添加。
 
 您还可以为本机应用程序修改附加的对话框XML文件，以实现以下目的：
 
