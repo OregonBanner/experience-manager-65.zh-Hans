@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '638'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ WebLogic服务器管理控制台不再可用，并且从中运行start命令的�
 >只有在创建WebLogic域和受管服务器后，才能执行此任务。
 
 1. 确保WebLogic服务器和节点管理器正在运行。
-1. 通过在Web浏览器的URL行中键入`https://host name]:[port]`/console`来启动WebLogic服务器管理控制台。
+1. 通过在Web浏览器的URL行中键入`https://host name]:[port]/console`来启动WebLogic服务器管理控制台。
 1. 在“域结构”下，单击“环境”>“服务器”。
 1. 在右窗格中，单击“Control（控制）”选项卡。
 1. 选择要启动的受控服务器。
