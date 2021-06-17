@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 配置，混合模式
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
 source-wordcount: '7843'
 ht-degree: 1%
@@ -564,8 +564,7 @@ Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分
    * **通过JCRT检查Video Analytics预设，**
 或通过JCR检查Video Analytics预设，您必须有权访问CRXDE Lite。
 
-      Experience Manager — 在CRXDE Lite中，导航到`/conf/global/settings/
-dam/dm/presets/analytics/jcr:content/userdata`
+      Experience Manager — 在CRXDE Lite中，导航到`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
       与`https://localhost:4502/crx/de/index.jsp#/conf/global/settings/dam/dm/presets/analytics/jcr%3Acontent/userdata`中一样
 
