@@ -6,7 +6,7 @@ feature: 商务集成框架
 doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 2%
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 ### 访问CIF附加组件
 
-可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载CIF加载项，搜索“AEM商务加载项”。
+可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载CIF加载项，以搜索“AEM Commerce加载项”。
 
 >[!TIP]
 >
