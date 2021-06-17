@@ -13,9 +13,9 @@ docset: aem65
 feature: 内容片段
 role: Business Practitioner, Administrator
 exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
@@ -174,7 +174,7 @@ ht-degree: 4%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-要指示代码跨度，请用反勾号(&#39;)将代码换行。 与预格式化的代码块不同，代码范围表示普通段落中的代码。
+要指示代码跨度，请用反勾号(&amp;grave;)将代码换行。 与预格式化的代码块不同，代码范围表示普通段落中的代码。
 
 例如：
 
