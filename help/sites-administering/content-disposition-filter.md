@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 exl-id: 1c3d0d48-5c31-42a8-8698-922d7c2127e9
-source-git-commit: cd895fcab5adce600ce230fb6867392e45963c16
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 “内容处置过滤器”选项提供以下功能：
 
-* **内容处置路径：** 路径列表，其中将应用过滤器，然后是要在该路径上排除的mime类型列表。此路径必须是绝对路径，并且最后可能包含通配符(`*`)，以将每个资源路径与给定路径前缀匹配。例如：`/content/*:image/jpeg,image/svg+xml`会将过滤器应用于“/content”中的每个节点？ 除jpg和svg图像外
+* **内容处置路径：** 路径列表，其中将应用过滤器，然后是要在该路径上排除的mime类型列表。此路径必须是绝对路径，并且最后可能包含通配符(`*`)，以将每个资源路径与给定路径前缀匹配。例如：`/content/*:image/jpeg,image/svg+xml`将对`/content?`中除jpg和svg图像外的每个节点应用滤镜
 
 * **排除的资源路径：** 排除的资源列表，必须将每个资源路径指定为绝对和完全限定的路径。不支持前缀匹配/通配符。
 
