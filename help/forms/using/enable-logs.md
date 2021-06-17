@@ -12,9 +12,9 @@ discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 feature: 移动设备表单
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '647'
 ht-degree: 6%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 6%
 
 ### 使用请求参数{#enabling-logging-using-request-parameter}启用日志记录
 
-使用此方法，您可以为特定请求生成日志。 请求参数的名称为“log”。 日志URL如下：
+使用此方法，您可以为特定请求生成日志。 请求参数的名称为`log`。 日志URL如下：
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -94,7 +94,7 @@ ht-degree: 6%
    <td>关闭<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>1</td>
+   <td>3</td>
    <td>致命<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ ht-degree: 6%
    <td>错误<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>1</td>
+   <td>3</td>
    <td>警告<br type="_moz" /> </td>
   </tr>
   <tr>
