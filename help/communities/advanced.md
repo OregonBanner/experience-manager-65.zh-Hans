@@ -12,7 +12,7 @@ discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 role: Administrator
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -184,28 +184,28 @@ ht-degree: 1%
 
 1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
-   * `subRules[] =
-/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
-/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
-/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule`
+   ```
+   subRules[] =
+   /libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+   /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+   /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule
+   ```
 
 1. `/libs/settings/community/scoring/rules/adv-forums-scoring`
 
-   * `subRules[] =
-/libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
-/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
-/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner`
+   ```
+   subRules[] =
+   /libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
+   /libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+   /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+   ```
 
 **注释:**
 
 * `rules`和`sub-rules`节点均为`cq:Page`类型。
-
-* `subRules` 是规则节点类[] 型字符串的属 `jcr:content` 性。
-
+* `subRules` 是规则节点类`[]` 型字符串的属 `jcr:content` 性。
 * `sub-rules` 可以在各种评分规则之间共享。
-
 * `rules` 应位于具有每个人读取权限的存储库位置。
-
 * 规则名称必须唯一，而不考虑位置。
 
 ### 包含标记规则{#included-badging-rules}
