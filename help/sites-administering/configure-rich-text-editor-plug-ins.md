@@ -3,9 +3,9 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 443115b306ff34ee98da9403222874a9700d8aed
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4395'
 ht-degree: 3%
 
 ---
@@ -338,7 +338,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 1. 在“样式”节点下创建新节点。 请参阅[指定新样式](#stylesindropdown)。
    * 名称: `jpn-word-wrap`
-   * 类型：&#39;nt:unstructure
+   * 类型: `nt:unstructure`
 
 1. 将属性`cssName`添加到节点以引用CSS类。 此类名称是日语自动换行功能的保留名称。
    * 名称: `cssName`
