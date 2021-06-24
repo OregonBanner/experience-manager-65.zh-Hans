@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 资产管理
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
 
-# 管理复合资产和多页资产{#managing-compound-assets}
+# 管理复合资产和多页资产 {#managing-compound-assets}
 
 [!DNL Adobe Experience Manager Assets] 可以识别上传的文件是否包含对存储库中已存在资产的引用。此功能仅适用于支持的文件格式。 如果上传的资产包含对[!DNL Experience Manager]资产的任何引用，则会在上传的资产和引用的资产之间创建双向链接。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    *图：资产详细信息中的资产引用。*
 
-## [!DNL Adobe InDesign]:将数字资产添加为参考  {#add-aem-assets-as-references-in-adobe-indesign}
+## [!DNL Adobe InDesign]:将数字资产添加为参考 {#add-aem-assets-as-references-in-adobe-indesign}
 
 要从[!DNL InDesign]文件中引用数字资产，请将资产拖到[!DNL InDesign]文件中，或将[!DNL InDesign]文件导出为ZIP存档。
 
@@ -57,11 +57,11 @@ ht-degree: 0%
 
 上传INDD文件后，将通过查询存储库中具有`xmpMM:InstanceID`和`xmpMM:DocumentID`属性的资产来获取引用。
 
-### 通过拖动资产创建引用{#create-references-by-dragging-aem-assets}
+### 通过拖动资产创建引用 {#create-references-by-dragging-aem-assets}
 
 此过程与[在Adobe Illustrator](#refai)中添加数字资产作为引用类似。
 
-### 通过导出ZIP文件{#create-references-to-aem-assets-by-exporting-a-zip-file}创建对资产的引用
+### 通过导出ZIP文件创建对资产的引用 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. 执行[创建工作流模型](/help/sites-developing/workflows-models.md)中的步骤，以创建新工作流。
 1. 使用[!DNL Adobe InDesign]的[包功能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)导出文档。 [!DNL Adobe InDesign] 可将文档和关联的资产作为包导出。在这种情况下，导出的文件夹包含一个`Links`文件夹，其中包含[!DNL InDesign]文件中的子资产。 `Links`文件夹与INDD文件位于同一文件夹中。
@@ -72,8 +72,6 @@ ht-degree: 0%
 ## [!DNL Adobe Photoshop]:将数字资产添加为参考 {#refps}
 
 1. 使用[!DNL Experience Manager]桌面应用程序访问[!DNL Experience Manager Assets]。 下载并显示本地文件系统上的资产。 在[!DNL Adobe Photoshop]中使用[!UICONTROL Linked]功能。 请参阅[将资产放入桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)中。
-
-   ![chlimage_1-87](assets/chlimage_1-261.png)
 
 1. 将[!DNL Photoshop]文件保存到已装载的驱动器，或将](/help/assets/manage-assets.md#uploading-assets)上载到[!DNL Experience Manager]存储库。[
 1. 工作流完成后，对现有[!DNL Experience Manager]资产的引用将列在资产详细信息页面中。
@@ -86,7 +84,7 @@ ht-degree: 0%
 >
 >复合资产中的资产还可以根据其文档ID和实例ID进行引用。 此功能仅在[!DNL Adobe Illustrator]和[!DNL Adobe Photoshop]版本中可用。 对于其他资产，则会按照[!DNL Experience Manager]早期版本中所述，基于主复合资产中链接资产的相对路径进行引用。
 
-## 创建子资产{#generate-subassets}
+## 创建子资产 {#generate-subassets}
 
 对于支持的多页格式资产（PDF文件、AI文件、[!DNL Microsoft PowerPoint]和[!DNL Apple Keynote]文件，以及[!DNL Adobe InDesign]文件） — [!DNL Experience Manager]可以生成与原始资产的每个单独页面对应的子资产。 这些子资产与&#x200B;*父*&#x200B;资产相关联，有助于进行多页面查看。 出于所有其他目的，子资产会像[!DNL Experience Manager]中的普通资产一样处理。
 
@@ -106,13 +104,13 @@ ht-degree: 0%
 
 特别是对于Microsoft Word文档，请执行&#x200B;**[!UICONTROL DAM解析Word文档]**&#x200B;工作流。 它从Microsoft Word文档的内容生成`cq:Page`组件。 从文档提取的图像将从`cq:Page`组件中引用。 即使禁用子资产生成，也会提取这些图像。
 
-## 查看子资产{#viewing-subassets}
+## 查看子资产 {#viewing-subassets}
 
 只有在生成子资产并且该子资产可用于选定的多页面资产时，才会显示子资产。 要查看生成的子资产，请打开多页面资产。 在页面的左上角，单击![选项以打开左边栏](assets/do-not-localize/aem_leftrail_contentonly.png)，然后单击列表中的&#x200B;**[!UICONTROL Subassets]**。 从列表中选择&#x200B;**[!UICONTROL 子资产]**&#x200B;时。 或者，使用键盘快捷键`alt + 5`。
 
 ![查看多页面资产的子资产](assets/view_subassets_simulation.gif)
 
-## 查看多页文件{#view-pages-of-a-multi-page-file}的页面
+## 查看多页文件的页面 {#view-pages-of-a-multi-page-file}
 
 使用[!DNL Experience Manager Assets]的页面查看器功能，可以查看多页文件，如PDF、INDD、PPT、PPTX和AI文件。 打开多页资产，然后单击页面左上角的&#x200B;**[!UICONTROL 查看页面]** 。 打开的页面查看器会显示资产的页面以及用于浏览和缩放每个页面的控件。
 
@@ -132,7 +130,7 @@ ht-degree: 0%
 
 * **** 单击选项以打开左边栏后，左边栏中 ![的时间](assets/do-not-localize/aem_leftrail_contentonly.png) 线选项会显示文件的活动流。
 
-## 最佳实践和限制{#best-practice-limitation-tips}
+## 最佳实践和限制 {#best-practice-limitation-tips}
 
 * 任何[!DNL Experience Manager]部署中的子资源生成都会占用大量资源。 如果您在上传复杂资产时生成子资产，请在DAM更新资产工作流中添加该步骤。 如果要按需生成子资产，请创建单独的工作流以生成子资产。 利用专用工作流，可跳过DAM更新资产工作流中的其他步骤并保存计算资源。
 
