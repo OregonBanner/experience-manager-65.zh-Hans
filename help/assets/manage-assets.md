@@ -6,20 +6,20 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: d06e60baac692c92358244944226b77d5dad4022
+source-git-commit: 550d837c8ad86393eefecb264b69157fca312984
 workflow-type: tm+mt
-source-wordcount: '9775'
+source-wordcount: '9743'
 ht-degree: 6%
 
 ---
 
-# 管理数字资产{#manage-digital-assets}
+# 管理数字资产 {#manage-digital-assets}
 
 在[!DNL Adobe Experience Manager Assets]中，您可以执行的操作不仅仅是存储和管理资产。 [!DNL Experience Manager] 提供企业级资产管理功能。您可以编辑和共享资产、运行高级搜索、创建数十种受支持文件格式的多个演绎版、管理版本和数字权限、自动处理资产、管理和管理元数据、使用批注进行协作等。
 
 本文介绍了创建或上传等基本资产管理任务；元数据更新；复制、移动和删除；发布、取消发布和搜索资产。 要了解用户界面，请参阅[资产用户界面入门](/help/sites-authoring/basic-handling.md)。 要管理内容片段，请参阅[管理内容片段](/help/assets/content-fragments/content-fragments-managing.md)资产。
 
-## 创建文件夹{#creating-folders}
+## 创建文件夹 {#creating-folders}
 
 组织资产集合（例如，所有`Nature`图像）时，可以创建文件夹以将它们保持在一起。 您可以使用文件夹对资产进行分类和组织。 [!DNL Experience Manager Assets] 您无需组织文件夹中的资产，即可更好地运行。
 
@@ -40,7 +40,7 @@ ht-degree: 6%
 
 资产文件名的扩展名中不要包含特殊字符。
 
-## 上传资产{#uploading-assets}
+## 上传资产 {#uploading-assets}
 
 <!-- TBD the following:
 Move this section into a new article. CQDOC-14874 ticket is created for this.
@@ -81,11 +81,9 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 单击&#x200B;**[!UICONTROL 暂停]**&#x200B;时，它会切换到&#x200B;**[!UICONTROL 播放]**&#x200B;选项。 要继续上传，请单击&#x200B;**[!UICONTROL Play]**。
 
-![恢复暂停的资产上传](assets/resume-paused-upload.png)
-
 要取消持续上传，请单击进度栏旁边的关闭(`X`)。 取消上传操作后，[!DNL Assets]将删除部分上传的资产部分。
 
-恢复上传的功能在低带宽情况和网络故障中特别有用，在这些情况下，上传大型资产需要较长时间。 您可以暂停上传操作，稍后在情况好转时继续。 恢复时，上传会从暂停之处开始。
+恢复上传的功能在低带宽情况和网络故障中特别有用，在这些情况下，上传大型资产需要较长时间。 您可以暂停上传操作，稍后在情况好转时继续。 恢复时，上传会从暂停时开始。
 
 在上传操作期间，[!DNL Experience Manager]会将上传的资产部分作为数据块保存到CRX存储库中。 上传完成后，[!DNL Experience Manager]会将这些区块合并到存储库中的单个数据块中。
 
@@ -152,7 +150,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 默认情况下，会启用资产的序列上传。 要禁用该功能并允许并发上传，请在Crx-de中叠加`fileupload`节点，并将`parallelUploads`属性的值设置为`true`。
 
-### 使用FTP {#uploading-assets-using-ftp}上传资产
+### 使用FTP上传资产 {#uploading-assets-using-ftp}
 
 Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传大资产(> 1 GB)或上传整个文件夹和子文件夹，则应使用FTP。 您甚至可以设置FTP上传以按定期计划进行。
 
@@ -191,7 +189,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
    要查看上传进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页面显示上传的进度。 您可以继续在[!DNL Experience Manager]中工作，并随时返回到Dynamic Media Classic中的“作业”页面，以查看正在进行的作业。
 要取消正在进行的上载作业，请单击持续时间旁边的**[!UICONTROL 取消]**。
 
-#### 上载作业选项{#upload-job-options}
+#### 上载作业选项 {#upload-job-options}
 
 | 上传选项 | 子选项 | 描述 |
 |---|---|---|
@@ -212,7 +210,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 |  | 视频选项 | 您可以通过选择视频预设来对视频文件进行转码。<br> 请参 [阅设置eVideo上传选项](#setting-evideo-upload-options)。 |
 |  | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的活动列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置/批集预设”页面中创建预设。<br> 请参 [阅配置批集预设以自动生成图像集和旋转集，以了](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) 解有关创建批集预设的更多信息。<br> 请参 [阅在上传时设置批集预设](#setting-batch-set-presets-at-upload)。 |
 
-#### 在上传{#setting-image-editing-options-at-upload}时设置图像编辑选项
+#### 在上传时设置图像编辑选项 {#setting-image-editing-options-at-upload}
 
 在上传图像文件（包括AI、EPS和PSD文件）时，可以在[!UICONTROL 上传作业选项]对话框中执行以下编辑操作：
 
@@ -238,7 +236,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 | | Tolerance | Optional.<br> Controls the allowable amount of variation in pixel color matching based on the Corner location that you set.<br> Use a value of 0.0 to match pixel colors exactly or, use a value of 1.0 to allow for the greatest variation. |
 -->
 
-#### 设置PostScript和Illustrator上传选项{#setting-postscript-and-illustrator-upload-options}
+#### 设置PostScript和Illustrator上传选项 {#setting-postscript-and-illustrator-upload-options}
 
 上传PostScript(EPS)或Illustrator(AI)图像文件时，可以采用各种方式设置它们的格式。 您可以栅格化文件、维护透明背景、选择分辨率和选择色彩空间。 在[!UICONTROL PostScript选项]和[!UICONTROL Illustrator选项]下的[!UICONTROL 上传作业选项]对话框中，提供了用于设置PostScript和Illustrator文件格式的选项。
 
@@ -253,7 +251,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 |  | 强制为CMYK | 转换为CMYK色彩空间。 |
 |  | 强制作为灰度 | 转换为灰度色彩空间。 |
 
-#### 设置Photoshop上传选项{#setting-photoshop-upload-options}
+#### 设置Photoshop上传选项 {#setting-photoshop-upload-options}
 
 Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件时，可以从该文件自动创建图像模板（在“上传”屏幕上选择[!UICONTROL 创建模板]选项）。
 
@@ -277,7 +275,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 |  | Photoshop和层名称 | 在PSD文件后面命名图像，后跟图层名称或图层编号。 如果PSD文件中的层名称是缺省的Photoshop层名称，则使用层编号。 例如，在名为SpringAd的PSD文件中，名为Price Tag的层被命名为Spring Ad_Price Tag。 缺省名称为Layer 2的层称为Spring Ad_2。 |
 | 锚点 |  | 指定如何在模板中定位图像，这些模板是从PSD文件生成的分层组合生成的。 默认情况下，锚点为中心。 无论替换图像的长宽比如何，中心锚点都允许替换图像最好地填充相同的空间。 引用模板和使用参数替换时，具有不同方面的图像会替换此图像，因此，当引用模板和使用参数替换时，会有效地占用相同的空间。 如果您的应用程序需要替换图像来填充模板中分配的空间，请更改为其他设置。 |
 
-#### 设置PDF上传选项{#setting-pdf-upload-options}
+#### 设置PDF上传选项 {#setting-pdf-upload-options}
 
 上传PDF文件时，可以采用多种格式设置其格式。 您可以裁剪其页面、提取搜索词、输入每英寸像素的分辨率并选择色彩空间。 PDF文件通常包含裁切边距、裁切标记、注册标记和其他打印机标记。 在上传PDF文件时，您可以从页面的两侧裁剪这些标记。
 
@@ -300,7 +298,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 |  | 强制为CMYK | 转换为CMYK色彩空间。 |
 |  | 强制作为灰度 | 转换为灰度色彩空间。 |
 
-#### 设置eVideo上传选项{#setting-evideo-upload-options}
+#### 设置eVideo上传选项 {#setting-evideo-upload-options}
 
 要通过从各种视频预设中进行选择来对视频文件进行转码，请执行以下操作：
 
@@ -312,13 +310,13 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 |  | 移动设备 | 创建MP4文件，以在iPhone或Android移动设备上交付。选择一个或多个具有所需分辨率大小和目标数据速率的纵横比。 |
 |  | 平板电脑 | 创建MP4文件，以在iPad或Android平板电脑设备上交付。选择一个或多个具有所需分辨率大小和目标数据速率的纵横比。 |
 
-#### 在上传时设置批集预设{#setting-batch-set-presets-at-upload}
+#### 在上传时设置批集预设 {#setting-batch-set-presets-at-upload}
 
 如果要根据上传的图像自动创建图像集或旋转集，请单击要使用的预设的“活动”列。 您可以选择多个预设。
 
 请参阅[将批集预设配置为自动生成图像集和旋转集](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) ，以了解有关创建批集预设的更多信息。
 
-### 流式上传{#streamed-uploads}
+### 流式上传 {#streamed-uploads}
 
 如果您将许多资产上传到Adobe Experience Manager，则对服务器的I/O请求会急剧增加，这会降低上传效率，甚至会导致某些上传任务超时。 [!DNL Experience Manager Assets] 支持流式上传资产。流式上传在上传操作期间减少了磁盘I/O，方法是在将磁盘复制到存储库之前，避免将资产存储在服务器上的临时文件夹中。 相反，数据会直接传输到存储库。 这样，上传大型资产的时间和超时的可能性就会减少。 默认情况下，在[!DNL Assets]中启用流式上传。
 
@@ -343,7 +341,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 * 不能同时选择两个ZIP文件并解压缩它们。 一次只能提取一个ZIP存档。
 * 上传ZIP存档时，如果上传对话框显示500服务器错误，请在安装[最新Service Pack](/help/release-notes/sp-release-notes.md)后重试。
 
-## 预览资产{#previewing-assets}
+## 预览资产 {#previewing-assets}
 
 要预览资产，请执行以下步骤。
 
@@ -378,7 +376,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 >* [查看子资产](managing-linked-subassets.md#viewing-subassets)。
 
 
-## 编辑属性和元数据{#editing-properties}
+## 编辑属性和元数据 {#editing-properties}
 
 1. 导航到资产的位置以编辑其元数据。
 
@@ -425,7 +423,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 1. 导航到[!DNL Assets]用户界面。 编辑的元数据属性（包括标题、描述、评级等）会显示在卡片视图的资产卡片上，以及列表视图的相关列下。
 
-## 复制资产{#copying-assets}
+## 复制资产 {#copying-assets}
 
 复制资产或文件夹时，会复制整个资产或文件夹及其内容结构。 复制的资产或文件夹会复制在目标位置。 不会更改源位置的资产。
 
@@ -455,7 +453,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
    >
    >**[!UICONTROL 粘贴]**&#x200B;选项在粘贴操作完成之前会显示在工具栏中。
 
-## 移动和重命名资产{#moving-or-renaming-assets}
+## 移动和重命名资产 {#moving-or-renaming-assets}
 
 将资产（或文件夹）移动到其他位置后，与复制资产时不会复制资产（或文件夹）。 资产（或文件夹）将放置在目标位置，并从源位置中删除。 您还可以在将资产移动到新位置时对其重命名。
 如果您将已发布的资产移动到其他位置，则可以选择重新发布资产。 默认情况下，对已发布资产执行移动操作时会自动取消发布该资产。 如果作者在移动资产时选择[!UICONTROL Republish]选项，则会重新发布已移动的资产。
@@ -499,7 +497,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
    如果您没有更新引用，则引用将继续指向资产的上一个路径。 如果调整引用，它们将更新为新的资产路径。
 
-### 使用拖动操作{#move-using-drag}移动资产
+### 使用拖动操作移动资产 {#move-using-drag}
 
 您可以通过将资产（或文件夹）拖动到目标位置，而不是使用用户界面中的[!UICONTROL 移动]选项，将资产（或文件夹）移动到同级文件夹。 但是，此操作只能在列表视图中执行。
 
@@ -507,7 +505,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
 ![通过拖动资产将资产移入同级文件夹](assets/move-by-drag.gif)
 
-## 管理演绎版{#managing-renditions}
+## 管理演绎版 {#managing-renditions}
 
 1. 您可以为资产添加或删除演绎版，但原始形式除外。导航到您要为其添加或删除演绎版的资产所在的位置。
 
@@ -541,7 +539,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
    同样，您也可以通过叠加`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`来自定义“注释”页面图像。
 
-   ![在CRXDE中叠加呈现选取器节点以自定义“注释”页面图像](assets/renditionpicker-node-crxde.png)
+   ![在CRXDE中叠加呈现选取器节点以自定义“注释”页面图像](assets/renditionpicker-node.png)
 
    要为视频资产配置演绎版维度，请导航到CRX存储库中位于`/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`的`videopicker`节点，叠加该节点，然后编辑相应的属性。
 
@@ -551,7 +549,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
 有关生成和查看子资产的更多信息，请参阅[管理子资产](managing-linked-subassets.md#generate-subassets)。
 
-## 删除资产{#deleting-assets}
+## 删除资产 {#deleting-assets}
 
 要删除资产，用户需要具有`dam/asset`的删除权限。 如果您只有修改权限，则只能编辑资产元数据并向资产添加注释。 但是，您无法删除资产或其元数据。
 
@@ -584,7 +582,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
 请参阅[从Experience Manager下载资产](/help/assets/download-assets-from-aem.md)。
 
-## 发布或取消发布资产{#publish-assets}
+## 发布或取消发布资产 {#publish-assets}
 
 在[!DNL Experience Manager]作者上传、处理或编辑资产后，您需要将资产发布到发布服务器。 发布后，资产将公开可用。 取消发布操作会从发布服务器中删除资产，但不会从创作服务器中删除资产。
 
@@ -647,7 +645,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 * 触控设备：触摸并按住。 例如，在iPad上，您可以点按并按住资产，以便显示快速操作。
 * 非触控设备：悬停指针。 例如，在桌面设备上，如果将指针悬停在资产缩略图上，则会显示快速操作栏。
 
-### 导航并选择资产{#navigating-and-selecting-assets}
+### 导航和选择资产 {#navigating-and-selecting-assets}
 
 您可以使用&#x200B;**[!UICONTROL 选择]**&#x200B;选项查看、导航和选择具有任何可用视图（卡片视图、列视图和列表视图）的资产。
 
@@ -655,13 +653,11 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 在卡片视图中， **[!UICONTROL Select]**&#x200B;选项显示为快速操作。
 
-![在卡片视图中选择快速操作](assets/select_quick_action.png)
-
 在浏览器的[!DNL Assets]用户界面中浏览文件夹或收藏集时，您可以使用右上角的[!UICONTROL 全选]选项选择显示或加载的所有资产。 最初，卡片视图中只加载100个资产，列表视图中加载200个资产。 在滚动搜索结果页面时，视图中会加载更多资产。 [!UICONTROL 全选]选项仅选择加载的资产。
 
 有关更多信息，请参阅[查看并选择您的资源](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 
-## 编辑图像{#editing-images}
+## 编辑图像 {#editing-images}
 
 [!DNL Assets]界面中的编辑工具允许您对图像资产执行小型编辑作业。 您可以裁剪、旋转、翻转和对图像执行其他编辑作业。 您还可以将图像映射添加到资产。
 
@@ -678,8 +674,6 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 1. 要裁剪图像，请单击&#x200B;**[!UICONTROL 裁剪]** ![选项以裁剪图像](assets/do-not-localize/crop.png)。
 
 1. 从列表中选择所需的选项。图像上会根据您选择的选项显示裁剪区域。利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
-
-   ![裁剪选项](assets/crop-options.png)
 
 1. 选择要裁剪的区域，并在图像上调整其大小或位置。
 
@@ -736,11 +730,9 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
 
-   ![“添加注释”对话框中的注释框](assets/annotation-comment-box.png)
-
 1. 要通知用户有关注释的信息，请指定用户的电子邮件地址并添加评论。 例如，要向 Aaron MacDonald 发送有关注释的通知，请输入 @aa。此时会出现一个列表，其中显示了所有匹配用户的提示。从列表中选择Aaron的电子邮件地址，以使用评论标记她。 同样，您可以在批注中的任意位置、批注前后标记更多用户。
 
-   ![指定用户的电子邮件地址并添加注释以通知用户](assets/annotation-add-user-email.png)
+   ![指定用户的电子邮件地址并添加注释以通知用户](assets/annotate-gif.gif)
 
    >[!NOTE]
    >
@@ -771,7 +763,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 >
 >您还可以向收藏集添加注释。 但是，如果收藏集包含子收藏集，则您只能向父收藏集添加注释/注释。 “注释”选项不适用于子收藏集。
 
-### 查看保存的注释{#viewing-saved-annotations}
+### 查看保存的注释 {#viewing-saved-annotations}
 
 1. 要查看资产的已保存注释，请导航到资产的位置，然后打开资产页面。
 
@@ -784,7 +776,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
    单击&#x200B;**[!UICONTROL Delete]**，以删除特定注释。
 
-### 打印批注{#printing-annotations}
+### 打印批注 {#printing-annotations}
 
 如果资产具有批注或者已经受过审阅工作流，您可以将资产以及批注和审阅状态打印为PDF文件，以供离线审阅。
 
@@ -807,8 +799,6 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 1. 单击工具栏中的&#x200B;**[!UICONTROL 打印]**。
 
 1. 从“打印”对话框中，选择希望在PDF上显示批注/审阅状态的位置。 例如，如果希望在包含已打印图像的页面的右上角打印批注/状态，请使用&#x200B;**左上角**&#x200B;设置。 默认情况下，此参数处于选中状态。
-
-   ![从“打印”对话框中选择要在PDF上显示的注释/审阅状态位置](assets/Print-annotation-dialog.png)
 
    您可以根据希望在打印的 PDF 中显示批注/状态的位置选择其他设置。如果希望批注/状态显示在与打印资产不同的页面中，请选择&#x200B;**[!UICONTROL 下一页]**。
 
@@ -856,7 +846,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 1. 通过将font-family参数设置为`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`来配置注释PDF文件。 此配置默认可用，适用于所有欧洲和CJK语言。
 1. 如果您选择的语言与步骤2中提到的语言不同，请在默认字体系列后附加一个适当（以逗号分隔）的条目。
 
-## 创建、管理、预览和还原资产版本{#asset-versioning}
+## 创建、管理、预览和还原资产版本 {#asset-versioning}
 
 版本控制创建数字资产在某个特定时间点的快照。版本控制有助于在以后将资产恢复到以前的状态。 例如，如果要撤消对资产所做的更改，请恢复该资产未经编辑的版本。 在[!DNL Experience Manager]中，您可以创建一个版本、查看当前修订版本、查看两个图像版本之间的并排差异，以及将资产恢复到其先前版本。
 
@@ -909,7 +899,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
    *图：使用滑块可轻松地将资产的选定版本与当前版本进行比较。*
 
-### 在资产{#starting-a-workflow-on-an-asset}上启动工作流
+### 在资产上启动工作流 {#starting-a-workflow-on-an-asset}
 
 要应用工作流处理资产，请参阅[启动资产](/help/assets/assets-workflow.md#apply-a-workflow-to-an-asset)上的工作流。
 
@@ -922,7 +912,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 要了解集合管理的详细信息，请参阅[管理集合](/help/assets/manage-collections.md)。
 
-## 在桌面应用程序中或Adobe资产链接{#hide-expired-assets-via-acp-api}中查看资产时，隐藏已过期的资产
+## 在桌面应用程序或Adobe资产链接中查看资产时，隐藏已过期的资产 {#hide-expired-assets-via-acp-api}
 
 [!DNL Experience Manager] 桌面应用程序允许从Windows或Mac桌面访问DAM存储库。Adobe资产链接允许从支持的[!DNL Creative Cloud]桌面应用程序内访问资产。
 
