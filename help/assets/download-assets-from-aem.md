@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner
 feature: 资产管理，资产分发
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '875'
 ht-degree: 8%
 
 ---
 
-# 从[!DNL Adobe Experience Manager] {#download-assets-from-aem}下载资产
+# 从[!DNL Adobe Experience Manager]下载资产 {#download-assets-from-aem}
 
 您可以下载资产，包括静态和动态演绎版。 或者，您也可以直接从[!DNL Adobe Experience Manager Assets]发送包含指向资产链接的电子邮件。 下载的资产会打包在 ZIP 文件中。对于导出作业，压缩的 ZIP 文件大小最大为 1 GB。每个导出作业最多允许资产总数为500个。
 
@@ -29,11 +29,6 @@ ht-degree: 8%
 1. 导航到包含要下载的资产的文件夹。
 1. 选择文件夹，或在文件夹中选择一个或多个资产。
 1. 在工具栏上，单击&#x200B;**[!UICONTROL 下载]**。
-
-   ![从Experience Manager资产下载资产时可用的选项](/help/assets/assets/asset-download1.png)
-
-   *图：下载对话框中提供的选项。*
-
 1. 在“下载”对话框中，选择所需的下载选项。
 
    | 导出或下载选项 | 描述 |
