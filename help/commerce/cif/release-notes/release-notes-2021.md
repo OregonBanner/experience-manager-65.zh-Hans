@@ -1,10 +1,11 @@
 ---
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
-source-git-commit: 99636664a49da3ac5d236db5a1185ad6659ee255
+exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
+source-git-commit: 71782a3caae3f74a4886c52cf9b29f9e998913fa
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 9%
+source-wordcount: '758'
+ht-degree: 8%
 
 ---
 
@@ -27,6 +28,23 @@ ht-degree: 9%
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 发行日期：2021年6月
+
+| 组件 | 版本号 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.06.18 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
+| CIF核心组件 | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
+| CIF Venia参考网站 | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
+
+### 新增功能 {#what-is-new-june}
+
+* 内容片段的新CIF产品和类别引用数据类型(包括 产品/类别选取器UI支持)
+* 新的商务内容片段核心组件
+* AEM后端支持的全文商务搜索
+* 商务核心组件支持Adobe商务Sensei Recs数据收集
+* 改进了类别页面的SEO友好URL
+* 支持每个站点/配置的自定义HTTP标头
 
 ## 发行日期：2021年5月
 
@@ -68,7 +86,7 @@ ht-degree: 9%
 
 * 类别页面的页面属性的商务选项卡下未显示根类别字段
 
-## 发行日期：2021年3月{#what-is-new-march}
+## 发行日期：2021年3月 {#what-is-new-march}
 
 | GitHub | 版本号 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
@@ -102,7 +120,7 @@ ht-degree: 9%
 
 * 扩展的产品控制台属性，用于显示链接的资产和体验片段，包括快速导航到关联内容的操作。
 
-### {#what-is-improved-february}的改进内容
+### 改进内容  {#what-is-improved-february}
 
 * 增强了客户端数据层，其中包含产品图像url和类别信息。
 
@@ -120,7 +138,7 @@ ht-degree: 9%
 
 * 产品体验管理：资产和体验片段新增了“商务”属性选项卡。 利用此选项卡，可将资产和体验片段关联到产品和类别。 选项卡还显示链接的商务对象的实时数据，以及用于在产品控制台中显示详细信息的链接。
 
-### {#what-is-improved-january}的改进内容
+### 改进内容  {#what-is-improved-january}
 
 * 在验证后将用户数据发送到Adobe客户端数据层。
 
