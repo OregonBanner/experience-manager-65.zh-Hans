@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 资产管理，演绎版
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: 3221454e2d2dfd90b645a4c0303404d44f8d373d
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '2626'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 # 智能成像 {#smart-imaging}
 
-## 什么是“智能成像”？{#what-is-smart-imaging}
+## 什么是“智能成像”？ {#what-is-smart-imaging}
 
 智能成像技术应用了Adobe Sensei AI功能，并与现有的“图像预设”配合使用，通过基于客户端浏览器功能自动优化图像格式、大小和质量，从而提高图像交付性能。
 
@@ -41,53 +41,54 @@ Smart Imaging还通过与Adobe一流的高级CDN服务完全集成而带来的�
 
 与上述内容类似，Adobe还使用实时客户网站的7009 URL进行测试。 他们平均可以进一步优化JPEG的38%文件大小。 对于具有WebP格式的PNG，他们平均可进一步优化31%的文件大小。 这种优化是由于智能成像的能力而实现的。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 On the mobile web, the challenges are compounded by two factors:
+在移动网络上，挑战因以下两个因素而加剧：
 
-* Large variety of devices with different form factors and high-resolution displays.
-* Constrained network bandwidth.
+* 多种不同外形规格和高分辨率显示器的设备。
+* 网络带宽受限。
 
-In terms of images, the goal is to serve the best quality images as efficiently as possible.
+在图像方面，目标是尽可能高效地提供最优质的图像。
 
-### About device pixel ratio optimization {#dpr}
+### 关于设备像素比例优化 {#dpr}
 
-Device pixel ratio (DPR) &ndash; also known as CSS pixel ratio &ndash; is the relation between a device’s physical pixels and logical pixels. Especially with the advent of retina screens, the pixel resolution of modern mobile devices is growing at a fast rate.
+设备像素比率(DPR)（也称为CSS像素比率）是设备的物理像素与逻辑像素之间的关系。 特别是随着视网膜屏幕的出现，现代移动设备的像素分辨率正以快速的速度增长。
 
-Enabling Device Pixel Ratio optimization renders the image at the native resolution of the screen which makes it look crisp.
+启用“设备像素比率”优化后，图像将以屏幕的本机分辨率呈现，从而使其看起来清晰。
 
-Turning on Smart Imaging DPR configuration automatically adjusts the requested image based on pixel density of the display the request is being served from. Currently, the pixel density of the display comes from Akamai CDN header values.
+打开智能成像DPR配置可根据请求所提供的显示器的像素密度自动调整请求的图像。 目前，显示屏的像素密度来自Akamai CDN标头值。
 
-| Permitted values in the URL of an image | Description |
+| 图像URL中允许的值 | 描述 |
 |---|---|
-| `dpr=off` | Turn off DPR optimization at an individual image URL level.| 
-| `dpr=on,dprValue` | Override the DPR value detected by Smart Imaging, with a custom value (as detected by any client-side logic or other means). Permitted value for `dprValue` is any number greater than 0. Specified values of 1.5, 2, or 3 are typical. |
+| `dpr=off` | 在单个图像URL级别关闭DPR优化。 |
+| `dpr=on,dprValue` | 使用自定义值覆盖由智能成像检测的DPR值（由任何客户端逻辑或其他方式检测）。 `dprValue`的允许值是大于0的任意数字。 指定的值1.5、2或3是典型值。 |
 
 >[!NOTE]
 >
->* You can use `dpr=on,dprValue` even if the company level DPR setting as off.
->* Owing to DPR optimization, when the resultant image is greater than the MaxPix Dynamic Media setting, MaxPix width is always recognized by maintaining the image's aspect ratio.
+>* 即使关闭公司级别DPR设置，您也可以使用`dpr=on,dprValue`。
+>* 由于DPR优化，当生成的图像大于MaxPix Dynamic Media设置时，始终通过保持图像的宽高比来识别MaxPix宽度。
 
-| Requested Image size | DPR value | Delivered image size |
+
+| 请求的图像大小 | DPR值 | 传送的图像大小 |
 |---|---|---|
 | 816x500 | 1 | 816x500 |
 | 816x500 | 2 | 1632x1000 |
 
-See also [When working with images](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) and [When working with Smart Crop](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop).
+另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
 
-### About network bandwidth optimization {#network-bandwidth-optimization}
+### 关于网络带宽优化 {#network-bandwidth-optimization}
 
-Turning on Network Bandwidth automatically adjusts the image quality that is served based on actual network bandwidth. For poor network bandwidth, DPR optimization is automatically turned off, even if it is already on.
+打开网络带宽可根据实际网络带宽自动调整提供的图像质量。 对于较差的网络带宽，即使DPR优化已打开，DPR优化也会自动关闭。
 
-If desired, your company can opt out of network bandwidth optimization at the individual image level by appending `network=off` to the URL of the image.
+如有需要，贵公司可以通过在图像的URL后附加`network=off` ，在单个图像级别选择退出网络带宽优化。
 
-| Permitted value in the URL of an image | Description |
+| 图像URL中允许的值 | 描述 |
 |---|---|
-| `network=off` | Turns off network optimization at an individual image URL level. |
+| `network=off` | 在单个图像URL级别关闭网络优化。 |
 
 >[!NOTE]
 >
->DPR and network bandwidth values are based on the detected client-side values of the bundled CDN. These values are sometimes inaccurate. For example, iPhone5 with DPR=2 and iPhone12 with DPR=3, both show DPR=2. Still, for high-resolution devices, sending DPR=2 is better than sending DPR=1. Coming soon: Adobe is working on client-side code to accurately determine an end user's DPR. -->
+>DPR和网络带宽值基于检测到的捆绑CDN的客户端值。 这些值有时不准确。 例如，DPR=2的iPhone5和DPR=3的iPhone12，都显示DPR=2。 但是，对于高分辨率设备，发送DPR=2比发送DPR=1要好。 即将推出：Adobe正在使用客户端代码来准确确定最终用户的DPR。
 
-## 最新的“智能成像”功能有哪些主要优势？{#what-are-the-key-benefits-of-smart-imaging}
+## 最新的“智能成像”功能有哪些主要优势？ {#what-are-the-key-benefits-of-smart-imaging}
 
 由于图像构成页面加载时间的大部分，因此性能改进对业务可能会产生深远影响，例如更高的转化率、网站逗留时间和较低的网站跳出率。
 
@@ -101,7 +102,7 @@ If desired, your company can opt out of network bandwidth optimization at the in
 * 以前，原始图像和派生图像都会缓存，而且使缓存失效需分两步进行。 在最新的智能成像中，只缓存派生项，从而允许单步缓存失效过程。
 * 在其规则集中使用自定义标头的客户可以从最新的智能成像中受益，因为这些标头不会被阻止，这与以前版本的智能成像不同。 例如，[向图像响应添加自定义标头值|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建议的“Timing Allow Origin”、“X-Robot”。
 
-## 是否存在与智能成像相关的许可成本？{#are-there-any-licensing-costs-associated-with-smart-imaging}
+## 是否存在与智能成像相关的许可成本？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
 否. Smart Imaging包含在您现有的Dynamic Media Classic或Adobe Experience Manager - Dynamic Media(内部部署、AMS和Adobe Experience Manager as aCloud Service)许可证中。
 
@@ -109,7 +110,7 @@ If desired, your company can opt out of network bandwidth optimization at the in
 >
 >Dynamic Media — 混合型客户无法使用智能成像。
 
-## 智能成像的工作原理是什么？{#how-does-smart-imaging-work}
+## 智能成像的工作原理是什么？ {#how-does-smart-imaging-work}
 
 当消费者请求图像时，智能成像会检查用户特征，并根据使用中的浏览器转换为适当的图像格式。 执行这些格式转换的方式不会降低视觉保真度。 智能成像可根据浏览器功能以下方式自动将图像转换为不同格式。
 
@@ -134,7 +135,7 @@ If desired, your company can opt out of network bandwidth optimization at the in
 
 如果原始图像大小小于智能成像生成的图像大小，则会提供原始图像。
 
-## 支持哪些图像格式？{#what-image-formats-are-supported}
+## 支持哪些图像格式？ {#what-image-formats-are-supported}
 
 智能成像支持以下图像格式：
 
@@ -148,13 +149,13 @@ If desired, your company can opt out of network bandwidth optimization at the in
 
 Adobe is working on a permanent fix that does not require you to append `bfc=off` for `fmt !=JPEG` or `fmt !=PNG`. This topic will be updated after the fix is delivered. -->
 
-## “智能成像”如何与我的现有已使用的图像预设一起使用？{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
+## “智能成像”如何与我的现有已使用的图像预设一起使用？ {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
 “智能成像”可与您现有的“图像预设”配合使用，如果请求的文件格式为JPEG或PNG，则“智能成像”会检查除质量(`qlt`)和格式(`fmt`)以外的所有图像设置。 对于格式转换，“智能成像”可根据图像预设设置的定义，保持完整的视觉保真度，但文件大小较小。 如果原始图像大小小于智能成像生成的图像大小，则会提供原始图像。
 
 <!-- CQDOC-15846 In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
-## 我是否必须更改任何URL、图像预设，或在我的网站上部署任何新代码才能进行智能成像？{#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
+## 我是否必须更改任何URL、图像预设，或在我的网站上部署任何新代码才能进行智能成像？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
 如果您在现有的自定义域上配置智能成像，则智能成像可以无缝地与您现有的图像URL和图像预设配合使用。 此外，“智能成像”功能不要求您在网站上添加任何代码来检测用户的浏览器。 它都是自动处理的。
 
@@ -166,11 +167,11 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 <!-- As mentioned earlier, Smart Imaging supports only JPEG and PNG image formats. For other formats, you need to append the `bfc=off` modifier to the URL as described earlier. -->
 
-## 智能成像是否可以使用HTTPS? HTTP/2呢？{#does-smart-imaging-working-with-https-how-about-http}
+## 智能成像是否可以使用HTTPS? HTTP/2呢？ {#does-smart-imaging-working-with-https-how-about-http}
 
 智能成像可处理通过HTTP或HTTPS传送的图像。 此外，它还可通过HTTP/2运行。
 
-## 我是否有资格使用智能成像？{#am-i-eligible-to-use-smart-imaging}
+## 我是否有资格使用智能成像？ {#am-i-eligible-to-use-smart-imaging}
 
 要使用智能成像，贵公司的Dynamic Media Classic或Dynamic MediaExperience Manager帐户必须满足以下要求：
 
@@ -183,19 +184,19 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 使用Dynamic Media许可证，您的第一个自定义域无需额外付费。
 
-## 为我的帐户启用“智能成像”的过程是什么？{#what-is-the-process-for-enabling-smart-imaging-for-my-account}
+## 为我的帐户启用“智能成像”的过程是什么？ {#what-is-the-process-for-enabling-smart-imaging-for-my-account}
 
 启动使用智能成像的请求；它不会自动启用。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 By default, Smart Imaging DPR and network optimization is disabled (turned off) for a Dynamic Media company account. If you want to enable (turn on) one or both of these out-of-the-box enhancements, create a support case as described below.
+默认情况下，对于Dynamic Media公司帐户，会禁用（关闭）智能成像DPR和网络优化。 如果要启用（打开）其中一个或两个现成增强功能，请按如下所述创建一个支持案例。
 
-The release schedule for Smart Imaging DPR and network optimization is as follows:
+智能成像DPR和网络优化的发布计划如下：
 
-| Region | Target date |
+| 区域 | 目标日期 |
 |---|---|
-| North America | 24 May 2021 | 
-| Europe, Middle East, Africa | 25 Jun 2021 | 
-| Asia-Pacific | 19 Jul 2021 | -->
+| 北美 | 实时 |
+| 欧洲、中东、非洲 | 2021年8月13日 |
+| 亚太 | 2021年7月22日 |
 
 1. [使用Admin Console创建支持案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。
 1. 在支持案例中提供以下信息：
@@ -227,7 +228,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
    1. 如果您使用Dynamic Media Classic，请单击&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。 将&#x200B;**[!UICONTROL 默认客户端缓存时间设置为Live]**&#x200B;值24或更长。
    1. 如果您使用Dynamic Media，请按照[这些说明](config-dynamic.md)操作。 将&#x200B;**[!UICONTROL Expiration]**&#x200B;值设置为24小时或更长。
 
-## 我何时才能通过智能成像启用我的帐户？{#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
+## 我何时才能通过智能成像启用我的帐户？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
 请求会按照客户关怀团队收到请求的顺序，根据等待列表进行处理。
 
@@ -235,7 +236,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 >
 >启用“智能成像”会涉及Adobe清除缓存，因此前置时间可能较长。 因此，在任何给定时间都只能处理少数客户过渡。
 
-## 切换到使用智能成像有哪些风险？{#what-are-the-risks-with-switching-over-to-use-smart-imaging}
+## 切换到使用智能成像有哪些风险？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
 客户网页不存在风险。 但是，过渡到智能成像会清除CDN中的缓存，因为它涉及在Experience Manager上迁移到Dynamic Media Classic或Dynamic Media的新配置。
 
@@ -260,13 +261,13 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
 
-## 是否可以针对任何请求关闭智能成像？{#turning-off-smart-imaging}
+## 是否可以针对任何请求关闭智能成像？ {#turning-off-smart-imaging}
 
 是. 您可以通过向URL添加修饰符`bfc=off`来关闭智能成像。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 ## Can I request DPR and network optimization to be turned off at the company level? {#dpr-companylevel-turnoff}
+## 我是否可以请求在公司级别关闭DPR和网络优化？ {#dpr-companylevel-turnoff}
 
-Yes. To disable DPR and network optimization at your company, create a support case as described earlier in this topic. -->
+是. 要在贵公司禁用DPR和网络优化，请创建一个支持案例，如本主题前面所述。
 
 ## 提供了哪些“调整”功能？ 是否可以定义任何设置或行为？ (#tuning-settings)
 
@@ -280,10 +281,10 @@ Yes. To disable DPR and network optimization at your company, create a support c
 
 “智能成像”可确定转换是否有益。 仅当转换导致文件大小更小且质量相当时，才会返回新图像。
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 ## How does Smart Imaging DPR optimization work with Adobe Experience Manager Sites components and Dynamic Media viewers?
+## 智能成像DPR优化如何与Adobe Experience Manager Sites组件和Dynamic Media查看器一起使用？
 
-* Experience Manager Sites Core Components are configured by default for DPR optimization. To avoid oversized images owing to server-side Smart Imaging DPR optimization, `dpr=off` is always added to Experience Manager Sites Core Components Dynamic Media images.
-* Given Dynamic Media Foundation Component is configured by default for DPR optimization, to avoid oversized images owing to server-side Smart Imaging DPR optimization, `dpr=off` is always added to Dynamic Media Foundation Component images. Even if customer deselects DPR optimization in DM Foundation Component, server-side Smart Imaging DPR does not kick in. In summary, in the DM Foundation Component, DPR optimization comes into effect based on DM Foundation Component level setting only.
-* Any viewer side DPR optimization works in tandem with server-side Smart Imaging DPR optimization, and does not result in over-sized images. In other words, wherever DPR is handled by the viewer, such as the main view only in a zoom-enabled viewer, the server-side Smart Imaging DPR values are not triggered. Likewise, wherever viewer elements, such as swatches and thumbnails, do not have DPR handling, the server-side Smart Imaging DPR value is triggered.
+* Experience Manager站点核心组件默认配置以进行DPR优化。 为避免因服务器端智能成像DPR优化而出现超大图像，应始终将`dpr=off`添加到Experience Manager站点核心组件Dynamic Media图像中。
+* 默认情况下，为了优化DPR，配置了Dynamic Media Foundation组件，以避免因服务器端智能成像DPR优化而出现过大的图像，将始终向Dynamic Media Foundation组件图像中添加`dpr=off`。 即使客户在DM Foundation组件中取消选择DPR优化，服务器端智能成像DPR也不会生效。 总之，在DM Foundation组件中，DPR优化仅基于DM Foundation组件级别设置生效。
+* 任何查看器端DPR优化都与服务器端智能成像DPR优化协同工作，并且不会导致图像过大。 换言之，无论DPR由查看器处理（例如仅在启用了缩放功能的查看器中的主视图），都不会触发服务器端智能成像DPR值。 同样，无论查看器元素（如色板和缩略图）没有DPR处理，都会触发服务器端智能成像DPR值。
 
-See also [When working with images](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) and [When working with Smart Crop](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop). -->
+另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
