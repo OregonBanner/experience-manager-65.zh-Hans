@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner
 feature: 工作流，演绎版
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 3%
 
 ---
 
-# 使用媒体处理程序和工作流{#processing-assets-using-media-handlers-and-workflows}处理资产
+# 使用媒体处理程序和工作流处理资产 {#processing-assets-using-media-handlers-and-workflows}
 
 [!DNL Adobe Experience Manager Assets] 附带一组用于处理资产的默认工作流和媒体处理程序。工作流定义要在资产上执行的任务，然后将特定任务委派给媒体处理程序，例如缩略图生成或元数据提取。
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 >
 >有关[!DNL Assets]支持的所有格式以及每种格式支持的功能的说明，请参阅[资产支持的格式](assets-formats.md)页面。
 
-## 默认媒体处理程序{#default-media-handlers}
+## 默认媒体处理程序 {#default-media-handlers}
 
 [!DNL Assets]中提供以下媒体处理程序，并处理最常见的MIME类型：
 
@@ -61,7 +61,7 @@ ht-degree: 3%
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## 在工作流中使用媒体处理程序对资产{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}执行任务
+## 在工作流中使用媒体处理程序对资产执行任务 {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 媒体处理程序是通常与工作流结合使用的服务。
 
@@ -71,7 +71,7 @@ ht-degree: 3%
 
 以下示例演示如何增强 **[!UICONTROL AEM Assets 同步工作流]**，以便为除 PDF 文档外的所有资产生成子资产。
 
-### 禁用或启用媒体处理程序{#disabling-enabling-a-media-handler}
+### 禁用或启用媒体处理程序 {#disabling-enabling-a-media-handler}
 
 可以通过Apache Felix Web管理控制台禁用或启用媒体处理程序。 禁用媒体处理程序后，不会对资产执行其任务。
 
@@ -82,11 +82,11 @@ ht-degree: 3%
 1. 刷新页面：媒体处理程序旁会显示一个图标，指示它已禁用。
 1. 要启用媒体处理程序，请单击媒体处理程序名称旁边的&#x200B;**[!UICONTROL 启用]**。
 
-### 创建新的媒体处理程序{#creating-a-new-media-handler}
+### 创建新媒体处理程序 {#creating-a-new-media-handler}
 
 要支持新媒体类型或对资产执行特定任务，需要创建新的媒体处理程序。 本节介绍如何继续。
 
-#### 重要类和接口{#important-classes-and-interfaces}
+#### 重要类和接口 {#important-classes-and-interfaces}
 
 开始实施的最佳方式是继承提供的抽象实施，该实施会处理大多数事务并提供合理的默认行为：`com.day.cq.dam.core.AbstractAssetHandler`类。
 
@@ -129,7 +129,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 * `com.day.cq.dam.core.AbstractAssetHandler` 类：此类用作所有其他资产处理程序实现的基础，并提供常用功能。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` 类：该类用作所有其他资产处理程序实现的基础，并为子资产提取提供常用功能以及常用功能。
 
-#### 示例：创建特定的文本处理程序{#example-create-a-specific-text-handler}
+#### 示例：创建特定文本处理程序 {#example-create-a-specific-text-handler}
 
 在此部分中，您将创建一个特定的文本处理程序，该处理程序生成带有水印的缩略图。
 
@@ -368,7 +368,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
      Layer watermarkLayer;
      try {
       final Session session = node.getSession();
-      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/geometrixx/icons/certificate.png");
+      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/samplesite/icons/certificate.png");
       watermarkLayer.setX(MARGIN);
       watermarkLayer.setY(MARGIN);
       layer.merge(watermarkLayer);
@@ -441,7 +441,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 1. 复制包`myBundle-0.0.1-SNAPSHOT.jar`并将其存储在`/apps/myApp/install`下（例如，使用WebDAV）。 现在，新文本处理程序在[!DNL Experience Manager]中处于活动状态。
 1. 在您的浏览器中，打开[!UICONTROL Apache Felix Web管理控制台]。 选择[!UICONTROL 组件]选项卡并禁用默认文本处理程序`com.day.cq.dam.core.impl.handler.TextHandler`。
 
-## 基于命令行的媒体处理程序{#command-line-based-media-handler}
+## 基于命令行的媒体处理程序 {#command-line-based-media-handler}
 
 [!DNL Experience Manager] 允许您在工作流中运行任何命令行工具以转换资产(如 [!DNL ImageMagick])，并将新演绎版添加到资产。您只需在托管[!DNL Experience Manager]服务器的磁盘上安装命令行工具，并向工作流中添加和配置流程步骤即可。 调用的进程名为`CommandLineProcess`，还允许根据特定的MIME类型进行筛选，并基于新演绎版创建多个缩略图。
 
@@ -466,7 +466,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 * 删除临时目录。
 * 根据这些演绎版创建缩略图（如果已指定）。 缩略图的数量和维度由步骤的参数定义。
 
-### 使用[!DNL ImageMagick] {#an-example-using-imagemagick}的示例
+### 使用[!DNL ImageMagick]的示例 {#an-example-using-imagemagick}
 
 以下示例向您展示了如何设置命令行流程步骤，以便每当将具有miMIME e类型GIF或TIFF的资产添加到[!DNL Experience Manager]服务器的`/content/dam`时，会创建原始的翻转图像以及三个其他缩略图（140x100、48x48和10x250）。
 
@@ -496,7 +496,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 1. 转到&#x200B;**[!UICONTROL CQ5 DAM]**&#x200B;控制台，例如`http://localhost:4502/libs/wcm/core/content/damadmin.html`。
 1. 打开资产&#x200B;**[!UICONTROL myImage.tiff]**，然后验证已创建翻转的图像和三个缩略图。
 
-#### 配置CommandLineProcess进程步骤{#configuring-the-commandlineprocess-process-step}
+#### 配置CommandLineProcess进程步骤 {#configuring-the-commandlineprocess-process-step}
 
 本节介绍如何设置 [!UICONTROL CommandLineProcess] 的[!UICONTROL 进程参数]。
 
