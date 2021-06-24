@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 资产管理
 exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1cfa58bb7dcbe70906071a22fbae4a9f479a31d9
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
-# 添加图像映射{#adding-image-maps}
+# 添加图像映射 {#adding-image-maps}
 
 图像映射允许您添加一个或多个与其他超链接功能类似的超链接区域。
 
@@ -26,8 +26,6 @@ ht-degree: 0%
 
    * 在&#x200B;**[!UICONTROL 卡片]**&#x200B;或&#x200B;**[!UICONTROL 列表]**&#x200B;视图中，选择资产，然后单击工具栏上的&#x200B;**[!UICONTROL 编辑]**。
    * 单击资产页面中的&#x200B;**[!UICONTROL 编辑]**。
-
-      ![编辑选项](assets/do-not-localize/edit_icon.png)
 
 1. 要插入图像映射，请单击工具栏中的&#x200B;**[!UICONTROL 启动映射]** ![图像映射](assets/do-not-localize/image-map-icon.png)。
 1. 选择图像映射的形状。 所选形状的热点将放置在图像上。
