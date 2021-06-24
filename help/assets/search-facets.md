@@ -5,10 +5,10 @@ contentOwner: AG
 role: Administrator, Developer
 feature: 搜索
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
-source-wordcount: '2425'
-ht-degree: 27%
+source-wordcount: '2397'
+ht-degree: 28%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 27%
 
 例如，如果要查找图像，则可以选择想要位图还是矢量图像。 您可以通过为图像指定MIME类型，进一步缩小搜索范围。 同样，在搜索文档时，您可以指定格式，例如PDF或MS Word。
 
-## 添加谓词{#adding-a-predicate}
+## 添加谓词 {#adding-a-predicate}
 
 “筛选器”面板中显示的搜索彩块化在基础搜索表单中使用谓词进行定义。 要显示更多或不同的Facet，您可以向默认表单添加谓词，或使用包含您选择的Facet的自定义表单。
 
@@ -30,8 +30,6 @@ ht-degree: 27%
 
 1. 单击[!DNL Experience Manager]徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索Forms]**。
 1. 在“搜索Forms”页面中，选择&#x200B;**[!UICONTROL 资产管理员搜索边栏]**，然后单击&#x200B;**[!UICONTROL 编辑]** ![编辑图标](assets/do-not-localize/aemassets_edit.png)。
-
-   ![找到并选择资产或管理员搜索边栏](assets/assets_admin_searchrail.png)
 
    >[!NOTE]
    >
@@ -71,7 +69,7 @@ ht-degree: 27%
 1. 导航到[!DNL Assets]用户界面中的“搜索”面板。 属性谓词已添加到面板。
 1. 在文本框中输入对要搜索的资产的描述。例如，输入`Adobe`。 执行搜索时，描述与`Adobe`匹配的资产会列在搜索结果中。
 
-## 添加“选项”谓词{#adding-an-options-predicate}
+## 添加“选项”谓词 {#adding-an-options-predicate}
 
 “选项”谓词允许您在“过滤器”面板中添加多个搜索选项。 您可以在过滤器面板中选择一个或多个选项来搜索资产。 例如，要根据文件类型搜索资产，请配置搜索表单中的“图像”、“多媒体”、“文档”和“存档”等选项。 配置这些选项后，当您在“过滤器”面板中选择“图像”选项时，会对GIF、JPEG、PNG等类型的资产执行搜索。
 
@@ -125,7 +123,7 @@ ht-degree: 27%
 1. 在&#x200B;**[!UICONTROL 描述]**&#x200B;字段中，输入可选描述，然后单击&#x200B;**[!UICONTROL 完成]**。
 1. 导航到“搜索”面板。“选项”谓词已添加到&#x200B;**搜索**&#x200B;面板。 **[!UICONTROL 文件类型]**&#x200B;的选项显示为复选框。
 
-## 添加多值属性谓词{#adding-a-multi-value-property-predicate}
+## 添加多值属性谓词 {#adding-a-multi-value-property-predicate}
 
 使用多值属性谓词，您可以搜索资产以查找多个值。 假设您在[!DNL Assets]中包含多个产品的图像，并且每个图像的元数据都包含与产品关联的SKU编号。 您可以使用此谓词根据多个SKU编号搜索产品图像。
 
@@ -138,7 +136,7 @@ ht-degree: 27%
 1. 导航到[!DNL Assets]用户界面中的“过滤器”面板。 **[!UICONTROL 多值属性]**&#x200B;谓词已添加到面板。
 1. 在由分隔符分隔的多值字段中指定多个值并执行搜索。 此谓词会获取与您指定的值精确匹配的文本。
 
-## 添加“标记”谓词{#adding-a-tags-predicate}
+## 添加“标记”谓词 {#adding-a-tags-predicate}
 
 利用标记谓词，可对资产执行基于标记的搜索。 默认情况下， [!DNL Assets]会根据您指定的标记搜索资产中一个或多个标记匹配项。 换句话说，搜索查询使用指定的标记执行OR操作。 但是，您可以使用“匹配所有标记”选项来搜索包含您指定的所有标记的资产。
 
@@ -155,7 +153,7 @@ ht-degree: 27%
 
 1. 选择&#x200B;**[!UICONTROL 匹配所有]**&#x200B;以搜索包含您指定的所有标记的匹配项。
 
-## 添加其他谓词{#adding-other-predicates}
+## 添加其他谓词 {#adding-other-predicates}
 
 按照与添加“属性”谓词或“选项”谓词相似的方法，您还可以将以下谓词添加到“搜索”面板：
 
@@ -176,11 +174,11 @@ ht-degree: 27%
 | [!UICONTROL 到期状态] | 此搜索谓词用于根据资产的到期状态搜索资产 | <ul><li>标签</li><li>属性名称</li><li>描述</li></ul> |
 | [!UICONTROL 隐藏] | 此搜索谓词用于定义用于搜索资产的隐藏字段属性 | <ul><li>属性名称</li><li>属性值</li><li>描述</li></ul> |
 
-## 恢复默认搜索彩块化{#restoring-default-search-facets}
+## 恢复默认搜索彩块化 {#restoring-default-search-facets}
 
 默认情况下，在&#x200B;**[!UICONTROL 搜索Forms]**&#x200B;页面的&#x200B;**[!UICONTROL 资产管理员搜索边栏]**&#x200B;之前，会显示锁图标![锁定关闭图标](assets/do-not-localize/lock_closed_icon.svg)。 针对“搜索Forms”页面上的选项的锁定图标表示默认设置保持不变且未进行自定义。 如果向表单添加搜索彩块化，则图标![锁定已关闭的图标](assets/do-not-localize/lock_closed_icon.svg)会消失，这表示默认表单已修改。
 
-![针对“搜索Forms”页面上的选项的锁定图标表示默认设置保持不变且未进行自定义。](assets/locked_admin_rail.png)
+![“锁定”图标](assets/locked_admin_rail.png)
 
 要恢复默认搜索彩块化，请执行以下步骤：
 
