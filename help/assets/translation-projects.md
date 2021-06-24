@@ -5,14 +5,14 @@ contentOwner: AG
 role: Architect, Administrator
 feature: 翻译
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1875'
 ht-degree: 17%
 
 ---
 
-# 创建翻译项目{#creating-translation-projects}
+# 创建翻译项目 {#creating-translation-projects}
 
 要创建语言副本，请触发[!DNL Experience Manager]用户界面的引用边栏下可用的以下语言副本工作流之一。
 
@@ -26,7 +26,7 @@ ht-degree: 17%
 >* 翻译服务提供程序支持二进制文件的翻译。
 
 
-## 创建和翻译工作流{#create-and-translate-workflow}
+## 创建和翻译工作流 {#create-and-translate-workflow}
 
 您可以使用创建和翻译工作流首次为特定语言生成语言副本。 工作流提供了以下选项：
 
@@ -69,15 +69,9 @@ ht-degree: 17%
 
 1. 从&#x200B;**[!UICONTROL 目标语言]**&#x200B;列表中，选择要为其创建文件夹结构的语言。
 
-   ![chlimage_1-65](assets/chlimage_1-65.png)
-
 1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 创建新的翻译项目]**。
 
-   ![chlimage_1-66](assets/chlimage_1-66.png)
-
 1. 在&#x200B;**[!UICONTROL 项目标题]**&#x200B;字段中，输入项目标题。
-
-   ![chlimage_1-67](assets/chlimage_1-67.png)
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。[!DNL Assets] 将从源文件夹复制到目标文件夹，以了解您在步骤4中选择的区域设置。
 
@@ -234,14 +228,12 @@ ht-degree: 17%
 
 1. 从&#x200B;**[!UICONTROL 项目]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 添加到现有翻译项目]**。
 
-   ![chlimage_1-97](assets/chlimage_1-97.png)
-
 1. 从&#x200B;**[!UICONTROL 现有翻译项目]**&#x200B;列表中，选择要添加要翻译的资产的项目。
 
 1. 单击&#x200B;**[!UICONTROL 开始]**。
 1. 请参阅[添加到现有翻译项目](translation-projects.md#add-to-existing-translation-project)的步骤9-14，以完成其余步骤。
 
-## 创建临时语言副本{#creating-temporary-language-copies}
+## 创建临时语言副本 {#creating-temporary-language-copies}
 
 当您运行翻译工作流以使用原始资产的编辑版本更新语言副本时，现有语言副本将保留，直到您批准已翻译的资产为止。 [!DNL Adobe Experience Manager Assets] 将新翻译的资产存储在临时位置，并在您明确批准资产后更新现有语言副本。如果您拒绝资产，语言副本将保持不变。
 
@@ -267,7 +259,7 @@ ht-degree: 17%
 
 1. 要查看已翻译的元数据，请导航到[!DNL Assets]控制台，并打开每个已翻译资产的[!UICONTROL 属性]页面。
 
-## 提示和限制{#tips-limitations}
+## 提示和限制 {#tips-limitations}
 
 * 如果您为复杂资产（如PDF和[!DNL Adobe InDesign]文件）启动翻译工作流，则不会提交其子资产或演绎版（如果有）以进行翻译。
 * 如果您使用机器翻译，则不会翻译资产二进制文件。
