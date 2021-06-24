@@ -4,10 +4,11 @@ description: 了解如何部署AEM内容和商务项目。
 topics: Commerce
 feature: 商务集成框架
 thumbnail: 37843.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
+source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 2%
+source-wordcount: '721'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +28,7 @@ AEM内容和商务的入门过程分为两步：
 
 2. 将AEM与您的商务解决方案连接
 
-### 安装适用于AEM 6.5的AEM Content and Commerce Add-On {#install-add-on}
+### 安装适用于AEM 6.5的AEM Content and Commerce加载项 {#install-add-on}
 
 从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装适用于AEM 6.5的AEM Commerce附加组件。
 
@@ -78,6 +79,9 @@ CIF附加组件在`/api/graphql`处提供了GraphQL代理Servlet，可选择用�
    >
    > 在Adobe商务(Magento)2.4.2中引入了对UID的支持。仅当您的商务后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此功能。
 - 目录根类别标识符 — 存储目录根的标识符（UID或ID）
+   >[!CAUTION]
+   >
+   > 从CIF核心组件版本2.0.0开始，`id`支持已移除，并替换为`uid`。 如果您的项目使用CIF核心组件版本2.0.0，则必须启用“目录UID支持”，并使用有效的类别UID作为“目录根类别标识符”。
 
 上面显示的配置供参考。 项目应提供自己的配置。
 
