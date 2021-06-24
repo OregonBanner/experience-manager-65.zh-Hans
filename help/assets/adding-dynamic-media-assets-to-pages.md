@@ -11,9 +11,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: 组件，发布
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3221454e2d2dfd90b645a4c0303404d44f8d373d
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3252'
 ht-degree: 22%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 22%
 >
 >在将资产添加到Experience Manager的页面之前，请确保先发布资产。 请参阅[发布Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 将Dynamic Media组件添加到页面{#adding-a-dynamic-media-component-to-a-page}
+## 将Dynamic Media组件添加到页面 {#adding-a-dynamic-media-component-to-a-page}
 
 向页面添加3D媒体、Dynamic Media、交互式媒体、全景媒体、智能裁剪视频或视频360媒体组件与向任何页面添加组件相同。 以下部分介绍了Dynamic Media组件。
 
@@ -56,7 +56,7 @@ ht-degree: 22%
 
 1. 完成后，在对话框的右上角，点按复选标记以保存更改。
 
-### 启用Dynamic Media组件{#enabling-dynamic-media-components}
+### 启用Dynamic Media组件 {#enabling-dynamic-media-components}
 
 如果没有可添加到页面的Dynamic Media组件，则可能意味着您必须首先启用要使用的组件。
 
@@ -83,7 +83,7 @@ ht-degree: 22%
 
 1. 在页面顶部附近的工具栏右侧，从下拉列表中，点按&#x200B;**[!UICONTROL 初始内容]**，然后按[将Dynamic Media组件照常添加到页面](#adding-a-dynamic-media-component-to-a-page)。
 
-## 本地化Dynamic Media组件{#localizing-dynamic-media-components}
+## 本地化Dynamic Media组件 {#localizing-dynamic-media-components}
 
 您可以通过以下两种方式之一将Dynamic Media组件本地化：
 
@@ -178,7 +178,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
    ![图像预设中的设备像素比率设置](/help/assets/assets-dm/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+   另请参阅[关于设备像素比率优化](/help/assets/imaging-faq.md#dpr)。 请注意，任何Adobe Experience Manager Dynamic Media智能成像DPR值都将被忽略。
 
 * **[!UICONTROL 标题]**  — 更改图像的标题。
 
@@ -224,7 +224,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
 * **[!UICONTROL 高度]**  — 如果希望图像具有固定大小，请输入以像素为单位的值。将此值留空会使资产具有自适应性。
 
-#### 使用智能裁剪{#when-working-with-smart-crop}时
+#### 使用智能裁剪时 {#when-working-with-smart-crop}
 
 使用Dynamic Media组件将智能裁剪图像资产添加到您的网页。 编辑组件时，您可以选择使用预定义的视频查看器预设来在页面上播放视频。
 
@@ -254,7 +254,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
    ![用于智能裁剪的设备像素比设置](/help/assets/assets-dm/dpr-smartcrop.png)
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+   另请参阅[关于设备像素比率优化](/help/assets/imaging-faq.md#dpr)。 请注意，任何Adobe Experience Manager Dynamic Media智能成像DPR值都将被忽略。
 
 * **[!UICONTROL 标题]**  — 更改智能裁剪图像的标题。
 
@@ -309,7 +309,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
 * **[!UICONTROL 显示产品表单]**  — 默认情况下，未选择此值。产品表单包含所有产品变量，例如大小和颜色。清除复选标记不会显示产品变量。
 
-### 全景媒体组件{#panoramic-media-component}
+### 全景媒体组件 {#panoramic-media-component}
 
 全景媒体组件适用于那些球面全景图像的资产。 此类图像可提供360°的房间、属性、位置或景观观看体验。 要使图像符合球面全景，它必须具有以下任一或两者：
 
@@ -339,7 +339,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
 如果您要查找的查看器预设不可见，请勾选以确保该查看器预设已发布。 在使用查看器预设之前，先发布查看器预设。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
-### 视频360媒体组件{#video-media-component}
+### 视频360媒体组件 {#video-media-component}
 
 使用&#x200B;**[!UICONTROL Video 360 Media]**&#x200B;组件在您的网页上呈现等矩形视频，以体验房间、属性、位置、景观或医疗程序的沉浸式观看体验。
 
@@ -355,7 +355,7 @@ Dynamic Media 组件允许您添加动态图像，包括图像集、旋转集和
 
 如果您要查找的查看器预设不可见，请勾选以确保该查看器预设已发布。 请确保在使用查看器预设之前先发布查看器预设。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
-### 使用HTTP/2交付Dynamic Media资产{#using-http-to-delivery-dynamic-media-assets}
+### 使用HTTP/2交付Dynamic Media资产 {#using-http-to-delivery-dynamic-media-assets}
 
 HTTP/2是经过更新的新Web协议，可改进浏览器和服务器的通信方式。 它提供了更快的信息传输，并降低了所需的处理能力。 现在，Dynamic Media资产的交付可以通过HTTP/2进行，从而提供更好的响应和加载时间。
 
