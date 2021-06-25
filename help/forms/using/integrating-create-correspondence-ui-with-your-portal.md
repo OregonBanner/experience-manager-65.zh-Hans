@@ -45,7 +45,7 @@ ht-degree: 4%
 
 ## 基于内联数据的调用{#inline-data-based-invocation}
 
-调用创建通信应用程序的另一种（也是更安全的）方法是，在https://&#39;[server]:[port]`/[contextPath]/aem/forms/createcorrespondence.html上点击URL，同时发送参数和数据以作为POST请求调用创建通信应用程序（向最终用户隐藏它们）。 这还意味着您现在可以在内联传递Create Correspondence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），在以前的方法中，这是不可能的/理想的。
+调用创建通信应用程序的另一种（也是更安全的）方法是，在https://&#39;[server]:[port]&grave;/[contextPath]/aem/forms/createcorrespondence.html上点击URL，同时发送参数和数据以作为POST请求调用创建通信应用程序（向最终用户隐藏它们）。 这还意味着您现在可以在内联传递Create Correspondence应用程序的XML数据（作为同一请求的一部分，使用cmData参数），在以前的方法中，这是不可能的/理想的。
 
 ### 用于指定字母{#parameters-for-specifying-letter}的参数
 
