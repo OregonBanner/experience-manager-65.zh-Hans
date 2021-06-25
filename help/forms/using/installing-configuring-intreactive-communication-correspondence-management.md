@@ -164,7 +164,7 @@ Dispatcher是Adobe Experience Manager的缓存和/或负载平衡工具，可与
 
 1. 配置反向链接过滤器服务：
 
-   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL是https://&#39;server&#39;:[port_number]/system/console/configMgr。 在&#x200B;**Configurations**&#x200B;菜单中，选择&#x200B;**Apache Sling反向链接过滤器**&#x200B;选项。 在允许主机字段中，输入Dispatcher的主机名以允许它作为反向链接，然后单击&#x200B;**Save**。 条目的格式为https://&#39;[server]:[port]`。
+   以管理员身份登录到Apache Felix配置管理器。 配置管理器的默认URL是https://&#39;server&#39;:[port_number]/system/console/configMgr。 在&#x200B;**Configurations**&#x200B;菜单中，选择&#x200B;**Apache Sling反向链接过滤器**&#x200B;选项。 在允许主机字段中，输入Dispatcher的主机名以允许它作为反向链接，然后单击&#x200B;**Save**。 条目的格式为https://&#39;[server]:[port]&grave;。
 
 #### 集成Adobe Target {#integrate-adobe-target}
 
