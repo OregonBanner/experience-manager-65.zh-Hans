@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
+source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3838'
 ht-degree: 4%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 4%
 
 * [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)和[[!DNL Dynamic Media]](#accessibility-dm-6590)中的辅助功能增强功能。
 
-* 智能成像DPR（设备像素比）和网络带宽优化使您能够高效地交付最佳质量的图像；在具有高分辨率显示器和网络带宽受限的设备上。 有关详细信息和时间轴，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
+* 智能成像DPR（设备像素比）和网络带宽优化让您能够高效地交付最佳质量的图像；在具有高分辨率显示器和网络带宽受限的设备上。 有关详细信息和时间轴，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
 
 * [!DNL Dynamic Media] 交付(`fmt` URL修饰符)支持下一代图像格式AVIF（AV1图像格式）。有关更多详细信息和时间轴，请参阅[图像提供和渲染API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
 
@@ -115,6 +115,29 @@ ht-degree: 4%
 
 ### [!DNL Assets] {#assets-6590}
 
+在[!DNL Assets]中完成了以下用户体验增强：
+
+* 要查看未基于[!UICONTROL 创建]、[!UICONTROL 修改]或[!UICONTROL 名称]参数进行排序的资产，[!DNL Adobe Experience Manager]在[!UICONTROL 排序]选项中提供了[!UICONTROL 无]选项。 [!UICONTROL 无]选项可确保“资产”用户界面（在卡片视图、列视图和分析视图中）中的资产与JCR节点中资产的顺序相同(NPR-36356)。
+
+* 要在[!DNL Adobe Experience Manager]的ACP API响应中将电子邮件ID设为小写，可引入可选设置；由于[!DNL Adobe Asset Link]用户的ID没有全部使用小写字符，因此无法签入资产。 请注意，[!DNL Adobe Asset Link]面板使用来自[!DNL Adobe Experience Manager]的ACP API响应(CQ-4317704)。
+
+[!DNL Adobe Experience Manager] 6.5.9.0提供了以 [!DNL Assets] 下辅助功能增强。
+
+对以下文本和图标的对比度（与背景）进行了改进，以便视力和颜色感知受限的用户能够理解：
+
+* [!UICONTROL 属性]页面上的资产标题(NPR-35967)。
+* [!UICONTROL 评级]部分中各个位置的星级评级图标(NPR-36009)。
+* 资产和文件夹卡片视图上的文本(NPR-35966)。
+* [!UICONTROL 时间轴]视图上的占位符文本(NPR-35965)。
+* 资产搜索结果上的资产名称(NPR-35964)。
+* [!UICONTROL 链接共享]对话框上的占位符文本(NPR-35963)。
+* [!UICONTROL 查看设置对话框]的列 [!UICONTROL 表选项中的元数]据  、状态    和其他文本(NPR-35910)。
+*  位置和 [!UICONTROL 类型] 以在全局搜索中搜索占位符文本(NPR-35909)。
+* 展开和折叠[!UICONTROL 内容树]下的图标(NPR-35908)。
+* 显示资产文件夹的页面上的[!UICONTROL Assets]文本(NPR-35905)。
+* 资产详细信息页面中[!UICONTROL 资产元数据]、[!UICONTROL [!UICONTROL 概述]选项内的使用情况统计信息]中的文本(NPR-35904)。
+* 资产详细信息页面中[!UICONTROL 属性]和[!UICONTROL 编辑]选项的快捷键文本(NPR-35904)。
+
 [!DNL Adobe Experience Manager] 6.5.9.0修复 [!DNL Assets] 了以下问题。
 
 * 未保存从[!UICONTROL 文件夹元数据架构]表单中的标记选择元素中创建的标记(NPR-36119)。
@@ -141,58 +164,11 @@ ht-degree: 4%
 
 * 无法删除或移动DAM文件夹，并记录异常(NPR-35942)。
 
-#### 资产中的增强功能 {#assets-enhancements}
-
-* 在卡片、列和分析视图中引入了[!UICONTROL 无]选项，以按资产在JCR节点中存储的顺序对资产进行排序(NPR-36356)。
-
-* 添加了一个选项，用于在来自Adobe Experience Manager的API响应中以小写形式添加电子邮件ID(CQ-4317704)。
-
-#### Assets中的辅助功能增强功能 {#assets-accessibility-6590}
-
-[!DNL Adobe Experience Manager] 6.5.9.0提供了以 [!DNL Assets] 下辅助功能增强。
-
-对以下文本和图标的对比度（与背景）进行了改进，以便视力和颜色感知受限的用户能够理解：
-
-* [!UICONTROL 属性]页面上的资产标题(NPR-35967)。
-* [!UICONTROL 评级]部分中各个位置的星级评级图标(NPR-36009)。
-* 资产和文件夹卡片视图上的文本(NPR-35966)。
-* [!UICONTROL 时间轴]视图上的占位符文本(NPR-35965)。
-* 资产搜索结果中的资产名称(NPR-35964)。
-* [!UICONTROL 链接共享]对话框上的占位符文本(NPR-35963)。
-* [!UICONTROL 查看设置对话框]的列 [!UICONTROL 表选项中的元数]据  、状态    和其他文本(NPR-35910)。
-*  位置和 [!UICONTROL 类型] 以在全局搜索中搜索占位符文本(NPR-35909)。
-* 展开和折叠[!UICONTROL 内容树]下的图标(NPR-35908)。
-* 显示资产文件夹页面上的[!UICONTROL Assets]文本(NPR-35905)。
-* 资产详细信息页面中[!UICONTROL 资产元数据]、[!UICONTROL 资产详细信息页面[!UICONTROL 概述]选项中的使用情况统计信息]中的文本(NPR-35904)。
-* 资产详细信息页面中[!UICONTROL 属性]和[!UICONTROL 编辑]选项的快捷键文本(NPR-35904)。
-
 ### [!DNL Dynamic Media] {#dynamic-media-6590}
-
-Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下问题：
-
-* 当[!DNL Dynamic Media]被[默认](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)选择性激活和禁用时，自定义查看器预设和CSS不会复制到[!DNL Dynamic Media](NPR-36232)。
-
-* 尝试在资产详细信息页面上预览视频演绎版时，视频加载速度缓慢(CQ-4320122)。
-
-* 在启用了重复资产检测器的情况下上传200多个资产时，浏览器页面无响应且速度会减慢(CQ-4319633)。
-
-* 在页面的全景媒体组件中添加全景图像资产时，将记录“未捕获引用”错误(CQ-4317666)。
-
-* 使用体验片段实施交互式媒体查看器时，不会从发布者中打开体验片段，并记录错误(CQ-4317655)。
-
-* 在元数据编辑器视图中的“快速发布”中，“发布到Dynamic Media”选项不可用(CQ-4317199)。
-
-* 具有只读权限的网站作者可以在资产上使用智能裁剪功能，并编辑智能裁剪演绎版。 但是，具有只读权限的用户必须无法在Sites开发实例中编辑资产属性(CQ-4316450)。
-
-* 视频注释不适用于文件夹路径[!DNL where Dynamic]。即使在[!DNL Dynamic Media]模式下设置了[!DNL Experience Manager]实例，媒体配置也未启用(CQ-4314950)。
-
-* 当资产标题具有双字节、多字节、高ASCII、西里尔文、代理对、希伯来语、阿拉伯语和GB18030字符时，资产标题将带有问号(?) (CQ-4311872).
-
-#### Dynamic Media中的辅助功能增强功能 {#accessibility-dm-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0在中提供 [!DNL Assets] 了以下辅助功能增强 [!DNL Dynamic Media]功能。
 
-* 在图像集编辑器中打开对话框以使用键盘键添加资产时：
+* 在[!UICONTROL 图像集]编辑器中打开对话框以使用键盘键添加资产时：
    * 屏幕阅读器会讲述该对话框是否已打开。
    * 键盘焦点在打开时移至对话框。
    * 关闭对话框后，键盘焦点会移回“添加资产”选项(CQ-4312134)。
@@ -218,6 +194,26 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 * 用于表示必填字段的可视星号现在在图像集编辑器的资产标题字段中提供，屏幕阅读器会朗读该字段的必填信息(CQ-4290712)。
 
 * 屏幕阅读器现在可以在资产详细信息页面的查看器中访问并讲述各种交互式选项的用途(CQ-4290708)。
+
+Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下问题：
+
+* 当[!DNL Dynamic Media]被[默认](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)选择性激活和禁用时，自定义查看器预设和CSS不会复制到[!DNL Dynamic Media](NPR-36232)。
+
+* 尝试在资产详细信息页面上预览视频演绎版时，视频加载速度缓慢(CQ-4320122)。
+
+* 在启用了重复资产检测器的情况下上传200多个资产时，浏览器页面无响应且速度会减慢(CQ-4319633)。
+
+* 在页面的全景媒体组件中添加全景图像资产时，将记录“未捕获引用”错误(CQ-4317666)。
+
+* 使用体验片段实施交互式媒体查看器时，不会从发布者中打开体验片段，并记录错误(CQ-4317655)。
+
+* [!UICONTROL 在“属性”] 页面的快速发布 [!UICONTROL 中，] “发布到  动态媒体”选项不可用(CQ-4317199)。
+
+* 具有只读权限的网站作者可以在资产上使用智能裁剪功能，并编辑智能裁剪演绎版(CQ-4316450)。
+
+* 即使在[!DNL Dynamic Media]模式下设置了[!DNL Experience Manager]实例(CQ-4314950)，视频注释对未启用[!DNL Dynamic Media]配置的文件夹路径也不起作用。
+
+* 当资产标题具有双字节、多字节、高ASCII、西里尔文、代理对、希伯来语、阿拉伯语和GB18030字符时，资产标题将带有问号(?) (CQ-4311872).
 
 ### 平台 {#platform-6590}
 
