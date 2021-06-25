@@ -38,7 +38,7 @@ AEM搜索能够搜索和查找AEM资产，并对各种常用文档格式（如�
 * 确保所有包都已启动并运行。 如果所有包都不处于活动状态，请等待所有包都启动并运行。
 
    * 对于OSGi上的AEM Forms，这些包列在https://&#39;[server]:[port]&#39;/system/console/bundles中。
-   * 对于JEE上的AEM Forms，这些包列在https://&#39;[server]:[port]`/[context-path]/system/console/bundles中。 例如https://localhost:8080/lc/system/console/bundles。
+   * 对于JEE上的AEM Forms，这些包列在https://&#39;[server]:[port]&grave;/[context-path]/system/console/bundles中。 例如https://localhost:8080/lc/system/console/bundles。
 
 * 将&#x200B;*sun.util.calendar*&#x200B;包添加到允许列表中。 要将包添加到允许列表，请执行以下步骤：
 
