@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: 元数据
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2730'
 ht-degree: 37%
 
 ---
 
-# 了解元数据概念{#why-we-need-metadata}
+# 了解元数据概念 {#why-we-need-metadata}
 
 元数据是指关于数据的数据。在这方面，数据是指您的数字资产，如图像。 元数据对于有效管理资产至关重要。
 
@@ -28,7 +28,7 @@ ht-degree: 37%
 
 您可以向数字资产中添加更多高级别的数据，例如：
 
-* 资产类型（是图像、视频、音频剪辑还是文档？）。
+* 资产类型（图像、视频、音频剪辑或文档）。
 * 资产的所有者。
 * 资产的标题。
 * 资产的描述。
@@ -59,7 +59,7 @@ ht-degree: 37%
 
 手动创建描述性元数据信息的成本很高。 因此，制定标准以简化跨软件系统和组织的元数据交换。 [!DNL Experience Manager Assets] 支持元数据管理的所有相关标准。
 
-## 编码标准{#encoding-standards}
+## 编码标准 {#encoding-standards}
 
 在文件中嵌入元数据的方法有多种。 支持一系列编码标准选项：
 
@@ -92,11 +92,11 @@ Exif的一个主要限制是一些常见的图像文件格式（如BMP、GIF或P
 
 Exif定义的元数据字段通常具有技术性，在描述性元数据管理中的用法有限。 因此，[!DNL Experience Manager Assets]提供了将Exif属性映射到[常用元数据架构](metadata-schemas.md)和[XMP](xmp-writeback.md)的功能。
 
-### 其他元数据{#other-metadata}
+### 其他元数据 {#other-metadata}
 
 可以从文件中嵌入的其他元数据包括[!DNL Microsoft Word]、[!DNL PowerPoint]、[!DNL Excel]等。
 
-## 了解元数据架构{#metadata-schemata}
+## 了解元数据架构 {#metadata-schemata}
 
 元数据架构是预定义的元数据属性定义集，可在各种应用程序中使用。 属性始终与资产关联，这意味着这些属性是“关于”资源的。
 
@@ -104,7 +104,7 @@ Exif定义的元数据字段通常具有技术性，在描述性元数据管理�
 
 下面列出了支持的元数据架构。
 
-### 标准元数据{#standard-metadata}
+### 标准元数据 {#standard-metadata}
 
 * DC - [!DNL Dublin Core]是一组重要且广泛使用的元数据。
 * DICOM - 医学数字成像和通信.
@@ -113,7 +113,7 @@ Exif定义的元数据字段通常具有技术性，在描述性元数据管理�
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpBJ`  — 基本工作单。
 
-### 特定于应用程序的元数据{#application-specific-metadata}
+### 特定于应用程序的元数据 {#application-specific-metadata}
 
 特定于应用程序的元数据包括技术和描述性元数据。 如果您使用此类元数据，其他应用程序可能无法使用该元数据。 例如，其他图像渲染应用程序可能无法访问[!DNL Adobe Photoshop]元数据。 您可以创建一个工作流步骤，以将特定于应用程序的属性更改为标准属性。
 
@@ -129,7 +129,7 @@ Exif定义的元数据字段通常具有技术性，在描述性元数据管理�
 * PDF和PDF/X。
 * Photoshop和psAux - [!DNL Adobe Photoshop]。
 
-### Digital Rights Management(DRM)元数据{#digital-rights-management-metadata}
+### Digital Rights Management(DRM)元数据 {#digital-rights-management-metadata}
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights]。
@@ -139,26 +139,26 @@ Exif定义的元数据字段通常具有技术性，在描述性元数据管理�
 * PUR - PRISM使用权限。
 * `xmpPlus`  — 将PLUS与XMP集成。
 
-### 特定于摄影的元数据{#photography-specific-metadata}
+### 特定于摄影的元数据 {#photography-specific-metadata}
 
 * Exif — 相机的技术信息，包括GPS位置。
 * CRS - [!DNL Camera Raw]架构。
 * `iptc4xmpCore` 和 `iptc4xmpExt`.
 * TIFF — 图像元数据（不仅适用于TIFF图像）。
 
-### 特定于打印的元数据{#print-specific-metadata}
+### 特定于打印的元数据 {#print-specific-metadata}
 
 * PDF和PDF/X - Adobe PDF和第三方应用程序。
 * PRISM - [发布行业标准元数据的要求](https://www.idealliance.org/prism-metadata)。
 * XMP - [!DNL Extensible Metadata Platform]。
 * `xmpPG`  — 分页文本的XMP元数据。
 
-### 特定于多媒体的元数据{#multimedia-specific-metadata}
+### 特定于多媒体的元数据 {#multimedia-specific-metadata}
 
 * `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM`  — 媒体管理。
 
-## 元数据架构引用{#metadata-schemata-reference}
+## 元数据架构引用 {#metadata-schemata-reference}
 
 以下参考内容介绍了关于特定元数据架构（按字母顺序排列）的信息并列出了各个属性及其定义。
 
@@ -194,7 +194,7 @@ Exif定义的元数据字段通常具有技术性，在描述性元数据管理�
 
 尽管 IPTC 标题信息基本上已经被 XMP 所取代，但仍有 IPTC 核心架构和扩展架构可供 XMP 使用。在图像程序中，会同时同步 XMP 属性和 IPTC 属性。
 
-## 元数据驱动的工作流{#metadata-driven-workflows}
+## 元数据驱动的工作流 {#metadata-driven-workflows}
 
 创建元数据驱动的工作流可以帮助您实现某些流程的自动化，从而提高效率。 在元数据驱动的工作流中，工作流管理系统会读取该工作流，然后相应地执行某些预定义操作。例如，以下是可以利用元数据驱动的工作流实现的功能：
 
@@ -210,7 +210,7 @@ XMP（可扩展元数据平台）是[!DNL Adobe Experience Manager Assets]用于
 
 Adobe 支持 [XMP 规范](https://www.adobe.com/devnet/xmp.html)。
 
-### 什么是XMP?{#what-is-xmp}
+### 什么是 XMP？ {#what-is-xmp}
 
 Adobe 首先在 Adobe Acrobat 软件产品中引入了 XMP 标准。此后，XMP 标准逐渐被广泛采用。[!DNL Assets] 在本机支持由 Adobe 率先推出的 XMP，即可扩展元数据平台。XMP 是一项用于处理和存储数字资产中的标准化专有元数据的标准。XMP 旨在形成通用标准，从而让多个应用程序能够高效地处理元数据。
 
@@ -223,7 +223,7 @@ XMP 通过提供数据模型、存储模型和架构，使元数据的定义、�
 XMP 中的元数据包含一组属性。这些属性始终与
 称为资源的特定实体；即，属性是“关于”资源。 对于 XMP，资源始终是指资产。
 
-### XMP生态系统{#xmp-ecosystem}
+### XMP生态系统 {#xmp-ecosystem}
 
 XMP 定义了一个可与任何定义的元数据项集一起使用的[元数据](https://en.wikipedia.org/wiki/Metadata)模型。XMP 还为基本属性定义了一个特定的[架构[，这些基本属性可用于记录资源经过多个处理步骤的历史记录：从拍摄、](https://en.wikipedia.org/wiki/XML_schema)扫描](https://en.wikipedia.org/wiki/Image_scanner)或创作为文本，到照片编辑步骤（如[裁剪](https://en.wikipedia.org/wiki/Cropping_%28image%29)或颜色调整），再到组合到最终图像中。XMP 允许每个软件程序或设备向数字资源添加其自己的信息，该信息可保留在最终的数字文件中。
 
@@ -244,18 +244,18 @@ XMP标准旨在提供可扩展性，允许您向XMP数据中添加自定义类�
 >
 >XMP 一般不允许嵌入二进制类型的数据。要在XMP中携带二进制数据（例如缩略图），必须以XML友好格式（如`Base64`）对它们进行编码。
 
-### XMP概念{#xmp-core-concepts}
+### XMP概念 {#xmp-core-concepts}
 
 以下各节介绍了 XMP 的核心概念，包括命名空间和架构、属性和值以及替代语言。
 
-#### 命名空间和架构{#namespaces-and-schemata}
+#### 命名空间和架构 {#namespaces-and-schemata}
 
 XMP 架构是通用 XML 命名空间中的一组属性名称，包括数据类型和描述性信息。
 XMP 架构采用其 XML 命名空间 URI 进行标识。使用命名空间可以防止不同架构内名称相同但含义不同的属性之间发生冲突。
 
 例如，两个独立设计架构中的`Creator`属性可能表示创建资产的人员，也可能表示创建资产的应用程序(例如，Adobe Photoshop)。
 
-#### 属性和值{#properties-and-values}
+#### 属性和值 {#properties-and-values}
 
 XMP 可以包含来自一个或多个架构的属性。例如，很多 Adobe 应用程序使用的典型子集包括以下架构：
 
@@ -264,11 +264,11 @@ XMP 可以包含来自一个或多个架构的属性。例如，很多 Adobe 应
 * XMP权限管理架构：`xmpRights:WebStatement`、`xmpRights:Marked`。
 * XMP媒体管理架构：`xmpMM:DocumentID`。
 
-#### 替代语言{#language-alternatives}
+#### 替代语言 {#language-alternatives}
 
 XMP允许您向文本属性添加`xml:lang`属性，以指定文本的语言。
 
-## 使用IPTC元数据{#support-for-iptc-metadata}
+## 使用IPTC元数据 {#support-for-iptc-metadata}
 
 了解[!DNL Adobe Experience Manager Assets]如何支持通过[!DNL Adobe Bridge]和其他[!DNL Adobe Creative Cloud]应用程序添加到资产的IPTC元数据、创作评级和关键词。
 
@@ -289,7 +289,7 @@ XMP允许您向文本属性添加`xml:lang`属性，以指定文本的语言。
 1. 根据需要编辑IPTC扩展元数据属性。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**&#x200B;以保存更改。
 
-### 创意评分支持{#creative-rating-support}
+### 创意评分支持 {#creative-rating-support}
 
 除了显示单个用户评级和聚合评级之外，“属性”页面现在还显示通过Adobe Bridge和其他创意应用程序为资产分配的评级
 
@@ -299,7 +299,7 @@ XMP允许您向文本属性添加`xml:lang`属性，以指定文本的语言。
 
 但是，此属性当前没有编入索引，以避免与用户所做的自定义更改发生任何冲突。
 
-### 关键词支持{#keyword-support}
+### 关键词支持 {#keyword-support}
 
 [!UICONTROL 属性]页面的&#x200B;**[!UICONTROL IPTC]**&#x200B;选项卡还显示通过Adobe Bridge和其他Adobe Creative Cloud应用程序添加到资产的关键字。 您还可以编辑这些关键词，并从&#x200B;**[!UICONTROL IPTC]**&#x200B;选项卡添加更多关键词。
 
