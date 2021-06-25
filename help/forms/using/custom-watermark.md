@@ -26,7 +26,7 @@ ht-degree: 0%
 
 为防止未经授权使用此数据，组织可以对预览PDF强制施加水印。 默认水印为“PREVIEW”，该水印在PDF中显示。
 
-要在预览PDF中启用水印，请在https://&#39;[服务器]:[端口]`/system/console/configMgr的&#x200B;**[!UICONTROL 通信管理配置]**&#x200B;中选择&#x200B;**[!UICONTROL 应用水印]**&#x200B;预览期间选项。
+要在预览PDF中启用水印，请在https://&#39;[服务器]:[端口]&grave;/system/console/configMgr的&#x200B;**[!UICONTROL 通信管理配置]**&#x200B;中选择&#x200B;**[!UICONTROL 应用水印]**&#x200B;预览期间选项。
 
 ![默认水印](assets/default-watermark.png)
 
