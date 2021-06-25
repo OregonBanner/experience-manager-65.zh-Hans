@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
+source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
 workflow-type: tm+mt
-source-wordcount: '3680'
+source-wordcount: '3674'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 1%
    * 各种编辑器中文本、占位符文本和控件的对比度（与背景）。
    * 按屏幕阅读器显示的辅助功能和旁白。
 
-* 智能成像DPR（设备像素比）和网络带宽优化使您能够高效地交付最佳质量的图像；在具有高分辨率显示器和网络带宽受限的设备上。 有关详细信息和时间轴，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
+* 借助智能成像DPR（设备像素比）和网络带宽优化，在具有高分辨率显示器和有限网络带宽的设备上高效提供最佳质量图像。 请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
 
 * [!DNL Dynamic Media] 交付(`fmt` URL修饰符)现在支持下一代图像格式AVIF（AV1图像格式）。有关更多详细信息和时间轴，请参阅[图像提供和渲染API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
 
