@@ -41,7 +41,7 @@ ht-degree: 100%
 | 控制台 | `?` | 键盘快捷键帮助 |
 |  | `/` | 调用[搜索](/help/sites-authoring/search.md) |
 |  | `Alt+`&lt;`Number`> | 切换要查看的[边栏选择器](/help/sites-authoring/basic-handling.md#rail-selector)选项 |
-|  | ` | 隐藏边栏 |
+|  | &grave; | 隐藏边栏 |
 |  | `e` | 编辑 |
 |  | `p` | 属性 |
 |  | `m` | 移动 |
