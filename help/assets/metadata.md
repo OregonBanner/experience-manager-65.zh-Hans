@@ -1,18 +1,19 @@
 ---
 title: 管理数字资产的元数据
-description: 了解元数据的类型，以及 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] 如何根据资产的元数据自动组织和处理资产。
+description: 了解元数据类型以及如何管理资产的元数据，以便轻松组织和处理资产。
 contentOwner: AG
+mini-toc-levels: 1
 feature: 标记，元数据
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2339'
 ht-degree: 20%
 
 ---
 
-# 管理数字资产的元数据{#managing-metadata-for-digital-assets}
+# 管理数字资产的元数据 {#managing-metadata-for-digital-assets}
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -22,7 +23,7 @@ ht-degree: 20%
 
 [!DNL Adobe Experience Manager Assets] 保留每个资产的元数据。它允许更轻松地对资产进行分类和组织，并帮助正在查找特定资产的用户。 元数据管理能够从上传到[!DNL Experience Manager Assets]的文件中提取元数据，与创作工作流集成。 通过使用资产保留和管理元数据的功能，您可以根据资产的元数据自动组织和处理资产。
 
-## 元数据及其源{#how-to-edit-or-add-metadata}
+## 元数据及其源 {#how-to-edit-or-add-metadata}
 
 元数据是有关可搜索资产的其他信息。 它会添加到资产中，并在[!DNL Experience Manager]中，当您上传资产时会进行处理。 您可以编辑现有元数据，向现有字段添加新的元数据属性。 组织需要可控且可靠的元数据词汇。 因此，[!DNL Experience Manager Assets]不允许按需添加新元数据属性。 只有管理员和开发人员才能添加包含元数据的新属性或字段。 用户可以使用元数据填充现有字段。
 
@@ -36,7 +37,7 @@ ht-degree: 20%
 
 * 在将资产上传到DAM后，您可以利用[元数据配置文件](/help/assets/metadata-config.md#metadata-profiles)功能自动添加元数据。[!DNL Experience Manager Assets]
 
-## 在[!DNL Experience Manager Assets] {#add-edit-metadata}中添加或编辑元数据
+## 在[!DNL Experience Manager Assets]中添加或编辑元数据 {#add-edit-metadata}
 
 要在[!DNL Assets]用户界面中编辑资产的元数据，请执行以下步骤：
 
@@ -62,7 +63,7 @@ ht-degree: 20%
 
 支持并启用XMP的写回功能，适用于[技术要求中描述的平台和文件格式。](/help/sites-deploying/technical-requirements.md)
 
-## 编辑多个资产的元数据属性{#editing-metadata-properties-of-multiple-assets}
+## 编辑多个资产的元数据属性 {#editing-metadata-properties-of-multiple-assets}
 
 [!DNL Adobe Enterprise Manager Assets] 允许您同时编辑多个资产的元数据，以便能够快速批量将常见元数据更改传播到资产。您还可以批量编辑多个收藏集的元数据。 使用属性页面对多个资产或收藏集执行元数据更改：
 
@@ -89,7 +90,7 @@ ht-degree: 20%
 >
 >对于单值字段，即使选择&#x200B;**[!UICONTROL 追加模式]**，新元数据也不会追加到字段中的现有值中。
 
-## 导入元数据{#import-metadata}
+## 导入元数据 {#import-metadata}
 
 [!DNL Assets] 允许您使用CSV文件批量导入资产元数据。您可以通过导入CSV文件，对最近上传的资产或现有资产进行批量更新。 您还可以以CSV格式从第三方系统批量摄取资产元数据。
 
@@ -116,13 +117,13 @@ ht-degree: 20%
 
 1. 要验证导入是否正确，请导航到资产的[!UICONTROL 属性]页面，并验证字段中的值。
 
-要在导入元数据时添加日期和时间戳，请对日期和时间使用`YYYY-MM-DDThh:mm:ss.fff-00:00`格式。 日期和时间以`T`隔开， `hh`以24小时格式表示小时，`fff`以纳秒为单位，`-00:00`以时区偏移。 例如， `2020-03-26T11:26:00.000-07:00`是2020年3月26日上午11:26:00:000（太平洋标准时间）。
+要在导入元数据时添加日期和时间戳，请对日期和时间使用`YYYY-MM-DDThh:mm:ss.fff-00:00`格式。 日期和时间以`T`隔开， `hh`以24小时格式表示小时，`fff`以纳秒为单位，`-00:00`以时区偏移。 例如， `2020-03-26T11:26:00.000-07:00`是2020年3月26日（太平洋标准时间上午11:26:00.000）。
 
 >[!CAUTION]
 >
 >如果日期格式与`YYYY-MM-DDThh:mm:ss.fff-00:00`不匹配，则不设置日期值。 导出的元数据CSV文件的日期格式为`YYYY-MM-DDThh:mm:ss-00:00`。 如果要导入该值，请通过添加以`fff`表示的纳秒值，将其转换为可接受的格式。
 
-## 导出元数据{#export-metadata}
+## 导出元数据 {#export-metadata}
 
 您可以以CSV格式导出多个资产的元数据。 元数据是异步导出的，不会影响系统性能。 要导出元数据，[!DNL Experience Manager]会遍历资产节点`jcr:content/metadata`及其子节点的属性，并在CSV文件中导出元数据属性。
 
@@ -151,11 +152,11 @@ ht-degree: 20%
 
    *图：用于下载包含批量导出元数据的CSV文件的对话框。*
 
-## 编辑集合{#collections-metadata}的元数据
+## 编辑收藏集的元数据 {#collections-metadata}
 
 有关详细信息，请参阅[查看和编辑集合元数据](/help/assets/manage-collections.md#view-edit-collection-metadata)和[批量编辑多个集合的元数据](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk)。
 
-## 将元数据配置文件应用到文件夹{#applying-a-metadata-profile-to-folders}
+## 将元数据配置文件应用到文件夹 {#applying-a-metadata-profile-to-folders}
 
 <!-- TBD: Review this overview.
 -->
@@ -178,7 +179,7 @@ ht-degree: 20%
 
 您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-### 从[!UICONTROL Profiles]用户界面{#applying-metadata-profiles-to-folders-from-profiles-user-interface}将元数据配置文件应用到文件夹
+### 从[!UICONTROL Profiles]用户界面将元数据配置文件应用到文件夹 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 请按照以下步骤应用元数据配置文件：
 
@@ -186,7 +187,7 @@ ht-degree: 20%
 1. 选择您要应用到一个或多个文件夹的元数据配置文件。
 1. 单击&#x200B;**[!UICONTROL 将元数据配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后单击&#x200B;**[!UICONTROL 完成]**。 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-### 将元数据配置文件应用到[!UICONTROL Properties] {#applying-metadata-profiles-to-folders-from-properties}中的文件夹
+### 将元数据配置文件应用到[!UICONTROL Properties]中的文件夹 {#applying-metadata-profiles-to-folders-from-properties}
 
 1. 在左边栏中，单击&#x200B;**[!UICONTROL Assets]**，然后导航到要将元数据配置文件应用到的文件夹。
 1. 在文件夹上，单击复选标记以将其选中，然后单击&#x200B;**[!UICONTROL 属性]**。
@@ -201,13 +202,13 @@ ht-degree: 20%
 
 For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
-### 从文件夹{#removing-a-metadata-profile-from-folders}中删除元数据配置文件
+### 从文件夹删除元数据配置文件 {#removing-a-metadata-profile-from-folders}
 
 当您将元数据配置文件从文件夹删除之后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。但是，此前对文件夹中的文件所做的处理均予以保留。
 
 您可以从&#x200B;**[!UICONTROL 工具]**&#x200B;菜单或从文件夹的&#x200B;**[!UICONTROL 属性]**&#x200B;中删除元数据配置文件。
 
-#### 通过配置文件用户界面{#removing-metadata-profiles-from-folders-via-profiles-user-interface}将元数据配置文件从文件夹删除
+#### 通过配置文件用户界面将元数据配置文件从文件夹删除 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
 1. 单击[!DNL Experience Manager]徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 元数据配置文件]**。
 1. 选择您要从一个或多个文件夹删除的元数据配置文件。
@@ -215,13 +216,13 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 
    如果元数据配置文件的名称不再出现在文件夹名称的下方，则可以确定该元数据配置文件不再应用于该文件夹。
 
-#### 通过属性{#removing-metadata-profiles-from-folders-via-properties}将元数据配置文件从文件夹删除
+#### 通过属性将元数据配置文件从文件夹删除 {#removing-metadata-profiles-from-folders-via-properties}
 
 1. 单击[!DNL Experience Manager]徽标，然后导航&#x200B;**[!UICONTROL Assets]**，然后导航到要从中删除元数据配置文件的文件夹。
 1. 在文件夹上，单击复选标记以将其选中，然后单击&#x200B;**[!UICONTROL 属性]**。
 1. 选择&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;选项卡，并从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-## 提示和限制{#best-practices-limitations}
+## 提示和限制 {#best-practices-limitations}
 
 * 通过用户界面更新的元数据更改了`dc`命名空间中的元数据属性。 通过HTTP API进行的任何更新都会更改`jcr`命名空间中的元数据属性。 请参阅[如何使用HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata)更新元数据。
 
