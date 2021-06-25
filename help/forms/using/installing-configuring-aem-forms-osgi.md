@@ -202,7 +202,7 @@ Dispatcher是Adobe Experience Manager的缓存和/或负载平衡工具，可与
 
 执行以下步骤以配置自适应表单缓存：
 
-1. 转到位于https://&#39;[server]的AEM Web控制台配置管理器：[port]`/system/console/configMgr。
+1. 转到位于https://&#39;[server]的AEM Web控制台配置管理器：[port]&grave;/system/console/configMgr。
 1. 单击&#x200B;**自适应表单和交互式通信Web渠道配置**&#x200B;以编辑其配置值。 在编辑配置值对话框中，在&#x200B;**自适应Forms**&#x200B;数字字段中指定AEM Forms服务器实例可缓存的表单或文档的最大数量。 默认值为 100。单击&#x200B;**保存**。
 
    >[!NOTE]
