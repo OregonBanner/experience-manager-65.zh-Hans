@@ -13,14 +13,14 @@ docset: aem65
 legacypath: /deploy/platform/data-store-config
 feature: 配置
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7038e9c2949cb6326470d0248b640e576c7f919
 workflow-type: tm+mt
-source-wordcount: '3424'
+source-wordcount: '3487'
 ht-degree: 1%
 
 ---
 
-# 在AEM 6{#configuring-node-stores-and-data-stores-in-aem}中配置节点存储和数据存储
+# 在AEM 6中配置节点存储和数据存储{#configuring-node-stores-and-data-stores-in-aem}
 
 ## 简介 {#introduction}
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 可使用OSGi配置配置数据存储区和节点存储区。 每个OSGi配置都使用永久标识符(PID)进行引用。
 
-## 配置步骤{#configuration-steps}
+## 配置步骤 {#configuration-steps}
 
 要同时配置节点存储和数据存储，请执行以下步骤：
 
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 1. 启动AEM。
 
-## 节点存储配置{#node-store-configurations}
+## 节点存储配置 {#node-store-configurations}
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ ht-degree: 1%
 >
 >如果您正在阅读本文以准备从&#x200B;**AEM 5.x**&#x200B;安装升级，请确保首先查阅[升级](https://docs.adobe.com/content/docs/en/aem/6-0/deploy/upgrade.html)文档。
 
-### 区段节点存储{#segment-node-store}
+### 区段节点存储 {#segment-node-store}
 
 区段节点存储是Adobe在AEM6中实施TarMK的基础。 它使用`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` PID进行配置。
 
@@ -85,7 +85,7 @@ tarmk.size=I"256"
 customBlobStore=B"true"
 ```
 
-#### 文档节点存储{#document-node-store}
+#### 文档节点存储 {#document-node-store}
 
 文档节点存储是AEM MongoMK实施的基础。 它使用`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID。 以下配置选项可用：
 
@@ -112,7 +112,7 @@ db="aem-author"
 customBlobStore=B"false"
 ```
 
-## 数据存储配置{#data-store-configurations}
+## 数据存储配置 {#data-store-configurations}
 
 在处理大量二进制文件时，建议使用外部数据存储而不是默认的节点存储，以便最大化性能。
 
@@ -142,7 +142,7 @@ customBlobStore=B"false"
 >
 >使用NAS存储共享文件数据存储时，请确保仅使用高性能设备以避免性能问题。
 
-## Amazon S3数据存储{#amazon-s-data-store}
+## Amazon S3数据存储 {#amazon-s-data-store}
 
 可以将AEM配置为在Amazon的简单存储服务(S3)中存储数据。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` PID进行配置。
 
@@ -190,14 +190,14 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 编辑文件并添加设置所需的配置选项。
 1. 启动AEM。
 
-### 升级到1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}的新版本
+### 升级到1.10.x S3 Connector的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
 
 如果您需要升级到新版本的1.10.x S3连接器(例如，从1.10.0到1.10.4)，请执行以下步骤：
 
 1. 停止AEM实例。
 
 1. 导航到AEM安装文件夹中的`<aem-install>/crx-quickstart/install/15`并备份其内容。
-1. 备份后，通过删除`<aem-install>/crx-quickstart/install/15`文件夹中的所有jar文件，删除S3 Connector的旧版本及其依赖项，例如：
+1. 备份后，通过删除`<aem-install>/crx-quickstart/install/15`文件夹中的所有jar文件，删除旧版S3 Connector及其依赖项，例如：
 
    * **oak-blob-cloud-1.6.1.jar**
    * **aws-java-sdk-osgi-1.10.76.jar**
@@ -229,7 +229,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * stagingPurgeInterval:从暂存缓存中清除已完成上载的间隔，以秒为单位。 默认值为&#x200B;**300**&#x200B;秒（5分钟）。
 * stagingRetryInterval:上传失败的重试间隔，以秒为单位。 默认值为&#x200B;**600**&#x200B;秒（10分钟）。
 
-### 存储段区域选项{#bucket-region-options}
+### 存储段区域选项 {#bucket-region-options}
 
 <table>
  <tbody>
@@ -295,7 +295,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 失败的上传（例如，由于网络中断）将被置于重试队列中并定期重试。 重试间隔使用`stagingRetryInterval parameter`进行配置。
 
-#### 使用Amazon S3 {#configuring-binaryless-replication-with-amazon-s}配置无二进制复制
+#### 使用Amazon S3配置无二进制复制 {#configuring-binaryless-replication-with-amazon-s}
 
 要使用S3配置无二进制复制，需要执行以下步骤：
 
@@ -310,7 +310,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 重新启动所有创作和发布实例，以使更改生效。
 
-#### 使用S3和MongoDB {#creating-a-cluster-using-s-and-mongodb}创建群集
+#### 使用S3和MongoDB创建群集 {#creating-a-cluster-using-s-and-mongodb}
 
 1. 使用以下命令解包CQ快速启动：
 
@@ -335,7 +335,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 对第二个AEM实例重复步骤1至4。
 1. 启动第二个AEM实例。
 
-#### 配置共享数据存储{#configuring-a-shared-data-store}
+#### 配置共享数据存储 {#configuring-a-shared-data-store}
 
 1. 首先，在共享数据存储所需的每个实例上创建数据存储配置文件：
 
@@ -446,7 +446,7 @@ accessKey="ASDASDERFAERAER"
 secretKey="28932hfjlkwdo8fufsdfas\=\="
 ```
 
-## 数据存储垃圾收集{#data-store-garbage-collection}
+## 数据存储垃圾收集 {#data-store-garbage-collection}
 
 数据存储垃圾收集过程用于删除数据存储中任何未使用的文件，从而释放该过程中有价值的磁盘空间。
 
@@ -463,11 +463,19 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
    >
    >`markOnly`参数表示垃圾收集的扫描阶段是否将运行。
 
-## 共享数据存储{#data-store-garbage-collection-for-a-shared-data-store}的数据存储垃圾收集
+## 共享数据存储的数据存储垃圾收集 {#data-store-garbage-collection-for-a-shared-data-store}
 
 >[!NOTE]
 >
 >在群集或共享数据存储设置（具有Mongo或Tar区段）中执行垃圾收集时，日志可能会显示有关无法删除某些Blob ID的警告。 之所以会出现这种情况，是因为之前垃圾收集中删除的Blob ID被没有ID删除信息的其他群集或共享节点再次错误地引用。 因此，在执行垃圾收集时，当垃圾收集尝试删除在上次运行中已删除的ID时，它会记录一则警告。 此行为不会影响性能或功能。
+
+>[!NOTE]
+> 如果您使用共享数据存储设置，并且数据存储垃圾收集被禁用，则运行Lucene二进制清理任务可能会突然增加所用的磁盘空间。 要避免这种情况，您需要在所有创作实例和发布实例上禁用BlobTracker，如下所示：
+>
+> 1. 停止AEM实例。
+> 2. 在`crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`文件中添加`blobTrackSnapshotIntervalInSecs=L"0"`参数。 此参数需要Oak 1.12.0、1.10.2或更高版本。
+> 3. 重新启动AEM实例。
+
 
 使用较新版本的AEM，还可以在由多个存储库共享的数据存储上运行数据存储垃圾收集。 为了能够在共享数据存储上运行数据存储垃圾收集，请执行以下步骤：
 
