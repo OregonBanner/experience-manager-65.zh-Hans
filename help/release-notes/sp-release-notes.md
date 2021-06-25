@@ -4,14 +4,14 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 101cbd0d06d370da315e1579a8c2f274a6138b9a
+source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
 workflow-type: tm+mt
-source-wordcount: '3857'
+source-wordcount: '3805'
 ht-degree: 4%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 service pack发行说明  {#aem-service-pack-release-notes}
+# [!DNL Adobe Experience Manager] 6.5 service pack发行说明 {#aem-service-pack-release-notes}
 
 ## 发行信息 {#release-information}
 
@@ -22,7 +22,7 @@ ht-degree: 4%
 | 日期 | 2021 年 5 月 27 日 |
 | 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip) |
 
-## [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}中包含的内容
+## [!DNL Adobe Experience Manager] 6.5.9.0中包含的内容 {#what-s-included-in-aem}
 
 [!DNL Adobe Experience Manager] 6.5.9.0包含自2019年4月6.5版发布以来发布的新功能、客户请求的关键增强功能以及性能、稳定性和安全性改进。[!DNL Adobe Experience Manager] 6.5上安装了Service Pack。
 
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 * [!DNL Experience Manager Sites] Dynamic Media Foundation组件现在允许在使用响应式图像预设或智能裁剪时打开或关闭针对高分辨率设备的优化功能。
 
-* 为了提高性能，将hidden=false条件从JCR查询移到QueryBuilder计算器。 要验证隐藏的谓词是否在更改后正常工作，Experience Manager会检查界面上是否未显示任何隐藏文件夹。
+* 为了提高性能，将`hidden=false`条件从JCR查询移动到[!UICONTROL QueryBuilder]计算器。 要验证隐藏的谓词是否在更改后正常工作，[!DNL Experience Manager]会检查是否未显示任何隐藏的文件夹。
 
 * 能够在[!DNL Experience Manager Sites]页面上恢复已删除的页面和树。
 
@@ -40,39 +40,13 @@ ht-degree: 4%
 
 * 支持[!DNL MongoDB]版本4.2和4.4。
 
-* 与香港、澳门和台湾有关的名称的出现次数将根据适用于中国地区和地区的新命名约定进行更新。
+* 与香港、澳门和台湾有关的名称的出现情况将根据适用于中国地区和地区的新命名惯例进行更新。
 
-* [!DNL Experience Manager] [Assets](#assets-accessibility-6590)和[Dynamic Media](#accessibility-dm-6590)中的辅助功能增强功能。
+* [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)和[[!DNL Dynamic Media]](#accessibility-dm-6590)中的辅助功能增强功能。
 
-* 智能成像DPR（设备像素比）和网络带宽优化使您能够高效地交付最佳质量的图像；在分辨率较高且网络带宽受限的设备上。 有关更多信息，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
+* 智能成像DPR（设备像素比）和网络带宽优化使您能够高效地交付最佳质量的图像；在具有高分辨率显示器和网络带宽受限的设备上。 有关详细信息和时间轴，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
 
-   >[!NOTE]
-   >
-   >上述智能成像增强功能的发布时间表是：
-   >
-   >* 2021年5月24日，北美，
-      >
-      >
-   * 欧洲、中东和非洲2021年6月25日，
-      >
-      >
-   * 亚太2021年7月19日。
-
-
-* 在Dynamic Media交付（fmt URL修饰符）中引入了对下一代图像格式AVIF的支持。 有关更多信息，请参阅[图像提供和渲染api fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
-
-   >[!NOTE]
-   >
-   >AVIF支持的发布时间表为：
-   >
-   >* 北美2021年5月10日，
-      >
-      >
-   * 欧洲、中东和非洲2021年5月24日，
-      >
-      >
-   * 亚太2021年6月24日。
-
+* [!DNL Dynamic Media] 交付(`fmt` URL修饰符)支持下一代图像格式AVIF（AV1图像格式）。有关更多详细信息和时间轴，请参阅[图像提供和渲染API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
 
 * 能够使用[!UICONTROL 分配任务]工作流步骤向组发送通知电子邮件。
 
@@ -167,13 +141,13 @@ ht-degree: 4%
 
 * 无法删除或移动DAM文件夹，并记录异常(NPR-35942)。
 
-#### 资产{#assets-enhancements}中的增强功能
+#### 资产中的增强功能 {#assets-enhancements}
 
 * 在卡片、列和分析视图中引入了[!UICONTROL 无]选项，以按资产在JCR节点中存储的顺序对资产进行排序(NPR-36356)。
 
 * 添加了一个选项，用于在来自Adobe Experience Manager的API响应中以小写形式添加电子邮件ID(CQ-4317704)。
 
-#### 资产{#assets-accessibility-6590}中的辅助功能增强功能
+#### Assets中的辅助功能增强功能 {#assets-accessibility-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0提供了以 [!DNL Assets] 下辅助功能增强。
 
@@ -214,7 +188,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 * 当资产标题具有双字节、多字节、高ASCII、西里尔文、代理对、希伯来语、阿拉伯语和GB18030字符时，资产标题将带有问号(?) (CQ-4311872).
 
-#### Dynamic Media {#accessibility-dm-6590}中的辅助功能增强功能
+#### Dynamic Media中的辅助功能增强功能 {#accessibility-dm-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0在中提供 [!DNL Assets] 了以下辅助功能增强 [!DNL Dynamic Media]功能。
 
@@ -283,7 +257,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 * [!UICONTROL 商务目录]向导无法在列视图中加载40个以上的项目(CQ-4318379)。
 
-### 翻译项目{#translation-6590}
+### 翻译项目 {#translation-6590}
 
 * 将`es`翻译为`es_es`页面时，不显示更新或覆盖选项(NPR-36170)。
 
@@ -418,7 +392,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 要了解经认证可与此版本配合使用的平台，请参阅[技术要求](/help/sites-deploying/technical-requirements.md)。
 
-### 安装Adobe Experience Manager Forms附加组件包{#install-aem-forms-add-on-package}
+### 安装Adobe Experience Manager Forms附加组件包 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -494,7 +468,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
    * 通过购物横幅查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :等待注册更改完成取消注册时超时。
 
-## 包含的{#osgi-bundles-and-content-packages-included} OSGi包和内容包
+## 包含的OSGi包和内容包 {#osgi-bundles-and-content-packages-included}
 
 以下文本文档列出了[!DNL Experience Manager] 6.5.9.0中包含的OSGi包和内容包：
 
@@ -502,7 +476,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 * [Experience Manager6.5.9.0中包含的内容包列表](assets/6590_packages.txt)
 
-## 受限网站{#restricted-sites}
+## 受限网站 {#restricted-sites}
 
 这些网站仅供客户使用。 如果您是客户并且需要访问，请联系您的 Adobe 客户经理。
 
