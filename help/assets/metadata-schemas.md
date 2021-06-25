@@ -2,10 +2,11 @@
 title: '元数据架构定义元数据属性页的布局 '
 description: 元数据架构定义属性页面的布局以及为资产显示的元数据属性。 了解如何创建自定义元数据架构、编辑元数据架构，以及如何将元数据架构应用到资产。
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner,Administrator
 feature: 元数据
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
+source-git-commit: 9ac5582b2e4859bf4f101c5caa5258fc755ebc46
 workflow-type: tm+mt
 source-wordcount: '3547'
 ht-degree: 15%
