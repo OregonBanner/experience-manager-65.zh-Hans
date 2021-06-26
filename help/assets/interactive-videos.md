@@ -11,9 +11,9 @@ docset: aem65
 feature: 交互式视频
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '6014'
+source-wordcount: '6013'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 20%
 
 另请参阅[交互式图像](/help/assets/interactive-images.md)。
 
-## 交互式视频正在使用{#interactive-video-in-action}
+## 交互式视频的实际操作情况 {#interactive-video-in-action}
 
 要查看交互式购物视频的实际操作情况，请单击[实时演示](https://landing.adobe.com/zh-Hans/na/dynamic-media/ctir-2755/live-demos.html)，滚动到页面上的&#x200B;**[!UICONTROL 购物视频]**&#x200B;标题，然后单击购物视频。
 
@@ -42,7 +42,7 @@ ht-degree: 20%
 >
 >如果创建交互式视频以在用户单击缩略图时启动网页，则某些设备会阻止弹出网页打开。 在这种情况下，您必须更改设备上的弹出窗口阻止程序设置。 例如，在Apple iPhone 6上，点按&#x200B;**[!UICONTROL 设置]** > **Safari** > **阻止弹出窗口**，然后将控件滑动到&#x200B;**[!UICONTROL 关闭]**。 现在，当您播放交互式视频并单击缩略图时，如果要打开弹出窗口，系统会提示您。 如果接受，则会打开网页。
 
-### 观看如何创建交互式视频{#watch-how-interactive-videos-are-created}
+### 观看如何创建交互式视频 {#watch-how-interactive-videos-are-created}
 
 播放有关如何创建交互式视频的演练](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)（7分30秒）。
 [尽管视频演练使用Assets（按需）进行标记，但Adobe Experience Manager Assets中的交互式视频仍适用这些原则和步骤。
@@ -90,7 +90,7 @@ ht-degree: 20%
 如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有概览实施相集成。 请参阅[将交互式视频与现有概览](#integrating-an-interactive-video-with-an-existing-quickview)集成。
    [将 Dynamic Media 资产添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-## （可选）识别概览变量{#optional-identifying-quickview-variables}
+## （可选）识别概览变量 {#optional-identifying-quickview-variables}
 
 >[!NOTE]
 >
@@ -220,7 +220,7 @@ ht-degree: 20%
 
 您现在可以上传视频及其关联的缩略图资产。
 
-## （可选）创建交互式视频查看器预设{#optional-creating-an-interactive-video-viewer-preset}
+## （可选）创建交互式视频查看器预设 {#optional-creating-an-interactive-video-viewer-preset}
 
 如果您打算使用默认的现成交互式视频查看器预设类型`Shoppable_Video_dark`或`Shoppable_Video_light`中的任一类型，则可以跳过此任务并继续下一步。
 
@@ -482,7 +482,7 @@ ht-degree: 20%
       在时间轴上，点按要分成两半的区段，然后点按工具栏上的&#x200B;**[!UICONTROL 拆分区段]** 。
 
       选择两个或更多区段会禁用&#x200B;**[!UICONTROL 拆分区段]**&#x200B;功能。
-   ![chlimage_1-133](assets/chlimage_1-135.png)
+   ![chlimage_1-135](assets/chlimage_1-135.png)
 
    将选定的10秒区段拆分为两个区段，每个区段为5秒。
 
@@ -510,11 +510,11 @@ ht-degree: 20%
 
    在添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站登录页面。请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
 
-## 发布交互式视频资产{#publishing-interactive-video-assets}
+## 发布交互式视频资产 {#publishing-interactive-video-assets}
 
 有关如何发布交互式视频资产的详细信息，请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 将交互式视频与您的网站集成{#integrating-an-interactive-video-with-your-website}
+## 将交互式视频与您的网站集成 {#integrating-an-interactive-video-with-your-website}
 
 现在，在上传视频、向视频添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站。
 
@@ -576,7 +576,7 @@ ht-degree: 20%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
-## 将交互式视频与现有概览{#integrating-an-interactive-video-with-an-existing-quickview}集成
+## 将交互式视频与现有概览集成 {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
 >
@@ -721,7 +721,7 @@ var inner_container = document.getElementById(sdkContainerId);
 
 实际找到模态对话框元素并将其附加到上述容器的步骤具体因大小写而异。 再次重申，您可以向熟悉所需Quickview实施的前端开发人员寻求帮助。
 
-对于示例网站，“快速视图”模式对话框将实施为`DIV` ，并且其快速视图模式ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
+如果我们使用示例网站，则“快速视图”模式对话框将实施为`DIV` ，并且该快速视图模式ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -776,6 +776,6 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
-## 使用概览{#using-quickviews-to-create-custom-pop-ups}创建自定义弹出窗口
+## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
 请参阅[使用概览创建自定义弹出窗口](/help/assets/custom-pop-ups.md)。
