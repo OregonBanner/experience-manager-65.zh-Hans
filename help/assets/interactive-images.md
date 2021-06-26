@@ -11,9 +11,9 @@ docset: aem65
 feature: 交互式图像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4284'
 ht-degree: 20%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 20%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
 
-## 观看如何创建交互式图像横幅{#watch-how-interactive-image-banners-are-created}
+## 观看如何创建交互式图像横幅 {#watch-how-interactive-image-banners-are-created}
 
 播放有关如何创建交互式图像横幅的演练](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10分33秒）。 [您还可以了解如何预览、编辑和传送交互式图像横幅。
 
-## 快速入门：交互式图像{#quick-start-interactive-images}
+## 快速入门：交互式图像 {#quick-start-interactive-images}
 
 以下工作流分步描述旨在帮助您快速启动并运行Adobe Experience Manager Assets中的交互式图像。
 
@@ -53,7 +53,8 @@ ht-degree: 20%
 1. **（可选）创建交互式图像查看器预设**  — 自定义用于表示热点的图形图像。如果您打算改用名为`Shoppable_Banner`的现成交互式图像查看器预设，则无需创建您自己的交互式图像查看器预设。
 请参阅[（可选）创建交互式图像查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
 
-1. **上传图像横幅**  — 上传要进行交互的图像横幅。请参 [阅上传图像横幅](#uploading-an-image-banner)。
+1. **上传图像横幅**  — 上传要进行交互的图像横幅。请参阅[上传图像横幅](#uploading-an-image-banner)。
+
 
 1. **将热点添加到图像横幅**  — 向图像横幅添加一个或多个热点，并将每个热点与操作（如超链接、概览或体验片段）相关联。添加热点后，您将通过发布交互式图像来完成此任务。
 
@@ -62,13 +63,13 @@ ht-degree: 20%
 
    * 有关如何发布交互式图像资产的详细信息，请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-1. **在Experience Manager中将交互式图像添加到您的网站或您的网站**  — 如果您使用Experience Manager站点或电子商务，或者同时使用这两者，则可以在Experience Manager中将交互式图像添加到网页。将交互式媒体组件拖动到页面上。 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+1. **将交互式图像添加到您的网站**  — 如果您使用Experience Manager站点或电子商务，或者同时使用这两者，则可以将交互式图像添加到Experience Manager中的网页。将交互式媒体组件拖动到页面上。 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
    如果您使用Experience Manager资产和Dynamic Media独立版，则必须复制您网站上的嵌入代码，然后将其与现有概览相集成。 请参阅[将交互式图像与您的网站集成](#integrating-an-interactive-image-with-your-website)。
 
    如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有概览实施相集成。 请参阅[将交互式图像与现有概览](#integrating-an-interactive-image-with-an-existing-quickview)集成。
 
-## （可选）识别热点变量{#optional-identifying-hotspot-variables}
+## （可选）识别热点变量 {#optional-identifying-hotspot-variables}
 
 >[!NOTE]
 >
@@ -164,14 +165,14 @@ ht-degree: 20%
 
 演示网页包含多个产品缩略图，每个缩略图都有一个标有“查看更多”的“概览”按钮。 如果Web浏览器的调试工具仍处于激活状态，请单击每个按钮并记下记录的概览URL。 激活页面上所有四个可用的产品概览后，您会向后端发出以下概览请求列表：
 
-* `/datafeed/Men-Windbreaker.json`
-* `/datafeed/Men-SimpleHenley.json`
-* `/datafeed/Men-CamoPullover.json`
-* `/datafeed/Women-QuiltedDownJacket.json`
+* `/datafeed/Male-Windbreaker.json`
+* `/datafeed/Male-SimpleHenley.json`
+* `/datafeed/Male-CamoPullover.json`
+* `/datafeed/Female-QuiltedDownJacket.json`
 
 查看服务器调用时，您会看到特定于产品的信息仅存在于请求路径中。 您还注意到查询字符串根本不被使用，并且涉及两种不同类型的数据段：
 
-* 第一类是“男人或女人”。 您可以将此类别称为“产品”。
+* 第一种类型是“男”或“女”。 您可以将此类别称为“产品”。
 * 第二种类型是产品名称，如CamoPullover。 您可以假定此信息是产品SKU。
 
 根据此信息，整个概览URL具有以下模式：
@@ -182,7 +183,7 @@ ht-degree: 20%
 
 现在，您可以使用Experience Manager资产中的交互式购物图像功能，上传图像横幅并向其添加热点。
 
-## （可选）创建交互式图像查看器预设{#optional-creating-an-interactive-image-viewer-preset}
+## （可选）创建交互式图像查看器预设 {#optional-creating-an-interactive-image-viewer-preset}
 
 您可以选择使用默认的名为`Shoppable_Banner`且随Experience Manager资产一起提供的现成交互式图像查看器预设。 或者，您也可以创建自己的自定义查看器预设，以用于交互式图像。
 
@@ -284,7 +285,7 @@ ht-degree: 20%
 
          * 请参阅[识别热点变量](#optional-identifying-hotspot-variables);您必须定义这些变量。
          * 然后，手动输入SKU值。 在“SKU值”文本字段中，键入产品的SKU（库存单位），即您提供的每个不同产品或服务的唯一标识符。 输入的SKU值会自动填充概览模板的变量部分，以便系统能够将点按的热点与特定SKU的概览相关联。
-         * （可选）如果快速视图中存在其他必须用来进一步标识产品的变量，请点按&#x200B;**[!UICONTROL 添加常规变量]**。 在文本字段中，指定一个额外的变量。 例如，`category=Mens` 就是一个添加的变量。
+         * （可选）如果快速视图中存在其他必须用来进一步标识产品的变量，请点按&#x200B;**[!UICONTROL 添加常规变量]**。 在文本字段中，指定一个额外的变量。 例如，`category=Males` 就是一个添加的变量。
    * 点按&#x200B;**[!UICONTROL 超链接]**。
 
       * 如果您是Experience Manager站点客户，请点按或单击站点选择器图标（文件夹）以导航到URL。 如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
@@ -318,7 +319,7 @@ ht-degree: 20%
    >[!NOTE]
    如果您正在使用热点编辑交互式图像并裁剪图像，则热点会被删除。
 
-### （可选）预览交互式图像{#optional-previewing-interactive-images}
+### （可选）预览交互式图像 {#optional-previewing-interactive-images}
 
 您可以使用“预览”来查看交互式图像在客户中的显示方式，并测试图像的热点以确保它们按预期行为。
 
@@ -333,11 +334,11 @@ ht-degree: 20%
 1. 在“查看器”列表中，点按&#x200B;**[!UICONTROL Shoppable_Banner]**&#x200B;或您创建的交互式图像查看器预设的名称。
 1. 如果要测试图像上的热点关联操作，请点按该图像上的热点。
 
-## 发布交互式图像资产{#publishing-interactive-image-assets}
+## 发布交互式图像资产 {#publishing-interactive-image-assets}
 
 有关如何发布交互式图像资产的详细信息，请参阅[发布资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 将交互式图像与您的网站集成{#integrating-an-interactive-image-with-your-website}
+## 将交互式图像与您的网站集成 {#integrating-an-interactive-image-with-your-website}
 
 现在，在上传横幅图像、将热点添加到图像并发布交互式图像后，您便可以将其添加到您的网站页面。
 
@@ -357,7 +358,7 @@ ht-degree: 20%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-请注意，三位男士的照片是静态的 `IMG` 标记：
+请注意，这三个雄性的图片是一个静态`IMG`标记：
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
@@ -378,7 +379,7 @@ ht-degree: 20%
 
 现在，您可以将交互式图像与网站上的现有概览相集成。
 
-## 将交互式图像与现有概览{#integrating-an-interactive-image-with-an-existing-quickview}集成
+## 将交互式图像与现有概览集成 {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
 此任务仅在您是独立Experience Manager资产客户时才适用。
