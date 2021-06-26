@@ -11,14 +11,14 @@ docset: aem65
 feature: 360 VR 视频
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1054'
 ht-degree: 1%
 
 ---
 
-# 360/VR视频{#vr-video}
+# 360/VR视频 {#vr-video}
 
 360度视频同时记录每个方向的视图。 它们是用全方位相机或一组相机拍摄的。 在平面显示器上播放时，用户可以控制观看角度；移动设备上的播放通常使用其内置的陀螺仪控件。
 
@@ -30,7 +30,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 另请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。
 
-## 360视频正在播放{#video-in-action}
+## 360视频正在使用 {#video-in-action}
 
 点按[空间站360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)以打开浏览器窗口并观看360度视频。 在视频播放期间，将鼠标指针拖动到新位置以更改观看角度。
 
@@ -43,14 +43,14 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 请参阅[编辑360/VR视频](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)。
 
-## 上传资产以与360视频查看器{#uploading-assets-for-use-with-the-video-viewer}一起使用
+## 上传资产以与360视频查看器一起使用 {#uploading-assets-for-use-with-the-video-viewer}
 
 上传到Adobe Experience Manager中的360个视频资产在资产页面上标记为&#x200B;**Multimedia**，与常规视频资产类似。
 
 ![6_5_360 video-selecttopreview](assets/6_5_360video-selecttopreview.png)
 *在卡片视图中看到已上传的360个视频资产。资产将标记为多媒体。*
 
-**要上传资产以与360视频查看器一起使用，请执行以下操作：**
+**上传资产以与360视频查看器一起使用：**
 
 1. 创建了专用于360视频资产的文件夹。
 1. [将自适应视频配置文件应用到该文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
@@ -62,7 +62,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
    * 理想情况下，您的原始360视频内容最好具有以下任一分辨率：
 
       * 1080p - 1920 x 1080，称为全高清或全高清分辨率，或
-      * 2160p - 3840 x 2160，称为4K、UHD或UltraHD分辨率。 这种大的显示分辨率通常出现在高档电视机和电脑显示器上。 2160p分辨率通常称为“4K”，因为宽度接近4000像素。 换句话说，它的像素数是1080p的四倍。
+      * 2160p - 3840 x 2160，称为4k、UHD或UltraHD分辨率。 这种大的显示分辨率通常出现在高档电视机和电脑显示器上。 2160p分辨率通常称为“4k”，因为宽度接近4000像素。 换句话说，它的像素数是1080p的四倍。
    * [创建具有更高质量演绎版](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) 的自定义自适应视频配置文件。例如，创建一个包含以下三个设置的自适应视频配置文件：
 
       * width=auto;height=720;bitrate=2500 kbps
@@ -74,7 +74,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 1. [将视频上传到文件夹](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
-## 覆盖360个视频的默认宽高比{#overriding-the-default-aspect-ratio-of-videos}
+## 覆盖360个视频的默认宽高比  {#overriding-the-default-aspect-ratio-of-videos}
 
 对于要将上传的资产视为您打算与360视频查看器一起使用的360视频，资产的宽高比必须为2。
 
@@ -91,7 +91,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 首先上传360个视频。
 
-## 预览360视频{#previewing-video}
+## 预览360视频 {#previewing-video}
 
 您可以使用“预览”功能来查看您的360视频对客户的外观，并确保其行为符合预期。
 
@@ -129,7 +129,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 1. 在预览页面的右上角附近，点按&#x200B;**[!UICONTROL 关闭]**。
 
-## 发布360视频{#publishing-video}
+## 发布360视频 {#publishing-video}
 
 发布360视频，以便您使用。 发布360视频可激活URL和嵌入代码。 它还会将360视频发布到Dynamic Media云，该云与CDN集成以进行可扩展且性能出众的交付。
 
