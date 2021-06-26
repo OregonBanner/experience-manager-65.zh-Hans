@@ -1,6 +1,7 @@
 ---
 title: 将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch集成
 description: 适用于Experience Platform Launch的Dynamic Media查看器扩展以及Dynamic Media查看器5.13，允许Adobe Analytics客户和Platform launch在其Platform launch配置中使用特定于Dynamic Media查看器的事件和数据。
+mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,16 +10,16 @@ docset: aem65
 feature: 查看器
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 22a181e77a563ee3590cd661507f4dfeaf9d14da
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
 source-wordcount: '6616'
 ht-degree: 8%
 
 ---
 
-# 将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch集成{#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
+# 将Dynamic Media查看器与Adobe Analytics和Experience Platform Launch集成 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
-## 什么是Dynamic Media查看器与Adobe Analytics和Experience Platform Launch的集成？{#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
+## 什么是Dynamic Media查看器与Adobe Analytics和Experience Platform Launch的集成？ {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
 <!-- Leave this hidden path here; it points to the topic source from Sasha https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=~oufimtse&title=Dynamic+Media+Viewers+integration+with+Adobe+Launch -->
 
@@ -30,7 +31,7 @@ ht-degree: 8%
 
 **本主题面向以下人员：** 站点管理员、Experience Manager平台的开发人员和操作人员。
 
-### 集成{#limitations-of-the-integration}的限制
+### 集成的限制 {#limitations-of-the-integration}
 
 * Dynamic Media查看器的Experience Platform Launch集成在“Experience Manager创作”节点中不起作用。 在WCM页面发布之前，您无法看到任何跟踪。
 * “弹出”操作模式不支持Dynamic Media查看器的Experience Platform Launch集成，在该模式下，查看器URL是使用“资产详细信息”页面上的“URL”按钮获取的。
@@ -38,7 +39,7 @@ ht-degree: 8%
 * 视频跟踪支持仅限于“核心播放”跟踪，如[跟踪概述](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)中所述。 尤其是，不支持QoS、广告、章节/区段或错误跟踪。
 * 使用&#x200B;*Dynamic Media Viewers*&#x200B;扩展的数据元素不支持数据元素的存储持续时间配置。 存储持续时间必须设置为&#x200B;**[!UICONTROL 无]**。
 
-### 集成{#use-cases-for-the-integration}的用例
+### 集成用例 {#use-cases-for-the-integration}
 
 与Experience Platform Launch集成的主要用例是同时使用Adobe Experience Manager Assets和Adobe Experience Manager Sites的客户。 在这些情况下，您可以在Experience Manager创作节点和Experience Platform Launch之间设置标准集成，然后将您的Sites实例与Experience Platform Launch属性相关联。 之后，添加到站点页面的任何Dynamic Media WCM组件都将跟踪查看器中的数据和事件。
 
@@ -50,17 +51,17 @@ ht-degree: 8%
 
 <!-- Path on internal wiki [About tracking Dynamic Media viewers using embed code](https://wiki.corp.adobe.com/display/~oufimtse/Dynamic+Media+Viewers+integration+with+Adobe+Launch#DynamicMediaViewersintegrationwithAdobeLaunch-TrackingDynamicMediaViewersusingEmbedcode). -->
 
-## 数据和事件跟踪在集成中的工作原理{#how-data-and-event-tracking-works-in-the-integration}
+## 数据和事件跟踪在集成中的工作原理 {#how-data-and-event-tracking-works-in-the-integration}
 
 该集成利用了两种单独且独立的Dynamic Media查看器跟踪类型：*Adobe Analytics*&#x200B;和&#x200B;*Adobe Analytics for Audio and Video*。
 
-### 关于使用Adobe Analytics {#about-tracking-using-adobe-analytics}进行跟踪
+### 关于使用Adobe Analytics跟踪  {#about-tracking-using-adobe-analytics}
 
 通过Adobe Analytics，您可以跟踪最终用户在与您网站上的Dynamic Media查看器进行交互时所执行的操作。 Adobe Analytics还允许您跟踪特定于查看者的数据。 例如，您可以跟踪和记录视图加载事件以及资产名称、发生的任何缩放操作和视频播放操作。
 
 在Experience Platform Launch中，*数据元素*&#x200B;和&#x200B;*规则*&#x200B;的概念可一起使用来启用Adobe Analytics跟踪。
 
-#### 关于Experience Platform Launch{#about-data-elements-in-adobe-launch}中的数据元素
+#### 关于Experience Platform Launch中的数据元素 {#about-data-elements-in-adobe-launch}
 
 Experience Platform Launch中的数据元素是一个命名的属性，其值可以静态定义，也可以根据网页或Dynamic Media查看器数据的状态进行动态计算。
 
@@ -74,7 +75,7 @@ Dynamic Media查看器扩展会自动保持其数据元素的值处于最新状�
 
 请参阅[数据元素](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html)。
 
-#### 关于Experience Platform Launch{#about-rules-in-adobe-launch}中的规则
+#### 关于Experience Platform Launch中的规则 {#about-rules-in-adobe-launch}
 
 Experience Platform Launch中的规则是一个不可知的配置，它定义了构成规则的三个区域：*事件*、*条件*&#x200B;和&#x200B;*操作*:
 
@@ -100,7 +101,7 @@ Experience Platform Launch中的规则是一个不可知的配置，它定义了
 
 请参阅[Rules](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html)。
 
-#### 示例配置{#sample-configuration}
+#### 示例配置 {#sample-configuration}
 
 Experience Platform Launch中的以下示例配置演示了如何在查看器加载时跟踪资产名称。
 
@@ -126,7 +127,7 @@ Experience Platform Launch中的以下示例配置演示了如何在查看器加
 
    ![image2019-4](assets/image2019-4.png)
 
-### 关于Adobe Analytics for Audio and Video {#about-adobe-analytics-for-audio-and-video}
+### 关于用于音频和视频的Adobe Analytics {#about-adobe-analytics-for-audio-and-video}
 
 订阅Experience Cloud帐户以使用Adobe Analytics for Audio and Video后，就足以在&#x200B;*Dynamic Media查看器*&#x200B;扩展设置中启用视频跟踪。 视频量度在Adobe Analytics中变得可用。 视频跟踪取决于是否存在Adobe MediumAnalytics for Audio and Video扩展。
 
@@ -134,11 +135,11 @@ Experience Platform Launch中的以下示例配置演示了如何在查看器加
 
 目前，对视频跟踪的支持仅限于“核心播放”跟踪，如[跟踪概述](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)中所述。 尤其是，不支持QoS、广告、章节/区段或错误跟踪。
 
-## 使用Dynamic Media查看器扩展{#using-the-dynamic-media-viewers-extension}
+## 使用Dynamic Media查看器扩展 {#using-the-dynamic-media-viewers-extension}
 
 如[集成的用例](#use-cases-for-the-integration)中所述，可以在Experience Manager站点中使用新的Experience Platform Launch集成并使用嵌入代码来跟踪Dynamic Media查看器。
 
-### 在Experience Manager站点{#tracking-dynamic-media-viewers-in-aem-sites}中跟踪Dynamic Media查看器
+### 在Experience Manager站点中跟踪Dynamic Media查看器 {#tracking-dynamic-media-viewers-in-aem-sites}
 
 要在Experience Manager站点中跟踪Dynamic Media查看器，必须执行[配置所有集成块](#configuring-all-the-integration-pieces)部分下列出的所有步骤。 具体而言，您必须创建IMS配置和Experience Platform Launch云配置。
 
@@ -148,7 +149,7 @@ Experience Platform Launch中的以下示例配置演示了如何在查看器加
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
-### 使用嵌入代码{#tracking-dynamic-media-viewers-using-embed-code}跟踪Dynamic Media查看器
+### 使用嵌入代码跟踪Dynamic Media查看器 {#tracking-dynamic-media-viewers-using-embed-code}
 
 未使用Experience Manager站点或将Dynamic Media查看器嵌入Experience Manager站点以外的网页或两者兼有的客户，仍可以使用Experience Platform Launch集成。
 
@@ -170,9 +171,9 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 1. 选取与网页环境相关的环境级别。 然后，在&#x200B;**[!UICONTROL Install]**&#x200B;列中，单击框图标。
 1. **[!UICONTROL 在“Web安装说]** 明”对话框中，复制完整的Experience Platform Launch库嵌入代码以及周围的 `<script/>` 标记。
 
-## Dynamic Media查看器扩展{#reference-guide-for-the-dynamic-media-viewers-extension}的参考指南
+## Dynamic Media查看器扩展的参考指南 {#reference-guide-for-the-dynamic-media-viewers-extension}
 
-### 关于Dynamic Media查看器配置{#about-the-dynamic-media-viewers-configuration}
+### 关于Dynamic Media查看器配置 {#about-the-dynamic-media-viewers-configuration}
 
 如果满足以下条件，则Dynamic Media Viewer扩展会自动与Experience Platform Launch库集成：
 
@@ -183,7 +184,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 
 此外，还有一个选项，可通过在查看器配置中指定`launch=0`参数来明确禁用查看器中的Experience Platform Launch集成。 此参数的默认值为`1`。
 
-### 配置Dynamic Media查看器扩展{#configuring-the-dynamic-media-viewers-extension}
+### 配置Dynamic Media查看器扩展 {#configuring-the-dynamic-media-viewers-extension}
 
 Dynamic Media查看器扩展的唯一配置选项是&#x200B;**[!UICONTROL 启用Adobe Medium分析以进行音频和视频分析]**。
 
@@ -193,7 +194,7 @@ Dynamic Media查看器扩展的唯一配置选项是&#x200B;**[!UICONTROL 启用
 
 ![image2019-7-22_12-4-23](assets/image2019-7-22_12-4-23.png)
 
-### 关于Dynamic Media查看器扩展{#about-data-elements-in-the-dynamic-media-viewers-extension}中的数据元素
+### 关于Dynamic Media查看器扩展中的数据元素 {#about-data-elements-in-the-dynamic-media-viewers-extension}
 
 Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICONTROL 数据元素类型]**&#x200B;下拉列表中的&#x200B;**[!UICONTROL 查看器事件]**。
 
@@ -242,11 +243,11 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html?lang=en#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的数据元素仅支持存储持续时间选项&#x200B;**[!UICONTROL None]**。 在用户界面中可以设置任何其他值，但在这种情况下，不会定义数据元素行为。 扩展可自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
 
-### 关于Dynamic Media查看器扩展{#about-rules-in-the-dynamic-media-viewers-extension}中的规则
+### 关于Dynamic Media查看器扩展中的规则 {#about-rules-in-the-dynamic-media-viewers-extension}
 
 在规则编辑器中，扩展会为事件编辑器添加新的配置选项。 此外，该编辑器还提供了一个选项，可作为一个短操作选项在操作编辑器中手动引用事件参数，而不是使用预配置的数据元素。
 
-#### 关于事件编辑器{#about-the-events-editor}
+#### 关于事件编辑器 {#about-the-events-editor}
 
 在事件编辑器中，Dynamic Media查看器扩展将添加一个名为&#x200B;**[!UICONTROL 查看器事件]**&#x200B;的&#x200B;**[!UICONTROL 事件类型]**。
 
@@ -254,7 +255,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 ![image2019-8-2_15-13-1](assets/image2019-8-2_15-13-1.png)
 
-#### 关于操作编辑器{#about-the-actions-editor}
+#### 关于操作编辑器 {#about-the-actions-editor}
 
 通过Dynamic Media查看器扩展，您可以使用Dynamic Media查看器的事件参数映射到Adobe Analytics扩展的“设置变量”编辑器中的分析变量。
 
@@ -406,7 +407,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
  </tbody>
 </table>
 
-## 配置所有集成块{#configuring-all-the-integration-pieces}
+## 配置所有集成块 {#configuring-all-the-integration-pieces}
 
 **开始之前**
 
@@ -426,7 +427,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
 在配置中，请确保您有权访问Adobe Experience Cloud中已启用Adobe Analytics和Experience Platform Launch的公司。
 
-## 为集成{#configuring-adobe-analytics-for-the-integration}配置Adobe Analytics
+## 为集成配置Adobe Analytics {#configuring-adobe-analytics-for-the-integration}
 
 配置Adobe Analytics后，将为集成设置以下内容：
 
@@ -444,7 +445,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
    现在，选择一个报表包。
 
-### 选择报表包{#selecting-a-report-suite}
+### 选择报表包 {#selecting-a-report-suite}
 
 1. 在 Adobe Analytics 页面的右上角附近，在&#x200B;**[!UICONTROL 搜索报告]**&#x200B;字段的右侧，从下拉列表中选择正确的报表包。如果有多个可用报表包，并且您不确定要使用哪个报表包，请与 Adobe Analytics 管理员联系，帮助您选择要使用的报表包。
 
@@ -460,7 +461,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
    现在设置Adobe Analytics变量。
 
-### 设置Adobe Analytics变量{#setting-up-adobe-analytics-variables}
+### 设置Adobe Analytics变量 {#setting-up-adobe-analytics-variables}
 
 1. 指定一个或多个要用于跟踪Adobe Analytics查看器在网页上的行为的Dynamic Media变量。
 
@@ -481,7 +482,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
 1. 在变量列表的底部，单击&#x200B;**[!UICONTROL Save]**。
 
-### 设置报表{#setting-up-a-report}
+### 设置报表 {#setting-up-a-report}
 
 1. 通常，在Adobe Analytics中设置报表是由特定项目需求驱动的。 因此，详细报表设置不在此集成的范围之内。
 
@@ -493,7 +494,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
    ![image2019-6-26_23-12-49](assets/image2019-6-26_23-12-49.png)
 
-## 配置集成的Experience Platform Launch{#configuring-adobe-launch-for-the-integration}
+## 为集成配置Experience Platform Launch {#configuring-adobe-launch-for-the-integration}
 
 配置Experience Platform Launch后，将为集成设置以下内容：
 
@@ -510,7 +511,7 @@ Adobe建议您在此部分之前仔细查看所有文档，以便了解完整集
 
    ![image2019-7-8_15-38-44](assets/image2019-7-8_15-38-44.png)
 
-### 在Experience Platform Launch{#creating-a-property-in-adobe-launch}中创建属性
+### 在Experience Platform Launch中创建资产 {#creating-a-property-in-adobe-launch}
 
 Experience Platform Launch中的属性是将所有设置保持在一起的命名配置。 系统会生成配置设置库，并将其发布到不同的环境级别（开发、暂存和生产）。
 
@@ -527,7 +528,7 @@ Experience Platform Launch中的属性是将所有设置保持在一起的命名
 
    单击新创建的属性，然后继续到&#x200B;*Installation and setup of extensions*。
 
-### 安装和设置扩展{#installing-and-setup-of-extensions}
+### 安装和设置扩展 {#installing-and-setup-of-extensions}
 
 Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL Extensions]** > **[!UICONTROL Catalog]**&#x200B;下。
 
@@ -581,7 +582,7 @@ Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL
 
 ![image2019-7-22_12-7-36](assets/image2019-7-22_12-7-36.png)
 
-### 设置数据元素和规则{#setting-up-data-elements-and-rules}
+### 设置数据元素和规则 {#setting-up-data-elements-and-rules}
 
 在Experience Platform Launch中，创建跟踪Dynamic Media查看器所需的数据元素和规则。
 
@@ -591,7 +592,7 @@ Experience Platform Launch中所有可用的扩展都列在&#x200B;**[!UICONTROL
 
 请参阅[配置Dynamic Media查看器扩展](#configuring-the-dynamic-media-viewers-extension) ，以详细了解扩展的功能。
 
-### 发布库{#publishing-a-library}
+### 发布库 {#publishing-a-library}
 
 要更改Experience Platform Launch配置（包括设置的属性、扩展、规则和数据元素），必须&#x200B;*publish*&#x200B;此类更改。 在Experience Platform Launch中发布是从属性配置下的发布选项卡执行的。
 
@@ -604,7 +605,7 @@ platform launch可能具有多个开发环境、一个暂存环境和一个生�
 * 通过将所有必要的更改（新更改和更新）包含到库中，以添加和构建新库。
 * 在不同的环境级别（从开发到暂存和生产）中向上移动库。
 
-#### 添加和构建新库{#adding-and-building-a-new-library}
+#### 添加和构建新库 {#adding-and-building-a-new-library}
 
 1. 首次在Experience Platform Launch中打开“发布”选项卡时，库列表为空。
 
@@ -633,7 +634,7 @@ platform launch可能具有多个开发环境、一个暂存环境和一个生�
    >
    >在库发布屏幕中，单击&#x200B;**[!UICONTROL Add All Changed Resources]**，然后单击&#x200B;**[!UICONTROL Save &amp; Build for Development]**。
 
-#### 通过环境级别向上移动库{#moving-a-library-up-through-environment-levels}
+#### 在环境级别中向上移动库 {#moving-a-library-up-through-environment-levels}
 
 1. 添加新库后，即可在开发环境中找到该库。 要将其移至暂存环境级别（对应于已提交列），请从库的下拉菜单中，单击&#x200B;**[!UICONTROL 提交以供审批]**。
 
@@ -657,7 +658,7 @@ platform launch可能具有多个开发环境、一个暂存环境和一个生�
 
    请参阅[发布](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) ，以了解有关Experience Platform Launch中发布过程的更多信息。
 
-## 为集成{#configuring-adobe-experience-manager-for-the-integration}配置Adobe Experience Manager
+## 为集成配置Adobe Experience Manager {#configuring-adobe-experience-manager-for-the-integration}
 
 前提条件:
 
@@ -792,7 +793,7 @@ Experience Manager配置包含以下两个主要步骤：
 
    ![image2019-7-15_14-17-54](assets/image2019-7-15_14-17-54.png)
 
-## 为集成{#configuring-adobe-launch-cloud-for-the-integration}配置Experience Platform Launch云
+## 为集成配置Experience Platform Launch云 {#configuring-adobe-launch-cloud-for-the-integration}
 
 1. 在Experience Manager作者中，在左上角附近，单击工具图标（锤子），然后单击&#x200B;**[!UICONTROL Cloud Services]** > **[!UICONTROL Experience Platform Launch配置]**。
 
