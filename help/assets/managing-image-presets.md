@@ -2,6 +2,7 @@
 title: 管理Dynamic Media图像预设
 description: 了解Dynamic Media图像预设，并了解如何创建、修改和管理图像预设
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
+mini-toc-levels: 3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -12,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 图像预设
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3851'
 ht-degree: 23%
 
 ---
@@ -33,7 +34,7 @@ ht-degree: 23%
 >
 >智能成像可与您现有的图像预设配合使用，并在交付的最后一毫秒内使用智能功能，根据浏览器或网络连接速度进一步减小图像文件大小。 有关更多信息，请参阅[智能成像](/help/assets/imaging-faq.md)。
 
-## 了解Dynamic Media图像预设{#understanding-image-presets}
+## 了解Dynamic Media图像预设 {#understanding-image-presets}
 
 与宏一样，图像预设是一组预定义的大小调整和格式设置命令，这些命令使用同一个名称进行保存。为了了解图像预设的工作方式，请假定您的网站要求每个产品图像在桌面和移动设备交付中以不同的大小、不同格式和压缩率显示。
 
@@ -47,7 +48,7 @@ ht-degree: 23%
 
 管理员可以创建图像预设。要创建图像预设，您可以从头开始创建，也可以通过现有图像预设创建，然后使用新名称对其保存。
 
-## 管理Dynamic Media图像预设{#managing-image-presets-1}
+## 管理Dynamic Media图像预设 {#managing-image-presets-1}
 
 您可以通过点按或单击Experience Manager徽标以访问全局导航控制台，然后点按或单击工具图标，然后导航到&#x200B;**[!UICONTROL 资产>图像预设]**&#x200B;来管理Experience Manager预设。
 
@@ -67,7 +68,7 @@ ht-degree: 23%
 >
 >当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示各种演绎版。 您可以增加或减少显示的图像预设数。 请参阅[增加显示](#increasing-or-decreasing-the-number-of-image-presets-that-display)的图像预设数。
 
-### 智能裁剪、Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式{#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
+### 智能裁剪、Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式 {#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats}
 
 >[!NOTE]
 >
@@ -96,7 +97,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 >
 >在[!UICONTROL DAM更新资产]工作流中， **[!UICONTROL EPS缩略图]**&#x200B;步骤为EPS文件生成缩略图。
 
-#### PDF/AI/EPS资产元数据属性{#pdf-ai-eps-asset-metadata-properties}
+#### PDF/AI/EPS资产元数据属性 {#pdf-ai-eps-asset-metadata-properties}
 
 | **元数据属性** | **描述** |
 |---|---|
@@ -107,7 +108,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
 点按左上角的Adobe Experience Manager，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。 在“工作流模型”页面中，选择&#x200B;**[!UICONTROL DAM更新资产]**，然后在工具栏中点按&#x200B;**[!UICONTROL 编辑]**。 在[!UICONTROL DAM更新资产]工作流页面上，双击`Rasterize PDF/AI Image Preview Rendition`流程组件以打开其步骤属性对话框。
 
-#### 栅格化PDF/AI图像预览呈现版本选项{#rasterize-pdf-ai-image-preview-rendition-options}
+#### 栅格化PDF/AI图像预览呈现版本选项 {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![用于栅格化PDF或AI工作流的参数](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -149,7 +150,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
 `Rasterize PDF/AI Image Preview Rendition`进程组件定义了最大值，以确保它不会在内存中创建过大的映像。 此类大映像可能会使提供给JVM(Java™虚拟机)的内存溢出。 必须小心为JVM提供足够的内存来管理已配置的并行工作流数量，每个工作流都有可能以已配置的最大大小创建映像。
 
-### InDesign(INDD)文件格式{#indesign-indd-file-format}
+### InDesign(INDD)文件格式 {#indesign-indd-file-format}
 
 如果您打算支持摄取INDD文件以便生成此文件格式的动态演绎版，则可能需要在创建图像预设之前查看以下信息。
 
@@ -180,7 +181,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>是</td>
-   <td>为每个页面生成一个300-ppi的JPEG子资产。 JPEG子资产是存储在InDesign资产下的实际资产。 它还通过<code>DAM Update Asset</code>工作流进行了优化并转换为PTIFF。<br /> </td>
+   <td>为每个页面生成300 ppi JPEG子资产。 JPEG子资产是存储在InDesign资产下的实际资产。 它还通过<code>DAM Update Asset</code>工作流进行了优化并转换为PTIFF。<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -190,7 +191,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
  </tbody>
 </table>
 
-## 配置图像缩略图大小{#configuring-image-thumbnail-size}
+## 配置图像缩略图大小 {#configuring-image-thumbnail-size}
 
 您可以通过在&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流中配置这些设置来配置缩略图的大小。 在工作流中，您可以通过两个步骤来配置图像资产的缩略图大小。 尽管其中一个(**[!UICONTROL Dynamic Media处理图像资产]**)用于动态图像资产，而另一个（**[!UICONTROL 处理缩略图]**）用于静态缩略图生成，或者当所有其他流程无法生成缩略图时，*两个*&#x200B;必须具有相同的设置。
 
@@ -224,11 +225,11 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
 1. 点按&#x200B;**[!UICONTROL 保存]**&#x200B;以保存对工作流所做的更改。
 
-### 增加或减少显示{#increasing-or-decreasing-the-number-of-image-presets-that-display}的Dynamic Media图像预设数
+### 增加或减少显示的Dynamic Media图像预设数 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 在预览资产时，您创建的图像预设可以作为动态演绎版使用。 Experience Manager在从&#x200B;**[!UICONTROL 详细信息视图>演绎版]**&#x200B;查看资产时显示各种动态演绎版。 您可以增加或减少显示的演绎版限制。
 
-**要增加或减少显示的Dynamic Media图像预设数，请执行以下操作：**
+**增加或减少显示的Dynamic Media图像预设数：**
 
 1. 导航到CRXDE Lite([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
 1. 导航到位于`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`的图像预设列表节点
@@ -243,7 +244,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 1. 在limit属性中，将数字更改为所需的数字，例如`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. 点按&#x200B;**[!UICONTROL 保存全部]**。
 
-## 创建Dynamic Media图像预设{#creating-image-presets}
+## 创建Dynamic Media图像预设 {#creating-image-presets}
 
 通过创建Dynamic Media图像预设，您可以在预览或发布图像时将这些设置应用到任何图像。
 
@@ -278,7 +279,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。
 
-## 创建响应式图像预设{#creating-a-responsive-image-preset}
+## 创建响应式图像预设 {#creating-a-responsive-image-preset}
 
 要创建响应式图像预设，请执行[创建图像预设](#creating-image-presets)中的步骤。在&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口中输入高度和宽度时，请清除这两个字段的值，并将其保留为空。
 
@@ -296,7 +297,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 >
 >在Dynamic Media — 混合模式下，您必须手动发布图像预设和图像资产。
 
-### 图像预设选项{#image-preset-options}
+### “图像预设”选项 {#image-preset-options}
 
 在创建或编辑图像预设时，您可以使用本节介绍的几种选项。此外，Adobe还建议从以下“最佳实践”选项开始：
 
@@ -306,7 +307,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
 * **[!UICONTROL 锐化：重新取样模式]**  — 选择 **[!UICONTROL 两次立方]**。
 
-#### “基本”选项卡选项{#basic-tab-options}
+#### “基本”选项卡选项 {#basic-tab-options}
 
 <table>
  <tbody>
@@ -352,7 +353,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
  </tbody>
 </table>
 
-#### “高级”选项卡选项{#advanced-tab-options}
+#### “高级”选项卡选项 {#advanced-tab-options}
 
 <table>
  <tbody>
@@ -401,7 +402,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
      <li><strong>应用于</strong>  — 确定钝化是否应用于每种颜色或亮度。</li>
     </ul>
     <div>
-      有关“锐化”的信息，请参阅<a href="https://experienceleague.adobe.com/docs/dynamic-media-classic/assets/sharpening_images.pdf">锐化图像</a>。
+      有关“锐化”的信息，请参阅<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf">锐化图像</a>。
     </div> </td>
   </tr>
   <tr>
@@ -436,7 +437,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
  </tbody>
 </table>
 
-## 使用图像修饰符{#defining-image-preset-options-with-image-modifiers}定义图像预设选项
+## 使用图像修饰符定义图像预设选项 {#defining-image-preset-options-with-image-modifiers}
 
 除了“基本”和“高级”选项卡中提供的选项外，您还可以定义图像修饰符，以便在定义图像预设时有更多选择。图像渲染依赖于[HTTP协议引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api)中详细定义的图像渲染API。
 
@@ -486,7 +487,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
    ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
 
-## 编辑图像预设{#modifying-image-presets}
+## 编辑图像预设 {#modifying-image-presets}
 
 1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**。
 
@@ -495,7 +496,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 1. 选择预设，然后单击&#x200B;**[!UICONTROL 编辑]**。将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
 1. 进行更改，然后单击&#x200B;**[!UICONTROL 保存]**&#x200B;以保存更改，或单击&#x200B;**[!UICONTROL 取消]**&#x200B;以取消更改。
 
-## 发布Dynamic Media图像预设{#publishing-image-presets}
+## 发布Dynamic Media图像预设 {#publishing-image-presets}
 
 如果您运行的是Dynamic Media — 混合模式，则必须手动发布图像预设。
 
@@ -509,7 +510,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
-## 删除Dynamic Media图像预设{#deleting-image-presets}
+## 删除Dynamic Media图像预设 {#deleting-image-presets}
 
 1. 在Experience Manager中，点按或单击Experience Manager徽标以访问全局导航控制台。
 1. 点按&#x200B;**[!UICONTROL 工具]**&#x200B;图标，然后导航到&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 图像预设]**。
