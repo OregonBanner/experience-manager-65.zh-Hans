@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 550d837c8ad86393eefecb264b69157fca312984
+source-git-commit: dc483b9871cebce64f7b60fec2144f1f19ef28ec
 workflow-type: tm+mt
-source-wordcount: '9743'
+source-wordcount: '9788'
 ht-degree: 6%
 
 ---
@@ -83,7 +83,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 要取消持续上传，请单击进度栏旁边的关闭(`X`)。 取消上传操作后，[!DNL Assets]将删除部分上传的资产部分。
 
-恢复上传的功能在低带宽情况和网络故障中特别有用，在这些情况下，上传大型资产需要较长时间。 您可以暂停上传操作，稍后在情况好转时继续。 恢复时，上传会从暂停时开始。
+恢复上传的功能在低带宽情况和网络故障中特别有用，在这些情况下，上传大型资产需要较长时间。 您可以暂停上传操作，稍后在情况好转时继续。 恢复时，上传会从暂停之处开始。
 
 在上传操作期间，[!DNL Experience Manager]会将上传的资产部分作为数据块保存到CRX存储库中。 上传完成后，[!DNL Experience Manager]会将这些区块合并到存储库中的单个数据块中。
 
@@ -765,7 +765,17 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 ### 查看保存的注释 {#viewing-saved-annotations}
 
-1. 要查看资产的已保存注释，请导航到资产的位置，然后打开资产页面。
+一次只能查看一个注释。
+
+>[!NOTE]
+>
+>如果您选择多个批注，则用户界面上将显示最新的批注。
+>
+>仅支持多选将注释资产打印为PDF。
+
+**要查看资产的已保存注释，请执行以下操作：**
+
+1. 导航到资产的位置，然后打开资产页面。
 
 1. 在Experience Manager界面中，选择&#x200B;**[!UICONTROL 时间轴]**。
 1. 从时间线的&#x200B;**[!UICONTROL 显示全部]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 注释]**&#x200B;以根据注释过滤结果。
@@ -781,6 +791,10 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 如果资产具有批注或者已经受过审阅工作流，您可以将资产以及批注和审阅状态打印为PDF文件，以供离线审阅。
 
 您还可以选择仅打印批注或审阅状态。
+
+>[!NOTE]
+>
+>在以PDF格式打印注释的资产时，您可以选择多个批注。
 
 要打印批注和审阅状态，请单击&#x200B;**[!UICONTROL 打印]**，然后按照向导中的说明操作。 只有当资产至少分配了一个注释或审阅状态时，**[!UICONTROL 打印]**&#x200B;选项才会显示在工具栏中。
 
