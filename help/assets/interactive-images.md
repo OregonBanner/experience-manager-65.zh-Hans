@@ -11,10 +11,10 @@ docset: aem65
 feature: 交互式图像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '4284'
-ht-degree: 20%
+source-wordcount: '4286'
+ht-degree: 18%
 
 ---
 
@@ -55,7 +55,6 @@ ht-degree: 20%
 
 1. **上传图像横幅**  — 上传要进行交互的图像横幅。请参阅[上传图像横幅](#uploading-an-image-banner)。
 
-
 1. **将热点添加到图像横幅**  — 向图像横幅添加一个或多个热点，并将每个热点与操作（如超链接、概览或体验片段）相关联。添加热点后，您将通过发布交互式图像来完成此任务。
 
    * 请参阅[将热点添加到图像横幅](#adding-hotspots-to-an-image-banner)。
@@ -67,7 +66,7 @@ ht-degree: 20%
 
    如果您使用Experience Manager资产和Dynamic Media独立版，则必须复制您网站上的嵌入代码，然后将其与现有概览相集成。 请参阅[将交互式图像与您的网站集成](#integrating-an-interactive-image-with-your-website)。
 
-   如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有概览实施相集成。 请参阅[将交互式图像与现有概览](#integrating-an-interactive-image-with-an-existing-quickview)集成。
+   如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有概览实施相集成。 请参阅[将交互式图像与现有Quickview](#integrating-an-interactive-image-with-an-existing-quickview)集成。
 
 ## （可选）识别热点变量 {#optional-identifying-hotspot-variables}
 
@@ -75,7 +74,7 @@ ht-degree: 20%
 >
 >仅当满足以下条件时，才需要执行此任务：
 >
->* 您希望通过触发概览来为图像添加交互性。
+>* 要通过触发概览来为图像添加交互性。
 >* 您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)拉入Experience Manager。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 >
@@ -99,7 +98,7 @@ ht-degree: 20%
 * 概览数据会转换为内容，以准备在网页上渲染。
 * 最后，前端代码以可视形式将这些内容呈现在屏幕上。
 
-然后，方法是访问现有网站中实施了概览功能的不同区域。 然后，您会触发概览并捕获由网页发送的用于加载概览数据或内容的Ajax URL。
+然后，方法是访问现有网站中实施了概览功能的不同区域。 然后，您触发概览并捕获由网页发送的用于加载概览数据或内容的Ajax URL。
 
 通常情况下，您不需要使用任何专业的调试工具。现代的 Web 浏览器具备 Web 检查器，可以实现相同的功能。下面列举了一些具备 Web 检查器的 Web 浏览器：
 
@@ -324,7 +323,8 @@ ht-degree: 20%
 您可以使用“预览”来查看交互式图像在客户中的显示方式，并测试图像的热点以确保它们按预期行为。
 
 如果您对交互式图像满意，可以发布该图像。
-请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。请参阅[将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
+请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
+请参阅[将URL关联到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **要预览交互式图像，请执行以下操作：**
@@ -369,7 +369,7 @@ ht-degree: 20%
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
-因此，演示网站交互式购物图像上的热点仅用于显示目的；它们尚未与现有概览相集成。
+因此，演示网站交互式购物图像上的热点仅用于显示目的；它们尚未与现有概览集成。
 
 要为响应式环境对交互式购物图像应用“裁剪”，您可以将交互式图像配置属性`ZoomView.iscommand`包含到路径中。 组件`ZoomView`被调用，`iscommand`是您应用的“裁剪”图像服务命令。
 
@@ -379,7 +379,7 @@ ht-degree: 20%
 
 现在，您可以将交互式图像与网站上的现有概览相集成。
 
-## 将交互式图像与现有概览集成 {#integrating-an-interactive-image-with-an-existing-quickview}
+## 将交互式图像与现有概览相集成 {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
 此任务仅在您是独立Experience Manager资产客户时才适用。
@@ -517,4 +517,4 @@ loadQuickView(quickViewUrl);
 
 ## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-请参阅[使用概览创建自定义弹出窗口](/help/assets/custom-pop-ups.md)。
+请参阅[使用概览](/help/assets/custom-pop-ups.md)创建自定义弹出窗口。
