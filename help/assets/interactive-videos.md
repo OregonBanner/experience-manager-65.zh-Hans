@@ -11,10 +11,10 @@ docset: aem65
 feature: 交互式视频
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '6013'
-ht-degree: 20%
+source-wordcount: '6015'
+ht-degree: 19%
 
 ---
 
@@ -72,13 +72,12 @@ ht-degree: 20%
 交互式视频步骤：
 
 1. **（可选）识别概览变量**  — 首先，识别现有概览实施所使用的动态变量。在创建交互式视频时，您可以使用变量将产品缩略图映射到其相应的产品概览。 请参阅[（可选）识别概览变量](#optional-identifying-quickview-variables)。
-   *仅当满足以下所有条件时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)拉入Experience Manager。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
+   *仅当满足以下所有条件时，才需要执行此步骤*:·您希望通过触发概览来为视频添加交互性。·您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取到Experience Manager中。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 1. **（可选）创建交互式视频查看器预设**  — 自定义构成播放器的各种组件的外观和行为，如视频清理器和交互式缩略图。如果您打算改用现成的交互式视频查看器预设`Shoppable_Video_Light`或`Shoppable_Video_Dark`，则无需创建您自己的交互式视频查看器预设。
-请参阅[创建新查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（可选）和[创建交互式查看器预设的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
+请参阅[创建查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（可选）和[创建交互式查看器预设的特殊注意事项](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)。
 
-1. **上传视频及其关联的图像资产**  — 上传您希望进行交互的视频和关联的图像。请参阅[上传视频及其关联的缩略图资产](#uploading-a-video-and-its-associated-thumbnail-assets)。
-
+1. **上传视频及其关联的图像资产**  — 上传您要进行交互的视频和关联的图像。请参阅[上传视频及其关联的缩略图资产](#uploading-a-video-and-its-associated-thumbnail-assets)。
 
 1. **为视频添加交互性**  — 向视频添加一个或多个时间区段。然后，关联这些时间区段中的图像缩略图。 将每个图像缩略图分配给操作，如超链接、概览或体验片段。
 (如果您的交互式内容具有包含相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。)
@@ -88,7 +87,7 @@ ht-degree: 20%
 1. **在Experience Manager中将交互式视频添加到您的网站或您的网站**  — 如果您使用Experience Manager站点或电子商务，或者同时使用这两者，则可以将交互式视频添加到网页。将交互式媒体组件拖动到页面上的Experience Manager。 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 使用嵌入代码或URL将交互式视频与您的网站体验相集成。 请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
 如果您使用的是第三方WCM（Web内容管理器），则必须将新的交互式视频与您网站上使用的现有概览实施相集成。 请参阅[将交互式视频与现有概览](#integrating-an-interactive-video-with-an-existing-quickview)集成。
-   [将 Dynamic Media 资产添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)
+   [将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## （可选）识别概览变量 {#optional-identifying-quickview-variables}
 
@@ -96,8 +95,8 @@ ht-degree: 20%
 >
 >仅当满足以下条件时，才需要执行此任务：
 >
->* 您希望通过触发概览来为视频添加交互性。
->* 您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、hybris或Intershop)拉入Experience Manager。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
+>* 要通过触发概览来为视频添加交互性。
+>* 您的Experience Manager实施&#x200B;*not*&#x200B;使用电子商务集成框架将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)拉入Experience Manager。 请参阅Experience Manager资产](/help/commerce/cif-classic/administering/concepts.md)中的[电子商务概念。
 
 >
 >
@@ -232,7 +231,7 @@ ht-degree: 20%
 
 交互式视频查看器预设能够准确地呈现您添加的视频和所有时间轴区段。当您在“预览”模式下单击产品缩略图时，它还使用默认概览示例，以便您能够在发布之前测试其交互性。
 
-保存查看器预设后，“查看器预设”页面中的查看器预设状态将自动设置为 **开**。此状态表明查看器预设在 Dynamic Media 组件中可见，预览视频时也可见。另请确保手动发布新查看器预设。
+在保存查看器预设后，查看器预设的状态会在“查看器预设”页面中自动设置为&#x200B;**开启**。此状态表明查看器预设在 Dynamic Media 组件中可见，预览视频时也可见。另请确保手动发布新查看器预设。
 
 请参阅[创建新查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)以创建您自己的交互式视频查看器预设。
 
@@ -500,13 +499,13 @@ ht-degree: 20%
 
 1. 发布交互式视频。发布后会创建嵌入代码或URL，您最终会将该嵌入代码或URL复制并粘贴到您的网站体验中。
 
-   如果您使用概览添加交互性，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
+   如果您是通过概览添加交互性的，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
 
    请参阅[发布资产](publishing-dynamicmedia-assets.md)。
 
    >[!NOTE]
    >
-   >要发布带有概览的购物视频，请确保您还会从商务区域单独发布每个视频的相关图像资产。
+   >要通过概览发布购物视频，请确保您还会从商务区域单独发布每个视频的相关图像资产。
 
    在添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站登录页面。请参阅[将交互式视频与您的网站集成](#integrating-an-interactive-video-with-your-website)。
 
@@ -518,15 +517,13 @@ ht-degree: 20%
 
 现在，在上传视频、向视频添加时间轴区段并发布交互式视频后，您便可以将其添加到您的现有网站。
 
-如果您是Experience Manager站点客户，则可以通过将交互式媒体组件拖动到您的页面来添加交互式视频。 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+如果您是Experience Manager站点客户，则可以通过将交互式媒体组件拖动到您的页面来添加交互式视频。 请参阅[将Dynamic Media资产添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 如果您是独立的Experience Manager资产客户，则可以按照此部分中的所述，手动将交互式视频添加到您的网站。
 
-1. 复制已发布的交互式视频的嵌入代码或 URL。
-
+1. 复制已发布的交互式视频的嵌入代码或URL。
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
-
-如果您使用概览添加交互性，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
+如果您是通过概览添加交互性的，则仅使用嵌入代码；如果您通过超链接的网页添加了交互性，则还可以使用已发布的URL。 但是，请注意，如果您的交互式内容具有链接相对URL的链接，特别是指向Experience Manager站点页面的链接，则无法使用基于URL的链接方法。
 
 1. 在目标网页代码中，找到静态视频所在的位置。
 
@@ -576,7 +573,7 @@ ht-degree: 20%
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
-## 将交互式视频与现有概览集成 {#integrating-an-interactive-video-with-an-existing-quickview}
+## 将交互式视频与现有概览相集成 {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
 >
@@ -721,7 +718,7 @@ var inner_container = document.getElementById(sdkContainerId);
 
 实际找到模态对话框元素并将其附加到上述容器的步骤具体因大小写而异。 再次重申，您可以向熟悉所需Quickview实施的前端开发人员寻求帮助。
 
-如果我们使用示例网站，则“快速视图”模式对话框将实施为`DIV` ，并且该快速视图模式ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
+如果您使用示例网站，则“快速视图”模式对话框将实施为`DIV` ，并且该快速视图模式ID直接附加到文档`BODY`。 因此，将该对话框移动到查看器容器的代码与以下代码一样简单：
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -778,4 +775,4 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 ## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-请参阅[使用概览创建自定义弹出窗口](/help/assets/custom-pop-ups.md)。
+请参阅[使用概览](/help/assets/custom-pop-ups.md)创建自定义弹出窗口。
