@@ -10,10 +10,10 @@ discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 role: Business Practitioner, Administrator
 exl-id: 6d165b0d-e3e7-4115-8f2a-827679754b3b
 feature: 选择器
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 19%
+source-wordcount: '722'
+ht-degree: 16%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 19%
 
 在创建轮播集、添加热点和图像映射、创建交互式视频和图像时，您可以访问选择器。
 
-例如，在此轮播横幅中，如果要将热点或图像映射链接到概览页面，则使用产品选择器；如果要将热点或图像映射链接到超链接，请使用站点选择器；创建新幻灯片时，请使用资产选择器。
+例如，在此轮播横幅中，如果要将热点或图像映射链接到概览页面，则使用产品选择器。 如果要将热点或图像映射链接到超链接，请使用站点选择器；创建幻灯片时，请使用资产选择器。
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
-当您选择热点或图像映射转到的位置（而不是手动输入）时，您将使用选择器。 仅当您是AEM Sites客户时，网站选择器才起作用。 产品选择器还需要AEM Commerce。
+当您选择热点或图像映射转到的位置（而不是手动输入）时，您将使用选择器。 仅当您是Experience Manager站点客户时，站点选择器才起作用。 产品选择器还需要Experience Manager商务。
 
-## 选择产品{#selecting-products}
+## 选择产品 {#selecting-products}
 
 当您希望热点或图像映射提供到产品目录中特定产品的概览时，请使用产品选择器来选择产品。
 
@@ -45,15 +45,15 @@ ht-degree: 19%
 
    ![chlimage_1-522](assets/chlimage_1-522.png)
 
-   您也可以按关键字或标记进行过滤，方法是点按&#x200B;**[!UICONTROL 过滤器]**&#x200B;并输入关键字，或选择标记，或同时选择这两者。
+   通过点按&#x200B;**[!UICONTROL 筛选]**&#x200B;并输入关键词，或选择标记，或同时选择这两者，按关键字或标记进行筛选。
 
    ![chlimage_1-523](assets/chlimage_1-523.png)
 
-   您可以通过点按&#x200B;**[!UICONTROL Browse]**&#x200B;并导航到其他文件夹来更改AEM浏览产品数据的位置。
+   通过点按&#x200B;**[!UICONTROL Browse]**&#x200B;并导航到其他文件夹，更改Experience Manager浏览产品数据的位置。
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   点按&#x200B;**[!UICONTROL 排序]**&#x200B;依据，以更改AEM是按最新到最旧还是最旧到最新进行排序。
+   点按&#x200B;**[!UICONTROL 排序]**&#x200B;依据，以更改Experience Manager是按最新到最旧还是最旧到最新进行排序。
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 
@@ -69,9 +69,9 @@ ht-degree: 19%
 
    ![chlimage_1-528](assets/chlimage_1-528.png)
 
-## 选择站点{#selecting-sites}
+## 选择站点 {#selecting-sites}
 
-当您希望热点或图像映射链接到在AEM网站中管理的网页时，可使用站点选择器来选择网页。
+当您希望热点或图像映射链接到在Experience Manager站点中管理的网页时，请使用站点选择器来选择网页。
 
 1. 导航到传送集、交互式图像或交互式视频，然后点按“ **[!UICONTROL Actions]** ”（操作）选项卡（仅当您定义了热点或图像映射时可用）。
 
@@ -79,7 +79,7 @@ ht-degree: 19%
 
    ![chlimage_1-529](assets/chlimage_1-529.png)
 
-1. 点按&#x200B;**[!UICONTROL 站点选择器]**&#x200B;图标（带放大镜的文件夹），然后导航到 AEM 站点中要将热点或图像映射链接到的页面。
+1. 点按&#x200B;**[!UICONTROL 站点选择器]**&#x200B;图标（带放大镜的文件夹），然后导航到Experience Manager站点中要将热点或图像映射链接到的页面。
 
    ![chlimage_1-530](assets/chlimage_1-530.png)
 
@@ -87,24 +87,24 @@ ht-degree: 19%
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. 在&#x200B;**[!UICONTROL 预览]**&#x200B;模式下（如果点按热点或图像映射），您将导航到您指定的AEM站点页面。
+1. 在&#x200B;**[!UICONTROL 预览]**&#x200B;模式下（如果点按热点或图像映射），您将导航到您指定的Experience Manager站点页面。
 
 ## 选择资产 {#selecting-assets}
 
-使用此选择器可选择要在轮播横幅、交互式视频、图像集、混合媒体集和旋转集中使用的图像。 在交互式视频中，当您点按&#x200B;**[!UICONTROL 内容]**&#x200B;选项卡中的&#x200B;**[!UICONTROL 选择资产]**&#x200B;时，即可使用资产选择器。 在轮播集中，当您创建新幻灯片时，可以使用资产选择器。 在图像集、混合媒体集和旋转集中，当您分别创建新的图像集、混合媒体集或旋转集时，可以使用资产选择器。
+使用此选择器可选择要在轮播横幅、交互式视频、图像集、混合媒体集和旋转集中使用的图像。 在交互式视频中，当您点按&#x200B;**[!UICONTROL 内容]**&#x200B;选项卡中的&#x200B;**[!UICONTROL 选择资产]**&#x200B;时，即可使用资产选择器。 在轮播集中，当您创建幻灯片时，可以使用资产选择器。 在图像集、混合媒体集和旋转集中，分别创建图像集、混合媒体集或旋转集时，可以使用资产选择器。
 
 另请参阅[资产选取器](search-assets.md#assetpicker)以了解更多信息。
 
-1. 导航到轮播集并创建新幻灯片。 或者，导航到交互式视频，转到&#x200B;**[!UICONTROL Content]**&#x200B;选项卡，然后选择资产。 或者，创建混合媒体集、图像集或旋转集。
+1. 导航到轮播集并创建幻灯片。 或者，导航到交互式视频，转到&#x200B;**[!UICONTROL Content]**&#x200B;选项卡，然后选择资产。 或者，创建混合媒体集、图像集或旋转集。
 1. 点按&#x200B;**[!UICONTROL 资产选择器]**&#x200B;图标（带有放大镜的文件夹），然后导航到资产。
 
    ![chlimage_1-532](assets/chlimage_1-532.png)
 
-   您还可以通过点按&#x200B;**[!UICONTROL 过滤器]**&#x200B;并输入关键词，或添加标准或两者，按关键字或标记进行过滤。
+   通过点按&#x200B;**[!UICONTROL 筛选]**&#x200B;并输入关键词，或添加标准，或同时添加两者，按关键词或标记进行筛选。
 
    ![chlimage_1-533](assets/chlimage_1-533.png)
 
-   您可以通过导航到&#x200B;**[!UICONTROL Path]**&#x200B;字段中的其他文件夹来更改AEM浏览资产的位置。
+   通过导航到&#x200B;**[!UICONTROL Path]**&#x200B;字段中的其他文件夹，更改Experience Manager浏览资产的位置。
 
    点按&#x200B;**[!UICONTROL 收藏集]** ，以仅搜索收藏集中的资产。
 
