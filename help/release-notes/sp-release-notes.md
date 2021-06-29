@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发�
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3837'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 [!DNL Adobe Experience Manager] 6.5.9.0中引入的主要功能和增强功能包括：
 
-* [!DNL Experience Manager Sites] Dynamic Media Foundation组件现在允许在使用响应式图像预设或智能裁剪时打开或关闭针对高分辨率设备的优化功能。
+* [!DNL Experience Manager Sites] Dynamic Media Foundation组件现在允许您在使用响应式图像预设或智能裁剪时，打开或关闭针对高分辨率设备的优化功能。
 
 * 为了提高性能，将`hidden=false`条件从JCR查询移动到[!UICONTROL QueryBuilder]计算器。 要验证隐藏的谓词是否在更改后正常工作，[!DNL Experience Manager]会检查是否未显示任何隐藏的文件夹。
 
@@ -66,10 +66,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->从Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了[!DNL Azul Zulu]版本的OpenJDK，该版本符合Java SE的标准。
+>从Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了[!DNL Azul Zulu]版本的OpenJDK，该版本符合Java™ SE的标准。
 >[!DNL Azul Zulu] JDK的支持也通过Adobe提供给[!DNL Experience Manager]客户。
 >您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载[!DNL Azul Zulu] JDK的相关版本。
->由Oracle分发的AdobeJava技术的使用权限将在2022年12月底之前过期。 [!DNL Experience Manager] 我们鼓励客户在此日期之前规划并实 [!DNL Azul Zulu] 施对JDK的使用。有关[!DNL Oracle Java]技术和[!DNL Azul Zulu]技术使用的更多信息，请参阅相关的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
+>由Oracle分发的AdobeJava™技术的使用权限将在2022年12月底之前过期。 [!DNL Experience Manager] 我们鼓励客户在此日期之前规划并实 [!DNL Azul Zulu] 施对JDK的使用。有关[!DNL Oracle Java™]技术和[!DNL Azul Zulu]技术使用的更多信息，请参阅相关的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)。
 
 以下是[!DNL Experience Manager] 6.5.9.0版中提供的修复列表。
 
@@ -83,7 +83,7 @@ ht-degree: 4%
 
 * 另一个大小调整的布局容器内的嵌套布局容器显示其子组件的列数不正确，从而导致这些组件未与网格对齐(NPR-36359)。
 
-* 外部链接检查器将有效的外部链接显示为无效链接(NPR-36289)。
+* 外部链接检查程序将有效的外部链接显示为无效链接(NPR-36289)。
 
 * 显示引用一段时间后，引用面板开始显示错误消息(NPR-36167)。
 
@@ -91,7 +91,7 @@ ht-degree: 4%
 
 * 在尝试同步Live Copy时（使用转出配置[!UICONTROL 在Blueprint激活时激活]和[!UICONTROL 在Blueprint激活时取消激活]），如果在Live Copy主控中删除了组件，则同步会失败并记录`NullPointerException`(NPR-36127)。
 
-* 当用户键入标记的临时文本（系统中不存在的标记）并按Enter时，标记将显示在字段下方，但当内容片段保存并重新打开时，临时标记会消失(NPR-36132)。
+* 当用户键入标记的临时文本（系统中不存在的标记）并按Enter时，该标记会显示在字段下方，但当内容片段被保存并重新打开时，临时标记会消失(NPR-36132)。
 
 * 收件箱中没有显示异步操作状态的选项(NPR-36104)。
 
@@ -119,7 +119,7 @@ ht-degree: 4%
 
 * 要查看未基于[!UICONTROL 创建]、[!UICONTROL 修改]或[!UICONTROL 名称]参数进行排序的资产，[!DNL Adobe Experience Manager]在[!UICONTROL 排序]选项中提供了[!UICONTROL 无]选项。 [!UICONTROL 无]选项可确保“资产”用户界面（在卡片视图、列视图和分析视图中）中的资产与JCR节点中资产的顺序相同(NPR-36356)。
 
-* 要在[!DNL Adobe Experience Manager]的ACP API响应中将电子邮件ID设为小写，可引入可选设置；由于[!DNL Adobe Asset Link]用户的ID没有全部使用小写字符，因此无法签入资产。 请注意，[!DNL Adobe Asset Link]面板使用来自[!DNL Adobe Experience Manager]的ACP API响应(CQ-4317704)。
+* 要在[!DNL Adobe Experience Manager]的ACP API响应中将电子邮件ID设为小写，可引入可选设置；由于[!DNL Adobe Asset Link]用户的ID没有全部使用小写字符，因此无法签入资产。 [!DNL Adobe Asset Link]面板使用来自[!DNL Adobe Experience Manager]的ACP API响应(CQ-4317704)。
 
 [!DNL Adobe Experience Manager] 6.5.9.0提供了以 [!DNL Assets] 下辅助功能增强。
 
@@ -144,7 +144,7 @@ ht-degree: 4%
 
 * 当使用小椭圆对资产添加注释时，该椭圆与打印版本中的注释数量重叠(NPR-36114)。
 
-* 在列视图中，在某些情况下，上传重复的资产后，[!DNL Experience Manager]不会提示出现重复的资产冲突(NPR-36048)。
+* 有时，在列视图中， [!DNL Experience Manager]不会在上传重复资产时提示出现重复资产冲突(NPR-36048)。
 
 * 如果共享链接对话框处于打开状态且未进行任何更改，则单击关闭按钮不会将其关闭(NPR-36030)。
 
@@ -194,6 +194,16 @@ ht-degree: 4%
 * 用于表示必填字段的可视星号现在在图像集编辑器的资产标题字段中提供，屏幕阅读器会朗读该字段的必填信息(CQ-4290712)。
 
 * 屏幕阅读器现在可以在资产详细信息页面的查看器中访问并讲述各种交互式选项的用途(CQ-4290708)。
+
+[!DNL Dynamic Media]中出现的已知视频播放问题：
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 
 Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下问题：
 
@@ -275,7 +285,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 ### [!DNL Communities] {#communities-6590}
 
-* 在垃圾邮件过滤中，系统会占用100%的Java堆空间，从而导致Experience Manager服务器无响应(NPR-36316、NPR-36493)。
+* 在垃圾邮件过滤中，系统会占用100%的Java™堆空间，从而导致Experience Manager服务器无响应(NPR-36316、NPR-36493)。
 * 在论坛中，源自`SearchCommentSocialComponentListProvider`的JCR会话数据会被泄露(NPR-36235)。
 * 打开特定收件箱消息会反映所有分页不正确的消息以及其他问题(NPR-35917)。
 
@@ -310,7 +320,7 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 **工作流**
 
-* 在JBoss上调用[!DNL Experience Manager Forms]服务的REST端点时， [!DNL Experience Manager]会显示以下错误消息(NPR-36305):
+* 在JBoss®上调用[!DNL Experience Manager Forms]服务的REST端点时， [!DNL Experience Manager]会显示以下错误消息(NPR-36305):
 
    ```TXT
    Invalid input. The maximum length of 2000 characters was exceeded.
@@ -400,7 +410,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 >[!NOTE]
 >
->AEM 6.5.9.0包含新版本的[AEM Forms兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用的是旧版AEM Forms兼容包并更新到AEM 6.5.9.0，请在安装Forms附加组件包后安装该包的最新版本。
+>Experience Manager6.5.9.0包含新版本的[AEM Forms兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)。 如果您使用的是旧版AEM Forms兼容包并更新到Experience Manager6.5.9.0，请在安装Forms附加组件包后安装该包的最新版本。
 
 ### 在JEE上安装Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
@@ -435,14 +445,14 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 ## 已弃用功能 {#removed-deprecated-features}
 
-以下是[!DNL Experience Manager] 6.5.7.0中标记为已弃用的特性和功能列表。在将来的版本中，这些功能最初被标记为已弃用，后来又被删除。 通常会提供替代选项。
+以下是[!DNL Experience Manager] 6.5.7.0中标记为已弃用的特性和功能列表。在将来的版本中，这些功能最初被标记为已弃用，后来又被删除。 提供了备用选项。
 
 查看您在部署中是否使用了功能。 此外，还计划更改实施以使用替代选项。
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
 | 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用。 随着Experience Manager6.5中更新了Experience Manager和Adobe Target集成，以支持Adobe Target Standard API(通过AdobeIMS和[!DNL Adobe I/O]进行身份验证)，以及Launch在检测Experience Manager页面以进行分析和个性化方面日益发挥的作用，选择加入向导在功能上已变得无关紧要。 | 通过相应的[!DNL Experience Manager]云服务配置系统连接、AdobeIMS身份验证和[!DNL Adobe I/O]集成。 |
-| 连接器 | 适用于Microsoft SharePoint 2010和Microsoft SharePoint 2013的AdobeJCR Connector已在Experience Manager6.5中弃用。 | 不适用 |
+| 连接器 | 适用于Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR Connector已在Experience Manager6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
 
