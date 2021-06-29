@@ -12,10 +12,10 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: 查看器
 role: Business Practitioner, Administrator
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
 source-wordcount: '1090'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 默认的概览用于电子商务体验，其中会显示一个弹出窗口，其中包含产品信息以促进购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据查看器，用户可以通过此功能点按热点、缩略图图像或图像映射来查看信息或相关内容。
 
-Dynamic Media中的以下查看器支持概览：
+Dynamic Media中的以下查看器支持快速查看：
 
 * 交互式图像（可单击的热点）
 * 交互式视频（视频播放期间可单击的缩略图图像）
