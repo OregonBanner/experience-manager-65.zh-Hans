@@ -5,7 +5,7 @@ contentOwner: AG
 role: Developer
 feature: 搜索
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 19%
@@ -59,7 +59,7 @@ ht-degree: 19%
 
 要构建属性谓词，请执行以下操作：
 
-1. 在项目目录中创建组件文件夹，例如&#x200B;**/apps/geometrixx/components/titleprediate**。
+1. 在项目目录中创建组件文件夹，例如&#x200B;**/apps/weretail/components/titleprediate**。
 1. 添加&#x200B;**content.xml**:
 
    ```xml
@@ -152,7 +152,7 @@ ht-degree: 19%
 
 要构建组谓词，请执行以下操作：
 
-1. 在项目目录中创建组件文件夹，例如&#x200B;**/apps/geometrixx/components/picspredicate.**
+1. 在项目目录中创建组件文件夹，例如&#x200B;**/apps/weretail/components/picspredicate**。
 1. 添加&#x200B;**content.xml**:
 
    ```xml
