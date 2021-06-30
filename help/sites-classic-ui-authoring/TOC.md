@@ -1,13 +1,13 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: end-user
 user-guide-title: AEM 6.5经典UI创作用户指南
 user-guide-description: 本指南介绍在经典用户界面中在AEM中创作的概念。
 feature: 创作
 role: Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 84%
@@ -15,7 +15,7 @@ ht-degree: 84%
 ---
 
 
-# AEM 6.5经典UI创作用户指南{#classic-ui}
+# AEM 6.5经典UI创作用户指南 {#classic-ui}
 
 + [经典UI创作指南概述](home.md)
 + 经典UI创作简介{#introduction}
