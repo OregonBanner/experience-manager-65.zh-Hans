@@ -2,13 +2,12 @@
 cloud: Experience Cloud
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.zh-Hans
-solution: Experience Manager
+solution: Experience Manager, Experience Manager 6.5
 feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
 version: 6.5
 type: Documentation
 index: y
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 74%
@@ -23,16 +22,16 @@ metadata.md 文件中包含存储库级别的元数据，这些元数据会传�
 | 元数据 | 用途 |
 |--- |--- |
 | solution-title | 在文章标题中用作链接. |
-| solution-hub-url | 打开“学习和支持”中心页。 |
+| solution-hub-url | 打开“学习和支持”中心页面。 |
 | solution-icon | 在解决方案标题旁边显示解决方案图标。尚未实施. |
-| getting-started-url | 链接到开始页面。 |
-| tutorials-url | 链接到视频教程。 |
+| getting-started-url | 指向入门页面的链接。 |
+| tutorials-url | 视频教程的链接。 |
 | mini-toc-levels | 确定显示在右边栏中的标题级别数量。默认值为 2。 |
-| git-repo | 指定主回购库的位置以供内部使用。 |
+| git-repo | 指定供内部使用的主存储库的位置。 |
 
 在 TOC.md 文件中
 
 | 元数据 | 用途 |
 |--- |--- |
 | user-guide-title | 在文章标题中用作链接. |
-| user-guide-url | 打开“学习和支持”中心页。 |
+| user-guide-url | 打开“学习和支持”中心页面。 |
