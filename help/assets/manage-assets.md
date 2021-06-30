@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: dc483b9871cebce64f7b60fec2144f1f19ef28ec
+source-git-commit: 03b171d2af17efee73780b01058fd62bc9d45dbd
 workflow-type: tm+mt
 source-wordcount: '9788'
 ht-degree: 6%
@@ -775,7 +775,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 **要查看资产的已保存注释，请执行以下操作：**
 
-1. 导航到资产的位置，然后打开资产页面。
+1. 转到资产的位置，然后打开资产页面。
 
 1. 在Experience Manager界面中，选择&#x200B;**[!UICONTROL 时间轴]**。
 1. 从时间线的&#x200B;**[!UICONTROL 显示全部]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 注释]**&#x200B;以根据注释过滤结果。
