@@ -6,14 +6,14 @@ mini-toc-levels: 1
 feature: 搜索，元数据
 role: Business Practitioner
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 791f5b5b2544eed1b3564dabf4bc3ed8df092653
 workflow-type: tm+mt
 source-wordcount: '5575'
 ht-degree: 7%
 
 ---
 
-# 在[!DNL Adobe Experience Manager] {#search-assets-in-aem}中搜索资产
+# 在[!DNL Adobe Experience Manager]中搜索资产 {#search-assets-in-aem}
 
 [!DNL Adobe Experience Manager Assets] 提供了强大的资产发现方法，可帮助您实现更高的内容速度。您的团队可以使用现成的功能和自定义方法，通过无缝、智能的搜索体验缩短上市时间。 搜索资产是使用数字资产管理系统的核心 — 无论是供创意人员进一步使用，还是由业务用户和营销人员对资产进行稳健管理，还是由DAM管理员进行管理。 您可以通过[!DNL Assets]用户界面或其他应用程序和界面执行的简单、高级和自定义搜索，有助于满足这些用例。
 
@@ -28,7 +28,7 @@ ht-degree: 7%
 | [搜索排名和提升](#searchrank) | [文本提取](#extracttextupload) | [智能收藏集](#collections) |
 | [高级搜索：筛选和搜索范围](#scope) | [自定义谓词](#custompredicates) | [了解意外结果并排除其故障](#unexpected-results) |
 | [从其他解决方案和应用程序中搜索](#search-assets-other-surfaces):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager桌面应用程序](#desktop-app)</li><li>[Adobe Stock图像](#adobe-stock)</li><li>[Dynamic Media资产](#dynamic-media)</li></ul> |  |  |
-| [资产选择器](#assetpicker) |  |  |
+| [资产选择器](#asset-picker) |  |  |
 | [](#limitations) 限制和提 [示](#tips) |  |  |
 | [示例](#samples) |  |  |
 
@@ -143,7 +143,7 @@ ht-degree: 7%
 
 *图：使用卡片视图中的选项查找类似图像。*
 
-### Adobe Stock图像{#adobe-stock}
+### Adobe Stock图像 {#adobe-stock}
 
 在[!DNL Experience Manager]用户界面中，用户可以搜索[Adobe Stock资产](/help/assets/aem-assets-adobe-stock.md)并授权所需的资产。 在Omnisearch栏中添加`Location: Adobe Stock`。 您还可以使用过滤器面板来查找所有授权或未授权的资产，或使用Adobe Stock文件号搜索特定资产。
 
@@ -151,7 +151,7 @@ ht-degree: 7%
 
 您可以通过选择&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中的 **[!UICONTROL Dynamic Media]** > **[!UICONTROL 集]**&#x200B;来过滤 Dynamic Media 图像。该操作可过滤并显示图像集、轮播集、混合媒体集和旋转集等资产。
 
-### 使用元数据字段{#gql-search}中的特定值进行GQL搜索
+### 使用元数据字段中的特定值进行GQL搜索 {#gql-search}
 
 您可以根据元数据字段的确切值（如标题、描述和创建者）来搜索资产。 GQL全文搜索功能仅获取其元数据值与您的搜索查询完全匹配的资产。 属性的名称（创建者、标题等）和值区分大小写。
 
@@ -196,7 +196,7 @@ ht-degree: 7%
 * 要显示包含属性值且其中包含特定字符串的资产(例如：title =巴塞尔会议室):`title:*Meeting*`
 * 要显示包含特定字符串且具有特定属性值的资产(例如：在标题为John Doe的资产中搜索字符串Adobe):`*Adobe* title:"John Doe"`
 
-## 从其他[!DNL Experience Manager]产品或界面{#search-assets-other-surfaces}搜索资产
+## 从其他[!DNL Experience Manager]产品或界面中搜索资产 {#search-assets-other-surfaces}
 
 [!DNL Adobe Experience Manager] 将DAM存储库连接到各种其他解 [!DNL Experience Manager] 决方案，以便更快地访问数字资产并简化创作工作流程。任何资产发现都以浏览或搜索开头。 在各种曲面和解决方案中，搜索行为基本保持不变。 某些搜索方法会随着目标受众、用例和用户界面的不同而有所变化，具体到[!DNL Experience Manager]解决方案。 下面的链接中介绍了各个解决方案的具体方法。 本文介绍了普遍适用的提示和行为。
 
@@ -204,23 +204,23 @@ ht-degree: 7%
 
 使用Adobe资产链接，创意专业人士现在可以访问存储在[!DNL Experience Manager Assets]中的内容，而无需离开支持的Adobe Creative Cloud应用程序。 创意人员可以使用[!DNL Adobe Creative Cloud]应用程序中的应用程序内面板无缝地浏览、搜索、签出和签入资产：[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]。 资产链接还允许用户搜索视觉上相似的结果。 可视搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户找到在美学上相似的图像。 请参阅[使用Adobe资产链接搜索和浏览资产](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)。
 
-### 在[!DNL Experience Manager]桌面应用程序{#desktop-app}中搜索资产
+### 在[!DNL Experience Manager]桌面应用程序中搜索资产 {#desktop-app}
 
 创意专业人士使用桌面应用程序，可轻松搜索[!DNL Experience Manager Assets]并在其本地桌面（Win或Mac）上提供。 创意人员可以轻松地在Mac Finder或Windows资源管理器中显示所需的资产，在桌面应用程序中打开，并在本地更改 — 更改将通过在存储库中创建的新版本保存回[!DNL Experience Manager]。 应用程序支持使用一个或多个关键字、 `*`和`?`通配符以及`AND`运算符进行基本搜索。 请参阅桌面应用程序中的[浏览、搜索和预览资产](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
 
-### 在[!DNL Brand Portal] {#brand-portal}中搜索资产
+### 在[!DNL Brand Portal]中搜索资产 {#brand-portal}
 
 业务线用户和营销人员使用Brand Portal，与其扩展的内部团队、合作伙伴和经销商高效、安全地共享已批准的数字资产。 请参阅[在Brand Portal上搜索资产](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html)。
 
-### 搜索[!DNL Adobe Stock]图像{#adobe-stock1}
+### 搜索[!DNL Adobe Stock]图像 {#adobe-stock1}
 
 在[!DNL Experience Manager]用户界面中，用户可以搜索Adobe Stock资产并授权所需的资产。 在Omnisearch字段中添加`Location: Adobe Stock`。 您还可以使用&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板来查找所有授权或未授权的资产，或使用Adobe Stock文件号搜索特定资产。 请参阅[管理 [!DNL Adobe Stock]  [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage)中的图像。
 
-### 搜索[!DNL Dynamic Media]资产{#dynamic-media}
+### 搜索[!DNL Dynamic Media]资产 {#dynamic-media}
 
 您可以通过选择&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中的 **[!UICONTROL Dynamic Media]** > **[!UICONTROL 集]**&#x200B;来过滤 Dynamic Media 图像。该操作可过滤并显示图像集、轮播集、混合媒体集和旋转集等资产。在创作网页时，作者可以在内容查找器中搜索集。弹出菜单中提供集的过滤器。
 
-### 创作网页时在内容查找器中搜索资产{#content-finder}
+### 创作网页时在内容查找器中搜索资产 {#content-finder}
 
 作者可以使用内容查找器搜索DAM存储库中的相关资产，并在他们创建的网页中使用资产。 作者还可以使用“连接的资产”功能搜索远程[!DNL Experience Manager]部署中可用的资产。 然后，作者可以在本地[!DNL Experience Manager]部署的网页中使用这些资产。 请参阅[使用远程资产](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets)。
 
@@ -228,7 +228,7 @@ ht-degree: 7%
 
 [!DNL Experience Manager] 搜索功能支持搜索收藏集和搜索收藏集中的资产。请参阅[搜索收藏集](/help/assets/manage-collections.md)。
 
-## 资产选择器{#asset-picker}
+## 资产选择器 {#asset-picker}
 
 >[!NOTE]
 >
@@ -444,7 +444,7 @@ ht-degree: 7%
 
 对于单个文件夹或集合中可用的资产，[更便于在不使用搜索功能的情况下批量](/help/assets/metadata.md)更新元数据。 对于跨文件夹提供的资产或符合常用条件的资产，通过搜索批量更新元数据会更快。
 
-### 智能收藏集{#smart-collections}
+### 智能收藏集 {#smart-collections}
 
 收藏集是一组有序的资产，这些资产可以包含来自不同位置的资产，因为收藏集仅包含对这些资产的引用。 收藏集有以下两种类型：
 
@@ -453,7 +453,7 @@ ht-degree: 7%
 
 您可以根据搜索条件创建智能收藏集。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，选择&#x200B;**[!UICONTROL 文件]**，然后单击&#x200B;**[!UICONTROL 保存智能收藏集]**。请参阅[管理收藏集](/help/assets/manage-collections.md)。
 
-## 意外的搜索结果和问题{#unexpected-results}
+## 意外的搜索结果和问题 {#unexpected-results}
 
 | 错误、问题、症状 | 可能的原因 | 可能的问题修复或了解 |
 |---|---|---|
