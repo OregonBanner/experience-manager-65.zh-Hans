@@ -12,9 +12,9 @@ docset: aem65
 feature: 资产管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 54230d68fc86c9098f7712044bc501bdc4f16502
+source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
 workflow-type: tm+mt
-source-wordcount: '11668'
+source-wordcount: '11672'
 ht-degree: 18%
 
 ---
@@ -23,21 +23,11 @@ ht-degree: 18%
 
 本节介绍如何在 Dynamic Media 中处理视频。
 
-Dynamic Media中当前已知的视频播放问题：
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
-
 ## 快速入门：视频 {#quick-start-videos}
 
 下面的工作流分布说明旨在帮助您在 Dynamic Media 中快速设置并运行自适应视频集。在每个步骤之后，都会对主题标题进行交叉引用，您可以在其中找到更多信息。
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >在Dynamic Media中处理视频之前，请确保Adobe Experience Manager管理员已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中启用并配置了Dynamic MediaCloud Services。
 >
@@ -45,7 +35,16 @@ Dynamic Media中当前已知的视频播放问题：
    >
    >
 * 请参阅配置Dynamic Media — 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
+>
+>
+当前已知的Dynamic Media中的视频播放问题(仅&#x200B;*在Experience Manager6.5.9.0上):*
+>
+>* 
 
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+>* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 >
 
 
