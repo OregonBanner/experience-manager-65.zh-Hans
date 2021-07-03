@@ -2,17 +2,17 @@
 title: 将 [!DNL Assets] 与 [!DNL InDesign Server]集成
 description: 了解如何将 [!DNL Adobe Experience Manager Assets] 与 [!DNL Adobe InDesign Server]集成。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 发布
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 3c1a30f36222c319c354afa408555982bfe2804e
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1565'
 ht-degree: 4%
 
 ---
 
-# 将[!DNL Adobe Experience Manager Assets]与[!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}集成
+# 将[!DNL Adobe Experience Manager Assets]与[!DNL Adobe InDesign Server]集成 {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets] 使用:
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 >
 >[!DNL Adobe InDesign] 将作为两个单独的产品提供。[Adobe](https://www.adobe.com/products/indesign.html) InDesigndesktop应用程序，用于设计用于打印和数字分发的页面布局。[Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Serverenals允许您根据您使用创建的内容以编程方式创建自动化文 [!DNL InDesign]档。它作为提供其[ExtendScript](https://www.adobe.com/devnet/scripting.html)引擎接口的服务运行。脚本以[!DNL ExtendScript]编写，与[!DNL JavaScript]类似。 有关[!DNL InDesign]脚本的信息，请参阅[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
 
-## 提取工作原理{#how-the-extraction-works}
+## 提取工作原理 {#how-the-extraction-works}
 
 [!DNL Adobe InDesign Server]可以与[!DNL Experience Manager Assets]集成，以便可以上传使用[!DNL InDesign]创建的INDD文件，生成演绎版，提取所有媒体（例如，视频）并存储为资产：
 
@@ -60,7 +60,7 @@ ht-degree: 4%
    * 提取的文本和文件存储在[!DNL Experience Manager Assets]中。
    * 所有演绎版都存储在资产本身的[!DNL Experience Manager Assets]中。
 
-## 将[!DNL InDesign Server]与Experience Manager{#integrating-the-indesign-server-with-aem}集成
+## 将[!DNL InDesign Server]与Experience Manager集成 {#integrating-the-indesign-server-with-aem}
 
 要集成[!DNL InDesign Server]以与[!DNL Experience Manager Assets]一起使用，并在配置代理后，您需要：
 
@@ -88,7 +88,7 @@ ht-degree: 4%
    >如果要将输出消息保存到文件，则使用重定向；例如，在Windows下：
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### 配置[!DNL Experience Manager Assets]工作流{#configuring-the-aem-assets-workflow}
+### 配置[!DNL Experience Manager Assets]工作流 {#configuring-the-aem-assets-workflow}
 
 [!DNL Experience Manager Assets] 具有预配置的工 **[!UICONTROL 作流DAM更新资产]**，该资产具有几个专门用于以下目的的流程 [!DNL InDesign]步骤：
 
@@ -99,7 +99,7 @@ ht-degree: 4%
 
 设置后，将[!DNL InDesign]文件上传到[!DNL Experience Manager Assets]（通过任何常用方法）会触发处理资产和准备各种演绎版的工作流。 通过将INDD文件上传到[!DNL Experience Manager Assets]来测试您的配置，以确认您看到ID在`<*your_asset*>.indd/Renditions`下创建的不同呈现版本
 
-#### 媒体提取{#media-extraction}
+#### 媒体提取 {#media-extraction}
 
 此步骤控制从INDD文件提取媒体。
 
@@ -125,7 +125,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 您可以配置流程缩略图工作流步骤以生成不同大小的静态演绎版。 请确保不要删除默认值，因为[!DNL Experience Manager Assets]接口需要这些默认值。 最后，删除图像预览呈现版本工作流步骤会删除JPG缩略图呈现版本，因为不再需要该呈现版本。
 
-#### 页面提取{#page-extraction}
+#### 页面提取 {#page-extraction}
 
 这会根据提取的元素创建一个[!DNL Experience Manager]页面。 提取处理程序用于从呈现版本（当前为HTML或IDML）中提取数据。 然后，此数据将用于使用PageBuilder创建页面。
 
@@ -146,7 +146,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 * **页面设计**:在生成结果页面时要使用的页面设计。
 
-### 为[!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}配置代理工作程序
+### 为[!DNL InDesign Server]配置代理工作程序 {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
    ![链接外部器设置](assets/link-externalizer-config.png)
 
-### 为[!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}启用并行作业处理
+### 为[!DNL InDesign Server]启用并行作业处理 {#enabling-parallel-job-processing-for-indesign-server}
 
 您现在可以为ID启用并行作业处理。 确定[!DNL InDesign Server]可处理的并行作业的最大数量(`x`):
 
@@ -213,7 +213,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >默认情况下，在IDS工作程序经过以分钟为单位的可配置(`retry.interval.to.whitelist.name`)时间后，将重新验证IDS工作程序。 如果在线找到该工作程序，则会将其从阻止列表中删除。
 
-## 启用对[!DNL InDesign Server] 10.0或更高版本{#enabling-support-for-indesign-server-or-later}的支持
+## 启用对[!DNL InDesign Server] 10.0或更高版本的支持 {#enabling-support-for-indesign-server-or-later}
 
 对于[!DNL InDesign Server] 10.0或更高版本，请执行以下步骤以启用多会话支持。
 
@@ -225,7 +225,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >对于与[!DNL Experience Manager Assets]的[!DNL InDesign Server]集成，请使用多核处理器，因为单核系统不支持集成所需的会话支持功能。
 
-## 配置[!DNL Experience Manager]凭据{#configure-aem-credentials}
+## 配置[!DNL Experience Manager]凭据 {#configure-aem-credentials}
 
 您可以更改从[!DNL Experience Manager]部署访问[!DNL InDesign Server]的默认管理员凭据（用户名和密码），而不中断与[!DNL InDesign Server]的集成。
 
