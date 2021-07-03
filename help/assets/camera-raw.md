@@ -2,17 +2,17 @@
 title: '[!DNL Adobe Camera Raw] 支持。'
 description: 了解如何在 [!DNL Adobe Experience Manager Assets]中启用 [!DNL Adobe Camera Raw] 支持。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 2%
 
 ---
 
-# 使用Camera Raw{#camera-raw-support}处理图像
+# 使用Camera Raw处理图像 {#camera-raw-support}
 
 您可以启用[!DNL Adobe Camera Raw]支持来处理原始文件格式（如CR2、NEF和RAF），并以JPEG格式渲染图像。 [!DNL Adobe Experience Manager Assets]使用Software Distribution提供的[Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)支持该功能。
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 在保存对[!DNL Camera Raw]图像的编辑后，将为该图像生成新的演绎版`AdjustedPreview.jpg`。 对于除[!DNL Camera Raw]之外的其他图像类型，所有演绎版中都会反映所做的更改。
 
-## 最佳实践、已知问题和限制{#best-practices}
+## 最佳实践、已知问题和限制 {#best-practices}
 
 该功能具有以下限制：
 
