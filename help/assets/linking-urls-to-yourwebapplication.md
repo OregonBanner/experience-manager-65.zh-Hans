@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 配置
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 26%
@@ -37,7 +37,7 @@ ht-degree: 26%
 
 另请参阅[上传资产](manage-assets.md#uploading-assets)。
 
-## 获取资产{#obtaining-a-url-for-an-asset}的URL
+## 获取资产的URL {#obtaining-a-url-for-an-asset}
 
 您可以获取由图像预设或查看器预设生成的 URL 字符串。复制 URL 后，它会进入剪贴板，然后您可以视需要将其粘贴到网站或应用程序的页面中。
 
@@ -87,7 +87,7 @@ ht-degree: 26%
 
    要退出URL窗口，请点按&#x200B;**[!UICONTROL X]**&#x200B;或点按&#x200B;**[!UICONTROL 关闭]**。
 
-## 获取静态资产{#obtaining-a-url-for-a-static-asset}的URL
+## 获取静态资产的URL {#obtaining-a-url-for-a-static-asset}
 
 Dynamic Media支持交付静态资产，这是除图像和视频之外的其他资产。 支持的静态资产格式用于交付：
 
@@ -121,7 +121,7 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
       更改复制的URL以在路径中使用`is/content`，而不是`is/image/`。
 
 
-## 获取已发布视频呈现版本{#obtaining-a-video-url-for-a-published-video-rendition}的视频URL
+## 获取已发布视频呈现的视频URL {#obtaining-a-video-url-for-a-published-video-rendition}
 
 1. 在AEM中，导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**。
 1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
@@ -158,7 +158,7 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
    这是已发布视频演绎版的完整视频URL。
 
-## 获取自适应流播放(HLS){#obtaining-a-video-url-for-adaptive-streaming-hls}的视频URL
+## 获取自适应流播放(HLS)的视频URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. 在AEM中，导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**。
 1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
@@ -201,7 +201,7 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## 使用HTTP/2传送Dynamic Media资产{#using-http-to-deliver-your-dynamic-media-assets}
+## 使用HTTP/2交付Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2是经过更新的新Web协议，可改进浏览器和服务器的通信方式。 它提供了更快的信息传输，并降低了所需的处理能力。 现在，Dynamic Media资产的交付可以通过HTTP/2进行，从而提供更好的响应和加载时间。
 
