@@ -2,17 +2,17 @@
 title: 文件夹共享到 [!DNL Adobe Creative Cloud] 最佳实践
 description: 配置 [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] 以与Adobe Creative Cloud(CC)用户交换文件夹。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 协作
 exl-id: 130cec6d-1cdd-4304-94bb-65e6bb573e55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager] 到文 [!DNL Adobe Creative Cloud] 件夹共享  {#aem-to-creative-cloud-folder-sharing-best-practices}
+# [!DNL Adobe Experience Manager] 到文 [!DNL Adobe Creative Cloud] 件夹共享 {#aem-to-creative-cloud-folder-sharing-best-practices}
 
 >[!CAUTION]
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 * **[!DNL Creative Cloud]资产Web服务** (存储和 [!DNL Creative Cloud] 文件Web UI):在这里，与之共享文件夹的特定Creative Cloud [!DNL Assets] 应用程序用户将能够接受邀请并在其Creative Cloud帐户存储中查看该文件夹。
 * **Creative Cloud桌面应用程序**:（可选）允许通过与Assets存储同步，从创意用户的桌面直接访问共享文件夹/ [!DNL Creative Cloud] 文件。
 
-## 特性和限制{#characteristics-and-limitations}
+## 特征和限制 {#characteristics-and-limitations}
 
 * **更改的单向传播：** 文件更改仅沿一个方向传播 — 从最初创建（上传）资产的系统([!DNL Experience Manager] 或 [!DNL Creative Cloud Assets])传播。该集成不会在两个系统之间提供完全自动的双向同步。
 * **版本控制:**
@@ -59,7 +59,7 @@ ht-degree: 0%
 * **网络和带宽：** 共享文件夹中的文件和所有更新需要通过网络在系统之间传输。您应确保仅共享相关文件和更新。
 * **文件夹类型**:在中 [!DNL Assets] 共享的上 `sling:OrderedFolder`下文中不支持共享类型的文 [!DNL Adobe Marketing Cloud]件夹。如果要共享文件夹，请在[!DNL Assets]中创建文件夹时，请勿选择[!UICONTROL 已排序]选项。
 
-## 最佳实践{#best-practices}
+## 最佳实践 {#best-practices}
 
 利用[!DNL Experience Manager]到[!DNL Creative Cloud]文件夹共享的最佳实践包括：
 
