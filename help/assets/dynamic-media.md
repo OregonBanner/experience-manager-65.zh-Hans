@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: 协作，资产管理
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 45%
@@ -52,7 +52,7 @@ Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和�
 >
 >要了解使用Dynamic Media与将Dynamic Media Classic与Adobe Experience Manager集成之间的差异，请参阅[Dynamic Media Classic集成与Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。
 
-## Dynamic Media启用与Dynamic Media禁用{#dynamic-media-on-versus-dynamic-media-off}
+## Dynamic Media启用与Dynamic Media禁用 {#dynamic-media-on-versus-dynamic-media-off}
 
 您可以通过以下特征判断Dynamic Media是否已启用（打开）：
 
@@ -62,7 +62,7 @@ Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和�
 
 单击图像资产时，Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media)会显示不同的资产视图。 Dynamic Media使用按需HTML5查看器。
 
-### 动态演绎版{#dynamic-renditions}
+### 动态演绎版 {#dynamic-renditions}
 
 当 Dynamic Media 处于启用状态时，可以使用图像和查看器预设等动态演绎版（在&#x200B;**[!UICONTROL 动态]**&#x200B;下）。
 
@@ -74,7 +74,7 @@ Dynamic Media 可提供交互式查看体验，包括缩放、360 度旋转和�
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### PTIFF演绎版{#ptiff-renditions}
+### PTIFF演绎版 {#ptiff-renditions}
 
 启用Dynamic Media的资产包括`pyramid.tiffs`。
 
