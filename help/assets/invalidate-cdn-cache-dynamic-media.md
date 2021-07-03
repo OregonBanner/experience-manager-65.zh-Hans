@@ -5,17 +5,17 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN缓存
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 1%
 
 ---
 
-# 通过Dynamic Media {#invalidating-cdn-cache-for-dm-assets}使CDN缓存失效
+# 通过Dynamic Media使CDN缓存失效 {#invalidating-cdn-cache-for-dm-assets}
 
 Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付给客户。 但是，当您更新这些资产时，您希望这些更改在您的网站上立即生效。 通过清除或使CDN缓存失效，您可以快速更新由Dynamic Media交付的资产。 您可以在Dynamic Media中发送请求，让缓存在几分钟内过期，而不是等待缓存使用TTL（生存时间）值（默认值为10小时）过期。
 
