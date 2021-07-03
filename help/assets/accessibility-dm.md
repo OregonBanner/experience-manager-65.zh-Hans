@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 feature: 辅助功能
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
 
 ---
 
-# [!DNL Dynamic Media] {#working-with-three-d-assets-dm}中的辅助功能
+# [!DNL Dynamic Media]中的辅助功能 {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media] 在整个创作用户界面中支持键盘控制和辅助技术，如JAWS和NVDA屏幕阅读器。
 
@@ -45,17 +45,17 @@ ht-degree: 0%
 
 <!-- I would not get into much of details of specific keyboard support logic of these editors. One of the reasons - chances are that accessibility support will receive Phase2-like attention, with more holistic approach. -->
 
-## [!DNL Dynamic Media] {#assistive-technology-support-for-dm}中的辅助技术支持
+## [!DNL Dynamic Media]中的辅助技术支持 {#assistive-technology-support-for-dm}
 
 [!DNL Dynamic Media] 用户界面元素可与屏幕阅读器等辅助技术配合使用。例如，当您使用键盘快捷键`D`导航地标时，它会识别页面上的地标，或者当您使用键盘快捷键`R`导航地标时，它会识别区域。 使用标题键盘快捷键`H`导航时，还会讲述标题。
 
-## [!DNL Dynamic Media]查看器{#keyboard-accessibility-for-dm-viewers}中支持键盘辅助功能
+## [!DNL Dynamic Media]查看器支持键盘辅助功能 {#keyboard-accessibility-for-dm-viewers}
 
 所有开箱即用的[!DNL Dynamic Media]查看器组件都支持客户使用键盘进行辅助功能。
 
 请参阅《Dynamic Media查看器参考指南》中的[键盘辅助功能和导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
-## [!DNL Dynamic Media]查看器{#assistive-technology-support-for-dm-viewers}中的辅助技术支持
+## [!DNL Dynamic Media]查看器中的辅助技术支持 {#assistive-technology-support-for-dm-viewers}
 
 所有[!DNL Dynamic Media]查看器组件都支持ARIA（无障碍的富互联网应用程序）角色和属性，以改进与屏幕阅读器等辅助技术的集成。
 请参阅《Dynamic Media查看器参考指南》中任何自定义查看器主题中的**辅助技术支持**&#x200B;帮助主题。 例如，请参阅[视频查看器的辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)或交互式图像查看器的[辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)。
