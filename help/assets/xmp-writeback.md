@@ -2,10 +2,10 @@
 title: XMP 写回到演绎版
 description: 了解XMP写回功能如何将资产的元数据更改传播到资产的所有或特定演绎版。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 元数据
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 5%
@@ -28,7 +28,7 @@ XMP写回功能允许您将元数据更改传播到资产的所有演绎版或�
 
 但是，[!DNL Experience Manager Assets]不会自动将任何元数据更改传播到资产的演绎版。 请参阅[如何启用XMP写回](#enable-xmp-writeback)。
 
-## 启用XMP写回{#enable-xmp-writeback}
+## 启用XMP写回 {#enable-xmp-writeback}
 
 要在上传元数据更改时将其传播到资产的演绎版，请在Configuration Manager中修改&#x200B;**[!UICONTROL Adobe CQ DAM演绎版制作器]**&#x200B;配置。
 
@@ -36,9 +36,9 @@ XMP写回功能允许您将元数据更改传播到资产的所有演绎版或�
 1. 打开&#x200B;**[!UICONTROL Adobe CQ DAM呈现程序生成器]**&#x200B;配置。
 1. 选择&#x200B;**[!UICONTROL 传播XMP]**&#x200B;选项，然后保存更改。
 
-   ![chlimage_1-133](assets/chlimage_1-346.png)
+   ![chlimage_1-135](assets/chlimage_1-346.png)
 
-## 为特定呈现版本{#enabling-xmp-writeback-for-specific-renditions}启用XMP写回
+## 为特定呈现启用XMP写回 {#enabling-xmp-writeback-for-specific-renditions}
 
 要让XMP写回功能将元数据更改传播到选定的演绎版，请将这些演绎版指定到[!UICONTROL DAM元数据写回]工作流的XMP写回流程工作流步骤。 默认情况下，此步骤配置为原始演绎版。
 
@@ -67,7 +67,7 @@ XMP写回功能允许您将元数据更改传播到资产的所有演绎版或�
 >
 >有关支持的平台，请参阅[XMP元数据回写先决条件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
 
-## 筛选XMP元数据{#filtering-xmp-metadata}
+## 筛选XMP元数据 {#filtering-xmp-metadata}
 
 [!DNL Experience Manager Assets] 支持对XMP元数据的属性/节点进行阻止列表和允许列表筛选，这些属性/节点从资产二进制文件中读取，并在摄取资产时存储在JCR中。
 
