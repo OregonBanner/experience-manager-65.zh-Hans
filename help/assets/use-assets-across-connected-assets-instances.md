@@ -2,10 +2,10 @@
 title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署中可用的资产。
 contentOwner: AG
-role: Business Practitioner, Administrator, Leader
+role: User, Admin, Leader
 feature: 连接的资产、用户和组
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 9e99d25a15aee56721112e2afd4b570ba7854bd7
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 29%
@@ -57,7 +57,7 @@ ht-degree: 29%
 | DAM 用户 | 远程 | `Authors` | `ksaner` 远程  [!DNL Experience Manager] | 远程[!DNL Experience Manager]部署上的创作角色。 使用[!UICONTROL 内容查找器]搜索和浏览“连接的资产”中的资产。 |
 | DAM 分发人员（技术用户） | 远程 | [!DNL Sites] `Authors` | `ksaner` 远程  [!DNL Experience Manager] | [!DNL Experience Manager]本地服务器（而非[!DNL Sites]作者角色）代表[!DNL Sites]作者，使用远程部署上存在的用户来获取远程资产。 此角色与上述两个 `ksaner` 角色不同，它属于另一个不同的用户组。 |
 
-## 在[!DNL Sites]部署与[!DNL Assets]部署{#configure-a-connection-between-sites-and-assets-deployments}之间配置连接
+## 在[!DNL Sites]部署和[!DNL Assets]部署之间配置连接 {#configure-a-connection-between-sites-and-assets-deployments}
 
 [!DNL Experience Manager]管理员可以创建此集成。 创建后，使用该组件所需的权限会通过用户组建立。 用户组在[!DNL Sites]部署和DAM部署中定义。
 
@@ -162,7 +162,7 @@ ht-degree: 29%
 
 获取的资产可用作任何其他本地资产，但关联的元数据无法编辑。
 
-### 检查跨网页的资产使用情况{#asset-usage-references}
+### 检查跨网页的资产使用情况 {#asset-usage-references}
 
 [!DNL Experience Manager] 允许DAM用户检查对资产的所有引用。它有助于了解和管理远程[!DNL Sites]和复合资产中资产的使用情况。 [!DNL Experience Manager Sites]部署中的许多网页作者可以在不同网页中的远程[!DNL Assets]上使用资产。 为了简化资产管理，并且不会导致引用损坏，DAM用户必须检查本地和远程网页中资产的使用情况。 资产的[!UICONTROL 属性]页面中的[!UICONTROL 引用]选项卡列出了资产的本地和远程引用。
 
@@ -179,11 +179,11 @@ ht-degree: 29%
 
    ![强制删除警告](assets/delete-referenced-asset.png)
 
-## 限制和最佳实践{#tip-and-limitations}
+## 限制和最佳实践 {#tip-and-limitations}
 
 * 要深入了解资产使用情况，请在[!DNL Sites]实例上配置[资产分析](/help/assets/asset-insights.md)功能。
 
-### 权限和资产管理{#permissions-and-managing-assets}
+### 权限和资产管理 {#permissions-and-managing-assets}
 
 * 本地资产与远程部署中的原始资产不同步。在 DAM 部署上所具有的任何编辑、删除或撤销权限均不会传播到下游。
 * 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。不允许进行其他编辑。
