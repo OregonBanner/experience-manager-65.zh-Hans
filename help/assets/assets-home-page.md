@@ -3,16 +3,16 @@ title: '[!DNL Assets] 主页体验'
 description: 将 [!DNL Experience Manager Assets] 主页个性化，以获得丰富的欢迎屏幕体验，包括有关资产近期活动的快照。
 contentOwner: AG
 feature: 资产管理开发人员工具
-role: Administrator, Business Practitioner
+role: Admin, User
 exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] 主页体验  {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] 主页体验 {#aem-assets-home-page-experience}
 
 将[!DNL Adobe Experience Manager Assets]主页个性化，以获得丰富的欢迎屏幕体验，包括有关资产近期活动的快照。
 
