@@ -2,17 +2,17 @@
 title: 相关资产
 description: 了解如何与共享某些常见属性的数字资产关联。 还可以在数字资产之间创建源派生的关系。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 协作，资产管理
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
 
 ---
 
-# 相关资产{#related-assets}
+# 相关资产 {#related-assets}
 
 [!DNL Adobe Experience Manager Assets] 允许您使用相关资产功能，根据贵组织的需求手动关联资产。例如，您可以将许可证文件与类似主题上的资产或图像/视频相关联。 您可以与共享某些公共属性的资产相关联。 您还可以使用该功能在资产之间创建源/派生关系。 例如，如果您有一个从INDD文件生成的PDF文件，则可以将PDF文件与其源INDD文件相关联。
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >只有对资产具有编辑权限的用户才能与资产关联和取消关联。
 
-## 相关资产{#relating-assets}
+## 相关资产 {#relating-assets}
 
 1. 从[!DNL Experience Manager]界面中，打开要关联的资产的&#x200B;**[!UICONTROL 属性]**&#x200B;页面。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 1. 单击&#x200B;**[!UICONTROL 确定]**&#x200B;以关闭对话框。 您删除了关系的资产将从&#x200B;**[!UICONTROL Related]**&#x200B;部分下的相关资产列表中删除。
 
-## 翻译相关资产{#translating-related-assets}
+## 翻译相关资产 {#translating-related-assets}
 
 使用相关资产功能在资产之间创建源/派生关系在翻译工作流程中也非常有用。 当您对派生资产运行翻译工作流时，[!DNL Experience Manager Assets]会自动获取源文件引用的任何资产并包含该资产进行翻译。 这样，源资产引用的资产与源资产和派生资产一起进行折算。 例如，假定您的英语副本包含派生资产及其源文件，如所示。
 
