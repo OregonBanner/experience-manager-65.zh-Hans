@@ -2,17 +2,17 @@
 title: 处理支持的文件格式的最佳实践
 description: 使用 [!DNL Experience Manager Assets]处理各种受支持文件类型的最佳实践。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 资产管理，开发人员工具
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
 
 ---
 
-# 资产文件格式最佳实践{#assets-file-format-best-practices}
+# 资产文件格式最佳实践 {#assets-file-format-best-practices}
 
 [!DNL Adobe Experience Manager Assets] 支持许多专有和第三方文件格式库，以满足用户的各种文件支持要求。支持的Adobe库包括[!DNL Adobe Camera Raw]、Gibson、Adobe PDF光栅器和[!DNL Adobe InDesign Server]。 此外，[!DNL Experience Manager Assets]还支持第三方库，包括[!DNL ImageMagick]、[!DNL TwelveMonkeys]等。
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，请联系Adobe客户关怀团队，如果您计划处理大量大型PSD或PSB文件。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
-## [!DNL Adobe Camera Raw] 库  {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] 库 {#adobe-camera-raw-library}
 
 为获得最佳性能，Adobe建议对RAW和DNG文件使用[!DNL Adobe Camera Raw]库。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 有关更多信息，请参阅[Camera Raw支持](/help/assets/camera-raw.md)。
 
-## Adobe PDF光栅器库{#adobe-pdf-rasterizer-library}
+## Adobe PDF光栅器库 {#adobe-pdf-rasterizer-library}
 
 为获得最佳结果，Adobe建议对以下文件使用Adobe PDF光栅器库：
 
@@ -50,7 +50,7 @@ Adobe建议您使用[!DNL Adobe InDesign Server]提取特定于[!DNL Adobe InDes
 
 目前，[!DNL Dynamic Media]每个文件最多可支持15 GB的内容。
 
-## ImageMagick库{#imagemagick-library}
+## ImageMagick库 {#imagemagick-library}
 
 Adobe建议在以下情况下使用ImageMagick库：
 
@@ -61,7 +61,7 @@ Adobe建议在以下情况下使用ImageMagick库：
 
 要了解如何在[!DNL Experience Manager]中设置[!DNL ImageMagick]库，请参阅[使用ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)。 有关最佳用法，请参阅[配置ImageMagick](/help/assets/best-practices-for-imagemagick.md)的最佳实践。
 
-## 图像转码库{#image-transcoding-library}
+## 图像转码库 {#image-transcoding-library}
 
 Adobe图像转码库是一款图像处理解决方案，可执行核心的图像处理功能，包括图像编码、转码、重新采样、调整大小等。
 
