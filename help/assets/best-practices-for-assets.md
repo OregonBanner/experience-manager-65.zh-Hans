@@ -3,16 +3,16 @@ title: ' [!DNL Assets]的最佳实践'
 description: 通过识别并遵守依赖于部署和配置的最佳实践，提高负载下的系统稳定性和性能。
 contentOwner: AG
 feature: 资产管理
-role: Architect, Administrator
+role: Architect, Admin
 exl-id: 6b50f1b3-9c1c-47c8-a43e-6f40c42a41cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets] {#best-practices-for-assets}的最佳实践
+# [!DNL Assets]的最佳实践 {#best-practices-for-assets}
 
 [!DNL Adobe Experience Manager Assets] 是提供高质量数字营销体验的关键部分，通过提高内容速度为实现业务目标做出贡献。如果您在[!DNL Experience Manager Assets]内处理大量资产，或定期/定期上传大量资产(包括视频和Dynamic Media)，那么优化数字资产管理体验对于提高系统效率至关重要。
 
