@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: 组件，发布
-source-git-commit: 3221454e2d2dfd90b645a4c0303404d44f8d373d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '3252'
 ht-degree: 22%
