@@ -2,17 +2,17 @@
 title: 创建和配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面和同时编辑多个资产。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 开发人员工具，资产管理
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2129'
 ht-degree: 1%
 
 ---
 
-# 创建和配置资产编辑器页面{#creating-and-configuring-asset-editor-pages}
+# 创建和配置资产编辑器页面 {#creating-and-configuring-asset-editor-pages}
 
 本文档将介绍以下内容：
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 >
 >资产共享可用作开源引用实施。 请参阅[资产共享共用](https://adobe-marketing-cloud.github.io/asset-share-commons/)。 它不受官方支持。
 
-## 为何要创建和配置资产编辑器页面？{#why-create-and-configure-asset-editor-pages}
+## 为何要创建和配置资产编辑器页面？ {#why-create-and-configure-asset-editor-pages}
 
 数字资产管理正在越来越多地使用。 当专业用户从小规模解决方案（面向专业培训用户群，例如摄影师或分类学家）转移到更大、更多样的用户组（例如业务用户、WCM作者、记者等）时，专业用户的[!DNL Adobe Experience Manager Assets]强大的用户界面可能会提供太多信息，而利益相关方开始请求特定的用户界面或应用程序访问与他们相关的数字资产。
 
@@ -190,7 +190,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 -->
 
-## 创建并配置资产编辑器页面{#creating-and-configuring-an-asset-editor-page}
+## 创建和配置资产编辑器页面 {#creating-and-configuring-an-asset-editor-page}
 
 您可以自定义资产编辑器，以确定用户如何查看和编辑数字资产。 为此，您需要创建一个新的资产编辑器页面，然后自定义用户在该页面上可执行的视图和操作。
 
@@ -198,7 +198,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 >
 >如果要向DAM资产编辑器添加自定义字段，请向`/apps/dam/content/asseteditors.`添加新的`cq:Widget`节点
 
-### 创建资产编辑器页面{#creating-the-asset-editor-page}
+### 创建资产编辑器页面 {#creating-the-asset-editor-page}
 
 创建资产编辑器页面时，最佳做法是将页面创建到资产共享页面的正下方。
 
@@ -217,7 +217,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![assetshare6](assets/assetshare6.png)
 
-#### 设置资产编辑器以从资产共享页面{#setting-which-asset-editor-opens-from-an-asset-share-page}中打开
+#### 设置要从资产共享页面打开的资产编辑器 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 创建自定义资产编辑器页面后，您需要确保在双击您创建的自定义资产共享时，在自定义编辑器页面中打开资产。
 
@@ -233,7 +233,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### 添加资产编辑器组件{#adding-asset-editor-components}
+#### 添加资产编辑器组件 {#adding-asset-editor-components}
 
 您可以通过向页面添加组件来确定资产编辑器具有的功能。
 
@@ -261,7 +261,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![screen_shot_2012-04-23at22743pm](assets/screen_shot_2012-04-23at22743pm.png)
 
-#### 元数据表单和文本字段 — 配置查看元数据组件{#metadata-form-and-text-field-configuring-the-view-metadata-component}
+#### 元数据表单和文本字段 — 配置查看元数据组件 {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
 元数据表单是一个包含开始和结束操作的表单。 在中间，输入&#x200B;**文本**&#x200B;字段。 有关使用表单的更多信息，请参阅[Forms](/help/sites-authoring/default-components-foundation.md#form-component)。
 
@@ -361,7 +361,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![chlimage_1-164](assets/chlimage_1-392.png)
 
-#### 添加资产编辑器操作{#adding-asset-editor-actions}
+#### 添加资产编辑器操作 {#adding-asset-editor-actions}
 
 您可以通过一系列预定义操作来确定用户可对选定的数字资产执行的操作。
 
@@ -386,7 +386,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
-## 使用资产编辑器页面{#multi-editing-assets-with-the-asset-editor-page}对资产进行多次编辑
+## 使用资产编辑器页面多次编辑资产 {#multi-editing-assets-with-the-asset-editor-page}
 
 通过[!DNL Experience Manager Assets]，您可以一次更改多个资产。 选择资产后，您可以同时更改其：
 
