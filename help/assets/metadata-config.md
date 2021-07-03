@@ -2,17 +2,17 @@
 title: 元数据功能的配置和管理。
 description: 配置和管理与元数据添加和管理相关的 [!DNL Experience Manager Assets] 功能。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 元数据
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 15%
 
 ---
 
-# [!DNL Assets] {#config-metadata}中元数据功能的配置和管理
+# [!DNL Assets]中元数据功能的配置和管理 {#config-metadata}
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -22,11 +22,11 @@ ht-degree: 15%
 
 [!DNL Adobe Experience Manager Assets] 保留每个资产的元数据。它允许更轻松地对资产进行分类和组织，并帮助正在查找特定资产的用户。 通过使用资产保留和管理元数据的功能，您可以根据资产的元数据自动组织和处理资产。 [!DNL Adobe Experience Manager Assets] 允许管理员配置和自定义元数据功能，以修改默认Adobe产品。
 
-## 编辑元数据架构{#metadata-schema}
+## 编辑元数据架构 {#metadata-schema}
 
 有关详细信息，请参阅[编辑元数据架构表单](metadata-schemas.md#edit-metadata-schema-forms)。
 
-## 在[!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}中注册自定义命名空间
+## 在[!DNL Experience Manager]中注册自定义命名空间 {#registering-a-custom-namespace-within-aem}
 
 您可以在[!DNL Experience Manager]中添加自己的命名空间。 正如存在预定义的命名空间（如`cq`、`jcr`和`sling`）一样，您也可以为存储库元数据和XML处理提供一个命名空间。
 
@@ -35,7 +35,7 @@ ht-degree: 15%
 1. 要添加命名空间，请单击页面底部的&#x200B;**[!UICONTROL New]**。
 1. 在XML命名空间约定中指定自定义命名空间。 以URI的形式指定ID以及ID的关联前缀。 单击&#x200B;**[!UICONTROL 保存]**。
 
-## 配置批量元数据更新的限制{#bulk-metadata-update-limit}
+## 配置批量元数据更新限制 {#bulk-metadata-update-limit}
 
 为防止出现类似拒绝服务(DOS)的情况，[!DNL Enterprise Manager]会限制Sling请求中支持的参数数。 一次更新多个资产的元数据时，您可能会达到限制，并且不会为更多资产更新元数据。 Enterprise Manager在日志中生成以下警告：
 
@@ -47,7 +47,7 @@ ht-degree: 15%
 
 通过元数据配置文件，您可以将默认元数据应用到文件夹中的资产。创建元数据配置文件并将其应用到文件夹。您随后上传到文件夹的任何资产都会继承您在元数据配置文件中配置的默认元数据。
 
-### 添加元数据配置文件{#adding-a-metadata-profile}
+### 添加元数据配置文件 {#adding-a-metadata-profile}
 
 1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 元数据配置文件]**，然后单击&#x200B;**[!UICONTROL 创建]**。
 1. 输入配置文件的标题，例如`Sample Metadata`，然后单击&#x200B;**[!UICONTROL 创建]**。 此时会显示元数据配置文件的[!UICONTROL 编辑表单]。
@@ -91,7 +91,7 @@ ht-degree: 15%
 
    ![在“元数据配置文件”页面中添加的元数据配置文件](assets/MetadataProfiles-page.png)
 
-### 复制元数据配置文件{#copying-a-metadata-profile}
+### 复制元数据配置文件 {#copying-a-metadata-profile}
 
 1. 从&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;页面中，选择元数据配置文件以制作其副本。
 
@@ -103,7 +103,7 @@ ht-degree: 15%
 
    ![在元数据配置文件页面中添加的元数据配置文件副本](assets/copy-metadata-profile.png)
 
-### 删除元数据配置文件{#deleting-a-metadata-profile}
+### 删除元数据配置文件 {#deleting-a-metadata-profile}
 
 1. 在&#x200B;**[!UICONTROL 元数据配置文件]**&#x200B;页面中，选择要删除的配置文件。
 
@@ -130,11 +130,11 @@ To apply a metadata profile globally, follow these steps:
   ![See applied metadata profile to a folder in the JCR in CRXDE](assets/metadata-profile-folder-setting2.png)
 -->
 
-## 文件夹{#folder-metadata-schema}的元数据架构
+## 文件夹的元数据架构 {#folder-metadata-schema}
 
 [!DNL Adobe Experience Manager Assets] 允许您为资产文件夹创建元数据架构，这些架构定义了文件夹属性页面中显示的布局和元数据。
 
-### 添加文件夹元数据架构表单{#add-a-folder-metadata-schema-form}
+### 添加文件夹元数据架构表单 {#add-a-folder-metadata-schema-form}
 
 使用文件夹元数据架构Forms编辑器为文件夹创建和编辑元数据架构。
 
@@ -142,7 +142,7 @@ To apply a metadata profile globally, follow these steps:
 1. 在[!UICONTROL 文件夹元数据架构Forms]页面上，单击&#x200B;**[!UICONTROL 创建]**。
 1. 指定表单的名称，然后单击&#x200B;**[!UICONTROL 创建]**。 新架构表单列在[!UICONTROL 架构Forms]页面中。
 
-### 编辑文件夹元数据架构表单{#edit-folder-metadata-schema-forms}
+### 编辑文件夹元数据架构表单 {#edit-folder-metadata-schema-forms}
 
 您可以编辑新添加的或现有的元数据架构表单，其中包括：
 
@@ -172,7 +172,7 @@ To apply a metadata profile globally, follow these steps:
 
 1. 单击工具栏中的&#x200B;**[!UICONTROL 保存]**&#x200B;以保存更改。
 
-#### 用于构建表单的组件{#components-to-build-forms}
+#### 用于构建表单的组件 {#components-to-build-forms}
 
 **[!UICONTROL 构建表单]**&#x200B;选项卡列出了您在文件夹元数据架构表单中使用的表单项目。 **[!UICONTROL 设置]**&#x200B;选项卡显示您在&#x200B;**[!UICONTROL 构建表单]**&#x200B;选项卡中选择的每个项目的属性。 以下是&#x200B;**[!UICONTROL 构建表单]**&#x200B;选项卡中可用的表单项目列表：
 
@@ -187,7 +187,7 @@ To apply a metadata profile globally, follow these steps:
 | [!UICONTROL 标准标记] | 添加标记。 |
 | [!UICONTROL 隐藏字段] | 添加隐藏字段。在保存资产时，该字段将作为 POST 参数发送。 |
 
-#### 编辑表单项{#editing-form-items}
+#### 编辑表单项目 {#editing-form-items}
 
 要编辑表单项的属性，请单击该组件，并在&#x200B;**[!UICONTROL Settings]**&#x200B;选项卡中编辑以下属性的全部或子集。
 
@@ -213,19 +213,19 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL 类]**:属性与关联的对象类。
 
-### 删除文件夹元数据架构表单{#delete-folder-metadata-schema-forms}
+### 删除文件夹元数据架构表单 {#delete-folder-metadata-schema-forms}
 
 您可以从文件夹元数据架构Forms页面中删除文件夹元数据架构表单。 要删除表单，请选择表单，然后单击工具栏中的删除选项。
 
 ![delete_form](assets/delete_form.png)
 
-### 分配文件夹元数据架构{#assign-a-folder-metadata-schema}
+### 分配文件夹元数据架构 {#assign-a-folder-metadata-schema}
 
 您可以从文件夹元数据架构Forms页面或在创建文件夹时，将文件夹元数据架构分配给文件夹。
 
 如果为文件夹配置元数据架构，则架构表单的路径将存储在`./jcr:content`下文件夹节点的`folderMetadataSchema`属性中。
 
-#### 从“文件夹元数据架构”页面{#assign-to-a-schema-from-the-folder-metadata-schema-page}中分配给架构
+#### 从“文件夹元数据架构”页面中分配给架构 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
 1. 在[!DNL Experience Manager]界面中，转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 文件夹元数据架构]**。
 1. 从文件夹元数据架构Forms页面中，选择要应用于文件夹的架构表单。
@@ -240,7 +240,7 @@ To apply a metadata profile globally, follow these steps:
 
    ![folder_metadata_properties](assets/folder_metadata_properties.png)
 
-#### 创建文件夹{#assign-a-schema-when-creating-a-folder}时分配架构
+#### 创建文件夹时分配架构 {#assign-a-schema-when-creating-a-folder}
 
 在创建文件夹时，您可以分配文件夹元数据架构。 如果系统中至少存在一个文件夹元数据架构，则在&#x200B;**[!UICONTROL 创建文件夹]**&#x200B;对话框中会显示一个额外的列表。 您可以选择所需的架构。 默认情况下，未选择架构。
 
@@ -253,7 +253,7 @@ To apply a metadata profile globally, follow these steps:
 1. 打开应用元数据架构的文件夹的元数据属性。
 1. 要查看文件夹元数据字段，请单击&#x200B;**[!UICONTROL 文件夹元数据]**&#x200B;选项卡。
 
-### 使用文件夹元数据架构{#use-the-folder-metadata-schema}
+### 使用文件夹元数据架构 {#use-the-folder-metadata-schema}
 
 打开使用文件夹元数据架构配置的文件夹属性。文件夹[!UICONTROL 属性]页面中会显示&#x200B;**[!UICONTROL 文件夹元数据]**&#x200B;选项卡。 要查看文件夹元数据架构表单，请选择此选项卡。
 
@@ -261,7 +261,7 @@ To apply a metadata profile globally, follow these steps:
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 
-## 提示和限制{#best-practices-limitations}
+## 提示和限制 {#best-practices-limitations}
 
 * 要导入自定义命名空间的元数据，请首先注册命名空间。
 * 属性选取器显示架构编辑器和搜索表单中使用的属性。 属性选取器不会从资产中选取元数据属性。
