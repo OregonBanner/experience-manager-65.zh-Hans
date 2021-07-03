@@ -2,10 +2,10 @@
 title: 向数字资产添加水印
 description: 了解如何使用水印功能向资产添加数字水印。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 资产管理
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 要以编程方式或使用动态信息对PDF文档进行水印，请考虑使用[Experience Manager文档服务](/help/forms/using/overview-aem-document-services.md)产品。
 
-## 提示和限制{#tips-limitations}
+## 提示和限制 {#tips-limitations}
 
 * 仅支持基于文本的水印。 即使在创建[!UICONTROL 添加水印过程]时可以上传图像，图像也不会用作水印。
 * 仅支持PNG和JPEG文件加水印。 其他资产格式不会添加水印。
