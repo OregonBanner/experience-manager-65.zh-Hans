@@ -2,17 +2,17 @@
 title: 收藏集、片段和代码片段模板的多租户
 description: 了解多租户功能如何让您根据客户组织来分隔CRX存储库中的内容，以防止未经授权的访问。
 contentOwner: AG
-role: Architect, Administrator, Leader
+role: Architect, Admin, Leader
 feature: 收藏集
 exl-id: f95560c9-f1b9-4e86-94a7-70347d268d8f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 1%
 
 ---
 
-# 收藏集、片段和代码片段模板的多租户{#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# 收藏集、片段和代码片段模板的多租户 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 多租户功能允许您根据组织前缀和组织ID在CRX中分隔内容，以防止其他组织的用户对内容进行未经授权的访问。
 
