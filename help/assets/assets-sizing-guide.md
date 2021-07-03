@@ -2,17 +2,17 @@
 title: '[!DNL Assets] 大小调整指南'
 description: 确定有效量度以评估部署 [!DNL Adobe Experience Manager Assets]所需的基础结构和资源的最佳实践。
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: 资产管理
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets] 大小调整指南  {#assets-sizing-guide}
+# [!DNL Assets] 大小调整指南 {#assets-sizing-guide}
 
 在调整[!DNL Adobe Experience Manager Assets]实施的环境大小时，务必确保在磁盘、CPU、内存、IO和网络吞吐量方面有足够的可用资源。 调整其中许多资源的大小需要了解系统中加载的资产数量。 如果没有更好的量度可用，您可以将现有库的大小除以库的年龄，以查找创建资产的速率。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 [获取文件](assets/disk_sizing_tool.xlsx)
 
-### 共享数据存储{#shared-datastores}
+### 共享数据存储 {#shared-datastores}
 
 对于大型数据存储，您可以通过网络连接驱动器上的共享文件数据存储或通过Amazon S3数据存储来实施共享数据存储。 在这种情况下，单个实例无需维护二进制文件的副本。 此外，共享数据存储有助于无二进制复制，并有助于减少将资产复制到发布环境的带宽。
 
@@ -66,19 +66,19 @@ ht-degree: 0%
 
 由于存在某些缺陷，因此在任何情况下都不建议共享数据存储。
 
-#### 单点故障{#single-point-of-failure}
+#### 单点故障 {#single-point-of-failure}
 
 共享数据存储，在基础架构中引入单点故障。 假设您的系统有一个作者实例和两个发布实例，每个实例都有其自己的数据存储。 如果其中任何一个崩溃，则另外两个仍可以继续运行。 但是，如果共享数据存储，则单个磁盘故障可能会破坏整个基础架构。 因此，请确保您维护共享数据存储的备份，您可以在其中快速还原数据存储。
 
 与常规的磁盘架构相比，部署用于共享数据存储的AWS S3服务会显着降低故障概率，因此，这是首选。
 
-#### 复杂性增加{#increased-complexity}
+#### 复杂性增加 {#increased-complexity}
 
 共享数据存储还增加了操作的复杂性，如垃圾收集。 通常，只需单击一次即可启动独立数据存储的垃圾收集。 但是，共享数据存储除了在单个节点上运行实际集合之外，还需要对使用数据存储的每个成员执行标记扫描操作。
 
 对于AWS操作，实施单个中心位置(通过Amazon S3)，而不是构建EBS卷的RAID阵列，可以显着抵消系统的复杂性和操作风险。
 
-#### 性能问题{#performance-concerns}
+#### 性能问题 {#performance-concerns}
 
 共享数据存储要求将二进制文件存储在所有实例之间共享的网络挂载驱动器上。 由于这些二进制文件是通过网络访问的，因此系统性能会受到不利影响。 使用快速网络连接到快速磁盘阵列可以部分减轻影响。 但是，这个建议很昂贵。 对于AWS操作，所有磁盘都是远程的，需要网络连接。 临时卷在实例启动或停止时丢失数据。
 
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 后台写入线程会引入S3实现中的延迟。 备份过程必须考虑到此滞后。 此外，进行备份时， Lucene索引可能仍不完整。 它适用于写入S3数据存储并从其他实例访问的任何时间敏感文件。
 
-### 节点存储或文档存储{#node-store-document-store}
+### 节点存储或文档存储 {#node-store-document-store}
 
 由于以下资源消耗，因此很难获得NodeStore或DocumentStore的精确大小调整图：
 
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 此外，您还可以在配置管理器中编辑`com.day.cq.dam.commons.handler.StandardImageHandler`组件的阈值大小属性，以使用大于零的中间临时文件。
 
-## 资产的最大数量{#maximum-number-of-assets}
+## 资产的最大数量 {#maximum-number-of-assets}
 
 由于文件系统限制，数据存储中可以存在的文件数量限制为21亿。 在达到数据存储限制之前，存储库可能会遇到由于节点数量过大而导致的问题。
 
@@ -121,6 +121,6 @@ ht-degree: 0%
 
 由于像素大小等其他因素影响处理，因此很难准确估计支持[!DNL Experience Manager]特定堆的现成TIFF文件的大小。 [!DNL Experience Manager]可以即装即用地处理大小为255 MB的文件，但无法处理大小为18 MB的文件，因为后者包含的像素比前者要高得异乎寻常。
 
-## 资产大小{#size-of-assets}
+## 资产大小 {#size-of-assets}
 
 默认情况下，[!DNL Experience Manager]允许您上传文件大小最大为2 GB的资产。 要在[!DNL Experience Manager]中上传超大型资产，请参阅[上传超大型资产的配置](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb)。
