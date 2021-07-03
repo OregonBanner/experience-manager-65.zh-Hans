@@ -2,17 +2,17 @@
 title: 网络注意事项和要求
 description: 讨论设计 [!DNL Adobe Experience Manager Assets] 部署时的网络注意事项。
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets] 网络注意事项  {#assets-network-considerations}
+# [!DNL Assets] 网络注意事项 {#assets-network-considerations}
 
 了解网络与了解[!DNL Adobe Experience Manager Assets]同样重要。 网络可能会影响上传、下载和用户体验。 绘制网络拓扑图有助于确定网络中必须修复的瓶颈点和次优化区域，以提高网络性能和用户体验。
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 * 定义[!DNL Experience Manager]网络接口的同时使用者。
 * 定义了[!DNL Experience Manager]部署的工作流。
 
-## 从客户端设备到公司网络的连接{#connectivity-from-the-client-device-to-the-corporate-network}
+## 从客户端设备到公司网络的连接 {#connectivity-from-the-client-device-to-the-corporate-network}
 
 首先，绘制单个客户端设备与公司网络之间的连接图。 在此阶段，识别共享资源，如WiFi连接，其中多个用户访问同一点或以太网交换机以上传和下载资产。
 
@@ -41,13 +41,13 @@ ht-degree: 0%
 
 右侧显示的计算机在VPN上的公司网络上游有限，速度为1 Mbps。 1Mbps连接的用户体验与1Gbps连接的用户体验有很大不同。 根据用户与之交互的资产的大小，其VPN上行链路可能不足以完成任务。
 
-## 公司网络的拓扑{#topology-of-the-corporate-network}
+## 公司网络的拓扑 {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
 该图表显示公司网络内的上行链路速度高于通常使用的上行链路速度。 这些管道是共享资源。 如果共享交换机需要处理50个客户端，则它可能是一个瓶颈。 在初始图中，只有两台计算机共享该特定连接。
 
-## 从公司网络和[!DNL Experience Manager]环境{#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}上行到Internet
+## 从公司网络和[!DNL Experience Manager]环境上行到Internet {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 从示例图中，您可以得出六台设备共享概念性的10Mbps通道。 根据杠杆资产的规模，这可能不足以满足用户的预期。
 
-## [!DNL Experience Manager]环境{#topology-of-the-aem-environment}的拓扑
+## [!DNL Experience Manager]环境的拓扑 {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 从客户端设备到[!DNL Experience Manager]部署的网络审查后，最小的中断点似乎是10 Mb企业防火墙限制。 您可以在[资产大小调整指南](assets-sizing-guide.md)的大小调整计算器中使用这些值来确定用户体验。
 
-## [!DNL Experience Manager]部署{#defined-workflows-of-the-aem-deployment}的已定义工作流
+## [!DNL Experience Manager]部署的已定义工作流 {#defined-workflows-of-the-aem-deployment}
 
 考虑网络性能时，考虑系统中将发生的工作流和发布可能很重要。 此外，您使用的S3或其他网络连接存储和I/O请求会消耗网络带宽。 因此，即使在完全优化的网络中，性能也可能受到磁盘I/O的限制。
 
