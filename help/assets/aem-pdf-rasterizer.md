@@ -2,17 +2,17 @@
 title: 使用PDF光栅器生成演绎版
 description: 使用Adobe PDF光栅器库生成高质量缩略图和演绎版。
 contentOwner: AG
-role: Developer, Administrator
+role: Developer, Admin
 feature: 开发人员工具，演绎版
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: fbabf714a3b5066fdef144a4092eaad7e8a6b370
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 0%
 
 ---
 
-# 使用PDF光栅器{#using-pdf-rasterizer}
+# 使用PDF光栅器 {#using-pdf-rasterizer}
 
 将内容密集型大型PDF或AI文件上传到[!DNL Adobe Experience Manager Assets]时，默认库可能无法生成准确的输出。 Adobe的PDF光栅化器库与默认库的输出相比，可以生成更可靠、更准确的输出。 Adobe建议对以下情况使用PDF光栅器库：
 
