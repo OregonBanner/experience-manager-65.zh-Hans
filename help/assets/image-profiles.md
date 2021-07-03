@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: 图像配置文件
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2752'
 ht-degree: 22%
@@ -29,7 +29,7 @@ ht-degree: 22%
 >
 >图像配置文件不适用于PDF、GIF动画或INDD(Adobe InDesign)文件。
 
-## 裁剪选项{#crop-options}
+## 裁剪选项 {#crop-options}
 
 <!-- CQDOC-16069 for paragraph directly below -->
 
@@ -91,7 +91,7 @@ ht-degree: 22%
 
 [锐化图像](/help/assets/assets/sharpening_images.pdf)中介绍了锐化。
 
-## 创建Dynamic Media图像配置文件{#creating-image-profiles}
+## 创建Dynamic Media图像配置文件 {#creating-image-profiles}
 
 要为其他资产类型定义高级处理参数，请参阅[配置资产处理](config-dms7.md#configuring-asset-processing)。
 
@@ -113,7 +113,7 @@ ht-degree: 22%
 
 1. 点按&#x200B;**[!UICONTROL 保存]**。此时新创建的配置文件会显示在可用配置文件列表中。
 
-## 编辑或删除Dynamic Media图像配置文件{#editing-or-deleting-image-profiles}
+## 编辑或删除Dynamic Media图像配置文件 {#editing-or-deleting-image-profiles}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 图像配置文件]**。
 1. 选择要编辑或删除的图像配置文件。要编辑图像配置文件，请选择&#x200B;**[!UICONTROL 编辑图像处理配置文件]**。要删除该配置文件，请选择&#x200B;**[!UICONTROL 删除图像处理配置文件]**。
@@ -122,7 +122,7 @@ ht-degree: 22%
 
 1. 如果是进行编辑操作，请保存更改。如果是进行删除操作，请确认您要删除配置文件。
 
-## 将Dynamic Media图像配置文件应用到文件夹{#applying-an-image-profile-to-folders}
+## 将Dynamic Media图像配置文件应用到文件夹 {#applying-an-image-profile-to-folders}
 
 当您将图像配置文件分配给文件夹之后，该文件夹中的所有子文件夹都会自动继承父文件夹的配置文件。此工作流意味着您只能向文件夹分配一个图像配置文件。 因此，您在上传、存储、使用资产以及将资产存档的过程中，请妥善安排文件夹结构。
 
@@ -136,7 +136,7 @@ ht-degree: 22%
 
 您可以重新处理文件夹中的资产，该文件夹中已有您稍后更改的图像配置文件。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-### 将Dynamic Media图像配置文件应用到特定文件夹{#applying-image-profiles-to-specific-folders}
+### 将Dynamic Media图像配置文件应用到特定文件夹 {#applying-image-profiles-to-specific-folders}
 
 您可以从“工具”菜单中将图像配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”]**。 本节将介绍这两种将图像配置文件应用到文件夹的方法。
 
@@ -144,7 +144,7 @@ ht-degree: 22%
 
 您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-#### 将Dynamic Media图像配置文件从Profiles用户界面{#applying-image-profiles-to-folders-from-profiles-user-interface}应用到文件夹
+#### 从“配置文件”用户界面将Dynamic Media图像配置文件应用到文件夹 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 图像配置文件]**。
 1. 选择您要应用到一个或多个文件夹的图像配置文件。
@@ -153,7 +153,7 @@ ht-degree: 22%
 
 1. 点按&#x200B;**[!UICONTROL 将处理配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按/单击&#x200B;**[!UICONTROL 应用]**。 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-#### 从“属性” {#applying-image-profiles-to-folders-from-properties}将Dynamic Media图像配置文件应用到文件夹
+#### 从“属性”将Dynamic Media图像配置文件应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到要将图像配置文件应用到的文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
@@ -161,7 +161,7 @@ ht-degree: 22%
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-### 全局应用Dynamic Media图像配置文件{#applying-an-image-profile-globally}
+### 全局应用Dynamic Media图像配置文件 {#applying-an-image-profile-globally}
 
 除了将配置文件应用到文件夹之外，您还可以全局应用一个配置文件，以便任何文件夹中上传到Experience Manager资产的任何内容都会应用选定的配置文件。
 
@@ -181,7 +181,7 @@ ht-degree: 22%
 
       ![configure_image_profiles](assets/configure_image_profiles.png)
 
-## 编辑单个图像的智能裁切或智能色板{#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
+## 编辑单个图像的智能裁剪或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ ht-degree: 22%
 
 1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL 保存]**，然后点按&#x200B;**[!UICONTROL 关闭]**&#x200B;以返回到资产文件夹。
 
-## 编辑多个图像的智能裁剪或智能色板{#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
+## 编辑多幅图像的智能裁剪或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
 
 将包含智能裁剪的图像配置文件应用到文件夹后，该文件夹中的所有图像都会对其应用裁剪。 如果需要，您可以&#x200B;*手动*&#x200B;重新调整多个图像中智能裁剪窗口的对齐或大小，以进一步优化其焦点。
 
@@ -263,13 +263,13 @@ ht-degree: 22%
 
 1. 在页面的右上角附近，点按&#x200B;**[!UICONTROL 保存]**，然后点按&#x200B;**[!UICONTROL 关闭]**&#x200B;以返回到资产文件夹。
 
-## 从文件夹{#removing-an-image-profile-from-folders}中删除图像配置文件
+## 从文件夹删除图像配置文件 {#removing-an-image-profile-from-folders}
 
 当您将图像配置文件从文件夹删除之后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。但是，此前对文件夹中的文件所做的处理均予以保留。
 
 您可以从“工具”菜单中的文件夹删除图像配置文件；如果您在 **[!UICONTROL 文件夹中]** ，也可以从“属性”中 **[!UICONTROL 删除]**。 本节将介绍这两种将图像配置文件从文件夹删除的方法。
 
-### 通过Profiles用户界面{#removing-image-profiles-from-folders-via-profiles-user-interface}将Dynamic Media图像配置文件从文件夹删除
+### 通过Profiles用户界面将Dynamic Media图像配置文件从文件夹删除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 图像配置文件]**。
 1. 选择您要从一个或多个文件夹删除的图像配置文件。
@@ -277,7 +277,7 @@ ht-degree: 22%
 
    如果图像配置文件的名称不再出现在文件夹名称的下方，则可以确定该图像配置文件不再应用于该文件夹。
 
-### 通过属性{#removing-image-profiles-from-folders-via-properties}将Dynamic Media图像配置文件从文件夹删除
+### 通过属性将Dynamic Media图像配置文件从文件夹删除 {#removing-image-profiles-from-folders-via-properties}
 
 1. 点按Experience Manager徽标，然后导航&#x200B;**[!UICONTROL Assets]**，然后导航到您要将图像配置文件从中删除的文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
