@@ -2,17 +2,17 @@
 title: 用于共享资产的专用文件夹
 description: 了解如何在 [!DNL Adobe Experience Manager Assets] 中创建专用文件夹，并与其他用户共享该文件夹，以及为其分配各种权限。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 协作
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 3%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] {#private-folder}中的专用文件夹
+# [!DNL Adobe Experience Manager Assets]中的专用文件夹 {#private-folder}
 
 您可以在[!DNL Adobe Experience Manager Assets]用户界面中创建专供您使用的专用文件夹。 您可以将此专用文件夹共享给其他用户，并为其分配各种权限。 根据您分配的权限级别，用户可以在文件夹中执行各种任务，例如查看文件夹中的资产或编辑资产。
 
@@ -20,7 +20,7 @@ ht-degree: 3%
 >
 >专用文件夹至少具有一个具有“所有者”角色的成员。
 
-## 创建和共享{#create-share-private-folder}专用文件夹
+## 创建和共享专用文件夹 {#create-share-private-folder}
 
 要创建和共享专用文件夹，请执行以下操作：
 
@@ -70,7 +70,7 @@ ht-degree: 3%
 >
 >要创建专用文件夹，您需要在要创建专用文件夹的父文件夹上执行读取和修改[访问控制权限](/help/sites-administering/security.md#permissions-in-aem)操作。 如果您不是管理员，则在`/content/dam`上默认不会为您启用这些权限。 在这种情况下，请先获取用户ID/组的这些权限，然后再尝试创建专用文件夹。
 
-## 删除专用文件夹{#delete-private-folder}
+## 删除专用文件夹 {#delete-private-folder}
 
 您可以删除文件夹，方法是选择文件夹并从顶部菜单中选择[!UICONTROL Delete]选项，或使用键盘上的Backspace键。
 
