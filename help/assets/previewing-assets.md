@@ -9,16 +9,16 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 feature: 资产管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 21%
 
 ---
 
-# 使用软件界面{#previewing-assets}预览资产
+# 使用软件界面预览资产 {#previewing-assets}
 
 您可以使用“预览”功能查看您上传的数字资产在客户在其Web浏览器中查看时的外观。 预览时将使用为资产分配的默认嵌入式跨设备查看器。
 
@@ -154,7 +154,7 @@ ht-degree: 21%
     </tbody>
     </table>
 
-## 使用键盘{#keyboard-navigation-asset-preview}预览资产
+## 使用键盘预览资产 {#keyboard-navigation-asset-preview}
 
 1. 从Assets用户界面中，导航到包含要预览资产的文件夹。
 
