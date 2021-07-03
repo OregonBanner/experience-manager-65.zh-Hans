@@ -3,16 +3,16 @@ title: 管理 [!DNL Adobe Stock] 资产
 description: 从 [!DNL Adobe Experience Manager]内搜索、获取、许可和管理 [!DNL Adobe Stock] 资产。 将授权资产用作任何其他数字资产。
 contentOwner: AG
 feature: 搜索，Adobe Stock
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 13%
 
 ---
 
-# 在[!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}中使用[!DNL Adobe Stock]资产
+# 在[!DNL Adobe Experience Manager Assets]中使用[!DNL Adobe Stock]资产 {#use-adobe-stock-assets-in-aem-assets}
 
 组织可以将其[!DNL Adobe Stock]企业计划与[!DNL Experience Manager Assets]集成，以确保许可资产广泛可用于其创意和营销项目，并具有[!DNL Experience Manager]的强大资产管理功能。
 
@@ -30,7 +30,7 @@ ht-degree: 13%
 >
 >只有[!DNL Experience Manager]管理员和[!DNL Admin Console]组织管理员才能执行集成，因为它需要管理员权限。
 
-### 创建IMS配置{#create-an-ims-configuration}
+### 创建IMS配置 {#create-an-ims-configuration}
 
 1. 在[!DNL Experience Manager]用户界面中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL AdobeIMS配置]**。 单击&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 云解决方案]** > **[!UICONTROL Adobe Stock]**。
 1. 重复使用现有证书或选择&#x200B;**[!UICONTROL 创建新证书]**。
@@ -43,7 +43,7 @@ ht-degree: 13%
 <!-- TBD: Update the URL to update the terminology when AIO team updates their documentation URL. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
 
-### 在[!DNL Experience Manager] {#create-adobe-stock-configuration-in-aem}中创建[!DNL Adobe Stock]配置
+### 在[!DNL Experience Manager]中创建[!DNL Adobe Stock]配置 {#create-adobe-stock-configuration-in-aem}
 
 1. 在[!DNL Experience Manager]中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**。
 1. 单击&#x200B;**[!UICONTROL 创建]**&#x200B;以创建配置并将其与现有IMS配置相关联。 选择`PROD`作为环境参数。
@@ -67,7 +67,7 @@ ht-degree: 13%
 
 **A.**[!DNL Adobe Stock] 搜索与提供 ID 的资产类似的资产。**B.** 搜索与您选择的形状或方向匹配的资产。**C.** 搜索一种或多种受支持的资产类型 **D.** 打开或折叠过滤器窗格 **E.** 在 中授权并保存选定的资产 [!DNL Experience Manager]**F.**[!DNL Experience Manager] 在 中保存带水印的资产 **G.**[!DNL Adobe Stock] 在 网站上浏览与选定资产类似的资产 **H.**[!DNL Adobe Stock] 在 网站上查看选定资产 **I.** 搜索结果中的选定资产数 **J.** 在卡片视图和列表视图之间切换
 
-### 查找资产{#find-assets}
+### 查找资产 {#find-assets}
 
 您的[!DNL Experience Manager]用户可以在[!DNL Experience Manager]和[!DNL Adobe Stock]中搜索资产。 当搜索位置不限于[!DNL Adobe Stock]时，将显示[!DNL Experience Manager]和[!DNL Adobe Stock]的搜索结果。
 
@@ -103,7 +103,7 @@ ht-degree: 13%
 
 *图：用于在中授权和保存资 [!DNL Adobe Stock] 产的对 [!DNL Experience Manager Assets]话框。*
 
-### 访问元数据和资产属性{#access-metadata-and-asset-properties}
+### 访问元数据和资产属性 {#access-metadata-and-asset-properties}
 
 用户可以访问和预览元数据，包括[!DNL Adobe Stock]中保存的资产的元数据属性，并为资产添加&#x200B;**[!UICONTROL 许可证引用]**。 [!DNL Experience Manager]但是，许可证引用更新不会在[!DNL Experience Manager]和[!DNL Adobe Stock]网站之间同步。
 
@@ -113,7 +113,7 @@ ht-degree: 13%
 
 *图：查看和访问已保存资产的元数据和许可证引用。*
 
-## 已知限制{#known-limitations}
+## 已知限制 {#known-limitations}
 
 * **未显示编辑图像警告**:授权图像时，用户无法检查图像是否为“仅编辑用途”。为防止可能的误用，管理员可以从Admin Console中关闭对编辑资产的访问。
 
