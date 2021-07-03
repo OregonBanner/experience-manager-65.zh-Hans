@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 feature: 视频配置文件
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '3697'
 ht-degree: 29%
@@ -48,7 +48,7 @@ Dynamic Media 附带预定义的自适应视频编码配置文件。此现成配
 
 另请参阅[用于处理元数据、图像和视频的配置文件](processing-profiles.md)。
 
-## 自适应视频编码预设{#adaptive-video-encoding-presets}
+## 自适应视频编码预设 {#adaptive-video-encoding-presets}
 
 下表显示了可作为最佳实践的编码配置文件，这些配置文件适用于移动和平板电脑设备及台式计算机上的自适应视频流播放。您可以针对任何宽高比的视频使用这些预设。
 
@@ -97,7 +97,7 @@ Dynamic Media 附带预定义的自适应视频编码配置文件。此现成配
  </tbody>
 </table>
 
-## 关于在视频配置文件{#about-smart-crop-video}中使用智能裁剪
+## 关于在视频配置文件中使用智能裁剪 {#about-smart-crop-video}
 
 视频智能裁剪 — 视频配置文件中提供的一项可选功能 — 是一款利用Adobe Sensei中人工智能功能的工具。 它会自动检测并裁剪您上传的任何自适应视频或渐进式视频中的焦点，而无论其大小如何。
 
@@ -129,7 +129,7 @@ Adobe Sensei限制为9000帧。 即，以30 FPS的速度为5分钟。 如果视�
 
 另请参阅[图像的智能裁剪](image-profiles.md)。
 
-## 为自适应流播放创建视频配置文件{#creating-a-video-encoding-profile-for-adaptive-streaming}
+## 为自适应流播放创建视频配置文件 {#creating-a-video-encoding-profile-for-adaptive-streaming}
 
 Dynamic Media已附带预定义的自适应视频编码配置文件，该配置文件是一组适用于MP4 H.264的视频上传设置，已针对最佳观看体验进行了优化。您可以在上传视频时使用此用户档案。
 
@@ -194,7 +194,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 您现在可以将配置文件应用到包含视频的文件夹。 请参阅[将视频配置文件应用到文件夹](#applying-a-video-profile-to-folders)或[全局应用视频配置文件](#applying-a-video-profile-globally)。
 
-## 为渐进式流播放创建视频配置文件{#creating-a-video-encoding-profile-for-progressive-streaming}
+## 为渐进式流播放创建视频配置文件 {#creating-a-video-encoding-profile-for-progressive-streaming}
 
 如果您选择不使用选项&#x200B;**[!UICONTROL 自适应流播放的编码]**，则您添加到配置文件的所有编码预设都将被视为用于单比特率流播放或渐进式视频交付的各个视频演绎版。 此外，不会进行验证，以确保所有视频呈现具有相同的纵横比。
 
@@ -316,7 +316,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 1. 在CRXDE Lite页面的左上角，点按&#x200B;**[!UICONTROL Back Home]**&#x200B;图标以返回Experience Manager。
 
-### 编辑视频配置文件{#editing-a-video-encoding-profile}
+### 编辑视频配置文件 {#editing-a-video-encoding-profile}
 
 您可以编辑您创建的任何视频配置文件，以在该配置文件中添加、编辑或删除视频预设。
 
@@ -339,7 +339,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save]**。
 
-### 复制视频配置文件{#copying-a-video-encoding-profile}
+### 复制视频配置文件 {#copying-a-video-encoding-profile}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
@@ -354,14 +354,14 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save]**。
 
-### 删除视频配置文件{#deleting-a-video-encoding-profile}
+### 删除视频配置文件 {#deleting-a-video-encoding-profile}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个或多个视频配置文件名称。
 1. 在工具栏中，点按&#x200B;**[!UICONTROL 删除]**。
 1. 点按&#x200B;**[!UICONTROL 确定]**。
 
-## 将视频配置文件应用到文件夹{#applying-a-video-profile-to-folders}
+## 将视频配置文件应用到文件夹 {#applying-a-video-profile-to-folders}
 
 当您将视频配置文件分配给文件夹之后，该文件夹中的所有子文件夹都会自动继承父文件夹的配置文件。此规则表示您只能向文件夹分配一个视频配置文件。 因此，您在上传、存储、使用资产以及将资产存档的过程中，请妥善安排文件夹结构。
 
@@ -375,7 +375,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-### 将视频配置文件应用到特定文件夹{#applying-video-profiles-to-specific-folders}
+### 将视频配置文件应用到特定文件夹 {#applying-video-profiles-to-specific-folders}
 
 您可以从“工具”菜单中将视频配置文件应用到 **[!UICONTROL 文件夹]** ，或者如果您在文件夹中，也可以从“属 **[!UICONTROL 性”]**。 本节将介绍这两种将视频配置文件应用到文件夹的方法。
 
@@ -383,13 +383,13 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 另请参阅[编辑文件夹中的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
 
-#### 通过Profiles用户界面{#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}将视频配置文件应用到文件夹
+#### 通过“配置文件”用户界面将视频配置文件应用到文件夹 {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 选择您要应用到一个或多个文件夹的视频配置文件。
 1. 点按&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按&#x200B;**[!UICONTROL 应用]**。 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
-#### 从“属性” {#applying-video-profiles-to-folders-from-properties}将视频配置文件应用到文件夹
+#### 从“属性”将视频配置文件应用到文件夹 {#applying-video-profiles-to-folders-from-properties}
 
 1. 点按或单击Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到要将视频配置文件应用到的文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
@@ -398,7 +398,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    ![chlimage_1-518](assets/chlimage_1-518.png)
 您可以监 [视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
-### 全局应用视频配置文件{#applying-a-video-profile-globally}
+### 全局应用视频配置文件 {#applying-a-video-profile-globally}
 
 除了将配置文件应用到文件夹之外，您还可以全局应用一个配置文件，以便任何文件夹中上传到Experience Manager资产的任何内容都会应用选定的配置文件。
 
@@ -411,19 +411,19 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * 您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
-## 监控视频配置文件处理作业{#monitoring-the-progress-of-an-encoding-job}的进度
+## 监控视频配置文件处理作业的进度 {#monitoring-the-progress-of-an-encoding-job}
 
 将显示处理指示器（或进度条），以便您能够直观地监视视频配置文件处理作业的进度。
 
 您还可以查看`error.log`文件以监视编码作业的进度、查看编码是否完成或查看任何作业错误。 `error.log`位于安装Experience Manager实例的`logs`文件夹中。
 
-## 从文件夹{#removing-a-video-profile-from-folders}中删除视频配置文件
+## 从文件夹删除视频配置文件 {#removing-a-video-profile-from-folders}
 
 当您将视频配置文件从文件夹删除之后，该文件夹中的所有子文件夹都会自动删除从父文件夹继承的配置文件。但是，此前对文件夹中的文件所做的处理均予以保留。
 
 您可以从“工具”菜单中将视频配置文件从文件夹删除 **** ，如果您在文件夹中，也可以从“文件夹设 **[!UICONTROL 置”中删除]**。 本节将介绍这两种将视频配置文件从文件夹删除的方法。
 
-### 通过Profiles用户界面{#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}将视频配置文件从文件夹删除
+### 通过配置文件用户界面将视频配置文件从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
 1. 选择您要从一个或多个文件夹删除的视频配置文件。
@@ -431,7 +431,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
    如果视频配置文件的名称不再出现在文件夹名称的下方，则可以确定该视频配置文件不再应用于该文件夹。
 
-### 通过属性{#removing-video-profiles-from-folders-by-way-of-properties}将视频配置文件从文件夹删除
+### 通过“属性”将视频配置文件从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-properties}
 
 1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到您要将视频配置文件从中删除的文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
