@@ -2,10 +2,10 @@
 title: 创建翻译项目
 description: 了解如何在 [!DNL Adobe Experience Manager]中创建翻译项目。
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: 翻译
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1875'
 ht-degree: 17%
