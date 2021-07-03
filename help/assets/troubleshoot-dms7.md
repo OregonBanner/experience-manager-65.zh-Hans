@@ -8,21 +8,21 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: 疑难解答
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 1%
 
 ---
 
-# Dynamic Media故障诊断 — Scene7模式{#troubleshooting-dynamic-media-scene-mode}
+# Dynamic Media - Scene7模式故障诊断{#troubleshooting-dynamic-media-scene-mode}
 
 以下文档介绍了运行&#x200B;**dynamicmedia_scene7**&#x200B;运行模式的Dynamic Media的故障排除。
 
-## 安装和配置{#setup-and-configuration}
+## 设置和配置 {#setup-and-configuration}
 
 通过执行以下操作，确保已正确设置Dynamic Media:
 
@@ -37,11 +37,11 @@ ht-degree: 1%
 
    此复制代理位于“创作代理”下。
 
-## 常规（所有资产）{#general-all-assets}
+## 常规（所有资产） {#general-all-assets}
 
 以下是所有资产的一些常规提示和技巧。
 
-### 资产同步状态属性{#asset-synchronization-status-properties}
+### 资产同步状态属性 {#asset-synchronization-status-properties}
 
 可以在CRXDE Lite中审阅以下资产属性，以确认资产是否已成功从AEM同步到Dynamic Media:
 
@@ -52,11 +52,11 @@ ht-degree: 1%
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | 必须填充才能生成指向Dynamic Media远程资产的URL。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **** 后继 **者失败：`<error text>`** | 集（旋转集、图像集等）、图像预设、查看器预设、资产的图像映射更新或已编辑图像的同步状态。 |
 
-### 同步日志记录{#synchronization-logging}
+### 同步日志记录 {#synchronization-logging}
 
 同步错误和问题记录在`error.log`(AEM服务器目录`/crx-quickstart/logs/`)中。 有足够的日志记录来确定大多数问题的根本原因，但是您可以通过Sling控制台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))将日志记录增加到`com.adobe.cq.dam.ips`包上的DEBUG，以收集更多信息。
 
-### 移动、复制、删除{#move-copy-delete}
+### 移动、复制、删除 {#move-copy-delete}
 
 在执行移动、复制或删除操作之前，请执行以下操作：
 
@@ -72,7 +72,7 @@ ht-degree: 1%
 
 * Dynamic Media - Scene7模式交付不支持创建版本。 新版本将替换交付中的现有资产。
 
-## 图像和集{#images-and-sets}
+## 图像和集 {#images-and-sets}
 
 如果您在图像和集合方面遇到问题，请参阅以下疑难解答指南。
 
