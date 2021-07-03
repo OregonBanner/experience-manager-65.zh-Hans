@@ -3,9 +3,9 @@ title: 审核文件夹资产和收藏集
 description: 为文件夹或收藏集中的资产设置审核工作流，并与审阅人或创意合作伙伴共享该工作流，以寻求反馈。
 contentOwner: AG
 feature: 协作、收藏集
-role: Business Practitioner
+role: User
 exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 4%
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 审核人员完成审核（批准或拒绝资产）后，您会收到审核完成通知。
 
-## 为文件夹{#creating-a-review-task-for-folders}创建审核任务
+## 为文件夹创建审核任务 {#creating-a-review-task-for-folders}
 
 1. 从[!DNL Assets]用户界面中，选择要为其创建审核任务的文件夹。
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 创建审核任务]** ![创建审核任务](assets/do-not-localize/create-review-task.png)以打开&#x200B;**[!UICONTROL 审核任务]**&#x200B;页面。 如果在工具栏中看不到选项，请单击&#x200B;**[!UICONTROL 更多]**，然后选择选项。
@@ -70,7 +70,7 @@ ht-degree: 4%
 
    ![查看列表视图中显示的状态](assets/review_status_listview.png)
 
-## 为集合{#creating-a-review-task-for-collections}创建审核任务
+## 为集合创建审核任务 {#creating-a-review-task-for-collections}
 
 1. 从收藏集页面中，选择要为其创建审阅任务的收藏集。
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 创建审核任务]** ![创建审核任务](assets/do-not-localize/create-review-task.png)以打开&#x200B;**[!UICONTROL 审核任务]**&#x200B;页面。 如果工具栏上看不到选项，请单击&#x200B;**[!UICONTROL 更多]**，然后选择选项。
