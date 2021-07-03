@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 feature: 传送横幅
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '4740'
 ht-degree: 9%
@@ -38,7 +38,7 @@ ht-degree: 9%
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
-## 观看如何创建传送横幅{#watch-how-carousel-banners-are-created}
+## 观看如何创建轮播横幅 {#watch-how-carousel-banners-are-created}
 
 播放有关如何创建轮播横幅的演练](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)（10分33秒）。 [您还将了解如何预览、编辑和传送传送轮播横幅。
 
@@ -46,7 +46,7 @@ ht-degree: 9%
 >
 >必须将非管理用户添加到&#x200B;**[!UICONTROL dam-users]**&#x200B;组中，才能创建或编辑传送横幅。 如果您在创建或编辑时遇到问题，请咨询系统管理员，系统管理员可以将您添加到&#x200B;**[!UICONTROL dam-users]**&#x200B;组。
 
-## 快速入门：传送横幅{#quick-start-carousel-banners}
+## 快速入门：传送横幅 {#quick-start-carousel-banners}
 
 要使用传送横幅快速启动并运行，请执行以下操作：
 
@@ -95,7 +95,7 @@ ht-degree: 9%
 
 要编辑传送集，请参阅[编辑传送集](#editing-carousel-sets)。 此外，您还可以查看和编辑[轮播集属性](manage-assets.md#editing-properties)。
 
-## 识别热点和图像映射变量{#identifying-hotspot-and-image-map-variables}
+## 识别热点和图像映射变量 {#identifying-hotspot-and-image-map-variables}
 
 首先，识别现有概览实施所使用的动态变量，以便您在Experience Manager资产的轮播集创建过程中，能够正确输入热点或图像映射数据。
 
@@ -177,13 +177,13 @@ ht-degree: 9%
  </tbody>
 </table>
 
-## 上传图像横幅{#uploading-image-banners}
+## 上传图像横幅 {#uploading-image-banners}
 
 如果已上传要使用的图像，请前进到下一步[创建轮播集](#creating-carousel-sets)。 请注意，在启用Dynamic Media后，必须上传轮播中使用的图像。
 
 要上传图像横幅，请参阅[上传资产](/help/assets/manage-assets.md)。
 
-## 创建轮播集{#creating-carousel-sets}
+## 创建轮播集 {#creating-carousel-sets}
 
 >[!NOTE]
 >
@@ -234,7 +234,7 @@ ht-degree: 9%
 
 1. 完成后，点按&#x200B;**[!UICONTROL Save]**。
 
-## 将热点或图像映射添加到图像横幅{#adding-hotspots-or-image-maps-to-an-image-banner}
+## 将热点或图像映射添加到图像横幅 {#adding-hotspots-or-image-maps-to-an-image-banner}
 
 您可以使用轮播集编辑器将热点或图像映射添加到横幅。
 
@@ -325,7 +325,7 @@ ht-degree: 9%
 
    请参阅[将轮播集添加到您的网站登录页面](#adding-a-carousel-banner-to-your-website-page)
 
-## 编辑轮播集{#editing-carousel-sets}
+## 编辑轮播集 {#editing-carousel-sets}
 
 >[!NOTE]
 必须将非管理用户添加到&#x200B;**[!UICONTROL dam-users]**&#x200B;组中，才能创建或编辑传送横幅。 如果您在创建或编辑时遇到问题，请咨询系统管理员，系统管理员可以将您添加到&#x200B;**[!UICONTROL dam-users]**&#x200B;组。
@@ -362,7 +362,7 @@ ht-degree: 9%
    >[!NOTE]
    如果您正在使用热点编辑交互式图像并裁剪图像，则热点会被删除。
 
-## （可选）预览传送横幅{#optional-previewing-carousel-banners}
+## （可选）预览传送横幅 {#optional-previewing-carousel-banners}
 
 您可以使用“预览”来查看您的轮播横幅对客户的显示方式，并测试轮播横幅热点和图像映射以确保它们按预期行事。
 
@@ -390,7 +390,7 @@ ht-degree: 9%
 1. 在页面左侧面板的&#x200B;**[!UICONTROL 查看器]**&#x200B;列表中，点按要使用的轮播横幅查看器预设的名称。
 1. 点按图像上的热点或图像映射，以便测试其关联的操作。
 
-## 发布传送横幅{#publishing-carousel-banners}
+## 发布传送横幅 {#publishing-carousel-banners}
 
 发布轮播以便使用它。 发布轮播集时，会激活URL和嵌入代码。 它还会将轮播发到Dynamic Media云，该云与CDN集成以进行可扩展且性能卓越的交付。
 
@@ -400,7 +400,7 @@ ht-degree: 9%
 
 有关如何发布传送横幅的信息，请参阅[发布Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 将轮播横幅添加到您的网站页面{#adding-a-carousel-banner-to-your-website-page}
+## 将轮播横幅添加到您的网站页面 {#adding-a-carousel-banner-to-your-website-page}
 
 在上传横幅图像以创建轮播、将热点和/或图像映射添加到横幅并发布轮播集后，您现在可以将其添加到现有网站页面。
 
@@ -415,7 +415,7 @@ ht-degree: 9%
 1. 将您从Experience Manager资产复制的嵌入代码添加到您的网页。
 复制的嵌入代码是响应式代码，因此必须自动适合页面的嵌入区域。
 
-## 将轮播横幅与现有概览{#integrating-the-carousel-banner-with-an-existing-quickview}集成
+## 将轮播横幅与现有概览集成 {#integrating-the-carousel-banner-with-an-existing-quickview}
 
 注意：仅当您是独立的Experience Manager资产客户时，此步骤才适用。
 
