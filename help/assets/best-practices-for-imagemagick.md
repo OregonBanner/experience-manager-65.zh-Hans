@@ -2,17 +2,17 @@
 title: 安装和配置ImageMagick
 description: 了解ImageMagick软件、如何安装它、设置命令行处理步骤，以及使用它编辑、撰写和从图像生成缩略图。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 演绎版，开发人员工具
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 1%
 
 ---
 
-# 安装并配置ImageMagick以与[!DNL Experience Manager Assets] {#install-and-configure-imagemagick-to-work-with-aem-assets}一起使用
+# 安装并配置ImageMagick以与[!DNL Experience Manager Assets]配合使用 {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
 ImageMagick是用于创建、编辑、合成或转换位图图像的软件插件。 它可以以各种格式（超过200种）读写图像，包括PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF和SVG。 使用ImageMagick调整图像大小、翻转、镜像、旋转、扭曲、剪切和变换图像。 您还可以使用ImageMagick调整图像颜色、应用各种特殊效果，或绘制文本、线、多边形、省略号和曲线。
 
@@ -34,7 +34,7 @@ ImageMagic安装文件的多个版本可用于各种操作系统。 为您的操
 1. 将路径环境变量设置为ImageMagic安装目录。
 1. 要检查安装是否成功，请执行`identify -version`命令。
 
-## 设置命令行处理步骤{#set-up-the-command-line-process-step}
+## 设置命令行处理步骤 {#set-up-the-command-line-process-step}
 
 您可以为特定用例设置命令行流程步骤。 每次在[!DNL Experience Manager]服务器上的`/content/dam`中添加JPEG图像文件时，请执行以下步骤以生成翻转图像和缩略图（140x100、48x48、319x319和1280）：
 
@@ -77,7 +77,7 @@ ImageMagic安装文件的多个版本可用于各种操作系统。 为您的操
 
 1. 要验证处理是否正确，请将JPG图像上传到[!DNL Assets]。 处理完成后，检查是否生成了翻转的图像和演绎版。
 
-## 缓解安全漏洞{#mitigating-security-vulnerabilities}
+## 缓解安全漏洞 {#mitigating-security-vulnerabilities}
 
 使用ImageMagick处理图像时存在多个安全漏洞。 例如，处理用户提交的图像涉及远程代码执行(RCE)的风险。
 
