@@ -8,16 +8,16 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2849'
 ht-degree: 17%
 
 ---
 
-# 将Dynamic Media Classic功能添加到页面{#adding-scene-features-to-your-page}
+# 将Dynamic Media Classic功能添加到页面 {#adding-scene-features-to-your-page}
 
 [AdobeDynamic Media ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html) Classics是一种托管解决方案，用于管理、增强、发布富媒体资产并将其交付到Web、移动设备、电子邮件以及连接Internet的显示屏和打印。
 
@@ -41,7 +41,7 @@ ht-degree: 17%
 >
 >如果Dynamic Media Classic资产显示不正确，请确保Dynamic Media[disabled](config-dynamic.md#disabling-dynamic-media)，然后刷新页面。
 
-## 从资产{#manually-publishing-to-scene-from-assets}手动发布到Dynamic Media Classic
+## 从资产手动发布到Dynamic Media Classic {#manually-publishing-to-scene-from-assets}
 
 您可以按如下方式将数字资产发布到Dynamic Media Classic:
 
@@ -54,7 +54,7 @@ ht-degree: 17%
 >Experience Manager会异步发布到Dynamic Media Classic。 单击&#x200B;**[!UICONTROL Publish]**&#x200B;后，您需要几秒钟的时间才能将资产发布到Dynamic Media Classic。
 
 
-## Dynamic Media Classic组件{#scene-components}
+## Dynamic Media Classic组件 {#scene-components}
 
 以下Dynamic Media Classic组件在Experience Manager中可用：
 
@@ -80,7 +80,7 @@ ht-degree: 17%
 
 <!-- For more information about this important change, see [Flash Viewer End-of-Life FAQs](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html). -->
 
-### 将Dynamic Media Classic(Scene7)组件添加到页面{#adding-a-scene-component-to-a-page}
+### 将Dynamic Media Classic(Scene7)组件添加到页面 {#adding-a-scene-component-to-a-page}
 
 将Dynamic Media Classic(Scene7)组件添加到页面的方法与将组件添加到任何页面的方法相同。 Dynamic Media Classic组件在以下部分中进行了详细描述。
 
@@ -105,7 +105,7 @@ ht-degree: 17%
    >
    >仅在触屏UI中，必须将图像或视频拖放到您放置在页面上的Dynamic Media Classic组件上。 不支持先选择和编辑Dynamic Media Classic组件，然后再选择资产。
 
-### 向响应式网站添加交互式查看体验{#adding-interactive-viewing-experiences-to-a-responsive-website}
+### 向响应式网站添加交互式查看体验 {#adding-interactive-viewing-experiences-to-a-responsive-website}
 
 资产的响应式设计意味着资产会根据资产的显示位置自行调整。 利用响应式设计，可以在多种设备上有效地显示同一资产。
 
@@ -127,7 +127,7 @@ ht-degree: 17%
 
 1. 确认查看器可实现响应式大小调整，并且所有交互已针对台式机、平板电脑和移动设备进行了优化。
 
-### 所有Dynamic Media Classic组件的通用设置{#settings-common-to-all-scene-components}
+### 所有Dynamic Media Classic组件的通用设置 {#settings-common-to-all-scene-components}
 
 尽管配置选项各不相同，但以下选项对所有[!UICONTROL Dynamic Media Classic]组件都是通用的：
 
@@ -229,7 +229,7 @@ ht-degree: 17%
 
 ![chlimage_1-237](assets/chlimage_1-237.png)
 
-#### 使Dynamic Media Classic图像模板成为链接{#making-the-scene-image-template-a-link}
+#### 将Dynamic Media Classic图像模板设为链接 {#making-the-scene-image-template-a-link}
 
 1. 在具有Dynamic Media Classic **[!UICONTROL 图像模板]**&#x200B;组件的页面上，点按&#x200B;**[!UICONTROL 编辑]**。
 1. 在&#x200B;**[!UICONTROL URL]**&#x200B;字段中，输入用户点按图像时转到的URL。 在&#x200B;**[!UICONTROL 打开方式]**&#x200B;字段中，选择您希望在新窗口中还是在同一窗口中打开目标。
@@ -257,7 +257,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 将自适应视频集与Dynamic Media Classic视频组件一起使用时，必须调整组件大小以适合视频的尺寸。
 
-## Dynamic Media Classic内容浏览器{#scene-content-browser}
+## Dynamic Media Classic内容浏览器 {#scene-content-browser}
 
 通过Dynamic Media Classic内容浏览器，您可以直接在Experience Manager中查看Dynamic Media Classic中的内容。 要访问内容浏览器，请在&#x200B;**[!UICONTROL 内容查找器]**&#x200B;中，选择触屏优化用户界面中的&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;或经典用户界面中的&#x200B;**[!UICONTROL S7]**&#x200B;图标。 这两种用户界面的功能是相同的。
 
@@ -277,7 +277,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
    >   * 单个F4V视频
 
 
-### 在触屏优化UI中浏览内容{#browsing-content-in-the-touch-optimized-ui}
+### 在触屏优化UI中浏览内容 {#browsing-content-in-the-touch-optimized-ui}
 
 您可以在触屏优化UI或经典UI中访问内容浏览器。 目前，触屏优化具有以下限制：
 
@@ -303,7 +303,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 * 对于自适应视频集和模板，不会为缩略图生成大小信息。
 * 对于自适应视频集，不会为缩略图生成分辨率。
 
-### 使用内容浏览器{#searching-for-scene-assets-with-the-content-browser}搜索Dynamic Media Classic资产
+### 使用内容浏览器搜索Dynamic Media Classic资产 {#searching-for-scene-assets-with-the-content-browser}
 
 在Dynamic Media Classic中搜索资产与在Experience Manager资产中搜索资产类似。 但是，在搜索时，您实际上会在Dynamic Media Classic系统中看到资产的远程视图，而不是直接将它们导入Experience Manager。
 
