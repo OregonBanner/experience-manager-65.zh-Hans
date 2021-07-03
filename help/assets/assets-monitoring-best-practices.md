@@ -2,17 +2,17 @@
 title: 监视 [!DNL Assets] 部署的最佳实践
 description: 部署后监控 [!DNL Adobe Experience Manager] 部署的环境和性能的最佳实践。
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 feature: 资产管理
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1670'
 ht-degree: 1%
 
 ---
 
-# 监视[!DNL Adobe Experience Manager Assets]部署{#assets-monitoring-best-practices}的最佳实践
+# 监视[!DNL Adobe Experience Manager Assets]部署的最佳实践 {#assets-monitoring-best-practices}
 
 从[!DNL Experience Manager Assets]的观点来看，监测应包括观察和报告以下过程和技术：
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 通常，可通过两种方式监控[!DNL Experience Manager Assets]：实时监控和长期监控。
 
-## 实时监视{#live-monitoring}
+## 实时监控 {#live-monitoring}
 
 您应在开发的性能测试阶段或高负载情况下执行实时监控，以了解环境的性能特性。 通常，应使用一套工具执行实时监视。 以下是一些建议：
 
@@ -53,15 +53,15 @@ ht-degree: 1%
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
-## 长期监测{#long-term-monitoring}
+## 长期监测 {#long-term-monitoring}
 
 对[!DNL Experience Manager]部署的长期监控包括对实时监控的相同部分进行较长时间的监控。 它还包括定义特定于您的环境的警报。
 
-### 日志聚合和报告{#log-aggregation-and-reporting}
+### 日志聚合和报告 {#log-aggregation-and-reporting}
 
 有几种可用于聚合日志的工具，例如Splunk(TM)和Elastic Search、Logstash和Kabana(ELK)。 要评估[!DNL Experience Manager]部署的正常运行时间，请务必了解特定于您系统的日志事件并基于这些事件创建警报。 了解您的开发和操作实践有助于您更好地了解如何调整日志聚合过程以生成关键警报。
 
-### 环境监控{#environment-monitoring}
+### 环境监控 {#environment-monitoring}
 
 环境监控包括监控以下内容：
 
@@ -74,7 +74,7 @@ ht-degree: 1%
 
 您需要外部工具(如NewRelic(TM)和AppDynamics(TM))来监控每个项目。 使用这些工具，您可以定义特定于您系统的警报，例如系统利用率高、工作流备份、运行状况检查失败或未经身份验证的网站访问。 Adobe不推荐任何特定工具而不是其他工具。 找到适合您的工具，并利用它监控所讨论的项目。
 
-#### 内部应用程序监控{#internal-application-monitoring}
+#### 内部应用程序监控 {#internal-application-monitoring}
 
 内部应用程序监控包括监控构成[!DNL Experience Manager]堆栈的应用程序组件，包括JVM、内容存储库，以及通过平台上构建的自定义应用程序代码进行监控。 通常，它通过JMX Mbeans执行，而JMX Mbeans可以由许多常用的监控解决方案(如SolarWinds(TM)、 HP OpenView(TM)、Hyperic(TM)、Zabbix(TM)等)直接监控。 对于不支持直接连接到JMX的系统，您可以编写shell脚本以提取JMX数据，并以它们本身理解的格式将其公开给这些系统。
 
@@ -188,7 +188,7 @@ ht-degree: 1%
    * 警报阈值：状态不正常时
    * 警报定义：日志文件中存在错误。 有关问题原因的更多信息，请查看日志属性。
 
-## 常见问题和决议{#common-issues-and-resolutions}
+## 共同问题和决议  {#common-issues-and-resolutions}
 
 在监控过程中，如果您遇到问题，可以执行以下一些故障诊断任务来解决[!DNL Experience Manager]部署中的常见问题：
 
