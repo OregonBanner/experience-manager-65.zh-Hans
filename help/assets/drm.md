@@ -2,17 +2,17 @@
 title: Digital Rights Management资产
 description: 了解如何在 [!DNL Experience Manager]中管理已许可资产的资产到期状态和信息。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: DRM，资产管理
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 5%
 
 ---
 
-# Digital Rights Management资产{#digital-rights-management-in-assets}
+# Digital Rights Management资产 {#digital-rights-management-in-assets}
 
 数字资产通常与指定使用条款和持续时间的许可证相关联。 由于[!DNL Adobe Experience Manager Assets]与[!DNL Experience Manager]平台完全集成，因此您可以高效地管理资产到期信息和资产状态。 您还可以将授权信息与资产关联。
 
@@ -45,7 +45,7 @@ ht-degree: 5%
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
-### 搜索已过期的资产{#search-expired-assets}
+### 搜索已过期的资产 {#search-expired-assets}
 
 您可以在“搜索”面板中搜索过期的资产，包括过期的子资产。
 
@@ -80,7 +80,7 @@ ht-degree: 5%
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。
 
-## 资产状态{#asset-states}
+## 资产状态 {#asset-states}
 
 [!DNL Assets]控制台可以显示资产的各种状态。 根据特定资产的当前状态，其卡片视图会显示一个用于描述其状态的标签，例如已过期、已发布、已批准、已拒绝等。
 
@@ -128,7 +128,7 @@ ht-degree: 5%
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
-## Digital Rights Management在[!DNL Assets] {#digital-rights-management-in-assets-1}中
+## Digital Rights Management在[!DNL Assets]中 {#digital-rights-management-in-assets-1}
 
 此功能强制您在从[!DNL Adobe Experience Manager Assets]下载授权资产之前接受许可协议。
 
@@ -147,7 +147,7 @@ ht-degree: 5%
 >
 >如果您创建或修改许可证页面，或将许可证页面从以前的[!DNL Experience Manager]版本中导入，则Adobe建议将许可证页面存储在`/apps/settings/dam/drm/licenses`或`/conf/&ast;/settings/dam/drm/licenses`下。
 
-### 下载受DRM保护的资产{#downloading-drm-assets}
+### 下载受DRM保护的资产 {#downloading-drm-assets}
 
 1. 在卡片视图中，选择要下载的资产，然后单击&#x200B;**[!UICONTROL 下载]**。
 1. 在&#x200B;**[!UICONTROL 版权管理]**&#x200B;页面，从列表中选择要下载的资产。
