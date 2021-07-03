@@ -2,17 +2,17 @@
 title: 批量迁移资产
 description: 介绍如何将资产引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版，以及如何激活资产以发布实例。
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: 迁移，演绎版，资产管理
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 8%
 
 ---
 
-# 如何批量迁移资产{#assets-migration-guide}
+# 如何批量迁移资产 {#assets-migration-guide}
 
 将资产迁移到[!DNL Adobe Experience Manager]时，需要考虑以下几个步骤。 将资产和元数据从其当前主页提取出不在本文档的范围之内，因为不同实施之间的资产和元数据差异很大，但本文档介绍了如何将这些资产引入[!DNL Experience Manager]、应用其元数据、生成演绎版，以及激活它们以发布实例。
 
@@ -47,21 +47,21 @@ ht-degree: 8%
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-### 禁用工作流{#disabling-workflows}
+### 禁用工作流 {#disabling-workflows}
 
 在开始迁移之前，请禁用[!UICONTROL  DAM更新资产]工作流的启动器。 最好将所有资产摄取到系统中，然后批量运行工作流。 如果迁移过程中您已经处于实时状态，则可以安排这些活动在非工作时间运行。
 
-### 加载标记{#loading-tags}
+### 加载标记 {#loading-tags}
 
 您可能已经拥有了要应用于图像的标记分类。 虽然CSV资产导入器和[!DNL Experience Manager]支持元数据配置文件之类的工具可以自动将标记应用到资产的过程，但需要将标记加载到系统中。 [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html)功能允许您使用加载到系统中的Microsoft Excel电子表格来填充标记。
 
-### 摄取资产{#ingesting-assets}
+### 摄取资产 {#ingesting-assets}
 
 在将资产摄取到系统中时，性能和稳定性是重要的考虑因素。 由于您正在将大量数据加载到系统中，因此您需要确保系统能够正常运行，并尽可能减少所需时间，避免系统过载，这可能导致系统崩溃，特别是在已在生产中的系统中。
 
 将资产加载到系统中的方法有两种：使用HTTP的基于推送的方法，或使用JCR API的基于拉取的方法。
 
-#### 通过HTTP {#pushing-through-http}发送
+#### 通过HTTP发送 {#pushing-through-http}
 
 Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客户环境中。 Glutton是一个小型Java应用程序，用于将所有资产从一个目录加载到[!DNL Experience Manager]部署中的另一个目录中。 您还可以使用诸如Perl脚本之类的工具将资产发布到存储库中，而不是Glutton。
 
@@ -72,13 +72,13 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
 
 摄取资产的另一种方法是从本地文件系统中提取资产。 但是，如果您无法将外部驱动器或网络共享装载到服务器以执行基于拉取的方法，则最好通过HTTP发布资产。
 
-#### 从本地文件系统{#pulling-from-the-local-filesystem}获取
+#### 从本地文件系统获取 {#pulling-from-the-local-filesystem}
 
 [ACS AEM工具CSV资产导入器](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html)从文件系统中提取资产，并从CSV文件中提取资产元数据以导入资产。 Experience Manager资产管理器API用于将资产导入系统并应用配置的元数据属性。 理想情况下，资产通过网络文件装载或通过外部驱动器装载到服务器上。
 
 由于资产不需要通过网络传输，因此总体性能会显着提高，而且这种方法通常被视为将资产加载到存储库的最有效方法。 此外，由于该工具支持元数据摄取，因此您可以在一个步骤中导入所有资产和元数据，而无需再另外创建一个步骤来通过单独的工具应用元数据。
 
-### 处理演绎版{#processing-renditions}
+### 处理演绎版 {#processing-renditions}
 
 将资产加载到系统中后，您需要通过[!UICONTROL DAM更新资产]工作流处理这些资产，以提取元数据并生成演绎版。 在执行此步骤之前，您需要复制并修改[!UICONTROL DAM更新资产]工作流，以满足您的需求。 现成的工作流包含许多您可能不需要的步骤，例如Dynamic Media PTIFF生成或[!DNL InDesign Server]集成。
 
@@ -87,7 +87,7 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
 1. 最简单的方法是[ACS Commons&#39; Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 利用此工具，可执行查询并通过工作流处理查询结果。 还有一些选项可用于设置批处理大小。
 1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 虽然此方法涉及的范围更广，但它允许您在优化服务器资源的使用时删除[!DNL Experience Manager]工作流引擎的开销。 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
 
-### 激活资产{#activating-assets}
+### 激活资产 {#activating-assets}
 
 对于具有发布层的部署，您需要将资产激活到发布场。 虽然Adobe建议运行多个发布实例，但最有效的方法是将所有资产复制到单个发布实例，然后克隆该实例。 激活大量资产时，在触发树激活后，您可能需要干预。 原因如下：触发激活时，项目会添加到Sling作业/事件队列。 此队列的大小开始超过大约40,000个项目后，处理速度会急剧减慢。 当此队列的大小超过100,000个项目后，系统稳定性开始受到影响。
 
@@ -101,7 +101,7 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
 >
 >Adobe不维护或支持Grabbit。
 
-### 克隆发布{#cloning-publish}
+### 克隆发布 {#cloning-publish}
 
 激活资产后，您可以克隆发布实例，以创建部署所需的任意数量的副本。 克隆服务器相当简单，但需要记住一些重要步骤。 要克隆发布，请执行以下操作：
 
@@ -113,11 +113,11 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
 1. 启动环境。
 1. 更新作者上任何复制代理的配置，以指向新实例上正确的发布实例或调度程序刷新代理，以指向新环境的正确调度程序。
 
-### 启用工作流{#enabling-workflows}
+### 启用工作流 {#enabling-workflows}
 
 完成迁移后，应重新启用[!UICONTROL  DAM更新资产]工作流的启动器，以支持生成演绎版并提取元数据，以便持续使用日常系统。
 
-## 跨[!DNL Experience Manager]部署{#migrating-between-aem-instances}迁移
+## 跨[!DNL Experience Manager]部署迁移 {#migrating-between-aem-instances}
 
 虽然这种情况并不常见，但有时您需要将大量数据从一个[!DNL Experience Manager]部署迁移到另一个部署；例如，执行[!DNL Experience Manager]升级、升级硬件或迁移到新数据中心时，例如通过AMS迁移。
 
