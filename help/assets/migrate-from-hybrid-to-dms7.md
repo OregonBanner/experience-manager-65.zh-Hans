@@ -6,17 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: Scene7模式，混合模式
 exl-id: 07f0803c-4ec4-4745-8214-63370e9d0282
-source-git-commit: 61e703e73b831a9b4e7045e5d5fffeef5be7ed6d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# 关于从Dynamic Media-Hybrid迁移到Dynamic Media-Scene7 {#about-migrating}
+# 关于从Dynamic Media — 混合到Dynamic Media-Scene7 {#about-migrating}
 
 Dynamic Media-Hybrid是Dynamic Media与Adobe Experience Manager集成的较旧版本。 混合版本最初在AEM(Adobe Experience Manager)6.1中引入。虽然Adobe继续支持混合模式，但它不是首选模式(Dynamic Media-Scene7是首选模式)。 它还不支持智能裁剪和全景图像等新功能。 而Dynamic Media-Scene7。
 
@@ -33,11 +33,11 @@ Dynamic Media-Hybrid和Dynamic Media-Scene7之间的其他主要区别包括：
 >
 >Adobe建议您不要在实时生产实例上将Dynamic Media-Hybrid实施迁移到Dynamic Media-Scene7。
 
-## 选项1 — 在AEM {#provision-new-dms7}上配置Dynamic Media-Scene7的新实例
+## 选项1 — 在AEM上配置Dynamic Media-Scene7的新实例 {#provision-new-dms7}
 
 您只需在Adobe Experience Manager上使用新的、已配置的Dynamic Media-Scene7实例即可开始使用。 除了通过Dynamic MediaCloud Service获取和处理资产之外，还强烈建议对资产使用情况、工作流和组件进行Adobe审核。 在许多情况下，自定义组件和工作流可以替换为较新的现成功能。
 
-## 选项2 — 将现有的Dynamic Media-Hybrid实例迁移到Dynamic Media-Scene7 {#process-for-migrating}
+## 选项2 — 将您现有的Dynamic Media-Hybrid实例迁移到Dynamic Media-Scene7 {#process-for-migrating}
 
 | 步骤 | 任务 | 注意事项 |
 |---|---|---|
