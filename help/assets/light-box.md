@@ -2,10 +2,10 @@
 title: 灯箱作为个人图像库
 description: 了解Lightbox作为您在Adobe Experience Manager Assets中的个人图像库]。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 开发人员工具，演绎版
 exl-id: 7652663a-11ba-4a78-9a9f-221d514fe992
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 26%
@@ -33,7 +33,7 @@ Lightbox 是一种特殊类型的收藏集，使用它可以轻松访问资产�
    >
    >尽管灯箱类似于收藏集，但您通常无法对收藏集执行所有操作。 例如，您无法删除、共享或查看 Lightbox 的设置。此外，您还无法将其添加到其他收藏集。但是，您可以编辑 Lightbox 中的资产。
 
-## 从Lightbox {#removing-assets-from-lightbox}中删除资产
+## 从Lightbox中删除资产 {#removing-assets-from-lightbox}
 
 1. 导航到收藏集控制台，单击Lightbox以查看其资产。
 1. 选择要删除的资产。
