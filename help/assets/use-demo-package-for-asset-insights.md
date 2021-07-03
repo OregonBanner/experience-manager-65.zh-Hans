@@ -2,21 +2,21 @@
 title: 资产分析使用演示包
 description: 使用演示包，可启用Adobe资产分析，以从中捕获数据并为网页生成分析。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 资产分析，资产报表
 exl-id: 13947513-da76-43e1-ae01-abd24a59752a
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 2%
 
 ---
 
-# 使用资产分析演示包{#using-demo-package-for-asset-insights}
+# 资产分析使用演示包 {#using-demo-package-for-asset-insights}
 
 使用演示包，您可以启用Adobe资产分析，以从中捕获数据并为示例网页生成分析。
 
-## [!DNL Use Experience Manager Assets] 分析示例网页   {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] 分析示例网页  {#using-aem-assets-insights-with-sample-web-page}
 
 1. 按照[配置资产分析](configure-asset-insights.md)中的说明配置资产分析。
 1. 从下面下载示例Assets包，然后从CRXDE包管理器安装该包。
