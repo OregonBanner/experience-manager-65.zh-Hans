@@ -2,17 +2,17 @@
 title: 使用智能内容服务配置资产标记
 description: 了解如何使用智能内容服务在 [!DNL Adobe Experience Manager]中配置智能标记和增强智能标记。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 标记，智能标记
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2173'
 ht-degree: 26%
 
 ---
 
-# 为智能标记{#configure-asset-tagging-using-the-smart-content-service}准备[!DNL Assets]
+# 为智能标记准备[!DNL Assets] {#configure-asset-tagging-using-the-smart-content-service}
 
 在开始使用智能内容服务标记资产之前，请将[!DNL Experience Manager Assets]与Adobe开发人员控制台集成，以利用[!DNL Adobe Sensei]的智能服务。 配置完毕后，可使用一些图像和标记来培训服务。
 
@@ -39,7 +39,7 @@ ht-degree: 26%
 
 1. （可选）[在资产上传时启用自动标记](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
-### 通过创建智能内容服务配置{#obtain-public-certificate}获取公共证书
+### 通过创建智能内容服务配置获取公共证书 {#obtain-public-certificate}
 
 公共证书允许您在 Adobe 开发人员控制台上验证配置文件。
 
@@ -94,7 +94,7 @@ ht-degree: 26%
 
 1. 访问[https://console.adobe.io](https://console.adobe.io)，然后导航到&#x200B;**[!UICONTROL Integrations]**&#x200B;页面上的现有智能内容服务。 上传新证书。 有关更多信息，请参阅[创建Adobe开发人员控制台集成](#create-adobe-i-o-integration)中的说明。
 
-### 创建Adobe开发人员控制台集成{#create-adobe-i-o-integration}
+### 创建Adobe开发人员控制台集成 {#create-adobe-i-o-integration}
 
 要使用智能内容服务API，请在Adobe开发人员控制台中创建集成，以获取[!UICONTROL API密钥](在Adobe开发人员控制台集成的[!UICONTROL 客户端ID]字段中生成)、 [!UICONTROL 技术帐户ID]、 [!UICONTROL 组织ID]和[!UICONTROL 客户端密钥A9&lt;A9/>，以用于&lt;A10/>智能资产设置&lt;A11&lt;A12/>中的云配置1/>。][!DNL Experience Manager]
 
@@ -119,7 +119,7 @@ ht-degree: 26%
 
    *图：Adobe开发人员控制台中的集成详细信息*
 
-### 配置智能内容服务{#configure-smart-content-service}
+### 配置智能内容服务 {#configure-smart-content-service}
 
 要配置集成，请使用Adobe开发人员控制台集成中的[!UICONTROL 技术帐户ID]、[!UICONTROL 组织ID]、[!UICONTROL 客户端密钥]和[!UICONTROL 客户端ID]字段值。 创建智能标记云配置后，可以对[!DNL Experience Manager]部署中的API请求进行身份验证。
 
@@ -152,7 +152,7 @@ ht-degree: 26%
 
 验证结果将显示在同一对话框中。
 
-### 在[!UICONTROL DAM更新资产]工作流中启用智能标记（可选）{#enable-smart-tagging-in-the-update-asset-workflow-optional}
+### 在[!UICONTROL DAM更新资产]工作流中启用智能标记（可选） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
 1. 在[!DNL Experience Manager]中，转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
 
@@ -189,7 +189,7 @@ ht-degree: 26%
 
 1. 单击&#x200B;**[!UICONTROL 确定]**，以关闭流程步骤，然后保存工作流。
 
-## 培训智能内容服务{#training-the-smart-content-service}
+## 培训智能内容服务 {#training-the-smart-content-service}
 
 为使智能内容服务能够识别您的业务分类，请在一组资产上运行该分类，这些资产已经包含与您的业务相关的标记。 为了有效地标记您的品牌图像，智能内容服务要求培训图像符合特定准则。 培训后，该服务可以对类似的资产集应用相同的分类。
 
@@ -201,7 +201,7 @@ ht-degree: 26%
 >
 >培训工作流仅在文件夹上运行。
 
-### 培训准则{#guidelines-for-training}
+### 培训准则 {#guidelines-for-training}
 
 为获得最佳结果，培训集中的图像符合以下准则：
 
@@ -233,7 +233,7 @@ ht-degree: 26%
 >
 >智能内容服务是否能够在您的标记上进行培训并将其应用于其他图像，取决于您用于培训的图像质量。 为获得最佳结果，Adobe建议您使用视觉上相似的图像来为每个标记培训服务。
 
-### 定期培训{#periodic-training}
+### 定期培训 {#periodic-training}
 
 您可以启用智能内容服务，以便对文件夹中的资产和关联的标记进行定期培训。 打开资产文件夹的[!UICONTROL 属性]页面，在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡下选择&#x200B;**[!UICONTROL 启用智能标记]**，然后保存更改。
 
@@ -241,7 +241,7 @@ ht-degree: 26%
 
 为文件夹选择此选项后，[!DNL Experience Manager]会自动运行培训工作流，以针对文件夹资产及其标记培训智能内容服务。 默认情况下，培训工作流每周在星期六凌晨12:30运行。
 
-### 按需培训{#on-demand-training}
+### 按需培训 {#on-demand-training}
 
 您可以根据需要从工作流控制台中培训智能内容服务。
 
@@ -256,7 +256,7 @@ ht-degree: 26%
 >
 >在处理文件夹中的资产以进行培训后，只会在后续培训周期中处理已修改的资产。
 
-### 查看培训报告{#viewing-training-reports}
+### 查看培训报告 {#viewing-training-reports}
 
 要检查是否在资产培训集中的标记上对智能内容服务进行了培训，请从报表控制台中查看培训工作流报表。
 
