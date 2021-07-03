@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: 资产管理，演绎版
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 14%
@@ -47,7 +47,7 @@ ht-degree: 14%
 * [使用规则集转换URL](/help/assets/using-rulesets-to-transform-urls.md)
 
 
-## HTTP/2交付Dynamic Media资产{#http-delivery-of-dynamic-media-assets}
+## HTTP/2交付Dynamic Media资产 {#http-delivery-of-dynamic-media-assets}
 
 Experience Manager现在支持通过HTTP/2交付所有Dynamic Media内容（图像和视频）。 即，图像或视频的已发布URL或嵌入代码可与接受托管资产的任何应用程序集成。 然后，将通过HTTP/2协议来交付已发布的资产。 这种交付方法改进了浏览器和服务器通信的方式，从而可以缩短所有Dynamic Media资产的响应和加载时间。
 
