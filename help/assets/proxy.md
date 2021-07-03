@@ -2,16 +2,16 @@
 title: '[!DNL Assets] 代理开发'
 description: 代理是 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] 代理、支持的操作、代理组件，以及如何开发自定义代理工作程序。
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets] 代理开发  {#assets-proxy-development}
+# [!DNL Assets] 代理开发 {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets] 使用代理来分发某些任务的处理。
 
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 当代理是单独的[!DNL Experience Manager]实例时，这有助于减少[!DNL Experience Manager]创作实例的负载。 默认情况下，[!DNL Assets]在同一JVM（通过代理外部化）中执行资产处理任务，以减少[!DNL Experience Manager]创作实例的负载。
 
-## 代理（HTTP访问）{#proxy-http-access}
+## 代理（HTTP访问） {#proxy-http-access}
 
 将HTTP Servlet配置为在以下位置接受处理作业时，可通过HTTP Servlet使用代理：`/libs/dam/cloud/proxy`。 此Servlet通过已发布的参数创建Sling作业。 然后，该任务将添加到代理作业队列并连接到相应的代理工作程序。
 
-### 支持的操作{#supported-operations}
+### 支持的操作 {#supported-operations}
 
 * `job`
 
@@ -69,7 +69,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
     http://localhost:4502/libs/dam/cloud/proxy
 ```
 
-### 代理工作程序{#proxy-worker}
+### 代理工作程序 {#proxy-worker}
 
 代理工作程序是负责处理作业并创建结果的处理器。 工作程序驻留在代理实例上，必须实施[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html)才能被识别为代理工作程序。
 
@@ -103,7 +103,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
  proxyJobService.removeJob(jobId);
 ```
 
-### Cloud Service配置{#cloud-service-configurations}
+### Cloud Service配置 {#cloud-service-configurations}
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
  final String value = cloudConfig.get("someProperty", "defaultValue");
 ```
 
-### 开发自定义代理工作程序{#developing-a-customized-proxy-worker}
+### 开发自定义代理工作程序 {#developing-a-customized-proxy-worker}
 
 [IDS代理工作程序](indesign.md)是[!DNL Assets]代理工作程序的示例，该代理工作程序已提供现成的，用于外包InDesign资产的处理。
 
