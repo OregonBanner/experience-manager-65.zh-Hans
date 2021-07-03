@@ -3,9 +3,9 @@ title: ' [!DNL Experience Manager Assets]的可访问功能和接口'
 description: 了解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的辅助功能如何帮助残障用户。
 contentOwner: AG
 feature: 资产管理
-role: Business Practitioner, Architect, Leader
+role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Possible topics to cover in this article are below.
   * Link to a11y-specific online methods to report issues, seek support, or request enhancements, if any. Asked the a11y team on Slack.
 -->
 
-# [!DNL Adobe Experience Manager Assets] {#accessibility-in-aem-assets}中的辅助功能
+# [!DNL Adobe Experience Manager Assets]中的辅助功能 {#accessibility-in-aem-assets}
 
 [!DNL Adobe Experience Manager] 允许内容创建者和发布者在Web上提供令人惊叹的体验。Adobe努力通过改进[!DNL Experience Manager]的无障碍功能，将残障创建者也包括在内。 该软件不断得到增强，以满足所有类型用户的需求，并遵守包括视力、听觉、移动性或其他残障人士在内的全球标准。
 
@@ -45,7 +45,7 @@ Possible topics to cover in this article are below.
 
 要了解如何访问[!DNL Dynamic Media]，请参阅 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)中的[辅助功能。
 
-## 辅助技术{#at-support}
+## 辅助技术 {#at-support}
 
 残障用户经常依赖硬件和软件来访问Web内容并使用软件产品。 这些工具被称为辅助技术。 [!DNL Experience Manager Assets] 使用软件的核心功能时，可以使用以下类型的辅助技术(AT):
 
@@ -55,7 +55,7 @@ Possible topics to cover in this article are below.
 * 辅助硬件，包括开关控件、可刷新的盲文显示屏和其他计算机输入设备。
 * UI放大工具。
 
-## [!DNL Experience Manager Assets] 可访问的用例  {#accessible-assets-use-cases}
+## [!DNL Experience Manager Assets] 可访问的用例 {#accessible-assets-use-cases}
 
 在[!DNL Experience Manager]中，辅助功能满足[!DNL Experience Manager]用户及其客户的两个关键要求。
 
@@ -64,7 +64,7 @@ Possible topics to cover in this article are below.
 
 [!DNL Assets]中的核心功能比以前更易访问，并且会定期更新以提高对全球标准的遵从性。 [!DNL Assets]中的CRUD操作在这些操作中具有一定程度的辅助功能。 可通过键盘快捷键、屏幕阅读器文本、颜色对比度等方式，访问添加、管理、搜索和分发资产等DAM工作流。
 
-## 支持使用键盘{#keyboard-use}
+## 支持使用键盘 {#keyboard-use}
 
 许多可单击或可通过指针操作的用户界面元素也可以使用键盘参与。 使用键盘，用户可以专注于UI元素并执行适当的操作。 用户可以使用键盘快捷键直接触发命令或操作，而无需重点关注UI元素并使用键盘触发。 例如，用户可以通过使用键盘浏览到用户界面控件，选择`Return`，然后选择`Alt + 2`键盘快捷键，来打开用户界面左侧资产的时间轴。
 
@@ -76,7 +76,7 @@ Possible topics to cover in this article are below.
 * Read-only form fields can be focused with the keyboard. Can users tab to these fields to understand the contents and are they able to copy text from the fields?
 -->
 
-### [!DNL Assets] {#keyboard-shortcuts}中的键盘快捷键
+### [!DNL Assets]中的键盘快捷键 {#keyboard-shortcuts}
 
 [!DNL Assets]中的以下操作可使用列出的键盘快捷键。 大多数应用于[!DNL Experience Manager]控制台的键盘快捷键也适用于[!DNL Assets]。 请参阅Console](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)的[键盘快捷键。 请参阅如何[启用或禁用键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
@@ -159,7 +159,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * Some enhancements to metadata properties UI?
 -->
 
-## 管理数字资产{#manage-assets}
+## 管理数字资产 {#manage-assets}
 
 许多资产管理任务（如CRUD操作、下载资产、添加元数据）都可以按不同程度进行访问。 [!DNL Assets] 允许您使用各种辅助技术（如屏幕阅读器和键盘）完成任务。
 
@@ -173,7 +173,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * 在屏幕阅读器的浏览模式下，使用键盘的拖动功能在[!UICONTROL 元数据架构编辑器]中正确运行。
 * 用户可以使用键盘将焦点移动到文件夹[!UICONTROL 属性]的[!UICONTROL 权限]选项卡中[!UICONTROL 已关闭的用户组]下的添加用户或组字段。
 
-## 搜索数字资产{#search-assets}
+## 搜索数字资产 {#search-assets}
 
 快速、无缝的资产搜索体验可提高内容速度。 内容周转率用例是核心[!DNL Assets]功能的一部分。 要从Omnisearch栏开始搜索，用户可以使用键盘快捷键`/`或将`Tab`与屏幕阅读器一起使用，以快速找到搜索选项。 当焦点位于搜索选项![搜索选项](assets/do-not-localize/search_icon.png)时，屏幕阅读器会将选项的名称讲述为“搜索按钮”。 用户可以选择`Return`以打开Omnisearch框。 屏幕阅读器不仅讲述在搜索框中键入的关键词，还讲述[!DNL Experience Manager Assets]提供的建议。 用户可以使用箭头键、`Return`和`Tab`的组合来访问各种选项以触发搜索。
 
@@ -206,7 +206,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
    * 可以导航到所有列出的建议。
    * 讲述有关添加电子邮件地址和搜索字段的显示建议。
 
-## 辅助文档{#accessible-docs}
+## 辅助文档 {#accessible-docs}
 
 [!DNL Experience Manager] 提供供残障人士使用的辅助文档。在Adobe不断改进模板和内容的同时，以下内容有助于使内容产品当前可访问：
 
@@ -215,7 +215,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * 可以使用键盘导航。
 * 对比度有助于突出文档网站的某些部分。
 
-## 提供反馈{#a11y-feedback}
+## 提供反馈 {#a11y-feedback}
 
 要提供与辅助功能相关的反馈、提出问题并请求产品增强功能，请使用以下方法：
 
