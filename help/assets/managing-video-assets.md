@@ -2,10 +2,10 @@
 title: 管理视频资产
 description: 在 [!DNL Adobe Experience Manager]中上传、预览、注释和发布视频资产。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 资产管理
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 10%
@@ -18,7 +18,7 @@ ht-degree: 10%
 
 了解如何在[!DNL Adobe Experience Manager Assets]中管理和编辑视频资产。 使用[!DNL Dynamic Media]集成，可以进行视频编码和转码（例如FFmpeg转码）。
 
-## 上传和预览视频资产{#upload-and-preview-video-assets}
+## 上传和预览视频资产 {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] 为扩展名为MP4的视频资产生成预览。如果资产的格式不是MP4，请安装FFmpeg包以生成预览。 FFmpeg创建OGG和MP4类型的视频演绎版。 您可以在[!DNL Assets]用户界面中预览演绎版。
 
@@ -30,7 +30,7 @@ ht-degree: 10%
 
    ![视频播放控件](assets/video-playback-controls.png)
 
-## 上传大于2 GB的资产的配置{#configuration-to-upload-assets-that-are-larger-than-gb}
+## 上传大于2 GB的资产的配置 {#configuration-to-upload-assets-that-are-larger-than-gb}
 
 默认情况下，由于文件大小限制，[!DNL Assets]不允许您上传任何大于2 GB的资产。 但是，您可以进入CRXDE Lite并在`/apps`目录下创建一个节点，以覆盖此限制。 节点必须具有相同的节点名称、目录结构和类似的节点顺序属性。
 
@@ -66,11 +66,11 @@ ht-degree: 10%
 1. 在&#x200B;**[!UICONTROL 超时]**&#x200B;字段中，指定值`18000`，然后单击&#x200B;**[!UICONTROL OK]**&#x200B;返回到&#x200B;**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流页面。
 1. 在页面顶部附近，在[!UICONTROL Dynamic Media编码视频]页面标题下，单击&#x200B;**[!UICONTROL Save]**。
 
-## 发布视频资产{#publish-video-assets}
+## 发布视频资产 {#publish-video-assets}
 
 发布后，您可以将视频资产作为URL包含在网页中，或直接嵌入资产。 有关详细信息，请参阅[发布Dynamic Media资产](/help/assets/publishing-dynamicmedia-assets.md)。
 
-## 在视频资产中添加批注{#annotate-video-assets}
+## 在视频资产中添加批注 {#annotate-video-assets}
 
 1. 从[!DNL Assets]控制台中，选择资产卡片上的&#x200B;**[!UICONTROL 编辑]** ，以显示资产详细信息页面。
 1. 要播放视频，请单击&#x200B;**[!UICONTROL 预览]**。
