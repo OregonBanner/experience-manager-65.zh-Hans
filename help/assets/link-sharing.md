@@ -2,17 +2,17 @@
 title: 使用链接共享资产
 description: 以URL形式共享资产、文件夹和收藏集。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 链接共享，资产管理
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: 3ec39279d001297dcc11ebd1110bb452de8ca980
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 7%
 
 ---
 
-# 通过链接{#asset-link-sharing}共享资产
+# 通过链接共享资产 {#asset-link-sharing}
 
 [!DNL Adobe Experience Manager Assets] 允许您以URL形式与组织成员及外部实体（包括合作伙伴和供应商）共享资产、文件夹和收藏集。通过链接共享资产是使外部各方无需首先登录[!DNL Assets]即可获得资源的一种便捷方式。
 
@@ -71,7 +71,7 @@ ht-degree: 7%
 
 1. 要取消共享资产，请选择该资产，然后单击工具栏中的&#x200B;**[!UICONTROL 取消共享]**。 下面显示确认消息。 资产的条目将从列表中删除。
 
-## 配置Day CQ邮件服务{#configure-day-cq-mail-service}
+## 配置Day CQ邮件服务 {#configure-day-cq-mail-service}
 
 1. 在[!DNL Experience Manager]主页上，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
 1. 在服务列表中，找到&#x200B;**[!UICONTROL Day CQ Mail Service]**。
@@ -86,7 +86,7 @@ ht-degree: 7%
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。
 
-## 配置最大数据大小{#configure-maximum-data-size}
+## 配置最大数据大小 {#configure-maximum-data-size}
 
 使用链接共享功能从共享的链接下载资产时，[!DNL Experience Manager]会从存储库中压缩资产层次结构，然后以ZIP文件形式返回资产。 但是，在对ZIP文件中可压缩的数据量没有限制的情况下，会对大量数据进行压缩，这会导致JVM中出现内存不足错误。 为了保护系统免受由于这种情况而导致的潜在拒绝服务攻击，请在Configuration Manager中使用&#x200B;**[!UICONTROL Max Content Size(uncompressed)]**&#x200B;参数为&#x200B;**[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]**&#x200B;配置最大大小。 如果资产的未压缩大小超过配置的值，则会拒绝资产下载请求。 默认值为100 MB。
 
@@ -98,7 +98,7 @@ ht-degree: 7%
 
 1. 保存更改。
 
-## {#best-practices-and-troubleshooting}最佳实践和疑难解答
+## 最佳实践和疑难解答 {#best-practices-and-troubleshooting}
 
 * 名称中包含空格的资产文件夹或收藏集可能无法共享。
 * 如果用户无法下载共享资产，请咨询[!DNL Experience Manager]管理员，了解[下载限制](#configure-maximum-data-size)的具体内容。
