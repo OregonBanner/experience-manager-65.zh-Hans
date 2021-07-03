@@ -3,17 +3,17 @@ title: 使用MSM重复使用资产
 description: 在从派生并链接到父资产的多个页面/文件夹中使用资产。 资产与主副本保持同步，单击几下即可从父资产接收更新。
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner, Administrator, Architect
+role: User, Admin, Architect
 feature: 资产管理，多站点管理器
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '3371'
 ht-degree: 9%
 
 ---
 
-# 为[!DNL Assets] {#reuse-assets-using-msm-for-assets}使用MSM重复使用资产
+# 使用MSM为[!DNL Assets]重用资产 {#reuse-assets-using-msm-for-assets}
 
 [!DNL Adobe Experience Manager]中的多站点管理器(MSM)功能使用户能够重复使用一次创作的内容，并在多个Web位置中重复使用。 与MSM一样，数字资产也可用于[!DNL Assets]功能。 对[!DNL Assets]使用MSM，您可以：
 
@@ -27,7 +27,7 @@ ht-degree: 9%
 
 ## 了解优势和概念 {#concepts}
 
-### 其工作方式及优势{#how-it-works-and-the-benefits}
+### 工作原理和优势 {#how-it-works-and-the-benefits}
 
 要了解在多个Web位置中重复使用相同内容（文本和资产）的使用方案，请参阅[可能的MSM方案](/help/sites-administering/msm.md)。 [!DNL Experience Manager] 在原始资产及其链接的副本(称为Live Copy(LC))之间维护一个链接。维护的链接允许将集中的更改推送到多个Live Copy。 这样可以在消除管理重复副本的限制的同时，更快地进行更新。 变化的传播是无误的和集中的。 利用功能，可以腾出空间进行仅限于选定Live Copy的更新。 用户可以分离链接（即中断继承），并在下次更新主副本并转出更改时，进行不被覆盖的本地编辑。 可以对一些选定的元数据字段或整个资产进行分离。 它允许灵活地在本地更新最初从主副本继承的资产。
 
@@ -124,7 +124,7 @@ MSM会在源资产及其Live Copy之间维护实时关系，以便：
 
 1. 您可以选择Live Copy的选项，以从父项继承转出配置或更改配置。
 
-### 文件夹{#status-lc-folder}的所有Live Copy的信息和状态
+### 文件夹所有Live Copy的信息和状态 {#status-lc-folder}
 
 [!DNL Experience Manager] 提供了一个控制台，用于检查源文件夹所有Live Copy的状态。此控制台显示所有子资产的状态。
 
@@ -167,7 +167,7 @@ MSM会在源资产及其Live Copy之间维护实时关系，以便：
 
 *图：暂停关系或更改特定Live Copy的转出配置。*
 
-### Live Copy {#ref-rail-lc}的“引用”边栏中的快速操作
+### Live Copy的“引用”边栏中的快速操作 {#ref-rail-lc}
 
 对于Live Copy资产或文件夹，您可以看到以下信息，并直接从“引用”边栏中执行以下操作：
 
@@ -208,7 +208,7 @@ MSM会在源资产及其Live Copy之间维护实时关系，以便：
 
 *图：将源的修改转出到选定的Live Copy。*
 
-### 关于同步操作{#about-sync}
+### 关于同步操作 {#about-sync}
 
 同步操作仅将源中的修改提取到选定的Live Copy。 同步操作会尊重并维护在取消继承后完成的本地修改。 不会覆盖本地修改，并且取消的继承也不会重新建立。 您可以通过三种方式启动同步操作。
 
@@ -232,7 +232,7 @@ MSM会在源资产及其Live Copy之间维护实时关系，以便：
 >
 >如果关系暂停，则同步操作在工具栏中不可用。 虽然同步操作在引用边栏中可用，但即使成功转出后，修改也不会传播。
 
-## 暂停和恢复关系{#suspend-resume}
+## 暂停和恢复关系 {#suspend-resume}
 
 您可以暂时暂停关系，以阻止Live Copy接收对源资产或文件夹所做的修改。 还可以恢复Live Copy的关系，以开始从源接收修改。
 
@@ -240,7 +240,7 @@ MSM会在源资产及其Live Copy之间维护实时关系，以便：
 
 或者，您也可以从 **[!UICONTROL Live Copy 概述]**&#x200B;控制台快速暂停或恢复 Live Copy 文件夹中多个资产的关系。请参阅[对 Live Copy 文件夹中的许多资产执行操作](#bulk-actions)。
 
-## 对Live Copy {#local-mods}进行本地修改
+## 对Live Copy进行本地修改 {#local-mods}
 
 Live Copy是创建时原始源的副本。 Live Copy的元数据值继承自源。 元数据字段单独维护与源资产相应字段的继承。
 
@@ -270,7 +270,7 @@ Live Copy是创建时原始源的副本。 Live Copy的元数据值继承自源�
 
 或者，您也可以从&#x200B;**[!UICONTROL Live Copy概述]**&#x200B;控制台中快速分离Live Copy文件夹中的多个资产。 请参阅[对 Live Copy 文件夹中的许多资产执行操作](#bulk-actions)。
 
-## Live Copy文件夹{#bulk-actions}中的批量操作
+## Live Copy文件夹中的批量操作 {#bulk-actions}
 
 如果您在Live Copy文件夹中包含多个资产，则对每个资产启动操作可能会非常繁琐。 您可以从[!UICONTROL Live Copy控制台]快速对许多资产启动基本操作。 上述方法可继续用于单个资产。
 
@@ -282,7 +282,7 @@ Live Copy是创建时原始源的副本。 Live Copy的元数据值继承自源�
 
    *图：从Live Copy概述控制台轻松更新Live Copy文件夹 [!UICONTROL 中的许] 多资产。*
 
-## 为[!DNL Assets] {#extend-api}扩展MSM
+## 为[!DNL Assets]扩展MSM {#extend-api}
 
 [!DNL Experience Manager] 用于使用MSM Java API扩展功能。对于[!DNL Assets]，扩展的工作方式与与用于[!DNL Sites]的MSM相同。 有关详细信息，请参阅[扩展MSM](/help/sites-developing/extending-msm.md)以及以下内容，以了解有关特定任务的信息：
 
@@ -298,7 +298,7 @@ Live Copy是创建时原始源的副本。 Live Copy的元数据值继承自源�
 >* 对于[!DNL Assets],MSM不支持在页面属性（触屏UI）上配置MSM锁定。
 
 
-## 资产管理任务对Live Copy的影响{#manage-assets}
+## 资产管理任务对Live Copy的影响 {#manage-assets}
 
 Live Copy和源是可在一定程度上作为数字资产进行管理的资产或文件夹。 [!DNL Experience Manager]中的某些资产管理任务对Live Copy具有特定影响。
 
@@ -321,7 +321,7 @@ Live Copy和源是可在一定程度上作为数字资产进行管理的资产�
 * 对于[!DNL Assets],MSM不支持在页面属性（触屏UI）上配置MSM锁定。
 * 对于[!DNL Assets]的MSM，请仅使用&#x200B;**[!UICONTROL 标准转出配置]**。 其他转出配置不适用于[!DNL Assets]的MSM。
 
-## 最佳实践{#best-practices}
+## 最佳实践 {#best-practices}
 
 MSM的一些最佳实践包括：
 
