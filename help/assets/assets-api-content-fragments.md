@@ -11,9 +11,9 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 feature: 内容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 3%
@@ -72,13 +72,13 @@ HTTP方法确定要执行的操作：
 
 支持的请求的确切格式在[API引用](/help/assets/assets-api-content-fragments.md#api-reference)文档中定义。
 
-### 事务性行为{#transactional-behavior}
+### 事务性行为 {#transactional-behavior}
 
 所有请求都是原子的。
 
 这意味着后续(`write`)请求不能合并到作为单个实体可能成功或失败的单个事务中。
 
-### AEM(Assets)REST API与AEM组件{#aem-assets-rest-api-versus-aem-components}
+### AEM(Assets)REST API与AEM组件 {#aem-assets-rest-api-versus-aem-components}
 
 <table>
  <tbody>
@@ -138,7 +138,7 @@ HTTP方法确定要执行的操作：
 
 在具有特定身份验证要求的环境中，建议使用OAuth。
 
-## 可用功能{#available-features}
+## 可用功能 {#available-features}
 
 内容片段是一种特定类型的资产，请参阅[使用内容片段](/help/assets/content-fragments/content-fragments.md)。
 
@@ -160,7 +160,7 @@ GETREST API支持通过URL参数进行分页（对于资产请求）：
 >
 >分页通常应用于容器实体（即具有演绎版的文件夹或资产），因为它与所请求实体的子实体相关。
 
-#### 示例：分页{#example-paging}
+#### 示例：分页 {#example-paging}
 
 `GET /api/assets.json?offset=2&limit=3`
 
@@ -178,7 +178,7 @@ GETREST API支持通过URL参数进行分页（对于资产请求）：
 ...
 ```
 
-## 实体类型{#entity-types}
+## 实体类型 {#entity-types}
 
 ### 文件夹 {#folders}
 
@@ -213,7 +213,7 @@ GETREST API支持通过URL参数进行分页（对于资产请求）：
 
 * 也被视为原子，即元素和变量作为片段属性的一部分公开，而作为链接或子实体公开。 这允许有效访问片段的有效负载。
 
-#### 内容模型和内容片段{#content-models-and-content-fragments}
+#### 内容模型和内容片段 {#content-models-and-content-fragments}
 
 当前，定义内容片段结构的模型不会通过HTTP API公开。 因此，*使用者*&#x200B;需要了解片段的模型（至少是一个最小值） — 尽管大多数信息都可以从负载中推断出来；数据类型等。 是定义的一部分。
 
@@ -241,7 +241,7 @@ GETREST API支持通过URL参数进行分页（对于资产请求）：
 >
 >有关更多详细信息，请参阅[API引用](/help/assets/assets-api-content-fragments.md#api-reference)。 尤其是[Adobe Experience Manager Assets API — 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
 
-### 读取/投放{#read-delivery}
+### 读取/投放 {#read-delivery}
 
 用法包括：
 
@@ -291,7 +291,7 @@ GETREST API支持通过URL参数进行分页（对于资产请求）：
 * **当前不支持内容片段模型**:无法读取或创建它们。为了能够创建新内容片段或更新现有内容片段，开发人员必须知道内容片段模型的正确路径。 目前，获取这些内容概述的唯一方法是通过管理UI。
 * **将忽略引用**。当前，没有检查是否引用了现有内容片段。 因此，例如，删除内容片段可能会导致包含引用的页面出现问题。
 
-## 状态代码和错误消息{#status-codes-and-error-messages}
+## 状态代码和错误消息 {#status-codes-and-error-messages}
 
 在相关情况下，可以看到以下状态代码：
 
@@ -364,7 +364,7 @@ GETREST API支持通过URL参数进行分页（对于资产请求）：
    }
    ```
 
-## API引用{#api-reference}
+## API参考 {#api-reference}
 
 有关详细的API参考，请参阅此处：
 
