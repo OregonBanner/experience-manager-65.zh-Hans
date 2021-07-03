@@ -3,16 +3,16 @@ title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
 feature: 智能标记，搜索
-role: Business Practitioner
+role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1600'
 ht-degree: 1%
 
 ---
 
-# 了解、应用和策划智能标记{#enhanced-smart-tags}
+# 了解、应用和策划智能标记 {#enhanced-smart-tags}
 
 处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 基本上，它包括员工、合作伙伴和客户通常用来引用和搜索特定类别数字资产的关键词列表。 使用分类控制的词汇标记资产可确保轻松识别和检索资产。
 
@@ -84,7 +84,7 @@ ht-degree: 1%
 >
 >如果您使用的是[!DNL Experience Manager] 6.3或更低版本，并且需要为资产提供标记服务，请参阅[智能标记](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智能标记不使用最新的AI功能，因此不如增强型智能标记服务准确。
 
-## 查看资产和标记{#reviewing-assets-and-tags}
+## 审核资产和标记 {#reviewing-assets-and-tags}
 
 入门后，您首先想要做的就是确定一组标记，这些标记在您的业务环境中最好地描述这些图像。
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 >
 >如果在[!DNL Adobe Experience Manager]之外完成了Lucene索引，则基于智能标记的搜索将无法按预期工作。
 
-## 自动标记资产{#tagging-assets-automatically}
+## 自动标记资产 {#tagging-assets-automatically}
 
 在培训了智能内容服务后，您可以触发标记工作流，以自动对其他相似资产集应用适当的标记。
 
@@ -127,13 +127,13 @@ ht-degree: 1%
 >
 >标记工作流可在资产和文件夹上运行。
 
-### 定期标记{#periodic-tagging}
+### 定期标记 {#periodic-tagging}
 
 您可以启用智能内容服务来定期标记文件夹中的资产。 打开资产文件夹的属性页面，在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡下选择&#x200B;**[!UICONTROL 启用智能标记]**，然后保存更改。
 
 为文件夹选择此选项后，智能内容服务会自动为文件夹中的资产添加标记。 默认情况下，标记工作流每天中午12:00运行。
 
-### 按需标记{#on-demand-tagging}
+### 按需标记 {#on-demand-tagging}
 
 您可以从工作流控制台或时间轴触发标记工作流，以立即标记您的资产。
 
@@ -141,7 +141,7 @@ ht-degree: 1%
 >
 >如果您从时间轴运行标记工作流，则一次最多可以对15个资产应用标记。
 
-#### 从工作流控制台{#tagging-assets-from-the-workflow-console}标记资产
+#### 从工作流控制台中标记资产 {#tagging-assets-from-the-workflow-console}
 
 1. 在[!DNL Experience Manager]界面中，转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
 1. 从&#x200B;**[!UICONTROL 工作流模型]**&#x200B;页面中，选择&#x200B;**[!UICONTROL DAM智能标记资产]**&#x200B;工作流，然后单击工具栏中的&#x200B;**[!UICONTROL 启动工作流]**。
@@ -155,7 +155,7 @@ ht-degree: 1%
 
    要验证智能内容服务是否正确标记了您的资产，请导航到资产文件夹并查看标记。
 
-#### 从时间轴{#tagging-assets-from-the-timeline}标记资产
+#### 从时间轴标记资产 {#tagging-assets-from-the-timeline}
 
 1. 从[!DNL Assets]用户界面中，选择包含要应用智能标记的资产或特定资产的文件夹。
 1. 从左上角打开&#x200B;**[!UICONTROL 时间轴]**。
@@ -170,7 +170,7 @@ ht-degree: 1%
 >
 >在后续的标记周期中，只有已修改的资产会再次使用新培训的标记进行标记。 但是，如果标记工作流的最后一个标记周期与当前标记周期之间的间隔超过24小时，则即使是未更改的资产也会进行标记。 对于定期标记工作流，当时间间隔超过6个月时，将标记未更改的资产。
 
-## 策划或审核应用的智能标记{#manage-smart-tags}
+## 策划或审核应用的智能标记 {#manage-smart-tags}
 
 您可以策划智能标记，以删除分配给品牌图像的任何不准确标记，以便仅显示最相关的标记。
 
@@ -186,7 +186,7 @@ ht-degree: 1%
 1. 单击&#x200B;**[!UICONTROL Save]**，然后单击&#x200B;**[!UICONTROL OK]**
 1. 导航到图像的&#x200B;**[!UICONTROL 属性]**&#x200B;页面。 请注意，您促销的标记被分配得更相关，并显示在搜索结果的前面。
 
-## 提示和限制{#tips-best-practices-limitations}
+## 提示和限制 {#tips-best-practices-limitations}
 
 * 智能内容服务的使用限制为每年最多200万张标记图像。 处理和标记的任何重复图像都计为标记图像。
 * 如果您从时间轴运行标记工作流，则一次最多可以对15个资产应用标记。
