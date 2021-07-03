@@ -2,17 +2,17 @@
 title: 启用重复资产的检测
 description: 了解如何在Experience Manager中启用重复资产的检测。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 资产管理，资产报表
 exl-id: a403d60e-2193-4835-8f37-4a40f2d01819
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
-# 启用对重复资产的检测{#enable-detection-of-duplicate-assets}
+# 启用重复资产的检测 {#enable-detection-of-duplicate-assets}
 
 如果您尝试上传[!DNL Adobe Experience Manager Assets]中存在的资产，重复项检测功能会将其标识为重复项。 默认情况下，重复项检测处于禁用状态。 要启用该功能，请执行以下步骤：
 
