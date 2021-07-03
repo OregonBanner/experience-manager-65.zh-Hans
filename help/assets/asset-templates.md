@@ -2,17 +2,17 @@
 title: 资产模板
 description: 了解 [!DNL Adobe Experience Manager Assets] 中的资产模板以及如何使用资产模板创建营销宣传资料。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 资产管理，开发人员工具
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 0%
 
 ---
 
-# 资产模板{#asset-templates}
+# 资产模板 {#asset-templates}
 
 资产模板是一种特殊的资产类别，有助于快速重新利用数字和打印媒体中视觉上丰富的内容。 资产模板包括固定消息传送部分和可编辑部分两部分。 固定消息部分可以包含专有内容，如品牌徽标和禁用进行编辑的版权信息。 可编辑的部分可以在字段中包含可视内容和文本内容，这些内容可以编辑以自定义消息传送。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 可以采用INDD、PDF或JPG格式，将更新的文件导出到父文件夹中。 您也可以将这些格式的输出下载到本地文件系统。
 
-## 创建宣传资料{#creating-a-collateral}
+## 创建宣传资料 {#creating-a-collateral}
 
 假设您想要创建数字可打印宣传资料（如宣传册、传单和广告等），以便在即将开展的活动中进行宣传，并与全球直销店共享。 根据模板创建宣传资料有助于跨渠道提供统一的客户体验。 设计人员可以使用创意解决方案（如[!DNL InDesign]）创建营销活动模板（单页或多页），并为您将模板上传到[!DNL Experience Manager Assets]。 在创建宣传资料之前，请预先将一个或多个INDD模板上传到[!DNL Experience Manager]并在中提供。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
-## 编辑宣传资料{#editing-a-collateral}
+## 编辑宣传资料 {#editing-a-collateral}
 
 您可以在创建宣传资料后立即对其进行编辑。 或者，您也可以从[!UICONTROL 模板]页面或资产页面中打开该模板。
 
@@ -139,7 +139,7 @@ ht-degree: 0%
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
-## 合并宣传资料{#merge-collateral}
+## 合并抵押品 {#merge-collateral}
 
 1. 在[!DNL Experience Manager]界面中，单击导航页面上的[!UICONTROL Assets]。
 
@@ -176,6 +176,6 @@ ht-degree: 0%
    >
    >您以后无法编辑合并的宣传资料，也无法使用它创建其他宣传资料。
 
-## 最佳实践和限制{#best-practices-limitations-tips}
+## 最佳实践和限制 {#best-practices-limitations-tips}
 
 * [!DNL Experience Manager]中的[!DNL InDesign]编辑器在标记级别工作，并且单个标记下的所有文本都被视为单个实体。 要在编辑时保留文本格式和样式，请分别标记每个段落（或具有不同样式的文本）。
