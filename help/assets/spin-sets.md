@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 feature: 旋转集，资产管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 36%
@@ -32,7 +32,7 @@ ht-degree: 36%
 >
 >有关Assets用户界面的信息，请参阅[管理资产](/help/assets/manage-assets.md)。
 
-## 快速入门：旋转集{#quick-start-spin-sets}
+## 快速入门：旋转集 {#quick-start-spin-sets}
 
 要快速设置并运行旋转集，请执行以下步骤：
 
@@ -86,7 +86,7 @@ ht-degree: 36%
 
 为旋转集上传图像的方法与[在 AEM Assets 中上传任何其他资产](/help/assets/manage-assets.md)的方法相同。
 
-### 为旋转集{#guidelines-for-shooting-spin-set-images}捕获图像的准则
+### 为旋转集捕获图像的准则 {#guidelines-for-shooting-spin-set-images}
 
 以下是关于旋转集图像的一些最佳实践。一般而言，旋转集中的图像越多，图像的旋转效果越好。但是，在旋转集中包含很多图像也会使加载图像所需的时间变长。在拍摄用于旋转集的图像时，AEM 建议遵循以下准则：
 
@@ -154,7 +154,7 @@ ht-degree: 36%
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。您新创建的旋转集会显示在创建时所用的文件夹中。
 
-## 查看旋转集{#viewing-spin-sets}
+## 查看旋转集 {#viewing-spin-sets}
 
 您可以在用户界面中创建旋转集，也可以使用[批集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。 但是，使用批集预设创建的集合，请&#x200B;*不*&#x200B;显示在用户界面中。 您可以通过三种不同方式访问通过批集预设创建的集。 （即使您是在用户界面中创建旋转集，这些方法也可用）。
 
