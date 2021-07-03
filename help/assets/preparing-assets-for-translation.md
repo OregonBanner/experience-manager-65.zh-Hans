@@ -2,17 +2,17 @@
 title: 准备资产以进行翻译
 description: 创建语言根文件夹以准备要翻译的资产以支持多语言资产。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 项目
 exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 1%
 
 ---
 
-# 准备翻译资产{#preparing-assets-for-translation}
+# 准备资产以进行翻译 {#preparing-assets-for-translation}
 
 多语言资产是指包含多种语言的二进制文件、元数据和标记的资产。 通常，资产的二进制文件、元数据和标记以一种语言存在，然后将这些语言翻译成其他语言，以用于多语言项目。
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 1. 将资产添加到主语言。
 1. 创建您需要语言副本的每种目标语言的语言根目录。
 
-## 创建语言根{#creating-a-language-root}
+## 创建语言根 {#creating-a-language-root}
 
 要创建语言根目录，请创建一个文件夹并使用ISO语言代码作为Name属性的值。 创建语言根目录后，可以在语言根目录的任何级别创建语言副本。
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 1. 单击&#x200B;**[!UICONTROL 创建]**。语言根目录在[!DNL Assets]控制台中创建。
 
-## 查看语言根{#viewing-language-roots}
+## 查看语言根 {#viewing-language-roots}
 
 [!DNL Experience Manager] 界面提供了一 **** 个“参考”面板，其中显示了在中创建的语言根列 [!DNL Assets]表。
 
