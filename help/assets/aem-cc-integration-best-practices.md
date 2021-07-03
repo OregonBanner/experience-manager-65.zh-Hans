@@ -3,10 +3,10 @@ title: 与Adobe Creative Cloud最佳实践集成
 description: 集成 [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 以简化资产传输工作流并实现高内容速度的最佳实践。
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 协作，Adobe资产链接，桌面应用程序
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '3254'
 ht-degree: 15%
@@ -37,7 +37,7 @@ ht-degree: 15%
 
 | 参与角色的价值主张 | Adobe服务 | 涉及的曲面 |
 |---|---|---|
-| 创意用户从[!DNL Experience Manager]中发现资产、打开并使用资产、编辑资产并将其上传到[!DNL Experience Manager]，以及将新文件上传到[!DNL Experience Manager]，而无需离开[!DNL Creative Cloud]应用程序。 | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
+| 创意用户从[!DNL Experience Manager]中发现资产，打开并使用资产，编辑资产并将其上传到[!DNL Experience Manager]，以及将新文件上传到[!DNL Experience Manager]，而无需离开[!DNL Creative Cloud]应用程序。 | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
 | 业务用户可简化资产的打开和使用、编辑和上传对[!DNL Experience Manager]所做的更改，以及从桌面环境将新文件上传到[!DNL Experience Manager]的过程。 它们使用通用集成来打开本机桌面应用程序中的任何资产类型，包括非Adobe资产类型。 | [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac桌面版上的桌面应用程序 |
 | 营销人员和企业用户从[!DNL Experience Manager]内发现、预览、许可和保存并管理[!DNL Adobe Stock]资产。 授权资产和已保存的资产会提供选择[!DNL Adobe Stock]元数据，以便更好地进行管理。 | [Experience Manager和Adobe Stock集成](aem-assets-adobe-stock.md) | [!DNL Experience Manager] web界面 |
 
