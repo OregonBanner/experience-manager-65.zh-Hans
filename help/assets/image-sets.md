@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 feature: 图像集，资产管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2085'
 ht-degree: 37%
@@ -24,7 +24,7 @@ ht-degree: 37%
 
 图像集由带有单词的横幅来指定 `IMAGESET`。 此外，如果图像集已发布，则横幅上会显示由 **[!UICONTROL World]** 图标指示的发布日期以及由铅笔图标指示的上次修改日期 **** 。
 
-![chlimage_1-133](assets/chlimage_1-339.png)
+![chlimage_1-135](assets/chlimage_1-339.png)
 
 在图像集中，您还可以通过创建图像集并添加缩略图来创建样本。
 
@@ -171,7 +171,7 @@ ht-degree: 37%
 
 1. 单击&#x200B;**[!UICONTROL 保存]**。您新创建的图像集会显示在创建时所用的文件夹中。
 
-## 查看图像集{#viewing-image-sets}
+## 查看图像集 {#viewing-image-sets}
 
 您可以在用户界面中创建图像集，也可以使用[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建图像集。
 
