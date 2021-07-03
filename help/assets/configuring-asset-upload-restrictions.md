@@ -2,17 +2,17 @@
 title: 配置资产上传限制
 description: '限制用户可上传的资产类型（文件） '
 contentOwner: AG
-role: Developer, Administrator, Architect
+role: Developer, Admin, Architect
 feature: 资产管理，上传
 exl-id: 0e009b9a-54c4-4715-98ee-0207839f90f6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 15%
 
 ---
 
-# 配置资产上传限制{#configuring-asset-upload-restrictions}
+# 配置资产上传限制 {#configuring-asset-upload-restrictions}
 
 您可以配置[!DNL Adobe Experience Manager Assets]以限制用户可上传的资产类型。 它有助于防止意外上载不需要的格式和恶意文件。 `Day CQ DAM Asset Upload Restriction`服务允许您控制用户可上传的文件类型。 默认情况下，[!DNL Assets]允许用户上传所有MIME类型的资产。 但是，您可以配置该服务，以限制用户仅上传特定MIME类型的文件。
 
