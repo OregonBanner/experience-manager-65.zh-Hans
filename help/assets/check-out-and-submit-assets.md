@@ -2,17 +2,17 @@
 title: 签入和签出 [!DNL Assets]中的文件
 description: 了解如何签出要编辑的资产，并在更改完成后重新签入它们。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: 资产管理
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
 
 ---
 
-# [!DNL Experience Manager] DAM {#check-in-and-check-out-files-in-assets}中的签入和签出文件
+# [!DNL Experience Manager] DAM中的签入和签出文件 {#check-in-and-check-out-files-in-assets}
 
 [!DNL Adobe Experience Manager Assets] 允许您签出要编辑的资产，并在完成更改后重新签入它们。签出资产后，只有您才能编辑、注释、发布、移动或删除资产。 签出资产会锁定资产。 在您将资产签回[!DNL Assets]之前，其他用户无法对资产执行上述任何操作。 但是，他们仍可以更改锁定资产的元数据。
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 此功能有助于防止其他用户覆盖作者所做的更改，在作者所做的更改中，多个用户会跨团队协作进行编辑工作流。
 
-## 查看资产{#checking-out-assets}
+## 签出资产 {#checking-out-assets}
 
 1. 从[!DNL Assets]用户界面中，选择要签出的资产。 您还可以选择多个要签出的资产。
 1. 在工具栏中，单击&#x200B;**[!UICONTROL Checkout]**。 **[!UICONTROL Checkout]**&#x200B;选项切换为&#x200B;**[!UICONTROL Checkin]**。
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 1. 从[!DNL Assets]界面中选择已编辑的资产，然后单击工具栏中的&#x200B;**[!UICONTROL 签入]**。 修改后的资产将签入[!DNL Assets]，可供其他用户编辑。
 
-## 强制检查{#forced-check-in}
+## 强制签入 {#forced-check-in}
 
 管理员可以签入其他用户签出的资产。
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 1. 在工具栏中，单击&#x200B;**[!UICONTROL 释放锁定]**。 资产会签回，以供其他用户编辑。
 
-## 最佳实践和限制{#tips-limitations}
+## 最佳实践和限制 {#tips-limitations}
 
 * 可以删除包含已签出资产文件的&#x200B;*文件夹*。 在删除文件夹之前，请确保用户未签出任何数字资产。
 
