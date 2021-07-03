@@ -8,10 +8,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 工作流，资产管理，演绎版
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 4%
@@ -41,7 +41,7 @@ ht-degree: 4%
 >
 >即使在两个文件夹之间移动资产时，也是如此，因为这两个文件夹分配了相同的配置文件。
 
-## 重新处理文件夹{#reprocessing-assets}中的资产
+## 重新处理文件夹中的资产 {#reprocessing-assets}
 
 >[!NOTE]
 >
@@ -92,7 +92,7 @@ ht-degree: 4%
 
    要监控工作流或检查其进度，请从Experience Manager主控制台页面中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]**。 在工作流实例页面上，选择一个工作流。 在菜单栏上，单击&#x200B;**[!UICONTROL 打开历史记录]**。 您还可以从同一工作流实例页面中终止、暂停或重命名选定的工作流。
 
-### 调整重新处理工作流的批处理大小{#adjusting-load}
+### 调整重新处理工作流的批处理大小 {#adjusting-load}
 
 （可选）重新处理工作流中的默认批大小为每个作业50个资产。 此最佳批处理大小受平均资产大小和运行重新处理的资产的MIME类型的约束。 值越高，表示您在一个重新处理作业中拥有许多文件。 因此，处理横幅会在Experience Manager资产上停留较长时间。 但是，如果平均文件大小较小（1 MB或更小），则Adobe建议您将值增加到100，但最多不超过1000。 如果文件平均大小较大（如数百MB），则Adobe建议您将批处理大小减少到10。
 
