@@ -6,16 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 feature: CDN缓存，Dynamic Media Classic
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 16%
 
 ---
 
-# 通过Dynamic Media Classic {#invalidating-your-cdn-cached-content}使CDN缓存失效
+# 通过Dynamic Media Classic使CDN缓存失效 {#invalidating-your-cdn-cached-content}
 
 Dynamic Media资产由CDN（内容交付网络）缓存，以便快速交付。 但是，当您对资产进行更新时，您希望这些更改立即生效。 通过使CDN缓存内容失效，您可以快速更新由Dynamic Media交付的资产，而无需等待缓存过期。
 
