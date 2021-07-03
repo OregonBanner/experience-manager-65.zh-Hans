@@ -2,17 +2,17 @@
 title: 扩展资产编辑器
 description: 了解如何使用自定义组件扩展资产编辑器的功能。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 14%
 
 ---
 
-# 扩展资产编辑器{#extending-asset-editor}
+# 扩展资产编辑器 {#extending-asset-editor}
 
 资产编辑器是在单击通过资产共享找到的资产后打开的页面，它允许用户编辑资产的元数据、缩略图、标题和标记等方面。
 
@@ -20,7 +20,7 @@ ht-degree: 14%
 
 除了使用预先存在的编辑器组件外，[!DNL Adobe Experience Manager]开发人员还可以创建自己的组件。
 
-## 创建资产编辑器模板{#creating-an-asset-editor-template}
+## 创建资产编辑器模板 {#creating-an-asset-editor-template}
 
 Geometrixx中包含以下示例页面：
 
@@ -40,7 +40,7 @@ Geometrixx中包含以下示例页面：
 
 在大多数情况下，复制现有示例`init.jsp`(`/apps/geometrixx/components/asseteditor/init.jsp`)应满足这些需求。
 
-### 配置JS操作{#configuring-js-actions}
+### 配置JS操作 {#configuring-js-actions}
 
 某些[!DNL Assets]组件需要在`component.js`中定义的JS函数。 将此文件复制到组件目录并链接它。
 
@@ -50,7 +50,7 @@ Geometrixx中包含以下示例页面：
 
 此示例在`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)中加载此JavaScript源。
 
-### 其他样式表{#additional-style-sheets}
+### 其他样式表 {#additional-style-sheets}
 
 某些[!DNL Assets]组件使用小组件库。 要在内容上下文中正确呈现，必须加载其他样式表。 标记操作组件需要再一个。
 
@@ -58,11 +58,11 @@ Geometrixx中包含以下示例页面：
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
-### Geometrixx样式表{#geometrixx-style-sheet}
+### Geometrixx样式表 {#geometrixx-style-sheet}
 
 示例页面组件要求所有选择器以`static.css`(`/etc/designs/geometrixx/static.css`)的`.asseteditor`开头。 最佳实践：将所有`.asseteditor`选择器复制到样式表，并根据需要调整规则。
 
-### 表单选择器：对最终加载的资源{#formchooser-adjustments-for-eventually-loaded-resources}的调整
+### 表单选择器：最终加载的资源的调整 {#formchooser-adjustments-for-eventually-loaded-resources}
 
 资产编辑器使用表单选择器，该选择器允许您通过只添加表单选择器和表单路径到资产URL来编辑同一表单页面上的资源（在本例中为资产）。
 
@@ -121,7 +121,7 @@ Geometrixx中包含以下示例页面：
 <title><%= title %></title>
 ```
 
-## 创建简单的表单字段组件{#creating-a-simple-form-field-component}
+## 创建简单的表单字段组件 {#creating-a-simple-form-field-component}
 
 此示例介绍如何构建可显示和显示已加载资产元数据的组件。
 
@@ -202,7 +202,7 @@ Geometrixx中包含以下示例页面：
 
 1. 在&#x200B;**编辑**&#x200B;模式中，新组件（例如，**示例元数据**）现在可在 Sidekick 中使用（位于&#x200B;**资产编辑器**&#x200B;组中）。插入组件。要能够存储元数据，必须将其添加到元数据表单中。
 
-## 修改元数据选项{#modifying-metadata-options}
+## 修改元数据选项 {#modifying-metadata-options}
 
 您可以修改[元数据表单](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component)中可用的命名空间。
 
