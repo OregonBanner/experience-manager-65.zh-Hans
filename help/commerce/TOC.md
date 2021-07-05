@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEM Content and Commerce
 breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用和管理 AEM Content and Commerce。
-source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
+source-git-commit: 538dc7620317f86c0b3d762eaef597d0a7969ace
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 38%
+source-wordcount: '108'
+ht-degree: 37%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 38%
       + [样式CIF组件](cif/customizing/style-cif-component.md)
       + [自定义CIF组件](cif/customizing/customize-cif-components.md)
       + [使用CIF目录选取器](cif/customizing/use-cif-pickers.md)
++ [Adobe商务PWA Studio](cif/pwa-studio/getting-started.md)
 + [迁移](cif/migration.md)
 + 发行说明 {#release-notes}
    + [2021年](cif/release-notes/release-notes-2021.md)
