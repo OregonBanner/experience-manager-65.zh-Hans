@@ -10,14 +10,15 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 08269877be5e98405474e4b1793526763cab174f
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 0%
 
 ---
 
-# 开发报告{#developing-reports}
+
+# 开发报告 {#developing-reports}
 
 AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，其中大多数报表基于报表框架。
 
@@ -85,7 +86,7 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 >* 属性 - `String`
 
 
-## 报告框架{#reporting-framework}
+## 报告框架 {#reporting-framework}
 
 报告框架遵循以下原则：
 
@@ -100,14 +101,14 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 
 ![chlimage_1-248](assets/chlimage_1-248.png)
 
-### 报表页面{#report-page}
+### 报表页面 {#report-page}
 
 报表页面：
 
 * 是标准CQ5页面。
 * 基于为报表](#report-template)配置的[标准CQ5模板。
 
-### 报表库{#report-base}
+### 报表库 {#report-base}
 
 [ `reportbase`组件](#report-base-component)构成任何报表的基础，如下所示：
 
@@ -117,7 +118,7 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 * 定义哪些图表类型可用以及哪些当前处于活动状态。
 * 定义编辑对话框，该对话框允许用户配置报表的某些方面。
 
-### 列基{#column-base}
+### 列基 {#column-base}
 
 每列都是[ `columnbase`组件](#column-base-component)的实例，该实例：
 
@@ -125,7 +126,7 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 * 定义指向[基础结果集](#the-query-and-data-retrieval)的链接；例如，定义此结果集中引用的特定数据，以及其处理方式。
 * 持有其他定义；例如可用的聚合和过滤器，以及任何默认值。
 
-### 查询与数据检索{#the-query-and-data-retrieval}
+### 查询与数据检索 {#the-query-and-data-retrieval}
 
 查询：
 
@@ -149,7 +150,7 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 
 开发人员必须确保为报表定义的查询返回适用于该报表的节点集。 但是，节点本身不需要保存所有必需的信息，这也可以从父节点和/或子节点派生。 例如，用于[用户报表](/help/sites-administering/reporting.md#user-report)的查询会根据节点类型选择节点（在此例中为`rep:user`）。 但是，此报表上的大多数列并非直接从这些节点获取其数据，而是从子节点`profile`获取其数据。
 
-### 处理队列{#processing-queue}
+### 处理队列 {#processing-queue}
 
 [query](#the-query-and-data-retrieval)返回要在报表中显示为行的数据集。 在将结果集中的每一行（服务器端）在[几个阶段](#phases-of-the-processing-queue)中进行处理，然后传输到客户端，以便在报表中显示。
 
@@ -168,13 +169,13 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 
    例如，由向用户显示的文本、用于排序的值以及用于（在客户端）创建链接的其他URL组成。
 
-#### 处理队列{#workflow-of-the-processing-queue}的工作流
+#### 处理队列的工作流 {#workflow-of-the-processing-queue}
 
 以下工作流表示处理队列：
 
 ![chlimage_1-249](assets/chlimage_1-249.png)
 
-#### 处理队列的阶段{#phases-of-the-processing-queue}
+#### 处理队列的阶段 {#phases-of-the-processing-queue}
 
 其中，详细步骤和元素包括：
 
@@ -207,7 +208,7 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 >
 >处理队列的其他元素在`columnbase`组件上定义。
 
-## 报表构建和配置{#report-construction-and-configuration}
+## 报表构建和配置 {#report-construction-and-configuration}
 
 构建和配置报表时需要满足以下条件：
 
@@ -218,7 +219,7 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 * a [报表设计](#report-design)
 * [报表模板](#report-template)
 
-### 报表组件的位置{#location-of-report-components}
+### 报表组件的位置 {#location-of-report-components}
 
 默认报表组件位于`/libs/cq/reporting/components`下。
 
@@ -245,13 +246,13 @@ N:apps
                         N:<columnname> [cq:Component]  // column base component
 ```
 
-### 页面组件{#page-component}
+### 页面组件 {#page-component}
 
 报表页面必须使用`/libs/cq/reporting/components/reportpage`的`sling:resourceType`。
 
 自定义页面组件在大多数情况下不应是必需的。
 
-## 报表基础组件{#report-base-component}
+## 报表库组件 {#report-base-component}
 
 每个报表类型都需要一个从`/libs/cq/reporting/components/reportbase`派生的容器组件。
 
@@ -269,7 +270,7 @@ N:<reportname> [cq:Component]
     N:queryBuilder
 ```
 
-### 查询定义{#query-definition}
+### 查询定义 {#query-definition}
 
 ```xml
 N:queryBuilder
@@ -314,7 +315,7 @@ N:queryBuilder
 
 所有项都是可选的，并且可以根据需要进行组合，但您必须至少定义其中一项。
 
-### 图表定义{#chart-definitions}
+### 图表定义 {#chart-definitions}
 
 ```xml
 N:charting
@@ -399,7 +400,7 @@ N:charting
 
 
 
-### 配置对话框{#configuration-dialog}
+### 配置对话框 {#configuration-dialog}
 
 每个报表都可以有一个配置对话框，允许用户为报表指定各种参数。 打开报表页面时，可通过&#x200B;**编辑**&#x200B;按钮访问此对话框。
 
@@ -487,7 +488,7 @@ N:charting
    * [报表模板](#report-template)（作为固定值或作为配置对话框的默认值）。
    * 用户（使用此参数）
 
-## 列基组件{#column-base-component}
+## 列基组件 {#column-base-component}
 
 每个列类型都需要一个从`/libs/cq/reporting/components/columnbase`派生的组件。
 
@@ -527,7 +528,7 @@ N:<columnname> [cq:Component]
 
 另请参阅[定义新报表](#defining-your-new-report)。
 
-### 列特定查询{#column-specific-query}
+### 列特定查询 {#column-specific-query}
 
 这定义了在单个列中使用的特定数据提取（从[报表数据结果集](#the-query-and-data-retrieval)）。
 
@@ -571,7 +572,7 @@ N:definitions
 
 在大多数情况下，仅使用`property`。
 
-### 客户端筛选器{#client-filter}
+### 客户端过滤器 {#client-filter}
 
 客户端过滤器从服务器返回的数据中提取要显示的信息。
 
@@ -602,7 +603,7 @@ function(v) {
 }
 ```
 
-### 解析器和预处理{#resolvers-and-preprocessing}
+### 解析器和预处理 {#resolvers-and-preprocessing}
 
 [处理队列](#processing-queue)定义各种解析器并配置预处理：
 
@@ -790,7 +791,7 @@ N:definitions
                 P:format          // data type formatter
 ```
 
-#### 预处理 — 查找和替换模式{#preprocessing-find-and-replace-patterns}
+#### 预处理 — 查找和替换模式 {#preprocessing-find-and-replace-patterns}
 
 要进行预处理，您可以指定一个`pattern`（定义为[正则表达式](https://en.wikipedia.org/wiki/Regular_expression)或正则表达式），该表达式位于并随后被`replace`模式替换：
 
@@ -824,7 +825,7 @@ N:definitions
 
    * `/content/geometrixx/en/services`
 
-#### 预处理 — 数据类型格式化程序{#preprocessing-data-type-formatters}
+#### 预处理 — 数据类型格式化程序 {#preprocessing-data-type-formatters}
 
 这些格式化程序会将数值转换为相对字符串。
 
@@ -862,7 +863,7 @@ N:definitions
                         P:format = "datedelta"
 ```
 
-### 列特定定义{#column-specific-definitions}
+### 列特定定义 {#column-specific-definitions}
 
 特定于列的定义定义该列可用的过滤器和聚合。
 
@@ -999,7 +1000,7 @@ N:definitions
 
          采用所有值的第95个百分位数。
 
-### 列默认值{#column-default-values}
+### 列默认值 {#column-default-values}
 
 用于定义列的默认值：
 
@@ -1012,7 +1013,7 @@ N:defaults
 
    有效的`aggregate`值与`aggregates`下`type`的值相同(请参阅[列特定定义（定义 — 过滤器/聚合）](#column-specific-definitions))。
 
-### 事件和操作{#events-and-actions}
+### 事件和操作 {#events-and-actions}
 
 编辑配置定义侦听器需要检测的事件以及在这些事件发生后要应用的操作。 有关背景信息，请参阅[组件开发简介](/help/sites-developing/components.md)。
 
@@ -1032,7 +1033,7 @@ N:cq:editConfig [cq:EditConfig]
         P:afterremove = "REFRESH_SELF"
 ```
 
-### 一般列{#generic-columns}
+### 通用列 {#generic-columns}
 
 通用列是扩展，其中（大多数）列定义存储在列节点（而不是组件节点）的实例中。
 
@@ -1078,7 +1079,7 @@ N:cq:editConfig [cq:EditConfig]
 
    `/etc/reports/userreport/jcr:content/report/columns/genericcol/settings/generic`
 
-## 报表设计{#report-design}
+## 报表设计 {#report-design}
 
 设计可定义哪些列类型可用于创建报表。 它还定义了将列添加到的段落系统。
 
@@ -1134,7 +1135,7 @@ N:cq:editConfig [cq:EditConfig]
 >
 >创建报表后，可自动创建默认列。 这些值在模板中指定。
 
-## 报表模板{#report-template}
+## 报表模板 {#report-template}
 
 每个报表类型必须提供一个模板。 这些是标准的[CQ模板](/help/sites-developing/templates.md)，可以这样配置。
 
@@ -1199,9 +1200,9 @@ N:apps
                 N:<reportname> [sling:Folder]
 ```
 
-## 创建您自己的报告 — 示例{#creating-your-own-report-an-example}
+## 创建您自己的报表 — 示例 {#creating-your-own-report-an-example}
 
-### 定义新报表{#defining-your-new-report}
+### 定义新报表 {#defining-your-new-report}
 
 要定义新报表，必须创建并配置：
 
@@ -1381,7 +1382,7 @@ N:apps
    * 提供模板的标题和描述
    * 提供可在模板列表中使用的缩略图图像（上面未列出此节点的完整定义 — 最简单的方法是从现有报表中复制thumbnail.png的实例）。
 
-### 创建新报表的实例{#creating-an-instance-of-your-new-report}
+### 创建新报表的实例 {#creating-an-instance-of-your-new-report}
 
 现在可以创建新报表的实例：
 
@@ -1404,13 +1405,13 @@ N:apps
    > P:groupable [Boolean] = true
    >```
 
-## 配置报表框架服务{#configuring-the-report-framework-services}
+## 配置报表框架服务 {#configuring-the-report-framework-services}
 
 本节介绍用于实施报表框架的OSGi服务的高级配置选项。
 
 可以使用Web控制台的“配置”菜单（例如`http://localhost:4502/system/console/configMgr`）查看这些配置。 使用AEM时，可通过多种方法来管理此类服务的配置设置；有关更多详细信息和建议的实践，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md) 。
 
-### 基本服务(Day CQ Reporting Configuration){#basic-service-day-cq-reporting-configuration}
+### 基本服务（Day CQ Reporting配置） {#basic-service-day-cq-reporting-configuration}
 
 * **** 时区定义为其创建时区历史数据。这是为了确保历史图表能够为全球每个用户显示相同的数据。
 * **** 本地化定义要与时间区一起用于历史 **** 数据的区域设置。区域设置用于确定某些特定于区域设置的日历设置（例如，一周的第一天是星期日还是星期一）。
@@ -1434,7 +1435,7 @@ N:apps
 
 * **强制快照用户**，如果启用，则所有快照都将与在快照用户 *下指定的用户一起*&#x200B;拍摄。如果处理不正确，可能会对安全造成严重影响。
 
-### 缓存设置(Day CQ Reporting Cache){#cache-settings-day-cq-reporting-cache}
+### 缓存设置(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
 
 * **** 启用后，您可以启用或禁用报表数据的缓存。启用报告缓存会在多个请求期间将报告数据保留在内存中。 这可能会提高性能，但会导致内存消耗增加，在极端情况下可能导致内存不足。
 * **** TTL定义缓存报表数据的时间（以秒为单位）。数字越高，性能越好，但如果数据在时间段内发生更改，则也可能会返回不准确的数据。
