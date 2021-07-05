@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 08269877be5e98405474e4b1793526763cab174f
+source-git-commit: 071bc0e36ed2d8eb4ce7bd0ba46823adc0e43095
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 0%
@@ -50,34 +50,17 @@ AEM提供了[标准报表](/help/sites-administering/reporting.md)的选项，�
 >在以下示例和定义中，使用了以下符号：
 >
 >* 每行定义一个节点或属性，其中：
-   >
-   >  
-* `N:<name> [<nodeType>]`
-   >
-   >     
-   描述名称为`<*name*>`且节点类型为&#x200B;`<*nodeType*>`*的节点。*
-   >
-   >  
-* `P:<name> [<propertyType]`
-   >
-   >     
-   描述名称为`<*name*>`且属性类型为`<*propertyType*>`的属性。
-   >
-   >  
-* `P:<name> = <value>`
-   >
-   >     
-   描述必须设置为`<value>`值的属性`<name>`。
+   >  `N:<name> [<nodeType>]` :描述名称为且节点类 `<*name*>` 型为的节 `<*nodeType*>`*点。*
+   >  `P:<name> [<propertyType]` :描述名称为且属 `<*name*>` 性类型为的属 `<*propertyType*>`性。
+   >  `P:<name> = <value>` :描述必 `<name>` 须设置为值的属 `<value>`性。
    >
    >
 * 缩进显示节点之间的分层依赖关系。
->* 以 |表示可能项目的列表；例如，类型或名称：
+>* 以 |表示可能项目的列表；例如，类型或名称；例如`String|String[]`表示该属性可以是String或String[]。
 
->
->  
-例如`String|String[]`表示该属性可以是String或String[]。
->
->* `[]` 描述数组；例如字符串[] 或查询定义中的节点 [数组](#query-definition)。
+   >
+   >
+* `[]` 描述数组；例如字符串[] 或查询定义中的节点 [数组](#query-definition)。
 >
 >
 除非另有说明，否则默认类型为：
