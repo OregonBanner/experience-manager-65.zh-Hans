@@ -10,9 +10,9 @@ docset: aem65
 feature: 查看器
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '6616'
+source-wordcount: '6614'
 ht-degree: 8%
 
 ---
@@ -241,7 +241,7 @@ Dynamic Media Viewers 扩展提供的唯一数据元素类型是&#x200B;**[!UICO
 
 无论如何，由Dynamic Media查看器驱动的数据元素的值都不会存储在本地存储或服务器上；而是仅在客户端Experience Platform Launch库中保留。 此类数据元素的值在网页重新加载时消失。
 
-通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html?lang=en#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的数据元素仅支持存储持续时间选项&#x200B;**[!UICONTROL None]**。 在用户界面中可以设置任何其他值，但在这种情况下，不会定义数据元素行为。 扩展可自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
+通常，数据元素编辑器支持[存储持续时间选择](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html#create-a-data-element)。 但是，使用Dynamic Media查看器扩展的数据元素仅支持存储持续时间选项&#x200B;**[!UICONTROL None]**。 在用户界面中可以设置任何其他值，但在这种情况下，不会定义数据元素行为。 扩展可自行管理数据元素的值：在整个查看器生命周期中维护查看器事件参数值的数据元素。
 
 ### 关于Dynamic Media查看器扩展中的规则 {#about-rules-in-the-dynamic-media-viewers-extension}
 
