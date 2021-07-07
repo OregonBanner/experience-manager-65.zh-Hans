@@ -3,14 +3,15 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4405'
 ht-degree: 3%
 
 ---
 
-# 配置富文本编辑器插件{#configure-the-rich-text-editor-plug-ins}
+
+# 配置富文本编辑器插件 {#configure-the-rich-text-editor-plug-ins}
 
 RTE功能通过一系列插件提供，每个插件都具有features属性。 您可以配置一个或多个RTE功能，以启用或禁用该功能属性。 本文介绍了如何具体配置RTE插件。
 
@@ -72,7 +73,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 单击“查找”(Find)后，“查找和替换”(Find and Replace)对话框将变得透明，单击“替换”(Replace)后，对话框将变得不透明。 这允许作者查看作者将替换的文本。 如果用户单击“全部替换”，则对话框将关闭并显示已进行替换的数量。
 
-## 配置粘贴模式{#paste-modes}
+## 配置粘贴模式 {#paste-modes}
 
 使用RTE时，作者可以以以下三种模式之一粘贴内容：
 
@@ -82,7 +83,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 * **MS Word模式**:从MS Word复制时，粘贴带格式的文本（包括表格）。不支持从其他源（如网页或MS Excel）复制和粘贴文本，并仅保留部分格式。
 
-### 配置RTE工具栏{#configure-paste-options-available-on-the-rte-toolbar}上的“粘贴”选项
+### 配置RTE工具栏上的粘贴选项  {#configure-paste-options-available-on-the-rte-toolbar}
 
 在RTE工具栏中，您可以为作者提供以下三个图标中的一些、全部或全部都不提供：
 
@@ -98,7 +99,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 1. 导航到节点`rtePlugins/edit`。 如果节点不存在，请参阅[激活插件](#activateplugin)。
 1. 在`edit`节点上创建`features`属性，并添加一个或多个功能。 保存所有更改。
 
-### 配置粘贴(Ctrl+V)图标和快捷键{#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}的行为
+### 配置“粘贴”(Ctrl+V)图标和快捷键的行为 {#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}
 
 可以使用以下步骤预配置&#x200B;**[!UICONTROL 粘贴(Ctrl+V)]**&#x200B;图标的行为。 此配置还定义作者用于粘贴内容的键盘快捷键Ctrl+V的行为。
 
@@ -155,53 +156,18 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
    >
    >如果未明确定义，则使用默认值true，并接受格式。
 
-1. 也可以使用一系列其他属性或节点来定义其他格式，这些属性或节点也应用于`htmlPasteRules`节点：
+1. 也可以使用一系列其他属性或节点来定义其他格式，这些属性或节点也应用于`htmlPasteRules`节点。 保存所有更改。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>属性</strong></td>
-   <td><strong>类型</strong></td>
-   <td><strong>描述</strong></td>
-  </tr>
-  <tr>
-   <td>allowBlockTags</td>
-   <td>String[]</td>
-   <td><p>定义允许的块标记列表。</p> <p>一些可能的块标记包括：</p>
-    <ul>
-     <li>标题(h1、h2、h3)</li>
-     <li>(p)段</li>
-     <li>列表(ol、ul)</li>
-     <li>表(table)</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>fallbackBlockTag</td>
-   <td>字符串</td>
-   <td><p>定义块标记，该标记用于任何具有未包含在allowBlockTags中的块标记的块。</p> <p> p在大多数情况下都足够。</p> </td>
-  </tr>
-  <tr>
-   <td>表</td>
-   <td>nt:unstructured</td>
-   <td><p>定义粘贴表时的行为。<br /> </p> <p>此节点必须具有属性<code>allow</code>（类型<code>Boolean</code>）以定义是否允许粘贴表。</p> <p>如果将<code>allow</code>设置为<code>false</code>，则必须指定属性<code>ignoreMode</code>（类型<code> String</code>）以定义如何处理粘贴的表内容。 <code>ignoreMode</code>的有效值为：</p>
-    <ul>
-     <li><code>remove</code>:删除表内容。</li>
-     <li><code>paragraph</code>:将表格单元格转换为段落。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>列表</td>
-   <td>nt：非结构化</td>
-   <td><p>定义粘贴列表时的行为。<br /> </p> <p>必须具有属性<code>allow</code>（类型<code>Boolean</code>）以定义是否允许粘贴列表。</p> <p>如果将<code>allow</code>设置为<code>false</code>，则必须指定属性<code>ignoreMode</code>（类型<code>String</code>）以定义如何处理粘贴的任何列表内容。 <code>ignoreMode</code>的有效值为：</p>
-    <ul>
-     <li><code>remove</code>:删除列表内容。</li>
-     <li><code>paragraph</code>:将列表项转换为段落。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+您可以将以下属性用于`htmlPasteRules`。
 
-有效`htmlPasteRules`结构的示例：
+| 属性 | 类型 | 描述 |
+|---|---|---|
+| `allowBlockTags` | 字符串 | 定义允许的块标记列表。 一些可能的块标记包括： <ul> <li>标题(h1、h2、h3)</li> <li>(p)段</li> <li>列表(ol、ul)</li> <li>表(table)</li> </ul> |
+| `fallbackBlockTag` | 字符串 | 定义块标记，该标记用于任何具有未包含在`allowBlockTags`中的块标记的块。 `p` 在大多数情况下都足够了。 |
+| 表 | nt:unstructured | 定义粘贴表时的行为。 此节点必须具有属性`allow`（类型Boolean）以定义是否允许粘贴表。 如果将允许设置为`false`，则必须指定属性`ignoreMode`（类型字符串）以定义粘贴表内容的处理方式。 `ignoreMode`的有效值为： <ul> <li>`remove`:删除表内容。</li> <li>`paragraph`:将表格单元格转换为段落。</li> </ul> |
+| 列表 | nt：非结构化 | 定义粘贴列表时的行为。 必须具有属性`allow`（类型Boolean）来定义是否允许粘贴列表。 如果将`allow`设置为`false`，则必须指定属性`ignoreMode`（类型字符串）以定义如何处理粘贴的任何列表内容。 `ignoreMode`的有效值为： <ul><li> `remove`:删除列表内容。</li> <li>`paragraph`:将列表项转换为段落。</li> </ul> |
+
+以下是有效`htmlPasteRules`结构的示例。
 
 ```xml
 "htmlPasteRules": {
@@ -223,13 +189,9 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 }
 ```
 
-1. 保存所有更改。
-
 ## 配置文本样式 {#textstyles}
 
-作者可以应用样式来更改部分文本的外观。 样式基于您在CSS样式表中预定义的CSS类。 使用`class`属性将风格化内容包含在`span`标记中以引用CSS类。 例如：
-
-`<span class=monospaced>Monospaced Text Here</span>`
+作者可以应用样式来更改部分文本的外观。 样式基于您在CSS样式表中预定义的CSS类。 使用`class`属性将风格化内容包含在`span`标记中以引用CSS类。 例如，`<span class=monospaced>Monospaced Text Here</span>`。
 
 首次启用“样式”插件后，没有可用的默认样式。 弹出列表为空。 要为作者提供样式，请执行以下操作：
 
@@ -237,11 +199,11 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 * 指定样式表的位置。
 * 指定可从“样式”下拉列表中选择的各个样式。
 
-对于以后（重新）的配置，例如要添加更多样式，请仅按照说明引用新样式表并指定其他样式。
+对于以后的配置，假设要添加更多样式，请仅按照说明引用新样式表并指定其他样式。
 
 >[!NOTE]
 >
->还可以为[表或表单元格](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)定义样式。 这些配置需要单独的过程。
+>您可以为[表或表单元格](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)定义样式。 这些配置需要单独的过程。
 
 ### 启用样式下拉选择器列表 {#styleselectorlist}
 
@@ -708,10 +670,7 @@ RTE允许作者撤消或重做上次所做的一些编辑。 默认情况下，�
    * **类型** `String`
    * **值** `richtext`
 
-   `../items/text`节点的位置可能因对话框的结构而异；两个示例包括：
-   * `/apps/myProject>/components/text/dialog/items/text`
-   * `/apps/<myProject>/components/text/dialog/items/panel/items/text`
-
+   `../items/text`节点的位置可能因对话框的结构而异；`/apps/myProject>/components/text/dialog/items/text`和`/apps/<myProject>/components/text/dialog/items/panel/items/text`是两个示例。
 
 1. 在`htmlRules`下，创建新节点。
 
