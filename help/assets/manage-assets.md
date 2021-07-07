@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User
 feature: 资产管理，搜索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '9788'
+source-wordcount: '9784'
 ht-degree: 6%
 
 ---
@@ -168,7 +168,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 
 1. 使用您选择的FTP客户端，使用您从配置电子邮件收到的FTP用户名和密码登录到FTP服务器。 在FTP客户端中，将文件或文件夹上传到FTP服务器。
 
-1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)，然后登录到您的帐户。
+1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然后登录到您的帐户。
 
    您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请联系技术支持。
 
@@ -869,7 +869,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 * 上传文件名与同一位置存在的资产。 它可以是新资产或同一资产的修改版本。
 * 在[!DNL Experience Manager]中编辑图像并保存更改。
 * 编辑资产的元数据。
-* 使用[!DNL Experience Manager]桌面应用程序签出现有资产并对其进行编辑，然后[上传更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#edit-assets-upload-updated-assets)。
+* 使用[!DNL Experience Manager]桌面应用程序签出现有资产并对其进行编辑，然后[上传更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
 您还可以通过工作流启用自动版本控制。 为资产创建版本时，元数据和演绎版会与该版本一起保存。 演绎版是相同图像的替代呈现形式，例如上传的JPEG文件的PNG演绎版。
 
