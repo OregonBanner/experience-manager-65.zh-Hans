@@ -3,9 +3,9 @@ title: 配置富文本编辑器插件
 description: 了解如何配置Adobe Experience Manager富文本编辑器插件以启用各个功能。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
+source-git-commit: 11cda989e6a28428f03a269c407a7672e6eab747
 workflow-type: tm+mt
-source-wordcount: '4405'
+source-wordcount: '4406'
 ht-degree: 3%
 
 ---
@@ -245,19 +245,11 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 >
 >富文本编辑器使用ID为`CQrte`的容器DOM元素，该元素可用于提供不同的样式以用于查看和编辑：
 >
+>`#CQ td {`
+>` // defines the style for viewing }`
 >
-```
->#CQ td {
-> // defines the style for viewing
-> }
->```
->
->
-```
->#CQrte td {
-> // defines the style for editing
-> }
->```
+>`#CQrte td {`
+>` // defines the style for editing }`
 
 ### 在弹出列表中指定可用的样式 {#stylesindropdown}
 
@@ -496,7 +488,7 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
    * **名称** `features`
    * **类型** `String`
-   * **值** `*`
+   * **值** `*` （星号）
 
    >[!NOTE]
    如果不想启用所有表功能，可以创建`features`属性，如下所示：
@@ -613,7 +605,7 @@ RTE允许作者撤消或重做上次所做的一些编辑。 默认情况下，�
 
    * **名称** `tabSize`
    * **类型** `String`
-   * **** 值要用于制表符的空格字符数。
+   * **** 值要用于制表符的空格字符数
 
 1. 保存更改。
 
