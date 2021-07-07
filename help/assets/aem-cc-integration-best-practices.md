@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin
 feature: 协作，Adobe资产链接，桌面应用程序
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3254'
+source-wordcount: '3250'
 ht-degree: 15%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 15%
 
 | 参与角色的价值主张 | Adobe服务 | 涉及的曲面 |
 |---|---|---|
-| 创意用户从[!DNL Experience Manager]中发现资产，打开并使用资产，编辑资产并将其上传到[!DNL Experience Manager]，以及将新文件上传到[!DNL Experience Manager]，而无需离开[!DNL Creative Cloud]应用程序。 | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
+| 创意用户从[!DNL Experience Manager]中发现资产、打开并使用资产、编辑资产并将其上传到[!DNL Experience Manager]，以及将新文件上传到[!DNL Experience Manager]，而无需离开[!DNL Creative Cloud]应用程序。 | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop]、 [!DNL Adobe Illustrator]和 [!DNL Adobe InDesign]。 |
 | 业务用户可简化资产的打开和使用、编辑和上传对[!DNL Experience Manager]所做的更改，以及从桌面环境将新文件上传到[!DNL Experience Manager]的过程。 它们使用通用集成来打开本机桌面应用程序中的任何资产类型，包括非Adobe资产类型。 | [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | [!DNL Experience Manager] Win和Mac桌面版上的桌面应用程序 |
 | 营销人员和企业用户从[!DNL Experience Manager]内发现、预览、许可和保存并管理[!DNL Adobe Stock]资产。 授权资产和已保存的资产会提供选择[!DNL Adobe Stock]元数据，以便更好地进行管理。 | [Experience Manager和Adobe Stock集成](aem-assets-adobe-stock.md) | [!DNL Experience Manager] web界面 |
 
@@ -89,7 +89,7 @@ ht-degree: 15%
 
 ### 使用[!DNL Experience Manager]和[!DNL Creative Cloud]集成时的注意事项 {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* 请参阅[桌面应用程序最佳实践](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)
+* 请参阅[桌面应用程序最佳实践](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
 * 请参阅[Adobe Stock集成](aem-assets-adobe-stock.md)
 * 请参阅[Adobe资产链接](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 
@@ -209,7 +209,7 @@ Adobe资产链接为此用例提供了良好支持：
 
 您可以利用以下上传功能：
 
-* 要批量上传大型/分层文件夹，请使用提供[文件夹上传](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#upload-and-add-new-assets-to-aem)功能的[!DNL Experience Manager]桌面应用程序。 您还可以上传分层文件夹结构。 [!DNL Assets] 都是在后台上传的，因此不会将其绑定到Web浏览器会话
+* 要批量上传大型/分层文件夹，请使用提供[文件夹上传](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem)功能的[!DNL Experience Manager]桌面应用程序。 您还可以上传分层文件夹结构。 [!DNL Assets] 都是在后台上传的，因此不会将其绑定到Web浏览器会话
 * 要从单个文件夹上传几个文件，请将文件直接拖到Web界面，或使用[!DNL Assets] Web界面中的“创建”选项。
 * 根据您的业务要求，您还可以使用自定义Uploader。
 
