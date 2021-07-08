@@ -8,9 +8,9 @@ activity: develop
 audience: developer
 feature: 商务集成框架
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
-source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
+source-git-commit: 2fadfa65242b208a750b0d5392fdd2c41e9ff20e
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ AEM Content &amp; Commerce Authoring提供了一套创作工具，可帮助AEM�
 
 类别选取器字段支持以下可选属性：
 
-- selectionId(id， uid， sulg， idAndUrlPath， uidAndUrlPath) — 允许选择选取器返回的类别属性（默认值= id）。 idAndUrlPath &amp; uidAndUrlPath是一些特殊选项，用于存储以 |字符，例如1|men/tops。
+- selectionId(id， uid， sulg， urlPath， idAndUrlPath _（已弃用）_, uidAndUrlPath _（已弃用）_) — 允许选择选取器返回的类别属性（默认= id）。
 - 多个(true， false) — 启用一个或多个类别的选择(default = false)
 
 此外，还支持标准图表字段属性，如`name`、`fieldLabel`或`fieldDescription`。
@@ -79,6 +79,6 @@ AEM Content &amp; Commerce Authoring提供了一套创作工具，可帮助AEM�
 >与`cifproductfield`组件相同，`cifcategoryfield`组件也需要`cif.shell.picker` clientlib。 要向对话框中添加clientlib，可以使用`extraClientlibs`属性。 请参阅AEM核心组件文档的[自定义对话框](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) 。
 >[!CAUTION]
 >
->从CIF核心组件版本2.0.0开始，`id`支持已移除，并替换为`uid`。 我们强烈建议使用`uid`或`slug`作为类别标识符。 我们继续仅支持使用CIF核心组件版本1.x的项目，即`id`和`idAndUrlPath`。
+>从CIF核心组件版本2.0.0开始，`id`支持已移除，并替换为`uid`。 我们强烈建议使用`uid`或`urlPath`作为类别标识符。 我们继续仅支持使用CIF核心组件版本1.x的项目，即`id`和`idAndUrlPath`。
 
 `cifcategoryfield`的完整工作示例可在[CIF核心组件](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml)项目中找到。
