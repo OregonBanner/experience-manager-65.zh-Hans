@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
-role: Administrator
+role: Admin
 exl-id: 2d33e6ba-cd32-40d1-8983-58f636b21470
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 3%
 
 ---
 
-# 用于启用功能的MySQL配置{#mysql-configuration-for-enablement-features}
+# 用于启用功能的MySQL配置 {#mysql-configuration-for-enablement-features}
 
 MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用资源的数据。 其中包含用于其他功能（如跟踪视频暂停/恢复）的表。
 
@@ -39,7 +39,7 @@ MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用资源的�
 
 应按照目标操作系统的说明下载和安装MySQL。
 
-### 小写表名称{#lower-case-table-names}
+### 小写表名称 {#lower-case-table-names}
 
 由于SQL不区分大小写，因此对于区分大小写的操作系统，必须包含一个设置，以使所有表名称都小写。
 
@@ -48,7 +48,7 @@ MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用资源的�
 * 编辑文件`/etc/my.cnf`
 * 在`[mysqld]`部分中，添加以下行：`lower_case_table_names = 1`
 
-### UTF8字符集{#utf-character-set}
+### UTF8字符集 {#utf-character-set}
 
 要提供更好的多语言支持，必须使用UTF8字符集。
 
@@ -66,13 +66,13 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装了架构
 
 应按照目标操作系统的说明下载和安装MySQL Workbench。
 
-## 启用连接{#enablement-connection}
+## 启用连接 {#enablement-connection}
 
 首次启动MySQL Workbench时，除非该MySQL Workbench已用于其他目的，否则它尚不显示任何连接：
 
 ![mysqlconnection](assets/mysqlconnection.png)
 
-### 新的连接设置{#new-connection-settings}
+### 新建连接设置 {#new-connection-settings}
 
 1. 选择`MySQL Connections`右侧的“+”图标。
 1. 在对话框`Setup New Connection`中，为演示目的输入适用于您的平台的值，并在同一服务器上将创作AEM实例和MySQL:
@@ -88,21 +88,21 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装了架构
 * 默认端口为`3306`。
 * 在[JDBC OSGi配置](#configure-jdbc-connections)中，选择的`Connection Name`作为`datasource`名称输入。
 
-#### 成功连接{#successful-connection}
+#### 成功连接 {#successful-connection}
 
 ![mysqlconnection1](assets/mysqlconnection1.png)
 
-#### 新建启用连接{#new-enablement-connection}
+#### 新建启用连接 {#new-enablement-connection}
 
 ![mysqlconnection2](assets/mysqlconnection2.png)
 
-## 数据库设置{#database-setup}
+## 数据库设置 {#database-setup}
 
 打开新的启用连接时，请注意存在一个测试架构和默认用户帐户。
 
 ![数据库设置](assets/database-setup.png)
 
-### 获取SQL脚本{#obtain-sql-scripts}
+### 获取SQL脚本 {#obtain-sql-scripts}
 
 SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包](deploy-communities.md#scorm):
 
@@ -120,7 +120,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 * 请注意`jcr:data`属性的值是一个视图链接。
 * 选择视图链接以将数据保存到本地文件。
 
-### 创建SCORM数据库{#create-scorm-database}
+### 创建SCORM数据库 {#create-scorm-database}
 
 要创建的启用SCORM数据库包括：
 
@@ -141,7 +141,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 * [SCORM配置](#configure-scorm)
 
 
-#### 步骤1:打开SQL文件{#step-open-sql-file}
+#### 步骤1:打开SQL文件 {#step-open-sql-file}
 
 在MySQL Workbench中
 
@@ -153,7 +153,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 
 ![scrom数据库](assets/scrom-database.png)
 
-#### 步骤2:执行SQL脚本{#step-execute-sql-script}
+#### 步骤2:执行SQL脚本 {#step-execute-sql-script}
 
 在步骤1中打开的文件的Workbench窗口中，选择`lightening (flash) icon`以执行脚本。
 
@@ -173,7 +173,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 
 ![scrom-database3](assets/scrom-database3.png)
 
-## 配置JDBC连接{#configure-jdbc-connections}
+## 配置JDBC连接 {#configure-jdbc-connections}
 
 **Day Commons JDBC连接池**&#x200B;的OSGi配置配置MySQL JDBC驱动程序。
 
@@ -200,7 +200,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 
 ## 配置Scorm {#configure-scorm}
 
-### AEM Communities ScormEngine服务{#aem-communities-scormengine-service}
+### AEM Communities ScormEngine服务 {#aem-communities-scormengine-service}
 
 **AEM Communities ScormEngine服务**&#x200B;的OSGi配置可为启用社区使用MySQL服务器配置SCORM。
 
@@ -229,7 +229,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
       仅供内部使用：它是供AEM Communities使用的特殊服务用户与scorm引擎通信的。
 * 选择&#x200B;**[!UICONTROL Save]**
 
-### AdobeGranite CSRF滤镜{#adobe-granite-csrf-filter}
+### AdobeGranite CSRF过滤器 {#adobe-granite-csrf-filter}
 
 要确保支持课程在所有浏览器中正常工作，必须将Mozilla添加为CSRF筛选器未选中的用户代理。
 
