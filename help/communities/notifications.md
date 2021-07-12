@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 1%
 
 ---
 
-# 社区通知{#communities-notifications}
+# 社区通知 {#communities-notifications}
 
 ## 概述 {#overview}
 
@@ -69,7 +69,7 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 * 成员配置文件已配置为允许其他成员跟踪。
 
-## 以下{#notifications-from-following}的通知
+## 以下通知 {#notifications-from-following}
 
 ![通知](assets/notifications.png)
 
@@ -88,7 +88,7 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
    * 跟踪该特定条目的所有活动。
 
-## 管理通知设置{#managing-notification-settings}
+## 管理通知设置 {#managing-notification-settings}
 
 通过从“通知”页面中选择“通知设置”链接，每个成员都可以管理通知的接收方式。
 
@@ -108,7 +108,7 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 ## 查看通知 {#viewing-notifications}
 
-### Web通知{#web-notifications}
+### Web通知 {#web-notifications}
 
 现在，创建的[向导社区站点](/help/communities/sites-console.md)包含一个指向横幅上方站点标题栏中`Notifications`功能的链接。 与消息不同，会为每个社区站点创建通知，而在站点创建过程中必须启用消息。
 
@@ -116,13 +116,13 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 ![通知4](assets/notifications4.png)
 
-### 电子邮件通知{#email-notifications}
+### 电子邮件通知 {#email-notifications}
 
 启用电子邮件渠道后，成员会收到一封电子邮件，其中包含指向Web上内容的链接。
 
 ![通知5](assets/notifications5.png)
 
-## 自定义电子邮件通知{#customize-email-notifications}
+## 自定义电子邮件通知 {#customize-email-notifications}
 
 组织可以通过[覆盖](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html**&#x200B;中的模板来自定义电子邮件通知。
 
