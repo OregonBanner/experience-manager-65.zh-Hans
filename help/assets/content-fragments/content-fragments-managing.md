@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 feature: 内容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 636daf55-2225-4780-9c57-1a2d7464fe2c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1488'
 ht-degree: 11%
@@ -28,9 +28,9 @@ ht-degree: 11%
 >
 >然后，内容片段可与创作页面一起使用；请参阅[使用内容片段进行页面创作](/help/sites-authoring/content-fragments.md)。
 
-## 创建内容片段{#creating-content-fragments}
+## 创建内容片段 {#creating-content-fragments}
 
-### 创建内容模型{#creating-a-content-model}
+### 创建内容模型 {#creating-a-content-model}
 
 [在使用结](/help/assets/content-fragments/content-fragments-models.md) 构化内容创建内容片段之前，应启用并创建内容片段模型。
 
@@ -38,7 +38,7 @@ ht-degree: 11%
 >
 >有关模板的更多信息，请参阅[开发内容片段](/help/sites-developing/customizing-content-fragments.md);用于简单内容片段。
 
-### 创建内容片段{#creating-a-content-fragment}
+### 创建内容片段 {#creating-a-content-fragment}
 
 对于简单片段和结构化片段，创建内容片段的方法（基本上）相同：
 
@@ -81,7 +81,7 @@ ht-degree: 11%
 
 1. 选 **择创建** ，以完成操作，然后打开片段 **进行编辑** ，或返回控制台并执行完 **成**。
 
-## 内容片段{#actions-for-a-content-fragment}的操作
+## 内容片段的操作 {#actions-for-a-content-fragment}
 
 在&#x200B;**Assets**&#x200B;控制台中，可以对内容片段执行一系列操作：
 
@@ -123,7 +123,7 @@ ht-degree: 11%
 >
 >其中许多操作是[资产](/help/assets/manage-assets.md)和/或[AEM桌面应用程序](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)的标准操作。
 
-## 打开片段编辑器{#opening-the-fragment-editor}
+## 打开片段编辑器 {#opening-the-fragment-editor}
 
 要打开片段进行编辑，请执行以下操作：
 
@@ -163,7 +163,7 @@ ht-degree: 11%
    >
    >“保 **存** ”和“取消 **”将退出编辑器——有关这两个选项如何对内容片段进行操作的完整信息，请参阅**[](#save-cancel-and-versions) “保存”、“取消”和“版本”。
 
-## 保存、取消和版本{#save-cancel-and-versions}
+## 保存、取消和版本 {#save-cancel-and-versions}
 
 >[!NOTE]
 >
@@ -216,23 +216,23 @@ ht-degree: 11%
 3. 如果用户选择&#x200B;**取消**&#x200B;编辑，则恢复编辑会话开始时创建的版本，并删除令牌以结束编辑会话。
 4. 如果用户选择&#x200B;**Save**&#x200B;编辑，则更新的元素/变量将被保留，并且令牌会被删除以结束编辑会话。
 
-## 编辑片段{#editing-the-content-of-your-fragment}的内容
+## 编辑片段的内容 {#editing-the-content-of-your-fragment}
 
 打开片段后，可以使用[Variations](/help/assets/content-fragments/content-fragments-variations.md)选项卡创作内容。
 
-## 创建和管理片段{#creating-and-managing-variations-within-your-fragment}中的变量
+## 创建和管理片段中的变量 {#creating-and-managing-variations-within-your-fragment}
 
 创建主控内容后，即可创建和管理该内容的[变体](/help/assets/content-fragments/content-fragments-variations.md)。
 
-## 将内容与片段{#associating-content-with-your-fragment}关联
+## 将内容与片段关联 {#associating-content-with-your-fragment}
 
 您还可以[将内容](/help/assets/content-fragments/content-fragments-assoc-content.md)与片段关联。 这提供了一个连接，以便在将资产（即图像）添加到内容页面时，可以（可选）与片段一起使用资产（即图像）。
 
-## 查看和编辑片段{#viewing-and-editing-the-metadata-properties-of-your-fragment}的元数据（属性）
+## 查看和编辑片段的元数据（属性） {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
 您可以使用[Metadata](/help/assets/content-fragments/content-fragments-metadata.md)选项卡查看和编辑片段的属性。
 
-## 内容片段{#timeline-for-content-fragments}的时间轴
+## 内容片段的时间轴 {#timeline-for-content-fragments}
 
 除标准选项外， [时间轴](/help/assets/manage-assets.md#timeline)还提供特定于内容片段的信息和操作：
 
@@ -274,7 +274,7 @@ ht-degree: 11%
 
 ![cfm-6420-19-2019](assets/cfm-6420-19-2019.png)
 
-## 比较片段版本{#comparing-fragment-versions}
+## 比较片段版本 {#comparing-fragment-versions}
 
 选择特定版本后，**与当前比较**&#x200B;操作可从[时间轴](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)中使用。
 
@@ -302,7 +302,7 @@ ht-degree: 11%
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## 还原到{#reverting-to-a-version}版本
+## 还原到某个版本  {#reverting-to-a-version}
 
 您可以还原到片段的特定版本：
 
@@ -312,7 +312,7 @@ ht-degree: 11%
 
 * 当[将某个版本与当前版本进行比较](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)时，您可以&#x200B;**将**&#x200B;还原到选定的版本。
 
-## 发布和引用片段{#publishing-and-referencing-a-fragment}
+## 发布和引用片段 {#publishing-and-referencing-a-fragment}
 
 >[!CAUTION]
 >
@@ -329,7 +329,7 @@ ht-degree: 11%
 >
 >发布和/或引用片段后，当作者打开片段进行再次编辑时，AEM将显示警告。 这是为了警告，对片段所做的更改也会影响引用的页面。
 
-## 删除片段{#deleting-a-fragment}
+## 删除片段 {#deleting-a-fragment}
 
 要删除片段，请执行以下操作：
 
