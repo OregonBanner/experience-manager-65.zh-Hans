@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2509'
 ht-degree: 1%
 
 ---
 
-# Communities用户同步{#communities-user-synchronization}
+# Communities用户同步 {#communities-user-synchronization}
 
 ## 简介 {#introduction}
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 有关用户数据的更多信息，请访问[管理用户和用户组](/help/communities/users.md)。
 
-## 跨发布场同步用户{#synchronizing-users-across-a-publish-farm}
+## 在发布场中同步用户 {#synchronizing-users-across-a-publish-farm}
 
 根据设计，在发布环境中创建的用户数据不会显示在创作环境中。
 
@@ -41,13 +41,13 @@ ht-degree: 1%
 
 启用用户同步后，将在场中的发布实例之间自动同步用户数据。
 
-### 用户同步设置说明{#user-sync-setup-instructions}
+### 用户同步设置说明 {#user-sync-setup-instructions}
 
 有关如何在发布场中启用同步的详细分步说明，请参阅：
 
 * [用户同步](/help/sites-administering/sync.md)
 
-## 后台{#user-sync-in-the-background}中的用户同步
+## 后台用户同步  {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
@@ -59,31 +59,31 @@ ht-degree: 1%
 
    其中包含Sling的分发信息。 这是有关内容需要分发的位置以及内容最后分发的时间的信息。
 
-## ... {#what-happens-when}时会发生什么情况
+## 当…… {#what-happens-when}
 
-### 从社区站点控制台{#publish-site-from-communities-sites-console}发布站点
+### 从“社区站点”控制台发布站点 {#publish-site-from-communities-sites-console}
 
 在作者中，从[社区站点控制台](/help/communities/sites-console.md)发布社区站点时，其效果是[复制](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents)关联的页面，并Sling分发动态创建的社区用户组，包括其成员资格。
 
-### 在发布{#user-is-created-or-edits-profile-on-publish}时创建或编辑用户配置文件
+### 用户在发布时创建或编辑配置文件 {#user-is-created-or-edits-profile-on-publish}
 
 根据设计，在发布环境中创建的用户和配置文件（例如，通过自注册、社交登录、LDAP身份验证）不会显示在创作环境中。
 
 当拓扑为[发布场](/help/communities/topologies.md)且用户同步配置正确时，将使用Sling分发在发布场中同步&#x200B;*用户*&#x200B;和&#x200B;*用户配置文件*。
 
-### 在发布{#new-community-group-is-created-on-publish}时创建新社区组
+### 在发布时创建新社区组 {#new-community-group-is-created-on-publish}
 
 尽管从发布实例启动，但社区组创建（这会导致新站点页面和新用户组）实际上会发生在创作实例上。
 
 在此过程中，新站点页面会复制到所有发布实例。 动态创建的社区用户组及其成员身份将Sling分发到所有发布实例。
 
-### 使用安全控制台{#users-or-user-groups-are-created-using-security-console}创建用户或组
+### 使用安全控制台创建用户或组 {#users-or-user-groups-are-created-using-security-console}
 
 根据设计，在发布环境中创建的用户数据不会显示在创作环境中，反之亦然。
 
 如果使用[用户管理和安全](/help/sites-administering/security.md)控制台在发布环境中添加新用户，则用户同步会将新用户及其组成员资格与其他发布实例同步（如果需要）。 用户同步还将同步通过安全控制台创建的用户组。
 
-### 用户在发布{#user-posts-content-on-publish}时发布内容
+### 用户在发布时发布内容 {#user-posts-content-on-publish}
 
 对于用户生成的内容(UGC)，在发布实例上输入的数据通过配置的SRP](/help/communities/srp-config.md)进行访问。[
 
@@ -106,7 +106,7 @@ ht-degree: 1%
 
 要在AEM Communities上启用用户同步，必须进行以下配置。 确保这些配置正确无误，以防止Sling内容分发失败。
 
-### Apache Sling Distribution Agent — 同步代理工厂{#apache-sling-distribution-agent-sync-agents-factory}
+### Apache Sling Distribution Agent — 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory}
 
 此配置会在发布者中获取要同步的内容。 配置位于创作实例上。 作者必须跟踪所有位于其中的发布者以及同步所有信息的位置。
 
@@ -133,7 +133,7 @@ ht-degree: 1%
       这些端点定义您要从何处获取内容以及要将内容推送到何处。 作者从指定的导出程序端点获取内容，并将内容推送到发布者（而不是从中获取内容的发布者）。
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### AdobeGranite分发 — 加密密码传输密钥提供程序{#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### AdobeGranite分发 — 加密密码传输密钥提供程序 {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 它使作者能够识别已授权的用户，即有权将用户数据从作者同步到发布。
 
@@ -158,7 +158,7 @@ ht-degree: 1%
 
 ![granite-paswrd-trans](assets/granite-paswrd-trans.png)
 
-### Apache Sling Distribution Agent — 队列代理工厂{#apache-sling-distribution-agent-queue-agents-factory}
+### Apache Sling Distribution Agent — 队列代理工厂 {#apache-sling-distribution-agent-queue-agents-factory}
 
 此配置用于配置要在发布者之间同步的数据。 在&#x200B;**允许的根**&#x200B;中指定的路径中创建/更新数据时，将激活“var/community/distribution/diff”，并且创建的复制程序从发布者中获取数据，并将其安装到其他发布者。
 
@@ -180,7 +180,7 @@ ht-degree: 1%
 
    ![queue-agents-fact](assets/queue-agents-fact.png)
 
-### AdobeGranite分布 — 差异观察器工厂{#adobe-granite-distribution-diff-observer-factory}
+### AdobeGranite分布 — 差异观察器工厂 {#adobe-granite-distribution-diff-observer-factory}
 
 此配置会在发布者之间同步组成员资格。
 如果更改某个发布者中某个组的成员资格不会更新其他发布者的组成员资格，请确保将**ref :members**&#x200B;添加到&#x200B;**已查找的属性名称**&#x200B;中。
@@ -202,7 +202,7 @@ ht-degree: 1%
 
    ![diff-obs](assets/diff-obs.png)
 
-### Apache Sling Distribution Trigger — 计划触发器工厂{#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling Distribution Trigger — 计划触发器工厂 {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 此配置允许您配置轮询间隔（在轮询间隔后，发布者会被Ping并由作者提取更改）以在发布者之间同步更改。
 
@@ -222,7 +222,7 @@ ht-degree: 1%
 
    ![计划触发器](assets/scheduled-trigger.png)
 
-### AEM Communities用户同步侦听器{#aem-communities-user-sync-listener}
+### AEM Communities用户同步侦听器 {#aem-communities-user-sync-listener}
 
 对于Sling分发中订阅和后续内容存在差异的问题，请检查是否在&#x200B;**AEM Communities用户同步侦听器**&#x200B;配置中设置了以下属性：
 
@@ -307,7 +307,7 @@ AEM创作实例使用Sling ID来识别数据的来源，以及数据需要（或
 
 重复这些步骤，直到所有发布实例都具有唯一的Sling ID。
 
-### 电子仓库包生成器工厂{#vault-package-builder-factory}
+### 保管库包生成器工厂 {#vault-package-builder-factory}
 
 要正确同步更新，必须修改电子仓库包生成器以进行用户同步。
 在`/home/users`中创建`*/rep:cache`节点。 它是一个缓存，用于查找如果我们查询某个节点的主体名称，则可以直接使用此缓存。
@@ -333,7 +333,7 @@ AEM创作实例使用Sling ID来识别数据的来源，以及数据需要（或
 
    ![保险库包生成器工厂](assets/vault-package-builder-factory.png)
 
-## 对AEM Communities中的Sling分发进行故障诊断{#troubleshoot-sling-distribution-in-aem-communities}
+## 对AEM Communities中的Sling分发进行故障诊断 {#troubleshoot-sling-distribution-in-aem-communities}
 
 如果Sling分发失败，请尝试以下调试步骤：
 
