@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
-role: Administrator
+role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 * 选择&#x200B;**创建组**&#x200B;按钮。
 
-### 步骤1:社区组模板{#step-community-group-template}
+### 步骤1:社区组模板 {#step-community-group-template}
 
 ![多语言社区组](assets/multi-lingual-group.png)
 
@@ -107,9 +107,9 @@ ht-degree: 2%
 
    使用下拉菜单选择可用的[社区组模板](/help/communities/tools.md)。
 
-### 步骤2:设计{#step-design}
+### 步骤2:设计 {#step-design}
 
-### 社区组主题{#community-group-theme}
+### 社区组主题 {#community-group-theme}
 
 ![社区组主题](assets/communitygrouptheme.png)
 
@@ -121,7 +121,7 @@ ht-degree: 2%
 
 社区网站发布后，可以[编辑属性](#modifyinggroupproperties)并选择其他主题。
 
-### 社区团体品牌{#community-group-branding}
+### 社区团体品牌化 {#community-group-branding}
 
 ![社区团体品牌](assets/community-group-branding.png)
 
@@ -138,7 +138,7 @@ ht-degree: 2%
    * 小于浏览器的宽度，图像将水平重复。
    * 大于浏览器的宽度，图像将被裁剪。
 
-### 步骤3:设置{#step-settings}
+### 步骤3:设置 {#step-settings}
 
 **审核**
 
@@ -188,7 +188,7 @@ ht-degree: 2%
 
 ![缩略图图像](assets/thumbnail-image.png)
 
-### 步骤4:创建组{#step-create-group}
+### 步骤4:创建群组 {#step-create-group}
 
 ![社区创建组](assets/community-create-group.png)
 
@@ -204,13 +204,13 @@ ht-degree: 2%
 >
 >该组以所有语言创建，如[步骤1中指定：在相应社区站点的“社区组”控制台中，使用其他可用社区组语言的社区组模板](/help/communities/groups.md#step-community-group-template)。
 
-## 创作组内容{#author-group-content}
+## 创作组内容 {#author-group-content}
 
 ![开放站点](assets/open-site.png)
 
 可使用与任何其他AEM页面相同的工具创作群组的页面内容。 要打开组进行创作，请选择将鼠标悬停在组卡片上时显示的打开站点图标。
 
-## 修改组属性{#modify-group-properties}
+## 修改组属性 {#modify-group-properties}
 
 在社区组创建过程中指定的现有子社区站点的属性可以通过选择编辑站点图标来修改，该图标将鼠标悬停在群组卡片上时会显示：
 
@@ -220,7 +220,7 @@ ht-degree: 2%
 
 ![社区群 — 基本](assets/community-group-basic.png)
 
-### 修改基本{#modify-basic}
+### 修改基本 {#modify-basic}
 
 基本面板允许修改
 
@@ -233,7 +233,7 @@ ht-degree: 2%
 
 可以修改子社区的[STRUCTURE](#modify-structure)。
 
-### 修改结构{#modify-structure}
+### 修改结构 {#modify-structure}
 
 “结构”面板允许修改最初从从创作或发布环境创建子社区站点时所选的社区组模板创建的结构。 在面板中，可以：
 
@@ -265,7 +265,7 @@ ht-degree: 2%
 
 ![社区组添加日历](assets/community-group-add-calendar.png)
 
-### 修改设计{#modify-design}
+### 修改设计 {#modify-design}
 
 “设计”面板允许修改主题：
 
@@ -274,19 +274,19 @@ ht-degree: 2%
 
    * 滚动到面板底部以更改品牌图像。
 
-### 修改设置{#modify-settings}
+### 修改设置 {#modify-settings}
 
 “设置”面板允许添加社区[审核者](#moderation)。
 
-### 修改成员资格{#modify-membership}
+### 修改成员资格 {#modify-membership}
 
 [MEMBERSHIP](#membership)面板仅供参考。 无论是可选的、必需的还是受限的，都无法更改已建立的组成员资格类型。
 
-### 修改缩略图{#modify-thumbnail}
+### 修改缩略图 {#modify-thumbnail}
 
 通过[THUMBNAIL](#thumbnail)面板，可以上传图像，以在发布环境以及创作环境的社区站点的“组”控制台中将社区组表示给站点访客。
 
-## 发布组{#publish-the-group}
+## 发布群组 {#publish-the-group}
 
 ![publish-site](assets/publish-site.png)
 
@@ -302,7 +302,7 @@ ht-degree: 2%
 >
 >社区网站和嵌套群组应以自上而下的方式发布。
 
-## 删除组{#delete-the-group}
+## 删除群组 {#delete-the-group}
 
 ![删除图标](assets/deleteicon.png)
 
