@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >确保您是`form-power-users`组的成员，才能上传XDP文件。 请联系您的管理员以成为组的成员。
 
-## 上载表单{#uploading-forms}
+## 上传表单 {#uploading-forms}
 
 1. 通过访问`https://'[server]:[port]'/aem/forms.html`登录AEM Forms用户界面。
 1. 导航到要上传表单的文件夹，或包含表单的文件夹。
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 上传完成后，后台工作流会根据资产的预览为每个资产生成缩略图。 资产的较新版本（如果已上传）会覆盖现有资产。
 
-### 保护模式{#protected-mode}
+### 保护模式 {#protected-mode}
 
 AEM Forms服务器允许您运行JavaScript代码。 恶意JavaScript代码可能会损害AEM Forms环境。 保护模式可限制AEM Forms仅从受信任的资产和位置运行XDP文件。 AEM Forms UI中所有可用的XDP都被视为可信资产。
 
@@ -72,7 +72,7 @@ AEM Forms服务器允许您运行JavaScript代码。 恶意JavaScript代码可�
 1. 打开移动Forms配置进行编辑。
 1. 取消选择“受保护模式”选项，然后单击&#x200B;**Save**。 已禁用受保护模式。
 
-## 更新引用的XFA表单{#updating-referenced-xfa-forms}
+## 更新引用的XFA表单 {#updating-referenced-xfa-forms}
 
 在AEM Forms中，XFA表单模板可以由自适应表单或其他XFA表单模板引用。 此外，模板可以引用资源或其他XFA模板。
 
