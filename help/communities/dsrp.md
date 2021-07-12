@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
-role: Administrator
+role: Admin
 exl-id: 15b3a594-efde-4702-9233-232ba1c7e5b0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 2%
 
 ---
 
-# DSRP — 关系数据库存储资源提供程序{#dsrp-relational-database-storage-resource-provider}
+# DSRP — 关系数据库存储资源提供程序 {#dsrp-relational-database-storage-resource-provider}
 
 ## 关于DSRP {#about-dsrp}
 
@@ -35,9 +35,9 @@ ht-degree: 2%
 >
 >默认存储配置现在存储在conf路径(`/conf/global/settings/community/srpc/defaultconfiguration`)中，而不是etc路径(`/etc/socialconfig/srpc/defaultconfiguration`)中。 建议您按照[迁移步骤](#zerodt-migration-steps)来使defaultsrp按预期工作。
 
-## 关系数据库配置{#relational-database-configuration}
+## 关系数据库配置 {#relational-database-configuration}
 
-### MySQL配置{#mysql-configuration}
+### MySQL配置 {#mysql-configuration}
 
 MySQL安装可以通过使用不同的数据库（模式）名称以及不同的连接（服务器：端口）在同一连接池内的启用功能和公共存储(DSRP)之间共享。
 
@@ -105,7 +105,7 @@ Solr安装可以通过使用不同的集合在节点存储(Oak)和公共存储(S
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
-### 默认srp {#zerodt-migration-steps}的零停机时间迁移步骤
+### 默认SRP的零停机时间迁移步骤 {#zerodt-migration-steps}
 
 请按照以下步骤确保默认srp页面[http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)按预期工作：
 
@@ -115,7 +115,7 @@ Solr安装可以通过使用不同的集合在节点存储(Oak)和公共存储(S
 1. 复制旧配置`/etc/socialconfig_old/srpc/defaultconfiguration`，以替代上一步中已删除的节点(`/conf/global/settings/community/srpc/defaultconfiguration`)。
 1. 删除旧等节点`/etc/socialconfig_old`。
 
-## 发布配置{#publishing-the-configuration}
+## 发布配置 {#publishing-the-configuration}
 
 DSRP必须被标识为所有创作实例和发布实例上的公共存储。
 
@@ -132,14 +132,14 @@ DSRP必须被标识为所有创作实例和发布实例上的公共存储。
    * 选择&#x200B;**[!UICONTROL 激活]**。
 
 
-## 管理用户数据{#managing-user-data}
+## 管理用户数据 {#managing-user-data}
 
 有关&#x200B;*用户*、*用户配置文件*&#x200B;和&#x200B;*用户组*&#x200B;的信息，请访问：
 
 * [用户同步](sync.md)
 * [管理用户和用户组](users.md)
 
-## 为DSRP {#reindexing-solr-for-dsrp}重新索引解决方案
+## 为DSRP重新索引解决方案 {#reindexing-solr-for-dsrp}
 
 要重新编入DSRP Solr索引，请按照[重新编入MSRP](msrp.md#msrp-reindex-tool)索引的文档进行操作，但在为DSRP重新编入索引时，请改用此URL:**/services/social/datastore/rdb/reindex**
 
