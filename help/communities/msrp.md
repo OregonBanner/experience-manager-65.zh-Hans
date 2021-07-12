@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
-role: Administrator
+role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 1%
 
 ---
 
-# MSRP - MongoDB存储资源提供程序{#msrp-mongodb-storage-resource-provider}
+# MSRP - MongoDB存储资源提供程序 {#msrp-mongodb-storage-resource-provider}
 
 ## 关于MSRP {#about-msrp}
 
@@ -47,7 +47,7 @@ ht-degree: 1%
       * [安装标准MLS](solr.md#installing-standard-mls)
       * [安装高级MLS](solr.md#installing-advanced-mls)
 
-## MongoDB配置{#mongodb-configuration}
+## MongoDB配置 {#mongodb-configuration}
 
 ### 选择MSRP {#select-msrp}
 
@@ -105,7 +105,7 @@ ht-degree: 1%
 >
 >mongoDB数据库默认为名称`communities`，不应将其设置为用于[节点存储或数据（二进制）存储](../../help/sites-deploying/data-store-config.md)的数据库名称。 另请参阅AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md)中的[存储元素。
 
-### MongoDB副本集{#mongodb-replica-set}
+### MongoDB副本集 {#mongodb-replica-set}
 
 对于生产环境，强烈建议设置一个复制副本集（MongoDB服务器群集，用于实施主次复制和自动故障切换）。
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 要使用副本集并了解如何定义应用程序与MongoDB实例之间的连接，请访问MongoDB的[连接字符串URI格式](https://docs.mongodb.org/manual/reference/connection-string/)文档。
 
-#### 用于连接到副本集{#example-url-for-connecting-to-a-replica-set}的示例Url
+#### 用于连接到副本集的示例Url  {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -144,7 +144,7 @@ Solr安装可以通过使用不同的集合在节点存储(Oak)和公共存储(M
 1. 重新索引MSRP
 请参阅[MSRP重新索引工具](#msrp-reindex-tool)部分
 
-## 发布配置{#publishing-the-configuration}
+## 发布配置 {#publishing-the-configuration}
 
 MSRP必须被标识为所有创作实例和发布实例上的公共存储。
 
@@ -156,14 +156,14 @@ MSRP必须被标识为所有创作实例和发布实例上的公共存储。
    * 浏览到`/etc/socialconfig/srpc/`
 * 选择&#x200B;**[!UICONTROL 激活]**
 
-## 管理用户数据{#managing-user-data}
+## 管理用户数据 {#managing-user-data}
 
 有关&#x200B;*用户*、*用户配置文件*&#x200B;和&#x200B;*用户组*&#x200B;的信息，请访问
 
 * [用户同步](sync.md)
 * [管理用户和用户组](users.md)
 
-## MSRP重新编入索引工具{#msrp-reindex-tool}
+## MSRP重新索引工具 {#msrp-reindex-tool}
 
 在安装新配置文件或修复损坏的Solr索引时，有一个用于为MSRP重新编制Solr索引的HTTP端点。
 
@@ -180,7 +180,7 @@ MSRP必须被标识为所有创作实例和发布实例上的公共存储。
 * 如果内存是问题，请指定一个较小的数字
 * 如果速度是问题，请指定更大的数字以提高速度
 
-### 使用cURL命令{#running-msrp-reindex-tool-using-curl-command}运行MSRP重新索引工具
+### 使用cURL命令运行MSRP重新索引工具 {#running-msrp-reindex-tool-using-curl-command}
 
 以下cURL命令显示HTTP请求重新索引存储在MSRP中的UGC所需的内容。
 
@@ -208,7 +208,7 @@ cURL -u *signin* -d *data* *reindex-url*
 >
 >如果您正在[重新索引DSRP Solr](dsrp.md)，则URL为&#x200B;**/services/social/datastore/rdb/reindex**
 
-### MSRP重新索引示例{#msrp-reindex-example}
+### MSRP重新索引示例 {#msrp-reindex-example}
 
 ```shell
 curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo/' http://localhost:4503/services/social/datastore/mongo/reindex
@@ -220,7 +220,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 ## 疑难解答 {#troubleshooting}
 
-### UGC在MongoDB {#ugc-not-visible-in-mongodb}中不可见
+### UGC在MongoDB中不可见 {#ugc-not-visible-in-mongodb}
 
 通过检查存储选项的配置，确保MSRP配置为默认提供程序。 默认情况下，存储资源提供程序为JSRP。
 
@@ -231,7 +231,7 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
    * 不包含[srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)节点，表示存储提供程序是JSRP。
    * 如果srpc节点存在并包含节点[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)，则默认配置的属性应将MSRP定义为默认提供程序。
 
-### 升级{#ugc-disappears-after-upgrade}后UGC消失
+### 升级后UGC消失 {#ugc-disappears-after-upgrade}
 
 如果从现有的AEM Communities 6.0站点升级，则必须转换任何预先存在的UGC，以符合升级到AEM Communities 6.3后[ SRP](srp.md) API所需的结构。
 
@@ -260,7 +260,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 * XML配置文件已复制到正确的Solr位置。
 * Solr在新配置文件替换现有配置文件后重新启动。
 
-### 与MongoDB的安全连接失败{#secure-connection-to-mongodb-fails}
+### 与MongoDB的安全连接失败 {#secure-connection-to-mongodb-fails}
 
 如果由于缺少类定义而尝试与MongoDB服务器建立安全连接失败，则必须更新公共Maven存储库中提供的MongoDB驱动程序包`mongo-java-driver`。
 
