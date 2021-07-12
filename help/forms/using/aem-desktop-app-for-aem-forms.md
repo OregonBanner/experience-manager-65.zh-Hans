@@ -8,22 +8,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
 discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
-role: Administrator
+role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
-# AEM AEM Forms桌面应用程序{#aem-desktop-app-for-aem-forms}
+# AEM桌面应用程序，AEM Forms {#aem-desktop-app-for-aem-forms}
 
 AEM桌面应用程序允许您将Adobe Experience Manager(AEM)Assets存储库和AEM Forms二进制文件映射到您系统上的网络目录。 您可以在文件资源管理器中查看已同步的资产和二进制文件，并根据需要使用各种应用程序来编辑文件。 除了查看文件外，您还可以创建、上传和删除二进制文件。 您还可以直接从软件打开、编辑和保存文件。 例如，您可以直接从Designer中打开和编辑XDP文件。 您在本地对资产所做的更改会反映在AEM Assets存储库和AEM Forms UI中。
 
 您可以从AEM实例下载应用程序。 有关下载应用程序的详细信息，请参阅[AEM桌面应用程序发行说明](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html)。
 
-## AEM桌面应用程序{#aem-forms-assets-supported-in-aem-desktop-app}中支持的AEM Forms资产
+## AEM Forms桌面应用程序支持的AEM资产 {#aem-forms-assets-supported-in-aem-desktop-app}
 
 您可以使用该应用程序同步以下类型的AEM Forms二进制文件：表单模板(.xdp)、PDF表单(.pdf)、文档(.pdf)、图像、XML架构(.xsd)、样式表(.xfs)。 应用程序将所有其他文件（不支持的文件）列为0字节文件。 将不受支持的文件列为0字节文件可确保用户知道AEM Forms服务器上存在其他可用资产。
 
