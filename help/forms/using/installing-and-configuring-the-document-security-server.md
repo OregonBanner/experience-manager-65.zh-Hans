@@ -6,16 +6,16 @@ seo-description: '使用文档安全功能安全地分发您以支持格式保�
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
-role: Administrator
+role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
 
 ---
 
-# 安装和配置文档安全服务器{#installing-and-configuring-the-document-security-server}
+# 安装和配置文档安全服务器 {#installing-and-configuring-the-document-security-server}
 
 使用文档安全功能安全地分发您以支持格式保存的任何信息。 只有授权用户才能访问受保护的文档。
 
@@ -27,7 +27,7 @@ Adobe Experience Manager Forms文档安全确保只有授权用户才能使用�
 
 文档安全性还为客户端、查看器和索引器提供了保护文档、查看受保护文档和索引受保护文档的功能。 有关文档安全的详细信息，请参阅[关于文档安全](/help/forms/using/admin-help/document-security.md)。
 
-## 部署拓扑{#deployment-topology}
+## 部署拓扑  {#deployment-topology}
 
 文档安全功能仅在JEE上的AEM Forms中可用。 您需要在JEE上使用单个AEM Forms实例。 您还可以根据需要创建AEM Forms服务器的群集或场。 以下拓扑是运行文档安全功能的指示拓扑。 有关拓扑的详细信息，请参阅[AEM Forms](aem-forms-architecture-deployment.md)的架构和部署拓扑。
 
@@ -39,7 +39,7 @@ Adobe Experience Manager Forms文档安全确保只有授权用户才能使用�
 
 ![](do-not-localize/document-security-typical-environment.png)
 
-## 在JEE {#installing-aem-forms-on-jee}上安装AEM Forms
+## 在JEE上安装AEM Forms {#installing-aem-forms-on-jee}
 
 执行以下步骤以在JEE上安装和配置AEM Forms:
 
@@ -60,7 +60,7 @@ Adobe Experience Manager Forms文档安全确保只有授权用户才能使用�
    >
    >在JEE配置管理器上AEM Forms的“模块选择”屏幕上，选择“文档安全”选项。 “文档安全”选项不需要选择任何其他模块。
 
-## 后续步骤{#next-steps}
+## 后续步骤 {#next-steps}
 
 * [配置客户端和服务器选项](/help/forms/using/admin-help/configuring-client-server-options.md)
 * [创建和管理策略](/help/forms/using/admin-help/creating-policies.md)
