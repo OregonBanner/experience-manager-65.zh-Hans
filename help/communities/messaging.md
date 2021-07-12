@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 232a0ec1-8dfc-41ec-84cc-69f9db494ea0
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: ee94f093-fd14-49f2-9990-fbe853d924b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
 
 ---
 
-# 配置消息传送{#configure-messaging}
+# 配置消息传送 {#configure-messaging}
 
 ## 概述 {#overview}
 
@@ -31,13 +31,13 @@ AEM Communities的消息传送功能允许已登录的网站访客（成员）�
 
 有关开发人员的其他信息，请参阅[Messaging Essentials](/help/communities/essentials-messaging.md)。
 
-## 消息传送操作服务{#messaging-operations-service}
+## 报文传送操作服务 {#messaging-operations-service}
 
 配置[AEM Communities Messaging Operations Service](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl)标识处理与消息相关请求的端点、服务应用于存储消息的文件夹，以及如果消息可能包含文件附件，则允许使用哪些文件类型。
 
 对于使用`Communities Sites console`创建的社区站点，服务的实例已存在，收件箱设置为`/mail/inbox`。
 
-### 社区消息传送操作服务{#community-messaging-operations-service}
+### Community Messaging Operations Service {#community-messaging-operations-service}
 
 如下所示，对于使用[站点创建向导](/help/communities/sites-console.md)创建的站点，该服务的配置存在。 通过选择配置旁边的铅笔图标，可以查看或编辑配置。
 
@@ -135,7 +135,7 @@ AEM Communities的消息传送功能允许已登录的网站访客（成员）�
 >
 >要允许所有文件扩展名(列入阻止列表的扩展名除外)，请使用“**-**”图标（再次）在单击&#x200B;**Save**&#x200B;之前删除单个空条目。
 
-## 组消息{#group-messaging}
+## 群组消息传送 {#group-messaging}
 
 要允许注册用户批量向用户组发送私信，请确保在以下两个&#x200B;**Messaging Operation Services**&#x200B;配置实例中启用组消息传送&#x200B;**:**
 
