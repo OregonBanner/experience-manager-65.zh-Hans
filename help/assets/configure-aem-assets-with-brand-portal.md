@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 feature: Brand Portal
-role: Administrator
+role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2086'
 ht-degree: 9%
@@ -241,7 +241,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    The API Key, Client Secret key, and JWT payload information will be used to create IMS account configuration.
 -->
 
-### 配置IMS帐户{#create-ims-account-configuration}
+### 配置IMS帐户 {#create-ims-account-configuration}
 
 确保您已执行以下步骤：
 
@@ -298,7 +298,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    您的AEM Assets创作实例现已配置为Brand Portal租户。
 
-### 测试配置{#test-integration}
+### 测试配置 {#test-integration}
 
 执行以下步骤以验证配置：
 
@@ -351,14 +351,14 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 有关更多信息，请参阅[Brand Portal文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-brand-portal/using/home.html)。
 
 
-## 升级配置{#upgrade-integration-65}
+## 升级配置 {#upgrade-integration-65}
 
 按照所列顺序执行以下步骤，将现有配置升级到Adobe开发人员控制台：
 1. [验证正在运行的作业](#verify-jobs)
 1. [删除现有配置](#delete-existing-configuration)
 1. [创建配置](#configure-new-integration-65)
 
-### 验证正在运行的作业{#verify-jobs}
+### 验证正在运行的作业 {#verify-jobs}
 
 在进行任何修改之前，请确保您的AEM Assets创作实例上未运行任何发布作业。 为此，您可以验证所有四个复制代理上活动作业的状态，并确保队列处于空闲状态。
 
@@ -376,7 +376,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![](assets/test-integration3.png)
 
-### 删除现有配置{#delete-existing-configuration}
+### 删除现有配置 {#delete-existing-configuration}
 
 删除现有配置时，必须运行以下检查列表：
 * 删除所有四个复制代理
