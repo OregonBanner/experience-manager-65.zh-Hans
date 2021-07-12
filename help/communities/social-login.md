@@ -9,22 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
-role: Administrator
+role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 1%
 
 ---
 
-# 使用Facebook和Twitter进行社交登录{#social-login-with-facebook-and-twitter}
+# 使用Facebook和Twitter进行社交登录 {#social-login-with-facebook-and-twitter}
 
 社交登录功能可向网站访客展示使用其Facebook或Twitter帐户登录的选项。 因此，请在其AEM成员配置文件中包含允许的Facebook或Twitter数据。
 
 ![socialloginweretail](assets/socialloginweretail.png)
 
-## 社交登录概述{#social-login-overview}
+## 社交登录概述 {#social-login-overview}
 
 要包含社交登录，创建自定义Facebook和Twitter应用程序时需要&#x200B;**。
 
@@ -61,9 +61,9 @@ ht-degree: 1%
    * 这些字段在[AEM Communities Facebook OAuth提供程序](#aem-communities-facebook-oauth-provider)和[AEM Communities Twitter OAuth提供程序](#aem-communities-twitter-oauth-provider)中指定。
    * 对于大多数用例，默认字段已足够，但可以修改。
 
-## Facebook登录{#facebook-login}
+## Facebook登录 {#facebook-login}
 
-### Facebook API版本{#facebook-api-version}
+### Facebook API版本 {#facebook-api-version}
 
 Social登录和we-retail Facebook示例是在Facebook图形API版本1.0时开发的。
 更新了自AEM 6.4 GA和AEM 6.3 SP1起的社交登录，以便与较新的Facebook Graph API 2.5版本配合使用。
@@ -74,7 +74,7 @@ Social登录和we-retail Facebook示例是在Facebook图形API版本1.0时开发
 
 有关Facebook图形API版本信息，请参阅[Facebook API changelog](https://developers.facebook.com/docs/apps/changelog)。
 
-### 创建Facebook应用程序{#create-a-facebook-app}
+### 创建Facebook应用程序 {#create-a-facebook-app}
 
 需要正确配置的Facebook应用程序才能启用Facebook社交登录。
 
@@ -96,7 +96,7 @@ Social登录和we-retail Facebook示例是在Facebook图形API版本1.0时开发
 
 创建应用程序后，找到&#x200B;**[!UICONTROL 应用程序ID]**&#x200B;和&#x200B;**[!UICONTROL 应用程序密钥]**&#x200B;设置。 配置[Facebook云服务](#createafacebookcloudservice)时需要此信息。
 
-### 创建Facebook ConnectCloud Service{#create-a-facebook-connect-cloud-service}
+### 创建Facebook ConnectCloud Service {#create-a-facebook-connect-cloud-service}
 
 [Adobe的Granite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider)实例（通过创建云服务配置进行实例化）可标识将新用户添加到的Facebook应用程序和成员组。
 
@@ -136,7 +136,7 @@ Social登录和we-retail Facebook示例是在Facebook图形API版本1.0时开发
 
 结果会生成一个[Adobe的Granite OAuth应用程序和提供程序](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)实例，除非添加其他范围（权限），否则无需进一步修改。 默认范围是Facebook登录的标准权限。 如果需要其他范围，则需要直接编辑OSGI配置。 如果有修改是直接通过系统/控制台完成的，请避免从触屏UI编辑云服务配置以避免覆盖。
 
-### AEM Communities Facebook OAuth提供程序{#aem-communities-facebook-oauth-provider}
+### AEM Communities Facebook OAuth提供程序 {#aem-communities-facebook-oauth-provider}
 
 AEM Communities提供程序扩展[AdobeGranite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider)实例。
 
@@ -203,16 +203,16 @@ AEM Communities提供程序扩展[AdobeGranite OAuth应用程序和提供程序]
       如果选中此项，则每次登录时都会刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 取消选择默认值。
 
 
-#### 后续步骤{#next-steps}
+#### 后续步骤 {#next-steps}
 
 facebook和Twitter的后续步骤相同：
 
 * [发布云服务配置](#publishcloudservices)
 * [为社区站点启用](#enable-social-login)
 
-## Twitter登录{#twitter-login}
+## Twitter登录 {#twitter-login}
 
-### 创建Twitter应用程序{#create-a-twitter-app}
+### 创建Twitter应用程序 {#create-a-twitter-app}
 
 需要配置的Twitter应用程序才能启用Twitter社交登录。
 
@@ -248,7 +248,7 @@ facebook和Twitter的后续步骤相同：
 
 对社交登录的唯一REST请求是&#x200B;*[GET帐户/验证凭据](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*。
 
-### 创建Twitter ConnectCloud Service{#create-a-twitter-connect-cloud-service}
+### 创建Twitter ConnectCloud Service {#create-a-twitter-connect-cloud-service}
 
 [Adobe的Granite OAuth应用程序和提供程序](#adobe-granite-oauth-application-and-provider)实例（通过创建云服务配置进行实例化）可标识将新用户添加到的Twitter应用程序和成员组。
 
@@ -300,7 +300,7 @@ facebook和Twitter的后续步骤相同：
 
 结果会生成一个[Adobe的Granite OAuth应用程序和Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)实例，该实例不需要进一步修改。 默认范围是Twitter登录的标准权限。
 
-### AEM Communities Twitter OAuth提供程序{#aem-communities-twitter-oauth-provider}
+### AEM Communities Twitter OAuth提供程序 {#aem-communities-twitter-oauth-provider}
 
 AEM Communities配置扩展了[AdobeGranite OAuth应用程序和Provider](#adobe-granite-oauth-application-and-provider)实例。 此提供程序将需要编辑才能允许用户更新。
 
@@ -339,16 +339,16 @@ AEM Communities配置扩展了[AdobeGranite OAuth应用程序和Provider](#adobe
       如果选中此项，则每次登录时都会刷新存储库中的用户数据，以反映配置文件更改或请求的其他数据。 将取消选择默认值。
 
 
-#### 后续步骤{#next-steps-1}
+#### 后续步骤 {#next-steps-1}
 
 facebook和Twitter的后续步骤相同：
 
 * [发布云服务配置](#publishcloudservices)
 * [为社区站点启用](#enable-social-login)
 
-## 启用社交登录{#enable-social-login}
+## 启用社交登录 {#enable-social-login}
 
-### AEM Communities Sites控制台{#aem-communities-sites-console}
+### AEM Communities站点控制台 {#aem-communities-sites-console}
 
 配置云服务后，可以使用社区站点[创建](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation)或[管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties)期间的[用户管理](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT)设置子面板为社区站点启用相关的社交登录设置。
 
@@ -362,7 +362,7 @@ facebook和Twitter的后续步骤相同：
 
    ![usermgmt_png](assets/usermgmt_png.png)
 
-## 测试社交登录{#test-social-login}
+## 测试社交登录 {#test-social-login}
 
 * 确保在所有发布实例上启用了[AdobeGranite OAuth身份验证处理程序](#adobe-granite-oauth-authentication-handler)。
 * 确保云服务已发布。
@@ -376,9 +376,9 @@ facebook和Twitter的后续步骤相同：
 * 请注意，页面顶部的工具栏已更新，以反映成功登录。
 * 选择&#x200B;**[!UICONTROL 配置文件]**:用户档案页面显示用户的头像图像、名字和姓氏。 它还会根据允许的字段/参数显示Facebook或Twitter配置文件中的信息。
 
-## AEM Platform OAuth配置{#aem-platform-oauth-configurations}
+## AEM Platform OAuth配置 {#aem-platform-oauth-configurations}
 
-### AdobeGranite OAuth身份验证处理程序{#adobe-granite-oauth-authentication-handler}
+### AdobeGranite OAuth身份验证处理程序 {#adobe-granite-oauth-authentication-handler}
 
 默认情况下，`Adobe Granite OAuth Authentication Handler`未启用，并且必须在所有AEM发布实例上启用&#x200B;***。***
 
@@ -399,7 +399,7 @@ facebook和Twitter的后续步骤相同：
 
 ![graniteauth1](assets/graniteoauth1.png)
 
-### AdobeGranite OAuth应用程序和提供程序{#adobe-granite-oauth-application-and-provider}
+### AdobeGranite OAuth应用程序和提供程序 {#adobe-granite-oauth-application-and-provider}
 
 创建Facebook或Twitter的云服务后，将创建`Adobe Granite OAuth Authentication Handler`的实例。
 
@@ -456,7 +456,7 @@ facebook和Twitter的后续步骤相同：
 
 有关更多信息，请参阅[使用Apache Oak外部登录模块进行身份验证](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)。
 
-## OAuth用户遍历性能{#oauth-user-traversal-performance}
+## OAuth用户遍历性能 {#oauth-user-traversal-performance}
 
 对于社区网站，如果有数十万用户使用Facebook或Twitter登录方式进行注册，则添加以下Oak索引可以提高网站访客使用其社交登录方式时执行查询的遍历性能。
 
@@ -497,6 +497,6 @@ facebook和Twitter的后续步骤相同：
 
 有关其他信息和工具，请参阅[Oak查询和索引](../../help/sites-deploying/queries-and-indexing.md)。
 
-## 调度程序配置{#dispatcher-configuration}
+## 调度程序配置 {#dispatcher-configuration}
 
 请参阅[为Communities配置Dispatcher](dispatcher.md)。
