@@ -7,22 +7,22 @@ contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
-role: Administrator
+role: Admin
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
-# Forms门户 |处理用户数据{#forms-portal-handling-user-data}
+# Forms门户 |处理用户数据 {#forms-portal-handling-user-data}
 
 [!DNL AEM Forms] Portal提供了一些组件，您可以使用这些组件在页面上列出自适应表单、HTML5表单和其他Forms [!DNL AEM Sites] 资产。此外，您还可以将其配置为为登录用户显示草稿和提交的自适应表单以及HTML5表单。 有关表单门户的更多信息，请参阅[在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)。
 
 当登录用户将自适应表单保存为草稿或提交它时，它们会显示在表单门户的“草稿和提交”选项卡中。 草稿或已提交表单的数据将存储在为AEM部署配置的数据存储中。 匿名用户的草稿和提交内容不显示在表单门户页面上；但是，数据存储在配置的数据存储中。 有关更多信息，请参阅[为草稿和提交配置存储服务](/help/forms/using/configuring-draft-submission-storage.md)。
 
-## 用户数据和数据存储{#user-data-and-data-stores}
+## 用户数据和数据存储 {#user-data-and-data-stores}
 
 Forms门户会在以下情况下存储草稿和提交表单的数据：
 
@@ -62,15 +62,15 @@ Forms门户会在以下情况下存储草稿和提交表单的数据：
  </tbody>
 </table>
 
-## 访问和删除用户数据{#access-and-delete-user-data}
+## 访问和删除用户数据 {#access-and-delete-user-data}
 
 您可以在配置的数据存储中访问已登录用户和匿名用户的草稿和已提交的表单数据，并根据需要删除该数据。
 
-### AEM实例{#aem-instances}
+### AEM实例 {#aem-instances}
 
 登录用户和匿名用户在AEM实例（创作、发布或远程）中提交的所有草稿和表单数据都存储在适用的AEM存储库的`/content/forms/fp/`节点中。 每次登录用户或匿名用户保存草稿或提交表单时，都会为每个附件（如果适用）生成`draft ID`或`submission ID`、`user data ID`和随机`ID`，并与相应的草稿或提交相关联。
 
-#### 访问用户数据{#access-user-data}
+#### 访问用户数据 {#access-user-data}
 
 登录用户保存草稿或提交表单时，将使用其用户ID创建子节点。 例如，用户ID为`srose`的Sarah Rose的草稿和提交数据存储在AEM存储库的`/content/forms/fp/srose/`节点中。 在用户ID节点内，数据以分层结构组织。
 
@@ -92,7 +92,7 @@ Forms门户会在以下情况下存储草稿和提交表单的数据：
 | `/content/forms/fp/srose/drafts/data/` | 根据用户数据ID组织用户的表单数据 |
 | `/content/forms/fp/srose/drafts/data/<user data ID>` | 包含二进制格式的选定用户数据ID的表单数据 |
 
-#### 删除用户数据{#delete-user-data}
+#### 删除用户数据 {#delete-user-data}
 
 要从AEM系统中完全删除已登录用户的草稿和提交中的用户数据，必须从创作节点中删除特定用户的`user ID`节点。 您必须从所有适用的AEM实例中手动删除数据。
 
@@ -106,7 +106,7 @@ Forms门户会在以下情况下存储草稿和提交表单的数据：
 * 元数据
 * 其他元数据
 
-#### 访问用户数据{#access-user-data-1}
+#### 访问用户数据 {#access-user-data-1}
 
 要访问数据库表中登录用户和匿名用户的草稿和提交数据，请运行以下数据库命令。 在查询中，将`logged-in user`替换为要访问其数据的用户ID，或将`anonymous`替换为匿名用户。
 
@@ -114,7 +114,7 @@ Forms门户会在以下情况下存储草稿和提交表单的数据：
 select * from metadata, data, additionalmetadatatable where metadata.owner = 'logged-in user' and metadata.id = additionalmetadatatable.id and metadata.userdataID = data.id
 ```
 
-#### 删除用户数据{#delete-user-data-1}
+#### 删除用户数据 {#delete-user-data-1}
 
 要从数据库表中删除已登录用户的草稿和提交数据，请运行以下数据库命令。 在查询中，将`logged-in user`替换为要删除其数据的用户ID，或将`anonymous`替换为匿名用户。 请注意，要从数据库中删除特定匿名用户的数据，您需要使用一些可识别信息找到该数据，并从包含该信息的数据库表中将其删除。
 
