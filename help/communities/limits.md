@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
-role: Administrator
+role: Admin
 exl-id: d00a8eb2-47ce-425a-a312-f043f82912be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 1%
 
 ---
 
-# 成员贡献限制{#member-contribution-limits}
+# 会员缴费限制 {#member-contribution-limits}
 
 ## 概述 {#overview}
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 使用“成员”控制台，社区管理员可以随时主动删除成员的贡献限制，或者在成员向提出此类请求的社区管理员发送消息时主动删除贡献限制。
 
-## AEM Communities用户生成的内容贡献限制配置{#aem-communities-user-generated-content-contribution-limits-configuration}
+## AEM Communities用户生成的内容贡献限制配置 {#aem-communities-user-generated-content-contribution-limits-configuration}
 
 此OSGi配置：
 
