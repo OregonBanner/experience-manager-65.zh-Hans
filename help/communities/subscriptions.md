@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
-role: Administrator
+role: Admin
 exl-id: 338be220-659a-459c-8e90-55e3a11ddeb0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 2%
@@ -44,7 +44,7 @@ ht-degree: 2%
 
 必须将组件配置为在下面启用订阅&#x200B;*和*。 允许订阅的功能包括[blog](blog-feature.md)、[forum](forum.md)和[QnA](working-with-qna.md)。
 
-## 以下{#subscriptions-from-following}中的订阅
+## 以下订阅 {#subscriptions-from-following}
 
 ![订购](assets/subscription-following.png)
 
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 * 对于特定条目（如论坛主题、问题解答问题或博客文章），当该特定条目存在活动时，将发送电子邮件。
 
-## 通过电子邮件回复{#reply-by-email}
+## 通过电子邮件回复 {#reply-by-email}
 
 当电子邮件配置为[通过电子邮件](email.md#configure-polling-importer)回复时，订阅的成员将收到一封包含已发布内容的电子邮件和指向在线内容的链接。
 
