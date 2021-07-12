@@ -6,16 +6,16 @@ uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
-role: Administrator
+role: Admin
 exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 0%
 
 ---
 
-# Forms用户管理 |处理用户数据{#forms-user-management-handling-user-data}
+# Forms用户管理 |处理用户数据 {#forms-user-management-handling-user-data}
 
 用户管理是AEM Forms JEE组件，它允许创建、管理和授权AEM Forms用户访问AEM Forms。 用户管理使用域作为获取用户信息的目录。 支持以下域类型：
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 <!-- Fix broken links For more information about how user management works and configured, see AEM Forms JEE administration help. -->
 
-## 用户数据和数据存储{#user-data-and-data-stores}
+## 用户数据和数据存储 {#user-data-and-data-stores}
 
 用户管理将用户数据存储在数据库中，如My Sql 、Oracle、MS SQL Server和IBM DB2。 此外，任何在AEM作者的Forms应用程序(`https://'[server]:[port]'lc`)中至少登录过一次的用户，都会在AEM存储库中创建该用户。 因此，用户管理存储在以下数据存储中：
 
@@ -86,11 +86,11 @@ ht-degree: 0%
  </tbody>
 </table>
 
-### AEM存储库{#aem-repository}
+### AEM存储库 {#aem-repository}
 
 对于在`https://'[server]:[port]'lc`下至少访问过Forms应用程序一次的用户，用户管理数据也存储在AEM存储库中。
 
-## 访问和删除用户数据{#access-and-delete-user-data}
+## 访问和删除用户数据 {#access-and-delete-user-data}
 
 您可以访问和导出用户管理数据库和AEM存储库中用户的用户管理数据，并根据需要永久删除该数据。
 
@@ -106,7 +106,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 知道主体ID后，即可导出或删除用户数据。
 
-#### 导出用户数据{#export-user-data}
+#### 导出用户数据 {#export-user-data}
 
 运行以下数据库命令，从数据库表中导出主体ID的用户管理数据。 在`select`命令中，将`<principal_id>`替换为要导出其数据的用户的主ID。
 
@@ -147,7 +147,7 @@ Select * from EdcPrincipalGrpCtmntEntity where refchildprincipalid in (Select id
 Select * from EdcPrincipalEntity where id='<principal_id>';
 ```
 
-#### 删除用户数据{#delete-user-data}
+#### 删除用户数据 {#delete-user-data}
 
 执行以下操作，以从数据库表中删除主体ID的用户管理数据。
 
@@ -175,15 +175,15 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 1. 启动AEM Forms服务器。
 
-### AEM存储库{#aem-repository-1}
+### AEM存储库 {#aem-repository-1}
 
 Forms JEE用户在AEM存储库中拥有其数据(如果他们至少访问了AEM Forms创作实例之一)。 您可以从AEM存储库访问和删除其用户数据。
 
-#### 访问用户数据{#access-user-data}
+#### 访问用户数据 {#access-user-data}
 
 要查看在AEM存储库中创建的用户，请使用AEM管理员凭据登录`https://'[server]:[port]'/lc/useradmin`。 请注意，URL中的`server`和`port`是AEM创作实例的。 在此，您可以使用用户名搜索用户。 双击某个用户可查看该用户的属性、权限和群组等信息。 用户的`Path`属性指定在AEM存储库中创建的用户节点的路径。
 
-#### 删除用户数据{#delete-aem}
+#### 删除用户数据 {#delete-aem}
 
 要删除用户，请执行以下操作：
 
