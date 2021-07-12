@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
-role: Administrator
+role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2490'
 ht-degree: 0%
 
 ---
 
-# AEM Forms {#architecture-and-deployment-topologies-for-aem-forms}的架构和部署拓扑
+# AEM Forms的架构和部署拓扑 {#architecture-and-deployment-topologies-for-aem-forms}
 
 ## 架构 {#architecture}
 
@@ -87,11 +87,11 @@ AEM Forms on OSGi和AEM Forms on JEE都具有工作流功能。 您可以在OSGi
 * 它支持从发布实例反向复制原始表单数据。 默认数据存储处理程序需要反向复制功能。
 * AEM工作流是处理从发布实例到达的原始表单数据的主要方法，建议在创作样式系统上运行。
 
-## JEE上AEM Forms的示例物理拓扑{#sample-physical-topologies-for-aem-forms-on-jee}
+## JEE上AEM Forms的示例物理拓扑 {#sample-physical-topologies-for-aem-forms-on-jee}
 
 下面推荐的JEE上的AEM Forms拓扑主要适用于从JEE上的LiveCycle或旧版AEM Forms升级的客户。 Adobe建议在OSGi上使用AEM Forms进行新安装。 仅建议在JEE上新安装AEM Forms，以便使用文档安全和流程管理功能。
 
-### 使用文档服务或文档安全功能的拓扑{#topology-for-using-document-services-or-document-security-capabilities}
+### 使用文档服务或文档安全功能的拓扑 {#topology-for-using-document-services-or-document-security-capabilities}
 
 AEM Forms客户计划仅使用文档服务或文档安全功能，其拓扑可能与下面显示的拓扑类似。 此拓扑建议使用单个AEM Forms实例。 您还可以根据需要创建AEM Forms服务器的群集或场。 当大多数用户以编程方式访问AEM Forms服务器的功能并且通过用户界面进行干预的次数最少时，建议使用此拓扑。 该拓扑有助于文档服务的批处理操作。 例如，使用输出服务每天创建数百个不可编辑的PDF文档。
 
@@ -99,7 +99,7 @@ AEM Forms客户计划仅使用文档服务或文档安全功能，其拓扑可�
 
 ![基本功能](assets/basic-features.png)
 
-### 使用AEM Forms进程管理{#topology-for-using-aem-forms-process-management}的拓扑
+### 使用AEM Forms进程管理的拓扑 {#topology-for-using-aem-forms-process-management}
 
 AEM Forms客户计划使用AEM Forms流程管理功能，例如，HTML工作区的拓扑可能与下面显示的拓扑类似。 JEE服务器上的AEM Forms可以位于单个服务器或群集配置中。
 
@@ -111,7 +111,7 @@ AEM Forms客户计划使用AEM Forms流程管理功能，例如，HTML工作区�
 
 对于计划在JEE服务器上使用AEM Forms实现流程管理功能（HTML工作区）的客户，建议您使用此拓扑，而无需使用任何后处理、自适应表单、HTML5表单和交互式通信功能。
 
-### 使用自适应表单、HTML5表单、交互式通信功能的拓扑{#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
+### 使用自适应表单、HTML5表单、交互式通信功能的拓扑 {#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
 
 AEM Forms客户计划使用AEM Forms数据捕获功能(例如，自适应表单、HTML5 Forms、PDF forms)，其拓扑可能与下面显示的拓扑类似。 此拓扑还建议使用AEM Forms的交互式通信功能。
 
@@ -124,21 +124,21 @@ AEM Forms客户计划使用AEM Forms数据捕获功能(例如，自适应表单�
 * 交互式通信代理UI通常在组织内运行。 因此，您可以将代理UI的发布服务器保留在专用网络中。
 * OSGi实例上内置到JEE服务器上AEM Forms的AEM表单还可以在OSGi和已监视文件夹上运行以Forms为中心的工作流。
 
-## 在OSGi {#sample-physical-topologies-for-using-aem-forms-on-osgi}上使用AEM Forms的示例物理拓扑
+## 在OSGi上使用AEM Forms的示例物理拓扑 {#sample-physical-topologies-for-using-aem-forms-on-osgi}
 
-### OSGi功能{#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}上的数据捕获、交互式通信、以表单为中心的工作流拓扑
+### OSGi功能上的数据捕获、交互式通信、以表单为中心的工作流拓扑 {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
 
 AEM Forms客户计划使用AEM Forms数据捕获功能(例如，自适应表单、HTML5 Forms、PDF forms)，其拓扑可能与下面显示的拓扑类似。 此拓扑还建议对OSGi功能使用交互式通信和以Forms为中心的工作流，例如，将AEM收件箱和AEM Forms应用程序用于业务流程工作流。
 
 ![interactive-use-cases-af-cm-osgi-workflow](assets/interactive-use-cases-af-cm-osgi-workflow.png)
 
-### 用于使用监视文件夹功能进行脱机批处理的拓扑{#topology-for-using-watched-folder-capabilities-for-offline-batch-processing}
+### 用于使用监视文件夹功能进行脱机批处理的拓扑 {#topology-for-using-watched-folder-capabilities-for-offline-batch-processing}
 
 AEM Forms客户计划使用“监视文件夹”进行批处理时，其拓扑可能与下面显示的拓扑类似。 拓扑显示群集环境，但您决定使用单个实例或AEM Forms服务器群，具体取决于负载。 第三方数据源是您自己的记录系统。 它用作监视文件夹的输入源。 拓扑还以打印文件的形式显示输出。 您还可以将输出内容存储到文件系统、通过电子邮件发送，以及使用其他自定义方法使用输出。
 
 ![offline-batch-processing-via-watched-folders](assets/offline-batch-processing-via-watched-folders.png)
 
-### 使用文档服务功能进行基于API的离线处理的拓扑{#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
+### 用于使用文档服务功能进行基于API的离线处理的拓扑 {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
 
 AEM Forms客户计划仅使用文档服务功能的拓扑可以与下面显示的拓扑类似。 此拓扑建议在OSGi服务器上使用AEM Forms群集。 当大多数用户以编程方式（使用API）访问AEM Forms服务器的功能以及通过用户界面进行干预的次数最少时，建议使用此拓扑。 该拓扑在多种软件客户端场景中非常有用。 例如，多个客户使用PDF生成器服务按需创建PDF文档。
 
