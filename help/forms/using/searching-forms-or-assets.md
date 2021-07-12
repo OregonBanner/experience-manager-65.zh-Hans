@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: e65925ff-1fbf-4da6-bf09-0cf056c86e5a
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 4%
@@ -26,7 +26,7 @@ ht-degree: 4%
 
 单击![aem6forms_search](assets/aem6forms_search.png)以显示或隐藏搜索面板。
 
-## 基本搜索{#basic-search}
+## 基本搜索 {#basic-search}
 
 基本搜索是默认搜索，在不指定任何过滤器的情况下运行。 元数据属性的全文搜索由AEM Forms执行。
 
@@ -45,7 +45,7 @@ Adobe Experience Manager会搜索元数据属性中输入的文本，并返回�
 
 * 如果元数据属性中字段的数据和显示值不同，则不能将显示值用作搜索参数。 例如，您无法根据状态（如“已修改”或“已发布”）进行搜索，因为这些属性以不同的格式存储。
 
-## 高级搜索{#advanced-search}
+## 高级搜索 {#advanced-search}
 
 在搜索标准中，除了查询之外，您还可以指定一些搜索参数，以使基本搜索更加高效和集中。
 
