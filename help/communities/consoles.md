@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
-role: Administrator
+role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 2%
 
 ---
 
-# 社区控制台{#communities-consoles}
+# 社区控制台 {#communities-consoles}
 
 AEM Communities控制台（位于全局导航面板的创作环境中）提供了对管理任务的访问，例如：
 
@@ -38,14 +38,14 @@ AEM Communities控制台（位于全局导航面板的创作环境中）提供�
 >
 >在发布环境中，当已登录的成员具有适当的权限时，[社区站点](sites-console.md)将显示`Administration`菜单项。
 
-## 全局导航面板{#global-navigation-panel}
+## 全局导航面板 {#global-navigation-panel}
 
 选择左上角的`Adobe Experience Manager`图标以打开全局导航面板并访问两个图标：
 
 * [导航控制台](#navigation-console)
 * [工具控制台](tools.md)
 
-## 导航控制台{#navigation-console}
+## 导航控制台 {#navigation-console}
 
 要访问各种“社区”控制台，请从全局导航中选择&#x200B;**导航、Communities**。
 
@@ -71,6 +71,6 @@ AEM Communities控制台（位于全局导航面板的创作环境中）提供�
 
    在“资源”控制台中， [启用管理器](enablement.md#communitymanagers)可创建资源并管理资源，将其分配给[启用社区站点](overview.md#enablement-community)的成员。 控制台仅在创作环境中可用。
 
-## “工具”控制台{#tools-console}
+## “工具”控制台 {#tools-console}
 
 要从全局导航中访问[Communities Tools](tools.md)（以前称为管理控制台），请执行以下操作：**[!UICONTROL 工具]** > **[!UICONTROL 社区]**
