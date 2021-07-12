@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
-role: Administrator
+role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
 
 ---
 
-# 管理用户和用户组{#managing-users-and-user-groups}
+# 管理用户和用户组 {#managing-users-and-user-groups}
 
 ## 概述 {#overview}
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 有关详细信息，请参阅[成员贡献限制](limits.md)。
 
-### 动态创建的用户组{#dynamically-created-user-groups}
+### 动态创建的用户组 {#dynamically-created-user-groups}
 
 创建新社区站点后，会使用唯一的ID(uid)和相应于在创作环境（请参阅[创作组角色](#author-group-roles)）或发布环境（请参阅[发布组角色](#publish-group-roles)）中管理社区站点所需的各种管理功能动态创建新用户组。
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 ## 创作环境 {#author-environment}
 
-### 隧道服务{#tunnel-service}
+### 隧道服务 {#tunnel-service}
 
 使用创作环境创建[站点](sites-console.md)、[修改站点属性](sites-console.md#modifying-site-properties)和[管理社区成员和成员组](members.md)时，必须访问在发布环境中注册的用户和用户组。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 要管理在创作环境中注册的用户和用户组，请使用[安全控制台](../../help/sites-administering/security.md)
 
-### 创作组角色{#author-group-roles}
+### 作者组角色 {#author-group-roles}
 
 | 如果组成员…… | 主要角色 |
 |---|---|
@@ -83,7 +83,7 @@ ht-degree: 0%
 | 社区&lt;*站点名称* > Siteenablementmanagers | 社区站点启用管理器组由分配给用户以管理社区站点的启用[资源](resources.md)的用户组成。 |
 | 无 | 匿名网站访客可能无法访问创作环境。 |
 
-### 系统管理员{#system-administrators}
+### 系统管理员 {#system-administrators}
 
 管理员组的成员是系统管理员，他们能够为创作和发布环境执行AEM安装的初始设置。
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 ## 发布环境 {#publish-environment}
 
-### 成为{#becoming-a-member}成员
+### 成为会员 {#becoming-a-member}
 
 在发布环境中，根据社区站点的[设置](sites-console.md#user-management)，站点访客可能会成为社区成员：
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 >
 >如果站点访客注册为一个开放社区站点的成员，则他们会自动成为同一发布环境中其他开放社区站点的成员。
 
-### 发布组角色{#publish-group-roles}
+### 发布组角色 {#publish-group-roles}
 
 | 如果组成员…… | 主要角色 |
 |---|---|
@@ -122,7 +122,7 @@ ht-degree: 0%
 | *特权成员安全组* | 为限制内容创建而手动创建和维护的用户组。 请参阅[特权成员组](#privileged-members-group)。 |
 | 无 | 发现网站的匿名网站访客可以查看和搜索允许匿名访问的社区网站。 要参与和发布内容，用户必须自行注册（如果允许）并成为社区成员。 |
 
-### 为成员分配发布组角色{#assigning-members-to-publish-group-roles}
+### 为成员分配发布组角色 {#assigning-members-to-publish-group-roles}
 
 当[在创作环境中创建社区站点](sites-console.md)时，或者当[修改站点属性时，可以为](sites-console.md#modifying-site-properties)成员分配在发布环境中执行的各种角色，如审核者、组管理员、资源联系人或特权成员。
 
@@ -151,9 +151,9 @@ ht-degree: 0%
 >
 >将用户添加到社区站点的特权成员组时，仅当用户也是同一社区站点的成员时，才会授予他们创建权限。
 
-## 创建社区成员{#creating-community-members}
+## 创建社区成员 {#creating-community-members}
 
-### 存储库位置{#repository-location}
+### 存储库位置 {#repository-location}
 
 为了使某些功能正常工作，需要创建具有相应权限的用户和用户组。
 
@@ -196,7 +196,7 @@ ht-degree: 0%
 | 管理 | 创作用户 | 创作时的用户组 | 发布时的成员 | 发布时的成员组 |
 | reamires | 管理权限 | 管理权限 | 管理员权限、隧道服务、发布场的用户同步 | 管理员权限、隧道服务、发布场的用户同步 |
 
-### 社区启用管理员角色{#community-enablement-manager-role}
+### 社区支持经理角色 {#community-enablement-manager-role}
 
 网站访客自行注册的功能通常不允许[启用社区](overview.md#enablement-community)进行注册，因为每个成员都有相关成本。 在创作网站创建期间，为`enablement manager` [的[角色](#author-group-roles)分配了](sites-console.md#enablement) 的用户（添加为组`Community <site-name> Siteenablementmanagers`的成员）管理启用学习者和资源。 `enablement manager`还负责将学习资源](resources.md)分配给创作社区成员。[
 
@@ -228,13 +228,13 @@ ht-degree: 0%
 
    ![分配组](assets/assign-group.png)
 
-### 社区管理员角色{#community-administrators-role}
+### 社区管理员角色 {#community-administrators-role}
 
 如[创作组角色](#author-group-roles)图表中所述，社区管理员组的成员能够创建社区站点、管理站点、管理成员（他们可以禁止社区成员）以及审核内容。
 
 按照与创建用户并将其分配给[启用管理器](#communitysiteenablementmanagerrole)的角色相同的步骤操作，但在用户的“组”选项卡下添加c `ommunity-administrators`组。
 
-### LDAP集成{#ldap-integration}
+### LDAP集成 {#ldap-integration}
 
 AEM支持使用LDAP对用户进行身份验证以及创建用户帐户。 有关详细信息，请参见[使用AEM 6](../../help/sites-administering/ldap-config.md)配置LDAP。
 
@@ -261,7 +261,7 @@ AEM支持使用LDAP对用户进行身份验证以及创建用户帐户。 有关
 
 * `User auto membership`值应为`rep:authorizableId`属性，而不是配置文件中的`givenName`（显示名称）。
 
-## 在AEM实例之间同步用户{#synchronizing-users-among-aem-instances}
+## 在AEM实例之间同步用户 {#synchronizing-users-among-aem-instances}
 
 使用[发布场](topologies.md)时，请确保用户在每个发布实例上具有相同的路径，方法是先将用户导入一个实例，然后[启用用户同步](sync.md)以Sling将用户分发到其他发布实例。
 
@@ -269,7 +269,7 @@ AEM支持使用LDAP对用户进行身份验证以及创建用户帐户。 有关
 
 虽然通过用户同步同步对用户组的同步将包含在将来的版本中，但当前只有用户组的&#x200B;*成员资格*&#x200B;将在用户同步运行时同步。
 
-## 关于社区组{#about-community-groups}
+## 关于社区组 {#about-community-groups}
 
 讨论组时，有两个不同的主题：
 
