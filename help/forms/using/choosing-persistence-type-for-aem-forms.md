@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
-role: Administrator
+role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 1%
 
 ---
 
-# 为AEM Forms安装选择持久性类型{#choosing-a-persistence-type-for-an-aem-forms-installation}
+# 为AEM Forms安装选择持久性类型 {#choosing-a-persistence-type-for-an-aem-forms-installation}
 
 明智地选择持久性类型。 它可帮助您构建一个高效且可扩展的AEM Forms环境。
 
@@ -63,7 +63,7 @@ TarMK是为性能而设计的，而MongoMK和RDBMK是为可扩展性而设计的
 
 有关支持的微内核列表，请参阅OSGi技术要求中的[AEM Forms](/help/sites-deploying/technical-requirements.md)或JEE上的[AEM Forms支持的平台组合](/help/forms/using/aem-forms-jee-supported-platforms.md)文章。
 
-## 选择Mongo或关系数据库微内核而不是TarMK {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
+## TarMK上选择Mongo或关系数据库微内核 {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
 
 可缩放（群集）的AEM Forms环境是由两个或多个水平配置的活动创作实例集合。 如果一个服务器支持所有并发创作活动，但该服务器不再可持续，则可以选择运行多个创作实例。
 
