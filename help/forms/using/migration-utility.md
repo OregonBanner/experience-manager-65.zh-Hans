@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-strategy: max-2018
 discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 3%
@@ -33,7 +33,7 @@ ht-degree: 3%
 >
 >如果升级不到位，对于通信管理资产，您可以在每次导入资产时运行迁移。 对于通信管理迁移，您需要安装Forms兼容包。
 
-## 迁移方法{#approach-to-migration}
+## 迁移方法 {#approach-to-migration}
 
 您可以从AEM Forms 6.4、6.3或6.2中[升级](../../forms/using/upgrade.md)到最新版本的AEM Forms 6.5，或执行全新安装。 根据您是升级了之前的安装还是执行了全新安装，您需要执行以下操作之一：
 
@@ -68,7 +68,7 @@ ht-degree: 3%
 * 资产编辑器配置更改为通信管理配置。
 * 资产会移动到名称为“现有文本”和“现有列表”的文件夹下。
 
-## 使用迁移实用程序{#using-the-migration-utility}
+## 使用迁移实用程序 {#using-the-migration-utility}
 
 ### 运行迁移实用程序 {#runningmigrationutility}
 
