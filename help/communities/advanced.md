@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -57,7 +57,7 @@ ht-degree: 1%
 >
 >要使用高级评分和标记功能，请安装[专家识别包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
 
-## 可配置评分引擎{#configurable-scoring-engine}
+## 可配置评分引擎 {#configurable-scoring-engine}
 
 高级评分引擎提供OSGi配置，其中包含影响高级评分算法的参数。
 
@@ -87,7 +87,7 @@ ht-degree: 1%
 
    默认值为 50。
 
-## 高级评分规则{#advanced-scoring-rules}
+## 高级评分规则 {#advanced-scoring-rules}
 
 在基本评分中，获得徽章所需的数量已知。
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 如果秒词文件缺失，则高级评分引擎将引发错误。
 
-## 高级标记规则{#advanced-badging-rules}
+## 高级标记规则 {#advanced-badging-rules}
 
 高级标记规则属性与[基本标记规则属性](/help/communities/implementing-scoring.md#badging-rules)不同。
 
@@ -155,9 +155,9 @@ ht-degree: 1%
  </tbody>
 </table>
 
-## 包含的规则和徽章{#included-rules-and-badge}
+## 包含的规则和徽章 {#included-rules-and-badge}
 
-### 包含的标记{#included-badge}
+### 包含的徽章 {#included-badge}
 
 此测试版中包含一个基于奖励的专家徽章：
 
@@ -178,7 +178,7 @@ ht-degree: 1%
 * [启用组件标记](/help/communities/implementing-scoring.md#enableforcomponent)
 * [应用规则](/help/communities/implementing-scoring.md#applytopage)
 
-### 包含评分规则和子规则{#included-scoring-rules-and-sub-rules}
+### 包含评分规则和子规则 {#included-scoring-rules-and-sub-rules}
 
 测试版中包含两个用于[论坛功能](/help/communities/functions.md#forum-function)的高级评分规则（每个规则用于论坛和论坛功能的评论组件）：
 
@@ -208,7 +208,7 @@ ht-degree: 1%
 * `rules` 应位于具有每个人读取权限的存储库位置。
 * 规则名称必须唯一，而不考虑位置。
 
-### 包含标记规则{#included-badging-rules}
+### 包含标记规则 {#included-badging-rules}
 
 该版本中包含两个与[高级论坛和评论评分规则](#included-scoring-rules-and-sub-rules)对应的高级标记规则。
 
