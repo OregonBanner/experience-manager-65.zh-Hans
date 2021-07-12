@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
-role: Administrator
+role: Admin
 exl-id: ac54f06e-1545-44bb-9f8f-970f161ebb72
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1117'
 ht-degree: 0%
 
 ---
 
-# 翻译用户生成的内容{#translating-user-generated-content}
+# 翻译用户生成的内容 {#translating-user-generated-content}
 
 AEM Communities的翻译功能将[翻译页面内容](../../help/sites-administering/translation.md)的概念扩展为使用[社交组件框架(SCF)组件](scf.md)发布到社区站点的用户生成内容(UGC)。
 
@@ -40,7 +40,7 @@ UGC的翻译通过消除语言障碍，站点访客和成员可以体验到全�
 
 当除了翻译服务提供商之外配置翻译集成框架时，站点的每个语言副本可以共享UGC的单个线程，从而提供跨语言副本的全局通信。 配置的[全局共享存储](#global-translation-of-ugc)使整个线程可见，而不是按语言分隔的讨论线程，而不管从哪个语言副本查看该线程。 此外，可以配置多个翻译集成配置，以指定不同的全局共享存储，用于诸如按区域的全局参与者的逻辑分组。
 
-## 默认翻译服务{#the-default-translation-service}
+## 默认翻译服务 {#the-default-translation-service}
 
 AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sites-administering/tc-msconf.md)的[试用许可证](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license)。
 
@@ -52,7 +52,7 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 >
 >对于生产系统，需要获得许可的翻译服务。 如果未获得许可，则默认翻译服务应为[关闭](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors)。
 
-## UGC {#global-translation-of-ugc}的全局翻译
+## UGC的全球翻译 {#global-translation-of-ugc}
 
 当网站具有多个[语言副本](../../help/sites-administering/tc-prep.md)时，默认翻译服务不会识别在一个网站上输入的UGC可能与在另一个网站上输入的UGC相关，因为当UGC基本上是由同一组件（包含该组件的页面的语言副本）生成时。
 
@@ -70,7 +70,7 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 >
 >没有用于将语言特定内容移动或合并到全局共享存储的迁移工具。
 
-### 翻译集成配置{#translation-integration-configuration}
+### 翻译集成配置 {#translation-integration-configuration}
 
 要创建新的翻译集成，该集成将翻译服务连接器与创作实例上的网站集成在一起：
 
@@ -90,7 +90,7 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 
 * 选择&#x200B;**[!UICONTROL 可用配置]**&#x200B;旁边的`[+]`图标以创建新配置
 
-#### 创建配置对话框{#create-configuration-dialog}
+#### 创建配置对话框 {#create-configuration-dialog}
 
 ![创建 — 配置](assets/translation-integration2.png)
 
@@ -108,7 +108,7 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 
 * 选择&#x200B;**[!UICONTROL 创建]**
 
-#### 翻译配置对话框{#translation-config-dialog}
+#### 翻译配置对话框 {#translation-config-dialog}
 
 ![configuration-dialog](assets/translation-integration3.png)
 
@@ -135,7 +135,7 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 
 需要将新的翻译集成云服务激活到发布环境。 与网站关联后，如果尚未激活，则在发布与其关联的页面时，激活工作流将提示发布此云服务配置。
 
-## 管理翻译设置{#managing-translation-settings}
+## 管理翻译设置 {#managing-translation-settings}
 
 >[!NOTE]
 >
@@ -147,7 +147,7 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 >
 >如果网站访客是匿名访客或在其配置文件中未指定语言首选项，则首选语言是页面模板的基本语言。
 
-### 用户首选项{#user-preference}
+### 用户首选项 {#user-preference}
 
 #### 用户个人资料 {#user-profile}
 
@@ -159,6 +159,6 @@ AEM Communities包含为多种语言启用的[默认翻译服务](../../help/sit
 
 ![user-profile](assets/translation-integration4.png)
 
-### 社区站点设置{#community-site-setting}
+### 社区站点设置 {#community-site-setting}
 
 创建社区站点后，可以启用和配置翻译选项。 翻译设置对匿名网站访客可能查看的内容有效，但会被用户的配置文件设置覆盖。
