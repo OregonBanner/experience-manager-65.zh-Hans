@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 3%
@@ -33,7 +33,7 @@ ht-degree: 3%
 >
 >用于创建[社区站点](/help/communities/sites-console.md)、[社区站点模板](/help/communities/sites.md)、[社区组模板](/help/communities/tools-groups.md)和[社区功能](/help/communities/functions.md)的控制台仅供在创作环境中使用。
 
-## 组模板控制台{#group-templates-console}
+## 组模板控制台 {#group-templates-console}
 
 要在AEM创作环境中访问组模板控制台，请执行以下操作：
 
@@ -95,7 +95,7 @@ ht-degree: 3%
 
 将所有所需函数放入模板生成器区域并进行配置后，选择右上角的&#x200B;**Save**。
 
-## 编辑组模板{#edit-group-template}
+## 编辑组模板 {#edit-group-template}
 
 在主[“组模板”控制台](#group-templates-console)中查看社区组时，可以选择现有的组模板进行编辑。
 
