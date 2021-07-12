@@ -9,9 +9,9 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 1%
@@ -22,13 +22,13 @@ ht-degree: 1%
 
 本文提供了一些介绍性信息，可帮助您为强化AEM Forms环境做好准备。 它包括有关JEE上的AEM Forms、操作系统、应用程序服务器和数据库安全性的先决条件信息。 在继续锁定环境之前，请查看此信息。
 
-## 特定于供应商的安全信息{#vendor-specific-security-information}
+## 特定于供应商的安全信息 {#vendor-specific-security-information}
 
 本部分包含有关操作系统、应用程序服务器和数据库的安全相关信息，这些信息已纳入到您的AEM Forms on JEE解决方案中。
 
 使用此部分中的链接可查找特定于供应商的操作系统、数据库和应用程序服务器的安全信息。
 
-### 操作系统安全信息{#operating-system-security-information}
+### 操作系统安全信息 {#operating-system-security-information}
 
 在保护操作系统时，请仔细考虑实施操作系统供应商描述的措施，包括：
 
@@ -74,7 +74,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 应用程序服务器安全信息{#application-server-security-information}
+### 应用程序服务器安全信息 {#application-server-security-information}
 
 在保护应用程序服务器时，请仔细考虑实施服务器供应商描述的措施，包括：
 
@@ -111,7 +111,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 数据库安全信息{#database-security-information}
+### 数据库安全信息 {#database-security-information}
 
 在保护数据库时，请考虑实施数据库供应商描述的措施，包括：
 
@@ -206,7 +206,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 将JBoss配置为使用非默认的HTTP端口{#configuring-jboss-to-use-a-non-default-http-port}
+### 将JBoss配置为使用非默认HTTP端口 {#configuring-jboss-to-use-a-non-default-http-port}
 
 JBoss Application Server使用8080作为默认HTTP端口。 JBoss还具有预配置的端口8180、8280和8380，这些端口在jboss-service.xml文件中注释掉。 如果您的计算机上有已使用此端口的应用程序，请按照以下步骤更改JEE上的AEM Forms使用的端口：
 
@@ -223,19 +223,19 @@ JBoss Application Server使用8080作为默认HTTP端口。 JBoss还具有预配
 1. 保存并关闭文件。
 1. 重新启动JBoss应用程序服务器。
 
-## AEM Forms JEE安全注意事项{#aem-forms-on-jee-security-considerations}
+## AEM Forms on JEE安全注意事项 {#aem-forms-on-jee-security-considerations}
 
 本节介绍一些您应该了解的与JEE相关的AEM Forms安全问题。
 
-### 未在数据库{#email-credentials-not-encrypted-in-database}中加密电子邮件凭据
+### 未在数据库中加密电子邮件凭据 {#email-credentials-not-encrypted-in-database}
 
 应用程序存储的电子邮件凭据在存储到JEE数据库上的AEM Forms中之前不会进行加密。 将服务端点配置为使用电子邮件时，作为该端点配置的一部分使用的任何密码信息在存储到数据库中时都不会加密。
 
-### 数据库{#sensitive-content-for-rights-management-in-the-database}中Rights Management的敏感内容
+### Rights Management数据库中的敏感内容 {#sensitive-content-for-rights-management-in-the-database}
 
 AEM Forms on JEE使用AEM Forms on JEE数据库来存储敏感文档密钥信息和用于策略文档的其他加密材料。 保护数据库免受入侵有助于保护此敏感信息。
 
-### 以明文形式{#password-in-clear-text-format-in-adobe-ds-xml}提供密码
+### 以明文形式显示密码 {#password-in-clear-text-format-in-adobe-ds-xml}
 
 用于在JEE上运行AEM Forms的应用程序服务器需要其自己的配置，以便通过应用程序服务器上配置的数据源访问数据库。 确保应用程序服务器在其数据源配置文件中不以明文形式公开数据库密码。
 
@@ -247,6 +247,6 @@ lc_[database].xml文件不应包含明文格式的密码。 请咨询应用程�
 
 默认情况下，IBM WebSphere Application Server和OracleWebLogic Server可能会加密数据源密码。 但是，请通过应用程序服务器文档进行确认，以确保出现这种情况。
 
-### 保护存储在信任存储{#protecting-the-private-key-stored-in-trust-store}中的私钥
+### 保护存储在信任存储中的私钥 {#protecting-the-private-key-stored-in-trust-store}
 
 在信任存储中导入的私钥或凭据存储在JEE数据库的AEM Forms中。 采取适当的预防措施保护数据库并限制仅对指定管理员的访问。
