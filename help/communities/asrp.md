@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 0%
 
 ---
 
-# ASRP -Adobe存储资源提供程序{#asrp-adobe-storage-resource-provider}
+# ASRP -Adobe存储资源提供程序 {#asrp-adobe-storage-resource-provider}
 
 ## 关于ASRP {#about-asrp}
 
@@ -73,23 +73,23 @@ ht-degree: 0%
 
 * 确保将链接外部化](#externalize-links)可使配置文件数据的网站URL从数据中心路由。[
 
-### 复制加密密钥{#replicate-the-crypto-key}
+### 复制加密密钥 {#replicate-the-crypto-key}
 
 消费者密钥和密钥已加密。 为了正确加密/解密密钥，所有AEM实例上的主Granite Crypto密钥必须相同。
 
 按照[复制加密密钥](/help/communities/deploy-communities.md#replicate-the-crypto-key)中的说明操作。
 
-### 将链接外部化{#externalize-links}
+### 将链接外部化 {#externalize-links}
 
 要获取正确的配置文件和配置文件图像链接，请务必正确地[配置链接外部器](/help/sites-developing/externalizer.md)。
 
 请确保将域设置为可从数据中心URL（ASRP端点）路由的URL。
 
-### 时间同步{#time-synchronization}
+### 时间同步 {#time-synchronization}
 
 要使用ASRP端点进行身份验证成功，运行托管AEM Communities的计算机必须进行时间同步，例如使用[网络时间协议(NTP)](https://www.ntp.org/)。
 
-### 发布配置{#publishing-the-configuration}
+### 发布配置 {#publishing-the-configuration}
 
 ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
@@ -103,7 +103,7 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 * 取消选择&#x200B;**仅已修改**
 * 选择&#x200B;**激活**
 
-## 从AEM 6.0 {#upgrading-from-aem}升级
+## 从AEM 6.0升级 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
@@ -113,7 +113,7 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
 由于新的存储结构，从社交社区升级到社区时，必须按照[升级](/help/communities/upgrade.md#adobe-cloud-storage)说明操作。
 
-## 管理用户数据{#managing-user-data}
+## 管理用户数据 {#managing-user-data}
 
 有关&#x200B;*用户*、*用户配置文件*&#x200B;和&#x200B;*用户组*&#x200B;的信息，请访问
 
@@ -122,23 +122,23 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
 ## 疑难解答 {#troubleshooting}
 
-### 升级{#ugc-disappears-after-upgrade}后UGC消失
+### 升级后UGC消失 {#ugc-disappears-after-upgrade}
 
 如果从现有AEM 6.0社交社区站点升级，请务必按照[升级说明](/help/communities/upgrade.md#adobe-cloud-storage)进行操作，否则UGC将会丢失。
 
-### 身份验证错误{#authentication-errors}
+### 身份验证错误 {#authentication-errors}
 
 如果收到针对数据中心URL的身份验证错误，且AEM error.log包含有关过时时间戳的消息，则请验证是否正在进行时间同步。
 
 使用诸如[网络时间协议(NTP)](https://www.ntp.org/)之类的工具对所有AEM创作和发布服务器进行时间同步。
 
-### 新内容未在搜索中显示{#new-content-does-not-appear-in-searches}
+### 搜索中不显示新内容 {#new-content-does-not-appear-in-searches}
 
 Adobe云存储基础架构使用&#x200B;*最终一致性*&#x200B;来实现其扩展和性能目标。 因此，新内容不会立即可用，并且需要几秒钟才能在搜索结果中显示。
 
 在监控影响最终一致性的间隔时，如果新内容需要超过几秒钟才能在搜索中显示，请联系您的客户代表。
 
-### ASRP {#ugc-not-visible-in-asrp}中不显示UGC
+### UGC在ASRP中不可见 {#ugc-not-visible-in-asrp}
 
 通过检查存储选项的配置，确保ASRP已配置为默认提供程序。 默认情况下，存储资源提供程序是JSRP，而不是ASRP。
 
