@@ -2,17 +2,17 @@
 title: 如何创建自适应表单
 description: '了解如何使用 [!DNL Experience Manager Forms]创建自适应表单。 自适应表单是响应式HTML5表单，可简化信息收集和处理过程。 深入了解如何根据表单数据模型、XFA表单模板以及XML或JSON架构创建自适应表单。 '
 feature: 自适应表单
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1858'
 ht-degree: 0%
 
 ---
 
-# 创建自适应表单{#creating-an-adaptive-form}
+# 创建自适应表单 {#creating-an-adaptive-form}
 
 ## <strong>创建自适应表单</strong> {#strong-create-an-adaptive-form-strong}
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 >
 >您还可以更改自适应表单的表单数据模型。 有关详细步骤，请参阅[编辑自适应表单的表单模型属性](#edit-form-model)。
 
-## 根据XFA表单模板{#create-an-adaptive-form-based-on-an-xfa-form-template}创建自适应表单
+## 根据XFA表单模板创建自适应表单 {#create-an-adaptive-form-based-on-an-xfa-form-template}
 
 您可以重新调整XFA表单模板的用途以创建自适应表单。 要重新调整用途，请上传XFA表单模板并将其与自适应表单相关联。 表单模板（XFA表单）的元素可在自适应表单创作时在内容查找器中使用。 从内容查找器中，可以将表单模板元素拖放到表单上。
 
@@ -102,7 +102,7 @@ Do the following to use an XFA form template as form model for your adaptive for
    >
    >You can also change the form template for an adaptive form. For detailed steps, see [Edit Form Model properties of an adaptive form](#edit-form-model). -->
 
-## 基于XML或JSON架构{#create-an-adaptive-form-based-on-xml-or-json-schema}创建自适应表单
+## 基于XML或JSON模式创建自适应表单 {#create-an-adaptive-form-based-on-xml-or-json-schema}
 
 XML和JSON架构表示组织内的后端系统生成或使用数据的结构。 您可以将架构与自适应表单相关联，并使用其元素向自适应表单添加动态内容。 架构的元素位于内容浏览器的“数据模型对象”选项卡中，用于创作自适应表单。 您可以拖放架构元素以构建表单。
 
@@ -137,7 +137,7 @@ XML和JSON架构表示组织内的后端系统生成或使用数据的结构。 
 >
 >您还可以更改自适应表单的架构。 有关详细步骤，请参阅[编辑自适应表单的表单模型属性](#edit-form-model)。
 
-## 自适应表单模板{#adaptive-form-templates}
+## 自适应表单模板 {#adaptive-form-templates}
 
 模板提供了基本结构并定义了自适应表单的外观（布局和样式）。 它具有预格式化的组件，其中包含某些属性和内容结构。<!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
 
@@ -147,7 +147,7 @@ XML和JSON架构表示组织内的后端系统生成或使用数据的结构。 
 >
 >当您打开使用高级模板创建的用于编辑的自适应表单时，会显示一条错误消息。 高级模板具有签名步骤组件，默认情况下为其启用Adobe Sign。 创建并选择[Adobe Sign云配置](adobe-sign-integration-adaptive-forms.md)和[配置签名者](working-with-adobe-sign.md#addsignerstoanadaptiveform)以解决错误。
 
-## 编辑自适应表单{#edit-form-model}的表单模型属性
+## 编辑自适应表单的表单模型属性 {#edit-form-model}
 
 创建自适应表单时没有使用表单模型（使用表单模型的无选项），也没有使用表单模型（如表单模板、XML架构或JSON架构或表单数据模型）。 可以将自适应表单的表单模型从“无”更改为其他表单模型。 对于基于表单模型的自适应表单，您可以为同一表单模型选择其他表单模板、XML架构、JSON架构或表单数据模型。 但是，不能将一个表单模型更改为另一个表单模型。
 
@@ -159,7 +159,7 @@ XML和JSON架构表示组织内的后端系统生成或使用数据的结构。 
 
 1. 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存属性。
 
-## 自动保存自适应表单{#auto-save-an-adaptive-form}
+## 自动保存自适应表单 {#auto-save-an-adaptive-form}
 
 默认情况下，自适应表单的内容会在用户操作（如按保存按钮）中保存。 您还可以配置自适应表单，以根据事件或时间间隔自动开始保存内容。 自动保存选项在以下位置很有用：
 
@@ -168,7 +168,7 @@ XML和JSON架构表示组织内的后端系统生成或使用数据的结构。 
 * 开始根据用户事件保存表单的内容
 * 在指定的时间间隔后重复保存表单的内容
 
-### 为自适应表单{#enable-auto-save-for-an-adaptive-form}启用自动保存
+### 为自适应表单启用自动保存 {#enable-auto-save-for-an-adaptive-form}
 
 默认情况下，“自动保存”选项未启用。 您可以从自适应表单的“自动保存”选项卡中启用自动保存选项。 “自动保存”选项卡还提供了其他几个配置选项。 执行以下步骤以启用和配置自适应表单的自动保存选项：
 
