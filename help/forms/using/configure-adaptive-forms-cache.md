@@ -9,20 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
 
 ---
 
-# 配置自适应表单缓存{#configure-adaptive-forms-cache}
+# 配置自适应表单缓存 {#configure-adaptive-forms-cache}
 
 缓存是一种缩短数据访问时间、减少延迟和提高输入/输出(I/O)速度的机制。 自适应表单缓存仅存储自适应表单的HTML内容和JSON结构，而不保存任何预填充数据。 这有助于减少在客户端上渲染自适应表单所需的时间。 它专为自适应表单而设计。
 
-## 在创作实例和发布实例中配置自适应表单缓存{#configure-adaptive-forms-caching-at-author-and-publish-instances}
+## 在创作实例和发布实例中配置自适应表单缓存 {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
 1. 转到位于`https://[server]:[port]/system/console/configMgr`的AEM Web控制台配置管理器。
 1. 单击&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道配置]**&#x200B;以编辑其配置值。
@@ -39,11 +39,11 @@ ht-degree: 0%
 您的环境配置为使用缓存自适应表单和相关资产。
 
 
-## （可选）在调度程序{#configure-the-cache}处配置自适应表单缓存
+## （可选）在调度程序处配置自适应表单缓存 {#configure-the-cache}
 
 您还可以在调度程序上配置自适应表单缓存，以提高性能。
 
-### 先决条件{#pre-requisites}
+### 先决条件 {#pre-requisites}
 
 * 启用[在客户端](prepopulate-adaptive-form-fields.md#prefill-at-client)合并或预填数据选项。 它有助于合并预填充表单每个实例的唯一数据。
 
@@ -132,7 +132,7 @@ ht-degree: 0%
 
 ## 疑难解答 {#troubleshooting}
 
-### 某些包含图像或视频的自适应表单不会从调度程序缓存中自动失效{#videos-or-images-not-auto-invalidated}
+### 某些包含图像或视频的自适应表单不会从调度程序缓存中自动失效 {#videos-or-images-not-auto-invalidated}
 
 #### 带有 OS 剪贴板 {#issue1}
 
@@ -142,7 +142,7 @@ ht-degree: 0%
 
 发布图像和视频后，明确取消发布和发布引用这些资产的自适应表单。
 
-### 只缓存自适应表单的第一个实例{#only-first-instance-of-adaptive-forms-is-cached}
+### 只缓存自适应表单的第一个实例 {#only-first-instance-of-adaptive-forms-is-cached}
 
 #### 带有 OS 剪贴板 {#issue3}
 
