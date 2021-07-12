@@ -4,9 +4,9 @@ seo-title: 安装Workbench
 description: 安装Workbench。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-role: Administrator
+role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 本文档提供了有关安装和配置AEM Forms Workbench的说明。 安装程序还安装Forms Designer。
 
-## 谁应该阅读此文档？{#who-should-read-this-doc}
+## 谁应该阅读此文档？ {#who-should-read-this-doc}
 
 本文档面向负责安装、配置、管理或部署Workbench的管理员或开发人员。 还包括配置系统以支持升级的AEM Forms进程所需的信息。 提供的信息基于以下假设：阅读本文档的任何人都熟悉Microsoft® Windows®操作系统。
 
@@ -53,9 +53,9 @@ ht-degree: 0%
 >
 >Flex工作区已弃用于AEM Forms。 它适用于AEM Forms版本。
 
-## 安装{#before-you-install}之前
+## 安装之前 {#before-you-install}
 
-### Workbench安装概述{#workbench-installation-overview}
+### Workbench安装概述 {#workbench-installation-overview}
 
 Workbench是一个集成开发环境(IDE)，开发人员和表单作者使用它来创建自动化的业务流程和表单。 它还用于管理流程和表单所使用的资源和服务。
 
@@ -69,11 +69,11 @@ Workbench是一个集成开发环境(IDE)，开发人员和表单作者使用它
 
 ![default-render-form](assets/installing-workbench.png)
 
-## 系统先决条件{#system-prerequisites}
+## 系统先决条件 {#system-prerequisites}
 
 本节概述了硬件和软件要求以及支持的平台。
 
-### 最低硬件和软件要求{#minimum-hardware-software-requirements}
+### 最低硬件和软件要求 {#minimum-hardware-software-requirements}
 
 ****
 工作台建议满足以下最低要求：安装的磁盘空间：
@@ -100,7 +100,7 @@ Workbench是一个集成开发环境(IDE)，开发人员和表单作者使用它
 
 请在[AEM Forms支持的平台](http://adobe.com/go/learn_aemforms_supportedplatforms_65)上查看Workbench支持的平台的完整列表。
 
-## 设计器安装注意事项{#designer-installation-considerations}
+## Designer安装注意事项 {#designer-installation-considerations}
 
 默认情况下，Workbench安装包含相应的仅英文版Designer。 如果Workbench安装应用程序在您的计算机上检测到Designer的现有版本，则安装可能会终止，您需要先删除当前版本的Designer，然后才能继续。
 下表提供了安装Workbench时您可能遇到的Designer安装方案以及必须执行的任何操作的完整列表。
@@ -125,7 +125,7 @@ Designer的不同版本可以共存于同一系统上，例如Workbench 6.4的De
  </tbody>
 </table>
 
-### 在Windows 10 {#uninstall-designer-standalone-windows10}上卸载Designer（独立）
+### 在Windows 10上卸载Designer（独立） {#uninstall-designer-standalone-windows10}
 
 1. 转到&#x200B;**控制面板>程序>程序和功能**
 1. 在“当前安装的程序”列表中，选择&#x200B;**Adobe设计器**。
@@ -135,7 +135,7 @@ Designer的不同版本可以共存于同一系统上，例如Workbench 6.4的De
 
 本章介绍如何安装Workbench。
 
-### 安装并运行Workbench {#installing-and-running-workbench}
+### 安装和运行Workbench {#installing-and-running-workbench}
 
 在安装Workbench之前，必须确保您的环境包含运行Workbench所需的软件和硬件(请参阅章节：**安装之前)。**
 
@@ -175,11 +175,11 @@ Designer的不同版本可以共存于同一系统上，例如Workbench 6.4的De
    * **设计器**:您可以从Workbench中访问Designer。有关信息，请参阅<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer Help</a>中的快速入门主题。
    * **AEM Forms SDK**:有关使用SDK的更多信息，请参阅 <a href="http://www.adobe.com/go/learn_aemforms_programming_65">使用AEM Forms编程</a>。
 
-## 升级进程{#upgrading-processes}
+## 升级过程 {#upgrading-processes}
 
 可以使用升级向导将JEE上的AEM Forms进程升级到AEM Forms应用程序。 有关更多信息，请参阅Workbench帮助中的升级旧工件文档。
 
-### 配置并登录到服务器{#configuring-and-logging-server}
+### 配置和登录到服务器 {#configuring-and-logging-server}
 
 要使用Workbench，您必须运行一个AEM Forms实例，通常在单独的计算机上运行。 您必须具有登录AEM Forms的用户名和密码，以及有关服务器位置的详细信息。
 
@@ -187,11 +187,11 @@ Designer的不同版本可以共存于同一系统上，例如Workbench 6.4的De
 >
 >如果您将AEM Forms配置为使用EMC Documentum或IBM FileNet存储库提供程序，并且您希望登录到除在AEM Forms管理控制台中配置为默认存储库的存储库之外的其他存储库，请提供用户名(username@Repository)。
 
-### 配置超时设置{#configuring-timeout-settings}
+### 配置超时设置 {#configuring-timeout-settings}
 
 默认情况下，Workbench会在两小时后超时，而不考虑活动或不活动状态。 要编辑超时设置，请参阅<a href="https://docs.adobe.com/content/help/en/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理控制台帮助</a>中的“配置用户管理>配置高级系统属性”。
 
-### 配置Workbench以通过HTTPS连接{#configuring-workbench-to-connect-over-HTTPS}
+### 配置Workbench以通过HTTPS连接 {#configuring-workbench-to-connect-over-HTTPS}
 
 要通过HTTPS将Workbench连接到AEM Forms服务器，您必须确保颁发公共密钥的证书颁发机构(CA)被Workbench识别为受信任。 如果证书未被识别为来自可信来源，则必须更新位于[Workbench_HOME]/workbench/jre/lib/security目录中的cacert文件。
 
@@ -221,7 +221,7 @@ Designer的不同版本可以共存于同一系统上，例如Workbench 6.4的De
 
 1. 关闭并重新启动Workbench以应用更改。
 
-### 为动态生成的模板{#configuring-cache-settings-for-dynamically-generated-templates}配置缓存设置
+### 为动态生成的模板配置缓存设置 {#configuring-cache-settings-for-dynamically-generated-templates}
 
 如果您的应用程序通过自动更新XFA内容来动态生成唯一的模板，则应考虑缓存操作的以下方面。 实际上，每个交易都使用一个唯一的新模板。
 
@@ -260,7 +260,7 @@ Forms服务通过引用文件名或存储库位置或作为内存中XML对象的
 
 使用控制面板中的“添加或删除程序”功能启动卸载程序。 Workbench和Designer应用程序具有单独的卸载程序。
 
-## 配置AEM Forms XDC编辑器{#configuring-aem-forms-xdc-editor}
+## 配置AEM Forms XDC编辑器 {#configuring-aem-forms-xdc-editor}
 
 使用XDC编辑器，网络打印机管理员可以创建和修改XML Forms架构设备配置(XDC)文件。 XDC文件描述了打印机的功能，如打印机语言或纸张大小与纸盒位置之间的关联。
 
