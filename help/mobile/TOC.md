@@ -6,8 +6,8 @@ user-guide-title: AEM 6.5 Mobile 用户指南
 breadcrumb-title: Mobile 指南
 user-guide-description: 创建和管理移动应用程序的内容。
 feature: 移动设备
-role: Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+role: User
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 13%
