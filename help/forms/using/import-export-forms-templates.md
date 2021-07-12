@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2548'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 
 
-## 下载或上传Forms和文档资产{#download-or-upload-forms-amp-documents-assets}
+## 下载或上传Forms和文档资产 {#download-or-upload-forms-amp-documents-assets}
 
 AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包或二进制文件来导出资产。 然后，您可以将下载的AEM CRX包或二进制文件导入另一个AEM实例。
 
@@ -38,7 +38,7 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
 
 对于这些资产类型，您必须使用AEM Package Manager在源AEM服务器上创建CRX包，并将该包安装到目标服务器上。 有关创建和安装包的信息，请参阅[使用包](/help/sites-administering/package-manager.md)。
 
-### 下载Forms和文档资产{#download-forms-amp-documents-assets}
+### 下载Forms和文档资产 {#download-forms-amp-documents-assets}
 
 要下载Forms和文档资产，请执行以下操作：
 
@@ -59,7 +59,7 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
    >
    >AEM包和二进制文件均下载为存档文件（.zip文件）。 不会随资产一起下载资产的模板。 您需要单独导出资产模板。
 
-### 上传Forms和文档资产{#upload-forms-amp-documents-assets}
+### 上传Forms和文档资产 {#upload-forms-amp-documents-assets}
 
 要上传Forms和文档资产，请执行以下操作：
 
@@ -78,11 +78,11 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
    >
    >上传资源包不会替换现有文件夹层次结构。 例如，如果您有一个名为“培训”的自适应表单，该表单位于某个服务器上的/content/dam/formsanddocuments位置。 您下载自适应表单，并将表单上载到其他服务器。 第二台服务器在同一位置/content/dam/formsanddocuments还有一个名为“Training”的文件夹。 上传失败。
 
-## 下载或上载主题{#downloading-or-uploading-a-theme}
+## 下载或上传主题 {#downloading-or-uploading-a-theme}
 
 通过AEM Forms，您可以创建、下载或上传主题。 与其他资产（如表单、文档和信件）一样，创建主题。 您可以创建主题、下载它，然后将其上传到单独的实例以重复使用。 有关主题的更多信息，请参阅AEM Forms](../../forms/using/themes.md)中的[主题。
 
-### 下载主题{#downloading-a-theme}
+### 下载主题 {#downloading-a-theme}
 
 您可以在AEM Forms中导出可在其他项目或实例中使用的主题。 AEM允许您以zip文件的形式下载主题，您可以在实例上传该主题。
 
@@ -92,7 +92,7 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
 1. 点按Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)图标>导航![compass](assets/compass.png)图标> Forms>主题。
 1. 选择主题，然后点按&#x200B;**Download**。 主题将下载为存档文件（.zip文件）。
 
-### 上传主题{#uploading-a-theme}
+### 上传主题 {#uploading-a-theme}
 
 您可以在项目中将创建的主题与样式预设结合使用。 您可以通过在您的项目上上传他人创建的主题包来导入这些主题包。
 
@@ -107,11 +107,11 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
 1. 点按Experience Manager![adobeexperiencemanager](assets/adobeexperiencemanager.png)图标>导航![compass](assets/compass.png)图标> Forms>主题。
 1. 单击&#x200B;**创建** > **文件上传**。 在“文件上载”提示中，浏览并选择计算机上的主题包，然后单击&#x200B;**上载**。 主题已上传。
 
-## 在通信管理{#import-and-export-assets-in-correspondence-management}中导入和导出资产
+## 在通信管理中导入和导出资产 {#import-and-export-assets-in-correspondence-management}
 
 要在通信管理的两个不同实施之间共享资产（如数据字典、字母和文档片段），您可以创建和共享.cmp文件。 .cmp文件可以包含一个或多个数据字典、字母、文档片段和表单。
 
-### 导出文档片段、字母和/或数据字典{#export-document-fragments-letters-and-or-data-dictionaries}
+### 导出文档片段、字母和/或数据字典 {#export-document-fragments-letters-and-or-data-dictionaries}
 
 1. 在信件、文档片段或数据字典页面中，点按并选择要导出到单个包的资产，然后点按待下载队列。 这些资产已排列好可供导出。
 1. 根据需要，重复上述步骤以添加字母、文档片段和数据字典。
@@ -126,7 +126,7 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
 
    .cmp文件包含导出的资产。 您可以与其他人共享.cmp文件。 其他用户可以将.cmp文件导入其他服务器，以获取新服务器中的所有资产。
 
-### 将所有通信管理资产导出为{#export-all-the-correspondence-management-assets-as-a-package}包
+### 将所有通信管理资产导出为一个包 {#export-all-the-correspondence-management-assets-as-a-package}
 
 使用此选项可从AEM Forms实例将所有通信管理资产和相关依赖项下载为包。
 
@@ -157,7 +157,7 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
 
    要将包中的资产添加到通信管理的另一个实例，请[将包导入AEM Forms实例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
 
-### 将文档片段、信件和/或数据字典导入通信管理{#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
+### 将文档片段、信件和/或数据字典导入通信管理 {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 
 您可以将导出的资产导入.cmp文件。 .cmp文件可以具有一个或多个字母、数据字典、文档片段和从属资产。
 
@@ -177,7 +177,7 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
    >
    >为了能够上传XDP（作为cmp文件或其他内容的一部分），您需要成为表单级用户组的一部分。 要获取访问权限，请与管理员联系。
 
-## 导出工作流应用程序{#export-a-workflow-application}
+## 导出工作流应用程序 {#export-a-workflow-application}
 
 您可以使用AEM包管理器导出工作流应用程序。 程序如下：
 
@@ -195,13 +195,13 @@ AEM Forms用户界面允许您通过将AEM实例中的资产下载为AEM CRX包�
    >
    >为了使工作流应用程序正常工作，还导出相应的自适应表单和工作流模型与工作应用程序。
 
-## 文件夹和组织资产{#folders-and-organizing-assets}
+## 文件夹和组织资产 {#folders-and-organizing-assets}
 
 AEM Forms用户界面使用文件夹来排列资产。 这些文件夹用于排列在AEM Forms用户界面中创建的资产。 您可以重命名子文件夹，并存储这些文件夹中的资产和文档。 通过在文件夹中组织文档和资产，可以将文件分组在一起，以便轻松管理。 您可以选择文件夹并选择下载或删除它。
 
 要创建文件夹，请完成以下步骤：
 
-### 创建文件夹{#create-a-folder}
+### 创建文件夹 {#create-a-folder}
 
 1. 登录到位于`https://<server>:<port>/aem/forms.html`的AEM Forms用户界面。
 1. 导航到要创建文件夹的位置。
@@ -223,7 +223,7 @@ AEM Forms用户界面使用文件夹来排列资产。 这些文件夹用于排�
 
    ![editdeletedownloadolder](assets/editdeletedownloadafolder.png)
 
-### 创建一个或多个资产或字母的副本{#create-copies-of-one-or-more-assets-or-letters}
+### 创建一个或多个资产或信件的副本 {#create-copies-of-one-or-more-assets-or-letters}
 
 您可以使用现有资产和信件快速创建具有相似属性、内容和继承资产的资产和信件。 您可以复制并粘贴数据字典、文档片段和字母。
 
