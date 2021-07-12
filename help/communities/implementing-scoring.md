@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
-role: Administrator
+role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2884'
 ht-degree: 2%
 
 ---
 
-# 社区评分和徽章{#communities-scoring-and-badges}
+# 社区评分和徽章 {#communities-scoring-and-badges}
 
 ## 概述 {#overview}
 
@@ -56,7 +56,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 
 社区[徽章控制台](/help/communities/badges.md)提供了添加自定义徽章的功能，当成员获得（授予）或在社区中承担特定角色（分配）时，可向其显示自定义徽章。
 
-### 分配的徽章{#assigned-badges}
+### 分配的徽章 {#assigned-badges}
 
 基于角色的徽章由管理员根据社区成员在社区中的角色分配给社区成员。
 
@@ -78,7 +78,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 
    ![分配徽章](assets/assigned-badges.png)
 
-### 奖章{#awarded-badges}
+### 奖章 {#awarded-badges}
 
 评分服务根据适用于社区成员活动的规则，将基于奖励的徽章授予社区成员。
 
@@ -109,13 +109,13 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 >
 >奖章的吊销方式与授予徽章相同。 请参阅[分配和撤销徽章](#assign-and-revoke-badges)部分。 未来的改进将包括用于管理会员徽章的UI。
 
-### 自定义徽章{#custom-badges}
+### 自定义徽章 {#custom-badges}
 
 可以使用[徽章控制台](/help/communities/badges.md)安装自定义徽章，并在徽章规则中分配或指定这些徽章。
 
 从徽章控制台安装后，自定义徽章会自动复制到发布环境。
 
-## 启用评分{#enable-scoring}
+## 启用评分 {#enable-scoring}
 
 默认情况下，未启用评分。 徽章设置、授予评分和授奖的基本步骤是：
 
@@ -127,7 +127,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 
 请参阅[快速测试](#quick-test)部分，以使用论坛和评论的默认评分和标记规则为社区网站启用评分。
 
-### 将规则应用于内容{#apply-rules-to-content}
+### 将规则应用到内容 {#apply-rules-to-content}
 
 要启用评分和徽章，请将属性`scoringRules`和`badgingRules`添加到站点内容树中的任何节点。
 
@@ -146,13 +146,13 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 >
 >如果评分规则似乎对奖励徽章没有任何影响，请确保评分规则未被徽章规则的scoringRules属性阻止。 请参阅标题为[标记规则](#badging-rules)的部分。
 
-### 为组件{#enable-badges-for-component}启用徽章
+### 为组件启用徽章 {#enable-badges-for-component}
 
 评分和标记规则仅对通过在[创作模式](/help/communities/author-communities.md)中编辑组件配置来启用标记的组件的实例有效。
 
 布尔属性`allowBadges`用于启用/禁用组件实例的徽章显示。 可以在[组件编辑对话框](/help/communities/author-communities.md)中对论坛、QnA和注释组件进行配置，方法是选中标有&#x200B;**显示徽章**&#x200B;的复选框。
 
-#### 示例：论坛组件实例{#example-allowbadges-for-forum-component-instance}的allowBadges
+#### 示例：论坛组件实例的allowBadges {#example-allowbadges-for-forum-component-instance}
 
 ![enable-bagges-component](assets/enable-badges-component.png)
 
@@ -160,7 +160,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 >
 >任何组件都可以覆盖以显示徽章，例如，使用在论坛、QnA和评论中找到的HBS代码。
 
-## 评分规则{#scoring-rules}
+## 评分规则 {#scoring-rules}
 
 评分规则是评分的基础，用于授予徽章。
 
@@ -192,7 +192,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 >/libs/settings/community/scoring/rules/site1/forums-scoring
 >/libs/settings/community/scoring/rules/site2/forums-scoring
 
-### 评分子规则{#scoring-sub-rules}
+### 评分子规则 {#scoring-sub-rules}
 
 评分子规则包含详细描述参与社区值的属性。
 
@@ -276,7 +276,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
  </tbody>
 </table>
 
-### 包含评分规则和子规则{#included-scoring-rules-and-sub-rules}
+### 包含评分规则和子规则 {#included-scoring-rules-and-sub-rules}
 
 此版本中包含以下两个评分规则： [论坛功能](/help/communities/functions.md#forum-function)（论坛功能的“论坛”和“评论”组件各一个）：
 
@@ -307,11 +307,11 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 
    * 规则名称必须唯一，而不考虑位置。
 
-### 激活自定义评分规则{#activating-custom-scoring-rules}
+### 激活自定义评分规则 {#activating-custom-scoring-rules}
 
 在创作环境中对评分规则或子规则所做的任何更改或添加操作需要在发布时安装。
 
-## 标记规则{#badging-rules}
+## 标记规则 {#badging-rules}
 
 标记规则通过指定以下内容将评分规则链接到徽章：
 
@@ -374,7 +374,7 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
  </tbody>
 </table>
 
-### 包含标记规则{#included-badging-rules}
+### 包含标记规则 {#included-badging-rules}
 
 该版本中包含两个标记规则，它们与[论坛和评论评分规则](#includedscoringrules)相对应。
 
@@ -389,11 +389,11 @@ AEM Communities评分和徽章功能提供了识别和奖励社区成员的功�
 
    * 规则名称必须唯一，而不考虑位置。
 
-### 激活自定义标记规则{#activating-custom-badging-rules}
+### 激活自定义标记规则 {#activating-custom-badging-rules}
 
 对创作环境中的标记规则或图像所做的任何更改或添加操作需要在发布时安装。
 
-## 分配和撤销徽章{#assign-and-revoke-badges}
+## 分配和撤销徽章 {#assign-and-revoke-badges}
 
 可以使用[members console](/help/communities/members.md#badges-tab)或使用cURL命令以编程方式将徽章分配给成员。
 
@@ -423,13 +423,13 @@ cURL -i -XPOST-H *标头* -u *信号* -F *操作* -F *标记* *member-profile-ur
 
 ### 示例： {#examples}
 
-#### 分配审核者标记{#assign-a-moderator-badge}
+#### 分配审核者徽章 {#assign-a-moderator-badge}
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
 ```
 
-#### 撤消分配的银徽章{#revoke-an-assigned-silver-badge}
+#### 撤消分配的银徽章 {#revoke-an-assigned-silver-badge}
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:deleteBadge" -F "badgeContentPath=/libs/settings/community/badging/images/silver/jcr:content/silver.png" /home/users/community/updcs9DndLEI74DB9zsB/profile.social.json
@@ -439,11 +439,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >
 >使用cURL分配和撤销徽章适用于任何徽章图像，但在分配徽章（而非免费徽章）后，它们将被标记为已分配的徽章，并会相应地进行处理。
 
-## 自定义组件的评分和徽章{#scoring-and-badges-for-custom-components}
+## 自定义组件的评分和徽章 {#scoring-and-badges-for-custom-components}
 
 可通过将为自定义组件创建的事件主题与动词关联，为该组件创建评分和标记规则。
 
-## 主题和动词{#topics-and-verbs}
+## 主题和动词 {#topics-and-verbs}
 
 成员与社区功能交互时，会发送可触发异步侦听器（如通知和评分）的事件。
 
@@ -554,7 +554,7 @@ ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 | 关闭 | 成员关闭对编辑和回复的评论 |
 | 打开 | 成员重新打开注释 |
 
-### 自定义组件事件{#custom-component-events}
+### 自定义组件事件 {#custom-component-events}
 
 对于自定义组件，将实例化SocialEvent，以将该组件的事件记录为`actions`，该事件针对`topic`发生。
 
@@ -562,25 +562,25 @@ ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 
 ## 疑难解答 {#troubleshooting}
 
-### 未出现徽章{#badges-are-not-appearing}
+### 徽章未出现 {#badges-are-not-appearing}
 
 如果已对网站内容应用了评分和徽章规则，但未为任何活动提醒徽章，请确保已为该组件实例启用徽章。
 
 请参阅[启用组件的徽章](#enable-badges-for-component)。
 
-### 评分规则无效{#scoring-rule-has-no-effect}
+### 评分规则无效 {#scoring-rule-has-no-effect}
 
 如果对网站内容应用了评分和徽章规则，并且针对某些操作（而非其他操作）授予徽章，则检查徽章规则是否未限制其适用的评分规则。
 
 请参阅[标记规则](#badging-rules)的`scoringRules`属性。
 
-### 区分大小写的类型{#case-sensitive-typo}
+### 区分大小写的类型 {#case-sensitive-typo}
 
 大多数属性和值（尤其是动词）都区分大小写。 在评分子规则中使用动词时，该动词必须全部为大写。
 
 如果功能未按预期工作，请确保已正确输入数据。
 
-## 快速测试{#quick-test}
+## 快速测试 {#quick-test}
 
 使用[快速入门教程](/help/communities/getting-started.md)（参与）网站可以快速尝试评分和标记：
 
