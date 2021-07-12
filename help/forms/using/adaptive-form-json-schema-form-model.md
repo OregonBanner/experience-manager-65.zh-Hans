@@ -2,17 +2,17 @@
 title: 如何使用JSON模式创建自适应Forms?
 description: 了解如何使用JSON模式作为表单模型来创建自适应表单。 您可以使用现有JSON架构创建自适应表单。 使用JSON模式的示例深入挖掘，在JSON模式定义中预配置字段，限制自适应表单组件的可接受值，以及了解不受支持的结构。
 feature: 自适应表单
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1450'
 ht-degree: 5%
 
 ---
 
-# 使用JSON模式{#creating-adaptive-forms-using-json-schema}创建自适应表单
+# 使用JSON模式创建自适应表单 {#creating-adaptive-forms-using-json-schema}
 
 ## 前提条件 {#prerequisites}
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 * [创建自适应表单](creating-adaptive-form.md)
 * [JSON架构](https://json-schema.org/)
 
-## 使用JSON模式作为表单模型{#using-a-json-schema-as-form-model}
+## 使用JSON模式作为表单模型  {#using-a-json-schema-as-form-model}
 
 [!DNL Adobe Experience Manager Forms] 支持使用现有JSON模式作为表单模型来创建自适应表单。此JSON模式表示组织内的后端系统在其中生成或使用数据的结构。 您使用的JSON架构应符合[v4规范](https://json-schema.org/draft-04/schema)。
 
@@ -103,7 +103,7 @@ JSON元素与自适应表单组件的映射如下所示：
  </tbody>
 </table>
 
-### 常用架构属性{#common-schema-properties}
+### 常见架构属性 {#common-schema-properties}
 
 自适应表单使用JSON模式中可用的信息来映射每个生成的字段。 特别是：
 
@@ -119,7 +119,7 @@ JSON元素与自适应表单组件的映射如下所示：
 * `pattern`属性设置为自适应表单中的验证模式（正则表达式）。
 * JSON架构文件的扩展名必须保留为.schema.json。 例如， &lt;filename>.schema.json。
 
-## JSON架构{#sample-json-schema}示例
+## JSON架构示例 {#sample-json-schema}
 
 以下是JSON模式的示例。
 
@@ -301,7 +301,7 @@ JSON元素与自适应表单组件的映射如下所示：
 }
 ```
 
-### 可重用架构定义{#reusable-schema-definitions}
+### 可重用架构定义 {#reusable-schema-definitions}
 
 定义键用于标识可重用的架构。 可重用架构定义用于创建片段。 它类似于在XSD中标识复杂类型。 下面提供了一个具有定义的JSON模式示例：
 
@@ -332,7 +332,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 上例定义了客户记录，其中每个客户都同时具有送货地址和帐单地址。 两个地址的结构相同 — 地址具有街道地址、城市地址和州地址 — 因此最好不要重复这些地址。 此外，还可以轻松添加和删除字段，以便将来进行任何更改。
 
-## 在JSON架构定义{#pre-configuring-fields-in-json-schema-definition}中预配置字段
+## 在JSON架构定义中预配置字段 {#pre-configuring-fields-in-json-schema-definition}
 
 您可以使用&#x200B;**aem:afProperties**&#x200B;属性预配置JSON架构字段以映射到自定义自适应表单组件。 下面列出了一个示例：
 
@@ -354,7 +354,7 @@ JSON元素与自适应表单组件的映射如下所示：
 }
 ```
 
-## 为表单对象{#configure-scripts-or-expressions-for-form-objects}配置脚本或表达式
+## 为表单对象配置脚本或表达式  {#configure-scripts-or-expressions-for-form-objects}
 
 JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，且使用自适应表单脚本模型API。 您可以预配置表单对象以在表单事件上评估表达式](adaptive-form-expressions.md)。[
 
@@ -585,7 +585,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 以下是前面提到的示例的JSON代码示例。
 
-### 在初始化事件{#hiding-a-field-on-initialize-event}时隐藏字段
+### 在初始化事件时隐藏字段 {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -598,7 +598,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-#### 在值提交事件{#configure-value-of-another-field-on-value-commit-event}上配置另一个字段的值
+#### 在值提交事件中配置另一个字段的值 {#configure-value-of-another-field-on-value-commit-event}
 
 ```json
 "Income": {
@@ -622,7 +622,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-## 限制自适应表单组件{#limit-acceptable-values-for-an-adaptive-form-component}的可接受值
+## 限制自适应表单组件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
 您可以向JSON架构元素添加以下限制，以限制自适应表单组件可接受的值：
 
@@ -720,7 +720,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
-## 不支持的构造{#non-supported-constructs}
+## 不支持的构造  {#non-supported-constructs}
 
 自适应表单不支持以下JSON模式构建：
 
