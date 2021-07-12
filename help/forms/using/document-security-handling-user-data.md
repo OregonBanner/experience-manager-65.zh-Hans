@@ -6,22 +6,22 @@ uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
-role: Administrator
+role: Admin
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 0%
 
 ---
 
-# 文档安全 |处理用户数据{#document-security-handling-user-data}
+# 文档安全 |处理用户数据 {#document-security-handling-user-data}
 
 AEM Forms文档安全允许您创建、存储预定义的安全设置并将其应用于文档。 它确保只有授权用户才能使用文档。 您可以使用策略保护文档。 策略是包含安全设置和授权用户列表的信息集合。 您可以将策略应用于一个或多个文档，并授权在AEM Forms JEE用户管理中添加的用户。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
-## 用户数据和数据存储{#user-data-and-data-stores}
+## 用户数据和数据存储 {#user-data-and-data-stores}
 
 文档安全存储与受保护文档相关的策略和数据，包括数据库中的用户数据，如My Sql、Oracle、MS SQL Server和IBM DB2。 此外，在用户管理中存储策略中授权用户的数据。 有关存储在用户管理中的数据的信息，请参阅[Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
@@ -80,7 +80,7 @@ AEM Forms文档安全允许您创建、存储预定义的安全设置并将其�
  </tbody>
 </table>
 
-## 访问和删除用户数据{#access-and-delete-user-data}
+## 访问和删除用户数据 {#access-and-delete-user-data}
 
 您可以访问和导出数据库中用户的文档安全数据，如果需要，请永久删除该数据。
 
@@ -94,7 +94,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 知道主体ID后，即可导出或删除用户数据。
 
-### 导出用户数据{#export-user-data}
+### 导出用户数据 {#export-user-data}
 
 运行以下数据库命令，从数据库表导出主体ID的用户数据。 在`select`命令中，将`<principal_id>`替换为要导出其数据的用户的主ID。
 
@@ -130,7 +130,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 要获取系统中某个用户的完整数据，必须从用户管理数据库访问和导出数据。 有关更多信息，请参阅[Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
-### 删除用户数据{#delete-user-data}
+### 删除用户数据 {#delete-user-data}
 
 执行以下操作，以从数据库表中删除主体ID的文档安全数据。
 
