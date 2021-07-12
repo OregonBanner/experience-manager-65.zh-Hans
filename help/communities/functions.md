@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 6%
@@ -29,7 +29,7 @@ ht-degree: 6%
 >
 >用于创建[社区站点](/help/communities/sites-console.md)、[社区站点模板](/help/communities/sites.md)、[社区组模板](/help/communities/tools-groups.md)和[社区功能](/help/communities/functions.md)的控制台仅供在创作环境中使用。
 
-## 社区功能控制台{#community-functions-console}
+## 社区功能控制台 {#community-functions-console}
 
 要在创作环境中访问社区功能控制台，请执行以下操作：
 
@@ -37,13 +37,13 @@ ht-degree: 6%
 
 ![社区功能](assets/community-functions.png)
 
-## 预建函数{#pre-built-functions}
+## 预建函数 {#pre-built-functions}
 
 以下是随AEM Communities一起提供的功能的简要描述。 每个函数都包括一个或多个AEM页面，其中包含将社区组件连接在一起的功能，该功能可轻松地并入到[社区站点模板](/help/communities/sites.md)中。
 
 社区站点模板为社区站点提供了结构，包括登录、用户配置文件、通知、消息、站点菜单、搜索、主题和品牌功能。
 
-### 标题和URL设置{#title-and-url-settings}
+### 标题和URL设置 {#title-and-url-settings}
 
 **** 标题和 **** URL是所有社区功能的通用属性。
 
@@ -179,7 +179,7 @@ ht-degree: 6%
 如果取消选择，则可以选择社区站点允许的一个或多个命名空间。
 已选中默认值。
 
-### 特色内容函数{#featured-content-function}
+### 特色内容功能 {#featured-content-function}
 
 特色内容函数是一个页面，其中[特色内容组件](/help/communities/featured.md)配置为允许添加和删除评论。
 
@@ -225,7 +225,7 @@ ht-degree: 6%
 
    如果选择，则组件的内容将被标识为[特色内容](/help/communities/featured.md)。 已选中默认值。
 
-### 组函数{#groups-function}
+### 组函数 {#groups-function}
 
 >[!CAUTION]
 >
