@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: e29aae44-67be-43d2-8004-c986412d9e63
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-# SRP — 社区内容存储{#srp-community-content-storage}
+# SRP — 社区内容存储 {#srp-community-content-storage}
 
 ## 简介 {#introduction}
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 >
 >当部署中不包含公共存储（如默认的[JSRP](/help/communities/topologies.md#jsrp)拓扑）时，UGC将仅在输入UGC的AEM发布或创作实例上可见。 只有当拓扑包含发布群集时，UGC才会在任何发布实例上可见。
 
-## SRP选项{#characteristics-of-srp-options}的特点
+## SRP选项的特点 {#characteristics-of-srp-options}
 
 [ASRP -Adobe存储资源提供程序](/help/communities/asrp.md)
 
@@ -120,7 +120,7 @@ JSRP:
 
 ## 附加信息 {#additional-information}
 
-### UGC从未复制{#ugc-never-replicated}
+### UGC从未复制 {#ugc-never-replicated}
 
 在创作环境中，作者创建页面内容并将其复制到发布环境。 当页面包含交互式AEM Communities功能（如评论、评论、论坛、博客或QnA）时，成员（在站点访客中签名）在发布实例上的交互会导致用户生成内容(UGC)进入发布环境。
 
@@ -130,7 +130,7 @@ JSRP:
 
 复制站点内容时，UGC从不复制。
 
-### 管理用户数据{#managing-user-data}
+### 管理用户数据 {#managing-user-data}
 
 Communities还关注&#x200B;[*用户*、*用户组*&#x200B;和&#x200B;*用户配置文件*](/help/communities/users.md)。 当拓扑为[发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm)时，在发布环境中创建和更新此用户相关数据时，需要将其提供给其他发布实例。
 
