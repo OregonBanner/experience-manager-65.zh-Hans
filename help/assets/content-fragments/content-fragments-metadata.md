@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 148803f3-1e7b-4d35-99c5-e0d82f3adf24
 docset: aem65
 feature: 内容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 319cd6b0-c866-4838-96a5-eceb7edae9af
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 13%
@@ -22,7 +22,7 @@ ht-degree: 13%
 
 # 元数据 - 片段属性{#metadata-fragment-properties}
 
-## 编辑属性/元数据{#editing-properties-meta-data}
+## 编辑属性/元数据 {#editing-properties-meta-data}
 
 您可以查看和编辑内容片段的元数据（属性）：
 
