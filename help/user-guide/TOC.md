@@ -5,8 +5,8 @@ audience: end-user
 user-guide-title: AEM 6.5用户指南
 user-guide-description: 概述了了解、安装、管理和使用AEM 6.5的所有基本资源
 feature: 发行信息
-role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 9%
@@ -14,7 +14,7 @@ ht-degree: 9%
 ---
 
 
-# AEM 6.5用户指南{#user-guide}
+# AEM 6.5用户指南 {#user-guide}
 
 + [AEM 6.5用户指南中心](home.md)
 + 用户指南和资源{#user-guides}
