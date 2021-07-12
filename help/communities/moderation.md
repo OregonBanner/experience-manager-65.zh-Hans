@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 3%
 
 ---
 
-# 审核控制台{#moderation-console}
+# 审核控制台 {#moderation-console}
 
 在AEM Communities中，管理员和社区审核者（分配为审核者的受信任社区成员）可以在创作和发布环境中批量审核社区内容[审核](/help/communities/moderate-ugc.md)。
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 只有以管理员或` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`的成员身份登录后，才能执行审核任务。
 
-## 发布环境访问{#publish-environment-access}
+## 发布环境访问 {#publish-environment-access}
 
 从已发布的社区站点访问审核控制台时，会通过管理链接，该链接在社区审核者登录时显示。
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-## 创作环境访问{#author-environment-access}
+## 创作环境访问 {#author-environment-access}
 
 在创作环境中，访问审核控制台
 
@@ -72,7 +72,7 @@ ht-degree: 3%
 * **[工具栏](#toolbar)**
 * **[内容区域](#content-area)**
 
-### 顶部导航栏{#top-navigation-bar}
+### 顶部导航栏 {#top-navigation-bar}
 
 对于所有控制台，顶部导航栏都是常量。 有关更多信息，请参阅[基本操作](/help/sites-authoring/basic-handling.md)。
 
@@ -174,7 +174,7 @@ ht-degree: 3%
 
 ![内容类型](assets/content-types.png)
 
-#### 其他内容类型{#additional-content-types}
+#### 其他内容类型 {#additional-content-types}
 
 要添加要筛选的其他资源，请执行以下操作：
 
@@ -232,7 +232,7 @@ ht-degree: 3%
 
 ![情绪](assets/sentiment.png)
 
-## 自定义过滤器{#custom-filters}
+## 自定义过滤器 {#custom-filters}
 
 除了[过滤器边栏](/help/communities/moderation.md#ootbfilters)中的现成过滤器之外，还可以将有关元数据的其他自定义过滤器添加到审核UI中。 开发人员可以使用Github中的示例代码来扩展现有的审核UI过滤器。
 
@@ -263,7 +263,7 @@ Github上的[示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
    * 设置为新组件`sling:resourceType = social/moderation/v2/modcontainer`。
 
-## 审核操作{#moderation-actions}
+## 审核操作 {#moderation-actions}
 
 [审核](/help/communities/moderate-ugc.md#moderation-actions) 操作可在内容区域中或查看内容详细信息时对一个或多个选择执行。
 
@@ -271,7 +271,7 @@ Github上的[示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 要审核内容区域中的单个帖子，请将鼠标悬停在该帖子上（桌面），或按住该帖子（移动设备）上的手指，以便在帖子上显示按钮。 对单个内容详细信息进行操作时，只有删除操作会提示进行确认。
 
-### 审核多个帖子{#moderating-multiple-posts}
+### 审核多个帖子 {#moderating-multiple-posts}
 
 通过单击帖子上的`Select`图标进入批量选择模式：
 
@@ -289,7 +289,7 @@ Github上的[示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 ![批量审核](assets/bulkmoderate.png)
 
-### 审核单个帖子{#moderating-a-single-post}
+### 审核单个帖子 {#moderating-a-single-post}
 
 在单选模式下，可以：
 
