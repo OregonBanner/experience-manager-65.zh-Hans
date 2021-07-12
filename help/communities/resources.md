@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
-role: Administrator
+role: Admin
 exl-id: 15e16572-c692-41fc-86e4-c1d475afa63c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 5%
 
 ---
 
-# 启用资源控制台{#enablement-resources-console}
+# 启用资源控制台 {#enablement-resources-console}
 
 对于AEM Communities，在资源控制台中， [启用管理器](users.md)可创建资源，并管理资源并将其分配给启用社区站点的成员。
 
@@ -59,7 +59,7 @@ ht-degree: 5%
 
 学习路径是一组分组在一起的支持资源的逻辑集合，用于轻松分配给成员。
 
-### 成员组{#members-group}
+### 成员组 {#members-group}
 
 创建社区站点时，在创建为[站点特定用户组](users.md)（为各种角色配置了各种权限）时，会使用为URL指定的站点名称。 所有这些自动创建的组都带有`Community <site-name>`前缀。
 
@@ -69,9 +69,9 @@ ht-degree: 5%
 
 对于[启用社区](overview.md#enablement-community)，建议将站点设为私有，然后需要管理员将用户添加到成员组。
 
-## 访问社区站点的支持资源{#accessing-a-community-site-s-enablement-resources}
+## 访问社区站点的支持资源 {#accessing-a-community-site-s-enablement-resources}
 
-### 导航到Communities资源{#navigate-to-communities-resources}
+### 导航到Communities Resources {#navigate-to-communities-resources}
 
 在创作环境中，访问资源控制台
 
@@ -79,7 +79,7 @@ ht-degree: 5%
 
    ![启用站点](assets/enablement-sites.png)
 
-### 选择社区站点{#select-a-community-site}
+### 选择社区站点 {#select-a-community-site}
 
 “社区资源”控制台将显示所有社区站点。
 
@@ -103,7 +103,7 @@ ht-degree: 5%
 
 ![选择模式](assets/selection-mode.png)
 
-## 创建资源{#create-a-resource}
+## 创建资源 {#create-a-resource}
 
 ![创建资源](assets/create-resource1.png)
 
@@ -122,7 +122,7 @@ ht-degree: 5%
 
 当资源是课程（学习路径）的一部分时，应仅将成员分配到学习路径。 在创建启用资源后，可以添加分配。
 
-### 1基本信息{#basic-info}
+### 1基本信息 {#basic-info}
 
 ![resource-basicinfo](assets/resource-basicinfo.png)
 
@@ -166,7 +166,7 @@ ht-degree: 5%
 
 * 选择&#x200B;**[!UICONTROL Next]**
 
-### 2添加内容{#add-content}
+### 2添加内容 {#add-content}
 
 ![resource-addcontent](assets/resource-addcontent.png)
 
@@ -226,7 +226,7 @@ ht-degree: 5%
 
       物理站点的位置，如教室。
 
-#### 添加的视频资源{#example-of-an-added-video-resource}的示例
+#### 添加的视频资源示例 {#example-of-an-added-video-resource}
 
 ![add-video](assets/add-video.png)
 
@@ -294,7 +294,7 @@ ht-degree: 5%
 
 成功创建启用资源后，将返回到资源控制台，并选中新创建的资源。 从此控制台中，可以[管理资源](#managing-a-resource)。
 
-## 创建学习路径{#create-a-learning-path}
+## 创建学习路径 {#create-a-learning-path}
 
 ![add-learning-path](assets/add-learning-path.png)
 
@@ -407,7 +407,7 @@ ht-degree: 5%
 >
 >如果成员同时注册了启用资源和引用该资源的学习路径，则其分配将显示学习路径中的单个资源和资源。
 
-## 管理资源{#managing-a-resource}
+## 管理资源 {#managing-a-resource}
 
 要管理单个启用资源，请执行以下操作：
 
@@ -526,7 +526,7 @@ Analytics查看者参与度报表会针对视频资源显示已查看该资源�
 
 评级报表基于已对启用资源进行评级的学习者数量，显示每个星级评级的数量，然后是总评级数和平均评级的摘要。
 
-#### 报表摘要{#report-summary}
+#### 报表摘要 {#report-summary}
 
 有关启用资源，报表摘要是一个表格列表。
 
@@ -556,7 +556,7 @@ Analytics查看者参与度报表会针对视频资源显示已查看该资源�
 
 可以通过使用`Show / hide columns`选择器选择列来调整表的显示。
 
-#### 将报表下载为CSV {#download-report-as-csv}
+#### 以CSV格式下载报表 {#download-report-as-csv}
 
 可以使用控制台顶部的按钮，以CSV格式下载报表摘要表。
 
