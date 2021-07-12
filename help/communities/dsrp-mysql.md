@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
-role: Administrator
+role: Admin
 exl-id: eafb60be-2963-4ac9-8618-50fd9bc6fe6c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 1%
 
 ---
 
-# DSRP {#mysql-configuration-for-dsrp}的MySQL配置
+# DSRP的MySQL配置 {#mysql-configuration-for-dsrp}
 
 MySQL是一个关系数据库，可用于存储用户生成的内容(UGC)。
 
@@ -40,7 +40,7 @@ MySQL是一个关系数据库，可用于存储用户生成的内容(UGC)。
 
 [](https://dev.mysql.com/downloads/mysql/) 应按照目标操作系统的说明下载和安装MySQL。
 
-### 小写表名称{#lower-case-table-names}
+### 小写表名称 {#lower-case-table-names}
 
 由于SQL不区分大小写，因此对于区分大小写的操作系统，必须包含一个设置，以使所有表名称都小写。
 
@@ -51,7 +51,7 @@ MySQL是一个关系数据库，可用于存储用户生成的内容(UGC)。
 
    `lower_case_table_names = 1`
 
-### UTF8字符集{#utf-character-set}
+### UTF8字符集 {#utf-character-set}
 
 要提供更好的多语言支持，必须使用UTF8字符集。
 
@@ -76,13 +76,13 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装了架构
 
 应按照目标操作系统的说明下载和安装MySQL Workbench。
 
-## 社区连接{#communities-connection}
+## Communities Connection {#communities-connection}
 
 首次启动MySQL Workbench时，除非该MySQL Workbench已用于其他目的，否则它尚不显示任何连接：
 
 ![mysqlconnection](assets/mysqlconnection.png)
 
-### 新的连接设置{#new-connection-settings}
+### 新建连接设置 {#new-connection-settings}
 
 1. 选择`MySQL Connections`右侧的`+`图标。
 1. 在对话框`Setup New Connection`中，输入适合您平台的值
@@ -103,17 +103,17 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装了架构
 * 默认端口为`3306`
 * 选择的连接名称将作为数据源名称输入到[JDBC OSGi配置](#configurejdbcconnections)中
 
-#### 新建社区连接{#new-communities-connection}
+#### 新建社区连接 {#new-communities-connection}
 
 ![社区连接](assets/community-connection.png)
 
-## 数据库设置{#database-setup}
+## 数据库设置 {#database-setup}
 
 打开Communities连接以安装数据库。
 
 ![install-database](assets/install-database.png)
 
-### 获取SQL脚本{#obtain-the-sql-script}
+### 获取SQL脚本 {#obtain-the-sql-script}
 
 SQL脚本从AEM存储库获取：
 
@@ -133,13 +133,13 @@ SQL脚本从AEM存储库获取：
 
 * 选择视图链接以将数据保存到本地文件
 
-### 创建DSRP数据库{#create-the-dsrp-database}
+### 创建DSRP数据库 {#create-the-dsrp-database}
 
 按照以下步骤安装数据库。 数据库的默认名称为`communities`。
 
 如果在脚本中更改了数据库名称，请务必在[JDBC配置](#configurejdbcconnections)中更改数据库名称。
 
-#### 步骤1:打开SQL文件{#step-open-sql-file}
+#### 步骤1:打开SQL文件 {#step-open-sql-file}
 
 在MySQL Workbench中
 
@@ -148,7 +148,7 @@ SQL脚本从AEM存储库获取：
 
 ![select-sql-script](assets/select-sql-script.png)
 
-#### 步骤2:执行SQL脚本{#step-execute-sql-script}
+#### 步骤2:执行SQL脚本 {#step-execute-sql-script}
 
 在步骤1中打开的文件的Workbench窗口中，选择`lightening (flash) icon`以执行脚本。
 
@@ -162,7 +162,7 @@ SQL脚本从AEM存储库获取：
 
 ![刷新模式](assets/refresh-schema.png)
 
-## 配置JDBC连接{#configure-jdbc-connection}
+## 配置JDBC连接 {#configure-jdbc-connection}
 
 **Day Commons JDBC连接池**&#x200B;的OSGi配置配置MySQL JDBC驱动程序。
 
