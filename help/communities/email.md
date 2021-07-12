@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
-role: Administrator
+role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 4%
 
 ---
 
-# 配置电子邮件{#configuring-email}
+# 配置电子邮件 {#configuring-email}
 
 AEM Communities使用电子邮件：
 
@@ -32,7 +32,7 @@ AEM Communities使用电子邮件：
 >
 >通知和订阅的电子邮件必须仅在[主发布者](deploy-communities.md#primary-publisher)上配置。
 
-## 默认邮件服务配置{#default-mail-service-configuration}
+## 默认邮件服务配置 {#default-mail-service-configuration}
 
 通知和订阅均需要默认邮件服务。
 
@@ -75,7 +75,7 @@ AEM Communities使用电子邮件：
 
    如果选中此项，则启用SMTP服务器交互的日志记录。
 
-## AEM Communities电子邮件配置{#aem-communities-email-configuration}
+## AEM Communities电子邮件配置 {#aem-communities-email-configuration}
 
 配置[默认邮件服务](#default-mail-service-configuration)后，此版本中包含的`AEM Communities Email Reply Configuration` OSGi配置的两个现有实例即可正常运行。
 
@@ -99,7 +99,7 @@ AEM Communities使用电子邮件：
 
 ![email-reply-config](assets/email-reply-config.png)
 
-### 通知配置{#configuration-for-notifications}
+### 通知配置 {#configuration-for-notifications}
 
 带有“名称”电子邮件的`AEM Communities Email Reply Configuration` OSGi配置的实例即为简化功能。 此功能不包括电子邮件回复。
 
@@ -113,7 +113,7 @@ AEM Communities使用电子邮件：
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
-### 订阅配置{#configuration-for-subscriptions}
+### 订阅配置 {#configuration-for-subscriptions}
 
 对于社区订阅，可以启用或禁用成员通过回复电子邮件来发布内容的功能。
 
@@ -164,11 +164,11 @@ AEM Communities使用电子邮件：
 
    电子邮件是使用该根路径中存储的模板生成的. 默认值为`/etc/community/templates/subscriptions-email`。
 
-## 配置轮询导入程序{#configure-polling-importer}
+## 配置轮询导入程序 {#configure-polling-importer}
 
 要将电子邮件引入存储库，必须配置轮询导入器并在存储库中手动配置其属性。
 
-### 添加新的轮询导入程序{#add-new-polling-importer}
+### 添加新轮询导入程序 {#add-new-polling-importer}
 
 * 使用管理员权限登录到主发布者，然后浏览到轮询导入器控制台：
 
@@ -205,7 +205,7 @@ AEM Communities使用电子邮件：
 
 * 选择&#x200B;**[!UICONTROL 确定]**。
 
-### 调整新轮询导入程序{#adjust-protocol-for-new-polling-importer}的协议
+### 调整新轮询导入程序的协议 {#adjust-protocol-for-new-polling-importer}
 
 保存新的轮询配置后，需要进一步修改订阅电子邮件导入器的属性，以便将协议从`POP3`更改为`emailreply`。
 
