@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
-role: Administrator
+role: Admin
 exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 5%
@@ -29,7 +29,7 @@ ht-degree: 5%
 * [社区内容存储](working-with-srp.md)
 * [推荐的拓扑](topologies.md)
 
-## 存储配置控制台{#storage-configuration-console}
+## 存储配置控制台 {#storage-configuration-console}
 
 ![jsrp-configuration](assets/jsrp-configuration.png)
 
@@ -48,7 +48,7 @@ ht-degree: 5%
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
-### 关于JCR存储{#about-jcr-storage}
+### 关于JCR存储 {#about-jcr-storage}
 
 请注意，如果未进行任何选择，则默认为AEM存储库JCR。
 
