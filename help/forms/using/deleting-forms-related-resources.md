@@ -8,22 +8,22 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
-role: Administrator
+role: Admin
 exl-id: b31f9f56-dd33-4478-ad34-01ac7d5a1b40
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
 
 ---
 
-# 删除表单和相关资源{#deleting-forms-and-related-resources}
+# 删除表单和相关资源 {#deleting-forms-and-related-resources}
 
 您可以删除表单和资产，以从存储库中删除这些资产。 删除操作适用于所有资产类型和文件夹。
 
 如果从创作实例中删除资产，则该资产也会从发布实例中删除。 AEM Forms服务器由创作实例和发布实例组成。 创作实例用于创建和管理表单资产和资源。 发布实例包含已发布的表单资产以及可用于最终用户的相关资源。
 
-## 如何删除表单{#how-to-delete-a-form}
+## 如何删除表单 {#how-to-delete-a-form}
 
 1. 通过访问`https://[hostname]:'port'/aem/forms.html.`登录AEM Forms用户界面
 1. 导航到要删除的表单并选择该表单。 单击工具栏中的删除![aem6forms_delete2](assets/aem6forms_delete2.png) ，然后确认删除操作。
@@ -42,7 +42,7 @@ ht-degree: 0%
    >
    >如果选定的资产是文件夹，并且在其层级中包含此类资产，请单独删除其他资产，或删除整个文件夹。
 
-## 删除引用的XFA表单{#impact-of-deleting-a-referenced-xfa-form}的影响
+## 删除引用的XFA表单的影响 {#impact-of-deleting-a-referenced-xfa-form}
 
 在AEM Forms中，XFA表单模板可以由自适应表单或其他XFA表单模板引用。 此外，模板可以引用资源或其他XFA模板。
 
