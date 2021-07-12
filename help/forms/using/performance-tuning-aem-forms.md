@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 本文讨论了您可以实施的策略和最佳实践，以减少瓶颈并优化AEM Forms部署的性能。
 
-## 缓存设置{#cache-settings}
+## 缓存设置 {#cache-settings}
 
 您可以在AEM Web配置控制台中使用&#x200B;**Mobile Forms配置**&#x200B;组件，配置和控制AEM Forms的缓存策略，具体位置为：
 
@@ -47,7 +47,7 @@ AEM Forms的默认缓存设置可能不足以获得最佳性能。 因此，建�
 >
 >如果您使用AEM Dispatcher缓存自适应表单，则它也会缓存包含带有预填充数据的表单的自适应表单。 如果此类表单是从AEM Dispatcher缓存提供的，则可能会导致向用户提供预填充或过时的数据。 因此，请使用AEM Dispatcher缓存未使用预填充数据的自适应表单。 此外，调度程序缓存不会自动使缓存的片段失效。 因此，请勿将其用于缓存表单片段。 对于此类表单和片段，请使用[自适应表单缓存](../../forms/using/configure-adaptive-forms-cache.md)。
 
-## JVM参数{#jvm-parameters}
+## JVM参数 {#jvm-parameters}
 
 为了获得最佳性能，建议使用以下JVM `init`参数来配置`Java heap`和`PermGen`。
 
@@ -62,7 +62,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 >
 >推荐的设置适用于Windows 2008 R2 8核心和OracleHotSpot 1.7（64位）JDK，并且应根据您的系统配置进行放大或缩小。
 
-## 使用Web服务器{#using-a-web-server}
+## 使用Web服务器 {#using-a-web-server}
 
 自适应表单和HTML5表单以HTML5格式呈现。 结果输出可能会很大，具体取决于表单大小和表单中图像等因素。 为优化数据传输，建议使用从中提供请求的Web服务器压缩HTML响应。 此方法可减少响应大小、网络流量以及在服务器和客户端计算机之间传输数据所需的时间。
 
@@ -140,7 +140,7 @@ Apache可以使用HTTP协议与CRX通信。 配置用于使用HTTP进行优化�
 
    要访问crx服务器，请使用`https://'server':80`，其中`server`是运行Apache服务器的服务器名称。
 
-## 在运行AEM Forms {#using-an-antivirus-on-server-running-aem-forms}的服务器上使用防病毒
+## 在运行AEM Forms的服务器上使用防病毒 {#using-an-antivirus-on-server-running-aem-forms}
 
 在运行防病毒软件的服务器上可能会出现性能缓慢的情况。 防病毒（访问扫描）软件始终扫描系统的所有文件。 这可能会降低服务器速度，并且会影响AEM Forms的性能。
 
