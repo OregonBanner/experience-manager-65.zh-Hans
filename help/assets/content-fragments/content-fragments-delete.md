@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
 docset: aem65
 feature: 内容片段
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 13%
@@ -22,7 +22,7 @@ ht-degree: 13%
 
 # 内容片段 - 删除注意事项{#content-fragments-delete-considerations}
 
-## 权限 — 删除或不删除{#permissions-delete-or-not-delete}
+## 权限 — 删除或不删除 {#permissions-delete-or-not-delete}
 
 删除内容的功能非常强大，但可能很敏感，许多行业都需要限制和控制这些权限的分配方式。
 
@@ -48,7 +48,7 @@ ht-degree: 13%
 >
 >另请参阅[如何在AEM](/help/sites-administering/audit-user-management-operations.md)中审核用户管理操作。
 
-## 仅{#permissions-required-for-editor-functionality-only}编辑器功能所需的权限
+## 仅编辑器功能所需的权限 {#permissions-required-for-editor-functionality-only}
 
 对于需要编辑／更新内容片段的用户， **不允许他们删除整个片段**，必须分配特定权限，因为内容片段编辑器的基本操作要求可以删除临时子元素。
 
