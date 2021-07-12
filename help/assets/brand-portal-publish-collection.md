@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 90e3fd0e-9bc3-4aff-8c7b-7408f5b940e8
 docset: aem65
 feature: Brand Portal
-role: Business Practitioner
+role: User
 exl-id: 8f426012-d9ec-418e-8ab6-78e4aeff7538
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 36%
@@ -32,7 +32,7 @@ ht-degree: 36%
 >
 >如果包含内容片段的收藏集从AEM创作发布到Brand Portal，则文件夹（内容片段除外）的所有内容都将复制到Brand Portal界面。
 
-## 将集合发布到Brand Portal {#publish-a-collection-to-brand-portal}
+## 将收藏集发布到Brand Portal {#publish-a-collection-to-brand-portal}
 
 1. 在 AEM Assets UI 中，单击 AEM 徽标。
 1. 在&#x200B;**导航**&#x200B;页面中，转到 **Assets > 收藏集**。
