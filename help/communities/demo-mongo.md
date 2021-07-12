@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
-role: Administrator
+role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 1%
 
 ---
 
-# 如何为演示{#how-to-setup-mongodb-for-demo}设置MongoDB
+# 如何为演示设置MongoDB {#how-to-setup-mongodb-for-demo}
 
 ## 简介 {#introduction}
 
@@ -74,7 +74,7 @@ ht-degree: 1%
 >
 >如果在&#x200B;*AEM之后启动MongoDB*，则&#x200B;**重新启动**&#x200B;所有&#x200B;**AEM**&#x200B;实例，以便它们正确连接到MongoDB。
 
-### 演示制作选项：设置MongoDB副本集{#demo-production-option-setup-mongodb-replica-set}
+### 演示制作选项：设置MongoDB复制副本集 {#demo-production-option-setup-mongodb-replica-set}
 
 以下命令是在本地主机上设置具有3个节点的复制副本集的示例：
 
@@ -115,7 +115,7 @@ ht-degree: 1%
 1. 在独立模式或[SolrCloud模式](msrp.md#solrcloudmode)中运行Solr。
 1. 安装[标准](msrp.md#installingstandardmls)或[高级](msrp.md#installingadvancedmls)多语言搜索(MLS)。
 
-### 独立Solr {#standalone-solr}
+### 独立解决方案 {#standalone-solr}
 
 运行Solr的方法可能因安装版本和方式而异。 [Solr参考指南](https://archive.apache.org/dist/lucene/solr/ref-guide/)是权威文档。
 
@@ -139,7 +139,7 @@ ht-degree: 1%
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
-## 将MongoDB标识为公用存储{#identify-mongodb-as-common-store}
+## 将MongoDB标识为公用存储 {#identify-mongodb-as-common-store}
 
 根据需要启动创作和发布AEM实例。
 
