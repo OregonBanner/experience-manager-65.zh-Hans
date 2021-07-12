@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 feature: Brand Portal
-role: Business Practitioner
+role: User
 exl-id: 92a156f0-ce2a-4c83-bd57-0c29efbf784f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 38%
@@ -28,7 +28,7 @@ ht-degree: 38%
 
 如果您随后在AEM Assets中对原始资产或文件夹进行了修改，则在重新发布该资产或文件夹之前，所做的更改不会反映在Brand Portal中。 此功能可确保在 Brand Portal 中不会出现进行中的更改。只有管理员发布的已批准更改才会出现在 Brand Portal 中。
 
-## 将文件夹发布到 Brand Portal{#publish-folders-to-brand-portal-1}
+## 将文件夹发布到 Brand Portal {#publish-folders-to-brand-portal-1}
 
 1. 在AEM Assets界面中，将鼠标悬停在所需的文件夹上，然后从快速操作中选择&#x200B;**发布**&#x200B;选项。
 
@@ -65,7 +65,7 @@ ht-degree: 38%
 
 
 
-## 从 Brand Portal 取消发布文件夹{#unpublish-folders-from-brand-portal}
+## 从 Brand Portal 取消发布文件夹 {#unpublish-folders-from-brand-portal}
 
 您可以通过从AEM创作实例中取消发布已发布到Brand Portal的任何资产文件夹，来删除该文件夹。 取消发布原始文件夹后，Brand Portal 用户将无法再使用其副本。
 
