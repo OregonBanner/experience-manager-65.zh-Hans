@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
-role: Administrator
+role: Admin
 exl-id: 1ecb41e5-c959-4380-a5c7-df9fc3a7703a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 3%
 
 ---
 
-# 标记用户生成的内容{#tagging-user-generated-content}
+# 标记用户生成的内容 {#tagging-user-generated-content}
 
 ## 概述 {#overview}
 
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 标记命名空间和分类对于两个应用程序都是相同的。
 
-## 社区功能{#communities-features}
+## 社区功能 {#communities-features}
 
 可配置为允许标记的AEM Communities功能包括：
 
@@ -38,7 +38,7 @@ ht-degree: 3%
 * [论坛](forum.md#configuretheaddedforum)
 * [问题与解答](working-with-qna.md)
 
-## 管理标记{#administering-tags}
+## 管理标记 {#administering-tags}
 
 有关创建和管理标记命名空间和分类的信息，请参阅[管理标记](../../help/sites-administering/tags.md#tagging-console)。
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 
 请参阅[使用Social标签云](tagcloud.md) ，以了解如何将Social标签云组件添加到页面，以便于使用所应用的标签搜索已发布的UGC。
 
-### 标记权限{#tag-permissions}
+### 标记权限 {#tag-permissions}
 
 默认权限设置为不允许发布环境中的每个人读取标记命名空间。
 
