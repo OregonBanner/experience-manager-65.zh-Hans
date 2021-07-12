@@ -2,17 +2,17 @@
 title: 如何使用XML架构创建自适应Forms?
 description: 了解如何在自适应表单中将XML模式用作表单模型。 您可以应用现有XSD模板来创建自适应表单，并将XSD中的架构元素拖放到自适应表单上。 使用XML架构的示例深入挖掘，使用XML架构向字段添加特殊属性，并限制自适应表单组件的可接受值。
 feature: 自适应表单
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 6%
 
 ---
 
-# 使用XML架构{#creating-adaptive-forms-using-xml-schema}创建自适应表单
+# 使用XML架构创建自适应表单 {#creating-adaptive-forms-using-xml-schema}
 
 ## 前提条件 {#prerequisites}
 
@@ -21,7 +21,7 @@ ht-degree: 6%
 * [创建自适应表单](creating-adaptive-form.md)
 * [XML 架构](https://www.w3.org/TR/xmlschema-2/)
 
-## 使用XML架构作为表单模型{#using-an-xml-schema-as-form-model}
+## 使用XML架构作为表单模型 {#using-an-xml-schema-as-form-model}
 
 [!DNL Experience Manager Forms] 支持使用现有XML架构作为表单模型来创建自适应表单。此XML架构表示组织内的后端系统生成或使用数据的结构。
 
@@ -76,7 +76,7 @@ XML元素与自适应表单组件的映射如下所示：
  </tbody>
 </table>
 
-## XML架构{#sample-xml-schema}示例
+## 示例XML架构 {#sample-xml-schema}
 
 以下是XML架构的示例。
 
@@ -124,7 +124,7 @@ XML元素与自适应表单组件的映射如下所示：
 >
 >确保XML架构只有一个根元素。 不支持具有多个根元素的XML架构。
 
-## 使用XML架构{#adding-special-properties-to-fields-using-xml-schema}向字段添加特殊属性
+## 使用XML架构向字段添加特殊属性 {#adding-special-properties-to-fields-using-xml-schema}
 
 您可以将以下属性添加到XML架构元素，以向关联的自适应表单的字段添加特殊属性。
 
@@ -170,7 +170,7 @@ XML元素与自适应表单组件的映射如下所示：
 >
 例如，如果添加`userFirstName`架构元素，则在自适应表单中生成的标题为`User First Name`。
 
-## 限制自适应表单组件{#limit-acceptable-values-for-an-adaptive-form-component}的可接受值
+## 限制自适应表单组件的可接受值 {#limit-acceptable-values-for-an-adaptive-form-component}
 
 您可以向XML架构元素添加以下限制，以限制自适应表单组件可接受的值：
 
