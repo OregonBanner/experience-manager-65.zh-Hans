@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1994'
 ht-degree: 1%
@@ -28,11 +28,11 @@ AEM Forms默认为每种资产类型提供一组定义的元数据。 除了默�
 
 如果您是开发人员或网站所有者，则可以自定义Forms Portal(AEM Forms的最终用户界面)，以反映您在组织中使用的元数据。 有关Forms Portal的更多信息，请参阅[在门户上发布表单简介](../../forms/using/introduction-publishing-forms.md)。
 
-## AEM Forms中的元数据{#metadata-in-aem-forms}
+## AEM Forms中的元数据 {#metadata-in-aem-forms}
 
 在AEM Forms中，与资产关联的元数据属性列表取决于其类型。 此外，如果添加任何自定义元数据属性，则该属性会添加到添加了自定义元数据的类型的所有资产中。
 
-### 资产类型{#asset-types}
+### 资产类型 {#asset-types}
 
 AEM Forms支持以下资产类型：
 
@@ -43,7 +43,7 @@ AEM Forms支持以下资产类型：
 * 资源
 * XFS
 
-#### 元数据{#extensive-list-of-metadata}的广泛列表
+#### 元数据的广泛列表 {#extensive-list-of-metadata}
 
 以下是AEM Forms中支持的元数据属性的详尽列表：
 
@@ -174,7 +174,7 @@ AEM Forms支持以下资产类型：
  </tbody> 
 </table>
 
-## 查看表单元数据{#view-form-metadata}
+## 查看表单元数据 {#view-form-metadata}
 
 资产具有现有的属性值，这些属性值可在只读模式下查看。 此元数据在表单上传或表单创建时发起。
 
@@ -204,11 +204,11 @@ AEM Forms支持以下资产类型：
    * 右侧面板包含只读模式下的元数据属性，这些属性分布于各种选项卡中。
 
 
-## 添加/更新表单元数据值{#add-update-form-metadata-values}
+## 添加/更新表单元数据值 {#add-update-form-metadata-values}
 
 您可以编辑现有元数据属性的值，或向现有元数据属性字段添加新值（例如，当元数据字段为空时）。
 
-### 更新元数据属性值{#update-metadata-property-values}
+### 更新元数据属性值 {#update-metadata-property-values}
 
 1. 按照上一节中所述的步骤，打开可在其中查看所选表单现有元数据的属性页面。
 
@@ -227,7 +227,7 @@ AEM Forms支持以下资产类型：
 
    这两个操作都会将用户引导回包含更新值的属性页面的只读模式。
 
-### 更新表单缩略图{#update-the-form-thumbnail}
+### 更新表单缩略图 {#update-the-form-thumbnail}
 
 属性页面中的左侧面板显示表单的缩略图。 默认情况下，显示的缩略图是在表单创建（自适应表单）或表单上传时生成的缩略图。
 
@@ -244,7 +244,7 @@ AEM Forms支持以下资产类型：
 
 
 
-## 添加自定义元数据{#add-custom-metadata}
+## 添加自定义元数据 {#add-custom-metadata}
 
 除了开箱即用提供的元数据之外，AEM Forms还支持新的自定义元数据。
 
@@ -252,7 +252,7 @@ AEM Forms支持以下资产类型：
 
 AEM Forms在此工具中公开了支持的表单类型的元数据架构。 这样，您就可以访问这些架构，并使用元数据架构编辑器中提供的功能来添加自定义属性。
 
-### 导航元数据架构编辑器{#navigate-the-metadata-schema-editor}
+### 导航元数据架构编辑器 {#navigate-the-metadata-schema-editor}
 
 1. 导航到&#x200B;**[!UICONTROL 工具>资产>元数据架构]**。
 
@@ -281,9 +281,9 @@ AEM Forms在此工具中公开了支持的表单类型的元数据架构。 这�
    1. 您可以通过单击+符号添加其他选项卡。
 
    1. 您可以添加所需类型的自定义字段，方法是将&#x200B;**[!UICONTROL 构建表单]**&#x200B;部分中的字段组件拖动到架构页面。
-   1. 单击该字段后，可在&#x200B;**[!UICONTROL Settings]**&#x200B;部分下提供该字段的规范。
+   1. 单击该字段后，可在&#x200B;**[!UICONTROL Settings]**&#x200B;部分下提供此字段的规范。
 
-### 在架构编辑器{#add-custom-metadata-property-in-schema-editor}中添加自定义元数据属性
+### 在架构编辑器中添加自定义元数据属性 {#add-custom-metadata-property-in-schema-editor}
 
 1. 导航到要在其中添加自定义属性的选项卡（现有或新）。
 
