@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
-role: Administrator
+role: Admin
 exl-id: ce58c8e9-8b4a-43fb-a108-ed2ac40268c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
 
 ---
 
-# 标记支持资源{#tagging-enablement-resources}
+# 标记支持资源 {#tagging-enablement-resources}
 
 ## 概述 {#overview}
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 * [将标记应用于启用](resources.md#create-a-resource) 资源，以便可以明确过滤它们
 * [发布支持资源](resources.md#publish)
 
-## 社区站点标记{#community-site-tags}
+## 社区站点标记 {#community-site-tags}
 
 创建或编辑社区站点时，[标记设置](sites-console.md#tagging)通过选择现有标记命名空间的子集来设置可用于站点功能的标记范围。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ![网站标签](assets/site-tags.png)
 
-## 目录标记命名空间{#catalog-tag-namespaces}
+## 目录标记命名空间 {#catalog-tag-namespaces}
 
 目录功能使用标记来定义自身。 在社区站点中配置目录函数时，要从中选择的标记命名空间集由社区站点设置的标记命名空间范围定义。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 ![catalog-namespace](assets/catalog-namespace.png)
 
-## 将标记应用于启用资源{#applying-tags-to-enablement-resources}
+## 将标记应用到启用资源 {#applying-tags-to-enablement-resources}
 
 选中`Show in Catalog`后，启用资源和学习路径将显示在所有目录中。 向资源和学习路径添加标记后，可以预过滤到特定目录，以及在目录UI中进行过滤。
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ![基本信息](assets/applytags-basicinfo.png)
 
-## 在发布时查看目录{#viewing-catalog-on-publish}
+## 在发布时查看目录 {#viewing-catalog-on-publish}
 
 从创作环境中设置并发布所有内容后，便可以在发布环境中体验使用目录查找支持资源的体验。
 
