@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
-role: Administrator
+role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 3%
 
 ---
 
-# 升级到JEE上的AEM 6.5 Forms {#upgrade-to-aem-forms-jee}
+# 在JEE上升级到AEM 6.5 Forms {#upgrade-to-aem-forms-jee}
 
 请执行以下步骤，将JEE上的现有AEM 6.3 Forms或JEE上的AEM 6.4 Forms升级到JEE上的AEM 6.5 Forms:
 
