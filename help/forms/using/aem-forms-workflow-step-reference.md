@@ -9,20 +9,20 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: aaafda59c63ea47c67ec974263013ead468df9cc
 workflow-type: tm+mt
-source-wordcount: '7109'
+source-wordcount: '7268'
 ht-degree: 0%
 
 ---
 
-# 基于OSGi的以Forms为中心的工作流 — 步骤引用{#forms-centric-workflow-on-osgi-step-reference}
+# 基于OSGi的以Forms为中心的工作流 — 步骤参考{#forms-centric-workflow-on-osgi-step-reference}
 
-## Forms Workflow步骤{#forms-workflow-steps}
+## Forms Workflow步骤 {#forms-workflow-steps}
 
 Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这些步骤允许您在OSGi上快速构建基于以Forms为中心的自适应表单工作流。 这些工作流可用于开发基本的审核和批准工作流、内部和跨防火墙的业务流程。 您还可以使用Forms Workflow步骤来启动文档服务、与Adobe Sign签名工作流集成，以及执行其他AEM Forms操作。 您需要[AEM Forms附加组件](https://www.adobe.com/go/learn_aemforms_documentation_63)才能在工作流中使用这些步骤。
 
-## 分配任务步骤{#assign-task-step}
+## 分配任务步骤 {#assign-task-step}
 
 分配任务步骤将创建一个任务并将其分配给用户或组。 除了分配任务外，组件还为任务指定自适应表单或非交互式PDF。 自适应表单需要接受用户输入，非交互式PDF或只读自适应表单仅用于审阅工作流。
 
@@ -87,7 +87,9 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 * **用户或组：** 任务被分配给选定的用户或组。当在&#x200B;**Assign options**&#x200B;字段中选择了&#x200B;**To a specific user or group option**&#x200B;选项时，该选项将可用。 该字段列出了工作流用户组的所有用户和组。\
    **用户或组**&#x200B;下拉菜单列出了登录用户有权访问的用户和组。 用户名的显示取决于您是否对该特定用户的crx-repository中的&#x200B;**users**&#x200B;节点拥有访问权限。
 
-* **通过电子邮件通知被分派人：** 选择此选项可向被分派人发送电子邮件通知。将任务分配给用户后，将发送这些通知。 在使用选项之前，请从AEM Web Console中启用通知。 有关分步说明，请参阅[为分配任务步骤配置电子邮件通知](../../forms/using/aem-forms-workflow.md)
+* **[!UICONTROL 发送通知电子邮件]**:选择此选项可向被分派人发送电子邮件通知。在将任务分配给用户或组时，会发送这些通知。 您可以使用&#x200B;**[!UICONTROL 收件人电子邮件地址]**&#x200B;选项指定检索电子邮件地址的机制。
+
+* **[!UICONTROL 收件人电子邮件地址]**:您可以在变量中存储电子邮件地址，使用文字指定永久电子邮件地址，或使用在被分派人配置文件中指定的被分派人的默认电子邮件地址。您可以使用文字或变量指定组的电子邮件地址。 变量选项有助于动态检索和使用电子邮件地址。 **[!UICONTROL 使用被分派人的默认电子邮件地址]**&#x200B;选项仅适用于单个被分派人。 在这种情况下，会使用存储在受分配用户配置文件中的电子邮件地址。
 
 * **HTML电子邮件模板**:为通知电子邮件选择电子邮件模板。要编辑模板，请修改crx-repository中位于/libs/fd/dashboard/templates/email/htmlEmailTemplate.txt的文件。
 * **允许委派到：** AEM收件箱为已登录用户提供了一个选项，用于将分配的工作流委派给其他用户。允许您在同一组内委派给另一个组的工作流用户。 如果任务被分配给单个用户，并且选择了&#x200B;**允许委派给被分派人组成员**&#x200B;选项，则无法将任务委派给其他用户或组。
@@ -117,7 +119,7 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 * **显示后续步骤中的数据：** 选择此选项可使当前代理人能够查看后续代理人已采取的操作和添加到任务中的注释。它还允许当前受让人查看已完成任务的记录文档（如果可用）。
 * **数据类型的可见性：** 默认情况下，代理人可以查看记录文档、受让人、采取的操作以及先前和后续受让人添加的注释。使用数据类型的可见性选项限制受让人可见的数据类型。
 
-## 发送电子邮件步骤{#send-email-step}
+## 发送电子邮件步骤 {#send-email-step}
 
 使用电子邮件步骤发送电子邮件，例如，包含记录文档、自适应表单链接、交互式通信链接或附加PDF文档的电子邮件。 “发送电子邮件”步骤支持[HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email)。 HTML电子邮件是响应式的，可根据收件人的电子邮件客户端和屏幕大小进行调整。 您可以使用HTML电子邮件模板来定义电子邮件的外观、颜色方案和行为。
 
@@ -151,7 +153,7 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 
 **文件名：** 电子邮件附件文件的名称。电子邮件步骤将附件的原始文件名更改为指定的文件名。 可以手动指定或从工作流元数据属性或变量中检索名称。 如果您知道要指定的确切值，请使用&#x200B;**Literal**&#x200B;选项。 使用&#x200B;**Variable**&#x200B;选项，从字符串数据类型变量中存储的值中检索文件名。 将要使用的值保存在工作流元数据属性中时，请使用&#x200B;**从工作流元数据中检索**&#x200B;选项。
 
-## 生成记录步骤{#generate-document-of-record-step}的文档
+## 生成记录文档步骤 {#generate-document-of-record-step}
 
 填写或提交表单后，您可以以打印或文档格式保留表单的记录。 这称为记录文档(DoR)。 您可以使用生成记录文档步骤创建自适应表单的只读或交互式PDF版本。 PDF版本包含填写到表单中的信息以及自适应表单的布局。
 
@@ -172,7 +174,7 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 
 **区域设置**:指定记录文档的语言。选择&#x200B;**Literal**&#x200B;从下拉列表中选择区域设置，或选择&#x200B;**Variable**&#x200B;从字符串数据类型变量中存储的值中检索区域设置。 在变量中存储区域设置值时，必须定义区域设置代码。 例如，为英语指定&#x200B;**en_US**，为法语指定&#x200B;**fr_FR**。
 
-## 调用表单数据模型服务步骤{#invoke-form-data-model-service-step}
+## 调用表单数据模型服务步骤 {#invoke-form-data-model-service-step}
 
 您可以使用[AEM Forms数据集成](../../forms/using/data-integration.md)配置和连接到不同的数据源。 这些数据源可以是数据库、Web服务、REST服务、OData服务和CRM解决方案。 AEM Forms数据集成允许您创建包含各种服务的表单数据模型，以对配置的数据库执行数据检索、添加和更新操作。 可以使用&#x200B;**调用数据模型服务步骤**&#x200B;选择表单数据模型(FDM)，并使用FDM的服务来检索、更新数据或将数据添加到不同的数据源。
 
@@ -242,6 +244,9 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
    * **文字：** 当您知道要指定的确切值时，请使用选项。例如， srose@we.info。
    * **变量：** 使用选项检索变量中存储的值。
    * **从工作流元数据中检索：** 将要使用的值保存在工作流元数据属性中时，使用选项。例如， emailAddress。
+   * **[!UICONTROL 相对于负载]**:使用选项检索保存在相对于有效负荷的路径上的文件附件。选择选项并指定包含文件附件的文件夹名称，或在文本框中指定文件附件名称。
+
+      例如，如果CRX存储库中的“相对于有效负荷”文件夹在`attachment\attachment-folder`位置包含文件附件，请在选择&#x200B;**[!UICONTROL 相对于有效负荷]**&#x200B;选项后在文本框中指定`attachment\attachment-folder`。
    * **JSON点表示法：** 如果要使用的值位于JSON文件中，请使用选项。例如， insurance.customerDetails.emailAddress。 仅当选择了来自输入JSON的映射输入字段选项时，“JSON点表示法”选项才可用。
    * **映射输入JSON的输入字段：** 指定JSON文件的路径，以从JSON文件获取某些服务参数的输入值。JSON文件的路径可以是相对于有效负载的路径、绝对路径，也可以是使用JSON或表单数据模型类型的变量选择输入JSON文档。
 
@@ -254,7 +259,7 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 * **服务输出>将输出保存到变量或JSON文件：** 选择选项，可将输出值保存在JSON文件的绝对路径、相对于有效负载的路径或变量中。
 * **使用以下选项保存输出JSON文档：** 保存输出JSON文件。输出JSON文件的路径可以是相对于有效负载的路径，也可以是绝对路径。 您还可以使用JSON或表单数据模型数据类型的变量保存输出JSON文件。
 
-## 签署文档步骤{#sign-document-step}
+## “签名文档”步骤 {#sign-document-step}
 
 通过“签名文档”步骤，您可以使用Adobe Sign来签署文档。 “签名文档”步骤具有以下属性：
 
@@ -276,44 +281,44 @@ Forms工作流步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 * **状态变量：** 启用Adobe Sign的文档将文档的签名状态存储在字符串数据类型的变量中。指定状态变量的名称(adobeSignStatus)。 在CRXDE中，可以在/etc/workflow/instances/&lt;server>/&lt;date-time>/&lt;工作流模型的实例>/workItems/&lt;node>/metaData包含变量状态。
 * **使用以下选项保存已签名文档：** 指定保留已签名文档的位置。您可以选择覆盖有效负载文件，将已签名文档放置在有效负载目录中的某个位置，或将已签名文档存储在文档类型的变量中。
 
-## 文档服务步骤{#document-services-steps}
+## 文档服务步骤 {#document-services-steps}
 
 AEM文档服务是一组用于创建、组合和保护PDF文档的服务。 AEM Forms为每个文档服务提供了单独的AEM工作流步骤。
 
 与其他AEM Forms工作流步骤（如“分配任务”、“发送电子邮件”和“签名文档”）类似，您可以在所有AEM文档服务步骤中使用变量。 有关创建和管理变量的更多信息，请参阅AEM工作流中的[变量](../../forms/using/variable-in-aem-workflows.md)。
 
-### 应用文档时间戳步骤{#apply-document-time-stamp-step}
+### 应用文档时间戳步骤 {#apply-document-time-stamp-step}
 
 向文档添加时间戳。 提供文档详细信息，如输入文档路径、输入文档名称、用于存储导出数据的位置。 您可以选择覆盖现有有效负载文件，选择其他文件名以将数据存储在有效负载文件夹下的其他文件中，提供数据的绝对路径，或将数据存储在文档类型的变量中。
 
-### 转换为图像步骤{#convert-to-image-step}
+### 转换为图像步骤 {#convert-to-image-step}
 
 将PDF文档转换为图像列表。 支持的图像格式为JPEG、JPEG2000、PNG和TIFF。 以下信息适用于TIFF图像的转换：
 
 * 将生成多页TIFF文件。
 * TIFF图像中未包含某些注释。 不包含要求Acrobat生成其外观的注释。
 
-### 转换为PDF/A步骤{#convert-to-pdf-a-step}
+### 转换为PDF/A步骤 {#convert-to-pdf-a-step}
 
 使用提供的选项将PDF文档转换为PDF/A格式。 PDF/A版本的可移植文档格式(PDF)专门用于文档归档和长期保存。
 
-### 转换为PS步骤{#convert-to-ps-step}
+### 转换为PS步骤 {#convert-to-ps-step}
 
 将PDF文档转换为PostScript。 转换为PostScript时，可以使用转换操作指定源文档以及是转换为PostScript 2级还是3级。 您转换为PostScript文件的PDF文档必须是非交互式的。
 
-### 根据指定的类型步骤{#create-pdf-from-specified-type-step}创建PDF
+### 通过指定的类型步骤创建PDF {#create-pdf-from-specified-type-step}
 
 从输入文件生成PDF文档。 输入文档可以是相对于有效负载的，具有绝对路径，可以是有效负载本身，或存储在Document数据类型的变量中。
 
-### 通过URL/HTML/ZIP步骤{#create-pdf-from-url-html-zip-step}创建PDF
+### 通过URL/HTML/ZIP步骤创建PDF {#create-pdf-from-url-html-zip-step}
 
 根据提供的URL、HTML和ZIP文件生成PDF文档。
 
-### 导出数据步骤{#export-data-step}
+### 导出数据步骤 {#export-data-step}
 
 从PDF forms或XDP文件导出数据。 它要求您输入“输入文档”和“导出数据格式”的文件路径。 “导出数据格式”的选项包括“自动”、“XDP”和“XmlData”。
 
-### Export PDF到指定类型步骤{#export-pdf-to-specified-type-step}
+### Export PDF到指定类型步骤 {#export-pdf-to-specified-type-step}
 
 将PDF文档转换为所选格式。
 
@@ -325,7 +330,7 @@ AEM文档服务是一组用于创建、组合和保护PDF文档的服务。 AEM 
 >
 >您可以使用变量为输入文档指定模板文件。 将模板文件的路径存储在字符串数据类型的变量中。
 
-### 导入数据步骤{#import-data-step}
+### 导入数据步骤 {#import-data-step}
 
 将表单数据合并到PDF表单中。 您可以将表单数据导入PDF表单。
 
@@ -337,7 +342,7 @@ AEM文档服务是一组用于创建、组合和保护PDF文档的服务。 AEM 
 >
 >您可以使用变量为输入文档指定DDX文件。 将DDX文件存储在Document或XML数据类型的变量中。
 
-### Optimize PDF步骤{#optimize-pdf-step}
+### Optimize PDF步骤 {#optimize-pdf-step}
 
 通过减小PDF文件大小来优化PDF文件。 此转换的结果是PDF文件，其大小可能小于其原始版本。 此操作还会将PDF文档转换为优化参数中指定的PDF版本。
 
@@ -359,11 +364,11 @@ AEM文档服务是一组用于创建、组合和保护PDF文档的服务。 AEM 
 >
 >您可以使用变量为输入文档指定模板文件。 将模板文件的路径存储在字符串数据类型的变量中。
 
-### 安全文档步骤{#secure-document-step}
+### 安全文档步骤 {#secure-document-step}
 
 加密、签名和验证文档。 AEM Forms支持基于密码的加密和基于证书的加密。 您还可以在各种文档签名算法之间进行选择。 例如， SHA-256和SH-512。 您还可以使用工作流步骤来阅读器扩展PDF文档。 工作流步骤提供了用于启用条形码解码、数字签名、PDF数据导入和导出以及其他选项的选项。
 
-### 发送到打印机步骤{#send-to-printer-step}
+### 发送到打印机步骤 {#send-to-printer-step}
 
 将文档直接发送到打印机。 它支持以下打印访问机制：
 
