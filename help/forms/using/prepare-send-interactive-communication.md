@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: 交互式通信
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b6774acc4ec32c87a5ad5f5b2ea885e1e1aa867e
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2041'
 ht-degree: 0%
 
 ---
 
-# 使用代理UI {#prepare-and-send-interactive-communication-using-the-agent-ui}准备和发送交互式通信
+# 使用代理UI准备和发送交互式通信 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 代理UI允许代理准备交互式通信并将其发送到后处理。 代理根据允许进行所需的修改，并将交互式通信提交到帖子流程，如电子邮件或打印。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 * **内容**:在“内容”选项卡中，代理管理交互式通信中的内容，如文档片段和内容变量。在这些文档片段的属性中创建交互式通信时，代理可以根据允许在文档片段中进行更改。 代理还可以重新排序、添加/删除文档片段以及添加分页符（如果允许）。
 * **附件**:仅当交互式通信具有任何附件或代理具有库访问权限时，“附件”选项卡才会在代理UI中显示。代理人可以（也可以不允许）更改或编辑附件。
 
-## 使用代理UI {#prepare-interactive-communication-using-the-agent-ui}准备交互式通信
+## 使用代理UI准备交互式通信 {#prepare-interactive-communication-using-the-agent-ui}
 
 1. 选择&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**。
 1. 选择相应的交互式通信，然后点按&#x200B;**[!UICONTROL 打开代理UI]**。
@@ -88,7 +88,7 @@ ht-degree: 0%
 
    继续管理交互式通信的附件。
 
-### 管理附件{#manage-attachments}
+### 管理附件 {#manage-attachments}
 
 1. 选择&#x200B;**[!UICONTROL 附件]**。 代理UI在创建交互式通信时显示设置的可用附件。
 
@@ -145,7 +145,7 @@ ht-degree: 0%
 
 ## 代理用户界面中可用的操作和信息 {#actionsagentui}
 
-### 文档片段{#document-fragments}
+### 文档片段 {#document-fragments}
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 * 选择（眼睛图标）：包括\排除交互式通信中的文档片段。
 * 未填充的值（信息）：指示文档片段中未填充变量的数量。
 
-### 列出文档片段{#list-document-fragments}
+### 列出文档片段 {#list-document-fragments}
 
 ![listoptions](assets/listoptions.png)
 
@@ -171,13 +171,13 @@ ht-degree: 0%
 * 跳过项目符号/编号：启用以跳过列表文档片段中的项目符号/编号。
 * 未填充的值（信息）：指示文档片段中未填充变量的数量。
 
-## 将交互式通信另存为草稿{#save-as-draft}
+## 将交互式通信另存为草稿 {#save-as-draft}
 
 您可以使用代理UI为每个交互式通信保存一个或多个草稿，稍后检索草稿以继续处理该草稿。 您可以为每个草稿指定不同的名称以标识它。
 
 Adobe建议按顺序执行这些说明，以成功将交互式通信另存为草稿。
 
-### 启用“另存为草稿”功能{#before-save-as-draft}
+### 启用“另存为草稿”功能 {#before-save-as-draft}
 
 默认情况下，“另存为草稿”功能未启用。 执行以下步骤以启用该功能：
 
@@ -191,7 +191,7 @@ Adobe建议按顺序执行这些说明，以成功将交互式通信另存为草
 1. 点按&#x200B;**[!UICONTROL 创建通信配置]**。
 1. 选择&#x200B;**[!UICONTROL 使用CCRDocumentInstanceService]**&#x200B;启用保存，然后点按&#x200B;**[!UICONTROL 保存]**。
 
-### 将交互式通信另存为草稿{#save-as-draft-agent-ui}
+### 将交互式通信另存为草稿 {#save-as-draft-agent-ui}
 
 执行以下步骤以将交互式通信另存为草稿：
 
@@ -203,7 +203,7 @@ Adobe建议按顺序执行这些说明，以成功将交互式通信另存为草
 
 将交互式通信另存为草稿后，点按&#x200B;**[!UICONTROL 保存更改]**&#x200B;以保存对草稿的任何进一步更改。
 
-### 检索交互式通信的草稿{#retrieve-draft}
+### 检索交互式通信的草稿 {#retrieve-draft}
 
 将交互式通信另存为草稿后，您可以检索它以继续处理它。 使用以下方法检索交互式通信：
 
@@ -211,11 +211,7 @@ Adobe建议按顺序执行这些说明，以成功将交互式通信另存为草
 
 [] 拖动指向在将交互式通信另存为草稿后生成的草稿版本的唯一标识符。
 
->[!NOTE]
->
->如果在将交互式通信另存为草稿后对其进行任何更改，则草稿版本无法打开。
-
-### ccrDocumentInstance SPI实现示例{#sample-ccrDocumentInstance-spi}
+### CcrDocumentInstance SPI实现示例 {#sample-ccrDocumentInstance-spi}
 
 实施`ccrDocumentInstance` SPI以将交互式通信另存为草稿。 以下是`ccrDocumentInstance` SPI的示例实现。
 
