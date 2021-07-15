@@ -3,11 +3,11 @@ title: Dynamic Media新闻稿
 description: '按Experience League划分的Dynamic Media新闻稿是每月的新闻稿。 它旨在帮助您快速掌握Dynamic Media和Dynamic Media Classic，以便您能够立即开始实现价值。 本一站式商店快讯中提供宝贵的知识建设资源。 其中包括视频介绍、解决方案概述，以及一些关键特性和功能（如图像预设、查看器预设、视频配置文件等）的简介。 '
 keywords: Dynamic Media；新闻稿；产品更新；提示和技巧；事件；客户成功；博客；博客；图像；视频；功能
 contentOwner: Rick Brough
-solution: Dynamic Media Classic, Experience Manager
+solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: 协作，Dynamic Media Classic
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
 workflow-type: tm+mt
 source-wordcount: '1182'
 ht-degree: 0%
