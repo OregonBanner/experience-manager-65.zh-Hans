@@ -1,5 +1,5 @@
 ---
-title: 优化图像质量的最佳实践
+title: 在Dynamic Media中优化图像质量的最佳实践
 description: 了解在Dynamic Media中优化图像质量的最佳实践
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: 资产管理
 role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 49%
+source-wordcount: '1451'
+ht-degree: 48%
 
 ---
 
-# 优化图像质量的最佳实践 {#best-practices-for-optimizing-the-quality-of-your-images}
+# 在Dynamic Media中优化图像质量的最佳实践 {#best-practices-for-optimizing-the-quality-of-your-images}
 
 优化图像质量可能会是一个很耗时的过程，因为渲染可接受的效果涉及到很多因素。在某种程度上，效果带有主观性，因为每个人对图像质量都会有不同的看法。结构化试验是关键所在。
 
@@ -59,14 +59,14 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 * 简单锐化(`&op_sharpen`) — 简单锐化与Photoshop中使用的锐化滤镜类似，它会在动态调整大小后对图像的最终视图应用基本锐化。 但是，用户不能对这种方法进行配置。最佳做法是，除非有需要，否则不使用&amp;op_sharpen。
 * USM锐化(`&op_USM`)- USM锐化是行业标准的锐化滤镜。 最佳实践是按照下面的准则，使用 USM 锐化来锐化图像。您可以通过 USM 锐化控制下面的三个参数：
 
-   * `&op_sharpen=`数量，半径，阈值
+   * `&op_sharpen=amount,radius,threshold`
 
-      * **[!UICONTROL amount]** （0-5，效果的强度。）
-      * **[!UICONTROL radius]** (0-250，在锐化的对象周围绘制的“锐化线”宽度（以像素为单位）。
+      * **[!UICONTROL *amount *]**（0-5，效果的强度。）
+      * **[!UICONTROL *radius *]**(0-250，在锐化的对象周围绘制的“锐化线”宽度（以像素为单位）。
 
       请记住，半径和量参数彼此相对工作。减少半径可通过增加量来补偿。半径允许进行更精细的控制，因为较低值仅锐化边缘像素，而较高值锐化较宽范围的像素。
 
-      * **[!UICONTROL 阈值]** （0-255，效果的敏感度。）
+      * **[!UICONTROL *阈值&#x200B;*]**（0-255，效果的敏感度。）
 
              此参数确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素，而滤镜会锐化这些像素。 **[!UICONTROL threshold]**参数有助于避免过度锐化颜色相似的区域，如肤色。 例如，阈值为12时，会忽略肤色亮度的细微变化，以避免添加“杂色”，同时仍会为高对比度区域添加边缘对比度，如睫毛与皮肤相遇的地方。
          
@@ -74,7 +74,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
          Experience Manager有关锐化图像的帮助主题。
 
-         最佳实践白皮书[在AdobeDynamic Media Classic中锐化图像](/help/assets/assets/sharpening_images.pdf)。
+         最佳实践白皮书[在AdobeDynamic Media Classic](/help/assets/assets/sharpening_images.pdf)中锐化图像。
 
       * Experience Manager还允许您控制第四个参数：单色(0,1)。 此参数确定是否使用值0分别将USM锐化应用于每个颜色组件，或者使用值1将USM锐化应用于图像亮度/强度。
 
