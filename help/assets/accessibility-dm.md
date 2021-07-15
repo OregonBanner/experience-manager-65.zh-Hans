@@ -7,9 +7,9 @@ content-type: reference
 feature: 辅助功能
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 由于[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的插件，因此大多数键盘控制行为与[!DNL Experience Manager Assets]中的行为相同。 例如，[!DNL Dynamic Media]中的`Cancel`按钮的焦点突出显示与[!DNL Experience Manager Assets]中的按钮相同，并对`Spacebar`键做出反应，与[!DNL Experience Manager Assets]中的键相同。 请参阅Assets](/help/assets/accessibility.md#keyboard-shortcuts)中的[键盘快捷键。
 
-[!DNL Dynamic Media]中各个用户界面元素支持的击键在大多数情况下是显而易见的，并且易于发现。 [!DNL Dynamic Media]中的键盘控件与以下内容有关：
+[!DNL Dynamic Media]中各个用户界面元素支持的按键清晰易懂。 [!DNL Dynamic Media]中的键盘控件与以下内容有关：
 
 * 能够使用`Tab`和`Shift+Tab`击键在页面上的交互式元素之间导航。
 使用`Tab`将输入焦点按Tab键顺序提前到下一个用户界面元素；使用`Shift+Tab`将输入焦点返回到上一个用户界面元素。
