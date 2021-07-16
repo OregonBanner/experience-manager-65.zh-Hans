@@ -10,10 +10,10 @@ discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: User, Admin
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
 source-wordcount: '2849'
-ht-degree: 17%
+ht-degree: 15%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->Experience Manager会异步发布到Dynamic Media Classic。 单击&#x200B;**[!UICONTROL Publish]**&#x200B;后，您需要几秒钟的时间才能将资产发布到Dynamic Media Classic。
+>Experience Manager会异步发布到Dynamic Media Classic。 选择&#x200B;**[!UICONTROL Publish]**&#x200B;后，您的资产需要几秒钟时间才能发布到Dynamic Media Classic。
 
 
 ## Dynamic Media Classic组件 {#scene-components}
@@ -78,8 +78,6 @@ ht-degree: 17%
 
 自2017年1月31日起，AdobeDynamic Media Classic停止对Flash查看器平台的支持。
 
-<!-- For more information about this important change, see [Flash Viewer End-of-Life FAQs](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html). -->
-
 ### 将Dynamic Media Classic(Scene7)组件添加到页面 {#adding-a-scene-component-to-a-page}
 
 将Dynamic Media Classic(Scene7)组件添加到页面的方法与将组件添加到任何页面的方法相同。 Dynamic Media Classic组件在以下部分中进行了详细描述。
@@ -88,17 +86,17 @@ ht-degree: 17%
 
 1. 在Experience Manager中，打开要添加&#x200B;**[!UICONTROL Dynamic Media Classic(Scene7)]**&#x200B;组件的页面。
 
-1. 如果没有可用的Dynamic Media Classic组件，请单击&#x200B;**[!UICONTROL 设计]**&#x200B;模式，点按任何带蓝色边框的组件，点按&#x200B;**[!UICONTROL 父项]**&#x200B;图标，然后点按&#x200B;**[!UICONTROL 配置]**&#x200B;图标。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，选择所有Dynamic Media Classic组件以使其可用，然后单击&#x200B;**[!UICONTROL 确定]**。
+1. 如果没有可用的Dynamic Media Classic组件，请选择&#x200B;**[!UICONTROL 设计]**&#x200B;模式，选择任何具有蓝色边框的组件，选择&#x200B;**[!UICONTROL 父项]**&#x200B;图标，然后选择&#x200B;**[!UICONTROL 配置]**&#x200B;图标。 在&#x200B;**[!UICONTROL Parsys(Design)]**&#x200B;中，选择所有Dynamic Media Classic组件以使其可用，然后选择&#x200B;**[!UICONTROL 确定]**。
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
-1. 单击&#x200B;**[!UICONTROL 编辑]**，以便返回到&#x200B;**[!UICONTROL 编辑]**&#x200B;模式。
+1. 选择&#x200B;**[!UICONTROL 编辑]**，以便您可以返回到&#x200B;**[!UICONTROL 编辑]**&#x200B;模式。
 
 1. 将组件从Sidekick中的Dynamic Media Classic组拖动到页面上所需位置。
 
-1. 单击&#x200B;**[!UICONTROL Configuration]**&#x200B;图标，以便打开组件。
+1. 选择&#x200B;**[!UICONTROL 配置]**&#x200B;图标，以便打开组件。
 
-1. 根据需要编辑该组件，然后单击&#x200B;**[!UICONTROL 确定]**&#x200B;以保存更改。
+1. 根据需要编辑组件，然后选择&#x200B;**[!UICONTROL OK]**&#x200B;以保存更改。
 1. 将您的图像或视频从内容浏览器拖动到您添加到页面的Dynamic Media Classic组件上。
 
    >[!NOTE]
@@ -120,7 +118,7 @@ ht-degree: 17%
    >如果Dynamic Media Classic组件不可用，请确保[通过设计模式](/help/sites-authoring/default-components-designmode.md)启用它们。
 
 1. 在启用了&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;组件的网站中，将&#x200B;**[!UICONTROL 图像]**&#x200B;组件拖到页面中。
-1. 选择组件，然后点按配置图标。
+1. 选择组件，然后选择配置图标。
 1. 在&#x200B;**[!UICONTROL Dynamic Media Classic设置]**&#x200B;选项卡中，调整断点。
 
    ![chlimage_1-225](assets/chlimage_1-225.png)
@@ -143,13 +141,13 @@ ht-degree: 17%
 
 按&#x200B;**[!UICONTROL +]**&#x200B;按钮时，HTML5缩放组件会显示一个较大的图像。
 
-缩放工具位于资产底部。如果要放大，请点按&#x200B;**[!UICONTROL +]**;如果要减少，请点按&#x200B;**[!UICONTROL -]**。 点按&#x200B;**[!UICONTROL x]**&#x200B;或重置缩放箭头可将图像恢复到导入时的原始大小。 点按对角线箭头，使其全屏显示。 点按&#x200B;**[!UICONTROL 编辑]**，以便您可以配置组件。 使用此组件，您可以配置所有[!UICONTROL Dynamic Media Classic]组件](#settings-common-to-all-scene-components)共有的[设置。
+缩放工具位于资产底部。如果要放大，请选择&#x200B;**[!UICONTROL +]**;如果要减少，请选择&#x200B;**[!UICONTROL -]**。 点按&#x200B;**[!UICONTROL x]**&#x200B;或重置缩放箭头可将图像恢复到导入时的原始大小。 选择对角线箭头，使其全屏显示。 选择&#x200B;**[!UICONTROL 编辑]**&#x200B;以便您可以配置组件。 使用此组件，您可以配置所有[!UICONTROL Dynamic Media Classic]组件](#settings-common-to-all-scene-components)共有的[设置。
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
 ### 弹出 {#flyout}
 
-在HTML5 **[!UICONTROL 弹出]**&#x200B;组件中，资产显示为分屏；将资产保留在指定的大小；右侧将显示缩放部分。 点按&#x200B;**[!UICONTROL 编辑]**，以便您可以配置组件。 使用此组件，您可以配置所有Dynamic Media Classic组件通用的[设置](#settings-common-to-all-scene-components)。
+在HTML5 **[!UICONTROL 弹出]**&#x200B;组件中，资产显示为分屏；将资产保留在指定的大小；右侧将显示缩放部分。 选择&#x200B;**[!UICONTROL 编辑]**&#x200B;以便您可以配置组件。 使用此组件，您可以配置所有Dynamic Media Classic组件通用的[设置](#settings-common-to-all-scene-components)。
 
 >[!NOTE]
 >
@@ -189,7 +187,7 @@ ht-degree: 17%
 
 [Dynamic Media Classic图像模](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) 板是已导入到Dynamic Media Classic的分层Photoshop内容，其中内容和属性已进行参数化，以便进行可变性。**[!UICONTROL 图像模板]**&#x200B;组件允许您导入图像并在Experience Manager中动态更改文本。 此外，您还可以配置&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件，以使用 Client Context 中的值，从而让每个客户获取个性化的图像体验。
 
-如果要配置组件，请点按&#x200B;**[!UICONTROL 编辑]**。 您可以配置所有Dynamic Media Classic组件通用的[设置以及本节中介绍的其他设置。](#settings-common-to-all-scene-components)
+如果要配置组件，请选择&#x200B;**[!UICONTROL 编辑]**。 您可以配置所有Dynamic Media Classic组件通用的[设置以及本节中介绍的其他设置。](#settings-common-to-all-scene-components)
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -211,7 +209,7 @@ ht-degree: 17%
 
 #### 动态更改文本 {#changing-text-dynamically}
 
-要动态更改文本，请在字段中输入新文本，然后单击&#x200B;**[!UICONTROL 确定]**。在此示例中，**[!UICONTROL 价格]**&#x200B;现在为 50 美元，运费为 99 美分。
+要动态更改文本，请在字段中输入新文本，然后选择&#x200B;**[!UICONTROL OK]**。 在此示例中，**[!UICONTROL 价格]**&#x200B;现在为 50 美元，运费为 99 美分。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -219,9 +217,9 @@ ht-degree: 17%
 
 ![chlimage_1-235](assets/chlimage_1-235.png)
 
-#### 更改文本以反映 Client Context 值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
+#### 更改文本以反映客户端上下文值的值 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-要将字段链接到客户端上下文值，请点按&#x200B;**[!UICONTROL 选择]**&#x200B;以打开客户端上下文菜单，选择客户端上下文，然后点按&#x200B;**[!UICONTROL 确定]**。 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
+要将字段链接到客户端上下文值，请选择&#x200B;**[!UICONTROL 选择]**&#x200B;以打开客户端上下文菜单，选择客户端上下文，然后选择&#x200B;**[!UICONTROL 确定]**。 在此示例中，由于已将名称与个人资料中设置的格式化名称链接在一起，因此名称会相应地发生更改。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -231,12 +229,12 @@ ht-degree: 17%
 
 #### 将Dynamic Media Classic图像模板设为链接 {#making-the-scene-image-template-a-link}
 
-1. 在具有Dynamic Media Classic **[!UICONTROL 图像模板]**&#x200B;组件的页面上，点按&#x200B;**[!UICONTROL 编辑]**。
+1. 在具有Dynamic Media Classic **[!UICONTROL 图像模板]**&#x200B;组件的页面上，选择&#x200B;**[!UICONTROL 编辑]**。
 1. 在&#x200B;**[!UICONTROL URL]**&#x200B;字段中，输入用户点按图像时转到的URL。 在&#x200B;**[!UICONTROL 打开方式]**&#x200B;字段中，选择您希望在新窗口中还是在同一窗口中打开目标。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. 点按&#x200B;**[!UICONTROL 确定]**。
+1. 选择&#x200B;**[!UICONTROL 确定]**。
 
 ### 视频组件 {#video-component}
 
@@ -311,7 +309,7 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 在任一 UI 中进行搜索时，您都可以按以下条件进行筛选（此处显示的是触屏优化 UI）：
 
-**[!UICONTROL 输入关键字]**  — 您可以按名称搜索资产。搜索时，您输入的关键词是文件名的开头。 例如，键入“swimming”一词后，将在该文件夹中查找任何以这些字母开头的资产文件名。在键入搜索词后，请务必点按Enter以查找资产。
+**[!UICONTROL 输入关键字]**  — 您可以按名称搜索资产。搜索时，您输入的关键词是文件名的开头。 例如，键入“swimming”一词后，将在该文件夹中查找任何以这些字母开头的资产文件名。键入搜索词后，请务必按Enter键以查找资产。
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -349,4 +347,4 @@ AdobeDAM和WCM显示是否上传了主源视频。 但它们不会显示以下�
 
 **[!UICONTROL 发布状态]**  — 您可以根据发布状态筛选资产： **** Unpublishedor  **[!UICONTROL Published]**。如果未选择任何&#x200B;**[!UICONTROL 发布状态]**，则默认情况下，Experience Manager会搜索所有发布状态。
 
-![chlimage_1-248](assets/chlimage_1-247.png)
+![chlimage_1-247](assets/chlimage_1-247.png)
