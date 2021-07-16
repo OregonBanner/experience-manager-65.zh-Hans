@@ -13,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 配置，混合模式
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
-source-wordcount: '7838'
+source-wordcount: '7797'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Dynamic Media-Hybrid必须启用并配置以供使用。 根据您的用例，Dy
 
 >
 >
-[监控和维护Experience Manager实例](/help/sites-deploying/monitoring-and-maintaining.md)中介绍了这些参数。
+它们记录在[监视和维护您的Experience Manager实例](/help/sites-deploying/monitoring-and-maintaining.md)中。
 
 混合发布和交付是Dynamic Media新增的Adobe Experience Manager的核心功能。 混合发布允许您从云而不是Experience Manager发布节点交付Dynamic Media资产，例如图像、集和视频。
 
@@ -198,7 +198,7 @@ Dynamic Media-Hybrid必须启用并配置以供使用。 根据您的用例，Dy
 
 在Experience Manager中：
 
-* [externalizer](/help/sites-developing/externalizer.md)中的&#x200B;**self-domain**&#x200B;用于检索端口号和上下文路径。
+* [Externalizer](/help/sites-developing/externalizer.md)中的&#x200B;**self-domain**&#x200B;用于检索端口号和上下文路径。
 * 如果未配置&#x200B;**self-domain**，则从Jetty HTTP服务中检索端口号和上下文路径。
 
 在Experience ManagerQuickStart WAR部署中，无法派生端口号和上下文路径，因此必须配置&#x200B;**self-domain**。 有关如何配置&#x200B;**self-domain**&#x200B;的[外部器文档](/help/sites-developing/externalizer.md)。
@@ -212,7 +212,7 @@ Dynamic Media默认未启用。 但是，如果您之前已启用Dynamic Media�
 
 要在启用Dynamic Media后禁用它，请删除`-r dynamicmedia`运行模式标志。
 
-**要在启用Dynamic Media后将其禁用，请执行以下操作：**
+**禁用Dynamic Media:**
 
 1. 在命令行中，启动快速启动时，可以执行以下任一操作：
 
@@ -270,13 +270,13 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 
 1. 如果您还没有KeyStore文件和密码，请联系Adobe客户关怀团队，以获取该文件和密码。 此信息是配置的必要部分。 它会将密钥关联到您的帐户。
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用户]**。
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用户]**。
 
-1. 在“用户管理”页面上，导航到&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;用户，然后点按以打开。
+1. 在“用户管理”页面上，导航到&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;用户，然后选择以打开。
 
    ![dm复制](assets/dm-replication.png)
 
-1. 在“编辑Dynamic-media-replication的用户设置”页中，点按&#x200B;**[!UICONTROL KeyStore]**&#x200B;选项卡，然后单击&#x200B;**[!UICONTROL 创建KeyStore]**。
+1. 在Dynamic-media-replication的“编辑用户设置”页中，选择&#x200B;**[!UICONTROL Keystore]**&#x200B;选项卡，然后选择&#x200B;**[!UICONTROL Create KeyStore]**。
 
    ![dm-replication-keystore](assets/dm-replication-keystore.png)
 
@@ -290,23 +290,23 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 1. 在&#x200B;**[!UICONTROL 编辑Dynamic-media-replication的用户设置]**&#x200B;页面中，展开&#x200B;**从KeyStore文件添加私钥**&#x200B;区域，然后添加以下内容（请参阅下面的图像）：
 
    * 在&#x200B;**[!UICONTROL New Alias]**&#x200B;字段中，输入要在复制配置中稍后使用的别名的名称。 例如，您可以使用`replication`作为别名。
-   * 点按&#x200B;**[!UICONTROL KeyStore文件]**。 导航到通过Adobe提供给您的KeyStore文件，将其选中，然后点按&#x200B;**[!UICONTROL Open]**。
+   * 选择&#x200B;**[!UICONTROL KeyStore文件]**。 导航到按Adobe提供给您的KeyStore文件，选择它，然后选择&#x200B;**[!UICONTROL Open]**。
    * 在&#x200B;**[!UICONTROL KeyStore File Password]**&#x200B;字段中，输入KeyStore File密码。 此密码是您在步骤5中创建的KeyStore密码&#x200B;**不**，但是是在预配期间发送给您的欢迎电子邮件中提供的KeyStore文件密码Adobe。 如果您未收到KeyStore文件密码，请联系Adobe客户关怀团队。
    * 在&#x200B;**[!UICONTROL 私钥密码]**&#x200B;字段中，输入私钥密码（可以是上一步中提供的相同私钥密码）。 Adobe在预配期间向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请联系Adobe客户关怀。
    * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中，输入私钥别名。 例如，`*companyname*-alias`。 Adobe在预配期间向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户关怀。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
-1. 点按&#x200B;**[!UICONTROL 保存并关闭]**，以将更改保存到此用户。
+1. 选择&#x200B;**[!UICONTROL 保存并关闭]**&#x200B;以将更改保存到此用户。
 
    接下来，必须[配置复制代理](#configuring-the-replication-agent)。
 
 ### 配置复制代理 {#configuring-the-replication-agent}
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 创作代理]**。
-1. 在创作代理页面上，点按&#x200B;**[!UICONTROL Dynamic Media混合图像复制(s7delivery)]**。
-1. 点按&#x200B;**[!UICONTROL 编辑]**。
-1. 点按&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡，然后输入以下内容：
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 作者代理]**。
+1. 在创作代理页面上，选择&#x200B;**[!UICONTROL Dynamic Media混合图像复制(s7delivery)]**。
+1. 选择&#x200B;**[!UICONTROL 编辑]**。
+1. 选择&#x200B;**[!UICONTROL Settings]**&#x200B;选项卡，然后输入以下内容：
 
    * **[!UICONTROL 已启用]**  — 选中此复选框可启用复制代理。
    * **[!UICONTROL 区域]**  — 设置为相应的区域：北美洲、欧洲或亚洲
@@ -318,13 +318,13 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
 
-1. 点按&#x200B;**[!UICONTROL 确定]**。
+1. 选择&#x200B;**[!UICONTROL 确定]**。
 
 ### 验证Dynamic Media的复制代理 {#validating-the-replication-agent-for-dynamic-media}
 
 要验证Dynamic Media的复制代理，请执行以下操作：
 
-点按&#x200B;**[!UICONTROL 测试连接]**。 输出示例如下：
+选择&#x200B;**[!UICONTROL 测试连接]**。 输出示例如下：
 
 ```shell
 11.03.2016 10:57:55 - Transferring content for ReplicationAction{type=TEST, path[0]='/content/dam', time=1457722675402, userId='admin', revision='null'}
@@ -343,7 +343,7 @@ Replication test succeeded
 >[!NOTE]
 您还可以通过执行以下操作之一来检查：
 * 检查复制日志，以确保资产已复制。
-* 发布图像。 点按图像，在下拉菜单中选择&#x200B;**[!UICONTROL 查看器]**，然后选择查看器预设。 单击&#x200B;**[!UICONTROL URL]**。 要验证是否可以看到图像，请复制URL路径并将其粘贴到浏览器中。
+* 发布图像。 选择图像，在下拉菜单中选择&#x200B;**[!UICONTROL 查看器]**，然后选择查看器预设。 选择&#x200B;**[!UICONTROL URL]**。 要验证是否可以看到图像，请复制URL路径并将其粘贴到浏览器中。
 
 
 
@@ -435,14 +435,14 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. 导航到“用户管理”页面：
    `localhost:4502/libs/granite/security/content/useradmin.html`
-1. 在“用户管理”页面上，导航到`dynamic-media-replication`用户，然后点按以打开。
-1. 单击&#x200B;**[!UICONTROL KeyStore]**&#x200B;选项卡。 如果出现&#x200B;**[!UICONTROL Create KeyStore]**&#x200B;按钮，则必须重做之前[Setting up Authentication](#setting-up-authentication)下的步骤。
+1. 在“用户管理”页面上，导航到`dynamic-media-replication`用户，然后选择以打开。
+1. 选择&#x200B;**[!UICONTROL KeyStore]**&#x200B;选项卡。 如果出现&#x200B;**[!UICONTROL Create KeyStore]**&#x200B;按钮，则必须重做之前[Setting up Authentication](#setting-up-authentication)下的步骤。
 1. 如果必须重做KeyStore设置，则还必须再次[配置复制代理](/help/assets/config-dynamic.md#configuring-the-replication-agent)。
 
    重新配置s7delivery复制代理。
    `localhost:4502/etc/replication/agents.author/s7delivery.html`
 
-1. 点按&#x200B;**[!UICONTROL 测试连接]**&#x200B;以验证配置是否有效。
+1. 选择&#x200B;**[!UICONTROL 测试连接]**，以验证配置是否有效。
 
 #### 问题：发布代理使用SSL而不是OAuth {#problem-publish-agent-is-using-ssl-instead-of-oauth}
 
@@ -462,7 +462,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **解决方案：**
 
-1. 在Experience Manager中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+1. 在Experience Manager中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 
    `localhost:4502/crx/de/index.jsp`
 
@@ -473,7 +473,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
    `enableOauth=true`
 
-1. 在页面的左上角附近，点按&#x200B;**[!UICONTROL 全部保存]**。
+1. 在页面的左上角附近，选择&#x200B;**[!UICONTROL 全部保存]**。
 
 ### 测试配置 {#testing-your-configuration}
 
@@ -486,15 +486,15 @@ Adobe建议您对配置进行端到端测试。
 
 **要测试您的配置，请执行以下操作：**
 
-1. 上传图像资产。 （在Assets中，点按&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 文件]**，然后选择文件。）
+1. 上传图像资产。 （在Assets中，导航至&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 文件]**，然后选择文件。）
 1. 等待工作流完成。
-1. 发布图像资产。 （选择资产，然后点按&#x200B;**[!UICONTROL 快速发布]**。）
+1. 发布图像资产。 （选择资产并选择&#x200B;**[!UICONTROL 快速发布]**。）
 1. 通过打开图像并点按&#x200B;**[!UICONTROL 演绎版]**，导航到该图像的演绎版。
 
    ![chlimage_1-510](assets/chlimage_1-510.png)
 
 1. 选择任何动态演绎版。
-1. 要获取此资产的URL，请单击&#x200B;**[!UICONTROL URL]**。
+1. 要获取此资产的URL，请选择&#x200B;**[!UICONTROL URL]**。
 1. 导航到选定的URL并检查图像是否按预期运行。
 
 测试已交付资产的另一种方法是，在URL后附加req=exists。
@@ -508,10 +508,10 @@ Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分
 >[!NOTE]
 在设置Dynamic MediaCloud Services之前，请确保设置了您的发布实例。 在配置Dynamic MediaCloud Services之前，您还必须设置复制。
 
-要配置Dynamic MediaCloud Services:
+**要配置Dynamic MediaCloud Services:**
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置(Pre-6.3)]**。
-1. 在Dynamic Media配置浏览器页面的左窗格中，选择&#x200B;**[!UICONTROL 全局]**，然后点按&#x200B;**[!UICONTROL 创建]**。
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置(Pre-6.3)]**。
+1. 在“Dynamic Media配置浏览器”页面的左窗格中，选择&#x200B;**[!UICONTROL 全局]**，然后选择&#x200B;**[!UICONTROL 创建]**。
 1. 在&#x200B;**[!UICONTROL 创建Dynamic Media配置]**&#x200B;对话框的标题字段中，键入标题。
 1. 如果要为视频配置Dynamic Media,
 
@@ -519,8 +519,8 @@ Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分
    * 在&#x200B;**[!UICONTROL 视频服务URL]**&#x200B;字段中，输入Dynamic Media网关的视频服务URL。
 
 1. 如果要配置Dynamic Media以进行成像，请在&#x200B;**[!UICONTROL 图像服务URL]**&#x200B;字段中，输入Dynamic Media网关的图像服务URL。
-1. 点按&#x200B;**[!UICONTROL Save]**&#x200B;以返回到Dynamic Media配置浏览器页面。
-1. 要访问全局导航控制台，请点按Experience Manager徽标。
+1. 选择&#x200B;**[!UICONTROL Save]**&#x200B;以返回到Dynamic Media配置浏览器页面。
+1. 要访问全局导航控制台，请选择Experience Manager徽标。
 
 ## 配置视频报告 {#configuring-video-reporting}
 
@@ -548,7 +548,7 @@ Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分
 1. 构建包。
 1. 下载或共享Video Analytics预设包，以便能够与后续的新创作节点共享该预设包。
 
-### 在配置更多创作节点之前，安装Video Analytics预设包 {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### 在配置更多创作节点之前，请安装Video Analytics预设包 {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 确保在&#x200B;***配置Dynamic Media配置（6.3之前）之前完成此任务。***&#x200B;如果未能这样做，则会创建另一个未使用的报表包。 此外，即使视频报告继续正常运行，数据收集也未得到优化。
 
@@ -588,7 +588,7 @@ Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分
       ```
 
    * **通过Experience Manager中的视频报告工具检查Video Analytics预**
-设点按 **[!UICONTROL 工具]**  >  **[!UICONTROL 资产]**  >  **[!UICONTROL 视频报告]**
+设导航 **[!UICONTROL 到工具]**  >  **[!UICONTROL 资产]**  >  **[!UICONTROL 视频报告]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -605,7 +605,7 @@ Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分
 
    如果在配置Dynamic Media配置（6.3之前）服务之前运行视频报告，则也会显示此错误。
 
-### 视频报告配置疑难解答 {#troubleshooting-the-video-reporting-configuration}
+### 视频报告配置故障诊断 {#troubleshooting-the-video-reporting-configuration}
 
 * 在安装过程中，有时与Analytics API服务器的连接会超时。 安装会重试连接20次，但仍会失败。 出现这种情况时，日志文件会记录多个错误。 搜索 `SiteCatalystReportService`.
 * 如果不先安装Analytics预设包，则可能会创建新的报表包。
@@ -636,8 +636,8 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 
    `https://<*server*>:<*port*>/crx/de/index.jsp#/conf/global/settings/dam/dm/imageserver/`
 
-1. 点按&#x200B;**[!UICONTROL 复制]**&#x200B;选项卡。
-1. 点按&#x200B;**[!UICONTROL 复制]**。
+1. 选择&#x200B;**[!UICONTROL 复制]**&#x200B;选项卡。
+1. 选择&#x200B;**[!UICONTROL 复制]**。
 
 ## 复制查看器预设 {#replicating-viewer-presets}
 
@@ -645,9 +645,9 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 有关更多信息，请参阅[发布查看器预设](/help/assets/managing-viewer-presets.md#publishing-viewer-presets) 。
 
 >[!NOTE]
-默认情况下，当您选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示各种演绎版；当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示各种查看器预设。 您可以增加或减少可见的数量。 请参阅[增加显示](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[的图像预设数。增加显示](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)的查看器预设数。
+默认情况下，当您选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示各种演绎版；当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示各种查看器预设。 您可以增加或减少可见的数量。 请参阅[增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
 
-## 筛选复制资产 {#filtering-assets-for-replication}
+## 筛选要复制的资产 {#filtering-assets-for-replication}
 
 在非Dynamic Media部署中，您会将&#x200B;*所有*&#x200B;资产（包括图像和视频）从Experience Manager创作环境复制到Experience Manager发布节点。 此工作流是必需的，因为Experience Manager发布服务器也会交付资产。
 
@@ -661,7 +661,7 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 
 过滤器为您提供了一种方法来排除&#x200B;**&#x200B;资产，使其不能复制到Experience Manager发布节点。
 
-### 使用默认资产过滤器进行复制 {#using-default-asset-filters-for-replication}
+### 使用默认资产筛选器进行复制 {#using-default-asset-filters-for-replication}
 
 如果您在生产&#x200B;*或*(2)图像和视频中使用Dynamic Media进行(1)成像，则可以按原样使用Adobe提供的默认过滤器。 默认情况下，以下过滤器处于活动状态：
 
@@ -670,7 +670,7 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
   <tr>
    <td> </td>
    <td><strong>筛选器</strong></td>
-   <td><strong>Mime 类型</strong></td>
+   <td><strong>Mime类型</strong></td>
    <td><strong>演绎版</strong></td>
   </tr>
   <tr>
@@ -713,16 +713,16 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 
 如果您使用Dynamic Media进行纯视频，请按照以下步骤设置资产过滤器以进行复制：
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 创作代理]**。
-1. 在“创作代理”页面上，点按&#x200B;**[!UICONTROL 默认代理（发布）]**。
-1. 点按&#x200B;**[!UICONTROL 编辑]**。
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 作者代理]**。
+1. 在“创作代理”页面上，选择&#x200B;**[!UICONTROL 默认代理（发布）]**。
+1. 选择&#x200B;**[!UICONTROL 编辑]**。
 1. 在&#x200B;**[!UICONTROL 代理设置]**&#x200B;对话框的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，选中&#x200B;**[!UICONTROL 启用]**&#x200B;以打开代理。
-1. 点按&#x200B;**[!UICONTROL 确定]**。
-1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+1. 选择&#x200B;**[!UICONTROL 确定]**。
+1. 在Experience Manager中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左侧文件夹树中，导航到`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
-1. 找到&#x200B;**[!UICONTROL filter-video]**，右键单击它并选择&#x200B;**[!UICONTROL Copy]**。
+1. 找到&#x200B;**[!UICONTROL filter-video]**，右键单击它，然后选择&#x200B;**[!UICONTROL Copy]**。
 1. 在左侧文件夹树中，导航到`/etc/replication/agents.author/publish`
-1. 找到&#x200B;**[!UICONTROL jcr:content]**，右键单击它并选择&#x200B;**[!UICONTROL 粘贴]**。
+1. 找到`jcr:content`，右键单击它，然后选择&#x200B;**[!UICONTROL 粘贴]**。
 
 这些步骤设置Experience Manager发布实例以交付播放所需的视频海报图像和视频元数据，而视频本身则由Dynamic MediaCloud Service交付。 过滤器还会从复制中排除原始视频和静态缩略图演绎版，这些演绎版在发布实例中不需要。
 
@@ -730,43 +730,41 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 
 如果您在非生产部署中使用Dynamic Media进行成像，请按照以下步骤设置资产过滤器以进行复制：
 
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 创作代理]**。
-1. 在“创作代理”页面上，点按&#x200B;**[!UICONTROL 默认代理（发布）]**。
-1. 点按&#x200B;**[!UICONTROL 编辑]**。
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]** > **[!UICONTROL 作者代理]**。
+1. 在“创作代理”页面上，选择&#x200B;**[!UICONTROL 默认代理（发布）]**。
+1. 选择&#x200B;**[!UICONTROL 编辑]**。
 1. 在&#x200B;**[!UICONTROL 代理设置]**&#x200B;对话框的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，选中&#x200B;**[!UICONTROL 启用]**&#x200B;以打开代理。
-1. 点按&#x200B;**[!UICONTROL 确定]**。
-1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+1. 选择&#x200B;**[!UICONTROL 确定]**。
+1. 在Experience Manager中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左侧文件夹树中，导航到`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`
 
    ![image-2018-01-16-10-22-40-410](assets/image-2018-01-16-10-22-40-410.png)
 
-1. 找到&#x200B;**[!UICONTROL filter-images]**，右键单击它并选择&#x200B;**[!UICONTROL Copy]**。
+1. 找到&#x200B;**[!UICONTROL filter-images]**，右键单击它，然后选择&#x200B;**[!UICONTROL 复制]**。
 1. 在左侧文件夹树中，导航到`/etc/replication/agents.author/publish`
-1. 找到&#x200B;**[!UICONTROL jcr:content]**，右键单击它并选择&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 创建节点]**。 输入类型`nt:unstructured`的名称`damRenditionFilters`。
-1. 找到`damRenditionFilters`，右键单击它并选择&#x200B;**[!UICONTROL 粘贴]**。
+1. 找到`jcr:content`，右键单击它，然后转到&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 创建节点]**。 输入类型`nt:unstructured`的名称`damRenditionFilters`。
+1. 找到`damRenditionFilters`，右键单击它，然后选择&#x200B;**[!UICONTROL 粘贴]**。
 
 这些步骤设置Experience Manager发布实例，以将图像交付到非生产环境。 过滤器还会从复制中排除原始图像和静态演绎版，这在发布实例中是不需要的。
 
 >[!NOTE]
 如果作者中有许多不同的过滤器，则每个代理需要为其分配一个不同的用户。 Granite代码强制按用户使用一个过滤器模型。 对于每个过滤器设置，始终具有不同的用户。
-您是否在服务器上使用多个过滤器？ 例如，一个用于要发布的复制的过滤器，另一个用于s7delivery的过滤器。 如果是，则必须确保在&#x200B;**jcr:content**&#x200B;节点中为这两个过滤器分配不同的&#x200B;**userId**。 请参阅下图：
+您是否在服务器上使用多个过滤器？ 例如，一个用于要发布的复制的过滤器，另一个用于s7delivery的过滤器。 如果是，则必须确保在`jcr:content`节点中为这两个过滤器分配不同的&#x200B;**userId**。 请参阅下图：
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
-### 为复制自定义资产过滤器 {#customizing-asset-filters-for-replication}
+### 自定义用于复制的资产过滤器（可选） {#customizing-asset-filters-for-replication}
 
-要（可选）为复制自定义资产过滤器，请执行以下操作：
-
-1. 在Experience Manager中，点按Experience Manager徽标以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在左侧文件夹树中，导航到`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`以查看过滤器。
 
    ![chlimage_1-511](assets/chlimage_1-511.png)
 
 1. 要为过滤器定义Mime类型，可以按如下方式找到Mime类型：
 
-   在左边栏中，展开`content > dam > <locate_your_asset> >  jcr:content > metadata`，然后在表中找到&#x200B;**[!UICONTROL dc:format]**。
+   在左边栏中，展开`content > dam > <locate_your_asset> >  jcr:content > metadata`，然后在表中，找到`dc:format`。
 
-   下图是资产dc:format路径的示例。
+   下图是资产`dc:format`路径的示例。
 
    ![chlimage_1-512](assets/chlimage_1-512.png)
 
@@ -780,36 +778,21 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 
    可用于筛选复制字符的字符包括：
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>要使用的字符</strong></td>
-   <td><strong>如何筛选用于复制的资产</strong></td>
-  </tr>
-  <tr>
-   <td>*</td>
-   <td>通配符<br /> </td>
-  </tr>
-  <tr>
-   <td>+</td>
-   <td>包括用于复制的资产。</td>
-  </tr>
-  <tr>
-   <td>-</td>
-   <td>从复制中排除资产。</td>
-  </tr>
- </tbody>
-</table>
+   | 要使用的字符 | 如何筛选用于复制的资产 |
+   | --- | --- |
+   | `*` | 通配符 |
+   | `+` | 包括用于复制的资产 |
+   | `-` | 从复制中排除资产 |
 
-导航至 `content/dam/<locate your asset>/jcr:content/renditions`.
+   导航至 `content/dam/<locate your asset>/jcr:content/renditions`.
 
-下图是资产演绎版的示例。
+   下图是资产演绎版的示例。
 
-![chlimage_1-513](assets/chlimage_1-4.png)
+   ![chlimage_1-513](assets/chlimage_1-4.png)
 
-使用上例，如果您只想复制PTIFF(Pyramid TIFF)，则可以输入`+cqdam,*`，其中包含以`cqdam`开头的所有演绎版。 在示例中，该呈现版本为`cqdam.pyramid.tiff`。
+   使用上例，如果您只想复制PTIFF(Pyramid TIFF)，则可以输入`+cqdam,*`，其中包含以`cqdam`开头的所有演绎版。 在示例中，该呈现版本为`cqdam.pyramid.tiff`。
 
-如果只想复制原件，则输入`+original`。
+   如果只想复制原件，则输入`+original`。
 
 ## 配置Dynamic Media图像服务器设置 {#configuring-dynamic-media-image-server-settings}
 
@@ -822,62 +805,31 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 
 要配置Dynamic Media图像服务器设置，请执行以下操作：
 
-1. 在Experience Manager的左上角，点按&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;以访问全局导航控制台，然后点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
-1. 在Adobe Experience Manager Web控制台配置页面上，点按&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL Configuration]** ，以列出Experience Manager中当前运行的所有包。
+1. 在Experience Manager的左上角，选择&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
+1. 在“Adobe Experience Manager Web控制台配置”页面上，转到&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL Configuration]** ，以列出Experience Manager中当前运行的所有包。
 
    Dynamic Media交付服务器位于列表中的以下名称下：
 
    * `Adobe CQ Scene7 ImageServer`
    * `Adobe CQ Scene7 PlatformServer`
 
-1. 在包列表的Adobe CQ Scene7 ImageServer右侧，点按&#x200B;**[!UICONTROL 编辑]**&#x200B;图标。
+1. 在包列表的Adobe CQ Scene7 ImageServer右侧，选择&#x200B;**[!UICONTROL 编辑]**&#x200B;图标。
 1. 在Adobe CQ Scene7 ImageServer对话框中，设置以下配置值：
 
    >[!NOTE]
    通常，无需更改默认值。 但是，如果确实更改了默认值，则必须重新启动包才能使更改生效。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>属性</strong></td>
-   <td><strong>默认值</strong></td>
-   <td><strong>描述</strong></td>
-  </tr>
-  <tr>
-   <td>TcpPort.name</td>
-   <td><code><em>empty</em></code></td>
-   <td>用于与ImageServer进程通信的端口号。 默认情况下，会自动检测空闲端口。</td>
-  </tr>
-  <tr>
-   <td>AllowRemoteAccess.name</td>
-   <td><code><em>empty</em></code></td>
-   <td><p>允许或禁止远程访问ImageServer进程。 如果为false，则图像服务器仅监听本地主机。</p> <p>指向本地主机的默认外部器设置必须指定特定VM实例的实际域或IP地址。 原因是本地主机指向虚拟机的父系统。</p> <p>VM的域或IP地址必须具有主机文件条目，以便它能够解析自身。</p> </td>
-  </tr>
-  <tr>
-   <td>MaxRenderRgnPixels</td>
-   <td>16兆帕</td>
-   <td>呈现的最大大小（以百万像素为单位）。</td>
-  </tr>
-  <tr>
-   <td>MaxMessageSize</td>
-   <td>16 MB</td>
-   <td>已传送的最大消息大小(MB)。</td>
-  </tr>
-  <tr>
-   <td>RandomAccessUrlTimeout</td>
-   <td>20</td>
-   <td>超时值，指图像服务器等待JCR响应范围内的拼贴请求的时长（以秒为单位）。</td>
-  </tr>
-  <tr>
-   <td>WorkerThreads</td>
-   <td>10</td>
-   <td>工作线程数。</td>
-  </tr>
- </tbody>
-</table>
+   | 属性 | 默认值 | 描述 |
+   | --- | --- | --- |
+   | `TcpPort.name` | *`empty`* | 用于与ImageServer进程通信的端口号。 默认情况下，会自动检测空闲端口。 |
+   | `AllowRemoteAccess.name` | *`empty`* | 允许或禁止远程访问ImageServer进程。 如果为false，则图像服务器仅监听本地主机。<br> 指向本地主机的默认外部器设置必须指定特定VM实例的实际域或IP地址。原因是本地主机指向虚拟机的父系统。<br>VM的域或IP地址必须具有主机文件条目，以便它能够解析自身。 |
+   | `MaxRenderRgnPixels` | 16兆帕 | 呈现的最大大小（以百万像素为单位）。 |
+   | `MaxMessageSize` | 16 MB | 已传送的最大消息大小(MB)。 |
+   | `RandomAccessUrlTimeout` | 20 | 超时值，指图像服务器等待JCR响应范围内的拼贴请求的时长（以秒为单位）。 |
+   | `WorkerThreads` | 10 | 工作线程数。 |
 
-1. 点按&#x200B;**[!UICONTROL 保存]**。
-1. 在包列表的Adobe CQ Scene7 PlatformServer右侧，点按&#x200B;**[!UICONTROL 编辑]**&#x200B;图标。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
+1. 在包列表的Adobe CQ Scene7 PlatformServer右侧，选择&#x200B;**[!UICONTROL 编辑]**&#x200B;图标。
 1. 在Adobe CQ Scene7 PlatformServer对话框中，设置以下默认值选项：
 
    >[!NOTE]
@@ -902,68 +854,25 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 
 您可以通过输入新值来更改属性的值（如下表所述）。
 
-更改完默认清单后，点按页面左上角的&#x200B;**[!UICONTROL 全部保存]**。
+更改完默认清单后，在页面的左上角，选择&#x200B;**[!UICONTROL Save All]**。
 
-请确保点按&#x200B;**[!UICONTROL 访问控制]**&#x200B;选项卡（位于“属性”选项卡的右侧），然后将每个用户和dynamic-media-replication用户的访问控制权限设置为`jcr:read`。
+确保选择&#x200B;**[!UICONTROL 访问控制]**&#x200B;选项卡（位于“属性”选项卡的右侧），然后为每个用户和dynamic-media-replication用户将访问控制权限设置为`jcr:read`。
 
 ![在CRXDE Lite中配置图像服务器并设置访问控制选项卡](assets/configimageservercrxdeliteaccesscontroltab.png)
 
 清单设置表及其默认值：
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>属性</strong></td>
-   <td><strong>默认值</strong></td>
-   <td><strong>描述</strong></td>
-  </tr>
-  <tr>
-   <td>bkgcolor</td>
-   <td>FFFFFF</td>
-   <td><p>默认背景颜色。 用于填充不包含实际图像数据的回复图像任何区域的RGB值。</p> <p>另请参阅图像提供API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api">BkgColor</a>。</p> </td>
-  </tr>
-  <tr>
-   <td>defaultpix</td>
-   <td>三十万零三百</td>
-   <td><p>默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，则服务器将限制返回图像不大于此宽度和高度。</p> <p>指定为两个整数数字，0或更大，用逗号分隔。 宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。 不适用于嵌套/嵌入的请求。</p> <p>另请参阅图像服务API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api">DefaultPix</a>。</p> <p>但是，通常情况下，您会使用查看器预设或图像预设来交付资产。 Defaultpix仅适用于未使用查看器预设或图像预设的资产。</p> </td>
-  </tr>
-  <tr>
-   <td>defaulthumbpix</td>
-   <td>十万零一百</td>
-   <td><p>默认缩略图大小。 对缩略图请求(req=tmb)使用的是：DefaultPix，而不是属性：:DefaultPix。</p> <p>服务器将限制返回图像不得大于此宽度和高度。 如果缩略图请求(req=tmb)未明确指定大小，并且未使用“wid=”、“hei=”或“scl=”显式指定视图大小，则此操作为true。</p> <p>指定为两个整数数字，0或更大，用逗号分隔。 宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。 </p> <p>不适用于嵌套/嵌入的请求。</p> <p>另请参阅图像服务API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api">DefaultThumbPix</a>。 </p> </td>
-  </tr>
-  <tr>
-   <td>过期</td>
-   <td>36000000</td>
-   <td><p>默认的客户端缓存生存时间。 提供默认过期时间间隔，以防特定目录记录不包含有效的目录：：过期值。</p> <p>实数，0或更大。 自生成回复数据后到期的毫秒数。 设置为0时，将始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要尽早清除缓存，请联系客户关怀团队。</p> <p>另请参阅图像提供API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html">过期</a>。</p> </td>
-  </tr>
-  <tr>
-   <td>jpegquality</td>
-   <td>80</td>
-   <td><p>默认JPEG编码属性。 指定JPEG回复图像的默认属性。</p> <p>整数和标记，以逗号分隔。 第一个值在1.100范围内，用于定义质量。 对于正常行为，第二个值可以为0，或者为1，以禁用JPEG编码器使用的RGB色度下采样。</p> <p>另请参阅图像提供API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api">JpegQuality</a>。</p> </td>
-  </tr>
-  <tr>
-   <td>maxpix</td>
-   <td>二十万零两百</td>
-   <td><p>回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。</p> <p>如果请求导致返回图像的宽度或高度大于属性：:MaxPix，则服务器会返回错误。</p> <p>另请参阅图像服务API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api">MaxPix</a>。</p> </td>
-  </tr>
-  <tr>
-   <td>resmode</td>
-   <td>SHARP2</td>
-   <td><p>默认重新取样模式。 指定用于缩放图像数据的默认重新取样属性和插值属性。</p> <p>在请求中未指定resMode=时使用。</p> <p>允许的值包括BILIN、BICUB或SHARP2。</p> <p>枚举。 对于bilin，设置为2；对于bicub，设置为3；对于sharp2插值模式，设置为4。 使用sharp2可获得最佳结果。</p> <p>另请参阅图像服务API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api">ResMode</a>。</p> </td>
-  </tr>
-  <tr>
-   <td>分辨率</td>
-   <td>72</td>
-   <td><p>默认对象分辨率。 提供默认对象分辨率，以防特定目录记录不包含有效的目录：:Resolution值。</p> <p>实数，大于0。 通常以每英寸像素数表示，但也可以以其他单位表示，如每米像素数。</p> <p>另请参阅图像提供API中的<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api">分辨率</a>。</p> </td>
-  </tr>
-  <tr>
-   <td>thumbnaitime</td>
-   <td>1%、11%、21%、31%、41%、51%、61%、71%、81%、91%</td>
-   <td>这些值表示视频播放时间的快照，并被传递到<a href="https://www.encoding.com/">encoding.com</a>。 有关更多信息，请参阅<a href="/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode">关于视频缩略图</a>。</td>
-  </tr>
- </tbody>
-</table>
+| 属性 | 默认值 | 描述 |
+| --- | --- | --- |
+| `bkgcolor` | `FFFFFF` | 默认背景颜色。 用于填充不包含实际图像数据的回复图像任何区域的RGB值。 另请参阅图像提供API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
+| `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，则服务器将限制返回图像不大于此宽度和高度。<br>指定为两个整数数字，0或更大，用逗号分隔。宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。 不适用于嵌套/嵌入的请求。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 阅图像提供API中的DefaultPixin 。<br>但是，通常情况下，您会使用查看器预设或图像预设来交付资产。Defaultpix仅适用于未使用查看器预设或图像预设的资产。 |
+| `defaultthumbpix` | `100,100` | 默认缩略图大小。 对缩略图请求(`req=tmb`)使用的是：DefaultPix，而不是属性：:DefaultPix。<br>服务器将限制返回图像不得大于此宽度和高度。如果缩略图请求(`req=tmb`)未明确指定大小，并且未使用`wid=`、`hei=`或`scl=`显式指定视图大小，则此操作为true。<br>指定为两个整数数字，0或更大，用逗号分隔。宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 阅图像提供API中的DefaultThumbPixin 。 |
+| `expiration` | `36000000` | 默认的客户端缓存生存时间。 提供默认过期时间间隔，以防特定目录记录不包含有效的目录：：过期值。<br>实数，0或更大。自生成回复数据后到期的毫秒数。 设置为0时，将始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要尽早清除缓存，请联系客户关怀团队。<br>另请参阅 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 图像提供API中的过期日期。 |
+| `jpegquality` | `80` | 默认JPEG编码属性。 指定JPEG回复图像的默认属性。<br>整数和标记，以逗号分隔。第一个值在1.100范围内，用于定义质量。 对于正常行为，第二个值可以为0，或者为1，以禁用JPEG编码器使用的RGB色度下采样。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 阅图像提供API中的JpegQualitie 。 |
+| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致返回图像的宽度或高度大于属性：:MaxPix，则服务器会返回错误。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api) 阅图像提供API中的MaxPixin 。 |
+| `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样属性和插值属性。<br>在请求 `resMode=` 中未指定时使用。<br>允许的值 `BILIN`包括 `BICUB`、或 `SHARP2`。<br>枚举。对于`bilin`，设置为2；对于`bicub`，设置为3；对于`sharp2`插值模式，设置为4。 使用`sharp2`获取最佳结果。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 阅图像提供API中的ResMode 。 |
+| `resolution` | `72` | 默认对象分辨率。 提供默认对象分辨率，以防特定目录记录不包含有效的目录：:Resolution值。<br>实数，大于0。通常以每英寸像素数表示，但也可以以其他单位表示，如每米像素数。<br>另请参阅 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) 图像提供API中的分辨率。 |
+| `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 这些值表示视频播放时间的快照，并被传递到[encoding.com](https://www.encoding.com/)。 有关更多信息，请参阅[关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)。 |
 
 ## 配置Dynamic Media色彩管理 {#configuring-dynamic-media-color-management}
 
@@ -1007,11 +916,11 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
-1. 通过滚动到&#x200B;**[!UICONTROL Properties]**&#x200B;选项卡的底部来添加颜色校正属性。 手动输入属性名称、类型和值，下表对此进行了说明。 在输入值后，点按&#x200B;**[!UICONTROL 添加]**，然后点按&#x200B;**[!UICONTROL 保存全部]**&#x200B;以保存您的值。
+1. 通过滚动到&#x200B;**[!UICONTROL Properties]**&#x200B;选项卡的底部来添加颜色校正属性。 手动输入属性名称、类型和值，下表对此进行了说明。 在输入值后，选择&#x200B;**[!UICONTROL Add]**，然后选择&#x200B;**[!UICONTROL Save All]**&#x200B;以保存值。
 
    颜色校正属性在&#x200B;**颜色校正属性**&#x200B;表中有介绍。 可以分配给颜色校正属性的值位于&#x200B;**颜色配置文件**&#x200B;表中。
 
-   例如，在&#x200B;**[!UICONTROL 名称]**&#x200B;中，添加`iccprofilecmyk`，选择&#x200B;**[!UICONTROL 类型]** `String`，并将`WebCoated`添加为&#x200B;**[!UICONTROL 值]**。 然后点按&#x200B;**[!UICONTROL 添加]**，然后点按&#x200B;**[!UICONTROL 保存全部]**&#x200B;以保存您的值。
+   例如，在&#x200B;**[!UICONTROL 名称]**&#x200B;中，添加`iccprofilecmyk`，选择&#x200B;**[!UICONTROL 类型]** `String`，并将`WebCoated`添加为&#x200B;**[!UICONTROL 值]**。 然后，选择&#x200B;**[!UICONTROL Add]**，然后选择&#x200B;**[!UICONTROL Save All]**&#x200B;以保存您的值。
 
    ![chlimage_1-515](assets/chlimage_1-515.png)
 
@@ -1259,7 +1168,7 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
  </tbody>
 </table>
 
-1. 点按&#x200B;**[!UICONTROL 保存全部]**。
+1. 选择&#x200B;**[!UICONTROL 全部保存]**。
 
 例如，您可以将&#x200B;**[!UICONTROL iccprofilergb]**&#x200B;设置为`sRGB`，将&#x200B;**[!UICONTROL iccprofilecmyk]**&#x200B;设置为&#x200B;**[!UICONTROL WebCoated]**。
 
