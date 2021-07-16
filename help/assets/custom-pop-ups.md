@@ -12,16 +12,16 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: 查看器
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1088'
 ht-degree: 2%
 
 ---
 
 # 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
-默认的概览用于电子商务体验，其中会显示一个弹出窗口，其中包含产品信息以促进购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据查看器，用户可以通过此功能点按热点、缩略图图像或图像映射来查看信息或相关内容。
+默认的概览用于电子商务体验，其中会显示一个弹出窗口，其中包含产品信息以促进购买。 但是，您可以触发要在弹出窗口中显示的自定义内容。 根据查看器的不同，此功能允许用户在热点、缩略图图像或图像映射上进行选择，以查看信息或相关内容。
 
 Dynamic Media中的以下查看器支持快速查看：
 
