@@ -6,8 +6,8 @@ audience: end-user
 user-guide-title: AEM 6.5经典UI创作用户指南
 user-guide-description: 本指南介绍在经典用户界面中在AEM中创作的概念。
 feature: 创作
-role: Business Practitioner
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+role: User
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 84%
