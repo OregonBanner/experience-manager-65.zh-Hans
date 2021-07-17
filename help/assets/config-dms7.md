@@ -9,7 +9,7 @@ docset: aem65
 role: User, Admin
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+source-git-commit: 752eacca9d29b272c040b48c35e4717b13e34b12
 workflow-type: tm+mt
 source-wordcount: '6160'
 ht-degree: 4%
