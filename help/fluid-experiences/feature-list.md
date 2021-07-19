@@ -4,10 +4,10 @@ description: 流式体验功能列表
 index: n
 feature: 创作
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 >
 >AEM Fluid Experiences是AEM功能的子集。 这些表中链接到的功能可能包括AEM中包含的其他功能，但不包括AEM Fluid Experiences中包含的其他功能。
 
-## 存储库功能{#repository-features}
+## 存储库功能 {#repository-features}
 
 |  |
 |---|
@@ -43,7 +43,7 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [重复检测](/help/assets/duplicate-detection.md) |
 | [智能标记](/help/assets/enhanced-smart-tags.md) |
 
-## 访问、API和交付功能{#access-api-and-delivery-features}
+## 访问、API和交付功能 {#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -56,7 +56,7 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
-## 管理和集成功能{#admin-and-integration-features}
+## 管理和集成功能 {#admin-and-integration-features}
 
 |  |
 |---|
@@ -72,7 +72,7 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [工作流](/help/sites-administering/workflows-starting.md) |
 | 连接（云服务） |
 
-## Analytics和个性化{#analytics-and-personalization}
+## 分析和个性化 {#analytics-and-personalization}
 
 |  |
 |---|
