@@ -7,9 +7,9 @@ solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: 协作，Dynamic Media Classic
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 0%
    * 了解如何使用Dynamic Media的裁剪魔力。
    * 利用免费审核，从而从Dynamic Media Classic中获得更多价值。
    * 了解Dynamic Media Classic的新用户界面。
-   * 会见Adobe Experience Cloud客户成功经理Georgia Myers。
+   * 会见`Georgia Myers`,Adobe Experience Cloud客户成功经理。
 
 * **[2020年1月，第1期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
@@ -85,7 +85,7 @@ ht-degree: 0%
    * 强大的新安全功能。
    * Adobe的准备情况，让您的假日季节很成功。
    * 与您的同事共享新闻稿，以培养团队专业知识。
-   * 请见Dynamic Media高级产品经理Apoorva Gupta。
+   * 会见Dynamic Media高级产品经理`Apoorva Gupta`。
 
 * **[2019年10月，第10期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**
 
@@ -95,7 +95,7 @@ ht-degree: 0%
    * 提供高质量图像和视频时的颌骨折结果的提示信息图。
    * 一篇CMSwire文章，可帮助您了解如何更新富媒体策略以满足当今客户的期望。
    * 访问技能培养系列中有关Dynamic Media的按需网络研讨会。
-   * 会见Adobe Experience Manager网站可靠性工程部经理Nick Peters。
+   * 满足Adobe Experience Manager站点可靠性工程部经理`Nick Peters`的要求。
    * 在Experience League中加快Dynamic Media和Dynamic Media Classic的运行速度。
 
 * **[2019年9月，09期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**
@@ -117,7 +117,7 @@ ht-degree: 0%
    * 了解网络研讨会系列，旨在帮助您快速了解Adobe Experience Manager Assets和Dynamic Media。
    * 开始您的旅程，从Dynamic Media获取Experience League价值。
    * 今年9月将推出一款功能强大的集成，让您能够分析访客与富媒体的交互方式。
-   * 会见Dynamic Media技术支持部的PieterJan Pieper。
+   * 满足`PieterJan Pieper`,Dynamic Media技术支持wiz。
 
 * **[2019年7月，07期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
 
@@ -128,7 +128,7 @@ ht-degree: 0%
    * 下一站将观看信息丰富的Adobe内幕浏览。
    * 在Adobe Experience Manager Assets(Adobe Experience Manager Assets)中拥有Dynamic Media时，可提供令人兴奋的功能。
    * 将360度视频和自定义视频缩略图添加到您的网站。
-   * 在Experience Manager资产中，与Dynamic Media的首席解决方案顾问Andrew Hathaway会面。
+   * 会见`Andrew Hathaway`,Dynamic MediaExperience Manager资产的主要解决方案顾问。
 
 * **[2019年6月，06期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
 
@@ -139,7 +139,7 @@ ht-degree: 0%
    * 进一步了解即将召开的Adobe内幕浏览。
    * 了解如何保护您的数字资产免遭盗用。
    * 了解AI驱动的图像智能裁剪。
-   * 与Alex Thiers会面，Alex Thiers是Dynamic Media和Dynamic Media Classic中众多伟大功能和创新背后的推动力之一。
+   * 会见`Alex Thiers`，这是Dynamic Media和Dynamic Media Classic中众多伟大功能和创新背后的驱动力之一。
 
 * **[2019年5月，05期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**
 
