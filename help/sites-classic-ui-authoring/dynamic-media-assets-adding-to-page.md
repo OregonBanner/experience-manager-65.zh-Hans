@@ -1,19 +1,19 @@
 ---
-title: 将 Dynamic Media 资产添加到页面
+title: 将Dynamic Media资产添加到页面
 description: 要将Dynamic Media功能添加到您在网站上使用的资产中，您可以直接在页面上添加Dynamic Media或交互式媒体组件。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '1668'
-ht-degree: 32%
+ht-degree: 30%
 
 ---
 
-# 将 Dynamic Media 资产添加到页面{#adding-dynamic-media-assets-to-pages}
+# 将Dynamic Media资产添加到页面{#adding-dynamic-media-assets-to-pages}
 
 要将Dynamic Media功能添加到您在网站上使用的资产中，您可以直接在页面上添加&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件。 进入&#x200B;**[!UICONTROL 设计]**&#x200B;模式并启用Dynamic Media组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic Media和交互式媒体组件是智能的 — 它们知道您添加的是图像还是视频，可用的选项会相应地发生更改。
 
@@ -23,14 +23,16 @@ ht-degree: 32%
 >
 >传送横幅可以使用现成的图像映射功能。
 
-## 将Dynamic Media组件添加到页面{#adding-a-dynamic-media-component-to-a-page}
+## 将Dynamic Media组件添加到页面 {#adding-a-dynamic-media-component-to-a-page}
 
 将[!UICONTROL Dynamic Media]或[!UICONTROL 交互式媒体]组件添加到页面与将组件添加到任何页面相同。 以下各节详细介绍了[!UICONTROL Dynamic Media]和[!UICONTROL Interactive Media]组件。
 
 要将 Dynamic Media 组件/查看器添加到页面，请执行以下操作：
 
 1. 在Experience Manager中，打开要添加Dynamic Media组件的页面。
-1. 如果没有可用的Dynamic Media组件，请单击[!UICONTROL Sidekick]中的标尺以进入&#x200B;**[!UICONTROL Design]**&#x200B;模式，单击&#x200B;**[!UICONTROL Edit]** parsys，然后选择&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;以使Dynamic Media组件可用。
+1. 如果没有可用的Dynamic Media组件，请在[!UICONTROL Sidekick]中选择标尺以进入&#x200B;**[!UICONTROL 设计]**&#x200B;模式。
+1. 选择&#x200B;**[!UICONTROL Edit]** parsys。
+1. 选择&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;以使Dynamic Media组件可用。
 
    >[!NOTE]
    >
@@ -38,8 +40,9 @@ ht-degree: 32%
 
 1. 通过单击[!UICONTROL Sidekick]中的铅笔图标，返回到&#x200B;**[!UICONTROL 编辑]**&#x200B;模式。
 1. 将&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;或&#x200B;**[!UICONTROL 交互式媒体]**&#x200B;组件从Sidekick中的&#x200B;**[!UICONTROL 其他]**&#x200B;组拖动到所需位置的页面上。
-1. 单击&#x200B;**[!UICONTROL 编辑]**&#x200B;以便组件打开。
-1. [](#dynamic-media-component)根据需要编辑该组件，然后单击&#x200B;**[!UICONTROL 确定]**&#x200B;以保存更改。
+1. 选择&#x200B;**[!UICONTROL 编辑]**&#x200B;以便组件打开。
+1. [根据需要](#dynamic-media-component) 编辑组件。
+1. 选择&#x200B;**[!UICONTROL OK]**&#x200B;以保存更改。
 
 ## Dynamic Media 组件 {#dynamic-media-components}
 
@@ -112,7 +115,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 **[!UICONTROL 宽度和高度]**  — 如果希望图像具有固定大小，请输入以像素为单位的值。将这两个值留空会使资产成为自适应资产。
 
-#### 使用视频{#when-working-with-video}时
+#### 使用视频时 {#when-working-with-video}
 
 使用&#x200B;**[!UICONTROL Dynamic Media]**&#x200B;组件将动态视频添加到您的网页。 编辑组件时，您可以选择使用预定义的视频查看器预设来在页面上播放视频。
 
@@ -132,7 +135,7 @@ Dynamic Media组件是智能的 — 根据您添加的是图像还是视频，�
 
 **[!UICONTROL 宽度和高度]**  — 如果您希望视频具有固定大小，请输入以像素为单位的值。将这两个值留空会使视频成为自适应资产。
 
-#### 如何安全传输视频 {#how-to-delivery-secure-video}
+#### 提供安全视频 {#how-to-delivery-secure-video}
 
 在Experience Manager6.2中，安装[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)时，您可以控制是通过安全SSL连接(HTTPS)还是不安全连接(HTTP)来传送视频。 默认情况下，视频传输协议会自动继承嵌入式网页的协议。如果网页通过 HTTPS 加载，则视频也会通过 HTTPS 进行传输。反之，如果网页是HTTP，则视频会通过HTTP传送。 通常，此默认行为是正常的，无需进行任何配置更改。 但是，您可以覆盖此默认行为。 将`VideoPlayer.ssl=on`附加到URL路径的末尾或嵌入代码片段中其他查看器配置参数的列表。 任一操作都会强制确保视频传输安全。
 
