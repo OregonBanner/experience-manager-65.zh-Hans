@@ -1,5 +1,5 @@
 ---
-title: HTTP2内容交付
+title: HTTP2 内容交付
 description: HTTP/2改进了浏览器和服务器的通信方式，允许更快地传输信息，同时降低所需的处理能力。
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 发布，配置
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
-# HTTP/2内容交付 {#http-delivery-of-content}
+# HTTP/2 内容交付 {#http-delivery-of-content}
 
 Adobe 很高兴地宣布推出 HTTP/2 内容交付功能，这意味着性能将全面提升。
 
