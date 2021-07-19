@@ -1,6 +1,6 @@
 ---
-title: 在网页上嵌入Dynamic Media视频或图像查看器
-description: 了解如何在网页上嵌入Dynamic Media视频或图像
+title: 在网页上嵌入Dynamic Media视频、图像查看器或维度查看器
+description: 了解如何在网页上嵌入Dynamic Media视频、图像或3D图像
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,10 +10,10 @@ discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: 查看器
 role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 30%
+source-wordcount: '381'
+ht-degree: 25%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 30%
 
 仅当&#x200B;*未*&#x200B;使用Adobe Experience Manager作为WCM时，才嵌入URL。 如果您使用Experience Manager作为WCM，请[直接在页面](adding-dynamic-media-assets-to-pages.md)中添加资产。
 
-请参阅[将URL关联到您的Web应用程序](linking-urls-to-yourwebapplication.md)。
+请参阅[将URL链接到Web应用程序](linking-urls-to-yourwebapplication.md)。
 
-请参阅[为响应式网站传送优化的图像](responsive-site.md)。
+请参阅[为响应式网站提供优化的图像](responsive-site.md)。
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ ht-degree: 30%
 >
 >请参阅[发布图像预设](managing-image-presets.md#publishing-image-presets)。
 
-**要在网页上嵌入Dynamic Media视频或图像查看器，请执行以下操作：**
+**要在网页上嵌入Dynamic Media视频、图像查看器或维度查看器，请执行以下操作：**
 
 1. 导航到要复制其嵌入代码的&#x200B;*published*&#x200B;视频或图像资产。
 
@@ -49,10 +49,10 @@ ht-degree: 30%
 
    请参阅[发布图像预设](managing-image-presets.md#publishing-image-presets)。
 
-1. 在左边栏中，选择下拉菜单，然后点按&#x200B;**[!UICONTROL 查看器]**。
-1. 在左边栏中，点按查看器预设名称。查看器预设将应用于资产。
-1. 点按&#x200B;**[!UICONTROL 嵌入]**。
-1. 在&#x200B;**[!UICONTROL 嵌入代码]**&#x200B;对话框中，将整个代码复制到剪贴板，然后点按&#x200B;**[!UICONTROL 关闭]**。
+1. 在左边栏中，选择下拉菜单，然后选择&#x200B;**[!UICONTROL 查看器]**。
+1. 在左边栏中，选择查看器预设名称。 查看器预设将应用于资产。
+1. 选择&#x200B;**[!UICONTROL Embed]**。
+1. 在&#x200B;**[!UICONTROL 嵌入代码]**&#x200B;对话框中，将整个代码复制到剪贴板，然后选择&#x200B;**[!UICONTROL 关闭]**。
 1. 将嵌入代码粘贴到网页中。
 
 ## 使用HTTP/2交付Dynamic Media资产 {#using-http-to-deliver-your-dynamic-media-assets}
