@@ -10,7 +10,7 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: 图像配置文件
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3411c5c4498cc45451a5874fae2bfccfaddae251
+source-git-commit: 6ac0be454a5410f55155490941cb5aa6e2d8620b
 workflow-type: tm+mt
 source-wordcount: '2755'
 ht-degree: 22%
@@ -155,7 +155,7 @@ ht-degree: 22%
 
 #### 从“属性”将Dynamic Media图像配置文件应用到文件夹 {#applying-image-profiles-to-folders-from-properties}
 
-1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL Assets]**。 然后，导航到要应用图像配置文件的文件夹的父文件夹。
+1. 点按AEM徽标，然后导航到&#x200B;**[!UICONTROL Assets]**。 然后，导航到要将图像配置文件应用到的文件夹的父文件夹。
 1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
 1. 点按&#x200B;**[!UICONTROL 图像配置文件]**&#x200B;选项卡。从&#x200B;**[!UICONTROL 配置文件名称]**&#x200B;下拉列表中，选择配置文件，然后点按&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
