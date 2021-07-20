@@ -1,6 +1,6 @@
 ---
 title: 智能成像
-description: 智能成像功能可应用每位用户独特的观看特性，自动为其体验优化的正确图像提供服务，从而提高性能和参与度。
+description: “智能成像”功能可应用每位用户的独特查看特性，自动为其体验优化的正确图像提供服务，从而提高性能和参与度。
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 content-type: reference
@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: 资产管理，演绎版
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '2633'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,7 @@ Smart Imaging还通过与Adobe一流的高级CDN服务完全集成而带来的�
 
 最新版智能成像中的增强功能：
 
-* 利用最新的智能成像功能改进了网页的Google SEO排名。
+* 针对使用最新智能成像的网页，改进了Google SEO排名。
 * 立即提供优化内容（在运行时）。
 * 使用Adobe Sensei技术根据图像请求中指定的质量(qlt)进行转换。
 * 可以使用“bfc”URL参数关闭智能成像。
@@ -180,7 +180,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 要查找您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的公司帐户或帐户。
 
-点按&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**&#x200B;查找标有&#x200B;**[!UICONTROL 已发布服务器名称]**&#x200B;的字段。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求转移到您自己的自定义域作为此过渡的一部分。
+导航至&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**&#x200B;查找标有&#x200B;**[!UICONTROL 已发布服务器名称]**&#x200B;的字段。 如果您当前使用的是通用域，则在提交技术支持票证时，可以请求转移到您自己的自定义域作为此过渡的一部分。
 
 使用Dynamic Media许可证，您的第一个自定义域无需额外付费。
 
@@ -206,7 +206,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       要查找您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的公司帐户或帐户。
 
-      单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
+      导航到&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 
       查找标有&#x200B;**[!UICONTROL Published Server Name]**&#x200B;的字段。
    1. 确认您通过Adobe使用CDN，而不是通过直接关系进行管理。
@@ -214,7 +214,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       要查找您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的公司帐户或帐户。
 
-      单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
+      导航到&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
 
       查找标有&#x200B;**[!UICONTROL Published Server Name]**&#x200B;的字段。 如果您当前使用的是通用Dynamic Media Classic域，则可以在此过渡中请求转移到您自己的自定义域。
    1. 指示您是否还需要智能成像才能通过HTTP/2运行。
@@ -225,7 +225,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 1. 客户关怀团队在完成后会通知您。
 1. 为了最大限度地提高智能成像的性能，Adobe建议将生存时间(TTL)设置为24小时或更长。 TTL定义CDN缓存资产的时长。 要更改此设置，请执行以下操作：
 
-   1. 如果您使用Dynamic Media Classic，请单击&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。 将&#x200B;**[!UICONTROL 默认客户端缓存时间设置为Live]**&#x200B;值24或更长。
+   1. 如果您使用Dynamic Media Classic，请导航到&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。 将&#x200B;**[!UICONTROL 默认客户端缓存时间设置为Live]**&#x200B;值24或更长。
    1. 如果您使用Dynamic Media，请按照[这些说明](config-dynamic.md)操作。 将&#x200B;**[!UICONTROL Expiration]**&#x200B;值设置为24小时或更长。
 
 ## 我何时才能通过智能成像启用我的帐户？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -245,7 +245,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 ## 如何验证智能成像是否按预期工作？{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. 在您的帐户配置了智能成像后，请在浏览器上加载Dynamic Media Classic或Adobe Experience Manager - Dynamic Media图像URL。
-1. 在浏览器中单击&#x200B;**[!UICONTROL 查看]** > **[!UICONTROL 开发人员]** > **[!UICONTROL 开发人员工具]**&#x200B;以打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
+1. 在浏览器中，通过导航到&#x200B;**[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]**&#x200B;打开Chrome开发人员窗格。 或者，选择您选择的任何浏览器开发人员工具。
 
 1. 确保在开发人员工具打开时禁用缓存。
 
