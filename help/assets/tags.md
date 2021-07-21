@@ -1,6 +1,6 @@
 ---
 title: 将Dynamic Media查看器与Adobe Analytics和Experience Platform标记集成
-description: Dynamic Media查看器针对Experience Platform标记和Dynamic Media查看器5.13的扩展，允许Adobe Analytics和Experience Platform标记客户在其“Experience Platform标记”配置中使用特定于Dynamic Media查看器的事件和数据。
+description: 了解适用于Experience Platform标记的Dynamic Media查看器扩展和Dynamic Media查看器5.13。它允许Adobe Analytics和Experience Platform标记的客户在其“Experience Platform标记”配置中使用特定于Dynamic Media查看器的事件和数据。
 mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -10,9 +10,9 @@ docset: aem65
 feature: 查看器
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 997eeafa03d3148fb0754eaa27a5a99217e0d1bc
 workflow-type: tm+mt
-source-wordcount: '6630'
+source-wordcount: '6636'
 ht-degree: 6%
 
 ---
@@ -801,7 +801,7 @@ Experience Manager配置包含以下两个主要步骤：
 
 1. 在&#x200B;**[!UICONTROL Experience Platform标记配置]**&#x200B;页面的左侧面板中，选择要对其应用Experience Platform标记配置的Experience Manager站点。
 
-   仅出于示例目的，会在以下屏幕截图中选择`We.Retail`站点。
+   仅出于示例目的，会在以下屏幕截图中选择&#x200B;**`We.Retail`**&#x200B;站点。
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
