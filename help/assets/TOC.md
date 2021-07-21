@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 43%
+source-wordcount: '584'
+ht-degree: 41%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 43%
    + [交互式图像](interactive-images.md)
    + [交互式视频](interactive-videos.md)
    + [360 VR 视频](/help/assets/360-video.md)
-   + [将 Dynamic Media 查看器与 Adobe Analytics 和 Adobe Launch 集成](/help/assets/launch.md)
+   + [将Dynamic Media查看器与Adobe Analytics和Adobe Experience Platform标记集成](/help/assets/tags.md)
    + [使用概览创建自定义弹出窗口](custom-pop-ups.md)
    + [为响应式网站传送优化的图像](responsive-site.md)
    + [预览 Dynamic Media 资产](previewing-assets.md)
