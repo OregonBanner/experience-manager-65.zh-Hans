@@ -6,7 +6,7 @@ contentOwner: AG
 role: User
 feature: 工作流，演绎版
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4851d61d9897ac71c6512829fdccf1895ad58bcd
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 3%
@@ -37,7 +37,7 @@ ht-degree: 3%
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要信息</b> — 上传MP3文件时，会使用第三方库](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)处理该文件[。 如果MP3具有可变比特率(VBR)，则库会计算非精确的近似长度。 |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要信息</b> — 上传MP3文件时，会使用第三方库](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)处理该文件[。 如果MP3具有可变比特率(VBR)，则库会计算非精确的近似长度。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | 图像/图片 |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 要查看活动媒体处理程序，请执行以下操作：
 
-1. 在浏览器中，导航到`http://localhost:4502/system/console/components`。
+1. 在浏览器中，导航到`https://localhost:4502/system/console/components`。
 1. 单击 `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
 1. 将显示包含所有活动媒体处理程序的列表。 例如：
 
@@ -494,7 +494,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 要测试修改后的工作流，请向`/content/dam`添加资产。
 
 1. 在文件系统中，获取您选择的TIFF图像。 将其重命名为`myImage.tiff`，然后将其复制到`/content/dam`，例如使用WebDAV。
-1. 转到&#x200B;**[!UICONTROL CQ5 DAM]**&#x200B;控制台，例如`http://localhost:4502/libs/wcm/core/content/damadmin.html`。
+1. 转到&#x200B;**[!UICONTROL CQ5 DAM]**&#x200B;控制台，例如`https://localhost:4502/libs/wcm/core/content/damadmin.html`。
 1. 打开资产&#x200B;**[!UICONTROL myImage.tiff]**，然后验证已创建翻转的图像和三个缩略图。
 
 #### 配置CommandLineProcess进程步骤 {#configuring-the-commandlineprocess-process-step}
