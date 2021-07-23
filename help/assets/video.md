@@ -12,9 +12,9 @@ docset: aem65
 feature: 资产管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
 workflow-type: tm+mt
-source-wordcount: '11672'
+source-wordcount: '11665'
 ht-degree: 18%
 
 ---
@@ -161,7 +161,7 @@ Dynamic Media中的视频是一个端到端解决方案，可轻松发布高质�
 
 Dynamic Media支持为MP4 H.264视频播放移动设备视频。您可以在以下位置找到支持此视频格式的BlackBerry®设备：[BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)上支持的视频格式。
 
-您可以在以下位置找到支持此视频格式的Windows设备：[Windows Phone 8支持的媒体编解码器](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))
+您可以在以下位置找到支持此视频格式的Windows设备：[Windows Phone 8支持的媒体编解码器](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
 
 * 使用 Dynamic Media 视频查看器预设播放视频，包括以下查看器：
 
@@ -197,7 +197,7 @@ Dynamic Media HTML5视频查看器预设是强大的视频播放器。您可以�
 
 对于桌面和移动设备自适应视频流播放，用于比特率切换的视频基于自适应视频集中的所有MP4视频。
 
-使用HLS或渐进式视频下载时出现视频播放。 在以前版本的Experience Manager（如6.0、6.1和6.2）中，视频通过HTTP进行流处理。
+使用HLS或渐进式视频下载发生视频播放。 在以前版本的Experience Manager（如6.0、6.1和6.2）中，视频通过HTTP进行流处理。
 
 但是，在Experience Manager6.3及更高版本中，视频现在通过HTTPS（即HLS）进行流处理，因为DM网关服务URL也始终使用HTTPS。 此默认行为不会对客户造成任何影响。 也就是说，除非浏览器不支持，否则视频流将始终通过HTTPS进行。 （请参阅下表）。 因此，
 
@@ -316,7 +316,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 获取文件元数据的方法如下：通过使用视频编辑工具查看文件的元数据，或者使用专门为获取元数据而设计的应用程序。下面说明了如何使用第三方应用程序 MediaInfo 获取视频文件的元数据：
 
-1. 转到此网页：[https://mediainfo.sourceforge.net/en/Download](https://mediainfo.sourceforge.net/en/Download)。
+1. 转到[MediaInfo下载](https://mediaarea.net/en/MediaInfo/Download)。
 1. 选择并下载 GUI 版本的安装程序，然后按照安装说明进行操作。
 1. 完成安装后，右键单击视频文件（仅限 Windows）并选择 MediaInfo，或打开 MediaInfo 并将视频文件拖到该应用程序中。您会看到与该视频文件相关的所有元数据，包括其宽度、高度和每秒帧数。
 
@@ -453,7 +453,7 @@ YouTube自行编码。 因此，上传到Experience Manager的原始视频文件
 
 ### 配置Google Cloud设置 {#configuring-google-cloud-settings}
 
-要发布到YouTube，您需要Google帐户。 如果你有Gmail账户，那么你已经有Google账户；如果您没有Google帐户，则可以轻松创建一个。 您需要该帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务，并直接转到[创建YouTube渠道](#creating-a-youtube-channel)。
+要发布到YouTube，您需要Google帐户。 如果你有Gmail账户，那么你已经有Google账户；如果您没有Google帐户，则可以轻松创建一个。 您需要该帐户，因为您需要凭据才能将视频资产发布到YouTube。 如果已创建帐户，请跳过此任务并直接转到[创建YouTube渠道](#creating-a-youtube-channel)。
 
 与Google Cloud一起使用的帐户和用于YouTube的Google帐户不必相同。
 
@@ -507,9 +507,9 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    * 从&#x200B;**[!UICONTROL 您使用的API中？]** 下拉列表中，选择 **[!UICONTROL YouTube数据API v3]**。
 
-   * 从&#x200B;**[!UICONTROL 将从何处调用API?]** 下拉列表中，选 **[!UICONTROL 择Web服务器（例如node.js、Tomcat）]**
+   * 从&#x200B;**[!UICONTROL 从何处调用API?]** 下拉列表中，选 **[!UICONTROL 择Web服务器（例如node.js、Tomcat）]**
 
-   * 从&#x200B;**[!UICONTROL 您将访问哪些数据？]** 下拉列表中，点按用 **[!UICONTROL 户数据]**。
+   * 从&#x200B;**[!UICONTROL 您访问哪些数据？]** 下拉列表中，点按用 **[!UICONTROL 户数据]**。
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
