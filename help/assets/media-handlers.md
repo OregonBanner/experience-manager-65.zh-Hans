@@ -6,7 +6,7 @@ contentOwner: AG
 role: User
 feature: 工作流，演绎版
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 4851d61d9897ac71c6512829fdccf1895ad58bcd
+source-git-commit: acc4b78f551e0e0694f41149fff7e24d855f504f
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 3%
@@ -451,7 +451,7 @@ package my.own.stuff;/&amp;ast;&amp;ast;&amp;ast;@scr.component inherit=&quot;tr
 * 使用[ImageMagick](https://www.imagemagick.org/script/index.php)和[Ghostscript](https://www.ghostscript.com/)的EPS和AI转换。
 * 使用[FFmpeg](https://ffmpeg.org/)进行FLV视频转码。
 * 使用[LAME](https://lame.sourceforge.io/)的MP3编码。
-* 使用[SOX](https://sox.sourceforge.net/)进行音频处理。
+* 使用[SOX](https://sox.sourceforge.io/)进行音频处理。
 
 >[!NOTE]
 >
