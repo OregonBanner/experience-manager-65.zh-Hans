@@ -1,5 +1,5 @@
 ---
-title: “请勿发布教程：将规则应用到自适应表单字段”
+title: 将规则应用于自适应表单字段
 seo-title: 将规则应用于自适应表单字段
 description: 创建规则以向自适应表单添加交互性、业务逻辑和智能验证。
 seo-description: 创建规则以向自适应表单添加交互性、业务逻辑和智能验证。
@@ -8,20 +8,20 @@ uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63bc43bba88a42d62fb574bc8ce42470ac61d693
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
 
-# 教程：将规则应用于自适应表单字段{#tutorial-apply-rules-to-adaptive-form-fields}
+# 教程：将规则应用于自适应表单字段 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
 本教程是[创建您的第一个自适应表单](/help/forms/using/create-your-first-adaptive-form.md)系列中的一个步骤。 Adobe建议按照时间顺序排列这些系列，以了解、执行和演示完整的教程用例。
 
-## 关于教程{#about-the-tutorial}
+## 关于教程 {#about-the-tutorial}
 
 您可以使用规则向自适应表单添加交互性、业务逻辑和智能验证。 自适应表单具有内置规则编辑器。 规则编辑器提供了拖放功能，与引导式导览类似。 拖放方法是创建规则最快、最简单的方法。 规则编辑器还为有兴趣测试其编码技能或将规则提升到更高级别的用户提供了一个代码窗口。
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 教程每个部分末尾的交互式GIF图像可帮助您即时学习和验证所构建表单的功能。
 
-## 步骤1:从数据库{#retrieve-customer-record}检索客户记录
+## 步骤1:从数据库中检索客户记录 {#retrieve-customer-record}
 
 您通过按照[创建表单数据模型](/help/forms/using/create-form-data-model.md)文章创建表单数据模型。 现在，您可以使用规则编辑器调用Forms数据模型服务以检索信息并将信息添加到数据库。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
    ![检索信息](assets/retrieve-information.gif)
 
-## 步骤2:将更新的客户地址添加到数据库{#updated-customer-address}
+## 步骤2:将更新的客户地址添加到数据库 {#updated-customer-address}
 
 在从数据库中检索客户详细信息后，您可以更新送货地址、状态和邮政编码。 以下过程会调用表单数据模型服务来将客户信息更新到数据库：
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 1. 点按&#x200B;**[!UICONTROL 完成]**&#x200B;以保存规则。 在规则编辑器窗口中，点按&#x200B;**[!UICONTROL 关闭]**。
 1. 预览自适应表单。 检索客户详细信息、更新送货地址并提交表单。 再次检索同一客户的详细信息时，将显示更新的发运地址。
 
-## 步骤3:（附加部分）使用代码编辑器运行验证并显示错误消息{#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
+## 步骤3:（附加部分）使用代码编辑器运行验证和显示错误消息 {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
 
 您应该对表单运行验证，以确保在表单中输入的数据正确无误，并在数据不正确时显示错误消息。 例如，如果在表单中输入了非现有客户ID，则应显示一条错误消息。
 
