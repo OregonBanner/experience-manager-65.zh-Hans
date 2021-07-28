@@ -5,9 +5,9 @@ contentOwner: AG
 feature: 智能标记，搜索
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1632'
 ht-degree: 1%
 
 ---
@@ -188,6 +188,7 @@ ht-degree: 1%
 
 ## 提示和限制 {#tips-best-practices-limitations}
 
+* 要训练模型，请使用最合适的图像。 无法恢复培训或删除培训模型。 您的标记准确性取决于当前培训，因此请谨慎进行。
 * 智能内容服务的使用限制为每年最多200万张标记图像。 处理和标记的任何重复图像都计为标记图像。
 * 如果您从时间轴运行标记工作流，则一次最多可以对15个资产应用标记。
 * 智能标记仅适用于PNG和JPG图像格式。 因此，对于以这两种格式创建演绎版的受支持资产，将使用智能标记进行标记。
