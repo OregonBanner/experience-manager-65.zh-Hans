@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 71782a3caae3f74a4886c52cf9b29f9e998913fa
+source-git-commit: d1e2a2b11bd4eaece80a2538ddc34ada59e63578
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '867'
 ht-degree: 8%
 
 ---
@@ -15,19 +15,36 @@ ht-degree: 8%
 
 请查看下表中的最低系统要求，了解您当前使用的CIF版本或计划将来使用的CIF版本。
 
-**在4月版中，我们使用[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上提供的CIF附加组件替换了GitHub上的CIF连接器。 切换到附加组件对项目有极大好处：
+**在4月版中，我们已使用Adobe软件分发中提供的CIF附加组件** 替换了GitHub上的CIF [连接器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。切换到附加组件对项目有极大好处：
 
 * 大多数新功能将立即在AEM 6.5上可用（无需再等待功能端口）
 * 可轻松升级到新的附加版本
 * 准备Cloud Service
 
-旧AEM CIF连接器将进入维护模式，不应再使用。 请将CIF连接器更换为新的CIF附加组件。 对于大多数项目来说，只需简单地替换包即可。 **
+旧AEM CIF连接器将进入维护模式，不应再使用。 请将CIF连接器更换为新的CIF附加组件。 对于大多数项目来说，只需简单地替换包即可。
 
 | 组件 | 系统要求 |
 |:-------|:-----:|
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 发行日期：2021年7月
+
+| 组件 | 版本号 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.07.21 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
+| CIF核心组件 | 1.13.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.13.0) |
+| CIF Venia参考网站 | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
+
+### 新增功能 {#what-is-new-july}
+
+* CIF核心组件v2
+   * 简化和改进了PDP/PLP URL和SEO配置
+   * 在创作模式下暂存产品数据的可视指示器，可更好地显示即将发生的更改
+   * 用于内容和商务页面的新站点地图组件
+
+* 支持[Adobe商务Sensei产品推荐，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供支持，使用预定义或即时创建的推荐
 
 ## 发行日期：2021年6月
 
@@ -79,8 +96,6 @@ ht-degree: 8%
 * AEM的PWA Studio扩展，包括 示例集成
 
 * 新的CIF导航核心组件，可扩展WCM导航核心组件
-
-* AEM storefront中暂存目录数据的可视指示器
 
 ### 错误修复 {#bug-fixes-april}
 
