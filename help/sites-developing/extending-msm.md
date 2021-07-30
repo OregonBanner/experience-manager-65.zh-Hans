@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
 workflow-type: tm+mt
 source-wordcount: '2601'
 ht-degree: 2%
@@ -41,7 +41,7 @@ ht-degree: 2%
 >
 >创作网站时会使用多站点管理器及其API，因此这些管理器仅用于在创作环境中使用。
 
-## Java API {#overview-of-the-java-api}概述
+## Java API概述 {#overview-of-the-java-api}
 
 多站点管理包含以下包：
 
@@ -64,14 +64,18 @@ ht-degree: 2%
       * 允许作者使用&#x200B;**Create Site**;这允许用户轻松选择语言并配置Live Copy的结构。
       * 为任何生成的Live Copy定义默认转出配置。
 
-* **`LiveRelationship`** 指 `LiveRelationship` 定Live Copy分支中的资源与其等效源/Blueprint资源之间的连接（关系）。
+* **`LiveRelationship`**
+
+   `LiveRelationship`指定Live Copy分支中的资源与其等效源/Blueprint资源之间的连接（关系）。
 
    * 在实现继承和转出时会使用关系。
    * `LiveRelationship` 对象提供对转出配置( `RolloutConfig`)、和与关系相 `LiveCopy`关的 `LiveStatus` 对象的访问（引用）。
 
    * 例如，在`/content/copy/us`中，从`/content/we-retail/language-masters`的源/Blueprint创建Live Copy。 资源`/content/we.retail/language-masters/en/jcr:content`和`/content/copy/us/en/jcr:content`形成关系。
 
-* **`LiveCopy`** `LiveCopy` 保存Live Copy资源与其源/Blueprint资源之间关系( `LiveRelationship`)的配置详细信息。
+* **`LiveCopy`**
+
+   `LiveCopy` 保存Live Copy资源与其源/Blueprint资源之间关系( `LiveRelationship`)的配置详细信息。
 
    * 使用`LiveCopy`类可访问页面的路径、源/Blueprint页面的路径、转出配置以及子页面是否也包含在`LiveCopy`中。
 
@@ -91,11 +95,13 @@ ht-degree: 2%
 
    创建`LiveAction`对象（给定`LiveAction`配置）。 配置作为资源存储在存储库中。
 
-* **`RolloutConfig`** 包 `RolloutConfig` 含一个列表， `LiveActions`可在触发时使用。`LiveCopy`继承`RolloutConfig`，结果出现在`LiveRelationship`中。
+* **`RolloutConfig`**
+
+   `RolloutConfig`包含要在触发时使用的`LiveActions`列表。 `LiveCopy`继承`RolloutConfig`，结果出现在`LiveRelationship`中。
 
    * 首次设置Live Copy时还会使用RolloutConfig（这会触发LiveActions）。
 
-## 创建新的同步操作{#creating-a-new-synchronization-action}
+## 创建新的同步操作 {#creating-a-new-synchronization-action}
 
 创建要与转出配置一起使用的自定义同步操作。 当[已安装的操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)不符合您的特定应用程序要求时，创建同步操作。 为此，请创建两个类：
 
@@ -117,7 +123,7 @@ ht-degree: 2%
 
    * `createsAction`:返回关联的名称 `LiveAction`。
 
-### 访问LiveAction配置节点{#accessing-the-liveaction-configuration-node}
+### 访问LiveAction配置节点 {#accessing-the-liveaction-configuration-node}
 
 在存储库中使用`LiveAction`配置节点存储影响`LiveAction`实例运行时行为的信息。 存储`LiveAction`配置的存储库中的节点在运行时可用于`LiveActionFactory`对象。 因此，您可以向配置节点添加属性，并根据需要在`LiveActionFactory`实施中使用这些属性。
 
@@ -162,7 +168,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >`Resource`参数可以是不适应`Node`对象的`null`或`Resources`对象，如[ `NonExistingResource`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)对象。
 
-## 创建新的转出配置{#creating-a-new-rollout-configuration}
+## 创建新转出配置 {#creating-a-new-rollout-configuration}
 
 当安装的转出配置不符合您的应用程序要求时，创建转出配置：
 
@@ -175,7 +181,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >另请参阅自定义转出的[最佳实践](/help/sites-administering/msm-best-practices.md#customizing-rollouts)。
 
-### 创建转出配置{#create-the-rollout-configuration}
+### 创建转出配置 {#create-the-rollout-configuration}
 
 要创建新的转出配置，请执行以下操作：
 
@@ -224,7 +230,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 单击&#x200B;**Save All**。
 
-### 将同步操作添加到转出配置{#add-synchronization-actions-to-the-rollout-configuration}
+### 将同步操作添加到转出配置 {#add-synchronization-actions-to-the-rollout-configuration}
 
 转出配置存储在您在`/apps/msm/<your-project>/rolloutconfigs`节点下创建的[转出配置节点](#create-the-rollout-configuration)下。
 
@@ -242,7 +248,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 根据需要添加和配置任意数量的同步操作节点。 重新排列操作节点，使其顺序与您希望其发生的顺序匹配。 最顶层的操作节点首先出现。
 
-## 创建和使用简单的LiveActionFactory类{#creating-and-using-a-simple-liveactionfactory-class}
+## 创建和使用简单的LiveActionFactory类 {#creating-and-using-a-simple-liveactionfactory-class}
 
 按照此部分中的步骤开发`LiveActionFactory`并将其用于转出配置。 这些过程使用Maven和Eclipse来开发和部署`LiveActionFactory`:
 
@@ -261,7 +267,7 @@ GITHUB上的代码
 * [在GitHub上打开experiencemanager-java-msmrollout项目](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * 将项目下载为[a ZIP文件](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
 
-### 创建Maven项目{#create-the-maven-project}
+### 创建Maven项目 {#create-the-maven-project}
 
 以下过程要求您将adobe-public配置文件添加到Maven设置文件。
 
@@ -287,7 +293,7 @@ GITHUB上的代码
 
 1. 启动Eclipse并[导入Maven项目](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)。
 
-### 向POM文件{#add-dependencies-to-the-pom-file}添加依赖项
+### 将依赖项添加到POM文件 {#add-dependencies-to-the-pom-file}
 
 添加依赖项，以便Eclipse编译器可以引用`LiveActionFactory`代码中使用的类。
 
@@ -543,7 +549,7 @@ GITHUB上的代码
    13.08.2013 14:34:55.454 *INFO* [OsgiInstallerImpl] org.apache.sling.audit.osgi.installer Started bundle com.adobe.example.msm.MyLiveActionFactory-bundle [316]
    ```
 
-### 创建示例转出配置{#create-the-example-rollout-configuration}
+### 创建示例转出配置 {#create-the-example-rollout-configuration}
 
 创建使用您创建的`LiveActionFactory`的MSM转出配置：
 
@@ -553,7 +559,7 @@ GITHUB上的代码
    * **名称**:examplolloutconfig
    * **cq:trigger**:  `publish`
 
-### 将实时操作添加到示例转出配置{#add-the-live-action-to-the-example-rollout-configuration}
+### 将实时操作添加到示例转出配置 {#add-the-live-action-to-the-example-rollout-configuration}
 
 配置您在上一步骤中创建的转出配置，以便它使用`ExampleLiveActionFactory`类。
 
@@ -610,7 +616,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
     1. **Name** = `xtype`; **Type** = `String`; **Value** = `hidden`
 -->
 
-## 更改语言名称和默认国家/地区{#changing-language-names-and-default-countries}
+## 更改语言名称和默认国家/地区 {#changing-language-names-and-default-countries}
 
 AEM使用一组默认的语言和国家/地区代码。
 
@@ -650,7 +656,7 @@ MSM使用存储的语言和国家/地区代码列表来确定与页面语言版�
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-## 在页面属性（触屏优化UI）{#configuring-msm-locks-on-page-properties-touch-enabled-ui}上配置MSM锁定
+## 在页面属性（触屏优化UI）上配置MSM锁定 {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 创建自定义页面资产时，您可能需要考虑新资产是否有资格转出到任何Live Copy。
 
