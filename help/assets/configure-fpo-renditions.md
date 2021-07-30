@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: 演绎版
 exl-id: null
-source-git-commit: 865370e38368072c39ad337eb52259c586403efb
+source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -24,10 +24,10 @@ Experience Manager允许使用多种方法处理可用于生成FPO呈现的图�
 
 您可以使用ImageMagick处理图像，包括生成FPO呈现版本。 此类演绎版会进行缩减采样，即，如果原始图像的PPI大于72，则演绎版的像素尺寸会按比例减小。 请参阅[安装和配置ImageMagick以使用Experience Manager资产](best-practices-for-imagemagick.md)。
 
-|  |使用Experience Manager的内置工作流 |使用ImageMagick工作流 |备注 |
-|— |— |—|— |
-|对于新资产 |启用FPO呈现([help](#generate-renditions-of-new-assets-using-aem-workflow)) |在Experience Manager工作流中添加ImageMagick命令行([help](#generate-renditions-of-new-assets-using-imagemagick)) |Experience Manager为每次上传执行DAM更新资产工作流。 |
-|对于现有资产 |在新的专用Experience Manager工作流中启用FPO呈现([help](#generate-renditions-of-existing-assets-using-aem-workflow)) |在新的专用Experience Manager工作流([help](#generate-renditions-of-existing-assets-using-imagemagick))中添加ImageMagick命令行 |现有资产的FPO演绎版可以按需或批量创建。 |
+|  | 使用Experience Manager的内置工作流 | 使用ImageMagick工作流 | 备注 |
+|--- |--- |---|--- |
+| 对于新资产 | 启用FPO呈现([help](#generate-renditions-of-new-assets-using-aem-workflow)) | 在Experience Manager工作流中添加ImageMagick命令行([help](#generate-renditions-of-new-assets-using-imagemagick)) | Experience Manager为每次上传执行DAM更新资产工作流。 |
+| 对于现有资产 | 在新的专用Experience Manager工作流中启用FPO呈现([help](#generate-renditions-of-existing-assets-using-aem-workflow)) | 在新的专用Experience Manager工作流([help](#generate-renditions-of-existing-assets-using-imagemagick))中添加ImageMagick命令行 | 现有资产的FPO演绎版可以按需或批量创建。 |
 
 >[!CAUTION]
 >
