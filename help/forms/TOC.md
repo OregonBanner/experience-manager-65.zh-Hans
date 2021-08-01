@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
 workflow-type: tm+mt
-source-wordcount: '3718'
+source-wordcount: '3771'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 3%
       + [Forms Portal](using/forms-portal-handling-user-data.md)
       + [通信管理](using/correspondence-management-handling-user-data.md)
       + [与Adobe Sign集成](/help/forms/using/integration-adobe-sign-handling-user-data.md)
-      + [文档安全](/help/forms/using/document-security-handling-user-data.md)
+      + [Document Security](/help/forms/using/document-security-handling-user-data.md)
    + 强化AEM Forms环境{#hardening-aem-forms-environment}
       + [在OSGi环境中强化和保护AEM表单](using/hardening-securing-aem-forms-environment.md)
       + [JEE上AEM Forms的一般安全注意事项](using/general-security-considerations.md)
@@ -679,3 +679,10 @@ ht-degree: 3%
          + [以编程方式管理首选项节点](developing/programmatically-preferences-nodes.md)
          + [使用策略保护文档](developing/protecting-documents-policies.md)
          + [使用Web服务API验证DDX文档](developing/validate-ddx-document-using-web.md)
+      + 旧版文档{#legacy-documentation}
+         + [使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据](developing/building-xml.md)
+         + [在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](developing/compressing-decompressing-custom-dsc.md)
+         + [在JEE服务器群集上配置AEM Forms并对其进行故障诊断](developing/configure-server-cluster.md)
+         + [在动态PDF forms中生成和使用哈希](developing/hashing-forms.md)
+         + [使用WS-Security标头传递凭据](developing/passing-credentials.md)
+
