@@ -12,9 +12,9 @@ docset: aem65
 feature: 资产管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '11665'
+source-wordcount: '11702'
 ht-degree: 18%
 
 ---
@@ -60,8 +60,10 @@ ht-degree: 18%
       * [将视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
       * 了解有关[组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md)的更多信息。
       * 了解有关[组织数字资产](/help/assets/organize-assets.md)的更多信息。
-   * 将主源视频上传到文件夹。 您可以上传每个最大15 GB的视频文件。 将视频添加到文件夹后，这些视频会根据您分配给文件夹的视频处理配置文件进行编码。
+   * 将主源视频上传到文件夹。 将视频添加到文件夹后，这些视频会根据您分配给文件夹的视频处理配置文件进行编码。
 
+      * Dynamic Media主要支持长度为30分钟的简短视频。
+      * 您可以上传每个最大15 GB的视频文件。
       * [上传视频](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 了解有关[支持的输入文件格式](/help/assets/assets-formats.md#supported-multimedia-formats)的更多信息。
    * 监视[视频编码在资产或工作流视图中的进展情况](#monitoring-video-encoding-and-youtube-publishing-progress)。
@@ -303,6 +305,9 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 ### 源视频文件 {#source-video-files}
 
 在对视频文件进行编码时，请尽可能使用最高质量的源视频文件。避免使用先前已编码的视频文件，因为这样的文件已经压缩，进一步编码会导致创建的视频质量不佳。
+
+* Dynamic Media主要支持长度为30分钟的简短视频。
+* 您可以上载每个最大15 GB的主源视频文件。
 
 下表描述了源视频文件在编码之前必须具有的推荐大小、宽高比和最小比特率：
 
