@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 41%
+ht-degree: 23%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 41%
    + [使用资产元数据](metadata.md)
    + [多语言资产](multilingual-assets.md)
    + [在资产中使用 [!DNL Adobe Stock] 资产](aem-assets-adobe-stock.md)
-   + [预览 3D 资产](previewing-3d-assets.md)
+   + [预览3D资产](previewing-3d-assets.md)
    + [审核文件夹资产和收藏集](bulk-approval.md)
    + [增强型智能标记](enhanced-smart-tags.md)
    + [时间轴中的活动流](activity-stream.md)
@@ -36,28 +36,28 @@ ht-degree: 41%
    + [使用MSM重复使用资产](reuse-assets-using-msm.md)
    + [使用 [!DNL Sites]连接的资产](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
-   + [Experience League 发布的 Dynamic Media 新闻稿](dynamic-media-newsletter.md)
-   + [设置 Dynamic Media](administering-dynamic-media.md)
-   + [使用 Dynamic Media](dynamic-media.md)
-   + [配置 Dynamic Media — Scene7 模式](config-dms7.md)
+   + [Dynamic Media新闻稿存档(按Experience League)](dynamic-media-newsletter.md)
+   + [设置Dynamic Media](administering-dynamic-media.md)
+   + [使用Dynamic Media](dynamic-media.md)
+   + [配置Dynamic Media - Scene7模式](config-dms7.md)
    + [配置Dynamic Media — 混合模式](config-dynamic.md)
    + [Dynamic Media - Scene7模式故障诊断](troubleshoot-dms7.md)
    + [Dynamic Media 中的辅助功能](accessibility-dm.md)
    + [从Dynamic Media迁移 — 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
-   + [管理 Dynamic Media 资产](managing-assets.md)
+   + [管理Dynamic Media资产](managing-assets.md)
    + [优化图像质量的最佳实践](best-practices-for-optimizing-the-quality-of-your-images.md)
-   + [管理 Dynamic Media 查看器预设](managing-viewer-presets.md)
-   + [应用 Dynamic Media 查看器预设](viewer-presets.md)
-   + [管理 Dynamic Media 图像预设](managing-image-presets.md)
-   + [应用 Dynamic Media 图像预设](image-presets.md)
+   + [管理Dynamic Media查看器预设](managing-viewer-presets.md)
+   + [应用Dynamic Media查看器预设](viewer-presets.md)
+   + [管理Dynamic Media图像预设](managing-image-presets.md)
+   + [应用Dynamic Media图像预设](image-presets.md)
    + [Dynamic Media 视频配置文件](video-profiles.md)
    + [Dynamic Media 图像配置文件](image-profiles.md)
    + [智能成像](imaging-faq.md)
    + [视频](s7-video.md)
-   + [将Dynamic Media功能添加到页面](scene7.md)
+   + [将Dynamic Media功能添加到您的页面](scene7.md)
    + [HTTP2 内容交付](http2.md)
-   + [传送 Dynamic Media 资产](delivering-dynamic-media-assets.md)
-   + [在 Dynamic Media 中激活热链接保护](hotlink-protection.md)
+   + [交付Dynamic Media资产](delivering-dynamic-media-assets.md)
+   + [在Dynamic Media中激活热链接保护](hotlink-protection.md)
    + [3D 支持](/help/assets/assets-3d.md)
    + [图像集](image-sets.md)
    + [全景图像](panoramic-images.md)
@@ -70,17 +70,17 @@ ht-degree: 41%
    + [360 VR 视频](/help/assets/360-video.md)
    + [将Dynamic Media查看器与Adobe Analytics和Adobe Experience Platform标记集成](/help/assets/tags.md)
    + [使用概览创建自定义弹出窗口](custom-pop-ups.md)
-   + [为响应式网站传送优化的图像](responsive-site.md)
-   + [预览 Dynamic Media 资产](previewing-assets.md)
-   + [将 Dynamic Media 资产添加到页面](adding-dynamic-media-assets-to-pages.md)
+   + [为响应式网站交付优化的图像](responsive-site.md)
+   + [预览Dynamic Media资产](previewing-assets.md)
+   + [将Dynamic Media资产添加到页面](adding-dynamic-media-assets-to-pages.md)
    + [在网页上嵌入动态视频或图像查看器](embed-code.md)
-   + [将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md)
+   + [将URL关联到您的Web应用程序](linking-urls-to-yourwebapplication.md)
    + [使用规则集转换 URL](using-rulesets-to-transform-urls.md)
-   + [发布 Dynamic Media 资产](publishing-dynamicmedia-assets.md)
-   + [使用 Dynamic Media 中的“选择性发布”功能](selective-publishing.md)
+   + [发布Dynamic Media资产](publishing-dynamicmedia-assets.md)
+   + [在Dynamic Media中使用“选择性发布”功能](selective-publishing.md)
    + [通过Dynamic Media使CDN缓存失效](invalidate-cdn-cache-dynamic-media.md)
    + [通过Dynamic Media Classic使CDN缓存失效](invalidate-cdn-cache-dm-classic.md)
-   + [安装用于批量资产迁移的功能包18912](bulk-ingest-migrate.md)
+   + [安装功能包18912以批量迁移资产](bulk-ingest-migrate.md)
    + [使用选择器](working-with-selectors.md)
 + 扩展资产{#extending}
    + [自定义和扩展 [!DNL Assets]](extending-assets.md)
