@@ -1,30 +1,34 @@
 ---
-title: Dynamic Media新闻稿
-description: '按Experience League划分的Dynamic Media新闻稿是每月的新闻稿。 它旨在帮助您快速掌握Dynamic Media和Dynamic Media Classic，以便您能够立即开始实现价值。 本一站式商店快讯中提供宝贵的知识建设资源。 其中包括视频介绍、解决方案概述，以及一些关键特性和功能（如图像预设、查看器预设、视频配置文件等）的简介。 '
+title: Dynamic Media新闻稿存档
+description: '按Experience League存档的Dynamic Media新闻稿是每月一次的新闻稿。 它旨在帮助您快速掌握Dynamic Media和Dynamic Media Classic，以便您能够立即实现价值。 已存档的快讯包含宝贵的知识建设资源，这些资源可在此一站式商店快讯中提供，该快讯现已停止。 存档的新闻稿包括操作方法视频和解决方案概述。 此外，还介绍了图像预设、查看器预设和视频配置文件等关键特性和功能。 '
 keywords: Dynamic Media；新闻稿；产品更新；提示和技巧；事件；客户成功；博客；博客；图像；视频；功能
 contentOwner: Rick Brough
 solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: 协作，Dynamic Media Classic
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
 
 # ![Dynamic Media时事通讯徽标](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
-按Experience League划分的每月Dynamic Media新闻稿旨在帮助您快速了解Dynamic Media和Dynamic Media Classic，以便您能够立即开始实现价值。
+>[!NOTE]
+>
+>每月新闻稿现已终止。 但是，您仍可以访问下面的新闻稿存档。
 
-本一站式商店快讯中提供宝贵的知识建设资源。 其中包括视频介绍、解决方案概述，以及一些关键特性和功能（如图像预设、查看器预设、视频配置文件等）的简介。
+按Experience League排列的Dynamic Media新闻稿旨在帮助您快速了解Dynamic Media和Dynamic Media Classic，以便您能够立即开始实现价值。
 
-## 获得灵感 — 随时掌握信息
+在这个一站式商店存档的时事通讯中，您可以找到宝贵的知识构建资源，如操作方法视频和解决方案概述。 此外，还介绍了图像预设、查看器预设和视频配置文件等关键特性和功能。
 
-[登](https://www.adobe.com/subscription/dynamic-media-newsletter.html) 录以在您的收件箱中按月接收Dynamic Media新闻稿。
+<!-- ## Get inspired - Stay informed
 
-## 错过了《Dynamic Media快讯》一期？
+[Sign up](https://www.adobe.com/subscription/dynamic-media-newsletter.html) to receive the Dynamic Media Newsletter on a monthly basis in your inbox. -->
+
+## Dynamic Media新闻稿存档
 
 <!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
@@ -52,9 +56,9 @@ ht-degree: 0%
    * 进一步了解Adobe的免费Dynamic Media Classic审核。
    * 会见客户成功服务高级项目经理John Monroe。
 
-      >[!IMPORTANT]
-      >
-      >Adobe希望确保他们只向希望接收Dynamic Media时事通讯的人员发送该新闻稿。 要在此问题后继续接收新闻稿，请[此处](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)注册。
+<!--     >[!IMPORTANT]
+    >
+    >Adobe wants to make sure they are only sending the Dynamic Media newsletter to people who want to receive it. To continue receiving the newsletter after this issue, please sign up for it [here](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&reserved=0). -->
 
 * **[2020年2月，第2期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -153,7 +157,7 @@ ht-degree: 0%
 
 * **[2019年4月，04期](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
 
-   欢迎阅读Dynamic Media快讯的就职典礼，Adobe的新月度快讯在Adobe Experience Manager Assets和AdobeDynamic Media Classic中为Dynamic Media用户填充了新闻、事件和资源。
+   欢迎阅读Dynamic Media快讯的就职发行，该Adobe的快讯在Adobe Experience Manager Assets和AdobeDynamic Media Classic中为Dynamic Media用户填充了新闻、事件和资源。
 
    在此问题中：
    * 注册Adobe的Dynamic Media Classic隐藏功能网络研讨会。
