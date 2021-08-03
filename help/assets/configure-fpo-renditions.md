@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: 演绎版
 exl-id: null
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -61,9 +61,11 @@ Experience Manager允许使用多种方法处理可用于生成FPO呈现的图�
 
 在Experience Manager中，当上传新资产时，会执行DAM更新资产工作流。 要使用ImageMagick处理新上传资产的演绎版，请向工作流模型中添加新命令。
 
-1. 单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。 选择&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;模型，然后单击&#x200B;**[!UICONTROL 编辑]**。
+1. 单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
 
-1. 单击左上角的&#x200B;**[!UICONTROL 切换侧面板]**。 搜索命令行步骤。
+1. 选择&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;模型，然后单击&#x200B;**[!UICONTROL 编辑]**。
+
+1. 单击左上角的&#x200B;**[!UICONTROL 切换侧面板]**&#x200B;并搜索命令行步骤。
 
 1. 拖动&#x200B;**[!UICONTROL 命令行]**&#x200B;步骤并将其添加到&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤之前。
 
@@ -89,13 +91,21 @@ Experience Manager允许使用多种方法处理可用于生成FPO呈现的图�
 
 要使用Experience Manager工作流生成现有资产的FPO呈现版本，请创建使用内置FPO呈现版本选项的专用工作流模型。
 
-1. 单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。 要创建模型，请单击&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 创建模型]**。 添加有意义的&#x200B;**[!UICONTROL 标题]**&#x200B;和&#x200B;**[!UICONTROL 名称]**。
+1. 单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
 
-1. 选择模型并单击&#x200B;**[!UICONTROL 编辑]**。 单击&#x200B;**[!UICONTROL 页面信息]** > **[!UICONTROL 打开属性]**。 选择&#x200B;**[!UICONTROL 临时工作流]**。 这提高了可扩展性和性能。 选择&#x200B;******[!UICONTROL 保存并关闭]**。
+1. 要创建模型，请单击&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 创建模型]**。
 
-1. 单击左上角的&#x200B;**[!UICONTROL 切换侧面板]**。 搜索流程缩略图步骤。 拖动&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤。
+1. 添加有意义的&#x200B;**[!UICONTROL 标题]**&#x200B;和&#x200B;**[!UICONTROL 名称]**。
 
-1. 选择&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;并单击&#x200B;**[!UICONTROL 配置]**。 按照[配置，使用Experience Manager工作流](#generate-renditions-of-new-assets-using-aem-workflow)生成新资产的演绎版。 要激活更改，请单击&#x200B;**[!UICONTROL 同步]**。
+1. 选择模型并单击&#x200B;**[!UICONTROL 编辑]**。 单击&#x200B;**[!UICONTROL 页面信息]** > **[!UICONTROL 打开属性]**，然后选择&#x200B;**[!UICONTROL 临时工作流]**。 这提高了可扩展性和性能。
+
+1. 选择&#x200B;******[!UICONTROL 保存并关闭]**。
+
+1. 单击左上角的&#x200B;**[!UICONTROL 切换侧面板]**&#x200B;并搜索流程缩略图步骤。
+
+1. 选择&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;并单击&#x200B;**[!UICONTROL 配置]**。 按照[配置，使用Experience Manager工作流](#generate-renditions-of-new-assets-using-aem-workflow)生成新资产的演绎版。
+
+1. 要激活更改，请单击&#x200B;**[!UICONTROL 同步]**。
 
 
 ## 使用ImageMagick生成现有资产的演绎版 {#generate-renditions-of-existing-assets-using-imagemagick}
