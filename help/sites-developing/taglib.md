@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Granite、CQ和Sling标记库允许您访问特定函数，以在模板和组件的JSP脚本中使用。
 
-## Granite标记库{#granite-tag-library}
+## Granite标记库 {#granite-tag-library}
 
 Granite标记库包含有用的函数。
 
@@ -37,7 +37,7 @@ Granite标记库包含有用的函数。
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling" %>
 ```
 
-### <ui:includeClientLib> {#ui-includeclientlib}
+### &lt;ui:includeclientlib> {#ui-includeclientlib}
 
 `<ui:includeClientLib>`标记包含AEM html客户端库，该客户端库可以是js、css或主题库。 对于不同类型（例如js和css）的多个包含项，此标记需要在jsp中多次使用。 此标记是` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)`服务接口的方便包装器。
 
@@ -77,7 +77,7 @@ Granite标记库包含有用的函数。
 <ui:includeClientLib css="cq.collab.calendar, cq.security" />
 ```
 
-## CQ标记库{#cq-tag-library}
+## CQ标记库 {#cq-tag-library}
 
 CQ标记库包含有用的函数。
 
@@ -99,7 +99,7 @@ CQ标记库包含有用的函数。
 
 它声明了sling、CQ和jstl taglibs，并公开了由[ `<cq:defineObjects />`](#amp-lt-cq-defineobjects)标记定义的常规脚本对象。 这可缩短并简化组件的jsp代码。
 
-### <cq:text> {#cq-text}
+### &lt;cq:text> {#cq-text}
 
 `<cq:text>`标记是一个方便的标记，用于在JSP中输出组件文本。
 
@@ -157,7 +157,7 @@ CQ标记库包含有用的函数。
 <cq:text property="text" tagClass="text"/>
 ```
 
-### <cq:setContentBundle> {#cq-setcontentbundle}
+### &lt;cq:setcontentbundle> {#cq-setcontentbundle}
 
 `<cq:setContentBundle>`标记会创建i18n本地化上下文并将其存储在`javax.servlet.jsp.jstl.fmt.localizationContext`配置变量中。
 
@@ -204,7 +204,7 @@ CQ标记库包含有用的函数。
 </div> ...
 ```
 
-### <cq:include> {#cq-include}
+### &lt;cq:include> {#cq-include}
 
 `<cq:include>`标记将资源包含到当前页面中。
 
@@ -254,7 +254,7 @@ CQ标记库包含有用的函数。
 * 开发AEM组件时，Adobe建议您使用`<cq:include>`。
 * `<cq:include>` 允许您在使用script属性时直接按名称包含脚本文件。这会考虑组件和资源类型继承，并且通常比严格遵循使用选择器和扩展的Sling脚本解析更简单。
 
-### <cq:includeClientLib> {#cq-includeclientlib}
+### &lt;cq:includeclientlib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
@@ -298,7 +298,7 @@ CQ标记库包含有用的函数。
 <cq:includeClientLib css="cq.collab.calendar, cq.security" />
 ```
 
-### <cq:defineObjects> {#cq-defineobjects}
+### &lt;cq:defineobjects> {#cq-defineobjects}
 
 `<cq:defineObjects>`标记会公开以下经常使用的脚本对象，开发人员可以引用这些对象。 它还会公开由[ `<sling:defineObjects>`](#amp-lt-sling-defineobjects)标记定义的对象。
 
@@ -440,7 +440,7 @@ CQ标记库包含有用的函数。
 >
 >当脚本中包含`/libs/foundation/global.jsp`文件时，将自动包含`<cq:defineObjects />`标记。
 
-### <cq:requestURL> {#cq-requesturl}
+### &lt;cq:requesturl> {#cq-requesturl}
 
 `<cq:requestURL>`标记将当前请求URL写入JspWriter。 两个标记[ `<cq:addParam>`](#amp-lt-cq-addparam)和[ `<cq:removeParam>`](#amp-lt-cq-removeparam)可在此标记正文中使用，以在写入之前修改当前请求URL。
 
@@ -462,7 +462,7 @@ CQ标记库包含有用的函数。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### <cq:addParam> {#cq-addparam}
+### &lt;cq:addparam> {#cq-addparam}
 
 `<cq:addParam>`标记会向封闭的[ `<cq:requestURL>`](#amp-lt-cq-requesturl)标记中添加具有给定名称和值的请求参数。
 
@@ -482,7 +482,7 @@ CQ标记库包含有用的函数。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### <cq:removeParam> {#cq-removeparam}
+### &lt;cq:removeparam> {#cq-removeparam}
 
 `<cq:removeParam>`标记会从封闭的[ `<cq:requestURL>`](#amp-lt-cq-requesturl)标记中删除具有给定名称和值的请求参数。 如果未提供值，则删除所有具有给定名称的参数。
 
@@ -498,7 +498,7 @@ CQ标记库包含有用的函数。
 <a href="<cq:requestURL><cq:removeParam name="language"/></cq:requestURL>">remove filter</a>
 ```
 
-## Sling标记库{#sling-tag-library}
+## Sling标记库 {#sling-tag-library}
 
 Sling标记库包含有用的Sling函数。
 
@@ -512,7 +512,7 @@ Sling标记库包含有用的Sling函数。
 >
 >当脚本中包含`/libs/foundation/global.jsp`文件时，将自动声明sling taglib。
 
-### <sling:include> {#sling-include}
+### &lt;sling:include> {#sling-include}
 
 `<sling:include>`标记将资源包含到当前页面中。
 
@@ -577,7 +577,7 @@ Sling标记库包含有用的Sling函数。
 <sling:include replaceSelectors="content" />
 ```
 
-### <sling:defineObjects> {#sling-defineobjects}
+### &lt;sling:defineobjects> {#sling-defineobjects}
 
 `<sling:defineObjects>`标记会公开以下经常使用的脚本对象，开发人员可以引用这些对象：
 
@@ -632,11 +632,11 @@ l **ogName resourceResolverName**
 %><sling:defineObjects/>
 ```
 
-## JSTL标记库{#jstl-tag-library}
+## JSTL标记库 {#jstl-tag-library}
 
 [JavaServer Pages标准标记库](https://www.oracle.com/technetwork/java/index-jsp-135995.html)包含许多有用的标准标记。 核心、格式和函数标签由`/libs/foundation/global.jsp`定义，如以下代码片段中所示。
 
-### /libs/foundation/global.jsp {#extract-of-libs-foundation-global-jsp}的提取
+### /libs/foundation/global.jsp的提取 {#extract-of-libs-foundation-global-jsp}
 
 ```xml
 <%@taglib prefix="c" uri="https://java.sun.com/jsp/jstl/core" %>
