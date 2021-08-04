@@ -10,16 +10,16 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
-feature: 文档安全
+feature: Document Security
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: a84f9bd590193cbb8c2549b34df1bbcec618ba67
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3310'
 ht-degree: 0%
 
 ---
 
-# 关于文档安全{#about-document-security}
+# 关于文档安全 {#about-document-security}
 
 文档安全确保只有授权用户才能使用您的文档。 使用文档安全，您可以安全地分发您以支持格式保存的任何信息。 支持的文件格式包括：
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 1. 收件人在相应的客户端应用程序中打开文档。 收件人可以根据其策略使用文档。
 1. 文档所有者、策略集协调者或管理员可以使用网页跟踪文档并修改对文档的访问权限。
 
-## 关于文档安全用户{#about-document-security-users}
+## 关于文档安全用户 {#about-document-security-users}
 
 各种类型的用户使用文档安全功能完成不同的任务：
 
@@ -147,7 +147,7 @@ ht-degree: 0%
 * 文档安全查看服务器事件
 * 文档安全更改策略所有者
 
-## 策略和受策略保护的文档{#policies-and-policy-protected-documents}
+## 策略和受策略保护的文档 {#policies-and-policy-protected-documents}
 
 *policy*&#x200B;定义一组保密设置以及可以访问应用了策略的文档的用户。 策略还允许动态更改文档的权限。 它为文档保护人授予更改机密性设置的权限，以撤消对文档的访问权限或切换策略。
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 
 如果启用了离线使用，则收件人还可以在策略中指定的时间段内脱机使用受策略保护的文档（没有活动的Internet或网络连接）。
 
-### 受策略保护的文档的工作原理{#how-policy-protected-documents-work}
+### 受策略保护的文档的工作方式 {#how-policy-protected-documents-work}
 
 要打开和使用受策略保护的文档，策略必须包括您作为收件人的姓名，并且您必须拥有有效的文档安全帐户。 对于PDF文档，您需要Acrobat或Adobe Reader®。 对于其他文件类型，您需要为安装了Acrobat Reader DC扩展名的文件提供相应的应用程序。
 
@@ -207,7 +207,7 @@ ht-degree: 0%
 
 如果使用“保存”或“另存为”菜单命令保存受策略保护的文档的副本，则将自动为新文档应用并强制执行该策略。 此外，还将审核并记录诸如尝试打开新文档之类的事件，以供原始文档使用。
 
-## 策略集{#policy-sets}
+## 策略集 {#policy-sets}
 
 *策略* 集用于对一组具有共同业务目的的策略进行分组。然后，系统中的部分用户可以使用这些策略集。
 
@@ -233,7 +233,7 @@ ht-degree: 0%
 
 安装文档安全后，将创建一个名为&#x200B;*全局策略集*&#x200B;的默认策略集。 安装软件的管理员将管理此策略设置。
 
-## 最佳实践{#best-practices}
+## 最佳实践 {#best-practices}
 
 策略是可以应用于各种文档的可重用权限集和用户组。 保护文档。 这些策略可确保只有授权用户才能使用允许的功能。 随着部门内不同用户角色和文档的增加，策略和策略集的数量预计会增加。 以下是创建和管理策略的一些注意事项和最佳实践：
 
@@ -276,4 +276,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 您可以使用[getAllPolicysetnames()]((https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html)) API检索最多1000个策略集名称。 在内部，API会检索API调用者具有文档发布者权限的最多1000个策略，然后创建并返回与检索的策略关联的唯一策略集名称列表。 例如，当API检索1000个策略并且检索到的策略与总共200个策略集关联时，API仅返回200个策略集名称。
+   > 您可以使用[getAllPolicysetnames()](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API检索最多1000个策略集名称。 在内部，API会检索API调用者具有文档发布者权限的最多1000个策略，然后创建并返回与检索的策略关联的唯一策略集名称列表。 例如，当API检索1000个策略并且检索到的策略与总共200个策略集关联时，API仅返回200个策略集名称。
