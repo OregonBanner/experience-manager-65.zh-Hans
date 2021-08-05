@@ -7,11 +7,12 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
+mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 9cca48f13f2e6f26961cff86d71f342cab422a78
 workflow-type: tm+mt
-source-wordcount: '6160'
+source-wordcount: '6856'
 ht-degree: 4%
 
 ---
@@ -26,7 +27,8 @@ ht-degree: 4%
 
 使用新架构时，Experience Manager负责主源资产以及与Dynamic Media的同步，以便进行资产处理和发布：
 
-1. 将主源资产上传到Experience Manager后，该资产会复制到Dynamic Media。 此时，Dynamic Media将处理所有资产处理和演绎版生成，如图像的视频编码和动态变体。<!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
+1. 将主源资产上传到Experience Manager后，该资产会复制到Dynamic Media。 此时，Dynamic Media将处理所有资产处理和演绎版生成，如图像的视频编码和动态变体。
+(在Dynamic Media - Scene7模式下，默认上传文件大小为2 GB或更小。 要启用2 GB到15 GB的上传文件大小，请参阅[（可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产](#optional-config-dms7-assets-larger-than-2gb)。)
 1. 生成演绎版后，Experience Manager可以安全地访问和预览远程Dynamic Media演绎版(不会将二进制文件发送回Experience Manager实例)。
 1. 在内容准备好发布和批准后，它将触发Dynamic Media服务，以将内容推送到分发服务器，并在CDN（内容分发网络）处缓存内容。
 
@@ -146,11 +148,95 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 如果要进一步自定义Dynamic Media - Scene7模式的配置和设置，或优化其性能，可以完成以下一个或多个&#x200B;*可选*&#x200B;任务：
 
+* [（可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产](#optional-config-dms7-assets-larger-than-2gb)
+
 * [（可选）Dynamic Media - Scene7模式设置的设置和配置](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
 
 * [（可选）调整Dynamic Media - Scene7模式的性能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [（可选）筛选用于复制的资产](#optional-filtering-assets-for-replication)
+
+### （可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产 {#optional-config-dms7-assets-larger-than-2gb}
+
+在Dynamic Media - Scene7模式下，默认资产上传文件大小为2 GB或更小。 但是，您可以选择配置大于2 GB和高于15 GB的资产上传。
+
+如果您打算使用此功能，请注意以下先决条件和要点：
+
+* 您必须运行带有Service Pack 6.5.4.0或更高版本的Experience Manager6.5。
+* [Oak的直接二进制访问下](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) 载已启用。
+
+   要启用，请在数据存储配置中设置属性`presignedHttpDownloadURIExpirySeconds > 0`。 值应足够长，可下载较大的二进制文件，并可能重试。
+
+* 大于15 GB的资产不会上传。 （大小限制在下面的步骤8中设置。）
+* 在文件夹上触发Scene7重新处理资产工作流后，会重新处理文件夹中已上传的大资产。 但是，它会上传Scene7公司中不存在的大资产。
+* 大型上传仅适用于单个资产负载，而不适用于在文件夹上触发工作流的情况。
+
+**要配置Dynamic Media - Scene7模式，以上传大于2 GB的资产，请执行以下操作：**
+
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+
+1. 在“CRXDE Lite”窗口中，执行以下任一操作：
+
+   * 在左边栏中，导航到以下路径：
+
+      `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
+
+   * 将上面的路径复制并粘贴到工具栏下方的CRXDE Lite路径字段中，然后按`Enter`。
+
+1. 在左边栏中，右键单击`fileupload`，然后从弹出菜单中，选择&#x200B;**[!UICONTROL 覆盖节点]**。
+
+   ![“覆盖节点”选项](/help/assets/assets-dm/uploadassets15gb_a.png)
+
+1. 在“覆盖节点”对话框中，选中&#x200B;**[!UICONTROL 匹配节点类型]**&#x200B;复选框以启用（打开）选项，然后选择&#x200B;**[!UICONTROL 确定]**。
+
+   ![“覆盖节点”对话框](/help/assets/assets-dm/uploadassets15gb_b.png)
+
+1. 在“CRXDE Lite”窗口中，执行以下任一操作：
+
+   * 在左边栏中，导航到以下覆盖节点路径：
+
+      `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
+
+   * 将上面的路径复制并粘贴到工具栏下方的CRXDE Lite路径字段中，然后按`Enter`。
+
+1. 在&#x200B;**[!UICONTROL 属性]**&#x200B;选项卡的&#x200B;**[!UICONTROL 名称]**&#x200B;列下，找到`sizeLimit`。
+1. 在`sizeLimit`名称的右侧，在&#x200B;**[!UICONTROL 值]**&#x200B;列下，双击值字段。
+1. 输入相应的字节值，以便将大小限制增加到所需的最大上载大小。 例如，要将上传资产大小限制增加到10 GB，请在值字段中输入`10737418240`。
+您可以输入一个最大15 GB（`2013265920`字节）的值。 在这种情况下，不会上传大于15 GB的已上传资产。
+
+
+   ![大小限制值](/help/assets/assets-dm/uploadassets15gb_c.png)
+
+1. 在CRXDE Lite窗口的左上角附近，选择&#x200B;**[!UICONTROL 全部保存]**。
+
+   *现在，通过执行以下操作，为AdobeGranite工作流外部进程作业处理程序设置超时：*
+
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台。
+1. 执行以下操作之一：
+
+   * 导航到以下URL路径：
+
+      `localhost:4502/system/console/configMgr/com.adobe.granite.workflow.core.job.ExternalProcessJobHandler`
+
+   * 将上述路径复制并粘贴到浏览器的URL字段中。 请确保将`localhost:4502`替换为您自己的Experience Manager实例。
+
+1. 在&#x200B;**[!UICONTROL AdobeGranite工作流外部进程作业处理程序]**&#x200B;对话框的&#x200B;**[!UICONTROL 最大超时]**&#x200B;字段中，将值设置为`18000`分钟（5小时）。 默认为10800分钟（三小时）。
+
+   ![最大超时值](/help/assets/assets-dm/uploadassets15gb_d.png)
+
+1. 在对话框的右下角，选择&#x200B;**[!UICONTROL Save]**。
+
+   *现在，通过执行以下操作，为Scene7直接二进制上传过程步骤设置超时：*
+
+1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台。
+1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
+1. 在“工作流模型”页面上，选择&#x200B;**[!UICONTROL Dynamic Media编码视频]**。
+1. 在工具栏中，选择&#x200B;**[!UICONTROL 编辑]**。
+1. 在工作流页面上，双击&#x200B;**[!UICONTROL Scene7直接二进制上传]**&#x200B;流程步骤。
+1. 在&#x200B;**[!UICONTROL 步骤属性]**&#x200B;对话框的&#x200B;**[!UICONTROL 常用]**&#x200B;选项卡的&#x200B;**[!UICONTROL 高级设置]**&#x200B;标题下，在&#x200B;**[!UICONTROL 超时]**&#x200B;字段中，输入值`18000`分钟（5小时）。 默认值为`3600`分钟（1小时）。
+1. 选择&#x200B;**[!UICONTROL 确定]**。
+1. 选择&#x200B;**[!UICONTROL 同步]**。
+1. 对&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流模型和&#x200B;**[!UICONTROL Scene7重新处理工作流]**&#x200B;工作流模型重复步骤14-21。
 
 ### （可选）Dynamic Media - Scene7模式设置的设置和配置 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
@@ -524,7 +610,7 @@ Granite传输工作流队列用于&#x200B;**[!UICONTROL DAM更新资产]**&#x200
 
 **要更新Granite临时工作流队列，请执行以下操作：**
 
-1. 导航到[https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr)并搜索&#x200B;**队列：Granite Transient工作流队列**。
+1. 导航到[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)并搜索&#x200B;**队列：Granite Transient工作流队列**。
 
    >[!NOTE]
    由于OSGi PID是动态生成的，因此需要进行文本搜索，而不是直接URL。
