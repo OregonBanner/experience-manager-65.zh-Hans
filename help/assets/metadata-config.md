@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: 元数据
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b36448449830aa8e19f6dc29ab7fb62608bb39dd
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1982'
 ht-degree: 15%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 15%
 
    ![元数据配置文件中的映射到属性设置](assets/metadata-profile-setting-map-property.png)
 
-   您为&#x200B;**[!UICONTROL 映射到属性]**&#x200B;指定的值会作为属性存储在资产的元数据节点下。例如，如果指定`./jcr:content/metadata/dc:desc`作为&#x200B;**[!UICONTROL 映射到属性]**&#x200B;的名称，则[!DNL Assets]会将值`dc:desc`存储在资产的元数据节点。
+   您为&#x200B;**[!UICONTROL 映射到属性]**&#x200B;指定的值会作为属性存储在资产的元数据节点下。例如，如果指定`./jcr:content/metadata/dc:desc`作为&#x200B;**[!UICONTROL 映射到属性]**&#x200B;的名称，则[!DNL Assets]会将值`dc:desc`存储在资产的元数据节点。 建议仅将一个字段映射到元数据架构中的给定属性。 否则，系统会选取映射到属性的最新添加字段。
 
    * **[!UICONTROL 默认值]**：使用此属性可为元数据组件添加默认值。例如，如果您指定“我的描述”，则会将该值分配给资产元数据节点的属性`dc:desc`。
 
