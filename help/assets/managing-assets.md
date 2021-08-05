@@ -10,16 +10,16 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: 资产管理
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 39%
+source-wordcount: '118'
+ht-degree: 38%
 
 ---
 
 # 关于管理Dynamic Media资产 {#managing-assets}
 
-管理Dynamic Media资产 — 图像、视频和交互式资产（上传后）涉及许多任务，包括预览、下载或发布资产。
+上传Dynamic Media资产（图像、视频和交互式资产）后，管理这些资产涉及许多任务，包括预览、下载或发布资产。
 
 在预览资产时，您还可以应用图像预设（仅适用于图像）或查看器预设（适用于视频和图像）。您不能同时对资产应用这两项功能。 请参阅[应用查看器预设](/help/assets/viewer-presets.md)和[应用图像预设](/help/assets/image-sets.md)。
 
