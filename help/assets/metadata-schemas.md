@@ -6,10 +6,10 @@ mini-toc-levels: 1
 role: User,Admin
 feature: 元数据
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: d3fcf3e55af1c57bed1db9191aa76576d3bedb29
 workflow-type: tm+mt
-source-wordcount: '3547'
-ht-degree: 15%
+source-wordcount: '3597'
+ht-degree: 14%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 15%
    ![资产属性的“基本”选项卡，其中资产类型无法更改](assets/asset-properties-basic-tab.png)
 
    *图：“资产属性”中的“基 [!UICONTROL 本”选项卡]。*
+
+   在创建或编辑元数据架构时，请确保仅将一个属性映射到字段。
 
    要修改资产的MIME类型，请使用自定义元数据架构表单或修改现有表单。 有关更多信息，请参阅[编辑元数据架构Forms](#edit-metadata-schema-forms)。 如果修改MIME类型的元数据架构，则会修改资产的属性页面布局和所有子类型。 例如，修改`default/image`下的jpeg架构仅会修改MIME类型为`image/jpeg`的资产的元数据布局（资产属性）。 但是，如果您编辑默认架构，则所做的更改将修改所有类型资产的元数据布局。
 
@@ -99,13 +101,13 @@ ht-degree: 15%
 
 #### 编辑元数据组件 {#edit-the-metadata-component}
 
-要编辑表单上元数据组件的属性，请在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中单击该组件以编辑以下所有属性或属性的子集。
+要编辑表单上元数据组件的属性，请在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中单击该组件以编辑以下所有属性或属性的子集。 建议仅将一个字段映射到元数据架构中的给定属性。 否则，系统会选取映射到属性的最新添加字段。
 
 **字段标签**:资产的属性页面上显示的元数据属性的名称。
 
 **映射到属性**:此属性指定保存在CRX存储库中的资产节点的相对路径或名称。以`./`开头，表示路径位于资产的节点下。
 
-以下是此属性的有效值：
+以下是资产的有效值示例：
 
 * `./jcr:content/metadata/dc:title`：将该值作为属性 `dc:title` 存储在资产的元数据节点中。
 
