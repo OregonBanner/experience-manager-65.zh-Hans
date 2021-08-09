@@ -11,10 +11,10 @@ docset: aem65
 feature: 全景图像，资产管理
 role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '578'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
-1. 在页面的右上角附近，单击&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。
+1. 在页面的右上角附近，选择&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。
 1. 在“图像服务器发布”页面上，从顶部附近的&#x200B;**[!UICONTROL 发布上下文]**&#x200B;下拉菜单中，选择&#x200B;**[!UICONTROL 图像服务]**。
 
 1. 在同一图像服务器发布页面上，找到标题&#x200B;**[!UICONTROL 请求属性]**。
@@ -65,11 +65,11 @@ ht-degree: 1%
 
    在Experience Manager中使用`Panoramic Media` WCM组件时，需要使用这些设置。
 
-1. 在“图像服务器发布”页面底部的左侧，单击&#x200B;**[!UICONTROL Save]**。
+1. 在“图像服务器发布”页面底部的左侧，选择&#x200B;**[!UICONTROL Save]**。
 
-1. 单击右下角的&#x200B;**[!UICONTROL 关闭]**。
+1. 在右下角，选择&#x200B;**[!UICONTROL 关闭]**。
 
-### 全景媒体WCM组件故障诊断 {#troubleshooting-the-panoramic-media-wcm-component}
+### 对全景媒体WCM组件进行故障诊断 {#troubleshooting-the-panoramic-media-wcm-component}
 
 如果将图像放入WCM中的全景媒体组件中，并且组件占位符折叠，则对以下问题进行故障诊断：
 
