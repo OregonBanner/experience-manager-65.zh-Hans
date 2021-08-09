@@ -6,14 +6,14 @@ docset: aem65
 feature: 3D资产
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 15%
+source-wordcount: '555'
+ht-degree: 10%
 
 ---
 
-# 在Adobe Experience Manager中预览3D资产{#previewing-3d-assets-aem}
+# 在Adobe Experience Manager中预览3D资产 {#previewing-3d-assets-aem}
 
 Experience Manager支持在创作过程中上传、交付和交互式预览3D资产。
 
@@ -55,16 +55,16 @@ Experience Manager支持在创作过程中上传、交付和交互式预览3D资
 
 1. 确保已将3D资产上传到Experience Manager。
 请参阅[支持的3D预览格式](#supported-3d-previewing-assets)和[上传资产](/help/assets/manage-assets.md#uploading-assets)。
-1. 从Experience Manager中，在&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，点按&#x200B;**[!UICONTROL 资产>文件]**。
+1. 从Experience Manager中，在&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，选择&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 文件]**。
 
    ![导航页面](/help/assets/assets-dm/navigation-assets.png)
 
-1. 在页面的右上角附近，从“视图”下拉列表中，点按&#x200B;**[!UICONTROL 卡片视图]**，然后导航到要预览的 3D 资产。
+1. 在页面的右上角附近，从“视图”下拉列表中，选择&#x200B;**[!UICONTROL 卡片视图]**，然后导航到要预览的3D资产。
 
    ![3D卡片选择](/help/assets/assets-dm/3d-card-select.png)
-   _在卡片视图中，点按要预览的3D资产的卡片。_
+   _在卡片视图中，选择要预览的3D资产的卡片。_
 
-1. 点按3D资产的卡片。
+1. 选择3D资产的卡片。
 
    ![交互式3D预览](/help/assets/assets-dm/3d-preview.png)
    _在资产详细信息视图页面中交互式预览3D资产。_
@@ -76,7 +76,7 @@ Experience Manager支持在创作过程中上传、交付和交互式预览3D资
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击并拖动。 | 双指按并拖动。 |
    | **缩放相机** | 进出3D场景中的区域。 | 滚轮。 | 双指捏。 |
    | **重新输入相机** | 将相机重新调到3D场景中对象上的某个点。 | 双击. | 双击。 |
-   | **重置** | 在页面的右下角附近，点按重置图标，以将视图目标点恢复到3D资产的中心。 重置还会使相机更近或更远地移开，以便以合理的查看大小完整地显示资产。 |  |  |
-   | **全屏模式** | 要进入全屏模式，请点按页面右下角的全屏图标。 |  |  |
+   | **重置** | 在页面的右下角附近，选择重置图标以将视图目标点恢复到3D资产的中心。 重置还会使相机更近或更远地移开，以便以合理的查看大小完整地显示资产。 |  |  |
+   | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |  |  |
 
-1. 完成后，在页面的右上角附近，点按&#x200B;**[!UICONTROL 关闭]**。
+1. 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 关闭]**。
