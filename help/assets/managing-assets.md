@@ -10,10 +10,10 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: 资产管理
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 38%
+source-wordcount: '114'
+ht-degree: 40%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 38%
 
 有关管理资产的常规信息，请参阅[管理资产](/help/assets/manage-assets.md)。
 
-以下主题描述了管理Dynamic Media资产时需要执行的操作：
+以下主题介绍了如何管理Dynamic Media资产：
 
 * [优化图像质量的最佳实践](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md)
 * [预览 Dynamic Media 资产](/help/assets/previewing-assets.md)
