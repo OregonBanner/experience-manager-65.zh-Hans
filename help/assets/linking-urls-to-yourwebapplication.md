@@ -10,10 +10,10 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 配置
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '1275'
-ht-degree: 26%
+source-wordcount: '1277'
+ht-degree: 22%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 26%
 
 您的网站和应用程序通过URL调用访问Dynamic Media服务。 在您发布资产后，Dynamic Media 会激活引用该资产的 URL 字符串。您可以将这些 URL 粘贴到 Web 浏览器中以进行测试。
 
-仅当&#x200B;*未*&#x200B;使用AEM作为WCM时，才链接到URL。 当您希望将视频播放器作为弹出窗口或模式窗口进行传送时，会使用“链接”与“嵌入”两种方式。 如果您使用AEM作为WCM，请[直接在页面](adding-dynamic-media-assets-to-pages.md)中添加资产。
+仅当&#x200B;*不*&#x200B;使用Experience Manager作为WCM时，才链接到URL。 链接 — 与嵌入 — 用于将视频播放器作为弹出窗口或模式窗口进行传递。 如果您使用Experience Manager作为WCM，请[直接在页面](adding-dynamic-media-assets-to-pages.md)中添加资产。
 
 要将这些URL字符串放置在网页和应用程序中，请从Dynamic Media复制它们。
 
@@ -69,7 +69,7 @@ ht-degree: 26%
 
    * 如果您选择了图像，请在下拉菜单中，点按&#x200B;**[!UICONTROL 演绎版]**。
 
-      在&#x200B;**[!UICONTROL Dynamic]**&#x200B;标题下，点按预设名称，以在右侧框架中查看其演绎版。 您可能需要滚动“演绎版”列表才能看到“动态”标题。
+      在&#x200B;**[!UICONTROL Dynamic]**&#x200B;标题下，点按预设名称，以在右侧框架中查看其演绎版。 如有必要，滚动演绎版列表以查看动态标题。
 
       在左边栏的底部，点按 **[!UICONTROL URL]**。
 
@@ -83,7 +83,7 @@ ht-degree: 26%
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
-1. 选择相应的文本并将其复制到 Web 浏览器中，以预览资产或将其添加到您的 Web 内容页面。
+1. 选择文本并将其复制到Web浏览器，以便您可以预览资产或将其添加到您的Web内容页面。
 
    要退出URL窗口，请点按&#x200B;**[!UICONTROL X]**&#x200B;或点按&#x200B;**[!UICONTROL 关闭]**。
 
@@ -123,32 +123,32 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
 ## 获取已发布视频呈现的视频URL {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. 在AEM中，导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**。
+1. 在Experience Manager中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**。
 1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
 
-1. 在&#x200B;**[!UICONTROL Dynamic Media云设置]**&#x200B;页面的&#x200B;**[!UICONTROL 视频服务URL]**&#x200B;下，向下复制整个URL路径。 在稍后的步骤中，您将需要复制的URL路径。
+1. 在&#x200B;**[!UICONTROL Dynamic Media云设置]**&#x200B;页面的&#x200B;**[!UICONTROL 视频服务URL]**&#x200B;下，向下复制整个URL路径。 您需要在后续步骤中访问复制的URL路径。
 
    例如，URL路径可能如下所示：
 
    `https://s7athens.macromedia.com:9090/DMGateway/`
 
-   (上述路径仅供说明；它不是您复制的实际路径。)
+   (以上路径仅是一个示例；它不是您复制的实际路径。)
 
 1. 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。
 
    例如，如果注册ID为`87654321|MyCompany`，则客户名称将为`MyCompany`。
 
 1. 在页面的左上角附近，点按&#x200B;**[!UICONTROL Cloud Services]**，然后点按Experience Manager徽标，并导航到&#x200B;**[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
-1. 从JCR（Java内容存储库）中向下复制整个视频呈现路径。
+1. 从JCR(Java™内容存储库)中向下复制整个视频呈现路径。
 
    例如，视频的呈现路径可能如下所示：
 
    `/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112f/avs/Momentum_1080-0x720-2600k.mp4`
 
-   (上述路径仅供说明；它不是您复制的实际路径。)
+   (以上路径仅是一个示例；它不是您复制的实际路径。)
 
-1. 按以下顺序排列复制的信息，以形成完整的URL路径：
+1. 按以下顺序排列复制的信息，以便形成完整的URL路径：
 
    `<Video_Service_URL>/public/<Customer_name_from_Registration_ID>/<Video_rendition_path>`
 
@@ -156,34 +156,34 @@ Dynamic Media支持交付静态资产，这是除图像和视频之外的其他�
 
    `https://s7athens.macromedia.com:9090/DMGateway/public/MyCompany/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112ff/avs/Momentum_1080-0x720-2600k.mp4`
 
-   这是已发布视频演绎版的完整视频URL。
+   此示例是已发布视频演绎版的完整视频URL。
 
 ## 获取自适应流播放(HLS)的视频URL {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. 在AEM中，导航至&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL Cloud Services]**。
+1. 在Experience Manager中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**。
 1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到 **[!UICONTROL Dynamic Media 云服务]**&#x200B;标题，然后点按显示&#x200B;**[!UICONTROL 配置]**。
 1. 在&#x200B;**[!UICONTROL 可用配置]**&#x200B;下，点按所需配置的名称。
 1. 在&#x200B;**[!UICONTROL Dynamic MediaCloud Services设置]**&#x200B;页面上，执行以下操作：
 
-   * 在&#x200B;**[!UICONTROL 视频服务URL]**&#x200B;下，复制整个URL路径。 在这些步骤的后面部分，您将需要复制的URL路径。 例如，URL路径可能如下所示：
+   * 在&#x200B;**[!UICONTROL 视频服务URL]**&#x200B;下，复制整个URL路径。 在稍后的这些步骤中，您需要复制的URL路径。 例如，URL路径可能如下所示：
 
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
-   (上述路径仅供说明；它不是您复制的实际路径。)
+   (以上路径仅是一个示例；它不是您复制的实际路径。)
 
-   * 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。在稍后这些步骤中，您将需要复制的客户名称。
+   * 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。在稍后的这些步骤中，您需要复制的客户名称。
 
       例如，如果注册ID为`87654321|demoCo`，则您复制的客户名称将为`demoCo`。
 
 
-1. 根据您所使用的视频交付协议，复制相应的协议选择器。 在这些步骤的后面部分，您将需要复制的协议选择器。
+1. 根据您所使用的视频交付协议，复制相应的协议选择器。 在这些步骤的后面部分，您需要复制的协议选择器。
 
    | 您使用的视频交付协议 | 要使用的协议选择器 |
    |---|---|
    | HTTP <br>如果您使用HTTP（非安全视频交付），请确保在之前复制的视频服务URL值中将https更改为http。 | `public/` |
    | HTTPS | `public-ssl/` |
 
-1. 在AEM中复制由Dynamic Media处理的完整视频资产路径。 在稍后的这些步骤中，您将需要此复制的视频资产路径。
+1. 按照Dynamic Media的处理方式，在Experience Manager中复制完整的视频资产路径。 在这些步骤的后面部分，您需要此复制的视频资产路径。
 
    例如：
 
