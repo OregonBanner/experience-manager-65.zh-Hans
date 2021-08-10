@@ -8,10 +8,10 @@ content-type: reference
 role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: 配置，规则集
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 5%
+source-wordcount: '761'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 5%
 此外，请确保首先在暂存环境中测试规则集，该测试环境不会影响您的实时生产环境。
 生产环境和暂存环境通常需要不同的登录方式。
 
-请参阅[AdobeDynamic Media Classic桌面应用程序以了解登录信息](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)。
+有关登录信息](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)，请参阅[AdobeDynamic Media Classic桌面应用程序。
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
@@ -66,21 +66,21 @@ ht-degree: 5%
 
 1. 通过执行以下操作，上传规则集文件：
 
-   * 在全局导航栏上，单击&#x200B;**[!UICONTROL Upload]**。
-   * 在&#x200B;**[!UICONTROL Upload]**&#x200B;页面左上角附近，单击&#x200B;**[!UICONTROL Browse]**。
+   * 在全局导航栏上，选择&#x200B;**[!UICONTROL Upload]**。
+   * 在&#x200B;**[!UICONTROL Upload]**&#x200B;页面左上角附近，选择&#x200B;**[!UICONTROL Browse]**。
    * 在&#x200B;**[!UICONTROL 打开]**&#x200B;对话框中，浏览到您的规则集文件(XML)。
-   * 选择文件，然后单击&#x200B;**[!UICONTROL Open]**。
+   * 选择文件，然后选择&#x200B;**[!UICONTROL Open]**。
    * 在&#x200B;**[!UICONTROL Upload]**&#x200B;页面的右侧，为规则集文件选择目标文件夹。
    * 在页面底部附近，确保选中&#x200B;**[!UICONTROL 上传]**&#x200B;后发布。
-   * 在页面右下角，单击&#x200B;**[!UICONTROL 提交上传]**。
-   * 在全局导航栏上，单击&#x200B;**[!UICONTROL 作业]**&#x200B;以检查上传作业的状态。 当&#x200B;**[!UICONTROL 作业]**&#x200B;页面上的&#x200B;**[!UICONTROL 状态]**&#x200B;列显示上传完成时，请继续执行后续步骤。
+   * 在页面的右下角，选择&#x200B;**[!UICONTROL 提交上传]**。
+   * 在全局导航栏上，选择&#x200B;**[!UICONTROL 作业]**&#x200B;以检查上传作业的状态。 当&#x200B;**[!UICONTROL 作业]**&#x200B;页面上的&#x200B;**[!UICONTROL 状态]**&#x200B;列显示上传完成时，请继续执行后续步骤。
 
-1. 在页面顶部附近的导航栏中，单击&#x200B;**[!UICONTROL 设置>应用程序设置>发布设置>图像服务器]**。
-1. 在&#x200B;**[!UICONTROL 图像服务器发布]**&#x200B;页面的&#x200B;**[!UICONTROL 目录管理]**&#x200B;组下，找到&#x200B;**[!UICONTROL 规则集定义文件路径]**，然后单击&#x200B;**[!UICONTROL 选择]**。
-1. 在&#x200B;**[!UICONTROL 择规则集定义文件 (XML)]** 页面上，浏览至您的规则集文件，然后在页面的右下角单击&#x200B;**[!UICONTROL 选择]**。
-1. 在“设置”页的右下角，单击&#x200B;**[!UICONTROL 关闭]**。
+1. 在页面顶部附近的导航栏中，选择&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**。
+1. 在&#x200B;**[!UICONTROL 图像服务器发布]**&#x200B;页面的&#x200B;**[!UICONTROL 目录管理]**&#x200B;组下，找到&#x200B;**[!UICONTROL 规则集定义文件路径]**，然后选择&#x200B;**[!UICONTROL 选择]**。
+1. 在&#x200B;**[!UICONTROL 选择规则集定义文件(XML)]**&#x200B;页面上，浏览到您的规则集文件，然后在页面右下角选择&#x200B;**[!UICONTROL 选择]**。
+1. 在“设置”页面的右下角，选择&#x200B;**[!UICONTROL 关闭]**。
 1. 运行图像服务器发布作业。
 
    规则集条件将应用于对实时Dynamic Media图像服务器的请求。
 
-   如果您对规则集文件进行了更改，则在您重新上传和重新发布更新的规则集文件时，会立即应用所做的更改。
+   如果更改规则集文件，则当您重新上传和重新发布更新的规则集文件时，将立即应用更改。
