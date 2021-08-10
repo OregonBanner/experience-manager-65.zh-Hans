@@ -10,7 +10,7 @@ docset: aem65
 feature: 查看器
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 997eeafa03d3148fb0754eaa27a5a99217e0d1bc
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '6636'
 ht-degree: 6%
