@@ -9,10 +9,11 @@ topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: User, Admin
+mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '2849'
+source-wordcount: '2850'
 ht-degree: 15%
 
 ---
@@ -169,11 +170,11 @@ ht-degree: 15%
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
 
-**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择一个现有的查看器预设。如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
+**[!UICONTROL 查看器预设]**  — 从下拉菜单中选择一个现有的查看器预设。如果您要查找的查看器预设不可见，则必须使其可见。 请参阅[管理查看器预设](/help/assets/managing-viewer-presets.md)。 如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
 
 **[!UICONTROL Dynamic Media Classic配置]**  — 选择要从SPS中获取活动图像预设的Dynamic Media Classic配置。
 
-**[!UICONTROL 图像预设]**  — 从下拉菜单中选择一个现有的图像预设。如果您要查找的图像预设不可见，则必须使其可见。 请参阅[管理图像预设](/help/assets/managing-image-presets.md)。如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
+**[!UICONTROL 图像预设]**  — 从下拉菜单中选择一个现有的图像预设。如果您要查找的图像预设不可见，则必须使其可见。 请参阅[管理图像预设](/help/assets/managing-image-presets.md)。 如果您使用的是图像预设，则无法选择查看器预设，反之，则无法选择查看器预设。
 
 **[!UICONTROL 输出格式]**  — 选择图像的输出格式，例如jpeg。根据您选择的输出格式，还有其他配置选项。 请参阅[图像预设最佳实践](/help/assets/managing-image-presets.md#image-preset-options)。
 
