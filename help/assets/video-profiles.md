@@ -10,11 +10,12 @@ discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
 feature: 视频配置文件
 role: User, Admin
+mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '3697'
-ht-degree: 29%
+source-wordcount: '3691'
+ht-degree: 22%
 
 ---
 
@@ -38,11 +39,11 @@ Dynamic Media 附带预定义的自适应视频编码配置文件。此现成配
 
 >[!NOTE]
 >
->要生成视频的元数据和关联的视频图像缩略图，视频本身必须在Dynamic Media中完成编码过程。 在Adobe Experience Manager中，如果您已启用Dynamic Media并设置了视频云服务，则&#x200B;**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。请参阅[监视视频编码和 YouTube 发布进度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。如果您已启用Dynamic Media并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 (如果您没有使用Dynamic Media，则&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。)
+>要生成视频的元数据和关联的视频图像缩略图，视频本身必须在Dynamic Media中完成编码过程。 在Adobe Experience Manager中，如果您已启用Dynamic Media并设置了视频云服务，则&#x200B;**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。请参阅[监视视频编码和YouTube发布进度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已启用Dynamic Media并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 (如果您没有使用Dynamic Media，则&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。)
 >
->在搜索资产时元数据很有用。缩略图是在编码过程中生成的静态视频图像。 Experience Manager系统需要这些参数，并在用户界面中使用这些参数，以帮助您在“卡片”视图、“搜索结果”视图和“资产列表”视图中以可视方式识别视频。 当您点按编码视频的演绎版图标（画板）时，可以看到生成的缩略图。
+>在搜索资产时元数据很有用。缩略图是在编码过程中生成的静态视频图像。 Experience Manager系统需要这些参数，并在用户界面中使用这些参数，以帮助您在“卡片”视图、“搜索结果”视图和“资产列表”视图中以可视方式识别视频。 当您选择编码视频的演绎版图标（画面板）时，您可以看到生成的缩略图。
 
-创建完视频配置文件后，可将其应用到一个或多个文件夹。请参阅[将视频配置文件应用到文件夹](#applying-a-video-profile-to-folders)。
+创建完视频配置文件后，可将其应用到一个或多个文件夹。 请参阅[将视频配置文件应用到文件夹](#applying-a-video-profile-to-folders)。
 
 要为其他资产类型定义高级处理参数，请参阅[配置资产处理](/help/assets/config-dms7.md#configuring-asset-processing)。
 
@@ -152,19 +153,19 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 另请参阅[为渐进式流播放创建视频编码配置文件](#creating-a-video-encoding-profile-for-progressive-streaming)。
 
-另请参阅[视频编码的最佳实践](/help/assets/video.md#best-practices-for-encoding-videos)。
+另请参阅[视频编码最佳实践](/help/assets/video.md#best-practices-for-encoding-videos)。
 
 要为其他资产类型定义高级处理参数，请参阅[配置资产处理](/help/assets/config-dms7.md#configuring-asset-processing)。
 
 **要为自适应流播放创建视频配置文件**,
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
-1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;以添加视频配置文件。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
+1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;以添加视频配置文件。
 
 1. 输入配置文件的名称和描述。
-1. 在创建/编辑视频编码预设页面中，点按&#x200B;**[!UICONTROL 添加视频编码预设]**。
+1. 在“创建/编辑视频编码预设”页面上，选择&#x200B;**[!UICONTROL 添加视频编码预设]**。
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
-点按每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
+选择每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 1. 在“视频大小”标题下，确保选中&#x200B;**[!UICONTROL 保持宽高比]**。
 1. 以像素为单位设置视频帧大小分辨率。 使用&#x200B;**[!UICONTROL Auto]**&#x200B;值自动缩放以匹配源宽高比（宽高比）。 例如，自动x 480或640 x自动。
 
@@ -172,16 +173,16 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
    * 在&#x200B;**[!UICONTROL Width]**&#x200B;字段中，输入&#x200B;**[!UICONTROL auto]**。 在&#x200B;**[!UICONTROL Height]**&#x200B;字段中，输入以像素为单位的值。
 
-   * 要帮助您可视化视频大小，请点按&#x200B;**[!UICONTROL Height]**&#x200B;右侧的信息图标(i)以打开“大小计算器”页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;设置所需的视频尺寸（由蓝框表示）。 完成后，点按右上角的 **[!UICONTROL X]**。
+   * 要帮助您可视化视频大小，请选择&#x200B;**[!UICONTROL Height]**&#x200B;右侧的信息图标(i)以打开“大小计算器”页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;设置所需的视频尺寸（由蓝框表示）。 完成后，选择右上角的&#x200B;**[!UICONTROL X]**。
 
-1. （可选）点按&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，并确保选中&#x200B;**[!UICONTROL 使用默认值]**&#x200B;复选框（推荐）。 或者，修改高级视频和音频设置。
-1. 在该页面的右上角，点按&#x200B;**[!UICONTROL 保存]**&#x200B;以保存预设。
+1. （可选）选择&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，并确保选中&#x200B;**[!UICONTROL 使用默认值]**&#x200B;复选框（推荐）。 或者，修改高级视频和音频设置。
+1. 在页面的右上角，选择&#x200B;**[!UICONTROL Save]**&#x200B;以保存预设。
 1. 执行下列操作之一：
    * 重复第 4-10 步来创建其他编码预设。（自适应视频流播放需要多个视频预设。）
    * 继续下一步。
 
 1. （可选）要向应用此配置文件的视频添加视频智能裁剪，请执行以下操作：
-   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，点按&#x200B;**[!UICONTROL 新增]**。
+   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，选择&#x200B;**[!UICONTROL 新增]**。
    * 在“名称”字段中，键入裁剪比例的名称，以帮助您轻松识别它。
    * 从&#x200B;**[!UICONTROL 裁剪比率]**&#x200B;下拉列表中，选择要使用的比率。
 
@@ -190,7 +191,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    * 根据需要继续添加新的裁剪比例。
    * 继续下一步。
 
-1. 在该页面的右上角，再次点按&#x200B;**[!UICONTROL 保存]**&#x200B;以保存配置文件。
+1. 在页面的右上角，再次选择&#x200B;**[!UICONTROL Save]**&#x200B;以保存配置文件。
 
 您现在可以将配置文件应用到包含视频的文件夹。 请参阅[将视频配置文件应用到文件夹](#applying-a-video-profile-to-folders)或[全局应用视频配置文件](#applying-a-video-profile-globally)。
 
@@ -205,31 +206,31 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 另请参阅[为自适应流播放创建视频编码配置文件](#creating-a-video-encoding-profile-for-adaptive-streaming)。
 
-另请参阅[视频编码的最佳实践](/help/assets/video.md#best-practices-for-encoding-videos)。
+另请参阅[视频编码最佳实践](/help/assets/video.md#best-practices-for-encoding-videos)。
 
 要为其他资产类型定义高级处理参数，请参阅[配置资产处理](/help/assets/config-dms7.md#configuring-asset-processing)。
 
 **要为渐进式流播放创建视频配置文件，请执行以下操作：**
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
-1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;以添加视频配置文件。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
+1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;以添加视频配置文件。
 1. 输入配置文件的名称和描述。
-1. 在创建/编辑视频编码预设页面中，点按&#x200B;**[!UICONTROL 添加视频编码预设]**。
+1. 在“创建/编辑视频编码预设”页面上，选择&#x200B;**[!UICONTROL 添加视频编码预设]**。
 1. 在&#x200B;**[!UICONTROL 基本]**选项卡中，设置视频和音频选项。
-点按每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
+选择每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 1. （可选）在“视频大小”标题下，取消选中&#x200B;**[!UICONTROL 保持宽高比]**。
 1. 执行以下操作：
    * 在&#x200B;**[!UICONTROL Width]**&#x200B;字段中，输入&#x200B;**[!UICONTROL auto]**。
    * 在&#x200B;**[!UICONTROL Height]**字段中，输入以像素为单位的值。
-要帮助您可视化视频大小，请点按“高度”的信息图标以打开**[!UICONTROL 大小计算器]**&#x200B;页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面可进一步按需设置视频尺寸（蓝框）。 完成后，在对话框的右上角，点按&#x200B;**[!UICONTROL X]**。
+为帮助您可视化视频大小，请选择“高度”的信息图标以打开**[!UICONTROL 大小计算器]**&#x200B;页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面可进一步按需设置视频尺寸（蓝框）。 完成后，在对话框的右上角，选择&#x200B;**[!UICONTROL X]**。
 1. （可选）执行以下操作之一：
 
-   * 点按&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，并确保选中&#x200B;**[!UICONTROL 使用默认值]**&#x200B;复选框（推荐）。
+   * 选择&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡，并确保选中&#x200B;**[!UICONTROL Use Default Values]**&#x200B;复选框（推荐）。
 
    * 清除&#x200B;**[!UICONTROL 使用默认值]**复选框，并指定所需的视频设置和音频设置。
-点按每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
+选择每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 
-1. 在该页面的右上角，点按&#x200B;**[!UICONTROL 保存]**&#x200B;以保存预设。
+1. 在页面的右上角，选择&#x200B;**[!UICONTROL Save]**&#x200B;以保存预设。
 1. 执行下列操作之一：
 
    * 重复第 4-9 步来创建其他编码预设。
@@ -237,7 +238,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 1. （可选）要向应用此配置文件的视频添加视频智能裁剪，请执行以下操作：
 
-   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，点按&#x200B;**[!UICONTROL 新增]**。
+   * 在“编辑视频配置文件”页面的“智能裁剪比例”标题右侧，选择&#x200B;**[!UICONTROL 新增]**。
    * 在“名称”字段中，键入裁剪比例的名称，以帮助您轻松识别它。
    * 从&#x200B;**[!UICONTROL 裁剪比率]**&#x200B;下拉列表中，选择要使用的比率。
 
@@ -246,17 +247,17 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    * 根据需要继续添加新的裁剪比例。
    * 继续下一步。
 
-1. 在页面的右上角，点按保 **[!UICONTROL 存]** ，以保存配置文件。
+1. 在页面的右上角，选择&#x200B;**[!UICONTROL Save]**&#x200B;以保存配置文件。
 
 您现在可以将配置文件应用到包含视频的文件夹。 请参阅[将视频配置文件应用到文件夹](#applying-a-video-profile-to-folders)或[全局应用视频配置文件](#applying-a-video-profile-globally)。
 
-## 使用添加的自定义视频编码参数 {#using-custom-added-video-encoding-parameters}
+## 使用自定义添加的视频编码参数 {#using-custom-added-video-encoding-parameters}
 
 您可以编辑现有视频编码配置文件，以利用在Experience Manager中创建或编辑视频配置文件时，用户界面中未找到的高级视频编码参数。 向现有配置文件中添加一个或多个高级参数，如minBitrate和maxBitrate 。
 
 **要使用自定义添加的视频编码参数，请执行以下操作：**
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
 1. 在CRXDE Lite页面的左侧资源管理器面板中，导航到以下内容：
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
@@ -308,13 +309,13 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 ![chlimage_1-516](assets/chlimage_1-516.png)
 
-1. 在页面的右下角附近，点按&#x200B;**[!UICONTROL 添加]**。
+1. 在页面右下角附近，选择&#x200B;**[!UICONTROL Add]**。
 1. 执行下列操作之一：
 
    * 重复步骤3和4，以向视频编码配置文件中添加其他参数。
-   * 在页面的左上角附近，点按&#x200B;**[!UICONTROL 全部保存]**。
+   * 在页面的左上角附近，选择&#x200B;**[!UICONTROL 全部保存]**。
 
-1. 在CRXDE Lite页面的左上角，点按&#x200B;**[!UICONTROL Back Home]**&#x200B;图标以返回Experience Manager。
+1. 在CRXDE Lite页面的左上角，选择&#x200B;**[!UICONTROL Back Home]**&#x200B;图标以返回Experience Manager。
 
 ### 编辑视频配置文件 {#editing-a-video-encoding-profile}
 
@@ -322,44 +323,44 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 默认情况下，您无法编辑Dynamic Media附带的预定义现成&#x200B;**[!UICONTROL 自适应视频编码]**&#x200B;配置文件。 相反，您可以轻松复制配置文件并使用新名称进行保存。 然后，您可以在复制的配置文件中编辑所需的预设。
 
-另请参阅[视频编码的最佳实践](/help/assets/video.md#best-practices-for-encoding-videos)。
+另请参阅[视频编码最佳实践](/help/assets/video.md#best-practices-for-encoding-videos)。
 
 要为其他资产类型定义高级处理参数，请参阅[配置资产处理](/help/assets/config-dms7.md#configuring-asset-processing)。
 
 **要编辑视频配置文件，请执行以下操作：**
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL 编辑]**。
+1. 在工具栏中，选择&#x200B;**[!UICONTROL 编辑]**。
 1. 在“视频编码配置文件”页面上，根据需要编辑名称和描述。
-1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。点按信息图标以获取自适应流播放的说明。 （如果正在编辑渐进式视频配置文件，请勿选中此复选框。）
+1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。选择信息图标以获取自适应流播放的描述。 （如果正在编辑渐进式视频配置文件，请勿选中此复选框。）
 1. 在“视频编码预设”标题下，添加、编辑或删除构成该配置文件的视频编码预设。
 
-   点按“基本”和“高级”选项卡上每个选项旁 **[!UICONTROL 边的信息图标]****** ，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
+   选择&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡上每个选项旁边的信息图标，以了解基于所选视频格式编解码器的其他说明或推荐的设置。
 
-1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save]**。
+1. 在页面的右上角，选择&#x200B;**[!UICONTROL Save]**。
 
 ### 复制视频配置文件 {#copying-a-video-encoding-profile}
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL 复制]**。
+1. 在工具栏中，选择&#x200B;**[!UICONTROL Copy]**。
 1. 在“视频编码配置文件”页面上，输入配置文件的新名称。
-1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 点按信息图标以获取自适应流播放的说明。 （如果要复制渐进式视频配置文件，请勿选中此复选框。）
+1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 选择信息图标以获取自适应流播放的描述。 （如果要复制渐进式视频配置文件，请勿选中此复选框。）
 
    在Dynamic Media — 混合模式下，如果WebM视频预设是视频配置文件的一部分，则无法执行&#x200B;**[!UICONTROL 自适应流播放的编码]**，因为所有预设都必须是MP4。
 1. 在“视频编码预设”标题下，添加、编辑或删除构成该配置文件的视频编码预设。
 
-   点按基本和高级选项卡上每个选项旁边的信息图标，以了解推荐的设置和说明。
+   在基本和高级选项卡上选择每个选项旁边的信息图标，以了解推荐的设置和说明。
 
-1. 在页面的右上角，点按&#x200B;**[!UICONTROL Save]**。
+1. 在页面的右上角，选择&#x200B;**[!UICONTROL Save]**。
 
 ### 删除视频配置文件 {#deleting-a-video-encoding-profile}
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
 1. 在“视频配置文件”页面上，选中一个或多个视频配置文件名称。
-1. 在工具栏中，点按&#x200B;**[!UICONTROL 删除]**。
-1. 点按&#x200B;**[!UICONTROL 确定]**。
+1. 在工具栏中，选择&#x200B;**[!UICONTROL Delete]**。
+1. 选择&#x200B;**[!UICONTROL 确定]**。
 
 ## 将视频配置文件应用到文件夹 {#applying-a-video-profile-to-folders}
 
@@ -373,7 +374,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 您可以将视频配置文件应用到特定文件夹或全局应用到所有资产。
 
-您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅[编辑文件夹的处理配置文件后重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
+您可以重新处理文件夹中已有视频配置文件且稍后进行了更改的资产。 请参阅[编辑文件夹中的处理配置文件](processing-profiles.md#reprocessing-assets)后，重新处理该文件夹中的资产。
 
 ### 将视频配置文件应用到特定文件夹 {#applying-video-profiles-to-specific-folders}
 
@@ -381,19 +382,19 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
-另请参阅[编辑文件夹中的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
+另请参阅[编辑文件夹中的处理配置文件](processing-profiles.md#reprocessing-assets)后，重新处理该文件夹中的资产。
 
-#### 通过“配置文件”用户界面将视频配置文件应用到文件夹 {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
+#### 通过Profiles用户界面将视频配置文件应用到文件夹 {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
 1. 选择您要应用到一个或多个文件夹的视频配置文件。
-1. 点按&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后点按&#x200B;**[!UICONTROL 应用]**。 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
+1. 选择&#x200B;**[!UICONTROL 将配置文件应用到文件夹]**，然后选择一个或多个用于接收新上传资产的文件夹，然后选择&#x200B;**[!UICONTROL 应用]**。 在&#x200B;**[!UICONTROL 卡片视图]**&#x200B;中，如果文件夹已经分配了配置文件，则文件夹名称的正下方会显示配置文件的名称。您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
 
 #### 从“属性”将视频配置文件应用到文件夹 {#applying-video-profiles-to-folders-from-properties}
 
-1. 点按或单击Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到要将视频配置文件应用到的文件夹。
-1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
-1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后单击&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到要将视频配置文件应用到的文件夹。
+1. 在文件夹中，选择复选标记以将其选中，然后选择&#x200B;**[!UICONTROL 属性]**。
+1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择配置文件，然后选择&#x200B;**[!UICONTROL 保存并关闭]**。 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
 您可以监 [视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
@@ -402,11 +403,11 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 除了将配置文件应用到文件夹之外，您还可以全局应用一个配置文件，以便任何文件夹中上传到Experience Manager资产的任何内容都会应用选定的配置文件。
 
-另请参阅[编辑文件夹中的处理配置文件后，重新处理该文件夹中的资产](processing-profiles.md#reprocessing-assets)。
+另请参阅[编辑文件夹中的处理配置文件](processing-profiles.md#reprocessing-assets)后，重新处理该文件夹中的资产。
 
 **要全局应用视频配置文件，请执行以下操作：**
 
-* 导航到CRXDE Lite到以下节点：`/content/dam/jcr:content`。 添加属性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`并点按&#x200B;**[!UICONTROL 保存全部]**。
+* 导航到CRXDE Lite到以下节点：`/content/dam/jcr:content`。 添加属性`videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>`并选择&#x200B;**[!UICONTROL Save All]**。
 
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * 您可以[监视视频配置文件处理作业的进度](#monitoring-the-progress-of-an-encoding-job)。
@@ -425,14 +426,14 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
 
 ### 通过配置文件用户界面将视频配置文件从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频配置文件]**。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 资产]** > **[!UICONTROL 视频配置文件]**。
 1. 选择您要从一个或多个文件夹删除的视频配置文件。
-1. 点按&#x200B;**[!UICONTROL 从文件夹删除配置文件]**，并选择一个或多个要从中删除配置文件的文件夹，然后点按&#x200B;**[!UICONTROL 删除]**。
+1. 选择&#x200B;**[!UICONTROL 从文件夹删除配置文件]**，然后选择一个或多个要从中删除配置文件的文件夹，然后选择&#x200B;**[!UICONTROL 删除]**。
 
    如果视频配置文件的名称不再出现在文件夹名称的下方，则可以确定该视频配置文件不再应用于该文件夹。
 
 ### 通过“属性”将视频配置文件从文件夹删除 {#removing-video-profiles-from-folders-by-way-of-properties}
 
-1. 点按Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到您要将视频配置文件从中删除的文件夹。
-1. 在文件夹中，点按复选标记以将其选中，然后点按&#x200B;**[!UICONTROL 属性]**。
-1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后单击&#x200B;**[!UICONTROL 保存并关闭]**。如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
+1. 选择Experience Manager徽标，然后导航到&#x200B;**[!UICONTROL Assets]**，然后导航到您要将视频配置文件从中删除的文件夹。
+1. 在文件夹中，选择复选标记，然后选择&#x200B;**[!UICONTROL 属性]**。
+1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，从下拉菜单中选择&#x200B;**[!UICONTROL 无]**，然后选择&#x200B;**[!UICONTROL 保存并关闭]**。 如果文件夹已经分配了配置文件，则文件夹名称正下方会显示配置文件的名称。
