@@ -8,12 +8,13 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: User, Admin
+mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: 视频
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 35%
+source-wordcount: '1564'
+ht-degree: 33%
 
 ---
 
@@ -45,7 +46,7 @@ Scene7 视频组件支持以下格式：
 * F4V H.264
 * MP4 H.264
 
-## 确定要将视频上传到的位置 {#deciding-where-to-upload-your-video}
+## 确定上传视频的位置 {#deciding-where-to-upload-your-video}
 
 确定要将视频资产上传到的位置取决于以下因素：
 
@@ -70,11 +71,9 @@ Scene7 视频组件支持以下格式：
 1. 在Experience Manager中，在内容查找器的&#x200B;**[!UICONTROL Scene7]**&#x200B;选项卡的WCM中访问视频资产。
 1. 使用&#x200B;**[!UICONTROL Scene7 Video]**&#x200B;组件进行创作。
 
-## 配置与 Scene7 视频的集成 {#configuring-integration-with-scene-video}
+## 配置与Scene7视频的集成 {#configuring-integration-with-scene-video}
 
-要配置通用预设，请执行以下操作：
-
-1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;中，导航到 **[!UICONTROL Scene7]** 配置，然后单击&#x200B;**[!UICONTROL 编辑]**。
+1. 在&#x200B;**[!UICONTROL Cloud Services]**&#x200B;中，导航到您的&#x200B;**[!UICONTROL Scene7]**&#x200B;配置，然后选择&#x200B;**[!UICONTROL 编辑]**。
 1. 选择&#x200B;**[!UICONTROL 视频]**&#x200B;选项卡。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -95,14 +94,14 @@ Scene7 视频组件支持以下格式：
 
 ## 更新查看器和编码预设 {#updating-viewer-and-encoding-presets}
 
-要由于预设已在Scene7中更新而更新视频的查看器和编码预设，请导航到“云配置”中的Scene7配置，然后点按&#x200B;**[!UICONTROL 更新查看器和编码预设]**。
+要因为预设已在Scene7中更新而更新视频的查看器和编码预设，请导航到“云配置”中的Scene7配置，然后选择&#x200B;**[!UICONTROL 更新查看器和编码预设]**。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## 将主源视频从AdobeDAM上传到Scene7 {#uploading-your-master-video}
+## 从AdobeDAM将主源视频上传到Scene7 {#uploading-your-master-video}
 
 1. 导航到在其中为云配置设置了 Scene7 编码配置文件的 CQ DAM 目标文件夹。
-1. 单击&#x200B;**[!UICONTROL Upload]**&#x200B;以上传主源视频。 在[!UICONTROL DAM更新资产]工作流完成并且&#x200B;**[!UICONTROL 发布到Scene7]**&#x200B;具有复选标记后，视频上传和编码即已完成。
+1. 选择&#x200B;**[!UICONTROL Upload]**&#x200B;以上传主源视频。 在[!UICONTROL DAM更新资产]工作流完成并且&#x200B;**[!UICONTROL 发布到Scene7]**&#x200B;具有复选标记后，视频上传和编码即已完成。
 
    >[!NOTE]
    >
@@ -150,9 +149,9 @@ Scene7 视频组件仅适用于 Scene7 视频。基础组件可处理从Experien
 >
 >必须激活新的视频配置文件以及对其所做的更改，才能进行发布。
 
-1. 在Experience Manager中，点按&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 配置控制台]**。
+1. 在Experience Manager中，选择&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 配置控制台]**。
 1. 在&#x200B;**[!UICONTROL 配置控制台]**&#x200B;中，导航到导航树中的&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL DAM]** > **[!UICONTROL 视频配置文件]**。
-1. 创建S7视频配置文件。 在&#x200B;**[!UICONTROL New]**.菜单中，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择Scene7视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后单击&#x200B;**[!UICONTROL 创建]**。
+1. 创建S7视频配置文件。 在&#x200B;**[!UICONTROL New]**.菜单中，选择&#x200B;**[!UICONTROL 创建页面]**，然后选择Scene7视频配置文件模板。 为新的视频配置文件页面指定一个名称，然后选择&#x200B;**[!UICONTROL 创建]**。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
