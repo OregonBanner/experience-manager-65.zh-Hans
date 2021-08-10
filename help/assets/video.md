@@ -12,9 +12,9 @@ docset: aem65
 feature: 资产管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '11702'
+source-wordcount: '11699'
 ht-degree: 18%
 
 ---
@@ -306,7 +306,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 在对视频文件进行编码时，请尽可能使用最高质量的源视频文件。避免使用先前已编码的视频文件，因为这样的文件已经压缩，进一步编码会导致创建的视频质量不佳。
 
-* Dynamic Media主要支持长度为30分钟的简短视频。
+* Dynamic Media支持长度最长为30分钟的短格式视频。
 * 您可以上载每个最大15 GB的主源视频文件。
 
 下表描述了源视频文件在编码之前必须具有的推荐大小、宽高比和最小比特率：
@@ -572,7 +572,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 1. 转到[https://www.youtube.com](https://www.youtube.com/)，然后使用您的Google帐户凭据登录。
 1. 在YouTube页面的右上角，单击您的配置文件图片（也可以在纯色圆中显示为字母），然后单击&#x200B;**[!UICONTROL YouTube设置]**（圆齿轮图标）。
-1. 在“概述”页面的“其他功能”标题下，单击&#x200B;**[!UICONTROL 查看我的所有渠道或创建新渠道]**。
+1. 在“概述”页面的“其他功能”标题下，单击&#x200B;**[!UICONTROL 查看我的所有渠道或创建渠道]**。
 1. 在渠道页面上，单击&#x200B;**[!UICONTROL 创建新渠道]**。
 1. 在“品牌帐户”页面的“品牌帐户名称”字段中，输入业务名称或您选择的任何其他渠道名称，然后单击&#x200B;**[!UICONTROL 创建]**。
 
@@ -1182,7 +1182,7 @@ Cost-efficient access to rapidly evolving technology.
 
 请参阅[WebVTT:Web视频文本跟踪格式](https://w3c.github.io/webvtt/)
 
-**要向视频添加章节标记，请执行以下操作：**
+**要添加视频章节导航，请执行以下操作：**
 
 1. 以UTF8编码格式保存`.vtt`文件，以避免章节标题文本中的字符呈现出现问题。
 
@@ -1245,7 +1245,7 @@ Experience Manager中的所有视频都必须具有关联的缩略图；不替�
 1. 确保您已经执行了以下操作：
 
    * 为您的视频资产创建了一个文件夹。
-   * [将视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
+   * [将视频配置文件应用到该文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
 
    * [已将您的视频上传到文件夹](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
