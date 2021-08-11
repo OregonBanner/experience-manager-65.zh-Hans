@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 配置，Scene7模式
-source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
+source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
 workflow-type: tm+mt
 source-wordcount: '6941'
 ht-degree: 4%
@@ -167,7 +167,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * 确保已使用Amazon S3或Microsoft® Azure Blob Storage配置Experience Manager实例。
 
    >[!NOTE]
-   使用访问键（键1和键2）配置Azure Blob存储，因为Blob存储配置中的AzureSas不支持此大型上传功能。
+   使用访问密钥和密钥配置Azure Blob Storage，因为Blob存储配置中的AzureSas不支持此大上传功能。
 
 * 已启用Oak的[直接二进制访问下载](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)（不需要Oak的&#x200B;*直接二进制访问上载*）。
 
