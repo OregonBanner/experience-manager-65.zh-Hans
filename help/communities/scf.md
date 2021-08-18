@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
 
-# 社交组件框架{#social-component-framework}
+# 社交组件框架 {#social-component-framework}
 
 社交组件框架(SCF)简化了在服务器端和客户端上配置、自定义和扩展社区组件的过程。
 
@@ -42,11 +42,11 @@ Handlebars JS模板可以扩展模型/视图JS组件，以处理用户与客户�
 
 SocialComponent API可以扩展，以提供客户端为视图层或HTTP客户端所需的数据。
 
-### 客户端{#how-pages-are-rendered-for-client}的页面呈现方式
+### 如何为客户端呈现页面 {#how-pages-are-rendered-for-client}
 
 ![scf-page-rendering](assets/scf-overview.png)
 
-### 组件自定义和扩展{#component-customization-and-extension}
+### 组件自定义和扩展 {#component-customization-and-extension}
 
 要自定义或扩展组件，您只需将叠加和扩展写入/apps目录，这简化了升级到未来版本的过程。
 
@@ -65,7 +65,7 @@ SocialComponent API可以扩展，以提供客户端为视图层或HTTP客户端
    * 根据需要使用现有的[OperationServices](server-customize.md#operationservice-class)。
    * 添加Javascript代码，以根据需要从客户端调用操作。
 
-## 服务器端框架{#server-side-framework}
+## 服务器端框架 {#server-side-framework}
 
 该框架提供了用于访问服务器上功能的API，并支持客户端与服务器之间的交互。
 
@@ -81,7 +81,7 @@ Java API提供易于继承或子类化的抽象类和接口。
 
 HTTP API支持轻松自定义和选择PhoneGap应用程序、本机应用程序以及其他集成和混合的客户端平台。 此外，HTTP API允许社区站点在没有客户端的情况下作为服务运行，这样框架组件就可以集成到基于任何技术构建的任何网页中。
 
-### HTTP API -GET请求{#http-api-get-requests}
+### HTTP API -GET请求 {#http-api-get-requests}
 
 对于每个SocialComponent，框架都提供基于HTTP的API端点。 通过使用“.social.json”选择器+扩展向资源发送GET请求来访问端点。 使用Sling，将请求传递到`DefaultSocialGetServlet`。
 
@@ -99,7 +99,7 @@ HTTP API支持轻松自定义和选择PhoneGap应用程序、本机应用程序�
 
 ![scf-framework](assets/scf-framework.png)
 
-### HTTP API -POST请求{#http-api-post-requests}
+### HTTP API -POST请求 {#http-api-post-requests}
 
 除了GET（读取）操作之外，该框架还定义了端点模式，以对组件启用其他操作，包括创建、更新和删除。 这些端点是接受输入并以HTTP状态代码或JSON响应对象进行响应的HTTP API。
 
@@ -111,7 +111,7 @@ HTTP API支持轻松自定义和选择PhoneGap应用程序、本机应用程序�
 
 ![scf-post-request](assets/scf-post-request.png)
 
-### 存储资源提供程序(SRP){#storage-resource-provider-srp}
+### 存储资源提供程序(SRP) {#storage-resource-provider-srp}
 
 要了解如何处理存储在[社区内容存储](working-with-srp.md)中的UGC，请参阅：
 
@@ -119,13 +119,13 @@ HTTP API支持轻松自定义和选择PhoneGap应用程序、本机应用程序�
 * [SRP和UGC Essentials](srp-and-ugc.md)  - SRP API实用程序方法和示例。
 * [使用SRP访问UGC](accessing-ugc-with-srp.md)  — 编码准则。
 
-### 服务器端自定义{#server-side-customizations}
+### 服务器端自定义 {#server-side-customizations}
 
 访问[服务器端自定义](server-customize.md) ，以了解有关自定义服务器端社区组件的业务逻辑和行为的信息。
 
-## Handlebars JS模板语言{#handlebars-js-templating-language}
+## Handlebars JS模板语言 {#handlebars-js-templating-language}
 
-在新框架中，更显着的更改之一是使用[Handlebars JS模板语言(HBS)](https://www.handlebarsjs.com/)，这是一种用于服务器客户端渲染的常用开源技术。
+在新框架中，一个更显着的变化是使用`Handlebars JS`(HBS)模板语言，该语言是一种用于服务器客户端渲染的常用开源技术。
 
 HBS脚本简单、无逻辑、可在服务器和客户端上编译、易于覆盖和自定义，并且与客户端UX自然绑定，因为HBS支持客户端渲染。
 
@@ -133,7 +133,7 @@ HBS脚本简单、无逻辑、可在服务器和客户端上编译、易于覆�
 
 在服务器上，当Sling解析GET请求时，它会标识将用于响应请求的脚本。 如果脚本是HBS模板(.hbs),Sling会将请求委派给Handlebars引擎。 然后，Handlebars引擎将从相应的SocialComponentFactory中获取SocialComponent，构建上下文并渲染HTML。
 
-### 无访问限制{#no-access-restriction}
+### 无访问限制 {#no-access-restriction}
 
 Handlebars(HBS)模板文件(.hbs)类似于.jsp和.html模板文件，不同之处在于它们可用于在客户端浏览器和服务器上渲染。 因此，请求客户端模板的客户端浏览器将从服务器接收.hbs文件。
 
@@ -141,7 +141,7 @@ Handlebars(HBS)模板文件(.hbs)类似于.jsp和.html模板文件，不同之�
 
 不得禁止对.hbs文件的HTTP访问。
 
-### 添加或包含社区组件{#add-or-include-a-communities-component}
+### 添加或包含社区组件 {#add-or-include-a-communities-component}
 
 大多数社区组件必须&#x200B;*添加*&#x200B;作为Sling可寻址资源。 在模板中，可以选择一些社区组件作为非现有资源&#x200B;*包含*，以允许动态包含和自定义用户生成内容(UGC)的写入位置。
 
@@ -187,15 +187,15 @@ Handlebars(HBS)模板文件(.hbs)类似于.jsp和.html模板文件，不同之�
 
 请参阅[SCF Handlebars Helpers](handlebars-helpers.md) ，以获取SCF中提供的自定义帮助器的列表和说明。
 
-## 客户端框架{#client-side-framework}
+## 客户端框架 {#client-side-framework}
 
-### 模型视图Javascript框架{#model-view-javascript-framework}
+### 模型视图Javascript框架 {#model-view-javascript-framework}
 
 该框架包含[Backbone.js](https://www.backbonejs.org/)的扩展，后者是一个模型视图的JavaScript框架，旨在促进开发丰富的交互式组件。 面向对象的性质支持可扩展/可重用框架。 通过HTTP API简化了客户端与服务器之间的通信。
 
 该框架利用服务器端Handlebars模板来为客户端渲染组件。 这些模型基于由HTTP API生成的JSON响应。 视图将自身绑定到由Handlebars模板生成的HTML，并提供交互性。
 
-### CSS约定{#css-conventions}
+### CSS惯例 {#css-conventions}
 
 以下是定义和使用CSS类的推荐约定：
 
@@ -203,7 +203,7 @@ Handlebars(HBS)模板文件(.hbs)类似于.jsp和.html模板文件，不同之�
 * 定义特定的类选择器样式，以便CSS样式表能够很好地与页面上的其他元素和样式一起使用。 例如：`.social-forum .topic-list .li { color: blue; }`
 * 对于由JavaScript驱动的UX，请将样式的CSS类与CSS类分开。
 
-### 客户端自定义{#client-side-customizations}
+### 客户端自定义 {#client-side-customizations}
 
 要自定义客户端上社区组件的外观和行为，请引用[客户端自定义](client-customize.md)，其中包含有关以下内容的信息：
 
@@ -214,7 +214,7 @@ Handlebars(HBS)模板文件(.hbs)类似于.jsp和.html模板文件，不同之�
 * [扩展Javascript](client-customize.md#extending-javascript)
 * [用于SCF的Clientlibs](client-customize.md#clientlibs-for-scf)
 
-## 功能和组件要点{#feature-and-component-essentials}
+## 功能和组件要点 {#feature-and-component-essentials}
 
 [功能和组件要点](essentials.md)部分中介绍了开发人员的基本信息。
 
