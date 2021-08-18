@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '674'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 此部分专门针对社区，并补充了[升级到AEM 6.5](/help/sites-deploying/upgrade.md)（平台）中提供的信息。
 
-## 从AEM 6.1或更高版本{#upgrading-from-aem-or-later}升级
+## 从AEM 6.1或更高版本升级 {#upgrading-from-aem-or-later}
 
 ### 重新索引Solr {#reindex-solr}
 
@@ -41,11 +41,11 @@ ht-degree: 3%
 
 请联系[客户关怀](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)，以获取有关从启用1.0迁移内容的帮助。
 
-## 从AEM 6.0 {#upgrading-from-aem}升级
+## 从AEM 6.0升级 {#upgrading-from-aem}
 
 如果需要保留预先存在的UGC，则执行此操作的方法取决于部署是存储在UGC [on-premise](#on-premise-storage)中，还是存储在[Adobe云](#adobe-cloud-storage)中。
 
-### Adobe云存储{#adobe-cloud-storage}
+### Adobe云存储 {#adobe-cloud-storage}
 
 如果已升级的站点配置为使用Adobe云存储，则它可能会（错误地）显示，好像所有UGC都丢失了一样，因为SRP方法将无法在旧位置中找到预先存在的UGC。
 
@@ -71,7 +71,7 @@ ht-degree: 3%
       ![实用程序](assets/utilities.png)
 
 
-### 本地存储{#on-premise-storage}
+### 内部部署存储 {#on-premise-storage}
 
 如果已升级的站点不使用云存储，则必须转换任何预先存在的UGC，以符合AEM 6.1 Communities中引入的新结构，从而支持常用存储。
 
@@ -86,21 +86,21 @@ ht-degree: 3%
 
 另请参阅[使用Maven for Communities](/help/communities/maven.md)。
 
-### 无JSP组件模板{#no-jsp-component-templates}
+### 无JSP组件模板 {#no-jsp-component-templates}
 
-[社交组件框架](/help/communities/scf.md)(SCF)使用[HandlebarsJS](https://www.handlebarsjs.com/)(HBS)模板语言代替AEM 6.0之前使用的Java服务器页面(JSP)。
+[社交组件框架](/help/communities/scf.md)(SCF)使用`HandlebarsJS`(HBS)模板语言代替AEM 6.0之前使用的Java服务器页(JSP)。
 
 在AEM 6.0中，JSP组件与新的HBS框架组件一起保留在同一位置，HBS组件通常位于名为“hbs”的子文件夹中。
 
 自AEM 6.1起，JSP组件已完全删除。 对于Communities，建议将JSP组件的所有使用替换为SCF组件。
 
-## AEM Communities UGC迁移工具{#aem-communities-ugc-migration-tool}
+## AEM Communities UGC迁移工具 {#aem-communities-ugc-migration-tool}
 
 [AEM Communities UGC迁移工具](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)是一款开源迁移工具，可在GitHub上使用，可通过自定义工具将UGC从AEM社交社区的早期版本导出并导入AEM Communities 6.1或更高版本。
 
 除了从早期版本移动UGC外，还可以使用该工具将UGC从一个[SRP](/help/communities/working-with-srp.md)移动到另一个版本，如从MSRP移动到DSRP。
 
-## 从AEM 5.6.1或更低版本{#upgrading-from-aem-or-earlier}升级
+## 从AEM 5.6.1或更早版本升级 {#upgrading-from-aem-or-earlier}
 
 从概念上讲，共有三代社区组件：
 
