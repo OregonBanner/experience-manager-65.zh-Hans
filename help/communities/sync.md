@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f4f4be3d9885723953b1306ff25a52d27799aa93
 workflow-type: tm+mt
-source-wordcount: '2509'
+source-wordcount: '2508'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ ht-degree: 1%
 
 要配置要同步的数据（节点路径），请执行以下操作：
 
-1. 使用创作实例的管理员权限登录。
+1. 使用发布实例的管理员权限登录。
 1. 访问[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
@@ -187,7 +187,7 @@ ht-degree: 1%
 
 要确保成员同步：
 
-1. 使用您的AEM创作实例的管理员权限登录。
+1. 使用发布实例的管理员权限登录。
 1. 访问[Web控制台](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)。
 
    例如， [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
