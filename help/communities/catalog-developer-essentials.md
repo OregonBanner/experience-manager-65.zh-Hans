@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 exl-id: 4ca76b50-d56d-4f4d-be92-bf8929c5d754
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 2%
 
 ---
 
-# 目录要点{#catalog-essentials}
+# 目录要点 {#catalog-essentials}
 
 本页提供了有关使用启用社区站点的目录功能的基本信息。
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 请参阅[标记支持资源](tag-resources.md)。
 
-## 客户端{#essentials-for-client-side}的要点
+## 客户端要点 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -58,13 +58,13 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 服务器端{#essentials-for-server-side}的要点
+## 服务器端要点 {#essentials-for-server-side}
 
 ### 目录功能 {#catalog-function}
 
 包含[Catalog函数](functions.md#catalog-function)的社区站点结构，包括配置的`enablement catalog`组件。
 
-### 预过滤器{#pre-filters}
+### 预过滤器 {#pre-filters}
 
 将目录功能添加到社区站点后，可以通过指定预过滤器来限制目录中显示的支持资源和学习路径。 这可以通过在网站的目录资源实例中设置属性来完成。
 
@@ -105,16 +105,16 @@ ht-degree: 2%
 
 ![configure-catalog](assets/configure-catalog.png)
 
-#### 预过滤TagID {#pre-filter-tagids}
+#### 预过滤标记ID {#pre-filter-tagids}
 
 预筛选器[TagIDs](../../help/sites-developing/framework.md#tagid)必须完全匹配应用于启用资源的标记。 这些值在站点的`resources`文件夹中作为属性`se_resource-tags`的值显示。
 
 ![configure-filters](assets/configure-catalog1.png)
 
-### 引用API {#reference-apis}
+### 参考API {#reference-apis}
 
-* [启用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/api/package-summary.html)
+* [启用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/reporting/model/api/package-summary.html)
 
-* [报表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/api/package-summary.html)
+* [报表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [报表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/client/reporting/analytics/api/package-summary.html)
+* [报表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
