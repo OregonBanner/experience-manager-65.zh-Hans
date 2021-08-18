@@ -13,9 +13,9 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1674'
 ht-degree: 2%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 2%
 
 ![社区组主题](assets/communitygrouptheme.png)
 
-该框架使用[TwitterBootstrap](https://twitterbootstrap.org/)为网站引入响应式灵活设计。 可以选择许多预加载的Bootstrap主题之一来设置所选社区组模板的样式，也可以上传Bootstrap主题。
+该框架使用`Twitter Bootstrap`为网站引入响应式灵活设计。 可以选择许多预加载的Bootstrap主题之一来设置所选社区组模板的样式，也可以上传Bootstrap主题。
 
 选择后，主题将被覆盖，并显示一个不透明的蓝色复选标记。
 
