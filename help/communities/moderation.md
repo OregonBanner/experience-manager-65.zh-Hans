@@ -12,10 +12,10 @@ discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2110'
-ht-degree: 3%
+source-wordcount: '2050'
+ht-degree: 4%
 
 ---
 
@@ -242,11 +242,11 @@ Github上的[示例项目](https://github.com/Adobe-Marketing-Cloud/aem-communit
 
 要安装标记过滤器的示例，请执行以下操作：
 
-1. 在AEM创作([https://[aem-author]:4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))实例和AEM发布([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp))实例上打开包管理器。
+1. 在AEM创作(`https://[aem-author]:4502/crx/packmgr/index.jsp`)实例和AEM发布(`https://[aem-publish]:4503/crx/packmgr/index.jsp`)实例上打开包管理器。
 1. 从Github代码构建包`com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip`，并安装并启用该包。
 1. 在AEM创作(`https://[aem-author]:4502/system/console/bundles`)实例和AEM发布(`https://[aem-publish]:4503/system/console/bundles`)实例上打开包控制台。
-1. 从Github构建包` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`，并安装并启用该包。
-1. 转到AEM创作([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))和AEM发布([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))实例上的&#x200B;**/apps/social/moderation/facets**)节点。
+1. 从Github构建包(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)，并安装并启用该包。
+1. 转到AEM创作(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)和AEM发布(`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)实例上的&#x200B;**/apps/social/moderation/facets**&#x200B;节点。
 1. 添加具有`jcr:read`权限的技术用户&#x200B;**communities-utility-reader**。
 
 要在现有社区网站上显示自定义过滤器，请执行以下操作：
