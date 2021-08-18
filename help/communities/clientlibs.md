@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
-# Clientlibs for Communities组件{#clientlibs-for-communities-components}
+# 适用于社区组件的Clientlibs {#clientlibs-for-communities-components}
 
 ## 简介 {#introduction}
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 * [使用客户端库，](/help/sites-developing/clientlibs.md) 该库提供使用详细信息以及调试工具
 * [SCF的Clientlib在自定](/help/communities/client-customize.md#clientlibs) 义SCF组件时提供有用信息
-* [博客：AEM客户端库（如示例所示）](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
+
 
 ## 为何需要Clientlibs {#why-clientlibs-are-required}
 
@@ -38,15 +38,15 @@ ht-degree: 0%
 
 当缺少所需的clientlib时， [将社区组件添加到页面](/help/communities/author-communities.md)可能会导致javascript错误以及意外外观。
 
-### 示例：未使用Clientlibs {#example-placed-reviews-without-clientlibs}进行审阅
+### 示例：未使用Clientlibs进行审阅 {#example-placed-reviews-without-clientlibs}
 
 ![置入审阅](assets/placed-reviews.png)
 
-### 示例：使用Clientlibs {#example-placed-reviews-with-clientlibs}进行审阅
+### 示例：使用Clientlibs进行审阅 {#example-placed-reviews-with-clientlibs}
 
 ![reviews-clientlibs](assets/reviews-clientlibs.png)
 
-## 识别所需的Clientlibs {#identifying-required-clientlibs}
+## 确定所需的Clientlib {#identifying-required-clientlibs}
 
 面向开发人员的基本功能信息可识别所需的客户端库。
 
