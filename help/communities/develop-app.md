@@ -10,22 +10,22 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 3%
+source-wordcount: '578'
+ht-degree: 4%
 
 ---
 
-# 开发沙盒应用程序{#develop-sandbox-application}
+# 开发沙盒应用程序  {#develop-sandbox-application}
 
 在本节中，由于模板已在[初始应用程序](initial-app.md)部分中设置，初始页面在[初始内容](initial-content.md)部分中建立，因此可以使用基础脚本来开发应用程序，其中包括启用Communities组件创作功能。 在本节的末尾，网站将正常运行。
 
-## 使用基础页面脚本{#using-foundation-page-scripts}
+## 使用Foundation页面脚本 {#using-foundation-page-scripts}
 
 默认脚本（在添加呈现播放页模板的组件时创建）将被修改以包含基础页的head.jsp和本地body.jsp。
 
-### 超级资源类型{#super-resource-type}
+### 超级资源类型 {#super-resource-type}
 
 第一步是向`/apps/an-scf-sandbox/components/playpage`节点添加资源超类型属性，以便该节点继承超类型的脚本和属性。
 
@@ -45,7 +45,7 @@ ht-degree: 3%
 
    ![page-script](assets/page-script.png)
 
-### Head和body脚本{#head-and-body-scripts}
+### 头部和身体脚本 {#head-and-body-scripts}
 
 1. 在&#x200B;**CRXDE Lite**&#x200B;资源管理器窗格中，导航到`/apps/an-scf-sandbox/components/playpage`并双击文件`playpage.jsp`以在编辑窗格中将其打开。
 
@@ -121,7 +121,7 @@ ht-degree: 3%
 
 **在编辑模式下在浏览器中查看页面：**
 
-* 标准UI:[http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html](http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.md)
+* 标准 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
 您不仅应看到标题&#x200B;**社区播放**，还应看到用于编辑页面内容的UI。
 
@@ -129,7 +129,7 @@ ht-degree: 3%
 
 ![查看页面](assets/view-page.png)
 
-* 经典UI:[http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
+* 经典 UI: `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
 
 以下是播放页面在经典UI中的显示方式，包括内容查找器(cf):
 
@@ -169,7 +169,7 @@ ht-degree: 3%
 
 在这个简单的示例中，正在静态设置根页面以重定向到英语页面，该页面将来可能会开发为包含播放页面链接的主登陆页面。
 
-将浏览器URL更改为根页面：[http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html)
+将浏览器URL更改为根页面：`http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
 * 选择页面信息图标
 * 选择&#x200B;**[!UICONTROL 打开属性]**
