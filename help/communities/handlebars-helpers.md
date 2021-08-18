@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -141,7 +141,7 @@ Then content-loadmore would return
 
 * **格式**:字符串
 
-   （可选）要应用的日期格式。 默认值为“YYYY-MM-DDTHH:mm:ss.sssZ”，结果显示为“2015-03-18T18:17:13-07:00”
+   （可选）要应用的日期格式。 默认值为“YYYY-MM-DDTHH:mm:ss.ssZ”，结果显示为“2015-03-18T18:17:13-07:00”
 
 ### 示例 {#examples-1}
 
@@ -447,9 +447,7 @@ var input = {{xss-jsString topic-title}}
 <a href="{{xss-validHref url}}">my link</a>
 ```
 
-## Handlebars.js基本概述{#handlebars-js-basic-overview}
-
-[Handlebars.js文档](https://handlebarsjs.com/expressions.html)中的帮助程序函数快速概述：
+## Handlebars.js基本概述 {#handlebars-js-basic-overview}
 
 * Handlebars帮助程序调用是一个简单的标识符（帮助程序的&#x200B;*name*），其后跟零个或多个以空格分隔的参数。
 * 参数可以是简单的字符串、数字、布尔值或JSON对象，以及作为最后一个参数的可选键值对（哈希参数）序列。
@@ -470,7 +468,7 @@ var input = {{xss-jsString topic-title}}
 
 * 建议从帮助程序返回的HTML字符串内容是SafeString。
 
-### Handlebars.js文档中的简单助手的示例：{#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.js文档中的简单助手的示例： {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -496,7 +494,7 @@ template(context);
 &lt;li>&lt;a href=&quot;/posts/hello-world&quot;>发帖！&lt;/a>&lt;/li>
 &lt;/ul>
 
-### Handlebars.js文档中的块帮助程序示例：{#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.js文档中的块帮助程序示例： {#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
@@ -522,11 +520,11 @@ template(data);
 &lt;li>&lt;a href=&quot;/people/2&quot;>耶胡达&lt;/a>&lt;/li>
 &lt;/ul>
 
-## 自定义SCF帮助程序{#custom-scf-helpers}
+## 定制SCF帮助器 {#custom-scf-helpers}
 
 必须在服务器端和客户端上实施自定义帮助程序，尤其是在传递数据时。 对于SCF，大多数模板都在服务器端编译和渲染，因为服务器在请求页面时会为给定组件生成HTML。
 
-### 服务器端自定义帮助程序{#server-side-custom-helpers}
+### 服务器端自定义帮助程序 {#server-side-custom-helpers}
 
 要在服务器端实施和注册自定义SCF帮助程序，只需实施Java接口[TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)，将其设为[OSGi服务](../../help/sites-developing/the-basics.md#osgi)，并将其作为OSGi包的一部分进行安装即可。
 
@@ -574,7 +572,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >组件将在已登录用户的客户端重新呈现，如果未找到客户端帮助程序，则组件会消失。
 
-### 客户端自定义帮助程序{#client-side-custom-helpers}
+### 客户端自定义帮助程序 {#client-side-custom-helpers}
 
 客户端帮助程序是通过调用`Handlebars.registerHelper()`注册的Handlebars脚本。
 例如：
