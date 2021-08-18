@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
 exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 11%
 
 ---
 
-# 工作总揽{#assignments-essentials}
+# 工作总揽 {#assignments-essentials}
 
 阅读并了解有关使用[启用社区](/help/communities/overview.md#enablement-community)站点的分配功能的基本信息。
 
 分配功能是将支持资源和学习路径分配给支持社区的成员的功能。
 
-## 客户端{#essentials-for-client-side}的要点
+## 客户端要点 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -55,7 +55,7 @@ ht-degree: 11%
  </tbody>
 </table>
 
-### 完成和成功状态{#completion-and-success-status}
+### 完成和成功状态 {#completion-and-success-status}
 
 “工作总揽”上的报表和状态横幅中使用“完成”和“成功”状态。
 
@@ -81,16 +81,16 @@ ht-degree: 11%
 | 完成 | 通过 |
 | 完成 | 失败 |
 
-## 服务器端{#essentials-for-server-side}的要点
+## 服务器端要点 {#essentials-for-server-side}
 
 ### 指定任务功能 {#assignments-function}
 
 包括[分配函数](/help/communities/functions.md#assignments-function)的社区站点结构包括配置的` [assignments](/help/communities/assignments.md)`组件。
 
-### 引用API {#reference-apis}
+### 参考API {#reference-apis}
 
 * [启用API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/enablement/reporting/model/api/package-summary.html)
 
 * [报表API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [报表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
+* [报表分析API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
