@@ -13,7 +13,7 @@ discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 3%
@@ -191,7 +191,7 @@ ht-degree: 3%
 
 ### 运行迁移实用程序后的内部管理任务 {#housekeepingtasks}
 
-运行迁移实用程序后，请处理以下内务处理任务：[](../../forms/using/import-export-forms-templates.md)
+运行迁移实用程序后，请处理以下内务处理任务：
 
 1. 确保XFA版本的布局和片段布局为3.3或更高版本。 如果您使用旧版本的布局和片段布局，则在渲染信件时可能会出现问题。 要将旧XFA的版本更新至最新版本，请完成以下步骤：
 
