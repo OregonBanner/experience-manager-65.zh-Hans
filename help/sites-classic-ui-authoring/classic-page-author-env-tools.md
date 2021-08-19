@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 87%
@@ -62,10 +62,10 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 * [文档](#finding-documents)
 * [电影](#finding-movies)
 * [Dynamic Media浏览器](/help/sites-administering/scene7.md#scene7contentbrowser)
-* [](#products) [页面](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
+* [页面](#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
-* [产品](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
+* [产品](#products)
 * 或[按存储库结构浏览网站](#the-content-finder)
 
 对于所有选项，均可[搜索特定项目](#the-content-finder)。
@@ -84,7 +84,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 您在页面中创建了 Download 段落后，可以拖曳项目并将其放置在段落中。
 
-![chlimage_1-112](assets/chlimage_1-112.png)
+![chlimage_1-192](assets/chlimage_1-112.png)
 
 ### 查找电影 {#finding-movies}
 
@@ -104,7 +104,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 此选项卡显示所有页面。双击任意页面以将其打开进行编辑。
 
-![chlimage_1-114](assets/chlimage_1-115.png)
+![chlimage_1-115](assets/chlimage_1-115.png)
 
 ### 从其他页面引用段落 {#referencing-paragraphs-from-other-pages}
 
@@ -112,7 +112,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-### 使用完整库视图 {#using-the-full-repository-view}
+### 使用完整存储库视图 {#using-the-full-repository-view}
 
 此选项卡显示存储库中的所有资源。
 
@@ -174,7 +174,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
 其他[页面间关系可以在“网站”控制台中进行查看](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)。
 
-## 审查日志  {#audit-log}
+## 审查日志 {#audit-log}
 
 从 Sidekick 的&#x200B;**信息**&#x200B;选项卡中，可以访问&#x200B;**审核日志**。它列出了对当前页面执行的近期操作，例如：
 
