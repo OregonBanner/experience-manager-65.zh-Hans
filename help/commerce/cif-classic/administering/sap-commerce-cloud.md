@@ -7,7 +7,8 @@ uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
+source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -26,7 +27,7 @@ ht-degree: 1%
 1. [配置目录导入器](#configure-the-catalog-importer)。
 1. 使用[导入器将目录](#catalog-import)导入AEM中的特定位置。
 
-## 配置Geometrixx Outdoors的强制搜索{#configure-the-facetted-search-for-geometrixx-outdoors}
+## 配置推荐搜索Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -100,7 +101,7 @@ ht-degree: 1%
    * **索引器操作**:  `full`
    * **解决方案配置**:  `Sample Solr Config for Clothes`
 
-## 配置目录版本{#configure-the-catalog-version}
+## 配置目录版本 {#configure-the-catalog-version}
 
 可以为OSGi服务配置导入的&#x200B;**目录版本**(`hybris.catalog.version`):
 
@@ -115,7 +116,7 @@ ht-degree: 1%
 
 日志输出可提供有关已创建页面和组件的反馈，并报告潜在错误。
 
-## 配置导入结构{#configure-the-import-structure}
+## 配置导入结构 {#configure-the-import-structure}
 
 以下列表显示了默认创建的示例结构（资产、页面和组件）：
 
@@ -165,7 +166,7 @@ ht-degree: 1%
 
 使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
-## 配置产品属性以加载{#configure-the-product-attributes-to-load}
+## 配置要加载的产品属性 {#configure-the-product-attributes-to-load}
 
 响应解析器可配置为定义要加载（变量）产品的属性和属性：
 
@@ -180,7 +181,7 @@ ht-degree: 1%
    >
    >使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
-## 导入产品数据{#importing-the-product-data}
+## 导入产品数据 {#importing-the-product-data}
 
 有多种方法可导入产品数据。 可在最初设置环境时或在hybris数据中进行更改后导入产品数据：
 
@@ -204,7 +205,7 @@ ht-degree: 1%
 >
 >每次请求有关产品的信息时，都会引用hybris服务器。
 
-### 完全导入{#full-import}
+### 完全导入 {#full-import}
 
 1. 如果需要，请使用CRXDE Lite删除所有现有产品数据。
 
@@ -273,7 +274,7 @@ ht-degree: 1%
    ```
 
 
-### 快速更新{#express-update}
+### 快速更新 {#express-update}
 
 导入过程可能需要较长时间，因此作为产品同步的扩展，您可以为手动触发的快速更新选择目录的特定区域。 这会将导出信息源与标准属性配置结合使用。
 
@@ -308,9 +309,7 @@ ht-degree: 1%
        /etc/commerce/products
    ```
 
-   ` [](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
-
-## 配置目录导入器{#configure-the-catalog-importer}
+## 配置目录导入器 {#configure-the-catalog-importer}
 
 可以使用hybris目录、类别和产品的批处理导入器，将hybris目录导入AEM。
 
@@ -321,7 +320,7 @@ ht-degree: 1%
 
 使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
-## 目录导入{#catalog-import}
+## 目录导入 {#catalog-import}
 
 hybris包随目录导入器一起提供，用于设置初始页面结构。
 
@@ -342,7 +341,7 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
 * **根**
 路径应将目录导入的路径。
 
-## 从目录{#removing-a-product-from-the-catalog}中删除产品
+## 从目录中删除产品 {#removing-a-product-from-the-catalog}
 
 要从目录中删除一个或多个产品，请执行以下操作：
 
