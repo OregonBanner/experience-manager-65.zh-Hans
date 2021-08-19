@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 1%
 
 ---
 
-# 体验已发布的站点{#experience-the-published-site}
+# 体验已发布的网站 {#experience-the-published-site}
 
-## 在发布时浏览到新站点{#browse-to-new-site-on-publish}
+## 在发布时浏览到新站点 {#browse-to-new-site-on-publish}
 
 现在，新创建的社区站点已发布，浏览到创建站点时显示的URL，但在发布服务器上显示，例如：
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ![authorpublished](assets/authorpublished.png)
 
-## 匿名网站访客{#anonymous-site-visitor}
+## 匿名网站访客 {#anonymous-site-visitor}
 
 匿名网站访客在UI中看到以下内容：
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 如果选择各种链接，则会发现它们处于只读模式。
 
-### 阻止对JCR {#prevent-anonymous-access-on-jcr}的匿名访问
+### 阻止对JCR的匿名访问 {#prevent-anonymous-access-on-jcr}
 
 已知限制通过jcr内容和json向匿名访客公开社区网站内容，但是&#x200B;**允许匿名访问**&#x200B;对于网站内容禁用。 但是，可以使用Sling限制作为解决方法来控制此行为。
 
@@ -75,7 +75,7 @@ ht-degree: 1%
 1. 添加登录页面的路径。 例如，**/content/......./GetStarted**。
 1. 发布页面。
 
-## 受信任的社区成员{#trusted-community-member}
+## 受信任的社区成员 {#trusted-community-member}
 
 此体验假定[Aaron McDonald](/help/communities/tutorials.md#demo-users)被分配了[社区经理和审查方](/help/communities/create-site.md#roles)的角色。 如果没有，请返回创作环境以[修改站点设置](/help/communities/sites-console.md#modifying-site-properties)，然后选择Aaron McDonald作为社区经理和审查方。
 
@@ -108,7 +108,7 @@ ht-degree: 1%
 >* [组件、函数和功能要点](/help/communities/essentials.md) （适用于开发人员）
 
 
-### 论坛链接{#forum-link}
+### 论坛链接 {#forum-link}
 
 通过选择“论坛”链接，查看基本论坛功能。
 
@@ -118,7 +118,7 @@ ht-degree: 1%
 
 ![forumlink](assets/forumlink.png)
 
-### 组链接{#groups-link}
+### 群组链接 {#groups-link}
 
 由于Aaron是群组管理员，因此选择群组链接将允许Aaron通过选择群组模板、图像（无论群组是开放还是保密）并邀请成员来创建新的社区群组。
 
@@ -193,7 +193,7 @@ ht-degree: 1%
 
 ![grouplink3](assets/grouplink3.png)
 
-### 网页链接{#web-page-link}
+### 网页链接 {#web-page-link}
 
 通过选择网页链接查看网站中包含的基本网页。 标准AEM创作工具可用于在创作环境中向此页面添加内容。
 
@@ -205,11 +205,11 @@ ht-degree: 1%
 
 当社区成员拥有审核权限时，将显示“审核”链接，选择该链接后，将显示已发布的社区内容，并允许其以与创作环境中的[审核控制台](/help/communities/moderation.md)类似的方式[审核](/help/communities/moderate-ugc.md)。
 
-使用浏览器的“返回”按钮返回到已发布的网站。 大多数控制台无法在发布环境中通过全局导航访问。[](/help/communities/moderate-ugc.md)
+使用浏览器的“返回”按钮返回到已发布的网站。 大多数控制台无法在发布环境中通过全局导航访问。
 
 ![审核链接](assets/moderationlink.png)
 
-## 自注册{#self-registration}
+## 自注册 {#self-registration}
 
 注销后，可以创建新用户注册。
 
