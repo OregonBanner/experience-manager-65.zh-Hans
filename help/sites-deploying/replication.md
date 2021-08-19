@@ -12,9 +12,9 @@ discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 feature: 配置
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '3444'
+source-wordcount: '3437'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 3%
 >
 >对于多个发布实例，在启用[用户同步](/help/sites-administering/sync.md)时，将分发用户数据。
 
-## 从创作复制到发布{#replicating-from-author-to-publish}
+## 从创作复制到发布 {#replicating-from-author-to-publish}
 
 复制到发布实例或调度程序的过程分为以下步骤：
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-### 从发布复制到创作{#replicating-from-publish-to-author}
+### 从发布到创作进行复制 {#replicating-from-publish-to-author}
 
 某些功能允许用户在发布实例上输入数据。
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 AEM [Communities](/help/communities/overview.md)从不对UGC使用复制。 Communities的部署需要UGC的公共存储（请参阅[Community Content Storage](/help/communities/working-with-srp.md)）。
 
-### 复制 — 开箱即用{#replication-out-of-the-box}
+### 复制 — 开箱即用 {#replication-out-of-the-box}
 
 标准安装的AEM中包含的we-retail网站可用于说明复制。
 
@@ -88,7 +88,7 @@ AEM [Communities](/help/communities/overview.md)从不对UGC使用复制。 Comm
 要检查代理或队列的状态，请使用&#x200B;**工具**控制台。
 >请参阅[监视复制代理](#monitoring-your-replication-agents)。
 
-#### 复制（创作到发布）{#replication-author-to-publish}
+#### 复制（创作到发布） {#replication-author-to-publish}
 
 1. 导航到创作环境中的支持页面。
    **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
@@ -105,7 +105,7 @@ AEM [Communities](/help/communities/overview.md)从不对UGC使用复制。 Comm
 
    `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
-#### 复制代理 — 开箱即用{#replication-agents-out-of-the-box}
+#### 复制代理 — 开箱即用 {#replication-agents-out-of-the-box}
 
 标准AEM安装中提供以下代理：
 
@@ -123,7 +123,7 @@ AgentUsed用于从创作复制到发布。
 例如，使用默认设置时，内容页面和dam资产会以HTML或相应的资产格式存储在`/tmp`下。 有关配置，请参阅`Settings`和`Rules`选项卡。
 请求执行此操作，以便当直接从应用程序服务器请求页面时，可以看到内容。 这是一个专门的代理，在大多数情况下（可能）不是必需的。
 
-## 复制代理 — 配置参数{#replication-agents-configuration-parameters}
+## 复制代理 — 配置参数 {#replication-agents-configuration-parameters}
 
 从“工具”控制台配置复制代理时，对话框中有四个选项卡：
 
@@ -351,17 +351,17 @@ AgentUsed用于从创作复制到发布。
 
    选中此选项后，代理将不会强制对已激活的页面进行版本控制。
 
-## 配置复制代理{#configuring-your-replication-agents}
+## 配置复制代理 {#configuring-your-replication-agents}
 
 有关使用MSSL将复制代理连接到发布实例的信息，请参阅[使用互相SSL复制](/help/sites-deploying/mssl-replication.md)。
 
-### 从创作环境{#configuring-your-replication-agents-from-the-author-environment}配置复制代理
+### 从创作环境配置复制代理 {#configuring-your-replication-agents-from-the-author-environment}
 
 在创作环境的“工具”选项卡中，您可以配置位于创作环境（**创作代理**）或发布环境（**发布代理**）中的复制代理。 以下过程说明了创作环境的代理配置，但可用于这两者。
 
 >[!NOTE]
 >
->当调度程序处理创作或发布实例的HTTP请求时，来自复制代理的HTTP请求必须包含PATH标头。 除了以下过程之外，您还必须将PATH标头添加到客户端标头的调度程序列表中。 (请参阅[/clientheaders（客户端标头）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。 [](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+>当调度程序处理创作或发布实例的HTTP请求时，来自复制代理的HTTP请求必须包含PATH标头。 除了以下过程之外，您还必须将PATH标头添加到客户端标头的调度程序列表中。 (请参阅[/clientheaders（客户端标头）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。
 
 
 1. 访问AEM中的&#x200B;**工具**&#x200B;选项卡。
@@ -380,7 +380,7 @@ AgentUsed用于从创作复制到发布。
 >
 >应将此帐户更改为具有复制所需路径权限的特定于站点的复制用户帐户。
 
-### 配置反向复制{#configuring-reverse-replication}
+### 配置反向复制 {#configuring-reverse-replication}
 
 反向复制用于将发布实例上生成的用户内容返回到创作实例。 这通常用于调查和注册表单等功能。
 
@@ -407,7 +407,7 @@ AgentUsed用于从创作复制到发布。
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-### 为多个发布实例{#configuring-replication-for-multiple-publish-instances}配置复制
+### 为多个发布实例配置复制 {#configuring-replication-for-multiple-publish-instances}
 
 >[!NOTE]
 >
@@ -463,7 +463,7 @@ AgentUsed用于从创作复制到发布。
 
 
 
-### 配置调度程序刷新代理{#configuring-a-dispatcher-flush-agent}
+### 配置调度程序刷新代理 {#configuring-a-dispatcher-flush-agent}
 
 安装中包含默认代理。 但是，如果您要定义新代理，则仍需要某些配置，这同样适用：
 
@@ -499,7 +499,7 @@ AgentUsed用于从创作复制到发布。
 
 **Dispatcher Flush**&#x200B;复制代理在创作时不活动。 您可以使用等效的URI在发布环境中访问同一页面；例如，`https://localhost:4503/etc/replication/agents.publish/flush.html`。
 
-### 控制对复制代理的访问{#controlling-access-to-replication-agents}
+### 控制对复制代理的访问 {#controlling-access-to-replication-agents}
 
 使用`etc/replication`节点上的用户和/或组页面权限，可以控制对用于配置复制代理的页面的访问。
 
@@ -507,7 +507,7 @@ AgentUsed用于从创作复制到发布。
 >
 >设置此类权限将不会影响复制内容的用户（例如，从“网站”控制台或Sidekick选项）。 复制框架在复制页面时不使用当前用户的“用户会话”访问复制代理。
 
-### 从CRXDE Lite{#configuring-your-replication-agents-from-crxde-lite}配置复制代理
+### 通过CRXDE Lite配置复制代理 {#configuring-your-replication-agents-from-crxde-lite}
 
 >[!NOTE]
 >
@@ -525,7 +525,7 @@ AgentUsed用于从创作复制到发布。
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
-## 监视复制代理{#monitoring-your-replication-agents}
+## 监控复制代理 {#monitoring-your-replication-agents}
 
 要监视复制代理，请执行以下操作：
 
@@ -564,7 +564,7 @@ AgentUsed用于从创作复制到发布。
    >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
-## 批量复制{#batch-replication}
+## 批量复制 {#batch-replication}
 
 批量复制不会复制单个页面或资产，而是会等待触发两个页面或资产的第一个阈值（基于时间或大小）。
 
@@ -572,7 +572,7 @@ AgentUsed用于从创作复制到发布。
 
 出版商将解包所有项目，保存它们并向作者报告。
 
-### 配置批量复制{#configuring-batch-replication}
+### 配置批量复制 {#configuring-batch-replication}
 
 1. 转到 `http://serveraddress:serverport/siteadmin`
 1. 按屏幕上方的&#x200B;**[!UICONTROL 工具]**&#x200B;图标
