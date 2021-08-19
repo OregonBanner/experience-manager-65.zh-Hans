@@ -11,7 +11,7 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '4901'
 ht-degree: 95%
@@ -93,7 +93,7 @@ ht-degree: 95%
 
 本文档详细介绍的任务列有负责执行这些任务的角色。
 
-### 可编辑的模板和静态模板  {#editable-and-static-templates}
+### 可编辑的模板和静态模板 {#editable-and-static-templates}
 
 现在，AEM 提供了两种基本类型的模板：
 
@@ -114,7 +114,7 @@ ht-degree: 95%
 
 按照定义，“模板”控制台和模板编辑器只允许创建和编辑可编辑的模板。因此，本文档将专门重点介绍可编辑的模板。
 
-### 使用模板创建页面  {#using-a-template-to-create-a-page}
+### 使用模板创建页面 {#using-a-template-to-create-a-page}
 
 使用静态模板和可编辑的模板[创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)的过程没有明显的区别，也没有孰优孰劣之分。对于页面作者而言，该创建过程一目了然。
 
@@ -127,7 +127,7 @@ ht-degree: 95%
    * 或直接从以下网站进行访问：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 * 如有必要，可以[创建模板文件夹](#creating-a-template-folder-admin)
-* [创建新模板](#creatinganewtemplateauthor)，新模板最初是空的  [](#templatedefinitions)
+* [创建新模板](#creatinganewtemplateauthor)，新模板最初是空的
 
 * 如有必要，为该模板[定义其他属性](#definingtemplatepropertiesauthor)
 * [编辑该模板](#editingtemplates)，以定义以下各项：
@@ -183,7 +183,7 @@ ht-degree: 95%
    >
    >创建新模板后，会在控制台中将其标记为&#x200B;**草稿**，这表示页面作者还不能使用此模板。
 
-### 定义模板属性 - 模板作者  {#defining-template-properties-template-author}
+### 定义模板属性 - 模板作者 {#defining-template-properties-template-author}
 
 模板可能具有以下属性：
 
@@ -234,7 +234,7 @@ ht-degree: 95%
 
 1. 如果对缩略图满意，请单击或点按&#x200B;**保存并关闭**。
 
-### 启用并允许模板 - 模板作者  {#enabling-and-allowing-a-template-template-author}
+### 启用并允许模板 - 模板作者 {#enabling-and-allowing-a-template-template-author}
 
 为了能够在创建页面时使用模板，您需要执行以下操作：
 
@@ -296,7 +296,7 @@ ht-degree: 95%
 
 1. 从工具栏中选择&#x200B;**发布**&#x200B;以完成操作。
 
-## 编辑模板 - 模板作者  {#editing-templates-template-authors}
+## 编辑模板 - 模板作者 {#editing-templates-template-authors}
 
 创建或编辑模板时，您可以定义模板的多个方面。编辑模板类似于页面创作。
 
