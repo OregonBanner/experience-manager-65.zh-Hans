@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
 
-# 性能测试最佳实践{#best-practices-for-performance-testing}
+# 性能测试的最佳实践{#best-practices-for-performance-testing}
 
 ## 简介 {#introduction}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 本文档将概述执行性能测试的总体战略和方法，以及Adobe为协助该过程而提供的一些工具。 最后，我们将从代码分析和系统配置角度分析AEM 6中可用的一些工具，以帮助进行性能调整。
 
-### 模拟现实{#simulating-reality}
+### 模拟现实 {#simulating-reality}
 
 执行性能测试时，最重要的是确保尽可能地模拟生产环境。 虽然这通常很困难，但必须确保这些测试的准确性。 在设计性能测试时，必须考虑以下几点：
 
@@ -45,7 +45,7 @@ AEM中的许多性能测量（如查询响应时间）可能会受系统中内�
 
 在系统负载过重之前，不会看到许多性能问题。 良好的性能测试应该模拟生产系统在其高峰时所受的负载。
 
-### 设置目标{#setting-goals}
+### 设置目标 {#setting-goals}
 
 在开始性能测试之前，必须设置非功能要求以指定负载和响应时间。 如果您从现有系统迁移，请确保响应时间与当前生产值类似。 对于负载，最好采用当前峰值负载，将其加倍。 这将确保网站能够在增长时继续正常运行。
 
@@ -53,7 +53,7 @@ AEM中的许多性能测量（如查询响应时间）可能会受系统中内�
 
 市场上有许多商品化的性能测试工具。 运行负载生成工具时，必须确保正在执行测试的计算机具有足够的网络带宽。 否则，一旦测试机达到其连接限制，将不会在被测试的环境中产生额外负载。
 
-#### 测试工具{#testing-tools}
+#### 测试工具 {#testing-tools}
 
 * Adobe的&#x200B;**Tough Day**&#x200B;工具可用于在AEM实例上生成负载并收集性能数据。 Adobe的AEM工程团队实际上使用该工具对AEM产品本身进行负载测试。 在艰难时刻执行的脚本是通过属性文件和JMX XML文件配置的。 有关更多信息，请参阅[艰难日期文档](/help/sites-developing/tough-day.md)。
 
@@ -65,10 +65,10 @@ AEM中的许多性能测量（如查询响应时间）可能会受系统中内�
 * 还可以使用基于云的负载测试工具，如[Neustar](https://www.neustar.biz/services/web-performance/load-testing)。
 * 在测试移动或响应式网站时，需要使用一组单独的工具。 它们通过限制网络带宽来工作，模拟较慢的移动连接（如3G或EDGE）。 使用范围更广的工具包括：
 
-   * **[网络链接调节器](https://nshipster.com/network-link-conditioner/)**  — 它提供易于使用的UI，在网络堆栈上工作级别较低。其中包括OS X和iOS版本；[](https://nshipster.com/network-link-conditioner/)
-   * [**Charles**](https://www.charlesproxy.com/)  — 一种Web调试代理应用程序，除了其他多种用途外，还提供网络限制。提供了适用于Windows、OS X和Linux的版本。[](https://www.charlesproxy.com/)
+   * **[网络链接调节器](https://nshipster.com/network-link-conditioner/)**  — 它提供易于使用的UI，在网络堆栈上工作级别较低。其中包括OS X和iOS版本；
+   * [**Charles**](https://www.charlesproxy.com/)  — 一种Web调试代理应用程序，除了其他多种用途外，还提供网络限制。提供了适用于Windows、OS X和Linux的版本。
 
-#### 优化工具{#optimization-tools}
+#### 优化工具 {#optimization-tools}
 
 **监测**
 
@@ -92,7 +92,7 @@ Google的PageSpeed工具提供了站点分析，以便遵循页面性能的最�
 
 ## 创作环境 {#author-environment}
 
-### 执行测试{#performing-tests}
+### 执行测试 {#performing-tests}
 
 要在创作环境中进行性能测试，必须模拟生产作者的体验。 这意味着作者安装必须包含您为生产作者实例就地的所有组件、OSGi包、UI自定义、自定义索引以及任何其他添加内容。
 
@@ -100,7 +100,7 @@ Google的PageSpeed工具提供了站点分析，以便遵循页面性能的最�
 
 对于需要大量资产加载或页面创作的环境类型，必须使用诸如艰难时刻之类的工具，以确保环境在峰值负载下能够高效运行。 [](/help/sites-administering/webdav-access.md) WebDAV是一款无需编写脚本的工具，也可用于加载大量资产。
 
-#### MongoDB特定步骤{#mongodb-specific-steps}
+#### MongoDB特定步骤 {#mongodb-specific-steps}
 
 在具有MongoDB后端的系统上， AEM提供了多个[JMX](/help/sites-administering/jmx-console.md) MBean，在执行负载或性能测试时需要监控这些JMX MBean:
 
@@ -118,7 +118,7 @@ Google的PageSpeed工具提供了站点分析，以便遵循页面性能的最�
 
 ## 发布环境 {#publish-environment}
 
-### 执行测试{#performing-tests-1}
+### 执行测试 {#performing-tests-1}
 
 部署中需要进行加载测试的最重要部分是面向最终用户的发布或调度程序环境。
 
@@ -130,7 +130,7 @@ Google的PageSpeed工具提供了站点分析，以便遵循页面性能的最�
 
 对于基本测试，Apache Bench可用于测量Web服务器响应时间，并帮助创建负载以测量内存泄漏等内容。 有关详细信息，请参阅[监控文档](/help/sites-deploying/monitoring-and-maintaining.md#apache-bench)中的示例。
 
-## 性能问题疑难解答{#troubleshooting-performance-issues}
+## 性能问题疑难解答 {#troubleshooting-performance-issues}
 
 在创作实例上运行性能测试后，需要调查、诊断和解决任何问题。 在执行分析和解决问题时，您可以使用多种工具和技术：
 
