@@ -5,12 +5,12 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.5发行说明
 breadcrumb-title: 发行说明
 user-guide-description: 在发行说明中了解AEM 6.5的最新新增功能。
-feature: 发行信息
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 36%
+source-wordcount: '75'
+ht-degree: 34%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 36%
 + [常规发行说明](release-notes.md)
 + Service Pack发行说明{#service-pack}
    + [新增功能](new-features-latest-service-pack.md)
-   + [Service Pack 9发行说明](sp-release-notes.md)
+   + [Service Pack 10发行说明](sp-release-notes.md)
    + [以前的Service Pack发行说明](previous-hotfixes-featurepacks.md)
 + [AEM Sites 发行说明](sites.md)
 + [AEM Assets 发行说明](assets.md)
