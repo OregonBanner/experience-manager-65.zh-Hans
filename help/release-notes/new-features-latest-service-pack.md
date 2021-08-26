@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
+source-git-commit: 738972f73ff3af070eb6b48bff67496ab451a6a7
 workflow-type: tm+mt
-source-wordcount: '3983'
+source-wordcount: '3974'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 1%
 [!DNL Adobe Experience Manager] 6.5 Service Pack每季度提供新功能、客户请求的增强功能以及性能、稳定性和安全性改进。每季度提供的服务使访问和采用新功能和创新变得轻松。
 
 本文重点介绍最新Service Pack中包含的功能、前6.5 Service Pack中包含的[关键功能以及自上一个Service Pack](#key-releases-since-last-sp)版本以来的[关键版本。](#key-features-previous-service-packs)
+
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -40,13 +41,13 @@ ht-degree: 1%
 
 * [!DNL Experience Manager] 将“连接的资产”功能扩展为在适用 [!DNL Dynamic Media] 的核心组件中使用图像。请参阅[使用连接的资产](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-* 在将单个资产和收藏集共享为链接（使用[!UICONTROL 链接共享]对话框）时，用户可以选择是让接收者下载原始资产或其演绎版，还是同时下载两者。 请参阅[通过链接共享资产](/help/assets/link-sharing.md)。
+* 在将单个资产和收藏集共享为链接（使用[!UICONTROL 链接共享]对话框）时，用户可以选择是让接收者下载原始资产或其演绎版，还是同时下载两者。
 
-   ![选项，以仅允许下载原始资产，仅允许下载演绎版，或同时允许下载两者](/help/release-notes/assets/share-assets-as-link.png)
+   ![用于仅下载原始资产（仅下载演绎版）或同时下载两者的选项](/help/assets/assets/share-renditions.png)
 
 * 当用户下载与他们共享的资产作为链接时，他们可以选择下载原始资产和/或演绎版。
 
-* **限制生成的子资产**:管理员可以限制为复合资产(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。
+* 管理员可以限制[!DNL Experience Manager]为复合资产(如PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。
 
    ![限制子资产的生成](/help/assets/assets/sub-asset-limit.png)
 
@@ -448,9 +449,9 @@ Experience ManagerForms包括以下辅助功能增强功能：
 <!-- TBD: Check if the wider team released anything in FY21.
 -->
 
-## [!DNL Adobe Experience Manager] 6.5 SP9之后的关键版本 {#key-releases-since-last-sp}
+## [!DNL Adobe Experience Manager] 6.5 SP8之后的关键版本 {#key-releases-since-last-sp}
 
-在2021年5月27日至2021年8月26日期间，除了Service Pack之外，Adobe还发布了以下内容：
+在2021年2月25日至2021年5月27日期间，除了Service Pack之外，Adobe还发布了以下内容：
 
 * [!DNL Adobe Experience Manager] as aCloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en)。
 

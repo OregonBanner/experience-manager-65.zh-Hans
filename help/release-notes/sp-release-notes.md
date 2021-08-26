@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 861f5f4ae87da106bc42895e03bc42c0b17bd9fc
+source-git-commit: 55b2e8d3d198857205b81b6974d9d6bfb8527fa6
 workflow-type: tm+mt
-source-wordcount: '3652'
+source-wordcount: '3648'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 * **增强的 [!DNL Content Fragment] 模型和编辑器**:您现在可以使用嵌套模型为结构化内容创建复杂的自定义 [!DNL Content Fragment] 模型。内容结构被模块化为基本元素，这些元素被建模为子片段。 更高级别的片段引用这些子片段。 更多数据类型增强功能（如高级验证规则）进一步增强了[!DNL Content Fragments]内容建模的灵活性。 [!DNL Experience Manager] [!DNL Content Fragment]编辑器支持在通用编辑器会话中嵌套的片段结构，并增强了诸如结构树视图和选项卡式痕迹导航在片段层次结构中的导航功能。
 
-* **GraphQL API，适[!DNL Content Fragments]**&#x200B;用于：新的GraphQL API是以JSON格式交付结构化内容的标准方法。GraphQL查询允许客户端仅请求相关内容项来渲染体验。 这种选择消除了需要在客户端解析内容的内容过交付（借助HTTP REST API来实现）。 GraphQL架构是从[!DNL Content Fragment]模型派生的，API响应采用JSON格式。 在[!DNL Experience Manager]作为[!DNL Cloud Service]的中， [GraphQL查询会保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)并处理缓存友好GET请求。 在[!DNL Experience Manager] 6.5.10.0中尚不可能。
+* **GraphQL API，适[!DNL Content Fragments]**&#x200B;用于：新的GraphQL API是以JSON格式交付结构化内容的标准方法。GraphQL查询允许客户端仅请求相关内容项来渲染体验。 这种选择消除了需要在客户端解析内容的内容过交付（借助HTTP REST API来实现）。 GraphQL架构是从[!DNL Content Fragment]模型派生的，API响应采用JSON格式。 在[!DNL Experience Manager]作为[!DNL Cloud Service]的中， [GraphQL查询会保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)并处理缓存友好GET请求。 在[!DNL Experience Manager] 6.5中尚不可能。
 
 * **层级管理和未来预览**:现在，用户有一个界面可访问其启动项的内 [!DNL Experience Manager] 容结构，包括在启动项中添加和删除页面的功能。此功能增强了[!DNL Experience Manager]启动项的灵活性，可创作目标内容版本以供将来发布。 [时间扭曲功能可](/help/sites-authoring/working-with-page-versions.md#timewarp) 将用户预览启动项作为未来的内容状态。
 
@@ -38,7 +38,7 @@ ht-degree: 3%
 
 * **链接共享选项以下载资产或演绎版**:在将资产和收藏集共享为链接时，用户可以选择是允许下载原始资产，还是允许下载其演绎版，还是同时使用共享链接来下载这两种资产。此外，下载通过链接与他们共享的资产的用户可以选择仅下载原始资产，仅下载演绎版，或同时下载两者。
 
-* **限制生成的子资产**:管理员可以限制为复合资产(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。请参阅[管理复合资产](/help/assets/managing-linked-subassets.md#generate-subassets)。
+* **限制生成的子资产**:管理员可以限制为复合资产(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。
 
 * **Camera Raw支持**:提供了 [!DNL Camera Raw] 支持v10.4的 [!DNL Adobe Camera Raw] 新包。请参阅使 [用 [!DNL Camera Raw]](/help/assets/camera-raw.md)处理图像。
 
@@ -319,9 +319,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 要了解经认证可与此版本配合使用的平台，请参阅[技术要求](/help/sites-deploying/technical-requirements.md)。
 
-<!--
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+<!--### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -345,9 +343,7 @@ For information about installing the cumulative installer for Experience Manager
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
-
--->
+>After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.-->
 
 ### UberJar {#uber-jar}
 
