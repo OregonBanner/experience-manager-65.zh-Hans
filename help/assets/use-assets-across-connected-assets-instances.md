@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 3e4e9ab8b3940f539228bccf759dcade03a8b015
+source-git-commit: 218e97eb31061e833f3b291a6607b2ebf4762471
 workflow-type: tm+mt
 source-wordcount: '2967'
 ht-degree: 26%
@@ -116,7 +116,7 @@ ht-degree: 26%
 ![已连接资产的连接测试配 [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *置图：已配置连接资产的连接测 [!DNL Sites]试。*
 
-### 配置Dynamic Media资产的连接{#sites-dynamic-media-connected-assets}
+### 配置Dynamic Media资产的连接 {#sites-dynamic-media-connected-assets}
 
 您可以在[!DNL Sites]部署和[!DNL Dynamic Media]部署之间配置连接，以允许网页作者在其网页中使用[!DNL Dynamic Media]图像。 在创作网页时，使用远程资产和远程[!DNL Dynamic Media]部署的体验保持不变。
 
