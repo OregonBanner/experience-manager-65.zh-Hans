@@ -3,11 +3,11 @@ title: 使用链接共享资产
 description: 以URL形式共享资产、文件夹和收藏集。
 contentOwner: AG
 role: User
-feature: 链接共享，资产管理
+feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '998'
 ht-degree: 7%
 
 ---
@@ -24,20 +24,17 @@ ht-degree: 7%
 
 ## 共享资产 {#share-assets}
 
-要为要与用户共享的资产生成URL，请使用链接共享对话框。 具有管理员权限或在`/var/dam/share`位置具有读取权限的用户能够查看与其共享的链接。
+要为要与用户共享的资产生成URL，请使用[!UICONTROL 链接共享]对话框。 具有管理员权限或在`/var/dam/share`位置具有读取权限的用户能够查看与其共享的链接。
 
 1. 在[!DNL Assets]用户界面中，选择要作为链接共享的资产。
-1. 在工具栏中，单击&#x200B;**[!UICONTROL 共享链接]** ![共享资产图标](assets/do-not-localize/assets_share.png)。 单击&#x200B;**[!UICONTROL Share]**&#x200B;后将创建的链接会提前显示在[!UICONTROL Share Link]字段中。 在单击&#x200B;**[!UICONTROL Submit]**&#x200B;之前，尚未创建该链接。
 
-   ![链接共享对话框](assets/Link-sharing-dialog-box.png)
+1. 在工具栏中，单击&#x200B;**[!UICONTROL 共享链接]** ![共享资产图标](assets/do-not-localize/assets_share.png)。 单击&#x200B;**[!UICONTROL Share]**&#x200B;后将创建的链接会提前显示在[!UICONTROL Share Link]字段中。 只有在选择&#x200B;**[!UICONTROL Submit]**&#x200B;之后，才会创建该链接。
+
+   ![链接共享对话框](/help/assets/assets/share-assets-as-link.png)
 
    *图：将资产共享为链接的对话框。*
 
 1. 在&#x200B;**[!UICONTROL 链接共享]**&#x200B;对话框的电子邮件地址框中，键入要与其共享链接的用户的电子邮件 ID。您可以添加一个或多个用户。
-
-   ![直接从链接共享对话框共享指向资产的链接](assets/Asset-Sharing-LinkShareDialog.png)
-
-   *图：直接从链接共享对话框共享指向 [!UICONTROL 资产] 的链接。*
 
    >[!NOTE]
    >
@@ -51,7 +48,7 @@ ht-degree: 7%
 
    ![设置共享链接的过期日期](assets/Set-shared-link-expiration.png)
 
-1. 要允许用户下载原始资产和演绎版，请选择&#x200B;**[!UICONTROL 允许下载原始文件]**。 默认情况下，用户只能下载您以链接形式共享的资产的演绎版。
+1. 要允许用户下载原始资产，请选择&#x200B;**[!UICONTROL 允许下载原始文件]**。 要允许用户仅下载共享资产的演绎版，请选择&#x200B;**[!UICONTROL 允许下载文件的演绎版]**。
 
 1. 单击&#x200B;**[!UICONTROL 共享]**。系统会显示一条消息，确认已通过电子邮件与用户共享该链接。
 

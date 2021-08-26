@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3648'
+source-wordcount: '3652'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 3%
 
 * **链接共享选项以下载资产或演绎版**:在将资产和收藏集共享为链接时，用户可以选择是允许下载原始资产，还是允许下载其演绎版，还是同时使用共享链接来下载这两种资产。此外，下载通过链接与他们共享的资产的用户可以选择仅下载原始资产，仅下载演绎版，或同时下载两者。
 
-* **限制生成的子资产**:管理员可以限制为复合资产(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。
+* **限制生成的子资产**:管理员可以限制为复合资产(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。请参阅[管理复合资产](/help/assets/managing-linked-subassets.md#generate-subassets)。
 
 * **Camera Raw支持**:提供了 [!DNL Camera Raw] 支持v10.4的 [!DNL Adobe Camera Raw] 新包。请参阅使 [用 [!DNL Camera Raw]](/help/assets/camera-raw.md)处理图像。
 

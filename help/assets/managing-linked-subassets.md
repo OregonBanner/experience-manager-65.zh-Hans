@@ -3,12 +3,12 @@ title: 使用引用和多个页面管理复合资产
 description: 了解如何从 [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]中创建对数字资产的引用。 使用页面查看器功能可查看多页文件（如PDF、INDD、PPT、PPTX和AI文件）的单个子资产页面。
 contentOwner: AG
 role: User, Admin
-feature: 资产管理
+feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1379'
-ht-degree: 0%
+source-wordcount: '1423'
+ht-degree: 1%
 
 ---
 
@@ -102,7 +102,11 @@ ht-degree: 0%
    * 选择资产并单击[!UICONTROL 时间轴]以打开左侧面板。 或者，使用键盘快捷键`alt + 3`。 单击[!UICONTROL 启动工作流]，选择[!UICONTROL DAM更新资产]，单击[!UICONTROL 启动]，然后单击[!UICONTROL 继续]。
    * 选择资产，然后单击工具栏中的[!UICONTROL 创建] > [!UICONTROL 工作流]。 在弹出对话框中，选择[!UICONTROL DAM更新资产]工作流，单击[!UICONTROL 启动]，然后单击[!UICONTROL 继续]。
 
-特别是对于Microsoft Word文档，请执行&#x200B;**[!UICONTROL DAM解析Word文档]**&#x200B;工作流。 它从Microsoft Word文档的内容生成`cq:Page`组件。 从文档提取的图像将从`cq:Page`组件中引用。 即使禁用子资产生成，也会提取这些图像。
+特别是对于Microsoft Word文档，请执行&#x200B;**[!UICONTROL DAM解析Word文档]**&#x200B;工作流。 它从Microsoft Word文档的内容生成`cq:Page`组件。 从文档提取的图像将从`cq:Page`组件中引用。 即使禁用了子资产生成，也会提取这些图像。
+
+>[!NOTE]
+>
+>在[!UICONTROL 流程参数]的[!UICONTROL 创建子资产流程 — 步骤属性]中，您可以指定[!DNL Experience Manager]生成的子资产数量。 默认值为 5。要生成所有子资产，请将字段留空。 如果字段为负数，则不会生成子资产。
 
 ## 查看子资产 {#viewing-subassets}
 
