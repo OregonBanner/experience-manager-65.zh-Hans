@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 37073594b45995ade7f0e73c519feb21adf48482
+source-git-commit: 3e4e9ab8b3940f539228bccf759dcade03a8b015
 workflow-type: tm+mt
-source-wordcount: '2732'
-ht-degree: 29%
+source-wordcount: '2967'
+ht-degree: 26%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 29%
 
 ## 连接的资产概述 {#overview-of-connected-assets}
 
-在[!UICONTROL 页面编辑器]中编辑页面作为目标目标时，作者可以从其他充当资产源的[!DNL Assets]部署中无缝搜索、浏览和嵌入资产。 管理员将具有[!DNL Sites]功能的[!DNL Experience Manager]部署与具有[!DNL Assets]功能的[!DNL Experience Manager]的另一部署创建一次性集成。
+在[!UICONTROL 页面编辑器]中编辑页面作为目标目标时，作者可以从其他充当资产源的[!DNL Assets]部署中无缝搜索、浏览和嵌入资产。 管理员将具有[!DNL Sites]功能的[!DNL Experience Manager]部署与具有[!DNL Assets]功能的[!DNL Experience Manager]的另一部署创建一次性集成。 网站作者还可以通过连接的资产在其网站网页中使用Dynamic Media图像，并利用Dynamic Media功能，如智能裁剪和图像预设。
 
 对于[!DNL Sites]作者，远程资产可用作只读本地资产。 该功能可支持一次无缝搜索和使用多个远程资产。要在[!DNL Sites]部署中一次性使用许多远程资产，请考虑批量迁移这些资产。 请参阅[Experience Manager资产迁移指南](/help/assets/assets-migration-guide.md)。
 
@@ -115,6 +115,25 @@ ht-degree: 29%
 
 ![已连接资产的连接测试配 [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *置图：已配置连接资产的连接测 [!DNL Sites]试。*
+
+### 配置Dynamic Media资产的连接{#sites-dynamic-media-connected-assets}
+
+您可以在[!DNL Sites]部署和[!DNL Dynamic Media]部署之间配置连接，以允许网页作者在其网页中使用[!DNL Dynamic Media]图像。 在创作网页时，使用远程资产和远程[!DNL Dynamic Media]部署的体验保持不变。
+
+要为Dynamic Media部署配置“连接的资产”功能，请执行以下步骤：
+
+1. 在远程[!DNL Assets]作者部署上启用[!DNL Dynamic Media]并将其配置为全局配置。 要配置Dynamic Media，请参阅[配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)。<br/>
+在远程 [!DNL Assets] 部署中，在 [!UICONTROL Dynamic Media同步模式]下，选 **[!UICONTROL 择默认启用]**。
+
+1. 创建连接的资产配置，如[配置站点与资产部署之间的连接](#configure-a-connection-between-sites-and-assets-deployments)中所述。 此外，选择&#x200B;**[!UICONTROL 为Dynamic Media连接的资产获取原始呈现版本]**&#x200B;选项。
+
+1. 在本地[!DNL Sites]和远程[!DNL Assets]部署上配置[!DNL Dynamic Media]。 按照[configure [!DNL Dynamic Media]](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)的说明操作。
+
+   * 在所有配置中使用相同的公司名称。
+   * 在本地[!DNL Sites]上的[!UICONTROL Dynamic Media同步模式]中，选择&#x200B;**[!UICONTROL 默认情况下禁用]**。 [!DNL Sites]部署只需要对[!DNL Dynamic Media]帐户进行只读访问。
+   * 在本地[!DNL Sites]的&#x200B;**[!UICONTROL 发布资产]**&#x200B;选项中，选择&#x200B;**[!UICONTROL 选择性发布]**。 请勿选择&#x200B;**[!UICONTROL 同步所有内容]**。
+
+1. 在图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media)中启用[[!DNL Dynamic Media] 支持。 当作者在本地[!DNL Sites]部署的网页中使用[!DNL Dynamic Media]图像时，此功能允许默认的[图像组件](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html)显示[!DNL Dynamic Media]图像。
 
 ## 使用远程资产 {#use-remote-assets}
 
@@ -226,3 +245,6 @@ ht-degree: 29%
 * 如果未检索到远程引用并导致出现错误消息，请检查[!DNL Sites]部署是否可用，并检查网络连接问题。 稍后重试以检查。 [!DNL Assets] 部署尝试两次建立与部署的 [!DNL Sites] 连接，然后报告失败。
 
    ![检索资产远程引用失败](assets/reference-report-failure.png)
+
+
+
