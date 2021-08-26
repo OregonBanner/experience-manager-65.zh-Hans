@@ -1,18 +1,18 @@
 ---
-title: '[!DNL Adobe Camera Raw] 支持。'
-description: 了解如何在 [!DNL Adobe Experience Manager Assets]中启用 [!DNL Adobe Camera Raw] 支持。
+title: '[!DNL Adobe Camera Raw] 支持处理数字资产'
+description: 了解如何在 [!DNL Adobe Experience Manager Assets]中启用 [!DNL Adobe Camera Raw] 支持
 contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 2%
+source-wordcount: '375'
+ht-degree: 1%
 
 ---
 
-# 使用Camera Raw处理图像 {#camera-raw-support}
+# 使用[!DNL Adobe Camera Raw]处理图像 {#camera-raw-support}
 
 您可以启用[!DNL Adobe Camera Raw]支持来处理原始文件格式（如CR2、NEF和RAF），并以JPEG格式渲染图像。 [!DNL Adobe Experience Manager Assets]使用Software Distribution提供的[Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)支持该功能。
 
@@ -22,9 +22,9 @@ ht-degree: 2%
 
 要在[!DNL Experience Manager Assets]中启用[!DNL Camera Raw]支持，请执行以下步骤：
 
-1. 从Software Distribution下载[Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
+1. 从[!DNL Software Distribution]下载[Camera Raw包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
 1. 访问 `https://[aem_server]:[port]/workflow`. 打开&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流。
-1. 打开&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤。
+1. 编辑&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤。
 1. 在&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡中提供以下配置：
 
    * **[!UICONTROL 缩略图]**:  `140:100:false, 48:48:false, 319:319:false`
@@ -36,7 +36,7 @@ ht-degree: 2%
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. 从侧面板中，在&#x200B;**[!UICONTROL 缩略图创建]**&#x200B;步骤下添加&#x200B;**[!UICONTROL Camera Raw/DNG处理程序]**&#x200B;步骤。
+1. 从侧面板中，将&#x200B;**[!UICONTROL Camera Raw/DNG处理程序]**&#x200B;步骤添加到&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤下方。
 1. 在&#x200B;**[!UICONTROL Camera Raw/DNG处理程序]**&#x200B;步骤中，在&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡中添加以下配置：
 
    * **[!UICONTROL Mime类型]**: `image/dng` 和  `image/x-raw-(.*)`

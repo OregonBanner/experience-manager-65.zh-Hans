@@ -1,13 +1,13 @@
 ---
 title: '[!DNL Experience Manager] 6.5 service pack发行说明'
-description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 9的发行说明
+description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发行说明
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 55b2e8d3d198857205b81b6974d9d6bfb8527fa6
 workflow-type: tm+mt
-source-wordcount: '3835'
-ht-degree: 4%
+source-wordcount: '3648'
+ht-degree: 3%
 
 ---
 
@@ -17,354 +17,275 @@ ht-degree: 4%
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| 版本号 | 6.5.9.0 |
+| 版本 | 6.5.10.0 |
 | 类型 | Service Pack 版本 |
-| 日期 | 2021 年 5 月 27 日 |
-| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip) |
+| 日期 | 2021 年 8 月 26 日 |
+| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.10.zip) |
 
-## [!DNL Adobe Experience Manager] 6.5.9.0中包含的内容 {#what-s-included-in-aem}
+## [!DNL Adobe Experience Manager] 6.5.10.0中包含的内容 {#what-is-included-in-aem}
 
-[!DNL Adobe Experience Manager] 6.5.9.0包含自2019年4月6.5版发布以来发布的新功能、客户请求的关键增强功能以及性能、稳定性和安全性改进。[!DNL Adobe Experience Manager] 6.5上安装了Service Pack。
+[!DNL Adobe Experience Manager] 6.5.10.0包括自2019年4月6.5版发布以来发布的新功能、客户请求的关键增强功能以及性能、稳定性和安全性改进。[!DNL Adobe Experience Manager] 6.5上安装了Service Pack。
 
-[!DNL Adobe Experience Manager] 6.5.9.0中引入的主要功能和增强功能包括：
+[!DNL Adobe Experience Manager] 6.5.10.0中引入的主要功能和增强功能包括：
 
-* [!DNL Experience Manager Sites] Dynamic Media Foundation组件现在允许您在使用响应式图像预设或智能裁剪时，打开或关闭针对高分辨率设备的优化功能。
+* **增强的 [!DNL Content Fragment] 模型和编辑器**:您现在可以使用嵌套模型为结构化内容创建复杂的自定义 [!DNL Content Fragment] 模型。内容结构被模块化为基本元素，这些元素被建模为子片段。 更高级别的片段引用这些子片段。 更多数据类型增强功能（如高级验证规则）进一步增强了[!DNL Content Fragments]内容建模的灵活性。 [!DNL Experience Manager] [!DNL Content Fragment]编辑器支持在通用编辑器会话中嵌套的片段结构，并增强了诸如结构树视图和选项卡式痕迹导航在片段层次结构中的导航功能。
 
-* 为了提高性能，将`hidden=false`条件从JCR查询移动到[!UICONTROL QueryBuilder]计算器。 要验证隐藏的谓词是否在更改后正常工作，[!DNL Experience Manager]会检查是否未显示任何隐藏的文件夹。
+* **GraphQL API，适[!DNL Content Fragments]**&#x200B;用于：新的GraphQL API是以JSON格式交付结构化内容的标准方法。GraphQL查询允许客户端仅请求相关内容项来渲染体验。 这种选择消除了需要在客户端解析内容的内容过交付（借助HTTP REST API来实现）。 GraphQL架构是从[!DNL Content Fragment]模型派生的，API响应采用JSON格式。 在[!DNL Experience Manager]作为[!DNL Cloud Service]的中， [GraphQL查询会保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching)并处理缓存友好GET请求。 在[!DNL Experience Manager] 6.5中尚不可能。
 
-* 能够在[!DNL Experience Manager Sites]页面上恢复已删除的页面和树。
+* **层级管理和未来预览**:现在，用户有一个界面可访问其启动项的内 [!DNL Experience Manager] 容结构，包括在启动项中添加和删除页面的功能。此功能增强了[!DNL Experience Manager]启动项的灵活性，可创作目标内容版本以供将来发布。 [时间扭曲功能可](/help/sites-authoring/working-with-page-versions.md#timewarp) 将用户预览启动项作为未来的内容状态。
 
-* 支持新用户使用邮件程序配置服务的刷新令牌刷新访问令牌。
+* **连接的资产**: [!DNL Experience Manager] 扩展了 [!DNL Connected Assets] 在适用的核心组 [!DNL Dynamic Media] 件中使用图像的功能。请参阅[使用连接的资产](/help/assets/use-assets-across-connected-assets-instances.md)。
 
-* [支持邮件配置服务的SMTP XOAUTH2](/help/sites-administering/notification.md#setting-up-oauth) 机制。
+* **链接共享选项以下载资产或演绎版**:在将资产和收藏集共享为链接时，用户可以选择是允许下载原始资产，还是允许下载其演绎版，还是同时使用共享链接来下载这两种资产。此外，下载通过链接与他们共享的资产的用户可以选择仅下载原始资产，仅下载演绎版，或同时下载两者。
 
-* 支持[!DNL MongoDB]版本4.2和4.4。
+* **限制生成的子资产**:管理员可以限制为复合资产(如 [!DNL Experience Manager] PDF、PowerPoint、InDesign和Keynote文件)生成的子资产数。
 
-* 与香港、澳门和台湾有关的名称的出现情况将根据适用于中国地区和地区的新命名惯例进行更新。
+* **Camera Raw支持**:提供了 [!DNL Camera Raw] 支持v10.4的 [!DNL Adobe Camera Raw] 新包。请参阅使 [用 [!DNL Camera Raw]](/help/assets/camera-raw.md)处理图像。
 
-* [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)和[[!DNL Dynamic Media]](#accessibility-dm-6590)中的辅助功能增强功能。
+* 内置存储库(Apache Jackrabbit Oak)已更新至1.22.8。
 
-* 智能成像DPR（设备像素比）和网络带宽优化让您能够高效地交付最佳质量的图像；在具有高分辨率显示器和网络带宽受限的设备上。 有关详细信息和时间轴，请参阅[智能成像常见问题解答](/help/assets/imaging-faq.md)。
+* **辅助功能增强功能**:
 
-* [!DNL Dynamic Media] 交付(`fmt` URL修饰符)支持下一代图像格式AVIF（AV1图像格式）。有关更多详细信息和时间轴，请参阅[图像提供和渲染API fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)。
+   * [!DNL Dynamic Media] 为查看器提供了许多辅助功能增强功能。请参阅[[!DNL Dynamic Media] updates](#dynamic-media-65100)。
 
-* 能够使用[!UICONTROL 分配任务]工作流步骤向组发送通知电子邮件。
+   * 平台提供了一些辅助功能增强功能。 请参阅[平台更新](#platform-65100)。
 
-* 能够在修改源交互式通信后检索交互式通信草稿。
+* **用户体验增强**:
 
-* 在[!DNL Experience Manager Forms]中设置自定义域名，用于加载、渲染和验证reCAPTCHA服务。
+   * [!DNL Experience Manager] 直接在文件夹下显示所有内容模型的列表，内容作者不必在文件结构中导航。现在，该功能需要的点击量更少，并且提高了创作效率。
 
-* 增强了[!UICONTROL 调用表单数据模型服务]工作流步骤的输入数据。
+   * [!DNL Sites]编辑器中的路径字段允许作者从[!DNL Content Finder]中拖动资产。
 
-* 能够在[!DNL Experience Manager Forms]的记录文档模板中使用多个主控页面。
+有关[!DNL Experience Manager] 6.5.10.0中引入的所有功能和增强功能的列表，请参阅 [!DNL Adobe Experience Manager] 6.5 Service Pack 10](new-features-latest-service-pack.md)中的[新增功能。
 
-* [!DNL Experience Manager Forms]的记录文档中的支持分页符。
+以下是[!DNL Experience Manager] 6.5.10.0版本中提供的修复列表。
 
-* 内置存储库(Apache Jackrabbit Oak)已更新至1.22.7。
+### [!DNL Sites] {#sites-65100}
 
-有关[!DNL Experience Manager] 6.5.9.0中引入的功能和增强功能的完整列表，请参阅 [!DNL Adobe Experience Manager] 6.5 Service Pack 9](new-features-latest-service-pack.md)中的[新增功能。
+* 在内容片段编辑器的&#x200B;**[!UICONTROL 属性]**&#x200B;选项卡下的&#x200B;**[!UICONTROL 默认值]**&#x200B;字段中键入内容时，焦点会转移到另一个字段(NPR-36992)。
 
->[!NOTE]
->
->从Service Pack 9开始，[!DNL Experience Manager]客户可以开发和运行其[!DNL Experience Manager]应用程序，其中分发了[!DNL Azul Zulu]版本的OpenJDK，该版本符合Java™ SE的标准。
->[!DNL Azul Zulu] JDK的支持也通过Adobe提供给[!DNL Experience Manager]客户。
->您可以从[Adobe软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载[!DNL Azul Zulu] JDK的相关版本。
->由Oracle分发的AdobeJava™技术的使用权限将在2022年12月底之前过期。 [!DNL Experience Manager] 我们鼓励客户在此日期之前规划并实 [!DNL Azul Zulu] 施对JDK的使用。有关[!DNL Oracle Java™]技术和[!DNL Azul Zulu]技术使用的更多信息，请参阅相关的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)。
+* 在指定路径下筛选[!DNL Content Fragment]模型时， [!DNL Experience Manager]搜索会返回所有具有`cq:Template`的节点，而不是只返回[!DNL Content Fragment]模型的路径和节点(SITES-1453)。
+* [!DNL Content Fragments] 返 `null` 回为文件夹的状态(SITES-1157)。
+* [!DNL Experience Manager] 不允许用户禁用和启用 [!DNL Content Fragment] 模型(SITES-1088)。
+* 当用户移动、重命名或删除[!DNL Content Fragments]或媒体资产时，引用的[!DNL Content Fragments]不会自动更新(SITES-196)。
+* 将组件从一个页面粘贴到另一个页面时，会产生JavaScript错误(NPR-37030)。
+* 快速查看页面属性时，将打开其他页面的页面属性(NPR-37025)。
+* 内容片段允许内容片段引用其自身。 选取器不支持该操作(NPR-36993)。
+* 升级到Service Pack 9后，某些用户无法在Experience Manager中移动文件夹，并在日志中看到错误(SITES-1481)。
+* 在编辑模式下调整布局容器中组件的宽度时，观察到闪烁(NPR-36961)。
+* 提升启动项时，提升的启动项中的更改将会双重推广到其他启动项。 如果用户推广双重转出的启动项，则双重内容会反映在源页面上(NPR-36893)。
+* [!DNL Experience Manager] 如果您使用图像核心组件将图像添加到页面，或者使用基础图像组件调整大小，则会向某些具有透明度的PNG图像添加灰色边框(NPR-36879)。
+* [!DNL Experience Manager Sites] 管理员UI中模板数量较多，导航缓慢(NPR-36870)。
+* 升级到Service Pack 9会阻止创作一些组件。 此问题不允许[!DNL Sites]用户创建新页面(NPR-36857)。
+* `ContextHubImpl`方法会创建未关闭的`ResourceResolver`。 这会导致出现有关长时间运行`ResourceResolver`的警告消息，并且该服务有时会返回意外结果(NPR-36853)。
+* 在从Blueprint页面属性同步单个Live Copy时，还会同步所有其他Live Copy(NPR-36829、NPR-36522)。
+* 仅使用XLS MIME类型时，文件上传函数无法按预期工作(NPR-36785)。
+* 带有pascal大小写和所有大写词的新标记不会显示在[!DNL Content Fragments]内的标记字段中(NPR-36742)。
+* 添加[!DNL Content Fragment]时的“单个文本元素”选项会导致文本丢失，并创建与列表和嵌套列表相关的奇数格式(NPR-36565)。
+* 当作者在页面上注释任何组件、删除组件并对删除操作执行撤消时，在站点控制台中尝试查看页面的时间轴数据时会遇到错误(NPR-36528)。
+* 页面属性批量编辑器的[!UICONTROL 保存并关闭]选项会保存更改，但不会关闭编辑器(NPR-36527)。
+* 当用户尝试将新的文本组件拖放到页面时，该组件会立即消失(NPR-36442)。
+* 当用户键入包含空格（系统上不存在的标记）的按需标记并按Enter时，该标记将显示在字段下方。 但是，保存并重新打开[!DNL Content Fragment]后，不会显示按需标记(NPR-36441)。
+* 通过Dispatcher访问实例时，无法删除模板(NPR-36385)。
+* 移动页面时，需要手动刷新浏览器才能渲染更改(NPR-36381)。
+* 选择组件时，可以按Ctrl+X或Ctrl+C（在Mac上按Command+X或Command+C）剪切或复制组件。 单击其他组件时，可以粘贴工具栏，但不能粘贴键盘（Ctrl+V或Command+V）(NPR-36379)。
+* 当用户尝试使用剪刀图标剪切组件以将其移动到其他位置时，会出现控制台错误。 此外，粘贴时只移动一个组件(NPR-36378)。
+* [!DNL Experience Manager] 在WCM或通知中存在没有索引的查询，会降低性能(NPR-36303)。
+* 当作者恢复已删除的继承组件上的继承时，可用选项是同步所有页面内容。 内容作者需要同步完整页面，即使继承仅在一个组件上恢复也是如此。 完全同步可能会导致同步不需要的内容(NPR-34456、CQ-4310183)。
+* 创作实例上组件的实时使用情况并不显示所有发生次数。 某些组件在1000多个页面中使用，但报表仅显示大约40个页面(CQ-4323724)。
+* 当网站结构具有许多子页面时，与Experience Manager6.4.8.2(CQ-4322766)相比，在列视图中加载子页面需要花费更多时间。
+* 取消选中“全部”在“转出页面”选项上不起作用(NPR-37070)。
+* 打开页面的现有v3组件版本时，页面属性对话框未打开，并且记录了`NullPointerException`(SITES-1830)。
 
-以下是[!DNL Experience Manager] 6.5.9.0版中提供的修复列表。
+### [!DNL Assets] {#assets-65100}
 
-### [!DNL Sites] {#sites-6590}
+[!DNL Assets]中修复了以下问题：
 
-* 启用了“身份验证要求”属性的已发布页面不会重定向到登录页面并返回404错误消息(NPR-36354)。
+* 移动文件夹后，属性`jcr:title`的值不会在Publish实例上更新。 在创作中重命名和重新发布文件夹不会更新发布实例中该文件夹的`jcr:title`属性值(NPR-36369)。
 
-* 创建超链接时，文本组件中无法使用搜索链接的选项(NPR-35849)。
+* 如果选择了两个或更多资产并编辑了一个或多个元数据字段，则保存操作将失败，Safari浏览器中的错误代码为500(NPR-36413)。
 
-* 使用`com.day.cq.wcm.commons.ReferenceSearch` API时会触发遍历查询。 它会影响[!DNL Experience Manager]服务器的性能(NPR-36407)。
+* 由于日期格式不正确，批量元数据导入失败(NPR-36428)。
 
-* 另一个大小调整的布局容器内的嵌套布局容器显示其子组件的列数不正确，从而导致这些组件未与网格对齐(NPR-36359)。
+* 在[!UICONTROL 属性]页面中选择以更新元数据时，当架构提供了多个选项时，接口响应速度缓慢(NPR-36430)。
 
-* 外部链接检查程序将有效的外部链接显示为无效链接(NPR-36289)。
+* 使用[!UICONTROL 到期状态]谓词的搜索筛选器不起作用(NPR-36436)。
 
-* 显示引用一段时间后，引用面板开始显示错误消息(NPR-36167)。
+* [!UICONTROL 文件夹元数据]属性中各个字段的弹出菜单不显示最后选择的值(NPR-36937、CQ-4314429)。
 
-* 移动组件时，自动创建的Parsys没有`sling:resourceType`节点(NPR-36165)。
+* 在搜索文件和文件夹时，如果用户应用过滤器并选择[!UICONTROL Files &amp; Folders]，则只显示文件，而不显示文件夹(CQ-4319543、NPR-36627)。
 
-* 在尝试同步Live Copy时（使用转出配置[!UICONTROL 在Blueprint激活时激活]和[!UICONTROL 在Blueprint激活时取消激活]），如果在Live Copy主控中删除了组件，则同步会失败并记录`NullPointerException`(NPR-36127)。
+* 从文件夹中选择同一收藏集并从搜索结果中选择该收藏集时，工具栏选项会有所不同(NPR-36620)。
 
-* 当用户键入标记的临时文本（系统中不存在的标记）并按Enter时，该标记会显示在字段下方，但当内容片段被保存并重新打开时，临时标记会消失(NPR-36132)。
+* 搜索结果页面上的[!UICONTROL 快速发布]选项不可用(NPR-36904、CQ-4317748)。
 
-* 收件箱中没有显示异步操作状态的选项(NPR-36104)。
+* 当用户在未指定资产扩展名的情况下创建资产的Live Copy时，下载Live Copy文件后，该文件将不可用(NPR-36903、CQ-4326305)。
 
-* 恢复继承后会创建重复的组件(NPR-36000)。
+* 将用户添加为子文件夹的所有者后，用户也会获得其父文件夹的所有者权限，进而获得父文件夹的其他子文件夹的所有者权限。 此外，在尝试删除用户时，该用户不会作为父文件夹的所有者被删除。 (NPR-36801、CQ-4323737)。
 
-* 使用`RemoteContentRenderingService`时，对`RemoteContentRendererRequestHandler.getRequest`的请求将始终包含`ComponentExporter`的根页面，但如果根模型未基于设置的遍历深度和筛选选项包含请求的页面，则不包含该页面。 请求必须始终包含请求的页面，以便SPA具有足够的信息来渲染响应(NPR-35961)。
+* [!DNL Experience Manager] 尝试为复合资产（如PowerPoint演示文稿）创建子资产时，会生成内存不足异常(NPR-36668)。
 
-* onTime/offTime项目不会在预期的onTime/offTime上激活/取消激活(NPR-35936)。
+* 当用户移动已发布的站点页面中已使用的资产时，即使未选择用于发布的选项，站点页面也会再次发布(NPR-36636、CQ-4323500)。
 
-* 发布包含没有`cq:lastModified`属性的体验片段的页面时，会出现`NullPointerException`(NPR-35914)。
+* 使用Apache Tika MIME类型检测功能时，使用`AssetManager.createAsset`方法上传的资产会在临时目录中保留一个名为`apache-tika-*.tmp`文件的临时文件。 此临时文件使用所有可用的可用磁盘空间(NPR-36545)。
 
-* 尝试在容器中调整组件大小时，无法重新调整到原始大小。 减小组件容器大小时，无法将大小重新设置为原始容器(NPR-35809)。
+* 下载所有受DRM保护的资产，并且未遵循用户选择下载特定资产(CQ-4327422)。
 
-* 在转出对话框中（在编辑器中触发或从Live Copy概述中触发），“已分离”、“已暂停”或“未创建”页面的状态图标错误(NPR-35691)。
+* 无法将资产拖到用户界面上的`pathfield`(NPR-36849)。
 
-* 主控忽略转出页面和子页面的多站点管理器转出页面属性复选框(NPR-35634)。
+* 在列视图中选择资产后，资产详细信息面板会消失(NPR-36667)。
 
-* 触屏UI中缺少经典UI中可用的恢复树功能(CQ-4315352、CQ-4309415)。
+### [!DNL Dynamic Media] {#dynamic-media-65100}
 
-* [!DNL Experience Manager Sites]页面上的还原继承和转出页面时出现问题(NPR-36033)。
+**辅助功能增强功能**
 
-### [!DNL Assets] {#assets-6590}
+[!DNL Dynamic Media Viewers]中提供了以下辅助功能增强功能。
 
-在[!DNL Assets]中完成了以下用户体验增强：
+* 屏幕阅读器现在会讲述要搜索的占位符文本，并将电子邮件地址添加为共享资产时的必填字段，以作为链接对话框，并会朗读[!UICONTROL 请填写此字段]工具提示(CQ-4327761)。
 
-* 要查看未基于[!UICONTROL 创建]、[!UICONTROL 修改]或[!UICONTROL 名称]参数进行排序的资产，[!DNL Adobe Experience Manager]在[!UICONTROL 排序]选项中提供了[!UICONTROL 无]选项。 [!UICONTROL 无]选项可确保“资产”用户界面（在卡片视图、列视图和分析视图中）中的资产与JCR节点中资产的顺序相同(NPR-36356)。
+* 现在，在使用键盘访问用户界面字段时，屏幕阅读器可以正确讲述[!UICONTROL 图像预设编辑器]中各个字段的名称和用途(CQ-4325677)。
 
-* 要在[!DNL Adobe Experience Manager]的ACP API响应中将电子邮件ID设为小写，可引入可选设置；由于[!DNL Adobe Asset Link]用户的ID没有全部使用小写字符，因此无法签入资产。 [!DNL Adobe Asset Link]面板使用来自[!DNL Adobe Experience Manager]的ACP API响应(CQ-4317704)。
+* 现在，可从[!UICONTROL 富媒体类型]选项的资产选取器中，相应地将键盘焦点移至[!UICONTROL 查看器预设]对话框的搜索选项卡(CQ-4324736)。
 
-[!DNL Adobe Experience Manager] 6.5.9.0提供了以 [!DNL Assets] 下辅助功能增强。
+* 使用键盘键在表单模式下导航时，屏幕阅读器会讲述与[!UICONTROL 图像预设]的[!UICONTROL 创建]选项卡(CQ-4323900)中的增量和减量选项对应的标签。
 
-对以下文本和图标的对比度（与背景）进行了改进，以便视力和颜色感知受限的用户能够理解：
+* 屏幕阅读器现在会朗读关于将资产共享为链接对话框的[!UICONTROL 搜索和添加电子邮件地址]选项(CQ-4323352)。
 
-* [!UICONTROL 属性]页面上的资产标题(NPR-35967)。
-* [!UICONTROL 评级]部分中各个位置的星级评级图标(NPR-36009)。
-* 资产和文件夹卡片视图上的文本(NPR-35966)。
-* [!UICONTROL 时间轴]视图上的占位符文本(NPR-35965)。
-* 资产搜索结果上的资产名称(NPR-35964)。
-* [!UICONTROL 链接共享]对话框上的占位符文本(NPR-35963)。
-* [!UICONTROL 查看设置对话框]的列 [!UICONTROL 表选项中的元数]据  、状态    和其他文本(NPR-35910)。
-*  位置和 [!UICONTROL 类型] 以在全局搜索中搜索占位符文本(NPR-35909)。
-* 展开和折叠[!UICONTROL 内容树]下的图标(NPR-35908)。
-* 显示资产文件夹的页面上的[!UICONTROL Assets]文本(NPR-35905)。
-* 资产详细信息页面中[!UICONTROL 资产元数据]、[!UICONTROL [!UICONTROL 概述]选项内的使用情况统计信息]中的文本(NPR-35904)。
-* 资产详细信息页面中[!UICONTROL 属性]和[!UICONTROL 编辑]选项的快捷键文本(NPR-35904)。
+* 使用键盘键导航资产时，工具栏中会保留键盘焦点(CQ-4322037)。
 
-[!DNL Adobe Experience Manager] 6.5.9.0修复 [!DNL Assets] 了以下问题。
+* 屏幕阅读器现在会在[!UICONTROL 编辑图像处理配置文件]页面(CQ-4290734)的[!UICONTROL 响应式图像裁剪]中选择[!UICONTROL 添加裁剪]选项后，讲述新添加的[!UICONTROL 编辑]字段信息。
 
-* 未保存从[!UICONTROL 文件夹元数据架构]表单中的标记选择元素中创建的标记(NPR-36119)。
+* 现在，在[!UICONTROL 编辑图像预设]和[!UICONTROL 创建交互式视频]页面上，屏幕阅读器在使用标题键盘快捷键(CQ-4290730)(CQ-4290701)导航页面时会相应地读出页面标题。
 
-* 当使用小椭圆对资产添加注释时，该椭圆与打印版本中的注释数量重叠(NPR-36114)。
+* 屏幕阅读器现在可以在导航以下页面时使用地标和区域快捷键识别屏幕的各个区域（如右面板区域、左面板、操作工具栏、查看器工具栏地标和可缩放图像地标）。
 
-* 有时，在列视图中， [!DNL Experience Manager]不会在上传重复资产时提示出现重复资产冲突(NPR-36048)。
+   * [!UICONTROL 查看器预设编辑器] (CQ-4290729)
 
-* 如果共享链接对话框处于打开状态且未进行任何更改，则单击关闭按钮不会将其关闭(NPR-36030)。
+   * [!UICONTROL 图像集编辑器] (CQ-4290710)
 
-* 选择多个资产以更新属性时，有时会发生错误，或更新已取消选择资产的属性(NPR-36002)。
+   * [!UICONTROL 创建交互式视频] (CQ-4290702)。
 
-* 当资产上传时，在资产文件名的开头或结尾处添加空格，其余字符与存储库中现有资产的名称相同，则会替换现有资产，而不会记录任何错误(NPR-36001)。
+* 屏幕阅读器现在使用向下箭头键导航时，会朗读视频帧中共享选项的名称(CQ-4290728)。
 
-* 在资产详细信息页面中播放视频时，播放和暂停选项不起作用(NPR-35999)。
+* 屏幕阅读器现在会讲述[!UICONTROL Sprite]和[!UICONTROL [!UICONTROL [!UICONTROL 查看器预设编辑器]中外观]选项卡的和背景]选项卡中各种选项的名称(CQ-4290727)。
 
-* 批量取消发布资产时，Brand Portal会生成一个错误，提示请求URI太长(NPR-35954)。
+* “编辑视频编码”页面的[!UICONTROL 基本]选项卡中的必填字段，如用于编辑[!UICONTROL 宽度]的字段，现在具有星号符号(*)(CQ-4290725)。
 
-* 打印具有长注释文本的资产时，即使有空格，注释文本也会被裁剪(NPR-35948)。
+* 屏幕阅读器现在会朗读[!UICONTROL 图像配置文件]页面(CQ-4290723)上选项的标签。
 
-* 在“创建目录”页面上的“选择模板”视图上选择该页面时，将禁用用于移动到下一页的选项(CQ-4315462)。
+* 当焦点位于CSS编辑器上时，Windows用户现在可以在[!UICONTROL 查看器预设编辑器]上导航出扩展的CSS编辑器(CQ-4290720)。
 
-* 在视频资产上启动更新资产工作流后，页面会重复刷新(CQ-4313375)。
+* 在表单模式下导航时，在[!UICONTROL [!UICONTROL 编辑图像预设]的“基本”]选项卡上，屏幕阅读器现在会讲述各种编辑字段和选项的标签(CQ-4290717)。
 
-* 无法删除或移动DAM文件夹，并记录异常(NPR-35942)。
+* 屏幕阅读器现在会在资产详细信息页面的左侧导航中，为用户界面选项讲述角色和状态（已选择或未选择）(CQ-4290709)。
 
-### [!DNL Dynamic Media] {#dynamic-media-6590}
+* 屏幕阅读器现在可以正确讲述图像的状态（已选或未选），并在[!UICONTROL 创建交互式视频]页面(CQ-4290707)的[!UICONTROL 内容]选项卡中切换图像的链接。
 
-[!DNL Adobe Experience Manager] 6.5.9.0在中提供 [!DNL Assets] 了以下辅助功能增强 [!DNL Dynamic Media]功能。
+* 现在，当使用[!UICONTROL 创建交互式视频]页面上的向下箭头键导航时，屏幕阅读器会在视频时间轴比例尺中正确讲述各个区段的名称、角色和状态(CQ-4290706)。
 
-* 在[!UICONTROL 图像集]编辑器中打开对话框以使用键盘键添加资产时：
-   * 屏幕阅读器会讲述该对话框是否已打开。
-   * 键盘焦点在打开时移至对话框。
-   * 关闭对话框后，键盘焦点会移回“添加资产”选项(CQ-4312134)。
+* 屏幕阅读器现在会在[!UICONTROL 创建交互式视频]页面(CQ-4290704)中导航选项时，讲述名称、角色、默认状态（已选择或未选择）和属性。
 
-* 您现在可以在热点编辑器中使用键盘键在资产上添加和编辑热点(CQ-4305965)。
+* 屏幕阅读器现在会在导航[!UICONTROL Publish]页面(CQ-4290705)时，讲述[!UICONTROL 所有资产]和[!UICONTROL 所有收藏集]选项的名称、角色和默认状态（已选择或未选择）。
 
-* 现在，您可以使用键盘键通过热点管理将超链接置于热点上。 屏幕阅读器焦点现在移至字段以编辑URL路径，并选择打开选择对话框(CQ-4290735)。
+* 在[!UICONTROL 创建交互式视频]页面上上传不受支持的视频格式（MP4除外）时，Experience Manager会显示并宣布错误消息(CQ-4290700)。
 
-* 改进了“图像集编辑器”页面上文本和控件的对比度（与背景），使视力和颜色感知受限的用户能够理解(CQ-4290733)。
+* 现在，[!UICONTROL 创建交互式视频]页面上时间轴比例中数字的对比度（以秒为单位）符合最低要求的光度比，以便对颜色有限感知的用户可以轻松阅读(CQ-4290699)。
 
-* 现在，您可以导航到查看器预设编辑器上的资产共享选项，然后使用键盘键折叠展开的共享选项(CQ-4290724)。
+* 屏幕阅读器现在在导航[!UICONTROL 创建交互式视频]页面(CQ-4290697)时，会朗读[!UICONTROL 产品名称]字段的标签。
 
-* 现在，您可以使用键盘键在“编辑视频编码”页面的基本和高级选项卡上导航和查看信息图标和警报图标的工具提示(CQ-4290722)。
+**已修复的问题**
 
-* 屏幕阅读器现在在查看器预设编辑器的外观选项卡和行为选项卡中讲述各个字段的说明(CQ-4290721)。
+[!DNL Dynamic Media]中提供了以下错误修复。
 
-* 在表单模式下导航“编辑图像预设”页面时，屏幕阅读器会讲述各个字段和控件的用途和名称(CQ-4290717)。
+* 在启用`dynamicmedia_scene7`运行模式并禁用同步后，将视频上传到[!DNL Experience Manager]显示`Process failed`(CQ-4327791)。
 
-* 现在，在导览资产详细信息页面时，屏幕阅读器会介绍查看器中各种选项的用途(CQ-4290716)。
+### 平台 {#platform-65100}
 
-* 资产详细信息页面的占位符文本的对比度（与背景）“所有演绎版”选项得到了改进，以便视力和颜色感知受限的用户能够理解(CQ-4290713)。
+此Service Pack中提供了以下增强功能：
 
-* 用于表示必填字段的可视星号现在在图像集编辑器的资产标题字段中提供，屏幕阅读器会朗读该字段的必填信息(CQ-4290712)。
+* 当用户在树视图中选择项目时，屏幕阅读器会朗读所做的选择以及顶部显示的工具栏选项(NPR-36504)。
+* 某些文本和控制名称对于出现视觉问题的用户来说更容易阅读，因为明度比率满足4.5:1的最低要求比率(NPR-36503)。
+* 当用户使用日历控件时，屏幕阅读器会讲述描述性日期、月份和工作日信息。 用户使用日历快捷键时，屏幕阅读器会讲述日期、月和年的更改(NPR-36498)。
+* 提供了使用ECMAScript 6功能执行自定义JavaScript `Clientlibs`而不遵守严格模式的支持。 具体而言，将`emitUseStrict`标记添加到`GCCScriptProcessor`(NPR-36411)。
 
-* 屏幕阅读器现在可以在资产详细信息页面的查看器中访问并讲述各种交互式选项的用途(CQ-4290708)。
+以下错误修复是此Service Pack的一部分：
 
-Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下问题：
+* 自定义运行状况检查的执行频率比计划的频率高(NPR-36985)。
+* 对于别名页面，`Resourceresolver map`方法返回错误结果(NPR-36767)。
+* [!DNL Experience Manager] 由于加载工作流，启动延迟(NPR-36615)。
 
-* 当[!DNL Dynamic Media]被[默认](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html#troubleshoot-dm-config)选择性激活和禁用时，自定义查看器预设和CSS不会复制到[!DNL Dynamic Media](NPR-36232)。
+### 集成 {#integrations-65100}
 
-* 尝试在资产详细信息页面上预览视频演绎版时，视频加载速度缓慢(CQ-4320122)。
+* Experience Manager在主MongoDB节点切换到另一个节点时变得无响应(NPR-36566)。
+* [!DNL Sling content distribution] 执行收集成员删除操作时失败(NPR-36521、CQ-4323578)。
 
-* 在启用了重复资产检测器的情况下上传200多个资产时，浏览器页面无响应且速度会减慢(CQ-4319633)。
+### 用户界面 {#user-interface-65100}
 
-* 在页面的全景媒体组件中添加全景图像资产时，将记录“未捕获引用”错误(CQ-4317666)。
+* **[!UICONTROL 引用]**&#x200B;侧面板不显示资产和站点引用(GRANITE-35078、GRANITE-34892)。
 
-* 使用体验片段实施交互式媒体查看器时，不会从发布者中打开体验片段，并记录错误(CQ-4317655)。
+### 翻译项目 {#translation-65100}
 
-* [!UICONTROL 在“属性”] 页面的快速发布 [!UICONTROL 中，] “发布到  动态媒体”选项不可用(CQ-4317199)。
+* 将删除多翻译项目语言副本中的额外子页面(NPR-36622)。
 
-* 具有只读权限的网站作者可以在资产上使用智能裁剪功能，并编辑智能裁剪演绎版(CQ-4316450)。
+### 工作流 {#workflow-65100}
 
-* 即使在[!DNL Dynamic Media]模式下设置了[!DNL Experience Manager]实例(CQ-4314950)，视频注释对未启用[!DNL Dynamic Media]配置的文件夹路径也不起作用。
+* 如果服务器收到不在办公室的消息，它会报告内存警报并停止响应(NPR-36768)。
 
-* 当资产标题具有双字节、多字节、高ASCII、西里尔文、代理对、希伯来语、阿拉伯语和GB18030字符时，资产标题将带有问号(?) (CQ-4311872).
+### [!DNL Communities] {#communities-65100}
 
->在Experience Manager6.5.9.0上，Dynamic Media *中出现的已知视频播放问题仅*:
->
->* 
+* 对于匿名来宾用户，社区站点页面以`LoggedIn`状态打开(NPR-36908)。
 
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
->* 
+* 当&#x200B;**[!UICONTROL 社区]** > **[!UICONTROL 构思]** > **[!UICONTROL 评论]**&#x200B;页面中有多个页面时，页面导航不起作用(NPR-36541)。
 
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
+<!--
+Need to verify with Engineering, the status is currently showing as Resolved
+-->
 
 
-### 平台 {#platform-6590}
+<!--
+### [!DNL Brand Portal] {#brandportal-65100}
 
-* 在为Blueprint生成缩略图并将更改转出到Live Copy时，某些字段的继承不起作用(CQ-4319517)。
+*
+-->
 
-* 创建文件夹时，选择可排序属性，并向文件夹添加20多个资产，选择文件夹中的所有资产会显示错误计数(CQ-4316243)。
-
-* 刷新页面时，对文件夹或资产进行排序，不会显示相应的结果(CQ-4316200)。
-
-* Handlebars JavaScript库已升级到v4.7.7(NPR-36375)。
-
-* 使用包管理器安装新代码包时，自定义包不会更新(NPR-35949)。
-
-* `resourceresolver` Sling包导致`Sling:alias`查询失败(NPR-35335)。
-
-* 在Experience Manager中设置SSL时，上下文路径将被删除(NPR-35294)。
-
-* 长时间运行的会话后，会返回`SegmentNotFound`异常(NPR-36405)。
-
-### 集成 {#integrations-6590}
-
-* 无法保存为Cloud Services体验片段启用继承的页面属性(NPR-36107)。
-
-* IMS用户界面分页和延迟加载不显示相应结果(NPR-36046)。
-
-* 创建A4T Target配置并选择报表源作为[!DNL Adobe Analytics]时，下拉列表中没有可用的启用Adobe Target的报表包(NPR-36006)。
-
-### 项目 {#projects-6590}
-
-* 无法保存项目的属性，因为项目的JCR路径未解析，原因是项目路径中附加了额外的正斜杠(`/`)(NPR-36191)。
-
-### 屏幕 {#screens-6590}
-
-* [!DNL Experience Manager Screens] 如果使用自定义的双重身份验证处理程序，则播放器无法进行身份验证(NPR-35854)。
-
-### 商务 {#commerce-6590}
-
-* [!UICONTROL 商务目录]向导无法在列视图中加载40个以上的项目(CQ-4318379)。
-
-### 翻译项目 {#translation-6590}
-
-* 将`es`翻译为`es_es`页面时，不显示更新或覆盖选项(NPR-36170)。
-
-* 为具有人工翻译的项目选择自动批准选项后，作业状态显示为`Unknown`(NPR-35981)。
-
-* 翻译页面时，[!DNL Experience Fragments]的引用路径不会更新到目标[!DNL Experience Fragment]引用路径(NPR-35911)。
-
-* 在父页面和子页面中进行更改并发送父页面进行翻译时，子页面也会被错误翻译(NPR-35896)。
-
-* 如果选定页面有多个并发翻译项目，则[!UICONTROL 转到项目]选项不会链接到最新的翻译项目(NPR-35454)。
-
-* 将资产发布到[!DNL Dynamic Media]时， [!DNL Experience Manager]会显示一条有关未发布标记的错误消息(CQ-4315914、CQ-4315913)。
-
-* 打开已删除的作业时，[!DNL Experience Manager]显示错误消息(CQ-4315910)。
-
-### 工作流 {#workflow-6590}
-
-* 对收件箱中可用的项目单击完成、委派或打开操作后，看不到完成这些操作的任何可见线索(NPR-36317)。
-
-### [!DNL Communities] {#communities-6590}
-
-* 在垃圾邮件过滤中，系统会占用100%的Java™堆空间，从而导致Experience Manager服务器无响应(NPR-36316、NPR-36493)。
-* 在论坛中，源自`SearchCommentSocialComponentListProvider`的JCR会话数据会被泄露(NPR-36235)。
-* 打开特定收件箱消息会反映所有分页不正确的消息以及其他问题(NPR-35917)。
-
-### [!DNL Brand Portal] {#brandportal-6590}
-
-* 使用[!DNL Brand Portal]配置[!DNL Experience Manager Assets]时，会自动启用资产源功能标记(NPR-36010)。
-
-### [!DNL Forms] {#forms-6590}
+### [!DNL Forms] {#forms-65100}
 
 >[!NOTE]
 >
 >* [!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
->* 现在，您可以在OSGi部署中使用[!DNL Azul Zulu]内部版本[!DNL OpenJDK]来开发和运行应用程序，[!DNL Experience Manager Forms]为。
 
 
-**自适应表单**
+### 商务 {#commerce-65100}
 
-* 生成多个翻译字典时，[!DNL Experience Manager Forms] 6.5.7.0中出现语言初始化问题(NPR-36439)。
-* 在向自适应表单片段添加附件并提交表单时， [!DNL Experience Manager Forms]会显示以下错误消息(NPR-36195):
-
-   ```TXT
-    POST /content/forms/af/attachmentissue/jcr:content/guideContainer.af.submit.jsp HTTP/1.1] com.adobe.aemds.guide.servlet.GuideSubmitServlet [AF] Invalid file name or mime type for file resulted in submission failure
-   ```
-
-* 当您使用人工翻译更新字典并预览自适应表单时，不会显示修改(NPR-36035)。
-
-**交互式通信**
-
-* 使用交互式通信打印渠道上传图像并对其进行编辑时，该图像不再可见(NPR-36518)。
-
-* 编辑文本资产和填充占位符时，将从导航窗格中删除所有交互元素(NPR-35991)。
-
-**工作流**
-
-* 在JBoss®上调用[!DNL Experience Manager Forms]服务的REST端点时， [!DNL Experience Manager]会显示以下错误消息(NPR-36305):
-
-   ```TXT
-   Invalid input. The maximum length of 2000 characters was exceeded.
-   ```
-
-**后端集成**
-
-* 将读取服务参数绑定到包含短划线的文字值时，无法保存表单数据模型(NPR-36366)。
-
-**文档安全**
-
-* 设置GlobalSign的认证和HSM后，[!DNL Experience Manager Forms]在向LTV添加时间戳时显示`Unsuported Algorithm`和`Invalid TSA Certificate`错误消息(NPR-36026、NPR-36025)。
-
-**文档服务**
-
-* 更新了[!DNL Gibson]库以与[!DNL Experience Manager Forms]集成(NPR-36211)。
-
-**Foundation JEE**
-
-* 在AdminUI中选择“端点管理”时， [!DNL Experience Manager Forms]会显示`endpoint registry failure`错误消息(CQ-4320249)。
+* 显示的&#x200B;**[!UICONTROL 发布者]**&#x200B;字段中的值在列视图中不正确(NPR-36902)。
+* 推出目录时，新产品会被错误地标记为已修改的产品(NPR-36666)。
+* 重新创建已删除的产品时，不会重新创建产品页面(NPR-36665)。
+* 已修改的页面会更新，但相应的链接产品在目录转出时不会更新(CQ-4321409、NPR-36422)。
+* **[!UICONTROL 稍后发布]**&#x200B;和&#x200B;**[!UICONTROL 稍后取消发布]**&#x200B;工作流不起作用(CQ-4327679)。
 
 有关安全更新的信息，请参阅[[!DNL Experience Manager] 安全公告页面](https://helpx.adobe.com/security/products/experience-manager.html)。
 
-## 安装 6.5.9.0 {#install}
+## 安装 6.5.10.0 {#install}
 
 **设置要求和更多信息**
 
-* Experience Manager6.5.9.0需要Experience Manager6.5。有关详细说明，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
+* Experience Manager6.5.10.0需要Experience Manager6.5。有关详细说明，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
 * 可在Adobe[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载Service Pack。
-* 在具有MongoDB和多个实例的部署中，使用包管理器在其中一个创作实例上安装Experience Manager6.5.9.0。
+* 在具有MongoDB和多个实例的部署中，使用包管理器在其中一个创作实例上安装Experience Manager6.5.10.0。
 
 >[!NOTE]
 >
->Adobe不建议移除或卸载[!DNL Adobe Experience Manager] 6.5.9.0包。
+>Adobe不建议移除或卸载[!DNL Adobe Experience Manager] 6.5.10.0包。
 
 ### 安装Service Pack {#install-service-pack}
 
 要在[!DNL Adobe Experience Manager] 6.5实例上安装Service Pack，请执行以下步骤：
 
-1. 如果实例处于更新模式，请在安装前重新启动该实例（在从早期版本更新该实例时，即为此情况）。 Adobe还建议，如果实例的当前正常运行时间较高，则应重新启动。
+1. 如果实例处于更新模式（从早期版本更新实例时），请在安装之前重新启动该实例。 Adobe建议，如果实例的当前正常运行时间较高，则重新启动。
 
 1. 在安装之前，请拍摄[!DNL Experience Manager]实例的快照或新备份。
 
-1. 从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip)下载Service Pack。
+1. 从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.10.zip)下载Service Pack。
 
 1. 打开包管理器，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。要了解更多信息，请参阅[包管理器](/help/sites-administering/package-manager.md)。
 
@@ -374,11 +295,11 @@ Adobe Experience Manager 6.5.9.0 Assets修复了[!DNL Dynamic Media]中的以下
 
 >[!NOTE]
 >
->在安装Service Pack时，包管理器UI上的对话框有时会退出。 Adobe建议您在访问部署之前等待错误日志稳定下来。 请等待与卸载更新程序包相关的特定日志，然后才能确保安装成功。 通常情况下，这会在[!DNL Safari]上发生，但是可能会间歇性地在任何浏览器上发生。
+>在安装Service Pack时，包管理器UI上的对话框有时会退出。 Adobe建议您在访问部署之前等待错误日志稳定下来。 请等待与卸载更新程序包相关的特定日志，然后才能确保安装成功。 通常，此问题会在[!DNL Safari]浏览器中发生，但可能会间歇性地在任何浏览器上发生。
 
 **自动安装**
 
-在工作实例上自动安装[!DNL Experience Manager] 6.5.9.0的方法有两种：
+在工作实例上自动安装[!DNL Experience Manager] 6.5.10.0的方法有两种：
 
 A.当服务器联机时，将包放入`../crx-quickstart/install`文件夹中。 包会自动安装。
 
@@ -386,11 +307,11 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 >[!NOTE]
 >
->Adobe Experience Manager 6.5.9.0不支持Bootstrap安装。
+>Adobe Experience Manager 6.5.10.0不支持Bootstrap安装。
 
 **验证安装**
 
-1. 产品信息页面(`/system/console/productinfo`)在[!UICONTROL Installed Products]下显示更新的版本字符串`Adobe Experience Manager (6.5.9.0)`。
+1. 产品信息页面(`/system/console/productinfo`)在[!UICONTROL Installed Products]下显示更新的版本字符串`Adobe Experience Manager (6.5.10.0)`。
 
 1. 所有OSGi包均为OSGi控制台中的&#x200B;**[!UICONTROL ACTIVE]**&#x200B;或&#x200B;**[!UICONTROL FRAGMENT]**(使用Web控制台：`/system/console/bundles`)。
 
@@ -398,35 +319,35 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 要了解经认证可与此版本配合使用的平台，请参阅[技术要求](/help/sites-deploying/technical-requirements.md)。
 
-### 安装Adobe Experience Manager Forms附加组件包 {#install-aem-forms-add-on-package}
+<!--### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->如果您没有使用Experience ManagerForms，请跳过。 在计划的[!DNL Experience Manager] Service Pack版本发布后一周，Experience ManagerForms中的修复将通过单独的附加组件包提供。
+>Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
 
-1. 确保您已安装Adobe Experience Manager Service Pack。
-1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)中列出的相应 Forms 附加组件包。
-1. 按照[安装Forms附加组件包](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)中所述安装AEM Forms附加组件包。
-
->[!NOTE]
->
->Experience Manager6.5.9.0包含新版本的[AEM Forms兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)。 如果您使用的是旧版AEM Forms兼容包并更新到Experience Manager6.5.9.0，请在安装Forms附加组件包后安装该包的最新版本。
-
-### 在JEE上安装Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
+1. Ensure that you have installed the Adobe Experience Manager Service Pack.
+1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) for your operating system.
+1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
 >[!NOTE]
 >
->如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的Adobe Experience Manager Forms中的修复通过单独的安装程序提供。
+>Experience Manager 6.5.10.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to Experience Manager 6.5.10.0, install the latest version of the package post installation of Forms Add-On Package.
 
-有关在JEE上安装用于Experience ManagerForms的累积安装程序以及部署后配置的信息，请参阅[发行说明](jee-patch-installer-65.md)。
+### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->在JEE上安装用于Experience ManagerForms的累积安装程序后，安装最新的Forms附加组件包，从`crx-repository\install`文件夹中删除Forms附加组件包，然后重新启动服务器。
+>Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+
+For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+
+>[!NOTE]
+>
+>After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.-->
 
 ### UberJar {#uber-jar}
 
-适用于Experience Manager6.5.9.0的UberJar在[Maven Central存储库](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.9-1.0/)中提供。
+适用于Experience Manager6.5.10.0的UberJar在[Maven Central存储库](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.10/)中提供。
 
 要在Maven项目中使用UberJar，请参阅[如何使用UberJar](/help/sites-developing/ht-projects-maven.md)，并在项目POM中包含以下依赖项：
 
@@ -434,7 +355,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.9-1.0</version>
+     <version>6.5.10.0</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -451,18 +372,18 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用。 随着Experience Manager6.5中更新了Experience Manager和Adobe Target集成，以支持Adobe Target Standard API(通过AdobeIMS和[!DNL Adobe I/O]进行身份验证)，以及Launch在检测Experience Manager页面以进行分析和个性化方面日益发挥的作用，选择加入向导在功能上已变得无关紧要。 | 通过相应的[!DNL Experience Manager]云服务配置系统连接、AdobeIMS身份验证和[!DNL Adobe I/O]集成。 |
+| 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用，因为[!DNL Experience Manager]和[!DNL Adobe Target]集成已在Experience Manager6.5中更新。该集成支持Adobe Target标准API。 该API使用通过AdobeIMS和[!DNL Adobe I/O]进行身份验证，并支持AdobeLaunch发挥越来越大的作用，以便为分析和个性化设置[!DNL Experience Manager]页面，因此选择加入向导在功能上无关紧要。 | 通过相应的[!DNL Experience Manager]云服务配置系统连接、AdobeIMS身份验证和[!DNL Adobe I/O]集成。 |
 | 连接器 | 适用于Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR Connector已在Experience Manager6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
 
-* 如果您要将[!DNL Experience Manager]实例从6.5版升级到6.5.9.0版，则可以在`error.log`文件中查看`RRD4JReporter`异常。 重新启动实例以解决问题。
+* 如果您要将[!DNL Experience Manager]实例从6.5版升级到6.5.10.0版，则可以在`error.log`文件中查看`RRD4JReporter`异常。 要解决此问题，请重新启动实例。
 
-* 如果您在[!DNL Experience Manager] 6.5上安装[!DNL Experience Manager] 6.5 Service Pack 5或之前的Service Pack，则会删除资产自定义工作流模型（在`/var/workflow/models/dam`中创建）的运行时副本。
+* 如果您在[!DNL Experience Manager] 6.5上安装[!DNL Experience Manager] 6.5 Service Pack 10或之前的Service Pack，则会删除资产自定义工作流模型（在`/var/workflow/models/dam`中创建）的运行时副本。
 要检索运行时副本，Adobe建议使用HTTP API将自定义工作流模型的设计时间副本与其运行时副本同步：
    `<designModelPath>/jcr:content.generate.json`。
 
-* 如果层级结构中的文件夹在[!DNL Assets]中重命名，并且包含资产的嵌套文件夹发布到[!DNL Brand Portal]，则在重新发布根文件夹之前，文件夹的标题不会在[!DNL Brand Portal]中更新。
+* 用户可以重命名[!DNL Assets]层次结构中的文件夹，并将嵌套文件夹发布到[!DNL Brand Portal]。 但是，在重新发布根文件夹之前，文件夹的标题不会在[!DNL Brand Portal]中更新。
 
 * 当用户首次选择在自适应表单中配置字段时，用于保存配置的选项不会显示在属性浏览器中。 选择在同一编辑器中配置自适应表单的其他一些字段可解决此问题。
 
@@ -476,11 +397,11 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 ## 包含的OSGi包和内容包 {#osgi-bundles-and-content-packages-included}
 
-以下文本文档列出了[!DNL Experience Manager] 6.5.9.0中包含的OSGi包和内容包：
+以下文本文档列出了[!DNL Experience Manager] 6.5.10.0中包含的OSGi包和内容包：
 
-* [Experience Manager6.5.9.0中包含的OSGi包列表](assets/6590_bundles.txt)
+* [Experience Manager6.5.10.0中包含的OSGi包列表](assets/65100_bundles.txt)
 
-* [Experience Manager6.5.9.0中包含的内容包列表](assets/6590_packages.txt)
+* [Experience Manager6.5.10.0中包含的内容包列表](assets/65100_packages.txt)
 
 ## 受限网站 {#restricted-sites}
 
@@ -492,7 +413,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 6.5发行说明](/help/release-notes/release-notes.md)
-* [[!DNL Experience Manager] 产品页面](https://www.adobe.com/cn/marketing/experience-manager.html)
-* [[!DNL Experience Manager] 6.5文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
-* [订阅 Adobe 产品更新早知道](https://www.adobe.com/subscription/priority-product-update.html)
+>* [[!DNL Experience Manager] 产品页面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
+>* [订阅 Adobe 产品更新早知道](https://www.adobe.com/subscription/priority-product-update.html)
 

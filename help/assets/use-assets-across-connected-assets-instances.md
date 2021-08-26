@@ -3,11 +3,11 @@ title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程 [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] 部署中可用的资产。
 contentOwner: AG
 role: User, Admin, Leader
-feature: 连接的资产、用户和组
+feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 37073594b45995ade7f0e73c519feb21adf48482
 workflow-type: tm+mt
-source-wordcount: '2742'
+source-wordcount: '2732'
 ht-degree: 29%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 29%
 
 作者在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索到的资产。 文档会添加到`Download`组件，图像会添加到`Image`组件。 此外，作者还会在任何自定义[!DNL Experience Manager]组件中添加远程资产，这些组件扩展了默认`Download`或`Image`组件。 支持的格式包括：
 
-* **图像格式**:图像组件支 [持](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 的格式。[!DNL Dynamic Media] 不支持图像。
+* **图像格式**:图像组件支 [持](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 的格式。
 * **文档格式**:请参阅支 [持的文档格式](assets-formats.md#supported-document-formats)。
 
 ### 涉及的用户和组 {#users-and-groups-involved}
@@ -188,7 +188,7 @@ ht-degree: 29%
 * 本地资产与远程部署中的原始资产不同步。在 DAM 部署上所具有的任何编辑、删除或撤销权限均不会传播到下游。
 * 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。不允许进行其他编辑。
 * 本地获取的资产只能用于创作。不能应用资产更新工作流，也不能编辑元数据。
-* 仅支持图像和列出的文档格式。[!DNL Dynamic Media] 不支持 [!DNL Content Fragments]资产、 [!DNL Experience Fragments] 和。
+* 仅支持图像和列出的文档格式。[!DNL Content Fragments] 和 [!DNL Experience Fragments] 不受支持。
 * [!DNL Experience Manager] 不会获取元数据架构。这意味着可能无法显示所有获取的元数据。 如果在[!DNL Sites]部署中单独更新了架构，则会显示所有元数据属性。
 * 所有[!DNL Sites]作者都对获取的副本具有读取权限，即使作者无法访问远程DAM部署。
 * 没有支持自定义集成的 API。
