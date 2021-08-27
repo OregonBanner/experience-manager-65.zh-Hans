@@ -1,30 +1,20 @@
 ---
 title: Markdown
-seo-title: Markdown
-description: 在创作时，内容片段编辑器使用Markdown语法来让您轻松编写内容。
-seo-description: 在创作时，内容片段编辑器使用Markdown语法来让您轻松编写内容。
-uuid: afcbf82f-3a75-4491-9172-706188db65bb
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: content-fragments
-content-type: reference
-discoiquuid: b193f28c-46c2-4eab-bbb8-578530f80ba5
-docset: aem65
-feature: 内容片段
-role: User, Admin
-exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: 了解内容片段编辑器如何使用Markdown语法来轻松创建无标题内容。
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '522'
 ht-degree: 4%
 
 ---
 
-# Markdown{#markdown}
+# Markdown {#markdown}
 
-当您处于[创作](content-fragments-variations.md#authoring-your-content)时，内容片段编辑器会使用&#x200B;*markdown*&#x200B;语法来轻松编写内容：
+当您处于[创作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)时，内容片段编辑器使用&#x200B;*markdown*&#x200B;语法来轻松编写无标题内容：
 
-![markdown编辑器](/help/assets/content-fragments/assets/cfm-6420-08.png)
+![markdown编辑器](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
 您可以定义：
 

@@ -1,8 +1,8 @@
 ---
 title: 自定义和扩展内容片段
-seo-title: 自定义和扩展内容片段
+seo-title: Customizing and Extending Content Fragments
 description: 内容片段对标准资产进行了扩展。
-seo-description: 内容片段对标准资产进行了扩展。
+seo-description: A content fragment extends a standard asset.
 uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2772'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,10 @@ ht-degree: 1%
 >
 >内容片段模型用于We.Retail中的所有示例。
 
+>[!NOTE]
+>
+>在AEM 6.3之前，内容片段是使用模板而不是模型创建的。 模板不再可用于创建新片段，但仍支持使用此类模板创建的任何片段。
+
 * 内容片段模型:
 
    * 用于定义包含结构化内容的内容片段。
@@ -63,7 +67,7 @@ ht-degree: 1%
    * [内容片](/help/sites-developing/content-fragment-templates.md) 段模板以不同于AEM生态系统中其他模板机制（例如页面模板等）的方式运行。因此，应单独考虑这些问题。
    * 基于模板时，根据实际内容管理内容的MIME类型；这意味着每个元素和变量可以具有不同的MIME类型。
 
-### 与资产集成{#integration-with-assets}
+### 与资产集成 {#integration-with-assets}
 
 内容片段管理(CFM)是AEM Assets的一部分，其格式为：
 
@@ -71,7 +75,7 @@ ht-degree: 1%
 * 它们使用现有的资产功能。
 * 它们与资产（管理控制台等）完全集成。
 
-#### 将结构化内容片段映射到资产{#mapping-structured-content-fragments-to-assets}
+#### 将结构化内容片段映射到资产 {#mapping-structured-content-fragments-to-assets}
 
 ![片段到资产结构](assets/fragment-to-assets-structured.png)
 
@@ -92,7 +96,7 @@ ht-degree: 1%
 除标题和描述之外，这些标题和描述不被视为传统元数据并存储在 
 `jcr:content`
 
-#### 将简单内容片段映射到资产{#mapping-simple-content-fragments-to-assets}
+#### 将简单内容片段映射到资产 {#mapping-simple-content-fragments-to-assets}
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
@@ -108,23 +112,23 @@ ht-degree: 1%
    * 这些附加元素的主要内容映射到相应子资产的原始演绎版。
    * 任何其他元素的其他变体（如果适用）都映射到相应子资产的其他演绎版。
 
-#### 资产位置{#asset-location}
+#### 资产位置 {#asset-location}
 
 与标准资产一样，内容片段位于以下位置：
 
 `/content/dam`
 
-#### 资产权限{#asset-permissions}
+#### 资产权限 {#asset-permissions}
 
 有关更多详细信息，请参阅[内容片段 — 删除注意事项](/help/assets/content-fragments/content-fragments-delete.md)。
 
-#### 功能集成{#feature-integration}
+#### 功能集成 {#feature-integration}
 
 * 内容片段管理(CFM)功能以资产核心为基础，但应当尽可能独立于该功能。
 * CFM为卡片/列/列表视图中的项目提供了自己的实施；这些插件可插入现有资产内容渲染实施。
 * 已扩展多个资产组件，以满足内容片段的需求。
 
-### 在页面{#using-content-fragments-in-pages}中使用内容片段
+### 在页面中使用内容片段 {#using-content-fragments-in-pages}
 
 >[!CAUTION]
 >
@@ -154,7 +158,7 @@ ht-degree: 1%
 >
 >在页面上使用基于内容片段模板的内容片段时，没有引用，因为创建片段时复制了模板。
 
-#### 使用OSGi控制台{#configuration-using-osgi-console}进行配置
+#### 使用OSGi控制台进行配置 {#configuration-using-osgi-console}
 
 例如，内容片段的后端实施负责使页面上使用的片段的实例可搜索，或管理混合媒体内容。 此实施需要了解用于渲染片段的组件以及如何对渲染进行参数化。
 
@@ -192,7 +196,7 @@ ht-degree: 1%
 
    * 如果`paragraphScope` == `range`，则属性`paragraphRange`定义要呈现的段落范围
 
-### 与其他框架{#integration-with-other-frameworks}集成
+### 与其他框架集成 {#integration-with-other-frameworks}
 
 内容片段可以与以下内容集成：
 
@@ -223,9 +227,8 @@ ht-degree: 1%
    >AEM翻译工作流可与`/content`配合使用：
    >
    >    * 由于内容片段模型位于`/conf`中，因此此类转换中不包含这些模型。 您可以[国际化UI字符串](/help/sites-developing/i18n-dev.md)。
-      >
-      >    
-   * 模板将被复制以创建片段，因此这是隐式的。
+   >
+   >    * 模板将被复制以创建片段，因此这是隐式的。
 
 
 * **元数据架构**
@@ -239,7 +242,7 @@ ht-degree: 1%
 
    * 相应的架构表单与片段编辑器集成。
 
-## 内容片段管理API — 服务器端{#the-content-fragment-management-api-server-side}
+## 内容片段管理API — 服务器端 {#the-content-fragment-management-api-server-side}
 
 您可以使用服务器端API访问您的内容片段；请参阅：
 
@@ -249,7 +252,7 @@ ht-degree: 1%
 >
 >强烈建议使用服务器端API，而不是直接访问内容结构。
 
-### 关键接口{#key-interfaces}
+### 关键界面 {#key-interfaces}
 
 以下三个界面可用作入口点：
 
@@ -358,7 +361,7 @@ ht-degree: 1%
 
 
 
-### 调整 — 使用adaptTo(){#adapting-using-adaptto}
+### 适应 — 使用adaptTo() {#adapting-using-adaptto}
 
 可以修改以下内容：
 
@@ -396,7 +399,7 @@ ht-degree: 1%
 
    * 删除现有变量不会更新数据结构。
 
-## 内容片段管理API — 客户端{#the-content-fragment-management-api-client-side}
+## 内容片段管理API — 客户端 {#the-content-fragment-management-api-client-side}
 
 >[!CAUTION]
 >
@@ -410,7 +413,7 @@ ht-degree: 1%
 
    内容片段管理的`filter.xml`已进行配置，以便它不会与资产核心内容包重叠。
 
-## 编辑会话{#edit-sessions}
+## 编辑会话 {#edit-sessions}
 
 当用户在其中一个编辑器页面中打开内容片段时，将启动编辑会话。 当用户通过选择&#x200B;**Save**&#x200B;或&#x200B;**Cancel**&#x200B;离开编辑器时，编辑会话即告结束。
 
@@ -479,7 +482,7 @@ ht-degree: 1%
 
 ## 示例 {#examples}
 
-### 示例：访问现有内容片段{#example-accessing-an-existing-content-fragment}
+### 示例：访问现有内容片段 {#example-accessing-an-existing-content-fragment}
 
 要实现此目的，您可以调整表示API的资源以：
 
@@ -497,7 +500,7 @@ if (fragmentResource != null) {
 }
 ```
 
-### 示例：创建新内容片段{#example-creating-a-new-content-fragment}
+### 示例：创建新内容片段 {#example-creating-a-new-content-fragment}
 
 要以编程方式创建新内容片段，您需要使用：
 
@@ -511,7 +514,7 @@ FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
-### 示例：指定自动保存间隔{#example-specifying-the-auto-save-interval}
+### 示例：指定自动保存间隔 {#example-specifying-the-auto-save-interval}
 
 使用配置管理器(ConfMgr)可以定义自动保存间隔（以秒为单位）：
 
@@ -530,7 +533,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 * 值：`300`（5分钟等于300秒）
 
-## 内容片段模板{#content-fragment-templates}
+## 内容片段模板 {#content-fragment-templates}
 
 有关完整信息，请参阅[内容片段模板](/help/sites-developing/content-fragment-templates.md)。
 

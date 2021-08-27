@@ -1,26 +1,18 @@
 ---
 title: 内容片段 - 删除注意事项
-seo-title: 内容片段 - 删除注意事项
-description: 内容片段 - 删除注意事项
-seo-description: 内容片段 - 删除注意事项
-uuid: e7ac1809-159f-4d02-ad30-dc6c246e8a04
-contentOwner: aheimoz
-topic-tags: content-fragments
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-content-type: reference
-discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
-docset: aem65
-feature: 内容片段
-role: User, Admin
-exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: 在AEM中定义内容片段删除策略之前，请查看这些重要注意事项。 内容片段是用于交付无头内容的强大工具，必须仔细考虑删除这些片段的影响。
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 13%
+source-wordcount: '509'
+ht-degree: 9%
 
 ---
 
-# 内容片段 - 删除注意事项{#content-fragments-delete-considerations}
+# 内容片段 - 删除注意事项 {#content-fragments-delete-considerations}
+
+在AEM中定义内容片段删除策略之前，请查看这些重要注意事项。 内容片段是用于交付无头内容的强大工具，必须仔细考虑删除这些片段的影响。
 
 ## 权限 — 删除或不删除 {#permissions-delete-or-not-delete}
 
@@ -33,12 +25,12 @@ ht-degree: 13%
    * **用例**:需要编辑/更新内容片段 — 和删除 **整个片段的用户**。
    * **权限**:可以 [](/help/sites-administering/security.md#actions) 通过用户 [和/或群组管理来分配“删除”权限](/help/sites-administering/security.md#managing-permissions)。
 
-1. **构成内容片段的多个子实体；例如，变体、子节点。**
+2. **构成内容片段的多个子实体；例如，变体、子节点。**
 
    内容片段编辑器的基本操作要求可以删除此类临时子元素。 例如，在处理变量时；在编辑元数据或管理关联的内容时，也可以。
 
    * **用例**:需要编辑/更新内容片段的用户 —  **不允许删除整个片段**。
-   * **权限**:请参 [阅仅编辑器功能所需的权限](/help/assets/content-fragments/content-fragments-delete.md#permissions-required-for-editor-functionality-only)。
+   * **权限**:请参 [阅仅编辑器功能所需的权限](#permissions-required-for-editor-functionality-only)。
 
 >[!NOTE]
 >
@@ -82,7 +74,7 @@ ht-degree: 13%
 
 * 对于所有内容片段的`jcr:content`节点：
 
-   * `jcr:addChildNodes`、 `jcr:modifyProperties` 和  `jcr:removeChildNodes`
+   * `jcr:addChildNodes`, `jcr:modifyProperties` 和 `jcr:removeChildNodes`
 
 * 对于所有内容片段的`jcr:content`以下的所有节点：
 

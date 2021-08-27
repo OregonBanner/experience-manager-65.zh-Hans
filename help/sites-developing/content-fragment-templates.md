@@ -1,8 +1,8 @@
 ---
 title: 内容片段模板
-seo-title: 内容片段模板
+seo-title: Content Fragment Templates
 description: 创建内容片段时会选择模板，并为新片段提供基本结构、元素和变量
-seo-description: 创建内容片段时会选择模板，并为新片段提供基本结构、元素和变量
+seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
 uuid: d147bac8-b710-40ed-9664-decb5ffcf8e7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '656'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,10 @@ ht-degree: 3%
 >[现在，建议](/help/assets/content-fragments/content-fragments-models.md) 使用内容片段模型来创建所有片段。
 >
 >内容片段模型用于We.Retail中的所有示例。
+
+>[!NOTE]
+>
+>在AEM 6.3之前，内容片段是使用模板而不是模型创建的。 模板不再可用于创建新片段，但仍支持使用此类模板创建的任何片段。
 
 创建内容片段时会选择模板。 它们为新片段提供了基本结构、元素和变量。 用于内容片段的模板受Granite配置管理器的约束。
 
@@ -51,12 +55,10 @@ ht-degree: 3%
 >配置和其他更改的推荐方法是：
 >
 >1. 在`/apps`下重新创建所需项（即`/libs`中存在的项）
-   >
-   >
-1. 在`/apps`中进行任何更改
+>
+>1. 在`/apps`中进行任何更改
 
 >
-
 
 
 模板的基本结构如下：
