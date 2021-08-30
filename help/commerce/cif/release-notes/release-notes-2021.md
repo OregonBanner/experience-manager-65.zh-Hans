@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: d1e2a2b11bd4eaece80a2538ddc34ada59e63578
+source-git-commit: b6703f519295eef728d5504360d99de69438064c
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '989'
 ht-degree: 8%
 
 ---
@@ -23,18 +23,44 @@ ht-degree: 8%
 
 旧AEM CIF连接器将进入维护模式，不应再使用。 请将CIF连接器更换为新的CIF附加组件。 对于大多数项目来说，只需简单地替换包即可。
 
-| 组件 | 系统要求 |
+| Component | 系统要求 |
 |:-------|:-----:|
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 发行日期：2021年8月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.08.20 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.08.20.zip) |
+| CIF核心组件 | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
+| CIF Venia参考网站 | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
+
+### 新增功能 {#what-is-new-august}
+
+* 新增了类别选取器UI，以改善用户体验、提高效率并更好地支持复杂的产品目录
+
+   ![新建类别选取器](/help/assets/CIF/category-picker.png)
+
+* 更好地A11Y持CIF核心组件
+
+### 错误修复 {#bug-fixes-august}
+
+* 打开类别过滤器折叠面板后，无法关闭该类别过滤器折叠面板
+
+* 产品Teaser中“行动动员文本”属性损坏
+
+* AEM CS部署步骤期间的CIF JS错误
+
+* 修复了映射的产品列表项的原始产品访问
+
 ## 发行日期：2021年7月
 
-| 组件 | 版本号 | 详细信息 |
+| 组件 | 版本 | 详细信息 |
 |:-------|:-----:|---------------------:|
 | CIF附加组件 | 2021.07.21 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
-| CIF核心组件 | 1.13.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.13.0) |
+| CIF核心组件 | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
 | CIF Venia参考网站 | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
 ### 新增功能 {#what-is-new-july}
@@ -48,7 +74,7 @@ ht-degree: 8%
 
 ## 发行日期：2021年6月
 
-| 组件 | 版本号 | 详细信息 |
+| 组件 | 版本 | 详细信息 |
 |:-------|:-----:|---------------------:|
 | CIF附加组件 | 2021.06.18 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
 | CIF核心组件 | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
@@ -65,7 +91,7 @@ ht-degree: 8%
 
 ## 发行日期：2021年5月
 
-| 组件 | 版本号 | 详细信息 |
+| 组件 | 版本 | 详细信息 |
 |:-------|:-----:|---------------------:|
 | CIF附加组件 | 2021.05.26 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
 | CIF核心组件 | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
@@ -83,7 +109,7 @@ ht-degree: 8%
 
 ## 发行日期：2021年4月
 
-| 组件 | 版本号 | 详细信息 |
+| 组件 | 版本 | 详细信息 |
 |:-------|:-----:|---------------------:|
 | CIF附加组件 | 2021.04.22 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF核心组件 | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -103,7 +129,7 @@ ht-degree: 8%
 
 ## 发行日期：2021年3月 {#what-is-new-march}
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.9.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.9.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -123,7 +149,7 @@ ht-degree: 8%
 
 ## 发行日期：2021年2月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.8.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.8.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -143,7 +169,7 @@ ht-degree: 8%
 
 ## 发行日期：2021年1月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.7.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.7.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
