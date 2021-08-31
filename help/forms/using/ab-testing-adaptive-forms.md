@@ -1,8 +1,8 @@
 ---
 title: 创建和管理自适应表单的A/B测试
-seo-title: 创建和管理自适应表单的A/B测试
+seo-title: Create and manage A/B test for adaptive forms
 description: AEM Forms与Adobe Target集成，后者允许运行自适应表单的A/B测试，以增强客户体验并提高转化率。
-seo-description: AEM Forms与Adobe Target集成，后者允许运行自适应表单的A/B测试，以增强客户体验并提高转化率。
+seo-description: AEM Forms integrates with Adobe Target that allows running A/B tests for adaptive forms to enhance customer experience and improve conversion rates.
 uuid: e258805c-4da8-4c5d-ae91-7bea78a6a71b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ AEM Forms与Adobe Marketing Cloud解决方案Adobe Target集成，以跨多个�
 
 在开始创建和分析自适应表单的A/B测试之前，您需要设置Target服务器并将其集成到AEM Forms中。
 
-### 设置目标{#set-up-target}
+### 设置Target {#set-up-target}
 
 要将AEM与Target集成，请确保您拥有有效的Adobe Target帐户。 在Adobe Target注册后，您会收到一个客户端代码。 您需要客户端代码、与Target帐户关联的电子邮件以及将AEM与Target连接的密码。
 
-客户端代码可标识Adobe Target客户帐户，并在调用Adobe Target服务器时在URL中用作子域。 在继续操作之前，请确保您的凭据允许您登录[https://testandtarget.omniture.com/](https://testandtarget.omniture.com/)。
+客户端代码可标识Adobe Target客户帐户，并在调用Adobe Target服务器时在URL中用作子域。 在继续操作之前，请登录到[https://experience.adobe.com/](https://experience.adobe.com/)，如果您有权访问，请查看[!UICONTROL 快速访问]部分中的[!DNL Adobe Target]选项。
 
 ### 在AEM Forms中集成Target {#integrate-target-in-aem-forms}
 
@@ -81,8 +81,7 @@ AEM Forms与Adobe Marketing Cloud解决方案Adobe Target集成，以跨多个�
 >
 >如果您稍后更新配置的Target URL，请确保更新任何正在运行的A/B测试，以便它们指向当前URL。 有关更新A/B测试的信息，请参阅[更新A/B测试](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p)。
 
-
-## 在AEM {#create-audiences-within-aem}中创建受众
+## 在AEM中创建受众 {#create-audiences-within-aem}
 
 AEM允许您创建受众，并将其用于A/B测试。 您在AEM中创建的受众在AEM Forms中可用。 执行以下步骤以在AEM中创建受众：
 
@@ -100,7 +99,7 @@ AEM允许您创建受众，并将其用于A/B测试。 您在AEM中创建的受�
 
 在为表单配置A/B测试时，您可以选择受众，如下所示。
 
-## 创建A/B测试{#create-a-b-test}
+## 创建A/B测试 {#create-a-b-test}
 
 执行以下步骤为自适应表单创建A/B测试。
 
@@ -133,7 +132,7 @@ AEM允许您创建受众，并将其用于A/B测试。 您在AEM中创建的受�
 
 您的A/B测试现在正在运行，并且将根据指定的分发随机向指定的受众提供体验。
 
-## 更新A/B测试{#update-a-b-test}
+## 更新A/B测试 {#update-a-b-test}
 
 您可以更新运行的A/B测试的受众和体验分布。 为此，请执行以下操作：
 
@@ -144,7 +143,7 @@ AEM允许您创建受众，并将其用于A/B测试。 您在AEM中创建的受�
 1. 根据需要更新受众和体验分发。
 1. 单击&#x200B;**Update**。
 
-## 查看并分析A/B测试报告{#view-and-analyze-a-b-test-report}
+## 查看和分析A/B测试报告 {#view-and-analyze-a-b-test-report}
 
 在允许A/B测试在所需的时间段内运行后，您可以生成报表并检查哪个体验改善了转化。 您可以将性能较好的体验声明为入选者，或选择运行另一个A/B测试。 为此，请执行以下步骤：
 

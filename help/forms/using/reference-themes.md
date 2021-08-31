@@ -1,24 +1,24 @@
 ---
 title: 参考主题
-seo-title: 参考主题
+seo-title: Reference Themes
 description: AEM Forms提供了自适应表单主题，您可以从Software Distribution获取这些主题，并使用它们来设置表单样式。
-seo-description: AEM Forms提供了自适应表单主题，您可以从Software Distribution获取这些主题，并使用它们来设置表单样式。
+seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 uuid: 3c6bd309-aa5a-4953-91ed-25ed5ba5671a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a69d3787-8149-4bca-835d-aeecfb11702b
 docset: aem65
 exl-id: f6c24894-c322-4c44-b001-8978954d6e53
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
 
-# 引用主题{#reference-themes}
+# 参考主题{#reference-themes}
 
-[](../../forms/using/themes.md) 它们允许您在不了解CSS的情况下设置表单样式。除了默认主题之外，您还可以通过安装[AEM-FORMS.-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)包来获取以下主题：
+[](../../forms/using/themes.md) 它们允许您在不了解CSS的情况下设置表单样式。除了默认主题之外，您还可以通过安装[AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)来获取以下主题：
 
 * 柏利
 * 执行
@@ -57,7 +57,7 @@ We.Gov自适应表单使用Beryl主题，强调背景图像、透明度和大型
 
 ](assets/exec-1.png)-->
 
-## 执行指示灯{#exec-light}
+## 执行指示灯 {#exec-light}
 
 “执行光”主题使用空格来创建无缝体验。 “下一步”(Next)和“提交”(Submit)按钮可获得实心填充和3D阴影。 左侧的选定选项卡会获得一个箭头，而不是双复选标记。
 
@@ -105,7 +105,7 @@ Ultramarine主题使用深蓝色阴影来突出显示组件，如选项卡、面
 
 ](assets/urbane-1.png)-->
 
-## 美国Web设计标准{#u-s-web-design-standards}
+## 美国Web设计标准 {#u-s-web-design-standards}
 
 如名称所示，美国Web设计标准主题使用美国Web设计标准草案网站中描述的字体和样式。 联邦组织使用Web标准来创建跨联邦政府网站的一致Web体验。
 
