@@ -6,11 +6,11 @@ audience: end-user
 user-guide-title: AEM 6.5 Developing 用户指南
 breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
-feature: 开发
+feature: Developing
 role: Developer
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+source-git-commit: 1eb2ef06ed0541026ff3ba436dfab0d261af7356
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 16%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 16%
       + [组合组件在SPA中](spa-composite-component.md)
       + [SPA参考资料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-   + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+   + [内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
    + [体验片段](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
    + [了解AEM中的内容片段和内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 开发工具{#devtools}
@@ -218,7 +218,7 @@ ht-degree: 16%
    + [代码缺陷](code-pitfalls.md)
    + [OSGi包](osgi-bundles.md)
    + [JCR集成](jcr-integration.md)
-   + [代码样本](code-samples.md)
+   + [代码示例](code-samples.md)
    + [慢速查询疑难解答](troubleshooting-slow-queries.md)
 + 移动 Web{#mobileweb}
    + [移动 Web](mobile-web.md)
