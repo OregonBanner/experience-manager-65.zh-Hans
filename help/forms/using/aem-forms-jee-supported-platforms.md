@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: f3ddfff1c91abf037cc5d9704596a51947322538
+source-git-commit: 3f33f93e53242225cd63f977c482441561ed3b0e
 workflow-type: tm+mt
-source-wordcount: '3457'
+source-wordcount: '3459'
 ht-degree: 1%
 
 ---
@@ -508,7 +508,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >
 >此外：
 >
->* PDF生成器需要32位版本的[Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能执行转换。
+>* PDF生成器需要32位版本的[Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)或Actobat 2017才能执行转换。
 >* PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
 >* PDF生成器不支持Microsoft Office 365。
 >* 仅在Windows和Linux上支持用于OpenOffice的PDF生成器转换。
