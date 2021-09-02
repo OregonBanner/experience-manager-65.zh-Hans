@@ -1,8 +1,8 @@
 ---
 title: JEE上的AEM Forms支持的平台
-seo-title: JEE上的AEM Forms支持的平台
+seo-title: Supported Platforms for AEM Forms on JEE
 description: 在JEE上安装AEM Forms时需要和支持的基础架构组件列表
-seo-description: 在JEE上安装AEM Forms时需要和支持的基础架构组件列表
+seo-description: List of infrastructure components required and supported for installing AEM Forms on JEE
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f0caaaf72a75aff3099f4a9184653353639035e4
 workflow-type: tm+mt
-source-wordcount: '3323'
+source-wordcount: '3458'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,6 @@ AEM Forms on JEE服务器可以使用支持的操作系统、应用程序服务�
 >* 有关受支持服务器平台的例外的完整列表，请参阅[受支持服务器平台的例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
 >* AEM Forms on JEE仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
 >
-
 
 
 ### 推荐配置 {#recommendedconfigurations}
@@ -184,11 +183,11 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>存储库微内核</td>
    <td>R:受限支持</td>
   </tr>
-    <tr>
-   <td>MySQL 5.7.19 </td>
+  <tr>
+   <td>MySQL 5.7.35 </td>
    <td>-</td>
    <td>R:受限支持</td>
-  </tr>
+  </tr>  
  </tbody>
 </table>
 
@@ -278,13 +277,28 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <th><p><strong>支持级别</strong></p> </th>
    <th><p><strong>支持的修补程序定义</strong></p> </th>
   </tr>
-  <tr>
-   <td>Microsoft Windows Server 2016（64位）</td>
+   <tr>
+   <td>Microsoft Windows Server 2019（64位）</td>
    <td>答：支持</td>
    <td>服务包和关键更新</td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7（内核3.x）（64位）</br><b>注意：</b> <a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a>已结束维护阶段，并于2020年11月30日过渡到延长生命周期支持阶段。 Adobe建议使用Red Hat Enterprise Linux 7进行升级和新安装。 现有安装可以在延长生命周期支持阶段使用Red Hat Enterprise Linux 6。</p> </td>
+   <td>Ubuntu 20.04</td>
+   <td>答：支持</td>
+   <td>服务包和关键更新</td>
+  </tr>
+  <tr>
+   <td>Microsoft Windows Server 2016（64位）（已弃用）</td>
+   <td>答：支持</td>
+   <td>服务包和关键更新</td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 8（内核4.x）（64位）</p> </td>
+   <td><p>答：支持</p> </td>
+   <td><p>次要版本、累积更新和关键更新</p> </td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 7（内核3.x）（64位）（已弃用）</td>
    <td><p>答：支持</p> </td>
    <td><p>次要版本、累积更新和关键更新</p> </td>
   </tr>
@@ -387,7 +401,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
  <tbody>
   <tr>
    <td><strong>产品<br /> </strong></td>
-   <td><strong>版本号</strong></td>
+   <td><strong>版本</strong></td>
   </tr>
   <tr>
    <td>EMC Documentum</td>
@@ -434,11 +448,19 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
    <th><p><strong>支持的转换为PDF的格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic tracklast</a> 版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic tracklast</a> 最新版本</td>
    <td>XPS，图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic tracklatest</a> 版本（已弃用）</td>
+   <td>XPS，图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2019</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2016（已弃用）</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
@@ -446,21 +468,37 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
    <td>WP、WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016<br /> </td>
+   <td>Microsoft® Office Visio 2019<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
   <tr>
-   <td>Microsoft® Publisher 2016<br /> </td>
+   <td>Microsoft® Office Visio 2016（已弃用）<br /> </td>
+   <td>VSD、VSDX</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Publisher 2019<br /> </td>
    <td>PUB</td>
   </tr>
   <tr>
-   <td>Microsoft® Project 2016<br /> </td>
+   <td>Microsoft® Publisher 2016（已弃用）<br /> </td>
+   <td>PUB</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Project 2019<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
-   <td>OpenOffice 4.1.2</td>
+   <td>Microsoft® Project 2016（已弃用）<br /> </td>
+   <td>MPP</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.10</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPX、JP2、J2K、J2C、JPC、RTPC、HTT)、HTMT和HTM</td>
   </tr>
+  <tr>
+   <td>OpenOffice 4.1.2（已弃用）</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPX、JP2、J2K、J2C、JPC、RTPC、HTT)、HTMT和HTM</td>
+  </tr>  
  </tbody>
 </table>
 
@@ -470,17 +508,15 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >
 >此外：
 >
->* PDF生成器需要32位版本的[Acrobat 2017 Classic跟踪版本17.011.30078或更高版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能执行转换。
+>* PDF生成器需要32位版本的[Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能执行转换。
 >* PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
 >* PDF生成器不支持Microsoft Office 365。
 >* 仅在Windows和Linux上支持用于OpenOffice的PDF生成器转换。
 >* OCR PDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
 >* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM Forms PDF生成器一起使用。 有关更多信息，请参阅根据您的部署([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))的AEM Forms产品说明。
-   >
-   >
-* PDF生成器服务不支持Microsoft Windows 10。
 >
-
+>* PDF生成器服务不支持Microsoft Windows 10。
+>
 
 
 ### 无障碍支持例外 {#exceptions-to-accessibility-support}
@@ -545,7 +581,7 @@ AEM Forms的以下子系统不符合[508](https://www.section508.gov/):
    <td>服务包和关键更新</td>
   </tr>
   <tr>
-   <td>Microsoft® Windows® 2016 Server</td>
+   <td>Microsoft® Windows® 2016 Server（待定）</td>
    <td>服务包和关键更新</td>
   </tr>
  </tbody>
@@ -581,10 +617,15 @@ AEM Forms的以下子系统不符合[508](https://www.section508.gov/):
    <th><p><strong>支持的修补程序定义</strong></p> </th>
   </tr>
   <tr>
-   <td>Acrobat 2017（经典曲目）</td>
+   <td>Acrobat 2020（经典曲目）</td>
+   <td>版本20.004.30006或更高版本<br /> </td>
+  </tr>
+  <tr>
+   <td>Acrobat 2017（经典跟踪）（已弃用）</td>
    <td>版本17.011.30078或更高版本<br /> </td>
   </tr>
- </tbody>
+
+</tbody>
 </table>
 
 >[!NOTE]
@@ -653,7 +694,6 @@ AEM Forms的以下子系统不符合[508](https://www.section508.gov/):
 >
 
 
-
 #### 移动设备客户端 {#mobile-clients}
 
 <table>
@@ -685,7 +725,6 @@ AEM Forms的以下子系统不符合[508](https://www.section508.gov/):
 >
 >* Forms Portal仅在iPad上的Safari上受支持。
 >
-
 
 
 ### AEM Forms应用程序 {#aem-forms-workspace-app}
@@ -742,6 +781,26 @@ Adobe支持第三方供应商在发布时发布的紧急或推荐的修补程序
 Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方引用平台及其支持的修补程序定义的权利。
 
 通过搜索Adobe企业支持网站，查找与您的产品相关的知识库文章，还可以找到有关第三方修补程序的其他信息。
+
+## 平台更新 {#platform-updates}
+
+2021年9月2日，AEM Forms 6.5.10.0版本将以下平台标记为已弃用：
+
+* Adobe Acrobat 2017 - [对Adobe Acrobat 2017的核心支持将于2022年6月6日终止](https://helpx.adobe.com/cn/support/programs/eol-matrix.html)。
+
+* Microsoft Windows Server 2016（64位）
+
+* Red Hat Enterprise Linux 7（内核3.x）（64位）
+
+* Microsoft® Office 2016
+
+* OpenOffice 4.1.2
+
+>[!NOTE]
+>
+>标记为[已弃用的平台在AEM Forms 6.5 Service Pack 15(6.5.15.0)版本](https://helpx.adobe.com/support/programs/eol-matrix.html)之前一直受支持。
+
+
 
 ## 修订历史记录 {#revision-history}
 

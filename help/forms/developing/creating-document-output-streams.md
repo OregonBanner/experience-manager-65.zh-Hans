@@ -1,8 +1,8 @@
 ---
 title: 创建文档输出流
-seo-title: 创建文档输出流
+seo-title: Creating Document Output Streams
 description: 使用输出服务将文档转换为PDF（包括PDF/A文档）、PostScript、打印机控制语言(PCL)和Zebra - ZPL、Intermec - IPL、Datamax - DPL和TecToshiba - TPCL标签格式。
-seo-description: 使用输出服务将文档转换为PDF（包括PDF/A文档）、PostScript、打印机控制语言(PCL)和Zebra - ZPL、Intermec - IPL、Datamax - DPL和TecToshiba - TPCL标签格式。
+seo-description: Use the Output service to convert documents as PDF (including PDF/A documents), PostScript, Printer Control Language (PCL), and Zebra - ZPL, Intermec - IPL, Datamax - DPL, and TecToshiba - TPCL label formats.
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 74882ccf78a62d543f1598f12ee009f9922c18a4
 workflow-type: tm+mt
-source-wordcount: '19044'
+source-wordcount: '19016'
 ht-degree: 0%
 
 ---
 
-# 创建文档输出流{#creating-document-output-streams}
+# 创建文档输出流  {#creating-document-output-streams}
 
 **本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-## 创建PDF文档{#creating-pdf-documents}
+## 创建PDF文档 {#creating-pdf-documents}
 
 您可以使用输出服务创建基于表单设计和您提供的XML表单数据的PDF文档。 由输出服务创建的PDF文档不是交互式PDF文档；用户无法输入或修改表单数据。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary-of-steps}的摘要
+### 步骤摘要 {#summary-of-steps}
 
 要创建PDF文档，请执行以下步骤：
 
@@ -192,7 +192,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->要查看通过引用位于Forms应用程序中的XDP来创建PDF文档的完整快速入门，请参阅[快速入门（EJB模式）：使用Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)根据应用程序XDP文件创建PDF文档。
+>要查看通过引用位于Forms应用程序中的XDP创建PDF文档的完整快速入门，请参阅[快速入门（EJB模式）：使用Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)根据应用程序XDP文件创建PDF文档。
 
 **检索操作的结果**
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API {#create-a-pdf-document-using-the-java-api}创建PDF文档
+### 使用Java API创建PDF文档 {#create-a-pdf-document-using-the-java-api}
 
 使用输出API(Java)创建PDF文档：
 
@@ -291,7 +291,7 @@ ht-degree: 0%
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API {#create-a-pdf-document-using-the-web-service-api}创建PDF文档
+### 使用Web服务API创建PDF文档 {#create-a-pdf-document-using-the-web-service-api}
 
 使用输出API（Web服务）创建PDF文档：
 
@@ -383,7 +383,7 @@ ht-degree: 0%
    >
    >`OutputServiceService`对象的`generateOutput`方法已弃用。
 
-## 创建PDF/A文档{#creating-pdf-a-documents}
+## 创建PDF/A文档 {#creating-pdf-a-documents}
 
 您可以使用输出服务创建PDF/A文档。 由于PDF/A是用于长期保留文档内容的存档格式，因此所有字体都会嵌入，而且文件会未压缩。 因此，PDF/A文档通常比标准PDF文档大。 此外，PDF/A文档不包含音频和视频内容。 与其他输出服务任务一样，您提供要与表单设计合并的表单设计和数据，以创建PDF/A文档。
 
@@ -401,13 +401,13 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 >[!NOTE]
 >
->AIIM网站有一个PDF/A常见问题解答部分，您可以在[https://www.aiim.org/documents/standards/19005-1_FAQ.pdf](https://www.aiim.org/documents/standards/19005-1_FAQ.pdf)中访问该部分。
+>AIIM网站有一个PDF/A常见问题解答部分，您可以在[https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml)中访问该部分。
 
 >[!NOTE]
 >
->有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
+>有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_65)。
 
-### 步骤{#summary_of_steps-1}的摘要
+### 步骤摘要 {#summary_of_steps-1}
 
 要创建PDF/A文档，请执行以下步骤：
 
@@ -475,7 +475,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API {#create-a-pdf-a-document-using-the-java-api}创建PDF/A文档
+### 使用Java API创建PDF/A文档 {#create-a-pdf-a-document-using-the-java-api}
 
 使用输出API(Java)创建PDF/A文档：
 
@@ -549,7 +549,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-### 使用Web服务API {#create-a-pdf-a-document-using-the-web-service-api}创建PDF/A文档
+### 使用Web服务API创建PDF/A文档 {#create-a-pdf-a-document-using-the-web-service-api}
 
 使用输出API（Web服务）创建PDF/A文档：
 
@@ -630,7 +630,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 将位于Content Services中的文档（已弃用）传递到输出服务{#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## 将位于Content Services中的文档（已弃用）传递到输出服务 {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
 输出服务会呈现一个非交互式PDF表单，该表单基于表单设计，通常另存为XDP文件，并在Designer中创建。 可以将包含表单设计的`com.adobe.idp.Document`对象传递到输出服务。 然后，输出服务会呈现位于`com.adobe.idp.Document`对象中的表单设计。
 
@@ -642,7 +642,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 >
 >有关Forms服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-2}的摘要
+### 步骤摘要 {#summary_of_steps-2}
 
 要将从Content Services（已弃用）获取的文档传递到输出服务，请执行以下任务：
 
@@ -690,7 +690,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 [使用片段创建PDF文档](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-### 使用Java API {#pass-documents-to-the-output-service-using-the-java-api}将文档传递到输出服务
+### 使用Java API将文档传递到输出服务 {#pass-documents-to-the-output-service-using-the-java-api}
 
 使用输出服务和内容服务（已弃用）API(Java)传递从Content Services检索的文档（已弃用）：
 
@@ -745,7 +745,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API {#pass-documents-to-the-output-service-using-the-web-service-api}将文档传递到输出服务
+### 使用Web服务API将文档传递到输出服务 {#pass-documents-to-the-output-service-using-the-web-service-api}
 
 使用输出服务和内容服务（已弃用）API（Web服务）传递从Content Services检索的文档（已弃用）：
 
@@ -818,7 +818,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 将存储库中的文档传递到输出服务{#passing-documents-located-in-the-repository-to-the-output-service}
+## 将存储库中的文档传递到输出服务 {#passing-documents-located-in-the-repository-to-the-output-service}
 
 输出服务会呈现一个非交互式PDF表单，该表单基于表单设计，通常另存为XDP文件，并在Designer中创建。 可以将包含表单设计的`com.adobe.idp.Document`对象传递到输出服务。 然后，输出服务会呈现位于`com.adobe.idp.Document`对象中的表单设计。
 
@@ -842,7 +842,7 @@ PDF/A文档必须使用在表单设计中指定的字体，并且字体无法替
 >
 >有关Forms服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-3}的摘要
+### 步骤摘要 {#summary_of_steps-3}
 
 要将从AEM Forms存储库获取的文档传递到输出服务，请执行以下任务：
 
@@ -890,7 +890,7 @@ XDP文件在`com.adobe.idp.Document`实例（或者，如果您使用Web服务�
 
 ResourceRepositoryClient
 
-### 使用Java API {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}将位于存储库中的文档传递到输出服务
+### 使用Java API将位于存储库中的文档传递到输出服务 {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
 
 使用输出服务和存储库API(Java)传递从存储库检索的文档：
 
@@ -937,7 +937,7 @@ ResourceRepositoryClient
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用片段{#creating-pdf-documents-using-fragments}创建PDF文档
+## 使用片段创建PDF文档 {#creating-pdf-documents-using-fragments}
 
 您可以使用“输出”和“汇编程序”服务创建基于片段的输出流，如PDF文档。 汇编程序服务会根据位于多个XDP文件中的片段组合一个XDP文档。 装配的XDP文档将传递到输出服务，该服务将创建PDF文档。 尽管此工作流显示正在生成的PDF文档，但输出服务可以为此工作流生成其他输出类型，如ZPL。 PDF文档仅用于讨论目的。
 
@@ -955,7 +955,7 @@ ResourceRepositoryClient
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-4}的摘要
+### 步骤摘要 {#summary_of_steps-4}
 
 要基于片段创建PDF文档，请执行以下步骤：
 
@@ -1001,7 +1001,7 @@ ResourceRepositoryClient
 
 [创建PDF文档](creating-document-output-streams.md#creating-pdf-documents)
 
-### 使用Java API {#create-a-pdf-document-based-on-fragments-using-the-java-api}根据片段创建PDF文档
+### 使用Java API根据片段创建PDF文档 {#create-a-pdf-document-based-on-fragments-using-the-java-api}
 
 使用输出服务API和汇编程序服务API(Java)根据片段创建PDF文档：
 
@@ -1061,7 +1061,7 @@ ResourceRepositoryClient
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-### 使用Web服务API {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}根据片段创建PDF文档
+### 使用Web服务API根据片段创建PDF文档 {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
 
 使用输出服务API和汇编程序服务API（Web服务），基于片段创建PDF文档：
 
@@ -1144,7 +1144,7 @@ ResourceRepositoryClient
 
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## 打印到文件{#printing-to-files}
+## 打印到文件 {#printing-to-files}
 
 您可以使用输出服务将流(如PostScript、打印机控制语言(PCL))或以下标签格式打印到文件：
 
@@ -1163,7 +1163,7 @@ ResourceRepositoryClient
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-5}的摘要
+### 步骤摘要 {#summary_of_steps-5}
 
 要打印到文件，请执行以下步骤：
 
@@ -1224,7 +1224,7 @@ ResourceRepositoryClient
 
 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API {#print-to-files-using-the-java-api}打印到文件
+### 使用Java API打印到文件 {#print-to-files-using-the-java-api}
 
 使用输出API(Java)打印到文件：
 
@@ -1281,7 +1281,7 @@ ResourceRepositoryClient
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-### 使用Web服务API {#print-to-files-using-the-web-service-api}打印到文件
+### 使用Web服务API打印到文件 {#print-to-files-using-the-web-service-api}
 
 使用输出API（Web服务）打印到文件：
 
@@ -1349,7 +1349,7 @@ ResourceRepositoryClient
 
 [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 将打印流发送到打印机{#sending-print-streams-to-printers}
+## 将打印流发送到打印机 {#sending-print-streams-to-printers}
 
 您可以使用输出服务将打印流(如PostScript、打印机控制语言(PCL))或以下标签格式发送到网络打印机：
 
@@ -1368,7 +1368,7 @@ ResourceRepositoryClient
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-6}的摘要
+### 步骤摘要 {#summary_of_steps-6}
 
 要向网络打印机发送打印流，请执行以下步骤：
 
@@ -1568,7 +1568,7 @@ ResourceRepositoryClient
    >
    >在版本8.2.1中，将`sendToPrinter`方法添加到AEM Forms API。
 
-### 使用Web服务API {#send-a-print-stream-to-a-printer-using-the-web-service-api}将打印流发送到打印机
+### 使用Web服务API将打印流发送到打印机 {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
 使用输出API（Web服务）将打印流发送到网络打印机：
 
@@ -1639,7 +1639,7 @@ ResourceRepositoryClient
    >
    >在版本8.2.1中，将`sendToPrinter`方法添加到AEM Forms API。
 
-## 创建多个输出文件{#creating-multiple-output-files}
+## 创建多个输出文件 {#creating-multiple-output-files}
 
 输出服务可以为XML数据源中的每条记录创建单独的文档，或为包含所有记录的单个文件创建单独的文档（默认功能为此功能）。 例如，假定有十个记录位于XML数据源中，并且您指示输出服务使用输出服务API为每个记录创建单独的PDF文档（或其他类型的输出）。 因此，输出服务会生成十个PDF文档。 （您可以向打印机发送多个打印流，而不是创建文档。）
 
@@ -1708,7 +1708,7 @@ ResourceRepositoryClient
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-7}的摘要
+### 步骤摘要 {#summary_of_steps-7}
 
 要基于XML数据源创建多个PDF文件，请执行以下步骤：
 
@@ -1805,7 +1805,7 @@ ResourceRepositoryClient
 
 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API {#create-multiple-pdf-files-using-the-java-api}创建多个PDF文件
+### 使用Java API创建多个PDF文件 {#create-multiple-pdf-files-using-the-java-api}
 
 使用输出API(Java)创建多个PDF文件：
 
@@ -1863,7 +1863,7 @@ ResourceRepositoryClient
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API {#create-multiple-pdf-files-using-the-web-service-api}创建多个PDF文件
+### 使用Web服务API创建多个PDF文件 {#create-multiple-pdf-files-using-the-web-service-api}
 
 使用输出API（Web服务）创建多个PDF文件：
 
@@ -1938,7 +1938,7 @@ ResourceRepositoryClient
 
 [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 创建搜索规则{#creating-search-rules}
+## 创建搜索规则 {#creating-search-rules}
 
 您可以创建搜索规则，以使输出服务检查输入数据，并根据数据内容使用不同的表单设计来生成输出。 例如，如果文本&#x200B;*mortgage*&#x200B;位于输入数据中，则输出服务可以使用名为Mortgage.xdp的表单设计。 同样，如果文本&#x200B;*automical*&#x200B;位于输入数据中，则输出服务可以使用另存为AutomicalLoan.xdp的表单设计。 尽管输出服务可以生成不同的输出类型，但此部分假定输出服务生成PDF文件。 下图显示了通过处理XML数据文件并使用众多表单设计之一生成PDF文件的输出服务。
 
@@ -1950,7 +1950,7 @@ ResourceRepositoryClient
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-8}的摘要
+### 步骤摘要 {#summary_of_steps-8}
 
 要指示输出服务在生成文档时使用搜索规则，请执行以下步骤：
 
@@ -2021,7 +2021,7 @@ ResourceRepositoryClient
 
 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API {#create-search-rules-using-the-java-api}创建搜索规则
+### 使用Java API创建搜索规则 {#create-search-rules-using-the-java-api}
 
 使用输出API(Java)创建搜索规则：
 
@@ -2096,7 +2096,7 @@ ResourceRepositoryClient
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API {#create-search-rules-using-the-web-service-api}创建搜索规则
+### 使用Web服务API创建搜索规则 {#create-search-rules-using-the-web-service-api}
 
 使用输出API（Web服务）创建搜索规则：
 
@@ -2197,7 +2197,7 @@ ResourceRepositoryClient
 
 [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 拼合PDF文档{#flattening-pdf-documents}
+## 拼合PDF文档 {#flattening-pdf-documents}
 
 您可以使用输出服务将交互式PDF文档转换为非交互式PDF。 交互式PDF文档允许用户输入或修改PDF文档字段中的数据。 将交互式PDF文档转换为非交互式PDF文档的过程称为&#x200B;*拼合*。 对PDF文档进行扁平化处理后，用户无法修改文档字段中的数据。 扁平化PDF文档的一个原因是为了确保数据无法修改。
 
@@ -2212,7 +2212,7 @@ ResourceRepositoryClient
 >
 >有关输出服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
-### 步骤{#summary_of_steps-9}的摘要
+### 步骤摘要 {#summary_of_steps-9}
 
 要将交互式PDF文档扁平化为非交互式PDF文档，请执行以下步骤：
 
@@ -2264,7 +2264,7 @@ ResourceRepositoryClient
 
 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### 使用Java API {#flatten-a-pdf-document-using-the-java-api}拼合PDF文档
+### 使用Java API拼合PDF文档 {#flatten-a-pdf-document-using-the-java-api}
 
 使用输出API(Java)将交互式PDF文档扁平化为非交互式PDF文档：
 
@@ -2311,7 +2311,7 @@ ResourceRepositoryClient
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API {#flatten-a-pdf-document-using-the-web-service-api}拼合PDF文档
+### 使用Web服务API拼合PDF文档 {#flatten-a-pdf-document-using-the-web-service-api}
 
 使用输出API（Web服务）将交互式PDF文档扁平化为非交互式PDF文档：
 
