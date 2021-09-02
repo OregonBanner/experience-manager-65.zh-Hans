@@ -4,10 +4,10 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: d107a31ff109be6ae848eef5d3102f63983fd120
+source-git-commit: 496516f7f4b0e59bbfdae4cbe061a793f28449d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '4438'
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 * **支持使用文字选项为JSON类型变量设置值**:您可以使用文字选项在AEM工作流的设置变量步骤中为JSON类型变量设置值。利用文本选项，可以指定字符串形式的JSON。
 
-* **平台更新**: [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
+* [平台更新](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
    * [!DNL Adobe Acrobat 2020]
    * [!DNL Ubuntu 20.04]
    * [!DNL Open Office 4.1.10]

@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 95f2268c5965ed73336da9681ae52e755cee36f4
+source-git-commit: 496516f7f4b0e59bbfdae4cbe061a793f28449d2
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3472'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ AEM Forms on JEE服务器可以使用支持的操作系统、应用程序服务�
 >
 >* 有关受支持服务器平台的例外的完整列表，请参阅[受支持服务器平台的例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
 >* AEM Forms on JEE仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
+
 >
 
 
@@ -516,6 +517,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM Forms PDF生成器一起使用。 有关更多信息，请参阅根据您的部署([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))的AEM Forms产品说明。
 >
 >* PDF生成器服务不支持Microsoft Windows 10。
+
 >
 
 
@@ -691,6 +693,7 @@ AEM Forms的以下子系统不符合[508](https://www.section508.gov/):
 >* Safari不支持管理控制台。
 >* 通信管理不支持用于AEM 6.1表单的Windows® Internet Explorer 9.0。
 >* Forms门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以便实现辅助功能。
+
 >
 
 
@@ -724,6 +727,7 @@ AEM Forms的以下子系统不符合[508](https://www.section508.gov/):
 >[!NOTE]
 >
 >* Forms Portal仅在iPad上的Safari上受支持。
+
 >
 
 
@@ -806,3 +810,13 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 
 * 2020年9月09日
    * 已将适用于AEM Forms应用程序的iOS支持版本更改为iOS 12。 以前的版本是iOS 11。
+
+* 2021年9月02日
+   * **平台更新**: [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
+      * [!DNL Adobe Acrobat 2020]
+      * [!DNL Ubuntu 20.04]
+      * [!DNL Open Office 4.1.10]
+      * [!DNL Microsoft Office 2019]
+      * [!DNL Microsoft Windows Server 2019]
+      * [!DNL RHEL8]
+

@@ -4,7 +4,7 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: f9b53df7d235fa6be2cee8c05071790114a91da1
+source-git-commit: 496516f7f4b0e59bbfdae4cbe061a793f28449d2
 workflow-type: tm+mt
 source-wordcount: '4106'
 ht-degree: 1%
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 * **支持使用文字选项为JSON类型变量设置值**:您可以使用文字选项在AEM工作流的设置变量步骤中为JSON类型变量设置值。利用文本选项，可以指定字符串形式的JSON。
 
-* **平台更新**: [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
+* [平台更新](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
    * [!DNL Adobe Acrobat 2020]
    * [!DNL Ubuntu 20.04]
    * [!DNL Open Office 4.1.10]
