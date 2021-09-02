@@ -4,10 +4,10 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f9b53df7d235fa6be2cee8c05071790114a91da1
+source-git-commit: d107a31ff109be6ae848eef5d3102f63983fd120
 workflow-type: tm+mt
-source-wordcount: '4376'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -458,6 +458,9 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 | 连接器 | 适用于Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR Connector已在Experience Manager6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
+
+* （仅限Microsoft Windows上的JBoss）要继续在[!DNL AEM Forms on JEE]上使用“创建PDF”服务，请从Software Distribution下载[omniORB_4.1.1_x86_win32_vc10.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/omniORB_4.1.1_x86_win32_vc10.zip)，提取Zip文件中可用的文件夹，并将其复制到以下位置：
+   `[AEM Forms Installation]\Adobe\Adobe_Experience_Manager_Forms\jboss\standalone\svcnative\CommonNatives\lib`
 
 * 由于[!DNL Microsoft Windows Server 2019]不支持[!DNL MySQL 5.7]和[!DNL JBoss EAP 7.1]，因此[!DNL Microsoft Windows Server 2019]不支持[!DNL AEM Forms 6.5.10.0]的统包安装。
 
