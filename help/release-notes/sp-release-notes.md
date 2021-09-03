@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a3d52ecf9284ba22cac3739ba543e5dd5c855331
+source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
 workflow-type: tm+mt
-source-wordcount: '4205'
+source-wordcount: '4245'
 ht-degree: 3%
 
 ---
@@ -272,8 +272,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 >[!NOTE]
 >
->* [!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
-
+>Service Pack允许您在最新的服务器操作系统、应用程序服务器和数据库上运行[!DNL AEM Forms]。 它还为内部部署环境引入了Cloud Service中提供的一些功能，并为客户报告的问题提供了修复。 [!DNL AEM Forms] 在OSGi service pack上，可以下载和安装。[!DNL AEM Forms on JEE]  service pack将于2021年9月09日发布。
 
 **自适应表单**
 
