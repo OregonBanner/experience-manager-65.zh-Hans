@@ -3,11 +3,11 @@ title: 将 [!DNL Assets] 与 [!DNL InDesign Server]集成
 description: 了解如何将 [!DNL Adobe Experience Manager Assets] 与 [!DNL Adobe InDesign Server]集成。
 contentOwner: AG
 role: Admin
-feature: 发布
+feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f74190692d718da6074affa87d283f326eca7faa
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1577'
 ht-degree: 4%
 
 ---
@@ -171,7 +171,9 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 1. 访问位于`https://[aem_server]:[port]/system/console/configMgr`的Web控制台。
 1. 找到配置&#x200B;**[!UICONTROL Day CQ Link Externalizer]**。 单击&#x200B;**[!UICONTROL 编辑]**&#x200B;以打开。
-1. 链接外部器设置有助于为[!DNL Experience Manager]部署和[!DNL InDesign Server]创建绝对URL。 使用&#x200B;**[!UICONTROL Domains]**&#x200B;字段指定[!DNL Adobe InDesign Server]的主机名和上下文路径。 单击&#x200B;**保存**。
+1. 链接外部器设置有助于为[!DNL Experience Manager]部署和[!DNL InDesign Server]创建绝对URL。 使用&#x200B;**[!UICONTROL Domains]**&#x200B;字段指定[!DNL Adobe InDesign Server]的主机名。 单击&#x200B;**保存**。
+
+   创建绝对URL时，必须对本地、创作和发布实例使用主机名`localhost`。
 
    ![链接外部器设置](assets/link-externalizer-config.png)
 
