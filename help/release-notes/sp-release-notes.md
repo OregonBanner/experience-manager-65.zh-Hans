@@ -4,9 +4,9 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
+source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
 workflow-type: tm+mt
-source-wordcount: '4245'
+source-wordcount: '4392'
 ht-degree: 3%
 
 ---
@@ -64,17 +64,13 @@ ht-degree: 3%
 
 * **支持使用文字选项为JSON类型变量设置值**:您可以使用文字选项在AEM工作流的设置变量步骤中为JSON类型变量设置值。利用文本选项，可以指定字符串形式的JSON。
 
-<!--
-
-* [Platform Updates](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platforms:
-  * [!DNL Adobe Acrobat 2020]
-  * [!DNL Ubuntu 20.04]
-  * [!DNL Open Office 4.1.10]
-  * [!DNL Microsoft Office 2019]
-  * [!DNL Microsoft Windows Server 2019]
-  * [!DNL RHEL8]
-
-  -->
+* [平台更新](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
+   * [!DNL Adobe Acrobat 2020]
+   * [!DNL Ubuntu 20.04]
+   * [!DNL Open Office 4.1.10]
+   * [!DNL Microsoft Office 2019]
+   * [!DNL Microsoft Windows Server 2019]
+   * [!DNL RHEL8]
 
 有关[!DNL Experience Manager] 6.5.10.0中引入的所有功能和增强功能的列表，请参阅 [!DNL Adobe Experience Manager] 6.5 Service Pack 10](new-features-latest-service-pack.md)中的[新增功能。
 
@@ -270,17 +266,21 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 ### [!DNL Forms] {#forms-65100}
 
+
 >[!NOTE]
 >
->Service Pack允许您在最新的服务器操作系统、应用程序服务器和数据库上运行[!DNL AEM Forms]。 它还为内部部署环境引入了Cloud Service中提供的一些功能，并为客户报告的问题提供了修复。 [!DNL AEM Forms] 在OSGi service pack上，可以下载和安装。[!DNL AEM Forms on JEE]  service pack将于2021年9月09日发布。
+>* [!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
+
+
+[!DNL AEM Forms 6.5.10.0] 包括以下错误修复：
+
+* 安装[!DNL AEM Forms 6.5]时，将自动安装以下第三方库(CQDOC-18373):
+   * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
+   * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
 
 **自适应表单**
 
-<!--
-
-* When the validations performed on the field values in an adaptive form are successful, [!DNL AEM Forms] fails to invoke the Form Data Model (CQ-4325491).
-
--->
+* 如果对自适应表单中的字段值执行的验证成功，则[!DNL AEM Forms]无法调用表单数据模型(CQ-4325491)。
 
 * 在向翻译项目添加语言词典并打开该项目时，[!DNL AEM Forms]会显示一条错误消息(CQ-4324933):
 
@@ -315,26 +315,19 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * 在编辑器中选择所有文本时，无法将字体文本更改为Arial(NPR-36646)。
 
-<!--
-
-* When you create a URL in an editor and preview the changes, a black background displays instead of the URL text (NPR-36640).
-
--->
+* 在编辑器中创建URL并预览更改时，将显示黑色背景而不是URL文本(NPR-36640)。
 
 * 将文本复制并粘贴到编辑器时，如果文档中提供了项目符号，则将字体更改为Arial时会出现问题(NPR-36628)。
 
 * 文本编辑器中的项目符号缩进问题(NPR-36513)。
 
-<!--
 **Designer**
 
-* Screen Reader fails to read floating field data placed inside text label on the Master page or on Subform pages in a dynamic PDF (CQ-4321587).
-
--->
+* 屏幕Reader无法读取置于主控页面或动态PDF中子表单页面上文本标签内的浮动字段数据(CQ-4321587)。
 
 **文档服务**
 
-* 将XDP文件转换为PDF文件，然后组合生成的PDF时，PDF层代会失败并显示以下错误消息(CQ-4328666):
+* 将XDP文件转换为PDF文件，然后组合生成的PDF时，PDF层代会失败并显示以下错误消息：
 
    ```TXT
    Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
@@ -428,21 +421,18 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 >
 >Experience Manager6.5.10.0包含新版本的[AEM Forms兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)。 如果您使用的是旧版AEM Forms兼容包并更新到Experience Manager6.5.10.0，请在安装Forms附加组件包后安装最新版本的包。
 
-<!--
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+### 在JEE上安装Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的Adobe Experience Manager Forms中的修复通过单独的安装程序提供。
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+有关在JEE上安装用于Experience ManagerForms的累积安装程序以及部署后配置的信息，请参阅[发行说明](jee-patch-installer-65.md)。
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+>在JEE上安装用于Experience ManagerForms的累积安装程序后，安装最新的Forms附加组件包，从`crx-repository\install`文件夹中删除Forms附加组件包，然后重新启动服务器。
 
--->
 
 ### UberJar {#uber-jar}
 
@@ -476,14 +466,7 @@ For information about installing the cumulative installer for Experience Manager
 
 ## 已知问题 {#known-issues}
 
-<!--
-
-* (For JBoss on Microsoft Windows only) To continue using the Create PDF service on [!DNL AEM Forms on JEE], download [omniORB_4.1.1_x86_win32_vc10.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/omniORB_4.1.1_x86_win32_vc10.zip) from Software Distribution, extract and copy the folder available in the Zip file to the following location:
-`[AEM Forms Installation]\Adobe\Adobe_Experience_Manager_Forms\jboss\standalone\svcnative\CommonNatives\lib`
-
-* As [!DNL Microsoft Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss EAP 7.1], [!DNL Microsoft Windows Server 2019] does not support turnkey installations for [!DNL AEM Forms 6.5.10.0].
-
--->
+* 由于[!DNL Microsoft Windows Server 2019]不支持[!DNL MySQL 5.7]和[!DNL JBoss EAP 7.1]，因此[!DNL Microsoft Windows Server 2019]不支持[!DNL AEM Forms 6.5.10.0]的统包安装。
 
 * 如果您要将[!DNL Experience Manager]实例从6.5版升级到6.5.10.0版，则可以在`error.log`文件中查看`RRD4JReporter`异常。 要解决此问题，请重新启动实例。
 
