@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
+source-git-commit: 355cea8e5d3d3426788cd23e6d55297363adf05b
 workflow-type: tm+mt
-source-wordcount: '4106'
+source-wordcount: '4108'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
 >
 >[!DNL Experience Manager Forms]的附加组件包将在计划的[!DNL Experience Manager] Service Pack版本发布后的一周内提供。
 
-* 现在，您可以使用Automated forms conversion服务将法语、德语和西班牙语的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)转换为自适应表单。[
+* 您现在可以使用Automated forms conversion服务将法语、德语、西班牙语、意大利语和葡萄牙语的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)转换为自适应表单。[
 
 * **属性浏览器中的错误消息**:为自适应Forms属性浏览器中的每个属性添加了错误消息。这些消息有助于了解字段的允许值。
 
