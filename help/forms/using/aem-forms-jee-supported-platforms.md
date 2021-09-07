@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
+source-git-commit: f8205e812274a231655d0a192bf77da7f721b3c1
 workflow-type: tm+mt
 source-wordcount: '3471'
 ht-degree: 1%
@@ -185,7 +185,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>R:受限支持</td>
   </tr>
   <tr>
-   <td>MySQL 5.7.34 </td>
+   <td>MySQL 5.7.35 </td>
    <td>-</td>
    <td>R:受限支持</td>
   </tr>  
