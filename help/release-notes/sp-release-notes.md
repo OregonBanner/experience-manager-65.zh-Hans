@@ -4,16 +4,16 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 59cc855e937c7be71cfc7a28fccd1db0b91e9f97
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '4394'
-ht-degree: 3%
+source-wordcount: '4392'
+ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Experience Manager] 6.5 service pack发行说明 {#aem-service-pack-release-notes}
 
-## 发行信息 {#release-information}
+## 发行版信息 {#release-information}
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
@@ -58,7 +58,7 @@ ht-degree: 3%
 
 * 在[!DNL AEM Forms]中添加了对`GuideBridge#getGuidePath` API的支持。
 
-* 您现在可以使用Automated forms conversion服务将法语、德语、西班牙语、意大利语和葡萄牙语的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)转换为自适应表单。[
+* 您现在可以使用Automated forms conversion服务将法语、德语、西班牙语、意大利语和葡萄牙语的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html#language-specific-meta-model)转换为自适应表单。[
 
 * **属性浏览器中的错误消息**:为自适应Forms属性浏览器中的每个属性添加了错误消息。这些消息有助于了解字段的允许值。
 
@@ -506,5 +506,5 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 >* [[!DNL Experience Manager] 6.5发行说明](/help/release-notes/release-notes.md)
 >* [[!DNL Experience Manager] 产品页面](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
->* [订阅 Adobe 产品更新早知道](https://www.adobe.com/subscription/priority-product-update.html)
+>* [订阅 Adobe 产品更新早知道](https://www.adobe.com/cn/subscription/priority-product-update.html)
 

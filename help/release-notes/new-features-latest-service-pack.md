@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10的新增功能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 355cea8e5d3d3426788cd23e6d55297363adf05b
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4102'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
 >
 >[!DNL Experience Manager Forms]的附加组件包将在计划的[!DNL Experience Manager] Service Pack版本发布后的一周内提供。
 
-* 您现在可以使用Automated forms conversion服务将法语、德语、西班牙语、意大利语和葡萄牙语的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)转换为自适应表单。[
+* 您现在可以使用Automated forms conversion服务将法语、德语、西班牙语、意大利语和葡萄牙语的PDF forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html#language-specific-meta-model)转换为自适应表单。[
 
 * **属性浏览器中的错误消息**:为自适应Forms属性浏览器中的每个属性添加了错误消息。这些消息有助于了解字段的允许值。
 
@@ -229,7 +229,7 @@ ht-degree: 1%
 * “过滤器”面板中的混合状态复选框（除非您选择所有嵌套谓词，否则未选择并遍历第一级复选框）可由屏幕阅读器读取。
 
 * 日期和时间格式约束在日期字段的字段标签中提供，以使用户能够使用键盘以正确的格式输入日期。
-例如，`On Time (MM-DD-YYYY HH:mm)`。 其中，MM为两位数格式的月份，YYYY为年份，DD为两位数格式的日份，HH为24小时军用格式的小时，mm为分钟。
+例如, `On Time (MM-DD-YYYY HH:mm)`. 其中，MM为两位数格式的月份，YYYY为年份，DD为两位数格式的日份，HH为24小时军用格式的小时，mm为分钟。
 
 * 屏幕阅读器会朗读用于删除选定标记的选项（`X`符号）和选定标记的数量。
 
@@ -468,11 +468,11 @@ Experience ManagerForms包括以下辅助功能增强功能：
 
 在2021年5月27日至2021年8月26日期间，除了Service Pack之外，Adobe还发布了以下内容：
 
-* [!DNL Adobe Experience Manager] as aCloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en)。
+* [!DNL Adobe Experience Manager] as aCloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)和 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=zh-Hans)。
 
 * [[!DNL Experience Manager] 桌面应用程序2.1(2.1.3.3)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
-* [Experience Manager Screens:功能包202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html?lang=en)
+* [Experience Manager Screens:功能包202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html)
 
 >[!MORELIKETHIS]
 >

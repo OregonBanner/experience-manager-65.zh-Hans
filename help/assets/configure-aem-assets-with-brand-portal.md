@@ -1,8 +1,8 @@
 ---
 title: 使用 Brand Portal 配置 AEM Assets
-seo-title: 使用 Brand Portal 配置 AEM Assets
+seo-title: Configure AEM Assets with Brand Portal
 description: 了解如何使用Brand Portal配置AEM Assets，以将资产和收藏集发布到Brand Portal。
-seo-description: 了解如何使用Brand Portal配置AEM Assets，以将资产和收藏集发布到Brand Portal。
+seo-description: Learn how to configure AEM Assets with Brand Portal for publishing assets and Collections to Brand Portal.
 uuid: b95c046e-9988-444c-b50e-ff5ec8cafe14
 topic-tags: brand-portal
 content-type: reference
@@ -12,10 +12,10 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: aed6e28d7ff228ecbaeaf0d468d1d9bcb4373f90
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '2076'
-ht-degree: 8%
+source-wordcount: '2047'
+ht-degree: 7%
 
 ---
 
@@ -70,7 +70,7 @@ AEM Assets通过Adobe开发人员控制台使用Brand Portal进行配置，从�
 
 * 如果您是Adobe合作伙伴，请使用[Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)请求AEM 6.5。
 
-下载AEM后，有关设置AEM创作实例的说明，请参阅[部署和维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#default-local-install)。
+下载AEM后，有关设置AEM创作实例的说明，请参阅[部署和维护](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install)。
 
 ### 下载并安装AEM最新Service Pack {#servicepack}
 
@@ -337,7 +337,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >
    >请避免禁用任何复制代理，因为这可能会导致资产复制（在队列中运行）失败。
    >
-   >确保将所有四个复制代理都配置为避免超时错误。 请参阅[并行发布到Brand Portal时出现的问题疑难解答](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=en#connection-timeout)。
+   >确保将所有四个复制代理都配置为避免超时错误。 请参阅[并行发布到Brand Portal时出现的问题疑难解答](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)。
 
 您现在可以：
 

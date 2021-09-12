@@ -10,12 +10,12 @@ content-type: reference
 discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
-feature: 图像预设
+feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '3843'
+source-wordcount: '3839'
 ht-degree: 23%
 
 ---
@@ -137,7 +137,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
    <td>生成的预览呈现的最大高度（以像素为单位）。<br /> </td>
   </tr>
   <tr>
-   <td>分辨率</td>
+   <td>解决方法</td>
    <td>72</td>
    <td>分辨率以ppi为单位栅格化第一页（每英寸像素）。</td>
   </tr>
@@ -202,12 +202,10 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
 >[!NOTE]
 >
 >* EPS文件的缩略图大小可在“缩略图”下的&#x200B;**[!UICONTROL EPS缩略图]**&#x200B;步骤的&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡中进行配置。
-   >
-   >
-* 视频的缩略图大小在&#x200B;**[!UICONTROL FFmpeg缩略图]**&#x200B;步骤的&#x200B;**[!UICONTROL Process]**&#x200B;选项卡的&#x200B;**[!UICONTROL Arguments]**&#x200B;下进行配置。
+>
+>* 视频的缩略图大小在&#x200B;**[!UICONTROL FFmpeg缩略图]**&#x200B;步骤的&#x200B;**[!UICONTROL Process]**&#x200B;选项卡的&#x200B;**[!UICONTROL Arguments]**&#x200B;下进行配置。
 
 >
-
 
 
 **要配置图像缩略图大小，请执行以下操作：**
@@ -422,7 +420,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager资产�
   </tr>
   <tr>
    <td><strong>图像修饰符</strong></td>
-   <td><p>除了UI中提供的常用图像设置之外，Dynamic Media还支持许多高级图像修改，您可以在<strong>图像修饰符</strong>字段中指定这些修改。 这些参数在<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api">Image Server协议命令引用</a>中定义。</p> <p>重要信息：API中列出的以下功能不受支持：</p>
+   <td><p>除了UI中提供的常用图像设置之外，Dynamic Media还支持许多高级图像修改，您可以在<strong>图像修饰符</strong>字段中指定这些修改。 这些参数在<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html#image-serving-api">Image Server协议命令引用</a>中定义。</p> <p>重要信息：API中列出的以下功能不受支持：</p>
     <ul>
      <li>基本模板和文本渲染命令：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code>和 <code>textPs=</code></li>
      <li>本地化命令：<code>locale=</code>和 <code>req=xlate</code></li>

@@ -12,10 +12,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
-feature: 配置，混合模式
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+feature: Configuration,Hybrid Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '7797'
+source-wordcount: '7792'
 ht-degree: 1%
 
 ---
@@ -44,8 +44,7 @@ Dynamic Media-Hybrid必须启用并配置以供使用。 根据您的用例，Dy
 >* `ImageServing.log`
 
 >
->
-它们记录在[监视和维护您的Experience Manager实例](/help/sites-deploying/monitoring-and-maintaining.md)中。
+>它们记录在[监视和维护您的Experience Manager实例](/help/sites-deploying/monitoring-and-maintaining.md)中。
 
 混合发布和交付是Dynamic Media新增的Adobe Experience Manager的核心功能。 混合发布允许您从云而不是Experience Manager发布节点交付Dynamic Media资产，例如图像、集和视频。
 
@@ -293,7 +292,7 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
    * 选择&#x200B;**[!UICONTROL KeyStore文件]**。 导航到按Adobe提供给您的KeyStore文件，选择它，然后选择&#x200B;**[!UICONTROL Open]**。
    * 在&#x200B;**[!UICONTROL KeyStore File Password]**&#x200B;字段中，输入KeyStore File密码。 此密码是您在步骤5中创建的KeyStore密码&#x200B;**不**，但是是在预配期间发送给您的欢迎电子邮件中提供的KeyStore文件密码Adobe。 如果您未收到KeyStore文件密码，请联系Adobe客户关怀团队。
    * 在&#x200B;**[!UICONTROL 私钥密码]**&#x200B;字段中，输入私钥密码（可以是上一步中提供的相同私钥密码）。 Adobe在预配期间向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请联系Adobe客户关怀。
-   * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中，输入私钥别名。 例如，`*companyname*-alias`。 Adobe在预配期间向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户关怀。
+   * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中，输入私钥别名。 例如, `*companyname*-alias`. Adobe在预配期间向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户关怀。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -344,7 +343,6 @@ Replication test succeeded
 您还可以通过执行以下操作之一来检查：
 * 检查复制日志，以确保资产已复制。
 * 发布图像。 选择图像，在下拉菜单中选择&#x200B;**[!UICONTROL 查看器]**，然后选择查看器预设。 选择&#x200B;**[!UICONTROL URL]**。 要验证是否可以看到图像，请复制URL路径并将其粘贴到浏览器中。
-
 
 
 ### 身份验证疑难解答 {#troubleshooting-authentication}
@@ -784,7 +782,7 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
    | `+` | 包括用于复制的资产 |
    | `-` | 从复制中排除资产 |
 
-   导航至 `content/dam/<locate your asset>/jcr:content/renditions`.
+   导航到 `content/dam/<locate your asset>/jcr:content/renditions`。
 
    下图是资产演绎版的示例。
 
@@ -838,7 +836,7 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
    | 属性 | 默认值 | 描述 |
    |---|---|---|
    | 已启用缓存 | 已选中 | 是否启用响应缓存 |
-   | 缓存根 | 缓存 | 响应缓存文件夹的一个或多个路径。 相对路径针对内部s7成像包文件夹进行解析。 |
+   | 缓存根 | cache | 响应缓存文件夹的一个或多个路径。 相对路径针对内部s7成像包文件夹进行解析。 |
    | 缓存最大大小 | 200000000 | 响应缓存的最大大小（以字节为单位）。 |
    | 缓存最大条目数 | 100000 | 缓存中允许的最大条目数。 |
 
@@ -869,7 +867,7 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 | `defaultthumbpix` | `100,100` | 默认缩略图大小。 对缩略图请求(`req=tmb`)使用的是：DefaultPix，而不是属性：:DefaultPix。<br>服务器将限制返回图像不得大于此宽度和高度。如果缩略图请求(`req=tmb`)未明确指定大小，并且未使用`wid=`、`hei=`或`scl=`显式指定视图大小，则此操作为true。<br>指定为两个整数数字，0或更大，用逗号分隔。宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 阅图像提供API中的DefaultThumbPixin 。 |
 | `expiration` | `36000000` | 默认的客户端缓存生存时间。 提供默认过期时间间隔，以防特定目录记录不包含有效的目录：：过期值。<br>实数，0或更大。自生成回复数据后到期的毫秒数。 设置为0时，将始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要尽早清除缓存，请联系客户关怀团队。<br>另请参阅 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 图像提供API中的过期日期。 |
 | `jpegquality` | `80` | 默认JPEG编码属性。 指定JPEG回复图像的默认属性。<br>整数和标记，以逗号分隔。第一个值在1.100范围内，用于定义质量。 对于正常行为，第二个值可以为0，或者为1，以禁用JPEG编码器使用的RGB色度下采样。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 阅图像提供API中的JpegQualitie 。 |
-| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致返回图像的宽度或高度大于属性：:MaxPix，则服务器会返回错误。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api) 阅图像提供API中的MaxPixin 。 |
+| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致返回图像的宽度或高度大于属性：:MaxPix，则服务器会返回错误。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 阅图像提供API中的MaxPixin 。 |
 | `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样属性和插值属性。<br>在请求 `resMode=` 中未指定时使用。<br>允许的值 `BILIN`包括 `BICUB`、或 `SHARP2`。<br>枚举。对于`bilin`，设置为2；对于`bicub`，设置为3；对于`sharp2`插值模式，设置为4。 使用`sharp2`获取最佳结果。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 阅图像提供API中的ResMode 。 |
 | `resolution` | `72` | 默认对象分辨率。 提供默认对象分辨率，以防特定目录记录不包含有效的目录：:Resolution值。<br>实数，大于0。通常以每英寸像素数表示，但也可以以其他单位表示，如每米像素数。<br>另请参阅 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) 图像提供API中的分辨率。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 这些值表示视频播放时间的快照，并被传递到[encoding.com](https://www.encoding.com/)。 有关更多信息，请参阅[关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)。 |

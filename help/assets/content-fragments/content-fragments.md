@@ -3,10 +3,11 @@ title: 使用内容片段
 description: 了解Adobe Experience Manager(AEM)中的内容片段如何允许您设计、创建、策划和使用独立于页面的内容，非常适合无头交付。
 feature: Content Fragments
 role: User
-source-git-commit: 819df6d6123575b378676dda200064725de47b84
+exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 6%
+source-wordcount: '1989'
+ht-degree: 7%
 
 ---
 
@@ -82,7 +83,7 @@ ht-degree: 6%
 >
 >体验片段可以包含内容片段形式的内容，反之则不行。
 >
->有关更多信息，请参阅[了解AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=en#content-fragments)中的内容片段和体验片段。
+>有关更多信息，请参阅[了解AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)中的内容片段和体验片段。
 
 >[!NOTE]
 >

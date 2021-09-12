@@ -9,10 +9,10 @@ docset: aem65
 role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
-feature: 配置，Scene7模式
-source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
+feature: Configuration,Scene7 Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '6941'
+source-wordcount: '6936'
 ht-degree: 4%
 
 ---
@@ -38,12 +38,12 @@ ht-degree: 4%
 >
 >以下功能列表要求您使用与Adobe Experience Manager - Dynamic Media捆绑在一起的现成CDN。 这些功能不支持任何其他自定义CDN。
 >
->* [智能成像](/help/assets/imaging-faq.md)
-* [缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
-* [热链接保护](/help/assets/hotlink-protection.md)
-* [HTTP/2 内容交付](/help/assets/http2.md)
-* CDN级别的URL重定向
-* Akamai ChinaCDN（在中国实现最佳交付）
+>* [智能图像处理](/help/assets/imaging-faq.md)
+>* [缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>* [热链接保护](/help/assets/hotlink-protection.md)
+>* [HTTP/2 内容交付](/help/assets/http2.md)
+>* CDN级别的URL重定向
+>* Akamai ChinaCDN（在中国实现最佳交付）
 
 
 ## 在Scene7模式下启用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
@@ -51,7 +51,8 @@ ht-degree: 4%
 [默认情况下，Dynamic Media 处于禁用状态。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)要利用Dynamic Media功能，您必须启用它。
 
 >[!WARNING]
-Dynamic Media - Scene7模式仅适用于&#x200B;*Experience Manager创作实例*。 因此，必须在Experience Manager创作实例上配置`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager发布实例。*
+>
+>Dynamic Media - Scene7模式仅适用于&#x200B;*Experience Manager创作实例*。 因此，必须在Experience Manager创作实例上配置`runmode=dynamicmedia_scene7`，而不是&#x200B;*Experience Manager发布实例。*
 
 要启用Dynamic Media，您必须在终端窗口中输入以下命令，从命令行中使用`dynamicmedia_scene7`运行模式启动Experience Manager（使用的示例端口为4502）：
 
@@ -64,7 +65,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 现在，将Experience ManagerDynamic Media从6.3升级到6.4或6.5中，即可实现零停机时间部署。 要在CRXDE Lite中将所有预设和配置从`/etc`迁移到`/conf`，请确保运行以下curl命令。
 
 >[!NOTE]
-如果您在兼容性模式下运行Experience Manager实例（即，已安装兼容包），则无需运行这些命令。
+>
+>如果您在兼容性模式下运行Experience Manager实例（即，已安装兼容包），则无需运行这些命令。
 
 无论是否具有兼容包，您都可以对所有升级，通过运行以下Linux® curl命令，复制Dynamic Media最初附带的默认现成查看器预设：
 
@@ -272,7 +274,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * **[!UICONTROL 目录字段的默认值]** — 这些设置与图像的分辨率和默认缩略图类型有关。
 * **[!UICONTROL 色彩管理属性]**  — 这些设置确定使用的ICC颜色配置文件。
 * **[!UICONTROL 兼容性属性]**  — 为了向后兼容，此设置允许文本层中的前导和尾随段落与版本3.6中的段落一样进行处理。
-* **[!UICONTROL 本地化支持]**  — 这些设置允许您管理多个区域设置属性。它还允许您指定区域设置映射字符串，以便定义要在查看器中支持各种工具提示的语言。 有关设置&#x200B;**[本地化支持]**&#x200B;的更多信息，请参阅[设置资产本地化时的注意事项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets)。
+* **[!UICONTROL 本地化支持]**  — 这些设置允许您管理多个区域设置属性。它还允许您指定区域设置映射字符串，以便定义要在查看器中支持各种工具提示的语言。 有关设置&#x200B;**[本地化支持]**&#x200B;的更多信息，请参阅[设置资产本地化时的注意事项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets)。
 
 #### 配置应用程序常规设置 {#configuring-application-general-settings}
 
@@ -294,7 +296,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 >[!NOTE]
 默认情况下，当您选择&#x200B;**[!UICONTROL 呈现]**&#x200B;时，系统会显示 15 种呈现形式，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示 15 个查看器预设。您可以提高此限制。请参阅[增加显示](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[的图像预设数。增加显示](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)的查看器预设数。
-
 
 #### 配置色彩管理 {#configuring-color-management}
 
@@ -721,7 +722,7 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
    | + | 包括用于复制的资产 |
    | - | 从复制中排除资产 |
 
-   导航至 `content/dam/<locate your asset>/jcr:content/renditions`.
+   导航到 `content/dam/<locate your asset>/jcr:content/renditions`。
 
    下图是资产演绎版的示例。
 

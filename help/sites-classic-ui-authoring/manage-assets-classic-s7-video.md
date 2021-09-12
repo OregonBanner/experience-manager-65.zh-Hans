@@ -1,6 +1,6 @@
 ---
 title: 视频
-seo-title: 视频
+seo-title: Video
 description: 资产提供了集中式视频资产管理功能，您可以在该功能中直接将视频上传到Assets以自动编码到Dynamic Media Classic，并直接从Assets中访问Dy视频以进行页面创作。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,9 +8,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1678'
 ht-degree: 28%
 
 ---
@@ -63,7 +63,7 @@ Dynamic Media Classic视频组件支持以下格式：
 
 如果您不需要为资产提供工作流或版本控制，则应将资产上传到Dynamic Media Classic。 下面是建议的工作流：
 
-1. 在Dynamic Media Classic桌面应用程序中， [设置一个计划的FTP上传和编码到Dynamic Media Classic（系统自动）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=en#upload-options)。
+1. 在Dynamic Media Classic桌面应用程序中， [设置一个计划的FTP上传和编码到Dynamic Media Classic（系统自动）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)。
 1. 在Experience Manager中，在内容查找器的&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;选项卡的WCM中访问视频资产。
 1. 使用Dynamic Media Classic视频组件进行创作。
 
@@ -80,7 +80,7 @@ Dynamic Media Classic视频组件支持以下格式：
 
    >[!NOTE]
    >
-   >有关视频预设含义的更多信息，请参阅[用于编码视频文件的视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files)。
+   >有关视频预设含义的更多信息，请参阅[用于编码视频文件的视频预设](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)。
    >
    >Adobe 建议您在配置通用预设时选择两个自适应视频集，或选择&#x200B;**[!UICONTROL 自适应视频编码]**&#x200B;选项。
 
@@ -118,7 +118,6 @@ Dynamic Media Classic视频组件仅适用于Dynamic Media Classic视频。 基�
 >[!NOTE]
 >
 >Dynamic Media Classic视频组件开箱即用地使用通用视频配置文件。 但是，您可以获取基于HTML5的视频播放器以供Experience Manager使用。 在Dynamic Media Classic中，复制现成HTML5视频播放器的嵌入代码，并将其放入Experience Manager页面。
-
 
 ## Experience Manager视频组件 {#aem-video-component}
 
