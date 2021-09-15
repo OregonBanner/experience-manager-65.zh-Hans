@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 610f294c314489032ec71b863542d269d302ee01
+source-git-commit: 0a4c27432e4005fa3999f7c6a776ef51b10d9746
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1589'
 ht-degree: 4%
 
 ---
@@ -173,7 +173,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 1. 找到配置&#x200B;**[!UICONTROL Day CQ Link Externalizer]**。 单击&#x200B;**[!UICONTROL 编辑]**&#x200B;以打开。
 1. 链接外部器设置有助于为[!DNL Experience Manager]部署和[!DNL InDesign Server]创建绝对URL。 使用&#x200B;**[!UICONTROL Domains]**&#x200B;字段指定[!DNL Adobe InDesign Server]的主机名。 单击&#x200B;**保存**。
 
-   在绝对URL中，必须使用`localhost`作为本地、创作和发布实例的主机名。
+   在绝对URL中，使用`localhost`作为本地（作者）实例的主机名，以及发布实例的主机名或IP地址，如下图所示。
 
    ![链接外部器设置](assets/link-externalizer-config.png)
 
