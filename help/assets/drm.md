@@ -3,11 +3,11 @@ title: Digital Rights Management资产
 description: 了解如何在 [!DNL Experience Manager]中管理已许可资产的资产到期状态和信息。
 contentOwner: AG
 role: User, Admin
-feature: DRM，资产管理
+feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: e87facbad559aa7e45656f621de17e6ef3109273
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1398'
 ht-degree: 5%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 5%
 1. 打开[!DNL Experience Manager]配置管理器。
 1. 选择&#x200B;**[!UICONTROL Adobe CQ DAM到期通知]**。 默认情况下，会选择&#x200B;**[!UICONTROL 基于时间的计划程序]**，该计划程序会安排作业在特定时间检查资产是否已过期的子资产。 作业完成后，已过期的子资产和引用的资产会在搜索结果中显示为已过期。
 
-1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式`0 0 0 &ast; &ast; ?`会在00小时触发作业。
+1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式`0 0 0 * * ?`会在00小时触发作业。
 1. 选择&#x200B;**[!UICONTROL 发送电子邮件]**，以在资产过期时接收电子邮件。
 
    >[!NOTE]
