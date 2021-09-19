@@ -2,13 +2,13 @@
 title: 增强型智能标记
 description: 增强型智能标记
 contentOwner: AG
-feature: 智能标记，搜索
+feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
+source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 1%
+source-wordcount: '1544'
+ht-degree: 0%
 
 ---
 
@@ -47,30 +47,30 @@ ht-degree: 1%
 
 该服务将智能标记应用于以下MIME类型的资产：
 
-* image/jpeg
-* image/tiff
-* image/png
-* image/bmp
-* image/gif
-* image/pjpeg
-* image/x-portable-anymap
-* image/x-portable-bitmap
-* image/x-portable-graymap
-* image/x-portable-pixmap
-* image/x-rgb
-* image/x-xbitmap
-* image/x-xpixmap
-* image/x-icon
-* image/photoshop
-* image/x-photoshop
-* 图像/psd
-* image/vnd.adobe.photoshop
+* `image/jpeg`
+* `image/tiff`
+* `image/png`
+* `image/bmp`
+* `image/gif`
+* `image/pjpeg`
+* `image/x-portable-anymap`
+* `image/x-portable-bitmap`
+* `image/x-portable-graymap`
+* `image/x-portable-pixmap`
+* `image/x-rgb`
+* `image/x-xbitmap`
+* `image/x-xpixmap`
+* `image/x-icon`
+* `image/photoshop`
+* `image/x-photoshop`
+* `image/psd`
+* `image/vnd.adobe.photoshop`
 
 该服务将智能标记应用于以下MIME类型的资产演绎版：
 
-* image/jpeg
-* image/pjpeg
-* image/png
+* `image/jpeg`
+* `image/pjpeg`
+* `image/png`
 
 ## 入门 {#onboarding}
 
@@ -79,10 +79,6 @@ ht-degree: 1%
 管理员可以按照链接将智能内容服务与[!DNL Experience Manager]集成。 要将服务与[!DNL Experience Manager Assets]集成，请参阅[配置智能标记](config-smart-tagging.md)。
 
 管理员配置服务并在[!DNL Experience Manager]中添加用户时，载入过程即已完成。
-
->[!NOTE]
->
->如果您使用的是[!DNL Experience Manager] 6.3或更低版本，并且需要为资产提供标记服务，请参阅[智能标记](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 智能标记不使用最新的AI功能，因此不如增强型智能标记服务准确。
 
 ## 审核资产和标记 {#reviewing-assets-and-tags}
 
