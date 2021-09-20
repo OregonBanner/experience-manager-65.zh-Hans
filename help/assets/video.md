@@ -9,12 +9,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
-feature: 资产管理
+feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '11699'
+source-wordcount: '11713'
 ht-degree: 18%
 
 ---
@@ -32,21 +32,15 @@ ht-degree: 18%
 >在Dynamic Media中处理视频之前，请确保Adobe Experience Manager管理员已在Dynamic Media - Scene7模式或Dynamic Media — 混合模式中启用并配置了Dynamic MediaCloud Services。
 >
 >* 请参阅配置Dynamic Media - Scene7模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)和[Dynamic Media - Scene7模式疑难解答](/help/assets/troubleshoot-dms7.md)。
-   >
-   >
-* 请参阅配置Dynamic Media — 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
 >
->
-当前已知的Dynamic Media中的视频播放问题(仅&#x200B;*在Experience Manager6.5.9.0上):*
->
->* 
+>* 请参阅配置Dynamic Media — 混合模式中的[配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 。
 
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
->* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 >
+>当前已知的Dynamic Media中的视频播放问题(仅&#x200B;*在Experience Manager6.5.9.0上):*
+>
+>* 如果已发布的视频已更新，则必须再次发布该视频，以反映投放时的更改。
 
+>
 
 
 1. 通过执行以下操作，**上传 Dynamic Media 视频**：
@@ -374,13 +368,13 @@ VBR需要较长的编码时间，但会产生最有利的结果；媒体文件�
 | 2000 | 典型的宽带桌面连接。对于此连接，目标数据率范围为800-2000 Kbps，大多数目标数据率平均为1200-1500 Kbps。 |
 | 5000 | 典型高宽带连接。不建议在此较高范围下进行编码，因为大多数用户并不具备此速度的视频传送条件。 |
 
-### 分辨率 {#resolution}
+### 解决方法 {#resolution}
 
 **分辨率**&#x200B;以像素为单位描述视频文件的高度和宽度。大多数源视频以高分辨率存储（例如，1920 x 1080）。出于流播放目的，源视频会压缩至较低分辨率（640 x 480 或更低）。
 
 分辨率和数据率是两个相互关联、密不可分的因素，它们决定着视频质量。为保持同等的视频质量，视频文件的像素数越高（分辨率越高），数据率就必须越高。例如，考虑分辨率分别为 320 x 240 和 640 x 480 的视频文件的每帧像素数：
 
-| 分辨率 | 每帧像素数 |
+| 解决方法 | 每帧像素数 |
 |--- |--- |
 | 320 x 240 | 76,800 |
 | 640 x 480 | 307,200 |
@@ -396,7 +390,7 @@ VBR需要较长的编码时间，但会产生最有利的结果；媒体文件�
 
 当您为主源视频文件选择（或创建）视频编码预设时，请使用此表来确定正确的分辨率：
 
-| 分辨率 | 高度（像素） | 屏幕大小 |
+| 解决方法 | 高度（像素） | 屏幕大小 |
 |--- |--- |--- |
 | 240p | 240 | 微型屏幕 |
 | 300p | 300 | 通常用于移动设备的小型屏幕 |
@@ -423,7 +417,7 @@ VBR需要较长的编码时间，但会产生最有利的结果；媒体文件�
 
 | 视频类型 | 宽度 x 高度 | 宽度比 | 高度比 |
 |--- |--- |--- |--- |
-| 源 | 1920 x 1080 | 1 | 1 |
+| 来源 | 1920 x 1080 | 1 | 1 |
 | 编码 | 960 x 540 | 2 | 2 |
 | 编码 | 640 x 360 | 3 | 1 |
 | 编码 | 480 x 270 | 4 | 4 |
@@ -524,7 +518,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    `https://<servername.domain>:<port_number>`
 
-   例如，`https://1a2b3c.mycompany.com:4321`
+   例如, `https://1a2b3c.mycompany.com:4321`
 
    **注意**:上述路径示例仅用于演示目的。
 
@@ -534,7 +528,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    `https://<servername.domain>:<port_number>/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   例如，`https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
+   例如, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
    **注意**:上述路径示例仅用于演示目的。
 
