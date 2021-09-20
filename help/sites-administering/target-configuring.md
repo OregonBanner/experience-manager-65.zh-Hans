@@ -1,8 +1,8 @@
 ---
 title: 手动配置与Adobe Target的集成
-seo-title: 手动配置与Adobe Target的集成
+seo-title: Manually Configuring the Integration with Adobe Target
 description: 了解如何手动配置与Adobe Target的集成。
-seo-description: 了解如何手动配置与Adobe Target的集成。
+seo-description: Learn how to manually configure the integration with Adobe Target.
 uuid: 0bb76a65-f981-4cc5-bee8-5feb3297137c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2210'
 ht-degree: 4%
 
 ---
 
-# 手动配置与Adobe Target的集成{#manually-configuring-the-integration-with-adobe-target}
+# 手动配置与Adobe Target的集成 {#manually-configuring-the-integration-with-adobe-target}
 
 您可以修改在使用向导时执行的选择加入向导配置，也可以不使用向导手动与Adobe Target集成。
 
-## 修改选择加入向导配置{#modifying-the-opt-in-wizard-configurations}
+## 修改选择加入向导配置 {#modifying-the-opt-in-wizard-configurations}
 
 [选择加入向导](/help/sites-administering/opt-in.md)，该向导[将AEM与Adobe Target](/help/sites-administering/target.md)集成，可自动创建名为“已配置的Target配置”的Target云配置。 该向导还会为名为已配置的Target框架的云配置创建Target框架。 您可以根据需要修改云配置和框架的属性。
 
@@ -30,7 +30,7 @@ ht-degree: 4%
 要找到云配置和框架，请通过&#x200B;**工具** > **部署** > **Cloud**&#x200B;导航到&#x200B;**Cloud Services**。 ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 在Adobe Target下，单击或点按**显示配置**。
 
-### 已设置Target配置属性{#provisioned-target-configuration-properties}
+### 已配置的Target配置属性 {#provisioned-target-configuration-properties}
 
 在选择加入向导创建的已配置Target配置云配置中使用以下属性值：
 
@@ -58,7 +58,7 @@ ht-degree: 4%
 >* AT.js包含target.js中包含的组件，因此不再需要调用target.js
 
 
-### 已配置Target框架属性{#provisioned-target-framework-properties}
+### 已配置的Target框架属性 {#provisioned-target-framework-properties}
 
 选择加入向导创建的已配置Target框架已配置为从配置文件数据存储发送上下文数据。 默认情况下，商店的年龄和性别数据项会发送到Target。 您的解决方案可能需要发送其他参数。
 
@@ -66,9 +66,13 @@ ht-degree: 4%
 
 您可以配置框架以按照[添加Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework)中所述，向Target发送其他上下文信息。
 
-### 配置A4T Analytics Cloud配置{#configuring-a-t-analytics-cloud-configuration}
+### 配置A4T Analytics Cloud配置 {#configuring-a-t-analytics-cloud-configuration}
 
 您可以将Adobe Target配置为在定位内容时使用Adobe Analytics作为报表源。
+
+>[!NOTE]
+>
+>用户凭据身份验证（旧版）不适用于A4T（适用于Target和Analytics）。 因此，客户应使用[IMS身份验证](/help/sites-administering/integration-ims-adobe-io.md)，而不是用户凭据身份验证。
 
 为此，您需要指定要将Adobe Target云配置与以下项连接的A4T云配置：
 
@@ -93,7 +97,7 @@ ht-degree: 4%
 
    单击&#x200B;**确定**。使用Adobe Target定位内容时，您可以[选择报表源](/help/sites-authoring/content-targeting-touch.md)。
 
-## 手动与Adobe Target集成{#manually-integrating-with-adobe-target}
+## 手动与Adobe Target集成 {#manually-integrating-with-adobe-target}
 
 手动与Adobe Target集成，而不是使用选择加入向导。
 
@@ -104,10 +108,9 @@ Target库文件[AT.JS](https://docs.adobe.com/content/help/en/target/using/imple
 * 增强的安全性
 * 为单页应用程序提供更好的实施选项
 * AT.js包含target.js中包含的组件，因此不再需要调用target.js
-
 您可以在&#x200B;**客户端库**&#x200B;下拉菜单中选择AT.js或mbox.js。
 
-### 创建Target云配置{#creating-a-target-cloud-configuration}
+### 创建Target云配置 {#creating-a-target-cloud-configuration}
 
 要启用AEM与Adobe Target的交互，请创建Target云配置。 要创建配置，请提供Adobe Target客户端代码和用户凭据。
 
@@ -165,7 +168,7 @@ Target库文件[AT.JS](https://docs.adobe.com/content/help/en/target/using/imple
 
    如果无法连接到Target，请参阅[疑难解答](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)部分。
 
-### 添加目标框架{#adding-a-target-framework}
+### 添加Target框架 {#adding-a-target-framework}
 
 配置Target云配置后，添加Target框架。 该框架标识从可用的[Client Context](/help/sites-administering/client-context.md)或[ContextHub](/help/sites-developing/ch-configuring.md)组件发送到Adobe Target的默认参数。 Target使用参数来确定应用于当前上下文的区段。
 
@@ -198,19 +201,17 @@ Target库文件[AT.JS](https://docs.adobe.com/content/help/en/target/using/imple
 
 将创建框架。 要将框架复制到发布实例，请使用Sidekick中的&#x200B;**激活框架**&#x200B;选项。
 
-### 将活动与Target云配置{#associating-activities-with-the-target-cloud-configuration}关联
+### 将活动与Target云配置关联  {#associating-activities-with-the-target-cloud-configuration}
 
 将[AEM活动](/help/sites-authoring/activitylib.md)与Target云配置关联，以便能够镜像[Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html)中的活动。
 
 >[!NOTE]
 可用的活动类型由以下因素决定：
 * 如果对 AEM 端上用来连接到 Adobe Target 的 Adobe Target 租户 (clientcode) 启用了 **xt_only** 选项，则您&#x200B;**只**&#x200B;能在 AEM 中创建 XT 活动。
-
 * 如果&#x200B;**未**&#x200B;对 Adobe Target 租户 (clientcode) 启用 **xt_only** 选项，则可以在 AEM 中创建 XT 活动&#x200B;**和** A/B 活动。
-
 **另请注意：****xt_only** 选项是对特定 Target 租户 (clientcode) 应用的设置，只能直接在 Adobe Target 中进行修改。您无法在 AEM 中启用或禁用此选项。
 
-### 将Target框架与您的站点{#associating-the-target-framework-with-your-site}关联
+### 将Target框架与您的站点关联 {#associating-the-target-framework-with-your-site}
 
 在AEM中创建Target框架后，将网页与框架关联。 页面上的目标组件会将框架定义的数据发送到Adobe Target以进行跟踪。 （请参阅[内容定位](/help/sites-authoring/content-targeting-touch.md)。）
 
@@ -235,7 +236,7 @@ Target库文件[AT.JS](https://docs.adobe.com/content/help/en/target/using/imple
    >[!NOTE]
    如果尚未激活您附加到页面的框架，则会打开一个向导，通过该向导也可以发布页面。
 
-## Target连接问题疑难解答{#troubleshooting-target-connection-problems}
+## Target连接问题疑难解答 {#troubleshooting-target-connection-problems}
 
 执行以下任务，以解决连接到Target时出现的问题：
 
