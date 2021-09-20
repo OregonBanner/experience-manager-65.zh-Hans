@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
-feature: 发布
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+feature: Publishing
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '2945'
+source-wordcount: '2960'
 ht-degree: 4%
 
 ---
@@ -70,6 +70,8 @@ ht-degree: 4%
    >[!IMPORTANT]
    >
    >无论您选择何种Dynamic Media发布模式选项，您稍后对已&#x200B;**&#x200B;发布的资产所做的任何更新，都会立即发布这些更新，而无需执行任何进一步的用户操作。
+   >
+   >如果已发布的视频已更新，则必须再次发布该视频，以反映投放时的更改。
 
    | Dynamic Media发布模式选项 | 描述 |
    | --- | --- |
@@ -182,7 +184,7 @@ ht-degree: 4%
 
 1. 从&#x200B;**[!UICONTROL 快速发布]**&#x200B;菜单列表中选择以下选项之一。
 
-   | “快速发布”选项 | 它的作用 |
+   | “快速发布”选项 | 作用 |
    | --- | --- | 
    | 发布到Experience Manager | 将选定的资产立即发布到Experience Manager。 |
    | 发布至 Brand Portal | 将选定的资产立即发布到&#x200B;**[!UICONTROL Brand Portal]**。<br>仅当您的Experience Manager资产实例已配置Brand Portal时，此选 **[!UICONTROL 项]** 才可用。 |
