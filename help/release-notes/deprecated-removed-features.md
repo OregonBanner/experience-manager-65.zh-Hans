@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: becdfee534e4464147811302ed67de74b8044a24
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1745'
 ht-degree: 41%
 
 ---
@@ -28,11 +28,12 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
+| [!DNL Sites] | 基于模板的简单内容片段。 | [基于模型的结构化内容](/help/assets/content-fragments/content-fragments-models.md) 片段。 |
 | Creative Cloud集成 | AEM 6.2中引入了“AEM到Creative Cloud文件夹共享”功能，以便创意用户能够从AEM访问资产，以便在CC应用程序中打开资产，并上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM Assets。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 |
 | 资产 | `AssetDownloadServlet`默认情况下，对发布实例禁用 有关更多详细信息，请参阅 [AEM 安全核对清单](/help/sites-administering/security-checklist.md)。 | [AEM 安全核对清单](/help/sites-administering/security-checklist.md)中描述的配置。 |
 | 资产 | 如果用户对`/content/dam/collections`没有足够的（读取和写入）权限，则用户无法创建集合。 | 遵循用户的访问控制设置并确保具有适当的权限。 |
 | Adobe Search &amp; Promote | 已弃用与Adobe Search&amp;Promote的集成。 Adobe 不打算进一步增强 Search &amp; Promote 集成。请注意，Search &amp; Promote 集成在弃用期间仍完全受支持。 |  |
-| DTM 标记管理器 | 已弃用与 DTM (Dynamic Tag Manager) 的集成。 | 切换为使用 Adobe Experience Platform Launch 作为标记管理器. |
+| DTM 标记管理器 | 已弃用与 DTM (Dynamic Tag Manager) 的集成。 | 切换为使用 Adobe Experience Platform Launch 作为标记管理器。 |
 | Adobe Target | 在AEM 6.5中，添加了使用基于[!DNL Adobe I/O]的Adobe Target Standard API(Rest API)连接到Adobe Target服务的功能，因此弃用了Target Classic API(XML)方式。 | 将集成重新配置为[使用新API](https://helpx.adobe.com/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html)。 |
 | Adobe Target | 已弃用在AEM中使用基于`mbox.js`的与Adobe Target的集成。 | 切换到使用`at.js` 1.x。 |
 | 商务 | [CIF ](https://github.com/adobe/commerce-cif-api) REST是在2018年作为一组微服务提供的，用于实现AEM和商务引擎之间的集成。在2018年年中Adobe获得Magento后，Adobe决定改变其做法，原因有二。 Magento有其自己的一组商务API（REST和GraphQL），因此维护两组API并不是最佳做法。 市场趋势表明，客户正在向GraphQL转移，因为这是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，该框架使用Magento的GraphQL API作为真相来源。 Adobe不打算在CIF REST中进一步投资。 强烈建议客户使用替换解决方案。 | 对于AEM-Magento集成，请切换到[AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype)和[AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)。 请参阅使用商务集成框架](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)的AEM和Magento集成[。 我们的路线图上提供了对与新方法进行第三方(Magento除外)集成的支持。 |
@@ -70,7 +71,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | [!DNL Assets] | [!DNL Adobe Experience Manager] 6.5中删除了资产卸载功能。 | 没有可替换项。 |
 | 缓存 | `system/console/slingjsp` 已删除，在AEM 6.5中不再可用。 | 类和Slightly缓存存储在Apache Sling Commons FileSystem类加载器包下。 可以在AEM Web控制台中检查包编号，并直接从文件系统(`crx-quickstart/launchpad/felix/bundle<ID>`)中删除缓存文件夹。 |
 
-## 下一版本{#pre-announcement-for-next-release}的预公告
+## 下一版本的预发布 {#pre-announcement-for-next-release}
 
 本节用于预先宣布未来版本中即将发生的更改。 已宣布的更改尚未生效，但将影响客户。 例如，这些功能尚未弃用，但会在弃用后影响用户。 这些更新旨在进行规划。
 
