@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: baf68f43decec6631516442c3f9e319ce879696f
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1538'
 ht-degree: 1%
 
 ---
@@ -245,9 +245,6 @@ ht-degree: 1%
    * **IMS配置**:选择IMS配置的名称
    * **API类型**:REST
    * **A4T Analytics Cloud配置**:选择用于定位活动目标和量度的Analytics云配置。如果您在定位内容时使用Adobe Analytics作为报表源，则需要使用此功能。 如果您看不到云配置，请参阅[配置A4T Analytics Cloud配置](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)中的注释。
-
-   >[!NOTE]
-   >用户凭据身份验证（旧版）不适用于A4T（适用于Target和Analytics）。 因此，客户应使用     IMS身份验证，而不是用户凭据身份验证。
    * **使用准确定位**:默认情况下，此复选框处于选中状态。如果选中此选项，云服务配置将等待上下文加载后再加载内容。 请参阅以下注释。
    * **同步来自Adobe Target的区段**:选择此选项可下载在Target中定义的区段，以在AEM中使用它们。当API类型属性为REST时，您必须选择此选项，因为不支持内联区段，您始终需要使用Target中的区段。 (请注意，“区段”的AEM术语等同于Target“受众”。)
    * **客户端库**:选择您是希望使用AT.js客户端库，还是mbox.js（已弃用）。

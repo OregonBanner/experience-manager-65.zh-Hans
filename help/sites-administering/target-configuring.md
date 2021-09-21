@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2196'
 ht-degree: 4%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->用户凭据身份验证（旧版）不适用于A4T（适用于Target和Analytics）。 因此，客户应使用[IMS身份验证](/help/sites-administering/integration-ims-adobe-io.md)，而不是用户凭据身份验证。
+>用户凭据身份验证（旧版）不适用于A4T（适用于Target和Analytics）。 因此，客户应使用IMS身份验证，而不是用户凭据身份验证。
 
 为此，您需要指定要将Adobe Target云配置与以下项连接的A4T云配置：
 
@@ -88,7 +88,7 @@ ht-degree: 4%
    >使用AEM配置A4T时，您可能会看到缺少条目的配置引用。 要选择分析框架，请执行以下操作：
    >
    >1. 导航到&#x200B;**工具** > **常规** > **CRXDE Lite**。
-   1. 导航到&#x200B;**/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
+   1. 导航至 `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. 将属性&#x200B;**disable**&#x200B;设置为&#x200B;**false**。
    1. 点按或单击&#x200B;**全部保存**。
 
