@@ -12,9 +12,9 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: d995173140237f34a03c8e84128ad9d657c9a026
 workflow-type: tm+mt
-source-wordcount: '2047'
+source-wordcount: '2053'
 ht-degree: 7%
 
 ---
@@ -338,6 +338,8 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
    >请避免禁用任何复制代理，因为这可能会导致资产复制（在队列中运行）失败。
    >
    >确保将所有四个复制代理都配置为避免超时错误。 请参阅[并行发布到Brand Portal时出现的问题疑难解答](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)。
+   >
+   >请勿修改任何自动生成的设置。
 
 您现在可以：
 
