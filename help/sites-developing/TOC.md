@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: 1eb2ef06ed0541026ff3ba436dfab0d261af7356
+source-git-commit: b82544398ca414afab867f188f33ae60989596f3
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '910'
 ht-degree: 16%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 16%
    + [CSRF保护框架](csrf-protection.md)
    + [数据建模 — 大卫·纽谢勒的模型](model-data.md)
    + [参与AEM](contributing-to-cq.md)
-   + [安全](security.md)
+   + [安全性](security.md)
    + [参考资料](reference-materials.md)
    + [创建功能齐全的网站（经典UI）](website.md)
    + [设计和设计器（经典UI）](designer.md)
@@ -97,7 +97,7 @@ ht-degree: 16%
       + [使用xtype（经典UI）](xtypes.md)
       + [开发Forms（经典UI）](developing-forms.md)
 + 无外设体验管理{#headless}
-   + [无头和混合AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [无头和混合AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [为组件启用JSON导出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 单页应用程序{#spas}
       + [SPA简介和演练](spa-walkthrough.md)
