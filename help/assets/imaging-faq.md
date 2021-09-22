@@ -6,12 +6,12 @@ topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
-feature: 资产管理，演绎版
+feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: a166ea9e56ba6b69793e9949a920a7a24b5b9b25
+source-git-commit: cd0ff8f3f595e4c97668abc8c296b2f15f9d4810
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2618'
 ht-degree: 1%
 
 ---
@@ -198,7 +198,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 | Europe, Middle East, Africa | 13 Aug 2021 |
 | Asia-Pacific | 22 Jul 2021 | -->
 
-1. [使用Admin Console创建支持案例](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。
+1. [使用Admin Console创建支持案例](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html)。
 1. 在支持案例中提供以下信息：
 
    1. 主要联系人姓名、电子邮件、电话。
@@ -263,11 +263,11 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## 是否可以针对任何请求关闭智能成像？ {#turning-off-smart-imaging}
 
-是. 您可以通过向URL添加修饰符`bfc=off`来关闭智能成像。
+是。您可以通过向URL添加修饰符`bfc=off`来关闭智能成像。
 
 ## 我是否可以请求在公司级别关闭DPR和网络优化？ {#dpr-companylevel-turnoff}
 
-是. 要在贵公司禁用DPR和网络优化，请创建一个支持案例，如本主题前面所述。
+是。要在贵公司禁用DPR和网络优化，请创建一个支持案例，如本主题前面所述。
 
 ## 提供了哪些“调整”功能？ 是否可以定义任何设置或行为？ (#tuning-settings)
 
@@ -288,3 +288,9 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 * 任何查看器端DPR优化都与服务器端智能成像DPR优化协同工作，并且不会导致图像过大。 换言之，无论DPR由查看器处理（例如仅在启用了缩放功能的查看器中的主视图），都不会触发服务器端智能成像DPR值。 同样，无论查看器元素（如色板和缩略图）没有DPR处理，都会触发服务器端智能成像DPR值。
 
 另请参阅[使用图像](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)和[使用智能裁剪](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)时。
+
+>[!MORELIKETHIS]
+>
+>* [使用下一代图像格式WebP和AVIF优化图像。](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+>
+
