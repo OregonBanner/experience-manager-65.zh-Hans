@@ -88,8 +88,7 @@ ht-degree: 4%
    >使用AEM配置A4T时，您可能会看到缺少条目的配置引用。 要选择分析框架，请执行以下操作：
    >
    >1. 导航到&#x200B;**工具** > **常规** > **CRXDE Lite**。
-   1. 导航至:
-      `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
+   1. 导航至: `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. 将属性&#x200B;**disable**&#x200B;设置为&#x200B;**false**。
    1. 点按或单击&#x200B;**全部保存**。
 
