@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 1a3430ef3d9e9f4fcd0aaced904644b36953292b
+source-git-commit: fb14c1901394198de59c2369563a9dcca2f95f4e
 workflow-type: tm+mt
-source-wordcount: '2198'
+source-wordcount: '2199'
 ht-degree: 4%
 
 ---
@@ -92,6 +92,8 @@ ht-degree: 4%
    1. 将属性&#x200B;**disable**&#x200B;设置为&#x200B;**false**。
    1. 点按或单击&#x200B;**全部保存**。
 
+
+[1]
 
 ```
 /libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
