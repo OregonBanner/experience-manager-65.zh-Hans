@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: e2b13bf47a2a816add7678587d51347266cc3552
+source-git-commit: 1a3430ef3d9e9f4fcd0aaced904644b36953292b
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2198'
 ht-degree: 4%
 
 ---
@@ -88,15 +88,18 @@ ht-degree: 4%
    >使用AEM配置A4T时，您可能会看到缺少条目的配置引用。 要选择分析框架，请执行以下操作：
    >
    >1. 导航到&#x200B;**工具** > **常规** > **CRXDE Lite**。
-   1. 导航到：
-/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
+   1. 导航到[1]（请参阅下文）
    1. 将属性&#x200B;**disable**&#x200B;设置为&#x200B;**false**。
    1. 点按或单击&#x200B;**全部保存**。
 
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+```
+/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
+```
 
-   单击&#x200B;**确定**。使用Adobe Target定位内容时，您可以[选择报表源](/help/sites-authoring/content-targeting-touch.md)。
+![chlimage_1-159](assets/chlimage_1-159.png)
+
+单击&#x200B;**确定**。使用Adobe Target定位内容时，您可以[选择报表源](/help/sites-authoring/content-targeting-touch.md)。
 
 ## 手动与Adobe Target集成 {#manually-integrating-with-adobe-target}
 
