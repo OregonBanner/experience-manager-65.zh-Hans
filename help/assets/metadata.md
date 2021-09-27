@@ -3,12 +3,12 @@ title: 管理数字资产的元数据
 description: 了解元数据类型以及如何管理资产的元数据，以便轻松组织和处理资产。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 标记，元数据
+feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
-source-wordcount: '2339'
+source-wordcount: '2336'
 ht-degree: 20%
 
 ---
@@ -110,7 +110,7 @@ ht-degree: 20%
    | [!UICONTROL 批量大小] | 要为其导入元数据的批次中的资产数量。 默认值为 50。最大值为100。 |
    | [!UICONTROL 字段分隔符] | 默认值为`,`（逗号）。 您可以指定任何其他字符。 |
    | [!UICONTROL 多值分隔符] | 元数据值的分隔符。 默认值为 `|`. |
-   | [!UICONTROL 启动工作流] | 默认为False。 当设置为`true`且默认的“启动器”设置对[!UICONTROL DAM元数据写回]工作流(将元数据写入二进制XMP数据)生效。 启用启动工作流会减慢系统运行速度。 |
+   | [!UICONTROL 启动工作流] | 默认为False。 当设置为`true`且默认设置对[!UICONTROL DAM元数据写回]工作流(将元数据写入二进制XMP数据)有效。 启用工作流会减慢系统速度。 |
    | [!UICONTROL 资产路径列名称] | 为包含资产的CSV文件定义列名称。 |
 
 1. 单击工具栏中的&#x200B;**[!UICONTROL 导入]**。 导入元数据后，通知会显示在[!UICONTROL Notification]收件箱中。
@@ -234,7 +234,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [元数据概念和了解](metadata-concepts.md)。
 >* [编辑多个收藏集的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)
-* [在Experience Manager资产中导入和导出元数据](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [在Experience Manager资产中导入和导出元数据](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
