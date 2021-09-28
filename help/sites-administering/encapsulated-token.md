@@ -1,8 +1,8 @@
 ---
 title: 封装的令牌支持
-seo-title: 封装的令牌支持
+seo-title: Encapsulated Token Support
 description: 了解AEM中的封装令牌支持。
-seo-description: 了解AEM中的封装令牌支持。
+seo-description: Learn about the Encapsulated Token support in AEM.
 uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 如果发布实例不可用，则在该实例上经过身份验证的所有用户都将丢失其会话。 这是因为验证身份验证Cookie需要存储库访问。
 
-## 使用封装的令牌{#stateless-authentication-with-the-encapsulated-token}进行无状态身份验证
+## 使用封装的令牌进行无状态身份验证 {#stateless-authentication-with-the-encapsulated-token}
 
 水平可扩展性解决方案是使用AEM中新的封装令牌支持进行无状态身份验证。
 
@@ -51,16 +51,14 @@ ht-degree: 0%
 >
 >例如，如果由于封装令牌的工作方式而在发布实例号1上创建了新用户，则该用户将在发布实例号2上成功进行身份验证。 如果用户在第二个发布实例上不存在，则请求仍将不成功。
 
-
-## 配置封装令牌{#configuring-the-encapsulated-token}
+## 配置封装令牌 {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >只有符合以下条件时，所有可同步用户并依赖令牌身份验证（如SAML和OAuth）的身份验证处理程序才能与封装的令牌一起使用：
 >
 >* 会话会置顶，或
-   >
-   >
-* 同步开始时，已在AEM中创建用户。 这意味着在同步过程中，如果处理程序&#x200B;**创建**&#x200B;用户，将不支持封装的令牌。
+>
+>* 同步开始时，已在AEM中创建用户。 这意味着在同步过程中，如果处理程序&#x200B;**创建**&#x200B;用户，将不支持封装的令牌。
 
 
 在配置封装令牌时，您需要考虑以下几项：
@@ -68,7 +66,7 @@ ht-degree: 0%
 1. 由于涉及的密码学，所有实例都需要具有相同的HMAC密钥。 自AEM 6.3起，关键材料不再存储在存储库中，而是存储在实际的文件系统中。 考虑到这一点，复制密钥的最佳方法是将它们从源实例的文件系统复制到要将密钥复制到的目标实例的文件系统。 请参阅下面“复制HMAC密钥”下的更多信息。
 1. 需要启用封装令牌。 这可以通过Web控制台来完成。
 
-### 复制HMAC密钥{#replicating-the-hmac-key}
+### 复制HMAC密钥 {#replicating-the-hmac-key}
 
 HMAC密钥以`/etc/key`的二进制属性形式存在于存储库中。 您可以通过按其旁边的&#x200B;**view**&#x200B;链接来单独下载它：
 
@@ -97,10 +95,10 @@ HMAC密钥以`/etc/key`的二进制属性形式存在于存储库中。 您可�
 
 1. 对要将密钥复制到的所有实例重复上述步骤。
 
-#### 启用封装令牌{#enabling-the-encapsulated-token}
+#### 启用封装令牌 {#enabling-the-encapsulated-token}
 
 复制HMAC密钥后，您可以通过Web控制台启用封装令牌：
 
 1. 将浏览器指向`https://serveraddress:port/system/console/configMgr`
-1. 查找名为&#x200B;**Day CRX令牌身份验证处理程序**&#x200B;的条目，然后单击该条目。
+1. 查找名为&#x200B;**AdobeGranite令牌身份验证处理程序**&#x200B;的条目，然后单击该条目。
 1. 在以下窗口中，勾选&#x200B;**启用封装的令牌支持**&#x200B;框，然后按&#x200B;**Save**。
