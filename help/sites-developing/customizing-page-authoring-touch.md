@@ -1,8 +1,8 @@
 ---
 title: 自定义页面创作
-seo-title: 自定义页面创作
+seo-title: Customizing Page Authoring
 description: AEM提供了各种机制，使您能够自定义页面创作功能
-seo-description: AEM提供了各种机制，使您能够自定义页面创作功能
+seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
 uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1383'
 ht-degree: 2%
 
 ---
@@ -52,8 +52,7 @@ AEM提供了各种机制，使您能够自定义创作实例的页面创作功�
 >* [AEM触屏优化UI的结构，以](/help/sites-developing/touch-ui-structure.md) 了解用于页面创作的结构区域的详细信息。
 
 >
->
-[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)会话 — [AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html)的用户界面自定义中也介绍了本主题。
+>[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)会话 — [AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html)的用户界面自定义中也介绍了本主题。
 
 >[!CAUTION]
 >
@@ -67,11 +66,11 @@ AEM提供了各种机制，使您能够自定义创作实例的页面创作功�
 >1. 在`/apps`中进行任何更改
 
 
-## 添加新层（模式）{#add-new-layer-mode}
+## 添加新层（模式） {#add-new-layer-mode}
 
 在编辑页面时，有各种[模式](/help/sites-authoring/author-environment-tools.md#page-modes)可用。 这些模式是使用[layers](/help/sites-developing/touch-ui-structure.md#layer)实现的。 这些功能允许访问同一页面内容的不同类型的功能。 标准层包括：编辑、预览、注释、开发人员和定位。
 
-### 层示例：Live Copy状态{#layer-example-live-copy-status}
+### 层示例：Live Copy状态 {#layer-example-live-copy-status}
 
 标准AEM实例提供MSM层。 这会访问与[多站点管理](/help/sites-administering/msm.md)相关的数据，并在层中突出显示该数据。
 
@@ -81,7 +80,7 @@ AEM提供了各种机制，使您能够自定义创作实例的页面创作功�
 
 `/libs/wcm/msm/content/touch-ui/authoring/editor/js/msm.Layer.js`
 
-### 代码示例{#code-sample}
+### 代码示例 {#code-sample}
 
 这是一个示例包，其中显示了如何创建新层（模式），这是MSM视图的新层。
 
@@ -92,11 +91,11 @@ GITHUB上的代码
 * [在GitHub上打开aem-authoring-new-layer-mode项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
 * 将项目下载为[a ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)
 
-## 向资产浏览器{#add-new-selection-category-to-asset-browser}添加新的选择类别
+## 将新选择类别添加到资产浏览器 {#add-new-selection-category-to-asset-browser}
 
 资产浏览器显示各种类型/类别（例如，图像、文档等）的资产。 资产也可以按这些资产类别进行过滤。
 
-### 代码示例{#code-sample-1}
+### 代码示例 {#code-sample-1}
 
 `aem-authoring-extension-assetfinder-flickr` 是一个示例包，用于显示如何向资产查找器添加新组。此示例连接到[Flickr](https://www.flickr.com)的公共流并在侧面板中显示它们。
 
@@ -107,7 +106,7 @@ GITHUB上的代码
 * [在GitHub上打开aem-authoring-extension-assetfinder-flickr项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
 * 将项目下载为[a ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)
 
-## 筛选资源{#filtering-resources}
+## 筛选资源 {#filtering-resources}
 
 在创作页面时，用户通常必须从资源（例如页面、组件、资产等）中进行选择。 这可以采用列表的形式，例如，作者必须从中选择项目。
 
@@ -124,11 +123,11 @@ GITHUB上的代码
 >
 >有关在经典UI中实施自定义谓词的示例，请参阅[此知识库文章](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html)。
 
-## 将新操作添加到组件工具栏{#add-new-action-to-a-component-toolbar}
+## 将新操作添加到组件工具栏 {#add-new-action-to-a-component-toolbar}
 
 每个组件（通常）都有一个工具栏，通过该工具栏可访问可对该组件执行的一系列操作。
 
-### 代码示例{#code-sample-2}
+### 代码示例 {#code-sample-2}
 
 `aem-authoring-extension-toolbar-screenshot` 是一个示例包，其中显示了如何创建用于呈现组件的自定义工具栏操作。
 
@@ -139,9 +138,9 @@ GITHUB上的代码
 * [在GitHub上打开aem-authoring-extension-toolbar-screanth项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
 * 将项目下载为[a ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)
 
-## 添加新的就地编辑器{#add-new-in-place-editor}
+## 添加新的就地编辑器 {#add-new-in-place-editor}
 
-### 标准就地编辑器{#standard-in-place-editor}
+### 标准就地编辑器 {#standard-in-place-editor}
 
 在标准 AEM 安装中：
 
@@ -190,7 +189,7 @@ GITHUB上的代码
    >
    >请注意，在AEM中，由`ratio`属性设置的裁剪比例被定义为&#x200B;**高度/宽度**。 这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。只要您清楚地定义`name`属性，创作用户便不会察觉到任何差异，因为UI中会显示此属性。
 
-#### 创建新的就地编辑器{#creating-a-new-in-place-editor}
+#### 创建新的就地编辑器 {#creating-a-new-in-place-editor}
 
 要实施新的就地编辑器（在clientlib中），请执行以下操作：
 
@@ -210,7 +209,7 @@ GITHUB上的代码
 
 1. 提供编辑器与可使用该编辑器的每个资源类型（如组件中所示）之间的连接。
 
-#### 用于创建新就地编辑器{#code-sample-for-creating-a-new-in-place-editor}的代码示例
+#### 用于创建新就地编辑器的代码示例 {#code-sample-for-creating-a-new-in-place-editor}
 
 `aem-authoring-extension-inplace-editor` 是一个示例包，其中显示了如何在AEM中新建就地编辑器。
 
@@ -221,15 +220,15 @@ GITHUB上的代码
 * [在GitHub上打开aem-authoring-extension-inplace-editor项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
 * 将项目下载为[a ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor/archive/master.zip)
 
-#### 配置多个就地编辑器{#configuring-multiple-in-place-editors}
+#### 配置多个就地编辑器 {#configuring-multiple-in-place-editors}
 
 可以配置组件，使其具有多个就地编辑器。 配置多个就地编辑器后，您可以选择相应的内容并打开相应的编辑器。 有关更多信息，请参阅[配置多个就地编辑器](/help/sites-developing/multiple-inplace-editors.md)文档。
 
-## 添加新页面操作{#add-a-new-page-action}
+## 添加新页面操作 {#add-a-new-page-action}
 
 要向页面工具栏中添加新的页面操作，例如&#x200B;**返回站点**（控制台）操作。
 
-### 代码示例{#code-sample-3}
+### 代码示例 {#code-sample-3}
 
 `aem-authoring-extension-header-backtosites` 是一个示例包，其中显示如何创建自定义标题栏操作以跳回站点控制台。
 
@@ -240,9 +239,13 @@ GITHUB上的代码
 * [在GitHub上打开aem-authoring-extension-header-backtosites项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
 * 将项目下载为[a ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)
 
-## 自定义激活请求工作流{#customizing-the-request-for-activation-workflow}
+## 自定义激活请求工作流 {#customizing-the-request-for-activation-workflow}
 
-当内容作者没有相应的复制权限时，会自动触发现成的工作流&#x200B;**请求激活**。
+开箱即用的工作流&#x200B;**请求激活**:
+
+* 当内容作者&#x200B;**没有**&#x200B;相应的复制权限，但&#x200B;**拥有** DAM用户和作者成员资格时，相应菜单中将自动显示。
+
+* 否则，将不显示任何内容，因为复制权限已被删除。
 
 要在进行此类激活时进行自定义行为，可以覆盖&#x200B;**激活请求**&#x200B;工作流：
 
