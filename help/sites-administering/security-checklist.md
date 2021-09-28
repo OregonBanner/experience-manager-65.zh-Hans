@@ -1,8 +1,8 @@
 ---
 title: 安全检查列表
-seo-title: 安全检查列表
+seo-title: Security Checklist
 description: 了解配置和部署AEM时的各种安全注意事项。
-seo-description: 了解配置和部署AEM时的各种安全注意事项。
+seo-description: Learn about the various security considerations when configuring and deploying AEM.
 uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
-feature: 安全
-source-git-commit: 1c6ee9b547fd0870feb510e35ffdcb8e3f857f18
+feature: Security
+source-git-commit: f60d3049b10a8ec500dd0cd4b1b5d4efbe415d84
 workflow-type: tm+mt
-source-wordcount: '2873'
-ht-degree: 0%
+source-wordcount: '2859'
+ht-degree: 3%
 
 ---
 
-# 安全检查列表{#security-checklist}
+# 安全检查列表 {#security-checklist}
 
 本节介绍您应采取的各种步骤，以确保AEM安装在部署时是安全的。 核对清单应自上而下应用。
 
@@ -31,13 +31,13 @@ ht-degree: 0%
 >
 >开发阶段还适用一些其他的[安全注意事项](/help/sites-developing/dev-guidelines-bestpractices.md#security-considerations)。
 
-## 主要安全措施{#main-security-measures}
+## 主要安全措施 {#main-security-measures}
 
 ### 在生产就绪模式下运行AEM {#run-aem-in-production-ready-mode}
 
 有关更多信息，请参阅[在生产就绪模式下运行AEM](/help/sites-administering/production-ready.md)。
 
-### 为传输层安全性启用HTTPS {#enable-https-for-transport-layer-security}
+### 为传输层安全性启用 HTTPS {#enable-https-for-transport-layer-security}
 
 对于具有安全实例，必须在创作实例和发布实例上启用HTTPS传输层。
 
@@ -45,11 +45,11 @@ ht-degree: 0%
 >
 >有关更多信息，请参阅[启用HTTP Over SSL](/help/sites-administering/ssl-by-default.md)部分。
 
-### 安装安全修补程序{#install-security-hotfixes}
+### 安装安全修补程序 {#install-security-hotfixes}
 
 确保已安装由Adobe](https://helpx.adobe.com/cn/experience-manager/kb/aem63-available-hotfixes.html)提供的最新[安全修补程序。
 
-### 更改AEM和OSGi Console管理帐户的默认密码{#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### 更改AEM和OSGi Console管理帐户的默认密码 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
 Adobe强烈建议在安装后更改特权&#x200B;[**AEM** `admin`帐户](#changing-the-aem-admin-password)的密码（在所有实例上）。
 
@@ -65,7 +65,7 @@ Adobe强烈建议在安装后更改特权&#x200B;[**AEM** `admin`帐户](#changi
 
 这两个帐户使用不同的凭据，并且每个帐户具有不同的强密码对于安全部署至关重要。
 
-#### 更改AEM管理员密码{#changing-the-aem-admin-password}
+#### 更改AEM管理员密码 {#changing-the-aem-admin-password}
 
 可以通过[Granite Operations - Users](/help/sites-administering/granite-user-group-admin.md)控制台更改AEM管理员帐户的密码。
 
@@ -75,7 +75,7 @@ Adobe强烈建议在安装后更改特权&#x200B;[**AEM** `admin`帐户](#changi
 >
 >更改管理员帐户也会更改OSGi Web控制台帐户。 更改管理员帐户后，您应将OSGi帐户更改为其他内容。
 
-#### 更改OSGi Web控制台密码{#importance-of-changing-the-osgi-web-console-password}的重要性
+#### 更改OSGi Web控制台密码的重要性 {#importance-of-changing-the-osgi-web-console-password}
 
 除AEM `admin`帐户外，如果无法更改OSGi Web控制台密码的默认密码，则可能会导致：
 
@@ -84,7 +84,7 @@ Adobe强烈建议在安装后更改特权&#x200B;[**AEM** `admin`帐户](#changi
 
 有关更改Web控制台密码的更多信息，请参阅下面的[更改OSGi Web控制台管理员密码](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password) 。
 
-#### 更改OSGi Web控制台管理员密码{#changing-the-osgi-web-console-admin-password}
+#### 更改OSGi Web控制台管理员密码 {#changing-the-osgi-web-console-admin-password}
 
 您还必须更改用于访问Web控制台的密码。 这是通过配置[Apache Felix OSGi管理控制台](/help/sites-deploying/osgi-configuration-settings.md)的以下属性来完成的：
 
@@ -99,7 +99,7 @@ Adobe强烈建议在安装后更改特权&#x200B;[**AEM** `admin`帐户](#changi
 
 1. 单击&#x200B;**保存**。
 
-### 实施自定义错误处理程序{#implement-custom-error-handler}
+### 实施自定义错误处理程序 {#implement-custom-error-handler}
 
 Adobe建议定义自定义错误处理程序页面，尤其是404和500 HTTP响应代码的页面，以防止信息泄露。
 
@@ -107,7 +107,7 @@ Adobe建议定义自定义错误处理程序页面，尤其是404和500 HTTP响�
 >
 >有关更多详细信息，请参阅[如何创建自定义脚本或错误处理程序](https://helpx.adobe.com/experience-manager/kb/CustomErrorHandling.html)知识库文章。
 
-### 完成Dispatcher安全检查表{#complete-dispatcher-security-checklist}
+### 完整的Dispatcher安全检查列表 {#complete-dispatcher-security-checklist}
 
 AEM Dispatcher是您基础架构的关键部分。 Adobe强烈建议您完成[调度程序安全检查列表](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/security-checklist.html)。
 
@@ -115,9 +115,9 @@ AEM Dispatcher是您基础架构的关键部分。 Adobe强烈建议您完成[�
 >
 >使用调度程序，您必须禁用“.form”选择器。
 
-## 验证步骤{#verification-steps}
+## 验证步骤 {#verification-steps}
 
-### 配置复制和传输用户{#configure-replication-and-transport-users}
+### 配置复制和传输用户 {#configure-replication-and-transport-users}
 
 标准的AEM安装将`admin`指定为默认[复制代理](/help/sites-deploying/replication.md)内传输凭据的用户。 此外，管理员用户还用于在创作系统上源复制。
 
@@ -129,13 +129,13 @@ AEM Dispatcher是您基础架构的关键部分。 Adobe强烈建议您完成[�
 
 * **复制用户**&#x200B;或&#x200B;**代理用户Id**&#x200B;也不应是管理员用户，而应是只能查看应复制内容的用户。 复制用户用于在将内容发送到发布者之前收集要在创作系统上复制的内容。
 
-### 检查操作仪表板安全运行状况检查{#check-the-operations-dashboard-security-health-checks}
+### 检查操作仪表板安全运行状况检查 {#check-the-operations-dashboard-security-health-checks}
 
 AEM 6引入了新的操作仪表板，旨在帮助系统操作员解决问题并监视实例的运行状况。
 
 仪表板还附带一组安全运行状况检查。 建议您在生产实例上线之前检查所有安全运行状况检查的状态。 有关更多信息，请参阅[操作功能板文档](/help/sites-administering/operations-dashboard.md)。
 
-### 检查示例内容是否存在{#check-if-example-content-is-present}
+### 检查示例内容是否存在 {#check-if-example-content-is-present}
 
 所有示例内容和用户(例如，Geometrixx项目及其组件)都应在生产系统上完全卸载和删除，然后才能公开访问。
 
@@ -143,7 +143,7 @@ AEM 6引入了新的操作仪表板，旨在帮助系统操作员解决问题并
 >
 >如果此实例在[生产就绪模式](/help/sites-administering/production-ready.md)中运行，则将删除示例We.Retail应用程序。 如果由于任何原因，情况并非如此，您可以转到包管理器以卸载示例内容，然后搜索并卸载所有We.Retail包。 有关更多信息，请参阅[使用包](package-manager.md)。
 
-### 检查CRX开发包是否存在{#check-if-the-crx-development-bundles-are-present}
+### 检查CRX开发包是否存在 {#check-if-the-crx-development-bundles-are-present}
 
 应先在创作和发布生产系统上卸载这些开发OSGi包，然后再使其可以访问。
 
@@ -151,19 +151,19 @@ AEM 6引入了新的操作仪表板，旨在帮助系统操作员解决问题并
 * AdobeGranite CRX Explorer(com.adobe.granite.crx-explorer)
 * AdobeGraniteCRXDE Lite(com.adobe.granite.crxde-lite)
 
-### 检查Sling开发包是否存在{#check-if-the-sling-development-bundle-is-present}
+### 检查Sling开发包是否存在 {#check-if-the-sling-development-bundle-is-present}
 
 [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md)部署了Apache Sling工具支持安装(org.apache.sling.tooliping.support.install)。
 
 应在创作和发布生产系统上卸载此OSGi包，然后才能使其可访问。
 
-### Protect反跨站点请求伪造{#protect-against-cross-site-request-forgery}
+### Protect防止跨站点请求伪造 {#protect-against-cross-site-request-forgery}
 
-#### CSRF保护框架{#the-csrf-protection-framework}
+#### CSRF保护框架 {#the-csrf-protection-framework}
 
 AEM 6.1附带一种有助于防止跨站点请求伪造攻击的机制，称为&#x200B;**CSRF保护框架**。 有关如何使用该域的更多信息，请参阅[文档](/help/sites-developing/csrf-protection.md)。
 
-#### Sling反向链接过滤器{#the-sling-referrer-filter}
+#### Sling反向链接过滤器 {#the-sling-referrer-filter}
 
 要解决CRX WebDAV和Apache Sling中跨站点请求伪造(CSRF)的已知安全问题，您需要为反向链接过滤器添加配置才能使用该过滤器。
 
@@ -206,7 +206,7 @@ AEM 6.1附带一种有助于防止跨站点请求伪造攻击的机制，称为&
 
 1. 单击&#x200B;**Save**&#x200B;以保存更改。
 
-### OSGi设置{#osgi-settings}
+### OSGI设置 {#osgi-settings}
 
 默认情况下，会设置一些OSGi设置，以便更轻松地调试应用程序。 需要在您的发布和创作生产实例中更改这些内容，以避免内部信息泄露给公众。
 
@@ -244,11 +244,11 @@ AEM 6.1附带一种有助于防止跨站点请求伪造攻击的机制，称为&
 
 使用AEM时，可通过多种方法来管理此类服务的配置设置；有关更多详细信息和建议的实践，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md) 。
 
-## 进一步读数{#further-readings}
+## 进一步读数 {#further-readings}
 
-### 缓解拒绝服务(DoS)攻击{#mitigate-denial-of-service-dos-attacks}
+### 缓解拒绝服务(DoS)攻击 {#mitigate-denial-of-service-dos-attacks}
 
-拒绝服务(DoS)攻击是试图使计算机资源对其目标用户不可用。 这通常是通过超载资源来完成的；例如：
+拒绝服务 (DoS) 攻击是一种试图让计算机资源对其目标用户不可用的攻击。这通常是通过超载资源来完成的；例如：
 
 * 来自外部源的大量请求。
 * 请求的信息比系统成功交付的信息要多。
@@ -301,7 +301,7 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
 
       **JSON最大结果** ( `json.maximumresults`)
 
-      在[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)的配置中。 超过此限制时，呈现将折叠。 AEM中Sling的默认值为`200`。
+      在[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)的配置中。 超过此限制时，呈现将折叠。 AEM中Sling的默认值为`1000`。
 
    * 作为一种预防措施，可禁用其他默认渲染器（HTML、纯文本、XML）。 再次通过配置[Apache SlingGETServlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)来执行此操作。
    >[!CAUTION]
@@ -343,7 +343,7 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
 
    `https://<*host*>:<*port*>/system/console`
 
-   例如`http://localhost:4503/system/console/bundles`。
+   例如 `http://localhost:4503/system/console/bundles`.
 
 1. 在包列表中，找到名为的包：
 
@@ -361,7 +361,7 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
    >
    >无需重新启动AEM。
 
-### 确认您未在用户主页路径{#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}中披露个人身份信息
+### 确认您未在用户主页路径中披露个人身份信息 {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
 
 通过确保不会在存储库用户主页路径中显示任何个人身份信息，保护用户至关重要。
 
@@ -383,13 +383,13 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
 >
 >有关更多信息，请参阅[可授权节点名称生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html)上的Oak文档。
 
-### 阻止Clickjacking {#prevent-clickjacking}
+### 防御点击劫持攻击 {#prevent-clickjacking}
 
-为防止Clickjacking，我们建议您将Web服务器配置为提供设置为`SAMEORIGIN`的`X-FRAME-OPTIONS` HTTP标头。
+要防御点击劫持攻击，建议您将 Web 服务器配置为将 `X-FRAME-OPTIONS` HTTP 标头集提供给 `SAMEORIGIN`。
 
-有关点击顶升的详细信息，请参见OWASP网站](https://www.owasp.org/index.php/Clickjacking)。[
+有关[点击劫持攻击的更多信息，请参阅 OWASP 网站](https://www.owasp.org/index.php/Clickjacking)。
 
-### 确保在需要时正确复制加密密钥{#make-sure-you-properly-replicate-encryption-keys-when-needed}
+### 确保在需要时正确复制加密密钥 {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
 某些AEM功能和身份验证方案要求您在所有AEM实例中复制加密密钥。
 
@@ -397,7 +397,7 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
 
 有关更多信息，请参阅下文。
 
-#### 复制AEM 6.3 {#replicating-keys-for-aem}的密钥
+#### 复制AEM 6.3的密钥 {#replicating-keys-for-aem}
 
 而在较旧版本中，复制密钥存储在存储库中，从AEM 6.3开始，它们存储在文件系统中。
 
@@ -431,7 +431,7 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
 >
 >`-Dcom.adobe.granite.crypto.file.disable=true`
 
-#### 复制AEM 6.2及更低版本{#replicating-keys-for-aem-and-older-versions}的密钥
+#### 复制AEM 6.2及更低版本的密钥 {#replicating-keys-for-aem-and-older-versions}
 
 在AEM 6.2及更低版本中，键存储在`/etc/key`节点下的存储库中。
 
@@ -442,10 +442,10 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
 1. 转到&#x200B;**Replication**&#x200B;选项卡。
 1. 按&#x200B;**Replication**&#x200B;按钮。
 
-### 执行渗透测试{#perform-a-penetration-test}
+### 执行渗透测试 {#perform-a-penetration-test}
 
-Adobe强烈建议在开始生产之前对AEM基础架构进行渗透测试。
+Adobe 强烈建议您在开始生产之前对 AEM 基础架构执行渗透测试。
 
-### 开发最佳实践{#development-best-practices}
+### 开发最佳实践 {#development-best-practices}
 
 新开发必须遵循[安全最佳实践](/help/sites-developing/security.md)，以确保AEM环境安全。
