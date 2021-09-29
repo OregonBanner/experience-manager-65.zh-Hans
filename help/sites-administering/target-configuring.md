@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: fb14c1901394198de59c2369563a9dcca2f95f4e
+source-git-commit: 6930d3f6449c8ebd18214c96ddec0bcb61b998c8
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2209'
 ht-degree: 4%
 
 ---
@@ -88,14 +88,14 @@ ht-degree: 4%
    >使用AEM配置A4T时，您可能会看到缺少条目的配置引用。 要选择分析框架，请执行以下操作：
    >
    >1. 导航到&#x200B;**工具** > **常规** > **CRXDE Lite**。
-   1. 导航到[1]（请参阅下文）
+   1. 导航到[A4T Analytics配置对话框](#a4t-analytics-config-dialog)（请参阅下文）
    1. 将属性&#x200B;**disable**&#x200B;设置为&#x200B;**false**。
    1. 点按或单击&#x200B;**全部保存**。
 
 
-[1]
+#### A4T Analytics配置对话框 {#a4t-analytics-config-dialog}
 
-```
+```xml
 /libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
 ```
 
