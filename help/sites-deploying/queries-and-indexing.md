@@ -1,8 +1,8 @@
 ---
 title: Oak查询和索引
-seo-title: Oak查询和索引
+seo-title: Oak Queries and Indexing
 description: 了解如何在AEM中配置索引。
-seo-description: 了解如何在AEM中配置索引。
+seo-description: Learn how to configure indexes in AEM.
 uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,11 +10,11 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
-feature: 配置
+feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7cd4b6918a8b0de68f9f5c6a79ab3b49e8ef6fc1
 workflow-type: tm+mt
-source-wordcount: '2881'
+source-wordcount: '2868'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 *WARN* Traversed 1000 nodes with filter Filter(query=select ...) consider creating an index or changing the query
 ```
 
-## 支持的查询语言{#supported-query-languages}
+## 支持的查询语言 {#supported-query-languages}
 
 Oak查询引擎支持以下语言：
 
@@ -44,7 +44,7 @@ Oak查询引擎支持以下语言：
 * SQL（已弃用）
 * JQOM
 
-## 索引器类型和成本计算{#indexer-types-and-cost-calculation}
+## 索引器类型和成本计算 {#indexer-types-and-cost-calculation}
 
 基于Apache Oak的后端允许将不同的索引器插入存储库。
 
@@ -64,19 +64,19 @@ Oak查询引擎支持以下语言：
 
 接下来，将参考每个索引以估算查询的成本。 完成后，将检索最便宜指数的结果。 最后，过滤结果，以确保当前用户具有对结果的读取权限，并且结果与完整查询匹配。
 
-## 配置索引{#configuring-the-indexes}
+## 配置索引 {#configuring-the-indexes}
 
 >[!NOTE]
 >
 >对于大型存储库，构建索引是一项非常耗时的操作。 对于初始创建索引和重新索引（在更改定义后重建索引），都是如此。 另请参阅[Oak索引疑难解答](/help/sites-deploying/troubleshooting-oak-indexes.md)和[防止慢速重新索引](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing)。
 
-如果在非常大的存储库中需要重新索引，特别是在使用MongoDB和对全文索引时，请考虑文本预提取，并使用oak-run构建初始索引和重新索引。
+如果在非常大的存储库中需要重新编制索引，特别是在使用MongoDB和对全文索引时，请考虑文本预提取，使用oak-run构建初始索引并重新编制索引。
 
 索引将配置为存储库中&#x200B;**oak:index**&#x200B;节点下的节点。
 
 索引节点的类型必须为&#x200B;**oak:QueryIndexDefinition。** 每个索引器都有几个配置选项作为节点属性。有关详细信息，请参阅下面每个索引器类型的配置详细信息。
 
-### 属性索引{#the-property-index}
+### 属性索引 {#the-property-index}
 
 属性索引通常适用于具有属性约束但不是全文的查询。 它可以按照以下过程进行配置：
 
@@ -101,13 +101,13 @@ Oak查询引擎支持以下语言：
 * **唯一**&#x200B;标记，如果设置为&#x200B;**true**，则会在属性索引中添加唯一性约束。
 
 * **declaringNodeTypes**&#x200B;属性允许您指定索引将仅应用于的特定节点类型。
-* **reindex**&#x200B;标记，如果设置为&#x200B;**true**，则会触发完整的内容重新索引。
+* **reindex**&#x200B;标记如果设置为&#x200B;**true**，将触发完整的内容重新索引。
 
-### 有序索引{#the-ordered-index}
+### 有序索引 {#the-ordered-index}
 
 Ordered索引是属性索引的扩展。 但是，它已被弃用。 此类型的索引需要替换为[Lucene属性索引](#the-lucene-property-index)。
 
-### Lucene全文索引{#the-lucene-full-text-index}
+### Lucene全文索引 {#the-lucene-full-text-index}
 
 AEM 6中提供了基于Apache Lucene的全文索引器。
 
@@ -115,7 +115,7 @@ AEM 6中提供了基于Apache Lucene的全文索引器。
 
 如果未配置全文索引，则包含全文条件的查询将无法按预期工作。
 
-由于索引是通过异步后台线程更新的，因此在后台进程完成之前，某些全文搜索将在一小段时间内不可用。
+由于索引是通过异步后台线程更新的，因此在后台进程完成之前，某些全文搜索在一段较短的时间内将不可用。
 
 您可以按照以下步骤配置Lucene全文索引：
 
@@ -136,7 +136,7 @@ Lucene索引具有以下配置选项：
 * **excludePropertyNames**&#x200B;属性，该属性将定义属性名称列表 — 应从索引中排除的属性。
 * **reindex**&#x200B;标记，当设置为&#x200B;**true**&#x200B;时，将触发完整的内容重新索引。
 
-### Lucene属性索引{#the-lucene-property-index}
+### Lucene属性索引 {#the-lucene-property-index}
 
 由于&#x200B;**Oak 1.0.8**，因此Lucene可用于创建包含非全文属性约束的索引。
 
@@ -157,19 +157,19 @@ select * from [nt:base] where [alias] = '/admin'
 
 * **类型:**
 
-   ```
+   ```xml
    lucene (of type String)
    ```
 
 * **异步:**
 
-   ```
+   ```xml
    async (of type String)
    ```
 
 * **fulltextEnabled:**
 
-   ```
+   ```xml
    false (of type Boolean)
    ```
 
@@ -183,7 +183,7 @@ select * from [nt:base] where [alias] = '/admin'
 >
 >有关Lucene属性索引的更多具体信息，请参阅[Apache Jackrabbit Oak Lucene文档页面](https://jackrabbit.apache.org/oak/docs/query/lucene.html)。
 
-### Lucene分析程序{#lucene-analyzers}
+### Lucene分析程序 {#lucene-analyzers}
 
 自版本1.2.0起，Oak支持Lucene分析程序。
 
@@ -199,7 +199,7 @@ select * from [nt:base] where [alias] = '/admin'
 >
 >有关可用分析程序的列表，请查阅您所使用的Lucene版本的API文档。
 
-#### 直接指定分析器类{#specifying-the-analyzer-class-directly}
+#### 直接指定分析器类 {#specifying-the-analyzer-class-directly}
 
 如果您希望使用任何现成的分析器，可以按照以下过程对其进行配置：
 
@@ -228,7 +228,7 @@ select * from [nt:base] where [alias] = '/admin'
    * **名称:** `stopwords`
    * **类型:** `nt:file`
 
-#### 通过组合{#creating-analyzers-via-composition}创建分析程序
+#### 通过合成创建分析程序 {#creating-analyzers-via-composition}
 
 分析程序也可以基于`Tokenizers`、`TokenFilters`和`CharFilters`进行组合。 为此，您可以指定一个分析器，并创建其可选令牌和过滤器的子节点，这些节点将按列表顺序应用。 另请参阅[https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
@@ -282,7 +282,7 @@ select * from [nt:base] where [alias] = '/admin'
 
 对于需要加载来自外部文件的内容的停止词等情况，可以通过为相关文件创建`nt:file`类型的子节点来提供内容。
 
-### 索尔指数{#the-solr-index}
+### 索尔指数 {#the-solr-index}
 
 索尔索引的目的主要是全文搜索，但也可以用于按路径、属性限制和主要类型限制进行索引搜索。 这意味着Oak中的Solr索引可用于任何类型的JCR查询。
 
@@ -290,7 +290,7 @@ AEM中的集成在存储库级别进行，因此Solr是可在Oak中使用的索�
 
 它可以配置为作为具有AEM实例的嵌入式服务器或作为远程服务器使用。
 
-### 使用嵌入的Solr服务器{#configuring-aem-with-an-embedded-solr-server}配置AEM
+### 使用嵌入的Solr服务器配置AEM {#configuring-aem-with-an-embedded-solr-server}
 
 >[!CAUTION]
 >
@@ -319,12 +319,12 @@ AEM可与可通过Web控制台配置的嵌入式Solr服务器一起使用。 在
 
 1. 保存更改。
 
-### 使用单个远程Solr服务器{#configuring-aem-with-a-single-remote-solr-server}配置AEM
+### 使用单个远程Solr服务器配置AEM {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM还可配置为与远程Solr服务器实例一起使用：
+AEM还可以配置为与远程Solr服务器实例一起使用：
 
 1. 下载并提取最新版本的Solr。 有关如何执行此操作的更多信息，请参阅[Apache Solr安装文档](https://cwiki.apache.org/confluence/display/solr/Installing+Solr)。
-1. 现在，创建两个索尔碎片。 为此，您可以在Solr已上线的文件夹中为每个共享创建文件夹：
+1. 现在，创建两个索尔碎片。 为此，您可以在Solr已解压的文件夹中为每个共享创建文件夹：
 
    * 对于第一个共享，创建文件夹：
 
@@ -382,9 +382,9 @@ AEM还可配置为与远程Solr服务器实例一起使用：
 
 1. 保存更改。
 
-#### Solr {#recommended-configuration-for-solr}的建议配置
+#### 推荐的Solr配置 {#recommended-configuration-for-solr}
 
-以下是基本配置示例，该示例可用于本文中描述的所有三个Solr部署。 它包含AEM中已存在的专用属性索引，这些索引不应用于其他应用程序。
+以下是基本配置示例，该示例可用于本文中描述的所有三个Solr部署。 它包含AEM中已存在且不应与其他应用程序一起使用的专用属性索引。
 
 要正确使用它，您需要将存档的内容直接放入Solr Home Directory中。 对于多节点部署，它应直接位于每个节点的根文件夹下。
 
@@ -392,7 +392,7 @@ AEM还可配置为与远程Solr服务器实例一起使用：
 
 [获取文件](assets/recommended-conf.zip)
 
-### AEM索引工具{#aem-indexing-tools}
+### AEM索引工具 {#aem-indexing-tools}
 
 AEM 6.1还集成了AEM 6.0中存在的两个索引工具，作为Adobe咨询服务共用工具集的一部分：
 
@@ -403,7 +403,7 @@ AEM 6.1还集成了AEM 6.0中存在的两个索引工具，作为Adobe咨询服�
 
 有关如何使用它们的更多信息，请参阅[操作功能板文档](/help/sites-administering/operations-dashboard.md)。
 
-#### 通过OSGi {#creating-property-indexes-via-osgi}创建属性索引
+#### 通过OSGi创建属性索引 {#creating-property-indexes-via-osgi}
 
 ACS Commons包还公开了可用于创建属性索引的OSGi配置。
 
@@ -411,19 +411,19 @@ ACS Commons包还公开了可用于创建属性索引的OSGi配置。
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
-### 索引问题疑难解答{#troubleshooting-indexing-issues}
+### 索引问题疑难解答 {#troubleshooting-indexing-issues}
 
 出现查询执行时间较长，且一般系统响应时间较慢的情况。
 
 本节就需要采取哪些措施来跟踪这些问题的原因提出一系列建议，并就如何解决这些问题提出建议。
 
-#### 为Analysis {#preparing-debugging-info-for-analysis}准备调试信息
+#### 准备用于分析的调试信息 {#preparing-debugging-info-for-analysis}
 
 获取正在执行的查询所需信息的最简单方法是通过[解释查询工具](/help/sites-administering/operations-dashboard.md#explain-query)。 这样，您就可以收集调试慢速查询所需的准确信息，而无需查阅日志级别信息。 如果您知道正在调试的查询，则此操作是理想的。
 
 如果由于任何原因无法实现此目的，您可以将索引日志收集到单个文件中，并使用它来解决您的特定问题。
 
-#### 启用日志记录{#enable-logging}
+#### 启用日志记录 {#enable-logging}
 
 要启用日志记录，您需要为与Oak索引和查询相关的类别启用&#x200B;**DEBUG**&#x200B;级别日志。 这些类别包括：
 
@@ -447,7 +447,7 @@ ACS Commons包还公开了可用于创建属性索引的OSGi配置。
 1. 运行查询或渲染使用要调试的查询的页面。
 1. 执行查询后，返回到日志记录控制台，并将新创建的日志记录器的日志级别更改为&#x200B;**INFO**。
 
-#### 索引配置{#index-configuration}
+#### 索引配置 {#index-configuration}
 
 查询的评估方式在很大程度上受索引配置的影响。 获取索引配置以便进行分析或发送给支持非常重要。 您可以作为内容包获取配置，也可以获取JSON呈现版本。
 
@@ -457,9 +457,9 @@ ACS Commons包还公开了可用于创建属性索引的OSGi配置。
 
 如果索引配置在其他位置，请相应地更改路径。
 
-#### MBean输出{#mbean-output}
+#### MBean输出 {#mbean-output}
 
-在某些情况下，提供与索引相关的MBean的输出以进行调试会很有帮助。 您可以通过以下方式执行此操作：
+在某些情况下，提供与索引相关的MBean的输出以进行调试会很有帮助。 您可以执行以下操作来实现此目标：
 
 1. 转到JMX控制台：
    `https://serveraddress:port/system/console/jmx`
@@ -482,7 +482,7 @@ ACS Commons包还公开了可用于创建属性索引的OSGi配置。
 
 您还可以通过`https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak.tidy.3.json`提供统一的JMX输出。 这将包含JSON格式的所有与Oak相关的MBean详细信息。
 
-#### 其他详细信息{#other-details}
+#### 其他详细信息 {#other-details}
 
 您可以收集其他详细信息以帮助解决问题，例如：
 
