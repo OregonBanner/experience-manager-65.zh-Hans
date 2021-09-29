@@ -1,19 +1,19 @@
 ---
 title: 配置翻译集成框架
-seo-title: 配置翻译集成框架
+seo-title: Configuring the Translation Integration Framework
 description: 了解如何配置翻译集成框架。
-seo-description: 了解如何配置翻译集成框架。
+seo-description: Learn how to configure the Translation Integration Framework.
 uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
-feature: 语言复制
+feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: bed7ffd413c7826cf0e419fa1c31e3d3c325d4b1
+source-git-commit: cadf2e240327ef52ef57f8fb2e911f36fd003852
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1550'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 有关AEM中内容翻译功能的概述，请参阅[多语言站点的内容翻译](/help/sites-administering/translation.md)。
 
-## 连接到翻译服务提供商{#connecting-to-a-translation-service-provider}
+## 连接到翻译服务提供商 {#connecting-to-a-translation-service-provider}
 
 创建将AEM连接到翻译服务提供商的云配置。 AEM默认包含连接到Microsoft Translator的功能。
 以下翻译供应商为翻译项目提供了新API的实施。 链接可了解有关集成的更多信息：
@@ -38,7 +38,6 @@ ht-degree: 2%
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Cloudwords](https://exchange.adobe.com/experiencecloud.details.90019.html)
-* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
 * [XTM云](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [林戈特克](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
 * [智能玲](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
@@ -58,14 +57,13 @@ ht-degree: 2%
 >
 
 
-
 安装连接器包后，可以为连接器创建云配置。 通常，您需要提供凭据以通过翻译服务进行身份验证。 有关为Microsoft Translator连接器添加云配置的信息，请参阅[与Microsoft Translator集成](/help/sites-administering/tc-msconf.md)。
 
 您可以根据需要为同一连接器创建多个云配置。 例如，为您与同一供应商拥有的每个帐户或项目创建一个配置。
 
 配置连接后，您可以创建使用该连接的翻译集成框架配置。
 
-## 创建翻译集成配置{#creating-a-translation-integration-configuration}
+## 创建翻译集成配置 {#creating-a-translation-integration-configuration}
 
 创建翻译集成框架配置以指定如何翻译内容。 配置包括以下信息：
 
@@ -84,7 +82,7 @@ ht-degree: 2%
 框架的单个配置可控制如何翻译页面内容、社区内容和资产。
 ![chlimage_1-386](assets/translation-config-65.jpg)
 
-### 站点配置属性{#sites-configuration-properties}
+### 站点配置属性 {#sites-configuration-properties}
 
 “站点”属性可控制页面内容翻译的执行方式。
 
@@ -131,7 +129,7 @@ ht-degree: 2%
  </tbody>
 </table>
 
-### 社区配置属性{#communities-configuration-properties}
+### 社区配置属性 {#communities-configuration-properties}
 
 社区属性控制如何执行用户生成内容的翻译。 用户生成内容的翻译始终使用机器翻译。 有关更多信息，请参阅[翻译用户生成的内容](/help/communities/translate-ugc.md)。
 
@@ -141,7 +139,7 @@ ht-degree: 2%
 | 内容目录 | 描述要翻译的内容的类别。 在翻译内容时，类别会影响术语和措辞的选择。 |
 | 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，所有语言副本中的帖子将显示在一个全局对话中。 按照惯例，为网站选择[基本语言](/help/communities/sites-console.md#translation)的区域设置。 选择“无公用商店”将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
 
-### 资产配置属性{#assets-configuration-properties}
+### 资产配置属性 {#assets-configuration-properties}
 
 资产属性可控制如何配置资产。 有关翻译资产的更多信息，请参阅[为资产创建语言副本](/help/assets/translation-projects.md)。
 
@@ -196,7 +194,7 @@ ht-degree: 2%
 1. 键入配置的名称，然后单击或点按创建。
 1. 在站点、社区和资产选项卡中配置属性，然后单击或点按确定。
 
-## 配置翻译页面{#configuring-pages-for-translation}
+## 配置翻译页面 {#configuring-pages-for-translation}
 
 要配置将源页面翻译成其他语言，请将这些页面与以下云配置关联：
 
@@ -211,7 +209,7 @@ ht-degree: 2%
 
 此外，对于页面上的任何社区[SCF组件](/help/communities/scf.md)，用户生成的内容(UGC)将包括用户翻译内容的功能。 有关更多信息，请参阅[用户生成内容的翻译](/help/communities/translate-ugc.md)。
 
-### 将页面与翻译提供程序{#associating-a-page-with-a-translation-provider}关联
+### 将页面与翻译提供程序关联 {#associating-a-page-with-a-translation-provider}
 
 将页面与您用来翻译页面和子代页面的翻译提供程序关联。
 
@@ -220,7 +218,7 @@ ht-degree: 2%
 1. 单击或点按添加配置>翻译集成。
 1. 选择要使用的翻译提供程序，然后单击或点按完成。
 
-### 将页面与翻译集成框架{#associating-pages-with-a-translation-integration-framework}关联
+### 将页面与翻译集成框架关联 {#associating-pages-with-a-translation-integration-framework}
 
 将页面与翻译集成框架关联，该框架定义您希望如何翻译页面和子页面。
 
