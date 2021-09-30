@@ -1,8 +1,8 @@
 ---
 title: SAML 2.0 身份验证处理程序
-seo-title: SAML 2.0 身份验证处理程序
+seo-title: SAML 2.0 Authentication Handler
 description: 了解AEM中的SAML 2.0身份验证处理程序。
-seo-description: 了解AEM中的SAML 2.0身份验证处理程序。
+seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6bc60122d2512a6f58c0204cd240a1b99a37ed93
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '842'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ AEM随[SAML](http://saml.xml.org/saml-specifications)身份验证处理程序一
 >
 >要阅读端到端社区文章，请单击：[将SAML与Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html)集成。
 
-## 配置SAML 2.0身份验证处理程序{#configuring-the-saml-authentication-handler}
+## 配置SAML 2.0身份验证处理程序 {#configuring-the-saml-authentication-handler}
 
 [Web控制台](/help/sites-deploying/configuring-osgi.md)提供对[SAML](http://saml.xml.org/saml-specifications) 2.0身份验证处理程序配置(称为&#x200B;**AdobeGranite SAML 2.0身份验证处理程序**)的访问。 可以设置以下属性。
 
@@ -50,10 +50,9 @@ AEM随[SAML](http://saml.xml.org/saml-specifications)身份验证处理程序一
 >
 
 
-
 >[!NOTE]
 >
->SAML断言已签名，并且可以选择进行加密。 要使此功能正常工作，您必须在TrustStore中至少提供身份提供商的公共证书。 有关更多信息，请参阅[将IdP证书添加到TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)部分。
+>SAML断言已签名，并且可以选择进行加密。 要使此功能正常工作，您必须在TrustStore中至少提供身份提供者的公共证书。 有关更多信息，请参阅[将IdP证书添加到TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)部分。
 
 **** Sling应使用此身份验证处理程序的PathRepository路径。如果为空，则将禁用身份验证处理程序。
 
@@ -107,7 +106,7 @@ SAML断言已签名，并且可以选择进行加密。 要使其正常工作，
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-## 将服务提供商密钥和证书链添加到AEM密钥库{#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
+## 将服务提供商密钥和证书链添加到AEM密钥库 {#add-the-service-provider-key-and-certificate-chain-to-the-aem-keystore}
 
 >[!NOTE]
 >
@@ -127,9 +126,9 @@ SAML断言已签名，并且可以选择进行加密。 要使其正常工作，
 
    ![chlimage_1-373](assets/chlimage_1-373.png)
 
-## 为SAML {#configure-a-logger-for-saml}配置日志记录器
+## 为SAML配置日志记录器 {#configure-a-logger-for-saml}
 
-您可以设置一个记录器，以调试因错误配置SAML而可能引发的任何问题。 您可以通过以下方式执行此操作：
+您可以设置一个记录器，以调试因错误配置SAML而可能引发的任何问题。 您可以执行以下操作来实现此目标：
 
 1. 转到Web控制台，位于&#x200B;*http://localhost:4502/system/console/configMgr*
 1. 搜索并单击名为&#x200B;**Apache Sling日志记录记录器配置**&#x200B;的条目
