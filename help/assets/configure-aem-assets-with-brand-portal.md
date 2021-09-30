@@ -12,7 +12,7 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: d995173140237f34a03c8e84128ad9d657c9a026
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
 source-wordcount: '2053'
 ht-degree: 7%
@@ -66,7 +66,7 @@ AEM Assets通过Adobe开发人员控制台使用Brand Portal进行配置，从�
 
 建议让AEM 6.5来设置AEM创作实例。 如果您没有启动并运行AEM，请从以下位置下载它：
 
-* 如果您是现有AEM客户，请从[Adobe授权网站](http://licensing.adobe.com)下载AEM 6.5。
+* 如果您是现有AEM客户，请从[Adobe授权网站](https://licensing.adobe.com)下载AEM 6.5。
 
 * 如果您是Adobe合作伙伴，请使用[Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)请求AEM 6.5。
 
@@ -118,9 +118,9 @@ IMS 配置包括两个步骤：
 
 1. 登录到您的AEM Assets创作实例。 默认URL为`http://localhost:4502/aem/start.html`。
 
-1. 从&#x200B;**Tools** ![Tools](assets/do-not-localize/tools.png)面板中，导航到&#x200B;**[!UICONTROL Security]** > **[!UICONTROL AdobeIMS配置]**。
+1. 从&#x200B;**Tools** ![Tools](assets/do-not-localize/tools.png)面板中，导航到&#x200B;**[!UICONTROL Security]** > **[!UICONTROL Adobe IMS配置]**。
 
-1. 在“AdobeIMS配置”页面中，单击&#x200B;**[!UICONTROL 创建]**。 它将重定向到&#x200B;**[!UICONTROL AdobeIMS技术帐户配置]**&#x200B;页面。 默认情况下，将打开&#x200B;**Certificate**&#x200B;选项卡。
+1. 在Adobe IMS配置页面中，单击&#x200B;**[!UICONTROL 创建]**。 它将重定向到&#x200B;**[!UICONTROL Adobe IMS技术帐户配置]**&#x200B;页面。 默认情况下，将打开&#x200B;**Certificate**&#x200B;选项卡。
 
 1. 在&#x200B;**[!UICONTROL 云解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL AdobeBrand Portal]**。
 
@@ -138,7 +138,7 @@ IMS 配置包括两个步骤：
 
 1. 单击&#x200B;**[!UICONTROL 下一步]**。
 
-   在&#x200B;**帐户**&#x200B;选项卡中，将创建AdobeIMS帐户，该帐户需要在Adobe开发人员控制台中生成的服务帐户凭据。 暂时保持此页面打开。
+   在&#x200B;**帐户**&#x200B;选项卡中，将创建Adobe IMS帐户，该帐户需要在Adobe开发人员控制台中生成的服务帐户凭据。 暂时保持此页面打开。
 
    在Adobe开发人员控制台](#createnewintegration)中打开新选项卡并[创建服务帐户(JWT)连接，以获取用于配置IMS帐户的凭据和JWT有效负载。
 

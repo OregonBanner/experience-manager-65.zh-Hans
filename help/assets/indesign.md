@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 0a4c27432e4005fa3999f7c6a776ef51b10d9746
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1591'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] 将作为两个单独的产品提供。[Adobe](https://www.adobe.com/products/indesign.html) InDesigndesktop应用程序，用于设计用于打印和数字分发的页面布局。[Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Serverenals允许您根据您使用创建的内容以编程方式创建自动化文 [!DNL InDesign]档。它作为提供其[ExtendScript](https://www.adobe.com/devnet/scripting.html)引擎接口的服务运行。脚本以[!DNL ExtendScript]编写，与[!DNL JavaScript]类似。 有关[!DNL InDesign]脚本的信息，请参阅[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
+>[!DNL Adobe InDesign] 将作为两个单独的产品提供。[Adobe](https://www.adobe.com/products/indesign.html) InDesigndesktop应用程序，用于设计用于打印和数字分发的页面布局。[Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Serverenals允许您根据您使用创建的内容以编程方式创建自动化文 [!DNL InDesign]档。它作为提供其[ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)引擎接口的服务运行。脚本以[!DNL ExtendScript]编写，与[!DNL JavaScript]类似。 有关[!DNL InDesign]脚本的信息，请参阅[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)。
 
 ## 提取工作原理 {#how-the-extraction-works}
 
