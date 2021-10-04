@@ -1,8 +1,8 @@
 ---
 title: 编辑页面属性
-seo-title: 编辑页面属性
+seo-title: Editing Page Properties
 description: 为页面定义所需的属性
-seo-description: 为页面定义所需的属性
+seo-description: Define the required properties for a page
 uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 85%
+source-wordcount: '1898'
+ht-degree: 82%
 
 ---
 
@@ -123,7 +123,7 @@ ht-degree: 85%
 
    指示此页面应自动重定向到的页面。
 
-* **设计**
+* **Design**
 
    指示要用于此页面的[设计](/help/sites-developing/designer.md)。
 
@@ -131,13 +131,10 @@ ht-degree: 85%
 
    指定要用于此页面的别名。
 
-   >[!NOTE]
-   >
-   >别名会设置 `sling:alias` 属性以定义资源的别名（这仅会影响资源，不会影响路径）。
-   >
-   >例如：如果您为节点 `/content/we-retail/spanish` 定义别名 `latin-lang`，则可以通过 `/content/we-retail/latin-language` 访问此页面。
-   >
-   >有关更多详细信息，请参阅“SEO和URL管理最佳实践”下的[本地化的页面名称](/help/managing/seo-and-url-management.md#localized-page-names)。
+   * 例如，如果为页面`/content/wknd/us/en/magazine/members-only`定义别名`private`，则也可以通过`/content/wknd/us/en/magazine/private`访问此页面
+   * 创建别名会在页面节点上设置`sling:alias`属性，这仅会影响资源，而不会影响存储库路径。
+   * 无法发布编辑器中别名访问的页面。 [编辑](/help/sites-authoring/publishing-pages.md) 器中的发布选项仅适用于通过实际路径访问的页面。
+   * 有关更多详细信息，请参阅“SEO和URL管理最佳实践”下的[本地化的页面名称](/help/managing/seo-and-url-management.md#localized-page-names)。
 
 * **继承自 &lt;*路径*>**
 
@@ -251,13 +248,13 @@ ht-degree: 85%
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Blueprint 页面定义属性。控制将修改传播到 Live Copy 的情况。
 
-### Live Copy  {#live-copy}
+### Live Copy {#live-copy}
 
 * **Live Copy**
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Live Copy 页面定义属性。控制将从 Blueprint 中传播修改的情况。
 
-### 站点结构  {#site-structure}
+### 站点结构 {#site-structure}
 
 * 提供具有全站点功能的页面的链接，例如&#x200B;**注册页面**、**脱机页面**&#x200B;以及其他。
 
