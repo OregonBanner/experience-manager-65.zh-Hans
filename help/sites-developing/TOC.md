@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: b82544398ca414afab867f188f33ae60989596f3
+source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '917'
 ht-degree: 16%
 
 ---
@@ -151,6 +151,7 @@ ht-degree: 16%
       + [Client Context详细信息](client-context.md)
       + [Client Context Javascript API](ccjsapi.md)
 + 扩展AEM{#extending-aem}
+   + [使用Adobe开发人员应用程序生成器扩展AEM](app-builder.md)
    + [自定义页面创作](customizing-page-authoring-touch.md)
    + [自定义控制台](customizing-consoles-touch.md)
    + [自定义页面属性的视图](page-properties-views.md)
