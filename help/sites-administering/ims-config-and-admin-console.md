@@ -1,8 +1,8 @@
 ---
-title: AdobeIMS身份验证和 [!DNL Admin Console] 对AEM Managed Services的支持
-seo-title: AdobeIMS身份验证和 [!DNL Admin Console] 对AEM Managed Services的支持
+title: Adobe IMS身份验证和 [!DNL Admin Console] 支持AEM Managed Services
+seo-title: Adobe IMS Authentication and [!DNL Admin Console] Support for AEM Managed Services
 description: 了解如何在AEM中使用 [!DNL Admin Console] 。
-seo-description: 了解如何在AEM中使用 [!DNL Admin Console] 。
+seo-description: Learn how to use the [!DNL Admin Console] in AEM.
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,23 +10,27 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
-feature: 安全
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Security
+source-git-commit: 3f55ebfe3b1603a573fcb77155227c449c6c0fbb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1688'
 ht-degree: 10%
 
 ---
 
-# AdobeIMS身份验证和[!DNL Admin Console]支持AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
+# Adobe IMS身份验证和[!DNL Admin Console]支持AEM Managed Services {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
 >
 >请注意，此功能仅适用于Adobe Managed Services客户。
 
+>[!NOTE]
+>
+>AEM的IMS登录不支持Admin Console中的嵌套组。
+
 ## 简介 {#introduction}
 
-AEM 6.4.3.0引入了[!DNL Admin Console]对AEM实例和基于AdobeIMS(Identity Management系统)的身份验证的支持，用于&#x200B;**AEM Managed Services**&#x200B;客户。
+AEM 6.4.3.0为&#x200B;**AEM Managed Services**&#x200B;客户引入了[!DNL Admin Console]对AEM实例和基于Adobe IMS(Identity Management系统)的身份验证的支持。
 
 AEM的[!DNL Admin Console]入门允许AEM Managed Services客户在一个控制台中管理所有Experience Cloud用户。 可以将用户和组分配到与AEM实例关联的产品配置文件，从而允许他们登录到特定实例。
 
@@ -42,19 +46,19 @@ AEM的[!DNL Admin Console]入门允许AEM Managed Services客户在一个控制�
 
 ## 架构 {#architecture}
 
-IMS身份验证通过在AEM和AdobeIMS端点之间使用OAuth协议来工作。 将用户添加到 IMS 并拥有 Adobe 身份后，他们便可以使用 IMS 凭证登录到 AEM Managed Services 实例。
+IMS身份验证通过在AEM和Adobe IMS端点之间使用OAuth协议来工作。 将用户添加到 IMS 并拥有 Adobe 身份后，他们便可以使用 IMS 凭证登录到 AEM Managed Services 实例。
 
 下面显示了用户登录流程，用户将被重定向到IMS，并（可选）重定向到客户IDP以进行SSO验证，然后重定向回AEM。
 
 ![image2018-9-23_23-55-8](assets/image2018-9-23_23-55-8.png)
 
-## 如何设置{#how-to-set-up}
+## 如何设置 {#how-to-set-up}
 
 ### 将组织载入[!DNL Admin Console] {#onboarding-organizations-to-admin-console}
 
-[!DNL Admin Console]的客户载入是使用AdobeIMS进行AEM身份验证的先决条件。
+[!DNL Admin Console]的客户入门是使用Adobe IMS进行AEM身份验证的先决条件。
 
-第一步，客户应在AdobeIMS中设置组织。 Adobe企业客户在[Adobe [!DNL Admin Console]](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)中表示为IMS组织。
+第一步，客户应在Adobe IMS中设置组织。 Adobe企业客户在[Adobe [!DNL Admin Console]](https://helpx.adobe.com/cn/enterprise/using/admin-console.html)中表示为IMS组织。
 
 AEM Managed Services客户应已设置组织，作为IMS设置的一部分，将在[!DNL Admin Console]中提供客户实例，以用于管理用户权限和访问权限。
 
@@ -84,7 +88,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，将
 1. 上传包含用户的CSV文件
 1. 从客户的企业Active Directory同步用户和组。
 
-#### 通过[!DNL Admin Console] UI {#manual-addition-through-admin-console-ui}手动添加
+#### 通过[!DNL Admin Console] UI手动添加 {#manual-addition-through-admin-console-ui}
 
 可以在[!DNL Admin Console] UI中手动创建用户和组。 如果要管理的用户数量不多，则可以使用此方法。 例如，少于50个AEM用户。
 
@@ -92,7 +96,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，将
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### 在[!DNL Admin Console] UI {#file-upload-in-the-admin-console-ui}中上传文件
+#### 在[!DNL Admin Console] UI中上传文件 {#file-upload-in-the-admin-console-ui}
 
 为便于创建用户，可以上传CSV文件以批量添加用户：
 
@@ -140,7 +144,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，将
 
 ## 使用方法 {#how-to-use}
 
-### 在[!DNL Admin Console] {#managing-products-and-user-access-in-admin-console}中管理产品和用户访问权限
+### 在[!DNL Admin Console]中管理产品和用户访问权限 {#managing-products-and-user-access-in-admin-console}
 
 当客户产品管理员登录到[!DNL Admin Console]时，他们将看到AEM Managed Services产品上下文的多个实例，如下所示：
 
@@ -164,7 +168,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，将
 
 ### 登录AEM {#logging-into-aem}
 
-#### 本地管理员登录{#local-admin-login}
+#### 本地管理员登录 {#local-admin-login}
 
 AEM可以继续支持管理员用户的本地登录，因为登录屏幕具有本地登录选项：
 
@@ -190,7 +194,7 @@ AEM可以继续支持管理员用户的本地登录，因为登录屏幕具有�
 
 ![screen_shot_2018-09-18at120124am](assets/screen_shot_2018-09-18at120124am.png)
 
-### 迁移现有用户{#migrating-existing-users}
+### 迁移现有用户 {#migrating-existing-users}
 
 对于使用其他身份验证方法且当前正在迁移到IMS的现有AEM实例，需要执行迁移步骤。
 
@@ -198,7 +202,7 @@ AEM可以继续支持管理员用户的本地登录，因为登录屏幕具有�
 
 此实用程序将由您的AMS团队作为IMS配置的一部分运行。
 
-### 在AEM {#managing-permissions-and-acls-in-aem}中管理权限和ACL
+### 在AEM中管理权限和ACL {#managing-permissions-and-acls-in-aem}
 
 访问控制和权限将继续在AEM中进行管理，这可以通过将来自IMS的用户组(例如以下示例中的AEM-GRP-008)与定义权限和访问控制的本地组分离来实现。 可以将从IMS同步的用户组分配给本地组并继承权限。
 
