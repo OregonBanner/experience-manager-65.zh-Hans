@@ -1,7 +1,7 @@
 ---
 title: 使用Adobe开发人员应用程序生成器扩展 [!DNL Adobe Experience Manager] 6.5。
 description: 使用Adobe开发人员应用程序生成器扩展 [!DNL Adobe Experience Manager] 6.5。
-source-git-commit: aab7d4aaf11b6aef3b729f906259a76c152fd6f0
+source-git-commit: e6153e1a816bb9169f96fa75827593485a6ddbd4
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -42,26 +42,26 @@ Adobe开发人员应用程序生成器不提供现成的解决方案，而是提
 
 ![架构](assets/firefly-architecture.jpg)
 
-有关应用程序生成器架构的更多详细信息，请参阅[架构概述](https://www.adobe.io/project-firefly/docs/guides/)。
+有关应用程序生成器架构的更多详细信息，请参阅[架构概述](https://www.adobe.io/app-builder/docs/guides/)。
 
 ## 应用程序生成器入门 {#additional-resources}
 
 为了帮助您开始使用应用程序生成器，我们创建了一系列文档来帮助您开始：
 
-* [应用程序生成器快速入门](https://www.adobe.io/project-firefly/docs/getting_started/)
+* [应用程序生成器快速入门](https://www.adobe.io/app-builder/docs/getting_started/)
 
 ## 继续学习文档 {#appbuilder-documentation}
 
 应用程序生成器为开发人员提供视频和文档，包括指南和参考文档，可帮助您开始开发自己的自定义应用程序：
 
-* [应用程序生成器文档](https://www.adobe.io/project-firefly/docs/overview/)
+* [应用程序生成器文档](https://www.adobe.io/app-builder/docs/overview/)
 * [应用程序生成器视频](https://www.youtube.com/playlist?list=PLcVEYUqU7VRfDij-Jbjyw8S8EzW073F_o)
 
 ## 试用其中一个示例应用程序 {#appbuilder-codesamples}
 
 准备好开始开发了吗？ 我们提供了许多示例应用程序，帮助您快速前进：
 
-* [Adobe开发人员网站上的应用程序生成器代码实验室](https://www.adobe.io/project-firefly/docs/resources/)
+* [Adobe开发人员网站上的应用程序生成器代码实验室](https://www.adobe.io/app-builder/docs/resources/)
 
 ## 支持 {#support}
 
