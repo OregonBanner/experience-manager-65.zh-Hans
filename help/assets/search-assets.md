@@ -3,12 +3,12 @@ title: 在 [!DNL Adobe Experience Manager]中搜索数字资产和图像
 description: 了解如何使用过滤器面板在 [!DNL Adobe Experience Manager] 中查找所需的资产，以及如何使用搜索中显示的资产。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 搜索，元数据
+feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '5573'
+source-wordcount: '5570'
 ht-degree: 7%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 7%
 
 熟悉搜索界面和可用的操作。
 
-![了解Experience Manager资产搜索结果界面](assets/aem_search_results.png)
+![了解Experience Manager Assets搜索结果界面](assets/aem_search_results.png)
 
 *图：了解 [!DNL Experience Manager Assets] 搜索结果界面。*
 
@@ -161,7 +161,7 @@ ht-degree: 7%
 | 创建者 | creator:John |
 | 位置 | 位置：NA |
 | 描述 | description:&quot;Sample Image&quot; |
-| 创建者工具 | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| 创建者工具 | creatortool:&quot;Adobe Photoshop&quot; |
 | 版权所有者 | copyrightowner:&quot;Adobe Systems&quot; |
 | 参与者 | contributor:John |
 | 使用条款 | usageterms:&quot;CopyRights Reserved&quot; |
@@ -206,7 +206,7 @@ ht-degree: 7%
 
 ### 在[!DNL Experience Manager]桌面应用程序中搜索资产 {#desktop-app}
 
-创意专业人士使用桌面应用程序，可轻松搜索[!DNL Experience Manager Assets]并在其本地桌面（Win或Mac）上提供。 创意人员可以轻松地在Mac Finder或Windows资源管理器中显示所需的资产，在桌面应用程序中打开，并在本地更改 — 更改将通过在存储库中创建的新版本保存回[!DNL Experience Manager]。 应用程序支持使用一个或多个关键字、 `*`和`?`通配符以及`AND`运算符进行基本搜索。 请参阅桌面应用程序中的[浏览、搜索和预览资产](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
+创意专业人士使用桌面应用程序，可轻松搜索[!DNL Experience Manager Assets]并在其本地桌面(Win或Mac)上提供。 创意人员可以轻松地在Mac Finder或Windows资源管理器中显示所需的资产，在桌面应用程序中打开，并在本地更改 — 更改将通过在存储库中创建的新版本保存回[!DNL Experience Manager]。 应用程序支持使用一个或多个关键字、 `*`和`?`通配符以及`AND`运算符进行基本搜索。 请参阅桌面应用程序中的[浏览、搜索和预览资产](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
 
 ### 在[!DNL Brand Portal]中搜索资产 {#brand-portal}
 
@@ -378,7 +378,7 @@ ht-degree: 7%
 
 ### 上传资产时提取文本 {#extracttextupload}
 
-您可以配置[!DNL Experience Manager] ，以在用户上传资产（如PSD或PDF文件）时从资产中提取文本。 [!DNL Experience Manager] 对提取的文本进行索引，并帮助用户根据提取的文本搜索这些资产。请参阅[上传资产](/help/assets/manage-assets.md#uploading-assets)。
+您可以配置[!DNL Experience Manager] ，以在用户上传资产(如PSD或PDF文件)时从资产中提取文本。 [!DNL Experience Manager] 对提取的文本进行索引，并帮助用户根据提取的文本搜索这些资产。请参阅[上传资产](/help/assets/manage-assets.md#uploading-assets)。
 
 如果文本提取对于您的部署而言过于占用资源，请考虑[禁用文本提取](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)。
 
@@ -390,7 +390,7 @@ ht-degree: 7%
 
 | 搜索字段 | 搜索属性值 |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| MIME类型 | 图像、文档、多媒体、存档或其他。 |
+| MIME 类型 | 图像、文档、多媒体、存档或其他。 |
 | 上次修改时间 | “小时”、“天”、“周”、“月”或“年”。 |
 | 文件大小 | “小”、“中”或“大”。 |
 | 发布状态 | “已发布”或“已取消发布”。 |

@@ -6,7 +6,7 @@ mini-toc-levels: 1
 feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 20%
@@ -29,9 +29,9 @@ ht-degree: 20%
 
 可以使用以下方法将元数据添加到数字资产：
 
-* 首先，创建资产的本机应用程序会向其中添加一些元数据。 例如， [Acrobat会将一些元数据](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)添加到PDF文件，或相机会将一些基本元数据添加到照片中。 在生成资产时，您可以在本机应用程序本身中添加元数据。 例如，您可以在AdobeLightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)中添加[ IPTC元数据。
+* 首先，创建资产的本机应用程序会向其中添加一些元数据。 例如， [Acrobat会将一些元数据](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html)添加到PDF文件，或相机会将一些基本元数据添加到照片中。 在生成资产时，您可以在本机应用程序本身中添加元数据。 例如，您可以在Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html)中添加[ IPTC元数据。
 
-* 在将资产上传到[!DNL Experience Manager]之前，您可以使用用于创建资产的本机应用程序或使用其他一些元数据编辑应用程序来编辑和修改元数据。 将资产上传到Experience Manager时，会处理元数据。 例如，请参阅如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用元数据，并查看[!DNL Adobe Exchange]中 [!DNL Bridge CC]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[标记面板。
+* 在将资产上传到[!DNL Experience Manager]之前，您可以使用用于创建资产的本机应用程序或使用其他一些元数据编辑应用程序来编辑和修改元数据。 将资产上传到Experience Manager时，会处理元数据。 例如，请参阅如何[在 [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html)中使用元数据，并查看[!DNL Adobe Exchange]中 [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)的[标记面板。
 
 * 在[!DNL Experience Manager Assets]中，您可以在[!UICONTROL 属性]页面中手动添加或编辑资产的元数据。
 
@@ -234,7 +234,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 >
 >* [元数据概念和了解](metadata-concepts.md)。
 >* [编辑多个收藏集的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)
->* [在Experience Manager资产中导入和导出元数据](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [在Experience Manager Assets中导入和导出元数据](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
