@@ -1,8 +1,8 @@
 ---
 title: 艰难的一天
-seo-title: 艰难的一天
+seo-title: Tough Day
 description: Tough Day测试在最坏情况下模拟大约1000位作者的每日负载，所有操作同时进行。
-seo-description: Tough Day测试在最坏情况下模拟大约1000位作者的每日负载，所有操作同时进行。
+seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 3727b561a2ee9778d75f18530caf16c6c3ef846a
+source-git-commit: e1f9cf160892c2fa5c7cc7f80f998166dbc877e6
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1883'
 ht-degree: 2%
 
 ---
 
 # 艰难的一天{#tough-day}
 
-## 艰难的第2天{#what-is-tough-day}
+## 艰难的第2天 {#what-is-tough-day}
 
-“Tough Day 2”是一个应用程序，它允许您压力测试AEM实例的限制。 它可以随默认测试包一起开箱即用，也可以根据您的测试需求对其进行配置。 您可以观看[此录制](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html)以了解应用程序的演示。
+“Tough Day 2”是一个应用程序，它允许您压力测试AEM实例的限制。 它可以随默认测试包一起开箱即用，也可以根据您的测试需求对其进行配置。 您可以观看[此录制](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)以了解应用程序的演示。
 
-## 如何运行艰难的第2天{#how-to-run-tough-day}
+## 如何跑艰难的第2天 {#how-to-run-tough-day}
 
 从[Adobe存储库](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/)下载Tough Day 2的最新版本。 下载应用程序后，您可以通过提供`host`参数即时运行该应用程序。 在以下示例中， AEM实例在本地运行，以便使用`localhost`值：
 
@@ -53,7 +53,6 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 >[!NOTE]
 >
 >艰难的第2天没有清理步骤。 因此，建议在克隆暂存实例上运行Tough Day 2，而不是在主生产实例上运行。 测试后应删除暂存实例。
-
 
 ### 获取帮助 {#getting-help}
 
@@ -115,7 +114,7 @@ java -jar toughday2.jar --help_full
  </tbody>
 </table>
 
-### 全局参数{#global-parameters}
+### 全局参数 {#global-parameters}
 
 艰难的第2天提供了全局参数，用于设置或更改测试环境。 这包括目标主机、端口号、使用的协议、实例的用户和密码等。 例如：
 
@@ -147,7 +146,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 保存测试配置的唯一方法是以yaml格式复制该配置。 有关更多详细信息，请参阅以下部分中的此[toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml)配置和yaml配置示例。
 
-### 添加新测试{#adding-a-new-test}
+### 添加新测试 {#adding-a-new-test}
 
 如果您不想使用默认的`toughday`包，可以使用`add`参数添加您选择的测试。 以下示例显示如何使用命令行参数或yaml配置文件添加`CreateAssetTreeTest`测试。
 
@@ -166,7 +165,7 @@ tests:
   - add : CreateAssetTreeTest
 ```
 
-### 添加同一测试{#adding-multiple-instances-of-the-same-test}的多个实例
+### 添加同一测试的多个实例  {#adding-multiple-instances-of-the-same-test}
 
 您还可以添加和运行同一测试的多个实例，但每个实例必须具有唯一的名称。 以下示例显示如何使用命令行参数或yaml配置文件添加同一测试的两个实例。
 
@@ -190,7 +189,7 @@ tests:
       name : SecondAssetTree
 ```
 
-### 更改测试属性{#changing-the-test-properties}
+### 更改测试属性 {#changing-the-test-properties}
 
 如果需要更改一个或多个测试属性，可将该属性添加到命令行或yaml配置文件中。 要查看所有可用的测试属性，请将`--help <TestClass/PublisherClass>`参数添加到命令行，例如：
 
@@ -219,7 +218,7 @@ tests:
       template : /conf/toughday-templates/settings/wcm/templates/toughday-template
 ```
 
-### 使用预定义的测试包{#working-with-predefined-test-suites}
+### 使用预定义测试包 {#working-with-predefined-test-suites}
 
 以下示例显示如何向预定义包添加测试，以及如何从预定义包重新配置和排除现有测试。
 
@@ -308,7 +307,7 @@ runmode:
 
 **恒定负载**&#x200B;运行模式与正常运行模式不同，它生成的是启动测试执行的恒定数量，而不是恒定数量的线程。 可以使用具有相同名称的运行模式参数来设置负载。
 
-### 测试选择{#test-selection}
+### 测试选择 {#test-selection}
 
 两种运行模式的测试选择过程相同，其方式如下：所有测试都具有`weight`属性，该属性可确定线程中执行的可能性。 例如，如果我们有两个测试，一个测试的权重为5，另一个测试的权重为10，则执行后者的可能性是前者的两倍。
 
@@ -347,7 +346,7 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 
 Tough Day 2可输出测试量度和日志。 有关更多详细信息，请阅读以下章节。
 
-### 测试量度{#test-metrics}
+### 测试量度 {#test-metrics}
 
 艰难的第2天当前报告了9个可评估的测试量度。 具有&#x200B;*****&#x200B;符号的量度仅在成功运行后才报告：
 
@@ -396,7 +395,7 @@ publishmode:
         -add : CreatePageTreeTest
 ```
 
-### 记录 {#logging}
+### 日志记录 {#logging}
 
 Tough Day 2会在运行Tough Day 2的同一目录中创建日志文件夹。 此文件夹包含两种类型的日志：
 
@@ -405,7 +404,7 @@ Tough Day 2会在运行Tough Day 2的同一目录中创建日志文件夹。 此
 
 日志不会被覆盖，后续运行会将消息附加到现有日志。 日志具有多个级别，有关详细信息，请参阅` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`。
 
-#### 用法示例{#example-usage}
+#### 使用示例 {#example-usage}
 
 #### 已知问题 {#known-issues}
 
