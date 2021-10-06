@@ -1,21 +1,21 @@
 ---
 title: '在电子邮件通知中使用元数据 '
-seo-title: '在电子邮件通知中使用元数据 '
+seo-title: Use metadata in an email notification
 description: 使用元数据在表单工作流电子邮件通知中填充信息
-seo-description: 使用元数据在表单工作流电子邮件通知中填充信息
+seo-description: Use metadata to populate information in a forms workflow email notification
 uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9cf4a68a2b3312fe53282e2fd4ec81988f2fd453
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
 
-# 在电子邮件通知{#use-metadata-in-an-email-notification}中使用元数据
+# 在电子邮件通知中使用元数据 {#use-metadata-in-an-email-notification}
 
 您可以使用“分配任务”步骤创建任务并将任务分配给用户或组。 将任务分配给用户或组后，将向定义的用户或定义组的每个成员发送电子邮件通知。 典型的[电子邮件通知](../../forms/using/use-custom-email-template-assign-task-step.md)包含已分配任务的链接以及与任务相关的信息。
 
@@ -96,7 +96,7 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 在电子邮件通知{#using-system-generated-metadata-in-an-email-notification}中使用系统生成的元数据
+## 在电子邮件通知中使用系统生成的元数据 {#using-system-generated-metadata-in-an-email-notification}
 
 AEM Forms应用程序提供了一些开箱即用的元数据变量（键值对）。 您可以在电子邮件模板中使用这些变量。 变量的值基于关联的表单应用程序。 下表列出了所有现成可用的元数据变量：
 
@@ -149,11 +149,11 @@ AEM Forms应用程序提供了一些开箱即用的元数据变量（键值对�
  </tbody> 
 </table>
 
-## 在电子邮件通知{#using-custom-metadata-in-an-email-notification}中使用自定义元数据
+## 在电子邮件通知中使用自定义元数据 {#using-custom-metadata-in-an-email-notification}
 
 您还可以在电子邮件通知中使用自定义元数据。 自定义元数据除包含系统生成的元数据之外，还包含其他信息。 例如，从数据库检索的策略详细信息。 您可以使用ECMAScript或OSGi包在crx-repository中添加自定义元数据：
 
-### 使用ECMAScript添加自定义元数据{#use-ecmascript-to-add-custom-metadata}
+### 使用ECMAScript添加自定义元数据  {#use-ecmascript-to-add-custom-metadata}
 
 [](https://en.wikipedia.org/wiki/ECMAScript) ECMAScriptis是一种脚本语言。它用于客户端脚本和服务器应用程序。 执行以下步骤以使用ECMAScript为电子邮件模板添加自定义元数据：
 
@@ -194,11 +194,11 @@ AEM Forms应用程序提供了一些开箱即用的元数据变量（键值对�
       | 类型 | 字符串 |
       | 值 | 指定脚本的标题。 例如，策略持有者的自定义元数据。 指定的值显示在分配任务步骤中。 |
 
-### 使用OSGi包和Java接口添加自定义元数据{#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
+### 使用OSGi包和Java界面添加自定义元数据 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
 您可以使用WorkitemUserMetadataService Java界面为电子邮件模板添加自定义元数据。 您可以创建使用WorkitemUserMetadataService Java界面的OSGi包，并将其部署到AEM Forms服务器。 它使元数据可供在分配任务步骤中进行选择。
 
-要使用Java界面创建OSGi包，请将[AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件添加为OSGi包项目的外部依赖项。 可以使用任何Java IDE创建OSGi包。 以下过程提供了使用Eclipse创建OSGi包的步骤：
+要使用Java界面创建OSGi包，请将[AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件添加为OSGi包项目的外部依赖项。 可以使用任何Java IDE创建OSGi包。 以下过程提供了使用Eclipse创建OSGi包的步骤：
 
 1. 打开Eclipse IDE。 导航到文件>新建项目。
 

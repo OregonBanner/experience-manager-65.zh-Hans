@@ -1,21 +1,21 @@
 ---
 title: 为以AEM Forms为中心的工作流步骤动态选择用户或组
-seo-title: 为以AEM Forms为中心的工作流步骤动态选择用户或组
+seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
 description: '了解如何在运行时为AEM Forms工作流选择用户或组。 '
-seo-description: '了解如何在运行时为AEM Forms工作流选择用户或组。 '
+seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
 uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: 3c48660e-5e4f-4615-82d4-9f1f285c2a39
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8f0e8b15d2ed8b436594fd2be464b4ace29a8902
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 1%
+source-wordcount: '923'
+ht-degree: 0%
 
 ---
 
-# 为以AEM Forms为中心的工作流步骤{#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}动态选择用户或组
+# 为以AEM Forms为中心的工作流步骤动态选择用户或组 {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
 
 了解如何在运行时为AEM Forms工作流选择用户或组。
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 在OSGi](/help/forms/using/aem-forms-workflow.md)上分配以[Forms为中心的工作流的任务和Adobe Sign步骤，提供用于动态选择用户的选项。 您可以使用ECMAScript或OSGi包动态地选择“分配任务”步骤的代理人，或选择“签名文档”步骤的签名人。
 
-## 使用ECMAScript动态选择用户或组{#use-ecmascript-to-dynamically-select-a-user-or-group}
+## 使用ECMAScript动态选择用户或组 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
 ECMAScript是一种脚本语言。 它用于客户端脚本和服务器应用程序。 执行以下步骤以使用ECMAScript动态选择用户或组：
 
@@ -51,7 +51,7 @@ ECMAScript是一种脚本语言。 它用于客户端脚本和服务器应用程
 
       ![脚本](assets/script.png)
 
-### 用于动态选择用户或组{#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}的ECMAScript示例
+### 用于动态选择用户或组的示例ECMAScript {#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}
 
 以下示例ECMAScript动态地为“分配任务”步骤选择一个代理人。 在此脚本中，会根据有效负载的路径选择用户。 在使用此脚本之前，请确保脚本中提及的所有用户都存在于AEM中。 如果脚本中提到的用户在AEM中不存在，则相关过程可能会失败。
 
@@ -114,11 +114,11 @@ function getAdobeSignRecipients() {
 }
 ```
 
-## 使用Java界面动态选择用户或组{#use-java-interface-to-dynamically-choose-a-user-or-group}
+## 使用Java界面动态选择用户或组 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-您可以使用[RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面为Adobe Sign和分配任务步骤动态选择用户或组。 您可以创建使用[RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口的OSGi包，并将其部署到AEM Forms服务器。 该选项可在AEM工作流的分配任务和Adobe Sign组件中进行选择。
+您可以使用[RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面为Adobe Sign和分配任务步骤动态选择用户或组。 您可以创建使用[RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口的OSGi包，并将其部署到AEM Forms服务器。 该选项可在AEM工作流的分配任务和Adobe Sign组件中进行选择。
 
-您需要[AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) jar和[granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件才能编译下面列出的代码示例。 将这些jar文件作为外部依赖项添加到OSGi包项目中。 可以使用任何Java IDE创建OSGi包。 以下过程提供了使用Eclipse创建OSGi包的步骤：
+您需要[AEM Forms客户端SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件才能编译下面列出的代码示例。 将这些jar文件作为外部依赖项添加到OSGi包项目中。 可以使用任何Java IDE创建OSGi包。 以下过程提供了使用Eclipse创建OSGi包的步骤：
 
 1. 打开Eclipse IDE。 导航到&#x200B;**[!UICONTROL File]**> **[!UICONTROL New Project]**。
 1. 在“选择向导”屏幕上，选择&#x200B;**[!UICONTROL Maven Project]**，然后单击&#x200B;**[!UICONTROL Next]**。
@@ -141,7 +141,7 @@ function getAdobeSignRecipients() {
            <repository>
                <id>adobe</id>
                <name>Adobe Public Repository</name>
-               <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+               <url>https://repo1.maven.org/maven2/com/adobe/</url>
                <layout>default</layout>
            </repository>
        </repositories>
@@ -149,7 +149,7 @@ function getAdobeSignRecipients() {
            <pluginRepository>
                <id>adobe</id>
                <name>Adobe Public Repository</name>
-               <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+               <url>https://repo1.maven.org/maven2/com/adobe/</url>
                <layout>default</layout>
            </pluginRepository>
        </pluginRepositories>
@@ -225,7 +225,7 @@ function getAdobeSignRecipients() {
    </project>
    ```
 
-1. 添加使用[RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面为“分配”任务步骤动态选择用户或组的源代码。 有关示例代码，请参阅[使用Java界面动态选择用户或组的示例](#-sample-scripts-for)。
+1. 添加使用[RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面为“分配”任务步骤动态选择用户或组的源代码。 有关示例代码，请参阅[使用Java界面动态选择用户或组的示例](#-sample-scripts-for)。
 1. 打开命令提示符，然后导航到包含OSGi包项目的目录。 使用以下命令创建OSGi包：
 
    `mvn clean install`
@@ -234,7 +234,7 @@ function getAdobeSignRecipients() {
 
 导入包后，用于动态选择用户或组的Java界面选项将在中可用，用于Adobe Sign和“分配任务”步骤。
 
-### 动态选择用户或组{#sample-java-code-to-dynamically-choose-a-user-or-a-group}的Java代码示例
+### 用于动态选择用户或组的Java代码示例 {#sample-java-code-to-dynamically-choose-a-user-or-a-group}
 
 以下示例代码可动态选择Adobe Sign步骤的代理人。 在OSGi包中使用代码。 在使用下面列出的代码之前，请确保代码中提及的用户信息（电子邮件地址和电话号码）正确无误。 如果代码中提及的用户信息不正确，则相关过程可能会失败。
 

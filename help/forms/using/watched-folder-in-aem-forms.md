@@ -1,8 +1,8 @@
 ---
 title: 已监视文件夹AEM Forms
-seo-title: 已监视文件夹AEM Forms
+seo-title: Watched folder in AEM Forms
 description: 管理员可以将文件夹置于监视中，并在文件置于监视的文件夹中时启动工作流、服务或脚本操作。
-seo-description: 管理员可以将文件夹置于监视中，并在文件置于监视的文件夹中时启动工作流、服务或脚本操作。
+seo-description: An administrator can put a folder on watch and start a workflow, service, or script operation when a file is placed in the folder being watched.
 uuid: 39eac0fd-8212-46ff-b75d-8b4320d448a9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,18 +10,18 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 79dcba8e14eac39467510416bf31737ac721b07f
 workflow-type: tm+mt
-source-wordcount: '7153'
+source-wordcount: '7118'
 ht-degree: 0%
 
 ---
 
-# 已监视AEM Forms中的文件夹{#watched-folder-in-aem-forms}
+# 已监视文件夹AEM Forms{#watched-folder-in-aem-forms}
 
-管理员可以配置网络文件夹（称为“监视文件夹”），以便当用户将文件（如PDF文件）放入“监视文件夹”时，会启动预配置的工作流、服务或脚本操作来处理添加的文件。 服务执行指定操作后，会将结果文件保存在指定的输出文件夹中。 有关工作流、服务和脚本的更多信息，请参阅[各种文件处理方法](#variousmethodsforprocessingfiles)。
+管理员可以配置网络文件夹（称为“监视文件夹”），以便当用户在“监视文件夹”中放置文件(如PDF文件)时，会启动预配置的工作流、服务或脚本操作来处理添加的文件。 服务执行指定操作后，会将结果文件保存在指定的输出文件夹中。 有关工作流、服务和脚本的更多信息，请参阅[各种文件处理方法](#variousmethodsforprocessingfiles)。
 
-## 创建监视文件夹{#create-a-watched-folder}
+## 创建监视文件夹 {#create-a-watched-folder}
 
 您可以使用以下方法之一在文件系统上创建监视文件夹：
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >在群集环境中，用作监视文件夹的文件夹必须在文件系统或网络上可访问、可写和共享。 群集的每个应用程序服务器实例都必须有权访问同一共享文件夹。 在Windows上，在所有服务器上创建一个映射的网络驱动器，并在folderPath属性中指定映射的网络驱动器的路径。
 
-## 创建监视文件夹配置节点{#create-watched-folder-configuration-node}
+## 创建监视文件夹配置节点 {#create-watched-folder-configuration-node}
 
 要配置监视文件夹，请创建监视文件夹配置节点。 执行以下步骤以创建配置节点：
 
@@ -176,7 +176,7 @@ ht-degree: 0%
 
    * **简单基于文件的有效负载映射器：** 使用简单基于文件的有效负载映射器，直接将输入和输出内容保留在有效负载文件夹中。它不会创建任何额外的层次结构，如默认映射器。
 
-### 自定义配置参数{#custom-configuration-parameters}
+### 自定义配置参数 {#custom-configuration-parameters}
 
 除了上面列出的监视文件夹配置属性外，您还可以指定自定义配置参数。 自定义参数将传递到文件处理代码。 它允许代码根据参数的值更改其行为。 要指定参数，请执行以下操作：
 
@@ -221,7 +221,7 @@ ht-degree: 0%
 
 服务是`com.adobe.aemfd.watchfolder.service.api.ContentProcessor`接口的自定义实现。 它已在OSGi中注册，并带有一些自定义属性。 实施的自定义属性使其具有唯一性，并有助于识别实施。
 
-#### ContentProcessor接口{#custom-implementation-of-the-contentprocessor-interface}的自定义实现
+#### ContentProcessor界面的自定义实施 {#custom-implementation-of-the-contentprocessor-interface}
 
 自定义实施接受处理上下文（com.adobe.aemfd.watchfolder.service.api.ProcessorContext类型的对象），从上下文中读取输入文档和配置参数，处理输入，并将输出添加回
 上下文。 ProcessorContext具有以下API:
@@ -262,7 +262,7 @@ public class TestContentProcessor1 implements ContentProcessor {
 }
 ```
 
-### 使用脚本处理监视文件夹{#using-scripts-to-process-files-of-a-watched-folder}的文件
+### 使用脚本处理已监视文件夹的文件 {#using-scripts-to-process-files-of-a-watched-folder}
 
 脚本是ECMAScript投诉自定义代码，编写用于处理置于监视文件夹中的文档。 脚本表示为JCR节点。 除了标准ECMAScript变量（日志、sling等）之外，脚本还具有一个变量processorContext。 变量的类型为ProcessorContext。 ProcessorContext具有以下API:
 
@@ -286,7 +286,7 @@ entry.getValue().copyToFile(tempFile);
 processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docmanager.Document(tempFile, true));
 ```
 
-#### 脚本位置和安全注意事项{#location-of-scripts-and-security-considerations}
+#### 脚本位置和安全注意事项 {#location-of-scripts-and-security-considerations}
 
 默认情况下，会提供一个容器文件夹(/etc/fd/watchfolder/scripts)，客户可以在其中放置其脚本，且watch-folder框架使用的默认服务用户具有从此位置读取脚本的必要权限。
 
@@ -299,7 +299,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 现在，您可以使用配置的自定义位置来保存脚本。
 
-### 使用工作流处理已监视文件夹{#using-a-workflow-to-process-files-of-a-watched-folder}的文件
+### 使用工作流处理已监视文件夹的文件 {#using-a-workflow-to-process-files-of-a-watched-folder}
 
 工作流可让您自动执行Experience Manager活动。 工作流由一系列按特定顺序执行的步骤组成。 每个步骤都会执行不同的活动，例如激活页面或发送电子邮件消息。 工作流可以与存储库、用户帐户和Experience Manager服务中的资产进行交互。 因此，工作流可以协调复杂的工作。
 
@@ -392,15 +392,15 @@ wfSvc.execute(impl, graniteWorkItem, graniteWorkflowSession, metaData);
 log.info("Exiting workflow script!")
 ```
 
-### 创建有效负荷映射器筛选器以将已监视文件夹的结构映射到工作流{#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}的有效负荷
+### 创建负载映射器过滤器，将已监视文件夹的结构映射到工作流的负载 {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
 
 创建监视文件夹时，它会在监视的文件夹中创建文件夹结构。 文件夹结构具有暂存、结果、保留、输入和失败文件夹。 文件夹结构可用作工作流的输入有效负荷，并接受来自工作流的输出。 它还可以列出故障点（如果有）。
 
 如果有效负载的结构与监视文件夹的结构不同，则可以编写自定义脚本以将监视文件夹的结构映射到有效负载。 这种脚本称为负载映射器过滤器。 开箱即用地，AEM Forms提供了有效负载映射器过滤器，用于将已监视文件夹的结构映射到有效负载。
 
-#### 创建自定义负载映射器筛选器{#creating-a-custom-payload-mapper-filter}
+#### 创建自定义有效负载映射器过滤器 {#creating-a-custom-payload-mapper-filter}
 
-1. 下载[Adobe客户端SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar)。
+1. 下载[Adobe客户端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)。
 1. 在基于Maven的项目的生成路径中设置客户端SDK。 要开始，您可以在选择的IDE中下载并打开以下基于Maven的项目。
 1. 编辑示例包中可用的有效负载映射器过滤器代码，以满足您的要求。
 1. 使用maven创建自定义有效负载映射器筛选器的包。
@@ -484,7 +484,7 @@ log.info("Exiting workflow script!")
    }
    ```
 
-## 用户如何与监视文件夹{#how-users-interact-with-a-watched-folder}进行交互
+## 用户如何与已监视文件夹交互 {#how-users-interact-with-a-watched-folder}
 
 对于监视文件夹端点，用户可以通过将输入文件或文件夹从其桌面复制或拖动到监视文件夹来开始文件处理操作。 文件按到达顺序处理。
 
@@ -496,9 +496,9 @@ log.info("Exiting workflow script!")
 >
 >确保应用程序服务器已删除对监视文件夹中文件的访问权限。 如果AEM Forms在扫描文件后无法从输入文件夹中删除文件，则关联的进程将无限期地启动。
 
-## 有关监视文件夹{#additional-information-about-the-watched-folders}的其他信息
+## 有关已监视文件夹的其他信息 {#additional-information-about-the-watched-folders}
 
-### 关于限制{#about-throttling}
+### 关于限制 {#about-throttling}
 
 为监视文件夹端点启用限制后，它将限制在任何给定时间处理的监视文件夹作业的数量。 最大作业数由批量大小值确定，该值也可在“监视文件夹”端点中进行配置。 达到限制限制时，不会轮询“监视文件夹”输入目录中的传入文档。 在完成其他监视文件夹作业并进行另一次轮询尝试之前，文档也会保留在输入目录中。 对于同步处理，在单次轮询中处理的所有作业都将计入限制，即使这些作业在单个线程中连续处理也是如此。
 
@@ -506,7 +506,7 @@ log.info("Exiting workflow script!")
 >
 >限制不随群集扩展。 启用限制后，集群作为一个整体将不会在任何给定时间处理超过“批处理大小”中指定的作业数。 此限制是群集范围的，并非群集中每个节点的特定限制。 例如，如果批量大小为2，则在一个节点处理两个作业时可以达到限制限制，而其他节点不会轮询输入目录直到完成其中一个作业为止。
 
-#### 限制工作原理{#how-throttling-works}
+#### 节流的工作原理 {#how-throttling-works}
 
 “监视文件夹”在每个pollInterval中扫描输入文件夹，选取批量大小中指定的文件数，并为每个文件调用目标服务。 例如，如果批处理大小为4，则监视文件夹在每次扫描时都会选取四个文件，创建四个调用请求，并调用目标服务。 在完成这些请求之前，如果调用“已监视文件夹”，则无论前四个作业是否完成，都会再次启动四个作业。
 
@@ -516,7 +516,7 @@ log.info("Exiting workflow script!")
 * 如果AEM Forms服务器在“监视文件夹”调用作业之前关闭，则管理员可以将文件移出暂存文件夹。 有关信息，请参阅[故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)。
 * 如果AEM Forms服务器正在运行，但当作业管理器服务回调时“监视文件夹”未运行（服务未按顺序启动时发生），则管理员可以将文件移出暂存文件夹。 有关信息，请参阅[故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)。
 
-### 故障点和恢复故障点和恢复{#failure-points-and-recoveryfailure-points-and-recovery}
+### 故障点和恢复故障点和恢复 {#failure-points-and-recoveryfailure-points-and-recovery}
 
 在每个轮询事件中，“监视文件夹”会锁定输入文件夹，将与包含文件模式匹配的文件移动到暂存文件夹，然后解锁输入文件夹。 需要锁定，以便两个线程不会选取同一组文件并处理它们两次。 如果pollInterval较小且批处理大小较大，则发生这种情况的可能性会增加。 将文件移到暂存文件夹后，将解锁输入文件夹，以便其他线程可以扫描该文件夹。 此步骤有助于提供高吞吐量，因为在一个线程处理文件时，其他线程可以扫描。
 
@@ -529,7 +529,7 @@ log.info("Exiting workflow script!")
    * **同步**:如果“已监视文件夹”配置为同步调用服务，则暂存文件夹中的所有文件在暂存文件夹中都将保留未处理。
    * **异步**:在这种情况下，“已监视文件夹”依赖于作业管理器服务。如果作业管理器服务调用回监视文件夹，则根据调用结果将暂存文件夹中的文件移动到保留或失败文件夹中。 如果作业管理器服务未回调“已监视文件夹”，则这些文件将在暂存文件夹中保持未处理状态。 当作业管理器回调时，监视文件夹未运行时，会发生这种情况。
 
-#### 恢复暂存文件夹{#recover-unprocessed-source-files-in-the-stage-folder}中未处理的源文件
+#### 恢复暂存文件夹中未处理的源文件 {#recover-unprocessed-source-files-in-the-stage-folder}
 
 当“监视文件夹”无法处理暂存文件夹中的源文件时，您可以恢复未处理的文件。
 
@@ -551,13 +551,13 @@ log.info("Exiting workflow script!")
 
 1. 如果阻止监视文件夹在步骤2中处理新的输入文件，请将“包含文件模式”更改为其上一个值，或重新启用您禁用的进程。
 
-### 将监视的文件夹链在一起{#chain-watched-folders-together}
+### 将监视文件夹链在一起 {#chain-watched-folders-together}
 
-监视文件夹可以链接在一起，以便一个监视文件夹的结果文档是下一个监视文件夹的输入文档。 每个已监视文件夹都可以调用其他服务。 通过以此方式配置监视文件夹，可以调用多项服务。 例如，一个监视文件夹可以将PDF文件转换为Adobe PostScript®，另一个监视文件夹可将PostScript文件转换为PDF/A格式。 为此，只需将您第一个端点定义的监视文件夹的结果文件夹设置为指向由第二个端点定义的监视文件夹的输入文件夹即可。
+监视文件夹可以链接在一起，以便一个监视文件夹的结果文档是下一个监视文件夹的输入文档。 每个已监视文件夹都可以调用其他服务。 通过以此方式配置监视文件夹，可以调用多项服务。 例如，一个监视文件夹可以将PDF文件转换为Adobe PostScript®，另一个监视文件夹可以将PostScript文件转换为PDF/A格式。 为此，只需将您第一个端点定义的监视文件夹的结果文件夹设置为指向由第二个端点定义的监视文件夹的输入文件夹即可。
 
 首次转换的输出将转到\path\result。 第二次转换的输入为\path\result，第二次转换的输出将转到\path\result\result (或在“结果文件夹”(Result Folder)框中为第二次转换定义的目录)。
 
-### 文件和文件夹模式{#file-and-folder-patterns}
+### 文件和文件夹模式 {#file-and-folder-patterns}
 
 管理员可以指定可调用服务的文件类型。 可以为每个监视文件夹建立多个文件模式。 文件模式可以是以下文件属性之一：
 
@@ -590,7 +590,7 @@ log.info("Exiting workflow script!")
 
 如果输出参数映射模式以“File.separator”（路径分隔符）结尾，则会创建一个文件夹并将内容复制到该文件夹中。 如果模式不以“File.separator”结尾，则使用该名称创建内容（结果文件或文件夹）。
 
-## 将PDF生成器与监视文件夹{#using-pdf-generator-with-a-watched-folder}结合使用
+## 将PDF生成器与监视文件夹结合使用 {#using-pdf-generator-with-a-watched-folder}
 
 您可以配置“监视文件夹”以启动工作流、服务或脚本以处理输入文件。 在以下部分中，我们将配置一个监视文件夹以启动ECMAScript。 ECMAScript将使用PDF生成器将Microsoft Word(.docx)文档转换为PDF文档。
 
@@ -635,7 +635,7 @@ ECMAScript将使用PDF生成器的createPDF API将Microsoft Word(.docx)文档转
 
 1. 保存并关闭文件。
 
-### 创建工作流{#create-a-workflow}
+### 创建工作流 {#create-a-workflow}
 
 1. 在浏览器窗口中打开AEM工作流UI。
 https://[servername]:&#39;port&#39;/workflow
@@ -656,7 +656,7 @@ https://[servername]:&#39;port&#39;/workflow
 
    ![create-a-workflow3-pdf](assets/create-a-workflow3-pdf.png)
 
-### 配置监视文件夹{#configure-the-watched-folder}
+### 配置监视文件夹 {#configure-the-watched-folder}
 
 1. 在浏览器窗口中打开CRXDE lite。 https://&#39;[server]:[port]&#39;/crx/de/
 

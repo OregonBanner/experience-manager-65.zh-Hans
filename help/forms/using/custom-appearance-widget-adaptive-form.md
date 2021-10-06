@@ -1,8 +1,8 @@
 ---
 title: 为自适应表单字段创建自定义外观
-seo-title: 为自适应表单字段创建自定义外观
+seo-title: Create custom appearances for adaptive form fields
 description: 在自适应Forms中自定义现成组件的外观。
-seo-description: 在自适应Forms中自定义现成组件的外观。
+seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
 uuid: 1aa36443-774a-49fb-b3d1-d5a2d5ff849a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 exl-id: 770e257a-9ffd-46a4-9703-ff017ce9caed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8a24ca02762e7902b7d0033b36560629ee711de1
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 **用户** 控制指构件中包含字段值的主元素，用于将自定义构件UI与自适应表单模型绑定的外观框架。
 
-## 创建自定义外观的步骤{#steps-to-create-a-custom-appearance}
+## 创建自定义外观的步骤 {#steps-to-create-a-custom-appearance}
 
 创建自定义外观的高级步骤如下所示：
 
@@ -48,18 +48,18 @@ ht-degree: 0%
 1. **构建并安装项目**:构建Maven项目，并在AEM上安装生成的内容包。
 1. **更新自适应表单**:更新自适应表单字段属性以使用自定义外观。
 
-### 创建项目{#create-a-project}
+### 创建项目 {#create-a-project}
 
 Maven原型是创建自定义外观的起点。 要使用的原型的详细信息如下：
 
-* **存储库**:https://repo.adobe.com/nexus/content/groups/public/
+* **存储库**:https://repo1.maven.org/maven2/com/adobe/
 * **对象Id**:custom-appearance-archetype
 * **组Id**:com.adobe.aemforms
 * **版本**:1.0.4
 
 执行以下命令以基于原型创建本地项目：
 
-`mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+`mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
 该命令从存储库下载Maven插件和原型信息，并根据以下信息生成项目：
 
@@ -107,7 +107,7 @@ Maven原型是创建自定义外观的起点。 要使用的原型的详细信�
                                      └───javascript
 ```
 
-### 扩展现有小组件类{#extend-an-existing-widget-class}
+### 扩展现有小组件类 {#extend-an-existing-widget-class}
 
 创建项目模板后，根据需要进行以下更改：
 
@@ -127,13 +127,13 @@ Maven原型是创建自定义外观的起点。 要使用的原型的详细信�
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>呈现函数返回小组件默认HTML元素的jQuery对象。 默认的HTML元素应为可聚焦类型。 例如，<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>和<code>&lt;li&gt;</code>。 返回的元素将用作<code>$userControl</code>。 如果<code>$userControl</code>指定上述约束，则<code>AbstractWidget</code>类的函数可按预期工作，否则某些常用API（集中，单击）需要更改。 </td>
+   <td>呈现函数返回小组件默认HTML元素的jQuery对象。 默认HTML元素应为可聚焦类型。 例如，<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>和<code>&lt;li&gt;</code>。 返回的元素将用作<code>$userControl</code>。 如果<code>$userControl</code>指定上述约束，则<code>AbstractWidget</code>类的函数可按预期工作，否则某些常用API（集中，单击）需要更改。 </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
    <td>返回将HTML事件转换为XFA事件的映射。 <br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> 此示例显示 <code>blur</code> 是HTML事件， <code>XFA_EXIT_EVENT</code> 是相应的XFA事件。 </td>
+      }</code><br /> 此示例显示 <code>blur</code> 是一个HTML事 <code>XFA_EXIT_EVENT</code> 件，是相应的XFA事件。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
@@ -168,11 +168,11 @@ Maven原型是创建自定义外观的起点。 要使用的原型的详细信�
 
    * 模板文件为各种方法提供了实施示例。 删除未扩展的方法。
 
-### 创建客户端库{#create-a-client-library}
+### 创建客户端库 {#create-a-client-library}
 
 由Maven原型生成的示例项目会自动创建所需的客户端库，并将它们包装到具有`af.customwidgets`类别的客户端库中。 `af.customwidgets`中可用的JavaScript和CSS文件在运行时会自动包含在内。
 
-### 构建并安装{#build-and-install}
+### 构建和安装 {#build-and-install}
 
 要构建项目，请在shell中执行以下命令，以生成需要安装在AEM服务器上的CRX包。
 
@@ -182,7 +182,7 @@ Maven原型是创建自定义外观的起点。 要使用的原型的详细信�
 >
 >Maven项目引用POM文件内的远程存储库。 这仅供参考，并且根据Maven标准，存储库信息将在`settings.xml`文件中捕获。
 
-### 更新自适应表单{#update-the-adaptive-form}
+### 更新自适应表单 {#update-the-adaptive-form}
 
 要将自定义外观应用于自适应表单字段，请执行以下操作：
 
@@ -196,7 +196,7 @@ Maven原型是创建自定义外观的起点。 要使用的原型的详细信�
 
 1. 执行以下命令以创建基于Maven原型的本地项目：
 
-   `mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+   `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
    它会提示您为以下参数指定值。
    *此示例中使用的值以粗体突出显示*。
