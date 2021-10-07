@@ -1,8 +1,8 @@
 ---
 title: 启动工作流
-seo-title: 启动工作流
+seo-title: Starting Workflows
 description: 了解如何在AEM中启动工作流。
-seo-description: 了解如何在AEM中启动工作流。
+seo-description: Learn how to start Workflows in AEM.
 uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '794'
 ht-degree: 4%
 
 ---
@@ -35,17 +35,18 @@ ht-degree: 4%
 >作者还可以使用其他方法；有关完整详细信息，请参阅：
 >
 >* [将工作流应用于页面](/help/sites-authoring/workflows-applying.md)
-* [如何将工作流应用到DAM资产](/help/assets/assets-workflow.md)
-* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
-* [翻译项目](/help/sites-administering/tc-manage.md)
+>* [如何将工作流应用到DAM资产](/help/assets/assets-workflow.md)
+>* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [翻译项目](/help/sites-administering/tc-manage.md)
 
+>
 
 
 ## 工作流模型 {#workflow-models}
 
 您可以根据“工作流模型”控制台中列出的模型之一](/help/sites-administering/workflows.md#workflow-models-and-instances)启动工作流[。 唯一的必需信息是有效负载，不过也可以添加标题和/或注释。
 
-## 工作流启动器{#workflows-launchers}
+## 工作流启动器 {#workflows-launchers}
 
 工作流启动器可监视内容存储库中的更改，以根据已更改节点的位置和资源类型来启动工作流。
 
@@ -73,7 +74,7 @@ ht-degree: 4%
 
 ![wf-100](assets/wf-100.png)
 
-## 用于批量处理的工作流包{#workflow-packages-for-batch-processing}
+## 用于批处理的工作流包 {#workflow-packages-for-batch-processing}
 
 工作流包是可以作为有效负载传递到工作流以进行处理的包，允许处理多个资源。
 
@@ -85,7 +86,7 @@ ht-degree: 4%
 * 可多次使用。
 * 当工作流实例实际运行时，用户（添加或删除资源）可能会进行更改。
 
-## 从模型控制台{#starting-a-workflow-from-the-models-console}启动工作流
+## 从模型控制台启动工作流 {#starting-a-workflow-from-the-models-console}
 
 1. 使用&#x200B;**工具**、**工作流**&#x200B;和&#x200B;**模型**&#x200B;导航到&#x200B;**模型**&#x200B;控制台。
 1. 选择工作流（根据控制台视图）；您还可以根据需要使用搜索（左上方）：
@@ -93,7 +94,8 @@ ht-degree: 4%
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
-   **[临时](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;指示器显示不保留工作流历史记录的工作流。
+   >
+   >**[临时](/help/sites-developing/workflows.md#transient-workflows)**&#x200B;指示器显示不保留工作流历史记录的工作流。
 
 1. 从工具栏中选择&#x200B;**启动工作流**。
 1. 此时将打开运行工作流对话框，允许您指定：
@@ -111,7 +113,7 @@ ht-degree: 4%
       可选注释可帮助指示此实例的详细信息。
    ![wf-104](assets/wf-104.png)
 
-## 创建启动器配置{#creating-a-launcher-configuration}
+## 创建启动器配置 {#creating-a-launcher-configuration}
 
 1. 使用&#x200B;**工具**、**工作流**&#x200B;和&#x200B;**启动器**&#x200B;导航到&#x200B;**工作流启动器**&#x200B;控制台。
 1. 选择&#x200B;**创建**，然后选择&#x200B;**添加启动器**&#x200B;以打开对话框：
@@ -172,7 +174,7 @@ ht-degree: 4%
       此启动器属性是以逗号分隔的项目列表：&quot;
 
       * `property-name` 忽略在 `jcr` 指定的属性名称上触发的任何事件。&quot;
-      * `event-user-data:<*someValue*>` 忽略包含通过 `*<someValue*`API `user-data` 设置的 [ `ObservationManager` >](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)的任何事件。
+      * `event-user-data:<*someValue*>` 忽略包含通过 `*<someValue*`API `user-data` 设置的 [ `ObservationManager` >](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)的任何事件。
 
       例如：
 
@@ -190,6 +192,6 @@ ht-degree: 4%
 
    发生相应事件后，将触发启动器并启动工作流。
 
-## 管理启动器配置{#managing-a-launcher-configuration}
+## 管理启动器配置 {#managing-a-launcher-configuration}
 
 创建启动器配置后，可以使用相同的控制台选择实例，然后选择&#x200B;**查看属性**（并编辑它们）或&#x200B;**删除**。

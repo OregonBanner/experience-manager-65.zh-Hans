@@ -1,8 +1,8 @@
 ---
 title: AEM核心概念
-seo-title: 基本信息
+seo-title: The Basics
 description: 概述了AEM的结构方式以及如何在其上进行开发的核心概念，包括了解JCR、Sling、OSGi、调度程序、工作流和MSM
-seo-description: 概述了AEM的结构方式以及如何在其上进行开发的核心概念，包括了解JCR、Sling、OSGi、调度程序、工作流和MSM
+seo-description: An overview of the core concepts of how AEM is structured and how to develop on top of it including understanding the JCR, Sling, OSGi, the dispatcher, workflows, and MSM
 uuid: e49f29db-a5d6-48a0-af32-f8785156746e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,20 +10,20 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 78e28636eec331314c2f29c93d516215b1572f20
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 0%
+source-wordcount: '3334'
+ht-degree: 1%
 
 ---
 
-# AEM核心概念{#aem-core-concepts}
+# AEM核心概念 {#aem-core-concepts}
 
 >[!NOTE]
 >
 >在深入研究AEM的核心概念之前，Adobe建议先完成[AEM Sites开发入门](/help/sites-developing/getting-started.md)文档中的WKND教程，以了解AEM开发流程概述和核心概念简介。
 
-## 在AEM {#prerequisites-for-developing-on-aem}上开发的先决条件
+## 在AEM上开发的先决条件 {#prerequisites-for-developing-on-aem}
 
 要在AEM上进行开发，您需要以下技能：
 
@@ -39,9 +39,9 @@ ht-degree: 0%
 
 还建议您阅读并遵循[准则和最佳实践](/help/sites-developing/dev-guidelines-bestpractices.md)。
 
-## Java内容存储库{#java-content-repository}
+## Java内容存储库 {#java-content-repository}
 
-Java内容存储库(JCR)标准[JSR 283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)指定了一种独立于供应商和独立于实施的方式，用于在内容存储库的粒度级别上双向访问内容。
+Java内容存储库(JCR)标准[JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html)指定了一种独立于供应商和独立于实施的方式，用于在内容存储库的粒度级别上双向访问内容。
 
 Adobe研究公司（瑞士）AG持有规范领先。
 
@@ -53,13 +53,13 @@ Experience Server提供AEM构建的Experience Services，并可利用该Experien
 
 [Apache ](https://jackrabbit.apache.org/) Jackrabbitis是JCR API 2.0的开放源代码，完全符合其实施要求。
 
-## Sling请求处理{#sling-request-processing}
+## Sling请求处理 {#sling-request-processing}
 
-### Sling {#introduction-to-sling}简介
+### Sling简介 {#introduction-to-sling}
 
 AEM是使用[Sling](https://sling.apache.org/site/index.html)构建的，Sling是一个基于REST原则的Web应用程序框架，可轻松开发面向内容的应用程序。 Sling使用JCR存储库（如Apache Jackrabbit）作为其数据存储，对于AEM，则使用CRX内容存储库。 Sling已对Apache Software Foundation做出了贡献 — 有关更多信息，请参阅Apache 。
 
-使用Sling时，要呈现的内容类型不是首要处理考虑事项。 相反，主要考虑的是URL是否解析为内容对象，随后可以找到用于执行渲染的脚本。 这为Web内容作者构建可轻松根据其要求进行自定义的页面提供了绝佳支持。
+使用Sling时，要呈现的内容类型不是首要处理考虑事项。 相反，主要考虑的是URL是否解析为内容对象，随后可以找到用于执行渲染的脚本。 这为Web内容作者构建可轻松根据其要求进行自定义的页面提供了极佳支持。
 
 在具有多种不同内容元素的应用程序中，或者您需要能够轻松自定义的页面时，这种灵活性的优势显而易见。 特别是，在实施Web内容管理系统(如AEM解决方案中的WCM)时。
 
@@ -73,7 +73,7 @@ AEM是使用[Sling](https://sling.apache.org/site/index.html)构建的，Sling�
 
 ![使用SlingPostServlet](assets/sling-cheatsheet-02.png)
 
-### Sling以内容为中心{#sling-is-content-centric}
+### Sling以内容为中心 {#sling-is-content-centric}
 
 Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR资源（存储库节点）的形式映射到内容时，处理重点会放在内容上：
 
@@ -90,7 +90,7 @@ Sling以&#x200B;*以内容为中心*。 这意味着当每个(HTTP)请求以JCR�
    * 以前需要满足以下条件：URL结构、业务对象、数据库模式；
    * 现在已简化为：URL = resource = JCR结构
 
-### URL分解{#url-decomposition}
+### URL分解 {#url-decomposition}
 
 在Sling中，处理由用户请求的URL驱动。 这定义了要由相应脚本显示的内容。 为此，将从URL中提取信息。
 
@@ -106,7 +106,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 |---|---|---|---|---|---|---|---|---|
 | https:// | myhost | 工具/间谍 | .printable.a4. | html | / | a/b | ? | x=12 |
 
-**** protocolHTTP
+**** 协议HTTP
 
 **** hostName网站。
 
@@ -116,11 +116,11 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 **** extensionContent格式；还指定用于渲染的脚本。
 
-**** suffixCanable用于指定其他信息。
+**** suffixCan可用于指定其他信息。
 
 **参数** 动态内容所需的任何参数。
 
-#### 从URL到内容和脚本{#from-url-to-content-and-scripts}
+#### 从URL到内容和脚本 {#from-url-to-content-and-scripts}
 
 使用以下原则：
 
@@ -133,7 +133,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 使用Sling，您可以指定哪个脚本渲染特定实体（通过在JCR节点中设置`sling:resourceType`属性）。 此机制比脚本在其中访问数据实体（如PHP脚本中的SQL语句那样）的自由度更高，因为资源可以具有多个演绎版。
 
-#### 将请求映射到资源{#mapping-requests-to-resources}
+#### 将请求映射到资源 {#mapping-requests-to-resources}
 
 请求被划分，并提取必要的信息。 在存储库中搜索所请求的资源（内容节点）：
 
@@ -143,7 +143,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 Sling还允许JCR节点以外的其他内容作为资源，但这是一项高级功能。
 
-### 查找脚本{#locating-the-script}
+### 查找脚本 {#locating-the-script}
 
 在找到相应的资源（内容节点）后，将提取&#x200B;**sling资源类型**。 这是一个路径，用于查找用于呈现内容的脚本。
 
@@ -185,7 +185,7 @@ Sling还允许JCR节点以外的其他内容作为资源，但这是一项高级
 
 * 其他格式的URL，不以.html结尾
 
-   例如`../content/corporate/jobs/developer.pdf`
+   例如 `../content/corporate/jobs/developer.pdf`
 
    脚本将为`/apps/hr/jobs/jobs.pdf.esp`;后缀会添加到脚本名称中。
 
@@ -271,7 +271,7 @@ Sling还允许JCR节点以外的其他内容作为资源，但这是一项高级
 
 这是因为`/y`具有`sling:resourceSuperType`属性，而`/x`没有，因此其超类型从其资源类型中获取。
 
-#### 不能直接调用{#sling-scripts-cannot-be-called-directly} Sling脚本
+#### 无法直接调用Sling脚本 {#sling-scripts-cannot-be-called-directly}
 
 在Sling中，无法直接调用脚本，因为这会破坏REST服务器的严格概念；您将混合使用资源和表示法。
 
@@ -288,7 +288,7 @@ Sling还允许JCR节点以外的其他内容作为资源，但这是一项高级
 
 它使用Sling API包org.apache.sling。&amp;ast；和标记库。
 
-### 使用sling:include {#referencing-existing-elements-using-sling-include}引用现有元素
+### 使用sling:include引用现有元素 {#referencing-existing-elements-using-sling-include}
 
 最后需要考虑的是需要引用脚本中的现有元素。
 
@@ -331,7 +331,7 @@ OSGi定义了用于开发和部署模块化应用程序和库的架构（又称�
 
 有关更多信息，请参阅[Web控制台](/help/sites-deploying/web-console.md)、[OSGi配置](/help/sites-deploying/configuring-osgi.md)和[OSGi配置设置](/help/sites-deploying/osgi-configuration-settings.md)。
 
-## AEM环境中的开发对象{#development-objects-in-the-aem-environment}
+## AEM环境中的开发对象 {#development-objects-in-the-aem-environment}
 
 以下是对发展感兴趣的方面：
 
@@ -392,7 +392,7 @@ AEM是使用ExtJS小组件库开发的。
 
 S`tring pageName = currentPage.getName();`
 
-将currentPage作为当前页面对象。 有关处理页面对象的详细信息，请参阅[Javaocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)。
+将currentPage作为当前页面对象。 有关处理页面对象的详细信息，请参阅[Javaocs](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)。
 
 **页面** 管理器页面管理器是一个界面，提供页面级别操作的方法。
 
@@ -400,9 +400,9 @@ S`tring pageName = currentPage.getName();`
 
 页面myPage = pageManager.getContainingPage(myResource);
 
-将pageManager作为页面管理器对象，将myResource作为资源对象。 有关页面管理器提供的方法的详细信息，请参阅[Javaocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)。
+将pageManager作为页面管理器对象，将myResource作为资源对象。 有关页面管理器提供的方法的详细信息，请参阅[Javaocs](https://helpx.adobe.com/cn/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)。
 
-## 存储库{#structure-within-the-repository}内的结构
+## 存储库内的结构 {#structure-within-the-repository}
 
 以下列表概述了您将在存储库中看到的结构。
 
@@ -446,11 +446,11 @@ S`tring pageName = currentPage.getName();`
 
 使用AEM，生产环境通常包含两种不同类型的实例：[创作实例和发布实例](/help/sites-deploying/deploy.md#author-and-publish-installs)。
 
-## 调度程序{#the-dispatcher}
+## 调度程序 {#the-dispatcher}
 
 Dispatcher是Adobe用于缓存和/或负载平衡的工具。 有关更多信息，请参阅[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)下。
 
-## FileVault（源修订版系统）{#filevault-source-revision-system}
+## FileVault（源修订版本系统） {#filevault-source-revision-system}
 
 FileVault为JCR存储库提供文件系统映射和版本控制。 它可用于管理AEM开发项目，并完全支持在标准版本控制系统（例如，Subversion）中存储和版本控制项目代码、内容、配置等。
 
@@ -462,7 +462,7 @@ FileVault为JCR存储库提供文件系统映射和版本控制。 它可用于�
 
 工作流引擎用于管理工作流的实施及其后续对内容的应用程序。
 
-## 多站点管理{#multi-site-management}
+## 多站点管理 {#multi-site-management}
 
 多站点管理器(MSM)使您能够轻松管理共享公共内容的多个网站。 MSM允许您定义站点之间的关系，以便一个站点中的内容更改可以自动复制到其他站点中。
 

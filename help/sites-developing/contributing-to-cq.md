@@ -1,8 +1,8 @@
 ---
 title: 参与AEM
-seo-title: 参与AEM
+seo-title: Contributing to AEM
 description: AEM的开发遵循大型开源项目中常用的行之有效的方法
-seo-description: AEM的开发遵循大型开源项目中常用的行之有效的方法
+seo-description: AEM is developed following proven methodologies commonly practiced in large open source projects
 uuid: ffef60ae-8a9a-4c4b-8cbd-3cd72792a42e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,22 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2709'
 ht-degree: 1%
 
 ---
 
 # 参与AEM{#contributing-to-aem}
 
-## 开发方法{#development-methodology}
+## 开发方法 {#development-methodology}
 
 AEM是按照在大型开源项目中常用的行之有效的方法开发的。 事实上，AEM技术堆栈中的许多核心元素都作为活动的开源项目进行维护，例如Sling和Jackrabbit，这些项目对Apache Software Foundation做出了贡献。 AEM中展现的这一精神的一个重要方面是鼓励您利用可用的邮寄列表和在线论坛与开发团队进行直接交互。
 
 如果您要为AEM的组件提供内容，则应该像向开源项目提供内容一样熟悉AEM，并像您打算向此类项目提供内容一样与现有核心团队进行沟通。
 
-## 所需体验{#required-experience}
+## 所需体验 {#required-experience}
 
 超文本传输协议(HTTP)是我们所做所有工作的核心。 因此，在参与AEM之前，您应该对HTTP有深入的了解，理想的是，您应该能够使用线程池编写自己的多线程HTTP服务器Java实施。 您还应该了解HTTP/1.1保持活动状态的行为，并且应该对与JavaScript的服务器/客户端交互(尤其是AJAX表示的异步交互样式)有深入的了解。
 
@@ -34,7 +34,7 @@ AEM是按照在大型开源项目中常用的行之有效的方法开发的。 �
 那么，在最高级别上，您应该对以下内容有充分的了解：
 
 * [HTTP/1.1协议](https://www.ietf.org/rfc/rfc2616.txt)
-* HTML（最好是[HTML5](https://dev.w3.org/html5/spec/Overview.html)）
+* HTML(最好[HTML5](https://dev.w3.org/html5/spec/Overview.html))
 * 层叠样式表
 * 可扩展标记语言(XML)
 * 异步JavaScript和XML(AJAX)设计模式
@@ -45,17 +45,17 @@ AEM是按照在大型开源项目中常用的行之有效的方法开发的。 �
 * 浏览器Cookie
 * 和其他现代Web开发概念
 
-Adobe Experience Manager的技术堆栈基于具有[Apache Sling](https://sling.apache.org/site/index.html) Web框架的[Apache Felix](https://felix.apache.org/) OSGI容器，并嵌入基于[Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html)的Java内容存储库([JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html))。 您应该熟悉这些单独的项目，以及您打算贡献内容的区域中使用的任何其他开源组件（例如Apache Lucene）。
+Adobe Experience Manager的技术堆栈基于具有[Apache Sling](https://sling.apache.org/site/index.html) Web框架的[Apache Felix](https://felix.apache.org/) OSGI容器，并嵌入基于[Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html)的Java内容存储库([JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html))。 您应该熟悉这些单独的项目，以及您打算贡献内容的区域中使用的任何其他开源组件（例如Apache Lucene）。
 
-## 部落知识{#tribal-knowledge}
+## 部落知识 {#tribal-knowledge}
 
 某些概念和指导原则深深地植根于前日文化中。 本节列出了您应注意的一些“深层嵌入DNA”的问题。
 
-### 所有内容均为{#everything-is-content}
+### 一切都是内容 {#everything-is-content}
 
 内容不仅包括Web应用程序保留的所有数据。 程序代码、库、脚本、模板、HTML、CSS、图像和各种对象、任何内容和所有内容将保留在内容存储库中，并通过包管理器和包共享以包的形式导入/导出。
 
-### David的模型{#david-s-model}
+### 大卫模型 {#david-s-model}
 
 在Java内容存储库中建模内容的方式，需要一种与软件行业中在关系世界中进行数据建模的常见做法完全不同的思维方式。 对于任何内容管理新人而言，JCR方式都是[David的模型：内容建模指南](https://wiki.apache.org/jackrabbit/DavidsModel)。
 
@@ -67,7 +67,7 @@ REST(REpresentational State Transfer)是指万维网所基于的软件体系结�
 
 由于REST为我们所做的许多工作提供了指导性理念，因此您应该认为，熟悉RESTful设计的原则至关重要。 一个很好的入手点是[Roy Fielding的论文](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)。
 
-### Sling请求解析{#sling-request-resolution}
+### Sling请求解决方案 {#sling-request-resolution}
 
 要了解AEM的一个关键方面是：传入请求如何与内容和应用程序行为相关联，内容存储库中内容的结构如何，以及AEM在何处查找应用程序逻辑以处理请求。 了解Apache [Sling URL分解](https://sling.apache.org/site/url-decomposition.html)以及其强制实施REST体系结构样式及其无状态、可缓存和分层系统约束的方式。
 
@@ -81,7 +81,7 @@ REST(REpresentational State Transfer)是指万维网所基于的软件体系结�
 
 更快的启动时间：当您做出可能影响启动时间的更改时，请确保缩短，而不是延长。
 
-### 精简和平均值{#lean-and-mean}
+### 精益与均等 {#lean-and-mean}
 
 我们支持轻量、小、快、雅的代码和项目。 “够好”还不够。
 
@@ -89,25 +89,25 @@ REST(REpresentational State Transfer)是指万维网所基于的软件体系结�
 
 松耦合：我们更青睐松散耦合的互动，而非紧紧的依赖和“不受欢迎的亲密”。 松耦合还可以实现更多代码重用。
 
-### 不要中断演示{#don-t-break-the-demo}
+### 不要破坏演示 {#don-t-break-the-demo}
 
 熟悉演示脚本和产品功能，这些脚本和产品功能最常在演示中显示。 请至少了解，您不应该破坏“演示脚本”功能。 核心产品应始终为演示做好准备，即使在开发过程中也是如此。
 
-### 可靠性设计{#design-for-reliability}
+### 可靠性设计 {#design-for-reliability}
 
 我们努力以失败软方式设计和编码功能，以便（例如）单个DOM元素的问题不会导致整个页面无法呈现。 换句话说：制造应该致命的东西。 让其他一切都能活下来。 让产品“原谅”。
 
-### “异常”是“新正常”{#abnormal-is-the-new-normal}
+### 异常是新常态 {#abnormal-is-the-new-normal}
 
 不要依赖关闭挂钩，确保启动时进行清理。 异常终止是正常终止。
 
 `shutdown == kill -9 == power outage`
 
-### 准备进行弹性聚类{#be-ready-for-elastic-clustering}
+### 准备好进行弹性聚类 {#be-ready-for-elastic-clustering}
 
 始终准备进行弹性聚类，始终假定存在聚类。 通常，遵守内容存储库中的所有内容意味着内置群集支持。
 
-### 向后兼容性设计{#design-for-backward-compatibility}
+### 面向后向兼容性的设计 {#design-for-backward-compatibility}
 
 您不应该破坏客户的旧代码。 请仅考虑`/libs`以包含可在升级期间更新的产品代码。 存储库的`/apps`部分是项目代码，而`/etc`部分包含需要保留的自定义配置。 通常，不要覆盖`/apps`、`/content`和`/home`中的任何内容。 升级后，旧项目代码、配置和内容应继续正常运行，这些操作与升级前的操作一样。
 

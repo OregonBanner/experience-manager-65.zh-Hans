@@ -1,8 +1,8 @@
 ---
 title: 自定义节点类型
-seo-title: 自定义节点类型
+seo-title: Custom Node Types
 description: AEM基于Sling，且使用的JCR存储库具有由两者提供的节点类型，但AEM还提供一系列自定义节点类型
-seo-description: AEM基于Sling，且使用的JCR存储库具有由两者提供的节点类型，但AEM还提供一系列自定义节点类型
+seo-description: AEM is based on Sling and uses a JCR repository with node types offered by both, but AEM also provides a range of custom node types
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1877'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 由于AEM基于Sling并使用JCR存储库，因此这两种存储库提供的节点类型可供使用：
 
-* [JCR节点类型](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR节点类型](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling节点类型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
 除了这些。 AEM提供一系列自定义节点类型。
@@ -56,7 +56,7 @@ ht-degree: 9%
 
 ## 注释 {#comment}
 
-### cq：注释{#cq-comment}
+### cq:Comment {#cq-comment}
 
 **描述**
 
@@ -119,7 +119,7 @@ ht-degree: 9%
 * `- latitude (double)`
 * `- longitude (double)`
 
-### cq：跟踪{#cq-trackback}
+### cq:Trackback {#cq-trackback}
 
 **描述**
 
@@ -417,7 +417,7 @@ DAM资产。
 `+ jcr:content (dam:AssetContent) = dam:AssetContent copy primary`
 `+ * (nt:base) = nt:base version`
 
-### dam：缩略图{#dam-thumbnail}
+### dam：缩略图 {#dam-thumbnail}
 
 **描述**
 
@@ -429,7 +429,7 @@ DAM资产。
    * `mixin`
    * `+ dam:thumbnails (nt:folder)`
 
-## 投放容器列表{#delivery-container-list}
+## 提交容器列表 {#delivery-container-list}
 
 ### cq:containerList {#cq-containerlist}
 
@@ -442,7 +442,7 @@ DAM资产。
 * `[cq:containerList]`
    * `mixin`
 
-## 投放页面{#delivery-page}
+## 投放页面 {#delivery-page}
 
 ### cq:Cq4PageAttributes {#cq-cq-pageattributes}
 
@@ -633,7 +633,7 @@ Blueprint操作
 
 ## 平台 {#platform}
 
-### cq：控制台{#cq-console}
+### cq：控制台 {#cq-console}
 
 **描述**
 
@@ -670,7 +670,7 @@ Blueprint操作
    * `- cq:lastReplicationAction (string) ignore`
    * `- cq:lastReplicationStatus (string) ignore`
 
-## 安全 {#security}
+## 安全性 {#security}
 
 ### cq:ApplicationPrivilege {#cq-applicationprivilege}
 
@@ -766,7 +766,7 @@ Blueprint操作
 
 ## 标记 {#tagging}
 
-### cq：标记{#cq-tag}
+### cq:Tag {#cq-tag}
 
 **描述**
 
@@ -870,7 +870,7 @@ Blueprint操作
    * `- categories (string) multiple`
    * `- dependencies (string) multiple`
 
-### cq：小组件{#cq-widget}
+### cq:Widget {#cq-widget}
 
 **描述**
 
@@ -896,7 +896,7 @@ Blueprint操作
    * `orderable`
    * `+ * (cq:Widget) = cq:Widget copy`
 
-### cq：对话框{#cq-dialog}
+### cq:Dialog {#cq-dialog}
 
 **描述**
 
@@ -906,7 +906,7 @@ Blueprint操作
 
 * `[cq:Dialog] > cq:Widget orderable`
 
-### cq：面板{#cq-panel}
+### cq：面板 {#cq-panel}
 
 **描述**
 
@@ -927,7 +927,7 @@ Blueprint操作
 * `[cq:TabPanel]` > `cq:Panel orderable`
    * `- activeTab (long)`
 
-### cq：字段{#cq-field}
+### cq:Field {#cq-field}
 
 **描述**
 
@@ -942,7 +942,7 @@ Blueprint操作
 
 ## 维基 {#wiki}
 
-### wiki：主题{#wiki-topic}
+### wiki：主题 {#wiki-topic}
 
 **描述**
 
@@ -963,7 +963,7 @@ Blueprint操作
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki：用户{#wiki-user}
+### wiki：用户 {#wiki-user}
 
 **描述**
 
@@ -974,7 +974,7 @@ Wiki用户
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki：属性{#wiki-properties}
+### wiki：属性 {#wiki-properties}
 
 **描述**
 
@@ -988,7 +988,7 @@ Wiki用户
 
 ## 工作流 {#workflow}
 
-### cq：工作流{#cq-workflow}
+### cq：工作流 {#cq-workflow}
 
 **描述**
 
@@ -1031,7 +1031,7 @@ Wiki用户
    * `- sling:resourceType (String) = "cq/workflow/components/workitem" mandatory autocreated`
    * `+ metaData (nt:unstructured)`
 
-### cq：负载{#cq-payload}
+### cq：负载 {#cq-payload}
 
 **描述**
 
@@ -1134,7 +1134,7 @@ Wiki用户
    * `- workflowId (String) // not compulsory as this node will already be attached to the workflow node`
    * `- nodeId (String)`
 
-### cq：等待{#cq-wait}
+### cq：等待 {#cq-wait}
 
 **描述**
 

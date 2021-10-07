@@ -1,8 +1,8 @@
 ---
 title: 查询生成器谓词引用
-seo-title: 查询生成器谓词引用
+seo-title: Query Builder Predicate Reference
 description: 查询生成器API的完整谓词引用。
-seo-description: 查询生成器API的完整谓词引用。
+seo-description: Complete predicate reference for the Query Builder API.
 uuid: af0e269e-7d52-4032-b22e-801c7b5dccfa
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '2323'
+source-wordcount: '2310'
 ht-degree: 3%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 3%
 `myFeatureEnabled` 或 `jcr:content/myFeatureEnabled`
 
 * ****
-用于检查属性的值， &quot; 
+值，用于检查属性， &quot; 
 `true`&quot; 或 &quot; `false`&quot;
 
 ### contentfragment {#contentfragment}
@@ -79,7 +79,7 @@ ht-degree: 3%
 #### 属性 {#properties-1}
 
 * ****
-contentfragmentIt可与任何值一起使用，以检查内容片段。
+contentfragment它可与任何值一起使用，以检查内容片段。
 
 ### dateComparison {#datecomparison}
 
@@ -221,7 +221,7 @@ group.2_group.type=dam:Asset
 
 ### hasPermission {#haspermission}
 
-将结果限制为当前会话具有指定[JCR权限的项目。](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
+将结果限制为当前会话具有指定[JCR权限的项目。](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
 
 这是仅限过滤的谓词，无法利用搜索索引。 它不支持面提取。
 
@@ -379,7 +379,7 @@ group.2_group.type=dam:Asset
 
 将JCR属性与间隔匹配。 这适用于具有线性类型（如`LONG`、`DOUBLE`和`DECIMAL`）的属性。 对于`DATE`，请参阅已优化日期格式输入的日期范围谓词。
 
-您可以定义下限和上限，或者只定义其中一个。 操作(例如 也可以单独为下界和上界指定“小于”或“小于或等于”)。
+您可以定义下限和上限，或者只定义其中一个。 操作(例如 也可以单独为下限和上限指定“小于”或“小于或等于”)。
 
 不支持面提取。
 
@@ -502,10 +502,10 @@ group.2_group.type=dam:Asset
 #### 属性 {#properties-20}
 
 * ****
-要查找相似节点的节点的相似绝对路径
+要查找相似节点的相似绝对路径
 
 * ****
-到子节点或 
+到子节点或子节点的本地相对路径 
 `.` 对于当前节点(可选，默认值为“  `.`”)
 
 ### 标记 {#tag}
