@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 41%
@@ -57,7 +57,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 替换 |
 |--- |--- |--- |
-| 与[!DNL Experience Cloud]集成 | 您可以通过[!DNL Adobe I/O]配置，将资产与[!DNL Experience Cloud]同步。 [!DNL Adobe Experience Cloud] 以前称为 [!DNL Adobe Marketing Cloud]。 | 如果您有任何查询，请[联系Adobe客户关怀团队](https://www.adobe.com/cn/account/sign-in.supportportal.html)。 |
+| 与[!DNL Experience Cloud]集成 | 您可以通过[!DNL Adobe I/O]配置，将资产与[!DNL Experience Cloud]同步。 [!DNL Adobe Experience Cloud] 以前称为 [!DNL Adobe Marketing Cloud]。 | 如果您有任何查询，请[联系Adobe客户支持](https://www.adobe.com/cn/account/sign-in.supportportal.html)。 |
 | Analytics Activity Map | AEM 中包含的 Activity Map 的版本。 | 由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。使用Adobe Analytics](https://docs.adobe.com/content/help/zh-Hans/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)提供的[ActivityMap插件。 |
 | 集成 | ExactTarget集成已从默认分发版（快速入门）中删除，不再可用。 | 无替换项. |
 | 集成 | Salesforce Force API集成已从默认分发版（快速入门）中删除，现在是从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)安装的额外包。 | 该功能仍然可用。 |

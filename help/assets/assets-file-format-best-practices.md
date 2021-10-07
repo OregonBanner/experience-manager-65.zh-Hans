@@ -3,11 +3,11 @@ title: 处理支持的文件格式的最佳实践
 description: 使用 [!DNL Experience Manager Assets]处理各种受支持文件类型的最佳实践。
 contentOwner: AG
 role: Admin
-feature: 资产管理，开发人员工具
+feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，请联系Adobe客户关怀团队，如果您计划处理大量大型PSD或PSB文件。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
+>如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户支持。 与Adobe客户支持代表合作，为您的AMS部署实施这些最佳实践，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ## [!DNL Adobe Camera Raw] 库 {#adobe-camera-raw-library}
 
@@ -34,11 +34,11 @@ ht-degree: 0%
 
 为获得最佳结果，Adobe建议对以下文件使用Adobe PDF光栅器库：
 
-* 内容密集型的PDF文件
+* 内容密集型大量PDF文件
 * 未开箱生成缩略图的AI文件
 * 对于具有专色(PMS)颜色的AI文件
 
-与开箱即用的光栅输出相比，使用PDF光栅化器生成的缩略图和预览的质量更高。 Adobe PDF光栅器库不支持任何色彩空间转换。 无论源PDF文件的色彩空间如何，Adobe PDF光栅器仅生成RGB输出。
+与开箱即用的光栅输出相比，使用PDF光栅器生成的缩略图和预览的质量更高。 Adobe PDF光栅器库不支持任何色彩空间转换。 无论源PDF文件的色彩空间如何，Adobe PDF光栅器只生成RGB输出。
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 

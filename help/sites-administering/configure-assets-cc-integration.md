@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 2%
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->[!DNL Assets]中已弃用此功能。 在[AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)中查找替换项。 如果您有任何查询，请[联系Adobe客户关怀团队](https://www.adobe.com/cn/account/sign-in.supportportal.html)。
+>[!DNL Assets]中已弃用此功能。 在[AEM和Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)中查找替换项。 如果您有任何查询，请[联系Adobe客户支持](https://www.adobe.com/cn/account/sign-in.supportportal.html)。
 
 <!-- Hiding this for now via cqdoc-16834.
 ![Flow of data when AEM Assets and Creative Cloud are integrated](assets/chlimage_1-48.png)

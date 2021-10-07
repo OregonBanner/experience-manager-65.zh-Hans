@@ -8,12 +8,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: 5d5eebe4-46c9-4028-9354-c5f27944fcdc
 docset: aem65
-feature: 资产管理
+feature: Asset Management
 role: User, Admin
 exl-id: 53ea2cf7-d633-4ab9-a869-ce76eb1c01e5
-source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ ht-degree: 0%
 
 1. 在您的Experience Manager实例中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用户]**，然后选择&#x200B;**[!UICONTROL 创建用户]**。 此服务用户必须具有&#x200B;*读/写*&#x200B;权限，即`/content/dam.`
 1. 在&#x200B;**[!UICONTROL ID]**&#x200B;和&#x200B;**[!UICONTROL Password]**&#x200B;字段中，输入用户名和密码；例如， **FTP用户**。 此名称以创建资产的用户身份显示在时间轴中。 从FTP上传资产后，当资产上传到FTP服务器并推送到Experience Manager时，会考虑创建该资产。
-1. 请联系[Adobe企业客户关怀以获取Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support) ，以请求访问功能包18912以进行下载。 在联系支持人员时，您可能需要以下信息：
+1. 联系[Adobe客户支持以获取Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support)，以请求访问功能包18912以进行下载。 在联系支持人员时，您可能需要以下信息：
 
    * Author实例的服务器IP地址，包括端口号（默认情况下，端口号为4502）。
    * Experience Manager服务上一步中的用户用户名和密码。
 
-1. Adobe企业客户关怀团队提供FTP凭据和对功能包18912的访问。
+1. Adobe客户Experience Manager支持为您提供FTP凭据和功能包18912的访问权限。
 1. 收到功能包18912后，请安装它。
 
    请参阅[如何使用包](/help/sites-administering/package-manager.md) ，以了解有关在Experience Manager中使用软件分发和包的详细信息。

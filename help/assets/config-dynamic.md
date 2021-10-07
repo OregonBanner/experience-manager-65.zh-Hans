@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
 source-wordcount: '7792'
 ht-degree: 1%
@@ -152,7 +152,7 @@ Dynamic Media-Hybrid必须启用并配置以供使用。 根据您的用例，Dy
 * 能够仅管理单个主源图像，并即时生成无限演绎版，而无需任何额外存储。
 * 能够使用交互式可视化图表，如缩放、平移和旋转。
 
-如果要在Experience Manager中使用Dynamic Media Classic，请勿启用Dynamic Media，除非您使用[特定方案](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。 Dynamic Media被禁用，除非您通过运行模式启用Dynamic Media。
+如果要在Experience Manager中使用Dynamic Media Classic，请勿启用Dynamic Media，除非您使用的是[特定方案](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)。 Dynamic Media被禁用，除非您通过运行模式启用Dynamic Media。
 
 要启用Dynamic Media，必须通过命令行或快速启动文件名启用Dynamic Media运行模式。
 
@@ -263,11 +263,11 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 
 ### 设置身份验证 {#setting-up-authentication}
 
-在作者上设置复制身份验证，以便将图像复制到Dynamic Media图像交付服务。 首先获取KeyStore，然后将其保存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;用户下，并对其进行配置。 在配置过程中，公司管理员收到了一封欢迎电子邮件，其中包含KeyStore文件和必要的凭据。 如果您未收到此信息，请联系Adobe客户关怀团队。
+在作者上设置复制身份验证，以便将图像复制到Dynamic Media图像交付服务。 首先获取KeyStore，然后将其保存在&#x200B;**[!UICONTROL dynamic-media-replication]**&#x200B;用户下，并对其进行配置。 在配置过程中，公司管理员收到了一封欢迎电子邮件，其中包含KeyStore文件和必要的凭据。 如果您未收到此信息，请联系Adobe客户支持。
 
 **要设置身份验证，请执行以下操作：**
 
-1. 如果您还没有KeyStore文件和密码，请联系Adobe客户关怀团队，以获取该文件和密码。 此信息是配置的必要部分。 它会将密钥关联到您的帐户。
+1. 如果您还没有KeyStore文件和密码，请联系Adobe客户支持，以获取该文件和密码。 此信息是配置的必要部分。 它会将密钥关联到您的帐户。
 
 1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用户]**。
 
@@ -290,9 +290,9 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 
    * 在&#x200B;**[!UICONTROL New Alias]**&#x200B;字段中，输入要在复制配置中稍后使用的别名的名称。 例如，您可以使用`replication`作为别名。
    * 选择&#x200B;**[!UICONTROL KeyStore文件]**。 导航到按Adobe提供给您的KeyStore文件，选择它，然后选择&#x200B;**[!UICONTROL Open]**。
-   * 在&#x200B;**[!UICONTROL KeyStore File Password]**&#x200B;字段中，输入KeyStore File密码。 此密码是您在步骤5中创建的KeyStore密码&#x200B;**不**，但是是在预配期间发送给您的欢迎电子邮件中提供的KeyStore文件密码Adobe。 如果您未收到KeyStore文件密码，请联系Adobe客户关怀团队。
-   * 在&#x200B;**[!UICONTROL 私钥密码]**&#x200B;字段中，输入私钥密码（可以是上一步中提供的相同私钥密码）。 Adobe在预配期间向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请联系Adobe客户关怀。
-   * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中，输入私钥别名。 例如, `*companyname*-alias`. Adobe在预配期间向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户关怀。
+   * 在&#x200B;**[!UICONTROL KeyStore File Password]**&#x200B;字段中，输入KeyStore File密码。 此密码是您在步骤5中创建的KeyStore密码&#x200B;**不**，但是是在预配期间发送给您的欢迎电子邮件中提供的KeyStore文件密码Adobe。 如果您未收到KeyStore文件密码，请联系Adobe客户支持。
+   * 在&#x200B;**[!UICONTROL 私钥密码]**&#x200B;字段中，输入私钥密码（可以是上一步中提供的相同私钥密码）。 Adobe在预配期间向您发送的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请联系Adobe客户支持。
+   * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中，输入私钥别名。 例如, `*companyname*-alias`. Adobe在预配期间向您发送的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户支持。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -309,7 +309,7 @@ Dynamic Media图像交付的工作方式是：将图像资产（包括视频缩�
 
    * **[!UICONTROL 已启用]**  — 选中此复选框可启用复制代理。
    * **[!UICONTROL 区域]**  — 设置为相应的区域：北美洲、欧洲或亚洲
-   * **[!UICONTROL 租户ID]**  — 此值是发布到复制服务的公司/租户的名称。此值是Adobe在配置期间发送给您的欢迎电子邮件中提供的租户ID。 如果您未收到此信息，请联系Adobe客户关怀团队。
+   * **[!UICONTROL 租户ID]**  — 此值是发布到复制服务的公司/租户的名称。此值是Adobe在配置期间发送给您的欢迎电子邮件中提供的租户ID。 如果您未收到此信息，请联系Adobe客户支持。
    * **[!UICONTROL 密钥存储别名]**  — 此值与在设置身份验 **证** 中生成密钥时设置 [的新别名](#setting-up-authentication)值相同；例如 `replication`。（请参阅[设置身份验证](#setting-up-authentication)中的步骤7。）
    * **[!UICONTROL 密钥存储密码]**  — 点按创建密钥存储时创建的 **[!UICONTROL KeyStore密码]**。Adobe不提供此密码。 请参阅[设置身份验证](#setting-up-authentication)的步骤5。
 
@@ -501,7 +501,7 @@ Adobe建议您对配置进行端到端测试。
 
 Dynamic MediaCloud Service支持混合发布和交付图像、视频、视频分析和视频编码等内容。
 
-在配置中，您必须输入注册ID、视频服务URL、图像服务URL、复制服务URL并设置身份验证。 此信息已在帐户配置过程中通过电子邮件发送给您。 如果您未收到此信息，请联系Adobe Experience Manager管理员或Adobe客户关怀团队以获取该信息。
+在配置中，您必须输入注册ID、视频服务URL、图像服务URL、复制服务URL并设置身份验证。 此信息已在帐户配置过程中通过电子邮件发送给您。 如果您未收到此信息，请联系Adobe Experience Manager管理员或Adobe客户支持以获取该信息。
 
 >[!NOTE]
 在设置Dynamic MediaCloud Services之前，请确保设置了您的发布实例。 在配置Dynamic MediaCloud Services之前，您还必须设置复制。
@@ -695,10 +695,10 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
    <td>Dynamic Media Classic(Scene7)集成</td>
    <td><p>过滤图像</p> <p>筛选集</p> <p>filter-video</p> </td>
    <td><p>以<strong>image/</strong>开头</p> <p>包含<strong>application/</strong>，以<strong>set</strong>结尾。</p> <p>以<strong>video/</strong>开头</p> </td>
-   <td><p>您将传输URI配置为指向您的Experience Manager发布服务器，而不是AdobeDynamic Media云复制服务URL。 设置此过滤器后，Dynamic Media Classic可以交付资产，而不是Experience Manager发布实例。</p> <p>现成的“filter-images”、“filter-sets”和“filter-video”将：</p>
+   <td><p>您将传输URI配置为指向您的Experience Manager发布服务器，而不是AdobeDynamic Media云复制服务URL。 通过设置此过滤器，Dynamic Media Classic可以交付资产，而不是Experience Manager发布实例。</p> <p>现成的“filter-images”、“filter-sets”和“filter-video”将：</p>
     <ul>
-     <li>包括PTIFF图像、代理视频演绎版和用于复制的元数据。 但是，由于JCR中不存在这些运行Experience Manager(即Dynamic Media Classic集成)的JCR中，因此它们实际上不会执行任何操作。</li>
-     <li>从复制中排除原始图像、静态图像呈现、原始视频和静态缩略图呈现。 相反，Dynamic Media Classic可提供图像和视频资产。</li>
+     <li>包括PTIFF图像、代理视频演绎版和用于复制的元数据。 但是，由于JCR中不存在这些运行Experience Manager(即Dynamic Media Classic集成)的JCR中，因此IT会无效执行任何操作。</li>
+     <li>从复制中排除原始图像、静态图像呈现、原始视频和静态缩略图呈现。 相反，Dynamic Media Classic会提供图像和视频资产。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -788,7 +788,7 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 
    ![chlimage_1-513](assets/chlimage_1-4.png)
 
-   使用上例，如果您只想复制PTIFF(Pyramid TIFF)，则可以输入`+cqdam,*`，其中包含以`cqdam`开头的所有演绎版。 在示例中，该呈现版本为`cqdam.pyramid.tiff`。
+   使用上例，如果您只想复制PTIFF(金字塔TIFF)，则可以输入`+cqdam,*`，其中包含以`cqdam`开头的所有演绎版。 在示例中，该呈现版本为`cqdam.pyramid.tiff`。
 
    如果只想复制原件，则输入`+original`。
 
@@ -799,7 +799,7 @@ Experience Manager6.4及更高版本将此预设保存在`/conf/global/settings/
 >[!NOTE]
 Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您可以选择通过配置Dynamic Media Image Server以满足特定规范或要求来微调安装。
 
-**先决条件**  -  ** 在配置Dynamic Media Image Server之前，请确保Windows®的VM包含Microsoft® Visual C++库的安装。运行Dynamic Media Image Server时需要这些库。 您可以在此处[下载Microsoft® Visual C++ 2010 Redistributable Package(x64)](https://www.microsoft.com/en-us/download/details.aspx?id=26999)。
+**先决条件**  -  ** 在配置Dynamic Media Image Server之前，请确保Windows®的虚拟机包含Microsoft® Visual C++库的安装。运行Dynamic Media Image Server时需要这些库。 您可以在此处[下载Microsoft® Visual C++ 2010 Redistributable Package(x64)](https://www.microsoft.com/en-us/download/details.aspx?id=26999)。
 
 要配置Dynamic Media图像服务器设置，请执行以下操作：
 
@@ -842,7 +842,7 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 
 ### 默认清单设置 {#default-manifest-settings}
 
-默认清单允许您配置用于生成Dynamic Media投放响应的默认清单。 您可以微调质量（JPEG质量、分辨率、重新取样模式）、缓存（过期），并阻止渲染太大的图像(defaultpix、defaultthumbpix、maxpix)。
+默认清单允许您配置用于生成Dynamic Media投放响应的默认清单。 您可以微调质量(JPEG质量、分辨率、重新取样模式)、缓存（过期），并阻止渲染太大的图像(defaultpix、defaultthumbpix、maxpix)。
 
 默认清单配置的位置取自&#x200B;**[!UICONTROL Adobe CQ Scene7 PlatformServer]**&#x200B;包的&#x200B;**[!UICONTROL 目录根]**&#x200B;默认值。 默认情况下，此值位于&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**&#x200B;中的以下路径
 
@@ -862,10 +862,10 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 
 | 属性 | 默认值 | 描述 |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | 默认背景颜色。 用于填充不包含实际图像数据的回复图像任何区域的RGB值。 另请参阅图像提供API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
+| `bkgcolor` | `FFFFFF` | 默认背景颜色。 RGB值，用于填充回复图像中不包含实际图像数据的任何区域。 另请参阅图像提供API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
 | `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，则服务器将限制返回图像不大于此宽度和高度。<br>指定为两个整数数字，0或更大，用逗号分隔。宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。 不适用于嵌套/嵌入的请求。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) 阅图像提供API中的DefaultPixin 。<br>但是，通常情况下，您会使用查看器预设或图像预设来交付资产。Defaultpix仅适用于未使用查看器预设或图像预设的资产。 |
 | `defaultthumbpix` | `100,100` | 默认缩略图大小。 对缩略图请求(`req=tmb`)使用的是：DefaultPix，而不是属性：:DefaultPix。<br>服务器将限制返回图像不得大于此宽度和高度。如果缩略图请求(`req=tmb`)未明确指定大小，并且未使用`wid=`、`hei=`或`scl=`显式指定视图大小，则此操作为true。<br>指定为两个整数数字，0或更大，用逗号分隔。宽度和高度（以像素为单位）。 可以将任一或两个值都设置为0，以保持它们不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) 阅图像提供API中的DefaultThumbPixin 。 |
-| `expiration` | `36000000` | 默认的客户端缓存生存时间。 提供默认过期时间间隔，以防特定目录记录不包含有效的目录：：过期值。<br>实数，0或更大。自生成回复数据后到期的毫秒数。 设置为0时，将始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要尽早清除缓存，请联系客户关怀团队。<br>另请参阅 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 图像提供API中的过期日期。 |
+| `expiration` | `36000000` | 默认的客户端缓存生存时间。 提供默认过期时间间隔，以防特定目录记录不包含有效的目录：：过期值。<br>实数，0或更大。自生成回复数据后到期的毫秒数。 设置为0时，将始终立即使回复图像过期，这会有效地禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布了新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要更快清除缓存，请联系客户支持。<br>另请参阅 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) 图像提供API中的过期日期。 |
 | `jpegquality` | `80` | 默认JPEG编码属性。 指定JPEG回复图像的默认属性。<br>整数和标记，以逗号分隔。第一个值在1.100范围内，用于定义质量。 对于正常行为，第二个值可以为0，或者为1，以禁用JPEG编码器使用的RGB色度下采样。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) 阅图像提供API中的JpegQualitie 。 |
 | `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致返回图像的宽度或高度大于属性：:MaxPix，则服务器会返回错误。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) 阅图像提供API中的MaxPixin 。 |
 | `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样属性和插值属性。<br>在请求 `resMode=` 中未指定时使用。<br>允许的值 `BILIN`包括 `BICUB`、或 `SHARP2`。<br>枚举。对于`bilin`，设置为2；对于`bicub`，设置为3；对于`sharp2`插值模式，设置为4。 使用`sharp2`获取最佳结果。<br>另请参 [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) 阅图像提供API中的ResMode 。 |
@@ -876,7 +876,7 @@ Dynamic Media在启用](#enabling-dynamic-media)后即可使用[。 但是，您
 
 Dynamic Media色彩管理允许您对资产进行颜色校正以进行预览。
 
-通过颜色校正，摄取的资产会在生成的金字塔TIFF呈现版本中保留其色彩空间（RGB、CMYK、灰色）和嵌入的色彩配置文件。 当您请求动态呈现时，图像颜色会校正到目标颜色空间中。 您可以在JCR的Dynamic Media发布设置中配置输出颜色配置文件。
+通过颜色校正，摄取的资产会在生成的金字塔TIFF呈现版本中保留其色彩空间(RGB、CMYK、灰色)和嵌入的颜色配置文件。 当您请求动态呈现时，图像颜色会校正到目标颜色空间中。 您可以在JCR的Dynamic Media发布设置中配置输出颜色配置文件。
 
 Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了该配置文件的格式。
 
@@ -906,7 +906,7 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
 
 ### 配置默认颜色配置文件 {#configuring-the-default-color-profiles}
 
-安装功能包后，请配置相应的默认颜色配置文件，以在请求RGB或CMYK图像数据时启用颜色校正。
+安装功能包后，配置适当的默认颜色配置文件，以在请求RGB或CMYK图像数据时启用颜色校正。
 
 **要配置默认颜色配置文件，请执行以下操作：**
 
@@ -1011,12 +1011,12 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
   <tr>
    <td>AppleRGB</td>
    <td>RGB</td>
-   <td>Apple RGB</td>
+   <td>AppleRGB</td>
   </tr>
   <tr>
    <td>CIERGB</td>
    <td>RGB</td>
-   <td>CIE RGB</td>
+   <td>CIERGB</td>
   </tr>
   <tr>
    <td>CoatedFogra27</td>
@@ -1036,7 +1036,7 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
   <tr>
    <td>ColorMatchRGB</td>
    <td>RGB</td>
-   <td>颜色匹配RGB</td>
+   <td>ColorMatchRGB</td>
   </tr>
   <tr>
    <td>EuropeISOCoated</td>
@@ -1096,7 +1096,7 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
   <tr>
    <td>ProPhoto</td>
    <td>RGB</td>
-   <td>ProPhoto RGB</td>
+   <td>ProPhotoRGB</td>
   </tr>
   <tr>
    <td>PS4Default</td>
@@ -1175,7 +1175,7 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，ICC定义了
 * 为RGB和CMYK图像启用颜色校正。
 * 假定没有颜色配置文件的RGB图像位于&#x200B;*sRGB*&#x200B;颜色空间中。
 * 假定没有颜色配置文件的CMYK图像位于&#x200B;*WebCoated*&#x200B;色彩空间中。
-* 返回RGB输出的动态呈现，以*sRGB *色彩空间返回。
+* 可返回RGB输出的动态演绎版，以*sRGB *色彩空间的形式返回。
 * 返回CMYK输出的动态呈现，在&#x200B;*WebCoated*&#x200B;色彩空间中返回。
 
 ## 传送资产 {#delivering-assets}

@@ -4,7 +4,7 @@ description: 特定于 [!DNL Adobe Experience Manager] 6.5 service pack 10的发
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '4392'
 ht-degree: 4%
@@ -104,7 +104,7 @@ ht-degree: 4%
 * 当用户键入包含空格（系统上不存在的标记）的按需标记并按Enter时，该标记将显示在字段下方。 但是，保存并重新打开[!DNL Content Fragment]后，不会显示按需标记(NPR-36441)。
 * 通过Dispatcher访问实例时，无法删除模板(NPR-36385)。
 * 移动页面时，需要手动刷新浏览器才能渲染更改(NPR-36381)。
-* 选择组件时，可以按Ctrl+X或Ctrl+C（在Mac上按Command+X或Command+C）剪切或复制组件。 单击其他组件时，可以粘贴工具栏，但不能粘贴键盘（Ctrl+V或Command+V）(NPR-36379)。
+* 选择组件时，可以按Ctrl+X或Ctrl+C(以及Mac上的Command+X或Command+C)剪切或复制组件。 单击其他组件时，可以粘贴工具栏，但不能粘贴键盘（Ctrl+V或Command+V）(NPR-36379)。
 * 当用户尝试使用剪刀图标剪切组件以将其移动到其他位置时，会出现控制台错误。 此外，粘贴时只移动一个组件(NPR-36378)。
 * [!DNL Experience Manager] 在WCM或通知中存在没有索引的查询，会降低性能(NPR-36303)。
 * 当作者恢复已删除的继承组件上的继承时，可用选项是同步所有页面内容。 内容作者需要同步完整页面，即使继承仅在一个组件上恢复也是如此。 完全同步可能会导致同步不需要的内容(NPR-34456、CQ-4310183)。
@@ -294,7 +294,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **通信管理**
 
-* 在[!UICONTROL Data]选项卡和HTML信件预览中显示字符的延迟(NPR-37020)。
+* 在[!UICONTROL Data]选项卡以及HTML信件预览中显示字符的延迟(NPR-37020)。
 
 * 编辑文本文档片段时，保存片段后，新词将显示为HTML标记(NPR-36837)。
 
@@ -323,11 +323,11 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **Designer**
 
-* 屏幕Reader无法读取置于主控页面或动态PDF中子表单页面上文本标签内的浮动字段数据(CQ-4321587)。
+* 屏幕Reader无法读取置于动态PDF中主控页面或子表单页面上文本标签内的浮动字段数据(CQ-4321587)。
 
 **文档服务**
 
-* 将XDP文件转换为PDF文件，然后组合生成的PDF时，PDF层代会失败并显示以下错误消息：
+* 将XDP文件转换为PDF文件，然后组合生成PDF时，PDF层代会失败，并显示以下错误消息：
 
    ```TXT
    Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
@@ -341,7 +341,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * 在CRX DE存储库中将`mfAllowAttachments`属性的值设置为`True`时，`dataXml`在提交HTML5表单时已损坏(NPR-37035)。
 
-* 使用`dataXml`将XDP渲染为HTML时，[!DNL AEM Forms]会显示`Page Unresponsive`错误(NPR-36631)。
+* 使用`dataXml`呈现XDP作为HTML时，[!DNL AEM Forms]会显示`Page Unresponsive`错误(NPR-36631)。
 
 ### 商务 {#commerce-65100}
 
@@ -411,7 +411,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 >[!NOTE]
 >
->如果您没有使用Experience ManagerForms，请跳过。 在计划的[!DNL Experience Manager] Service Pack版本发布后一周，Experience ManagerForms中的修复将通过单独的附加组件包提供。
+>如果您没有使用Experience Manager Forms，请跳过。 在计划的[!DNL Experience Manager] Service Pack版本发布后一周，Experience Manager Forms中的修复将通过单独的附加组件包提供。
 
 1. 确保您已安装Adobe Experience Manager Service Pack。
 1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)中列出的相应 Forms 附加组件包。
@@ -427,11 +427,11 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 >
 >如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的Adobe Experience Manager Forms中的修复通过单独的安装程序提供。
 
-有关在JEE上安装用于Experience ManagerForms的累积安装程序以及部署后配置的信息，请参阅[发行说明](jee-patch-installer-65.md)。
+有关在JEE上安装Experience Manager Forms累积安装程序和部署后配置的信息，请参阅[发行说明](jee-patch-installer-65.md)。
 
 >[!NOTE]
 >
->在JEE上安装用于Experience ManagerForms的累积安装程序后，安装最新的Forms附加组件包，从`crx-repository\install`文件夹中删除Forms附加组件包，然后重新启动服务器。
+>在JEE上安装Experience Manager Forms的累积安装程序后，安装最新的Forms附加组件包，从`crx-repository\install`文件夹中删除Forms附加组件包，然后重新启动服务器。
 
 
 ### UberJar {#uber-jar}
@@ -461,7 +461,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 
 | 区域 | 功能 | 替换 |
 |---|---|---|
-| 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用，因为[!DNL Experience Manager]和[!DNL Adobe Target]集成已在Experience Manager6.5中更新。该集成支持Adobe Target标准API。 该API使用通过AdobeIMS和[!DNL Adobe I/O]进行身份验证，并支持AdobeLaunch发挥越来越大的作用，以便为分析和个性化设置[!DNL Experience Manager]页面，因此选择加入向导在功能上无关紧要。 | 通过相应的[!DNL Experience Manager]云服务配置系统连接、AdobeIMS身份验证和[!DNL Adobe I/O]集成。 |
+| 集成 | **[!UICONTROL AEM云服务选择加入]**&#x200B;屏幕已弃用，因为[!DNL Experience Manager]和[!DNL Adobe Target]集成已在Experience Manager6.5中更新。该集成支持Adobe Target标准API。 该API使用通过Adobe IMS和[!DNL Adobe I/O]进行身份验证，并支持AdobeLaunch发挥越来越大的作用来为分析和个性化设置[!DNL Experience Manager]页面，因此选择加入向导在功能上与此无关。 | 通过相应的[!DNL Experience Manager]云服务配置系统连接、Adobe IMS身份验证和[!DNL Adobe I/O]集成。 |
 | 连接器 | 适用于Microsoft® SharePoint 2010和Microsoft® SharePoint 2013的AdobeJCR Connector已在Experience Manager6.5中弃用。 | 不适用 |
 
 ## 已知问题 {#known-issues}
@@ -481,7 +481,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 * 在安装Experience Manager6.5.x.x期间，可能会显示以下错误和警告消息：
    * “当使用Target Standard API（IMS身份验证）在Experience Manager中配置Adobe Target集成时，将体验片段导出到Target会导致创建错误的选件类型。 而不是“体验片段”/源“Adobe Experience Manager”类型，Target 会创建若干个“HTML”/源“Adobe Target Classic”类型的选件。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
-   * 使用聚合函数（如SUM、MAX和MIN）时，自适应表单服务器端验证失败(CQ-4274424)。
+   * 使用聚合函数(如SUM、MAX和MIN)时，自适应表单服务器端验证失败(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 通过购物横幅查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :等待注册更改完成取消注册时超时。
@@ -499,7 +499,7 @@ B.使用包管理器](/help/sites-administering/package-manager.md#package-share
 这些网站仅供客户使用。 如果您是客户并且需要访问，请联系您的 Adobe 客户经理。
 
 * [产品下载：licensing.adobe.com](https://licensing.adobe.com/)
-* 请参阅[如何联系Adobe客户关怀团队](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。
+* 请参阅[如何联系Adobe客户支持](https://experienceleague.adobe.com/docs/customer-one/using/home.html)。
 
 >[!MORELIKETHIS]
 >

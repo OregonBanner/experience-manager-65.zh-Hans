@@ -4,12 +4,12 @@ description: 了解资产管理任务，如上传、下载、编辑、搜索、�
 contentOwner: AG
 mini-toc-levels: 1
 role: User
-feature: 资产管理，搜索
+feature: Asset Management,Search
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 9dc61a66a79004013d8cff89c4607f7aafad08df
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '9848'
-ht-degree: 6%
+source-wordcount: '9846'
+ht-degree: 7%
 
 ---
 
@@ -47,7 +47,7 @@ Move this section into a new article. CQDOC-14874 ticket is created for this.
 In this complete article, replace emphasis with UICONTROL where appropriate.
 -->
 
-您可以将各种类型的资产（包括图像、PDF文件、RAW文件等）从本地文件夹或网络驱动器上传到[!DNL Experience Manager Assets]。
+您可以将各种类型的资产(包括图像、PDF文件、RAW文件等)从本地文件夹或网络驱动器上传到[!DNL Experience Manager Assets]。
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 1. 要上传资产，请执行以下操作之一：
 
    * 在工具栏中，单击&#x200B;**[!UICONTROL 创建]**。 然后，在菜单中，单击&#x200B;**[!UICONTROL 文件]**。 如果需要，可以在显示的对话框中重命名文件。
-   * 在支持HTML5的浏览器中，直接将资产拖动到[!DNL Assets]用户界面上。 未显示重命名文件的对话框。
+   * 在支持HTML5的浏览器中，将资产直接拖动到[!DNL Assets]用户界面上。 未显示重命名文件的对话框。
 
    ![创建用于上传资产的选项](assets/create-options.png)
 
@@ -83,7 +83,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 要取消持续上传，请单击进度栏旁边的关闭(`X`)。 取消上传操作后，[!DNL Assets]将删除部分上传的资产部分。
 
-恢复上传的功能在低带宽情况和网络故障中特别有用，在这些情况下，上传大型资产需要较长时间。 您可以暂停上传操作，稍后在情况好转时继续。 恢复时，上传会从暂停之处开始。
+恢复上传的功能在低带宽情况和网络故障中特别有用，在这些情况下，上传大型资产需要较长时间。 您可以暂停上传操作，稍后在情况好转时继续。 恢复时，上传会从暂停时开始。
 
 在上传操作期间，[!DNL Experience Manager]会将上传的资产部分作为数据块保存到CRX存储库中。 上传完成后，[!DNL Experience Manager]会将这些区块合并到存储库中的单个数据块中。
 
@@ -96,9 +96,8 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >考虑到凭据到期超时、延迟、带宽和预期的并发上载，可确保选择以下内容的最高值：
 >
 >* 确保在上传过程中为可能导致凭据过期的大小文件启用区块上传。
-   >
-   >
-* 确保每个块在凭据过期之前完成。
+>
+>* 确保每个块在凭据过期之前完成。
 
 
 如果您上传的资产与上传资产的位置已提供的资产同名，则会显示一个警告对话框。
@@ -160,9 +159,9 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 
 >[!NOTE]
 >
->要在Dynamic Media - Scene7模式下通过FTP上传资产，请在[!DNL Experience Manager]创作实例上安装功能包18912。 联系[Adobe客户关怀](https://experienceleague.adobe.com/?support-solution=General#support)以访问FP-18912并完成FTP帐户的设置。 有关更多信息，请参阅[安装用于批量资产迁移的功能包18912](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media - Scene7模式下通过FTP上传资产，请在[!DNL Experience Manager]创作实例上安装功能包18912。 联系[Adobe客户支持](https://experienceleague.adobe.com/?support-solution=General#support)以访问FP-18912并完成FTP帐户的设置。 有关更多信息，请参阅[安装用于批量资产迁移的功能包18912](/help/assets/bulk-ingest-migrate.md)。
 >
->如果您使用FTP上传资产，则会忽略[!DNL Experience Manager]中指定的上传设置。 而是使用Dynamic Media Classic中定义的文件处理规则。
+>如果您使用FTP上传资产，则会忽略[!DNL Experience Manager]中指定的上传设置。 而是使用在Dynamic Media Classic中定义的文件处理规则。
 
 **使用FTP上传资产**
 
@@ -170,7 +169,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 
 1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然后登录到您的帐户。
 
-   您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请联系技术支持。
+   您的凭据和登录是在配置时由Adobe提供的。 如果您没有此信息，请联系Adobe客户支持。
 
 1. 在全局导航栏上，单击&#x200B;**[!UICONTROL Upload]**。
 1. 在上传页面左上角附近，单击&#x200B;**[!UICONTROL 通过FTP]**&#x200B;选项卡。
@@ -186,7 +185,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 1. 在“上传作业选项”对话框的右下角，单击&#x200B;**[!UICONTROL 保存]**。
 1. 在上传页面的右下角，单击&#x200B;**[!UICONTROL 提交上传]**。
 
-   要查看上传进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页面显示上传的进度。 您可以继续在[!DNL Experience Manager]中工作，并随时返回到Dynamic Media Classic中的“作业”页面，以查看正在进行的作业。
+   要查看上传进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页面显示上传的进度。 您可以继续在[!DNL Experience Manager]中工作，并随时返回到Dynamic Media Classic的“作业”页面，以查看正在进行的作业。
 要取消正在进行的上载作业，请单击持续时间旁边的**[!UICONTROL 取消]**。
 
 #### 上载作业选项 {#upload-job-options}
@@ -195,7 +194,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 |---|---|---|
 | 作业名称 |  | 在文本字段中预填充的默认名称包括用户输入的名称部分以及日期和时间戳。 您可以使用默认名称或输入您自己为此上载作业创建的名称。 <br>作业以及其他上传和发布作业会记录在“作业”页面上，您可以在该页面中检查作业的状态。 |
 | 上传后发布 |  | 自动发布您上传的资产。 |
-| 在任意文件夹中覆盖相同的基本资产名称，而不考虑扩展名 |  | 如果希望上传的文件替换具有相同名称的现有文件，请选择此选项。 此选项的名称可能不同，具体取决于&#x200B;**[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]** > **[!UICONTROL 上传到应用程序]** > **[!UICONTROL 覆盖图像]**&#x200B;中的设置。 |
+| 在任意文件夹内，使用相同的基本资源名称（不论扩展名是什么）进行覆盖 |  | 如果希望上传的文件替换具有相同名称的现有文件，请选择此选项。 此选项的名称可能不同，具体取决于&#x200B;**[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]** > **[!UICONTROL 上传到应用程序]** > **[!UICONTROL 覆盖图像]**&#x200B;中的设置。 |
 | 上传时解压缩Zip或Tar文件 |  |  |
 | 作业选项 |  | 单击&#x200B;**[!UICONTROL 作业选项]** ，以打开[!UICONTROL 上传作业选项]对话框并选择影响整个上传作业的选项。 所有文件类型的这些选项都是相同的。<br>您可以从“应用程序常规设置”页面开始，选择上传文件的默认选项。要打开此页，请选择&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]**。 选择&#x200B;**[!UICONTROL 默认上传选项]**&#x200B;选项以打开[!UICONTROL 上传作业选项]对话框。 |
 |  | 当 | 选择一次性或定期。 要设置循环作业，请选择重复选项（每日、每周、每月或自定义）以指定希望FTP上传作业何时重复。 然后根据需要指定计划选项。 |
@@ -212,7 +211,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 
 #### 设置上传时图像编辑的选项 {#setting-image-editing-options-at-upload}
 
-在上传图像文件（包括AI、EPS和PSD文件）时，可以在[!UICONTROL 上传作业选项]对话框中执行以下编辑操作：
+上传图像文件(包括AI、EPS和PSD文件)时，您可以在[!UICONTROL 上传作业选项]对话框中执行以下编辑操作：
 
 * 从图像边缘裁剪空格（请参阅上表中的描述）。
 * 从图像的侧边手动裁剪（请参阅上表中的描述）。
@@ -244,18 +243,18 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上传
 |---|---|---|
 | 正在处理 |  | 选择&#x200B;**[!UICONTROL 光栅化]**&#x200B;以将文件中的矢量图形转换为位图格式。 |
 | 在渲染的图像中维护透明背景 |  | 保持文件的背景透明度。 |
-| 分辨率 |  | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
+| 解决方法 |  | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
 | 色彩空间 |  | 选择“色彩空间”菜单，然后从以下色彩空间选项中进行选择： |
 |  | 自动检测 | 保留文件的色彩空间。 |
-|  | 强制为RGB | 转换为RGB色彩空间。 |
+|  | 强制作为RGB | 转换为RGB色彩空间。 |
 |  | 强制为CMYK | 转换为CMYK色彩空间。 |
 |  | 强制作为灰度 | 转换为灰度色彩空间。 |
 
 #### 设置Photoshop上传选项 {#setting-photoshop-upload-options}
 
-Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件时，可以从该文件自动创建图像模板（在“上传”屏幕上选择[!UICONTROL 创建模板]选项）。
+Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时，可以从该文件自动创建图像模板（在“上传”屏幕上选择[!UICONTROL 创建模板]选项）。
 
-如果使用PSD文件创建模板，则Dynamic Media会从带有图层的文件中创建多个图像；它会为每个图层创建一个图像。
+如果使用文件创建模板，则Dynamic Media会从带有层的PSD文件创建多个图像；它会为每个图层创建一个图像。
 
 使用上述的[!UICONTROL 裁剪选项]和[!UICONTROL 颜色配置文件选项]，并使用Photoshop上传选项。
 
@@ -265,19 +264,19 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 
 | 选项 | Suboption | 描述 |
 |---|---|---|
-| 维护图层 |  | 将PSD中的图层（如果有）拆分为单个资产。 资产层仍与PSD关联。 可通过在“详细信息”视图中打开PSD文件并选择图层面板来查看它们。 |
-| 创建模板 |  | 从PSD文件中的层创建模板。 |
+| 维护图层 |  | 将PSD中的层（如果有）拆分为单个资产。 资产层与PSD保持关联。 可以通过在“详细信息”视图中打开PSD文件并选择层面板来查看它们。 |
+| 创建模板 |  | 从PSD文件的层创建模板。 |
 | 提取文本 |  | 提取文本，以便用户在查看器中搜索文本。 |
-| 将图层扩展到背景大小 |  | 将撕裂图像层的大小扩展到背景层的大小。 |
+| 将图层扩展至背景大小 |  | 将撕裂图像层的大小扩展到背景层的大小。 |
 | 层命名 |  | PSD文件中的图层将作为单独的图像上传。 |
-|  | 层名称 | 在PSD文件中将图像命名为图层名称之后的图像。 例如，原始PSD文件中名为“价格标签”的图层将变为名为“价格标签”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、图层1、图层2等），则图像将以PSD文件中的图层编号命名。 它们的名称不以其默认层名称命名。 |
-|  | Photoshop和层号 | 在PSD文件中将图像命名为图层编号之后的图像，而忽略原始图层名称。 图像以Photoshop文件名和附加的图层编号命名。 例如，名为Spring Ad.psd的文件的第二层名为Spring Ad_2，即使它在Photoshop中具有非默认名称。 |
-|  | Photoshop和层名称 | 在PSD文件后面命名图像，后跟图层名称或图层编号。 如果PSD文件中的层名称是缺省的Photoshop层名称，则使用层编号。 例如，在名为SpringAd的PSD文件中，名为Price Tag的层被命名为Spring Ad_Price Tag。 缺省名称为Layer 2的层称为Spring Ad_2。 |
-| 锚点 |  | 指定如何在模板中定位图像，这些模板是从PSD文件生成的分层组合生成的。 默认情况下，锚点为中心。 无论替换图像的长宽比如何，中心锚点都允许替换图像最好地填充相同的空间。 引用模板和使用参数替换时，具有不同方面的图像会替换此图像，因此，当引用模板和使用参数替换时，会有效地占用相同的空间。 如果您的应用程序需要替换图像来填充模板中分配的空间，请更改为其他设置。 |
+|  | 层名称 | 将图像命名为PSD文件中图层名称之后的图像。 例如，原始PSD文件中名为“价格标签”的层将变为名为“价格标签”的图像。 但是，如果PSD文件中的层名称是默认的Photoshop层名称（背景、层1、层2等），则图像将以其在PSD文件中的层编号命名。 它们的名称不以其默认层名称命名。 |
+|  | Photoshop和层号 | 在PSD文件中将图像命名为其图层编号之后，而忽略原始图层名称。 图像以Photoshop文件名和附加的图层编号命名。 例如，名为Spring Ad.psd的文件的第二层名为Spring Ad_2，即使它在Photoshop中具有非默认名称。 |
+|  | Photoshop和层名称 | 在PSD文件后面命名图像，后跟图层名称或图层编号。 如果PSD文件中的层名称是默认的Photoshop层名称，则使用层编号。 例如，在名为SpringAd的PSD文件中，名为Price Tag的层被命名为Spring Ad_Price Tag。 缺省名称为Layer 2的层称为Spring Ad_2。 |
+| 锚点 |  | 指定如何在模板中锚定图像，这些模板是由从PSD文件生成的分层组合生成的。 默认情况下，锚点为中心。 无论替换图像的长宽比如何，中心锚点都允许替换图像最好地填充相同的空间。 引用模板和使用参数替换时，具有不同方面的图像会替换此图像，因此，当引用模板和使用参数替换时，会有效地占用相同的空间。 如果您的应用程序需要替换图像来填充模板中分配的空间，请更改为其他设置。 |
 
 #### 设置PDF上传选项 {#setting-pdf-upload-options}
 
-上传PDF文件时，可以采用多种格式设置其格式。 您可以裁剪其页面、提取搜索词、输入每英寸像素的分辨率并选择色彩空间。 PDF文件通常包含裁切边距、裁切标记、注册标记和其他打印机标记。 在上传PDF文件时，您可以从页面的两侧裁剪这些标记。
+上传PDF文件时，可以采用各种方式设置其格式。 您可以裁剪其页面、提取搜索词、输入每英寸像素的分辨率并选择色彩空间。 PDF文件通常包含裁切边距、裁切标记、注册标记和其他打印机标记。 在上传PDF文件时，您可以从页面的两侧裁剪这些标记。
 
 >[!NOTE]
 >
@@ -290,13 +289,13 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 在上传PSD文件�
 | 正在处理 | 光栅化 | （默认）拆除PDF文件中的页面，并将矢量图形转换为位图图像。 如果要创建eCatalog，请选择此选项。 |
 | 提取 | 搜索词 | 从PDF文件中提取单词，以便在eCatalog查看器中按关键字搜索文件。 |
 |  | 链接 | 从PDF文件中提取链接，并将其转换为在eCatalog查看器中使用的图像映射。 |
-| 从多页面PDF自动生成eCatalog |  | 自动从PDF文件创建eCatalog。 eCatalog以您上传的PDF文件命名。 （仅当您在上传PDF文件时栅格化该文件时，此选项才可用。） |
-| 分辨率 |  | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认为 150。 |
-| 色彩空间 |  | 选择“色彩空间”菜单，然后为PDF文件选择色彩空间。 大多数PDF文件都具有RGB和CMYK彩色图像。 RGB色彩空间是联机查看的首选方式。 |
+| 从多个页面自动生成eCatalogPDF |  | 自动从PDF文件创建eCatalog。 eCatalog以您上传的PDF文件命名。 (仅当您在上传PDF文件时栅格化文件时，此选项才可用。) |
+| 解决方法 |  | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认为 150。 |
+| 色彩空间 |  | 选择“色彩空间”菜单，然后为PDF文件选择色彩空间。 大多数PDF文件都具有RGB和CMYK彩色图像。 RGB色彩空间是联机查看的首选。 |
 |  | 自动检测 | 保留PDF文件的色彩空间。 |
-|  | 强制为RGB | 转换为RGB色彩空间。 |
-|  | 强制为CMYK | 转换为CMYK色彩空间。 |
-|  | 强制作为灰度 | 转换为灰度色彩空间。 |
+|  | 强制渲染为 RGB | 转换为RGB色彩空间。 |
+|  | 强制渲染为 CMYK | 转换为CMYK色彩空间。 |
+|  | 强制渲染为灰度 | 转换为灰度色彩空间。 |
 
 #### 设置eVideo上传选项 {#setting-evideo-upload-options}
 
@@ -788,13 +787,13 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 ### 打印批注 {#printing-annotations}
 
-如果资产具有批注或者已经受过审阅工作流，您可以将资产以及批注和审阅状态打印为PDF文件，以供离线审阅。
+如果资产具有批注或者已经受过审阅工作流，您可以打印资产以及批注和审阅状态，作为PDF文件，以便离线审阅。
 
 您还可以选择仅打印批注或审阅状态。
 
 >[!NOTE]
 >
->在以PDF格式打印注释的资产时，您可以选择多个批注。
+>在打印注释的资产时，您可以选择多个注释。PDF
 
 要打印批注和审阅状态，请单击&#x200B;**[!UICONTROL 打印]**，然后按照向导中的说明操作。 只有当资产至少分配了一个注释或审阅状态时，**[!UICONTROL 打印]**&#x200B;选项才会显示在工具栏中。
 
@@ -812,25 +811,25 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 
 1. 单击工具栏中的&#x200B;**[!UICONTROL 打印]**。
 
-1. 从“打印”对话框中，选择希望在PDF上显示批注/审阅状态的位置。 例如，如果希望在包含已打印图像的页面的右上角打印批注/状态，请使用&#x200B;**左上角**&#x200B;设置。 默认情况下，此参数处于选中状态。
+1. 从“打印”对话框中，选择希望批注/审阅状态在PDF上显示的位置。 例如，如果希望在包含已打印图像的页面的右上角打印批注/状态，请使用&#x200B;**左上角**&#x200B;设置。 默认情况下，此参数处于选中状态。
 
    您可以根据希望在打印的 PDF 中显示批注/状态的位置选择其他设置。如果希望批注/状态显示在与打印资产不同的页面中，请选择&#x200B;**[!UICONTROL 下一页]**。
 
 1. 单击&#x200B;**[!UICONTROL Print]**。 根据您在步骤 2 中选择的选项，生成的 PDF 会在指定位置显示批注/状态。例如，如果您选择使用&#x200B;**左上角**&#x200B;设置打印批注和审阅状态，则生成的输出将类似于此处描述的 PDF 文件。
 
-   ![生成的PDF上的批注和审阅状态](assets/annotation-status-pdf.png)
+   ![生成的PDF上的注释和查看状态](assets/annotation-status-pdf.png)
 
-1. 下载![PDF的下载选项](assets/do-not-localize/download.png)或使用右上角的选项在PDF](assets/do-not-localize/print.png)上打印![打印选项。
+1. 下载![PDF](assets/do-not-localize/download.png)的下载选项，或使用右上角的选项在PDF](assets/do-not-localize/print.png)上打印![打印选项。
 
    >[!NOTE]
    >
    >如果资产具有子资产，则可以打印所有子资产及其特定的页面注释。
 
-   要编辑呈现的PDF文件的外观（例如字体颜色、大小和样式），请从Configuration Manager中打开&#x200B;**[!UICONTROL 注释PDF配置]**，并修改所需的选项。 例如，要更改已批准状态的显示颜色，请修改相应字段中的颜色代码。 有关更改批注字体颜色的信息，请参阅[批注](/help/assets/manage-assets.md#annotating)。
+   要编辑呈现的PDF文件的外观（例如字体颜色、大小和样式），请从配置管理器中打开&#x200B;**[!UICONTROL 注释PDF配置]**，并修改所需的选项。 例如，要更改已批准状态的显示颜色，请修改相应字段中的颜色代码。 有关更改批注字体颜色的信息，请参阅[批注](/help/assets/manage-assets.md#annotating)。
 
    ![在PDF文档上打印资产批注的配置](assets/annotation-print-pdf-config.png)
 
-   返回到渲染的PDF文件并刷新它。 刷新后的PDF将反映您所做的更改。
+   返回到渲染的PDF文件并刷新它。 刷新的PDF反映您所做的更改。
 
 如果资产包含外语（特别是非拉丁语）的批注，则必须首先在[!DNL Experience Manager]服务器上配置CQ-DAM-Handler-Gibson字体管理器服务，才能打印这些批注。 在配置CQ-DAM-Handler-Gibson字体管理器服务时，请提供所需语言字体所在的路径。
 
@@ -843,7 +842,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
    * 为系统中的字体创建文件夹，并将所需的字体存储在文件夹中。 然后，在Customer Fonts目录选项中指定该文件夹的完整路径。
 
 1. 从URL `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`访问注释PDF配置。
-1. 使用正确的字体系列集配置“注释PDF”，如下所示：
+1. 使用正确的字体系列集配置“注释”PDF，如下所示：
 
    * 在font-family选项中包含字符串`<font_family_name_of_custom_font, sans-serif>`。 例如，如果要在CJK（中文、日文和韩文）中打印注释，请在字体系列选项中包含字符串`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`。 如果要在印地语中打印注释，请下载相应的字体，并将字体系列配置为Arial® Unicode MS®、Noto Sans、Noto Sans CJK JP、Noto Sans Devanagari、san-serif。
 
@@ -857,7 +856,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
    * Noto Sans（欧洲语言）：[https://www.google.com/get/noto/](https://www.google.com/get/noto/)
    * 您选择的语言的字体：[https://www.google.com/get/noto/](https://www.google.com/get/noto/)
 
-1. 通过将font-family参数设置为`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`来配置注释PDF文件。 此配置默认可用，适用于所有欧洲和CJK语言。
+1. 通过将font-family参数设置为`Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`配置注释PDF文件。 此配置默认可用，适用于所有欧洲和CJK语言。
 1. 如果您选择的语言与步骤2中提到的语言不同，请在默认字体系列后附加一个适当（以逗号分隔）的条目。
 
 ## 创建、管理、预览和还原资产版本 {#asset-versioning}
@@ -871,7 +870,7 @@ CUG是一种限制对资产访问的额外方式。 您还可以为文件夹配�
 * 编辑资产的元数据。
 * 使用[!DNL Experience Manager]桌面应用程序签出现有资产并对其进行编辑，然后[上传更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
-您还可以通过工作流启用自动版本控制。 为资产创建版本时，元数据和演绎版会与该版本一起保存。 演绎版是相同图像的替代呈现形式，例如上传的JPEG文件的PNG演绎版。
+您还可以通过工作流启用自动版本控制。 为资产创建版本时，元数据和演绎版会与该版本一起保存。 演绎版是相同图像的替代呈现形式，例如，上传的JPEG文件的PNG演绎版。
 
 1. 导航到要为其创建版本的资产所在的位置，然后单击该资产以打开其预览。 从页面的左上角打开菜单，然后选择&#x200B;**[!UICONTROL 时间轴]**。
 

@@ -4,11 +4,11 @@ description: 有关 [!DNL Experience Manager] 配置、硬件、软件和网络�
 contentOwner: AG
 mini-toc-levels: 1
 role: Architect, Admin
-feature: 资产管理
+feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2741'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ mkfs -q /dev/ram1 800000
  df -H | grep aem-tmp
 ```
 
-在Windows操作系统上，使用第三方驱动程序创建RAM驱动器，或仅使用高性能存储（如SSD）。
+在Windows操作系统上，使用第三方驱动程序创建RAM驱动器或仅使用高性能存储（如SSD）。
 
 高性能临时卷准备就绪后，设置JVM参数`-Djava.io.tmpdir`。 例如，您可以将下面的JVM参数添加到[!DNL Experience Manager]脚本的`bin/start`变量中：`CQ_JVM_OPTS`
 
@@ -118,8 +118,8 @@ Adobe建议启用HTTPS，因为许多公司都有可嗅探HTTP流量的防火墙
 
 网络优化策略主要取决于可用带宽量和[!DNL Experience Manager]实例的负载。 常用配置选项（包括防火墙或代理）可帮助提高网络性能。 请牢记以下要点：
 
-* 根据您的实例类型（小、中、大），确保您的Experience Manager实例有足够的网络带宽。 如果在AWS上托管[!DNL Experience Manager]，则适当的带宽分配尤为重要。
-* 如果您的[!DNL Experience Manager]实例托管在AWS上，则您可以通过使用通用的扩展策略来获益。 如果用户期望获得高负载，请更新实例的大小。 为适中/低负载减小其大小。
+* 根据您的实例类型（小、中、大），确保您的Experience Manager实例有足够的网络带宽。 如果在AWS上托管[!DNL Experience Manager] ，则分配足够的带宽就显得尤为重要。
+* 如果您的[!DNL Experience Manager]实例托管在AWS上，则使用通用的缩放策略可以使您受益。 如果用户期望获得高负载，请更新实例的大小。 为适中/低负载减小其大小。
 * HTTPS:大多数用户具有可嗅探HTTP流量的防火墙，这可能会对上传操作期间文件的上传甚至文件损坏产生不利影响。
 * 大文件上传：确保用户有与网络的有线连接（WiFi连接快速饱和）。
 
@@ -212,7 +212,7 @@ Adobe建议启用HTTPS，因为许多公司都有可嗅探HTTP流量的防火墙
 >
 >ImageMagick `policy.xml`和`configure.xml`文件位于`/usr/lib64/ImageMagick-&#42;/config/`，而不是`/etc/ImageMagick/`。有关配置文件的位置，请参阅[ImageMagick文档](https://www.imagemagick.org/script/resources.php)。
 
-如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，请联系Adobe客户关怀团队，如果您计划处理大量大型PSD或PSB文件。 与Adobe客户关怀代表合作，为您的AMS部署实施这些最佳实践，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
+如果您在Adobe Managed Services(AMS)上使用[!DNL Experience Manager]，如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户支持。 与Adobe客户支持代表合作，为您的AMS部署实施这些最佳实践，并为Adobe的专有格式选择尽可能最好的工具和模型。 [!DNL Experience Manager] 可能无法处理超过30000 x 23000像素的高分辨率PSB文件。
 
 ### XMP写回 {#xmp-writeback}
 
@@ -255,7 +255,7 @@ Adobe建议启用HTTPS，因为许多公司都有可嗅探HTTP流量的防火墙
 1. 添加`String[]`属性`excludedPaths`，其值为`/var`、`/etc/workflow/instances`和`/etc/replication`。
 1. 浏览到`/oak:index/damAssetLucene`。 添加值为`/content/dam`的`String[]`属性`includedPaths`。 保存更改。
 
-如果您的用户不需要对资产进行全文搜索，例如，在PDF文档中通过文本进行搜索，然后将其禁用。 您可以通过禁用全文索引来提高索引性能。 要禁用[!DNL Apache Lucene]文本提取，请执行以下步骤：
+如果您的用户不需要对资产进行全文搜索，例如，在PDF文档中通过文本进行搜索，则会禁用该功能。 您可以通过禁用全文索引来提高索引性能。 要禁用[!DNL Apache Lucene]文本提取，请执行以下步骤：
 
 1. 在[!DNL Experience Manager]接口中，访问[!UICONTROL 包管理器]。
 1. 上载并安装位于[disable_indexingbinarytextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip)的包。
@@ -306,6 +306,6 @@ Adobe建议启用HTTPS，因为许多公司都有可嗅探HTTP流量的防火墙
 * 配置[!DNL ImageMagick]以限制资源消耗。
 * 从[!UICONTROL DAM更新资产]工作流中删除不必要的步骤。
 * 配置工作流和版本清除。
-* 使用最新的Service Pack和修补程序优化索引。 请咨询Adobe客户关怀团队，了解是否存在任何其他可用的索引优化。
+* 使用最新的Service Pack和修补程序优化索引。 请咨询Adobe客户支持，以了解可能提供的任何其他索引优化。
 * 使用guessTotal优化查询性能。
 * 如果将[!DNL Experience Manager]配置为从文件内容中检测文件类型(通过在&#x200B;**[!UICONTROL AEM Web Console]**&#x200B;中启用&#x200B;**[!UICONTROL Day CQ DAM Mime Type Service]**)，则在非高峰时间会批量上传许多文件，因为它占用大量资源。
