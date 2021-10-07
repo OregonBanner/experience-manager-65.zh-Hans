@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: fd973cb3693872e4850f860a625cab70553d2754
+source-git-commit: a401955e4b163a8062a498ea897d4a3d95ae0208
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 8%
+source-wordcount: '1135'
+ht-degree: 10%
 
 ---
 
@@ -23,11 +23,39 @@ ht-degree: 8%
 
 旧AEM CIF连接器将进入维护模式，不应再使用。 请将CIF连接器更换为新的CIF附加组件。 对于大多数项目来说，只需简单地替换包即可。
 
-| Component | 系统要求 |
+| 组件 | 系统要求 |
 |:-------|:-----:|
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 发行日期：2021年9月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.09.27 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
+| CIF核心组件 | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
+| CIF Venia参考网站 | 2021.09.23 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.09.23) |
+
+### 新增功能 {#what-is-new-september}
+
+* 站点编辑器中新增的“关联的商务内容”选项卡可快速访问当前上下文的相关AEM产品内容，从而提高创作效率
+
+   ![关联的商务内容](/help/assets/CIF/associated-commerce-content.png)
+
+* 改进了产品选取器UI，以改善用户体验、提高效率并支持复杂的产品目录
+
+   ![新产品选取器](/help/assets/CIF/product-picker.png)
+
+* 在导航组件中遵循“include_in_menu”属性
+
+### 错误修复 {#bug-fixes-september}
+
+* 菜单缓存刷新无法按预期工作
+
+* 在AEM CS部署步骤和不使用客户端组件时出现JS错误
+
+* 无法在具有sling:configs节点的文件夹中创建CIF云配置
 
 ## 发行日期：2021年8月
 
@@ -70,7 +98,7 @@ ht-degree: 8%
    * 在创作模式下暂存产品数据的可视指示器，可更好地显示即将发生的更改
    * 用于内容和商务页面的新站点地图组件
 
-* 支持[Adobe商务Sensei产品推荐，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供支持，使用预定义或即时创建的推荐
+* 支持[Adobe Commerce Sensei产品推荐，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供支持，使用预定义或即时创建的推荐
 
 ## 发行日期：2021年6月
 
@@ -85,7 +113,7 @@ ht-degree: 8%
 * 内容片段的新CIF产品和类别引用数据类型(包括 产品/类别选取器UI支持)
 * 新的商务内容片段核心组件
 * AEM后端支持的全文商务搜索
-* 商务核心组件支持Adobe商务Sensei Recs数据收集
+* 商务核心组件支持Adobe Commerce Sensei Recs数据收集
 * 改进了类别页面的SEO友好URL
 * 支持每个站点/配置的自定义HTTP标头
 
