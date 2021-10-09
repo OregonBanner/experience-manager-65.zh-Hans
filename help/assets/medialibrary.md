@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Leader
 feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
-source-git-commit: 64ac790579db921aa16f32c51592f0b701237df9
+source-git-commit: 823f36bb7eab6c74a07f90883fa040428d8f8420
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -42,18 +42,10 @@ Media Library为以下用例提供了基本的DAM功能：
 * 使用[!DNL Adobe Experience Manager Screens]创建的数字屏幕体验。
 * [!DNL Assets] 用于无头操作的HTTP REST API。
 
-<!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
-
-* Basic metadata properties
-* Tag management
-* Version control
+<!--
+ TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 * Static renditions
-* Projects, tasks, workflow authoring
-* Activity stream (timeline)
-* Query Builder (API)
-* Marketing Cloud integration
-* User interface customization and extension
-* Comments and annotation
+
 -->
 
 要使用Media Library功能，您可以使用默认的[!DNL Experience Manager]用户界面。 Media Library是[!DNL Experience Manager Sites]安装的一部分，不需要单独的界面或附加组件。 使用现有界面，Media Library用户有权完成以下任务：
@@ -76,6 +68,9 @@ Media Library为以下用例提供了基本的DAM功能：
 * 自定义和扩展资产管理用户界面。
 * 访问查询生成器(API)以扩展搜索功能。
 * 创建静态标记。
+* 创作项目和任务。
+* 活动流（时间轴）。
+* 注释和批注。
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
 
@@ -86,7 +81,7 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 >
 >许多高级DAM用例由[!DNL Experience Manager Assets]完成。 Media Library许可证授权您使用Media Library仅执行列出的用例。 如果未列出用例，请勿将其与Media Library许可证结合使用。 如果您有任何疑问，请联系Adobe客户支持。
 
-请注意，您不能使用智能标记、[!DNL Asset]链接、[!DNL Asset]选择器、批量标记、修改没有[!DNL Assets]许可证的资产工作流。
+请注意，您不能使用智能标记、[!DNL Asset]链接、[!DNL Asset]选择器、批量标记、修改资产工作流，或标准的[!DNL Adobe Experience Manager]用户界面来访问没有[!DNL Assets]许可证的Media Library。
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
