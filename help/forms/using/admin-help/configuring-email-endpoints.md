@@ -1,8 +1,8 @@
 ---
 title: 配置电子邮件端点
-seo-title: 配置电子邮件端点
+seo-title: Configuring email endpoints
 description: 了解如何配置电子邮件端点。
-seo-description: 了解如何配置电子邮件端点。
+seo-description: Learn how to configure email endpoints.
 uuid: d47bb45b-0e0e-43ca-9e25-e347d0e60206
 contentOwner: admin
 content-type: reference
@@ -10,20 +10,20 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
 exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
-source-wordcount: '3766'
+source-wordcount: '3757'
 ht-degree: 0%
 
 ---
 
-# 配置电子邮件端点{#configuring-email-endpoints}
+# 配置电子邮件端点 {#configuring-email-endpoints}
 
 电子邮件端点允许用户通过向指定的电子邮件帐户发送一个或多个文档（作为电子邮件附件）来调用服务。 电子邮件收件箱用作附件的收集点。 该服务监控收件箱并处理附件。 转换结果将转发给端点中定义的用户。
 
 对于电子邮件端点，授权用户可以通过向相应帐户发送电子邮件来调用进程。 结果将返回给提交用户（默认情况下）或端点设置中定义的用户。
 
-在配置电子邮件端点之前，请创建一个POP3或IMAP电子邮件帐户，以供端点使用。 为每种转化类型设置单独的帐户。 例如，一个帐户可配置为从传入文件附件生成标准PDF文档，另一个帐户可配置为生成安全PDF文档。
+在配置电子邮件端点之前，请创建一个POP3或IMAP电子邮件帐户，以供端点使用。 为每种转化类型设置单独的帐户。 例如，一个帐户可配置为从传入文件附件生成标准PDF文档，而另一个帐户可配置为生成安全PDF文档。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ ht-degree: 0%
 * 配置所有电子邮件端点通用的属性
 * 为所有电子邮件端点提供默认值
 
-## 为电子邮件端点{#configure-ssl-for-an-email-endpoint}配置SSL
+## 为电子邮件端点配置SSL {#configure-ssl-for-an-email-endpoint}
 
 您可以将POP3、IMAP或SMTP配置为对电子邮件端点使用安全套接字层(SSL)。
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 1. 从电子邮件服务器导出客户端证书。
 1. 使用keytool程序将客户端证书文件导入应用程序服务器的Java虚拟机(JVM)证书存储区。 此步骤的过程取决于JVM和客户端安装路径。
 
-   例如，如果您使用默认OracleWebLogic Server安装，并在Microsoft Windows Server® 2003上使用JDK 1.5.0，请在命令提示符下键入以下文本：
+   例如，如果您使用默认的OracleWebLogic Server安装，并在Microsoft Windows Server® 2003上使用JDK 1.5.0，请在命令提示符下键入以下文本：
 
    `keytool -import -file client_certificate -alias myalias -keystore BEA_HOME\jdk150_04\jre\security\cacerts`
 
@@ -56,21 +56,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->提示：如果您在使用SSL时遇到问题，请使用电子邮件客户端（如Microsoft Outlook）检查它是否可以使用SSL访问电子邮件服务器。 如果电子邮件客户端无法访问电子邮件服务器，则此问题与证书或电子邮件服务器的配置有关。
+>提示：如果您在使用SSL时遇到问题，请使用诸如Microsoft Outlook之类的电子邮件客户端检查它是否可以使用SSL访问电子邮件服务器。 如果电子邮件客户端无法访问电子邮件服务器，则此问题与证书或电子邮件服务器的配置有关。
 
-## 配置默认电子邮件端点设置{#configure-default-email-endpoint-settings}
+## 配置默认电子邮件端点设置 {#configure-default-email-endpoint-settings}
 
 您可以使用“服务管理”页面配置所有电子邮件端点通用的属性，并为所有电子邮件端点提供默认值。
 
 要使表单工作流接收和处理来自用户的传入电子邮件，您需要为完成任务服务创建电子邮件端点。 此电子邮件端点需要其他设置，如[为完成任务服务](configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)创建电子邮件端点中所述。
 
-### 更改电子邮件端点的默认值{#change-the-default-values-for-email-endpoints}
+### 更改电子邮件端点的默认值 {#change-the-default-values-for-email-endpoints}
 
 1. 在管理控制台中，单击服务>应用程序和服务>服务管理。
 1. 在“服务管理”页面上，单击电子邮件：1.0（组件ID是com.adobe.idp.dsc.provider.service.email.Email）。
 1. 在“配置”选项卡中，指定默认的电子邮件端点设置，然后单击“保存”。
 
-### 默认电子邮件端点设置{#default-email-endpoint-settings}
+### 默认电子邮件端点设置 {#default-email-endpoint-settings}
 
 **Cron表达式：** 石英用来计划输入目录轮询的cron表达式。
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 **POP3/IMAP SSL已启用：** 选中此选项后，将启用SSL。
 
-**SMTP主机：** 电子邮件提供程序用来发送结果和错误消息的邮件服务器的主机名。例如， mail.corp.example.com。
+**SMTP主机：** 电子邮件提供程序用来发送结果和错误消息的邮件服务器的主机名。例如， mail.example.com。
 
 **SMTP端口：** 用于连接到邮件服务器的端口。默认值为 25。
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 **失败的电子邮件发送文件夹：** 指定在SMTP邮件服务器无法运行时要在其中存储结果的目录。
 
-## 电子邮件端点设置{#email-endpoint-settings}
+## 电子邮件端点设置 {#email-endpoint-settings}
 
 使用以下设置配置电子邮件端点。
 
@@ -204,7 +204,7 @@ ht-degree: 0%
 
 **异步：** 当设置为同步时，将处理所有输入文档并返回一个响应。设置为异步时，将为处理的每个文档发送响应。
 
-例如，为采用单个Word文档并将该文档作为PDF文件返回的服务创建电子邮件端点。 可以向端点的收件箱发送一封电子邮件，其中包含多个(3)Word文档。 在处理所有三个文档时，如果端点配置为同步，则会发送一封包含所有三个文档的单个响应电子邮件。 如果端点是异步的，则在将每个Word文档转换为PDF后，会发送一封响应电子邮件。 结果会生成三封电子邮件，每封都带有一个PDF附件。
+例如，为采用单个Word文档并将该文档作为PDF文件返回的服务创建电子邮件端点。 可以向端点的收件箱发送一封电子邮件，其中包含多个(3)Word文档。 在处理所有三个文档时，如果端点配置为同步，则会发送一封包含所有三个文档的单个响应电子邮件。 如果端点是异步的，则在将每个Word文档转换为PDF后，发送一封响应电子邮件。 结果会生成三封电子邮件，每封都带有一个PDF附件。
 
 默认值为异步。
 
@@ -252,7 +252,7 @@ ht-degree: 0%
 
 **映射：** 模式为Result/%F/，源目标为Result%%sourcefilename%%file1和Result%%sourcefilename%%file2。如果映射包含多个对象且模式为Result/%F.ps，则响应文件附件为Result%%sourcefilename1.ps(output 1)和Result%%sourcefilename2.ps(output 2)。
 
-## 为完成任务服务{#create-an-email-endpoint-for-the-complete-task-service}创建电子邮件端点
+## 为完成任务服务创建电子邮件端点 {#create-an-email-endpoint-for-the-complete-task-service}
 
 要使表单工作流接收和处理来自用户的传入电子邮件，您需要为完成任务服务创建电子邮件端点。
 

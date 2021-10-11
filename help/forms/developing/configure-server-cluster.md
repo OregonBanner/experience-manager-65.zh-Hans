@@ -1,7 +1,8 @@
 ---
 title: 如何在JEE服务器群集上配置AEM Forms并执行故障诊断？
 description: 了解如何在JEE服务器群集上配置AEM Forms并执行故障诊断
-source-git-commit: 8502e0227819372db4120d3995fba51c7401d944
+exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
 source-wordcount: '4033'
 ht-degree: 0%
@@ -209,7 +210,7 @@ GDS共享在JEE的AEM Forms外部配置，在O/S级别，您必须安排相同�
 
 ### （三）数据库共享 {#database-sharing}
 
-为使群集正常工作，所有群集成员必须共享同一数据库。 大致来说，这个错误的出现范围是：
+为使群集正常工作，所有群集成员必须共享同一数据库。 大致来说，这个问题的出现范围是：
 
 * 意外地在单独的群集节点上以不同方式设置IDP_DS、EDC_DS、AdobeDefaultSA_DS或其他必需的数据源，以便节点指向不同的数据库。
 * 意外地设置了多个不同的节点，以共享不应共享的数据库。
@@ -266,7 +267,7 @@ and ones like:
 信息`[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPShedulerService onLoad
 在日志中查找第一行很重要，因为某些应用程序服务器也使用Quartz，并且其Quartz实例不应与AEM Forms在JEE调度程序服务上使用的实例混淆。 这表示调度程序服务正在启动，其后的线路将告诉您它是否在群集模式下正确启动。 此序列中会显示多条消息，这是显示Quartz配置方式的最后一个“已启动”消息：
 
-这里给出了Quartz实例的名称：`IDPSchedulerService_$_ap-hp8.ottperflab.corp.adobe.com1312883903975`。 调度程序的Quartz实例的名称将始终以字符串`IDPSchedulerService_$_`开头。 附加到此末尾的字符串可告知您石英是否在群集模式下运行。 节点的主机名和长位数字符串（此处为`ap-hp8.ottperflab.corp.adobe.com1312883903975`）生成的长唯一标识符表示该节点在群集中运行。 如果它以单个节点的形式运行，则标识符将为两位数“20”：
+这里给出了Quartz实例的名称：`IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`。 调度程序的Quartz实例的名称将始终以字符串`IDPSchedulerService_$_`开头。 附加到此末尾的字符串可告知您石英是否在群集模式下运行。 节点的主机名和长位数字符串（此处为`ap-hp8.ottperflab.adobe.com1312883903975`）生成的长唯一标识符表示该节点在群集中运行。 如果它以单个节点的形式运行，则标识符将为两位数“20”：
 
 信息`[org.quartz.core.QuartzScheduler]`调度程序`IDPSchedulerService_$_20`已启动。
 必须对所有群集节点单独进行此检查，因为每个节点的调度程序单独确定是否在群集模式下运行。
@@ -295,7 +296,7 @@ Caused by: java.sql.SQLException: ORA-00060: deadlock detected while waiting for
 
 为了使集群平稳运行，所有集群节点上的时钟必须紧密同步。 手工操作无法充分完成，必须通过非常定期运行的某种形式的时间同步服务来完成。 所有节点上的时钟必须彼此在一秒内。 最佳做法要求不仅同步群集节点，还同步负载平衡器、数据库服务器、GDS NAS服务器和任何其他组件。
 
-Windows时间同步通常是到域控制器。 UNIX系统可以使用NTP同步到其他时间源。 如果可能，最好是所有系统(包括JEE节点上的AEM Forms和其他系统组件)同步到同一源。
+Windows时间同步通常是到域控制器。 UNIX系统可以使用NTP同步到其他时间源。 如果可能，最好是所有系统(包括JEE节点上的AEM Forms和其他系统组件)都同步到同一源。
 
 即使在最临时的测试环境中，在节点上手动设置时钟也绝对不够。 手动设置时钟不会提供足够精确的同步，而且两个节点上的时钟不可避免地会彼此相互漂移，即使只在一天的时间内。 主动时间同步机制对于可靠的群集操作至关重要。
 
@@ -332,19 +333,3 @@ JEE上AEM Forms中的某些文件路径设置在群集范围内建立，并且�
 特别是，节点之间不应共享临时目录路径。 应使用类似于所述验证GDS的过程来验证临时目录是否未共享：转到每个节点，在路径设置所指示的路径中创建临时文件，然后验证其他节点是否不共享该文件。 临时目录路径应引用每个节点上的本地磁盘存储（如果可能），并且应当进行检查。
 
 对于每个路径设置，请确保该路径实际存在，并且可从群集中的每个节点访问，并使用JEE上运行AEM Forms的有效使用标识。 字体目录内容必须可读。 临时目录必须允许读取、写入和控制。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
