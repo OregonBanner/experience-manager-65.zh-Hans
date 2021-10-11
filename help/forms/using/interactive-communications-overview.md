@@ -1,22 +1,23 @@
 ---
 title: 交互式通信概述
-seo-title: 交互式通信概述
+seo-title: Interactive Communications Overview
 description: 本文包括概述、示例用例、创建工作流，以及交互式通信和信件之间的差异。
-seo-description: 交互式通信关键功能、示例用例、创建工作流，以及交互式通信和通信管理之间的差异
+seo-description: Interactive Communication key capabilities, sample use cases, creation workflow, and differences between Interactive Communication and Correspondence Management
 uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
 topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 5%
+source-wordcount: '489'
+ht-degree: 7%
 
 ---
 
-# 交互式通信概述{#interactive-communications-overview}
+
+# 交互式通信概述 {#interactive-communications-overview}
 
 本文包括概述、示例用例、创建工作流，以及交互式通信和信件之间的差异。
 
@@ -24,18 +25,18 @@ ht-degree: 5%
 
 交互式通信可以集中管理安全、个性化和交互式信函的创建、编排和交付，例如商务信函、文档、声明、福利通知、营销邮件、账单和欢迎资料包。
 
-## 关键功能{#key-capabilities}
+## 关键功能 {#key-capabilities}
 
 以下是交互式通信的关键功能：
 
-* 与表单数据模型的开箱即用集成，可轻松、简化对后端数据库和其他CRM系统(如MS® Dynamics)的访问
-* 用于打印和Web渠道的集成创作界面，其能够从打印渠道自动生成Web渠道
-* 以易于理解的可视格式在打印和Web中显示信息的图表
-* 文档片段支持规则编辑器和表单数据模型
-* 代理用户界面显示交互式通信的打印和Web预览
-* 拖放组件以快速构建打印和Web渠道
+- 与表单数据模型的开箱即用集成，可轻松、简化对后端数据库和其他CRM系统(如MS® Dynamics)的访问
+- 用于打印和Web渠道的集成创作界面，其能够从打印渠道自动生成Web渠道
+- 以易于理解的可视格式在打印和Web中显示信息的图表
+- 文档片段支持规则编辑器和表单数据模型
+- 代理用户界面显示交互式通信的打印和Web预览
+- 拖放组件以快速构建打印和Web渠道
 
-## 交互式通信创建{#interactive-communication-creation}
+## 交互式通信创建 {#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
@@ -62,13 +63,13 @@ ht-degree: 5%
 
 以下是创建交互式通信所需的构建基块：
 
-* [表单数据模型](/help/forms/using/data-integration.md)
-* [打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md)
-* [文档片段](/help/forms/using/document-fragments.md)
-* 图像
-* [](/help/forms/using/themes.md) Web渠道主题
+- [表单数据模型](/help/forms/using/data-integration.md)
+- [打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md)
+- [文档片段](/help/forms/using/document-fragments.md)
+- 图像
+- [](/help/forms/using/themes.md) Web渠道主题
 
-## 交互式通信与通信管理{#interactive-communications-vs-correspondence-management}
+## 交互式通信与通信管理 {#interactive-communications-vs-correspondence-management}
 
 交互式通信是创建客户通信的默认和推荐方法。 要继续使用在AEM 6.3 Forms和AEM 6.2 Forms中创建的字母，您需要[安装兼容包](/help/forms/using/compatibility-package.md)。 以下是交互式通信和信件功能的比较。
 
@@ -118,14 +119,24 @@ ht-degree: 5%
    <td>使用主题来设置Web渠道的样式</td>
    <td>不支持主题</td>
   </tr>
-  <tr>
-   <td>审核和版本控制</td>
-   <td>不受支持</td>
+   <tr>
+   <td>草稿</td>
+   <td>支持</td>
    <td>支持</td>
   </tr>
   <tr>
-   <td>草稿和管理实例</td>
-   <td>不受支持</td>
+   <td>审核</td>
+   <td>不支持</td>
+   <td>支持</td>
+  </tr>
+   <tr>
+   <td>版本控制</td>
+   <td>不支持</td>
+   <td>支持</td>
+  </tr>
+   <tr>
+   <td>草稿管理实例</td>
+   <td>不支持</td>
    <td>支持</td>
   </tr>
   <tr>
