@@ -2,22 +2,22 @@
 title: ' [!DNL Adobe Experience Manager Assets] 6.5的发行说明。'
 description: ' [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]的新功能和增强功能。'
 exl-id: 6d9c9f09-ea42-43fb-98f7-12ce82d308bf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 62544559020b0c0afd7bb31fb832b82ba3d47919
 workflow-type: tm+mt
 source-wordcount: '897'
-ht-degree: 42%
+ht-degree: 34%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] 发行说明  {#aem-assets-release-notes}
+# [!DNL Adobe Experience Manager Assets] 发行说明 {#aem-assets-release-notes}
 
 以下是[!DNL Adobe Experience Manager] 6.5 [!DNL Assets]版本的主要功能和亮点。
 
-## 与[!DNL Adobe Creative Cloud]和创意工作流{#integration-with-adobe-creative-cloud-and-creative-workflows}集成
+## 与[!DNL Adobe Creative Cloud]和创意工作流集成 {#integration-with-adobe-creative-cloud-and-creative-workflows}
 
 [!DNL Adobe Experience Manager] 提供了多种方法来与 集成并共享资产，以供在创意、营销或业务团队密切合作的工作流中使用。[!DNL Adobe Creative Cloud][!DNL Experience Manager] 6.5 将继续改进并进一步简化该集成，以提供更多商机和简化现有方法。
 
-请阅读并了解[!DNL Experience Manager] 6.5的特定功能和集成，您可以利用这些功能和集成来最佳地支持内容周转率用例。
+请阅读并了解[!DNL Experience Manager] 6.5的特定功能和集成，您可以使用这些功能和集成来更好地支持内容周转率用例。
 
 ### Adobe Asset Link {#aal}
 
@@ -33,9 +33,9 @@ ht-degree: 42%
 
 [!DNL Adobe Stock] 服务为设计师和企业提供了数百万种可用于所有创意项目的高品质、精选、免版税的照片、矢量、插图、视频、模板和 3D 资产。
 
-有关更多信息，请参阅[在Experience Manager资产](/help/assets/aem-assets-adobe-stock.md)中使用Adobe Stock资产。
+有关更多信息，请参阅[在Experience Manager Assets中使用Adobe Stock资产](/help/assets/aem-assets-adobe-stock.md)。
 
-![从Adobe Stock Assets中预览Experience Manager图像和许可证](assets/stock_image_preview_license_options.png)
+![在Experience Manager Assets中预览Adobe Stock图像和许可证](assets/stock_image_preview_license_options.png)
 
 *图：从中 [!DNL Adobe Stock] 预览图像和许 [!DNL Experience Manager Assets]可。*
 
@@ -43,7 +43,7 @@ ht-degree: 42%
 
 *图：在中搜索和过滤获 [!DNL Adobe Stock] 许的图 [!DNL Experience Manager]像。*
 
-### [!DNL Adobe InDesign] {#dynamic-references-in-indesign}中的动态引用
+### [!DNL Adobe InDesign]中的动态引用 {#dynamic-references-in-indesign}
 
 [!DNL Experience Manager Assets] 在文件中 [!DNL Adobe InDesign] 使用是动态的。如果引用的资产在存储库中移动，则引用会自动更新。 有关更多信息，请参阅[如何管理复合资产](/help/assets/managing-linked-subassets.md)。
 
@@ -51,7 +51,7 @@ ht-degree: 42%
 
 [!DNL Experience Manager Assets Brand Portal] 可帮助您轻松获取及有效控制已批准的资产，并在设备间安全地将该资产分发给外部供应商/代理商和内部企业用户。它有助于提高资产共享的效率、加快资产的上市时间，并消除不合规使用和未授权访问的风险。
 
-有关更多信息，请参阅 [Brand Portal 中的新增功能](https://helpx.adobe.com/cn/experience-manager/brand-portal/using/whats-new.html)。
+有关更多信息，请参阅[Brand Portal的新增功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=zh-Hans)。
 
 ## 连接的资产 {#connectedassets}
 
@@ -65,23 +65,23 @@ ht-degree: 42%
 
 ## Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] 在中提供增强的富媒体创作和交 [!DNL Experience Manager Assets] 付，以提供沉浸式和个性化的前沿体验。通过上传单个高质量主控资产并使用我们高级的云渲染和查看器，您可以即时提供任意演绎版组合，以支持贵组织的媒体策略。
+[!DNL Dynamic Media] 在中提供增强的富媒体创作和交 [!DNL Experience Manager Assets] 付，以提供沉浸式和个性化的前沿体验。通过上传单个高质量主资产，并使用Adobe的高级云渲染和查看器，您可以即时交付任意演绎版组合，以支持贵组织的媒体策略。
 
 有关新增[!DNL Dynamic Media]功能的更多详细信息，请参阅[Dynamic Media发行说明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html)。
 
-### 360视频支持{#video-support}
+### 360视频支持 {#video-support}
 
-使用最先进的查看器直接在[!DNL Experience Manager]中管理您的360视频文件，以将VR体验交付到台式机、移动设备和VR耳机。 有关更多信息，请参阅[使用 360 视频](/help/assets/360-video.md)。
+使用最先进的查看器直接在[!DNL Experience Manager]中管理您的360视频文件，以将VR体验交付到台式机、移动设备和VR耳机。 有关更多信息，请参阅[使用360 Video](/help/assets/360-video.md)。
 
-### 自定义视频缩略图{#custom-video-thumbnails}
+### 自定义视频缩略图 {#custom-video-thumbnails}
 
 您现在可以使用视频本身的帧或存储在 DAM 中的其他内容自定义视频资产的缩略图。有关其他说明，请参阅[关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)。
 
 ### 辅助功能增强功能 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。有关其他详细信息，请参阅 [Dynamic Media 查看器发行说明](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)。
+[!DNL Dynamic Media] 查看器现在支持增强的辅助功能，如Aria支持、屏幕阅读器和替代文本。有关更多详细信息，请参阅[查看器参考指南](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html)。
 
-## 搜索体验增强功能  {#experience-enhancement-for-searching}
+## 搜索体验增强功能 {#experience-enhancement-for-searching}
 
 [!DNL Experience Manager] 从6.5开始，营销人员可以更快地从搜索结果页面发现所需的资产。即使还未应用搜索筛选器，也会为搜索 Facet 更新资产数量。查看筛选后的预计计数有助于用户有效地浏览搜索结果。有关更多信息，请参阅[在Experience Manager](../assets/search-assets.md)中搜索资产。
 
@@ -91,7 +91,7 @@ ht-degree: 42%
 
 ## 可用性增强功能 {#usability-enhancement}
 
-您现在可以一次从文件夹或搜索结果中选择所有加载的资产。 该功能可以帮助您快速管理多个资产。此复选框会选择符合方案的所有资产（例如搜索结果），而不只是[!DNL Experience Manager]界面中显示的资产。
+您现在可以一次从文件夹或搜索结果中选择所有加载的资产。 该功能可以帮助您快速管理多个资产。此复选框会选择符合方案（如搜索结果）的所有资产，而不只是选择[!DNL Experience Manager]界面中可见的资产。
 
 ![使用全选选项，一键选择所有加载的资产。](assets/select-all-in-aem-assets.gif)
 
@@ -99,7 +99,7 @@ ht-degree: 42%
 
 ## 元数据增强功能 {#metadata-enhancements}
 
-[!DNL Assets] 允许您为资产文件夹创建元数据架构，这些架构定义了文件夹属性页面中显示的布局和元数据。您现在既可以将文件夹元数据架构分配给现有文件夹，也可以在创建新文件夹时分配。有关更多信息，请参阅[文件夹元数据架构](/help/assets/metadata-config.md#folder-metadata-schema)。
+[!DNL Assets] 允许您为资产文件夹创建元数据架构，该架构定义文件夹属性页面中显示的布局和元数据。现在，您可以将文件夹元数据架构分配给现有文件夹，或在创建文件夹时。 有关更多信息，请参阅[文件夹元数据架构](/help/assets/metadata-config.md#folder-metadata-schema)。
 
 指定级联元数据时，可以在运行时从 JSON 文件加载选项，而不是在表单中手动键入选项。有关更多信息，请参阅[级联元数据](/help/assets/metadata-schemas.md#cascading-metadata)。
 
