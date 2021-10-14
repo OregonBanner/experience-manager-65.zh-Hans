@@ -4,12 +4,12 @@ description: ' [!DNL Assets] and [!DNL Dynamic Media] 支持的文件格式和MI
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
-feature: 资产管理，演绎版
+feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
+source-git-commit: c8e83622070572d104f2cdc20c592ac2e9d0d31b
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 22%
+source-wordcount: '1535'
+ht-degree: 21%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 22%
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | - | - | - | - |
-| PSD ? | ✓ | - | - | - | - |
+| PSD| | ✓ | - | - | - | - |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
 
@@ -95,10 +95,10 @@ ht-degree: 22%
 
 * IDAT区块大于100 MB的PNG文件。
 * PSB文件。
-* 不支持具有非CMYK、RGB、灰度或位图的色彩空间的PSD文件。 不支持DuoTone、Lab和索引色彩空间。
-* 位深度大于16的PSD文件。
-* 具有浮点数据的TIFF文件。
-* 具有Lab色彩空间的TIFF文件。
+* 不支持具有CMYK、RGB、灰度或位图以外的色彩空间的PSD文件。 不支持DuoTone、Lab和索引色彩空间。
+* PSD位深度大于16的文件。
+* TIFF具有浮点数据的文件。
+* TIFF具有Lab色彩空间的文件。
 
 <!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
 ## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
@@ -132,7 +132,7 @@ Adobe PDF光栅化器库可为大型且内容密集型[!DNL Adobe Illustrator]�
 
 Adobe图像转码库是一款图像处理解决方案，可执行核心的图像处理功能，例如编码、转码、重新取样和调整大小。
 
-图像转码库支持JPG/JPEG、PNG（8位和16位）、GIF、BMP、TIFF/压缩TIFF（除了32位TIFF文件和PTIFF文件外）、ICO和ICN MIME类型。
+图像转码库支持JPG/JPEG、PNG（8位和16位）、GIF、BMP、TIFF/压缩TIFF(32位TIFF文件和PTIFF文件除外)、ICO和ICN MIME类型。
 
 请参阅[成像转码库](imaging-transcoding-library.md)。
 
@@ -211,15 +211,13 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | MP4 | MPEG-4 | H264/AVC（所有配置文件） | - |
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
 | FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
-| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片文章(WVP2) |
+| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
 | M4V | Apple iTunes | H264/AVC | - |
 | AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV、OGG | Ogg | Theora、VP3、Dirac | - |
 | MKV | Matroska | H264/AVC | - |
-| RAM、RM | RealVideo | 不支持 | Real G2 (RV20)、Real 8 (RV30)、Real 10 (RV40) |
-| MJ2 | Motion JPEG2000 | Motion JPEG 2000编解码器 | - |
 
 ## 支持的存档格式 {#supported-archive-formats}
 
@@ -297,11 +295,11 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | PPT | application/vnd.ms-powerpoint |  |  |
 | PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li>[illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
 | PSD | image/vnd.adobe.photoshop | `process=None&layerNaming=Layername`<br>`&anchor=Center&createTemplate=false`<br>`&extractText=false&extendLayers=false` | <ul><li>[photoshopOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html)</li><li>[photoshopLayerOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-layer-options.html)</li></ul> |
-| TTF | application/rtf |  |  |
+| RTF | application/rtf |  |  |
 | SVG | image/svg+xml |  |  |
 | SWF | application/x-shockwave-flash |  |  |
 | TAR | application/x-tar |  |  |
-| TIF / TIFF | image/tiff |  |  |
+| TIF /TIFF | image/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
 | TTF | application/x-font-ttf |  |  |
 | VOB | 视频/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
