@@ -1,8 +1,8 @@
 ---
 title: 权限管理的主体视图
-seo-title: 权限管理的主体视图
+seo-title: Principal View for Permissions Management
 description: 了解可简化权限管理的新触屏UI界面。
-seo-description: 了解可简化权限管理的新触屏UI界面。
+seo-description: Learn about the new Touch UI interface that facilitates permissions management.
 uuid: 16c5889a-60dd-4b66-bbc4-74fbdb5fc32f
 contentOwner: sarchiz
 content-type: reference
@@ -11,14 +11,14 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4ea49fe6745b23f01f46edfe07ff3dd8c8299729
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '699'
 ht-degree: 1%
 
 ---
 
-# 权限管理的主视图{#principal-view-for-permissions-management}
+# 权限管理的主体视图{#principal-view-for-permissions-management}
 
 ## 概述 {#overview}
 
@@ -38,11 +38,11 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 ![](assets/unu-1.png)
 
-有一个过滤器允许用户选择主体类型以查看&#x200B;**用户**、**组**&#x200B;或&#x200B;**全部**&#x200B;并搜索任何主体&#x200B;**。**
+有一个过滤器允许用户选择要查看的承担者类型 **用户**, **群组**&#x200B;或 **全部**&#x200B;并搜索任何主体&#x200B;**.**
 
 ![](assets/image2019-3-20_23-52-51.png)
 
-### 查看主体{#viewing-permissions-for-a-principal}的权限
+### 查看主体的权限 {#viewing-permissions-for-a-principal}
 
 左侧的框架允许用户向下滚动以查找任何主体，或根据选定的过滤器搜索组或用户，如下所示：
 
@@ -52,7 +52,7 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 ![](assets/trei-1.png)
 
-### 为主体{#adding-new-access-control-entry-for-a-principal}添加新的访问控制条目
+### 为主体添加新的访问控制条目 {#adding-new-access-control-entry-for-a-principal}
 
 通过单击添加ACE按钮添加新的访问控制条目，可添加新权限。
 
@@ -62,17 +62,17 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 ![](assets/cinci-1.png)
 
-在此，我们选择一个路径，用于配置&#x200B;**dam-users**&#x200B;的权限：
+在此，我们选择一个要为 **dam-users**:
 
 ![](assets/sase-1.png)
 
-选择路径后，工作流会返回到此屏幕，用户随后可以从可用的命名空间（如`jcr`、`rep`或`crx`）中选择一个或多个权限，如下所示。
+选择路径后，工作流会返回到此屏幕，用户随后可以从可用的命名空间中选择一个或多个权限(例如 `jcr`, `rep` 或 `crx`)，如下所示。
 
 可以通过使用文本字段进行搜索，然后从列表中选择来添加权限。
 
 >[!NOTE]
 >
->有关权限和描述的完整列表，请参阅[此页面](/help/sites-administering/user-group-ac-admin.md#access-right-management)。
+>有关权限和说明的完整列表，请参阅 [本页](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
 ![](assets/image2019-3-21_0-5-47.png) ![](assets/image2019-3-21_0-6-53.png)
 
@@ -80,7 +80,7 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 ![](assets/screen_shot_2019-03-17at63938pm.png) ![](assets/screen_shot_2019-03-17at63947pm.png)
 
-### 使用限制{#using-restrictions}
+### 使用限制 {#using-restrictions}
 
 除了给定路径上的权限列表和权限类型之外，此屏幕还允许为细粒度访问控制添加限制，如下所示：
 
@@ -88,29 +88,31 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 >[!NOTE]
 >
->有关每个限制含义的更多信息，请参阅[此页面](/help/sites-administering/user-group-ac-admin.md#restrictions)。
+>欲知每项限制的含义，请查阅 [Jackrabbit Oak文档](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
-可通过选择限制类型、输入值并点击&#x200B;**+**&#x200B;图标，添加如下所示的限制。![](assets/sapte-1.png) ![](assets/opt-1.png)
+可通过选择限制类型、输入值并点击 **+** 图标。
 
-新ACE将反映在访问控制列表中，如下所示。 请注意，`jcr:write`是包含上面添加的`jcr:removeNode`的聚合权限，但下面未显示为`jcr:write`下所涵盖的权限。
+![](assets/sapte-1.png) ![](assets/opt-1.png)
+
+新ACE将反映在访问控制列表中，如下所示。 请注意 `jcr:write` 是包含 `jcr:removeNode` 中，但未在下面显示，因为 `jcr:write`.
 
 ### 编辑ACE {#editing-aces}
 
 可通过选择主体并选择要编辑的ACE来编辑访问控制条目。
 
-例如，在此，我们可以通过单击右侧的铅笔图标，编辑&#x200B;**dam-users**&#x200B;的以下条目：
+例如，在此，我们可以编辑 **dam-users** 单击右侧的铅笔图标：
 
-![](assets/image2019-3-21_0-35-39.png)
+![添加限制](assets/image2019-3-21_0-35-39.png)
 
 在编辑屏幕中显示了预选配置的ACE，单击它们旁边的交叉图标可删除这些ACE，或者可以为给定路径添加新权限，如下所示。
 
-![](assets/noua-1.png)
+![编辑条目](assets/noua-1.png)
 
-下面，我们将在给定路径上为&#x200B;**dam-users**&#x200B;添加`addChildNodes`权限。
+在本例中，我们将添加 `addChildNodes` 权限 **dam-users** 在给定路径上。
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-单击右上方的&#x200B;**Save**&#x200B;按钮可保存更改，这些更改将反映在**dam用户**的新权限中，如下所示：
+通过单击 **保存** 按钮，且所做的更改将反映在**dam用户**的新权限中，如下所示：
 
 ![](assets/zece-1.png)
 
@@ -120,7 +122,7 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 ![](assets/image2019-3-21_0-53-19.png) ![](assets/unspe.png)
 
-### 经典UI权限组合{#classic-ui-privilege-combinations}
+### 经典UI权限组合 {#classic-ui-privilege-combinations}
 
 请注意，新权限UI明确使用基本权限集，而不是预定义的组合，这些组合不会真正反映已授予的基本权限。
 
