@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
+source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '486'
 ht-degree: 7%
 
 ---
@@ -42,22 +42,22 @@ ht-degree: 7%
 
 ### 工作流 {#workflow}
 
-要创建交互式通信，请准备好[用于交互式通信的构建基块](#buildingblocks)，然后完成以下步骤：
+要创建交互式通信，请使用 [构件](#buildingblocks) ，然后完成以下步骤：
 
-1. 选择[创建交互式通信](/help/forms/using/create-interactive-communication.md)。
+1. 选择 [创建交互式通信](/help/forms/using/create-interactive-communication.md).
 
-1. 指定[表单数据模型](/help/forms/using/data-integration.md)、预填充服务以及[打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md)。 您可以选择从打印渠道生成Web渠道。
+1. 指定 [表单数据模型](/help/forms/using/data-integration.md)、预填充服务和 [打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md). 您可以选择从打印渠道生成Web渠道。
 
-1. 使用[拖放界面](/help/forms/using/introduction-interactive-communication-authoring.md)，根据需要添加要打印的文档片段、图像、组件和交互式通信的Web渠道。
+1. 使用 [拖放界面](/help/forms/using/introduction-interactive-communication-authoring.md)，根据需要添加要打印的文档片段、图像、组件和交互式通信的Web渠道。
 1. 为插入的组件配置属性，如下所示：
 
    1. [图像](/help/forms/using/create-interactive-communication.md#step2)
-   1. [表](/help/forms/using/create-interactive-communication.md#tables) （包括布局片段）
+   1. [表格](/help/forms/using/create-interactive-communication.md#tables) （包括布局片段）
    1. [图表](/help/forms/using/chart-component-interactive-communications.md)
    1. [文档片段](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 预览打印和Web渠道，并根据需要编辑交互式通信。
-1. 代理使用代理UI来准备交互式通信](/help/forms/using/prepare-send-interactive-communication.md)，以将其发送到收件人/后处理。[
+1. 代理使用代理UI [准备交互式通信](/help/forms/using/prepare-send-interactive-communication.md) ，以将其发送到收件人/帖子进程。
 
 ### 构建基块 {#buildingblocks}
 
@@ -67,11 +67,11 @@ ht-degree: 7%
 - [打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md)
 - [文档片段](/help/forms/using/document-fragments.md)
 - 图像
-- [](/help/forms/using/themes.md) Web渠道主题
+- [主题](/help/forms/using/themes.md) （对于Web渠道）
 
 ## 交互式通信与通信管理 {#interactive-communications-vs-correspondence-management}
 
-交互式通信是创建客户通信的默认和推荐方法。 要继续使用在AEM 6.3 Forms和AEM 6.2 Forms中创建的字母，您需要[安装兼容包](/help/forms/using/compatibility-package.md)。 以下是交互式通信和信件功能的比较。
+交互式通信是创建客户通信的默认和推荐方法。 要继续使用在AEM 6.3 Forms和AEM 6.2 Forms中创建的字母，您需要 [安装兼容包](/help/forms/using/compatibility-package.md). 以下是交互式通信和信件功能的比较。
 
 <table>
  <tbody>
@@ -124,6 +124,12 @@ ht-degree: 7%
    <td>支持</td>
    <td>支持</td>
   </tr>
+   <tr>
+   <td>提交</td>
+   <td>支持</td>
+   <td>支持</td>
+  </tr>
+  <tr>
   <tr>
    <td>审核</td>
    <td>不支持</td>
@@ -134,12 +140,6 @@ ht-degree: 7%
    <td>不支持</td>
    <td>支持</td>
   </tr>
-   <tr>
-   <td>草稿管理实例</td>
-   <td>不支持</td>
-   <td>支持</td>
-  </tr>
-  <tr>
    <td>批处理</td>
    <td>支持 </td>
    <td>支持</td>
