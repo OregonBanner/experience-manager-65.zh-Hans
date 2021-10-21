@@ -1,8 +1,8 @@
 ---
 title: 个性化
-seo-title: 个性化
+seo-title: Personalization
 description: 了解AEM中的个性化。
-seo-description: 了解AEM中的个性化。
+seo-description: Learn about personalization in AEM.
 uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d6b595b6b5477b5cad662e219f1abd483491897f
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1686'
 ht-degree: 16%
 
 ---
 
 # 个性化 {#personalization}
 
-## 什么是个性化？{#what-is-personalization}
+## 什么是个性化？ {#what-is-personalization}
 
 如今，可用的内容量越来越多，无论是在Internet、Extranet或Intranet网站上，都是如此。
 
@@ -35,8 +35,10 @@ ht-degree: 16%
 ### 内容 {#content}
 
 * 是用户希望看到的内容。 最好是感兴趣的内容，并用于他们完成任务。
-* 可以进行分类，因此可以根据预定义的规则提供给用户。必须是动态的；换句话说，内容
-* 必须以某种方式依赖用户 — 如果每个用户都看到相同的内容，则个性化将会是多余的。
+* 可以进行分类，以便根据预定义的规则提供给用户。
+* 必须是动态的。
+
+换句话说，内容在某种程度上必须依赖于用户。 如果每个用户都看到相同的内容，则个性化是多余的。
 
 ### 规则 {#rules}
 
@@ -54,11 +56,11 @@ ht-degree: 16%
 * 简单过滤：基于用户和/或组级别的预定义用户档案进行选择。
 * 协作/推荐过滤：用户行为根据预定义规则进行注册。 这些规则基于与志同道合的个人观察到的行为。 收集的信息用于定制向用户显示的信息，特别是推荐形式的信息。
 
-## 如何以及何时可以使用个性化？{#how-and-when-can-personalization-be-used}
+## 如何以及何时可以使用个性化？ {#how-and-when-can-personalization-be-used}
 
 个性化在很多情况下都可用，例如：
 
-### 内联网页{#intranet-pages}
+### 内联网页面 {#intranet-pages}
 
 * 内容可以基于用户的位置、部门和/或角色（已在内部网络中定义）进行预配置。
 * 根据可用的选择，用户可以进一步选择。
@@ -70,15 +72,15 @@ ht-degree: 16%
 * 向其市场中高度专业化的部分提供网站的公司，例如为医生提供专门网站的制药公司。
 * 提供网站以允许其客户查看经常帐户和账单信息的公司；例如，电话提供商。
 
-### 销售和分销网站{#sales-site}
+### 销售和分销网站 {#sales-site}
 
 * 销售和分销网站(如Amazon)可以合并用户配置文件、用户的销售历史记录及其浏览历史记录，以就用户接下来可能感兴趣的内容提出建议。
 
-### 搜索网站{#search-site}
+### 搜索网站 {#search-site}
 
 * 许多主要的搜索引擎网站都有非常强大的分析工具，记录用户行为、他们使用的搜索词以及他们实际访问的网站。 然后，该内容用于定制所提供的内容 — 特别是关于显示广告的内容。
 
-### 个性化的优势和需要考虑的点{#strengths-of-personalization-and-points-to-consider}
+### 个性化的优势和需要考虑的点 {#strengths-of-personalization-and-points-to-consider}
 
 以下是应使用个性化的原因：
 
@@ -107,7 +109,7 @@ ht-degree: 16%
 
 >[!TIP]
 >
->在[性能优化文档中，进一步讨论了个性化对性能和相关缓存主题的影响。](/help/sites-deploying/configuring-performance.md)
+>在文档中进一步讨论了个性化对性能和相关缓存主题的影响 [性能优化。](/help/sites-deploying/configuring-performance.md)
 
 #### 规则的准确性 {#accuracy}
 
@@ -115,7 +117,7 @@ ht-degree: 16%
 * 最让用户感到沮丧的是，由于规则的逻辑不准确，用户被迫或拒绝了内容。
 * 因此，必须充分考虑规则，并在前台满足用户的要求。 这可能需要很多努力，而且不会被低估；在实施个性化时，定义业务规则通常比技术工作更重要。
 
-#### 何时使用{#when-to-use}
+#### 使用时间 {#when-to-use}
 
 * 与Web上的许多功能一样，应谨慎使用个性化。 其使用真的会对用户有益吗？ 应该始终是第一个考虑 — 或者是否可以通过其他方法以更少的努力实现预期目标。 个性化可能会造成用户配置一次（以查看其工作方式）而仅配置一次的功能的风险，因为个性化不会给他们带来真正的优势。
 * 仅当内容是动态的 — 在某种程度上取决于用户时，个性化才有意义。 如果所有用户都看到相同的内容，则个性化是多余的。
@@ -124,7 +126,7 @@ ht-degree: 16%
 
 * 许多用户都关心数据保护和安全。 特别是关于在网上冲浪时跟踪其行为时检索的数据。
 
-## 个性化和访问{#personalization-and-access}
+## 个性化和访问 {#personalization-and-access}
 
 个性化应与访问控制分开考虑，但它们确实相互关联。
 
@@ -132,7 +134,7 @@ ht-degree: 16%
 
 但是，访问控制可用于创建个性化表单。 如果您允许或拒绝用户访问内容，则这会不可避免地影响用户选择其可用内容，从而个性化其Web体验。
 
-## 可用于个性化的组件{#components-available-for-personalization}
+## 可用于个性化的组件 {#components-available-for-personalization}
 
 各种组件随AEM一起提供以进行个性化。 有些组件允许用户登录和编辑其配置文件，而其他组件（如我的小工具）则允许用户配置特定页面：
 
@@ -167,11 +169,11 @@ ht-degree: 16%
 | 标记云 | 标记云，用于在您的网站中以图形方式显示所选标记 |
 | Teaser | 主页上显示的一段内容（通常是图像），用于“吸引”用户访问基础内容。 |
 
-## 个性化和社区内容{#personalization-and-community-content}
+## 个性化和社区内容 {#personalization-and-community-content}
 
-社区功能（如博客、论坛和日历）会导致创建社区内容，通常称为用户生成内容(UGC)。 在包含多个AEM实例([publish farm](/help/communities/topologies.md))的发布环境中输入UGC时，一个主要问题是如何在所有实例中同步UGC。
+社区功能（如博客、论坛和日历）会导致创建社区内容，通常称为用户生成内容(UGC)。 在包含多个AEM实例的发布环境中输入UGC时( [发布场](/help/communities/topologies.md))，一个主要问题是如何在所有实例中同步UGC。
 
-使用[AEM Communities 6.1](/help/communities/overview.md)扩展，可通过对UGC](/help/communities/working-with-srp.md)使用[公共存储来解决此问题。 在个性化方面，社区包括[社交登录](/help/communities/social-login.md) — 该功能可为网站访客提供使用Facebook和Twitter登录的选项。
+使用 [AEM Communities 6.1](/help/communities/overview.md) 扩展，此问题通过使用 [用于UGC的常用商店](/help/communities/working-with-srp.md). 在个性化方面，社区包括 [社交登录](/help/communities/social-login.md)  — 能够为站点访客提供使用Facebook和Twitter登录的选项。
 
 如果没有Communities扩展，可以探索各种方法来解决UGC一致性问题：
 
