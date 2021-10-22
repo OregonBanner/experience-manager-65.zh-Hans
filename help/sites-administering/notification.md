@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 676299c741684708d420ac208f44b0c7a285de0c
+source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2116'
 ht-degree: 2%
 
 ---
@@ -319,7 +319,7 @@ AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守�
 
 >[!NOTE]
 >
->下面概述的过程是发布实例的一个示例。 如果您希望，也可以对创作实例执行此过程。
+>此过程是Publish实例的示例。 如果要在创作实例上启用电子邮件通知，则需要在创作上执行相同的步骤。
 
 ### Gmail {#gmail}
 
