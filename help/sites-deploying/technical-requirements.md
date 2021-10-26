@@ -1,14 +1,14 @@
 ---
 title: 技术要求
-seo-title: 技术要求
+seo-title: Technical Requirements
 description: AEM支持的客户端和服务器平台列表。
-seo-description: AEM支持的客户端和服务器平台列表。
+seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: f3c99936c1bbfd8a942ffefb1fcd3c2c0b3e9094
+source-git-commit: 1aad655a141fd2137875ae829d1b698298dfe285
 workflow-type: tm+mt
-source-wordcount: '3270'
+source-wordcount: '3253'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Adobe在平台上支持Adobe Experience Manager(AEM)，如本文档中的以下�
 
 安装Adobe Experience Manager的最低要求：
 
-* 已安装的Java平台、标准版JDK或其他受支持的[Java虚拟机](#java-virtual-machines)
+* 已安装的Java平台、标准版JDK或其他受支持的 [Java虚拟机](#java-virtual-machines)
 * Experience Manager快速入门文件（独立JAR或Web应用程序部署WAR）
 
 ### 最低大小要求 {#minimum-sizing-requirements}
@@ -39,14 +39,13 @@ Adobe在平台上支持Adobe Experience Manager(AEM)，如本文档中的以下�
 
 >[!NOTE]
 >
->* 数字资产用例需要更多基本内存。 有关详细信息，请参阅[部署和维护](/help/sites-deploying/deploy.md#default-local-install)。
->* [AEM Forms附加组](/help/forms/using/installing-configuring-aem-forms-osgi.md) 件包需要15 GB的临时空间。
+>* 数字资产用例需要更多基本内存。 请参阅 [部署和维护](/help/sites-deploying/deploy.md#default-local-install) 以了解详细信息。
+>* [AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md) 需要15 GB的临时空间。
 
 >
 
 
-
-有关详细信息，请参阅[硬件大小调整指南](/help/managing/hardware-sizing-guidelines.md)。
+有关详细信息，请参阅 [硬件大小调整指南](/help/managing/hardware-sizing-guidelines.md).
 
 ### 支持级别 {#support-levels}
 
@@ -107,7 +106,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
   </tr>
   <tr>
    <td>OracleJava SE 11 JDK - 64位</td>
-   <td>答：支持的[2] [4]</td>
+   <td>答：支持的[2]</td>
   </tr>
   <tr>
    <td>OracleJava SE 10 JDK</td>
@@ -132,13 +131,11 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
  </tbody>
 </table>
 
-1. 支持和分发阿祖尔Zulu Build的OpenJDK，包括对LTS版本的所有维护更新，将由Adobe直接支持所有使用OpenJDK的阿祖尔Zulu Build的AEM客户，从AEM 6.5 SP9的版本开始。 有关更多信息，请参阅[Azul Java支持Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)。
+1. 支持和分发阿祖尔Zulu Build的OpenJDK，包括对LTS版本的所有维护更新，将由Adobe直接支持所有使用OpenJDK的阿祖尔Zulu Build的AEM客户，从AEM 6.5 SP9的版本开始。 请参阅 [Azul Java支持Adobe Experience Manager问答](assets/adobe-azul-openjdk-license-agreement.pdf) 以了解更多信息。
 
-1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅[OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 直到2022年12月，所有使用OracleJava SE技术&#x200B;**的AEM客户都将直接Adobe支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本的所有维护更新。**&#x200B;有关更多信息，请参阅[OracleAdobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf)的Java支持。
+1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本的所有维护更新 **截至2022年12月**. 请参阅 [Oracle对Adobe Experience Manager问答的Java支持](assets/adobe-oracle-java-license-agreement.pdf) 以了解更多信息。
 
 1. IBM JRE仅与WebSphere Application Server一起受支持。
-
-1. [!DNL Oracle Java SE 11 JDK] 不支持 [!DNL Experience Manager Forms]。
 
 
 ### 存储和持久性 {#storage-persistence}
@@ -149,13 +146,13 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 |---|---|---|
 | **具有TAR文件的文件系统** `[1]` | 存储库 | 答：支持 |
 | **具有数据存储的文件系统** `[1]` | 二进制文件 | 答：支持 |
-| 将二进制文件存储在文件系统`[1]`上的TAR文件中 | 二进制文件 | Z:不支持生产 |
+| 将二进制文件存储在文件系统上的TAR文件中 `[1]` | 二进制文件 | Z:不支持生产 |
 | Amazon S3 | 二进制文件 | 答：支持 |
 | Microsoft Azure Blob Storage | 二进制文件 | 答：支持 |
-| MongoDB Enterprise 4.0 | 存储库 | 答：支持的`[2, 3]` |
+| MongoDB Enterprise 4.0 | 存储库 | 答：支持 `[2, 3]` |
 | MongoDB Enterprise 3.6 | 存储库 | Z:不支持 |
 | MongoDB Enterprise 3.4 | 存储库 | Z:不支持 |
-| IBM DB2 10.5 | 存储库和Forms数据库 | R:受限支持`[4]` |
+| IBM DB2 10.5 | 存储库和Forms数据库 | R:受限支持 `[4]` |
 | Oracle数据库12c(12.1.x) | 存储库和Forms数据库 | R:受限支持 |
 | Microsoft SQL Server 2016 | Forms数据库 | 答：支持 |
 | **Apache Lucene（Quickstart内置）** | 搜索服务 | 答：支持 |
@@ -168,13 +165,13 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 
 >[!NOTE]
 >
->有关AEM Communities功能的其他信息，请参阅[部署Communities](/help/communities/deploy-communities.md) 。
+>请参阅 [部署社区](/help/communities/deploy-communities.md) 有关AEM Communities功能的其他信息。
 
 >[!NOTE]
 >
->MongoDB是第三方软件，未包含在AEM授权包中。 有关详细信息，请参阅[MongoDB授权策略](https://www.mongodb.org/about/licensing/)页。
+>MongoDB是第三方软件，未包含在AEM授权包中。 有关详细信息，请参阅 [MongoDB许可策略](https://www.mongodb.org/about/licensing/) 页面。
 >
->为了充分利用MongoDB的AEM部署，Adobe建议授权MongoDB企业版以从专业支持中受益。 有关更多信息，请参阅[推荐的部署](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 。
+>为了充分利用MongoDB的AEM部署，Adobe建议授权MongoDB企业版以从专业支持中受益。 请参阅 [推荐的部署](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 以了解更多信息。
 >
 >该许可证包含一个标准副本集，该副本集由一个主实例和两个辅助实例组成，这两个实例可用于创作或发布部署。
 >
@@ -182,7 +179,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 >
 >Adobe客户关怀团队将协助确定与将MongoDB与AEM结合使用相关的问题。
 >
->有关更多信息，请参阅[MongoDB for Adobe Experience Manager页面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。
+>有关更多信息，请参阅 [用于Adobe Experience Manager的MongoDB页](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
 
 >[!NOTE]
 >
@@ -202,11 +199,11 @@ Adobe Experience Manager可以作为独立服务器（快速入门JAR文件）�
 |---|---|
 | **快速入门内置Servlet引擎(Jetty 9.4)** | 答：支持 |
 | OracleWebLogic Server 12.2(12cR2) | Z:不支持 |
-| IBM WebSphere Application Server Continuous Delivery(LibertyProfile)，带Web Profile 7.0和IBM JRE 1.8 | R:限制对新合同的支持`[2]` |
-| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R:限制对新合同的支持`[1]` `[2]` |
-| Apache Tomcat 8.5.x | R:限制对新合同的支持`[2]` |
+| IBM WebSphere Application Server连续交付(LibertyProfile)，带有Web Profile 7.0和IBM JRE 1.8 | R:限制对新合同的支持 `[2]` |
+| IBM WebSphere Application Server 9.0和IBM JRE 1.8 | R:限制对新合同的支持 `[1]` `[2]` |
+| Apache Tomcat 8.5.x | R:限制对新合同的支持 `[2]` |
 | JBoss EAP 7.2.x与JBoss应用程序服务器 | Z:不支持 |
-| JBoss EAP 7.1.4，带JBoss应用程序服务器 | R:限制对新合同的支持`[1]` `[2]` |
+| JBoss EAP 7.1.4，带JBoss应用程序服务器 | R:限制对新合同的支持 `[1]` `[2]` |
 | JBoss EAP 7.0.x与JBoss应用程序服务器 | Z:不支持 |
 
 1. 建议使用AEM Forms进行部署。
@@ -218,11 +215,11 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 | **平台** | **支持级别** |
 |---|---|
-| **Linux，基于Red Hat分发** | 答：支持的`[1]` `[3]` |
-| Linux，基于Debian分发，包括 乌本图 | 答：支持的`[2]` |
+| **Linux，基于Red Hat分发** | 答：支持 `[1]` `[3]` |
+| Linux，基于Debian分发，包括 乌本图 | 答：支持 `[2]` |
 | Linux，基于SUSE分发 | 答：支持 |
 | Microsoft Windows Server 2019 `[4]` | R:限制对新合同的支持 |
-| Microsoft Windows Server 2016 `[4]` | R:限制对新合同的支持`[5]` |
+| Microsoft Windows Server 2016 `[4]` | R:限制对新合同的支持 `[5]` |
 | Microsoft Windows Server 2012 R2 | Z:不支持 |
 | OracleSolaris 11 | Z:不支持 |
 | IBM AIX 7.2 | Z:不支持 |
@@ -230,22 +227,22 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 1. Linux内核2.6、3.x和4.x包含Red Hat分发版的衍生产品，包括Red Hat Enterprise Linux、CentOS、OracleLinux和Amazon Linux。 AEM Forms附加功能仅在CentOS 7和Red Hat Enterprise Linux 7中受支持。
 1. AEM Forms仅在Ubuntu 16.04 LTS上受支持
 1. Adobe Managed Services支持的Linux分发
-1. 升级到6.5的客户和非生产用户均支持Microsoft Windows生产部署。 新部署是应AEM Sites和Assets的请求进行的。
+1. 升级到6.5的客户和非生产用户支持Microsoft Windows生产部署。 新部署是应AEM Sites和Assets的请求进行的。
 1. AEM Forms在Microsoft Window Server上不受支持级别R限制
 
 ### 虚拟和云计算环境 {#virtual-cloud-computing-environments}
 
-Adobe Experience Manager支持在云计算环境(如Microsoft Azure和Amazon Web Services(AWS))上的虚拟机中运行，以符合本页所列的技术要求，并且符合Adobe的标准支持条款。
+支持在云计算环境(如Microsoft Azure和Amazon Web Services(AWS))的虚拟机中运行Adobe Experience Manager，以符合本页中列出的技术要求，并且符合Adobe的标准支持条款。
 
-Adobe建议使用Adobe Managed Services在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅[有关Adobe Managed Services](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)的其他文档。
+Adobe建议使用Adobe Managed Services在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅 [关于Adobe Managed Services的其他文档](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
 
-在Azure或AWS或任何其他云计算环境上部署AEM的所有其他情况中，将根据本页中列出的技术规范，将来自Adobe的支持包含在虚拟计算环境中。 与在任何这些云环境中运行的AEM相关的任何报告问题都需要独立于特定于云计算环境的任何云服务来重现，除非云服务作为本页面上所列技术要求（例如Azure Blob Storage或AWS S3）的一部分得到专门支持。
+在Azure或AWS或任何其他云计算环境上部署AEM的所有其他情况下，将根据本页中列出的技术规范，将从Adobe支持包含在虚拟计算环境中。 与在任何这些云环境中运行的AEM相关的任何报告问题都必须能够独立于特定于云计算环境的任何云服务进行重现，除非云服务是本页中列出的技术要求(例如Azure Blob Storage或AWS S3)的一部分而专门受支持。
 
-有关如何在Azure或AWS上部署AEM的建议，请在Adobe Managed Services之外，强烈建议您直接与云提供商或Adobe合作伙伴合作，在您选择的云环境中支持部署AEM。 选定的云提供商或合作伙伴将负责架构的大小调整规范、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
+有关如何在Adobe Managed Services之外的Azure或AWS上部署AEM的建议，Adobe强烈建议直接与云提供商或Adobe合作伙伴合作，在您选择的云环境中支持部署AEM。 选定的云提供商或合作伙伴将负责架构的大小调整规范、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
 
 ### 调度程序平台（Web服务器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)。Experience Manager6.5需要Dispatcher版本4.3.2或更高版本。
+Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html). Experience Manager6.5需要Dispatcher版本4.3.2或更高版本。
 
 支持将以下Web服务器与Dispatcher版本4.3.2一起使用：
 
@@ -268,7 +265,7 @@ Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](ht
 
 Adobe Experience Manager用户界面适用于以下客户端平台。 所有浏览器均使用一组默认的插件和加载项进行测试。
 
-AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）和平板电脑外形（如Apple iPad或Microsoft Surface）进行了优化。 不支持手机外形规格。
+AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）和平板电脑外形(如Apple iPad或Microsoft Surface)进行了优化。 不支持手机外形规格。
 
 >[!NOTE]
 >
@@ -284,7 +281,7 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
    <td><strong>支持经典UI</strong></td>
   </tr>
   <tr>
-   <td><strong>Google Chrome(Evergreen)</strong></td>
+   <td><strong>Google Chrome（常绿版）</strong></td>
    <td>答：支持</td>
    <td>答：支持</td>
   </tr>
@@ -309,29 +306,29 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
    <td>答：支持</td>
   </tr>
   <tr>
-   <td>macOS上的Apple Safari（常绿）</td>
+   <td>Apple Safari on macOS（常绿）</td>
    <td>答：支持</td>
    <td>答：支持</td>
   </tr>
   <tr>
-   <td>macOS上的Apple Safari 11.x</td>
+   <td>Apple Safari 11.x on macOS</td>
    <td>Z:不支持</td>
    <td>Z:不支持</td>
   </tr>
   <tr>
-   <td>iOS 12.x上的Apple Safari</td>
+   <td>Apple Safari on iOS 12.x</td>
    <td>答：支持的[2]</td>
    <td>Z:不支持</td>
   </tr>
   <tr>
-   <td>iOS 11.x上的Apple Safari</td>
+   <td>Apple Safari on iOS 11.x</td>
    <td>Z:不支持</td>
    <td>Z:不支持</td>
   </tr>
  </tbody>
 </table>
 
-1. Firefox的扩展支持版本[在mozilla.org](https://www.mozilla.org/en-US/firefox/organizations/faq/)上了解有关此内容的更多信息
+1. Firefox的扩展支持版本 [在mozilla.org上了解有关此内容的更多信息](https://www.mozilla.org/en-US/firefox/organizations/faq/)
 1. 支持Apple iPad
 
 ### 支持的网站浏览器 {#supported-browsers-for-websites}
@@ -342,7 +339,7 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
 
 **Microsoft Windows 7+**
 
-要成功与Microsoft Windows 7+连接到未使用SSL保护的AEM实例，必须在Windows中启用基于不安全网络的基本身份验证。 这要求在WebClient的Windows注册表中进行更改：
+要成功与Microsoft Windows 7及更高版本连接到未使用SSL保护的AEM实例，必须在Windows中启用不安全网络上的基本身份验证。 这要求在WebClient的Windows注册表中进行更改：
 
 1. 找到注册表子项：
 
@@ -350,7 +347,7 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
 
 1. 使用值2或更多将BasicAuthLevel注册表项添加到此子项。
 
-要提高Windows下WebDav客户端的响应性 — 请参阅[Microsoft支持KB 2445570](https://support.microsoft.com/kb/2445570)
+要在Windows下提高WebDav客户端的响应性，请参阅 [Microsoft支持KB 2445570](https://support.microsoft.com/kb/2445570)
 
 ## 其他平台说明 {#additional-platform-notes}
 
@@ -364,29 +361,25 @@ Adobe Experience Manager的所有元素（实例、调度程序）都可以安�
 
 这意味着当需要指定IP地址时，您可以（根据需要）从以下位置进行选择：
 
-* IPv6地址
-例如`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* 例如IPv6地址 `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
-* IPv4地址
-例如`https://123.1.1.4:4502`
+* 例如IPv4地址 `https://123.1.1.4:4502`
 
-* 服务器名称
-例如，`https://www.yourserver.com:4502`
+* 例如， `https://www.yourserver.com:4502`
 
-* 对于IPv4和IPv6网络安装，将解释`localhost`的默认情况
-例如，`https://localhost:4502`
+* 默认大小写 `localhost` 将解释为IPv4和IPv6网络安装，例如 `https://localhost:4502`
 
 ### AEM Dynamic Media附加组件的要求 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)。[
+AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
 启用Dynamic Media后，将应用以下其他技术要求。
 
 >[!NOTE]
 >
->如果您使用Dynamic Media — 混合模式，则这些系统要求&#x200B;**仅**&#x200B;适用；Dynamic Media — 混合模式具有嵌入式图像服务器，该服务器仅在某些操作系统上获得认证。
+>这些系统要求 **仅** 使用Dynamic Media — 混合模式时应用；Dynamic Media — 混合模式具有嵌入式图像服务器，该服务器仅在某些操作系统上获得认证。
 >
->对于运行Dynamic Media - Scene7模式（即&#x200B;**dynamicmedia_scene7**&#x200B;运行模式）的Dynamic Media客户，没有其他系统要求；只有与AEM相同的系统要求。 Dynamic Media - Scene7模式架构使用基于云的图像服务，而不是AEM中嵌入的服务。
+>对于运行Dynamic Media - Scene7模式的Dynamic Media客户(即 **dynamicmedia_scene7** 运行模式)，没有其他系统要求；只有与AEM相同的系统要求。 Dynamic Media - Scene7模式架构使用基于云的图像服务，而不是AEM中嵌入的服务。
 
 #### 硬件 {#hardware}
 
@@ -406,25 +399,25 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media]
 
 >[!NOTE]
 >
->如果设置了LC_CTYPE不等于`en_US.UTF-8`的区域设置，则会阻止Dynamic Media工作。 要在命令提示符下查看其值是什么，请键入“locale”。 如果未将其设置为，请在运行AEM之前，通过键入“export LC_CTYPE=”将LC_CTYPE环境变量设置为空字符串。
+>如果设置了LC_CTYPE不等于 `en_US.UTF-8`，则会阻止Dynamic Media工作。 要在命令提示符下查看其值是什么，请键入“locale”。 如果未将其设置为，请在运行AEM之前，通过键入“export LC_CTYPE=”将LC_CTYPE环境变量设置为空字符串。
 
 >[!NOTE]
 >
->**禁用SELinux:** 打开SELinux后，“图像提供”功能不起作用。默认情况下，此选项处于启用状态。 要解决此问题，请编辑&#x200B;**/etc/selinux/config**&#x200B;文件，并将SELinux值从：
+>**禁用SELinux:** 打开SELinux时，图像提供不起作用。 默认情况下，此选项处于启用状态。 要解决此问题，请编辑 **/etc/selinux/config** 文件，并将SELinux值从：
 >
 >`SELINUX=enforcing` **到** `SELINUX=disabled`
 
 >[!NOTE]
 >
->**NUMA架构：** 带有AMD64和Intel EM64T处理器的系统通常配置为非均匀内存架构(NUMA)平台，这意味着内核在启动时构建多个内存节点，而不是构建单个内存节点。
+>**NUMA架构：** 具有AMD64和Intel EM64T处理器的系统通常配置为非均匀内存架构(NUMA)平台，这意味着内核在启动时构建多个内存节点，而不是构建单个内存节点。
 >
 >该多节点构造可导致在其它节点耗尽之前一个或多个节点上的内存耗尽。 当内存耗尽时，内核可能会决定终止进程（例如，图像服务器或平台服务器），即使内存可用。
 >
->因此，Adobe建议，如果您运行这样的系统，以便使用&#x200B;**numa=off**&#x200B;引导选项关闭NUMA，以避免内核杀死这些进程。
+>因此，Adobe建议，如果您运行的系统使用 **numa=off** 引导选项，以避免内核杀死这些进程。
 
 >[!NOTE]
 >
->**必须解析服务器主机名：** 确保服务器的主机名可解析为IP地址。如果无法实现，请将完全限定的主机名和IP地址添加到&#x200B;**/etc/hosts**:
+>**服务器主机名必须解析：** 确保服务器的主机名可解析为IP地址。 如果无法实现，请将完全限定的主机名和IP地址添加到 **/etc/hosts**:
 >
 >`<ip address> <fully qualified hostname>`
 
@@ -437,32 +430,32 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media]
 
 对于Windows x64:
 
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)获取Microsoft Visual Studio 2010可再发行版本
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)获取Microsoft Visual Studio 2013可再发行版本
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)获取Microsoft Visual Studio 2015可再发行版本
+* 获取Microsoft Visual Studio 2010的可再发行版本： [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)
+* 获取Microsoft Visual Studio 2013可再发行版本，具体位置为 [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* 获取Microsoft Visual Studio 2015可再发行版本，网址为 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 对于Windows x86:
 
-* 在[https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/en-in/download/details.aspx?id=5555)获取Microsoft Visual Studio 2010可再发行版本
-* 在[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)获取Microsoft Visual Studio 2013可再发行版本
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)获取Microsoft Visual Studio 2015可再发行版本
+* 获取Microsoft Visual Studio 2010的可再发行版本： [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/en-in/download/details.aspx?id=5555)
+* 获取Microsoft Visual Studio 2013可再发行版本，具体位置为 [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
+* 获取Microsoft Visual Studio 2015可再发行版本，网址为 [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
-#### MacOS {#macos}
+#### macOS {#macos}
 
 * 10.9.x及更高版本
 * 仅支持试用和演示目的
 
-### AEM Forms PDF生成器的要求 {#requirements-for-aem-forms-pdf-generator}
+### AEM FormsPDF生成器的要求 {#requirements-for-aem-forms-pdf-generator}
 
 <table>
  <tbody>
   <tr>
    <th><p><strong>产品</strong></p> </th>
-   <th><p><strong>支持的转换为PDF的格式</strong></p> </th>
+   <th><p><strong>支持的转换为PDF格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic tracklast</a> 版本</td>
-   <td>XPS，图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017款经典曲目</a> 最新版本</td>
+   <td>XPS，图像格式(BMP，GIF,JPEG,JPG, TIF，TIFF, PNG， JPF， JPX， JP2, J2K， J2C， JPC),HTML, HTM， DWG， DXF和DWF</td>
   </tr>
   <tr>
    <td>Microsoft® Office 2016</td>
@@ -481,12 +474,12 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media]
    <td>PUB</td>
   </tr>
   <tr>
-   <td>Microsoft® Project 2016<br /> </td>
+   <td>Microsoft® 2016工程<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
    <td>OpenOffice 4.1.2</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、PNG、JPX、JP2、J2K、J2C、JPC、RTPC、HTT)、HTMT和HTM</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JP2、J2K、J2C、JPC、JPC、HTML、HTM和RT</td>
   </tr>
  </tbody>
 </table>
@@ -497,19 +490,16 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media]
 >
 >此外：
 >
->* PDF生成器需要32位版本的[Acrobat 2017 Classic跟踪版本17.011.30078或更高版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)才能执行转换。
+>* PDF生成器需要32位版本的 [Acrobat 2017 Classic跟踪版本17.011.30078或更高版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 执行转换。
 >* PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
 >* PDF生成器不支持Microsoft Office 365。
->* 仅在Windows和Linux上支持用于OpenOffice的PDF生成器转换。
->* OCR PDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
->* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM Forms PDF生成器一起使用。 有关更多信息，请参阅根据您的部署([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))的AEM Forms产品说明。
-
-   >
-   >
-* PDF生成器服务不支持Microsoft Windows 10。
+>* PDF生成器转换仅在Windows和Linux上受支持。
+>* OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
+>* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+>
+>* PDF生成器服务不支持Microsoft Windows 10。
 
 >
-
 
 
 ### AEM Forms Designer的要求 {#requirements-for-aem-forms-designer}
@@ -531,7 +521,7 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media]
 
 * **操作系统：**
 
-   * Linux（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
+   * Linux（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅 [如何在64位RedHat Linux上启用XMP提取和回写](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
 
    * Windows Server
    * Mac OS X（64位）
@@ -540,4 +530,4 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处启用Dynamic Media]
 
 ### AEM Assets在Linux上处理元数据密集型资产的要求 {#assetsonlinux}
 
-XMPFilesProcessor进程需要库GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux内核，例如Linux内核版本3.1.x。它可提高处理包含大量元数据（如PSD文件）的资产的性能。 使用以前版本的GLIBC会导致以`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`开头的日志中出现错误。
+XMPFilesProcessor进程需要库GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux内核，例如Linux内核版本3.1.x。它改进了处理包含大量元数据(如PSD文件)的资产的性能。 使用以前版本的GLIBC会导致日志中以 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
