@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: a401955e4b163a8062a498ea897d4a3d95ae0208
+source-git-commit: 7261a71769dfb968c768e0cb4835d7d4cca97b1a
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 10%
+source-wordcount: '1327'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 请查看下表中的最低系统要求，了解您当前使用的CIF版本或计划将来使用的CIF版本。
 
-**在4月版中，我们已使用Adobe软件分发中提供的CIF附加组件** 替换了GitHub上的CIF [连接器](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。切换到附加组件对项目有极大好处：
+**在4月版中，我们已使用CIF附加组件替换了GitHub上的CIF连接器** 可在 [AdobeSoftware Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 切换到附加组件对项目有极大好处：
 
 * 大多数新功能将立即在AEM 6.5上可用（无需再等待功能端口）
 * 可轻松升级到新的附加版本
@@ -28,6 +28,26 @@ ht-degree: 10%
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 发行日期：2021年10月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.10.20.02 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.10.20.02.zip) |
+| CIF核心组件 | 2.4.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.0) |
+| CIF Venia参考网站 | 2021.11.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.11.01) |
+
+### 新增功能 {#what-is-new-october}
+
+* CIF附加组件支持最新的Commerce v2.4.3和新的GraphQL API和架构
+
+* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 CIF图标已添加到RTE工具栏，该工具栏将打开选取器，以便快速搜索并选择产品或类别，而无需离开上下文。
+
+* 现有的弹出式购物车和结帐已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Magento的可扩展Peregrine组件构建的
+
+* 商户可以使用商务后端在导航中隐藏某些产品目录类别。 CIF导航核心组件遵循商务后端配置“包含在菜单中”来在导航中显示/隐藏类别
+
+* AEM Storefront Venia在未找到类别或产品页面时返回HTTP 404错误
 
 ## 发行日期：2021年9月
 
@@ -98,7 +118,7 @@ ht-degree: 10%
    * 在创作模式下暂存产品数据的可视指示器，可更好地显示即将发生的更改
    * 用于内容和商务页面的新站点地图组件
 
-* 支持[Adobe Commerce Sensei产品推荐，由AEM Storefront中的Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)提供支持，使用预定义或即时创建的推荐
+* 支持 [Adobe Commerce Sensei产品推荐，由Adobe Sensei提供支持](https://business.adobe.com/products/magento/product-recommendations.html) 在AEM Storefront中使用预定义或即时创建的推荐
 
 ## 发行日期：2021年6月
 
