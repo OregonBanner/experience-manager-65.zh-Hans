@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEM Content and Commerce
 breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用和管理 AEM Content and Commerce。
-source-git-commit: a5bf6a1a6e9013e44209ea865145af1557445318
+source-git-commit: 5678d20fa0a7e8a709b02a2f6cbbeffbd4a26cbd
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 36%
+source-wordcount: '109'
+ht-degree: 33%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 36%
 + [对AEM内容和商务的显着更改](cif/changes.md)
 + [简介和概述](cif/introduction.md)
 + 集成 {#integrations}
-   + [Adobe商务](cif/integrating/magento.md)
+   + [Adobe Commerce](cif/integrating/magento.md)
    + [第三方商务解决方案](cif/integrating/third-party.md)
 + AEM Storefront {#storefront}
    + [入门](cif/getting-started.md)
@@ -32,15 +32,16 @@ ht-degree: 36%
       + [样式CIF组件](cif/customizing/style-cif-component.md)
       + [自定义CIF组件](cif/customizing/customize-cif-components.md)
       + [使用CIF目录选取器](cif/customizing/use-cif-pickers.md)
-+ [Adobe商务PWA Studio](cif/pwa-studio/getting-started.md)
++ [Adobe CommercePWA Studio](cif/pwa-studio/getting-started.md)
 + [迁移](cif/migration.md)
 + 发行说明 {#release-notes}
    + [2021年](cif/release-notes/release-notes-2021.md)
    + [2020年](cif/release-notes/release-notes-2020.md)
    + [2019年](cif/release-notes/release-notes-2019.md)
 + [常见问题解答](cif/faq.md)
-+ 经典CIF {#classic}
-   + 部署{#deploying}
++ AEM CIF Classic {#classic}
+   + [概述](/help/commerce/cif-classic/home.md)
+   + 部署 {#deploying}
       + [电子商务概述](/help/commerce/cif-classic/deploying/ecommerce.md)
       + [SAPCommerce Cloud](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)
    + 管理 {#administering}
