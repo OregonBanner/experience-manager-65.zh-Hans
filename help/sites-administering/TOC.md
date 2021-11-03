@@ -6,11 +6,11 @@ audience: admin-user
 user-guide-title: AEM 6.5 Administering 用户指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
-feature: 管理
+feature: Administering
 role: Admin
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '623'
 ht-degree: 17%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 17%
 # AEM 6.5 Administering 用户指南 {#administering}
 
 + [Administering用户指南概述](home.md)
-+ 站点功能{#introduction}
++ 站点功能 {#introduction}
    + [网站管理](msm-and-translation.md)
    + [异步作业](asynchronous-jobs.md)
    + [重用内容：多站点管理器和Live Copy](msm.md)
@@ -78,7 +78,7 @@ ht-degree: 17%
    + [OWASP前10](owasp-top10.md)
    + [在生产就绪模式下运行AEM](production-ready.md)
    + [身份管理](identity-management.md)
-   + [AdobeAEM Managed Services的IMS身份验证和Admin Console支持](ims-config-and-admin-console.md)
+   + [对AEM Managed Services的Adobe IMS身份验证和Admin Console支持](ims-config-and-admin-console.md)
    + [创建封闭用户组](cug.md)
    + [在AEM中缓解序列化问题](mitigating-serialization-issues.md)
    + [用户同步](sync.md)
@@ -157,7 +157,7 @@ ht-degree: 17%
    + [为AEM Foundation处理GDPR请求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM Commerce - GDPR就绪](gdpr-compliance-commerce.md)
 + 内容管理 {#contentmanagement}
-   + [如何使用包](package-manager.md)
+   + [包管理器](package-manager.md)
    + [管理标记](tags.md)
    + [页面导出程序](page-exporter.md)
    + [经典UI标记控制台](classic-console.md)
