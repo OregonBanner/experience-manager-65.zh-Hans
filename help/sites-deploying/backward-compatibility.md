@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5中的向后兼容性
-seo-title: AEM 6.5中的向后兼容性
+seo-title: Backward Compatibility in AEM 6.5
 description: 了解如何使您的应用程序和配置与AEM 6.5兼容
-seo-description: 了解如何使您的应用程序和配置与AEM 6.5兼容
+seo-description: Learn how to keep your apps and configurations compatible with AEM 6.5
 uuid: 81dc2771-f59b-4b24-8932-9e938cba05e0
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,22 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
-feature: 升级
+feature: Upgrading
 exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 50a11e30ccd720065962e8dd03cbcc71ec9f715a
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
 
-# AEM 6.5{#backward-compatibility-in-aem}中的向后兼容性
+# Backward Compatibility in AEM 6.5{#backward-compatibility-in-aem}
 
 ## 概述 {#overview}
 
 >[!NOTE]
 >
->有关不在兼容包范围内的内容和配置更改列表，请参阅AEM](/help/sites-deploying/repository-restructuring.md)中的[存储库重组。
+>有关不在兼容包范围内的内容和配置更改列表，请参阅 [AEM中的存储库重组](/help/sites-deploying/repository-restructuring.md).
 
 在AEM 6.5中，开发所有功能时都考虑到了向后兼容性。
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ![sase](assets/sase.png)
 
-兼容包有两种模式：**已启用路由**&#x200B;和&#x200B;**已禁用路由**。
+兼容包有两种模式： **已启用路由** 和 **路由已禁用**.
 
 这允许以三种模式运行AEM 6.5:
 
@@ -63,10 +63,10 @@ ht-degree: 1%
 
 ## 如何设置 {#how-to-set-up}
 
-AEM 6.3兼容包可以使用包管理器作为包进行安装。 您可以从Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)站点下载[AEM 6.3兼容包。
+的 **AEM 6.4适用于6.5的兼容包** 可以使用包管理器作为包安装。 您可以下载 [AEM 6.4 Software Distribution中适用于6.5的兼容包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64) 网站。
 
 安装兼容包后，可以使用OSGI配置中的交换机启用或禁用路由，如下所示：
 
-![screen_shot_2017-11-27at122421pm](assets/screen_shot_2017-11-27at122421pm.png)
+![比较交换机](assets/compat-switches.png)
 
 安装并设置兼容包后，将根据所选的兼容模式来使用这些功能。
