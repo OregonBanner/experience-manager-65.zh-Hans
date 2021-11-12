@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: bbced918e67c64c0bf2f5a3de8cbcb9063fff669
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2216'
 ht-degree: 4%
 
 ---
@@ -46,6 +46,9 @@ ht-degree: 4%
    * [Photoshop](#photoshop-tab) 选项卡
    * [PDF](#pdf-tab) 选项卡
    * [Illustrator](#illustrator-tab) 选项卡
+
+   ![Dynamic Media“常规设置”页面](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Media“常规设置”页面，其中&#x200B;**[!UICONTROL 图像编辑]**选项卡。*<br><br>
 
 1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 保存]**.
 

@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: e3067a17153864babaf0243c4c3f6cf9cd8d30bc
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '3098'
+source-wordcount: '3114'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,6 @@ ht-degree: 3%
 >* 您在Scene7模式下运行Dynamic Media。
 >* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5中或在Experience Manageras a Cloud Service中。
 >* 您是具有管理员权限的Experience Manager系统管理员。
-
 
 
 “Dynamic Media发布设置”页面设置决定了默认情况下如何将资产从Dynamic Media服务器Adobe到网站或应用程序。 如果未指定任何设置，AdobeDynamic Media服务器将根据“发布设置”页面上的默认设置来传送资产。 例如，如果请求传送的图像不包含分辨率属性，则会生成一个图像，其中图像服务器页面上具有默认对象分辨率设置。
@@ -50,6 +49,9 @@ ht-degree: 3%
    * [请求属性](#request-attributes-tab) 选项卡
    * [常见缩略图属性](#common-thumbnail-attributes-tab) 选项卡
    * [色彩管理属性](#color-management-attributes-tab) 选项卡
+
+   ![Dynamic Media发布设置页面](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media发布设置页面，其中&#x200B;**[!UICONTROL 请求属性]**选项卡。*<br><br>
 
 1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 保存]**.
 
