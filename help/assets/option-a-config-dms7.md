@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
+source-git-commit: b6000516b88342d6abf8072623cfece43e2ba19d
 workflow-type: tm+mt
-source-wordcount: '11558'
+source-wordcount: '11571'
 ht-degree: 4%
 
 ---
@@ -170,11 +170,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 如果要进一步自定义Dynamic Media - Scene7模式的配置和设置，或优化其性能，可以完成以下一个或多个操作 *可选* 任务：
 
 * [（可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产](#optional-config-dms7-assets-larger-than-2gb)
-
-* [（可选）Dynamic Media - Scene7模式设置的设置和配置](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
-
+* [（可选）配置Dynamic Media发布设置](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
+   * [（可选）在将资产公开之前对资产进行测试](#test-assets-before-making-public)
+* [（可选）配置Dynamic Media常规设置](#configuring-application-general-settings)
+* [（可选）其他配置任务](#additional-configuration-tasks)
 * [（可选）调整Dynamic Media - Scene7模式的性能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
-
 * [（可选）筛选用于复制的资产](#optional-filtering-assets-for-replication)
 
 ### （可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产 {#optional-config-dms7-assets-larger-than-2gb}
@@ -332,7 +332,7 @@ Dynamic Media发布设置适用于经验丰富的网站开发人员和程序员�
 | **[!UICONTROL 请求锁定模式]** | 如果您希望请求中包含简单的哈希锁定，则启用。<br>另请参阅 [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) 参数。 |
 | **[!UICONTROL 默认请求属性]** |  |
 | **[!UICONTROL 默认图像文件后缀]** | 必填.<br>默认数据文件扩展名，如果路径不包含文件后缀，则附加到目录路径和掩码路径字段值中。<br>另请参阅 [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) 参数。 |
-| **[!UICONTROL 默认字体名称]** | 指定在文本层请求未提供字体时使用的字体。 If specified, it must be a valid font name value in the font map of this image catalog or in the font map of the default catalog.<br>另请参阅 [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) 参数。 |
+| **[!UICONTROL 默认字体名称]** | 指定在文本层请求未提供字体时使用的字体。 如果已指定，则必须是此图像目录的字体映射或默认目录的字体映射中的有效字体名称值。<br>另请参阅 [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) 参数。 |
 | **[!UICONTROL 默认图像]** | 提供默认图像以返回，以响应未找到请求图像的请求。<br>另请参阅 [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) 参数。 |
 | **[!UICONTROL 默认图像模式]** | 启用滑块框（右侧的滑块）后， **[!UICONTROL 默认图像]** 使用默认图像替换源图像中每个缺失的图层，并照常返回复合。 禁用滑块框（左侧的滑块）后，默认图像会替换整个复合图像，即使缺少的图像只是多个图层中的一个图层。<br>另请参阅 [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) 参数。 |
 | **[!UICONTROL 默认视图大小]** | 必填.<br>如果请求未明确使用指定视图大小，则服务器将限制返回图像不得大于此宽度和高度 `wid=`, `hei=`或 `scl=`.<br>另请参阅 [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) 参数。 |
@@ -436,10 +436,10 @@ Dynamic Media发布设置适用于经验丰富的网站开发人员和程序员�
 * HTTP视频流。
 * 渐进式视频流。
 
-The following asset types and functionalities are currently not supported:
+当前不支持以下资产类型和功能：
 
 * Adobe Dynamic Media Classic信息或eCatalog搜索
-* RTMP video streaming
+* RTMP视频流
 * Web-to-print
 * UGC（用户生成的内容）服务
 
@@ -643,7 +643,7 @@ Dynamic Media常规设置仅在以下情况下可用：
 >[!NOTE]
 默认情况下，当您选择&#x200B;**[!UICONTROL 呈现]**&#x200B;时，系统会显示 15 种呈现形式，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示 15 个查看器预设。您可以提高此限制。请参阅 [增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-### （可选）其他配置任务
+### （可选）其他配置任务 {#additional-configuration-tasks}
 
 可选的设置和配置任务包括：
 
