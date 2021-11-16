@@ -4,9 +4,9 @@ description: 发行说明特定于 [!DNL Adobe Experience Manager] 6.5 service p
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 14339f6a34952c00351c6dee8537b5df6f6fbcd3
+source-git-commit: 0a35b26c5f790d67db55421b8f3e98e5ddb30528
 workflow-type: tm+mt
-source-wordcount: '4436'
+source-wordcount: '4430'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 3%
 * 提升启动项时，提升的启动项中的更改将会双重推广到其他启动项。 如果用户推广双重转出的启动项，则双重内容会反映在源页面上(NPR-36893)。
 * [!DNL Experience Manager] 如果您使用图像核心组件将图像添加到页面，或者使用基础图像组件调整大小，则会向某些具有透明度的PNG图像添加灰色边框(NPR-36879)。
 * [!DNL Experience Manager Sites] 管理员UI中模板数量较多，导航缓慢(NPR-36870)。
-* 升级到Service Pack 9会阻止创作一些组件。 此问题不允许 [!DNL Sites] 用户创建新页面(NPR-36857)。
+* 当自定义Servlet过滤器包修改网页的链接时，网页无法呈现(NPR-36857)。
 * 的 `ContextHubImpl` 方法创建 `ResourceResolver` 尚未关闭。 这会导致有关长时间运行的警告消息 `ResourceResolver` 并且服务有时会返回意外结果(NPR-36853)。
 * 在从Blueprint页面属性同步单个Live Copy时，还会同步所有其他Live Copy(NPR-36829、NPR-36522)。
 * 仅使用XLS MIME类型时，文件上传函数无法按预期工作(NPR-36785)。
@@ -296,7 +296,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **通信管理**
 
-* 在 [!UICONTROL 数据] 选项卡以及HTML信件预览(NPR-37020)。
+* 在 [!UICONTROL 数据] 选项卡以及HTML信件预览(NPR-37020)中的“隐藏主体”选项卡。
 
 * 编辑文本文档片段时，保存片段后，新词将显示为HTML标记(NPR-36837)。
 
