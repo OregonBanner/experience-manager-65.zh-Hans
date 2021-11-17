@@ -3,9 +3,9 @@ title: '[!DNL Experience Manager Assets] integration with [!DNL Adobe Workfront]
 description: 集成简介 [!DNL Assets] 和 [!DNL Workfront]
 role: Admin,Leader,Architect
 feature: Integrations
-source-git-commit: 468a8d96153c67232524eea6f180c9ceb364d60a
+source-git-commit: 8d39e1c86e5185a181400f10b7822a57c9d3aeae
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '873'
 ht-degree: 2%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 2%
 
 # [!DNL Adobe Experience Manager Assets] 集成 [!DNL Adobe Workfront] {#assets-integration-overview}
 
-[!DNL Adobe Workfront] 是一个工作管理应用程序，可帮助您在一个位置管理工作的整个生命周期。 集成 [!DNL Workfront] 和 [!DNL Adobe Experience Manager Assets] 通过将工作与数字资产管理本质地联系在一起，让组织可以提高内容的快速性和上市时间。 在Workfront中管理其工作的上下文中，用户可以访问所需的文档和图像。
+[!DNL Adobe Workfront] 是一个工作管理应用程序，可帮助您在一个位置管理工作的整个生命周期。 集成 [!DNL Workfront] 和 [!DNL Adobe Experience Manager Assets] 通过将工作与数字资产管理本质地联系在一起，让组织可以提高内容的快速性和上市时间。 在Workfront中管理其工作的范围内，用户可以访问所需的文档和图像。
 
-Adobe提供了两个不同的连接器来集成两个解决方案。 这些连接器在以下两个位置之间实现了复杂的企业自动化、配置和可扩展的工作流 [!DNL Assets] 和 [!DNL Workfront]. 此外， [!DNL Assets Essentials] 可作为新 [!DNL Workfront] 客户可以单独购买。 要了解更多信息，请参阅 [[!DNL Workfront] and [!DNL Assets Essentials] 集成](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/integration.html).
+的 [!DNL Workfront for Experience Manager enhanced connector] 通过端到端工作流支持增强的业务流程，并提供个性化的端到端客户体验和中央存储。 有关 [!DNL enhanced connector]，请参阅 [的新增功能 [!DNL enhanced connector]](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
 
 [!DNL Workfront for Experience Manage enhanced connector] 使贵组织能够：
 
-* 轻松协作。 创意团队可以少担心一件事。 现在，完成工作后，他们只需单击按钮，即可将其发送到AEM Assets
-* 在每一步都丰富资产。 在资产生命周期的每个阶段收集新数据。 从构思到交付，您的组织可以捕获关键量度，以便对未来资产开发做出更明智的业务决策。
-* 引用现有资产。 轻松地在生产中查找和重复使用现有资产，并将其作为参考项目添加到新项目中。
-* 同步所有元数据。 通过尽可能简化添加过程来增强元数据。 通过连接器，元数据在Workfront和AEM Assets之间双向同步
-* 利用 [!DNL Experience Manager Assets] 数字管理功能。 直接在您喜爱的内容中访问所有数字资产 [!DNL Creative Cloud] 应用程序。 支持AI的智能标记和裁剪、搜索工具、通过动态交付 [!DNL Dynamic Media]，以及更多。
+* 在Workfront中自动创建链接的Experience Manager文件夹，并根据WorkfrontPortfolio、项目和项目来组织文件夹。
+* 将Workfront项目元数据与链接的Experience Manager文件夹同步。
+* Experience Manager元数据会随新版本而更新。
+* 使用Workfront工作流根据可配置条件设置Experience Manager对象状态。
+* 将资产发布到Experience Manager发布环境或Brand Portal。
 
-请参阅平台支持和其他 [enhanced connector先决条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+查看平台支持和 [enhanced connector先决条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
 
 >[!IMPORTANT]
 >
 >Adobe需要部署和配置 [!DNL Adobe Workfront for Experience Manager enhanced connector] 仅通过认证合作伙伴或 [!DNL Adobe Professional Services]. 如果部署和配置时没有经过认证的合作伙伴或 [!DNL Adobe Professional Services]，则Adobe不支持此功能。
 >
->Adobe可发布 [!DNL Adobe Workfront] 和 [!DNL Adobe Experience Manager] 这使得该连接器冗余；如果发生这种情况，客户可能需要从使用此连接器过渡。
+>Adobe可发布 [!DNL Adobe Workfront] 和 [!DNL Adobe Experience Manager] 使此连接器冗余；如果发生这种情况，客户可能需要从使用此连接器过渡。
 
 ## 比较 [!DNL Assets] 和 [!DNL Workfront] {#feature-parity-matrix}
 
