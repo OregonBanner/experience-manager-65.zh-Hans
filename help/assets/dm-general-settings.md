@@ -7,12 +7,13 @@ topic-tags: administering
 content-type: reference
 feature: Image Profiles
 role: User, Admin
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
+source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: '2454'
 ht-degree: 4%
 
 ---
@@ -20,24 +21,29 @@ ht-degree: 4%
 
 # 配置Dynamic Media常规设置
 
->[!IMPORTANT]
->
->Dynamic Media常规设置仅在以下情况下可用：
->
->* 您在Scene7模式下运行Dynamic Media。
->* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5中或在Experience Manageras a Cloud Service中。
->* 您是具有管理员权限的Experience Manager系统管理员。
+配置 **[!UICONTROL Dynamic Media常规设置]** 仅在以下情况下可用：
 
+* 您在Scene7模式下运行Dynamic Media。 请参阅 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
+* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5中或在Experience Manageras a Cloud Service中。
+* 您是具有管理员权限的Experience Manager系统管理员。
+
+Dynamic Media常规设置适用于经验丰富的网站开发人员和程序员。 AdobeDynamic Media建议更改这些发布设置的用户熟悉Adobe Experience Manager上的Dynamic Media和基本成像技术。
 
 在创建帐户时，AdobeDynamic Media会自动为您的公司提供分配的服务器。 这些服务器用于为您的网站和应用程序构建URL字符串。 这些URL调用特定于您的帐户。
 
-另请参阅 [测试安全测试服务](/help/assets/dm-publish-settings.md#test-assets-before-making-public).
+“Dynamic Media发布设置”页面可建立默认设置，以确定如何将资产从Dynamic MediaAdobe服务器交付到网站或应用程序。 如果未指定任何设置，AdobeDynamic Media服务器将根据Dynamic Media发布设置页面上配置的默认设置来传送资产。
+
+另请参阅 [Dynamic Media的设置和配置 — Scene7模式设置](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+
+>[!NOTE]
+>
+>在Adobe Experience Manager上从Dynamic Media Classic升级到Dynamic Media? Dynamic Media中的“常规设置”和“发布设置”页面已预填充Dynamic Media Classic帐户中的值。 例外是 **[!UICONTROL 默认上传选项]** 中。 这些值已处于Experience Manager中。 因此，您在下进行的任何更改 **[!UICONTROL 默认上传选项]**，而不是Dynamic Media Classic中，则会通过Experience Manager用户界面在所有五个选项卡中都反映在Dynamic Media中。 “常规设置”和“发布设置”页面中的所有其他设置和值将在Experience Manager时在Dynamic Media Classic和Dynamic Media之间进行维护。
 
 **要配置Dynamic Media常规设置，请执行以下操作：**
 
 1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
 1. 在左边栏中，选择工具图标，然后转到 **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media常规设置]**.
-1. 在“服务器”页面中，将 **[!UICONTROL 已发布的服务器名称]** 和 **[!UICONTROL 源服务器名称]**，然后使用五个选项卡来配置默认的发布设置。
+1. 在“服务器”页面中，将 **[!UICONTROL 已发布的服务器名称]** 和 **[!UICONTROL 源服务器名称]**，然后使用五个选项卡为图像编辑以及Postscript、Photoshop、PDF和Illustrator文件配置默认上传选项。
 
    * [服务器](#server-general-setting)
    * [上载到应用程序](#upload-to-application)
@@ -58,7 +64,7 @@ ht-degree: 4%
 
 | 选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 已发布的服务器名称]** | 必填.<br>此服务器是实时CDN（内容交付网络）服务器，用于特定于您帐户的所有系统生成URL调用。 请勿更改此服务器名称，除非Adobe技术支持部门指示您更改此名称。 名称必须使用 `https://` 在路径中。 |
+| **[!UICONTROL 已发布的服务器名称]** | 必填.<br>名称必须使用 `https://` 在路径中。<br>此服务器是实时CDN（内容交付网络）服务器，用于特定于您帐户的所有系统生成URL调用。 请勿更改此服务器名称，除非Adobe技术支持部门指示您更改此名称。 |
 | **[!UICONTROL 原始服务器名称]** | 必填.<br>此服务器仅用于质量保证测试。 除非Adobe技术支持部门指示您更改此服务器名称，否则请勿更改此服务器名称。 |
 
 ## 上载到应用程序 {#upload-to-application}
@@ -69,8 +75,8 @@ ht-degree: 4%
 
    | “覆盖图像”选项 | 描述 |
    | --- | --- |
-   | **[!UICONTROL 在当前文件夹内，使用相同的基本名称/扩展名进行覆盖]** | 默认.<br>此选项是最严格的替换规则。 它要求您将替换图像上传到与原始图像相同的文件夹，并且替换图像的文件扩展名与原始图像相同。 如果不满足这些要求，则会创建重复项。 |
-   | **[!UICONTROL 在当前文件夹内，使用相同的基本名称（不论扩展名是什么）进行覆盖]** | 要求您将替换图像上传到与原始图像相同的文件夹，但文件扩展名可能与原始图像不同。 例如， chair.tif将取代chair.jpg。 |
+   | **[!UICONTROL 覆盖当前文件夹中相同的基本名称/扩展名]** | 仅对新Dynamic Media帐户默认。<br>此选项是最严格的替换规则。 它要求您将替换图像上传到与原始图像相同的文件夹，并且替换图像的文件扩展名与原始图像相同。 如果不满足这些要求，则会创建重复项。 |
+   | **[!UICONTROL 覆盖当前文件夹中相同的基本名称，无论扩展名是什么]** | 要求您将替换图像上传到与原始图像相同的文件夹，但文件扩展名可能与原始图像不同。 例如， chair.tif将取代chair.jpg。 |
    | **[!UICONTROL 在任意文件夹内，使用相同的基本资源名称和扩展名进行覆盖]** | 要求替换图像的文件扩展名与原始图像相同（例如，chair.jpg必须替换chair.jpg，而不是chair.tif）。 但是，您可以将替换图像上传到与原始图像不同的文件夹。 更新后的图像位于新文件夹中；在文件的原始位置中无法再找到该文件。 |
    | **[!UICONTROL 在任意文件夹内，使用相同的基本资源名称（不论扩展名是什么）进行覆盖]** | 此选项是包含最广的替换规则。 您可以将替换图像上传到与原始图像不同的文件夹，上传文件扩展名不同的文件，然后替换原始文件。 如果原始文件位于其他文件夹中，则替换图像将位于上传到的新文件夹中。 |
 

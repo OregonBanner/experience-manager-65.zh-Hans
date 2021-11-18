@@ -7,29 +7,23 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
-mini-toc-levels: 3
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
+source-git-commit: 680c0e00a739c5e880286cb4adf33f4ea5f6a318
 workflow-type: tm+mt
-source-wordcount: '6438'
-ht-degree: 3%
+source-wordcount: '6058'
+ht-degree: 4%
 
 ---
 
-# 里克：选项B — 配置Dynamic Media - Scene7模式{#configuring-dynamic-media-scene-mode}
-
->[!NOTE]
->
->里克：选项B — 我写的两个新主题仍然存在。 但是，在本主题中，您现在正在阅读我已在“常规设置”和“发布设置”中介绍OPTIONS的相应区域，我添加了两个新主题的链接。
+# 配置Dynamic Media - Scene7模式{#configuring-dynamic-media-scene-mode}
 
 如果您使用为开发、暂存和生产等不同环境设置的Adobe Experience Manager，则请为每个环境配置Dynamic MediaCloud Services。
 
 ## Dynamic Media - Scene7模式的架构图 {#architecture-diagram-of-dynamic-media-scene-mode}
-
-**里克：保持原样**
 
 以下架构图介绍了Dynamic Media - Scene7模式的工作方式。
 
@@ -56,23 +50,19 @@ ht-degree: 3%
 
 ## 在Scene7模式下启用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
 
-**里克：保持原样**
-
 [默认情况下，Dynamic Media 处于禁用状态。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)要利用Dynamic Media功能，您必须启用它。
 
 >[!WARNING]
 >
 >Dynamic Media - Scene7模式适用于 *仅Experience Manager创作实例*. 因此，您必须配置 `runmode=dynamicmedia_scene7` 在Experience Manager创作实例上， *not* Experience Manager发布实例。
 
-要启用Dynamic Media，您必须使用 `dynamicmedia_scene7` 通过在终端窗口中输入以下命令行来运行模式（使用的示例端口为4502）：
+要启用Dynamic Media，请使用 `dynamicmedia_scene7` 通过在终端窗口中输入以下命令行来运行模式（使用的示例端口为4502）：
 
 ```shell
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
 ## （可选）将Dynamic Media预设和配置从6.3迁移到6.5，零停机时间 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
-
-**里克：保持原样**
 
 现在，将Experience ManagerDynamic Media从6.3升级到6.4或6.5中，即可实现零停机时间部署。 要从 `/etc` to `/conf` 在CRXDE Lite中，确保运行以下curl命令。
 
@@ -90,8 +80,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## 安装用于批量资产迁移的功能包18912 {#installing-feature-pack-for-bulk-asset-migration}
 
-**里克：保持原样**
-
 功能包18912的安装是 *可选*.
 
 功能包18912允许您通过FTP批量摄取资产，或在Experience Manager中将资产从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 可从 [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
@@ -99,8 +87,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 请参阅 [安装用于批量资产迁移的功能包18912](/help/assets/bulk-ingest-migrate.md) 以了解更多信息。
 
 ## 在Cloud Services中创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
-
-**里克：保持原样**
 
 **在配置Dynamic Media之前**  — 收到包含Dynamic Media凭据的配置电子邮件后，必须打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户以更改密码。 预配电子邮件中提供的密码是系统生成的，并且仅准备为临时密码。 请务必更新密码，以便使用正确的凭据设置Dynamic MediaCloud Service。
 
@@ -144,7 +130,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
          * **[!UICONTROL 子文件夹已禁用]**  — 将此子树中的所有内容从同步到Dynamic Media。
 
    >[!NOTE]
-   DMS7中不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
+   在Dynamic Media - Scene7模式下不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
@@ -165,8 +151,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## （可选）在Dynamic Media - Scene7模式下配置高级设置 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
-**里克：保持原样**
-
 如果要进一步自定义Dynamic Media - Scene7模式的配置和设置，或优化其性能，可以完成以下一个或多个操作 *可选* 任务：
 
 * [（可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产](#optional-config-dms7-assets-larger-than-2gb)
@@ -178,8 +162,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 * [（可选）筛选用于复制的资产](#optional-filtering-assets-for-replication)
 
 ### （可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产 {#optional-config-dms7-assets-larger-than-2gb}
-
-**里克：保持原样**
 
 在Dynamic Media - Scene7模式下，默认资产上传文件大小为2 GB或更小。 但是，您可以选择配置大于2 GB和高于15 GB的资产上传。
 
@@ -267,49 +249,39 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ### （可选）Dynamic Media - Scene7模式设置的设置和配置 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-**里克：指向新发布设置主题的链接**
-
 在运行模式下 `dynamicmedia_scene7`，请使用Dynamic Media Classic用户界面更改Dynamic Media设置。
 
 安装和配置任务包括：
 
-* [为图像服务器发布设置](#publishing-setup-for-image-server)
-* [配置应用程序常规设置](#configuring-application-general-settings)
+* [为图像服务器配置Dynamic Media发布设置](/help/assets/dm-publish-settings.md)
+* [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md)
 * [配置色彩管理](#configuring-color-management)
-* [编辑支持的格式的MIME类型](#editing-mime-types-for-supported-formats) **里克：留下？**
-* [为不支持的格式添加MIME类型](#adding-mime-types-for-unsupported-formats) **里克：留下？**
-* [创建批集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) **里克：留下？**
+* [编辑支持的格式的MIME类型](#editing-mime-types-for-supported-formats)
+* [为不支持的格式添加MIME类型](#adding-mime-types-for-unsupported-formats)
+* [创建批集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### 为图像服务器发布设置 {#publishing-setup-for-image-server}
+<!-- #### Configure Dynamic Media Publish Setup for Image Server {#publishing-setup-for-image-server} 
 
-“发布设置”设置可确定默认情况下如何从Dynamic Media交付资产。 如果未指定任何设置，Dynamic Media会根据发布设置中定义的默认设置来传送资产。 例如，如果请求传送的图像不包含分辨率属性，则会生成一个具有默认对象分辨率设置的图像。
+The Dynamic Media Publish Setup page establishes default settings that determine how assets are delivered from Adobe Dynamic Media servers to web sites or applications.
 
-“图像服务器”页为传送图像建立了默认设置。
+See [Configure Dynamic Media Publish Setup for Image Server](/help/assets/dm-publish-settings.md).
 
-**里克：链接到新的发布设置主题** 请参阅 [Dynamic Media发布设置](/help/assets/dm-publish-settings.md).
+#### Configure Dynamic Media General Settings {#configuring-application-general-settings}
 
+To configure the default color properties so color correction is enabled when images are requested, see [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md).
 
-* **[!UICONTROL 兼容性属性]** - **里克：还需要吗？** 为了向后兼容，此设置允许文本层中的前导和尾随段落与版本3.6中的段落一样进行处理。 **里克：还需要吗？**
-* **[!UICONTROL 本地化支持]** - **里克：还需要吗？** 这些设置允许您管理多个区域设置属性。 它还允许您指定区域设置映射字符串，以便定义要在查看器中支持各种工具提示的语言。 有关设置的更多信息 **[本地化支持]**，请参阅 [设置资产本地化时的注意事项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets). **里克：还需要吗？**
-
-#### 配置应用程序常规设置 {#configuring-application-general-settings}
-
-**里克：链接到新的常规设置主题** 请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
+See [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md). -->
 
 #### 配置色彩管理 {#configuring-color-management}
 
-**里克：新常规设置主题的链接**
+Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校正，摄取的资产会保留其色彩空间(RGB、CMYK、灰色)和嵌入的色彩配置文件。 请求动态呈现时，图像颜色会使用CMYK、RGB或灰色输出校正为目标颜色空间。
 
-Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校正，摄取的资产会保留其色彩空间(RGB、CMYK、灰色)和嵌入的色彩配置文件。 请求动态呈现时，图像颜色会使用CMYK、RGB或灰色输出校正为目标颜色空间。 请参阅 [配置图像预设](/help/assets/managing-image-presets.md).
+请参阅 [配置图像预设](/help/assets/managing-image-presets.md).
 
 >[!NOTE]
 默认情况下，当您选择 **[!UICONTROL 演绎版]** 和15个查看器预设 **[!UICONTROL 查看器]** 的详细信息视图中。 您可以提高此限制。请参阅 [增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-要配置默认颜色属性，以便在请求图像时启用颜色校正， **里克：新常规设置主题的链接** 请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
-
 #### 编辑支持的格式的MIME类型 {#editing-mime-types-for-supported-formats}
-
-**里克：保持原样**
 
 您可以定义Dynamic Media处理的资产类型，并自定义高级资产处理参数。 例如，您可以指定资产处理参数以执行以下操作：
 
@@ -344,8 +316,6 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 1. 在页面的左上角，选择 **[!UICONTROL CRXDE Lite]** 返回Experience Manager。
 
 #### 为不支持的格式添加MIME类型 {#adding-mime-types-for-unsupported-formats}
-
-**里克：保持原样**
 
 您可以为Experience Manager Assets中不支持的格式添加自定义MIME类型。 通过在CRXDE Lite前移动MIME类型，确保Experience Manager不会删除您添加的任何新节点 `image_`. 此外，请确保将其启用值设置为 **[!UICONTROL false]**.
 
@@ -399,8 +369,6 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
 #### 创建批集预设以自动生成图像集和旋转集 {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
-**里克：保持原样？**
-
 在将资产上传到Dynamic Media时，使用批集预设自动创建图像集或旋转集。
 
 首先，定义资产在一组中分组的命名约定。 然后，创建一个批集预设，该预设是一组唯一命名的自包含说明。 它必须定义如何使用与预设方法中定义的命名约定相匹配的图像来构建集。
@@ -418,8 +386,6 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 有两个元素可用于定义：“匹配”和“基本名称”。 利用这些字段，可定义命名约定的所有元素，并标识用于命名包含这些元素的集合的约定部分。 公司的单个命名约定通常对其中每个元素使用一行或多行定义。 您可以为唯一定义使用任意多行的线条，并将它们分组为不同的元素，如“主图像”、“颜色”元素、“替代视图”元素和“色板”元素。
 
 **要配置默认命名，请执行以下操作：**
-
-**里克：保持原样？**
 
 1. 打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
@@ -456,8 +422,6 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
 **要创建批集预设，请执行以下操作：**
 
-**里克：保持原样？**
-
 1. 打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
    您的凭据和登录详细信息由Adobe在配置时提供。 如果您没有此信息，请联系Adobe客户支持。
@@ -490,8 +454,6 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
 ##### 创建批集预设以自动生成2D旋转集
 
-**里克：保持原样??**
-
 您可以使用批集类型 **[!UICONTROL 多轴旋转集]** 创建可自动生成2D旋转集的方法。 图像分组使用行和列正则表达式，以便图像资产在多维数组中的相应位置中正确对齐。 在多轴旋转集中，没有必须具有的最小或最大行数或列数。
 
 例如，假定要创建一个名为 `spin-2dspin`. 您有一组包含三行的旋转集图像，每行12个图像。 这些图像的名称如下所示：
@@ -515,8 +477,6 @@ spin-01-01
 上传和发布旋转集后，您可以激活&#x200B;**[!UICONTROL 上传作业选项]**&#x200B;对话框中&#x200B;**[!UICONTROL 批集预设]**&#x200B;下方 2D 旋转集方法的名称。
 
 **要创建批量集预设以自动生成2D旋转集，请执行以下操作：**
-
-**里克：保持原样？**
 
 1. 打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
@@ -575,8 +535,6 @@ spin-01-01
 
 ### （可选）调整Dynamic Media - Scene7模式的性能 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-**里克：保持原样？**
-
 为保持Dynamic Media - Scene7模式顺利运行，Adobe建议使用以下同步性能/可伸缩性微调提示：
 
 * 更新预定义的作业参数，以处理不同的文件格式。
@@ -585,8 +543,6 @@ spin-01-01
 * 更新与Dynamic Media Classic服务器的最大上传连接数。
 
 #### 更新预定义的作业参数，以处理不同的文件格式
-
-**里克：保持原样？**
 
 您可以在上传文件时调整作业参数以加快处理速度。 例如，如果您上传PSD文件，但不希望将它们作为模板进行处理，则可以将层提取设置为false(off)。 在这种情况下，调整的作业参数如下所示： `process=None&createTemplate=false`.
 
@@ -612,8 +568,6 @@ Adobe建议对PDF、PostScript®和PSD文件使用以下“已调整”的作业
 
 #### 更新Granite临时工作流队列 {#updating-the-granite-transient-workflow-queue}
 
-**里克：保持原样？**
-
 Granite传输工作流队列用于 **[!UICONTROL DAM更新资产]** 工作流。 在Dynamic Media中，它用于图像摄取和处理。
 
 **要更新Granite临时工作流队列，请执行以下操作：**
@@ -637,8 +591,6 @@ Granite传输工作流队列用于 **[!UICONTROL DAM更新资产]** 工作流。
 
 #### 更新Granite工作流队列 {#updating-the-granite-workflow-queue}
 
-**里克：保持原样??**
-
 Granite工作流队列用于非临时工作流。 在Dynamic Media中，它使用 **[!UICONTROL Dynamic Media编码视频]** 工作流。
 
 **要更新Granite工作流队列，请执行以下操作：**
@@ -657,8 +609,6 @@ Granite工作流队列用于非临时工作流。 在Dynamic Media中，它使�
 1. 选择&#x200B;**[!UICONTROL 保存]**。
 
 #### 更新Dynamic Media Classic上传连接 {#updating-the-scene-upload-connection}
-
-**里克：保持原样？**
 
 Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Classic服务器。
 
@@ -679,8 +629,6 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
 ### （可选）筛选用于复制的资产 {#optional-filtering-assets-for-replication}
 
-**里克：保持原样**
-
 在非Dynamic Media部署中，您会复制 *全部* 资产（图像和视频）从Experience Manager创作环境到Experience Manager发布节点。 此工作流是必需的，因为Experience Manager发布服务器也会交付资产。
 
 但是，在Dynamic Media部署中，由于资产是通过Cloud Service交付的，因此无需复制这些资产来Experience Manager发布节点。 这种“混合发布”工作流可避免复制资产所需的额外存储成本和较长的处理时间。 其他内容（如网站页面）将继续从Experience Manager发布节点提供。
@@ -688,8 +636,6 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 这些过滤器为您提供了一种 *排除* 资产复制到Experience Manager发布节点。
 
 #### 使用默认资产筛选器进行复制 {#using-default-asset-filters-for-replication}
-
-**里克：保持原样**
 
 如果您使用Dynamic Media进行成像或视频，或者同时使用视频或视频，则可以按原样使用Adobe提供的默认过滤器。 默认情况下，以下过滤器处于活动状态：
 
@@ -702,8 +648,6 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 过滤器应用于MIME类型，并且不能特定于路径。
 
 #### 自定义用于复制的资产筛选器 {#customizing-asset-filters-for-replication}
-
-**里克：保持原样**
 
 1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后导航到 **[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**.
 1. 在左侧文件夹树中，导航到 `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` 以查看过滤器。
