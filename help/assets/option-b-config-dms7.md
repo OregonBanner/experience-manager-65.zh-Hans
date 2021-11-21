@@ -12,10 +12,10 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 680c0e00a739c5e880286cb4adf33f4ea5f6a318
+source-git-commit: b1f2a6b8fecd9ee98f345d1de8c26c6f42a44823
 workflow-type: tm+mt
-source-wordcount: '6058'
-ht-degree: 4%
+source-wordcount: '6107'
+ht-degree: 3%
 
 ---
 
@@ -249,28 +249,26 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ### （可选）Dynamic Media - Scene7模式设置的设置和配置 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-在运行模式下 `dynamicmedia_scene7`，请使用Dynamic Media Classic用户界面更改Dynamic Media设置。
-
-安装和配置任务包括：
+<!-- When you are in run mode `dynamicmedia_scene7`, use the Dynamic Media Classic user interface to change your Dynamic Media settings. -->
 
 * [为图像服务器配置Dynamic Media发布设置](/help/assets/dm-publish-settings.md)
 * [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md)
 * [配置色彩管理](#configuring-color-management)
 * [编辑支持的格式的MIME类型](#editing-mime-types-for-supported-formats)
 * [为不支持的格式添加MIME类型](#adding-mime-types-for-unsupported-formats)
-* [创建批集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+* [创建批集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) (在Dynamic Media Classic用户界面中完成)
 
-<!-- #### Configure Dynamic Media Publish Setup for Image Server {#publishing-setup-for-image-server} 
+#### 为图像服务器配置Dynamic Media发布设置 {#publishing-setup-for-image-server}
 
-The Dynamic Media Publish Setup page establishes default settings that determine how assets are delivered from Adobe Dynamic Media servers to web sites or applications.
+“Dynamic Media发布设置”页面可建立默认设置，以确定如何将资产从Dynamic MediaAdobe服务器交付到网站或应用程序。
 
-See [Configure Dynamic Media Publish Setup for Image Server](/help/assets/dm-publish-settings.md).
+请参阅 [为图像服务器配置Dynamic Media发布设置](/help/assets/dm-publish-settings.md).
 
-#### Configure Dynamic Media General Settings {#configuring-application-general-settings}
+#### 配置Dynamic Media常规设置 {#configuring-application-general-settings}
 
-To configure the default color properties so color correction is enabled when images are requested, see [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md).
+配置默认颜色属性，以便在请求图像时启用颜色校正。
 
-See [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md). -->
+请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
 
 #### 配置色彩管理 {#configuring-color-management}
 
