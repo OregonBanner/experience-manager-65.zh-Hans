@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
+source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
 workflow-type: tm+mt
-source-wordcount: '2454'
+source-wordcount: '2461'
 ht-degree: 4%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 4%
 
 配置 **[!UICONTROL Dynamic Media常规设置]** 仅在以下情况下可用：
 
-* 您在Scene7模式下运行Dynamic Media。 请参阅 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
-* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5中或在Experience Manageras a Cloud Service中。
+* 您在Scene7模式下运行Dynamic Media。 请参阅 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
+* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5或更高版本中。
 * 您是具有管理员权限的Experience Manager系统管理员。
 
 Dynamic Media常规设置适用于经验丰富的网站开发人员和程序员。 AdobeDynamic Media建议更改这些发布设置的用户熟悉Adobe Experience Manager上的Dynamic Media和基本成像技术。
@@ -33,11 +33,11 @@ Dynamic Media常规设置适用于经验丰富的网站开发人员和程序员�
 
 “Dynamic Media发布设置”页面可建立默认设置，以确定如何将资产从Dynamic MediaAdobe服务器交付到网站或应用程序。 如果未指定任何设置，AdobeDynamic Media服务器将根据Dynamic Media发布设置页面上配置的默认设置来传送资产。
 
-另请参阅 [Dynamic Media的设置和配置 — Scene7模式设置](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+另请参阅 [可选 — 设置和配置Dynamic Media - Scene7模式设置](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) fpr更多可选配置任务。
 
 >[!NOTE]
 >
->在Adobe Experience Manager上从Dynamic Media Classic升级到Dynamic Media? Dynamic Media中的“常规设置”和“发布设置”页面已预填充Dynamic Media Classic帐户中的值。 例外是 **[!UICONTROL 默认上传选项]** 中。 这些值已处于Experience Manager中。 因此，您在下进行的任何更改 **[!UICONTROL 默认上传选项]**，而不是Dynamic Media Classic中，则会通过Experience Manager用户界面在所有五个选项卡中都反映在Dynamic Media中。 “常规设置”和“发布设置”页面中的所有其他设置和值将在Experience Manager时在Dynamic Media Classic和Dynamic Media之间进行维护。
+>在Adobe Experience Manager上从Dynamic Media Classic升级到Dynamic Media? “常规设置”页面和 [发布设置](/help/assets/dm-publish-settings.md) 页面中已预填充来自Dynamic Media Classic帐户的值。 例外是 **[!UICONTROL 默认上传选项]** 中。 这些值已处于Experience Manager中。 因此，您在下进行的任何更改 **[!UICONTROL 默认上传选项]**，则通过Experience Manager用户界面，在这五个选项卡的任意一个选项卡中，都会反映在Dynamic Media中，而不是Dynamic Media Classic中。 “常规设置”页面和 [发布设置](/help/assets/dm-publish-settings.md) 页面在Dynamic Media Classic和Dynamic Media之间Experience Manager。
 
 **要配置Dynamic Media常规设置，请执行以下操作：**
 
