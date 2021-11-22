@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
-source-wordcount: '6063'
+source-wordcount: '6082'
 ht-degree: 3%
 
 ---
@@ -164,7 +164,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 在Dynamic Media - Scene7模式下，默认资产上传文件大小为2 GB或更小。 但是，您可以选择配置大于2 GB和高于15 GB的资产上传。
 
-If you intend to use this feature, be aware of the following prerequisites and points:
+如果您打算使用此功能，请注意以下先决条件和要点：
 
 * 您必须在Dynamic Media - Scene7模式下运行带有Service Pack 6.5.4.0或更高版本的Experience Manager6.5。
 * 仅支持此大型上传功能 [*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html) 客户。
@@ -263,9 +263,9 @@ If you intend to use this feature, be aware of the following prerequisites and p
 
 请参阅 [为图像服务器配置Dynamic Media发布设置](/help/assets/dm-publish-settings.md).
 
-#### Configure Dynamic Media General Settings {#configuring-application-general-settings}
+#### 配置Dynamic Media常规设置 {#configuring-application-general-settings}
 
-配置默认颜色属性，以便在请求图像时启用颜色校正。
+配置Dynamic Media **[!UICONTROL 发布服务器名称]** URL和 **[!UICONTROL 源服务器名称]** URL。 您还可以指定 **[!UICONTROL 上传到应用程序]** 设置和 **[!UICONTROL 默认上传选项]** 所有这些都基于您的特定用例。
 
 请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
 
@@ -353,7 +353,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
    `conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
 
-1. Drag the mime type `image_vnd.dwg` and drop it directly above `image_` in the tree as seen in the following screenshot.
+1. 拖动mime类型 `image_vnd.dwg` 直接放在上面 `image_` 在树中，如以下屏幕截图所示。
 
    ![crxdelite_cqdoc-14627](assets/crxdelite_cqdoc-14627.png)
 
@@ -364,11 +364,11 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
 1. 在CRXDE Lite页面的左上角附近，选择 **[!UICONTROL 全部保存]**.
 
-#### Create batch set presets to auto-generate Image Sets and Spin Sets {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
+#### 创建批集预设以自动生成图像集和旋转集 {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
-Use batch set presets to automate the creation of image sets or spin sets while assets are uploaded to Dynamic Media.
+在将资产上传到Dynamic Media时，使用批集预设自动创建图像集或旋转集。
 
-First, define the naming convention for how assets are grouped in a set. Then create a batch set preset that is a uniquely named, self-contained set of instructions. 它必须定义如何使用与预设方法中定义的命名约定相匹配的图像来构建集。
+首先，定义资产在一组中分组的命名约定。 然后，创建一个批集预设，该预设是一组唯一命名的自包含说明。 它必须定义如何使用与预设方法中定义的命名约定相匹配的图像来构建集。
 
 上传文件时，Dynamic Media会自动创建一个文件集，其中包含与活动预设中定义的命名约定相匹配的所有文件。
 
@@ -396,7 +396,7 @@ First, define the naming convention for how assets are grouped in a set. Then cr
    >[!NOTE]
    取消激活的表单字段不会验证正则表达式是否正确。 您会看到在结果行之后为每个元素构建的正则表达式的结果。 完整的正则表达式显示在页面底部。
 
-1. Expand each element as necessary and enter the naming conventions you want to use.
+1. 根据需要展开每个元素，然后输入要使用的命名约定。
 1. 根据需要，执行以下任一操作：
 
    * 选择 **[!UICONTROL 添加]** 为元素添加其他命名约定。
@@ -411,7 +411,7 @@ First, define the naming convention for how assets are grouped in a set. Then cr
 
 
 
-Dynamic Media uses batch set presets to organize assets into sets of images (alternate images, color options, 360 spin) for display in viewers. 批集预设会随Dynamic Media中的资产上传流程自动运行。
+Dynamic Media使用批量集预设将资产组织为一组图像（替代图像、颜色选项、360旋转），以便在查看器中显示。 批集预设会随Dynamic Media中的资产上传流程自动运行。
 
 您可以创建、编辑和管理批集预设。 有两种形式的批集预设定义：一个用于您可以设置的默认命名约定，另一个用于您随时创建的自定义命名约定。
 
@@ -486,7 +486,7 @@ spin-01-01
 1. 在“预设列表”面板中，选择 **[!UICONTROL 添加]** 激活屏幕右侧“详细信息”面板中的定义字段。
 1. 在“详细信息”面板的“预设名称”字段中，键入预设的名称。
 1. 在“批集类型”下拉菜单中，选择&#x200B;**[!UICONTROL 资产集]**。
-1. In the Sub Type drop-down list, select **[!UICONTROL Multi-Axis Spin Set]**.
+1. 在子类型下拉列表中，选择 **[!UICONTROL 多轴旋转集]**.
 1. 展开 **[!UICONTROL 资产命名约定]**，然后在文件命名下拉列表中，选择 **[!UICONTROL 自定义]**.
 1. 使用&#x200B;**[!UICONTROL 匹配]**&#x200B;和（可选）**[!UICONTROL 基本名称]**&#x200B;属性定义组成分组的图像资产命名的正则表达式。
 
@@ -498,7 +498,7 @@ spin-01-01
 
    使用圆括号将行或列在文件名中的位置括起来。
 
-   For example, for your row regular expression, it can look like the following:
+   例如，对于行正则表达式，它可能如下所示：
 
    `\w+-R([0-9]+)-\w+`
 
@@ -521,9 +521,9 @@ spin-01-01
 
 1. 对于设置命名和创建约定，请为您在资产命名约定中定义的基本名称指定后缀或前缀。
 
-   Also, define where the spin set is created within the Dynamic Media Classic folder structure.
+   此外，定义在Dynamic Media Classic文件夹结构中创建旋转集的位置。
 
-   If you define large numbers of sets, keep the sets separate from the folders that contain the assets themselves. 例如，创建一个旋转集文件夹，将生成的集放在此处。
+   如果您定义大量集，请将这些集与包含资产本身的文件夹分开。 例如，创建一个旋转集文件夹，将生成的集放在此处。
 
 1. 在“详细信息”面板中，选择 **[!UICONTROL 保存]**.
 1. 选择 **[!UICONTROL 活动]** 新预设名称旁边。
@@ -586,20 +586,20 @@ Granite传输工作流队列用于 **[!UICONTROL DAM更新资产]** 工作流。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
 
-#### Update the Granite workflow queue {#updating-the-granite-workflow-queue}
+#### 更新Granite工作流队列 {#updating-the-granite-workflow-queue}
 
 Granite工作流队列用于非临时工作流。 在Dynamic Media中，它使用 **[!UICONTROL Dynamic Media编码视频]** 工作流。
 
 **要更新Granite工作流队列，请执行以下操作：**
 
-1. Navigate to `https://<server>/system/console/configMgr` and search for **Queue: Granite Workflow Queue**.
+1. 导航到 `https://<server>/system/console/configMgr` 和搜索 **队列：Granite工作流队列**.
 
    >[!NOTE]
    由于OSGi PID是动态生成的，因此需要进行文本搜索，而不是直接URL。
 
-1. In the **[!UICONTROL Maximum Parallel Jobs]** field, change the number to the desired value.
+1. 在 **[!UICONTROL 最大并行作业数]** 字段，请将数字更改为所需的值。
 
-   您可以增加最大并行作业数，以充分支持将文件重新上载到Dynamic Media。 The exact value depends on hardware capacity. In certain scenarios – that is, an initial migration or a one-time bulk upload – you can use a large value. Be aware, however, that using a large value (such as two times the number of cores) can have negative effects on other concurrent activities. 因此，请根据您的特定用例测试和调整值。
+   您可以增加最大并行作业数，以充分支持将文件重新上载到Dynamic Media。 具体值取决于硬件容量。 在某些情况下（即初始迁移或一次性批量上传），您可以使用较大的值。 但是，请注意，使用较大的值（如内核数的两倍）可能会对其他并发活动产生负面影响。 因此，请根据您的特定用例测试和调整值。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -609,10 +609,10 @@ Granite工作流队列用于非临时工作流。 在Dynamic Media中，它使�
 
 Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Classic服务器。
 
-**To update the Dynamic Media Classic upload connection:**
+**要更新Dynamic Media Classic上传连接，请执行以下操作：**
 
 1. 导航至 `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
-1. In the **[!UICONTROL Number of connections]** field and/or the **[!UICONTROL Active job timeout]** field, change the number as desired.
+1. 在 **[!UICONTROL 连接数]** 字段和/或 **[!UICONTROL 活动作业超时]** 字段，请根据需要更改数字。
 
    的 **[!UICONTROL 连接数]** 设置控制允许Experience Manager到Dynamic Media上传的HTTP连接的最大数量；通常，十个连接的预定义值就足够了。
 
@@ -624,17 +624,17 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
 
-### (Optional) Filter assets for replication {#optional-filtering-assets-for-replication}
+### （可选）筛选用于复制的资产 {#optional-filtering-assets-for-replication}
 
-In non-Dynamic Media deployments, you replicate *all* assets (both images and video) from your Experience Manager author environment to the Experience Manager Publish node. 此工作流是必需的，因为Experience Manager发布服务器也会交付资产。
+在非Dynamic Media部署中，您会复制 *全部* 资产（图像和视频）从Experience Manager创作环境到Experience Manager发布节点。 此工作流是必需的，因为Experience Manager发布服务器也会交付资产。
 
 但是，在Dynamic Media部署中，由于资产是通过Cloud Service交付的，因此无需复制这些资产来Experience Manager发布节点。 这种“混合发布”工作流可避免复制资产所需的额外存储成本和较长的处理时间。 其他内容（如网站页面）将继续从Experience Manager发布节点提供。
 
-The filters provide a way for you to *exclude* assets from being replicated to the Experience Manager publish node.
+这些过滤器为您提供了一种 *排除* 资产复制到Experience Manager发布节点。
 
 #### 使用默认资产筛选器进行复制 {#using-default-asset-filters-for-replication}
 
-If you use Dynamic Media for imaging, or video, or both, you can use the default filters that Adobe provides as-is. The following filters are active by default:
+如果您使用Dynamic Media进行成像或视频，或者同时使用视频或视频，则可以按原样使用Adobe提供的默认过滤器。 默认情况下，以下过滤器处于活动状态：
 
 |  | 筛选器 | Mime类型 | 演绎版 |
 | --- | --- | --- | --- |
@@ -669,10 +669,10 @@ If you use Dynamic Media for imaging, or video, or both, you can use the default
 
    可用于筛选复制字符的字符包括：
 
-   | Character to use | 如何筛选用于复制的资产 |
+   | 要使用的字符 | 如何筛选用于复制的资产 |
    | --- | --- |
    | * | 通配符 |
-   | + | Includes assets for replication |
+   | + | 包括用于复制的资产 |
    | - | 从复制中排除资产 |
 
    导航到 `content/dam/<locate your asset>/jcr:content/renditions`。

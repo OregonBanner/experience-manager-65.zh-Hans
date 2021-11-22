@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
 source-wordcount: '3450'
 ht-degree: 4%
@@ -24,7 +24,7 @@ ht-degree: 4%
 配置Dynamic Media发布设置仅在以下情况下可用：
 
 * 您在Scene7模式下运行Dynamic Media。 请参阅 [在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5或更高版本中。
+* 您拥有 *现有* **[!UICONTROL Dynamic Media配置]** (在 **[!UICONTROL Cloud Services]**)在Adobe Experience Manager 6.5.11或更高版本中。
 * 您是具有管理员权限的Experience Manager系统管理员。
 
 Dynamic Media发布设置适用于经验丰富的网站开发人员和程序员。 AdobeDynamic Media建议更改这些发布设置的用户应熟悉AdobeDynamic Media、HTTP协议标准和惯例以及基本成像技术。
