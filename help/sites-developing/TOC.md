@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
+source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '920'
 ht-degree: 16%
 
 ---
@@ -97,6 +97,7 @@ ht-degree: 16%
       + [使用xtype（经典UI）](xtypes.md)
       + [开发Forms（经典UI）](developing-forms.md)
 + 无外设体验管理{#headless}
+   + [无头和AEM](headless/introduction.md)
    + [无头和混合AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [为组件启用JSON导出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 单页应用程序{#spas}
@@ -169,7 +170,7 @@ ht-degree: 16%
       + [工作流过程参考](workflows-process-ref.md)
       + [AEM工作流中的变量](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [扩展多站点管理器](extending-msm.md)
-   + 跟踪和Analytics{#extending-analytics}
+   + 跟踪和分析{#extending-analytics}
       + [扩展事件跟踪](extending-analytics.md)
       + [将Adobe Analytics跟踪添加到组件](extending-analytics-components.md)
       + [自定义Adobe Analytics框架](extending-analytics-framework.md)
@@ -207,7 +208,7 @@ ht-degree: 16%
    + [开发最佳实践](development-practices.md)
    + [内容架构](content-architecture.md)
    + [软件架构](software-architecture.md)
-   + We.Retail引用实施{#we-retail}
+   + We.Retail参考实施{#we-retail}
       + [We.Retail参考实施](we-retail.md)
       + [在We.Retail中尝试内容片段](we-retail-content-fragments.md)
       + [在We.Retail中试用核心组件](we-retail-core-components.md)
