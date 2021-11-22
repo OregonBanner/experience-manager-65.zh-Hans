@@ -1,9 +1,9 @@
 ---
 title: 'AEM 6.5站点的无头开发 '
 description: 了解AEM 6.5的无头功能（如内容模型、内容片段和GraphQL API）如何协同工作，从而让您能够集中管理您的体验并跨渠道提供它们。
-source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
+source-git-commit: 8c7acd06f3909897e5756170c606e00aead098b8
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '405'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 ## AEM 6.5和Headless {#aem-headless}
 
-AEM as a Cloud Service提供三种功能强大的服务，是无外设实施模型的灵活工具：
+AEM 6.5是一款适用于无头实施模型的灵活工具，它提供了三项强大的服务：
 
 1. 内容模型
    * 内容模型是内容的结构化表示形式。
