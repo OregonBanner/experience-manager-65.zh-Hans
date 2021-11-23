@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
+source-git-commit: f5989e182ee0d9075251b582fa618af5efcb9f8a
 workflow-type: tm+mt
 source-wordcount: '3450'
 ht-degree: 4%
@@ -31,7 +31,7 @@ Dynamic Media发布设置适用于经验丰富的网站开发人员和程序员�
 
 “Dynamic Media发布设置”页面可建立默认设置，以确定如何将资产从Dynamic MediaAdobe服务器交付到网站或应用程序。 如果未指定任何设置，AdobeDynamic Media服务器将根据Dynamic Media发布设置页面上配置的默认设置来传送资产。
 
-另请参阅 [可选 — 设置和配置Dynamic Media - Scene7模式设置](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 以了解更多可选配置任务。
+另请参阅 [可选 — 设置和配置Dynamic Media - Scene7模式设置](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) 以了解更多可选配置任务。
 
 >[!NOTE]
 >
