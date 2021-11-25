@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 1e02ad94459ff2893d96055c026d0873b1d69991
+source-git-commit: c9db5a1764d98bb049c08a0e6962b7ed5e1bfe5c
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1753'
 ht-degree: 41%
 
 ---
@@ -28,7 +28,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 替换 | 版本号 (SP) |
 |---|---|---|---|
-| [!DNL Sites] | 内容片段模板，用于创建简单的内容片段。 | [基于模型的结构化内容片段](/help/assets/content-fragments/content-fragments-models.md) 现在。 |  |
+| [!DNL Sites] | 内容片段模板，用于创建简单的内容片段。 | [基于模型的结构化内容片段](/help/assets/content-fragments/content-fragments-models.md) 现在。 | 6.5.11.0 |
 | Creative Cloud集成 | AEM 6.2中引入了“AEM到Creative Cloud文件夹共享”功能，以便创意用户能够从AEM访问资产，以便在 [!DNL Creative Cloud] 应用程序和上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM Assets。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然该功能包含在 AEM 中，但强烈建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 |  |
 | 资产 | `AssetDownloadServlet`默认情况下，对发布实例禁用 有关更多详细信息，请参阅 [AEM 安全核对清单](/help/sites-administering/security-checklist.md)。 | [AEM 安全核对清单](/help/sites-administering/security-checklist.md)中描述的配置。 |  |
 | 资产 | 如果用户没有足够的（读取和写入）权限，则 `/content/dam/collections`，则用户无法创建收藏集。 | 遵循用户的访问控制设置并确保具有适当的权限。 |  |
@@ -45,7 +45,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 开发人员 | jQuery Animation客户端库(`granite.jquery.animation`)。 Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 jQuery Animation 客户端库 | Adobe建议仍需要jQuery动画作为代码的客户将其添加到项目代码库中。 |  |
 | 开发人员 | Handlebars 客户端库. Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 Handlebar 客户端库 | Adobe建议仍需要Handlebars代码的客户将其添加到项目代码库中。 |  |
 | 开发人员 | Lawnchair 客户端库. Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 Lawnchair 客户端库 | Adobe建议仍需要Lawnchair作为代码的客户将其添加到项目代码库中。 |  |
-| 开发人员 | `Granite.Sling.js` 客户端库。 Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Granite.Sling.js 客户端库 | Adobe建议依赖库功能的客户重构其代码以不再使用它。 |  |
+| 开发人员 | `Granite.Sling.js` 客户端库。 Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Granite.Sling.js 客户端库 | Adobe建议依赖库功能的客户重新构建其代码，以便不再使用该代码。 |  |
 | 开发人员 | 使用 YUI 压缩/缩小 JavaScript 客户端库。Adobe 不打算进一步更新 YUI 库。在AEM 6.4之前，默认使用YUI来缩小JavaScript，并选择切换到Google关闭编译器(GCC)。 从 AEM 6.5 开始，默认使用 GCC。 | Adobe建议升级到AEM 6.5的客户转到GCC以进行实施 |  |
 | 开发人员 | CRXDE lite 中的 Classic UI Dialog Editor. Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 没有可替换项。 |  |
 | 表单 | AEM Forms与AEM Mobile集成已弃用。 | 无可替换项。 |  | 开发人员 | CRXDE lite 中的 Classic UI Dialog Editor. Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 没有可替换项。 |  |
