@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
+source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
 workflow-type: tm+mt
 source-wordcount: '2789'
 ht-degree: 1%
 
 ---
+
 
 # 自定义和扩展内容片段{#customizing-and-extending-content-fragments}
 
@@ -226,9 +227,9 @@ ht-degree: 1%
    >
    >AEM翻译工作流可与 `/content`:
    >
-   >    * 由于内容片段模型位于 `/conf`，则此类翻译中不包含这些内容。 您可以 [国际化UI字符串](/help/sites-developing/i18n-dev.md).
+   >* 由于内容片段模型位于 `/conf`，则此类翻译中不包含这些内容。 您可以 [国际化UI字符串](/help/sites-developing/i18n-dev.md).
    >
-   >    * 模板将被复制以创建片段，因此这是隐式的。
+   >* 模板将被复制以创建片段，因此这是隐式的。
 
 
 * **元数据架构**
