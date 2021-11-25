@@ -7,13 +7,13 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
-mini-toc-levels: 3
+mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b5835d16efb0f2112ec8a6917e8cf2529cbf19c7
+source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
 workflow-type: tm+mt
-source-wordcount: '6940'
-ht-degree: 4%
+source-wordcount: '6080'
+ht-degree: 3%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 4%
 >
 >Dynamic Media - Scene7模式适用于 *仅Experience Manager创作实例*. 因此，您必须配置 `runmode=dynamicmedia_scene7` 在Experience Manager创作实例上， *not* Experience Manager发布实例。
 
-要启用Dynamic Media，您必须使用 `dynamicmedia_scene7` 通过在终端窗口中输入以下命令行来运行模式（使用的示例端口为4502）：
+要启用Dynamic Media，请使用 `dynamicmedia_scene7` 通过在终端窗口中输入以下命令行来运行模式（使用的示例端口为4502）：
 
 ```shell
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
@@ -128,20 +128,19 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
          * **[!UICONTROL 子文件夹已禁用]**  — 将此子树中的所有内容从同步到Dynamic Media。
 
    >[!NOTE]
-   DMS7中不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
+   在Dynamic Media - Scene7模式下不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
 1. 要在发布Dynamic Media内容之前安全预览内容，您必须“”允许列表Experience Manager创作实例才能连接到Dynamic Media:
 
-   * 打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。 您的凭据和登录详细信息由Adobe在配置时提供。 如果您没有此信息，请联系Adobe客户支持。
-
-   * 在页面右上方的导航栏上，导航到 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**.
-
-   * 在图像服务器发布页面的发布上下文下拉列表中，选择 **[!UICONTROL 测试图像提供]**.
-   * 对于客户端地址筛选器，选择 **[!UICONTROL 添加]**.
-   * 要启用（打开）地址，请选中复选框。 输入Experience Manager创作实例的IP地址（而非Dispatcher IP）。
-   * 选择&#x200B;**[!UICONTROL 保存]**。
+   * 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
+   * 在左边栏中，选择 **[!UICONTROL 工具]** 图标，然后转到 **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media发布设置]**.
+   * 在Dynamic Media图像服务器页面的 **[!UICONTROL 发布上下文]** 下拉列表中，选择 **[!UICONTROL 测试图像提供]**.
+   * 选择 **[!UICONTROL 安全性]** 选项卡。
+   * 对于 **[!UICONTROL 客户端地址]**，选择 **[!UICONTROL 添加]**.
+   * 输入Experience Manager创作实例的IP地址（而非Dispatcher IP）。
+   * 在页面的右上角，选择 **[!UICONTROL 保存]**.
 
 您现在已完成基本配置；您已准备好使用Dynamic Media - Scene7模式。
 
@@ -212,7 +211,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 1. 输入相应的字节值，以便将大小限制增加到所需的最大上载大小。 例如，要将上传资产大小限制增加到10 GB，请输入 `10737418240` （在值字段中）。
 您可以输入一个最大为15 GB(`2013265920` 字节)。 在这种情况下，不会上传大于15 GB的已上传资产。
 
-
    ![大小限制值](/help/assets/assets-dm/uploadassets15gb_c.png)
 
 1. 在CRXDE Lite窗口的左上角附近，选择 **[!UICONTROL 全部保存]**.
@@ -248,85 +246,35 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ### （可选）Dynamic Media - Scene7模式设置的设置和配置 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-在运行模式下 `dynamicmedia_scene7`，请使用Dynamic Media Classic用户界面更改Dynamic Media设置。
+<!-- When you are in run mode `dynamicmedia_scene7`, use the Dynamic Media Classic user interface to change your Dynamic Media settings. -->
 
-上述一些任务要求您打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
-
-安装和配置任务包括：
-
-* [为图像服务器发布设置](#publishing-setup-for-image-server)
-* [配置应用程序常规设置](#configuring-application-general-settings)
+* [为图像服务器配置Dynamic Media发布设置](/help/assets/dm-publish-settings.md)
+* [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md)
 * [配置色彩管理](#configuring-color-management)
 * [编辑支持的格式的MIME类型](#editing-mime-types-for-supported-formats)
 * [为不支持的格式添加MIME类型](#adding-mime-types-for-unsupported-formats)
-* [创建批集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+* [创建批集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) (在Dynamic Media Classic用户界面中完成)
 
-#### 为图像服务器发布设置 {#publishing-setup-for-image-server}
+#### 为图像服务器配置Dynamic Media发布设置 {#publishing-setup-for-image-server}
 
-“发布设置”设置可确定默认情况下如何从Dynamic Media交付资产。 如果未指定任何设置，Dynamic Media会根据发布设置中定义的默认设置来传送资产。 例如，如果请求传送的图像不包含分辨率属性，则会生成一个具有默认对象分辨率设置的图像。
+“Dynamic Media发布设置”页面可建立默认设置，以确定如何将资产从Dynamic MediaAdobe服务器交付到网站或应用程序。
 
-要配置发布设置，请执行以下操作：在Dynamic Media Classic中，导航到 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 发布设置]** > **[!UICONTROL 图像服务器]**.
+请参阅 [为图像服务器配置Dynamic Media发布设置](/help/assets/dm-publish-settings.md).
 
-“图像服务器”屏幕为传送图像建立了默认设置。 有关每个设置的说明，请参阅UI屏幕。
+#### 配置Dynamic Media常规设置 {#configuring-application-general-settings}
 
-* **[!UICONTROL 请求属性]**  — 这些设置对可从服务器传送的图像施加了限制。
-* **[!UICONTROL 默认请求属性]**  — 这些设置与图像的默认外观有关。
-* **[!UICONTROL 常见缩略图属性]**  — 这些设置与缩略图图像的默认外观有关。
-* **[!UICONTROL 目录字段的默认值]** — 这些设置与图像的分辨率和默认缩略图类型有关。
-* **[!UICONTROL 色彩管理属性]**  — 这些设置确定使用的ICC颜色配置文件。
-* **[!UICONTROL 兼容性属性]**  — 为了向后兼容，此设置允许文本层中的前导和尾随段落与版本3.6中的段落一样进行处理。
-* **[!UICONTROL 本地化支持]**  — 这些设置允许您管理多个区域设置属性。 它还允许您指定区域设置映射字符串，以便定义要在查看器中支持各种工具提示的语言。 有关设置的更多信息 **[本地化支持]**，请参阅 [设置资产本地化时的注意事项](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
+配置Dynamic Media **[!UICONTROL 发布服务器名称]** URL和 **[!UICONTROL 源服务器名称]** URL。 您还可以指定 **[!UICONTROL 上传到应用程序]** 设置和 **[!UICONTROL 默认上传选项]** 所有这些都基于您的特定用例。
 
-#### 配置应用程序常规设置 {#configuring-application-general-settings}
-
-要打开“应用程序常规设置”页面，请在Dynamic Media Classic全局导航栏中，导航到 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**.
-
-**[!UICONTROL 服务器]**  — 在进行帐户配置时，Dynamic Media会自动为您的公司提供分配的服务器。 这些服务器用于为您的网站和应用程序构建URL字符串。 这些URL调用特定于您的帐户。 请勿更改任何服务器名称，除非Adobe客户支持部门明确指示执行此操作。
-
-**[!UICONTROL 覆盖图像]** - Dynamic Media不允许两个文件具有相同的名称。 每个项目的URL ID（文件名减去扩展名）必须唯一。 以下选项指定了如何上传替换资产：是替换原始内容还是变为重复内容。 重复资产将使用“–1”重命名（例如，chair.tif将chair-1.tif重命名）。 这些选项会影响上传到与原始文件夹不同的文件夹的资产，或文件扩展名与原始文件夹不同的资产(例如JPG、TIF或PNG)。
-
-* **[!UICONTROL 在当前文件夹中覆盖，基本图像名称/扩展名相同]**  — 此选项是最严格的替换规则。 它要求您将替换图像上传到与原始图像相同的文件夹，并且替换图像的文件扩展名与原始图像相同。 如果不满足这些要求，则会创建重复项。
-
->[!NOTE]
-要保持与Experience Manager的一致性，请始终选择以下设置： **在当前文件夹中覆盖，基本图像名称/扩展名相同**
-
-* **[!UICONTROL 在任何文件夹中覆盖相同的基本资产名称/扩展名]**  — 要求替换图像的文件扩展名与原始图像相同（例如，chair.jpg必须替换chair.jpg，而不是chair.tif）。 但是，您可以将替换图像上传到与原始图像不同的文件夹。 更新后的图像位于新文件夹中；在文件的原始位置中无法再找到该文件
-* **[!UICONTROL 在任意文件夹中覆盖相同的基本资产名称，而不考虑扩展名]**  — 此选项是包含性最强的替换规则。 您可以将替换图像上传到与原始图像不同的文件夹，上传文件扩展名不同的文件，然后替换原始文件。 如果原始文件位于其他文件夹中，则替换图像将位于上传到的新文件夹中。
-
-**[!UICONTROL 默认颜色配置文件]**  — 请参阅 [配置色彩管理](#configuring-color-management) 以了解其他信息。
-
->[!NOTE]
-默认情况下，当您选择&#x200B;**[!UICONTROL 呈现]**&#x200B;时，系统会显示 15 种呈现形式，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示 15 个查看器预设。您可以提高此限制。请参阅 [增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
 
 #### 配置色彩管理 {#configuring-color-management}
 
-Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校正，摄取的资产会保留其色彩空间(RGB、CMYK、灰色)和嵌入的色彩配置文件。 请求动态呈现时，图像颜色会使用CMYK、RGB或灰色输出校正为目标颜色空间。 请参阅 [配置图像预设](/help/assets/managing-image-presets.md).
+Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校正，摄取的资产会保留其色彩空间(RGB、CMYK、灰色)和嵌入的色彩配置文件。 请求动态呈现时，图像颜色会使用CMYK、RGB或灰色输出校正为目标颜色空间。
 
-要配置默认颜色属性，以便在请求图像时启用颜色校正，请执行以下操作：
+请参阅 [配置图像预设](/help/assets/managing-image-presets.md).
 
-1. 打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后使用配置期间提供的凭据登录到您的帐户。
-1. 导航到 **[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]**.
-1. 展开&#x200B;**[!UICONTROL 发布设置]**&#x200B;区域，然后选择&#x200B;**[!UICONTROL 图像服务器]**。设置发布实例的默认设置时，将&#x200B;**[!UICONTROL 发布上下文]**&#x200B;设置为&#x200B;**[!UICONTROL 图像提供]**。
-1. 滚动到要更改的属性。 例如， **[!UICONTROL 色彩管理属性]** 的上界。
-
-   您可以设置以下颜色校正属性：
-
-   * **[!UICONTROL CMYK默认色彩空间]**  — 默认CMYK颜色配置文件的名称
-   * **[!UICONTROL 灰阶默认色彩空间]**  — 默认灰色配置文件的名称
-   * **[!UICONTROL RGB默认色彩空间]**  — 默认RGB颜色配置文件的名称
-   * **[!UICONTROL 颜色转换渲染意图]**  — 指定渲染意图。 可接受的值包括： **[!UICONTROL 知觉]**, **[!UICONTROL 相对色度]**, **[!UICONTROL 饱和度]**, **[!UICONTROL 绝对色度]**. Adobe建议 **[!UICONTROL 相对]** 作为默认设置。
-
-1. 选择&#x200B;**[!UICONTROL 保存]**。
-
-例如，可以将 **[!UICONTROL RGB 默认色彩空间]**&#x200B;设置为 *sRGB*，将 **[!UICONTROL CMYK 默认色彩空间]**&#x200B;设置为 *WebCoated*。
-
-这样做可以执行以下操作：
-
-* 为RGB和CMYK图像启用颜色校正。
-* 没有颜色配置文件的RGB图像假定位于 *sRGB* 色彩空间。
-* 假定没有颜色配置文件的CMYK图像位于 *WebCoated* 色彩空间。
-* 返回RGB输出的动态演绎版，将其返回 *sRGB* 色彩空间。
-* 返回CMYK输出的动态呈现，将其返回 *WebCoated* 色彩空间。
+>[!NOTE]
+默认情况下，当您选择 **[!UICONTROL 演绎版]** 和15个查看器预设 **[!UICONTROL 查看器]** 的详细信息视图中。 您可以提高此限制。请参阅 [增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) 或 [增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 #### 编辑支持的格式的MIME类型 {#editing-mime-types-for-supported-formats}
 
@@ -458,6 +406,8 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
    * 选择 **[!UICONTROL 保存]** 编辑现有预设时，才会显示该预设。
 
 ##### 创建批集预设
+
+
 
 Dynamic Media使用批量集预设将资产组织为一组图像（替代图像、颜色选项、360旋转），以便在查看器中显示。 批集预设会随Dynamic Media中的资产上传流程自动运行。
 
