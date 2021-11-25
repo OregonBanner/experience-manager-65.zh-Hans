@@ -3,17 +3,13 @@ title: 自定义和扩展内容片段
 seo-title: Customizing and Extending Content Fragments
 description: 内容片段对标准资产进行了扩展。
 seo-description: A content fragment extends a standard asset.
-uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
+source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
 workflow-type: tm+mt
-source-wordcount: '2789'
+source-wordcount: '2778'
 ht-degree: 1%
 
 ---
@@ -133,9 +129,9 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->的 [内容片段核心组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) 现在建议。 请参阅 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以了解更多详细信息。
+>的 [内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 现在建议。 请参阅 [开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) 以了解更多详细信息。
 
-可以像任何其他资产类型一样，从AEM页面引用内容片段。 AEM提供 [**内容片段** 核心组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) - a [用于在页面上包含内容片段的组件](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). 您也可以扩展，此 **内容片段** 核心组件。
+可以像任何其他资产类型一样，从AEM页面引用内容片段。 AEM提供 [**内容片段** 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - a [用于在页面上包含内容片段的组件](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). 您也可以扩展，此 **内容片段** 核心组件。
 
 * 组件使用 `fragmentPath` 属性来引用实际的内容片段。 的 `fragmentPath` 资产的处理方式与其他资产类型的类似资产相同；例如，当内容片段被移动到其他位置时。
 
@@ -247,7 +243,7 @@ ht-degree: 1%
 
 您可以使用服务器端API访问您的内容片段；请参阅：
 
-[com.adobe.cq.dam.cfm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
+[com.adobe.cq.dam.cfm](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
 >[!CAUTION]
 >
@@ -257,7 +253,7 @@ ht-degree: 1%
 
 以下三个界面可用作入口点：
 
-* **片段模板** ([片段模板](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
+* **片段模板** ([片段模板](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
    使用 `FragmentTemplate.createFragment()` 用于创建新片段。
 
@@ -302,7 +298,7 @@ ht-degree: 1%
 
 
 
-* **内容片段** ([内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **内容片段** ([内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
    此界面允许您以抽象方式处理内容片段。
 
@@ -332,7 +328,7 @@ ht-degree: 1%
 
    表示片段主要元素的界面包括：
 
-   * **内容元素** ([ContentElement](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **内容元素** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * 获取基本数据（名称、标题、描述）
       * 获取/设置内容
@@ -344,7 +340,7 @@ ht-degree: 1%
          * 删除变量(请参阅 [注意事项](#caveats))
          * 访问变量数据(请参阅 `ContentVariation`)
       * 解析变量的快捷方式（如果指定的变量不适用于元素，则应用一些其他特定于实施的回退逻辑）
-   * **内容变体** ([ContentVariation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **内容变体** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * 获取基本数据（名称、标题、描述）
       * 获取/设置内容
@@ -542,5 +538,5 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 有关详细信息，请参阅
 
-* [核心组件 — 内容片段组件](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) （推荐）
+* [核心组件 — 内容片段组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) （推荐）
 * [内容片段组件 — 用于页面创作的组件](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)
