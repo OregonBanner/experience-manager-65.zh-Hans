@@ -4,9 +4,9 @@ description: 发行说明特定于 [!DNL Adobe Experience Manager] 6.5 service p
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c0393e614cf96066dfd765cc00dc8ad370755a27
+source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
 workflow-type: tm+mt
-source-wordcount: '3368'
+source-wordcount: '3367'
 ht-degree: 4%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 4%
 
 * 用户体验增强功能可显示文件夹中存在的资产数量。 对于文件夹中超过1000个资产， [!DNL Assets] 显示1000+。
 
-* 现在，您可以在卡片视图和列视图中渲染排序选项(NPR-37199)。
+* 您现在可以在卡片视图和列视图中渲染排序选项。
 
 * 您现在可以使用 [!DNL Dynamic Media] 来配置常规设置，而不必执行 [!DNL Dynamic Media Classic] 桌面应用程序。 请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
 
