@@ -1,21 +1,21 @@
 ---
 title: 支持的文件格式和MIME类型
-description: ' [!DNL Assets] and [!DNL Dynamic Media] 支持的文件格式和MIME类型以及每种格式支持的功能。'
+description: 支持的文件格式和MIME类型 [!DNL Assets] and [!DNL Dynamic Media] 以及每种格式支持的功能。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: c8e83622070572d104f2cdc20c592ac2e9d0d31b
+source-git-commit: 7c2fcb94475eccfff5373a1dd28707bbe50ee078
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1539'
 ht-degree: 21%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]中支持的格式 {#assets-supported-formats}
+# 支持的格式 [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
-[!DNL Experience Manager Assets] 支持多种文件格式，每种功能都支持不同的MIME类型。要将[!DNL Assets]与其他符合标准的数字资产管理(DAM)解决方案和桌面软件集成，请使用Adobe的[!DNL Extensible Metadata Platform](XMP)。
+[!DNL Experience Manager Assets] 支持多种文件格式，每种功能都支持不同的MIME类型。 集成 [!DNL Assets] 使用符合其他标准的数字资产管理(DAM)解决方案和桌面软件，使用Adobe [!DNL Extensible Metadata Platform] (XMP)。
 
 使用图例了解支持级别。
 
@@ -25,9 +25,9 @@ ht-degree: 21%
 | * | 受支持，但需要附加功能 |
 | - | 不适用 |
 
-## [!DNL Experience Manager]中支持的光栅图像格式 {#supported-raster-image-formats}
+## 支持的栅格图像格式 [!DNL Experience Manager] {#supported-raster-image-formats}
 
-[!DNL Assets]中支持的光栅图像格式包括：
+支持的栅格图像格式 [!DNL Assets] 为：
 
 | 格式 | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | 编辑 | 元数据写回 | 分析 |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
@@ -47,9 +47,9 @@ ht-degree: 21%
 
 从PSD文件中提取合并的图像。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际的图像，也可能不是实际的图像。
 
-[!DNL Dynamic Media]中支持的光栅图像格式包括：
+支持的栅格图像格式 [!DNL Dynamic Media] 为：
 
-| 格式 | 上载<br>（输入格式） | 创建<br>图像<br>预设<br>（输出格式） | 预览<br>动态<br>演绎版 | 传递<br>动态<br>演绎版 | 下载<br> dynamic<br>演绎版 |
+| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -64,11 +64,11 @@ ht-degree: 21%
 
 除上述信息外，请考虑以下事项：
 
-* 对EPS文件的支持仅适用于光栅图像。 例如，默认不支持为 EPS 矢量图像生成缩略图。要添加支持，请[配置ImageMagick](best-practices-for-imagemagick.md)。 要集成第三方工具以启用其他功能，请参阅[基于命令行的媒体处理程序](media-handlers.md#command-line-based-media-handler)。
+* 对EPS文件的支持仅适用于光栅图像。 例如，默认不支持为 EPS 矢量图像生成缩略图。要添加支持， [配置ImageMagick](best-practices-for-imagemagick.md). 要集成第三方工具以启用其他功能，请参阅 [基于命令行的媒体处理程序](media-handlers.md#command-line-based-media-handler).
 
-* 元数据写回在添加到`NComm`处理程序时对PSB文件格式有效。
+* 元数据写回在添加到 `NComm` 处理程序。
 
-* 要使用[!DNL Dynamic Media]预览和生成EPS文件的动态呈现，请参阅[Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 使用 [!DNL Dynamic Media] 要预览和生成EPS文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 对于EPS文件， PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
 
@@ -76,7 +76,7 @@ ht-degree: 21%
 
 支持以下3D格式列表。
 
-另请参阅[在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
+另请参阅 [在Dynamic Media中使用3D资产。](/help/assets/assets-3d.md)
 
 | 格式 | 存储 | 版本控制 | 工作流 | 发布 | 访问控制 | 缩略图预览 | 3D预览 | Dynamic Media交付 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -89,9 +89,9 @@ ht-degree: 21%
 
 ## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
 
-下表描述了Dynamic Media中支持的&#x200B;*not*&#x200B;光栅图像文件格式的子类型。
+下表介绍了栅格图像文件格式的子类型，这些子类型包括 *not* 在Dynamic Media中受支持。
 
-另请参阅[检测不支持的Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)文件格式。
+另请参阅 [检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
 
 * IDAT区块大于100 MB的PNG文件。
 * PSB文件。
@@ -120,13 +120,13 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## 支持的PDF光栅器库 {#supported-pdf-rasterizer-library}
 
-Adobe PDF光栅化器库可为大型且内容密集型[!DNL Adobe Illustrator]和PDF文件生成高质量缩略图和预览。 Adobe建议为以下内容使用PDF光栅器库：
+Adobe PDF光栅化库可为大型内容密集型应用程序生成高质量缩略图和预览 [!DNL Adobe Illustrator] 和PDF文件。 Adobe建议为以下内容使用PDF光栅器库：
 
 * 需要大量处理的内容密集型AI/PDF文件。
 * AI/PDF文件，默认情况下不会为其生成缩略图。
 * 具有Pantone匹配系统(PMS)颜色的AI文件。
 
-请参阅[使用PDF光栅器](aem-pdf-rasterizer.md)。
+请参阅 [使用PDF光栅器](aem-pdf-rasterizer.md).
 
 ## 支持的图像转码库 {#supported-image-transcoding-library}
 
@@ -134,17 +134,17 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 
 图像转码库支持JPG/JPEG、PNG（8位和16位）、GIF、BMP、TIFF/压缩TIFF(32位TIFF文件和PTIFF文件除外)、ICO和ICN MIME类型。
 
-请参阅[成像转码库](imaging-transcoding-library.md)。
+请参阅 [图像转码库](imaging-transcoding-library.md).
 
 ## 支持的Camera Raw {#supported-camera-raw}
 
-[!DNL Adobe Camera Raw]库允许[!DNL Assets]摄取原始图像。 请参阅[Camera Raw支持](camera-raw.md)。
+的 [!DNL Adobe Camera Raw] 库启用 [!DNL Assets] 以摄取原始图像。 请参阅 [Camera Raw支持](camera-raw.md).
 
-## 支持的[!DNL Assets]文档格式 {#supported-document-formats}
+## 支持 [!DNL Assets] 文档格式 {#supported-document-formats}
 
 资产管理功能支持的文档格式如下：
 
-| 格式 | 存储 | [元数据管理](metadata.md) | 全文<br>提取 | [元数据提取](metadata.md) | 缩略图<br>生成 | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
+| 格式 | 存储 | [元数据管理](metadata.md) | 全文<br> 提取 | [元数据提取](metadata.md) | 缩略图<br> 生成 | [子资产提取](managing-linked-subassets.md) | [元数据写回](xmp-writeback.md) | [连接的资产](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
 | DOC | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
@@ -167,19 +167,19 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 
 ## Dynamic Media中支持的文档格式 {#supported-document-formats-dynamic-media}
 
-| 格式 | 上载<br>（输入格式） | 创建<br>图像<br>预设<br>（输出格式） | 预览<br>动态<br>演绎版 | 传递<br>动态<br>演绎版 | 下载<br> dynamic<br>演绎版 |
+| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 除了上述功能外，还请考虑以下事项：
 
-* 要使用Dynamic Media为PDF文件生成动态演绎版，请参阅[Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media为PDF文件生成动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic Media预览和生成AI文件的动态呈现，请参阅[Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* 要使用Dynamic Media预览和生成AI文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* 要使用Dynamic Media为INDD文件生成动态呈现，请参阅[InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format)。
+* 要使用Dynamic Media为INDD文件生成动态演绎版，请参阅 [InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format).
 
 ## 支持的多媒体格式 {#supported-multimedia-formats}
 
@@ -208,16 +208,17 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 
 | 视频文件扩展名 | 容器 | 推荐的视频编解码器 | 不支持的视频编解码器 |
 |---|---|---|---|
-| MP4 | MPEG-4 | H264/AVC（所有配置文件） | - |
-| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
-| FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
-| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
-| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
-| M4V | Apple iTunes | H264/AVC | - |
 | AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
-| WebM | WebM | Google VP8 | - |
-| OGV、OGG | Ogg | Theora、VP3、Dirac | - |
+| FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
+| M4V | Apple iTunes | H264/AVC | - |
+| MFX | MPEG-2 | Apple ProRes422 | - |
 | MKV | Matroska | H264/AVC | - |
+| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
+| MP4 | MPEG-4 | H264/AVC（所有配置文件） | - |
+| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
+| OGV、OGG | Ogg | Theora、VP3、Dirac | - |
+| WebM | WebM | Google VP8 | - |
+| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
 
 ## 支持的存档格式 {#supported-archive-formats}
 
@@ -249,9 +250,9 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 
 ## 支持的MIME类型 {#supported-mime-types}
 
-默认情况下，[!DNL Experience Manager]会使用文件扩展名检测文件类型。 [!DNL Experience Manager] 可以从文件内容中检测到它。对于后者，在[!DNL Experience Manager]Web控制台中，选择[!UICONTROL Day CQ DAM Mime类型服务]中的[!UICONTROL 从内容中检测MIME]选项。
+默认情况下， [!DNL Experience Manager] 检测使用文件扩展名的文件类型。 [!DNL Experience Manager] 可以从文件内容中检测到它。 对于后者，选择 [!UICONTROL 从内容中检测MIME] 选项 [!UICONTROL Day CQ DAM Mime类型服务] 在 [!DNL Experience Manager] Web控制台。
 
-`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`的CRXDE Lite中提供了支持的MIME类型列表。
+支持的MIME类型列表可在以下位置CRXDE Lite `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
 | 文件扩展名 | MIME类型/ Internet媒体类型 | 默认jobParam值 | 允许的jobParam值 |
 |---|---|---|---|
@@ -313,6 +314,6 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 
 >[!MORELIKETHIS]
 >
->* [启用基于MIME类型的资产和Dynamic Media Classic上传作业参数支持](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
->* [为上传作业参数支持配置基于MIME类型](config-dynamic.md)。
+>* [启用基于MIME类型的资产和Dynamic Media Classic上传作业参数支持](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+>* [为上传作业参数支持配置基于MIME类型](config-dynamic.md).
 
