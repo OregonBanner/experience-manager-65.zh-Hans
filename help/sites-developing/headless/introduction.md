@@ -1,7 +1,7 @@
 ---
 title: 'AEM 6.5站点的无头开发 '
 description: 了解AEM 6.5的无头功能（如内容模型、内容片段和GraphQL API）如何协同工作，从而让您能够集中管理您的体验并跨渠道提供它们。
-source-git-commit: 8c7acd06f3909897e5756170c606e00aead098b8
+source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 2%
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 本文档重点介绍AEM的完整无头实施模型。 但是，在AEM中，“头部”与“无头”不必是二进制选择。 无标题功能可用于管理内容并将其交付到各种端点，同时还允许内容作者编辑单页应用程序。 全部在AEM中。
 
-<!--
+<!-- HM-Links
 >[!TIP]
 >
 >See the document [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md) for more information.
@@ -56,7 +56,7 @@ AEM 6.5是一款适用于无头实施模型的灵活工具，它提供了三项�
 |---|---|---|---|---|
 | [AEM Headless动手操作入门教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **如果您喜欢实际操作方法并熟悉AEM**，本教程将直接深入探讨如何创建一个简单的无头项目。 | 教程 | 开发人员 | 2小时 |
 
-<!--
+<!-- HM-Links
 |Resource|Description|Type|Audience|Est. Time|
 |---|---|---|---|---|
 |[Headless Developer Journey](/help/journey-headless/developer/overview.md)|**For users new to AEM and headless** technologies, start here for a comprehensive introduction to AEM and its headless features from the theory of headless through going live with your first headless project.|Guide|Developers **new to AEM and headless**|1 hour|

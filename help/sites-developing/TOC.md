@@ -8,10 +8,10 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: fccfcc71d61b483273cc3501fbcc411fce5c1424
+source-git-commit: ba6b910add6770753efeb576d9df1db42d5720b8
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 16%
+source-wordcount: '1080'
+ht-degree: 15%
 
 ---
 
@@ -98,6 +98,13 @@ ht-degree: 16%
       + [开发Forms（经典UI）](developing-forms.md)
 + 无外设体验管理{#headless}
    + [无头和AEM](headless/introduction.md)
+   + 入门指南 {#getting-started}
+      + [简介](headless/getting-started/introduction.md)
+      + [创建配置](headless/getting-started/create-configuration.md)
+      + [创建内容片段模型](headless/getting-started/create-content-model.md)
+      + [创建资产文件夹](headless/getting-started/create-assets-folder.md)
+      + [创建内容片段](headless/getting-started/create-content-fragment.md)
+      + [访问和传送内容片段](headless/getting-started/create-api-request.md)
    + 内容片段{#content-fragments}
       + [使用内容片段和GraphQL进行无头交付](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
       + [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
