@@ -2,7 +2,7 @@
 title: 访问和传送内容片段无头快速入门指南
 description: 了解如何使用AEM Assets REST API管理内容片段和GraphQL API来无头地交付内容片段内容。
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
+source-git-commit: 6c75af3957c319c38177cd62c90e781a982ba91b
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 [现在，您已创建了一些内容片段，](create-content-fragment.md) 您可以使用AEM API无头地提供它们。
 
 * [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 允许您创建访问和交付内容片段的请求。
-   * 要使用此功能，需要在AEM中定义并启用端点，如有需要，还需要安装GraphiQL界面。
+   * 要使用此功能， [端点需要在AEM中定义和启用](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)，如果需要， [已安装GraphiQL界面](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface).
 * [资产REST API](/help/assets/assets-api-content-fragments.md) 允许您创建和修改内容片段（和其他资产）。
 
 本指南的其余部分将重点介绍GraphQL访问和内容片段交付。
