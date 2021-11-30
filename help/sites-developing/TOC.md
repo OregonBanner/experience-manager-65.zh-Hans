@@ -8,9 +8,9 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: ba6b910add6770753efeb576d9df1db42d5720b8
+source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1085'
 ht-degree: 15%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 15%
       + [使用和扩展小组件（经典UI）](widgets.md)
       + [使用xtype（经典UI）](xtypes.md)
       + [开发Forms（经典UI）](developing-forms.md)
++ [AEM中的Headful和Headless](headful-headless.md)
 + 无外设体验管理{#headless}
    + [无头和AEM](headless/introduction.md)
    + 入门指南 {#getting-started}
