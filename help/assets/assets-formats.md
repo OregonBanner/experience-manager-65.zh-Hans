@@ -6,10 +6,10 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 7c2fcb94475eccfff5373a1dd28707bbe50ee078
+source-git-commit: 12a8b26a402ce68ee8f61e1035b7f44531cd2825
 workflow-type: tm+mt
-source-wordcount: '1539'
-ht-degree: 21%
+source-wordcount: '1543'
+ht-degree: 22%
 
 ---
 
@@ -211,11 +211,11 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
 | M4V | Apple iTunes | H264/AVC | - |
-| MFX | MPEG-2 | Apple ProRes422 | - |
 | MKV | Matroska | H264/AVC | - |
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
 | MP4 | MPEG-4 | H264/AVC（所有配置文件） | - |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
+| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
 | OGV、OGG | Ogg | Theora、VP3、Dirac | - |
 | WebM | WebM | Google VP8 | - |
 | WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
