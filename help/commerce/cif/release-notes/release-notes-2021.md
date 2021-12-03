@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 7261a71769dfb968c768e0cb4835d7d4cca97b1a
+source-git-commit: 98ba3edb3b9e93fa13a0f0418f1b17323d5a7233
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1311'
 ht-degree: 9%
 
 ---
@@ -15,19 +15,29 @@ ht-degree: 9%
 
 请查看下表中的最低系统要求，了解您当前使用的CIF版本或计划将来使用的CIF版本。
 
-**在4月版中，我们已使用CIF附加组件替换了GitHub上的CIF连接器** 可在 [AdobeSoftware Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). 切换到附加组件对项目有极大好处：
-
-* 大多数新功能将立即在AEM 6.5上可用（无需再等待功能端口）
-* 可轻松升级到新的附加版本
-* 准备Cloud Service
-
-旧AEM CIF连接器将进入维护模式，不应再使用。 请将CIF连接器更换为新的CIF附加组件。 对于大多数项目来说，只需简单地替换包即可。
-
 | 组件 | 系统要求 |
 |:-------|:-----:|
 | CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## 发行日期：2021年11月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2021.11.18.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
+| CIF核心组件 | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
+| CIF Venia参考网站 | 2021.12.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.12.01) |
+
+### 新增功能 {#what-is-new-november}
+
+* 扩展了myAccount组件，这些组件基于Commerce的可扩展Peregrine组件
+
+![扩展的myAccount组件](/help/assets/CIF/extended-myAccount-components.png)
+
+* 作者可以使用其他推荐类型创建临时商务产品Recommendations
+
+* 在AEM Storefront中支持礼品卡
 
 ## 发行日期：2021年10月
 
@@ -41,7 +51,7 @@ ht-degree: 9%
 
 * CIF附加组件支持最新的Commerce v2.4.3和新的GraphQL API和架构
 
-* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 CIF图标已添加到RTE工具栏，该工具栏将打开选取器，以便快速搜索并选择产品或类别，而无需离开上下文。
+* 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 CIF图标已添加到RTE工具栏中，该工具栏将打开选取器，以便快速搜索并选择产品或类别，而无需离开上下文。
 
 * 现有的弹出式购物车和结帐已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Magento的可扩展Peregrine组件构建的
 
