@@ -4,9 +4,9 @@ description: 的发行说明 [!DNL Adobe Experience Manager] 6.5 service pack
 contentOwner: AK
 mini-toc-levels: 2
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 45673270ec839377f941860c098f965f7b35c59e
+source-git-commit: 80f4e8c857fe9e0dfe344042fc1db81dde721e18
 workflow-type: tm+mt
-source-wordcount: '26608'
+source-wordcount: '26665'
 ht-degree: 11%
 
 ---
@@ -22,6 +22,9 @@ ht-degree: 11%
 * **增强功能 [!DNL Content Fragment] 模型和编辑器**:您现在可以使用嵌套方式为结构化内容创建复杂的自定义模型 [!DNL Content Fragment] 模型。 内容结构被模块化为基本元素，这些元素被建模为子片段。 更高级别的片段引用这些子片段。 更多数据类型增强功能（如高级验证规则），进一步增强了内容建模的灵活性 [!DNL Content Fragments]. 的 [!DNL Experience Manager] [!DNL Content Fragment] 编辑器支持在通用编辑器会话中嵌套的片段结构，增强功能如结构树视图和选项卡式痕迹导航在片段层次结构中导航。
 
 * **用于的GraphQL API[!DNL Content Fragments]**:新的GraphQL API是以JSON格式交付结构化内容的标准方法。 GraphQL查询允许客户端仅请求相关内容项来渲染体验。 这种选择消除了需要在客户端解析内容的内容过交付（借助HTTP REST API来实现）。 GraphQL架构是从 [!DNL Content Fragment] 模型和API响应采用JSON格式。 在 [!DNL Experience Manager] as a [!DNL Cloud Service], [GraphQL查询会保留](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) 和处理缓存友好GET请求。 在 [!DNL Experience Manager] 6.5.10.0。
+
+* **用于的GraphQL API[!DNL Content Fragments]**:要支持GraphQL API，内容片段模型属性字段中不再允许使用连字符。 如果任何“内容片段模型”属性名称中存在连字符，则GraphQL查询可能会返回不需要的结果。
+属性名称仅允许使用以下字符：A-Za-z0-9_。 数字不能位于第一位。
 
 * **层级管理和未来预览**:用户现在有一个界面可访问其内容结构 [!DNL Experience Manager] 启动项，包括在启动项中添加和删除页面的功能。 此功能增强了 [!DNL Experience Manager] 启动项以创作目标内容版本，以供将来发布。 [时间扭曲功能](/help/sites-authoring/working-with-page-versions.md#timewarp) 允许用户将启动项预览为将来的内容状态。
 
