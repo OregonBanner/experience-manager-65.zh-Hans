@@ -4,10 +4,10 @@ description: 发行说明特定于 [!DNL Adobe Experience Manager] 6.5 service p
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
+source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
 workflow-type: tm+mt
-source-wordcount: '3674'
-ht-degree: 4%
+source-wordcount: '3728'
+ht-degree: 3%
 
 ---
 
@@ -512,6 +512,16 @@ For information about installing the cumulative installer for Experience Manager
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 通过购物横幅查看器预览资产时，Dynamic Media交互式图像中的热点不可见。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :等待注册更改完成取消注册时超时。
+
+* 尝试移动/删除/发布内容片段或站点/页面时，获取内容片段引用时会出现问题，因为后台查询将失败；即，该功能将无法正常工作。
+要确保操作正确，您需要将以下属性添加到索引定义节点 `/oak:index/damAssetLucene` （无需重新索引）：
+
+   ```xml
+   "tags": [
+       "visualSimilaritySearch"
+     ]
+   "refresh": true
+   ```
 
 ## 包含的OSGi包和内容包 {#osgi-bundles-and-content-packages-included}
 
