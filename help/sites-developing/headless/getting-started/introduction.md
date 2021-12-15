@@ -2,9 +2,9 @@
 title: Headless快速入门指南
 description: 通过此快速入门指南，了解AEM 6.5强大无头功能（如内容模型、内容片段和GraphQL API）的要点。
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
-source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
+source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '301'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,8 @@ ht-degree: 1%
 >[!TIP]
 >
 >本入门指南假定您了解AEM和无外设技术。
-
-<!-- HM-Links
 >
->If you are new to either AEM or headless, please refer to our [Headless Documentation Journeys](/help/journey-headless/home.md) for an end-to-end introduction to both headless and how AEM supports it.
--->
+>如果您是初次使用AEM或Headless，请参阅 [无头文档历程](/help/journey-headless/home.md) 了解无头和AEM如何支持无头的端到端简介。
 
 ## 受众 {#audience}
 
