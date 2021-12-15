@@ -6,10 +6,10 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: eb7051582a51d983851c876025770668b258bff5
+source-git-commit: e3743b7ecbd8266abfaee36dcee94bcd2b260cac
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 21%
+source-wordcount: '1741'
+ht-degree: 20%
 
 ---
 
@@ -47,28 +47,11 @@ ht-degree: 21%
 
 从PSD文件中提取合并的图像。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际的图像，也可能不是实际的图像。
 
-支持的栅格图像格式 [!DNL Dynamic Media] 为：
-
-| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
-| BMP | ✓ | - | - | - | - |
-| PSD| | ✓ | - | - | - | - |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PICT | ✓ | - | - | - | - |
-
-从PSD文件中提取合并的图像。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际的图像，也可能不是实际的图像。
-
 除上述信息外，请考虑以下事项：
 
 * 对EPS文件的支持仅适用于光栅图像。 例如，默认不支持为 EPS 矢量图像生成缩略图。要添加支持， [配置ImageMagick](best-practices-for-imagemagick.md). 要集成第三方工具以启用其他功能，请参阅 [基于命令行的媒体处理程序](media-handlers.md#command-line-based-media-handler).
 
 * 元数据写回在添加到 `NComm` 处理程序。
-
-* 使用 [!DNL Dynamic Media] 要预览和生成EPS文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * 对于EPS文件， PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
 
@@ -86,37 +69,6 @@ ht-degree: 21%
 | OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
-
-## Dynamic Media中不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
-
-下表介绍了栅格图像文件格式的子类型，这些子类型包括 *not* 在Dynamic Media中受支持。
-
-另请参阅 [检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
-
-* IDAT区块大于100 MB的PNG文件。
-* PSB文件。
-* 不支持具有CMYK、RGB、灰度或位图以外的色彩空间的PSD文件。 不支持DuoTone、Lab和索引色彩空间。
-* PSD位深度大于16的文件。
-* TIFF具有浮点数据的文件。
-* TIFF具有Lab色彩空间的文件。
-
-<!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
-## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
-
-The following table describes the sub-types of raster image formats that are *not* supported in Dynamic Media. The table also describes suggested methods you can use to detect such files.
-
-| Format | What is unsupported? | Suggested detection method |
-|---|---|---|
-| JPEG  | Files where the initial three bytes is incorrect. | To identify a JPEG file, its initial three bytes must be `ff d8 ff`. If they are anything else, then it is not classified as a JPEG.<br>&bull; There is no software tool that can help with this issue.<br>&bull; A small C++/java program which reads the initial three bytes of a file should be able to detect these types of files.<br>&bull; It may be better to track the source of such files and look at the tool generating the file. |
-| PNG |  Files that have an IDAT chunk size greater than 100 MB. | You can detect this issue using [libpng](http://www.libpng.org/pub/png/libpng.html) in C++. |
-| PSB |  | Use exiftool if the file type is PSB.<br>Example in an ExifTool log:<br>1. File type: `PSB` |
-| PSD | Files with a color space other than CMYK, RGB, Grayscale, or Bitmap are not supported.<br>DuoTone, Lab, and Indexed color spaces are not supported. | Use ExifTool if Color mode is Duotone.<br>Example in an ExifTool log:<br>1. Color mode: `Duotone` |
-|  | Files with abrupt endings. | Adobe is unable to detect this condition. Also, such files cannot be opened with Adobe PhotoShop. Adobe suggests you examine the tool that was used to create such a file and troubleshoot at the source. |
-|  | Files that have a bit depth greater than 16. | Use ExifTool if the bit depth is greater than 16.<br>Example in an ExifTool log:<br>1. Bit depth: `32` |
-|  | File that have Lab color space. | Use exiftool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
-| TIFF | Files that have floating point data. That is, a TIFF file with 32-bit depth is not supported. | Use ExifTool if the MIME type is `image/tiff` and the SampleFormat has `Float` in its value. Example in an ExifTool log:<br>1. MIME type: `image/tiff`<br>Sample format: `Float #`<br>2. MIME type: `image/tiff`<br>Sample format: `Float; Float; Float; Float` |
-|  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
--->
 
 ## 支持的PDF光栅器库 {#supported-pdf-rasterizer-library}
 
@@ -165,22 +117,6 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | QXP | ✓ | ✓ | - | - | - | - | - | - |
 | EPUB | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
 
-## Dynamic Media中支持的文档格式 {#supported-document-formats-dynamic-media}
-
-| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
-
-除了上述功能外，还请考虑以下事项：
-
-* 要使用Dynamic Media为PDF文件生成动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
-
-* 要使用Dynamic Media预览和生成AI文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
-
-* 要使用Dynamic Media为INDD文件生成动态演绎版，请参阅 [InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format).
-
 ## 支持的多媒体格式 {#supported-multimedia-formats}
 
 |  | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | FFmpeg转码 |
@@ -203,24 +139,6 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | MOV | ✓ | ✓ | - | * | * |
 | WMV | ✓ | ✓ | - | * | * |
 | SWF | ✓ | ✓ | - | - | - |
-
-## Dynamic Media中支持的用于转码的输入视频格式 {#supported-input-video-formats-for-dynamic-media-transcoding}
-
-| 视频文件扩展名 | 容器 | 推荐的视频编解码器 | 不支持的视频编解码器 |
-|---|---|---|---|
-| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
-| FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
-| M4V | Apple iTunes | H264/AVC | - |
-| MKV | Matroska | H264/AVC | - |
-| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
-| MP4 | MPEG-4 | H264/AVC（所有配置文件） | - |
-| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
-| MXF ‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
-| OGV、OGG | Ogg | Theora、VP3、Dirac | - |
-| WebM | WebM | Google VP8 | - |
-| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
-
-‡尚不支持在Dynamic Media中将此视频格式用于交互式视频，或在Experience Manager Assets中将其与“注释”一起使用。
 
 ## 支持的存档格式 {#supported-archive-formats}
 
@@ -313,6 +231,105 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 | WMV | video/x-ms-wmv |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | XLS | application/vnd.ms-excel |  |  |
 | ZIP | application/zip |  |  |
+
+## Dynamic Media — 支持的用于转码的输入视频格式 {#supported-input-video-formats-for-dynamic-media-transcoding}
+
+| 视频文件扩展名 | 容器 | 推荐的视频编解码器 | 不支持的视频编解码器 |
+|---|---|---|---|
+| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
+| FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（矢量动画文件） |
+| M4V | Apple iTunes | H264/AVC | - |
+| MKV | Matroska | H264/AVC | - |
+| MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV (DV25)、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
+| MP4 | MPEG-4 | H264/AVC（所有配置文件） | - |
+| MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
+| MXF ‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
+| OGV、OGG | Ogg | Theora、VP3、Dirac | - |
+| WebM | WebM | Google VP8 | - |
+| WMV | Windows Media 9 | WMV3 (v9)、WMV2 (v8)、WMV1 (v7)、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft®屏幕(MSS2)、Microsoft®照片故事(WVP2) |
+
+‡尚不支持在Dynamic Media中将此视频格式用于交互式视频，或在Experience Manager Assets中将其与“注释”一起使用。
+
+## Dynamic Media — 支持的文档格式 {#supported-document-formats-dynamic-media}
+
+| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 |
+|---|:---:|:---:|:---:|:---:|:---:|
+| [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+除了上述功能外，还请考虑以下事项：
+
+* 要使用Dynamic Media为PDF文件生成动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+
+* 要使用Dynamic Media预览和生成AI文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+
+* 要使用Dynamic Media为INDD文件生成动态演绎版，请参阅 [InDesign(INDD)文件格式](../assets/managing-image-presets.md#indesign-indd-file-format).
+
+## Dynamic Media — 支持的栅格图像格式 {#supported-raster-image-formats-dynamic-media}
+
+| 格式 | 上传<br> （输入格式） | 创建<br> 图像<br> 预设<br> （输出格式） | 预览<br> 动态<br> 演绎版 | 交付<br> 动态<br> 演绎版 | 下载<br> 动态<br> 演绎版 | 设置支持此格式的类型 |
+|---|:---:|:---:|:---:|:---:|:---:| --- |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
+| BMP | ✓ | - | - | - | - | [图像](/help/assets/image-sets.md), [混合媒体](/help/assets/mixed-media-sets.md)和 [旋转](/help/assets/spin-sets.md) |
+| PSD| | ✓ | - | - | - | - | - |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| PICT | ✓ | - | - | - | - | - |
+
+从PSD文件中提取合并的图像。 它是由Adobe Photoshop生成并包含在PSD文件中的图像。 根据设置，合并的图像可能是实际的图像，也可能不是实际的图像。
+
+* 对EPS文件的支持仅适用于光栅图像。 例如，默认不支持为 EPS 矢量图像生成缩略图。要添加支持， [配置ImageMagick](best-practices-for-imagemagick.md). 要集成第三方工具以启用其他功能，请参阅 [基于命令行的媒体处理程序](media-handlers.md#command-line-based-media-handler).
+
+* 使用 [!DNL Dynamic Media] 要预览和生成EPS文件的动态演绎版，请参阅 [Adobe Illustrator(AI)、Postscript(EPS)和PDF文件格式。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+
+* 对于EPS文件， PostScript文档结构约定(PS-Adobe)版本3.0或更高版本支持元数据写回。
+
+## Dynamic Media — 不支持的栅格图像格式 {#unsupported-image-formats-dynamic-media}
+
+下表介绍了栅格图像文件格式的子类型，这些子类型包括 *not* 在Dynamic Media中受支持。
+
+另请参阅 [检测不支持的Dynamic Media文件格式](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html) 知识库文章。
+
+* IDAT区块大于100 MB的PNG文件。
+* PSB文件。
+* 不支持具有CMYK、RGB、灰度或位图以外的色彩空间的PSD文件。 不支持DuoTone、Lab和索引色彩空间。
+* PSD位深度大于16的文件。
+* TIFF具有浮点数据的文件。
+* TIFF具有Lab色彩空间的文件。
+
+<!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
+## Unsupported raster image formats in Dynamic Media (#unsupported-image-formats-dynamic-media)
+
+The following table describes the sub-types of raster image formats that are *not* supported in Dynamic Media. The table also describes suggested methods you can use to detect such files.
+
+| Format | What is unsupported? | Suggested detection method |
+|---|---|---|
+| JPEG  | Files where the initial three bytes is incorrect. | To identify a JPEG file, its initial three bytes must be `ff d8 ff`. If they are anything else, then it is not classified as a JPEG.<br>&bull; There is no software tool that can help with this issue.<br>&bull; A small C++/java program which reads the initial three bytes of a file should be able to detect these types of files.<br>&bull; It may be better to track the source of such files and look at the tool generating the file. |
+| PNG |  Files that have an IDAT chunk size greater than 100 MB. | You can detect this issue using [libpng](http://www.libpng.org/pub/png/libpng.html) in C++. |
+| PSB |  | Use exiftool if the file type is PSB.<br>Example in an ExifTool log:<br>1. File type: `PSB` |
+| PSD | Files with a color space other than CMYK, RGB, Grayscale, or Bitmap are not supported.<br>DuoTone, Lab, and Indexed color spaces are not supported. | Use ExifTool if Color mode is Duotone.<br>Example in an ExifTool log:<br>1. Color mode: `Duotone` |
+|  | Files with abrupt endings. | Adobe is unable to detect this condition. Also, such files cannot be opened with Adobe PhotoShop. Adobe suggests you examine the tool that was used to create such a file and troubleshoot at the source. |
+|  | Files that have a bit depth greater than 16. | Use ExifTool if the bit depth is greater than 16.<br>Example in an ExifTool log:<br>1. Bit depth: `32` |
+|  | File that have Lab color space. | Use exiftool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
+| TIFF | Files that have floating point data. That is, a TIFF file with 32-bit depth is not supported. | Use ExifTool if the MIME type is `image/tiff` and the SampleFormat has `Float` in its value. Example in an ExifTool log:<br>1. MIME type: `image/tiff`<br>Sample format: `Float #`<br>2. MIME type: `image/tiff`<br>Sample format: `Float; Float; Float; Float` |
+|  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
+-->
+
+## Dynamic Media — 支持的3D格式 {#supported-three-d-file-formats-in-dm}
+
+Dynamic Media支持以下3D格式。
+
+另请参阅 [在Dynamic Media中使用3D资产](/help/assets/assets-3d.md).
+
+| 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
+|---|---|---|---|
+| GLB | 二进制GL传输 | model/gltf-binary | 将材料和纹理作为单个资产包含在内。 |
+| OBJ | WaveFront 3D对象文件 | application/x-tgif |  |
+| STL | 立体成形 | application/vnd.ms-pki.stl |  |
+| USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | *仅支持摄取；无法查看或进行交互。* USDZ是一种专有的3D格式，Safari和iOS设备可在本机查看该格式。 |
 
 >[!MORELIKETHIS]
 >
