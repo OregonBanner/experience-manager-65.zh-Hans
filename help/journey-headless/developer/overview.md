@@ -1,9 +1,9 @@
 ---
 title: AEM Headless开发人员历程
 description: AEM无头CMS文档。 从此处开始，您可以逐步了解AEM强大而灵活的无外设功能、其功能，以及如何在您的第一个开发项目中利用这些功能。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1212'
 ht-degree: 2%
 
 ---
@@ -65,12 +65,8 @@ ht-degree: 2%
 | 5 | [如何通过AEM交付API访问您的内容](access-your-content.md) | 了解如何使用GraphQL查询访问内容片段内容。 |
 | 6 | [如何通过AEM Assets API更新内容](update-your-content.md) | 了解如何使用REST API访问和更新内容片段内容。 |
 | 7 | [如何将所有内容整合在一起 — 在AEM Headless中查看您的应用程序和内容](put-it-all-together.md) | 了解如何获取您的AEM项目并为使用AEM Headless SDK进行上线做准备。 |
-| 8 | [可选 — 如何使用AEM创建单页应用程序(SPA)](create-spa.md) | 了解AEM无标题功能后，请了解如何结合使用无标题和无标题交付，并了解如何使用AEM SPA编辑器框架创建可编辑的SPA。 |
-
-<!-- HM-Links
-|8|[How to go live with your headless application](go-live.md)|Learn how to deploy application live and take your local code in Git and move it to Cloud Manager Git for CI/CD pipeline.|
-|9|[Optional - How to create single page applications (SPAs) with AEM](create-spa.md)|Once you understand AEM's headless features, explore how to combine headful and headless delivery and learn how you can create editable SPAs using AEM's SPA Editor framework.|
--->
+| 8 | [如何使用无头应用程序](go-live.md) | 了解如何在Git中实时部署应用程序并获取本地代码，然后将其移至Cloud Manager Git for CI/CD管道。 |
+| 9 | [可选 — 如何使用AEM创建单页应用程序(SPA)](create-spa.md) | 了解AEM无标题功能后，请了解如何结合使用无标题和无标题交付，并了解如何使用AEM SPA编辑器框架创建可编辑的SPA。 |
 
 ## 下一步 {#what-is-next}
 
