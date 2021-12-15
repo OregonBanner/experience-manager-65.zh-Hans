@@ -8,10 +8,10 @@ breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
+source-git-commit: b924dc186497b6dfa4c2d2bb675f5029f8fc3617
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 15%
+source-wordcount: '1299'
+ht-degree: 13%
 
 ---
 
@@ -99,6 +99,23 @@ ht-degree: 15%
 + [AEM中的Headful和Headless](headful-headless.md)
 + 无外设体验管理{#headless}
    + [无头和AEM](headless/introduction.md)
+   + 无头历程 {#journeys}
+      + 无头开发人员历程 {#developer}
+         + [了解AEM中的无头](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
+         + [了解CMS无头开发](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
+         + [AEM Headless入门as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
+         + [使用AEM Headless获得首个体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
+         + [如何将内容建模为AEM内容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
+         + [如何通过AEM交付API访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
+         + [如何通过AEM Assets API更新内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
+         + [如何把它拼凑起来](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
+         + [如何使用无头应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
+         + [可选 — 如何使用AEM创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
+      + 无外设内容架构师历程 {#architect}
+         + [AEM Headless Content Architect历程概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
+         + [使用AEM实现无头内容建模 — 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
+         + [了解使用AEM实现无头的内容建模基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
+         + [了解如何在AEM中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
    + 入门指南 {#getting-started}
       + [简介](headless/getting-started/introduction.md)
       + [创建配置](headless/getting-started/create-configuration.md)
