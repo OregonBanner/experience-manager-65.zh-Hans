@@ -4,9 +4,9 @@ description: 发行说明特定于 [!DNL Adobe Experience Manager] 6.5 service p
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
+source-git-commit: 5b62efe65be44416335c6dbbde23ee6a7e5a8fd7
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3822'
 ht-degree: 3%
 
 ---
@@ -371,6 +371,17 @@ Need to verify with Engineering, the status is currently showing as Resolved
 **Foundation JEE**
 
 * 安装AEM 6.5 Forms Service Pack 9后，CRX存储库URL不再可用(NPR-37592)。
+
+**AEM Forms 6.5.11.1中修复的问题**
+
+>[!NOTE]
+>
+>如果尚未升级到AEM 6.5.11.0 Forms，请直接安装AEM Forms 6.5.11.1附加组件包。 如果您已安装AEM 6.5.11.0 Forms，则Adobe建议升级到AEM 6.5.11.1 Forms。
+
+* 安装Forms 6.5.11.0附加组件包后，提交操作、发送电子邮件并调用AEM工作流停止工作。
+* 安装Microsoft 6.5.11.0附加组件包后，CreatePDF操作会停止将Forms Word文档转换为PDF文档。
+* （仅限JEE）针对Apache Log4j2报告的关键安全漏洞(CVE-2021-44228和CVE-2021-45046)。
+* （仅限JEE）6.5.11.0修补程序中的汇编程序DSC包含不正确的代码，如规范版本和实施版本。
 
 
 有关安全更新的信息，请参阅 [[!DNL Experience Manager] 安全公告页面](https://helpx.adobe.com/security/products/experience-manager.html).
