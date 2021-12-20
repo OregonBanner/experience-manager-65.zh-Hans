@@ -1,14 +1,14 @@
 ---
-title: 预览 3D 资产
-description: 了解如何预览3D资产
+title: 预览3D资产
+description: 了解如何在Experience Manager中预览3D资产。
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D资产
+feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '556'
 ht-degree: 10%
 
 ---
@@ -28,7 +28,7 @@ Experience Manager支持在创作过程中上传、交付和交互式预览3D资
 | 3D文件扩展名 | 文件格式 | MIME类型 | 注释 |
 |---|---|---|---|
 | GLB | 二进制GL传输 | model/gltf-binary |  |
-| GLTF | GL传输格式 | model/gltf+json | 请参阅下面的&#x200B;**注意**。 |
+| GLTF | GL传输格式 | model/gltf+json | 请参阅 **注意** 下。 |
 | OBJ | WaveFront 3D对象文件 | application/x-tgif |  |
 | STL | 立体成形 | application/vnd.ms-pki.stl |  |
 | DN | Adobe Dimension | model/x-adobe-dn | 仅支持摄取；预览不可用。 |
@@ -36,14 +36,14 @@ Experience Manager支持在创作过程中上传、交付和交互式预览3D资
 
 >[!NOTE]
 >
->如果材料未在gLTF模型的预览中呈现，请确保它们的名称正确，并且位于与模型相同的根文件夹的`textures`文件夹中，如下所示：
+>如果在gLTF模型的预览中未呈现材料，请确保它们的名称正确，并且在 `textures` 文件夹，与模型相同，如下所示：
 
-    Asset（文件夹）
-    model.
-    gltfmodel.
-    bintextures（文件夹）
-    material_0_baseColor.
-    jpegmaterial_0_normal.jpeg
+    资产（文件夹）
+    model.gltf
+    model.bin
+    纹理（文件夹）
+    material_0_baseColor.jpeg
+    material_0_normal.jpeg
 
 ## 在预览3D资产时的性能注意事项Experience Manager{#performance-3d-previewing-assets}
 
@@ -54,12 +54,12 @@ Experience Manager支持在创作过程中上传、交付和交互式预览3D资
 **要在Experience Manager中预览3D资产，请执行以下操作：**
 
 1. 确保已将3D资产上传到Experience Manager。
-请参阅[支持的3D预览格式](#supported-3d-previewing-assets)和[上传资产](/help/assets/manage-assets.md#uploading-assets)。
-1. 从Experience Manager中，在&#x200B;**[!UICONTROL 导航]**&#x200B;页面上，选择&#x200B;**[!UICONTROL 资产]** > **[!UICONTROL 文件]**。
+请参阅 [支持的3D预览格式](#supported-3d-previewing-assets) 和 [上传资产](/help/assets/manage-assets.md#uploading-assets).
+1. 从Experience Manager，在 **[!UICONTROL 导航]** 页面，选择 **[!UICONTROL 资产]** > **[!UICONTROL 文件]**.
 
    ![导航页面](/help/assets/assets-dm/navigation-assets.png)
 
-1. 在页面的右上角附近，从“视图”下拉列表中，选择&#x200B;**[!UICONTROL 卡片视图]**，然后导航到要预览的3D资产。
+1. 在页面的右上角附近，从“视图”下拉列表中，选择 **[!UICONTROL 卡片视图]**，然后导航到要预览的3D资产。
 
    ![3D卡片选择](/help/assets/assets-dm/3d-card-select.png)
    _在卡片视图中，选择要预览的3D资产的卡片。_
@@ -79,4 +79,4 @@ Experience Manager支持在创作过程中上传、交付和交互式预览3D资
    | **重置** | 在页面的右下角附近，选择重置图标以将视图目标点恢复到3D资产的中心。 重置还会使相机更近或更远地移开，以便以合理的查看大小完整地显示资产。 |  |  |
    | **全屏模式** | 要进入全屏模式，请在页面的右下角选择全屏图标。 |  |  |
 
-1. 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 关闭]**。
+1. 完成后，在页面的右上角附近，选择 **[!UICONTROL 关闭]**.
