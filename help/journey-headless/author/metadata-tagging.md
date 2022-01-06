@@ -1,11 +1,8 @@
 ---
 title: 了解如何为内容片段定义元数据和标记
 description: 了解如何为内容片段定义元数据和标记
-index: true
-hide: false
-hidefromtoc: false
 exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
-source-git-commit: 7bbeb79ffd54dd97a16988a7d4b930557241a43a
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 3%
