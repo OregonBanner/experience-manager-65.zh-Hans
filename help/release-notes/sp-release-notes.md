@@ -4,10 +4,10 @@ description: 发行说明特定于 [!DNL Adobe Experience Manager] 6.5 service p
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 5b62efe65be44416335c6dbbde23ee6a7e5a8fd7
+source-git-commit: 282f634e84b7c6c5e281d2b425953853790f225c
 workflow-type: tm+mt
-source-wordcount: '3822'
-ht-degree: 3%
+source-wordcount: '3829'
+ht-degree: 4%
 
 ---
 
@@ -37,6 +37,8 @@ ht-degree: 3%
 * 用户体验增强功能可显示文件夹中存在的资产数量。 对于文件夹中超过1000个资产， [!DNL Assets] 显示1000+。
 
 * 您现在可以在卡片视图和列视图中渲染排序选项。
+
+* 业务配置文件支持Adobe资产链接。
 
 * 您现在可以使用 [!DNL Dynamic Media] 来配置常规设置，而不必执行 [!DNL Dynamic Media Classic] 桌面应用程序。 请参阅 [配置Dynamic Media常规设置](/help/assets/dm-general-settings.md).
 
@@ -380,7 +382,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * 安装Forms 6.5.11.0附加组件包后，提交操作、发送电子邮件并调用AEM工作流停止工作。
 * 安装Microsoft 6.5.11.0附加组件包后，CreatePDF操作会停止将Forms Word文档转换为PDF文档。
-* （仅限JEE）针对Apache Log4j2报告的关键安全漏洞(CVE-2021-44228和CVE-2021-45046)。
+* （仅限 JEE）针对 Apache Log4j2 报告的严重安全漏洞（CVE-2021-44228 和 CVE-2021-45046）。
 * （仅限JEE）6.5.11.0修补程序中的汇编程序DSC包含不正确的代码，如规范版本和实施版本。
 
 
