@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 1aad655a141fd2137875ae829d1b698298dfe285
+source-git-commit: 7630a6c4d908144e384b705bfce72779803aea93
 workflow-type: tm+mt
-source-wordcount: '3253'
+source-wordcount: '3340'
 ht-degree: 1%
 
 ---
@@ -95,18 +95,22 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
   <tr>
    <td><strong>平台</strong></td>
    <td><strong>支持级别</strong></td>
+   <td><strong>链接</strong></td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64位</td>
    <td>答：支持的[1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24</td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 8 - 64位</td>
    <td>答：支持的[1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18</td>
   </tr>
   <tr>
    <td>OracleJava SE 11 JDK - 64位</td>
    <td>答：支持的[2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24<td>
   </tr>
   <tr>
    <td>OracleJava SE 10 JDK</td>
@@ -119,6 +123,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
   <tr>
    <td>OracleJava SE 8 JDK - 64位</td>
    <td>答：支持的[2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10<td>
   </tr>
   <tr>
    <td>IBM J9 VM — 内部版本2.9、JRE 1.8.0</td>
@@ -395,7 +400,7 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 * RedHat Enterprise 7或CentOS 7及更高版本，带有最新的修补程序
 * 64位操作系统
 * 禁用交换（建议）
-* 已禁用SELinux（请参阅以下注意事项）
+* 已禁用SELinux（请参阅以下注释）
 
 >[!NOTE]
 >
