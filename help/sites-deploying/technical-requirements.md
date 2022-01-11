@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 41a9ab1dd37c135be73fe47bc36ceb4845e13379
+source-git-commit: 610e37571df168bba91f2c2fe5b41e2f70ba748e
 workflow-type: tm+mt
-source-wordcount: '3427'
+source-wordcount: '3345'
 ht-degree: 1%
 
 ---
@@ -30,11 +30,11 @@ Adobe在平台上支持Adobe Experience Manager(AEM)，如本文档中的以下�
 * 已安装的Java平台、标准版JDK或其他受支持的 [Java虚拟机](#java-virtual-machines)
 * Experience Manager快速入门文件（独立JAR或Web应用程序部署WAR）
 
-### Minimum Sizing Requirements {#minimum-sizing-requirements}
+### 最低大小要求 {#minimum-sizing-requirements}
 
 运行Adobe Experience Manager的最低要求：
 
-* 5 GB free disk space in the installation directory
+* 安装目录中有5 GB可用磁盘空间
 * 2 GB内存
 
 >[!NOTE]
@@ -53,7 +53,7 @@ Adobe在平台上支持Adobe Experience Manager(AEM)，如本文档中的以下�
 
 ### 支持的配置 {#supported-configurations}
 
-Adobe recommends these configurations and provides full support as part of the standard software maintenance agreement.
+Adobe建议这些配置，并作为标准软件维护协议的一部分提供完全支持。
 
 <table>
  <tbody>
@@ -138,18 +138,18 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 
 | **平台** | **支持级别** | **链接** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
-| Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
-| OracleJava SE 11 JDK - 64位 | 答：支持 `[2]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
+| Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
+| Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
+| OracleJava SE 11 JDK - 64位 | 答：支持 `[2]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava SE 10 JDK | Z:不支持 `[2]` |
 | OracleJava SE 9 JDK | Z:不支持 `[2]` |
-| OracleJava SE 8 JDK - 64位 | 答：支持 `[2]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
+| OracleJava SE 8 JDK - 64位 | 答：支持 `[2]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
 | IBM J9 VM — 内部版本2.9、JRE 1.8.0 | 答：支持 `[3]` |
 | IBM J9 VM — 内部版本2.8、JRE 1.8.0 | 答：支持 `[3]` |
 
-1. Support and distribution of Azul Zulu Builds of OpenJDK, including all maintenance updates of LTS releases will be supported by Adobe directly for all AEM customers making use of the Azul Zulu Builds of OpenJDK, starting with AEM 6.5 SP9 resp. See the [Azul Java support for Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf) for more information.
+1. 支持和分发阿祖尔Zulu Build的OpenJDK，包括对LTS版本的所有维护更新，将由Adobe直接支持所有使用OpenJDK的阿祖尔Zulu Build的AEM客户，从AEM 6.5 SP9的版本开始。 请参阅 [Azul Java支持Adobe Experience Manager问答](assets/adobe-azul-openjdk-license-agreement.pdf) 以了解更多信息。
 
-1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Support and distribution of the Oracle Java SE JDK, including all maintenance updates of LTS releases beyond the end of the public updates, will be supported by Adobe directly for all AEM customers making use of the Oracle Java SE technology **until December 2022**. See the [Oracle Java support for Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf) for more information.
+1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本的所有维护更新 **截至2022年12月**. 请参阅 [Oracle对Adobe Experience Manager问答的Java支持](assets/adobe-oracle-java-license-agreement.pdf) 以了解更多信息。
 
 1. IBM JRE仅与WebSphere Application Server一起受支持。
 
@@ -161,7 +161,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 | **平台** | **描述** | **支持级别** |
 |---|---|---|
 | **具有TAR文件的文件系统** `[1]` | 存储库 | 答：支持 |
-| **File system with Datastore** `[1]` | 二进制文件 | 答：支持 |
+| **具有数据存储的文件系统** `[1]` | 二进制文件 | 答：支持 |
 | 将二进制文件存储在文件系统上的TAR文件中 `[1]` | 二进制文件 | Z:不支持生产 |
 | Amazon S3 | 二进制文件 | 答：支持 |
 | Microsoft Azure Blob Storage | 二进制文件 | 答：支持 |
@@ -189,7 +189,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 >
 >为了充分利用MongoDB的AEM部署，Adobe建议授权MongoDB企业版以从专业支持中受益。 请参阅 [推荐的部署](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 以了解更多信息。
 >
->The license includes a standard replica set, which is composed of one primary and two secondary instances that can be used for either the author or the publish deployments.
+>该许可证包含一个标准副本集，该副本集由一个主实例和两个辅助实例组成，这两个实例可用于创作或发布部署。
 >
 >如果要在MongoDB上同时运行创作和发布，则需要购买两个单独的许可证。
 >
@@ -199,7 +199,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 
 >[!NOTE]
 >
->Supported relational databases as listed above are third-party software and are not included in the AEM licensing package.
+>上面列出的受支持的关系数据库是第三方软件，不包含在AEM授权包中。
 >
 >要使用受支持的关系数据库运行AEM 6.5，需要与数据库供应商签订单独的支持合同。 Adobe客户关怀团队将帮助确定与AEM 6.5中的关系数据库的使用相关的问题。
 >
@@ -324,12 +324,12 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
   <tr>
    <td>Apple Safari on macOS（常绿）</td>
    <td>答：支持</td>
-   <td>A: Supported</td>
+   <td>答：支持</td>
   </tr>
   <tr>
    <td>Apple Safari 11.x on macOS</td>
    <td>Z:不支持</td>
-   <td>Z: Not supported</td>
+   <td>Z:不支持</td>
   </tr>
   <tr>
    <td>Apple Safari on iOS 12.x</td>
@@ -410,7 +410,7 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 
 * RedHat Enterprise 7或CentOS 7及更高版本，带有最新的修补程序
 * 64位操作系统
-* Swapping disabled (recommended)
+* 禁用交换（建议）
 * 已禁用SELinux（请参阅以下注释）
 
 >[!NOTE]
@@ -419,7 +419,7 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 
 >[!NOTE]
 >
->**Disabling SELinux:** Image Serving does not work with SELinux turned on. 默认情况下，此选项处于启用状态。 要解决此问题，请编辑 **/etc/selinux/config** 文件，并将SELinux值从：
+>**禁用SELinux:** 打开SELinux时，图像提供不起作用。 默认情况下，此选项处于启用状态。 要解决此问题，请编辑 **/etc/selinux/config** 文件，并将SELinux值从：
 >
 >`SELINUX=enforcing` **到** `SELINUX=disabled`
 
@@ -440,14 +440,14 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 #### Windows {#windows}
 
 * Microsoft Windows Server 2016
-* Swap space equal to at least twice the amount of physical memory (RAM)
+* 交换空间至少等于物理内存(RAM)量的两倍
 
-To use Dynamic Media on Windows, install Microsoft Visual Studio 2010, 2013, and 2015 redistributables for x64 and x86.
+要在Windows上使用Dynamic Media，请安装适用于x64和x86的Microsoft Visual Studio 2010、2013和2015可再发行版。
 
-For Windows x64:
+对于Windows x64:
 
 * 获取Microsoft Visual Studio 2010的可再发行版本： [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)
-* Get Microsoft Visual Studio 2013 redistributable at [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* 获取Microsoft Visual Studio 2013可再发行版本，具体位置为 [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
 * 获取Microsoft Visual Studio 2015可再发行版本，网址为 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 对于Windows x86:
@@ -524,20 +524,20 @@ For Windows x64:
 * 支持PAE、NX和SSE2的1 GHz或更快的处理器。
 * 1 GB的RAM（32位）或2 GB的RAM（64位操作系统）
 * 对于32位或20 GB的磁盘空间，对于64位操作系统，为16 GB的磁盘空间
-* Graphics memory - 128 MB of GPU (256 MB recommended)
+* 图形内存 — 128 MB的GPU（建议256 MB）
 * 2.35 GB可用硬盘空间
-* 1024 X 768 pixels or greater monitor resolution
+* 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC。
-* Administrative privileges to install Designer.
+* 安装Designer的管理权限。
 
 ### AEM Assets XMP元数据回写的要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
 支持并启用以下平台和文件格式的XMP写回：
 
-* **Operating Systems:**
+* **操作系统：**
 
-   * Linux (32-bit and 32-bit application support on 64-bit systems). 有关安装32位客户端库的步骤，请参阅 [如何在64位RedHat Linux上启用XMP提取和回写](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
+   * Linux（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅 [如何在64位RedHat Linux上启用XMP提取和回写](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
 
    * Windows Server
    * Mac OS X（64位）
@@ -546,4 +546,4 @@ For Windows x64:
 
 ### AEM Assets在Linux上处理元数据密集型资产的要求 {#assetsonlinux}
 
-XMPFilesProcessor process requires library GLIBC_2.14 to work. 使用包含GLIBC_2.14的Linux内核，例如Linux内核版本3.1.x。它改进了处理包含大量元数据(如PSD文件)的资产的性能。 使用以前版本的GLIBC会导致日志中以 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
+XMPFilesProcessor进程需要库GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux内核，例如Linux内核版本3.1.x。它改进了处理包含大量元数据(如PSD文件)的资产的性能。 使用以前版本的GLIBC会导致日志中以 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
