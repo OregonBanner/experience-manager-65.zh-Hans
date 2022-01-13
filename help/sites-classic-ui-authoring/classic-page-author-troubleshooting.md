@@ -1,8 +1,8 @@
 ---
 title: 解决 AEM 中有关创作方面的问题
-seo-title: 解决 AEM 中有关创作方面的问题
+seo-title: Troubleshooting AEM when Authoring
 description: 以下部分涵盖您在使用 AEM 时可能遇到的一些问题，以及有关如何解决这些问题的建议。
-seo-description: 以下部分涵盖您在使用 AEM 时可能遇到的一些问题，以及有关如何解决这些问题的建议。
+seo-description: The following section covers some issues that you might encounter when using AEM, together with suggestions on how to troubleshoot them.
 uuid: eb95e5ba-1eed-4ffb-80c1-9b8468820c22
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '430'
 ht-degree: 95%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->遇到问题时，还可以查阅实例（发行版本或服务包）的[已知问题](/help/release-notes/known-issues.md)列表。
+>遇到问题时，还可以查阅实例（发行版本或服务包）的[已知问题](/help/release-notes/release-notes.md)列表。
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ ht-degree: 95%
 
 * **问题：**
 
-   * 使用&#x200B;**查找并替换**&#x200B;选项时，可能并非页面上替换了`find`术语的所有实例。
+   * 使用 **查找和替换** 选项，并非所有实例 `find` 术语会在页面上替换。
 
 * **原因**：
 

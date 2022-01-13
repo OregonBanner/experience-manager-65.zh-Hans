@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5发行说明
 description: AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: a2b3cb81fb15a1f03004e42cafbf92c84c9d7b89
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '391'
 ht-degree: 41%
 
 ---
@@ -13,10 +13,12 @@ ht-degree: 41%
 
 AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。
 
+* [最新发行说明](/help/release-notes/release-notes.md)
+
 ## 关键AEM文章
 
-* [AEM入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
-* [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [AEM入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
+* [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [AEM 安全核对清单](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5用户指南
@@ -40,7 +42,7 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 ## 关键AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher用户指南](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
@@ -48,8 +50,8 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
 * [AEM 社区论坛](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
-## 版权、许可证和免责声明{#copyright-licenses-and-disclaimers}
+## 版权、许可和免责声明 {#copyright-licenses-and-disclaimers}
 
-有关详细信息，请参阅[https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/cn/legal/terms/enterprise-licensing.html)
+有关详细信息，请参阅 [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/cn/legal/terms/enterprise-licensing.html)
 
-第三方许可证通知：[https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
+第三方许可证通知： [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)

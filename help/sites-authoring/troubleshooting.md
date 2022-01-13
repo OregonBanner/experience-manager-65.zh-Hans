@@ -1,8 +1,8 @@
 ---
 title: 解决 AEM 中有关创作方面的问题
-seo-title: 解决 AEM 中有关创作方面的问题
+seo-title: Troubleshooting AEM when Authoring
 description: 使用 AEM 时可能遇到的一些问题
-seo-description: 使用 AEM 时可能遇到的一些问题
+seo-description: Some issues that you might encounter when using AEM
 uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '294'
 ht-degree: 100%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->遇到问题时，还可以查阅实例（发行版本或服务包）的[已知问题](/help/release-notes/known-issues.md)列表。
+>遇到问题时，还可以查阅实例（发行版本或服务包）的[已知问题](/help/release-notes/release-notes.md)列表。
 
 >[!NOTE]
 >

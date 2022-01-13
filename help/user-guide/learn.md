@@ -1,21 +1,21 @@
 ---
 title: 了解AEM 6.5功能
-seo-title: 了解AEM 6.5功能
+seo-title: Learn About AEM 6.5 Capabilities
 description: 对AEM 6.5基本功能的描述
-seo-description: 对AEM 6.5基本功能的描述
+seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '400'
 ht-degree: 29%
 
 ---
 
-# 了解AEM 6.5功能{#learn-about-aem-64-capabilities}
+# 了解AEM 6.5功能 {#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是AdeobeExperience Manager内的一个内容管理系统，它为您提供了一个位置，用于在网站、移动设备网站和网站屏幕中创建、管理和提供数字体验，使其在全球范围内触及，但与个人相关且引人入胜。 [了](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 解更 [多或深入了解一些新增的视频功能教程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是AdeobeExperience Manager内的一个内容管理系统，它为您提供了一个位置，用于在网站、移动设备网站和网站屏幕中创建、管理和提供数字体验，使其在全球范围内触及，但与个人相关且引人入胜。 [了解更多](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 或 [深入学习我们的一些新增视频功能教程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -23,7 +23,7 @@ AEM Sites是AdeobeExperience Manager内的一个内容管理系统，它为您�
 
 * [使用 AEM Assets](/help/assets/manage-assets.md)
 * [使用 Dynamic Media](/help/assets/dynamic-media.md)
-* [AEM Assets 发行说明](/help/release-notes/assets.md)
+* [AEM 发行说明](/help/release-notes/release-notes.md)
 
 ## AEM Forms {#aem-forms}
 
@@ -46,8 +46,8 @@ Screens是一项Adobe Experience Manager功能，它允许您与全面的数字�
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre是一项全新的Adobe Experience Manager功能，它允许您利用Web上共享的所有内容，在您自己的网站上持续创建新鲜高质量的内容流。 [了解](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 更多 [或直接进入我们的指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre是一项全新的Adobe Experience Manager功能，它允许您利用Web上共享的所有内容，在您自己的网站上持续创建新鲜高质量的内容流。 [了解更多](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) 或 [直接跳进我们的指南。](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM Foundation {#aem-foundation}
 
-进一步了解[Adobe Experience Manager 6.5 foundation](/help/sites-deploying/home.md)和我们的托管服务部署模型，或深入了解我们在此版本中新增的[功能视频简介。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+进一步了解 [Adobe Experience Manager 6.5基金会](/help/sites-deploying/home.md) 以及我们的托管服务部署模型，或深入研究我们的 [此版本中新增了有关功能的视频简介。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
