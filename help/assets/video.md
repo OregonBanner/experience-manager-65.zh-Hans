@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c1eb9fb56cf9024ff58adec644a40e3def52e62a
+source-git-commit: e8270ad3f658236184467eda9f25c2ec0e6787ba
 workflow-type: tm+mt
-source-wordcount: '11747'
+source-wordcount: '11766'
 ht-degree: 18%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 18%
       * 详细了解 [组织数字资产](/help/assets/organize-assets.md).
    * 将主源视频上传到文件夹。 将视频添加到文件夹后，这些视频会根据您分配给文件夹的视频处理配置文件进行编码。
 
-      * Dynamic Media主要支持长度为30分钟的简短视频。
+      * Dynamic Media主要支持长度最长为30分钟且最小分辨率大于50 x 50的短格式视频。
       * 您可以上传每个最大15 GB的视频文件。
       * [上传视频](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 了解有关[支持的输入文件格式](/help/assets/assets-formats.md#supported-multimedia-formats)的更多信息。
@@ -193,7 +193,7 @@ Dynamic MediaHTML5视频查看器预设是强大的视频播放器。您可以�
 
 对于桌面和移动设备自适应视频流播放，用于比特率切换的视频基于自适应视频集中的所有MP4视频。
 
-使用HLS或渐进式视频下载时出现视频播放。 在以前版本的Experience Manager（如6.0、6.1和6.2）中，视频通过HTTP进行流处理。
+使用HLS或渐进式视频下载发生视频播放。 在以前版本的Experience Manager（如6.0、6.1和6.2）中，视频通过HTTP进行流处理。
 
 但是，在Experience Manager6.3及更高版本中，视频现在通过HTTPS（即HLS）进行流处理，因为DM网关服务URL也始终使用HTTPS。 此默认行为不会对客户造成任何影响。 也就是说，除非浏览器不支持，否则视频流将始终通过HTTPS进行。 （请参阅下表）。 因此，
 
@@ -300,7 +300,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 在对视频文件进行编码时，请尽可能使用最高质量的源视频文件。避免使用先前已编码的视频文件，因为这样的文件已经压缩，进一步编码会导致创建的视频质量不佳。
 
-* Dynamic Media支持长度最长为30分钟的短格式视频。
+* Dynamic Media主要支持长度最长为30分钟且最小分辨率大于50 x 50的短格式视频。
 * 您可以上载每个最大15 GB的主源视频文件。
 
 下表描述了源视频文件在编码之前必须具有的推荐大小、宽高比和最小比特率：
