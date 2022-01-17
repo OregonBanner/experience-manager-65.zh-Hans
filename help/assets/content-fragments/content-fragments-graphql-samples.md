@@ -2,10 +2,11 @@
 title: 了解如何将GraphQL与AEM结合使用 — 示例内容和查询
 description: 了解如何通过探索示例内容和查询，将GraphQL与AEM结合使用来无头地提供内容。
 feature: Content Fragments,GraphQL API
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
+exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
+source-git-commit: 1a3d5a6b3b4f7af67d6a62cdaab484daa536cb63
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,9 +27,9 @@ ht-degree: 6%
 
 要提供相关帮助，请参阅：
 
-* [示例内容片段结构](#content-fragment-structure-graphql)
+* A [内容片段结构示例](#content-fragment-structure-graphql)
 
-* 以及一些[示例GraphQL查询](#graphql-sample-queries) ，这些查询基于示例内容片段结构（内容片段模型和相关内容片段）。
+* 有些 [示例GraphQL查询](#graphql-sample-queries)，基于示例内容片段结构（内容片段模型和相关内容片段）。
 
 
 ## GraphQL — 使用示例内容片段结构的示例查询 {#graphql-sample-queries-sample-content-fragment-structure}
@@ -37,17 +38,17 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->根据您的实例，您可以直接访问AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)随附的[Graph *i* QL接口，以提交和测试查询。
+>根据您的实例，您可以直接访问 [AEM GraphQL API附带的GraphiQL接口](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) 用于提交和测试查询。
 >
 >例如：`http://localhost:4502/content/graphiql.html`
 
 >[!NOTE]
 >
->示例查询基于[示例内容片段结构，用于GraphQL](#content-fragment-structure-graphql)
+>示例查询基于 [与GraphQL一起使用的示例内容片段结构](#content-fragment-structure-graphql)
 
 ### 示例查询 — 所有可用架构和数据类型 {#sample-all-schemes-datatypes}
 
-这将返回所有可用架构的所有`types`。
+这将返回所有 `types` （适用于所有可用架构）。
 
 **示例查询**
 
@@ -223,7 +224,7 @@ ht-degree: 6%
 
 ### 示例查询 — 所有城市的名称 {#sample-names-all-cities}
 
-这是一个简单的查询，用于返回`city`架构中所有条目的`name`。
+这是一个简单的查询，用于返回 `name`的所有条目 `city`架构。
 
 **示例查询**
 
@@ -314,7 +315,7 @@ query {
 
 ### 示例查询 — 具有命名变体的所有城市 {#sample-cities-named-variation}
 
-如果为`city`柏林创建一个名为“柏林中心”(`berlin_centre`)的新变体，则可以使用查询返回该变体的详细信息。
+如果创建一个名为“柏林中心”(`berlin_centre`)，对于 `city` 然后，您可以使用查询返回变体的详细信息。
 
 **示例查询**
 
@@ -485,7 +486,7 @@ query {
 
 ### 示例查询 — 名称为“Jobs”或“Smith”的所有人员 {#sample-all-persons-jobs-smith}
 
-对于名称为`Jobs`或`Smith`的任何文件，此操作都会过滤所有`persons`。
+这将过滤所有 `persons` 对于任何 `Jobs`或 `Smith`.
 
 **示例查询**
 
@@ -539,7 +540,7 @@ query {
 
 ### 示例查询 — 所有名称不为“Jobs”的人员 {#sample-all-persons-not-jobs}
 
-对于名称为`Jobs`或`Smith`的任何文件，此操作都会过滤所有`persons`。
+这将过滤所有 `persons` 对于任何 `Jobs`或 `Smith`.
 
 **示例查询**
 
@@ -604,9 +605,9 @@ query {
 }
 ```
 
-### 示例查询 — 以特定前缀开头的所有冒险`_path` {#sample-wknd-all-adventures-cycling-path-filter}
+### 示例查询 — 所有其 `_path` 以特定前缀开头 {#sample-wknd-all-adventures-cycling-path-filter}
 
-所有`adventures`，其中`_path`以特定前缀(`/content/dam/wknd/en/adventures/cycling`)开头。
+全部 `adventures` where `_path` 以特定前缀(`/content/dam/wknd/en/adventures/cycling`)。
 
 **示例查询**
 
@@ -651,7 +652,7 @@ query {
 
 ### 示例查询 — 位于德国或瑞士的人口介于400000和999999之间的所有城市 {#sample-all-cities-d-ch-population}
 
-此处过滤了字段组合。 `AND`（隐式）用于选择`population`范围，而`OR`（显式）用于选择所需的城市。
+此处过滤了字段组合。 安 `AND` （隐式）用于选择 `population`范围，而 `OR` （显式）用于选择所需的城市。
 
 **示例查询**
 
@@ -714,7 +715,7 @@ query {
 
 ### 示例查询 — 名称中包含SAN的所有城市，无论大小写如何 {#sample-all-cities-san-ignore-case}
 
-此查询将询问名称中包含`SAN`的所有城市，而不考虑任何情况。
+这个查询会询问所有 `SAN` 名称中，不考虑任何情况。
 
 **示例查询**
 
@@ -765,7 +766,7 @@ query {
 
 ### 示例查询 — 对包含项目且必须至少发生一次的数组进行筛选 {#sample-array-item-occur-at-least-once}
 
-此查询会在数组上筛选项(`city:na`)，且该项必须至少出现一次。
+此查询对具有项目(`city:na`)，且必须至少发生一次。
 
 **示例查询**
 
@@ -875,7 +876,7 @@ query {
 
 ### 嵌套内容片段的查询示例 — 所有至少有一名员工的公司名称都为“Smith” {#sample-companies-employee-smith}
 
-此查询说明了对`name` &quot;Smith&quot;的任意`person`的筛选，以及从两个嵌套片段（`company`和`employee`）返回的信息。
+此查询说明了对任何 `person` of `name` “Smith”，从两个嵌套片段返回信息 —  `company` 和 `employee`.
 
 **示例查询**
 
@@ -941,7 +942,7 @@ query {
 
 ### 嵌套内容片段的查询示例 — 所有员工均获得“Gamestar”奖的公司 {#sample-all-companies-employee-gamestar-award}
 
-此查询说明了跨三个嵌套片段（`company`、`employee`和`award`）的筛选。
+此查询说明了跨三个嵌套片段的筛选 —  `company`, `employee`和 `award`.
 
 **示例查询**
 
@@ -1033,7 +1034,7 @@ query {
 
 ### 元数据查询示例 — 列出标题为GB的奖项的元数据 {#sample-metadata-awards-gb}
 
-此查询说明了跨三个嵌套片段（`company`、`employee`和`award`）的筛选。
+此查询说明了跨三个嵌套片段的筛选 —  `company`, `employee`和 `award`.
 
 **示例查询**
 
@@ -1109,8 +1110,8 @@ query {
 
 此示例查询询问：
 
-* 适用于`article`类型的所有内容片段
-* 具有`path`和`author`属性。
+* 适用于所有类型的内容片段 `article`
+* 和 `path`和 `author` 属性。
 
 **示例查询**
 
@@ -1129,7 +1130,7 @@ query {
 
 此查询询问：
 
-* 适用于`adventure`类型的所有内容片段
+* 适用于所有类型的内容片段 `adventure`
 * 元数据
 
 **示例查询**
@@ -1190,7 +1191,7 @@ query {
 
 此示例查询询问：
 
-* 适用于特定路径上类型为`article`的单个内容片段
+* （对于类型为的单个内容片段） `article` 在特定路径上
    * 其中，所有格式的内容：
       * HTML
       * Markdown
@@ -1244,12 +1245,12 @@ query {
 
 此查询询问：
 
-* 适用于特定路径上类型为`article`的单个内容片段
+* （对于类型为的单个内容片段） `article` 在特定路径上
    * 在该路径中，引用（嵌套）片段的路径和作者
 
 >[!NOTE]
 >
->字段`referencearticle`的数据类型为`fragment-reference`。
+>字段 `referencearticle` 具有数据类型 `fragment-reference`.
 
 **示例查询**
 
@@ -1272,12 +1273,12 @@ query {
 
 此查询询问：
 
-* 适用于`bookmark`类型的多个内容片段
-   * 具有片段对特定模型类型`article`和`adventure`的其他片段的引用
+* （适用于类型的多个内容片段） `bookmark`
+   * 具有对特定模型类型的其他片段的片段引用 `article` 和 `adventure`
 
 >[!NOTE]
 >
->字段`fragments`的数据类型为`fragment-reference`，并选择了模型`Article`、`Adventure`。
+>字段 `fragments` 具有数据类型 `fragment-reference`，与模型 `Article`, `Adventure` 选项。
 
 ```xml
 {
@@ -1303,16 +1304,16 @@ query {
 此查询有两种类型：
 
 1. 返回所有内容引用。
-1. 返回类型`attachments`的特定内容引用。
+1. 返回类型的特定内容引用 `attachments`.
 
 这些查询会询问：
 
-* 适用于`bookmark`类型的多个内容片段
+* （适用于类型的多个内容片段） `bookmark`
    * 包含对其他片段的内容引用
 
 #### 包含预取引用的多个内容片段的查询示例 {#sample-wknd-multiple-fragments-prefetched-references}
 
-以下查询使用`_references`返回所有内容引用：
+以下查询通过使用 `_references`:
 
 ```xml
 {
@@ -1348,11 +1349,11 @@ query {
 
 #### 带有附件的多个内容片段的查询示例 {#sample-wknd-multiple-fragments-attachments}
 
-以下查询返回所有`attachments` - `content-reference`类型的特定字段（子组）：
+以下查询返回所有 `attachments`  — 类型的特定字段（子组） `content-reference`:
 
 >[!NOTE]
 >
->字段`attachments`具有数据类型`content-reference`，并选择了各种表单。
+>字段 `attachments` 具有数据类型 `content-reference`，并选择各种表单。
 
 ```xml
 {
@@ -1389,12 +1390,12 @@ query {
 
 此查询询问：
 
-* 适用于特定路径上类型为`bookmark`的单个内容片段
+* （对于类型为的单个内容片段） `bookmark` 在特定路径上
    * 其中，RTE内联引用
 
 >[!NOTE]
 >
->在`_references`中补充了RTE内联引用。
+>在 `_references`.
 
 **示例查询**
 
@@ -1435,8 +1436,8 @@ query {
 
 此查询询问：
 
-* 适用于特定路径上类型为`article`的单个内容片段
-   * 其中，与变量相关的数据：`variation1`
+* （对于类型为的单个内容片段） `article` 在特定路径上
+   * 其中，与变量相关的数据： `variation1`
 
 **示例查询**
 
@@ -1461,7 +1462,7 @@ query {
 
 此查询询问：
 
-* 对于具有特定变量的`article`类型的内容片段：`variation1`
+* （对于类型的内容片段） `article` 具有特定变量： `variation1`
 
 **示例查询**
 
@@ -1486,7 +1487,7 @@ query {
 
 此查询询问：
 
-* 适用于`fr`区域设置中类型为`article`的内容片段
+* （对于类型的内容片段） `article` 在 `fr` 语言
 
 **示例查询**
 
@@ -1511,9 +1512,9 @@ query {
 
 示例查询基于以下结构，该结构使用：
 
-* 一个或多个[示例内容片段模型](#sample-content-fragment-models-schemas) — 构成GraphQL架构的基础
+* 一个或多个， [内容片段模型示例](#sample-content-fragment-models-schemas)  — 构成GraphQL架构的基础
 
-* [基于上](#sample-content-fragments) 述模型的示例内容片段
+* [示例内容片段](#sample-content-fragments) 基于上述模型
 
 ### 内容片段模型示例（架构） {#sample-content-fragment-models-schemas}
 
@@ -1521,7 +1522,7 @@ query {
 
 * [公司](#model-company)
 -> [人员](#model-person)
-    -> [奖](#model-award)
+    -> [奖项](#model-award)
 
 * [城市](#model-city)
 
@@ -1573,9 +1574,9 @@ query {
 
 | 公司名称 | 首席执行官 | 员工 |
 |--- |--- |--- |
-| Apple | 史蒂夫·乔布斯 | 杜克·马什<br>Max Caulfield |
-|  小马公司 | 亚当·斯密 | Lara Croft<br>刀刀刀刀刀 |
-| NextStep Inc. | 史蒂夫·乔布斯 | Joe Smith<br>Abe Lincoln |
+| Apple | 史蒂夫·乔布斯 | 杜克马什<br>麦斯·考尔菲尔德 |
+|  小马公司 | 亚当·斯密 | 拉腊·克罗夫特<br>刀具刀片 |
+| NextStep Inc. | 史蒂夫·乔布斯 | 乔·史密斯<br>阿部·林肯 |
 
 #### 人员 {#fragment-person}
 
@@ -1583,7 +1584,7 @@ query {
 |--- |--- |--- |
 | 林肯 |  阿部 |  |
 | 史密斯 | Adam |   |
-| 斯莱德 |  刀具 |  Gameblitz<br>Gamestar |
+| 斯莱德 |  刀具 |  加梅布利茨<br>Gamestar |
 | 马什 |  杜克 |   |   |
 |  史密斯 |  乔 |   |
 | 克罗夫特 |  拉拉 | Gamestar |
@@ -1603,9 +1604,9 @@ query {
 | 名称 | 国家/地区 | 人口 | 类别 |
 |--- |--- |--- |--- |
 | Basel | 瑞士 | 172258 | 城市：emea |
-| 柏林 | 德国 | 3669491 | city:capital<br>city:emea |
-| 布加勒斯特 | 罗马尼亚 | 1821000 |  city:capital<br>city:emea |
-| San Francisco |  美国 |  883306 |  city:beach<br>city:na |
+| 柏林 | 德国 | 3669491 | 城市：资本<br>城市：emea |
+| 布加勒斯特 | 罗马尼亚 | 1821000 |  城市：资本<br>城市：emea |
+| San Francisco |  美国 |  883306 |  城市：海滩<br>城市：纳 |
 | 圣何塞 |  美国 |  102635 |  城市：纳 |
 | 斯图加特 |  德国 |  634830 |  城市：emea |
-|  苏黎世 |  瑞士 |  415367 |  city:capital<br>city:emea |
+|  苏黎世 |  瑞士 |  415367 |  城市：资本<br>城市：emea |
