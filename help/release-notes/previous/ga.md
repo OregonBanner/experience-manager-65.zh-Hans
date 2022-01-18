@@ -1,7 +1,7 @@
 ---
 title: 的常规发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 说明概述了发行信息、新增功能、安装方式以及详细的更改列表。'
-source-git-commit: 9b15215a68495a800e94a58b523e1b7baa0c0203
+source-git-commit: 37f1df9f9421ff18fff45723b6eb081f0192520a
 workflow-type: tm+mt
 source-wordcount: '4696'
 ht-degree: 57%
@@ -359,7 +359,7 @@ AEM 6.5 引入了以下功能和增强功能，以提高 AEM 用户、DAM 角色
 
 有关更多信息，请参阅 [Brand Portal的新增功能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=zh-Hans).
 
-#### 连接的资产 {#connectedassets}
+#### 连接的资源 {#connectedassets}
 
 在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和所需的数字资产位于不同的容器中。
 
@@ -472,12 +472,12 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 
 * AEM 现代化工具套件，例如对话框转换工具。（[GitHub 项目](https://github.com/adobe/aem-modernize-tools)）
 
-**资产**
+**资源**
 
 * 用于添加增强型 PDF 栅格化程序的软件包（[了解更多](/help/assets/aem-pdf-rasterizer.md)）
 * 用于添加扩展 RAW 图像支持的软件包（[了解更多](/help/assets/camera-raw.md)）
 
-**表单**
+**Forms**
 
 * [用于 AEM Forms 功能的软件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [AEM Forms OSGi客户端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
@@ -552,9 +552,9 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. 保存文件并重新启动AEM实例。
 
-## 站点 {#sites}
+### 站点 {#sites}
 
-* **使用页面版本**:如果页面已移动，则无法再对移动前创建的任何版本执行预览。
+* **使用页面版本**: [如果页面已移动，则无法再对移动前创建的任何版本执行预览](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
 
 ### 资产 {#assets}
 
