@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 说明概述了发行信息、新增功能、安装方式以及详细的更改列表。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 13c76122a38e32783bca248597a16f0512dae44c
+source-git-commit: 1cfa01544ad8bf0adafd55e696a6844a8edf1007
 workflow-type: tm+mt
-source-wordcount: '3906'
+source-wordcount: '3894'
 ht-degree: 4%
 
 ---
@@ -35,8 +35,6 @@ ht-degree: 4%
 * 用户体验增强功能可显示文件夹中存在的资产数量。 对于文件夹中超过1000个资产， [!DNL Assets] 显示1000+。
 
    ![文件夹中的资产数量](/help/assets/assets/browse-folder-number-of-assets.png)
-
-* 您现在可以在卡片视图和列视图中渲染排序选项。
 
 * 业务配置文件支持Adobe资产链接。
 
@@ -368,7 +366,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **书信**
 
-* 在HTML视图中提交信件并将其重新打开时，文本文档片段的位置不会保持相同(NPR-37307)。
+* 在HTML视图中提交信件并将其重新打开时，文本文档片段的位置不会保持不变(NPR-37307)。
 
 **表单工作流**
 
