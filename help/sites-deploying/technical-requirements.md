@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 610e37571df168bba91f2c2fe5b41e2f70ba748e
+source-git-commit: ab89683610a896e73c219c1fde4dde16dd8fbec6
 workflow-type: tm+mt
-source-wordcount: '3345'
+source-wordcount: '3358'
 ht-degree: 1%
 
 ---
@@ -165,16 +165,18 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 | 将二进制文件存储在文件系统上的TAR文件中 `[1]` | 二进制文件 | Z:不支持生产 |
 | Amazon S3 | 二进制文件 | 答：支持 |
 | Microsoft Azure Blob Storage | 二进制文件 | 答：支持 |
-| MongoDB Enterprise 4.0 | 存储库 | 答：支持 `[2, 3]` |
+| MongoDB Enterprise 4.2 | 存储库 | 答：支持 `[2, 3, 4]` |
+| MongoDB Enterprise 4.0 | 存储库 | Z:不支持 |
 | MongoDB Enterprise 3.6 | 存储库 | Z:不支持 |
 | MongoDB Enterprise 3.4 | 存储库 | Z:不支持 |
-| IBM DB2 10.5 | 存储库和Forms数据库 | R:受限支持 `[4]` |
+| IBM DB2 10.5 | 存储库和Forms数据库 | R:受限支持 `[5]` |
 | Oracle数据库12c(12.1.x) | 存储库和Forms数据库 | R:受限支持 |
 | Microsoft SQL Server 2016 | Forms数据库 | 答：支持 |
 | **Apache Lucene（Quickstart内置）** | 搜索服务 | 答：支持 |
 | Apache Solr | 搜索服务 | 答：支持 |
 
 1. “文件系统”包括符合POSIX的块存储。 这包括网络存储技术。 请注意，文件系统性能可能会有所不同，并会影响整体性能。 建议将测试AEM与网络/远程文件系统结合加载。
+1. MongoDB Enterprise 4.2至少需要AEM 6.5 SP9。
 1. AEM不支持MongoDB Sharding。
 1. 仅支持MongoDB Storage Engine WiredTiger。
 1. 支持AEM Forms升级客户。 新安装不支持。
