@@ -3,9 +3,9 @@ title: AEM GraphQL API，用于内容片段
 description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 6c75af3957c319c38177cd62c90e781a982ba91b
+source-git-commit: e7a2a4ad89a58e5fad0acb521adb100cf0bcd1d8
 workflow-type: tm+mt
-source-wordcount: '3919'
+source-wordcount: '3942'
 ht-degree: 1%
 
 ---
@@ -586,6 +586,10 @@ query {
 
    * use `... on`
       * 请参阅 [包含内容引用的特定模型的内容片段的示例查询](#sample-wknd-fragment-specific-model-content-reference)
+
+* 在查询嵌套片段时回退：
+
+   * 如果请求的变量在嵌套片段中不存在，则 **主控** 将返回变量。
 
 ## 持久查询（缓存） {#persisted-queries-caching}
 
