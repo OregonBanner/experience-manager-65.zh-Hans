@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: f1c8660d36a1e84b57d4d1a65a54d153bc373dc6
+source-git-commit: b4c3f4c393d9b34acaadc375d20738ead42e481d
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2979'
 ht-degree: 26%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 26%
 在使用或配置此功能之前，请确保：
 
 * 用户是每个部署中相应用户组的一部分。
-* 对于 [!DNL Adobe Experience Manager] 部署类型中，满足支持的标准之一。 [!DNL Experience Manager] 6.5 [!DNL Assets] 与 [!DNL Experience Manager] as a Cloud Service。 有关此功能在中的工作方式的更多信息 [!DNL Experience Manager] as a [!DNL Cloud Service]，请参阅 [中的连接资产 [!DNL Experience Manager] as a [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
+* 对于 [!DNL Adobe Experience Manager] 部署类型中，满足支持的标准之一。 [!DNL Experience Manager] 6.5 [!DNL Assets] 与 [!DNL Experience Manager] as a Cloud Service。 有关此功能在中的工作方式的更多信息 [!DNL Experience Manager] as a [!DNL Cloud Service]，请参阅 [Experience Manageras a Cloud Service中的连接资产](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] as a [!DNL Cloud Service] | [!DNL Experience Manager] 6.5 [!DNL Sites] 在AMS上 | [!DNL Experience Manager] 6.5 [!DNL Sites] 内部部署 |
    |---|---|---|---|
