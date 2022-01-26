@@ -1,8 +1,6 @@
 ---
 title: 在Dynamic Media中使用3D资产
-seo-title: Working with 3D assets in Dynamic Media
 description: 了解如何在Dynamic Media中使用3D资产
-seo-description: Learn how to work with 3D assets in Dynamic Media
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
@@ -10,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 9f08d529af0ec37d2bd2a4f479a172c6c950c47d
+source-git-commit: a13d6d10dd10605d2cb83a8622fae3a7e2590c93
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2317'
 ht-degree: 4%
 
 ---
@@ -27,7 +25,7 @@ Dynamic Media让您可以上传、管理、查看和交付3D资产，充当沉�
 
 在Dynamic Media中使用3D资产无需其他配置。
 
-![3D鞋](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
+![3D鞋](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png) *三维鞋的细节。*
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
@@ -43,6 +41,10 @@ Dynamic Media支持以下3D格式。
 | OBJ | WaveFront 3D对象文件 | application/x-tgif |  |
 | STL | 立体成形 | application/vnd.ms-pki.stl |  |
 | USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | *仅支持摄取；无法查看或进行交互。* USDZ是一种专有的3D格式，Safari和iOS设备可在本机查看该格式。 |
+
+<!-- >[!NOTE]
+>
+>The 3D Media WCM component and 3D preview on an asset's Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x). -->
 
 ## 快速入门：Dynamic Media3D资产 {#quick-start-three-d}
 
@@ -86,7 +88,7 @@ Dynamic Media支持以下3D格式。
 
 ## 关于查看和与3D资产交互 {#viewing-three-d-assets}
 
-本节将介绍两种不同的查看和与3D资产交互的方法：从资产详细信息页面和站点的3D媒体组件中。
+本节将介绍两种不同的查看和与3D资产交互的方法：从资产详细信息页面和Experience Manager Sites的3D媒体组件中。
 
 交互式3D查看器包括一组交互式相机控件等，这些控件允许您绕行、缩放和平移3D资产。
 
