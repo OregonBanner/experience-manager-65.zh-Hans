@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEM Content and Commerce
 breadcrumb-title: Commerce 指南
 user-guide-description: 了解如何使用和管理 AEM Content and Commerce。
-source-git-commit: 5678d20fa0a7e8a709b02a2f6cbbeffbd4a26cbd
+source-git-commit: f3e286c7b5404812655f3b257de17be7bfde7487
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 33%
+source-wordcount: '120'
+ht-degree: 70%
 
 ---
 
@@ -18,21 +18,25 @@ ht-degree: 33%
 + [简介和概述](cif/introduction.md)
 + 集成 {#integrations}
    + [Adobe Commerce](cif/integrating/magento.md)
-   + [第三方商务解决方案](cif/integrating/third-party.md)
+   + [第三方商业解决方案](cif/integrating/third-party.md)
 + AEM Storefront {#storefront}
    + [入门](cif/getting-started.md)
+   + 创作 {#authoring}
+      + [Commerce 体验](cif/authoring/authoring-commerce-experiences.md)
+      + [产品 Cockpit](cif/authoring/product-cockpit.md)
+      + [用关联内容扩充产品数据](cif/authoring/enrich-product-associated-content.md)
    + 管理 {#administering}
-      + [多商店设置](cif/configuring/multi-store-setup.md)
-      + [使用多模板](cif/configuring/multi-template-usage.md)
-      + [为SEO配置URL](cif/configuring/advanced-url-configuration.md)
+      + [多存储设置](cif/configuring/multi-store-setup.md)
+      + [多模板使用](cif/configuring/multi-template-usage.md)
+      + [配置 SEO 的 URL](cif/configuring/advanced-url-configuration.md)
       + [缓存选项](cif/configuring/caching.md)
-      + [自定义HTTP头](/help/commerce/cif/configuring/custom-http-headers.md)
+      + [自定义 HTTP 标头](/help/commerce/cif/configuring/custom-http-headers.md)
    + 开发 {#developing}
       + [使用AEM进行开发](cif/develop.md)
-      + [样式CIF组件](cif/customizing/style-cif-component.md)
-      + [自定义CIF组件](cif/customizing/customize-cif-components.md)
+      + [设置 CIF 组件的样式](cif/customizing/style-cif-component.md)
+      + [自定义 CIF 组件](cif/customizing/customize-cif-components.md)
       + [使用CIF目录选取器](cif/customizing/use-cif-pickers.md)
-+ [Adobe CommercePWA Studio](cif/pwa-studio/getting-started.md)
++ [Adobe Commerce PWA Studio](cif/pwa-studio/getting-started.md)
 + [迁移](cif/migration.md)
 + 发行说明 {#release-notes}
    + [2021年](cif/release-notes/release-notes-2021.md)

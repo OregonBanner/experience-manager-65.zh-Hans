@@ -1,10 +1,10 @@
 ---
 title: AEM — 使用商务集成框架的商务集成常见问题解答
 description: AEM — 使用商务集成框架的商务集成常见问题解答
-exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45,aece1190-9530-4060-9b08-022da7068987
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 ## 1. CIF GraphQL是仅用于商务，还是可用于查询AEM上创作的内容？ JCR?
 
-Adobe已采用Magento的GraphQL API作为其官方商务API，用于所有与商务相关的数据。 因此，AEM使用GraphQL通过I/O运行时与Magento和任何商务引擎交换商务数据。 此GraphQL API与AEM GraphQL API无关，可用于访问内容片段。
+Adobe已采用Adobe Commerce的GraphQL API作为其官方商务API，用于所有与商务相关的数据。 因此，AEM使用GraphQL通过I/O运行时与Adobe Commerce以及任何商务引擎交换商务数据。 此GraphQL API与AEM GraphQL API无关，可用于访问内容片段。
 
-## 2.能否通过Adobe商务(Magento)管理员从AEM中存储和引用产品资产（图像）？ 如何使用Dynamic Media中的资产？
+## 2.能否通过Adobe Commerce管理员从AEM中存储和引用产品资产（图像）？ 如何使用Dynamic Media中的资产？
 
-没有正式的AEM Assets -Magento集成可用。 [marketplace](https://marketplace.magento.com/bounteous-dam.html)上有一个合作伙伴连接器。
+没有正式的AEM Assets - Adobe Commerce集成可用。 在 [市场](https://marketplace.magento.com/bounteous-dam.html).
 
-或者，作为解决方法，您可以在AEM Assets中存储产品资产（图像），但您必须手动将资产URL存储在Magento中。 Dynamic Media现在是AEM Assets的一部分，将以同样的方式工作。
+或者，作为解决方法，您可以在AEM Assets中存储产品资产（图像），但必须在Adobe Commerce中手动存储资产URL。 Dynamic Media现在是AEM Assets的一部分，将以同样的方式工作。
 
 ## 3.在何处部署商务解决方案是否重要？ （内部或云中）
 
@@ -39,7 +39,7 @@ Adobe已采用Magento的GraphQL API作为其官方商务API，用于所有与商
 
 ## 7. PIM在这个框架中如何发挥作用？
 
-PIM数据将通过GraphQL请求公开给AEM和客户端。 我们的建议是将PIM与商务引擎(Magento或其他)集成，以便随后可以从商务引擎中检索PIM数据。
+PIM数据将通过GraphQL请求公开给AEM和客户端。 我们的建议是将PIM与商务引擎(Adobe Commerce或其他)集成，以便随后可以从商务引擎中检索PIM数据。
 
 ## 8.您是否还通过Dispatcher缓存定价和其他数据。 这是否会经常引发缓存失效问题？
 
@@ -47,7 +47,7 @@ PIM数据将通过GraphQL请求公开给AEM和客户端。 我们的建议是将
 
 ## 9. AEM Dispatcher的缓存失效如何与AEM和商务一起使用？
 
-我们建议为Dispatcher上缓存的页面设置基于TTL的缓存失效。 对于价格或库存等动态信息，我们建议渲染客户端日期。 有关基于TTL的缓存失效的更多信息，请参阅[AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
+我们建议为Dispatcher上缓存的页面设置基于TTL的缓存失效。 对于价格或库存等动态信息，我们建议渲染客户端日期。 有关基于TTL的缓存失效的详细信息，请参阅 [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
 
 ## 10.是否建议使用商务在AEM内容中进行统一搜索？
 
@@ -59,7 +59,7 @@ CIF提供搜索栏和搜索结果组件。 搜索栏组件向商务解决方案�
 
 ## 12.如何在MSM或翻译中使用产品数据？
 
-产品数据通常已在PIM或Magento中翻译。 AEM -Magento集成支持与多个Magento存储和存储视图的连接。 在MSM设置中，通常有一个AEM站点链接到一个Magento存储视图。
+产品数据通常已在PIM或Adobe Commerce中翻译。 AEM - Adobe Commerce集成支持与多个Adobe Commerce商店和商店视图的连接。 在MSM设置中，通常有一个AEM站点链接到一个Adobe Commerce存储视图。
 
 ## 13.是否有办法用商业文本增强产品数据？ 你在哪里做？ 在AEM中还是在商务解决方案中？
 
@@ -67,12 +67,12 @@ CIF提供搜索栏和搜索结果组件。 搜索栏组件向商务解决方案�
 
 ## 14.在整个表示层使用AEM时，我们如何确保PCI合规性？
 
-我们建议使用抽象的支付方法。 这使得浏览器客户端与支付网关提供商直接通信，从而Adobe或商业解决方案都不能保存或传递持卡人数据。 这种方法只需要3级PCI合规性。 但是，还有一些其他事项需要考虑完全符合PCI标准，例如员工如何与系统和数据交互。 有关MagentoPCI合规性的详细信息，请参阅<https://magento.com/pci-compliance>
+我们建议使用抽象的支付方法。 这使得浏览器客户端与支付网关提供商直接通信，从而Adobe或商业解决方案都不能保存或传递持卡人数据。 这种方法只需要3级PCI合规性。 但是，还有一些其他事项需要考虑完全符合PCI标准，例如员工如何与系统和数据交互。 有关Adobe Commerce PCI合规性的详细信息，请参阅 [PCI合规性](https://business.adobe.com/products/magento/pci-compliance.html)
 
-## 15.如果我使用AEM和Magento云版本，此联合解决方案是否符合PCI标准？
+## 15.如果我使用AEM和Adobe Commerce云版本，此联合解决方案是否符合PCI标准？
 
 是的，可应要求提供自我评估调查表D和合规性证明。
 
 ## 16.如何请求I/O运行时试用许可证？
 
-您可以在此处](https://adobeio.typeform.com/to/obqgRm)请求试用许可证以使用I/O运行时[。
+您可以请求试用许可证以使用I/O运行时 [此处](https://adobeio.typeform.com/to/obqgRm).

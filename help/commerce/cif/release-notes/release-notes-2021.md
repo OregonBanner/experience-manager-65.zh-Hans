@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 98ba3edb3b9e93fa13a0f0418f1b17323d5a7233
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 9%
+source-wordcount: '1314'
+ht-degree: 11%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 | 组件 | 系统要求 |
 |:-------|:-----:|
-| CIF附加组件 | 最低：AEM 6.5.7,Magento2.3.5 GraphQL模式 |
+| CIF附加组件 | 最低：AEM 6.5.7、Adobe Commerce 2.3.5 GraphQL模式 |
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
@@ -31,13 +31,13 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-november}
 
-* 扩展了myAccount组件，这些组件基于Commerce的可扩展Peregrine组件
+* 基于 Commerce 的可扩展 Peregrine 组件的扩展 myAccount 组件
 
-![扩展的myAccount组件](/help/assets/CIF/extended-myAccount-components.png)
+![扩展 myAccount 组件](/help/assets/CIF/extended-myAccount-components.png)
 
-* 作者可以使用其他推荐类型创建临时商务产品Recommendations
+* 作者可以使用其他推荐类型来创建临时 Commerce 产品推荐
 
-* 在AEM Storefront中支持礼品卡
+* 支持 AEM Storefront 中的礼品卡
 
 ## 发行日期：2021年10月
 
@@ -53,7 +53,7 @@ ht-degree: 9%
 
 * 作者可以使用富文本编辑器(RTE)在文本字段中添加指向产品和目录页面的链接。 CIF图标已添加到RTE工具栏中，该工具栏将打开选取器，以便快速搜索并选择产品或类别，而无需离开上下文。
 
-* 现有的弹出式购物车和结帐已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Magento的可扩展Peregrine组件构建的
+* 现有的弹出式购物车和结帐已替换为专用的AEM购物车和结帐页面。 这些页面上的组件是使用Adobe Commerce的可扩展Peregrine组件构建的
 
 * 商户可以使用商务后端在导航中隐藏某些产品目录类别。 CIF导航核心组件遵循商务后端配置“包含在菜单中”来在导航中显示/隐藏类别
 
@@ -195,7 +195,7 @@ ht-degree: 9%
 
 ### 新增功能
 
-* 支持Magento2.4.2
+* 支持Adobe Commerce 2.4.2
 
 ### 改进内容
 

@@ -1,15 +1,15 @@
 ---
-title: 自定义HTTP头
+title: 自定义 HTTP 标头
 description: 配置自定义HTTP头
-source-git-commit: 7d174be35cb99d802e4aeff6f4d955b1b92cab74
+exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 1%
+source-wordcount: '270'
+ht-degree: 3%
 
 ---
 
-
-# 自定义HTTP头 {#custom-http-headers}
+# 自定义 HTTP 标头 {#custom-http-headers}
 
 ## 概述 {#overview}
 
@@ -19,10 +19,9 @@ ht-degree: 1%
 >
 >开发人员始终可以使用GraphQL客户端配置来配置自定义HTTP标头。
 
-
 ## 配置 {#configuration}
 
-要配置自定义HTTP标头，必须先定义它们。 必须首先通过使用OSGi配置将自定义HTTP标头添加到`com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl`服务配置中来定义它们。
+要配置自定义HTTP标头，必须先定义它们。 必须首先通过将自定义HTTP标头添加到 `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl` 使用OSGi配置进行服务配置。
 
 您可以在项目的“Cloud Service配置”页面中配置HTTP标头的值：
 
@@ -34,7 +33,7 @@ ht-degree: 1%
 
 ## 限制 {#restrictions}
 
-虽然该服务允许定义任何标头名称（包括标准名称），但它们将无法进行配置。 换言之，您无法使用此功能覆盖标准HTTP标头。 [此处](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)可找到受限标头名称列表。 除了这些标头之外，还有两个标头不能使用：
+虽然该服务允许定义任何标头名称（包括标准名称），但它们将无法进行配置。 换言之，您无法使用此功能覆盖标准HTTP标头。 可以找到受限标头名称的列表 [此处](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). 除了这些标头之外，还有两个标头不能使用：
 
-* “商店” — CIF用于标识Magento商店
+* “商店” — CIF用于标识Adobe Commerce商店
 * “Preview-Version” — CIF用于检索暂存产品

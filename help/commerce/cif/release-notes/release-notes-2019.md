@@ -1,9 +1,10 @@
 ---
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '978'
 ht-degree: 7%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 7%
 
 ## 发行日期：2019年11月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.7.1 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.6.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -28,9 +29,9 @@ ht-degree: 7%
 
 * Braintree支付支持在AEM Venia商店前端添加。
 
-### {#what-is-improved-november}的改进内容
+### 改进内容 {#what-is-improved-november}
 
-* 类别/产品选取器在多商店设置中增强了，以符合指定的Magento商店视图。
+* 类别/产品选取器在多商店设置中根据指定的Adobe Commerce商店视图进行了增强。
 
 * 基于React的组件可作为npm包使用。 这允许开发人员将React组件包用作新React项目的依赖项，以允许自定义现有组件或开发新的基于React的组件。
 
@@ -38,7 +39,7 @@ ht-degree: 7%
 
 ## 发行日期：2019年10月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.6.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.5.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -48,11 +49,11 @@ ht-degree: 7%
 
 * 产品详细信息页面和产品列表页面的完全可授权的模板。 作者现在可以创建新模板，并将产品列表和产品详细信息组件拖放到这些模板上。 除了添加其他组件之外，作者现在还可以更改这些模板的布局，从而无限制地为它们创建结合营销和商务内容的精彩体验。
 
-* 所有对作者友好的CIF核心组件均已得到增强，可支持[AEM样式系统](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)。 为产品列表组件提供了示例样式。
+* 所有对作者友好的CIF核心组件均已得到增强，可支持 [AEM Style System](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html). 为产品列表组件提供了示例样式。
 
 * 用于帐户管理的基于React的客户端组件。 此版本支持以下功能：登录、忘记密码和创建帐户。
 
-### {#what-is-improved-october}的改进内容
+### 改进内容 {#what-is-improved-october}
 
 * 产品详细信息和产品列表组件已得到增强，可显示虚拟数据，以便当这些组件放置在模板/页面上时，为作者提供布局预览。
 
@@ -60,7 +61,7 @@ ht-degree: 7%
 
 ## 发行日期：2019年9月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.5.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.4.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -76,13 +77,13 @@ ht-degree: 7%
 
 * 结帐组件包括地址表单、付款选择和发运方法选择。
 
-### {#what-is-improved-september}的改进内容
+### 改进内容 {#what-is-improved-september}
 
 * 产品Teaser和产品轮播组件支持产品变体。
 
 ## 发行日期：2019年8月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.4.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.3.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -94,7 +95,7 @@ ht-degree: 7%
 
 * CIF组件与“Venia”特定CSS样式相分离，以允许开发人员应用其选择的CSS样式。
 
-* 多存储/站点功能，允许在多个AEM站点结构上使用CIF核心组件，并且允许底层的GraphQL客户端实施连接到不同的Magento存储/存储视图。
+* 多存储/站点功能，允许在多个AEM站点结构上使用CIF核心组件，并且允许底层的GraphQL客户端实施连接到不同的Adobe Commerce存储/存储视图。
 
 * 通过HTTPGET为某些GraphQL查询启用了GraphQL缓存，以缩短响应时间。
 
@@ -104,13 +105,13 @@ ht-degree: 7%
 
 * 用于允许作者在AEM页面上放置并链接到AEM页面、产品详细信息页面、产品列表页面或外部链接的按钮。
 
-### {#what-is-improved-august}的改进内容
+### 改进内容 {#what-is-improved-august}
 
-* Magento存储配置已从OSGi移至AEM产品控制台，以使集成设置对作者更友好。
+* Adobe Commerce存储配置已从OSGi移至AEM产品控制台，以使集成设置对作者更友好。
 
 ## 发行日期：2019年7月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.3.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.2.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -130,13 +131,13 @@ ht-degree: 7%
 
 * 服务器端特色类别列表，在AEM页面上显示类别列表。
 
-### {#what-is-improved-july}的改进内容
+### 改进内容 {#what-is-improved-july}
 
-* 支持Magento2.3.2，并且产品控制台中会显示与产品属性相关的错误修复。
+* 支持Adobe Commerce 2.3.2，并且产品控制台中会显示与产品属性相关的错误修复。
 
 ## 发行日期：2019年6月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.2.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.1.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -147,11 +148,10 @@ ht-degree: 7%
 
 * CIF连接器和创作工具（产品控制台、产品选取器和类别选取器）使作者能够在AEM中创建包含商务内容的体验。
 
-* 与Magento2.3.1兼容的CIF核心组件的第一版：
+* 与Adobe Commerce 2.3.1兼容的CIF核心组件的第一版：
    * 产品详细信息
    * 产品列表
    * Product Teaser
    * 导航
    * 产品搜索
    * 购物车(REST)
-

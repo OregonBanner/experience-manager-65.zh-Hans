@@ -1,19 +1,19 @@
 ---
 title: AEM Content and Commerce 2021发行说明
 description: AEM Content and Commerce 2021发行说明
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1328'
 ht-degree: 9%
 
 ---
-
 
 # 商务集成框架GitHub发行概述
 
 ## 发行日期：2020年11月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.6.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.6.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -25,7 +25,7 @@ ht-degree: 9%
 
 * 更新了维尼亚引用店面，以在页脚中使用体验片段。 企业用户可以使用AEM创作工具编辑页脚。
 
-### {#what-is-improved-november}的改进内容
+### 改进内容 {#what-is-improved-november}
 
 * 改进了结帐组件，使购物者能够进入目标国家/地区，以允许美国以外的帐单/送货地址。
 
@@ -35,7 +35,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年10月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.5.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.5.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -45,15 +45,15 @@ ht-degree: 9%
 
 * 新增了类别轮播组件，使企业用户能够将此组件拖放到AEM内容页面上，以使用商务数据扩充内容页面。
 
-* CIF核心组件通过发送商务数据来扩展，以补充Adobe客户端数据层。 Adobe客户端数据层是一种收集数据并将数据传输到数字分析和报告服务器的标准化方法。 有关更多详细信息，请参阅[Adobe客户端数据层](https://github.com/adobe/adobe-client-data-layer/wiki)。
+* CIF核心组件通过发送商务数据来扩展，以补充Adobe客户端数据层。 Adobe客户端数据层是一种收集数据并将数据传输到数字分析和报告服务器的标准化方法。 有关更多详细信息，请参阅 [Adobe客户端数据层](https://github.com/adobe/adobe-client-data-layer/wiki).
 
-* 扩展了产品详细信息页面和产品列表页面，用于自动填充从Magento管理UI中配置的SEO元数据（例如标题、元描述、元关键字）
+* 扩展了产品详细信息和产品列表页面，用于自动填充从Adobe Commerce管理员UI中配置的SEO元数据（例如标题、元描述、元关键字）
 
 * 修复了商务Teaser组件错误。
 
 ## 发行日期：2020年9月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.4.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.4.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -61,7 +61,7 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-september}
 
-* 支持对Magento2.4.0架构的查询。
+* 支持查询Adobe Commerce 2.4.0架构。
 
 * 添加了帐户信息功能，允许购物者更新个人信息。
 
@@ -71,7 +71,7 @@ ht-degree: 9%
 
 * 支持捆绑的产品类型。
 
-* 开发人员可以为产品轮播、相关产品和特色类别列表组件配置HTML标记，以遵循SEO最佳实践。
+* 开发人员可以配置产品轮播、相关产品和特有类别列表组件的HTML标记，以遵循SEO最佳实践。
 
 * 我的帐户错误已修复。
 
@@ -79,7 +79,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年8月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.3.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.3.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -103,7 +103,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年7月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.2.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.2.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -113,13 +113,13 @@ ht-degree: 9%
 
 * CIF Venia参考站点是从CIF原型存储库中提取的，现在是一个独立的GitHub存储库。
 
-* CIF原型与AEM项目原型合并。 对于新项目，请使用[AEM项目原型](https://github.com/adobe/aem-project-archetype)作为起点。
+* CIF原型与AEM项目原型合并。 对于新项目，请使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 作为起点。
 
 * 添加了通讯簿管理，以允许已登录用户管理其地址。
 
 * CIF云配置UI支持发布/取消发布操作。
 
-### {#what-is-improved-july}的改进内容
+### 改进内容 {#what-is-improved-july}
 
 * 登录组件已移至用户下拉列表，以便轻松访问。
 
@@ -129,7 +129,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年6月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.1.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.1.1 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -145,7 +145,7 @@ ht-degree: 9%
 
 * 添加了服务用户映射作为安全要求的一部分，以确保通过服务用户而不是直接处理ACL来访问/conf。 CIF核心组件现在必须使用服务用户来访问配置。
 
-### {#what-is-improved-june}的改进内容
+### 改进内容 {#what-is-improved-june}
 
 * “产品列表”页和“搜索结果”页显示项目总数。 购物者应用过滤器时，项目数会更新。
 
@@ -157,7 +157,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年5月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 1.0.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 1.0.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -165,11 +165,11 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-may}
 
-* 支持对Magento2.3.5架构的查询。
+* 支持查询Adobe Commerce 2.3.5架构。
 
 * 向搜索页面和产品列表页面添加了多面搜索支持，以允许购物者根据产品彩块化过滤搜索结果。
 
-* 添加了新的OSGi服务，用于自定义用于SEO的PDP/PLP URL。 有关更多详细信息，请参阅此[文档](https://github.com/adobe/aem-core-cif-components/wiki/configuration)。
+* 添加了新的OSGi服务，用于自定义用于SEO的PDP/PLP URL。 有关更多详细信息，请参阅 [文档](https://github.com/adobe/aem-core-cif-components/wiki/configuration).
 
 * 在创建云配置时自动创建产品绑定。
 
@@ -181,7 +181,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年4月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.10.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.10.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -189,9 +189,9 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-april}
 
-* 统一和简化CIF连接器的配置设置。 有关更多详细信息，请参阅[快速入门](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)或[新建AEM CIF项目设置](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
+* 统一和简化CIF连接器的配置设置。 有关结帐的更多详细信息 [快速入门](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) 或 [新的AEM CIF项目设置](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
 
-### {#what-is-improved-april}的改进内容
+### 改进内容 {#what-is-improved-april}
 
 * 购物车和结账流程已扩展，可支持注册购物者。
 
@@ -205,7 +205,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年2月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.9.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.9.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -213,13 +213,13 @@ ht-degree: 9%
 
 ### 新增功能 {#what-is-new-february}
 
-* 支持对Magento2.3.4架构的查询。
+* 支持查询Adobe Commerce 2.3.4架构。
 
 * 在类别选取器中添加了搜索支持。
 
 * 在类别列表组件中分页以支持大目录集。
 
-### {#what-is-improved-february}的改进内容
+### 改进内容 {#what-is-improved-february}
 
 * 购物车增强了显示折扣。
 
@@ -231,7 +231,7 @@ ht-degree: 9%
 
 ## 发行日期：2020年1月
 
-| GitHub | 版本号 | 详细发行说明 |
+| GitHub | 版本 | 详细发行说明 |
 |:-------|:-----:|---------------------:|
 | CIF连接器 | 0.8.0 | [发行说明](https://github.com/adobe/commerce-cif-connector/releases) |
 | CIF核心组件 | 0.8.0 | [发行说明](https://github.com/adobe/aem-core-cif-components/releases) |
@@ -247,7 +247,7 @@ ht-degree: 9%
 
 * 提供通用相关产品组件。
 
-### {#what-is-improved-january}的改进内容
+### 改进内容 {#what-is-improved-january}
 
 * 支持在产品Teaser上显示CTA按钮。
 

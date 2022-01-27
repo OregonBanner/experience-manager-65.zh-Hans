@@ -1,9 +1,10 @@
 ---
 title: 缓存和性能
 description: 了解可启用GraphQL和内容缓存以优化商务实施性能的各种配置。
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
@@ -20,9 +21,9 @@ AEM CIF核心组件已内置支持缓存各个组件的GraphQL响应。 此功�
 
 为给定组件配置后，缓存将开始存储由每个缓存配置条目定义的GraphQL查询和响应。 缓存大小和每个条目的缓存持续时间将基于项目进行定义，具体取决于目录数据更改的频率、组件始终显示最新可能数据的关键程度，等等。 请注意，没有任何缓存失效，因此在设置缓存持续时间时要小心。
 
-为组件配置缓存时，缓存名称必须是您在项目中定义的&#x200B;**proxy**&#x200B;组件的名称。
+为组件配置缓存时，缓存名称必须是 **代理** 您在项目中定义的组件。
 
-在客户端发送GraphQL请求之前，它会检查是否已缓存&#x200B;**exact**&#x200B;同一GraphQL请求，并可能返回缓存的响应。 要进行匹配，GraphQL请求必须完全匹配，即查询、操作名称（如果有）、变量（如果有）都必须等于缓存的请求，并且所有可能设置的自定义HTTP标头也必须相同。 例如，Magento`Store`标头必须匹配。
+在客户端发送GraphQL请求之前，它会检查这是否是 **精确** 已缓存同一GraphQL请求，并可能返回缓存的响应。 要进行匹配，GraphQL请求必须完全匹配，即查询、操作名称（如果有）、变量（如果有）都必须等于缓存的请求，并且所有可能设置的自定义HTTP标头也必须相同。 例如，Adobe Commerce `Store` 标头必须匹配。
 
 ### 示例
 
@@ -40,23 +41,23 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:10:3600
 venia/components/structure/navigation:true:10:600
 ```
 
-考虑[Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)时，使用。 请注意组件代理名称`venia/components/structure/navigation`的使用，以及&#x200B;**不** CIF导航组件的名称(`core/cif/components/structure/navigation/v1/navigation`)。
+当考虑 [Venia参考存储](https://github.com/adobe/aem-cif-guides-venia) 中，将使用。 请注意组件代理名称的使用 `venia/components/structure/navigation`和 **not** CIF导航组件的名称(`core/cif/components/structure/navigation/v1/navigation`)。
 
 其他组件的缓存应根据项目进行定义，通常与在调度程序级别配置的缓存相协调。 请记住，这些缓存没有任何活动失效，因此应仔细设置缓存持续时间。 没有任何“一刀切”的值可匹配所有可能的项目和用例。 确保在项目级别定义最符合项目要求的缓存策略。
 
 ## 调度程序缓存 {#dispatcher}
 
-在[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)中缓存AEM页面或片段是任何AEM项目的最佳实践。 通常，它依赖于失效技术来确保在AEM中更改的任何内容在Dispatcher中正确更新。 这是AEM Dispatcher缓存策略的核心功能。
+在中缓存AEM页面或片段 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是任何AEM项目的最佳实践。 通常，它依赖于失效技术来确保在AEM中更改的任何内容在Dispatcher中正确更新。 这是AEM Dispatcher缓存策略的核心功能。
 
-除了纯AEM管理内容CIF之外，页面通常还可以显示通过GraphQL从Magento中动态获取的商务数据。 虽然页面结构本身可能永远不会更改，但商务内容可能会更改，例如，如果某些产品数据（如名称或价格）在Magento中发生更改。
+除了纯AEM管理内容CIF之外，页面通常还可以显示通过GraphQL从Adobe Commerce动态获取的商务数据。 虽然页面结构本身可能永远不会更改，但商务内容可能会更改，例如，如果某些产品数据（如名称或价格）发生更改，则Adobe Commerce中的商务内容可能会更改。
 
-为确保在AEM Dispatcher中缓存CIF页面的时间有限，我们因此建议在AEM Dispatcher中缓存CIF页面时使用[基于时间的缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl)（也称为基于TTL的缓存）。 此功能可以在AEM中使用额外的[ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/)包进行配置。
+为确保CIF页面在AEM Dispatcher中缓存的时间有限，我们建议使用 [基于时间的缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-time-based-cache-invalidation-enablettl) （也称为基于TTL的缓存）。 此功能可以在AEM中使用 [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) 包。
 
 使用基于TTL的缓存，开发人员通常为选定的AEM页面定义一个或多个缓存持续时间。 这可确保在配置的持续时间内，CIF页面仅会缓存在AEM Dispatcher中，并且内容会经常更新。
 
 >[!NOTE]
 >
->虽然AEM Dispatcher可能会缓存服务器端数据，但某些CIF组件（如`product`、`productlist`和`searchresults`组件）通常会在加载页面时在客户端浏览器请求中重新获取产品价格。 这可确保在页面加载时始终获取关键的动态内容。
+>虽然AEM Dispatcher可能会缓存服务器端数据，但某些CIF组件(例如 `product`, `productlist`和 `searchresults` 组件通常会在加载页面时在客户端浏览器请求中重新获取产品价格。 这可确保在页面加载时始终获取关键的动态内容。
 
 ## 其他资源
 
