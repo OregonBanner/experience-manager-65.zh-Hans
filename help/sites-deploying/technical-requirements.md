@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 07fccc7b34a2d74b6e7837ac2f05e2f9d845fba1
+source-git-commit: cda5e0b545903333d928f14e043a931898d87dc3
 workflow-type: tm+mt
-source-wordcount: '3380'
+source-wordcount: '3362'
 ht-degree: 1%
 
 ---
@@ -242,7 +242,7 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 | OracleSolaris 11 | Z:不支持 |
 | IBM AIX 7.2 | Z:不支持 |
 
-1. Linux内核2.6、3.x和4.x包含Red Hat分发版的衍生产品，包括Red Hat Enterprise Linux、CentOS、OracleLinux和Amazon Linux。 AEM Forms附加功能仅在CentOS 7、Red Hat Enterprise Linux 7和Red Hat Enterprise Linux 8上受支持。 AEM支持Linux内核4.x，该内核涵盖RHEL8（内核版本4.18）。 AEM Forms OSGi在RHEL8上也受支持。
+1. Linux内核2.6、3.x和4.x包含Red Hat分发版的衍生产品，包括Red Hat Enterprise Linux、CentOS、OracleLinux和Amazon Linux。 AEM Forms附加功能仅在CentOS 7、Red Hat Enterprise Linux 7和Red Hat Enterprise Linux 8上受支持。
 1. AEM Forms仅在Ubuntu 16.04 LTS上受支持
 1. Adobe Managed Services支持的Linux分发
 1. 升级到6.5的客户和非生产用户支持Microsoft Windows生产部署。 新部署是应AEM Sites和Assets的请求进行的。
