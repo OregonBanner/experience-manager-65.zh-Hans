@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
+source-git-commit: 270219c8baedd4b72a256e6318d89154d6dadb0b
 workflow-type: tm+mt
-source-wordcount: '6080'
+source-wordcount: '6110'
 ht-degree: 3%
 
 ---
@@ -132,7 +132,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. 要在发布Dynamic Media内容之前安全预览内容，您必须“”允许列表Experience Manager创作实例才能连接到Dynamic Media:
+1. 默认情况下，Experience Manager作者无法预览Dynamic Media内容。 因此，要在发布Dynamic Media内容之前安全预览该内容，您必须 *允许列表* 连接到Dynamic Media的Experience Manager创作实例。 此外，如果要为用户提供安全预览内容的访问权限，则可以 *允许列表* 其他IP地址：
 
    * 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
    * 在左边栏中，选择 **[!UICONTROL 工具]** 图标，然后转到 **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media发布设置]**.
