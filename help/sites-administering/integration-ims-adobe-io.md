@@ -11,7 +11,7 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 9fbf338b18e73fbd272af061381baf34b694239a
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 1%
@@ -152,7 +152,7 @@ ht-degree: 1%
 
 * [https://console.adobe.io/projects](https://console.adobe.io/projects)
 
-选择 **查看** （位于特定项目条目的右侧）以显示有关配置的更多详细信息。 这些 Cookie 包括：
+选择 **查看** （位于特定项目条目的右侧）以显示有关配置的更多详细信息。 这些功能包括：
 
 * 项目概述
 * 分析
@@ -175,7 +175,7 @@ ht-degree: 1%
 1. 在此，您可以使用 [来自Adobe I/O的详细信息](#details-stored-for-the-adobe-io-integration-project):
 
    * **标题**:你的短信。
-   * **授权服务器**:从 `"aud"` 行 **负载** ，例如 `"https://ims-na1.adobelogin.com"` 在以下示例中
+   * **授权服务器**:从 `aud` 行 **负载** ，例如 `https://ims-na1.adobelogin.com` 在以下示例中
    * **API密钥**:从 [概述](#details-stored-for-the-adobe-io-integration-project) TargetAdobe I/O集成部分
    * **客户端密钥**:在 [概述](#details-stored-for-the-adobe-io-integration-project) Adobe I/O集成部分，并复制
    * **负载**:从 [生成JWT](#details-stored-for-the-adobe-io-integration-project) TargetAdobe I/O集成部分
@@ -230,6 +230,7 @@ ht-degree: 1%
 1. 在 **Adobe Target设置** 选项卡：
 
    * **身份验证**:IMS
+
    * **租户ID**:Adobe IMS租户ID。 另请参阅 [租户ID和客户端代码](#tenant-client) 中。
 
       >[!NOTE]
@@ -241,24 +242,34 @@ ht-degree: 1%
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >那你就用 `yourtenantid`.
-   * **客户端代码**:请参阅 [租户ID和客户端代码](#tenant-client) 中。
-   * **IMS配置**:选择IMS配置的名称
-   * **API类型**:REST
-   * **A4T Analytics Cloud配置**:选择用于定位活动目标和量度的Analytics云配置。 如果您在定位内容时使用Adobe Analytics作为报表源，则需要使用此功能。 如果您看不到云配置，请参阅 [配置A4T Analytics Cloud配置](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
-   * **使用准确定位**:默认情况下，此复选框处于选中状态。 如果选中此选项，云服务配置将等待上下文加载后再加载内容。 请参阅以下注释。
-   * **同步来自Adobe Target的区段**:选择此选项可下载在Target中定义的区段，以在AEM中使用它们。 当API类型属性为REST时，您必须选择此选项，因为不支持内联区段，您始终需要使用Target中的区段。 (请注意，“区段”的AEM术语等同于Target“受众”。)
-   * **客户端库**:选择您是希望使用AT.js客户端库，还是mbox.js（已弃用）。
-   * **使用标签管理系统来交付客户端库**:使用DTM（已弃用）、LaunchAdobe或任何其他标签管理系统。
-   * **自定义AT.js**:如果您选中标签管理框或使用默认AT.js，则保留为空。 或者，上传您的自定义AT.js。 仅当您选择了AT.js时，才会显示。
 
+   * **客户端代码**:请参阅 [租户ID和客户端代码](#tenant-client) 中。
+
+   * **IMS配置**:选择IMS配置的名称
+
+   * **API类型**:REST
+
+   * **A4T Analytics Cloud配置**:选择用于定位活动目标和量度的Analytics云配置。 如果您在定位内容时使用Adobe Analytics作为报表源，则需要使用此功能。 如果您看不到云配置，请参阅 [配置A4T Analytics Cloud配置](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
+
+   * **使用准确定位**:默认情况下，此复选框处于选中状态。 如果选中此选项，云服务配置将等待上下文加载后再加载内容。 请参阅以下注释。
+
+   * **同步来自Adobe Target的区段**:选择此选项可下载在Target中定义的区段，以在AEM中使用它们。 当API类型属性为REST时，您必须选择此选项，因为不支持内联区段，您始终需要使用Target中的区段。 (请注意，“区段”的AEM术语等同于Target“受众”。)
+
+   * **客户端库**:选择您是希望使用AT.js客户端库，还是mbox.js（已弃用）。
+
+   * **使用标签管理系统来交付客户端库**:使用DTM（已弃用）、LaunchAdobe或任何其他标签管理系统。
+
+   * **自定义AT.js**:如果您选中标签管理框或使用默认AT.js，则保留为空。 或者，上传您的自定义AT.js。 仅当您选择了AT.js时，才会显示。
    >[!NOTE]
    >
    >[配置Cloud Service以使用Target Classic API](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 已弃用(使用Adobe Recommendations设置选项卡)。
+
 1. 单击 **连接到Target** 初始化与Adobe Target的连接。
 
    如果连接成功，则显示消息 **连接成功** 中。
 
 1. 选择 **确定** 在留言上，然后 **确定** ，以确认配置。
+
 1. 您现在可以继续 [添加Target框架](/help/sites-administering/target-configuring.md#adding-a-target-framework) 配置将发送到Target的ContextHub或ClientContext参数。 请注意，将AEM体验片段导出到Target时可能不需要执行此操作。
 
 ### 租户ID和客户端代码 {#tenant-client}
