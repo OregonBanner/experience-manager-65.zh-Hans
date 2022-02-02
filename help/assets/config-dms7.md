@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 270219c8baedd4b72a256e6318d89154d6dadb0b
+source-git-commit: cfd08526fd1dccf461b13747b4a7496849243669
 workflow-type: tm+mt
-source-wordcount: '6110'
-ht-degree: 3%
+source-wordcount: '6035'
+ht-degree: 4%
 
 ---
 
@@ -132,16 +132,17 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. 默认情况下，Experience Manager作者无法预览Dynamic Media内容。 因此，要在发布Dynamic Media内容之前安全预览该内容，您必须 *允许列表* 连接到Dynamic Media的Experience Manager创作实例。 此外，如果要为用户提供安全预览内容的访问权限，则可以 *允许列表* 其他IP地址：
+1. 为了在发布Dynamic Media内容之前安全地预览该内容，Experience Manager会使用基于令牌的验证，因此默认情况下，Experience Manager作者会预览Dynamic Media内容。 但是，您可以 *允许列表* 提供更多IP，以为用户提供安全预览内容的访问权限。 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
+<!-- 1. By default Experience Manager Author cannot preview Dynamic Media content. Therefore, to securely preview Dynamic Media content before it gets published, you must *allowlist* the Experience Manager Author instance to connect to Dynamic Media. In addition, if you want to provide users access to securely preview content, you can *allowlist* additional IP addresses:
 
-   * 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
-   * 在左边栏中，选择 **[!UICONTROL 工具]** 图标，然后转到 **[!UICONTROL 资产]** > **[!UICONTROL Dynamic Media发布设置]**.
-   * 在Dynamic Media图像服务器页面的 **[!UICONTROL 发布上下文]** 下拉列表中，选择 **[!UICONTROL 测试图像提供]**.
-   * 选择 **[!UICONTROL 安全性]** 选项卡。
-   * 对于 **[!UICONTROL 客户端地址]**，选择 **[!UICONTROL 添加]**.
-   * 输入Experience Manager创作实例的IP地址（而非Dispatcher IP）。
-   * 在页面的右上角，选择 **[!UICONTROL 保存]**.
-
+    * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
+    * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+    * On the Dynamic Media Image Server page, in the **[!UICONTROL Publish Context]** drop-down list, select **[!UICONTROL Test Image Serving]**.
+    * Select the **[!UICONTROL Security]** tab.
+    * For the **[!UICONTROL Client address]**, select **[!UICONTROL Add]**.
+    * Enter the IP address of the Experience Manager Author instance (not Dispatcher IP).
+    * In the upper-right corner of the page, select **[!UICONTROL Save]**.
+ -->
 您现在已完成基本配置；您已准备好使用Dynamic Media - Scene7模式。
 
 如果要进一步自定义配置，可以选择完成 [（可选）在Dynamic Media - Scene7模式下配置高级设置](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
