@@ -1,5 +1,5 @@
 ---
-title: 视频在Dynamic Media
+title: Dynamic Media 中的视频
 description: 了解如何在Dynamic Media中处理视频，例如，对视频进行编码、将视频发布到YouTube以及查看视频报表的最佳实践。 还了解如何向视频添加隐藏式字幕、字幕或章节标记。
 mini-toc-levels: 3
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
@@ -12,14 +12,14 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: e8270ad3f658236184467eda9f25c2ec0e6787ba
+source-git-commit: 128358e17aa6166c81e0979825ee81d029418f22
 workflow-type: tm+mt
 source-wordcount: '11766'
 ht-degree: 18%
 
 ---
 
-# 视频在Dynamic Media {#video}
+# Dynamic Media 中的视频 {#video}
 
 本节介绍如何在 Dynamic Media 中处理视频。
 
@@ -34,12 +34,10 @@ ht-degree: 18%
 >* 请参阅 [配置Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) 配置Dynamic Media - Scene7模式和 [Dynamic Media - Scene7模式故障诊断](/help/assets/troubleshoot-dms7.md).
 >
 >* 请参阅 [配置Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) 在配置Dynamic Media — 混合模式中。
-
 >
 >Dynamic Media中当前已知的视频播放问题 *仅在Experience Manager6.5.9.0上*:
 >
 >* 如果已发布的视频已更新，则必须再次发布该视频，以反映投放时的更改。
-
 >
 
 
@@ -56,7 +54,7 @@ ht-degree: 18%
       * 详细了解 [组织数字资产](/help/assets/organize-assets.md).
    * 将主源视频上传到文件夹。 将视频添加到文件夹后，这些视频会根据您分配给文件夹的视频处理配置文件进行编码。
 
-      * Dynamic Media主要支持长度最长为30分钟且最小分辨率大于50 x 50的短格式视频。
+      * Dynamic Media主要支持长度最长为30分钟且最小分辨率大于25 x 25的短格式视频。
       * 您可以上传每个最大15 GB的视频文件。
       * [上传视频](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 了解有关[支持的输入文件格式](/help/assets/assets-formats.md#supported-multimedia-formats)的更多信息。
@@ -113,7 +111,7 @@ ht-degree: 18%
    * 如果您使用的是第三方Web内容管理系统，则可以将视频链接或嵌入到您的网页。
 
       * 使用URL集成视频：
-         [将URL关联到您的Web应用程序](linking-urls-to-yourwebapplication.md).
+         [将 URL 关联到您的 Web 应用程序](linking-urls-to-yourwebapplication.md).
 
       * 使用网页上的嵌入代码集成视频：
          [在网页上嵌入视频查看器](embed-code.md).
@@ -126,7 +124,7 @@ ht-degree: 18%
 
 ## 在Dynamic Media中处理视频 {#working-with-video-in-dynamic-media}
 
-Dynamic Media中的视频是一个端到端解决方案，它可以轻松发布高质量自适应视频，以便在多个屏幕(包括台式机、iOS、Android™、BlackBerry®和Windows移动设备)上进行流播放。自适应视频集是同一视频的一组版本，这些版本以不同的比特率和格式进行编码，如400 kbps、800 kbps和1000 kbps。台式计算机或移动设备会检测可用带宽。
+Dynamic Media中的视频是一个端到端解决方案，它可以轻松发布高质量自适应视频，以便在多个屏幕(包括台式机、iOS、Android™、BlackBerry®和Windows移动设备)上进行流播放。 自适应视频集是同一个视频的一组版本，这些版本以不同的比特率和格式进行编码，例如 400 kbps、800 kbps 和 1000 kbps。台式计算机或移动设备会检测可用带宽。
 
 例如，在 iOS 移动设备上，设备检测到 3G、4G 或 Wi-Fi 等带宽。设备会随之自动从自适应视频集内的各种视频比特率中选择正确的编码视频。然后，视频会在桌面设备、移动设备或平板电脑上进行流播放。
 
@@ -300,7 +298,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 在对视频文件进行编码时，请尽可能使用最高质量的源视频文件。避免使用先前已编码的视频文件，因为这样的文件已经压缩，进一步编码会导致创建的视频质量不佳。
 
-* Dynamic Media主要支持长度最长为30分钟且最小分辨率大于50 x 50的短格式视频。
+* Dynamic Media主要支持长度最长为30分钟且最小分辨率大于25 x 25的短格式视频。
 * 您可以上载每个最大15 GB的主源视频文件。
 
 下表描述了源视频文件在编码之前必须具有的推荐大小、宽高比和最小比特率：
