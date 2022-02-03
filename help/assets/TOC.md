@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
-source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
+source-git-commit: 2706a069bea731da1f84c15e2da02b53a9db4d28
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 51%
+source-wordcount: '665'
+ht-degree: 50%
 
 ---
 
@@ -43,6 +43,7 @@ ht-degree: 51%
    + [可选 — 配置Dynamic Media - Scene7模式、常规设置](dm-general-settings.md)
    + [可选 — 配置Dynamic Media - Scene7模式、发布设置](dm-publish-settings.md)
    + [Dynamic Media - Scene7模式故障诊断](troubleshoot-dms7.md)
+   + [配置Dynamic Media公司别名帐户](dm-alias-account.md)
    + [配置Dynamic Media — 混合模式](config-dynamic.md)
    + [从Dynamic Media迁移 — 混合模式迁移到Dynamic Media - S7模式](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media 中的辅助功能](accessibility-dm.md)
