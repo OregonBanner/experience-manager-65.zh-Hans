@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: 9fbf338b18e73fbd272af061381baf34b694239a
+source-git-commit: bf55553f48c1eddf5dec503fb105cf35ff26677d
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1539'
 ht-degree: 1%
 
 ---
@@ -143,7 +143,7 @@ ht-degree: 1%
 
 1. 导航到 **产品** （顶部工具栏），然后选择 **Adobe Target - &lt;*your-tenant-id*>** （从左侧面板）。
 1. 选择 **产品配置文件**，则会从显示的列表中找到所需的工作区。 例如，默认工作区。
-1. 选择 **集成**，则是所需的集成配置。
+1. 选择 **API凭据**，则是所需的集成配置。
 1. 选择 **编辑器** 作为 **产品角色**;而不是 **观察者**.
 
 ## 存储的Adobe I/O集成项目详细信息 {#details-stored-for-the-adobe-io-integration-project}
