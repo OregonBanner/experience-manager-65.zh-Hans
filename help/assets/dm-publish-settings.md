@@ -8,13 +8,13 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
-source-git-commit: 1a410c7b71f0e329b327a7f7f05137fcd220fb6a
+exl-id: c86e79c4-e887-4ee3-bb54-eeffb34a33c2
+source-git-commit: 8561eb8b4b5164188ebf387c8f0344b462b830ec
 workflow-type: tm+mt
-source-wordcount: '3459'
+source-wordcount: '3467'
 ht-degree: 4%
 
 ---
-
 
 # 为图像服务器配置Dynamic Media发布设置
 
@@ -64,6 +64,8 @@ Dynamic Media发布设置适用于经验丰富的网站开发人员和程序员�
 ### “安全”选项卡 {#security-tab}
 
 **[!UICONTROL 客户端地址]**  — 用于指定一个或多个IP地址或IP地址范围。 指定后，对此图像目录的请求将被拒绝，这些请求源自位于未列出IP地址的客户端。 此规则同时适用于图像和已渲染图像的交付。
+
+![“安全”选项卡&#x200B;](/help/assets/assets-dm/dm-ipallowlist.png)<br>*显示IP“允许”字段的“安全”选项卡。*
 
 ### “目录管理”选项卡 {#catalog-management-tab}
 
