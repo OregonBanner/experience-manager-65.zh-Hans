@@ -8,10 +8,10 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 feature: Administering
 role: Admin
-source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
+source-git-commit: 7af09e73f40c2d947c9ccce000174155ef67137f
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 17%
+source-wordcount: '631'
+ht-degree: 28%
 
 ---
 
@@ -23,19 +23,19 @@ ht-degree: 17%
    + [网站管理](msm-and-translation.md)
    + [异步作业](asynchronous-jobs.md)
    + [重用内容：多站点管理器和Live Copy](msm.md)
-   + [Live Copy概述控制台](msm-livecopy-overview.md)
+   + [Live Copy 概述控制台](msm-livecopy-overview.md)
    + [配置 Live Copy 同步](msm-sync.md)
-   + [创建和同步Live Copy](msm-livecopy.md)
+   + [创建并同步 Live Copy](msm-livecopy.md)
    + [MSM转出冲突](msm-rollout-conflicts.md)
-   + [MSM最佳实践](msm-best-practices.md)
+   + [MSM 最佳实践](msm-best-practices.md)
    + [翻译多语言站点的内容](translation.md)
    + [管理翻译项目](tc-manage.md)
-   + [识别要翻译的内容](tc-rules.md)
-   + [准备翻译内容](tc-prep.md)
+   + [标识要翻译的内容](tc-rules.md)
+   + [准备内容以进行翻译](tc-prep.md)
    + [使用经典UI创建语言根](tc-lroot-classic.md)
-   + [连接到Microsoft Translator](tc-msconf.md)
+   + [连接到 Microsoft Translator](tc-msconf.md)
    + [配置翻译集成框架](tc-tic.md)
-   + [语言副本向导](tc-wizard.md)
+   + [语言复制向导](tc-wizard.md)
    + [翻译增强功能](tc-enhancements.md)
    + [翻译最佳实践](tc-bp.md)
    + [配置和配置浏览器](configurations.md)
@@ -71,7 +71,7 @@ ht-degree: 17%
    + [编辑者](enable-classic-ui-editor.md)
    + [启用对经典UI的访问](enable-classic-ui.md)
    + [Admin Console](enable-classic-ui-admin.md)
-+ 安全 {#security}
++ 安全性 {#security}
    + [用户管理和安全](security.md)
    + [用户、组和访问权限管理](user-group-ac-admin.md)
    + [安全检查列表](security-checklist.md)
@@ -101,10 +101,10 @@ ht-degree: 17%
    + [同一网站Cookie支持](same-site-cookie-support.md)
 + 个性化 {#personalization}
    + [个性化](personalization.md)
-   + [配置ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
+   + [配置 ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [ClientContext](client-context.md)
    + [营销活动](campaigns.md)
-   + [使用ContextHub配置分段](segmentation.md)
+   + [使用 ContextHub 配置分段](segmentation.md)
    + [配置分段](campaign-segmentation.md)
    + [为登陆页面扩展和配置设计导入程序](extending-the-design-importer-for-landingpages.md)
    + [将登陆页面与Adobe Analytics集成](integrating-landing-pages-with-adobe-analytics.md)
@@ -143,16 +143,17 @@ ht-degree: 17%
    + [手动配置与Adobe Target的集成](target-configuring.md)
    + [与Adobe Target集成的先决条件](target-requirements.md)
    + [使用Adobe Target与Adobe I/O集成](integration-ims-adobe-io.md)
+   + [使用Adobe Target与Adobe I/O集成](integration-target-ims-adobe-io.md)
    + [Adobe分类](adobeanalytics-classifications.md)
    + [与AdobeSearch&amp;Promote集成](search-and-promote.md)
    + [解决方案集成](integration.md)
-   + [将体验片段导出到Adobe Target](experience-fragments-target.md)
+   + [将体验片段导出到 Adobe Target](experience-fragments-target.md)
    + [电子邮件模板最佳实践](best-practices-for-email-templates.md)
    + [与 Livefyre 集成](livefyre.md)
 + 最佳实践 {#bestpractices}
    + [最佳实践](administer-best-practices.md)
    + [翻译最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
-   + [MSM最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
+   + [MSM 最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR就绪](gdpr-compliance-sites.md)
    + [为AEM Foundation处理GDPR请求](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM Commerce - GDPR就绪](gdpr-compliance-commerce.md)
