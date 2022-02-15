@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 说明概述了发行信息、新增功能、安装方式以及详细的更改列表。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 1cfa01544ad8bf0adafd55e696a6844a8edf1007
+source-git-commit: 1ca3032063a148293f67c69a941b83b6aa5d48f1
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3884'
 ht-degree: 4%
 
 ---
@@ -52,14 +52,17 @@ ht-degree: 4%
 
 ### [!DNL Sites] {#sites-65110}
 
-要通过GraphQL使用内容片段访问无标题内容交付，并使用增强的内容片段模型和编辑器功能，请安装 [索引定义包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.0.0.zip)，并重新索引以下异步AEM索引定义：
+>[!WARNING]
+>
+>正在开发此包的新版本。 该链接一经发布即会发布。
 
-* /oak:index/assetPrefixNodename
+要通过GraphQL使用内容片段访问无标题内容交付，并使用增强的内容片段模型和编辑器功能，请安装索引定义包，并重新编入以下异步AEM索引定义的索引：
 
-* /oak:index/fragments
+* `/oak:index/assetPrefixNodename`
 
-* /oak:index/graphqlConfig
+* `/oak:index/fragments`
 
+* `/oak:index/graphqlConfig`
 
 中修复了以下问题 [!DNL Sites]:
 
@@ -366,7 +369,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **书信**
 
-* 在HTML视图中提交信件并将其重新打开时，文本文档片段的位置不会保持不变(NPR-37307)。
+* 在HTML视图中提交信件并将其重新打开时，文本文档片段的位置不会保持相同(NPR-37307)。
 
 **表单工作流**
 
