@@ -8,9 +8,9 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 feature: Administering
 role: Admin
-source-git-commit: 7af09e73f40c2d947c9ccce000174155ef67137f
+source-git-commit: d4f5cebc76ed9348a17efc07443cd82317f24368
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '623'
 ht-degree: 28%
 
 ---
@@ -142,7 +142,6 @@ ht-degree: 28%
    + [与Adobe Marketing Cloud集成](marketing-cloud.md)
    + [手动配置与Adobe Target的集成](target-configuring.md)
    + [与Adobe Target集成的先决条件](target-requirements.md)
-   + [使用Adobe Target与Adobe I/O集成](integration-ims-adobe-io.md)
    + [使用Adobe Target与Adobe I/O集成](integration-target-ims-adobe-io.md)
    + [Adobe分类](adobeanalytics-classifications.md)
    + [与AdobeSearch&amp;Promote集成](search-and-promote.md)
