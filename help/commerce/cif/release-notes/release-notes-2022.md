@@ -1,11 +1,10 @@
 ---
 title: AEM Content and Commerce 2022发行说明
 description: AEM Content and Commerce 2022发行说明
-exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 26df21270e8c586ba21b9bf3e9fc5003facbaade
+source-git-commit: 84ac40a5cd18b1a5c8bb7a93af4106be6bda7631
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 13%
+ht-degree: 45%
 
 ---
 
@@ -31,13 +30,13 @@ ht-degree: 13%
 
 ### 新增功能 {#what-is-new-january}
 
-* 增强的myAccount组件
-* 产品推荐组件支持其他页面类型（主页、购物车、订单确认）
+* 增强的 myAccount 组件
+* “产品推荐”组件支持额外的页面类型（主页、购物车、订单确认）
 * **愿望清单**
-   * 已登录的访客可以将产品添加到愿望列表
-   * 通过myAccount可以修改该愿望清单及其产品
-   * 可以通过策略（示例产品预告、产品详细信息）在组件级别启用/禁用“添加到愿望列表”按钮
-   * 可作为核心组件和在AEM Venia Storefront中使用
+   * 登录的访客可以将产品添加到愿望清单
+   * 可以通过 myAccount 管理愿望清单及其产品
+   * 可以通过策略（例如产品预告片、产品详细信息）在组件级别启用/禁用“添加到愿望清单”按钮
+   * 作为核心组件提供，位于 AEM Venia Storefront 中
 
 ![愿望清单](/help/assets/CIF/wishlist.png)
 
