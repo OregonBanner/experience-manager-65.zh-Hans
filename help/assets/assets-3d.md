@@ -8,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: a13d6d10dd10605d2cb83a8622fae3a7e2590c93
+source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2358'
 ht-degree: 4%
 
 ---
@@ -42,9 +42,9 @@ Dynamic Media支持以下3D格式。
 | STL | 立体成形 | application/vnd.ms-pki.stl |  |
 | USDZ | 通用场景描述Zip存档 | model/vnd.usdz+zip | *仅支持摄取；无法查看或进行交互。* USDZ是一种专有的3D格式，Safari和iOS设备可在本机查看该格式。 |
 
-<!-- >[!NOTE]
+>[!NOTE]
 >
->The 3D Media WCM component and 3D preview on an asset's Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x). -->
+>资产详细信息页面上的3D Media WCM组件和3D预览与最新版本的Chrome(97.x)不兼容。 要处理3D资产，请改用Firefox或Safari，或使用Chrome(96.x)的早期版本。
 
 ## 快速入门：Dynamic Media3D资产 {#quick-start-three-d}
 
