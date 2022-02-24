@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b4c3f4c393d9b34acaadc375d20738ead42e481d
+source-git-commit: 72b39fd0263347c5bfe98fe2fdaf8999d7d40a96
 workflow-type: tm+mt
-source-wordcount: '2979'
-ht-degree: 26%
+source-wordcount: '3215'
+ht-degree: 24%
 
 ---
 
@@ -197,6 +197,22 @@ ht-degree: 26%
 1. 用户可以移动或删除资产。 移动或删除资产时，所有选定资产/文件夹的引用总数会显示在警告对话框中。 删除尚未显示引用的资产时，会显示一个警告对话框。
 
    ![强制删除警告](assets/delete-referenced-asset.png)
+
+### 管理远程DAM中资产的更新 {#manage-updates-in-remote-dam}
+
+之后 [配置连接](#configure-a-connection-between-sites-and-assets-deployments) 在远程DAM和 [!DNL Sites] 部署时，远程DAM上的资产可在 [!DNL Sites] 部署。 然后，您可以对远程DAM资产或文件夹执行更新、删除、重命名和移动操作。 更新（如果延迟）会在 [!DNL Sites] 部署。 此外，如果远程DAM上的资产在本地 [!DNL Experience Manager Sites] 页面上，远程DAM上的资产更新将显示在 [!DNL Sites] 页面。
+
+将资产从一个位置移动到另一个位置时，请确保 [调整参照](/help/assets/manage-assets.md) 以便资产显示在 [!DNL Sites] 页面。 如果您将资产移动到无法从本地访问的位置， [!DNL Sites] 部署时，资产无法在Sites部署中显示。
+
+您还可以更新远程DAM上资产的元数据属性，并且更改可在本地使用 [!DNL Sites] 部署。
+
+[!DNL Sites] 作者可以在 [!DNL Sites] 部署后，再重新发布更改，以使其在 [!DNL Experience Manager] 发布实例。
+
+[!DNL Experience Manager] 在 `Remote Assets Content Finder` 阻止网站作者在 [!DNL Sites] 页面。 如果您在 [!DNL Sites] 页面上显示的资产失败 [!DNL Experience Manager] 发布实例。
+
+>[!NOTE]
+>
+>对远程DAM中资产的更新可用于 [!DNL Sites] 仅在远程DAM和 [!DNL Sites] 部署已开启 [!DNL Experience Manager].
 
 ## 限制和最佳实践 {#tip-and-limitations}
 

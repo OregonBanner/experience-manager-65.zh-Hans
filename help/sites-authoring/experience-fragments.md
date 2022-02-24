@@ -1,8 +1,8 @@
 ---
 title: 体验片段
-seo-title: 体验片段
+seo-title: Experience Fragments
 description: 体验片段
-seo-description: 'null'
+seo-description: null
 uuid: 9a1d12ef-5690-4a2e-8635-a710775efa39
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ab6fd8ca02d2a24e5973b5d78bc75288b5cc26c0
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 96%
+source-wordcount: '1440'
+ht-degree: 92%
 
 ---
 
@@ -27,10 +27,12 @@ ht-degree: 96%
 * 体验的一部分（页面）。
 * 可以跨多个页面使用。
 * 基于模板（仅可编辑）来定义结构和组件。
+* 此模板用于创建 *根页面* 体验片段的URL。
 * 由段落系统中的一个或多个的组件及布局构成。
 * 可以包含其他体验片段。
 * 可以与其他组件（包括其他体验片段）结合使用来构成完整的页面（体验）。
-* 可以具有不同的变体，可共享内容和/或组件。
+* 可以基于根页面创建一个或多个变量。
+* 这些变体可能共享内容和/或组件。
 * 可以划分为可在片段的多个变体中使用的构建基块。
 
 您可以使用体验片段：
@@ -45,7 +47,7 @@ ht-degree: 96%
 >    `experience-fragments-editors`
 如果您遇到任何问题，请联系您的系统管理员。
 
-## 应在何时使用体验片段？  {#when-should-you-use-experience-fragments}
+## 应在何时使用体验片段？ {#when-should-you-use-experience-fragments}
 
 体验片段应在以下时候使用：
 
@@ -159,7 +161,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
    ![xf-01](assets/xf-01.png)
 
-1. 导航到所需的文件夹，然后选择&#x200B;**创建**。
+1. 导航到所需的文件夹并选择 **创建**.
 
    ![xf-02](assets/xf-02.png)
 
@@ -174,6 +176,10 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
    **标题**&#x200B;是必填项。如果&#x200B;**名称**&#x200B;留空，将从&#x200B;**标题**&#x200B;派生名称。
 
    ![xf-04](assets/xf-04.png)
+
+   >[!NOTE]
+   体验片段模板中的标记将不会与此体验片段根页面上的标记合并。
+   这些是完全分开的。
 
 1. 单击&#x200B;**创建**。
 
@@ -235,7 +241,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 1. 打开要编辑的任何页面。
 
-   例如：[https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
+   例如： [https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
 1. 通过将组件从组件浏览器拖动到页面段落系统来创建“体验片段”组件的实例：
 
@@ -279,7 +285,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 您的构建基块会显示在&#x200B;**构建基块**&#x200B;选项卡中。对于每个基块，可执行以下操作：
 
-* 转至母版：在新选项卡中打开母版变体
+* 转到主控:在新选项卡中打开根页面变量
 * 重命名
 * 删除
 
@@ -332,7 +338,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
       * 引用列表.
    * **社交媒体状态**
 
-      * 社交媒体变体的详细信息.
+      * 社交媒体变体的详细信息。
 
 
 
@@ -344,7 +350,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 >[!NOTE]
 虽然这可以直接从浏览器获得，[但主要目的是允许其他应用程序（例如，第三方 Web 应用程序、自定义移动实现）仅使用 URL 直接访问体验片段的内容](/help/sites-developing/experience-fragments.md#the-plain-html-rendition)。
 
-## 导出体验片段  {#exporting-experience-fragments}
+## 导出体验片段 {#exporting-experience-fragments}
 
 默认情况下，将以 HTML 格式提供体验片段。这可以由 AEM 和相似的第三方渠道使用。
 
