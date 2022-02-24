@@ -1,9 +1,9 @@
 ---
 title: 使用Adobe Analytics与Adobe I/O集成
 description: 了解如何使用AEM与Adobe Analytics集成Adobe I/O
-source-git-commit: c2c7c3f745a5f1edc1a8d2a73922f86f0b952ff7
+source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1052'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ### 创建项目 {#creating-the-project}
 
-打开Adobe I/O控制台，以创建将由AEM使用的包含Adobe Target的I/O项目：
+打开Adobe I/O控制台，以创建将由AEM使用的包含Adobe Analytics的I/O项目：
 
 <!--
 >[!NOTE]
@@ -112,23 +112,9 @@ ht-degree: 1%
 
 1. 选择所需的产品配置文件，然后继续 **保存配置的API**:
 
-   >[!NOTE]
-   >
-   >显示的产品配置文件取决于您是否具有：
-   >
-   >* Adobe Target Standard — 仅 **默认工作区** 可用
-   >* Adobe Target Premium — 列出了所有可用工作区，如下所示
-
-
    ![选择所需的产品配置文件](assets/integration-analytics-io-16.png)
 
 1. 将确认配置。
-
-<!--
-1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
-
-   ![](assets/integrate-target-io-07.png)
--->
 
 ### 为集成分配权限 {#assigning-privileges-to-the-integration}
 
@@ -164,7 +150,7 @@ ht-degree: 1%
 
 ## 在AEM中完成IMS配置 {#completing-the-ims-configuration-in-aem}
 
-返回AEM后，您可以通过从TargetAdobe I/O集成添加所需值来完成IMS配置：
+返回AEM后，您可以通过从Analytics的Adobe I/O集成添加所需值来完成IMS配置：
 
 1. 返回到 [在AEM中打开IMS配置](#configuring-an-ims-configuration-generating-a-public-key).
 1. 选择&#x200B;**下一步**。
@@ -181,7 +167,7 @@ ht-degree: 1%
 
 1. 使用确认 **创建**.
 
-1. 您的Adobe Target配置将显示在AEM控制台中。
+1. 您的Adobe Analytics配置将显示在AEM控制台中。
 
    ![IMS 配置](assets/integrate-analytics-io-11.png)
 
@@ -204,10 +190,6 @@ ht-degree: 1%
    ![IMS配置 — 检查运行状况](assets/integrate-analytics-io-12.png)
 
 1. 如果成功，您将看到一条确认消息。
-
-   <!--
-   ![](assets/integrate-target-io-13.png)
-   -->
 
 ## 配置Adobe Analytics Cloud服务 {#configuring-the-adobe-analytics-cloud-service}
 
@@ -232,7 +214,7 @@ ht-degree: 1%
 
    * **IMS配置**:选择IMS配置的名称
 
-1. 单击 **连接到Analytics** 初始化与Adobe Target的连接。
+1. 单击 **连接到Analytics** 初始化与Adobe Analytics的连接。
 
    如果连接成功，则显示消息 **连接成功** 中。
 
