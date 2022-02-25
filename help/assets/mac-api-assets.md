@@ -1,14 +1,14 @@
 ---
-title: '[!DNL Assets] HTTP API。'
+title: '"[!DNL Assets] HTTP API."'
 description: 在 [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
-source-git-commit: b841eb8d1820c1e42d966547280ae9743e773812
+source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
 workflow-type: tm+mt
 source-wordcount: '1723'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -140,7 +140,7 @@ API调用失败，错误为 `500` 响应代码。 调用会返回响应代码 `4
 
 ## 创建资产 {#create-an-asset}
 
-将提供的文件放在提供的路径中，以在DAM存储库中创建资产。 如果 `*` 提供的不是节点名称，servlet使用参数名称或文件名作为节点名称。
+将提供的文件放置到提供的路径中，以在DAM存储库中创建资产。 如果 `*` 提供的不是节点名称，servlet使用参数名称或文件名作为节点名称。
 
 **参数**:参数包括 `name` (对于资产名称和 `file` ，用于文件引用。
 
