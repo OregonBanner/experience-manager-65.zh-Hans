@@ -3,10 +3,10 @@ title: AEM与第三方商务集成使用商务集成框架
 description: 企业企业可能需要额外的第三方商务解决方案来支持其店面。 商务集成框架(CIF)可用于此类集成方案，以使用I/O运行时将第三方商务解决方案连接到Adobe Experience Manager。
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 885d0763fca9ad4eab499081adca9b83875b27e1
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 1%
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 
@@ -51,3 +51,14 @@ CIF通过实时产品目录访问和产品体验管理工具来扩展Experience 
 的 [参考实施](https://github.com/adobe/commerce-cif-graphql-integration-reference) 是构建与商务解决方案集成的绝佳起点。 尽管它支持GraphQL，但也可以与任何其他类型的API（如REST）集成。
 
 如果有第三方层可用（如Mulesoft）或集成是基于第三方解决方案构建的，则无需使用此集成层。
+
+## 预建连接器 {#connectors}
+
+连接器为项目提供了良好的开始。 它们附带特定于商务解决方案的连接和默认API映射。 这些连接器由第三方构建，不由Adobe维护。 请联系相应的合作伙伴以获取相关信息。
+
+* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris)，由迪库铵建造
+* [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool)，由迪库铵建造
+
+>[!TIP]
+>
+>虽然连接器有助于项目加快商务集成，但它们不是即插即用的。 企业商务解决方案通常需要大量自定义，并且需要自定义集成。 需要充分了解商务平台、Adobe Commerce GraphQL架构和Adobe I/O Runtime。
