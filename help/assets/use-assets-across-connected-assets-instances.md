@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 72b39fd0263347c5bfe98fe2fdaf8999d7d40a96
+source-git-commit: 6b9f0836ae61fdaa1aaf89434d76be5925970088
 workflow-type: tm+mt
-source-wordcount: '3215'
-ht-degree: 24%
+source-wordcount: '3811'
+ht-degree: 21%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 24%
 在大型企业中，可以分发创建网站所需的基础环境。有时，网站创建功能和用于创建这些网站的数字资产可能驻留在不同的部署中。一个原因可能是地理上分散的现有部署需要协同工作。 另一个原因可能是收购导致不同的基础架构，包括不同 [!DNL Experience Manager] 版本，父公司希望结合使用的版本。
 
 “连接的资产”功能通过集成支持上述用例 [!DNL Experience Manager Sites] 和 [!DNL Experience Manager Assets]. 用户可以在 [!DNL Sites] 从单独的 [!DNL Assets] 部署。
+
+>[!NOTE]
+>
+>仅当您需要在单独的Sites部署中使用远程DAM部署中可用的资产来创作网页时，才配置连接的资产。
 
 ## 连接的资产概述 {#overview-of-connected-assets}
 
@@ -56,6 +60,18 @@ ht-degree: 24%
 | [!DNL Assets] 管理员 | 远程 | [!DNL Experience Manager] `administrators` | `admin` 远程 [!DNL Experience Manager] | 配置跨源资源共享 (CORS)。 |
 | DAM 用户 | 远程 | `Authors` | `ksaner` 远程 [!DNL Experience Manager] | 远程上的创作角色 [!DNL Experience Manager] 部署。 使用 [!UICONTROL 内容查找器]. |
 | DAM 分发人员（技术用户） | 远程 | [!DNL Sites] `Authors` | `ksaner` 远程 [!DNL Experience Manager] | 远程部署中存在的用户由 [!DNL Experience Manager] 本地服务器(不是 [!DNL Sites] 作者角色)，以代表获取远程资产 [!DNL Sites] 作者。 此角色与上述两个 `ksaner` 角色不同，它属于另一个不同的用户组。 |
+
+### 连接的资产架构 {#connected-assets-architecture}
+
+Experience Manager允许您将远程DAM部署作为源连接到多个Experience Manager [!DNL Sites] 部署。 最多可连接4个 [!DNL Sites] 部署到源远程DAM。 但是，您可以 [!DNL Sites] 部署时，只能使用一个远程DAM部署。
+
+下图说明了支持的情景：
+
+![连接的资产架构](assets/connected-assets-architecture.png)
+
+下图说明了不支持的方案：
+
+![连接的资产架构](assets/connected-assets-architecture-unsupported.png)
 
 ## 在 [!DNL Sites] 和 [!DNL Assets] 部署 {#configure-a-connection-between-sites-and-assets-deployments}
 
@@ -116,11 +132,24 @@ ht-degree: 24%
 ![已配置连接的资产的连接测试 [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *图：已配置连接的资产的连接测试 [!DNL Sites].*
 
-### 配置Dynamic Media资产的连接 {#sites-dynamic-media-connected-assets}
+## 使用Dynamic Media资产 {#dynamic-media-assets}
 
-您可以配置 [!DNL Sites] 部署和 [!DNL Dynamic Media] 允许网页作者使用的部署 [!DNL Dynamic Media] 图像。 在创作网页时，使用远程资产和远程资产的体验 [!DNL Dynamic Media] 部署保持不变。
 
-要为Dynamic Media部署配置“连接的资产”功能，请执行以下步骤：
+通过连接的资产，您可以使用由 [!DNL Dynamic Media] 从站点页面上的远程DAM部署，并利用Dynamic Media功能，如智能裁剪和图像预设。
+
+使用 [!DNL Dynamic Media] 与连接的资产：
+
+1. 配置 [!DNL Dynamic Media] 在启用了同步模式的远程DAM部署中。
+1. 配置 [连接的资产](#configure-a-connection-between-sites-and-assets-deployments).
+1. 配置 [!DNL Dynamic Media] 在与远程DAM中配置的公司名称相同的Sites实例上。 Sites部署必须具有Dynamic Media帐户的只读访问权限才能处理连接的资产。 因此，请确保在Sites实例上的Dynamic Media配置中禁用同步模式。
+
+>[!CAUTION]
+>
+>具有连接的资产和 [!DNL Dynamic Media] 配置，您不能使用 [!DNL Dynamic Media] 以处理 [!DNL Sites] 部署。
+
+## 配置 [!DNL Dynamic Media] {#configure-dynamic-media}
+
+配置 [!DNL Dynamic Media] on [!DNL Assets] 和 [!DNL Sites] 部署：
 
 1. 启用和配置 [!DNL Dynamic Media] 作为远程的全局配置 [!DNL Assets] 作者部署。 要配置Dynamic Media，请参阅 [配置Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services).<br/>
 在远程 [!DNL Assets] 部署，在 [!UICONTROL Dynamic Media同步模式]，选择 **[!UICONTROL 默认启用]**.
@@ -213,6 +242,48 @@ ht-degree: 24%
 >[!NOTE]
 >
 >对远程DAM中资产的更新可用于 [!DNL Sites] 仅在远程DAM和 [!DNL Sites] 部署已开启 [!DNL Experience Manager].
+
+## 常见问题解答 {#frequently-asked-questions}
+
+### 如果您需要使用 [!DNL Sites] 部署？
+
+在这种情况下，无需配置“连接的资产”。 您可以在 [!DNL Sites] 部署。
+
+### 您何时需要配置“连接的资产”功能？
+
+仅当您需要使用 [!DNL Sites] 部署。
+
+### 多少 [!DNL Sites] 部署在配置“连接的资产”后，是否可以连接到远程DAM部署？
+
+最多可连接4个 [!DNL Sites] 部署到远程DAM部署。 有关更多信息，请参阅 [连接的资产架构](#connected-assets-architecture).
+
+### 您可以连接多少个远程DAM部署 [!DNL Sites] 是否在配置连接的资产后进行部署？
+
+您可以将一个远程DAM部署连接到 [!DNL Sites] 配置连接的资产后进行部署。 有关更多信息，请参阅 [连接的资产架构](#connected-assets-architecture).
+
+### 能否从 [!DNL Sites] 是否在配置连接的资产后进行部署？
+
+配置连接的资产后， [!DNL Dynamic Media] 资产可用于 [!DNL Sites] 以只读模式部署。 因此，您无法使用 [!DNL Dynamic Media] 处理 [!DNL Sites] 部署。 有关更多信息，请参阅 [在Sites与Dynamic Media部署之间配置连接](#dynamic-media-assets).
+
+### 能否在 [!DNL Sites] 是否在配置连接的资产后进行部署？
+
+是，您可以在 [!DNL Sites] 配置连接的资产后进行部署。
+
+### 能否在 [!DNL Sites] 是否在配置连接的资产后进行部署？
+
+不能，您不能在 [!DNL Sites] 配置连接的资产后进行部署。
+
+### 能否在上的远程DAM部署中使用Dynamic Media资产 [!DNL Sites] 是否在配置连接的资产后进行部署？
+
+能，您可以在上的远程DAM部署中配置和使用Dynamic Media资产 [!DNL Sites] 配置连接的资产后进行部署。 有关更多信息，请参阅 [在Sites与Dynamic Media部署之间配置连接](#dynamic-media-assets).
+
+### 配置连接的资产后，能否对远程DAM资产或文件夹执行更新、删除、重命名和移动操作？
+
+是，在配置连接的资产后，您可以对远程DAM资产或文件夹执行更新、删除、重命名和移动操作。 相关更新会在 Sites 部署中自动提供，但会有一些延迟。有关更多信息，请参阅 [管理远程DAM中资产的更新](#handling-updates-to-remote-assets).
+
+### 配置连接的资产后，您可以在 [!DNL Sites] 部署，并在远程DAM部署中使用？
+
+您可以将资产添加到 [!DNL Sites] 但是，无法将这些资产用于远程DAM部署。
 
 ## 限制和最佳实践 {#tip-and-limitations}
 
