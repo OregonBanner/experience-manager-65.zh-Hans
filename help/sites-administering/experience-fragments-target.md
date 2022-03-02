@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: a33d46bcfcf901fb774b742c0fc972265401a56e
+source-git-commit: 079b7b1e386ac2d02026ee2d8db411e517168b00
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 2%
@@ -37,7 +37,7 @@ ht-degree: 2%
    >   * 在云配置中指定的命名工作区。
    >   * **注意：** 要导出到特定工作区，需要使用Adobe Target Premium。
 >
->* AEM必须 [与Adobe Target集成(使用Adobe I/O)](/help/sites-administering/integration-target-ims-adobe-io.md).
+>* AEM必须 [与Adobe Target集成(使用Adobe I/O)](/help/sites-administering/integration-target-ims.md).
 >
 >AEM 6.5.0.0和6.5.1.0:
 >
@@ -53,7 +53,7 @@ ht-degree: 2%
 * JSON:支持无头内容交付
 * HTML 和 JSON
 
-AEM体验片段可导出到Adobe Target中的默认工作区，或导出到Adobe Target的用户定义的工作区。 这是通过Adobe I/O完成的，AEM必须为 [与Adobe Target集成(使用Adobe I/O)](/help/sites-administering/integration-target-ims-adobe-io.md).
+AEM体验片段可导出到Adobe Target中的默认工作区，或导出到Adobe Target的用户定义的工作区。 这是通过Adobe I/O完成的，AEM必须为 [与Adobe Target集成(使用Adobe I/O)](/help/sites-administering/integration-target-ims.md).
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ AEM体验片段可导出到Adobe Target中的默认工作区，或导出到Adobe
 
 需要执行各种操作：
 
-1. 你必须 [使用Adobe I/O将AEM与Adobe Target集成](/help/sites-administering/integration-target-ims-adobe-io.md).
+1. 你必须 [使用Adobe I/O将AEM与Adobe Target集成](/help/sites-administering/integration-target-ims.md).
 2. 体验片段是从AEM创作实例导出的，因此您需要 [配置AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) ，以确保体验片段中的任何引用外部化以用于Web交付。
 
    >[!NOTE]
