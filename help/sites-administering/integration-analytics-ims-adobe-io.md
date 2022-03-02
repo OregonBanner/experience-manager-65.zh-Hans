@@ -1,16 +1,16 @@
 ---
-title: 使用Adobe Analytics与Adobe I/O集成
-description: 了解如何使用AEM与Adobe Analytics集成Adobe I/O
-source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
+title: 使用IMS与Adobe Analytics集成
+description: 了解如何使用IMS将AEM与Adobe Analytics集成。
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 1%
+source-wordcount: '1040'
+ht-degree: 2%
 
 ---
 
-# 使用Adobe Analytics与Adobe I/O集成 {#integration-with-adobe-analytics-using-adobe-i-o}
+# 使用IMS与Adobe Analytics集成 {#integration-with-adobe-analytics-using-ims}
 
-要通过Analytics Standard API将AEM与Adobe Analytics集成，需要配置Adobe IMS(Identity Management系统)和Adobe I/O。
+要通过Analytics Standard API将AEM与Adobe Analytics集成，需要使用Adobe开发人员控制台配置Adobe IMS(Identity Management系统)。
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ ht-degree: 1%
 * [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 必须为您的帐户配置：
 
    * Adobe控制台
-   * Adobe I/O
+   * Adobe Developer Console
    * Adobe Analytics和
    * Adobe IMS(Identity Management系统)
 
 * 贵组织的系统管理员应使用Admin Console将组织中所需的开发人员添加到相关的产品配置文件中。
 
-   * 这为特定开发人员提供了在Adobe I/O内启用集成的权限。
+   * 这为特定开发人员提供了在Adobe开发人员控制台中启用集成的权限。
    * 有关更多详细信息，请参阅 [管理开发人员](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
    ![](assets/integrate-analytics-io-01.png)
 
-1. 选择 **下载** (或 **下载公钥**)将文件下载到本地驱动器，以便在 [配置Adobe I/O以将Adobe Analytics与AEM集成](#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem).
+1. 选择 **下载** (或 **下载公钥**)将文件下载到本地驱动器，以便在 [为Adobe Analytics与AEM集成配置IMS](#configuring-ims-for-adobe-analytics-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -60,23 +60,17 @@ ht-degree: 1%
 
    ![](assets/integrate-analytics-io-02.png)
 
-## 为Adobe Analytics与AEM集成配置Adobe I/O {#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem}
+## 为Adobe Analytics与AEM集成配置IMS {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-您需要创建与AEM将使用的Adobe Analytics的Adobe I/O项目（集成），然后分配所需的权限。
+使用Adobe开发人员控制台，您需要与Adobe Analytics(供AEM使用)创建项目（集成），然后分配所需的权限。
 
 ### 创建项目 {#creating-the-project}
 
-打开Adobe I/O控制台，以创建将由AEM使用的包含Adobe Analytics的I/O项目：
+打开Adobe开发人员控制台，以使用AEM将使用的Adobe Analytics创建项目：
 
-<!--
->[!NOTE]
->
->See also the [Adobe I/O tutorials](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
--->
+1. 打开项目的Adobe开发人员控制台：
 
-1. 打开项目的Adobe I/O控制台：
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. 您所有的项目都将显示出来。 选择 **创建新项目**  — 位置和使用情况取决于：
 
@@ -129,11 +123,11 @@ ht-degree: 1%
 1. 选择 **API凭据**，则是所需的集成配置。
 1. 选择 **编辑器** 作为 **产品角色**;而不是 **观察者**.
 
-## 存储的Adobe I/O集成项目详细信息 {#details-stored-for-the-adobe-io-integration-project}
+## 存储的Adobe开发人员控制台集成项目的详细信息 {#details-stored-for-the-ims-integration-project}
 
-从Adobe I/O项目控制台中，您可以看到所有集成项目的列表：
+从Adobe开发人员项目控制台中，您可以看到所有集成项目的列表：
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 选择特定项目条目以显示有关配置的更多详细信息。 这些功能包括：
 
@@ -146,26 +140,26 @@ ht-degree: 1%
 * API
    * 例如，Adobe Analytics
 
-其中某些内容需要完成AEM中Adobe Analytics的Adobe I/O集成。
+其中一些内容需要完成AEM中的Adobe Analytics集成。
 
 ## 在AEM中完成IMS配置 {#completing-the-ims-configuration-in-aem}
 
-返回AEM后，您可以通过从Analytics的Adobe I/O集成添加所需值来完成IMS配置：
+返回AEM后，您可以通过从Analytics集成项目中添加所需值来完成IMS配置：
 
 1. 返回到 [在AEM中打开IMS配置](#configuring-an-ims-configuration-generating-a-public-key).
 1. 选择&#x200B;**下一步**。
 
-1. 在此，您可以使用 [中项目配置的详细信息Adobe I/O](#details-stored-for-the-adobe-io-integration-project):
+1. 在此，您可以使用 [存储的Adobe开发人员控制台集成项目的详细信息](#details-stored-for-the-ims-integration-project):
 
    * **标题**:你的短信。
    * **授权服务器**:从 `aud` 行 **负载** ，例如 `https://ims-na1.adobelogin.com` 在以下示例中
-   * **API密钥**:从 **凭据** 部分 [项目概述](#details-stored-for-the-adobe-io-integration-project)
-   * **客户端密钥**:在 [服务帐户(JWT)部分的“客户端密钥”选项卡](#details-stored-for-the-adobe-io-integration-project)，和复制
-   * **负载**:从 [生成服务帐户(JWT)部分的JWT选项卡](#details-stored-for-the-adobe-io-integration-project)
+   * **API密钥**:从 **凭据** 部分 [项目概述](#details-stored-for-the-ims-integration-project)
+   * **客户端密钥**:在 [服务帐户(JWT)部分的“客户端密钥”选项卡](#details-stored-for-the-ims-integration-project)，和复制
+   * **负载**:从 [生成服务帐户(JWT)部分的JWT选项卡](#details-stored-for-the-ims-integration-project)
 
    ![AEM IMS配置详细信息](assets/integrate-analytics-io-10.png)
 
-1. 使用确认 **创建**.
+1. 选择&#x200B;**创建**&#x200B;来确认。
 
 1. 您的Adobe Analytics配置将显示在AEM控制台中。
 
@@ -204,7 +198,7 @@ ht-degree: 1%
 
    您还可以选择所需的模板（如果有多个模板可用）。
 
-1. 使用确认 **创建**.
+1. 选择&#x200B;**创建**&#x200B;来确认。
 
    的 **编辑组件** 对话框。
 

@@ -1,25 +1,17 @@
 ---
-title: 使用Adobe Target与Adobe I/O集成
-seo-title: Integration with Adobe Target using Adobe I/O
-description: 了解如何使用AEM与Adobe Target集成Adobe I/O
-seo-description: Learn about integrating AEM with Adobe Target using Adobe I/O
-uuid: dd4ed638-e182-4d7e-9c98-282431812467
-contentOwner: aheimoz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: integration
-discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
-docset: aem65
-source-git-commit: e6f4f3cf31c39853b45450e0c925694fc45f7aec
+title: 使用IMS与Adobe Target集成
+description: 了解如何使用IMS将AEM与Adobe Target集成。
+exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1500'
 ht-degree: 1%
 
 ---
 
-# 使用Adobe Target与Adobe I/O集成{#integration-with-adobe-target-using-adobe-i-o}
+# 使用IMS与Adobe Target集成{#integration-with-adobe-target-using-ims}
 
-要通过Target Standard API将AEM与Adobe Target集成，需要配置Adobe IMS(Identity Management系统)和Adobe I/O。
+要通过Target Standard API将AEM与Adobe Target集成，需要使用Adobe开发人员控制台配置Adobe IMS(Identity Management系统)。
 
 >[!NOTE]
 >
@@ -37,13 +29,13 @@ ht-degree: 1%
 * [Adobe支持](https://helpx.adobe.com/cn/contact/enterprise-support.ec.html) 必须为您的帐户配置：
 
    * Adobe控制台
-   * Adobe I/O
+   * Adobe Developer Console
    * Adobe Target和
    * Adobe IMS(Identity Management系统)
 
 * 贵组织的系统管理员应使用Admin Console将组织中所需的开发人员添加到相关的产品配置文件中。
 
-   * 这为特定开发人员提供了在Adobe I/O内启用集成的权限。
+   * 这为特定开发人员提供了在Adobe开发人员控制台中启用集成的权限。
    * 有关更多详细信息，请参阅 [管理开发人员](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -60,7 +52,7 @@ ht-degree: 1%
 
    ![](assets/integrate-target-io-01.png)
 
-1. 选择 **下载** (或 **下载公钥**)将文件下载到本地驱动器，以便在 [配置Adobe I/O以将Adobe Target与AEM集成](#configuring-adobe-i-o-for-adobe-target-integration-with-aem).
+1. 选择 **下载** (或 **下载公钥**)将文件下载到本地驱动器，以便在 [为Adobe Target与AEM集成配置IMS](#configuring-ims-for-adobe-target-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -68,21 +60,17 @@ ht-degree: 1%
 
    ![](assets/integrate-target-io-02.png)
 
-## 为Adobe Target与AEM集成配置Adobe I/O {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
+## 为Adobe Target与AEM集成配置IMS {#configuring-ims-for-adobe-target-integration-with-aem}
 
-您需要创建与AEM将使用的Adobe Target的Adobe I/O项目（集成），然后分配所需的权限。
+使用Adobe开发人员控制台，您需要与AEM将使用的Adobe Target创建一个项目（集成），然后分配所需的权限。
 
 ### 创建项目 {#creating-the-project}
 
-打开Adobe I/O控制台，以创建将由AEM使用的包含Adobe Target的I/O项目：
+打开Adobe开发人员控制台，以使用AEM将使用的Adobe Target创建项目：
 
->[!NOTE]
->
->另请参阅 [Adobe I/O教程](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
+1. 打开项目的Adobe开发人员控制台：
 
-1. 打开项目的Adobe I/O控制台：
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. 您所有的项目都将显示出来。 选择 **创建新项目**  — 位置和使用情况取决于：
 
@@ -145,11 +133,11 @@ ht-degree: 1%
 1. 选择 **API凭据**，则是所需的集成配置。
 1. 选择 **编辑器** 作为 **产品角色**;而不是 **观察者**.
 
-## 存储的Adobe I/O集成项目详细信息 {#details-stored-for-the-adobe-io-integration-project}
+## 存储的Adobe开发人员控制台集成项目的详细信息 {#details-stored-for-the-ims-integration-project}
 
-从Adobe I/O项目控制台中，您可以看到所有集成项目的列表：
+从Adobe开发人员控制台 — 项目中，您可以看到所有集成项目的列表：
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 选择 **查看** （位于特定项目条目的右侧）以显示有关配置的更多详细信息。 这些功能包括：
 
@@ -162,26 +150,26 @@ ht-degree: 1%
 * API
    * 例如，Adobe Target
 
-其中一些操作需要完成AEM中Target的Adobe I/O集成。
+其中一些功能需要基于IMS完成AEM中Adobe Target的集成。
 
 ## 在AEM中完成IMS配置 {#completing-the-ims-configuration-in-aem}
 
-返回AEM后，您可以通过从TargetAdobe I/O集成添加所需值来完成IMS配置：
+返回AEM后，您可以通过从Target的Adobe开发人员控制台集成添加所需的值来完成IMS配置：
 
 1. 返回到 [在AEM中打开IMS配置](#configuring-an-ims-configuration-generating-a-public-key).
 1. 选择&#x200B;**下一步**。
 
-1. 在此，您可以使用 [来自Adobe I/O的详细信息](#details-stored-for-the-adobe-io-integration-project):
+1. 在此，您可以使用 [有关Adobe开发人员控制台中项目配置的详细信息](#details-stored-for-the-ims-integration-project):
 
    * **标题**:你的短信。
    * **授权服务器**:从 `aud` 行 **负载** ，例如 `https://ims-na1.adobelogin.com` 在以下示例中
-   * **API密钥**:从 [概述](#details-stored-for-the-adobe-io-integration-project) TargetAdobe I/O集成部分
-   * **客户端密钥**:在 [概述](#details-stored-for-the-adobe-io-integration-project) Adobe I/O集成部分，并复制
-   * **负载**:从 [生成JWT](#details-stored-for-the-adobe-io-integration-project) TargetAdobe I/O集成部分
+   * **API密钥**:从 [概述](#details-stored-for-the-ims-integration-project) 部分
+   * **客户端密钥**:在 [概述](#details-stored-for-the-ims-integration-project) 部分和复制
+   * **负载**:从 [生成JWT](#details-stored-for-the-ims-integration-project) 部分
 
    ![](assets/integrate-target-io-10.png)
 
-1. 使用确认 **创建**.
+1. 选择&#x200B;**创建**&#x200B;来确认。
 
 1. 您的Adobe Target配置将显示在AEM控制台中。
 
@@ -222,7 +210,7 @@ ht-degree: 1%
 
    您还可以选择所需的模板（如果有多个模板可用）。
 
-1. 使用确认 **创建**.
+1. 选择&#x200B;**创建**&#x200B;来确认。
 
    的 **编辑组件** 对话框。
 
