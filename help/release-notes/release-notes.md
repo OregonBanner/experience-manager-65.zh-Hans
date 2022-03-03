@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 37e7f2552ae712bc23eb3ce1af1b41808f4d1810
+source-git-commit: b02ec58b94e37e0d9902078bbd2387c7b75a208b
 workflow-type: tm+mt
-source-wordcount: '2644'
+source-wordcount: '3071'
 ht-degree: 6%
 
 ---
@@ -137,72 +137,41 @@ The following accessibility enhancements are available in [!DNL Assets]:
 >* [!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
 
 
-<!--
+**自适应表单**
 
-**Adaptive Forms**
+* 当自适应表单中的文本组件包含表时，将内容粘贴到该组件中会导致在编辑器中擦除表(NPR-38078)。
 
-* Accessibility – When you set the `Wizard` layout for a panel in an adaptive form, the navigation buttons do not have Aria labels and role (NPR-37613).
+* 仅当您打开保存的表单时，表单才会显示工具栏(NPR-38060)。
 
-* Validations on a date field in an adaptive form does not work, as expected (NPR-37556).
+* 对于规则编辑器，撤消操作无法正确工作(NPR-37973)。
 
-* When the label text for the Checkbox and Radio Button components is long, the text does not fit appropriately (NPR-37294).
+* `getAemFormContainer` 安装AEM Forms 6.5.10.0后返回空指针(NPR-37881)。
 
-* When you apply styling changes to the Thank You message of the AEM Forms Container component, the changes do not replicate in the source adaptive form (NPR-37284).
+* 辅助功能 — 当选项卡焦点移到字段时，屏幕阅读器会朗读对文本框的长描述，而不是仅在单击字段时才会宣布(NPR-37855)。
 
-* Differences in the value of the `Switch` component on the user interface and in the backend (NPR-37268).
+* 为文本框启用允许富文本属性时，存在允许的最大字符长度问题(NPR-37825)。
 
-* When you use the keyboard keys to navigate to the `Submit` option and press the `Enter` key, you can submit the adaptive form multiple times (CQ-4333993).
+* 以自适应表单复制任何组件时出现CSS问题(NPR-37812)。
 
-* The Remove operation for the File Attachment component does not work, as expected (NPR-37376).
+**交互式通信**
 
-* When a label for a field exceeds 1000 characters in an adaptive form that translates to various languages, the dictionary fails to retrieve the translation of the label (CQ-4329290).
+* “引用”选项卡未列出交互式通信中的任何引用(NPR-37995)。
 
-**Document Services**
+**文档服务**
 
-* An error displays while using the Assembler service (NPR-37606):
+* 汇编程序未按预期嵌入字体(NPR-38056)。
 
-  ```TXT
-    500 Internal Server Error
-  ```
+* 无法使用Workbench将PDF转换为PDFA(NPR-37879)。
 
-* When the document attachments are passed to the Assembler service, the following exception displays (NPR-37582):
+**文档安全**
 
-  ```TXT
-    com.adobe.livecycle.assembler.client.ProcessingException: ⁪: Failed to execute the DDX
-  ```
-
-* Missing closing parenthesis from data after converting a PDF document to a PDF-A/1B PDF document (NPR-37608).
-
-**HTML5 Forms**
-
-* When you install AEM 6.5.10.0, the HTML preview for an XDP form does not work (NPR-37503, CQ-4331926).
-
-* Text overlapping issues while migrating the PDF forms to HTML 5 forms in various languages (NPR-37173).
-
-**Letters**
-
-* When you submit a letter and reopen it in HTML view, the position of text document fragments does not remain the same (NPR-37307).
-
-**Forms Workflow**
-
-* In case of embedded container workflow, you get multiple workflow completion emails even after selecting the `Notify on Complete of Container Workflow` option (NPR-37280).
+* PDF加密在升级到java版本1.8.0_281后不起作用(NPR-37716)。
 
 **Foundation JEE**
 
-* After installing AEM 6.5 Forms Service Pack 9, the CRX repository URLs are no longer available (NPR-37592).
+* 对于AEM Forms 6.5.7.0，多线程PDF生成器服务在随机的一段时间后出现死锁(NPR-38053)。
 
-**Issues fixed in AEM Forms 6.5.11.1**
-
->[!NOTE]
->
->If you have not upgraded to AEM 6.5.11.0 Forms, install the AEM Forms 6.5.11.1 add-on package directly. If you have installed AEM 6.5.11.0 Forms, Adobe recommends to upgrade to AEM 6.5.11.1 Forms.
-
-* Submit actions, Send Email and Invoke an AEM Workflow stop working after installing the Forms 6.5.11.0 add-on package.
-* CreatePDF operation stops converting Microsoft Word documents to PDF documents after installing the Forms 6.5.11.0 add-on package.
-* (JEE Only) Critical security vulnerabilities (CVE-2021-44228 and CVE-2021-45046) reported for Apache Log4j2.
-* (JEE only) Assembler DSC in 6.5.11.0 patch contains incorrect metainfo like specification version and impl version.
-
--->
+* 在AEM Workbench版本6.5.0.20210518.1.338459中，当您使用电子邮件起点并编辑用户名和密码时，不会保存配置(NPR-37967)。
 
 
 有关安全更新的信息，请参阅 [[!DNL Experience Manager] 安全公告页面](https://helpx.adobe.com/security/products/experience-manager.html).
@@ -261,35 +230,31 @@ B.使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.
 
 要了解经认证可与此版本配合使用的平台，请参阅 [技术要求](/help/sites-deploying/technical-requirements.md).
 
-<!-- 
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+### 安装Adobe Experience Manager Forms附加组件包 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>如果您没有使用Experience Manager Forms，请跳过。 Experience Manager Forms中的修复将在计划的 [!DNL Experience Manager] Service Pack版本。
 
-1. Ensure that you have installed the Adobe Experience Manager Service Pack.
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) for your operating system.
-1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->Experience Manager 6.5.10.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to Experience Manager 6.5.10.0, install the latest version of the package post installation of Forms Add-On Package.
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+1. 确保您已安装Adobe Experience Manager Service Pack。
+1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)中列出的相应 Forms 附加组件包。
+1. 按照 [安装AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>Experience Manager6.5.12.0包含新版本的 [AEM Forms兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). 如果您使用的是旧版AEM Forms兼容包并更新到Experience Manager6.5.10.0，请在安装Forms附加组件包后安装最新版本的包。
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+### 在JEE上安装Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+>如果您未在 JEE 上使用 AEM Forms，请跳过。JEE上的Adobe Experience Manager Forms中的修复通过单独的安装程序提供。
 
--->
+有关在JEE上安装Experience Manager Forms累积安装程序和部署后配置的信息，请参阅 [发行说明](jee-patch-installer-65.md).
+
+>[!NOTE]
+>
+>在JEE上安装Experience Manager Forms的累积安装程序后，安装最新的Forms附加组件包，并从 `crx-repository\install` 文件夹，然后重新启动服务器。
 
 ### UberJar {#uber-jar}
 
