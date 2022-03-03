@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: b1e38323fbbb268de76067eb85596119b44221c2
+source-git-commit: 37e7f2552ae712bc23eb3ce1af1b41808f4d1810
 workflow-type: tm+mt
-source-wordcount: '2662'
+source-wordcount: '2644'
 ht-degree: 6%
 
 ---
@@ -323,13 +323,11 @@ For information about installing the cumulative installer for Experience Manager
 
 ## 已知问题 {#known-issues}
 
-* 安装AEM 6.5 Service Pack 12并尝试下载状态ZIP文件时，Experience Manager会下载损坏的文件。
+* 如果您使用内容片段和GraphQL，则建议您在6.5.12.0上安装以下包：
 
-   要避免出现此问题，请在AEM实例上下载并安装以下两个项目 **之前** 下载状态ZIP文件：
+   * [AEM 6.5.12 Sites热修复程序 — NPR-38144](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   * 以下 [修补程序](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
-
-   * the [AEM Sites SEO索引包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
+   * [AEM包含GraphQL索引包1.0.4的内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
 
 * 作为 [!DNL Microsoft Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss EAP 7.1], [!DNL Microsoft Windows Server 2019] 不支持的turnkey安装 [!DNL AEM Forms 6.5.10.0].
 
