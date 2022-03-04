@@ -1,8 +1,8 @@
 ---
 title: 升级到 AEM 6.5 Forms
-seo-title: 升级到 AEM 6.5 Forms
+seo-title: Upgrade to AEM 6.5 Forms
 description: 您可以从AEM 6.3 Forms和AEM 6.4 Forms直接升级到AEM 6.5 Forms。
-seo-description: 您可以从AEM 6.3 Forms和AEM 6.4 Forms直接升级到AEM 6.5 Forms。
+seo-description: You can perform a direct upgrade from AEM 6.3 Forms and AEM 6.4 Forms to AEM 6.5 Forms.
 uuid: 7a38cd72-2d01-4af7-b6a3-00dc34c4f02b
 content-type: reference
 topic-tags: installing
@@ -11,16 +11,16 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 5%
+source-wordcount: '309'
+ht-degree: 2%
 
 ---
 
 # 升级到 AEM 6.5 Forms{#upgrade-to-aem-forms}
 
-AEM 6.5 Forms包含一些新增功能和增强功能，可简化表单和信函的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅[新增功能摘要文档](../../forms/using/whats-new.md)。
+AEM 6.5 Forms包含一些新增功能和增强功能，可简化表单和信函的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅 [新增功能摘要文档](../../forms/using/whats-new.md).
 
 您可以升级现有LiveCycle或AEM Forms安装，以获取AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、流程和资产完好无损。 升级时，还会保留元数据和进程状态。 您可以选择升级路径以开始升级。
 
@@ -47,6 +47,7 @@ AEM 6.5 Forms包含一些新增功能和增强功能，可简化表单和信函�
 
 * AEM 6.3 JEE上的Forms
 * AEM 6.4 JEE上的Forms
+* JEE上的AEM 6.5.x.x
 
 您还可以从
 
@@ -56,6 +57,16 @@ AEM 6.5 Forms包含一些新增功能和增强功能，可简化表单和信函�
 * AEM 6.0 Forms on JEE
 * AEM 6.1 Forms on JEE
 * AEM 6.2 JEE上的Forms
+
+AEM 6.5.12.0 Forms on JEE提供了两种类型的安装程序：完整安装程序和修补程序安装程序。
+
+**完整安装程序**:您可以使用完整安装程序设置新的AEM Forms实例，或从JEE上的AEM 6.3 Forms、JEE上的AEM 6.4执行升级，以及从JEE上的AEM 6.5.x.x到JEE上的AEM 6.5.12.0 Forms的就地升级。
+
+**修补程序安装程序**:修补程序安装程序适用于已在使用AEM 6.5.x.x版本的客户。 您可以使用修补程序安装程序升级到最新版本的AEM Forms。
+
+下图描述了使用完整和修补程序安装程序的传感器。
+
+![](assets/full-and-patch-installer.png)
 
 <!--
 [Work in Progress]

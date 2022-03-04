@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 41fb9099ef81b84bcf9fa7b6f153ab1a27953795
+source-git-commit: 45a26c34ba879e1948ace785e861d38cce71e3a6
 workflow-type: tm+mt
-source-wordcount: '3488'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -111,12 +111,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>次要版本和更新</td>
   </tr>
   <tr>
-   <td>IBM® J9 Virtual Machine（版本2.8,JRE 1.8.0）</td>
-   <td>答：支持</td>
-   <td>次要版本和更新</td>
-  </tr>
-  <tr>
-   <td>IBM® J9 Virtual Machine（版本2.9,JRE 1.8.0）<br /> </td>
+   <td>IBM® J9虚拟机（版本2.9,JRE 1.8.0）IBM® JDK SR6-FP26<br /> </td>
    <td>答：支持</td>
    <td>次要版本和更新</td>
   </tr>
@@ -144,25 +139,20 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>MongoDB Enterprise 4.0 </p> </td>
+   <td><p> MongoDB Enterprise 4.0（已弃用） </p> </td>
    <td><p>存储库微内核</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td><p>Oracle数据库12c版本1</p> </td>
-   <td><p>存储库微内核</p> </td>
-   <td><p>支持</p> </td>
-  </tr>
-   <tr>
-   <td><p>Oracle数据库12c版本2(12.2.0.1.0)</p> </td>
+   <td><p>MongoDB Enterprise 4.2 </p> </td>
    <td><p>存储库微内核</p> </td>
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td>Oracle数据库18c </td>
-   <td>存储库微内核</td>
-   <td>支持</td>
-  </tr> 
+   <td><p>Oracle数据库12c版本2(12.2.0.1.0)（已弃用）</p> </td>
+   <td><p>存储库微内核</p> </td>
+   <td><p>支持</p> </td>
+  </tr>
    <tr>
    <td>Oracle数据库19c(标准、Real Application Clusters(RAC)和企业版) </td>
    <td>存储库微核 </td>
@@ -179,15 +169,20 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td><p>支持</p> </td>
   </tr>
   <tr>
-   <td>IBM DB2 11.1</td>
+   <td>IBM DB2 11.1（已弃用）</td>
    <td>存储库微内核</td>
    <td>R:受限支持</td>
   </tr>
   <tr>
-   <td>MySQL 5.7.35 </td>
+   <td>MySQL 5.7.35（已弃用） </td>
    <td>-</td>
    <td>R:受限支持</td>
-  </tr>  
+  </tr>
+  <tr>
+   <td>MySQL 8.0.27</td>
+   <td>-</td>
+   <td>R:受限支持</td>
+  </tr>
  </tbody>
 </table>
 
@@ -218,7 +213,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
   </tr>
   <tr>
    <td>Microsoft SQL Server<br /> </td>
-   <td><p>Microsoft® SQL Server JDBC驱动程序6.2.1.0<br /> </p> <p>sqljdbc6.jar</p> </td>
+   <td><p>Microsoft® SQL Server JDBC驱动程序6.2.1.0（已弃用） <br /> </p> <p>sqljdbc6.jar</p> </td>
    <td><p>在JEE安装中随AEM Forms提供。</p> </td>
   </tr>
   <tr>
@@ -254,7 +249,12 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>Service Pack和关键更新</td>
   </tr>
   <tr>
-   <td><p>JBoss®企业应用程序平台(EAP)7.1.4 <sup>[2] [3] [7]</sup></p> </td>
+   <td><p>JBoss®企业应用程序平台(EAP)7.1.4 <sup>[2] [3] [7]</sup> （已弃用） </p> </td>
+   <td><p>答：支持</p> </td>
+   <td><p>支持的EAP版本的修补程序和累积修补程序</p> </td>
+  </tr>
+  <tr>
+   <td><p>JBoss®企业应用程序平台(EAP)7.4 <sup>[2] [3] [7]</sup> </p> </td>
    <td><p>答：支持</p> </td>
    <td><p>支持的EAP版本的修补程序和累积修补程序</p> </td>
   </tr>
@@ -287,7 +287,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>服务包和关键更新</td>
   </tr>
   <tr>
-   <td>Microsoft Windows Server 2016（64位）（已弃用）</td>
+   <td> Microsoft Windows Server 2016（64位）（已弃用）</td>
    <td>答：支持</td>
    <td>服务包和关键更新</td>
   </tr>
@@ -345,7 +345,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
 在选择平台以在JEE服务器上设置AEM Forms时，请考虑以下例外情况。
 
 1. JEE上的AEM Forms不支持将IBM® WebSphere®与MySQL结合使用。
-1. JEE上的AEM Forms不支持SUSE Linux Enterprise Server 12上的JBoss。 SUSE Linux Enterprise Server 12仅支持IBM WebSphere。
+1. JEE上的AEM Forms在SUSE Linux Enterprise Server 12上不支持和JBoss。 SUSE Linux Enterprise Server 12仅支持IBM WebSphere。
 1. AEM Forms在JEE上不支持使用JBoss®(OracleJava™ SE除外)的任何JDK。
 1. AEM Forms on JEE不支持通过IBM® WebSphere®(IBM® JDK除外)进行任何JDK。
 1. CRX-repository支持TarMK、MongoDB类型和关系数据库(RDBMK)的持久性。 应用程序服务器和CRX-repository之间不能有两个不同的数据库系统。 但是，在JEE环境的AEM Forms上，您可以将MongoMK与CRX-repository结合使用，将受支持的关系数据库与应用程序服务器结合使用。
@@ -372,10 +372,6 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <th><p><strong>支持的修补程序定义</strong></p> </th>
   </tr>
   <tr>
-   <td>Oracle统一目录(OUD)11g版本2</td>
-   <td>服务包</td>
-  </tr>
-  <tr>
    <td>Microsoft Active Directory 2016</td>
    <td>维护版本和修复包</td>
   </tr>
@@ -390,7 +386,6 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
 
 | 产品 |
 | ----------------------- |
-| IBM Lotus Domino 9.0 |
 | Microsoft Exchange 2013 |
 | Microsoft Office 365 |
 
@@ -408,18 +403,14 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
   </tr>
   <tr>
    <td>IBM Filenet</td>
-   <td>5.2</td>
-  </tr>
-  <tr>
-   <td>IBM Filenet</td>
    <td>5.5.2</td>
   </tr>
   <tr>
-   <td>IBM Content Manager Server</td>
+   <td>IBM Content Manager Server（已弃用） </td>
    <td>8.5修复包2</td>
   </tr>
   <tr>
-   <td>IBM Content Manager客户端</td>
+   <td> IBM Content Manager客户端（已弃用）</td>
    <td>8.5 </td>
   </tr>
   <tr>
@@ -463,7 +454,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
-   <td>WordPerfect X7</td>
+   <td>WordPerfect 2020<br /> </td>
    <td>WP、WPD</td>
   </tr>
   <tr>
@@ -683,7 +674,6 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 >
 > 桌面的一些与浏览器相关的例外如下：
 >
-> - 大多数现代浏览器不再支持基于NPAPI的插件。 有关它如何影响AEM Forms应用程序和工作流的信息，请参阅 [NPAPI浏览器插件的停用及其影响](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
 > - Safari仅在Macintosh OS X上受支持。
 > - 工作区在Macintosh OS X 10.6和10.7上支持Safari 5.1(含Acrobat DC或更高版本)。 有关Safari 5.1与AcrobatAdobe Reader兼容的更多信息，请参阅 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
 > - Safari不支持管理控制台。
@@ -735,25 +725,6 @@ AEM Forms应用程序在以下平台上可用：
 | Google Android | Android 5.1及更高版本。 AEM Forms应用在7英寸和10英寸的三星Galaxy平板电脑和流行的智能手机上获得认证。 |
 | Microsoft Windows | Microsoft运行Microsoft Windows 10操作系统的Surface设备、平板电脑、笔记本电脑和台式机。 |
 
-### AdobeFlash Player {#adobe-flash-player}
-
-<table>
- <tbody>
-  <tr>
-   <th><p><strong>Flash Player（基本）</strong></p> </th>
-   <th><p><strong>支持的修补程序定义</strong></p> </th>
-  </tr>
-  <tr>
-   <td><p>Flash Player最新版本</p> </td>
-   <td><p>次要版本和更新</p> </td>
-  </tr>
- </tbody>
-</table>
-
->[!NOTE]
->
-> Adobe [2020年底停止更新和分发Flash Player](https://theblog.adobe.com/adobe-flash-update/).
-
 ### Adobe文档安全扩展，适用于Microsoft Office {#adobe-rights-management-extension-for-microsoft-office}
 
 单击 [此处](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html) 查看《Microsoft® OfficeAdobe文档安全扩展》的系统要求。
@@ -780,29 +751,45 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 
 ## 平台更新 {#platform-updates}
 
+2022年2月3日，AEM Forms 6.5.12.0版本将以下平台标记为已弃用：
+
+- MongoDB Enterprise 4.0
+- IBM DB2 11.1
+- Oracle数据库12c版本2
+- MySQL 5.7.35
+- Microsoft® SQL Server JDBC驱动程序6.2.1.0
+- JBoss®企业应用程序平台(EAP)7.1.4
+- IBM Content Manager Server 8.5修复包2
+- IBM Content Manager Client 8.5
+
 2021年9月7日，AEM Forms 6.5.10.0版本将以下平台标记为已弃用：
 
 - Adobe Acrobat2017 - [对Adobe Acrobat 2017的核心支持将于2022年6月6日终止](https://helpx.adobe.com/cn/support/programs/eol-matrix.html).
-
 - Microsoft Windows Server 2016（64位）
-
 - Red Hat Enterprise Linux 7（内核3.x）（64位）
-
 - Microsoft® Office 2016
-
 - OpenOffice 4.1.2
 
 >[!NOTE]
 >
-> 标记为 [在AEM Forms 6.5 Service Pack 15(6.5.15.0)版本之前，已弃用的仍支持](https://helpx.adobe.com/support/programs/eol-matrix.html).
+> 标记为 [在AEM Forms 6.5.12.0和6.5.10.0中已弃用，在AEM Forms 6.5 Service Pack 18(6.5.18.0)版本之前，仍支持](https://helpx.adobe.com/support/programs/eol-matrix.html).
 
 ## 修订历史记录 {#revision-history}
 
+- 2022 年 2 月 03 日
+
+   - 删除了对以下项的支持：
+      - IBM® J9 Virtual Machine（版本2.8,JRE 1.8.0）
+      - Oracle数据库12c版本2
+      - Oracle数据库18c
+      - Oracle统一目录(OUD)11g版本2
+      - IBM Lotus Domino 9.0
+      - IBM Filenet 5.2
+      - AdobeFlash Player
 
 - 2021年10月10日
 
    - 已将支持的iOS for AEM Forms应用程序版本更改为iOS 15.1。以前的版本为iOS 12。
-
 
 - 2021年9月07日
    - **平台更新**: [!DNL Adobe Experience Manager Forms] 在JEE上添加了对以下平台的支持：
@@ -815,5 +802,3 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
    - 2020年9月09日
 
       - 已将支持的iOS for AEM Forms应用程序版本更改为iOS 12。 以前的版本是iOS 11。
-
-
