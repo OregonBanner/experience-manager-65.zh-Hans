@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: b02ec58b94e37e0d9902078bbd2387c7b75a208b
+source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
 workflow-type: tm+mt
-source-wordcount: '3071'
+source-wordcount: '3154'
 ht-degree: 6%
 
 ---
@@ -111,7 +111,6 @@ The following accessibility enhancements are available in [!DNL Assets]:
    * 对于从属的不可编辑字段，只会保存最后选择的父字段(NPR-37858)。
    * 从属下拉列表（多值字段）间歇性地反映选定父下拉列表的默认值(NPR-37791)。
 
-
 ### [!DNL Dynamic Media] {#dynamic-media-65120}
 
 中修复了以下问题 [!DNL Dynamic Media]:
@@ -128,9 +127,7 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * 如果对收件箱项目应用过滤器，则滚动操作无法按预期工作(CQ-4333594)。
 
-
 ### [!DNL Forms] {#forms-65120}
-
 
 >[!NOTE]
 >
@@ -153,6 +150,10 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * 以自适应表单复制任何组件时出现CSS问题(NPR-37812)。
 
+**表单数据模型**
+
+* 将连接到表单数据模型的自适应表单附件保存到数据库时出现问题(CQ-4338561)。
+
 **交互式通信**
 
 * “引用”选项卡未列出交互式通信中的任何引用(NPR-37995)。
@@ -163,16 +164,38 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * 无法使用Workbench将PDF转换为PDFA(NPR-37879)。
 
+* 从AEM 6.5.7.0 Forms升级到AEM 6.5.10.0 Forms后，使用PDF生成器服务时办公室文档出现问题(NPR-37758)。
+
 **文档安全**
 
 * PDF加密在升级到java版本1.8.0_281后不起作用(NPR-37716)。
 
 **Foundation JEE**
 
-* 对于AEM Forms 6.5.7.0，多线程PDF生成器服务在随机的一段时间后出现死锁(NPR-38053)。
+* 对于AEM 6.5.7.0 Forms，多线程PDF生成器服务在随机的一段时间后出现死锁(NPR-38053)。
 
-* 在AEM Workbench版本6.5.0.20210518.1.338459中，当您使用电子邮件起点并编辑用户名和密码时，不会保存配置(NPR-37967)。
+* 在AEM Workbench版本6.5.0.20210518.1.338459中，当您使用电子邮件起点并编辑用户名和密码时，不会保存配置(NPR-37967、CQ-4336081)。
 
+* 保存日志会导致CPU利用率较高，需要重新启动服务器(NPR-37868)。
+
+* `Gemfire.log` 未在中创建 `temp\adobejb_server1\Caching` 文件夹(在安装AEM Forms-6.5.0-0038之后)(CQ-4340237)。
+
+* 执行 `ConfigurationManager.sh` 命令(CQ-4338323):
+
+   ```TXT
+     [root@localhost bin]# ./ConfigurationManager.sh 
+     bash: ./ConfigurationManagerCLI.sh: /bin/sh^M: bad interpreter: No such file or directory
+   ```
+
+* RHEL8上的AEM 6.5 Forms不支持JBOSS EAP 7.3和MySQL8(CQ-4331770)。
+
+**工作流**
+
+* 在AEM 6.5.10.0 Forms发布实例上，将UTF-8特殊字符存储为工作流的一部分时出现问题(NPR-37673)。
+
+* 创建ArrayList类型和JSON子类型的变量时出现问题(NPR-37600)。
+
+* 在AEM 6.5.9.0 Forms和AEM 6.5.10.0 Forms(CQ-4336582)的工作流中，使用设置变量步骤的XPath/点表示法浏览器出现问题。
 
 有关安全更新的信息，请参阅 [[!DNL Experience Manager] 安全公告页面](https://helpx.adobe.com/security/products/experience-manager.html).
 
@@ -240,10 +263,6 @@ B.使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.
 1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)中列出的相应 Forms 附加组件包。
 1. 按照 [安装AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
->[!NOTE]
->
->Experience Manager6.5.12.0包含新版本的 [AEM Forms兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). 如果您使用的是旧版AEM Forms兼容包并更新到Experience Manager6.5.10.0，请在安装Forms附加组件包后安装最新版本的包。
-
 ### 在JEE上安装Adobe Experience Manager Forms {#install-aem-forms-jee-installer}
 
 >[!NOTE]
@@ -292,7 +311,7 @@ B.使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.
 
    * [AEM 6.5.12 Sites热修复程序 — NPR-38144](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   * [AEM包含GraphQL索引包1.0.4的内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
+   * [AEM包含GraphQL索引包1.0.3的内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
 
 * 作为 [!DNL Microsoft Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss EAP 7.1], [!DNL Microsoft Windows Server 2019] 不支持的turnkey安装 [!DNL AEM Forms 6.5.10.0].
 
