@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
+source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
 workflow-type: tm+mt
-source-wordcount: '3154'
+source-wordcount: '3180'
 ht-degree: 6%
 
 ---
@@ -84,6 +84,7 @@ ht-degree: 6%
 * [社区] 群组成员的表中的内容不可点击(CQ-4334404)。
 * [Oak] 冷待同步进程不工作且正在记录错误(CQ-4333868)。
 * [Platform Foundation UI] [!DNL Experience Manager] 当用户选择 [!DNL Adobe Experience Manager] 图标(CQ-4317409)。
+* 对于用户（没有复制权限）删除或移动页面（即使页面未激活）， `Page Subtree Activation Check` 在配置下 `Page Manager Factory` 需要启用(NPR-37936)。
 
 ### [!DNL Assets] {#assets-65120}
 
