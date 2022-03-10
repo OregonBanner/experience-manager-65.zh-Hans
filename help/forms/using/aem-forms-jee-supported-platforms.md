@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 45a26c34ba879e1948ace785e861d38cce71e3a6
+source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3515'
+ht-degree: 1%
 
 ---
 
@@ -115,7 +115,13 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>答：支持</td>
    <td>次要版本和更新</td>
   </tr>
- </tbody>
+  <tr>
+   <td> IBM JAVA1.8.0_291（内部版本8.0.6.30）<br /> </td>
+   <td>答：支持</td>
+   <td>次要版本和更新</td>
+  </tr>
+
+</tbody>
 </table>
 
 >[!NOTE]
@@ -159,7 +165,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>支持</td>
   </tr>
   <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
+   <td><p>Microsoft SQL Server 2016（已弃用）</p> </td>
    <td><p>存储库微内核</p> </td>
    <td><p>支持</p> </td>
   </tr>
@@ -244,7 +250,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>Service Pack和关键更新</td>
   </tr>
   <tr>
-   <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
+   <td>IBM® WebSphere® Application Server 9.0.0.10 <sup>[1] [4]</sup><br /> </td>
    <td>答：支持</td>
    <td>Service Pack和关键更新</td>
   </tr>
@@ -751,7 +757,7 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 
 ## 平台更新 {#platform-updates}
 
-2022年2月3日，AEM Forms 6.5.12.0版本将以下平台标记为已弃用：
+2022年3月3日，AEM Forms 6.5.12.0版本将以下平台标记为已弃用：
 
 - MongoDB Enterprise 4.0
 - IBM DB2 11.1
@@ -761,6 +767,7 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 - JBoss®企业应用程序平台(EAP)7.1.4
 - IBM Content Manager Server 8.5修复包2
 - IBM Content Manager Client 8.5
+- Microsoft SQL Server 2016
 
 2021年9月7日，AEM Forms 6.5.10.0版本将以下平台标记为已弃用：
 
@@ -776,11 +783,11 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 
 ## 修订历史记录 {#revision-history}
 
-- 2022 年 2 月 03 日
+- 2022年3月03日
 
    - 删除了对以下项的支持：
       - IBM® J9 Virtual Machine（版本2.8,JRE 1.8.0）
-      - Oracle数据库12c版本2
+      - Oracle数据库12c版本1
       - Oracle数据库18c
       - Oracle统一目录(OUD)11g版本2
       - IBM Lotus Domino 9.0

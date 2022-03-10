@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
+source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
 workflow-type: tm+mt
-source-wordcount: '3180'
+source-wordcount: '3318'
 ht-degree: 6%
 
 ---
@@ -150,6 +150,12 @@ The following accessibility enhancements are available in [!DNL Assets]:
 * 为文本框启用允许富文本属性时，存在允许的最大字符长度问题(NPR-37825)。
 
 * 以自适应表单复制任何组件时出现CSS问题(NPR-37812)。
+
+* 在生成自适应表单翻译时，生成的XLIFF文件不包含与自适应表单中相同的文本序列。 在有些情况下，需要了解案文的背景。 如果XLIFF中的序列是字母，则无法执行此操作。 (NPR-37435).
+
+* 翻译自适应表单后，HTML标记即会包含在翻译中。 如果用户出错，并且标记无效，则整个文本不会显示在记录文档中。 (NPR-37499)
+
+* 以基本语言创建并完成自适应表单后，翻译由外部团队完成并导入。 即使文本发生了细微更改，如添加或缺少点(.) 对于基本语言，使用完成，对于所有其他语言，将缺少完整的翻译。 (NPR-37189)
 
 **表单数据模型**
 
