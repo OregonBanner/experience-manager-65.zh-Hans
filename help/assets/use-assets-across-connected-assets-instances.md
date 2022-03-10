@@ -1,14 +1,15 @@
 ---
 title: 在 中，使用连接的资产共享 DAM 资产 [!DNL Sites]
 description: 使用远程设备上可用的资产 [!DNL Adobe Experience Manager Assets] 在另一个页面上创建网页时进行部署 [!DNL Adobe Experience Manager Sites] 部署。
-contentOwner: AG
+contentOwner: AK
+mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 6b9f0836ae61fdaa1aaf89434d76be5925970088
+source-git-commit: 19eaabb55f11ea8080a545d994795e30817a51fb
 workflow-type: tm+mt
-source-wordcount: '3811'
-ht-degree: 21%
+source-wordcount: '3786'
+ht-degree: 18%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 21%
 
 在中编辑页面时 [!UICONTROL 页面编辑器] 作为target目标，作者可以从其他位置无缝搜索、浏览和嵌入资产 [!DNL Assets] 用作资产源的部署。 管理员可创建部署的一次性集成 [!DNL Experience Manager] with [!DNL Sites] 能力与另一部署 [!DNL Experience Manager] with [!DNL Assets] 功能。 网站作者还可以通过连接的资产在其网站网页中使用Dynamic Media图像，并利用Dynamic Media功能，如智能裁剪和图像预设。
 
-对于 [!DNL Sites] 作者，远程资产可用作只读本地资产。 该功能可支持一次无缝搜索和使用多个远程资产。在 [!DNL Sites] 请考虑一次性部署资产，以批量迁移资产。 请参阅 [Experience Manager Assets迁移指南](/help/assets/assets-migration-guide.md).
+对于 [!DNL Sites] 作者，远程资产可用作只读本地资产。 该功能支持在站点编辑器上无缝搜索和访问远程资产。 对于可能需要在站点上提供完整资产语料库的任何其他用例，请考虑批量迁移资产，而不是利用连接的资产。 请参阅 [Experience Manager Assets迁移指南](/help/assets/assets-migration-guide.md).
 
 ### 先决条件与支持的部署 {#prerequisites}
 
@@ -43,7 +44,7 @@ ht-degree: 21%
 
 ### 支持的文件格式 {#mimetypes}
 
-作者在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中使用搜索到的资产。 文档将添加到 `Download` 组件和图像 `Image` 组件。 作者还会在任何自定义中添加远程资产 [!DNL Experience Manager] 扩展默认值的组件 `Download` 或 `Image` 组件。 支持的格式包括：
+作者在内容查找器中搜索图像和以下类型的文档，并在页面编辑器中拖动搜索到的资产。 文档将添加到 `Download` 组件和图像 `Image` 组件。 作者还可以在任何自定义中添加远程资产 [!DNL Experience Manager] 扩展默认值的组件 `Download` 或 `Image` 组件。 支持的格式包括：
 
 * **图像格式**:格式 [图像组件](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) 支持。
 * **文档格式**:请参阅 [支持的文档格式](assets-formats.md#supported-document-formats).
@@ -52,7 +53,7 @@ ht-degree: 21%
 
 下面介绍了配置和使用该功能所涉及的各种角色，及其相应的用户组。作者创建网页的用例使用本地范围。 对于托管所需资产的 DAM 部署，使用远程范围。的 [!DNL Sites] 作者会获取这些远程资产。
 
-| 角色 | 范围 | 用户组 | 演示中的用户名 | 要求 |
+| 角色 | 范围 | 用户组 | 演示中的用户名 | 描述 |
 |---|---|---|---|---|
 | [!DNL Sites] 管理员 | 本地 | [!DNL Experience Manager] `administrators` | `admin` | 设置 [!DNL Experience Manager] 和配置与远程设备的集成 [!DNL Assets] 部署。 |
 | DAM 用户 | 本地 | `Authors` | `ksaner` | 用于查看和复制在 `/content/DAM/connectedassets/` 上获取的资产。 |
@@ -97,7 +98,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
    1. **[!UICONTROL 本地站点URL]** 是 [!DNL Sites] 部署。 [!DNL Assets] 部署使用此值维护对此获取的数字资产的引用 [!DNL Sites] 部署。
    1. 凭据 [!DNL Sites] 技术用户。
    1. 的值 **[!UICONTROL 原始二进制传输优化阈值]** 字段会指定原始资产（包括演绎版）是否同步传输。 可以轻松获取文件大小较小的资产，而文件大小相对较大的资产最好异步同步。 此值取决于您的网络功能。
-   1. 如果您使用数据存储来存储您的资产，且数据存储是两个 部署之间的公用存储，请选择&#x200B;**[!UICONTROL 与连接的资产共享数据存储]**。在这种情况下，阈值限制无关紧要，因为数据存储上有实际的资产二进制文件，并且不会传输。
+   1. 选择 **[!UICONTROL 与连接的资产共享数据存储]**，则当您使用数据存储来存储您的资产，并且数据存储在两个部署之间共享时。 在这种情况下，阈值限制无关紧要，因为数据存储上有实际的资产二进制文件，并且不会传输。
 
    ![连接的资产功能的典型配置](assets/connected-assets-typical-config.png)
 
@@ -166,7 +167,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
 ## 使用远程资产 {#use-remote-assets}
 
-网站作者使用内容查找器连接到DAM部署。 作者可以浏览、搜索以及拖动组件中的远程资产。要验证远程 DAM，请准备好管理员提供的 DAM 用户凭据。
+网站作者使用内容查找器连接到DAM部署。 作者可以浏览、搜索以及拖动组件中的远程资产。要对远程DAM进行身份验证，请准备好管理员提供的凭据（如果有）。
 
 作者可以在单个网页中使用本地DAM和远程DAM部署中可用的资产。 使用内容查找器，可在搜索本地 DAM 与搜索远程 DAM 之间切换。
 
@@ -182,7 +183,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
    单击页面左上角的&#x200B;**[!UICONTROL 切换侧面板]**。
 
-1. 打开 [!UICONTROL 资产] 选项卡，单击 **[!UICONTROL 登录到连接的资产]**.
+1. 打开 [!UICONTROL 资产] 选项卡（远程内容查找器），然后单击 **[!UICONTROL 登录到连接的资产]**.
 1. 提供凭据 -- `ksaner` 作为用户名，`password` 作为密码。此用户对 [!DNL Experience Manager] 部署。
 1. 搜索您添加到 DAM 的资产。远程资产会显示在左侧面板中。筛选图像或文档，并进一步筛选支持的文档类型。拖动 `Image` 组件上的图像和 `Download` 组件上的文档。
 
@@ -192,7 +193,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
    *图：在远程 DAM 上搜索资产时，筛选文档类型和图像的选项.*
 
-1. 如果异步获取资产且获取任务失败，会通知站点作者。在创作时甚至在创作后，作者可以在 [异步作业](/help/sites-administering/asynchronous-jobs.md) 用户界面。
+1. 如果异步获取资产的原始资产，并且获取任务失败，则会通知网站作者。 在创作时甚至在创作后，作者可以在 [异步作业](/help/sites-administering/asynchronous-jobs.md) 用户界面。
 
    ![关于在后台进行的异步获取资产的通知。](assets/assets_async_transfer_fails.png)
 
@@ -202,7 +203,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
    >[!NOTE]
    >
-   >即使未获取一个或多个远程资产，页面也会发布。使用该远程资产的组件发布为空。的 [!DNL Experience Manager] “通知”区域显示在异步作业页面中显示错误通知。
+   >即使未完全获取一个或多个远程资产，页面也会发布。 的 [!DNL Experience Manager] “通知”区域显示在异步作业页面中显示错误通知。
 
 >[!CAUTION]
 >
@@ -223,7 +224,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
 1. 的引用 [!DNL Sites] 页面显示每个本地引用的总计数 [!DNL Sites]. 查找所有引用并显示引用总数可能需要一些时间。
 1. 引用列表是交互式的，DAM用户可以单击引用以打开引用页面。 如果由于某些原因无法获取远程引用，则会显示通知，告知用户失败。
-1. 用户可以移动或删除资产。 移动或删除资产时，所有选定资产/文件夹的引用总数会显示在警告对话框中。 删除尚未显示引用的资产时，会显示一个警告对话框。
+1. 用户可以移动或删除资产。 移动或删除资产时，所有选定资产/文件夹的引用总数会显示在警告对话框中。 删除尚未检索引用的资产时，会显示一个警告对话框。
 
    ![强制删除警告](assets/delete-referenced-asset.png)
 
@@ -275,7 +276,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
 ### 能否在上的远程DAM部署中使用Dynamic Media资产 [!DNL Sites] 是否在配置连接的资产后进行部署？
 
-能，您可以在上的远程DAM部署中配置和使用Dynamic Media资产 [!DNL Sites] 配置连接的资产后进行部署。 有关更多信息，请参阅 [在Sites与Dynamic Media部署之间配置连接](#dynamic-media-assets).
+能，您可以在 [!DNL Sites] 配置连接的资产后进行部署。 有关更多信息，请参阅 [在Sites与Dynamic Media部署之间配置连接](#dynamic-media-assets).
 
 ### 配置连接的资产后，能否对远程DAM资产或文件夹执行更新、删除、重命名和移动操作？
 
@@ -291,7 +292,6 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
 ### 权限和资产管理 {#permissions-and-managing-assets}
 
-* 本地资产与远程部署中的原始资产不同步。在 DAM 部署上所具有的任何编辑、删除或撤销权限均不会传播到下游。
 * 本地资产是只读副本。[!DNL Experience Manager] 组件对资产进行无损编辑。不允许进行其他编辑。
 * 本地获取的资产只能用于创作。不能应用资产更新工作流，也不能编辑元数据。
 * 仅支持图像和列出的文档格式。[!DNL Content Fragments] 和 [!DNL Experience Fragments] 不受支持。
@@ -304,7 +304,7 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 ### 设置和许可 {#setup-licensing}
 
 * [!DNL Assets] 部署 [!DNL Adobe Managed Services] 支持。
-* [!DNL Sites] 可以连接到单个 [!DNL Assets] 存储库。
+* [!DNL Sites] 可以连接到单个 [!DNL Assets] 一次部署。
 * 许可证 [!DNL Assets] 需要远程存储库。
 * 一个或多个 [!DNL Sites] 需要本地创作部署。
 
