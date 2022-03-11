@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
-source-git-commit: 10e46fe60edcaa116978173b8c61542653f6a551
+source-git-commit: 084e5d561e25dcbaee4489b65f423fc9166832be
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 86%
+source-wordcount: '2000'
+ht-degree: 85%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 86%
 
 要添加活动，请执行以下操作：
 
-1. 单击或点按要为其创建活动的品牌，然后依次单击或点按&#x200B;**创建**、**创建活动**。如果您正在编辑，请选择活动，然后单击或点按 **编辑**.
+1. 单击或点按要为其创建活动的品牌，然后单击或点按 **创建** 然后 **创建活动**. 如果您正在编辑，请选择活动，然后单击或点按 **编辑**.
 1. 提供以下信息，然后单击或点按&#x200B;**下一步**：
 
    * 活动的名称。
