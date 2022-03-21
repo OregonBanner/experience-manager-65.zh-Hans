@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cda5e0b545903333d928f14e043a931898d87dc3
+source-git-commit: 077540ed65f31f1bb4f0063fb6ac8bddb76595da
 workflow-type: tm+mt
-source-wordcount: '3362'
+source-wordcount: '3314'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,6 @@ Adobe在平台上支持Adobe Experience Manager(AEM)，如本文档中的以下�
 >
 >* 数字资产用例需要更多基本内存。 请参阅 [部署和维护](/help/sites-deploying/deploy.md#default-local-install) 以了解详细信息。
 >* [AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md) 需要15 GB的临时空间。
-
 >
 
 
@@ -138,8 +137,8 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 
 | **平台** | **支持级别** | **链接** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
-| Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
+| Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[1]` |  |
+| Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[1]` |  |
 | OracleJava SE 11 JDK - 64位 | 答：支持 `[2]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava SE 10 JDK | Z:不支持 `[2]` |
 | OracleJava SE 9 JDK | Z:不支持 `[2]` |
@@ -149,7 +148,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 
 1. 支持和分发阿祖尔Zulu Build的OpenJDK，包括对LTS版本的所有维护更新，将由Adobe直接支持所有使用OpenJDK的阿祖尔Zulu Build的AEM客户，从AEM 6.5 SP9的版本开始。 请参阅 [Azul Java支持Adobe Experience Manager问答](assets/adobe-azul-openjdk-license-agreement.pdf) 以了解更多信息。
 
-1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本的所有维护更新 **截至2022年12月**. 请参阅 [Oracle对Adobe Experience Manager问答的Java支持](assets/adobe-oracle-java-license-agreement.pdf) 以了解更多信息。
+1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本进行的所有维护更新。 请参阅 [Oracle对Adobe Experience Manager问答的Java支持](assets/adobe-oracle-java-license-agreement.pdf) 以了解更多信息。
 
 1. IBM JRE仅与WebSphere Application Server一起受支持。
 
@@ -517,7 +516,6 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 >* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >* PDF生成器服务不支持Microsoft Windows 10。
-
 >
 
 
