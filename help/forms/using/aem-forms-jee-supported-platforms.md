@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
+source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
 workflow-type: tm+mt
 source-wordcount: '3515'
 ht-degree: 1%
@@ -116,12 +116,11 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>次要版本和更新</td>
   </tr>
   <tr>
-   <td> IBM JAVA1.8.0_291（内部版本8.0.6.30）<br /> </td>
+   <td>IBM JAVA1.8.0_291（内部版本8.0.6.30）<br /> </td>
    <td>答：支持</td>
    <td>次要版本和更新</td>
   </tr>
-
-</tbody>
+ </tbody>
 </table>
 
 >[!NOTE]
@@ -649,7 +648,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>Microsoft Firefox ESR</td>
+   <td>Mozilla Firefox ESR</td>
    <td>E:预计会正常工作</td>
    <td> 所有更新</td>
   </tr>
@@ -721,7 +720,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 
 ### AEM Forms应用程序 {#aem-forms-workspace-app}
 
-#### 移动设备支持 {#mobile-device-support}
+#### Mobile设备支持 {#mobile-device-support}
 
 AEM Forms应用程序在以下平台上可用：
 
