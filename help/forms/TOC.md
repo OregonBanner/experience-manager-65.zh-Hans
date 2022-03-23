@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 7962d076135bcbac821ff85fd1831ee2c444ff00
+source-git-commit: 290ae422e1136ea28ab21c3031ab66fb5405f1d3
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3775'
 ht-degree: 4%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 4%
       + [在JEE for WebSphere上安装和部署Adobe Experience Manager表单](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [在JEE上安装和部署AEM Forms for WebLogic](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
       + [安装AEM Forms Workbench](using/install-workbench.md)
-      + [安装和配置Designer](using/installing-configuring-designer.md)
+      + [安装和配置 Designer](using/installing-configuring-designer.md)
       + [准备安装AEM Forms（服务器群集）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
       + [在JBoss群集上的JEE上配置Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
       + [在WebSphere群集上的JEE上配置Adobe Experience Manager Forms](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
@@ -155,7 +155,7 @@ ht-degree: 4%
    + [AEM Forms键盘快捷键](using/keyboard-shortcuts.md)
    + [将提交审阅人与表单关联](using/adding-reviewers-form.md)
    + [为表单字段创作上下文内帮助](using/authoring-in-field-help.md)
-   + [使用布局模式调整组件大小](/help/forms/using/resize-using-layout-mode.md)
+   + [使用版面模式调整组件大小](/help/forms/using/resize-using-layout-mode.md)
 + 自适应Forms — 高级创作 {#adaptive-forms-advanced-authoring}
    + [使用JSON模式创建自适应表单](using/adaptive-form-json-schema-form-model.md)
    + [使用XML架构创建自适应表单](using/adaptive-form-xml-schema-form-model.md)
@@ -168,12 +168,11 @@ ht-degree: 4%
    + [自适应表单模板](using/template-editor.md)
    + [自适应表单表达式](using/adaptive-form-expressions.md)
    + [为自适应表单生成记录文档](using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
-   + [通过延迟加载提高大型表单的性能](using/lazy-loading-adaptive-forms.md)
+   + [使用延迟加载改进大型表单的性能](using/lazy-loading-adaptive-forms.md)
    + [预填自适应表单字段](using/prepopulate-adaptive-form-fields.md)
    + [在自适应表单中使用SOM表达式](using/using-som-expressions-adaptive-forms.md)
    + [将来自用户数据的信息添加到表单提交元数据](using/form-submission-metadata.md)
    + [基于XDP的自适应表单中的XFA支持](using/xfa-api-supported-in-adaptive-form.md)
-   + [在Designer中更改“零页面”内容](using/changing-page-zero-content-designer.md)
    + [向选定的用户组授予对规则编辑器的访问权限](using/rule-editor-access-user-groups.md)
    + [使用AEM翻译工作流将自适应表单和记录文档本地化](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [自动测试自适应表单](using/calvin.md)
@@ -193,7 +192,7 @@ ht-degree: 4%
    + [打印渠道和Web渠道](using/web-channel-print-channel.md)
    + [交互式通信配置属性](using/interactive-communication-configuration-properties.md)
    + [生成多个交互式通信](using/generate-multiple-interactive-communication-using-batch-api.md)
-   + [使用布局模式调整组件大小](using/resize-using-layout-mode-interactive-communication.md)
+   + [使用版面模式调整组件大小](using/resize-using-layout-mode-interactive-communication.md)
 + 工作流 {#workflows}
    + [基于OSGi的以Forms为中心的工作流](using/aem-forms-workflow.md)
    + [基于OSGi的以Forms为中心的工作流 — 步骤参考](using/aem-forms-workflow-step-reference.md)
@@ -373,6 +372,7 @@ ht-degree: 4%
    + [使AEM能够搜索文档安全保护PDF和Microsoft Office文档](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect代表其他用户创建文档](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
+   + [Forms Designer帮助](using/forms-designer-help.md)
    + [使用Designer](http://www.adobe.com/go/learn_aemforms_designer_65)
    + [设计器快速入门Tutorials](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
    + [设计器示例](http://www.adobe.com/go/learn_aemforms_designer_samples_65)
@@ -380,6 +380,7 @@ ht-degree: 4%
    + [设计器脚本参考](http://www.adobe.com/go/learn_aemforms_scriptingReference_65)
    + [设计器表单计算引用](http://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [在HTML5表单中使用涂写签名](using/scribble-signature.md)
+   + [在Designer中更改“零页面”内容](using/changing-page-zero-content-designer.md)
 + 自定义AEM Forms {#customize-aem-forms}
    + [自适应表单和HTML表单的外观框架5](using/introduction-widgets.md)
    + [创建自定义自适应表单模板](using/custom-adaptive-forms-templates.md)
@@ -686,4 +687,3 @@ ht-degree: 4%
          + [在JEE服务器群集上配置AEM Forms并对其进行故障诊断](developing/configure-server-cluster.md)
          + [在动态PDF forms中生成和使用哈希](developing/hashing-forms.md)
          + [使用WS-Security标头传递凭据](developing/passing-credentials.md)
-
