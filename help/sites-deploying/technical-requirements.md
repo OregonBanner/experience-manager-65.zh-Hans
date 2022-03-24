@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 077540ed65f31f1bb4f0063fb6ac8bddb76595da
+source-git-commit: ec1c8d80fabefdae01fea92fec9cb33bc5779f3c
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3262'
 ht-degree: 1%
 
 ---
@@ -89,64 +89,16 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 >
 >建议跟踪Java供应商提供的安全公告，以确保生产环境的安全和安全，并安装最新的Java更新。
 
-<!--- <table>
- <tbody>
-  <tr>
-   <td><strong>Platform</strong></td>
-   <td><strong>Support Level</strong></td>
-   <td><strong>Link</strong></td>
-  </tr>
-  <tr>
-   <td>Azul Zulu OpenJDK 11 - 64bit</td>
-   <td>A: Supported [1]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24</td>
-  </tr>
-  <tr>
-   <td>Azul Zulu OpenJDK 8 - 64bit</td>
-   <td>A: Supported [1]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=18</td>
-  </tr>
-  <tr>
-   <td>Oracle Java SE 11 JDK - 64bit</td>
-   <td>A: Supported [2]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24<td>
-  </tr>
-  <tr>
-   <td>Oracle Java SE 10 JDK</td>
-   <td>Z: Not supported [2]</td>
-  </tr>
-  <tr>
-   <td>Oracle Java SE 9 JDK</td>
-   <td>Z: Not supported [2]</td>
-  </tr>
-  <tr>
-   <td>Oracle Java SE 8 JDK - 64bit</td>
-   <td>A: Supported [2]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=10<td>
-  </tr>
-  <tr>
-   <td>IBM J9 VM - build 2.9, JRE 1.8.0</td>
-   <td>A: Supported [3]</td>
-  </tr>
-  <tr>
-   <td>IBM J9 VM - build 2.8, JRE 1.8.0</td>
-   <td>A: Supported [3]</td>
-  </tr>
- </tbody>
-</table> --->
-
 | **平台** | **支持级别** | **链接** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[1]` |  |
-| Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[1]` |  |
-| OracleJava SE 11 JDK - 64位 | 答：支持 `[2]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
-| OracleJava SE 10 JDK | Z:不支持 `[2]` |
-| OracleJava SE 9 JDK | Z:不支持 `[2]` |
-| OracleJava SE 8 JDK - 64位 | 答：支持 `[2]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
-| IBM J9 VM — 内部版本2.9、JRE 1.8.0 | 答：支持 `[3]` |
-| IBM J9 VM — 内部版本2.8、JRE 1.8.0 | 答：支持 `[3]` |
-
-1. 支持和分发阿祖尔Zulu Build的OpenJDK，包括对LTS版本的所有维护更新，将由Adobe直接支持所有使用OpenJDK的阿祖尔Zulu Build的AEM客户，从AEM 6.5 SP9的版本开始。 请参阅 [Azul Java支持Adobe Experience Manager问答](assets/adobe-azul-openjdk-license-agreement.pdf) 以了解更多信息。
+| Azul Zulu OpenJDK 11 - 64位 | Z:不支持 |  |
+| Azul Zulu OpenJDK 8 - 64位 | 答：不支持 |  |
+| OracleJava SE 11 JDK - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
+| OracleJava SE 10 JDK | Z:不支持 `[1]` |
+| OracleJava SE 9 JDK | Z:不支持 `[1]` |
+| OracleJava SE 8 JDK - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
+| IBM J9 VM — 内部版本2.9、JRE 1.8.0 | 答：支持 `[2]` |
+| IBM J9 VM — 内部版本2.8、JRE 1.8.0 | 答：支持 `[2]` |
 
 1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本进行的所有维护更新。 请参阅 [Oracle对Adobe Experience Manager问答的Java支持](assets/adobe-oracle-java-license-agreement.pdf) 以了解更多信息。
 
