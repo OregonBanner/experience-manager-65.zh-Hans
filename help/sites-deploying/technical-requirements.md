@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: ec1c8d80fabefdae01fea92fec9cb33bc5779f3c
+source-git-commit: 9e9a01cddf56d23bfe4e84812534c295be1595f4
 workflow-type: tm+mt
-source-wordcount: '3262'
+source-wordcount: '3294'
 ht-degree: 1%
 
 ---
@@ -91,18 +91,20 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 
 | **平台** | **支持级别** | **链接** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64位 | Z:不支持 |  |
-| Azul Zulu OpenJDK 8 - 64位 | 答：不支持 |  |
 | OracleJava SE 11 JDK - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava SE 10 JDK | Z:不支持 `[1]` |
 | OracleJava SE 9 JDK | Z:不支持 `[1]` |
 | OracleJava SE 8 JDK - 64位 | 答：支持 `[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
 | IBM J9 VM — 内部版本2.9、JRE 1.8.0 | 答：支持 `[2]` |
 | IBM J9 VM — 内部版本2.8、JRE 1.8.0 | 答：支持 `[2]` |
+| Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[3]` |  |
+| Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[3]` |  |
 
 1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本进行的所有维护更新。 请参阅 [Oracle对Adobe Experience Manager问答的Java支持](assets/adobe-oracle-java-license-agreement.pdf) 以了解更多信息。
 
 1. IBM JRE仅与WebSphere Application Server一起受支持。
+
+1. 从版本6.5 SP9开始，本地AEM部署支持Azul OpenJDK LTS版本。 我们的客户必须直接从Azul获得对Azul JDK LTS版本的支持和分发许可。
 
 
 ### 存储和持久性 {#storage-persistence}
@@ -317,7 +319,7 @@ AEM用户界面针对大屏幕（通常是笔记本电脑和台式计算机）�
 
 1. 使用值2或更多将BasicAuthLevel注册表项添加到此子项。
 
-要在Windows下提高WebDav客户端的响应性，请参阅 [Microsoft支持KB 2445570](https://support.microsoft.com/kb/2445570)
+要提高Windows下WebDav客户端的响应性，请参阅 [Microsoft支持KB 2445570](https://support.microsoft.com/kb/2445570)
 
 ## 其他平台说明 {#additional-platform-notes}
 
