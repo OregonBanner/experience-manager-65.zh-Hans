@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cffec7ce415d00ab483b31d763ff2cdaa1eb16de
+source-git-commit: 80298613370c7187288b33e5a665a074ccb5cd3e
 workflow-type: tm+mt
-source-wordcount: '3294'
+source-wordcount: '3292'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ Adobe Experience Manager使用以下版本的Java虚拟机：
 | Azul Zulu OpenJDK 11 - 64位 | 答：支持 `[3]` |  |
 | Azul Zulu OpenJDK 8 - 64位 | 答：支持 `[3]` |  |
 
-1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本的所有维护更新 **截至2022年12月**. 请参阅 [适用于Adobe Experience Manager的Java支持策略](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) 以了解更多信息。
+1. Oracle 已经转向 Oracle Java SE 产品的“长期支持”(LTS) 模型。Java 9、Java 10和Java 12是按Oracle划分的非LTS版本(请参阅 [OracleJava SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM,Adobe仅支持LTS版本的Java。 Adobe将直接为所有使用OracleJava SE技术的AEM客户支持和分发OracleJava SE JDK，包括公共更新结束后对LTS版本进行的所有维护更新。 请参阅 [适用于Adobe Experience Manager的Java支持策略](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) 以了解更多信息。
 
 
 1. IBM JRE仅与WebSphere Application Server一起受支持。
