@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Developing 用户指南
 breadcrumb-title: Developing 指南
 user-guide-description: 本指南介绍如何构建 AEM 实例。
 feature: Developing
 role: Developer
-source-git-commit: b924dc186497b6dfa4c2d2bb675f5029f8fc3617
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '1299'
-ht-degree: 13%
+ht-degree: 37%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 13%
 
 + [开发用户指南概述](home.md)
 + 开发人员简介{#introduction}
-   + [AEM Sites 开发入门- WKND 教程](getting-started.md)
+   + [AEM Sites 开发入门 - WKND 教程](getting-started.md)
    + [AEM核心概念](the-basics.md)
    + [AEM触屏UI的结构](touch-ui-structure.md)
    + [AEM触屏UI的概念](touch-ui-concepts.md)
@@ -52,11 +52,11 @@ ht-degree: 13%
    + [创建新的Granite UI字段组件](granite-ui-component.md)
    + 查询生成器{#query-builder}
       + [为查询生成器实施自定义谓词计算器](implementing-custom-predicate-evaluator.md)
-      + [查询生成器谓词引用](querybuilder-predicate-reference.md)
+      + [查询生成器谓词参考](querybuilder-predicate-reference.md)
       + [查询生成器 API](querybuilder-api.md)
    + 标记{#tagging}
       + [标记](tags.md)
-      + [AEM Tagging Framework](framework.md)
+      + [AEM 标记框架](framework.md)
       + [将标记构建到AEM应用程序](building.md)
    + [自定义错误处理程序显示的页面](customizing-errorhandler-pages.md)
    + [自定义节点类型](custom-nodetypes.md)
@@ -76,8 +76,8 @@ ht-degree: 13%
    + [AEM组件 — 基础知识](components-basics.md)
    + [开发AEM组件](developing-components.md)
    + [开发AEM组件 — 代码示例](developing-components-samples.md)
-   + [内容服务的JSON导出程序](json-exporter.md)
-   + [为组件启用JSON导出](json-exporter-components.md)
+   + [内容服务的 JSON 导出器](json-exporter.md)
+   + [为组件启用 JSON 导出](json-exporter-components.md)
    + [图像编辑器](image-editor.md)
    + [修饰标记](decoration-tag.md)
    + [使用隐藏条件](hide-conditions.md)
@@ -96,37 +96,37 @@ ht-degree: 13%
       + [使用和扩展小组件（经典UI）](widgets.md)
       + [使用xtype（经典UI）](xtypes.md)
       + [开发Forms（经典UI）](developing-forms.md)
-+ [AEM中的Headful和Headless](headful-headless.md)
-+ 无外设体验管理{#headless}
-   + [无头和AEM](headless/introduction.md)
-   + 无头历程 {#journeys}
-      + 无头开发人员历程 {#developer}
-         + [了解AEM中的无头](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
-         + [了解CMS无头开发](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
-         + [AEM Headless入门as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
-         + [使用AEM Headless获得首个体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
-         + [如何将内容建模为AEM内容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
-         + [如何通过AEM交付API访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
-         + [如何通过AEM Assets API更新内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
-         + [如何把它拼凑起来](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-         + [如何使用无头应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
-         + [可选 — 如何使用AEM创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
-      + 无外设内容架构师历程 {#architect}
-         + [AEM Headless Content Architect历程概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
-         + [使用AEM实现无头内容建模 — 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
-         + [了解使用AEM实现无头的内容建模基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
-         + [了解如何在AEM中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
++ [AEM 中的 Headful 和 Headless](headful-headless.md)
++ Headless 体验管理{#headless}
+   + [Headless 和 AEM](headless/introduction.md)
+   + Headless 历程 {#journeys}
+      + Headless 开发人员历程 {#developer}
+         + [了解 AEM 中的 Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
+         + [了解 CMS Headless 开发](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
+         + [AEM Headless as a Cloud Service 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
+         + [首次 AEM Headless 使用体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
+         + [如何将内容建模为 AEM 内容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
+         + [如何通过 AEM 交付 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
+         + [如何通过 AEM Assets API 更新您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
+         + [如何融于一起](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
+         + [如何使用 Headless 应用程序上线](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
+         + [可选 - 如何使用 AEM 创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
+      + Headless 内容架构师历程 {#architect}
+         + [AEM Headless 内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
+         + [使用 AEM 对 Headless 进行内容建模 - 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
+         + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
+         + [了解如何在 AEM 中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
    + 入门指南 {#getting-started}
       + [简介](headless/getting-started/introduction.md)
       + [创建配置](headless/getting-started/create-configuration.md)
       + [创建内容片段模型](headless/getting-started/create-content-model.md)
-      + [创建资产文件夹](headless/getting-started/create-assets-folder.md)
+      + [创建资源文件夹](headless/getting-started/create-assets-folder.md)
       + [创建内容片段](headless/getting-started/create-content-fragment.md)
-      + [访问和传送内容片段](headless/getting-started/create-api-request.md)
+      + [访问和交付内容片段](headless/getting-started/create-api-request.md)
    + 内容片段{#content-fragments}
-      + [使用内容片段和GraphQL进行无头交付](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
+      + [使用内容片段和 GraphQL 进行 Headless 交付](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
       + [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
-      + [为实例启用内容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
+      + [为您的实例启用内容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
       + [内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html)
       + [管理内容片段](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html)
       + [变量 - 创作片段内容](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html)
@@ -134,33 +134,33 @@ ht-degree: 13%
       + [使用关联内容](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-assoc-content.html)
       + [元数据 - 片段属性](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
       + [结构树](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
-      + [预览 — JSON表示法](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
-   + 交付API{#delivery-api}
+      + [预览 - JSON 呈现](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
+   + 投放 API{#delivery-api}
       + [资产 HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-      + [内容片段REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
-      + [内容片段GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [包含内容片段的AEM GraphQL API — 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
-      + [对内容片段的远程AEM GraphQL查询进行身份验证](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
+      + [内容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
+      + [内容片段 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
+      + [带内容片段的 AEM GraphQL API - 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [对内容片段的远程 AEM GraphQL 查询的身份验证](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
 + 混合和SPA AEM开发{#spas}
-   + [混合和SPA与AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-   + [SPA简介和演练](spa-walkthrough.md)
-   + [SPA WKND教程](spa-wknd.md)
-   + [开始使用React](spa-getting-started-react.md)
+   + [使用 AEM 的混合和 SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [SPA 简介和演练](spa-walkthrough.md)
+   + [SPA WKND 教程](spa-wknd.md)
+   + [使用 React 快速入门](spa-getting-started-react.md)
    + [为 SPA 实施 React 组件](spa-implementing-react-component.md)
-   + [开始使用Angular](spa-getting-started-angular.md)
-   + [SPA深潜](spa-deep-dives.md)
-   + [开发SPA for AEM](spa-architecture.md)
-   + [SPA编辑器概述](spa-overview.md)
+   + [使用 Angular 快速入门](spa-getting-started-angular.md)
+   + [SPA 深入了解](spa-deep-dives.md)
+   + [为 AEM 开发 SPA](spa-architecture.md)
+   + [SPA 编辑器概述](spa-overview.md)
    + [SPA Blueprint](spa-blueprint.md)
-   + [SPA页面组件](spa-page-component.md)
-   + [适用于SPA的动态模型到组件映射](spa-dynamic-model-to-component-mapping.md)
+   + [SPA 页面组件](spa-page-component.md)
+   + [对组件映射进行动态建模 for SPA](spa-dynamic-model-to-component-mapping.md)
    + [SPA模型路由](spa-routing.md)
-   + [RemotePage组件](spa-remote-page.md)
-   + [在AEM中编辑外部SPA](spa-edit-external.md)
-   + [组合组件在SPA中](spa-composite-component.md)
+   + [RemotePage 组件](spa-remote-page.md)
+   + [在 AEM 中编辑外部 SPA](spa-edit-external.md)
+   + [SPA 中的复合组件](spa-composite-component.md)
    + [SPA和服务器端渲染](spa-ssr.md)
-   + [为组件启用JSON导出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
-   + [Launch集成](spa-launch.md)
+   + [为组件启用 JSON 导出](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
+   + [启动集成](spa-launch.md)
    + [SPA参考资料](spa-reference-materials.md)
 + 开发工具{#devtools}
    + [开发工具](dev-tools.md)
@@ -175,29 +175,29 @@ ht-degree: 13%
    + [如何使用VLT工具](ht-vlttool.md)
    + [如何使用代理服务器工具](ht-proxy-server.md)
    + [AEM Brackets扩展](aem-brackets.md)
-   + [AEM Developer Tools for Eclipse](aem-eclipse.md)
+   + [适用于 Eclipse 的 AEM 开发人员工具](aem-eclipse.md)
    + [AEM Repo 工具](aem-repo-tool.md)
 + 个性化{#personlization}
    + [ContextHub](contexthub.md)
    + [配置ContextHub](ch-configuring.md)
    + [将ContextHub添加到页面和访问存储](ch-adding.md)
-   + [扩展ContextHub](ch-extend.md)
+   + [扩展 ContextHub](ch-extend.md)
    + [ContextHub存储候选示例](ch-samplestores.md)
    + [ContextHub UI模块类型示例](ch-samplemodules.md)
-   + [ContextHub诊断](ch-diagnostics.md)
+   + [ContextHub 诊断](ch-diagnostics.md)
    + [针对目标内容进行开发](target.md)
    + [ContextHub Javascript API参考](contexthub-api.md)
    + ClientContext{#client-context}
       + [Client Context详细信息](client-context.md)
       + [Client Context Javascript API](ccjsapi.md)
 + 扩展AEM{#extending-aem}
-   + [使用Adobe开发人员应用程序生成器扩展AEM](app-builder.md)
+   + [使用 Adobe Developer App Builder 扩展 AEM](app-builder.md)
    + [自定义页面创作](customizing-page-authoring-touch.md)
    + [自定义控制台](customizing-consoles-touch.md)
    + [自定义页面属性的视图](page-properties-views.md)
    + [配置页面以批量编辑页面属性](bulk-editing.md)
    + [自定义和扩展内容片段](customizing-content-fragments.md)
-   + [内容片段配置用于渲染的组件](content-fragments-config-components-rendering.md)
+   + [配置用于渲染的组件的内容片段](content-fragments-config-components-rendering.md)
    + [体验片段](experience-fragments.md)
    + 扩展工作流{#extending-workflows}
       + [开发和扩展工作流](workflows.md)
@@ -218,7 +218,7 @@ ht-degree: 13%
       + [云服务配置](extending-cloud-config.md)
       + [创建自定义Cloud Service](extending-cloud-config-custom-cloud.md)
    + [创建自定义扩展](extending-campaign-extensions.md)
-   + 表单{#extending-forms}
+   + Forms{#extending-forms}
       + [创建自定义表单映射](extending-campaign-form-mapping.md)
       + [使用Adobe Campaign表单组件创建自定义AEM页面模板](extending-campaign-custom-template.md)
       + [请求分析脚本](analyze-request.md)
@@ -265,5 +265,5 @@ ht-degree: 13%
    + [移动 Web](mobile-web.md)
    + [创建设备组过滤器](groupfilters.md)
    + [网页响应式设计](responsive.md)
-   + [为移动设备创建站点](mobile.md)
+   + [为Mobile设备创建站点](mobile.md)
    + [模拟器](emulators.md)

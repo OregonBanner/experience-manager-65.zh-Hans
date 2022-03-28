@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: admin-user
 user-guide-title: AEM 6.5 Administering 用户指南
 breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 feature: Administering
 role: Admin
-source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 28%
@@ -128,7 +128,7 @@ ht-degree: 28%
    + [与Adobe Campaign Standard集成](campaignstandard.md)
    + [Flash 查看器生命周期终止通知](flash-viewers-eol.md)
    + [产品信息源](product-feed.md)
-   + [与Adobe动态标签管理集成](dtm.md)
+   + [与AdobeDynamic Tag Management集成](dtm.md)
    + [选择加入Adobe Analytics和Adobe Target](opt-in.md)
    + [AEM门户和Portlet](aem-as-portal.md)
    + [与Dynamic Media Classic集成(Scene7)](scene7.md)

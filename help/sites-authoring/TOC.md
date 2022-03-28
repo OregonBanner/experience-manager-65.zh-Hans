@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Authoring 用户指南
 breadcrumb-title: Authoring 指南
 user-guide-description: 了解在 AEM 中创建内容、进行编辑创作的主要概念。
-feature: 创作
+feature: Authoring
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 88%
+source-wordcount: '298'
+ht-degree: 87%
 
 ---
 
@@ -19,16 +19,16 @@ ht-degree: 88%
 # AEM 6.5 Authoring 用户指南 {#authoring}
 
 + [Authoring用户指南概述](home.md)
-+ AEM创作{#essentials}的基本任务、工具和概念
++ AEM创作的基本任务、工具和概念 {#essentials}
    + [创作的首要步骤](first-steps.md)
    + [页面创作](page-authoring.md)
    + [页面创作快速指南](qg-page-authoring.md)
    + [创作概念](author.md)
-   + [基本操作](basic-handling.md)
+   + [基本处理](basic-handling.md)
    + [搜索](search.md)
    + [配置帐户环境](user-properties.md)
    + [您的收件箱](inbox.md)
-   + [控制台的键盘快捷键](keyboard-shortcuts.md)
+   + [键盘快捷键 （在控制台中）](keyboard-shortcuts.md)
    + [选择您的 UI](select-ui.md)
 + 创作 {#authoring}
    + [创作环境和工具](author-environment-tools.md)
@@ -76,7 +76,7 @@ ht-degree: 88%
    + [将工作流应用于页面](workflows-applying.md)
    + [参与工作流](workflows-participating.md)
    + [使用项目工作流](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html)
-+ 页面性能{#page-performance}
++ 页面性能 {#page-performance}
    + [内容分析](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/content-insights.html)
    + [分析页面性能](ci-analyze.md)
    + [查看页面分析数据](pa-using.md)

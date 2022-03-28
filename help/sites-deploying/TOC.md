@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Deploying 指南
 breadcrumb-title: Deploying 指南
 user-guide-description: 详细了解 Adobe Experience Manager 6.5 的安装、部署和架构，包括我们的 Adobe Managed Services 云部署。
-feature: 部署
+feature: Deploying
 role: Architect
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 16%
+source-wordcount: '327'
+ht-degree: 18%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 16%
 # AEM 6.5 Deploying用户指南 {#deploying}
 
 + [Deploying用户指南](home.md)
-+ AEM平台{#introduction}简介
++ AEM平台简介 {#introduction}
    + [AEM平台简介](platform.md)
    + [技术要求](technical-requirements.md)
    + [AEM 6.5中的存储元素](storage-elements-in-aem-6.md)
@@ -42,7 +42,7 @@ ht-degree: 16%
    + [疑难解答](troubleshooting.md)
 + 配置AEM {#configuring}
    + [基本配置概念](configuring.md)
-   + [记录](configure-logging.md)
+   + [日志记录](configure-logging.md)
    + [配置OSGi](configuring-osgi.md)
    + [OSGi配置设置](osgi-configuration-settings.md)
    + [运行模式](configure-runmodes.md)
@@ -80,7 +80,7 @@ ht-degree: 16%
    + [升级代码和自定义](upgrading-code-and-customizations.md)
    + [应用程序服务器安装的升级步骤](app-server-upgrade.md)
    + [升级后卸载的过时包列表](obsolete-bundles.md)
-+ 存储库重组{#restructuring}
++ 存储库重构 {#restructuring}
    + [AEM 6.5中的存储库重组](repository-restructuring.md)
    + [AEM 6.5中的常见存储库重组](all-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5中的站点存储库重组](sites-repository-restructuring-in-aem-6-5.md)
