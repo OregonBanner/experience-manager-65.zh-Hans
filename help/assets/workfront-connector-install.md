@@ -3,17 +3,21 @@ title: 安装 [!DNL Workfront for Experience Manager enhanced connector]
 description: 安装 [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
-source-git-commit: 8d39e1c86e5185a181400f10b7822a57c9d3aeae
+exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
+source-git-commit: a589836c77fd919838dce60a1eaf676683c165c0
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-
 # 安装 [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
 
 具有 [!DNL Adobe Experience Manager] 安装增强的连接器。 安装之前，请查看平台支持和其他 [连接器先决条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+
+>[!TIP]
+>
+>您是否在 [!DNL Workfront for Experience Manager enhanced connector] AEMas a Cloud Service文档？ 单击 [此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=en).
 
 >[!IMPORTANT]
 >
@@ -56,3 +60,15 @@ ht-degree: 0%
    ![连接 [!DNL Experience Manager] 和 [!DNL Workfront]](/help/assets/assets/wf-connection-config.png)
 
 1. 要验证连接，请在 [!DNL Workfront] 并验证API密钥是否相同且连接是否相同 **[!UICONTROL 已启用]**. 要执行此操作，请选择 **[!UICONTROL 设置]** > **[!UICONTROL 文档]** > **[!UICONTROL 自定义集成]** in [!DNL Workfront].
+
+## 更新 [!DNL Workfront for Experience Manager enhanced connector] {#update-enhanced-connector-for-workfront}
+
+Experience Manager Assets允许您更新 [!DNL Workfront for Experience Manager enhanced connector] 从以前的版本到最新版本。
+
+要更新 [!DNL Workfront for Experience Manager enhanced connector] 到最新版本：
+
+1. 从下载最新版本的增强型连接器 [[!DNL Software Distribution] 链接](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
+
+1. 使用安装包 [!UICONTROL 包管理器]. 要了解如何安装软件包，请参阅 [包管理器文档](/help/sites-administering/package-manager.md).
+
+
