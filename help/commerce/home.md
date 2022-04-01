@@ -1,33 +1,32 @@
 ---
 title: AEM Content and Commerce
-description: AEM内容和商务自助资源和文档链接
-source-git-commit: 809789d268deb4d77bbb5101265a1a0d7268b748
+description: 了解如何使用和管理AEM内容与商务，以及我们有关集成以及如何开始使用AEM Storefront的有用文章。
+exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 31%
+source-wordcount: '367'
+ht-degree: 30%
 
 ---
 
-
 # AEM Content and Commerce {#commerce-guide}
 
-本页列出了有关AEM Commerce的自助资源。
+了解如何使用和管理AEM内容与商务，以及我们有关集成以及如何开始使用AEM Storefront的有用文章。
 
 >[!NOTE]
 >
->有关将AEM作为Cloud Service的AEM内容和商务，请参阅[AEM内容和商务](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)。
+>有关AEM内容和与AEMas a Cloud Service的商务，请参阅 [AEM Content and Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html).
 
-
-## 关键商务文章{#key-articles}
+## 关键商务文章 {#key-articles}
 
 * [AEM Commerce简介](/help/commerce/cif/introduction.md)
-* [入门](/help/commerce/cif/getting-started.md)
+* [快速入门](/help/commerce/cif/getting-started.md)
 
 ## AEM 6.5用户指南
 
 | 用户指南 | 描述 |
 |--- |---|
-| [发行说明](/help/release-notes/home.md) | 提供有关最新版AEM的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。 |
+| [发行说明](/help/release-notes/home.md) | 提供有关最新版本AEM的重要信息，包括新增功能、受支持的平台、已弃用和已删除的功能以及已知问题。 |
 | [Assets 用户指南](/help/assets/home.md) | 了解如何创建、管理、交付和优化数字资产。 |
 | [Forms用户指南](/help/forms/home.md) | 本指南介绍如何创建、管理、发布和更新数字表单。 |
 | [Communities用户指南](/help/communities/home.md) | 创建在线体验，如论坛、用户组、学习资源和其他社交功能。 |
@@ -44,7 +43,7 @@ ht-degree: 31%
 ## 关键AEM资源
 
 * [AEM教程](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher用户指南](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)

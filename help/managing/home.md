@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 Managing 用户指南
-seo-title: AEM 6.5 Managing 用户指南
-description: '本指南介绍如何成功管理AEM项目 '
-seo-description: 介绍如何成功管理AEM项目
+seo-title: AEM 6.5 Managing User Guide
+description: '了解如何在关键资源和AEM 6.5用户指南的全面集合的支持下成功管理AEM项目。 '
+seo-description: Covers how to manage an AEM project successfully
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 35%
+source-wordcount: '367'
+ht-degree: 34%
 
 ---
 
 # AEM 6.5 Managing 用户指南
 
-本指南介绍如何成功管理AEM项目
+了解如何在关键资源和AEM 6.5用户指南的全面集合的支持下成功管理AEM项目。
 
 ## 关键AEM文章
 
@@ -37,14 +37,14 @@ ht-degree: 35%
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
-| [Commerce用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
 
 ## 关键AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher用户指南](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)

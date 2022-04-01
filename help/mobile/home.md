@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 Mobile 用户指南
-seo-title: AEM 6.5 Mobile 用户指南
-description: 本指南介绍如何为移动设备应用程序创建和管理内容。
-seo-description: 介绍如何为移动设备应用程序创建和管理内容。
+seo-title: AEM 6.5 Mobile User Guide
+description: 从AEM支持中为移动设备应用程序创建和管理内容中受益。 了解并了解如何创作、开发和管理On-Demand Services应用程序和Adobe PhoneGap Enterprise。
+seo-description: Describes how to create and manage content for mobile applications.
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 34%
+source-wordcount: '391'
+ht-degree: 31%
 
 ---
 
 # AEM 6.5 Mobile 用户指南
 
-本指南涵盖所有AEM Mobile任务，例如如何为移动设备应用程序创建和管理内容。
+从AEM支持中为移动设备应用程序创建和管理内容中受益。 了解并了解如何创作、开发和管理On-Demand Services应用程序和Adobe PhoneGap Enterprise。
 
 ## 关键AEM文章
 
@@ -37,14 +37,14 @@ ht-degree: 34%
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
-| [Commerce用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
 
 ## 关键AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher用户指南](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)

@@ -1,19 +1,19 @@
 ---
 title: Adobe Experience Manager 6.5 Communities指南
-seo-title: Adobe Experience Manager 6.5 Communities指南
-description: 本指南涵盖所有AEM Communities任务，例如创建在线体验（如论坛、用户组、学习资源和其他社交功能）。
-seo-description: 涵盖所有AEM Communities任务，例如创建在线体验（如论坛、用户组、学习资源和其他社交功能）。
+seo-title: Adobe Experience Manager 6.5 Communities Guide
+description: 创建在线体验，如论坛、用户组、学习资源和其他社交功能。浏览我们的指南，其中说明了如何部署、管理、开发和创作社区。
+seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 28%
+source-wordcount: '381'
+ht-degree: 38%
 
 ---
 
 # Adobe Experience Manager 6.5 Communities指南
 
-本指南涵盖所有AEM Communities任务，例如创建在线体验（如论坛、用户组、学习资源和其他社交功能）。
+创建在线体验，如论坛、用户组、学习资源和其他社交功能。浏览我们的指南，其中说明了如何部署、管理、开发和创作社区。
 
 ## 关键AEM文章
 
@@ -37,14 +37,14 @@ ht-degree: 28%
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
-| [Commerce用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
 
 ## 关键AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-dispatcher/using/dispatcher.html)
+* [Dispatcher用户指南](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
 * [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
