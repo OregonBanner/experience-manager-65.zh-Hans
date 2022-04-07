@@ -10,9 +10,9 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 0b0478f837b63d0a04c83283024c155329e368db
+source-git-commit: c92b5b5dd70e7a4e696d8d75282edbc88a13ba51
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2010'
 ht-degree: 1%
 
 ---
@@ -190,7 +190,7 @@ OData服务由其服务根URL标识。 要在AEM云服务中配置OData服务，
 
 >[!NOTE]
 >
-> 表单数据模型支持 [OData版本4.0](https://www.odata.org/documentation/) 之后。
+> 表单数据模型支持 [OData版本4](https://www.odata.org/documentation/).
 >有关配置Microsoft Dynamics 365的分步指南（在线或本地），请参阅 [Microsoft Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md).
 
 1. 转到 **[!UICONTROL 工具>Cloud Services>数据源]**. 点按以选择要在其中创建云配置的文件夹。
