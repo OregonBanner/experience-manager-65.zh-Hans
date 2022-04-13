@@ -8,9 +8,9 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 feature: Administering
 role: Admin
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '632'
 ht-degree: 28%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 28%
    + [配置 Live Copy 同步](msm-sync.md)
    + [创建并同步 Live Copy](msm-livecopy.md)
    + [MSM转出冲突](msm-rollout-conflicts.md)
+   + [MSM问题故障诊断和常见问题解答](troubleshoot-msm.md)
    + [MSM 最佳实践](msm-best-practices.md)
    + [翻译多语言站点的内容](translation.md)
    + [管理翻译项目](tc-manage.md)
