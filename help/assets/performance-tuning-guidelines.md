@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 35639a818f58923ae9ad099752d359e7795be60b
 workflow-type: tm+mt
 source-wordcount: '2741'
 ht-degree: 0%
@@ -202,7 +202,7 @@ Adobe建议启用HTTPS，因为许多公司都有可嗅探HTTP流量的防火墙
 </policymap>
 ```
 
-此外，在 `configure.xml` 文件(或通过设置环境变量 `MAGIC_TEMPORARY_PATH`)到具有足够空间和IOPS的磁盘分区。
+此外，在 `configure.xml` 文件(或通过设置环境变量 `MAGICK_TEMPORARY_PATH`)到具有足够空间和IOPS的磁盘分区。
 
 >[!CAUTION]
 >
