@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 8fcbdb4d00a5ddffadf5b4a099454dc795999769
+source-git-commit: 81008366b7d5edaf1d2f83ccd2ba6237c2e96fad
 workflow-type: tm+mt
-source-wordcount: '5100'
+source-wordcount: '5107'
 ht-degree: 2%
 
 ---
@@ -430,13 +430,13 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包包含AEM For
 
 ### 配置本地用户帐户以运行PDF生成器服务  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
-运行PDF生成器服务需要本地用户帐户。 有关创建本地用户的步骤，请参阅 [在Windows中创建用户帐户](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) 或在基于UNIX的平台中创建用户帐户。
+A local user account is required to run the PDF Generator service. 有关创建本地用户的步骤，请参阅 [在Windows中创建用户帐户](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) 或在基于UNIX的平台中创建用户帐户。
 
-1. 打开 [AEM FormsPDF生成器配置](http://localhost:4502/libs/fd/pdfg/config/ui.html) 页面。
+1. Open the [AEM Forms PDF Generator Configuration](http://localhost:4502/libs/fd/pdfg/config/ui.html) page.
 
-1. 在 **[!UICONTROL 用户帐户]** 选项卡，提供本地用户帐户的凭据，然后单击 **[!UICONTROL 提交]**. 如果Microsoft® Windows出现提示，请允许访问用户。 成功添加后，配置的用户将显示在 **[!UICONTROL 您的用户帐户]** 部分 **[!UICONTROL 用户帐户]** 选项卡。
+1. In the **[!UICONTROL User Accounts]** tab, provide credentials of a local user account, and click **[!UICONTROL Submit]**. If Microsoft® Windows prompts, allow access to the user. When added successfully, the configured user is displayed under the **[!UICONTROL Your user accounts]** section in the **[!UICONTROL User Accounts]** tab.
 
-### 配置超时设置 {#configure-the-time-out-settings}
+### Configure the time-out settings {#configure-the-time-out-settings}
 
 1. 在 [AEM configuration manager](http://localhost:4502/system/console/configMgr)，找到并打开 **[!UICONTROL Jacorb ORB提供商]** 服务。
 
@@ -509,9 +509,9 @@ HTML到PDF转换的默认主要路由是Webkit。 要更改转化路线，请执
 1. 转到  **[!UICONTROL 工具]** >  **[!UICONTROL 安全性]** >  **[!UICONTROL 信任存储]**.
 1. 单击  **[!UICONTROL 创建TrustStore]**. 设置密码并点按 **[!UICONTROL 保存]**.
 
-### 为Reader扩展和加密服务设置证书 {#set-up-certificates-for-reader-extension-and-encryption-service}
+### Set up certificates for Reader extension and encryption service {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应用使用权限，请配置证书。
+DocAssurance服务可以将使用权限应用于PDF文档。 To apply usage rights to PDF documents, configure the certificates.
 
 在设置证书之前，请确保您具有：
 
@@ -524,14 +524,14 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 * 密钥库文件密码。 如果您使用的是Adobe的Reader扩展证书，则Keystore文件密码始终与私钥密码相同。
 
-请执行以下步骤来配置证书：
+Perform the following steps to configure the certificates:
 
 1. 以管理员身份登录到AEM创作实例。 转到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]**.
-1. 单击 **[!UICONTROL name]** 字段。 的 **[!UICONTROL 编辑用户设置]** 页面。 在AEM创作实例中，证书位于KeyStore中。 如果您之前尚未创建KeyStore，请单击 **[!UICONTROL 创建KeyStore]** 并为KeyStore设置新密码。 如果服务器已包含KeyStore，请跳过此步骤。  如果您使用的是Adobe的Reader扩展证书，则Keystore文件密码始终与私钥密码相同。
-1. 在 **[!UICONTROL 编辑用户设置]** 页面，选择 **[!UICONTROL KeyStore]** 选项卡。 展开 **[!UICONTROL 从密钥存储文件添加私钥]** 选项，并提供别名。 别名用于执行Reader扩展操作。
+1. 单击 **[!UICONTROL name]** 字段。 的 **[!UICONTROL 编辑用户设置]** 页面。 On the AEM Author instance, certificates reside in a KeyStore. If you have not created a KeyStore earlier, click **[!UICONTROL Create KeyStore]** and set a new password for the KeyStore. 如果服务器已包含KeyStore，请跳过此步骤。  如果您使用的是Adobe的Reader扩展证书，则Keystore文件密码始终与私钥密码相同。
+1. 在 **[!UICONTROL 编辑用户设置]** 页面，选择 **[!UICONTROL KeyStore]** 选项卡。 Expand the **[!UICONTROL Add Private Key from Key Store file]** option and provide an alias. 别名用于执行Reader扩展操作。
 1. 要上载证书文件，请单击 **[!UICONTROL 选择密钥存储文件]** 并上传 &lt;filename>.pfx文件。
 
-   添加 **[!UICONTROL 密钥存储密码]**, **[!UICONTROL 私钥密码]**&#x200B;和 **[!UICONTROL 私钥别名]** 与证书关联到相应字段的ID。 单击 **[!UICONTROL 提交]**.
+   Add the **[!UICONTROL Key Store Password]**, **[!UICONTROL Private Key Password]**, and **[!UICONTROL Private Key Alias]** that is associated with the certificate to the respective fields. Click **[!UICONTROL Submit]**.
 
    >[!NOTE]
    >
@@ -642,10 +642,10 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 * 确保禁用Adobe Acrobat Update Service。
 * 确保 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) 批处理文件以管理员权限运行。
 * 确保在PDF配置UI中添加PDF生成器用户。
-* 确保 [替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege) 为PDF生成器用户添加权限。
+* Ensure that the [Replace a  process level token](#grant-the-replace-a-process-level-token-privilege) permission is added for the PDF Generator user.
 * （对于基于应用程序服务器的安装）确保应用程序服务器以服务形式运行。
-* 确保用户对PDF生成器的临时目录和操作系统临时目录具有读写权限。 例如， `<crx-quickstart-home>\temp` 和 `C:\Windows\Temp`
-* 确保为Acrobat Office应用程序启用了Microsoft PDFMaker Office COM Addin。 如果未启用加载项，请运行Adobe Acrobat修复，运行 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) 文件，然后重新启动AEM Forms服务器。
+* Ensure that the users have read and write permissions on PDF Generator&#39;s temp and operating systems temp directory. 例如， `<crx-quickstart-home>\temp` 和 `C:\Windows\Temp`
+* 确保为Acrobat Office应用程序启用了Microsoft PDFMaker Office COM Addin。 If the add-in is not enabled, run Adobe Acrobat repair, run the [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) file, and restart the AEM Forms Server.
 
 +++
 
@@ -656,10 +656,10 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 * 确保 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 已安装Open Office的，并且所有应用程序都取消打开对话框。
 * 确保在PDF配置UI中添加PDF生成器用户。
 * 确保 [系统就绪工具](#SRT) 不报告任何错误。
-* 确保PDF生成器用户是管理员组的成员，并且 [替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege) 为用户设置权限。
-* 确保 `\Windows\SysWOW64\config\systemprofile\Deskop` 文件夹存在。 如果文件夹不存在，请创建该文件夹。
+* Ensure the PDF Generator user is a member of administrators group and the [Replace a process level token](#grant-the-replace-a-process-level-token-privilege) privilege is set for the user.
+* Ensure that the `\Windows\SysWOW64\config\systemprofile\Deskop` folder exists. 如果文件夹不存在，请创建该文件夹。
 * 授予对 `\Windows\SysWOW64\config\systemprofile`, `<crx-quickstart-home>\temp`和 `\Windows\Temp` 文件夹添加到PDF生成器用户。
-* 确保在PDF生成器UI中配置了用户，并执行以下操作：
+* Ensure that the user is configured in PDF Generator UI and perform the following actions:
    1. 使用Microsoft生成器用户登录到PDF® Windows。
    1. 打开Microsoft® Office或Open Office应用程序并取消所有对话框。
    1. 将AdobePDF设置为默认打印机。
@@ -677,13 +677,23 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 +++
 
-+++HTMLtoPDF
++++HTML到PDF的转换问题
 
 * 确保在PDF生成器配置UI中添加字体目录。
 
-+++
+**Linux和Solaris（PhantomJS转换路由）**
 
-+++Linux®和Solaris™（WebKit转换）
+* 确保32位库(libicudata.so.42)可用于基于Webkit的HTMLToPDF转换，64位库(libicudata.so.42 libs可用于基于PhantomJS的HTMLToPDF转换。
+
+* 运行以下命令以列出phantomjs缺少的库：
+
+   ```
+   ldd phantomjs | grep not
+   ```
+
+* 确保JAVA_HOME_32环境变量指向正确的位置。
+
+**Linux®和Solaris™（WebKit转换路由）**
 
 * 确保目录 `/usr/lib/X11/fonts` 和 `/usr/share/fonts` 存在。 如果目录不存在，请从 `/usr/share/X11/fonts` to `/usr/lib/X11/fonts` 另一个符号链接来自 `/usr/share/fonts` to `/usr/share/X11/fonts`.
 
@@ -694,15 +704,15 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
    ```
 
 * 确保在usr/share/fonts下复制IBM字体。
-* 确保计算机上可以使用ghost漏洞修复glibc。 使用默认包管理器更新到最新版本的glibc。 它包括幽灵漏洞修复。
-* 确保系统上安装了32位lib curl、libcrypto和libssl库的最新版本。 还创建符号链接 `/usr/lib/libcurl.so` (或用于AIX®的libcurl.a), `/usr/lib/libcrypto.so` (或用于AIX®的libcrypto.a)和 `/usr/lib/libssl.so` (或用于AIX®的libssl.a)，指向相应库的最新版本（32位）。
+* 确保计算机上可以使用ghost漏洞修复glibc。 使用默认包管理器更新到最新版本的glibc。 It includes ghost vulnerability fix.
+* 确保系统上安装了32位lib curl、libcrypto和libssl库的最新版本。 Also create symlinks `/usr/lib/libcurl.so` (or libcurl.a for AIX®), `/usr/lib/libcrypto.so` (or libcrypto.a for AIX®) and `/usr/lib/libssl.so` (or libssl.a for AIX®) pointing to the latest versions (32-bit) of respective libraries.
 
 * 为IBM® SSL套接字提供程序执行以下步骤：
    1. 从以下位置复制java.security文件 `<WAS_Installed_JAVA>\jre\lib\security` 到AEM Forms服务器上的任何位置。 默认位置为默认位置= `<WAS_Installed>\Appserver\java_1.7_64\jre\lib\security`.
 
-   1. 在复制的位置编辑java.security文件，并更改使用JSSE2工厂的默认SSL Socket工厂(使用JSSE2工厂而不是WebSphere®)。
+   1. Edit the java.security file at the copied location and change the default SSL Socket factories with JSSE2 factories (Use JSSE2 factories instead of WebSphere®).
 
-      更改以下默认的JSSE套接字工厂：
+      Change the following default JSSE socket factories:
 
       ```
       #ssl.SocketFactory.provider=com.ibm.jsse2.SSLSocketFactoryImpl
@@ -724,20 +734,6 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 +++
 
-+++Linux®和Solaris(PhantomJS)HTMLtoPDF
-
-* 确保32位库(libicudata.so.42)可用于基于Webkit的HTMLToPDF转换，64位库(libicudata.so.42 libs可用于基于PhantomJS的HTMLToPDF转换。
-
-* 运行以下命令以列出phantomjs缺少的库：
-
-```
-ldd phantomjs | grep not
-```
-
-* 确保JAVA_HOME_32环境变量指向正确的位置。
-
-+++
-
 +++ 无法添加PDF生成器(PDFG)用户
 
 * 确保在Windows上安装Microsoft® Visual C++ 2008 x86、Microsoft® Visual C++ 2010 x86、Microsoft® Visual C++ 2012 x86和Microsoft® Visual C++ 2013 x86（32位）可再发行版本。
@@ -752,7 +748,7 @@ ldd phantomjs | grep not
 
 +++
 
-+++多用户转化失败
++++多次用户转换失败
 
 * 验证服务器日志以检查特定用户的转换是否失败。（进程资源管理器可以帮助您检查不同用户的运行进程）
 
@@ -760,7 +756,7 @@ ldd phantomjs | grep not
 
 * 确保PDF生成器用户对LC临时和PDFG临时用户具有读、写和执行权限。
 
-* 对于Microsoft® Office和OpenOffice，请手动执行至少一次转换（作为每个用户），以确保转换期间不会弹出对话框。 如果出现任何对话框，请将其取消。 在自动化转换期间，不应显示此类对话框。
+* 对于Microsoft® Office和OpenOffice，请手动执行至少一次转换（作为每个用户），以确保转换期间不会弹出对话框。 如果出现任何对话框，请将其取消。 No such dialogue should appear during automated conversion.
 
 * 执行示例转换。
 
@@ -768,8 +764,8 @@ ldd phantomjs | grep not
 
 ## 下面的步骤 {#next-steps}
 
-您有一个可用的AEM Forms文档服务环境。 您可以通过以下方式使用文档服务：
+You have a working AEM Forms document services environment. 您可以通过以下方式使用文档服务：
 
-* [在OSGi上以表单为中心的工作流](/help/forms/using/aem-forms-workflow.md)
+* [Form centric workflows on OSGi](/help/forms/using/aem-forms-workflow.md)
 * [观察文件夹](/help/forms/using/watched-folder-in-aem-forms.md)
 * [文档服务API](/help/forms/using/aem-document-services-programmatically.md)
