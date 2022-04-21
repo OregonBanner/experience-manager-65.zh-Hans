@@ -1,8 +1,8 @@
 ---
 title: 设置您的营销活动
-seo-title: 设置您的营销活动
+seo-title: Setting up your campaign
 description: 要设置新营销活动，需要创建品牌以保存您的营销活动，然后创建营销活动以保存体验，最后为新营销活动定义属性。
-seo-description: 要设置新营销活动，需要创建品牌以保存您的营销活动，然后创建营销活动以保存体验，最后为新营销活动定义属性。
+seo-description: Setting up a new campaign requires creating a brand to hold your campaigns, creating a campaign to hold experiences, and finally defining the properties for your new campaign.
 uuid: 244a150e-7b5e-4eff-bd15-e3b04be6a3e9
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 19ad4751-1d5d-49de-b76b-3501b3e98e62
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a2623df38bcd683a6a43bdaf3483e11e40ac4a68
 workflow-type: tm+mt
-source-wordcount: '2289'
-ht-degree: 95%
+source-wordcount: '2257'
+ht-degree: 94%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 95%
 
 1. 单击&#x200B;**创建**。您的新品牌将在 MCM 中显示（带有默认图标）。
 
-### 为您的新品牌定义属性  {#defining-the-properties-for-your-new-brand}
+### 为您的新品牌定义属性 {#defining-the-properties-for-your-new-brand}
 
 1. 从左边窗格中选择&#x200B;**营销活动**，然后在右边窗格中选择您的新品牌图标并单击&#x200B;**属性...**
 
@@ -74,7 +74,7 @@ ht-degree: 95%
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
 
-### 创建新营销活动  {#creating-a-new-campaign}
+### 创建新营销活动 {#creating-a-new-campaign}
 
 创建新的营销活动：
 
@@ -88,7 +88,7 @@ ht-degree: 95%
 
 1. 单击&#x200B;**创建**。您的新营销活动将显示在 MCM 中。
 
-### 定义新营销活动的属性  {#defining-the-properties-for-your-new-campaign}
+### 为新营销活动定义属性 {#defining-the-properties-for-your-new-campaign}
 
 配置以下可控制行为的营销活动属性：
 
@@ -99,7 +99,7 @@ ht-degree: 95%
 
 * **Adobe Target：**&#x200B;这些属性用于配置与 Adobe Target 集成的营销活动。（请参阅[与 Adobe Target 集成](/help/sites-administering/target.md)。）
 
-1. 从&#x200B;**营销活动**&#x200B;中，选择您的品牌。在右侧窗格中，选择您的营销活动，然后单击&#x200B;**属性**。
+1. 从&#x200B;**营销活动**&#x200B;中，选择您的品牌。在右窗格中，选择您的营销活动并单击 **属性**.
 
    您可以输入各种属性，包括“**标题**”、“**说明**”和所需的任何“**云服务**”。
 
@@ -107,7 +107,7 @@ ht-degree: 95%
 
 1. 单击&#x200B;**确定**&#x200B;进行保存。
 
-### 创建新体验  {#creating-a-new-experience}
+### 创建新体验 {#creating-a-new-experience}
 
 创建新体验的步骤取决于体验类型：
 
@@ -121,7 +121,7 @@ ht-degree: 95%
 >
 >现在建议使用 MCM 来创建体验。
 
-### 配置新体验  {#configuring-your-new-experience}
+### 配置新体验 {#configuring-your-new-experience}
 
 既然您已为体验创建了基本梗概，则还需要根据相应体验类型继续执行以下操作：
 
@@ -172,7 +172,7 @@ ht-degree: 95%
 >
 >要添加或修改用户的头像，请打开 Clickstream Cloud (Ctrl+Alt+c)，加载个人资料，并单击&#x200B;**编辑**。
 
-### 创建新潜在客户  {#creating-new-leads}
+### 创建新潜在客户 {#creating-new-leads}
 
 创建新潜在客户后，请务必[激活潜在客户](#activating-or-deactivating-leads)，以便跟踪其发布实例活动并对其体验进行个性化设置。
 
@@ -221,12 +221,8 @@ ht-degree: 95%
    >
    >或者，可通过执行以下操作之一导入潜在客户：
    >
-   >
-   >
-   >    * 在信息面板中，单击&#x200B;**列表**&#x200B;窗格中的&#x200B;**导入潜在客户**
-      >
-      >    
-   * 单击&#x200B;**列表**，然后在&#x200B;**工具**&#x200B;菜单中，选择&#x200B;**导入潜在客户**。
+   >* 在信息面板中，单击&#x200B;**列表**&#x200B;窗格中的&#x200B;**导入潜在客户**
+   >* 单击&#x200B;**列表**，然后在&#x200B;**工具**&#x200B;菜单中，选择&#x200B;**导入潜在客户**。
 
 
 1. 在&#x200B;**工具**&#x200B;菜单中，选择&#x200B;**导入****潜在客户**。
@@ -238,7 +234,7 @@ ht-degree: 95%
    >CSV 列表中的第一行为预定义标签，必须严格按以下示例写入：
    >
    >
-   >`email,givenName,familyName`  — 例如，如 `givenname`果写为，系统将无法识别。
+   >`email,givenName,familyName`  — 如果写为 `givenname`例如，系统将无法识别它。
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
@@ -252,7 +248,7 @@ ht-degree: 95%
 
    潜在客户窗格中将显示新潜在客户。在单击该条目后，输入的所有信息将显示在右侧窗格中。在创建潜在客户后，可以将其添加到列表中。
 
-### 将潜在客户添加到列表  {#adding-leads-to-lists}
+### 将潜在客户添加到列表 {#adding-leads-to-lists}
 
 向预先存在的列表中添加潜在客户：
 
@@ -268,7 +264,7 @@ ht-degree: 95%
 
 1. 选择要向其添加潜在客户的列表，并单击&#x200B;**确定**。这些潜在客户将添加到相应列表中。
 
-### 查看潜在客户信息  {#viewing-lead-information}
+### 查看潜在客户信息 {#viewing-lead-information}
 
 要查看潜在客户信息，请在 MCM 中，单击相应潜在客户旁的复选框，右侧窗格将打开，其中显示该潜在客户的所有信息，包括列表从属关系。
 
@@ -296,7 +292,7 @@ ht-degree: 95%
    >
    >要更改潜在客户头像，请转到用户个人资料。可以在 Clickstream Cloud 中加载个人资料，方法是按 CTRL+ALT+c，单击&#x200B;**加载**，然后选择个人资料。
 
-### 删除现有潜在客户  {#deleting-existing-leads}
+### 删除现有潜在客户 {#deleting-existing-leads}
 
 要在 MCM 中删除现有潜在客户，请选中该潜在客户旁的复选框，并单击&#x200B;**删除**。该潜在客户即会从该潜在客户列表和所有相关列表中删除。
 
@@ -304,7 +300,7 @@ ht-degree: 95%
 >
 >在删除之前，AEM 会确认您是否要删除现有潜在客户。在删除后，无法检索它。
 
-## 使用列表  {#working-with-lists}
+## 使用列表 {#working-with-lists}
 
 >[!NOTE]
 >
@@ -347,7 +343,7 @@ ht-degree: 95%
 
 1. 根据需要进行编辑，并单击&#x200B;**保存**&#x200B;以保存更改。
 
-### 删除现有列表  {#deleting-existing-lists}
+### 删除现有列表 {#deleting-existing-lists}
 
 要删除现有列表，请在 MCM 中，选中该列表旁的复选框，并单击&#x200B;**删除**。该列表即已删除。从属于该列表的潜在客户不会被删除，仅删除与该列表的从属关系。
 
@@ -355,7 +351,7 @@ ht-degree: 95%
 >
 >在删除之前，AEM 会确认您是否要删除现有列表。在删除后，无法检索它。
 
-### 合并列表  {#merging-lists}
+### 合并列表 {#merging-lists}
 
 您可以将现有列表与另一个列表合并。在执行此操作时，要合并的列表将变成另一个列表的成员。它仍将作为单独的实体存在，不能被删除。
 
@@ -387,7 +383,7 @@ ht-degree: 95%
 >
 >从成员资格中删除合并的列表与从列表中删除潜在客户一样。打开&#x200B;**列表**&#x200B;选项卡，选择包含合并列表的列表，并通过单击该列表旁的红色圆圈来删除成员资格。
 
-### 查看列表中的潜在客户  {#viewing-leads-in-lists}
+### 查看列表中的潜在客户 {#viewing-leads-in-lists}
 
 您随时可以通过浏览或搜索成员来查看属于特定列表的潜在客户。
 
