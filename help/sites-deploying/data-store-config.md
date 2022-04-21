@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /deploy/platform/data-store-config
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 9d8387934e2eab61191bd66c625a9fa52b686e37
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3471'
 ht-degree: 1%
 
 ---
@@ -206,7 +206,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    >
    >上述文件名仅用于说明目的。
 
-1. 从 [Adobe存储库](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/).
+1. 从 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/com.adobe.granite.oak.s3connector).
 1. 将内容解压缩到单独的文件夹，然后导航到 `jcr_root/libs/system/install/15`.
 1. 将jar文件复制到 **&lt;aem-install>**/crx-quickstart/install/15(位于AEM安装文件夹中)。
 1. 启动AEM并检查连接器功能。
@@ -286,7 +286,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 **异步上传**
 
-缓存支持异步上传到DataStore。 文件将在本地缓存中（在文件系统上）存放，异步作业开始上传文件。 异步上传的数量受暂存缓存大小的限制。 暂存缓存的大小通过使用 `stagingSplitPercentage` 参数。 此参数定义用于暂存缓存的缓存大小百分比。 此外，可下载的缓存百分比计算为 **(100 - `stagingSplitPercentage`)*`cacheSize`**.
+缓存支持异步上传到DataStore。 文件将在本地缓存中（在文件系统上）存放，异步作业开始上传文件。 异步上传的数量受暂存缓存大小的限制。 暂存缓存的大小通过使用 `stagingSplitPercentage` 参数。 此参数定义用于暂存缓存的缓存大小百分比。 此外，可下载的缓存百分比计算为 **(100 - `stagingSplitPercentage`) &#42;`cacheSize`**.
 
 异步上传是多线程的，且线程数量是使用 `uploadThreads` 参数。
 
