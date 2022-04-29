@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 70280ec60e8bc4cc139a44c379adca7541856997
+source-git-commit: fe31483555cbecffe067f920b5ed6bbf82f1ae58
 workflow-type: tm+mt
-source-wordcount: '3329'
+source-wordcount: '3330'
 ht-degree: 6%
 
 ---
@@ -284,7 +284,7 @@ B.使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.
 
 ### UberJar {#uber-jar}
 
-适用于Experience Manager6.5.12.0的UberJar可在 [Maven中央存储库](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.12/).
+适用于Experience Manager6.5.12.0的UberJar可在 [Maven中央存储库](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.12/).
 
 要在Maven项目中使用UberJar，请参阅 [如何使用UberJar](/help/sites-developing/ht-projects-maven.md) 并在项目POM中包含以下依赖项：
 

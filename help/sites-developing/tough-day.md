@@ -1,14 +1,12 @@
 ---
 title: 艰难的一天
-seo-title: Tough Day
 description: Tough Day测试在最坏情况下模拟大约1000位作者的每日负载，所有操作同时进行。
-seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 0b1f28963d9294c7aa9ae45c6b9fc9a9b8b4f6e6
+source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1849'
 ht-degree: 2%
 
 ---
@@ -143,7 +141,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 可通过两种方式实现定制：命令行参数或yaml配置文件。 **配置文件通常用于大型自定义包，并将覆盖第2天的严格默认参数。 命令行参数覆盖配置文件和缺省参数。**
 
-保存测试配置的唯一方法是以yaml格式复制该配置。 有关更多详细信息，请参阅此 [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml) 配置和以下部分中的yaml配置示例。
+保存测试配置的唯一方法是以yaml格式复制该配置。
 
 ### 添加新测试 {#adding-a-new-test}
 
@@ -347,22 +345,22 @@ Tough Day 2可输出测试量度和日志。 有关更多详细信息，请阅�
 
 ### 测试量度 {#test-metrics}
 
-艰难的第2天当前报告了9个可评估的测试量度。 量度 ***** 符号仅在成功运行后才报告：
+艰难的第2天当前报告了9个可评估的测试量度。 量度 **&#42;** 符号仅在成功运行后才报告：
 
 | **名称** | **描述** |
 |---|---|
 | 时间戳 | 上次完成测试运行的时间戳。 |
 | 已通过 | 成功运行的次数。 |
 | 失败 | 失败的运行数。 |
-| 最小* | 测试执行的最短持续时间。 |
-| 最大* | 测试执行的最长持续时间。 |
-| 中等* | 计算所有测试执行的中间持续时间。 |
-| 平均* | 计算所有测试执行的平均持续时间。 |
-| StdDev* | 标准偏差。 |
-| 90p* | 第90个百分位数。 |
-| 99p* | 第99个百分位数。 |
-| 99.9p* | 第99.9个百分位数。 |
-| 实际吞吐量* | 运行次数除以已用执行时间。 |
+| 最小&#42; | 测试执行的最短持续时间。 |
+| 最大&#42; | 测试执行的最长持续时间。 |
+| 中等&#42; | 计算所有测试执行的中间持续时间。 |
+| 平均&#42; | 计算所有测试执行的平均持续时间。 |
+| StdDev&#42; | 标准偏差。 |
+| 90p&#42; | 第90个百分位数。 |
+| 99便士&#42; | 第99个百分位数。 |
+| 99.9便士&#42; | 第99.9个百分位数。 |
+| 实际吞吐量&#42; | 运行次数除以已用执行时间。 |
 
 这些量度是在发布者的帮助下编写的，发布者可以在 `add` 参数（与添加测试类似）。 目前有两个选项：
 

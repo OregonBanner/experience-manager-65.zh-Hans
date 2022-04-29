@@ -1,21 +1,14 @@
 ---
 title: 在AEM 6中配置节点存储和数据存储
-seo-title: Configuring node stores and data stores in AEM 6
 description: 了解如何配置节点存储和数据存储，以及如何执行数据存储垃圾收集。
-seo-description: Learn how to configure node stores and data stores and how to perform data store garbage collection.
-uuid: 1a58c0ba-1c32-4539-ad0d-0a27c8c4ff5e
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: b97482f2-2791-4d14-ae82-388302d9eab3
 docset: aem65
-legacypath: /deploy/platform/data-store-config
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 9d8387934e2eab61191bd66c625a9fa52b686e37
+source-git-commit: 0c9d436d863d55f94e16f5c0f570251e2fb3d805
 workflow-type: tm+mt
-source-wordcount: '3471'
+source-wordcount: '3467'
 ht-degree: 1%
 
 ---
@@ -146,7 +139,7 @@ customBlobStore=B"false"
 
 可以将AEM配置为在Amazon的简单存储服务(S3)中存储数据。 它使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` 用于配置的PID。
 
-要启用S3数据存储功能，需要下载和安装包含S3数据存储连接器的功能包。 转到 [Adobe存储库](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/) 并从1.10.x版本的功能包下载最新版本(例如，com.adobe.granite.oak.s3connector-1.10.0.zip)。 此外，您还需要下载并安装上列出的最新AEM Service Pack [AEM 6.5发行说明](/help/release-notes/release-notes.md) 页面。
+要启用S3数据存储功能，需要下载和安装包含S3数据存储连接器的功能包。 转到 [Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) 并从1.10.x版本的功能包下载最新版本(例如，com.adobe.granite.oak.s3connector-1.10.0.zip)。 此外，您还需要下载并安装上列出的最新AEM Service Pack [AEM 6.5发行说明](/help/release-notes/release-notes.md) 页面。
 
 >[!NOTE]
 >
@@ -382,7 +375,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 可以将AEM配置为在Microsoft的Azure存储服务中存储数据。 它使用 `org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` 用于配置的PID。
 
-要启用Azure数据存储功能，需要下载并安装包含Azure连接器的功能包。 转到 [Adobe存储库](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) 并从1.6.x版本的功能包下载最新版本（例如，com.adobe.granite.oak.azureblobconnector-1.6.3.zip）。
+要启用Azure数据存储功能，需要下载并安装包含Azure连接器的功能包。 转到 [Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) 并从1.6.x版本的功能包下载最新版本（例如，com.adobe.granite.oak.azureblobconnector-1.6.3.zip）。
 
 >[!NOTE]
 >
