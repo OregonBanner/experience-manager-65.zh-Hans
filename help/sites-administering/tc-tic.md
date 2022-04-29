@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: cadf2e240327ef52ef57f8fb2e911f36fd003852
+source-git-commit: e5bdf1218d3b747e2317481a67ae74e7855cda0b
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1552'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 * 创建翻译集成框架配置。
 * 将云配置与您的页面关联。
 
-有关AEM中内容翻译功能的概述，请参阅[多语言站点的内容翻译](/help/sites-administering/translation.md)。
+有关AEM中的内容翻译功能的概述，请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md).
 
 ## 连接到翻译服务提供商 {#connecting-to-a-translation-service-provider}
 
@@ -40,11 +40,11 @@ ht-degree: 2%
 * [Cloudwords](https://exchange.adobe.com/experiencecloud.details.90019.html)
 * [XTM云](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [林戈特克](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
+* [RWS](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108277.html)
 * [智能玲](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
-* [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
 * [阿尔特朗](https://exchange.adobe.com/experiencecloud.details.90222.altlang.html)
-* Microsoft(AEM中预装了Microsoft Translator)
+* Microsoft(AEM中预安装了Microsoft Translator)
 
 >[!NOTE]
 >
@@ -53,11 +53,10 @@ ht-degree: 2%
 >
 >* [AEM人文翻译](https://www.adobe.com/go/aem-human-translation-connectors)
 >* [AEM机器翻译](https://www.adobe.com/go/aem-machine-translation-connectors)
-
 >
 
 
-安装连接器包后，可以为连接器创建云配置。 通常，您需要提供凭据以通过翻译服务进行身份验证。 有关为Microsoft Translator连接器添加云配置的信息，请参阅[与Microsoft Translator集成](/help/sites-administering/tc-msconf.md)。
+安装连接器包后，可以为连接器创建云配置。 通常，您需要提供凭据以通过翻译服务进行身份验证。 有关为Microsoft Translator连接器添加云配置的信息，请参阅 [与Microsoft Translator集成](/help/sites-administering/tc-msconf.md).
 
 您可以根据需要为同一连接器创建多个云配置。 例如，为您与同一供应商拥有的每个帐户或项目创建一个配置。
 
@@ -75,9 +74,9 @@ ht-degree: 2%
 
 当网站的不同部分具有不同的翻译要求时，请相应地创建多个框架配置。 例如，多语言网站包含英语、西班牙语和日语副本。 网站所有者使用两个不同的翻译服务提供商进行西班牙语和日语的翻译。 因此，框架的两个配置已配置。 每个配置都使用不同的翻译服务提供程序。
 
-配置翻译集成框架后，您可以[将其与使用该框架的页面](/help/sites-administering/tc-prep.md)相关联。
+配置翻译集成框架后，您可以 [将其与页面关联](/help/sites-administering/tc-prep.md) 用它。
 
-**注意：** 有关AEM中内容翻译功能的概述，请参阅 [多语言站点内容翻译](/help/sites-administering/translation.md)。
+**注意：** 有关AEM中的内容翻译功能的概述，请参阅 [翻译多语言站点的内容](/help/sites-administering/translation.md).
 
 框架的单个配置可控制如何翻译页面内容、社区内容和资产。
 ![chlimage_1-386](assets/translation-config-65.jpg)
@@ -131,17 +130,17 @@ ht-degree: 2%
 
 ### 社区配置属性 {#communities-configuration-properties}
 
-社区属性控制如何执行用户生成内容的翻译。 用户生成内容的翻译始终使用机器翻译。 有关更多信息，请参阅[翻译用户生成的内容](/help/communities/translate-ugc.md)。
+社区属性控制如何执行用户生成内容的翻译。 用户生成内容的翻译始终使用机器翻译。 有关更多信息，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md).
 
 | 属性 | 描述 |
 |---|---|
 | 翻译提供商 | 选择翻译提供程序以执行翻译。 为其创建云配置的提供程序将显示在列表中。 |
 | 内容目录 | 描述要翻译的内容的类别。 在翻译内容时，类别会影响术语和措辞的选择。 |
-| 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，所有语言副本中的帖子将显示在一个全局对话中。 按照惯例，为网站选择[基本语言](/help/communities/sites-console.md#translation)的区域设置。 选择“无公用商店”将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
+| 选择要用作全局共享存储的区域设置 | （可选）通过选择存储UGC的区域设置，所有语言副本中的帖子将显示在一个全局对话中。 根据惯例，选择 [基本语言](/help/communities/sites-console.md#translation) 中。 选择“无公用商店”将禁用全局翻译。 默认情况下，全局翻译处于禁用状态。 |
 
 ### 资产配置属性 {#assets-configuration-properties}
 
-资产属性可控制如何配置资产。 有关翻译资产的更多信息，请参阅[为资产创建语言副本](/help/assets/translation-projects.md)。
+资产属性可控制如何配置资产。 有关翻译资产的更多信息，请参阅 [为资产创建语言副本](/help/assets/translation-projects.md).
 
 <table>
  <tbody>
@@ -207,7 +206,7 @@ ht-degree: 2%
 
 如果需要，您可以覆盖子代页面上的关联。 例如，网站的内容大多与服装有关。 但是，页面的一个分支描述了公司。 站点的根页面与翻译集成框架相关联，该框架使用Clothing类别指定机器翻译。 描述公司的分支使用使用使用常规类别执行机器翻译的框架。
 
-此外，对于页面上的任何社区[SCF组件](/help/communities/scf.md)，用户生成的内容(UGC)将包括用户翻译内容的功能。 有关更多信息，请参阅[用户生成内容的翻译](/help/communities/translate-ugc.md)。
+此外，对于任何社区 [SCF组件](/help/communities/scf.md) 在页面上，用户生成的内容(UGC)将包括用户翻译内容的功能。 有关更多信息，请参阅 [用户生成内容的翻译](/help/communities/translate-ugc.md).
 
 ### 将页面与翻译提供程序关联 {#associating-a-page-with-a-translation-provider}
 
