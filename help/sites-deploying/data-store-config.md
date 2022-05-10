@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 0c9d436d863d55f94e16f5c0f570251e2fb3d805
+source-git-commit: 6257b56c61ae14889d9ecefed5030e123a415fd7
 workflow-type: tm+mt
-source-wordcount: '3467'
+source-wordcount: '3455'
 ht-degree: 1%
 
 ---
@@ -199,7 +199,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    >
    >上述文件名仅用于说明目的。
 
-1. 从 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/com.adobe.granite.oak.s3connector).
+1. 从 [Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
 1. 将内容解压缩到单独的文件夹，然后导航到 `jcr_root/libs/system/install/15`.
 1. 将jar文件复制到 **&lt;aem-install>**/crx-quickstart/install/15(位于AEM安装文件夹中)。
 1. 启动AEM并检查连接器功能。
