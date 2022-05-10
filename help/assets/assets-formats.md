@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: e3743b7ecbd8266abfaee36dcee94bcd2b260cac
+source-git-commit: fcbfd8b378282d908b68c61ab235e9b80fd6644c
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1751'
 ht-degree: 20%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 20%
 | 支持级别 | 描述 |
 | :-----------: | ------------------------------ |
 | ✓ | 支持 |
-| * | 受支持，但需要附加功能 |
-| - | 不适用 |
+| &#42; | 受支持，但需要附加功能 |
+| − | 不适用 |
 
 ## 支持的栅格图像格式 [!DNL Experience Manager] {#supported-raster-image-formats}
 
@@ -121,23 +121,23 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 
 |  | 存储 | 元数据管理 | 元数据提取 | 缩略图生成 | FFmpeg转码 |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ | - | - | * |
-| MIDI | ✓ | ✓ | - | - | * |
-| 3GP | ✓ | ✓ | - | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ | - | - | * |
-| OGA | ✓ | ✓ | - | - | * |
-| OGG | ✓ | ✓ | - | - | * |
-| RA | ✓ | ✓ | - | - | * |
-| WAV | ✓ | ✓ | - | - | * |
-| WMA | ✓ | ✓ | - | - | * |
-| DVI | ✓ | ✓ | - | * | * |
-| FLV | ✓ | ✓ | - | * | * |
-| M4V | ✓ | ✓ | - | * | * |
-| MPEG | ✓ | ✓ | - | * | * |
-| OGV | ✓ | ✓ | - | * | * |
-| MOV | ✓ | ✓ | - | * | * |
-| WMV | ✓ | ✓ | - | * | * |
+| AAC | ✓ | ✓ | - | - | &#42; |
+| MIDI | ✓ | ✓ | - | - | &#42; |
+| 3GP | ✓ | ✓ | - | - | &#42; |
+| MP3 | ✓ | ✓ | ✓ | - | &#42; |
+| MPG | ✓ | ✓ | - | - | &#42; |
+| OGA | ✓ | ✓ | - | - | &#42; |
+| OGG | ✓ | ✓ | - | - | &#42; |
+| RA | ✓ | ✓ | - | - | &#42; |
+| WAV | ✓ | ✓ | - | - | &#42; |
+| WMA | ✓ | ✓ | - | - | &#42; |
+| DVI | ✓ | ✓ | - | &#42; | &#42; |
+| FLV | ✓ | ✓ | - | &#42; | &#42; |
+| M4V | ✓ | ✓ | - | &#42; | &#42; |
+| MPEG | ✓ | ✓ | - | &#42; | &#42; |
+| OGV | ✓ | ✓ | - | &#42; | &#42; |
+| MOV | ✓ | ✓ | - | &#42; | &#42; |
+| WMV | ✓ | ✓ | - | &#42; | &#42; |
 | SWF | ✓ | ✓ | - | - | - |
 
 ## 支持的存档格式 {#supported-archive-formats}
@@ -256,7 +256,11 @@ Adobe图像转码库是一款图像处理解决方案，可执行核心的图像
 |---|:---:|:---:|:---:|:---:|:---:|
 | [人工智能](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （请参阅下文的注释） | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+>[!NOTE]
+>
+>对于安全PDF，仅支持上传。
 
 除了上述功能外，还请考虑以下事项：
 
