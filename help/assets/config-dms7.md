@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: f2cfe62c561e772a10ede4f76314a5904d6d64ff
+source-git-commit: 5c29ac6b87b818e168a746827624b65c6ba3b2f7
 workflow-type: tm+mt
-source-wordcount: '6048'
+source-wordcount: '6049'
 ht-degree: 4%
 
 ---
@@ -134,7 +134,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. 默认情况下，Experience Manager作者无法预览Dynamic Media内容。 因此，要在发布Dynamic Media内容之前安全预览该内容，您必须 *允许列表* 连接到Dynamic Media的Experience Manager创作实例。 此外，如果要为用户提供安全预览内容的访问权限，则可以 *允许列表* 其他IP地址。
+1. 默认情况下，Experience Manager作者无法预览Dynamic Media内容。 因此，要在发布Dynamic Media内容之前安全预览内容，您必允许列表须Experience Manager创作实例才能连接到Dynamic Media。 此外，如果您希望为用户提供安全预览内容的访问权限，则可以允许列表管理其他IP地址。 <!-- CQDOC-19254 UNHIDE ON MAY 26, 2022 To securely preview Dynamic Media content before it gets published, Experience Manager Author uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can allowlist more IPs to provide users access to securely preview content. -->
 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
@@ -304,7 +304,7 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
 
    * 双击 **[!UICONTROL 已启用]** 字段。 默认情况下，所有资产mime类型均启用(设置为 **[!UICONTROL true]**)，这表示资产将同步到Dynamic Media进行处理。 如果要排除此资产mime类型，请将此设置更改为 **[!UICONTROL false]**.
 
-   * 双击 **[!UICONTROL jobParam]** 打开其关联的文本字段。 请参阅 [支持的Mime类型](/help/assets/assets-formats.md#supported-mime-types) 有关允许的处理参数值列表，可用于给定mime类型。
+   * 双击 **[!UICONTROL jobParam]** 打开其关联的文本字段。 请参阅 [支持的Mime类型](/help/assets/assets-formats.md#supported-mime-types) 以获取可用于给定mime类型的允许处理参数值列表。
 
 1. 执行下列操作之一：
 
@@ -409,8 +409,6 @@ Dynamic Media色彩管理允许您对资产进行颜色校正。 通过颜色校
    * 选择 **[!UICONTROL 保存]** 编辑现有预设时，才会显示该预设。
 
 ##### 创建批集预设
-
-
 
 Dynamic Media使用批量集预设将资产组织为一组图像（替代图像、颜色选项、360旋转），以便在查看器中显示。 批集预设会随Dynamic Media中的资产上传流程自动运行。
 
