@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2022发行说明
 description: AEM Content and Commerce 2022发行说明
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 1a82930d9f0aa84cea590782aba2e70ec23b41c3
+source-git-commit: aacb497b10f46be3157aae86a5973aa277fda967
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 27%
+source-wordcount: '458'
+ht-degree: 45%
 
 ---
 
@@ -21,6 +21,24 @@ ht-degree: 27%
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 发行日期：2022年4月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2022.04.28.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
+| CIF核心组件 | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
+| CIF Venia参考网站 | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
+
+### 新增功能 {#what-is-new}
+
+* 快速访问产品驾驶舱：在站点编辑器中，通过一键单击即可轻松访问完整的详细产品信息
+
+   ![启用愿望清单](/help/assets/CIF/enable-wishlist.png)
+
+* 支持其他营销商务组件：组件可配置为显示加货车和加货车清单行动动员
+
+   ![站点编辑器到产品驾驶舱的快捷键](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
+
 ## 发行日期：2022年3月
 
 | 组件 | 版本 | 详细信息 |
@@ -31,11 +49,11 @@ ht-degree: 27%
 
 ### 新增功能 {#what-is-new-march}
 
-* 测试版：AEM CIF搜索核心组件支持商务LiveSearch
-* 改进了多存储方案的SEO:现在，可以通过CIF云配置属性在存储级别配置PDP/PLP的URL格式
-* 产品选取器通过UI中的新筛选器选项支持暂存产品。  这样，内容从业者就可以为即将推出的产品准备产品内容管理
-* 使用CIF云配置名称（而不是配置代理URL）简化CIF配置管理和错误处理
-* 产品列表和轮播组件的手动类别选择。 这允许内容从业者在目录体验之外的内容页面上使用这些组件
+* Beta：AEM CIF 搜索核心组件支持 Commerce Live Search
+* 改进了多商店场景的 SEO：PDP/PLP 的 URL 格式现在可以通过 CIF 云配置属性在商店级别进行配置
+* 产品挑选器通过 UI 中新的过滤器选项支持阶段性产品。这使内容从业者能够为即将发布的产品准备产品内容管理
+* 通过使用 CIF 云配置名称而非配置代理 URL，简化了 CIF 配置管理和错误处理
+* 产品列表和轮盘组件的手动类别选择。这允许内容从业者在目录体验之外的内容页面上使用这些组件
 
 ## 发行日期：2022年1月
 
@@ -48,10 +66,10 @@ ht-degree: 27%
 ### 新增功能 {#what-is-new-january}
 
 * 增强的 myAccount 组件
-* “产品推荐”组件支持额外的页面类型（主页、购物车、订单确认）
+* 产品推荐组件支持其他页面类型（主页、购物车、订单确认）
 * **愿望清单**
    * 登录的访客可以将产品添加到愿望清单
-   * 可以通过 myAccount 管理愿望清单及其产品
+   * 通过 myAccount 可以管理愿望清单及其产品
    * 可以通过策略（例如产品预告片、产品详细信息）在组件级别启用/禁用“添加到愿望清单”按钮
    * 作为核心组件提供，位于 AEM Venia Storefront 中
 
