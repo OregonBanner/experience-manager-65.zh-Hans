@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 5c29ac6b87b818e168a746827624b65c6ba3b2f7
+source-git-commit: 684f73722834f1764e8f37ad790d7da4ef57a369
 workflow-type: tm+mt
-source-wordcount: '6049'
-ht-degree: 4%
+source-wordcount: '6090'
+ht-degree: 3%
 
 ---
 
@@ -134,8 +134,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. 默认情况下，Experience Manager作者无法预览Dynamic Media内容。 因此，要在发布Dynamic Media内容之前安全预览内容，您必允许列表须Experience Manager创作实例才能连接到Dynamic Media。 此外，如果您希望为用户提供安全预览内容的访问权限，则可以允许列表管理其他IP地址。 <!-- CQDOC-19254 UNHIDE ON MAY 26, 2022 To securely preview Dynamic Media content before it gets published, Experience Manager Author uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can allowlist more IPs to provide users access to securely preview content. -->
-要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
+1. 默认情况下，Experience Manager作者无法预览Dynamic Media内容。 因此，要在发布Dynamic Media内容之前安全预览内容，您必允许列表须Experience Manager创作实例才能连接到Dynamic Media。 此外，如果您希望为用户提供安全预览内容的访问权限，则可以允许列表管理其他IP地址。
+为了在发布Dynamic Media内容之前安全地预览该内容，Experience Manager作者使用基于令牌的验证，因此默认情况下，Experience Manager作者会预览Dynamic Media内容。 但是，您可以允许列表更多IP，以便为用户提供安全预览内容的访问权限。 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
