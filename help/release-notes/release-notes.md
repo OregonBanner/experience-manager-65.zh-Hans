@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: a45d66dc2226dbe2879aa61d95cc5379dce882bb
+source-git-commit: f78d12d6fa1daa1c1b3afdfe22ecb8c183e8e1d0
 workflow-type: tm+mt
-source-wordcount: '3774'
+source-wordcount: '3737'
 ht-degree: 7%
 
 ---
@@ -92,9 +92,9 @@ ht-degree: 7%
 
 ## [!DNL Forms] {#forms-65130}
 
-* 当使用预填充服务来填充包含片段的自适应表单并且该片段包含支持富文本的文本框时，表单无法提交，并出现以下错误：
+<!-- * When you use the prefill service to fill an adaptive form that contains a fragment and the fragment contains a Text box that supports rich text, the form fails to submit, and the following error occurs:
 
-   `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542)
+  `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542) -->
 
 * 单选按钮、复选框和文件上传组件未正确从德语翻译为英语。 (NPR-38527)
 * PDF417条形码编码由 [!DNL Experience Manager] Forms对单选按钮组无效。 (NPR-38525)
