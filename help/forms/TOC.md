@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
 workflow-type: tm+mt
-source-wordcount: '3775'
+source-wordcount: '3788'
 ht-degree: 4%
 
 ---
@@ -681,9 +681,12 @@ ht-degree: 4%
          + [以编程方式管理首选项节点](developing/programmatically-preferences-nodes.md)
          + [使用策略保护文档](developing/protecting-documents-policies.md)
          + [使用Web服务API验证DDX文档](developing/validate-ddx-document-using-web.md)
-      + 旧版文档 {#legacy-documentation}
-         + [使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据](developing/building-xml.md)
-         + [在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](developing/compressing-decompressing-custom-dsc.md)
-         + [在JEE服务器群集上配置AEM Forms并对其进行故障诊断](developing/configure-server-cluster.md)
-         + [在动态PDF forms中生成和使用哈希](developing/hashing-forms.md)
-         + [使用WS-Security标头传递凭据](developing/passing-credentials.md)
++ 疑难解答 {#troubleshooting}
+   + [无法将某些表单功能与某些版本的OracleJDK一起使用](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
++ 旧版文档 {#legacy-documentation}
+   + [使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据](developing/building-xml.md)
+   + [在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](developing/compressing-decompressing-custom-dsc.md)
+   + [在JEE服务器群集上配置AEM Forms并对其进行故障诊断](developing/configure-server-cluster.md)
+   + [在动态PDF forms中生成和使用哈希](developing/hashing-forms.md)
+   + [使用WS-Security标头传递凭据](developing/passing-credentials.md)
+

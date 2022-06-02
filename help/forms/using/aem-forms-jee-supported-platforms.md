@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
+source-git-commit: dab643ffd64217018bf2f5544ae3c417963cea82
 workflow-type: tm+mt
-source-wordcount: '3515'
+source-wordcount: '3533'
 ht-degree: 1%
 
 ---
@@ -419,8 +419,12 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <td>8.5 </td>
   </tr>
   <tr>
-   <td>Microsoft Sharepoint</td>
-   <td>2016年<br /> </td>
+   <td>Microsoft Sharepoint </td>
+   <td>2016（已弃用）<br /> </td>
+  </tr>
+  <tr>
+   <td>Microsoft Sharepoint </td>
+   <td>2019年<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -720,7 +724,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 
 ### AEM Forms应用程序 {#aem-forms-workspace-app}
 
-#### Mobile设备支持 {#mobile-device-support}
+#### 移动设备支持 {#mobile-device-support}
 
 AEM Forms应用程序在以下平台上可用：
 
@@ -755,6 +759,10 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 通过搜索Adobe企业支持网站，查找与您的产品相关的知识库文章，还可以找到有关第三方修补程序的其他信息。
 
 ## 平台更新 {#platform-updates}
+
+2022年6月2日发行的AEM Forms 6.5.13.0版将以下平台标记为已弃用：
+
+- MicrosoftSharePoint2016
 
 2022年3月3日，AEM Forms 6.5.12.0版本将以下平台标记为已弃用：
 

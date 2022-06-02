@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6c9e8f1e62fe1a193cb9938e5f789e1e08b8339d
+source-git-commit: db94e464b130c6ca223314c3c5ffb8893a92a142
 workflow-type: tm+mt
-source-wordcount: '3546'
+source-wordcount: '3752'
 ht-degree: 7%
 
 ---
@@ -24,6 +24,22 @@ ht-degree: 7%
 ## 中包含的内容 [!DNL Experience Manager] 6.5.13.0 {#what-is-included-in-aem}
 
 [!DNL Experience Manager] 6.5.13.0包括自2019年4月6.5版首次发布以来发布的新功能、客户请求的关键增强功能以及性能、稳定性和安全性改进。 [安装此Service Pack](#install) on [!DNL Experience Manager] 6.5。
+
+中引入的主要功能和增强功能 [!DNL Adobe Experience Manager] 6.5.13.0是：
+
+* 在自适应表单中使用不可见的CAPTCHA:现在，您只能在可疑活动时使用隐形验证码来显示验证码挑战。 如果未发现可疑活动，则不会显示验证码质询。 它有助于评估人工表单的完成情况，而无需使用复选框要求，减少自定义工作，并改善最终用户体验。 (NPR-38500)
+
+* 添加了对REST端点的表单数据模型后处理器中获取响应标头的支持。 (NPR-38275)
+
+* 现在，在生成自适应表单翻译文件时，生成的XLIFF文件的文本序列与相应自适应表单中的组件序列相同。 (NPR-37700)
+
+* 当您将自适应表单本地化，并对基本语言的文本做出哪怕是细微的更改时，所有其他语言都将丢失完整的翻译。 此问题已在 [!DNL Experience Manager] 6.5.13.0。 (NPR-37189)
+
+* Forms的无障碍功能改进：
+
+   * 增加了对屏幕阅读器的支持，以识别表的标题和正文作为继续和连接的实体。 它有助于屏幕阅读器正确导航表。 (NPR-37139)
+   * 为屏幕阅读器添加了支持，可在对话框打开之前停止导航HTML工作区。 (NPR-37134)
+   * 添加了在Forms Designer中为超链接指定屏幕Reader文本的功能。(NPR-36221)
 
 中引入了以下错误修复、主要功能和增强功能 [!DNL Experience Manager] 6.5.13.0:
 
@@ -120,20 +136,6 @@ ht-degree: 7%
 >
 >* [!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。
 
-
-<!-- **Adaptive Forms**
-
-**Form Data Model**
-
-**Interactive Communication**
-
-**Document Services**
-
-**Document Security**
-
-**Foundation JEE**
-
-**Workflow** -->
 
 ## Granite {#granite-6513}
 
