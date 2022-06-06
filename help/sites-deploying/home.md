@@ -3,9 +3,9 @@ title: AEM 6.5 Deploying用户指南
 seo-title: AEM 6.5 Deploying User Guide
 description: 了解如何安装和部署Adobe Experience Manager 6.5及其架构，包括我们的Adobe Managed Services云部署。
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 31%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 31%
 
 ## 关键AEM文章
 
-* [AEM 快速入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
+* [AEM 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5 发行说明](/help/release-notes/home.md)
 * [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM 安全核对清单](/help/sites-administering/security-checklist.md)

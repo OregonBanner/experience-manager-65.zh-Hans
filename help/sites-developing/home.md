@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Developing User Guide
 description: 了解如何构建AEM实例。 进一步了解该平台和组件，并查找有关开发工具和个性化的信息。
 seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '372'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 ## 关键AEM文章
 
-* [AEM 快速入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
+* [AEM 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5 发行说明](/help/release-notes/home.md)
 * [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM 安全核对清单](/help/sites-administering/security-checklist.md)

@@ -2,10 +2,10 @@
 title: AEM 6.5 Administering 用户指南
 description: 了解如何管理AEM 6.5。这些指南涵盖站点功能、部署操作、安全功能、个性化、集成等。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 34%
+source-wordcount: '359'
+ht-degree: 35%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 34%
 
 ## 关键文章
 
-* [AEM 快速入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
+* [AEM 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5 发行说明](/help/release-notes/home.md)
 * [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM 安全核对清单](/help/sites-administering/security-checklist.md)

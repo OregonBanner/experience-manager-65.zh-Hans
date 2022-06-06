@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Authoring User Guide
 description: 探索在AEM 6.5中创建内容和进行创作的关键概念。您还可以找到有关使用标记、模板和其他页面功能的信息。
 seo-description: Explains the concepts of authoring in AEM.
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '374'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 ## 关键AEM文章
 
-* [AEM 快速入门](https://helpx.adobe.com/cn/experience-manager/get-started.html)
+* [AEM 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
 * [AEM 6.5 发行说明](/help/release-notes/home.md)
 * [近期文档更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM 安全核对清单](/help/sites-administering/security-checklist.md)
