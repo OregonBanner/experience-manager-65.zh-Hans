@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
+source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
 workflow-type: tm+mt
-source-wordcount: '3558'
+source-wordcount: '3557'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 **Apache SlingGETServlet** 配置渲染的某些方面：
 
 * **自动索引** 启用/禁用用于浏览的目录渲染。
-* **启用** （或禁用）默认演绎版，例如 **HMTL**, **纯文本**, **JSON** 或 **XML**.
+* **启用** （或禁用）默认演绎版，例如 **HTML**, **纯文本**, **JSON** 或 **XML**.
 您不应禁用JSON。
 
 >[!NOTE]
@@ -109,7 +109,7 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 
 某些设置可能会影响性能，应尽可能禁用这些设置，尤其是对于生产实例。
 
-* S **源虚拟机** 和 **目标虚拟机**，将JDK版本定义为用作运行时JVM的版本
+* **源虚拟机** 和 **目标虚拟机**，将JDK版本定义为用作运行时JVM的版本
 
 * 对于生产实例：
 
@@ -117,7 +117,7 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 
 **Apache Sling JCR安装程序** 这些参数可能不需要配置，但在开发或调试时可能有助于了解这些参数。 例如，安装文件夹可用于签入/签出或创建包。
 
-* **安装文件夹名称正则表达式** 和 **安装文件夹的最大层次结构深度**  — 指定在何处和到哪个深度搜索要安装的资源库文件夹。 使用通配符时（如中所示）。*/install)将搜索所有适当的匹配项，例如， `/libs/sling/install` 和 `/libs/cq/core/install`.
+* **安装文件夹名称正则表达式** 和 **安装文件夹的最大层次结构深度**  — 指定在何处和到哪个深度搜索要安装的资源库文件夹。 使用通配符时（如中所示）。&#42;/install)将搜索所有适当的匹配项，例如， `/libs/sling/install` 和 `/libs/cq/core/install`.
 
 * **搜索路径**, jcrinstall搜索要安装的资源的路径列表，以及指示该路径的权重因子的数字。
 
@@ -320,19 +320,19 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 AEM中提供了两个UI:
 
 * 触屏优化UI是标准UI
-* 且弃用的经典UI仍完全可操作
+* 且已弃用的经典UI仍完全可操作
 
 使用AEM根映射，您可以配置要作为实例默认UI的UI:
 
 * 要将触屏优化UI作为默认UI，请执行以下操作： **目标路径** 应指向：
 
-   ```
+   ```shell
       /projects.html
    ```
 
 * 要将经典UI作为默认UI，请在 **目标路径** 应指向：
 
-   ```
+   ```shell
       /welcome.html
    ```
 
