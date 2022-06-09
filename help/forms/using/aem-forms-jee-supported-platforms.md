@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: dab643ffd64217018bf2f5544ae3c417963cea82
+source-git-commit: f1dade2cb15f98bb7830f6afb27ec493dc182a37
 workflow-type: tm+mt
-source-wordcount: '3533'
+source-wordcount: '3550'
 ht-degree: 1%
 
 ---
@@ -219,6 +219,11 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
   <tr>
    <td>Microsoft SQL Server<br /> </td>
    <td><p>Microsoft® SQL Server JDBC驱动程序6.2.1.0（已弃用） <br /> </p> <p>sqljdbc6.jar</p> </td>
+   <td><p>在JEE安装中随AEM Forms提供。</p> </td>
+  </tr>
+    <tr>
+   <td>Microsoft SQL Server<br /> </td>
+   <td><p>Microsoft® SQL Server JDBC驱动程序6.2.2.0 <br /> </p> <p>sqljdbc6.jar</p> </td>
    <td><p>在JEE安装中随AEM Forms提供。</p> </td>
   </tr>
   <tr>

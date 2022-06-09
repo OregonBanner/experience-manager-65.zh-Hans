@@ -10,9 +10,9 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: c92b5b5dd70e7a4e696d8d75282edbc88a13ba51
+source-git-commit: 98854fa3b852f511cf95adc13b945c06b1afff96
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2011'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 AEM Forms数据集成允许您配置不同的数据源并将其连接到不同的数据源。 支持开箱即用地使用以下类型。 但是，通过少量自定义，您也可以集成其他数据源。
 
-* 关系数据库 — MySQL、Microsoft SQL Server、IBM DB2和OracleRDBMS。
+* 关系数据库 — MySQL、Microsoft SQL Server、IBM DB2、OracleRDBMS和Sybase
 * AEM用户配置文件
 * RESTful Web服务
 * 基于SOAP的Web服务
