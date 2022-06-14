@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2022发行说明
 description: AEM Content and Commerce 2022发行说明
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: aacb497b10f46be3157aae86a5973aa277fda967
+source-git-commit: f6a16e5744222600b3a1760efe3c61619160b6cd
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 45%
+source-wordcount: '573'
+ht-degree: 38%
 
 ---
 
@@ -21,6 +21,30 @@ ht-degree: 45%
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 发行日期：2022年5月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2022.05.31.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
+| CIF核心组件 | 2.9.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.9.0) |
+| CIF Venia参考网站 | 2022.05.30 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.05.30) |
+
+### 新增功能 {#what-is-new-may}
+
+* 新产品驾驶舱属性页面，以获得更好和简化的概述
+
+![产品驾驶舱属性概述](/help/assets/CIF/product_cockpit_properties_overview.png)
+
+* 改进了I/O运行时第三方连接器的兼容性和稳健性
+
+* 改进对GQL客户端配置覆盖的支持（例如，设置自定义缓存行为）
+
+### 错误修复 {#bug-fixes-may}
+
+* 多值产品选取器字段将第2个和其他产品显示为无效
+
+* 有时，产品选取器会隐藏在组件后面
+
 ## 发行日期：2022年4月
 
 | 组件 | 版本 | 详细信息 |
@@ -29,7 +53,7 @@ ht-degree: 45%
 | CIF核心组件 | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
 | CIF Venia参考网站 | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
 
-### 新增功能 {#what-is-new}
+### 新增功能 {#what-is-new-april}
 
 * 快速访问产品驾驶舱：在站点编辑器中，通过一键单击即可轻松访问完整的详细产品信息
 
