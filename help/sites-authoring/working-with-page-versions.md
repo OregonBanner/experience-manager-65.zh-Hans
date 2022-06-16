@@ -1,8 +1,8 @@
 ---
 title: 处理页面版本
-seo-title: 处理页面版本
+seo-title: Working with Page Versions
 description: 创建、比较和恢复页面版本
-seo-description: 创建、比较和恢复页面版本
+seo-description: Create, compare, and restore versions of a page
 uuid: 29e049f0-532c-4e3b-b64f-5be88ee6b08c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 4d5f7057178ea0a1f00ea363b76dacdfb714b5e3
+source-git-commit: b11a97b9b00e6f80fb0243e234ed1dc2c004ed3a
 workflow-type: tm+mt
-source-wordcount: '1487'
-ht-degree: 69%
+source-wordcount: '1491'
+ht-degree: 96%
 
 ---
 
@@ -26,14 +26,14 @@ ht-degree: 69%
 * 将页面恢复到之前的版本，例如，为了撤消您对页面所做的更改。
 * 将页面的当前版本与之前版本进行比较，并突出显示文本和图像中的差异。
 
-## 创建新版本  {#creating-a-new-version}
+## 创建新版本 {#creating-a-new-version}
 
 您可以通过以下方式创建某个版本的资源：
 
 * [时间轴边栏](#creating-a-new-version-timeline)
 * [创建](#creating-a-new-version-create-with-a-selected-resource)选项（在选择某资源时）
 
-### 创建新版本 - 时间轴 {#creating-a-new-version-timeline}
+### 创建新版本 - 时间线 {#creating-a-new-version-timeline}
 
 1. 导航以显示要为其创建版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
@@ -49,7 +49,7 @@ ht-degree: 69%
 
 1. 通过&#x200B;**创建**&#x200B;确认新版本。
 
-   时间轴中的信息将进行更新以指示该新版本。
+   时间线中的信息将进行更新以指示该新版本。
 
 ### 创建新版本 - 通过选定的资源创建 {#creating-a-new-version-create-with-a-selected-resource}
 
@@ -62,25 +62,25 @@ ht-degree: 69%
 
 1. 通过&#x200B;**创建**&#x200B;确认新版本。
 
-   将会打开时间轴，并且其信息会更新以指示新版本。
+   将会打开时间线，并且其信息会更新以指示新版本。
 
-## 恢复版本{#reinstating-versions}
+## 恢复版本 {#reinstating-versions}
 
-创建页面版本后，可使用多种方法恢复以前的版本：
+创建页面的版本后，可通过多种方法恢复以前的版本：
 
-* **从[时间轴](/help/sites-authoring/basic-handling.md#timeline)边栏还原到此版本**&#x200B;选项
+* [时间线](/help/sites-authoring/basic-handling.md#timeline)边栏中的&#x200B;**恢复到此版本**&#x200B;选项
 
-   恢复选定页面的先前版本。
+   恢复所选页面的先前版本。
 
-* **操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)顶部[操作工具栏**&#x200B;中的“恢复”选项
+* 顶部[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中的&#x200B;**恢复**&#x200B;选项
 
    * **恢复版本**
 
-      恢复当前选定文件夹中指定页面的版本；这还可以包括恢复之前已删除的页面。
+      在当前选定的文件夹中恢复指定页面的版本；这还可以包括恢复之前已删除的页面。
 
    * **恢复树**
 
-      在指定的日期和时间恢复整个树的版本；这可以包括之前已删除的页面。
+      将整个树恢复到指定的日期和时间的版本；这可以包括之前已删除的页面。
 
 >[!NOTE]
 >
@@ -90,79 +90,79 @@ ht-degree: 69%
 >
 >1. 为任意页面创建版本。
 >1. 初始的标签和版本节点名称将表示为 1.0、1.1、1.2，以此类推。
->1. 恢复第一版；即1.0。
+>1. 恢复第一个版本；即 1.0。
 >1. 再次创建新版本。
 >1. 此时生成的标签和节点名称将表示为 1.0.0、1.0.1、1.0.2，以此类推。
 
 
-### 还原到版本{#revert-to-a-version}
+### 恢复到某个版本 {#revert-to-a-version}
 
-要&#x200B;**还原**&#x200B;选定页面到之前的版本：
+要将选定页面&#x200B;**恢复**&#x200B;到先前版本，请执行以下操作：
 
 1. 导航以显示要还原到之前版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
-1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。 将列出所选页面的页面版本。
+1. 打开“ **时间线** ”列，然后选择“ **显示全部** ”或“ **版本**”。 将列出所选页面的页面版本。
 1. 选择要还原到的版本。将显示可能的选项：
 
-   ![还原到此版本](assets/screen-shot_2019-03-05at112505.png)
+   ![恢复到此版本](assets/screen-shot_2019-03-05at112505.png)
 
-1. 选择“**还原到此版本**”。将恢复到所选版本，并在时间轴中更新信息。
+1. 选择“**还原到此版本**”。将恢复到所选版本，并在时间线中更新信息。
 
 ### 恢复版本 {#restore-version}
 
-此方法可用于还原当前文件夹中指定页面的版本；这还可能包括恢复之前已删除的页面：
+可以使用此方法在当前文件夹中恢复指定页面的版本；这还可以包括恢复之前已删除的页面：
 
-1. 导航到所需的文件夹，然后选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。[
+1. 导航到并[选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)所需文件夹。
 
-1. 从顶部的[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**恢复**，然后选择&#x200B;**恢复版本**。
+1. 选择&#x200B;**恢复**，然后从顶部[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**恢复版本**。
 
    >[!NOTE]
    >
-   >如果，则：
+   >如果：
    >
-   >* 您选择了单个页面，且该页面从未包含任何子页面，
-   >* 或者文件夹中的任何页面都没有版本，
+   >* 您已选择一个从未具有任何子页面的页面，
+   >* 或者文件夹中的所有页面都没有版本，
 
    >
-   >然后，显示内容将为空，因为没有适用的版本。
+   >则显示将为空，因为没有适用的版本。
 
 1. 将列出可用版本：
 
-   ![恢复版本 — 文件夹中所有页面的列表](/help/sites-authoring/assets/versions-restore-version-01.png)
+   ![恢复版本 - 文件夹中所有页面的列表](/help/sites-authoring/assets/versions-restore-version-01.png)
 
-1. 对于特定页面，使用&#x200B;**RESTORE TO VERSION**&#x200B;下的下拉选择器为该页面选择所需的版本。
+1. 对于特定页面，使用&#x200B;**恢复到版本**&#x200B;下的下拉选择器来选择该页面的所需版本。
 
-   ![还原版本 — 选择版本](/help/sites-authoring/assets/versions-restore-version-02.png)
+   ![恢复版本 - 选择版本](/help/sites-authoring/assets/versions-restore-version-02.png)
 
-1. 在主显示屏中，选择要还原的所需页面：
+1. 在主显示中，选择要恢复的页面：
 
-   ![恢复版本 — 选择页](/help/sites-authoring/assets/versions-restore-version-03.png)
+   ![恢复版本 - 选择页面](/help/sites-authoring/assets/versions-restore-version-03.png)
 
-1. 选择&#x200B;**恢复**，以恢复选定页面的选定版本，作为当前版本。
+1. 对于要恢复为当前版本的选定页面的所选版本，选择&#x200B;**恢复**。
 
 >[!NOTE]
 >
->您选择所需页面和相关版本的顺序可互换。
+>所需页面和相关版本的选择顺序可以互换。
 
 ### 恢复树 {#restore-tree}
 
-此方法可用于在指定的日期和时间还原树的版本；这可能包括之前已删除的页面：
+可使用此方法将树恢复到指定的日期和时间的版本；这可以包括之前已删除的页面：
 
-1. 导航到所需的文件夹，然后选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。[
+1. 导航到并[选择](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)所需文件夹。
 
-1. 从顶部的[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**Restore**，然后选择&#x200B;**Restore Tree**。 将显示树的最新版本：
+1. 选择&#x200B;**恢复**，然后从顶部[操作工具栏](/help/sites-authoring/basic-handling.md#actions-toolbar)中选择&#x200B;**恢复树**。将显示树的最新版本：
 
    ![恢复树](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
-1. 使用&#x200B;**Date**&#x200B;最新版本中的日期和时间选择器，选择树的其他版本 — 要恢复的版本。
+1. 使用&#x200B;**最新版本(日期)**&#x200B;上的日期和时间选择器来选择树的其他版本 - 要恢复的版本。
 
-1. 根据需要设置标记&#x200B;**保留的未版本化页面**:
+1. 根据需要设置标志&#x200B;**保留的非版本化页面**：
 
-   * 如果处于活动状态（已选中），则任何非版本化页面都将得到维护，且不会受到恢复的影响。
+   * 如果处于活动状态（选中），则任何非版本化页面都将得到维护并且不受恢复的影响。
 
-   * 如果不活动（未选中），则将删除任何未版本化的页面，因为这些页面在版本化树中不存在。
+   * 如果处于非活动状态（未选中），则将删除任何非版本化页面，因为它们在版本化树中不存在。
 
-1. 选择&#x200B;**恢复**，以恢复树的选定版本为&#x200B;*当前*&#x200B;版本。
+1. 对于要恢复为&#x200B;*当前*&#x200B;版本的树的所选版本，选择&#x200B;**恢复**。
 
 ## 预览版本 {#previewing-a-version}
 
@@ -170,7 +170,7 @@ ht-degree: 69%
 
 1. 导航以显示要进行比较的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
-1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。
+1. 打开&#x200B;**时间线**&#x200B;列，然后选择&#x200B;**显示全部**&#x200B;或&#x200B;**版本**。
 1. 将列出页面版本。选择要预览的版本：
 
    ![screenshot_2019-03-05at112505-1](assets/screen-shot_2019-03-05at112505-1.png)
@@ -181,7 +181,7 @@ ht-degree: 69%
    >
    >如果页面发生移动，将无法再对移动前制作的任何版本执行预览。
    >
-   >* 如果您遇到问题，请检查页面的[时间轴](/help/sites-authoring/basic-handling.md#timeline)以查看页面是否已被移动。
+   >* 如果您遇到问题，请检查页面的[时间线](/help/sites-authoring/basic-handling.md#timeline)以查看页面是否已被移动。
 
 
 ## 将页面的某个版本与当前版本进行比较 {#comparing-a-version-with-current-page}
@@ -190,7 +190,7 @@ ht-degree: 69%
 
 1. 导航以显示要进行比较的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
-1. 打开“ **时间轴** ”列，然后选择“ **显示全部** ”或“ **版本**”。
+1. 打开&#x200B;**时间线**&#x200B;列，然后选择&#x200B;**显示全部**&#x200B;或&#x200B;**版本**。
 1. 将列出页面版本。选择要进行比较的版本：
 
    ![screenshot_2019-03-05at112505-2](assets/screen-shot_2019-03-05at112505-2.png)
@@ -200,6 +200,10 @@ ht-degree: 69%
 ## 时间扭曲 {#timewarp}
 
 时间扭曲是一项功能，旨在模拟过去特定时间某个页面的&#x200B;*已发布*&#x200B;状态。
+
+>[!TIP]
+>
+>[时间扭曲还可以与启动项一起使用来预览未来](/help/sites-authoring/launches.md) 运行AEM 6.5.10.0或更高版本时。
 
 由于内容创建是一个持续的协作过程，因此时间扭曲旨在允许作者随时间跟踪已发布的网站，以了解内容的更改情况。此功能使用页面版本来确定发布环境的状态。
 
