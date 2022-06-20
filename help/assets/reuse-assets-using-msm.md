@@ -1,19 +1,25 @@
 ---
-title: 使用MSM重复使用资产
+title: 使用 MSM 重用资源
 description: 在从派生并链接到父资产的多个页面/文件夹中使用资产。 资产与主副本保持同步，单击几下即可从父资产接收更新。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
-source-wordcount: '3366'
-ht-degree: 9%
+source-wordcount: '3401'
+ht-degree: 10%
 
 ---
 
 # 使用MSM重复使用资产 [!DNL Assets] {#reuse-assets-using-msm-for-assets}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-64/assets/using/reuse-assets-using-msm.html?lang=en) |
 
 中的多站点管理器(MSM)功能 [!DNL Adobe Experience Manager] 允许用户重复使用一次创作的内容，并在多个Web位置重复使用。 与MSM相同，对于，数字资产也适用 [!DNL Assets] 功能。 将MSM用于 [!DNL Assets]，您可以：
 

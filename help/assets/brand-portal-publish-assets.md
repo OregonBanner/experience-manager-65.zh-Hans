@@ -1,8 +1,8 @@
 ---
 title: 将资产发布到 Brand Portal
-seo-title: 将资产发布到 Brand Portal
+seo-title: Publish assets to Brand Portal
 description: 了解如何将资产发布和取消发布到Brand Portal。
-seo-description: 了解如何将资产发布和取消发布到Brand Portal。
+seo-description: Learn how to publish and unpublish assets to Brand Portal.
 uuid: 350beb85-c0fb-4a1c-8597-c03592c02d3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -13,14 +13,20 @@ docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
-source-git-commit: 39a44c4b706f68d2f4f220811aa9bcc80aec55e4
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 43%
+source-wordcount: '390'
+ht-degree: 42%
 
 ---
 
 # 将资产发布到 Brand Portal {#publish-assets-to-brand-portal}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/publish-to-brand-portal.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-64/assets/brandportal/brand-portal-publish-assets.html?lang=en) |
 
 作为Adobe Experience Manager(AEM)Assets管理员，您可以将资产和文件夹发布到您组织的AEM Assets Brand Portal实例（或将发布工作流安排到稍后的日期/时间）。 但是，您必须首先使用 Brand Portal 配置 AEM Assets。有关详细信息，请参阅[使用 Brand Portal 配置 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
@@ -30,7 +36,7 @@ ht-degree: 43%
 >
 >Adobe 建议实施错峰发布，最好在非高峰时段发布，这样 AEM 作者就不会占用过多的资源。
 
-1. 从资产控制台中，选择要发布的资产/文件夹，然后单击工具栏中的&#x200B;**[!UICONTROL 快速发布]**&#x200B;选项。
+1. 从资产控制台中，选择要发布的资产/文件夹，然后单击 **[!UICONTROL 快速发布]** 选项。
 
    或者，选择要发布到Brand Portal的资产。
 
@@ -44,13 +50,13 @@ ht-degree: 43%
 
 要将选定资产发布到 Brand Portal，请执行以下任一操作：
 
-* 在工具栏中，选择&#x200B;**[!UICONTROL 快速发布]**。然后，从菜单中选择&#x200B;**[!UICONTROL 发布到Brand Portal]**。
+* 在工具栏中，选择&#x200B;**[!UICONTROL 快速发布]**。然后，从菜单中，选择 **[!UICONTROL 发布到Brand Portal]**.
 
 * 在工具栏中，选择&#x200B;**[!UICONTROL 管理发布]**。
 
-   1. 然后，从&#x200B;**[!UICONTROL Action]**&#x200B;中选择&#x200B;**[!UICONTROL Publish to Brand Portal]**，从&#x200B;**[!UICONTROL Scheduling]**&#x200B;中选择&#x200B;**[!UICONTROL Now]**。 单击&#x200B;**[!UICONTROL 下一步]**。
+   1. 然后，从 **[!UICONTROL 操作]** 选择 **[!UICONTROL 发布到Brand Portal]**，从 **[!UICONTROL 计划]** 选择 **[!UICONTROL 现在]**. 单击&#x200B;**[!UICONTROL 下一步]**。
 
-   2. 在&#x200B;**[!UICONTROL 范围]**&#x200B;中，确认您的选择，然后单击&#x200B;**[!UICONTROL 发布到Brand Portal]**。
+   2. 在 **[!UICONTROL 范围]**，确认您的选择，然后单击 **[!UICONTROL 发布到Brand Portal]**.
 
 此时将显示一条消息，表明资产已排队等候发布到 Brand Portal。登录到 Brand Portal 界面可查看已发布的资产。
 
@@ -58,9 +64,9 @@ ht-degree: 43%
 
 要计划在稍后的日期或时间将资产发布到 Brand Portal，请执行以下操作：
 
-1. 选择要发布的资产/文件夹后，从顶部工具栏中选择&#x200B;**[!UICONTROL 管理发布]** 。
+1. 选择要发布的资产/文件夹后，请选择 **[!UICONTROL 管理发布]** 工具栏。
 
-1. 在&#x200B;**[!UICONTROL 管理发布]**&#x200B;页面上，从&#x200B;**[!UICONTROL 操作]**&#x200B;中选择&#x200B;**[!UICONTROL 发布到Brand Portal]**，然后从&#x200B;**[!UICONTROL 计划]**&#x200B;中选择&#x200B;**[!UICONTROL 稍后]**。
+1. 开 **[!UICONTROL 管理发布]** 页面，选择 **[!UICONTROL 发布到Brand Portal]** 从 **[!UICONTROL 操作]** 选择 **[!UICONTROL 稍后]** 从 **[!UICONTROL 计划]**.
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 

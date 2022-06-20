@@ -1,18 +1,24 @@
 ---
-title: 下载资产
+title: 下载资源
 description: 了解如何从下载资产 [!DNL Adobe Experience Manager] 以及启用或禁用下载功能。
 contentOwner: AG
 role: User
 feature: Asset Management,Asset Distribution
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: f9d82edbb7469fab96629fc6cf4f138a082691fd
+source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 8%
+source-wordcount: '896'
+ht-degree: 9%
 
 ---
 
 # 从下载资产 [!DNL Adobe Experience Manager] {#download-assets-from-aem}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/download-assets-from-aem.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/download-assets-from-aem.html?lang=en) |
 
 您可以下载资产，包括静态和动态演绎版。 或者，您也可以直接从发送包含指向资产链接的电子邮件 [!DNL Adobe Experience Manager Assets]. 下载的资产会打包在 ZIP 文件中。对于导出作业，压缩的 ZIP 文件大小最大为 1 GB。每个导出作业最多允许资产总数为500个。
 
@@ -82,5 +88,5 @@ OLD content of the above NOTE, changed wrt CQDOC-18661.
 >* [使用Brand Portal下载资产](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [下载受DRM保护的资产](drm.md).
 >* [在Win或Mac桌面上使用Experience Manager桌面应用程序下载资产](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets).
->* [从支持的Adobe Creative Cloud应用程序中使用Adobe资产链接下载资产](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html).
+>* [从支持的Adobe Creative Cloud应用程序中使用Adobe资产链接下载资产](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html).
 

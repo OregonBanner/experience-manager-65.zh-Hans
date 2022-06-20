@@ -5,14 +5,20 @@ contentOwner: AG
 role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: fb9de8a0303edd7e54639f7bb9c8a4f8e9227fa8
+source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 7%
+source-wordcount: '1043'
+ht-degree: 8%
 
 ---
 
 # 将资产共享为链接 {#asset-link-sharing}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/link-sharing.html?lang=en) |
 
 [!DNL Adobe Experience Manager Assets] 允许您以URL形式与组织成员及外部实体（包括合作伙伴和供应商）共享资产、文件夹和收藏集。 通过链接共享资产是让外部各方无需首先登录即可获取资源的一种便捷方式 [!DNL Assets].
 
@@ -22,7 +28,7 @@ ht-degree: 7%
 >* 要向用户发送电子邮件，请在 [Day CQ Mail Service](#configmailservice).
 
 
-## 共享资产 {#share-assets}
+## 共享资源 {#share-assets}
 
 要为要与用户共享的资产生成URL，请使用 [!UICONTROL 链接共享] 对话框。
 
@@ -67,7 +73,7 @@ ht-degree: 7%
 
    ![用于下载共享资产的工具栏选项](assets/chlimage_1-547.png)
 
-1. 要查看您以链接形式共享的资产，请转到 [!DNL Assets] 用户界面，然后单击 [!DNL Experience Manager] 徽标。 选择 **[!UICONTROL 导航]**. 在导航窗格中，选择 **[!UICONTROL 共享链接]** 以显示共享资产列表。
+1. 要查看您作为链接共享的资产，请转到 [!DNL Assets] 用户界面，然后单击 [!DNL Experience Manager] 徽标。 选择 **[!UICONTROL 导航]**. 在导航窗格中，选择 **[!UICONTROL 共享链接]** 以显示共享资产列表。
 
 1. 要取消共享资产，请选择资产并单击 **[!UICONTROL 取消共享]** 中。 下面显示确认消息。 资产的条目将从列表中删除。
 

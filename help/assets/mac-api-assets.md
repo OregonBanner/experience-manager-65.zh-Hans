@@ -5,14 +5,20 @@ contentOwner: AG
 role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1758'
 ht-degree: 1%
 
 ---
 
 # [!DNL Assets] HTTP API {#assets-http-api}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html?lang=en) |
 
 ## 概述 {#overview}
 
@@ -64,7 +70,7 @@ A [内容片段](/help/assets/content-fragments/content-fragments.md) 是一种�
 * `parent`:链接到父文件夹。
 * `thumbnail`:（可选）链接到文件夹缩略图图像。
 
-### 资产 {#assets}
+### 资源 {#assets}
 
 在Experience Manager中，资产包含以下元素：
 

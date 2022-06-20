@@ -1,19 +1,24 @@
 ---
-title: 预览3D资产
+title: 预览 3D 资源
 description: 了解如何在Experience Manager中预览3D资产。
 contentOwner: Rick Brough
 docset: aem65
 feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
+source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 10%
+source-wordcount: '580'
+ht-degree: 12%
 
 ---
 
 # 在Adobe Experience Manager中预览3D资产 {#previewing-3d-assets-aem}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/previewing-3d-assets.html?lang=en) |
+| AEM 6.5 | 本文 |
 
 Experience Manager支持在创作过程中上传、交付和交互式预览3D资产。
 

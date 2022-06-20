@@ -5,14 +5,20 @@ contentOwner: AG
 feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
+source-git-commit: dd1e08bee03a6c7b07b32b0fb929d02dad467744
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 0%
+source-wordcount: '1579'
+ht-degree: 1%
 
 ---
 
 # 了解、应用和策划智能标记 {#enhanced-smart-tags}
+
+| 版本 | 文章链接 |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=en) |
+| AEM 6.5 | 本文 |
+| AEM 6.4 | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/enhanced-smart-tags.html?lang=en) |
 
 处理数字资产的组织越来越多地在资产元数据中使用分类控制的词汇。 基本上，它包括员工、合作伙伴和客户通常用来引用和搜索特定类别数字资产的关键词列表。 使用分类控制的词汇标记资产可确保轻松识别和检索资产。
 
@@ -26,7 +32,7 @@ ht-degree: 0%
 
 在后台，智能内容服务使用Adobe Sensei AI框架，根据您的标记结构和业务分类培训其图像识别算法。 然后，可使用此内容智能对不同的资产集应用相关标记。
 
-智能内容服务是在[!DNL Adobe Developer Console]上托管的云服务。 要在[!DNL Adobe Experience Manager]中使用它，系统管理员必须将您的[!DNL Experience Manager]部署与[!DNL Adobe Developer Console]集成。
+智能内容服务是托管在 [!DNL Adobe Developer Console]. 要在 [!DNL Adobe Experience Manager]，系统管理员必须将 [!DNL Experience Manager] 部署 [!DNL Adobe Developer Console].
 
 总之，以下是使用智能内容服务的主要步骤：
 
@@ -39,11 +45,11 @@ ht-degree: 0%
 
 ## 先决条件和支持的格式 {#prerequisites}
 
-在使用智能内容服务之前，请确保满足以下条件以在[!DNL Adobe Developer Console]上创建集成：
+在使用智能内容服务之前，请确保满足以下条件在 [!DNL Adobe Developer Console]:
 
 * 具有组织管理员权限的Adobe ID帐户。
 * 为贵组织启用智能内容服务。
-* 要将智能内容服务基础包添加到部署中，请授权[!DNL Adobe Experience Manager Sites]基础包和[!DNL Assets]附加组件。
+* 要将智能内容服务基础包添加到部署，请获取许可证 [!DNL Adobe Experience Manager Sites] 基本包和 [!DNL Assets] 附加组件。
 
 该服务将智能标记应用于以下MIME类型的资产：
 
@@ -74,44 +80,44 @@ ht-degree: 0%
 
 ## 入门 {#onboarding}
 
-智能内容服务可作为[!DNL Experience Manager]的附加组件进行购买。 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向[!DNL Adobe I/O]的链接。
+智能内容服务可作为的加载项进行购买 [!DNL Experience Manager]. 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向 [!DNL Adobe I/O].
 
-管理员可以按照链接将智能内容服务与[!DNL Experience Manager]集成。 要将服务与[!DNL Experience Manager Assets]集成，请参阅[配置智能标记](config-smart-tagging.md)。
+管理员可以按照链接将智能内容服务与 [!DNL Experience Manager]. 将服务与 [!DNL Experience Manager Assets]，请参阅 [配置智能标记](config-smart-tagging.md).
 
-管理员配置服务并在[!DNL Experience Manager]中添加用户时，载入过程即已完成。
+当管理员配置服务并将用户添加到 [!DNL Experience Manager].
 
 ## 审核资产和标记 {#reviewing-assets-and-tags}
 
 入门后，您首先想要做的就是确定一组标记，这些标记在您的业务环境中最好地描述这些图像。
 
-接下来，查看图像以识别最能代表您产品以满足特定业务需求的图像集。 确保策划集中的资产符合[智能内容服务培训准则](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
+接下来，查看图像以识别最能代表您产品以满足特定业务需求的图像集。 确保策划集中的资产符合 [智能内容服务培训指南](/help/assets/config-smart-tagging.md#training-the-smart-content-service).
 
 将资产添加到文件夹中，并从属性页面将标记应用于每个资产。 然后，在此文件夹上运行培训工作流。 经过策划的资产集使智能内容服务能够使用您的分类定义有效地培训更多资产。
 
 >[!NOTE]
 >
 >1. 培训是一个不可撤消的过程。 Adobe建议您在对标记培训智能内容服务之前，先查看策划资产集中的标记。
->1. 在培训标记之前，请参阅[智能内容服务培训准则](/help/assets/config-smart-tagging.md#training-the-smart-content-service)。
+>1. 在培训标记之前，请参阅 [智能内容服务培训指南](/help/assets/config-smart-tagging.md#training-the-smart-content-service).
 >1. 首次培训智能内容服务时，Adobe建议您至少在两个不同的标记上对其进行培训。
 
 
-## 了解带有智能标记的[!DNL Experience Manager]搜索结果 {#understandsearch}
+## 了解 [!DNL Experience Manager] 使用智能标记搜索结果 {#understandsearch}
 
-默认情况下，[!DNL Experience Manager]搜索将搜索词与`AND`子句组合在一起。 使用智能标记不会更改此默认行为。 使用智能标记会添加一个额外的`OR`子句，以查找与智能标记相关的任何搜索词。 例如，请考虑搜索`woman running`。 默认情况下，元数据中仅具有`woman`或仅具有`running`关键字的资产不会显示在搜索结果中。 但是，此类搜索查询中会显示使用智能标记标记为`woman`或`running`的资产。 所以搜索结果是，
+默认情况下， [!DNL Experience Manager] 搜索将搜索词与 `AND` 子句。 使用智能标记不会更改此默认行为。 使用智能标记会添加 `OR` 子句来查找与智能标记相关的任何搜索词。 例如，请考虑搜索 `woman running`. 仅包含 `woman` 或 `running` 默认情况下，元数据中的关键字不会显示在搜索结果中。 但是，标有以下任一项的资产 `woman` 或 `running` 在此类搜索查询中会显示使用智能标记。 所以搜索结果是，
 
-* 元数据中具有`woman`和`running`关键字的资产。
+* 资产 `woman` 和 `running` 元数据中的关键词。
 
 * 使用任一关键字标记的资产智能。
 
 首先显示与元数据字段中的所有搜索词匹配的搜索结果，然后显示与智能标记中的任意搜索词匹配的搜索结果。 在上例中，搜索结果的显示大致顺序为：
 
-1. 各种元数据字段中`woman running`的匹配项。
-1. 智能标记中`woman running`的匹配项。
-1. 智能标记中`woman`或`running`的匹配项。
+1. 匹配 `woman running` 在各种元数据字段中。
+1. 匹配 `woman running` 在智能标记中。
+1. 匹配 `woman` 或 `running` 在智能标记中。
 
 >[!CAUTION]
 >
->如果在[!DNL Adobe Experience Manager]之外完成了Lucene索引，则基于智能标记的搜索将无法按预期工作。
+>如果Lucene索引在 [!DNL Adobe Experience Manager]，则基于智能标记的搜索将无法按预期工作。
 
 ## 自动标记资产 {#tagging-assets-automatically}
 
@@ -125,7 +131,7 @@ ht-degree: 0%
 
 ### 定期标记 {#periodic-tagging}
 
-您可以启用智能内容服务来定期标记文件夹中的资产。 打开资产文件夹的属性页面，在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡下选择&#x200B;**[!UICONTROL 启用智能标记]**，然后保存更改。
+您可以启用智能内容服务来定期标记文件夹中的资产。 打开资产文件夹的属性页面，选择 **[!UICONTROL 启用智能标记]** 下 **[!UICONTROL 详细信息]** ，然后保存更改。
 
 为文件夹选择此选项后，智能内容服务会自动为文件夹中的资产添加标记。 默认情况下，标记工作流每天中午12:00运行。
 
@@ -139,13 +145,13 @@ ht-degree: 0%
 
 #### 从工作流控制台中标记资产 {#tagging-assets-from-the-workflow-console}
 
-1. 在[!DNL Experience Manager]界面中，转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**。
-1. 从&#x200B;**[!UICONTROL 工作流模型]**&#x200B;页面中，选择&#x200B;**[!UICONTROL DAM智能标记资产]**&#x200B;工作流，然后单击工具栏中的&#x200B;**[!UICONTROL 启动工作流]**。
+1. 在 [!DNL Experience Manager] 界面，转到 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
+1. 从 **[!UICONTROL 工作流模型]** 页面，选择 **[!UICONTROL DAM智能标记资产]** 工作流，然后单击 **[!UICONTROL 启动工作流]** 中。
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
-1. 在&#x200B;**[!UICONTROL 运行工作流]**&#x200B;对话框中，浏览到包含要自动应用标记的资产的有效负荷文件夹。
-1. 指定工作流的标题和可选注释。 单击&#x200B;**[!UICONTROL 运行]**。
+1. 在 **[!UICONTROL 运行工作流]** 对话框中，浏览到包含要自动应用标记的资产的有效负荷文件夹。
+1. 指定工作流的标题和可选注释。 单击 **[!UICONTROL 运行]**.
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
@@ -153,14 +159,14 @@ ht-degree: 0%
 
 #### 从时间轴标记资产 {#tagging-assets-from-the-timeline}
 
-1. 从[!DNL Assets]用户界面中，选择包含要应用智能标记的资产或特定资产的文件夹。
-1. 从左上角打开&#x200B;**[!UICONTROL 时间轴]**。
-1. 从左侧边栏底部打开操作，然后单击&#x200B;**[!UICONTROL 启动工作流]**。
+1. 从 [!DNL Assets] 用户界面中，选择包含要应用智能标记的资产或特定资产的文件夹。
+1. 从左上角，打开 **[!UICONTROL 时间轴]**.
+1. 从左侧边栏的底部打开操作，然后单击 **[!UICONTROL 启动工作流]**.
 
    ![start_workflow](assets/start_workflow.png)
 
-1. 选择&#x200B;**[!UICONTROL DAM智能标记资产]**&#x200B;工作流，并指定工作流的标题。
-1. 单击&#x200B;**[!UICONTROL 开始]**。 工作流会对资产应用标记。 要验证智能内容服务是否正确标记了您的资产，请导航到资产文件夹并查看标记。
+1. 选择 **[!UICONTROL DAM智能标记资产]** 工作流，并为工作流指定标题。
+1. 单击 **[!UICONTROL 开始]**. 工作流会对资产应用标记。 要验证智能内容服务是否正确标记了您的资产，请导航到资产文件夹并查看标记。
 
 >[!NOTE]
 >
@@ -176,11 +182,11 @@ ht-degree: 0%
 
 1. 在搜索框中，使用标记作为关键字来搜索资产。
 1. 要识别您找不到与搜索相关的图像，请查看搜索结果。
-1. 选择图像，然后单击工具栏中的&#x200B;**[!UICONTROL 管理标记]**。
-1. 从&#x200B;**[!UICONTROL 管理标记]**&#x200B;页面中，查看标记。 如果您不希望根据特定标记搜索图像，请选择该标记，然后单击工具栏中的&#x200B;**[!UICONTROL 删除]**。 或者，单击标记旁边显示的`x`符号。
-1. （可选）要为标记分配更高的排名，请选择该标记，然后单击工具栏中的&#x200B;**[!UICONTROL Promote]**。 您促销的标记将移至&#x200B;**[!UICONTROL Tags]**&#x200B;部分。
-1. 单击&#x200B;**[!UICONTROL Save]**，然后单击&#x200B;**[!UICONTROL OK]**
-1. 导航到图像的&#x200B;**[!UICONTROL 属性]**&#x200B;页面。 请注意，您促销的标记被分配得更相关，并显示在搜索结果的前面。
+1. 选择图像，然后单击 **[!UICONTROL 管理标记]** 中。
+1. 从 **[!UICONTROL 管理标记]** 页面，查看标记。 如果您不希望根据特定标记搜索图像，请选择该标记，然后单击 **[!UICONTROL 删除]** 中。 或者，单击 `x` 标记旁边显示的符号。
+1. （可选）要为标记分配更高的排名，请选择标记并单击 **[!UICONTROL 提升]** 中。 您提升的标记将移至 **[!UICONTROL 标记]** 中。
+1. 单击 **[!UICONTROL 保存]** 然后单击 **[!UICONTROL 确定]**
+1. 导航到 **[!UICONTROL 属性]** 页面。 请注意，您促销的标记被分配得更相关，并显示在搜索结果的前面。
 
 ## 提示和限制 {#tips-best-practices-limitations}
 
