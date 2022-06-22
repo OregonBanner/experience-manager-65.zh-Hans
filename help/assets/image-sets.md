@@ -11,10 +11,10 @@ docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 7b29fc96768dc2238ebf9596b136ec10fa71aca9
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '2080'
-ht-degree: 28%
+source-wordcount: '2194'
+ht-degree: 27%
 
 ---
 
@@ -35,6 +35,15 @@ ht-degree: 28%
 >[!NOTE]
 >
 >有关Assets用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md).
+
+在创建图像集时，Adobe会推荐以下最佳实践，并实施以下限制：
+
+| 资产 — 限制类型 | 最佳实践 | 已实施的限制 | 对2022年12月31日上限的更改 |
+| --- | --- | --- | --- |
+| **图像集**  — 每个集的重复资产数 | 无重复项 | 100 | 20 |
+| **图像集**  — 每组图像的最大数量 | 每组5-10张图像 | 1000 |
+
+另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
 ## 快速入门：图像集 {#quick-start-image-sets}
 
@@ -130,6 +139,15 @@ ht-degree: 28%
 >[!NOTE]
 >
 >文件名中具有“，”（逗号）的资产不支持图像集。
+
+在创建图像集时，Adobe会推荐以下最佳实践，并实施以下限制：
+
+| 资产 — 限制类型 | 最佳实践 | 已实施的限制 | 对2022年12月31日上限的更改 |
+| --- | --- | --- | --- |
+| **图像集**  — 每个集的重复资产数 | 无重复项 | 100 | 20 |
+| **图像集**  — 每组图像的最大数量 | 每组5-10张图像 | 1000 |
+
+另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
 **要创建图像集，请执行以下操作：**
 

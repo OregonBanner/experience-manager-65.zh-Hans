@@ -11,10 +11,10 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 7b29fc96768dc2238ebf9596b136ec10fa71aca9
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '1866'
-ht-degree: 26%
+source-wordcount: '1946'
+ht-degree: 25%
 
 ---
 
@@ -31,6 +31,14 @@ ht-degree: 26%
 >[!NOTE]
 >
 >有关Assets用户界面的信息，请参阅 [管理资产](/help/assets/manage-assets.md).
+
+在创建旋转集时，Adobe建议遵循以下最佳实践，并强制实施以下限制：
+
+| 限制类型 | 最佳实践 | 已实施的限制 |
+| --- | --- | --- |
+| 每个2D集的最大行/列数 | 每套12-18页图片 | 1000 |
+
+另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
 ## 快速入门：旋转集 {#quick-start-spin-sets}
 
@@ -113,6 +121,14 @@ ht-degree: 26%
 >[!NOTE]
 >
 >旋转集中的图像显示顺序很重要。请务必对其进行排序，以便旋转是一个平滑的360°视图。
+
+在创建旋转集时，Adobe建议遵循以下最佳实践，并强制实施以下限制：
+
+| 限制类型 | 最佳实践 | 已实施的限制 |
+| --- | --- | --- |
+| 每个2D集的最大行/列数 | 每套12-18页图片 | 1000 |
+
+另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
 **要创建旋转集，请执行以下操作：**
 
