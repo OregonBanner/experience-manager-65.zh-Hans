@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '2825'
+source-wordcount: '2831'
 ht-degree: 17%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 17%
 
 在图像上实施智能裁剪时，Adobe建议采用以下最佳实践并强制实施以下限制：
 
-| 限制类型 | 最佳实践 | 已实施的限制 |
-| --- | --- | --- |
-| 每个图像的智能作物数量 | 5 | 100 |
+| 限制类型 | 最佳实践 | 规定的限制 | 2022年12月31日的上限变更 |
+| --- | --- | --- | --- |
+| 每个图像的智能作物数量 | 5 | 100 | 20 |
 
 另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
