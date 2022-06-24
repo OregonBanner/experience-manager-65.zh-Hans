@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 80298613370c7187288b33e5a665a074ccb5cd3e
+source-git-commit: 3643534fa0f24a1c2ea00c35853a2671b156bf9a
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3329'
 ht-degree: 1%
 
 ---
@@ -207,7 +207,9 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 支持在云计算环境(如Microsoft Azure和Amazon Web Services(AWS))的虚拟机中运行Adobe Experience Manager，以符合本页中列出的技术要求，并且符合Adobe的标准支持条款。
 
-Adobe建议使用Adobe Managed Services在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅 [关于Adobe Managed Services的其他文档](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
+对于云原生环境，请从AEM产品线查看最新的产品：Adobe Experience Manager as a Cloud Service。 请参阅 [Adobe Experience Manager as a Cloud Service文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=en) 以了解详细信息。
+
+Adobe还提供Adobe Managed Services以在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅 [关于Adobe Managed Services的其他文档](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
 
 在Azure或AWS或任何其他云计算环境上部署AEM的所有其他情况下，将根据本页中列出的技术规范，将从Adobe支持包含在虚拟计算环境中。 与在任何这些云环境中运行的AEM相关的任何报告问题都必须能够独立于特定于云计算环境的任何云服务进行重现，除非云服务是本页中列出的技术要求(例如Azure Blob Storage或AWS S3)的一部分而专门受支持。
 
