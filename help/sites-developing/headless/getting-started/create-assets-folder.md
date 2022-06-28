@@ -1,57 +1,57 @@
 ---
 title: 创建Assets文件夹无标题快速入门指南
-description: 使用AEM内容片段模型来定义内容片段的结构，这是您无头内容的基础。
+description: 使用 AEM 内容片段模型定义内容片段的结构，也就是 Headless 内容的基础。
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
-source-git-commit: a5cb385aa369a5e59889e77597119358b77b55be
+source-git-commit: 40922b222e15aa3ef12b54d65addff32b679d36e
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 1%
+ht-degree: 86%
 
 ---
 
 # 创建Assets文件夹无标题快速入门指南 {#creating-an-assets-folder}
 
-使用AEM内容片段模型来定义内容片段的结构，这是您无头内容的基础。 然后，内容片段将存储在资产文件夹中。
+使用 AEM 内容片段模型定义内容片段的结构，也就是 Headless 内容的基础。然后，将内容片段存储在资源文件夹中。
 
-##  什么是资产文件夹？ {#what-is-an-assets-folder}
+## 什么是资产文件夹？ {#what-is-an-assets-folder}
 
-[现在，您已创建内容片段模型](create-content-model.md) 定义了希望用于将来内容片段的结构，您可能很兴奋地创建一些片段。
+[现在您已创建了内容片段模型](create-content-model.md)，这些模型定义了希望用于未来内容片段的结构，也许您会希望创建一些片段。
 
-但是，您首先需要创建一个资产文件夹，以便将其存储在该文件夹中。
+但是，您首先需要创建用于存储这些内容的资源文件夹。
 
-资产文件夹用于 [组织传统内容资产](/help/assets/manage-assets.md) ，例如图像和视频以及内容片段。
+资源文件夹用于[组织传统内容资源](/help/assets/manage-assets.md)，例如图像和视频以及内容片段。
 
-## 如何创建资产文件夹 {#how-to-create-an-assets-folder}
+## 如何创建资源文件夹 {#how-to-create-an-assets-folder}
 
-管理员在创建内容时，只需偶尔创建文件夹即可组织内容。 出于本快速入门指南的目的，我们只需创建一个文件夹。
+管理员只需要偶尔创建文件夹，在创建内容时用于组织内容。对于本指南快速入门，我们只需要创建一个文件夹。
 
 1. 登录AEM，然后从主菜单中选择 **导航 — >资产 — >文件**.
-1. 点按或单击 **创建 — >文件夹**.
-1. 提供 **标题** 和 **名称** 文件夹的URL。
-   * 的 **标题** 应具有描述性。
-   * 的 **名称** 将成为存储库中的节点名称。
-      * 将根据标题自动生成并根据 [AEM命名约定。](/help/sites-developing/naming-conventions.md)
-      * 如有必要，可进行调整。
+1. 点击或单击&#x200B;**创建 -> 文件夹**。
+1. 提供文件夹的&#x200B;**标题**&#x200B;和&#x200B;**名称**。
+   * **标题**&#x200B;应为描述性的。
+   * **名称**&#x200B;将成为存储库中的节点名称。
+      * 它会根据标题自动生成，并根据 [AEM 命名约定](/help/sites-developing/naming-conventions.md)进行调整。
+      * 如有必要可以调整。
 
    ![创建文件夹](../assets/assets-folder-create.png)
 1. 选择之前创建的文件夹，然后选择 **属性** (或使用 `p` [键盘快捷键。](/help/sites-authoring/keyboard-shortcuts.md))
-1. 在 **属性** 窗口，选择 **Cloud Services** 选项卡。
-1. 对于 **云配置** 选择 [配置。](create-configuration.md)
+1. 在&#x200B;**属性**&#x200B;窗口中，选择 **Cloud Services** 选项卡。
+1. 对于&#x200B;**云配置**，选择[您之前创建的配置。](create-configuration.md)
 
-   ![配置资产文件夹](../assets/assets-folder-configure.png)
-1. 点按或单击 **保存并关闭**.
-1. 点按或单击 **确定** 在确认窗口中。
+   ![配置资源文件夹](../assets/assets-folder-configure.png)
+1. 点击或单击&#x200B;**保存并关闭**。
+1. 在确认窗口中，点击或单击&#x200B;**确定**。
 
    ![确认窗口](../assets/assets-folder-confirmation.png)
 
-您可以在刚刚创建的文件夹中创建其他子文件夹。 子文件夹将继承 **云配置** 的子目录访问Advertising Cloud帮助。 但是，如果您希望使用其他配置中的模型，则可以覆盖此值。
+您可以在刚刚创建的文件夹中创建额外的子文件夹。子文件夹将继承父文件夹的&#x200B;**云配置**。但是，如果您希望使用来自其他配置的模型，则可以覆盖此项。
 
-如果您使用的是本地化的站点结构，则可以 [创建语言根](/help/assets/multilingual-assets.md) 下。
+如果您使用本地化的网站结构，则可以在新文件夹下[创建语言根](/help/assets/multilingual-assets.md)。
 
 ## 后续步骤 {#next-steps}
 
-现在，您已为内容片段创建文件夹，接下来可以转到入门指南的第四部分和 [创建内容片段。](create-content-fragment.md)
+现在您已经为内容片段创建了文件夹，接下来可以转到快速入门指南的第四部分并[创建内容片段](create-content-fragment.md)。
 
 >[!TIP]
 >
->有关管理内容片段的完整详细信息，请参阅 [内容片段文档](/help/assets/content-fragments/content-fragments.md)
+>有关管理内容片段的完整详细信息，请参阅[内容片段文档](/help/assets/content-fragments/content-fragments.md)
