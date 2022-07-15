@@ -265,5 +265,5 @@ ht-degree: 37%
    + [移动 Web](mobile-web.md)
    + [创建设备组过滤器](groupfilters.md)
    + [网页响应式设计](responsive.md)
-   + [为Mobile设备创建站点](mobile.md)
+   + [为移动设备创建站点](mobile.md)
    + [模拟器](emulators.md)

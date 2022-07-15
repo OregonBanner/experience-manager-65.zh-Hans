@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
 source-wordcount: '632'
-ht-degree: 28%
+ht-degree: 34%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 28%
 + 站点功能 {#introduction}
    + [网站管理](msm-and-translation.md)
    + [异步作业](asynchronous-jobs.md)
-   + [重用内容：多站点管理器和Live Copy](msm.md)
+   + [重用内容：多站点管理器和 Live Copy](msm.md)
    + [Live Copy 概述控制台](msm-livecopy-overview.md)
    + [配置 Live Copy 同步](msm-sync.md)
    + [创建并同步 Live Copy](msm-livecopy.md)
-   + [MSM转出冲突](msm-rollout-conflicts.md)
-   + [MSM问题故障诊断和常见问题解答](troubleshoot-msm.md)
+   + [MSM 转出冲突](msm-rollout-conflicts.md)
+   + [解决 MSM 问题和常见问题](troubleshoot-msm.md)
    + [MSM 最佳实践](msm-best-practices.md)
    + [翻译多语言站点的内容](translation.md)
    + [管理翻译项目](tc-manage.md)
@@ -115,9 +115,9 @@ ht-degree: 28%
    + [与 Adobe Target 集成](target.md)
    + [与 Adobe Analytics 集成](adobeanalytics.md)
    + [连接到Adobe Analytics和创建框架](adobeanalytics-connect.md)
-   + [为Adobe Analytics配置链接跟踪](adobeanalytics-link.md)
-   + [使用Adobe Analytics属性映射组件数据](adobeanalytics-mapping.md)
-   + [为Adobe Analytics配置视频跟踪](adobeanalytics-video.md)
+   + [为 Adobe Analytics 配置链接跟踪](adobeanalytics-link.md)
+   + [建立组件数据与 Adobe Analytics 属性的映射](adobeanalytics-mapping.md)
+   + [为 Adobe Analytics 配置视频跟踪](adobeanalytics-video.md)
    + [使用IMS与Adobe Analytics集成](integration-analytics-ims.md)
    + [HTTP2 内容交付常见问题解答](scene7-http2faq.md)
    + [Adobe Campaign集成故障诊断](troubleshooting-campaignintegration.md)
@@ -145,7 +145,7 @@ ht-degree: 28%
    + [手动配置与Adobe Target的集成](target-configuring.md)
    + [与Adobe Target集成的先决条件](target-requirements.md)
    + [使用IMS与Adobe Target集成](integration-target-ims.md)
-   + [Adobe分类](adobeanalytics-classifications.md)
+   + [Adobe 分类](adobeanalytics-classifications.md)
    + [与AdobeSearch&amp;Promote集成](search-and-promote.md)
    + [解决方案集成](integration.md)
    + [将体验片段导出到 Adobe Target](experience-fragments-target.md)

@@ -5,11 +5,11 @@ audience: end-user
 user-guide-title: AEM 6.5 Communities 用户指南
 breadcrumb-title: Communities 指南
 user-guide-description: 创建在线体验，如论坛、用户组、学习资源和其他社交功能。
-feature: 社区
+feature: Communities
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '501'
 ht-degree: 12%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 12%
 # Adobe Experience Manager 6.5 Communities指南 {#communities}
 
 + [Communities 指南](home.md)
-+ AEM Communities简介{#introduction}
++ AEM Communities简介 {#introduction}
    + [社区站点](administer-landing.md)
    + [AEM Communities概述](overview.md)
    + [AEM Communities 发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
@@ -32,7 +32,7 @@ ht-degree: 12%
    + [创作新的社区网站以启用](enablement-create-site.md)
    + [创建和分配启用资源](resource.md)
    + [体验已发布的启用网站](enablement-published-site.md)
-+ 部署{#deploy}
++ 部署 {#deploy}
    + [部署社区](deploy-communities.md)
    + [升级到 AEM 6.5 Communities](upgrade.md)
    + [推荐的社区拓扑](topologies.md)
@@ -100,7 +100,7 @@ ht-degree: 12%
    + [目录要点](catalog-developer-essentials.md)
    + [适用于社区组件的Clientlibs](clientlibs.md)
    + [评论要点](essentials-comments.md)
-   + [社区组件的OSGi事件](events.md)
+   + [适用于社区组件的OSGi事件](events.md)
    + [特色内容要点](essentials-featured.md)
    + [文件库要点](essentials-file-library.md)
    + [论坛要点](essentials-forum.md)

@@ -44,7 +44,7 @@ ht-degree: 70%
    + [2021年](cif/release-notes/release-notes-2021.md)
    + [2020年](cif/release-notes/release-notes-2020.md)
    + [2019年](cif/release-notes/release-notes-2019.md)
-+ [常见问题解答](cif/faq.md)
++ [常见问题](cif/faq.md)
 + AEM CIF Classic {#classic}
    + [概述](/help/commerce/cif-classic/home.md)
    + 部署 {#deploying}

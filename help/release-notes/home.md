@@ -5,7 +5,7 @@ exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 source-git-commit: a2b3cb81fb15a1f03004e42cafbf92c84c9d7b89
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 41%
+ht-degree: 43%
 
 ---
 
@@ -35,7 +35,7 @@ AEM 发行说明涵盖有关最新版 AEM 的重要信息，包括新增功能�
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
-| [Commerce用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
+| [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
 
