@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
+source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3778'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 + [AEM 6.5 Forms指南](home.md)
 + 发行说明 {#release-notes-new-features}
-   + [发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans)
+   + [发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
    + [新增功能摘要](using/whats-new.md)
    + [已弃用功能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
 + 快速入门 {#getting-started}
@@ -35,7 +35,6 @@ ht-degree: 4%
       + [教程：将规则应用于自适应表单字段l](using/apply-rules-to-adaptive-form-fields.md)
       + [教程：设置自适应表单的样式](using/style-your-adaptive-form.md)
       + [教程：发布自适应表单](/help/forms/using/publish-your-adaptive-form.md)
-      + [教程：测试自适应表单](/help/forms/using/testing-your-adaptive-form.md)
    + 教程：创建您的首次交互式通信 {#create-first-interactive-communication}
       + [教程：创建您的第一个交互式通信](using/create-your-first-interactive-communication.md)
       + [教程：规划交互式通信](using/planning-interactive-communications.md)
@@ -175,7 +174,6 @@ ht-degree: 4%
    + [基于XDP的自适应表单中的XFA支持](using/xfa-api-supported-in-adaptive-form.md)
    + [向选定的用户组授予对规则编辑器的访问权限](using/rule-editor-access-user-groups.md)
    + [使用AEM翻译工作流将自适应表单和记录文档本地化](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
-   + [自动测试自适应表单](using/calvin.md)
    + [自适应表单的样式构建](using/styling-constructs-adaptive-forms.md)
    + [将自适应Forms与XFA表单模板同步](using/synchronizing-adaptive-forms-xfa.md)
    + [将Adobe Sign与AEM Forms集成](using/adobe-sign-integration-adaptive-forms.md)

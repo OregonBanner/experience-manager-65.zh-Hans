@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 64ba9b1082e39552cd27e5616de2a35f7870270b
+source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4322'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) 用于创建
    * 此外，您还可以使用以下字段属性：
 
       * `field.value` 更改字段的值。
-      * f `ield.enabled` 启用/禁用字段。
+      * `field.enabled` 启用/禁用字段。
       * `field.visible` 更改字段的可见性。
 
 * 自适应表单作者可能需要编写JavaScript代码以在表单中构建业务逻辑。 尽管JavaScript功能强大且有效，但它可能会损害安全预期。 因此，您必须确保表单作者是可信任的人物，并且在表单投入生产之前，需要先审核和批准JavaScript代码的流程。 管理员可以根据用户组的角色或功能限制对规则编辑器访问权限。 请参阅 [为选定用户组授予规则编辑器访问权限](/help/forms/using/rule-editor-access-user-groups.md).
@@ -228,17 +228,6 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) 用于创建
 * 探索和了解guideBridge API
 
 有关更多信息，请参阅 [AEM Chrome插件 — 自适应表单](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).
-
-Calvin SDK是一个实用程序API，供自适应Forms开发人员测试自适应Forms。 Calvin SDK是在 [Hobbes.js测试框架](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html). 您可以使用框架来测试以下内容：
-
-* 自适应表单的演绎版体验
-* 自适应表单的预填体验
-* 提交自适应表单的体验
-* 表达式规则
-* 验证
-* 延迟加载
-
-有关更多信息，请参阅 [自动测试自适应表单](/help/forms/using/calvin.md).
 
 ### 在AEM服务器上验证自适应表单 {#validating-adaptive-forms-on-aem-server}
 
