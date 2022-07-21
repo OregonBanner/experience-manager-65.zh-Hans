@@ -8,10 +8,10 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: 7a800199b0d3a9dce0a8a31d14f07326b56050ba
+source-git-commit: d4eae7774cb657713a06261deeef0fd2ad542836
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 6%
+source-wordcount: '254'
+ht-degree: 4%
 
 ---
 
@@ -21,11 +21,10 @@ ht-degree: 6%
 
 本主题包括以下部分：
 
-* Dynamic Media对资产类型的最佳实践和强制限制
+* [Dynamic Media对资产类型的最佳实践和强制限制](#best-practice-enforced-limits)
+* [Dynamic Media查看器不支持的Web浏览器和操作系统组合](#unsupported-browser-os)
 
-<!-- * Unsupported web browser and operating system combinations for Dynamic Media Viewers -->
-
-## Dynamic Media对资产类型的最佳实践和强制限制
+## Dynamic Media对资产类型的最佳实践和强制限制 {#best-practice-enforced-limits}
 
 在您创建旋转集或图像集，或上传PDF以进行页面提取时，Adobe会推荐以下最佳实践并强制实施以下限制：
 
@@ -39,16 +38,16 @@ ht-degree: 6%
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
-<!-- ## Unsupported web browser and operating system combinations for Dynamic Media Viewers
+## Dynamic Media查看器不支持的Web浏览器和操作系统组合 {#unsupported-browser-os}
 
-Dynamic Media Viewers do not support following combinations of web browser and operating system.
+Dynamic Media查看器不支持以下Web浏览器和操作系统组合。
 
 * Internet Explorer 11 + Windows 7
 * Internet Explorer 11 + Windows 8.1
 * Internet Explorer 11 + Windows Phone 8.1
-* Internet Explorer 11 + Windows Phone 8.1 Update
+* Internet Explorer 11 + Windows Phone 8.1更新
 * Safari 6 + iOS 6.0.1
 * Safari 7 + iOS 7.1
-* Safari 7 + macOS X 10.9 Mavericks
+* Safari 7 + OS X 10.9小牛队
 * Safari 8 + iOS 8.4
-* Safari 8 + macOS X 10.10 Yosemite -->
+* Safari 8 + OS X 10.10 Yosemite
