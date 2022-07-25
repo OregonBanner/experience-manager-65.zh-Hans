@@ -2,9 +2,9 @@
 title: AEM Content and Commerce 2022发行说明
 description: AEM Content and Commerce 2022发行说明
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
+source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '663'
 ht-degree: 34%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 34%
 
 ### 新增功能 {#what-is-new-june}
 
-* 创作产品目录模板时，模板名称现在显示为站点编辑器
+* 产品目录扩充现在支持AEM页面。 这样，作者就可以管理页面 — 产品关联。
 
 * 各种CIF核心组件改进
 
