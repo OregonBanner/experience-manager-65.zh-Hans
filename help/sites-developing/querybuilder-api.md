@@ -12,9 +12,9 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: bfb02e79d6895be498e6e40888c6d8d4e3a8fcd4
+source-git-commit: 49a74d8c14c79e72f9df1e2ec41652ebc6fe76b6
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2312'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ REST API通过HTTP提供对完全相同功能的访问，响应以JSON格式发�
 
 ## Gem会议 {#gem-session}
 
-[AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html) 是Adobe专家对Adobe Experience Manager进行的一系列深入技术探讨。 此专门用于查询生成器的会话对于工具的概述和使用非常有用。
+[AEM Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) 是Adobe专家对Adobe Experience Manager进行的一系列深入技术探讨。 此专门用于查询生成器的会话对于工具的概述和使用非常有用。
 
 >[!NOTE]
 >
