@@ -1,19 +1,19 @@
 ---
 title: 翻译增强功能
-seo-title: 翻译增强功能
+seo-title: Translation Enhancements
 description: AEM中的翻译增强功能。
-seo-description: AEM中的翻译增强功能。
+seo-description: Translation enhancements in AEM.
 uuid: 0563603f-327b-48f1-ac14-6777c06734b9
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
-feature: 语言复制
+feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3de9f3c97b99644297a2f07344f6aebae1c5ae83
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 0%
+source-wordcount: '609'
+ht-degree: 10%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 0%
 
 本页介绍对AEM翻译管理功能的增量增强和改进。
 
-## 翻译项目自动化{#translation-project-automation}
+## 翻译项目自动化 {#translation-project-automation}
 
 添加了用于提高翻译项目工作效率的选项，例如自动提升和删除翻译启动项，以及计划翻译项目的定期执行。
 
-1. 在您的翻译项目中，单击或点按&#x200B;**翻译摘要**&#x200B;拼贴底部的省略号。
+1. 在您的翻译项目中，单击或点按 **翻译摘要** 拼贴。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. 切换到&#x200B;**Advanced**&#x200B;选项卡。 在底部，您可以选择&#x200B;**自动提升翻译启动项**。
+1. 切换到 **高级** 选项卡。 在底部，您可以选择 **自动提升翻译启动项**.
 
    ![screen_shot_2018-04-19at223430](assets/screen_shot_2018-04-19at223430.jpg)
 
@@ -37,23 +37,23 @@ ht-degree: 0%
 
    ![screen_shot_2018-04-19at224033](assets/screen_shot_2018-04-19at224033.jpg)
 
-1. 要选择翻译项目的定期执行，请在&#x200B;**Repeat Translation**&#x200B;下方选择带有下拉菜单的频率。 定期项目执行将在指定的时间间隔内自动创建和执行翻译作业。
+1. 要选择翻译项目的定期执行，请在下方选择带下拉菜单的频率 **重复翻译**. 定期项目执行将在指定的时间间隔内自动创建和执行翻译作业。
 
    ![screen_shot_2018-04-19at223820](assets/screen_shot_2018-04-19at223820.jpg)
 
-## 多语言翻译项目{#multilingual-translation-projects}
+## 多语言翻译项目 {#multilingual-translation-projects}
 
 可以在翻译项目中配置多种目标语言，以减少创建的翻译项目总数。
 
-1. 在翻译项目中，单击或点按&#x200B;**翻译摘要**&#x200B;拼贴底部的圆点。
+1. 在翻译项目中，单击或点按 **翻译摘要** 拼贴。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. 切换到&#x200B;**Advanced**&#x200B;选项卡。 您可以在&#x200B;**Target语言**&#x200B;下添加多种语言。
+1. 切换到 **高级** 选项卡。 您可以在 **目标语言**.
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
-1. 或者，如果您通过站点中的引用边栏启动翻译，请添加语言，然后选择&#x200B;**创建多语言翻译项目**。
+1. 或者，如果您通过站点中的引用边栏启动翻译，请添加语言并选择 **创建多语言翻译项目**.
 
    ![screen_shot_2018-04-22at212941](assets/screen_shot_2018-04-22at212941.jpg)
 
@@ -61,23 +61,26 @@ ht-degree: 0%
 
    ![screen_shot_2018-04-22at213854](assets/screen_shot_2018-04-22at213854.jpg)
 
-## 翻译内存更新{#translation-memory-updates}
+## 翻译内存更新 {#translation-memory-updates}
 
-翻译内容的手动编辑可以同步回翻译管理系统(TMS)以培训其翻译记忆库。
+已翻译内容的手动编辑可以同步回翻译管理系统 (TMS) 以训练其翻译记忆库。
 
-1. 在站点控制台中，在更新翻译页面中的文本内容后，选择&#x200B;**更新翻译内存**。
+1. 在站点控制台中，更新翻译页面中的文本内容后，选择 **更新翻译内存**.
 
    ![screen_shot_2018-04-22at234430](assets/screen_shot_2018-04-22at234430.jpg)
 
-1. 列表视图可并排显示编辑的每个文本组件的源和翻译比较。 选择应同步到翻译记忆库的翻译更新，然后选择&#x200B;**更新记忆库**。
+1. 列表视图显示每个已编辑的文本组件的源和翻译的并排比较。选择应同步到翻译记忆库的翻译更新，然后选择 **更新内存**.
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-   >[!NOTE]
-   >
-   >AEM会将选定的字符串发送回翻译管理系统。
+AEM 会将选定的字符串发送回翻译管理系统。
 
-## 多级{#language-copies-on-multiple-levels}上的语言副本
+* 该操作可更新已配置翻译管理系统(TMS)的翻译内存中现有字符串的翻译。
+* 它不会创建新的翻译作业。
+* 它会通过AEM转换API将字符串的值对及其转换发送回TMS。
+* 此功能要求翻译管理系统配置为与AEM一起使用。
+
+## 多个级别的语言副本 {#language-copies-on-multiple-levels}
 
 语言根现在可以分组到节点下，例如按区域，同时仍被识别为语言副本的根。
 
@@ -85,35 +88,33 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->只允许一个级别。 例如，以下内容将不允许“es”页面解析为语言副本：
+>仅允许一个级别。例如，以下内容将不允许“es”页面解析为语言副本：
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
-
 >
->
-此`es`语言副本将不被检测到，因为它离`en`节点只有2个级别（美洲/中美洲）。
+>此 `es` 将不会检测到语言副本，因为它是2个级别（美洲/中美洲），而不是 `en` 节点。
 
 >[!NOTE]
 >
 >语言根可以具有任何页面名称，而不只是语言的ISO代码。 AEM将始终先检查路径和名称，但如果页面名称无法识别语言，则AEM将检查页面的cq:language属性以获取语言标识。
 
-## 翻译状态报告{#translation-status-reporting}
+## 翻译状态报表 {#translation-status-reporting}
 
 现在，可以在站点列表视图中选择一个属性，以显示页面是否已翻译、正在翻译或尚未翻译。 要显示它，请执行以下操作：
 
-1. 在站点中，切换到&#x200B;**列表视图。**
+1. 在站点中，切换到 **列表视图。**
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. 单击或点按&#x200B;**查看设置**。
+1. 单击或点按 **查看设置**.
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. 选中&#x200B;**Translation**&#x200B;下的&#x200B;**复选框，然后点按/单击** Update **。**
+1. 检查 **已翻译** 复选框下方 **翻译** 然后点按/单击 **更新**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 
-现在，您可以看到一个&#x200B;**Translated**&#x200B;列，该列显示页面的翻译状态。
+您现在可以看到 **已翻译** 列，显示页面的翻译状态。
 
 ![screen_shot_2018-04-23at133821](assets/screen_shot_2018-04-23at133821.jpg)
