@@ -5,9 +5,9 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 2c2277f43fe12c4d4fa655c0666519e3608ba3f9
+source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '475'
 ht-degree: 29%
 
 ---
@@ -52,17 +52,12 @@ AEM 6.5 Forms JEE修补程序安装程序包含AEM 6.5 Forms JEE的所有组件�
 1. 阅读“Pre-Installation Summary”信息，然后单击 **[!UICONTROL Install]**。
 1. 安装完成后，单击 **[!UICONTROL Next]** 以将快速修补程序更新应用到已安装的文件。
 
-1. 在单击“完成”之前，请取消选择“开始配置管理器”选项。 在使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 *&lt;aemforms_install_dir>\configurationManager\bin* 目录和更新 `ConfigurationManager.lax` 和 `ConfigurationManager_IPv6.lax` 具有以下重命名操作的文件：
+1. **[仅限Windows]** 执行以下步骤：
 
-   * `axis.jar` 到 `axis-1.4.1.1.jar`
-   * `serializer-2.7.1.jar` 到 `serializer-2.7.2.jar`
-   * `xalan-2.7.1.jar` 到 `xalan-2.7.2.jar`
-   * `xercesImpl-2.9.1.jar` 到 `xercesImpl-2.12.0.jar`
-   * `xml-apis-2.7.1.jar` 到 `xml-apis-2.7.2.jar`
-
+   取消选择 **启动配置管理器** 选项，在单击 **[!UICONTROL 完成]**. 在使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 `<AEMForms_Install_Dir>\configurationManager\bin` 目录和替换 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 文件。
 1. 默认情况下，“开始配置管理器”(Start Configuration Manager)复选框处于选中状态。 单击 **[!UICONTROL Done]** 以运行配置管理器。
 
-1. 要稍后运行配置管理器，请先取消选择 Start Configuration Manager 选项，然后再单击 Done。您稍后可以使用 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
+1. 要稍后运行配置管理器，请先取消选择 Start Configuration Manager 选项，然后再单击 **[!UICONTROL Done]**。您稍后可以使用 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
 
 1. 根据您的应用程序服务器，选择以下文档之一，然后按照 *配置和部署AEM表单* 中。
 
@@ -70,9 +65,6 @@ AEM 6.5 Forms JEE修补程序安装程序包含AEM 6.5 Forms JEE的所有组件�
    * [安装和部署AEM for WebSphere表单](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_cn)
 
 1. （仅限JBoss）安装修补程序并配置服务器后，删除JBoss应用程序服务器的tmp和工作目录。
-
->[!NOTE]
->启动之前 **配置管理器**、下载和替换 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 文件。
 
 ## 部署后配置 {#post-deployment-configurations}
 
