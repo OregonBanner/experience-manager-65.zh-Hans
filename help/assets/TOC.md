@@ -8,8 +8,8 @@ breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
 source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 50%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
