@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
+source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
 workflow-type: tm+mt
-source-wordcount: '4322'
+source-wordcount: '4529'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,19 @@ Adobe Experience Manager(AEM)表单可帮助您将复杂的事务转换为简单
    * 通过创建自定义小组件或外观来引入自定义交互活动。 不建议修改默认组件。 有关更多信息，请参阅 [外观框架](/help/forms/using/introduction-widgets.md).
 
 * 请参阅 [处理个人身份信息](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p) 以了解有关处理PII数据的建议。
+
+### 创建表单模板
+
+您可以使用 **配置浏览器**. 要启用表单模板，请参阅 [创建自适应表单模板](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
+
+也可以从在其他创作计算机上创建的自适应表单包中上传表单模板。 通过安装，可使用表单模板 [aemforms-references-*包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). 推荐的一些最佳实践是：
+* 的 **nosamplecontent** 仅建议作者使用运行模式，而不建议发布节点使用。
+* 资产（如自适应表单、主题、模板或云配置）的创作操作只能通过创作节点执行，而创作节点可以在配置的发布节点中发布。
+有关更多信息，请参阅 [发布和取消发布表单和文档](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
+* 创作和发布都需要Forms addon包，才能支持文档服务操作；因此，它可以被视为依赖项。
+如果您只想要与Forms相关的示例模板、主题和DOR包，则可以从 [aemforms-references-*包](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
+
+有关更多信息，请参阅 [创作自适应表单简介](/help/forms/using/introduction-forms-authoring.md).
 
 ## 创作自适应表单 {#author-adaptive-forms}
 
@@ -309,3 +322,5 @@ AEM提供了翻译工作流，您可以使用这些工作流将自适应表单�
 
 * 使用安全的外部存储（如数据库）来存储草稿和提交的表单中的数据。 请参阅 [为草稿和提交的表单数据配置外部存储](/help/forms/using/adaptive-forms-best-practices.md#external-storage).
 * 使用“条款和条件”表单组件，在启用自动保存之前获得用户的明确同意。 在这种情况下，仅当用户同意“条款”和“条件”组件中的条件时，才启用自动保存。
+
+
