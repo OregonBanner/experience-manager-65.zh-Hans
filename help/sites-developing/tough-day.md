@@ -4,7 +4,7 @@ description: Tough Day测试在最坏情况下模拟大约1000位作者的每日
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
+source-git-commit: 1b92b973209fdbd2509b1c644c1064a1e9224a9e
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## 艰难的第2天 {#what-is-tough-day}
 
-“Tough Day 2”是一个应用程序，它允许您压力测试AEM实例的限制。 它可以随默认测试包一起开箱即用，也可以根据您的测试需求对其进行配置。 您可以观看 [这个录音](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html) 以呈现应用程序。
+“Tough Day 2”是一个应用程序，它允许您压力测试AEM实例的限制。 它可以随默认测试包一起开箱即用，也可以根据您的测试需求对其进行配置。 您可以观看 [这个录音](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) 以呈现应用程序。
 
 >[!CAUTION]
 >
