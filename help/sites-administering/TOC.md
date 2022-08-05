@@ -8,10 +8,10 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 feature: Administering
 role: Admin
-source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
+source-git-commit: 9a164f92b6d5a927d1cb4ead2f119cc094180713
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '637'
+ht-degree: 34%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 0%
    + [安全检查列表](security-checklist.md)
    + [OWASP前10](owasp-top10.md)
    + [在生产就绪模式下运行AEM](production-ready.md)
-   + [身份管理](identity-management.md)
+   + [Identity Management](identity-management.md)
    + [对AEM Managed Services的Adobe IMS身份验证和Admin Console支持](ims-config-and-admin-console.md)
    + [创建封闭用户组](cug.md)
    + [在AEM中缓解序列化问题](mitigating-serialization-issues.md)
@@ -113,6 +113,7 @@ ht-degree: 0%
    + [与第三方服务集成](third-party-services.md)
    + [与 Salesforce 集成](salesforce.md)
    + [与 Adobe Target 集成](target.md)
+   + [与Adobe学习管理器集成](adobe-learningmanager.md)
    + [与 Adobe Analytics 集成](adobeanalytics.md)
    + [连接到Adobe Analytics和创建框架](adobeanalytics-connect.md)
    + [为 Adobe Analytics 配置链接跟踪](adobeanalytics-link.md)
