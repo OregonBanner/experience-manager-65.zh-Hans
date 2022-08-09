@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
+source-git-commit: e51cf7a5b7d14bc4aed053496c7fe6685dd2b0b8
 workflow-type: tm+mt
-source-wordcount: '3742'
+source-wordcount: '3653'
 ht-degree: 7%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 中引入的主要功能和增强功能 [!DNL Adobe Experience Manager] 6.5.13.0是：
 
-* 在自适应表单中使用不可见的CAPTCHA:现在，您只能在可疑活动时使用隐形验证码来显示验证码挑战。 如果未发现可疑活动，则不会显示验证码质询。 它有助于评估人工表单的完成情况，而无需使用复选框要求，减少自定义工作，并改善最终用户体验。 (NPR-38500)
+* 在自适应表单中使用不可见的CAPTCHA:现在，您只能在可疑活动时使用隐形验证码来显示验证码挑战。 如果未发现可疑活动，则不会显示验证码质询。 它有助于评估人工表单的完成情况，而无需使用复选框要求，减少自定义工作，并改善最终用户体验。(NPR-38500)
 
 * 添加了对REST端点的表单数据模型后处理器中获取响应标头的支持。 (NPR-38275)
 
@@ -39,7 +39,12 @@ ht-degree: 7%
 
    * 增加了对屏幕阅读器的支持，以识别表的标题和正文作为继续和连接的实体。 它有助于屏幕阅读器正确导航表。 (NPR-37139)
    * 为屏幕阅读器添加了支持，可在对话框打开之前停止导航HTML工作区。 (NPR-37134)
-   * 添加了在Forms Designer中为超链接指定屏幕Reader文本的功能。(NPR-36221)
+
+   <!-- 
+
+    * Added ability to specify Screen Reader Text for Hyperlinks in Forms Designer.(NPR-36221)
+  
+  -->
 
 中引入了以下错误修复、主要功能和增强功能 [!DNL Experience Manager] 6.5.13.0:
 
@@ -123,11 +128,19 @@ ht-degree: 7%
 * 当用户在执行工作流时向注释部分添加HTML标记时，将呈现HTML标记。 (NPR-37591)
 * 导入和发布包含新XDP文件的信件时，无法在Publish实例上预览这些信件。 但是，如果使用同一CMP文件第二次导入和发布信件，则信件会成功预览。 (CQ-4343599)
 * 具有准备数据处理属性集的表单无法在HTML工作区中呈现。 (CQ-4343294)
-* 对于使用Forms 6.5 Designer创建的静态PDF forms,PDF辅助功能失败，并出现错误 `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
+<!--
+For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility fails with error `Tab order entry in page with annotations not set to "S"`. (CQ-4343117) 
+ -->
 * 应用AEMForms-6.5.0-0038(log4jv2.16)修补程序后，无法使用OCR的PDFG服务将图像转换为PDF。 (CQ-4342450)
-* 条形码SSCC-18显示错误值。 Forms服务器会忽略条形码右侧的值。 (CQ-4342400)
+
+<!-- 
+* Incorrect value is displayed for barcode SSCC-18. Forms servers omit the value on the right part of the barcode. (CQ-4342400)
+-->
 * 无法将Microsoft® Word文件导入Forms Designer。 用户遇到错误 `Word (version XP or onwards) could not be found on the machine`. (CQ-4342146)
-* 在Forms 6.5 Designer中，当您打开使用Forms 6.1 Designer创建的表单并编辑文本框时，段落间距会超出指定的间距。 删除了之前对空格的所有设置，并且需要手动重新设置文本框的格式。 (CQ-4341899)
+
+<!-- 
+* In Forms 6.5 Designer, when you open a form created with Forms 6.1 Designer and edit a textbox, paragraph spacing exceeds the specified space. All previous settings to the space are removed and manual reformatting of the text box is required. (CQ-4341899) 
+-->
 * 用户无法在作业清除计划程序中设置自定义时间。 (CQ-4339192)
 * 用户无法更新端点管理UI下的任何配置，并遇到错误 ` Uncaught ReferenceError: updateEndpoint_required is not defined`. (CQ-4331523)
 * 对于无效标记，错误消息的正常处理无法按预期工作。 (NPR-38106和CQ-4337173)
