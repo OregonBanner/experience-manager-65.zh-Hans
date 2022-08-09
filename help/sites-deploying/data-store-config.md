@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 6257b56c61ae14889d9ecefed5030e123a415fd7
+source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
 workflow-type: tm+mt
-source-wordcount: '3455'
+source-wordcount: '3447'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 您可以使用以下选项来使用配置文件：
 
 * accessKey:AWS访问密钥。
-* secretKey:AWS密钥访问密钥。 **注意：** 或者， [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 可用于身份验证。 如果您使用IAM角色，则不再需要指定 `accessKey` 和 `secretKey`.
-
+* secretKey:AWS密钥访问密钥。 **注意：** 当 `accessKey` 或 `secretKey` 未指定，则 [IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) 用于身份验证。
 * s3存储段：存储段名称。
 * s3地区：桶区域。
 * 路径：数据存储的路径。 默认值为 **&lt;aem install=&quot;&quot; folder=&quot;&quot;>/repository/datastore**
