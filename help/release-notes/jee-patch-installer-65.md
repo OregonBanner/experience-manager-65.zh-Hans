@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
+source-git-commit: 6c6ddaba0e42df4b4701670e8abfdabe5205879c
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 29%
+source-wordcount: '525'
+ht-degree: 22%
 
 ---
 
@@ -47,17 +47,23 @@ AEM 6.5 Forms JEE修补程序安装程序包含AEM 6.5 Forms JEE的所有组件�
    这会启动安装向导，引导您完成安装。
 
 1. 在“Introduction”面板上，单击 **[!UICONTROL Next]**。
-1. 在“Choose Install Folder（选择安装文件夹）”屏幕上，验证显示的默认位置对于您的现有安装是否正确，或单击 **[!UICONTROL 浏览]** 要选择安装AEM表单的替代文件夹，请单击 **[!UICONTROL 下一个]**.
+1. 在 **选择安装文件夹** 屏幕，验证显示的默认位置对于您的现有安装是否正确，或单击 **[!UICONTROL 浏览]** 要选择安装AEM表单的替代文件夹，请单击 **[!UICONTROL 下一个]**.
 1. 阅读“Quick Fix Patch Summary”信息，然后单击 **[!UICONTROL Next]**。
 1. 阅读“Pre-Installation Summary”信息，然后单击 **[!UICONTROL Install]**。
 1. 安装完成后，单击 **[!UICONTROL Next]** 以将快速修补程序更新应用到已安装的文件。
 
-1. **[仅限Windows]** 执行以下步骤：
+1. **[仅适用于Windows]:** 执行以下步骤之一：
+   * 取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 运行 **配置管理器** 使用 **ConfigurationManager.bat** 位于 `[aem-forms root]\configurationManager\bin`.
 
-   取消选择 **启动配置管理器** 选项，在单击 **[!UICONTROL 完成]**. 在使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 `<AEMForms_Install_Dir>\configurationManager\bin` 目录和替换 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 文件。
-1. 默认情况下，“开始配置管理器”(Start Configuration Manager)复选框处于选中状态。 单击 **[!UICONTROL Done]** 以运行配置管理器。
+   * 取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 运行前 **配置管理器** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目录和替换 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 文件。
+   >[!NOTE]
+   >使用 **ConfigurationManager.bat** 文件可帮助您避免手动更新.lax文件的名称。
 
-1. 要稍后运行配置管理器，请先取消选择 Start Configuration Manager 选项，然后再单击 **[!UICONTROL Done]**。您稍后可以使用 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
+1. **[仅适用于基于Unix的]:** 执行以下步骤之一：
+
+   * 的 **启动配置管理器** 复选框。 单击 **[!UICONTROL 完成]** 以便立即运行配置管理器。
+
+   * 运行 **配置管理器** 稍后，取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 您可以开始 **配置管理器** 稍后在 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
 
 1. 根据您的应用程序服务器，选择以下文档之一，然后按照 *配置和部署AEM表单* 中。
 
