@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: a1e620103290f8c704f2b8782be495ab7aec5fe2
+source-git-commit: 9faad7562a85f368ae47bb0c3a381bebe4c8c612
 workflow-type: tm+mt
-source-wordcount: '3329'
+source-wordcount: '3434'
 ht-degree: 1%
 
 ---
@@ -422,6 +422,8 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 
 ### AEM FormsPDF生成器的要求 {#requirements-for-aem-forms-pdf-generator}
 
+### 对PDF生成器的软件支持 {#software-support-for-pdf-generator}
+
 <table>
  <tbody>
   <tr>
@@ -429,51 +431,74 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
    <th><p><strong>支持的转换为PDF格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017款经典曲目</a> 最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020经典曲目</a> 最新版本</td>
    <td>XPS，图像格式(BMP，GIF,JPEG,JPG, TIF，TIFF, PNG， JPF， JPX， JP2, J2K， J2C， JPC),HTML, HTM， DWG， DXF和DWF</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017款经典曲目</a> 最新版本（已弃用）</td>
+   <td>XPS，图像格式(BMP，GIF,JPEG,JPG, TIF，TIFF, PNG， JPF， JPX， JP2, J2K， J2C， JPC),HTML, HTM， DWG， DXF和DWF</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
-   <td>WordPerfect X7</td>
+   <td>Microsoft® Office 2016（已弃用）</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+  </tr>
+  <tr>
+   <td>WordPerfect 2020<br /> </td>
    <td>WP、WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016<br /> </td>
+   <td>Microsoft® Office Visio 2019<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
   <tr>
-   <td>Microsoft® Publisher 2016<br /> </td>
+   <td>Microsoft® Office Visio 2016（已弃用）<br /> </td>
+   <td>VSD、VSDX</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Publisher 2019<br /> </td>
    <td>PUB</td>
   </tr>
   <tr>
-   <td>Microsoft® 2016工程<br /> </td>
+   <td>Microsoft® Publisher 2016（已弃用）<br /> </td>
+   <td>PUB</td>
+  </tr>
+  <tr>
+   <td>Microsoft® 2019工程<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
-   <td>OpenOffice 4.1.2</td>
+   <td>Microsoft® Project 2016（已弃用）<br /> </td>
+   <td>MPP</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.10</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JP2、J2K、J2C、JPC、JPC、HTML、HTM和RT</td>
   </tr>
+  <tr>
+   <td>OpenOffice 4.1.2（已弃用）</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLS、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JP2、J2K、J2C、JPC、JPC、HTML、HTM和RT</td>
+  </tr>  
  </tbody>
 </table>
 
 >[!NOTE]
 >
->PDF生成器仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
+> PDF生成器仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
 >
->此外：
+> 此外：
 >
->* PDF生成器需要32位版本的 [Acrobat 2017 Classic跟踪版本17.011.30078或更高版本](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 执行转换。
->* PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
->* PDF生成器不支持Microsoft Office 365。
->* PDF生成器转换仅在Windows和Linux上受支持。
->* OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
->* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+> * PDF生成器需要32位版本的 [Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017版本17.011.30078来执行转换。
+> * PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
+> * PDF生成器不支持Microsoft Office 365。
+> * PDF生成器转换仅在Windows和Linux上受支持。
+> * OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
+> * Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >
->* PDF生成器服务不支持Microsoft Windows 10。
->
+> * PDF生成器服务不支持Microsoft Windows 10。
 
 
 ### AEM Forms Designer的要求 {#requirements-for-aem-forms-designer}
