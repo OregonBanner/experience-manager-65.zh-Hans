@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2022发行说明
 description: AEM Content and Commerce 2022发行说明
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
+source-git-commit: 6c5c37c1c365e1f03ea9b5c935adf63a33faba5d
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 34%
+source-wordcount: '715'
+ht-degree: 45%
 
 ---
 
@@ -21,11 +21,22 @@ ht-degree: 34%
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 发行日期：2022年7月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2022.08.02.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
+
+### 新增功能 {#what-is-new-july}
+
+* 通过AEM页面属性以及产品驾驶舱中的概述将AEM页面与产品和类别关联
+   ![产品驾驶舱页面关联](/help/assets/CIF/product_cockpit_page_association.png)
+
 ## 发行日期：2022年6月
 
 | 组件 | 版本 | 详细信息 |
 |:-------|:-----:|---------------------:|
-| CIF附加组件 | 2022.06.xx.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF附加组件 | 2022.07.05.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
 | CIF核心组件 | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
 | CIF Venia参考网站 | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
 
@@ -51,17 +62,17 @@ ht-degree: 34%
 
 ### 新增功能 {#what-is-new-may}
 
-* 新产品驾驶舱属性页面，以获得更好和简化的概述
+* 新产品驾驶舱属性页面，提供更好、更简化的概述
 
 ![产品驾驶舱属性概述](/help/assets/CIF/product_cockpit_properties_overview.png)
 
-* 改进了I/O运行时第三方连接器的兼容性和稳健性
+* 改进了 I/O 运行时第三方连接器的兼容性和稳健性
 
 * 改进对GQL客户端配置覆盖的支持（例如，设置自定义缓存行为）
 
 ### 错误修复 {#bug-fixes-may}
 
-* 多值产品选取器字段将第2个和其他产品显示为无效
+* 多值产品选取器字段将第 2 个和其他产品显示为无效
 
 * 有时，产品选取器会隐藏在组件后面
 
@@ -79,7 +90,7 @@ ht-degree: 34%
 
    ![启用愿望清单](/help/assets/CIF/enable-wishlist.png)
 
-* 支持其他营销商务组件：组件可配置为显示加货车和加货车清单行动动员
+* 支持其他营销商务组件：组件可以配置为显示添加到购物车和添加到愿望清单的号召性用语
 
    ![站点编辑器到产品驾驶舱的快捷键](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
