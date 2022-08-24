@@ -7,10 +7,10 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3802'
-ht-degree: 76%
+ht-degree: 96%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 76%
 
 在 AEM 项目中评估 URL 时，请问自己以下问题：
 
-“如果用户要查看此 URL 而页面上没有内容，他们会怎样描述此页面？”
+“如果用户要查看此URL而页面上没有内容，他们能否描述此页面是什么？”
 
 如果答案是“是”，则很可能此 URL 非常适用于搜索引擎。
 
@@ -51,7 +51,8 @@ ht-degree: 76%
    * 在页面上使用选择器时，首选提供语义值的选择器。
    * 如果人们无法读取您的 URL，则搜索引擎也无法读取。
    * 例如：
-      `mybrand.com/products/product-detail.product-category.product-name.html` 比  更可取 
+      `mybrand.com/products/product-detail.product-category.product-name.html`
+优先 
 `mybrand.com/products/product-detail.1234.html`
 
 * 尽量避免使用子域，因为搜索引擎会将子域视为不同的实体，进而分割站点的 SEO 价值。
@@ -112,7 +113,7 @@ ht-degree: 76%
 * 允许您在调度程序上缓存页面，这通常会提高安全性。
 * 允许您直接寻址内容，而不是让通用的 Servlet 来检索内容。这可让您体验到应用于存储库的 ACL 以及应用于调度程序的过滤器带来的好处。
 
-#### 使用 Servlet 选择器 {#using-selectors-for-servlets}
+#### 为 Servlet 使用选择器 {#using-selectors-for-servlets}
 
 在编写 Servlet 时，AEM 提供两个选项：
 
@@ -155,7 +156,7 @@ String myParam = req.getParameter("myParam");
 此类 Servlet 的 SCR 注释如下所示：
 
 ```
-@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
+@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json", methods="GET")
 ```
 
 在这种情况下，URL 寻址的资源（`myPageType` 资源的一个实例）可在 Servlet 中自动访问。要访问该资源，请使用以下调用：
@@ -319,12 +320,12 @@ Resource myPage = req.getResource();
 二者均会将以下标记应用于页面的标题：
 
 ```xml
-<link rel=”canonical” href=”my-brand/my-page.html”/>
+<link rel="canonical" href="my-brand/my-page.html"/>
 ```
 
 `href` 可以是相对位置或绝对位置。该代码应包含在页面标记中，以确定页面的规范 URL 并输出此标记。
 
-### 将调度程序配置为不区分大小写 {#configuring-the-dispatcher-for-case-insensitivity}
+### 将 Dispatcher 配置为不区分大小写 {#configuring-the-dispatcher-for-case-insensitivity}
 
 最佳实践是使用小写字母来提供所有页面。但是，您不希望当用户在 URL 中使用大写字母访问您的网站时得到 404 错误。因此，Adobe 建议您在 Apache HTTP Server 配置中添加重写规则，以将所有传入的 URL 映射为小写。此外，必须为内容作者提供使用小写字母创建页面的培训。
 
@@ -357,11 +358,11 @@ Disallow: /
 
 将 `robots.txt` 文件放在站点根目录时应当注意，调度程序刷新请求可能会清除此文件，同时 URL 映射可能会将该站点根目录放置在与 Apache HTTP Server 配置中定义的 `DOCROOT` 不同的位置。因此，通常将该文件放在站点根目录下的作者实例上，并将其复制到发布实例。
 
-### 在 AEM 上构建 XML 站点地图 {#building-an-xml-sitemap-on-aem}
+### 在 AEM 上构建 XML Sitemap {#building-an-xml-sitemap-on-aem}
 
 爬取程序使用 XML 站点地图来更好地理解网站的结构。虽然提供站点地图无法保证会提高 SEO 排名，但这是公认的最佳实践。您可以在 Web 服务器上手动维护要用作站点地图的 XML 文件，但我们建议以编程方式生成站点地图，这种方法可确保当作者创建新内容时，站点地图会自动反映内容更改。
 
-AEM使用 [Apache Sling Sitemap模块](https://github.com/apache/sling-org-apache-sling-sitemap) 用于生成XML站点地图，它为开发人员和编辑人员提供了多种选项来使站点XML站点地图保持最新。
+AEM 使用 [Apache Sling Sitemap 模块](https://github.com/apache/sling-org-apache-sling-sitemap)生成 XML Sitemap，这将为开发人员和编辑人员提供一系列广泛的选项，以使站点 XML Sitemap 保持最新。
 
 >[!NOTE]
 >
@@ -369,9 +370,9 @@ AEM使用 [Apache Sling Sitemap模块](https://github.com/apache/sling-org-apach
 > 
 > 对于旧版本，您可以自行注册一个Sling Servlet，以侦听 `sitemap.xml` 调用并使用通过servlet API提供的资源来查找当前页面及其子体，以输出sitemap.xml文件。
 
-Apache Sling站点地图模块区分顶级站点地图和嵌套站点地图，这两者都是为具有 `sling:sitemapRoot` 属性设置为 `true`. 通常，站点地图使用树顶级站点地图路径（即没有其他站点地图根父级的资源）中的选择器来呈现。 此顶级站点地图根目录还会公开站点地图索引，该索引通常是站点所有者在搜索引擎的配置门户中配置或添加到站点的索引 `robots.txt`.
+对于由 `sling:sitemapRoot` 属性设置为 `true` 的任何资源生成的顶级 Sitemap 和嵌套 Sitemap，Apache Sling Sitemap 模块会予以区分。通常，使用树的顶级 Sitemap 路径上的选择器来呈现 Sitemap，而顶级 Sitemap 是没有其他 Sitemap 根祖先的资源。此顶级 Sitemap 根还公开 Sitemap 索引，该索引通常是站点所有者将在搜索引擎的配置门户中配置或添加到站点的 `robots.txt` 的内容。
 
-例如，假定某个站点在 `my-page` 和位于 `my-page/news`，以便为新闻子树中的页面生成专用站点地图。 由此产生的相关URL将是
+例如，考虑一个在 `my-page` 定义顶级 Sitemap 根并在 `my-page/news` 定义嵌套 Sitemap 根的站点，以便为新闻子树中的页面生成专用 Sitemap。生成的相关 URL 将为
 
 * https://www.mydomain.com/my-brand/my-page.sitemap-index.xml
 * https://www.mydomain.com/my-brand/my-page.sitemap.xml
@@ -379,26 +380,26 @@ Apache Sling站点地图模块区分顶级站点地图和嵌套站点地图，�
 
 >[!NOTE]
 >
-> 选择器 `sitemap` 和 `sitemap-index` 可能会干扰自定义实施。 如果您不想使用产品功能，请配置您自己的Servlet，以通过 `service.ranking` 大于0。
+> 选择器 `sitemap` 和 `sitemap-index` 可能会干扰自定义实现。如果您不想使用产品功能，请使用高于 0 的 `service.ranking` 来配置用于这些选择器的自己的 servlet。
 
-在默认配置中，“页面属性”对话框提供了一个选项，用于将页面标记为站点地图根，因此，如上所述，可生成其自身及其子体的站点地图。 此行为由的实施实施 `SitemapGenerator` 界面和，可通过添加其他实施来扩展。 但是，由于重新生成XML站点地图的频率高度取决于内容创作工作流程和工作负载，因此产品不会发送任何 `SitemapScheduler` 配置。 这可以有效地使该功能选择加入。
+在默认配置中，“页面属性”对话框提供了一个选项，用于将页面标记为 Sitemap 根（如上所述）并生成 Sitemap 本身及其后代。此行为通过实施 `SitemapGenerator` 接口来实现，并且可以通过添加替代实施进行扩展。但是，由于重新生成 XML Sitemap 的频率在很大程度上取决于内容创作工作流和工作负载，因此，该产品不提供任何 `SitemapScheduler` 配置。这使得该功能可以有效地选择启用。
 
-为了启用生成XML站点地图的后台作业， `SitemapScheduler` 必须进行配置。 为此，请为PID创建OSGI配置 `org.apache.sling.sitemap.impl.SitemapScheduler`. 调度程序表达式 `0 0 0 * * ?` 可用作在午夜每天重新生成一次所有XML站点地图的起点。
+要启用生成 XML Sitemap 的后台作业，必须配置 `SitemapScheduler`。为此，可为 PID `org.apache.sling.sitemap.impl.SitemapScheduler` 创建 OSGI 配置。调度程序表达式 `0 0 0 * * ?` 可用作起点，以在每天的午夜重新生成所有 XML Sitemap 一次。
 
-![Apache Sling站点地图 — 调度程序](assets/sling-sitemap-scheduler.png)
+![Apache Sling Sitemap - 调度程序](assets/sling-sitemap-scheduler.png)
 
-站点地图生成作业可以在创作层和发布层实例上运行。 在大多数情况下，建议在发布层实例上运行生成，因为只能在此生成正确的规范URL（因为Sling资源映射规则通常仅存在于发布层实例上）。 但是，可以通过实施 [SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html) 界面。 如果自定义实施能够在创作层实例上生成站点地图的规范URL，则 `SitemapScheduler` 可以为创作运行模式配置，并且XML站点地图生成工作量可以分布在创作服务群集的实例中。 在此方案中，在处理尚未发布、已修改或仅对受限用户组可见的内容时必须特别谨慎。
+Sitemap 生成作业可以在创作和发布层实例上运行。在大多数情况下，建议在发布层实例上运行生成，因为只能在此生成正确的规范 URL（这是因为 Sling 资源映射规则通常仅存在于发布层实例上）。不过，可以通过实施 [SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html) 接口，插入用于生成规范 URL 的外部化机制的自定义实施。如果自定义实施能够在创作层实例上生成 Sitemap 的规范 URL，则可以为创作运行模式配置 `SitemapScheduler`，并且可以跨创作服务集群的实例分布 XML Sitemap 生成工作负载。在此情况下，必须特别小心地处理尚未发布、已修改或仅对受限用户组可见的内容。
 
-AEM Sites包含 `SitemapGenerator` 遍历页面树以生成站点地图的路径。 它已预配置为仅输出网站的规范URL和任何语言替代语言（如果可用）。 此外，还可以根据需要将其配置为包含页面的上次修改日期。 为此，请启用 _添加上次修改时间_ 的 _AdobeAEM SEO — 页面树站点地图生成器_ 配置并选择 _上次修改的源_. 在发布层上生成站点地图时，建议使用 `cq:lastModified` 日期。
+AEM Sites 包含 `SitemapGenerator` 的默认实施，它将遍历页面树以生成 Sitemap。它预先配置为仅输出站点的规范 URL 和任何语言替代项（如果可用）。如果需要，它还可以配置为包含页面的上次修改日期。为此，启用“Adobe AEM SEO - 页面树 Sitemap 生成器”__&#x200B;配置的“添加上次修改日期”__&#x200B;选项，并选择“上次修改源”__。在发布层上生成 Sitemap 时，建议使用 `cq:lastModified` 日期。
 
-![AdobeAEM SEO — 页面树站点地图生成器配置](assets/sling-sitemap-pagetreegenerator.png)
+![Adobe AEM SEO - 页面树 Sitemap 生成器配置](assets/sling-sitemap-pagetreegenerator.png)
 
-要限制站点地图的内容，可以根据需要实施以下服务界面：
+要限制 Sitemap 的内容，可以在需要时实施以下服务接口：
 
-* the [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) 可以实施来隐藏由AEM Sites特定站点地图生成器生成的XML站点地图中的页面
-* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) 或 [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) 可以实施以从由XML站点地图生成的产品或类别中过滤掉 [商务集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html) 特定站点地图生成器
+* 可以实施 [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html)，以在由 AEM Sites 特定的 Sitemap 生成器生成的 XML Sitemap 中隐藏页面
+* 可以实施 [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) 或 [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html)，以从由 [Commerce 集成框架](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)特定的 Sitemap 生成器生成的 XML Sitemap 筛选出产品或类别
 
-如果默认实施不适用于特定用例，或者如果扩展点不够灵活，则自定义 `SitemapGenerator` 可以实施以完全控制生成的站点地图的内容。 以下示例演示了如何执行此操作，同时利用了默认实施的AEM Sites逻辑。 它使用 [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) 作为遍历页面树的起点：
+如果默认实施不适用于特定用例，或者扩展点不够灵活，则可以实施自定义 `SitemapGenerator` 以完全控制生成的 Sitemap 的内容。以下示例说明如何使用 AEM Sites 的默认实施逻辑来完成此操作。它使用 [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) 作为起点来遍历页面树：
 
 ```
 import java.util.Optional;
@@ -471,7 +472,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
 }
 ```
 
-此外，为XML站点地图实现的功能也可用于不同的用例，例如，将规范链接或语言替代添加到页面标题中。 请参阅 [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) 界面以了解更多信息。
+此外，为XML站点地图实现的功能也可用于不同的用例，例如，将规范链接或语言替代添加到页面标题中。 有关更多信息，请参阅 [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) 接口。
 
 ### 为旧版 URL 创建 301 重定向 {#creating-redirects-for-legacy-urls}
 

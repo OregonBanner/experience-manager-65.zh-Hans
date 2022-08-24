@@ -1,8 +1,8 @@
 ---
-title: 开发SPA for AEM
-seo-title: 开发SPA for AEM
+title: 为 AEM 开发 SPA
+seo-title: Developing SPAs for AEM
 description: 本文介绍了在让前端开发人员开发AEM的SPA时应考虑的重要问题，并概述了在部署AEM上开发的SPA时要记住的AEM与SPA的架构。
-seo-description: 本文介绍了在让前端开发人员开发AEM的SPA时应考虑的重要问题，并概述了在部署AEM上开发的SPA时要记住的AEM与SPA的架构。
+seo-description: This article presents important questions to consider when engaging a front-end developer to develop a SPA for AEM as well as gives an overview of the architecture of AEM with respect to SPAs to keep in mind when deploying a developed SPA on AEM.
 uuid: 6673a041-c557-4968-ae54-4cd5b9f56251
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '2122'
-ht-degree: 1%
+source-wordcount: '2074'
+ht-degree: 2%
 
 ---
 
-# 开发SPA for AEM{#developing-spas-for-aem}
+# 为 AEM 开发 SPA{#developing-spas-for-aem}
 
 单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用SPA框架构建站点，而作者则希望在AEM中为使用此类框架构建的站点无缝编辑内容。
 
@@ -30,16 +30,16 @@ ht-degree: 1%
 
 ## SPA的AEM开发原则 {#spa-development-principles-for-aem}
 
-在AEM上开发单页应用程序时，假定前端开发人员在创建SPA时遵循标准的最佳实践。 如果作为前端开发人员，您遵循这些一般最佳实践以及一些特定于AEM的原则，那么您的SPA将能够与[AEM及其内容创作功能](/help/sites-developing/spa-walkthrough.md#content-editing-experience-with-spa)一起使用。
+在AEM上开发单页应用程序时，假定前端开发人员在创建SPA时遵循标准的最佳实践。 如果您作为前端开发人员，遵循以下一般最佳实践以及一些特定于AEM的原则，则您的SPA将能够在 [AEM及其内容创作功能](/help/sites-developing/spa-walkthrough.md#content-editing-experience-with-spa).
 
-* **[可移植性](/help/sites-developing/spa-architecture.md#portability)  -** 与任何组件一样，组件应构建为尽可能便携。SPA应使用可移植且可重复使用的组件构建。
-* **[AEM驱动站点结构](/help/sites-developing/spa-architecture.md#aem-drives-site-structure)**  — 前端开发人员创建组件并拥有其内部结构，但依赖AEM来定义站点的内容结构。
-* **[动态渲染](/help/sites-developing/spa-architecture.md#dynamic-rendering)**  — 所有渲染应为动态。
-* **[动态路由](#dynamic-routing)  -** SPA负责路由，AEM会侦听该路由并基于该路由获取。任何路由都应是动态的。
+* **[便携性](/help/sites-developing/spa-architecture.md#portability) -** 与任何组件一样，组件应该构建为尽可能便携。 SPA应使用可移植且可重复使用的组件构建。
+* **[AEM驱动器站点结构](/help/sites-developing/spa-architecture.md#aem-drives-site-structure)**  — 前端开发人员创建组件并拥有其内部结构，但依赖AEM来定义网站的内容结构。
+* **[动态渲染](/help/sites-developing/spa-architecture.md#dynamic-rendering)**  — 所有渲染都应是动态的。
+* **[动态路由](#dynamic-routing) -** SPA负责路由，AEM会侦听路由，并根据它获取。 任何路由都应是动态的。
 
 在开发SPA时，如果您牢记这些原则，那么在启用所有受支持的AEM创作功能时，将尽可能灵活地进行未来验证。
 
-如果您不需要支持AEM创作功能，则可能需要考虑其他[SPA设计模型](/help/sites-developing/spa-architecture.md#spa-design-models)。
+如果您不需要支持AEM创作功能，则可能需要考虑其他 [SPA设计模型](/help/sites-developing/spa-architecture.md#spa-design-models).
 
 ### 便携性 {#portability}
 
@@ -57,21 +57,21 @@ ht-degree: 1%
 
 SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构所有子项的默认期望值。
 
-指向特定内容的任何显式渲染均被视为静态渲染，尽管受支持，但将与AEM内容创作功能不兼容。 这也违背了[可移植性](/help/sites-developing/spa-architecture.md#portability)的原则。
+指向特定内容的任何显式渲染都被视为静态渲染，尽管受支持，但将与AEM内容创作功能不兼容。 这也违背了 [便携性](/help/sites-developing/spa-architecture.md#portability).
 
 ### 动态路由 {#dynamic-routing}
 
-与渲染一样，所有路由也应是动态的。 在AEM中， [SPA应始终拥有路由](/help/sites-developing/spa-routing.md),AEM侦听路由并基于路由获取内容。
+与渲染一样，所有路由也应是动态的。 在AEM中， [SPA应始终拥有路由](/help/sites-developing/spa-routing.md) 和AEM会侦听数据，并据此获取内容。
 
-任何静态路由都与可移植性](/help/sites-developing/spa-architecture.md#portability)的原则相抵触，并且由于与AEM的内容创作功能不兼容而限制了作者。 [例如，使用静态路由时，如果内容作者想要更改路由或更改页面，则他/她将必须要求前端开发人员执行此操作。
+任何静态路由都适用于 [便携性原则](/help/sites-developing/spa-architecture.md#portability) 和通过与AEM的内容创作功能不兼容来限制作者。 例如，使用静态路由时，如果内容作者想要更改路由或更改页面，则他/她将必须要求前端开发人员执行此操作。
 
 ## AEM 项目原型 {#aem-project-archetype}
 
-任何AEM项目都应使用[AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
+任何AEM项目都应利用 [AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
 
 ## SPA设计模型 {#spa-design-models}
 
-如果遵循在AEM](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中开发SPA的[原则，则您的SPA将能够与所有受支持的AEM内容创作功能一起使用。
+如果 [在AEM中开发SPA的原则](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem) 之后，您的SPA将能够使用所有受支持的AEM内容创作功能正常工作。
 
 但是，在有些情况下，这并非完全必要。 下表概述了各种设计模型、其优点和缺点。
 
@@ -79,11 +79,11 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
  <tbody>
   <tr>
    <th><strong>设计模型<br /> </strong></th>
-   <th><strong>优势</strong></th>
+   <th><strong>优点</strong></th>
    <th><strong>缺点</strong></th>
   </tr>
   <tr>
-   <td>AEM用作无头CMS，而不使用<a href="/help/sites-developing/spa-reference-materials.md">SPA Editor SDK框架。</a></td>
+   <td>AEM用作无头CMS，而不使用 <a href="/help/sites-developing/spa-reference-materials.md">SPA Editor SDK框架。</a></td>
    <td>前端开发人员完全控制应用程序。</td>
    <td><p>内容作者无法利用AEM内容创作体验。</p> <p>如果代码包含静态引用或路由，则该代码既不可移植，也不可重复使用。</p> <p>不允许使用模板编辑器，因此前端开发人员必须通过JCR维护可编辑的模板。</p> </td>
   </tr>
@@ -102,11 +102,11 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
 
 >[!NOTE]
 >
->尽管AEM支持所有模型，但只有通过实施第三个模型(从而遵循AEM](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中建议的[SPA开发原则)，内容作者才能像往常一样与AEM中的内容进行交互和编辑。
+>尽管AEM中支持所有模型，但只能通过实施第三个模型(从而遵循建议的 [SPA的AEM开发原则](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem))内容作者将能够像往常一样与AEM中的SPA内容进行交互和编辑。
 
 ## 将现有SPA迁移到AEM {#migrating-existing-spas-to-aem}
 
-通常，如果您的SPA遵循AEM的[SPA开发原则](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)，则SPA将在AEM中工作，并且可以使用AEM SPA编辑器进行编辑。
+通常，如果您的SPA遵循 [SPA的AEM开发原则](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)，则您的SPA将在AEM中工作，并可使用AEM SPA编辑器进行编辑。
 
 按照以下步骤操作，使现有SPA可以随时使用AEM。
 
@@ -134,35 +134,35 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
 
 1. **在React组件中，通过`this.props.cqModel`**
 
-   在同意组件并且JSON模型到位后，前端开发人员可以免费开发SPA，只需通过`this.props.cqModel`访问JSON模型即可。
+   在同意组件并且JSON模型到位后，前端开发人员便可以免费开发SPA，只需通过访问JSON模型即可 `this.props.cqModel`.
 
-1. **实现组件的方 `render()` 法**
+1. **实施组件的 `render()` 方法**
 
-   前端开发人员按照其认为合适的方式实施`render()`方法，并且可以使用`cqModel`属性的字段。 这会输出将插入页面的DOM和HTML片段。 这是在React中构建应用程序的标准方式。
+   前端开发人员实施 `render()` 方法，并可使用 `cqModel` 属性。 这会输出将插入页面的DOM和HTML片段。 这是在React中构建应用程序的标准方式。
 
 1. **通过将组件映射到AEM资源类型`MapTo()`**
 
-   该映射存储组件类，并由提供的`Container`组件在内部使用，以基于给定的资源类型检索和动态实例化组件。
+   映射存储组件类，并由提供的在内部使用 `Container` 组件来检索和动态实例化基于给定资源类型的组件。
 
    它用作前端和后端之间的“胶水”，以便编辑器了解反应组件对应的组件。
 
-   `Page`和`ResponsiveGrid`是扩展基`Container`的类的好示例。
+   的 `Page` 和 `ResponsiveGrid` 是扩展基础的类的好示例 `Container`.
 
-1. **将组件的定义为 `EditConfig` 参数以`MapTo()`**
+1. **定义组件的 `EditConfig` 作为参数`MapTo()`**
 
    此参数对于告知编辑器组件在尚未渲染或没有要渲染的内容时应该如何命名。
 
-1. **为页面和容 `Container` 器扩展提供的类**
+1. **扩展提供的 `Container` 页面和容器的类**
 
-   页面和段落系统应扩展此类，以便委派给内部组件可以按预期工作。
+   页面和段落系统应扩展此类，以便委派到内部组件可以按预期工作。
 
-1. **实施使用HTML5 API的路由解决 `History` 方案。**
+1. **实施使用HTML5的路由解决方案 `History` API。**
 
-   启用`ModelRouter`后，调用`pushState`和`replaceState`函数将触发对`PageModelManager`的请求，以获取模型的缺失片段。
+   当 `ModelRouter` 启用，调用 `pushState` 和 `replaceState` 函数将触发对的请求 `PageModelManager` 以获取模型的缺失片段。
 
-   `ModelRouter`的当前版本仅支持使用指向Sling模型入口点实际资源路径的URL。 它不支持使用虚URL或别名。
+   的当前版本 `ModelRouter` 仅支持使用指向Sling模型入口点实际资源路径的URL。 它不支持使用虚URL或别名。
 
-   可以禁用或配置`ModelRouter`以忽略正则表达式列表。
+   的 `ModelRouter` 可以禁用或配置为忽略正则表达式列表。
 
 ## 与AEM无关 {#aem-agnostic}
 
@@ -173,12 +173,12 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
 
 ![screen_shot_2018-12-11at144019](assets/screen_shot_2018-12-11at144019.png)
 
-`MapTo`帮助程序是“胶水”，它允许后端组件和前端组件匹配在一起：
+的 `MapTo` 帮助程序是允许后端和前端组件相匹配的“胶水”：
 
 * 它可告知JS容器（或JS段落系统），JS组件负责渲染JSON中存在的每个组件。
 * 它会向JS组件呈现的HTML中添加HTML数据属性，以便SPA编辑器知道在编辑组件时要向作者显示的对话框。
 
-有关一般使用`MapTo`并构建SPA for AEM的更多信息，请参阅所选框架的快速入门指南。
+有关使用的更多信息 `MapTo` 和一般构建AEM的SPA，请参阅所选框架的快速入门指南。
 
 * [AEM - React中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md)
 * [AEM SPA快速入门 — Angular](/help/sites-developing/spa-getting-started-angular.md)
@@ -189,7 +189,7 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
 
 ![screen_shot_2018-12-11at145348](assets/screen_shot_2018-12-11at145348.png)
 
-* **构建环境**
+* **生成环境**
 
    这是签出SPA应用程序源和组件源的源位置。
 
@@ -205,8 +205,8 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
    1. SPA请求外部HTML。
    1. 将加载CSS。
    1. 将加载SPA应用程序的Javascript。
-   1. 执行SPA应用程序时，将请求JSON，从而允许应用程序构建页面的DOM，其中包括`cq-data`属性。
-   1. 此`cq-data`属性允许编辑器加载其他页面信息，以便它知道组件可以使用哪些编辑配置。
+   1. 执行SPA应用程序时，将请求JSON，以允许应用程序构建页面的DOM，包括 `cq-data` 属性。
+   1. 此 `cq-data` 属性允许编辑器加载其他页面信息，以便它知道哪些编辑配置可用于组件。
 
 * **AEM 发布**
 
@@ -225,10 +225,10 @@ SPA应仅依赖于内容的动态渲染。 这是AEM获取并呈现内容结构�
 
 ## 后续步骤 {#next-steps}
 
-有关AEM中简单SPA的结构方式及其工作方式的概述，请参阅[React](/help/sites-developing/spa-getting-started-react.md)和[Angular](/help/sites-developing/spa-getting-started-angular.md)的快速入门指南。
+有关AEM中简单SPA的结构方式及其工作方式的概述，请参阅这两者的入门指南 [React](/help/sites-developing/spa-getting-started-react.md) 和 [Angular](/help/sites-developing/spa-getting-started-angular.md).
 
-有关创建您自己的SPA的分步指南，请参阅[AEM SPA编辑器入门 — WKND事件教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)。
+有关创建您自己的SPA的分步指南，请参阅 [AEM SPA Editor - WKND事件入门教程](https://helpx.adobe.com/cn/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
 
-有关动态模型到组件映射以及它如何在AEM的SPA中工作的更多详细信息，请参阅文章[Dynamic Model to Component Mapping for SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
+有关动态模型到组件映射以及它如何在AEM的SPA中工作的更多详细信息，请参阅文章 [适用于SPA的动态模型到组件映射](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
-如果您希望在AEM中为React或Angular以外的框架实施SPA，或者只想深入了解SPA SDK for AEM的工作方式，请参阅[SPA Blueprint](/help/sites-developing/spa-blueprint.md)文章。
+如果您希望在AEM中为除React或Angular之外的其他框架实施SPA，或者只想深入了解SPA SDK for AEM的工作方式，请参阅 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 文章。

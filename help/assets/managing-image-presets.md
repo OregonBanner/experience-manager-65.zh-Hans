@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 0d3bcdaa10d16c292aa0dd60254302d30fd700d6
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3839'
 ht-degree: 23%
@@ -91,7 +91,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager Assets�
 
 1. 在 `DAM Update Asset` 工作流， `Rasterize PDF/AI Image Preview Rendition` 流程组件使用配置的分辨率将原始资产的第一页栅格化为 `cqdam.preview.png` 演绎版。
 
-1. 的 `cqdam.preview.png` 然后，演绎版会由 `Dynamic Media Process Image Assets` 工作流中的流程组件。
+1. 的 `cqdam.preview.png` 然后，演绎版将由 `Dynamic Media Process Image Assets` 工作流中的流程组件。
 
 >[!NOTE]
 >
@@ -390,7 +390,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager Assets�
     <ul>
      <li>选择 <strong>无</strong> 要禁用锐化。</li>
      <li>选择 <strong>锐化</strong> 如果要在进行所有缩放后对图像应用基本锐化滤镜，请执行以下操作。 锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </li>
-     <li>选择<strong> 钝化蒙版</strong> 如果要对最终缩减采样图像微调锐化滤镜效果。 您可以控制效果的强度、效果的半径（以像素为单位）以及被忽略的对比度阈值。 此效果使用与 Photoshop 的“钝化蒙蔽”滤镜相同的选项。</li>
+     <li>选择<strong> 钝化蒙版</strong> 如果要对最终缩减采样图像微调锐化滤镜效果。 您可以控制效果的强度、效果的半径（以像素为单位）以及被忽略的对比度阈值。 此效果使用与Photoshop的“钝化蒙版”滤镜相同的选项。</li>
     </ul> <p>在 <strong>USM 锐化</strong>中，您可以设置以下选项：</p>
     <ul>
      <li><strong>金额</strong>  — 控制对边缘像素应用的对比度量。 默认的实数值为1.0。对于高分辨率图像，最高可将其增加到5.0。请考虑使用“数量”来测量滤镜强度。</li>

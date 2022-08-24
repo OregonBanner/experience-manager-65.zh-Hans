@@ -1,13 +1,13 @@
 ---
 title: 更新过期的Reader扩展服务证书
-description: 'Reader扩展文档无法工作，请更新证书 '
-source-git-commit: a26e4fb53458beae9b259e5ee5dc74a95264f9e1
+description: Reader扩展文档无法工作，请更新证书
+exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 0%
 
 ---
-
 
 # 更新过期的Reader扩展服务证书 {#Updating-expired-Reader-Extension-service-certificates}
 
@@ -124,7 +124,7 @@ Adobe利用PKI（公钥基础结构）颁发数字证书，以用于许可和功
 
 ## 常见问题解答
 
-**如果我有其他问题，应该联系谁？**
+**如果我有其他问题，我应该联系谁？**
 
 您可以联系 [Adobe支持](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) 或者提供支持票。
 

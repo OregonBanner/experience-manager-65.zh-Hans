@@ -1,8 +1,8 @@
 ---
 title: Acrobat Reader DC扩展使用的证书类型
-seo-title: Acrobat Reader DC扩展使用的证书类型
+seo-title: Certificate types used by Acrobat Reader DC extensions
 description: 了解Acrobat Reader DC扩展使用的证书类型。
-seo-description: 了解Acrobat Reader DC扩展使用的证书类型。
+seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.
 uuid: 93c02abc-2d5a-44ed-b93c-981afbd0553d
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,14 @@ geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
 exl-id: 800bffd5-0cdc-4251-bba4-e350f226f019
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '936'
 ht-degree: 3%
 
 ---
 
-# Acrobat Reader DC扩展{#certificate-types-used-by-acrobat-reader-dc-extensions}使用的证书类型
+# Acrobat Reader DC扩展使用的证书类型 {#certificate-types-used-by-acrobat-reader-dc-extensions}
 
 证书查看器提供了有关证书的以下信息：
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 * 有效期
 * Acrobat Reader DC扩展使用权限
 
-## 证书“友好”名称{#certificate-friendly-name}
+## 证书“友好”名称 {#certificate-friendly-name}
 
 Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的字符串，如以下示例中所示：
 
@@ -34,17 +34,17 @@ ARE 2D条形码完整生产V6.1 P8 0002054
 
 字符串包含以下元素：
 
-**证书类型：** 描述证书激活的AEM表单模块和激活级别，如ARE 2D条形码已满。有关可用证书类型的列表，请参阅证书配置文件部分表中的类型列。
+**证书类型：** 描述证书激活的AEM表单模块和激活级别，如ARE 2D条形码已满。 有关可用证书类型的列表，请参阅证书配置文件部分表中的类型列。
 
-**部署类型：** 指示证书的预期用途，如生产。该值可以是“评估”或“生产”。 有关与每个证书类型关联的部署类型列表，请参阅证书配置文件部分表中的部署类型列。
+**部署类型：** 指示证书的预期用途，如生产。 该值可以是“评估”或“生产”。 有关与每个证书类型关联的部署类型列表，请参阅证书配置文件部分表中的部署类型列。
 
 **使用权限版本：** 描述证书可用于的使用权限算法的版本，如V6.1。此版本不表示Acrobat或Acrobat Reader DC扩展的版本。
 
-**配置文件代码：** 配置文件代码是完整证书属性的简写描述，例如P8。有关与每个文件类型关联的配置文件代码的列表，请参阅证书配置文件部分表中的配置文件代码列。
+**配置文件代码：** 配置文件代码是完整证书属性的简写描述，例如P8。 有关与每个文件类型关联的配置文件代码的列表，请参阅证书配置文件部分表中的配置文件代码列。
 
-**序列号：** Adobe颁发的每个证书都分配有序列号，如0002054。Adobe企业支持人员或Adobe企业客户代表可以使用此序列号将证书跟踪到特定产品订单或OEM关系。
+**序列号：** 序列号会分配给由Adobe颁发的每个证书，如0002054。 Adobe企业支持人员或Adobe企业客户代表可以使用此序列号将证书跟踪到特定产品订单或OEM关系。
 
-## 证书配置文件{#certificate-profiles}
+## 证书配置文件 {#certificate-profiles}
 
 下表列出了在分析Acrobat Reader DC扩展证书时可能遇到的证书配置文件。
 
@@ -153,13 +153,13 @@ ARE 2D条形码完整生产V6.1 P8 0002054
 
 Adobe内部使用证书用在Adobe中，以支持软件开发、集成、原型制作和演示。 这些证书自发行之日起有效期为两年。
 
-生产证书将颁发给购买Acrobat Reader DC扩展的客户。 这些证书在证书颁发机构(CA)允许的最长期限内有效，在“证书配置文件”表中显示为&#x200B;*Max*。
+生产证书将颁发给购买Acrobat Reader DC扩展的客户。 这些证书在证书颁发机构(CA)允许的最长期限内有效，如下所示 *Max* （在证书配置文件表中）。
 
-## Acrobat Reader DC扩展使用权限{#acrobat-reader-dc-extensions-usage-rights}
+## Acrobat Reader DC扩展使用权限 {#acrobat-reader-dc-extensions-usage-rights}
 
 在证书查看器中检查Acrobat Reader DC扩展证书时，您可以从“详细信息”选项卡中选择使用权限项（如果已配置），以查看证书可启用的Adobe Reader使用权限的明细列表。 对特定文档启用的使用权限可以是证书启用的使用权限的子集。
 
-如果在非协作环境中需要联机注释，请联系Adobe支持以了解更多信息。 Mode属性与部署类型匹配，并且为&#x200B;*production*&#x200B;或&#x200B;*evaluation*。
+如果在非协作环境中需要联机注释，请联系Adobe支持以了解更多信息。 Mode属性与部署类型匹配，且为 *生产* 或 *评价*.
 
 允许的Acrobat Reader DC扩展使用权限由一个或多个特定元素组成。 这些元素可在不同组合中使用，以实现各种授权产品功能。
 
@@ -167,7 +167,7 @@ Adobe内部使用证书用在Adobe中，以支持软件开发、集成、原型�
  <thead>
   <tr>
    <th><p>使用权限元素</p></th>
-   <th><p>查看启用了权限的PDF文档时在Adobe Reader中启用的功能</p></th>
+   <th><p>查看启用了权限的Adobe Reader文档时在中启用的PDF</p></th>
   </tr>
  </thead>
  <tbody>

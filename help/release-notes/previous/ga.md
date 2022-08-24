@@ -1,10 +1,11 @@
 ---
 title: 的常规发行说明 [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5发行说明，其中概述了发行信息、新增功能、安装方式和详细的更改列表。”'
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '4696'
-ht-degree: 57%
+ht-degree: 59%
 
 ---
 
@@ -101,7 +102,7 @@ ht-degree: 57%
 
 * 快速入门分发版使用Eclipse Jetty 9.4.15作为servlet引擎(AEM 6.4随9.3.22一起提供)。
 
-### [!DNL Experience Manager] 站点 {#experience-manager-sites}
+### [!DNL Experience Manager] Sites {#experience-manager-sites}
 
 #### 托管单页应用程序 {#managed-single-page-apps}
 
@@ -452,7 +453,7 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 * 用于 Brackets 代码编辑器的扩展（[了解更多并下载](/help/sites-developing/aem-brackets.md)）
 * Maven/Gradle 依赖（[下载链接](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/)）
 
-**站点**
+**Sites**
 
 * 核心组件（[GitHub 项目](https://github.com/adobe/aem-core-wcm-components)）
 * We.Retail 参考实施（[了解更多](/help/sites-developing/we-retail.md)）
@@ -472,7 +473,7 @@ Adobe 实施了多种规程和流程来对以客户为中心的错误解决方�
 
 * AEM 现代化工具套件，例如对话框转换工具。（[GitHub 项目](https://github.com/adobe/aem-modernize-tools)）
 
-**资源**
+**Assets**
 
 * 用于添加增强型 PDF 栅格化程序的软件包（[了解更多](/help/assets/aem-pdf-rasterizer.md)）
 * 用于添加扩展 RAW 图像支持的软件包（[了解更多](/help/assets/camera-raw.md)）
@@ -552,17 +553,17 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. 保存文件并重新启动AEM实例。
 
-### 站点 {#sites}
+### Sites {#sites}
 
 * **使用页面版本**: [如果页面已移动，则无法再对移动前创建的任何版本执行预览](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
 
-### 资产 {#assets}
+### Assets {#assets}
 
 * **搜索：** 如果搜索字符串包含前导空格([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
 * **文件夹元数据架构**：添加选择按钮后，ID 和值字段未按预期呈现，且删除功能不起作用。(CQ-4261144)
 * 重命名资产时，无法在资产名称中使用空格。(CQ-4266403)
 
-### 表单 {#forms}
+### Forms {#forms}
 
 * 在Linux操作系统上安装AEM Forms后，带硬件安全模块的数字签名不起作用。 (CQ-4266721)
 * （仅限 WebSphere 上的 AEM Forms）如果您将&#x200B;**用户名**&#x200B;作为搜索条件搜索&#x200B;**管理员**，则 **Forms 工作流** > **任务搜索**&#x200B;选项不会返回任何结果。(CQ-4266457)

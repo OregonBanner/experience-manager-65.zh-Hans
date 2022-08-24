@@ -1,8 +1,8 @@
 ---
 title: JEE上AEM Forms的一般安全注意事项
-seo-title: JEE上AEM Forms的一般安全注意事项
+seo-title: General Security Considerations for AEM Forms on JEE
 description: 了解如何准备在JEE环境中强化AEM Forms。
-seo-description: 了解如何准备在JEE环境中强化AEM Forms。
+seo-description: Learn how to prepare for hardening your AEM Forms on JEE environment.
 uuid: 4d098731-fc8f-41d7-98b5-5c2e31211614
 content-type: reference
 topic-tags: Security
@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1062'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 1%
  <tbody>
   <tr>
    <td><p>OracleWebLogic®</p> </td>
-   <td><p>在<a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>中搜索“了解WebLogic安全”。</p> </td>
+   <td><p>在 <a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>.</p> </td>
   </tr>
   <tr>
    <td><p>IBM WebSphere®</p> </td>
@@ -144,12 +144,12 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>Oracle® 12c</p> </td>
-   <td><p>请参阅<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle12g文档</a>中的“安全”一章</p> </td>
+   <td><p>请参阅 <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle12g文档</a></p> </td>
   </tr>
  </tbody>
 </table>
 
-此表介绍了在JEE配置过程中AEM Forms所需打开的默认端口。 如果您通过https连接，请相应地调整端口信息和IP地址。 有关配置端口的更多信息，请参阅应用程序服务器的&#x200B;*在JEE*&#x200B;上安装和部署AEM Forms文档。
+此表介绍了在JEE配置过程中AEM Forms所需打开的默认端口。 如果您通过https连接，请相应地调整端口信息和IP地址。 有关配置端口的更多信息，请参阅 *在JEE上安装和部署AEM Forms* 文档。
 
 <table>
  <thead>
@@ -212,13 +212,13 @@ JBoss Application Server使用8080作为默认HTTP端口。 JBoss还具有预配
 
 1. 打开以下文件进行编辑：
 
-   单个服务器安装：[JBoss根]/standalone/configuration/standalone.xml
+   单个服务器安装： [JBoss根]/standalone/configuration/standalone.xml
 
-   群集安装：[JBoss根]/domain/configuration/domain.xml
+   群集安装： [JBoss根]/domain/configuration/domain.xml
 
-1. 将&#x200B;**&lt;socket-binding>**&#x200B;标记中&#x200B;**port**&#x200B;属性的值更改为自定义端口号。 例如，以下代码使用端口8090:
+1. 更改的值 **端口** 属性 **&lt;socket-binding>** 标记为自定义端口号。 例如，以下代码使用端口8090:
 
-   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot; />
+   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
 1. 保存并关闭文件。
 1. 重新启动JBoss应用程序服务器。
@@ -229,7 +229,7 @@ JBoss Application Server使用8080作为默认HTTP端口。 JBoss还具有预配
 
 ### 未在数据库中加密电子邮件凭据 {#email-credentials-not-encrypted-in-database}
 
-应用程序存储的电子邮件凭据在存储到JEE数据库上的AEM Forms中之前不会进行加密。 将服务端点配置为使用电子邮件时，作为该端点配置的一部分使用的任何密码信息在存储到数据库中时都不会加密。
+在将应用程序存储到JEE数据库的AEM Forms中之前，应用程序存储的电子邮件凭据未进行加密。 将服务端点配置为使用电子邮件时，作为该端点配置的一部分使用的任何密码信息在存储到数据库中时都不会加密。
 
 ### Rights Management数据库中的敏感内容 {#sensitive-content-for-rights-management-in-the-database}
 
@@ -239,13 +239,13 @@ AEM Forms on JEE使用AEM Forms on JEE数据库来存储敏感文档密钥信息
 
 用于在JEE上运行AEM Forms的应用程序服务器需要其自己的配置，以便通过应用程序服务器上配置的数据源访问数据库。 确保应用程序服务器在其数据源配置文件中不以明文形式公开数据库密码。
 
-lc_[database].xml文件不应包含明文格式的密码。 请咨询应用程序服务器供应商，了解如何为应用程序服务器加密这些密码。
+lc_[数据库].xml文件不应包含明文格式的密码。 请咨询应用程序服务器供应商，了解如何为应用程序服务器加密这些密码。
 
 >[!NOTE]
 >
 >JEE JBoss统包安装程序上的AEM Forms加密数据库密码。
 
-默认情况下，IBM WebSphere Application Server和OracleWebLogic Server可能会加密数据源密码。 但是，请通过应用程序服务器文档进行确认，以确保出现这种情况。
+IBM WebSphere应用程序服务器和OracleWebLogic服务器默认情况下可能会加密数据源密码。 但是，请通过应用程序服务器文档进行确认，以确保出现这种情况。
 
 ### 保护存储在信任存储中的私钥 {#protecting-the-private-key-stored-in-trust-store}
 

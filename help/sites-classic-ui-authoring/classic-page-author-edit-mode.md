@@ -1,8 +1,8 @@
 ---
 title: 用于创作页面的组件
-seo-title: 用于创作页面的组件
+seo-title: Components for Page Authoring
 description: 编辑页面时，可从 Sidekick 的“组件”选项卡和“插入新组件”选择器（在“将组件或资产拖动到此处”区域中双击鼠标时）中使用这些组件。
-seo-description: 编辑页面时，可从 Sidekick 的“组件”选项卡和“插入新组件”选择器（在“将组件或资产拖动到此处”区域中双击鼠标时）中使用这些组件。
+seo-description: The components are available when editing a page from the Components tab of the sidekick and the Insert New Component selector (when you double-click in the Drag components or assets here area).
 uuid: c353073d-d4d1-4529-b8bd-d0ca302cc9a0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '6169'
+source-wordcount: '6133'
 ht-degree: 88%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 88%
 >
 >根据您的实例，您可能已经拥有明确按照您的要求开发的自定义组件。这些组件甚至会与此处讨论的某些组件同名。
 
-在[编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)时，可从Sidekick的&#x200B;**组件**&#x200B;选项卡和&#x200B;**插入新组件**&#x200B;选择器中（当您在&#x200B;**将组件或资产拖动到此处**&#x200B;区域中双击时）编辑页面时，即可使用这些组件。
+组件在 [编辑页面](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 从 **组件** 的 **插入新组件** 选择器(当您在 **将组件或资产拖动到此处** 区域)。
 
-您可以选择一个组件并将其拖动到页面上的所需位置，然后[编辑内容和属性](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)。
+您可以选择组件并将其拖动到页面上的所需位置，然后 [编辑内容和属性](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties).
 
 组件按照各种类别（组件组）进行分类，这些类别包括（用于创作页面）：
 
@@ -44,13 +44,13 @@ ht-degree: 88%
 
 常规组件是指用于创建内容的基本组件。
 
-### 帐户项  {#account-item}
+### 帐户项 {#account-item}
 
 您可以为链接定义标题和描述。
 
 ![](do-not-localize/chlimage_1-2.png)
 
-### 自适应图像  {#adaptive-image}
+### 自适应图像 {#adaptive-image}
 
 “自适应图像”基础组件生成的图像的大小会被调整至适应打开网页的窗口。要使用该组件，可以从文件系统或 DAM 提供图像资源。打开网页后，Web 浏览器将下载该图像的一个副本，且大小已调整至适合当前窗口。
 
@@ -68,11 +68,11 @@ ht-degree: 88%
 * .jpg
 * .jpeg
 * .png
-* .gif **
+* .gif &#42;&#42;
 
 >[!CAUTION]
 >
->** .gif 动图文件在 AEM 不可进行自适应呈现。
+>&#42;&#42; AEM不支持.gif动画文件进行自适应呈现。
 
 #### 图像大小和质量 {#images-sizes-and-quality}
 
@@ -128,7 +128,7 @@ ht-degree: 88%
 
 有关自定义自适应图像组件的信息，请参阅[了解自适应图像组件](/help/sites-developing/responsive.md#using-adaptive-images)。
 
-### 轮播 {#carousel}
+### 轮盘 {#carousel}
 
 传送组件允许您通过以下方式显示与单个页面关联的图像：
 
@@ -167,8 +167,8 @@ ht-degree: 88%
 手动或使用选择器指定一个路径。如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
 
-         * ****
-页面选择页面列表。使用 
+         * **页面**
+选择页面列表。使用 
 `+` 添加更多条目，并使用向上/向下按钮调整顺序。
       * **搜索选项**
 
@@ -182,9 +182,9 @@ ht-degree: 88%
          * **QueryBuilder 谓词记号**
 可以使用“QueryBuilder 谓词记号”输入搜索查询。例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
-   * **按选择**
-排序 
-`jcr:title`、  `jcr:created`、 `cq:lastModified`或 `cq:template` 下拉菜单中。
+   * **订购依据**
+选择 
+`jcr:title`, `jcr:created`, `cq:lastModified`或 `cq:template` 下拉菜单中。
 
    * **限制**
 您希望在传送中使用的最多项目数；这是可选项。
@@ -194,7 +194,8 @@ ht-degree: 88%
 
 
 >[!NOTE]
-您可以为 Adobe Experience Manager 创建一个自定义传送组件，使其显示位于 AEM DAM 中的数字资产。有关信息，请参阅[为 Adobe Experience Manager 创建自定义传送组件](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
+>
+>您可以为 Adobe Experience Manager 创建一个自定义传送组件，使其显示位于 AEM DAM 中的数字资产。有关信息，请参阅[为 Adobe Experience Manager 创建自定义传送组件](https://helpx.adobe.com/experience-manager/using/custom-carousel-components.html)。
 
 ### 图表 {#chart}
 
@@ -203,7 +204,7 @@ ht-degree: 88%
 * **数据**
 
    * **图表数据**
-使用 CSV 格式输入您的图表数据；逗号分隔值格式使用逗号（“,”）作为字段分隔符。
+使用CSV格式输入图表数据；逗号分隔值格式使用逗号(&quot;,&quot;)作为字段分隔符。
 
 * **高级**
 
@@ -224,13 +225,16 @@ ht-degree: 88%
 ![chlimage_1-6](assets/chlimage_1-6.png) ![dc_chart_use](assets/dc_chart_use.png)
 
 >[!NOTE]
-您可以创建一个自定义 AEM 图表控件来显示位于 AEM JCR 中的数据。有关信息，请参阅[在图表中显示 Adobe Experience Manager 数据](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html)。
+>
+>您可以创建一个自定义 AEM 图表控件来显示位于 AEM JCR 中的数据。有关信息，请参阅[在图表中显示 Adobe Experience Manager 数据](https://helpx.adobe.com/experience-manager/using/displaying-experience-manager-data-chart.html)。
 
 ### 内容片段 {#content-fragment}
 
 >[!CAUTION]
-内容片段管理的完整功能仅可通过触屏优化的 UI 提供。
-内容片段组件可在经典 UI Sidekick 中见到，但是进一步的功能不可用。
+>
+>内容片段管理的完整功能仅可通过触屏优化的 UI 提供。
+>
+>内容片段组件可在经典 UI Sidekick 中见到，但是进一步的功能不可用。
 
 [内容片段](/help/sites-classic-ui-authoring/classic-page-author-content-fragments.md)将作为独立于页面的资产来创建和管理。您随后可以在创作内容页面时使用这些片段及其变量。
 
@@ -281,7 +285,8 @@ ht-degree: 88%
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
 >[!NOTE]
-根据您的用例，还有其他选项可用于外部应用程序的集成，例如，[Portlet 的集成](/help/sites-administering/aem-as-portal.md)。
+>
+>根据您的用例，还有其他选项可用于外部应用程序的集成，例如，[Portlet 的集成](/help/sites-administering/aem-as-portal.md)。
 
 ### Flash {#flash}
 
@@ -334,9 +339,12 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 ![dc_image](assets/dc_image.png)
 
 >[!NOTE]
-无法使用 Internet Explorer 监控上传过程。
-Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
-有关AEM使用的HTML5功能的更多信息，请参阅[认证的平台](/help/release-notes/release-notes.md#certifiedplatforms)部分。
+>
+>无法使用 Internet Explorer 监控上传过程。
+>
+>Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
+>
+>请参阅 [认证平台](/help/release-notes/release-notes.md#certifiedplatforms) 部分以了解有关AEM使用的HTML5功能的更多信息。
 
 加载图像后，您可以配置下列各项：
 
@@ -387,7 +395,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 布局容器 {#layout-container}
 
 >[!CAUTION]
-尽管布局容器组件在经典 UI 中可用，但是只有在触屏优化 UI 中才能使用其全部功能。有关详细信息，请参阅[响应式布局](/help/sites-classic-ui-authoring/classic-page-author-responsive-layout.md)。
+>
+>尽管布局容器组件在经典 UI 中可用，但是只有在触屏优化 UI 中才能使用其全部功能。有关详细信息，请参阅[响应式布局](/help/sites-classic-ui-authoring/classic-page-author-responsive-layout.md)。
 
 ### 列表 {#list}
 
@@ -429,7 +438,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
             有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
       * **标记**
 
-         指定&#x200B;**父页面**、**标记/关键字**&#x200B;和您所需的匹配条件。
+         指定 **父页面**, **标记/关键词** 和所需的匹配条件。
    * **显示方式**
 
       希望列出项目的方式；包括链接、Teaser 和新闻。
@@ -513,13 +522,13 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
 ![chlimage_1-10](assets/chlimage_1-10.png)
 
-### 针对开发人员的 Adobe AIR API 参考 {#reference}
+### 引用 {#reference}
 
 使用&#x200B;**引用**&#x200B;组件可以从 AEM 网站的其他页面引用文本（在当前实例中）。引用的段落内容会像在当前页面上一样进行显示。当源段落发生更改时，此内容也将随之更新（可能需要刷新页面）。
 
 * **段落引用**
 
-   * **针对开发人员的 Adobe AIR API 参考**
+   * **引用**
 
       指定要引用的页面和段落的路径（包括内容）。
 
@@ -553,7 +562,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * **节点类型**
 
-      如果搜索限制为特定的节点类型，请在此处列出它们；例如，`cq:Page`。
+      如果搜索限制为特定的节点类型，请在此处列出它们；例如， `cq:Page`.
 
    * **搜索路径**
 
@@ -631,7 +640,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * **新幻灯片**
 
-      您可以使用&#x200B;**Add**（和&#x200B;**Remove**）按钮指定幻灯片选项。
+      您可以使用 **添加** (和 **删除**)按钮。
 
    * **标题**
 
@@ -650,8 +659,10 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 表 {#table}
 
 >[!NOTE]
-与&#x200B;****&#x200B;文本[](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)组件一样，**[表组件也基于富文本编辑器](#text)**。
-尽管使用&#x200B;**文本**&#x200B;组件也可以构建表，但是对于表的构建，建议使用&#x200B;**表**&#x200B;组件来完成。
+>
+>与&#x200B;****&#x200B;文本[](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)组件一样，**[表组件也基于富文本编辑器](#text)**。
+>
+>尽管使用&#x200B;**文本**&#x200B;组件也可以构建表，但是对于表的构建，建议使用&#x200B;**表**&#x200B;组件来完成。
 
 **表**&#x200B;组件经过预配置，让您可以构建和填写表，以及设置表的格式。使用对话框，您可以配置表，并通过以下任一方式创建内容：
 
@@ -686,8 +697,10 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ### 文本 {#text}
 
 >[!NOTE]
-与&#x200B;****&#x200B;表[](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)组件一样，**[文本组件也基于富文本编辑器](#table)**。
-尽管使用&#x200B;**文本**&#x200B;组件也可以构建表，但是对于表的构建，建议使用&#x200B;**表**&#x200B;组件来完成。
+>
+>与&#x200B;****&#x200B;表[](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)组件一样，**[文本组件也基于富文本编辑器](#table)**。
+>
+>尽管使用&#x200B;**文本**&#x200B;组件也可以构建表，但是对于表的构建，建议使用&#x200B;**表**&#x200B;组件来完成。
 
 通过文本组件可以使用所见即所得 （WYSIWYG) 编辑器输入文本块，相应编辑器功能由[富文本编辑器](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)提供。通过精选的图标可以设置文本格式，包括字体特性、对齐方式、链接、列表和缩进。
 
@@ -724,7 +737,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    允许您指定以下内容：
 
-   * **图像资产**
+   * **图像资源**
 
       上传所需的图像。
 
@@ -796,11 +809,13 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
       视频固有的大小（宽 x 高，以像素为单位）将出现在“大小”（参阅上文）旁边的框中。如果要覆盖视频固有的尺寸，请在此处手动输入宽度和高度尺寸。单击&#x200B;**确定**&#x200B;关闭对话框。
 
 >[!NOTE]
-支持的格式包括：
-* `.mp4`
-* `Ogg`
-* `FLV` (Flash视频)
-
+>
+>支持的格式包括：
+>
+>* `.mp4`
+>* `Ogg`
+>* `FLV` (Flash视频)
+>
 
 
 ## 列 {#columns}
@@ -815,7 +830,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
 默认为 2 个相等列的列控件组件。
 
-### 3 列  {#columns-2}
+### 3 列 {#columns-2}
 
 默认为 3 个相等列的列控件组件。
 
@@ -834,7 +849,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 表单组件用于为访客创建表单以提交输入。表单和表单组件可用于收集用户反馈（例如，客户满意度调查问卷）和用户信息（例如，用户注册）等信息。
 
 >[!NOTE]
-请参阅 [AEM Forms 帮助](/help/forms/home.md)，以获取有关 AEM Forms 的信息。
+>
+>请参阅 [AEM Forms 帮助](/help/forms/home.md)，以获取有关 AEM Forms 的信息。
 
 表单是从多个不同组件中构建的：
 
@@ -855,7 +871,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
-有关开发和进一步自定义表单的信息，请参阅[开发表单](/help/sites-developing/developing-forms.md)页面。相关信息包括添加操作和约束，预载字段以及通过使用脚本调用服务的方式执行操作，等等。
+>
+>有关开发和进一步自定义表单的信息，请参阅[开发表单](/help/sites-developing/developing-forms.md)页面。相关信息包括添加操作和约束，预载字段以及通过使用脚本调用服务的方式执行操作，等等。
 
 ### （许多）表单组件的常规设置 {#settings-common-to-many-form-components}
 
@@ -880,7 +897,8 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
    指示字段的大小和样式。
 
 >[!NOTE]
-您看到的字段差别很大，具体取决于各个组件。
+>
+>您看到的字段差别很大，具体取决于各个组件。
 
 这些选项卡为您提供必需的参数；具体的选项卡依各个组件类型而定，但可能包括：
 
@@ -941,7 +959,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
    * **CSS**
 
-### 表单（组件）  {#form-component}
+### 表单（组件） {#form-component}
 
 表单组件使用&#x200B;**表单开始**&#x200B;和&#x200B;**表单结尾**&#x200B;元素定义表单的开始和结尾。它们始终是成对的，以确保正确定义表单。
 
@@ -949,7 +967,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
 在表单开始和表单结尾之间，您可以添加用于定义用户实际输入字段的表单组件。
 
-#### 表单开始  {#start-of-form}
+#### 表单开始 {#start-of-form}
 
 定义页面上新表单的开始时需要此组件。您可以配置：
 
@@ -1021,7 +1039,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
          `/apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
    * **操作配置**
 
-      **操作配置**&#x200B;中可用的选项取决于所选的&#x200B;**操作类型**:
+      中的可用选项 **操作配置** 取决于 **操作类型** 选定项：
 
       * **帐户请求**
 
@@ -1029,8 +1047,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 创建新帐户时使用的页面。
       * **创建内容**
 
-         * 内容路径
-表单转储的任何内容的内容路径。输入以斜杠`/`结尾的路径。斜杠表示对于每个表单端口，在给定位置创建一个新节点；例如：
+         * 内容路径表单转储的任何内容的内容路径。输入以斜杠结尾的路径 `/`.斜杠表示对于每个表单端口，在给定位置创建一个新节点；例如：
             `/forms/feedback/`
 
          * **类型**
@@ -1047,7 +1064,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
          * **资源类型**
 
-            如果已设置，则会将此参数作为`sling:resourceType`添加到每个注释中
+            如果已设置，则会将此内容作为 `sling:resourceType`
 
          * **视图选择器**
       * **创建潜在客户**
@@ -1070,7 +1087,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到`.tsv`（制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到 `.tsv` （制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **邮件**
 
          * **从**
@@ -1101,7 +1118,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
 
          * **内容路径**
 
-            表单转储的任何内容的内容路径。输入以斜杠`/`结尾的路径。 斜杠表示对于每个表单端口而言，新节点是在给定位置创建的；例如：
+            表单转储的任何内容的内容路径。输入以斜杠结尾的路径 `/`. 斜杠表示对于每个表单端口而言，新节点是在给定位置创建的；例如：
             `/forms/feedback/`
 
          * **查看数据...**
@@ -1109,7 +1126,7 @@ Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后�
             单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到.tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **通过上传存储内容**
 
-         此选项与&#x200B;**存储内容**&#x200B;的选项相同。
+         此选项与 **存储内容**.
 
       * **取消订阅者的订阅**
 
@@ -1178,7 +1195,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 您可为此组件配置不同参数，包括当 captcha 字符串无效时将显示的消息。
 
-### 复选框组  {#checkbox-group}
+### 复选框组 {#checkbox-group}
 
 通过复选框可以生成一个或多个复选框的列表，其中某些复选框可以同时选中。
 
@@ -1187,8 +1204,10 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 您可以指定各种参数，包括标题、说明和元素名称。您可以使用 + 和 - 按钮添加或删除项目，然后使用向上和向下箭头定位这些项目。
 
 >[!NOTE]
-使用&#x200B;**项目加载路径**，您可以预加载值的复选框组列表。
-请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
+>
+>使用&#x200B;**项目加载路径**，您可以预加载值的复选框组列表。
+>
+>请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
 ### 信用卡详细信息 {#credit-card-details}
 
@@ -1205,8 +1224,10 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 您可以指定标题以及要在列表中显示的项目。使用 + 和 - 按钮，可以添加或删除列表项目，然后使用向上和向下按钮定位这些项目。您可以指定是否允许用户从列表中选择多个项目，还可以指定用户首次打开列表时应自动选择的项目（初始值）。
 
 >[!NOTE]
-使用&#x200B;**项目加载路径**，您可以预载包含值的下拉列表。
-请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
+>
+>使用&#x200B;**项目加载路径**，您可以预载包含值的下拉列表。
+>
+>请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
 ### 文件上传 {#file-upload}
 
@@ -1215,19 +1236,22 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ![dc_form_fileupload](assets/dc_form_fileupload.png)
 
 >[!NOTE]
-您可以创建一个自定义上传组件来将文件上传至 Sling Servlet。有关信息，请参阅[将文件上传至 Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)。
+>
+>您可以创建一个自定义上传组件来将文件上传至 Sling Servlet。有关信息，请参阅[将文件上传至 Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)。
 
-### 隐藏字段  {#hidden-field}
+### 隐藏字段 {#hidden-field}
 
 此组件允许您创建隐藏字段。隐藏字段可用于多种目的；例如，当您需要在提交表单后执行操作，或者在帖子处理期间需要使用隐藏数据时。
 
 ![dc_form_hiddenfield](assets/dc_form_hiddenfield.png)
 
 >[!NOTE]
-还可以自定义您的表单，以根据表单中其他字段的值显示或隐藏特定表单组件。当仅在特定条件下才需要表单字段时，更改表单字段的可见性很有用。
-请参阅[显示和隐藏表单组件](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)。
+>
+>还可以自定义您的表单，以根据表单中其他字段的值显示或隐藏特定表单组件。当仅在特定条件下才需要表单字段时，更改表单字段的可见性很有用。
+>
+>请参阅[显示和隐藏表单组件](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)。
 
-### 图像按钮  {#image-button}
+### 图像按钮 {#image-button}
 
 图像按钮允许您使用自己的图像和文本创建按钮：
 
@@ -1247,7 +1271,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 最常用于日历事件表单，它在该表单中用于事件的 URL/链接字段。
 
-### 密码字段  {#password-field}
+### 密码字段 {#password-field}
 
 此组件用于允许用户输入密码：
 
@@ -1273,8 +1297,10 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 ![dc_form_radiogroupuse](assets/dc_form_radiogroupuse.png)
 
 >[!NOTE]
-使用&#x200B;**项目加载路径**，您可以预载包含值的单选按钮组。
-请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
+>
+>使用&#x200B;**项目加载路径**，您可以预载包含值的单选按钮组。
+>
+>请参阅[预载包含多个值的表单字段](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)。
 
 ### 提交按钮 {#submit-button}
 
@@ -1316,7 +1342,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 ![dc_form_text](assets/dc_form_text.png)
 
-### 工作流提交按钮{#workflow-submit-button-s}
+### 工作流提交按钮 {#workflow-submit-button-s}
 
 此组件允许您创建可在工作流中使用的提交按钮。
 

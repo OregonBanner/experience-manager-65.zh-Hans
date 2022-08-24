@@ -3,7 +3,7 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: “查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5”
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 3c3efe108b020d9c64e456d409f114c8969f2723
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 7%
@@ -260,7 +260,7 @@ For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility
 <!-- version 2 of the description above * When out of the box components that don't have inlineEditing or dropTarget feature in the _cq_editConfig file (navigation, breadcrumb, embed) are deleted > undeleted (by way of Undo), all configurations are lost and empty placeholder reappears. Component must be reconfigured from scratch. (NPR-38361) -->
 * 样式系统下拉列表可能位于页面顶部而不是组件的上下文中(对于使用 `cq:editConfig` “afteredit:REFRESH_PAGE”。 此问题现已解决。 (NPR-38384)
 
-<!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
+<!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig "afteredit: REFRESH_PAGE". (NPR-38384) -->
 * 文本组件在添加到嵌套布局容器时未对齐。 (NPR-38193)
 * 当组件没有样式系统配置时，会显示空样式选项卡；现在，当不存在配置时，选项卡处于隐藏状态。 (NPR-38218)
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
@@ -453,7 +453,7 @@ UberJar [!DNL Experience Manager] 6.5.13.0在 [Maven中央存储库](https://rep
 * 当用户首次选择在自适应表单中配置字段时，用于保存配置的选项不会显示在属性浏览器中。 选择在同一编辑器中配置自适应表单的其他一些字段可解决此问题。
 
 * 在安装 [!DNL Experience Manager] 6.5.x.x:
-   * “配置Adobe Target集成时， [!DNL Experience Manager] 使用Target Standard API（IMS身份验证），然后将体验片段导出到Target时，会导致创建错误的选件类型。 而不是“体验片段”/源“Adobe Experience Manager”类型，Target 会创建若干个“HTML”/源“Adobe Target Classic”类型的选件。
+   * “配置Adobe Target集成时， [!DNL Experience Manager] 使用Target Standard API（IMS身份验证），然后将体验片段导出到Target时，会导致创建错误的选件类型。 Target会创建多个类型为“HTML”/源“Adobe Experience Manager Classic”的选件，而不是“体验片段”/源“Adobe Target Classic”的选件类型。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。
    * 使用聚合函数(如SUM、MAX和MIN)时，自适应表单服务器端验证失败(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler`：在 granite/operations/maintenance 中未发现维护窗口。

@@ -11,10 +11,10 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1952'
-ht-degree: 25%
+ht-degree: 24%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 25%
 
 旋转集模拟旋转对象的真实动作，以便于进行检查。通过旋转集，可以从任意角度查看项目，从而获取任意角度的重要可视细节。
 
-旋转集模拟360°的查看体验。 Dynamic Media 提供单轴旋转集，查看者可在该旋转集中旋转项目。另外，用户可以自由缩放和平移任何视图，只需几次简单的鼠标单击操作即可实现。这样，用户就可以从任何特定视角更仔细地检查项目。
+旋转集模拟360°的查看体验。 Dynamic Media 提供单轴旋转集，查看者可在该旋转集中旋转项目。此外，用户只需单击几下鼠标即可“自由”缩放和平移任何视图。 这样，用户就可以从任何特定视角更仔细地检查项目。
 
 旋转集由带有单词的横幅来指定 **[!UICONTROL 旋转集]**.此外，如果旋转集已发布，则发布日期(由 **[!UICONTROL 世界]** 图标，以及上次修改日期(由 **[!UICONTROL 铅笔]** 图标。
 
@@ -171,7 +171,7 @@ ht-degree: 25%
 
    * 要应用预设，请在页面的右上角附近，选择 **[!UICONTROL 预设]**，然后选择要同时应用于所有资产的预设。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。您新创建的旋转集会显示在创建时所用的文件夹中。
+1. 选择&#x200B;**[!UICONTROL “保存”]**。您新创建的旋转集会显示在创建时所用的文件夹中。
 
 ## 查看旋转集 {#viewing-spin-sets}
 

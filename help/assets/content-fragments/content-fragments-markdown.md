@@ -3,18 +3,19 @@ title: Markdown
 description: 了解内容片段编辑器如何使用Markdown语法来轻松创建无标题内容。
 feature: Content Fragments
 role: User
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
+exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 4%
+ht-degree: 91%
 
 ---
 
 # Markdown {#markdown}
 
-当您处于[创作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)时，内容片段编辑器使用&#x200B;*markdown*&#x200B;语法来轻松编写无标题内容：
+当您 [创作](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)，内容片段编辑器使用 *markdown* 允许您轻松写入无标题内容的语法：
 
-![markdown编辑器](/help/assets/content-fragments/assets/cfm-markdown-01.png)
+![Markdown 编辑器](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
 您可以定义：
 
@@ -30,7 +31,7 @@ ht-degree: 4%
 
 ## 标题符号 {#heading-notation}
 
-要通过在标题前面放置井号(#)来创建标题，请执行以下操作： 一个哈希标记(#)用于H1，两个哈希标记(##)用于H2等。 您最多可以使用6个哈希标记。 例如：
+要通过在标题前面放置井号标记 (#) 来创建标题，请执行以下操作： 一个井号标记 (#) 用于一级标题，两个井号标记 (##) 用于二级标题，以此类推。 您最多可以使用 6 个井号标记。 例如：
 
     `## This is an H2`
 
@@ -38,7 +39,7 @@ ht-degree: 4%
 
     `###### This is a H6`
 
-或者，您也可以通过以等号加下划线来创建H1，并通过以减号加下划线来创建H2。 例如：
+或者，您也可以通过等号加下划线来创建一级标题，并通过减号加下划线来创建二级标题。 例如：
 
     `This is an H1`
 
@@ -58,7 +59,7 @@ ht-degree: 4%
 
 您可以创建内联链接和引用链接。
 
-在这两种样式中，链接文本都由方括号`[]`分隔。
+在这两种样式中，链接文本都由方括号分隔 `[]`.
 
 以下是内联链接的示例：
 
@@ -91,10 +92,10 @@ ht-degree: 4%
 语法包括：
 
 * 一个感叹号：!;
-* 后跟一组方括号，其中包含图像的alt属性文本；
-* 后跟一组括号（包含图像的URL或路径），以及一个可选的标题属性，它用双引号或单引号括起来。
+* 后跟一组方括号，其中包含图像的 alt 属性文本；
+* 后跟一组括号（包含图像的 URL 或路径），以及一个用双引号或单引号括起来的可选标题属性。
 
-引用样式图像具有以下语法：
+引用样式图像的语法如下：
 
     `![Alt text][id]`
 
@@ -104,7 +105,7 @@ ht-degree: 4%
 
 ## 块引号 {#block-quotes}
 
-可以在文本前添加>符号来引用文本。 例如：
+可以在文本前添加 > 符号来引用文本。 例如：
 
     `>This is block quotes`
 
@@ -128,7 +129,7 @@ ht-degree: 4%
 
 您可以创建已排序和未排序的列表。
 
-要创建无序列表，请使用&amp;ast;符号。 例如：
+要创建未排序的列表，请使用 &amp;ast; 符号。 例如：
 
     `* item in list`
 
@@ -164,7 +165,7 @@ ht-degree: 4%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-要指示代码跨度，请用反勾号(&amp;grave;)将代码换行。 与预格式化的代码块不同，代码范围表示普通段落中的代码。
+要指示代码跨度，请用反勾号 (&grave;) 将代码换行。 与预格式化的代码块不同，代码范围表示普通段落中的代码。
 
 例如：
 
@@ -172,7 +173,7 @@ ht-degree: 4%
 
 ## 代码块 {#code-blocks}
 
-代码块通常用于说明源代码。 您可以通过使用制表符缩进代码，或者最少使用4个空格来创建代码块。 例如：
+代码块通常用于说明源代码。 您可以通过使用制表符缩进代码，或者最少 4 个空格来创建代码块。 例如：
 
     `This is a normal paragraph.`
 
@@ -180,7 +181,7 @@ ht-degree: 4%
 
 ## 反斜线转义 {#backslash-escapes}
 
-您可以使用反斜杠转义生成在格式语法中具有特殊含义的文字字符。 例如，如果您想要在单词周围加上文字星号（而不是HTML &lt;em>标记），则可以在星号之前使用反斜杠，如下所示：
+您可以使用反斜杠转义生成在格式语法中具有特殊含义的文字字符。 例如，如果您想要在单词周围加上文字星号（而不是 HTML 标记），则可以在星号前使用反斜杠，如下所示：
 
     `\\*literal asterisks\\*`
 

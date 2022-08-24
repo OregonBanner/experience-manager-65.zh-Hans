@@ -1,8 +1,8 @@
 ---
 title: 术语表
-seo-title: 术语表
+seo-title: Glossary
 description: 此术语表列出了项目核对清单中所有可交付项目文档的详细信息（按字母顺序）。
-seo-description: 此术语表列出了项目核对清单中所有可交付项目文档的详细信息（按字母顺序）。
+seo-description: This glossary lists (alphabetically) details of all Deliverable documents from the Project Checklist.
 uuid: 5f919b05-3ec5-4b18-b966-5dcf706407f4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: cca21688-40b1-433d-93dc-cd62e5558507
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '7050'
+source-wordcount: '7036'
 ht-degree: 0%
 
 ---
 
 # 术语表{#glossary}
 
-此术语表列出了[项目核对清单](/help/managing/best-practices-checklist.md)中所有可交付项文档的详细信息（逐个列出）。
+此术语表列出了 [项目核对清单](/help/managing/best-practices-checklist.md).
 
 ## 业务利益相关方的接受 {#acceptance-from-business-stakeholders}
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### Adobe安全检查列表 {#adobe-security-checklist}
 
-[Adobe安全检查表](/help/sites-administering/security-checklist.md)是为确保AEM安装安全而提供的正式检查表。 它包含您需要执行的安全措施和验证步骤，以确保实例的完整性。
+的 [Adobe安全检查列表](/help/sites-administering/security-checklist.md) 是为确保安装AEM时安全而提供的正式核对清单。 它包含您需要执行的安全措施和验证步骤，以确保实例的完整性。
 
 ### Adobe支持门户项目设置 {#adobe-support-portal-project-set-up}
 
@@ -57,19 +57,19 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 ### AEM管理员培训 {#aem-administrator-training}
 
-对解决方案的行政人员进行培训。 有关更多信息，请参阅[Adobe培训服务](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)。
+对解决方案的行政人员进行培训。 请参阅 [Adobe培训服务](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 以了解更多信息。
 
 ### AEM创作培训 {#aem-author-training}
 
-为将要为解决方案制作（创作）内容的员工提供培训。 有关更多信息，请参阅[Adobe培训服务](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)。
+为将要为解决方案制作（创作）内容的员工提供培训。 请参阅 [Adobe培训服务](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 以了解更多信息。
 
 ### AEM认证考试 {#aem-certification-exam}
 
-确保注册相应角色以参加相关的[认证考试](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)。
+确保注册适当角色以获取相关 [考试](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 ### AEM Certified {#aem-certified}
 
-确保相应角色通过了相关的[认证考试](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)。
+确保相应角色已通过 [考试](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 ### AEM技术培训 {#aem-technical-training}
 
@@ -93,7 +93,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 ### 应用程序架构定义 {#application-architecture-definition}
 
-[应用程序架构](/help/managing/best-practices.md#development-preparation)应明确定义建议应用程序的行为。
+的 [应用程序架构](/help/managing/best-practices.md#development-preparation) 应明确定义建议应用程序的行为。
 
 重点是：
 
@@ -110,8 +110,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 * 至少有一个AEM认证的Lead Developer
 * 至少一个AEM certified architect
-* 至少75%的开发人员通过AEM认证；
-这允许经认证的开发人员指导初级开发人员，并确保知识共享和透明
+* 至少75%的开发人员通过AEM认证；这允许经认证的开发人员指导初级开发人员，并确保知识共享和透明
 
 ### 架构图 {#architecture-diagram}
 
@@ -208,8 +207,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 业务要求文档(BRD)详细描述了项目的业务解决方案，为客户的业务需求和期望提供了明确的规格说明。 BRD还区分了业务解决方案和技术解决方案。
 
-在审查业务解决方案时，BRD应该回答以下问题：
-“企业想做什么？”
+在审查业务解决方案时，BRD应该回答以下问题：“企业想做什么？”
 
 ### 对已识别并符合ROI和KPI预期的解决方案或架构进行任何必要调整后，业务部门予以签收 {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
@@ -505,7 +503,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 ### 最终合同 {#finalized-contract}
 
-在继续开展项目之前，需要签订最后确定的合同。 这基于[合同草稿](#contract-draft)。
+在继续开展项目之前，需要签订最后确定的合同。 这基于 [合同草稿](#contract-draft).
 
 ### 利益相关方接受的解决方案的功能 {#functionality-of-the-solution-accepted-by-stakeholders}
 
@@ -547,7 +545,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 ### 高级解决方案设计 {#high-level-solution-design}
 
-高级解决方案设计解释了将用于开发解决方案的架构。 架构图提供了整个系统的概述，确定了将为产品及其界面开发的主要组件。
+高级解决方案设计说明了将用于开发解决方案的架构。 架构图提供了整个系统的概述，确定了将为产品及其界面开发的主要组件。
 
 ### 高级系统图 {#high-level-system-map}
 
@@ -629,7 +627,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 * 维护
 * 兼容性
 * 可重用性
-* 安全
+* 安全性
 * 可扩展性
 
 此概念还可以超出解决方案中使用的框架、库和其他工件。
@@ -904,7 +902,7 @@ Adobe支持门户允许实施合作伙伴和客户将AEM实施设置为支持门
 
 ### 项目工作 — 最终估计 {#project-efforts-final-estimates}
 
-[初始估计数](#project-efforts-initial-estimates)为高水平，根据执行工作的高水平要求作出。
+的 [初始估计](#project-efforts-initial-estimates) 是高水平的，是按照实施的高水平要求制定的。
 
 现对这些内容进行审查、改进和扩大，以提供最终估计。 估计应由每个适当的项目负责人提供，包括项目管理、咨询、架构、测试和开发。
 
@@ -969,7 +967,7 @@ AEM维护多个版本的资产和内容。 清除规则的设计和配置是定�
 
 >[!NOTE]
 >
->有关示例，请参阅[AEM发行说明](/help/release-notes/release-notes.md)。
+>有关示例，请参阅 [AEM发行说明](/help/release-notes/release-notes.md).
 
 ### 在生产环境中运行的版本 {#release-running-on-production-environment}
 
@@ -1255,7 +1253,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 ### 测试内容 {#test-content}
 
-测试内容应尽可能靠近生产内容。 它必须具有足够大的选择范围，以便能够测试所有方案。
+测试内容应尽可能靠近生产内容。 必须具有足够大的选择范围，才能测试所有方案。
 
 ### 测试环境已准备就绪 {#test-environment-ready}
 
@@ -1288,7 +1286,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 ### 测试计划 {#testing-plans}
 
-这些计划更详细地概述了针对每个开发阶段执行测试的情况，并以[测试策略](#testing-strategy)为基础。
+这些计划更详细地概述了为每个开发阶段执行测试的情况，并以 [测试策略](#testing-strategy).
 
 ### 测试范围 {#testing-scope}
 
@@ -1403,7 +1401,7 @@ Recommendations与软件和硬件架构的安全性相关。
 
 根据工作流概念，这些规范应详细定义将创建完整工作流的步骤。
 
-每个工作流的规范应包括（至少）：
+每个工作流的规范应（至少）包括：
 
 * 用例
 * 角色

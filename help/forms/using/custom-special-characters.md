@@ -1,19 +1,19 @@
 ---
 title: 通信管理中的自定义特殊字符
-seo-title: 通信管理中的自定义特殊字符
+seo-title: Custom special characters in Correspondence Management
 description: 了解如何在通信管理中添加自定义特殊字符。
-seo-description: 了解如何在通信管理中添加自定义特殊字符。
+seo-description: Learn how to add custom special characters in Correspondence Management.
 uuid: a1890f6d-8e0c-471f-a9bd-861acf1f17e6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
-feature: 通信管理
+feature: Correspondence Management
 exl-id: 3e978c3e-12f2-4dc6-801d-8ab4c5df6700
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '639'
 ht-degree: 1%
 
 ---
@@ -32,8 +32,8 @@ ht-degree: 1%
 
 您可以在字母中插入特殊字符：
 
-* 在[文本编辑器](/help/forms/using/document-fragments.md#createtext)中
-* 在[可编辑的内联模块中，通信](../../forms/using/create-correspondence.md#managecontent)
+* 在 [文本编辑器](/help/forms/using/document-fragments.md#createtext)
+* 在 [可编辑的内联模块](../../forms/using/create-correspondence.md#managecontent)
 
 ![specialcharactersinlinemodule](assets/specialcharactersinlinemodule.png)
 
@@ -43,10 +43,10 @@ ht-degree: 1%
 
 使用以下步骤添加对自定义特殊字符的支持：
 
-1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`并以管理员身份登录。
-1. 在apps文件夹中，创建一个名为&#x200B;**[!UICONTROL specialcharacters]**&#x200B;的文件夹，其路径/结构与specialcharacters文件夹类似（位于libs下的textEditorConfig文件夹中）：
+1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 和以管理员身份登录。
+1. 在apps文件夹中，创建一个名为 **[!UICONTROL 特殊字符]** 其路径/结构类似于specialcharacters文件夹（位于libs下的textEditorConfig文件夹中）：
 
-   1. 右键单击以下路径中的&#x200B;**特殊字符**&#x200B;文件夹，然后选择&#x200B;**覆盖节点**:
+   1. 右键单击 **特殊字符** 文件夹，然后选择 **覆盖节点**:
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -69,25 +69,23 @@ ht-degree: 1%
       >    * 安装功能包
 
 
-   1. 单击&#x200B;**确定**，然后单击&#x200B;**保存全部**。 在指定的路径中创建特定字符文件夹。
+   1. 单击 **确定** 然后单击 **全部保存**. 在指定的路径中创建特定字符文件夹。
 
       创建叠加后，验证节点结构标记。 在/apps中使用叠加创建的每个节点都应具有与/libs中为该节点定义的相同类和属性。 如果/apps位置下的节点结构中缺少任何属性或标记，请将其标记与/libs中的相应节点同步。
 
-
-
-1. 确保&#x200B;**[!UICONTROL textEditorConfig]**&#x200B;节点具有以下属性和值：
+1. 确保 **[!UICONTROL textEditorConfig]** 节点具有以下属性和值：
 
    | 名称 | 类型 | 值 |
    |---|---|---|
    | cmConfigurationType | 字符串 | cmTextEditorConfiguration |
    | cssPath | 字符串 | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. 右键单击以下路径中的&#x200B;**[!UICONTROL 特殊字符]**&#x200B;文件夹，然后选择&#x200B;**创建>子节点**，然后单击&#x200B;**保存全部**:
+1. 右键单击 **[!UICONTROL 特殊字符]** 文件夹，然后选择 **创建>子节点** 然后单击 **全部保存**:
 
-   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
+   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacts/&lt;yourchildnode>
 
 1. 刷新文本编辑器\创建通信UI页。 您添加的节点是UI中特殊字符列表中的最后一个节点。
-1. 单击&#x200B;**Save All**。
+1. 单击 **全部保存**.
 1. 根据需要更改特殊字符：
 
 <table>

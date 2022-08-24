@@ -1,8 +1,8 @@
 ---
 title: 在JEE环境中强化AEM Forms
-seo-title: 在JEE环境中强化AEM Forms
+seo-title: Hardening Your AEM Forms on JEE Environment
 description: 了解各种安全强化设置，以增强在企业内部网中运行的JEE上的AEM Forms的安全性。
-seo-description: 了解各种安全强化设置，以增强在企业内部网中运行的JEE上的AEM Forms的安全性。
+seo-description: Learn a variety of security-hardening settings to enhance the security of AEM Forms on JEE running in a corporate intranet.
 uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
 content-type: reference
 topic-tags: Security
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '7696'
-ht-degree: 0%
+source-wordcount: '7665'
+ht-degree: 1%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 本文介绍了在安装和配置生命周期的以下阶段应用的硬化技术：
 
-* **安装前：** 在JEE上安装AEM Forms之前，请使用这些技术。
-* **安装：** 在JEE上的AEM Forms安装过程中使用这些技术。
-* **安装后：** 安装后使用这些技术，之后会定期使用。
+* **预安装：** 在JEE上安装AEM Forms之前，请使用这些技术。
+* **安装：** 在AEM Forms on JEE安装过程中使用这些技术。
+* **安装后：** 在安装后使用这些技术，然后定期使用。
 
 AEM Forms on JEE是高度可自定义的，并且可以在许多不同的环境中工作。 某些建议可能不符合您组织的需求。
 
@@ -41,7 +41,7 @@ AEM Forms on JEE是高度可自定义的，并且可以在许多不同的环境�
 
 **在Windows上安装和配置**
 
-如果您在JBoss的JEE上使用统包方法安装AEM Forms，或者您正在安装PDF生成器，则您应以管理员身份在Windows上执行安装。 此外，在具有本机应用程序支持的Windows上安装PDF生成器时，必须与安装Microsoft Office的Windows用户一样运行安装。 有关安装权限的更多信息，请参阅*在JEE上安装和部署AEM Forms*文档，以了解您的应用程序服务器。
+如果您在JBoss的JEE上使用统包方法安装AEM Forms，或者您正在安装PDF生成器，则您应以管理员身份在Windows上执行安装。 此外，在具有本机应用程序支持的Windows上安装PDF生成器时，您必须与安装Microsoft Office的Windows用户一样运行安装。 有关安装权限的更多信息，请参阅*在JEE上安装和部署AEM Forms*文档，以了解您的应用程序服务器。
 
 ### 网络层安全性 {#network-layer-security}
 
@@ -69,14 +69,14 @@ AEM Forms on JEE是高度可自定义的，并且可以在许多不同的环境�
    <td><p>防火墙</p> </td> 
    <td><p>使用以下标准选择防火墙解决方案：</p> 
     <ul> 
-     <li><p>实施支持代理服务器和/或<em>状态检查</em>的防火墙，而不是简单的数据包过滤解决方案。</p> </li> 
-     <li><p>使用支持<em>拒绝除明确允许的</em>安全范例之外的所有服务的防火墙。</p> </li> 
-     <li><p>实施双宿主或多宿主的防火墙解决方案。 此架构可提供最高级别的安全性，并有助于防止未经授权的用户绕过防火墙安全性。</p> </li> 
+     <li><p>实施支持代理服务器和/或 <em>状态检查</em> 而不是简单的包过滤解决方案。</p> </li> 
+     <li><p>使用支持 <em>拒绝所有服务，但明确允许的服务除外</em> 安全范例。</p> </li> 
+     <li><p>实施双宿或多宿的防火墙解决方案。 此架构可提供最高级别的安全性，并有助于防止未经授权的用户绕过防火墙安全性。</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td><p>数据库端口</p> </td> 
-   <td><p>请勿对数据库使用默认监听端口(MySQL - 3306、Oracle- 1521、MS SQL - 1433)。 有关更改数据库端口的信息，请参阅数据库文档。</p> <p>使用其他数据库端口会影响JEE上的整个AEM Forms配置。 如果更改默认端口，则必须在其他配置区域(例如JEE上的AEM Forms的数据源)中进行相应的修改。</p> <p>有关在JEE上的AEM Forms中配置数据源的信息，请参阅<a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Forms用户指南</a>中的在JEE上安装和升级AEM Forms或在JEE上升级到AEM Forms以获取应用程序服务器。</p> </td> 
+   <td><p>请勿对数据库使用默认监听端口(MySQL - 3306、Oracle- 1521、MS SQL - 1433)。 有关更改数据库端口的信息，请参阅数据库文档。</p> <p>使用其他数据库端口会影响JEE上的整个AEM Forms配置。 如果更改默认端口，则必须在其他配置区域(例如JEE上的AEM Forms的数据源)中进行相应的修改。</p> <p>有关在JEE上的AEM Forms中配置数据源的信息，请参阅在JEE上安装和升级AEM Forms或在JEE上为应用程序服务器升级到AEM Forms(位于 <a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Forms用户指南</a>.</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -108,7 +108,7 @@ AEM Forms on JEE是高度可自定义的，并且可以在许多不同的环境�
  </tbody> 
 </table>
 
-有关操作系统的其他安全信息，请参阅[&quot;操作系统安全信息&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
+有关操作系统的其他安全信息，请参阅 [&quot;操作系统安全信息&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information).
 
 ## 安装 {#installation}
 
@@ -123,8 +123,8 @@ AEM Forms on JEE是高度可自定义的，并且可以在许多不同的环境�
  </thead> 
  <tbody>
   <tr> 
-   <td><p>权限</p> </td> 
-   <td><p>使用安装软件所需的最少权限数。 使用“管理员”组中未包含的帐户登录到您的计算机。 在Windows上，您可以使用“运行方式”命令在JEE安装程序上以管理用户身份运行AEM Forms。 在UNIX和Linux系统上，使用<code>sudo</code>之类的命令来安装软件。</p> </td> 
+   <td><p>特权</p> </td> 
+   <td><p>使用安装软件所需的最少权限数。 使用“管理员”组中未包含的帐户登录到您的计算机。 在Windows上，您可以使用“运行方式”命令在JEE安装程序上以管理用户身份运行AEM Forms。 在UNIX和Linux系统上，使用命令，例如 <code>sudo</code> 来安装软件。</p> </td> 
   </tr> 
   <tr> 
    <td><p>软件源</p> </td> 
@@ -140,11 +140,11 @@ AEM Forms on JEE是高度可自定义的，并且可以在许多不同的环境�
   </tr> 
   <tr> 
    <td><p>跨域策略文件</p> </td> 
-   <td><p>服务器上存在<code>crossdomain.xml</code>文件可能会立即削弱该服务器。 建议您尽可能限制域列表。 使用指南<em>（已弃用）</em>时，请勿将开发期间使用的<code>crossdomain.xml</code>文件放入生产中。 对于使用Web服务的指南，如果服务位于提供该指南的同一服务器上，则根本不需要<code>crossdomain.xml</code>文件。 但是，如果服务位于另一台服务器上，或者如果涉及群集，则需要存在<code>crossdomain.xml</code>文件。 有关crossdomain.xml文件的更多信息，请参阅<a href="https://kb2.adobe.com/cps/142/tn_14213.html">https://kb2.adobe.com/cps/142/tn_14213.html</a>。</p> </td> 
+   <td><p>存在 <code>crossdomain.xml</code> 服务器上的文件可能会立即削弱该服务器。 建议您尽可能限制域列表。 请勿将 <code>crossdomain.xml</code> 使用指南在开发到生产中时使用的文件 <em>（已弃用）</em>. 对于使用Web服务的指南，如果该服务位于提供该指南的同一服务器上，则 <code>crossdomain.xml</code> 文件。 但是，如果服务位于另一台服务器上，或者如果涉及群集，则存在 <code>crossdomain.xml</code> 文件。 请参阅 <a href="https://kb2.adobe.com/cps/142/tn_14213.html">https://kb2.adobe.com/cps/142/tn_14213.html</a>，以了解有关crossdomain.xml文件的更多信息。</p> </td> 
   </tr> 
   <tr> 
    <td><p>操作系统安全设置</p> </td> 
-   <td><p>如果需要在Solaris平台上使用192位或256位XML加密，请确保安装<code>pkcs11_softtoken_extra.so</code>而不是<code>pkcs11_softtoken.so</code>。</p> </td> 
+   <td><p>如果需要在Solaris平台上使用192位或256位XML加密，请确保安装 <code>pkcs11_softtoken_extra.so</code> 而不是 <code>pkcs11_softtoken.so</code>.</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -169,19 +169,19 @@ AEM Forms on JEE默认使用LocalSystem帐户安装服务。 内置的LocalSyste
 
 要使用特定的非管理帐户运行部署了JEE上的AEM Forms的应用程序服务器，请按照以下说明操作：
 
-1. 在Microsoft管理控制台(MMC)中，为表单服务器服务创建本地用户以登录为：
+1. 在Microsoft管理控制台(MMC)中，为表单服务器服务创建一个本地用户，以登录方式：
 
-   * 选择&#x200B;**用户无法更改密码**。
-   * 在&#x200B;**成员**&#x200B;选项卡上，确保列出&#x200B;**用户**&#x200B;组。
+   * 选择 **用户无法更改密码**.
+   * 在 **成员** 选项卡，确保 **用户** 列出群组。
 
    >[!NOTE]
    >
    >无法更改PDF生成器的此设置。
 
-1. 选择&#x200B;**开始** > **设置** > **管理工具** > **服务**。
+1. 选择 **开始** > **设置** > **管理工具** > **服务**.
 1. 双击JEE上的JBoss for AEM Forms并停止服务。
-1. 在&#x200B;**登录**&#x200B;选项卡上，选择&#x200B;**此帐户**，浏览您创建的用户帐户，然后输入该帐户的密码。
-1. 在MMC中，打开&#x200B;**本地安全设置**，然后选择&#x200B;**本地策略** > **用户权限分配**。
+1. 在 **登录** 选项卡，选择 **此帐户**，浏览您创建的用户帐户，然后输入该帐户的密码。
+1. 在MMC中，打开 **本地安全设置** 选择 **本地策略** > **用户权限分配**.
 1. 将以下权限分配给表单服务器在下运行的用户帐户：
 
    * 通过终端服务拒绝登录
@@ -189,18 +189,17 @@ AEM Forms on JEE默认使用LocalSystem帐户安装服务。 内置的LocalSyste
    * 以服务身份登录（应已设置）
 
 1. 为新用户帐户授予对以下目录的修改权限：
-   * **全局文档存储(GDS)目录**:GDS目录的位置在AEM Forms安装过程中手动配置。如果位置设置在安装期间保持为空，则位置默认为`[JBoss root]/server/[type]/svcnative/DocumentStorage`应用程序服务器安装下的目录
-   * **CRX-Repository目录**:默认位置为  `[AEM-Forms-installation-location]\crx-repository`
+   * **全局文档存储(GDS)目录**:GDS目录的位置在AEM Forms安装过程中手动配置。 如果位置设置在安装期间保持为空，则位置默认为应用程序服务器安装下的目录( `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repository目录**:默认位置为 `[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms临时目录**:
       * (Windows)在环境变量中设置的TMP或TEMP路径
-      * （AIX、Linux或Solaris）登录用户的主目录
-在基于UNIX的系统上，非根用户可以使用以下目录作为临时目录：
+      * （AIX、Linux或Solaris）登录用户的主目录在基于UNIX的系统上，非根用户可以将以下目录用作临时目录：
       * (Linux)/var/tmp或/usr/tmp
       * (AIX)/tmp或/usr/tmp
       * (Solaris)/var/tmp或/usr/tmp
 1. 为以下目录授予新的用户帐户写入权限：
    * [JBoss-directory]\standalone\deployment
-   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\dantalone\
    * [JBoss-directory]\bin\
 
    >[!NOTE]
@@ -269,15 +268,15 @@ AEM Forms on JEE默认使用LocalSystem帐户安装服务。 内置的LocalSyste
 
 配置管理器允许您将Acrobat Reader DC扩展凭据上传到JEE信任存储上的AEM Forms。 这意味着，默认情况下已启用通过远程协议（SOAP和EJB）访问信任存储凭据服务的功能。 在您使用配置管理器上传权限凭据后或者如果您决定稍后使用管理控制台来管理凭据，则不再需要此访问。
 
-您可以按照[禁用对服务的非基本远程访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)部分中的步骤，禁用对所有信任存储服务的远程访问。
+您可以按照部分中的步骤，禁用对所有信任存储服务的远程访问 [禁用对服务的非必要远程访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services).
 
 **禁用所有非必需的匿名访问**
 
-某些表单服务器服务具有可由匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照[禁用对服务的非必要匿名访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步骤禁用它。
+某些表单服务器服务具有可由匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照 [禁用对服务的非必要匿名访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
 
 #### 更改默认管理员密码 {#change-the-default-administrator-password}
 
-安装JEE上的AEM Forms时，会为用户Super Administrator/login-id Administrator配置一个默认用户帐户，其默认密码为&#x200B;*password*。 您应使用配置管理器立即更改此密码。
+安装JEE上的AEM Forms时，会为用户Super Administrator/login-id Administrator配置一个默认用户帐户，其默认密码为 *密码*. 您应使用配置管理器立即更改此密码。
 
 1. 在Web浏览器中键入以下URL:
 
@@ -293,19 +292,19 @@ AEM Forms on JEE默认使用LocalSystem帐户安装服务。 内置的LocalSyste
 
    **WebSphere:** 9080。
 
-1. 在&#x200B;**用户名**&#x200B;字段中，键入`administrator`，在&#x200B;**密码**&#x200B;字段中，键入`password`。
-1. 单击&#x200B;**设置** > **用户管理** > **用户和组**。
-1. 在&#x200B;**Find**&#x200B;字段中键入`administrator`，然后单击&#x200B;**Find**。
-1. 从用户列表中单击&#x200B;**Super Administrator**。
-1. 单击“编辑用户”页上的&#x200B;**更改密码**。
-1. 指定新密码，然后单击&#x200B;**Save**。
+1. 在 **用户名** 字段，类型 `administrator` 和 **密码** 字段，类型 `password`.
+1. 单击 **设置** > **用户管理** > **用户和组**.
+1. 类型 `administrator` 在 **查找** ，然后单击 **查找**.
+1. 单击 **超级管理员** 中。
+1. 单击 **更改密码** （在“编辑用户”页面上）。
+1. 指定新密码并单击 **保存**.
 
 此外，还建议通过执行以下步骤来更改CRX管理员的默认密码：
 
-1. 使用默认的用户名/密码登录`https://[server]:[port]/lc/libs/granite/security/content/useradmin.html`。
-1. 在搜索字段中键入Administrator ，然后单击&#x200B;**Go**。
-1. 从搜索结果中选择&#x200B;**Administrator** ，然后单击用户界面右下方的&#x200B;**编辑**&#x200B;图标。
-1. 在&#x200B;**New Password**&#x200B;字段中指定新密码，在&#x200B;**Your Password**&#x200B;字段中指定旧密码。
+1. 登录 `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` 使用默认的用户名/密码。
+1. 在搜索字段中键入Administrator ，然后单击 **开始**.
+1. 选择 **管理员** ，然后单击 **编辑** 图标。
+1. 在 **新密码** 字段和旧密码 **您的密码** 字段。
 1. 单击用户界面右下方的保存图标。
 
 #### 禁用WSDL生成 {#disable-wsdl-generation}
@@ -318,8 +317,8 @@ Web服务定义语言(WSDL)生成应仅为开发环境启用，开发人员在�
    https://[host name]:[port]/adminui
    ```
 
-1. 单击&#x200B;**设置>核心系统设置>配置**。
-1. 取消选择&#x200B;**启用WSDL**&#x200B;并单击&#x200B;**确定**。
+1. 单击 **设置>核心系统设置>配置**.
+1. 取消选择 **启用WSDL** 单击 **确定**.
 
 ### 应用程序服务器安全性 {#application-server-security}
 
@@ -339,11 +338,11 @@ Web服务定义语言(WSDL)生成应仅为开发环境启用，开发人员在�
   </tr> 
   <tr> 
    <td><p>应用程序服务器Cookie设置</p> </td> 
-   <td><p>应用程序Cookie由应用程序服务器控制。 部署应用程序时，应用程序服务器管理员可以在服务器范围或特定于应用程序的基础上指定Cookie首选项。 默认情况下，服务器设置会首选。</p> <p>应用程序服务器生成的所有会话Cookie都应包含<code>HttpOnly</code>属性。 例如，使用JBoss应用程序服务器时，可以将SessionCookie元素修改为<code>WEB-INF/web.xml</code>文件中的<code>httpOnly="true"</code>。</p> <p>您可以限制使用仅限HTTPS发送Cookie。 因此，不会通过HTTP发送这些文件并对其进行未加密。 应用程序服务器管理员应全局启用服务器的安全Cookie。 例如，使用JBoss应用程序服务器时，可以将连接器元素修改为<code>server.xml</code>文件中的<code>secure=true</code>。</p> <p>有关Cookie设置的更多详细信息，请参阅应用程序服务器文档。</p> </td> 
+   <td><p>应用程序Cookie由应用程序服务器控制。 部署应用程序时，应用程序服务器管理员可以在服务器范围或特定于应用程序的基础上指定Cookie首选项。 默认情况下，服务器设置会首选。</p> <p>您的应用程序服务器生成的所有会话Cookie都应包含 <code>HttpOnly</code> 属性。 例如，使用JBoss应用程序服务器时，您可以将SessionCookie元素修改为 <code>httpOnly="true"</code> 在 <code>WEB-INF/web.xml</code> 文件。</p> <p>您可以限制使用仅限HTTPS发送Cookie。 因此，不会通过HTTP发送这些文件并对其进行未加密。 应用程序服务器管理员应全局启用服务器的安全Cookie。 例如，使用JBoss Application Server时，可以将连接器元素修改为 <code>secure=true</code> 在 <code>server.xml</code> 文件。</p> <p>有关Cookie设置的更多详细信息，请参阅应用程序服务器文档。</p> </td> 
   </tr> 
   <tr> 
    <td><p>目录浏览</p> </td> 
-   <td><p>当有人请求不存在的页面或请求控制器名称(请求字符串以正斜杠(/)结尾)时，应用程序服务器不应返回该目录的内容。 要防止出现这种情况，您可以禁用应用程序服务器上的目录浏览。 您应该为管理控制台应用程序以及服务器上运行的其他应用程序执行此操作。</p> <p>对于JBoss，请在web.xml文件中将<code>DefaultServlet</code>属性的列表初始化参数的值设置为<code>false</code>，如以下示例所示：</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;默认&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;列表&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>对于WebSphere，将ibm-web-ext.xmi文件中的<code>directoryBrowsingEnabled</code>属性设置为<code>false</code>。</p> <p>对于WebLogic，将weblogic.xml文件中的index-directories属性设置为<code>false</code>，如以下示例所示：</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
+   <td><p>当有人请求不存在的页面或请求控制器名称(请求字符串以正斜杠(/)结尾)时，应用程序服务器不应返回该目录的内容。 要防止出现这种情况，您可以禁用应用程序服务器上的目录浏览。 您应该为管理控制台应用程序以及服务器上运行的其他应用程序执行此操作。</p> <p>对于JBoss，请设置 <code>DefaultServlet</code> 属性 <code>false</code> 在web.xml文件中，如以下示例所示：</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;默认&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;列表&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>对于WebSphere，请将 <code>directoryBrowsingEnabled</code> ibm-web-ext.xmi文件中的属性 <code>false</code>.</p> <p>对于WebLogic，将weblogic.xml文件中的index-directories属性设置为 <code>false</code>，如以下示例所示：</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -352,11 +351,11 @@ Web服务定义语言(WSDL)生成应仅为开发环境启用，开发人员在�
 
 在保护数据库时，应实施数据库供应商描述的措施。 您应当为数据库用户分配最低要求的数据库权限，该权限授予AEM Forms在JEE上使用的权限。 例如，请勿使用具有数据库管理员权限的帐户。
 
-在Oracle时，您使用的数据库帐户只需要CONNECT、资源和“创建视图”权限。 有关其他数据库的类似要求，请参阅[准备在JEE（单服务器）上安装AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)。
+在Oracle时，您使用的数据库帐户只需要CONNECT、资源和“创建视图”权限。 有关其他数据库的类似要求，请参见 [正在准备在JEE（单服务器）上安装AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64).
 
 #### 在Windows上为JBoss配置SQL Server的集成安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
-1. 修改[JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml}以将`integratedSecurity=true`添加到连接URL，如以下示例所示：
+1. 修改 [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml}要添加 `integratedSecurity=true` 到连接URL，如以下示例所示：
 
    ```java
     jdbc:sqlserver://<serverhost>:<port>;databaseName=<dbname>;integratedSecurity=true
@@ -364,7 +363,7 @@ Web服务定义语言(WSDL)生成应仅为开发环境启用，开发人员在�
 
 1. 将sqljdbc_auth.dll文件添加到运行应用程序服务器的计算机上的Windows系统路径中。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 6.2.1.0驱动程序安装一起找到。
 1. 将“从本地系统登录为”的JBoss Windows服务(JBoss for AEM Forms on JEE)属性修改为具有AEM Forms数据库和最低权限集的登录帐户。 如果您从命令行而不是作为Windows服务运行JBoss，则无需执行此步骤。
-1. 将&#x200B;**混合**&#x200B;模式的SQL Server安全设置为&#x200B;**仅Windows身份验证**。
+1. 从设置SQL Server的安全性 **混合** 模式 **仅Windows身份验证**.
 
 #### 在Windows上为WebLogic配置SQL Server的集成安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
 
@@ -374,30 +373,30 @@ Web服务定义语言(WSDL)生成应仅为开发环境启用，开发人员在�
    https://[host name]:7001/console
    ```
 
-1. 在“更改中心”下，单击&#x200B;**锁定并编辑**。
-1. 在“域结构”下，单击&#x200B;*[base_domain]* > **服务** > **JDBC** > **数据源**，然后在右侧窗格中单击&#x200B;**IDP_DS**。
-1. 在下一个屏幕的&#x200B;**Configuration**&#x200B;选项卡上，单击&#x200B;**连接池**&#x200B;选项卡，然后在&#x200B;**Properties**&#x200B;框中，键入`integratedSecurity=true`。
-1. 在“域结构”下，单击&#x200B;**[base_domain]** > **服务** > **JDBC** > **数据源**，然后在右侧窗格中单击&#x200B;**RM_DS**。
-1. 在下一个屏幕的&#x200B;**Configuration**&#x200B;选项卡上，单击&#x200B;**连接池**&#x200B;选项卡，然后在&#x200B;**Properties**&#x200B;框中，键入`integratedSecurity=true`。
+1. 在“更改中心”(Change Center)下，单击 **锁定和编辑**.
+1. 在“域结构”(Domain Structure)下，单击 *[base_domain]* > **服务** > **JDBC** > **数据源** 然后，在右窗格中，单击 **IDP_DS**.
+1. 在下一个屏幕上，在 **配置** ，单击 **连接池** 选项卡和 **属性** 框，文字 `integratedSecurity=true`.
+1. 在“域结构”(Domain Structure)下，单击 **[base_domain]** > **服务** > **JDBC** > **数据源** 然后，在右窗格中，单击 **RM_DS**.
+1. 在下一个屏幕上，在 **配置** ，单击 **连接池** 选项卡和 **属性** 框，文字 `integratedSecurity=true`.
 1. 将sqljdbc_auth.dll文件添加到运行应用程序服务器的计算机上的Windows系统路径中。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 6.2.1.0驱动程序安装一起找到。
-1. 将&#x200B;**混合**&#x200B;模式的SQL Server安全设置为&#x200B;**仅Windows身份验证**。
+1. 从设置SQL Server的安全性 **混合** 模式 **仅Windows身份验证**.
 
 #### 在Windows上为WebSphere配置SQL Server的集成安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
 
 在WebSphere上，仅当使用外部SQL Server JDBC驱动程序时，才能配置集成安全，而不是使用WebSphere嵌入的SQL Server JDBC驱动程序时。
 
 1. 登录到WebSphere管理控制台。
-1. 在导航树中，单击&#x200B;**资源** > **JDBC** > **数据源**，然后在右窗格中单击&#x200B;**IDP_DS**。
-1. 在右窗格的“其他属性”下，单击&#x200B;**自定义属性**，然后单击&#x200B;**新建**。
-1. 在&#x200B;**名称**&#x200B;框中，键入`integratedSecurity`，在&#x200B;**值**&#x200B;框中，键入`true`。
-1. 在导航树中，单击&#x200B;**资源** > **JDBC** > **数据源**，然后在右窗格中单击&#x200B;**RM_DS**。
-1. 在右窗格的“其他属性”下，单击&#x200B;**自定义属性**，然后单击&#x200B;**新建**。
-1. 在&#x200B;**名称**&#x200B;框中，键入`integratedSecurity`，在&#x200B;**值**&#x200B;框中，键入`true`。
-1. 在安装了WebSphere的计算机上，将sqljdbc_auth.dll文件添加到Windows系统路径(C:\Windows)中。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 1.2驱动程序安装位置相同（默认为&#x200B;*[InstallDir]*/sqljdbc_1.2/enu/auth/x86）。
-1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击WebSphere的Windows服务（IBM WebSphere应用程序服务器&lt;version> - &lt;node>），然后选择&#x200B;**属性**。
-1. 在“属性”对话框中，单击&#x200B;**登录**&#x200B;选项卡。
-1. 选择&#x200B;**此帐户**&#x200B;并提供设置要使用的登录帐户所需的信息。
-1. 在SQL Server上将安全性从&#x200B;**混合**&#x200B;模式设置为&#x200B;**仅Windows身份验证**。
+1. 在导航树中，单击 **资源** > **JDBC** > **数据源** 然后，在右窗格中，单击 **IDP_DS**.
+1. 在右窗格的“Additional Properties（其他属性）”下，单击 **自定义属性**，然后单击 **新建**.
+1. 在 **名称** 框，文字 `integratedSecurity` 和 **值** 框，文字 `true`.
+1. 在导航树中，单击 **资源** > **JDBC** > **数据源** 然后，在右窗格中，单击 **RM_DS**.
+1. 在右窗格的“Additional Properties（其他属性）”下，单击 **自定义属性**，然后单击 **新建**.
+1. 在 **名称** 框，文字 `integratedSecurity` 和 **值** 框，文字 `true`.
+1. 在安装了WebSphere的计算机上，将sqljdbc_auth.dll文件添加到Windows系统路径(C:\Windows)中。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 1.2驱动程序安装位置相同(默认为 *[InstallDir]*/sqljdbc_1.2/enu/auth/x86)。
+1. 选择 **开始** > **控制面板** > **服务**，右键单击WebSphere的Windows服务(IBM WebSphere Application Server) &lt;version> - &lt;node>)并选择 **属性**.
+1. 在属性对话框中，单击 **登录** 选项卡。
+1. 选择 **此帐户** 以及提供设置您要使用的登录帐户所需的信息。
+1. 在SQL Server上设置安全 **混合** 模式 **仅Windows身份验证**.
 
 ### 保护对数据库中敏感内容的访问 {#protecting-access-to-sensitive-content-in-the-database}
 
@@ -409,7 +408,7 @@ AEM Forms数据库模式包含有关系统配置和业务流程的敏感信息�
 * 信任存储HSM PIN加密密钥
 * 本地用户密码哈希
 
-有关特定于供应商的工具的信息，请参阅[&quot;数据库安全信息&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
+有关特定于供应商的工具的信息，请参阅 [&quot;数据库安全信息&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information).
 
 ### LDAP安全 {#ldap-security}
 
@@ -424,8 +423,8 @@ AEM Forms数据库模式包含有关系统配置和业务流程的敏感信息�
 #### 设置自动帐户锁定 {#set-automatic-account-locking}
 
 1. 登录到管理控制台。
-1. 单击&#x200B;**设置** > **用户管理** > **域管理**。
-1. 在自动帐户锁定设置下，将&#x200B;**最大连续身份验证失败数**&#x200B;设置为低数，如3。
+1. 单击 **设置** > **用户管理** > **域管理**.
+1. 在自动帐户锁定设置下，设置 **最大连续身份验证失败数** 到低数，如3。
 1. 单击&#x200B;**保存**。
 
 ### 审核和日志记录 {#auditing-and-logging}
@@ -454,7 +453,7 @@ AEM Forms数据库模式包含有关系统配置和业务流程的敏感信息�
   </tr> 
   <tr> 
    <td><p>日志文件冗余</p> </td> 
-   <td><p>如果资源允许，请实时将日志发送到攻击者无法访问的其他服务器（仅写入），方法是使用Syslog、Tivoli、Microsoft Operations Manager(MOM)Server或其他机制。</p> <p>以这种方式保护日志有助于防止篡改。 此外，在中央存储库中存储日志有助于进行关联和监控（例如，如果使用了多个表单服务器，并且在多台计算机上对每台计算机查询密码进行了猜测攻击）。</p> </td> 
+   <td><p>如果资源允许，请实时将日志发送到攻击者无法访问的其他服务器（只写），方法是使用Syslog、Tivoli、Microsoft Operations Manager(MOM)Server或其他机制。</p> <p>以这种方式保护日志有助于防止篡改。 此外，在中央存储库中存储日志有助于进行关联和监控（例如，如果使用了多个表单服务器，并且在多台计算机上对每台计算机查询密码进行了猜测攻击）。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -475,7 +474,7 @@ AEM Forms数据库模式包含有关系统配置和业务流程的敏感信息�
 
 ### 为Web访问设置反向代理 {#setting-up-a-reverse-proxy-for-web-access}
 
-可以使用&#x200B;*反向代理*&#x200B;来确保JEE Web应用程序上AEM Forms的一组URL可供外部和内部用户使用。 此配置比允许用户直接连接到JEE上运行AEM Forms的应用程序服务器更加安全。 反向代理为在JEE上运行AEM Forms的应用程序服务器执行所有HTTP请求。 用户只能通过网络访问反向代理，并且只能尝试反向代理支持的URL连接。
+A *反向代理* 可用于确保外部和内部用户均可使用JEE Web应用程序上AEM Forms的一组URL。 此配置比允许用户直接连接到JEE上运行AEM Forms的应用程序服务器更加安全。 反向代理为在JEE上运行AEM Forms的应用程序服务器执行所有HTTP请求。 用户只能通过网络访问反向代理，并且只能尝试反向代理支持的URL连接。
 
 **AEM Forms（在JEE根URL上），用于反向代理服务器**
 
@@ -662,7 +661,7 @@ JEE Web应用程序上每个AEM Forms的以下应用程序根URL。 您应该配
 
 跨站点请求伪造(CSRF)攻击利用网站对用户的信任来传输未经授权和无意的命令。 攻击的设置方式是：在网页中包含链接或脚本，或在电子邮件中包含URL，以访问用户已经通过身份验证的其他网站。
 
-例如，您可能在同时浏览其他网站的同时登录到管理控制台。 其中一个网页可以包括具有`src`属性的HTML图像标记，该属性针对受害者网站上的服务器端脚本。 攻击网站利用Web浏览器提供的基于Cookie的会话身份验证机制，可以向此受害服务器端脚本发送恶意请求，伪装成合法用户。 有关更多示例，请参阅[https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples)。
+例如，您可能在同时浏览其他网站的同时登录到管理控制台。 其中一个网页可以包括带有 `src` 用于定位受害网站上的服务器端脚本的属性。 攻击网站利用Web浏览器提供的基于Cookie的会话身份验证机制，可以向此受害服务器端脚本发送恶意请求，伪装成合法用户。 有关更多示例，请参阅 [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
 
 CSRF具有以下共性：
 
@@ -673,10 +672,10 @@ CSRF具有以下共性：
 
 AEM Forms on JEE使用反向链接过滤器功能阻止CSRF攻击。 本节使用以下术语来描述反向链接过滤机制：
 
-* **允许的反向链接：** 反向链接是指向服务器发送请求的源页面的地址。对于JSP页或表单，反向链接通常是浏览历史记录中的上一页。 图像的反向链接通常是显示图像的页面。 您可以通过将服务器资源添加到允许的反向链接列表来识别允许访问这些资源的反向链接。
-* **允许的反向链接例外：** 您可能希望限制允许的反向链接列表中特定反向链接的访问范围。要强制实施此限制，您可以将该反向链接的单个路径添加到允许的反向链接例外列表。 阻止从允许的反向链接例外列表中的路径发起的请求在表单服务器上调用任何资源。 您可以为特定应用程序定义允许的反向链接例外，还可以使用适用于所有应用程序的例外的全局列表。
-* **允许的URI:** 这是在不检查反向链接标头的情况下提供的资源列表。例如，不会导致服务器上状态更改的帮助页面，可以将资源添加到此列表。 反向链接筛选器从不阻止允许的URI列表中的资源，而不管反向链接是谁。
-* **Null反向链接：** 与父网页无关联或不源自父网页的服务器请求被视为来自Null反向链接的请求。例如，当您打开新的浏览器窗口，键入地址并按Enter时，发送到服务器的反向链接为Null。 桌面应用程序（.NET或SWING）向Web服务器发出HTTP请求，也会向服务器发送空反向链接。
+* **允许的反向链接：** 反向链接是指向服务器发送请求的源页面的地址。 对于JSP页或表单，反向链接通常是浏览历史记录中的上一页。 图像的反向链接通常是显示图像的页面。 您可以通过将服务器资源添加到允许的反向链接列表来识别允许访问这些资源的反向链接。
+* **允许的反向链接例外：** 您可能想要限制允许的反向链接列表中特定反向链接的访问范围。 要强制实施此限制，您可以将该反向链接的单个路径添加到允许的反向链接例外列表。 阻止从允许的反向链接例外列表中的路径发起的请求在表单服务器上调用任何资源。 您可以为特定应用程序定义允许的反向链接例外，还可以使用适用于所有应用程序的例外的全局列表。
+* **允许的URI:** 这是要提供的资源列表，不勾选反向链接标题。 例如，不会导致服务器上状态更改的帮助页面，可以将资源添加到此列表。 反向链接过滤器不会阻止允许的URI列表中的资源，而不管反向链接是谁。
+* **Null反向链接：** 未与父网页关联或未源自父网页的服务器请求被视为来自空反向链接的请求。 例如，当您打开新的浏览器窗口，键入地址并按Enter时，发送到服务器的反向链接为Null。 桌面应用程序（.NET或SWING）向Web服务器发出HTTP请求，也会向服务器发送空反向链接。
 
 ### 反向链接过滤 {#referer-filtering}
 
@@ -685,7 +684,7 @@ AEM Forms on JEE使用反向链接过滤器功能阻止CSRF攻击。 本节使�
 1. 表单服务器检查用于调用的HTTP方法：
 
    1. 如果是POST，表单服务器将执行反向链接标题检查。
-   1. 如果是GET，则Forms服务器会绕过反向链接检查，除非将&#x200B;*CSRF_CHECK_GETS*&#x200B;设置为true，在这种情况下，它会执行反向链接标头检查。 *CSRF_CHECK_GETS是在* 应用程序的web. *xml* 文件中指定的。
+   1. 如果是GET，则Forms服务器会绕过反向链接检查，除非 *CSRF_CHECK_GETS* 设置为true时，它会执行反向链接标题检查。 *CSRF_CHECK_GETS* 在 *web.xml* 文件。
 
 1. 表单服务器检查请求的URI是否存在于允许列表中：
 
@@ -704,13 +703,13 @@ AEM Forms on JEE使用反向链接过滤器功能阻止CSRF攻击。 本节使�
 
 ### 管理反向链接过滤 {#managing-referer-filtering}
 
-AEM Forms on JEE提供了反向链接过滤器，用于指定允许访问您的服务器资源的反向链接。 默认情况下，反向链接过滤器不会过滤使用安全HTTP方法(例如GET)的请求，除非将&#x200B;*CSRF_CHECK_GETS*&#x200B;设置为true。 如果允许的反向链接条目的端口号设置为0，则JEE上的AEM Forms将允许来自该主机的具有反向链接的所有请求，而不考虑端口号。 如果未指定端口号，则仅允许从默认端口80(HTTP)或端口443(HTTPS)发出请求。 如果删除了允许的反向链接列表中的所有条目，则会禁用反向链接过滤。
+AEM Forms on JEE提供了反向链接过滤器，用于指定允许访问您的服务器资源的反向链接。 默认情况下，反向链接过滤器不会过滤使用安全HTTP方法(例如GET)的请求，除非 *CSRF_CHECK_GETS* 设置为true。 如果允许的反向链接条目的端口号设置为0，则JEE上的AEM Forms将允许来自该主机的具有反向链接的所有请求，而不考虑端口号。 如果未指定端口号，则仅允许从默认端口80(HTTP)或端口443(HTTPS)发出请求。 如果删除了允许的反向链接列表中的所有条目，则会禁用反向链接过滤。
 
-首次安装Document Services时，将使用安装Document Services的服务器的地址更新允许的反向链接列表。 服务器的条目包括服务器名称、IPv4地址、启用IPv6时的IPv6地址、环回地址和本地主机条目。 主机操作系统会返回添加到允许的反向链接列表的名称。 例如，IP地址为10.40.54.187的服务器将包含以下条目：`https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`。 对于由主机操作系统重新调整的任何不合格名称（没有IPv4地址、IPv6地址或合格域名的名称），允许列表不会更新。 修改允许的反向链接列表以适合您的业务环境。 请勿在生产环境中使用默认允许的反向链接列表部署表单服务器。 修改任何允许的反向链接、反向链接例外或URI后，确保重新启动服务器以使更改生效。
+首次安装Document Services时，将使用安装Document Services的服务器的地址更新允许的反向链接列表。 服务器的条目包括服务器名称、IPv4地址、启用IPv6时的IPv6地址、环回地址和本地主机条目。 主机操作系统会返回添加到允许的反向链接列表的名称。 例如，IP地址为10.40.54.187的服务器将包含以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. 对于由主机操作系统重新调整的任何不合格名称（没有IPv4地址、IPv6地址或合格域名的名称），允许列表不会更新。 修改允许的反向链接列表以适合您的业务环境。 请勿在生产环境中使用默认允许的反向链接列表部署表单服务器。 修改任何允许的反向链接、反向链接例外或URI后，确保重新启动服务器以使更改生效。
 
 **管理允许的反向链接列表**
 
-您可以从管理控制台的用户管理界面管理允许的反向链接列表。 用户管理界面提供了创建、编辑或删除列表的功能。 有关使用允许的反向链接列表的更多信息，请参阅&#x200B;*管理帮助*&#x200B;的* [防止CSRF攻击](/help/forms/using/admin-help/preventing-csrf-attacks.md)*部分。
+您可以从管理控制台的用户管理界面管理允许的反向链接列表。 用户管理界面提供了创建、编辑或删除列表的功能。 请参阅* [防止CSRF攻击](/help/forms/using/admin-help/preventing-csrf-attacks.md)* *管理帮助* 有关使用允许的反向链接列表的更多信息。
 
 **管理允许的反向链接异常和允许的URI列表**
 
@@ -727,37 +726,37 @@ AEM Forms on JEE提供了用于管理允许的反向链接异常列表和允许�
 
 有关API的更多信息，请参阅* Jee API参考上的AEM Forms* 。
 
-在全局级别使用&#x200B;***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION***&#x200B;列表，以定义适用于所有应用程序的例外。 此列表仅包含具有绝对路径(例如，`/index.html`)或相对路径(例如`/sample/`)。 您还可以在相对URI(例如，`/sample/(.)*`。
+使用 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 全局级别允许的反向链接例外列表，即定义适用于所有应用程序的例外。 此列表仅包含具有绝对路径(例如， `/index.html`)或相对路径(例如 `/sample/`)。 您还可以在相对URI(例如， `/sample/(.)*`.
 
-***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION***&#x200B;列表ID在`com.adobe.idp.um.api`命名空间的`UMConstants`类中定义为常量，该类位于`adobe-usermanager-client.jar`中。 您可以使用AEM Forms API创建、修改或编辑此列表。 例如，要创建全局允许的反向链接例外列表，请使用：
+的 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** 列表ID在 `UMConstants` 类 `com.adobe.idp.um.api` 命名空间，在 `adobe-usermanager-client.jar`. 您可以使用AEM Forms API创建、修改或编辑此列表。 例如，要创建全局允许的反向链接例外列表，请使用：
 
 ```java
 addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arrays.asList("/index.html", "/sample/(.)*"))
 ```
 
-对于特定于应用程序的异常，请使用&#x200B;***CSRF_ALLOWED_REFERER_EXCEPTIONS***&#x200B;列表。
+使用 ***CSRF_ALLOWED_REFERER_EXCEPTIONS*** 特定于应用程序的例外列表。
 
 **禁用反向链接过滤器**
 
 如果反向链接过滤器完全阻止对表单服务器的访问，并且您无法编辑允许的反向链接列表，则可以更新服务器启动脚本并禁用反向链接过滤。
 
-在启动脚本中包含`-Dlc.um.csrffilter.disabled=true` JAVA参数并重新启动服务器。 确保在正确重新配置允许的反向链接列表后删除JAVA参数。
+包括 `-Dlc.um.csrffilter.disabled=true` 启动脚本中的JAVA参数并重新启动服务器。 确保在正确重新配置允许的反向链接列表后删除JAVA参数。
 
 **自定义WAR文件的反向链接过滤**
 
-您可能已创建自定义WAR文件以在JEE上与AEM Forms一起使用，以满足您的业务要求。 要为自定义WAR文件启用反向链接过滤，请在WAR的类路径中包含&#x200B;***adobe-usermanager-client.jar***，并在* web.xml*文件中包含一个过滤器条目，并包含以下参数：
+您可能已创建自定义WAR文件以在JEE上与AEM Forms一起使用，以满足您的业务要求。 要为自定义WAR文件启用反向链接过滤，请包括 ***adobe-usermanager-client.jar*** 在WAR的类路径中，并在* web.xml*文件中包含一个筛选条目，并包含以下参数：
 
-**CSRF_CHECK_GETS控制** 对GET请求进行反向链接检查。如果未定义此参数，则默认值设置为false。 仅当您想要过滤GET请求时，才应包含此参数。
+**CSRF_CHECK_GETS** 控制GET请求的反向链接检查。 如果未定义此参数，则默认值设置为false。 仅当您想要过滤GET请求时，才应包含此参数。
 
-**CSRF_ALLOWED_REFERER_EXCEPTIONS是“允** 许的反向链接例外”列表的ID。反向链接过滤器可阻止来自由列表ID标识的列表中反向链接的请求在表单服务器上调用任何资源。
+**CSRF_ALLOWED_REFERER_EXCEPTIONS** 是允许的反向链接例外列表的ID。 反向链接过滤器可阻止来自由列表ID标识的列表中反向链接的请求在表单服务器上调用任何资源。
 
-**CSRF_ALLOWED_URIS_LIST_NAME是** 允许的URI列表的ID。反向链接过滤器不会阻止对列表ID标识的列表中任何资源的请求，而与请求中反向链接标头的值无关。
+**CSRF_ALLOWED_URIS_LIST_NAME** 是允许的URI列表的ID。 反向链接过滤器不会阻止对列表ID标识的列表中任何资源的请求，而与请求中反向链接标头的值无关。
 
-**当反向链接为空或不存** 在时，CSRF_ALLOW_NULL_REFERER控制反向链接过滤器行为。如果未定义此参数，则默认值设置为false。 仅当您希望允许空反向链接时，才包含此参数。 允许空反向链接可能会允许某些类型的跨站点请求伪造攻击。
+**CSRF_ALLOW_NULL_REFERER** 当反向链接为null或不存在时，控制反向链接过滤器行为。 如果未定义此参数，则默认值设置为false。 仅当您希望允许空反向链接时，才包含此参数。 允许空反向链接可能会允许某些类型的跨站点请求伪造攻击。
 
-**CSRF_NULL_REFERER_EXCEPTIONS是URI的列** 表，当反向链接为空时，不会对其执行反向链接检查。仅当&#x200B;*CSRF_ALLOW_NULL_REFERER*&#x200B;设置为false时，才启用此参数。 在列表中用逗号分隔多个URI。
+**CSRF_NULL_REFERER_EXCEPTIONS** 是URI列表，当Referrer为null时，不会对其执行反向链接检查。 此参数仅在 *CSRF_ALLOW_NULL_REFERER* 设置为false。 在列表中用逗号分隔多个URI。
 
-以下是&#x200B;***SAMPLE*** WAR文件&#x200B;*web.xml*&#x200B;文件中过滤器条目的示例：
+以下是 *web.xml* 文件 ***示例*** 战争文件：
 
 ```java
 <filter> 
@@ -817,7 +816,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
  <thead> 
   <tr> 
    <th><p>协议</p> </th> 
-   <th><p>用法</p> </th> 
+   <th><p>使用</p> </th> 
   </tr> 
  </thead> 
  <tbody>
@@ -953,11 +952,11 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 ### 配置SSL {#configuring-ssl}
 
-有关JEE物理架构](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)上的AEM Forms部分[中描述的物理架构，您应当为计划使用的所有连接配置SSL。 具体而言，所有SOAP连接都必须通过SSL进行，以防止用户凭据在网络上泄露。
+有关部分中描述的物理架构 [AEM Forms on JEE物理架构](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)，则应该为您计划使用的所有连接配置SSL。 具体而言，所有SOAP连接都必须通过SSL进行，以防止用户凭据在网络上泄露。
 
-有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅[管理帮助](https://www.adobe.com/go/learn_aemforms_admin_64)中的“配置SSL”。
+有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅 [管理帮助](https://www.adobe.com/go/learn_aemforms_admin_64).
 
-有关如何将证书导入为AEM Forms服务器配置的JVM（Java虚拟机）的说明，请参阅[AEM Forms Workbench帮助](http://www.adobe.com/go/learn_aemforms_workbench_65)中的“相互身份验证”部分。
+有关如何将证书导入为AEM Forms服务器配置的JVM（Java虚拟机）的说明，请参阅 [AEM Forms Workbench帮助](http://www.adobe.com/go/learn_aemforms_workbench_65).
 
 ### 配置SSL重定向 {#configuring-ssl-redirect}
 
@@ -971,9 +970,9 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 1. 打开JBOSS_HOME/standalone/configuration/standalone.xml文件进行编辑。
 
-   在&lt;subsystem xmlns=&quot;urn:jboss:domain:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;>元素之后，添加以下详细信息：
+   在 &lt;subsystem xmlns=&quot;urn&lt;span id=&quot; translate=&quot;no&quot; />域:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;>元素，添加以下详细信息：:jboss:
 
-   &lt;connector name=&quot;https&quot; protocol=&quot;HTTP/1.1&quot; scheme=&quot;https&quot; socket-binding=&quot;https&quot; enabled=&quot;true&quot; secure=&quot;true&quot; />
+   &lt;connector name=&quot;https&quot; protocol=&quot;HTTP/1.1&quot; scheme=&quot;https&quot; socket-binding=&quot;https&quot; enabled=&quot;true&quot; secure=&quot;true&quot;/>
 
 1. 在https连接器元素中添加以下代码：
 
@@ -995,14 +994,14 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 #### 使用非管理帐户运行应用程序服务器 {#run-the-application-server-using-a-non-administrative-account}
 
-1. 在Microsoft管理控制台(MMC)中，为表单服务器服务创建本地用户以登录为：
+1. 在Microsoft管理控制台(MMC)中，为表单服务器服务创建一个本地用户，以登录方式：
 
-   * 选择&#x200B;**用户无法更改密码**。
-   * 在&#x200B;**成员**&#x200B;选项卡上，确保列出用户组。
+   * 选择 **用户无法更改密码**.
+   * 在 **成员** 选项卡，确保列出用户组。
 
-1. 选择&#x200B;**设置** > **管理工具** > **服务**。
+1. 选择 **设置** > **管理工具** > **服务**.
 1. 双击应用程序服务器服务并停止该服务。
-1. 在&#x200B;**登录**&#x200B;选项卡上，选择&#x200B;**此帐户**，浏览您创建的用户帐户，然后输入该帐户的密码。
+1. 在 **登录** 选项卡，选择 **此帐户**，浏览您创建的用户帐户，然后输入该帐户的密码。
 1. 在“本地安全设置”窗口的“用户权限分配”下，为表单服务器在下运行的用户帐户提供以下权限：
 
    * 通过终端服务拒绝登录
@@ -1010,18 +1009,17 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
    * 以服务身份登录（应已设置）
 
 1. 为新用户帐户授予对以下目录的修改权限：
-   * **全局文档存储(GDS)目录**:GDS目录的位置在AEM Forms安装过程中手动配置。如果位置设置在安装期间保持为空，则位置默认为`[JBoss root]/server/[type]/svcnative/DocumentStorage`应用程序服务器安装下的目录
-   * **CRX-Repository目录**:默认位置为  `[AEM-Forms-installation-location]\crx-repository`
+   * **全局文档存储(GDS)目录**:GDS目录的位置在AEM Forms安装过程中手动配置。 如果位置设置在安装期间保持为空，则位置默认为应用程序服务器安装下的目录( `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Repository目录**:默认位置为 `[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms临时目录**:
       * (Windows)在环境变量中设置的TMP或TEMP路径
-      * （AIX、Linux或Solaris）登录用户的主目录
-在基于UNIX的系统上，非根用户可以使用以下目录作为临时目录：
+      * （AIX、Linux或Solaris）登录用户的主目录在基于UNIX的系统上，非根用户可以将以下目录用作临时目录：
       * (Linux)/var/tmp或/usr/tmp
       * (AIX)/tmp或/usr/tmp
       * (Solaris)/var/tmp或/usr/tmp
 1. 为以下目录授予新的用户帐户写入权限：
    * [JBoss-directory]\standalone\deployment
-   * [JBoss-directory]\standalone\
+   * [JBoss-directory]\dantalone\
    * [JBoss-directory]\bin\
 
    >[!NOTE]
@@ -1066,7 +1064,7 @@ https://<servername>:8080/um/
 
 ### 禁用目录浏览 {#disable_directory_browsing-1}
 
-将weblogic.xml文件中的index-directories属性设置为`false`，如以下示例所示：
+将weblogic.xml文件中的index-directories属性设置为 `false`，如以下示例所示：
 
 ```xml
 <container-descriptor> 
@@ -1085,13 +1083,13 @@ https://<servername>:8080/um/
 
 ### 禁用目录浏览 {#disable_directory_browsing-2}
 
-将ibm-web-ext.xml文件中的`directoryBrowsingEnabled`属性设置为`false`。
+设置 `directoryBrowsingEnabled` ibm-web-ext.xml文件中的属性 `false`.
 
 ### 启用WebSphere管理安全性 {#enable-websphere-administrative-security}
 
 1. 登录到WebSphere管理控制台。
-1. 在导航树中，转到&#x200B;**Security** > **Global Security**
-1. 选择&#x200B;**启用管理安全**。
-1. 取消选择&#x200B;**启用应用程序安全**&#x200B;和&#x200B;**使用Java 2安全**。
-1. 单击&#x200B;**确定**&#x200B;或&#x200B;**应用**。
-1. 在&#x200B;**消息**&#x200B;框中，单击&#x200B;**直接保存到主控配置**。
+1. 在导航树中，转到 **安全性** > **全球安全**
+1. 选择 **启用管理安全性**.
+1. 同时取消选择这两项 **启用应用程序安全性** 和 **使用Java 2安全性**.
+1. 单击 **确定** 或 **应用**.
+1. 在 **消息** 框，单击 **直接保存到主控配置**.

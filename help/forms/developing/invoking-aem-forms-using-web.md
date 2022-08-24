@@ -1,8 +1,8 @@
 ---
 title: 使用Web服务调用AEM Forms
-seo-title: 使用Web服务调用AEM Forms
+seo-title: Invoking AEM Forms using Web Services
 description: 使用完全支持WSDL生成的Web服务调用AEM Forms进程。
-seo-description: 使用完全支持WSDL生成的Web服务调用AEM Forms进程。
+seo-description: Invoke AEM Forms processes using web services with full support for WSDL generation.
 uuid: 66bcd010-c476-4b66-831d-a48307d8d67a
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
 workflow-type: tm+mt
-source-wordcount: '10004'
+source-wordcount: '9905'
 ht-degree: 0%
 
 ---
 
-# 使用Web服务{#invoking-aem-forms-using-web-services}调用AEM Forms
+# 使用Web服务调用AEM Forms {#invoking-aem-forms-using-web-services}
 
 **本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
 
@@ -29,17 +29,17 @@ ht-degree: 0%
 
 使用Web服务，您可以执行与使用Java API相同的AEM Forms服务操作。 使用Web服务调用AEM Forms服务的一个好处是，您可以在支持SOAP的开发环境中创建客户端应用程序。 客户端应用程序不绑定到特定的开发环境或编程语言。 例如，您可以使用Microsoft Visual Studio .NET和C#作为编程语言创建客户端应用程序。
 
-AEM Forms服务通过SOAP协议公开，并且符合WSI基本配置文件1.1。 Web服务互操作性(WSI)是一个开放标准组织，旨在促进跨平台的Web服务互操作性。 有关信息，请参阅[https://www.ws-i.org/](https://www.ws-i.org)。
+AEM Forms服务通过SOAP协议公开，并且符合WSI基本配置文件1.1。 Web服务互操作性(WSI)是一个开放标准组织，旨在促进跨平台的Web服务互操作性。 有关信息，请参阅 [https://www.ws-i.org/](https://www.ws-i.org).
 
 AEM Forms支持以下web服务标准：
 
-* **编码**:仅支持文档和文字编码（根据WSI基本配置文件，这是首选编码）。(请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **MTOM**:表示一种使用SOAP请求对附件进行编码的方法。(请参阅[使用MTOM](#invoking-aem-forms-using-mtom)调用AEM Forms。)
-* **SwaRef**:表示使用SOAP请求对附件进行编码的另一种方法。(请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。)
-* **带有附件的SOAP**:支持MIME和DIME（直接Internet消息封装）。这些协议是通过SOAP发送附件的标准方式。 Microsoft Visual Studio .NET应用程序使用DIME。 (请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **WS-Security**:支持用户名密码令牌配置文件，这是作为WS Security SOAP标头的一部分发送用户名和密码的标准方式。AEM Forms还支持HTTP基本身份验证。 （请参阅[使用WS-Security标头传递凭据](https://www.adobe.com/devnet/livecycle/articles/passing_credentials.html)。）
+* **编码**:仅支持文档和文字编码（根据WSI基本配置文件，这是首选编码）。 (请参阅 [使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding).)
+* **MTOM**:表示一种使用SOAP请求对附件进行编码的方法。 (请参阅 [使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom).)
+* **SwaRef**:表示使用SOAP请求对附件进行编码的另一种方法。 (请参阅 [使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref).)
+* **带有附件的SOAP**:支持MIME和DIME（直接Internet消息封装）。 这些协议是通过SOAP发送附件的标准方式。 Microsoft Visual Studio .NET应用程序使用DIME。 (请参阅 [使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding).)
+* **WS-Security**:支持用户名密码令牌配置文件，这是作为WS Security SOAP标头的一部分发送用户名和密码的标准方式。 AEM Forms还支持HTTP基本身份验证。 s
 
-要使用Web服务调用AEM Forms服务，通常需要创建使用服务WSDL的代理库。 *使用Web服务调用AEM Forms*&#x200B;部分使用JAX-WS创建Java代理类来调用服务。 （请参阅[使用JAX-WS](#creating-java-proxy-classes-using-jax-ws)创建Java代理类。）
+要使用Web服务调用AEM Forms服务，通常需要创建使用服务WSDL的代理库。 的 *使用Web服务调用AEM Forms* 部分使用JAX-WS创建Java代理类来调用服务。 (请参阅 [使用JAX-WS创建Java代理类](#creating-java-proxy-classes-using-jax-ws).)
 
 您可以通过指定以下URL定义来检索服务WDSL（方括号中的项是可选项）：
 
@@ -50,11 +50,11 @@ AEM Forms支持以下web服务标准：
 其中：
 
 * *your_serverhost* 表示托管AEM Forms的J2EE应用程序服务器的IP地址。
-* *your_* port表示J2EE应用程序服务器使用的HTTP端口。
-* *service_* name表示服务名称。
-* ** version表示服务的目标版本（默认使用最新的服务版本）。
-* `async` 指定值以 `true` 为异步调用启用其他操 `false` 作（默认情况下）。
-* *lc_* version表示要调用的AEM Forms版本。
+* *your_port* 表示J2EE应用程序服务器使用的HTTP端口。
+* *service_name* 表示服务名称。
+* *版本* 表示服务的目标版本（默认使用最新的服务版本）。
+* `async` 指定值 `true` 启用异步调用的其他操作( `false` )。
+* *lc_version* 表示要调用的AEM Forms版本。
 
 下表列出了服务WSDL定义(假定AEM Forms已部署在本地主机上，而post为8080)。
 
@@ -99,7 +99,7 @@ AEM Forms支持以下web服务标准：
    <td><p><code>http://localhost:8080/soap/services/EncryptionService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>表单</p></td>
+   <td><p>Forms</p></td>
    <td><p><code>http://localhost:8080/soap/services/FormsService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ AEM Forms支持以下web服务标准：
    <td><p><code>http://localhost:8080/soap/services/ GeneratePDFService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>生成3D PDF</p></td>
+   <td><p>生成3DPDF</p></td>
    <td><p><code>http://localhost:8080/soap/services/Generate3dPDFService?WSDL</code></p></td>
   </tr>
   <tr>
@@ -131,7 +131,7 @@ AEM Forms支持以下web服务标准：
    <td><p><code>http://localhost:8080/soap/services/ RepositoryService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>权限管理 </p></td>
+   <td><p>Rights Management </p></td>
    <td><p><code>http://localhost:8080/soap/services/ RightsManagementService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -147,7 +147,7 @@ AEM Forms支持以下web服务标准：
 
 **AEM Forms进程WSDL定义**
 
-必须在WSDL定义中指定应用程序名称和进程名称，才能访问属于在Workbench中创建的进程的WSDL。 假定应用程序的名称为`MyApplication`，进程的名称为`EncryptDocument`。 在这种情况下，请指定以下WSDL定义：
+必须在WSDL定义中指定应用程序名称和进程名称，才能访问属于在Workbench中创建的进程的WSDL。 假定应用程序的名称为 `MyApplication` 进程的名称是 `EncryptDocument`. 在这种情况下，请指定以下WSDL定义：
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?wsdl
@@ -155,7 +155,7 @@ AEM Forms支持以下web服务标准：
 
 >[!NOTE]
 >
->有关示例`MyApplication/EncryptDocument`短生命周期进程的信息，请参阅[短生命周期进程示例](/help/forms/developing/aem-forms-processes.md)。
+>有关示例的信息 `MyApplication/EncryptDocument` 短暂的过程，看 [短暂的流程示例](/help/forms/developing/aem-forms-processes.md).
 
 >[!NOTE]
 >
@@ -167,9 +167,9 @@ AEM Forms支持以下web服务标准：
 
 **使用Web服务访问新功能**
 
-可以使用Web服务访问新的AEM Forms服务功能。 例如，在AEM Forms中，引入了使用MTOM对附件进行编码的功能。 (请参阅[使用MTOM](#invoking-aem-forms-using-mtom)调用AEM Forms。)
+可以使用Web服务访问新的AEM Forms服务功能。 例如，在AEM Forms中，引入了使用MTOM对附件进行编码的功能。 (请参阅 [使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom).)
 
-要访问AEM Forms中引入的新功能，请在WSDL定义中指定`lc_version`属性。 例如，要访问新的服务功能（包括MTOM支持），请指定以下WSDL定义：
+要访问AEM Forms中引入的新功能，请指定 `lc_version` 属性。 例如，要访问新的服务功能（包括MTOM支持），请指定以下WSDL定义：
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?wsdl&lc_version=9.0.1
@@ -177,13 +177,13 @@ AEM Forms支持以下web服务标准：
 
 >[!NOTE]
 >
->在设置`lc_version`属性时，请确保使用三位数。 例如，9.0.1等于版本9.0。
+>设置 `lc_version` 属性，请确保使用三位数。 例如，9.0.1等于版本9.0。
 
 **Web服务BLOB数据类型**
 
-AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要的数据类型之一是`BLOB`类型。 使用AEM Forms Java API时，此数据类型映射到`com.adobe.idp.Document`类。 (请参阅[使用Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)将数据传递到AEM Forms服务。)
+AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要的数据类型之一是 `BLOB` 类型。 此数据类型映射到 `com.adobe.idp.Document` 类。 (请参阅 [使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
-`BLOB`对象向AEM Forms服务发送和检索二进制数据（例如，PDF文件、XML数据等）。 `BLOB`类型在服务WSDL中定义如下：
+A `BLOB` 对象向AEM Forms服务发送和检索二进制数据(例如，PDF文件、XML数据等)，以及从中检索二进制数据。 的 `BLOB` 类型在服务WSDL中定义如下：
 
 ```xml
  <complexType name="BLOB">
@@ -208,35 +208,35 @@ AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要
  </complexType>
 ```
 
-`MTOM`和`swaRef`字段仅在AEM Forms中受支持。 仅当您指定的URL包含`lc_version`属性时，才能使用这些新字段。
+的 `MTOM` 和 `swaRef` 仅在AEM Forms中支持字段。 仅当您指定的URL包含 `lc_version` 属性。
 
 **在服务请求中提供BLOB对象**
 
-如果AEM Forms服务操作需要`BLOB`类型作为输入值，请在应用程序逻辑中创建`BLOB`类型的实例。 (位于&#x200B;*使用AEM表单进行编程的许多Web服务快速入门都显示了如何使用BLOB数据类型。)*
+如果AEM Forms服务操作需要 `BLOB` 键入作为输入值，创建实例 `BLOB` 在应用程序逻辑中键入。 (许多Web服务快速入门位于 *使用AEM表单进行编程* 显示如何使用BLOB数据类型。)
 
-将值分配给属于`BLOB`实例的字段，如下所示：
+将值分配给属于 `BLOB` 实例如下所示：
 
-* **Base64**:要将数据作为以Base64格式编码的文本进行传递，请在字段中设 `BLOB.binaryData` 置数据，并在字段中以MIME格式(例如 `application/pdf`)设置数据 `BLOB.contentType` 类型。(请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **MTOM**:要在MTOM附件中传递二进制数据，请在字段中设置 `BLOB.MTOM` 数据。此设置会使用Java JAX-WS框架或SOAP框架的本机API将数据附加到SOAP请求中。 (请参阅[使用MTOM](#invoking-aem-forms-using-mtom)调用AEM Forms。)
-* **SwaRef**:要在WS-I SwaRef附件中传递二进制数据，请在字段中设置 `BLOB.swaRef` 数据。此设置会使用Java JAX-WS框架将数据附加到SOAP请求。 (请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。)
-* **MIME或DIME附件**:要在MIME或DIME附件中传递数据，请使用SOAP框架的本机API将数据附加到SOAP请求。在`BLOB.attachmentID`字段中设置附件标识符。 (请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **远程URL**:如果数据托管在Web服务器上并且可通过HTTP URL访问，请在字段中设置 `BLOB.remoteURL` HTTP URL。(请参阅[使用HTTP](#invoking-aem-forms-using-blob-data-over-http)上的BLOB数据调用AEM Forms。)
+* **Base64**:要将数据作为以Base64格式编码的文本进行传递，请在 `BLOB.binaryData` 字段，并以MIME格式设置数据类型(例如 `application/pdf`) `BLOB.contentType` 字段。 (请参阅 [使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding).)
+* **MTOM**:要在MTOM附件中传递二进制数据，请在 `BLOB.MTOM` 字段。 此设置会使用Java JAX-WS框架或SOAP框架的本机API将数据附加到SOAP请求中。 (请参阅 [使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom).)
+* **SwaRef**:要在WS-I SwaRef附件中传递二进制数据，请在 `BLOB.swaRef` 字段。 此设置会使用Java JAX-WS框架将数据附加到SOAP请求。 (请参阅 [使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref).)
+* **MIME或DIME附件**:要在MIME或DIME附件中传递数据，请使用SOAP框架的本机API将数据附加到SOAP请求。 在 `BLOB.attachmentID` 字段。 (请参阅 [使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding).)
+* **远程URL**:如果数据托管在Web服务器上并且可通过HTTP URL访问，请在 `BLOB.remoteURL` 字段。 (请参阅 [通过HTTP使用BLOB数据调用AEM Forms](#invoking-aem-forms-using-blob-data-over-http).)
 
 **访问从服务返回的BLOB对象中的数据**
 
-返回的`BLOB`对象的传输协议取决于多个因素，这些因素按以下顺序考虑，在满足主要条件时停止：
+返回的传输协议 `BLOB` 对象取决于多个因素，这些因素按以下顺序考虑，在满足主条件时停止：
 
-1. **目标URL指定传输协议**。如果在SOAP调用中指定的目标URL包含参数&#x200B;`blob="`*BLOB_TYPE*&quot;，则&#x200B;*BLOB_TYPE*&#x200B;将确定传输协议。 *BLOB_* TYPE是base64、dime、mime、http、mtom或swaref的占位符。
-1. **服务SOAP端点是智能**。如果以下条件为真，则使用与输入文档相同的传输协议返回输出文档：
+1. **目标URL指定传输协议**. 如果在SOAP调用中指定的目标URL包含参数 `blob="`*BLOB_TYPE*&quot;，则 *BLOB_TYPE* 确定传输协议。 *BLOB_TYPE* 是base64、dime、mime、http、mtom或swaref的占位符。
+1. **服务SOAP端点是智能的**. 如果以下条件为真，则使用与输入文档相同的传输协议返回输出文档：
 
    * 输出Blob对象的服务的SOAP端点参数默认协议设置为Smart。
 
-      对于具有SOAP端点的每项服务，管理控制台允许您为任何返回的Blob指定传输协议。 （请参阅[管理帮助](https://www.adobe.com/go/learn_aemforms_admin_63)。）
+      对于具有SOAP端点的每项服务，管理控制台允许您为任何返回的Blob指定传输协议。 (请参阅 [管理帮助](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
    * AEM Forms服务将一个或多个文档作为输入。
 
-1. **服务SOAP端点不是智能**。所配置的协议确定文档传输协议，并在相应的`BLOB`字段中返回数据。 例如，如果SOAP端点设置为DIME，则返回的blob将位于`blob.attachmentID`字段中，而不考虑任何输入文档的传输协议。
-1. **否则**。如果服务不将文档类型作为输入，则在HTTP协议的`BLOB.remoteURL`字段中返回输出文档。
+1. **服务SOAP端点不是智能端点**. 所配置的协议确定文档传输协议，并在相应的协议中返回数据 `BLOB` 字段。 例如，如果SOAP端点设置为DIME，则返回的blob将位于 `blob.attachmentID` 字段，而不考虑任何输入文档的传输协议。
+1. **否则**. 如果服务不将文档类型作为输入，则输出文档将在 `BLOB.remoteURL` 字段。
 
 如第一个条件中所述，您可以通过扩展带有后缀的SOAP端点URL来确保任何返回文档的传输类型，如下所示：
 
@@ -247,26 +247,26 @@ AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要
 
 以下是传输类型与从中获取数据的字段之间的关联：
 
-* **Base64格式**:将后 `blob` 缀设 `base64` 置为，以返回字段中的 `BLOB.binaryData` 数据。
-* **MIME或DIME附件**:将后缀 `blob` 设置为 `DIME` 或 `MIME` ，以将数据作为相应的附件类型返回，并在字段中返回附件 `BLOB.attachmentID` 标识符。使用SOAP框架的专有API从附件中读取数据。
-* **远程URL**:将后 `blob` 缀设 `http` 置为保留应用程序服务器上的数据，并返回指向字段中数据的 `BLOB.remoteURL` URL。
-* **MTOM或SwaRef**:将后缀 `blob` 设置为 `mtom` 或 `swaref` ，以将数据作为相应的附件类型返回，并在或字段中返回附 `BLOB.MTOM` 件标 `BLOB.swaRef` 识符。使用SOAP框架的本机API从附件中读取数据。
+* **Base64格式**:设置 `blob` 后缀为 `base64` 返回 `BLOB.binaryData` 字段。
+* **MIME或DIME附件**:设置 `blob` 后缀为 `DIME` 或 `MIME` 以相应的附件类型返回数据，并在 `BLOB.attachmentID` 字段。 使用SOAP框架的专有API从附件中读取数据。
+* **远程URL**:设置 `blob` 后缀为 `http` 将数据保留在应用程序服务器上，并返回指向 `BLOB.remoteURL` 字段。
+* **MTOM或SwaRef**:设置 `blob` 后缀为 `mtom` 或 `swaref` 以相应的附件类型返回数据，并在 `BLOB.MTOM` 或 `BLOB.swaRef` 字段。 使用SOAP框架的本机API从附件中读取数据。
 
 >[!NOTE]
 >
->通过调用`setBinaryData`方法填充`BLOB`对象时，建议不要超过30 MB。 否则，可能会出现`OutOfMemory`异常。
+>建议在填充 `BLOB` 通过调用对象 `setBinaryData` 方法。 否则，可能 `OutOfMemory` 异常。
 
 >[!NOTE]
 >
->使用MTOM传输协议的基于JAX WS的应用程序被限制为25 MB的发送和接收数据。 此限制是由于JAX-WS中存在错误所致。 如果已发送和已接收文件的合计大小超过25MB，请使用SwaRef传输协议，而不是MTOM传输协议。 否则，可能会出现`OutOfMemory`异常。
+>使用MTOM传输协议的基于JAX WS的应用程序被限制为25 MB的发送和接收数据。 此限制是由于JAX-WS中存在错误所致。 如果已发送和已接收文件的合计大小超过25MB，请使用SwaRef传输协议，而不是MTOM传输协议。 否则，可能会 `OutOfMemory` 例外。
 
 **基64编码字节阵列的MTOM传输**
 
-除了`BLOB`对象外，MTOM协议还支持任何复杂类型的字节数组参数或字节数组字段。 这意味着支持MTOM的客户端SOAP框架可以将任何`xsd:base64Binary`元素作为MTOM附件（而不是base64编码的文本）发送。 AEM Forms SOAP端点可以读取此类字节数组编码。 但是，AEM Forms服务始终返回字节数组类型作为base64编码文本。 输出字节数组参数不支持MTOM。
+除 `BLOB` 对象中，MTOM协议支持任何复杂类型的字节数组参数或字节数组字段。 这意味着支持MTOM的客户端SOAP框架可以发送任何 `xsd:base64Binary` 元素作为MTOM附件（而不是base64编码的文本）。 AEM Forms SOAP端点可以读取此类字节数组编码。 但是，AEM Forms服务始终返回字节数组类型作为base64编码文本。 输出字节数组参数不支持MTOM。
 
 返回大量二进制数据的AEM Forms服务使用文档/BLOB类型，而不是字节数组类型。 文档类型对于传输大量数据的效率更高。
 
-## Web服务数据类型{#web-service-data-types}
+## Web服务数据类型 {#web-service-data-types}
 
 下表列出了Java数据类型，并显示了相应的Web服务数据类型。
 
@@ -288,11 +288,11 @@ AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要
   </tr>
   <tr>
    <td><p><code>java.util.Date</code></p></td>
-   <td><p><code>DATE</code>类型，在服务WSDL中定义，如下所示：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作输入<code>java.util.Date</code>值，则SOAP客户端应用程序必须传递<code>DATE.date</code>字段中的日期。 在这种情况下，设置<code>DATE.calendar</code>字段会导致运行时异常。 如果服务返回<code>java.util.Date</code>，则在<code>DATE.date</code>字段中重新调整日期。</p></td>
+   <td><p>的 <code>DATE</code> 类型，在服务WSDL中定义如下：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作 <code>java.util.Date</code> 值，则SOAP客户端应用程序必须在 <code>DATE.date</code> 字段。 设置 <code>DATE.calendar</code> 字段会导致运行时异常。 如果服务返回 <code>java.util.Date</code>，则在 <code>DATE.date</code> 字段。</p></td>
   </tr>
   <tr>
    <td><p><code>java.util.Calendar</code></p></td>
-   <td><p><code>DATE</code>类型，在服务WSDL中定义，如下所示：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作输入<code>java.util.Calendar</code>值，则SOAP客户端应用程序必须传递<code>DATE.caledendar</code>字段中的日期。 在这种情况下，设置<code>DATE.date</code>字段会导致运行时异常。 如果服务返回<code>java.util.Calendar</code>，则在<code>DATE.calendar</code>字段中返回日期。 </p></td>
+   <td><p>的 <code>DATE</code> 类型，在服务WSDL中定义如下：</p><p><code>&lt;complexType name="DATE"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="date" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="calendar" </code><code>type="xsd:dateTime" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作 <code>java.util.Calendar</code> 值，则SOAP客户端应用程序必须在 <code>DATE.caledendar</code> 字段。 设置 <code>DATE.date</code> 在这种情况下，字段会导致运行时异常。 如果服务返回 <code>java.util.Calendar</code>，则在 <code>DATE.calendar</code> 字段。 </p></td>
   </tr>
   <tr>
    <td><p><code>java.math.BigDecimal</code></p></td>
@@ -324,7 +324,7 @@ AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要
   </tr>
   <tr>
    <td><p><code>java.util.Map</code></p></td>
-   <td><p><code>apachesoap:Map</code>，在服务WSDL中定义，如下所示：</p><p><code>&lt;schema elementFormDefault="qualified" targetNamespace="https://xml.apache.org/xml-soap" xmlns="https://www.w3.org/2001/XMLSchema"&gt;</code></p><p><code>&lt;complexType name="mapItem"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element name="key" nillable="true" type="xsd:anyType"/&gt;</code></p><p><code>&lt;element name="value" nillable="true" type="xsd:anyType"/&gt;</code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p><code>&lt;complexType name="Map"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="unbounded" minOccurs="0" name="item" </code><code>type="apachesoap:mapItem"/&gt;</code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p><code>&lt;/schema&gt;</code></p><p>映射以键/值对序列表示。</p></td>
+   <td><p>的 <code>apachesoap:Map</code>，在服务WSDL中定义如下：</p><p><code>&lt;schema elementFormDefault="qualified" targetNamespace="https://xml.apache.org/xml-soap" xmlns="https://www.w3.org/2001/XMLSchema"&gt;</code></p><p><code>&lt;complexType name="mapItem"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element name="key" nillable="true" type="xsd:anyType"/&gt;</code></p><p><code>&lt;element name="value" nillable="true" type="xsd:anyType"/&gt;</code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p><code>&lt;complexType name="Map"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="unbounded" minOccurs="0" name="item" </code><code>type="apachesoap:mapItem"/&gt;</code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p><code>&lt;/schema&gt;</code></p><p>映射以键/值对序列表示。</p></td>
   </tr>
   <tr>
    <td><p><code>java.lang.Object</code></p></td>
@@ -340,45 +340,33 @@ AEM Forms服务WSDL定义了许多数据类型。 Web服务中公开的最重要
   </tr>
   <tr>
    <td><p><code>org.w3c.dom.Document</code></p></td>
-   <td><p>XML类型，在服务WSDL中定义如下：</p><p><code>&lt;complexType name="XML"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="document" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="element" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作接受<code>org.w3c.dom.Document</code>值，请在<code>XML.document</code>字段中传递XML数据。</p><p>设置<code>XML.element</code>字段会导致运行时异常。 如果服务返回<code>org.w3c.dom.Document</code>，则在<code>XML.document</code>字段中返回XML数据。</p></td>
+   <td><p>XML类型，在服务WSDL中定义如下：</p><p><code>&lt;complexType name="XML"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="document" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="element" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作接受 <code>org.w3c.dom.Document</code> 值，请在 <code>XML.document</code> 字段。</p><p>设置 <code>XML.element</code> 字段会导致运行时异常。 如果服务返回 <code>org.w3c.dom.Document</code>，则会在 <code>XML.document</code> 字段。</p></td>
   </tr>
   <tr>
    <td><p><code>org.w3c.dom.Element</code></p></td>
-   <td><p>XML类型，在服务WSDL中定义如下：</p><p><code>&lt;complexType name="XML"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="document" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="element" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作采用<code>org.w3c.dom.Element</code>作为输入，请在<code>XML.element</code>字段中传递XML数据。</p><p>设置<code>XML.document</code>字段会导致运行时异常。 如果服务返回<code>org.w3c.dom.Element</code>，则在<code>XML.element</code>字段中重新调整XML数据。</p></td>
+   <td><p>XML类型，在服务WSDL中定义如下：</p><p><code>&lt;complexType name="XML"&gt;</code></p><p><code>&lt;sequence&gt;</code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="document" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;element maxOccurs="1" minOccurs="0" name="element" </code><code>type="xsd:string" /&gt; </code></p><p><code>&lt;/sequence&gt;</code></p><p><code>&lt;/complexType&gt;</code></p><p>如果AEM Forms服务操作 <code>org.w3c.dom.Element</code> 作为输入，在 <code>XML.element</code> 字段。</p><p>设置 <code>XML.document</code> 字段会导致运行时异常。 如果服务返回 <code>org.w3c.dom.Element</code>，则会在 <code>XML.element</code> 字段。</p></td>
   </tr>
  </tbody>
 </table>
 
-**Adobe开发人员网站**
-
-Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务API调用AEM Forms服务：
-
-[创建表单渲染ASP.NET应用程序](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)
-
-[使用自定义组件调用Web服务](https://www.adobe.com/devnet/livecycle/articles/extend_webservices.html)
-
->[!NOTE]
->
->使用自定义组件调用Web服务介绍了如何创建调用第三方Web服务的AEM Forms组件。
-
-## 使用JAX-WS {#creating-java-proxy-classes-using-jax-ws}创建Java代理类
+## 使用JAX-WS创建Java代理类 {#creating-java-proxy-classes-using-jax-ws}
 
 可以使用JAX-WS将Forms服务WSDL转换为Java代理类。 这些类允许您调用AEM Forms服务操作。 Apache Ant允许您通过引用AEM Forms服务WSDL创建生成Java代理类的生成脚本。 可通过执行以下步骤来生成JAX-WS代理文件：
 
-1. 在客户端计算机上安装Apache Ant。 (请参阅[https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi)。)
+1. 在客户端计算机上安装Apache Ant。 (请参阅 [https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi).)
 
    * 将bin目录添加到类路径中。
-   * 将`ANT_HOME`环境变量设置为安装Ant的目录。
+   * 设置 `ANT_HOME` 环境变量到您安装Ant的目录。
 
 1. 安装JDK 1.6或更高版本。
 
    * 将JDK bin目录添加到类路径中。
-   * 将JRE bin目录添加到类路径中。 此站位于`[JDK_INSTALL_LOCATION]/jre`目录中。
-   * 将`JAVA_HOME`环境变量设置为安装JDK的目录。
+   * 将JRE bin目录添加到类路径中。 此箱位于 `[JDK_INSTALL_LOCATION]/jre` 目录访问Advertising Cloud的帮助。
+   * 设置 `JAVA_HOME` 环境变量到您安装JDK的目录。
 
    JDK 1.6包含在build.xml文件中使用的wsimport程序。 JDK 1.5不包含该程序。
 
-1. 在客户端计算机上安装JAX-WS。 （请参阅[Java API for XML Web Services](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html)。）
+1. 在客户端计算机上安装JAX-WS。 (请参阅 [适用于XML Web服务的Java API](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html).)
 1. 使用JAX-WS和Apache Ant生成Java代理类。 创建Ant构建脚本以完成此任务。 以下脚本是名为build.xml的Ant内部版本脚本示例：
 
    ```xml
@@ -427,11 +415,11 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     </project>
    ```
 
-   在此Ant构建脚本中，请注意`url`属性已设置为引用本地主机上运行的加密服务WSDL。 必须将`username`和`password`属性设置为有效的AEM表单用户名和密码。 请注意，URL包含`lc_version`属性。 如果未指定`lc_version`选项，则无法调用新的AEM Forms服务操作。
+   在此Ant构建脚本中，请注意 `url` 属性设置为引用本地主机上运行的加密服务WSDL。 的 `username` 和 `password` 属性必须设置为有效的AEM forms用户名和密码。 请注意，URL包含 `lc_version` 属性。 不指定 `lc_version` 选项，则无法调用新的AEM Forms服务操作。
 
    >[!NOTE]
    >
-   >将`EncryptionService`替换为要使用Java代理类调用的AEM Forms服务名称。 例如，要为Rights Management服务创建Java代理类，请指定：
+   >替换 `EncryptionService`具有要使用Java代理类调用的AEM Forms服务名。 例如，要为Rights Management服务创建Java代理类，请指定：
 
    ```java
     http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1
@@ -449,18 +437,18 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
    * 创建新的Java项目，用于将代理JAVA文件打包到JAR文件中。
    * 在项目中创建源文件夹。
-   * 在Source文件夹中创建`com.adobe.idp.services`包。
-   * 选择`com.adobe.idp.services`包，然后将JAVA文件从adobe/idp/services文件夹导入包中。
-   * 如有必要，请在Source文件夹中创建`org/apache/xml/xmlsoap`包。
+   * 创建 `com.adobe.idp.services` 包。
+   * 选择 `com.adobe.idp.services` 包，然后将JAVA文件从adobe/idp/services文件夹导入包中。
+   * 如有必要，请创建 `org/apache/xml/xmlsoap` 包。
    * 选择源文件夹，然后从org/apache/xml/xmlsoap文件夹导入JAVA文件。
    * 将Java编译器的符合级别设置为5.0或更高。
    * 构建项目。
    * 将项目导出为JAR文件。
-   * 将此JAR文件导入客户端项目的类路径中。 此外，还导入位于&lt;安装目录>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty中的所有JAR文件。
+   * 将此JAR文件导入客户端项目的类路径中。 此外，导入位于 &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty。
 
    >[!NOTE]
    >
-   >位于“使用AEM表单编程”中的所有Java Web服务快速入门(Forms服务除外)均使用JAX-WS创建Java代理文件。 此外，所有Java Web服务都可快速启动，使用SwaRef。 (请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。)
+   >位于“使用AEM表单编程”中的所有Java Web服务快速入门(Forms服务除外)均使用JAX-WS创建Java代理文件。 此外，所有Java Web服务都可快速启动，使用SwaRef。 (请参阅 [使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref).)
 
 **另请参阅**
 
@@ -472,23 +460,23 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 [使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)
 
-## 使用Apache Axis {#creating-java-proxy-classes-using-apache-axis}创建Java代理类
+## 使用Apache Axis创建Java代理类 {#creating-java-proxy-classes-using-apache-axis}
 
-可以使用Apache Axis WSDL2Java工具将Forms服务转换为Java代理类。 这些类允许您调用Forms服务操作。 使用Apache Ant，可以通过服务WSDL生成轴库文件。 您可以在URL [https://ws.apache.org/axis/](https://ws.apache.org/axis/)下载Apache Axis。
+可以使用Apache Axis WSDL2Java工具将Forms服务转换为Java代理类。 这些类允许您调用Forms服务操作。 使用Apache Ant，可以通过服务WSDL生成轴库文件。 您可以通过URL下载Apache Axis [https://ws.apache.org/axis/](https://ws.apache.org/axis/).
 
 >[!NOTE]
 >
->与Forms服务关联的Web服务快速入门使用使用Apache Axis创建的Java代理类。 Forms Web服务快速入门还使用Base64作为编码类型。 (请参阅[Forms服务API快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)。)
+>与Forms服务关联的Web服务快速入门使用使用Apache Axis创建的Java代理类。 Forms Web服务快速入门还使用Base64作为编码类型。 (请参阅 [Forms Service API快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts).)
 
 可通过执行以下步骤来生成Axis Java库文件：
 
-1. 在客户端计算机上安装Apache Ant。 它位于[https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi)。
+1. 在客户端计算机上安装Apache Ant。 它位于 [https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi).
 
    * 将bin目录添加到类路径中。
-   * 将`ANT_HOME`环境变量设置为安装Ant的目录。
+   * 设置 `ANT_HOME` 环境变量到您安装Ant的目录。
 
-1. 在客户端计算机上安装Apache Axis 1.4。 它位于[https://ws.apache.org/axis/](https://ws.apache.org/axis/.md)。
-1. 按照[https://ws.apache.org/axis/java/install.html](https://ws.apache.org/axis/java/install.html)的Axis安装说明中所述，设置类路径以在Web服务客户端中使用Axis JAR文件。
+1. 在客户端计算机上安装Apache Axis 1.4。 它位于 [https://ws.apache.org/axis/](https://ws.apache.org/axis/).
+1. 设置类路径以在Web服务客户端中使用Axis JAR文件，如Axis安装说明中所述： [https://ws.apache.org/axis/java/install.html](https://ws.apache.org/axis/java/install.html).
 1. 使用Axis中的Apache WSDL2Java工具生成Java代理类。 创建Ant构建脚本以完成此任务。 以下脚本是名为build.xml的Ant内部版本脚本示例：
 
    ```java
@@ -518,7 +506,7 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     </project>
    ```
 
-   在此Ant构建脚本中，请注意`url`属性已设置为引用本地主机上运行的加密服务WSDL。 必须将`username`和`password`属性设置为有效的AEM表单用户名和密码。
+   在此Ant构建脚本中，请注意 `url` 属性设置为引用本地主机上运行的加密服务WSDL。 的 `username` 和 `password` 属性必须设置为有效的AEM forms用户名和密码。
 
 1. 创建BAT文件以执行Ant构建脚本。 以下命令可以位于负责执行Ant生成脚本的BAT文件中：
 
@@ -526,15 +514,15 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     ant -buildfile "build.xml" encryption-wsdl2java-client
    ```
 
-   JAVA文件将写入C:\JavaFiles folder as specified by the `output`属性。 要成功调用Forms服务，请将这些JAVA文件导入类路径。
+   JAVA文件将写入C:\JavaFiles folder as specified by the文件夹中 `output` 属性。 要成功调用Forms服务，请将这些JAVA文件导入类路径。
 
-   默认情况下，这些文件属于名为`com.adobe.idp.services`的Java包。 建议将这些JAVA文件放入JAR文件中。 然后，将JAR文件导入客户端应用程序的类路径。
+   默认情况下，这些文件属于名为 `com.adobe.idp.services`. 建议将这些JAVA文件放入JAR文件中。 然后，将JAR文件导入客户端应用程序的类路径。
 
    >[!NOTE]
    >
-   >将.JAVA文件放入JAR的方法有所不同。 一种方法是使用Java IDE，如Eclipse。 创建Java项目并创建`com.adobe.idp.services`包（所有.JAVA文件都属于此包）。 接下来，将所有.JAVA文件导入包中。 最后，将项目导出为JAR文件。
+   >将.JAVA文件放入JAR的方法有所不同。 一种方法是使用Java IDE，如Eclipse。 创建Java项目并创建 `com.adobe.idp.services`包（所有.JAVA文件都属于此包）。 接下来，将所有.JAVA文件导入包中。 最后，将项目导出为JAR文件。
 
-1. 修改`EncryptionServiceLocator`类中的URL以指定编码类型。 例如，要使用base64，请指定`?blob=base64`以确保`BLOB`对象返回二进制数据。 即，在`EncryptionServiceLocator`类中，找到以下代码行：
+1. 修改 `EncryptionServiceLocator` 类来指定编码类型。 例如，要使用base64，请指定 `?blob=base64` 确保 `BLOB` 对象返回二进制数据。 即，在 `EncryptionServiceLocator` 类中，找到以下代码行：
 
    ```java
     http://localhost:8080/soap/services/EncryptionService;
@@ -566,7 +554,7 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
    * xbean.jar
    * xercesImpl.jar
 
-   这些JAR文件位于`[install directory]/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdparty`目录中。
+   这些JAR文件位于 `[install directory]/Adobe/Adobe Experience Manager Forms/sdk/lib/thirdparty` 目录访问Advertising Cloud的帮助。
 
 **另请参阅**
 
@@ -576,31 +564,31 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 [通过HTTP使用BLOB数据调用AEM Forms](#invoking-aem-forms-using-blob-data-over-http)
 
-## 使用Base64编码{#invoking-aem-forms-using-base64-encoding}调用AEM Forms
+## 使用Base64编码调用AEM Forms {#invoking-aem-forms-using-base64-encoding}
 
-您可以使用Base64编码调用AEM Forms服务。 Base64编码对随Web服务调用请求发送的附件进行编码。 即，`BLOB`数据是Base64编码，而不是整个SOAP消息。
+您可以使用Base64编码调用AEM Forms服务。 Base64编码对随Web服务调用请求发送的附件进行编码。 就是说， `BLOB` 数据是Base64编码的，而不是整个SOAP消息。
 
-“使用Base64编码调用AEM Forms”讨论了使用Base64编码调用以下名为`MyApplication/EncryptDocument`的AEM Forms短生命周期进程。
+“使用Base64编码调用AEM Forms”讨论了调用以下名为 `MyApplication/EncryptDocument` 使用Base64编码。
 
 >[!NOTE]
 >
->此过程不基于现有的AEM Forms进程。 要遵循代码示例，请使用Workbench创建一个名为`MyApplication/EncryptDocument`的进程。 （请参阅[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此过程不基于现有的AEM Forms进程。 要遵循代码示例，请创建一个名为 `MyApplication/EncryptDocument` 使用Workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 调用此过程时，会执行以下操作：
 
-1. 获取传递到流程的不安全的PDF文档。 此操作基于`SetValue`操作。 此进程的输入参数是名为`inDoc`的`document`进程变量。
-1. 使用密码加密PDF文档。 此操作基于`PasswordEncryptPDF`操作。 在名为`outDoc`的进程变量中返回密码加密的PDF文档。
+1. 获取传递到流程的不安全PDF文档。 此操作基于 `SetValue` 操作。 此过程的输入参数是 `document` 进程变量已命名 `inDoc`.
+1. 使用密码加密PDF文档。 此操作基于 `PasswordEncryptPDF` 操作。 密码加密的PDF文档在名为 `outDoc`.
 
-### 创建使用Base64编码{#creating-a-net-client-assembly-that-uses-base64-encoding}的.NET客户端程序集
+### 创建使用Base64编码的.NET客户端程序集 {#creating-a-net-client-assembly-that-uses-base64-encoding}
 
-您可以创建.NET客户端程序集，以通过Microsoft Visual Studio .NET项目调用Forms服务。 要创建使用base64编码的.NET客户端程序集，请执行以下步骤：
+您可以创建一个.NET客户端程序集，以从Microsoft Visual Studio .NET项目中调用Forms服务。 要创建使用base64编码的.NET客户端程序集，请执行以下步骤：
 
 1. 根据AEM Forms调用URL创建代理类。
 1. 创建一个Microsoft Visual Studio .NET项目，以生成.NET客户端程序集。
 
 **创建代理类**
 
-您可以使用Microsoft Visual Studio附带的工具创建用于创建.NET客户端程序集的代理类。 该工具的名称为wsdl.exe ，它位于Microsoft Visual Studio安装文件夹中。 要创建代理类，请打开命令提示符，然后导航到包含wsdl.exe文件的文件夹。 有关wsdl.exe工具的详细信息，请参阅&#x200B;*MSDN帮助*。
+您可以使用Microsoft Visual Studio附带的工具创建用于创建.NET客户端程序集的代理类。 该工具的名称为wsdl.exe ，它位于Microsoft Visual Studio安装文件夹中。 要创建代理类，请打开命令提示符，然后导航到包含wsdl.exe文件的文件夹。 有关wsdl.exe工具的详细信息，请参阅 *MSDN帮助*.
 
 在命令提示符下输入以下命令：
 
@@ -608,9 +596,9 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
  wsdl https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
 ```
 
-默认情况下，此工具会在基于WSDL名称的同一文件夹中创建CS文件。 在这种情况下，它会创建一个名为&#x200B;*EncryptDocumentService.cs*&#x200B;的CS文件。 使用此CS文件创建一个代理对象，用于调用调用URL中指定的服务。
+默认情况下，此工具会在基于WSDL名称的同一文件夹中创建CS文件。 在这种情况下，它会创建一个名为 *EncryptDocumentService.cs*. 使用此CS文件创建一个代理对象，用于调用调用URL中指定的服务。
 
-修改代理类中的URL以包含`?blob=base64`，以确保`BLOB`对象返回二进制数据。 在代理类中，找到以下代码行：
+修改代理类中的URL以包含 `?blob=base64` 确保 `BLOB` 对象返回二进制数据。 在代理类中，找到以下代码行：
 
 ```java
  "https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument";
@@ -622,7 +610,7 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
  "https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64";
 ```
 
-*使用Base64 Encoding*&#x200B;调用AEM Forms部分以`MyApplication/EncryptDocument`为例。 如果要为另一个Forms服务创建.NET客户端程序集，请确保将`MyApplication/EncryptDocument`替换为服务的名称。
+的 *使用Base64编码调用AEM Forms* 部分使用 `MyApplication/EncryptDocument` 例如。 如果要为另一个Forms服务创建.NET客户端程序集，请确保将 `MyApplication/EncryptDocument` 和服务的名称。
 
 **开发.NET客户端程序集**
 
@@ -631,76 +619,76 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 1. 启动Microsoft Visual Studio .NET。
 1. 创建类库项目并将其命名为DocumentService。
 1. 导入使用wsdl.exe创建的CS文件。
-1. 在&#x200B;**项目**&#x200B;菜单中，选择&#x200B;**添加引用**。
-1. 在“添加引用”对话框中，选择&#x200B;**System.Web.Services.dll**。
-1. 单击&#x200B;**选择**，然后单击&#x200B;**确定**。
+1. 在 **项目** 菜单，选择 **添加引用**.
+1. 在“添加引用”(Add Reference)对话框中，选择 **System.Web.Services.dll**.
+1. 单击 **选择** 然后单击 **确定**.
 1. 编译并构建项目。
 
 >[!NOTE]
 >
->此过程会创建一个名为DocumentService.dll的.NET客户端程序集，您可以使用它向`MyApplication/EncryptDocument`服务发送SOAP请求。
+>此过程会创建一个名为DocumentService.dll的.NET客户端程序集，您可以使用它向 `MyApplication/EncryptDocument` 服务。
 
 >[!NOTE]
 >
->确保将`?blob=base64`添加到用于创建.NET客户端程序集的代理类中的URL。 否则，无法从`BLOB`对象检索二进制数据。
+>确保已添加 `?blob=base64` 到用于创建.NET客户端程序集的代理类中的URL。 否则，您无法从 `BLOB` 对象。
 
 **引用.NET客户端程序集**
 
-将新创建的.NET客户端程序集放置在正在开发客户端应用程序的计算机上。 将.NET客户端程序集放置到目录后，可以从项目中引用它。 另请引用您项目中的`System.Web.Services`库。 如果不引用此库，则不能使用.NET客户端程序集调用服务。
+将新创建的.NET客户端程序集放置在正在开发客户端应用程序的计算机上。 将.NET客户端程序集放置到目录后，可以从项目中引用它。 另请参考 `System.Web.Services` 库。 如果不引用此库，则不能使用.NET客户端程序集调用服务。
 
-1. 在&#x200B;**项目**&#x200B;菜单中，选择&#x200B;**添加引用**。
-1. 单击&#x200B;**.NET**&#x200B;选项卡。
-1. 单击&#x200B;**Browse**&#x200B;并找到DocumentService.dll文件。
-1. 单击&#x200B;**选择**，然后单击&#x200B;**确定**。
+1. 在 **项目** 菜单，选择 **添加引用**.
+1. 单击 **.NET** 选项卡。
+1. 单击 **浏览** 和找到DocumentService.dll文件。
+1. 单击 **选择** 然后单击 **确定**.
 
 **使用使用Base64编码的.NET客户端程序集调用服务**
 
-您可以使用使用Base64编码的.NET客户端程序集调用`MyApplication/EncryptDocument`服务（该服务是在Workbench中构建的）。 要调用`MyApplication/EncryptDocument`服务，请执行以下步骤：
+您可以调用 `MyApplication/EncryptDocument` 服务（在Workbench中构建）使用使用Base64编码的.NET客户端程序集。 调用 `MyApplication/EncryptDocument` 服务，请执行以下步骤：
 
-1. 创建使用`MyApplication/EncryptDocument`服务WSDL的Microsoft .NET客户端程序集。
-1. 创建客户端Microsoft .NET项目。 在客户端项目中引用Microsoft .NET客户端程序集。 另请参阅`System.Web.Services`。
-1. 使用Microsoft .NET客户端程序集，通过调用其默认构造函数创建`MyApplication_EncryptDocumentService`对象。
-1. 使用`System.Net.NetworkCredential`对象设置`MyApplication_EncryptDocumentService`对象的`Credentials`属性。 在`System.Net.NetworkCredential`构造函数中，指定AEM表单用户名和相应的密码。 设置身份验证值，使您的.NET客户端应用程序能够成功与AEM Forms交换SOAP消息。
-1. 使用`BLOB`对象的构造函数创建对象。 `BLOB`对象用于存储传递到`MyApplication/EncryptDocument`进程的PDF文档。
-1. 通过调用`System.IO.FileStream`对象的构造函数创建对象。 传递一个字符串值，该值表示PDF文档的文件位置以及打开文件的模式。
-1. 创建用于存储`System.IO.FileStream`对象内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
-1. 通过调用`System.IO.FileStream`对象的`Read`方法，使用流数据填充字节数组。 传递字节数组、开始位置和流长度以读取。
-1. 通过为`BLOB`对象的`binaryData`属性分配字节数组的内容来填充该对象。
-1. 通过调用`MyApplication_EncryptDocumentService`对象的`invoke`方法并传递包含PDF文档的`BLOB`对象来调用`MyApplication/EncryptDocument`进程。 此过程会在`BLOB`对象中返回加密的PDF文档。
-1. 通过调用`System.IO.FileStream`对象的构造函数并传递表示密码加密文档的文件位置的字符串值，创建对象。
-1. 创建一个字节数组，用于存储`MyApplicationEncryptDocumentService`对象`invoke`方法返回的`BLOB`对象的数据内容。 通过获取`BLOB`对象`binaryData`数据成员的值来填充字节数组。
-1. 通过调用`System.IO.BinaryWriter`对象的构造函数并传递`System.IO.FileStream`对象来创建该对象。
-1. 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组内容写入PDF文件。
+1. 创建使用的Microsoft .NET客户端程序集 `MyApplication/EncryptDocument` 服务WSDL。
+1. 创建客户端Microsoft .NET项目。 在客户端项目中引用Microsoft .NET客户端程序集。 还参考 `System.Web.Services`.
+1. 使用Microsoft .NET客户端程序集，创建 `MyApplication_EncryptDocumentService` 对象。
+1. 设置 `MyApplication_EncryptDocumentService` 对象 `Credentials` 属性 `System.Net.NetworkCredential` 对象。 在 `System.Net.NetworkCredential` 构造函数中，指定AEM表单用户名和相应的密码。 设置身份验证值，使您的.NET客户端应用程序能够成功与AEM Forms交换SOAP消息。
+1. 创建 `BLOB` 对象。 的 `BLOB` 对象用于存储传递到的PDF文档 `MyApplication/EncryptDocument` 进程。
+1. 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示PDF文档的文件位置以及打开文件的模式。
+1. 创建用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象 `Length` 属性。
+1. 通过调用 `System.IO.FileStream` 对象 `Read` 方法。 传递字节数组、开始位置和流长度以读取。
+1. 填充 `BLOB` 通过指定对象 `binaryData` 属性。
+1. 调用 `MyApplication/EncryptDocument` 进程 `MyApplication_EncryptDocumentService` 对象 `invoke` 方法和通过 `BLOB` 包含PDF文档的对象。 此过程会在 `BLOB` 对象。
+1. 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示密码加密文档的文件位置。
+1. 创建用于存储 `BLOB` 由返回的对象 `MyApplicationEncryptDocumentService` 对象 `invoke` 方法。 通过获取 `BLOB` 对象 `binaryData` 数据成员。
+1. 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数并传递 `System.IO.FileStream` 对象。
+1. 通过调用 `System.IO.BinaryWriter` 对象 `Write` 方法和传递字节数组。
 
-### 使用Java代理类和Base64编码{#invoking-a-service-using-java-proxy-classes-and-base64-encoding}调用服务
+### 使用Java代理类和Base64编码调用服务 {#invoking-a-service-using-java-proxy-classes-and-base64-encoding}
 
-您可以使用Java代理类和Base64调用AEM Forms服务。 要使用Java代理类调用`MyApplication/EncryptDocument`服务，请执行以下步骤：
+您可以使用Java代理类和Base64调用AEM Forms服务。 调用 `MyApplication/EncryptDocument` 服务，请执行以下步骤：
 
-1. 使用使用`MyApplication/EncryptDocument`服务WSDL的JAX-WS创建Java代理类。 使用以下WSDL端点：
+1. 使用使用的JAX-WS创建Java代理类 `MyApplication/EncryptDocument` 服务WSDL。 使用以下WSDL端点：
 
    `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1`
 
    >[!NOTE]
    >
-   >将`hiro-xp` *替换为托管AEM Forms的J2EE应用程序服务器的IP地址。*
+   >替换 `hiro-xp` *具有托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
 1. 将使用JAX-WS创建的Java代理类打包到JAR文件中。
 1. 将Java代理JAR文件和JAR文件包含在以下路径中：
 
-   &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
+   &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
    到您Java客户端项目的类路径中。
 
-1. 使用`MyApplicationEncryptDocumentService`对象的构造函数创建对象。
-1. 通过调用`MyApplicationEncryptDocumentService`对象的`getEncryptDocument`方法创建`MyApplicationEncryptDocument`对象。
+1. 创建 `MyApplicationEncryptDocumentService` 对象。
+1. 创建 `MyApplicationEncryptDocument` 对象 `MyApplicationEncryptDocumentService` 对象 `getEncryptDocument` 方法。
 1. 通过为以下数据成员分配值来设置调用AEM Forms所需的连接值：
 
-   * 为`javax.xml.ws.BindingProvider`对象的`ENDPOINT_ADDRESS_PROPERTY`字段分配WSDL端点和编码类型。 要使用Base64编码调用`MyApplication/EncryptDocument`服务，请指定以下URL值：
+   * 将WSDL端点和编码类型分配给 `javax.xml.ws.BindingProvider` 对象 `ENDPOINT_ADDRESS_PROPERTY` 字段。 调用 `MyApplication/EncryptDocument` 使用Base64编码的服务，请指定以下URL值：
 
       `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
-   * 将AEM Forms用户分配给`javax.xml.ws.BindingProvider`对象的`USERNAME_PROPERTY`字段。
-   * 为`javax.xml.ws.BindingProvider`对象的`PASSWORD_PROPERTY`字段分配相应的密码值。
+   * 将AEM表单用户分配给 `javax.xml.ws.BindingProvider` 对象 `USERNAME_PROPERTY` 字段。
+   * 为 `javax.xml.ws.BindingProvider` 对象 `PASSWORD_PROPERTY` 字段。
 
    以下代码示例显示了此应用程序逻辑：
 
@@ -714,12 +702,12 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, password);
    ```
 
-1. 通过使用`java.io.FileInputStream`对象的构造函数创建一个对象，以检索要发送到`MyApplication/EncryptDocument`进程的PDF文档。 传递指定PDF文档位置的字符串值。
-1. 创建一个字节数组，并使用`java.io.FileInputStream`对象的内容对其进行填充。
-1. 使用`BLOB`对象的构造函数创建对象。
-1. 通过调用`setBinaryData`方法并传递字节数组来填充`BLOB`对象。 使用Base64编码时，`BLOB`对象的`setBinaryData`是调用的方法。 请参阅在服务请求中提供BLOB对象。
-1. 通过调用`MyApplicationEncryptDocument`对象的`invoke`方法来调用`MyApplication/EncryptDocument`进程。 传递包含PDF文档的`BLOB`对象。 invoke方法会返回一个`BLOB`对象，该对象包含加密的PDF文档。
-1. 通过调用`BLOB`对象的`getBinaryData`方法，创建包含加密PDF文档的字节数组。
+1. 检索要发送到的PDF文档 `MyApplication/EncryptDocument` 流程 `java.io.FileInputStream` 对象。 传递指定PDF文档位置的字符串值。
+1. 创建字节数组，然后使用 `java.io.FileInputStream` 对象。
+1. 创建 `BLOB` 对象。
+1. 填充 `BLOB` 通过调用对象 `setBinaryData` 方法和传递字节数组。 的 `BLOB` 对象 `setBinaryData` 是使用Base64编码时调用的方法。 请参阅在服务请求中提供BLOB对象。
+1. 调用 `MyApplication/EncryptDocument` 进程 `MyApplicationEncryptDocument` 对象 `invoke` 方法。 传递 `BLOB` 包含PDF文档的对象。 invoke方法返回 `BLOB` 包含加密PDF文档的对象。
+1. 通过调用 `BLOB` 对象 `getBinaryData` 方法。
 1. 将加密的PDF文档另存为PDF文件。 将字节数组写入文件。
 
 **另请参阅**
@@ -728,20 +716,20 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 [创建使用Base64编码的.NET客户端程序集](#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## 使用MTOM {#invoking-aem-forms-using-mtom}调用AEM Forms
+## 使用MTOM调用AEM Forms {#invoking-aem-forms-using-mtom}
 
-您可以使用Web服务标准MTOM调用AEM Forms服务。 此标准定义二进制数据（如PDF文档）如何通过Internet或内联网传输。 MTOM的一项功能是使用`XOP:Include`元素。 此元素在XML二进制优化打包(XOP)规范中定义，以引用SOAP消息的二进制附件。
+您可以使用Web服务标准MTOM调用AEM Forms服务。 此标准定义二进制数据(如PDF文档)如何通过Internet或内联网传输。 MTOM的一项功能是使用 `XOP:Include` 元素。 此元素在XML二进制优化打包(XOP)规范中定义，以引用SOAP消息的二进制附件。
 
-此处讨论的内容是使用MTOM调用以下名为`MyApplication/EncryptDocument`的AEM Forms短期进程。
+这里讨论的内容是使用MTOM调用以下名为的AEM Forms短期流程 `MyApplication/EncryptDocument`.
 
 >[!NOTE]
 >
->此过程不基于现有的AEM Forms进程。 要遵循代码示例，请使用Workbench创建一个名为`MyApplication/EncryptDocument`的进程。 （请参阅[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此过程不基于现有的AEM Forms进程。 要遵循代码示例，请创建一个名为 `MyApplication/EncryptDocument` 使用Workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 调用此过程时，会执行以下操作：
 
-1. 获取传递到流程的不安全的PDF文档。 此操作基于`SetValue`操作。 此进程的输入参数是名为`inDoc`的`document`进程变量。
-1. 使用密码加密PDF文档。 此操作基于`PasswordEncryptPDF`操作。 在名为`outDoc`的进程变量中返回密码加密的PDF文档。
+1. 获取传递到流程的不安全PDF文档。 此操作基于 `SetValue` 操作。 此过程的输入参数是 `document` 进程变量已命名 `inDoc`.
+1. 使用密码加密PDF文档。 此操作基于 `PasswordEncryptPDF` 操作。 密码加密的PDF文档在名为 `outDoc`.
 
 >[!NOTE]
 >
@@ -749,62 +737,62 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 >[!NOTE]
 >
->使用MTOM传输协议的基于JAX WS的应用程序被限制为25 MB的发送和接收数据。 此限制是由于JAX-WS中存在错误所致。 如果已发送和已接收文件的合计大小超过25MB，请使用SwaRef传输协议，而不是MTOM传输协议。 否则，可能会出现`OutOfMemory`异常。
+>使用MTOM传输协议的基于JAX WS的应用程序被限制为25 MB的发送和接收数据。 此限制是由于JAX-WS中存在错误所致。 如果已发送和已接收文件的合计大小超过25MB，请使用SwaRef传输协议，而不是MTOM传输协议。 否则，可能会 `OutOfMemory` 例外。
 
 此处讨论的内容是在Microsoft .NET项目中使用MTOM来调用AEM Forms服务。 使用的.NET框架为3.5，开发环境为Visual Studio 2008。 如果您的开发计算机上安装了Web服务增强功能(WSE)，请将其删除。 .NET 3.5框架支持名为Windows Communication Foundation(WCF)的SOAP框架。 使用MTOM调用AEM Forms时，仅支持WCF（不支持WSE）。
 
-### 创建使用MTOM {#creating-a-net-project-that-invokes-a-service-using-mtom}调用服务的.NET项目
+### 创建使用MTOM调用服务的.NET项目 {#creating-a-net-project-that-invokes-a-service-using-mtom}
 
-您可以创建一个Microsoft .NET项目，以使用Web服务调用AEM Forms服务。 首先，使用Visual Studio 2008创建Microsoft .NET项目。 要调用AEM Forms服务，请创建要在项目中调用的AEM Forms服务的服务引用。 创建服务引用时，请指定指向AEM Forms服务的URL:
+您可以创建一个Microsoft .NET项目，以便使用Web服务调用AEM Forms服务。 首先，使用Visual Studio 2008创建Microsoft .NET项目。 要调用AEM Forms服务，请创建要在项目中调用的AEM Forms服务的服务引用。 创建服务引用时，请指定指向AEM Forms服务的URL:
 
 ```java
  http://localhost:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
 ```
 
-将`localhost`替换为托管AEM Forms的J2EE应用程序服务器的IP地址。 将`MyApplication/EncryptDocument`替换为要调用的AEM Forms服务的名称。 例如，要调用Rights Management操作，请指定：
+替换 `localhost` 具有托管AEM Forms的J2EE应用程序服务器的IP地址。 替换 `MyApplication/EncryptDocument` ，以调用AEM Forms服务的名称。 例如，要调用Rights Management操作，请指定：
 
 `http://localhost:8080/soap/services/RightsManagementService?WSDL&lc_version=9.0.1`
 
-`lc_version`选项可确保AEM Forms功能（如MTOM）可用。 如果未指定`lc_version`选项，则无法使用MTOM调用AEM Forms。
+的 `lc_version` 选项可确保AEM Forms功能（如MTOM）可用。 不指定 `lc_version` 选项，则无法使用MTOM调用AEM Forms。
 
 创建服务引用后，与AEM Forms服务关联的数据类型可在.NET项目中使用。 要创建调用AEM Forms服务的.NET项目，请执行以下步骤：
 
 1. 使用Microsoft Visual Studio 2008创建.NET项目。
-1. 在&#x200B;**项目**&#x200B;菜单中，选择&#x200B;**添加服务引用**。
-1. 在&#x200B;**地址**&#x200B;对话框中，指定AEM Forms服务的WSDL。 例如，
+1. 在 **项目** 菜单，选择 **添加服务参考**.
+1. 在 **地址** 对话框中，指定AEM Forms服务的WSDL。 例如，
 
    ```java
     http://localhost:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
    ```
 
-1. 单击&#x200B;**Go**，然后单击&#x200B;**OK**。
+1. 单击 **开始** 然后单击 **确定**.
 
-### 在.NET项目{#invoking-a-service-using-mtom-in-a-net-project}中使用MTOM调用服务
+### 在.NET项目中使用MTOM调用服务 {#invoking-a-service-using-mtom-in-a-net-project}
 
-考虑`MyApplication/EncryptDocument`流程，该流程接受不安全的PDF文档并返回密码加密的PDF文档。 要使用MTOM调用`MyApplication/EncryptDocument`进程（在Workbench中构建），请执行以下步骤：
+请考虑 `MyApplication/EncryptDocument` 接受不安全的PDF文档并返回密码加密的PDF文档的流程。 调用 `MyApplication/EncryptDocument` 流程（已在Workbench中构建），请执行以下步骤：
 
 1. 创建Microsoft .NET项目。
-1. 使用其默认构造函数创建`MyApplication_EncryptDocumentClient`对象。
-1. 使用`System.ServiceModel.EndpointAddress`构造函数创建`MyApplication_EncryptDocumentClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递到AEM Forms服务和编码类型：
+1. 创建 `MyApplication_EncryptDocumentClient` 对象。
+1. 创建 `MyApplication_EncryptDocumentClient.Endpoint.Address` 对象 `System.ServiceModel.EndpointAddress` 构造函数。 将指定WSDL的字符串值传递到AEM Forms服务和编码类型：
 
    ```java
     https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=mtom
    ```
 
-   您无需使用`lc_version`属性。 在创建服务引用时，会使用此属性。 但是，请确保指定`?blob=mtom`。
+   您无需使用 `lc_version` 属性。 在创建服务引用时，会使用此属性。 但是，请确保指定 `?blob=mtom`.
 
    >[!NOTE]
    >
-   >将`hiro-xp` *替换为托管AEM Forms的J2EE应用程序服务器的IP地址。*
+   >替换 `hiro-xp` *具有托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
-1. 通过获取`EncryptDocumentClient.Endpoint.Binding`数据成员的值，创建`System.ServiceModel.BasicHttpBinding`对象。 将返回值转换为`BasicHttpBinding`。
-1. 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`数据成员设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
+1. 创建 `System.ServiceModel.BasicHttpBinding` 对象，方法是获取 `EncryptDocumentClient.Endpoint.Binding` 数据成员。 将返回值转换为 `BasicHttpBinding`.
+1. 设置 `System.ServiceModel.BasicHttpBinding` 对象 `MessageEncoding` 数据成员到 `WSMessageEncoding.Mtom`. 此值可确保使用MTOM。
 1. 通过执行以下任务，启用基本HTTP身份验证：
 
-   * 将AEM表单用户名分配给数据成员`MyApplication_EncryptDocumentClient.ClientCredentials.UserName.UserName`。
-   * 为数据成员`MyApplication_EncryptDocumentClient.ClientCredentials.UserName.Password`分配相应的密码值。
-   * 将常量值`HttpClientCredentialType.Basic`分配给数据成员`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-   * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给数据成员`BasicHttpBindingSecurity.Security.Mode`。
+   * 将AEM表单用户名分配给数据成员 `MyApplication_EncryptDocumentClient.ClientCredentials.UserName.UserName`.
+   * 为数据成员分配相应的密码值 `MyApplication_EncryptDocumentClient.ClientCredentials.UserName.Password`.
+   * 指定常量值 `HttpClientCredentialType.Basic` 到数据成员 `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+   * 指定常量值 `BasicHttpSecurityMode.TransportCredentialOnly` 到数据成员 `BasicHttpBindingSecurity.Security.Mode`.
 
    以下代码示例显示了这些任务。
 
@@ -819,20 +807,20 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     b.ReaderQuotas.MaxArrayLength = 4000000;
    ```
 
-1. 使用`BLOB`对象的构造函数创建对象。 `BLOB`对象用于存储要传递到`MyApplication/EncryptDocument`进程的PDF文档。
-1. 通过调用`System.IO.FileStream`对象的构造函数创建对象。 传递一个字符串值，该值表示PDF文档的文件位置以及打开文件的模式。
-1. 创建用于存储`System.IO.FileStream`对象内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
-1. 通过调用`System.IO.FileStream`对象的`Read`方法，使用流数据填充字节数组。 传递字节数组、开始位置和流长度以读取。
-1. 通过为`MTOM`数据成员分配字节数组的内容来填充`BLOB`对象。
-1. 通过调用`MyApplication_EncryptDocumentClient`对象的`invoke`方法来调用`MyApplication/EncryptDocument`进程。 传递包含PDF文档的`BLOB`对象。 此过程会在`BLOB`对象中返回加密的PDF文档。
-1. 通过调用`System.IO.FileStream`对象的构造函数并传递表示安全PDF文档的文件位置的字符串值来创建该对象。
-1. 创建一个字节数组，用于存储`invoke`方法返回的`BLOB`对象的数据内容。 通过获取`BLOB`对象`MTOM`数据成员的值来填充字节数组。
-1. 通过调用`System.IO.BinaryWriter`对象的构造函数并传递`System.IO.FileStream`对象来创建该对象。
-1. 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
+1. 创建 `BLOB` 对象。 的 `BLOB` 对象用于存储要传递到的PDF文档 `MyApplication/EncryptDocument` 进程。
+1. 创建 `System.IO.FileStream` 对象。 传递一个字符串值，该值表示PDF文档的文件位置以及打开文件的模式。
+1. 创建用于存储 `System.IO.FileStream` 对象。 您可以通过获取 `System.IO.FileStream` 对象 `Length` 属性。
+1. 通过调用 `System.IO.FileStream` 对象 `Read` 方法。 传递字节数组、开始位置和流长度以读取。
+1. 填充 `BLOB` 通过指定对象 `MTOM` 具有字节数组内容的数据成员。
+1. 调用 `MyApplication/EncryptDocument` 进程 `MyApplication_EncryptDocumentClient` 对象 `invoke` 方法。 传递 `BLOB` 包含PDF文档的对象。 此过程会在 `BLOB` 对象。
+1. 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递一个字符串值，该字符串值表示安全PDF文档的文件位置。
+1. 创建用于存储 `BLOB` 由返回的对象 `invoke` 方法。 通过获取 `BLOB` 对象 `MTOM` 数据成员。
+1. 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数并传递 `System.IO.FileStream` 对象。
+1. 通过调用 `System.IO.BinaryWriter` 对象 `Write` 方法和传递字节数组。
 
 >[!NOTE]
 >
->大多数AEM Forms服务操作都具有MTOM快速启动。 您可以在服务的相应快速启动部分中查看这些快速启动。 例如，要查看“输出快速启动”部分，请参阅[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)。
+>大多数AEM Forms服务操作都具有MTOM快速启动。 您可以在服务的相应快速启动部分中查看这些快速启动。 例如，要查看输出快速入门部分，请参阅 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap).
 
 **另请参阅**
 
@@ -842,20 +830,20 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 [创建ASP.NET Web应用程序，该应用程序调用以人为中心的长生命周期流程](/help/forms/developing/invoking-human-centric-long-lived.md#creating-an-asp-net-web-application-that-invokes-a-human-centric-long-lived-process)
 
-## 使用SwaRef {#invoking-aem-forms-using-swaref}调用AEM Forms
+## 使用SwaRef调用AEM Forms {#invoking-aem-forms-using-swaref}
 
-您可以使用SwaRef调用AEM Forms服务。 `wsi:swaRef` XML元素的内容将作为附件发送到存储对该附件的引用的SOAP主体中。 使用SwaRef调用Forms服务时，请使用Java API for XML Web Services(JAX-WS)创建Java代理类。 （请参阅[Java API for XML Web Services](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html)。）
+您可以使用SwaRef调用AEM Forms服务。 的内容 `wsi:swaRef` XML元素作为附件发送到SOAP主体内，该主体存储对该附件的引用。 使用SwaRef调用Forms服务时，请使用Java API for XML Web Services(JAX-WS)创建Java代理类。 (请参阅 [适用于XML Web服务的Java API](https://jax-ws.dev.java.net/jax-ws-ea3/docs/mtom-swaref.html).)
 
-这里讨论的是如何使用SwaRef调用以下名为`MyApplication/EncryptDocument`的Forms短期进程。
+这里讨论的是如何调用以下名为的Forms短期流程 `MyApplication/EncryptDocument` 使用SwaRef。
 
 >[!NOTE]
 >
->此过程不基于现有的AEM Forms进程。 要遵循代码示例，请使用Workbench创建一个名为`MyApplication/EncryptDocument`的进程。 （请参阅[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此过程不基于现有的AEM Forms进程。 要遵循代码示例，请创建一个名为 `MyApplication/EncryptDocument` 使用Workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 调用此过程时，会执行以下操作：
 
-1. 获取传递到流程的不安全的PDF文档。 此操作基于`SetValue`操作。 此进程的输入参数是名为`inDoc`的`document`进程变量。
-1. 使用密码加密PDF文档。 此操作基于`PasswordEncryptPDF`操作。 在名为`outDoc`的进程变量中返回密码加密的PDF文档。
+1. 获取传递到流程的不安全PDF文档。 此操作基于 `SetValue` 操作。 此过程的输入参数是 `document` 进程变量已命名 `inDoc`.
+1. 使用密码加密PDF文档。 此操作基于 `PasswordEncryptPDF` 操作。 密码加密的PDF文档在名为 `outDoc`.
 
 >[!NOTE]
 >
@@ -863,39 +851,39 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 下面讨论的是如何在Java客户端应用程序中使用SwaRef调用Forms服务。 Java应用程序使用通过使用JAX-WS创建的代理类。
 
-### 使用使用SwaRef {#invoke-a-service-using-jax-ws-library-files-that-use-swaref}的JAX-WS库文件调用服务
+### 使用使用SwaRef的JAX-WS库文件调用服务 {#invoke-a-service-using-jax-ws-library-files-that-use-swaref}
 
-要使用使用JAX-WS和SwaRef创建的Java代理文件来调用`MyApplication/EncryptDocument`进程，请执行以下步骤：
+调用 `MyApplication/EncryptDocument` 使用使用JAX-WS和SwaRef创建的Java代理文件进行处理，请执行以下步骤：
 
-1. 使用使用`MyApplication/EncryptDocument`服务WSDL的JAX-WS创建Java代理类。 使用以下WSDL端点：
+1. 使用使用的JAX-WS创建Java代理类 `MyApplication/EncryptDocument` 服务WSDL。 使用以下WSDL端点：
 
    ```java
     https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
    ```
 
-   有关信息，请参阅[使用JAX-WS](#creating-java-proxy-classes-using-jax-ws)创建Java代理类。
+   有关信息，请参阅 [使用JAX-WS创建Java代理类](#creating-java-proxy-classes-using-jax-ws).
 
    >[!NOTE]
    >
-   >将`hiro-xp` *替换为托管AEM Forms的J2EE应用程序服务器的IP地址。*
+   >替换 `hiro-xp` *具有托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
 1. 将使用JAX-WS创建的Java代理类打包到JAR文件中。
 1. 将Java代理JAR文件和JAR文件包含在以下路径中：
 
-   &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
+   &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
    到您Java客户端项目的类路径中。
 
-1. 使用`MyApplicationEncryptDocumentService`对象的构造函数创建对象。
-1. 通过调用`MyApplicationEncryptDocumentService`对象的`getEncryptDocument`方法创建`MyApplicationEncryptDocument`对象。
+1. 创建 `MyApplicationEncryptDocumentService` 对象。
+1. 创建 `MyApplicationEncryptDocument` 对象 `MyApplicationEncryptDocumentService` 对象 `getEncryptDocument` 方法。
 1. 通过为以下数据成员分配值来设置调用AEM Forms所需的连接值：
 
-   * 为`javax.xml.ws.BindingProvider`对象的`ENDPOINT_ADDRESS_PROPERTY`字段分配WSDL端点和编码类型。 要使用SwaRef编码调用`MyApplication/EncryptDocument`服务，请指定以下URL值：
+   * 将WSDL端点和编码类型分配给 `javax.xml.ws.BindingProvider` 对象 `ENDPOINT_ADDRESS_PROPERTY` 字段。 调用 `MyApplication/EncryptDocument` 服务，请指定以下URL值：
 
       ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
-   * 将AEM Forms用户分配给`javax.xml.ws.BindingProvider`对象的`USERNAME_PROPERTY`字段。
-   * 为`javax.xml.ws.BindingProvider`对象的`PASSWORD_PROPERTY`字段分配相应的密码值。
+   * 将AEM表单用户分配给 `javax.xml.ws.BindingProvider` 对象 `USERNAME_PROPERTY` 字段。
+   * 为 `javax.xml.ws.BindingProvider` 对象 `PASSWORD_PROPERTY` 字段。
 
    以下代码示例显示了此应用程序逻辑：
 
@@ -909,46 +897,46 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, password);
    ```
 
-1. 通过使用`java.io.File`对象的构造函数创建一个对象，以检索要发送到`MyApplication/EncryptDocument`进程的PDF文档。 传递指定PDF文档位置的字符串值。
-1. 使用`FileDataSource`构造函数创建`javax.activation.DataSource`对象。 传递`java.io.File`对象。
-1. 使用其构造函数创建`javax.activation.DataHandler`对象，并传递`javax.activation.DataSource`对象。
-1. 使用`BLOB`对象的构造函数创建对象。
-1. 通过调用`setSwaRef`方法并传递`javax.activation.DataHandler`对象来填充`BLOB`对象。
-1. 通过调用`MyApplicationEncryptDocument`对象的`invoke`方法并传递包含PDF文档的`BLOB`对象来调用`MyApplication/EncryptDocument`进程。 invoke方法会返回一个`BLOB`对象，该对象包含加密的PDF文档。
-1. 通过调用`BLOB`对象的`getSwaRef`方法来填充`javax.activation.DataHandler`对象。
-1. 通过调用`javax.activation.DataHandler`对象的`getInputStream`方法，将`javax.activation.DataHandler`对象转换为`java.io.InputSteam`实例。
-1. 将`java.io.InputSteam`实例写入表示加密PDF文档的PDF文件。
+1. 检索要发送到的PDF文档 `MyApplication/EncryptDocument` 流程 `java.io.File` 对象。 传递指定PDF文档位置的字符串值。
+1. 创建 `javax.activation.DataSource` 对象 `FileDataSource` 构造函数。 传递 `java.io.File` 对象。
+1. 创建 `javax.activation.DataHandler` 对象，并使用其构造函数进行传递 `javax.activation.DataSource` 对象。
+1. 创建 `BLOB` 对象。
+1. 填充 `BLOB` 通过调用对象 `setSwaRef` 方法和通过 `javax.activation.DataHandler` 对象。
+1. 调用 `MyApplication/EncryptDocument` 进程 `MyApplicationEncryptDocument` 对象 `invoke` 方法和通过 `BLOB` 包含PDF文档的对象。 invoke方法返回 `BLOB` 包含加密PDF文档的对象。
+1. 填充 `javax.activation.DataHandler` 对象 `BLOB` 对象 `getSwaRef` 方法。
+1. 转换 `javax.activation.DataHandler` 对象 `java.io.InputSteam` 实例 `javax.activation.DataHandler` 对象 `getInputStream` 方法。
+1. 编写 `java.io.InputSteam` 实例到表示已加密的PDF文档的PDF文件。
 
 >[!NOTE]
 >
->大多数AEM Forms服务操作都有SwaRef快速启动。 您可以在服务的相应快速启动部分中查看这些快速启动。 例如，要查看“输出快速启动”部分，请参阅[输出服务API快速启动](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)。
+>大多数AEM Forms服务操作都有SwaRef快速启动。 您可以在服务的相应快速启动部分中查看这些快速启动。 例如，要查看输出快速入门部分，请参阅 [输出服务API快速入门](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap).
 
 **另请参阅**
 
 [快速入门：在Java项目中使用SwaRef调用服务](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-swaref-in-a-java-project)
 
-## 通过HTTP {#invoking-aem-forms-using-blob-data-over-http}使用BLOB数据调用AEM Forms
+## 通过HTTP使用BLOB数据调用AEM Forms {#invoking-aem-forms-using-blob-data-over-http}
 
-您可以使用Web服务调用AEM Forms服务，并通过HTTP传递BLOB数据。 通过HTTP传递BLOB数据是替代方法，而不是使用base64编码、DIME或MIME。 例如，在使用Web服务增强3.0（不支持DIME或MIME）的Microsoft .NET项目中，可以通过HTTP传递数据。 通过HTTP使用BLOB数据时，会先上传输入数据，然后再调用AEM Forms服务。
+您可以使用Web服务调用AEM Forms服务，并通过HTTP传递BLOB数据。 通过HTTP传递BLOB数据是替代方法，而不是使用base64编码、DIME或MIME。 例如，在使用Web服务增强3.0（不支持DIME或MIME）的Microsoft .NET项目中，您可以通过HTTP传递数据。 通过HTTP使用BLOB数据时，会先上传输入数据，然后再调用AEM Forms服务。
 
-“使用HTTP上的BLOB数据调用AEM Forms”讨论通过通过HTTP传递BLOB数据来调用以下名为`MyApplication/EncryptDocument`的AEM Forms短生命周期进程。
+“通过HTTP使用BLOB数据调用AEM Forms”讨论了调用以下AEM Forms短暂的进程，该进程名为 `MyApplication/EncryptDocument` 通过HTTP传递BLOB数据。
 
 >[!NOTE]
 >
->此过程不基于现有的AEM Forms进程。 要遵循代码示例，请使用Workbench创建一个名为`MyApplication/EncryptDocument`的进程。 （请参阅[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+>此过程不基于现有的AEM Forms进程。 要遵循代码示例，请创建一个名为 `MyApplication/EncryptDocument` 使用Workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 调用此过程时，会执行以下操作：
 
-1. 获取传递到流程的不安全的PDF文档。 此操作基于`SetValue`操作。 此进程的输入参数是名为`inDoc`的`document`进程变量。
-1. 使用密码加密PDF文档。 此操作基于`PasswordEncryptPDF`操作。 在名为`outDoc`的进程变量中返回密码加密的PDF文档。
+1. 获取传递到流程的不安全PDF文档。 此操作基于 `SetValue` 操作。 此过程的输入参数是 `document` 进程变量已命名 `inDoc`.
+1. 使用密码加密PDF文档。 此操作基于 `PasswordEncryptPDF` 操作。 密码加密的PDF文档在名为 `outDoc`.
 
 >[!NOTE]
 >
->建议您熟悉使用SOAP调用AEM Forms。 (请参阅[使用Web服务调用AEM Forms](#invoking-aem-forms-using-web-services)。)
+>建议您熟悉使用SOAP调用AEM Forms。 (请参阅 [使用Web服务调用AEM Forms](#invoking-aem-forms-using-web-services).)
 
-### 创建使用HTTP {#creating-a-net-client-assembly-that-uses-data-over-http}上数据的.NET客户端程序集
+### 创建通过HTTP使用数据的.NET客户端程序集 {#creating-a-net-client-assembly-that-uses-data-over-http}
 
-要创建通过HTTP使用数据的客户端程序集，请按照[使用Base64编码](#invoking-aem-forms-using-base64-encoding)调用AEM Forms中指定的过程操作。 但是，请修改代理类中的URL以包含`?blob=http`，而不是`?blob=base64`。 此操作可确保数据通过HTTP进行传递。 在代理类中，找到以下代码行：
+要创建通过HTTP使用数据的客户端程序集，请按照 [使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding). 但是，请修改代理类中的URL以包含 `?blob=http` 而不是 `?blob=base64`. 此操作可确保数据通过HTTP进行传递。 在代理类中，找到以下代码行：
 
 ```java
  "http://localhost:8080/soap/services/MyApplication/EncryptDocument";
@@ -962,63 +950,63 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 **引用.NET clienMyApplication/EncryptDocument程序集**
 
-将新的.NET客户端程序集放置在正在开发客户端应用程序的计算机上。 将.NET客户端程序集放置到目录后，可以从项目中引用它。 从项目中引用`System.Web.Services`库。 如果不引用此库，则不能使用.NET客户端程序集调用服务。
+将新的.NET客户端程序集放置在正在开发客户端应用程序的计算机上。 将.NET客户端程序集放置到目录后，可以从项目中引用它。 引用 `System.Web.Services` 库。 如果不引用此库，则不能使用.NET客户端程序集调用服务。
 
-1. 在&#x200B;**项目**&#x200B;菜单中，选择&#x200B;**添加引用**。
-1. 单击&#x200B;**.NET**&#x200B;选项卡。
-1. 单击&#x200B;**Browse**&#x200B;并找到DocumentService.dll文件。
-1. 单击&#x200B;**选择**，然后单击&#x200B;**确定**。
+1. 在 **项目** 菜单，选择 **添加引用**.
+1. 单击 **.NET** 选项卡。
+1. 单击 **浏览** 和找到DocumentService.dll文件。
+1. 单击 **选择** 然后单击 **确定**.
 
 **使用通过HTTP使用BLOB数据的.NET客户端程序集调用服务**
 
-您可以使用通过HTTP使用数据的.NET客户端程序集来调用`MyApplication/EncryptDocument`服务（该服务是在Workbench中构建的）。 要调用`MyApplication/EncryptDocument`服务，请执行以下步骤：
+您可以调用 `MyApplication/EncryptDocument` 服务（在Workbench中构建）使用通过HTTP使用数据的.NET客户端程序集。 调用 `MyApplication/EncryptDocument` 服务，请执行以下步骤：
 
 1. 创建.NET客户端程序集。
-1. 引用Microsoft .NET客户端程序集。 创建客户端Microsoft .NET项目。 在客户端项目中引用Microsoft .NET客户端程序集。 另请参阅`System.Web.Services`。
-1. 使用Microsoft .NET客户端程序集，通过调用其默认构造函数创建`MyApplication_EncryptDocumentService`对象。
-1. 使用`System.Net.NetworkCredential`对象设置`MyApplication_EncryptDocumentService`对象的`Credentials`属性。 在`System.Net.NetworkCredential`构造函数中，指定AEM表单用户名和相应的密码。 设置身份验证值，使您的.NET客户端应用程序能够成功与AEM Forms交换SOAP消息。
-1. 使用`BLOB`对象的构造函数创建对象。 `BLOB`对象用于将数据传递到`MyApplication/EncryptDocument`进程。
-1. 为`BLOB`对象的`remoteURL`数据成员分配一个字符串值，该数据成员指定要传递到`MyApplication/EncryptDocument`服务的PDF文档的URI位置。
-1. 通过调用`MyApplication_EncryptDocumentService`对象的`invoke`方法并传递`BLOB`对象来调用`MyApplication/EncryptDocument`进程。 此过程会在`BLOB`对象中返回加密的PDF文档。
-1. 使用`System.UriBuilder`对象的构造函数创建一个对象，并传递返回`BLOB`对象`remoteURL`数据成员的值。
-1. 将`System.UriBuilder`对象转换为`System.IO.Stream`对象。 （此列表后面的C#快速入门说明了如何执行此任务。）
-1. 创建一个字节数组，然后使用位于`System.IO.Stream`对象中的数据对其进行填充。
-1. 通过调用`System.IO.BinaryWriter`对象的构造函数并传递`System.IO.FileStream`对象来创建该对象。
-1. 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组内容写入PDF文件。
+1. 引用Microsoft .NET客户端程序集。 创建客户端Microsoft .NET项目。 在客户端项目中引用Microsoft .NET客户端程序集。 还参考 `System.Web.Services`.
+1. 使用Microsoft .NET客户端程序集，创建 `MyApplication_EncryptDocumentService` 对象。
+1. 设置 `MyApplication_EncryptDocumentService` 对象 `Credentials` 属性 `System.Net.NetworkCredential` 对象。 在 `System.Net.NetworkCredential` 构造函数中，指定AEM表单用户名和相应的密码。 设置身份验证值，使您的.NET客户端应用程序能够成功与AEM Forms交换SOAP消息。
+1. 创建 `BLOB` 对象。 的 `BLOB` 对象用于将数据传递到 `MyApplication/EncryptDocument` 进程。
+1. 为 `BLOB` 对象 `remoteURL` 指定要传递到的PDF文档的URI位置的数据成员 `MyApplication/EncryptDocument`服务。
+1. 调用 `MyApplication/EncryptDocument` 进程 `MyApplication_EncryptDocumentService` 对象 `invoke` 方法和通过 `BLOB` 对象。 此过程会在 `BLOB` 对象。
+1. 创建 `System.UriBuilder` 对象，并传递返回的值 `BLOB` 对象 `remoteURL` 数据成员。
+1. 转换 `System.UriBuilder` 对象 `System.IO.Stream` 对象。 （此列表后面的C#快速入门说明了如何执行此任务。）
+1. 创建一个字节数组，然后使用位于 `System.IO.Stream` 对象。
+1. 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数并传递 `System.IO.FileStream` 对象。
+1. 通过调用 `System.IO.BinaryWriter` 对象 `Write` 方法和传递字节数组。
 
-### 通过HTTP {#invoking-a-service-using-java-proxy-classes-and-blob-data-over-http}使用Java代理类和BLOB数据调用服务
+### 通过HTTP使用Java代理类和BLOB数据调用服务 {#invoking-a-service-using-java-proxy-classes-and-blob-data-over-http}
 
-您可以通过HTTP使用Java代理类和BLOB数据来调用AEM Forms服务。 要使用Java代理类调用`MyApplication/EncryptDocument`服务，请执行以下步骤：
+您可以通过HTTP使用Java代理类和BLOB数据来调用AEM Forms服务。 调用 `MyApplication/EncryptDocument` 服务，请执行以下步骤：
 
-1. 使用使用`MyApplication/EncryptDocument`服务WSDL的JAX-WS创建Java代理类。 使用以下WSDL端点：
+1. 使用使用的JAX-WS创建Java代理类 `MyApplication/EncryptDocument` 服务WSDL。 使用以下WSDL端点：
 
    ```java
     https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
    ```
 
-   有关信息，请参阅[使用JAX-WS](#creating-java-proxy-classes-using-jax-ws)创建Java代理类。
+   有关信息，请参阅 [使用JAX-WS创建Java代理类](#creating-java-proxy-classes-using-jax-ws).
 
    >[!NOTE]
    >
-   >将`hiro-xp` *替换为托管AEM Forms的J2EE应用程序服务器的IP地址。*
+   >替换 `hiro-xp` *具有托管AEM Forms的J2EE应用程序服务器的IP地址。*
 
 1. 将使用JAX-WS创建的Java代理类打包到JAR文件中。
 1. 将Java代理JAR文件和JAR文件包含在以下路径中：
 
-   &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
+   &lt;install directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
    到您Java客户端项目的类路径中。
 
-1. 使用`MyApplicationEncryptDocumentService`对象的构造函数创建对象。
-1. 通过调用`MyApplicationEncryptDocumentService`对象的`getEncryptDocument`方法创建`MyApplicationEncryptDocument`对象。
+1. 创建 `MyApplicationEncryptDocumentService` 对象。
+1. 创建 `MyApplicationEncryptDocument` 对象 `MyApplicationEncryptDocumentService` 对象 `getEncryptDocument` 方法。
 1. 通过为以下数据成员分配值来设置调用AEM Forms所需的连接值：
 
-   * 为`javax.xml.ws.BindingProvider`对象的`ENDPOINT_ADDRESS_PROPERTY`字段分配WSDL端点和编码类型。 要使用BLOB over HTTP编码来调用`MyApplication/EncryptDocument`服务，请指定以下URL值：
+   * 将WSDL端点和编码类型分配给 `javax.xml.ws.BindingProvider` 对象 `ENDPOINT_ADDRESS_PROPERTY` 字段。 调用 `MyApplication/EncryptDocument` 使用BLOB over HTTP编码的服务，请指定以下URL值：
 
       `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
-   * 将AEM Forms用户分配给`javax.xml.ws.BindingProvider`对象的`USERNAME_PROPERTY`字段。
-   * 为`javax.xml.ws.BindingProvider`对象的`PASSWORD_PROPERTY`字段分配相应的密码值。
+   * 将AEM表单用户分配给 `javax.xml.ws.BindingProvider` 对象 `USERNAME_PROPERTY` 字段。
+   * 为 `javax.xml.ws.BindingProvider` 对象 `PASSWORD_PROPERTY` 字段。
 
    以下代码示例显示了此应用程序逻辑：
 
@@ -1032,30 +1020,30 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
     ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, password);
    ```
 
-1. 使用`BLOB`对象的构造函数创建对象。
-1. 通过调用`setRemoteURL`方法填充`BLOB`对象。 传递一个字符串值，该值指定要传递到`MyApplication/EncryptDocument`服务的PDF文档的URI位置。
-1. 通过调用`MyApplicationEncryptDocument`对象的`invoke`方法并传递包含PDF文档的`BLOB`对象来调用`MyApplication/EncryptDocument`进程。 此过程会在`BLOB`对象中返回加密的PDF文档。
-1. 创建字节数组以存储表示加密PDF文档的数据流。 调用`BLOB`对象的`getRemoteURL`方法（使用`invoke`方法返回的`BLOB`对象）。
-1. 使用`java.io.File`对象的构造函数创建对象。 此对象表示加密的PDF文档。
-1. 使用其构造函数创建`java.io.FileOutputStream`对象，并传递`java.io.File`对象。
-1. 调用`java.io.FileOutputStream`对象的`write`方法。 传递包含表示加密PDF文档的数据流的字节数组。
+1. 创建 `BLOB` 对象。
+1. 填充 `BLOB` 通过调用对象 `setRemoteURL` 方法。 传递一个字符串值，该字符串值指定要传递到的PDF文档的URI位置 `MyApplication/EncryptDocument` 服务。
+1. 调用 `MyApplication/EncryptDocument` 进程 `MyApplicationEncryptDocument` 对象 `invoke` 方法和通过 `BLOB` 包含PDF文档的对象。 此过程会在 `BLOB` 对象。
+1. 创建字节数组以存储表示加密PDF文档的数据流。 调用 `BLOB` 对象 `getRemoteURL` 方法(使用 `BLOB` 由返回的对象 `invoke` 方法)。
+1. 创建 `java.io.File` 对象。 此对象表示加密的PDF文档。
+1. 创建 `java.io.FileOutputStream` 对象，并使用其构造函数进行传递 `java.io.File` 对象。
+1. 调用 `java.io.FileOutputStream` 对象 `write` 方法。 传递包含表示加密PDF文档的数据流的字节数组。
 
-## 使用DIME {#invoking-aem-forms-using-dime}调用AEM Forms
+## 使用DIME调用AEM Forms {#invoking-aem-forms-using-dime}
 
-您可以使用带有附件的SOAP调用AEM Forms服务。 AEM Forms支持MIME和DIME Web服务标准。 DIME允许您发送二进制附件（如PDF文档）以及调用请求，而不是对附件进行编码。 *使用DIME调用AEM Forms*&#x200B;部分讨论了使用DIME调用以下名为`MyApplication/EncryptDocument`的AEM Forms短期进程。
+您可以使用带有附件的SOAP调用AEM Forms服务。 AEM Forms支持MIME和DIME Web服务标准。 DIME允许您发送二进制附件(如PDF文档)以及调用请求，而不是对附件进行编码。 的 *使用DIME调用AEM Forms* 部分讨论调用以下名为的AEM Forms短期流程 `MyApplication/EncryptDocument` 用DIME。
 
 调用此过程时，会执行以下操作：
 
-1. 获取传递到流程的不安全的PDF文档。 此操作基于`SetValue`操作。 此进程的输入参数是名为`inDoc`的`document`进程变量。
-1. 使用密码加密PDF文档。 此操作基于`PasswordEncryptPDF`操作。 在名为`outDoc`的进程变量中返回密码加密的PDF文档。
+1. 获取传递到流程的不安全PDF文档。 此操作基于 `SetValue` 操作。 此过程的输入参数是 `document` 进程变量已命名 `inDoc`.
+1. 使用密码加密PDF文档。 此操作基于 `PasswordEncryptPDF` 操作。 密码加密的PDF文档在名为 `outDoc`.
 
-此过程不基于现有的AEM Forms进程。 要遵循代码示例，请使用Workbench创建一个名为`MyApplication/EncryptDocument`的进程。 （请参阅[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。）
+此过程不基于现有的AEM Forms进程。 要遵循代码示例，请创建一个名为 `MyApplication/EncryptDocument` 使用Workbench。 (请参阅 [使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 >[!NOTE]
 >
->已弃用使用DIME调用AEM Forms服务操作。 建议您使用MTOM。 (请参阅[使用MTOM](#invoking-aem-forms-using-mtom)调用AEM Forms。)
+>已弃用使用DIME调用AEM Forms服务操作。 建议您使用MTOM。 (请参阅 [使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom).)
 
-### 创建使用DIME {#creating-a-net-project-that-uses-dime}的.NET项目
+### 创建使用DIME的.NET项目 {#creating-a-net-project-that-uses-dime}
 
 要创建可使用DIME调用Forms服务的.NET项目，请执行以下任务：
 
@@ -1064,23 +1052,23 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 **安装Web服务增强功能2.0**
 
-在开发计算机上安装Web服务增强2.0，并将其与Microsoft Visual Studio .NET相集成。 您可以从[Microsoft下载中心下载Web服务增强2.0。](https://www.microsoft.com/downloads/search.aspx)
+在开发计算机上安装Web Services增强功能2.0，并将其与Microsoft Visual Studio .NET相集成。 您可以从 [Microsoft下载中心。](https://www.microsoft.com/downloads/search.aspx)
 
 从此网页中，搜索Web Services Enhancements 2.0，并将其下载到开发计算机。 此下载会将名为Microsoft WSE 2.0 SPI.msi的文件放置到您的计算机上。 运行安装程序并遵循联机说明。
 
 >[!NOTE]
 >
->Web服务增强2.0支持DIME。 使用Web服务增强功能2.0时，支持的Microsoft Visual Studio版本是2003年。Web服务增强功能3.0不支持DIME;但是，它支持MTOM。
+>Web服务增强2.0支持DIME。 使用Web服务增强功能2.0时，支持的Microsoft Visual Studio版本为2003年。Web服务增强功能3.0不支持DIME;但是，它支持MTOM。
 
 **创建对AEM Forms服务的Web引用**
 
-在开发计算机上安装Web服务增强功能2.0并创建Microsoft .NET项目后，请创建对Forms服务的Web引用。 例如，要创建对`MyApplication/EncryptDocument`进程的Web引用，并假定本地计算机上已安装Forms，请指定以下URL:
+在开发计算机上安装Web服务增强功能2.0并创建Microsoft .NET项目后，请创建对Forms服务的Web引用。 例如，创建对 `MyApplication/EncryptDocument` 进程并假定本地计算机上安装了Forms，请指定以下URL:
 
 ```java
      http://localhost:8080/soap/services/MyApplication/EncryptDocument?WSDL
 ```
 
-创建Web引用后，可在.NET项目中使用以下两种代理数据类型：`EncryptDocumentService`和`EncryptDocumentServiceWse`。 要使用DIME调用`MyApplication/EncryptDocument`进程，请使用`EncryptDocumentServiceWse`类型。
+创建Web引用后，可在.NET项目中使用以下两种代理数据类型： `EncryptDocumentService` 和 `EncryptDocumentServiceWse`. 调用 `MyApplication/EncryptDocument` 使用DIME的流程，使用 `EncryptDocumentServiceWse` 类型。
 
 >[!NOTE]
 >
@@ -1105,76 +1093,76 @@ Adobe开发人员网站包含以下文章，其中讨论了如何使用Web服务
 
 **在.NET项目中使用DIME调用服务**
 
-您可以使用DIME调用Forms服务。 考虑`MyApplication/EncryptDocument`流程，该流程接受不安全的PDF文档并返回密码加密的PDF文档。 要使用DIME调用`MyApplication/EncryptDocument`进程，请执行以下步骤：
+您可以使用DIME调用Forms服务。 请考虑 `MyApplication/EncryptDocument` 接受不安全的PDF文档并返回密码加密的PDF文档的流程。 调用 `MyApplication/EncryptDocument` 使用DIME处理，请执行以下步骤：
 
 1. 创建一个Microsoft .NET项目，使您能够使用DIME调用Forms服务。 确保包含Web服务增强功能2.0并创建对AEM Forms服务的Web引用。
-1. 在设置对`MyApplication/EncryptDocument`进程的Web引用后，使用其默认构造函数创建`EncryptDocumentServiceWse`对象。
-1. 使用`System.Net.NetworkCredential`值设置`EncryptDocumentServiceWse`对象的`Credentials`数据成员，该值指定AEM表单用户名和密码值。
-1. 使用`Microsoft.Web.Services2.Dime.DimeAttachment`对象的构造函数并传递以下值来创建该对象：
+1. 在将Web引用设置为 `MyApplication/EncryptDocument` 流程，创建 `EncryptDocumentServiceWse` 对象。
+1. 设置 `EncryptDocumentServiceWse` 对象 `Credentials` 具有 `System.Net.NetworkCredential` 指定AEM表单用户名和密码值的值。
+1. 创建 `Microsoft.Web.Services2.Dime.DimeAttachment` 对象，并传递以下值：
 
-   * 指定GUID值的字符串值。 可以通过调用`System.Guid.NewGuid.ToString`方法来获取GUID值。
-   * 指定内容类型的字符串值。 由于此过程需要PDF文档，请指定`application/pdf`。
-   * `TypeFormat`枚举值。 指定`TypeFormat.MediaType`。
+   * 指定GUID值的字符串值。 可以通过调用 `System.Guid.NewGuid.ToString` 方法。
+   * 指定内容类型的字符串值。 由于此过程需要PDF文档，请指定 `application/pdf`.
+   * A `TypeFormat` 枚举值。 指定 `TypeFormat.MediaType`.
    * 一个字符串值，用于指定要传递到AEM Forms进程的PDF文档的位置。
 
-1. 使用`BLOB`对象的构造函数创建对象。
-1. 通过将`Microsoft.Web.Services2.Dime.DimeAttachment`对象的`Id`数据成员值分配给`BLOB`对象的`attachmentID`数据成员，将DIME附件添加到`BLOB`对象。
-1. 调用`EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add`方法并传递`Microsoft.Web.Services2.Dime.DimeAttachment`对象。
-1. 通过调用`EncryptDocumentServiceWse`对象的`invoke`方法并传递包含DIME附件的`BLOB`对象来调用`MyApplication/EncryptDocument`进程。 此过程会在`BLOB`对象中返回加密的PDF文档。
-1. 通过获取返回的`BLOB`对象的`attachmentID`数据成员的值，获取附件标识符值。
-1. 遍历位于`EncryptDocumentServiceWse.ResponseSoapContext.Attachments`中的附件，并使用附件标识符值获取加密的PDF文档。
-1. 通过获取`Attachment`对象`Stream`数据成员的值，获取`System.IO.Stream`对象。
-1. 创建一个字节数组，并将该字节数组传递到`System.IO.Stream`对象的`Read`方法。 此方法使用表示加密PDF文档的数据流填充字节数组。
-1. 通过调用`System.IO.FileStream`对象的构造函数并传递表示PDF文件位置的字符串值来创建该对象。 此对象表示加密的PDF文档。
-1. 通过调用`System.IO.BinaryWriter`对象的构造函数并传递`System.IO.FileStream`对象来创建该对象。
-1. 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
+1. 创建 `BLOB` 对象。
+1. 将DIME附件添加到 `BLOB` 对象 `Microsoft.Web.Services2.Dime.DimeAttachment` 对象 `Id` 数据成员值 `BLOB` 对象 `attachmentID` 数据成员。
+1. 调用 `EncryptDocumentServiceWse.RequestSoapContext.Attachments.Add` 方法和通过 `Microsoft.Web.Services2.Dime.DimeAttachment` 对象。
+1. 调用 `MyApplication/EncryptDocument` 进程 `EncryptDocumentServiceWse` 对象 `invoke` 方法和通过 `BLOB` 包含DIME附件的对象。 此过程会在 `BLOB` 对象。
+1. 通过获取返回的值，获取附件标识符值 `BLOB` 对象 `attachmentID` 数据成员。
+1. 遍历位于 `EncryptDocumentServiceWse.ResponseSoapContext.Attachments` 并使用附件标识符值获取加密的PDF文档。
+1. 获取 `System.IO.Stream` 对象，方法是获取 `Attachment` 对象 `Stream` 数据成员。
+1. 创建一个字节数组，并将该字节数组传递到 `System.IO.Stream` 对象 `Read` 方法。 此方法使用表示加密PDF文档的数据流填充字节数组。
+1. 创建 `System.IO.FileStream` 对象，方法是调用其构造函数并传递表示PDF文件位置的字符串值。 此对象表示加密的PDF文档。
+1. 创建 `System.IO.BinaryWriter` 对象，方法是调用其构造函数并传递 `System.IO.FileStream` 对象。
+1. 通过调用 `System.IO.BinaryWriter` 对象 `Write` 方法和传递字节数组。
 
-### 创建使用DIME {#creating-apache-axis-java-proxy-classes-that-use-dime}的Apache Axis Java代理类
+### 创建使用DIME的Apache Axis Java代理类 {#creating-apache-axis-java-proxy-classes-that-use-dime}
 
-可以使用Apache轴WSDL2Java工具将服务WSDL转换为Java代理类，以便调用服务操作。 使用Apache Ant，可以通过AEM Forms服务WSDL生成轴库文件，该WSDL允许您调用该服务。 （请参阅[使用Apache Axis](#creating-java-proxy-classes-using-apache-axis)创建Java代理类。）
+可以使用Apache轴WSDL2Java工具将服务WSDL转换为Java代理类，以便调用服务操作。 使用Apache Ant，可以通过AEM Forms服务WSDL生成轴库文件，该WSDL允许您调用该服务。 (请参阅 [使用Apache Axis创建Java代理类](#creating-java-proxy-classes-using-apache-axis).)
 
 Apache轴WSDL2Java工具会生成JAVA文件，其中包含用于向服务发送SOAP请求的方法。 由服务接收的SOAP请求由Axis生成的库解码，并返回到方法和参数中。
 
-要使用轴生成的库文件和DIME调用`MyApplication/EncryptDocument`服务（在Workbench中构建），请执行以下步骤：
+调用 `MyApplication/EncryptDocument` 使用Axis生成的库文件和DIME的服务（已在Workbench中内置），请执行以下步骤：
 
-1. 使用Apache轴创建使用`MyApplication/EncryptDocument`服务WSDL的Java代理类。 （请参阅[使用Apache Axis](#creating-java-proxy-classes-using-apache-axis)创建Java代理类。）
+1. 创建使用 `MyApplication/EncryptDocument` 使用Apache轴的服务WSDL。 (请参阅 [使用Apache Axis创建Java代理类](#creating-java-proxy-classes-using-apache-axis).)
 1. 将Java代理类包含到类路径中。
-1. 使用`MyApplicationEncryptDocumentServiceLocator`对象的构造函数创建对象。
-1. 使用`URL`对象的构造函数并传递指定AEM Forms服务WSDL定义的字符串值，以创建对象。 确保在SOAP端点URL的末尾指定`?blob=dime`。 例如，使用
+1. 创建 `MyApplicationEncryptDocumentServiceLocator` 对象。
+1. 创建 `URL` 对象，方法是使用其构造函数并传递一个指定AEM Forms服务WSDL定义的字符串值。 确保指定 `?blob=dime` SOAP端点URL的末尾。 例如，使用
 
    ```java
     https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=dime.
    ```
 
-1. 通过调用`EncryptDocumentSoapBindingStub`对象的构造函数并传递`MyApplicationEncryptDocumentServiceLocator`对象和`URL`对象来创建对象。
-1. 通过调用`EncryptDocumentSoapBindingStub`对象的`setUsername`和`setPassword`方法来设置AEM表单用户名和密码值。
+1. 创建 `EncryptDocumentSoapBindingStub` 对象，方法是调用其构造函数并传递 `MyApplicationEncryptDocumentServiceLocator`对象和 `URL` 对象。
+1. 通过调用 `EncryptDocumentSoapBindingStub` 对象 `setUsername` 和 `setPassword` 方法。
 
    ```java
     encryptionClientStub.setUsername("administrator");
     encryptionClientStub.setPassword("password");
    ```
 
-1. 通过创建`java.io.File`对象，检索要发送到`MyApplication/EncryptDocument`服务的PDF文档。 传递指定PDF文档位置的字符串值。
-1. 使用其构造函数创建`javax.activation.DataHandler`对象，并传递`javax.activation.FileDataSource`对象。 `javax.activation.FileDataSource`对象可通过使用其构造函数并传递表示PDF文档的`java.io.File`对象来创建。
-1. 使用其构造函数创建`org.apache.axis.attachments.AttachmentPart`对象，并传递`javax.activation.DataHandler`对象。
-1. 通过调用`EncryptDocumentSoapBindingStub`对象的`addAttachment`方法并传递`org.apache.axis.attachments.AttachmentPart`对象来附加附件。
-1. 使用`BLOB`对象的构造函数创建对象。 通过调用`BLOB`对象的`setAttachmentID`方法并传递附件标识符值，使用附件标识符值填充`BLOB`对象。 可以通过调用`org.apache.axis.attachments.AttachmentPart`对象的`getContentId`方法来获取此值。
-1. 通过调用`EncryptDocumentSoapBindingStub`对象的`invoke`方法来调用`MyApplication/EncryptDocument`进程。 传递包含DIME附件的`BLOB`对象。 此过程会在`BLOB`对象中返回加密的PDF文档。
-1. 通过调用返回的`BLOB`对象的`getAttachmentID`方法获取附件标识符值。 此方法会返回一个字符串值，该值表示返回附件的标识符值。
-1. 通过调用`EncryptDocumentSoapBindingStub`对象的`getAttachments`方法检索附件。 此方法会返回表示附件的`Objects`数组。
-1. 遍历附件（`Object`数组），然后使用附件标识符值获取加密的PDF文档。 每个元素都是一个`org.apache.axis.attachments.AttachmentPart`对象。
-1. 通过调用`org.apache.axis.attachments.AttachmentPart`对象的`getDataHandler`方法，获取与附件关联的`javax.activation.DataHandler`对象。
-1. 通过调用`javax.activation.DataHandler`对象的`getInputStream`方法来获取`java.io.FileStream`对象。
-1. 创建一个字节数组，并将该字节数组传递到`java.io.FileStream`对象的`read`方法。 此方法使用表示加密PDF文档的数据流填充字节数组。
-1. 使用`java.io.File`对象的构造函数创建对象。 此对象表示加密的PDF文档。
-1. 使用其构造函数创建`java.io.FileOutputStream`对象，并传递`java.io.File`对象。
-1. 调用`java.io.FileOutputStream`对象的`write`方法并传递包含表示加密PDF文档的数据流的字节数组。
+1. 检索要发送到的PDF文档 `MyApplication/EncryptDocument` 通过创建 `java.io.File` 对象。 传递指定PDF文档位置的字符串值。
+1. 创建 `javax.activation.DataHandler` 对象，并使用其构造函数进行传递 `javax.activation.FileDataSource` 对象。 的 `javax.activation.FileDataSource` 对象可以使用其构造函数并传递 `java.io.File` 表示PDF文档的对象。
+1. 创建 `org.apache.axis.attachments.AttachmentPart` 对象，并使用其构造函数进行传递 `javax.activation.DataHandler` 对象。
+1. 通过调用 `EncryptDocumentSoapBindingStub` 对象 `addAttachment` 方法和通过 `org.apache.axis.attachments.AttachmentPart` 对象。
+1. 创建 `BLOB` 对象。 填充 `BLOB` 对象，其中包含附件标识符值(通过调用 `BLOB` 对象 `setAttachmentID` 方法和传递附件标识符值。 此值可通过调用 `org.apache.axis.attachments.AttachmentPart` 对象 `getContentId` 方法。
+1. 调用 `MyApplication/EncryptDocument` 进程 `EncryptDocumentSoapBindingStub` 对象 `invoke` 方法。 传递 `BLOB` 包含DIME附件的对象。 此过程会在 `BLOB` 对象。
+1. 通过调用返回的 `BLOB` 对象 `getAttachmentID` 方法。 此方法会返回一个字符串值，该值表示返回附件的标识符值。
+1. 通过调用 `EncryptDocumentSoapBindingStub` 对象 `getAttachments` 方法。 此方法会返回 `Objects` 表示附件。
+1. 遍历附件( `Object` 数组)，然后使用附件标识符值获取加密的PDF文档。 每个元素都是 `org.apache.axis.attachments.AttachmentPart` 对象。
+1. 获取 `javax.activation.DataHandler` 通过调用 `org.apache.axis.attachments.AttachmentPart` 对象 `getDataHandler` 方法。
+1. 获取 `java.io.FileStream` 对象 `javax.activation.DataHandler` 对象 `getInputStream` 方法。
+1. 创建一个字节数组，并将该字节数组传递到 `java.io.FileStream` 对象 `read` 方法。 此方法使用表示加密PDF文档的数据流填充字节数组。
+1. 创建 `java.io.File` 对象。 此对象表示加密的PDF文档。
+1. 创建 `java.io.FileOutputStream` 对象，并使用其构造函数进行传递 `java.io.File` 对象。
+1. 调用 `java.io.FileOutputStream` 对象 `write` 方法，并传递包含表示加密PDF文档的数据流的字节数组。
 
 **另请参阅**
 
 [快速入门：在Java项目中使用DIME调用服务](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-dime-in-a-java-project)
 
-## 使用基于SAML的身份验证{#using-saml-based-authentication}
+## 使用基于SAML的身份验证 {#using-saml-based-authentication}
 
 AEM Forms在调用服务时支持各种web服务身份验证模式。 一种验证模式是使用Web服务调用中的基本授权标头指定用户名和密码值。 AEM Forms还支持基于SAML断言的身份验证。 当客户端应用程序使用Web服务调用AEM Forms服务时，客户端应用程序可以以下列方式之一提供身份验证信息：
 
@@ -1238,26 +1226,26 @@ AEM表单用户的身份可以通过使用密钥签名的SAML断言来表示。 
 * 它经过数字签名。 因此，对它所做的任何修改都会破坏签名。
 * 它可以作为用户身份的令牌显示在AEM Forms中，与用户名和密码类似。
 
-客户端应用程序可以从返回`AuthResult`对象的任何AEM Forms AuthenticationManager API中检索断言。 您可以通过执行以下两种方法之一来获取`AuthResult`实例：
+客户端应用程序可以从任何返回 `AuthResult` 对象。 您可以获取 `AuthResult` 实例，方法是执行以下两种方法之一：
 
 * 使用AuthenticationManager API公开的任何身份验证方法对用户进行身份验证。 通常使用用户名和密码；但是，您也可以使用证书身份验证。
-* 使用`AuthenticationManager.getAuthResultOnBehalfOfUser`方法。 此方法允许客户端应用程序为任何AEM表单用户获取`AuthResult`对象。
+* 使用 `AuthenticationManager.getAuthResultOnBehalfOfUser` 方法。 此方法允许客户端应用程序获取 `AuthResult` 对象。
 
 可以使用获取的SAML令牌对AEM表单用户进行身份验证。 此SAML断言（xml片段）可作为WS-Security标头的一部分发送，该标头包含用户身份验证的Web服务调用。 通常，客户端应用程序已对用户进行了身份验证，但尚未存储用户凭据。 （或者用户已通过除使用用户名和密码之外的其他机制登录到该客户端。） 在这种情况下，客户端应用程序必须调用AEM Forms并模拟允许调用AEM Forms的特定用户。
 
-要模拟特定用户，请使用Web服务调用`AuthenticationManager.getAuthResultOnBehalfOfUser`方法。 此方法返回一个`AuthResult`实例，其中包含该用户的SAML断言。
+要模拟特定用户，请调用 `AuthenticationManager.getAuthResultOnBehalfOfUser` 方法。 此方法将返回 `AuthResult` 包含该用户的SAML断言的实例。
 
 接下来，使用该SAML断言来调用任何需要身份验证的服务。 此操作包括将断言作为SOAP标头的一部分发送。 使用此断言进行Web服务调用时，AEM Forms会将用户标识为该断言所表示的用户。 即，断言中指定的用户是正在调用服务的用户。
 
-### 使用Apache Axis类和基于SAML的身份验证{#using-apache-axis-classes-and-saml-based-authentication}
+### 使用Apache Axis类和基于SAML的身份验证 {#using-apache-axis-classes-and-saml-based-authentication}
 
-您可以通过使用Axis库创建的Java代理类调用AEM Forms服务。 （请参阅[使用Apache Axis](#creating-java-proxy-classes-using-apache-axis)创建Java代理类。）
+您可以通过使用Axis库创建的Java代理类调用AEM Forms服务。 (请参阅 [使用Apache Axis创建Java代理类](#creating-java-proxy-classes-using-apache-axis).)
 
-使用使用基于SAML的身份验证的AXIS时，请使用Axis注册请求和响应处理程序。 在向AEM Forms发送调用请求之前，Apache Axis会调用处理程序。 要注册处理程序，请创建扩展`org.apache.axis.handlers.BasicHandler`的Java类。
+使用使用基于SAML的身份验证的AXIS时，请使用Axis注册请求和响应处理程序。 在向AEM Forms发送调用请求之前，Apache Axis会调用处理程序。 要注册处理程序，请创建一个Java类，该类扩展 `org.apache.axis.handlers.BasicHandler`.
 
 **创建具有轴的断言处理程序**
 
-以下名为`AssertionHandler.java`的Java类显示了扩展`org.apache.axis.handlers.BasicHandler`的Java类的示例。
+以下Java类名为 `AssertionHandler.java`，显示扩展的Java类示例 `org.apache.axis.handlers.BasicHandler`.
 
 ```java
  public class AssertionHandler extends BasicHandler {
@@ -1341,13 +1329,13 @@ AEM表单用户的身份可以通过使用密钥签名的SAML断言来表示。 
  }
 ```
 
-### 使用.NET客户端程序集和基于SAML的身份验证{#using-a-net-client-assembly-and-saml-based-authentication}
+### 使用.NET客户端程序集和基于SAML的身份验证 {#using-a-net-client-assembly-and-saml-based-authentication}
 
-您可以使用.NET客户端程序集和基于SAML的身份验证来调用Forms服务。 为此，您必须使用Web服务增强功能3.0(WSE)。 有关创建使用WSE的.NET客户端程序集的信息，请参阅[创建使用DIME](#creating-a-net-project-that-uses-dime)的.NET项目。
+您可以使用.NET客户端程序集和基于SAML的身份验证来调用Forms服务。 为此，您必须使用Web服务增强功能3.0(WSE)。 有关创建使用WSE的.NET客户端程序集的信息，请参阅 [创建使用DIME的.NET项目](#creating-a-net-project-that-uses-dime).
 
 >[!NOTE]
 >
->DIME部分使用WSE 2.0。要使用基于SAML的身份验证，请按照DIME主题中指定的相同说明进行操作。 但是，请将WSE 2.0替换为WSE 3.0。在开发计算机上安装Web服务增强功能3.0，并将其与Microsoft Visual Studio .NET相集成。 您可以从[Microsoft下载中心](https://www.microsoft.com/downloads/search.aspx)下载Web服务增强3.0。
+>DIME部分使用WSE 2.0。要使用基于SAML的身份验证，请按照DIME主题中指定的相同说明进行操作。 但是，请将WSE 2.0替换为WSE 3.0。在开发计算机上安装Web服务增强功能3.0，并将其与Microsoft Visual Studio .NET相集成。 您可以从 [Microsoft下载中心](https://www.microsoft.com/downloads/search.aspx).
 
 WSE架构使用策略、断言和SecurityToken数据类型。 对于Web服务调用，请简要指定策略。 一个策略可以有多个断言。 每个断言都可以包含过滤器。 过滤器在Web服务调用的特定阶段被调用，届时，它们可以修改SOAP请求。 有关完整的详细信息，请参阅Web服务增强3.0文档。
 
@@ -1457,13 +1445,13 @@ WSE架构使用策略、断言和SecurityToken数据类型。 对于Web服务调
  }
 ```
 
-## 使用Web服务时的相关注意事项{#related-considerations-when-using-web-services}
+## 使用Web服务时的相关注意事项 {#related-considerations-when-using-web-services}
 
 有时，在使用Web服务调用某些AEM Forms服务操作时会出现问题。 本讨论的目的是确定这些问题，并提供解决办法（如果有）。
 
-### 异步{#invoking-service-operations-asynchronously}调用服务操作
+### 异步调用服务操作 {#invoking-service-operations-asynchronously}
 
-如果尝试异步调用AEM Forms服务操作（如生成PDF的`htmlToPDF`操作），则会出现`SoapFaultException`。 要解决此问题，请创建一个自定义绑定XML文件，该文件会将`ExportPDF_Result`元素和其他元素映射到不同的类中。 以下XML表示自定义绑定文件。
+如果尝试异步调用AEM Forms服务操作，例如生成PDF `htmlToPDF` 操作， a `SoapFaultException` 发生。 要解决此问题，请创建一个自定义绑定XML文件，该文件将 `ExportPDF_Result` 元素和其他元素。 以下XML表示自定义绑定文件。
 
 ```xml
  <bindings
@@ -1497,11 +1485,11 @@ WSE架构使用策略、断言和SecurityToken数据类型。 对于Web服务调
  </bindings>
 ```
 
-使用JAX-WS创建Java代理文件时，请使用此XML文件。 （请参阅[使用JAX-WS](#creating-java-proxy-classes-using-jax-ws)创建Java代理类。）
+使用JAX-WS创建Java代理文件时，请使用此XML文件。 (请参阅 [使用JAX-WS创建Java代理类](#creating-java-proxy-classes-using-jax-ws).)
 
-使用 — `b`命令行选项执行JAX-WS工具(wsimport.exe)时，请引用此XML文件。 更新绑定XML文件中的`wsdlLocation`元素以指定AEM Forms的URL。
+在使用 — 执行JAX-WS工具(wsimport.exe)时引用此XML文件 `b` 命令行选项。 更新 `wsdlLocation` 元素来指定AEM Forms的URL。
 
-要确保异步调用正常工作，请修改端点URL值并指定`async=true`。 例如，对于使用JAX-WS创建的Java代理文件，请为`BindingProvider.ENDPOINT_ADDRESS_PROPERTY`指定以下内容。
+要确保异步调用正常工作，请修改端点URL值并指定 `async=true`. 例如，对于使用JAX-WS创建的Java代理文件，请为 `BindingProvider.ENDPOINT_ADDRESS_PROPERTY`.
 
 `https://server:port/soap/services/ServiceName?wsdl&async=true&lc_version=9.0.0`
 
@@ -1512,18 +1500,18 @@ WSE架构使用策略、断言和SecurityToken数据类型。 对于Web服务调
 * 应用程序管理器
 * 目录管理器
 * Distiller
-* 权限管理
+* Rights Management
 * 文档管理
 
-### J2EE应用程序服务器{#differences-in-j2ee-application-servers}中的差异
+### J2EE应用程序服务器中的差异 {#differences-in-j2ee-application-servers}
 
 有时，使用特定J2EE应用程序服务器创建的代理库无法成功调用托管在其他J2EE应用程序服务器上的AEM Forms。 考虑使用部署在WebSphere上的AEM Forms生成的代理库。 此代理库无法成功调用JBoss应用程序服务器上部署的AEM Forms服务。
 
-与JBoss应用程序服务器相比，在WebSphere上部署AEM Forms时，某些AEM Forms复杂数据类型（如`PrincipalReference`）的定义方式有所不同。 不同J2EE应用程序服务所使用的JDK的差异是WSDL定义存在差异的原因。 因此，请使用从同一J2EE应用程序服务器中生成的代理库。
+一些AEM Forms复杂的数据类型，例如 `PrincipalReference`，与JBoss应用程序服务器相比，在WebSphere上部署AEM Forms时，其定义方式有所不同。 不同J2EE应用程序服务所使用的JDK差异是WSDL定义存在差异的原因。 因此，请使用从同一J2EE应用程序服务器中生成的代理库。
 
-### 使用Web服务{#accessing-multiple-services-using-web-services}访问多项服务
+### 使用Web服务访问多项服务 {#accessing-multiple-services-using-web-services}
 
-由于命名空间冲突，数据对象无法在多个服务WSDL之间共享。 不同的服务可以共享数据类型，因此服务在WSDL中共享这些类型的定义。 例如，不能将包含`BLOB`数据类型的两个.NET客户端程序集添加到同一.NET客户端项目。 如果尝试执行此操作，则会出现编译错误。
+由于命名空间冲突，数据对象无法在多个服务WSDL之间共享。 不同的服务可以共享数据类型，因此服务在WSDL中共享这些类型的定义。 例如，您无法添加两个包含 `BLOB` 数据类型到同一.NET客户端项目。 如果尝试执行此操作，则会出现编译错误。
 
 以下列表指定了无法在多个服务WSDL之间共享的数据类型：
 
@@ -1534,9 +1522,9 @@ WSE架构使用策略、断言和SecurityToken数据类型。 对于Web服务调
 * `Roles`
 * `BLOB`
 
-为避免出现此问题，建议您完全确定数据类型。 例如，假定.NET应用程序使用服务引用同时引用Forms服务和签名服务。 两个服务引用都将包含`BLOB`类。 要使用`BLOB`实例，请在声明`BLOB`对象时完全限定该对象。 下面的代码示例中显示了此方法。 有关此代码示例的信息，请参阅[对交互式Forms进行数字签名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)。
+为避免出现此问题，建议您完全确定数据类型。 例如，假定.NET应用程序使用服务引用同时引用Forms服务和签名服务。 两个服务引用都将包含 `BLOB` 类。 使用 `BLOB` 实例，完全限定 `BLOB` 对象。 下面的代码示例中显示了此方法。 有关此代码示例的信息，请参阅 [以数字方式签名交互式Forms](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-interactive-forms).
 
-以下C#代码示例对Forms服务呈现的交互式表单进行签名。 客户端应用程序具有两个服务引用。 与Forms服务关联的`BLOB`实例属于`SignInteractiveForm.ServiceReference2`命名空间。 同样，与签名服务关联的`BLOB`实例属于`SignInteractiveForm.ServiceReference1`命名空间。 已签名的交互式表单另存为名为&#x200B;*LoanXFASpid.pdf*&#x200B;的PDF文件。
+以下C#代码示例对Forms服务呈现的交互式表单进行签名。 客户端应用程序具有两个服务引用。 的 `BLOB` 与Forms服务关联的实例属于 `SignInteractiveForm.ServiceReference2` 命名空间。 同样， `BLOB` 与签名服务关联的实例属于 `SignInteractiveForm.ServiceReference1` 命名空间。 签名的交互式表单将另存为名为的PDF文件 *LoanXFASqids.pdf*.
 
 ```csharp
  ???/**
@@ -1749,6 +1737,6 @@ WSE架构使用策略、断言和SecurityToken数据类型。 对于Web服务调
  
 ```
 
-### 以字母I开头的服务会生成无效的代理文件{#services-starting-with-the-letter-i-produce-invalid-proxy-files}
+### 以字母I开头的服务会生成无效的代理文件 {#services-starting-with-the-letter-i-produce-invalid-proxy-files}
 
-使用Microsoft .Net 3.5和WCF时，某些AEM Forms生成的代理类的名称不正确。 当为IBMFilenetContentRepositoryConnector、IDPShedulerService或任何其名称以字母I开头的服务创建代理类时，会出现此问题。例如，在IBMFileNetContentRepositoryConnector为`BMFileNetContentRepositoryConnectorClient`时，生成的客户端的名称。 生成的代理类中缺少字母I。
+使用Microsoft .Net 3.5和WCF时，某些AEM Forms生成的代理类的名称不正确。 当为IBMFilenetContentRepositoryConnector、IDPShedulerService或任何其名称以字母I开头的服务创建代理类时，会出现此问题。例如，在IBMFileNetContentRepositoryConnector为时，生成的客户端的名称为 `BMFileNetContentRepositoryConnectorClient`. 生成的代理类中缺少字母I。

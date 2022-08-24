@@ -1,19 +1,19 @@
 ---
 title: 为自适应表单生成记录文档
-seo-title: 为自适应表单生成记录文档
+seo-title: Generate Document of Record for adaptive forms
 description: 说明如何为记录文档(DoR)生成用于自适应表单的模板。
-seo-description: 说明如何为记录文档(DoR)生成用于自适应表单的模板。
+seo-description: Explains how you can generate a template for a document of record (DoR) for adaptive forms.
 uuid: 2dc7e0de-fff9-43fa-9426-e9b047eb2595
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: a81367c2a07031d8c6cf549050a1445ff0c1a8dc
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '3508'
+source-wordcount: '3483'
 ht-degree: 2%
 
 ---
@@ -34,19 +34,18 @@ ht-degree: 2%
 
 创建自适应表单时，可以选择表单模型。 您的选项包括：
 
-* [表单](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)
-模板允许您为自适应表单选择XFA模板。选择XFA模板时，可以使用关联的XDP文件作为记录文档，如上所述。
+* [表单模板](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)
+允许您为自适应表单选择XFA模板。 选择XFA模板时，可以使用关联的XDP文件作为记录文档，如上所述。
 
-* [XML](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)
-架构允许您为自适应表单选择XML架构定义。为自适应表单选择XML架构时，您可以：
+* [XML架构](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)
+允许您为自适应表单选择XML架构定义。 为自适应表单选择XML架构时，您可以：
 
    * 为记录文档关联XFA模板。 确保关联的XFA模板使用与自适应表单相同的XML架构
    * 自动生成记录文档
 
-* 无
-允许您创建不带表单模型的自适应表单。 记录文档将自动为您的自适应表单生成。
+* 无用于创建没有表单模型的自适应表单。 记录文档将自动为您的自适应表单生成。
 
-选择表单模型时，使用“记录模板配置文档”下提供的选项配置记录文档。 请参阅[记录模板配置文档](#document-of-record-template-configuration)。
+选择表单模型时，使用“记录模板配置文档”下提供的选项配置记录文档。 请参阅 [记录模板配置文档](#document-of-record-template-configuration).
 
 ## 自动生成的记录文档 {#automatically-generated-document-of-record}
 
@@ -64,21 +63,21 @@ ht-degree: 2%
 
 要为自适应表单生成记录文档，您需要以下组件：
 
-**自适** 应表单要为其生成记录文档的自适应表单。
+**自适应表单** 要为其生成记录文档的自适应表单。
 
-**在AEM Designer中创建的基本模板（推荐）** XFA模板（XDP文件）。基本模板用于指定记录模板文档的样式和品牌信息。
+**基本模板（推荐）** 在AEM Designer中创建的XFA模板（XDP文件）。 基本模板用于指定记录模板文档的样式和品牌信息。
 
-请参阅记录文档的[基本模板](#base-template-of-a-document-of-record)
+请参阅 [记录文档的基本模板](#base-template-of-a-document-of-record)
 
 >[!NOTE]
 >
 >记录文档的基本模板也称为记录文档的元模板。
 
-**记录模** 板文档XFA模板（XDP文件），从自适应表单生成。
+**记录模板文档** 从自适应表单生成的XFA模板（XDP文件）。
 
-请参阅[记录模板配置文档](#document-of-record-template-configuration)。
+请参阅 [记录模板配置文档](#document-of-record-template-configuration).
 
-**表单** 数据用户在自适应表单中填写的信息。它与记录模板文档合并，以生成记录文档。
+**表单数据** 用户在自适应表单中填写的信息。 它与记录模板文档合并，以生成记录文档。
 
 ## 自适应表单元素的映射 {#mapping-of-adaptive-form-elements}
 
@@ -149,7 +148,7 @@ ht-degree: 2%
    <td> </td>
   </tr>
   <tr>
-   <td>重置按钮</td>
+   <td>“重置”按钮</td>
    <td>重置按钮</td>
    <td>false</td>
    <td> </td>
@@ -211,7 +210,7 @@ ht-degree: 2%
 
 基本模板为记录文档提供样式和外观信息。 它允许您自定义自动生成的记录文档的默认外观。 例如，您要在页眉中添加公司徽标，并在记录文档的页脚中添加版权信息。 基本模板中的主控页用作记录模板文档的主控页。 主控页面可以包含可应用于记录文档的页眉、页脚和页码等信息。 您可以使用基本模板将此类信息应用于记录文档，以自动生成记录文档。 使用基本模板可更改字段的默认属性。
 
-在设计基本模板时，请遵循[基本模板约定](#base-template-conventions)。
+请关注 [基本模板约定](#base-template-conventions) 设计基本模板时。
 
 ## 基本模板约定 {#base-template-conventions}
 
@@ -219,26 +218,26 @@ ht-degree: 2%
 
 **主控页面惯例**
 
-* 在基本模板中，您应将根子表单命名为`AF_METATEMPLATE`，将主控页面命名为`AF_MASTERPAGE`。
+* 在基本模板中，您应将根子表单命名为 `AF_METATEMPLATE` 主控页面为 `AF_MASTERPAGE`.
 
-* 位于`AF_METATEMPLATE`根子表单下方的名称为`AF_MASTERPAGE`的主控页面优先用于提取页眉、页脚和样式信息。
+* 具有名称的主控页面 `AF_MASTERPAGE` 位于 `AF_METATEMPLATE` 根子表单优先提取页眉、页脚和样式信息。
 
-* 如果`AF_MASTERPAGE`不存在，则使用基本模板中存在的第一个主控页面。
+* 如果 `AF_MASTERPAGE` 不存在，则使用基础模板中存在的第一个主控页面。
 
 **字段的样式约定**
 
-* 要对记录文档中的字段应用样式，基本模板会提供位于`AF_METATEMPLATE`根子表单下`AF_FIELDSSUBFORM`子表单中的字段。
+* 要对记录文档中的字段应用样式，基本模板会提供位于 `AF_FIELDSSUBFORM` 从 `AF_METATEMPLATE` 根子表单。
 
-* 这些字段的属性将应用于记录文档中的字段。 这些字段应遵循`AF_<name of field in all caps>_XFO`命名约定。 例如，复选框的字段名称应为`AF_CHECKBOX_XFO`。
+* 这些字段的属性将应用于记录文档中的字段。 这些字段应跟在 `AF_<name of field in all caps>_XFO` 命名约定。 例如，复选框的字段名称应为 `AF_CHECKBOX_XFO`.
 
 要创建基本模板，请在AEM Designer中执行以下操作。
 
-1. 单击&#x200B;**文件>新建**。
-1. 选择&#x200B;**基于模板**&#x200B;选项。
+1. 单击 **文件>新建**.
+1. 选择 **基于模板** 选项。
 
-1. 选择&#x200B;**Forms — 记录文档**&#x200B;类别。
-1. 选择&#x200B;**DoR基本模板**。
-1. 单击&#x200B;**Next**&#x200B;并提供所需信息。
+1. 选择 **Forms — 记录文档** 类别。
+1. 选择 **DoR基模板**.
+1. 单击 **下一个** 并提供所需信息。
 
 1. （可选）修改要应用于记录文档中字段的字段的样式和外观。
 1. 保存表单。
@@ -261,24 +260,24 @@ ht-degree: 2%
 
 执行以下步骤来配置自适应表单的记录文档：
 
-1. 在AEM创作实例中，单击&#x200B;**Forms > Forms和文档。**
-1. 选择表单，然后单击&#x200B;**查看属性**。
-1. 在“属性”窗口中，点按&#x200B;**表单模型**。
+1. 在AEM创作实例中，单击 **Forms > Forms和文档。**
+1. 选择表单，然后单击 **查看属性**.
+1. 在属性窗口中，点按 **表单模型**.
 在创建表单时，您还可以选择表单模型。
 
    >[!NOTE]
    >
-   >在“表单模型”选项卡中，确保从“从&#x200B;**选择**”下拉列表中选择“**架构**”或“**无**”。 **[!UICONTROL 基于XFA或以表单模板作为表单模型的自适应表单不支持记录文档。]**
+   >在“表单模型”(Form Model)选项卡中，确保选择 **架构** 或 **无** 从 **选择自** 下拉菜单。 **[!UICONTROL 基于XFA或以表单模板作为表单模型的自适应表单不支持记录文档。]**
 
 1. 在“表单模型”选项卡的“记录模板配置文档”部分中，选择以下选项之一。
 
-   **** 无如果不想为表单配置记录文档，请选择此选项。
+   **无** 如果不想为表单配置记录文档，请选择此选项。
 
-   **将表单模板关联为记录** 模板如果您有要用作记录文档模板的XDP文件，请选择此选项。选择此选项后，将显示AEM Forms存储库中可用的所有XDP文件。 选择相应的文件。
+   **将表单模板关联为记录模板文档** 如果有要用作记录文档模板的XDP文件，请选择此选项。 选择此选项后，将显示AEM Forms存储库中可用的所有XDP文件。 选择相应的文件。
 
    选定的XDP文件将与自适应表单关联。
 
-   **生成记录文** 档选择此选项可将XDP文件用作定义记录文档样式和外观的基本模板。选择此选项后，将显示AEM Forms存储库中可用的所有XDP文件。 选择相应的文件。
+   **生成记录文档** 选择此选项可将XDP文件用作定义记录文档样式和外观的基本模板。 选择此选项后，将显示AEM Forms存储库中可用的所有XDP文件。 选择相应的文件。
 
    >[!NOTE]
    >
@@ -287,10 +286,10 @@ ht-degree: 2%
    >
    >
    >    * 您的自适应表单基于架构
-   >    * 您正在使用&#x200B;**关联表单模板作为记录文档的记录模板文档**&#x200B;选项
+   >    * 您正在使用 **将表单模板关联为记录模板文档** 记录文档的选项
 
 
-1. 单击&#x200B;**完成。**
+1. 单击 **完成。**
 
 ## 自定义记录文档中的品牌信息 {#customize-the-branding-information-in-document-of-record}
 
@@ -298,8 +297,8 @@ ht-degree: 2%
 
 要将您在“记录文档”选项卡中输入的品牌信息本地化，您需要确保正确设置浏览器的区域设置。 要自定义记录文档的品牌信息，请完成以下步骤：
 
-1. 在记录文档中选择一个面板（根面板），然后点按![configure](assets/configure.png)。
-1. 点按![dortab](assets/dortab.png)。 将出现“记录文档”选项卡。
+1. 在记录文档中选择一个面板（根面板），然后点按 ![配置](assets/configure.png).
+1. 点按 ![多选项卡](assets/dortab.png). 将出现“记录文档”选项卡。
 1. 选择默认模板或用于呈现记录文档的自定义模板。 如果选择默认模板，则记录文档的缩略图预览将显示在“模板”下拉框的下方。
 
    ![品牌模板](assets/brandingtemplate.png)
@@ -315,18 +314,18 @@ ht-degree: 2%
    * **免责声明**
    * **免责声明文本**
    * **强调颜色**:在文档或记录PDF中呈现标题文本和分隔线的颜色
-   * **字体系列**:记录PDF文档中文本的字体系列
+   * **字体系列**:记录文档中文本的字体系列PDF
    * **对于复选框和单选按钮组件，仅显示选定的值**
    * **用于多个选定值的分隔符**
    * **包括未绑定到数据模型的表单对象**
    * **从记录文档中排除隐藏字段**
    * **隐藏面板描述**
 
-   如果您选择的自定义XDP模板包含多个主控页面，则这些页面的属性将显示在&#x200B;**[!UICONTROL 记录文档]**&#x200B;选项卡的&#x200B;**[!UICONTROL content]**&#x200B;部分中。
+   如果您选择的自定义XDP模板包含多个主控页面，则这些页面的属性将显示在 **[!UICONTROL 内容]** 部分 **[!UICONTROL 记录文档]** 选项卡。
 
-   ![主控页面属性](assets/master-page-properties.png)
+   ![母版页  属性](assets/master-page-properties.png)
 
-   主控页面属性包括徽标图像、标题文本、表单标题、免责声明标签和免责声明文本。 您可以将自适应表单或XDP模板属性应用到记录文档。 AEM Forms默认将模板属性应用于记录文档。 您还可以为主控页面属性定义自定义值。 有关如何在记录文档中应用多个主控页面的信息，请参阅[将多个主控页面应用于记录文档](#apply-multiple-master-pages-dor)。
+   主控页面属性包括徽标图像、标题文本、表单标题、免责声明标签和免责声明文本。 您可以将自适应表单或XDP模板属性应用到记录文档。 AEM Forms默认将模板属性应用于记录文档。 您还可以为主控页面属性定义自定义值。 有关如何在记录文档中应用多个主控页面的信息，请参阅 [将多个主控页面应用于记录文档](#apply-multiple-master-pages-dor).
 
    >[!NOTE]
    >
@@ -348,7 +347,7 @@ ht-degree: 2%
 
 ## 记录文档中面板的表和列布局 {#table-and-column-layouts-for-panels-in-document-of-record}
 
-您的自适应表单可能是一个包含多个表单字段的冗长表单。 您可能不希望将记录文档另存为自适应表单的确切副本。 现在，您可以选择表格或列布局，以在记录PDF的文档中保存一个或多个自适应表单面板。
+您的自适应表单可能是一个包含多个表单字段的冗长表单。 您可能不希望将记录文档另存为自适应表单的确切副本。 现在，您可以选择表格或列布局，以在记录PDF文档中保存一个或多个自适应表单面板。
 
 在生成记录文档之前，在面板的设置中，选择“表”或“列”作为该面板的记录文档的布局。 面板中的字段在记录文档中相应地进行组织。
 
@@ -364,40 +363,40 @@ ht-degree: 2%
 
 记录文档设置允许您选择要包含在记录文档中的选项。 例如，银行以表格接受姓名、年龄、社会保障号码和电话号码。 表单会生成银行帐号和分行详细信息。 您可以选择在记录文档中仅显示名称、社会保险号、银行帐户和分行详细信息。
 
-组件的记录设置文档位于其属性下。 要访问组件的属性，请选择该组件，然后单击叠加中的![cmppr](assets/cmppr.png)。 侧栏中列出了这些属性，您可以在其中找到以下设置。
+组件的记录设置文档位于其属性下。 要访问组件的属性，请选择该组件并单击 ![cppr](assets/cmppr.png) 在叠加图中。 侧栏中列出了这些属性，您可以在其中找到以下设置。
 
 **字段级别设置**
 
-* **从记录文档中排除**:将属性设置为true会从记录文档中排除该字段。这是名为`excludeFromDoR`的可脚本属性。 其行为取决于隐藏的&#x200B;**表单级别属性时DoR中的** Exclude字段。
+* **从记录文档中排除**:将属性设置为true会从记录文档中排除该字段。 这是名为的可脚本属性 `excludeFromDoR`. 其行为取决于 **隐藏时从DoR中排除字段** 表单级别属性。
 
-* **将面板显示为表：** 如果面板中的字段少于6个，则将属性将面板显示为记录文档中的表。仅适用于面板。
-* **从记录文档中排除标题：** 设置属性时，会从记录文档中排除面板/表的标题。仅适用于面板和表。
-* **从记录文档中排除描述：** 设置属性时，会从记录文档中排除面板/表的描述。仅适用于面板和表。
-* **[!UICONTROL 分页]** > **[!UICONTROL 放置]**:确定选择放置面板的位置。
-   * **[!UICONTROL 放置]**  >以 **[!UICONTROL 下上一个]**:将面板放在父面板中上一个对象的后面。
-   * **[!UICONTROL 置入]**  >  **[!UICONTROL 内容区域]**  >内容区域的名称：将面板放置在指定的内容区域中。
-   * **[!UICONTROL 放置]**  >  **[!UICONTROL 下一内容区域的顶部]**:将面板放在下一个内容区域的顶部。
-   * **[!UICONTROL 放置]**  >  **[!UICONTROL 内容区域顶部]**  >内容区域的名称：将面板放置在指定内容区域的顶部。
-   * **[!UICONTROL 置入]**  >  **[!UICONTROL 页面]**  >主控页面的名称：将面板放置在指定的页面上。如果未自动插入分页符，[!DNL AEM Forms]会添加分页符。
-   * **[!UICONTROL 置入]**  >  **[!UICONTROL 下一页顶部]**:将面板放在下一页的顶部。如果未自动插入分页符，[!DNL AEM Forms]会添加分页符。
-   * **[!UICONTROL 置入]**  >  **[!UICONTROL 页面顶部]**  >主控页面的名称：在呈现指定的页面时，将面板放置在页面顶部。如果未自动插入分页符，[!DNL AEM Forms]会添加分页符。
-* **[!UICONTROL 分页]**  > **[!UICONTROL 后]**:确定放置面板后要填充的区域。After部分中提供了以下 **** 字段：
-   * **[!UICONTROL 在]**  >  **[!UICONTROL 继续填充父项]**&#x200B;之后：继续合并父面板中剩余要填充的所有对象的数据。
-   * **[!UICONTROL 在]**  >  **[!UICONTROL 转到下一个内容区域]**&#x200B;之后：放置面板后，开始填充下一个内容区域。
-   * **[!UICONTROL 在]**  >  **[!UICONTROL 转到内容区域]**  >内容区域的名称之后：放置面板后，开始填充指定的内容区域。
-   * **[!UICONTROL 之后]**  >  **[!UICONTROL 转到下一页]**:放置面板后，开始填充下一页。
-   * **[!UICONTROL 之后]**  >  **[!UICONTROL 转到页面]**  >页面名称：放置面板后，开始填充指定的页面。
-* **[!UICONTROL 分页]** > **[!UICONTROL 溢出]**:为跨页面的面板或表设置溢出。**[!UICONTROL Overflow]**&#x200B;部分提供以下字段：
-   * **[!UICONTROL 溢出]**  >  **[!UICONTROL 无]**:开始填充下一页。如果未自动插入分页符，[!DNL AEM Forms]会添加分页符。
-   * **[!UICONTROL 溢出]**  >  **[!UICONTROL 转到内容区域]**  >内容区域的名称：开始填充指定的内容区域。
-   * **[!UICONTROL 溢出]**  >  **[!UICONTROL 转到页面]**  >页面名称：开始填充指定的页面。
+* **将面板显示为表格：** 如果面板中的字段少于6个，则设置属性会将面板显示为记录文档中的表。 仅适用于面板。
+* **从记录文档中排除标题：** 设置属性会从记录文档中排除面板/表的标题。 仅适用于面板和表。
+* **从记录文档中排除说明：** 设置属性时，会从记录文档中排除面板/表的说明。 仅适用于面板和表。
+* **[!UICONTROL 分页]** > **[!UICONTROL 位置]**:确定选择放置面板的位置。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 关注上一个]**:将面板放在父面板中上一个对象的后面。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 内容区域中]** >内容区域的名称：将面板放置在指定的内容区域中。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 下一内容区域的顶部]**:将面板放在下一个内容区域的顶部。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 内容区域顶部]** >内容区域的名称：将面板放置在指定内容区域的顶部。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 页面上]** >主控页面的名称：将面板放置在指定的页面上。 如果不自动插入分页符， [!DNL AEM Forms] 添加分页符。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 下一页顶部]**:将面板放在下一页的顶部。 如果不自动插入分页符， [!DNL AEM Forms] 添加分页符。
+   * **[!UICONTROL 位置]** > **[!UICONTROL 页面顶部]** >主控页面的名称：在呈现指定的页面时，将面板放置在页面顶部。 如果不自动插入分页符， [!DNL AEM Forms] 添加分页符。
+* **[!UICONTROL 分页]** > **[!UICONTROL 之后]**:确定放置面板后要填充的区域。 **[!UICONTROL 之后]** 部分：
+   * **[!UICONTROL 之后]** > **[!UICONTROL 继续填写父项]**:继续合并父面板中剩余要填充的所有对象的数据。
+   * **[!UICONTROL 之后]** > **[!UICONTROL 转到下一个内容区域]**:放置面板后，开始填充下一个内容区域。
+   * **[!UICONTROL 之后]** > **[!UICONTROL 转到内容区域]** >内容区域的名称：放置面板后，开始填充指定的内容区域。
+   * **[!UICONTROL 之后]** > **[!UICONTROL 转到下一页]**:放置面板后，开始填充下一页。
+   * **[!UICONTROL 之后]** > **[!UICONTROL 转到页面]** >页面名称：放置面板后，开始填充指定的页面。
+* **[!UICONTROL 分页]** > **[!UICONTROL 溢出]**:为跨页面的面板或表设置溢出。 在 **[!UICONTROL 溢出]** 部分：
+   * **[!UICONTROL 溢出]** > **[!UICONTROL 无]**:开始填充下一页。 如果不自动插入分页符， [!DNL AEM Forms] 添加分页符。
+   * **[!UICONTROL 溢出]** > **[!UICONTROL 转到内容区域]** >内容区域的名称：开始填充指定的内容区域。
+   * **[!UICONTROL 溢出]** > **[!UICONTROL 转到页面]** >页面名称：开始填充指定的页面。
 
-有关如何在记录文档中应用分页符和应用多个主控页的信息，请参阅[在记录文档中应用分页符](#apply-page-breaks-in-dor)和[将多个主控页应用于记录文档](#apply-multiple-master-pages-dor)。
+有关如何在记录文档中应用分页符和应用多个主控页面的信息，请参阅 [在记录文档中应用分页符](#apply-page-breaks-in-dor) 和 [将多个主控页面应用于记录文档](#apply-multiple-master-pages-dor).
 
 **表单级别设置**
 
-* **在DoR中包含未绑定字段：** 设置属性时，将包含记录文档中基于架构的自适应表单中未绑定的字段。默认情况下，为true。
-* **隐藏时从DoR中排除字段：** 设置属性会覆盖“从记录文档中排除”字段级别属性的行为（如果不为true）。如果字段在表单提交时处于隐藏状态，则如果该属性设置为true，则它们将从记录文档中排除，但前提是未设置“从记录文档排除”属性。
+* **在DoR中包含未绑定字段：** 设置属性包括记录文档中基于架构的自适应表单中的未绑定字段。 默认情况下，为true。
+* **隐藏时从DoR中排除字段：** 设置属性会覆盖“从记录文档中排除”字段级别属性（如果不为true）的行为。 如果字段在表单提交时处于隐藏状态，则如果该属性设置为true，则它们将从记录文档中排除，但前提是未设置“从记录文档排除”属性。
 
 ## 在记录文档中应用分页符 {#apply-page-breaks-in-dor}
 
@@ -405,34 +404,33 @@ ht-degree: 2%
 
 要将分页符应用于记录文档，请执行以下操作：
 
-1. 点按面板，然后选择![配置](assets/configure-icon.svg)。
+1. 点按面板并选择 ![配置](assets/configure-icon.svg).
 
-1. 展开&#x200B;**[!UICONTROL 记录文档]**&#x200B;以查看属性。
+1. 展开 **[!UICONTROL 记录文档]** 以查看属性。
 
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;部分中，点按&#x200B;**[!UICONTROL 放置]**&#x200B;字段中的![文件夹](assets/folder-icon.svg)。
-1. 点按&#x200B;**[!UICONTROL 下一页顶部]**，然后点按&#x200B;**[!UICONTROL 选择]**。 您还可以点按页面&#x200B;]**顶部的**[!UICONTROL ，选择主控页面，然后点按&#x200B;**[!UICONTROL 选择]**&#x200B;以应用分页符。
-1. 点按![Save](assets/save_icon.svg)以保存属性。
+1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](assets/folder-icon.svg) 在 **[!UICONTROL 位置]** 字段。
+1. 点按 **[!UICONTROL 下一页顶部]** 点按 **[!UICONTROL 选择]**. 您还可以点按 **[!UICONTROL 页面顶部]**，选择主控页面，然后点按 **[!UICONTROL 选择]** 来应用分页符。
+1. 点按 ![保存](assets/save_icon.svg) 以保存属性。
 
 选定的面板将移至下一页。
 
 ## 将多个主控页面应用于记录文档 {#apply-multiple-master-pages-dor}
 
-如果您选择的自定义XDP模板包含多个主控页面，则这些页面的属性将显示在[!UICONTROL 记录文档]选项卡的[!UICONTROL content]部分中。 有关更多信息，请参阅[自定义记录文档](#customize-the-branding-information-in-document-of-record)中的品牌信息。
+如果您选择的自定义XDP模板包含多个主控页面，则这些页面的属性将显示在 [!UICONTROL 内容] 部分 [!UICONTROL 记录文档] 选项卡。 有关更多信息，请参阅 [自定义记录文档中的品牌信息](#customize-the-branding-information-in-document-of-record).
 
-您可以通过将不同的主控页面应用到自适应表单的组件，将多个主控页面应用到记录文档。 使用“记录文档”属性的[分页](#document-of-record-settings)部分可应用多个主控页面。
+您可以通过将不同的主控页面应用到自适应表单的组件，将多个主控页面应用到记录文档。 使用 [分页](#document-of-record-settings) 文档属性中用于应用多个主控页面的部分。
 
-以下是如何将多个主控页面应用于记录文档的示例：
-您将包含四个主控页面的XDP模板上传到[!DNL AEM Forms]服务器。 [!DNL AEM Forms] 默认情况下，将模板属性应用到记录文档。[!DNL AEM Forms] 还将模板中的第一个主控页面属性应用到记录文档。
+以下是如何将多个主控页面应用于记录文档的示例：您需要将包含四个主控页面的XDP模板上传到 [!DNL AEM Forms] 服务器。 [!DNL AEM Forms] 默认情况下，将模板属性应用到记录文档。 [!DNL AEM Forms] 还将模板中的第一个主控页面属性应用到记录文档。
 
 要将第二个主控页面属性应用到面板，将第三个主控页面属性应用到后续面板，请执行以下步骤：
 
-1. 点按面板以应用第二个主控页面，然后选择![配置](assets/configure-icon.svg)。
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;部分中，点按&#x200B;**[!UICONTROL 放置]**&#x200B;字段中的![文件夹](assets/folder-icon.svg)。
-1. 点按&#x200B;**[!UICONTROL 在页面]**&#x200B;上，选择第二个主控页面，然后点按&#x200B;**[!UICONTROL 选择]**。
+1. 点按面板以应用第二个主控页面，然后选择 ![配置](assets/configure-icon.svg).
+1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](assets/folder-icon.svg) 在 **[!UICONTROL 位置]** 字段。
+1. 点按 **[!UICONTROL 页面上]**，选择第二个主控页面并点按 **[!UICONTROL 选择]**.
 AEM Forms将第二个主控页面应用到自适应表单中的面板和所有后续面板。
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;部分中，点按&#x200B;**[!UICONTROL After]**&#x200B;字段中的![文件夹](assets/folder-icon.svg)。
-1. 点按&#x200B;**[!UICONTROL 转到页面]**，选择第三个主控页面，然后点按&#x200B;**[!UICONTROL 选择]**。
-1. 点按![Save](assets/save_icon.svg)以保存属性。
+1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](assets/folder-icon.svg) 在 **[!UICONTROL 之后]** 字段。
+1. 点按 **[!UICONTROL 转到页面]**，选择第三个主控页面并点按 **[!UICONTROL 选择]**.
+1. 点按 ![保存](assets/save_icon.svg) 以保存属性。
 AEM Forms将第三个主控页面应用到自适应表单中的面板和所有后续面板。
 
 
@@ -443,4 +441,4 @@ AEM Forms将第三个主控页面应用到自适应表单中的面板和所有�
 * 记录模板文档不支持富文本。 因此，静态自适应表单或最终用户填写的信息中的任何富文本都会在记录文档中显示为纯文本。
 * 自适应表单中的文档片段不会显示在记录文档中。 但是，支持自适应表单片段。
 * 不支持在为基于XML架构的自适应表单生成的记录文档中绑定内容。
-* 当用户请求呈现记录文档时，根据区域设置的要求创建记录文档的本地化版本。 记录文档的本地化与自适应表单的本地化同时发生。 有关记录和自适应表单文档本地化的更多信息，请参阅[使用AEM翻译工作流将自适应表单和记录文档本地化](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)。
+* 当用户请求呈现记录文档时，根据区域设置的要求创建记录文档的本地化版本。 记录文档的本地化与自适应表单的本地化同时发生。 有关记录文档和自适应表单文档本地化的详细信息，请参阅 [使用AEM翻译工作流将自适应表单和记录文档本地化](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).

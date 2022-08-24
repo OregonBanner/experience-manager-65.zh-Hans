@@ -12,7 +12,7 @@ discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '6872'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->为了简单起见，本文档中将使用CUG缩写。
+>为简便起见，本文档中将使用CUG缩写。
 
 新实施的目标是在需要时覆盖现有功能，同时解决旧版本中的问题和设计限制。 其结果是新的CUG设计，具有以下特点：
 
@@ -42,12 +42,12 @@ ht-degree: 0%
 
 在AEM上下文中称为CUG的步骤如下：
 
-* 在需要保护的树上限制读取访问，并且仅允许读取与给定CUG实例一起列出或完全从CUG评估中排除的承担者。 这称为&#x200B;**authorization**&#x200B;元素。
-* 对给定树强制进行身份验证，并（可选）为该树指定随后被排除的专用登录页。 这称为&#x200B;**authentication**&#x200B;元素。
+* 在需要保护的树上限制读取访问，并且仅允许读取与给定CUG实例一起列出或完全从CUG评估中排除的承担者。 这称为 **授权** 元素。
+* 对给定树强制进行身份验证，并（可选）为该树指定随后被排除的专用登录页。 这称为 **身份验证** 元素。
 
 新实施旨在在身份验证和授权元素之间划出一条线。 从AEM 6.3开始，可以在不显式添加身份验证要求的情况下限制读取访问。 例如，如果给定实例完全需要身份验证，或者给定树已驻留在需要身份验证的子树中。
 
-同样，给定的树可以用验证要求进行标记，而无需更改有效的许可设置。 这些组合和结果列在[Combining CUG Policies and the Authentication Requirement](/help/sites-administering/closed-user-groups.md#combining-cug-policies-and-the-authentication-requirement)部分。
+同样，给定的树可以用验证要求进行标记，而无需更改有效的许可设置。 组合和结果列在 [结合CUG策略和身份验证要求](/help/sites-administering/closed-user-groups.md#combining-cug-policies-and-the-authentication-requirement) 中。
 
 ## 概述 {#overview}
 
@@ -70,17 +70,17 @@ CUG的主要功能是限制内容存储库中除选定承担者之外的所有�
 * 可以嵌套CUG策略，嵌套的CUG启动新CUG，而不继承“父”CUG的主集；
 * 如果启用了评估，则策略的效果会继承到下一个嵌套CUG的整个子树。
 
-这些CUG策略通过名为oak-authorization-cug的单独授权模块部署到AEM实例。 本模块提供了自己的访问控制管理和权限评估。 换句话说，默认的AEM设置提供了Oak内容存储库配置，该配置结合了多种授权机制。 有关更多信息，请参阅Apache Oak文档](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)上的[此页面。
+这些CUG策略通过名为oak-authorization-cug的单独授权模块部署到AEM实例。 本模块提供了自己的访问控制管理和权限评估。 换言之，默认的AEM设置提供了Oak内容存储库配置，该配置结合了多种授权机制。 有关更多信息，请参阅 [此页面位于Apache Oak文档中](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html).
 
 在此复合设置中，新的CUG不会替换附加到目标节点的现有访问控制内容，而是设计为补充内容，此补充内容也可在以后删除，而不会影响原始访问控制，在AEM中默认为访问控制列表。
 
-与以前的实施不同，新的CUG策略始终被识别并视为访问控制内容。 这意味着它们是使用JCR访问控制管理API创建和编辑的。 有关更多信息，请参阅[管理CUG策略](#managing-cug-policies)一节。
+与以前的实施不同，新的CUG策略始终被识别并视为访问控制内容。 这意味着它们是使用JCR访问控制管理API创建和编辑的。 有关更多信息，请参阅 [管理CUG策略](#managing-cug-policies) 中。
 
 #### CUG策略的权限评估 {#permission-evaluation-of-cug-policies}
 
 除了针对CUG的专用访问控制管理之外，新授权模型还允许有条件地启用对其策略的许可评估。 这允许在暂存环境中设置CUG策略，并且仅在复制到生产环境后才允许评估有效权限。
 
-CUG策略的权限评估以及与默认或任何其他授权模型的交互遵循为Apache Jackrabbit Oak中的多个授权机制设计的模式：仅当且仅当所有模型授予访问权限时，才会授予给定的一组权限。 有关更多详细信息，请参阅[此页面](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)。
+CUG策略的权限评估以及与默认或任何其他授权模型的交互遵循为Apache Jackrabbit Oak中的多个授权机制设计的模式：仅当且仅当所有模型授予访问权限时，才会授予给定的一组权限。 请参阅 [本页](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html) 以了解更多详细信息。
 
 以下特征适用于与用于处理和评估CUG策略的授权模型相关的权限评估：
 
@@ -113,27 +113,27 @@ CUG策略的权限评估以及与默认或任何其他授权模型的交互遵�
 
 ### 身份验证：定义身份验证要求 {#authentication-defining-the-auth-requirement}
 
-CUG功能的与身份验证相关的部分允许标记需要身份验证的树并可选地指定专用登录页面。 根据以前的版本，新实施允许标记需要在内容存储库中进行身份验证的树，并有条件地启用与`Sling org.apache.sling.api.auth.Authenticator`的同步，该负责最终实施该要求并重定向到登录资源。
+CUG功能的与身份验证相关的部分允许标记需要身份验证的树并可选地指定专用登录页面。 根据先前的版本，新实施允许标记需要在内容存储库中进行验证的树，并有条件地启用与的同步 `Sling org.apache.sling.api.auth.Authenticator`负责最终实施要求并重定向到登录资源。
 
-这些要求通过提供`sling.auth.requirements`注册属性的OSGi服务在验证器中注册。 然后，这些属性用于动态扩展身份验证要求。 有关更多详细信息，请参阅[Sling文档](https://sling.apache.org/apidocs/sling7/org/apache/sling/auth/core/AuthConstants.html#AUTH_REQUIREMENTS)。
+这些要求通过提供 `sling.auth.requirements` 注册属性。 然后，这些属性用于动态扩展身份验证要求。 有关更多详细信息，请参阅 [Sling文档](https://sling.apache.org/apidocs/sling7/org/apache/sling/auth/core/AuthConstants.html#AUTH_REQUIREMENTS).
 
 #### 用专用混合类型定义认证要求 {#defining-the-authentication-requirement-with-a-dedicated-mixin-type}
 
-出于安全原因，新实施将使用名为`granite:AuthenticationRequired`的专用混合类型替换剩余JCR属性，该混合类型为登录路径`granite:loginPath`定义STRING类型的单个可选属性。 只有与此混合类型相关的内容更改才会导致更新向Apache Sling Authenticator注册的要求。 在保留任何临时修改时会跟踪这些修改，因此需要`javax.jcr.Session.save()`调用才能生效。
+出于安全原因，新实施将使用名为的专用混合类型替换剩余JCR属性 `granite:AuthenticationRequired`，为登录路径定义类型为STRING的单个可选属性 `granite:loginPath`. 只有与此混合类型相关的内容更改才会导致更新向Apache Sling Authenticator注册的要求。 在保留任何临时修改时会跟踪这些修改，因此需要 `javax.jcr.Session.save()` 呼吁生效。
 
-`granite:loginPath`属性也是如此。 仅当它由与身份验证相关的mixin类型定义时，才会遵守该规则。 在非结构化JCR节点中添加具有此名称的剩余属性将不会显示所需的效果，该属性将被负责更新OSGi注册的处理程序忽略。
+这同样适用于 `granite:loginPath` 属性。 仅当它由与身份验证相关的mixin类型定义时，才会遵守该规则。 在非结构化JCR节点中添加具有此名称的剩余属性将不会显示所需的效果，该属性将被负责更新OSGi注册的处理程序忽略。
 
 >[!NOTE]
 >
->设置登录路径属性是可选的，并且仅当需要身份验证的树无法回退到默认登录页面或继承的登录页面时才需要此属性。 请参阅下面的[登录路径评估](/help/sites-administering/closed-user-groups.md#evaluation-of-login-path)。
+>设置登录路径属性是可选的，并且仅当需要身份验证的树无法回退到默认登录页面或继承的登录页面时才需要此属性。 请参阅 [登录路径评估](/help/sites-administering/closed-user-groups.md#evaluation-of-login-path) 下。
 
 #### 向Sling验证器注册验证要求和登录路径 {#registering-the-authentication-requirement-and-login-path-with-the-sling-authenticator}
 
 由于此类身份验证要求预计仅限于某些运行模式和内容存储库中树的一小部分，因此对要求混合类型和登录路径属性的跟踪是有条件的，并绑定到定义受支持路径的相应配置（请参阅下面的配置选项）。 因此，只有这些受支持路径范围内的更改才会触发OSGi注册的更新，在mixin类型和属性的其他位置都会被忽略。
 
-默认的AEM设置现在允许在创作运行模式下设置mixin，以便利用此配置，但只有在复制到发布实例时才会生效。 有关Sling如何实施身份验证要求的详细信息，请参阅[此页面](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html)。
+默认的AEM设置现在允许在创作运行模式下设置mixin，以便利用此配置，但只有在复制到发布实例时才会生效。 请参阅 [本页](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) 有关Sling如何实施身份验证要求的详细信息。
 
-在配置的受支持路径中添加`granite:AuthenticationRequired` mixin类型将导致更新负责处理程序的OSGi注册，该注册包含一个具有`sling.auth.requirements`属性的新附加条目。 如果给定的身份验证要求指定了可选的`granite:loginPath`属性，则该值会附加地向验证器注册“ — ”前缀，以便从身份验证要求中排除。
+添加 `granite:AuthenticationRequired` 配置的受支持路径中的mixin类型将导致更新负责处理程序的OSGi注册，该注册包含一个新的附加条目，该条目包含 `sling.auth.requirements` 属性。 如果给定的身份验证要求指定了可选 `granite:loginPath` 属性中，该值将附加地在验证器中注册，并带有“ — ”前缀，以便从验证要求中排除。
 
 #### 认证要求的评价与继承 {#evaluation-and-inheritance-of-the-authentication-requirement}
 
@@ -141,33 +141,33 @@ Apache Sling身份验证要求应通过页面或节点层次结构进行继承�
 
 #### 登录路径评估 {#evaluation-of-login-path}
 
-当前，AdobeGranite登录选择器身份验证处理程序(`com.day.cq.auth.impl.LoginSelectorHandler`)的实施详细信息(默认情况下是使用AEM配置的Apache Sling AuthenticationHandler)将评估登录路径并重定向到相应的资源。
+当前，AdobeGranite登录选择器身份验证处理程序( `com.day.cq.auth.impl.LoginSelectorHandler`)，默认情况下是使用AEM配置的Apache Sling AuthenticationHandler。
 
-在调用`AuthenticationHandler.requestCredentials`时，此处理程序会尝试确定用户将被重定向到的映射登录页面。 这包括以下步骤：
+呼叫 `AuthenticationHandler.requestCredentials` 此处理程序尝试确定用户将被重定向到的映射登录页面。 这包括以下步骤：
 
 * 区分密码过期和需要定期登录作为重定向原因；
 * 如果是定期登录，则会测试是否可以按以下顺序获取登录路径：
 
-   * 从新`com.adobe.granite.auth.requirement.impl.RequirementService`实施的LoginPathProvider中，
+   * 来自新 `com.adobe.granite.auth.requirement.impl.RequirementService`,
    * 从已弃用的旧CUG实施中，
-   * 从登录页面映射（如`LoginSelectorHandler`中定义）
-   * 最后，回退到默认登录页面，如`LoginSelectorHandler`所定义。
+   * 登录页面映射(通过 `LoginSelectorHandler`,
+   * 最后，回退到默认登录页面，使用 `LoginSelectorHandler`.
 
 * 一旦通过上述调用获得了有效的登录路径，用户的请求就会被重定向到该页面。
 
-本文档的目标是评估内部`LoginPathProvider`界面所显示的登录路径。 自AEM 6.3起提供的实施如下所示：
+本文档的目标是对内部 `LoginPathProvider` 界面。 自AEM 6.3起提供的实施如下所示：
 
 * 登录路径的注册取决于是否区分过期的密码以及是否因重定向而需要定期登录
 * 如果是定期登录，则会测试是否可以按以下顺序获取登录路径：
 
-   * 从新`com.adobe.granite.auth.requirement.impl.RequirementService`实施的`LoginPathProvider`中，
+   * 从 `LoginPathProvider` 由新 `com.adobe.granite.auth.requirement.impl.RequirementService`,
    * 从已弃用的旧CUG实施中，
-   * 从使用`LoginSelectorHandler`定义的登录页面映射中，
-   * 最后，回退到使用`LoginSelectorHandler`定义的默认登录页面。
+   * 的登录页面映射(定义为 `LoginSelectorHandler`,
+   * ，最后回退到使用 `LoginSelectorHandler`.
 
 * 一旦通过上述调用获得了有效的登录路径，用户的请求就会被重定向到该页面。
 
-由Granite中新的auth-requerience支持实施的`LoginPathProvider`会公开由`granite:loginPath`属性定义的登录路径，这些属性又由如上所述的mixin类型定义。 保存登录路径的资源路径和属性值本身的映射被保存在内存中，并且将被评估以为层次结构中的其他节点找到合适的登录路径。
+的 `LoginPathProvider` 由Granite中新的auth-requirement支持实施时，会公开由 `granite:loginPath` 属性，这些属性又由如上所述的mixin类型定义。 保存登录路径的资源路径和属性值本身的映射被保存在内存中，并且将被评估以为层次结构中的其他节点找到合适的登录路径。
 
 >[!NOTE]
 >
@@ -183,13 +183,13 @@ Apache Sling身份验证要求应通过页面或节点层次结构进行继承�
 
    * 依赖继承并避免定义嵌套的登录路径，
    * 请勿将可选登录路径设置为与默认值或继承值对应的值，
-   * 应用程序开发人员应当确定在与`LoginSelectorHandler`关联的全局登录路径配置（默认和映射）中应配置哪些登录路径。
+   * 应用程序开发人员应确定在与全局登录路径配置（默认和映射）关联的中应配置哪些登录路径 `LoginSelectorHandler`.
 
 ## 存储库中的表示形式 {#representation-in-the-repository}
 
 ### 存储库中的CUG策略表示 {#cug-policy-representation-in-the-repository}
 
-Oak文档介绍了新CUG策略在存储库内容中的反映方式。 有关详细信息，请参阅[此页面](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository)。
+Oak文档介绍了新CUG策略在存储库内容中的反映方式。 有关详细信息，请查阅 [本页](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository).
 
 ### 存储库中的身份验证要求 {#authentication-requirement-in-the-repository}
 
@@ -207,11 +207,11 @@ Oak文档介绍了新CUG策略在存储库内容中的反映方式。 有关详�
 
 ### 管理CUG策略 {#managing-cug-policies}
 
-使用JCR访问控制管理API管理用于限制CUG读访问的新类型的访问控制策略，并遵循[JCR 2.0规范](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)中描述的机制。
+用于限制CUG读取访问的新类型的访问控制策略是使用JCR访问控制管理API来管理的，并遵循 [JCR 2.0规范](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 
 #### 设置新的CUG策略 {#set-a-new-cug-policy}
 
-用于在之前没有设置CUG的节点应用新CUG策略的代码。 请注意，`getApplicablePolicies`将只返回以前未设置的新策略。 最后，需要回写策略，并且需要保留更改。
+用于在之前没有设置CUG的节点应用新CUG策略的代码。 请注意 `getApplicablePolicies` 将仅返回以前未设置的新策略。 最后，需要回写策略，并且需要保留更改。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -247,7 +247,7 @@ session.save();
 
 #### 编辑现有的CUG策略 {#edit-an-existing-cug-policy}
 
-编辑现有CUG策略需要执行以下步骤。 请注意，修改后的策略需要回写，并且需要使用`javax.jcr.Session.save()`保留更改。
+编辑现有CUG策略需要执行以下步骤。 请注意，修改后的策略需要回写，并且需要使用 `javax.jcr.Session.save()`.
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -281,11 +281,11 @@ if (cugPolicy.addPrincipals(toAdd1, toAdd2) || cugPolicy.removePrincipals(toRemo
 
 ### 检索有效的CUG策略 {#retrieve-effective-cug-policies}
 
-JCR访问控制管理定义了一种检索在给定路径生效的策略的最佳方法。 由于评估CUG策略是有条件的，并且取决于要启用的相应配置，因此调用`getEffectivePolicies`是验证给定CUG策略是否在给定安装中生效的一种简便方法。
+JCR访问控制管理定义了一种检索在给定路径生效的策略的最佳方法。 由于CUG策略的评估是有条件的，并且取决于要启用的相应配置，因此调用 `getEffectivePolicies` 是验证给定CUG策略是否在给定安装中生效的一种简便方法。
 
 >[!NOTE]
 >
->请注意`getEffectivePolicies`与后续代码示例之间的区别，该示例将逐级向上查找给定路径是否已包含在现有CUG中。
+>请注意 `getEffectivePolicies` 以及随后的代码示例，该示例将逐级向上查找，以查找给定路径是否已包含在现有CUG中。
 
 ```java
 String path = [...] // needs to be a supported, absolute path
@@ -308,7 +308,7 @@ for (AccessControlPolicy policy : acMgr.getEffectivePolicies(path) {
 
 #### 检索继承的CUG策略 {#retrieve-inherited-cug-policies}
 
-查找在给定路径上定义的所有嵌套CUG，而不管它们是否生效。 有关更多信息，请参阅[配置选项](/help/sites-administering/closed-user-groups.md#configuration-options)部分。
+查找在给定路径上定义的所有嵌套CUG，而不管它们是否生效。 有关更多信息，请参阅 [配置选项](/help/sites-administering/closed-user-groups.md#configuration-options) 中。
 
 ```java
 String path = [...]
@@ -326,7 +326,7 @@ while (isSupportedPath(path)) {
 
 #### 按Pincipal管理CUG策略 {#managing-cug-policies-by-pincipal}
 
-`JackrabbitAccessControlManager`定义的允许按主体编辑访问控制策略的扩展未通过CUG访问控制管理实施，因为根据定义，CUG策略始终影响所有主体：与`PrincipalSetPolicy`一起列出的主体将被授予读取访问权限，而所有其他主体将被阻止读取目标节点定义的树中的内容。
+定义的扩展 `JackrabbitAccessControlManager` 允许按主体编辑访问控制策略的CUG访问控制管理不会通过CUG访问控制管理来实施，因为根据定义，CUG策略始终影响所有主体：列在 `PrincipalSetPolicy` 将被授予读取访问权限，而所有其他主体将被阻止读取目标节点定义的树中的内容。
 
 相应的方法始终返回空策略数组，但不会引发异常。
 
@@ -336,13 +336,13 @@ while (isSupportedPath(path)) {
 
 >[!NOTE]
 >
->只有配置了`RequirementHandler`并且目标包含在由支持的路径定义的树中时，对上述给定目标节点所做的修改才会反映在Apache Sling Authenticator中（请参阅配置选项一节）。
+>仅当 `RequirementHandler` 已配置，且目标包含在由支持的路径定义的树中（请参阅配置选项一节）。
 >
->有关更多信息，请参阅[分配混合节点类型](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3分配混合节点类型)和[添加节点和设置属性](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4添加节点和设置属性)
+>有关更多信息，请参阅 [分配混合节点类型](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3分配混合节点类型)和 [添加节点和设置属性](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4添加节点和设置属性)
 
 #### 添加新的身份验证要求 {#adding-a-new-auth-requirement}
 
-创建新身份验证要求的步骤详见下文。 请注意，仅当为包含目标节点的树配置了`RequirementHandler`时，才向Apache Sling Authenticator注册此要求。
+创建新身份验证要求的步骤详见下文。 请注意，仅当 `RequirementHandler` 已为包含目标节点的树配置。
 
 ```java
 Node targetNode = [...]
@@ -353,7 +353,7 @@ session.save();
 
 #### 使用登录路径添加新的身份验证要求 {#add-a-new-auth-requirement-with-login-path}
 
-创建新身份验证要求（包括登录路径）的步骤。 请注意，仅当为包含目标节点的树配置了`RequirementHandler`时，才向Apache Sling Authenticator注册登录路径的要求和排除项。
+创建新身份验证要求（包括登录路径）的步骤。 请注意，仅当 `RequirementHandler` 已为包含目标节点的树配置。
 
 ```java
 Node targetNode = [...]
@@ -368,7 +368,7 @@ session.save();
 
 #### 修改现有登录路径 {#modify-an-existing-login-path}
 
-更改现有登录路径的步骤详见下文。 仅当为包含目标节点的树配置了`RequirementHandler`时，才会向Apache Sling Authenticator注册该修改。 将从注册中删除之前的登录路径值。 与目标节点关联的身份验证要求不受此修改的影响。
+更改现有登录路径的步骤详见下文。 仅当 `RequirementHandler` 已为包含目标节点的树配置。 将从注册中删除之前的登录路径值。 与目标节点关联的身份验证要求不受此修改的影响。
 
 ```java
 Node targetNode = [...]
@@ -384,7 +384,7 @@ if (targetNode.isNodeType("granite:AuthenticationRequired")) {
 
 #### 删除现有登录路径 {#remove-an-existing-login-path}
 
-删除现有登录路径的步骤。 仅当为包含目标节点的树配置了`RequirementHandler`时，才会从Apache Sling Authenticator中取消注册登录路径条目。 与目标节点关联的身份验证要求不受影响。
+删除现有登录路径的步骤。 只有在 `RequirementHandler` 已为包含目标节点的树配置。 与目标节点关联的身份验证要求不受影响。
 
 ```java
 Node targetNode = [...]
@@ -413,7 +413,7 @@ if (session.propertyExists(propertyPath)) {
 
 #### 删除身份验证要求 {#remove-an-auth-requirement}
 
-删除现有身份验证要求的步骤。 仅当为包含目标节点的树配置了`RequirementHandler`时，才会从Apache Sling Authenticator中取消注册该要求。
+删除现有身份验证要求的步骤。 仅当 `RequirementHandler` 已为包含目标节点的树配置。
 
 ```java
 Node targetNode = [...]
@@ -424,13 +424,13 @@ session.save();
 
 #### 检索有效的身份验证要求 {#retrieve-effective-auth-requirements}
 
-没有专用的公共API来读取在Apache Sling Authenticator中注册的所有有效身份验证要求。 但是，该列表会显示在位于`https://<serveraddress>:<serverport>/system/console/slingauth`的系统控制台中“**身份验证要求配置**”部分下。
+没有专用的公共API来读取在Apache Sling Authenticator中注册的所有有效身份验证要求。 但是，该列表会在系统控制台(位于 `https://<serveraddress>:<serverport>/system/console/slingauth` 在“**身份验证要求配置**“ ”部分。
 
 下图显示了包含演示内容的AEM发布实例的身份验证要求。 社区页面突出显示的路径说明了Apache Sling Authenticator如何反映本文档中所述实施添加的要求。
 
 >[!NOTE]
 >
->在此示例中，未设置可选的登录路径属性。 因此，没有向鉴定人登记第二项。
+>在此示例中，未设置可选的登录路径属性。 因此，没有向鉴定人注册第二项。
 
 ![chlimage_1-24](assets/chlimage_1-24.jpeg)
 
@@ -442,13 +442,13 @@ session.save();
 
 #### 检索继承的身份验证要求 {#retrieve-the-inherited-auth-requirement}
 
-与登录路径一样，没有用于检索内容中定义的继承身份验证要求的公共API。 以下示例说明了如何列出已使用给定层次结构定义的所有身份验证要求，而不管这些要求是否生效。 有关更多信息，请参阅[配置选项](/help/sites-administering/closed-user-groups.md#configuration-options)。
+与登录路径一样，没有用于检索内容中定义的继承身份验证要求的公共API。 以下示例说明了如何列出已使用给定层次结构定义的所有身份验证要求，而不管这些要求是否生效。 有关更多信息，请参阅 [配置选项](/help/sites-administering/closed-user-groups.md#configuration-options).
 
 >[!NOTE]
 >
 >建议在身份验证要求和登录路径上都使用继承机制，并避免创建嵌套的身份验证要求。
 >
->有关更多信息，请参阅[身份验证要求的评估和继承](#evaluation-and-inheritance-of-the-authentication-requirement)、[登录路径评估](#evaluation-of-login-path)和[最佳实践](#best-practices)。
+>有关详细信息，请参阅 [认证需求的评估与继承](#evaluation-and-inheritance-of-the-authentication-requirement), [登录路径评估](#evaluation-of-login-path) 和 [最佳实践](#best-practices).
 
 ```java
 String path = [...]
@@ -490,15 +490,15 @@ while (isSupported(node)) {
 
 ### 授权：设置和配置 {#authorization-setup-and-configuration}
 
-新的授权相关部件包含在&#x200B;**Oak CUG授权**&#x200B;包(`org.apache.jackrabbit.oak-authorization-cug`)中，该包是AEM默认安装的一部分。 该包定义了一个分离的授权模型，该授权模型旨在作为管理读取访问的另一种方式进行部署。
+与授权相关的新部分包含在 **Oak CUG授权** 捆绑( `org.apache.jackrabbit.oak-authorization-cug`)，这是AEM默认安装的一部分。 该包定义了一个分离的授权模型，该授权模型旨在作为管理读取访问的另一种方式进行部署。
 
 #### 设置CUG授权 {#setting-up-cug-authorization}
 
-[相关Apache文档](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability)中对设置CUG授权进行了详细描述。 默认情况下，AEM在所有运行模式下都部署了CUG授权。 在那些需要不同授权设置的安装中，也可以使用分步指令来禁用CUG授权。
+有关设置CUG授权的详情，请参阅 [相关Apache文档](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability). 默认情况下，AEM在所有运行模式下都部署了CUG授权。 在那些需要不同授权设置的安装中，也可以使用分步指令来禁用CUG授权。
 
 #### 配置反向链接过滤器 {#configuring-the-referrer-filter}
 
-您还需要配置[Sling反向链接过滤器](/help/sites-administering/security-checklist.md#the-sling-referrer-filter)，以包含可用于访问AEM的所有主机名；例如，通过CDN、负载平衡器和其他任何方式。
+您还需要配置 [Sling反向链接过滤器](/help/sites-administering/security-checklist.md#the-sling-referrer-filter) 包含所有可用于访问AEM的主机名；例如，通过CDN、负载平衡器和其他任何方式。
 
 如果未配置反向链接过滤器，则用户尝试登录CUG网站时会看到与以下类似的错误：
 
@@ -532,7 +532,7 @@ while (isSupported(node)) {
      <li><code>cugSupportedPaths</code></li>
      <li><code>cugEnabled</code></li>
      <li><code>configurationRanking</code></li>
-    </ul> <p>另请参阅下面的<a href="#configuration-options">配置选项</a>。</p> </td>
+    </ul> <p>另请参阅 <a href="#configuration-options">配置选项</a> 下。</p> </td>
   </tr>
   <tr>
    <td>配置策略</td>
@@ -579,10 +579,10 @@ while (isSupported(node)) {
 
 关键配置选项包括：
 
-* `cugSupportedPaths`:指定可能包含CUG的子树。未设置默认值
+* `cugSupportedPaths`:指定可能包含CUG的子树。 未设置默认值
 * `cugEnabled`:配置选项，以启用对当前CUG策略的权限评估。
 
-[Apache Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#configuration)中列出了与CUG授权模块关联的可用配置选项，并对其进行了更详细的描述。
+有关与CUG授权模块关联的可用配置选项的列出，请参阅 [Apache Oak文档](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#configuration).
 
 #### 从CUG评估中排除承担者 {#excluding-principals-from-cug-evaluation}
 
@@ -594,17 +594,17 @@ while (isSupported(node)) {
 * 服务用户主体
 * 存储库内部系统主体
 
-有关更多信息，请参阅下面“自AEM 6.3](#default-configuration-since-aem)以来的默认配置”部分中的表。[
+有关详细信息，请参阅 [自AEM 6.3以来的默认配置](#default-configuration-since-aem) 部分。
 
-在系统控制台的&#x200B;**Apache Jackrabbit Oak CUG Exclude List**&#x200B;的配置部分中，可以更改或扩展“管理员”组的排除。
+在的配置部分的系统控制台中，可以更改或扩展“管理员”组的排除 **Apache Jackrabbit Oak CUG排除列表**.
 
-或者，也可以提供和部署CugExclude界面的自定义实施，以在特殊需要时调整排除的承担者集。 有关详细信息和示例实施，请参阅[CUG插件](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability)上的文档。
+或者，也可以提供和部署CugExclude界面的自定义实施，以在特殊需要时调整排除的承担者集。 请参阅 [CUG可插拔性](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) 以了解详细信息和实施示例。
 
 ### 身份验证：设置和配置 {#authentication-setup-and-configuration}
 
-与身份验证相关的新部分包含在&#x200B;**AdobeGranite身份验证处理程序**&#x200B;包（`com.adobe.granite.auth.authhandler`版本5.6.48）中。 此包是AEM默认安装的一部分。
+与身份验证相关的新部分包含在 **AdobeGranite身份验证处理程序** 捆绑( `com.adobe.granite.auth.authhandler` 版本5.6.48)。 此包是AEM默认安装的一部分。
 
-要设置已弃用CUG支持的身份验证要求替换，某些OSGi组件必须在给定的AEM安装中存在且处于活动状态。 有关更多详细信息，请参阅下面的&#x200B;**OSGi组件的特性** 。
+要设置已弃用CUG支持的身份验证要求替换，某些OSGi组件必须在给定的AEM安装中存在且处于活动状态。 有关更多详细信息，请参阅 **OSGi元件的特性** 下。
 
 >[!NOTE]
 >
@@ -627,7 +627,7 @@ while (isSupported(node)) {
   </tr>
   <tr>
    <td>描述</td>
-   <td>用于验证要求的专用OSGi服务，该服务为影响验证要求的内容更改（通过<code>granite:AuthenticationRequirement</code> mixin类型）的观察者注册，以及与的登录路径将暴露在<code>LoginSelectorHandler</code>中。 </td>
+   <td>专用的OSGi身份验证要求服务，该服务为影响身份验证要求的内容更改注册观察者(通过 <code>granite:AuthenticationRequirement</code> 混合类型)和登录路径会显示在 <code>LoginSelectorHandler</code>. </td>
   </tr>
   <tr>
    <td>配置属性</td>
@@ -659,7 +659,7 @@ while (isSupported(node)) {
 
 #### 配置选项 {#configuration-options-1}
 
-CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证要求和登录路径处理程序关联的单个配置选项：
+CUG重写的与身份验证相关的部分只附带一个与AdobeGranite身份验证要求和登录路径处理程序关联的配置选项：
 
 **&quot;身份验证要求和登录路径处理程序&quot;**
 
@@ -673,9 +673,9 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
   </tr>
   <tr>
    <td><p>标签=支持的路径</p> <p>Name = 'supportedPaths'</p> </td>
-   <td>Set&lt;String&gt;</td>
+   <td>已设置&lt;string&gt;</td>
    <td>-</td>
-   <td>此处理程序将遵循身份验证要求的路径。 如果要将<code>granite:AuthenticationRequirement</code> mixin类型添加到节点而不强制执行它们（例如，在创作实例上），请保持未设置此配置。 如果缺失，则禁用该功能。 </td>
+   <td>此处理程序将遵循身份验证要求的路径。 如果要添加 <code>granite:AuthenticationRequirement</code> 混合类型到节点，但未强制执行它们（例如，在创作实例上）。 如果缺失，则禁用该功能。 </td>
   </tr>
  </tbody>
 </table>
@@ -688,20 +688,20 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 
 | **&quot;Apache Jackrabbit Oak CUG配置&quot;** | **说明** |
 |---|---|
-| 支持的路径`/content` | 已启用CUGpolicies的访问控制管理。 |
+| 支持的路径 `/content` | 已启用CUGpolicies的访问控制管理。 |
 | CUG评估已启用FALSE | 权限评估被禁用。 CUG政策不起作用。 |
 | 等级 | 200 | 请参阅Oak文档。 |
 
 >[!NOTE]
 >
->默认创作实例中不存在&#x200B;**Apache Jackrabbit Oak CUG Exclude List**&#x200B;和&#x200B;**AdobeGranite身份验证要求和登录路径处理程序**&#x200B;的配置。
+>没有配置 **Apache Jackrabbit Oak CUG排除列表** 和 **AdobeGranite身份验证要求和登录路径处理程序** 默认创作实例中存在。
 
 ### 发布实例 {#publish-instances}
 
 | **&quot;Apache Jackrabbit Oak CUG配置&quot;** | **说明** |
 |---|---|
-| 支持的路径`/content` | CUG策略的访问控制管理在配置的路径下启用。 |
-| CUG评估已启用TRUE | 权限评估在配置的路径下启用。 CUG策略对`Session.save()`生效。 |
+| 支持的路径 `/content` | CUG策略的访问控制管理在配置的路径下启用。 |
+| CUG评估已启用TRUE | 权限评估在配置的路径下启用。 CUG政策于 `Session.save()`. |
 | 等级 | 200 | 请参阅Oak文档。 |
 
 | **&quot;Apache Jackrabbit Oak CUG排除列表&quot;** | **说明** |
@@ -710,7 +710,7 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 
 | **“AdobeGranite身份验证要求和登录路径处理程序”** | **说明** |
 |---|---|
-| 支持的路径`/content` | `granite:AuthenticationRequired` mixin类型在存储库中定义的身份验证要求在`Session.save()`后在`/content`下生效。 Sling Authenticator已更新。 将忽略在支持的路径之外添加混合类型。 |
+| 支持的路径  `/content` | 在存储库中通过 `granite:AuthenticationRequired` mixin类型在下面生效 `/content` on `Session.save()`. Sling Authenticator已更新。 将忽略在支持的路径之外添加混合类型。 |
 
 ## 禁用CUG授权和身份验证要求 {#disabling-cug-authorization-and-authentication-requirement}
 
@@ -718,11 +718,11 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 
 ### 禁用CUG授权 {#disable-cug-authorization}
 
-有关如何从复合授权设置中删除CUG授权模型的详细信息，请参阅[CUG插件](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability)文档。
+请查阅 [CUG可插拔性](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability) 有关如何从复合授权设置中删除CUG授权模型的详细信息文档。
 
 ### 禁用身份验证要求 {#disable-the-authentication-requirement}
 
-为了禁用对`granite.auth.authhandler`模块提供的身份验证要求的支持，就足以删除与&#x200B;**AdobeGranite身份验证要求和登录路径处理程序**&#x200B;关联的配置。
+为了禁用对 `granite.auth.authhandler` 模块足以删除与 **AdobeGranite身份验证要求和登录路径处理程序**.
 
 >[!NOTE]
 >
@@ -732,36 +732,36 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 
 ### Apache Jackrabbit API {#apache-jackrabbit-api}
 
-为了引用CUG授权模型使用的新类型访问控制策略，扩展了Apache Jackrabbit定义的API。 自`jackrabbit-api`模块版本2.11.0起，定义了一个名为`org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy`的新接口，该接口从`javax.jcr.security.AccessControlPolicy`扩展。
+为了引用CUG授权模型使用的新类型访问控制策略，扩展了Apache Jackrabbit定义的API。 自版本2.11.0起 `jackrabbit-api` 模块定义了名为 `org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy`，从 `javax.jcr.security.AccessControlPolicy`.
 
 ### Apache Jackrabbit FileVault {#apache-jackrabbit-filevault}
 
-已调整Apache Jackrabbit FileVault的导入机制，以处理`PrincipalSetPolicy`类型的访问控制策略。
+已调整Apache Jackrabbit FileVault的导入机制，以处理类型的访问控制策略 `PrincipalSetPolicy`.
 
 ### Apache Sling内容分发 {#apache-sling-content-distribution}
 
-请参阅上面的[Apache Jackrabbit FileVault](/help/sites-administering/closed-user-groups.md#apache-jackrabbit-filevault)部分。
+请参阅上文 [Apache Jackrabbit FileVault](/help/sites-administering/closed-user-groups.md#apache-jackrabbit-filevault) 中。
 
 ### AdobeGranite复制 {#adobe-granite-replication}
 
 为了能够在不同AEM实例之间复制CUG策略，复制模块已进行了稍微调整：
 
-* `DurboImportConfiguration.isImportAcl()` 将以字面形式解释，并且只会影响访问控制策略的实施  `javax.jcr.security.AccessControlList`
+* `DurboImportConfiguration.isImportAcl()` 将以字面形式解释，并且只会影响访问控制策略的实施 `javax.jcr.security.AccessControlList`
 
 * `DurboImportTransformer` 将仅遵守此配置，才能获得真正的ACL
-* 其他策略（如由CUG授权模型创建的`org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy`实例）将始终被复制，并且配置选项`DurboImportConfiguration.isImportAcl`()将被忽略。
+* 其他政策，例如 `org.apache.jackrabbit.api.security.authorization.PrincipalSetPolicy` 由CUG授权模型创建的实例将始终复制和配置选项 `DurboImportConfiguration.isImportAcl`()将被忽略。
 
-复制CUG策略存在一个限制。 如果在删除相应的混合节点类型`rep:CugMixin,`的情况下删除了给定的CUG策略，则复制时不会反映该删除。 已通过始终在删除策略时删除mixin来解决此问题。 但是，如果手动添加混合类型，则可能会显示该限制。
+复制CUG策略存在一个限制。 如果删除了给定的CUG策略而未删除相应的混合节点类型 `rep:CugMixin,` 复制时不会反映删除内容。 已通过始终在删除策略时删除mixin来解决此问题。 但是，如果手动添加混合类型，则可能会显示该限制。
 
 ### AdobeGranite身份验证处理程序 {#adobe-granite-authentication-handler}
 
-验证处理程序&#x200B;**AdobeGranite HTTP标头验证处理程序**&#x200B;随`com.adobe.granite.auth.authhandler`包一起提供，它包含对由同一模块定义的`CugSupport`接口的引用。 它用于在某些情况下计算“领域”，并回退到使用处理程序配置的领域。
+身份验证处理程序 **AdobeGranite HTTP标头身份验证处理程序** 随 `com.adobe.granite.auth.authhandler` 包包含对的引用 `CugSupport` 由同一模块定义的接口。 它用于在某些情况下计算“领域”，并回退到使用处理程序配置的领域。
 
-已对此进行了调整，使对`CugSupport`的引用成为可选的引用，以确保在给定设置决定重新启用已弃用的实施时最大的向后兼容性。 使用该实施的安装将不再获取从CUG实施提取的领域，但将始终按照&#x200B;**AdobeGranite HTTP标头身份验证处理程序**&#x200B;定义的领域显示。
+此参数已调整为参考 `CugSupport` 可选，以确保在给定设置决定重新启用已弃用的实施时，能够实现最大的向后兼容性。 使用实施的安装将不再获取从CUG实施提取的领域，但将始终显示通过定义的领域 **AdobeGranite HTTP标头身份验证处理程序**.
 
 >[!NOTE]
 >
->默认情况下，**AdobeGranite HTTP标头身份验证处理程序**&#x200B;仅在发布运行模式下配置，并启用“禁用登录页面”(`auth.http.nologin`)选项。
+>默认情况下， **AdobeGranite HTTP标头身份验证处理程序** 仅在发布运行模式下使用“禁用登录页面”( `auth.http.nologin`)选项。
 
 ### AEM LiveCopy {#aem-livecopy}
 
@@ -770,9 +770,9 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 * `/content/we-retail/us/en/blueprint/rep:cugPolicy`
 * `/content/we-retail/us/en/LiveCopy@granite:loginPath`
 
-这两个元素都在`cq:Page`下创建。 使用当前设计时，MSM仅处理`cq:PageContent`(`jcr:content`)节点下的节点和属性。
+这两个元素均在 `cq:Page`. 在当前设计中，MSM仅处理位于 `cq:PageContent` (`jcr:content`)节点。
 
-因此，无法从Blueprint将CUG组转出到Live Copy。 请在配置Live Copy时针对此进行规划。
+因此，无法从Blueprint将CUG组转出到Live Copy。 请在配置 Live Copy 时对此进行规划。
 
 ## 新CUG实施中的更改 {#changes-with-the-new-cug-implementation}
 
@@ -780,7 +780,7 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 
 ### CUG设置和配置中的差异 {#differences-in-cug-setup-and-configuration}
 
-已弃用的OSGi组件&#x200B;**AdobeGranite封闭用户组(CUG)支持**(`com.day.cq.auth.impl.cug.CugSupportImpl`)已被新组件替换，以便能够单独处理前CUG功能中与授权和身份验证相关的部分。
+已弃用的OSGi组件 **AdobeGranite封闭用户组(CUG)支持** ( `com.day.cq.auth.impl.cug.CugSupportImpl`)已被新组件取代，以便能够单独处理以前CUG功能中与授权和身份验证相关的部分。
 
 ## 在管理存储库内容中的CUG方面的差异 {#differences-in-managing-cugs-in-the-repository-content}
 
@@ -794,11 +794,11 @@ CUG重写的与身份验证相关的部分只附带与AdobeGranite身份验证�
 
 在旧实施中，默认授权模型用于处理发布时的访问控制列表策略，通过CUG授权的设置替换任何现有ACE。 这是由编写常规的剩余JCR属性触发的，这些属性会在发布时进行解释。
 
-在新实施中，默认授权模型的访问控制设置不受任何正在创建、修改或删除的CUG的影响。 而是将名为`PrincipalSetPolicy`的新策略类型作为附加访问控制内容应用到目标节点。 此附加策略将作为目标节点的子项找到，并且如果存在，则将作为默认策略节点的同级。
+在新实施中，默认授权模型的访问控制设置不受任何正在创建、修改或删除的CUG的影响。 而是新类型的策略，名为 `PrincipalSetPolicy` 作为附加访问控制内容应用于目标节点。 此附加策略将作为目标节点的子项找到，并且如果存在，则将作为默认策略节点的同级。
 
 **在访问控制管理中编辑CUG策略**
 
-从剩余的JCR属性移动到专用的访问控制策略会影响创建或修改CUG功能授权部分所需的权限。 由于这被视为访问控制内容的修改，因此需要`jcr:readAccessControl`和`jcr:modifyAccessControl`权限才能写入存储库。 因此，只有有权修改页面访问控制内容的内容作者才能设置或修改此内容。 这与旧实施形成了对比，旧实施中写入常规JCR属性的功能已足够，从而导致权限提升。
+从剩余的JCR属性移动到专用的访问控制策略会影响创建或修改CUG功能授权部分所需的权限。 由于这被视为对访问控制内容的修改，因此需要 `jcr:readAccessControl` 和 `jcr:modifyAccessControl` 权限。 因此，只有有权修改页面访问控制内容的内容作者才能设置或修改此内容。 这与旧实施形成了对比，旧实施中写入常规JCR属性的功能已足够，从而导致权限提升。
 
 **策略定义的目标节点**
 
@@ -808,20 +808,20 @@ CUG策略应在JCR节点创建，该节点定义要受限制读取访问的子�
 
 **使用CUG策略进行权限评估**
 
-从旧的CUG支持转移到其他授权模型，更改了评估有效读取权限的方式。 如[Jackrabbit文档](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)中所述，仅当Oak存储库中配置的所有模型的权限评估授予读取访问权限时，才会授予允许查看`CUGcontent`的给定主体读取权限。
+从旧的CUG支持转移到其他授权模型，更改了评估有效读取权限的方式。 如 [Jackrabbit文档](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html)，允许给定的主体查看 `CUGcontent` 只有在对Oak存储库中配置的所有模型进行权限评估时，才授予读取访问权限。
 
-换言之，在评估有效权限时，将考虑`CUGPolicy`和默认访问控制条目，并且仅当两种策略都授予CUG内容读取权限时，才授予对CUG内容的读取权限。 在默认的AEM发布安装中，为每个人授予对完整`/content`树的读取访问权限，CUG策略的效果将与旧实施的效果相同。
+换言之，在评估有效权限时， `CUGPolicy` 并且，将考虑默认访问控制条目，并且仅在两种策略类型授予CUG内容的读取访问权限时，才授予该内容的读取权限。 在默认的AEM发布安装中，其中对完成项具有读取访问权限 `/content` 树会向每个人授予，CUG政策的效果将与旧实施的效果相同。
 
 **按需评估**
 
 CUG授权模型允许单独开启访问控制管理和权限评估：
 
 * 如果模块具有一个或多个可创建CUG的支持路径，则会启用访问控制管理
-* 仅当另外选中选项&#x200B;**已启用CUG评估**&#x200B;时，才启用权限评估。
+* 仅当选项时，才启用权限评估 **已启用CUG评估** 已另外选中。
 
-在新的AEM默认设置CUG策略评估中，仅通过“发布”运行模式启用该设置。 有关更多详细信息，请参阅自AEM 6.3](#default-configuration-since-aem)以来的[默认配置的详细信息。 可通过将给定路径的有效策略与存储在内容中的策略进行比较来验证这一点。 只有在启用CUG的权限评估时，才会显示有效策略。
+在新的AEM默认设置CUG策略评估中，仅通过“发布”运行模式启用该设置。 请参阅 [自AEM 6.3以来的默认配置](#default-configuration-since-aem) 以了解更多详细信息。 可通过将给定路径的有效策略与存储在内容中的策略进行比较来验证这一点。 只有在启用CUG的权限评估时，才会显示有效策略。
 
-如上所述，CUG访问控制策略现在始终存储在内容中，但只有在Apache Jackrabbit Oak **CUG配置的系统控制台中打开**&#x200B;启用CUG评估&#x200B;**时，才会强制评估这些策略产生的有效权限。** 默认情况下，仅通过“发布”运行模式启用此功能。
+如上所述，CUG访问控制策略现在始终存储在内容中，但只有在 **已启用CUG评估** 在Apache Jackrabbit Oak的系统控制台中打开 **CUG配置。** 默认情况下，仅通过“发布”运行模式启用此功能。
 
 ### 与身份验证的区别 {#differences-with-regards-to-authentication}
 
@@ -829,17 +829,17 @@ CUG授权模型允许单独开启访问控制管理和权限评估：
 
 #### 用于验证要求的专用混合类型 {#dedicated-mixin-type-for-authentication-requirement}
 
-在前一个实现中，CUG的授权和身份验证方面都由单个JCR属性(`cq:cugEnabled`)触发。 就身份验证而言，这会生成与Apache Sling Authenticator实施一起存储的身份验证要求的更新列表。 在新的实施中，通过用专用混合类型(`granite:AuthenticationRequired`)标记目标节点来实现相同的结果。
+在前一个实现中，CUG的授权和身份验证方面都由单个JCR属性( `cq:cugEnabled`)。 就身份验证而言，这会生成与Apache Sling Authenticator实施一起存储的身份验证要求的更新列表。 在新的实施中，通过用专用混合类型标记目标节点( `granite:AuthenticationRequired`)。
 
 #### 用于排除登录路径的属性 {#property-for-excluding-login-path}
 
-mixin类型定义一个名为`granite:loginPath`的可选属性，该属性基本上与`cq:cugLoginPage`属性相对应。 与之前的实施相反，仅当其声明节点类型为所述mixin时，才会遵守登录路径属性。 在不设置mixin类型的情况下添加具有该名称的属性将不起作用，并且不会向验证器报告对登录路径的新要求或排除项。
+mixin类型定义一个名为的可选属性 `granite:loginPath`，它基本上与 `cq:cugLoginPage` 属性。 与之前的实施相反，仅当其声明节点类型为所述mixin时，才会遵守登录路径属性。 在不设置mixin类型的情况下添加具有该名称的属性将不起作用，并且不会向验证器报告对登录路径的新要求或排除项。
 
 #### 身份验证要求的权限 {#privilege-for-authentication-requirement}
 
-添加或删除混合类型需要授予`jcr:nodeTypeManagement`权限。 在上一个实施中，使用`jcr:modifyProperties`权限来编辑剩余属性。
+添加或删除混合类型需要 `jcr:nodeTypeManagement` 权限。 在上一个实施中， `jcr:modifyProperties` 权限用于编辑剩余属性。
 
-就`granite:loginPath`而言，添加、修改或删除资产时需要相同的权限。
+对于 `granite:loginPath` 担心添加、修改或删除资产时需要具有相同的权限。
 
 #### 由混合类型定义的目标节点 {#target-node-defined-by-mixin-type}
 
@@ -851,7 +851,7 @@ mixin类型定义一个名为`granite:loginPath`的可选属性，该属性基�
 
 #### 已配置的受支持路径 {#configured-supported-paths}
 
-`granite:AuthenticationRequired` mixin类型和granite:loginPath属性将仅在&#x200B;**支持的路径**&#x200B;配置选项集定义的范围内得到遵守，该选项集与&#x200B;**Adobe的Granite身份验证要求和登录路径处理程序**&#x200B;一起提供。 如果未指定路径，则完全禁用身份验证要求功能。 在这种情况下，将mixin类型或属性添加到给定的JCR节点或将其设置为该节点时，将会生效。
+和 `granite:AuthenticationRequired` mixin类型和granite:loginPath属性将仅在由 **支持的路径** 配置选项 **AdobeGranite身份验证要求和登录路径处理程序**. 如果未指定路径，则完全禁用身份验证要求功能。 在这种情况下，将mixin类型或属性添加到给定的JCR节点或将其设置为该节点时，将会生效。
 
 ### JCR内容、OSGi服务和配置的映射 {#mapping-of-jcr-content-osgi-services-and-configurations}
 
@@ -876,10 +876,10 @@ mixin类型定义一个名为`granite:loginPath`的可选属性，该属性基�
 
 Adobe提供了迁移到新CUG实施的工具。 要使用该插件，请执行以下步骤：
 
-1. 转到`https://<serveraddress>:<serverport>/system/console/cug-migration`以访问该工具。
-1. 输入要检查CUG的根路径，然后按&#x200B;**Perform dry run**&#x200B;按钮。 这将扫描选定位置中符合转化条件的CUG。
-1. 查看结果后，按&#x200B;**Perform migration**&#x200B;按钮以迁移到新实施。
+1. 转到 `https://<serveraddress>:<serverport>/system/console/cug-migration` 以访问该工具。
+1. 输入要检查CUG的根路径，然后按 **执行干跑** 按钮。 这将扫描选定位置中符合转化条件的CUG。
+1. 查看结果后，按 **执行迁移** 按钮迁移到新实施。
 
 >[!NOTE]
 >
->如果遇到问题，可以在`com.day.cq.auth.impl.cug`的&#x200B;**DEBUG**&#x200B;级别设置特定的日志记录器，以获取迁移工具的输出。 有关如何执行此操作的详细信息，请参阅[日志记录](/help/sites-deploying/configure-logging.md)。
+>如果遇到问题，可以在 **调试** 级别 `com.day.cq.auth.impl.cug` 以获取迁移工具的输出。 请参阅 [记录](/help/sites-deploying/configure-logging.md) 以了解有关如何执行此操作的详细信息。

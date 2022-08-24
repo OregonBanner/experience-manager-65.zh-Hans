@@ -1,19 +1,19 @@
 ---
 title: 布局设计
-seo-title: 布局设计
+seo-title: Layout Design
 description: 布局设计详细信息说明如何创建用于信件或交互式通信的布局。
-seo-description: 布局设计详细信息说明如何创建用于信件或交互式通信的布局。
+seo-description: Layout Design Details explains how you can create layouts to be used for your letters or Interactive Communications.
 uuid: 469a8a71-88f7-4102-bb02-38ed05390f6c
 content-type: reference
 topic-tags: correspondence-management, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
-feature: 通信管理
+feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2170'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 XFA表单模板或XDP是用于以下目的的模板：
 
 * [书信](/help/forms/using/create-letter.md)
-* [打印](/help/forms/using/web-channel-print-channel.md#printchannel) 交互式 [通信渠道](/help/forms/using/interactive-communications-overview.md)
+* [打印渠道](/help/forms/using/web-channel-print-channel.md#printchannel) of [交互式通信](/help/forms/using/interactive-communications-overview.md)
 
 * 布局片段
 
 XDP是在AdobeForms Designer中设计的。 本文详细介绍了如何设计XDP以创建有效的通信/交互式通信，例如在何处使用表单字段或目标区域以及何时使用布局片段。
 
-## 为信件或交互式通信的打印渠道创建布局{#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
+## 为信件或交互式通信的打印渠道创建布局 {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
 
 布局定义交互式通信的信件/打印渠道的图形布局。 布局可以包含典型的表单字段，如“地址”和“引用编号”。 它还包含表示目标区域的空子形式。 在表单设计器中创建布局，完成后，应用程序专家将其上传到AEM服务器。 从此处，您可以在创建通信模板或交互式通信的打印渠道时选择布局。
 
@@ -56,62 +56,62 @@ XDP是在AdobeForms Designer中设计的。 本文详细介绍了如何设计XDP
 
 >[!NOTE]
 >
->向交互式通信的打印渠道中添加内容，而不是向XDP模板中的子表单组件添加内容。 使用[文档片段、图表、图像](create-interactive-communication.md#step2)和布局片段将内容添加到打印渠道中的目标区域。
+>向交互式通信的打印渠道中添加内容，而不是向XDP模板中的子表单组件添加内容。 使用 [文档片段、图表、图像](create-interactive-communication.md#step2)、和布局片段。
 
 要在XDP模板中使用子表单，请执行以下步骤：
 
-1. 打开Forms Designer，选择&#x200B;**文件** > **新建** > **使用空白表单**，点按&#x200B;**下一个**，然后点按&#x200B;**完成**&#x200B;以打开用于模板创建的表单。
+1. 打开Forms Designer，选择 **文件** > **新建** > **使用空白表单**，点按 **下一个**，然后点按 **完成** 打开模板创建表单。
 
-   确保从&#x200B;**Window**&#x200B;菜单中选择了&#x200B;**对象库**&#x200B;和&#x200B;**对象**&#x200B;选项。
+   确保 **对象库** 和 **对象** 选项 **窗口** 菜单。
 
-1. 将&#x200B;**Subform**&#x200B;组件从&#x200B;**对象库**&#x200B;拖放到表单中。
+1. 拖放 **子表单** 组件 **对象库** 到表单。
 
    ![组件设计器](assets/subform_component_designer_new.png)
 
-1. 选择子窗体以在右窗格的&#x200B;**Object**&#x200B;窗口中显示子窗体的选项。
-1. 选择&#x200B;**子表单**&#x200B;选项卡，然后从&#x200B;**内容**&#x200B;下拉列表中选择&#x200B;**Fled**。 拖动子表单的左端点以调整长度。
+1. 选择子表单以在 **对象** 窗口。
+1. 选择 **子表单** 选项卡，选择 **流** 从 **内容** 下拉列表。 拖动子表单的左端点以调整长度。
 
    ![流子表单](assets/object_subform_flowed_new.png)
 
-1. 在&#x200B;**Binding**&#x200B;选项卡中：
+1. 在 **绑定** 选项卡：
 
-   1. 在&#x200B;**Name**&#x200B;字段中指定子表单的名称。
-   1. 从&#x200B;**数据绑定**&#x200B;下拉列表中选择&#x200B;**无数据绑定**。
+   1. 在 **名称** 字段。
+   1. 选择 **无数据绑定** 从 **数据绑定** 下拉列表。
 
 1. 同样，从左窗格中选择根子表单。
 
    ![根子表单](assets/root_subform_designer_new.png)
 
-1. 选择&#x200B;**子表单**&#x200B;选项卡，然后从&#x200B;**内容**&#x200B;下拉列表中选择&#x200B;**Fled**。 在&#x200B;**绑定**&#x200B;选项卡中：
+1. 选择 **子表单** 选项卡，选择 **流** 从 **内容** 下拉列表。 在 **绑定** 选项卡：
 
-   1. 在&#x200B;**Name**&#x200B;字段中指定子表单的名称。
-   1. 从&#x200B;**数据绑定**&#x200B;下拉列表中选择&#x200B;**无数据绑定**。
+   1. 在 **名称** 字段。
+   1. 选择 **无数据绑定** 从 **数据绑定** 下拉列表。
 
-   重复步骤2至5，向XDP模板添加更多子表单。 仅在创作交互式通信时，向目标区域添加[文本、文档片段、图像和图表](create-interactive-communication.md#step2)。
+   重复步骤2至5，向XDP模板添加更多子表单。 添加 [文本、文档片段、图像和图表](create-interactive-communication.md#step2) 仅在创作交互式通信时才返回到目标区域。
 
-1. 选择&#x200B;**文件** > **另存为**，将文件保存到本地文件系统上：
+1. 选择 **文件** > **另存为** 要在本地文件系统上保存文件，请执行以下操作：
 
    1. 导航到要保存文件的位置，并指定XDP模板的名称。
-   1. 从&#x200B;**另存为类型**&#x200B;下拉列表中选择&#x200B;**.xdp**。
+   1. 选择 **.xdp** 从 **另存为类型** 下拉列表。
 
    1. 点按&#x200B;**保存**。
 
-### 在XDP模板{#use-image-field-component-in-an-xdp-template}中使用图像字段组件
+### 在XDP模板中使用图像字段组件 {#use-image-field-component-in-an-xdp-template}
 
 在创作交互式通信时，使用XDP模板中的图像字段或子表单组件并添加图像。
 
 >[!NOTE]
 >
->将图像添加到交互式通信的打印渠道，而不是将图像添加到XDP模板中的图像字段或子表单组件。 有关更多信息，请参阅[向交互式通信添加内容](../../forms/using/create-interactive-communication.md#step2)。
+>将图像添加到交互式通信的打印渠道，而不是将图像添加到XDP模板中的图像字段或子表单组件。 有关更多信息，请参阅 [向交互式通信添加内容](../../forms/using/create-interactive-communication.md#step2).
 
 执行以下步骤以在XDP模板中使用图像字段组件：
 
-1. 将&#x200B;**图像字段**&#x200B;组件从&#x200B;**对象库**&#x200B;拖放到表单中。
-1. 选择子窗体以在右窗格的&#x200B;**Object**&#x200B;窗口中显示子窗体的选项。
-1. 在&#x200B;**Binding**&#x200B;选项卡中：
+1. 拖放 **图像字段** 组件 **对象库** 到表单。
+1. 选择子表单以在 **对象** 窗口。
+1. 在 **绑定** 选项卡：
 
-   1. 在&#x200B;**名称**&#x200B;字段中为图像字段指定名称。
-   1. 从&#x200B;**数据绑定**&#x200B;下拉列表中选择&#x200B;**无数据绑定**。
+   1. 在 **名称** 字段。
+   1. 选择 **无数据绑定** 从 **数据绑定** 下拉列表。
 
 ### 为布局片段创建XDP模板 {#xdplayoutfragments}
 
@@ -119,31 +119,31 @@ XDP是在AdobeForms Designer中设计的。 本文详细介绍了如何设计XDP
 
 >[!NOTE]
 >
->在表单元格中输入文本，或仅在创作交互式通信时使用表单数据模型对象](create-interactive-communication.md#step2)创建绑定。[
+>在表格单元格或 [使用表单数据模型对象创建绑定](create-interactive-communication.md#step2) 仅在创作交互式通信时。
 
 执行以下步骤以使用Forms Designer在XDP模板中使用表组件：
 
-1. 将&#x200B;**表**&#x200B;组件从&#x200B;**对象库**&#x200B;拖放到窗体中。
-1. 在&#x200B;**插入表**&#x200B;对话框中：
+1. 拖放 **表** 组件 **对象库** 到表单。
+1. 在 **插入表** 对话框：
 
    1. 指定表的行数和列数。
-   1. 选中&#x200B;**在表中包括标题行**&#x200B;复选框以包括表标题的行。
-   1. 点按&#x200B;**确定**。
+   1. 选择 **在表中包含标题行** 复选框以包含表标题的行。
+   1. 点按 **确定**.
 
-1. 点按表名称旁边左窗格中的&#x200B;**+** ，右键单击标题和其他行中包含的单元格名称，然后选择&#x200B;**重命名对象**&#x200B;以重命名表单元格。
-1. 单击&#x200B;**设计视图**&#x200B;中的表标题文本字段，然后对它们进行重命名。
-1. 将&#x200B;**文本字段**&#x200B;组件从&#x200B;**对象库**&#x200B;拖放到&#x200B;**设计视图**&#x200B;中的每个表单元格。 执行此步骤，以便能够在创作交互式通信时，将表单元格与表单数据模型对象绑定。
+1. 点按 **+** 在表名称旁边的左窗格中，右键单击标题和其他行中包含的单元格名称，然后选择 **重命名对象** 重命名表单元格。
+1. 单击 **设计视图** 并重命名它们。
+1. 拖放 **文本字段** 组件 **对象库** 到 **设计视图**. 执行此步骤，以便能够在创作交互式通信时，将表单元格与表单数据模型对象绑定。
 
    ![表中的文本字段](assets/text_fields_table_new.png)
 
-1. 从左窗格中选择行的名称，然后选择&#x200B;**Object** > **Binding** > **Repeat Row for Each Data Item**。 执行此步骤以确保如果在具有集合类型的表单数据模型对象的此行的表单元格之间创建绑定，则将自动为数据库中每个可用数据项重复表行。
+1. 从左窗格中选择行的名称，然后选择 **对象** > **绑定** > **每个数据项的重复行**. 执行此步骤以确保如果在具有集合类型的表单数据模型对象的此行的表单元格之间创建绑定，则将自动为数据库中每个可用数据项重复表行。
 
-   在表单元格中输入文本，或仅在创作交互式通信时使用表单数据模型对象](create-interactive-communication.md#step2)创建绑定。[
+   在表格单元格或 [使用表单数据模型对象创建绑定](create-interactive-communication.md#step2) 仅在创作交互式通信时。
 
-1. 选择&#x200B;**文件** > **另存为**，将文件保存到本地文件系统上：
+1. 选择 **文件** > **另存为** 要在本地文件系统上保存文件，请执行以下操作：
 
    1. 导航到要保存文件的位置，并指定XDP模板的名称。
-   1. 从&#x200B;**另存为类型**&#x200B;下拉列表中选择&#x200B;**.xdp**。
+   1. 选择 **.xdp** 从 **另存为类型** 下拉列表。
 
    1. 点按&#x200B;**保存**。
 
@@ -151,26 +151,26 @@ XDP是在AdobeForms Designer中设计的。 本文详细介绍了如何设计XDP
 
 使用Forms Designer创建XDP模板后，必须将其上传到AEM Forms服务器，以便该模板在创建交互式通信时可供使用。
 
-1. 选择&#x200B;**Forms** > **Forms和文档**。
-1. 点按&#x200B;**创建** > **文件上传**。
-1. 导航到XDP模板在本地文件系统中的位置，然后点按&#x200B;**Open** ，以将XDP模板导入AEM Forms服务器。
+1. 选择 **Forms** > **Forms和文档**.
+1. 点按 **创建** > **文件上传**.
+1. 导航到XDP模板在本地文件系统中的位置，然后点按 **打开** 将XDP模板导入AEM Forms服务器。
 
-## 使用架构{#using-schema}
+## 使用模式 {#using-schema}
 
 您可以在布局或布局片段中使用架构，但不是必需的。 如果您使用架构，请确保：
 
 1. 信件/交互式通信中使用的布局和所有片段布局使用与信件/交互式通信相同的架构。
 1. 使用数据填充所需的所有字段都绑定到架构。
 
-## 创建可关联字段{#creating-relatable-fields}
+## 创建可靠字段 {#creating-relatable-fields}
 
 默认情况下，所有字段都被视为与各种其他数据源相关。 如果您的布局包含任何与数据源不相关的字段，请使用“_int”（内部）后缀命名该字段；例如，pageCount_int。
 
 可关联的字段必须：
 
-* 是XFA &lt;field>或&lt;exclGroup>
+* 是XFA &lt;field> 或 &lt;exclgroup>
 * 具有XFA绑定引用
-* 如果它是&lt;exclGroup>，则它必须至少具有一个子单选按钮字段；否则，无法确定其值类型
+* 如果 &lt;exclgroup>，则必须至少有一个子单选按钮字段；否则，无法确定其值类型
 
 可关联的字段必须：
 
@@ -180,13 +180,13 @@ XDP是在AdobeForms Designer中设计的。 本文详细介绍了如何设计XDP
 
 * 在其名称中包含“_int”后缀
 * 将绑定设置为“none”
-* 是&lt;exclGroup>元素的子项
+* 是 &lt;exclgroup> 元素
 
 只要可靠字段符合上述标准，它就可以位于布局中的任何位置和任何嵌套深度。 您可以在主控页面中使用可重复字段。
 
 字段的布局配置比目标区域子表单更灵活；但是，它们与单个值类型绑定。 您可以将字段设为大字段，或将其设置为固定的宽度和高度等。 解析的模块或规则结果将推送到字段中。
 
-## 决定何时使用子表单和文本字段{#deciding-when-to-use-subforms-and-text-nbsp-fields}
+## 确定何时使用子表单和文本字段 {#deciding-when-to-use-subforms-and-text-nbsp-fields}
 
 如果要以自上而下的垂直流布局（多个段落或图像）捕获多个模块内容，请使用子表单。 您的布局必须处理子表单的高度增长以容纳其内容这一事实。 如果您无法确定与子表单/目标关联的内容长度永远不会超过布局中为子表单保留的空间，请在流子表单容器中将子表单创建为子表单。 此过程可确保子表单下方的布局对象随着子表单的增长而向下流动。
 
@@ -225,12 +225,12 @@ XDP是在AdobeForms Designer中设计的。 本文详细介绍了如何设计XDP
  </tbody>
 </table>
 
-## 设置重复性元素{#setting-up-repetitive-elements}
+## 设置重复性元素 {#setting-up-repetitive-elements}
 
 当信件/交互式通信的所有页面上显示组织的徽标和地址等元素时，请为这些元素创建表单字段，并将它们置于主控页面。 为这些字段使用名称（字段名称）绑定。
 
-## 指定服务器呈现格式{#specify-the-server-nbsp-render-format}
+## 指定服务器呈现格式 {#specify-the-server-nbsp-render-format}
 
 将布局的服务器渲染格式用于动态XML表单；否则，任何基于此布局的字母/交互式通信都无法正确呈现。 默认情况下，Forms Designer中的服务器渲染格式设置为“动态XML表单”。 要确保使用正确的格式：
 
-* 在Designer中，单击&#x200B;**文件** > **表单属性** > **默认值**，并确保将PDF渲染/格式设置设置为动态XML表单。
+* 在Designer中，单击 **文件** > **表单属性** > **默认值**，并确保将“PDF渲染/格式”设置设置为“动态XML表单”。

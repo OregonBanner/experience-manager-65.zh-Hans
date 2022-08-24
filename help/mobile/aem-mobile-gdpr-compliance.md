@@ -1,26 +1,26 @@
 ---
 title: AEM Mobile - GDPR就绪
-seo-title: AEM Mobile - GDPR就绪
+seo-title: AEM Mobile - GDPR Readiness
 description: “AEM Mobile - GDPR就绪”
-seo-description: 'null'
+seo-description: null
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '692'
 ht-degree: 1%
 
 ---
 
-# AEM Mobile - GDPR就绪{#aem-mobile-gdpr-readiness}
+# AEM Mobile - GDPR就绪 {#aem-mobile-gdpr-readiness}
 
 >[!IMPORTANT]
 >
 >GDPR用作以下部分的示例，但相关详细信息适用于所有数据保护和隐私法规；例如GDPR、CCPA等
 
-## AEM Mobile GDPR支持{#aem-mobile-gdpr-support}
+## AEM Mobile GDPR支持 {#aem-mobile-gdpr-support}
 
 AEM Mobile随时准备协助客户履行其GDPR合规义务。 AEM Mobile中不存储任何个人数据。 如果已配置，则可以使用Adobe ID登录Adobe Experience Mobile。
 
@@ -28,13 +28,13 @@ AEM Mobile随时准备协助客户履行其GDPR合规义务。 AEM Mobile中不�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobe的数字发布产品(先于AEM Mobile)支持Adobe的GDPR准备计划。 请参阅[https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html)。 以下将详细介绍Digital Publishing Suite产品中与GDPR相关的功能支持，包括如何与Adobe合作以启动GDPR请求。
+Adobe的数字发布产品(先于AEM Mobile)支持Adobe的GDPR准备计划。 请参阅 [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html). 以下将详细介绍Digital Publishing Suite产品中与GDPR相关的功能支持，包括如何与Adobe合作以启动GDPR请求。
 
 为了确保您不会将AEM Mobile与旧版Digital Publishing Suite产品混淆，您可以在此处登录到Digital Publishing Suite产品：
 
 [https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
 
-### 启动GDPR请求{#initiating-a-gdpr-request}
+### 启动GDPR请求 {#initiating-a-gdpr-request}
 
 请联系Adobe客户关怀，以发起Digital Publishing Suite的GDPR请求。
 
@@ -42,17 +42,17 @@ Adobe的数字发布产品(先于AEM Mobile)支持Adobe的GDPR准备计划。 �
 
 强制:
 
-* 客户合同ID:*dpsc-contractId*
+* 客户合同ID: *dpsc-contractId*
 
 至少提供以下1项：
 
-* 最终用户的客户提供的OAuth ID（在客户的直接授权系统中使用的ID）：*dpsc-directEntitlementId*
-* 对于Windows应用程序用户，最终用户的应用商店ID:*dpsc-windowsAppStoreId*
-* 最终用户用于与DPS应用程序交互的电子邮件地址：*email*
+* 最终用户的客户提供的OAuth ID（在客户的直接授权系统中使用的ID）： *dpsc-directEntitlementId*
+* 对于Windows应用程序用户，最终用户的App Store ID: *dpsc-windowsAppStoreId*
+* 最终用户用于与DPS应用程序交互的电子邮件地址： *电子邮件*
 
-### 常见问题解答(FAQ){#frequently-asked-questions-faq}
+### 常见问题解答(FAQ) {#frequently-asked-questions-faq}
 
-**Adobe在发起DELETE请求时是否会删除我在应用商店购买的内容？**
+**Adobe在发起DELETE请求时是否会删除我购买的App Store?**
 
 Adobe将删除其拥有的应用商店购买（订阅等）信息 但应用商店中的购买情况仍将记录在案。 如果应用程序（最终用户）登录到应用商店，则这些收据将再次被提取并发送到Adobe，随后，这些收据将被视为新购买，并由应用程序恢复以重新获得访问权限。
 
@@ -72,7 +72,7 @@ Adobe几乎没有可直接与特定用户关联的信息。 它会使用随机�
 
 无. 有数据被跟踪，但是在应用程序级别（而非个人）。 这包括启动次数、崩溃次数、关闭次数、活动次数、购买次数或作品集叠加图等事件。 不会跟踪地理位置、名称、设备ID或IP地址。
 
-**最终用户提供了其信息，但未找到任何内容。为什么不？**
+**最终用户提供了其信息，但未找到任何内容。 为什么不呢？**
 
 随着Digital Publishing Suite产品的不断发展，服务实施发生了更改，更多数据被模糊处理。 如果未使用用户提供的数据找到任何数据，则意味着无法将用户的数据跟踪回该人员。
 
@@ -85,10 +85,10 @@ Adobe几乎没有可直接与特定用户关联的信息。 它会使用随机�
 #### 输入： {#inputs}
 
 ```
-dpsc-contractId = “12345-1234-12416234” 
-directEntitlementId = “1234-1234-1234” 
-windowsAppStoreId = “testWinAppStoreId” 
-email = “test@what.com”
+dpsc-contractId = "12345-1234-12416234" 
+directEntitlementId = "1234-1234-1234" 
+windowsAppStoreId = "testWinAppStoreId" 
+email = "test@what.com"
 ```
 
 #### 输出 {#outputs}

@@ -1,30 +1,30 @@
 ---
 title: 在AEM Forms中设置表单
-seo-title: 在AEM Forms中设置表单
-description: 本文介绍了表单集，并说明了如何通过将HTML5表单拼合在一起来创建表单集。 本文还介绍如何将xml数据预填充到表单集，以及如何在流程管理中使用表单集。
-seo-description: 本文介绍了表单集，并说明了如何通过将HTML5表单拼合在一起来创建表单集。 本文还介绍如何将xml数据预填充到表单集，以及如何在流程管理中使用表单集。
+seo-title: Form set in AEM Forms
+description: 本文介绍了表单集，并说明如何通过将表单HTML5拼合在一起来创建表单集。 本文还介绍如何将xml数据预填充到表单集，以及如何在流程管理中使用表单集。
+seo-description: This article introduces form set and explains how to create form sets by stitching together HTML5 forms. This article also explains how you can prefill xml data to a form set and how you can use form sets in process management.
 uuid: a1a2f267-26a9-4f45-bcfc-dbdedad95973
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 80e3eec4-95e0-4731-a0e5-a617e9bcb069
 docset: aem65
-feature: 移动设备表单
+feature: Mobile Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '2862'
+source-wordcount: '2814'
 ht-degree: 0%
 
 ---
 
-# 在AEM Forms中设置的表单{#form-set-in-aem-forms}
+# 在AEM Forms中设置表单{#form-set-in-aem-forms}
 
 ## 概述 {#overview}
 
 客户通常需要提交多个表单才能申请服务或福利。 它涉及找到所有相关表格；并单独填写、提交和跟踪这些内容。 此外，还需要在表单中多次填写常见详细信息。 如果整个过程涉及大量表单，则会变得麻烦且容易出错。 AEM Forms的表单集功能有助于简化此类情况下的用户体验。
 
-表单集是HTML5表单的集合，分组在一起，以单个表单集的形式向最终用户显示。 当最终用户开始填写表单集时，他们会从一个表单无缝地转换到另一个表单。 最后，他们只需单击一次即可提交所有表单。
+表单集是HTML5个表单的集合，这些表单分组在一起，并以单个表单集的形式呈现给最终用户。 当最终用户开始填写表单集时，他们会从一个表单无缝地转换到另一个表单。 最后，他们只需单击一次即可提交所有表单。
 
 AEM Forms为表单作者提供了直观的用户界面，用于创建、配置和管理表单集。 作为作者，您可以按您希望最终用户遵循的特定顺序对表单进行排序。 此外，您还可以对单个表单应用条件或资格表达式，以根据用户输入控制其可见性。 例如，您可以将配偶详细信息表单配置为仅在婚姻状态指定为“已婚”时显示。
 
@@ -32,13 +32,13 @@ AEM Forms为表单作者提供了直观的用户界面，用于创建、配置�
 
 AEM Forms应用程序还支持表单集，允许您的现场员工脱机创建表单集、访问客户、输入数据，并稍后与AEM Forms服务器同步，以将表单数据提交到业务流程。
 
-## 创建和管理表单集{#creating-and-managing-form-set}
+## 创建和管理表单集 {#creating-and-managing-form-set}
 
 可以将使用Designer创建的多个XDP或表单模板关联到表单集中。 然后，可以使用表单集根据用户在初始表单中输入的值及其配置文件有选择地渲染XDP。
 
-使用[AEM Forms用户界面](../../forms/using/introduction-managing-forms.md)管理您的所有表单、表单集和相关资产。
+使用 [AEM Forms用户界面](../../forms/using/introduction-managing-forms.md) 管理所有表单、表单集和相关资产。
 
-### 创建表单集{#create-a-form-set}
+### 创建表单集 {#create-a-form-set}
 
 要创建表单集，请执行以下操作：
 
@@ -67,14 +67,14 @@ AEM Forms应用程序还支持表单集，允许您的现场员工脱机创建�
 
    * 表单顺序：拖放表单以对其重新排序。 表单顺序定义在AEM Forms应用程序和独立呈现版本中向最终用户显示表单的顺序。
    * 表单标识符：为要在资格表达式中使用的表单指定唯一标识。
-   * 数据根：对于表单集中的每个表单，作者都可以配置XPATH，该特定表单的数据位于提交的XML中。 默认情况下，值为/。 如果表单集中的所有表单都绑定了架构，并且共享了相同的XML架构，则可以更改此值。 建议每个表单字段在XDP中指定适当的数据绑定。 如果两个不同表单中的字段共享通用数据绑定，则第二个表单中的字段显示第一个表单中的预填充值。 请勿将具有相同内部内容的两个子表单绑定到同一XML节点。 有关表单集的XML结构的详细信息，请参阅[为表单集预填充XML](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p)。
+   * 数据根：对于表单集中的每个表单，作者都可以配置XPATH，该特定表单的数据位于提交的XML中。 默认情况下，值为/。 如果表单集中的所有表单都绑定了架构，并且共享了相同的XML架构，则可以更改此值。 建议每个表单字段在XDP中指定适当的数据绑定。 如果两个不同表单中的字段共享通用数据绑定，则第二个表单中的字段显示第一个表单中的预填充值。 请勿将具有相同内部内容的两个子表单绑定到同一XML节点。 有关表单集的XML结构的详细信息，请参阅 [为表单集预填充XML](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
    * 资格表达式：指定一个JavaScript表达式，该表达式将计算布尔值并指示表单集中的表单是否符合填写条件。 如果为false，则不会要求用户填写，甚至不会向用户显示要填写的表单。 通常，表达式基于在此表单之前捕获的字段值。 表达式还包含对表单集API fs.valueOf的调用，以提取用户在表单集字段中填写的值：
 
-   *fs.valueOf(&lt;form Identifier=&quot;&quot;>,  &lt;fieldsom expression=&quot;&quot;>)>  &lt;value>*
+   *fs.valueOf(&lt;form identifier=&quot;&quot;>, &lt;fieldsom expression=&quot;&quot;>)> &lt;value>*
 
    例如，如果表单集中有两个表单：业务费用和差旅费用，您可以在资格表达式字段中为这两种表单添加JavaScript代码片段，以检查用户在表单中输入的费用类型。 如果用户选择“业务费用”，则“业务费用”表单会呈现给最终用户。 或者，如果用户选择差旅费用，则会向最终用户呈现其他表单。 有关更多信息，请参阅资格表达式。
 
-   此外，作者还可以选择使用每行右角的“删除”图标从表单集中删除表单，或使用工具栏中的“**+**”图标添加另一组表单。 此“**+**”图标将用户引导回向导中用于“选择表单”的上一步。 将维护现有的选择，并且必须使用该页面上的“添加到表单集”图标将所做的任何其他选择添加到表单集。
+   此外，作者还可以选择使用每行右上角出现的删除图标从表单集中删除表单，或使用“**+**&#x200B;工具栏中的“ ”图标。 此&#39;**+**“ ”图标会将用户引导回向导的上一步，该步骤用于“选择表单”。 将维护现有的选择，并且必须使用该页面上的“添加到表单集”图标将所做的任何其他选择添加到表单集。
 
    ![表单集：配置表单](assets/createformset2.png)
 
@@ -82,7 +82,7 @@ AEM Forms应用程序还支持表单集，允许您的现场员工脱机创建�
    >
    >表单集中使用的所有表单都由AEM Forms用户界面管理。
 
-### 管理表单集{#managing-a-form-set}
+### 管理表单集 {#managing-a-form-set}
 
 创建表单集后，您可以对该表单集执行以下操作：
 
@@ -98,12 +98,12 @@ AEM Forms应用程序还支持表单集，允许您的现场员工脱机创建�
 
 ![createformset3](assets/createformset3.png)
 
-### 编辑表单集{#edit-a-form-set}
+### 编辑表单集 {#edit-a-form-set}
 
 要编辑表单集，请执行以下操作：
 
 1. 选择Forms > Forms和文档。
-1. 找到要编辑的表单集。 将鼠标悬停在该页面上，然后选择“编辑”(![editicon](assets/editicon.png))。
+1. 找到要编辑的表单集。 将鼠标悬停在该页面上，然后选择“编辑”( ![编辑](assets/editicon.png))。
 1. 在“配置表单”页面中，您可以编辑以下内容：
 
    * 表单顺序
@@ -113,13 +113,13 @@ AEM Forms应用程序还支持表单集，允许您的现场员工脱机创建�
 
    您还可以单击相关的删除图标，从表单集中删除表单。
 
-## 进程管理{#form-set-in-process-management}中的表单集
+## 流程管理中的表单集 {#form-set-in-process-management}
 
 使用AEM Forms管理用户界面创建表单集后，您可以在开始点中使用表单集，或使用工作台分配任务活动。
 
-### 使用任务或起始点{#using-form-set-in-task-or-start-point}中设置的表单
+### 在任务或开始点中使用表单集 {#using-form-set-in-task-or-start-point}
 
-1. 在设计流程时，在分配任务/起点的演示和数据部分下，选择&#x200B;**使用CRX资产**。 出现CRX资产浏览器。
+1. 在设计流程时，在“指定任务/起点”的“演示和数据”部分下，选择 **使用CRX资产**. 出现CRX资产浏览器。
 
    ![设计流程：使用CRX资产](assets/formsetinprocessmgmt1.png)
 
@@ -129,7 +129,7 @@ AEM Forms应用程序还支持表单集，允许您的现场员工脱机创建�
 
 1. 选择表单集并单击“确定”。
 
-## 资格表达式{#eligibility-expressions}
+## 资格表达式 {#eligibility-expressions}
 
 表单集中的资格表达式用于定义和动态控制向用户显示的表单。 例如，仅当用户属于某个特定年龄组时，才显示特定表单。 使用表单管理器指定和编辑资格表达式。
 
@@ -158,12 +158,12 @@ API的使用无效：
 
 ```javascript
 var formUid = "form1";
- var fieldSOM = “xfa.form.form1.subform1.field1"; fs.valueOf(formUid, fieldSOM);
+ var fieldSOM = "xfa.form.form1.subform1.field1"; fs.valueOf(formUid, fieldSOM);
 ```
 
-## 为表单集{#prefill-xml-for-form-set}预填充XML
+## 为表单集预填充XML {#prefill-xml-for-form-set}
 
-表单集是多个HTML5表单的集合，这些表单具有共同或不同的架构。 表单集支持使用XML文件预填充表单字段。 您可以将XML文件与表单集关联，这样当您在表单集中打开表单时，表单中的某些字段就会被预填充。
+表单集是多个HTML5个具有共同或不同架构的表单的集合。 表单集支持使用XML文件预填充表单字段。 您可以将XML文件与表单集关联，这样当您在表单集中打开表单时，表单中的某些字段就会被预填充。
 
 预填充XML文件是使用表单集URL的dataRef参数指定的。 dataRef参数指定与表单集合并的数据XML文件的绝对路径。
 
@@ -172,19 +172,16 @@ var formUid = "form1";
 form1
 
 字段
-form1field
 
 form2
 
-字段
-form2field
+字段form2field
 
 form3
 
-字段
-form3field
+字段form3field
 
-每个表单都有一个名为“field”的通用命名字段和一个名为“form&lt;i>field”的唯一命名字段。
+每个表单都有一个名为“field”的公用命名字段和一个名为“formfield”的唯一命名字段。
 
 您可以使用具有以下结构的XML预填此表单集：
 
@@ -249,7 +246,7 @@ form3field
 >
 >如果存在两个具有重叠数据根的表单，或者一个表单的元素层次结构与另一个表单的数据根目录层次结构重叠，则在预填充xml中，合并重叠元素的值。 提交XML的结构与预填充XML类似，但提交XML具有更多的包装标签，并且有些表单集上下文数据标签会附加在末尾。
 
-### 预填充XML元素描述{#prefill-xml-elements-description}
+### 预填充XML元素描述 {#prefill-xml-elements-description}
 
 用于创建预填充XML文件的语法规则：
 
@@ -281,7 +278,7 @@ form3field
 
 `formset`
 
-基数：[1]
+基数： [1]
 
 submitXML:P
 
@@ -305,7 +302,7 @@ prefillXML:O
 
 此标记表示HTML5表单XML的开始。 如果提交XML中存在预填充XML，或者没有预填充XML，则会在该XML中添加该XML。 可以从预填充XML中删除此标记。
 
-### XFA：数据集{#xfa-datasets}
+### XFA：数据集 {#xfa-datasets}
 
 `parent elements: xdp:xdp`
 
@@ -347,15 +344,15 @@ prefillXML:O
 
 根元素标记的名称
 
-如果预填充XML中有根元素，则该元素的名称也会在提交XML中采用。 如果没有预填充xml，则rootElement的名称是表单集中第一个表单的根子表单的名称，该表单集的dataRoot属性设置为“/”。 如果没有此类形式，则rootElement名称为&#x200B;**fs_dummy_root**，这是保留的关键字。
+如果预填充XML中有根元素，则该元素的名称也会在提交XML中采用。 如果没有预填充xml，则rootElement的名称是表单集中第一个表单的根子表单的名称，该表单集的dataRoot属性设置为“/”。 如果没有此类形式，则根元素名称为 **fs_dummy_root**，是保留的关键词。
 
-## 在AEM Forms应用程序中设置的表单{#formset-in-workspace-app}
+## 在AEM Forms应用程序中设置的表单 {#formset-in-workspace-app}
 
 AEM Forms应用程序允许现场工作人员将其移动设备与AEM Forms服务器同步并处理其任务。 即使设备处于脱机状态，应用程序也能通过将数据保存在设备本地而正常工作。 使用照片等注释功能，现场工作人员可以提供准确的信息以集成到业务流程中。
 
 <!-- Update link as it is a 404 - For more information on AEM Forms app, see [AEM Forms app overview](/help/forms/using/mobile-workspace-overview.md).-->
 
-## 已知限制 — 表单集{#known-limitations-patterns-not-fully-supported-in-form-set}中不完全支持模式
+## 已知限制 — 表单集中不完全支持模式 {#known-limitations-patterns-not-fully-supported-in-form-set}
 
 表单集中不完全支持以下数据模式：
 

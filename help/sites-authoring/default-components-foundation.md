@@ -1,8 +1,8 @@
 ---
 title: 基础组件
-seo-title: 基础组件
+seo-title: Foundation Components
 description: 基础组件
-seo-description: 'null'
+seo-description: null
 uuid: 3caf9123-ae58-4590-af2f-57ef076daf7f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '7365'
+source-wordcount: '7362'
 ht-degree: 87%
 
 ---
@@ -24,15 +24,15 @@ ht-degree: 87%
 
 >[!CAUTION]
 >
->AEM 6.5现在已弃用大多数基础组件。有关更多信息，请参阅[发行说明](/help/release-notes/deprecated-removed-features.md)。
+>AEM 6.5现已弃用大多数基础组件。请参阅 [发行说明](/help/release-notes/deprecated-removed-features.md) 以了解更多信息。
 >
->Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。这些是[We.Retail示例内容](/help/sites-developing/we-retail.md)的一部分，也可以是[单独安装，并由管理员用于开发](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html)。
+>Adobe 建议在 AEM 项目中利用更现代且可扩展的[核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)。这些是 [We.Retail示例内容](/help/sites-developing/we-retail.md) 也可以 [独立安装及用于开发](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html) 由您的管理员。
 >
->您可以使用[AEM现代化工具套件](https://opensource.adobe.com/aem-modernize-tools/)重构基于基础组件的站点以使用核心组件。
+>您可以使用 [AEM现代化工具套件](https://opensource.adobe.com/aem-modernize-tools/) 以重构基于基础组件的网站，以使用核心组件。
 
 基础组件专门为在创作标准网页内容时使用而设计。这些组件构成了适用于标准 AEM 安装的现成组件的子集。
 
-有些组件可通过组件浏览器立即使用，而有些组件则可通过使用[设计模式](/help/sites-authoring/default-components-designmode.md)（如果页面基于静态模板）或通过[编辑模板](/help/sites-authoring/templates.md)（如果页面基于可编辑的模板）来使用。
+有些组件可通过组件浏览器立即使用，而其他各种组件也可使用 [设计模式](/help/sites-authoring/default-components-designmode.md) （如果页面基于静态模板）或 [编辑模板](/help/sites-authoring/templates.md) （如果页面基于可编辑的模板）。
 
 支持使用基础组件，但它们大部分已被弃用并被核心组件取代，核心组件提供了更大的可扩展性和灵活性。
 
@@ -49,7 +49,7 @@ ht-degree: 87%
 * [配置属性](/help/sites-authoring/editing-page-properties.md)
 * [编辑内容](/help/sites-authoring/editing-content.md)
 
-* [编辑内容 - 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
+* [编辑内容 – 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
 组件会根据称为组件组的各种类别进行分类，具体包括：
 
@@ -61,7 +61,7 @@ ht-degree: 87%
 
 常规组件是指用于创建内容的基本组件。
 
-### 帐户项  {#account-item}
+### 帐户项 {#account-item}
 
 >[!CAUTION]
 >
@@ -93,7 +93,7 @@ ht-degree: 87%
 * .jpg
 * .jpeg
 * .png
-* .gif **
+* .gif &#42;&#42;
 
 >[!CAUTION]
 >
@@ -153,7 +153,7 @@ ht-degree: 87%
 
 有关自定义自适应图像组件的信息，请参阅[了解自适应图像组件](/help/sites-developing/responsive.md#using-adaptive-images)。
 
-### 轮播 {#carousel}
+### 轮盘 {#carousel}
 
 >[!CAUTION]
 >
@@ -197,8 +197,8 @@ ht-degree: 87%
 手动或使用选择器指定一个路径。如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
 
-         * ****
-页面选择页面列表。使用 
+         * **页面**
+选择页面列表。使用 
 `+` 添加更多条目，并使用向上/向下按钮调整顺序。
       * **搜索选项**
 
@@ -212,9 +212,9 @@ ht-degree: 87%
          * **QueryBuilder 谓词记号**
 可以使用“QueryBuilder 谓词记号”输入搜索查询。例如，您可以输入“fulltext=Marketing”，以使内容带有“Marketing”的所有页面都显示在传送中。
 有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
-   * **按选择**
-排序 
-`jcr:title`、  `jcr:created`、 `cq:lastModified`或 `cq:template` 下拉菜单中。
+   * **订购依据**
+选择 
+`jcr:title`, `jcr:created`, `cq:lastModified`或 `cq:template` 下拉菜单中。
 
    * **限制**
 您希望在传送中使用的最多项目数；这是可选项。
@@ -238,7 +238,7 @@ ht-degree: 87%
 * **数据**
 
    * **图表数据**
-使用 CSV 格式输入您的图表数据；逗号分隔值格式使用逗号（“,”）作为字段分隔符。
+使用CSV格式输入图表数据；逗号分隔值格式使用逗号(&quot;,&quot;)作为字段分隔符。
 
 * **高级**
 
@@ -308,8 +308,8 @@ ht-degree: 87%
 
 * **外部**
 
-   * **目**
-标应用程序指定要集成的Web应用程序的URL;例如：
+   * **目标应用程序**
+指定要集成的Web应用程序的URL;例如：
 
       ```
       https://en.wikipedia.org/wiki/Main_Page
@@ -318,8 +318,7 @@ ht-degree: 87%
    * **传递参数**
 根据需要选中要传递到应用程序的参数所对应的框。
 
-   * **宽度和高度
-**定义iframe的大小
+   * **宽度和高度**定义iframe的大小
 
 外部应用程序会集成到 AEM 页面的段落系统；例如，在使用目标应用程序 `https://en.wikipedia.org/wiki/Main_Page` 时：
 
@@ -411,7 +410,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 >
 >Internet Explorer 用户需要上传图像，单击&#x200B;**确定**，然后重新打开图像，以预览方式查看已上传的文件，并进行修改（即裁剪）。
 >
->有关AEM使用的HTML5功能的更多信息，请参阅[认证的平台](/help/release-notes/release-notes.md#certifiedplatforms)部分。
+>请参阅 [认证平台](/help/release-notes/release-notes.md#certifiedplatforms) 部分以了解有关AEM使用的HTML5功能的更多信息。
 
 加载图像后，您可以配置下列各项：
 
@@ -467,7 +466,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!NOTE]
 >
->此组件已通过 [HTML 模板语言 (HTL)](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) 进行了实施。
+>此组件已通过 [HTML 模板语言 (HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 进行了实施。
 
 ### 列表 {#list}
 
@@ -487,7 +486,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
       * **子页面选项**
 
-         * **** 的子项（父页面）
+         * **子项** （父页面）
 
             手动或使用选择器指定路径。 如果将此选项留空，则使用当前页面作为父页面。
       * **固定列表选项**
@@ -514,7 +513,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
             有关查询表达式的完整说明和更多示例，请参阅 [QueryBuilder API](/help/sites-developing/querybuilder-api.md)。
       * **标记**
 
-         指定&#x200B;**父页面**、**标记/关键字**&#x200B;和您所需的匹配条件。
+         指定 **父页面**, **标记/关键词** 和所需的匹配条件。
    * **显示方式**
 
       希望列出项目的方式；包括链接、Teaser 和新闻。
@@ -610,7 +609,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-### 针对开发人员的 Adobe AIR API 参考 {#reference}
+### 引用 {#reference}
 
 >[!CAUTION]
 >
@@ -620,7 +619,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 * **段落引用**
 
-   * **针对开发人员的 Adobe AIR API 参考**
+   * **引用**
 
       指定要引用的页面和段落的路径（包括内容）。
 
@@ -658,7 +657,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **节点类型**
 
-      如果搜索限制为特定的节点类型，请在此处列出它们；例如，`cq:Page`。
+      如果搜索限制为特定的节点类型，请在此处列出它们；例如， `cq:Page`.
 
    * **搜索路径**
 
@@ -716,7 +715,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe建议改用[导航](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html)、[语言导航](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html)和[痕迹导航核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html)。
+>此基础组件已被弃用。Adobe建议利用 [导航](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html), [语言导航](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html)和 [痕迹导航核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) 中。
 
 自动 Sitemap 列表，该列表（具有默认设置）列出了当前网站中的所有页面（作为活动链接）。例如，提取结果如下所示：
 
@@ -748,7 +747,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **新幻灯片**
 
-      您可以使用&#x200B;**Add**（和&#x200B;**Remove**）按钮指定幻灯片选项。
+      您可以使用 **添加** (和 **删除**)按钮。
 
    * **标题**
 
@@ -827,7 +826,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
-打开&#x200B;**配置**&#x200B;对话框时，还可以设置：
+当您打开 **配置** 对话框中，您还可以设置：
 
 * **分隔条**
 * **文本样式**
@@ -862,7 +861,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    允许您指定以下内容：
 
-   * **图像资产**
+   * **图像资源**
 
       上传所需的图像。
 
@@ -923,7 +922,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 >[!CAUTION]
 >
->此基础组件已被弃用。Adobe建议改用[核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html)。
+>此基础组件已被弃用。Adobe建议利用 [核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) 中。
 
 >[!CAUTION]
 >
@@ -966,7 +965,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
 默认为 2 个相等列的列控件组件。
 
-### 3 列  {#columns-2}
+### 3 列 {#columns-2}
 
 默认为 3 个相等列的列控件组件。
 
@@ -1099,7 +1098,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
    * **CSS**
 
-### 表单（组件）  {#form-component}
+### 表单（组件） {#form-component}
 
 >[!CAUTION]
 >
@@ -1188,7 +1187,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
          `/apps/<*myApp*>/form/<*myValidation*>/formservervalidation.jsp`
    * **操作配置**
 
-      **操作配置**&#x200B;中可用的选项取决于所选的&#x200B;**操作类型**:
+      中的可用选项 **操作配置** 取决于 **操作类型** 选定项：
 
       * **帐户请求**
 
@@ -1199,7 +1198,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * 内容路径
 
-            表单转储的任何内容的内容路径。输入以斜杠`/`结尾的路径。 斜杠表示对于每个表单端口而言，新节点是在给定位置创建的；例如：
+            表单转储的任何内容的内容路径。输入以斜杠结尾的路径 `/`. 斜杠表示对于每个表单端口而言，新节点是在给定位置创建的；例如：
 
             `/forms/feedback/`
 
@@ -1217,7 +1216,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **资源类型**
 
-            如果已设置，则会将此参数作为`sling:resourceType`添加到每个注释中
+            如果已设置，则会将此内容作为 `sling:resourceType`
 
          * **视图选择器**
       * **创建潜在客户**
@@ -1241,7 +1240,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **查看数据...**
 
-            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到`.tsv`（制表符分隔）文件（例如，在Excel电子表格中使用）。
+            单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到 `.tsv` （制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **邮件**
 
          * **从**
@@ -1272,7 +1271,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
 
          * **内容路径**
 
-            表单转储的任何内容的内容路径。输入以斜杠`/`结尾的路径。 斜杠表示对于每个表单端口而言，新节点是在给定位置创建的；例如：
+            表单转储的任何内容的内容路径。输入以斜杠结尾的路径 `/`. 斜杠表示对于每个表单端口而言，新节点是在给定位置创建的；例如：
             `/forms/feedback/`
 
          * **查看数据...**
@@ -1280,7 +1279,7 @@ Flash 组件允许您加载 Flash 影片。您可以从内容查找器中将 Fla
             单击此按钮可访问有关批量编辑器中表单结果的信息。从此处，您可以将信息导出到.tsv（制表符分隔）文件（例如，在Excel电子表格中使用）。
       * **通过上传存储内容**
 
-         此选项与&#x200B;**存储内容**&#x200B;的选项相同。
+         此选项与 **存储内容**.
 
       * **取消订阅者的订阅**
 
@@ -1365,7 +1364,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 您可为此组件配置不同参数，包括当 captcha 字符串无效时将显示的消息。
 
-### 复选框组  {#checkbox-group}
+### 复选框组 {#checkbox-group}
 
 >[!CAUTION]
 >
@@ -1425,7 +1424,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 >
 >您可以创建一个自定义上传组件来将文件上传至 Sling Servlet。有关信息，请参阅[将文件上传至 Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)。
 
-### 隐藏字段  {#hidden-field}
+### 隐藏字段 {#hidden-field}
 
 >[!CAUTION]
 >
@@ -1441,7 +1440,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 >
 >请参阅[显示和隐藏表单组件](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)。
 
-### 图像按钮  {#image-button}
+### 图像按钮 {#image-button}
 
 >[!CAUTION]
 >
@@ -1473,7 +1472,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 最常用于日历事件表单，它在该表单中用于事件的 URL/链接字段。
 
-### 密码字段  {#password-field}
+### 密码字段 {#password-field}
 
 >[!CAUTION]
 >
@@ -1567,7 +1566,7 @@ Captcha 组件需要用户键入屏幕上所示的字母数字字符串。该字
 
 ![dc_form_text](assets/dc_form_text.png)
 
-### 工作流提交按钮{#workflow-submit-button-s}
+### 工作流提交按钮 {#workflow-submit-button-s}
 
 >[!CAUTION]
 >

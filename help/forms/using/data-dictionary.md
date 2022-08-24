@@ -1,18 +1,18 @@
 ---
 title: 数据字典
-seo-title: 数据字典
+seo-title: Data Dictionary
 description: 通过通信管理中的数据字典，您可以将后端数据与信件集成为输入，以用于客户通信。
-seo-description: 通过通信管理中的数据字典，您可以将后端数据与信件集成为输入，以用于客户通信。
+seo-description: Data dictionary in Correspondence Management lets you integrate back-end data to letters as inputs for use in customer correspondence.
 uuid: 178a285e-b4a4-4a36-a2aa-b43ecb0871ed
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
-feature: 通信管理
+feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '3861'
+source-wordcount: '3838'
 ht-degree: 1%
 
 ---
@@ -31,16 +31,16 @@ ht-degree: 1%
 
 通常，业务用户不需要了解元数据表示法，如XSD（XML架构）和Java类。 但是，它们通常需要访问这些数据结构和属性才能构建解决方案。
 
-### 数据字典工作流{#data-dictionary-workflow}
+### 数据字典工作流 {#data-dictionary-workflow}
 
-1. 作者[通过上传架构或从头开始创建数据字典](#createdatadictionary)。
+1. 作者 [创建数据字典](#createdatadictionary) 上传架构或从头开始上传。
 1. 作者根据数据字典创建信件和交互式通信，并根据需要将信件和交互式通信中的数据字典元素关联起来。
 1. 作者可以下载基于数据字典架构的示例数据XML文件。 作者可以修改样本数据XML文件，该文件可以作为测试数据与数据字典相关联。 在信件预览期间会使用相同的内容。
-1. 在[预览信件](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)时，作者选择使用数据预览信件（自定义预览）。 此时将打开一个信件，其中预填充了作者提供的数据。 此操作将在创建通信界面中打开。 正在预览此信件的代理可以修改此信件中的内容、数据和附件，并提交最终信件。 有关创建字母的更多信息，请参阅[创建通信](../../forms/using/create-letter.md)。
+1. While [预览信件](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)，作者会选择使用数据预览信件（自定义预览）。 此时将打开一个信件，其中预填充了作者提供的数据。 此操作将在创建通信界面中打开。 正在预览此信件的代理可以修改此信件中的内容、数据和附件，并提交最终信件。 有关创建信件的更多信息，请参阅 [创建通信](../../forms/using/create-letter.md).
 
 ## 先决条件 {#prerequisite}
 
-安装[兼容包](compatibility-package.md)以查看&#x200B;**Forms**&#x200B;页面上的&#x200B;**数据字典**&#x200B;选项。
+安装 [兼容包](compatibility-package.md) 查看 **数据字典** 选项 **Forms** 页面。
 
 ## 创建数据字典 {#createdatadictionary}
 
@@ -50,28 +50,28 @@ ht-degree: 1%
 >
 >对于需要相似元素的多个字母，您可以创建通用数据字典。 但是，具有大量元素的大数据字典在使用数据字典和加载元素（如在字母和文档片段中）时可能会导致性能问题。 如果遇到性能问题，请尝试为不同的字母创建单独的数据字典。
 
-1. 选择&#x200B;**Forms** > **数据字典**。
-1. 点按&#x200B;**创建数据字典**。
+1. 选择 **Forms** > **数据字典**.
+1. 点按 **创建数据字典**.
 1. 在属性屏幕中，添加以下内容：
 
-   * **标题：** （可选）输入数据字典的标题。标题不必是唯一的，并且可以包含特殊字符和非英语字符。 信件和其他文档片段的标题（如果可用）会被引用，例如在缩略图和资产属性中。 数据字典的引用名称而非标题。
-   * **名称：** 数据字典的唯一名称。在“名称”字段中，您只能输入英语字符、数字和连字符。 “名称”字段会根据“标题”字段自动填充，在“标题”字段中输入的特殊字符、空格、数字和非英语字符将替换为连字符。 尽管标题字段中的值会自动复制到名称中，但您可以编辑该值。
+   * **标题：** （可选）输入数据字典的标题。 标题不必是唯一的，并且可以包含特殊字符和非英语字符。 信件和其他文档片段的标题（如果可用）会被引用，例如在缩略图和资产属性中。 数据字典的引用名称而非标题。
+   * **名称：** 数据字典的唯一名称。 在“名称”字段中，您只能输入英语字符、数字和连字符。 “名称”字段会根据“标题”字段自动填充，在“标题”字段中输入的特殊字符、空格、数字和非英语字符将替换为连字符。 尽管标题字段中的值会自动复制到名称中，但您可以编辑该值。
 
    * **描述**:（可选）数据字典的描述。
-   * **标记：** （可选）要创建自定义标记，请在文本字段中输入值，然后按Enter。您可以在标记文本字段下方看到您的标记。 保存此文本时，也会创建新添加的标记。
-   * **扩展属性**:（可选）点按添 **加** 字段，以指定数据字典的元数据属性。在属性名称列中，输入唯一的属性名称。 在值列中，输入要与属性关联的值。
+   * **标记：** （可选）要创建自定义标记，请在文本字段中输入值，然后按Enter。 您可以在标记文本字段下方看到您的标记。 保存此文本时，也会创建新添加的标记。
+   * **扩展属性**:（可选）点按 **添加字段** 指定数据字典的元数据属性。 在属性名称列中，输入唯一的属性名称。 在值列中，输入要与属性关联的值。
 
    ![德语中指定的数据字典属性](do-not-localize/1_ddproperties.png)
 
-1. （可选）要上传数据字典的XSD架构定义，请在“数据字典结构”窗格下，点按&#x200B;**上传XML架构**。 浏览到XSD文件，将其选中，然后点按&#x200B;**打开**。 将根据上传的XML架构创建数据字典。 您需要调整数据字典中元素的显示名称和描述。 要实现此目的，请点按元素名称，然后在右侧窗格的字段中编辑其说明、显示名称和其他详细信息，以选择这些元素的名称。
+1. （可选）要为数据字典上载XSD架构定义，请在数据字典结构窗格下，点按 **上载XML架构**. 浏览到XSD文件，将其选中，然后点按 **打开**. 将根据上传的XML架构创建数据字典。 您需要调整数据字典中元素的显示名称和描述。 要实现此目的，请点按元素名称，然后在右侧窗格的字段中编辑其说明、显示名称和其他详细信息，以选择这些元素的名称。
 
-   有关计算DD元素的更多信息，请参阅[计算数据字典元素](#computedddelements)。
+   有关计算DD元素的更多信息，请参阅 [计算数据字典元素](#computedddelements).
 
    >[!NOTE]
    >
    >您可以使用用户界面从头开始跳过上传架构文件并构建数据字典。 为此，请跳过此步骤并继续执行后续步骤。
 
-1. 点按&#x200B;**Next**。
+1. 点按 **下一个**.
 1. 在添加属性屏幕中，将元素添加到数据字典中。 如果您上传了架构以获取数据字典的基本结构，则还可以添加/删除元素并编辑其详细信息。
 
    您可以点按元素右侧的三个圆点，并向数据字典结构中添加一个元素。
@@ -92,17 +92,17 @@ ht-degree: 1%
    * 父DDE（复合）不能有两个同名的子项。
    * 枚举仅包含基元字符串类型。
 
-   有关复合元素、收集元素和基元元素以及使用数据字典元素的更多信息，请参阅[将数据字典元素映射到XML架构](#mappingddetoschema)。
+   有关复合元素、收集元素和基元元素以及使用数据字典元素的更多信息，请参阅 [将数据字典元素映射到XML架构](#mappingddetoschema).
 
-   有关数据字典中验证的信息，请参阅[数据字典编辑器验证](#ddvalidations)。
+   有关数据字典中验证的信息，请参阅 [数据字典编辑器验证](#ddvalidations).
 
    ![2_adddproperties基本](assets/2_addddpropertiesbasic.png)
 
-1. （可选）选择元素后，在高级选项卡中，您可以添加属性（属性）。 您还可以点按&#x200B;**添加字段**&#x200B;并扩展DD元素的属性。
+1. （可选）选择元素后，在高级选项卡中，您可以添加属性（属性）。 您还可以点按 **添加字段** 和扩展DD元素的属性。
 
    ![3_adddproperties高级](assets/3_addddpropertiesadvanced.png)
 
-1. （可选）您可以删除任何元素，方法是点按元素右侧的三个圆点，然后选择&#x200B;**Delete**。
+1. （可选）您可以删除任何元素，方法是点按元素右侧的三个圆点，然后选择 **删除**.
 
    ![4_deleteelement](assets/4_deleteelement.png)
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 1. （可选）在“数据字典结构”窗格和“字段和变量列表”面板中选择一个元素。 更改或添加与元素关联的任何必需属性。
 1. 点按&#x200B;**保存**。
 
-### 创建一个或多个数据字典的副本{#create-copies-of-one-or-more-data-dictionary}
+### 创建一个或多个数据字典的副本 {#create-copies-of-one-or-more-data-dictionary}
 
 要快速创建一个或多个具有与现有数据字典类似的属性和元素的数据字典，可以复制并粘贴它们。
 
@@ -123,7 +123,7 @@ ht-degree: 1%
 1. 如果需要，请编辑要用于保存数据字典副本的标题和名称。
 1. 点按粘贴。 将创建数据字典的副本。 现在，您可以在新创建的数据字典中进行所需的更改。
 
-## 请参阅引用数据字典元素{#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}的文档片段或文档
+## 请参阅引用数据字典元素的文档片段或文档 {#see-the-document-fragments-or-documents-that-refer-to-a-data-dictionary-element}
 
 在编辑或查看数据字典时，您可以看到数据字典中引用了哪些元素，其中包含文本、条件、字母和交互式通信。
 
@@ -150,11 +150,11 @@ ht-degree: 1%
 1. 要查看其他元素的借出内容，请点按该元素。
 1. 要显示引用该元素的资产，请点按其名称。 浏览器会显示资产、信件或交互式通信。
 
-## 使用测试数据{#working-with-test-data}
+## 使用测试数据 {#working-with-test-data}
 
-1. 在“数据字典”页面上，点按&#x200B;**选择**。
-1. 点按要为其下载测试数据的数据字典，然后点按&#x200B;**下载示例XML数据**。
-1. 点按警报消息中的&#x200B;**确定**。 将下载XML文件。
+1. 在“数据字典”页面上，点按 **选择**.
+1. 点按要下载测试数据的数据字典，然后点按 **下载示例XML数据**.
+1. 点按 **确定** 中。 将下载XML文件。
 1. 使用记事本或其他XML编辑器打开XML文件。 XML文件的结构与元素中的数据字典和占位符字符串的结构相同。 将占位符字符串替换为要使用测试信件的数据。
 
    ```xml
@@ -200,14 +200,13 @@ ht-degree: 1%
 
 1. 生成数据条目后，在预览包含测试数据的信件时，可以使用此XML文件。
 
-   您可以使用DD添加此测试数据（选择DD，然后点按上传测试数据并上传此xml文件）
-因此，在正常预览信件时（而非自定义），此XML数据会用在信件中。 您还可以点按自定义，然后上传此XML。
+   您可以使用DD添加此测试数据（选择DD，然后点按上传测试数据并上传此xml文件）。因此，在正常预览信件时（而非自定义），此XML数据将用在信件中。 您还可以点按自定义，然后上传此XML。
 
 ## 示例 {#samples}
 
 以下代码示例显示了数据字典的实施详细信息。
 
-### 可上传到数据字典{#sample-schema-that-can-be-uploaded-to-the-data-dictionary}的示例架构
+### 可上传到数据字典的示例架构 {#sample-schema-that-can-be-uploaded-to-the-data-dictionary}
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -261,7 +260,7 @@ ht-degree: 1%
 </xs:schema>
 ```
 
-## 与DDE {#common-attributes-associated-with-a-dde}关联的常用属性
+## 与DDE关联的常用属性 {#common-attributes-associated-with-a-dde}
 
 下表详细列出了与DDE关联的常用属性：
 
@@ -275,10 +274,10 @@ ht-degree: 1%
   <tr>
    <td>名称</td>
    <td>字符串</td>
-   <td>必填.<br /> DDE的名称。它必须是唯一的。</td>
+   <td>必填.<br /> DDE的名称。 它必须是唯一的。</td>
   </tr>
   <tr>
-   <td>引用<br />名称</td>
+   <td>参考<br /> 名称</td>
    <td>字符串</td>
    <td>必填. DDE的唯一引用名称，允许引用与数据字典的层次结构或结构更改无关的DDE。 使用此名称映射了文本模块</td>
   </tr>
@@ -346,7 +345,7 @@ ht-degree: 1%
 
 计算的DDE PersonFullName可以与EL串联表达式（如${PersonFirstName} ${PersonLastName}）关联。
 
-## XSD与数据字典{#data-type-mapping-between-xsd-and-data-dictionary-br}之间的数据类型映射
+## XSD和数据字典之间的数据类型映射 {#data-type-mapping-between-xsd-and-data-dictionary-br}
 
 导出XSD需要特定的数据映射，有关详情，请参阅下表。 DDI列指示DDI中可用的DDE值类型。
 
@@ -358,28 +357,28 @@ ht-degree: 1%
    <td>DDI（实例值数据类型）<br /> </p> </td>
   </tr>
   <tr>
-   <td><p>xs:type的元素 — 复合类型<br /> </p> </td>
-   <td>类型的DDE — 复合<br /> </p> </td>
+   <td><p>xs：类型的元素 — 复合类型<br /> </p> </td>
+   <td>类型DDE — 复合<br /> </p> </td>
    <td>java.util.Map<br /> </td>
   </tr>
   <tr>
    <td><p>xs:element，其中maxOccurs &gt; 1<br /> </p> </td>
-   <td>类型的DDE - COLLECTION-<br /> DDE节点在从父COLLECTION节点捕获信息的COLLECTION DDE旁边创建。 为简单/复合数据类型的集合创建相同的数据类型。 当您拥有复合类型的集合时，数据字典树会捕获为捕获类型信息而创建的DDE子代中的组成字段。<br /> - DDE(COLLECTION)<br />  - DDE(COMPOSITE for type info)<br />  - DDE(STRING)field1<br />  - DDE(STRING)field2<br /> <br /> </p> </td>
+   <td>类型的DDE — 集合 — <br /> COLLECTION DDE旁会创建一个DDE节点，该节点从父COLLECTION节点捕获信息。 为简单/复合数据类型的集合创建相同的数据类型。 当您拥有复合类型的集合时，数据字典树会捕获为捕获类型信息而创建的DDE子代中的组成字段。<br /> - DDE（集合）<br /> - DDE（对于类型信息，复合）<br /> - DDE（字符串）字段1<br /> - DDE(STRING)字段2<br /> <br /> </p> </td>
    <td>java.util.List<br /> </td>
   </tr>
   <tr>
    <td>类型的属性 — xs:id <br /> </p> </td>
-   <td>类型的DDE — 字符串<br /> </td>
+   <td>类型的DDE — 字符串 <br /> </td>
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
    <td>xs:attribute /xs:type的元素 — xs:string</p> </td>
-   <td>类型的DDE - STRING<br /> </td>
+   <td>类型的DDE — 字符串<br /> </td>
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
-   <td>xs:attribute /xs:element类型 — xs:布尔<br /> </td>
-   <td>类型的DDE — 布尔值<br /> </td>
+   <td>xs:attribute /xs:element类型 — xs:布尔 <br /> </td>
+   <td>类型DDE — 布尔值 <br /> </td>
    <td>java.lang.Boolean<br /> </td>
   </tr>
   <tr>
@@ -404,31 +403,31 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>枚举类型和baseType的元素 — xs:string</td>
-   <td><br />类型的DDE - STRING<br />子类型 — ENUM<br /> valueSet - ENUM<br />允许的值 </td>
+   <td>DDE<br /> 类型 — 字符串<br /> 子类型 — 枚举<br /> valueSet - ENUM允许的值<br /> </td>
    <td>java.lang.String</td>
   </tr>
  </tbody>
 </table>
 
-## 从数据字典{#download-a-sample-data-file-from-a-data-dictionary}下载示例数据文件
+## 从数据字典下载示例数据文件 {#download-a-sample-data-file-from-a-data-dictionary}
 
 创建数据字典后，可以将其下载为XML示例数据文件，以在其中进行文本条目。
 
-1. 在“数据字典”页面中，点按&#x200B;**选择**，然后点按数据字典以将其选中。
-1. 选择&#x200B;**下载示例XML数据**。
-1. 点按警报消息中的&#x200B;**确定**。
+1. 在数据字典页面中，点按 **选择** 然后点按数据字典以将其选中。
+1. 选择 **下载示例XML数据**.
+1. 点按 **确定** 中。
 
-   通信管理根据所选数据字典的结构创建XML文件，并将其下载到名为&lt;data-dictionary-name>-SampleData的计算机。 现在，您可以在XML或文本编辑器中编辑此文件，以在[创建信件](../../forms/using/create-letter.md)时进行数据输入。
+   通信管理根据所选数据字典的结构创建XML文件，并将其下载到您的计算机(名称为 &lt;data-dictionary-name>-SampleData。 现在，您可以在XML或文本编辑器中编辑此文件，以在 [创建信件](../../forms/using/create-letter.md).
 
-## 元数据的国际化{#internationalization-of-meta-data}
+## 元数据的国际化 {#internationalization-of-meta-data}
 
 如果您希望以不同语言向客户发送同一个字母，则可以将数据字典和数据字典元素的显示名称、描述和枚举值集本地化。
 
-### 本地化数据字典{#localize-data-dictionary}
+### 本地化数据字典 {#localize-data-dictionary}
 
-1. 在“数据字典”页面上，点按&#x200B;**选择**，然后点按数据字典以将其选中。
-1. 点按&#x200B;**下载本地化数据**。
-1. 点按警报中的&#x200B;**确定**。 通信管理会将名为DataDictionary-&lt;Dname>.zip的zip文件下载到您的计算机。
+1. 在“数据字典”页面上，点按 **选择** 然后点按数据字典以将其选中。
+1. 点按 **下载本地化数据**.
+1. 点按 **确定** 中。 通信管理会将名为DataDictionary的zip文件下载到您的计算机 — &lt;ddname>.zip.
 1. Zip文件包含一个.properties文件。 此文件定义下载的数据字典。 属性文件的内容类似于以下内容：
 
    ```ini
@@ -457,7 +456,7 @@ ht-degree: 1%
 
 1. 将.properties文件（或多个区域设置的文件）存档到单个.zip文件中。
 
-1. 在“数据字典”页面中，选择&#x200B;**更多** > **上传本地化数据**，然后选择包含本地化属性文件的zip文件。
+1. 在“数据字典”页面中，选择 **更多** > **上载本地化数据** 并选择包含本地化属性文件的zip文件。
 1. 要查看本地化更改，请更改浏览器区域设置。
 
 ## 数据字典验证 {#ddvalidations}
@@ -508,7 +507,7 @@ ht-degree: 1%
 
 以下详细信息示例模型和代码示例，它们显示数据字典的实施详细信息。
 
-## 映射简单（基元）元素{#mapping-simple-primitive-elements}
+## 映射简单（基元）元素 {#mapping-simple-primitive-elements}
 
 基元DDE表示在本质上属于原子的字段或属性。 在复杂类型（复合DDE）或重复元素（集合DDE）的范围外定义的基元DDE可以存储在XML架构内的任何位置。 与基元DDE对应的数据的位置不取决于其父DDE的映射。 基元DDE使用XML绑定字段中的映射信息来确定其值，并且映射转换为以下任一值：
 
@@ -532,7 +531,7 @@ ht-degree: 1%
 | 年龄 | /年龄 |
 | 价格 | /价格 |
 
-### 映射复合元素{#mapping-composite-elements}
+### 映射复合元素 {#mapping-composite-elements}
 
 复合元素不支持绑定，如果提供绑定，则会忽略该绑定。 所有原始类型的组成子DDE的绑定必须是绝对的。 允许对复合DDE的子元素进行绝对映射，在XPath绑定方面提供了更大的灵活性。 将复合DDE映射到XML架构中的复杂类型元素会限制其子元素的绑定范围。
 
@@ -580,7 +579,7 @@ ht-degree: 1%
  </tbody>
 </table>
 
-### 映射集合元素{#mapping-collection-elements}
+### 映射集合元素 {#mapping-collection-elements}
 
 收藏集元素仅映射到基数> 1的其他收藏集元素。 集合DDE的子DDE相对于其父XML绑定具有相对（本地）XML绑定。 由于集合元素的子DDE必须与父元素的基数相同，因此必须强制使用相对绑定来确保基数约束，以便子DDE不会指向非重复的XML架构元素。 在以下示例中，“TokenID”的基数必须与“Tokens”（其父集合DDE）相同。
 

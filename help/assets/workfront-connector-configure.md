@@ -4,7 +4,7 @@ description: 配置 [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1749'
 ht-degree: 1%
@@ -130,14 +130,14 @@ Adobe Workfront文档和资产之间的元数据映射是在AEM元数据架构�
    * AEM资产。 此引用应该相对于工作流有效负载。
    * 命名值。 这些应被括号括起来。
    * 以上3个项目的拼接。 使用指定 `{+}`.
-   * 以上3项的变更，以 `{replace(<value>,”old-char”,”new-char”)}`.
+   * 以上3项的变更，以 `{replace(<value>,"old-char","new-char")}`.
 
 * 例如：
 
    * `status="INP"`
    * `DE:Asset Type=jcr:content/metadata/assetType`
    * `DE:Path={path}`
-   * `URL=”https://my-aem-author/assets.html”{+}{path}`
+   * `URL="https://my-aem-author/assets.html"{+}{path}`
 
 ![要映射属性的配置](/help/assets/assets/wf-map-property-config.png)
 
