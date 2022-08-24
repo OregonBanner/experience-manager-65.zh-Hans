@@ -5,9 +5,9 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 6c6ddaba0e42df4b4701670e8abfdabe5205879c
+source-git-commit: 495b9a006f5288ad6579e13aaea82ace6d6f0e91
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '522'
 ht-degree: 22%
 
 ---
@@ -55,15 +55,13 @@ AEM 6.5 Forms JEE修补程序安装程序包含AEM 6.5 Forms JEE的所有组件�
 1. **[仅适用于Windows]:** 执行以下步骤之一：
    * 取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 运行 **配置管理器** 使用 **ConfigurationManager.bat** 位于 `[aem-forms root]\configurationManager\bin`.
 
-   * 取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 运行前 **配置管理器** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目录和替换 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 文件。
+   * 或取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 运行前 **配置管理器** 使用 **ConfigurationManager.exe** 或 **ConfigurationManager_IPv6.exe**，导航到 *`<AEMForms_Install_Dir>\configurationManager\bin`* 目录和替换 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) 和 [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) 文件。
    >[!NOTE]
    >使用 **ConfigurationManager.bat** 文件可帮助您避免手动更新.lax文件的名称。
 
-1. **[仅适用于基于Unix的]:** 执行以下步骤之一：
+1. **[仅适用于基于Unix的]:**
 
-   * 的 **启动配置管理器** 复选框。 单击 **[!UICONTROL 完成]** 以便立即运行配置管理器。
-
-   * 运行 **配置管理器** 稍后，取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 您可以开始 **配置管理器** 稍后在 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
+   * 的 **启动配置管理器** 复选框。 单击 **[!UICONTROL 完成]** 立即运行配置管理器或运行 **配置管理器** 稍后，取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 您可以开始 **配置管理器** 稍后在 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
 
 1. 根据您的应用程序服务器，选择以下文档之一，然后按照 *配置和部署AEM表单* 中。
 
