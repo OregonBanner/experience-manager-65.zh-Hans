@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b14cbc4cad15b06754db8b8c992a596d4d64c096
+source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
 workflow-type: tm+mt
-source-wordcount: '6037'
-ht-degree: 4%
+source-wordcount: '6253'
+ht-degree: 3%
 
 ---
 
@@ -86,11 +86,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 ## 在Cloud Services中创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
 
-**在配置Dynamic Media之前**  — 收到包含Dynamic Media凭据的配置电子邮件后，必须打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户以更改密码。 预配电子邮件中提供的密码是系统生成的，并且仅准备为临时密码。 请务必更新密码，以便使用正确的凭据设置Dynamic MediaCloud Service。
+<!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
-![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
+   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**要在Cloud Services中创建Dynamic Media配置，请执行以下操作：**
+**To create a Dynamic Media Configuration in Cloud Services:** -->
 
 1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台，然后选择工具图标，然后转到 **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置]**.
 1. 在Dynamic Media配置浏览器页面的左窗格中，选择 **[!UICONTROL 全球]** (请勿选择 **[!UICONTROL 全球]**)，然后选择 **[!UICONTROL 创建]**.
@@ -98,8 +98,24 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    选择 **[!UICONTROL 连接到Dynamic Media]**.
 
-   >[!NOTE]
-   在收到包含Dynamic Media凭据的配置电子邮件后，打开 [Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户以更改密码。 预配电子邮件中提供的密码是系统生成的，并且仅准备为临时密码。 请务必更新密码，以便使用正确的凭据设置Dynamic MediaCloud Service。
+1. 在 **[!UICONTROL 更改密码]** 对话框中 **[!UICONTROL 新密码]** 字段，输入包含8-25个字符的新密码。 密码必须至少包含以下任一项：
+
+   * 大写字母
+   * 小写字母
+   * 数字
+   * 特殊字符： `# $ & . - _ : { }`
+
+   的 **[!UICONTROL 当前密码]** 字段，且该字段会在交互中被有意预填充和隐藏。
+
+   如有必要，您可以通过选择密码眼图标来显示密码，来检查您键入或重新键入的密码的拼写。 再次选择图标以隐藏密码。
+
+1. 在 **[!UICONTROL 重复密码]** 字段，重新键入新密码，然后选择 **[!UICONTROL 完成]**.
+
+   当您选择 **[!UICONTROL 保存]** 的右上角 **[!UICONTROL 创建Dynamic Media配置]** 页面。
+
+   如果已选择 **[!UICONTROL 取消]** 在 **[!UICONTROL 更改密码]** 对话框中，在保存新创建的Dynamic Media配置时，仍必须输入新密码。
+
+   另请参阅 [将密码更改为Dynamic Media](#change-dm-password).
 
 1. 连接成功后，请设置以下内容。 带星号(*)的标题是必填项：
 
@@ -133,7 +149,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    在Dynamic Media - Scene7模式下不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
    激活资产后，任何更新都会立即实时发布到S7交付。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。
+1. 选择&#x200B;**[!UICONTROL “保存”]**。
 1. 为了在发布Dynamic Media内容之前安全地预览该内容，Experience Manager作者使用基于令牌的验证，因此默认情况下，Experience Manager作者会预览Dynamic Media内容。 但是，您可以允许列表更多IP，以便为用户提供安全预览内容的访问权限。 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
@@ -147,6 +163,37 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 您现在已完成基本配置；您已准备好使用Dynamic Media - Scene7模式。
 
 如果要进一步自定义配置，可以选择完成 [（可选）在Dynamic Media - Scene7模式下配置高级设置](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+
+### 将密码更改为Dynamic Media {#change-dm-password}
+
+Dynamic Media中的密码过期时间设置为从当前系统日期起100年。
+
+密码必须至少包含以下任一项：
+
+* 大写字母
+* 小写字母
+* 数字
+* 特殊字符： `# $ & . - _ : { }`
+
+如有必要，您可以通过选择密码眼图标来显示密码，来检查您键入或重新键入的密码的拼写。 再次选择图标以隐藏密码。
+
+在选择 **[!UICONTROL 保存]** 的右上角 **[!UICONTROL 编辑Dynamic Media配置]** 页面。
+
+**将密码更改为Dynamic Media:**
+
+1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台。
+1. 在控制台的左侧，选择工具图标，然后转到 **[!UICONTROL Cloud Services] > [!UICONTROL Dynamic Media配置]**.
+1. 在Dynamic Media配置浏览器页面的左窗格中，选择 **[!UICONTROL 全球]**. 请勿选择 **[!UICONTROL 全球]**. 然后，选择 **[!UICONTROL 编辑]**.
+1. 在 **[!UICONTROL 编辑Dynamic Media配置]** 页面的正下方 **[!UICONTROL 密码]** 字段，选择 **[!UICONTROL 更改密码]**.
+1. 在 **[!UICONTROL 更改密码]** 对话框中，执行以下操作：
+
+   * 在 **[!UICONTROL 新密码]** 字段输入新密码。
+
+      的 **[!UICONTROL 当前密码]** 字段，且该字段会在交互中被有意预填充和隐藏。
+
+   * 在 **[!UICONTROL 重复密码]** 字段，重新键入新密码，然后选择 **[!UICONTROL 完成]**.
+
+1. 位于的右上角 **[!UICONTROL 编辑Dynamic Media配置]** 页面，选择 **[!UICONTROL 保存]**，然后选择 **[!UICONTROL 确定]**.
 
 ## （可选）在Dynamic Media - Scene7模式下配置高级设置 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
@@ -582,7 +629,7 @@ Granite传输工作流队列用于 **[!UICONTROL DAM更新资产]** 工作流。
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。
+1. 选择&#x200B;**[!UICONTROL “保存”]**。
 
 #### 更新Granite工作流队列 {#updating-the-granite-workflow-queue}
 
@@ -601,7 +648,7 @@ Granite工作流队列用于非临时工作流。 在Dynamic Media中，它使�
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。
+1. 选择&#x200B;**[!UICONTROL “保存”]**。
 
 #### 更新Dynamic Media Classic上传连接 {#updating-the-scene-upload-connection}
 
@@ -620,7 +667,7 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。
+1. 选择&#x200B;**[!UICONTROL “保存”]**。
 
 ### （可选）筛选用于复制的资产 {#optional-filtering-assets-for-replication}
 
@@ -634,7 +681,7 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
 如果您使用Dynamic Media进行成像或视频，或者同时使用视频或视频，则可以按原样使用Adobe提供的默认过滤器。 默认情况下，以下过滤器处于活动状态：
 
-|  | 筛选器 | Mime类型 | 演绎版 |
+|  | 过滤器 | Mime类型 | 演绎版 |
 | --- | --- | --- | --- |
 | Dynamic Media图像交付 | 过滤图像<br>筛选集 | 开始于 **图像/**<br>&#x200B;包含 **应用程序/** 结尾为 **set**. | 现成的“滤镜图像”（适用于单个图像资产，包括交互式图像）和“滤镜集”（适用于旋转集、图像集、混合媒体集和轮播集）将：<br>·从复制中排除原始图像和静态图像呈现。 |
 | Dynamic Media视频交付 | filter-video | 开始于 **video/** | 现成的“过滤视频”将：<br>·从复制中排除原始视频和静态缩略图呈现。 |
