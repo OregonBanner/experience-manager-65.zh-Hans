@@ -11,18 +11,18 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Adobe Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 51801dfae47e82f31042f48b113332783464bafb
+source-git-commit: e46d77caf831324f077315df43b8f3a0267bef9a
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 0%
+source-wordcount: '1091'
+ht-degree: 24%
 
 ---
 
 # 集成 [!DNL Adobe Sign] 与AEM [!DNL Forms]{#integrate-adobe-sign-with-aem-forms}
 
-[!DNL Adobe Sign] 为自适应表单启用电子签名工作流。 电子签名可改进工作流，以处理法律、销售、工资单、人力资源管理等许多领域的文档。
+[!DNL Adobe Sign] 为自适应表单启用电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
 
-在 [!DNL Adobe Sign] 和自适应表单方案中，用户将自适应表单填充到 **申请服务**. 例如，信用卡申请和公民福利表。 当用户填写、提交和签署申请表时，该表单将发送给服务提供商以进一步操作。 服务提供商审核应用程序和使用 [!DNL Adobe Sign] 来标记已批准的申请。 要启用类似的电子签名工作流，您可以集成 [!DNL Adobe Sign] 与AEM [!DNL Forms].
+在 [!DNL Adobe Sign] 和自适应表单方案中，用户将自适应表单填充到 **申请服务**. 例如，信用卡申请表和公民权益表。在用户填写、签署和提交申请表后，该表将发送给服务提供商以执行后续操作。服务提供商将审核申请，并使用 [!DNL Adobe Sign] 将申请标记为已批准。要启用类似的电子签名工作流，您可以集成 [!DNL Adobe Sign] 与AEM [!DNL Forms].
 
 使用 [!DNL Adobe Sign] 与AEM [!DNL Forms]，配置 [!DNL Adobe Sign] 在AEM云服务中：
 
@@ -32,10 +32,10 @@ ht-degree: 0%
 
 * 活动 [Adobe Sign开发人员帐户。](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)
 * 安 [启用SSL](/help/sites-administering/ssl-by-default.md) AEM [!DNL Forms] 服务器。
-* 安 [Adobe Sign API应用程序](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
-* 的凭据（客户端ID和客户端密钥） [!DNL Adobe Sign] API应用程序。
+* [Adobe Sign API 应用程序](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
+* [!DNL Adobe Sign] API 应用程序的凭据（客户端 ID 和客户端密码）。
 * 重新配置时，请删除现有 [!DNL Adobe Sign] 从创作实例和发布实例进行配置。
-* 使用 [相同加密密钥](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) 用于创作和发布实例。
+* 针对创作实例和发布实例，使用[相同的加密密钥](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)。
 
 ## 配置 [!DNL Adobe Sign] 与AEM [!DNL Forms] {#configure-adobe-sign-with-aem-forms}
 
@@ -57,9 +57,26 @@ ht-degree: 0%
 1. 在配置页面上，点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] 在AEM中配置 [!DNL Forms].
 1. 在 **[!UICONTROL 常规]** 选项卡 **[!UICONTROL 创建Adobe Sign配置]** 页面，指定 **[!UICONTROL 名称]** ，然后点按 **[!UICONTROL 下一个]**. 您可以选择指定标题并浏览以选择配置的缩略图。
 
-1. 将当前浏览器窗口中的URL复制到记事本。 需要配置 [!DNL Adobe Sign] 使用AEM应用程序[!DNL Forms].
+1. 将当前浏览器窗口中的 URL 复制到记事本。需要配置 [!DNL Adobe Sign] 使用AEM应用程序[!DNL Forms].
 
-1. 为 [!DNL Adobe Sign] 应用程序：
+1. 在 **[!UICONTROL 设置]** 选项卡 **[!UICONTROL OAuth URL]** 字段中包含默认URL。 URL 的格式为：
+
+   `https://<shard>/public/oAuth/v2`
+
+   例如：
+   `https://secure.na1.echosign.com/public/oauth/v2`
+
+   其中：
+
+   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL  Adobe Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
+
+   如果为 Adobe Experience Manager 功能或组件创建另一个 [!DNL Adobe Sign] 配置，请确保所有 [!DNL Adobe Sign] 云配置指向同一分片。
+
+   >[!NOTE]
+   保留 **创建Adobe Sign配置** 页面。 不要关闭它。 您可以检索 **客户端Id** 和 **客户端密钥** 在为 [!DNL Adobe Sign] 应用程序，如后续步骤中所述。
+
+
+1. 配置 [!DNL Adobe Sign] 应用程序的 OAuth 设置：
 
    1. 打开浏览器窗口并登录到 [!DNL Adobe Sign] 开发人员帐户。
    1. 选择为AEM配置的应用程序 [!DNL Forms]，然后点按 **[!UICONTROL 为应用程序配置OAuth]**.
@@ -72,11 +89,11 @@ ht-degree: 0%
    * widget_write
    * workflow_read
 
-   有关为 [!DNL Adobe Sign] 应用程序和获取密钥，请参阅 [为应用程序配置oAuth设置](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) 开发人员文档。
+   有关为 [!DNL Adobe Sign] 应用程序配置 OAuth 设置并获取密钥的分步信息，请参阅[为应用程序配置 OAuth 设置](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md)开发人员文档。
 
-   ![OAuth配置](assets/oauthconfig_new.png)
+   ![OAuth 配置](assets/oauthconfig_new.png)
 
-1. 返回到 **[!UICONTROL 创建Adobe Sign配置]** 页面。 在 **[!UICONTROL 设置]** 选项卡 **[!UICONTROL OAuth URL]** 字段中会提及默认URL。 URL的格式为：
+1. 返回到 **[!UICONTROL 创建Adobe Sign配置]** 页面。 在 **[!UICONTROL 设置]** 选项卡 **[!UICONTROL OAuth URL]** 字段中会提及默认URL。 URL 的格式为：
 
    `https://<shard>/public/oAuth/v2`
 
@@ -85,18 +102,20 @@ ht-degree: 0%
 
    其中：
 
-   **na1** 是指默认数据库共享。
+   **na1** 指默认数据库分片。
 
-   您可以修改数据库共享的值。 重新启动服务器，以便能够将新值用于数据库共享。
+   您可以修改数据库分片的值。重新启动服务器，以便能够将新值用于数据库共享。
 
    >[!NOTE]
    确保您的创作和发布实例配置指向同一共享。 如果您为组织创建多个Adobe Sign配置，请确保所有配置都使用同一共享。
 
-1. 指定 **客户端ID** （也称为应用程序ID）和 **客户端密钥** 在步骤8中执行。 选择 **[!UICONTROL 还为附件启用Adobe Sign]** 用于将附加到自适应表单的文件附加到相应表单的选项 [!DNL Adobe Sign] 文档已发送以供签名。
+1. 返回到 **[!UICONTROL 创建Adobe Sign配置]** 页面。 在 **[!UICONTROL 设置]** 选项卡，指定 **客户端ID** （也称为应用程序ID）和 **客户端密钥**. 使用 [Adobe Sign应用程序的客户端ID和客户端密钥](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) 为AEM Forms创建。
 
-   点按 **[!UICONTROL 连接到Adobe Sign]**. 提示输入凭据时，请提供创建时所用帐户的用户名和密码 [!DNL Adobe Sign] 应用程序。
+1. 选择 **[!UICONTROL 还为附件启用Adobe Sign]** 用于将附加到自适应表单的文件附加到相应表单的选项 [!DNL Adobe Sign] 文档已发送以供签名。
 
-   点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] 配置。
+1. 点按 **[!UICONTROL 连接到Adobe Sign]**. 在系统提示输入凭据时，提供在创建 [!DNL Adobe Sign] 应用程序时所用帐户的用户名和密码。
+
+1. 点按 **[!UICONTROL 创建]** 创建 [!DNL Adobe Sign] 配置。
 
 1. 打开AEM Web Console。 URL为 `https://'[server]:[port]'/system/console/configMgr`
 1. 打开 **[!UICONTROL Forms通用配置服务].**
@@ -110,7 +129,7 @@ ht-degree: 0%
 
 ## 配置 [!DNL Adobe Sign] 调度程序以同步签名状态 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-安 [!DNL Adobe Sign] 只有在所有签名者完成签名过程后，才会提交已启用的自适应表单。 默认情况下， [!DNL Adobe Sign] 计划程序服务计划在每24小时后检查（轮询）签名者响应。 您可以更改环境的默认间隔。 执行以下步骤以更改默认间隔：
+安 [!DNL Adobe Sign] 只有在所有签名者完成签名过程后，才会提交已启用的自适应表单。 默认情况下， [!DNL Adobe Sign] 计划程序服务计划在每24小时后检查（轮询）签名者响应。 您可以为您的环境更改此默认间隔。执行以下步骤以更改默认间隔：
 
 1. 登录AEM [!DNL Forms] 具有管理员凭据的服务器，然后导航到 **工具** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
 
