@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: 35639a818f58923ae9ad099752d359e7795be60b
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2753'
 ht-degree: 0%
 
 ---
@@ -222,7 +222,7 @@ XMP写回会在 [!DNL Experience Manager]，这会导致以下结果：
 * 此时会创建资产的版本
 * [!UICONTROL DAM更新资产] 针对资产运行
 
-所列结果消耗了大量资源。 因此，Adobe建议 [禁用XMP写回](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html)，如果不需要。
+所列结果消耗了大量资源。 因此，Adobe建议在不需要XMP写回时禁用该写回。 有关更多信息，请参阅 [XMP写回](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html).
 
 如果选中了运行工作流标志，则导入大量元数据可能会导致资源密集型XMP写回活动。 在精益服务器使用期间规划此类导入，以便不影响其他用户的性能。
 
@@ -242,7 +242,7 @@ XMP写回会在 [!DNL Experience Manager]，这会导致以下结果：
 
 ## 搜索索引 {#search-indexes}
 
-安装 [最新的Service Pack](/help/release-notes/release-notes.md) 和与性能相关的修补程序，因为这些修补程序通常包括对系统索引的更新。 请参阅 [性能调整提示](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) ，用于某些索引优化。
+安装 [最新的Service Pack](/help/release-notes/release-notes.md) 和与性能相关的修补程序，因为这些修补程序通常包括对系统索引的更新。 请参阅 [性能调整提示](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=en) ，用于某些索引优化。
 
 为经常运行的查询创建自定义索引。 有关详细信息，请参阅 [分析慢速查询的方法](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) 和 [编制自定义索引](/help/sites-deploying/queries-and-indexing.md). 有关查询和索引最佳实践的其他分析，请参阅 [有关查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 

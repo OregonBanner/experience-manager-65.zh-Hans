@@ -10,9 +10,9 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
-source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
+source-git-commit: a78de999992d4ab2fc63b5f7e796aa0d5527cb26
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '732'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ Adobe自己的测试产生了以下结果：
 
 启动切换到HTTP/2的请求；它不会自动为您完成。
 
-1. 要切换到HTTP/2，请启动Adobe客户支持请求。 请参阅[访问Adobe Experience Manager支持门户](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html)。
+1. 要切换到HTTP/2，请启动Adobe客户支持请求。 请参阅 [打开支持票证](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support).
 
    1. 在支持请求中提供以下信息：
 
@@ -98,4 +98,4 @@ Adobe自己的测试产生了以下结果：
 
 由于浏览器未声明这一事实，因此需要下载扩展。
 
-对于Firefox和Chrome，有一个名为“HTTP/2和SPDY指示器”的扩展。 浏览器仅安全支持http/2，因此需要使用https调用URL进行验证。 如果支持http/2，则扩展将以蓝色Flash符号和标头`X-Firefox-Spdy`的形式指示：`h2`。
+对于Firefox和Chrome，有一个名为“HTTP/2和SPDY指示器”的扩展。 浏览器仅安全支持http/2，因此需要使用https调用URL进行验证。 如果支持http/2，则扩展将以蓝色Flash符号和标头的形式表示 `X-Firefox-Spdy` : `h2`.

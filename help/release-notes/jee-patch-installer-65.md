@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 495b9a006f5288ad6579e13aaea82ace6d6f0e91
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 22%
+ht-degree: 20%
 
 ---
 
@@ -65,8 +65,8 @@ AEM 6.5 Forms JEE修补程序安装程序包含AEM 6.5 Forms JEE的所有组件�
 
 1. 根据您的应用程序服务器，选择以下文档之一，然后按照 *配置和部署AEM表单* 中。
 
-   * [安装和部署AEM forms for JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65_cn)
-   * [安装和部署AEM for WebSphere表单](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_cn)
+   * [安装和部署AEM forms for JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安装和部署AEM for WebSphere表单](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. （仅限JBoss）安装修补程序并配置服务器后，删除JBoss应用程序服务器的tmp和工作目录。
 
