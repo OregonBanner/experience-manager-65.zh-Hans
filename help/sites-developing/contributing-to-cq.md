@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2709'
 ht-degree: 1%
@@ -143,7 +143,7 @@ JCR本质上是一个节点和属性的系统，节点可以继承其他节点�
 
 JCR具有许多预定义的节点类型和属性类型，但一般而言，键入系统相当灵活，而且（事实上）JCR的一个强项是，它允许以同等轻松的方式存储/管理结构化和非结构化内容。 即，JCR可以容纳高度结构化的数据，但也可以容纳没有模式约束的任意动态数据结构。
 
-用于JCR的Java API的JavaDoc为 [此处](http://jackrabbit.apache.org/jcr/jcr-api.html).
+用于JCR的Java API的JavaDoc为 [此处](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 在尝试阅读JavaDoc或JCR规范本身之前，您可能需要查看 [这个高级解释](/help/sites-developing/the-basics.md#java-content-repository) JCR的URL。
 

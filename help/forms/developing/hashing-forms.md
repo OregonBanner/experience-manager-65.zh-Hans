@@ -2,7 +2,7 @@
 title: 如何在动态PDF forms中生成和处理哈希？
 description: 在动态PDF forms中生成和使用哈希
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 0%
@@ -112,7 +112,7 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 你在哪里需要这样的东西？ 假设PDF表单中包含的字段只应由授权个人填写。 通过使用密码保护这些字段（与Sample_2.pdf中一样，该密码在文档中的任意位置都无法以明文显示），可以确保这些字段仅供知道密码的用户访问。
 
-我建议您继续浏览两个示例PDF文件。  您可以使用Sample_1.pdf生成新的哈希值，并使用生成的值更改Sample_2.pdf中使用的密码或哈希函数。  “归因”部分中列出的资源还提供了有关哈希处理以及本文中使用的特定JavaScript实施的其他信息。
+我建议您继续浏览两个示例PDF文件。  您可以使用Sample_1.pdf生成新的哈希值，并使用生成的值更改Sample_2.pdf中使用的密码或哈希函数。  “属性”部分中列出的资源还提供了有关哈希处理以及本文中使用的特定JavaScript实施的其他信息。
 
 ## 归因 {#attributions}
 
@@ -120,5 +120,5 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 * [NIST](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
 * [哈希冲突](https://en.wikipedia.org/wiki/Hash_collision)
 * [彩虹表](https://en.wikipedia.org/wiki/Rainbow_table)
-* [JavaScript MD5项目主页](http://pajhome.org.uk/crypt/md5/)
+* [JavaScript MD5项目主页](https://pajhome.org.uk/crypt/md5/)
 * [jsSHA2项目主页](https://anmar.eu.org/projects/jssha2/)

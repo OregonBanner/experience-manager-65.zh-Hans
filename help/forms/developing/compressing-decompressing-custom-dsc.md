@@ -1,7 +1,8 @@
 ---
 title: 如何使用WS-security标头来传递凭据？
 description: 了解如何使用WS-security标头来传递凭据
-source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
+exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 **其他必需的产品**
 
-Java编辑器，如[Eclipse](https://www.eclipse.org/)或[Netbeans IDE](https://netbeans.apache.org/)
+Java编辑器，例如 [Eclipse](https://www.eclipse.org/) 或 [Netbeans IDE](https://netbeans.apache.org/)
 
 ## 用户级别 {#user-level}
 
@@ -127,7 +128,7 @@ component.xml文件如下所示：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<component xmlns="http://adobe.com/idp/dsc/component/document">
+<component xmlns="https://adobe.com/idp/dsc/component/document">
 <!-- Unique id identifying this component -->
    <component-id>ZipService</component-id>
 
@@ -212,13 +213,10 @@ component.xml文件如下所示：
 
 * 在给定文件夹中查找所有文件，并将文件作为压缩文档返回。
 
-* 提供包含大量PDF文档的ZIP文件，在解压缩后，这些文档可供Reader扩展。 这需要JEEReader扩展模块上的AEM Forms。
+* 提供包含大量PDF文档的ZIP文件，在解压缩后，这些文档可供读取器扩展。 这需要JEEReader扩展模块上的AEM Forms。
 
-* 提供包含异构类型文档的ZIP文件，此类文档可通过“生成PDF”服务解压缩并转换为PDF文档。
+* 提供包含异构类型文档的ZIP文件，此类文档可以通过“生成PDF”服务解压缩并转换为PDF文档。
 
 * 策略可保护文档列表并以ZIP文件形式返回。
 
 * 允许用户将流程实例的所有附件下载为单个ZIP文件。
-
-
-

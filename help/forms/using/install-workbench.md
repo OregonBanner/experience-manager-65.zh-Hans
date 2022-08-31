@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2244'
 ht-degree: 0%
@@ -36,11 +36,11 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>有关AEM Forms及其如何与其他Adobe产品集成的一般信息</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms概述</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms概述</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>所有可用于AEM Forms的文档</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms文档</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms文档</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>有关此产品版本的修补程序更新、技术说明和其他信息</p> </td>
@@ -98,7 +98,7 @@ Workbench是一个集成开发环境(IDE)，开发人员和表单作者使用它
 
 ### 支持的平台 {#supported-platforms}
 
-请参阅Workbench支持的平台的完整列表() [AEM Forms支持的平台](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
+请参阅Workbench支持的平台的完整列表() [AEM Forms支持的平台](https://adobe.com/go/learn_aemforms_supportedplatforms_65).
 
 ## Designer安装注意事项 {#designer-installation-considerations}
 
@@ -173,7 +173,7 @@ Designer的不同版本可以共存于同一系统中，例如Workbench 6.4的De
 1. 现在，您的计算机上安装了以下项目：
    * **Workbench**:要从“开始”菜单运行Workbench，请选择“所有程序”>“AEM Forms”>“Workbench”（如果您选择将快捷方式文件夹存储在此处）。 有关信息，请参阅 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">使用Workbench</a> 文档。
    * **Designer**:您可以从Workbench中访问Designer。 有关信息，请参阅 <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer帮助</a>.
-   * **AEM Forms SDK**:有关使用SDK的更多信息，请参阅 <a href="http://www.adobe.com/go/learn_aemforms_programming_65">使用AEM Forms编程</a>.
+   * **AEM Forms SDK**:有关使用SDK的更多信息，请参阅 <a href="https://www.adobe.com/go/learn_aemforms_programming_65">使用AEM Forms编程</a>.
 
 ## 升级过程 {#upgrading-processes}
 
@@ -232,7 +232,7 @@ Designer的不同版本可以共存于同一系统中，例如Workbench 6.4的De
 * **模板UUID**:Designer在每个模板中为表单及其版本插入一个唯一标识符(UUID)。 每次更新表单时，嵌入的UUID都会更新。 例如，XDP模板可能会显示以下内容：
 
    `<?xml version="1.0" encoding="UTF-8"?>`
-   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=http://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="http://www.xfa.org/schema/xfa-template/2.6/">`
+   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
 
 * **渲染选项**:在渲染的表单缓存中，针对每组唯一渲染选项分别存储缓存内容。
 

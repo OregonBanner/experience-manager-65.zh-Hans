@@ -6,7 +6,7 @@ role: User
 feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '9980'
 ht-degree: 7%
@@ -583,7 +583,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 >
 >如果使用上述方法从用户界面中删除文件夹，则关联的用户组也会被删除。
 >
->但是，可以使用从存储库中清理冗余、未使用和自动生成的现有用户组 `clean` 方法(`http://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)。
+>但是，可以使用从存储库中清理冗余、未使用和自动生成的现有用户组 `clean` 方法(`https://[server]:[port]/system/console/jmx/com.day.cq.dam.core.impl.team%3Atype%3DClean+redundant+groups+for+Assets`)。
 
 ## 下载资源 {#downloading-assets}
 

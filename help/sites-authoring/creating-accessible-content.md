@@ -2,7 +2,7 @@
 title: 为Adobe Experience Manager创建无障碍内容（WCAG 2.1符合性）
 description: 使用AEM帮助残障人士访问和使用Web内容
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '13956'
 ht-degree: 99%
@@ -559,7 +559,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建语义上有意义的 Web �
 >
 >* [Px 到 Em 计算器 - Omni](https://www.omnicalculator.com/conversion/px-to-em)
 >* [字体大小转换：pixel-point-em-rem-percent](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/)
->* [PMtoEM.com：让 PX 到 EM 的转换变得简单](http://pxtoem.com)
+>* [PMtoEM.com：让 PX 到 EM 的转换变得简单](https://pxtoem.com)
 
 
 要检查对比度，可使用颜色对比度工具，例如 [Paciello Group Color Contrast Analyser](https://www.paciellogroup.com/resources/contrast-analyser.html) 或 [WebAIM Color Contrast Checker](https://www.webaim.org/resources/contrastchecker/)。这些工具可以用来检查颜色对，并报告任何对比度问题。

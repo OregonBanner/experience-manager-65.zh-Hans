@@ -5,7 +5,7 @@ contentOwner: AG
 role: Developer
 feature: APIs,Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '1758'
 ht-degree: 1%
@@ -70,7 +70,7 @@ A [内容片段](/help/assets/content-fragments/content-fragments.md) 是一种�
 * `parent`:链接到父文件夹。
 * `thumbnail`:（可选）链接到文件夹缩略图图像。
 
-### 资源 {#assets}
+### Assets {#assets}
 
 在Experience Manager中，资产包含以下元素：
 
@@ -289,7 +289,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 请勿使用 `/content/dam` 中。 移动资产并覆盖现有资产的示例命令如下：
 
 ```shell
-curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
+curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: https://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
 ```
 
 **响应代码**:响应代码为：

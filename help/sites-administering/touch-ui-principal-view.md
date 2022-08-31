@@ -11,7 +11,7 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: 4ea49fe6745b23f01f46edfe07ff3dd8c8299729
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 1%
@@ -88,13 +88,13 @@ CRXDE可管理高级权限和限制。 已在同一视图中合并。 该视图�
 
 >[!NOTE]
 >
->欲知每项限制的含义，请查阅 [Jackrabbit Oak文档](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
+>欲知每项限制的含义，请查阅 [Jackrabbit Oak文档](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
 可通过选择限制类型、输入值并点击 **+** 图标。
 
 ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-新ACE将反映在访问控制列表中，如下所示。 请注意 `jcr:write` 是包含 `jcr:removeNode` 中，但未在下面显示，因为 `jcr:write`.
+新ACE将反映在访问控制列表中，如下所示。 请注意 `jcr:write` 是包含 `jcr:removeNode` 中，但未在下面显示 `jcr:write`.
 
 ### 编辑ACE {#editing-aces}
 

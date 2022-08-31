@@ -6,19 +6,19 @@ seo-description: Forms Designer help
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-source-git-commit: cb6ae1270499efa16d816b107a232f9680eb0fb8
+exl-id: 1847fc04-ba02-4c7c-b957-b5d7c79a2597
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 8%
+ht-degree: 0%
 
 ---
 
-
 # Forms Designer帮助 {#form-designer-help}
 
-[使用Designer](http://www.adobe.com/go/learn_aemforms_designer_65_cn)
-[设计器快速入门Tutorials](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
-[设计器示例](http://www.adobe.com/go/learn_aemforms_designer_samples_65)
-[设计器脚本基础知识](http://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
-[设计器脚本参考](http://www.adobe.com/go/learn_aemforms_scriptingReference_65)
-[设计器表单计算引用](http://www.adobe.com/go/learn_aemforms_formCalc_65)
+[使用Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
+[设计器快速入门Tutorials](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
+[设计器示例](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
+[设计器脚本基础知识](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
+[设计器脚本参考](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
+[设计器表单计算引用](https://www.adobe.com/go/learn_aemforms_formCalc_65)

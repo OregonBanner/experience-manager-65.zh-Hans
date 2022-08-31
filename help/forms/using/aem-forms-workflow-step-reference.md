@@ -9,7 +9,7 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: de7b1d2d0f3863f9554b346204c18cc57d4bf814
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '7575'
 ht-degree: 0%
@@ -442,9 +442,9 @@ AEM文档服务是一组用于创建、组合和保护PDF文档的服务。 AEM 
 * **[!UICONTROL 使用选择XCI文件]**:XCI文件用于描述用于表单设计元素的字体和其他属性。 您可以将XCI文件保留为相对于有效负载、位于绝对路径上，或使用Document数据类型的变量。
 
 * **[!UICONTROL 区域设置]**:指定用于生成PDF文档的语言。 如果提供文字值，请从列表中选择一种语言，或选择以下任一值：
-   * **使用服务器默认值**:（默认）使用在AEM Forms服务器上配置的区域设置。 “区域设置”设置是使用管理控制台配置的。 (请参阅 [Designer帮助](http://www.adobe.com/go/learn_aemforms_designer_65_cn).)
+   * **使用服务器默认值**:（默认）使用在AEM Forms服务器上配置的区域设置。 “区域设置”设置是使用管理控制台配置的。 (请参阅 [Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_65).)
 
-   * **使用自定义值**:在文字框中键入区域设置代码，或选择包含区域设置代码的字符串变量。 有关支持的区域设置代码的完整列表，请参阅http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html 。
+   * **使用自定义值**:在文字框中键入区域设置代码，或选择包含区域设置代码的字符串变量。 有关支持的区域设置代码的完整列表，请参阅https://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html 。
 
 * **[!UICONTROL 副本]**:一个整数值，它指定要为输出生成的副本数。 默认值为 1。
 
