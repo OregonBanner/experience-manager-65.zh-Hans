@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 0bd7c444bf0424b60c11b7171b7ea7ae9d7f3926
+source-git-commit: 21cbb1df659c8ff82170bb953b05260219dc4970
 workflow-type: tm+mt
-source-wordcount: '2624'
-ht-degree: 6%
+source-wordcount: '3237'
+ht-degree: 5%
 
 ---
 
@@ -78,9 +78,37 @@ ht-degree: 6%
 
 ## [!DNL Forms] {#forms-6514}
 
->[!NOTE]
->
->* [!DNL Experience Manager Forms] 在计划的 [!DNL Experience Manager] Service Pack 发行日期后一周发布附加组件包。在这种情况下，附加组件包将于2022年9月1日星期四发布。 此外，此部分还将添加Forms修复和增强功能的列表。
+* 将文件附加到多面板自适应表单并保存自适应表单的草稿时，会发生错误。 (NPR-38978)
+* 当用户使用带有AdobePDF设置的createPDF2 Java API将RGB配置文件转换为CMYK配置文件时，该选项不适用于Java API。 此选项在独立DistillerClient应用程序中可正常使用。 (NPR-38858、CQ-4346181)
+* 安装AEM 6.5 Forms Service Pack 12(6.5.12.0)后，在AEM工作流的“分配任务”步骤中，除关闭任务之外的所有选项都将不可用。 (NPR-38743)
+* 在记录文档(DoR)中，表中的某些值会被截断。 (NPR-38657)
+* 使用数据XML预览FormSet时，如果XDP包含浮动字段，则在预览FormSet时，不会显示任何数据，但在使用“预览”PDF选项时会显示数据。
+* 在自适应Forms中，单选按钮和复选框不按选项卡顺序排列。 (NPR-38645)
+* 当您使用 `Summary Step` 要在提交表单后为已翻译的自适应表单生成记录文档(DoR)，不会将其翻译为本地化语言。 (NPR-38567)
+* AEM工作流步骤中的禁用重试选项未按预期工作。 出现间歇性问题。 (NPR-38547)
+* 在使用富文本字段提交自适应表单时， `an Internal Error while Submitting a Form` 错误。 当用户将焦点放在富文本字段上时，在提交表单之前，不会发生错误。 (NPR-38542)
+* 错误 `sling-default-3-AdobeSignRefreshTokenScheduleJob com.adobe.forms.foundation.oauth.model.OAuthConfigSlingModel Refresh Token not present for: /conf/gws-eform/cashlite/settings/cloudconfigs/fdm/cashlite/jcr:content occurs` 已记录。 (NPR-38541)
+* 当用户将PDF上传到自适应表单时，AEM Forms服务器会变得无响应。 (NPR-38398)
+* 在OSGi服务器上的AEM Forms上，当您使用Document Service API来验证PDF时，验证失败，并出现错误：com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311。 (CQ-4346252)
+* 在提交信件草稿时， `Could not upload asset from xml input` 出现错误。 它对功能没有影响。 打开草稿时，信件正确呈现。 （CQ-4345979，CQ-4344418）
+* 以德语格式输入日期时， `Preview with Data` 选项，则“日期”字段不会呈现。 (CQ-4345783)
+* 当您构建网站门户并根据数据生成条形码时，某些条形码无法正确解码。 (CQ-4345743)
+* 转换到PDF的Postscript不会呈现具有预期颜色的输出文档。 (CQ-4345074)
+* 资源解析程序导致间歇性提交失败，并导致同一堆栈跟踪在一次提交中出现多次。 (CQ-4344764)
+* 用户无法打开使用 `cmDataUrl` 参数。 草稿第一次打开。 问题开始在后续尝试中出现。 (CQ-4344418)
+* 用户在 `&` 在交互式通信(IC)中，对应IC的草稿无法加载。 (CQ-4343969)
+* 在AEM Forms Designer中使用样式选项生成PCL文件时，指定的样式不会应用于生成的文件。 (CQ-4339573)
+* 当页面计数超过15时，将动态XDP表单自动转换为自适应表单失败。 当页面计数小于15时，这项操作可正常进行。 (NPR-35337)
+* 使用“添加到收藏夹”选项时，不会向屏幕阅读器指示切换的状态。 (NPR-37137)
+* 在表单数据模型中，数据库支持的表单数据模型中小数后的值会因货币和小额货币数据类型而被截断。. (CQDOC-19509)
+* 在HTML工作区中为工作流选择导航链接时，未指示已选择导航链接。 (NPR-37138)
+* 潦草签名功能与无障碍准则不兼容。 (NPR-37596)
+* AEM Forms使用log4j 1.x。对log4j 1.x的支持已终止。 (NPR-38273)
+* 在表单数据模型中将MSSQL数据库用作数据源并检索值时，检索值中小数后的数字将被旋转。 (CQ-4346190)
+* 在Forms 6.5 Designer中，当您打开使用Forms 6.1 Designer创建的表单并编辑文本框时，段落间距会超出指定的间距。 删除了之前对空格的所有设置，并且需要手动重新设置文本框的格式。 (CQ-4341899)
+* 条形码SSCC-18显示错误值。 Forms服务器会忽略条形码右侧的值。 (CQ-4342400)
+* 对于使用Forms 6.5 Designer创建的静态PDF forms,PDF辅助功能失败，并出现错误 `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
+* 添加了在Forms Designer中为超链接指定屏幕Reader文本的功能。(NPR-36221)
 
 
 ## 集成 {#integrations-6514}
@@ -208,12 +236,13 @@ ht-degree: 6%
 
 1. OSGi包 `org.apache.jackrabbit.oak-core` 是版本1.22.12或更高版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-38747 -->
 
-
 ### 安装 [!DNL Experience Manager] Forms附加组件包 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->如果您没有使用 [!DNL Experience Manager] Forms。 的修复 [!DNL Experience Manager] Forms在计划后一周通过单独的附加组件包提供 [!DNL Experience Manager] Service Pack版本。
+>如果您没有使用 [!DNL Experience Manager] Forms。
+
+<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release. -->
 
 1. 确保您已安装 [!DNL Experience Manager] Service Pack。
 1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)中列出的相应 Forms 附加组件包。
