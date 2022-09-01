@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '3778'
+source-wordcount: '3801'
 ht-degree: 4%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 4%
       + [JEE上AEM Forms的一般安全注意事项](using/general-security-considerations.md)
       + [在JEE环境中强化AEM Forms](using/hardening-aem-forms-jee-environment.md)
       + [在JEE上为AEM Forms配置安全管理设置](using/configuring-secure-administration-settings-aem.md)
+      + [对邮件服务的 OAuth2 支持](using/oauth2-support-for-mail-service.md)
 + 表单数据模型 {#form-data-model}
    + [AEM Forms数据集成简介](using/data-integration.md)
    + [配置数据源](using/configure-data-sources.md)
@@ -332,6 +333,7 @@ ht-degree: 4%
    + [配置分析和报表](using/configure-analytics-forms-documents.md)
    + [查看和了解AEM Forms分析报表](using/view-understand-aem-forms-analytics-reports.md)
    + [创建和管理自适应表单的A/B测试](using/ab-testing-adaptive-forms.md)
+   + [与 Adobe Analytics 集成](using/integrate-aem-forms-with-adobe-analytics.md)
 + 发布和处理AEM Forms {#publish-process-aem-forms}
    + [在门户上发布表单简介](using/introduction-publishing-forms.md)
    + [将草稿和提交组件与数据库集成的示例](using/integrate-draft-submission-database.md)
@@ -681,6 +683,7 @@ ht-degree: 4%
          + [使用Web服务API验证DDX文档](developing/validate-ddx-document-using-web.md)
 + 疑难解答 {#troubleshooting}
    + [无法将某些表单功能与某些版本的OracleJDK一起使用](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
+   + [在JEE版本上获取带有附件的自适应Forms电子邮件的其他步骤](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
 + 旧版文档 {#legacy-documentation}
    + [使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据](developing/building-xml.md)
    + [在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](developing/compressing-decompressing-custom-dsc.md)

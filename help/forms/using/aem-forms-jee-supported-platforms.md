@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3583'
 ht-degree: 1%
 
 ---
@@ -91,9 +91,9 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
    <th><p><strong>支持的修补程序定义</strong></p> </th>
   </tr>
   <tr>
-   <td><p>OracleJava™ SE 11（64位）</p> </td>
-   <td><p>Z:不支持</p> </td>
-   <td><p> </p> </td>
+   <td><p>OracleJava™ SE 11（64位） <sup> [8] </sup> </p>  </td>
+   <td><p>答：支持</p> </td>
+   <td><p>次要版本和更新 </p> </td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64位</td>
@@ -361,6 +361,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
 1. CRX-repository支持TarMK、MongoDB类型和关系数据库(RDBMK)的持久性。 应用程序服务器和CRX-repository之间不能有两个不同的数据库系统。 但是，在JEE环境的AEM Forms上，您可以将MongoMK与CRX-repository结合使用，将受支持的关系数据库与应用程序服务器结合使用。
 1. JEE上的AEM Forms不支持CentOS上的WebSphere应用程序服务器。
 1. AEM Forms on JEE不支持基于JBoss角色的访问控制(RBAC)。
+1. AEM Forms on JEE仅支持OracleJava™ SE 11（64位）SDK用于应用程序服务器JBoss EAP 7.4。
 
 此外，在选择用于在JEE部署上AdobeAEM Forms的软件时，请考虑以下几点：
 
@@ -794,6 +795,10 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 > 标记为 [在AEM Forms 6.5.12.0和6.5.10.0中已弃用，在AEM Forms 6.5 Service Pack 18(6.5.18.0)版本之前，仍支持](https://helpx.adobe.com/support/programs/eol-matrix.html).
 
 ## 修订历史记录 {#revision-history}
+
+- 2022年9月01日
+
+   - 添加了对OracleJava™ SE 11（64位）SDK的支持，用于应用程序服务器JBoss EAP 7.4。
 
 - 2022年3月03日
 

@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '10683'
+source-wordcount: '10769'
 ht-degree: 0%
 
 ---
@@ -186,6 +186,16 @@ Distiller服务( `DistillerService`)将PostScript、封装的PostScript(EPS)和P
 **SMTP用户：** 用于登录到SMTP服务器的用户帐户的用户名。
 
 **SMTP密码：** 与SMTP用户帐户关联的密码。
+
+**0Auth2.0身份验证：** Auth2.0身份验证服务为其集成的邮件服务提供支持，使组织能够遵守安全的电子邮件要求。
+
+**客户端ID:** Azure门户会生成用于身份验证的应用程序ID。
+
+**客户端密钥：** Azure门户会生成用于身份验证的密钥。
+
+**刷新令牌：**  OAuth客户端使用字符串在不进行用户交互的情况下获取新的访问令牌。
+
+有关如何检索和使用客户端ID、客户端密钥和刷新令牌的更多信息，请参阅 [电子邮件服务的OAuth2.0身份验证支持](/help/forms/using/oauth2-support-for-mail-service.md).
 
 **SMTP传输安全：** 用于连接到SMTP服务器的安全协议：
 
@@ -857,7 +867,7 @@ XSLT转换服务( `XSLTService`)允许进程对XML文档应用可扩展样式表
 1. 在“最大服务实例池大小”框中，输入给定服务的池中的最大实例数。 此设置控制在给定时间可执行给定服务的线程数。 默认值为0，这会导致池大小不受限制。
 1. 在最大异步服务实例数框中，输入池中可用于在任何给定时间为异步请求提供服务的最大实例数。 此设置允许服务限制可并行处理的请求数。
 1. 在调用等待超时框中，输入等待服务对调用请求可用的毫秒数。 如果未为此设置指定值，则默认值为0，这会导致没有等待时间。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 删除池 {#remove-pooling}
 
@@ -870,4 +880,4 @@ XSLT转换服务( `XSLTService`)允许进程对XML文档应用可扩展样式表
 
    **每个请求的新实例：** 将为收到的每次调用创建新的服务实例。
 
-1. 单击保存。
+1. 单击“保存”。
