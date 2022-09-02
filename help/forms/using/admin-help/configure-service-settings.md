@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3e6eba85dbd9e98ac29fed55c1787e5633bafc04
 workflow-type: tm+mt
-source-wordcount: '10769'
+source-wordcount: '10683'
 ht-degree: 0%
 
 ---
@@ -186,16 +186,6 @@ Distiller服务( `DistillerService`)将PostScript、封装的PostScript(EPS)和P
 **SMTP用户：** 用于登录到SMTP服务器的用户帐户的用户名。
 
 **SMTP密码：** 与SMTP用户帐户关联的密码。
-
-**0Auth2.0身份验证：** Auth2.0身份验证服务为其集成的邮件服务提供支持，使组织能够遵守安全的电子邮件要求。
-
-**客户端ID:** Azure门户会生成用于身份验证的应用程序ID。
-
-**客户端密钥：** Azure门户会生成用于身份验证的密钥。
-
-**刷新令牌：**  OAuth客户端使用字符串在不进行用户交互的情况下获取新的访问令牌。
-
-有关如何检索和使用客户端ID、客户端密钥和刷新令牌的更多信息，请参阅 [电子邮件服务的OAuth2.0身份验证支持](/help/forms/using/oauth2-support-for-mail-service.md).
 
 **SMTP传输安全：** 用于连接到SMTP服务器的安全协议：
 
