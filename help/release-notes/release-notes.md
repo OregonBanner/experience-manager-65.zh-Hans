@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 381ab110ccf5605b17382b9c77693c819e31e3b6
 workflow-type: tm+mt
-source-wordcount: '3237'
+source-wordcount: '3224'
 ht-degree: 5%
 
 ---
@@ -152,7 +152,6 @@ ht-degree: 5%
 * 文本组件在添加到嵌套布局容器时未对齐。 (NPR-38193)
 * 当组件没有样式系统配置时，会显示空样式选项卡。 现在，当没有配置时，选项卡处于隐藏状态。 (NPR-38218) <!-- version 2 (old) of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * 资产 `useLegacyResponsiveBehaviour` 仅在经过身份验证后才可正常工作。 (NPR-37996)
-* 将jquery-ui升级到最新版本会导致编辑器损坏。 (SITES-5647)
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6514}
 
