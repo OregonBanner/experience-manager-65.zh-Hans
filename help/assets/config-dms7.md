@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 74e3d4204166280e8624298098042b8cb222c034
+source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
 workflow-type: tm+mt
-source-wordcount: '6253'
+source-wordcount: '6282'
 ht-degree: 3%
 
 ---
@@ -119,7 +119,11 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 1. 连接成功后，请设置以下内容。 带星号(*)的标题是必填项：
 
-   * **[!UICONTROL 公司]** -Dynamic Media帐户的名称。 您可以在Experience Manager中有一个Dynamic Media帐户。 <!-- CQDOC-19579 and CQDOC-19612 -->
+   * **[!UICONTROL 公司]** -Dynamic Media帐户的名称。
+      >[!IMPORTANT]
+      在Experience Manager实例上，仅支持Cloud Services中的一个Dynamic Media配置；请勿添加多个配置。 Experience Manager实例上的多个Dynamic Media配置是 _not_ 受Adobe支持或推荐。
+
+      <!-- CQDOC-19579 and CQDOC-19612 -->
 
       另请参阅 [配置Dynamic Media公司别名帐户](/help/assets/dm-alias-account.md).
 
