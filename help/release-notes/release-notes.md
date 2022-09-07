@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 381ab110ccf5605b17382b9c77693c819e31e3b6
+source-git-commit: 935698e6c8caabccb7bbe0aa9f45012d07163660
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3257'
 ht-degree: 5%
 
 ---
@@ -123,6 +123,7 @@ ht-degree: 5%
 * 条形码SSCC-18显示错误值。 Forms服务器会忽略条形码右侧的值。 (CQ-4342400)
 * 对于使用Forms 6.5 Designer创建的静态PDF forms,PDF辅助功能失败，并出现错误 `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
 * 添加了在Forms Designer中为超链接指定屏幕Reader文本的功能。(NPR-36221)
+* 如果向非XFA自适应表单添加可重复面板，且非XFA表单中可重复面板的计数超过15秒，则添加新实例可能最多需要7-8秒。 (NPR-37346)
 
 ## 集成 {#integrations-6514}
 
