@@ -7,9 +7,9 @@ user-guide-title: AEM 6.5经典UI创作用户指南
 user-guide-description: 本指南介绍在经典用户界面中在AEM中创作的概念。
 feature: Authoring
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '264'
 ht-degree: 84%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 84%
    + [选择您的 UI](author-env-select-ui.md)
    + [搜索](author-env-search.md)
    + [您的收件箱](author-env-inbox.md)
-   + [键盘快捷键 （在控制台中）](author-env-keyboard-shortcuts.md)
+   + [控制台的键盘快捷键](author-env-keyboard-shortcuts.md)
 + 创作 {#authoring}
    + [创作页面](classic-page-author.md)
    + [创作 - 环境和工具](classic-page-author-env-tools.md)
@@ -49,7 +49,6 @@ ht-degree: 84%
    + [使用标记](classic-feature-tags.md)
    + [基架](classic-feature-scaffolding.md)
    + [在设计模式中配置组件](classic-page-author-design-mode.md)
-   + [将 Search&amp;Promote 功能添加到您的页面](classic-feature-search-promote.md)
    + [组件](classic-page-author-default-components.md)
 + 工作流 {#workflows}
    + [参与工作流](classic-workflows-participating.md)

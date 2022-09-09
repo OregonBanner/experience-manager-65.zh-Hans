@@ -1,8 +1,8 @@
 ---
-title: 云服务配置
-seo-title: 云服务配置
+title: Cloud Service 配置
+seo-title: Cloud Service Configurations
 description: 您可以扩展现有实例以创建您自己的配置
-seo-description: 您可以扩展现有实例以创建您自己的配置
+seo-description: You can extend the existing instances to create your own configurations
 uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '564'
 ht-degree: 3%
 
 ---
 
-# 云服务配置{#cloud-service-configurations}
+# Cloud Service 配置{#cloud-service-configurations}
 
 配置旨在提供用于存储服务配置的逻辑和结构。
 
@@ -31,8 +31,8 @@ ht-degree: 3%
 * 配置（如属性/段落）从父级继承。
 * 按路径从分析节点引用。
 * 易于扩展。
-* 灵活地满足更复杂的配置需求，例如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)。
-* 支持依赖项(例如[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)插件需要[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)配置)。
+* 具有灵活性，可满足更复杂的配置(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* 支持依赖项(例如 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 插件需要 [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 配置)。
 
 ## 结构 {#structure}
 
@@ -53,7 +53,7 @@ ht-degree: 3%
    * 配置模板
    * 配置组件
 
-模板和组件必须从基本模板继承`sling:resourceSuperType`:
+模板和组件必须继承 `sling:resourceSuperType` 从基本模板：
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -71,7 +71,7 @@ ht-degree: 3%
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-并定义指向自定义组件的`resourceType`。
+并定义 `resourceType` 指向自定义组件。
 
 ```xml
 /libs/cq/analytics/templates/sitecatalyst
@@ -108,9 +108,9 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 `/etc/cloudservices/<service-name>`
 
-### 内容模型{#content-model}
+### 内容模型 {#content-model}
 
-内容模型将存储为`cq:Page`，位于：
+内容模型将存储为 `cq:Page` 下：
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -121,10 +121,10 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-配置存储在子节点`jcr:content`下。
+配置存储在子节点下 `jcr:content`.
 
-* 修复了对话框中定义的属性应直接存储在`jcr:node`上。
-* 动态元素（使用`parsys`或`iparsys`）使用子节点存储组件数据。
+* 修复了对话框中定义的属性应存储在 `jcr:node` 直接。
+* 动态元素(使用 `parsys` 或 `iparsys`)使用子节点存储组件数据。
 
 ```xml
 /etc/cloudservices/service/config/jcr:content as nt:unstructured
@@ -137,36 +137,36 @@ propertyname
 
 ### API {#api}
 
-有关API的参考文档，请参阅[com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
+有关API的参考文档，请参阅 [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
-### AEM集成{#aem-integration}
+### AEM集成 {#aem-integration}
 
-**页面属性**&#x200B;对话框的&#x200B;**Cloud Services**&#x200B;选项卡（任何从`foundation/components/page`或`wcm/mobile/components/page`继承的页面）中列出了可用服务。
+可用服务列在 **Cloud Services** 选项卡 **页面属性** 对话框(从 `foundation/components/page` 或 `wcm/mobile/components/page`)。
 
 选项卡还提供：
 
 * 可在其中启用服务的位置的链接
 * 从路径字段中选择配置（服务的子节点）
 
-#### 密码加密{#password-encryption}
+#### 密码加密 {#password-encryption}
 
 存储服务的用户凭据时，应加密所有密码。
 
-您可以通过添加隐藏的表单字段来实现此目的。 该字段的属性名称中应包含注释`@Encrypted`;例如，对于`password`字段，名称将写为：
+您可以通过添加隐藏的表单字段来实现此目的。 此字段应具有注释 `@Encrypted` 在资产名称中；例如 `password` 字段名称将写为：
 
 `password@Encrypted`
 
-然后，该属性将由`EncryptionPostProcessor`自动加密（使用`CryptoSupport`服务）。
+然后，该属性将自动加密(使用 `CryptoSupport` 服务) `EncryptionPostProcessor`.
 
 >[!NOTE]
 >
->这类似于标准` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)`注释。
+>这类似于标准 ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` 批注。
 
 >[!NOTE]
 >
->默认情况下，`EcryptionPostProcessor`仅加密对`/etc/cloudservices`发出的`POST`请求。
+>默认情况下， `EcryptionPostProcessor` 仅加密 `POST` 发出的请求 `/etc/cloudservices`.
 
-#### 服务页jcr:content节点{#additional-properties-for-service-page-jcr-content-nodes}的其他属性
+#### “服务”页jcr:content节点的其他属性 {#additional-properties-for-service-page-jcr-content-nodes}
 
 <table>
  <tbody>
@@ -176,7 +176,7 @@ propertyname
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>要自动包含在页面中的组件的引用路径。<br /> 此插件可用于其他功能和JS包含项。<br /> 这包括包含的页面上的组<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 件(通常在标记之 <code>body</code> 前)。<br /> 对于Analytics和Target，我们使用此功能包含其他功能，例如用于跟踪访客行为的JavaScript调用。</td>
+   <td>要自动包含在页面中的组件的引用路径。<br /> 此插件可用于其他功能和JS包含项。<br /> 这包括页面上的组件，其中<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> 包含(通常在 <code>body</code> 标记)。<br /> 对于Analytics和Target，我们使用此功能包含其他功能，例如用于跟踪访客行为的JavaScript调用。</td>
   </tr>
   <tr>
    <td>描述</td>
@@ -213,16 +213,17 @@ propertyname
  </tbody>
 </table>
 
-### 用例{#use-cases}
+### 用例 {#use-cases}
 
-默认提供以下服务：
+默认情况下，会提供以下服务：
 
-* [跟踪器片段](/help/sites-administering/external-providers.md) （Google、WebTrends等）
+* [跟踪器片段](/help/sites-administering/external-providers.md) (Google、WebTrends等)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
-* [Search&amp;Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
+
+<!-- Search&Promote is end of life as of September 1, 2022 * [Search&Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote) -->
 * [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 
 >[!NOTE]
 >
->另请参阅[创建自定义Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md)。
+>另请参阅 [创建自定义Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md).

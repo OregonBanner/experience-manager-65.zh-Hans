@@ -8,10 +8,10 @@ breadcrumb-title: Administering 指南
 user-guide-description: 了解如何管理 AEM。
 feature: Administering
 role: Admin
-source-git-commit: 8e8c829779e172441605a8abd2ef73623b95462d
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 34%
+source-wordcount: '630'
+ht-degree: 36%
 
 ---
 
@@ -112,7 +112,7 @@ ht-degree: 34%
    + [与第三方服务集成](third-party-services.md)
    + [与 Salesforce 集成](salesforce.md)
    + [与 Adobe Target 集成](target.md)
-   + [与Adobe学习管理器集成](adobe-learningmanager.md)
+   + [与 Adobe Learning Manager 集成](adobe-learningmanager.md)
    + [与 Adobe Analytics 集成](adobeanalytics.md)
    + [连接到Adobe Analytics和创建框架](adobeanalytics-connect.md)
    + [为 Adobe Analytics 配置链接跟踪](adobeanalytics-link.md)
@@ -124,11 +124,10 @@ ht-degree: 34%
    + [SharePoint连接器许可证、版权声明和免责声明](sharepoint-connector-licenses.md)
    + [SharePoint Connector](sharepoint-connector.md)
    + [DHTML 查看器生命周期结束常见问题解答](dhtml-viewer-endoflifefaqs.md)
-   + [与Adobe Campaign Classic集成](campaignonpremise.md)
+   + [与 Adobe Campaign Classic 集成](campaignonpremise.md)
    + [相关社区文章](related-community-articles.md)
    + [与Adobe Campaign Standard集成](campaignstandard.md)
    + [Flash 查看器生命周期终止通知](flash-viewers-eol.md)
-   + [产品信息源](product-feed.md)
    + [与AdobeDynamic Tag Management集成](dtm.md)
    + [选择加入Adobe Analytics和Adobe Target](opt-in.md)
    + [AEM门户和Portlet](aem-as-portal.md)
@@ -146,7 +145,6 @@ ht-degree: 34%
    + [与Adobe Target集成的先决条件](target-requirements.md)
    + [使用IMS与Adobe Target集成](integration-target-ims.md)
    + [Adobe 分类](adobeanalytics-classifications.md)
-   + [与AdobeSearch&amp;Promote集成](search-and-promote.md)
    + [解决方案集成](integration.md)
    + [将体验片段导出到 Adobe Target](experience-fragments-target.md)
    + [电子邮件模板最佳实践](best-practices-for-email-templates.md)

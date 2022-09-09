@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5版本中已弃用和已删除的功能。
 description: 以下发行说明特定于 Adobe Experience Manager 6.5 中已弃用和已删除功能。
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 40%
+source-wordcount: '1675'
+ht-degree: 27%
 
 ---
 
@@ -32,25 +32,10 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | [!DNL Sites] | 内容片段模板，用于创建简单的内容片段。 | 现已提供[基于模型的结构化内容片段](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud集成 | AEM 6.2中引入了“AEM到Creative Cloud文件夹共享”功能，以便创意用户能够从AEM访问资产，以便在 [!DNL Creative Cloud] 应用程序和上传新文件或将更改保存到AEM。 在 Creative Cloud 应用程序中发布的新功能“Adobe 资产链接”提供了更佳的用户体验，能够直接从 Photoshop、InDesign 和 Illustrator 中轻松访问 AEM Assets。Adobe 不打算进一步增强“AEM 到 Creative Cloud Folder Sharing”集成。虽然AEM中包含该功能，但建议客户使用替换解决方案。 | 建议客户切换到新的Creative Cloud集成功能，包括Adobe资产链接或AEM桌面应用程序。 |  |
 | Assets | `AssetDownloadServlet`默认情况下，对发布实例禁用 有关更多详细信息，请参阅 [AEM 安全核对清单](/help/sites-administering/security-checklist.md)。 | [AEM 安全核对清单](/help/sites-administering/security-checklist.md)中描述的配置。 |  |
-| 资产 | 如果用户没有足够的（读取和写入）权限，则 `/content/dam/collections`，则用户无法创建收藏集。 | 遵循用户的访问控制设置并确保具有适当的权限。 |  |
-| Adobe Search &amp; Promote | 已弃用与Adobe Search&amp;Promote的集成。 Adobe 不打算进一步增强 Search &amp; Promote 集成。Adobe Search&amp;Promote集成在弃用时仍完全受支持。 |  |  |
-| DTM 标记管理器 | 已弃用与 DTM (Dynamic Tag Manager) 的集成。 | 切换为使用 Adobe Experience Platform Launch 作为标记管理器。 |  |
-| Adobe Target | 通过添加AEM使用 [!DNL Adobe I/O] 在AEM 6.5中，基于Adobe Target Standard API(Rest API)，弃用了Target Classic API(XML)方式。 | 将集成重新配置到 [使用新API](/help/sites-administering/target.md). |  |
-| Adobe Target | 使用 `mbox.js` 已弃用AEM中与Adobe Target的基于集成。 | 切换使用 `at.js` 1.x。 |  |
-| 商务 | [CIF剩余](https://github.com/adobe/commerce-cif-api) 是在2018年作为一组微服务提供的，用于启用AEM与商务引擎之间的集成。 在2018年年中Adobe获得Magento后，Adobe决定改变其做法，原因有二。 Magento有其自己的一组商务API（REST和GraphQL），因此维护两组API并不是最佳做法。 市场趋势表明，客户正在向GraphQL转移，因为这是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，该框架使用Magento的GraphQL API作为真相来源。 Adobe不打算在CIF REST中进一步投资。 建议客户使用替换解决方案。 | 对于AEM-Magento集成，请切换到 [AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype) 和 [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components). 请参阅AEM和Adobe Commerce集成 [使用商务集成框架](/help/commerce/cif/integrating/magento.md). 我们的路线图上提供了对与新方法进行第三方(Magento除外)集成的支持。 |  |
-| 组件 (AEM Sites) | Adobe不打算进一步增强存储在 `/libs/foundation/components`. 查找 `cq:deprecated` 和 `cq:deprecatedReason` 属性。 AEM 6.5中包含Foundation组件，从早期版本升级的客户可以按原样继续使用它们。 此外，即使已弃用，也支持基础组件。 | Adobe建议将核心组件用于将来的项目。 现有网站可以保持原样或使用 [AEM现代化工具套件](https://github.com/adobe/aem-modernize-tools) 以重构网站以使用核心组件。 |  |
-| 组件 (AEM Sites) | 设计导入程序组件 `/libs/wcm/designimporter/components` 已从6.5开始标记为已弃用。Adobe不打算进一步增强设计导入程序的实施。 | Adobe计划在未来版本中提供用例的替代实施。 |  |
-| Foundation | Granite 卸载框架. Adobe不打算进一步增强CQ 5.6.1中引入的将资产处理外部化的卸载框架。 | Adobe 正在开发下一代云本机卸载框架。 |  |
-| 开发人员 | `Hobbes.js`. Adobe不打算进一步增强 `hobbes.js` 用户界面测试框架。 | Adobe建议客户使用Selenium自动化。 |  |
-| 开发人员 | jQuery UI 客户端库. Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 jQuery UI 客户端库 | Adobe建议仍需要jQuery UI才能使用代码的客户将其添加到项目代码库中。 |  |
-| 开发人员 | jQuery Animation客户端库(`granite.jquery.animation`)。 Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 jQuery Animation 客户端库 | Adobe建议仍需要jQuery动画作为代码的客户将其添加到项目代码库中。 |  |
-| 开发人员 | Handlebars 客户端库. Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 Handlebar 客户端库 | Adobe建议仍需要Handlebars代码的客户将其添加到项目代码库中。 |  |
-| 开发人员 | Lawnchair 客户端库. Adobe 不打算进一步维护和更新作为分发版（快速入门）的一部分提供的 Lawnchair 客户端库 | Adobe建议仍需要Lawnchair作为代码的客户将其添加到项目代码库中。 |  |
-| 开发人员 | `Granite.Sling.js` 客户端库。 Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Granite.Sling.js 客户端库 | Adobe建议依赖库功能的客户重新构建其代码，以便不再使用该代码。 |  |
-| 开发人员 | 使用 YUI 压缩/缩小 JavaScript 客户端库。Adobe 不打算进一步更新 YUI 库。在AEM 6.4之前，默认使用YUI来缩小JavaScript，并选择切换到Google关闭编译器(GCC)。 从 AEM 6.5 开始，默认使用 GCC。 | Adobe建议升级到AEM 6.5的客户转到GCC以进行实施 |  |
-| 开发人员 | 经典UI对话框编辑器CRXDE Lite。 Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 没有可替换项。 |  |
-| 表单 | AEM Forms与AEM Mobile集成已弃用。 | 无可替换项。 |  | 开发人员 | 经典UI对话框编辑器CRXDE Lite。 Adobe 不打算进一步增强作为分发版（快速入门）的一部分提供的 Classic UI Dialog Editor | 没有可替换项。 |  |
-| 开发人员 | Lodash/下划线客户端库。 Adobe不打算进一步维护和更新作为分发版（快速入门）一部分提供的Lodash/下划线客户端库 | Adobe建议仍要求代码使用长划线/下划线的客户将其添加到项目代码库中。 |  |
+<!-- Search&Promote is end-of-life September 1, 2022 | Assets | If a user does not have sufficient (read and write) permissions on `/content/dam/collections`, the user cannot create a Collection. | Honor the access control setup of user and ensure appropriate permissions. ||
+|Adobe Search & Promote|The integration with Adobe Search & Promote is deprecated. Adobe does not plan to make further enhancements to the Search & Promote integration. Adobe Search & Promote integration remains fully supported while being deprecated.||| -->
+| DTM标签管理器 |已弃用与DTM（动态标签管理器）的集成。 | 切换为使用 Adobe Experience Platform Launch 作为标记管理器. || |Adobe Target|添加AEM使用 [!DNL Adobe I/O] 在AEM 6.5中，基于Adobe Target Standard API(Rest API)，弃用了Target Classic API(XML)方式。|将集成重新配置为 [使用新API](/help/sites-administering/target.md). || |Adobe Target|使用 `mbox.js` 已弃用AEM中与Adobe Target的基于集成。|切换使用 `at.js` 1.x.|| |商务 | [CIF剩余](https://github.com/adobe/commerce-cif-api) 是在2018年作为一组微服务提供的，用于启用AEM与商务引擎之间的集成。 在2018年年中Adobe获得Magento后，Adobe决定改变其做法，原因有二。 Magento有其自己的一组商务API（REST和GraphQL），因此维护两组API并不是最佳做法。 市场趋势表明，客户正在向GraphQL转移，因为这是一种更高效的数据查询方式。 2019年，Adobe发布了新的商务集成框架，该框架使用Magento的GraphQL API作为真相来源。 Adobe不打算在CIF REST中进一步投资。 建议客户使用替换解决方案。|对于AEM-Magento集成，请切换到 [AEM CIF原型](https://github.com/adobe/aem-cif-project-archetype) 和 [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components). 请参阅AEM和Adobe Commerce集成 [使用商务集成框架](/help/commerce/cif/integrating/magento.md). 我们的路线图上提供了对与新方法进行第三方(Magento除外)集成的支持。|| |组件(AEM Sites) |Adobe不打算进一步增强存储在 `/libs/foundation/components`. 查找 `cq:deprecated` 和 `cq:deprecatedReason` 属性。 AEM 6.5中包含Foundation组件，从早期版本升级的客户可以按原样继续使用它们。 此外，即使已弃用，也支持基础组件。 |Adobe建议在将来的项目中使用核心组件。 现有网站可以保持原样或使用 [AEM现代化工具套件](https://github.com/adobe/aem-modernize-tools) 以重构网站以使用核心组件。 || |组件(AEM Sites)|设计导入程序组件 `/libs/wcm/designimporter/components` 已从6.5开始标记为已弃用。Adobe不打算进一步增强设计导入程序的实施。 |Adobe计划在未来版本中提供用例的替代实施。 || |基础|Granite卸载框架。 Adobe不打算进一步增强CQ 5.6.1中引入的将资产处理外部化的卸载框架。|Adobe正在开发下一代云原生卸载框架。||
+|开发人员|`Hobbes.js`. Adobe不打算进一步增强 `hobbes.js` 用户界面测试框架。|Adobe建议客户使用Selenium自动化。|| |开发人员|jQuery UI客户端库。 Adobe不打算进一步维护和更新作为分发（快速入门）|Adobe一部分提供的jQuery UI客户端库，该库建议仍需要jQuery UI才能将其代码添加到其项目代码库中的客户。|| |开发人员|jQuery动画客户端库(`granite.jquery.animation`)。 Adobe不打算进一步维护和更新作为分发（快速入门）|Adobe一部分提供的jQuery Animation客户端库，该客户端库建议仍需要jQuery Animations作为其代码的客户将其添加到其项目代码库中。|| |开发人员|Handlebars客户端库。 Adobe不打算进一步维护和更新作为分发（快速入门）|Adobe一部分提供的Handlebar客户端库，该库建议仍需要Handlebars代码的客户将其添加到其项目代码库中。|| |开发人员|Lawnchair客户端库。 Adobe不打算进一步维护和更新作为分发（快速入门）|Adobe一部分提供的Lawnchair客户端库，该库建议仍需Lawnchair的代码的客户将其添加到其项目代码库中。|| |开发人员|`Granite.Sling.js` 客户端库。 Adobe不打算进一步增强作为分发（快速入门）|Adobe一部分提供的Granite.Sling.js客户端库，该库建议依赖库功能的客户重构其代码以不再使用。|| |开发人员|使用YUI压缩/缩小JavaScript客户端库。 Adobe 不打算进一步更新 YUI 库。在AEM 6.4之前，默认使用YUI来缩小JavaScript，并选择切换到Google关闭编译器(GCC)。 从 AEM 6.5 开始，默认使用 GCC。|Adobe建议升级到AEM 6.5的客户转为使用GCC进行实施|| |开发人员|经典UI对话框编辑器处于CRXDE Lite中。 Adobe不打算进一步增强作为分发版（快速入门）一部分提供的经典UI对话框编辑器|无可替换项。 || |Forms|AEM Forms与AEM Mobile的集成已弃用。 |无可替换项。 ||开发人员|CRXDE Lite中的经典UI对话框编辑器。 Adobe不打算进一步增强作为分发版（快速入门）一部分提供的经典UI对话框编辑器|无可替换项。 || |开发人员|Lodash/下划线客户端库。 Adobe不打算进一步维护和更新作为分发版（快速入门）一部分提供的Lodash/下划线客户端库 |Adobe建议仍要求代码使用长划线/下划线的客户将其添加到项目代码库中。 ||
 
 ## 已删除功能 {#removed-features}
 
@@ -78,4 +63,4 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 | 区域 | 功能 | 公告 |
 |--- |--- |--- |
-| 基础 | UI 框架 | Adobe 计划在 2019 年弃用 Coral UI 2 组件。Coral UI 3 是随 AEM 6.2 引入的，而 AEM 6.5 完全基于 Coral 3。Adobe 建议使用 Coral 2 构建自定义 UI 的客户和合作伙伴将它们重构为使用 Coral 3。Adobe 将提供将 Coral 2 对话框转换为 Coral 3 的工具 - [阅读更多](/help/sites-developing/modernization-tools.md)。 |
+| Foundation | UI 框架 | Adobe 计划在 2019 年弃用 Coral UI 2 组件。Coral UI 3 是随 AEM 6.2 引入的，而 AEM 6.5 完全基于 Coral 3。Adobe 建议使用 Coral 2 构建自定义 UI 的客户和合作伙伴将它们重构为使用 Coral 3。Adobe 将提供将 Coral 2 对话框转换为 Coral 3 的工具 - [阅读更多](/help/sites-developing/modernization-tools.md)。 |
