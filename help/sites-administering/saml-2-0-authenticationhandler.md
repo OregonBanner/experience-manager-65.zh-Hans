@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: ffabf5a9e3b08f60394cecfe540692b161437362
+source-git-commit: c73d39a1c88c914cd63bc08fe8daf0ff37b4bf7c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM随a [SAML](https://saml.xml.org/saml-specifications) 身份验证处理程�
 >
 >默认情况下，SAML 2.0身份验证处理程序处于禁用状态。 要启用处理程序，必须至少设置以下属性之一：
 >
->* 身份提供程序POSTURL。
+>* 身份提供程序POSTURL或IDP URL。
 >* 服务提供商实体ID。
 >
 
@@ -57,7 +57,7 @@ AEM随a [SAML](https://saml.xml.org/saml-specifications) 身份验证处理程�
 
 **IDP证书别名** 全局信任存储中IdP证书的别名。 如果此属性为空，则禁用身份验证处理程序。 有关如何设置IdP证书的信息，请参阅下面的“将IdP证书添加到AEM TrustStore”一章。
 
-**身份提供程序URL** 应将SAML身份验证请求发送到的IDP的URL。 如果此属性为空，则禁用身份验证处理程序。
+**IDP URL** 应将SAML身份验证请求发送到的IDP的URL。 如果此属性为空，则禁用身份验证处理程序。
 
 >[!CAUTION]
 >
