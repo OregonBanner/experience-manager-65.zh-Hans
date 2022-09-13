@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2d12f1652a3b8ec4e6ca9c737dc844d1f53f7d08
+source-git-commit: 2bad64ebc94cf5b09149a8216648de763a6e30d0
 workflow-type: tm+mt
-source-wordcount: '5365'
+source-wordcount: '5369'
 ht-degree: 2%
 
 ---
@@ -417,7 +417,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包包含AEM For
 ### 配置字体管理器服务  {#configuring-the-font-manager-service}
 
 1. 登录到 [AEM Configuration Manager](http://localhost:4502/system/console/configMgr) 作为管理员。
-1. 找到并打开 **[!UICONTROL CQ-DAM-Handler-Gibson字体管理器]** 服务。 指定System Fonts 、 Customer Server Fonts和Customer Fonts目录的路径。 单击&#x200B;**[!UICONTROL 保存]**。
+1. 找到并打开 **[!UICONTROL CQ-DAM-Handler-Gibson字体管理器]** 服务。 指定System Fonts 、 Customer Server Fonts和Customer Fonts目录的路径。 单击“**[!UICONTROL 保存]**”。
 
    >[!NOTE]
    >
@@ -654,7 +654,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 **Microsoft® Windows**
 
-* 确保 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 安装Microsoft Office并取消所有应用程序的打开对话框。
+* 确保32位 [受支持版本 ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) 安装Microsoft Office并取消所有应用程序的打开对话框。
 * 确保在PDF配置UI中添加PDF生成器用户。
 * 确保PDF生成器用户是管理员组的成员，并且 [替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege) 为用户设置权限。
 * 确保在PDF生成器UI中配置了用户，并执行以下操作：
@@ -668,7 +668,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 **Linux®**
 
-* 确保 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Open Office安装后，所有应用程序的打开对话框都将取消，Office应用程序将成功启动。
+* 确保32位或64位 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Open Office安装后，所有应用程序的打开对话框都将取消，Office应用程序将成功启动。
 * 创建环境变量 `OpenOffice_PATH` 并将其设置为指向在 [控制台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt（设备树）配置文件。
 * 如果安装OpenOffice时出现问题，请确保 [32位库](#extrarequirements) OpenOffice安装所需的内容可用。
 
