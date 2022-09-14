@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 060bfb2ed3288b0ef9fbb5ba7f6b06ee027062b6
+source-git-commit: bc9168eb22f2ebe7ae5408d5e033e085e47c7438
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3636'
 ht-degree: 1%
 
 ---
@@ -831,6 +831,12 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
       - [!DNL Microsoft Office 2019]
       - [!DNL Microsoft Windows Server 2019]
       - [!DNL RHEL8]
-   - 2020年9月09日
 
-      - 已将支持的iOS for AEM Forms应用程序版本更改为iOS 12。 以前的版本是iOS 11。
+- 2020 年 12 月 3 日
+   - 随AEM Forms 6.5.7.0或更高版本一起为以下平台添加了支持：
+      - [!DNL Microsoft SQL Server 2019]
+
+- 2020年9月09日
+
+   - 已将支持的iOS for AEM Forms应用程序版本更改为iOS 12。 以前的版本是iOS 11。
+
