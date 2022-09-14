@@ -6,7 +6,7 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0b1080b99edaa3f0eb21d72bda82774ba3a21703
+source-git-commit: 0194abbdd9da1f89491678e0ad688d392af56423
 workflow-type: tm+mt
 source-wordcount: '3452'
 ht-degree: 1%

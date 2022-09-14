@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2bad64ebc94cf5b09149a8216648de763a6e30d0
+source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
 workflow-type: tm+mt
-source-wordcount: '5369'
+source-wordcount: '5389'
 ht-degree: 2%
 
 ---
@@ -650,7 +650,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 +++
 
-+++Open Office
++++OpenOffice
 
 **Microsoft® Windows**
 
@@ -668,7 +668,8 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 **Linux®**
 
-* 确保32位或64位 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Open Office安装后，所有应用程序的打开对话框都将取消，Office应用程序将成功启动。
+* 安装 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支持32位和64位版本。 安装后，打开所有OpenOffice应用程序，取消所有对话框窗口，然后关闭应用程序。 重新打开应用程序，并确保打开OpenOffice应用程序时不显示对话框。
+
 * 创建环境变量 `OpenOffice_PATH` 并将其设置为指向在 [控制台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt（设备树）配置文件。
 * 如果安装OpenOffice时出现问题，请确保 [32位库](#extrarequirements) OpenOffice安装所需的内容可用。
 
