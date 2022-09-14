@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 477e3d6d7e64a86726a71a8c554593441c94d5bc
+source-git-commit: a0612d10c91cf096403dad1c50b0884feeb10ec2
 workflow-type: tm+mt
-source-wordcount: '5388'
+source-wordcount: '5461'
 ht-degree: 2%
 
 ---
@@ -605,32 +605,29 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
    >
    > * 您可以使用srt_config.yaml文件配置的各种设置。 文件格式为：
 
-
-   ```
-      # =================================================================
-      # SRT Configuration
-      # =================================================================
-      #Note - follow correct format to avoid parsing failures
-      #e.g. <param name>:<space><param value> 
-      #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
-      locale: en
-   
-      #aemTempDir: AEM Temp direcotry
-      aemTempDir:
-   
-      #users: provide PDFG converting users list
-      #users:
-      # - user1
-      # - user2
-      users:
-   
-      #profile: select profile to run specific checks. Choose from [LCM], more will be added soon 
-      profile:
-   
-      #outputDir: directory where output files will be saved
-      outputDir:
-   ```
-
+       #=================================================================
+       # SRT配置
+       #=================================================================
+       #Note — 遵循正确的格式以避免解析失败
+       #e.g. &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       #locale:（必填字段）用于SRT的区域设置。 支持的区域设置[en/fr/de/ja]。
+       区域设置：en
+       
+       #aemTempDir:AEM Temp目录
+       aemTempDir:
+       
+       #users:提供PDFG转换用户列表
+       #users:
+       # — 用户1
+       # — 用户2
+       用户：
+       
+       #profile:选择要运行特定检查的配置文件。 从[LCM]中进行选择，不久将添加更多内容
+       用户档案：
+       
+       #outputDir:保存输出文件的目录
+       outputDir:
+   >
 1. 导航到 `[Path_of_reports_folder]`。打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
 
 ## 疑难解答
