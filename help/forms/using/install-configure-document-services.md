@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
+source-git-commit: e5b78a6f84fa0f9de746ca4ae69a8df4f474e305
 workflow-type: tm+mt
-source-wordcount: '5389'
+source-wordcount: '5388'
 ht-degree: 2%
 
 ---
@@ -659,7 +659,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 * 确保PDF生成器用户是管理员组的成员，并且 [替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege) 为用户设置权限。
 * 确保在PDF生成器UI中配置了用户，并执行以下操作：
    1. 使用Microsoft生成器用户登录到PDF® Windows。
-   1. 打开Microsoft® Office或Open Office应用程序并取消所有对话框。
+   1. 打开Microsoft® Office或OpenOffice应用程序并取消所有对话框。
    1. 将AdobePDF设置为默认打印机。
    1. 将Acrobat设置为PDF文件的默认程序。
    1. 使用Microsoft Office应用程序中的“文件”>“打印和Acrobat”功能区选项执行手动转换，并取消所有对话框。
