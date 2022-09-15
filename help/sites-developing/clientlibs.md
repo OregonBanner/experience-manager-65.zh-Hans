@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 684474d764ac2a2c187827382e0180e6c0d5259b
+source-git-commit: 7ceee6819618d785f04029b9ac1c6f763995b3ac
 workflow-type: tm+mt
 source-wordcount: '2861'
 ht-degree: 1%
@@ -224,7 +224,7 @@ Web客户端必须具有访问 `cq:ClientLibraryFolder` 节点。 您还可以�
 
 #### 特定于应用程序的客户端库文件夹 {#app-specific-client-library-folders}
 
-最佳做法是将所有与应用程序相关的文件保留在其应用程序文件夹下 `/apps`. 此外，最好还是拒绝网站访客访问 `/app` 文件夹。 要满足这两个最佳实践，请在下面创建一个客户端库文件夹 `/apps`，并使其可通过代理servlet访问，如 [查找客户端库文件夹并使用代理客户端库Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
+最佳做法是将所有与应用程序相关的文件保留在其应用程序文件夹下 `/apps`. 此外，最好还是拒绝网站访客访问 `/apps` 文件夹。 要满足这两个最佳实践，请在下面创建一个客户端库文件夹 `/apps`，并使其可通过代理servlet访问，如 [查找客户端库文件夹并使用代理客户端库Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
 
 使用类别属性标识要嵌入的客户端库文件夹。 要嵌入库，请向嵌入中添加资产 `cq:ClientLibraryFolder` 节点，使用以下属性属性：
 
