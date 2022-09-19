@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 11bad847558d295d1cf38aa9e8f246fc6fc3877b
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3826'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ ht-degree: 0%
 
    有关“创建通信”用户界面中各个模块可用的操作的更多信息，请参阅 [“创建通信”用户界面中可用的操作和信息](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
-1. 要查找内容模块，请使用“查找”字段。 输入内容模块的完整或部分名称或标题，以在通信中搜索内容模块。
+1. 要查找内容模块，请使用查找字段。 输入内容模块的完整或部分名称或标题，以在通信中搜索内容模块。
 1. 点按显示图标( ![显示](assets/display.png))，以在信件中显示或隐藏该内容。
 1. 要编辑内嵌或可编辑的文本模块，请点按 **编辑** 图标( ![edittextmodule](assets/edittextmodule.png))或在信件预览中双击相关文本模块。
 
@@ -289,6 +289,22 @@ ht-degree: 0%
 1. 定位 **[!UICONTROL 通信管理配置]** 然后单击它。
 1. 检查 **[!UICONTROL 在发布时管理信件实例]** 配置，然后单击 **[!UICONTROL 保存]**.
 
+### 启用保存草稿功能 {#enable-save-draft-feature}
+
+在发布信件或在发布实例上保存草稿之前，请执行以下步骤以启用另存为草稿功能：
+
+1. 使用以下URL打开服务器的Web控制台配置：https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr。
+
+1. 查找并单击 **编辑** 图标 *com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name* 设置。
+
+1. 在 *VersionRestoreManager创作URL* 字段中，指定相应创作实例的URL。
+
+1. 单击“保存”。
+
+的 *cq:lastReplicationAction*, *cq:lastreplaced* 和 *cq:lastReplicatedBy* 默认情况下，属性不会传递到发布实例。 要在发布实例中启用重新加载草稿，需要在发布实例中使用这些属性。
+
+为了继续 *cq:lastReplicationAction*, *cq:lastreplaced* 和 *cq:lastReplicatedBy* 要发布实例的属性，请将组件禁用为 *com.day.cq.replication.impl.ReplicationPropertiesFilterFactory* 使用URL在创作实例中：`http://server:port/system/console/components`
+
 打开信件实例的保存时，您可以选择在何处保存信件实例。 保存信件实例有两个选项：本地保存或远程保存。
 
 ### 本地保存 {#local-save}
@@ -359,4 +375,4 @@ AEM Forms通信管理在创建通信UI中将信件显示为HTML。 但是，通�
 
 1. 转到 `https://[system]:'port'/system/console/configMgr` 并且（如有必要）以管理员身份登录。
 1. 转到 **[!UICONTROL 通信管理配置]** > **[!UICONTROL 演绎版类型]** 选择 **HTML呈现** （默认）或 **PDF呈现**.
-1. 单击&#x200B;**[!UICONTROL 保存]**。
+1. 单击“**[!UICONTROL 保存]**”。
