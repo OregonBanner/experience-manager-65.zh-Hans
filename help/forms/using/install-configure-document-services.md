@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 26fbf8629715c983ccae9dcdee1defb279849107
+source-git-commit: 652f2f9b55857b8962f5bfd4edb85f3700866485
 workflow-type: tm+mt
-source-wordcount: '5461'
+source-wordcount: '5535'
 ht-degree: 2%
 
 ---
@@ -786,6 +786,15 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 * 您可以在Adobe产品首次发布后的7天内联机以完成在线激活和注册，或使用启用互联网的设备和产品序列号来完成此过程。 有关详细说明，请参阅 [脱机激活](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
 
 +++
+
++++ 无法在Windows Server上将Word或Excel文件转换为PDF
+
+当用户尝试在Microsoft Windows Server上将Word或Excel文件转换为PDF时，遇到以下错误：
+
+*来自主转换器的错误消息：ALC-PDG-015-003-The系统无法打开输入文件。 请再次提交您的文件或与系统管理员联系。*
+
+要解决此问题，请参阅 [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+
 
 ## 下面的步骤 {#next-steps}
 

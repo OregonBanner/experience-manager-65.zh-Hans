@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 633a9b6d972cf8b0bb102a7efd5eeb8e0b71a19e
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3814'
 ht-degree: 4%
 
 ---
@@ -330,7 +330,8 @@ ht-degree: 4%
 + 将AEM Forms与Experience Cloud解决方案集成 {#integrate-aem-forms-with-experience-cloud-solutions}
    + [在AEM Forms中创建定位体验](/help/forms/using/experience-targeting-forms.md)
    + [衡量并改进表单的有效性和转换](using/measure-improve-performance-forms-documents.md)
-   + [配置分析和报表](using/configure-analytics-forms-documents.md)
+   + [使用Cloud Service框架的Analytics](using/configure-analytics-forms-documents.md)
+   + [使用Launch的AnalyticsAdobe](using/integrate-aem-forms-with-adobe-analytics.md)
    + [查看和了解AEM Forms分析报表](using/view-understand-aem-forms-analytics-reports.md)
    + [创建和管理自适应表单的A/B测试](using/ab-testing-adaptive-forms.md)
 + 发布和处理AEM Forms {#publish-process-aem-forms}
@@ -683,6 +684,7 @@ ht-degree: 4%
 + 疑难解答 {#troubleshooting}
    + [无法将某些表单功能与某些版本的OracleJDK一起使用](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
    + [在JEE版本上获取带有附件的自适应Forms电子邮件的其他步骤](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
+   + [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
 + 旧版文档 {#legacy-documentation}
    + [使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据](developing/building-xml.md)
    + [在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](developing/compressing-decompressing-custom-dsc.md)
