@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
+source-git-commit: 1a383f0e620adf6968d912a9a1759e5ee020c908
 workflow-type: tm+mt
 source-wordcount: '3447'
 ht-degree: 1%
@@ -183,7 +183,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 编辑文件并添加设置所需的配置选项。
 1. 启动AEM。
 
-### 升级到1.10.x S3 Connector的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
+## 升级到1.10.x S3 Connector的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
 
 如果您需要升级到新版本的1.10.x S3连接器(例如，从1.10.0到1.10.4)，请执行以下步骤：
 
@@ -260,7 +260,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
  </tbody>
 </table>
 
-**数据存储缓存**
+### 数据存储缓存 {#data-store-caching}
 
 >[!NOTE]
 >
@@ -272,11 +272,11 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 缓存具有大小限制，可使用cacheSize参数对其进行配置。
 
-**下载**
+#### 下载 {#downloads}
 
 在从DataStore访问本地缓存之前，将检查所请求文件/blob的记录。 当缓存超出配置的限制时(请参阅 `cacheSize` 参数)时，会逐出某些文件以回收空间。
 
-**异步上传**
+#### 异步上传 {#async-upload}
 
 缓存支持异步上传到DataStore。 文件将在本地缓存中（在文件系统上）存放，异步作业开始上传文件。 异步上传的数量受暂存缓存大小的限制。 暂存缓存的大小通过使用 `stagingSplitPercentage` 参数。 此参数定义用于暂存缓存的缓存大小百分比。 此外，可下载的缓存百分比计算为 **(100 - `stagingSplitPercentage`) &#42;`cacheSize`**.
 
