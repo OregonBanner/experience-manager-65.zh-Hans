@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
+source-git-commit: 4c3cc888a7590fdbee9b7d7e441602e4ae3f54b0
 workflow-type: tm+mt
-source-wordcount: '3557'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,6 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 
 * 的 **管理员密码** 应在安装后进行更改，以确保 [安全](/help/sites-administering/security-checklist.md) 实例。
 * 不应进行其他更改，并且必须谨慎，因为这些更改会影响对存储库的访问。
-
-**维基邮件服务** 为Wiki发送的电子邮件配置电子邮件设置。
 
 **Apache Felix OSGi管理控制台** 配置：
 
@@ -249,7 +247,7 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 **Day Commons GFX字体助手** 在渲染图形时，可以使用DrawText嵌入文本。 为此，您还可以安装自己的字体：
 
 * 定义 **字体路径** 搜索项目特定字体。
-例如， `/apps/myapp/fonts`.
+例如：`/apps/myapp/fonts`。
 
 **Apache HTTP组件代理配置** 使用Apache HTTP客户端的所有代码的代理配置，在进行HTTP时使用；例如，复制时。
 
@@ -447,10 +445,6 @@ OSGi框架服务排名值用于指示调用此服务的顺序。 这是
 **Day Commons JDBC连接池** 配置对用作内容源的外部数据库的访问。
 
 这是工厂配置，因此可以配置多个实例。
-
-**Adobe CQ Media DPS会话服务** 管理DPS会话以与发布结合使用。
-
-特别是，您可以定义 `dps.session.service.url.name`:默认值设置为 [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions)
 
 **CDN重写程序** 必须确保AEM与CDN之间的通信，以便以安全的方式将资产/二进制文件交付给最终用户。 这包括两项任务：
 
