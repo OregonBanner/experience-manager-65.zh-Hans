@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 4c3cc888a7590fdbee9b7d7e441602e4ae3f54b0
+source-git-commit: 71c318e59f39b091f52650853be2d472354c2f1c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3474'
 ht-degree: 0%
 
 ---
@@ -243,11 +243,6 @@ OSGi &quot;*提供标准化的基元，允许应用程序从可重用的小组�
 * **脚本用户**  — 此可选属性可指定用于读取脚本的存储库用户帐户。 如果未指定帐户，则 `admin` 默认使用用户。
 
 * **默认扩展** 将使用默认行为的扩展的列表。 这意味着资源类型的最后一个路径段可用作脚本名称。
-
-**Day Commons GFX字体助手** 在渲染图形时，可以使用DrawText嵌入文本。 为此，您还可以安装自己的字体：
-
-* 定义 **字体路径** 搜索项目特定字体。
-例如：`/apps/myapp/fonts`。
 
 **Apache HTTP组件代理配置** 使用Apache HTTP客户端的所有代码的代理配置，在进行HTTP时使用；例如，复制时。
 
