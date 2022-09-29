@@ -2,10 +2,10 @@
 title: AEM Content and Commerce 2022发行说明
 description: AEM Content and Commerce 2022发行说明
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 6c5c37c1c365e1f03ea9b5c935adf63a33faba5d
+source-git-commit: 0fdff88695646603cec120d25f156f8c918686df
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 45%
+source-wordcount: '812'
+ht-degree: 47%
 
 ---
 
@@ -21,6 +21,21 @@ ht-degree: 45%
 | CIF核心组件 | [系统要求](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM 项目原型 | [系统要求](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## 发行日期：2022年9月
+
+| 组件 | 版本 | 详细信息 |
+|:-------|:-----:|---------------------:|
+| CIF附加组件 | 2022.09.20.00 | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
+| CIF核心组件 | 2.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.11.0) |
+| CIF Venia参考网站 | 2022.09.02 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.09.02) |
+
+### 新增功能 {#what-is-new-september}
+
+* 作者可以使用体验片段动态扩充产品列表(示例：在产品列表之间放置横幅)
+* 列表组件支持关联的产品/类别页面以动态显示相关页面
+* 支持Peregrine 12.5组件
+* 支持在产品Teaser和轮播中加载客户端价格
+
 ## 发行日期：2022年7月
 
 | 组件 | 版本 | 详细信息 |
@@ -29,8 +44,8 @@ ht-degree: 45%
 
 ### 新增功能 {#what-is-new-july}
 
-* 通过AEM页面属性以及产品驾驶舱中的概述将AEM页面与产品和类别关联
-   ![产品驾驶舱页面关联](/help/assets/CIF/product_cockpit_page_association.png)
+* 通过 AEM 页面属性以及产品主控室中的概述将 AEM 页面与产品和类别关联
+   ![产品主控室页面关联](/help/assets/CIF/product_cockpit_page_association.png)
 
 ## 发行日期：2022年6月
 
@@ -42,13 +57,13 @@ ht-degree: 45%
 
 ### 新增功能 {#what-is-new-june}
 
-* 产品目录扩充现在支持AEM页面。 这样，作者就可以管理页面 — 产品关联。
+* 产品目录扩充现在支持 AEM 页面。这使作者能够管理页面 – 产品关联。
 
-* 各种CIF核心组件改进
+* 多项 CIF 核心组件功能改进
 
 ### 错误修复 {#bug-fixes-june}
 
-* 将登录令牌添加到客户端价格获取
+* 将登录令牌添加到客户端价格获取流程
 
 * 数据层中的页面组件错误
 
