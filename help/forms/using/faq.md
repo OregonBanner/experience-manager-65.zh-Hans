@@ -12,7 +12,7 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 1e301f3991a18a594ac10a6548a0a645327dd4dd
+source-git-commit: f39102c938107b8ce01325499f29f00e287b5bcc
 workflow-type: tm+mt
 source-wordcount: '1995'
 ht-degree: 0%
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 1. 为什么HTML表单中显示的某些字体与设计表单时使用的字体不同？
 
-   答案：HTML5表单不嵌入字体(与将字体嵌入到表单中的PDF forms相反)。 要使表单的HTML版本按预期呈现，请确保在XDP中指定的字体在服务器和客户端计算机上可用。 如果服务器上没有所需的字体，则使用回退字体。 此外，如果您在表单模板中使用客户端设备上不可用的字体，则将使用浏览器的默认字体来呈现文本。
+   答案：HTML5 Forms不允许嵌入字体(与字体嵌入在表单中的PDF forms相反)。 对于要按预期呈现的表单HTML版本，请确保字体在AEM Forms服务器的CRX存储库(AEM内容存储库)以及安装了AEM Designer的计算机上可用。 当字体在AEM Forms服务器的CRX存储库中或在AEM Designer的安装位置不可用时，将使用回退字体呈现表单。
 
 1. vAlign和hAlign属性是否在HTML表单中受支持？
 
