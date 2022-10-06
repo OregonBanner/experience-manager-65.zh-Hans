@@ -46,7 +46,7 @@ ht-degree: 94%
 * 如果创建 Adobe Target（以前称为 Test&amp;Target）选件：
 
    1. [创建 Adobe Target 选件体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)。
-   1. [与 Adobe Target 集成。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
+   1. [与 Adobe Target 集成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ ht-degree: 94%
 
 * [Adobe Target 选件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
-   * [与 Adobe Target 集成。](/help/sites-administering/target.md)
+   * [与 Adobe Target 集成](/help/sites-administering/target.md)
 
 ### 添加新触点 {#adding-a-new-touchpoint}
 

@@ -1,8 +1,8 @@
 ---
 title: 流程报告简介
-seo-title: 流程报告简介
+seo-title: Introduction to Process Reporting
 description: AEM Forms在JEE流程报告中的简介和关键功能
-seo-description: AEM Forms在JEE流程报告中的简介和关键功能
+seo-description: Introduction and key capabilities of AEM Forms on JEE Process Reporting
 uuid: a7f2455b-1b09-41a7-817b-e2e7a1ff9936
 content-type: reference
 topic-tags: process-reporting
@@ -12,7 +12,7 @@ docset: aem65
 exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 此外，“流程报表”还提供了一个界面来运行临时查询，并将自定义报表视图集成到“流程报表”用户界面中。
 
-有关支持的浏览器列表，请参阅[AEM Forms支持的平台](/help/forms/using/aem-forms-jee-supported-platforms.md)。
+有关支持的浏览器列表，请参阅 [AEM Forms支持的平台](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
 流程报告基于以下模块：
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 * 将流程数据发布到嵌入的流程报表存储库
 * 提供基于浏览器的用户界面以查看报表
 
-## 关键功能{#key-capabilities}
+## 关键功能 {#key-capabilities}
 
-### 始终运行报表{#always-on-reporting}
+### 始终报告 {#always-on-reporting}
 
 ![站点管理](assets/site-management.png)
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 “流程报表”还提供了以CSV格式导出报表和查询数据的选项。
 
-### 临时报表{#adhoc-reports}
+### 临时报表 {#adhoc-reports}
 
 ![打印和颜色](assets/print-&-colour.png)
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 然后，您可以保存报表过滤器，以便在以后的日期或时间运行。
 
-### 进程/任务历史记录{#process-task-history}
+### 进程/任务历史记录 {#process-task-history}
 
 ![文件管理](assets/file-management.png)
 

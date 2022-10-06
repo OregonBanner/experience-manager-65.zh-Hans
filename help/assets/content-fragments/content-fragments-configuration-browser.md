@@ -1,5 +1,5 @@
 ---
-title: 内容片段 — 配置浏览器
+title: 内容片段 – 配置浏览器
 description: 了解如何在配置浏览器中启用某些内容片段功能，以便利用AEM功能强大的无头交付功能。
 feature: Content Fragments
 role: User
@@ -7,11 +7,11 @@ exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
 source-git-commit: 8dc8eff86ff25534a578dd227033aa185853d930
 workflow-type: tm+mt
 source-wordcount: '292'
-ht-degree: 21%
+ht-degree: 70%
 
 ---
 
-# 内容片段 — 配置浏览器{#content-fragments-configuration-browser}
+# 内容片段 – 配置浏览器{#content-fragments-configuration-browser}
 
 了解如何在配置浏览器中启用某些内容片段功能，以便利用AEM功能强大的无头交付功能。
 
@@ -19,29 +19,29 @@ ht-degree: 21%
 
 在使用内容片段之前，您需要使用 **配置浏览器** 启用：
 
-* **内容片段模型**  — 必填
-* **GraphQL永久查询**  — 可选
+* **内容片段模型** – 强制
+* **GraphQL 持久查询** – 可选
 
 >[!CAUTION]
 >
->如果未启用 **内容片段模型**:
+>如果未启用&#x200B;**内容片段模型**：
 >
->* the **创建** 选项将不可用于创建新模型。
->* 你将无法 [选择站点配置以创建相关的端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint).
+>* **“创建”**&#x200B;选项将不可用于创建新模型。
+>* 你将无法[选择 Sites 配置来创建相关的端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)。
 
 
 要启用内容片段功能，您需要：
 
-* 通过配置浏览器启用内容片段功能的使用
-* 将配置应用到Assets文件夹
+* 通过配置浏览器启用内容片段功能
+* 将配置应用到 Assets 文件夹
 
 ### 在配置浏览器中启用内容片段功能 {#enable-content-fragment-functionality-in-configuration-browser}
 
-至 [使用某些内容片段功能](#creating-a-content-fragment-model) you **必须** 首先，通过 **配置浏览器**:
+要[使用某些内容片段功能，](#creating-a-content-fragment-model) **必须**&#x200B;首先通过&#x200B;**配置浏览器**&#x200B;启用它们：
 
 >[!NOTE]
 >
->有关更多详细信息，另请参阅 [配置浏览器：](/help/sites-administering/configurations.md#using-configuration-browser).
+>有关更多详细信息，另请参阅[配置浏览器：](/help/sites-administering/configurations.md#using-configuration-browser)。
 
 >[!CAUTION]
 >
@@ -49,9 +49,9 @@ ht-degree: 21%
 
 1. 导航到&#x200B;**工具**、**常规**，然后打开&#x200B;**配置浏览器**。
 
-1. 使用 **创建** 要打开对话框，您需要：
+1. 使用&#x200B;**“创建”**&#x200B;来打开对话框，您需要：
 
-   1. 指定 **标题**.
+   1. 指定&#x200B;**标题**。
    1. 要启用其用法，请选择
       * **内容片段模型**
       * **GraphQL 持久查询**
@@ -59,7 +59,7 @@ ht-degree: 21%
       ![定义配置](assets/cfm-conf-01.png)
 
 
-1. 选择 **创建** 以保存定义。
+1. 选择&#x200B;**“创建”**&#x200B;以保存定义。
 
 <!-- 1. Select the location appropriate to your website. -->
 
@@ -67,6 +67,6 @@ ht-degree: 21%
 
 配置 **全球** ，则会应用于任何资产文件夹。
 
-要将其他配置（即不包括全局配置）与类似的 Assets 文件夹一起使用，您必须定义连接。这是通过在相应文件夹的“ **文件夹属性** ”的“云服务 **”选项卡中选****** 择相应的配置来完成的。
+要将其他配置（即不包括全局配置）与类似的 Assets 文件夹一起使用，您必须定义连接。这是通过在适当文件夹的&#x200B;**文件夹属性**&#x200B;的 **Cloud Services** 选项卡中选择适当的&#x200B;**配置**&#x200B;来完成的。
 
 ![应用配置](assets/cfm-conf-02.png)

@@ -1,8 +1,8 @@
 ---
 title: 编辑页面内容
-seo-title: 编辑页面内容
+seo-title: Editing Page Content
 description: 创建页面后，您可以编辑其内容，以进行所需的更新
-seo-description: 创建页面后，您可以编辑其内容，以进行所需的更新
+seo-description: Once your page is created you can edit the content to make the updates you require
 uuid: 5b4f0a8f-5196-42ea-8413-203783a0b77b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '3064'
+source-wordcount: '3045'
 ht-degree: 94%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 94%
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-* **注释**
+* **批注**
 
    允许您在审核页面时向页面中添加[注释](/help/sites-authoring/annotations.md)。添加第一个注释后，该图标将切换为数字，以指示页面上的注释数量。
 
@@ -106,9 +106,9 @@ ht-degree: 94%
 
 通知会列出正在针对页面运行的工作流。如果用户参与了当前工作流步骤，还可以使用[影响工作流状态](/help/sites-authoring/workflows-participating.md)和获取更多工作流相关信息的选项，例如：
 
-* **完成**  — 打开完成工 **作项** 对话框
+* **完成**  — 打开 **完成工作项** 对话框
 
-* **委派**  — 打开完成工 **作项** 对话框
+* **委派**  — 打开 **完成工作项** 对话框
 
 * **查看详细信息** - 打开工作流的&#x200B;**详细信息**&#x200B;窗口
 
@@ -165,7 +165,7 @@ ht-degree: 94%
 
 1. 选定的组件将添加到页面底部。根据需要[编辑](#editmovecopypastedelete)组件。
 
-### 使用资产浏览器插入组件  {#inserting-a-component-using-the-assets-browser}
+### 使用资产浏览器插入组件 {#inserting-a-component-using-the-assets-browser}
 
 您还可以通过从[资产浏览器](/help/sites-authoring/author-environment-tools.md#assets-browser)拖动资产来向页面添加新组件。这将自动创建相应类型的新组件（并且包含资产）。
 
@@ -304,14 +304,14 @@ ht-degree: 94%
 
    ![](do-not-localize/screen_shot_2018-03-22at113033.png)
 
-## 编辑（内容）{#edit-content}
+## 编辑（内容） {#edit-content}
 
 有两种方法可以在组件中添加和/或编辑内容：
 
 * 打开[组件编辑对话框](#component-edit-dialog)。
 * 通过从资产浏览器中[拖放资产](#draganddropintocomponent)来直接添加内容。
 
-### 组件编辑对话框  {#component-edit-dialog}
+### 组件编辑对话框 {#component-edit-dialog}
 
 您可以打开一个组件以使用[组件工具栏的编辑（铅笔）图标](#edit-configure-copy-cut-delete-paste)来编辑内容。
 
@@ -354,7 +354,7 @@ ht-degree: 94%
 | 视频 | Flash |
 | 内容片段 | 内容片段 |
 
-## 编辑（内容）全屏模式  {#edit-content-full-screen-mode}
+## 编辑（内容）全屏模式 {#edit-content-full-screen-mode}
 
 对于所有组件，都可以通过以下图标进入（和退出）全屏模式：
 
@@ -453,11 +453,11 @@ ht-degree: 94%
 
 如果页面基于[可编辑的模板](/help/sites-authoring/templates.md#editable-and-static-templates)，则可以通过选择[“页面信息”菜单](/help/sites-authoring/author-environment-tools.md#page-information)中的&#x200B;**编辑模板**，轻松地切换到[模板编辑器](/help/sites-authoring/templates.md#editing-templates-template-authors)。
 
-如果页面基于[静态模板](/help/sites-authoring/templates.md#editable-and-static-templates)，则可以使用工具栏上的[页面模式选择器](/help/sites-authoring/author-environment-tools.md#page-modes)切换到[设计模式](/help/sites-authoring/default-components-designmode.md)，以启用/禁用组件以在页面上使用。
+如果页面基于 [静态模板](/help/sites-authoring/templates.md#editable-and-static-templates)，您可以切换到 [设计模式](/help/sites-authoring/default-components-designmode.md) 使用 [页面模式选择器](/help/sites-authoring/author-environment-tools.md#page-modes) 启用/禁用组件以在页面上使用。
 
-您在[列视图](/help/sites-authoring/basic-handling.md#column-view)或[列表视图](/help/sites-authoring/basic-handling.md#list-view)中选择页面时，可以轻松地查看该页面所基于的模板。
+在[列视图](/help/sites-authoring/basic-handling.md#column-view)或[列表视图](/help/sites-authoring/basic-handling.md#list-view)中选择页面时，您可以轻松查看该页面所基于的模板。
 
-## Live Copy 状态  {#live-copy-status}
+## Live Copy 状态 {#live-copy-status}
 
 [“Live Copy 状态”页面模式](/help/sites-authoring/author-environment-tools.md#page-modes)允许快速查看 Live Copy 状态以及继承/未继承的组件。
 
@@ -472,7 +472,7 @@ ht-degree: 94%
 
 [注释](/help/sites-authoring/annotations.md)允许审核者和其他作者对内容提出反馈。该功能通常作审核和验证之用。
 
-## 预览页面  {#previewing-pages}
+## 预览页面 {#previewing-pages}
 
 可通过以下两个选项预览页面：
 
@@ -485,9 +485,7 @@ ht-degree: 94%
 >* 链接会在内容中显示，但在“编辑”模式下无法访问。
 >* 如果您希望使用链接进行导航，请使用任一预览选项。
 >* 使用[键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` 可在预览和最后选择的模式之间切换。
-
 >
-
 
 
 >[!NOTE]
@@ -506,7 +504,7 @@ ht-degree: 94%
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
-### 查看已发布的项目 {#view-as-published}
+### 以发布的形式查看 {#view-as-published}
 
 **查看已发布的项目**&#x200B;选项可从[页面信息](/help/sites-authoring/author-environment-tools.md#page-information)菜单中获取。这会在新选项卡中打开页面，刷新内容并准确显示页面在发布环境中呈现的原貌。
 
@@ -562,13 +560,13 @@ AEM 允许您锁定页面，这样其他人就无法修改页面内容。当您�
 >
 >也可使用[键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z` 撤消页面编辑操作。
 >
->也可使用键盘快捷键`Ctrl-Y`重做页面编辑操作。
+>键盘快捷键 `Ctrl-Y` 也可用于重做页面编辑操作。
 
 >[!NOTE]
 >
 >有关撤消和重做页面编辑时可执行操作的完整详细信息，请参阅[撤消和重做页面编辑 - 理论](#undoing-and-redoing-page-edits-the-theory)。
 
-## 撤消和重做页面编辑 - 理论 {#undoing-and-redoing-page-edits-the-theory}
+## 撤消和重做页面编辑 – 理论 {#undoing-and-redoing-page-edits-the-theory}
 
 >[!NOTE]
 >
@@ -587,9 +585,7 @@ AEM 会按照您执行操作的顺序来存储这些操作的历史记录，这�
 >* 只要您在执行撤消操作之后没有进行任何页面编辑，就可以执行重做操作。
 >* 最多可撤消 20 次编辑操作（默认设置）。
 >* 也可以使用[键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)执行撤消和重做操作。
-
 >
-
 
 
 您可以对以下类型的页面更改使用撤消和重做：

@@ -1,8 +1,8 @@
 ---
 title: 组件
-seo-title: 组件
+seo-title: Components
 description: AEM 附带多种现成的组件，这些组件为网站作者提供了全面功能。
-seo-description: AEM 附带多种现成的组件，这些组件为网站作者提供了全面功能。
+seo-description: AEM comes with a variety of out-of-the-box components that provide comprehensive functionality for website authors
 uuid: 55caeec3-add7-4d05-a620-07e33901adb7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '429'
 ht-degree: 97%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 * [配置属性](/help/sites-authoring/editing-page-properties.md)
 * [编辑内容](/help/sites-authoring/editing-content.md)
 
-* [编辑内容 - 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
+* [编辑内容 – 全屏模式](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
 有关将组件添加到页面的进一步信息，请参阅文章[编辑页面内容](/help/sites-authoring/editing-content.md)。组件会根据称为组件组的各种类别进行分类。此类组件组的示例包括：
 
@@ -52,13 +52,13 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 [组件控制台](/help/sites-authoring/default-components-console.md)对 AEM 安装提供的组件组和组件进行了概述。您可以查看有关单个组件及其用途的关键信息。
 
-## 组件 - 主要区域  {#components-major-areas}
+## 组件 - 主要区域 {#components-major-areas}
 
 以下页面提供了指向有关组件的一些其他重要信息的链接：
 
 * [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) - 核心组件提供了灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
 
-* [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。创建[社区站点](/help/communities/overview.md)时，会包含许多这些组件。
+* [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。当 [社区站点](/help/communities/overview.md) 创建时。
 
 * [电子商务](/help/commerce/cif-classic/administering/ecommerce.md) - AEM 中的电子商务功能也包含一系列组件。实际用途取决于所使用的商业引擎。
 
@@ -66,5 +66,5 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 除了作者可在标准安装中访问的组件外，还可使用各种其他组件。
 
-* 如果您的页面基于建议的现代化可编辑的模板，则可以通过[编辑模板](/help/sites-authoring/templates.md)来启用/禁用这些组件及编辑特定组件的参数。
+* 如果您的页面基于建议的现代化可编辑的模板，则可以通过[编辑模板](/help/sites-authoring/templates.md)来启用/禁用这些组件以及编辑特定组件的参数。
 * 如果您的页面基于静态模板，则可以使用[设计模式](/help/sites-authoring/default-components-designmode.md#enable-disable-components)启用/禁用这些组件及编辑特定组件的参数。

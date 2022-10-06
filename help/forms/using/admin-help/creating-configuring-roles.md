@@ -1,8 +1,8 @@
 ---
 title: 创建和配置角色
-seo-title: 创建和配置角色
+seo-title: Creating and configuring roles
 description: 了解如何将用户和组与已经属于用户管理数据库一部分的角色相关联。 您还可以创建、编辑和删除角色。
-seo-description: 了解如何将用户和组与已经属于用户管理数据库一部分的角色相关联。 您还可以创建、编辑和删除角色。
+seo-description: Learn how to associate users and groups with roles that are already part of the User Management database. You can also create, edit, and delete roles.
 uuid: e8e4331d-48e1-4fa9-8f44-f885f4ab1a54
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
 exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
@@ -23,23 +23,23 @@ ht-degree: 0%
 
 用户管理具有两种类型的角色：
 
-**可变角色：** 可以编辑和删除此类角色，也可以从这些角色类型中添加和删除角色权限。您创建的任何角色都被视为一个可变角色。 您可以添加或删除分配给可变角色的用户和组。
+**可变角色：** 可以编辑和删除此类角色，也可以从这些角色类型中添加和删除角色权限。 您创建的任何角色都被视为一个可变角色。 您可以添加或删除分配给可变角色的用户和组。
 
-**不可变角色：** “用户管理”中包含的默认角色是不可变角色。无法编辑或删除这些角色。 但是，您可以添加或删除分配给不可更改角色的用户和组。
+**不可变角色：** “用户管理”中包含的默认角色是不可变的角色。 无法编辑或删除这些角色。 但是，您可以添加或删除分配给不可更改角色的用户和组。
 
 也可以通过AEM表单API创建可变和不可变角色。
 
-## 默认角色{#default-roles}
+## 默认角色 {#default-roles}
 
 用户管理数据库中包含以下默认角色。
 
 **管理控制台用户：** 可以访问管理控制台。
 
-**应用程序管理员：** 可以使用所有Workbench功能。可以使用管理控制台中的“应用程序”和“服务”页面配置服务运行时属性、端点和安全性。
+**应用程序管理员：** 可以使用所有Workbench功能。 可以使用管理控制台中的“应用程序”和“服务”页面配置服务运行时属性、端点和安全性。
 
-**AEM forms管理员：** 可以为所有已安装的服务执行所有任务。
+**AEM Forms管理员：** 可以为所有已安装的服务执行所有任务。
 
-**安全管理员：** 控制“用户管理”设置，并管理与任何用户管理器域关联的用户和组
+**安全管理员：** 控制用户管理设置，并管理与任何用户管理器域关联的用户和组
 
 **服务用户：** 可以查看和调用任何服务
 
@@ -47,45 +47,45 @@ ht-degree: 0%
 
 **信任管理员：** 可以管理从管理控制台的“信任存储管理”页管理的PKI信任设置和PKI凭据
 
-### 其他默认角色{#additional-default-roles}
+### 其他默认角色 {#additional-default-roles}
 
 根据您安装的AEM Forms组件，可能还包含以下其他默认角色
 
 **文档上传应用程序用户：** 可以使用Flex Remoting上传文档。
 
-**Forms管理员：** 可以在管理控制台中从Forms页面查看和修改设置
+**Forms管理员：** 可以在管理控制台的Forms页面中查看和修改设置
 
 **AEM Forms Contentspace管理员：** 可以从管理控制台的“内容服务（已弃用）”页面中查看和修改设置
 
 **AEM Forms Contentspace用户：** 可以登录到Contentspace（已弃用）网页
 
-**Documentum Connector Administrator:** 可以从管理控制台的“EMC Documentum的连接器”页面查看和修改设置
+**Documentum Connector Administrator:** 可以从管理控制台的“ Connector for EMC Documentum ”页面查看和修改设置
 
-**AEM Forms FileNet Connector管理员：** 可以从管理控制台的“Connector for IBM FileNet”页中查看和修改设置
+**AEM Forms FileNet Connector管理员：** 可以从管理控制台的“IBM FileNet连接器”页面查看和修改设置
 
-**AEM forms IBM CM Connector管理员：** 可以从管理控制台的“IBM Connet Manager连接器”页面查看和修改设置
+**AEM forms IBM CM连接器管理员：** 可以从管理控制台的“IBM内容管理器的连接器”页面中查看和修改设置
 
-**Rights Management管理员：** 执行相关Rights Management页面上所有服务器配置所需的所有任务
+**Rights Management管理员：** 在相关Rights Management页上执行所有服务器配置所需的所有任务
 
 **Rights Management最终用户：** 可以访问Rights Management最终用户网页
 
 **Rights Management邀请用户：** 可以邀请用户
 
-**Rights Management管理受邀用户和本地用户：** 可以执行管理相关Rights Management页面上所有受邀用户和本地用户所需的任务
+**Rights Management管理受邀和本地用户：** 可以执行管理相关Rights Management页面上所有受邀和本地用户所需的任务
 
-**Rights Management策略集管理员：** 在相关Rights Management页面上执行所有策略集所需的所有任务
+**Rights Management策略集管理员：** 在相关Rights Management页上执行所有策略集所需的所有任务
 
 **Rights Management超级管理员：** 执行Rights Management页面中所需的所有任务
 
-**AEM Forms Workspace管理员：** 可以在管理控制台中从“工作区”页面查看和修改设置
+**AEM Forms Workspace管理员：** 可以在管理控制台的“工作区”页面中查看和修改设置
 
-***注意&#x200B;**:AEM Forms版本已弃用Flex Workspace。*
+***注释&#x200B;**:AEM Forms版本已弃用Flex Workspace。*
 
 **工作区用户：** 可以登录到工作区最终用户应用程序
 
 **输出管理员：** 可以在管理控制台的“输出”页面中查看和修改设置
 
-**PDFG管理员：** 可以从管理控制台的“PDF生成器”页面查看和修改设置
+**PDFG管理员：** 可以从管理控制台的“PDF生成器”页面中查看和修改设置
 
 **PDFG用户：** 可以访问PDF生成器的所有非管理功能
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 >
 >AEM Forms版本已弃用Flex Workspace。
 
-## 创建角色{#create-a-role}
+## 创建角色 {#create-a-role}
 
 1. 在管理控制台中，单击设置>用户管理>角色管理，然后单击新建角色。
 1. 在“角色名称”框中，键入角色的名称，（可选）键入角色的描述，然后单击“下一步”。
@@ -112,7 +112,7 @@ ht-degree: 0%
 1. 单击“确定”，然后单击“下一步”。
 1. 将此角色分配给用户和群组：
 
-   * 单击“查找用户/群组”。
+   * 单击查找用户/群组。
    * 在“查找”框中，键入您的搜索标准。
    * 选择名称、电子邮件或用户ID，然后选择“用户”、“组”或“用户和组”。
    * 选择域，选择要显示的结果数，然后单击“查找”。
@@ -121,7 +121,7 @@ ht-degree: 0%
 1. 要查看用户和群组详细信息，请选择实体。
 1. 单击“确定”，然后单击“完成”。
 
-## 编辑角色{#edit-a-role}
+## 编辑角色 {#edit-a-role}
 
 1. 在管理控制台中，单击设置>用户管理>角色管理，然后单击角色名称。
 
@@ -138,7 +138,7 @@ ht-degree: 0%
    * 要将角色分配给新用户和组，请单击查找用户/组，然后完成搜索信息。 选中每个用户和群组的复选框以将此角色分配给，单击确定，然后单击保存。
    * 要删除角色，请选中用户或组的复选框，单击取消分配，然后单击保存。
 
-## 删除角色{#delete-a-role}
+## 删除角色 {#delete-a-role}
 
 您可以删除您创建的任何角色，但不能删除产品中包含的默认AEM表单角色。
 
@@ -148,7 +148,7 @@ ht-degree: 0%
 
 1. 选中要删除的角色复选框，单击删除，然后单击确定。
 
-## 为用户和组分配角色{#assign-a-role-to-users-and-groups}
+## 为用户和组分配角色 {#assign-a-role-to-users-and-groups}
 
 1. 在管理控制台中，单击设置>用户管理>用户和群组。
 1. 指定要缩小搜索范围的信息，然后单击“查找”。 搜索结果列在页面底部。 您可以通过单击任意列标题对列表进行排序。
@@ -157,7 +157,7 @@ ht-degree: 0%
 
 您还可以使用“角色管理”页面来分配角色。
 
-## 确定为谁分配了{#determine-who-is-assigned-to-a-role}角色
+## 确定为谁分配了角色 {#determine-who-is-assigned-to-a-role}
 
 1. 在管理控制台中，单击设置>用户管理>角色管理，然后单击角色名称。
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 1. 在角色详细信息页面上，单击角色用户选项卡。 随即会显示与角色直接关联的用户和组列表。
 
-## 更改角色权限{#change-role-permissions}
+## 更改角色权限 {#change-role-permissions}
 
 您可以更改您创建的任何角色的权限。 您无法更改产品中包含的默认AEM表单角色的权限。
 
@@ -177,7 +177,7 @@ ht-degree: 0%
 1. 要更改这些权限，请单击查找权限，选中要添加到角色的权限复选框，单击确定，然后单击保存。
 1. 要删除权限，请选择该权限，单击“删除”，然后单击“保存”。
 
-### AEM forms权限{#aem-forms-permissions}
+### AEM forms权限 {#aem-forms-permissions}
 
 **ADD_REMOVE_ENDPOINT_PERM:** 添加、删除和修改服务的端点
 
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 **证书修改：** 修改信任存储中任何证书的信任设置
 
-**证书已读：** 读取信任存储中的任何证书
+**证书已读：** 在信任存储中读取任何证书
 
 **证书写入：** 将证书添加到信任存储
 
@@ -195,39 +195,39 @@ ht-degree: 0%
 
 **组件读取：** 读取系统中的任何组件
 
-**Contentspace管理员：** Contentspace（已弃用）管理员的权限
+**Contentspace管理员：** Contentspace（已弃用）管理员权限
 
-**Contentspace控制台登录：** Contentspace（已弃用）控制台登录的权限
+**Contentspace控制台登录：** Contentspace（已弃用）控制台登录权限
 
 **核心设置控制：** 在管理控制台的“核心系统设置”页面上管理设置
 
 **CREATE_VERSION_PERM:** 创建服务的新版本
 
-**凭据修改：** 修改信任存储中的任何签名凭据
+**凭据修改：** 在信任存储中修改任何签名凭据
 
-**凭据已读：** 读取信任存储中的任何签名凭据
+**凭据已读：** 在信任存储中读取任何签名凭据
 
 **凭据写入：** 将签名凭据添加到信任存储
 
-**CRL修改：** 修改信任存储中的任意CRL（证书吊销列表）
+**CRL修改：** 在信任存储中修改任何CRL（证书吊销列表）
 
-**CRL读取：** 读取信任存储中的任意CRL
+**CRL读取：** 在信任存储中读取任何CRL
 
 **CRL写入：** 将CRL添加到信任存储
 
-**委派：** 在资源上设置ACL
+**委托：** 在资源上设置ACL
 
-**DELETE_VERSION_PERM:** 删除服务的版本
+**DELETE_VERSION_PERM:** 删除服务版本
 
 **文档上传：** 在AEM表单中上传文档
 
-**域控制：** 创建、删除或修改任何用户管理域的设置，包括其身份验证和目录提供程序
+**域控件：** 创建、删除或修改任何用户管理域的设置，包括其身份验证和目录提供程序
 
 **事件类型编辑：** 编辑到事件类型
 
 **身份模拟控制：** 在用户管理器中模拟身份
 
-**INVOKE_PERM:** 调用服务上的所有操作
+**调用_PERM:** 对服务调用所有操作
 
 **LCDS数据模型控制：** 在数据服务中读取和部署数据模型
 
@@ -235,7 +235,7 @@ ht-degree: 0%
 
 **MODIFY_CONFIG_PERM:** 修改服务的配置
 
-**** 修改服务的版本
+**术语** 修改服务的版本
 
 **PDFGAdminPermission:** PDFG管理员
 
@@ -253,25 +253,25 @@ ht-degree: 0%
 
 **PERM_READER_扩展_WEB_APPLICATION:** 使用Acrobat Reader DC扩展Web应用程序
 
-**PERM_SP_ADMIN:** 管理SharePoint连接器设置
+**PERM_SP_ADMIN:** 管理SharePoint Connector设置
 
 **PERM_WORKSPACE_ADMIN:** 管理工作区设置
 
-**PERM_WORKSPACE_USER:** 登录到Workspace最终用户应用程序
+**PERM_WORKSPACE_USER:** 登录到工作区最终用户应用程序
 
-**主控制：** 管理任何域的用户和组，以及管理任何域中所有用户和组的角色分配
+**主要控制：** 管理任何域的用户和组，以及管理任何域中所有用户和组的角色分配
 
-**进程记录读取/删除：** 列出并检索工作流审核实例
+**进程记录读取/删除：** 列出和检索工作流审核实例
 
 **PROCESS_OWNER_PERM:** 查看趋势数据并对从流程创建的服务执行管理操作
 
-**读取：** 读取资源的内容
+**阅读：** 读取资源的内容
 
 **READ_PERM:** 读取或查看服务
 
 **续订断言：** 在用户管理中续订断言
 
-**存储库委派：** 在资源上设置ACL
+**存储库委托：** 在资源上设置ACL
 
 **存储库读取：** 读取资源的内容
 
@@ -285,19 +285,19 @@ ht-degree: 0%
 
 **Rights Management管理配置：** 管理服务器配置
 
-**Rights Management管理受邀用户和本地用户：** 管理受邀用户和本地用户
+**Rights Management管理受邀和本地用户：** 管理受邀用户和本地用户
 
 **Rights Management管理策略集：** 管理任何策略集中的所有策略和文档
 
-**Rights Management策略集添加协调器：** 添加、删除和更改策略集协调器的权限
+**Rights Management策略集添加协调器：** 添加、删除和更改策略集协调员的权限
 
 **Rights Management策略集创建策略：** 为策略集创建新策略
 
 **Rights Management策略集删除策略：** 从策略集中删除策略
 
-**Rights Management策略集编辑策略：** 编辑策略集中的策略
+**Rights Management策略集编辑策略：** 在策略集中编辑策略
 
-**Rights Management策略集管理文档发布者：** 在创建策略集时，为用户分配文档发布者角色。文档发布者是使用策略保护文档的用户。
+**Rights Management策略集管理文档发布者：** 创建策略集时，您会为用户分配文档发布者角色。 文档发布者是使用策略保护文档的用户。
 
 **Rights Management策略集删除协调器：** 从策略集中删除策略集协调器
 
@@ -315,21 +315,21 @@ ht-degree: 0%
 
 **服务激活：** 启动任何服务，使其可供调用
 
-**服务添加：** 将新服务部署到服务注册表。这包括添加新流程和流程变体
+**服务添加：** 将新服务部署到服务注册表。 这包括添加新流程和流程变体
 
 **服务停用：** 停止系统中的任何服务
 
-**服务删除：** 删除系统中的任何服务，包括进程和进程变体
+**服务删除：** 删除系统中的任何服务，包括流程和流程变体
 
 **服务调用：** 在运行时可用的服务注册表中调用任何服务
 
-**服务修改：** 修改系统中任何服务的配置属性。这包括在IDE中锁定和解锁服务，以及从服务中添加或删除端点
+**服务修改：** 修改系统中任何服务的配置属性。 这包括在IDE中锁定和解锁服务，以及从服务中添加或删除端点
 
-**服务已读：** 读取系统中的任何服务。这包括所有流程和流程变体
+**服务读取：** 阅读系统中的任何服务。 这包括所有流程和流程变体
 
-**SERVICE_AGENT_PERM:** 查看从进程创建的服务的数据并与进程实例交互
+**SERVICE_AGENT_PERM:** 查看从流程创建的服务的数据并与流程实例交互
 
-**SERVICE_MANAGER_PERM:** 对从进程创建的服务执行负载平衡和其他管理操作
+**SERVICE_MANAGER_PERM:** 对从流程创建的服务执行负载平衡和其他管理操作
 
 **START_STOP_PERM:** 启动或停止服务
 
@@ -337,7 +337,7 @@ ht-degree: 0%
 
 **遍历：** 在列表资源请求中包含资源或读取资源的元数据
 
-**写入：** 写入存储库元数据和内容
+**写：** 写入存储库元数据和内容
 
 **在Workbench中打开文件**
 
@@ -348,7 +348,7 @@ ht-degree: 0%
 * 服务调用
 * 服务读取
 
-## 从角色{#remove-a-user-or-group-from-a-role}中删除用户或组
+## 从角色中删除用户或组 {#remove-a-user-or-group-from-a-role}
 
 使用“角色管理”页可从特定角色中删除用户和组。 如果用户或组继承了角色分配，则不能在用户或组级别删除该角色。 从继承树中删除用户或组，或从父树中删除角色。
 

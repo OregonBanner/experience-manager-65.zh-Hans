@@ -1,10 +1,11 @@
 ---
 title: 使用AEM Headless获得首个体验的路径
 description: 在AEM无头开发人员历程的这一部分中，您将了解在AEM中实施首个无头体验的步骤（包括规划注意事项），并了解尽可能使路径顺畅的最佳实践。
-source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
+exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1982'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -135,7 +136,7 @@ ht-degree: 0%
 无论您的学习风格如何，Adobe都希望您在开始使用AEM Headless项目时取得成功。
 
 * 如果您希望继续 **了解无头概念和AEM无头技术**，则您应该通过下一步审阅文档来继续您的AEM无头历程 [如何将内容建模为AEM内容模型](model-your-content.md) 其中，您了解如何在AEM中构建内容结构模型。
-* 如果您愿意 **学习**，您可以跳转到 [AEM Headless动手操作入门教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) 在这里，您将通过实施一个简单的项目来公开AEM无头内容，从而直接进入AEM开发。
+* 如果您愿意 **学习**，您可以跳转到 [AEM Headless动手操作入门教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=zh-Hans) 在这里，您将通过实施一个简单的项目来公开AEM无头内容，从而直接进入AEM开发。
 
 ## 其他资源 {#additional-resources}
 
@@ -143,7 +144,7 @@ ht-degree: 0%
 
 * [AEM无头翻译历程](/help/journey-headless/translation/overview.md)  — 此文档历程使您能够广泛了解无头技术、AEM如何提供无头内容以及如何翻译无头内容。
 * [AEM Sites无头开发](/help/sites-developing/headless/introduction.md)  — 简要介绍AEM Headless开发人员的发展方向以及必要的功能
-* [AEM无头Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  — 使用这些动手实践教程探索如何使用各种选项通过AEM将内容交付到无头端点，并选择适合您的选项。
+* [AEM无头Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)  — 使用这些动手实践教程探索如何使用各种选项通过AEM将内容交付到无头端点，并选择适合您的选项。
 * [使用GraphQL API的无头内容管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses)  — 请阅读本课程，概述在AEM中实施的GraphQL API。 需要通过AdobeID进行身份验证。
 * [AEM指南WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql)  — 此GitHub项目包括高亮显示AEM GraphQL API的示例应用程序。
 * [Headless快速入门指南](/help/sites-developing/headless/introduction.md#getting-started)  — 为已了解AEM的用户快速介绍AEM无头功能。

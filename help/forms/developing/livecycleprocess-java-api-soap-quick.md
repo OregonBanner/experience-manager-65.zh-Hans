@@ -1,8 +1,8 @@
 ---
 title: LiveCycleProcess Java API(SOAP)快速入门
-seo-title: LiveCycleProcess Java API(SOAP)快速入门
-description: '使用LiveCycleProcess Java API(SOAP)快速启动可搜索进程实例、暂停进程实例、启动暂停的进程实例、终止进程实例、清除进程数据以及检索作业的状态。 '
-seo-description: 使用LiveCycleProcess Java API(SOAP)快速启动可搜索进程实例、暂停进程实例、启动暂停的进程实例、终止进程实例、清除进程数据以及检索作业的状态。
+seo-title: LiveCycleProcess Java API(SOAP)Quick Start
+description: 使用LiveCycleProcess Java API(SOAP)快速启动可搜索进程实例、暂停进程实例、启动暂停的进程实例、终止进程实例、清除进程数据以及检索作业的状态。
+seo-description: Use the LiveCycleProcess Java API (SOAP) Quick Start to search for process instances, suspend process instances, start suspended process instances, terminate process instances, purge process data, and retrieve the status of a job.
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
 contentOwner: admin
 content-type: reference
@@ -13,14 +13,14 @@ role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
 
-# LiveCycleProcess Java API(SOAP)快速入门{#livecycleprocess-java-api-soap-quick-start}
+# LiveCycleProcess Java API(SOAP)快速入门 {#livecycleprocess-java-api-soap-quick-start}
 
-Java API(SOAP)快速入门适用于流程。 *进程实例*&#x200B;是特定进程的出现，该进程是通过调用方法（如调用API）或从工作区中启动的。
+Java API(SOAP)快速入门适用于流程。 A *过程实例* 是由调用方法（如调用API）或从工作区中启动的特定进程的发生情况。
 
 [快速入门（SOAP模式）：使用Java API搜索进程实例](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
@@ -38,11 +38,11 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->如果您使用其他操作系统（如Unix），则位于“使用AEM Forms进行编程”中的快速入门将基于Forms，并将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 （请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+>如果您使用其他操作系统（如Unix），则位于“使用AEM Forms进行编程”中的快速入门将基于Forms，并将特定于窗口的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 (请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}搜索进程实例
+## 快速入门（SOAP模式）：使用Java API搜索进程实例 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
-以下Java代码示例搜索基于&#x200B;*MortgageLoan - Prebuild*&#x200B;进程的进程实例。
+以下Java代码示例会搜索基于 *抵押贷款 — 预建* 进程。
 
 ```java
  /*
@@ -158,7 +158,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}暂停进程实例
+## 快速入门（SOAP模式）：使用Java API暂停进程实例 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
 以下Java代码示例暂停一个进程实例。 要成功暂停进程实例，您需要在使用调用API调用长生命周期进程时获取的进程调用标识符。
 
@@ -250,7 +250,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}启动挂起的进程实例
+## 快速入门（SOAP模式）：使用Java API启动挂起的进程实例 {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
 以下Java代码示例将启动一个挂起的进程实例。
 
@@ -338,7 +338,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}终止进程实例
+## 快速入门（SOAP模式）：使用Java API终止进程实例 {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
 
 以下Java代码示例终止标识符值为756c22860a242fb101ec7a5bc0977fd6的进程实例。
 
@@ -429,9 +429,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}清除流程数据
+## 快速入门（SOAP模式）：使用Java API清除流程数据 {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-以下Java代码从名为&#x200B;*SecureDocument*&#x200B;的进程中清除数据。 过滤器用于指定清除名为&#x200B;*inValue*&#x200B;的进程变量大于200的进程实例的数据。
+以下Java代码从名为的流程中清除数据 *SecureDocument*. 过滤器用于指定清除那些进程实例(其中进程变量名为 *inValue* 大于200。
 
 ```java
  /*
@@ -536,7 +536,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}检索作业的状态
+## 快速入门（SOAP模式）：使用Java API检索作业的状态 {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
 
 以下代码示例检索10个AEM Forms作业的状态。
 

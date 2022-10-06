@@ -1,8 +1,8 @@
 ---
 title: 骨干互动
-seo-title: 骨干互动
+seo-title: Backbone interaction
 description: 有关在AEM Forms工作区中使用骨干JavaScript模型的概念信息。
-seo-description: 有关在AEM Forms工作区中使用骨干JavaScript模型的概念信息。
+seo-description: Conceptual information about use of Backbone JavaScript models in AEM Forms workspace.
 uuid: 040f42cb-3b76-4657-ba05-9e52647efb12
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,24 +12,24 @@ docset: aem65
 exl-id: 8fd9770b-6ec4-4b09-b6b2-47a5e5d40f79
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
 # 骨干互动{#backbone-interaction}
 
-Backbone是一个库，可帮助在Web应用程序中创建和遵循MVC架构。 Backbone的基本思想是将您的界面组织成逻辑视图，并由模型支持，每个模型在模型更改时都可以独立更新，而无需重绘页面。 有关Backbone的详细信息，请参阅[https://backbonejs.org](https://backbonejs.org/)。
+Backbone是一个库，可帮助在Web应用程序中创建和遵循MVC架构。 Backbone的基本思想是将您的界面组织成逻辑视图，并由模型支持，每个模型在模型更改时都可以独立更新，而无需重绘页面。 有关Backbone的详细信息，请参阅 [https://backbonejs.org](https://backbonejs.org/).
 
 一些关键概念如下：
 
-**骨干** 模型包含数据，以及与此数据相关的大多数逻辑。
+**骨干模型** 包含数据，以及与此数据相关的大多数逻辑。
 
-**骨干** 视图用于表示相应模型的状态。骨干视图实际上像控制器一样，监听用户点击等用户界面事件，或模拟事件（如数据更改），并根据需要修改用户界面。
+**骨干视图** 用于表示相应模型的状态。 骨干视图实际上像控制器一样，监听用户点击等用户界面事件，或模拟事件（如数据更改），并根据需要修改用户界面。
 
-**HTML模** 板（HTML模板）包装模板，其占位符由模型填充。
+**HTML模板** 包装模板，其中包含由模型填充的占位符。
 
-**AEM Forms工** 作区包含多个单独的组件。每个组件：
+**AEM Forms工作区** 包含多个单独的组件。 每个组件：
 
 * 表示单个逻辑用户界面元素。
 * 可以是类似组件的集合。
@@ -45,7 +45,7 @@ Backbone是一个库，可帮助在Web应用程序中创建和遵循MVC架构。
 
 在骨干视图中，有一个事件映射，它映射由于用户界面与相应处理程序的交互而可能出现的各种事件。 初始化组件后，将启动此映射。
 
-初始化视图时，视图会调用其相应的模型以从服务器获取数据。 视图所需的所有数据都可用后，视图会以HTML模板指定的格式呈现数据。 多个视图可以共享同一模型进行通信。
+初始化视图时，视图会调用其相应的模型以从服务器获取数据。 在视图所需的所有数据都可用后，视图会以HTML模板指定的格式呈现数据。 多个视图可以共享同一模型进行通信。
 
 ![](do-not-localize/aem_forms_workflow.png)
 

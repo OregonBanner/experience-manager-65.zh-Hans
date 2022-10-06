@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: 4472da2e9aa0b45e0d5f03bfdc53a2748d82cdb3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '5351'
+source-wordcount: '5317'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe建议对需要基于单页应用程序框架的客户端渲染的项目使用SPA编辑器(例如 _React_)。 [了解更多](/help/sites-developing/spa-overview.md)。
-
->[!NOTE]
->
->各种示例均基于Geometrixx示例内容，该内容不再随AEM一起提供，而已被We.Retail替换。 查看文档 [We.Retail参考实施](/help/sites-developing/we-retail.md#we-retail-geometrixx) 以了解如何下载和安装Geometrixx。
 
 设计网页，使其适应显示网页的客户端视区。 通过响应式设计，可以在多个设备上以两种方向有效地显示相同的页面。 下图演示了页面对视区大小更改做出响应的一些方式：
 

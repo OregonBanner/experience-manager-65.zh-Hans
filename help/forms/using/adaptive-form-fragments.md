@@ -1,18 +1,18 @@
 ---
 title: 自适应表单片段
-seo-title: 自适应表单片段
+seo-title: Adaptive form fragments
 description: 自适应表单提供了一种机制来创建表单区段，如面板或一组字段，以便在任何自适应表单中使用它。 您还可以将现有面板另存为片段。
-seo-description: 自适应表单提供了一种机制来创建表单区段，如面板或一组字段，以便在任何自适应表单中使用它。 您还可以将现有面板另存为片段。
+seo-description: Adaptive forms provides a mechanism to create a form segment, such as a panel or a group of fields, as use it in any adaptive form. You can also save an existing panel as fragment.
 uuid: bb4830b5-82a0-4026-9dae-542daed10e6f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -23,24 +23,24 @@ ht-degree: 0%
 
 自适应表单提供了一种便捷的机制，只需像面板或一组字段一样创建表单区段一次，即可在自适应表单中重复使用。 这些可重用的独立区段称为自适应表单片段。
 
-## 创建片段{#create-a-fragment}
+## 创建片段 {#create-a-fragment}
 
 您可以从头开始创建自适应表单片段，或将现有自适应表单中的面板另存为片段。
 
-### 从头开始创建片段{#create-fragment-from-scratch}
+### 从头开始创建片段 {#create-fragment-from-scratch}
 
-1. 登录AEM Forms创作实例，网址为https://[*hostname*]:[*port*]/aem/forms.html。
-1. 单击&#x200B;**创建>自适应表单片段**。
+1. 在https://登录AEM Forms创作实例&#x200B;[*主机名*]:[*端口*]/aem/forms.html。
+1. 单击 **创建>自适应表单片段**.
 1. 为片段指定标题、名称、描述和标记。
 
    >[!NOTE]
    >
    >确保为片段指定唯一名称。 如果已存在具有相同名称的其他片段，则无法创建该片段。
 
-1. 单击以打开&#x200B;**表单模型**&#x200B;选项卡，然后从&#x200B;**选择自**&#x200B;下拉菜单中，为片段选择以下模型之一：
+1. 单击以打开 **表单模型** ，并从 **选择自** 下拉菜单中，为片段选择以下模型之一：
 
    * **无**:指定从头开始创建片段，而不使用任何表单模型。
-   * **表单模板**:指定使用上传到AEM Forms的XDP模板创建片段。选择相应的XDP模板作为片段的表单模型。
+   * **表单模板**:指定使用上传到AEM Forms的XDP模板创建片段。 选择相应的XDP模板作为片段的表单模型。
 
    ![使用表单模板作为模型创建自适应表单](assets/form-template-model.png)
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
    此外，您还可以使用表单模板中未标记为片段的子表单创建自适应表单片段，方法是在下拉框中为子表单指定SOM表达式。
 
-   * **XML架构**:指定使用上传到AEM Forms的XML架构创建片段。您可以从可用的XML架构上传或选择作为片段的表单模型。
+   * **XML架构**:指定使用上传到AEM Forms的XML架构创建片段。 您可以从可用的XML架构上传或选择作为片段的表单模型。
 
    ![基于XML架构作为模型创建自适应表单片段](assets/xml-schema-model.png)
 
@@ -58,16 +58,16 @@ ht-degree: 0%
 
    ![从指定的XML架构模型中选择复杂类型](assets/complex-type.png)
 
-1. 单击&#x200B;**创建**，然后单击&#x200B;**打开**&#x200B;以在编辑模式下使用默认模板打开片段。
+1. 单击 **创建** 然后单击 **打开** 在编辑模式下使用默认模板打开片段。
 
-在编辑模式下，您可以将任何自适应表单组件从AEM Sidekick拖放到片段上。 有关自适应表单组件的信息，请参阅[创作自适应表单简介](../../forms/using/introduction-forms-authoring.md)。
+在编辑模式下，您可以将任何自适应表单组件从AEM Sidekick拖放到片段上。 有关自适应表单组件的信息，请参阅 [创作自适应表单简介](../../forms/using/introduction-forms-authoring.md).
 
 此外，如果您选择XML架构或XDP表单模板作为片段的表单模型，则内容查找器中会显示一个显示表单模型层次结构的新选项卡。 它允许您将表单模型元素拖放到片段上。 添加的表单模型元素将转换为表单组件，同时保留关联XDP或XSD中的原始属性。
 
-### 将面板另存为片段{#save-panel-as-a-fragment}
+### 将面板另存为片段 {#save-panel-as-a-fragment}
 
 1. 打开一个自适应表单，其中包含要另存为自适应表单片段的面板。
-1. 在面板工具栏中，单击&#x200B;**[!UICONTROL 另存为片段]**。 将打开另存为片段对话框。
+1. 在面板工具栏中，单击 **[!UICONTROL 另存为片段]**. 将打开另存为片段对话框。
 
    >[!NOTE]
    >
@@ -75,27 +75,27 @@ ht-degree: 0%
 
 1. 在片段创建对话框中，指定以下信息：
 
-   * **名称**:片段的名称。默认值是面板的元素名称。 它是必填字段。
+   * **名称**:片段的名称。 默认值是面板的元素名称。 它是必填字段。
       >[!NOTE]
       >
       >确保为片段指定唯一名称。 如果已存在具有相同名称的其他片段，则无法创建该片段。
 
-   * **标题**:片段的标题。默认值是面板的标题。
+   * **标题**:片段的标题。 默认值是面板的标题。
 
    * **描述**:片段的描述。
 
    * **标记**:片段的标记元数据。
 
-   * **目标路径**:保存片段的存储库路径。如果未指定路径，则会在包含自适应表单的节点旁边创建与片段名称同名的节点。 片段保存在此节点中。
+   * **目标路径**:保存片段的存储库路径。 如果未指定路径，则会在包含自适应表单的节点旁边创建与片段名称同名的节点。 片段保存在此节点中。
 
-   * **表单模型**:根据自适应表单的表单模型，此字段显示“XML **架构**”、“ **表单模板**”或“ **无**”。它是一个不可编辑的字段。
+   * **表单模型**:根据自适应表单的表单模型，此字段显示 **XML架构**, **表单模板**&#x200B;或 **无**. 它是一个不可编辑的字段。
 
-   * **片段模型根**:仅在基于XSD的自适应表单中显示。它指定片段模型的根。 您可以从下拉列表中选择&#x200B;**/**或XSD复杂类型。 请注意，仅当选择复杂类型作为片段模型根时，才能在另一个自适应表单中重复使用该片段。
-如果选择**/**&#x200B;作为片段模型根，则自根的完整XSD树将显示在自适应表单数据模型选项卡中。 对于复杂类型片段模型根，在自适应表单数据模型选项卡中只显示所选复杂类型的子体。
+   * **片段模型根**:仅在基于XSD的自适应表单中显示。 它指定片段模型的根。 您可以选择 **/** 或下拉列表中的XSD复杂类型。 请注意，仅当选择复杂类型作为片段模型根时，才能在另一个自适应表单中重复使用该片段。
+如果您选择 **/** 作为片段模型根，根中的完整XSD树在自适应表单数据模型选项卡中可见。 对于复杂类型片段模型根，在自适应表单数据模型选项卡中只显示所选复杂类型的子体。
 
-   * **XSD引用**:仅在基于XSD的自适应表单中显示。它显示XML架构的位置。
+   * **XSD引用**:仅在基于XSD的自适应表单中显示。 它显示XML架构的位置。
 
-   * **XDP参考**:仅在基于XDP的自适应表单中显示。它会显示XDP表单模板的位置。
+   * **XDP参考**:仅在基于XDP的自适应表单中显示。 它会显示XDP表单模板的位置。
 
    ![保存片段](assets/save-fragment.png)
 
@@ -105,29 +105,29 @@ ht-degree: 0%
 
    面板保存在存储库中的指定或默认位置。 在自适应表单中，面板将被片段的快照替换。 如下所示，“常规信息”面板及其子面板“个人信息和地址”将另存为片段。
 
-   要编辑片段，请单击面板工具栏中的&#x200B;**[!UICONTROL 编辑资产]** 。 片段在编辑模式下的新选项卡或窗口中打开。
+   要编辑片段，请单击 **[!UICONTROL 编辑资产]** 中。 片段在编辑模式下的新选项卡或窗口中打开。
 
    ![编辑片段](assets/edit-fragment.png)
 
-## 使用片段{#working-with-fragments}
+## 使用片段 {#working-with-fragments}
 
-### 配置片段外观{#configure-fragment-appearance}
+### 配置片段外观 {#configure-fragment-appearance}
 
 您在自适应表单中插入的任何片段都显示为占位符图像。 占位符在片段中显示最多十个子面板的标题。 您可以配置AEM Forms以显示完整片段，而不是占位符图像。
 
 执行以下步骤以在表单中显示完整片段：
 
-1. 转到位于https:[*host*]:[*port*]/system/console/configMgr的AEM Web控制台配置页。
+1. 转到位于https的AEM Web控制台配置页面：[*主机*]:[*端口*]/system/console/configMgr。
 
-1. 搜索并单击&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道配置]**&#x200B;以在编辑模式下将其打开。
-1. 禁用&#x200B;**[!UICONTROL 启用占位符代替片段]**&#x200B;复选框以显示完整片段，而不是占位符图像。
+1. 搜索并单击 **[!UICONTROL 自适应表单与交互式通信Web信道配置]** 以在编辑模式下将其打开。
+1. 禁用 **[!UICONTROL 启用占位符代替片段]** 复选框以显示完整片段，而不是占位符图像。
 
-### 在自适应表单{#insert-a-fragment-in-an-adaptive-form}中插入片段
+### 在自适应表单中插入片段 {#insert-a-fragment-in-an-adaptive-form}
 
 您创建的自适应表单片段显示在AEM内容查找器的自适应表单片段选项卡中。 要在自适应表单中插入自适应表单片段，请执行以下操作：
 
 1. 在编辑模式下打开自适应表单，您要在其中插入自适应表单片段。
-1. 单击侧栏中的&#x200B;**Assets** ![assets-browser](assets/assets-browser.png)。 在资产浏览器中，从下拉菜单中选择&#x200B;**自适应表单片段**。
+1. 单击 **资产** ![assets-browser](assets/assets-browser.png) 中。 在资产浏览器中，选择 **自适应表单片段** 从下拉菜单中。
 
    您还可以选择显示所有自适应表单片段，或根据表单模型（“表单模板”、“XML架构”或“基本”）进行筛选。
 
@@ -139,9 +139,9 @@ ht-degree: 0%
 
 自适应表单片段由引用插入到自适应表单中，并与独立的自适应表单片段同步。 这意味着当您更新自适应表单片段时，所做的更改将反映在使用该片段的所有自适应表单中。
 
-### 在自适应表单{#embed-a-fragment-in-adaptive-form}中嵌入片段
+### 在自适应表单中嵌入片段 {#embed-a-fragment-in-adaptive-form}
 
-您可以通过单击&#x200B;**嵌入资产，选择在自适应表单中嵌入自适应表单片段：*fragmentName*>**&#x200B;按钮，位于添加片段的面板工具栏上，如以下示例图像所示。
+您可以通过单击 **嵌入资产：&lt;*fragmentName*>** 按钮，如以下示例图像中所示。
 
 ![在自适应表单中嵌入表单片段](assets/embed-fragment.png)
 
@@ -149,15 +149,15 @@ ht-degree: 0%
 >
 >嵌入式片段不再与独立片段链接。 您可以从自适应表单中编辑嵌入片段中的组件。
 
-### 在片段{#using-fragments-within-fragments}中使用片段
+### 在片段中使用片段 {#using-fragments-within-fragments}
 
 您可以创建嵌套的自适应表单片段，这意味着您可以将一个片段拖放到另一个片段中，并且可以具有嵌套的片段结构。
 
-### 更改片段{#change-fragments}
+### 更改片段 {#change-fragments}
 
-您可以使用自适应表单片段面板的编辑组件对话框中的&#x200B;**选择片段资产**&#x200B;属性，将自适应表单片段替换或由另一个片段更改。
+您可以使用 **选择片段资产** 属性。
 
-## 数据绑定{#auto-mapping-of-fragments-for-data-binding}的片段自动映射
+## 为数据绑定自动映射片段 {#auto-mapping-of-fragments-for-data-binding}
 
 使用XFA表单模板或XSD复杂类型创建自适应表单片段并将片段拖放到自适应表单时，XFA片段或XSD复杂类型将自动替换为相应的自适应表单片段，其片段模型根目录映射到XFA片段或XSD复杂类型。
 
@@ -167,13 +167,13 @@ ht-degree: 0%
 >
 >您还可以从AEM内容查找器的自适应表单片段库中拖放绑定的自适应表单片段，并从自适应表单片段面板的编辑组件对话框中提供正确的绑定引用。
 
-## 管理片段{#manage-fragments}
+## 管理片段 {#manage-fragments}
 
 您可以使用AEM Forms UI对自适应表单片段执行多项操作。
 
 1. 转到 `https://[hostname]:'port'/aem/forms.html`.
 
-1. 单击AEM Forms UI工具栏中的&#x200B;**选择**，然后选择自适应表单片段。 工具栏显示您可以对所选自适应表单片段执行的以下操作。
+1. 单击 **选择** 在AEM Forms UI工具栏中，选择一个自适应表单片段。 工具栏显示您可以对所选自适应表单片段执行的以下操作。
 
 <table>
  <tbody>
@@ -183,15 +183,15 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>打开</p> </td>
-   <td><p>在编辑模式下打开所选的自适应表单片段。<br /> <br /> </p> </td>
+   <td><p>在编辑模式下打开选定的自适应表单片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>查看属性</p> </td>
-   <td><p>打开“属性”面板。 从“属性”面板中，您可以查看和编辑属性、生成预览以及上传选定片段的缩略图。 有关更多信息，请参阅<a href="../../forms/using/manage-form-metadata.md" target="_blank">管理元数据</a>。<br /> <br /> </p> </td>
+   <td><p>打开“属性”面板。 从“属性”面板中，您可以查看和编辑属性、生成预览以及上传选定片段的缩略图。 有关更多信息，请参阅 <a href="../../forms/using/manage-form-metadata.md" target="_blank">管理元数据</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>复制</p> </td>
-   <td><p>复制所选片段。 “粘贴”按钮显示在工具栏中。<br /> <br /> </p> </td>
+   <td><p>复制所选片段。 “粘贴”按钮将显示在工具栏中。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>下载</p> </td>
@@ -199,19 +199,19 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>预览</p> </td>
-   <td><p>提供用于通过将XML文件中的数据与片段合并来以HTML或自定义预览形式预览片段的选项。 有关更多信息，请参阅<a href="/help/forms/using/previewing-forms.md" target="_blank">预览表单</a>。<br /> <br /> </p> </td>
+   <td><p>提供用于通过将XML文件中的数据与片段合并来将片段作为HTML或自定义预览来预览的选项。 有关更多信息，请参阅 <a href="/help/forms/using/previewing-forms.md" target="_blank">预览表单</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>开始审阅/管理审阅</p> </td>
-   <td><p>允许启动和管理所选片段的审阅。 有关更多信息，请参阅<a href="../../forms/using/create-reviews-forms.md" target="_blank">创建和管理审阅</a>。<br /> <br /> </p> </td>
+   <td><p>允许启动和管理所选片段的审阅。 有关更多信息，请参阅 <a href="../../forms/using/create-reviews-forms.md" target="_blank">创建和管理审阅</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>创建字典</p> </td>
-   <td><p>生成用于本地化所选片段的字典。 有关更多信息，请参阅<a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">本地化自适应表单</a>。<br /> <br /> </p> </td>
+   <td><p>生成用于本地化所选片段的字典。 有关更多信息，请参阅 <a href="/help/forms/using/lazy-loading-adaptive-forms.md" target="_blank">本地化自适应表单</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>发布/取消发布</p> </td>
-   <td><p>发布/取消发布所选片段。<br /> <br /> </p> </td>
+   <td><p>发布/取消发布选定的片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>删除</p> </td>
@@ -220,7 +220,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-## 本地化包含片段{#localizing-adaptive-form-containing-fragments}的自适应表单
+## 本地化包含片段的自适应表单 {#localizing-adaptive-form-containing-fragments}
 
 要将包含自适应表单片段的自适应表单本地化，您需要将片段和表单分别本地化。 其思想是将片段本地化一次，然后在多个自适应表单中重复使用。
 
@@ -228,7 +228,7 @@ ht-degree: 0%
 >
 >片段中的本地化键不会显示在自适应表单的XLIFF文件中。
 
-## 使用片段{#key-points-to-remember-when-working-with-fragments}时要记住的要点
+## 使用片段时要记住的要点 {#key-points-to-remember-when-working-with-fragments}
 
 * 确保片段名称是唯一的。 如果存在具有相同名称的现有片段，则无法创建该片段。
 * 在基于XDP的自适应表单中，如果将面板另存为包含其他XDP片段的片段，则生成的片段将自动绑定到子XDP片段。 如果是基于XSD的自适应表单，则生成的片段将绑定到架构根。
@@ -240,9 +240,9 @@ ht-degree: 0%
 * 发布自适应表单时，您需要发布由引用插入到自适应表单中的独立自适应表单片段。
 * 重新发布更新的自适应表单片段时，所做的更改将反映在使用片段的自适应表单的已发布实例中。
 * 包含验证组件的自适应表单不支持匿名用户。 此外，不建议在自适应表单片段中使用验证组件。
-* （**仅限Mac**）要确保表单片段功能在所有情况下都能正常工作，请将以下条目添加到/private/etc/hosts文件中：
+* (**仅Mac**)要确保表单片段功能在所有情况下都能正常工作，请将以下条目添加到/private/etc/hosts文件中：
    `127.0.0.1 <Host machine>` **主机**:部署了AEM Forms的Apple Mac计算机。
 
-## 引用片段{#reference-fragments}
+## 引用片段 {#reference-fragments}
 
-可以使用引用可用于创建表单的自适应表单片段。 有关更多信息，请参阅[引用片段](../../forms/using/reference-adaptive-form-fragments.md)。
+可以使用引用可用于创建表单的自适应表单片段。 有关更多信息，请参阅 [引用片段](../../forms/using/reference-adaptive-form-fragments.md).

@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
-feature: 升级
+feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '413'
 ht-degree: 4%
 
 ---
 
 # Dynamic Media 6.5中的Adobe Experience Manager存储库重组 {#dynamic-media-repository-restructuring-in-aem}
 
-如父级[Adobe Experience Manager 6.5](/help/sites-deploying/repository-restructuring.md)中的存储库重组页面中所述，升级到Experience Manager6.5的客户应使用此页面评估与影响Dynamic Media的存储库更改相关的工作量。 某些更改在Experience Manager6.5升级过程中需要工作，而其他更改可能会推迟到将来的升级。
+如父项中所述 [Adobe Experience Manager 6.5中的存储库重组](/help/sites-deploying/repository-restructuring.md) 页面中，升级到Experience Manager6.5的客户应使用此页面来评估与影响Dynamic Media的存储库更改相关的工作量。 某些更改在Experience Manager6.5升级过程中需要工作，而其他更改可能会推迟到将来的升级。
 
 **未来升级前**
 
@@ -116,7 +116,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><strong>重组指导</strong></td>
-   <td><p>1.取消发布YouTube<br /> 2中的所有视频。 使用新的TouchUI（从<code>/conf</code>）创建YouTube配置，包括从旧位置<br /> 3复制所有通道。 将所有视频发布回YouTube。</p> <p>此工作流会生成新的YouTube URL。 如果在创建触屏UI YouTube配置之前未取消发布，则在“属性”下方会列出多个YouTube URL，因为如果有机会，重新创建的渠道会再次发布。 此功能意味着您在“属性”下列出了无用的URL。</p> </td>
+   <td><p>1.从YouTube取消发布所有视频<br /> 2. 使用新的触屏UI创建YouTube配置(从 <code>/conf</code>)，包括从旧位置复制所有渠道<br /> 3. 将所有视频发布回YouTube。</p> <p>此工作流会生成新的YouTube URL。 如果在创建触屏UI YouTube配置之前未取消发布，则在“属性”下方会列出多个YouTube URL，因为如果有机会，重新创建的渠道会再次发布。 此功能意味着您在“属性”下列出了无用的URL。</p> </td>
   </tr>
   <tr>
    <td><strong>注释</strong></td>

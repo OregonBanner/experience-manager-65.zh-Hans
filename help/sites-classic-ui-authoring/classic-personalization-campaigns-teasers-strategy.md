@@ -1,8 +1,8 @@
 ---
 title: Teaser 和战略
-seo-title: Teaser 和战略
+seo-title: Teasers and Strategies
 description: 营销活动通常使用 Teaser 作为吸引特定区段的访客群体访问其关注的内容的机制。可以对特定营销活动定义一个或多个 Teaser。
-seo-description: 营销活动通常使用 Teaser 作为吸引特定区段的访客群体访问其关注的内容的机制。可以对特定营销活动定义一个或多个 Teaser。
+seo-description: Campaigns often use teasers as a mechanism to entice a specific segment of the visitor population through to content focused on their interests. One or more teasers are defined for a specific campaign.
 uuid: c78ec858-4b0a-48d5-99b2-5ddd9e15183d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 27b8302c-250b-4ce6-b3cf-c938738f2d92
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1216'
 ht-degree: 89%
 
 ---
@@ -26,27 +26,27 @@ ht-degree: 89%
 >
 >AEM 6.2 中已弃用 Teaser 组件。请改为使用 [Target 组件](/help/sites-authoring/content-targeting-touch.md)。
 
-* **品牌** 页面存储在网站的“营销活动”部分中。品牌包含多个单独的营销活动。
-* **促销** 活动页面存储在网站的促销活动部分中。每个营销活动都有单独的页面，该页面包含 Teaser 定义。容器或概述页面也包含有关单独的 Teaser 页面的特定信息和统计数据。
+* **品牌页面** 存储在网站的“营销活动”部分中。 品牌包含多个单独的营销活动。
+* **促销活动页面** 存储在网站的“营销活动”部分中。 每个营销活动都有单独的页面，该页面包含 Teaser 定义。容器或概述页面也包含有关单独的 Teaser 页面的特定信息和统计数据。
 
 AEM 中的 Teaser 由若干部分组成：
 
-* **Teaser页** 面存储在相应的营销活动页面下，并保存每个特定营销活动可用的Teaser段落定义。在显示 Teaser 段落时，需使用这些定义；包括内容变体，以及要用于选择变体和提升因子的区段。
-* **Teaser 组件**&#x200B;开箱即用，使用它可以在内容页面中创建特定 Teaser 段落的实例。您可以从 Sidekick 拖动 Teaser 组件，然后指定 Teaser 定义，以便创建自己的 Teaser 段落。**注意：** AEM 6.2中已弃用Teaser组件。请改用Target [组](/help/sites-authoring/content-targeting-touch.md) 件。
+* **Teaser页面** 存储在相应的营销活动页面下，并保存每个特定营销活动可用的teaser段落定义。 在显示 Teaser 段落时，需使用这些定义；包括内容变体，以及要用于选择变体和提升因子的区段。
+* **Teaser 组件**&#x200B;开箱即用，使用它可以在内容页面中创建特定 Teaser 段落的实例。您可以从 Sidekick 拖动 Teaser 组件，然后指定 Teaser 定义，以便创建自己的 Teaser 段落。**注意：** AEM 6.2中已弃用Teaser组件。请使用 [目标组件](/help/sites-authoring/content-targeting-touch.md) 中。
 * **Teaser 段落**&#x200B;是内容页面中的实际 Teaser 实例。这些段落用于吸引特定访客区段访问其关注的内容。
 * 包含针对特定访客区段的营销活动内容的页面。通常，Teaser 段落将引导访客访问此类页面。
 
 ## 战略 {#strategies}
 
-在向页面添加Teaser段落时，您需要定义&#x200B;**Strategy**。
+在向页面添加Teaser段落时，您需要定义 **策略**.
 
 这适用于以下情况：由于几个 Teaser 的分配区段都成功解析，这几个 Teaser 都可供选择。**战略**&#x200B;随后指定用于选择显示的 Teaser 的额外标准：
 
 * **Clickstream 得分**，基于访客的 ClientContext 中包含的标记和相关标记点击量（显示包含各个标记的页面上的访客点击频率）。将比较 Teaser 页面上定义的标记的点击率。
-* **随机**，用于“随机”选择；使用为页面生成的随机因子，可通过Client Context [查看该随](/help/sites-administering/client-context.md)机因子。
-* **** 首先确定已解析区段的列表。该顺序即为营销活动容器页面中 Teaser 的顺序。
+* **随机**，用于“随机”选择；使用为页面生成的随机因子，可通过 [客户端上下文](/help/sites-administering/client-context.md).
+* **第一个** 在已解析的区段列表中。 该顺序即为营销活动容器页面中 Teaser 的顺序。
 
-区段的[提升因子](/help/sites-administering/campaign-segmentation.md#boost-factor)也会对选择产生影响。 该因子是添加到区段定义中的加权因子，用以提升/降低被选中的相对可能性。
+的 [提升因子](/help/sites-administering/campaign-segmentation.md#boost-factor) 区段对选择也有影响。 该因子是添加到区段定义中的加权因子，用以提升/降低被选中的相对可能性。
 
 各种选择条件的作用和相互关系可通过举例（这种方法还可用于确保所需受众看到 Teaser）得到最佳阐释。
 
@@ -112,7 +112,7 @@ AEM 中的 Teaser 由若干部分组成：
 
 那么，如果我们对访客应用此类内容，其中：
 
-* **S1**、 **S2** 和 **S6** 解析成功
+* **S1**, **S2** 和 **S6** 已成功解析
 
 * **营销**&#x200B;标记具有 3 次点击量
 * **企业**&#x200B;标记具有 6 次点击量

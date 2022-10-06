@@ -1,8 +1,8 @@
 ---
 title: 配置启用功能
-seo-title: 配置启用功能
+seo-title: Configuring Enablement Features
 description: 在社区中配置启用功能
-seo-description: 在社区中配置启用功能
+seo-description: Configure enablement features in Communities
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: b635e2ed-4637-4b2f-a746-ec8dc7541bab
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## 概述 {#overview}
 
-启用功能提供创建[启用社区](overview.md#enablement-community)的功能。
+启用功能提供了创建 [启用社区](overview.md#enablement-community).
 
 * 此功能需要额外的许可才能在生产环境中使用。
 
@@ -40,13 +40,13 @@ ht-degree: 1%
 
 * **FFmpeg**
 
-   FFmpeg是用于转换和流式传输音频和视频的解决方案，安装后，将用于对[视频资产](../../help/sites-authoring/default-components-foundation.md#video)进行正确转码。 对于启用社区，可在创作环境中使用该变量来获取已上传资源的元数据，并生成在列出资源时要显示的缩略图。
+   FFmpeg是一种用于转换和流式传输音频和视频的解决方案，安装后可用于对 [视频资产](../../help/sites-authoring/default-components-foundation.md#video). 对于启用社区，可在创作环境中使用该变量来获取已上传资源的元数据，并生成在列出资源时要显示的缩略图。
 
 设置：
 
 * **社区管理员**
 
-   对于启用社区，只能为`Community Enablement Managers`用户组的成员分配`Community Site Enablement Manager`的角色，其权限可能包括发布环境中的内容创建、分配和成员管理。
+   对于启用社区，仅 `Community Enablement Managers` 可以为用户组分配 `Community Site Enablement Manager`，其权限可能包括发布环境中的内容创建、分配和成员管理。
 
 可选配置：
 
@@ -66,14 +66,14 @@ ht-degree: 1%
 
 1. **[为MySQL安装JDBC驱动程序](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   使用Web控制台（包）：*http://localhost:4502/system/console/bundles*
+   使用Web控制台（包）： *http://localhost:4502/system/console/bundles*
 
-   在安装SCORM包之前安装&#x200B;**
+   安装 *之前* 安装SCORM包
 
 1. **[安装SCORM包](deploy-communities.md#scorm-package)**
 
 
-   使用包管理器：*http://localhost:4502/crx/packmgr/*
+   使用包管理器： *http://localhost:4502/crx/packmgr/*
 
 **在任何服务器上：**
 
@@ -93,21 +93,21 @@ ht-degree: 1%
 
 1. **[配置JDBC连接池](mysql.md#configure-jdbc-connections)**
 
-   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
 
 1. **[配置SCORM引擎服务](mysql.md#aem-communities-scormengine-service)**
 
-   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
 
 1. **[配置CSRF过滤器](mysql.md#adobe-granite-csrf-filter)**
 
-   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
 
 **在创作实例上：**
 
-1. （*可选*）**[配置Analytics服务](analytics.md)**
+1. (*可选*) **[配置Analytics服务](analytics.md)**
 
-   使用工具、部署、Cloud Services控制台：*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   使用工具、部署、Cloud Services控制台： *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[配置FFmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -115,11 +115,11 @@ ht-degree: 1%
 
 1. **[启用隧道服务](deploy-communities.md#tunnel-service-on-author)**
 
-   使用Web控制台(configMgr):*http://localhost:4502/system/console/configMgr*
+   使用Web控制台(configMgr): *http://localhost:4502/system/console/configMgr*
 
 1. **[创建社区管理员](users.md#creating-community-members)**
 
-   对于创作环境，请使用经典UI安全控制台：*http://localhost:4502/useradmin*
+   对于创作环境，请使用经典UI安全控制台： *http://localhost:4502/useradmin*
 
    使用路径= /home/users/community创建用户
 
@@ -130,4 +130,4 @@ ht-degree: 1%
 
 ## Dispatcher {#dispatcher}
 
-当部署包含[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)时，为了使启用功能正常工作，`clientheader`和`filter`部分需要进行修改。 请参阅[为Communities配置Dispatcher](dispatcher.md#enablement)。
+当部署包含 [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)，为了使启用功能正常工作，请通过 `clientheader` 和 `filter` 章节需要修改。 请参阅 [为社区配置Dispatcher](dispatcher.md#enablement).

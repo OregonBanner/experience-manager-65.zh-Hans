@@ -1,8 +1,8 @@
 ---
 title: SocialUtils重构
-seo-title: SocialUtils重构
+seo-title: SocialUtils Refactoring
 description: com.adobe.cq.social.ugcbase.SocialUtils包已在AEM 6.1中弃用
-seo-description: com.adobe.cq.social.ugcbase.SocialUtils包已在AEM 6.1中弃用
+seo-description: The package com.adobe.cq.social.ugcbase.SocialUtils was deprecated in AEM 6.1
 uuid: 54a0d98e-5ead-4c12-850f-8252ea9b3263
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,20 +12,20 @@ discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 0%
+source-wordcount: '294'
+ht-degree: 1%
 
 ---
 
-# SocialUtils重构{#socialutils-refactoring}
+# SocialUtils重构 {#socialutils-refactoring}
 
-## 已弃用的SocialUtils包{#socialutils-package-deprecated}
+## 已弃用SocialUtils包 {#socialutils-package-deprecated}
 
-`com.adobe.cq.social.ugcbase.SocialUtils`包已在AEM 6.1中弃用。
+包 `com.adobe.cq.social.ugcbase.SocialUtils` 已在AEM 6.1中弃用。
 
-下表列出了用于替代`SocialUtils`方法的方法。
+下表列出了用于替代的方法 `SocialUtils` 方法。
 
-## SocialResourceUtilities包{#socialresourceutilities-package}
+## SocialResourceUtilities包  {#socialresourceutilities-package}
 
 | com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities中的方法 |
 |---|
@@ -43,13 +43,13 @@ ht-degree: 0%
 | 字符串UGCToResourcePath（字符串ugcPath） | 更改了签名 |
 | 字符串UGCToResourcePath（字符串ugcPath， ResourceResolver） | 新版 |
 
-| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities中的方法 |
+| 中的方法 `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities |
 |---|
 | SocialResourceProvider getSocialResourceProvider（资源） | 替换SocialResourceProvider getConfiguredProvider(Resource resource) |
 
-## SCFUtilities包{#scfutilities-package}
+## SCFUtilities包 {#scfutilities-package}
 
-| `com.adobe.cq.social.`utilities.scf.api.SCFUtilites中的方法 |
+| 中的方法 `com.adobe.cq.social.`实用程序.scf.api.SCFUtilites |
 |---|
 | 字符串getAvatar(UserProperties userProperties) |
 | 字符串getAvatar(UserProperties userProperties， int size) |
@@ -59,7 +59,7 @@ ht-degree: 0%
 | 字符串getSocialProfileURL（字符串用户名， ResourceResolver， Page页） |
 | UserProperties getUserProperties(ResourceResolver， String userId) |
 
-## 仅供内部使用{#for-internal-use-only}
+## 仅供内部使用 {#for-internal-use-only}
 
 | 布尔canAddNode（会话会话，字符串路径） |
 |---|
@@ -78,7 +78,7 @@ ht-degree: 0%
 | 布尔型mayPost(ResourceResolver， Resource) |
 | 字符串prepareUserGeneratedContent(ResourceResolver， String path) |
 
-## 方法不再可用{#methods-no-longer-available}
+## 方法不再可用 {#methods-no-longer-available}
 
 | Node createNode(ResourceResolver， String path， String nodeType) |
 |---|

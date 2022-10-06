@@ -1,8 +1,8 @@
 ---
 title: 编辑页面时添加注释
-seo-title: 编辑页面时添加注释
+seo-title: Annotations when Editing a Page
 description: 向网站的页面中添加内容时，通常需要先经过一系列讨论，然后才实际发布网站页面。为了有助于讨论，许多与内容直接相关的组件允许您添加注释。
-seo-description: 向网站的页面中添加内容时，通常需要先经过一系列讨论，然后才实际发布网站页面。为了有助于讨论，许多与内容直接相关的组件允许您添加注释。
+seo-description: Adding content to the pages of your website is often subject to discussions prior to it actually being published. To aid this, many components directly related to content allow you to add an annotation.
 page-status-flag: de-activated
 uuid: d8d6ba76-f2aa-4044-98bf-5d506742d90d
 contentOwner: Chris Bohnert
@@ -13,7 +13,7 @@ discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 exl-id: d60e9601-d15b-4378-a33e-e90961f63195
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '782'
 ht-degree: 95%
 
 ---
@@ -78,9 +78,7 @@ ht-degree: 95%
 >
 >* 将不显示图标。
 >* 将不显示在其他浏览器中创建的现有草图。
-
 >
-
 
 
 草图是一种注释功能，可用于在浏览器窗口中的任意位置（可见部分）创建简单的线划图。

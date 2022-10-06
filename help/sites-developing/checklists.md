@@ -1,8 +1,8 @@
 ---
 title: 检查列表
-seo-title: 检查列表
+seo-title: Checklists
 description: 以下检查列表重点介绍了一些主要测试问题
-seo-description: 以下检查列表重点介绍了一些主要测试问题
+seo-description: The following checklist highlights some of the main testing issues
 uuid: 0456c98c-779f-415d-9641-b17ac141698b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 exl-id: 16c5f9aa-024d-4d8a-ba08-22b073289cfd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 2%
+source-wordcount: '157'
+ht-degree: 3%
 
 ---
 
@@ -36,4 +36,4 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->您还可以查看[管理项目 — 最佳实践检查列表](/help/managing/best-practices.md)，以了解与整个项目相关的进一步检查列表。
+>您还可以在 [管理项目 — 最佳实践检查列表](/help/managing/best-practices.md) 以进一步了解与整个项目相关的检查列表。

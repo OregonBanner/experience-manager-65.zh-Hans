@@ -1,8 +1,8 @@
 ---
 title: 创作页面
-seo-title: 创作页面
+seo-title: Authoring Pages
 description: 有两个关于使用AEM进行创作的概述。 (1)作者的首要步骤 — 新作者的简介，以及(2)页面创作快速指南 — 主要操作的快速指南（概要）。
-seo-description: 有两个关于使用AEM进行创作的概述。 (1)作者的首要步骤 — 新作者的简介，以及(2)页面创作快速指南 — 主要操作的快速指南（概要）。
+seo-description: There are two overviews to authoring with AEM. (1) First Steps for Authors - an introduction for new authors, and (2) Quick Guide to Authoring Pages - a quick guide (high-level) to the main actions.
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: a3606d72-1bd8-4886-9285-6457dae66486
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 78%
+source-wordcount: '298'
+ht-degree: 86%
 
 ---
 

@@ -38,7 +38,7 @@ Dynamic Media公司别名帐户可确保用户界面中所有现成的Dynamic Me
 
 首先提交支持案例，即可开始配置Dynamic Media公司别名帐户。 此步骤是必需的。
 
-1. [使用Admin Console创建支持案例](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+1. [使用Admin Console创建支持案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
 1. 在支持案例中提供以下信息：
 
    * 要使用的Dynamic Media公司别名。 名称必须包含 *仅* 字母（允许混合大小写）、数字、连字符和下划线。

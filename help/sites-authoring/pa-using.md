@@ -1,8 +1,8 @@
 ---
 title: 查看页面分析数据
-seo-title: 查看页面分析数据
+seo-title: Seeing Page Analytics Data
 description: 可使用页面分析数据评估页面内容的有效性
-seo-description: 可使用页面分析数据评估页面内容的有效性
+seo-description: Use page analytics data to gauge the effectiveness of their page content
 uuid: 8dda89be-13e3-4a13-9a44-0213ca66ed9c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '628'
 ht-degree: 93%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 93%
 
 可使用页面分析数据评估页面内容的有效性。
 
-## 可从控制台中查看分析数据  {#analytics-visible-from-the-console}
+## 可从控制台中查看分析数据 {#analytics-visible-from-the-console}
 
 ![aa-10](assets/aa-10.png)
 
@@ -62,7 +62,7 @@ ht-degree: 93%
 >
 >当页面树包含与不同 Adobe Analytics 云配置关联的子项时，您无法为页面配置可用数据列。
 
-1. 在列表视图中，使用视图选择器（工具栏右侧），选择&#x200B;**查看设置**，然后选择&#x200B;**添加自定义Analytics数据**。
+1. 在列表视图中，使用视图选择器（工具栏右侧），选择 **查看设置** 然后 **添加自定义Analytics数据**.
 
    ![aa-15](assets/aa-15.png)
 
@@ -74,14 +74,14 @@ ht-degree: 93%
 
 ### 从站点打开内容分析 {#opening-content-insights-from-sites}
 
-从“站点”控制台中打开[内容分析](/help/sites-authoring/content-insights.md) ，以进一步调查页面有效性。
+打开 [内容分析](/help/sites-authoring/content-insights.md) 从“站点”控制台中，进一步调查页面的有效性。
 
 1. 在站点控制台中，选择要查看“内容分析”的页面。
 1. 在工具栏上，单击“分析和建议”图标。
 
    ![](do-not-localize/chlimage_1-16a.png)
 
-## 可从页面编辑器 (Activity Map) 中查看分析数据  {#analytics-visible-from-the-page-editor-activity-map}
+## 可从页面编辑器 (Activity Map) 中查看分析数据 {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!NOTE]
 >

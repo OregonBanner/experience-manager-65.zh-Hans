@@ -1,8 +1,8 @@
 ---
 title: 参与工作流
-seo-title: 参与工作流
+seo-title: Participating in Workflows
 description: 工作流通常包括需要人员对页面或资产执行活动的步骤。工作流会选择要执行活动的用户或组，并将工作项分配给该用户或组。
-seo-description: 工作流通常包括需要人员对页面或资产执行活动的步骤。工作流会选择要执行活动的用户或组，并将工作项分配给该用户或组。
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset. The workflow selects a user or group to perform the activity and assigns a work item to that person or group.
 uuid: 04dcc8f2-dc11-430f-b0ae-47ef2cb069a2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
 exl-id: 2f1a3a73-7a20-48c7-8f3e-54252f5fb71c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '543'
 ht-degree: 98%
 
 ---
@@ -43,11 +43,11 @@ ht-degree: 98%
 
    如果您发现需要重复一个步骤或一系列步骤，您可以执行回退。此操作允许您选择之前已在工作流中执行过的步骤，以进行重新处理。工作流会返回到您指定的步骤，然后从此处继续执行。
 
-## 参与工作流  {#participating-in-a-workflow}
+## 参与工作流 {#participating-in-a-workflow}
 
 ### 已分配工作流操作的通知 {#notifications-of-assigned-workflow-actions}
 
-为您分配了工作项(例如批准内 **容**)后，将显示各种警报和／或通知：
+为您分配了工作项（例如，**批准内容**）后，将显示各种警报和/或通知：
 
 * 当页面处于工作流中时，“网站”控制台的&#x200B;**状态**&#x200B;列会显示相应的指示：
 
@@ -70,7 +70,7 @@ ht-degree: 98%
 
 1. 单击&#x200B;**确定**&#x200B;以确认该操作。
 
-### 委派参与者步骤  {#delegating-a-participant-step}
+### 委派参与者步骤 {#delegating-a-participant-step}
 
 请按照以下过程委派工作项。
 
@@ -81,7 +81,7 @@ ht-degree: 98%
 
 1. 单击&#x200B;**确定**&#x200B;以确认该操作。
 
-### 对参与者步骤执行回退  {#performing-step-back-on-a-participant-step}
+### 对参与者步骤执行回退 {#performing-step-back-on-a-participant-step}
 
 请按照以下过程执行回退。
 

@@ -1,8 +1,8 @@
 ---
 title: 迁移到触屏UI
-seo-title: 迁移到触屏UI
+seo-title: Migration to the Touch UI
 description: 迁移到触屏UI
-seo-description: 迁移到触屏UI
+seo-description: Migration to the Touch UI
 uuid: 47c43b56-532b-4ada-8503-04d66bab3564
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,20 +13,20 @@ docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 6%
+source-wordcount: '673'
+ht-degree: 7%
 
 ---
 
 # 迁移到触屏UI{#migration-to-the-touch-ui}
 
-从版本6.0开始，Adobe Experience Manager(AEM)引入了称为&#x200B;*触屏优化UI*（也称为&#x200B;*触屏优化UI*）的新用户界面。 它符合Adobe Marketing Cloud和整体Adobe用户界面准则。 在AEM中，这已成为标准UI，该UI具有以桌面为导向的旧版界面，称为&#x200B;*经典UI*。
+从版本6.0开始，Adobe Experience Manager(AEM)引入了一个新的用户界面，称为 *触屏优化UI* (也称为 *触屏UI*)。 它符合Adobe Marketing Cloud和整体Adobe用户界面准则。 这已成为AEM中的标准UI，其旧版面向桌面的界面称为 *经典UI*.
 
 如果您一直在将AEM与经典UI结合使用，则需要采取措施来迁移实例。 本页旨在通过提供指向各个资源的链接来充当跳板。
 
 >[!NOTE]
 >
->此类迁移项目可能会对您的实例产生重大影响。 请参阅[管理项目 — 最佳实践](/help/managing/best-practices.md)以了解推荐的准则。
+>此类迁移项目可能会对您的实例产生重大影响。 请参阅 [管理项目 — 最佳实践](/help/managing/best-practices.md) 以了解建议的准则。
 
 ## 基本信息 {#the-basics}
 
@@ -39,7 +39,7 @@ ht-degree: 6%
    <td>触屏优化 UI</td>
   </tr>
   <tr>
-   <td>在JCR存储库中描述为节点的结构。 表示UI元素的每个节点都称为<em>ExtJS小组件</em>，并由<code>ExtJS</code>在客户端呈现。</td>
+   <td>在JCR存储库中描述为节点的结构。 表示UI元素的每个节点都称为 <em>ExtJS小组件</em> 呈现在客户端的 <code>ExtJS</code>.</td>
    <td>JCR存储库中也描述为节点的结构。 但是，在这种情况下，每个节点都引用Sling资源类型（Sling组件），负责其渲染。 因此UI（基本上）在服务器端呈现。</td>
   </tr>
   <tr>
@@ -94,13 +94,13 @@ ht-degree: 6%
    <td>由服务器完成渲染：
     <ul>
      <li>客户端请求页面以及相关的UI。</li>
-     <li>服务器将UI作为HTML文档发送（推送）；使用Coral UI组件。<br /> </li>
+     <li>服务器将UI作为HTML文档发送（推送）；使用Coral用户界面组件。<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-换言之，将UI的某个部分从经典UI迁移到触屏UI意味着将&#x200B;*ExtJS小组件*&#x200B;迁移到&#x200B;*Sling组件*。 为了简化此过程，触屏UI基于Granite UI框架，该框架已经为UI提供了一些Sling组件（称为Granite UI组件）。
+换言之，将UI的某个部分从经典UI迁移到触屏UI意味着将 *ExtJS小组件* 至 *Sling组件*. 为了简化此过程，触屏UI基于Granite UI框架，该框架已经为UI提供了一些Sling组件（称为Granite UI组件）。
 
 开始之前，请检查状态和相关推荐：
 
@@ -112,13 +112,13 @@ ht-degree: 6%
 * [AEM触屏UI的概念](/help/sites-developing/touch-ui-concepts.md)
 * [AEM触屏UI的结构](/help/sites-developing/touch-ui-structure.md)
 
-## 迁移页面创作{#migrating-page-authoring}
+## 迁移页面创作 {#migrating-page-authoring}
 
 在迁移组件时，对话框是一个主要因素：
 
-* [开发AEM组件](/help/sites-developing/developing-components.md) （使用触屏UI）
+* [开发AEM组件](/help/sites-developing/developing-components.md) （使用触屏优化UI）
 * [从经典组件迁移](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [AEM现代化工具](/help/sites-developing/modernization-tools.md)  — 可帮助您将经典UI组件的对话框转换为触屏UI
+* [AEM现代化工具](/help/sites-developing/modernization-tools.md)  — 帮助您将经典UI组件的对话框转换为触屏UI
 
    * 触屏UI中有一个兼容层，用于在“触屏UI包装器”中打开经典UI对话框，但该对话框的功能有限，长期而言，不建议使用该兼容层。
 
@@ -126,32 +126,32 @@ ht-degree: 6%
 * [创建新的Granite UI字段组件](/help/sites-developing/granite-ui-component.md)
 * [自定义页面创作](/help/sites-developing/customizing-page-authoring-touch.md) （使用触屏优化UI）
 
-## 迁移控制台{#migrating-consoles}
+## 迁移控制台 {#migrating-consoles}
 
 您还可以自定义控制台：
 
-* [自定义控制台](/help/sites-developing/customizing-consoles-touch.md) （适用于触屏UI）
+* [自定义控制台](/help/sites-developing/customizing-consoles-touch.md) （对于触屏优化UI）
 
-## 相关注意事项{#related-considerations}
+## 相关注意事项 {#related-considerations}
 
 尽管与迁移到触屏UI并非直接相关，但仍有一些相关问题值得同时考虑，因为也推荐使用以下实践：
 
-* [模板](/help/sites-developing/templates.md)  — 可编 [辑的模板](/help/sites-developing/page-templates-editable.md)
+* [模板](/help/sites-developing/templates.md) - [可编辑的模板](/help/sites-developing/page-templates-editable.md)
 * [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
+* [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 
 >[!NOTE]
 >
->另请参阅[开发 — 最佳实践](/help/sites-developing/best-practices.md)。
+>另请参阅 [开发 — 最佳实践](/help/sites-developing/best-practices.md).
 
-## 其他资源{#further-resources}
+## 其他资源 {#further-resources}
 
 有关开发AEM的完整信息，请参阅以下资源收集：
 
 * [Developing用户指南](/help/sites-developing/home.md)
 * [Granite用户界面文档](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 SitesTutorials和视频](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
-* [AEM Sites 开发入门- WKND 教程](/help/sites-developing/getting-started.md)
+* [AEM 6.5 SitesTutorials和视频](https://docs.adobe.com/content/help/zh-Hans/experience-manager-learn/sites/overview.html)
+* [AEM站点开发入门 – WKND 教程](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 

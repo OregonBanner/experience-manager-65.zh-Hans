@@ -15,7 +15,7 @@ ht-degree: 21%
 
 # Flash 查看器生命周期终止通知{#flash-viewers-end-of-life-notice}
 
-*自2017年1月31日起，AdobeDynamic Media Classic(以前称为Scene7)正式终止对Flash查看器平台的支持。*
+*自2017年1月31日起，Adobe Dynamic Media Classic(前称Scene7)正式终止对Flash查看器平台的支持。*
 
 <!-- *For more information about this important change, see the following FAQ website:*
 

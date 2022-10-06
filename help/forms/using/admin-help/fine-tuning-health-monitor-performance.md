@@ -1,8 +1,8 @@
 ---
 title: 微调运行状况监视器性能
-seo-title: 微调运行状况监视器性能
+seo-title: Fine-tuning Health Monitor performance
 description: 了解如何优化运行状况监视器性能
-seo-description: 了解如何优化运行状况监视器性能
+seo-description: Learn how to fine-tune Health Monitor performance
 uuid: 770b10cb-065f-41b5-9594-a291e4311151
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 exl-id: 41042e08-5e14-4809-89b7-16d98a72d1b4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '407'
 ht-degree: 1%
 
 ---
@@ -66,20 +66,20 @@ ht-degree: 1%
 ## 将Java选项添加到JBoss {#add-java-options-to-jboss}
 
 1. 停止JBoss应用程序服务器。
-1. 在编辑器中打开&#x200B;*[appserver root]*/bin/run.bat(Windows)或run.sh（Linux或UNIX），并根据需要添加任何Java选项。
+1. 打开 *[appserver根]*/bin/run.bat(Windows)或在编辑器中运行.sh（Linux或UNIX），并根据需要添加任何Java选项。
 1. 重新启动服务器。
 
-## 向WebLogic {#add-java-options-to-weblogic}添加Java选项
+## 将Java选项添加到WebLogic {#add-java-options-to-weblogic}
 
-1. 在Web浏览器的URL行中键入https://[主机名]:&#39;port&#39;/console，以启动WebLogic管理控制台。
+1. 通过键入https://以启动WebLogic管理控制台[主机名]: Web浏览器URL行中的“port”/console。
 1. 键入您为WebLogic Server域创建的用户名和密码，然后单击“更改中心”下的“日志”，然后单击“锁定并编辑”。
 1. 在“域结构”下，单击“环境”>“服务器”，然后在右窗格中，单击受控服务器名称。
 1. 在下一个屏幕上，单击“配置”选项卡>“服务器开始”选项卡。
-1. 在参数框中，将所需的参数附加到当前内容的末尾。 例如，添加 — `Dadobe.healthmonitor.enabled=false`会禁用运行状况监视器。
+1. 在参数框中，将所需的参数附加到当前内容的末尾。 例如，添加 —  `Dadobe.healthmonitor.enabled=false` 禁用运行状况监视器。
 1. 单击保存，然后单击激活更改。
 1. 重新启动WebLogic托管服务器。
 
-## 向WebSphere {#add-java-options-to-websphere}添加Java选项
+## 将Java选项添加到WebSphere {#add-java-options-to-websphere}
 
 1. 在WebSphere管理控制台导航树中，为应用程序服务器执行以下操作：
 

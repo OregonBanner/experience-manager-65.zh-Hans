@@ -39,7 +39,7 @@ ht-degree: 14%
 1. 访问节点类型管理页面 `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
 1. 要访问命名空间管理页面，请单击 **[!UICONTROL 命名空间]** 的双曲余切值。
 1. 要添加命名空间，请单击 **[!UICONTROL 新建]** 页面底部。
-1. 在XML命名空间约定中指定自定义命名空间。 以URI的形式指定ID以及ID的关联前缀。 单击&#x200B;**[!UICONTROL 保存]**。
+1. 在XML命名空间约定中指定自定义命名空间。 以URI的形式指定ID以及ID的关联前缀。 单击“**[!UICONTROL 保存]**”。
 
 ## 配置批量元数据更新限制 {#bulk-metadata-update-limit}
 

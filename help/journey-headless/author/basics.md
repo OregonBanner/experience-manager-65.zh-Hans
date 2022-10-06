@@ -1,14 +1,15 @@
 ---
 title: 了解创作基础知识
 description: 了解使用内容片段为无头CMS创作内容的概念和机制。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1693'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
-# 使用AEM创作无头的基础知识 {#author-headless-basics}
+# 使用 AEM 为 Headless 创作基本内容 {#author-headless-basics}
 
 ## 迄今为止的故事 {#story-so-far}
 
@@ -23,7 +24,7 @@ ht-degree: 3%
    * AEMaCS创作简介
    * 内容片段简介
 
-## 基本操作 {#basic-handling}
+## 基本处理 {#basic-handling}
 
 在您了解内容片段之前，请先简要介绍如何使用AEM....但是，没有什么东西能真正取代登录和尝试使用系统的体验。
 
@@ -31,7 +32,7 @@ ht-degree: 3%
 
 AEM 安装通常至少包含两个环境：
 
-* 作者
+* 创作
 * 发布
 
 您可以登录，然后使用创作环境生成内容。 准备就绪后，您可以发布内容，以便内容可正常使用。 如果没有头，这将适用于其他应用程序，对于网页，这将适用于网上的读者。
@@ -109,7 +110,7 @@ AEM 安装通常至少包含两个环境：
 
 此部分的级别稍高一些。 如果你只是开始尝试一些东西，你并不需要它，但是 *非常* 当您有大量片段时很有用。 因此，即使你还没用到，了解情况也是件好事。
 
-您的内容架构师将创建当前项目所需的所有内容片段模型，也可能创建其他一些项目所需的所有内容片段模型。 为了帮助您自己和其他作者保持简单，您可以限制适用于特定文件夹的模型列表。
+您的内容架构师将创建当前项目所需的所有内容片段模型，也可能创建了其他一些项目所需的所有内容片段模型。 为了帮助您自己和其他作者保持简单，您可以限制适用于特定文件夹的模型列表。
 
 创建文件夹后，可以打开该文件夹 **属性**. 此处提供了各种选项卡，其中包含有关文件夹的信息和配置详细信息。 特别是对于内容片段，您可以使用 **策略** 选项卡来定义此文件夹的特定路径和/或标记。 这限制了可在文件夹中使用的内容片段模型，因为这意味着内容片段模型必须满足这些要求，才能在此文件夹中用于生成片段。
 
@@ -263,6 +264,6 @@ AEM 安装通常至少包含两个环境：
 * 入门指南
    * [创建Assets文件夹无标题快速入门指南](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
-* [AEM Headless Content Architect历程](/help/journey-headless/architect/overview.md)
+* [AEM Headless 内容架构师历程](/help/journey-headless/architect/overview.md)
 
 * [AEM无头翻译历程](/help/journey-headless/translation/overview.md)

@@ -5,7 +5,7 @@ exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
 source-git-commit: 7b97bc0ffb0df6641ae71fa36c459f1368052e12
 workflow-type: tm+mt
 source-wordcount: '1273'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -105,23 +105,23 @@ RemotePage组件允许在AEM中渲染外部SPA。
 
 要开始开发您自己的SPA for AEM，请查看以下文档：
 
-* [SPA WKND教程](/help/sites-developing/spa-wknd.md)
+* [SPA WKND 教程](/help/sites-developing/spa-wknd.md)
 * [开始使用React](/help/sites-developing/spa-getting-started-react.md)
 * [开始使用Angular](/help/sites-developing/spa-getting-started-angular.md)
 
 如果您需要调整现有SPA以在AEM中使用它，请查看以下文档：
 
-* [RemotePage组件](/help/sites-developing/spa-remote-page.md)
-* [在AEM中编辑外部SPA](/help/sites-developing/spa-edit-external.md)
+* [RemotePage 组件](/help/sites-developing/spa-remote-page.md)
+* [在 AEM 中编辑外部 SPA](/help/sites-developing/spa-edit-external.md)
 
 请参阅下面的 [其他资源](#additional-resources) 可让您更深入地了解AEM中的SPA主题。
 
 ## 其他资源 {#additional-resources}
 
-以下是一些其他资源，可更深入地了解本文档中提到的一些概念。
+以下是一些附加资源，它们对本文档中提及的一些概念进行了更深入的探讨。
 
 * [AEM中的Headful和Headless](/help/sites-developing/headful-headless.md)  — 描述AEM中可用的不同投放模型
-* [SPA简介和演练。](/help/sites-developing/spa-walkthrough.md) - AEM中的SPA简介
+* [SPA 简介和演练.](/help/sites-developing/spa-walkthrough.md) - AEM中的SPA简介
 * [开发SPA for AEM](/help/sites-developing/spa-architecture.md)  — 关于如何开发SPA for AEM的准则
 * [SPA编辑器概述](/help/sites-developing/spa-overview.md)  — 有关SPA编辑器工作方式的详细信息
 * [服务器端渲染](/help/sites-developing/spa-ssr.md)  — 如何为AEM SPA配置SSR

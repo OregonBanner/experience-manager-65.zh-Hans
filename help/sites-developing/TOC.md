@@ -10,8 +10,8 @@ feature: Developing
 role: Developer
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1299'
+ht-degree: 37%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 + [开发用户指南概述](home.md)
 + 开发人员简介{#introduction}
-   + [AEM Sites 开发入门 - WKND 教程](getting-started.md)
+   + [AEM站点开发入门 – WKND 教程](getting-started.md)
    + [AEM核心概念](the-basics.md)
    + [AEM触屏UI的结构](touch-ui-structure.md)
    + [AEM触屏UI的概念](touch-ui-concepts.md)
@@ -106,14 +106,14 @@ ht-degree: 0%
          + [AEM Headless as a Cloud Service 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
          + [首次 AEM Headless 使用体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
          + [如何将内容建模为 AEM 内容模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
-         + [如何通过 AEM 交付 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
+         + [如何通过 AEM 投放 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
          + [如何通过 AEM Assets API 更新您的内容](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
          + [如何融于一起](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
          + [如何使用 Headless 应用程序上线](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
-         + [可选 - 如何使用 AEM 创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
+         + [可选 – 如何使用 AEM 创建单页面应用程序](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
       + Headless 内容架构师历程 {#architect}
          + [AEM Headless 内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
-         + [使用 AEM 对 Headless 进行内容建模 - 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
+         + [使用 AEM 对 Headless 进行内容建模 – 简介](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
          + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
          + [了解如何在 AEM 中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
    + 入门指南 {#getting-started}
@@ -197,7 +197,7 @@ ht-degree: 0%
    + [自定义页面属性的视图](page-properties-views.md)
    + [配置页面以批量编辑页面属性](bulk-editing.md)
    + [自定义和扩展内容片段](customizing-content-fragments.md)
-   + [配置用于渲染的组件的内容片段](content-fragments-config-components-rendering.md)
+   + [配置用于呈现的组件的内容片段](content-fragments-config-components-rendering.md)
    + [体验片段](experience-fragments.md)
    + 扩展工作流{#extending-workflows}
       + [开发和扩展工作流](workflows.md)
@@ -215,7 +215,7 @@ ht-degree: 0%
       + [自定义Adobe Analytics框架](extending-analytics-framework.md)
       + [为Analytics实施服务器端页面命名](extending-analytics-pa-naming.md)
    + 云服务{#extending-cloud-services}
-      + [云服务配置](extending-cloud-config.md)
+      + [Cloud Service 配置](extending-cloud-config.md)
       + [创建自定义Cloud Service](extending-cloud-config-custom-cloud.md)
    + [创建自定义扩展](extending-campaign-extensions.md)
    + Forms{#extending-forms}

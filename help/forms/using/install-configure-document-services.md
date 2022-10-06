@@ -459,12 +459,12 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包包含AEM For
   <tr>
    <td>PDFG 清理扫描秒数</td>
    <td>执行转换后操作所需的秒数。<br /> </td>
-   <td>3600秒</td>
+   <td>3600 秒</td>
   </tr>
   <tr>
    <td>作业盗取秒数</td>
    <td>允许PDF生成器服务运行转换的持续时间。 确保作业过期秒数的值大于PDFG清理扫描秒数值。</td>
-   <td>7200秒</td>
+   <td>7200 秒</td>
   </tr>
  </tbody>
 </table>

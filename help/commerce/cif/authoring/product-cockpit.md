@@ -1,7 +1,8 @@
 ---
 title: 产品 Cockpit
 description: 使用产品驾驶舱
-source-git-commit: f3e286c7b5404812655f3b257de17be7bfde7487
+exl-id: 05ef2604-1d52-4397-a696-0b64717cc3cc
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 1%

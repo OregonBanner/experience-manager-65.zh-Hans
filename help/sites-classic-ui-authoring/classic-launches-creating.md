@@ -1,8 +1,8 @@
 ---
 title: 创建启动项
-seo-title: 创建启动项
+seo-title: Creating Launches
 description: 可创建启动项，以允许更新现有网页的新版本，以便将来激活。在创建启动项时，需要指定标题和源页面。
-seo-description: 可创建启动项，以允许更新现有网页的新版本，以便将来激活。在创建启动项时，需要指定标题和源页面。
+seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
 uuid: e67608a9-e6c9-42f3-bd1d-63a5fa87ae18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,16 +13,16 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 8ab21067-c19a-4faa-8bf0-cd9f21f6df70
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 92%
+source-wordcount: '370'
+ht-degree: 95%
 
 ---
 
 # 创建启动项{#creating-launches}
 
-可创建启动项，以允许更新现有网页的新版本，以便将来激活。创建启动项时，需要指定标题和源页面：
+可创建启动项，以允许更新现有网页的新版本，以便将来激活。在创建启动项时，需要指定标题和源页面：
 
-* 标题会显示在&#x200B;**Sidekick**&#x200B;中，作者可以从中访问这些标题以对其进行处理。
+* 标题将显示在 **Sidekick**，作者可以从中访问这些页面以对其进行处理。
 * 默认情况下，源页面的子页面包含在启动项中。必要时，可只使用源页面。
 * 默认情况下，[Live Copy](/help/sites-administering/msm.md) 会在源页面发生更改时自动更新启动页面。您可以指定创建一个静态副本，以防止自动更改。
 
@@ -40,13 +40,13 @@ ht-degree: 92%
    * **源页面**：创建启动项的页面路径。默认情况下，包含所有子页面。
    * **不包括子页面**：选中此选项，可只为源页面（而非子页面）创建启动项。默认情况下，此选项处于未选中状态。
    * **保持同步**：选中此选项，可在源页面发生更改时自动更新启动页面的内容。此功能可通过将启动项设为 [Live Copy](/help/sites-administering/msm.md) 来实现。
-   * **启动日期**：激活启动副本的日期和时间（取决于&#x200B;**生产就绪**&#x200B;标记；请参阅[启动项 - 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)）。
+   * **启动日期**：激活启动副本的日期和时间（取决于&#x200B;**生产就绪**&#x200B;标记；请参阅[启动项 – 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)）。
 
    ![chlimage_1-99](assets/chlimage_1-99a.png)
 
 1. 单击&#x200B;**创建**。
 
-## 删除启动项  {#deleting-a-launch}
+## 删除启动项 {#deleting-a-launch}
 
 您还可以删除启动项。
 

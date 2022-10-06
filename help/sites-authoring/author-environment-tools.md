@@ -1,8 +1,8 @@
 ---
 title: 创作 - 环境和工具
-seo-title: 创作 - 环境和工具
+seo-title: Authoring - the Environment and Tools
 description: AEM 的创作环境提供了各种可用于组织和编辑内容的机制
-seo-description: AEM 的创作环境提供了各种可用于组织和编辑内容的机制
+seo-description: The authoring environment of AEM provides various mechanisms for organizing and editing your content
 uuid: 23a8aa93-b3d2-423b-b402-9e5f3f273d9a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,16 +13,16 @@ docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '2239'
+source-wordcount: '2220'
 ht-degree: 97%
 
 ---
 
 # 创作 - 环境和工具{#authoring-the-environment-and-tools}
 
-AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
+AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可以从各种控制台和页面编辑器访问提供的工具。
 
-## 管理您的网站 {#managing-your-site}
+## 管理您的站点 {#managing-your-site}
 
 **站点**&#x200B;控制台允许您使用标题栏、工具栏、操作图标（适用于所选资源）和痕迹导航来导航和管理您的网站，选择后还可使用辅助边栏（例如时间轴和引用）。
 
@@ -212,7 +212,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
    ![ateat-13](assets/ateat-13.png)
 
-## 片段 - 关联的内容浏览器 {#fragments-associated-content-browser}
+## 片段 – 关联的内容浏览器 {#fragments-associated-content-browser}
 
 如果您的页面包含内容片段，那么您还可以访问[适用于关联内容的浏览器](/help/sites-authoring/content-fragments.md#using-associated-content)。
 
@@ -244,7 +244,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 * [对产品页面的引用](/help/commerce/cif-classic/administering/generic.md#showing-product-references)（可以从“商务 - 产品”控制台实现）
 * [启动项](/help/sites-authoring/launches.md)，提供对相关启动项的访问权
-* [](/help/sites-administering/msm.md)Live Copy 显示基于选定资源的所有 Live Copy 的路径。
+* [Live Copy](/help/sites-administering/msm.md) 显示基于选定资源的所有 Live Copy 的路径。
 * [Blueprint](/help/sites-administering/msm-best-practices.md)，提供详细信息和各种操作
 * [语言副本](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel)，提供详细信息和各种操作
 
@@ -252,11 +252,11 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 ![ateat-14](assets/ateat-14.png)
 
-## 事件 - 时间轴 {#events-timeline}
+## 事件 – 时间线 {#events-timeline}
 
-对于相应的资源（例如&#x200B;**站点**&#x200B;控制台中的页面或&#x200B;**资产**&#x200B;控制台中的资产），[可使用时间轴显示任何选定项目上的近期活动](/help/sites-authoring/basic-handling.md#timeline)。
+对于相应的资源（例如&#x200B;**站点**&#x200B;控制台中的页面或&#x200B;**资产**&#x200B;控制台中的资产），[可使用时间线显示任何选定项目上的近期活动](/help/sites-authoring/basic-handling.md#timeline)。
 
-打开所需的控制台，然后导航到需要的资源并使用以下方法打开&#x200B;**时间轴**：
+打开所需的控制台，然后导航到需要的资源并使用以下方法打开&#x200B;**时间线**：
 
 ![ateat-15](assets/ateat-15.png)
 
@@ -278,18 +278,18 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 * [取消发布页面](/help/sites-authoring/publishing-pages.md#main-pars-title-5)
 * [编辑模板](/help/sites-authoring/templates.md)；在该页面基于[可编辑的模板](/help/sites-authoring/templates.md#editable-and-static-templates)时
 
-* [查看已发布的项目](/help/sites-authoring/editing-content.md#view-as-published)
+* [以发布的形式查看](/help/sites-authoring/editing-content.md#view-as-published)
 * [以管理员身份查看](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 * [帮助](/help/sites-authoring/basic-handling.md#accessing-help)
 
 例如，在适当时，**页面信息**&#x200B;还有以下选项：
 
 * [提升启动项](/help/sites-authoring/launches-promoting.md)，如果该页面是启动项。
-* [在经典UI中](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 打开如果管理员 [已启用此选项](/help/sites-administering/enable-classic-ui-editor.md)
+* [在经典UI中打开](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 如果此选项已 [由管理员启用](/help/sites-administering/enable-classic-ui-editor.md)
 
 另外，在适当时，**页面信息**&#x200B;还允许访问分析和建议。
 
-## 页面模式  {#page-modes}
+## 页面模式 {#page-modes}
 
 编辑页面时可以使用多种模式来执行不同的操作：
 
@@ -320,16 +320,14 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 >* 某些模式需要相应的许可/权限才能访问。
 >* 由于空间限制，“开发人员”模式在移动设备上不可用。
 >* 使用[键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) (`Ctrl-Shift-M`) 可以在&#x200B;**预览**&#x200B;模式和当前选定的模式（例如，**编辑**、**布局**&#x200B;等）之间切换。
-
 >
-
 
 
 ## 路径选择 {#path-selection}
 
 在创作时，通常需要选择其他资源，例如在定义指向其他页面或资源的链接或者选择图像时。为了轻松选择路径，[路径字段](/help/sites-authoring/author-environment-tools.md#path-fields)提供了自动完成功能，并且还可通过[路径浏览器](/help/sites-authoring/author-environment-tools.md#path-browser)做出更可靠的选择。
 
-### 路径字段  {#path-fields}
+### 路径字段 {#path-fields}
 
 此处所用的说明示例是图像组件。有关使用和编辑组件的更多信息，请参阅[页面创作组件](/help/sites-authoring/default-components.md)。
 
@@ -353,7 +351,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 * 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **** ”按钮，但也会将选定资源的计数添加到窗口的右上角。 单击该 **数字旁边的** X可取消选择全部。
 * 在树中导航时，您的位置会反映在对话框顶部的痕迹导航中。还可使用这些痕迹导航在资源层次结构中快速跳转。
 * 您随时都可以使用对话框顶部的搜索字段。单击搜索字段中的 **X** 可清除搜索。
-* 要缩小搜索范围，您可以显示筛选器选项并按特定路径筛选结果。
+* 要缩小搜索范围，您可以显示过滤器选项并按特定路径筛选结果。
 
    ![ateat-21](assets/ateat-21.png)
 

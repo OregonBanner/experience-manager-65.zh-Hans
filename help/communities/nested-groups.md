@@ -1,7 +1,7 @@
 ---
 title: 创作嵌套群组
 seo-title: Authoring Nested Groups
-description: Create nested groups
+description: 创建嵌套群组
 seo-description: Create nested groups
 uuid: b377dc1b-bbb6-41c9-b0fc-8281e1410685
 contentOwner: Janice Kendall
@@ -18,9 +18,9 @@ ht-degree: 4%
 
 ---
 
-# Authoring Nested Groups{#authoring-nested-groups}
+# 创作嵌套群组{#authoring-nested-groups}
 
-## Creating Groups on Author {#creating-groups-on-author}
+## 在创作时创建组 {#creating-groups-on-author}
 
 在AEM创作实例上，从全局导航中：
 
@@ -41,7 +41,7 @@ ht-degree: 4%
 
 ## 创建主要艺术组 {#create-main-arts-group}
 
-可以创建此组，因为参与的站点结构包含组功能。 站点的 `Reference Template` 默认为允许选择任何已启用的组模板。 Thus, the template chosen for this new group is the `Reference Group`.
+可以创建此组，因为参与的站点结构包含组功能。 站点的 `Reference Template` 默认为允许选择任何已启用的组模板。 因此，为此新组选择的模板是 `Reference Group`.
 
 这些控制台与“社区站点”控制台类似。
 
@@ -52,7 +52,7 @@ ht-degree: 4%
    * **[!UICONTROL 社区组标题]**:艺术
    * **[!UICONTROL 社区组描述]**:各种艺术团体的家长组
    * **[!UICONTROL 社区组根]**: *默认保留*
-   * **[!UICONTROL Additional Available Community Group Language(s)]**: use the drop-down menu to select the available community group language(s). 该菜单显示创建父社区站点的所有语言。 用户可以在这些语言中进行选择，以在此单步中的多个区域设置中创建组。 在相应社区站点的“组”控制台中，会以多种指定语言创建同一组。
+   * **[!UICONTROL 其他可用的社区组语言]**:使用下拉菜单选择可用的社区组语言。 该菜单显示创建父社区站点的所有语言。 用户可以在这些语言中进行选择，以在此单步中的多个区域设置中创建组。 在相应社区站点的“组”控制台中，会以多种指定语言创建同一组。
    * **[!UICONTROL 社区组名称]**:艺术
    * **[!UICONTROL 模板]**:下拉框选择 `Reference Group`
    * 选择 **[!UICONTROL 下一个]**
@@ -73,7 +73,7 @@ ht-degree: 4%
       * 将留空（从父站点继承）。
    * **[!UICONTROL 成员资格]**
 
-      * Use default `Optional Membership.`
+      * 使用默认 `Optional Membership.`
 
       * **[!UICONTROL 缩略图]**
          * `optional.*`
@@ -85,9 +85,9 @@ ht-degree: 4%
 
 ### 艺术组中的嵌套组 {#nesting-groups-within-arts-group}
 
-The `groups` folder now contains two groups (refresh the page).
+的 `groups` 文件夹现在包含两个组（刷新页面）。
 
-![Nesting the groups](assets/create-community-group.png)
+![嵌套组](assets/create-community-group.png)
 
 #### 发布组 {#publish-group}
 
@@ -120,11 +120,11 @@ The `groups` folder now contains two groups (refresh the page).
    * 标题: `Art History`
    * 名称: `history`
    * 模板: `Reference Group`
-   * 会员资格：选择 `Restricted Membership`，秘密组，仅对受邀成员可见。 As an example, invite [demo user](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
+   * 会员资格：选择 `Restricted Membership`，秘密组，仅对受邀成员可见。 例如，邀请 [演示用户](/help/communities/tutorials.md#demo-users) `emily.andrews@mailinator.com`.
 
 刷新页面可查看所有三个嵌套群组（子社区）。
 
-To navigate to the nested groups from the Communities Sites console:
+要从“社区站点”控制台导航到嵌套的组，请执行以下操作：
 
 * 选择 **[!UICONTROL 参与文件夹]**
 * 选择 **[!UICONTROL 快速入门教程卡]**
@@ -138,7 +138,7 @@ To navigate to the nested groups from the Communities Sites console:
 
 ![publish-site](assets/publish-site.png)
 
-After publishing the main community site:
+发布主社区网站后：
 
 * 单独发布每个组：
 
@@ -150,19 +150,19 @@ After publishing the main community site:
 
 ![组发布](assets/group-published.png)
 
-## Experience on Publish {#experience-on-publish}
+## 发布体验 {#experience-on-publish}
 
 登录后，可能会体验不同的群组，例如使用 [演示用户](/help/communities/tutorials.md#demo-users) 用于：
 
 * 艺术/历史组成员：emily.andrews@mailinator.com
    * 受限（秘密）组艺术/历史可见：
-   * Can see optional (public) groups.
-   * Can join restricted (open) groups.
+   * 可以查看可选（公共）群组。
+   * 可以加入受限（打开）组。
 
-* Group manager: aaron.mcdonald@mailinator.com/password
+* 组管理器：aaron.mcdonald@mailinator.com
 
    * 可以查看可选（公共）群组。
-   * Can join restricted (open) groups.
+   * 可以加入受限（打开）组。
    * 看不到受限（密钥）组。
 
 访问社区 [“成员”和“组”控制台](/help/communities/members.md) 创作时，将其他用户添加到与社区组对应的各个成员组。

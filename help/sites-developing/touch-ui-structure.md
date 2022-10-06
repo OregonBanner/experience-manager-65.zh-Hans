@@ -1,8 +1,8 @@
 ---
 title: AEM触屏UI的结构
-seo-title: AEM触屏UI的结构
+seo-title: Structure of the AEM Touch-Enabled UI
 description: 触屏优化UI(在AEM中实施)具有多个基本原则，由几个关键元素组成
-seo-description: 触屏优化UI(在AEM中实施)具有多个基本原则，由几个关键元素组成
+seo-description: The touch-optimized UI, as implemented in AEM, has several underlying principles and is made up of several key elements
 uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 1%
+source-wordcount: '861'
+ht-degree: 2%
 
 ---
 
@@ -23,11 +23,11 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 ## 控制台 {#consoles}
 
-### 基本布局和大小调整{#basic-layout-and-resizing}
+### 基本布局和大小调整 {#basic-layout-and-resizing}
 
 虽然UI既适用于移动设备，也适用于桌面设备，但Adobe决定使用一种样式，该样式适用于所有屏幕和设备，而不是创建两种样式。
 
-所有模块都使用相同的基本布局，在AEM中，这可以看作：
+所有模块都使用相同的基本布局，在AEM中，这可以看成：
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -66,11 +66,11 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 可以根据需要打开/隐藏左边栏以显示：
 
-* **时间轴**
+* **时间线**
 * **引用**
-* **筛选器**
+* **过滤器**
 
-默认值为&#x200B;**仅内容**（隐藏的边栏）。
+默认值为 **仅限内容** （隐藏的边栏）。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -78,7 +78,7 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 创作页面时，结构区域如下所示。
 
-### 内容帧{#content-frame}
+### 内容帧 {#content-frame}
 
 页面内容在内容框架中呈现。 内容框架完全独立于编辑器，可确保不会因CSS或Javascript而发生冲突。
 
@@ -86,11 +86,11 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 ![chlimage_1-148](assets/chlimage_1-148.png)
 
-### 编辑器帧{#editor-frame}
+### 编辑器框架 {#editor-frame}
 
 编辑器框架实现编辑功能。
 
-编辑器框架是用于所有&#x200B;*页面创作元素*&#x200B;的容器（抽象）。 它位于内容框架的顶部，包括：
+编辑器框架是所有 *页面创作元素*. 它位于内容框架的顶部，包括：
 
 * 顶部工具栏
 * 侧面板
@@ -99,7 +99,7 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### 侧面板{#side-panel}
+### 侧面板 {#side-panel}
 
 其中包含两个默认选项卡，用于选择资产和组件；可以从此处拖放到页面上。
 
@@ -107,19 +107,19 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
-### 侧面板 — 资产{#side-panel-assets}
+### 侧面板 — 资产 {#side-panel-assets}
 
 在资产选项卡中，您可以从资产范围中进行选择。 您还可以过滤特定术语或选择群组。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-### 侧面板 — 资产组{#side-panel-asset-groups}
+### 侧面板 — 资产组 {#side-panel-asset-groups}
 
 在资产选项卡中，您可以使用下拉列表选择特定的资产组。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
-### 侧面板 — 组件{#side-panel-components}
+### 侧面板 — 组件 {#side-panel-components}
 
 在组件选项卡中，您可以从组件范围中进行选择。 您还可以过滤特定术语或选择群组。
 
@@ -127,7 +127,7 @@ AEM触屏UI具有多个基本原则，由几个关键元素组成：
 
 ### 叠加 {#overlays}
 
-这些参数覆盖内容框架，并由[层](#layer)使用，以了解如何与组件及其内容进行（完全透明）交互的机制。
+这些选项将叠加内容框架，并由 [层](#layer) 了解如何与组件及其内容进行（完全透明）交互的机制。
 
 叠加图位于编辑器框架中（包含所有其他页面创作元素），但它们实际上会覆盖内容框架中的相应组件。
 
@@ -148,7 +148,7 @@ AEM附带了多个已实施的页面创作层；包括编辑、预览、注释�
 >
 >层是一个强大的概念，会影响用户对页面内容的查看以及与页面内容的交互。 在开发您自己的层时，您需要确保该层在退出时清理。
 
-### 层切换器{#layer-switcher}
+### 层切换器 {#layer-switcher}
 
 层切换器允许您选择要使用的层。 关闭后，它表示当前正在使用的层。
 
@@ -166,6 +166,6 @@ AEM附带了多个已实施的页面创作层；包括编辑、预览、注释�
 
 ## 更多信息 {#further-information}
 
-有关触屏优化UI相关概念的更多详细信息，请继续阅读文章[AEM触屏优化UI](/help/sites-developing/touch-ui-concepts.md)的概念。
+有关触屏优化UI相关概念的更多详细信息，请继续阅读文章 [AEM触屏UI的概念](/help/sites-developing/touch-ui-concepts.md).
 
-有关更多技术信息，请参阅适用于触屏优化页面编辑器的[JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)。
+有关更多技术信息，请参阅 [JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) ，用于触屏优化页面编辑器。

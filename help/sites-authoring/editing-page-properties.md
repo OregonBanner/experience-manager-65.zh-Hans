@@ -14,7 +14,7 @@ exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
 source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
 source-wordcount: '1898'
-ht-degree: 82%
+ht-degree: 90%
 
 ---
 
@@ -54,12 +54,12 @@ ht-degree: 82%
 
 * **品牌化**
 
-   通过在每个页面标题后附加一个品牌辅助信息，在页面中应用一致的品牌标识。 此功能需要使用[核心组件2.14.0版或更高版本中的页面组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+   通过将品牌概要附加到每个页面标题，跨页面应用一致的品牌识别。此功能需要使用 2.14.0 版或更高版本的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)中的页面组件。
 
-   * **覆盖**  — 选中以定义此页面上的品牌概要信息。
-      * 任何子页面都将继承该值，除非它们还设置了其&#x200B;**Override**&#x200B;值。
-   * **覆盖值**  — 要附加到页面标题的品牌辅助信息的文本。
-      * 该值会在管道字符（如“循环托斯卡纳”）后附加到页面标题中 |始终为WKND做好准备”
+   * **覆盖** – 选中可在此页面上定义品牌概要。
+      * 该值将由任何子页面继承，除非它们也设置了&#x200B;**覆盖**&#x200B;值。
+   * **覆盖值** – 要附加到页面标题的品牌概要的文本。
+      * 该值附加到页面标题后的竖线字符后，例如“骑行 Tuscany | 始终准备好使用 WKND”
 * **页面标题**
 
    要在页面中使用的标题。通常由标题组件使用。如果留空，则将使用&#x200B;**标题**。
@@ -92,7 +92,7 @@ ht-degree: 82%
 
    允许您输入此页面的虚 URL，以便使用更短并且/或者含意更清楚的 URL。
 
-   例如，如果将网站`http://example.com,`的虚URL设置为`welcome`由路径`/v1.0/startpage`标识的页面，则`http://example.com/welcome`将是`http://example.com/content/v1.0/startpage`的虚URL
+   例如，如果虚URL设置为 `welcome`路径标识的页面 `/v1.0/startpage`网站的 `http://example.com,` then `http://example.com/welcome`应该是的虚URL `http://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -103,7 +103,7 @@ ht-degree: 82%
    >* 不应设置为现有页面。
 
 
-   您还需要配置Dispatcher以启用对虚URL的访问。 有关更多详细信息，请参阅[启用对虚URL的访问](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
+   您还需要配置Dispatcher以启用对虚URL的访问。 请参阅 [启用对虚URL的访问](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) 以了解更多详细信息。
 
 * **重定向虚 URL**
 
@@ -131,10 +131,10 @@ ht-degree: 82%
 
    指定要用于此页面的别名。
 
-   * 例如，如果为页面`/content/wknd/us/en/magazine/members-only`定义别名`private`，则也可以通过`/content/wknd/us/en/magazine/private`访问此页面
-   * 创建别名会在页面节点上设置`sling:alias`属性，这仅会影响资源，而不会影响存储库路径。
-   * 无法发布编辑器中别名访问的页面。 [编辑](/help/sites-authoring/publishing-pages.md) 器中的发布选项仅适用于通过实际路径访问的页面。
-   * 有关更多详细信息，请参阅“SEO和URL管理最佳实践”下的[本地化的页面名称](/help/managing/seo-and-url-management.md#localized-page-names)。
+   * 例如，如果您为页面 `/content/wknd/us/en/magazine/members-only` 定义别名 `private`，则也可以通过 `/content/wknd/us/en/magazine/private` 访问此页面
+   * 创建别名将设置页面节点上的 `sling:alias` 属性，这只会影响资源，而不会影响存储库路径。
+   * 无法发布编辑器中按别名处理的页面。编辑器中的[发布选项](/help/sites-authoring/publishing-pages.md)仅适用于通过其实际路径访问的页面。
+   * 有关更多详细信息，请参阅 [“SEO和URL管理最佳实践”下的本地化页面名称](/help/managing/seo-and-url-management.md#localized-page-names).
 
 * **继承自 &lt;*路径*>**
 
@@ -158,7 +158,7 @@ ht-degree: 82%
 
    >[!CAUTION]
    >
-   >通过&#x200B;**[Permissions](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**&#x200B;选项卡，可以根据`granite:AuthenticationRequired` mixin的存在来编辑CUG配置。 如果使用已弃用的CUG配置配置了页面权限，则在存在`cq:cugEnabled`属性的情况下，将在&#x200B;**Authentication Requirement**&#x200B;下显示一条警告消息，且该选项将不可编辑，也将不可编辑[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)。
+   >的 **[权限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** 选项卡，允许根据 `granite:AuthenticationRequired` 混合。 如果页面权限是使用已弃用的CUG配置配置的，则 `cq:cugEnabled` 属性中，将显示一条警告消息 **身份验证要求** 选项将不可编辑， [权限](/help/sites-authoring/editing-page-properties.md#permissions) 可编辑。
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
@@ -202,9 +202,9 @@ ht-degree: 82%
    * **首选体验片段变量**
 定义用于为页面生成元数据的体验片段变量
 
-### 云服务 {#cloud-services}
+### Cloud Service {#cloud-services}
 
-* **云服务**
+* **Cloud Service**
 
    为[云服务](/help/sites-developing/extending-cloud-config.md)定义属性。
 
@@ -233,14 +233,14 @@ ht-degree: 82%
    * 查看[有效权限](/help/sites-administering/user-group-ac-admin.md)
    >[!CAUTION]
    >
-   >通过&#x200B;**Permissions**&#x200B;选项卡，可以根据`granite:AuthenticationRequired` mixin的存在来编辑CUG配置。 如果页面权限是使用已弃用的 CUG 配置来配置的，则在存在 `cq:cugEnabled` 属性的情况下，将会显示一条警告消息，且 CUG 权限将不可编辑，同时[高级](/help/sites-authoring/editing-page-properties.md#advanced)选项卡上的“身份验证要求”也将不可编辑。
+   >的 **权限** 选项卡，允许根据 `granite:AuthenticationRequired` 混合。 如果页面权限是使用已弃用的 CUG 配置来配置的，则在存在 `cq:cugEnabled` 属性的情况下，将会显示一条警告消息，且 CUG 权限将不可编辑，同时[高级](/help/sites-authoring/editing-page-properties.md#advanced)选项卡上的“身份验证要求”也将不可编辑。
    >
    >
    >对于此类情况，必须在[经典 UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) 中编辑 CUG 权限。
 
    >[!NOTE]
    >
-   >“权限”选项卡不允许创建空 CUG 组，这可用作拒绝每个用户访问的简单方式。为此，必须使用 CRX 资源管理器。有关详细信息，请参阅文档[用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md)。
+   >“权限”选项卡不允许创建空 CUG 组，这可用作拒绝每个用户访问的简单方式。为此，必须使用 CRX 资源管理器。查看文档 [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md) 以了解更多信息。
 
 ### Blueprint {#blueprint}
 
@@ -271,11 +271,11 @@ ht-degree: 82%
       * 单个页面
       * 多个页面（只有一部分属性可用于整体编辑）
 
-* 在页面编辑器中：
+* 从页面编辑器中：
 
    * 使用&#x200B;**页面信息**（然后&#x200B;**打开属性**）
 
-### 从“站点”控制台中 - 单个页面 {#from-the-sites-console-single-page}
+### 从“站点”控制台中 – 单个页面 {#from-the-sites-console-single-page}
 
 单击或点按&#x200B;**属性**&#x200B;以定义页面属性：
 
@@ -290,7 +290,7 @@ ht-degree: 82%
 
 1. 查看或编辑所需的属性。
 
-1. 然后，使用&#x200B;**保存**&#x200B;以保存您的更新，接着使用&#x200B;**关闭**&#x200B;以返回到控制台。
+1. 然后，使用&#x200B;**保存**&#x200B;来保存您的更新，接着使用&#x200B;**关闭**&#x200B;返回到控制台。
 
 ### 编辑页面时 {#when-editing-a-page}
 
@@ -302,16 +302,16 @@ ht-degree: 82%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 选择&#x200B;**打开属性** ，此时将打开一个用于编辑属性的对话框，这些属性按相应的选项卡进行排序。 工具栏右侧还提供以下按钮：
+1. 选择 **打开属性** 此时将打开一个用于编辑属性的对话框，这些属性按相应的选项卡进行排序。 工具栏右侧还提供以下按钮：
 
    * **取消**
    * **保存并关闭**
 
 1. 使用&#x200B;**保存并关闭**&#x200B;按钮以保存更改。
 
-### 从“站点”控制台中 - 多个页面 {#from-the-sites-console-multiple-pages}
+### 从“站点”控制台中 – 多个页面 {#from-the-sites-console-multiple-pages}
 
-从“站 **点** ”控制台中，您可以选择多个页面，然后使用&#x200B;**查看属性** ，以查看和／或编辑页面属性。 这称为批量编辑页面属性。
+从&#x200B;**“站点”**&#x200B;控制台中，您可以选择多个页面，然后使用&#x200B;**查看属性**，查看和／或编辑页面属性。 这称为批量编辑页面属性。
 
 >[!NOTE]
 >

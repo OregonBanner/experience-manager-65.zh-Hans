@@ -1,8 +1,8 @@
 ---
-title: 语言副本向导
-seo-title: 语言副本向导
-description: 了解如何在AEM中使用语言副本向导。
-seo-description: 了解如何在AEM中使用语言副本向导。
+title: 语言复制向导
+seo-title: Language Copy Wizard
+description: 了解如何在 AEM 中使用语言复制向导。
+seo-description: Learn about using the Language Copy Wizard in AEM.
 uuid: a6168f5d-cce7-48bd-a898-171319621460
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,12 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
-feature: 语言复制
+feature: Language Copy
 exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 0%
+source-wordcount: '214'
+ht-degree: 35%
 
 ---
 
@@ -37,26 +37,26 @@ ht-degree: 0%
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
-1. 在向导的&#x200B;**选择源**&#x200B;步骤中，您可以添加/删除页面。 您还可以选择包含或排除子页面。
+1. 的 **选择源** 在向导的步骤中，可添加/删除页面。 您还可以选择包含或排除子页面。
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. 通过&#x200B;**Next**&#x200B;按钮，您可以转到向导的&#x200B;**配置**&#x200B;步骤。 在此，您可以添加/删除语言并选择翻译方法。
+1. 的 **下一个** 按钮 **配置** 的子菜单。 在此，您可以添加/删除语言并选择翻译方法。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
    >[!NOTE]
    >
-   >默认情况下，只有一个翻译设置。 要选择其他设置，您必须先配置云配置。 请参阅[配置翻译集成框架](/help/sites-administering/tc-tic.md)。
+   >默认情况下，只有一种翻译设置。要能够选择其他设置，您必须先配置云配置。请参阅[配置翻译集成框架](/help/sites-administering/tc-tic.md)。
 
-1. 通过&#x200B;**Next**&#x200B;按钮，您可以转到向导的&#x200B;**Translate**&#x200B;步骤。 在此，您可以选择仅创建结构、创建新翻译项目或添加到现有翻译项目。
+1. 的 **下一个** 按钮 **翻译** 的子菜单。 在此，您可以选择仅创建结构、创建新翻译项目或添加到现有翻译项目。
 
    >[!NOTE]
    >
-   >如果您在上一步中选择了多种语言，则会创建多个翻译项目。
+   >如果您在上一步中选择了多种语言，则将创建多个翻译项目。
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. **创建**&#x200B;按钮可结束向导。
+1. 最后，该向导将显示&#x200B;**创建**&#x200B;按钮。
 
    ![chlimage_1-14](assets/chlimage_1-14.jpeg)

@@ -1,13 +1,13 @@
 ---
 title: 如何使用JSON模式创建自适应Forms?
 description: 了解如何使用JSON模式作为表单模型来创建自适应表单。 您可以使用现有JSON架构创建自适应表单。 使用JSON模式的示例深入挖掘，在JSON模式定义中预配置字段，限制自适应表单组件的可接受值，以及了解不受支持的结构。
-feature: 自适应表单
+feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1448'
 ht-degree: 5%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 ## 使用JSON模式作为表单模型  {#using-a-json-schema-as-form-model}
 
-[!DNL Adobe Experience Manager Forms] 支持使用现有JSON模式作为表单模型来创建自适应表单。此JSON模式表示组织内的后端系统在其中生成或使用数据的结构。 您使用的JSON架构应符合[v4规范](https://json-schema.org/draft-04/schema)。
+[!DNL Adobe Experience Manager Forms] 支持使用现有JSON模式作为表单模型来创建自适应表单。 此JSON模式表示组织内的后端系统在其中生成或使用数据的结构。 您使用的JSON架构应与 [v4规范](https://json-schema.org/draft-04/schema).
 
 使用JSON架构的主要功能包括：
 
@@ -81,12 +81,12 @@ JSON元素与自适应表单组件的映射如下所示：
    <td><br /> <br /> 文本字段<br /> <br /> <br /> </td>
   </tr>
   <tr>
-   <td>number属性<br /> </td>
-   <td>子类型设置为float<br />的数值字段 </td>
+   <td>数字属性<br /> </td>
+   <td>子类型设置为浮点的数值字段<br /> </td>
   </tr>
   <tr>
    <td>整数属性<br /> </td>
-   <td>子类型设置为integer<br />的数字字段 </td>
+   <td>子类型设置为整数的数字字段<br /> </td>
   </tr>
   <tr>
    <td>布尔属性<br /> </td>
@@ -107,17 +107,17 @@ JSON元素与自适应表单组件的映射如下所示：
 
 自适应表单使用JSON模式中可用的信息来映射每个生成的字段。 特别是：
 
-* `title`属性用作自适应表单组件的标签。
-* `description`属性设置为自适应表单组件的长描述。
-* `default`属性用作自适应表单字段的初始值。
-* 将`maxLength`属性设置为文本字段组件的`maxlength`属性。
-* `minimum`、`maximum`、`exclusiveMinimum`和`exclusiveMaximum`属性用于数字框组件。
-* 为了支持`DatePicker component`其他JSON架构属性`minDate`和`maxDate`的范围。
-* `minItems`和`maxItems`属性用于限制可从面板组件添加或删除的项目/字段数。
-* `readOnly`属性设置自适应表单组件的`readonly`属性。
-* `required`属性将自适应表单字段标记为必填字段，而在面板（其中type是对象）中，最终提交的JSON数据具有对应于该对象的空值的字段。
-* `pattern`属性设置为自适应表单中的验证模式（正则表达式）。
-* JSON架构文件的扩展名必须保留为.schema.json。 例如， &lt;filename>.schema.json。
+* 的 `title` 属性用作自适应表单组件的标签。
+* 的 `description` 属性设置为自适应表单组件的长描述。
+* 的 `default` 属性用作自适应表单字段的初始值。
+* 的 `maxLength` 属性设置为 `maxlength` 属性。
+* 的 `minimum`, `maximum`, `exclusiveMinimum`和 `exclusiveMaximum` 属性用于数值框组件。
+* 支持范围 `DatePicker component` 其他JSON架构属性 `minDate` 和 `maxDate` .
+* 的 `minItems` 和 `maxItems` 属性用于限制可从面板组件添加或删除的项目/字段数。
+* 的 `readOnly` 属性设置 `readonly` 自适应表单组件的属性。
+* 的 `required` 属性将自适应表单字段标记为必填字段，而在面板（其中type为object）中，最终提交的JSON数据具有对应于该对象的空值的字段。
+* 的 `pattern` 属性设置为自适应表单中的验证模式（正则表达式）。
+* JSON架构文件的扩展名必须保留为.schema.json。 例如， &lt;filename>.schema.json.
 
 ## JSON架构示例 {#sample-json-schema}
 
@@ -334,7 +334,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 ## 在JSON架构定义中预配置字段 {#pre-configuring-fields-in-json-schema-definition}
 
-您可以使用&#x200B;**aem:afProperties**&#x200B;属性预配置JSON架构字段以映射到自定义自适应表单组件。 下面列出了一个示例：
+您可以使用 **aem:afProperties** 属性来预配置要映射到自定义自适应表单组件的JSON架构字段。 下面列出了一个示例：
 
 ```json
 {
@@ -356,7 +356,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 ## 为表单对象配置脚本或表达式  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，且使用自适应表单脚本模型API。 您可以预配置表单对象以在表单事件上评估表达式](adaptive-form-expressions.md)。[
+JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，且使用自适应表单脚本模型API。 您可以将表单对象预配置为 [评估表达式](adaptive-form-expressions.md) 在表单事件中。
 
 使用aem:afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，触发初始化事件时，以下代码会设置电话字段的值，并在日志中打印一个值：
 
@@ -376,13 +376,13 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 }
 ```
 
-您应该是[forms-power-user组](forms-groups-privileges-tasks.md)的成员，以配置表单对象的脚本或表达式。 下表列出了自适应表单组件支持的所有脚本事件。
+您应该是 [表单 — 用户组](forms-groups-privileges-tasks.md) 为表单对象配置脚本或表达式。 下表列出了自适应表单组件支持的所有脚本事件。
 
 <table>
  <tbody>
   <tr>
    <th><strong></strong>组件\事件</th>
-   <th>初始化<br /> </th>
+   <th>初始化 <br /> </th>
    <td>计算</td>
    <td>可见性</td>
    <td>验证</td>
@@ -581,7 +581,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
  </tbody>
 </table>
 
-在JSON中使用事件的一些示例包括在初始化事件时隐藏字段，并在值提交事件时配置另一个字段的值。 有关为脚本事件创建表达式的详细信息，请参阅[自适应表单表达式](adaptive-form-expressions.md)。
+在JSON中使用事件的一些示例包括在初始化事件时隐藏字段，并在值提交事件时配置另一个字段的值。 有关为脚本事件创建表达式的详细信息，请参阅 [自适应表单表达式](adaptive-form-expressions.md).
 
 以下是前面提到的示例的JSON代码示例。
 
@@ -735,7 +735,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 在可重复的子表单中，您必须使用完整的子表单。 如果只希望选择字段，请使用整个结构并删除不需要的字段。
 
-**我在内容查找器中有一个很长的复杂结构。如何查找特定元素？**
+**我在内容查找器中有一个很长的复杂结构。 如何查找特定元素？**
 
 您有两个选项：
 
@@ -744,4 +744,4 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 **JSON架构文件的扩展名应该是什么？**
 
-JSON架构文件的扩展名必须为.schema.json。 例如， &lt;filename>.schema.json。
+JSON架构文件的扩展名必须为.schema.json。 例如， &lt;filename>.schema.json.

@@ -1,8 +1,8 @@
 ---
 title: 启用对经典UI的访问
-seo-title: 启用对经典UI的访问
+seo-title: Enabling Access to Classic UI
 description: 了解如何启用对经典UI的访问权限。
-seo-description: 了解如何启用对经典UI的访问权限。
+seo-description: Lear how to enable access to Classic UI.
 uuid: 08698023-6e0d-4160-8c4d-d282e74182bc
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: f3683696-663d-4de5-a388-1709f44d58c1
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 20%
+source-wordcount: '86'
+ht-degree: 23%
 
 ---
 

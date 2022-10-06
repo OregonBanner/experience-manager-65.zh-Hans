@@ -1,23 +1,23 @@
 ---
 title: 注册为用户
-seo-title: 注册为用户
+seo-title: Registering as a User
 description: 了解如何使用从文档安全用户那里收到的受策略保护的文档，即使您是用户组织的外部用户。
-seo-description: 了解如何使用从文档安全用户那里收到的受策略保护的文档，即使您是用户组织的外部用户。
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
-feature: 文档安全
+feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '700'
 ht-degree: 6%
 
 ---
 
-# 注册为用户{#registering-as-a-user}
+# 注册为用户 {#registering-as-a-user}
 
 您可以使用从文档安全用户处收到的受策略保护的文档，即使您是用户组织的外部用户。 要使用受策略保护的文档，必须使用文档安全性进行注册。 如果您之前未被邀请注册，则在发生这些事件时，文档安全会启动注册流程：
 
@@ -36,16 +36,16 @@ ht-degree: 6%
 >
 >如果您收到受策略保护的文档，但未收到注册电子邮件邀请，请联系向您发送该文档的人员以获取更多信息。
 
-## 注册为受邀用户{#register-as-an-invited-user}
+## 注册为受邀用户 {#register-as-an-invited-user}
 
 如果您是受邀用户，并且收到来自文档安全的电子邮件注册消息，则可以使用消息中的URL进行注册，以打开在线注册页面。 在注册之后，您将收到有关激活帐户的第二个通知。
 
 1. 打开文档安全注册电子邮件。 消息所包含的URL是指向文档安全中“外部用户注册”页面的链接。
 1. 单击 URL 或者复制并将其粘贴到浏览器中。将显示“外部用户注册”页面。
 1. 在相应的框中键入您的姓名、电话号码、地址、组织和密码，然后在“确认密码”框中重新键入您的密码。 您的密码可以是任意八个字符的组合。
-1. 单击保存。此时会显示一则感谢信，通知您检查电子邮件中是否有激活电子邮件。 您现在必须激活帐户才能完成注册过程。
+1. 单击“保存”。此时会显示一则感谢信，通知您检查电子邮件中是否有激活电子邮件。 您现在必须激活帐户才能完成注册过程。
 
-## 激活您的受邀用户帐户{#activate-your-invited-user-account}
+## 激活您的受邀用户帐户 {#activate-your-invited-user-account}
 
 注册后，文档安全会向您发送一封激活电子邮件。 您必须使用消息中的URL激活您的帐户。 然后，您可以登录到文档安全，以使用您有权访问的受策略保护的文档。 根据管理员为外部用户启用的功能，您可能有权创建策略、将策略应用于文档以及将其他外部用户添加到您的策略。
 
@@ -57,7 +57,7 @@ ht-degree: 6%
 1. 在“用户名”框中，键入您在文档安全中注册的电子邮件地址。 此电子邮件地址是您的默认文档安全用户名。
 1. 在“密码”框中，键入您注册时创建的密码，然后单击“登录”。
 
-## 重置密码{#reset-your-password}
+## 重置密码 {#reset-your-password}
 
 如果忘记密码，策略管理员可以为您重置密码。 重置密码会生成一封电子邮件，邀请您使用临时密码登录。 然后，您可以创建新密码。
 

@@ -1,8 +1,8 @@
 ---
 title: 在AEM Forms应用程序中使用自动保存
-seo-title: 在AEM Forms应用程序中使用自动保存
+seo-title: Using autosave in AEM Forms app
 description: 了解如何在AEM Forms应用程序中使用自动保存功能，以避免数据丢失。
-seo-description: 了解如何在AEM Forms应用程序中使用自动保存功能，以避免数据丢失。
+seo-description: Learn how to use autosave feature in AEM Forms app that lets you avoid data loss.
 uuid: 00fe6a10-1a72-443d-a840-0415dc769199
 contentOwner: sashanka
 content-type: reference
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 1603eef1-d7c8-47d3-8cfa-55ec3eaadd64
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -36,11 +36,11 @@ ht-degree: 0%
 
 执行以下步骤以使用AEM Forms应用程序中的自动保存功能：
 
-1. 登录应用程序，然后导航到&#x200B;**设置>常规**。
-1. 在“常规”屏幕中，使用&#x200B;**自动保存频率**选项选择您希望应用程序保存输入数据的间隔。
+1. 登录应用程序，然后导航到 **设置>常规**.
+1. 在“常规”屏幕中，使用 **自动保存频率** 选项，以选择您希望应用程序保存输入数据的间隔。
    [ ![设置自动保存频率](assets/using-autosave-freq-07.png)](assets/using-autosave-freq-07-1.png)
 
-1. 重新启动应用程序并使用同一用户登录时，系统会提示您使用恢复未保存的任务对话框还原任务。 在恢复未保存的任务对话框中单击&#x200B;**确定**&#x200B;以恢复已保存的任务。 单击&#x200B;**取消**&#x200B;可删除与上次触发的自动保存对应的已保存数据，并开始处理新任务。
+1. 重新启动应用程序并使用同一用户登录时，系统会提示您使用恢复未保存的任务对话框还原任务。 单击 **确定** 在恢复未保存的任务对话框中，以继续处理已保存的任务。 您可以单击 **取消** 删除与上次触发的自动保存对应的已保存数据，然后开始处理新任务。
 
-   单击&#x200B;**确定**后，将恢复任务，并在应用程序崩溃之前触发与最新自动保存对应的数据。 它包括表单数据以及与任务关联的所有附件。
-   [ ![正在恢复&#x200B;](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**任务A。** 正在进行的表单B。 **应用程序已强制关闭C.** 应用程序，并 **在恢复未保存的任务对话框D.** 中 **** 恢复了原始数据的表单
+   单击 **确定**，则会还原任务，并在应用程序崩溃之前触发与最新自动保存对应的数据。 它包括表单数据以及与任务关联的所有附件。
+   [ ![正在恢复任务&#x200B;](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**A.** 正在进行的表单 **B.** 应用程序被强制关闭 **C.** 使用恢复未保存的任务对话框重新启动了应用程序 **D.** 使用原始数据还原的表单

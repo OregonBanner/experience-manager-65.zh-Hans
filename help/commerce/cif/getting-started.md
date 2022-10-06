@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 需要7或更高版本。
 
-## 入门 {#onboarding}
+## 新用户引导 {#onboarding}
 
 AEM内容和商务的入门过程分为两步：
 

@@ -1,8 +1,8 @@
 ---
 title: 搜索
-seo-title: 搜索
+seo-title: Search
 description: AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类型。
-seo-description: AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类型。
+seo-description: The author environment of AEM provides various mechanisms for searching for content, dependent on the resource type.
 uuid: 6dd3df4d-6040-4230-8373-fc028687b675
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '470'
 ht-degree: 85%
 
 ---
@@ -26,7 +26,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 >
 >在创作环境以外，还有其他机制可用于进行搜索，例如 [Query Builder](/help/sites-developing/querybuilder-api.md) 和 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。
 
-## 关于搜索的基础知识 {#search-basics}
+## 搜索基础知识 {#search-basics}
 
 要访问搜索面板，请单击相应控制台左侧窗格顶部的&#x200B;**搜索**&#x200B;选项卡。
 
@@ -45,20 +45,16 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 >
 >* [通配符](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [布尔运算符](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
-
-   >
-   >
-* [正则表达式](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
+>
+>* [正则表达式](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [字段分组](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [Boosting](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
-
 >
-
 
 
 通过单击面板底部的&#x200B;**搜索**&#x200B;来执行搜索。单击&#x200B;**重置**&#x200B;来清除搜索条件。
 
-## 筛选器 {#filter}
+## 过滤器 {#filter}
 
 可在多个位置设置（和清除）筛选器进一步精简您的视图：
 
@@ -81,7 +77,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
    * 指示搜索是否应区分大小写
    * 指示是否应仅查找所有词（否则，还将查找子字符串）
 
-   单击&#x200B;**Preview**&#x200B;列出了找到该术语的位置。您可以选择/清除要替换的特定实例：
+   单击 **预览** 列出已找到术语的位置。您可以选择/清除要替换的特定实例：
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
@@ -94,7 +90,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 * `jcr:text`
 * `text`
 
-使用Apache Felix Web管理控制台（例如，在`https://localhost:4502/system/console/configMgr`）可以更改范围。 选择`CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`并根据需要配置范围。
+使用Apache Felix Web管理控制台(例如， `https://localhost:4502/system/console/configMgr`)。 选择 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 并根据需要配置范围。
 
 >[!NOTE]
 >

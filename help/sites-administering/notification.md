@@ -13,7 +13,7 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
 workflow-type: tm+mt
 source-wordcount: '2116'
-ht-degree: 2%
+ht-degree: 12%
 
 ---
 
@@ -308,8 +308,8 @@ subject=<text_1>
 在AEM Assets中的收藏集进行共享或取消共享时，用户可以从AEM收到电子邮件通知。 要配置电子邮件通知，请执行以下步骤。
 
 1. 按照上文中的说明配置电子邮件服务 [配置邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service).
-1. 以管理员身份登录AEM。 单击 **工具** >  **操作** >  **Web控制台** 打开Web控制台配置。
-1. 编辑 **Day CQ DAM资源收集Servlet**. 选择 **发送电子邮件**. 单击&#x200B;**保存**。
+1. 以管理员身份登录 AEM。单击 **工具** >  **操作** >  **Web控制台** 打开Web控制台配置。
+1. 编辑 **Day CQ DAM资源收集Servlet**. 选择 **发送电子邮件**. 单击“**保存**”。
 
 ## 设置OAuth {#setting-up-oauth}
 
@@ -360,7 +360,7 @@ AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守�
    * 客户端ID和客户端密钥：使用您检索到的值配置这些字段，如上段所述。
    * 刷新令牌 URL: `https://accounts.google.com/o/oauth2/token`
    * 刷新令牌到期：从
-1. 单击&#x200B;**保存**。
+1. 单击“**保存**”。
 
 <!-- clarify refresh token expiry, currrently not present in the UI -->
 
@@ -390,16 +390,16 @@ AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守�
 
 ### Microsoft Outlook {#microsoft-outlook}
 
-1. 转到 [https://portal.azure.com/](https://portal.azure.com/) 并登录。
-1. 搜索 **Azure Active Directory** ，然后单击结果。 或者，您也可以直接浏览到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
-1. 单击 **应用程序注册** - **新注册**
+1. 转至 [https://portal.azure.com/](https://portal.azure.com/) 并登录。
+1. 在搜索栏中搜索 **Azure Active Directory**，并单击搜索结果。或者，您可以直接浏览到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+1. 单击&#x200B;**应用程序注册** - **新注册**
 
    ![](assets/oauth-outlook1.png)
 
-1. 根据您的要求填写信息，然后单击 **注册**
-1. 转到新创建的应用程序，然后选择 **API权限**
-1. 转到 **添加权限** - **图形权限** - **授权权限**
-1. 为您的应用程序选择以下权限，然后单击 **添加权限**:
+1. 根据您的要求填写信息，然后单击&#x200B;**注册**
+1. 转至新创建的应用程序，并选择 **API 权限**
+1. 转至&#x200B;**添加权限** - **图表权限** - **委派权限**
+1. 为应用程序选择以下权限，然后单击&#x200B;**添加权限**：
    * `SMTP.Send`
    * `Mail.Read`
    * `Mail.Send`
@@ -409,16 +409,16 @@ AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守�
    * `http://localhost:4503/services/mailer/oauth2/token`
 1. 对每个发布实例重复上述步骤
 1. 根据您的要求配置设置
-1. 接下来，转到 **证书和密钥**，单击 **新客户端密钥** 并按照屏幕上的步骤创建密钥。 请务必注意此密码，供以后使用
-1. 按 **概述** ，并复制 **应用程序（客户端）ID** 和 **目录（租户）ID** 供以后使用
+1. 接下来，转至&#x200B;**证书和密码**，单击&#x200B;**新建客户端密码**，然后执行屏幕上显示的步骤来创建密码。请务必记下此密码供以后使用
+1. 按左窗格中的&#x200B;**概述**，复制&#x200B;**应用程序（客户端）ID** 和&#x200B;**目录（租户）ID** 的值供以后使用
 
 要重新查看，您需要以下信息在AEM端为邮件程序服务配置OAuth2:
 
-* 身份验证URL，将使用租户ID构建。 它将具有以下表单： `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
-* 令牌URL，将使用租户ID构建。 它将具有以下表单： `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 刷新URL，将使用租户ID构建。 它将具有以下表单： `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 客户端ID
-* 客户端密钥
+* 将使用租户 ID 构建的身份验证 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* 将使用租户 ID 构建的令牌 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 将使用租户 ID 构建的刷新 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 客户端 ID
+* 客户端密码
 
 **AEM端配置**
 
@@ -437,7 +437,7 @@ AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守�
 1. 按如下方式填写所需信息：
    * 按照 [本程序结束](#microsoft-outlook)
    * 客户端ID和客户端密钥：使用如上所述的检索值配置这些字段。
-   * 将以下作用域添加到配置中：
+   * 将以下范围添加到配置：
       * openid
       * offline_access
       * `https://outlook.office365.com/Mail.Send`
@@ -445,7 +445,7 @@ AEM为其集成的邮件服务提供了OAuth2支持，以便组织能够遵守�
       * `https://outlook.office365.com/SMTP.Send`
    * 身份验证代码重定向Url: `http://localhost:4503/services/mailer/oauth2/token`
    * 刷新令牌URL:此URL的值应与上面的令牌URL的值相同
-1. 单击&#x200B;**保存**。
+1. 单击“**保存**”。
 
 配置完毕后，设置应如下所示：
 

@@ -5,7 +5,7 @@ exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
 source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '237'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 ## 其他资源 {#additional-resources}
 
-* [元数据 - 片段属性](/help/assets/content-fragments/content-fragments-metadata.md)
+* [元数据 – 片段属性](/help/assets/content-fragments/content-fragments-metadata.md)
 
 * [使用标记](/help/sites-authoring/tags.md)
 

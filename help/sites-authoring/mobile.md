@@ -1,8 +1,8 @@
 ---
 title: 创作适用于移动设备的页面
-seo-title: 创作适用于移动设备的页面
+seo-title: Authoring a Page for Mobile Devices
 description: 在为移动设备进行创作时，您可以在多个模拟器之间切换，以查看最终用户看到的内容
-seo-description: 在为移动设备进行创作时，您可以在多个模拟器之间切换，以查看最终用户看到的内容
+seo-description: When authoring for mobile, you can switch between several emulators to see what the end-user sees
 uuid: a7a1ba68-d608-4819-88d1-0dab5955d3f4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 89%
+source-wordcount: '225'
+ht-degree: 88%
 
 ---
 
@@ -25,16 +25,16 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->要创建基于现有标准站点的移动站点，请创建标准站点的 Live Copy。（请参阅[为不同渠道创建Live Copy](/help/sites-administering/msm-livecopy.md)。）
+>要创建基于现有标准站点的移动站点，请创建标准站点的 Live Copy。(请参阅 [为不同渠道创建Live Copy](/help/sites-administering/msm-livecopy.md).)
 >
->AEM 开发人员可以创建新设备组。（请参阅[创建设备组过滤器](/help/sites-developing/groupfilters.md)。）
+>AEM 开发人员可以创建新设备组。(请参阅 [创建设备组过滤器](/help/sites-developing/groupfilters.md).)
 
 请使用以下过程来创作移动页面：
 
 1. 从全局导航中打开&#x200B;**站点**&#x200B;控制台。
-1. 打开页面&#x200B;**We.Retail** -> **美国** -> **英语**。
+1. 打开页面 **We.Retail** -> **美国** -> **英语**.
 
-1. 切换到&#x200B;**预览**&#x200B;模式。
+1. 切换到 **预览** 模式。
 1. 单击页面顶部的设备图标以切换到所需的模拟器。
 1. 将组件浏览器中的组件拖放到页面上。
 

@@ -1,8 +1,8 @@
 ---
 title: 编辑启动项
-seo-title: 编辑启动项
+seo-title: Editing Launches
 description: 在为一个页面（或一组页面）创建启动项后，您可以编辑页面启动副本中的内容。
-seo-description: 在为一个页面（或一组页面）创建启动项后，您可以编辑页面启动副本中的内容。
+seo-description: When a launch has been created for a page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 3a310eeb-553d-4d2b-98b5-c5bc523b2aca
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '291'
 ht-degree: 99%
 
 ---
@@ -55,9 +55,9 @@ ht-degree: 99%
    * 在&#x200B;**图像**&#x200B;选项卡中，您可以上传图像文件。
 
 
-1. 单击&#x200B;**保存**。
+1. 单击“**保存**”。
 
-## 发现页面的启动状态  {#discovering-the-launch-status-of-a-page}
+## 发现页面的启动状态 {#discovering-the-launch-status-of-a-page}
 
 编辑页面的启动项时，有关该启动项的信息会显示在 Sidekick 的&#x200B;**版本控制**&#x200B;选项卡底部：
 

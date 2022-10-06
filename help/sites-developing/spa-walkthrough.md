@@ -1,5 +1,5 @@
 ---
-title: SPA简介和演练
+title: SPA 简介和演练
 seo-title: SPA Introduction and Walkthrough
 description: 本文介绍了SPA的概念，并演示了如何使用基本的SPA应用程序进行创作，其中显示了它与基础AEM SPA编辑器的关系。
 seo-description: This article introduces the concepts of a SPA and walks through using a basic SPA application for authoring, showing how it relates to the underlying AEM SPA Editor.
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ---
 
-# SPA简介和演练{#spa-introduction-and-walkthrough}
+# SPA 简介和演练{#spa-introduction-and-walkthrough}
 
 单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用SPA框架构建站点，而作者则希望在AEM中为使用此类框架构建的站点无缝编辑内容。
 
@@ -104,7 +104,6 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 >
 >* [AEM版本6.4（带有Service Pack 2）](/help/release-notes/release-notes.md)
 >* [请在此处安装GitHub上提供的示例We.Retail Journal应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
-
 >
 
 

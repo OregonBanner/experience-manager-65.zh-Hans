@@ -1,10 +1,11 @@
 ---
 title: 了解无标题内容以及如何在AEM中翻译
 description: 了解无头概念、它们如何映射到AEM以及AEM翻译理论。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: cb2e2d89-e2d2-462f-8fff-b201847d0641
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 ## 目标 {#objective}
 
-本文档可帮助您了解无标题内容交付、AEM如何支持无标题内容，以及如何翻译此类内容。 阅读后，您应该：
+本文档可帮助您了解无标题内容交付、AEM如何支持无标题内容，以及如何翻译此类内容。 阅读本文档后，您应：
 
 * 了解无头内容交付的基本概念。
 * 熟悉AEM如何支持无头和翻译。
@@ -44,7 +45,7 @@ ht-degree: 0%
 
 当我们讨论无头CMS时，CMS会管理内容并继续向消费者提供内容。 但是，通过仅提供 **内容** 无头CMS以标准化方式忽略最终输出渲染，从而将 **演示文稿** 内容到消费服务。
 
-![无头CMS](/help/journey-headless/developer/assets/headless-cms.png)
+![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
 消费性服务(无论是AR体验、Web商店、移动体验、渐进式Web应用程序(PWA)等)从无头CMS中获取内容并提供自己的呈现。 他们负责为您的内容提供自己的头脑。
 
@@ -58,14 +59,14 @@ AEM的强大功能允许它无头、全栈或同时在两个模型中交付内�
 
 在历程中，您将进一步了解有关AEM如何翻译内容的详细信息，但在较高的层面，概念很简单：
 
-1. 通过配置翻译集成框架定义与翻译服务的连接。
-1. 定义应使用翻译规则翻译的内容。
-1. 创建翻译项目以收集内容，将其发送到翻译服务并接收结果。
-1. 审阅并发布翻译后的内容。
+1. 通过配置翻译集成框架来定义与翻译服务的连接。
+1. 使用翻译规则定义应翻译的内容。
+1. 创建翻译项目以收获内容，将该内容发送到翻译服务，并接收结果。
+1. 检查和发布已翻译的内容。
 
 ## 下一步 {#what-is-next}
 
-感谢您开始使用AEM无头翻译历程！ 现在，您阅读了本文档，您应该：
+感谢您开始使用AEM无头翻译历程！ 现在您已阅读本文档，您应：
 
 * 了解无头内容交付的基本概念。
 * 熟悉AEM如何支持无头和翻译。
@@ -76,4 +77,4 @@ AEM的强大功能允许它无头、全栈或同时在两个模型中交付内�
 
 但建议您通过审阅文档来进入无标题翻译历程的下一部分 [开始使用AEM无头翻译，](getting-started.md) 以下是一些其他可选资源，可更深入地了解本文档中提到的某些概念，但无需继续进行无头历程。
 
-* [MSM和翻译](/help/sites-administering/msm-and-translation.md) - AEM多站点管理器的详细信息以及它如何与其翻译工具配合使用
+* [MSM 和翻译](/help/sites-administering/msm-and-translation.md) – AEM 的多站点管理器的详细信息及其使用翻译工具的方式

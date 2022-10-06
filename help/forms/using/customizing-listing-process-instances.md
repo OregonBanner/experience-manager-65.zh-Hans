@@ -1,8 +1,8 @@
 ---
 title: 自定义进程实例列表
-seo-title: 自定义进程实例列表
+seo-title: Customizing the listing of process instances
 description: 如何在AEM Forms工作区中自定义流程实例中显示的属性。
-seo-description: 如何在AEM Forms工作区中自定义流程实例中显示的属性。
+seo-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 exl-id: b27ffe92-8491-43a0-bf42-613eb39a606e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '284'
 ht-degree: 3%
 
 ---
 
-# 自定义进程实例列表{#customizing-the-listing-of-process-instances}
+# 自定义进程实例列表 {#customizing-the-listing-of-process-instances}
 
 进程实例列表显示在AEM Forms工作区的“跟踪”选项卡中。
 
@@ -50,7 +50,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>processInstanceStatus</td>
-   <td>0 =已启动<br /> 1 =运行<br /> 2 =完成<br /> 3 =完成<br /> 4 =终止<br /> 5 =终止<br /> 6 =暂停<br /> 7 =暂停<br /> 8 =取消暂停</td>
+   <td>0 =已启动<br /> 1 =正在运行<br /> 2 =完成<br /> 3 =完成<br /> 4 =终止<br /> 5 =终止<br /> 6 =暂停<br /> 7 =暂停<br /> 8 =取消暂停</td>
   </tr>
   <tr>
    <td>processName</td>
@@ -62,19 +62,19 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>进程变量对象数组。 每个进程变量对象都包含<strong>name</strong>（进程变量的名称）、<strong>value</strong>（进程变量的值）和<strong> type</strong>（进程变量的类型）。</td>
+   <td>进程变量对象数组。 每个进程变量对象都包含 <strong>name</strong> （进程变量的名称）、 <strong>值</strong> （进程变量的值）和<strong> type</strong> （进程变量的类型）。</td>
   </tr>
  </tbody>
 </table>
 
 **示例:**
 
-要在流程实例卡中显示流程实例的`description`属性，请执行以下步骤。
+显示 `description` 进程实例卡中进程实例的属性，请执行以下步骤。
 
-1. 按照[AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md)操作。
+1. 关注 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md).
 1. 执行以下操作：
 
-   1. 将/libs/ws/js/runtime/templates/processinstance.html复制到/apps/ws/js/runtime/templates/（如果不存在）。 单击&#x200B;**Save All**。
+   1. 将/libs/ws/js/runtime/templates/processinstance.html复制到/apps/ws/js/runtime/templates/（如果不存在）。 单击 **全部保存**.
    1. 使用类= &#39;processDescription&#39; inprocessinstance.html添加流程描述div。
 
    ```jsp
@@ -84,7 +84,7 @@ ht-degree: 3%
 1. 执行以下操作：
 
    1. 打开/apps/ws/js/registry.js进行编辑。
-   1. 使用&#x200B;`text!/lc/`**apps**/ws/js/runtime/templates/processinstance.html搜索并替换`text!/lc/libs/ws/js/runtime/templates/processinstance.html`。
+   1. 搜索和替换 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`with `text!/lc/`**应用程序**/ws/js/runtime/templates/processinstance.html。
 
 1. 上述更改可能需要通过以下方式在样式表/apps/ws/css/newStyle.css中添加一个条目来更新CSS文件：
 

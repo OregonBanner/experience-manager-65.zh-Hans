@@ -1,26 +1,26 @@
 ---
 title: Web 控制台
-seo-title: Web 控制台
+seo-title: Web Console
 description: 了解如何使用AEM Web控制台。
-seo-description: 了解如何使用AEM Web控制台。
+seo-description: Learn how to use the AEM web console.
 uuid: 7856b2b3-4216-421d-a315-cd9a55936362
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
-feature: 配置
+feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
 
 # Web 控制台{#web-console}
 
-AEM中的Web控制台基于[Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)。 Apache Felix是为实施OSGi R4服务平台（包括OSGi框架和标准服务）而做出的社区努力。
+AEM中的Web控制台基于 [Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是为实施OSGi R4服务平台（包括OSGi框架和标准服务）而做出的社区努力。
 
 >[!NOTE]
 >
@@ -36,19 +36,19 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 所做的任何更改都会立即应用于正在运行的系统。 无需重新启动。
 
-可以从`../system/console`访问控制台；例如：
+可以从访问控制台 `../system/console`;例如：
 
 `http://localhost:4502/system/console/components`
 
 ## 配置 {#configuration}
 
-**Configuration**&#x200B;选项卡用于配置OSGi包，因此是配置AEM系统参数的基础机制。
+的 **配置** 选项卡用于配置OSGi包，因此是配置AEM系统参数的基础机制。
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅使用Web控制台进行的[OSGi配置](/help/sites-deploying/configuring-osgi.md) 。
+>请参阅 [使用Web控制台进行OSGi配置](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息。
 
-**Configuration**&#x200B;选项卡可通过以下任一方式访问：
+的 **配置** 选项卡可通过以下方式访问：
 
 * 下拉菜单：
 
@@ -64,14 +64,14 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 此屏幕上的下拉列表提供了两种类型的配置：
 
-* ****
-配置用于更新现有配置。它们具有永久标识(PID)，可以是：
+* **配置**
+用于更新现有配置。 它们具有永久标识(PID)，可以是：
 
    * 标准及AEM的完整性；如果删除了这些值，则需要使用这些值，这些值将返回默认设置。
    * 从工厂配置创建的实例；这些实例由用户创建，删除后将删除该实例。
 
-* **工厂**
-配置允许您创建所需功能对象的实例。
+* **工厂配置**
+用于创建所需功能对象的实例。
 
    这将分配一个永久标识，然后列在配置下拉列表中。
 
@@ -105,7 +105,7 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 ## 包 {#bundles}
 
-**Bundles**&#x200B;选项卡是安装AEM所需的OSGi包的机制。 可通过以下任一方法访问选项卡：
+的 **包** 选项卡是安装AEM所需的OSGi包的机制。 可通过以下任一方法访问选项卡：
 
 * 下拉菜单：
 
@@ -123,7 +123,7 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 * **安装或更新**
 
-   您可以&#x200B;**浏览**&#x200B;以查找包含包的文件，并指定它是否应立即启动&#x200B;****，在该启动级别&#x200B;**。**
+   您可以 **浏览** 查找包含包的文件，并指定是否应 **开始** 立即 **开始级别**.
 
 * **重新加载**
 
@@ -135,7 +135,7 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
    例如，在更新后，由于以前的引用，旧版本和新版本可能仍在运行。 此选项将检查并移动对新版本的所有引用，从而允许停止旧版本。
 
-* **开始**
+* **启动**
 
    根据指定的开始级别启动包。
 
@@ -153,11 +153,11 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 >[!NOTE]
 >
->在&#x200B;**Update**&#x200B;之后，建议执行&#x200B;**刷新包**。
+>之后 **更新** 建议执行 **刷新包**.
 
 ## 组件 {#components}
 
-**组件**&#x200B;选项卡允许您启用和/或禁用各种组件。 它可通过以下任一方式访问：
+的 **组件** 选项卡允许您启用和/或禁用各种组件。 它可通过以下任一方式访问：
 
 * 下拉菜单：
 

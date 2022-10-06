@@ -1,8 +1,8 @@
 ---
 title: 部署最佳实践
-seo-title: 部署最佳实践
+seo-title: Deploying Best Practices
 description: 部署和维护最佳实践。
-seo-description: 部署和维护最佳实践。
+seo-description: Deploying and maintaining best practices.
 uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 15%
+source-wordcount: '430'
+ht-degree: 16%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 15%
 
 ## OAK {#oak}
 
-[](/help/sites-deploying/platform.md) Oak是一个可扩展且性能卓越的分层内容存储库，是AEM的基础。
+[Oak](/help/sites-deploying/platform.md) 是一个可扩展且性能卓越的分层内容存储库，是AEM的基础。
 
 <table>
  <tbody>
@@ -74,9 +74,9 @@ ht-degree: 15%
 
 AEM Communities简化了内部部署社区的创建和管理。 以下介绍了AEM Communities的最佳实践：
 
-[社区内容存储](/help/communities/working-with-srp.md)  — 讨论用户生成内容(UGC)的新共享存储功能以及选择基础拓扑的注 [意事项](/help/communities/topologies.md)。
+[社区内容存储](/help/communities/working-with-srp.md)  — 讨论用户生成内容(UGC)的新共享存储功能以及选择基础内容的注意事项 [拓扑](/help/communities/topologies.md).
 
-[推荐的社区部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 描述推荐的社区部署。 |
+[推荐的社区部署](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  — 介绍推荐的社区部署。 |
 
 ## UI {#ui}
 
@@ -95,7 +95,7 @@ AEM当前有两个UI:同一版本中的经典用户界面和触屏优化用户�
   <tr>
    <td>质量保证最佳实践</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">质量保证最佳实践</a></td>
-   <td>针对在<em>publish</em>环境中的性能测试专门定义测试概念时涉及的问题的标准化概述。 这主要是QA工程师、项目经理和系统管理员感兴趣的。</td>
+   <td>针对您的性能测试专门定义测试概念时涉及的问题的标准化概述 <em>发布</em> 环境。 这主要是QA工程师、项目经理和系统管理员感兴趣的。</td>
   </tr>
   <tr>
    <td>将 Dispatcher 与 CDN 结合使用</td>

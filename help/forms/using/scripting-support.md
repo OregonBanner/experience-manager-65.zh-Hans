@@ -1,24 +1,24 @@
 ---
 title: HTML5表单的脚本支持
-seo-title: HTML5表单的脚本支持
-description: HTML5 Forms支持的JavaScript、FormCalc属性和其他方法。
-seo-description: HTML5 Forms支持的JavaScript、FormCalc属性和其他方法。
+seo-title: Scripting support for HTML5 forms
+description: JavaScript、FormCalc属性和HTML5 Forms中支持的其他方法。
+seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
-feature: 移动设备表单
+feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '3911'
+source-wordcount: '3892'
 ht-degree: 6%
 
 ---
 
-# 对HTML5表单{#scripting-support-for-html-forms}的脚本支持
+# HTML5表单的脚本支持 {#scripting-support-for-html-forms}
 
 HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 
@@ -36,7 +36,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>指定字段内容，然后字段根据用户的操作进行更改。 此值与撤消功能类似，可以回调。</td>
    <td><p>不适用于下拉框和列表框。 <code>PrevText </code>无法在以下情况下正常工作：</p>
     <ul>
-     <li>在iPad的“数字”字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)，以及 </li>
+     <li>在iPad的数字字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)，以及 </li>
      <li>对于“日期”字段（通过日历输入日期时）。<br /> </li>
     </ul> <p>不支持通过脚本设置值。</p> </td>
   </tr>
@@ -48,11 +48,11 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td><code>newtext</code></td>
    <td>指定字段在响应用户操作而发生更改后的内容。</td>
-   <td><p><code>newText</code>属性在以下情况下无法正常工作：</p>
+   <td><p>的 <code>newText</code> 属性在以下情况下无法正常工作：</p>
     <ul>
      <li>论文本的选替</li>
      <li>删除、复制和粘贴文本时。</li>
-     <li>在数字字段<br />中键入一些特殊字符键(例如$、(、)、&amp;、@等) </li>
+     <li>在数字字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)<br /> </li>
      <li>使用shift+字母数字组合。 </li>
      <li>使用日期/时间字段时。</li>
     </ul>
@@ -67,7 +67,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
     <ul>
      <li>论文本的选替</li>
      <li>删除、复制和粘贴文本时。</li>
-     <li>在数字字段<br />中键入一些特殊字符键(例如$、(、)、&amp;、@等) </li>
+     <li>在数字字段中键入一些特殊字符键(例如$、(、)、&amp;、@等)<br /> </li>
      <li>使用shift+字母数字组合。 </li>
      <li>使用日期/时间字段时。</li>
     </ul> <p>不支持通过脚本设置值。</p> </td>
@@ -97,7 +97,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td><code>apptype</code></td>
    <td>返回主机的应用程序类型。 仅适用于客户端应用程序。</td>
-   <td>返回<code>HTML 5</code>。</td>
+   <td>返回结果 <code>HTML 5</code>.</td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -137,7 +137,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td><code>pageUp</code></td>
    <td>转到上一页。</td>
-   <td>HTML5表单与PDF表单的分页策略不同，因此HTML5表单的上一页与PDF表单的上一页不同。</td>
+   <td>HTML5表单与PDF表单不遵循相同的分页策略，因此HTML5表单的上一页与PDF表单的上一页不同。</td>
   </tr>
   <tr>
    <td><code>pageDown</code></td>
@@ -184,7 +184,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td><code>access</code></td>
    <td>控制用户对内容的访问。</td>
-   <td>不适用于排除组。 此外，HTML5表单对非交互式和受保护对象也给予相同的处理。<br /> </td>
+   <td>不适用于排除组。 此外，HTML5形式对非交互和受保护的物体给予相同的处理。<br /> </td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -204,17 +204,17 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td><code>formattedValue</code></td>
    <td>指定此字段的格式化值。</td>
-   <td>不支持通过脚本设置<code>formattedValue</code>。</td>
+   <td>设置 <code>formattedValue</code> 不支持通过脚本。</td>
   </tr>
   <tr>
    <td><code>editValue</code></td>
    <td>指定此字段的编辑值。</td>
-   <td>不支持设置<code>editValue </code>到脚本。</td>
+   <td>设置 <code>editValue </code>不支持通过脚本。</td>
   </tr>
   <tr>
    <td><code>formatMessage</code></td>
    <td>指定此字段的格式验证消息字符串。</td>
-   <td>不支持设置<code>formatMessage </code>到脚本。</td>
+   <td>设置 <code>formatMessage </code>不支持通过脚本。</td>
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
@@ -253,7 +253,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td><code>clearItem</code></td>
-   <td>从字段中删除所有项目。</td>
+   <td>删除字段中的所有项目。</td>
    <td>无</td>
   </tr>
   <tr>
@@ -370,7 +370,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 | `moveInstance` | 将表单模型对象的子对象移动到表单模型内的其他指定位置。 对象的相应数据模型信息也在数据模型内被重新定位。 |
 | `insertInstance` | 向此节点插入子表单或子表单集的新实例。 |
 
-## 列表 {#list}
+## list {#list}
 
 | 属性 | 描述 |
 |---|---|
@@ -481,7 +481,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>instanceManager</td>
-   <td>instanceManager对象管理表单模型对象的实例创建、删除和移动。<br /> </td>
+   <td>instanceManager对象管理表单模型对象的实例创建、移除和移动。<br /> </td>
    <td>无</td>
   </tr>
  </tbody>
@@ -508,13 +508,13 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>xfa.nodes、desc不支持</li>
-     <li>针对PDF和HTML报告的节点数不同。 </li>
+     <li>报告的PDF和HTML节点数不同。 </li>
     </ul> </td>
   </tr>
   <tr>
    <td>name</td>
    <td>指定此节点的名称。</td>
-   <td>HTML中不允许使用脚本设置名称。</td>
+   <td>不允许在HTML中使用脚本设置名称。</td>
   </tr>
   <tr>
    <td>parent</td>
@@ -522,7 +522,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>无</td>
   </tr>
   <tr>
-   <td>索引</td>
+   <td>index</td>
    <td>返回此节点在其相似名称、范围内、相似子关系节点集合中的位置。</td>
    <td>无</td>
   </tr>
@@ -577,7 +577,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
+     <li>这些更改会反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -598,7 +598,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
+     <li>这些更改会反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -619,7 +619,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
+     <li>这些更改会反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -637,7 +637,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>边缘</td>
    <td>边缘对象描述边框或矩形的弧、线或一侧。<br /> </td>
-   <td>不支持颜色、帽子等属性。<br /> </td>
+   <td>不支持颜色、大写等属性。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -657,7 +657,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
+     <li>这些更改会反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -678,7 +678,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>
     <ul>
      <li>无法检索默认值。 </li>
-     <li>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
+     <li>这些更改会反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -716,7 +716,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>ui</td>
-   <td>ui对象封装了表单对象的用户界面描述。<br /> </td>
+   <td>用户界面对象封装了表单对象的用户界面描述。<br /> </td>
    <td> </td>
   </tr>
   <tr>
@@ -736,7 +736,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   </tr>
   <tr>
    <td>选定</td>
-   <td>值对象封装了单个数据内容单位。<br /> </td>
+   <td>值对象将封装单个数据内容单位。<br /> </td>
    <td> </td>
   </tr>
  </tbody>
@@ -775,7 +775,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
   <tr>
    <td>边框</td>
    <td>边框对象描述checkButton对象周围的边框。 </td>
-   <td>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改未反映在UI中。<br /> </td>
+   <td>这些更改将反映在模型中，可用于编写脚本，但不会与HTML元素同步。 因此，这些更改不会反映在UI中。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -1084,7 +1084,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>确定当前表单的页数。</td>
    <td>
     <ul>
-     <li>layout.pageCount()方法会为PDF和HTML表单返回不同的值。</li>
+     <li>layout.pageCount()方法会为PDF表单和HTML表单返回不同的值。</li>
      <li>通过隐藏对象来减少页面计数时，abspagecount方法会返回错误值。<br /> </li>
     </ul> </td>
   </tr>
@@ -1098,7 +1098,7 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
    <td>确定当前表单的页面计数。</td>
    <td>
     <ul>
-     <li>layout.pageCount()方法会为PDF和HTML表单返回不同的值。</li>
+     <li>layout.pageCount()方法会为PDF表单和HTML表单返回不同的值。</li>
      <li>通过隐藏对象来减少页面计数时，abspagecount方法会返回错误值。</li>
     </ul> </td>
   </tr>
@@ -1115,9 +1115,9 @@ HTML5表单中支持的JavaScript、FormCalc属性和方法如下所示：
 
 FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的逻辑和计算根。 FormCalculation提供了一组功能强大的构建函数。
 
-### FormCalc支持的函数{#formcalc-supported-functions}
+### FormCalc支持的函数 {#formcalc-supported-functions}
 
-### 表单计算表达式支持{#formcalc-expression-support}
+### 表单计算表达式支持 {#formcalc-expression-support}
 
 <table>
  <tbody>
@@ -1156,14 +1156,14 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
    <td>而(ilt 5)do i = i + 1 endwile</td>
   </tr>
   <tr>
-   <td>对象</td>
+   <td> 的 </td>
    <td><br type="_moz" /> </td>
-   <td>对于i = 100，向下到1 <br />, do s = s + i结束</td>
+   <td>对于i = 100 - 1 <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>每个</td>
    <td><br type="_moz" /> </td>
-   <td>对于(1、2、3)<br />中的每个i， s = s + i结尾</td>
+   <td>(1、2、3)中的每个i <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>函数声明</td>
@@ -1173,7 +1173,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
  </tbody>
 </table>
 
-### Acrobat API支持{#acrobat-api-support}
+### Acrobat API支持 {#acrobat-api-support}
 
 1. **算术函数**
 
@@ -1196,7 +1196,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
    1. Atan2()
    1. Cos()
    1. Sin()
-   1. 谭()
+   1. 棕褐色()
    1. Exp()
    1. 日志()
    1. Pow()
@@ -1273,7 +1273,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   <tr>
    <td>app.execDialog()</td>
    <td>向用户显示一个模式对话框。 必须先由用户关闭模态对话框，然后才能直接再次使用主机应用程序。</td>
-   <td>未执行任何操作。<br /> </td>
+   <td>不执行任何操作。<br /> </td>
   </tr>
   <tr>
    <td>app.launchURL()</td>
@@ -1338,7 +1338,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
  </tbody>
 </table>
 
-## 支持的XFA事件{#supported-xfa-events}
+## 支持的XFA事件 {#supported-xfa-events}
 
 支持以下客户端XFA事件：
 
@@ -1353,4 +1353,4 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
 
 >[!NOTE]
 >
->HTML5表单在客户端（浏览器）上呈现。 建议使用客户端&#x200B;**validate**&#x200B;和&#x200B;**calculate**&#x200B;脚本，而不是服务器端脚本。
+>HTML5表单在客户端（浏览器）上呈现。 建议使用客户端 **验证** 和 **计算** 脚本，而不是服务器端脚本。

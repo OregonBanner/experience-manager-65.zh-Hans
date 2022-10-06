@@ -138,7 +138,7 @@ Software Distribution用于分发产品功能、示例和热修复程序。 有�
 1. 搜索“Apache Sling登录管理员白名单”服务。
 1. 选择 **绕过白名单**.
 1. 添加 `com.day.cq.dam.cq-dam-jcr-connectors` 在白名单包中默认
-1. 单击保存。
+1. 单击“保存”。
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
@@ -164,7 +164,7 @@ Software Distribution用于分发产品功能、示例和热修复程序。 有�
 1. 搜索“默认DAMAssetSynchronization”服务。
 1. 编辑配置值。
 1. 在SharePoint网站上设置有权访问的用户的用户名和相应的密码。
-1. 单击保存。
+1. 单击“保存”。
 
 启用DAM同步服务，默认情况下处于禁用状态：
 
@@ -178,7 +178,7 @@ Software Distribution用于分发产品功能、示例和热修复程序。 有�
 1. 搜索“DAY CQ DAM JCR连接器资产同步服务”。
 1. 编辑配置值。
 1. 设置同步时段的值（以秒为单位）。
-1. 单击保存。
+1. 单击“保存”。
 
 ### 配置身份验证 {#configuring-authentication}
 
@@ -207,7 +207,7 @@ Sharepoint包括经典身份验证和基于声明的身份验证方法，这两�
 1. 搜索“Day JCR Connector for Microsoft Sharepoint”
 1. 单击“编辑配置值”
 1. 将“Sharepoint连接工厂”的值设置为“com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory”
-1. 单击&#x200B;**保存**。
+1. 单击“**保存**”。
 
 **配置基本身份验证(Windows)**
 
@@ -217,7 +217,7 @@ Sharepoint包括经典身份验证和基于声明的身份验证方法，这两�
 1. 搜索 **适用于Microsoft Sharepoint的Day JCR Connector**.
 1. 单击 `Edit the configuration values`.
 1. 将Sharepoint连接工厂的值设置为 `com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`.
-1. 单击&#x200B;**保存**。
+1. 单击“**保存**”。
 
 只有在AEM和SharePoint上通过身份验证的用户才能通过连接器访问SharePoint内容。
 

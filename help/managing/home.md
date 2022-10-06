@@ -1,7 +1,7 @@
 ---
 title: AEM 6.5 Managing 用户指南
 seo-title: AEM 6.5 Managing User Guide
-description: '了解如何在关键资源和AEM 6.5用户指南的全面集合的支持下成功管理AEM项目。 '
+description: 了解如何在关键资源和AEM 6.5用户指南的全面集合的支持下成功管理AEM项目。
 seo-description: Covers how to manage an AEM project successfully
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
 source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51

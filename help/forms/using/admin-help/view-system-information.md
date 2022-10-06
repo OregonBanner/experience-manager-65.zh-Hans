@@ -1,8 +1,8 @@
 ---
 title: 查看系统信息
-seo-title: 查看系统信息
+seo-title: View system information
 description: 了解如何查看资源监控图表以及有关运行AEM Forms的服务器的信息。
-seo-description: 了解如何查看资源监控图表以及有关运行AEM Forms的服务器的信息。
+seo-description: Learn how you can view resource monitoring charts and information about the server that is running AEM forms.
 uuid: 983c1cc7-a8b3-48b2-a4c8-7b28a2e32537
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: d51460d9-c96c-4661-b93e-e015427878ab
 exl-id: 27a2e81c-47b0-4de8-95bd-7cb34b9450da
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
-# 查看系统信息{#view-system-information}
+# 查看系统信息 {#view-system-information}
 
 “系统”选项卡显示资源监控图表以及有关运行AEM表单的服务器的信息。 要访问此信息，请在管理控制台中，单击页面右上角的运行状况监视器。 如果您在群集环境中运行AEM表单，则显示的信息是从服务器列表中选择的节点。
 
@@ -43,11 +43,11 @@ ht-degree: 0%
 
 **虚拟机版本：** JVM版本号
 
-**计算机名称：** 安装AEM表单的服务器的主机名。
+**计算机名称：** 安装AEM Forms的服务器的主机名。
 
 **启动时间：** 服务器运行的时间（以小时和分钟为单位）。
 
-**即时编译器：** 所使用的编译器的名称。
+**即时编译器：** 正在使用的编译器的名称。
 
 **编译时间：** 编译所花费的时间。
 
@@ -55,17 +55,17 @@ ht-degree: 0%
 
 **线程数峰值：** 系统上记录的最大实时线程数。
 
-**已加载类的数量：** 已加载到JVM中的类的数量。
+**加载的类数：** 加载到JVM中的类数。
 
-**已卸载的类数：** 从JVM中卸载的类数。
+**已卸载的类数：** 从JVM卸载的类数。
 
-**最小堆：** 已使用的最小堆量。
+**最小堆：** 已使用的堆的最小数量。
 
-**最大堆数：** 已使用的最大堆数。
+**最大堆数：** 已使用的堆的最大数量。
 
-**操作系统名称：** 在AEM Forms服务器上运行的操作系统的名称。
+**操作系统名称：** AEM Forms服务器上运行的操作系统的名称。
 
-**操作系统版本：** 在AEM Forms服务器上运行的操作系统的版本号。
+**操作系统版本：** AEM Forms服务器上运行的操作系统的版本号。
 
 **操作系统拱：** JVM运行的操作系统架构。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 **库路径：** JVM使用的库路径。
 
-**引导类路径：** JVM使用的引导类路径。
+**引导类路径：** JVM使用的启动类路径。
 
 **应用程序服务器类型：** 用于运行AEM表单的应用程序服务器类型。
 
@@ -85,18 +85,18 @@ ht-degree: 0%
 
 **应用程序服务器供应商：** 用于运行AEM表单的应用程序服务器的制造商。
 
-**安装日期：** 安装AEM Forms的日期（yyyy-mm-dd格式）。
+**安装日期：** 安装AEM表单的日期（yyyy-mm-dd格式）。
 
-**AEM表单版本：** 已安装的AEM表单版本。
+**AEM Forms版本：** 安装的AEM表单版本。
 
-**修补程序版本：** AEM Forms修补程序编号。
+**修补程序版本：** AEM forms修补程序号。
 
 **数据库名称：** AEM表单使用的数据库类型。
 
 **数据库版本：** AEM表单使用的数据库的版本号。
 
-**数据库驱动器名称：** JVM用来连接到数据库的驱动程序的名称。
+**数据库驱动器名称：** JVM用于连接到数据库的驱动程序的名称。
 
-**数据库驱动程序版本：** JVM用来连接到数据库的驱动程序的版本。
+**数据库驱动程序版本：** JVM用于连接到数据库的驱动程序的版本。
 
-使用&#x200B;**Save**&#x200B;按钮可将此系统信息保存在属性文件中。
+的 **保存** 按钮可将此系统信息保存在属性文件中。

@@ -1,54 +1,54 @@
 ---
-title: 了解如何将GraphQL与AEM结合使用 — 示例内容和查询
-description: 了解如何通过探索示例内容和查询，将GraphQL与AEM结合使用来无头地提供内容。
+title: 了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询
+description: 通过探索示例内容和查询，了解如何将 GraphQL 与 AEM 结合使用，以 Headless 方式提供内容。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 source-git-commit: 1a3d5a6b3b4f7af67d6a62cdaab484daa536cb63
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1416'
+ht-degree: 100%
 
 ---
 
-# 了解如何将GraphQL与AEM结合使用 — 示例内容和查询 {#learn-graphql-with-aem-sample-content-queries}
+# 了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询 {#learn-graphql-with-aem-sample-content-queries}
 
-了解如何通过探索示例内容和查询，将GraphQL与AEM结合使用来无头地提供内容。
+通过探索示例内容和查询，了解如何将 GraphQL 与 AEM 结合使用，以 Headless 方式提供内容。
 
 >[!NOTE]
 >
->本页应与以下内容一起阅读：
+>本页面应该与下列内容一起阅读：
 >
 >* [内容片段](/help/assets/content-fragments/content-fragments.md)
 >* [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
->* [AEM GraphQL API，用于内容片段](/help/assets/content-fragments/graphql-api-content-fragments.md)
+>* [用于内容片段的 AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)
 
 
-要开始使用GraphQL查询以及它们如何使用AEM内容片段，请查看一些实用示例。
+要开始了解 GraphQL 查询以及它们如何与 AEM 内容片段结合使用，看一些具体的示例会有所帮助。
 
-要提供相关帮助，请参阅：
+有关这方面的帮助，请查看：
 
-* A [内容片段结构示例](#content-fragment-structure-graphql)
+* 一个[示例内容片段结构](#content-fragment-structure-graphql)
 
-* 有些 [示例GraphQL查询](#graphql-sample-queries)，基于示例内容片段结构（内容片段模型和相关内容片段）。
+* 以及一些[示例 GraphQL 查询](#graphql-sample-queries)，基于示例内容片段结构（内容片段模型以及相关的内容片段）。
 
 
-## GraphQL — 使用示例内容片段结构的示例查询 {#graphql-sample-queries-sample-content-fragment-structure}
+## GraphQL – 使用示例内容片段结构的示例查询 {#graphql-sample-queries-sample-content-fragment-structure}
 
-有关创建查询的插图，请参阅这些示例查询以及示例结果。
+查看这些示例查询，以了解创建查询的说明以及示例结果。
 
 >[!NOTE]
 >
->根据您的实例，您可以直接访问 [AEM GraphQL API附带的GraphiQL接口](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) 用于提交和测试查询。
+>根据您的实例，您可以直接访问 [AEM GraphQL API 中包含的 GraphiQL 接口](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)，用于提交和测试查询。
 >
 >例如：`http://localhost:4502/content/graphiql.html`
 
 >[!NOTE]
 >
->示例查询基于 [与GraphQL一起使用的示例内容片段结构](#content-fragment-structure-graphql)
+>示例查询基于[用于 GraphQL 的示例内容片段结构](#content-fragment-structure-graphql)
 
-### 示例查询 — 所有可用架构和数据类型 {#sample-all-schemes-datatypes}
+### 示例查询 – 所有可用架构和数据类型 {#sample-all-schemes-datatypes}
 
-这将返回所有 `types` （适用于所有可用架构）。
+这会返回所有可用架构的所有 `types`。
 
 **示例查询**
 
@@ -139,9 +139,9 @@ ht-degree: 0%
 }
 ```
 
-### 示例查询 — 有关所有城市的所有信息 {#sample-all-information-all-cities}
+### 示例查询 – 关于所有城市的所有信息 {#sample-all-information-all-cities}
 
-要检索所有城市的所有信息，您可以使用非常基本的查询：
+要检索有关所有城市的所有信息，您可以使用非常基本的查询：
 **示例查询**
 
 ```xml
@@ -152,7 +152,7 @@ ht-degree: 0%
 }
 ```
 
-执行时，系统将自动展开查询以包含所有字段：
+在执行时，系统将自动扩展查询以包含所有字段：
 
 ```xml
 {
@@ -222,9 +222,9 @@ ht-degree: 0%
 }
 ```
 
-### 示例查询 — 所有城市的名称 {#sample-names-all-cities}
+### 示例查询 – 所有城市的名称 {#sample-names-all-cities}
 
-这是一个简单的查询，用于返回 `name`的所有条目 `city`架构。
+这是一个直接的查询，返回 `city` 架构中所有条目的 `name`。
 
 **示例查询**
 
@@ -272,9 +272,9 @@ query {
 }
 ```
 
-### 示例查询 — 单个特定城市片段 {#sample-single-specific-city-fragment}
+### 示例查询 – 一个特定城市片段 {#sample-single-specific-city-fragment}
 
-这是一个查询，用于返回位于存储库中特定位置的单个片段条目的详细信息。
+此查询返回存储库中特定位置的单个片段条目的详细信息。
 
 **示例查询**
 
@@ -313,9 +313,9 @@ query {
 }
 ```
 
-### 示例查询 — 具有命名变体的所有城市 {#sample-cities-named-variation}
+### 示例查询 – 具有指定变体的所有城市 {#sample-cities-named-variation}
 
-如果创建一个名为“柏林中心”(`berlin_centre`)，对于 `city` 然后，您可以使用查询返回变体的详细信息。
+如果您创建新的变体，命名为“柏林中心”(`berlin_centre`)，则对于 `city` 柏林，您可以使用查询返回变体的详细信息。
 
 **示例查询**
 
@@ -356,9 +356,9 @@ query {
 }
 ```
 
-### 示例查询 — 公司CEO和员工的完整详细信息 {#sample-full-details-company-ceos-employees}
+### 示例查询 – 公司的 CEO 和员工的完整详细信息 {#sample-full-details-company-ceos-employees}
 
-使用嵌套片段的结构，此查询可返回公司首席执行官及其所有员工的完整详细信息。
+使用嵌套片段的结构，此查询返回公司的 CEO 及其所有员工的完整详细信息。
 
 **示例查询**
 
@@ -484,9 +484,9 @@ query {
 }
 ```
 
-### 示例查询 — 名称为“Jobs”或“Smith”的所有人员 {#sample-all-persons-jobs-smith}
+### 示例查询 – 所有名为“Jobs”或“Smith”的人 {#sample-all-persons-jobs-smith}
 
-这将过滤所有 `persons` 对于任何 `Jobs`或 `Smith`.
+这将筛选出名为 `Jobs` 或 `Smith` 的所有 `persons`。
 
 **示例查询**
 
@@ -538,9 +538,9 @@ query {
 }
 ```
 
-### 示例查询 — 所有名称不为“Jobs”的人员 {#sample-all-persons-not-jobs}
+### 示例查询 – 所有名字不是“Jobs”的人 {#sample-all-persons-not-jobs}
 
-这将过滤所有 `persons` 对于任何 `Jobs`或 `Smith`.
+这将筛选出名为 `Jobs` 或 `Smith` 的所有 `persons`。
 
 **示例查询**
 
@@ -605,9 +605,9 @@ query {
 }
 ```
 
-### 示例查询 — 所有其 `_path` 以特定前缀开头 {#sample-wknd-all-adventures-cycling-path-filter}
+### 示例查询 – 其 `_path` 以特定前缀开头的所有冒险 {#sample-wknd-all-adventures-cycling-path-filter}
 
-全部 `adventures` where `_path` 以特定前缀(`/content/dam/wknd/en/adventures/cycling`)。
+其 `_path` 以特定前缀 (`/content/dam/wknd/en/adventures/cycling`) 开头的所有 `adventures`。
 
 **示例查询**
 
@@ -650,9 +650,9 @@ query {
 }
 ```
 
-### 示例查询 — 位于德国或瑞士的人口介于400000和999999之间的所有城市 {#sample-all-cities-d-ch-population}
+### 示例查询 – 位于德国或瑞士且人口在 400000 到 999999 之间的所有城市。 {#sample-all-cities-d-ch-population}
 
-此处过滤了字段组合。 安 `AND` （隐式）用于选择 `population`范围，而 `OR` （显式）用于选择所需的城市。
+以下是筛选的字段组合：使用 `AND`（隐式）来选择 `population` 范围，使用 `OR`（显式）来选择所需的城市。
 
 **示例查询**
 
@@ -713,9 +713,9 @@ query {
 }
 ```
 
-### 示例查询 — 名称中包含SAN的所有城市，无论大小写如何 {#sample-all-cities-san-ignore-case}
+### 示例查询 – 名称中包含 SAN 的所有城市，不考虑大小写 {#sample-all-cities-san-ignore-case}
 
-这个查询会询问所有 `SAN` 名称中，不考虑任何情况。
+此查询查找名称中包含 `SAN` 的所有城市，不考虑大小写。
 
 **示例查询**
 
@@ -764,9 +764,9 @@ query {
 }
 ```
 
-### 示例查询 — 对包含项目且必须至少发生一次的数组进行筛选 {#sample-array-item-occur-at-least-once}
+### 示例查询 – 筛选数组中必须至少出现一次的项 {#sample-array-item-occur-at-least-once}
 
-此查询对具有项目(`city:na`)，且必须至少发生一次。
+此查询筛选数组中必须至少出现一次的项 (`city:na`)。
 
 **示例查询**
 
@@ -822,9 +822,9 @@ query {
 }
 ```
 
-### 示例查询 — 对精确数组值进行筛选 {#sample-array-exact-value}
+### 示例查询 – 根据精确的数组值筛选 {#sample-array-exact-value}
 
-此查询会过滤精确的数组值。
+此查询筛选一个精确的数组值。
 
 **示例查询**
 
@@ -874,9 +874,9 @@ query {
 }
 ```
 
-### 嵌套内容片段的查询示例 — 所有至少有一名员工的公司名称都为“Smith” {#sample-companies-employee-smith}
+### 嵌套内容片段的示例查询 – 至少有一位员工名为“Smith”的所有公司 {#sample-companies-employee-smith}
 
-此查询说明了对任何 `person` of `name` “Smith”，从两个嵌套片段返回信息 —  `company` 和 `employee`.
+此查询演示了筛选 `name` 为“Smith”的任意 `person`，跨两个嵌套片段返回结果：`company` 和 `employee`。
 
 **示例查询**
 
@@ -940,9 +940,9 @@ query {
 }
 ```
 
-### 嵌套内容片段的查询示例 — 所有员工均获得“Gamestar”奖的公司 {#sample-all-companies-employee-gamestar-award}
+### 嵌套内容片段的示例查询 – 所有员工赢得了“Gamestar”奖项的所有公司 {#sample-all-companies-employee-gamestar-award}
 
-此查询说明了跨三个嵌套片段的筛选 —  `company`, `employee`和 `award`.
+此查询演示了跨三个嵌套片段筛选：`company`、`employee` 和 `award`。
 
 **示例查询**
 
@@ -1032,9 +1032,9 @@ query {
 }
 ```
 
-### 元数据查询示例 — 列出标题为GB的奖项的元数据 {#sample-metadata-awards-gb}
+### 元数据的示例查询 – 列出标题为 GB 的奖项的元数据 {#sample-metadata-awards-gb}
 
-此查询说明了跨三个嵌套片段的筛选 —  `company`, `employee`和 `award`.
+此查询演示了跨三个嵌套片段筛选：`company`、`employee` 和 `award`。
 
 **示例查询**
 
@@ -1092,26 +1092,26 @@ query {
 }
 ```
 
-## 使用WKND项目的示例查询 {#sample-queries-using-wknd-project}
+## 使用 WKND 项目的示例查询 {#sample-queries-using-wknd-project}
 
-这些示例查询基于WKND项目。 具有：
+这些示例查询基于 WKND 项目。它具有：
 
-* 可在以下位置获取的内容片段模型：
+* 在以下位置提供的内容片段模型：
    `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
 
-* 可在以下位置获取的内容片段（和其他内容）：
+* 在以下位置提供的内容片段（和其他内容）：
    `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
 
 >[!NOTE]
 >
->由于结果可能很广泛，因此在此不再复制。
+>由于结果可能会很庞大，此处不再复述。
 
-### 具有指定属性的特定模型的所有内容片段的示例查询 {#sample-wknd-all-model-properties}
+### 具有指定属性的特定模型的所有内容片段示例查询 {#sample-wknd-all-model-properties}
 
-此示例查询询问：
+此示例查询查找：
 
-* 适用于所有类型的内容片段 `article`
-* 和 `path`和 `author` 属性。
+* 类型为 `article` 的所有内容片段
+* 具有 `path` 和 `author` 属性。
 
 **示例查询**
 
@@ -1126,11 +1126,11 @@ query {
 }
 ```
 
-### 元数据查询示例 {#sample-wknd-metadata}
+### 元数据的示例查询 {#sample-wknd-metadata}
 
-此查询询问：
+此查询查找：
 
-* 适用于所有类型的内容片段 `adventure`
+* 类型为 `adventure` 的所有内容片段
 * 元数据
 
 **示例查询**
@@ -1189,10 +1189,10 @@ query {
 
 ### 给定模型的单个内容片段的示例查询 {#sample-wknd-single-content-fragment-of-given-model}
 
-此示例查询询问：
+此示例查询查找：
 
-* （对于类型为的单个内容片段） `article` 在特定路径上
-   * 其中，所有格式的内容：
+* 特定路径下类型为 `article` 的单个内容片段
+   * 在其中，所有下列格式的内容：
       * HTML
       * Markdown
       * 纯文本
@@ -1217,12 +1217,12 @@ query {
 }
 ```
 
-### 模型中内容片段模型的示例查询 {#sample-wknd-content-fragment-model-from-model}
+### 来自模型的内容片段模型的示例查询 {#sample-wknd-content-fragment-model-from-model}
 
-此示例查询询问：
+此示例查询查找：
 
-* 用于单个内容片段
-   * 基础内容片段模型的详细信息
+* 单个内容片段
+   * 底层内容片段模型的详细信息
 
 **示例查询**
 
@@ -1241,16 +1241,16 @@ query {
 }
 ```
 
-### 嵌套内容片段的示例查询 — 单个模型类型{#sample-wknd-nested-fragment-single-model}
+### 嵌套内容片段的示例查询 – 单个模型类型{#sample-wknd-nested-fragment-single-model}
 
-此查询询问：
+此查询查找：
 
-* （对于类型为的单个内容片段） `article` 在特定路径上
-   * 在该路径中，引用（嵌套）片段的路径和作者
+* 特定路径下类型为 `article` 的单个内容片段
+   * 在其中，引用（嵌套）片段的路径和作者
 
 >[!NOTE]
 >
->字段 `referencearticle` 具有数据类型 `fragment-reference`.
+>字段 `referencearticle` 具有数据类型 `fragment-reference`。
 
 **示例查询**
 
@@ -1269,16 +1269,16 @@ query {
 }
 ```
 
-### 嵌套内容片段的示例查询 — 多模型类型{#sample-wknd-nested-fragment-multiple-model}
+### 嵌套内容片段的示例查询 – 多个模型类型{#sample-wknd-nested-fragment-multiple-model}
 
-此查询询问：
+此查询查找：
 
-* （适用于类型的多个内容片段） `bookmark`
-   * 具有对特定模型类型的其他片段的片段引用 `article` 和 `adventure`
+* 类型为 `bookmark` 的多个内容片段
+   * 带有对特定模型类型 `article` 和 `adventure` 的其他片段的片段引用
 
 >[!NOTE]
 >
->字段 `fragments` 具有数据类型 `fragment-reference`，与模型 `Article`, `Adventure` 选项。
+>字段 `fragments` 具有数据类型 `fragment-reference`，并选择了模型 `Article`、`Adventure`。
 
 ```xml
 {
@@ -1299,21 +1299,21 @@ query {
 }
 ```
 
-### 包含内容引用的特定模型的内容片段的示例查询{#sample-wknd-fragment-specific-model-content-reference}
+### 具有内容引用的特定模型的内容片段示例查询{#sample-wknd-fragment-specific-model-content-reference}
 
-此查询有两种类型：
+此查询有两种风格：
 
-1. 返回所有内容引用。
-1. 返回类型的特定内容引用 `attachments`.
+1. 用于返回所有内容引用。
+1. 用于返回类型为 `attachments` 的特定内容引用。
 
-这些查询会询问：
+这些查询查找：
 
-* （适用于类型的多个内容片段） `bookmark`
-   * 包含对其他片段的内容引用
+* 类型为 `bookmark` 的多个内容片段
+   * 具有对其他片段的内容引用
 
-#### 包含预取引用的多个内容片段的查询示例 {#sample-wknd-multiple-fragments-prefetched-references}
+#### 具有预获取引用的多个内容片段的示例查询 {#sample-wknd-multiple-fragments-prefetched-references}
 
-以下查询通过使用 `_references`:
+以下查询通过使用 `_references` 返回所有内容引用：
 
 ```xml
 {
@@ -1347,13 +1347,13 @@ query {
 }
 ```
 
-#### 带有附件的多个内容片段的查询示例 {#sample-wknd-multiple-fragments-attachments}
+#### 具有附件的多个内容片段的示例查询 {#sample-wknd-multiple-fragments-attachments}
 
-以下查询返回所有 `attachments`  — 类型的特定字段（子组） `content-reference`:
+以下查询返回所有 `attachments` – 类型为 `content-reference` 的特定字段（子组）：
 
 >[!NOTE]
 >
->字段 `attachments` 具有数据类型 `content-reference`，并选择各种表单。
+>字段 `attachments` 具有数据类型 `content-reference`，并选择了多种格式。
 
 ```xml
 {
@@ -1386,16 +1386,16 @@ query {
 }
 ```
 
-### 使用RTE内联引用的单个内容片段的查询示例 {#sample-wknd-single-fragment-rte-inline-reference}
+### 具有 RTE 内联引用的单个内容片段的示例查询 {#sample-wknd-single-fragment-rte-inline-reference}
 
-此查询询问：
+此查询查找：
 
-* （对于类型为的单个内容片段） `bookmark` 在特定路径上
-   * 其中，RTE内联引用
+* 特定路径下类型为 `bookmark` 的单个内容片段
+   * 在其中，具有 RTE 内联引用
 
 >[!NOTE]
 >
->在 `_references`.
+>RTE 内联引用在 `_references` 中水合。
 
 **示例查询**
 
@@ -1432,12 +1432,12 @@ query {
 }
 ```
 
-### 给定模型的单个内容片段变量的示例查询 {#sample-wknd-single-fragment-given-model}
+### 给定模型的单个内容片段变体的示例查询 {#sample-wknd-single-fragment-given-model}
 
-此查询询问：
+此查询查找：
 
-* （对于类型为的单个内容片段） `article` 在特定路径上
-   * 其中，与变量相关的数据： `variation1`
+* 特定路径下类型为 `article` 的单个内容片段
+   * 在其中，数据关联到变体：`variation1`
 
 **示例查询**
 
@@ -1458,11 +1458,11 @@ query {
 }
 ```
 
-### 给定模型的多个内容片段的命名变体的示例查询 {#sample-wknd-variation-multiple-fragment-given-model}
+### 给定模型的多个内容片段的指定变体示例查询 {#sample-wknd-variation-multiple-fragment-given-model}
 
-此查询询问：
+此查询查找：
 
-* （对于类型的内容片段） `article` 具有特定变量： `variation1`
+* 类型为 `article` 且具有以下特定变体的内容片段：`variation1`
 
 **示例查询**
 
@@ -1483,11 +1483,11 @@ query {
 }
 ```
 
-### 给定区域设置的多个内容片段的查询示例 {#sample-wknd-multiple-fragments-given-locale}
+### 给定区域设置的多个内容片段的示例查询 {#sample-wknd-multiple-fragments-given-locale}
 
-此查询询问：
+此查询查找：
 
-* （对于类型的内容片段） `article` 在 `fr` 语言
+* `fr` 区域设置中类型为 `article` 的内容片段
 
 **示例查询**
 
@@ -1508,21 +1508,21 @@ query {
 }
 ```
 
-## 示例内容片段结构（与GraphQL一起使用） {#content-fragment-structure-graphql}
+## 示例内容片段结构（用于 GraphQL） {#content-fragment-structure-graphql}
 
 示例查询基于以下结构，该结构使用：
 
-* 一个或多个， [内容片段模型示例](#sample-content-fragment-models-schemas)  — 构成GraphQL架构的基础
+* 一个或多个[示例内容片段模型](#sample-content-fragment-models-schemas) – 构成了 GraphQL 架构的基础
 
-* [示例内容片段](#sample-content-fragments) 基于上述模型
+* 基于以上模型的[示例内容片段](#sample-content-fragments)
 
-### 内容片段模型示例（架构） {#sample-content-fragment-models-schemas}
+### 示例内容片段模型（架构） {#sample-content-fragment-models-schemas}
 
-对于示例查询，我们将使用以下内容模型及其相互关系（引用 — >）：
+对于相同的查询，我们将使用以下内容模型及其相互关系（引用 ->）：
 
 * [公司](#model-company)
 -> [人员](#model-person)
-    -> [奖项](#model-award)
+-> [奖励](#model-award)
 
 * [城市](#model-city)
 
@@ -1530,36 +1530,36 @@ query {
 
 定义公司的基本字段包括：
 
-| 字段名称 | 数据类型 | 针对开发人员的 Adobe AIR API 参考 |
+| 字段名 | 数据类型 | 引用 |
 |--- |--- |--- |
 | 公司名称 | 单行文本 |  |
-| 首席执行官 | 片段引用（单个） | [人员](#model-person) |
-| 员工 | 片段引用（多字段） | [人员](#model-person) |
+| CEO | 片段引用（单个字段） | [人员](#model-person) |
+| 员工 | 片段引用（多个字段） | [人员](#model-person) |
 
 #### 人员 {#model-person}
 
-定义人员（也可以是员工）的字段：
+这些字段定义人员，也可以是员工：
 
-| 字段名称 | 数据类型 | 针对开发人员的 Adobe AIR API 参考 |
+| 字段名 | 数据类型 | 引用 |
 |--- |--- |--- |
 | 名称 | 单行文本 |  |
 | 名字 | 单行文本 |  |
-| 奖项 | 片段引用（多字段） | [奖项](#model-award) |
+| 奖励 | 片段引用（多个字段） | [奖励](#model-award) |
 
-#### 奖项 {#model-award}
+#### 奖励 {#model-award}
 
 定义奖励的字段包括：
 
-| 字段名称 | 数据类型 | 针对开发人员的 Adobe AIR API 参考 |
+| 字段名 | 数据类型 | 引用 |
 |--- |--- |--- |
-| 快捷方式/ID | 单行文本 |  |
+| 简称/ID | 单行文本 |  |
 | 标题 | 单行文本 |  |
 
 #### 城市 {#model-city}
 
-用于定义城市的字段包括：
+定义城市的字段包括：
 
-| 字段名称 | 数据类型 | 针对开发人员的 Adobe AIR API 参考 |
+| 字段名 | 数据类型 | 引用 |
 |--- |--- |--- |
 | 名称 | 单行文本 |  |
 | 国家/地区 | 单行文本 |  |
@@ -1574,39 +1574,39 @@ query {
 
 | 公司名称 | 首席执行官 | 员工 |
 |--- |--- |--- |
-| Apple | 史蒂夫·乔布斯 | 杜克马什<br>麦斯·考尔菲尔德 |
-|  小马公司 | 亚当·斯密 | 拉腊·克罗夫特<br>刀具刀片 |
-| NextStep Inc. | 史蒂夫·乔布斯 | 乔·史密斯<br>阿部·林肯 |
+| Apple | Steve Jobs | Duke Marsh<br>Max Caulfield |
+| Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
+| NextStep Inc. | 史蒂夫·乔布斯 | Joe Smith<br>Abe Lincoln |
 
 #### 人员 {#fragment-person}
 
-| 名称 | 名字 | 奖项 |
+| 姓名 | 名字 | 奖励 |
 |--- |--- |--- |
-| 林肯 |  阿部 |  |
-| 史密斯 | Adam |   |
-| 斯莱德 |  刀具 |  加梅布利茨<br>Gamestar |
-| 马什 |  杜克 |   |   |
-|  史密斯 |  乔 |   |
-| 克罗夫特 |  拉拉 | Gamestar |
-| 考尔菲尔德 |  最大 |  加梅布利茨 |
-|  作业 |  Steve |   |
+| Lincoln | Abe |  |
+| Smith | Adam |   |
+| Slade | Cutter | Gameblitz<br>Gamestar |
+| Marsh | Duke |   |   |
+| Smith | Joe |   |
+| Croft | Lara | Gamestar |
+| Caulfield | Max | Gameblitz |
+| Jobs | Steve |   |
 
-#### 奖项 {#fragment-award}
+#### 奖励 {#fragment-award}
 
-| 快捷方式/ID | 标题 |
+| 简称/ID | 标题 |
 |--- |--- |
-| GB | 加梅布利茨 |
-|  GS | Gamestar |
-|  OSC | Oscar |
+| GB | Gameblitz |
+| GS | Gamestar |
+| OSC | Oscar |
 
 #### 城市 {#fragment-city}
 
 | 名称 | 国家/地区 | 人口 | 类别 |
 |--- |--- |--- |--- |
-| Basel | 瑞士 | 172258 | 城市：emea |
-| 柏林 | 德国 | 3669491 | 城市：资本<br>城市：emea |
-| 布加勒斯特 | 罗马尼亚 | 1821000 |  城市：资本<br>城市：emea |
-| San Francisco |  美国 |  883306 |  城市：海滩<br>城市：纳 |
-| 圣何塞 |  美国 |  102635 |  城市：纳 |
-| 斯图加特 |  德国 |  634830 |  城市：emea |
-|  苏黎世 |  瑞士 |  415367 |  城市：资本<br>城市：emea |
+| 巴塞尔 | 瑞士 | 172258 | city:emea |
+| 柏林 | 德国 | 3669491 | city:capital<br>city:emea |
+| 布加勒斯特 | 罗马尼亚 | 1821000 |  city:capital<br>city:emea |
+| 圣弗朗西斯科 | 美国 |  883306 |  city:beach<br>city:na |
+| 圣何塞 | 美国 |  102635 | city:na |
+| 斯图加特 | 德国 | 634830 | city:emea |
+| 苏黎世 | 瑞士 | 415367 |  城市：资本<br>城市：emea |

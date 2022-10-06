@@ -1,8 +1,8 @@
 ---
 title: 草稿和提交组件的自定义存储
-seo-title: 草稿和提交组件的自定义存储
+seo-title: Custom storage for drafts and submissions component
 description: 请参阅如何自定义草稿和提交的用户数据存储。
-seo-description: 请参阅如何自定义草稿和提交的用户数据存储。
+seo-description: See how to customize the storage of user data for drafts and submissions.
 uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,29 +12,29 @@ feature: Forms Portal
 exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
-# 草稿和提交组件的自定义存储{#custom-storage-for-drafts-and-submissions-component}
+# 草稿和提交组件的自定义存储 {#custom-storage-for-drafts-and-submissions-component}
 
 ## 概述 {#overview}
 
 AEM Forms允许您将表单另存为草稿。 草稿功能允许您维护正在进行的表单，您可以从任何设备完成并稍后提交该表单。
 
-默认情况下，AEM Forms会将与表单草稿和提交相关的用户数据存储在Publish实例的`/content/forms/fp`节点中。 此外，AEM Forms门户组件还提供数据服务，您可以使用这些数据服务来自定义存储草稿和提交用户数据的实施。 例如，您可以将用户数据存储在数据存储中。
+默认情况下，AEM Forms会在 `/content/forms/fp` 节点。 此外，AEM Forms门户组件还提供数据服务，您可以使用这些数据服务来自定义存储草稿和提交用户数据的实施。 例如，您可以将用户数据存储在数据存储中。
 
 ## 前提条件  {#prerequisites}
 
-* 启用[forms门户组件](/help/forms/using/enabling-forms-portal-components.md)
-* 创建[forms门户页面](/help/forms/using/creating-form-portal-page.md)
-* 为表单门户启用[自适应表单](/help/forms/using/draft-submission-component.md)
-* 了解自定义存储的[实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* 启用 [表单门户组件](/help/forms/using/enabling-forms-portal-components.md)
+* 创建 [表单门户页面](/help/forms/using/creating-form-portal-page.md)
+* 启用 [表单门户自适应表单](/help/forms/using/draft-submission-component.md)
+* 学习 [自定义存储的实施详细信息](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
-## 草稿数据服务{#draft-data-service}
+## 草稿数据服务 {#draft-data-service}
 
-要自定义草稿的用户数据存储，您需要实施`DraftDataService`界面的所有方法。 以下示例代码介绍了方法和参数。
+要自定义草稿的用户数据存储，您需要实施 `DraftDataService` 界面。 以下示例代码介绍了方法和参数。
 
 ```java
 /**
@@ -101,9 +101,9 @@ public interface DraftDataService {
 >
 >草稿ID字段长度的最小值为26个字符。 Adobe建议将草稿ID长度设置为26个或更多字符。
 
-## 提交数据服务{#submission-data-service}
+## 提交数据服务 {#submission-data-service}
 
-要自定义提交用户数据的存储，您需要实施`SubmitDataService`界面的所有方法。 以下示例代码介绍了方法和参数。
+要自定义提交用户数据的存储，您需要实施 `SubmitDataService` 界面。 以下示例代码介绍了方法和参数。
 
 ```java
 /**

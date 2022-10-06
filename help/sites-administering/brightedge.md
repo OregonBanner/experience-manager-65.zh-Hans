@@ -1,8 +1,8 @@
 ---
 title: 与BrightEdge Content Optimizer集成
-seo-title: 与BrightEdge Content Optimizer集成
+seo-title: Integrating with BrightEdge Content Optimizer
 description: 了解如何将AEM与BrightEdge Content Optimizer集成。
-seo-description: 了解如何将AEM与BrightEdge Content Optimizer集成。
+seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
 uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 0%
 
 1. 如果单击显示配置，请单击可用配置旁边的+链接。
 1. 键入配置的标题。 （可选）键入用于在存储库中存储配置的节点名称。 单击创建。
-1. 在BrightEdge Content Optimizer的“配置”对话框中，键入BrightEdge帐户的用户名和密码，然后单击“确定”。
+1. 在BrightEdge Content Optimizer配置对话框中，键入BrightEdge帐户的用户名和密码，然后单击确定。
 
-## 编辑BrightEdge配置{#editing-a-brightedge-configuration}
+## 编辑BrightEdge配置 {#editing-a-brightedge-configuration}
 
 根据需要修改BrightEdge配置的用户名和密码。 修改会影响使用配置的所有页面。
 
@@ -47,9 +47,9 @@ ht-degree: 0%
 1. 单击要编辑的配置的名称。
 1. 单击编辑，修改属性值，然后单击确定。
 
-## 将页面与BrightEdge配置{#associating-pages-with-a-brightedge-configuration}关联
+## 将页面与BrightEdge配置关联 {#associating-pages-with-a-brightedge-configuration}
 
-将页面与BrightEdge配置关联，以将页面数据发送到BrightEdge服务进行分析。 将页面与配置关联后，子页面将继承关联。 通常，您会关联网站的主页，以便将所有页面的数据发送到BrightEdge。
+将页面与BrightEdge配置关联，以将页面数据发送到BrightEdge服务进行分析。 将页面与配置关联后，子页面将继承该关联。 通常，您会关联网站的主页，以便将所有页面的数据发送到BrightEdge。
 
 1. 打开经典的网站控制台。 ([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
 1. 在“网站”树中，选择包含要与BrightEdge配置关联的页面的文件夹或页面。
@@ -59,7 +59,7 @@ ht-degree: 0%
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-## 激活BrightEdge配置{#activating-a-brightedge-configuration}
+## 激活BrightEdge配置 {#activating-a-brightedge-configuration}
 
 激活BrightEdge配置以在发布实例上复制该配置，并使已发布的页面能够与BrightEdge服务进行交互。
 

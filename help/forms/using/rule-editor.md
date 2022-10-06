@@ -380,7 +380,7 @@ AEM Forms会跟踪您上次用于写入规则的规则编辑器模式。 下次�
 1. 单击以编辑 **[!UICONTROL 自适应表单与交互式通信Web信道配置]**.
 1. 选择 **[!UICONTROL 可视编辑器]** 或 **[!UICONTROL 代码编辑器]** 从 **[!UICONTROL 规则编辑器的默认模式]** 下拉列表
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。
+1. 单击“**[!UICONTROL 保存]**”。
 
 ### F.完成和取消按钮 {#f-done-and-cancel-buttons}
 

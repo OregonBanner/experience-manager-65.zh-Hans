@@ -6,7 +6,7 @@ exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 6f3f88ea0f07c97fa8d7ff3bdd1c89114d12a8a1
 workflow-type: tm+mt
 source-wordcount: '3986'
-ht-degree: 89%
+ht-degree: 90%
 
 ---
 
@@ -68,7 +68,7 @@ GraphQL 是：
 
 GraphQL for AEM 实施基于标准 GraphQL Java 库。请参阅：
 
-* [graphQL.org - Java](https://graphql.org/code/#java)
+* [graphQL.org – Java](https://graphql.org/code/#java)
 
 * [GitHub 上的 GraphQL Java](https://github.com/graphql-java)
 
@@ -119,20 +119,20 @@ AEM 中有两种类型的端点：
 
 * 全局
    * 可供所有站点使用。
-   * 此端点可以使用所有 Sites 配置的所有内容片段模型（在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中定义）。
-   * 如果有任何应该在 Sites 配置中共享的内容片段模型，则这些内容应该在全局 Sites 配置下创建。
+   * 此端点可以使用所有站点配置的所有内容片段模型（在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中定义）。
+   * 如果有任何应该在站点配置中共享的内容片段模型，则这些内容应该在全局站点配置下创建。
 * Sites 配置：
-   * 对应于 Sites 配置，如[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中的定义。
+   * 对应于站点配置，如[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)中的定义。
    * 特定于指定站点/项目。
-   * Sites 配置特定的端点将来自特定 Sites 配置与来自全局 Sites 配置的内容片段模型结合使用。
+   * Sites 配置特定的端点将来自特定站点配置与来自全局站点配置的内容片段模型结合使用。
 
 >[!CAUTION]
 >
->内容片段编辑器可以允许一个 Sites 配置的内容片段引用另一个 Sites 配置（通过策略）的内容片段。
+>内容片段编辑器可以允许一个站点配置的内容片段引用另一个站点配置（通过策略）的内容片段。
 >
->在这种情况下，所有内容将可使用 Sites 配置特定的端点检索。
+>在这种情况下，所有内容将可使用站点配置特定的端点检索。
 >
->内容作者应控制这种情境；例如，在考虑将共享内容片段模型放在全局 Sites 配置下时，它会很有用。
+>内容作者应控制这种情境；例如，在考虑将共享内容片段模型放在全局站点配置下时，它会很有用。
 
 AEM 全局端点的 GraphQL 的存储库路径为：
 
@@ -149,11 +149,11 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 ### 启用 GraphQL 端点 {#enabling-graphql-endpoint}
 
-要启用 GraphQL 端点，您首先需要具有合适的配置。请参阅[内容片段 - 配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md)。
+要启用 GraphQL 端点，您首先需要具有合适的配置。请参阅[内容片段 – 配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md)。
 
 >[!CAUTION]
 >
->如果[未启用内容片段模型的使用](/help/assets/content-fragments/content-fragments-configuration-browser.md)，则&#x200B;**创建**&#x200B;选项将不可用。
+>如果[未启用内容片段模型](/help/assets/content-fragments/content-fragments-configuration-browser.md)，则&#x200B;**创建**&#x200B;选项将不可用。
 
 要启用对应的端点，请执行以下操作：
 
@@ -171,7 +171,7 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 
 1. 选择&#x200B;**创建**&#x200B;来确认。
-1. **后续步骤**&#x200B;对话框将提供直接指向安全控制台的链接，这样您可以确保新创建的端点具有合适的权限。
+1. **后续步骤**&#x200B;对话框将提供直接指向安全性控制台的链接，这样您可以确保新创建的端点具有合适的权限。
 
    >[!CAUTION]
    >
@@ -286,7 +286,7 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
 架构通过与 GraphQL 查询相同的端点提供，客户端处理使用扩展 `GQLschema` 调用架构的实际情况。例如，在 `/content/cq:graphql/global/endpoint.GQLschema` 上执行简单的 `GET` 请求将导致架构的输出带有内容类型：`text/x-graphql-schema;charset=iso-8859-1`。
 
-### 架构生成 - 未发布的模型 {#schema-generation-unpublished-models}
+### 架构生成 – 未发布的模型 {#schema-generation-unpublished-models}
 
 当内容片段嵌套时，可能会出现的情况是发布了父内容片段模型，但未发布引用的模型。
 
@@ -304,7 +304,7 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
    使用选择的一组[字段类型](#field-types)，根据您配置内容片段模型的方式来创建字段。字段名称获取自&#x200B;**数据类型**&#x200B;的&#x200B;**属性名称**&#x200B;字段。
 
-   * 其中还有&#x200B;**渲染为**&#x200B;属性需要考虑，因为用户可以配置特定数据类型；例如，作为单行文本或多行文本。
+   * 其中还有&#x200B;**呈现为**&#x200B;属性需要考虑，因为用户可以配置特定数据类型；例如，作为单行文本或多行文本。
 
 * GraphQL for AEM 还生成多个[帮助程序字段](#helper-fields)。
 
@@ -314,13 +314,13 @@ Sites GraphQL 服务监听（在后台）对内容片段模型所作的任何更
 
 GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数据类型和对应的 GraphQL 类型呈现如下：
 
-| 内容片段模型 - 数据类型 | GraphQL 类型 | 描述 |
+| 内容片段模型 – 数据类型 | GraphQL 类型 | 描述 |
 |--- |--- |--- |
 | 单行文本 | 字符串，[字符串] | 用于简单字符串，例如作者姓名、位置名称等 |
 | 多行文本 | 字符串 | 用于输出文本，例如文章的正文 |
-| 数值 | 浮点，[浮点] | 用于显示浮点数和常规数字 |
+| 数字 | 浮点，[浮点] | 用于显示浮点数和常规数字 |
 | 布尔型 |  布尔型 | 用于显示复选框 → 简单的 true/false 语句 |
-| 日期和时间 | 日历 | 用于显示日期和时间，使用 ISO 8086 格式。根据选择的类型，有三种风格可用于 AEM GraphQL 中：`onlyDate`、`onlyTime`、`dateTime` |
+| 日期和时间 | 日程表 | 用于显示日期和时间，使用 ISO 8086 格式。根据选择的类型，有三种风格可用于 AEM GraphQL 中：`onlyDate`、`onlyTime`、`dateTime` |
 | 枚举 | 字符串 | 用于显示在模型创建时定义的选项列表中的选项 |
 | 标记 | [字符串] | 用于显示表示在 AEM 中所用标记的字符串列表 |
 | 内容引用 | 字符串 | 用于显示指向 AEM 中其他资源的路径 |
@@ -363,7 +363,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 }
 ```
 
-请参阅[示例查询 - 一个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)。
+请参阅[示例查询 – 一个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)。
 
 #### 元数据 {#metadata}
 
@@ -415,9 +415,9 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 >
 >举例而言，通过调用 `stringMetadata` 字段，您应该以 `String` 的形式收到存储在存储库中所有元数据的数组，如果您调用 `stringArrayMetadata`，则会以 `String[]` 的形式收到存储在存储库中所有元数据的数组。
 
-请参阅[元数据的示例查询 - 列出标题为 GB 的奖励的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)。
+请参阅[元数据的示例查询 – 列出标题为 GB 的奖励的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)。
 
-#### 变量 {#variations}
+#### 变体 {#variations}
 
 `_variations` 字段已实施以简化查询内容片段具有的变体。例如：
 
@@ -431,7 +431,7 @@ GraphQL for AEM 支持一个类型列表。所有支持的内容片段模型数�
 }
 ```
 
-请参阅[示例查询 - 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)。
+请参阅[示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)。
 
 >[!NOTE]
 >
@@ -532,25 +532,25 @@ query {
 
 * [基于 WKND 项目的示例查询](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-queries-using-wknd-project)
 
-## GraphQL for AEM - 执行摘要 {#graphql-extensions}
+## GraphQL for AEM – 执行摘要 {#graphql-extensions}
 
-使用 GraphQL for AEM 的查询基本操作遵循标准 GraphQL 规范。对于用于 AEM 的 GraphQL 查询，有几个扩展：
+使用 GraphQL for AEM 的查询基本处理遵循标准 GraphQL 规范。对于用于 AEM 的 GraphQL 查询，有几个扩展：
 
 * 如果您需要单个结果：
    * 使用模型名称，例如 city
 
 * 如果您需要结果列表：
    * 将 `List` 添加到模型名称；例如，`cityList`
-   * 请参阅[示例查询 - 关于所有城市的所有信息](#sample-all-information-all-cities)
+   * 请参阅[示例查询 – 关于所有城市的所有信息](#sample-all-information-all-cities)
 
 * 如果您希望使用逻辑 OR：
    * 使用 ` _logOp: OR`
-   * 请参阅[示例查询 - 所有名为“Jobs”或“Smith”的人](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-jobs-smith)
+   * 请参阅[示例查询 – 所有名为“Jobs”或“Smith”的人](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-jobs-smith)
 
 * 逻辑 AND 也可使用，不过（通常）是隐式的
 
 * 您可以查询与内容片段模型中字段对应的字段名称
-   * 请参阅[示例查询 - 公司的 CEO 和员工的完整详细信息](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-full-details-company-ceos-employees)
+   * 请参阅[示例查询 – 公司的 CEO 和员工的完整详细信息](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-full-details-company-ceos-employees)
 
 * 除了来自您模型的字段以外，还有一些系统生成的字段（以下划线为前缀）：
 
@@ -559,11 +559,11 @@ query {
       * `_locale`：用于显示语言；基于语言管理器
          * 请参阅[给定区域设置的多个内容片段的示例查询](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)
       * `_metadata`：用于显示片段的元数据
-         * 请参阅[元数据的示例查询 - 列出标题为 GB 的奖励的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+         * 请参阅[元数据的示例查询 – 列出标题为 GB 的奖励的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
       * `_model`：允许查询内容片段模型（路径和标题）
          * 请参阅[来自模型的内容片段模型的示例查询](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-content-fragment-model-from-model)
       * `_path`：存储库中内容片段的路径
-         * 请参阅[示例查询 - 一个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+         * 请参阅[示例查询 – 一个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
       * `_reference`：用于显示引用，包括富文本编辑器中的内联引用
          * 请参阅[具有预获取引用的多个内容片段的示例查询](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-prefetched-references)
       * `_variation`：用于显示内容片段中的特定变体
@@ -572,16 +572,16 @@ query {
          >
          >如果内容片段不存在给定的变量，则主控变量将作为（回退）默认值返回。
 
-         * 请参阅[示例查询 - 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+         * 请参阅[示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
    * 以及操作：
 
       * `_operator`：应用特定运算符；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
-         * 请参阅[示例查询 - 所有名字不是“Jobs”的人](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)
-         * 请参阅[示例查询 - `_path` 以特定前缀开头的所有冒险](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
+         * 请参阅[示例查询 – 所有名字不是“Jobs”的人](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)
+         * 请参阅[示例查询 – `_path` 以特定前缀开头的所有冒险](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
       * `_apply`：用于应用特定条件，例如 `AT_LEAST_ONCE`
-         * 请参阅[示例查询 - 筛选数组中必须至少出现一次的项](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
+         * 请参阅[示例查询 – 筛选数组中必须至少出现一次的项](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
       * `_ignoreCase`：在查询时忽略大小写
-         * 请参阅[示例查询 - 名称中包含 SAN 的所有城市，不考虑大小写](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
+         * 请参阅[示例查询 – 名称中包含 SAN 的所有城市，不考虑大小写](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
 
 
 
@@ -606,12 +606,12 @@ query {
 
 这是必需的，因为POST查询通常不会缓存，如果将GET与查询一起用作参数，则很有可能会使参数对HTTP服务和中间产品而言变得过大。
 
-持久查询必须始终使用与[相应 Sites 配置](#graphql-aem-endpoint)相关的端点，因此它们可以使用以下项之一或全部：
+持久查询必须始终使用与[相应站点配置](#graphql-aem-endpoint)相关的端点，因此它们可以使用以下项之一或全部：
 
 * 全球配置和端点
 查询具有对所有内容片段模型的访问权限。
-* 特定 Sites 配置和端点
-为特定 Sites 配置创建持久查询需要对应的 Sites 配置特定的端点（用于提供对相关内容片段模型的访问权限）。
+* 特定站点配置和端点
+为特定站点配置创建持久查询需要对应的站点配置特定的端点（用于提供对相关内容片段模型的访问权限）。
 例如，要创建特定于 WKND Sites 配置的持久查询，必须预先创建对应的 WKND 特定的端点。
 
 >[!NOTE]
@@ -945,6 +945,6 @@ query {
 *AEM GraphQL API 提供了对 JSON 输出的全面控制，是用于查询内容的行业标准。
 接下来，AEM 计划投资于 AEM GraphQL API。*
 
-## 教程 - AEM Headless 和 GraphQL 快速入门 {#tutorial}
+## 教程 – AEM Headless 和 GraphQL 快速入门 {#tutorial}
 
 正在寻找实践教程？请查看 [AEM Headless 和 GraphQL 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)端到端教程，其中说明了在 Headless CMS 场景中，如何使用 AEM GraphQL API 构建和公开内容并由外部应用程序使用。

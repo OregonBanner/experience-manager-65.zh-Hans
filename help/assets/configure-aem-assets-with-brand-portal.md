@@ -300,7 +300,7 @@ Adobe I/O integration generates API Key, Client Secret, and Payload (JWT) which 
 
    ![](assets/create-cloud-service.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。将创建云配置。
+1. 单击“**[!UICONTROL 保存并关闭]**”。将创建云配置。
 
    您的AEM Assets创作实例现已配置为Brand Portal租户。
 

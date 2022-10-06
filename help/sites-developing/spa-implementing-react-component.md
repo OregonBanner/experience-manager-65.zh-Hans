@@ -1,8 +1,8 @@
 ---
 title: 为 SPA 实施 React 组件
-seo-title: 为 SPA 实施 React 组件
+seo-title: Implementing a React Component for SPA
 description: 本文提供了一个示例，说明如何调整现有的简单React组件以与AEM SPA Editor一起使用。
-seo-description: 本文提供了一个示例，说明如何调整现有的简单React组件以与AEM SPA Editor一起使用。
+seo-description: This article presents an example of how to adapt a simple, existing React component to work with the AEM SPA Editor.
 uuid: ae6a0a6f-0c3c-4820-9b58-c2a85a9f5291
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 7%
+source-wordcount: '548'
+ht-degree: 6%
 
 ---
 
@@ -34,18 +34,18 @@ SPA创作功能提供了一个全面的解决方案，可在AEM中支持SPA。 �
 
 本文说明了We.Retail Journal示例SPA上天气组件的示例。
 
-在阅读本文之前，您应该熟悉AEM](/help/sites-developing/spa-getting-started-react.md)的SPA应用程序的[结构。
+您应该熟悉 [适用于AEM的SPA应用程序的结构](/help/sites-developing/spa-getting-started-react.md) 阅读本文之前。
 
 >[!CAUTION]
->本文档仅将[We.Retail Journal应用程序](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)用于演示目的。 它不应用于任何项目工作。
+>本文档使用 [We.Retail Journal应用程序](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 仅用于演示目的。 它不应用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
+>任何AEM项目都应利用 [AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
 
-## 天气组件{#the-weather-component}
+## 天气组件 {#the-weather-component}
 
 天气组件位于We.Retail Journal应用程序的左上角。 它显示定义位置的当前天气，并动态提取天气数据。
 
-### 使用天气小组件{#using-the-weather-widget}
+### 使用天气小组件 {#using-the-weather-widget}
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
@@ -61,22 +61,22 @@ SPA创作功能提供了一个全面的解决方案，可在AEM中支持SPA。 �
 
 ![screen_shot_2018-06-08at143524](assets/screen_shot_2018-06-08at143524.png)
 
-### 天气组件实施{#weather-component-implementation}
+### 天气组件实施 {#weather-component-implementation}
 
-天气组件实际上基于一个公开提供的React组件，称为[React Open Weather](https://www.npmjs.com/package/react-open-weather)，该组件已经过修改，可用作We.Retail Journal示例SPA应用程序中的组件。
+天气组件实际上基于一个公开提供的React组件，称为 [React Open Weather](https://www.npmjs.com/package/react-open-weather)，已在We.Retail Journal示例SPA应用程序中改为用作组件。
 
 以下是NPM文档中关于React Open Weather组件用法的片段。
 
 ![screen_shot_2018-06-08at144723](assets/screen_shot_2018-06-08at144723.png) ![screen_shot_2018-06-08at144215](assets/screen_shot_2018-06-08at144215.png)
 
-查看We.Retail Journal应用程序中自定义天气组件(`Weather.js`)的代码：
+查看自定义天气组件的代码( `Weather.js`):
 
-* **第16行**:根据需要加载React Open Weather小组件。
-* **第46行**:该函 `MapTo` 数将此React组件与相应的AEM组件相关联，以便在SPA编辑器中对其进行编辑。
+* **16号线**:根据需要加载React Open Weather小组件。
+* **46号线**:的 `MapTo` 函数将此AEM组件与相应的SPA组件关联，以便在React编辑器中对其进行编辑。
 
-* **第22-29行**:定 `EditConfig` 义，检查城市是否已填充，如果为空，则定义值。
+* **第22-29行**:的 `EditConfig` 定义，检查城市是否已填充，并定义值（如果为空）。
 
-* **第31-44行**:天气组件对类进行扩 `Component` 展，并提供React Open Weather组件的NPM使用文档中定义的所需数据，并渲染组件。
+* **第31-44行**:天气组件将 `Component` 类和提供React Open Weather组件的NPM使用文档中定义的所需数据，并渲染组件。
 
 ```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,6 +129,6 @@ MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig)
 
 尽管后端组件必须已存在，但前端开发人员可以利用We.Retail Journal SPA中的React Open Weather组件，而且只需极少的编码。
 
-## 下一步 {#next-step}
+## 后续步骤 {#next-step}
 
-有关开发AEM SPA的更多信息，请参阅文章[开发AEM for SPA](/help/sites-developing/spa-architecture.md)。
+有关开发SPA for AEM的更多信息，请参阅文章 [开发SPA for AEM](/help/sites-developing/spa-architecture.md).

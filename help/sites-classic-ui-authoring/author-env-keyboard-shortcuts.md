@@ -1,8 +1,8 @@
 ---
 title: 控制台的键盘快捷键
-seo-title: 控制台的键盘快捷键
-description: 用户在整个 AEM 环境中都可以使用各种键盘快捷键。其中一些快捷键适用于控制台，还有一些则适用于页面编辑。
-seo-description: 用户在整个 AEM 环境中都可以使用各种键盘快捷键。其中一些快捷键适用于控制台，还有一些则适用于页面编辑。
+seo-title: Keyboard Shortcuts for Consoles
+description: 在整个 AEM 环境中都可以使用各种键盘快捷键。其中一些快捷键适用于控制台，还有一些则适用于页面编辑。
+seo-description: Various keyboard shortcuts are available throughout AEM. Some apply to the use of consoles, others to page editing.
 uuid: 3be775f4-ea44-4843-9041-dbcf0c41eec4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: b6e42b9d-9e27-4f22-8543-442d03af48f3
 exl-id: 8cc9200e-981d-468f-b2bd-cd44e9a02bb5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '114'
 ht-degree: 100%
 
 ---
@@ -29,7 +29,6 @@ ht-degree: 100%
 >
 >* Mac：**按住 Cmd** **并单击**&#x200B;所需的组件。
 >
-
 
 
 ## 键盘快捷键 {#keyboard-shortcuts}

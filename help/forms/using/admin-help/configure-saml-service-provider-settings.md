@@ -1,8 +1,8 @@
 ---
 title: 配置SAML服务提供程序设置
-seo-title: 配置SAML服务提供程序设置
+seo-title: Configure SAML service provider settings
 description: 您可以配置SAML服务提供程序设置，以允许用户通过指定的第三方身份提供程序(IDP)登录AEM表单并对其进行身份验证。
-seo-description: 您可以配置SAML服务提供程序设置，以允许用户通过指定的第三方身份提供程序(IDP)登录AEM表单并对其进行身份验证。
+seo-description: You can configure SAML service provider settings to allow users to login and authenticate to AEM forms via a specified third-party identity provider (IDP).
 uuid: 14c706ad-8b1c-4c03-9cd4-97424f2162bc
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 安全断言标记语言(SAML)是在为企业域或混合域配置授权时可以选择的选项之一。 SAML主要用于支持跨多个域的单点登录。 将SAML配置为身份验证提供程序后，用户将通过指定的第三方身份提供程序(IDP)登录AEM表单并对其进行身份验证。
 
-有关SAML的说明，请参阅[安全断言标记语言(SAML)V2.0技术概述](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf)。
+有关SAML的说明，请参阅 [安全断言标记语言(SAML)V2.0技术概述](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf).
 
 1. 在管理控制台中，单击“设置”>“用户管理”>“配置”>“SAML服务提供程序设置”。
-1. 在“服务提供商实体ID”框中，键入一个唯一ID，以用作AEM表单服务提供商实施的标识符。 在配置IDP时，您还可以指定此唯一ID（例如，`um.lc.com`。） 您还可以使用用于访问AEM表单的URL（例如，`https://AEMformsserver`）。
-1. 在“服务提供商基本URL”框中，键入表单服务器的基本URL（例如，`https://AEMformsserver:8080`）。
+1. 在“服务提供商实体ID”框中，键入一个唯一ID，以用作AEM表单服务提供商实施的标识符。 在配置IDP时，您还可以指定此唯一ID(例如， `um.lc.com`.) 您还可以使用用于访问AEM表单的URL(例如， `https://AEMformsserver`)。
+1. 在“服务提供商基本URL”框中，键入表单服务器的基本URL(例如， `https://AEMformsserver:8080`)。
 1. （可选）要启用AEM表单向IDP发送签名身份验证请求，请执行以下任务：
 
-   * 使用信任管理器导入PKCS #12格式的凭据，并选择文档签名凭据作为信任存储类型。 （请参阅[管理本地凭据](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)。）
+   * 使用信任管理器导入PKCS #12格式的凭据，并选择文档签名凭据作为信任存储类型。 (请参阅 [管理本地凭据](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)
    * 在“服务提供商凭据密钥别名”列表中，选择您在信任存储中分配给凭据的别名。
    * 单击导出将URL内容保存到文件，然后将该文件导入您的IDP。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    未选择此选项时，用户将直接转到第三方SAML身份提供程序的登录页面，在该页面中，属于企业域的用户可以进行身份验证。
 
-1. （可选）选择“启用对象绑定”以启用对象绑定支持。 默认情况下，POST绑定与SAML一起使用。 但是，如果已配置“对象绑定”，请选择此选项。 选择此选项后，实际的用户断言不会通过浏览器请求传递。 而是会传递指向断言的指针，并使用后端Web服务调用来检索断言。
+1. （可选）选择“启用对象绑定”以启用对象绑定支持。 默认情况下，POST绑定与SAML一起使用。 但是，如果已配置“对象绑定”，请选择此选项。 选择此选项后，实际用户断言不会通过浏览器请求传递。 而是会传递指向断言的指针，并使用后端Web服务调用来检索断言。
 1. （可选）选择启用重新定向绑定以支持使用重定向的SAML绑定。
 1. （可选）在自定义属性中，指定其他属性。 其他属性是名称=值对，用新行分隔。
 
@@ -61,4 +61,4 @@ ht-degree: 0%
 
    `saml.sp.discovery.url=/custom/custom.jsp`
 
-1. 单击保存。
+1. 单击“保存”。

@@ -8,7 +8,7 @@ exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '344'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 21%
 ## 键 [!DNL Experience Manager] 文章
 
 * [Experience Manager6.5发行说明](/help/release-notes/home.md)
-* [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=zh-Hans)
+* [近期文档更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [安全检查列表](/help/sites-administering/security-checklist.md)
 
 ## [!DNL Experience Manager] 6.5指南
@@ -49,4 +49,4 @@ ht-degree: 21%
 * [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
 * [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=zh-Hans)
 * [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=zh-Hans)

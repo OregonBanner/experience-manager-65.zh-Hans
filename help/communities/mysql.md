@@ -1,8 +1,8 @@
 ---
 title: 用于启用功能的MySQL配置
-seo-title: 用于启用功能的MySQL配置
+seo-title: MySQL Configuration for Enablement Features
 description: 连接MySQL服务器
-seo-description: 连接MySQL服务器
+seo-description: Connecting your MySQL server
 uuid: e02d9404-de75-4fdb-896c-ea3f64f980a3
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 2d33e6ba-cd32-40d1-8983-58f636b21470
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1084'
 ht-degree: 3%
 
 ---
@@ -28,12 +28,12 @@ MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用资源的�
 
 在配置MySQL for Communities的启用功能之前，请务必
 
-* 安装[MySQL Server](https://dev.mysql.com/downloads/mysql/) Community Server版本5.6:
+* 安装 [MySQL Server](https://dev.mysql.com/downloads/mysql/) 社区服务器版本5.6:
    * SCORM不支持版本5.7。
    * 可能与创作AEM实例相同的服务器。
-* 在所有AEM实例上，安装MySQL](deploy-communities.md#jdbc-driver-for-mysql)的官方[JDBC驱动程序。
-* 安装[MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)。
-* 在所有AEM实例上，安装[SCORM包](enablement.md#scorm)。
+* 在所有AEM实例上，安装 [MySQL的JDBC驱动程序](deploy-communities.md#jdbc-driver-for-mysql).
+* 安装 [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/).
+* 在所有AEM实例上，安装 [SCORM包](enablement.md#scorm).
 
 ## 安装MySQL {#installing-mysql}
 
@@ -45,8 +45,8 @@ MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用资源的�
 
 例如，要在Linux操作系统中指定所有小写表名：
 
-* 编辑文件`/etc/my.cnf`
-* 在`[mysqld]`部分中，添加以下行：`lower_case_table_names = 1`
+* 编辑文件 `/etc/my.cnf`
+* 在 `[mysqld]` 部分添加以下行： `lower_case_table_names = 1`
 
 ### UTF8字符集 {#utf-character-set}
 
@@ -56,9 +56,9 @@ MySQL是一个关系数据库，主要用于SCORM跟踪和报告启用资源的�
 * mysql > SET NAMES &#39;utf8&#39;;
 
 将MySQL数据库更改为默认UTF8:
-* 编辑文件`/etc/my.cnf`
-* 在`[client]`部分中，添加：`default-character-set=utf8`
-* 在`[mysqld]`部分中，添加：`character-set-server=utf8`
+* 编辑文件 `/etc/my.cnf`
+* 在 `[client]` 部分添加： `default-character-set=utf8`
+* 在 `[mysqld]` 部分添加： `character-set-server=utf8`
 
 ## 安装MySQL Workbench {#installing-mysql-workbench}
 
@@ -74,19 +74,19 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装了架构
 
 ### 新建连接设置 {#new-connection-settings}
 
-1. 选择`MySQL Connections`右侧的“+”图标。
-1. 在对话框`Setup New Connection`中，为演示目的输入适用于您的平台的值，并在同一服务器上将创作AEM实例和MySQL:
-   * 连接名称：`Enablement`
-   * 连接方法：`Standard (TCP/IP)`
-   * 主机名：`127.0.0.1`
+1. 选择右侧的“+”图标 `MySQL Connections`.
+1. 在对话框中 `Setup New Connection`，输入适用于您的平台以用于演示的值，并在同一服务器上使用作者AEM实例和MySQL:
+   * 连接名称： `Enablement`
+   * 连接方法： `Standard (TCP/IP)`
+   * 主机名： `127.0.0.1`
    * 用户名: `root`
    * 密码: `no password by default`
-   * 默认架构：`leave blank`
-1. 选择`Test Connection`以验证与正在运行的MySQL服务的连接。
+   * 默认架构： `leave blank`
+1. 选择 `Test Connection` 验证与正在运行的MySQL服务的连接。
 
 **注释**:
-* 默认端口为`3306`。
-* 在[JDBC OSGi配置](#configure-jdbc-connections)中，选择的`Connection Name`作为`datasource`名称输入。
+* 默认端口为 `3306`.
+* 的 `Connection Name` 所选内容输入为 `datasource` 名称 [JDBC OSGi配置](#configure-jdbc-connections).
 
 #### 成功连接 {#successful-connection}
 
@@ -104,11 +104,11 @@ MySQL Workbench提供了用于执行SQL脚本的UI，这些脚本安装了架构
 
 ### 获取SQL脚本 {#obtain-sql-scripts}
 
-SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包](deploy-communities.md#scorm):
+SQL脚本是使用创作实例上的CRXDE Lite获取的。 的 [SCORM包](deploy-communities.md#scorm) 必须安装：
 
 1. 浏览CRXDE Lite:
    * 例如， [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
-1. 展开`/libs/social/config/scorm/`文件夹
+1. 展开 `/libs/social/config/scorm/` 文件夹
 1. 下载 `database_scormengine.sql`
 1. 下载 `database_scorm_integration.sql`
 
@@ -116,8 +116,8 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 
 下载模式的一种方法是：
 
-* 为sql文件选择`jcr:content`节点。
-* 请注意`jcr:data`属性的值是一个视图链接。
+* 选择 `jcr:content` sql文件的节点。
+* 请注意 `jcr:data` 属性是视图链接。
 * 选择视图链接以将数据保存到本地文件。
 
 ### 创建SCORM数据库 {#create-scorm-database}
@@ -127,9 +127,9 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 * name: `ScormEngineDB`
 * 从脚本创建：
    * 架构: `database_scormengine.sql`
-   * 数据：`database_scorm_integration.sql`
+   * 数据： `database_scorm_integration.sql`
 按照以下步骤(
-[打开](#step-open-sql-file), [执行](#step-execute-sql-script))以安装每 [个SQL脚本](#obtain-sql-scripts) 。[](#refresh) 根据需要刷新以查看脚本执行的结果。
+[open](#step-open-sql-file), [执行](#step-execute-sql-script))安装每个 [SQL脚本](#obtain-sql-scripts) . [刷新](#refresh) （必要时）查看脚本执行的结果。
 
 在安装数据之前，请务必先安装架构。
 
@@ -138,7 +138,7 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 >如果数据库名称已更改，请确保在中正确指定它：
 >
 >* [JDBC配置](#configure-jdbc-connections)
-* [SCORM配置](#configure-scorm)
+>* [SCORM配置](#configure-scorm)
 
 
 #### 步骤1:打开SQL文件 {#step-open-sql-file}
@@ -155,92 +155,92 @@ SQL脚本是使用创作实例上的CRXDE Lite获取的。 必须安装[SCORM包
 
 #### 步骤2:执行SQL脚本 {#step-execute-sql-script}
 
-在步骤1中打开的文件的Workbench窗口中，选择`lightening (flash) icon`以执行脚本。
+在步骤1中打开的文件的Workbench窗口中，选择 `lightening (flash) icon` 来执行脚本。
 
-请注意，执行`database_scormengine.sql`脚本以创建SCORM数据库可能需要一分钟才能完成。
+请注意， `database_scormengine.sql` 创建SCORM数据库的脚本可能需要一分钟才能完成。
 
 ![scrom-database1](assets/scrom-database1.png)
 
 #### 刷新 {#refresh}
 
-执行脚本后，需要刷新`Navigator`的`SCHEMAS`部分，才能查看新数据库。 使用“架构”右侧的刷新图标：
+执行脚本后，需要刷新 `SCHEMAS` 部分 `Navigator` 以查看新数据库。 使用“架构”右侧的刷新图标：
 
 ![scrom-database2](assets/scrom-database2.png)
 
 #### 结果：scormenginedb {#result-scormenginedb}
 
-安装和刷新架构后，将显示`scormenginedb`。
+安装和刷新架构后， `scormenginedb` 将可见。
 
 ![scrom-database3](assets/scrom-database3.png)
 
 ## 配置JDBC连接 {#configure-jdbc-connections}
 
-**Day Commons JDBC连接池**&#x200B;的OSGi配置配置MySQL JDBC驱动程序。
+的OSGi配置 **Day Commons JDBC连接池** 配置MySQL JDBC驱动程序。
 
 所有发布和创作AEM实例都应指向同一MySQL服务器。
 
-当MySQL在与AEM不同的服务器上运行时，必须在JDBC连接器中指定服务器主机名代替“localhost”（该连接器填充[ScormEngine](#configurescormengineservice)配置）。
+当MySQL在与AEM不同的服务器上运行时，必须在JDBC连接器中指定服务器主机名代替“localhost”(用于填充 [ScormEngine](#configurescormengineservice) 配置)。
 
 * 在每个创作和发布AEM实例上
 * 使用管理员权限登录
-* 访问[Web控制台](../../help/sites-deploying/configuring-osgi.md)
+* 访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
    * 例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-* 找到`Day Commons JDBC Connections Pool`
-* 选择`+`图标以创建新配置
+* 找到 `Day Commons JDBC Connections Pool`
+* 选择 `+` 创建新配置的图标
 
    ![jdbcconnection1](assets/jdbcconnection1.png)
 
 * 输入以下值：
-   * **[!UICONTROL JDBC驱动程序类]**:  `com.mysql.jdbc.Driver`
+   * **[!UICONTROL JDBC驱动程序类]**: `com.mysql.jdbc.Driver`
    * **DBC连接URIJ**: `jdbc:mysql://localhost:3306/aem63reporting` 如果MySQL服务器与&#39;this&#39; AEM服务器不同，请指定服务器代替localhost。
    * **[!UICONTROL 用户名]**:为MySQL服务器输入根或配置的用户名（如果不是“根”）。
    * **[!UICONTROL 密码]**:如果未为MySQL设置密码，则清除此字段，否则输入MySQL用户名的配置密码。
-   * **[!UICONTROL 数据源名称]**:为MySQL连接 [输入的名称](#new-connection-settings)，例如“启用”。
+   * **[!UICONTROL 数据源名称]**:为输入的名称 [MySQL连接](#new-connection-settings)，例如“启用”。
 * 选择&#x200B;**[!UICONTROL 保存]**。
 
 ## 配置Scorm {#configure-scorm}
 
 ### AEM Communities ScormEngine服务 {#aem-communities-scormengine-service}
 
-**AEM Communities ScormEngine服务**&#x200B;的OSGi配置可为启用社区使用MySQL服务器配置SCORM。
+的OSGi配置 **AEM Communities ScormEngine服务** 为启用社区使用MySQL Server的情况配置SCORM。
 
-安装[SCORM包](deploy-communities.md#scorm-package)时，即存在此配置。
+当 [SCORM包](deploy-communities.md#scorm-package) 已安装。
 
 所有发布和创作实例都指向同一MySQL服务器。
 
-当MySQL在与AEM不同的服务器上运行时，必须在ScormEngine服务中指定服务器主机名代替“localhost”，该服务通常从[JDBC连接](#configure-jdbc-connections)配置中填充。
+当MySQL在与AEM不同的服务器上运行时，必须在ScormEngine服务中指定服务器主机名来代替“localhost”，该服务通常从 [JDBC连接](#configure-jdbc-connections) 配置。
 
 * 在每个创作和发布AEM实例上
 * 使用管理员权限登录
-* 访问[Web控制台](../../help/sites-deploying/configuring-osgi.md)
+* 访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
    * 例如， [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-* 找到`AEM Communities ScormEngine Service`
+* 找到 `AEM Communities ScormEngine Service`
 * 选择编辑图标
 
    ![scrom-engine](assets/scrom-engine.png)
 
-* 验证以下参数值是否与[JDBC连接](#configurejdbcconnectionspool)配置一致：
-   * **[!UICONTROL JDBC连接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` ** ScormEngineDB是SQL脚本中的默认数据库名称
+* 验证以下参数值是否与 [JDBC连接](#configurejdbcconnectionspool) 配置：
+   * **[!UICONTROL JDBC连接URI]**: `jdbc:mysql://localhost:3306/ScormEngineDB` *ScormEngineDB* 是SQL脚本中的默认数据库名称
    * **[!UICONTROL 用户名]**:为MySQL Server输入根或配置的用户名（如果不是“根”）
    * **[!UICONTROL 密码]**:如果未为MySQL设置密码，则清除此字段，否则输入MySQL用户名的配置密码
 * 关于以下参数：
    * **[!UICONTROL Scorm用户密码]**:不编辑
 
       仅供内部使用：它是供AEM Communities使用的特殊服务用户与scorm引擎通信的。
-* 选择&#x200B;**[!UICONTROL Save]**
+* 选择 **[!UICONTROL 保存]**
 
 ### AdobeGranite CSRF过滤器 {#adobe-granite-csrf-filter}
 
 要确保支持课程在所有浏览器中正常工作，必须将Mozilla添加为CSRF筛选器未选中的用户代理。
 
 * 使用管理员权限登录AEM发布实例。
-* 访问[Web控制台](../../help/sites-deploying/configuring-osgi.md)
+* 访问 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
-* 找到`Adobe Granite CSRF Filter`。
+* 定位 `Adobe Granite CSRF Filter`.
 * 选择编辑图标。
 
    ![jdbcconnection2](assets/jdbcconnection2.png)
 
-* 选择`[+]`图标以添加安全用户代理。
-* 输入`Mozilla/*`。
+* 选择 `[+]` 图标添加安全用户代理。
+* 输入 `Mozilla/*`.
 * 选择&#x200B;**[!UICONTROL 保存]**。

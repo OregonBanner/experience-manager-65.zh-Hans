@@ -1,8 +1,8 @@
 ---
 title: 创建页面模板
-seo-title: 创建页面模板
+seo-title: Creating Page Templates
 description: 模板可定义生成页面的结构，而且有了模板编辑器，创建和维护模板不再只是开发人员的任务
-seo-description: 模板可定义生成页面的结构，而且有了模板编辑器，创建和维护模板不再只是开发人员的任务
+seo-description: The template defines the structure of the resultant page and with the template editor, creating and maintaining templates is no longer a developer-only task
 uuid: e14cd298-289f-43f0-aacb-314ed5d56c12
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '4901'
-ht-degree: 95%
+source-wordcount: '4874'
+ht-degree: 96%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 95%
 
 >[!CAUTION]
 >
->使用&#x200B;**模板控制台**&#x200B;创建的页面和模板不适用于经典UI，因此不支持此类使用。
+>使用创建的页面和模板 **“模板”控制台** 经典UI中不使用，因此不支持这种使用。
 
 ## 开始之前 {#before-you-start}
 
@@ -61,7 +61,7 @@ ht-degree: 95%
 
 ### 角色 {#roles}
 
-使用“模板”控制台和“模 **板编辑器** ”创建新 **** 模板需要以下角色之间的协作：
+使用&#x200B;**“模板”控制台**&#x200B;和&#x200B;**模板编辑器**&#x200B;创建新模板需要以下角色之间的协作：
 
 * **管理员**：
 
@@ -69,7 +69,7 @@ ht-degree: 95%
 
    * 此类任务通常可由开发人员完成。
 
-* **开发人员**：
+* **开发人员**:
 
    * 专注于技术/内部细节。
    * 需要具有开发环境方面的经验。
@@ -97,7 +97,7 @@ ht-degree: 95%
 
 现在，AEM 提供了两种基本类型的模板：
 
-* [可编辑的模板](/help/sites-authoring/templates.md#creatingandmanagingnewtemplates)
+* [可编辑模板](/help/sites-authoring/templates.md#creatingandmanagingnewtemplates)
 
    * 可由模板作者使用&#x200B;**模板**&#x200B;控制台和模板编辑器来[创建](#creatinganewtemplate)和[编辑](#editingatemplate)。**模板**&#x200B;控制台可在&#x200B;**工具**&#x200B;控制台的&#x200B;**常规**&#x200B;部分访问。
 
@@ -110,7 +110,7 @@ ht-degree: 95%
    * 此类模板[由开发人员提供](/help/sites-developing/page-templates-static.md)，因此不能由作者创建或编辑。
    * 可复制此类模板，以创建新页面，但是创建之后，页面与模板之间不存在动态连接（即使已注册模板名称来获取相关信息）。
    * 可使用[设计模式](/help/sites-authoring/default-components-designmode.md)来保留设计属性。
-   * 由于编辑静态模板是开发人员的专有任务，因此有关详细信息，请参阅开发人员文档[页面模板 — 静态](/help/sites-developing/page-templates-static.md) 。
+   * 由于编辑静态模板是开发人员的专有任务，请参阅开发人员文档 [页面模板 — 静态](/help/sites-developing/page-templates-static.md) 以了解更多信息。
 
 按照定义，“模板”控制台和模板编辑器只允许创建和编辑可编辑的模板。因此，本文档将专门重点介绍可编辑的模板。
 
@@ -147,13 +147,13 @@ ht-degree: 95%
 
 >[!CAUTION]
 >
->切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。出于内部化目的，建议使用核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
+>切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。出于内部化目的， [核心组件的本地化功能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) 。
 
-### 创建模板文件夹 - 管理员 {#creating-a-template-folder-admin}
+### 创建模板文件夹 – 管理员 {#creating-a-template-folder-admin}
 
 您应该为项目创建模板文件夹，以保存特定于项目的模板。这是一项管理员任务，在[页面模板 - 可编辑](/help/sites-developing/page-templates-editable.md#template-folders)文档中有相关说明。
 
-### 创建新模板 - 模板作者 {#creating-a-new-template-template-author}
+### 创建新模板 – 模板作者 {#creating-a-new-template-template-author}
 
 1. 打开&#x200B;**“模板”控制台**（通过&#x200B;**工具** -> **常规**），然后导航到所需的文件夹。
 
@@ -210,9 +210,9 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->模板是简化页面创建工作流程的强大工具。 但是，太多的模板可能会使作者不堪重负，并使页面创建令人困惑。 经验法则是将模板数量保持在100以下。
+>模板是简化页面创建工作流的强大工具。不过，太多的模板会让作者不知所措，并使页面创建变得混乱。一个好的经验法则是将模板的数量保持在 100 个以内。
 >
->Adobe不建议拥有1000个以上的模板，因为这可能会影响性能。
+>由于潜在的性能影响，Adobe 建议不要使用超过 1000 个模板。
 
 >[!NOTE]
 >
@@ -241,7 +241,7 @@ ht-degree: 95%
 * [启用模板](#enablingatemplate)以使其可在创建页面时使用。
 * [允许模板](#allowingatemplate)以指定可以使用模板的内容分支。
 
-#### 启用模板 - 模板作者 {#enabling-a-template-template-author}
+#### 启用模板 – 模板作者 {#enabling-a-template-template-author}
 
 可以启用或禁用模板，以使其在&#x200B;**创建页面**&#x200B;向导中可用或不可用。
 
@@ -257,7 +257,7 @@ ht-degree: 95%
 >
 >控制台中会指示模板的状态（“草稿”、“已启用”或“已禁用”）。
 
-#### 允许模板 - 作者 {#allowing-a-template-author}
+#### 允许模板 – 作者 {#allowing-a-template-author}
 
 可以使模板可用于或不可用于某些页面分支。
 
@@ -278,7 +278,7 @@ ht-degree: 95%
    >如果&#x200B;**允许的模板**&#x200B;列表为空，则树会向上追溯，直到找到值/列表。
    >
    >
-   >请参阅[模板可用性](/help/sites-developing/templates.md#template-availability) — 对允许的模板适用的原则与此相同。
+   >请参阅[模板可用性](/help/sites-developing/templates.md#template-availability) – 对允许的模板适用的原则与此相同。
 
 1. 单击&#x200B;**保存**，以保存对页面属性所做的更改。
 
@@ -286,7 +286,7 @@ ht-degree: 95%
 >
 >通常，在设置您的网站时便会为整个网站预定义允许的模板。
 
-### 发布模板 - 模板作者 {#publishing-a-template-template-author}
+### 发布模板 – 模板作者 {#publishing-a-template-template-author}
 
 由于渲染页面时会引用模板，因此模板在完全配置后需要进行发布，才能用于发布环境。
 
@@ -350,7 +350,7 @@ ht-degree: 95%
 >
 >如果作者开始编辑已经启用的模板，系统会显示一条警告消息。此消息用于告知用户，该模板可能已被引用，因此所做的任何更改可能会影响引用该模板的页面。
 
-### 编辑模板 - 结构 - 模板作者 {#editing-a-template-structure-template-author}
+### 编辑模板 – 结构 – 模板作者 {#editing-a-template-structure-template-author}
 
 在&#x200B;**结构**&#x200B;模式下，您可以为模板定义组件和内容，并为模板及其组件定义策略。
 
@@ -491,7 +491,7 @@ ht-degree: 95%
 
    >[!NOTE]
    >
-   >[](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)只能为 RTE 通过其 UI 设置提供的选项定义用于实施富文本编辑器的组件的内容策略。[](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)[](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+   >[](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)只能为 RTE 通过其 UI 设置提供的选项定义用于实施富文本编辑器的组件的内容策略。 [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **策略和属性（布局容器）**
 
@@ -515,7 +515,7 @@ ht-degree: 95%
 
    * 允许的组件
    * 默认组件
-   * 响应设置
+   * 响应式设置
 
    *允许的组件*
 
@@ -525,7 +525,7 @@ ht-degree: 95%
    * 可以通过选中组名称选择整个组，通过取消选中全部取消选择。
    * 减号表示至少选中了组中的一个而并非所有项目。
    * 可按名称进行搜索来筛选组件。
-   * 无论是否应用了筛选器，组件组名称右侧列出的数字都表示这些组中选定组件的总数。
+   * 无论是否应用了过滤器，组件组名称右侧列出的数字都表示这些组中选定组件的总数。
 
    ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -539,9 +539,9 @@ ht-degree: 95%
 
    ![chlimage_1-145](assets/chlimage_1-145.png)
 
-   *响应设置*
+   *响应式设置*
 
-   在&#x200B;**响应设置**&#x200B;选项卡上，您可以配置布局容器的生成网格中的列数。
+   在&#x200B;**响应式设置**&#x200B;选项卡上，您可以配置布局容器的生成网格中的列数。
 
 * **解锁/锁定组件**
 
@@ -564,7 +564,7 @@ ht-degree: 95%
 
    为了节省空间，布局容器不会扩大来容纳允许的组件列表。容器而是会变为一个可滚动的列表。
 
-   可配置的组件会显示一个 **策略图标** ，单击或点按该图标可编辑该组件的策略和属性。
+   可配置的组件会显示一个 **策略图标**，单击或点按该图标可编辑该组件的策略和属性。
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -574,7 +574,7 @@ ht-degree: 95%
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### 编辑模板 - 初始内容 - 作者 {#editing-a-template-initial-content-author}
+### 编辑模板 – 初始内容 – 作者 {#editing-a-template-initial-content-author}
 
 **初始内容**&#x200B;模式可用于定义最初基于模板创建页面后将显示的内容。页面作者随后可以编辑初始内容。
 
@@ -606,7 +606,7 @@ ht-degree: 95%
 >
 >如果需要在模板中包括可翻译文本（如在页眉或页脚中），则可以使用[核心组件的本地化功能](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/get-started/localization.html)。
 
-### 编辑模板 - 布局 - 模板作者 {#editing-a-template-layout-template-author}
+### 编辑模板 – 布局 – 模板作者 {#editing-a-template-layout-template-author}
 
 您可以为各种设备定义模板布局。模板的[响应式布局](/help/sites-authoring/responsive-layout.md)与页面创作时的响应式布局功能相同。
 
@@ -622,7 +622,7 @@ ht-degree: 95%
 
 要访问&#x200B;**页面设计**&#x200B;对话框，请执行以下操作：
 
-1. 从&#x200B;**模板编辑器**&#x200B;中，从工具栏中选择&#x200B;**页面信息**，然后选择&#x200B;**页面设计**&#x200B;以打开对话框。
+1. 从 **模板编辑器**，选择 **页面信息** ，然后 **页面设计** 打开对话框。
 1. 随即会打开&#x200B;**页面设计**&#x200B;对话框，该对话框分成两个部分：
 
    * 左半部分定义了[页面策略](/help/sites-authoring/templates.md#page-policies)
@@ -683,7 +683,7 @@ ht-degree: 95%
 >
 >虽然模板作者可以在模板上指定页面策略，但是他们需要从开发人员处获取相应客户端库的详细信息。
 
-### 编辑模板 - 初始页面属性 - 作者 {#editing-a-template-initial-page-properties-author}
+### 编辑模板 – 初始页面属性 – 作者 {#editing-a-template-initial-page-properties-author}
 
 使用&#x200B;**初始页面属性**&#x200B;选项，您可以定义要在创建生成页面时使用的初始[页面属性](/help/sites-authoring/editing-page-properties.md)。
 

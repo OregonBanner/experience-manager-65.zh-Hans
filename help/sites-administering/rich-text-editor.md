@@ -145,7 +145,6 @@ RTE的基本功能由的值激活或停用 `features` 属性。
 >* **名称**: `configPath`
 >* **类型**: `String`
 >* **值**:包含实际配置的节点的路径
-
 >
 >请勿将RTE配置节点命名为 `config`. 否则，RTE配置将仅对管理员生效，而对组中的用户不生效 `content-author`.
 
@@ -192,7 +191,6 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
-
 >
 >要创建自己的文本组件，请复制上述组件，而不是编辑这些组件。
 

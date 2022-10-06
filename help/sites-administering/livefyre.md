@@ -202,7 +202,7 @@ Livefyre for AEM包中包含AEM Communities配置文件与Livefyre的SSO服务�
 
 AEM Commerce用户可以将其现有产品目录无缝集成到Livefyre中，以提高用户对Livefyre可视化应用程序的参与度。
 
-导入产品目录后，这些产品将实时显示在您的Livefyre实例中。 如果您编辑或删除了AEM Commerce Product Catalog中的项目，则所做的更改会在Livefrye中自动更新。
+导入产品目录后，这些产品将实时显示在您的Livefyre实例中。 如果您编辑或删除了AEM Commerce产品目录中的项目，则所做的更改会在Livefrye中自动更新。
 
 1. 确保在AEM实例上安装了最新的AEM Livefyre包。
 1. 从AEM主页，导航到 **AEM Commerce**.

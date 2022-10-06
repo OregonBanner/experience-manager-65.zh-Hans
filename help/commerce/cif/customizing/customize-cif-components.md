@@ -500,5 +500,5 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
 - [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)
 - [自定义AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
 - [自定义核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
-- [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
+- [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 - [CIF产品和类别选取器的用法](use-cif-pickers.md)

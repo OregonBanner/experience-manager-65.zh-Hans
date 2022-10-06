@@ -41,7 +41,7 @@ Possible topics to cover in this article are below.
 * [无障碍计划 — 由W3C提供的无障碍富互联网应用程序(WAI-ARIA)](https://www.w3.org/WAI/standards-guidelines/aria/).
 * [EN 301 549](https://en.wikipedia.org/wiki/EN_301_549).
 
-要阅读包含合规级别详细信息的报告，请参阅 [“无障碍合规性”报告](https://www.adobe.com/accessibility/compliance.html) (ACR)页面。
+要阅读包含合规级别详细信息的报告，请参阅 [“无障碍合规性”报告](https://www.adobe.com/cn/accessibility/compliance.html) (ACR)页面。
 
 要知道 [!DNL Dynamic Media] 可访问，请参阅 [辅助功能 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md).
 
@@ -85,7 +85,7 @@ Possible topics to cover in this article are below.
 | 列视图 [!DNL Assets] 用户界面 | 向上和向下箭头键 | 导航到同一层次结构中的文件和文件夹。 |
 | 列视图 [!DNL Assets] 用户界面 | 向左和向右箭头键 | 导航到当前文件夹上方或下方的文件和文件夹。 |
 | 在中浏览文件夹 [!DNL Assets] | `/` | 通过打开Omnisearch框来调用搜索。 |
-| [!DNL Assets] 控制台 | &amp;grave; | 切换侧边栏 |
+| [!DNL Assets] 控制台 | &grave; | 切换侧边栏 |
 | [!DNL Assets] 控制台 | `Alt + 1` | 打开内容树。 |
 | [!DNL Assets] 控制台 | `Alt + 2` | 打开 [!UICONTROL 导航] 左边栏。 |
 | [!DNL Assets] 控制台 | `Alt + 3` | 显示 [!UICONTROL 时间轴] 的值。 |
@@ -191,7 +191,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog wasn't accessib
 * 屏幕阅读器将搜索筛选器中的选项作为可扩展的折叠项来宣布。
 * 具有混合状态选项的谓词由屏幕阅读器发布。
 
-## 共享资产 {#share-assets}
+## 共享资源 {#share-assets}
 
 <!-- TBD: Anything about accessibility in DA, BP? AAL team confirmed that there's no content for AAL a11y on helpx.
 -->

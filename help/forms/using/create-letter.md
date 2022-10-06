@@ -1,7 +1,7 @@
 ---
 title: 创建书信
 seo-title: Create Letter
-description: '本主题介绍了创建信件、向其添加数据模块和附件以及在通信管理中预览信件的步骤。 '
+description: 本主题介绍了创建信件、向其添加数据模块和附件以及在通信管理中预览信件的步骤。
 seo-description: This topic gives you the steps to create a letter, add data modules and attachments to it, and preview it in Correspondence Management.
 uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

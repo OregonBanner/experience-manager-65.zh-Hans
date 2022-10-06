@@ -1,6 +1,6 @@
 ---
 title: 对邮件服务的 OAuth2 支持
-description: 'Oauth2对邮件服务的支持  '
+description: Oauth2对邮件服务的支持
 source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
 source-wordcount: '690'

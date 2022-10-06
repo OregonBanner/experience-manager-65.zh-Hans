@@ -1,8 +1,8 @@
 ---
 title: 使用预检预览
-seo-title: 使用预检预览
+seo-title: Previewing with Preflight
 description: 本页介绍了使用预检应用程序进行预览。
-seo-description: 借助Mobile On Demand Preflight应用程序，您可以查看您有权访问的所有项目。 请阅读本页以了解有关此内容的更多信息。
+seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
 uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
 contentOwner: User
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '299'
 ht-degree: 1%
 
 ---
 
-# 使用预检{#previewing-with-preflight}预览
+# 使用预检预览 {#previewing-with-preflight}
 
 本页介绍了使用预检应用程序进行预览。
 
@@ -31,25 +31,25 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Preflight应用程序在性质上与PhoneGap Enterprise查看器类似。
+>Preflight应用程序与PhoneGap Enterprise查看器在性质上相似。
 
-## 使用预检{#previewing-with-preflight-1}预览
+## 使用预检预览 {#previewing-with-preflight-1}
 
 1. 在移动设备中，从目录中选择您的移动按需应用程序。
-1. 单击&#x200B;**管理文章**（或横幅/收藏集）拼贴中的省略号(...)。
-1. 从操作栏中选择&#x200B;**Preflight**。
-1. 在对话框中单击&#x200B;**激活预检**。
+1. 单击 **管理文章** （或横幅/收藏集）拼贴。
+1. 选择 **预检** 中。
+1. 单击 **激活预检** 对话框。
 1. 现在，您的应用程序就可以在Mobile On-Demand Preflight应用程序上进行预览。
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight应用程序用于预览内容和浏览页面。 要深入了解Preflight应用程序，请单击[此处](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html)。
+>AEM Preflight应用程序用于预览内容和浏览页面。 要深入了解Preflight应用程序，请单击 [此处](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html).
 >
->AEM Preflight应用程序位于[iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8)、[Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)和[Windows应用商店](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq)中。
+>AEM Preflight应用程序在 [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play商店](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)和 [Windows应用商店](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
 
-### 提前{#getting-ahead}
+### 抢滩 {#getting-ahead}
 
 如果您仍需要有关创作内容的更多信息，请参阅以下资源以在AEM Mobile应用程序中创建和管理内容：
 

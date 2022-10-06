@@ -1,6 +1,6 @@
 ---
 title: “教程：创建您的第一个自适应表单”
-seo-title: 'Tutorial: Create your first adaptive form'
+seo-title: "Tutorial: Create your first adaptive form"
 description: 了解如何创建业务类、交互式和响应式表单。
 seo-description: Learn to create business class, interactive, and responsive forms.
 uuid: ee351a3f-ea6a-4b4c-8045-4948ad51b7c1
@@ -12,7 +12,7 @@ exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
 source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
 workflow-type: tm+mt
 source-wordcount: '957'
-ht-degree: 9%
+ht-degree: 0%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 9%
 * 创建提交操作以发送包含表单内容的电子邮件
 * 预览和提交自适应表单
 
-[![请参阅指南]（https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png）](create-adaptive-form.md)
+[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
 
 ## 步骤2:创建表单数据模型 {#step-create-form-data-model}
 
@@ -78,7 +78,7 @@ ht-degree: 9%
 * 为表单数据模型配置读写服务
 * 测试表单数据模型和配置有测试数据的服务
 
-[![请参阅指南]（https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png）](create-form-data-model.md)
+[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
 
 ## 步骤3:将规则应用于自适应表单字段 {#step-apply-rules-to-adaptive-form-fields}
 
@@ -91,7 +91,7 @@ ht-degree: 9%
 * 创建规则并将其应用于自适应表单字段
 * 使用规则触发表单数据模型服务以将数据更新到数据库
 
-[![请参阅指南]（https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png）](apply-rules-to-adaptive-form-fields.md)
+[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
 ## 步骤4:设置自适应表单的样式 {#step-style-your-adaptive-form}
 
@@ -105,7 +105,7 @@ ht-degree: 9%
 * 使用主题编辑器创建自适应表单的主题
 * 在自定义主题中使用Web字体
 
-[![请参阅指南]（https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png）](style-your-adaptive-form.md)
+[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
 ## 步骤5:发布自适应表单 {#step-publish-your-adaptive-form}
 
@@ -119,4 +119,4 @@ ht-degree: 9%
 * 在AEM中嵌入自适应表单 [!DNL Sites] 页面
 * 将自适应表单嵌入到外部网页(在AEM外部托管的非AEM网页)
 
-[![请参阅指南]（https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png）](publish-your-adaptive-form.md)
+[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)

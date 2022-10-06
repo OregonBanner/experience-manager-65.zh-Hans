@@ -9,7 +9,7 @@ ht-degree: 11%
 
 ---
 
-# Adobe内容包Maven插件{#adobe-content-package-maven-plugin}
+# Adobe内容包Maven插件 {#adobe-content-package-maven-plugin}
 
 使用Adobe内容包Maven插件将包部署和管理任务集成到您的Maven项目中。
 
@@ -19,10 +19,8 @@ ht-degree: 11%
 >
 >有关更多详细信息，请参阅：
 >
->* AEM中的[Adobe内容包Maven插件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools)文章，作为有关如何部署AEM应用程序的Cloud Service文档。
->* AEM中的[AEM项目结构](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)文章，作为有关如何构建现代AEM项目的Cloud Service文档。
->* 有关如何使用原型启动新的AEM项目的[AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)文档。
-
+>* 的 [Adobe内容包Maven插件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) 有关如何部署AEM应用程序的AEMas a Cloud Service文档中的文章。
+>* 的 [AEM项目结构](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 有关如何构建现代AEM项目的AEMas a Cloud Service文档中的文章。
+>* 的 [AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html) 文档介绍了如何使用原型启动新的AEM项目。
 >
->
-这三个文档都适用于AEM 6.5。
+>这三个文档都适用于AEM 6.5。

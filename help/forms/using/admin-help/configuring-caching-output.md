@@ -1,8 +1,8 @@
 ---
 title: 为输出配置缓存
-seo-title: 为输出配置缓存
+seo-title: Configuring caching for Output
 description: 输出服务可缓存表单设计、片段和图像。 了解如何配置输出的缓存。
-seo-description: 输出服务可缓存表单设计、片段和图像。 了解如何配置输出的缓存。
+seo-description: The Output service caches the form designs, fragments and images. Learn how to configure the caching for output.
 uuid: 00bffeb5-c9c4-4a46-98b5-e14ec9f4514e
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: e5398abd-f62c-485d-9f4b-a316c0de2b6b
 exl-id: 1015f5c9-6ab8-4656-a5c8-40f82b9938b9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
 
-# 为输出{#configuring-caching-for-output}配置缓存
+# 为输出配置缓存  {#configuring-caching-for-output}
 
 输出服务将XML表单数据与在Designer中创建的表单设计合并，以创建各种格式的文档输出流。
 
@@ -25,26 +25,26 @@ ht-degree: 0%
 
 输出服务缓存以下项：
 
-* **表单设计：** 输出服务会缓存从存储库或HTTP源中检索的表单设计。此缓存可提高性能，因为对于后续渲染请求，输出服务会从缓存中检索表单设计，而不是从存储库中检索。
-* **片段和图像：** 输出服务可以缓存表单设计中使用的片段和图像。当输出服务缓存这些对象时，会提高性能，因为片段和图像仅在第一次请求时从存储库中读取。
+* **表单设计：** 输出服务会缓存从存储库或HTTP源中检索的表单设计。 此缓存可提高性能，因为对于后续渲染请求，输出服务会从缓存中检索表单设计，而不是从存储库中检索。
+* **片段和图像：** 输出服务可以缓存表单设计中使用的片段和图像。 当输出服务缓存这些对象时，会提高性能，因为片段和图像仅在第一次请求时从存储库中读取。
 
 输出将缓存存储在以下两个位置：
 
-* **内存中：** 项目存储在内存中以便快速访问。内存中的缓存大小有限，在重新启动服务器时将被删除。
-* **在磁盘上：** 项目存储在服务器的文件系统中。磁盘缓存的容量大于内存中的缓存，并且在重新启动服务器时保留该缓存。 磁盘缓存的位置取决于您的应用程序服务器。 有关更改磁盘缓存位置的信息，请参阅[为输出](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)指定文件位置。
+* **内存中：** 项目存储在内存中以便快速访问。 内存中的缓存大小有限，在重新启动服务器时将被删除。
+* **在磁盘上：** 项目存储在服务器的文件系统中。 磁盘缓存的容量大于内存中的缓存，并且在重新启动服务器时保留该缓存。 磁盘缓存的位置取决于您的应用程序服务器。 有关更改磁盘缓存位置的信息，请参阅 [为输出指定文件位置](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).
 
-## 指定缓存模式{#specifying-the-cache-mode}
+## 指定缓存模式 {#specifying-the-cache-mode}
 
 输出支持两种缓存模式：
 
 * 无条件
 * 使用缓存检查点
 
-如果在缓存模式之间切换，请重新启动输出服务以使更改生效。 要重新启动此服务，请使用Workbench或参阅[启动或停止与AEM表单模块关联的服务](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)以获取相关说明。
+如果在缓存模式之间切换，请重新启动输出服务以使更改生效。 要重新启动此服务，请使用Workbench或查看 [启动或停止与AEM表单模块关联的服务](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 中。
 
 在模式之间切换时，缓存检查点时间会自动重置。
 
-### 使用无条件缓存{#using-unconditional-caching}
+### 使用无条件缓存 {#using-unconditional-caching}
 
 在此模式下，当输出服务收到请求时，它将验证所需的资源（表单设计以及任何相关资产，如片段和图像）。 输出服务将存储库中资源的时间戳与缓存中资源的时间戳进行比较。 如果缓存中的资源较旧，则输出服务会更新该资源。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 1. 在管理控制台中，单击服务>输出。
 1. 在“输出缓存控制设置”下，选择“无条件”并单击“保存”。
 
-### 使用缓存检查点{#use-the-cache-check-point}
+### 使用缓存检查点 {#use-the-cache-check-point}
 
 在此模式下，当缓存资源的时间戳早于缓存检查点时间时，输出服务仅检查存储库是否有较新版本的资源。 最后一个缓存检查点时间显示在管理控制台的“输出”页面上。
 
@@ -71,14 +71,14 @@ ht-degree: 0%
 1. 在管理控制台中，单击服务>输出。
 1. 在“输出缓存控制设置”下，单击“缓存检查点”。
 
-### 重置缓存内容{#reset-the-cache-contents}
+### 重置缓存内容 {#reset-the-cache-contents}
 
 您可以随时清除缓存的内容。 重置缓存后，每个表单的第一个请求速度变慢，因为输出服务执行完整渲染并创建新缓存内容。
 
 1. 在管理控制台中，单击服务>输出。
 1. 在“输出缓存控制设置”下，单击“重置缓存”。
 
-## 配置缓存设置{#configuring-cache-settings}
+## 配置缓存设置 {#configuring-cache-settings}
 
 您可以指定输出用于缓存的设置，以优化AEM表单环境的性能。
 
@@ -88,43 +88,43 @@ ht-degree: 0%
 >
 >缓存的磁盘要求应等于存储库。
 
-### 指定全局缓存设置{#specifying-global-cache-settings}
+### 指定全局缓存设置 {#specifying-global-cache-settings}
 
-**全局缓存设置**&#x200B;区域中的设置会影响所有类型的缓存。 如果更改其中任一设置，请重新启动输出服务，以使更改生效。 要重新启动此服务，请使用Workbench或参阅[启动或停止与AEM表单模块关联的服务](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)以获取相关说明。
+中的设置 **全局缓存设置** 区域会影响所有类型的缓存。 如果更改其中任一设置，请重新启动输出服务，以使更改生效。 要重新启动此服务，请使用Workbench或查看 [启动或停止与AEM表单模块关联的服务](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 中。
 
-**最大缓存文档大小(KB):** 表单设计或其他资源可存储在任何内存中缓存中的最大大小（以千字节为单位）。这是适用于所有内存中缓存的全局设置。 如果资源大于此值，则不会将其缓存在内存中。 默认值为1024千字节。 此设置不影响磁盘缓存。
+**最大缓存文档大小(KB):** 表单设计或其他资源可存储在任何内存缓存中的最大大小（以千字节为单位）。 这是适用于所有内存中缓存的全局设置。 如果资源大于此值，则不会将其缓存在内存中。 默认值为1024千字节。 此设置不影响磁盘缓存。
 
-**表单渲染缓存已启用：** 默认情况下，选中此选项，这意味着已渲染的表单会缓存以供后续检索。此设置对输出服务的性能几乎没有影响，因为它不缓存非交互式文档。 当您将输出服务用于呈现在客户端上的非交互式文档时，此选项会生效。
+**表单渲染缓存已启用：** 默认情况下，此选项处于选中状态，这意味着已渲染的表单会缓存以供后续检索。 此设置对输出服务的性能几乎没有影响，因为它不缓存非交互式文档。 当您将输出服务用于呈现在客户端上的非交互式文档时，此选项会生效。
 
-### 缓存表单设计{#caching-form-designs}
+### 缓存表单设计 {#caching-form-designs}
 
 当输出服务收到渲染请求时，它会从存储库或HTTP源中检索表单设计并缓存它。 此缓存可提高性能，因为对于后续渲染请求，输出服务会从缓存中检索表单设计，而不是从存储库中检索。
 
-输出服务始终在磁盘上缓存表单设计。 如果表单设计存储在服务器上，则这些文件将被视为磁盘缓存。 输出服务还根据&#x200B;**在内存模板缓存**&#x200B;区域中的设置，在内存中缓存表单设计。 如果更改其中的任何设置，请重新启动输出服务以使更改生效。 要重新启动此服务，请使用Workbench或参阅[启动或停止与AEM表单模块关联的服务](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)以获取相关说明。
+输出服务始终在磁盘上缓存表单设计。 如果表单设计存储在服务器上，则这些文件将被视为磁盘缓存。 输出服务还根据 **内存模板缓存中** 的上界。 如果更改其中的任何设置，请重新启动输出服务以使更改生效。 要重新启动此服务，请使用Workbench或查看 [启动或停止与AEM表单模块关联的服务](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules) 中。
 
-**模板配置缓存大小：** 要保留在内存中的模板配置对象的最大数量。默认值为 100。建议您将此值设置为大于或等于“模板缓存大小”值。 此设置不影响磁盘缓存。
+**模板配置缓存大小：** 要保留在内存中的模板配置对象的最大数量。 默认值为 100。建议您将此值设置为大于或等于“模板缓存大小”值。 此设置不影响磁盘缓存。
 
-**模板缓存大小：** 要保留在内存中的模板内容对象的最大数量。默认值为 100。此设置不影响磁盘缓存。
+**模板缓存大小：** 要保留在内存中的模板内容对象的最大数量。 默认值为 100。此设置不影响磁盘缓存。
 
-**启用：** 默认情况下，此复选框处于选中状态，这意味着表单模板已缓存在内存中。如果未选择此选项，则表单模板仅缓存在磁盘上。
+**已启用：** 默认情况下，此复选框处于选中状态，这意味着表单模板已缓存在内存中。 如果未选择此选项，则表单模板仅缓存在磁盘上。
 
-### 缓存片段和图像{#caching-fragments-and-images}
+### 缓存片段和图像 {#caching-fragments-and-images}
 
 输出服务在磁盘上缓存表单设计中使用的片段和图像。 这会提高性能，因为片段和图像仅在第一次请求时从存储库中读取。 然后，在后续请求中，输出服务会从磁盘缓存中读取片段和图像。 片段和图像仅缓存在磁盘上，而不在内存中。
 
-您可以使用以下设置控制片段和图像的磁盘缓存。 这些设置位于&#x200B;**模板资源缓存设置**&#x200B;区域：
+您可以使用以下设置控制片段和图像的磁盘缓存。 这些设置位于 **模板资源缓存设置** 区域：
 
-**资源** 缓存从列表中选择以下选项之一：
+**资源缓存** 从列表中选择以下选项之一：
 
-**为片段和图像启用：** 输出服务可缓存片段和图像。这是默认选项。
+**为片段和图像启用：** 输出服务可缓存片段和图像。 这是默认选项。
 
 **为片段启用：** 输出服务会缓存片段，但不会缓存图像。
 
-**禁用：** 输出服务不缓存片段或图像。
+**已禁用：** 输出服务不缓存片段或图像。
 
-**清理间隔（秒）：** 指定输出服务删除旧的无效缓存文件的频率。输出服务不会删除有效的缓存文件。 如果更改清理间隔，请重新启动输出服务以使更改生效。 要重新启动此服务，请使用Workbench或参阅启动或停止与AEM表单模块关联的服务，以获取相关说明。
+**清理间隔（秒）：** 指定输出服务删除旧无效缓存文件的频率。 输出服务不会删除有效的缓存文件。 如果更改清理间隔，请重新启动输出服务以使更改生效。 要重新启动此服务，请使用Workbench或参阅启动或停止与AEM表单模块关联的服务，以获取相关说明。
 
-## 缓存{#clustering-considerations-for-caches}的群集注意事项
+## 缓存的群集注意事项 {#clustering-considerations-for-caches}
 
 在群集环境中，每个节点都维护其自己的内存和磁盘缓存。 每个节点上的缓存内容取决于该节点上已呈现的表单。
 

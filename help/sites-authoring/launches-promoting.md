@@ -1,8 +1,8 @@
 ---
 title: 提升启动项
-seo-title: 提升启动项
-description: '您需要提升启动页面以将内容移回源（生产）中，然后才能进行发布。 '
-seo-description: '您需要提升启动页面以将内容移回源（生产）中，然后才能进行发布。 '
+seo-title: Promoting Launches
+description: 您需要提升启动页面以将内容移回源（生产）中，然后才能进行发布。
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing.
 uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -14,8 +14,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 92%
+source-wordcount: '756'
+ht-degree: 98%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 92%
 
 >[!CAUTION]
 >
->不能并行提升单个启动项。这意味着在同一次启动中同时执行两个提升操作可能会导致错误 — `Launch could not be promoted`（以及日志中的冲突错误）。
+>不能并行提升单个启动项。这意味着，对同一个启动项同时执行两次提升操作可能会导致出现以下错误：`Launch could not be promoted`（同时还会导致日志中出现冲突错误）。
 
 >[!CAUTION]
 >
@@ -48,9 +48,7 @@ ht-degree: 92%
 >
 >* [提升嵌套启动项](#promoting-a-nested-launch)，当结构中有多个启动项时。
 >* [启动项 - 事件的顺序](/help/sites-authoring/launches.md#launches-the-order-of-events)，包含有关自动提升和发布的更多详细信息。
-
 >
-
 
 
 您可以从&#x200B;**站点**&#x200B;控制台或&#x200B;**启动项**&#x200B;控制台提升启动项：
@@ -59,7 +57,7 @@ ht-degree: 92%
 
    * **站点**&#x200B;控制台：
 
-      1. 打开[引用边栏](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然后使用[选择模式](/help/sites-authoring/basic-handling.md)选择所需的源页面（或者选择并打开引用边栏，顺序不重要）。 此时将显示所有引用。
+      1. 打开[引用边栏](/help/sites-authoring/author-environment-tools.md#showingpagereferences)，然后使用[选择模式](/help/sites-authoring/basic-handling.md)选择所需的源页面（或者先进行选择，然后再打开引用边栏，顺序不重要）。此时将显示所有引用。
 
       1. 选择&#x200B;**启动项**（例如“启动项 (1)”）以显示特定启动项的列表。
       1. 选择特定的启动项以显示可用的操作。
@@ -72,7 +70,7 @@ ht-degree: 92%
 
 1. 在第一步中，您可以指定：
 
-   * **Target**
+   * **目标**
 
       * **提升后删除启动项**
    * **范围**
@@ -97,7 +95,7 @@ ht-degree: 92%
 
 1. 选择&#x200B;**提升**。
 
-## 编辑时提升启动页面  {#promoting-launch-pages-when-editing}
+## 编辑时提升启动页面 {#promoting-launch-pages-when-editing}
 
 在编辑启动页面时，也可以从&#x200B;**页面信息**&#x200B;中执行&#x200B;**提升启动项**&#x200B;操作。这将打开相应向导来收集所需的信息。
 
@@ -107,7 +105,7 @@ ht-degree: 92%
 >
 >此操作适用于单个启动项和[嵌套启动项](#promoting-a-nested-launch)。
 
-## 提升嵌套启动项  {#promoting-a-nested-launch}
+## 提升嵌套启动项 {#promoting-a-nested-launch}
 
 创建嵌套启动项后，您可以将其提升回任意源，包括根目录源（生产）。
 
@@ -118,7 +116,7 @@ ht-degree: 92%
 
 1. 输入所需的详细信息：
 
-   * **Target**
+   * **目标**
 
       * **提升目标**&#x200B;您可以提升到任意源。
 
@@ -135,7 +133,7 @@ ht-degree: 92%
 1. 选择&#x200B;**下一步**。
 1. 在选择&#x200B;**提升**&#x200B;之前查看提升详细信息：
 
-   ![chlimage_1-105](assets/chlimage_1-106.png)
+   ![chlimage_1-106](assets/chlimage_1-106.png)
 
    >[!NOTE]
    >

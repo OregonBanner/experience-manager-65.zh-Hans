@@ -1,8 +1,8 @@
 ---
 title: 移动设备应用程序
-seo-title: 移动设备应用程序
-description: '"移动设备应用程序"'
-seo-description: 'null'
+seo-title: Mobile-Apps
+description: "移动设备应用程序"
+seo-description: null
 uuid: 4a91241e-8c78-42fe-a5d3-732a6c34cbfd
 contentOwner: msm-service
 content-type: reference
@@ -11,8 +11,8 @@ discoiquuid: eda55579-4140-477b-b4d0-a87d14ec3237
 exl-id: 0a98881d-08f3-47e7-bae1-5500d1fe6514
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 2%
+source-wordcount: '118'
+ht-degree: 1%
 
 ---
 
@@ -31,4 +31,4 @@ AEM Mobile提供了多种创建应用程序的方法。 您可以使用以下不
 
 >[!NOTE]
 >
->如果您是Adobe Experience Manager的新用户，则可能需要浏览[AEM](/help/sites-deploying/deploy.md)快速入门。
+>如果你是Adobe Experience Manager的新手，可能想要 [AEM快速入门](/help/sites-deploying/deploy.md).

@@ -1,8 +1,8 @@
 ---
 title: 动态填充下拉列表
-seo-title: 动态填充下拉列表
+seo-title: Dynamically populating drop-down lists
 description: 根据某些逻辑动态填充下拉列表的过程
-seo-description: 根据某些逻辑动态填充下拉列表的过程
+seo-description: Procedure to dynamically populate drop-down lists based on some logic
 uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,12 +12,12 @@ docset: aem65
 exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
-# 动态填充下拉列表{#dynamically-populating-drop-down-lists}
+# 动态填充下拉列表 {#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
@@ -26,9 +26,9 @@ ht-degree: 0%
 * [创建自适应表单](../../forms/using/creating-adaptive-form.md)
 * [创作自适应表单](../../forms/using/introduction-forms-authoring.md)
 
-## 动态填充下拉列表的过程{#procedure-to-dynamically-populate-drop-down-lists}
+## 动态填充下拉列表的过程 {#procedure-to-dynamically-populate-drop-down-lists}
 
-假设您想要根据在&#x200B;**国家/地区**&#x200B;下拉列表中选择的值填充&#x200B;**状态**&#x200B;下拉列表。 如果在&#x200B;**Country**&#x200B;下拉列表中选择Australia，则&#x200B;**State**&#x200B;下拉列表会显示Australia内的状态。 以下过程介绍如何完成此任务。
+假设您想要在 **州** 下拉列表中，根据您在 **国家/地区** 下拉列表。 如果在 **国家/地区** 下拉列表， **州** 下拉列表显示澳大利亚的州。 以下过程介绍如何完成此任务。
 
 1. 使用以下模块创建项目：
 
@@ -146,7 +146,7 @@ ht-degree: 0%
    }
    ```
 
-1. 在应用程序的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保节点的`sling:resourceType`参数与Servlet指向的参数(/apps/populatedropdown)相同。
+1. 在应用程序的特定文件夹层次结构下创建一个下拉节点（例如，在/apps/myfolder/demo下创建一个节点）。 确保 `sling:resourceType` 节点的参数与servlet指向的参数相同(/apps/populatedropdown)。
 
    ![创建下拉节点](assets/dropdown-node.png)
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
    添加要在国家/地区列表中显示的国家/地区名称。 在“州”列表中，添加一个脚本，以根据“国家/地区”列表中国家/地区的名称来填充该脚本。
 
-   ![添加国家/](assets/country-dropdown.png) ![地区名称添加用于填充州名](assets/state-dropdown.png) ![称的脚本国家/地区和州下拉列表以收集](assets/2dropdowns.png)
+   ![添加国家/地区名称](assets/country-dropdown.png) ![添加用于填充状态名称的脚本](assets/state-dropdown.png) ![要收集的国家/地区和州下拉列表](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(

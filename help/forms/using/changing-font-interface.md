@@ -1,8 +1,8 @@
 ---
 title: 更改界面上的字体
-seo-title: 更改界面上的字体
+seo-title: Changing the font on the interface
 description: 如何有选择地更改用户界面上的字体。
-seo-description: 如何有选择地更改用户界面上的字体。
+seo-description: How to change the fonts on the user interface selectively.
 uuid: 421fdd24-441a-4092-8c52-f3ed3d5d5671
 contentOwner: robhagat
 content-type: reference
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '276'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 您可以更改在AEM Forms工作区中显示的字体。 在用户界面的特定部分中使用的字体在样式表的相应部分中定义。 您可以选择性地更改用户界面上的字体。
 
-按照[AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md)操作，并根据您的要求，执行自定义CSS、HTML或两者的步骤。
+关注 [AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md) 并根据您的要求，按照自定义CSS和/或HTML的步骤操作。
 
 1. 更改或添加现有样式的字体系列。
 1. 更改或添加HTML元素的内嵌字体系列。
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 例如，要将顶部导航栏锚点文本的字体更改为Courier New，请执行以下步骤：
 
-1. 通过访问`https://'[server]:[port]'/lc/crx/de/index.jsp`登录CRXDE Lite。
+1. 通过访问以登录CRXDE Lite `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. 执行下列操作之一：
 
    1. 要更改现有样式的字体系列，请在/apps/ws/css的newStyle.css文件中添加以下内容。
@@ -41,7 +41,7 @@ ht-degree: 1%
       }
       ```
 
-   1. 要为HTML元素添加内联的字体系列，请将`/libs/ws/js/runtime/templates/appnavigation.html`文件复制到`/apps/ws/js/runtime/templates/appnavigation.html`。
+   1. 要为HTML元素添加内嵌的字体系列，请复制 `/libs/ws/js/runtime/templates/appnavigation.html` 文件到 `/apps/ws/js/runtime/templates/appnavigation.html`.
 
       按如下方式更新/apps/ws/js/runtime/templates/appnavigation.html文件：
 
@@ -52,7 +52,7 @@ ht-degree: 1%
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      打开/apps/ws/js/registry.js文件进行编辑，并将`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`替换为`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`。
+      打开/apps/ws/js/registry.js文件进行编辑和替换 `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` with `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
 
    1. 要添加定义font-family的样式，请在/apps/ws/css的newStyle.css文件中添加以下内容。
 

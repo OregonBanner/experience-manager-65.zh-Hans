@@ -1,18 +1,18 @@
 ---
 title: 将来自用户数据的信息添加到表单提交元数据
-seo-title: 将来自用户数据的信息添加到表单提交元数据
-description: '了解如何使用用户提供的数据向已提交表单的元数据中添加信息。 '
-seo-description: '了解如何使用用户提供的数据向已提交表单的元数据中添加信息。 '
+seo-title: Adding information from user data to form submission metadata
+description: 了解如何使用用户提供的数据向已提交表单的元数据中添加信息。
+seo-description: Learn how to add information to metadata of a submitted form with user provided data.
 uuid: c3eea3c0-31f8-4bf8-b5cf-34f907bdbdba
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -27,18 +27,18 @@ ht-degree: 0%
 
 再考虑一个捕获电子邮件ID和电话号码的表单示例。 当用户以匿名方式访问此表单并放弃该表单时，作者可以将表单配置为自动保存电子邮件ID和电话号码。 此表单会自动保存，电话号码和电子邮件ID存储在草稿的元数据节点中。 此配置的用例是潜在客户管理功能板。
 
-## 将表单元素添加到元数据{#adding-form-elements-to-metadata}
+## 将表单元素添加到元数据 {#adding-form-elements-to-metadata}
 
 执行以下步骤以在元数据中添加元素：
 
 1. 在编辑模式下打开自适应表单。\
-   要在编辑模式下打开表单，请在表单管理器中，选择您的表单，然后点按&#x200B;**打开**。
-1. 在编辑模式下，选择一个组件，点按![字段级别](assets/field-level.png) > **自适应表单容器**，然后点按![cmpr](assets/cmppr.png)。
-1. 在侧栏中，单击&#x200B;**元数据**。
-1. 在元数据部分中，单击&#x200B;**Add**。
+   要在编辑模式下打开表单，请在表单管理器中，选择您的表单，然后点按 **打开**.
+1. 在编辑模式下，选择一个组件，点按 ![字段级别](assets/field-level.png) > **自适应表单容器**，然后点按 ![cppr](assets/cmppr.png).
+1. 在侧栏中，单击 **元数据**.
+1. 在元数据部分中，单击 **添加**.
 1. 使用元数据选项卡的值字段添加脚本。 您添加的脚本将从表单上的元素收集数据，并计算馈送到元数据的值。
 
-   例如，如果输入的年龄大于21，则元数据中会记录&#x200B;**true**；如果年龄小于21，则记录&#x200B;**false**。 您可以在元数据选项卡中输入以下脚本：
+   例如， **true** 如果输入的年龄大于21岁，则会记录在元数据中，并且 **false** 的值。 您可以在元数据选项卡中输入以下脚本：
 
    `(agebox.value >= 21) ? true : false`
 
@@ -50,17 +50,17 @@ ht-degree: 0%
 
 在用户在选定为元数据字段的元素中输入数据后，计算信息将记录在元数据中。 您可以在配置为存储元数据的存储库中看到元数据。
 
-## 查看更新的表单提交元数据：{#seeing-updated-form-nbsp-submission-metadata}
+## 查看更新的表单提交元数据： {#seeing-updated-form-nbsp-submission-metadata}
 
 例如，元数据存储在CRX存储库中。 元数据如下所示：
 
 ![元数据](assets/metadata_entry_new.png)
 
-如果在元数据中添加复选框元素，则选定值将存储为以逗号分隔的字符串。 例如，在表单中添加一个复选框组件，并将其名称指定为`checkbox1`。 在复选框组件属性中，为值0、1和2添加“驾照”、“社会保险号”和“护照”项。
+如果在元数据中添加复选框元素，则选定值将存储为以逗号分隔的字符串。 例如，在表单中添加复选框组件，并将其名称指定为 `checkbox1`. 在复选框组件属性中，为值0、1和2添加“驾照”、“社会保险号”和“护照”项。
 
 ![存储复选框中的多个值](assets/checkbox-metadata.png)
 
-选择自适应表单容器，然后在表单属性中添加存储`checkbox1.value`的元数据键`cb1`，然后发布表单。 当客户填写表单时，客户会在复选框字段中选择“护照”和“社会保障号”选项。 值1和2在提交元数据的cb1字段中存储为1、2。
+选择自适应表单容器，然后在表单属性中添加元数据键 `cb1` 商店 `checkbox1.value`，然后发布表单。 当客户填写表单时，客户会在复选框字段中选择“护照”和“社会保障号”选项。 值1和2在提交元数据的cb1字段中存储为1、2。
 
 ![在复选框字段中选择的多个值的元数据条目](assets/metadata-entry.png)
 

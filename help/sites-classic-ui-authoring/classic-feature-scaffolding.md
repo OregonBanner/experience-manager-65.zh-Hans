@@ -1,8 +1,8 @@
 ---
 title: 基架
-seo-title: 基架
+seo-title: Scaffolding
 description: 有时，您可能需要创建大量结构相同但内容不同的页面。使用基架，您可以创建一个表单（即基架），其中包含的字段反映您要用于页面的结构，然后使用此表单轻松创建基于此结构的页面。
-seo-description: 有时，您可能需要创建大量结构相同但内容不同的页面。使用基架，您可以创建一个表单（即基架），其中包含的字段反映您要用于页面的结构，然后使用此表单轻松创建基于此结构的页面。
+seo-description: Sometimes you may need to create a large set of pages that share the same structure but have differing content. With scaffolding you can create a form (a scaffold) with fields that reflect the structure you want for your pages and then use this form to easily create pages based on this structure.
 uuid: 5904abc0-b256-4da4-a7d7-3c17ea299648
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 58e61302-cfb4-4a3d-98d4-3c92baa2ad42
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 82%
+source-wordcount: '1448'
+ht-degree: 81%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 82%
 
 ![howscaffold_work](assets/howscaffolds_work.png)
 
-基架由一个表单和四个重要参数组成，表单中包含将构成要创建页面的每段内容的字段，这些参数可通过基架页面的&#x200B;**页面属性**&#x200B;访问。
+基架由一个表单和四个重要参数组成，前者包含将构成要创建页面的每段内容的字段，后者通过 **页面属性** 基架页面的。
 
 ![pageprops](assets/pageprops.png)
 
@@ -47,7 +47,7 @@ ht-degree: 82%
 * **标题文本**：这是此基架页面自己的名称。在本示例中，它的名称为“新闻”。
 * **说明**：显示在基架页面的标题下方。
 * **目标模板**：这是此基架在创建新页面时要使用的模板。在本示例中使用的是 *Geometrrixx 内容页面*&#x200B;模板。
-* **目标路径**：这是此基架要在其下创建新页面的父页面的路径。在此示例中，路径为&#x200B;*/content/geometrixx/en/news*。
+* **目标路径**：这是此基架要在其下创建新页面的父页面的路径。在本例中，路径为 */content/geometrixx/en/news*.
 
 基架的主体是表单。当用户希望使用基架创建页面时，他需要填充表单并单击底部的“创建&#x200B;**”。在上面的&#x200B;**新闻**&#x200B;示例中，表单具有以下字段：
 
@@ -60,13 +60,13 @@ ht-degree: 82%
 * **图像/高级**：**尺寸**：图像的尺寸。
 * **标记/关键字**：要分配给此页面的元数据。每个基架都具有此字段。
 
-### 创建基架  {#creating-a-scaffold}
+### 创建基架 {#creating-a-scaffold}
 
-要创建新基架，请转到&#x200B;**工具**&#x200B;控制台，然后转到&#x200B;**默认页面基架**&#x200B;并创建新页面。 将提供单页模板类型，即&#x200B;*基架模板。*
+要创建新基架，请转到 **工具** 控制台，然后 **默认页面基架** 并创建新页面。 将提供单个页面模板类型， *基架模板。*
 
-转到新页面的&#x200B;**页面属性**&#x200B;并设置&#x200B;*标题文本*、*描述*、*目标模板*&#x200B;和&#x200B;*目标路径*，如上所述。
+转到 **页面属性** ，并将 *标题文本*, *描述*, *目标模板* 和 *目标路径*，如上所述。
 
-接下来，您必须定义此 scaffold 将创建的页面的结构。为此，请进入基架页面上的&#x200B;**[设计模式](/help/sites-authoring/page-authoring.md#sidekick)**。 随即显示一个链接，允许您在&#x200B;**对话框编辑器**&#x200B;中编辑 scaffold。
+接下来，您必须定义此 scaffold 将创建的页面的结构。要执行此操作，请进入 **[设计模式](/help/sites-authoring/page-authoring.md#sidekick)** 在基架页面上。 随即显示一个链接，允许您在&#x200B;**对话框编辑器**&#x200B;中编辑 scaffold。
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
@@ -80,7 +80,7 @@ ht-degree: 82%
 
 研究对话框编辑器中的示例&#x200B;**新闻**&#x200B;基架对话框可帮助了解此过程的运行方式。进入基架页面的设计模式并单击对话框编辑器链接。
 
-现在，单击对话框字段&#x200B;**对话框>选项卡面板>文本>文本**，如下所示：
+现在，单击对话框字段 **对话框>选项卡面板>文本>文本**，如下所示：
 
 ![文本编辑](assets/textedit.png)
 
@@ -101,7 +101,7 @@ ht-degree: 82%
 
 请注意，在普通的组件对话框中，您不必指定此信息，因为它是隐式的，对话框已绑定到特定的组件。
 
-要指定这两类信息，可使用隐藏字段。单击第一个隐藏字段&#x200B;**对话框>选项卡面板>文本>隐藏的**，如下所示：
+要指定这两类信息，可使用隐藏字段。单击第一个隐藏字段 **对话框>选项卡面板>文本>隐藏**，如下所示：
 
 ![隐藏](assets/hidden.png)
 
@@ -113,13 +113,13 @@ ht-degree: 82%
 
 `./jcr:content/par/text/textIsRich`
 
-这是用于解释存储在`./jcr:content/par/text/text`中的文本字符串的布尔属性。
+这是一个布尔属性，用于解释存储在 `./jcr:content/par/text/text`.
 
 因为我们知道文本应解释为富文本，所以我们将此字段的 `value` 属性指定为 `true`。
 
 >[!CAUTION]
 >
->对话框编辑器允许用户更改对话框定义中&#x200B;*现有*&#x200B;属性的值。 要添加新属性，用户必须使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。例如，在使用对话框编辑器将新的隐藏字段添加到对话框定义时，它没有 *value* 属性（即名为“value”的属性）。如果涉及的隐藏字段需要设置默认的 *value* 属性，则必须使用其中一个 CRX 工具手动添加此属性。通过对话框编辑器本身无法添加该值。然而，此属性一旦存在，即可使用对话框编辑器编辑其值。
+>对话框编辑器允许用户更改 *现有* 属性。 要添加新属性，用户必须使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)。例如，在使用对话框编辑器将新的隐藏字段添加到对话框定义时，它没有 *value* 属性（即名为“value”的属性）。如果涉及的隐藏字段需要设置默认的 *value* 属性，则必须使用其中一个 CRX 工具手动添加此属性。通过对话框编辑器本身无法添加该值。然而，此属性一旦存在，即可使用对话框编辑器编辑其值。
 
 可通过单击查看第二个隐藏字段，如下所示：
 
@@ -137,7 +137,7 @@ ht-degree: 82%
 
 `foundation/components/textimage`
 
-它指定要用于呈现此段落文本内容的组件是&#x200B;*文本图像*&#x200B;组件。如果使用在另一个隐藏字段中指定的`isRichText`布尔值，组件可以按所需的方式呈现存储在`./jcr:content/par/text/text`上的实际文本字符串。
+它指定要用于呈现此段落文本内容的组件是&#x200B;*文本图像*&#x200B;组件。使用 `isRichText` 在其他隐藏字段中指定的布尔值，组件可以呈现存储在 `./jcr:content/par/text/text` 以所需的方式。
 
 ### 使用 MSM 继承的基架 {#scaffolding-with-msm-inheritance}
 
@@ -167,4 +167,4 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->如果在页面级别取消继承（从“页面属性”的“Live Copy”选项卡中），则所有组件都将在&#x200B;**Scaffolding**&#x200B;模式下可编辑（它们将以解锁状态显示）。
+>如果在页面级别取消继承（从“页面属性”的“Live Copy”选项卡中），则所有组件都可以在 **基架** 模式（它们将显示为已解锁状态）。

@@ -1,8 +1,8 @@
 ---
 title: 最佳实践
-seo-title: 最佳实践
+seo-title: Best Practices
 description: 如何以最高效、最实用的方式使用 AEM
-seo-description: 如何以最高效、最实用的方式使用 AEM
+seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 72%
+source-wordcount: '287'
+ht-degree: 70%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 72%
 
 目前已经有针对以下区域的最佳实践文档：
 
-* [资产](#assets)
-* [站点](#sites)
-* [表单](#forms)
+* [Assets](#assets)
+* [Sites](#sites)
+* [Forms](#forms)
 
 有关管理、部署和维护或开发方面的最佳实践，请参阅以下内容之一：
 
@@ -73,7 +73,7 @@ ht-degree: 72%
 | 创作工具 | [创作环境和工具](/help/sites-authoring/author-environment-tools.md) | 提供页面创作工具的概述。 |
 | 组织页面 | [创建和组织页面](/help/sites-authoring/managing-pages.md) | 提供有关如何对页面进行最佳组织的概述，包括命名约定。 |
 
-## 表单 {#forms}
+## Forms {#forms}
 
 |  |  |  |
 |---|---|---|

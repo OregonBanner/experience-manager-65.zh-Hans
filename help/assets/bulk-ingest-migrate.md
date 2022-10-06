@@ -14,31 +14,31 @@ exl-id: 53ea2cf7-d633-4ab9-a869-ce76eb1c01e5
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 # 安装用于批量资产迁移的功能包18912{#installing-feature-pack-for-bulk-asset-migration}
 
-功能包18912的安装是&#x200B;*可选*。
+功能包18912的安装是 *可选*.
 
-功能包18912允许您通过FTP将资产直接批量摄取到Adobe Experience Manager上的Dynamic Media - Scene7模式。 它还允许您在Experience Manager上将资产从Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 该功能包位于[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)。
+功能包18912允许您通过FTP将资产直接批量摄取到Adobe Experience Manager上的Dynamic Media - Scene7模式。 它还允许您在Experience Manager上将资产从Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 功能包可从 [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
 
 >[!IMPORTANT]
 >
->您可以在Experience Manager中使用功能包，自行将资产从Dynamic Media Classic批量迁移到Dynamic Media - Scene7模式。 您还可以使用Dynamic Media Classic中的FTP功能批量迁移资产。 但是，Adobe *not*&#x200B;建议您使用以下任一方法，因为涉及的复杂性。
+>您可以在Experience Manager中使用功能包，自行将资产从Dynamic Media Classic批量迁移到Dynamic Media - Scene7模式。 您还可以使用Dynamic Media Classic中的FTP功能批量迁移资产。 但是，Adobe会 *not* 由于涉及的复杂性，建议您使用以下任一方法。
 >
->因此，通过[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)完成迁移后，此迁移功能包仅作为迁移项目的一部分支持&#x200B;**。
+>因此，此迁移功能包为 *仅* 在完成 [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
 
 在安装该功能包之前，请创建Service用户，并提供该信息以Adobe支持。
 
-另请参阅[配置Dynamic Media - Scene7模式](/help/assets/config-dms7.md)。
+另请参阅[配置 Dynamic Media - Scene7 模式](/help/assets/config-dms7.md).
 
 **要安装用于批量资产迁移的功能包18912，请执行以下操作：**
 
-1. 在您的Experience Manager实例中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 安全]** > **[!UICONTROL 用户]**，然后选择&#x200B;**[!UICONTROL 创建用户]**。 此服务用户必须具有&#x200B;*读/写*&#x200B;权限，即`/content/dam.`
-1. 在&#x200B;**[!UICONTROL ID]**&#x200B;和&#x200B;**[!UICONTROL Password]**&#x200B;字段中，输入用户名和密码；例如， **FTP用户**。 此名称以创建资产的用户身份显示在时间轴中。 从FTP上传资产后，当资产上传到FTP服务器并推送到Experience Manager时，会考虑创建该资产。
-1. 联系[Adobe客户支持以获取Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support)，以请求访问功能包18912以进行下载。 在联系支持人员时，您可能需要以下信息：
+1. 在您的Experience Manager实例中，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 安全性]** > **[!UICONTROL 用户]** 选择 **[!UICONTROL 创建用户]**. 此服务用户必须 *读/写* 权限 `/content/dam.`
+1. 在 **[!UICONTROL ID]** 和 **[!UICONTROL 密码]** 输入用户名和密码；例如， **FTP用户**. 此名称以创建资产的用户身份显示在时间轴中。 从FTP上传资产后，当资产上传到FTP服务器并推送到Experience Manager时，会考虑创建该资产。
+1. 联系人 [Adobe客户支持以Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support) 请求访问功能包18912以进行下载。 在联系支持人员时，您可能需要以下信息：
 
    * Author实例的服务器IP地址，包括端口号（默认情况下，端口号为4502）。
    * Experience Manager服务上一步中的用户用户名和密码。
@@ -46,4 +46,4 @@ ht-degree: 0%
 1. Adobe客户Experience Manager支持为您提供FTP凭据和功能包18912的访问权限。
 1. 收到功能包18912后，请安装它。
 
-   请参阅[如何使用包](/help/sites-administering/package-manager.md) ，以了解有关在Experience Manager中使用软件分发和包的详细信息。
+   请参阅 [如何使用包](/help/sites-administering/package-manager.md) 有关在Experience Manager中使用Software Distribution和包的更多信息。

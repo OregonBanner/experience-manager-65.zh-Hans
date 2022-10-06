@@ -1,8 +1,8 @@
 ---
 title: 创建和组织页面
-seo-title: 创建和组织页面
+seo-title: Creating and Organizing Pages
 description: 此部分介绍如何使用 AEM 创建和管理页面，以便您随后能够在这些页面上创建内容。
-seo-description: 此部分介绍如何使用 AEM 创建和管理页面，以便您随后能够在这些页面上创建内容。
+seo-description: This section describes how to create and manage pages with AEM so that you can then create content on those pages.
 uuid: 47ce137a-7a85-4b79-b4e0-fdf08a9e77bd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1910'
 ht-degree: 89%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 89%
 
    `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-   根据实例的配置，在发布环境中使用`/content`可能是可选的。
+   根据实例的配置，使用 `/content` 在发布环境中可能是可选的。
 
 ```xml
   /content
@@ -70,7 +70,7 @@ ht-degree: 89%
     /...
 ```
 
-此结构可以从“网站”控制台中查看，您可以使用该控制台在树结构](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15)中导航。[
+此结构可以从“网站”控制台中查看，您可以使用该控制台 [在树结构中导航](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -88,7 +88,7 @@ ht-degree: 89%
    * 用于生成 URI。
    * 此字段的用户输入是可选的。如果未指定，名称会从标题派生。
 
-创建新页面时，AEM将根据AEM和JCR实行的惯例](/help/sites-developing/naming-conventions.md)验证页面名称。[
+创建新页面时，AEM将 [根据惯例验证页面名称](/help/sites-developing/naming-conventions.md) 由AEM和JCR强加。
 
 实施和允许使用的字符列表因UI而略有不同（触屏UI更为广泛），但最低允许使用的字符数为：
 
@@ -102,7 +102,7 @@ ht-degree: 89%
 
 #### 标题 {#title}
 
-如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**[，并依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)在这两个 UI 中，包含无效字符的&#x200B;**标题**&#x200B;字段将被接受，不过派生的名称将把无效的字符替换掉。例如：
+如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**[，并依据 AEM 和 JCR 实行的惯例验证此名称](/help/sites-developing/naming-conventions.md)。在这两个 UI 中，包含无效字符的&#x200B;**标题**&#x200B;字段将被接受，不过派生的名称将把无效的字符替换掉。例如：
 
 | 标题 | 派生的名称 |
 |---|---|
@@ -113,10 +113,10 @@ ht-degree: 89%
 
 如果您在创建新页面时提供页面&#x200B;**名称**[，AEM 将依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)
 
-在经典UI中，**无法在**&#x200B;名称&#x200B;**字段中输入无效字符**。
+在经典UI中，您 **无法输入无效字符** 在 **名称** 字段。
 
 >[!NOTE]
->在触屏UI中，您&#x200B;**无法在**&#x200B;名称&#x200B;**字段中提交无效的字符**。 当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
+>在触屏UI中，您 **无法提交无效字符** 在 **名称** 字段。 当 AEM 检测到无效字符时，此字段将会突出显示，并出现一条说明性消息以指示需要删除/替换的字符。
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 * 视频
 * 更多
 
-创建并打开页面后，您可以[使用](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)组件添加内容，该组件可从[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)中获取。
+创建并打开页面后，您可以 [使用组件添加内容](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)，可从 [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
 
 ## 管理页面 {#managing-pages}
 
@@ -197,7 +197,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
    >[!NOTE]
    >
-   >您也可以在编辑现有页面时创建页面。使用Sidekick的&#x200B;**Page**&#x200B;选项卡中的**创建子页面**，将在正在编辑的页面下直接创建新页面。
+   >您也可以在编辑现有页面时创建页面。使用**创建子页** **页面** 选项卡，则会在正在编辑的页面下方创建一个新页面。
 
 ### 打开页面进行编辑 {#opening-a-page-for-editing}
 
@@ -209,7 +209,7 @@ AEM 附带了一些现成的模板。预提供的模板取决于各个网站，�
 
 * 打开页面后，可通过单击超链接导航到站点中的其他页面（以对其进行编辑）。
 
-### 复制和粘贴页面  {#copying-and-pasting-a-page}
+### 复制和粘贴页面 {#copying-and-pasting-a-page}
 
 复制时，可以复制以下任一内容：
 
@@ -304,7 +304,7 @@ AEM 还有一项功能是允许您更新指向重命名或被移动页面的内�
 
 ### 删除页面 {#deleting-a-page}
 
-1. 可从多个位置删除页面：
+1. 可从不同位置删除页面：
 
    * 在&#x200B;**网站**&#x200B;控制台中，单击以选择页面，然后右键单击并从显示的菜单中选择&#x200B;**删除**。
    * 在&#x200B;**网站**&#x200B;控制台中，单击以选择页面，然后从工具栏菜单中选择&#x200B;**删除**。

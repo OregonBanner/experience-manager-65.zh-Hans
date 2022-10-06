@@ -1,8 +1,8 @@
 ---
-title: 使用自定义工具栏呈现HTML Forms
-seo-title: 使用自定义工具栏呈现HTML Forms
-description: 使用Forms服务自定义使用HTML表单呈现的工具栏。 您可以使用Java API和Web服务API渲染带有自定义工具栏的HTML表单。
-seo-description: 使用Forms服务自定义使用HTML表单呈现的工具栏。 您可以使用Java API和Web服务API渲染带有自定义工具栏的HTML表单。
+title: 使用自定义工具栏呈现HTMLForms
+seo-title: Rendering HTML Forms with CustomToolbars
+description: 使用Forms服务自定义通过HTML表单呈现的工具栏。 您可以使用Java API和Web服务API渲染带有自定义工具栏的HTML表单。
+seo-description: Use the Forms service to customize a toolbar that is rendered with an HTML form. You can render an HTML Form with a custom toolbar using the Java API and a Web Service API.
 uuid: b9c9464e-ff19-4051-a39b-4ec71c512d10
 contentOwner: admin
 content-type: reference
@@ -14,18 +14,18 @@ role: Developer
 exl-id: 0b992b1c-3878-447a-bccc-7034aa3e98bc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2384'
+source-wordcount: '2345'
 ht-degree: 0%
 
 ---
 
-# 使用CustomToolbars {#rendering-html-forms-with-customtoolbars}渲染HTML Forms
+# 使用自定义工具栏呈现HTMLForms {#rendering-html-forms-with-customtoolbars}
 
 **本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
 
-## 使用自定义工具栏{#rendering-html-forms-with-custom-toolbars}渲染HTML Forms
+## 使用自定义工具栏呈现HTMLForms {#rendering-html-forms-with-custom-toolbars}
 
-利用Forms服务，可自定义使用HTML表单呈现的工具栏。 可以通过覆盖默认CSS样式来自定义工具栏以更改其外观，并通过覆盖Java脚本来添加动态行为。 使用名为fscmenu.xml的XML文件自定义工具栏。 默认情况下，Forms服务会从内部指定的URI位置检索此文件。
+利用Forms服务，可自定义通过HTML表单呈现的工具栏。 可以通过覆盖默认CSS样式来自定义工具栏以更改其外观，并通过覆盖Java脚本来添加动态行为。 使用名为fscmenu.xml的XML文件自定义工具栏。 默认情况下，Forms服务会从内部指定的URI位置检索此文件。
 
 >[!NOTE]
 >
@@ -42,21 +42,21 @@ ht-degree: 0%
 * fscmenu-ie.css
 * fscdialog.css
 
-fscJS是与每个节点关联的Java脚本。 必须为`div#fscmenu`节点提供一个，并且可选地为`ul#fscmenuItem`节点提供一个。 JS文件实施了核心工具栏功能，并且默认文件有效。
+fscJS是与每个节点关联的Java脚本。 必须为 `div#fscmenu` 节点和可选 `ul#fscmenuItem` 节点。 JS文件实施了核心工具栏功能，并且默认文件有效。
 
-fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具栏外观。 ** fscVCSS是垂直工具栏的样式表，显示在呈现的HTML表单的左侧。** fscIECSS是在Internet Explorer中呈现的HTML表单的样式表。
+fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具栏外观。 *fscVCSS* 是垂直工具栏的样式表，显示在渲染的HTML表单的左侧。 *fscIECSS* 是用于在Internet Explorer中呈现的HTML表单的样式表。
 
-请确保上述所有文件均在fscmenu.xml文件中引用。 也就是说，在fscmenu.xml文件中，指定指向这些文件的URI位置，以便Forms服务能够找到这些文件。 默认情况下，这些文件位于以内部关键字`FSWebRoot`或`ApplicationWebRoot`开头的URI位置。
+请确保上述所有文件均在fscmenu.xml文件中引用。 也就是说，在fscmenu.xml文件中，指定指向这些文件的URI位置，以便Forms服务能够找到这些文件。 默认情况下，这些文件可在以内部关键字开头的URI位置使用 `FSWebRoot` 或 `ApplicationWebRoot`.
 
-要自定义工具栏，请使用外部关键词`FSToolBarURI`替换关键词。 此关键字表示在运行时传递到Forms服务的URI（此方法将在此部分稍后显示）。
+要自定义工具栏，请使用外部关键词替换关键词 `FSToolBarURI`. 此关键字表示在运行时传递到Forms服务的URI（此方法将在此部分稍后显示）。
 
-您还可以指定这些JS和CSS文件的绝对位置，如https://www.mycompany.com/scripts/misc/fscmenu.js。 在这种情况下，您无需使用`FSToolBarURI`关键字。
+您还可以指定这些JS和CSS文件的绝对位置，如https://www.mycompany.com/scripts/misc/fscmenu.js。 在这种情况下，您无需使用 `FSToolBarURI` 关键词。
 
 >[!NOTE]
 >
->不建议将引用这些文件的方式混合使用。 也就是说，所有URI都应使用`FSToolBarURI`关键字或绝对位置来引用。
+>不建议将引用这些文件的方式混合使用。 即，所有URI都应使用 `FSToolBarURI` 关键字或绝对位置。
 
-您可以通过打开adobe-forms-&lt;appserver>.ear文件来获取JS和CSS文件。 在此文件中，打开adobe-forms-res.war。 所有这些文件都位于WAR文件中。 adobe-forms-&lt;appserver>.ear文件位于AEM Forms安装文件夹(C:\ is the installation directory)中。 您可以使用文件提取工具（如WinRAR）打开adobe-forms-&lt;appserver>.ear。
+您可以通过打开adobe-forms-&lt;appserver>.ear文件。 在此文件中，打开adobe-forms-res.war。 所有这些文件都位于WAR文件中。 adobe-forms-&lt;appserver>.ear文件位于AEM forms安装文件夹(C:\ is the installation directory)中。 您可以打开adobe-forms-&lt;appserver>.ear使用文件提取工具（如WinRAR）。
 
 以下XML语法显示了一个fscmenu.xml文件示例。
 
@@ -99,10 +99,10 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 以下项目介绍了如何自定义工具栏：
 
-* 更改`fscJS`、`fscCSS`、`fscVCSS`、`fscIECSS`属性的值（在fscmenu.xml文件中），以使用本节中描述的方法之一（例如`fscJS="FSToolBarURI/scripts/fscmenu.js"`）来反映引用文件的自定义位置。
+* 更改 `fscJS`, `fscCSS`, `fscVCSS`, `fscIECSS` 属性（在fscmenu.xml文件中），以通过使用本节中描述的方法之一(例如， `fscJS="FSToolBarURI/scripts/fscmenu.js"`)。
 * 必须指定所有CSS和JS文件。 如果未修改任何文件，请在自定义位置提供默认文件。 您可以打开各种文件，以获取默认文件，如本节所述。
 * 允许为任何文件提供绝对引用(例如，https://www.example.com/scripts/custom-vertical-fscmenu.css)。
-* `div#fscmenu`节点需要的JS和CSS文件对于工具栏功能至关重要。 单个`ul#fscmenuItem`节点可能或可能没有支持的JS或CSS文件。
+* JS和CSS文件 `div#fscmenu` 节点对于工具栏功能至关重要。 个人 `ul#fscmenuItem` 节点可能或可能没有支持的JS或CSS文件。
 
 **更改本地值**
 
@@ -151,22 +151,22 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 >
 >与此部分关联的快速入门使用此XML文件来显示法语自定义工具栏，如上图所示。
 
-此外，通过调用`HTMLRenderSpec`对象的`setLocale`方法并传递指定区域设置值的字符串值来指定有效的区域设置值。 例如，传递`fr_FR`以指定法语。 Forms服务与本地化的工具栏捆绑在一起。
+此外，通过调用 `HTMLRenderSpec` 对象 `setLocale` 方法和传递指定区域设置值的字符串值。 例如，pass `fr_FR` 来指定法语。 Forms服务与本地化的工具栏捆绑在一起。
 
 >[!NOTE]
 >
->在渲染使用自定义工具栏的HTML表单之前，您必须了解HTML表单的渲染方式。 (请参阅[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)。)
+>在渲染使用自定义工具栏的HTML表单之前，您必须了解HTML表单的渲染方式。 (请参阅 [将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md).)
 
-有关Forms服务的更多信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
+有关Forms服务的更多信息，请参阅 [AEM Forms服务参考](https://www.adobe.com/go/learn_aemforms_services_63).
 
-### 步骤{#summary-of-steps}的摘要
+### 步骤摘要 {#summary-of-steps}
 
 要渲染包含自定义工具栏的HTML表单，请执行以下任务：
 
 1. 包括项目文件。
 1. 创建Forms Java API对象。
 1. 引用自定义fscmenu XML文件。
-1. 渲染HTML表单。
+1. 呈现HTML表单。
 1. 将表单数据流写入客户端Web浏览器。
 
 **包含项目文件**
@@ -179,21 +179,21 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 **引用自定义fscmenu XML文件**
 
-要渲染包含自定义工具栏的HTML表单，请引用描述该工具栏的fscmenu XML文件。 （本节提供了fscmenu XML文件的两个示例。） 此外，请确保fscmenu.xml文件正确指定所有引用文件的位置。 如本节前面所述，请确保`FSToolBarURI`关键字或其绝对位置引用所有文件。
+要渲染包含自定义工具栏的HTML表单，请引用描述该工具栏的fscmenu XML文件。 （本节提供了fscmenu XML文件的两个示例。） 此外，请确保fscmenu.xml文件正确指定所有引用文件的位置。 如本节前面所述，请确保所有文件均被 `FSToolBarURI` 关键词或其绝对位置。
 
-**渲染HTML表单**
+**呈现HTML表单**
 
-要渲染HTML表单，请指定在Designer中创建并另存为XDP文件的表单设计。 另请选择HTML转换类型。 例如，您可以指定为Internet Explorer 5.0或更高版本渲染动态HTML的HTML转换类型。
+要渲染HTML表单，请指定在Designer中创建并另存为XDP文件的表单设计。 另请选择HTML转换类型。 例如，您可以指定用于为Internet Explorer 5.0或更高版本呈现动态HTML的HTML转换类型。
 
 渲染HTML表单还需要值，例如用于渲染其他表单类型的URI值。
 
 **将表单数据流写入客户端Web浏览器**
 
-当Forms服务呈现HTML表单时，它会返回一个表单数据流，您必须将该数据流写入客户端Web浏览器，以使用户能够看到HTML表单。
+当Forms服务呈现HTML表单时，它会返回一个表单数据流，您必须将该数据流写入客户端Web浏览器以使HTML表单对用户可见。
 
 **另请参阅**
 
-[使用Java API呈现带有自定义工具栏的HTML表单](#render-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[使用Java API呈现具有自定义工具栏的HTML表单](#render-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
 [使用Web服务API呈现带有自定义工具栏的HTML表单](#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api)
 
@@ -209,7 +209,7 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### 使用Java API {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}渲染带有自定义工具栏的HTML表单
+### 使用Java API呈现具有自定义工具栏的HTML表单 {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
 使用Forms服务API(Java)渲染包含自定义工具栏的HTML表单：
 
@@ -219,43 +219,43 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 1. 创建Forms Java API对象
 
-   * 创建包含连接属性的`ServiceClientFactory`对象。
-   * 使用其构造函数创建`FormsServiceClient`对象，并传递`ServiceClientFactory`对象。
+   * 创建 `ServiceClientFactory` 包含连接属性的对象。
+   * 创建 `FormsServiceClient` 对象，并使用其构造函数进行传递 `ServiceClientFactory` 对象。
 
 1. 引用自定义fscmenu XML文件
 
-   * 使用`HTMLRenderSpec`对象的构造函数创建对象。
-   * 要呈现带有工具栏的HTML表单，请调用`HTMLRenderSpec`对象的`setHTMLToolbar`方法并传递`HTMLToolbar`枚举值。 例如，要显示垂直HTML工具栏，请传递`HTMLToolbar.Vertical`。
-   * 通过调用`HTMLRenderSpec`对象的`setToolbarURI`方法并传递指定XML文件URI位置的字符串值，指定fscmenu XML文件的位置。
-   * 如果适用，请通过调用`HTMLRenderSpec`对象的`setLocale`方法并传递指定区域设置值的字符串值来设置区域设置值。 默认值为英语。
+   * 创建 `HTMLRenderSpec` 对象。
+   * 要呈现带有工具栏的HTML表单，请调用 `HTMLRenderSpec` 对象 `setHTMLToolbar` 方法和传递 `HTMLToolbar` 枚举值。 例如，要显示垂直HTML工具栏，请通过 `HTMLToolbar.Vertical`.
+   * 通过调用 `HTMLRenderSpec` 对象 `setToolbarURI` 方法和传递指定XML文件URI位置的字符串值。
+   * 如果适用，请通过调用 `HTMLRenderSpec` 对象 `setLocale` 方法和传递指定区域设置值的字符串值。 默认值为英语。
 
    >[!NOTE]
    >
-   >与此部分关联的快速入门会将此值设置为&#x200B;`fr_FR`*。*
+   >与此部分关联的快速入门会将此值设置为 `fr_FR`*.*
 
-1. 渲染HTML表单
+1. 呈现HTML表单
 
-   调用`FormsServiceClient`对象的`renderHTMLForm`方法并传递以下值：
+   调用 `FormsServiceClient` 对象 `renderHTMLForm` 方法并传递以下值：
 
-   * 指定表单设计名称（包括文件扩展名）的字符串值。 如果您引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 指定HTML首选项类型的`TransformTo`枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定`TransformTo.MSDHTML`。
-   * `com.adobe.idp.Document`对象，其中包含要与表单合并的数据。 如果不想合并数据，请传递一个空的`com.adobe.idp.Document`对象。
-   * 存储HTML运行时选项的`HTMLRenderSpec`对象。
-   * 指定`HTTP_USER_AGENT`标头值的字符串值，如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-   * `URLSpec`对象，用于存储呈现HTML表单所需的URI值。
-   * 用于存储文件附件的`java.util.HashMap`对象。 这是一个可选参数，如果您不想将文件附加到表单，可以指定`null`。
+   * 指定表单设计名称（包括文件扩展名）的字符串值。 如果您引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * A `TransformTo` 指定HTML首选项类型的枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定 `TransformTo.MSDHTML`.
+   * A `com.adobe.idp.Document` 包含要与表单合并的数据的对象。 如果不想合并数据，请传递一个空 `com.adobe.idp.Document` 对象。
+   * 的 `HTMLRenderSpec` 用于存储HTML运行时选项的对象。
+   * 指定 `HTTP_USER_AGENT` 标题值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+   * A `URLSpec` 用于存储呈现HTML表单所需的URI值的对象。
+   * A `java.util.HashMap` 用于存储文件附件的对象。 这是一个可选参数，您可以指定 `null` 如果您不想将文件附加到表单。
 
-   `renderHTMLForm`方法返回一个`FormsResult`对象，该对象包含必须写入客户端Web浏览器的表单数据流。
+   的 `renderHTMLForm` 方法返回 `FormsResult` 包含必须写入客户端web浏览器的表单数据流的对象。
 
 1. 将表单数据流写入客户端Web浏览器
 
-   * 通过调用`FormsResult`对象“s `getOutputContent`”方法创建`com.adobe.idp.Document`对象。
-   * 通过调用`getContentType`方法获取`com.adobe.idp.Document`对象的内容类型。
-   * 通过调用`setContentType`方法并传递`com.adobe.idp.Document`对象的内容类型来设置`javax.servlet.http.HttpServletResponse`对象的内容类型。
-   * 通过调用`javax.servlet.http.HttpServletResponse`对象的`getOutputStream`方法，创建一个`javax.servlet.ServletOutputStream`对象，该对象用于将表单数据流写入客户端Web浏览器。
-   * 通过调用`com.adobe.idp.Document`对象的`getInputStream`方法创建`java.io.InputStream`对象。
-   * 通过调用`InputStream`对象的`read`方法并将字节数组作为参数传递，创建一个字节数组并用表单数据流填充该数组。
-   * 调用`javax.servlet.ServletOutputStream`对象的`write`方法，将表单数据流发送到客户端Web浏览器。 将字节数组传递到`write`方法。
+   * 创建 `com.adobe.idp.Document` 对象 `FormsResult` 对象s `getOutputContent` 方法。
+   * 获取的内容类型 `com.adobe.idp.Document` 通过调用对象 `getContentType` 方法。
+   * 设置 `javax.servlet.http.HttpServletResponse` 对象的内容类型(通过调用 `setContentType` 方法和传递 `com.adobe.idp.Document` 对象。
+   * 创建 `javax.servlet.ServletOutputStream` 用于通过调用将表单数据流写入客户端web浏览器的对象 `javax.servlet.http.HttpServletResponse` 对象 `getOutputStream` 方法。
+   * 创建 `java.io.InputStream` 对象 `com.adobe.idp.Document` 对象 `getInputStream` 方法。
+   * 通过调用 `InputStream` 对象 `read` 方法并将字节数组作为参数进行传递。
+   * 调用 `javax.servlet.ServletOutputStream` 对象 `write` 将表单数据流发送到客户端web浏览器的方法。 将字节数组传递到 `write` 方法。
 
 **另请参阅**
 
@@ -265,9 +265,9 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 使用Web服务API {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}呈现带有自定义工具栏的HTML表单
+### 使用Web服务API呈现带有自定义工具栏的HTML表单 {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}
 
-使用Forms服务API（Web服务）渲染包含自定义工具栏的HTML表单：
+使用Forms服务API（Web服务）呈现包含自定义工具栏的HTML表单：
 
 1. 包含项目文件
 
@@ -276,48 +276,48 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 1. 创建Forms Java API对象
 
-   创建`FormsService`对象并设置身份验证值。
+   创建 `FormsService` 对象，并设置身份验证值。
 
 1. 引用自定义fscmenu XML文件
 
-   * 使用`HTMLRenderSpec`对象的构造函数创建对象。
-   * 要呈现带有工具栏的HTML表单，请调用`HTMLRenderSpec`对象的`setHTMLToolbar`方法并传递`HTMLToolbar`枚举值。 例如，要显示垂直HTML工具栏，请传递`HTMLToolbar.Vertical`。
-   * 通过调用`HTMLRenderSpec`对象的`setToolbarURI`方法并传递指定XML文件URI位置的字符串值，指定fscmenu XML文件的位置。
-   * 如果适用，请通过调用`HTMLRenderSpec`对象的`setLocale`方法并传递指定区域设置值的字符串值来设置区域设置值。 默认值为英语。
+   * 创建 `HTMLRenderSpec` 对象。
+   * 要呈现带有工具栏的HTML表单，请调用 `HTMLRenderSpec` 对象 `setHTMLToolbar` 方法和传递 `HTMLToolbar` 枚举值。 例如，要显示垂直HTML工具栏，请通过 `HTMLToolbar.Vertical`.
+   * 通过调用 `HTMLRenderSpec` 对象 `setToolbarURI` 方法和传递指定XML文件URI位置的字符串值。
+   * 如果适用，请通过调用 `HTMLRenderSpec` 对象 `setLocale` 方法和传递指定区域设置值的字符串值。 默认值为英语。
 
    >[!NOTE]
    >
-   >与此部分关联的快速入门会将此值设置为&#x200B;`fr_FR`*。*
+   >与此部分关联的快速入门会将此值设置为 `fr_FR`*.*
 
-1. 渲染HTML表单
+1. 呈现HTML表单
 
-   调用`FormsService`对象的`renderHTMLForm`方法并传递以下值：
+   调用 `FormsService` 对象 `renderHTMLForm` 方法并传递以下值：
 
-   * 指定表单设计名称（包括文件扩展名）的字符串值。 如果您引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
-   * 指定HTML首选项类型的`TransformTo`枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定`TransformTo.MSDHTML`。
-   * `BLOB`对象，其中包含要与表单合并的数据。 如果不想合并数据，请传递`null`。
-   * 存储HTML运行时选项的`HTMLRenderSpec`对象。
-   * 指定`HTTP_USER_AGENT`标头值（如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`）的字符串值。 如果不想设置此值，可以传递空字符串。
-   * `URLSpec`对象，用于存储呈现HTML表单所需的URI值。
-   * 用于存储文件附件的`java.util.HashMap`对象。 此参数是可选的，如果您不打算将文件附加到表单，则可以指定`null`。
-   * 由`renderHTMLForm`方法填充的空`com.adobe.idp.services.holders.BLOBHolder`对象。 此参数值存储呈现的表单。
-   * 由`renderHTMLForm`方法填充的空`com.adobe.idp.services.holders.BLOBHolder`对象。 此参数存储输出XML数据。
-   * 由`renderHTMLForm`方法填充的空`javax.xml.rpc.holders.LongHolder`对象。 此参数以表单形式存储页数。
-   * 由`renderHTMLForm`方法填充的空`javax.xml.rpc.holders.StringHolder`对象。 此参数存储区域设置值。
-   * 由`renderHTMLForm`方法填充的空`javax.xml.rpc.holders.StringHolder`对象。 此参数存储所用的HTML呈现值。
-   * 将包含此操作结果的空`com.adobe.idp.services.holders.FormsResultHolder`对象。
+   * 指定表单设计名称（包括文件扩展名）的字符串值。 如果您引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，例如 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * A `TransformTo` 指定HTML首选项类型的枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的动态HTML兼容的HTML表单，请指定 `TransformTo.MSDHTML`.
+   * A `BLOB` 包含要与表单合并的数据的对象。 如果不想合并数据，请传递 `null`.
+   * 的 `HTMLRenderSpec` 用于存储HTML运行时选项的对象。
+   * 指定 `HTTP_USER_AGENT` 标题值，例如 `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`)。 如果不想设置此值，可以传递空字符串。
+   * A `URLSpec` 用于存储呈现HTML表单所需的URI值的对象。
+   * A `java.util.HashMap` 用于存储文件附件的对象。 此参数是可选的，您可以指定 `null` 如果您不打算将文件附加到表单。
+   * 空 `com.adobe.idp.services.holders.BLOBHolder` 由填充的对象 `renderHTMLForm` 方法。 此参数值存储呈现的表单。
+   * 空 `com.adobe.idp.services.holders.BLOBHolder` 由填充的对象 `renderHTMLForm` 方法。 此参数存储输出XML数据。
+   * 空 `javax.xml.rpc.holders.LongHolder` 由填充的对象 `renderHTMLForm` 方法。 此参数以表单形式存储页数。
+   * 空 `javax.xml.rpc.holders.StringHolder` 由填充的对象 `renderHTMLForm` 方法。 此参数存储区域设置值。
+   * 空 `javax.xml.rpc.holders.StringHolder` 由填充的对象 `renderHTMLForm` 方法。 此参数存储所用的HTML呈现值。
+   * 空 `com.adobe.idp.services.holders.FormsResultHolder` 包含此操作结果的对象。
 
-   `renderHTMLForm`方法使用必须写入客户端Web浏览器的表单数据流填充作为最后一个参数值传递的`com.adobe.idp.services.holders.FormsResultHolder`对象。
+   的 `renderHTMLForm` 方法填充 `com.adobe.idp.services.holders.FormsResultHolder` 作为最后一个参数值传递的对象，表单数据流必须写入客户端web浏览器。
 
 1. 将表单数据流写入客户端Web浏览器
 
-   * 通过获取`com.adobe.idp.services.holders.FormsResultHolder`对象`value`数据成员的值，创建`FormResult`对象。
-   * 通过调用`FormsResult`对象的`getOutputContent`方法，创建包含表单数据的`BLOB`对象。
-   * 通过调用`getContentType`方法获取`BLOB`对象的内容类型。
-   * 通过调用`setContentType`方法并传递`BLOB`对象的内容类型来设置`javax.servlet.http.HttpServletResponse`对象的内容类型。
-   * 通过调用`javax.servlet.http.HttpServletResponse`对象的`getOutputStream`方法，创建一个`javax.servlet.ServletOutputStream`对象，该对象用于将表单数据流写入客户端Web浏览器。
-   * 创建一个字节数组，并通过调用`BLOB`对象的`getBinaryData`方法来填充该数组。 此任务将`FormsResult`对象的内容分配给字节数组。
-   * 调用`javax.servlet.http.HttpServletResponse`对象的`write`方法，将表单数据流发送到客户端Web浏览器。 将字节数组传递到`write`方法。
+   * 创建 `FormResult` 对象，方法是获取 `com.adobe.idp.services.holders.FormsResultHolder` 对象 `value` 数据成员。
+   * 创建 `BLOB` 通过调用包含表单数据的对象 `FormsResult` 对象 `getOutputContent` 方法。
+   * 获取的内容类型 `BLOB` 通过调用对象 `getContentType` 方法。
+   * 设置 `javax.servlet.http.HttpServletResponse` 对象的内容类型(通过调用 `setContentType` 方法和传递 `BLOB` 对象。
+   * 创建 `javax.servlet.ServletOutputStream` 用于通过调用将表单数据流写入客户端web浏览器的对象 `javax.servlet.http.HttpServletResponse` 对象 `getOutputStream` 方法。
+   * 创建一个字节数组，并通过调用 `BLOB` 对象 `getBinaryData` 方法。 此任务分配 `FormsResult` 对象。
+   * 调用 `javax.servlet.http.HttpServletResponse` 对象 `write` 将表单数据流发送到客户端web浏览器的方法。 将字节数组传递到 `write` 方法。
 
 **另请参阅**
 

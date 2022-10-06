@@ -1,8 +1,8 @@
 ---
 title: 社区组件
-seo-title: 社区组件
+seo-title: Communities Components
 description: 向任何AEM站点添加社区功能
-seo-description: 向任何AEM站点添加社区功能
+seo-description: Adding community features to any AEM site
 uuid: 76824820-81e9-4192-8df3-dff55eaf144e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '286'
 ht-degree: 44%
 
 ---
@@ -32,24 +32,24 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->如果不熟悉创作环境，请查看有关[基本操作](/help/sites-authoring/basic-handling.md)和[页面创作快速指南的文档](/help/sites-authoring/qg-page-authoring.md)。
+>如果不熟悉创作环境，请查看 [基本操作](/help/sites-authoring/basic-handling.md) 和 [页面创作快速指南](/help/sites-authoring/qg-page-authoring.md).
 
-## 可用社区组件{#available-communities-components}
+## 可用的社区组件 {#available-communities-components}
 
 下表列出了在组件浏览器(Sidekick)中启用后，作者可看到的社区组件。
 
-另请参阅交互式[社区组件指南](/help/communities/components-guide.md)。
+另请参阅交互式 [社区组件指南](/help/communities/components-guide.md).
 
 >[!NOTE]
 >
->请阅读[社区组件基础知识](/help/communities/basics.md) ，因为它包含使用社区组件进行创作所需的信息。
+>读取 [社区组件基础知识](/help/communities/basics.md) 因为其中包含使用社区组件进行创作所需的信息。
 
 | **组件标题** | **功能** |
 |---|---|
 | 活动流 | [活动流](/help/communities/activities.md) |
 | 博客 | [博客](/help/communities/blog-feature.md) |
 | 博客侧栏 | [博客](/help/communities/blog-feature.md) |
-| 日历 | [日历](/help/communities/calendar.md) |
+| 日程表 | [日程表](/help/communities/calendar.md) |
 | 评论 | [评论](/help/communities/comments.md) |
 | 社区活动列表 | [活动趋势](/help/communities/trends.md) |
 | 社区组成员列表 | [社区组](/help/communities/creating-groups.md) |
@@ -81,10 +81,10 @@ ht-degree: 44%
 >
 >投票组件不再可用，并且在Experience Manager社区中受支持。
 
-## 相关社区文档{#related-communities-documentation}
+## 相关社区文档 {#related-communities-documentation}
 
-* 访问[部署Communities](/help/communities/deploy-communities.md)以了解建议的部署。
+* 访问 [部署社区](/help/communities/deploy-communities.md) 以了解建议的部署。
 
-* 访问[管理社区站点](/help/communities/administer-landing.md) ，了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息。
+* 访问 [管理社区站点](/help/communities/administer-landing.md) 要了解有关创建社区站点、配置社区站点模板、审核社区内容、管理成员和配置消息传送的信息，请执行以下操作：
 
-* 访问[开发社区](/help/communities/communities.md) ，了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展社区](/help/communities/communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。

@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media限制
+title: Dynamic Media 限制
 description: 了解在创建图像集、旋转集或上传PDF时的最佳实践和强制限制。 另外，了解不支持的Web浏览器和Dynamic Media查看器的操作系统组合。
 contentOwner: admin
 content-type: reference
@@ -11,7 +11,7 @@ exl-id: e4d4059e-ac0b-42e7-910c-001310796574
 source-git-commit: 098c52720d08ad294a745addb8bd3ca3f1c63b5c
 workflow-type: tm+mt
 source-wordcount: '283'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 

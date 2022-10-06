@@ -10,7 +10,7 @@ exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
 source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
 workflow-type: tm+mt
 source-wordcount: '2778'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -129,7 +129,7 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->的 [内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) 现在建议。 请参阅 [开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) 以了解更多详细信息。
+>的 [内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans) 现在建议。 请参阅 [开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) 以了解更多详细信息。
 
 可以像任何其他资产类型一样，从AEM页面引用内容片段。 AEM提供 [**内容片段** 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - a [用于在页面上包含内容片段的组件](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). 您也可以扩展，此 **内容片段** 核心组件。
 

@@ -1,7 +1,7 @@
 ---
 title: 参考信模板
 seo-title: Reference letter templates
-description: 'AEM Forms提供了通信管理信件布局模板，您可以使用这些模板快速创建信件。 '
+description: AEM Forms提供了通信管理信件布局模板，您可以使用这些模板快速创建信件。
 seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
 uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 在“通信管理”中，信件模板包含典型的表单字段、页眉和页脚等布局功能以及用于内容放置的空“目标区域”。
 
-通信管理在[AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)中提供信件模板。 您可以根据品牌和业务需求在Designer中自定义模板。 该包包含以下模板：
+通信管理在 [AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). 您可以根据品牌和业务需求在Designer中自定义模板。 该包包含以下模板：
 
 * 经典
 * 经典Simple
@@ -51,7 +51,7 @@ Classic模板顶部带有徽标，适合用于普通专业信件。
 
 ![经典](assets/classic.png)
 
-使用经典模板创建的信件的PDF预览
+PDF预览使用经典模板创建的信件
 
 ## 经典Simple {#classic-simple}
 
@@ -59,7 +59,7 @@ Classic模板顶部带有徽标，适合用于普通专业信件。
 
 ![联系信息片段](assets/classicsimple.png)
 
-使用经典简单模板创建的信件的PDF预览
+PDF预览使用经典简单模板创建的信件
 
 ## 平衡左 {#balanced-left}
 
@@ -67,7 +67,7 @@ Classic模板顶部带有徽标，适合用于普通专业信件。
 
 ![平衡左](assets/balancedleft.png)
 
-使用“平衡的左侧”模板创建的信件的PDF预览
+PDF预览使用“平衡的左侧”模板创建的信件
 
 ## 平衡权 {#balanced-right}
 
@@ -75,7 +75,7 @@ Classic模板顶部带有徽标，适合用于普通专业信件。
 
 ![平衡](assets/balancedright.png)
 
-使用平衡右侧模板创建的信件的PDF预览
+PDF预览使用平衡右侧模板创建的信件
 
 ## 左视 {#visual-left}
 
@@ -83,7 +83,7 @@ Classic模板顶部带有徽标，适合用于普通专业信件。
 
 ![visualleft](assets/visualleft.png)
 
-使用可视化左侧模板创建的信件的PDF预览
+PDF预览使用可视化左侧模板创建的信件
 
 ## 可视顶部 {#visual-top}
 
@@ -91,7 +91,7 @@ Classic模板顶部带有徽标，适合用于普通专业信件。
 
 ![可视化图表](assets/visualtop.png)
 
-使用可视化顶部模板创建的信件的PDF预览
+PDF预览使用可视化顶部模板创建的信件
 
 ## Visual Top - Classic {#visual-top-classic}
 
@@ -99,4 +99,4 @@ Visual Top - Classic模板在页面顶部有一个标题，且其中带有公司
 
 ![visualtopclassic](assets/visualtopclassic.png)
 
-使用Visual Top - Classic模板创建的信件的PDF预览
+PDF预览使用Visual Top - Classic模板创建的信件

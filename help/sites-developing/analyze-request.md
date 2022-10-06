@@ -1,8 +1,8 @@
 ---
 title: 请求分析脚本
-seo-title: 请求分析脚本
+seo-title: Request Analysis Script
 description: 请求分析脚本的编写，旨在简化对access.log文件的分析，生成可读报告供以后处理
-seo-description: 请求分析脚本的编写，旨在简化对access.log文件的分析，生成可读报告供以后处理
+seo-description: The request analysis script is made to ease the analysis of the access.log files producing a readable report for later processing
 uuid: 24eff3c6-5748-46f3-a30c-4a3a6427ce1d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 1b5e0ccf-4157-45e3-8caf-1d6739d7d9d2
 exl-id: e14a9cda-890f-46b7-9433-1b52eb91eae3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '171'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 2%
 
 ## 下载 {#download}
 
-此脚本旨在简化对`access.log`文件的分析，这些文件会生成可读报告以供日后处理。
+此脚本旨在简化 `access.log` 生成可读报告以供日后处理的文件。
 
 [获取文件](assets/analyse-access.sh)
 
 ## 描述 {#description}
 
-此脚本旨在简化对`access.log`文件的分析，这些文件会生成可读报告以供日后处理。
+此脚本旨在简化 `access.log` 生成可读报告以供日后处理的文件。
 
 它会生成总的请求数、GET与POST、随时间推移的请求分发等。
 
@@ -37,9 +37,9 @@ ht-degree: 2%
 
 从告诉您如何运行该注释的文件中获取注释：
 
-分析CQ `access.log`外推各种信息并在`stdout`上生成Markdown输出。
+分析CQ `access.log` 根据 `stdout`.
 
-## 使用 {#usage}
+## 用途 {#usage}
 
 `./analyse-access.sh access.log.2013-&ast;`
 

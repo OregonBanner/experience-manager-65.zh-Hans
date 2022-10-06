@@ -323,7 +323,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>extendedProperties</td>
-   <td>Object</td>
+   <td>对象</td>
    <td>添加到DDE的自定义属性映射（特定于用户界面或任何其他信息）。</td>
   </tr>
   <tr>

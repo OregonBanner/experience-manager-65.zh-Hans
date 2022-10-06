@@ -1,8 +1,8 @@
 ---
 title: 存储配置
-seo-title: 存储配置
+seo-title: Storage Configuration
 description: 如何访问存储配置控制台
-seo-description: 如何访问存储配置控制台
+seo-description: How to access the Storage Configuration Console
 uuid: 6a5a71d5-6aaa-4635-8852-4dae33c497a9
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 5%
+source-wordcount: '199'
+ht-degree: 4%
 
 ---
 
@@ -35,16 +35,16 @@ ht-degree: 5%
 
 在创作环境中，以访问存储配置控制台。
 
-* 从全局导航中，选择&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Communities]** > **[!UICONTROL 存储配置]**
+* 从全局导航中，选择 **[!UICONTROL 工具]** > **[!UICONTROL 社区]** > **[!UICONTROL 存储配置]**
 
 要选择默认JCR以外的存储选项，请执行以下操作：
 
 * 选择选项
 * 正确配置
 
-   * 查看有关[选择MSRP](msrp.md#select-msrp)的详细信息
-   * 查看有关[选择DSRP](dsrp.md#select-dsrp)的详细信息
-   * 请参阅[选择ASRP](asrp.md#select-asrp)的详细信息
+   * 请参阅详细信息 [选择MSRP](msrp.md#select-msrp)
+   * 请参阅详细信息 [选择DSRP](dsrp.md#select-dsrp)
+   * 请参阅详细信息 [选择ASRP](asrp.md#select-asrp)
 
 * 选择&#x200B;**[!UICONTROL 提交]**。
 
@@ -52,10 +52,10 @@ ht-degree: 5%
 
 请注意，如果未进行任何选择，则默认为AEM存储库JCR。
 
-JCR是&#x200B;*不*&#x200B;创作和发布环境共享的公共存储。 社区内容将仅在创建社区内容的创作或发布环境中可见。
+JCR为 *not* 由创作和发布环境共享的公共存储。 社区内容将仅在创建社区内容的创作或发布环境中可见。
 
-有关其他信息，请访问[JCR商店](jsrp.md)。
+访问 [JCR商店](jsrp.md) 以了解其他信息。
 
 >[!NOTE]
 >
->`/etc/socialconfig`下没有节点`srpc`表示默认的[JCR存储](jsrp.md)。
+>节点的缺失 `srpc` 在 `/etc/socialconfig` 表示默认 [JCR商店](jsrp.md).

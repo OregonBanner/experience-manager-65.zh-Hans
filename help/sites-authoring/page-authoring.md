@@ -1,8 +1,8 @@
 ---
 title: 创作页面
-seo-title: 创作页面
+seo-title: Authoring Pages
 description: 创作内容页面时所涉及的任务
-seo-description: 创作内容页面时所涉及的任务
+seo-description: The tasks involved when authoring a content page
 uuid: 454d94aa-da27-45cb-bbb2-7bfcef103806
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '312'
 ht-degree: 100%
 
 ---

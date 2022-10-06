@@ -208,7 +208,7 @@ conf
    </tbody>
   </table>
 
-* **变量**
+* **变体**
 
    <table>
    <tbody>

@@ -1,8 +1,8 @@
 ---
 title: 创建有效的新闻稿登陆页面
-seo-title: 创建有效的新闻稿登陆页面
+seo-title: Creating an Effective Newsletter Landing Page
 description: 有效的新闻稿登陆页面可帮助您获取尽可能多的用户注册您的新闻稿（或其他电子邮件营销活动）。您可以使用通过新闻稿注册收集的信息来获取潜在客户。
-seo-description: 有效的新闻稿登陆页面可帮助您获取尽可能多的用户注册您的新闻稿（或其他电子邮件营销活动）。您可以使用通过新闻稿注册收集的信息来获取潜在客户。
+seo-description: An effective newsletter landing page helps you get as many people as possible to sign up for your newsletter (or other email marketing campaign). You can use the information you gather from your newsletter sign ups to get leads.
 uuid: 0799b954-076b-4e95-8724-3661ae8fddb6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '613'
 ht-degree: 94%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 94%
 
 1. 使用两个 Teaser 创建市场活动 -- 一个带有企业标记，一个没有企业标记。
 
-### 将内容推送给订阅者  {#pushing-content-to-subscribers}
+### 将内容推送给订阅者 {#pushing-content-to-subscribers}
 
 通过 MCM 中的新闻稿功能将所有更改内容推送到页面中。然后向订阅者推送更新内容。
 

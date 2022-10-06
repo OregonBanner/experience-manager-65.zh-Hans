@@ -1,22 +1,22 @@
 ---
 title: Content Services
-seo-title: 内容服务
+seo-title: Content Services
 description: 内容服务
-seo-description: 'null'
+seo-description: null
 uuid: 7bd09c91-3931-400b-bdfc-b064b9ca9668
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 955ffb1c-4fa9-43bb-8e5b-2df7f2d17951
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '299'
 ht-degree: 3%
 
 ---
 
-
-# Content Services{#content-services}
+# 内容服务{#content-services}
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ Content Services引入了几种新的AEM结构，使开发人员能够访问AEM�
 
 这些结构对于保持灵活性和通过在AEM托管内容和使用内容的移动应用程序之间提供抽象层来实现未来扩展是必不可少的。 这允许AEM内容服务在本机应用程序的内容要求和AEM内容存储库之间充当抽象层。
 
-内容服务可以将内容作为资产、打包的HTML(HTML/CSS/JS)或作为与渠道无关的内容进行交付。
+内容服务可以将内容作为资产、打包的HTML(HTML/CSS/JS)或作为与渠道无关的内容交付。
 
 >[!CAUTION]
 >
@@ -42,7 +42,7 @@ Content Services引入了几种新的AEM结构，使开发人员能够访问AEM�
 >
 >在开始使用内容服务之前，请确保启用内容服务标记。 要在应用程序中启用模型的创建和管理，您需要在配置浏览器中启用数据模型。
 >
->有关更多信息，请参阅&#x200B;**[管理内容服务](/help/mobile/developing-content-services.md)**&#x200B;和[配置浏览器](/help/sites-administering/configurations.md)文档。
+>请参阅 **[管理内容服务](/help/mobile/developing-content-services.md)** 和 [配置浏览器](/help/sites-administering/configurations.md) 文档以了解更多信息。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 

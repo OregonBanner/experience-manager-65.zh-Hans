@@ -1,19 +1,19 @@
 ---
 title: 自定义创建通信UI
-seo-title: 自定义创建通信UI
+seo-title: Customize create correspondence UI
 description: 了解如何自定义创建通信UI。
-seo-description: 了解如何自定义创建通信UI。
+seo-description: Learn how to customize create correspondence UI.
 uuid: 9dee9b6f-4129-4560-9bf8-db48110b76f7
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 13a93111-c08c-4457-b69a-a6f6eb6da330
 docset: aem65
-feature: 通信管理
+feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ ht-degree: 0%
 
 创建通信UI中的自定义图标
 
-### 更改创建通信UI {#changing-the-logo-in-the-create-correspondence-ui}中的徽标
+### 在创建通信UI中更改徽标 {#changing-the-logo-in-the-create-correspondence-ui}
 
 要设置您选择的徽标图像，请执行以下操作：
 
-1. 在CRX](#creatingfolderstructure)中创建相应的[文件夹结构。
-1. [在您在CRX中创](#uploadlogo) 建的文件夹中上传新的徽标文件。
+1. 创建相应的 [CRX中的文件夹结构](#creatingfolderstructure).
+1. [上传新的徽标文件](#uploadlogo) （在CRX中创建的文件夹中）。
 
-1. [在CRX上](#createcss) 设置CSSon以引用新徽标。
-1. 清除浏览器历史记录，然后[刷新创建通信UI](#refreshccrui)。
+1. [设置CSS](#createcss) 在CRX上引用新徽标。
+1. 清除浏览器历史记录和 [刷新创建通信UI](#refreshccrui).
 
 ## 创建所需的文件夹结构 {#creatingfolderstructure}
 
@@ -54,12 +54,12 @@ ht-degree: 0%
 
 请按照以下步骤在/apps分支中创建所需的文件夹结构：
 
-1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`并以管理员身份登录。
-1. 在apps文件夹中，创建一个名为`css`的文件夹，其路径/结构与css文件夹类似（位于ccrui文件夹中）。
+1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de` 和以管理员身份登录。
+1. 在apps文件夹中，创建一个名为 `css` 路径/结构与css文件夹类似（位于ccrui文件夹中）。
 
    创建css文件夹的步骤：
 
-   1. 右键单击以下路径中的&#x200B;**css**&#x200B;文件夹，然后选择&#x200B;**覆盖节点**:`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. 右键单击 **css** 文件夹，然后选择 **覆盖节点**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![覆盖节点](assets/1_overlaynode_css.png)
 
@@ -86,11 +86,9 @@ ht-degree: 0%
 
    1. 单击&#x200B;**确定**。在指定的路径中创建css文件夹。
 
+1. 在apps文件夹中，创建一个名为 `imgs` 路径/结构与imgs文件夹类似（位于ccrui文件夹中）。
 
-
-1. 在apps文件夹中，创建一个名为`imgs`的文件夹，其路径/结构与imgs文件夹（位于ccrui文件夹中）类似。
-
-   1. 右键单击以下路径中的&#x200B;**imgs**&#x200B;文件夹，然后选择&#x200B;**覆盖节点**:`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
+   1. 右键单击 **imgs** 文件夹，然后选择 **覆盖节点**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. 确保“覆盖节点”对话框具有以下值：
 
       **路径：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
@@ -105,20 +103,20 @@ ht-degree: 0%
       >
       >您还可以在/apps文件夹中手动创建文件夹结构。
 
-1. 单击&#x200B;**Save All**&#x200B;以在服务器上保存更改。
+1. 单击 **全部保存** 来保存对服务器所做的更改。
 
 ## 将新徽标上传到CRX {#uploadlogo}
 
 将您的自定义徽标文件上传到CRX。 标准HTML规则控制徽标的呈现。 支持的图像文件格式取决于您用来访问AEM Forms的浏览器。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的有关支持的图像格式的文档。
 
-* 徽标图像的默认尺寸为48 px * 48 px。 确保图像与此大小相似或大于48 px * 48 px。
+* 徽标图像的默认尺寸为48像素 &#42; 48像素。 确保图像与此大小或大于48像素的图像相似 &#42; 48像素。
 * 如果徽标图像的高度大于50像素，则“创建通信”用户界面会将图像向下缩放到最大高度50像素，因为这是标题的高度。 缩小图像时，“创建通信”用户界面会保持图像的宽高比。
 * 如果图像较小，则“创建通信”用户界面不会放大图像，因此请确保您使用的徽标图像高度至少为48像素，并且宽度足够清晰。
 
 请按照以下步骤将自定义徽标文件上传到CRX:
 
 1. 转到 `https://'[server]:[port]'/[contextpath]/crx/de`. 如有必要，请以管理员身份登录。
-1. 在CRXDE中，右键单击以下路径中的&#x200B;**imgs**&#x200B;文件夹，然后选择&#x200B;**创建>创建文件**:
+1. 在CRXDE中，右键单击 **imgs** 文件夹，然后选择 **创建>创建文件**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
 
@@ -128,7 +126,7 @@ ht-degree: 0%
 
    ![CustomLogo.png作为新节点](assets/3_contentexplorernewnode_customlogo.png)
 
-1. 单击&#x200B;**Save All**。
+1. 单击 **全部保存**.
 
    在您创建的新文件（此处为CustomLogo.png）下，将显示jcr:content属性。
 
@@ -138,13 +136,13 @@ ht-degree: 0%
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. 双击&#x200B;**jcr:data**&#x200B;属性。
+1. 双击 **jcr:data** 属性。
 
    此时会出现“编辑jcr:data”对话框。
 
    现在，单击newlogo.png文件夹，双击jcr:content（dim选项）并设置类型nt:resource。 如果不存在，请创建名为jcr:content的属性。
 
-1. 在“编辑jcr:data”对话框中，单击&#x200B;**浏览**&#x200B;并选择要用作徽标的图像文件（此处为CustomLogo.png）。
+1. 在“编辑jcr:data”对话框中，单击 **浏览** 并选择要用作徽标的图像文件（此处为CustomLogo.png）。
 
    支持的图像文件格式取决于您用来访问AEM Forms的浏览器。 所有浏览器都支持JPEG、GIF和PNG。 有关更多信息，请参阅特定于浏览器的有关支持的图像格式的文档。
 
@@ -152,7 +150,7 @@ ht-degree: 0%
 
    示例：CustomLogo.png用作自定义徽标
 
-1. 单击&#x200B;**Save All**。
+1. 单击 **全部保存**.
 
 ## 创建CSS以将徽标与UI集成 {#createcss}
 
@@ -167,8 +165,8 @@ ht-degree: 0%
 
    创建customcss.css文件的步骤：
 
-   1. 右键单击&#x200B;**css**&#x200B;文件夹，然后选择&#x200B;**创建>创建文件**。
-   1. 在“新建文件”对话框中，将CSS的名称指定为`customcss.css`（不能使用其他文件名），然后单击&#x200B;**确定**。
+   1. 右键单击 **css** 文件夹，选择 **创建>创建文件**.
+   1. 在“新建文件”对话框中，将CSS的名称指定为 `customcss.css`（不能使用其他文件名），然后单击 **确定**.
    1. 将以下代码添加到新创建的css文件。 在代码的content:url中，指定您已上传到CRXDE中的imgs文件夹的图像名称。
 
       ```css
@@ -177,7 +175,7 @@ ht-degree: 0%
       }
       ```
 
-   1. 单击&#x200B;**Save All**。
+   1. 单击 **全部保存**.
 
 ## 刷新创建通信UI以查看自定义徽标 {#refreshccrui}
 

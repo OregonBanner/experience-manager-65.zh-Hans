@@ -1,8 +1,8 @@
 ---
 title: 工具控制台
-seo-title: 工具控制台
+seo-title: Tools Consoles
 description: 了解整个 AEM 中的不同工具控制台。
-seo-description: 了解整个 AEM 中的不同工具控制台。
+seo-description: Learn about the different tools consoles throughout AEM.
 uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '609'
 ht-degree: 44%
 
 ---
 
 # 工具控制台{#tools-consoles}
 
-**工具**&#x200B;控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。目前，根据您所使用的UI，有两种类型的&#x200B;**工具**&#x200B;控制台：
+**工具**&#x200B;控制台让您可以访问一些专用工具，这些工具有助于您管理网站、数字资产及内容存储库的其他方面。目前有两种 **工具** 控制台取决于您所使用的UI:
 
 * [工具 — 触屏优化UI](#tools-touch-optimized-ui)
 * [工具 — 经典UI](#tools-classic-ui)
@@ -377,11 +377,11 @@ ht-degree: 44%
    <td>用于管理多个站点的集中点。</td>
   </tr>
   <tr>
-   <td>Client Context配置<br /> </td>
-   <td>Client Context表示动态组合的用户数据集合。 此处保留了默认和marketing cloud配置。<br /> </td>
+   <td>客户端上下文配置<br /> </td>
+   <td>Client Context表示动态组合的用户数据集合。 此处保留了默认和Marketing Cloud配置。<br /> </td>
   </tr>
   <tr>
-   <td>Cloud Services配置<br /> </td>
+   <td>云服务配置<br /> </td>
    <td>保留与与Adobe Marketing Cloud集成相关的配置。</td>
   </tr>
   <tr>
@@ -446,7 +446,7 @@ ht-degree: 44%
   </tr>
   <tr>
    <td>分段</td>
-   <td>站点访客在访问站点时的兴趣和目标各不相同。了解这些目标并满足预期是在线营销活动的一个重要成功因素。分段可通过分析访客的详细信息并描述其特征来帮助实现这一点。<br /> </td>
+   <td>站点访客在访问站点时的兴趣和目标各不相同。了解这些目标并满足预期是在线营销活动的一个重要成功因素。分段可通过分析访客的详细信息并描述其特征，帮助实现这一点。<br /> </td>
   </tr>
   <tr>
    <td>租户</td>

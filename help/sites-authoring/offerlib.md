@@ -1,8 +1,8 @@
 ---
 title: 创建和管理选件
-seo-title: 创建和管理选件
+seo-title: Creating and Managing Offers
 description: 使用“选件”控制台，可创建您可以在活动体验中使用的选件
-seo-description: 使用“选件”控制台，可创建您可以在活动体验中使用的选件
+seo-description: Use the Offers console to create offers that you can use in activity experiences
 uuid: be0a53da-a979-4a30-a4bb-7c9ce26ae1a1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 34293432-cfdc-466b-96bd-2c43b566a420
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '866'
 ht-degree: 98%
 
 ---
@@ -27,22 +27,22 @@ ht-degree: 98%
 
 “选件”控制台按品牌组织选件。每个品牌都包含一个可在品牌的体验中使用的选件库。可使用文件夹定义用于在每个库中组织选件的层次结构。作者可以通过在逻辑文件夹结构中进行浏览来轻松查找选件。作者还可以通过标记和搜索工具查找选件。
 
-## 使用“选件”控制台添加品牌  {#add-a-brand-using-the-offers-console}
+## 使用“选件”控制台添加品牌 {#add-a-brand-using-the-offers-console}
 
 创建与您的选件关联的品牌。在“选件”控制台中打开品牌以访问其选件库，您可以在该库中创建文件夹和选件。
 
 使用“选件”控制台创建品牌时，该品牌也会显示在您可以添加和管理品牌活动的[“活动”控制台](/help/sites-authoring/activitylib.md)中。
 
-1. 在导航控制台中，单击或点按&#x200B;**个性化** > **选件**。
+1. 在“导航”控制台中，单击或点按&#x200B;**个性化** > **选件**。
 
    ![screenshot_2019-03-05at124139-1](assets/screen-shot_2019-03-05at124139-1.png)
 
-1. 单击或点按&#x200B;**创建**，然后单击&#x200B;**创建** **品牌**。
+1. 依次单击或点按&#x200B;**创建**&#x200B;和&#x200B;**创建****品牌**。
 1. 选择品牌模板，然后单击或点按&#x200B;**下一步**。
 1. 键入您希望品牌在“选件”控制台和“活动”控制台中显示的标题。（可选）键入或选择要与该品牌关联的一个或多个标记。
 1. 单击或点按&#x200B;**创建**。
 
-## 向选件库中添加文件夹  {#add-a-folder-to-an-offer-library}
+## 向选件库中添加文件夹 {#add-a-folder-to-an-offer-library}
 
 向品牌的选件库中添加文件夹以组织和存储选件。您可以在品牌下或其他文件夹下创建一个文件夹。
 
@@ -58,7 +58,7 @@ ht-degree: 98%
 
 1. 单击或点按&#x200B;**创建**。
 
-## 向选件库中添加选件  {#add-an-offer-to-an-offer-library}
+## 向选件库中添加选件 {#add-an-offer-to-an-offer-library}
 
 向品牌的选件库中添加选件，以便能够将其添加到品牌的体验中。添加选件时，您需要提供标题。您还可以将选件与一个或多个标记相关联以提高可搜索性。
 
@@ -82,7 +82,7 @@ ht-degree: 98%
 1. 在“选件”控制台中，单击或点按选件旁边的图标，然后单击或点按&#x200B;**编辑**。
 1. 按常规方式向选件中添加组件并编辑组件内容。
 
-## 删除选件  {#deleting-an-offer}
+## 删除选件 {#deleting-an-offer}
 
 不再需要某个选件时，可将其删除。如果您尝试删除的选件已用在某个体验中，系统会提示您确认删除。确认后，会删除选件，同时也会将其从体验中删除。
 
@@ -98,7 +98,7 @@ ht-degree: 98%
    * 要删除该选件，同时也将其从体验中删除，请单击或点按&#x200B;**强制删除**。
    * 要保留该选件，请单击或点按&#x200B;**取消**。
 
-## 搜索选件  {#searching-for-offers}
+## 搜索选件 {#searching-for-offers}
 
 通过使用与标题匹配的关键字搜索任何品牌的选件。
 

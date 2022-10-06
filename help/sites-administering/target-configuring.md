@@ -13,7 +13,7 @@ exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
 source-git-commit: 813441a61baa560c9d317a5519b9e0c0d1da7a6e
 workflow-type: tm+mt
 source-wordcount: '2209'
-ht-degree: 4%
+ht-degree: 43%
 
 ---
 
@@ -49,12 +49,12 @@ ht-degree: 4%
 >
 >在AEM 6.3中，您可以选择Target库文件： [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，这是适用于Adobe Target的新实施库，专为典型的Web实施和单页应用程序而设计。
 >
->与mbox.js库相比，AT.js提供了以下几项改进：
+>AT.js 对 mbox.js 库进行了多项改进：
 >
->* 缩短了Web实施的页面加载时间
->* 增强的安全性
->* 为单页应用程序提供更好的实施选项
->* AT.js包含target.js中包含的组件，因此不再需要调用target.js
+>* 缩短了 Web 实现的页面加载时间
+>* 提高了安全性
+>* 改善了针对单页应用程序的实施选项
+>* AT.js 包含 target.js 具有的组件，因此不再调用 target.js
 
 
 ### 已配置的Target框架属性 {#provisioned-target-framework-properties}
@@ -76,7 +76,7 @@ ht-degree: 4%
 为此，您需要指定要将Adobe Target云配置与以下项连接的A4T云配置：
 
 1. 导航到 **Cloud Services** 通过 **AEM徽标** > **工具** > **部署** > **Cloud Services**.
-1. 在 **Adobe Target** ，单击 **立即配置**.
+1. 在 **Adobe Target** 部分中，单击&#x200B;**立即配置**。
 1. 重新连接到Adobe Target配置。
 1. 在 **A4T Analytics Cloud配置** 下拉菜单中，选择框架。
 
@@ -107,37 +107,37 @@ ht-degree: 4%
 手动与Adobe Target集成，而不是使用选择加入向导。
 
 >[!NOTE]
-目标库文件， [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，是适用于Adobe Target的新实施库，专为典型的Web实施和单页应用程序而设计。 Adobe建议您使用AT.js而不是mbox.js作为客户端库。
-与mbox.js库相比，AT.js提供了以下几项改进：
-* 缩短了Web实施的页面加载时间
-* 增强的安全性
-* 为单页应用程序提供更好的实施选项
-* AT.js包含target.js中包含的组件，因此不再需要调用target.js
+Target 库文件 [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html) 是 Adobe Target 的新实施库，专为典型的 Web 实施和单页应用程序而设计。Adobe 建议您使用 AT.js 而不是 mbox.js 作为客户端库。
+AT.js 对 mbox.js 库进行了多项改进：
+* 缩短了 Web 实现的页面加载时间
+* 提高了安全性
+* 改善了针对单页应用程序的实施选项
+* AT.js 包含 target.js 具有的组件，因此不再调用 target.js
 >
-您可以在 **客户端库** 下拉菜单。
+您可以在&#x200B;**客户端库**&#x200B;下拉菜单中选择 AT.js 或 mbox.js。
 
-### 创建Target云配置 {#creating-a-target-cloud-configuration}
+### 创建 Target 云配置 {#creating-a-target-cloud-configuration}
 
-要启用AEM与Adobe Target的交互，请创建Target云配置。 要创建配置，请提供Adobe Target客户端代码和用户凭据。
+要启用 AEM 以便与 Adobe Target 交互，请创建 Target 云配置。要创建配置，您需要提供 Adobe Target 客户端代码和用户凭据。
 
-您只能创建一次Target云配置，因为您可以将该配置与多个AEM促销活动关联。 如果您有多个Adobe Target客户端代码，请为每个客户端代码创建一个配置。
+您只需创建一次 Target 云配置，因为您可以将该配置与多个 AEM 活动关联。如果您有多个 Adobe Target 客户端代码，请为每个客户端代码创建一个配置。
 
-您可以配置云配置以同步来自Adobe Target的区段。 如果启用同步，则在保存云配置后，系统会立即从后台的Target中导入区段。
+您可以配置云配置以从 Adobe Target 同步片段。如果启用同步，则保存云配置后，将立即在后台从 Target 导入分段。
 
-请按照以下过程在AEM中创建Target云配置：
+使用以下过程可在 AEM 中创建 Target 云配置：
 
 1. 导航到 **Cloud Services** 通过 **AEM徽标** > **工具** > **部署** > **Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
    的 **Adobe Marketing Cloud** 将打开“概述”页面。
 
-1. 在 **Adobe Target** ，单击 **立即配置**.
-1. 在 **创建配置** 对话框：
+1. 在 **Adobe Target** 部分中，单击&#x200B;**立即配置**。
+1. 在&#x200B;**创建配置**&#x200B;对话框中：
 
-   1. 为配置指定 **标题**.
-   1. 选择 **Adobe Target配置** 模板。
+   1. 为配置提供&#x200B;**标题**。
+   1. 选择 **Adobe Target 配置**&#x200B;模板。
    1. 单击&#x200B;**创建**。
 
-   将打开编辑对话框。
+   此时将打开编辑对话框。
 
    ![AdobeTargetSettings](assets/adobe-target-settings.jpg)
 
@@ -151,61 +151,61 @@ ht-degree: 4%
 
 1. 在对话框中，提供这些属性的值。
 
-   * **客户端代码**:目标帐户客户端代码
+   * **客户端代码**：Target 帐户的客户端代码
    * **电子邮件**:Target帐户电子邮件。
    * **密码**:目标帐户密码。
    * **API类型**:REST或XML
-   * **A4T Analytics Cloud配置**:选择用于定位活动目标和量度的Analytics云配置。 如果您在定位内容时使用Adobe Analytics作为报表源，则需要使用此功能。 如果您看不到云配置，请参阅 [配置A4T Analytics Cloud配置](#configuring-a-t-analytics-cloud-configuration).
+   * **A4T Analytics Cloud 配置**：选择用于 Target 活动目标和量度的 Analytics Cloud 配置。如果您在定位内容时使用 Adobe Analytics 作为报告源，则需要此项。如果您看不到云配置，请参阅 [配置A4T Analytics Cloud配置](#configuring-a-t-analytics-cloud-configuration).
 
-   * **使用准确定位：** 默认情况下，此复选框处于选中状态。 如果选中此选项，云服务配置将等待上下文加载后再加载内容。 请参阅以下注释。
-   * **同步来自Adobe Target的区段：** 选择此选项可下载在Target中定义的区段，以在AEM中使用它们。 当API类型属性为REST时，您必须选择此选项，因为不支持内联区段，您始终需要使用Target中的区段。 (请注意，“区段”的AEM术语等同于Target“受众”。)
+   * **使用准确定位：**&#x200B;默认情况下，此复选框处于选中状态。如果选中，云服务配置将等到上下文加载完后，再加载内容。请参阅以下注释。
+   * **从 Adobe Target 同步分段：**&#x200B;选择此选项可下载 Target 中定义的分段，以便在 AEM 中使用它们。当“API 类型”属性为 REST 时，您必须选择此选项，因为内联分段不受支持，并且您始终需要从 Target 使用分段。（请注意，AEM 术语“分段”等同于 Target“受众”。）
    * **客户端库：** 选择您希望使用mbox.js还是AT.js客户端库。
    * **使用DTM交付客户端库**  — 选择此选项可从DTM或其他标签管理系统中使用AT.js或mbox.js。 您必须 [配置DTM集成](/help/sites-administering/dtm.md) ，以使用此选项。 Adobe建议您使用DTM而不是AEM来交付库。
    * **自定义mbox.js**:如果您选中DTM框或使用默认的mbox.js，请将留空。 或者，上传您的自定义mbox.js。 仅当您选择了mbox.js时，才会显示。
    * **自定义AT.js**:如果您选中DTM框或使用默认AT.js，请将留空。 或者，上传您的自定义AT.js。 仅当您选择了AT.js时，才会显示。
 
    >[!NOTE]
-   默认情况下，当您选择加入Adobe Target配置向导时，将启用“准确定位”。
-   准确定位意味着云服务配置在加载内容之前会等待上下文加载。 因此，就性能而言，准确定位可能会在加载内容之前造成几毫秒的延迟。
-   创作实例始终启用准确定位。 但是，在发布实例上，您可以通过清除云服务配置中准确定位旁边的复选标记(**http://localhost:4502/etc/cloudservices.html**)。 无论云服务配置中的设置如何，您仍可以为各个组件打开和关闭准确定位。
-   如果 ***已经*** 创建目标组件后，如果更改了此设置，则所做的更改不会影响这些组件。 您必须直接对这些组件进行任何更改。
+   默认情况下，当您选择加入 Adobe Target 配置向导时，将启用“准确定位”。
+   准确定位意味着，云服务配置将等到上下文加载完后，再加载内容。因此，就性能而言，准确定位可能会导致加载内容前有几毫秒的延迟。
+   对于创作实例，“准确定位”始终处于启用状态。但在发布实例上，您可以通过清除云服务配置中“准确定位”旁边的复选标记来选择全局关闭准确定位 (**http://localhost:4502/etc/cloudservices.html**)。无论您在云服务配置中的设置如何，您都可以为各个组件打开和关闭“准确定位”。
+   如果您&#x200B;***已经***&#x200B;创建目标组件并更改此设置，则您的更改不会影响这些组件。您必须直接对这些组件进行任何更改。
 
-1. 单击 **连接到Target** 以初始化与Target的连接。 如果连接成功，则显示消息 **连接成功** 中。 单击 **确定** ，然后 **确定** 对话框。
+1. 单击&#x200B;**连接到 Target** 可初始化与 Target 的连接。如果连接成功，则将显示消息&#x200B;**连接成功**。单击消息上的&#x200B;**确定**，然后单击对话框上的&#x200B;**确定**。
 
-   如果您无法连接到Target，请参阅 [疑难解答](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) 中。
+   如果无法连接到 Target，请参阅[疑难解答](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)部分。
 
-### 添加Target框架 {#adding-a-target-framework}
+### 添加 Target 框架 {#adding-a-target-framework}
 
-配置Target云配置后，添加Target框架。 该框架可识别从可用 [Client Context](/help/sites-administering/client-context.md) 或 [ContextHub](/help/sites-developing/ch-configuring.md) 组件。 Target使用参数来确定应用于当前上下文的区段。
+配置 Target 云配置后，可以添加 Target 框架。该框架可识别从可用 [Client Context](/help/sites-administering/client-context.md) 或 [ContextHub](/help/sites-developing/ch-configuring.md) 组件。 Target 使用参数来确定适用于当前上下文的分段。
 
-您可以为单个Target配置创建多个框架。 当您需要为网站的不同部分向Target发送一组不同的参数时，多个框架非常有用。 为您需要发送的每组参数创建一个框架。 将网站的每个部分与相应的框架相关联。 请注意，网页一次只能使用一个框架。
+您可以为单个 Target 配置创建多个框架。在需要针对网站的不同部分向 Target 发送一组不同的参数时，多个框架会很有用。为需要发送的每组参数创建一个框架。将网站的每个部分与适当的框架关联。请注意，网页一次只能使用一个框架。
 
 1. 在Target配置页面上，单击 **+** 可用框架旁边的（加号）。
-1. 在创建框架对话框中，指定 **标题**，选择 **Adobe Target框架**，然后单击 **创建**.
+1. 在“创建框架”对话框中，指定&#x200B;**标题**，选择 **Adobe Target 框架**，然后单击&#x200B;**创建**。
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-   将打开框架页面。 Sidekick提供表示 [Client Context](/help/sites-administering/client-context.md) 或 [ContextHub](/help/sites-developing/ch-configuring.md) 你可以映射的。
+   这将打开框架页面。Sidekick提供表示 [Client Context](/help/sites-administering/client-context.md) 或 [ContextHub](/help/sites-developing/ch-configuring.md) 你可以映射的。
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. 拖动表示要用于映射到拖放目标的数据的Client Context组件。 或者，拖动&#x200B;**ContextHub存储** 组件。
+1. 将表示要用于映射的数据的客户端上下文组件拖动到放置目标。或者，将 **ContextHub 存储**&#x200B;组件拖动到框架。
 
    >[!NOTE]
-   映射时，参数会通过简单字符串传递到mbox。 无法从ContextHub映射数组。
+   映射时，参数通过简单字符串传递给 mbox。无法从 ContextHub 映射数组。
 
-   例如，要使用 **用户档案数据** 关于网站访客以控制Target营销活动，请将 **用户档案数据** 组件。 此时会显示可用于映射到Target参数的配置文件数据变量。
+   例如，要使用有关站点访客的&#x200B;**配置文件数据**&#x200B;来控制 Target 活动，请将&#x200B;**配置文件数据**&#x200B;组件拖动到页面。可用于映射到 Target 参数的配置文件数据变量随即显示。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. 通过选择 **共享** 复选框。
+1. 通过选中相应列中的&#x200B;**共享**&#x200B;复选框，选择要对 Adobe Target 系统可见的变量。
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
    >[!NOTE]
-   只有从AEM到Adobe Target同步参数的一种方式。
+   同步参数是唯一方式 – 从 AEM 到 Adobe Target。
 
-将创建框架。 要将框架复制到发布实例，请使用 **激活框架** 选项。
+此时将创建您的框架。要将框架复制到发布实例，请使用 sidekick 中的&#x200B;**激活框架**&#x200B;选项。
 
 ### 将活动与Target云配置关联  {#associating-activities-with-the-target-cloud-configuration}
 
@@ -226,8 +226,8 @@ ht-degree: 4%
 
 1. 在 **站点** 控制台中，导航到要配置的站点。
 1. 使用 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions) 或 [选择模式](/help/sites-authoring/basic-handling.md)，选择 **查看属性。**
-1. 选择 **Cloud Services** 选项卡。
-1. 点按/单击 **编辑**.
+1. 选择&#x200B;**云服务**&#x200B;选项卡。
+1. 点按/单击&#x200B;**编辑**。
 1. 点按/单击 **添加配置** 在 **Cloud Service配置** 选择 **Adobe Target**.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)

@@ -1,56 +1,56 @@
 ---
-title: 通过延迟加载提高大型表单的性能
-seo-title: 通过延迟加载提高大型表单的性能
+title: 使用延迟加载改进大型表单的性能
+seo-title: Improve performance of large forms with lazy loading
 description: 延迟加载会延迟表单片段的初始化和加载，直到它们可见，从而显着提高大型复杂自适应表单的性能。
-seo-description: 延迟加载会延迟表单片段的初始化和加载，直到它们可见，从而显着提高大型复杂自适应表单的性能。
+seo-description: Lazy loading significantly improves the performance of large and complex adaptive forms by deferring initialization and loading of form fragments until they are visible.
 uuid: 6be3d2f0-1b2a-4090-af66-2b08487c31bc
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 0%
+source-wordcount: '1011'
+ht-degree: 1%
 
 ---
 
-# 通过延迟加载提高大型表单的性能{#improve-performance-of-large-forms-with-lazy-loading}
+# 使用延迟加载改进大型表单的性能{#improve-performance-of-large-forms-with-lazy-loading}
 
-## 延迟加载简介{#introduction-to-lazy-loading}
+## 延迟加载简介 {#introduction-to-lazy-loading}
 
 当表单变得大而复杂，包含成千上万个字段时，最终用户在运行时渲染表单时会经历较长的响应时间。 为了最大程度地缩短响应时间，自适应表单允许您将表单划分为逻辑片段，并配置以延迟片段的初始化或加载，直到片段需要可见为止。 这称为延迟加载。 此外，用户导航到表单中的其他部分并且片段不再可见后，将卸载为延迟加载配置的片段。
 
 在配置延迟加载之前，我们先了解相关要求和准备步骤。
 
-## 准备配置延迟加载{#preparing-to-configure-lazy-loading}
+## 准备配置延迟加载 {#preparing-to-configure-lazy-loading}
 
 在自适应表单中配置片段的延迟加载之前，务必要定义策略以创建片段，识别脚本中使用或其他片段中引用的值，以及定义规则以控制延迟加载片段中字段的可见性。
 
-* **识别和创建片**
-段您只能配置自适应表单片段以便延迟加载。片段是位于自适应表单外部且可在表单之间重复使用的独立区段。 因此，实施延迟加载的第一步是识别表单中的逻辑部分并将其转换为片段。 您可以从头开始创建片段，或将现有表单面板另存为片段。
+* **识别和创建片段**
+您只能为延迟加载配置自适应表单片段。 片段是位于自适应表单外部且可在表单之间重复使用的独立区段。 因此，实施延迟加载的第一步是识别表单中的逻辑部分并将其转换为片段。 您可以从头开始创建片段，或将现有表单面板另存为片段。
 
-   有关创建片段的更多信息，请参阅[自适应表单片段](../../forms/using/adaptive-form-fragments.md)。
+   有关创建片段的更多信息，请参阅 [自适应表单片段](../../forms/using/adaptive-form-fragments.md).
 
-* **识别和标记全局值基**
-于表单的交易涉及动态元素，用于从用户处捕获相关数据并对其进行处理以简化表单填写体验。例如，您的表单在片段X中具有字段A，其值决定了字段B在另一个片段中的有效性。 在这种情况下，如果片段X标记为延迟加载，则字段A的值必须可用于验证字段B，即使未加载片段X也是如此。 要实现此目的，您可以将字段A标记为全局，这可确保其值在片段X未加载时可用于验证字段B。
+* **识别和标记全局值**
+基于Forms的交易涉及动态元素，用于从用户处捕获相关数据并对其进行处理以简化表单填写体验。 例如，您的表单在片段X中具有字段A，其值决定了字段B在另一个片段中的有效性。 在这种情况下，如果片段X标记为延迟加载，则字段A的值必须可用于验证字段B，即使未加载片段X也是如此。 要实现此目的，您可以将字段A标记为全局，这可确保其值在片段X未加载时可用于验证字段B。
 
-   有关如何使字段值全局化的信息，请参阅[配置延迟加载](../../forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p)。
+   有关如何使字段值全局化的信息，请参阅 [配置延迟加载](../../forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
 
-* **用于控制字段可见性的写**
-入规则表单包括某些字段和部分，这些字段和部分不适用于所有用户和所有条件。Forms作者和开发人员使用可见性或显示隐藏规则来根据用户输入控制其可见性。 例如，在表单的“就业状态”字段中选择“失业”的用户不会显示“办公地址”字段。 有关编写规则的更多信息，请参阅[使用规则编辑器](../../forms/using/rule-editor.md)。
+* **用于控制字段可见性的写入规则**
+Forms中包含一些不适用于所有用户和所有条件的字段和部分。 Forms作者和开发人员使用可见性或显示隐藏规则来根据用户输入控制其可见性。 例如，在表单的“就业状态”字段中选择“失业”的用户不会显示“办公地址”字段。 有关编写规则的更多信息，请参阅 [使用规则编辑器](../../forms/using/rule-editor.md).
 
    您可以利用懒惰加载的片段中的可见性规则，以便仅在需要时显示条件字段。 此外，将条件字段标记为全局，以在延迟加载片段的可见性表达式中引用它。
 
-## 配置延迟加载{#configuring-lazy-loading}
+## 配置延迟加载 {#configuring-lazy-loading}
 
 执行以下步骤以在自适应表单片段上启用延迟加载：
 
 1. 在创作模式下打开自适应表单，该表单包含要为延迟加载启用的片段。
-1. 选择自适应表单片段，然后点按![cmpr](assets/cmppr.png)。
-1. 在侧栏中，启用&#x200B;**[!UICONTROL 延迟]**&#x200B;加载片段，然后点按&#x200B;**完成**。
+1. 选择自适应表单片段并点按 ![cppr](assets/cmppr.png).
+1. 在侧栏中，启用 **[!UICONTROL 延迟加载片段]** 点按 **完成**.
 
    ![为自适应表单片段启用延迟加载](assets/lazy-loading-fragment.png)
 
@@ -59,19 +59,19 @@ ht-degree: 0%
 您可以将延迟加载片段中对象的值标记为全局值，以便在未加载包含片段时，这些值可在脚本中使用。 执行以下操作：
 
 1. 在创作模式下打开自适应表单片段。
-1. 点按要将其值标记为全局的字段，然后点按![cmppr](assets/cmppr.png)。
-1. 在侧栏中，启用&#x200B;**延迟加载期间使用值**。
+1. 点按要将其值标记为全局的字段，然后点按 ![cppr](assets/cmppr.png).
+1. 在侧栏中，启用 **在延迟加载期间使用值**.
 
    ![侧栏中的延迟加载字段](assets/enable-lazy-loading.png)
 
    该值现在标记为全局值，即使在卸载包含片段时，也可在脚本中使用。
 
-## 配置延迟加载的注意事项和最佳实践{#considerations-and-best-practices-for-configuring-lazy-loading}
+## 配置延迟加载的注意事项和最佳实践 {#considerations-and-best-practices-for-configuring-lazy-loading}
 
 使用延迟加载时应记住的一些限制、建议和重要点如下：
 
 * 建议在基于XFA的自适应表单上使用基于XSD架构的自适应表单，以在大型表单上配置延迟加载。 在基于XFA的自适应表单中，由于延迟加载实施而带来的性能增益相对小于基于XSD的自适应表单的增益。
-* 请勿在使用&#x200B;**[!UICONTROL 响应式 — 所有功能的自适应表单中对片段配置延迟加载，该响应式 — 所有功能都位于一个页面上，而无需根面板的导航]**&#x200B;布局。 由于响应式布局配置，所有片段会以自适应表单同时加载。 它还会导致性能下降。
+* 请勿在使用 **[!UICONTROL 响应式 — 无导航的一个页面上的所有内容]** 根面板的布局。 由于响应式布局配置，所有片段会以自适应表单同时加载。 它还会导致性能下降。
 * 建议不要在自适应表单的第一个片段上配置延迟加载。
 * 建议不要在加载自适应表单时呈现的第一个面板中对片段配置延迟加载。
 * 片段层次结构中最多支持两个级别的延迟加载。
@@ -79,7 +79,7 @@ ht-degree: 0%
 * 考虑为应根据条件显示或隐藏的片段编写可见性规则。 例如，您可以根据用户指定的婚姻状态显示或隐藏“配偶详细信息”片段。
 * 懒散加载的片段不支持文件附件和条款和条件组件。
 
-### 配置延迟加载的脚本最佳实践{#scripting-best-practices-for-configuring-lazy-loading}
+### 编写配置延迟加载的脚本最佳实践 {#scripting-best-practices-for-configuring-lazy-loading}
 
 为延迟加载面板开发脚本时要记住的重要要点如下：
 

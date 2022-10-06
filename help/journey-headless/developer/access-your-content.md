@@ -1,10 +1,11 @@
 ---
 title: 如何通过AEM交付API访问您的内容
 description: 在AEM无头开发人员历程的这一部分中，了解如何使用GraphQL查询访问内容片段内容。
-source-git-commit: 7f43d9d6b631b26f7b9293aa109498d0c8040436
+exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 1%
+ht-degree: 17%
 
 ---
 
@@ -94,7 +95,7 @@ AEM GraphQL API是基于标准GraphQL API规范的自定义版本，专门配置
 
 >[!NOTE]
 >
->AEM GraphQL API实施基于GraphQL Java库。
+>AEM GraphQL API 实施基于 GraphQL Java 库。
 
 <!--
 ### Use Cases for Author and Publish Environments {#use-cases-author-publish-environments}
@@ -110,7 +111,7 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
     * The REST API can be used for CR(u)D operations.
 -->
 
-## 用于AEM GraphQL API的内容片段 {#content-fragments-use-with-aem-graphql-api}
+## 用于 AEM GraphQL API 的内容片段 {#content-fragments-use-with-aem-graphql-api}
 
 内容片段可用作AEM架构和查询的GraphQL的基础，如下所示：
 
@@ -120,23 +121,23 @@ The use cases for the AEM GraphQL API can depend on the type of AEMenvironment:
 
 ### 内容片段模型 {#content-fragments-models}
 
-以下内容片段模型：
+这些内容片段模型：
 
-* 用于生成架构一次 **已启用**.
-* 提供GraphQL所需的数据类型和字段。 它们确保您的应用程序仅请求可能的内容，并接收预期内容。
-* 数据类型 **片段引用** 可在模型中使用来引用其他内容片段，因此可引入其他级别的结构。
+* 一旦&#x200B;**启用**，用于生成模式。
+* 提供 GraphQL 所需的数据类型和字段。 它们确保您的应用程序仅请求可能的内容，并接收预期内容。
+* 数据类型&#x200B;**片段引用**&#x200B;可在模型中使用来引用其他内容片段，因此可引入其他级别的结构。
 
 ### 片段引用 {#fragment-references}
 
-的 **片段引用**:
+**片段引用**：
 
 * 是在定义内容片段模型时可用的特定数据类型。
 * 引用另一个片段，具体取决于特定的内容片段模型。
 * 允许您创建并检索结构化数据。
 
-   * 定义为 **多源**，则主片段可以引用（检索）多个子片段。
+   * 定义为&#x200B;**多源**，则主片段可以引用（检索）多个子片段。
 
-### JSON预览 {#json-preview}
+### JSON 预览 {#json-preview}
 
 为帮助设计和开发内容片段模型，您可以在内容片段编辑器中预览JSON输出。
 
@@ -242,7 +243,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 * 启用您的端点
    * 使用工具 — >资产 — > GraphQL
-   * [启用GraphQL端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
+   * [启用 GraphQL 端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
 
 * 安装GraphiQL（如果需要）
    * 安装为专用包
@@ -257,7 +258,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
    * 首席执行官（人员） — 片段参考
    * 员工（人员） — 片段参考
 * 人员
-   * 名称 — 文本
+   * 姓名 - 文本
    * 名字 — 文本
 
 如您所见，CEO和Employees字段引用“人员”片段。
@@ -273,7 +274,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 * `http://localhost:4502/content/graphiql.html`
 
-![GraphiQL接口](assets/graphiql-interface.png "GraphiQL接口")
+![GraphiQL 接口](assets/graphiql-interface.png "GraphiQL 接口")
 
 ### 查询入门 {#getting-Started-with-queries}
 
@@ -349,7 +350,7 @@ query {
 
 * 了解如何将GraphQL与AEM结合使用
 * 示例内容片段结构
-* 了解如何将GraphQL与AEM结合使用 — 示例内容和查询
+* 了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询
 
 ## 下一步 {#whats-next}
 
@@ -363,13 +364,13 @@ query {
    * [GraphQL Java库](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
 * [了解如何将GraphQL与AEM结合使用](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * [启用GraphQL端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
+   * [启用 GraphQL 端点](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
    * [安装AEM GraphiQL界面](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
 * [示例内容片段结构](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [了解如何将GraphQL与AEM结合使用 — 示例内容和查询](/help/assets/content-fragments/content-fragments-graphql-samples.md)
-   * [示例查询 — 单个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [元数据查询示例 — 列出标题为GB的奖项的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [示例查询 — 具有命名变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+* [了解如何将 GraphQL 与 AEM 结合使用 – 示例内容和查询](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+   * [示例查询 – 一个特定城市片段](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+   * [元数据的示例查询 – 列出标题为 GB 的奖项的元数据](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+   * [示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [在配置浏览器中启用内容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
    * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)

@@ -1,8 +1,8 @@
 ---
 title: 配置帐户环境
-seo-title: 配置帐户环境
+seo-title: Configuring Your Account Environment
 description: AEM 提供了用于配置帐户和创作环境的某些方面的功能
-seo-description: AEM 提供了用于配置帐户和创作环境的某些方面的功能
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 99%
 
 ---
@@ -34,17 +34,17 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
    * 借助[模拟为](/help/sites-administering/security.md#impersonating-another-user)功能，用户可以代表其他用户工作。
 
-* 个人资料
+* 配置文件
 
    * 提供一个指向您的[用户设置](/help/sites-administering/security.md)的便捷链接
 
-* [我的首选项](/help/sites-authoring/user-properties.md#my-preferences)
+* [我的偏好设置](/help/sites-authoring/user-properties.md#my-preferences)
 
    * 指定用户特有的各种首选项设置
 
 ![screen_shot_2018-03-20at103808](assets/screen_shot_2018-03-20at103808.png)
 
-### 我的首选项 {#my-preferences}
+### 我的偏好设置 {#my-preferences}
 
 **我的首选项**&#x200B;对话框可通过标题中的[用户](/help/sites-authoring/user-properties.md#user-settings)选项进行访问。
 

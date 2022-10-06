@@ -1,8 +1,8 @@
 ---
 title: 响应式布局
-seo-title: 响应式布局
+seo-title: Responsive Layout
 description: 尽管布局容器组件在经典 UI 中可用，但是只有在触屏优化 UI 中才能使用和支持其全部功能。
-seo-description: 尽管布局容器组件在经典 UI 中可用，但是只有在触屏优化 UI 中才能使用和支持其全部功能。
+seo-description: Although the Layout container component is available in the classic UI, its full functionality is only available and supported in the touch-enabled UI.
 uuid: 203c7491-ce0e-49fc-ad81-1697325b3d8c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 69a20064-99c9-4ead-9cc1-4c771a87268c
 exl-id: ccdce571-8b1c-4aca-a8c6-a909ec9b0516
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '62'
 ht-degree: 100%
 
 ---

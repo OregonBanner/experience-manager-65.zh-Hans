@@ -6,7 +6,7 @@ exl-id: e1616385-0855-4f70-b787-b01701929bbc
 source-git-commit: f7a4907ca6ce8ecaff9ef1fdf99ec0951ff497e0
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 55%
+ht-degree: 74%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 55%
 
 >[!CAUTION]
 >
->的 `SameSite=None` 仅当协议安全(HTTPS)时才应用设置。
+>`SameSite=None` 设置仅在协议安全 (HTTPS) 时应用。
 >
->如果协议不安全(HTTP)，则将忽略该设置，服务器将显示以下WARN消息：
+>如果协议不安全 (HTTP)，则将忽略该设置，服务器将显示以下警告消息：
 >
 >`WARN com.day.crx.security.token.TokenCookie Skip 'SameSite=None'`
 

@@ -1,8 +1,8 @@
 ---
 title: 参与工作流
-seo-title: 参与工作流
+seo-title: Participating in Workflows
 description: 工作流通常包括需要人员对页面或资产执行活动的步骤。
-seo-description: 工作流通常包括需要人员对页面或资产执行活动的步骤。
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset.
 uuid: 15d56bcc-1e84-4cc0-8b71-7fb906cd7ff7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1545'
-ht-degree: 77%
+source-wordcount: '1525'
+ht-degree: 98%
 
 ---
 
@@ -26,12 +26,12 @@ ht-degree: 77%
 * [完成参与者步骤](#completing-a-participant-step)
 * [委派参与者步骤](#delegating-a-participant-step)
 * [对参与者步骤执行回退](#performing-step-back-on-a-participant-step)
-* [打开工作流项目以查看详细信息（并执行操作）](#opening-a-workflow-item-to-view-details-and-take-actions)
-* [查看工作流有效负荷（多个资源）](#viewing-the-workflow-payload-multiple-resources)
+* [打开工作流项目查看详细信息（并执行操作）](#opening-a-workflow-item-to-view-details-and-take-actions)
+* [查看工作流有效负载（多个资源）](#viewing-the-workflow-payload-multiple-resources)
 
 ## 可用工作流操作的通知 {#notifications-of-available-workflow-actions}
 
-为您分配了工作项(例如批准内 **容**)后，将显示各种警报和／或通知：
+为您分配了工作项（例如，**批准内容**）后，将显示各种警报和/或通知：
 
 * 您的[通知](/help/sites-authoring/inbox.md)指示符（工具栏）上的数字将会递增：
 
@@ -54,12 +54,12 @@ ht-degree: 77%
 
    >[!NOTE]
    >
-   >状态栏仅对具有工作流权限的用户可见；例如，`workflow-users`组的成员。
+   >状态栏只对拥有工作流权限的用户可见；例如，`workflow-users` 组的成员。
    >
    >
    >如果当前用户直接参与工作流的当前步骤，则会显示相应的操作。
 
-* 当打开资源的&#x200B;**时间轴**&#x200B;时，将会显示工作流步骤。当单击/点按警报横幅时，也会显示可用的操作：
+* 当打开资源的&#x200B;**时间线**&#x200B;时，将会显示工作流步骤。当单击/点按警报横幅时，也会显示可用的操作：
 
    ![screenshot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
@@ -76,33 +76,33 @@ ht-degree: 77%
 
 * [收件箱](#completing-a-participant-step-inbox)
 * [页面编辑器](#completing-a-participant-step-page-editor)
-* [时间轴](#completing-a-participant-step-timeline)
+* [时间线](#completing-a-participant-step-timeline)
 * [打开工作流项目以查看详细信息](#opening-a-workflow-item-to-view-details-and-take-actions)时。
 
-#### 完成参与者步骤 - 收件箱  {#completing-a-participant-step-inbox}
+#### 完成参与者步骤 - 收件箱 {#completing-a-participant-step-inbox}
 
 请按照以下过程完成工作项：
 
 1. 打开 **[AEM 收件箱](/help/sites-authoring/inbox.md)**。
 1. 选择要对其执行操作的工作流项目（点按/单击缩略图）。
-1. 从工具栏中选择&#x200B;**Complete**。
-1. 此时将打开&#x200B;**完成工作项目**&#x200B;对话框。从下拉选择器中选择&#x200B;**下一步**，并根据需要添加&#x200B;**注释**。
-1. 使用&#x200B;**OK**&#x200B;完成该步骤（或使用&#x200B;**Cancel**&#x200B;中止该操作）。
+1. 从工具栏中选择&#x200B;**完成**。
+1. 此时将打开&#x200B;**完成工作项**&#x200B;对话框。从下拉选择器中选择&#x200B;**下一步**，并根据需要添加&#x200B;**评论**。
+1. 单击&#x200B;**确定**&#x200B;完成该步骤（或者单击&#x200B;**取消**&#x200B;中止该操作）。
 
 #### 完成参与者步骤 - 页面编辑器 {#completing-a-participant-step-page-editor}
 
 请按照以下过程完成工作项：
 
 1. 打开[要编辑的页面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
-1. 从顶部的状态栏中选择&#x200B;**Complete**。
-1. 此时将打开&#x200B;**完成工作项目**&#x200B;对话框。从下拉选择器中选择&#x200B;**下一步**，并根据需要添加&#x200B;**注释**。
-1. 使用&#x200B;**OK**&#x200B;完成该步骤（或使用&#x200B;**Cancel**&#x200B;中止该操作）。
+1. 从顶部的状态栏中选择&#x200B;**完成**。
+1. 此时将打开&#x200B;**完成工作项**&#x200B;对话框。从下拉选择器中选择&#x200B;**下一步**，并根据需要添加&#x200B;**评论**。
+1. 单击&#x200B;**确定**&#x200B;以完成该步骤（或者单击&#x200B;**取消**&#x200B;以中止该操作）。
 
-#### 完成参与者步骤 - 时间轴 {#completing-a-participant-step-timeline}
+#### 完成参与者步骤 - 时间线 {#completing-a-participant-step-timeline}
 
-您也可以使用时间轴来完成并推进步骤：
+您也可以使用时间线来完成并推进步骤：
 
-1. 选择所需的页面并打开&#x200B;**时间轴**（或打开&#x200B;**时间轴**&#x200B;并选择该页面）：
+1. 选择所需的页面，然后打开&#x200B;**时间线**（或者先打开&#x200B;**时间线**，然后再选择页面）：
 
    ![screenshot_2019-03-05at120744](assets/screen-shot_2019-03-05at120744.png)
 
@@ -116,7 +116,7 @@ ht-degree: 77%
 
 1. 选择&#x200B;**前进**&#x200B;以确认操作。
 
-### 委派参与者步骤  {#delegating-a-participant-step}
+### 委派参与者步骤 {#delegating-a-participant-step}
 
 如果某个步骤已分配给您，但由于某种原因您无法采取操作，则您可以将该步骤委派给其他用户或组。
 
@@ -135,18 +135,18 @@ ht-degree: 77%
 
 * [收件箱](#delegating-a-participant-step-inbox)
 * [页面编辑器](#delegating-a-participant-step-page-editor)
-* [时间轴](#delegating-a-participant-step-timeline)
+* [时间线](#delegating-a-participant-step-timeline)
 * [打开工作流项目以查看详细信息](#opening-a-workflow-item-to-view-details-and-take-actions)时。
 
-#### 委派参与者步骤 - 收件箱  {#delegating-a-participant-step-inbox}
+#### 委派参与者步骤 - 收件箱 {#delegating-a-participant-step-inbox}
 
 请按照以下过程委派工作项：
 
 1. 打开 **[AEM 收件箱](/help/sites-authoring/inbox.md)**。
 1. 选择要对其执行操作的工作流项目（点按/单击缩略图）。
 1. 从工具栏中选择&#x200B;**委派**。
-1. 此时将打开一个对话框。从下拉选择器中指定&#x200B;**User**（这也可以是组），并根据需要添加&#x200B;**Comment**。
-1. 使用&#x200B;**OK**&#x200B;完成该步骤（或使用&#x200B;**Cancel**&#x200B;中止该操作）。
+1. 此时将打开一个对话框。从下拉选择器中指定 **用户**（也可以是组），并根据需要添加&#x200B;**评论**。
+1. 单击&#x200B;**确定**&#x200B;完成该步骤（或者单击&#x200B;**取消**&#x200B;中止该操作）。
 
 #### 委派参与者步骤 - 页面编辑器 {#delegating-a-participant-step-page-editor}
 
@@ -154,14 +154,14 @@ ht-degree: 77%
 
 1. 打开[要编辑的页面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
 1. 从顶部的状态栏中选择&#x200B;**委派**。
-1. 此时将打开一个对话框。从下拉选择器中指定&#x200B;**User**（这也可以是组），并根据需要添加&#x200B;**Comment**。
-1. 使用&#x200B;**OK**&#x200B;完成该步骤（或使用&#x200B;**Cancel**&#x200B;中止该操作）。
+1. 此时将打开一个对话框。从下拉选择器中指定 **用户**（也可以是组），并根据需要添加&#x200B;**评论**。
+1. 单击&#x200B;**确定**&#x200B;完成该步骤（或者单击&#x200B;**取消**&#x200B;中止该操作）。
 
-#### 委派参与者步骤 - 时间轴 {#delegating-a-participant-step-timeline}
+#### 委派参与者步骤 - 时间线 {#delegating-a-participant-step-timeline}
 
-您也可以使用时间轴来委派和/或分配步骤：
+您也可以使用时间线来委派和/或分配步骤：
 
-1. 选择所需的页面并打开&#x200B;**时间轴**（或打开&#x200B;**时间轴**&#x200B;并选择该页面）。
+1. 选择所需的页面，然后打开&#x200B;**时间线**（或者先打开&#x200B;**时间线**，然后再选择页面）。
 1. 单击/点按警报横幅以显示可用的操作。选择&#x200B;**更改被分派人**：
 
    ![screenshot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
@@ -170,7 +170,7 @@ ht-degree: 77%
 
    ![screenshot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
 
-1. 选择&#x200B;**分配**&#x200B;以确认操作。
+1. 选择&#x200B;**分配**，确认操作。
 
 ### 对参与者步骤执行回退 {#performing-step-back-on-a-participant-step}
 
@@ -185,34 +185,34 @@ ht-degree: 77%
 
 * [收件箱](#performing-step-back-on-a-participant-step-inbox)
 * [页面编辑器](#performing-step-back-on-a-participant-step-page-editor)
-* [时间轴](#performing-step-back-on-a-participant-step-timeline)
+* [时间线](#performing-step-back-on-a-participant-step-timeline)
 * [打开工作流项目以查看详细信息](#opening-a-workflow-item-to-view-details-and-take-actions)时。
 
-#### 对参与者步骤执行回退 - 收件箱  {#performing-step-back-on-a-participant-step-inbox}
+#### 对参与者步骤执行回退 - 收件箱 {#performing-step-back-on-a-participant-step-inbox}
 
 请按照以下过程执行回退：
 
 1. 打开 **[AEM 收件箱](/help/sites-authoring/inbox.md)**。
 1. 选择要对其执行操作的工作流项目（点按/单击缩略图）。
-1. 选择&#x200B;**回退**&#x200B;以打开对话框。
+1. 选择&#x200B;**回退**，打开对话框。
 
 1. 指定&#x200B;**上一步**，并根据需要添加&#x200B;**评论**。
-1. 使用&#x200B;**OK**&#x200B;完成该步骤（或使用&#x200B;**Cancel**&#x200B;中止该操作）。
+1. 单击&#x200B;**确定**&#x200B;完成该步骤（或者单击&#x200B;**取消**&#x200B;中止该操作）。
 
 #### 对参与者步骤执行回退 - 页面编辑器 {#performing-step-back-on-a-participant-step-page-editor}
 
 请按照以下过程执行回退：
 
 1. 打开[要编辑的页面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
-1. 从顶部的状态栏中选择&#x200B;**回退** 。
+1. 从顶部的状态栏中选择&#x200B;**回退**。
 1. 指定&#x200B;**上一步**，并根据需要添加&#x200B;**评论**。
-1. 使用&#x200B;**OK**&#x200B;完成该步骤（或使用&#x200B;**Cancel**&#x200B;中止该操作）。
+1. 单击&#x200B;**确定**&#x200B;完成该步骤（或者单击&#x200B;**取消**&#x200B;中止该操作）。
 
-#### 对参与者步骤执行回退 - 时间轴 {#performing-step-back-on-a-participant-step-timeline}
+#### 对参与者步骤执行回退 - 时间线 {#performing-step-back-on-a-participant-step-timeline}
 
-您也可以使用时间轴来回滚（回退）到上一步：
+您也可以使用时间线来回滚（回退）到上一步：
 
-1. 选择所需的页面并打开&#x200B;**时间轴**（或打开&#x200B;**时间轴**&#x200B;并选择该页面）。
+1. 选择所需的页面，然后打开&#x200B;**时间线**（或者先打开&#x200B;**时间线**，然后再选择页面）。
 1. 单击/点按警报横幅以显示可用的操作。选择&#x200B;**回滚**：
 
    ![screenshot_2019-03-05at121131](assets/screen-shot_2019-03-05at121131.png)
@@ -221,9 +221,9 @@ ht-degree: 77%
 
    ![screenshot_2019-03-05at121158](assets/screen-shot_2019-03-05at121158.png)
 
-1. 选择&#x200B;**回滚**&#x200B;以确认操作。
+1. 选择&#x200B;**回滚**，确认操作。
 
-### 打开工作流项目以查看详细信息（并执行操作）{#opening-a-workflow-item-to-view-details-and-take-actions}
+### 打开工作流项目以查看详细信息（并执行操作） {#opening-a-workflow-item-to-view-details-and-take-actions}
 
 查看工作流工作项的详细信息并执行相应的操作。
 
@@ -233,7 +233,7 @@ ht-degree: 77%
 
    ![wf-72](assets/wf-72.png)
 
-* **工作流** 信息选项卡：
+* **工作流信息**&#x200B;选项卡：
 
    ![wf-73](assets/wf-73.png)
 
@@ -241,7 +241,7 @@ ht-degree: 77%
 
    ![wf-107](assets/wf-107.png)
 
-* **** “注释”选项卡：
+* **评论**&#x200B;选项卡：
 
    ![wf-75](assets/wf-75.png)
 
@@ -256,10 +256,10 @@ ht-degree: 77%
 
 1. 打开 **[AEM 收件箱](/help/sites-authoring/inbox.md)**。
 1. 选择要对其执行操作的工作流项目（点按/单击缩略图）。
-1. 选择&#x200B;**打开**&#x200B;以打开信息选项卡。
+1. 选择&#x200B;**打开**，打开信息选项卡。
 
 1. 如果需要，选择相应的操作，提供任何详细信息，然后单击&#x200B;**确定**&#x200B;进行确认（或单击&#x200B;**取消**）。
-1. 使用&#x200B;**Save**&#x200B;或&#x200B;**Cancel**&#x200B;退出。
+1. 单击&#x200B;**保存**&#x200B;或&#x200B;**取消**&#x200B;以退出。
 
 #### 打开工作流详细信息 - 页面编辑器 {#opening-workflow-details-page-editor}
 
@@ -269,9 +269,9 @@ ht-degree: 77%
 1. 从状态栏中选择&#x200B;**查看详细信息**&#x200B;以打开信息选项卡。
 
 1. 如果需要，选择相应的操作，提供任何详细信息，然后单击&#x200B;**确定**&#x200B;进行确认（或单击&#x200B;**取消**）。
-1. 使用&#x200B;**Save**&#x200B;或&#x200B;**Cancel**&#x200B;退出。
+1. 单击&#x200B;**保存**&#x200B;或&#x200B;**取消**&#x200B;以退出。
 
-### 查看工作流负载（多个资源）{#viewing-the-workflow-payload-multiple-resources}
+### 查看工作流有效负荷（多个资源） {#viewing-the-workflow-payload-multiple-resources}
 
 您可以查看与工作流实例关联的有效负荷的详细信息。最初会显示资源包，之后您可以深入查看各个页面。
 
@@ -279,7 +279,7 @@ ht-degree: 77%
 
 1. 打开 **[AEM 收件箱](/help/sites-authoring/inbox.md)**。
 1. 选择要对其执行操作的工作流项目（点按/单击缩略图）。
-1. 从工具栏中选择&#x200B;**查看负载**&#x200B;以打开对话框。
+1. 从工具栏中选择&#x200B;**查看有效负载**&#x200B;以打开对话框。
 
    由于工作流包只是存储库中路径的指针集合，因此您可以在此处添加/删除/修改条目以调整工作流包所引用的内容。使用&#x200B;**资源定义**&#x200B;组件可添加新条目。
 

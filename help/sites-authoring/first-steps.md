@@ -1,8 +1,8 @@
 ---
 title: 创作的首要步骤
-seo-title: 创作的首要步骤
+seo-title: First Steps for Authors
 description: 概述在 AEM 中开始创作内容时将使用的主要任务
-seo-description: 概述在 AEM 中开始创作内容时将使用的主要任务
+seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
 uuid: 1a09da22-faa4-4a7a-a2c5-97a255a6a2ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '403'
 ht-degree: 93%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 93%
 
 它涵盖以下内容：
 
-* [入门](#getting-started)\
+* [快速入门](#getting-started)\
    详细介绍创建和发布首个页面所需的一系列基本事件。
 
 * [其他操作](#further-actions)\
    继续执行您在创作时可以使用的许多其他操作。
 
-## 入门 {#getting-started}
+## 快速入门 {#getting-started}
 
 这些链接详细介绍创建和发布首个页面所需的一系列基本事件。
 
@@ -42,11 +42,11 @@ ht-degree: 93%
 
 进行编辑之前，您需要[创建一个新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)。
 
-### 打开页面  {#opening-a-page}
+### 打开页面 {#opening-a-page}
 
 对于诸如编辑之类的许多操作，您需要[打开页面](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)才能执行。
 
-### 编辑页面  {#editing-a-page}
+### 编辑页面 {#editing-a-page}
 
 无论您的实例已有页面，还是您刚刚自行创建了一个新页面，您都可以通过下列方式[编辑页面](/help/sites-authoring/editing-content.md)：
 
@@ -63,7 +63,7 @@ ht-degree: 93%
 
 完成页面编辑之后，您将需要[发布（或激活）页面](/help/sites-authoring/publishing-pages.md#main-pars-title-10)，以便网站的访客可以使用该内容。
 
-## 其他操作  {#further-actions}
+## 其他操作 {#further-actions}
 
 除基本步骤之外，创作时还可以使用许多其他操作。
 
@@ -75,7 +75,7 @@ ht-degree: 93%
 
 [移动和重命名页面](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)基本上可通过相同的操作完成。
 
-### 取消发布页面  {#unpublishing-a-page}
+### 取消发布页面 {#unpublishing-a-page}
 
 要使之前发布（或激活）的内容在您的公共网站上不可用，您需要[取消发布（或取消激活）页面](/help/sites-authoring/publishing-pages.md#main-pars-title-5)。
 
@@ -83,14 +83,14 @@ ht-degree: 93%
 
 如果不再需要某个页面，您可能想要[删除该页面](/help/sites-authoring/managing-pages.md#deleting-a-page)。
 
-### 设置页面属性  {#setting-the-page-properties}
+### 设置页面属性 {#setting-the-page-properties}
 
 每个[页面都有一些属性](/help/sites-authoring/editing-page-properties.md)，通过定义这些属性可以确定各方面操作。这些属性可使用任何一种 UI 进行更新。
 
-### 创建一个页面版本  {#creating-a-version-of-a-page}
+### 创建一个页面版本 {#creating-a-version-of-a-page}
 
 您可以为页面[创建一个版本](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)，然后在必要时[还原到该版本](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)。
 
-## 更多信息  {#more-information}
+## 更多信息 {#more-information}
 
 可以在[页面创作](/help/sites-authoring/page-authoring.md)下访问有关创作的更多信息。

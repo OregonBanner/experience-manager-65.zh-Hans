@@ -1,8 +1,8 @@
 ---
 title: 搜索表单和资产
-seo-title: 搜索表单和资产
+seo-title: Searching for forms and assets
 description: 您可以使用AEM搜索在AEM实例中搜索表单和资产。 通过基本和高级搜索，您可以快速找到资产。
-seo-description: 您可以使用AEM搜索在AEM实例中搜索表单和资产。 通过基本和高级搜索，您可以快速找到资产。
+seo-description: You can search forms and assets in your AEM instance using AEM search. Basic and advanced search allows you to quickly locate your assets.
 uuid: 0928a453-3dc4-448b-9320-dcbf20606dd9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '692'
 ht-degree: 4%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 4%
 
 当您选择一个或多个标准并指定文本字符串时，将返回文本和标准的交集作为搜索结果。 搜索结果与提供的表单和资产元数据一样好。
 
-单击![aem6forms_search](assets/aem6forms_search.png)以显示或隐藏搜索面板。
+单击 ![aem6forms_search](assets/aem6forms_search.png)，以显示或隐藏搜索面板。
 
 ## 基本搜索 {#basic-search}
 
 基本搜索是默认搜索，在不指定任何过滤器的情况下运行。 元数据属性的全文搜索由AEM Forms执行。
 
-要运行基本搜索，请在文本字段中输入搜索查询并返回点击。 您还可以输入通配符(*)以匹配任意数量的字符。
+要运行基本搜索，请在文本字段中输入搜索查询并返回点击。 您还可以输入通配符(&#42;)以匹配任意数量的字符。
 
 Adobe Experience Manager会搜索元数据属性中输入的文本，并返回相应的结果。 如果键入多个词，则搜索操作将匹配要搜索的完整文本。
 
@@ -38,10 +38,10 @@ Adobe Experience Manager会搜索元数据属性中输入的文本，并返回�
 
 * 使用表单和资产元数据属性进行搜索。
 * 如果键入多个词，则搜索操作将匹配要搜索的完整文本。
-* 搜索不区分大小写。 例如，在键入`geometrixx`时，标题为`Geometrixx`、`GEOMETRIXX`和`GeoMetRixx`的资产会显示在搜索结果中。
+* 搜索不区分大小写。 例如，在您键入 `geometrixx`，带有标题的资产 `Geometrixx`, `GEOMETRIXX`和 `GeoMetRixx` 会显示在搜索结果中。
 
-* 不支持单词的部分匹配。 要使用部分字符串进行搜索，请使用*通配符。 但是，如果搜索查询与一个完整单词匹配，则会显示相应的表单或资产。
-* 在搜索期间，会遵守并且不会裁切额外的空格。 例如，`My form`与`My form`不同。
+* 不支持单词的部分匹配。 要使用部分字符串进行搜索，请使用 &#42; 通配符。 但是，如果搜索查询与一个完整单词匹配，则会显示相应的表单或资产。
+* 在搜索期间，会遵守并且不会裁切额外的空格。 例如， `My form` 与的搜索查询不同 `My form`.
 
 * 如果元数据属性中字段的数据和显示值不同，则不能将显示值用作搜索参数。 例如，您无法根据状态（如“已修改”或“已发布”）进行搜索，因为这些属性以不同的格式存储。
 
@@ -93,7 +93,7 @@ Adobe Experience Manager会搜索元数据属性中输入的文本，并返回�
    <td>在所有表单模板中搜索。<br /> </td> 
   </tr>
   <tr>
-   <td>PDF Form</td> 
+   <td>PDF表单</td> 
    <td>搜索所有PDF文档。</td> 
   </tr>
   <tr>

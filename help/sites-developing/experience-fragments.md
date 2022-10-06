@@ -207,7 +207,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 此服务将用于插入体验片段导出到Target的重写，以便能够访问各种链接。
 
-例如, `ComponentService`:
+例如， `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;

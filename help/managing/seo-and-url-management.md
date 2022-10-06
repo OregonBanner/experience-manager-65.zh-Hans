@@ -356,7 +356,7 @@ Disallow: /
 
 或者，在实时环境中，您可以选择禁止某些不希望索引的路径。
 
-将 `robots.txt` 文件放在站点根目录时应当注意，调度程序刷新请求可能会清除此文件，同时 URL 映射可能会将该站点根目录放置在与 Apache HTTP Server 配置中定义的 `DOCROOT` 不同的位置。因此，通常将该文件放在站点根目录下的作者实例上，并将其复制到发布实例。
+将 `robots.txt` 文件放在站点根目录时应当注意，调度程序刷新请求可能会清除此文件，同时 URL 映射可能会将该站点根目录放置在与 Apache HTTP Server 配置中定义的 `DOCROOT` 不同的位置。因此，通常将该文件放在站点根目录的作者实例上，并将其复制到发布实例。
 
 ### 在 AEM 上构建 XML Sitemap {#building-an-xml-sitemap-on-aem}
 

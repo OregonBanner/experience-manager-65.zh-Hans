@@ -121,7 +121,7 @@ ht-degree: 7%
 
 1. 从 [!DNL Assets] 用户界面中，打开资产的属性页面。 单击 **[!UICONTROL 高级]** 单击 **[!UICONTROL 添加]** 在 **[!UICONTROL 提升搜索关键词]**.
 1. 在 **[!UICONTROL Search Promote]** 框中，指定要增加图像搜索的关键词，然后单击 **[!UICONTROL 添加]**. 您可以以相同方式指定多个关键词。
-1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。您为此关键词促销的资产会显示在热门搜索结果中。
+1. 单击“**[!UICONTROL 保存并关闭]**”。您为此关键词促销的资产会显示在热门搜索结果中。
 
 您可以通过提升目标关键字的搜索结果中某些资产的排名，来使用此功能。 请观看下面的视频示例。 有关详细信息，请参阅 [搜索 [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
 

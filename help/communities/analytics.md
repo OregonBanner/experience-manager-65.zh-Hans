@@ -49,7 +49,7 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 * [问题与解答](/help/communities/working-with-qna.md)
 * [博客](/help/communities/blog-feature.md)
 * [文件库](/help/communities/file-library.md)
-* [日历](/help/communities/calendar.md)
+* [日程表](/help/communities/calendar.md)
 
 文档的此部分介绍如何将Analytics报表包与社区功能连接起来。 基本步骤包括：
 
@@ -134,7 +134,6 @@ Adobe Analytics和Adobe Experience Manager(AEM)都是Adobe Marketing Cloud的解
 >* **`evar1`** 至 **`evar11`**
 >
 >* **`event1`** 至 **`event7`**
-
 >
 >**然后，在社区网站发布之前，** 通过移动在为社区站点启用AEM时自动映射到Analytics变量的Analytics变量，来恢复预先存在的映射至关重要。
 >
@@ -578,7 +577,6 @@ Analytics会自动用于多个社区功能。
 >* **`evar1`** 至 **`evar11`**
 >
 >* **`event1`** 至 **`event7`**
-
 >
 >**然后，在社区网站发布之前，** 重要的是要恢复预先存在的映射，并将自动映射的社区AEM变量（在为社区站点启用Analytics时）移动到其他Analytics变量。 此重新映射应在所有社区组件中保持一致。
 >
@@ -642,7 +640,7 @@ Adobe Analytics凭据已加密。 为了便于作者和发布者之间复制或�
 * 导航到 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). 例如， [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
 * 在语言根的jcr:content节点下(例如 `/content/sites/engage/en/jcr:content),`导航到为Analytics报表配置的组件。
-例如, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
+例如，**`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 * 请注意创建的时间段：
 

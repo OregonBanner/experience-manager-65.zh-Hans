@@ -1,8 +1,8 @@
 ---
 title: 管理工作流
-seo-title: 管理工作流
+seo-title: Administering Workflows
 description: 了解如何在AEM中管理工作流。
-seo-description: 了解如何在AEM中管理工作流。
+seo-description: Learn how to administer workflows in AEM.
 uuid: d000a13c-97cb-4b1b-809e-6c3eb0d675e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 exl-id: 10eecfb8-d43d-4f01-9778-87c752dee64c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '779'
 ht-degree: 2%
 
 ---
@@ -38,17 +38,15 @@ ht-degree: 2%
 >
 >有关更多信息，请参阅：
 >
->* 应用和参与工作流：[使用工作流](/help/sites-authoring/workflows.md)。
->* 创建工作流模型和扩展工作流功能：[开发和扩展工作流](/help/sites-developing/workflows.md)。
->* 改进使用大量服务器资源的工作流的性能：[并发工作流处理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)。
-
+>* 应用和参与工作流： [使用工作流](/help/sites-authoring/workflows.md).
+>* 创建工作流模型和扩展工作流功能： [开发和扩展工作流](/help/sites-developing/workflows.md).
+>* 改进使用大量服务器资源的工作流的性能： [并发工作流处理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
 >
 
 
+## 工作流模型和实例 {#workflow-models-and-instances}
 
-## 工作流模型和实例{#workflow-models-and-instances}
-
-[AEM中](/help/sites-developing/workflows.md#model) 的工作流模型是业务流程的表示和实现：
+[工作流模型](/help/sites-developing/workflows.md#model) 在AEM中，是业务流程的表示和实施：
 
 * 通常，它们会在页面或资产上执行操作，以获得特定结果。
 * 这些页面和/或资产称为工作流有效负载。
@@ -59,7 +57,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->执行的步骤是工作流模型&#x200B;*在生成实例时定义的步骤*。 有关更多详细信息，请参阅[开发工作流](/help/sites-developing/workflows.md#model)。
+>执行的步骤由工作流模型定义 *实例生成时*. 请参阅 [开发工作流](/help/sites-developing/workflows.md#model) 以了解更多详细信息。
 
 工作流实例在以下生命周期内进行：
 
@@ -76,7 +74,7 @@ ht-degree: 2%
 
 AEM提供了许多有用的工作流模型。 此外，您组织中的开发人员可以创建自定义工作流模型，并根据您业务流程的特定需求进行定制。
 
-## 工作流步骤{#workflow-steps}
+## 工作流步骤 {#workflow-steps}
 
 执行工作流步骤时，这些步骤将与工作流实例关联。 工作流实例的历史记录包括有关为实例执行的每个步骤的信息。 此信息对于调查执行过程中出现的问题非常有用。
 
@@ -89,28 +87,28 @@ AEM提供了许多有用的工作流模型。 此外，您组织中的开发人�
 >
 >如果发生错误，服务/步骤实施应处理错误情景的行为。 工作流引擎本身将重试该作业，然后记录错误并停止实例。
 
-## 工作流状态和操作{#workflow-status-and-actions}
+## 工作流状态和操作 {#workflow-status-and-actions}
 
 工作流可以具有以下状态之一：
 
 * **正在运行**:工作流实例正在运行。
 * **已完成**:工作流实例已成功结束。
 
-* **已暂停**:将工作流标记为已暂停。但是，有关此状态的已知问题，请参阅下面的警告说明。
-* **中止**:工作流实例已终止。
-* **过时**:工作流实例的进度要求执行后台作业，但在系统中找不到该作业。执行工作流时出错时，可能会发生这种情况。
+* **挂起**:将工作流标记为已暂停。 但是，有关此状态的已知问题，请参阅下面的警告说明。
+* **已中止**:工作流实例已终止。
+* **失效**:工作流实例的进度要求执行后台作业，但在系统中找不到该作业。 执行工作流时出错时，可能会发生这种情况。
 
 >[!NOTE]
 >
->执行“流程步骤”会导致错误时，该步骤会显示在管理员的收件箱中，并且工作流状态为&#x200B;**RUNNING**。
+>执行“流程步骤”会导致错误时，该步骤会显示在管理员的收件箱中，并且工作流状态为 **正在运行**.
 
 根据当前状态，当您需要干预工作流实例的正常进程时，可以对运行工作流实例执行以下操作：
 
-* **暂停**:暂停会将工作流状态更改为“已暂停”。请参阅下面的警告：
+* **暂停**:暂停会将工作流状态更改为“已暂停”。 请参阅下面的警告：
 
 >[!CAUTION]
 >
 >将工作流状态标记为“暂停”存在已知问题。 在此状态下，可以对收件箱中暂停的工作流项目执行操作。
 
 * **恢复**:在暂停的同一执行点使用相同的配置重新启动暂停的工作流。
-* **终止**:结束工作流执行并将状态更改为 **ABORTED**。无法重新启动中止的工作流实例。
+* **终止**:结束工作流执行并将状态更改为 **已中止**. 无法重新启动中止的工作流实例。

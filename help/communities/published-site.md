@@ -1,8 +1,8 @@
 ---
 title: 体验已发布的网站
-seo-title: 体验已发布的网站
+seo-title: Experience the Published Site
 description: 浏览到已发布的网站
-seo-description: 浏览到已发布的网站
+seo-description: Browse to a published site
 uuid: 44594e9e-27ad-475d-953d-3611b04f0df8
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1193'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 ### 阻止对JCR的匿名访问 {#prevent-anonymous-access-on-jcr}
 
-已知限制通过jcr内容和json向匿名访客公开社区网站内容，但是&#x200B;**允许匿名访问**&#x200B;对于网站内容禁用。 但是，可以使用Sling限制作为解决方法来控制此行为。
+尽管如此，已知的限制会通过jcr内容和json向匿名访客公开社区站点内容 **允许匿名访问** 对于网站的内容禁用。 但是，可以使用Sling限制作为解决方法来控制此行为。
 
 要保护您的社区站点内容免遭匿名用户通过jcr内容和json访问，请执行以下步骤：
 
@@ -62,41 +62,41 @@ ht-degree: 1%
    >
    >请勿转到本地化的站点。
 
-1. 转到&#x200B;**Page Properties**。
+1. 转到 **页面属性**.
 
    ![page-properties](assets/page-properties.png)
 
-1. 转到&#x200B;**Advanced**&#x200B;选项卡。
+1. 转到 **高级** 选项卡。
 
-1. 启用&#x200B;**身份验证要求**。
+1. 启用 **身份验证要求**.
 
    ![网站验证](assets/site-authentication.png)
 
-1. 添加登录页面的路径。 例如，**/content/......./GetStarted**。
+1. 添加登录页面的路径。 例如， **/content/......./GetStarted**.
 1. 发布页面。
 
 ## 受信任的社区成员 {#trusted-community-member}
 
-此体验假定[Aaron McDonald](/help/communities/tutorials.md#demo-users)被分配了[社区经理和审查方](/help/communities/create-site.md#roles)的角色。 如果没有，请返回创作环境以[修改站点设置](/help/communities/sites-console.md#modifying-site-properties)，然后选择Aaron McDonald作为社区经理和审查方。
+此体验假定为 [亚伦·麦当诺](/help/communities/tutorials.md#demo-users) 已分配 [社区经理和主持人](/help/communities/create-site.md#roles). 如果没有，请返回创作环境以 [修改站点设置](/help/communities/sites-console.md#modifying-site-properties) 并选择Aaron McDonald作为社区经理和主持人。
 
-在右上角，选择`Log in`，然后使用用户名(aaron.mcdonald@mailinator.com)和密码（密码）进行签名。 请注意使用Twitter或Facebook凭据登录的功能。
+在右上角，选择 `Log in`，并使用用户名(aaron.mcdonald@mailinator.com)和密码（密码）进行签名。 请注意使用Twitter或Facebook凭据登录的功能。
 
 ![登录](assets/login.png)
 
 以注册的社区成员身份登录后，请注意以下菜单项，以单击并浏览您的社区站点：
 
-* **** “配置文件”选项允许您查看和编辑配置文件。
-* [](/help/communities/configure-messaging.md) 消息选项将引导您转到直接消息传送部分，在该部分中，您可以：
+* **用户档案** 选项可让您查看和编辑配置文件。
+* [消息](/help/communities/configure-messaging.md) 选项将引导您定向消息传送部分，在该部分中，您可以：
 
    1. 查看您收到的私信（收件箱）、发送的私信（已发送的邮件）和删除的私信（垃圾桶）。
    1. 撰写要发送给个人和群组的新私信。
 
-* [](/help/communities/notifications.md) 通知选项将引导您转到通知部分，您可以在此处查看感兴趣的事件并编辑通知设置。
-* [](/help/communities/published-site.md#moderationlink) 如果您拥有审核权限，则管理会将您引导至AEM Communities审核页面。
+* [通知](/help/communities/notifications.md) 选项会引导您转到“通知”部分，您可以在此处查看感兴趣的事件并编辑通知设置。
+* [管理](/help/communities/published-site.md#moderationlink) 如果您有审核权限，将引导您转到AEM Communities审核页面。
 
 ![adminscreen](assets/adminscreen.png)
 
-请注意，日历页面是主页，因为所选的引用站点模板首先包含日历函数，然后是活动流函数、论坛函数等。 此结构可从[站点模板](/help/communities/sites.md#edit-site-template)控制台中查看，或在创作环境中修改站点属性时：
+请注意，日历页面是主页，因为所选的引用站点模板首先包含日历函数，然后是活动流函数、论坛函数等。 此结构在 [网站模板](/help/communities/sites.md#edit-site-template) 控制台或在创作环境中修改站点属性时：
 
 ![站点模板](assets/sitetemplate.png)
 
@@ -104,8 +104,8 @@ ht-degree: 1%
 >
 >有关社区组件和功能的更多信息，请访问：
 >
->* [社区组件](/help/communities/author-communities.md) （供作者使用）
->* [组件、函数和功能要点](/help/communities/essentials.md) （适用于开发人员）
+>* [社区组件](/help/communities/author-communities.md) （对于作者）
+>* [组件、函数和功能要点](/help/communities/essentials.md) （对于开发人员）
 
 
 ### 论坛链接 {#forum-link}
@@ -124,51 +124,51 @@ ht-degree: 1%
 
 例如，会在发布环境中创建群组。
 
-组也可以在创作环境中创建并在创作环境的社区站点（[社区组控制台](/help/communities/groups.md)）中进行管理。 本教程的下一步是[在作者](/help/communities/nested-groups.md)上创建组的体验。
+也可以在创作环境中创建组，并在创作环境的社区站点中进行管理([社区组控制台](/help/communities/groups.md))。 体验 [创建创作组](/help/communities/nested-groups.md) 下一个教程中。
 
 ![groupling](assets/grouplink.png)
 
 创建引用组：
 
-1. 选择&#x200B;**新建组**
+1. 选择 **新建组**
 1. **“设置”选项卡**
 
    * 组名称 : `Sports`
    * 描述 : `A parent group for various sporting groups`.
    * 组 URL 名称 : `sports`
-   * 选择`Open Group`（允许任何社区成员通过加入来参与）
+   * 选择 `Open Group` （允许任何社区成员通过加入参与）
 
 1. **“模板”选项卡**
 
-   * 选择`Reference Group`（在其结构中包含允许嵌套组的组函数）
+   * 选择 `Reference Group` （在其结构中包含允许嵌套组的组函数）
 
-1. 选择&#x200B;**创建组**
+1. 选择 **创建群组**
 
    ![creategroup](assets/creategroup.png)
 
-创建新组后，**选择新的体育组**，以在其中创建两个组（嵌套）。 由于网站结构不能以组功能开头，因此在打开“体育”组后，需要选择“组”链接：
+创建新群组后， **选择新的体育组** 以在其中创建两个组（嵌套）。 由于网站结构不能以组功能开头，因此在打开“体育”组后，需要选择“组”链接：
 
 ![grouplink1](assets/grouplink1.png)
 
-第二组以`Blog`开头的链接属于当前选定的组`Sports`组。 通过选择“体育”`Groups`链接，可以在“体育”组中嵌套两个组。
+第二组链接，以 `Blog`，则属于当前选定的群组， `Sports` 群组。 选择“体育” `Groups` 链接时，可以在“体育”组中嵌套两个组。
 
-例如，添加两个`new groups`。
+例如，添加 `new groups`.
 
-* 一个名为`Baseball`
+* 一个已确认 `Baseball`
 
-   * 将其保留设置为`Open Group`（必需的成员资格）。
-   * 在“模板”选项卡上，选择`Conversational Group`。
+   * 将其设置为 `Open Group` （必需的会员资格）。
+   * 在“模板”选项卡上，选择 `Conversational Group`.
 
-* 一个名为`Gymnastics`
+* 一个已确认 `Gymnastics`
 
-   * 将其设置更改为`Member Only Group`（成员资格受限）。
-   * 在“模板”选项卡上，选择`Conversational Group`。
+   * 将其设置更改为 `Member Only Group` （会员资格受限）。
+   * 在“模板”选项卡上，选择 `Conversational Group`.
 
 **通知**:
 
 * 在显示两个组之前，可能需要刷新页面。
-* 此模板&#x200B;*不*&#x200B;包含组函数，因此不可能进一步嵌套组。
-* 在创作时， [组控制台](/help/communities/groups.md)提供了第三个选项 — `Public Group`（可选成员资格）。
+* 此模板可以 *not* 包括组函数，因此不可能再嵌套组。
+* 在作者中， [“组”控制台](/help/communities/groups.md) 提供了第三种选择 — a `Public Group` （可选成员资格）。
 
 创建两个组后，选择打开的组“棒球组”，并注意其链接：
 
@@ -178,18 +178,18 @@ ht-degree: 1%
 
 ![grouplink2](assets/grouplink2.png)
 
-在创作时 — 具有管理权限，导航到[社区组控制台](/help/communities/members.md)，并将Weston McCall添加到`Community Engage Gymnastics <uid> Members`组。
+在创作时 — 具有管理权限，导航到 [“社区组”控制台](/help/communities/members.md) 把韦斯顿·麦考尔加到 `Community Engage Gymnastics <uid> Members` 群组。
 
 继续发布内容，以Aaron McDonald身份登录，并以匿名网站访客的身份查看体育组中的群组：
 
 * 从主页
-* 选择`Groups`链接
-* 选择`Sports`链接
-* 选择Sports&#39; `Groups`链接
+* 选择 `Groups` 链接
+* 选择 `Sports` 链接
+* 选择体育 `Groups` 链接
 
 只有棒球组可见。
 
-以Weston McCall(weston.mccall@dodgit.com /密码)的身份登录，然后导航到同一位置。 请注意，Weston能够`Join`打开的`Baseball`组和`enter or Leave`专用`Gymnastics`组。
+以Weston McCall(weston.mccall@dodgit.com /密码)的身份登录，然后导航到同一位置。 注意，韦斯顿能 `Join` 打开 `Baseball` 群组及 `enter or Leave` 私人 `Gymnastics` 群组。
 
 ![grouplink3](assets/grouplink3.png)
 
@@ -197,13 +197,13 @@ ht-degree: 1%
 
 通过选择网页链接查看网站中包含的基本网页。 标准AEM创作工具可用于在创作环境中向此页面添加内容。
 
-例如，转到&#x200B;**author**&#x200B;实例，在[Communities Sites控制台](/help/communities/sites-console.md)中打开`engage`文件夹，选择&#x200B;**打开Site**&#x200B;图标以进入创作编辑模式。 然后选择预览模式以选择`Web Page`链接，然后选择编辑模式以添加标题和文本组件。 最后，只重新发布页面或整个网站。
+例如，转到 **作者** 实例，打开 `engage` 文件夹 [社区站点控制台](/help/communities/sites-console.md)，选择 **打开网站** 图标以进入创作编辑模式。 然后选择预览模式以选择 `Web Page` 链接，然后选择编辑模式以添加标题和文本组件。 最后，只重新发布页面或整个网站。
 
 ![webpagelink](assets/webpagelink.png)
 
 ### 审核链接 {#moderationlink}
 
-当社区成员拥有审核权限时，将显示“审核”链接，选择该链接后，将显示已发布的社区内容，并允许其以与创作环境中的[审核控制台](/help/communities/moderation.md)类似的方式[审核](/help/communities/moderate-ugc.md)。
+当社区成员具有审核权限时，将显示审核链接，选择该链接后，将显示已发布的社区内容并允许该内容发布 [已审核](/help/communities/moderate-ugc.md) 与 [审核控制台](/help/communities/moderation.md) 在创作环境中。
 
 使用浏览器的“返回”按钮返回到已发布的网站。 大多数控制台无法在发布环境中通过全局导航访问。
 
@@ -222,9 +222,9 @@ ht-degree: 1%
 
 默认情况下，电子邮件地址为登录ID。 如果未选中，则访客可以输入自己的登录ID（用户名）。 在发布环境中，用户名必须唯一。
 
-指定用户的名称、电子邮件和密码后，选择`Sign Up`将创建用户并允许他们进行签名。
+指定用户名、电子邮件和密码后，选择 `Sign Up` 将创建用户并允许他们进行签名。
 
-登录后，显示的第一个页面是其`Profile`页面，它们可以对其进行个性化设置。
+登录后，显示的第一个页面是 `Profile` 页面，用户可以对其进行个性化。
 
 ![配置文件](assets/profile.png)
 

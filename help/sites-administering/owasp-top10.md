@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # OWASP前10{#owasp-top}
 
-[Open Web应用程序安全项目](https://www.owasp.org)(OWASP)维护一个列表，列出他们认为的[前10个Web应用程序安全风险](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)。
+的 [打开Web应用程序安全项目](https://www.owasp.org) (OWASP)保存一份清单，列有 [Web应用程序十大安全风险](https://www.owasp.org/index.php/OWASP_Top_Ten_Project).
 
 下面列出了这些内容，以及CRX如何处理这些内容的说明。
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 ## 2.跨站点脚本(XSS) {#cross-site-scripting-xss}
 
-一般的缓解做法是使用基于[OWASP Encoder](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project)和[AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)的服务器端XSS保护库对用户生成内容的所有输出进行编码。
+一般的缓解做法是使用基于的服务器端XSS保护库对用户生成内容的所有输出进行编码 [OWASP编码器](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) 和 [AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
 
 在测试和开发过程中，XSS都是头等大事，发现的任何问题（通常）都会立即得到解决。
 
 ## 3.身份验证和会话管理中断 {#broken-authentication-and-session-management}
 
-AEM使用完善且经过验证的身份验证技术，依赖于[Apache Jackrabbit](https://jackrabbit.apache.org/)和[Apache Sling](https://sling.apache.org/)。 浏览器/HTTP会话不在AEM中使用。
+AEM使用完善且经过验证的身份验证技术，依赖 [Apache Jackrabbit](https://jackrabbit.apache.org/) 和 [Apache Sling](https://sling.apache.org/). 浏览器/HTTP会话不在AEM中使用。
 
 ## 4.不安全的直接对象引用 {#insecure-direct-object-references}
 
@@ -48,13 +48,13 @@ AEM使用完善且经过验证的身份验证技术，依赖于[Apache Jackrabbi
 
 通过自动将加密令牌插入所有表单和AJAX请求中，并在服务器上为每个POST验证此令牌，可缓解跨站点请求伪造(CSRF)问题。
 
-此外，AEM附带基于反向链接标头的过滤器，该过滤器可配置为&#x200B;*仅*&#x200B;允许来自特定主机的POST请求（在列表中定义）。
+此外，AEM附带基于反向链接标题的过滤器，该过滤器可配置为 *仅* 允许来自特定主机的POST请求（在列表中定义）。
 
 ## 6.安全配置错误 {#security-misconfiguration}
 
-不可能保证所有软件始终正确配置。 但是，我们努力提供尽可能多的指导，并尽可能简化配置。 此外，AEM还附带[集成的安全运行状况检查](/help/sites-administering/operations-dashboard.md)，可帮助您快速监控安全配置。
+不可能保证所有软件始终正确配置。 但是，我们努力提供尽可能多的指导，并尽可能简化配置。 此外，AEM附带 [集成的安全运行状况检查](/help/sites-administering/operations-dashboard.md) 可帮助您快速监控安全配置。
 
-请查看[安全检查表](/help/sites-administering/security-checklist.md)以了解为您提供逐步强化说明的更多信息。
+请查看 [安全检查列表](/help/sites-administering/security-checklist.md) 有关为您提供逐步强化说明的更多信息。
 
 ## 7.不安全的加密存储 {#insecure-cryptographic-storage}
 
@@ -64,7 +64,7 @@ AEM使用完善且经过验证的身份验证技术，依赖于[Apache Jackrabbi
 
 ## 8.限制URL访问失败 {#failure-to-restrict-url-access}
 
-存储库允许通过访问控制条目为任何给定路径上的任何给定用户或组设置[细粒度权限（由JCR指定）](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)。 访问限制由存储库强制实施。
+存储库允许将 [细粒度权限（由JCR指定）](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) 通过访问控制条目，对于任何给定路径上的任何给定用户或组。 访问限制由存储库强制实施。
 
 ## 9.传输层保护不足 {#insufficient-transport-layer-protection}
 

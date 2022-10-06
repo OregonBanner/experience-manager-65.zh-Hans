@@ -1,8 +1,8 @@
 ---
 title: 叠加社区组件
-seo-title: 叠加社区组件
+seo-title: Overlay communities components
 description: 叠加社区组件
-seo-description: 叠加社区组件
+seo-description: Overlay communities components
 uuid: 872f7006-959a-49d2-b025-3a5abb7c6dca
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 18376805-c2ed-439a-abc7-e9657afe8baf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
-# 覆盖社区组件{#overlay-communities-components}
+# 叠加社区组件 {#overlay-communities-components}
 
-[覆盖](/help/communities/client-customize.md#overlays)默认组件的意图是全局更改组件的外观或行为，以便对组件进行所有相对引用。 在/libs文件夹中搜索之前，它依赖于sling的性质来解析到/apps文件夹。 因此，组件的路径与默认组件的路径相同，不同之处在/apps文件夹中，而不是/libs文件夹中。
+意图 [覆盖](/help/communities/client-customize.md#overlays) 默认组件是全局更改组件的外观或行为，以便对组件进行所有相对引用。 在/libs文件夹中搜索之前，它依赖于sling的性质来解析到/apps文件夹。 因此，组件的路径与默认组件的路径相同，不同之处在/apps文件夹中，而不是/libs文件夹中。
 
 ## 示例 {#example}
 
@@ -36,9 +36,9 @@ ht-degree: 0%
 
 **叠加通知电子邮件**
 
-假定要自定义电子邮件通知的消息，可以通过[覆盖](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html**&#x200B;中的模板来执行此操作。
+假定您要自定义电子邮件通知的消息，可以通过 [覆盖](/help/communities/client-customize.md#overlays) 模板位于 **/libs/settings/community/templates/email/html**.
 
-例如，要修改提及次数电子邮件通知（针对创建ugc的特定社区组件），请在为其启用&#x200B;**@mentions**&#x200B;支持的组件模板中，为动词&#x200B;**提及**&#x200B;添加&#x200B;**条件。**
+例如，要修改提及次数电子邮件通知（针对创建ugc的特定社区组件），请添加 **if** 动词条件 **提及** 在为其启用 **@mentions** 支持。
 
 ```java
 {{#equals this.verb "mention"}}\
@@ -46,4 +46,4 @@ ht-degree: 0%
 {{/equals}}\
 ```
 
-要修改博客评论中@mention的电子邮件通知模板，请将开箱即用模板放置：`/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`
+要修改博客评论中@mention的电子邮件通知模板，请将开箱即用模板放置： `/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en`

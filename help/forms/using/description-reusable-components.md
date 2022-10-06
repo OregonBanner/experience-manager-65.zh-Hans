@@ -1,8 +1,8 @@
 ---
 title: 可重用组件描述
-seo-title: 可重用组件描述
+seo-title: Description of reusable components
 description: 可重用组件的完整列表，包含文件名和依赖项，可帮助您将AEM Forms工作区组件集成到Web应用程序中。
-seo-description: 可重用组件的完整列表，包含文件名和依赖项，可帮助您将AEM Forms工作区组件集成到Web应用程序中。
+seo-description: A complete list of reusable components with filenames and dependencies, to help you integrate AEM Forms workspace component in your web applications.
 uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
 contentOwner: robhagat
 content-type: reference
@@ -12,14 +12,14 @@ discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1231'
 ht-degree: 9%
 
 ---
 
-# 可重用组件{#description-of-reusable-components}的描述
+# 可重用组件描述 {#description-of-reusable-components}
 
-AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-components-web.md)组件组成，这些组件组织在CRX™中的特定[文件夹结构](/help/forms/using/folder-structure.md)中。 每个组件在文件夹结构中指定的位置都有模型、视图和模板文件，JavaScript™依赖于其他组件文件，组件侦听的事件以及在AEM Forms工作区中触发这些事件的JavaScript对象。 此处提供了包含组成文件名和依赖项的可重用组件的完整列表。
+AEM Forms工作区由 [可重用](/help/forms/using/integrating-html-ws-components-web.md) 按特定 [文件夹结构](/help/forms/using/folder-structure.md) 在CRX™中。 每个组件在文件夹结构中指定的位置都有模型、视图和模板文件，JavaScript™依赖于其他组件文件，组件侦听的事件以及在AEM Forms工作区中触发这些事件的JavaScript对象。 此处提供了包含组成文件名和依赖项的可重用组件的完整列表。
 
 ## 任务列表 {#tasklist}
 
@@ -151,7 +151,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
  </tbody>
 </table>
 
-## 筛选器 {#filter}
+## 过滤器 {#filter}
 
 <table>
  <tbody>
@@ -924,7 +924,7 @@ AEM Forms工作区由[可重用](/help/forms/using/integrating-html-ws-component
    <td>
     <ul>
      <li>userImageUrlIcated - userinfo模型</li>
-     <li>sessionRextended - userinfo模型<br /> </li>
+     <li>sessionRextended - userinfo模型 <br /> </li>
      <li>sessionExpired - userinfo模型 </li>
     </ul> </td>
   </tr>

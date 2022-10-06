@@ -13,7 +13,7 @@ exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 source-git-commit: de58ba638c22b7148e1349417d1f514c26c5887e
 workflow-type: tm+mt
 source-wordcount: '3525'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 在 **更多** 按钮。
 
 * [删除](#deleting-packages)
-* [范围](#package-coverage)
+* [覆盖率](#package-coverage)
 * [个内容](#viewing-package-contents-and-testing-installation)
 * [重新包装](#rewrapping-a-package)
 * [其他版本](#other-versions)
@@ -467,7 +467,7 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 通过POST请求验证时，响应将作为JSON对象发送回来。
 
-### 查看包覆盖面 {#package-coverage}
+### 查看包覆盖 {#package-coverage}
 
 包由其过滤器定义。 您可以让包管理器将包的过滤器应用于您现有的存储库内容，以显示包的过滤器定义涵盖的存储库内容。
 
@@ -559,7 +559,7 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 1. [访问包管理器。](#accessing)
 
-1. 通过单击资源包名称，从资源包列表中打开要复制的资源包详细信息。
+1. 通过单击包名称，从包列表中打开要复制的包的包详细信息。
 
 1. 单击 **更多** -> **复制**.
 

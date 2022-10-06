@@ -15,7 +15,7 @@ exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
 source-git-commit: d6c875e85d553b8ef557b811c9fa43f46824f297
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ AEM交付和内容管理API:
 * 核心组件(JSON)
 
    * [JSON导出程序](/help/sites-developing/json-exporter.md)
-   * [为组件启用JSON导出](/help/sites-developing/json-exporter-components.md)
+   * [为组件启用 JSON 导出](/help/sites-developing/json-exporter-components.md)
    * 请参阅 [Developing用户指南中的组件部分](/help/sites-developing/home.md) 有关详细信息
 
 * **资产**:资产HTTP API允许对资产执行创建读取更新 — 删除(CRUD)操作，包括二进制、元数据、演绎版和注释。 请参阅 [AEM Assets HTTP API](/help/assets/mac-api-assets.md)

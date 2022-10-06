@@ -1,8 +1,8 @@
 ---
 title: 将草稿和提交组件与数据库集成的示例
-seo-title: 将草稿和提交组件与数据库集成的示例
+seo-title: Sample for integrating drafts & submissions component with database
 description: 引用自定义数据和元数据服务的实施，以将草稿和提交组件与数据库集成。
-seo-description: 引用自定义数据和元数据服务的实施，以将草稿和提交组件与数据库集成。
+seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
 uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,44 +11,44 @@ discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1467'
 ht-degree: 1%
 
 ---
 
-# 将草稿和提交组件与数据库{#sample-for-integrating-drafts-submissions-component-with-database}集成的示例
+# 将草稿和提交组件与数据库集成的示例 {#sample-for-integrating-drafts-submissions-component-with-database}
 
-## 示例概述{#sample-overview}
+## 示例概述 {#sample-overview}
 
 AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿，稍后从任何设备提交。 此外，用户还可以在门户上查看其提交的表单。 为启用此功能，AEM Forms提供了数据和元数据服务，用于存储用户在表单中填写的数据以及与草稿和提交的表单关联的表单元数据。 默认情况下，此数据存储在CRX存储库中。 但是，当用户通过AEM发布实例与表单进行交互时（通常位于企业防火墙之外），组织可能希望自定义数据存储以使其更加安全可靠。
 
-本文档中讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成在一起。 示例实现中使用的数据库是&#x200B;**MySQL 5.6.24**。 但是，您可以将草稿和提交组件与您选择的任何数据库相集成。
+本文档中讨论的示例是自定义数据和元数据服务的参考实现，用于将草稿和提交组件与数据库集成在一起。 示例实现中使用的数据库为 **MySQL 5.6.24**. 但是，您可以将草稿和提交组件与您选择的任何数据库相集成。
 
 >[!NOTE]
 >
->* 本文档中介绍的示例和配置符合MySQL 5.6.24的要求，您必须将它们适当地替换为数据库系统。
->* 确保您已安装最新版本的AEM Forms附加组件包。 有关可用包的列表，请参阅[AEM Forms发行版](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)文章。
+>* 本文档中介绍的示例和配置符合MySQL 5.6.24的要求，您必须将其适当替换为数据库系统。
+>* 确保您已安装最新版本的AEM Forms附加组件包。 有关可用包的列表，请参阅 [AEM Forms版本](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html) 文章。
 >* 示例包仅适用于自适应Forms提交操作。
 
 
-## 设置并配置示例{#set-up-and-configure-the-sample}
+## 设置和配置示例 {#set-up-and-configure-the-sample}
 
 对所有创作实例和发布实例执行以下步骤以安装和配置示例：
 
-1. 将以下&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;包下载到您的文件系统。
+1. 下载以下内容 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 包到文件系统。
 
    数据库集成的示例包
 
 [获取文件](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 转到位于https://[*host*]&#x200B;的AEM包管理器：[*port*]/crx/packmgr/。
-1. 单击&#x200B;**[!UICONTROL 上传包]**。
+1. 转到AEM包管理器，网址为https://[*主机*]:[*端口*]/crx/packmgr/。
+1. 单击 **[!UICONTROL 上传包]**.
 
-1. 浏览以选择&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;包，然后单击&#x200B;**[!UICONTROL 确定]**。
-1. 单击包旁边的&#x200B;**[!UICONTROL 安装]**&#x200B;以安装包。
-1. 转到&#x200B;**[!UICONTROL AEM Web控制台配置]**
-位于https://[*host*]&#x200B;的页面：[*port*]/system/console/configMgr。
-1. 单击以在编辑模式下打开&#x200B;**[!UICONTROL Forms Portal草稿和提交配置]**。
+1. 浏览以选择 **aem-fp-db-integration-sample-pkg-6.1.2.zip** 包并单击 **[!UICONTROL 确定]**.
+1. 单击 **[!UICONTROL 安装]** ，以安装包。
+1. 转到 **[!UICONTROL AEM Web控制台配置]**
+https://页面[*主机*]:[*端口*]/system/console/configMgr。
+1. 单击以打开 **[!UICONTROL Forms门户草稿和提交配置]** 在编辑模式下。
 
 1. 指定属性的值，如下表所述：
 
@@ -63,7 +63,7 @@ AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿�
 
    >[!NOTE]
    >
-   >这些服务通过其名称解析，其名称被提及为`aem.formsportal.impl.prop`键值，如下所示：
+   >这些服务通过其名称解析，这些名称在 `aem.formsportal.impl.prop` 键：
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -85,10 +85,10 @@ AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿�
    >
    >如果更改表名称，请在表单门户配置中提供它们。
 
-1. 保持其他配置原样，然后单击&#x200B;**[!UICONTROL Save]**。
+1. 保持其他配置原样，然后单击 **[!UICONTROL 保存]**.
 
 1. 数据库连接可通过Apache Sling连接池化数据源完成。
-1. 对于Apache Sling连接，在Web控制台配置的编辑模式下，找到并单击以打开&#x200B;**[!UICONTROL Apache Sling连接池化数据源]**。 指定属性的值，如下表所述：
+1. 对于Apache Sling连接，找到并单击以打开 **[!UICONTROL Apache Sling连接池化数据源]** 在“Web控制台配置”的编辑模式下。 指定属性的值，如下表所述：
 
 <table>
  <tbody>
@@ -106,7 +106,7 @@ AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿�
   </tr>
   <tr>
    <td>JDBC连接URI<br /> </td>
-   <td>jdbc[<em>host</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
+   <td>jdbc:mysql://[<em>主机</em>]:[<em>端口</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>用户名</td>
@@ -163,12 +163,10 @@ AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿�
 >
 > * MySQL的JDBC驱动程序未提供示例。 确保已为其进行配置，并提供配置JDBC连接池所需的信息。
 > * 将创作实例和发布实例指向使用同一数据库。 对于所有创作实例和发布实例，JDBC连接URI字段的值必须相同。
-
->
-
+   >
 
 
-1. 保持其他配置原样，然后单击&#x200B;**[!UICONTROL Save]**。
+1. 保持其他配置原样，然后单击 **[!UICONTROL 保存]**.
 
 1. 如果数据库架构中已有表，请跳转到下一步。
 
@@ -304,49 +302,49 @@ AEM Forms Portal的草稿和提交组件允许用户将其表单另存为草稿�
 
 现在已配置示例实施，您可以在数据库中存储所有数据和元数据时，使用该实施列出草稿和提交。 现在，让我们看看如何在示例中配置数据和元数据服务。
 
-## 安装mysql-connector-java-5.1.39-bin.jar文件{#install-mysql-connector-java-bin-jar-file}
+## 安装mysql-connector-java-5.1.39-bin.jar文件 {#install-mysql-connector-java-bin-jar-file}
 
 对所有创作实例和发布实例执行以下步骤，以安装mysql-connector-java-5.1.39-bin.jar文件：
 
-1. 导航到`https://'[server]:[port]'/system/console/depfinder`并搜索com.mysql.jdbc包。
+1. 导航到 `https://'[server]:[port]'/system/console/depfinder` 和搜索com.mysql.jdbc包。
 1. 在“导出方式”列中，检查包是否由任何包导出。
 
    如果包未被任何包导出，则继续。
 
-1. 导航到`https://'[server]:[port]'/system/console/bundles`并单击&#x200B;**[!UICONTROL Install/Update]**。
-1. 单击&#x200B;**[!UICONTROL 选择文件]**&#x200B;并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选中&#x200B;**[!UICONTROL 启动包]**&#x200B;和&#x200B;**[!UICONTROL 刷新包]**&#x200B;复选框。
-1. 单击&#x200B;**[!UICONTROL 安装或更新]**。 完成后，重新启动服务器。
-1. （*仅Windows*）关闭操作系统的系统防火墙。
+1. 导航到 `https://'[server]:[port]'/system/console/bundles` 单击 **[!UICONTROL 安装/更新]**.
+1. 单击 **[!UICONTROL 选择文件]** 并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择 **[!UICONTROL 启动包]** 和 **[!UICONTROL 刷新包]** 复选框。
+1. 单击 **[!UICONTROL 安装或更新]**. 完成后，重新启动服务器。
+1. (*仅限Windows*)关闭操作系统的系统防火墙。
 
-## 表单门户数据和元数据服务的示例代码{#sample-code-for-forms-portal-data-and-metadata-service}
+## 表单门户数据和元数据服务的示例代码 {#sample-code-for-forms-portal-data-and-metadata-service}
 
-以下zip包含用于数据和元数据服务接口的`FormsPortalSampleDataServiceImpl`和`FormsPortalSampleMetadataServiceImpl`（实施类）。 此外，它包含编译上述实现类所需的所有类。
+以下zip文件包含 `FormsPortalSampleDataServiceImpl` 和 `FormsPortalSampleMetadataServiceImpl` （实施类）。 此外，它包含编译上述实现类所需的所有类。
 
 [获取文件](assets/sample_package.zip)
 
-## 验证文件名{#verify-length-of-the-file-name}的长度
+## 验证文件名的长度  {#verify-length-of-the-file-name}
 
 Forms Portal的数据库实施使用其他元数据表。 表具有基于表的键和id列的复合主键。 MySQL允许主键的长度不超过255个字符。 您可以使用以下客户端验证脚本来验证附加到文件小组件的文件名长度。 附加文件后，将运行验证。 当文件名大于150（包括扩展名）时，以下过程中提供的脚本会显示一条消息。 您可以修改脚本，以检查其是否存在不同数量的字符。
 
-执行以下步骤以创建[客户端库](/help/sites-developing/clientlibs.md)并使用脚本：
+执行以下步骤以创建 [客户端库](/help/sites-developing/clientlibs.md) 和使用脚本：
 
 1. 登录到CRXDE并导航到/etc/clientlibs/
-1. 创建类型为&#x200B;**cq:ClientLibraryFolder**&#x200B;的节点，并提供该节点的名称。 例如，`validation`。
+1. 创建类型的节点 **cq:ClientLibraryFolder** 和提供节点的名称。 例如：`validation`。
 
-   单击&#x200B;**[!UICONTROL Save All]**。
+   单击 **[!UICONTROL 全部保存]**.
 
-1. 右键单击节点，单击&#x200B;**[!UICONTROL 创建新文件]**，然后创建扩展名为.txt的文件。 例如， `js.txt`将以下代码添加到新创建的.txt文件中，然后单击&#x200B;**[!UICONTROL 保存全部]**。
+1. 右键单击节点，单击 **[!UICONTROL 创建新文件]**，然后创建扩展名为.txt的文件。 例如， `js.txt`将以下代码添加到新创建的.txt文件中，然后单击 **[!UICONTROL 全部保存]**.
 
    ```javascript
    #base=util
     util.js
    ```
 
-   在上述代码中，`util`是文件夹的名称，`util.js`是`util`文件夹中文件的名称。 在以下步骤中创建`util`文件夹和`util.js`文件。
+   在上述代码中， `util` 是文件夹的名称，并且 `util.js` 中文件的名称 `util` 文件夹。 的 `util` 文件夹和 `util.js` 文件。
 
-1. 右键单击在步骤2中创建的`cq:ClientLibraryFolder`节点，选择创建>创建文件夹。 创建名为`util`的文件夹。 单击&#x200B;**[!UICONTROL Save All]**。 右键单击`util`文件夹，选择创建>创建文件。 创建名为`util.js`的文件。 单击&#x200B;**[!UICONTROL Save All]**。
+1. 右键单击 `cq:ClientLibraryFolder` 在步骤2中创建的节点，选择创建>创建文件夹。 创建名为的文件夹 `util`. 单击 **[!UICONTROL 全部保存]**. 右键单击 `util` 文件夹，选择创建>创建文件。 创建名为 `util.js`. 单击 **[!UICONTROL 全部保存]**.
 
-1. 将以下代码添加到util.js文件中，然后单击&#x200B;**[!UICONTROL 保存全部]**。 代码验证文件名的长度。
+1. 将以下代码添加到util.js文件中，然后单击 **[!UICONTROL 全部保存]**. 代码验证文件名的长度。
 
    ```javascript
    /*
@@ -403,7 +401,7 @@ Forms Portal的数据库实施使用其他元数据表。 表具有基于表的�
    >
    >此脚本适用于开箱即用(OOTB)附件小组件。 如果您已自定义OOTB附件小组件，请更改上述脚本以合并相应更改。
 
-1. 将以下属性添加到步骤2中创建的文件夹中，然后单击&#x200B;**[!UICONTROL Save All]**。
+1. 将以下属性添加到在步骤2中创建的文件夹中，然后单击 **[!UICONTROL 全部保存]**.
 
    * **[!UICONTROL 名称：]** 类别
 
@@ -413,12 +411,12 @@ Forms Portal的数据库实施使用其他元数据表。 表具有基于表的�
 
    * **[!UICONTROL 多选项：]** 已启用
 
-1. 导航到`/libs/fd/af/runtime/clientlibs/guideRuntime`，并将`fp.validation`值附加到embed属性。
+1. 导航到 `/libs/fd/af/runtime/clientlibs/guideRuntime`并附加 `fp.validation` 的值。
 
-1. 导航到/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA并将`fp.validation`值附加到embed属性。
+1. 导航到/libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA并附加 `fp.validation` 值嵌入属性。
 
    >[!NOTE]
    >
    >如果您使用的是自定义客户端库，而不是guideRuntime和guideRuntimeWithXfa客户端库，请使用类别名称将此过程中创建的客户端库嵌入到运行时加载的自定义库中。
 
-1. 单击&#x200B;**[!UICONTROL 全部保存。]** 现在，当文件名大于150（包括扩展名）字符时，会显示消息。
+1. 单击 **[!UICONTROL 全部保存。]** 现在，当文件名大于150（包括扩展名）字符时，会显示消息。

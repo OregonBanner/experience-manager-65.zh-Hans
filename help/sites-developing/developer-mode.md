@@ -1,8 +1,8 @@
 ---
 title: 开发人员模式
-seo-title: 开发人员模式
+seo-title: Developer Mode
 description: 开发人员模式会打开包含多个选项卡的侧面板，这些选项卡为开发人员提供有关当前页面的信息
-seo-description: 开发人员模式会打开包含多个选项卡的侧面板，这些选项卡为开发人员提供有关当前页面的信息
+seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
 uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,18 +13,18 @@ docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 0%
+source-wordcount: '687'
+ht-degree: 1%
 
 ---
 
 # 开发人员模式{#developer-mode}
 
-在AEM中编辑页面时，可以使用多个[模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui)，包括开发人员模式。 这会打开一个侧面板，其中包含多个选项卡，用于向开发人员提供有关当前页面的信息。 这三个选项卡是：
+在AEM中编辑页面时， [模式](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) 包括开发人员模式。 这会打开一个侧面板，其中包含多个选项卡，用于向开发人员提供有关当前页面的信息。 这三个选项卡是：
 
-* **[](#components)** 用于查看结构和性能信息的组件。
-* **[](#tests)** 测试运行并分析结果。
-* **[](#errors)** 错误，无法看到发生的任何问题。
+* **[组件](#components)** ，以查看结构和性能信息。
+* **[测试](#tests)** 用于运行测试和分析结果。
+* **[错误](#errors)** 来发现任何问题。
 
 这些帮助开发人员：
 
@@ -38,11 +38,9 @@ ht-degree: 0%
 >
 >* 仅在触屏UI中可用（编辑页面时）。
 >* 在移动设备上或桌面上的小窗口上不可用（由于空间限制）。
-
    >
-   >   
-   * 当宽度小于1024像素时，会发生这种情况。
->* 仅适用于属于`administrators`组成员的用户。
+   >   * 当宽度小于1024像素时，会发生这种情况。
+>* 仅适用于 `administrators` 群组。
 
 
 >[!CAUTION]
@@ -53,33 +51,29 @@ ht-degree: 0%
 >
 >* 在使用nosamplecontent run-mode的创作实例上
 >* 发布实例
-
 >
->
-在使用后应再次禁用该功能。
+>在使用后应再次禁用该功能。
 
 >[!NOTE]
 >
 >请参阅：
 >
->* 知识库文章[AEM TouchUI问题疑难解答](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以获取更多提示和工具。
->* AEM Gem会话关于[AEM 6.0开发人员模式](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)。
-
+>* 知识库文章， [AEM触屏UI问题疑难解答](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)，以获取更多提示和工具。
+>* AEM Gem会议关于 [AEM 6.0开发人员模式](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
 >
 
 
+## 打开开发人员模式 {#opening-developer-mode}
 
-## 打开开发人员模式{#opening-developer-mode}
-
-开发人员模式作为页面编辑器的侧面板来实施。 要打开面板，请从页面编辑器工具栏的模式选择器中选择&#x200B;**Developer**:
+开发人员模式作为页面编辑器的侧面板来实施。 要打开面板，请选择 **开发人员** 从页面编辑器工具栏的模式选择器中：
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
 该面板分为两个选项卡：
 
-* **[组件](/help/sites-developing/developer-mode.md#components)**  — 此时会显示一个组件树，与作者的内 [容](/help/sites-authoring/author-environment-tools.md#content-tree) 树类似
+* **[组件](/help/sites-developing/developer-mode.md#components)**  — 此时会显示组件树，与 [内容树](/help/sites-authoring/author-environment-tools.md#content-tree) 对于作者
 
-* **[错误](/help/sites-developing/developer-mode.md#errors)**  — 出现问题时，将显示每个组件的详细信息。
+* **[错误](/help/sites-developing/developer-mode.md#errors)**  — 当出现问题时，将显示每个组件的详细信息。
 
 ### 组件 {#components}
 
@@ -126,18 +120,18 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->某些链接指向`/libs`下的脚本。 但是，这些参数仅供参考，您&#x200B;**不得**&#x200B;编辑`/libs`下的任何内容，因为您所做的任何更改都可能丢失。 这是因为当您升级或应用修补程序/功能包时，此分支可能会发生更改。 您所需的任何更改都应在`/apps`下进行，请参阅[叠加和覆盖](/help/sites-developing/overlays.md)。
+>某些链接指向下的脚本 `/libs`. 但是，这些仅供参考，您 **必须** 编辑下的任何内容 `/libs`，因为您所做的任何更改都可能会丢失。 这是因为当您升级或应用修补程序/功能包时，此分支可能会发生更改。 您所需的任何更改均应在 `/apps`，请参阅 [叠加和覆盖](/help/sites-developing/overlays.md).
 
 ### 错误 {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-希望&#x200B;**Errors**&#x200B;选项卡将始终为空（如上所示），但是当出现问题时，将为每个组件显示以下详细信息：
+希望 **错误** 选项卡将始终为空（如上所示），但出现问题时，将为每个组件显示以下详细信息：
 
 * 当组件将条目写入错误日志、错误详细信息以及指向CRXDE Lite中相应代码的链接时，会出现警告。
 * 组件打开管理员会话时出现警告。
 
-例如，在调用了未定义方法的情况下，导致的错误将显示在&#x200B;**Errors**&#x200B;选项卡中：
+例如，在调用了未定义方法的情况下，将在 **错误** 选项卡：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -149,4 +143,4 @@ ht-degree: 0%
 >
 >在AEM 6.2中，作为独立的工具应用程序重新实施了开发人员模式的测试功能。
 >
->有关完整的详细信息，请参阅[测试UI](/help/sites-developing/hobbes.md)。
+>有关详细信息，请参阅 [测试您的UI](/help/sites-developing/hobbes.md).

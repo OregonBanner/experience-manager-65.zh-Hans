@@ -1,8 +1,8 @@
 ---
 title: 使用创作环境
-seo-title: 使用创作环境
+seo-title: Working with the Author Environment
 description: 在创作环境中，您可以执行与创作相关的任务（包括页面创作和资产管理），以及在网站上生成和维护内容时所需的管理任务。
-seo-description: 在创作环境中，您可以执行与创作相关的任务（包括页面创作和资产管理），以及在网站上生成和维护内容时所需的管理任务。
+seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
 uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 exl-id: 4486c503-21e6-493a-8994-b0f8cd34c85a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 86%
+source-wordcount: '250'
+ht-degree: 84%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->以下文档重点介绍经典 UI。有关在现代化的触屏优化UI中进行创作的信息，请参阅[标准创作文档](/help/assets/assets.md)。
+>以下文档重点介绍经典 UI。有关在现代化触屏优化UI中进行创作的信息，请参阅 [标准创作文档](/help/assets/assets.md).
 
 在创作环境中，您可以执行与以下各项相关的任务：
 
-* [创作](/help/sites-authoring/author.md) (包括页 [面](/help/sites-authoring/qg-page-authoring.md) 创作和 [管理资产](/help/assets/assets.md))
+* [创作](/help/sites-authoring/author.md) (包括 [页面创作](/help/sites-authoring/qg-page-authoring.md) 和 [管理资产](/help/assets/assets.md))
 
 * 在网站上生成和维护内容时所需的[管理](/help/sites-administering/administer-best-practices.md)任务
 
@@ -45,7 +45,7 @@ ht-degree: 86%
    * 这是新式标准 AEM UI。
    * 主色调为灰色，且采用整洁的平面界面。
    * 既适用于触控设备，也适用于桌面设备（针对触屏进行了优化）。其外观和感觉在所有设备上都是相同的，只是[查看和选择资源](/help/sites-authoring/basic-handling.md)稍有不同（分别采用点按和单击方式）。
-   * 有关如何使用触屏UI进行创作的更多详细信息，请参阅[标准创作文档](/help/sites-authoring/author.md)。 以下文档重点介绍经典 UI。
+   * 请参阅 [标准创作文档](/help/sites-authoring/author.md) 有关如何使用触屏UI进行创作的更多详细信息。 以下文档重点介绍经典 UI。
 
    * 桌面设备：
    ![chlimage_1-150](assets/chlimage_1-150.png)

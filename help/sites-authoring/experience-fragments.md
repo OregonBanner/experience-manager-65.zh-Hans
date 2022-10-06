@@ -14,7 +14,7 @@ exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
 source-git-commit: ab6fd8ca02d2a24e5973b5d78bc75288b5cc26c0
 workflow-type: tm+mt
 source-wordcount: '1440'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -27,18 +27,19 @@ ht-degree: 92%
 * 体验的一部分（页面）。
 * 可以跨多个页面使用。
 * 基于模板（仅可编辑）来定义结构和组件。
-* 此模板用于创建 *根页面* 体验片段的URL。
+* 此模板用于创建体验片段的&#x200B;*根页面*。
 * 由段落系统中的一个或多个的组件及布局构成。
 * 可以包含其他体验片段。
 * 可以与其他组件（包括其他体验片段）结合使用来构成完整的页面（体验）。
-* 可以基于根页面创建一个或多个变量。
-* 这些变体可能共享内容和/或组件。
-* 可以划分为可在片段的多个变体中使用的构建基块。
+* 可以基于根页面创建一个或多个变体。
+* 这些变体可以共享内容和/或组件。
+* 可以划分为可在片段的多个变体中使用的构建块。
 
 您可以使用体验片段：
 
 * 如果作者希望重复使用页面的某些部分（某个体验片段），则需要复制并粘贴该片段。创建并维护这些复制/粘贴体验非常费时，而且容易导致用户错误。体验片段无需复制/粘贴。
-* 支持无头 CMS 用例。作者希望仅将 AEM 用于创作，而不是用于提供给客户。第三方系统/触点会使用该体验，然后将其提供给最终用户。
+* 支持 headless CMS 用例。
+作者希望仅将 AEM 用于创作，而不是用于提供给客户。第三方系统/触点会使用该体验，然后将其提供给最终用户。
 
 >[!NOTE]
 >
@@ -55,9 +56,9 @@ ht-degree: 92%
 
    * 将重复使用内容相同或相似的体验
 
-* 当您使用 AEM 作为第三方的内容交付平台时。
+* 当您使用 AEM 作为第三方的内容投放平台时。
 
-   * 任何需要使用 AEM 作为内容交付平台的解决方案
+   * 任何需要使用 AEM 作为内容投放平台的解决方案
    * 将内容嵌入第三方触点
 
 * 当您有一个具有不同变体或呈现版本的体验时。
@@ -82,7 +83,7 @@ ht-degree: 92%
 * 为您的体验片段创建有意义的结构；例如，根据分类
 
    >[!NOTE]
-   无需将体验片段的结构与站点的页面结构保持一致。
+   无需将体验片段的结构于站点的页面结构保持一致。
 
 * [在文件夹级别分配允许的模板](#configure-allowed-templates-folder)
 
@@ -125,7 +126,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
    请参阅：
    `http://localhost:4502/mnt/overlay/cq/experience-fragments/content/experience-fragments/folderproperties.html/content/experience-fragments/wknd`
 
-   ![体验片段属性 - 允许的模板](/help/sites-authoring/assets/xf-folders-templates.png)
+   ![体验片段属性 – 允许的模板](/help/sites-authoring/assets/xf-folders-templates.png)
 
    >[!NOTE]
    请参阅[体验片段的模板](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments)，以进一步了解详细信息。
@@ -146,7 +147,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 1. 在&#x200B;**配置体验片段**&#x200B;对话框中指定所需的模板：
 
-   ![配置 Experience Fragments](assets/ef-01.png)
+   ![配置体验片段](assets/ef-01.png)
 
    >[!NOTE]
    请参阅[体验片段的模板](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments)，以进一步了解详细信息。
@@ -178,8 +179,8 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
    ![xf-04](assets/xf-04.png)
 
    >[!NOTE]
-   体验片段模板中的标记将不会与此体验片段根页面上的标记合并。
-   这些是完全分开的。
+   体验片段模板中的标记不会与此体验片段根页面上的标记合并。
+   它们是完全独立的。
 
 1. 单击&#x200B;**创建**。
 
@@ -218,7 +219,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 1. **创建**&#x200B;使您能够创建：
 
-   * **变量**
+   * **变体**
    * **live-copy 形式的变体**。
 
 1. 定义所需属性：
@@ -237,7 +238,7 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
 ## 使用您的体验片段 {#using-your-experience-fragment}
 
-您现在可以在创作页面时使用您的经验片段：
+您现在可以在创作页面时使用您的体验片段：
 
 1. 打开要编辑的任何页面。
 
@@ -257,23 +258,23 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
    >[!NOTE]
    组件工具栏中的“编辑”将用作在片段编辑器中打开片段的快捷方式。
 
-## 构建基块 {#building-blocks}
+## 构建块 {#building-blocks}
 
-您可以选择一个或多个组件来创建用于在片段中回收的构建基块：
+您可以选择一个或多个组件来创建用于在片段中回收的构建块：
 
-### 创建构建基块 {#creating-a-building-block}
+### 创建构建块 {#creating-a-building-block}
 
-要创建构建基块，请执行以下操作：
+要创建构建块，请执行以下操作：
 
 1. 在体验片段编辑器中，选择要重复使用的组件：
 
    ![xf-10](assets/xf-10.png)
 
-1. 从组件工具栏中选择&#x200B;**转换为构建基块**：
+1. 从组件工具栏中选择&#x200B;**转换为构建块**：
 
    ![xf-authoring-13-icon](assets/xf-authoring-13-icon.png)
 
-1. 输入&#x200B;**构建基块**&#x200B;的名称，然后使用&#x200B;**转换**&#x200B;进行确认：
+1. 输入&#x200B;**构建块**&#x200B;的名称，然后使用&#x200B;**转换**&#x200B;进行确认：
 
    ![xf-11](assets/xf-11.png)
 
@@ -281,19 +282,19 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
    ![xf-12](assets/xf-12.png)
 
-#### 管理构建基块 {#managing-a-building-block}
+#### 管理构建块 {#managing-a-building-block}
 
-您的构建基块会显示在&#x200B;**构建基块**&#x200B;选项卡中。对于每个基块，可执行以下操作：
+您的构建块会显示在&#x200B;**构建块**&#x200B;选项卡中。对于每个基块，可执行以下操作：
 
-* 转到主控:在新选项卡中打开根页面变量
+* 转至母版：在新选项卡中打开根页面变体
 * 重命名
 * 删除
 
 ![xf-13](assets/xf-13.png)
 
-#### 使用构建基块 {#using-a-building-block}
+#### 使用构建块 {#using-a-building-block}
 
-您可以将构建基块拖动到任何片段的段落系统，就像对任何组件一样。
+您可以将构建块拖动到任何片段的段落系统，就像对任何组件一样。
 
 ## 您的体验片段的详细信息 {#details-of-your-experience-fragment}
 
@@ -317,20 +318,20 @@ WKND 项目可根据 `Contributors` 构建一些体验片段。使用的结构�
 
    * **基本**
 
-      * **标题** - 必填项
+      * **标题** – 必填项
 
       * **描述**
       * **标记**
-      * **变体总数** - 仅供参考
+      * **变体总数** – 仅供参考
 
-      * **Web 变体的数量** - 仅供参考
+      * **Web 变体的数量** – 仅供参考
       * **非 Web 变体的数量** - **仅供参考**
 
-      * **使用此片段的页数** - 仅供参考
-   * **云服务**
+      * **使用此片段的页数** – 仅供参考
+   * **Cloud Service**
 
       * **云配置**
-      * **云服务配置**
+      * **Cloud Service 配置**
       * **Facebook 页面 ID**
       * **Pinterest 钉板**
    * **引用**

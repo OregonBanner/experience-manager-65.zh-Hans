@@ -14,7 +14,7 @@ exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
 source-git-commit: 084e5d561e25dcbaee4489b65f423fc9166832be
 workflow-type: tm+mt
 source-wordcount: '2000'
-ht-degree: 85%
+ht-degree: 95%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 85%
 
 通过“活动”控制台，您可以创建、组织和管理品牌的营销[活动](/help/sites-authoring/personalization.md#activities)：
 
-* 添加品牌。
-* 为每个品牌添加并配置活动。
-* 管理活动。
+* 添加品牌.
+* 为每个品牌添加并配置活动.
+* 管理活动.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 85%
 
 在“活动”控制台中，各活动按品牌进行组织。您可以使用品牌和文件夹构建活动的组织结构。通过点按/单击&#x200B;**个性化**，然后再点按/单击&#x200B;**活动**，可以导航到“活动”控制台。
 
-在“定位”模式下，可以 [创作目标内容](/help/sites-authoring/content-targeting-touch.md)，您也可以在其中创建活动。 在“定位”模式下创建的活动会显示在“活动”控制台中。
+在“定位”模式下，可以使用活动来[创作目标内容](/help/sites-authoring/content-targeting-touch.md)，您也可以在该模式下创建活动。在“定位”模式下创建的活动会显示在“活动”控制台中。
 
 活动显示有相应的标签，用于说明定义的活动类型：
 
@@ -54,15 +54,15 @@ ht-degree: 85%
 
 >[!CAUTION]
 >
->您必须保护活动设置节点 **cq:ActivitySettings** ，以便普通用户无法访问。 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+>您必须确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 >
->请参阅 [与Adobe Target集成的先决条件](/help/sites-administering/target-requirements.md#securingtheactivitysettings) 以了解详细信息。
+>请参阅[与 Adobe Target 集成的先决条件](/help/sites-administering/target-requirements.md#securingtheactivitysettings)，以了解详细信息。
 
 ## 使用“活动”控制台创建品牌 {#creating-a-brand-using-the-activities-console}
 
 创建要管理其营销活动的品牌。
 
-使用“活动”控制台创建品牌时，该品牌也会显示在 [“选件”控制台](/help/sites-authoring/offerlib.md) 您可以在其中为活动体验创建选件。
+使用“活动”控制台创建品牌后，[“选件”控制台](/help/sites-authoring/offerlib.md)（可在此处创建活动体验的选件）中也会出现该品牌。
 
 1. 在“导航”控制台中，单击或点按&#x200B;**个性化**。单击或点按&#x200B;**活动**。
 
@@ -91,7 +91,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->新的Adobe Target活动需要在目标内 ***容编辑器中*** （而不是在“活动”控制台中）创建 **** ，因为与Adobe Target的同步将失败。
+>新的 Adobe Target 活动需要在目标内容编辑器中（而不是在&#x200B;**活动**&#x200B;控制台中）***创建***，因为与 Adobe Target 的同步将失败。
 >
 >不过，您可以在该控制台中编辑现有的 Adobe Target 活动。
 
@@ -114,6 +114,7 @@ ht-degree: 85%
 
    1. 单击或点按&#x200B;**下一步**。
 
+
    如果您使用的是 Adobe Target A/B 测试，请执行以下操作：
 
    1. 单击或点按受众对话框中的铅笔图标，以选择受众。
@@ -121,6 +122,7 @@ ht-degree: 85%
 
    1. 输入显示每个体验的流量百分比。
    1. 单击或点按&#x200B;**下一步**。
+
 
 
 1. 要指定活动的开始时间，请使用&#x200B;**开始**&#x200B;下拉菜单选择以下某个值：
@@ -134,7 +136,7 @@ ht-degree: 85%
    * **指定的日期和时间**：特定的时间。选择此选项时，请单击或点按日历图标，选择一个日期，然后指定结束活动的时间。
 
 1. 要指定活动的优先级，请使用滑块选择&#x200B;**低**、**标准**&#x200B;或&#x200B;**高**。
-1. 如果您使用 Adobe Target 作为定位引擎，请选择您希望使用此活动测量什么内容。请参阅 [配置活动和设置目标](/help/sites-authoring/content-targeting-touch.md) 以了解有关可用成功量度的更多信息。 您必须至少选择一个目标。
+1. 如果您使用 Adobe Target 作为定位引擎，请选择您希望使用此活动测量什么内容。请参阅[配置活动和设置目标](/help/sites-authoring/content-targeting-touch.md)，以了解有关可用成功量度的更多信息。您必须至少选择一个目标。
 1. 单击或点按&#x200B;**保存**。
 
    >[!NOTE]
@@ -147,7 +149,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->取消发布活动时，除非刷新页面，否则活动的状态不会更改。
+>取消发布活动时，除非您刷新页面，否则活动的状态不会改变。
 
 要发布或取消发布活动，请执行以下操作：
 
@@ -171,18 +173,18 @@ ht-degree: 85%
 
 要查看活动业绩并转换入选体验，请执行以下操作：
 
-1. 在 **个性化**，单击或点按 **活动** 导航到 **活动** 控制台。
+1. 在&#x200B;**个性化**&#x200B;中，单击或点按&#x200B;**活动**，以导航到&#x200B;**活动**&#x200B;控制台。
 1. 单击或点按要查看其活动的品牌。
 1. ********&#x200B;显示性能数据。
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
-1. 单击或点按 **推送入选者** 链接以将该体验作为默认体验推送。
+1. 单击或点按&#x200B;**推送入选方**&#x200B;链接，以将入选体验推送为默认体验。
 
    如果转换入选方，则会：
 
    * 禁用当前活动
-   * 修改所有页面，并将目标内容替换为入选体验的实际内容。入选体验的内容会成为正常页面的一部分 **无** 定位。
+   * 修改所有页面，并将目标内容替换为入选体验的实际内容。入选体验的内容&#x200B;**无需**&#x200B;定位即可成为常规页面的一部分。
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -203,7 +205,7 @@ ht-degree: 85%
 同步某个活动后，Adobe Target 中会创建一个与其对应的营销活动：
 
 * 发布实例中的活动与其对应的 Adobe Target 营销活动具有相同的名称。
-* 创作实例上的活动与具有相同名称且具有 `_author` 后缀。
+* 创作实例中的活动与具有相同名称但带有 `_author` 后缀的 Target 营销活动相对应。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -213,7 +215,7 @@ ht-degree: 85%
 
 ## 活动同步故障排除 {#troubleshooting-activity-synchronization}
 
-当AEM与Adobe Target同步活动时，AEM将包含一个名为 `thirdPartyId`. 此属性的值基于活动在 AEM 存储库中的路径。Adobe Target 中的任意两个营销活动不能具有相同的 `thirdPartyId` 属性值。因此，如果 Adobe Target 中的某个现有营销活动（具有不同的类型：AB、XT）使用的 `thirdPartyId` 值与某个活动相同，则该活动的同步操作会失败。
+与 Adobe Target 同步活动时，AEM 中包含一个名为 `thirdPartyId` 的活动属性。此属性的值基于活动在 AEM 存储库中的路径。Adobe Target 中的任意两个营销活动不能具有相同的 `thirdPartyId` 属性值。因此，如果 Adobe Target 中的某个现有营销活动（具有不同的类型：AB、XT）使用的 `thirdPartyId` 值与某个活动相同，则该活动的同步操作会失败。
 
 这种情况可能会出现在以下情形中：
 
@@ -229,7 +231,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->在Adobe Target中创建营销活动时，会分配一个名为 `thirdPartyId t`每个营销活动。 在 Adobe Target 中删除营销活动时，不会删除 `thirdPartyId`。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。要避免出现此问题，请为每个营销活动命名一个唯一的名称；因此，不能在不同的营销活动类型中重复使用营销活动名称。
+>在Adobe Target中创建营销活动时，会分配一个名为 `thirdPartyId t`每个营销活动。 在 Adobe Target 中删除营销活动时，不会删除 `thirdPartyId`。您不能为不同类型（AB、XT）的营销活动重复使用 `thirdPartyId`，也不能手动删除此属性。为避免出现此问题，请为每个营销活动指定唯一的名称；这样，营销活动名称便无法在不同的营销活动类型中重复使用。
 >
 >如果在同一种营销活动类型中使用相同的名称，则会覆盖现有的营销活动。
 >

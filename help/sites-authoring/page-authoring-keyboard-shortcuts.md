@@ -1,8 +1,8 @@
 ---
 title: 编辑页面时的键盘快捷键
-seo-title: 编辑页面时的键盘快捷键
+seo-title: Keyboard Shortcuts when Editing Pages
 description: 用户在整个 AEM 环境中都可以使用各种键盘快捷键，包括某些用于页面编辑的快捷键
-seo-description: 用户在整个 AEM 环境中都可以使用各种键盘快捷键，包括某些用于页面编辑的快捷键
+seo-description: Various keyboard shortcuts are available throughout AEM, including some for page editing
 uuid: bf9428fc-73b5-499f-b9ed-62fa72272126
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,14 +12,14 @@ discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 91%
+source-wordcount: '221'
+ht-degree: 90%
 
 ---
 
 # 编辑页面时的键盘快捷键{#keyboard-shortcuts-when-editing-pages}
 
-用户在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则[在控制台中适用](/help/sites-authoring/keyboard-shortcuts.md)。
+在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则[在控制台中适用](/help/sites-authoring/keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->&amp;ast;用户开始在预览模式下与页面进行交互后，`Ctrl-Shift-m`快捷键便不再可用。 用户必须单击顶部编辑器栏或返回到“编辑”模式，才能使该快捷键再次变为可用。
+>&amp;ast;用户开始在预览模式下与页面进行交互后， `Ctrl-Shift-m` 快捷键不再可用。 用户必须单击顶部编辑器栏或返回到“编辑”模式，才能使该快捷键再次变为可用。
 
 在使用[控制台](/help/sites-authoring/keyboard-shortcuts.md)时，桌面用户也可以使用各种键盘快捷键。
 

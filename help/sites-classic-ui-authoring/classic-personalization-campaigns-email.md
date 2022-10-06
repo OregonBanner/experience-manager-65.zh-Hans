@@ -1,8 +1,8 @@
 ---
 title: 电子邮件营销
-seo-title: 电子邮件营销
+seo-title: E-mail Marketing
 description: 电子邮件营销（例如新闻稿）是所有市场营销的重要组成部分，因为您可以通过这种方式将内容推送到您的潜在客户。在 AEM 中，您可以根据现有 AEM 内容创建新闻稿，也可以添加特定于新闻稿的新内容。
-seo-description: 电子邮件营销（例如新闻稿）是所有市场营销的重要组成部分，因为您可以通过这种方式将内容推送到您的潜在客户。在 AEM 中，您可以根据现有 AEM 内容创建新闻稿，也可以添加特定于新闻稿的新内容。
+seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
 uuid: 565943bf-fe37-4d5c-98c3-7c629c4ba264
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1758'
 ht-degree: 96%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 96%
 >
 >如果没有先将新闻稿发布到发布实例，或发布实例不可用，则以下操作将失败：更新电子邮件提供商、执行试运行，或发送新闻稿。请务必发布您的新闻稿，并确保发布实例已启动且正在运行。
 
-## 创建新闻稿体验  {#creating-a-newsletter-experience}
+## 创建新闻稿体验 {#creating-a-newsletter-experience}
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->在发送新闻稿之前，请检查`https://localhost:4502/system/console/configMgr`处的Day CQ Link Externalizer的OSGi配置。
+>在发送新闻稿之前，请检查Day CQ Link Externalizer（位于）的OSGi配置 `https://localhost:4502/system/console/configMgr`.
 >
 >默认情况下，参数的值为 `localhost:4502`，并且如果运行实例的端口发生更改，将无法完成操作。
 
@@ -220,7 +220,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->在发送新闻稿之前，请检查`https://localhost:4502/system/console/configMgr`处的Day CQ Link Externalizer的OSGi配置。
+>在发送新闻稿之前，请检查Day CQ Link Externalizer（位于）的OSGi配置 `https://localhost:4502/system/console/configMgr`.
 >
 >默认情况下，参数的值为 `localhost:4502`，并且如果运行实例的端口发生更改，将无法完成操作。
 
@@ -228,7 +228,7 @@ ht-degree: 96%
 >
 >如果没有先将新闻稿发布到发布实例，或发布实例不可用，则以下操作将失败：更新电子邮件提供商、执行试运行，或发送新闻稿。请务必发布您的新闻稿，并确保发布实例已启动且正在运行。
 
-### 从营销活动发送新闻稿  {#sending-newsletters-from-a-campaign}
+### 从营销活动发送新闻稿 {#sending-newsletters-from-a-campaign}
 
 要从营销活动中发出新闻稿，请执行以下操作：
 
@@ -255,7 +255,7 @@ ht-degree: 96%
    >
    >确保您是收件人之一，以此确保收到 Newsletter。
 
-### 从列表发送 Newsletter  {#sending-newsletters-from-a-list}
+### 从列表发送 Newsletter {#sending-newsletters-from-a-list}
 
 要从列表中发出新闻稿，请执行以下操作：
 
@@ -285,7 +285,7 @@ ht-degree: 96%
 
 此部分介绍如何订阅新闻稿。
 
-### 订阅新闻稿  {#subscribing-to-a-newsletter-1}
+### 订阅新闻稿 {#subscribing-to-a-newsletter-1}
 
 订阅 Newsletter（以 Geometrixx 网站为例）：
 

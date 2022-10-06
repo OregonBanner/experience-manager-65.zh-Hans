@@ -13,7 +13,7 @@ exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
 source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 4%
+ht-degree: 28%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 4%
 
 ## 翻译内存更新 {#translation-memory-updates}
 
-翻译内容的手动编辑可以同步回翻译管理系统(TMS)以培训其翻译内存。
+翻译内容的手动编辑可以同步回翻译管理系统 (TMS)，以训练其翻译记忆。
 
 1. 在站点控制台中，更新翻译页面中的文本内容后，选择 **更新翻译内存**.
 
@@ -73,20 +73,20 @@ ht-degree: 4%
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-AEM会更新已配置TMS的翻译内存中现有字符串的翻译。
+AEM 会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
 
-* 该操作可更新已配置TMS的翻译内存中现有字符串的翻译。
-* 它不会创建新的翻译作业。
-* 它通过AEM翻译API将翻译发送回TMS（请参阅下文）。
+* 该操作会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
+* 它不会创建新的翻译工作。
+* 它通过 AEM 翻译 API（见下文）将翻译发送回 TMS。
 
-要使用此功能，请执行以下操作：
+要使用此功能：
 
-* 必须配置TMS以与AEM一起使用。
-* 连接器需要实现该方法 [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
-   * 此方法中的代码确定了翻译内存更新请求的情况。
-   * AEM转换框架通过此方法实施将字符串值对（原始和更新的转换）发送回TMS。
+* TMS 必须配置为可与 AEM 一起使用。
+* 连接器需要执行该方法[`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html)。
+   * 此方法中的代码确定翻译记忆更新请求的情况。
+   * AEM 翻译框架通过实施该方法来将字符串值对（原始和更新的翻译）发送回 TMS。
 
-对于使用专有翻译存储器的情况，翻译存储器更新可被拦截并发送到自定义目的地。
+对于使用专有翻译记忆的情况，可以拦截翻译记忆更新并将其发送到自定义目标。
 
 ## 多个级别的语言副本 {#language-copies-on-multiple-levels}
 

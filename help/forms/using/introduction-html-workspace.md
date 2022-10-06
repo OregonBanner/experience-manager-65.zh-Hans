@@ -1,8 +1,8 @@
 ---
 title: AEM Forms工作区简介
-seo-title: AEM Forms工作区简介
+seo-title: Introduction to AEM Forms workspace
 description: 使用LiveCycleAEM Forms工作区，通过业务流程自动化提高组织效率并创建无纸化办公室。
-seo-description: 使用LiveCycleAEM Forms工作区，通过业务流程自动化提高组织效率并创建无纸化办公室。
+seo-description: Increase org efficiency and create paperless office by business process automation using LiveCycle AEM Forms workspace.
 uuid: 6493101e-1030-4579-8bb1-4825cffe8fa3
 contentOwner: robhagat
 content-type: reference
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: e6759ffd-cf63-4684-a1d7-208fbe55aaed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Forms工作流程通过自动化和提供对关键文档和与表单相关的业务流程的可见性来提高组织效率。 使用流程管理模块，您可以构建可在线或离线访问的简化的端到端工作流（包括人员、系统、内容和业务规则）。Forms工作流包括AEM Forms工作区。 AEM Forms工作区新增了扩展和集成工作区的功能，并使其更加用户友好。
 
-AEM Forms工作区兼容更多设备和外形因素。 它允许在没有Flash®播放器和Adobe®Reader®的客户端上管理任务。 除了PDF forms外，它还方便了HTML Forms的呈现。
+AEM Forms工作区兼容更多设备和外形因素。 它允许在没有Flash®播放器和Adobe®Reader®的客户端上管理任务。 除了PDF forms外，还方便了HTMLForms的呈现。
 
 ![html-ws](assets/html-ws.png)
 

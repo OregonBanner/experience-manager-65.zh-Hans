@@ -47,7 +47,7 @@ venia/components/structure/navigation:true:10:600
 
 ## 调度程序缓存 {#dispatcher}
 
-在中缓存AEM页面或片段 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是任何AEM项目的最佳实践。 通常，它依赖于失效技术来确保在AEM中更改的任何内容在Dispatcher中正确更新。 这是AEM Dispatcher缓存策略的核心功能。
+在中缓存AEM页面或片段 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 是任何AEM项目的最佳实践。 通常，它依赖于失效技术来确保在AEM中更改的任何内容在Dispatcher中正确更新。 这是AEM Dispatcher缓存策略的核心功能。
 
 除了纯AEM管理内容CIF之外，页面通常还可以显示通过GraphQL从Adobe Commerce动态获取的商务数据。 虽然页面结构本身可能永远不会更改，但商务内容可能会更改，例如，如果某些产品数据（如名称或价格）发生更改，则Adobe Commerce中的商务内容可能会更改。
 

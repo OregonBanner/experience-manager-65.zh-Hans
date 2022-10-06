@@ -1,8 +1,8 @@
 ---
 title: 发布页面
-seo-title: 发布页面
+seo-title: Publishing Pages
 description: 在创作环境中创建并审核内容后，接下来的目标就是让内容在您的公共网站中可供使用。
-seo-description: 在创作环境中创建并审核内容后，接下来的目标就是让内容在您的公共网站中可供使用。
+seo-description: Once you have created and reviewed your content on the author environment, the goal is to make it available on your public website.
 uuid: ab5ffc59-1c41-46fe-904e-9fc67d7ead04
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1044'
 ht-degree: 79%
 
 ---
@@ -32,16 +32,13 @@ ht-degree: 79%
 >
 >* **发布/取消发布**
    >  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
-   >
-   >
-* **激活／取消激活**
+>
+>* **激活／取消激活**
    >  这两个术语与发布/取消发布同义。
-   >
-   >
-* **复制**
+>
+>* **复制**
    >  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户评论）从一个环境移动到另一个环境（例如在发布或反向复制用户评论时）的移动。
 >
-
 
 
 >[!NOTE]
@@ -50,12 +47,10 @@ ht-degree: 79%
 >
 >* 将触发一个工作流，向相应的人员通知您的发布请求。
 >* 将显示一条消息来通知您没有权限（仅显示很短的一段时间）。
-
 >
 
 
-
-## 发布页面  {#publishing-a-page}
+## 发布页面 {#publishing-a-page}
 
 激活页面的方法有两种：
 
@@ -120,7 +115,7 @@ ht-degree: 79%
 计划在以后的时间激活：
 
 1. 在“网站”控制台中，转到&#x200B;**激活**&#x200B;菜单，然后选择&#x200B;**以后激活**。
-1. 在打开的对话框中，您提供激活的日期和时间，然后单击&#x200B;**OK**。这会创建在指定时间激活的页面版本。
+1. 在打开的对话框中，您提供激活的日期和时间，然后单击 **确定**.这会创建在指定时间激活的页面版本。
 
    ![screen_shot_2012-02-08at14751pm](assets/screen_shot_2012-02-08at14751pm.png)
 
@@ -128,13 +123,13 @@ ht-degree: 79%
 
 如果您要撤消激活/取消激活页面，请转到[“工作流”控制台](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd)以终止相应的工作流。
 
-### 稍后取消激活  {#deactivate-later}
+### 稍后取消激活 {#deactivate-later}
 
 计划在以后的时间取消激活：
 
-1. 在网站控制台中，转到&#x200B;**停用**&#x200B;菜单，然后选择&#x200B;**稍后停用**。
+1. 在网站控制台中，转到 **停用** 菜单，然后选择 **稍后取消激活**.
 
-1. 在打开的对话框中，您提供停用的日期和时间，然后单击&#x200B;**确定**。
+1. 在打开的对话框中，提供停用的日期和时间，然后单击 **确定**.
 
    ![screen_shot_2012-02-08at15129pm](assets/screen_shot_2012-02-08at15129pm.png)
 
@@ -142,7 +137,7 @@ ht-degree: 79%
 
 如果您要撤消此取消激活操作，请转到[“工作流”控制台](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd)以终止相应的工作流。
 
-## 计划激活/计划停用（开始/结束时间）  {#scheduled-activation-deactivation-on-off-time}
+## 计划激活/计划停用（开始/结束时间） {#scheduled-activation-deactivation-on-off-time}
 
 您可以使用&#x200B;**开始时间**&#x200B;和&#x200B;**结束时间**&#x200B;来安排页面的发布/取消发布时间，这两个设置可在[页面属性](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)中进行定义。
 
@@ -150,21 +145,21 @@ ht-degree: 79%
 
 状态可以从[网站](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)控制台查看。发布状态将以不同的颜色表示。
 
-## 激活网站的完整区域（树）  {#activating-a-complete-section-tree-of-your-website}
+## 激活网站的完整区域（树） {#activating-a-complete-section-tree-of-your-website}
 
 在&#x200B;**网站**&#x200B;选项卡中，可以激活单个页面。如果输入或更新了大量内容页面（所有内容页面都位于同一根页面下），则可以更轻松地通过一个操作来激活整个树。您也可以通过执行练习来模拟激活和突出显示要激活的页面。
 
-1. 从&#x200B;**欢迎**&#x200B;页面中选择&#x200B;**工具**&#x200B;控制台，然后双击&#x200B;**复制**&#x200B;以打开该控制台(`https://localhost:4502/etc/replication.html`)。
+1. 打开 **工具** 控制台，方法是从 **欢迎** 页面，然后双击 **复制** 打开控制台( `https://localhost:4502/etc/replication.html`)。
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
 1. 在&#x200B;**复制**&#x200B;控制台上，单击&#x200B;**激活树**。
 
-   将显示以下窗口(`https://localhost:4502/etc/replication/treeactivation.html`)。
+   以下窗口( `https://localhost:4502/etc/replication/treeactivation.html`)。
 
    ![screen_shot_2012-02-08at125033pm-1](assets/screen_shot_2012-02-08at125033pm-1.png)
 
-1. 输入&#x200B;**开始路径**。这会指定要激活（发布）的节的根路径。 系统将考虑激活此页面及其下的所有页面（或在选择“练习”时，系统将模拟激活这些页面）。
+1. 输入 **开始路径**.这会指定要激活（发布）的节的根路径。 系统将考虑激活此页面及其下的所有页面（或在选择“练习”时，系统将模拟激活这些页面）。
 1. 根据需要激活选择条件：
 
    * **仅限已修改的条目**：仅激活已修改的页面。
@@ -173,6 +168,6 @@ ht-degree: 79%
 
 1. 选择要执行的操作：
 
-   1. 如果要检查要激活的页面&#x200B;**，请选择&#x200B;**练习**。这只是模拟操作，不会激活任何页面。
+   1. 选择 **干流** 如果要检查哪些页面 *wild* 激活。这只是模拟操作，不会激活任何页面。
 
-   1. 如果要激活页面，请选择&#x200B;**激活**。
+   1. 选择 **激活** 。

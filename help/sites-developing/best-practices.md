@@ -1,8 +1,8 @@
 ---
 title: 最佳实践
-seo-title: 最佳实践
+seo-title: Best Practices
 description: Adobe工程和咨询团队为AEM开发人员开发了一套全面的最佳实践
-seo-description: Adobe工程和咨询团队为AEM开发人员开发了一套全面的最佳实践
+seo-description: Adobe Engineering and Consulting teams have developed a comprehensive set of best practices for AEM developers
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,16 +12,16 @@ discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 13%
+source-wordcount: '467'
+ht-degree: 17%
 
 ---
 
 # 最佳实践{#best-practices}
 
-## 开发人员最佳实践 — 快速入门{#best-practices-for-developers-getting-started}
+## 开发人员最佳实践 — 快速入门 {#best-practices-for-developers-getting-started}
 
-Adobe工程和咨询团队为AEM开发人员开发了一套全面的最佳实践。 Adobe开发人员在为客户实施开发核心AEM产品更新和客户代码时，会遵循这些最佳实践。
+Adobe 工程和咨询团队开发了一组面向 AEM 开发人员的全面的最佳实践。Adobe开发人员在为客户实施开发核心AEM产品更新和客户代码时，将遵循这些最佳实践。
 
 在开始AEM开发项目之前，请首先查看以下最佳实践：
 
@@ -34,11 +34,11 @@ Adobe工程和咨询团队为AEM开发人员开发了一套全面的最佳实践
 * [OSGi包](/help/sites-developing/osgi-bundles.md)
 * [Java API最佳实践](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
-### 其他最佳实践信息{#additional-best-practices-information}
+### 其他最佳实践信息 {#additional-best-practices-information}
 
 以下区域提供了专门用于制定最佳实践的文档：
 
-* [站点](#sites)
+* [Sites](#sites)
 * [社区](/help/sites-developing/best-practices.md#communities)
 * [工具/HTL](/help/sites-developing/best-practices.md#tooling-htl)
 
@@ -81,25 +81,25 @@ Adobe工程和咨询团队为AEM开发人员开发了一套全面的最佳实践
 
 ## 社区 {#communities}
 
-[AEM](/help/communities/overview.md) 社区简化了内部部署社区的创建和管理。
+[AEM Communities](/help/communities/overview.md) 简化了内部部署社区的创建和管理。
 
 下面介绍了社区的一些最佳实践：
 
 |  |  |  |
 |---|---|---|
-| 使用用户生成内容(UGC)的最佳实践 | [编码准则](/help/communities/code-guide.md) | 为[社交组件框架](/help/communities/scf.md)(SCF)开发灵活的可移植代码的准则。 |
+| 使用用户生成内容(UGC)的最佳实践 | [编码准则](/help/communities/code-guide.md) | 为 [社交组件框架](/help/communities/scf.md) (SCF)。 |
 | 社区组件的使用示例 | [社区组件指南](/help/communities/components-guide.md) | 交互式开发工具。 |
 
 ## 工具/HTL {#tooling-htl}
 
-HTML模板语言(HTL)是一种新的HTML模板系统，随AEM 6.0的推出而成，它取代了JSP和ESP作为AEM的首选模板系统。
+HTML模板语言(HTL)是一种新的HTML模板系统，以AEM 6.0为平台，取代JSP和ESP作为AEM的首选模板系统。
 
 |  |  |  |
 |---|---|---|
-| HTL概述 | [HTL概述和语法](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) | 本文档介绍HTL是什么，如何迁移到HTL、示例项目、语法、表达式和语句 |
+| HTL 概述 | [HTL概述和语法](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) | 本文档介绍HTL是什么，如何迁移到HTL、示例项目、语法、表达式和语句 |
 | 在java中使用API | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | HTL Java Use-API允许HTL文件访问自定义Java类中的Helper方法。 |
 
 >[!NOTE]
 >
 >以下多部分教程可能最符合设置新AEM项目的最佳实践，其中详细介绍了核心组件、可编辑模板、客户端库和组件开发：
->[AEM Sites - WKND 教程快速入门](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[《AEM Sites 快速入门》 - WKND 教程](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

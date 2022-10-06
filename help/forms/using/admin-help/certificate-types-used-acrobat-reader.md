@@ -13,7 +13,7 @@ exl-id: 800bffd5-0cdc-4251-bba4-e350f226f019
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '936'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -91,7 +91,7 @@ ARE 2D条形码完整生产V6.1 P8 0002054
   <tr>
    <td><p>P6</p></td>
    <td><p>Acrobat Reader DC扩展，评估</p></td>
-   <td><p>60天</p></td>
+   <td><p>60 天</p></td>
    <td><p>评估</p></td>
   </tr>
   <tr>

@@ -1,8 +1,8 @@
 ---
 title: 编辑页面属性
-seo-title: 编辑页面属性
+seo-title: Editing Page Properties
 description: 页面属性会因页面性质而异。例如，某些页面可能会连接到 Live Copy，而其他页面则可能不会，Live Copy 信息将在适当情况下才可用。
-seo-description: 页面属性会因页面性质而异。例如，某些页面可能会连接到 Live Copy，而其他页面则可能不会，Live Copy 信息将在适当情况下才可用。
+seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.
 uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '763'
 ht-degree: 96%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 96%
 
    允许您为此页面输入虚 URL。通过这种方式，您可以使用更短并且含意更清楚的 URL。
 
-   例如，如果对于网站h `ttp://example.com,`，将路径/ `v1.0/startpage`标识的页面的虚URL设置为w `elcome`，则h `ttp://example.com/welcome`将为h `ttp://example.com/content/v1.0/startpage`的虚URL
+   例如，如果虚URL设置为w `elcome`到路径/标识的页面 `v1.0/startpage`网站h `ttp://example.com,` 然后 `ttp://example.com/welcome`应该是h的虚URL `ttp://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -105,7 +105,7 @@ ht-degree: 96%
 
    指示此页面应自动重定向到的页面。
 
-* **设计**
+* **Design**
 
    指示要用于此页面的[设计](/help/sites-developing/designer.md)。
 
@@ -147,9 +147,9 @@ ht-degree: 96%
 
       上传要用作缩略图的图像。
 
-### 云服务 {#cloud-services}
+### Cloud Service {#cloud-services}
 
-* **云服务**
+* **Cloud Service**
 
    为[云服务](/help/sites-developing/extending-cloud-config.md)定义属性。
 
@@ -171,13 +171,13 @@ ht-degree: 96%
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Blueprint 页面定义属性。控制将修改传播到 Live Copy 的情况。
 
-### Live Copy  {#live-copy}
+### Live Copy {#live-copy}
 
 * **Live Copy**
 
    在[多站点管理](/help/sites-administering/msm.md)中为 Live Copy 页面定义属性。控制将从 Blueprint 中传播修改的情况。
 
-### 站点结构  {#site-structure}
+### 站点结构 {#site-structure}
 
 * 提供具有全站点功能的页面的链接，例如&#x200B;**注册页面**、**脱机页面**&#x200B;以及其他。
 

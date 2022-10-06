@@ -22,7 +22,7 @@ ht-degree: 7%
 
 ## 解决方法 {#workaround}
 
-1. 安装 [Experience Manager Forms Service Pack 13或更高版本(6.5.13.0或更高版本)](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=zh-Hans)
+1. 安装 [Experience Manager Forms Service Pack 13或更高版本(6.5.13.0或更高版本)](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 1. 使用以下链接从Software Distribution下载包（具有分辨率的.jar文件）：
 
    https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]pack/com.adobe.livecycle.dsc.externalloginmodule-4.0.8.jar

@@ -124,7 +124,7 @@ Adobe利用PKI（公钥基础结构）颁发数字证书，以用于许可和功
 
 ## 常见问题解答
 
-**如果我有其他问题，我应该联系谁？**
+**如果我有其他问题，应该联系谁？**
 
 您可以联系 [Adobe支持](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) 或者提供支持票。
 

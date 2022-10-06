@@ -1,17 +1,17 @@
 ---
 title: “配置外出”设置
-seo-title: “配置外出”设置
+seo-title: Configure Out of Office settings
 description: 配置“不在办公室”设置
-seo-description: “配置外出”设置
+seo-description: Configure Out of Office settings
 exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
 
-# 配置“不在办公室”设置{#configure-out-of-office-settings}
+# “配置外出”设置 {#configure-out-of-office-settings}
 
 如果您计划不在办公室，则可以指定在该期间分配给您的项目会发生什么情况。
 
@@ -30,24 +30,24 @@ ht-degree: 0%
 >* 当分配存在循环时，任务将保留在原始用户。 例如，当用户A将项目委派给用户B用户B将项目委派给用户C时，用户C将委派给用户D，用户D将委派给用户B时，会创建一个循环。 在这种情况下，项目将保留为原始用户。 用户A是上例中的原始用户。
 
 
-## 为帐户{#enable-out-of-office}启用“外出”设置
+## 为您的帐户启用“外出”设置 {#enable-out-of-office}
 
 为您的帐户启用“Enable the Out of Office（外出）”设置，并将您的收件箱项目委派给其他用户：
 
-1. 登录到您的AEM实例。 点按![收件箱](assets/bell.svg)图标，然后点按&#x200B;**[!UICONTROL 查看全部]**。 此时会显示收件箱项目的列表。
-1. 点按&#x200B;**[!UICONTROL 创建]**&#x200B;按钮旁边的![视图选择器](assets/viewlist.svg)或![视图选择器](assets/calendar.svg)图标，然后点按&#x200B;**[!UICONTROL 设置]**。 此时会出现“设置”对话框。
-1. 打开设置对话框上的&#x200B;**[!UICONTROL Out of Office]**&#x200B;选项卡。
-1. 点按&#x200B;**[!UICONTROL 启用/禁用]**&#x200B;按钮以启用“不在办公室”设置。
-1. 为设置指定&#x200B;**[!UICONTROL 开始时间]**&#x200B;和&#x200B;**[!UICONTROL 结束时间]**。 项目仅在指定的时间段内委派。 将&#x200B;**[!UICONTROL End Time]**&#x200B;字段留空，以便在不确定的时间段内委派项目。
-1. 选中&#x200B;**[!UICONTROL 在此期间转发我的项目]**&#x200B;复选框。 如果未选择选项并未指定代理人，则项目不会转发给任何用户。 尽管您不在，并且已启用该设置，但这些项目仍保留在您的收件箱中。
-1. 点按&#x200B;**[!UICONTROL 添加被分派人]**。 在&#x200B;**[!UICONTROL 被分派人]**&#x200B;字段中指定用户以将项目委派到。 指定要委派给指定用户的&#x200B;**[!UICONTROL 工作流模型]**。 您可以选择多个工作流模型。
+1. 登录到您的AEM实例。 点按 ![收件箱](assets/bell.svg) 图标，点按 **[!UICONTROL 查看全部]**. 此时会显示收件箱项目的列表。
+1. 点按 ![视图选择器](assets/viewlist.svg) 或 ![视图选择器](assets/calendar.svg) 图标 **[!UICONTROL 创建]** 按钮和点按 **[!UICONTROL 设置]**. 此时会出现“设置”对话框。
+1. 打开 **[!UICONTROL 不在办公室]** 选项卡。
+1. 点按 **[!UICONTROL 启用/禁用]** 按钮以启用“外出”设置。
+1. 指定 **[!UICONTROL 开始时间]**  和 **[!UICONTROL 结束时间]** 中的“隐藏主体”。 项目仅在指定的时间段内委派。 离开 **[!UICONTROL 结束时间]** 字段为空，可在不确定的时间段内委派项目。
+1. 选择 **[!UICONTROL 在此期间转发我的项目]** 复选框。 如果未选择选项并未指定代理人，则项目不会转发给任何用户。 尽管您不在，并且已启用该设置，但这些项目仍保留在您的收件箱中。
+1. 点按 **[!UICONTROL 添加被分派人]**. 在 **[!UICONTROL 被分派人]** 字段将项目委派到。 指定 **[!UICONTROL 工作流模型]** 向指定用户委派。 您可以选择多个工作流模型。
 
-   此外，要将所有项目（不管工作流模型如何）分配给特定用户，请从“工作流模型”下拉列表中选择&#x200B;**[!UICONTROL 所有工作流]**。<br>
+   此外，要将所有项目（不论工作流模型如何）分配给特定用户，请选择 **[!UICONTROL 所有工作流]** 从工作流模型下拉列表中。 <br>
 
-   要为除少数工作流模型之外的所有工作流模型分配项目给特定用户，请从“工作流模型”下拉列表中选择&#x200B;**[!UICONTROL 所有工作流]**，点按&#x200B;**[!UICONTROL +添加例外]**，然后指定要排除的工作流模型。
+   要为除少数工作流程模型之外的所有工作流程模型分配项目给特定用户，请选择 **[!UICONTROL 所有工作流]** 从工作流模型下拉列表中，点按 **[!UICONTROL +添加例外]**，并指定要保留的工作流模型。
    <br>
 
-   重复该步骤以添加更多受分配者。<br>
+   重复该步骤以添加更多受分配者。 <br>
 
    >[!NOTE]
    >
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->(仅限以Forms为中心的工作流项目)启用&#x200B;**允许被分派人使用工作流中**&#x200B;分配任务&#x200B;**步骤的“外出”设置**&#x200B;选项进行委派。 只有启用了上述选项的项目才会委派给其他用户。
+>(仅限以Forms为中心的工作流项目)启用 **允许被分派人使用“不在办公室”设置委派** 的 **分配任务** 中的步骤。 只有启用了上述选项的项目才会委派给其他用户。
 
 ## 限制 {#limitations}
 

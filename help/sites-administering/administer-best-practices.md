@@ -1,8 +1,8 @@
 ---
 title: 最佳实践
-seo-title: 最佳实践
+seo-title: Best Practices
 description: 查找由Adobe工程和咨询团队编译的最佳实践，以帮助管理员快速启动并运行。
-seo-description: 查找由Adobe工程和咨询团队编译的最佳实践，以帮助管理员快速启动并运行。
+seo-description: Find best practices compiled by Adobe engineering and consulting teams to help administrators get up and running.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 13%
+source-wordcount: '524'
+ht-degree: 18%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 13%
 
 目前已经有针对以下区域的最佳实践文档：
 
-* [资产](#assets)
-* [站点](#sites)
+* [Assets](#assets)
+* [Sites](#sites)
 
 有关创作、部署和维护或开发的最佳实践，请参阅以下内容之一：
 
@@ -57,8 +57,8 @@ ht-degree: 13%
   </tr>
   <tr>
    <td>图像预设选项</td>
-   <td>了解<a href="/help/assets/managing-image-presets.md#understanding-image-presets">图像预设</a>和<a href="/help/assets/managing-image-presets.md#image-preset-options">图像预设最佳实践</a></td>
-   <td>在<a href="/help/assets/managing-image-presets.md">管理图像预设</a>的文档中，以下主题介绍了图像预设的含义以及有关选择图像预设选项的最佳实践。</td>
+   <td>了解 <a href="/help/assets/managing-image-presets.md#understanding-image-presets">图像预设</a> 和 <a href="/help/assets/managing-image-presets.md#image-preset-options">图像预设最佳实践</a></td>
+   <td>作为 <a href="/help/assets/managing-image-presets.md">管理图像预设</a>，以下主题将介绍图像预设的含义以及有关选择图像预设选项的最佳实践。</td>
   </tr>
   <tr>
    <td>Dynamic Media与Scene7的直接集成</td>
@@ -77,7 +77,7 @@ ht-degree: 13%
   <tr>
    <td>GDPR合规</td>
    <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR合规</a></td>
-   <td>欧盟的《数据隐私权通用数据保护条例》已于2018年5月正式生效。 AEM Sites符合GDPR。 本页面将指导客户完成在AEM Sites中处理GDPR请求的过程。 它描述了存储的专用数据的位置，以及如何手动或使用代码删除这些数据。</td>
+   <td>欧盟的《数据隐私权通用数据保护条例》已于2018年5月正式生效。 AEM Sites符合GDPR。 本页面将指导客户完成在AEM Sites中处理GDPR请求的过程。 它描述了私有数据的存储位置，以及如何手动或使用代码删除私有数据。</td>
   </tr>
   <tr>
    <td>为实例定义默认UI。</td>
@@ -86,7 +86,7 @@ ht-degree: 13%
   </tr>
   <tr>
    <td>多站点管理</td>
-   <td><a href="/help/sites-administering/msm-best-practices.md">MSM最佳实践</a></td>
+   <td><a href="/help/sites-administering/msm-best-practices.md">MSM 最佳实践</a></td>
    <td>使用MSM自动部署内容的最佳实践。 </td>
   </tr>
   <tr>

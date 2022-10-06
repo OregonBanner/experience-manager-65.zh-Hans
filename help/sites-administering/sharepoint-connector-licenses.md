@@ -1,8 +1,8 @@
 ---
 title: SharePoint连接器许可证、版权声明和免责声明
-seo-title: SharePoint连接器许可证、版权声明和免责声明
+seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
 description: 了解SharePoint连接器许可证、版权声明和免责声明。
-seo-description: 了解SharePoint连接器许可证、版权声明和免责声明。
+seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,18 +13,18 @@ docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 10%
+source-wordcount: '362'
+ht-degree: 19%
 
 ---
 
 # SharePoint连接器许可证、版权声明和免责声明{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-本节列出了所有必须与Day JCR Connector for MS SharePoint相关的许可证、版权声明和免责声明。
+本节列出了所有必须与MS SharePoint的Day JCR Connector相关的许可证、版权声明和免责声明。
 
-## 连接器第三方库概述{#overview-of-connector-rd-party-libraries}
+## Connector第三方库概述 {#overview-of-connector-rd-party-libraries}
 
-下表列出了SharePoint Connector核心库内使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
+下表列出了在SharePoint Connector核心库中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
 | 库 | 许可类型 |
 |---|---|
@@ -63,7 +63,7 @@ ht-degree: 10%
 | xml-api | [Apache](#apache) （包含公共域和W3C软件许可证涵盖的部分） |
 | XmlSchema | [Apache](#apache) |
 
-## CRX第三方库概述{#overview-of-crx-rd-party-libraries}
+## CRX第三方库概述 {#overview-of-crx-rd-party-libraries}
 
 下表列出了CRX中使用的第三方库，以及涵盖这些库的许可证、版权声明或免责声明：
 
@@ -155,7 +155,7 @@ ht-degree: 10%
  </tbody>
 </table>
 
-## CQSE第三方库概述{#overview-of-cqse-rd-party-libraries}
+## CQSE第三方库概述 {#overview-of-cqse-rd-party-libraries}
 
 下表列出了公报Servlet引擎内使用的第三方库，以及涉及这些库的许可证、版权声明或免责声明：
 
@@ -167,7 +167,7 @@ ht-degree: 10%
  <tbody>
   <tr>
    <td>库</td>
-   <td>License</td>
+   <td>许可</td>
   </tr>
   <tr>
    <td>ant-1.6.jar</td>
@@ -567,7 +567,7 @@ ht-degree: 10%
      implementations, and test suites thereof.
 ```
 
-## 高超音速SQL组{#hypersonic-sql-group}
+## 高超音速SQL组 {#hypersonic-sql-group}
 
 ```xml
      COPYRIGHTS AND LICENSES
@@ -1094,7 +1094,7 @@ ht-degree: 10%
      (LFI#95810/Form ID#011801)
 ```
 
-## W3C文档{#w-c-document}
+## W3C文档 {#w-c-document}
 
 ```xml
      This license came from: https://www.w3.org/Consortium/Legal/
@@ -1180,7 +1180,7 @@ ht-degree: 10%
      (last updated by reagle on 1999/04/99.)
 ```
 
-## W3C软件{#w-c-software}
+## W3C软件 {#w-c-software}
 
 ```xml
      This license came from: <a href="https://www.w3.org/Consortium/Legal/" TARGET="_blank" >https://www.w3.org/Consortium/Legal/</a>

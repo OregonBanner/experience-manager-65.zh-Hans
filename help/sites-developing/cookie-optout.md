@@ -1,8 +1,8 @@
 ---
 title: 配置Cookie使用情况
-seo-title: 配置Cookie使用情况
+seo-title: Configuring Cookie Usage
 description: AEM提供了一项服务，可让您配置和控制如何在网页中使用cookie
-seo-description: AEM提供了一项服务，可让您配置和控制如何在网页中使用cookie
+seo-description: AEM provides a service that enables you to configure and control how cookies are used with your web pages
 uuid: 10d95176-0a56-41f1-9d36-01dbdac757d4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 exl-id: 42e8d804-6b6a-432e-a651-940b9f45db4e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 1%
+source-wordcount: '554'
+ht-degree: 2%
 
 ---
 
@@ -30,15 +30,15 @@ AEM提供了一项服务，可让您配置和控制如何在您的网页中使�
 
 配置AdobeGranite选择退出服务以指定如何在您的网页上使用Cookie。 下表介绍了可配置的属性。
 
-要配置服务，可以使用[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)。 下表介绍了任一方法所需的属性。 对于OSGi配置，服务PID为`com.adobe.granite.optout`。
+要配置服务，您可以使用 [Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 或 [将OSGi配置添加到存储库](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository). 下表介绍了任一方法所需的属性。 对于OSGi配置，服务PID为 `com.adobe.granite.optout`.
 
-| 属性名称（Web控制台） | OSGi属性名称 | 描述 |
+| 属性名称（Web 控制台） | OSGi 属性名称 | 描述 |
 |---|---|---|
 | 禁用Cookie | optout.cookies | Cookie的名称，当用户设备上存在时，该名称指示用户不同意使用Cookie。 |
 | 选择禁用HTTP标头 | optout.headers | 表示用户未同意使用Cookie的HTTP标头的名称（如果存在）。 |
 | 白名单Cookie | optout.whitelist.cookies | 对网站运行至关重要，且未经用户同意即可使用的Cookie列表。 |
 
-## 验证Cookie使用情况{#validating-cookie-usage}
+## 验证Cookie使用情况 {#validating-cookie-usage}
 
 使用客户端Javascript调用AdobeGranite选择退出服务，以验证您是否可以使用Cookie。 使用Granite.OptOutUtil javascript对象执行以下任何任务：
 
@@ -47,7 +47,7 @@ AEM提供了一项服务，可让您配置和控制如何在您的网页中使�
 * 确定Web浏览器是否包含指示用户不同意使用Cookie进行跟踪的Cookie。
 * 确定是否可以使用特定Cookie。
 
-granite.utils [客户端库文件夹](/help/sites-developing/clientlibs.md#referencing-client-side-libraries)提供了Granite.OptOutUtil对象。 将以下代码添加到页眉JSP，以包含指向Javascript库的链接：
+granite.utils [客户端库文件夹](/help/sites-developing/clientlibs.md#referencing-client-side-libraries) 提供Granite.OptOutUtil对象。 将以下代码添加到页眉JSP，以包含指向Javascript库的链接：
 
 `<ui:includeClientLib categories="granite.utils" />`
 
@@ -64,11 +64,11 @@ function writeCookie(value){
 }
 ```
 
-## Granite.OptOutUtil Javascript对象{#the-granite-optoututil-javascript-object}
+## Granite.OptOutUtil Javascript对象 {#the-granite-optoututil-javascript-object}
 
 Granite.OptOutUtil允许您确定是否允许使用Cookie。
 
-### getCookieNames()函数{#getcookienames-function}
+### getCookieNames()函数 {#getcookienames-function}
 
 返回Cookie的名称（如果存在），表示用户未同意使用Cookie。
 
@@ -80,7 +80,7 @@ Granite.OptOutUtil允许您确定是否允许使用Cookie。
 
 Cookie名称数组。
 
-#### getWhitelistCookieNames()函数{#getwhitelistcookienames-function}
+#### getWhitelistCookieNames()函数 {#getwhitelistcookienames-function}
 
 返回可在用户同意的情况下使用的Cookie的名称。
 
@@ -92,7 +92,7 @@ Cookie名称数组。
 
 Cookie名称数组。
 
-#### isOptedOut()函数{#isoptedout-function}
+#### isOptedOut()函数 {#isoptedout-function}
 
 确定用户的浏览器是否包含任何指示尚未同意使用Cookie的Cookie。
 
@@ -102,11 +102,11 @@ Cookie名称数组。
 
 **返回结果**
 
-如果找到指示未同意的Cookie，则为`true`布尔值；如果没有Cookie指示未同意，则为`false`值。
+布尔值 `true` 如果发现表示未同意的Cookie，则 `false` 如果没有cookie表示不同意。
 
-### maySetCookie(cookieName)函数{#maysetcookie-cookiename-function}
+### maySetCookie(cookieName)函数 {#maysetcookie-cookiename-function}
 
-确定能否在用户的浏览器上使用特定的Cookie。 此函数等同于使用`isOptedOut`函数并结合确定给定Cookie是否包含在`getWhitelistCookieNames`函数返回的列表中。
+确定能否在用户的浏览器上使用特定的Cookie。 此函数等同于使用 `isOptedOut` 函数，同时确定给定Cookie是否包含在 `getWhitelistCookieNames` 函数返回。
 
 **参数**
 
@@ -114,4 +114,4 @@ Cookie名称数组。
 
 **返回结果**
 
-如果可以使用`cookieName`，则为`true`布尔值；如果不能使用`cookieName`，则为`false`值。
+布尔值 `true` if `cookieName` 值，或 `false` if `cookieName` 无法使用。

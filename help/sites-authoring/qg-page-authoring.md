@@ -1,8 +1,8 @@
 ---
 title: 页面创作快速指南
-seo-title: 页面创作快速指南
+seo-title: Quick Guide to Authoring Pages
 description: 针对创作页面内容时所需执行的主要操作的快速指南（简介）。
-seo-description: 针对创作页面内容时所需执行的主要操作的快速指南（简介）。
+seo-description: A quick, high-level guide to the key actions of authoring page content
 uuid: ef7ab691-f80d-4eeb-9f4a-afbf1bc83669
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1573'
 ht-degree: 97%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 97%
    * 当您处于&#x200B;***编辑***&#x200B;模式下时，**链接不可用于导航**。要通过链接导航，您需要使用以下任一方式来[预览页面](/help/sites-authoring/editing-content.md#previewing-pages)：
 
       * [预览模式](/help/sites-authoring/editing-content.md#preview-mode)
-      * [查看已发布的项目](/help/sites-authoring/editing-content.md#view-as-published)
+      * [以发布的形式查看](/help/sites-authoring/editing-content.md#view-as-published)
 
 * 无法从页面编辑器启动/创建版本；现在，可以从站点控制台完成（通过对所选资源选择&#x200B;**创建**&#x200B;或[时间轴](/help/sites-authoring/basic-handling.md#timeline)）。
 
@@ -62,8 +62,8 @@ ht-degree: 97%
 >有许多键盘快捷键可帮助您更轻松地创作体验。
 >
 >* [编辑页面时的键盘快捷键](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
-
+>* [控制台的键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md)
+>
 
 
 ### 查找页面 {#finding-your-page}
@@ -88,14 +88,14 @@ ht-degree: 97%
 
 要[创建新的页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)，请执行以下操作：
 
-1. [导航到要创建新页面的位置。](#finding-your-page)
+1. [导航到要创建新页面的位置](#finding-your-page)。
 1. 使用&#x200B;**创建**&#x200B;图标，然后从列表中选择&#x200B;**页面**：
 
    ![qgtap-02](assets/qgtap-02.png)
 
 1. 这将打开向导，逐步指导您收集[创建新页面](/help/sites-authoring/managing-pages.md#creating-a-new-page)时所需的信息。按照屏幕上的说明操作。
 
-### 选择页面以执行其他操作  {#selecting-your-page-for-further-action}
+### 选择页面以执行其他操作 {#selecting-your-page-for-further-action}
 
 您可以选择一个页面，以对其执行操作。选择页面后，工具栏将自动更新，以显示与该资源相关的操作。
 
@@ -120,9 +120,10 @@ ht-degree: 97%
 
    * 卡片上将覆盖一个勾号，表示已选择该页面。
    >[!NOTE]
-   进入选择模式后，**选择**&#x200B;图标（勾号）将变为&#x200B;**取消选择**&#x200B;图标（叉号）。
+   >
+   >进入选择模式后，**选择**&#x200B;图标（勾号）将变为&#x200B;**取消选择**&#x200B;图标（叉号）。
 
-### 快速操作（仅限卡片视图/桌面）{#quick-actions-card-view-desktop-only}
+### 快速操作（仅限卡片视图/桌面） {#quick-actions-card-view-desktop-only}
 
 [快速操作](/help/sites-authoring/basic-handling.md#quick-actions)可用：
 
@@ -175,7 +176,8 @@ ht-degree: 97%
 
       * 通过点按或单击打开组件工具栏。根据需要依次使用&#x200B;**复制**&#x200B;和&#x200B;**粘贴**&#x200B;图标。
    >[!NOTE]
-   您可以将组件&#x200B;**粘贴**&#x200B;到同一页面或其他页面。如果在剪切/复制操作之前粘贴到已打开的其他页面，则表明该页面需要刷新。
+   >
+   >您可以将组件&#x200B;**粘贴**&#x200B;到同一页面或其他页面。如果在剪切/复制操作之前粘贴到已打开的其他页面，则表明该页面需要刷新。
 
    * [删除](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)组件：
 
@@ -192,9 +194,10 @@ ht-degree: 97%
    * 使用&#x200B;**编辑**&#x200B;下拉选择器返回编辑模式（或选择其他模式）。
 
    >[!NOTE]
-   要使用内容中的链接导航，您必须使用[预览模式](/help/sites-authoring/editing-content.md#preview-mode)。
+   >
+   >要使用内容中的链接导航，您必须使用[预览模式](/help/sites-authoring/editing-content.md#preview-mode)。
 
-### 编辑页面属性  {#editing-the-page-properties}
+### 编辑页面属性 {#editing-the-page-properties}
 
 [编辑页面属性](/help/sites-authoring/editing-page-properties.md)的方法（主要）有两种：
 
@@ -218,7 +221,7 @@ ht-degree: 97%
 
    ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
-### 发布页面（或取消发布）{#publishing-your-page-or-unpublishing}
+### 发布页面（或取消发布） {#publishing-your-page-or-unpublishing}
 
 [发布页面](/help/sites-authoring/publishing-pages.md)（和取消发布）的方法主要有两种：
 
@@ -239,7 +242,7 @@ ht-degree: 97%
 
    ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
-* 从控制台取消发布页面只能通过“管理发布 **** ”选项完成，该选项仅在工具栏上可用（不能通过快速操作）。
+* 从控制台取消发布页面只能通过&#x200B;**管理发布**&#x200B;选项完成，该选项仅在工具栏上可用（不能通过快速操作）。
 
    **取消发布页面**&#x200B;选项仍可通过编辑器中的&#x200B;**页面信息**&#x200B;菜单使用。
 
@@ -247,7 +250,7 @@ ht-degree: 97%
 
    请参阅[发布页面](/help/sites-authoring/publishing-pages.md#unpublishing-pages)以了解更多信息。
 
-### 移动、复制并粘贴或删除页面  {#move-copy-and-paste-or-delete-your-page}
+### 移动、复制并粘贴或删除页面 {#move-copy-and-paste-or-delete-your-page}
 
 这些操作全部可以通过以下项触发：
 
@@ -269,9 +272,10 @@ ht-degree: 97%
 
       * 系统将要求您确认该操作。
    >[!NOTE]
-   快速操作中并未提供“删除”操作。
+   >
+   >快速操作中并未提供“删除”操作。
 
-### 锁定页面（然后解锁）{#locking-your-page-then-unlocking}
+### 锁定页面（然后解锁） {#locking-your-page-then-unlocking}
 
 [锁定页面](/help/sites-authoring/editing-content.md#locking-a-page) ，可阻止其他作者在您处理页面时对其进行处理。 可以找到“锁定”（和“解锁”）图标／按钮：
 
@@ -297,11 +301,11 @@ ht-degree: 97%
 
 1. 点按/单击所需的引用类型，以显示更多详细信息并（视需要）执行进一步操作。
 
-### 创建页面版本  {#creating-a-version-of-your-page}
+### 创建页面版本 {#creating-a-version-of-your-page}
 
 要创建页面的[版本](/help/sites-authoring/working-with-page-versions.md)：
 
-1. 要打开“时间轴”边栏，请使用工具栏图标选择&#x200B;**[时间轴](/help/sites-authoring/basic-handling.md#timeline)**（在[选择您的页面](#selecting-your-page-for-further-action)之前或之后）：
+1. 要打开“时间线”边栏，请使用工具栏图标选择&#x200B;**[时间线](/help/sites-authoring/basic-handling.md#timeline)**（在[选择您的页面](#selecting-your-page-for-further-action)之前或之后）：
 
    ![screen_shot_2018-03-21at161355](assets/screen_shot_2018-03-21at161355.png)
 
@@ -315,15 +319,15 @@ ht-degree: 97%
 
 恢复和/或比较页面版本时所使用的机制基本相同：
 
-1. 使用工具栏图标选择&#x200B;**[时间轴](/help/sites-authoring/basic-handling.md#timeline)**（在[选择您的页面](#selecting-your-page-for-further-action)之前或之后）：
+1. 使用工具栏图标选择&#x200B;**[时间线](/help/sites-authoring/basic-handling.md#timeline)**（在[选择您的页面](#selecting-your-page-for-further-action)之前或之后）：
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 
-   如果页面的某个版本已经保存，则会在“时间轴”中列出该版本。
+   如果页面的某个版本已经保存，则会在“时间线”中列出该版本。
 
 1. 点按/单击要恢复的版本 - 这将显示其他操作按钮：
 
-   * **还原到此版本**
+   * **恢复到此版本**
 
       * 将恢复该版本。
    * **显示差异**

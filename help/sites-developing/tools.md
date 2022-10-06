@@ -1,8 +1,8 @@
 ---
 title: 测试和跟踪工具
-seo-title: 测试和跟踪工具
+seo-title: Testing and Tracking Tools
 description: AEM提供了组件UI测试框架以及组件测试和调试机制
-seo-description: AEM提供了组件UI测试框架以及组件测试和调试机制
+seo-description: AEM provides a framework for testing component UI and a mechanism for testing and debugging components
 uuid: 12abedb5-4ee7-4389-9340-e628adbbc053
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: bb5d1c7c-56ce-4d1e-a3cb-4e74d6922137
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 0%
+source-wordcount: '292'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 0%
 
 ## 测试 {#testing}
 
-AEM提供：
+AEM 提供：
 
-* [用于测试组件UI的框架](/help/sites-developing/hobbes.md)。
-* [用于测试和调试组件的机制](/help/sites-developing/developer-mode.md)。
+* [组件UI测试框架](/help/sites-developing/hobbes.md).
+* [组件测试和调试机制](/help/sites-developing/developer-mode.md).
 
 以下是两个开源测试工具：
 
@@ -33,13 +33,13 @@ AEM提供：
 
 Selenium用于在每个活动有一个用户的浏览器中进行功能测试。 它将测试步骤（点击）记录为HTML表或Java类。
 
-有关更多信息，请参阅[https://www.seleniumhq.org/](https://www.seleniumhq.org/)。
+有关详细信息，请参阅 [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 
 **JMeter**
 
 JMeter用于跟踪请求，可用于功能、性能和压力测试。
 
-有关更多信息，请参阅[https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter)。
+有关详细信息，请参阅 [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
 
 还有许多专有工具可用于自动化测试和管理测试计划。
 
@@ -53,7 +53,7 @@ JMeter用于跟踪请求，可用于功能、性能和压力测试。
 
 **电子表格**
 
-尽管电子表格并非特别是错误跟踪工具，但通常会&#x200B;*mis*&#x200B;用于此目的，因为它们易于理解，并且大多数用户都有使用其功能的经验。
+尽管电子表格并非特别是错误跟踪工具，但通常 *mis*&#x200B;用于此目的，因为用户易于理解，并且大多数用户都具有使用其功能的经验。
 
 如果用于跟踪，则：
 

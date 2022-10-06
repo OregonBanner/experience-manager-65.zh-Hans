@@ -1,8 +1,8 @@
 ---
 title: 编辑者
-seo-title: 编辑者
+seo-title: Editor
 description: 了解如何切换回经典UI编辑器。
-seo-description: 了解如何切换回经典UI编辑器。
+seo-description: Learn how to switch back to the Classic UI Editor.
 uuid: ca8b07e7-014f-428e-82bd-87f3aae12f6e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 8540e1f0-22d7-4f48-85d9-7c44eb7185df
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '100'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 默认情况下，从编辑器切换到经典UI的功能已被禁用。
 
-要在&#x200B;**页面信息**&#x200B;菜单中重新启用在经典UI **中打开选项**，请执行以下步骤。
+重新启用选项 **在经典UI中打开** 在 **页面信息** 菜单，请按照以下步骤操作。
 
 1. 使用CRXDE Lite，找到以下节点：
 
@@ -32,7 +32,7 @@ ht-degree: 5%
 
    ` [https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui)`
 
-1. 使用&#x200B;**覆盖节点**&#x200B;选项创建覆盖；例如：
+1. 使用创建叠加 **覆盖节点** 选项；例如：
 
    * **路径**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **覆盖位置**: `/apps/`
@@ -42,6 +42,6 @@ ht-degree: 5%
 
    `sling:hideProperties = ["granite:hidden"]`
 
-1. 编辑页面时， **在经典UI中打开**&#x200B;选项在&#x200B;**页面信息**&#x200B;菜单中再次可用。
+1. 的 **在经典UI中打开** 选项在 **页面信息** 菜单。
 
    ![](assets/syui-03-2019-02-27-15-19-48.png)

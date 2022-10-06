@@ -1,8 +1,8 @@
 ---
 title: 使用sendToPrinter API
-seo-title: 使用sendToPrinter API
+seo-title: Using the sendToPrinter API
 description: 使用sendToPrinter服务将文档发送到打印机。
-seo-description: 使用sendToPrinter服务将文档发送到打印机。
+seo-description: Using the sendToPrinter service to send a document to printer.
 uuid: c6a3fe8d-ec19-4350-b4a6-4c3d1971b501
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,8 +11,8 @@ discoiquuid: c2d564ba-fa5a-4130-b7fe-7e2c64d92170
 exl-id: 5fb38afd-7517-494e-b084-1fdd4aef3ca4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 13%
+source-wordcount: '362'
+ht-degree: 14%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 13%
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**:输出服务支持通用Internet文件系统(CIFS)打印协议。
 
-## 使用SendToPrinter服务{#using-sendtoprinter-service}
+## 使用SendToPrinter服务 {#using-sendtoprinter-service}
 
 下表列出：
 
@@ -61,12 +61,12 @@ ht-degree: 13%
 | CIFS | 无效 | 任意 | 使用CIFS打印时出现未知错误。 |
 | CIFS | 空 | 任意 | 表示必需参数sPrintServerUri不能为空的异常。 |
 
-## 身份验证支持{#authentication-support}
+## 身份验证支持 {#authentication-support}
 
 仅CIFS打印支持身份验证。 要进行身份验证，请在PrinterSpec中提供用户名/密码/域。 您可以通过执行以下步骤，使用AEM Granite CyprotoSupport服务加密密码：
 
-1. 转到https://&lt;server>:&lt;port>/system/console。
+1. 转到https://&lt;server>:&lt;port>/system/console.
 
-1. 转到&#x200B;**[!UICONTROL Main]** > **[!UICONTROL Crypto Support]**。
+1. 转到 **[!UICONTROL 主要]** > **[!UICONTROL 加密支持]**.
 
-1. 输入一些纯文本，然后单击&#x200B;**[!UICONTROL Protect]**。
+1. 输入一些纯文本，然后单击 **[!UICONTROL Protect]**.

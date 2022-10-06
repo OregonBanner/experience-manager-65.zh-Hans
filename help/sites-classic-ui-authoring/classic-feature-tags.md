@@ -1,8 +1,8 @@
 ---
 title: 使用标记
-seo-title: 使用标记
+seo-title: Using Tags
 description: 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
-seo-description: 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
+seo-description: Tags are a quick and easy method of classifying content within a website. Tags may be thought of as keywords or labels that can be attached to a page, an asset, or other content to enable searches to find that content and related content.
 uuid: 9799131f-4043-4022-a401-af8be93a1bf6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: c117b9d1-e4ae-403f-8619-6e48d424a761
 exl-id: 4b6c273c-560e-4330-b886-a02825d5aaa1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 80%
+source-wordcount: '712'
+ht-degree: 84%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 80%
 
 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资产或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
 
-* 请参阅[管理标记](/help/sites-administering/tags.md) ，以了解有关创建和管理标记以及已对哪些内容应用标记的信息。
-* 请参阅[面向开发人员的标记](/help/sites-developing/tags.md) ，以了解有关标记框架以及在自定义应用程序中包括和扩展标记的信息。
+* 请参阅 [管理标记](/help/sites-administering/tags.md) 有关创建和管理标记以及已对哪些内容应用标记的信息。
+* 有关标记框架以及在自定义应用程序中包括和扩展标记的信息，请参阅[针对开发人员的标记](/help/sites-developing/tags.md)。
 
 ## 使用标记的十大理由 {#ten-reasons-to-use-tagging}
 
@@ -39,11 +39,11 @@ ht-degree: 80%
 
 在设计站点的内容结构和资产的元数据架构时，请考虑使用标记提供的轻量级可行方法。
 
-## 应用标记  {#applying-tags}
+## 应用标记 {#applying-tags}
 
 在创作环境中，作者可以通过访问页面属性并在&#x200B;**标记/关键字**&#x200B;字段中输入一个或多个标记来应用标记。
 
-要应用[预定义的标记](/help/sites-administering/tags.md)，请在&#x200B;**页面属性**&#x200B;窗口中，使用`Tags/Keywords`字段下拉列表从页面允许的标记列表中进行选择。 **标准标记**&#x200B;选项卡是默认的命名空间，这意味着分类前面没有前缀`namespace-string:`。
+应用 [预定义标记](/help/sites-administering/tags.md)，在 **页面属性** 窗口使用 `Tags/Keywords` 字段下拉列表，从页面允许的标记列表中进行选择。 在 **标准标记** 选项卡是默认的命名空间，这表示 `namespace-string:` 前缀为分类。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -67,16 +67,16 @@ ht-degree: 80%
 
 ## 标记云 {#tag-clouds}
 
-标记云会显示一组标记，用于当前页面、整个网站或最常访问的标记。 标记云是突出显示用户感兴趣的问题的一种方法。用于显示标记的文本大小因标记的用途而异。
+标记云显示当前页面、整个网站的标记，或者那些最常访问的标记。标记云是突出显示用户感兴趣的问题的一种方法。用于显示标记的文本大小因标记的用途而异。
 
 [标记云](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud)组件（通用组件组）用于向页面添加标记云。
 
-## 搜索标记  {#searching-on-tags}
+## 搜索标记 {#searching-on-tags}
 
 您可以在创作和发布环境中搜索标记。
 
-### 使用搜索组件  {#using-search-component}
+### 使用搜索组件 {#using-search-component}
 
-将[搜索组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search)添加到页面可提供搜索功能，该功能包含标记，并且可在创作和发布环境中使用。
+添加 [搜索组件](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) 到页面可提供包含标记的搜索功能，该功能可在创作和发布环境中使用。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)

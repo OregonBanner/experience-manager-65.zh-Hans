@@ -478,7 +478,7 @@ Adobe已制定相应的程序和流程，以便收集、确定以客户为中心
 * 用于添加增强型 PDF 栅格化程序的软件包（[了解更多](/help/assets/aem-pdf-rasterizer.md)）
 * 用于添加扩展 RAW 图像支持的软件包（[了解更多](/help/assets/camera-raw.md)）
 
-**表单**
+**Forms**
 
 * [用于 AEM Forms 功能的软件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [AEM Forms OSGi客户端SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
@@ -563,10 +563,10 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * **文件夹元数据架构**：添加选择按钮后，ID 和值字段未按预期呈现，且删除功能不起作用。(CQ-4261144)
 * 重命名资产时，无法在资产名称中使用空格。(CQ-4266403)
 
-### 表单 {#forms}
+### Forms {#forms}
 
 * 在Linux®操作系统上安装AEM Forms后，带硬件安全模块的数字签名不起作用。 (CQ-4266721)
-* (仅限WebSphere上的AEM Forms®) **Forms Workflow** > **任务搜索** 搜索时，不返回任何结果 **管理员** with **用户名** 作为搜索标准。 (CQ-4266457)
+* (仅限WebSphere上的AEM Forms®) **Forms Workflow** > **任务搜索** 如果您搜索 **管理员** with **用户名** 作为搜索标准。 (CQ-4266457)
 
 * AEM Forms无法将具有JPEG压缩的TIF和TIFF文件转换为PDF文档。 (CQ-4265972)
 * **AEM Forms 迁移**&#x200B;页面上的 **AEM Forms 资产扫描程序**&#x200B;和&#x200B;**交互式通信迁移字符**&#x200B;选项不起作用。(CQ-4266572)

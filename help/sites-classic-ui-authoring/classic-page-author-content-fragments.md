@@ -1,8 +1,8 @@
 ---
 title: 通过内容片段进行页面创作
-seo-title: 通过内容片段进行页面创作
+seo-title: Page Authoring with Content Fragments
 description: 内容片段将作为独立于页面的资产来创建和管理。它们允许您创建渠道中性内容以及各种变量。
-seo-description: 内容片段将作为独立于页面的资产来创建和管理。它们允许您创建渠道中性内容以及各种变量。
+seo-description: Content fragments are created and managed as page-independent assets. They allow you to create channel-neutral content, together with variations.
 page-status-flag: de-activated
 uuid: 8e3bb1bc-8720-48e2-8d06-98fbab4dd4fd
 contentOwner: Chris Bohnert
@@ -13,7 +13,7 @@ discoiquuid: 5b488f41-2cc1-41f9-8c7f-da851d325949
 exl-id: b55d9edc-a210-407a-aa4b-a91bb358be7b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '110'
 ht-degree: 100%
 
 ---

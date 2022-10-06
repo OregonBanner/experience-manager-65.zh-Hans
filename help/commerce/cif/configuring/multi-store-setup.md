@@ -11,8 +11,8 @@ thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '385'
+ht-degree: 2%
 
 ---
 
@@ -61,4 +61,4 @@ AEM Live Copy和语言副本的多站点管理功能与商务集成框架结合�
 * [Adobe Commerce网站、商店和视图](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 * [AEM CIF核心组件 — 多商店/站点配置](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
 * [使用多站点管理器](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
-* [重用内容：多站点管理器和Live Copy](/help/sites-administering/msm.md)
+* [重用内容：多站点管理器和 Live Copy](/help/sites-administering/msm.md)

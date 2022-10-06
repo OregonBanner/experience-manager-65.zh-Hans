@@ -1,8 +1,8 @@
 ---
 title: 配置用户和用户组
-seo-title: 配置用户和用户组
+seo-title: Configure Your Users and User Groups
 description: 请阅读本页，了解用户角色以及如何配置用户和群组，以支持On-Demand Services移动应用程序的创作和管理。
-seo-description: 请阅读本页，了解用户角色以及如何配置用户和群组，以支持On-Demand Services移动应用程序的创作和管理。
+seo-description: Follow this page to understand the user roles and how to configure your users and groups to support the authoring and mangement of your mobile On-Demand services app.
 uuid: 461e1725-41dd-4883-92b9-a7e175660401
 contentOwner: User
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-# 配置用户和用户组{#configure-your-users-and-user-groups}
+# 配置用户和用户组 {#configure-your-users-and-user-groups}
 
 >[!NOTE]
 >
@@ -25,17 +25,17 @@ ht-degree: 0%
 
 本章介绍用户角色以及如何配置用户和群组以支持移动设备应用程序的创作和管理。
 
-## AEM Mobile应用程序用户和组管理{#aem-mobile-application-users-and-group-administration}
+## AEM Mobile应用程序用户和组管理 {#aem-mobile-application-users-and-group-administration}
 
-### AEM Mobile应用程序内容作者（应用程序作者组）{#aem-mobile-application-content-authors-app-author-group}
+### AEM Mobile应用程序内容作者（应用程序作者组） {#aem-mobile-application-content-authors-app-author-group}
 
 应用程序作者组的成员负责创作AEM移动应用程序内容，包括页面、文本、图像和视频。
 
-#### 组配置 — app-authors {#group-configuration-app-authors}
+#### 组配置 — 应用程序作者 {#group-configuration-app-authors}
 
 1. 创建一个名为“app-authors”的新用户组：
 
-   导航到用户Admin Console:[http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   导航到用户Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    在用户组控制台中，选择“+”按钮以创建组。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. 现在，您已创建应用程序作者用户群组，接下来可以通过[用户管理控制台](http://localhost:4502/libs/granite/security/content/useradmin.md)向此新群组添加各个团队成员。
+1. 现在，您已创建应用程序作者用户群组，接下来可以通过 [用户管理控制台](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -58,9 +58,9 @@ ht-degree: 0%
    * /etc/designs
    * /etc/cloudservices/dps2015
 
-### AEM Mobile应用程序管理员组（应用程序管理员组）{#aem-mobile-application-administrators-group-app-admins-group}
+### AEM Mobile应用程序管理员组（应用程序管理员组） {#aem-mobile-application-administrators-group-app-admins-group}
 
-应用程序管理员组的成员还可以使用应用程序作者&#x200B;**AND**&#x200B;附带的相同权限创作应用程序内容：
+应用程序管理员组的成员可以使用应用程序作者附带的相同权限创作应用程序内容 **和** 此外，还负责：
 
 * 暂存、发布和清除应用程序ContentSync OTA更新
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 >
 >您会注意到，有些选项对于应用程序作者而言不可用，而应用程序管理员则可用。
 
-### 组配置 — 应用程序管理员{#group-configuration-app-admins}
+### 组配置 — 应用程序管理员 {#group-configuration-app-admins}
 
 1. 创建一个名为应用程序管理员的新组。
 1. 将以下组添加到新的应用程序管理员组：
@@ -84,7 +84,7 @@ ht-degree: 0%
    >
    >使用PhoneGap Build服务远程构建需要工作流用户
 
-1. 导航到[权限控制台](http://localhost:4502/useradmin)并添加用于管理cloudservices的权限
+1. 导航到 [权限控制台](http://localhost:4502/useradmin) 和添加管理cloudservices的权限
 
    * （读取、修改、创建、删除、复制）/etc/cloudservices/mobileservices
 

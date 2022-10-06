@@ -1,8 +1,8 @@
 ---
 title: 使用日志
-seo-title: 使用日志
+seo-title: Working with Logs
 description: 了解如何通过使用日志对AEM进行故障诊断。
-seo-description: 了解如何通过使用日志对AEM进行故障诊断。
+seo-description: Learn how to troubleshoot AEM by working with logs.
 uuid: af8b7f50-c8d4-4760-9f00-3feb0b79ee4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '234'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ CRX记录详细日志。 解包并启动快速入门后，您可以在以下位�
 * crx-quickstart/server/logs
 * crx-quickstart/logs
 
-## 激活DEBUG日志级别{#activating-the-debug-log-level}
+## 激活DEBUG日志级别 {#activating-the-debug-log-level}
 
 默认日志级别为“信息”，即不记录DEBUG消息。
 
@@ -54,7 +54,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 | 2 | 警告 | 操作已成功，但遇到问题。 CRX可能正常工作，也可能无法正常工作。 |
 | 3 | 信息 | 操作成功。 |
 
-## 用于{#verbose-option-used-for-troubleshooting}故障排除的详细选项
+## 用于疑难解答的详细选项 {#verbose-option-used-for-troubleshooting}
 
 启动CRX时，可以向命令行中添加 — v(verbose)选项，如下所示：
 

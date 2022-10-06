@@ -1,8 +1,8 @@
 ---
 title: 为草稿和提交配置存储服务
-seo-title: 为草稿和提交配置存储服务
+seo-title: Configuring storage services for drafts and submissions
 description: 了解如何为草稿和提交配置存储
-seo-description: 了解如何为草稿和提交配置存储
+seo-description: Learn how to configure storage for drafts and submissions
 uuid: 2f4efc07-312c-4908-8c91-84f4e6c5ad25
 topic-tags: publish
 content-type: reference
@@ -11,12 +11,12 @@ discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 exl-id: 51ca2844-91f0-453a-9b39-b876399ebecb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
 
-# 为草稿和提交配置存储服务{#configuring-storage-services-for-drafts-and-submissions}
+# 为草稿和提交配置存储服务 {#configuring-storage-services-for-drafts-and-submissions}
 
 ## 概述 {#overview}
 
@@ -36,15 +36,15 @@ AEM Forms门户数据和元数据服务支持草稿和提交。 默认情况下�
 >
 >当您使用Forms Portal提交操作或在自适应表单中启用“在表单门户中存储数据”选项时，表单数据会存储在AEM存储库中。 在生产环境中，建议不要将草稿或提交的表单数据存储在AEM存储库中。 您而是必须将草稿和提交组件与安全存储（如企业数据库）集成，以存储草稿和提交的表单数据。
 >
->有关更多信息，请参阅[将草稿和提交组件与数据库](/help/forms/using/integrate-draft-submission-database.md)集成的示例。
+>有关更多信息，请参阅 [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md).
 
-## 配置Forms Portal草稿和提交服务{#configuring-forms-portal-drafts-and-submissions-services}
+## 配置Forms Portal草稿和提交服务 {#configuring-forms-portal-drafts-and-submissions-services}
 
-在AEM Web控制台配置(`https://[host]:'port'/system/console/configMgr`)中，单击以在编辑模式下打开&#x200B;**Forms Portal草稿和提交配置**。
+在AEM Web控制台配置( `https://[host]:'port'/system/console/configMgr`)，单击以打开 **Forms门户草稿和提交配置** 在编辑模式下。
 
 根据您的要求指定属性的值，如下所述：
 
-### 用于在发布实例{#out-of-the-box-services-to-store-data-on-publish-instance}上存储数据的开箱即用服务
+### 用于在发布实例上存储数据的开箱即用服务 {#out-of-the-box-services-to-store-data-on-publish-instance}
 
 数据会反向复制到配置的创作实例。
 
@@ -63,17 +63,17 @@ AEM Forms门户数据和元数据服务支持草稿和提交。 默认情况下�
    <td>com.adobe.fd.fp.service.impl.DraftMetadataServiceImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal提交数据服务(提交数据服务的标识符(<strong>submit.data.service</strong>))</td>
+   <td>Forms门户提交数据服务(提交数据服务的标识符(<strong>submit.data.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitDataServiceImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal提交元数据服务(提交元数据服务的标识符(<strong>submit.metadata.service</strong>))</td>
+   <td>Forms门户提交元数据服务(提交元数据服务的标识符(<strong>submit.metadata.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitMetadataServiceImpl<br /> </td>
   </tr>
  </tbody>
 </table>
 
-### 用于在远程处理实例{#out-of-the-box-services-to-store-data-on-remote-processing-instance}上存储数据的开箱即用服务
+### 用于在远程处理实例上存储数据的开箱即用服务 {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
 
 数据会直接推送到配置的远程实例
 
@@ -92,20 +92,20 @@ AEM Forms门户数据和元数据服务支持草稿和提交。 默认情况下�
    <td>com.adobe.fd.fp.service.impl.DraftMetadataServiceRemoteImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal提交数据服务(提交数据服务的标识符(<strong>submit.data.service</strong>))</td>
+   <td>Forms门户提交数据服务(提交数据服务的标识符(<strong>submit.data.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitDataServiceRemoteImpl<br /> </td>
   </tr>
   <tr>
-   <td>Forms Portal提交元数据服务(提交元数据服务的标识符(<strong>submit.metadata.service</strong>))</td>
+   <td>Forms门户提交元数据服务(提交元数据服务的标识符(<strong>submit.metadata.service</strong>))</td>
    <td>com.adobe.fd.fp.service.impl.SubmitMetadataServiceRemoteImpl<br /> </td>
   </tr>
  </tbody>
 </table>
 
-除了上述指定的配置之外，还提供有关已配置远程处理实例的信息。
+除了上述指定的配置外，请提供有关已配置远程处理实例的信息。
 
-在AEM Web控制台配置(`https://[host]:'port'/system/console/configMgr`)中，单击以在编辑模式下打开&#x200B;**AEM DS设置服务**。 在AEM DS设置服务对话框中，提供有关处理服务器URL、处理服务器用户名和密码的信息。
+在AEM Web控制台配置( `https://[host]:'port'/system/console/configMgr`)，单击以打开 **AEM DS设置服务** 在编辑模式下。 在AEM DS设置服务对话框中，提供有关处理服务器URL、处理服务器用户名和密码的信息。
 
 >[!NOTE]
 >
->还提供用于在数据库中存储用户数据的示例实现。 要了解如何配置数据和元数据服务以在外部数据库中存储用户数据，请参阅[将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)。
+>还提供用于在数据库中存储用户数据的示例实现。 要了解如何配置数据和元数据服务以将用户数据存储在外部数据库中，请参阅 [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md).

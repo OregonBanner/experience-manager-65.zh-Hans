@@ -38,7 +38,7 @@ ht-degree: 4%
 
 这会配置产品页面的URL，并支持以下选项：
 
-* `{{page}}.html/{{sku}}.html#{{variant_sku}}` (默认)
+* `{{page}}.html/{{sku}}.html#{{variant_sku}}`（默认）
 * `{{page}}.html/{{url_key}}.html#{{variant_sku}}`
 * `{{page}}.html/{{sku}}/{{url_key}}.html#{{variant_sku}}`
 * `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
@@ -60,7 +60,7 @@ ht-degree: 4%
 
 这会配置类别或产品列表页面的URL，并支持以下选项：
 
-* `{{page}}.html/{{url_path}}.html` (默认)
+* `{{page}}.html/{{url_path}}.html`（默认）
 * `{{page}}.html/{{url_key}}.html`
 
 对于 [Venia参考存储](https://github.com/adobe/aem-cif-guides-venia):

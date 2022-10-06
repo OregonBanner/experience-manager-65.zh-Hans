@@ -1,8 +1,8 @@
 ---
 title: 工作总揽
-seo-title: 工作总揽
+seo-title: Assignments Essentials
 description: 启用社区的工作总揽功能概述
-seo-description: 启用社区的工作总揽功能概述
+seo-description: Assignments feature overview for enablement communities
 uuid: e49fce26-1091-4f37-93e8-c4ec85371811
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 11%
+source-wordcount: '214'
+ht-degree: 12%
 
 ---
 
 # 工作总揽 {#assignments-essentials}
 
-阅读并了解有关使用[启用社区](/help/communities/overview.md#enablement-community)站点的分配功能的基本信息。
+阅读以了解使用 [启用社区](/help/communities/overview.md#enablement-community) 站点。
 
 分配功能是将支持资源和学习路径分配给支持社区的成员的功能。
 
@@ -50,7 +50,7 @@ ht-degree: 11%
   </tr>
   <tr>
    <td><strong> 属性</strong></td>
-   <td>请参阅<a href="/help/communities/assignments.md">工作总揽功能</a></td>
+   <td>请参阅 <a href="/help/communities/assignments.md">工作分配功能</a></td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +85,7 @@ ht-degree: 11%
 
 ### 指定任务功能 {#assignments-function}
 
-包括[分配函数](/help/communities/functions.md#assignments-function)的社区站点结构包括配置的` [assignments](/help/communities/assignments.md)`组件。
+包含 [分配函数](/help/communities/functions.md#assignments-function)，包括已配置的 ` [assignments](/help/communities/assignments.md)` 组件。
 
 ### 参考API {#reference-apis}
 

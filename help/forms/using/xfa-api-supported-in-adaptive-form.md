@@ -1,23 +1,23 @@
 ---
 title: 基于XDP的自适应表单中的XFA支持
-seo-title: 基于XDP的自适应表单中的XFA支持
+seo-title: XFA support in XDP-based adaptive forms
 description: 列出自适应表单中支持的XFA事件、属性、脚本和验证。
-seo-description: 列出自适应表单中支持的XFA事件、属性、脚本和验证。
+seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
 uuid: 75d3c292-cfed-438f-afdb-4071d95a08b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '683'
 ht-degree: 5%
 
 ---
 
-# 基于XDP的自适应表单中支持XFA{#xfa-support-in-xdp-based-adaptive-forms}
+# 基于XDP的自适应表单中的XFA支持{#xfa-support-in-xdp-based-adaptive-forms}
 
 ## 简介 {#introduction}
 
@@ -31,7 +31,7 @@ ht-degree: 5%
 
 本文列出了自适应表单中受支持的XFA事件、属性和验证，并说明如何在自适应表单中覆盖它们。
 
-## 自适应表单{#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}中支持的XFA元素及其映射
+## 自适应表单中支持的XFA元素及其映射 {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
 
 ### 字段 {#fields}
 
@@ -141,39 +141,39 @@ ht-degree: 5%
    <td><p>在自适应表单中映射到简短描述属性。</p> </td>
   </tr>
   <tr>
-   <td><p>题注<em>（所有字段类型）</em></p> </td>
+   <td><p>字幕<em> （所有字段类型）</em></p> </td>
    <td><p>在自适应表单中映射到标题属性。</p> </td>
   </tr>
   <tr>
-   <td><p>displayFormat<em>（所有字段类型）</em></p> </td>
+   <td><p>displayFormat<em> （所有字段类型）</em></p> </td>
    <td><p>在自适应表单中映射到显示模式。</p> </td>
   </tr>
   <tr>
-   <td><p>rawValue<em>（所有字段类型）</em></p> </td>
+   <td><p>rawValue<em> （所有字段类型）</em></p> </td>
    <td><p>映射到自适应表单中的值属性。</p> </td>
   </tr>
   <tr>
-   <td><p>项目<em>（列表框，复选框）</em></p> </td>
+   <td><p>项目<em> （列表框、复选框）</em></p> </td>
    <td><p>在自适应表单中映射到options属性。 您可以使用“选项”表达式覆盖它。</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em>（文本字段）</em></p> </td>
+   <td><p>maxChar<em> （文本字段）</em></p> </td>
    <td><p>在自适应表单中映射到允许的最大字符数属性。</p> </td>
   </tr>
   <tr>
-   <td><p>多行<em>（文本字段）</em></p> </td>
+   <td><p>多线<em> （文本字段）</em></p> </td>
    <td><p>在自适应表单中映射到允许多行属性。</p> </td>
   </tr>
   <tr>
-   <td><p>fracDigit<em>（数字字段，小数字段）</em></p> </td>
+   <td><p>fracDigit<em> （数字字段、小数字段）</em></p> </td>
    <td><p>在自适应表单中映射到Frac digits属性。</p> </td>
   </tr>
   <tr>
-   <td><p>leadDigit<em>（数字字段，小数字段）</em></p> </td>
+   <td><p>leadDigit<em> （数字字段、小数字段）</em></p> </td>
    <td><p>在自适应表单中映射到潜在客户位数属性。</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em>（列表框）</em></p> </td>
+   <td><p>multiSelect<em> （列表框）</em></p> </td>
    <td><p>映射到自适应表单中允许多个选择属性。</p> </td>
   </tr>
  </tbody>

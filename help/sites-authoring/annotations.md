@@ -1,8 +1,8 @@
 ---
 title: 编辑页面时添加注释
-seo-title: 编辑页面时添加注释
+seo-title: Annotations when Editing a Page
 description: 许多与内容直接相关的组件允许您添加注释
-seo-description: 许多与内容直接相关的组件允许您添加注释
+seo-description: Many components directly related to content allow you to add an annotation
 uuid: 157be55c-8ab8-472e-be32-0dcc02bfa41d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '634'
 ht-degree: 98%
 
 ---
@@ -52,8 +52,8 @@ ht-degree: 98%
 >您可以对各种资源添加注释：
 >
 >* [对资产添加注释](/help/assets/manage-assets.md#annotating)
-* [对视频资产添加注释](/help/assets/managing-video-assets.md#annotate-video-assets)
-
+>* [对视频资产添加注释](/help/assets/managing-video-assets.md#annotate-video-assets)
+>
 
 
 ### 对组件添加注释 {#annotating-a-component}
@@ -67,12 +67,14 @@ ht-degree: 98%
    此时，您可以查看任何现有的注释。
 
    >[!NOTE]
-   要退出“注释”模式，请点按/单击顶部工具栏右侧的“注释”图标（x 符号）。
+   >
+   >要退出“注释”模式，请点按/单击顶部工具栏右侧的“注释”图标（x 符号）。
 
 1. 单击/点按“添加注释”图标（工具栏左侧的加号）以开始添加注释。
 
    >[!NOTE]
-   要停止添加注释（并返回到查看模式），请点按/单击顶部工具栏左侧的“取消”图标（用白色圆圈圈住的 x 符号）。
+   >
+   >要停止添加注释（并返回到查看模式），请点按/单击顶部工具栏左侧的“取消”图标（用白色圆圈圈住的 x 符号）。
 
 1. 单击/点按需要添加注释的组件（可添加注释的组件将用蓝色边框突出显示），此时将打开如下对话框：
 
@@ -114,7 +116,8 @@ ht-degree: 98%
 1. 要退出“注释”模式并返回之前使用的模式，请点按/单击顶部工具栏右侧的“注释”图标（x 符号）。
 
 >[!NOTE]
-无法将注释添加到其他用户已锁定的页面。
+>
+>无法将注释添加到其他用户已锁定的页面。
 
 ### 注释指示器 {#annotation-indicator}
 

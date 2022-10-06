@@ -1,8 +1,8 @@
 ---
 title: 组件控制台
-seo-title: 组件控制台
+seo-title: Components Console
 description: 组件控制台
-seo-description: 'null'
+seo-description: null
 uuid: a4e34d81-7875-4e26-8b48-4473e2905c37
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '262'
 ht-degree: 96%
 
 ---

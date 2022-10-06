@@ -1,5 +1,5 @@
 ---
-title: '在电子邮件通知中使用元数据 '
+title: 在电子邮件通知中使用元数据
 seo-title: Use metadata in an email notification
 description: 使用元数据在表单工作流电子邮件通知中填充信息
 seo-description: Use metadata to populate information in a forms workflow email notification

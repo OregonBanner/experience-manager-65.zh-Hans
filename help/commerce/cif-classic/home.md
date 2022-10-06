@@ -1,10 +1,11 @@
 ---
 title: AEM CIF Classic
 description: AEM CIF Classic自助资源和文档链接
-source-git-commit: 491b0398c90d84f38efaa7f0ccd4d4215064753d
+exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '52'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +19,6 @@ ht-degree: 3%
 >
 >* 新项目应使用 [AEM CIF](/help/commerce/home.md).
 >* 现有的CIF Classic应 [迁移到AEM CIF](/help/commerce/cif/migration.md).
-
 >
 
 

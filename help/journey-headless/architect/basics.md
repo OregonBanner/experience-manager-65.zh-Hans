@@ -1,14 +1,15 @@
 ---
 title: 了解内容建模基础知识
 description: 了解使用内容片段为无头CMS建模内容的基本知识。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '905'
-ht-degree: 4%
+ht-degree: 9%
 
 ---
 
-# 了解使用AEM实现无头的内容建模基础知识 {#content-modeling-headless-basics}
+# 了解使用 AEM 对 Headless 进行内容建模的基础知识 {#content-modeling-headless-basics}
 
 ## 迄今为止的故事 {#story-so-far}
 
@@ -127,7 +128,7 @@ AEM提供了以下数据类型来为内容建模：
 * 城市
 * 公司
 * 人员
-* 奖项
+* 奖励
 
 看起来很简单，但公司当然有CEO和员工…….这些都是人，每个人都定义为人。
 

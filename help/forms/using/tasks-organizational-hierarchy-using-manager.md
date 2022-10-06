@@ -1,8 +1,8 @@
 ---
 title: 使用“经理视图”管理组织层次结构中的任务
-seo-title: 使用“经理视图”管理组织层次结构中的任务
+seo-title: Managing tasks in an organizational hierarchy using Manager View
 description: 管理人员和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报表的任务。
-seo-description: 管理人员和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接和间接报表的任务。
+seo-description: How managers and organization heads can access and work on the tasks of their direct and indirect reports in the To-do tab in AEM Forms workspace.
 uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
 contentOwner: robhagat
 content-type: reference
@@ -13,26 +13,26 @@ docset: aem65
 exl-id: e50974a7-01ac-4a08-bea2-df9cc975c69e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
 
-# 使用Manager View{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}管理组织层次结构中的任务
+# 使用“经理视图”管理组织层次结构中的任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
 在AEM Forms工作区中，经理现在可以访问分配给其层次结构中任何人的任务（直接或间接报表），并对其执行各种操作。 这些任务位于AEM Forms工作区的“待办事项”选项卡中。 对直接报告任务支持的操作包括：
 
-**** 转发将任务从直接报表转发给任何用户。
+**转发** 将任务从直接报告转发给任何用户。
 
-**** ClaimClaim（声明）直接报表的任务。
+**索赔** 声明直接报告的任务。
 
-**声明和** 打开声明直接报表的任务，并在经理的待办事项列表中自动将其打开。
+**声明和打开** 声明直接报表的任务，并在经理的待办事项列表中自动将其打开。
 
-**** 拒绝拒绝由其他用户转发到直接报表的任务。此选项适用于其他用户转发到直接报表的任务。
+**拒绝** 拒绝其他某些用户转发到直接报表的任务。 此选项适用于其他用户转发到直接报表的任务。
 
 AEM Forms仅限制用户对其拥有访问控制(ACL)的任务的访问。 这种检查可确保用户只能获取用户具有访问权限的任务。 使用第三方Web服务和实施来定义层次结构，组织可以自定义经理的定义并定向报表以满足其需求。
 
-1. 创建DSC。 有关更多信息，请参阅《使用AEM Forms进行编程》指南中的“为AEM表单开发组件”主题。[](https://www.adobe.com/go/learn_aemforms_programming_63)
+1. 创建DSC。 有关更多信息，请参阅 [使用AEM Forms编程](https://www.adobe.com/go/learn_aemforms_programming_63) 的双曲余切值。
 1. 在DSC中，为层级管理定义新的SPI，以在AEM Forms用户中定义直接报表和层级。 以下是Java™代码片段示例。
 
    ```java
@@ -112,7 +112,7 @@ AEM Forms仅限制用户对其拥有访问控制(ACL)的任务的访问。 这�
    </component>
    ```
 
-1. 通过Workbench部署DSC。 重新启动`ProcessManagementTeamTasksService`服务。
+1. 通过Workbench部署DSC。 重新启动 `ProcessManagementTeamTasksService` 服务。
 1. 您可能需要刷新浏览器或再次注销/登录用户。
 
 以下屏幕说明了如何访问直接报告的任务和可用的操作。

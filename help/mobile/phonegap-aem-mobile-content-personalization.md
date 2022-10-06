@@ -1,21 +1,21 @@
 ---
 title: AEM Mobile内容个性化
-seo-title: AEM Mobile内容个性化
+seo-title: AEM Mobile content personalization
 description: 可查看本页以了解AEM Mobile内容个性化功能，该功能允许AEM作者利用Adobe Target对移动应用程序内容进行个性化。
-seo-description: 可查看本页以了解AEM Mobile内容个性化功能，该功能允许AEM作者利用Adobe Target对移动应用程序内容进行个性化。
+seo-description: Follow this page to learn about AEM Mobile content personalization feature that allows AEM authors to personalize mobile app content by leveraging Adobe Target.
 uuid: 9078edd1-8399-485f-8a63-a07e766f7ef9
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: c9c818dc-c5c4-4a96-94fe-9dc9fe75705b
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 70d7ee0d-2f6d-4f97-a6e2-b02d84a0ca42
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
-
 
 # AEM Mobile内容个性化{#aem-mobile-content-personalization}
 
@@ -25,29 +25,29 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本文档是[AEM Mobile快速入门](/help/mobile/getting-started-aem-mobile.md)指南的一部分，该指南是AEM Mobile参考的推荐起点。
+>本文档是 [开始使用AEM Mobile](/help/mobile/getting-started-aem-mobile.md) 指南，AEM Mobile参考的推荐起点。
 
-AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](https://www.adobe.com/ca/marketing-cloud/testing-targeting.html)个性化移动设备应用程序内容。 这允许向移动应用程序用户交付目标选件。 Adobe Experience Manager Mobile提供创建、定位和交付内容的功能，以便为用户提供特定于其个人品味的内容。
+AEM Mobile内容个性化功能允许 [AEM作者](#author) 通过利用 [Adobe Target](https://www.adobe.com/ca/marketing-cloud/testing-targeting.html). 这允许向移动应用程序用户交付目标选件。 Adobe Experience Manager Mobile提供创建、定位和交付内容的功能，以便为用户提供特定于其个人品味的内容。
 
 与AEM中的常见情况一样，为了让作者开始创建此内容，管理员和开发人员需要先准备环境。
 
-[AEM ](#administrator) dministrator需要在AEM Mobile和Adobe TargetCloud Service之间建立连接。
+[AEM管理员](#administrator) 需要在AEM Mobile与Adobe TargetCloud Service之间建立连接。
 
-同时，AEM Mobile [开发人员](#developer)需要修改其现有脚本，以便于进行目标内容创作。
+与此同时，AEM Mobile [开发人员](#developer) 需要修改其现有脚本，以便于进行目标内容创作。
 
-## 对于管理员{#for-administrators}
+## 对于管理员 {#for-administrators}
 
 在内容作者开始为移动设备应用程序生成目标内容之前，需要先完成许多步骤：我们将为用户和组获取正确的权限集，创建云服务，配置活动的应用程序，最后生成内容。
 
-本文将指导您完成配置[AEM Mobile混合引用应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)以进行定位的过程。
+本文将指导您完成配置 [AEM Mobile混合参考应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 进行定位。
 
 今后的假设是AEM Mobile混合参考应用程序已成功部署并可通过AEM Mobile功能板访问。
 
-在作者可以在应用程序中生成目标内容之前，您的AEM实例需要[配置Adobe TargetCloud Service。](/help/mobile/aem-mobile-configuring-cloud-service.md)
+在作者可以在应用程序中生成目标内容之前，您的AEM实例需要 [已配置Adobe TargetCloud Service。](/help/mobile/aem-mobile-configuring-cloud-service.md)
 
 ### 权限 {#permissions}
 
-需要访问个性化控制台的用户必须属于`target-activity-authors`组。
+需要访问个性化控制台的用户需要包含在 `target-activity-authors` 群组。
 
 建议在用户和组设置中，将target-activity-group添加到apps-admins组。 通过添加target-activity-authors组，用户将能够查看个性化导航菜单条目。
 
@@ -55,7 +55,7 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 >
 >忘记将您希望有权访问个性化管理控制台的用户或组添加到target-activity-authors组将阻止用户看到个性化控制台。
 
-### 云服务 {#cloud-services}
+### Cloud Service {#cloud-services}
 
 要使目标内容适用于移动设备应用程序，需要配置两项服务：Adobe Target服务和AdobeMobile Services服务。 Adobe Target服务提供用于处理客户请求和返回个性化内容的引擎。 AdobeMobile Services服务通过ADBMobileConfig.json文件（AMS Cordova插件使用该文件）提供Adobe服务与移动应用程序之间的连接。 在AEM Mobile功能板中，您可以通过添加这两项服务来配置应用程序。
 
@@ -83,13 +83,13 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 ### 客户代码 {#client-code}
 
-要登录AMS服务，请访问[https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)，选择移动应用程序并单击设置。 找到“SDK目标选项”字段，并将客户端代码放入该字段中，然后单击保存。
+要登录AMS服务，请访问 [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)，选择移动应用程序并单击设置。 找到“SDK目标选项”字段，并将客户端代码放入该字段中，然后单击保存。
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
 现在，客户端代码已与移动设备应用程序关联，在通过Adobe移动设备功能板配置AMS云服务后，服务设置的设置将通过ADBMobileConfig.json文件交付。
 
-### AdobeMobile ServiceCloud Service{#adobe-mobile-service-cloud-service}
+### AdobeMobile ServiceCloud Service {#adobe-mobile-service-cloud-service}
 
 配置AMS后，应将移动应用程序与Adobe移动功能板中的移动应用程序关联。 在AEM Mobile功能板中找到管理Cloud Services，然后单击+按钮。
 
@@ -105,7 +105,7 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 ![chlimage_1-44](assets/chlimage_1-44.png)
 
-## 对于作者{#for-authors}
+## 对于作者 {#for-authors}
 
 **先决条件：** 如上所述，管理员需要先配置与Adobe Target服务的连接，然后作者才能生成新的目标内容。
 
@@ -113,17 +113,17 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 在AEM Mobile应用程序中创作目标内容的过程与创作AEM Sites类似：
 
-请参阅此处，获取有关[在AEM](/help/sites-authoring/personalization.md)中创作目标内容的完整概述
+请参阅此处，获取 [在AEM中创作目标内容](/help/sites-authoring/personalization.md)
 
-## 对于开发人员{#for-developers}
+## 对于开发人员 {#for-developers}
 
 构建移动应用程序的AEM开发人员应继续遵循开发组件时在AEM中常用的模式。 在此，我们将指导您完成使内容作者能够创建目标内容的必要步骤：
 
-### Adobe Target ContentSync处理程序{#adobe-target-contentsync-handlers}
+### Adobe Target ContentSync处理程序 {#adobe-target-contentsync-handlers}
 
-向用户的设备内容交付内容是通过渲染由AEM内容作者创建的选件来生成的。 要处理目标选件的渲染，有一个新的内容同步处理程序将处理选件。 以混合引用应用程序为例， en（英语）内容包包含带有[mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml)处理程序的ContentSyncConfig。 下一步对于向设备渲染选件至关重要。 mobileappoppers处理程序具有path属性，该属性用于标识要用于应用程序的个性化活动的路径。
+向用户的设备内容交付内容是通过渲染由AEM内容作者创建的选件来生成的。 要处理目标选件的渲染，有一个新的内容同步处理程序将处理选件。 以混合引用应用程序作为示例， en（英语）内容包包含ContentSyncConfig ，其中 [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) 处理程序。 下一步对于向设备渲染选件至关重要。 mobileappoppers处理程序具有path属性，该属性用于标识要用于应用程序的个性化活动的路径。
 
-例如，如果存在位于&#x200B;*/content/campaigns/hybridref*&#x200B;的活动，请复制此路径并将其作为值粘贴到mobileappoffers处理程序的&#x200B;*path*&#x200B;属性中。
+例如，如果某个活动位于 */content/campaigns/hybridref* 复制此路径，并将其作为值粘贴到 *路径* mobileapporfers处理程序的属性。
 
 >[!NOTE]
 >
@@ -131,13 +131,13 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 在mobileapporfers处理程序的路径属性中设置活动路径后，保存处理程序。 处理程序现在可以开始为我们的移动设备渲染选件。
 
-### 呈现模式{#render-mode}
+### 渲染模式 {#render-mode}
 
-对于发布和开发设置，mobileappoppers处理程序的配置方式有所不同。 对于发布设置，在cq:ContentSyncConfig节点上设置了名为&#x200B;*renderMode*&#x200B;的属性，其值为&#x200B;*publish*。 mobileappopfers处理程序引用renderMode，如果设置为发布，则将修改创建的mbox ID。 默认情况下，由AEM创建的mbox具有一个 — author值，附加到mbox ID。 这表示该活动尚未发布，应使用未发布的营销活动解决选件问题。
+对于发布和开发设置，mobileappoppers处理程序的配置方式有所不同。 对于发布设置，有一个名为的属性 *renderMode* 值为 *发布* 在cq:ContentSyncConfig节点上设置。 mobileappopfers处理程序引用renderMode，如果设置为发布，则将修改创建的mbox ID。 默认情况下，由AEM创建的mbox具有一个 — author值，附加到mbox ID。 这表示该活动尚未发布，应使用未发布的营销活动解决选件问题。
 
 通过Adobe移动设备功能板暂存内容时，暂存内容会被视为生产就绪内容，并通过非开发内容同步配置进行渲染。 以这种方式渲染将导致 — author从所有mbox ID中删除，并预期Target服务器上会有发布的活动可用。 在测试暂存内容之前，请确保活动已发布。
 
-### 个性化应用程序开发{#personalization-app-development}
+### 个性化应用程序开发 {#personalization-app-development}
 
 #### 组件 {#components}
 
@@ -147,7 +147,7 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 #### head.html {#head-html}
 
-为了让作者能够定位其内容，需要将目标菜单添加到页面，以便作者可以将上下文从编辑模式更改为定位模式。 要启用此功能，开发人员应修改head.html脚本，以在head.html顶部附近或尽可能靠近&lt;title>&lt;/title>元素的位置包含以下代码片段。
+为了让作者能够定位其内容，需要将目标菜单添加到页面，以便作者可以将上下文从编辑模式更改为定位模式。 要启用此功能，开发人员应修改head.html脚本，以在head.html顶部附近或靠近 &lt;title>&lt;/title> 元素。
 
 ```xml
 <meta data-sly-test="${!wcmmode.disabled}">
@@ -163,9 +163,9 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 为了让作者能够预览目标内容，编辑器需要能够找到Adobe Target云服务的配置。 下面的代码块会添加两个重要的脚本。 首先，为页面添加功能，以找到关联的Target云服务并发出对Adobe Target的调用。 第二个是添加了cq.apps.targeting类别。
 
-**cq.apps.targeting**&#x200B;类别覆盖默认的cq/personalization/component/target组件，并使用mobileapps/components/target组件来呈现专门用于移动设备应用程序使用情况的选件。 有关此内容的更多详细信息，请参阅目标组件一节。
+的 **cq.apps.targeting** 类别会覆盖默认的cq/personalization/component/target组件，并使用mobileapps/components/target组件来呈现专门用于移动设备应用程序使用情况的选件。 有关此内容的更多详细信息，请参阅目标组件一节。
 
-应将代码添加到head.html中，并放在&lt;/head>元素结尾之前。
+应将代码添加到head.html中，并放在 &lt;/head> 元素。
 
 ```xml
 <div data-sly-test="${!wcmmode.disabled}">
@@ -196,11 +196,11 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 </div>
 ```
 
-### 引用应用程序{#reference-application}
+### 参考应用程序 {#reference-application}
 
-[AEM Mobile混合引用应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)中显示了head.html和body.html的示例，其中显示了开发人员将脚本块放置在两个脚本中的位置。
+head.html和body.html的示例可在 [AEM Mobile混合参考应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 显示开发人员将脚本块放置在两个脚本中的位置。
 
-### 内容同步处理程序{#content-sync-handlers}
+### 内容同步处理程序 {#content-sync-handlers}
 
 内容作者为移动设备应用程序创建完内容后，下一步是下载源并构建应用程序，或暂存要发布的内容。 开发人员涉及许多步骤来实现此目的。 为帮助渲染内容，AEM Mobile会利用内容同步处理程序来渲染和打包内容。 为个性化用例引入了新的内容同步处理程序，以渲染目标内容。 “mobileappoffers”处理程序知道如何渲染由内容作者创建的关联目标选件。 因此，mobileappoffers处理程序扩展了抽象页面更新处理程序，因此许多属性都相似。 mobileappopers处理程序的详细信息具有以下属性。
 
@@ -271,15 +271,15 @@ AEM Mobile内容个性化功能允许[AEM作者](#author)利用[Adobe Target](ht
 
 >[!NOTE]
 >
->[AEM Mobile混合引用应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)具有默认mobileappoffer处理程序的配置。 示例中的路径属性为空，因为它取决于营销活动位置。 营销活动作者创建营销活动后，应用程序管理员应通过指定指向营销活动的路径属性，将营销活动与处理程序关联。
+>的 [AEM Mobile混合参考应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 具有默认mobileappoffer处理程序的配置。 示例中的路径属性为空，因为它取决于营销活动位置。 营销活动作者创建营销活动后，应用程序管理员应通过指定指向营销活动的路径属性，将营销活动与处理程序关联。
 
-### 目标组件{#target-component}
+### 目标组件 {#target-component}
 
 为了帮助专门为移动设备应用程序渲染内容，AEM Mobile使用了mobileapps/components/target组件。 移动设备目标组件扩展了cq/personalization/components/target组件，并覆盖engine_tnt.jsp脚本。 通过覆盖engine_tnt.jsp，AEM Mobile可以控制为移动设备应用程序用例生成的HTML。 对于内容作者所定向的每个组件，engine_tnt.jsp会创建一个关联的mbox。
 
-对于每个mbox，添加了&#x200B;**cq-targeting**&#x200B;的属性，使应用程序开发人员能够编写自定义代码，以便随意使用和使用。 [AEM Mobile混合引用应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)有一个使用cq-targeting属性的Angular指令示例。 内容替换的概念何时以及如何完成，完全取决于移动应用程序开发人员。 有一个通过AEM /etc/clientlibs/mobileapps/js/mobileapps.js交付的Mobile SDK，该SDK提供了一个API来调用Adobe定位服务。 由应用程序开发人员根据应用程序的设计来指定何时应进行该调用。
+对于每个mbox， **cq定位** 添加了允许应用程序开发人员编写自定义代码以供使用和随意使用的功能。 的 [AEM Mobile混合参考应用程序](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 有一个使用cq-targeting属性的Angular指令示例。 内容替换的概念何时以及如何完成，完全取决于移动应用程序开发人员。 有一个通过AEM /etc/clientlibs/mobileapps/js/mobileapps.js交付的Mobile SDK，该SDK提供了一个API来调用Adobe定位服务。 由应用程序开发人员根据应用程序的设计来指定何时应进行该调用。
 
-## 接下来是什么？{#what-s-next}
+## 下一步? {#what-s-next}
 
 1. [开始我的AEM Mobile应用程序体验](/help/mobile/starting-aem-phonegap-app.md)
 1. [管理我的应用程序的内容](/help/mobile/phonegap-manage-app-content.md)

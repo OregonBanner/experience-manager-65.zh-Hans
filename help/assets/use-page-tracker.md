@@ -3,18 +3,18 @@ title: 在网页中使用页面跟踪器和嵌入代码
 description: 了解如何在您的网站代码中包含页面跟踪器和嵌入JavaScript代码，以便Adobe Analytics能够捕获有关资产的使用情况数据。
 contentOwner: AG
 role: Architect, Admin
-feature: 资产报表
+feature: Asset Reports
 exl-id: 14d02015-df00-4566-a098-de76eaf42605
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 1%
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
 # 在网页中使用页面跟踪器和嵌入代码 {#using-page-tracker-and-embed-code-in-web-pages}
 
-“页面跟踪器”是一段JavaScript代码，您可以将该代码包含在第三方网站的代码中，以便Adobe Analytics能够捕获这些网站上[!DNL Adobe Experience Manager Assets]周围的使用情况数据。
+“页面跟踪器”是一段JavaScript代码，您可以将该代码包含在第三方网站的代码中，以便Adobe Analytics能够捕获 [!DNL Adobe Experience Manager Assets] 在这些网站上。
 
 要捕获特定于资产的事件（例如单击次数等），您还应在第三方网站的代码中包含嵌入代码。
 

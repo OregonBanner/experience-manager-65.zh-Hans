@@ -1,8 +1,8 @@
 ---
 title: AEM Forms工作区JSON对象描述
-seo-title: AEM Forms工作区JSON对象描述
+seo-title: AEM Forms workspace JSON object description
 description: 有关LiveCycleAEM Forms工作区中用于自定义、扩展、修改和重用的JSON JavaScript对象的概念信息。
-seo-description: 有关LiveCycleAEM Forms工作区中用于自定义、扩展、修改和重用的JSON JavaScript对象的概念信息。
+seo-description: Conceptual information about the JSON JavaScript objects used in LiveCycle AEM Forms workspace for customization, extension, modification, and reuse.
 uuid: 91c923c8-144a-4453-ba91-6a5193f1c4c4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2109'
 ht-degree: 4%
 
 ---
 
-# AEM Forms工作区JSON对象描述{#aem-forms-workspace-json-object-description}
+# AEM Forms工作区JSON对象描述 {#aem-forms-workspace-json-object-description}
 
 AEM Forms工作区中使用的JSON对象如下所述。
 
@@ -49,7 +49,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>parentOid<br type="_moz" /> </td>
    <td>F</td>
-   <td>包含父类别<br type="_moz" />的oid </td>
+   <td>包含父类别的oid<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>startPointsList<br type="_moz" /> </td>
@@ -59,7 +59,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>categoryList</td>
    <td>T</td>
-   <td>包含类别<br type="_moz" />的直接子类别列表 </td>
+   <td>包含类别的直接子类别列表<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -93,13 +93,13 @@ AEM Forms工作区中使用的JSON对象如下所述。
  <tbody>
   <tr>
    <td>属性<br /> </td>
-   <td>仅客户端<br /> </td>
+   <td>仅限客户端<br /> </td>
    <td>评论<br /> </td>
   </tr>
   <tr>
    <td>classOfTask</td>
    <td>F</td>
-   <td>任务类为“LC8”，任务为lc8任务，而任务为“标准”。<br /> </td>
+   <td>任务类为“LC8”，而任务为“lc8”，任务为“标准”。<br /> </td>
   </tr>
   <tr>
    <td>completeTime<br /> </td>
@@ -109,7 +109,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>consultGroupId<br /> </td>
    <td>F</td>
-   <td>它包含可咨询任务的组的ID。 在过程设计期间设置。<br /> </td>
+   <td>它包含可咨询任务的组的ID。 在过程设计过程中设置。<br /> </td>
   </tr>
   <tr>
    <td>createTime<br /> </td>
@@ -119,7 +119,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>creationId<br /> </td>
    <td>F</td>
-   <td>该ID包含创建任务的用户ID。<br /> </td>
+   <td>它包含创建任务的用户ID。<br /> </td>
   </tr>
   <tr>
    <td>currentAssignment<br /> </td>
@@ -127,9 +127,9 @@ AEM Forms工作区中使用的JSON对象如下所述。
    <td>它包含有关当前任务分配的详细信息。<br /> </td>
   </tr>
   <tr>
-   <td>deadline<br /> </td>
+   <td>截止时间<br /> </td>
    <td>F</td>
-   <td>它包含任务达到其截止时间的时间戳。<br /> </td>
+   <td>它包含任务到达其截止时间的时间戳。<br /> </td>
   </tr>
   <tr>
    <td>描述<br /> </td>
@@ -144,7 +144,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>forwardGroupId<br /> </td>
    <td>F</td>
-   <td>它包含可将任务转发到的组的ID。 在过程设计期间设置。<br /> </td>
+   <td>它包含可将任务转发到的组的ID。 在过程设计过程中设置。<br /> </td>
   </tr>
   <tr>
    <td>说明<br /> </td>
@@ -164,7 +164,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>isOpenFullScreen<br /> </td>
    <td>F</td>
-   <td>如果为true，则在打开任务时，表单将首次显示完整屏幕。<br /> </td>
+   <td>如果为true，则在打开任务时，表单会首次显示完整屏幕。<br /> </td>
   </tr>
   <tr>
    <td>isRouteSelectionRequired<br /> </td>
@@ -184,7 +184,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>isVisible<br /> </td>
    <td>F</td>
-   <td>如果任务在工作区中可见，则为True。<br /> </td>
+   <td>如果任务在工作区中可见，则为true。<br /> </td>
   </tr>
   <tr>
    <td>nextReminder<br /> </td>
@@ -234,7 +234,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>serviceTitle<br /> </td>
    <td>F</td>
-   <td>它包含任务服务的标题。<br /> </td>
+   <td>它包含任务的服务标题。<br /> </td>
   </tr>
   <tr>
    <td>状态<br /> </td>
@@ -244,7 +244,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>stepName<br /> </td>
    <td>F</td>
-   <td>它包含在流程设计期间的任务集的名称。<br /> </td>
+   <td>它包含在流程设计期间的任务集名称。<br /> </td>
   </tr>
   <tr>
    <td>summaryUrl<br /> </td>
@@ -292,14 +292,14 @@ AEM Forms工作区中使用的JSON对象如下所述。
    <td>如果为true，则表单可脱机。 这仅适用于pdf表单。<br /> </td>
   </tr>
   <tr>
-   <td>支持Save<br /> </td>
+   <td>supportsSave<br /> </td>
    <td>T</td>
    <td>如果为true，则用户可以保存任务。<br /> </td>
   </tr>
   <tr>
    <td>readerSubmitOptions<br /> </td>
    <td>T</td>
-   <td>此对象包含用于在pdf表单不包含提交按钮时通过阅读器提交pdf表单的选项。<br /> </td>
+   <td>此对象包含用于通过阅读器提交pdf表单的选项，以防pdf表单不包含提交按钮。<br /> </td>
   </tr>
   <tr>
    <td>isDefaultImage<br /> </td>
@@ -349,7 +349,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>pendingTasks<br /> </td>
    <td>T</td>
-   <td>它包含任务进程实例的挂起任务列表。<br /> </td>
+   <td>它包含任务进程实例的待处理任务列表。<br /> </td>
   </tr>
   <tr>
    <td>userActions<br /> </td>
@@ -367,9 +367,9 @@ AEM Forms工作区中使用的JSON对象如下所述。
    <td>这是第三方应用程序表单的配置。<br /> </td>
   </tr>
   <tr>
-   <td>submitted<br /> </td>
+   <td>已提交<br /> </td>
    <td>T</td>
-   <td>如果提交了任务，则为True。<br /> </td>
+   <td>如果提交了任务，则为true。<br /> </td>
   </tr>
   <tr>
    <td>附件<br /> </td>
@@ -384,7 +384,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
  </tbody>
 </table>
 
-1. 筛选器
+1. 过滤器
 
    过滤器基本上是用户或组的队列。 将任务分配给用户/组后，该任务会添加到相应的队列中。
 
@@ -398,7 +398,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>isDefault <br type="_moz" /> </td>
    <td>F</td>
-   <td>如果队列是已登录用户的默认队列，则为true；否则为false。<br type="_moz" /> </td>
+   <td>如果队列是已登录用户的默认队列，则为True；否则为False。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>name<br type="_moz" /> </td>
@@ -413,12 +413,12 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>类型</td>
    <td>F</td>
-   <td>它包含队列的类型。<br /> 0 — 用户队列。<br /> 1. 共享队列。<br /> 2.组队列。<br type="_moz" /> </td>
+   <td>它包含队列的类型。<br /> 0 — 用户队列。<br /> 1. 共享队列。<br /> 2. 组队列。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>查询</td>
    <td>T</td>
-   <td>此变量包含与过滤器关联的查询。 此查询用于从完成的任务列表中搜索任务。<br type="_moz" /> </td>
+   <td>此变量包含与过滤器关联的查询。 此查询用于从完整任务列表中搜索任务。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>任务</td>
@@ -455,9 +455,9 @@ AEM Forms工作区中使用的JSON对象如下所述。
    <td>如果用户不在办公室，则为true。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>outOfOfficeDesignate<br type="_moz" /> </td>
+   <td>outOfficeDesignate<br type="_moz" /> </td>
    <td>F</td>
-   <td>它包含被用户指定为主要指定的用户的详细信息。<br type="_moz" /> </td>
+   <td>其中包含被用户指定为主要指定的用户的详细信息。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processSpecificDisigns<br type="_moz" /> </td>
@@ -465,7 +465,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
    <td>它包含特定于进程的“不在办公室”指定对象的数组。 在每个特定于进程的指定对象中，processName包含进程的名称；如果没有为相应进程分配用户，则isNotDesignated为true；如果没有为相应进程分配用户的详细信息，则userDesignated为null。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>进程<br type="_moz" /> </td>
+   <td>流程<br type="_moz" /> </td>
    <td>T</td>
    <td>它包含用户可用的所有进程的列表。<br type="_moz" /> </td>
   </tr>
@@ -501,7 +501,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>描述<br type="_moz" /> </td>
    <td>F</td>
-   <td>进程实例的描述<br type="_moz" /> </td>
+   <td>流程实例的描述<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>发起者</td>
@@ -526,7 +526,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>processInstanceStatus<br type="_moz" /> </td>
    <td>F</td>
-   <td>0 =已启动<br /> 1 =运行<br /> 2 =完成<br /> 3 =完成<br /> 4 =终止<br /> 5 =终止<br /> 6 =暂停<br /> 7 =暂停<br /> 8 =取消暂停<br type="_moz" /> </td>
+   <td>0 =已启动<br /> 1 =正在运行<br /> 2 =完成<br /> 3 =完成<br /> 4 =终止<br /> 5 =终止<br /> 6 =暂停<br /> 7 =暂停<br /> 8 =取消暂停<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processName<br type="_moz" /> </td>
@@ -541,12 +541,12 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>processVariables<br type="_moz" /> </td>
    <td>F</td>
-   <td>进程变量对象数组。 每个进程变量对象都包含进程变量名称、进程变量值和进程变量类型的名称。<br type="_moz" /> </td>
+   <td>进程变量对象数组。 每个进程变量对象都包含进程变量名称、进程变量值和进程变量类型。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>任务列表<br type="_moz" /> </td>
    <td>T</td>
-   <td>此进程实例生成的任务。<br type="_moz" /> </td>
+   <td>由此进程实例生成的任务。<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -563,12 +563,12 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>processMajorVersion<br type="_moz" /> </td>
    <td>F</td>
-   <td>进程的主版本。<br type="_moz" /> </td>
+   <td>流程的主要版本。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processMinorVersion<br type="_moz" /> </td>
    <td>F</td>
-   <td>进程的次版本。<br type="_moz" /> </td>
+   <td>流程的次要版本。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processName<br type="_moz" /> </td>
@@ -578,7 +578,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>processTitle<br type="_moz" /> </td>
    <td>F</td>
-   <td>进程的标题。<br type="_moz" /> </td>
+   <td>流程的标题。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processInstanceList<br type="_moz" /> </td>
@@ -607,12 +607,12 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>assignmentType<br type="_moz" /> </td>
    <td>F</td>
-   <td>0 =初始分配<br /> 1 =转发（任务已转发给任务的当前所有者。）<br /> 2 =已返回（任务的先前所有者已将任务返回给当前任务所有者。）<br /> 3 =已声明（任务的当前所有者已声明任务。）<br /> 4 =呈报（呈报后已将任务分配给当前任务所有者。）<br /> 5 =已分配管理员（管理员已将任务分配给当前任务所有者。）<br /> 6 =已咨询（已咨询任务的当前所有者。）<br type="_moz" /> </td>
+   <td>0 =初始分配<br /> 1 =转发（任务已转发给当前任务所有者。）<br /> 2 =已返回（任务的先前所有者已将任务返回给当前任务所有者。）<br /> 3 =已声明（任务的当前所有者已声明任务。）<br /> 4 =呈报（呈报后已将任务分配给当前任务所有者。）<br /> 5 =已分配管理员（管理员已将任务分配给当前任务所有者。）<br /> 6 =已咨询（已咨询任务的当前所有者。）<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>assignmentUpdateTime<br type="_moz" /> </td>
    <td>F</td>
-   <td>更新任务分配的时间戳。<br type="_moz" /> </td>
+   <td>更新任务分配时的时间戳。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>queueId<br type="_moz" /> </td>
@@ -661,7 +661,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>canConsult<br type="_moz" /> </td>
    <td>F</td>
-   <td>如果为true，则可以查阅任务。<br type="_moz" /> </td>
+   <td>如果是真的，可以咨询任务。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>canForward<br type="_moz" /> </td>
@@ -705,7 +705,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>描述<br type="_moz" /> </td>
    <td>F</td>
-   <td>附件的说明。<br type="_moz" /> </td>
+   <td>附件的描述。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>fileName<br type="_moz" /> </td>
@@ -745,7 +745,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>类型<br type="_moz" /> </td>
    <td>F</td>
-   <td>类型是文件的附件，类型是注释的注释。<br type="_moz" /> </td>
+   <td>“类型”(Type)是文件的附件，“类型”(Type)是注释的注释。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>formattedCreationDate<br type="_moz" /> </td>
@@ -760,7 +760,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>formattedFileName<br type="_moz" /> </td>
    <td>T</td>
-   <td>带格式的附件名称。 用于在AEM Forms工作区中显示附件名称中存在的特殊字符。 仅供注释使用。<br type="_moz" /> </td>
+   <td>带格式的附件名称。 用于在AEM Forms工作区中显示附件名称中存在的特殊字符。 这仅供参考。<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -794,7 +794,7 @@ AEM Forms工作区中使用的JSON对象如下所述。
   <tr>
    <td>directGroupMemberships<br type="_moz" /> </td>
    <td>F</td>
-   <td>用户组的列表。<br type="_moz" /> </td>
+   <td>用户群组的列表。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>displayName<br type="_moz" /> </td>

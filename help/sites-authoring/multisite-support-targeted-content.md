@@ -1,8 +1,8 @@
 ---
 title: 在多个站点中使用目标内容
-seo-title: 在多个站点中使用目标内容
+seo-title: Working with Targeted Content in Multisites
 description: 如果您需要在多个站点间管理目标内容（例如活动、体验和选件），则可以利用 AEM 中内置的目标内容多站点支持功能
-seo-description: 如果您需要在多个站点间管理目标内容（例如活动、体验和选件），则可以利用 AEM 中内置的目标内容多站点支持功能
+seo-description: If you need to manage targeted content, such as activities, experiences, and offers between your sites, you can take advantage of AEM's built-in multisite support for targeted content
 uuid: acb2ffe1-d846-4580-bb69-d5af860796db
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2906'
-ht-degree: 93%
+source-wordcount: '2872'
+ht-degree: 99%
 
 ---
 
@@ -40,11 +40,11 @@ ht-degree: 93%
 
 您可以随时暂停或恢复继承。此外，如果您不希望暂停继承，则还可以创建本地体验。默认情况下，除非另有指定，否则所有页面都会使用主区域。
 
-## 目标内容的多站点支持功能简介  {#introduction-to-multisite-support-for-targeted-content}
+## 目标内容的多站点支持功能简介 {#introduction-to-multisite-support-for-targeted-content}
 
 目标内容的多站点支持功能是开箱即用式功能，利用此功能，您可以将目标内容从通过 MSM 管理的主页面推送到本地 Live Copy，还可以管理对此类内容的全局修改和本地修改。
 
-可以在&#x200B;**Area**&#x200B;中管理此内容。 区域可将在不同站点中使用的目标内容（活动、体验和选件）分隔开来，并提供基于 MSM 的机制，以创建并管理目标内容的继承以及站点继承。如此一来，您就不必按照 6.2 之前的 AEM 版本中的要求，在继承的站点中重新创建目标内容。
+可以在&#x200B;**区域**&#x200B;中管理目标内容。区域可将在不同站点中使用的目标内容（活动、体验和选件）分隔开来，并提供基于 MSM 的机制，以创建并管理目标内容的继承以及站点继承。如此一来，您就不必按照 6.2 之前的 AEM 版本中的要求，在继承的站点中重新创建目标内容。
 
 在某个区域中，只有链接到该区域的活动才会被推送到 Live Copy。默认情况下，主区域将处于选定状态。创建其他区域后，您可以将这些区域链接到站点或页面，以指示要推送的目标内容。
 
@@ -56,12 +56,10 @@ ht-degree: 93%
 >
 >* 使用转出或 Live Copy 时，需要获得 MSM 许可。
 >* 使用同步到 Adobe Target 的功能时，需要获得 Adobe Target 许可。
-
 >
 
 
-
-## 用例  {#use-cases}
+## 用例 {#use-cases}
 
 您可以使用多种方式设置目标内容的多站点支持功能，具体使用哪种方式取决于您的用例。此部分从理论上介绍了如何在一个品牌中使用多种方式设置此功能。此外，在[示例：根据地域定位内容](#example-targeting-content-based-on-geography)中，您可以了解在多个站点中定位内容的实际应用。
 
@@ -69,17 +67,17 @@ ht-degree: 93%
 
 例如，通过目标内容的多站点支持功能，您的&#x200B;**一个**&#x200B;品牌可以拥有两个（或更多）站点，这些站点具有以下某种内容：
 
-* 完全“不同”**&#x200B;的目标内容集 - 在一个站点中编辑目标内容不会影响其他站点。链接到不同区域的站点将读取并写入其自身的配置区域。例如：
+* 完全&#x200B;*不同*&#x200B;的目标内容集 – 在一个站点中编辑目标内容不会影响其他站点。链接到不同区域的站点将读取并写入其自身的配置区域。例如：
 
    * 站点 A 链接到区域 X
    * 站点 B 链接到区域 Y
 
-* “共享”**&#x200B;的目标内容集 - 在一个站点中编辑会直接影响两个站点；通过让两个站点引用同一区域，可以实现此设置。链接到同一区域的站点共享该区域内的目标内容。例如：
+* *共享*&#x200B;的目标内容集 – 在一个站点中编辑会直接影响两个站点；通过让两个站点引用同一区域，可以实现此设置。链接到同一区域的站点共享该区域内的目标内容。例如：
 
    * 站点 A 链接到区域 X
    * 站点 B 也链接到区域 X
 
-* 通过MSM从其他站点继承的不同目标内容&#x200B;**&#x200B;集 — 内容可以从主控单向转出到Live Copy。 例如：
+* 通过 MSM 从其他站点&#x200B;*继承*&#x200B;的不同目标内容集 – 内容可从主区域单向转出到 Live Copy。例如：
 
    * 站点 A 链接到区域 X
    * 站点 B 链接到区域 Y（该区域是区域 X 的 Live Copy）
@@ -90,7 +88,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->有关此功能的技术性更详细的介绍，请参阅[如何构建目标内容的多站点管理](/help/sites-authoring/technical-multisite-targeted.md)。
+>要从技术层面更详细地了解此功能，请参阅[如何构建目标内容的多站点管理](/help/sites-authoring/technical-multisite-targeted.md)。
 
 ## 示例：根据地域定位内容 {#example-targeting-content-based-on-geography}
 
@@ -131,7 +129,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->有关此功能的技术性更详细的介绍，请参阅[如何构建目标内容的多站点管理](/help/sites-authoring/technical-multisite-targeted.md)。
+>要从技术层面更详细地了解此功能，请参阅[如何构建目标内容的多站点管理](/help/sites-authoring/technical-multisite-targeted.md)。
 
 ### 创建新区域与创建新区域作为 Live Copy {#creating-a-new-area-versus-creating-a-new-area-as-livecopy}
 
@@ -141,7 +139,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->当页面是链接到某个区域的Live Copy，而该区域本身是链接到页面Blueprint的区域的Live Copy时，默认转出会触发目标内容的后续转出。
+>当页面是链接到某个区域的 Live Copy，而该区域本身又是链接到页面 Blueprint 的区域的 Live Copy 时，默认转出会触发后续的目标内容转出。
 
 例如，下图中有四个站点，其中两个站点共享主区域（以及该区域中的所有活动）；还有一个站点的区域是其他区域的 Live Copy，因此会在转出后共享活动；最后一个站点完全独立（因此其活动需要一个单独的区域）。
 
@@ -154,7 +152,7 @@ ht-degree: 93%
 * 站点 C 链接到继承的区域，该区域是主区域的 Live Copy - 创建区域作为 Live Copy，即创建基于主区域的 Live Copy。转出后，继承的区域会从主区域继承活动。
 * 站点 D 链接到其自身的独立区域 - 创建区域，即创建尚未定义任何活动的全新区域。独立区域不会与其他任何站点共享活动。
 
-## 创建新区域  {#creating-new-areas}
+## 创建新区域 {#creating-new-areas}
 
 区域可以跨活动和选件使用。在任何一种内容（如活动）中创建区域后，您也可以将该区域用于另一种内容（如选件）。
 
@@ -164,7 +162,7 @@ ht-degree: 93%
 
 要创建新区域，请执行以下操作：
 
-1. 导航到 **个性化** >活 **动** 或 **选件** ，然后导航到您的品牌。
+1. 导航到&#x200B;**个性化** > **活动**&#x200B;或&#x200B;**选件**，然后导航到您的品牌。
 1. 点按或单击&#x200B;**创建区域**。
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
@@ -183,7 +181,7 @@ ht-degree: 93%
 
 要创建区域作为 Live Copy，请执行以下操作：
 
-1. 导航到 **个性化** >活 **动** 或 **选件** ，然后导航到您的品牌。
+1. 导航到&#x200B;**个性化** > **活动**&#x200B;或&#x200B;**选件**，然后导航到您的品牌。
 1. 点按或单击&#x200B;**创建区域作为 Live Copy**。
 
    ![chlimage_1-279](assets/chlimage_1-279.png)
@@ -204,7 +202,7 @@ ht-degree: 93%
 
    >[!NOTE]
    >
-   >如果将页面转出到 Live Copy，且为 Blueprint 页面配置的区域同时也是为页面 Live Copy 配置的区域的 Blueprint，则 LiveAction **personalizationContentRollout** 会触发同步的 subRollout，它是&#x200B;**标准转出配置**&#x200B;的一部分。
+   >如果将页面转出到 Live Copy，并且为 Blueprint 页面配置的区域同时也是为页面 Live Copy 配置的区域的 Blueprint，则 LiveAction **personalizationContentRollout** 会触发同步的 subRollout，它是&#x200B;**标准转出配置**&#x200B;的一部分。
 
 1. 点按或单击&#x200B;**创建**。
 
@@ -220,7 +218,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->引用相同区域的页面或站点使用的是&#x200B;*same*&#x200B;一组共享的活动、体验和选件。 编辑由多个站点共享的活动、体验或选件会影响所有站点。
+>引用了同一区域的页面或站点使用的是&#x200B;*相同*&#x200B;的共享活动、体验和选件集。编辑由多个站点共享的活动、体验或选件会影响所有站点。
 
 要将站点链接到区域，请执行以下操作：
 
@@ -249,12 +247,10 @@ ht-degree: 93%
 >
 >* 您只能在活动中暂停或分离 Live Copy。
 >* 要扩展继承的活动，无需暂停或分离 Live Copy。您始终可以为该活动创建&#x200B;**新的**&#x200B;本地体验和选件。如果您想要修改现有活动，则需要暂停继承。
-
 >
 
 
-
-### 暂停继承  {#suspending-inheritance}
+### 暂停继承 {#suspending-inheritance}
 
 要在活动中暂停或分离目标内容的继承，请执行以下操作：
 
@@ -267,7 +263,7 @@ ht-degree: 93%
 
    ![chlimage_1-285](assets/chlimage_1-285.png)
 
-1. 点按或单击&#x200B;**暂停**&#x200B;以暂停活动。 暂停继承的活动会标记为红色。
+1. 点按或单击&#x200B;**暂停**，以在活动中暂停继承。暂停继承的活动会标记为红色。
 
    ![chlimage_1-286](assets/chlimage_1-286.png)
 
@@ -288,20 +284,20 @@ ht-degree: 93%
 
 要在活动中恢复目标内容的继承，请执行以下操作：
 
-1. 导航到要恢复继承的页面，然后点按或单击“模式”下拉菜单中的&#x200B;**定位**。
+1. 导航到要在其中恢复继承的页面，然后点按或单击“模式”下拉菜单中的&#x200B;**定位**。
 1. 点按或单击&#x200B;**开始定位**。
-1. 从工 **具栏的下拉菜单中选择** “恢复Live Copy”。
+1. 从工具栏的下拉菜单中选择&#x200B;**恢复 Live Copy**。
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
 
 1. 点按或单击&#x200B;**继续**，以确认您想要恢复 Live Copy 继承。如果恢复继承，对当前活动所做的任何修改都会丢失。
 
-## 删除区域  {#deleting-areas}
+## 删除区域 {#deleting-areas}
 
-删除区域时，也会删除该区域中的所有活动。在您删除区域之前，AEM 会向您发出警告。如果您确实删除了网站所链接的区域，则此品牌的映射将自动重新映射到主控区域。
+删除区域时，也会删除该区域中的所有活动。在您删除区域之前，AEM 会向您发出警告。如果您删除了站点链接到的区域，则此品牌的映射会自动重新映射到主区域。
 
 要删除区域，请执行以下操作：
 
-1. 导航至&#x200B;**Personalization** > **Activities**&#x200B;或&#x200B;**Offers**，然后导航至您的品牌。
+1. 导航到&#x200B;**个性化** > **活动**&#x200B;或&#x200B;**选件**，然后导航到您的品牌。
 1. 点按或单击要删除的区域旁边的图标。
 1. 点按或单击&#x200B;**删除**，并确认要删除该区域。

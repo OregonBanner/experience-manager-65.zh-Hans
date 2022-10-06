@@ -1,8 +1,8 @@
 ---
 title: 论坛功能
-seo-title: 论坛功能
+seo-title: Forum Feature
 description: 如何添加和配置论坛功能
-seo-description: 如何添加和配置论坛功能
+seo-description: How to add and configure the forum feature
 uuid: e69be4e1-c9d5-4d51-8e7e-609e5460e378
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 2b1a4917-9db6-436a-a5fd-c102fe41fb9d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1216'
 ht-degree: 8%
 
 ---
@@ -34,33 +34,33 @@ ht-degree: 8%
 文档的此部分描述：
 
 * 将论坛功能添加到AEM网站。
-* `Forum`组件的配置设置。
+* 的配置设置 `Forum` 组件。
 
-### 将论坛添加到页面{#adding-a-forum-to-a-page}
+### 将论坛添加到页面 {#adding-a-forum-to-a-page}
 
-要在创作模式下向页面添加`Forum`组件，请使用组件浏览器找到
+添加 `Forum` 组件添加到创作模式下的页面，可使用组件浏览器找到
 
 * `Communities / Forum`
 
 并将其拖动到应显示论坛的页面上。
 
-有关必要信息，请访问[社区组件基础知识](/help/communities/basics.md)。
+有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-当包含[所需的客户端库](/help/communities/essentials-forum.md#essentials-for-client-side)时，将显示`Forum`组件：
+当 [所需的客户端库](/help/communities/essentials-forum.md#essentials-for-client-side) 包含，这是 `Forum` 组件将显示：
 
 ![论坛 — 组件](assets/forum-component.png)
 
-### 配置论坛{#configuring-a-forum}
+### 配置论坛 {#configuring-a-forum}
 
-选择要访问的已放置的`Forum`组件，然后选择`Configure`图标以打开编辑对话框。
+选择已放置的 `Forum` 要访问和选择的组件 `Configure` 图标，打开编辑对话框。
 
 ![configure-new](assets/configure-new.png)
 
 ![论坛 — 配置](assets/forum-config.png)
 
-#### “设置”选项卡{#settings-tab}
+#### “设置”选项卡 {#settings-tab}
 
-在&#x200B;**设置**&#x200B;选项卡下，指定主题和回复的设置：
+在 **设置** 选项卡，指定主题和回复的设置：
 
 * **允许附加缩略图**
 
@@ -93,7 +93,7 @@ ht-degree: 8%
 
 * **允许标记**
 
-   如果选中此选项，则允许成员向其帖子中添加标签（请参阅&#x200B;**标签字段**&#x200B;选项卡）。 默认为未选中。
+   如果选中此项，则允许成员向其帖子添加标签(请参阅 **标记字段** 选项卡。 默认为未选中。
 
 * **允许文件上传**
 
@@ -101,7 +101,7 @@ ht-degree: 8%
 
 * **允许关注**
 
-   如果选中此项，则为论坛帖子添加以下功能，该功能允许成员在新帖子中[收到通知](/help/communities/notifications.md)。 默认为未选中。
+   如果选中此项，则为论坛帖子包含以下功能，以允许成员 [通知](/help/communities/notifications.md) 新职位数量。 默认为未选中。
 
 * **允许固定**
 
@@ -109,22 +109,22 @@ ht-degree: 8%
 
 * **允许专题内容**
 
-   如果选中，则该构思能够被标识为[特色内容](/help/communities/featured.md)。 默认为未选中。
+   如果选中，则该构思可被识别为 [特色内容](/help/communities/featured.md). 默认为未选中。
 
 * **允许电子邮件订阅**
 
-   如果选中此项，则允许成员通过电子邮件([subscription](/help/communities/subscriptions.md))接收新帖子的通知。 需要检查`Allow Following`并[电子邮件配置](/help/communities/email.md)。 默认为未选中。
+   如果选中此项，则允许成员通过电子邮件接收新帖子的通知([订阅](/help/communities/subscriptions.md))。 需要 `Allow Following` 要检查和 [已配置电子邮件](/help/communities/email.md). 默认为未选中。
 
 * **最大文件大小**
 
-   仅当选中`Allow File Uploads`时相关。 此字段将限制已上传文件的大小（以字节为单位）。 默认为104857600(10 Mb)。
+   仅在 `Allow File Uploads` 复选框。 此字段将限制已上传文件的大小（以字节为单位）。 默认为104857600(10 Mb)。
 
 * **允许的文件类型**
 
-   仅当选中`Allow File Uploads`时相关。 以逗号分隔的文件扩展名列表，其中带有“圆点”分隔符。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则将不允许上载未指定的文件类型。 默认值未指定，以便允许使用所有文件类型。
+   仅在 `Allow File Uploads` 复选框。 以逗号分隔的文件扩展名列表，其中带有“圆点”分隔符。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则将不允许上载未指定的文件类型。 默认值未指定，以便允许使用所有文件类型。
 
-* **最大附加图像文件大**
-小仅在选中允许文件上传时相关。上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
+* **最大附加图像文件大小**
+仅当选中允许文件上传时相关。 上传的图像文件可能具有的最大字节数。 默认为2097152(2 Mb)。
 
 * **允许主题回复**
 
@@ -144,7 +144,7 @@ ht-degree: 8%
 
 * **显示徽章**
 
-   如果选中此项，则使用成员的博客条目显示已获得的和已分配的[徽章](/help/communities/implementing-scoring.md)。 默认为未选中。
+   如果选中，则显示已获取和已分配的 [徽章](/help/communities/implementing-scoring.md) 的博客条目。 默认为未选中。
 
 * **允许拥有权限的成员**
 
@@ -168,15 +168,15 @@ ht-degree: 8%
 
 * **UI 提及模式**
 
-   指定允许的模式字符串以标记帖子中注册用户(@mention)。 例如`~{{familyName}}{{givenName}}`。
+   指定允许的模式字符串以标记帖子中注册用户(@mention)。 例如 `~{{familyName}}{{givenName}}`.
 
 >[!NOTE]
 >
->可能需要同时检查`AllowThreaded Replies`和`Allow users to Delete Comments and Topics`以启用对主题的注释。
+>可能需要同时检查这两者 `AllowThreaded Replies` 和 `Allow users to Delete Comments and Topics` 启用对主题的注释。
 
-#### “用户审核”选项卡{#user-moderation-tab}
+#### “用户审核”选项卡 {#user-moderation-tab}
 
-在&#x200B;**用户审核**&#x200B;选项卡下，指定如何管理已发布的主题和回复（用户生成的内容）。 有关更多信息，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
+在 **用户审核** 选项卡，指定如何管理已发布的主题和回复（用户生成的内容）。 有关更多信息，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
 
 * **拒绝帖子**
 
@@ -210,50 +210,50 @@ ht-degree: 8%
 
    输入在主题或评论在公共视图中隐藏之前必须标记的次数。 如果设置为–1，则标记的主题或评论永远不会在公共视图中隐藏。 否则，此数字必须大于或等于审核阈值。 默认值为5。
 
-#### 标记字段选项卡{#tag-field-tab}
+#### 标记字段选项卡 {#tag-field-tab}
 
-在&#x200B;**标记字段**&#x200B;选项卡下，可能应用的标记（如果允许）位于&#x200B;**设置**&#x200B;选项卡下，将根据所选的命名空间而受到限制。
+在 **标记字段** 选项卡，可应用的标记（如果允许） **设置** 选项卡，具体受到的限制，具体取决于所选的命名空间。
 
 * **允许的命名空间**
 
-   如果在&#x200B;**设置**&#x200B;选项卡下选中`Allow Tagging`，则相关。 可应用的标记仅限于所选命名空间类别中的标记。 命名空间列表包括“标准标记”（默认命名空间）以及“包括所有标记”。 默认为“未选中”，这表示允许使用所有命名空间。
+   相关条件 `Allow Tagging` 在 **设置** 选项卡。 可应用的标记仅限于所选命名空间类别中的标记。 命名空间列表包括“标准标记”（默认命名空间）以及“包括所有标记”。 默认为“未选中”，这表示允许使用所有命名空间。
 
 * **建议限制**
 
    输入要作为建议显示给论坛成员的标记数。 默认值为**-**1（无限制）。
 
-#### 翻译选项卡{#translation-tab}
+#### “翻译”选项卡 {#translation-tab}
 
-在&#x200B;**翻译**&#x200B;选项卡下，如果为社区站点启用了翻译，则可以设置翻译以翻译整个主题或选定的帖子。
+在 **翻译** 选项卡，如果为社区站点启用了翻译，则可以设置翻译以翻译整个主题或选定的帖子。
 
 * **全部翻译**
 
    如果选中，则论坛线程将转换为用户的首选语言。 默认为未选中。
 
-#### 排序设置选项卡{#sort-settings-tab}
+#### 排序设置选项卡 {#sort-settings-tab}
 
-在&#x200B;**排序设置**&#x200B;选项卡下，指定在显示时对发布的评论进行排序的方式。
+在 **排序设置** 选项卡，指定在显示已发布评论时的排序方式。
 
 * **排序方式**
 
-   检查所有允许的排序选择：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 默认值为`Newest, Oldest, Last Updated`。
+   检查所有允许的排序选择： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 默认为 `Newest, Oldest, Last Updated`.
 
 * **设置为默认**
 
-   下拉以选择要显示为默认的选中排序选项之一。 默认值为`Newest`。
+   下拉以选择要显示为默认的选中排序选项之一。 默认为 `Newest`.
 
 * **选择分析排序的时间选项**
 
-   下拉以选择以下选项之一：`All, Last 24 Hours, Last 7 Days, Last 30 Days`。
+   下拉以选择以下选项之一： `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
 
-   默认值为`All`。
+   默认为 `All`.
 
 ### 附加信息 {#additional-information}
 
-有关更多信息，请参阅[Forum Essentials](/help/communities/essentials-forum.md)页面，供开发人员使用。
+有关 [论坛要点](/help/communities/essentials-forum.md) 页面。
 
-有关审核已发布的主题和评论，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
+有关审核已发布的主题和评论，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
 
-有关标记已发布的主题和评论，请参阅[标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记已发布的主题和评论，请参阅 [标记用户生成的内容](/help/communities/tag-ugc.md).
 
-有关已发布主题和评论的翻译，请参阅[翻译用户生成的内容](/help/communities/translate-ugc.md)。
+有关已发布主题和评论的翻译，请参阅 [翻译用户生成的内容](/help/communities/translate-ugc.md).

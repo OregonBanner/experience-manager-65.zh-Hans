@@ -1,8 +1,8 @@
 ---
 title: AEM Forms关于OSGi组和权限
-seo-title: AEM Forms关于OSGi组和权限
+seo-title: AEM Forms on OSGi Groups and Privileges
 description: 将用户分配到组以在OSGi中管理AEM Forms
-seo-description: 将用户分配到组以在OSGi中管理AEM Forms
+seo-description: Assign users to the groups to manage AEM Forms on OSGi
 uuid: f269a206-356d-4cee-b449-05c5da87121a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -14,16 +14,16 @@ role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '261'
 ht-degree: 1%
 
 ---
 
 # AEM Forms关于OSGi组和权限{#aem-forms-on-osgi-groups-and-privileges}
 
-您可以[创建组](/help/sites-administering/user-group-ac-admin.md#group-administration)，并将策略和[用户](/help/sites-administering/user-group-ac-admin.md#user-administration)分配给AEM中的组。 这些策略控制属于组的用户的权限。
+您可以 [创建组](/help/sites-administering/user-group-ac-admin.md#group-administration) 并分配策略和 [用户](/help/sites-administering/user-group-ac-admin.md#user-administration) 到AEM中的组。 这些策略控制属于组的用户的权限。
 
-安装[AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)后，本文中提到的组（如forms-users和forms-power-user）将自动可用于分配。 下表列出了用户在OSGi上可根据组分配为AEM Forms执行的任务：
+安装后 [AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)，本文中提及的组（如表单用户和表单超级用户）可自动进行分配。 下表列出了用户在OSGi上可根据组分配为AEM Forms执行的任务：
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ ht-degree: 1%
    <td>任务</td> 
   </tr>
   <tr>
-   <td>forms-users <sup>[1]</sup></td> 
+   <td>表单用户 <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>创建、预览、发布和提交自适应表单</li> 
@@ -62,7 +62,7 @@ ht-degree: 1%
     </ul> </td> 
   </tr>
   <tr>
-   <td>模板作者<sup>[2]</sup></td> 
+   <td>模板 — 作者 <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>创建和预览自适应表单或交互式通信模板</li> 
@@ -94,7 +94,7 @@ ht-degree: 1%
    <td>工作流用户</td> 
    <td>
     <ul> 
-     <li>使用AEM收件箱应用程序<br /> <strong>注意：</strong>您必须分配cm-agent-users和workflow-users组才能在AEM收件箱中访问Interactive Communications Agent UI。</li> 
+     <li>使用AEM收件箱应用程序<br /> <strong>注意： </strong>您必须分配cm-agent-users和workflow-users组才能在AEM收件箱中访问Interactive Communications Agent UI。</li> 
      <li>管理工作流实例</li> 
     </ul> </td> 
   </tr>

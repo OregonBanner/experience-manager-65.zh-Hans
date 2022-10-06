@@ -1,8 +1,8 @@
 ---
 title: 审核凭据使用信息
-seo-title: 审核凭据使用信息
+seo-title: Review credential use information
 description: 了解如何查看凭据使用信息。
-seo-description: 了解如何查看凭据使用信息。
+seo-description: Learn how to review credential use information.
 uuid: 02af75f9-c235-470d-a98b-a2102aa31381
 contentOwner: admin
 content-type: reference
@@ -12,18 +12,18 @@ discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
 exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
 
-# 查看凭据使用信息{#review-credential-use-information}
+# 审核凭据使用信息 {#review-credential-use-information}
 
 凭据包含描述其预期用途的信息，这些用途可通过Acrobat Reader DC扩展最终用户Web应用程序访问。 您可以使用此信息来确定安装的凭据类型（评估或生产）及其有效日期。
 
 1. 打开Web浏览器并输入以下URL:
 
-   http://localhost:port/ReaderExtensions（其中&#x200B;*port*&#x200B;是您的应用程序服务器的端口号）
+   http://localhost:port/ReaderExtensions(其中 *端口* 是您的应用程序服务器的端口号)
 
 1. 使用默认用户名和密码登录：
 

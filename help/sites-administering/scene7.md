@@ -353,7 +353,7 @@ Adobe建议您通过让根文件夹仅指向子文件夹而不是整个公司来
 
    ![chlimage_1-299](assets/chlimage_1-299.png)
 
-1. 选择&#x200B;**[!UICONTROL “保存”]**。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
 
 ### 向Dynamic Media Classic上传工作流添加可配置的超时 {#adding-configurable-timeout-to-scene-upload-workflow}
 
@@ -369,7 +369,7 @@ Adobe建议您通过让根文件夹仅指向子文件夹而不是整个公司来
    >
    >最佳实践：大多数资产最多会在几分钟内摄取（例如，图像）。 但在某些情况下（例如，视频较大），将超时值增加到7200秒（2小时），以适应较长的处理时间。 否则，此Dynamic Media Classic上传作业将标记为 **[!UICONTROL 上载失败]** (在JCR(Java™内容存储库)元数据中)。
 
-1. 选择&#x200B;**[!UICONTROL “保存”]**。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
 
 ### 来自Experience Manager Assets的奥图普洛德 {#autouploading-from-aem-assets}
 

@@ -1,8 +1,8 @@
 ---
 title: 选择您的 UI
-seo-title: 选择您的 UI
+seo-title: Selecting your UI
 description: 为了创作用户方便起见，触屏优化 UI 允许在必要时切换到经典 UI。
-seo-description: 为了创作用户方便起见，触屏优化 UI 允许在必要时切换到经典 UI。
+seo-description: For convenience to authoring users, the touch-enabled UI does allow for switching to the classic UI when necessary.
 uuid: 755e513e-990c-4dba-8316-623f17bf5c33
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: dcac2a3a-3241-47de-96ce-982ab0bc05eb
 exl-id: 57d45b06-e76e-420c-8cd0-389bd9f811af
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 60%
+source-wordcount: '195'
+ht-degree: 55%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 60%
 >
 >对于从以前版本升级而来的实例，页面创作将继续使用经典 UI。
 >
->升级后，页面创作不会自动切换到触屏优化UI，但您可以使用&#x200B;**WCM创作UI模式服务**（`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)对此进行配置。 请参阅[编辑器的 UI 重写](#uioverridesfortheeditor)。
+>升级后，页面创作不会自动切换到触屏UI，但您可以使用[OSGi配置](/help/sites-deploying/configuring-osgi.md) 的 **WCM创作UI模式服务** ( `AuthoringUIMode` 服务)。 请参阅[编辑器的 UI 重写](#uioverridesfortheeditor)。
 
 ## 配置实例的默认 UI {#configuring-the-default-ui-for-your-instance}
 

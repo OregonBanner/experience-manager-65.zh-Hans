@@ -2,12 +2,12 @@
 title: AEM Fluid Experiences功能列表
 description: 流式体验功能列表
 index: n
-feature: 创作
+feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 9%
+source-wordcount: '350'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Adobe Experience Manager流式体验利用AEM Sites、AEM Dynamic Media和AEM Assets等强大的功能集，为无头内容交付提供了强大的解决方案。
 
-AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放用例。 [完整的AEM Sites、Assets和Dynamic Media解决方案提供了Headful内容创作和交付，以及AEM对混合用例的强大支持。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放用例。 通过 [完整的AEM Sites、 Assets和Dynamic Media解决方案。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
 下表定义了AEM流式体验的功能并链接到相关支持文档。
 
@@ -37,8 +37,8 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [图像呈现](/help/assets/image-presets.md) |
 | [元数据和标签管理](/help/assets/metadata.md) |
 | [搜索](/help/assets/manage-assets.md) |
-| [](/help/assets/manage-assets.md) 收藏集和灯 [箱](/help/assets/light-box.md) |
-| [个人资料](/help/assets/processing-profiles.md) |
+| [收藏集](/help/assets/manage-assets.md) 和 [灯箱](/help/assets/light-box.md) |
+| [配置文件](/help/assets/processing-profiles.md) |
 | [版本控制](/help/assets/manage-assets.md) |
 | [重复检测](/help/assets/duplicate-detection.md) |
 | [智能标记](/help/assets/enhanced-smart-tags.md) |

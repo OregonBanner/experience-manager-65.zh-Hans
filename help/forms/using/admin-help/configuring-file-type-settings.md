@@ -100,7 +100,7 @@ ht-degree: 0%
 
    **[!UICONTROL 文件类型设置]**:原始默认值为“标准”。
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。
+1. 单击“**[!UICONTROL 保存]**”。
 
 ## 删除文件类型设置 {#delete-a-file-type-setting}
 

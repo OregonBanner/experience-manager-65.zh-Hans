@@ -1,8 +1,8 @@
 ---
 title: SAPCommerce Cloud
-seo-title: SAPCommerce Cloud
+seo-title: SAP Commerce Cloud
 description: 了解如何将AEM与SAPCommerce Cloud结合使用。
-seo-description: 了解如何将AEM与SAPCommerce Cloud结合使用。
+seo-description: Learn how to use AEM with SAP Commerce Cloud.
 uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
@@ -10,7 +10,7 @@ content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
 source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1714'
 ht-degree: 1%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 1%
 
 安装后，您可以配置实例：
 
-1. [配置强制搜索Geometrixx Outdoors](#configure-the-facetted-search-for-geometrixx-outdoors)。
-1. [配置目录版本](#configure-the-catalog-version)。
-1. [配置导入结构](#configure-the-import-structure)。
-1. [配置要加载的产品属性](#configure-the-product-attributes-to-load)。
-1. [导入产品数据](#importing-the-product-data)。
-1. [配置目录导入器](#configure-the-catalog-importer)。
-1. 使用[导入器将目录](#catalog-import)导入AEM中的特定位置。
+1. [配置推荐搜索Geometrixx Outdoors](#configure-the-facetted-search-for-geometrixx-outdoors).
+1. [配置目录版本](#configure-the-catalog-version).
+1. [配置导入结构](#configure-the-import-structure).
+1. [配置要加载的产品属性](#configure-the-product-attributes-to-load).
+1. [导入产品数据](#importing-the-product-data).
+1. [配置目录导入器](#configure-the-catalog-importer).
+1. 使用 [导入程序导入目录](#catalog-import) 到AEM中的特定位置。
 
 ## 配置推荐搜索Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
@@ -33,16 +33,16 @@ ht-degree: 1%
 >
 >hybris 5.3.0.1及更高版本不需要此设置。
 
-1. 在您的浏览器中，导航到&#x200B;**hybris管理控制台**，其地址为：
+1. 在您的浏览器中，导航到 **hybris管理控制台** at:
 
    [http://localhost:9001/hmc/hybris](http://localhost:9001/hmc/hybris)
 
-1. 在侧栏中，选择&#x200B;**System**，然后选择&#x200B;**Facet search**，然后选择&#x200B;**Facet Search Config**。
-1. **打开** 编辑器，以 **获取Clothescatalog的示例Solr配置**。
+1. 在侧栏中，选择 **系统**，则 **Facet搜索**，则 **Facet搜索配置**.
+1. **Open Editor** 对于 **服装目录的示例Solr配置**.
 
-1. 在&#x200B;**目录版本**&#x200B;下，使用&#x200B;**添加目录版本**&#x200B;将`outdoors-Staged`和`outdoors-Online`添加到列表中。
+1. 在 **目录版本** use **添加目录版本** 添加 `outdoors-Staged` 和 `outdoors-Online` 到列表。
 1. **保存配置。**
-1. 打开&#x200B;**SOLR项目类型**&#x200B;以将&#x200B;**SOLR排序**&#x200B;添加到`ClothesVariantProduct`:
+1. 打开 **SOLR物料类型** 添加 **SOLR排序** to `ClothesVariantProduct`:
 
    * 相关性（“相关性”，分数）
    * name-asc(&quot;Name（升序）&quot;, name)
@@ -52,67 +52,67 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >使用上下文菜单（通常通过右键单击）选择`Create Solr sort`。
+   >使用上下文菜单（通常是右键单击）选择 `Create Solr sort`.
    >
-   >对于Hybris 5.0.0，打开`Indexed Types`选项卡，双击`ClothesVariantProduct`，然后单击选项卡`SOLR Sort`。
+   >对于Hybris 5.0.0，打开 `Indexed Types` ，双击 `ClothesVariantProduct`，然后选择选项卡 `SOLR Sort`.
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. 在&#x200B;**索引类型**&#x200B;选项卡中，将&#x200B;**合成类型**&#x200B;设置为：
+1. 在 **索引类型** 选项卡设置 **合成类型** 至：
 
    `Product - Product`
 
-1. 在&#x200B;**索引类型**&#x200B;选项卡中，调整&#x200B;**索引器查询**&#x200B;以用于`full`:
+1. 在 **索引类型** 选项卡调整 **索引器查询** 表示 `full`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. 在&#x200B;**索引类型**&#x200B;选项卡中，调整&#x200B;**索引器查询**&#x200B;以用于`incremental`:
+1. 在 **索引类型** 选项卡调整 **索引器查询** 表示 `incremental`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. 在&#x200B;**索引类型**&#x200B;选项卡中，调整`category`方面。 双击类别列表中最后一个条目，以打开&#x200B;**Indexed属性**&#x200B;选项卡：
+1. 在 **索引类型** 选项卡调整 `category` 面。 双击类别列表中的最后一个条目以打开 **索引属性** 选项卡：
 
    >[!NOTE]
    >
-   >对于hybris 5.2，请确保根据以下屏幕截图选择Properties表中的`Facet`属性：
+   >对于hybris 5.2，请确保 `Facet` 属性表中的属性将根据以下屏幕截图进行选择：
 
    ![chlimage_1-37](/help/sites-administering/assets/chlimage_1-37a.png) ![chlimage_1-38](/help/sites-administering/assets/chlimage_1-38a.png)
 
-1. 打开&#x200B;**Facet Settings**&#x200B;选项卡并调整字段值：
+1. 打开 **Facet设置** ，并调整字段值：
 
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
 1. **保存更改。**
-1. 再次从&#x200B;**SOLR项目类型**&#x200B;中，根据以下屏幕截图调整`price`方面。 与`category`一样，双击`price`以打开&#x200B;**索引属性**&#x200B;选项卡：
+1. 从 **SOLR物料类型**，调整 `price` facet会根据以下屏幕截图显示。 与 `category`，双击 `price` 打开 **索引属性** 选项卡：
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
-1. 打开&#x200B;**Facet Settings**&#x200B;选项卡并调整字段值：
+1. 打开 **Facet设置** ，并调整字段值：
 
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
 1. **保存更改。**
-1. 打开&#x200B;**System**、**Facetsearch**，然后打开&#x200B;**索引器操作向导**。 启动cronjob:
+1. 打开 **系统**, **Facet搜索**，则 **索引器操作向导**. 启动cronjob:
 
-   * **索引器操作**:  `full`
-   * **解决方案配置**:  `Sample Solr Config for Clothes`
+   * **索引器操作**: `full`
+   * **Solr配置**: `Sample Solr Config for Clothes`
 
 ## 配置目录版本 {#configure-the-catalog-version}
 
-可以为OSGi服务配置导入的&#x200B;**目录版本**(`hybris.catalog.version`):
+的 **目录版本** ( `hybris.catalog.version`)，可以为OSGi服务配置：
 
 **Day CQ Commerce Hybris Configuration**
 ( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**目录** 版本通常设置为 `Online` 或 `Staged` （默认）。
+**目录版本** 通常设置为 `Online` 或 `Staged` （默认）。
 
 >[!NOTE]
 >
->使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
+>使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整详细信息。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
 日志输出可提供有关已创建页面和组件的反馈，并报告潜在错误。
 
@@ -153,33 +153,33 @@ ht-degree: 1%
               + ...
 ```
 
-此结构由实现`ImportHandler`接口的OSGi服务`DefaultImportHandler`创建。 实际导入程序会调用导入处理程序，以创建产品、产品变体、类别、资产等。
+此类结构由OSGi服务创建 `DefaultImportHandler` 实施 `ImportHandler` 界面。 实际导入程序会调用导入处理程序，以创建产品、产品变体、类别、资产等。
 
 >[!NOTE]
 >
->您可以通过实施自己的导入处理程序](#configure-the-import-structure)来自定义此过程。[
+>您可以 [通过实施您自己的导入处理程序来自定义此过程](#configure-the-import-structure).
 
 可以为以下对象配置导入时要生成的结构：
 
 &quot;**Day CQ Commerce Hybris默认导入处理程序**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
-使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
+使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整详细信息。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
 ## 配置要加载的产品属性 {#configure-the-product-attributes-to-load}
 
-响应解析器可配置为定义要加载（变量）产品的属性和属性：
+响应解析器可配置为定义要为（变量）产品加载的属性和属性：
 
 1. 配置OSGi包：
 
-   **Day CQ Commerce Hybris默认响应解析器**
+   **Day CQ Commerce Hybris默认响应分析器**
 (`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    在此，您可以定义加载和映射所需的各种选项和属性。
 
    >[!NOTE]
    >
-   >使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
+   >使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整详细信息。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
 ## 导入产品数据 {#importing-the-product-data}
 
@@ -201,7 +201,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->hybris实施(即`geometrixx-outdoors/en_US`)仅在`/etc/commerce`下存储产品ID和其他基本信息。
+>hybris实施(即 `geometrixx-outdoors/en_US`)仅存储产品ID和 `/etc/commerce`.
 >
 >每次请求有关产品的信息时，都会引用hybris服务器。
 
@@ -217,8 +217,8 @@ ht-degree: 1%
 
       [`http://localhost:4502/crx/de/index.jsp#/etc/commerce/products`](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-   1. 删除保存产品数据的节点；例如，`outdoors`。
-   1. **保** 存All以保留更改。
+   1. 删除保存产品数据的节点；例如， `outdoors`.
+   1. **全部保存** 来保留更改。
 
 1. 在AEM中打开hybris导入器：
 
@@ -232,7 +232,7 @@ ht-degree: 1%
 
    ![chlimage_1-42](/help/sites-administering/assets/chlimage_1-42a.png)
 
-1. 单击&#x200B;**Import Catalog**&#x200B;以开始导入。
+1. 单击 **导入目录** 以开始导入。
 
    完成后，您可以验证在以下位置导入的数据：
 
@@ -264,8 +264,8 @@ ht-degree: 1%
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 选择Clickbox **Incremental Import**。
-1. 单击&#x200B;**Import Catalog**&#x200B;以开始导入。
+1. 选择单击框 **增量导入**.
+1. 单击 **导入目录** 以开始导入。
 
    完成后，您可以在以下位置验证AEM中更新的数据：
 
@@ -300,8 +300,8 @@ ht-degree: 1%
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 选择Clickbox **Express Update**。
-1. 单击&#x200B;**Import Catalog**&#x200B;以开始导入。
+1. 选择单击框 **快速更新**.
+1. 单击 **导入目录** 以开始导入。
 
    完成后，您可以在以下位置验证AEM中更新的数据：
 
@@ -311,14 +311,14 @@ ht-degree: 1%
 
 ## 配置目录导入器 {#configure-the-catalog-importer}
 
-可以使用hybris目录、类别和产品的批处理导入器，将hybris目录导入AEM。
+hybris目录可以使用hybris目录、类别和产品的批处理导入器导入到AEM中。
 
 可以为导入器使用的参数配置：
 
 **Day CQ Commerce Hybris Catalog Importer**
 ( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
-使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
+使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整详细信息。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
 ## 目录导入 {#catalog-import}
 
@@ -332,20 +332,20 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
 
 必须提供以下信息：
 
-* **基本**
-存储在hybris中配置的基本存储的标识符。
+* **基本存储**
+在hybris中配置的基本存储的标识符。
 
-* ****
-目录要导入的目录的标识符。
+* **目录**
+要导入的目录的标识符。
 
-* **根**
-路径应将目录导入的路径。
+* **根路径**
+应将目录导入的路径。
 
 ## 从目录中删除产品 {#removing-a-product-from-the-catalog}
 
 要从目录中删除一个或多个产品，请执行以下操作：
 
-1. [为OSGi serviceDay CQ Commerce ](/help/sites-deploying/configuring-osgi.md) **Hybris Catalog Importer**&#x200B;配置；另请参阅 [配置目录导入器](#configure-the-catalog-importer)。
+1. [为OSGi服务配置](/help/sites-deploying/configuring-osgi.md) **Day CQ Commerce Hybris Catalog Importer**;另请参阅 [配置目录导入器](#configure-the-catalog-importer).
 
    激活以下属性：
 
@@ -354,9 +354,9 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
 
    >[!NOTE]
    >
-   >使用AEM时，可通过多种方法来管理此类服务的配置设置；有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
+   >使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整详细信息。 另请参阅控制台，获取可配置参数及其默认值的完整列表。
 
-1. 通过执行两个增量更新来初始化导入器（请参阅[目录导入](#catalog-import)）：
+1. 通过执行两个增量更新来初始化导入器(请参阅 [目录导入](#catalog-import)):
 
    * 第一次运行会生成一组更改的产品，如日志列表所示。
    * 第二次不应更新任何产品。
@@ -371,17 +371,17 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
 
    [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-1. 在hybris控制台中删除产品。 使用选项&#x200B;**更改批准状态**&#x200B;将状态设置为`unapproved`。 产品将从实时馈送中删除。
+1. 在hybris控制台中删除产品。 使用选项 **更改批准状态** 将状态设置为 `unapproved`. 产品将从实时馈送中删除。
 
    例如：
 
-   * 打开页面[http://localhost:9001/productcockpit](http://localhost:9001/productcockpit)
-   * 选择目录`Outdoors Staged`
+   * 打开页面 [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit)
+   * 选择目录 `Outdoors Staged`
    * 搜索 `Cajamara`
-   * 选择此产品并将批准状态更改为`unapproved`
+   * 选择此产品，然后将审批状态更改为 `unapproved`
 
-1. 执行另一次增量更新（请参阅[目录导入](#catalog-import)）。 日志将列出已删除的产品。
-1. [](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 转出相应的目录。产品和产品页面将从AEM中删除。
+1. 执行其他增量更新(请参阅 [目录导入](#catalog-import))。 日志将列出已删除的产品。
+1. [转出](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 相应的目录。 产品和产品页面将从AEM中删除。
 
    例如：
 
@@ -389,16 +389,16 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
 
       [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
-   * 转出`Hybris Base`目录
+   * 转出 `Hybris Base` 目录
    * 打开：
 
       [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * `Cajamara`产品将从`Bike`类别中删除
+   * 的 `Cajamara` 产品将从 `Bike` 类别
 
 1. 要重新声明产品，请执行以下操作：
 
-   1. 在hybris中，将批准状态设置回&#x200B;**approved**
+   1. 在hybris中，将批准状态设置回 **已批准**
    1. 在AEM中：
 
       1. 执行增量更新
@@ -407,17 +407,17 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
 
 ## 将订单历史记录特征添加到Client Context {#add-order-history-trait-to-the-client-context}
 
-要向[client context](/help/sites-developing/client-context.md)添加订单历史记录：
+将订单历史记录添加到 [客户端上下文](/help/sites-developing/client-context.md):
 
-1. 通过以下任一方式打开[客户端上下文设计页面](/help/sites-administering/client-context.md):
+1. 打开 [客户端上下文设计页面](/help/sites-administering/client-context.md)，通过以下任一方式：
 
-   * 打开要编辑的页面，然后使用&#x200B;**Ctrl-Alt-c**(windows)或&#x200B;**control-option-c**(Mac)打开客户端上下文。 使用Client Context左上角的铅笔图标可&#x200B;**打开ClientContext设计页面**。
-   * 直接导航到[http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
+   * 打开要编辑的页面，然后使用 **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac)。 使用Client Context左上角的铅笔图标，可 **打开ClientContext设计页面**.
+   * 直接导航到 [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
 
-1. [将订单历 **史组** ](/help/sites-administering/client-context.md#adding-a-property-component) 件添加到Client **上**&#x200B;下文的购物车组件中。
+1. [添加 **订单历史记录** 组件](/help/sites-administering/client-context.md#adding-a-property-component) 到 **购物车**&#x200B;客户端上下文的t组件。
 1. 您可以确认Client Context显示了订单历史记录的详细信息。 例如：
 
-   1. 打开[client context](/help/sites-administering/client-context.md)。
+   1. 打开 [客户端上下文](/help/sites-administering/client-context.md).
    1. 向购物车中添加商品。
    1. 完成结帐。
    1. 检查客户端上下文。
@@ -431,12 +431,11 @@ hybris包随目录导入器一起提供，用于设置初始页面结构。
    >
    >该消息的实现方式为：
    >
-   >* 导航到[http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
+   >* 导航到 [http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)
    >
    >  营销活动包含一个体验。
    >
    >* 单击区段([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
-      >
-      >
-   * 区段是使用&#x200B;**Order History属性**&#x200B;特征构建的。
+   >
+   >* 区段是使用 **订单历史记录属性** 特征。
 

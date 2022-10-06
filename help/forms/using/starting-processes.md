@@ -1,8 +1,8 @@
 ---
 title: 启动进程
-seo-title: 启动进程
+seo-title: Starting processes
 description: 如何使用LiveCycleAEM Forms工作区 — 选择流程、添加注释和附件、保存草稿副本，以及添加到收藏夹。
-seo-description: 如何使用LiveCycleAEM Forms工作区 — 选择流程、添加注释和附件、保存草稿副本，以及添加到收藏夹。
+seo-description: How to use LiveCycle AEM Forms workspace--select processes, add notes and attachments, save draft copies, and add to favorites.
 uuid: a61da785-25b4-4482-bd72-02e250d35dc7
 contentOwner: robhagat
 content-type: reference
@@ -12,20 +12,20 @@ discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 exl-id: b2a6ba3a-0f4c-44b1-8f9a-c15c6fb8c305
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
 
-# 启动进程{#starting-processes}
+# 启动进程 {#starting-processes}
 
 AEM Forms工作区按管理员或流程设计器设置的类别组织流程。 您还可以将经常使用的流程放入收藏夹类别中，以便快速找到它们。
 
 启动流程时，您可能需要填写表单以启动由AEM Forms工作流控制的业务流程。 如果表单使用“准备数据流程”，则在启动新流程时，某些信息可以预填充为空白表单。
 
-例如，您要购买新的计算机监视器，从而启动一个名为&#x200B;*Purchase Order*&#x200B;的流程。 启动该过程时，会打开一个表单，提示您输入有关要订购项目的详细信息。 您的姓名、员工编号和经理姓名可能已在表单中预填。 在提交请求时，将启动业务流程。 根据流程定义，服务器会自动将请求路由到您的管理器。 任务开始显示在管理员的待办事项列表中。 经理批准请求后，表单工作流会将请求路由到采购部门，并向您发送电子邮件通知。
+例如，您要购买新的计算机监视器，因此启动一个名为 *采购订单*. 启动该过程时，会打开一个表单，提示您输入有关要订购项目的详细信息。 您的姓名、员工编号和经理姓名可能已在表单中预填。 在提交请求时，将启动业务流程。 根据流程定义，服务器会自动将请求路由到您的管理器。 任务开始显示在管理员的待办事项列表中。 经理批准请求后，表单工作流会将请求路由到采购部门，并向您发送电子邮件通知。
 
-## 选择要启动{#selecting-processes-to-start}的进程
+## 选择要启动的进程 {#selecting-processes-to-start}
 
 您可以选择启动某个流程或查看有关该流程的更多信息。
 
@@ -37,7 +37,7 @@ AEM Forms工作区按管理员或流程设计器设置的类别组织流程。 �
 
 选择某个流程时，将显示“表单”选项卡和“详细信息”选项卡。 如果流程允许您添加附注或附件，则也会显示“附件”(Attachments)选项卡和“附注”(Notes)选项卡。 如果您还使用该流程配置了摘要url，则还会显示“摘要”选项卡。 “Forms”选项卡显示关联的表单，而“详细信息”选项卡显示有关当前任务及其所包含的流程的信息。
 
-### 启动业务流程{#start-a-business-process}
+### 启动业务流程 {#start-a-business-process}
 
 1. 在“开始流程”页面的左侧列表中，选择一个类别。 您有权在类别中访问的所有进程都会显示在右侧。
 
@@ -47,9 +47,9 @@ AEM Forms工作区按管理员或流程设计器设置的类别组织流程。 �
 
 1. 通过单击任务选择流程。 与流程关联的表单将在表单选项卡上打开。
 
-   流程中的每个表单都有一个唯一的URL。 您可以使用唯一URL直接通过特定流程和表单启动HTML工作区。 URL的格式为https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>。 &lt;ApplicationName>%2F&lt;ProcessName>字符串始终进行URL编码。 示例URL为http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess。 示例中的ApplicationName%2FProcessName字符串已进行URL编码。
+   流程中的每个表单都有一个唯一的URL。 您可以使用唯一URL直接通过特定流程和表单启动HTML工作区。 URL的格式为https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;applicationname>%2F&lt;processname>. 的 &lt;applicationname>%2F&lt;processname> 字符串始终进行URL编码。 示例URL为http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess。 示例中的ApplicationName%2FProcessName字符串已进行URL编码。
 
-1. 按照随附的说明填写表格。 如有必要，单击&#x200B;**最大化**&#x200B;以增加表单的可见区域。
+1. 按照随附的说明填写表格。 如有必要，请单击 **最大化** 以增加表单的可见区域。
 1. 如果“附件”选项卡可用，请根据需要添加附件。
 1. 如果“注释”选项卡可用，请根据需要提供任何注释。
 1. 执行以下步骤之一：
@@ -59,17 +59,17 @@ AEM Forms工作区按管理员或流程设计器设置的类别组织流程。 �
 
    流程管理启动流程，并将表单路由到流程中需要完成下一个任务的相应人员的待办事项列表。
 
-   如果您必须在提交表单之前关闭表单，并且没有丢失您输入的数据，请保存草稿并在流程允许时稍后完成该草稿。 如果表单和流程允许，您还可以单击&#x200B;**Offline**，稍后从Adobe®Reader®或Adobe®Acrobat® Professional或Acrobat Standard提交。
+   如果您必须在提交表单之前关闭表单，并且没有丢失您输入的数据，请保存草稿并在流程允许时稍后完成该草稿。 如果表单和进程允许，您还可以单击 **脱机** 稍后从Adobe®Reader®或Adobe®Acrobat®专业版或Acrobat Standard提交。
 
    >[!NOTE]
    >
    >脱机选项仅适用于PDF forms。
 
-## 添加注释和附件{#adding-notes-and-attachments}
+## 添加注释和附件 {#adding-notes-and-attachments}
 
 如果某个流程允许，您可以向该流程添加注释和文件附件。 您可以为参与查看、更新和删除注释或附件的流程的其他用户提供权限。
 
-### 添加注释{#add-a-note}
+### 添加注释 {#add-a-note}
 
 您可以添加多个注释、编辑所写注释并删除它们。 每个注释都有一个标题、一个描述以及与其关联的访问权限。 您可以在注释中设置以下访问权限之一：
 
@@ -79,12 +79,12 @@ AEM Forms工作区按管理员或流程设计器设置的类别组织流程。 �
 * 读取/删除
 * 无权访问
 
-1. 打开任务并单击&#x200B;**Notes**&#x200B;选项卡（如果该过程允许）。
-1. 在&#x200B;**标题**&#x200B;框中键入注释的标题，然后在&#x200B;**注释**&#x200B;框中键入注释的文本。
-1. 为参与该过程的其他用户选择&#x200B;**权限**&#x200B;级别的注释。
-1. 单击&#x200B;**确定**。表单上会附加一个包含您的注释的文本文件。 您可以通过单击注释并直接修改文本来更新注释。 可以通过单击注释旁边的&#x200B;**删除**&#x200B;按钮![垃圾桶图像](assets/icondelete.png)来删除注释。
+1. 打开任务并单击 **注释** 选项卡（如果流程允许）。
+1. 在 **标题** ，然后在 **注意** 框中。
+1. 选择 **权限** 级别。
+1. 单击&#x200B;**确定**。表单上会附加一个包含您的注释的文本文件。 您可以通过单击注释并直接修改文本来更新注释。 您可以通过单击 **删除** 按钮 ![垃圾桶的图像](assets/icondelete.png) 在笔记旁边。
 
-### 添加附件{#add-an-attachment}
+### 添加附件 {#add-an-attachment}
 
 您还可以添加有关附件的注释。 您可以对附件设置以下访问权限之一：
 
@@ -94,39 +94,39 @@ AEM Forms工作区按管理员或流程设计器设置的类别组织流程。 �
 * 读取/删除
 * 无权访问
 
-1. 单击&#x200B;**附件**&#x200B;选项卡，然后选择&#x200B;**附件**。
-1. 单击&#x200B;**Browse**&#x200B;以选择要附加的文件。
-1. 为参与该进程的其他用户的附件选择&#x200B;**权限**&#x200B;级别。 如果选择&#x200B;**读取**，则其他用户可以将文件保存在本地。 如果您选择其中一个编辑权限，其他用户也可以上传新文件以替换您的附件。
-1. 单击&#x200B;**确定**。文件已附加到表单。 单击附件旁边的&#x200B;**删除**&#x200B;按钮![垃圾桶图像](assets/icondelete.png)可删除文件。
+1. 单击 **附件** 选项卡，选择 **附件**.
+1. 单击 **浏览** 来选择要附加的文件。
+1. 选择 **权限** 参与流程的其他用户的附件级别。 如果您选择 **读取**，则其他用户可以将文件保存在本地。 如果您选择其中一个编辑权限，其他用户也可以上传新文件以替换您的附件。
+1. 单击&#x200B;**确定**。文件已附加到表单。 您可以通过单击 **删除** 按钮 ![垃圾桶的图像](assets/icondelete.png) 在附件旁边。
 
-## 保存表单的草稿副本{#saving-draft-copies-of-forms}
+## 保存表单的草稿副本 {#saving-draft-copies-of-forms}
 
 如果您必须在以后完成并提交表单，则可以保存表单的草稿副本，以便您不会丢失现有工作。 草稿副本将添加到待办事项页面的草稿类别中。
 
 重新打开并提交草稿表单后，草稿将从“草稿”类别中删除。
 
-此外，您还可以将工作区配置为自动将用户输入的信息另存为草稿。 有关更多信息，请参阅[管理首选项](/help/forms/using/getting-started-livecycle-html-workspace.md)。
+此外，您还可以将工作区配置为自动将用户输入的信息另存为草稿。 有关更多信息，请参阅 [管理首选项](/help/forms/using/getting-started-livecycle-html-workspace.md).
 
 >[!NOTE]
 >
 >保存按钮对于某些表单不可用，具体取决于它所关联的过程。
 
-### 保存草稿副本{#save-a-draft-copy}
+### 保存草稿副本 {#save-a-draft-copy}
 
-1. 单击任意选项卡左下角的&#x200B;**Save**。 表单会添加到待办事项页面的草稿类别中。 您对表单所做的所有更改都将保存。
+1. 单击 **保存** 中。 表单会添加到待办事项页面的草稿类别中。 您对表单所做的所有更改都将保存。
 
-### 重新打开草稿副本{#reopen-a-draft-copy}
+### 重新打开草稿副本 {#reopen-a-draft-copy}
 
-1. 在待办事项页面，选择&#x200B;**草稿**&#x200B;队列，然后单击表单的草稿副本。
+1. 在待办事项页面上，选择 **草稿** 排队并单击表单的草稿副本。
 
    如果表单包含一系列面板，则您可能需要转到上次会话结束的面板。
 
-## 将进程添加到收藏夹类别{#adding-processes-to-the-favorites-category}
+## 将流程添加到收藏夹类别 {#adding-processes-to-the-favorites-category}
 
 您可以将任何流程添加到“收藏夹”类别。 通过设置收藏夹，您可以将经常启动的所有流程分组到一个类别中，以便快速找到它们。
 
 >[!NOTE]
 >
->如果您通常在使用AEM Forms工作区时启动流程，则可以设置“开始位置”首选项，以在启动AEM Forms工作区时自动显示“收藏夹”类别。 有关更多详细信息，请参阅[AEM Forms工作区快速入门](/help/forms/using/getting-started-livecycle-html-workspace.md)中的管理首选项。
+>如果您通常在使用AEM Forms工作区时启动流程，则可以设置“开始位置”首选项，以在启动AEM Forms工作区时自动显示“收藏夹”类别。 有关更多详细信息，请参阅 [AEM Forms工作区入门](/help/forms/using/getting-started-livecycle-html-workspace.md).
 
 要将某个进程标记为收藏，请在其类别中选择该任务，然后单击空心星形。 星星变金了。 要取消将流程标记为收藏，请再次单击金星。

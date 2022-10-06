@@ -54,9 +54,9 @@ ht-degree: 77%
 >
 >[!UICONTROL 标题]组件设计用于包含短文本（没有换行符）。在就地编辑模式中编辑标题时，输入换行符将在标题下方打开一个新&#x200B;**文本**&#x200B;组件。
 
-## 富文本编辑器的功能  {#features-of-the-rich-text-editor}
+## 富文本编辑器的功能 {#features-of-the-rich-text-editor}
 
-富文本编辑器提供了一系列功能，这些功能[取决于单个组件的配置](/help/sites-administering/rich-text-editor.md)。这些功能同时适用于触屏优化UI和经典UI。
+富文本编辑器提供了一系列功能，这些功能 [取决于配置](/help/sites-administering/rich-text-editor.md) 的值。这些功能同时适用于触屏优化UI和经典UI。
 
 ### 基本字符格式 {#basic-character-formats}
 
@@ -74,7 +74,7 @@ ht-degree: 77%
 
 所有都以切换方式运行，因此重新选择将删除格式。
 
-### 预定义样式和格式  {#predefined-styles-and-formats}
+### 预定义样式和格式 {#predefined-styles-and-formats}
 
 ![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
@@ -96,7 +96,7 @@ ht-degree: 77%
 >
 >不要实际重新选择任何已应用样式的文本，否则将停用图标。
 
-### 剪切、复制、粘贴  {#cut-copy-paste}
+### 剪切、复制、粘贴 {#cut-copy-paste}
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
@@ -104,8 +104,7 @@ ht-degree: 77%
 
 * 剪切 (Ctrl-X)
 * 复制 (Ctrl-C)
-* 粘贴
-这是组件的默认粘贴机制(Ctrl-V);安装现成版本后，此插件将配置为从Word]粘贴[!UICONTROL 。
+* 粘贴这是组件的默认粘贴机制(Ctrl-V);当安装现成功能时，此配置将 [!UICONTROL 从Word粘贴].
 
 * 粘贴为文本：去除所有样式和格式，仅粘贴纯文本。
 
@@ -169,13 +168,13 @@ AEM 会按时间顺序保留您在当前组件中过去 50 次操作的记录。
 
 * 直接键入URI
 * 使用网站地图在您的网站中选择页面
-* 输入URI，然后附加目标锚点；例如`www.TargetUri.org#AnchorName`
-* 仅输入锚点（引用“当前页面”）；例如，`#anchor`
+* 输入URI，然后附加目标锚点；例如 `www.TargetUri.org#AnchorName`
+* 仅输入锚点（引用“当前页面”）；例如， `#anchor`
 * 在内容查找器中搜索页面，然后将页面图标拖放到“超链接”对话框中
 
 >[!NOTE]
 >
->URI 可以使用为您的安装配置的任何协议作为前缀。在标准安装中，这些参数分别为`https://`、`ftp://`和`mailto:`。 将拒绝并非为您的安装配置的协议，并将其标记为无效。
+>URI 可以使用为您的安装配置的任何协议作为前缀。在标准安装中，这些 `https://`, `ftp://`和 `mailto:`. 将拒绝并非为您的安装配置的协议，并将其标记为无效。
 
 要中断链接，请将光标置于链接文本中的任意位置并单击[!UICONTROL 取消链接]图标：
 
@@ -249,7 +248,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
    >[!NOTE]
    >
-   >尽管RTE中提供了表，但在创建表时，建议使用&#x200B;**Table**&#x200B;组件。
+   >尽管RTE中提供了表，但建议使用 **表** 组件。
 
 在&#x200B;**文本**&#x200B;和&#x200B;**表**&#x200B;组件中，可通过单击表中的上下文菜单（通常是鼠标右键按钮）使用表功能；例如：
 
@@ -285,7 +284,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 * **边框**:表边框的大小。
 
-* **单元格边距**:这定义单元格内容与其边框之间的空白。
+* **单元格内边距**:这定义单元格内容与其边框之间的空白。
 
 * **单元格间距**:这定义单元格之间的距离。
 
@@ -310,7 +309,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 * **水平对齐** - 左对齐、居中对齐或右对齐
 * **垂直对齐**  — 顶部、中间、底部或基线
 * **单元格类型** — 数据或标题
-* **应用到：** 单个单元格、整行、整列
+* **适用于：** 单个单元格、整行、整列
 
 #### 添加或删除行 {#add-or-delete-rows}
 
@@ -320,7 +319,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 还可删除当前行。
 
-#### 添加或删除列  {#add-or-delete-columns}
+#### 添加或删除列 {#add-or-delete-columns}
 
 ![cq55_rte_columns](assets/cq55_rte_columns.png)
 
@@ -328,20 +327,20 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 还可删除当前列。
 
-#### 选择整行或整列  {#selecting-entire-rows-or-columns}
+#### 选择整行或整列 {#selecting-entire-rows-or-columns}
 
-![chlimage_1-105](assets/chlimage_1-106.png)
+![chlimage_1-106](assets/chlimage_1-106.png)
 
 选择整个当前行或列。随后可进行特定操作（例如合并）。
 
 #### 合并单元格 {#merge-cells}
 
-![cq55_rte_cellmergecq](assets/cq55_rte_cellmerge.png) ![55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * 如果您选择了一组单元格，可以将这些单元格合并为一个。
 * 如果您只选择了一个单元格，可以将其与右侧或下方的单元格合并。
 
-#### 拆分单元格  {#split-cells}
+#### 拆分单元格 {#split-cells}
 
 ![cq55_rte_cellsplit](assets/cq55_rte_cellsplit.png)
 
@@ -350,7 +349,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 * 水平拆分单元格将在当前单元格的右侧、当前列中生成新单元格。
 * 垂直拆分单元格将在当前单元格的下方、但在当前行中生成新单元格。
 
-#### 创建嵌套表  {#creating-nested-tables}
+#### 创建嵌套表 {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
@@ -368,7 +367,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-使用选项可从&#x200B;**[!UICONTROL Text]**&#x200B;组件中删除表。
+使用选项可从 **[!UICONTROL 文本]** 组件。
 
 ### 特殊字符 {#special-characters}
 
@@ -380,7 +379,7 @@ AEM 提供了&#x200B;**查找**&#x200B;和&#x200B;**替换**（查找并替换�
 
 使用鼠标悬停可查看字符的放大版本，然后单击以便将其包含在您的文本中的当前位置。
 
-### 源编辑模式  {#source-editing-mode}
+### 源编辑模式 {#source-editing-mode}
 
 ![](do-not-localize/cq55_rte_sourceedit.png)
 

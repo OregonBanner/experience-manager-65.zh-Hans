@@ -1,8 +1,8 @@
 ---
 title: 分析页面性能
-seo-title: 分析页面性能
+seo-title: Analyzing Page Performance
 description: 可使用“内容分析”页面分析您正在创作的页面的性能
-seo-description: 可使用“内容分析”页面分析您正在创作的页面的性能
+seo-description: Use the Content Insight page to analyze the performance of the page that you are authoring
 uuid: 563d3e98-20d9-4cca-a174-bafd6e65c1bb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '662'
 ht-degree: 97%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 97%
 
 可打开“[内容分析](/help/sites-authoring/content-insights.md)”页面以分析您正在创作的页面的性能。此外，还可配置报表时间段以集中进行分析。
 
-## 打开页面的分析和推荐  {#opening-analytics-and-recommendations-for-a-page}
+## 打开页面的分析和推荐 {#opening-analytics-and-recommendations-for-a-page}
 
 请按照以下过程查看页面的分析和推荐：
 
@@ -62,7 +62,7 @@ ht-degree: 97%
 
 1. 要更改报表时间段的结束日期，请将显示在阴影区域右侧的圆圈拖动到所需的结束日期。
 
-#### 更改报表时间段的粒度  {#changing-the-granularity-of-the-reporting-period}
+#### 更改报表时间段的粒度 {#changing-the-granularity-of-the-reporting-period}
 
 更改报表中每个数据点跨越的时间。例如，选择“周”粒度时，“查看次数”报表中的每个数据点表示一周的查看次数。
 
@@ -76,7 +76,7 @@ ht-degree: 97%
 
 1. 单击或点按所需的粒度。选定后，报表会自动更新以反映该粒度。
 
-### 为 SEO 推荐分配任务  {#assigning-tasks-for-seo-recommendations}
+### 为 SEO 推荐分配任务 {#assigning-tasks-for-seo-recommendations}
 
 可使用“SEO 推荐”报表来创建任务，以提高页面对搜索引擎的可见性。对于报表中没有复选标记的每个推荐，您可以创建一个任务，以将其分配给用户来执行所需的工作。
 
@@ -86,7 +86,7 @@ ht-degree: 97%
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
 
-创建后，任务会显示在用户的“任务”列表中。有关任务的信息，请参阅[使用任务](/help/sites-authoring/task-content.md)。
+创建后，任务会显示在用户的“任务”列表中。有关任务的信息，请参阅 [使用任务](/help/sites-authoring/task-content.md).
 
 请按照以下过程为 SEO 推荐创建任务。
 

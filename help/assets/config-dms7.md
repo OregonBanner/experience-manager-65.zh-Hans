@@ -153,7 +153,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    在Dynamic Media - Scene7模式下不支持版本控制。 此外，仅当“编辑 Dynamic Media 配置”页面中的&#x200B;**[!UICONTROL 发布资产]**&#x200B;设置为&#x200B;**[!UICONTROL 激活时]**&#x200B;时，并且直到首次激活资产时延迟激活才适用。
    激活资产后，任何更新都会立即实时发布到S7交付。
 
-1. 选择&#x200B;**[!UICONTROL “保存”]**。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
 1. 为了在发布Dynamic Media内容之前安全地预览该内容，Experience Manager作者使用基于令牌的验证，因此默认情况下，Experience Manager作者会预览Dynamic Media内容。 但是，您可以允许列表更多IP，以便为用户提供安全预览内容的访问权限。 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
@@ -633,7 +633,7 @@ Granite传输工作流队列用于 **[!UICONTROL DAM更新资产]** 工作流。
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. 选择&#x200B;**[!UICONTROL “保存”]**。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
 
 #### 更新Granite工作流队列 {#updating-the-granite-workflow-queue}
 
@@ -652,7 +652,7 @@ Granite工作流队列用于非临时工作流。 在Dynamic Media中，它使�
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-1. 选择&#x200B;**[!UICONTROL “保存”]**。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
 
 #### 更新Dynamic Media Classic上传连接 {#updating-the-scene-upload-connection}
 
@@ -671,7 +671,7 @@ Scene7上传连接设置可将Experience Manager资产同步到Dynamic Media Cla
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 选择&#x200B;**[!UICONTROL “保存”]**。
+1. 选择&#x200B;**[!UICONTROL 保存]**。
 
 ### （可选）筛选用于复制的资产 {#optional-filtering-assets-for-replication}
 

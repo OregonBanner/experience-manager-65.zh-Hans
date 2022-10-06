@@ -1,8 +1,8 @@
 ---
 title: 同步应用程序
-seo-title: 同步应用程序
+seo-title: Synchronizing the app
 description: 将移动设备上的AEM Forms应用程序与AEM Forms服务器同步。
-seo-description: 将移动设备上的AEM Forms应用程序与AEM Forms服务器同步。
+seo-description: Synchronize the AEM Forms app on your mobile device with the AEM Forms server.
 uuid: 3a6fb2d5-2ec4-4f78-a42a-fc921b66238e
 contentOwner: robhagat
 content-type: reference
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 6bb1d6df-b322-4112-bc25-6300877ee146
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
 
 # 同步应用程序{#synchronizing-the-app}
 
-## 同步应用程序{#synchronizing-the-app-1}
+## 同步应用程序 {#synchronizing-the-app-1}
 
 应用程序中的表单将从AEM Forms服务器下载。 表格将在“任务”和“Forms”选项卡下下载。 从表单创建的草稿将在“草稿”选项卡中下载，从任务创建的草稿将在“任务”选项卡中下载。 对于OSGi服务器上的独立表单，表单和草稿将分别下载到Forms和草稿选项卡中。
 
@@ -30,11 +30,11 @@ ht-degree: 0%
 
 **手动同步应用程序**
 
-点按主屏幕右下角的同步按钮![sync-app](assets/sync-app.png)。
+点按同步按钮 ![sync-app](assets/sync-app.png) 在主屏幕的右下角。
 
 **更改同步频率**
 
-1. 要转到“设置”屏幕，请点按主屏幕左上角的菜单按钮，然后点按&#x200B;**Settings**。
+1. 要转到设置屏幕，请点按主屏幕左上角的菜单按钮，然后点按 **设置**.
 1. 在设置屏幕中，点按常规选项卡。
 
    ![“常规设置”窗口中的同步频率设置](assets/gen-settings-2.png)
@@ -42,7 +42,7 @@ ht-degree: 0%
 1. 在同步频率选项中，点按同步频率右侧的值。
 1. 在下拉列表中，选择新的同步频率。
 
-### 技术规范{#technical-specifications}
+### 技术规范 {#technical-specifications}
 
 * 将离线应用程序数据提交到AEM Forms服务器的主要逻辑包含在runtime/offline/util/offline.js中。
 * 在.js中，对processOfflineSubmittedSavedTasks(...)函数的调用会将已保存/已提交的任务发送到服务器。 它还可处理同步过程中的任何错误或冲突。 如果提交任务失败，则应用程序上的任务将标记为失败。 此外，任务仍保留在发件箱中。

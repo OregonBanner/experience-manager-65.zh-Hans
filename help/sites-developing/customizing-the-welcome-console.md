@@ -1,8 +1,8 @@
 ---
 title: 自定义欢迎控制台（经典UI）
-seo-title: 自定义欢迎控制台（经典UI）
+seo-title: Customizing the Welcome Console (Classic UI)
 description: “欢迎”控制台提供了指向AEM中各种控制台和功能的链接列表
-seo-description: “欢迎”控制台提供了指向AEM中各种控制台和功能的链接列表
+seo-description: The Welcome console provides a list of links to the various consoles and functionality within AEM
 uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 9%
+source-wordcount: '464'
+ht-degree: 11%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 9%
 >
 >本页面介绍经典 UI。
 >
->有关标准触屏UI的详细信息，请参阅[自定义控制台](/help/sites-developing/customizing-consoles-touch.md)。
+>请参阅 [自定义控制台](/help/sites-developing/customizing-consoles-touch.md) 有关标准触屏UI的详细信息。
 
 “欢迎”控制台提供了指向AEM中各种控制台和功能的链接列表。
 
@@ -31,16 +31,16 @@ ht-degree: 9%
 
 可以配置可见的链接。 这可以为特定用户和/或组定义。 要执行的操作取决于目标类型（与所在控制台的部分相关）：
 
-* [主控制台](#links-in-main-console-left-pane)  — 主控制台中的链接（左窗格）
+* [主要控制台](#links-in-main-console-left-pane)  — 主控制台（左窗格）中的链接
 * [资源、文档和参考、功能](#links-in-sidebar-right-pane)  — 侧栏（右窗格）中的链接
 
-## 主控制台中的链接（左窗格）{#links-in-main-console-left-pane}
+## 主控制台中的链接（左窗格） {#links-in-main-console-left-pane}
 
 这列出了AEM的主要控制台。
 
 ![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 
-### 配置主控制台链接是否可见{#configuring-whether-main-console-links-are-visible}
+### 配置主控制台链接是否可见 {#configuring-whether-main-console-links-are-visible}
 
 节点级别权限决定链接是否可见。 相关节点包括：
 
@@ -62,17 +62,17 @@ ht-degree: 9%
 
 例如：
 
-* 要限制对&#x200B;**工具**&#x200B;的访问，请删除
+* 限制对 **工具**，从中删除读取访问权限
 
    `/libs/wcm/core/content/misc`
 
-有关如何设置所需权限的更多信息，请参阅[安全部分](/help/sites-administering/security.md)。
+请参阅 [安全部分](/help/sites-administering/security.md) 以了解有关如何设置所需权限的更多信息。
 
-### 侧栏（右窗格）{#links-in-sidebar-right-pane}中的链接
+### 侧栏中的链接（右窗格） {#links-in-sidebar-right-pane}
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
-这些链接基于存在&#x200B;*和*&#x200B;对以下路径下节点的读取访问：
+这些链接基于 *和* 读取以下路径下的节点访问权限：
 
 `/libs/cq/core/content/welcome`
 
@@ -85,7 +85,7 @@ ht-degree: 9%
    <td> </td>
   </tr>
   <tr>
-   <td> 云服务</td>
+   <td> Cloud Service</td>
    <td><code>/libs/cq/core/content/welcome/resources/cloudservices</code></td>
   </tr>
   <tr>
@@ -159,7 +159,7 @@ ht-degree: 9%
  </tbody>
 </table>
 
-#### 配置侧栏链接是否可见{#configuring-whether-sidebar-links-are-visible}
+#### 配置侧栏链接是否可见 {#configuring-whether-sidebar-links-are-visible}
 
 可以通过删除对表示链接的节点的读取访问权限来隐藏特定用户或组的链接。
 
@@ -177,38 +177,36 @@ ht-degree: 9%
 
 例如：
 
-* 要删除指向&#x200B;**Reports**&#x200B;的链接，请删除
+* 删除链接 **报表**，从中删除读取访问权限
 
    `/libs/cq/core/content/welcome/resources/reports`
 
-* 要删除指向&#x200B;**Packages**&#x200B;的链接，请删除
+* 删除链接 **包**，从中删除读取访问权限
 
    `/libs/cq/core/content/welcome/features/packages`
 
-有关如何设置所需权限的更多信息，请参阅[安全部分](/help/sites-administering/security.md)。
+请参阅 [安全部分](/help/sites-administering/security.md) 以了解有关如何设置所需权限的更多信息。
 
-### 链路选择机制{#link-selection-mechanism}
+### 链接选择机制 {#link-selection-mechanism}
 
-在`/libs/cq/core/components/welcome/welcome.jsp`中，使用的是[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，它对具有以下属性的节点执行查询：
+在 `/libs/cq/core/components/welcome/welcome.jsp` 使用 [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，用于对具有以下属性的节点执行查询：
 
-* `jcr:mixinTypes` 值：  `cq:Console`
+* `jcr:mixinTypes` 值为: `cq:Console`
 
 >[!NOTE]
 >
 >执行以下查询以查看现有列表：
 >
 >* `select * from cq:Console`
-
 >
 
 
+当用户或组对具有混合的节点没有读取权限时 `cq:Console`，则该节点不会被 `ConsoleUtil` 搜索，因此它不会列在控制台中。
 
-当用户或组对具有mixin `cq:Console`的节点没有读取权限时，该节点不会通过`ConsoleUtil`搜索进行检索，因此它不会列在控制台中。
+### 添加自定义项目 {#adding-a-custom-item}
 
-### 添加自定义项目{#adding-a-custom-item}
+的 [链接选择机制](#link-selection-mechanism) 可用于将您自己的自定义项目添加到链接列表。
 
-[链接选择机制](#link-selection-mechanism)可用于将您自己的自定义项目添加到链接列表。
+通过添加 `cq:Console` 混合到小组件或资源中。 这可通过定义属性来完成：
 
-通过将`cq:Console` mixin添加到小组件或资源，将自定义项目添加到列表中。 这可通过定义属性来完成：
-
-* `jcr:mixinTypes` 值：  `cq:Console`
+* `jcr:mixinTypes` 值为: `cq:Console`

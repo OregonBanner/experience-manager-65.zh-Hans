@@ -1,14 +1,15 @@
 ---
-title: AEM中的Headful和Headless
+title: AEM 中的 Headful 和 Headless
 description: AEM项目可以采用无头和无头模型来实施，但选择不是二进制的。 AEM可以灵活地在一个项目中利用这两个模型的优势。
-source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
+exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# AEM中的Headful和Headless {#headful-headless}
+# AEM 中的 Headful 和 Headless {#headful-headless}
 
 Adobe Experience Manager项目可以在头部和无头两种模型中实施，但选择不是二进制的。 AEM可以灵活地在一个项目中利用这两个模型的优势。 本文档概述了不同的模型并描述了SPA集成的级别。
 
@@ -20,7 +21,7 @@ AEM还可用于简单地管理内容，从而允许由其他平台管理内容�
 
 但这不一定是二选一。 AEM提供了前所未有的灵活性，允许您利用这两个模型在项目中的优势。
 
-![AEM实施模型](headless/assets/aem-implementation-models.png)
+![AEM 实施模型](headless/assets/aem-implementation-models.png)
 
 在标题式或全堆栈式模型中，内容基于Java、HTL等在AEM存储库和AEM组件中进行管理。 用于呈现用户体验的内容。 在此模型中，可在AEM中创建内容、为其设置样式、演示内容并交付所有内容。
 

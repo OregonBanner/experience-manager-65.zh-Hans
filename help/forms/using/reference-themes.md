@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # 参考主题{#reference-themes}
 
-[](../../forms/using/themes.md) 它们允许您在不了解CSS的情况下设置表单样式。除了默认主题之外，您还可以通过安装[AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)来获取以下主题：
+[主题](../../forms/using/themes.md) 允许您在不深入了解CSS的情况下设置表单样式。 除了默认主题之外，您还可以通过安装 [AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
 
 * 柏利
 * 执行
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 此包中包含的主题是响应式的，这些主题中的样式是为移动设备和桌面显示屏定义的。 各种设备上的大多数现代浏览器都可以轻松渲染使用其中一个主题应用的表单。
 
-有关安装软件包的更多信息，请参阅[如何使用软件包](/help/sites-administering/package-manager.md)。
+有关安装包的更多信息，请参阅 [如何使用包](/help/sites-administering/package-manager.md).
 
 ## 柏利 {#beryl}
 

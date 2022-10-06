@@ -1,8 +1,8 @@
 ---
 title: 测试 — 何时与谁一起进行？
-seo-title: 测试 — 何时与谁一起进行？
+seo-title: Testing - when and with whom?
 description: 测试和项目开发的各个阶段可能涉及各种角色
-seo-description: 测试和项目开发的各个阶段可能涉及各种角色
+seo-description: Various roles can be involved in testing and at various stages of project development
 uuid: 431e8f06-80eb-4fb3-a4c7-2580608b0a1c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
 exl-id: 5a16be40-eede-4a47-b03b-3993e285232e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-# 测试 — 何时与谁一起？{#testing-when-and-with-whom}
+# 测试 — 何时与谁一起进行？{#testing-when-and-with-whom}
 
 测试和项目开发的各个阶段可能涉及各种角色。
 
@@ -44,7 +44,7 @@ ht-degree: 0%
     <ul>
      <li><p>为客户提供正在开发的项目的体验。</p> </li>
      <li><p>提供客户的早期反馈。</p> </li>
-     <li><p>用户往往根据以往的经验来表达自己的需求；尽早让客户参与测试，从<i>实际操作</i>体验角度来讲，可增加他们对新项目的体验。</p> </li>
+     <li><p>用户往往根据以往的经验来表达自己的需求；让客户尽早参与测试，可增加他们对新项目的体验， <i>动手</i> 体验。</p> </li>
     </ul> </td>
    <td><p>同样，早期参与也是好事，不过客户使用的任何版本都应该是稳定的，并且具有合理的功能。</p> <p>第一印象始终很重要。</p> </td>
   </tr>

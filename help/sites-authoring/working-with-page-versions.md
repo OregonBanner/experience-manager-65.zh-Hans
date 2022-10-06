@@ -33,7 +33,7 @@ ht-degree: 96%
 * [时间轴边栏](#creating-a-new-version-timeline)
 * [创建](#creating-a-new-version-create-with-a-selected-resource)选项（在选择某资源时）
 
-### 创建新版本 - 时间线 {#creating-a-new-version-timeline}
+### 创建新版本 – 时间线 {#creating-a-new-version-timeline}
 
 1. 导航以显示要为其创建版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
@@ -42,7 +42,7 @@ ht-degree: 96%
 
    ![screenshot_2019-03-05at112335](assets/screen-shot_2019-03-05at112335.png)
 
-1. 选择&#x200B;**另存为版本**。
+1. 选择&#x200B;**保存为版本**。
 1. 根据需要输入&#x200B;**标签**&#x200B;和&#x200B;**评论**。
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
@@ -51,7 +51,7 @@ ht-degree: 96%
 
    时间线中的信息将进行更新以指示该新版本。
 
-### 创建新版本 - 通过选定的资源创建 {#creating-a-new-version-create-with-a-selected-resource}
+### 创建新版本 – 通过选定的资源创建 {#creating-a-new-version-create-with-a-selected-resource}
 
 1. 导航以显示要为其创建版本的页面。
 1. 在[选择模式](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中选择页面。
@@ -128,15 +128,15 @@ ht-degree: 96%
 
 1. 将列出可用版本：
 
-   ![恢复版本 - 文件夹中所有页面的列表](/help/sites-authoring/assets/versions-restore-version-01.png)
+   ![恢复版本 – 文件夹中所有页面的列表](/help/sites-authoring/assets/versions-restore-version-01.png)
 
 1. 对于特定页面，使用&#x200B;**恢复到版本**&#x200B;下的下拉选择器来选择该页面的所需版本。
 
-   ![恢复版本 - 选择版本](/help/sites-authoring/assets/versions-restore-version-02.png)
+   ![恢复版本 – 选择版本](/help/sites-authoring/assets/versions-restore-version-02.png)
 
 1. 在主显示中，选择要恢复的页面：
 
-   ![恢复版本 - 选择页面](/help/sites-authoring/assets/versions-restore-version-03.png)
+   ![恢复版本 – 选择页面](/help/sites-authoring/assets/versions-restore-version-03.png)
 
 1. 对于要恢复为当前版本的选定页面的所选版本，选择&#x200B;**恢复**。
 
@@ -154,7 +154,7 @@ ht-degree: 96%
 
    ![恢复树](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
-1. 使用&#x200B;**最新版本(日期)**&#x200B;上的日期和时间选择器来选择树的其他版本 - 要恢复的版本。
+1. 使用&#x200B;**最新版本(日期)**&#x200B;上的日期和时间选择器来选择树的其他版本 – 要恢复的版本。
 
 1. 根据需要设置标志&#x200B;**保留的非版本化页面**：
 
@@ -211,7 +211,7 @@ ht-degree: 96%
 
 * 系统会查找在选定时间处于活动状态的页面版本。
 * 这表示显示的版本是在“时间扭曲”中选择的时间点&#x200B;*之前*&#x200B;创建/激活的。
-* 当浏览到已经删除的页面时，也会呈现相应的页面版本 - 只要该页面的旧版本仍然在存储库中即可。
+* 当浏览到已经删除的页面时，也会呈现相应的页面版本 – 只要该页面的旧版本仍然在存储库中即可。
 * 如果没有找到发布的版本，则时间扭曲会还原到该页面在创作环境中的当前状态（这是为了防止出现错误/404 页面，此页面将阻止您进行浏览）。
 
 ### 使用时间扭曲 {#using-timewarp}
@@ -234,13 +234,13 @@ ht-degree: 96%
 
 时间扭曲会尽量在选定的时刻重现页面。但是，由于在 AEM 中连续创作内容的过程非常复杂，并非总能实现这一点。在使用时间扭曲时，应牢记以下限制。
 
-* **时间扭曲基于已发布的页面工作** - 仅当您之前已发布页面时，时间扭曲才会完全正常工作。如果没有，时间扭曲将在创作环境显示当前页面。
-* **时间扭曲使用页面版本** - 当您浏览到的页面已从存储库删除时，如果该页面的旧版本仍然位于存储库中，则该页面将会正常呈现。
-* **已删除的版本会影响时间扭曲** - 如果从存储库从删除了版本，那么时间扭曲无法显示正确的视图。
+* **时间扭曲基于已发布的页面工作** – 仅当您之前已发布页面时，时间扭曲才会完全正常工作。如果没有，时间扭曲将在创作环境显示当前页面。
+* **时间扭曲使用页面版本** – 当您浏览到的页面已从存储库删除时，如果该页面的旧版本仍然位于存储库中，则该页面将会正常呈现。
+* **已删除的版本会影响时间扭曲** – 如果从存储库从删除了版本，那么时间扭曲无法显示正确的视图。
 
-* **时间扭曲为只读** - 您无法编辑页面的旧版本。旧版本仅供查看。如果要恢复旧版本，则必须使用[恢复](#reverting-to-a-page-version)功能手动恢复。
+* **时间扭曲为只读** – 您无法编辑页面的旧版本。旧版本仅供查看。如果要恢复旧版本，则必须使用[恢复](#reverting-to-a-page-version)功能手动恢复。
 
-* **时间扭曲仅基于页面内容** - 如果呈现网站的元素（如代码、css、资产/图像等）发生更改，则视图将与它原来的样子不同，因为这些项目不在存储库中进行版本控制。
+* **时间扭曲仅基于页面内容** – 如果呈现网站的元素（如代码、css、资产/图像等）发生更改，则视图将与它原来的样子不同，因为这些项目不在存储库中进行版本控制。
 
 >[!CAUTION]
 >

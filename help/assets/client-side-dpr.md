@@ -2,7 +2,8 @@
 title: 使用具有客户端设备像素比的智能成像
 description: 了解如何在Adobe Experience Manager as a Cloud Service中结合使用客户端设备像素比率和智能成像，以及Dynamic Media。
 role: Admin,User
-source-git-commit: 9b02a5363d32771cd9c039f97044e8a1d72fe286
+exl-id: e38f522a-242a-4ea9-a866-d8d129950831
+source-git-commit: c8682118f15132063073df5cdc2b576b6e62a0c8
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -69,3 +70,4 @@ Adobe还建议您在差异HTML标记下Bootstrap应用程序，而不是正文�
 >[!MORELIKETHIS]
 >
 >* [智能图像处理](/help/assets/imaging-faq.md)
+

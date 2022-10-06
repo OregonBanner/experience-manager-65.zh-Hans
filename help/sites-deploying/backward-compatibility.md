@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ---
 
-# Backward Compatibility in AEM 6.5{#backward-compatibility-in-aem}
+# AEM 6.5中的向后兼容性{#backward-compatibility-in-aem}
 
 ## 概述 {#overview}
 

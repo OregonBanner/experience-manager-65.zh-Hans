@@ -1,7 +1,7 @@
 ---
 title: 安装和配置Designer
 seo-title: Installing and configuring Designer
-description: 'Designer可作为独立安装程序使用，并与Workbench捆绑在一起。 了解如何安装独立的Designer。  '
+description: Designer可作为独立安装程序使用，并与Workbench捆绑在一起。 了解如何安装独立的Designer。
 seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
 uuid: c5b779d1-cb6a-48f4-87d6-48464753e516
 contentOwner: gtalwar

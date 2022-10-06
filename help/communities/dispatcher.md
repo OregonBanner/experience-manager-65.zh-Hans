@@ -21,13 +21,13 @@ ht-degree: 10%
 
 ## AEM Communities {#aem-communities}
 
-对于AEM Communities，需要配置Dispatcher以确保[社区站点](overview.md#community-sites)正常运行。 在包含社区启用和社交登录等功能时，需要额外配置。
+对于AEM Communities，需要配置Dispatcher以确保 [社区站点](overview.md#community-sites). 在包含社区启用和社交登录等功能时，需要额外配置。
 
 了解特定部署和站点设计所需的内容
 
-* 联系[客户关怀](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)
+* 联系[客户关怀团队](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)
 
-另请参阅主[Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+另请参阅 [Dispatcher文档](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
 ## 调度程序缓存 {#dispatcher-caching}
 
@@ -43,7 +43,7 @@ AEM Communities的调度程序缓存是指调度程序能够提供社区网站�
 
 ### 要求 {#requirements}
 
-* Dispatcher版本4.1.2或更高版本（有关最新版本，请参阅[安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)）
+* Dispatcher版本4.1.2或更高版本(请参阅 [安装Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) )
 * [ACS AEM Commons包](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * 版本3.3.2或更高版本
@@ -51,32 +51,32 @@ AEM Communities的调度程序缓存是指调度程序能够提供社区网站�
 
 ### 配置 {#configuration}
 
-OSGi配置&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**&#x200B;设置在指定路径下显示的缓存页面的过期时间。
+OSGi配置 **ACS AEM Commons — 调度程序缓存控制标头 — 最大年龄** 设置在指定路径下显示的缓存页面的过期时间。
 
-* 从[Web控制台](../../help/sites-deploying/configuring-osgi.md)
+* 从 [Web控制台](../../help/sites-deploying/configuring-osgi.md)
 
    * 例如， [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 找到`ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 定位 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
 * 选择“+”图标以创建新连接配置
 
    ![dispatcher](assets/dispatcher.png)
 
 * **筛选模式**
 
-   *（必需）* 一个或多个到社区页面的路径。例如, `/content/sites/engage/(.*)`.
+   *（必需）* 一个或多个到社区页面的路径。 例如：`/content/sites/engage/(.*)`。
 
 * **Cache-Control Max Age（缓存控制最大年龄）**
 
-   *（必需）* 要添加到缓存控制标头的最大页面（以秒为单位）。值必须大于零(0)。
+   *（必需）* 要添加到缓存控制标头的最大页面（以秒为单位）。 值必须大于零(0)。
 
 ## Dispatcher客户端标头 {#dispatcher-client-headers}
 
-在`dispatcher.any`的/clientheaders部分中，如果列出了一组特定的标头，则必须包含`"CSRF-Token"`，才能使[启用功能](enablement.md)正常工作。
+在 `dispatcher.any`，如果列出了一组特定的标头，则需要包括 `"CSRF-Token"` 为了 [启用功能](enablement.md) 才能正常工作。
 
 ## 调度程序过滤器 {#dispatcher-filters}
 
-`dispatcher.any`文件的/filter部分记录在[配置对内容的访问 — /filter](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#filter)中。
+的/filter部分 `dispatcher.any` 文件记录在 [配置对内容的访问 — /filter](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
 本节介绍社区功能正常运行可能需要的条目。
 
@@ -91,11 +91,11 @@ OSGi配置&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 >[!NOTE]
 >
 >**属性名称示例**
->所显示的所有属性名称（如&#x200B;**/0050**&#x200B;和&#x200B;**/0170**）都应调整为适合现有dispatcher.any配置文件。
+>显示的所有属性名称，如 **/0050** 和 **/0170**，应调整为适合现有dispatcher.any配置文件。
 
 >[!CAUTION]
 >
->请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。另外，请阅读[AEM安全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html)，了解有关AEM安装的其他安全详细信息。
+>请参阅 [Dispatcher 安全检查清单](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)以了解使用 Dispatcher 限制访问时的更多注意事项。此外，请阅读 [AEM安全检查列表](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) 有关AEM安装的其他安全详细信息。
 
 应将以下条目添加到/filter部分的末尾，特别是所有拒绝条目之后。
 
@@ -249,7 +249,7 @@ OSGi配置&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 
 ## 调度程序规则 {#dispatcher-rules}
 
-`dispatcher.any`的规则部分定义了应根据请求的URL缓存哪些响应。 对于社区，使用规则部分定义不应缓存的内容。
+的规则部分 `dispatcher.any` 定义应根据请求的URL缓存哪些响应。 对于社区，使用规则部分定义不应缓存的内容。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -297,13 +297,13 @@ OSGi配置&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 
 ## 疑难解答 {#troubleshooting}
 
-导致问题的一个主要原因是插入过滤器规则时不会注意对早期规则的影响，特别是在添加规则以拒绝访问时。
+导致问题的一个主要原因是插入过滤器规则时不会注意对早期规则的影响，尤其是在添加规则以拒绝访问时。
 
 第一个过滤器模式通常用于拒绝所有内容，以便后续过滤器以受控方式恢复访问。 当多个过滤器应用于一个请求时，应用的最后一个过滤器即是生效的过滤器。
 
 ## Dispatcher.any示例 {#sample-dispatcher-any}
 
-以下是一个`dispatcher.any`示例文件，其中包含Communities /filters和/rules。
+以下示例 `dispatcher.any` 包含Communities /filters和/rules的文件。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->

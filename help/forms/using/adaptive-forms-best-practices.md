@@ -128,11 +128,11 @@ AEM Forms提供 [规则编辑器](/help/forms/using/rule-editor.md) 用于创建
 规则编辑器提供了用于编写规则的可视化编辑器和代码编辑器。 使用代码编辑器模式编写规则时，请考虑以下事项：
 
 * 为表单字段和组件使用有意义且唯一的名称，以避免在编写规则时出现任何可能的冲突。
-* 使用 `this` 运算符，以便组件在规则表达式中引用自身。 它可确保即使组件名称发生更改，规则也保持有效。 例如， `field1.valueCommit script: this.value > 10`.
+* 使用 `this` 运算符，以便组件在规则表达式中引用自身。 它可确保即使组件名称发生更改，规则也保持有效。 例如：`field1.valueCommit script: this.value > 10`。
 
-* 引用其他表单组件时，请使用组件名称。 使用 `value` 属性来获取字段或组件的值。 例如， `field1.value`.
+* 引用其他表单组件时，请使用组件名称。 使用 `value` 属性来获取字段或组件的值。 例如：`field1.value`。
 
-* 按相对唯一的层次结构引用组件以避免任何冲突。 例如， `parentName.fieldName`.
+* 按相对唯一的层次结构引用组件以避免任何冲突。 例如：`parentName.fieldName`。
 
 * 在处理复杂或常用的规则时，请考虑将业务逻辑编写为函数，在单独的客户端库中编写，您可以在自适应表单中指定和重复使用这些函数。 客户端库应为自包含库，除jQuery和Underscore.js外，不应有任何外部依赖项。 您还可以使用客户端库来强制执行 [服务器端重新验证](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form) 已提交表单数据的次数。
 * 自适应表单提供了一组API，您可以使用这些API与自适应表单通信并对自适应表单执行操作。 一些关键API如下所示。 有关更多信息，请参阅 [适用于自适应Forms的JavaScript库API引用](https://adobe.com/go/learn_aemforms_documentation_63).

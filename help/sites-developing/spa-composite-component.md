@@ -1,15 +1,15 @@
 ---
-title: 组合组件在SPA中
+title: SPA 中的复合组件
 description: 了解如何创建您自己的复合组件（由其他组件组成的组件），这些组件可与AEM单页应用程序(SPA)编辑器配合使用。
 exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '783'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# SPA {#composite-components-in-spas}中的复合组件
+# SPA 中的复合组件 {#composite-components-in-spas}
 
 复合组件通过将多个基本组件组合到单个组件中，来利用AEM组件的模块化性质。 常见的复合组件用例是卡组件，由图像和文本组件的组合构成。
 
@@ -26,8 +26,8 @@ ht-degree: 0%
 以下用于支持复合组件用例的模型需要满足以下先决条件。
 
 * 您的AEM开发实例正在端口4502本地运行，并带有一个示例项目。
-* 在AEM中启用了工作的外部React应用程序[以进行编辑。](spa-edit-external.md)
-* React应用程序使用RemotePage组件加载到AEM编辑器[中。](spa-remote-page.md)
+* 您有一个正在运行的外部React应用程序 [在AEM中启用进行编辑。](spa-edit-external.md)
+* React应用程序将加载到AEM编辑器中 [使用RemotePage组件。](spa-remote-page.md)
 
 ## 将复合组件添加到SPA {#adding-composite-components}
 
@@ -39,18 +39,18 @@ ht-degree: 0%
 
 以下各节提供了使用卡组件作为示例实施每个案例的示例。
 
-### 组件在您的AEM项目中不存在。{#component-does-not-exist}
+### 组件在您的AEM项目中不存在。 {#component-does-not-exist}
 
 首先，创建将构成复合组件的组件，即图像及其文本的组件。
 
 1. 在AEM项目中创建文本组件。
-1. 在组件的`editConfig`节点中，从项目添加相应的`resourceType`。
+1. 添加对应的 `resourceType` 从组件中的项目 `editConfig` 节点。
 
    ```text
     resourceType: 'wknd-spa/components/text' 
    ```
 
-1. 使用`withMappable`帮助程序为组件启用编辑功能。
+1. 使用 `withMappable` 帮助程序以启用组件的编辑。
 
    ```text
    export const AEMText = withMappable(Text, TextEditConfig); 
@@ -85,7 +85,7 @@ export const Text = ({ cqPath, richText, text }) => {
 export const AEMText = withMappable(Text, TextEditConfig);
 ```
 
-如果您以类似的方式创建图像组件，则可以将其与`AEMText`组件合并到新的卡组件中，并将图像和文本组件用作子组件。
+如果您以类似的方式创建图像组件，则可以将其与 `AEMText` 组件转换为新卡片组件时，会将图像和文本组件用作子组件。
 
 ```javascript
 import React from 'react';
@@ -118,11 +118,11 @@ function Home() {
 }
 ```
 
-这将在编辑器中显示文本和图像的空占位符。 使用编辑器输入这些值时，它们会存储在指定的页面路径（即根级别的`/content/wknd-spa/home`）中，并且名称在`itemPath`中指定。
+这将在编辑器中显示文本和图像的空占位符。 使用编辑器输入这些值时，它们会存储在指定的页面路径(即 `/content/wknd-spa/home`  在根级别上，使用 `itemPath`.
 
 ![编辑器中的复合卡组件](assets/composite-card.png)
 
-### 组件存在于您的AEM项目中，但其必需内容不存在。{#content-does-not-exist}
+### 组件存在于您的AEM项目中，但其必需内容不存在。 {#content-does-not-exist}
 
 在这种情况下，已在包含标题和图像节点的AEM项目中创建卡组件。 子节点（文本和图像）具有相应的资源类型。
 
@@ -130,7 +130,7 @@ function Home() {
 
 然后，您可以将其添加到SPA并检索其内容。
 
-1. 在SPA中为此创建相应的组件。 确保将子组件映射到SPA项目中相应的AEM资源类型。 在本例中，我们使用与上例中详细描述的[相同的`AEMText`和`AEMImage`组件。](#component-does-not-exist)
+1. 在SPA中为此创建相应的组件。 确保将子组件映射到SPA项目中相应的AEM资源类型。 在本例中，我们使用相同的 `AEMText` 和 `AEMImage` 组件详情 [在上一个情况下。](#component-does-not-exist)
 
    ```javascript
    import React from 'react';
@@ -146,7 +146,7 @@ function Home() {
    MapTo('wknd-spa/components/image')(Image, ImageEditConfig);
    ```
 
-1. 由于`imagecard`组件没有内容，因此请将卡添加到页面中。 在SPA中包含AEM中的现有容器。
+1. 由于 `imagecard` 组件，将卡添加到页面。 在SPA中包含AEM中的现有容器。
    * 如果AEM项目中已存在一个容器，我们可以将其包含在SPA中，改为从AEM将组件添加到容器中。
    * 确保将卡组件映射到SPA中的相应资源类型。
 
@@ -156,13 +156,13 @@ function Home() {
     itemPath='root/responsivegrid' />
    ```
 
-1. 将创建的`wknd-spa/components/imagecard`组件添加到页面模板中容器组件[的允许组件中。](/help/sites-authoring/templates.md)
+1. 添加已创建的 `wknd-spa/components/imagecard` 组件添加到容器组件允许的组件 [中。](/help/sites-authoring/templates.md)
 
-现在，可以在AEM编辑器中将`imagecard`组件直接添加到容器中。
+现在 `imagecard` 组件可直接添加到AEM编辑器中的容器。
 
 ![编辑器中的复合卡片](assets/composite-card.gif)
 
-### 组件及其所需内容都存在于您的AEM项目中。{#both-exist}
+### 组件及其所需内容都存在于您的AEM项目中。 {#both-exist}
 
 如果内容存在于AEM中，则可以通过提供内容路径直接将其包含在SPA中。
 
@@ -174,4 +174,4 @@ function Home() {
 
 ![节点结构中的复合路径](assets/composite-path.png)
 
-`AEMCard`组件与上一个用例中定义的[组件相同。](#content-does-not-exist) 在此，AEM项目中上述位置定义的内容将包含在SPA中。
+的 `AEMCard` 组件与定义的组件相同 [在上一个用例中。](#content-does-not-exist) 在此，AEM项目中上述位置定义的内容将包含在SPA中。

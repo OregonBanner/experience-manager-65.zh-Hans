@@ -1,8 +1,8 @@
 ---
 title: 使用API执行服务操作
-seo-title: 使用API执行服务操作
+seo-title: Performing Service Operations Using APIs
 description: 使用AEM Forms API开发客户端应用程序。
-seo-description: 使用AEM Forms API开发客户端应用程序。
+seo-description: Develop client applications using the AEM Forms APIs.
 uuid: a5697c91-d643-4265-973c-18467ca0437a
 contentOwner: admin
 content-type: reference
@@ -13,16 +13,16 @@ role: Developer
 exl-id: 62489194-82ca-44f6-b5be-4411c95f6f80
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# 使用API {#performing-service-operations-using-apis}执行服务操作
+# 使用API执行服务操作 {#performing-service-operations-using-apis}
 
 **本文档中的示例和示例仅适用于JEE环境中的AEM Forms。**
 
-在使用AEM Forms API开始开发客户端应用程序之前，建议您首先阅读调用AEM Forms，其中介绍了调用服务的不同方式。 （请参阅[服务容器](/help/forms/developing/service-container.md#service-container)。）
+在使用AEM Forms API开始开发客户端应用程序之前，建议您首先阅读调用AEM Forms，其中介绍了调用服务的不同方式。 (请参阅 [服务容器](/help/forms/developing/service-container.md#service-container).)
 
 熟悉不同的调用方法后，您可以了解如何以编程方式与每项服务交互。 您可以在Flex® Builder™Adobe、Java开发环境或Microsoft Visual Studio .NET等环境中开发客户端应用程序，该环境允许您使用公开的WSDL在本机SOAP堆栈上使用。
 

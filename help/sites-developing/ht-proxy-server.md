@@ -1,8 +1,8 @@
 ---
 title: 如何使用代理服务器工具
-seo-title: 如何使用代理服务器工具
+seo-title: How to use the Proxy Server Tool
 description: 代理服务器充当在客户机和服务器之间中继请求的中间服务器
-seo-description: 代理服务器充当在客户机和服务器之间中继请求的中间服务器
+seo-description: The proxy server acts as an intermediate server that relays requests between a client and a server
 uuid: 30f4f46d-839e-4d23-a511-12f29b3cc8aa
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 例如，可以在通过TCP/IP网络通信的任意两个应用程序之间放置代理服务器；例如，Web浏览器和AEM。 这允许您监控请求CQ页面时发生的确切情况。
 
-## 启动代理服务器工具{#starting-the-proxy-server-tool}
+## 启动代理服务器工具 {#starting-the-proxy-server-tool}
 
 在命令行上启动服务器：
 
@@ -44,11 +44,11 @@ ht-degree: 0%
 
 `<host>`
 
-这是您要连接到的CRX实例的主机地址。 如果实例位于本地计算机上，则此参数将为`localhost`。
+这是您要连接到的CRX实例的主机地址。 如果实例位于您的本地计算机上，则该实例将为 `localhost`.
 
 `<remoteport>`
 
-这是目标CRX实例的主机端口。 例如，新安装的AEM安装的默认值为&#x200B;**`4502`**，新安装的AEM创作实例的默认值为`4502`。
+这是目标CRX实例的主机端口。 例如，新安装的AEM安装的默认值为 **`4502`** 而且，新安装的AEM创作实例的默认值为 `4502`.
 
 `<localport>`
 
@@ -74,9 +74,9 @@ ht-degree: 0%
 
 **`-i <numIndentions>`**（添加缩进）
 
-每个活动连接都会缩进，以提高可读性。 默认为16级。 此功能在`proxy.jar version 1.16`中引入。
+每个活动连接都会缩进，以提高可读性。 默认为16级。 此功能在 `proxy.jar version 1.16`.
 
-### 日志格式{#log-format}
+### 日志格式 {#log-format}
 
 proxy-2.1.jar生成的日志条目均具有以下格式：
 
@@ -98,7 +98,7 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-这显示在第6个连接上的客户端(`C`)与服务器(`S`)之间以平均速度传递的字节数。
+这显示在客户端( `C`)和服务器( `S`)，且速度为平均速度。
 
 **日志输出示例**
 
@@ -114,7 +114,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 `/content/test.jpg`
 
-`test.html`的内容为：
+的内容 `test.html` 为：
 
 ```xml
 <html>
@@ -128,11 +128,11 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-假设AEM实例在`localhost:4502`上运行，则启动代理如下：
+假定AEM实例运行于 `localhost:4502` 我们启动的代理如下：
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-现在，可通过`localhost:4444`的代理访问CQ/CRX实例，并且通过此端口的所有通信都记录到`test.log`。
+现在，可以通过代理访问CQ/CRX实例： `localhost:4444` 并且所有通过此端口的通信都记录到 `test.log`.
 
 如果我们现在观看代理的输出，将看到浏览器与AEM实例之间的交互。
 
@@ -147,7 +147,7 @@ using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 
 `http://localhost:4444/content/test.html`
 
-此时，我们会看到浏览器对页面发出`GET`请求：
+我们看到浏览器 `GET` 页面请求：
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -164,7 +164,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-AEM实例将以文件`test.html`的内容进行响应：
+AEM实例将以文件内容进行响应 `test.html`:
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]
@@ -186,7 +186,7 @@ S-0-#000311 -> [</body>]
 S-0-#000319 -> [</html>]
 ```
 
-### 代理服务器{#uses-of-the-proxy-server}的使用
+### 代理服务器的使用 {#uses-of-the-proxy-server}
 
 以下方案说明了可以使用代理服务器的一些目的：
 

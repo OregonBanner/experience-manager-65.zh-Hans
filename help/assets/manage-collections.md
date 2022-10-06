@@ -23,7 +23,7 @@ ht-degree: 19%
 
 收藏集是 [!DNL Adobe Experience Manager Assets]. 使用收藏集可在用户之间共享资源。该集可以是静态收藏集或基于搜索结果的动态收藏集。
 
-与文件夹不同，一个收藏集可以包含来自不同位置的资源。您可以与分配了不同权限级别（包括查看、编辑等）的各种用户共享收藏集。
+收藏集与文件夹的不同之处是可包含来自不同位置的资源。您可以与分配了不同权限级别（包括查看、编辑等）的各种用户共享收藏集。
 
 您可以与一个用户共享多个收藏集。每个收藏集都包含对资源的引用。收藏集中会保持资源的引用完整性。
 
@@ -134,13 +134,13 @@ ht-degree: 19%
    ![select_smart_collection](assets/select_smart_collection.png)
 
 1. 从 **[!UICONTROL 文件和文件夹]** 列表，选择 **[!UICONTROL 文件]**.
-1. 根据需要修改一个或多个过滤器。 单击 **[!UICONTROL 编辑智能收藏集]**.
+1. 根据需要修改一个或多个过滤器。 单击&#x200B;**[!UICONTROL “编辑智能收藏集”]**。
 
    您还可以编辑智能收藏集的名称。
 
    ![edit_smart_collectiondialog](assets/edit_smart_collectiondialog.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。此时会出现&#x200B;**[!UICONTROL 编辑智能收藏集]**&#x200B;对话框。
+1. 单击“**[!UICONTROL 保存]**”。此时会出现&#x200B;**[!UICONTROL 编辑智能收藏集]**&#x200B;对话框。
 1. 单击 **[!UICONTROL 覆盖]** 将原始智能收藏集替换为已编辑的收藏集。 或者，选择 **[!UICONTROL 另存为]** 单独保存已编辑的收藏集。
 1. 在确认对话框中，单击 **[!UICONTROL 保存]** 以完成该过程。
 

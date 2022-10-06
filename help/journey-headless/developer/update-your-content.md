@@ -1,10 +1,11 @@
 ---
 title: 如何通过AEM Assets API更新您的内容
 description: 在AEM无头开发人员历程的这一部分中，了解如何使用REST API访问和更新内容片段的内容。
-source-git-commit: 7f43d9d6b631b26f7b9293aa109498d0c8040436
+exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -44,7 +45,7 @@ ht-degree: 2%
 
 在最新Adobe Experience Manager版本的每次现成安装中，都提供Assets REST API。
 
-## 资产 HTTP API {#assets-http-api}
+## 资源 HTTP API {#assets-http-api}
 
 资产HTTP API包括：
 
@@ -321,8 +322,8 @@ HTTP方法确定要执行的操作：
 
 ## 其他资源 {#additional-resources}
 
-* [资产 HTTP API](/help/assets/mac-api-assets.md)
-* [内容片段REST API](/help/assets/assets-api-content-fragments.md)
+* [资源 HTTP API](/help/assets/mac-api-assets.md)
+* [内容片段 REST API](/help/assets/assets-api-content-fragments.md)
    * [API参考](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API — 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)

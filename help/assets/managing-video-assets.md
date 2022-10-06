@@ -64,7 +64,7 @@ ht-degree: 11%
 1. 在工具栏中，单击 **[!UICONTROL 全部保存]**.
 1. 在 [!DNL Experience Manager]，单击 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
 1. 在 [!DNL Adobe Experience Manager] [!UICONTROL Web控制台包] 页面，在表的“名称”列下找到并单击 **[!UICONTROL AdobeGranite工作流外部进程作业处理程序]**.
-1. 在 [!UICONTROL AdobeGranite工作流外部进程作业处理程序] 页面时，为 **[!UICONTROL 默认超时]** 和 **[!UICONTROL 最大超时]** 字段 `18000` （五小时）。 单击&#x200B;**[!UICONTROL 保存]**。
+1. 在 [!UICONTROL AdobeGranite工作流外部进程作业处理程序] 页面时，为 **[!UICONTROL 默认超时]** 和 **[!UICONTROL 最大超时]** 字段 `18000` （五小时）。 单击“**[!UICONTROL 保存]**”。
 1. 在 [!DNL Experience Manager]，单击 **[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 模型]**.
 1. 在工作流模型页面上，选择 **[!UICONTROL Dynamic Media编码视频]**，然后单击 **[!UICONTROL 编辑]**.
 1. 在工作流页面上，双击 **[!UICONTROL Dynamic Media视频服务流程]** 组件。

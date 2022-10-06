@@ -1,8 +1,8 @@
 ---
 title: 疑难解答
-seo-title: 疑难解答
+seo-title: Troubleshooting
 description: 本文介绍了您在AEM中可能遇到的一些安装问题。
-seo-description: 本文介绍了您在AEM中可能遇到的一些安装问题。
+seo-description: This article covers some of the installation issues you might encounter with AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,7 +12,7 @@ discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 本节包含可帮助您进行故障诊断的日志的详细信息，还包含有关您在AEM中可能遇到的一些问题的信息。
 
-## 创作性能疑难解答{#troubleshoot-author-performance}
+## 创作性能疑难解答 {#troubleshoot-author-performance}
 
 在创作实例上分析缓慢的性能可能会变得相当复杂。 第一步需要确定性能下降的技术堆栈级别。
 
@@ -29,25 +29,25 @@ ht-degree: 0%
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
 
-## 基本优化{#basic-optimization}
+## 基本优化 {#basic-optimization}
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-## 配置日志文件和审核日志{#configuring-log-files-and-audit-logs}
+## 配置日志文件和审核日志 {#configuring-log-files-and-audit-logs}
 
-AEM记录您可能需要配置的详细日志，以便对安装问题进行故障诊断。 有关信息，请参阅[使用审核记录和日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)一节。
+AEM记录您可能需要配置的详细日志，以便对安装问题进行故障诊断。 有关信息，请参阅 [使用审核记录和日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) 中。
 
-## 使用详细选项{#using-the-verbose-option}
+## 使用详细选项 {#using-the-verbose-option}
 
-启动AEM WCM时，可以向命令行中添加 — v(verbose)选项，如下所示：java -jar cq-wcm-quickstart-&lt;版本>.jar -v。
+启动AEM WCM时，可以向命令行中添加 — v(verbose)选项，如下所示：java -jar cq-wcm-quickstart-&lt;version>.jar -v.
 
 详细选项在控制台上显示一些快速启动日志输出，以便用于疑难解答。
 
-## 常见安装问题{#common-installation-issues}
+## 常见安装问题 {#common-installation-issues}
 
 以下部分介绍一些安装问题及其解决方案。
 
-### 双击快速入门Jar不起任何作用，或者使用其他程序（例如，存档管理器）{#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}打开Jar文件
+### 双击快速入门Jar不起任何作用，或者使用其他程序（例如，存档管理器）打开Jar文件 {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
 这通常表示将操作系统的桌面环境配置为打开扩展名为.jar的文件时出现问题。 它还可能表示您未安装Java，或者您使用的是不受支持的Java版本。
 
@@ -64,11 +64,11 @@ AEM记录您可能需要配置的详细日志，以便对安装问题进行故�
 * 有时重新安装支持的Java版本有助于恢复正确的关联。
 * 您始终可以使用命令行或启动/停止脚本来运行CRX，如本文档前面所述。
 
-### 我在CRX上运行的应用程序会引发内存不足错误{#my-application-running-on-crx-throws-out-of-memory-errors}
+### 我在CRX上运行的应用程序会引发内存不足错误 {#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
->另请参阅[分析内存问题](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)。
+>另请参阅 [分析内存问题](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
 
 
 CRX公司自身的内存占用空间非常小。 如果在CRX中运行的应用程序具有较大的内存要求或请求内存密集型操作（例如，大型事务），则需要使用适当的内存设置启动运行CRX的JVM实例。
@@ -85,7 +85,7 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 这会生成堆转储文件(**java_...hprof**)。 在生成堆转储后，该进程可能会继续运行。 通常，一个堆转储文件就足以分析问题。
 
-### 双击“AEM快速入门{#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}”后，浏览器中不会显示“AEM欢迎”屏幕
+### 双击“AEM快速入门”后，浏览器中不会显示“AEM欢迎”屏幕 {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
 在某些情况下，即使存储库本身成功运行，AEM WCM欢迎屏幕也不会自动显示。 这可能取决于操作系统设置、浏览器配置或类似因素。
 
@@ -97,13 +97,13 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 如果其他所有操作都失败，请检查日志以了解发生了什么。
 
-### 使用Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}时，网站不会加载或间歇性失败
+### 使用Java 11时，网站不会间歇性加载或失败 {#the-website-does-not-load-or-fails-intermittently-with-java11}
 
 在Java 11上运行的AEM 6.5存在一个已知问题，即网站可能无法间歇性加载或失败。
 
 如果发生这种情况，请按照以下解决方法操作：
 
-1. 在`crx-quickstart/conf/`文件夹下打开`sling.properties`文件
+1. 打开 `sling.properties` 文件 `crx-quickstart/conf/` 文件夹
 1. 找到以下行：
 
    `org.osgi.framework.bootdelegation=sun.,com.sun.`
@@ -114,21 +114,21 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 1. 重新启动实例。
 
-## 使用应用程序服务器{#troubleshooting-installations-with-an-application-server}进行安装故障排除
+## 使用应用程序服务器对安装进行故障排除 {#troubleshooting-installations-with-an-application-server}
 
-### 请求geometrixx-outdour页面{#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}时返回页面未找到
+### 请求geometrixx-outdour页面时返回“页面未找到” {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
 **适用于WebLogic 10.3.5和JBoss 5.1**
 
 当对geometrixx-outdoors/en页面的请求返回404（页面未找到）时，您可以重新检查是否已在这些特定应用程序服务器所需的sling.properties文件中设置附加sling属性。
 
-有关详细信息，请参阅&#x200B;*部署AEM Web应用程序*&#x200B;步骤中的。
+请参阅 *部署AEM Web应用程序* 详细信息的步骤。
 
-### 响应标头大小可以大于4Kb {#response-header-size-can-be-greater-than-kb}
+### 响应标头大小可以大于4 Kb {#response-header-size-can-be-greater-than-kb}
 
 502错误可能表示Web服务器无法处理AEM HTTP响应标头的大小。 AEM可以生成包含大于4Kb的Cookie的HTTP响应标头。 确保配置了Servlet容器，以便最大响应标头大小可以超过4kb。
 
-例如，对于Tomcat 7.0,[HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html)的maxHttpHeaderSize属性控制标头大小的限制。
+例如，对于Tomcat 7.0, [HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) 控制标头大小的限制。
 
 ## 卸载Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
@@ -138,11 +138,11 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 >[!NOTE]
 >
->Adobe强烈建议您在删除AEM之前备份存储库。 如果删除整个&lt;cq-installation-directory>，则将删除存储库。 要在删除之前保留存储库数据，请在删除其他文件夹之前，将&lt;cq-installation-directory>/crx-quickstart/repository文件夹移动或复制到其他位置。
+>Adobe强烈建议您在删除AEM之前备份存储库。 如果删除整个 &lt;cq-installation-directory>，则会删除存储库。 要在删除、移动或复制 &lt;cq-installation-directory>/crx-quickstart/repository文件夹（在删除其他文件夹之前）。
 
 如果您的AEM安装使用外部存储（例如，数据库服务器），则删除文件夹不会自动删除数据，但会删除存储配置，这会使恢复JCR内容变得困难。
 
-### JP文件未在JBoss {#jsp-files-are-not-compiled-on-jboss}上编译
+### JSP文件未在JBoss上编译 {#jsp-files-are-not-compiled-on-jboss}
 
 如果安装或更新JSP文件以在JBoss上Experience Manager，并且未编译相应的Servlet，请确保正确配置了JBoss JSP编译器。 有关信息，请参阅
-JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html)文章中的[JSP编译问题。
+[JBoss中的JSP编译问题](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) 文章。

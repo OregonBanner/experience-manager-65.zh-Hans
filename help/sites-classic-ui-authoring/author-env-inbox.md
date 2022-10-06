@@ -1,8 +1,8 @@
 ---
 title: 您的收件箱
-seo-title: 您的收件箱
+seo-title: Your Inbox
 description: 您可以接收来自 AEM 各个区域的通知，例如，关于工作项或任务的通知，这些通知指示您需要对页面内容执行的操作。
-seo-description: 您可以接收来自 AEM 各个区域的通知，例如，关于工作项或任务的通知，这些通知指示您需要对页面内容执行的操作。
+seo-description: You can receive notifications from various areas of AEM such as notification about work items or tasks that represent actions that you need to perform on page content.
 uuid: e7ba9150-957d-4f84-a570-2f3d83792472
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '581'
 ht-degree: 93%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 93%
 您会在按通知类型分开的两个收件箱中接收这些通知：
 
 * 在一个收件箱中，您会看到因订阅而收到的通知，后续部分对该收件箱进行了说明。
-* [参与工作流](/help/sites-classic-ui-authoring/classic-workflows-participating.md)文档中介绍了工作流项目的专用收件箱。
+* 工作流项目的专用收件箱在 [参与工作流](/help/sites-classic-ui-authoring/classic-workflows-participating.md) 文档。
 
 ## 查看通知 {#viewing-your-notifications}
 
@@ -91,7 +91,7 @@ ht-degree: 93%
 1. 定义要通知的页面的路径：
 
    * 单击&#x200B;**添加**&#x200B;向表添加新行。
-   * 单击&#x200B;**路径**&#x200B;表单元格并输入路径，例如`/content/docs`。
+   * 单击 **路径** 表格单元格，然后输入路径，例如 `/content/docs`.
 
    * 要接收属于子树的所有页面的通知，请将“**是否精确？**&#x200B;设置为&#x200B;**否**。要仅接收路径定义的页面上的操作通知，请将&#x200B;**是否精确？**&#x200B;设置为&#x200B;**是**。
 
@@ -101,7 +101,7 @@ ht-degree: 93%
 
 1. 单击&#x200B;**确定**&#x200B;以保存配置。
 
-## 处理通知  {#processing-your-notifications}
+## 处理通知 {#processing-your-notifications}
 
 如果已选择通过您的 AEM 收件箱接收通知，则会将通知放入您的收件箱中。您可以[查看通知](#viewing-your-notifications)，然后选择所需的通知以执行下列操作：
 

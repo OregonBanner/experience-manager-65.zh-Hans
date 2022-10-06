@@ -1,8 +1,8 @@
 ---
 title: 配置帐户环境
-seo-title: 配置帐户环境
+seo-title: Configuring your account environment
 description: AEM 提供了配置帐户和创作环境某些方面的功能。
-seo-description: AEM 提供了配置帐户和创作环境某些方面的功能。
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment.
 uuid: a4a408f4-e33e-4304-90ab-f564ae772b7d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 77%
+source-wordcount: '224'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,7 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 使用[帐户设置](#account-settings)和[用户首选项](#user-preferences)，可以定义以下选项和首选项：
 
 * **编辑工具栏** 选择是否要使用全局编辑工具栏。此工具栏（显示在浏览器窗口的顶部）为您提供 
-**复制**、 **剪切**、 **粘贴**、删除按钮，以便与该页面上的段落组件一起使用： **** 
+**复制**, **剪切**, **粘贴**, **删除** 用于与该页面上的段落组件一起使用的按钮：
 
    * 需要时显示（默认）
    * 始终显示
@@ -33,8 +33,8 @@ AEM 提供了配置帐户和创作环境某些方面的功能。
 
 * **模拟为** 借助[模拟为](/help/sites-administering/security.md#impersonating-another-user)功能，用户可以代表其他用户工作。
 
-* ****
-语言创作环境UI所使用的语言。从可用列表中选择所需的语言。
+* **语言**
+创作环境UI所使用的语言。从可用列表中选择所需的语言。
 
 * **窗口管理** 选择下列任何一项：
 

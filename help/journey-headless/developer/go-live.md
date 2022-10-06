@@ -1,10 +1,11 @@
 ---
 title: 如何使用您的无头应用程序
 description: 在AEM Headless开发人员历程的这一部分中，了解如何实时部署无头应用程序。
-source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
+exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1903'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -63,11 +64,11 @@ Node.js是一个JavaScript运行时环境，用于处理AEM项目的前端资产
 
 完整的AEM环境由创作、发布和调度程序组成。 这些相同的组件将在本地开发运行时中提供，以便您在上线之前更轻松地预览代码和内容。
 
-* **创作服务** 是内部用户创建、管理和预览内容的位置。
+* **Author 服务**&#x200B;是内部用户创建、管理和预览内容的地方。
 
-* **发布服务** 被视为“实时”环境，通常是最终用户与之交互的环境。 内容在创作服务上进行编辑和批准后，会分发（复制）到发布服务。 AEM无头应用程序的最常见部署模式是，将应用程序的生产版本连接到AEM发布服务。
+* **Publish 服务**&#x200B;被视为“实时”环境，通常是最终用户与之交互的对象。内容在创作服务上进行编辑和批准后，会分发（复制）到发布服务。 AEM Headless 应用程序最常见的部署模式是将应用程序的生产版本连接到 AEM Publish 服务。
 
-* **调度程序** 是一种随AEM dispatcher模块一起增强的静态web服务器。 它会缓存由发布实例生成的网页，以提高性能。
+* **Dispatcher** 是一个通过 AEM Dispatcher 模块增强的静态 Web 服务器。它会缓存由发布实例生成的网页，以提高性能。
 
 ## 本地开发工作流 {#the-local-development-workflow}
 
@@ -134,7 +135,7 @@ Node.js是一个JavaScript运行时环境，用于处理AEM项目的前端资产
 
 <!-- End of CDN Review -->
 
-## 部署到生产环境 {#deploy-to-production}
+## 部署到生产 {#deploy-to-production}
 
 部署到生产环境取决于您是否具有 *传统* 使用Maven进行部署或位于Adobe Managed Services(AMS)上，因此使用Cloud Manager的AEM实例。
 
@@ -193,7 +194,7 @@ You can start deploying your code by leveraging the Cloud Manager CI/CD pipeline
 
 ## 历程结束了？ {#journey-ends}
 
-恭喜！ 您已完成AEM Headless开发人员历程! 您现在应该了解：
+恭喜！您已完成AEM Headless开发人员历程! 您现在应该了解：
 
 * 无头内容和有头内容交付之间的区别。
 * AEM无头功能。

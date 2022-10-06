@@ -1,8 +1,8 @@
 ---
 title: 社区通知
-seo-title: 社区通知
+seo-title: Communities Notifications
 description: AEM Communities有显示已登录社区成员感兴趣事件的通知
-seo-description: AEM Communities有显示已登录社区成员感兴趣事件的通知
+seo-description: AEM Communities has notifications that display events of interest to the signed-in community member
 uuid: 2f5ea4b5-7308-414e-a3f8-2e8aa76b1ef4
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,7 +14,7 @@ role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 AEM Communities提供了通知部分，其中显示已登录社区成员感兴趣的事件。
 
-通知与[活动](/help/communities/essentials-activities.md)和[订阅](/help/communities/subscriptions.md)类似，它们可能源自：
+通知类似于 [活动](/help/communities/essentials-activities.md) 和 [订阅](/help/communities/subscriptions.md) 因以下原因而产生：
 
 * 成员发布内容。
 * 成员选择跟随另一个成员。
@@ -36,17 +36,17 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 * 指向通知部分的链接始终显示在社区站点的标题中：
 
-   * 活动要求将[活动流函数](/help/communities/functions.md#activity-stream-function)包含在社区站点的结构中。
-   * 订阅需要[配置电子邮件](/help/communities/email.md)。
+   * 活动需要 [活动流函数](/help/communities/functions.md#activity-stream-function) 包含在社区站点的结构中。
+   * 订阅需要 [电子邮件的配置](/help/communities/email.md).
 
 * 通知的实施是通过可扩展的可插拔渠道：
 
    * 活动仅在Web上可用。
    * 订阅仅使用电子邮件提供。
 
-从Communities [FP1](/help/communities/deploy-communities.md#latestfeaturepack)开始，可用的通知渠道包括：
+截至社区 [FP1](/help/communities/deploy-communities.md#latestfeaturepack)，则可用的通知渠道包括：
 
-* 使用`Notifications`链接访问的Web渠道。
+* 使用 `Notifications` 链接。
 * 电子邮件渠道，在正确配置电子邮件时可用。
 
 未来的渠道包括移动设备和台式机。
@@ -57,15 +57,15 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 必须配置电子邮件，才能使电子邮件渠道正常运行通知。
 
-有关设置电子邮件的说明，请参阅[配置电子邮件](/help/communities/analytics.md)。
+有关设置电子邮件的说明，请参阅 [配置电子邮件](/help/communities/analytics.md).
 
 **启用关注**
 
-必须配置组件才能启用以下功能。 允许以下功能： [blog](/help/communities/blog-feature.md)、[论坛](/help/communities/forum.md)、[QnA](/help/communities/working-with-qna.md)、[日历](/help/communities/calendar.md)、[filelibrary](/help/communities/file-library.md)和[评论](/help/communities/comments.md)。
+必须配置组件才能启用以下功能。 允许遵循的功能包括 [博客](/help/communities/blog-feature.md), [论坛](/help/communities/forum.md), [问题解答](/help/communities/working-with-qna.md), [日历](/help/communities/calendar.md), [文件库](/help/communities/file-library.md)和 [评论](/help/communities/comments.md).
 
 **注意**:
 
-* 在社区[站点模板](/help/communities/sites.md)和[组模板](/help/communities/tools-groups.md)中使用的组件可能已配置为遵循。
+* 社区中使用的组件 [网站模板](/help/communities/sites.md) 和 [组模板](/help/communities/tools-groups.md) 可能已配置为遵循。
 
 * 成员配置文件已配置为允许其他成员跟踪。
 
@@ -73,11 +73,11 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 ![通知](assets/notifications.png)
 
-**[!UICONTROL Follow]**&#x200B;按钮提供了作为活动、订阅和/或通知跟踪条目的方法。 每次选择&#x200B;**[!UICONTROL Follow]**&#x200B;按钮时，都可以打开或关闭选定内容。 `Email Subscriptions`选项仅在配置后才存在。
+的 **[!UICONTROL 关注]** 按钮提供了跟踪活动、订阅和/或通知条目的方法。 每次 **[!UICONTROL 关注]** 按钮时，可以打开或关闭选定内容。 的 `Email Subscriptions` 仅在配置后才存在选择。
 
-如果选择了以下任何方法，则按钮的文本将变为&#x200B;**[!UICONTROL Following]**。 为方便起见，可以选择`Unfollow All`以关闭所有方法。
+如果选择了以下任何方法，则按钮的文本将更改为 **[!UICONTROL 关注]**. 为方便起见，可以选择 `Unfollow All` 以关闭所有方法。
 
-将显示&#x200B;**[!UICONTROL Follow]**&#x200B;按钮：
+的 **[!UICONTROL 关注]** 按钮：
 
 * 查看其他成员的配置文件时。
 * 在主功能页面（如论坛、QnA和博客）上：
@@ -96,7 +96,7 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 ![通知14](assets/notifications1.png)
 
-电子邮件渠道依赖于电子邮件](/help/communities/email.md)的正确[配置，它提供的设置与Web渠道的设置相同。
+电子邮件渠道，依赖于正确 [电子邮件的配置](/help/communities/email.md)，提供与Web渠道相同的设置。
 
 默认情况下，电子邮件渠道处于关闭状态。
 
@@ -110,9 +110,9 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 ### Web通知 {#web-notifications}
 
-现在，创建的[向导社区站点](/help/communities/sites-console.md)包含一个指向横幅上方站点标题栏中`Notifications`功能的链接。 与消息不同，会为每个社区站点创建通知，而在站点创建过程中必须启用消息。
+A [向导创建的社区站点](/help/communities/sites-console.md) 现在包含指向的链接 `Notifications` 功能。 与消息不同，会为每个社区站点创建通知，而在站点创建过程中必须启用消息。
 
-访问已发布的站点时，选择`Notifications`链接将显示该成员的所有通知。
+访问已发布的网站时，选择 `Notifications` 链接将显示该成员的所有通知。
 
 ![通知4](assets/notifications4.png)
 
@@ -124,11 +124,11 @@ AEM Communities提供了通知部分，其中显示已登录社区成员感兴�
 
 ## 自定义电子邮件通知 {#customize-email-notifications}
 
-组织可以通过[覆盖](/help/communities/client-customize.md#overlays)**/libs/settings/community/templates/email/html**&#x200B;中的模板来自定义电子邮件通知。
+组织可以通过 [覆盖](/help/communities/client-customize.md#overlays) 模板位于 **/libs/settings/community/templates/email/html**.
 
-例如，要修改提及电子邮件通知（适用于社区组件），请在为其启用&#x200B;**@mentions**&#x200B;支持的组件模板中为动词&#x200B;**提及**&#x200B;添加&#x200B;**if**&#x200B;条件。
+例如，要修改提及次数电子邮件通知（适用于社区组件），请添加 **if** 动词条件 **提及** 在为其启用 **@mentions** 支持。
 
-要修改博客评论中@mention的电子邮件通知模板，请将开箱即用模板放置：**/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
+要修改博客评论中@mention的电子邮件通知模板，请将开箱即用模板放置： **/libs/settings/community/templates/email/html/social.journal.components.hbs.comment/en**
 
 ```java
 {{#equals this.verb "mention"}}\

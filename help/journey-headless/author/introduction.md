@@ -1,14 +1,15 @@
 ---
 title: AEM Headless内容创作历程
 description: 介绍Adobe Experience Manager强大、灵活、无头的功能，以及如何为项目创作内容。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# 使用AEM创作无头 — 简介 {#author-headless-introduction}
+# 使用 AEM 为 Headless 创作 – 简介 {#author-headless-introduction}
 
 在 [AEM Headless内容创作历程](overview.md)，您可以了解使用Adobe Experience Manager(AEM)创作无头内容交付所需的（基本）概念和术语。
 
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 内容管理系统(CMS)就是它所说的 — 用于管理内容的计算机系统。 这有些笼统，因此更确切地说，它通常用于管理您希望在网站上提供的内容。
 
-## 无头CMS {#headless-cms}
+## Headless CMS {#headless-cms}
 
 “无头”是一个术语，用于描述从在Web上显示内容的方式中有效分离内容的系统。
 
@@ -77,6 +78,6 @@ ht-degree: 0%
 * AEM Headless开发人员历程
    * [了解CMS无头开发](/help/journey-headless/developer/learn-about.md)
 
-* [AEM Headless Content Architect历程](/help/journey-headless/architect/overview.md)
+* [AEM Headless 内容架构师历程](/help/journey-headless/architect/overview.md)
 
 * [AEM Headless内容翻译历程](/help/journey-headless/translation/overview.md)

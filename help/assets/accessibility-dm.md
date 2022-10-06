@@ -10,11 +10,11 @@ exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
 source-git-commit: 01de1d5064f5ebf00acd2fe9f138d852f41f7273
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 中的辅助功能 [!DNL Dynamic Media] {#working-with-three-d-assets-dm}
+# [!DNL Dynamic Media] 中的辅助功能 {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media] 在整个创作用户界面中支持键盘控制和辅助技术，如JAWS和NVDA屏幕阅读器。
 
@@ -69,5 +69,5 @@ Dynamic Media支持交付带有隐藏式字幕的视频和自适应视频集。 
 >[!MORELIKETHIS]
 >
 >* [Adobe解决方案的辅助功能](https://www.adobe.com/accessibility.html)
->* [中的辅助功能 [!DNL Experience Manager Assets]](/help/assets/accessibility.md)
+>* [ [!DNL Experience Manager Assets]](/help/assets/accessibility.md) 中的辅助功能
 

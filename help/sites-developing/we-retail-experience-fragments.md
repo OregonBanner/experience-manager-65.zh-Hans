@@ -1,8 +1,8 @@
 ---
 title: 在We.Retail中尝试体验片段
-seo-title: 在We.Retail中尝试体验片段
+seo-title: Trying out Experience Fragments in We.Retail
 description: 在We.Retail中尝试体验片段
-seo-description: 在We.Retail中尝试体验片段
+seo-description: Trying out Experience Fragments in We.Retail
 uuid: 43a6df77-9dd3-4316-b749-0ef059370f7d
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ discoiquuid: fe44a941-a09b-4421-b766-1d433291f2cc
 exl-id: e17ff611-122a-4d17-97af-071d0234dd16
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 38%
+source-wordcount: '235'
+ht-degree: 40%
 
 ---
 
-# 在We.Retail{#trying-out-experience-fragments-in-we-retail}中尝试体验片段
+# 在We.Retail中尝试体验片段{#trying-out-experience-fragments-in-we-retail}
 
 在We.Retail中尝试体验片段
 
@@ -31,20 +31,18 @@ ht-degree: 38%
 >
 >**[内容片段](/help/sites-developing/we-retail-content-fragments.md)**&#x200B;和&#x200B;**体验片段**&#x200B;是 AEM 中的两个不同功能：
 >
->* **内容片段**&#x200B;是可编辑的内容，主要为文本和相关图像。它们是纯内容，不带有任何设计和布局。
+>* **内容片段**&#x200B;是可编辑内容，主要为文本和相关图像。它们是纯内容，不带有任何设计和布局。
 >* **体验片段**&#x200B;是经过充分布局的内容；例如，网页的一个片段。
-
 >
->
-体验片段可以包含内容片段形式的内容，反之则不行。
+>体验片段可以包含内容片段形式的内容，反之则不行。
 
-## 在We.Retail {#where-to-create-experience-fragments-in-we-retail}中创建体验片段的位置
+## 在We.Retail中的何处创建体验片段 {#where-to-create-experience-fragments-in-we-retail}
 
-从全局导航中选择&#x200B;**体验片段**。在此，您可以配置[create](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment)和[edit](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment)您的体验片段，以及任何相关的[变量](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation)。
+从全局导航中选择&#x200B;**体验片段**。在这里， [创建](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) 和 [编辑](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) 您的体验片段以及任何相关的 [变量](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
 
-## 在We.Retail {#where-to-use-experience-fragments-in-we-retail}中的何处使用体验片段
+## 在We.Retail中的何处使用体验片段 {#where-to-use-experience-fragments-in-we-retail}
 
-您可以在全局导航中的&#x200B;**Sites**&#x200B;下的[体验片段](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment)（与任何其他组件一样）上的[任意页面](/help/sites-authoring/editing-content.md)下使用您的体验片段（与任何其他组件一样）。
+您可以使用 [体验片段](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment) （与任何其他组件一样）on [任意页面](/help/sites-authoring/editing-content.md) 在 **站点** 中。
 
 ## 更多信息 {#further-information}
 

@@ -1,10 +1,11 @@
 ---
 title: 了解CMS无头开发
 description: 在AEM Headless开发人员历程的这一部分中，了解无头技术以及使用无头技术的原因。
-source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
+exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 ## 目标 {#objective}
 
-本文档可帮助您了解无标题内容交付以及应使用它的原因。 阅读后，您应该：
+本文档可帮助您了解无标题内容交付以及应使用它的原因。 阅读本文档后，您应：
 
 * 了解无头内容交付的基本概念和术语
 * 了解为何需要无头
@@ -59,7 +60,7 @@ ht-degree: 0%
 
 当我们讨论无头CMS时，CMS会管理内容并继续向消费者提供内容。 但是，通过仅提供 **内容** 无头CMS以标准化方式忽略最终输出渲染，从而将 **演示文稿** 内容到消费服务。
 
-![无头CMS](assets/headless-cms.png)
+![Headless CMS](assets/headless-cms.png)
 
 消费性服务(无论是AR体验、网店、移动体验、渐进式Web应用程序(PWA)等)从无头CMS中获取内容并提供自己的呈现。 他们负责为您的内容提供自己的头脑。
 
@@ -113,7 +114,7 @@ ht-degree: 0%
 
 ## 下一步 {#what-is-next}
 
-感谢您开始您的AEM无头历程！ 现在，您阅读了本文档，您应该：
+感谢您开始您的AEM无头历程！ 现在您已阅读本文档，您应：
 
 * 了解无头内容交付的基本概念和术语。
 * 了解为何以及何时需要无头。
@@ -125,4 +126,4 @@ ht-degree: 0%
 
 虽然建议您通过审阅文档来进入无头开发历程的下一部分 [AEM Headless快速入门](getting-started.md)，以下是一些其他可选资源，可更深入地了解本文档中提到的某些概念，但无需继续进行无头历程。
 
-* [AEM无头Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  — 使用这些动手实践教程探索如何使用各种选项通过AEM将内容交付到无头端点，并选择适合您的选项。
+* [AEM无头Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=zh-Hans)  — 使用这些动手实践教程探索如何使用各种选项通过AEM将内容交付到无头端点，并选择适合您的选项。

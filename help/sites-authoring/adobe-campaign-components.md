@@ -1,8 +1,8 @@
 ---
 title: Adobe Campaign 组件
-seo-title: Adobe Campaign 组件
+seo-title: Adobe Campaign Components
 description: 与 Adobe Campaign 集成后，您可以在处理新闻稿和表单时使用相应的组件
-seo-description: 与 Adobe Campaign 集成后，您可以在处理新闻稿和表单时使用相应的组件
+seo-description: When you integrate with Adobe Campaign, you have components available for when working with newsletters and with forms
 uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '2847'
+source-wordcount: '2826'
 ht-degree: 80%
 
 ---
@@ -81,9 +81,9 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->必须在&#x200B;**替换文本**&#x200B;字段中输入信息，否则无法保存图像。
+>您必须在 **替换文本** 字段，或无法保存图像。
 
-上传图像后（而非之前），您可以使用[就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui)来根据需要裁剪/旋转图像：
+上传图像后（而非之前），您可以使用 [就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 要根据需要裁剪/旋转图像，请执行以下操作：
 
 ![](do-not-localize/chlimage_1-10.png)
 
@@ -127,7 +127,6 @@ ht-degree: 80%
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-
 以下示例展示了所显示的图像（营销活动）组件。
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
@@ -142,18 +141,17 @@ ht-degree: 80%
 
 * **链接工具提示**&#x200B;添加其他有关如何使用链接的信息。
 
-* ****
-LinkType在下拉列表中，选择 
-**自定** 义URL和自 **适应文档**。此字段为必填字段。如果选择“自定义 URL”，则可以提供链接 URL。如果选择“自适应文档”，则可以提供文档路径。
+* **LinkType**
+在下拉列表中，选择 
+**自定义URL** 和 **自适应文档**. 此字段为必填字段。如果选择“自定义 URL”，则可以提供链接 URL。如果选择“自适应文档”，则可以提供文档路径。
 
 * **其他 URL 参数**&#x200B;添加任何其他 URL 参数。单击“添加项目”可添加多个项目。
 
 >[!NOTE]
 >
->必须在&#x200B;**URL信息**&#x200B;选项卡的&#x200B;**链接类型**&#x200B;字段中输入信息，否则无法保存组件，并且您会看到以下错误消息：
+>您必须在 **链接类型** 字段 **URL信息** 选项卡，或者无法保存组件，并且会看到以下错误消息：
 >
 >`Validation failed. Verify the values of the marked fields.`
-
 
 以下示例展示了所显示的链接（营销活动）组件。
 
@@ -165,7 +163,7 @@ Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-单击&#x200B;**编辑**&#x200B;可配置该组件。您可以配置此部分中描述的设置。 [Scene7图像模板组件](/help/assets/scene7.md#image-template)中对此Scene7图像模板进行了详细描述。
+单击&#x200B;**编辑**&#x200B;可配置该组件。您可以配置此部分中描述的设置。 此Scene7图像模板在 [Scene7图像模板组件](/help/assets/scene7.md#image-template).
 
 此外，参数面板列出了在 Scene7 中为模板定义的所有模板参数。对于其中的每个参数，您都可以调整值、插入变量，或将其重置为默认值。
 
@@ -224,29 +222,26 @@ Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-
 以下示例展示了所显示的文本与图像（营销活动）组件。
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
 ### 文本与个性化（营销活动） {#text-personalization-campaign}
 
-通过文本与个性化（营销活动）组件，您可以使用WYSIWYG编辑器输入文本块，该编辑器的功能由[富文本编辑器](/help/sites-authoring/rich-text-editor.md)提供。 此外，通过此组件，您还可以使用 Adobe Campaign 提供的上下文字段和个性化基块；另请参阅[插入个性化](/help/sites-authoring/campaign.md#inserting-personalization)。
+通过文本与个性化（营销活动）组件，您可以使用所见即所得(WYSIWYG)编辑器输入文本块，该编辑器的功能由 [富文本编辑器](/help/sites-authoring/rich-text-editor.md). 此外，通过此组件，您还可以使用 Adobe Campaign 提供的上下文字段和个性化基块；另请参阅[插入个性化](/help/sites-authoring/campaign.md#inserting-personalization)。
 
-通过精选的图标可以设置文本格式，包括字体特性、对齐方式、链接、列表和缩进。在[两个UI](/help/sites-authoring/editing-content.md)中，功能基本相同，但外观不同：
+通过精选的图标可以设置文本格式，包括字体特性、对齐方式、链接、列表和缩进。在 [两个UI](/help/sites-authoring/editing-content.md)，但外观不同：
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-在就地编辑器中，您可以添加文本、更改对齐方式、添加和删除链接、添加上下文字段或个性化基块，以及进入全屏模式。添加完文本/个性化后，选择复选标记可保存更改（或选择 x 可取消）。有关更多信息，请参阅[就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui)。
+在就地编辑器中，您可以添加文本、更改对齐方式、添加和删除链接、添加上下文字段或个性化基块，以及进入全屏模式。添加完文本/个性化后，选择复选标记可保存更改（或选择 x 可取消）。请参阅 [就地编辑](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) 以了解更多信息。
 
 >[!NOTE]
 >
 >* 可用的个性化字段取决于您的新闻稿所链接到的 Adobe Campaign 模板。
 >* 从 ContextHub 中选择某个人物后，个性化字段会自动替换为选定配置文件中的数据。
-
 >
->
-请参阅[插入个性化](/help/sites-authoring/campaign.md#inserting-personalization)。
+>请参阅[插入个性化](/help/sites-authoring/campaign.md#inserting-personalization)。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -260,7 +255,7 @@ Dynamic Media Classic(Scene7)图像模板是分层的图像文件，其中的内
 
 每个组件字段均可链接到一个 Adobe Campaign 数据库字段。可用的字段因其包含的数据类型而有所不同，如[组件和数据类型](#components-and-data-type)部分中所述。如果在 Adobe Campaign 中扩展收件人架构，则数据类型匹配的组件中将可以使用新字段。
 
-打开配置为与Adobe Campaign集成的表单时，您会在&#x200B;**Adobe Campaign**&#x200B;部分看到以下组件：
+当您打开配置为与Adobe Campaign集成的表单时，您会在 **Adobe Campaign** 部分：
 
 * 复选框（营销活动）
 * 日期字段（营销活动）和日期字段/HTML 5（营销活动）
@@ -374,10 +369,10 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 除了[大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)之外，您还可以配置以下各项：
 
-* **约束 —** 约束下拉列表您可以选择 —  **** 无 **日期 —** 来添加日期的约束或不添加任何约束。如果您选择日期，则用户在字段中输入的回答必须采用某种日期格式。
+* **约束 — 约束** 下拉列表您可以选择 —  **无** 或 **日期 —** 添加日期约束或不添加约束。 如果您选择日期，则用户在字段中输入的回答必须采用某种日期格式。
 
 * **约束消息**&#x200B;此外，您还可以添加一条约束消息，以告知用户如何以正确的格式输入回答。
-* **样式 —** 宽度通过单击或点按+和 **图标或输入数字来调**  **** 整字段的宽度。
+* **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
 
 以下示例展示了所显示的调整了宽度的日期字段（营销活动）组件。
 
@@ -425,10 +420,10 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 除了[大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)之外，您还可以配置以下各项：
 
-* **约束 —** 约束下拉列表您可以选择 —  **** 无 **或数值 —** 来添加数字约束或无约束。如果您选择数字，则用户在字段中输入的回答必须是数字。
+* **约束 — 约束** 下拉列表您可以选择 —  **无** 或 **数值 —** 添加数字约束或无约束。 如果您选择数字，则用户在字段中输入的回答必须是数字。
 
 * **约束消息**&#x200B;此外，您还可以添加一条约束消息，以告知用户如何以正确的格式输入回答。
-* **样式 —** 宽度通过单击或点按+和 **图标或输入数字来调**  **** 整字段的宽度。
+* **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
 
 以下示例展示了所显示的配置了宽度的数字字段（营销活动）组件。
 
@@ -450,7 +445,7 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 使用&#x200B;**订阅核对清单（营销活动）**&#x200B;组件，可修改与 Adobe Campaign 配置文件关联的订阅。
 
-此组件在添加到表单后，会将所有可用的订阅显示为复选框，并允许用户选择所需的订阅。用户提交表单时，此组件会根据表单操作类型(**Adobe Campaign:订阅Services**&#x200B;或&#x200B;**Adobe Campaign:取消订阅服务**)。
+此组件在添加到表单后，会将所有可用的订阅显示为复选框，并允许用户选择所需的订阅。用户提交表单时，此组件会根据表单操作类型(**Adobe Campaign:订阅服务** 或 **Adobe Campaign:取消订阅服务**)。
 
 >[!NOTE]
 >
@@ -468,10 +463,10 @@ Adobe Campaign 组件具有所有组件（不包括已加密的主要密钥组�
 
 除了[大多数 Adobe Campaign 组件通用的设置](#settings-common-to-most-components)之外，您还可以配置以下各项：
 
-* **约束 —** 约束下拉列表您可以选择 **无、** **电子邮件**&#x200B;或 **名称** （无变音） — 添加电子邮件地址、名称或无约束的约束。如果您选择电子邮件，则用户在字段中输入的回答必须是电子邮件地址。如果您选择名称，则输入的回答必须是名称（不允许包含变音）。
+* **约束 — 约束** 下拉列表您可以选择 —  **无，** **电子邮件**&#x200B;或 **名称** （无变音） — 添加电子邮件地址、名称或无约束的约束。 如果您选择电子邮件，则用户在字段中输入的回答必须是电子邮件地址。如果您选择名称，则输入的回答必须是名称（不允许包含变音）。
 
 * **约束消息**&#x200B;此外，您还可以添加一条约束消息，以告知用户如何以正确的格式输入回答。
-* **样式 —** 宽度通过单击或点按+和 **图标或输入数字来调**  **** 整字段的宽度。
+* **样式 — 宽度** 通过单击或点按 **+** 和 **-** 图标或输入数字。
 
 以下示例展示了所显示的文本字段（营销活动）组件。
 

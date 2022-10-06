@@ -1,8 +1,8 @@
 ---
 title: 使用营销活动管理器
-seo-title: 使用营销活动管理器
+seo-title: Working with the Marketing Campaign Manager
 description: 营销活动管理器 (MCM) 是一个控制台，可帮助您管理多渠道营销活动。使用此营销活动自动化软件，您可以管理您的所有品牌、营销活动和体验，以及相关的区段、列表、潜在客户和报表。
-seo-description: 营销活动管理器 (MCM) 是一个控制台，可帮助您管理多渠道营销活动。使用此营销活动自动化软件，您可以管理您的所有品牌、营销活动和体验，以及相关的区段、列表、潜在客户和报表。
+seo-description: The Marketing Campaign Manager (MCM) is a console that helps you manage multi-channel campaigns. With this marketing automation software you can manage all your brands, campaigns and experiences together with the related segments, lists, leads, and reports.
 uuid: 63b817e4-34b9-42b8-845b-e0b7d9af3a96
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1218'
+source-wordcount: '1175'
 ht-degree: 96%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 96%
 
 * **[营销活动](#campaigns)**&#x200B;您可以在此处管理品牌、营销活动和体验。
 
-## 功能板 {#dashboard}
+## 仪表板 {#dashboard}
 
 功能板显示了四个窗格，分别为您提供了有关（潜在客户）列表、区段、报表和营销活动的概述。可以在此处访问这些内容的基本功能。
 
@@ -107,7 +107,7 @@ ht-degree: 96%
 
 * **在右侧窗格中**：显示了每个品牌的图标（不会显示历史营销活动）。您可以双击这些图标打开品牌概述。
 
-#### 品牌概述  {#brand-overview}
+#### 品牌概述 {#brand-overview}
 
 ![mcm_brandoverview](assets/mcm_brandoverview.png)
 
@@ -125,7 +125,7 @@ ht-degree: 96%
 
 * 打开营销活动概述（在右侧窗格中双击某个营销活动，或在左侧窗格中单击一次）。
 
-#### 营销活动概述  {#campaign-overview}
+#### 营销活动概述 {#campaign-overview}
 
 对于每个营销活动提供有两种视图：
 
@@ -159,7 +159,7 @@ ht-degree: 96%
 
    您可以在此处：
 
-   * 创建&#x200B;**新建……**&#x200B;体验；例如，Adobe Target选件、Teaser和新闻稿。
+   * 创建 **新建……** 经验；例如，Adobe Target选件、Teaser和新闻稿。
    * **编辑**&#x200B;特定的 Teaser 页面或新闻稿的详细信息（也可以使用双击）。
    * 为特定的 Teaser 页面或新闻稿定义&#x200B;**属性...**。
    * **模拟**&#x200B;体验（Teaser 页面或新闻稿）的外观。当模拟的页面打开时，您可以打开 sidekick 以切换到该页面的编辑模式。
@@ -170,7 +170,7 @@ ht-degree: 96%
    * **搜索**&#x200B;您的文本（将会搜索体验的“标题”字段）。
    * 使用&#x200B;**高级**&#x200B;搜索来对搜索应用过滤器。
 
-### 模拟您的营销活动体验  {#simulating-your-campaign-experiences}
+### 模拟您的营销活动体验 {#simulating-your-campaign-experiences}
 
 在 MCM 中，单击&#x200B;**营销活动**。确保列表视图处于激活状态，然后选择所需的营销活动体验，并单击“**模拟**”。触点（Teaser 或新闻稿页面）将会打开，以显示您选择的体验 - 与访客将会看到的内容相同。
 
@@ -178,7 +178,7 @@ ht-degree: 96%
 
 您还可以在此处打开 Sidekick（单击小的向下箭头）更改到编辑模式，以便更新页面。
 
-### 分析您的营销活动体验  {#analyzing-your-campaign-experiences}
+### 分析您的营销活动体验 {#analyzing-your-campaign-experiences}
 
 在 MCM 中，单击&#x200B;**营销活动**。确保列表视图处于激活状态，然后选择所需的营销活动体验，并选择&#x200B;**分析...**。将会显示一段时间内的页面展示图。
 

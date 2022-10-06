@@ -1,8 +1,8 @@
 ---
 title: 应用程序服务器网站
-seo-title: 应用程序服务器网站
+seo-title: Application server websites
 description: 本文档包含所有受支持应用程序服务器的制造商网站的链接。
-seo-description: 本文档包含所有受支持应用程序服务器的制造商网站的链接。
+seo-description: This document contains links to the manufacturer websites for all supported application servers.
 uuid: a5db777e-646a-4f12-9705-6ca50d9339d4
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: 59b03638-7e1c-4cbd-bd37-671a16afa10f
 exl-id: 483e8d11-7bb4-49a7-b71b-fca57356179b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-# 应用程序服务器网站{#application-server-websites}
+# 应用程序服务器网站 {#application-server-websites}
 
 此列表包含所有受支持应用程序服务器的制造商网站的链接。
 

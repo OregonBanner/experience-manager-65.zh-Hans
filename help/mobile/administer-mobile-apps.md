@@ -1,8 +1,8 @@
 ---
 title: 移动应用程序
-seo-title: 移动应用程序
+seo-title: Mobile Apps
 description: 请阅读本页，以开始管理移动设备应用程序的内容。
-seo-description: 请阅读本页，以开始管理移动设备应用程序的内容。
+seo-description: Follow this page to get started with administering content for mobile apps.
 uuid: 0ef31513-b720-46cb-b162-35883ae48912
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -12,8 +12,8 @@ discoiquuid: 302d1bd9-fdb3-4db6-a446-6ed85ad9fba5
 exl-id: dc7ba6ad-9df9-4312-a82f-5f3405dea684
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 5%
+source-wordcount: '131'
+ht-degree: 4%
 
 ---
 
@@ -32,4 +32,4 @@ AEM Mobile提供了多种创建应用程序的方法。 您可以使用以下不
 
 >[!NOTE]
 >
->如果您是Adobe Experience Manager的新用户，则可能需要浏览[AEM](/help/sites-deploying/deploy.md)快速入门。
+>如果你是Adobe Experience Manager的新手，可能想要 [AEM快速入门](/help/sites-deploying/deploy.md).

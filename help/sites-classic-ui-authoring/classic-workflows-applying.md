@@ -1,8 +1,8 @@
 ---
 title: 将工作流应用于页面
-seo-title: 将工作流应用于页面
+seo-title: Applying Workflows to Pages
 description: 可以从网站控制台启动工作流，也可以在编辑页面时从 Sidekick 启动工作流。
-seo-description: 可以从网站控制台启动工作流，也可以在编辑页面时从 Sidekick 启动工作流。
+seo-description: Workflows can be started from either the Websites console or, when editing a page, from Sidekick.
 uuid: 55f6f1d7-da54-4732-b9ff-b7479622db51
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 86%
+source-wordcount: '253'
+ht-degree: 85%
 
 ---
 
@@ -33,11 +33,11 @@ ht-degree: 86%
 >
 >AEM 管理员可以使用[其他几种方法](/help/sites-administering/workflows-starting.md)来启动工作流。
 
-## 应用工作流  {#applying-workflows}
+## 应用工作流 {#applying-workflows}
 
 可以从网站控制台启动工作流，也可以在编辑页面时从 Sidekick 启动工作流。
 
-**网站**&#x200B;控制台中的&#x200B;**状态**&#x200B;列指示工作流是否已应用于页面：
+的 **状态** 列 **网站** 控制台指示工作流是否已应用于页面：
 
 ![工作流状态](assets/workflowstatus.png)
 
@@ -48,12 +48,12 @@ ht-degree: 86%
 1. 在页面列表中，选择相应的页面，然后单击“工作流”。
 1. 在“启动工作流”对话框中，选择要应用的工作流。（可选）输入备注和标题。然后，单击“启动”。
 
-### 使用 Sidekick 启动工作流  {#starting-a-workflow-using-sidekick}
+### 使用 Sidekick 启动工作流 {#starting-a-workflow-using-sidekick}
 
 1. 打开网站控制台。
 1. 打开所需的页面。
 1. 从 Sidekick 中选择“工作流”选项卡。
-1. 展开&#x200B;**工作流**&#x200B;对话框，允许您选择&#x200B;**工作流**，并选择输入&#x200B;**工作流标题**&#x200B;和&#x200B;**注释**。
+1. 展开 **工作流** 对话框，允许您选择 **工作流** （可选）输入 **工作流标题** 和 **注释**.
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 

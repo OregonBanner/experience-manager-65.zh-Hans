@@ -47,11 +47,11 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | Analytics Activity Map | AEM 中包含的 Activity Map 的版本。 | 由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。使用 [由Adobe Analytics提供的ActivityMap插件](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans). |  |
 | 集成 | ExactTarget集成已从默认分发版（快速入门）中删除，不再可用。 | 无替换项. |  |
 | 集成 | Salesforce Force API集成已从默认分发版（快速入门）中删除，现在是要从安装的额外包 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | 该功能仍然可用。 |
-| 表单 | 由于不再支持 Adobe Central 产品，删除了对 Adobe Central Migration Bridge 服务的支持。 | 无替换项. |  |
-| 表单 | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项. |  |
-| 表单 | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |  |
-| 表单 | 在JEE上从LiveCycleES4 SP1到AEM 6.5 Forms的单跳升级不可用 | 请参阅 [可用升级路径](../forms/using/upgrade.md) 在AEM Forms升级文档中。 |  |
-| 表单 | 从JEE上的AEM Forms中删除了基于UPD的群集支持 | 在JEE上的AEM Forms中，只能使用基于TCP的群集。 如果将UDP多播服务器从以前的版本升级到JEE上的AEM 5.5 Forms，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请参阅 [升级到JEE上的AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |  |
+| Forms | 由于不再支持 Adobe Central 产品，删除了对 Adobe Central Migration Bridge 服务的支持。 | 无替换项. |  |
+| Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 无替换项. |  |
+| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 无替换项 |  |
+| Forms | 在JEE上从LiveCycleES4 SP1到AEM 6.5 Forms的单跳升级不可用 | 请参阅 [可用升级路径](../forms/using/upgrade.md) 在AEM Forms升级文档中。 |  |
+| Forms | 从JEE上的AEM Forms中删除了基于UPD的群集支持 | 在JEE上的AEM Forms中，只能使用基于TCP的群集。 如果将UDP多播服务器从以前的版本升级到JEE上的AEM 5.5 Forms，请执行手动配置以切换到基于TCP的gemfire群集。 有关详细说明，请参阅 [升级到JEE上的AEM 6.5表单](../forms/using/upgrade-forms-jee.md) |  |
 | 开发人员 | Firebug Lite 已从默认分发版（快速入门）中删除 | 使用浏览器内置的开发人员控制台 |
 | 开发人员 | 删除 `customJavaScriptPath` 在HTML客户端库管理器中支持。 | 无替换项 |  |
 | [!DNL Assets] | 资产卸载功能将在 [!DNL Adobe Experience Manager] 6.5。 | 没有可替换项。 |  |

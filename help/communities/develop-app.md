@@ -1,8 +1,8 @@
 ---
 title: 开发沙盒应用程序
-seo-title: 开发沙盒应用程序
+seo-title: Develop Sandbox Application
 description: 使用基础脚本开发应用程序
-seo-description: 使用基础脚本开发应用程序
+seo-description: Develop application using foundation scripts
 uuid: 572f68cd-9ecb-4b43-a7f8-4aa8feb6c64e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,14 +12,14 @@ discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 4%
+source-wordcount: '570'
+ht-degree: 5%
 
 ---
 
 # 开发沙盒应用程序  {#develop-sandbox-application}
 
-在本节中，由于模板已在[初始应用程序](initial-app.md)部分中设置，初始页面在[初始内容](initial-content.md)部分中建立，因此可以使用基础脚本来开发应用程序，其中包括启用Communities组件创作功能。 在本节的末尾，网站将正常运行。
+在本节中，由于模板已在 [初始应用](initial-app.md) ，以及 [初始内容](initial-content.md) 部分，可以使用基础脚本来开发应用程序，其中包括启用使用社区组件进行创作的功能。 在本节的末尾，网站将正常运行。
 
 ## 使用Foundation页面脚本 {#using-foundation-page-scripts}
 
@@ -27,11 +27,11 @@ ht-degree: 4%
 
 ### 超级资源类型 {#super-resource-type}
 
-第一步是向`/apps/an-scf-sandbox/components/playpage`节点添加资源超类型属性，以便该节点继承超类型的脚本和属性。
+第一步是向 `/apps/an-scf-sandbox/components/playpage` 节点，以便继承超类型的脚本和属性。
 
-使用CRXDE Lite:
+使用 CRXDE Lite:
 
-1. 选择节点`/apps/an-scf-sandbox/components/playpage`。
+1. 选择节点 `/apps/an-scf-sandbox/components/playpage`.
 1. 在“属性”选项卡中，输入具有以下值的新属性：
 
    名称: `sling:resourceSuperType`
@@ -40,14 +40,14 @@ ht-degree: 4%
 
    值: `foundation/components/page`
 
-1. 单击绿色的&#x200B;**[!UICONTROL +Add]**&#x200B;按钮。
-1. 单击&#x200B;**[!UICONTROL Save All]**。
+1. 单击绿色 **[!UICONTROL +添加]** 按钮。
+1. 单击 **[!UICONTROL 全部保存]**.
 
    ![page-script](assets/page-script.png)
 
 ### 头部和身体脚本 {#head-and-body-scripts}
 
-1. 在&#x200B;**CRXDE Lite**&#x200B;资源管理器窗格中，导航到`/apps/an-scf-sandbox/components/playpage`并双击文件`playpage.jsp`以在编辑窗格中将其打开。
+1. 在 **CRXDE Lite** 浏览器窗格，导航到 `/apps/an-scf-sandbox/components/playpage` 并双击该文件 `playpage.jsp` ，以在编辑窗格中将其打开。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -68,7 +68,7 @@ ht-degree: 4%
 
 1. 请注意打开/关闭脚本标记，请替换“ // TODO ...” 包含用于 &lt;html>.
 
-   如果超类型为`foundation/components/page`，则未在同一文件夹中定义的任何脚本都将解析为`/apps/foundation/components/page`文件夹中的脚本（如果存在），否则解析为`/libs/foundation/components/page`文件夹中的脚本。
+   超级类型的 `foundation/components/page`，该文件夹中未定义的任何脚本都将解析为 `/apps/foundation/components/page` 文件夹（如果存在）， `/libs/foundation/components/page` 文件夹。
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -88,18 +88,18 @@ ht-degree: 4%
    </html>
    ```
 
-1. 基础脚本`head.jsp`不需要覆盖，但基础脚本`body.jsp`为空。
+1. 基础脚本 `head.jsp` 不需要覆盖，但基础脚本 `body.jsp` 为空。
 
-   要设置创作元素，请使用本地脚本叠加`body.jsp`，并在正文中包含段落系统(parsys):
+   要设置以进行创作，请叠加 `body.jsp` ，并在正文中包含段落系统(parsys):
 
-   1. 导航至 `/apps/an-scf-sandbox/components`.
-   1. 选择`playpage`节点。
-   1. 右键单击并选择`Create > Create File...`
+   1. 导航到 `/apps/an-scf-sandbox/components`。
+   1. 选择 `playpage` 节点。
+   1. 右键单击并选择 `Create > Create File...`
 
-      * 名称：**body.jsp**
-   1. 单击&#x200B;**[!UICONTROL Save All]**。
+      * 名称： **body.jsp**
+   1. 单击 **[!UICONTROL 全部保存]**.
 
-   打开`/apps/an-scf-sandbox/components/playpage/body.jsp`并粘贴以下文本：
+   打开 `/apps/an-scf-sandbox/components/playpage/body.jsp` 并粘贴以下文本：
 
    ```xml
    <%--
@@ -117,13 +117,13 @@ ht-degree: 4%
    </body>
    ```
 
-1. 单击&#x200B;**[!UICONTROL Save All]**。
+1. 单击 **[!UICONTROL 全部保存]**.
 
 **在编辑模式下在浏览器中查看页面：**
 
 * 标准 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
-您不仅应看到标题&#x200B;**社区播放**，还应看到用于编辑页面内容的UI。
+您不应仅看到标题 **社区游戏**，还有用于编辑页面内容的UI。
 
 当两个侧面板都切换为打开，并且窗口足够宽以便同时显示侧内容和页面内容时，会看到资产/组件侧面板。
 
@@ -141,7 +141,7 @@ ht-degree: 4%
 
 * [访问社区组件](basics.md#accessing-communities-components)
 
-出于此沙盒的目的，请从以下&#x200B;**Communities**&#x200B;组件开始（通过选中方框启用）：
+出于此沙盒的目的，请首先 **社区** 组件（通过选中框启用）：
 
 * 评论
 * 论坛
@@ -150,16 +150,16 @@ ht-degree: 4%
 * 审核摘要（显示）
 * 投票
 
-此外，请选择&#x200B;**[!UICONTROL 常规]**&#x200B;组件，例如
+此外，选择 **[!UICONTROL 常规]** 组件，例如
 
 * 图像
 * 表
 * 文本
-* 标题（基础）
+* 标题 (Foundation)
 
 >[!NOTE]
 >
->为页面段落启用的组件作为的`components`属性的值存储在存储库中
+>为页面段落启用的组件作为 `components` 属性
 >
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` 节点。
 
@@ -169,16 +169,16 @@ ht-degree: 4%
 
 在这个简单的示例中，正在静态设置根页面以重定向到英语页面，该页面将来可能会开发为包含播放页面链接的主登陆页面。
 
-将浏览器URL更改为根页面：`http://localhost:4502/editor.html/content/an-scf-sandbox.html`
+将浏览器URL更改为根页面： `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
 * 选择页面信息图标
-* 选择&#x200B;**[!UICONTROL 打开属性]**
+* 选择 **[!UICONTROL 打开属性]**
 * 在“高级”选项卡上
 
-   * 对于重定向条目，请浏览到&#x200B;**[!UICONTROL 网站]** > **[!UICONTROL SCF沙盒站点]** > **[!UICONTROL SCF沙盒]**
-   * 单击&#x200B;**[!UICONTROL 确定]**
+   * 对于重定向条目，请浏览至 **[!UICONTROL 网站]** > **[!UICONTROL SCF沙盒站点]** > **[!UICONTROL SCF沙盒]**
+   * 单击 **[!UICONTROL 确定]**
 
-* 单击&#x200B;**[!UICONTROL 确定]**
+* 单击 **[!UICONTROL 确定]**
 
 网站发布后，浏览到发布实例上的根页面将重定向到英文页面。
 

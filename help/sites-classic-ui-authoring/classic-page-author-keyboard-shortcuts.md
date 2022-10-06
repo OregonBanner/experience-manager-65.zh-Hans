@@ -1,8 +1,8 @@
 ---
 title: 编辑页面时的键盘快捷键
-seo-title: 编辑页面时的键盘快捷键
-description: 用户在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则在控制台中适用。
-seo-description: 用户在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则在控制台中适用。
+seo-title: Keyboard Shortcuts when Editing Pages
+description: 在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则在控制台中适用。
+seo-description: Various keyboard shortcuts are available throughout AEM. Some apply when editing pages, others to the use of consoles.
 uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,18 +12,18 @@ discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 91%
+source-wordcount: '313'
+ht-degree: 90%
 
 ---
 
 # 编辑页面时的键盘快捷键{#keyboard-shortcuts-when-editing-pages}
 
-用户在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则[在控制台中适用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
+在整个 AEM 环境中都可以使用各种键盘快捷键。有些快捷键在编辑页面时适用，有些则[在控制台中适用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
->在下表中，对于&#x200B;**Shortcut**&#x200B;列中的组合键，Ctrl和Command键均适用于macOS。
+>在下表中，对于 **快捷键** 列中，Ctrl键和Command键都适用于macOS。
 
 >[!NOTE]
 >
@@ -31,9 +31,7 @@ ht-degree: 91%
 >
 >* Windows：按住 Ctrl 并单击所需的组件。
 >* Mac：按住 Cmd 并单击所需的组件。
-
 >
-
 
 
 ## 编辑键盘快捷键 {#editing-keyboard-shortcuts}
@@ -156,7 +154,7 @@ ht-degree: 91%
 
 在使用[控制台](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)时，桌面用户也可以使用各种键盘快捷键。
 
-## 用于开发的键盘快捷键  {#keyboard-shortcuts-for-development}
+## 用于开发的键盘快捷键 {#keyboard-shortcuts-for-development}
 
 在使用页面编辑器时，还有其他键盘快捷键可供桌面开发人员使用。
 
@@ -169,7 +167,7 @@ ht-degree: 91%
   </tr>
   <tr>
    <td>编辑模式</td>
-   <td>在URL中设置以下后缀：<br /> <code>?debugClientLibs=true</code><br />然后使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>在URL中设置以下后缀：<br /> <code>?debugClientLibs=true</code><br /> 然后，使用：<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>查看页面加载的计时统计数据。</td>
   </tr>
  </tbody>

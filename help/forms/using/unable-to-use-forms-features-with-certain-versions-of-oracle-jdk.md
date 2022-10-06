@@ -3,7 +3,8 @@ title: 无法将Experience Manager Forms与某些版本的OracleJDK结合使用
 seo-title: Unable to use Experience Manager Forms with certain versions of Oracle JDK
 description: 无法将Experience Manager Forms与某些版本的OracleJDK结合使用
 seo-description: Unable to use Experience Manager Forms with certain versions of Oracle JDK
-source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
+exl-id: 6a8a7cb7-77d6-4bfc-82f3-82d0fddfc10a
+source-git-commit: 0142b46d087d34707b09a1f172910c8b287b839d
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 4%

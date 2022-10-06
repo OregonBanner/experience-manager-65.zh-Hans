@@ -13,8 +13,8 @@ ht-degree: 10%
 
 呈现网页中的组件后，可以生成一个 HTML 元素，以将呈现的组件封装在其中。这主要用于两个目的：
 
-* 仅当组件与HTML元素封装时，才能编辑组件。
-* 封装元素用于应用提供以下内容的HTML类：
+* 仅当组件与HTML元素封装时，才能编辑该组件。
+* 包装元素用于应用提供以下内容的HTML类：
 
    * 布局信息
    * 样式信息
@@ -32,45 +32,45 @@ ht-degree: 10%
 * 应将包装器元素添加到所有可编辑的组件中，以便页面编辑器能够正确初始化和更新这些组件。
 * 对于不可编辑的组件，如果包装元素不提供特定功能，则可以避免该包装元素，因此所得的标记不会不必要的臃肿。
 
-## 组件控件{#component-controls}
+## 组件控件 {#component-controls}
 
 以下属性和节点可应用于组件以控制其装饰标记的行为：
 
-* **`cq:noDecoration {boolean}`:** 此属性可添加到组件，如果值为true，则强制AEM不在该组件上生成任何包装器元素。
+* **`cq:noDecoration {boolean}`:** 此属性可添加到组件中，如果值为true，则强制AEM不在该组件上生成任何包装器元素。
 
-* **`cq:htmlTag`节点：** 此节点可添加到组件下，并可以具有以下属性：
+* **`cq:htmlTag`节点：** 此节点可以添加在组件下，并且可以具有以下属性：
 
-   * **`cq:tagName {String}`:** 这可用于指定用于封装组件的自定义HTML标记，而不是默认DIV元素。
+   * **`cq:tagName {String}`:** 这可用于指定用于封装组件的自定义HTML标记，而不是默认的DIV元素。
    * **`class {String}`:** 这可用于指定要添加到包装器的css类名称。
-   * 其他属性名称将作为HTML属性添加，其中的字符串值与提供的字符串值相同。
+   * 其他属性名称将添加为HTML属性，其中提供的字符串值与提供的字符串值相同。
 
-## 脚本控件{#script-controls}
+## 脚本控件 {#script-controls}
 
-但是，包装器行为确实不同，具体取决于是使用[HTL](/help/sites-developing/decoration-tag.md#htl)还是[JSP](/help/sites-developing/decoration-tag.md#jsp)来包含元素。
+但是，包装器行为的不同，具体取决于 [HTL](/help/sites-developing/decoration-tag.md#htl) 或 [JSP](/help/sites-developing/decoration-tag.md#jsp) 用于包含元素。
 
 ### HTL {#htl}
 
 通常，HTL中的包装器行为可概括如下：
 
-* 默认情况下（仅执行`data-sly-resource="foo"`时）不呈现包装器DIV。
+* 默认情况下，不会呈现包装器DIV(仅执行 `data-sly-resource="foo"`)。
 * 所有wcm模式（在创作和发布时均禁用、预览、编辑）的呈现方式均相同。
 
 也可以完全控制包装器的行为。
 
 * HTL脚本可完全控制包装器标记的生成行为。
-* 组件属性（如`cq:noDecoration`和`cq:tagName`）也可以定义包装器标记。
+* 组件属性(如 `cq:noDecoration` 和 `cq:tagName`)也可以定义包装器标记。
 
 可以完全控制HTL脚本中包装器标记的行为及其关联逻辑。
 
-有关在HTL中进行开发的更多信息，请参阅[HTL文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)。
+有关在HTL中开发的更多信息，请参阅 [HTL文档](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html).
 
-#### 决策树{#decision-tree}
+#### 决策树 {#decision-tree}
 
 此决策树将总结用于确定包装器标记行为的逻辑。
 
 ![chlimage_1-75](assets/chlimage_1-75a.png)
 
-#### 用例{#use-cases}
+#### 用例 {#use-cases}
 
 以下三个用例提供了如何处理包装器标记的示例，并说明了控制包装器标记的所需行为是多么简单。
 
@@ -94,35 +94,35 @@ ht-degree: 10%
       @class = "component-two"
 ```
 
-#### 用例1:包含用于代码重用的组件{#use-case-include-a-component-for-code-reuse}
+#### 用例1:包含用于代码重用的组件 {#use-case-include-a-component-for-code-reuse}
 
-最典型的用例是，由于代码重用的原因，组件包含其他组件时。 在这种情况下，不希望包含的组件通过其自己的工具栏和对话框进行编辑，因此不需要包装器，并且将忽略该组件的`cq:htmlTag`。 这可以视为默认行为。
+最典型的用例是，由于代码重用的原因，组件包含其他组件时。 在这种情况下，不希望包含的组件通过其自己的工具栏和对话框进行编辑，因此无需包装，也无需编辑组件的 `cq:htmlTag` 将被忽略。 这可以视为默认行为。
 
 `one.html: <sly data-sly-resource="child"></sly>`
 
 `two.html: Hello World!`
 
-在`/content/test.html`上生成输出：
+生成的输出 `/content/test.html`:
 
 **`Hello World!`**
 
 例如，组件包括用于显示图像的核心图像组件，在这种情况下通常使用合成资源，该合成资源包括通过将表示组件将具有的所有属性的映射对象传递到数据 — 资源来包含虚拟子组件。
 
-#### 用例2:包含可编辑的组件{#use-case-include-an-editable-component}
+#### 用例2:包含可编辑的组件 {#use-case-include-an-editable-component}
 
-另一个常见用例是容器组件包含可编辑的子组件（如布局容器）时。 在这种情况下，每个包含的子项都必须需要一个包装器才能正常工作（除非使用`cq:noDecoration`属性明确禁用）。
+另一个常见用例是容器组件包含可编辑的子组件（如布局容器）时。 在这种情况下，每个包含的子项都必须有一个包装器才能正常工作(除非通过 `cq:noDecoration` 属性)。
 
-由于包含的组件在本例中是独立组件，因此它需要包装器元素才能使编辑器正常工作，并定义其布局和样式以应用。 要触发此行为，请使用`decoration=true`选项。
+由于包含的组件在本例中是独立组件，因此它需要包装器元素才能使编辑器正常工作，并定义其布局和样式以应用。 要触发这种行为， `decoration=true` 选项。
 
 `one.html: <sly data-sly-resource="${'child' @ decoration=true}"></sly>`
 
 `two.html: Hello World!`
 
-在`/content/test.html`上生成输出：
+生成的输出 `/content/test.html`:
 
 **`<article class="component-two">Hello World!</article>`**
 
-#### 用例3:自定义行为{#use-case-custom-behavior}
+#### 用例3:自定义行为 {#use-case-custom-behavior}
 
 可能存在任意数量的复杂情况，HTL可以明确提供以下内容，从而轻松实现这些复杂情况：
 
@@ -133,19 +133,19 @@ ht-degree: 10%
 
 `two.html: Hello World!`
 
-结果输出`/content/test.html`:
+结果输出 `/content/test.html`:
 
 **`<aside class="child">Hello World!</aside>`**
 
 ## JSP {#jsp}
 
-当包含使用`cq:includ`e或`sling:include`的组件时，AEM中的默认行为是使用DIV来封装元素。 但是，可以通过两种方式自定义此包装：
+当使用 `cq:includ`e或 `sling:include`，则AEM中的默认行为是使用DIV来包装元素。 但是，可以通过两种方式自定义此包装：
 
-* 明确告知AEM不要使用`cq:noDecoration`来封装组件。
-* 使用自定义HTML标记，使用`cq:htmlTag`/ `cq:tagName`或`decorationTagName`封装组件。
+* 明确告知AEM不要使用 `cq:noDecoration`.
+* 使用自定义HTML标记来封装组件(使用 `cq:htmlTag`/ `cq:tagName` 或 `decorationTagName`.
 
-### 决策树{#decision-tree-1}
+### 决策树 {#decision-tree-1}
 
-以下决策树说明了`cq:noDecoration`、`cq:htmlTag`、`cq:tagName`和`decorationTagName`如何影响包装器行为。
+以下决策树说明了如何 `cq:noDecoration`, `cq:htmlTag`, `cq:tagName`和 `decorationTagName` 会影响包装器行为。
 
 ![chlimage_1-3](assets/chlimage_1-3a.jpeg)

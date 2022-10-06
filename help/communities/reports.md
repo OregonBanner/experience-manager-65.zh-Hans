@@ -1,8 +1,8 @@
 ---
 title: 报表控制台
-seo-title: 报表控制台
+seo-title: Reports Console
 description: 了解如何访问报告
-seo-description: 了解如何访问报告
+seo-description: Learn how to access reports
 uuid: 7bb15a15-077b-4bfb-aaf4-50fddc67f237
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,7 +14,7 @@ role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '618'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 7%
 
 * [指定报表](#assignments-report)
 
-   对于[启用社区](/help/communities/overview.md#enablement-community)，提供学习者在其分配中的进度概述，包括实施SCORM标准时的关联得分。
+   对于 [启用社区](/help/communities/overview.md#enablement-community)，提供学习者分配进度的概述，包括实施SCORM标准时的关联得分。
 
 * [查看次数报表](#views-report)
 
@@ -39,7 +39,7 @@ ht-degree: 7%
 
    提供由社区成员到任何社区站点的各种类型帖子的图表。
 
-启用[Adobe Analytics](/help/communities/sites-console.md#analytics)后，报表将包含一段时间内每个启用资源的查看次数、播放次数、评论次数和评级。
+When [Adobe Analytics已启用](/help/communities/sites-console.md#analytics)，报表将包括一段时间内每个启用资源的查看次数、播放次数、评论次数和评级。
 
 表格报表可以导出为.csv格式，以供后续处理。
 
@@ -47,7 +47,7 @@ ht-degree: 7%
 
 ### 社区站点报告 {#reports-for-community-sites}
 
-* 从全局导航：**[!UICONTROL 导航]** > **[!UICONTROL Communities]** > **[!UICONTROL 报表]**
+* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL 社区]** >  **[!UICONTROL 报表]**
 
 * 选择：
 
@@ -67,13 +67,13 @@ ht-degree: 7%
 
 ### 有关启用资源和学习路径的报表 {#reports-for-enablement-resources-and-learning-paths}
 
-* 从全局导航：**[!UICONTROL 导航]** > **[!UICONTROL 社区]** > **[!UICONTROL 资源]**
+* 从全局导航： **[!UICONTROL 导航]** > **[!UICONTROL 社区]** >  **[!UICONTROL 资源]**
 
 * 选择现有的启用社区网站：
 
-   * 选择&#x200B;**报表**&#x200B;图标以生成涵盖所有启用资源的报表。
+   * 选择 **报表** 图标以生成涵盖所有启用资源的报表。
    * 选择启用学习路径。
-   * 选择&#x200B;**报表**&#x200B;图标以生成以下报表：
+   * 选择 **报表** 用于生成报表的图标：
 
       * 包含的支持资源。
       * 分配给学习路径的学习者。
@@ -88,7 +88,7 @@ ht-degree: 7%
       * 评论次数
       * 给定星级
 
-有关更多详细信息，请参阅资源控制台的[报表部分](/help/communities/resources.md#report)。
+有关更多详细信息，请参阅 [报表部分](/help/communities/resources.md#report) 的子菜单。
 
 ## 指定报表 {#assignments-report}
 
@@ -114,7 +114,7 @@ ht-degree: 7%
 
    从分配给选定学习者的支持资源中进行选择。
 
-选择&#x200B;**生成**&#x200B;以创建报表：
+选择 **生成** 要创建报表，请执行以下操作：
 
 ![生成报告](assets/generate-assignment-report.png)
 
@@ -143,7 +143,7 @@ ht-degree: 7%
    * 过去 90 天
    * 去年
 
-选择&#x200B;**[!UICONTROL 生成]**&#x200B;以创建报表。
+选择 **[!UICONTROL 生成]** 以创建报表。
 
 ![生成视图](assets/generate-views.png)
 
@@ -172,7 +172,7 @@ ht-degree: 7%
    * 过去 90 天
    * 去年
 
-选择&#x200B;**[!UICONTROL 生成]**&#x200B;以创建报表。
+选择 **[!UICONTROL 生成]** 以创建报表。
 
 ![生成报告](assets/generate-posts-report.png)
 
@@ -184,6 +184,6 @@ ht-degree: 7%
 
 ### 报表未在AEM创作实例中显示 {#reports-do-not-show-in-aem-author-instance}
 
-如果报表未在AEM创作实例中显示，请检查自定义设置，如发布实例上的URL映射。 如果URL映射仅在社区站点的AEM发布实例上完成，请确保已在&#x200B;**站点趋势报表社交组件工厂**&#x200B;配置的AEM创作实例中配置了该映射。
+如果报表未在AEM创作实例中显示，请检查自定义设置，如发布实例上的URL映射。 如果URL映射仅在社区站点的AEM发布实例上完成，请确保已在的AEM创作实例中配置了该URL映射 **网站趋势报表社交组件工厂** 配置。
 
 ![AEM作者上的URL映射](assets/sitetrend.png)

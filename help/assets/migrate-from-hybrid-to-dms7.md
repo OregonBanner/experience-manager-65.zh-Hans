@@ -7,11 +7,11 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
-feature: Scene7模式，混合模式
+feature: Scene7 Mode,Hybrid Mode
 exl-id: 07f0803c-4ec4-4745-8214-63370e9d0282
 source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '524'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ Dynamic Media-Hybrid和Dynamic Media-Scene7之间的其他主要区别包括：
 |---|---|---|
 | 1 | 克隆Dynamic Media — 混合创作实例。 | 维护您的现有Dynamic Media-Hybrid Author实例以用于回退，直到成功完成此迁移过程中的其余步骤为止。 |
 | 2 | 在Dynamic Media-Scene7模式下启动克隆的创作实例。 |  |
-| 3 | 在Adobe Experience ManagerCloud Services中，使用Dynamic Media-Scene7凭据配置Dynamic Media。 | Adobe必须批准Dynamic Media-Scene7配置。 因此，您拥有受Adobe支持的并发Dynamic MediaM-Hybrid和Dynamic Media-Scene7环境，但该环境的时间有限。 |
+| 3 | 在Adobe Experience ManagerCloud Services中，使用Dynamic Media-Scene7凭据配置Dynamic Media。 | Adobe必须批准Dynamic Media-Scene7配置。 因此，您拥有受Adobe支持的并发Dynamic MediaM-Hybrid和Dynamic Media-Scene7环境，但这两个环境的时间有限。 |
 | 4 | 创建迁移包，以便您可以根据需要摄取资产。<br>删除在初始摄取到Dynamic Media-Hybrid期间创建的本地PTIFF。 | 如果Dynamic Media-Hybrid实例中当前所有资产都可用，则的克隆已包含所有资产。 因此，不需要包。 |
 | 5 | 运行资产更新工作流，以便将资产同步到Dynamic MediaCloud Service。 | Adobe建议您分批执行更新工作流，以便进行压缩。 |
 | 6 | 迁移查看器预设、图像预设和视频预设。 |  |

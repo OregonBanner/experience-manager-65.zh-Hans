@@ -1,8 +1,8 @@
 ---
 title: 响应式布局
-seo-title: 响应式布局
+seo-title: Responsive Layout
 description: AEM 让您能够为页面实现响应式布局
-seo-description: AEM 让您能够为页面实现响应式布局
+seo-description: AEM allows you to realize a responsive layout for your pages
 uuid: 4db45d78-9fca-4251-b504-ae3481fd9a8b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 92%
+source-wordcount: '1782'
+ht-degree: 93%
 
 ---
 
@@ -67,7 +67,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 >[!NOTE]
 >
->通过对模板进行配置，可以启用上述机制。有关更多信息，请参阅[配置响应式布局](/help/sites-administering/configuring-responsive-layout.md)。
+>通过对模板进行配置，可以启用上述机制。请参阅 [配置响应式布局](/help/sites-administering/configuring-responsive-layout.md) 以了解更多信息。
 
 ## 布局定义、设备模拟和断点 {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -143,7 +143,7 @@ AEM 允许您根据设备的宽度定义布局：
 
 
 
-## 添加布局容器及其内容（编辑模式）{#adding-a-layout-container-and-its-content-edit-mode}
+## 添加布局容器及其内容（编辑模式） {#adding-a-layout-container-and-its-content-edit-mode}
 
 **布局容器**&#x200B;是一个段落系统，该系统：
 
@@ -160,7 +160,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)
 
-## 选择布局容器并对其执行操作（编辑模式）{#selecting-and-taking-action-on-a-layout-container-edit-mode}
+## 选择布局容器并对其执行操作（编辑模式） {#selecting-and-taking-action-on-a-layout-container-edit-mode}
 
 与其他组件一样，您可以先选择布局容器，然后再对其执行剪切、复制、删除等操作（在&#x200B;**编辑**&#x200B;模式下）：
 
@@ -190,7 +190,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    ![screen_shot_2018-03-23at085724](assets/screen_shot_2018-03-23at085724.png)
 
-## 定义布局（布局模式）{#defining-layouts-layout-mode}
+## 定义布局（布局模式） {#defining-layouts-layout-mode}
 
 >[!NOTE]
 >
@@ -243,7 +243,7 @@ AEM 允许您根据设备的宽度定义布局：
 
    ![](do-not-localize/screen_shot_2018-03-23at090823.png)
 
-   * **显示隐藏的组件**  — 显示所有或各个组件。数字表示当前隐藏的组件数量。计数器显示隐藏的组件数量。
+   * **显示隐藏的组件**  — 显示所有或各个组件。 数字表示当前隐藏的组件数量。计数器显示隐藏的组件数量。
 
    ![](do-not-localize/screen_shot_2018-03-23at091007.png)
 
@@ -263,9 +263,9 @@ AEM 允许您根据设备的宽度定义布局：
    >
    >在以上示例中，浮动和隐藏操作之所以可用，是因为此布局容器嵌套在一个父布局容器内。
 
-   * **取消隐**
-藏组件选择父组件可显示包含 
-**显示隐藏的** 组件选项。在此示例中，隐藏了两个组件。
+   * **取消隐藏组件**
+选择父组件会显示包含 
+**显示隐藏组件**&#x200B;选项的操作工具栏。 在此示例中，隐藏了两个组件。
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    选择&#x200B;**显示隐藏的组件**&#x200B;选项时，当前隐藏的组件将以蓝色显示在它们的原始位置。

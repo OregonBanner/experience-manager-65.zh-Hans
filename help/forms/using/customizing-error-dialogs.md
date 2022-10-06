@@ -1,8 +1,8 @@
 ---
 title: 自定义错误对话框
-seo-title: 自定义错误对话框
+seo-title: Customizing error dialogs
 description: 如何自定义LiveCycleAEM Forms工作区的错误对话框，以添加不同的故障描述。
-seo-description: 如何自定义LiveCycleAEM Forms工作区的错误对话框，以添加不同的故障描述。
+seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,18 +11,18 @@ discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 exl-id: 8d2b07f5-5c4e-4111-8f78-eb1b156221bc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '152'
 ht-degree: 4%
 
 ---
 
-# 自定义错误对话框{#customizing-error-dialogs}
+# 自定义错误对话框 {#customizing-error-dialogs}
 
-AEM Forms工作区允许您自定义错误对话框。 执行[AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md)，然后执行以下步骤以自定义错误对话框。
+AEM Forms工作区允许您自定义错误对话框。 执行 [AEM Forms工作区自定义的一般步骤](/help/forms/using/generic-steps-html-workspace-customization.md) 按照以下步骤自定义错误对话框。
 
-## 自定义文本{#customizing-text}
+## 自定义文本 {#customizing-text}
 
-1. 在`/apps/ws/locales/en-US/translation.json`文件中，将`wserror`的值更改为自定义值。 例如：
+1. 在 `/apps/ws/locales/en-US/translation.json` ，请更改 `wserror` 值。 例如：
 
    ```json
    "wserror" : {
@@ -52,7 +52,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行[AEM Forms工作区
 
 ## 自定义CSS {#customizing-css}
 
-1. 您可以通过在`/apps/ws/css/newStyle.css`文件中添加以下代码片段来更新对话框、标题、内容区域、脚条、脚条按钮和其他资料：
+1. 您可以通过在 `/apps/ws/css/newStyle.css` 文件：
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -187,7 +187,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行[AEM Forms工作区
    }
    ```
 
-1. 对于脚条按钮跨度，从复合列表中分隔`.error-dialog`和`.foot-bar`按钮跨度。 要进行此更改，请在newStyle.css文件中添加以下内容：
+1. 对于脚条按钮跨度，请将 `.error-dialog` 和 `.foot-bar` 按钮跨复合列表。 要进行此更改，请在newStyle.css文件中添加以下内容：
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -224,7 +224,7 @@ AEM Forms工作区允许您自定义错误对话框。 执行[AEM Forms工作区
 
 >[!NOTE]
 >
->如果您引用的是其他图像，请将其添加到`/apps/ws/images`下所需的层次结构中。
+>如果您引用的是其他图像，请在 `/apps/ws/images`.
 
 ## 示例 {#examples}
 

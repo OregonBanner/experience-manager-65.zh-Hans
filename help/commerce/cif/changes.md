@@ -1,15 +1,15 @@
 ---
 title: 对商务集成框架(CIF)附加组件的显着更改
 description: 与旧的CIF版本相比，商务集成框架(CIF)附加组件发生了显着更改。
-exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32,c136763f-56aa-450e-8796-bc84bf6c205d
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32
+source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
-# 对商务集成框架(CIF)附加组件{#notable-changes}的显着更改
+# 对商务集成框架(CIF)附加组件的显着更改{#notable-changes}
 
 本文档重点介绍了商务集成框架(CIF)附加组件与旧CIF版本(主要称为CIF Classic（快速入门）和CIF开源版本)之间的重要区别。
 
@@ -33,7 +33,7 @@ AEM CIF附加组件包已安装并更新，其中包含AEM包管理器。
 
 ## 部署CIF维尼亚项目
 
-[GitHub AEM指南中提供的项目 — CIF维尼亚项目](https://github.com/adobe/aem-cif-guides-venia)，并通过AEM Package Manager完成部署。
+项目可用于 [GitHub AEM指南 — CIF Venia项目](https://github.com/adobe/aem-cif-guides-venia) 和通过AEM包管理器完成的部署。
 
 **早期CIF版本**
 
@@ -57,4 +57,4 @@ AEM使用已分配给产品和类别的AEM目录模板即时渲染产品目录�
 
 >[!NOTE]
 >
->有关如何将CIF与AEM Managed Service或AEM On-Premise结合使用的其他文档，请参阅[Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
+>有关如何将CIF与AEM Managed Service或AEM On-Premise结合使用的其他文档，请参阅 [商务集成框架](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)

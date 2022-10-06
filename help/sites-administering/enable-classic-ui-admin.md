@@ -1,8 +1,8 @@
 ---
 title: Admin Console
-seo-title: Admin Console
+seo-title: Admin Consoles
 description: 了解如何使用AEM中提供的Admin Console。
-seo-description: 了解如何使用AEM中提供的Admin Console。
+seo-description: Lear how to use the Admin Consoles available in AEM.
 uuid: 82ab5267-2f2a-4772-85d5-678d883a0294
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '222'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 默认情况下，通过管理控制台切换到经典UI的功能已被禁用。 因此，将鼠标悬停在某些控制台图标上时显示的允许访问经典UI的弹出图标将不再显示。
 
-每个在`/libs/cq/core/content/nav`中具有经典UI版本的控制台都可以单独重新启用，以便将鼠标悬停在控制台图标上时，再次弹出&#x200B;**经典UI**&#x200B;选项。
+在中具有经典UI版本的每个控制台 `/libs/cq/core/content/nav` 可以单独重新启用，以便 **经典UI** 将鼠标悬停在控制台图标上时，选项会再次弹出。
 
 在此示例中，我们将为站点控制台重新启用经典UI。
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
    `/libs/cq/core/content/nav/sites`
 
-1. 使用&#x200B;**覆盖节点**&#x200B;选项创建覆盖；例如：
+1. 使用创建叠加 **覆盖节点** 选项；例如：
 
    * **路径**: `/apps/cq/core/content/nav/sites`
    * **覆盖位置**: `/apps/`
@@ -48,7 +48,7 @@ ht-degree: 1%
 
    `enableDesktopOnly = {Boolean}true`
 
-1. **经典UI**&#x200B;选项在管理控制台中再次作为弹出窗口选项可用。
+1. 的 **经典UI** 选项在管理控制台中再次作为弹出选项可用。
 
    ![](assets/syui-01-2019-02-27-15-16-55.png)
 

@@ -274,7 +274,7 @@ Adobe Illustrator的文件格式是PDF的变体。 在Experience Manager Assets�
 
    ![6_5_imagepreset-edit](assets/6_5_imagepreset-edit.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。
+1. 单击“**[!UICONTROL 保存]**”。
 
 ## 创建响应式图像预设 {#creating-a-responsive-image-preset}
 

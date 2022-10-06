@@ -1,8 +1,8 @@
 ---
 title: 发布取消发布内容
-seo-title: 发布取消发布内容
+seo-title: Publish UnPublish Content
 description: 熟悉文章、横幅和收藏集上的内容管理操作后，请访问此页面以了解如何发布内容。 您还可以取消发布内容。
-seo-description: 熟悉文章、横幅和收藏集上的内容管理操作后，请访问此页面以了解如何发布内容。 您还可以取消发布内容。
+seo-description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
 uuid: 75179aa8-022c-4876-9664-6dd2b826174c
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
 exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '268'
 ht-degree: 1%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->要了解有关AEM Mobile应用程序设计注意事项的更多信息，请参阅联机帮助中的[AEM Mobile应用程序的设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)。
+>要了解有关AEM Mobile应用程序设计注意事项的更多信息，请参阅 [AEM Mobile应用程序的设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) 中。
 
-## 发布/取消发布内容{#publishing-unpublishing-the-content}
+## 发布/取消发布内容 {#publishing-unpublishing-the-content}
 
 这与“AEM发布”有所不同。 我们不会将内容推送到AEM发布服务器实例，以使其可公开查看。 在此，我们将通知Mobile On-Demand，应在实时Mobile On-Demand应用程序中公布所选内容。
 

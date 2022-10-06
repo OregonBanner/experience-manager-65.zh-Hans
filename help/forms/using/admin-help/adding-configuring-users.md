@@ -1,8 +1,8 @@
 ---
-title: '添加和配置用户 '
-seo-title: '添加和配置用户 '
+title: 添加和配置用户
+seo-title: Adding and configuring users
 description: 通过管理控制台中的“用户管理”设置，您可以创建或删除用户，以及配置其他用户设置。
-seo-description: 通过管理控制台中的“用户管理”设置，您可以创建或删除用户，以及配置其他用户设置。
+seo-description: The User Management settings in the administration console allow you to create or delete users  and configure other user settings.
 uuid: fe650cdb-7d0d-4f38-9899-e5349559ed32
 contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
@@ -10,80 +10,79 @@ discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 exl-id: 50eea35d-d844-4f4b-9cbe-7d84bd6b1e3b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
 
-# 添加和配置用户{#adding-and-configuring-users}
+# 添加和配置用户 {#adding-and-configuring-users}
 
 在第三方存储系统（如LDAP目录）中维护用户和组信息。 用户管理不写入第三方存储系统。 用户管理而是将用户和组信息与其自己的数据库同步
 
-## 创建用户{#create-a-user}
+## 创建用户 {#create-a-user}
 
 在创建用户时，您可以将用户添加到群组并为其分配角色。
 
-1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>用户管理>用户和组]**，然后单击&#x200B;**[!UICONTROL 新用户]**。
-.
-1. 在&#x200B;**[!UICONTROL 常规设置]**&#x200B;下，根据需要提供信息，然后单击&#x200B;**[!UICONTROL 下一步]**。 有关这些设置的详细信息，请参阅[用户设置](adding-configuring-users.md#user-settings)。
-1. （可选）要将用户添加到群组，请单击&#x200B;**[!UICONTROL 查找群组]**，然后执行以下任务：
+1. 在管理控制台中，单击 **[!UICONTROL 设置>用户管理>用户和群组]**，然后单击 **[!UICONTROL 新用户]**..
+1. 在 **[!UICONTROL 常规设置]**，根据需要提供信息，然后单击 **[!UICONTROL 下一个]**. 有关设置的详细信息，请参阅 [用户设置](adding-configuring-users.md#user-settings).
+1. （可选）要将用户添加到群组，请单击 **[!UICONTROL 查找组]**，并执行以下任务：
 
-   * 在&#x200B;**[!UICONTROL 查找]**&#x200B;框中，键入组名称的全部或部分。
-   * 选择要搜索的域，选择要显示的项目数，然后单击&#x200B;**[!UICONTROL 查找]**。
-   * （可选）要查看组详细信息，请选择组名称，然后单击&#x200B;**[!UICONTROL 确定]**&#x200B;以返回搜索结果页面。
-   * 选中该组的复选框，然后单击&#x200B;**[!UICONTROL 确定]**。
+   * 在 **[!UICONTROL 查找]** 框中，键入组名称的全部或部分。
+   * 选择要搜索的域，选择要显示的项目数，然后单击 **[!UICONTROL 查找]**.
+   * （可选）要查看群组详细信息，请选择群组名称，然后单击 **[!UICONTROL 确定]** 返回到搜索结果页面。
+   * 选中组的复选框，然后单击 **[!UICONTROL 确定]**.
    * 单击&#x200B;**[!UICONTROL 下一步]**。
 
-1. （可选）要为用户分配角色，请单击&#x200B;**[!UICONTROL 查找角色]**，选中要分配角色的复选框，然后单击&#x200B;**[!UICONTROL 确定]**。
-1. 单击&#x200B;**[!UICONTROL 完成]**。
+1. （可选）要为用户分配角色，请单击 **[!UICONTROL 查找角色]**，选中要分配的角色复选框，然后单击 **[!UICONTROL 确定]**.
+1. 单击 **[!UICONTROL 完成]**.
 
    >[!NOTE]
    >
-   >如果您遇到用户的登录问题，请参阅OSGi端](https://helpx.adobe.com/aem-forms/kb/AEM-users-fails-to-login.html)上JEE上的[AEM Forms用户无法登录AEM Forms。
+   >如果您遇到用户的任何登录问题，请参阅 [AEM Forms on JEE用户无法在OSGi端上登录AEM Forms](https://helpx.adobe.com/aem-forms/kb/AEM-users-fails-to-login.html).
 
 ## 用户设置 {#user-settings}
 
 在创建或编辑用户时，请指定以下设置。
 
-**规范名称：** （必需）用户的唯一标识符。域中的每个用户和组都必须具有唯一的规范名称。 选中系统生成复选框，让用户管理分配唯一值，或清除该复选框并为规范名称指定自定义值。
+**规范名称：** （必需）用户的唯一标识符。 域中的每个用户和组都必须具有唯一的规范名称。 选中系统生成复选框，让用户管理分配唯一值，或清除该复选框并为规范名称指定自定义值。
 
-避免在规范名称中使用下划线字符(_)，例如`sample_user`。 根据用户的规范名称搜索用户时，不会返回包含下划线字符的用户。
+避免在规范名称中使用下划线字符(_)，例如， `sample_user`. 根据用户的规范名称搜索用户时，不会返回包含下划线字符的用户。
 
-**名字：** （必填）用户的给定名称
+**名字：** （必需）用户的给定名称
 
-**姓氏：** （必填）用户的姓氏
+**姓氏：** （必需）用户的姓
 
-**通用名称：** 用户的全名或显示名称。例如，如果名字= Gloria ，姓氏= Rios ，则通用名称= Gloria Rios 。
+**通用名称：** 用户的全名或显示名称。 例如，如果名字= Gloria ，姓氏= Rios ，则通用名称= Gloria Rios 。
 
 **电子邮件：** 用户的电子邮件地址
 
 **电话：** 用户的电话号码
 
-**描述：** 可选描述。根据贵组织的需要使用此字段。
+**描述：** 可选描述。 根据贵组织的需要使用此字段。
 
-**地址：** 用户的邮寄地址
+**地址：** 用户的邮件地址
 
 **组织：** 用户所属的组织
 
-**电子邮件别名：** 用户的电子邮件别名。使用逗号分隔电子邮件别名。
+**电子邮件别名：** 用户的电子邮件别名。 使用逗号分隔电子邮件别名。
 
 **域：** 用户所属的域
 
 **区域设置：** 用户的ISO区域设置
 
-**业务日历键：** 允许您根据此设置的值将业务日历映射到用户。业务日历定义业务日和非业务日。 AEM表单在计算提醒、截止日期和呈报等事件的未来日期和时间时，可以使用业务日历。 您为用户分配业务日历键的方式取决于您使用的是企业域、本地域还是混合域。 （请参阅[添加域](/help/forms/using/admin-help/adding-domains.md#adding-domains)。）
+**业务日历键：** 允许您根据此设置的值将业务日历映射到用户。 业务日历定义业务日和非业务日。 AEM表单在计算提醒、截止日期和呈报等事件的未来日期和时间时，可以使用业务日历。 您为用户分配业务日历键的方式取决于您使用的是企业域、本地域还是混合域。 (请参阅 [添加域](/help/forms/using/admin-help/adding-domains.md#adding-domains).)
 
 如果您使用的是本地域或混合域，则有关用户的信息仅存储在用户管理数据库中。 对于这些用户，将“业务日历键”设置为字符串。 然后，在表单工作流中将业务日历键值（字符串）映射到业务日历。
 
 如果您使用的是企业域，则有关用户的信息将驻留在第三方存储系统（如LDAP目录）中。 用户管理将目录中的用户信息与用户管理数据库同步。 此功能允许您将业务日历键映射到LDAP目录中的字段。 例如，假设您目录中的每个用户记录都包含一个国家/地区字段，并且您希望根据用户所在的国家/地区来分配业务日历。 在这种情况下，您将国家/地区字段名称指定为“业务日历键值”设置的值。 然后，您可以将业务日历键（LDAP目录中为国家/地区字段定义的值）映射到表单工作流中的业务日历。
 
-有关业务日历的其他信息，包括如何将业务日历键映射到业务日历，请参阅[配置业务日历](/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars)。
+有关业务日历的其他信息，包括如何将业务日历键映射到业务日历，请参阅 [配置业务日历](/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars).
 
 将名称限制为少于53个字符。 较短的名称有助于防止在管理控制台的“流程管理”页面中显示业务日历键时出现问题。
 
-**用户ID:** （必需）用户用于登录的用户ID。用户ID不区分大小写，并且它在整个域中必须是唯一的。
+**用户ID:** （必需）用户用于登录的用户ID。 用户ID不区分大小写，并且它在整个域中必须是唯一的。
 
-在企业域中，使用非DN属性作为用户ID，因为如果用户的DN移至组织的其他部分，则其DN可能会发生更改。 此设置取决于目录服务器。 对于Active Directory 2003，该值为`objectGUID`；对于Sun™ One，值为`nsuniqueID`；对于eDirectory，值为`guid`。
+在企业域中，使用非DN属性作为用户ID，因为如果用户的DN移至组织的其他部分，则其DN可能会发生更改。 此设置取决于目录服务器。 值为 `objectGUID` 对于Active Directory 2003, `nsuniqueID` Sun™ One和 `guid` （对于eDirectory）。
 
 确保用户ID是唯一的。 请勿使用已分配给已删除用户的用户。
 
@@ -91,13 +90,13 @@ AEM表单无法区分具有相同用户ID和密码但属于不同域的用户帐
 
 使用SQL Server作为数据库时，无法创建超过255个字符的用户ID。
 
-使用MySQL时，用户ID可以包含扩展字符。 但是，当在两个字符串（如abcde和âbcdè）之间进行比较时，它们会被视为相同。 例如，在同步时，如果向数据库中添加了新用户，则会进行比较以检查数据库中是否存在具有相同用户ID的用户。 如果在添加新用户&#x200B;*âbcdè*&#x200B;时，数据库中已存在用户&#x200B;*abcde*，则比较无法区分这两个名称。 假定该用户已存在于数据库中，并且将忽略新用户且不会添加。
+使用MySQL时，用户ID可以包含扩展字符。 但是，当在两个字符串（如abcde和âbcdè）之间进行比较时，它们会被视为相同。 例如，在同步时，如果向数据库中添加了新用户，则会进行比较以检查数据库中是否存在具有相同用户ID的用户。 如果用户 *abcde* 新用户 *阿布迪* 添加，则比较无法区分这两个名称。 假定该用户已存在于数据库中，并且将忽略新用户且不会添加。
 
-避免创建以数字符号(#)开头的用户名。 执行任务搜索不会返回这些用户名的结果。 （请参阅[处理任务](/help/forms/using/admin-help/tasks.md#working-with-tasks)。）
+避免创建以数字符号(#)开头的用户名。 执行任务搜索不会返回这些用户名的结果。 (请参阅 [处理任务](/help/forms/using/admin-help/tasks.md#working-with-tasks).)
 
-**密码和确认密码：** 用户用于登录的密码。它必须至少包含8个字符。 属于混合域的用户不需要密码。
+**密码和确认密码：** 用户用于登录的密码。 它必须至少包含8个字符。 属于混合域的用户不需要密码。
 
-## 查看有关用户{#view-details-about-a-user}的详细信息
+## 查看有关用户的详细信息 {#view-details-about-a-user}
 
 1. 在管理控制台中，单击设置>用户管理>用户和群组。
 1. 指定用于缩小搜索范围的信息，然后在“在”列表中，选择“用户”，然后单击“查找”。 搜索结果列在页面底部。 您可以通过单击任意列标题对列表进行排序。
@@ -107,71 +106,71 @@ AEM表单无法区分具有相同用户ID和密码但属于不同域的用户帐
    * 分配给用户的角色
    * 对用户所属的组进行分组
 
-## 更改本地用户{#change-the-password-for-a-local-user}的密码
+## 更改本地用户的密码 {#change-the-password-for-a-local-user}
 
-1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>用户管理>用户和组]**。
-1. 指定信息以缩小特定用户的搜索范围，然后单击&#x200B;**[!UICONTROL 查找]**。 搜索结果列在页面底部。 您可以通过单击任意列标题对列表进行排序。
-1. 单击用户的名称，然后单击&#x200B;**[!UICONTROL 更改密码]**。
-1. 键入并确认新密码，然后单击&#x200B;**[!UICONTROL 确定]**。 密码必须至少为8个字符。
+1. 在管理控制台中，单击 **[!UICONTROL 设置>用户管理>用户和群组]**.
+1. 指定用于缩小特定用户搜索范围的信息，然后单击 **[!UICONTROL 查找]**. 搜索结果列在页面底部。 您可以通过单击任意列标题对列表进行排序。
+1. 单击用户的名称，然后单击 **[!UICONTROL 更改密码]**.
+1. 键入并确认新密码，然后单击 **[!UICONTROL 确定]**. 密码必须至少为8个字符。
 
-## 编辑用户的属性{#edit-a-user-s-properties}
+## 编辑用户的属性 {#edit-a-user-s-properties}
 
-1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>用户管理>用户和组]**。
+1. 在管理控制台中，单击 **[!UICONTROL 设置>用户管理>用户和群组]**.
 1. 要查找要编辑的用户，请执行以下任务：
 
-   * 在&#x200B;**[!UICONTROL 查找]**&#x200B;框中，键入搜索条件。
-   * 在&#x200B;**[!UICONTROL 使用]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 名称]**、**[!UICONTROL 电子邮件]**&#x200B;或&#x200B;**[!UICONTROL 用户ID]**。
-   * 在&#x200B;**[!UICONTROL 在列表]**&#x200B;中，选择&#x200B;**[!UICONTROL 用户]**。
-   * 选择域，选择要显示的项目数，然后单击&#x200B;**[!UICONTROL 查找]**。
+   * 在 **[!UICONTROL 查找]** 框中，键入搜索条件。
+   * 在 **[!UICONTROL 使用]** 列表，选择 **[!UICONTROL 名称]**, **[!UICONTROL 电子邮件]**&#x200B;或 **[!UICONTROL 用户ID]**.
+   * 在 **[!UICONTROL 在列表中]**，选择 **[!UICONTROL 用户]**.
+   * 选择域，选择要显示的项目数，然后单击 **[!UICONTROL 查找]**.
 
 1. 单击要编辑的用户。
-1. 对于属于本地或混合域的用户，在&#x200B;**[!UICONTROL Detail]**&#x200B;选项卡上，编辑&#x200B;**[!UICONTROL General Settings]**&#x200B;和&#x200B;**[!UICONTROL Login Settings]**，然后单击&#x200B;**[!UICONTROL Save]**。 有关这些设置的详细信息，请参阅[用户设置](adding-configuring-users.md#user-settings)。 您无法编辑属于企业域的用户的常规设置和登录设置。
-1. 要编辑用户的组设置，请单击&#x200B;**[!UICONTROL 组成员资格]**&#x200B;选项卡并执行以下任务：
+1. 对于属于本地或混合域的用户，请在 **[!UICONTROL 详细信息]** ，编辑 **[!UICONTROL 常规设置]** 和 **[!UICONTROL 登录设置]**，然后单击 **[!UICONTROL 保存]**. 有关设置的详细信息，请参阅 [用户设置](adding-configuring-users.md#user-settings). 您无法编辑属于企业域的用户的常规设置和登录设置。
+1. 要编辑用户的群组设置，请单击 **[!UICONTROL 组成员资格]** 选项卡，然后执行以下任务：
 
-   * 单击&#x200B;**[!UICONTROL 查找组]**&#x200B;并完成搜索信息。
-   * 要将用户添加到新组，请选中该组的复选框，单击&#x200B;**[!UICONTROL 确定]**，然后单击&#x200B;**[!UICONTROL 保存]**。
+   * 单击 **[!UICONTROL 查找组]** 并完成搜索信息。
+   * 要将用户添加到新群组，请选中该群组的复选框，单击 **[!UICONTROL 确定]**，然后单击 **[!UICONTROL 保存]**.
 
    >[!NOTE]
    >
    >无法将本地用户添加到目录组。 但是，可以将目录用户添加到本地组。
 
-   * 要将用户从组中删除，请选中该组的复选框，单击&#x200B;**[!UICONTROL 删除]**，然后单击&#x200B;**[!UICONTROL 保存]**。
+   * 要将用户从群组中删除，请选中该群组的复选框，单击 **[!UICONTROL 删除]**，然后单击 **[!UICONTROL 保存]**.
 
 
-1. 要编辑用户的角色，请单击&#x200B;**[!UICONTROL 角色分配]**&#x200B;选项卡并执行以下任务：
+1. 要编辑用户的角色，请单击 **[!UICONTROL 角色分配]** 选项卡，然后执行以下任务：
 
-   * 要显示角色列表，请单击&#x200B;**[!UICONTROL 查找角色]**。
-   * 要添加角色，请选中该角色的复选框，单击&#x200B;**[!UICONTROL 确定]**，然后单击&#x200B;**[!UICONTROL 保存]**。
-   * 要删除角色，请选中该角色的复选框，单击&#x200B;**[!UICONTROL 取消分配]**，然后单击&#x200B;**[!UICONTROL 保存]**。
+   * 要显示角色列表，请单击 **[!UICONTROL 查找角色]**.
+   * 要添加角色，请选中角色的复选框，单击 **[!UICONTROL 确定]**，然后单击 **[!UICONTROL 保存]**.
+   * 要删除角色，请选中该角色的复选框，单击 **[!UICONTROL 取消分配]**，然后单击 **[!UICONTROL 保存]**.
 
-## 删除用户{#delete-a-user}
+## 删除用户 {#delete-a-user}
 
-1. 在管理控制台中，单击&#x200B;**[!UICONTROL 设置>用户管理>用户和组]**。
+1. 在管理控制台中，单击 **[!UICONTROL 设置>用户管理>用户和群组]**.
 1. 要查找要删除的用户，请执行以下任务：
 
-   * 在&#x200B;**[!UICONTROL 查找]**&#x200B;框中，键入搜索条件。
-   * 在&#x200B;**[!UICONTROL 使用]**&#x200B;列表中，选择&#x200B;**[!UICONTROL 名称]**、**[!UICONTROL 电子邮件]**&#x200B;或&#x200B;**[!UICONTROL 用户ID]**。
-   * 在&#x200B;**[!UICONTROL 在列表]**&#x200B;中，选择&#x200B;**[!UICONTROL 用户]**。
-   * 选择域，选择要显示的项目数，然后单击&#x200B;**[!UICONTROL 查找]**。
+   * 在 **[!UICONTROL 查找]** 框中，键入搜索条件。
+   * 在 **[!UICONTROL 使用]** 列表，选择 **[!UICONTROL 名称]**, **[!UICONTROL 电子邮件]**&#x200B;或 **[!UICONTROL 用户ID]**.
+   * 在 **[!UICONTROL 在列表中]**，选择 **[!UICONTROL 用户]**.
+   * 选择域，选择要显示的项目数，然后单击 **[!UICONTROL 查找]**.
 
-1. 选中用户的复选框，单击&#x200B;**[!UICONTROL 删除]**，然后单击&#x200B;**[!UICONTROL 确定]**。
+1. 选中用户的复选框，单击 **[!UICONTROL 删除]**，然后单击 **[!UICONTROL 确定]**.
 
 >[!NOTE]
 >
->JEE上的AEM Forms还允许在OSGi上运行的AEM Forms加载项的用户被识别为AEM用户。 如果需要在JEE上的AEM Forms与在OSGi上运行的AEM Forms加载项之间进行单点登录（例如，HTML工作区），则需要使用此参数。 上述删除操作仅会从JEE上的AEM Forms中删除用户。 不会从OSGi环境中运行的AEM Forms加载项中删除用户。 但是，删除用户后进行的任何登录尝试(对AEM Forms附加组件JEE服务器或OSGi环境上的AEM Forms附加组件的登录尝试)都会被拒绝。
+>JEE上的AEM Forms还允许在OSGi上运行的AEM Forms加载项的用户被识别为AEM用户。 如果需要在JEE上的AEM Forms与在OSGi上运行的AEM Forms加载项之间进行单点登录(例如，HTML工作区)，则需要使用此参数。 上述删除操作仅会从JEE上的AEM Forms中删除用户。 不会从OSGi环境中运行的AEM Forms加载项中删除用户。 但是，删除用户后进行的任何登录尝试(对AEM Forms附加组件JEE服务器或OSGi环境上的AEM Forms附加组件的登录尝试)都会被拒绝。
 
-## 创建自定义登录错误处理程序{#create-custom-login-error-handler}
+## 创建自定义登录错误处理程序 {#create-custom-login-error-handler}
 
 如果用户没有所需的AEM表单和CQ权限，尝试登录到嵌入在CQ中的以下应用程序，则用户将被重定向到包含错误跟踪的默认CQ 404页面：
 
 * 通信管理解决方案
 * AEM forms Workspace
 
-   ***注意&#x200B;**:AEM Forms版本已弃用Flex Workspace。*
+   ***注释&#x200B;**:AEM Forms版本已弃用Flex Workspace。*
 
 * 表单管理器
 * 进程报告
 
 CQ提供了一种机制来覆盖默认的404处理程序jsp。
 
-有关如何自定义错误处理页面的详细信息，请参阅Adobe Experience Manager文档中的[自定义由错误处理程序](https://docs.adobe.com/docs/en/cq/current/developing/customizing_error_handler_pages.html)显示的页面。
+有关如何自定义错误处理页面的详细信息，请参阅 [自定义错误处理程序显示的页面](https://docs.adobe.com/docs/en/cq/current/developing/customizing_error_handler_pages.html) 中的Adobe Experience Manager文档。

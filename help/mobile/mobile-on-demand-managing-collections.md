@@ -1,8 +1,8 @@
 ---
 title: 管理收藏集
-seo-title: 管理收藏集
+seo-title: Managing Collections
 description: 收藏集代表一个定义良好的存储段，其中填充了适合封面主题的文章或横幅等内容。 请阅读本页以了解更多信息。
-seo-description: 收藏集代表一个定义良好的存储段，其中填充了适合封面主题的文章或横幅等内容。 请阅读本页以了解更多信息。
+seo-description: Collections represent a well defined bucket filled with content such as articles or banners that suits the cover's theme. Follow this page to learn more.
 uuid: 1d2e9769-d2cc-4d43-a428-e962a51eb5d0
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 64c6d198-983f-4a52-9c83-560206363868
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '797'
 ht-degree: 2%
 
 ---
@@ -25,37 +25,34 @@ ht-degree: 2%
 
 内容管理操作是帮助在应用程序中创建和管理内容的构建基块。 将对应用程序内的内容执行以下操作。
 
-## 收藏集概述{#collections-overview}
+## 收藏集概述 {#collections-overview}
 
-收藏集代表一个定义良好的&#x200B;*存储段*，其中填充了适合封面主题的文章或横幅等内容。
+收藏集代表一个定义明确的 *桶* 充满了适合封面主题的文章或横幅等内容。
 
 >[!NOTE]
 >
 >请参阅“联机帮助”中的以下资源，以了解AEM Mobile应用程序中的以下主题：
 >
 >* [设计注意事项](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
-   >
-   >
-* [管理收藏集](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
-
 >
-
+>* [管理收藏集](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
+>
 
 
 ## 创建收藏集 {#creating-a-collection}
 
 创建收藏集的常规工作流如下所示：
 
-1. 从侧边栏中选择&#x200B;**Mobile**。
+1. 选择 **移动设备** 从侧边栏。
 1. 在移动设备中，从目录中选择您的移动按需应用程序。
-1. 单击&#x200B;**管理收藏集**&#x200B;拼贴右上角的向下箭头。
+1. 单击 **管理收藏集** 拼贴。
 1. 在向导的每个步骤中继续创建新文章。
-1. 准备就绪后，单击&#x200B;**创建**。
-1. 您的新文章将显示在&#x200B;**管理收藏集**&#x200B;拼贴中。
+1. 准备就绪后，单击 **创建**.
+1. 您的新文章将显示在 **管理收藏集** 拼贴。
 
 ![chlimage_1-1](assets/chlimage_1-1.gif)
 
-## 导入新集合{#importing-a-new-collection}
+## 导入新收藏集 {#importing-a-new-collection}
 
 现有的Mobile On-Demand内容可以从Mobile On-Demand下载（导入）到AEM。 这允许编辑和查看本地内容。
 
@@ -66,49 +63,49 @@ ht-degree: 2%
 导入新收藏集的工作流
 
 1. 在移动设备中，从目录中选择您的移动按需应用程序。
-1. 单击&#x200B;**管理收藏集**&#x200B;拼贴右上角的向下箭头，然后选择“导入收藏集”。
-1. 单击对话框中的&#x200B;**导入收藏集** ，然后单击关闭。
-1. 您的Mobile On-Demand收藏集现在显示在&#x200B;**管理收藏集**&#x200B;拼贴中。
+1. 单击 **管理收藏集** 拼贴，然后选择“导入收藏集”。
+1. 单击 **导入收藏集** ，然后单击关闭。
+1. 您的Mobile On-Demand收藏集现在显示在 **管理收藏集** 拼贴。
 
 >[!CAUTION]
 >
 >您必须先关联Mobile On-Demand连接。
 
-## 编辑集合{#editing-a-collection}
+## 编辑收藏集 {#editing-a-collection}
 
 使用AEM中内置的拖放编辑器来添加或更改文章。 可以添加/删除文本和图像等组件。 可以插入DAM资产中的图像。
 
 编辑收藏集的工作流：
 
 1. 在移动设备中，从目录中选择您的移动按需应用程序。
-1. 从&#x200B;**管理收藏集**&#x200B;拼贴中选择源于AEM的文章。
+1. 从中选择源于AEM的文章 **管理收藏集** 拼贴。
 1. 从列表视图中单击突出显示的收藏集，以在内容编辑器中将其打开。
 1. 使用内容编辑器拖动收藏内容（手稿、图像、文本等）。
 
-### 查看和编辑集合{#viewing-and-editing-the-metadata-within-a-collection}中的元数据
+### 查看和编辑收藏集中的元数据 {#viewing-and-editing-the-metadata-within-a-collection}
 
 收藏集具有许多属性，如标题、描述、图像。 此操作用于查看和修改此类属性。 （可选）保存后，这些更改可以上传到Mobile On-Demand。
 
 查看/编辑收藏集的常规工作流：
 
 1. 在移动设备中，从目录中选择您的移动按需应用程序。
-1. 从&#x200B;**管理收藏集**&#x200B;拼贴中选择一个收藏集。
+1. 从 **管理收藏集** 拼贴。
 
-1. 从操作栏中选择&#x200B;**属性**。
+1. 选择 **属性** 中。
 1. 查看该文章的所有可用元数据。
-1. 根据需要编辑元数据，完成后单击&#x200B;**保存**。
+1. 根据需要编辑元数据，然后单击 **保存** 完成时。
 1. （可选）立即将更改上传到Mobile On-Demand。
 
-## 上传集合{#uploading-a-collection}
+## 上传收藏集 {#uploading-a-collection}
 
 上传操作会复制选定的内容并将其添加到Mobile On-Demand项目。 现有的Mobile On-Demand内容将被新版本替换。
 
 上传收藏集的常规工作流：
 
-1. 从&#x200B;**Mobile**&#x200B;中，从目录中选择您的Mobile On-Demand应用程序。
-1. 在&#x200B;**管理收藏集**&#x200B;拼贴中，选择要上传到Mobile On-Demand的文章。
+1. 从 **移动设备**，请从目录中选择您的Mobile On-Demand应用程序。
+1. 在 **管理收藏集** 拼贴中，选择要上传到Mobile On-Demand的文章。
 1. 根据需要从列表视图添加更多收藏集。
-1. 从操作栏中选择&#x200B;**Upload** ，然后在对话框中单击Upload。
+1. 选择 **上传** 在操作栏中，单击对话框中的上传。
 1. 您的收藏集现已上传到Mobile On-Demand。
 
 ## 删除收藏集 {#deleting-a-collection}
@@ -118,14 +115,14 @@ ht-degree: 2%
 删除收藏集的常规工作流：
 
 1. 在移动设备中，从目录中选择您的移动按需应用程序。
-1. 在&#x200B;**管理收藏集**&#x200B;拼贴中选择要删除的文章。
+1. 在 **管理收藏集** 拼贴。
 1. 确保在列表中选择了该选件（根据需要选择其他要删除组件）。
-1. 单击操作栏中的&#x200B;**删除**。
+1. 单击 **删除** 中。
 1. 检查是否要从AEM和Mobile On-Demand中删除。
 1. 单击&#x200B;**删除**。
 1. 您的收藏集现已从列表中删除。
 
-## 向收藏集添加内容{#adding-content-to-collections}
+## 将内容添加到收藏集 {#adding-content-to-collections}
 
 收藏集本质上是相关内容的一类。 它们将文章、横幅等内容收集到用于定义应用程序导航结构的包中。 可以嵌套收藏集。
 
@@ -139,13 +136,13 @@ ht-degree: 2%
 1. 选择之前上传的文章（或横幅/收藏集）
 1. 从操作栏中选择添加到。
 1. 从对话框中选择之前上传的收藏集。
-1. 单击&#x200B;**Update**&#x200B;以向集合添加内容。
+1. 单击 **更新** 向集合添加内容。
 
 ![chlimage_1-2](assets/chlimage_1-2.gif)
 
 ### 后续步骤 {#the-next-steps}
 
-在您了解如何管理收藏集时，请参阅
+在了解如何管理收藏集时，请参阅
 
 * [管理横幅](/help/mobile/mobile-on-demand-managing-banners.md)
 * [管理文章](/help/mobile/mobile-on-demand-managing-articles.md)

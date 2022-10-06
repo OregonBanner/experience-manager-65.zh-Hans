@@ -36,7 +36,7 @@ ht-degree: 1%
 
 总之，以下是使用智能内容服务的主要步骤：
 
-* 入门
+* 新用户引导
 * 审核资产和标记（分类定义）
 * 培训智能内容服务
 * 自动标记
@@ -78,7 +78,7 @@ ht-degree: 1%
 * `image/pjpeg`
 * `image/png`
 
-## 入门 {#onboarding}
+## 新用户引导 {#onboarding}
 
 智能内容服务可作为的加载项进行购买 [!DNL Experience Manager]. 购买后，系统会向贵组织的管理员发送一封电子邮件，其中包含指向 [!DNL Adobe I/O].
 

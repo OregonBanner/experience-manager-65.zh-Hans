@@ -1,8 +1,8 @@
 ---
 title: AEM Mobile应用程序功能板
-seo-title: AEM Mobile应用程序功能板
+seo-title: AEM Mobile Application Dashboard
 description: 您可以从AEM Mobile应用程序功能板或控制中心管理您的应用程序和移动设备应用程序内容。 请阅读本页以了解更多信息。
-seo-description: 您可以从AEM Mobile应用程序功能板或控制中心管理您的应用程序和移动设备应用程序内容。 请阅读本页以了解更多信息。
+seo-description: You can manage your application and mobile app content from AEM Mobile Application Dashboard or the Control Center. Follow this page to learn more.
 uuid: 0d182989-eb83-4207-a8e0-050edbf98ff9
 contentOwner: User
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 exl-id: daafc8b8-3c01-4c97-a14b-f1b706600249
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '597'
 ht-degree: 3%
 
 ---
 
-# AEM Mobile应用程序功能板{#aem-mobile-application-dashboard}
+# AEM Mobile应用程序功能板 {#aem-mobile-application-dashboard}
 
 >[!NOTE]
 >
@@ -37,9 +37,9 @@ ht-degree: 3%
 
 最后，管理员可以战略性地发布更新的应用程序内容。
 
-## 管理应用程序磁贴{#the-manage-app-tile}
+## 管理应用程序拼贴 {#the-manage-app-tile}
 
-**管理应用程序**&#x200B;拼贴显示可用的应用程序信息：
+的 **管理应用程序** 拼贴显示可用的应用程序信息：
 
 * 标题
 * 描述
@@ -49,9 +49,9 @@ ht-degree: 3%
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 
-## 管理连接磁贴{#the-manage-connection-tile}
+## 管理连接拼贴 {#the-manage-connection-tile}
 
-**管理连接**&#x200B;拼贴显示AEM Mobile On-demand Services连接信息：
+的 **管理连接** 磁贴显示AEM Mobile On-demand Services连接信息：
 
 * 库配置名称
 * 项目名称和ID
@@ -61,11 +61,11 @@ ht-degree: 3%
 >
 >单击右上方的齿轮以设置Mobile On-Demand Cloud配置。
 >
->有关详细信息，请参阅[配置Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)。
+>请参阅 [配置Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) 以了解详细信息。
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-## 管理实体{#managing-entities}
+## 管理实体 {#managing-entities}
 
 这3个图块提供了应用程序内容状态的概述：
 
@@ -75,9 +75,9 @@ ht-degree: 3%
 
 通过单击右下角的省略号(...)，每个拼贴都可以展开以提供更加详细的列表视图。 这些列表视图提供了一种访问常见的“按需移动设备”操作（如删除、上传和编辑属性）的替代方法。
 
-### 管理横幅拼贴{#the-manage-banners-tile}
+### 管理横幅拼贴 {#the-manage-banners-tile}
 
-使用&#x200B;**管理横幅**&#x200B;拼贴可管理横幅的内容。 将为横幅显示以下信息：
+的 **管理横幅** 利用拼贴可管理横幅的内容。 将为横幅显示以下信息：
 
 * 图像
 * **标题**:横幅的名称
@@ -86,17 +86,17 @@ ht-degree: 3%
 * **已发布**:上次发布的请求表AEM
 * **来源**:源(AEM本地或远程来自Mobile On Demand)
 
-下图显示了AEM Mobile应用程序功能板中的&#x200B;**管理横幅**&#x200B;拼贴：
+下图显示了 **管理横幅** AEM Mobile应用程序功能板中的拼贴：
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
 >[!NOTE]
 >
->请参阅&#x200B;**[管理横幅](/help/mobile/mobile-on-demand-managing-banners.md)**&#x200B;以创建、删除或更新横幅。
+>请参阅 **[管理横幅](/help/mobile/mobile-on-demand-managing-banners.md)** 用于创建、删除或更新横幅。
 
-### 管理文章拼贴{#the-manage-articles-tile}
+### 管理文章拼贴 {#the-manage-articles-tile}
 
-使用&#x200B;**管理文章**&#x200B;拼贴可管理文章的内容。 将为文章显示以下信息：
+的 **管理文章** 利用拼贴可管理文章的内容。 将为文章显示以下信息：
 
 * 图像
 * **标题**:文章的名称
@@ -105,17 +105,17 @@ ht-degree: 3%
 * **已发布**:上次发布的请求表AEM
 * **来源**:源(AEM本地或远程来自Mobile On-Demand)
 
-下图显示了AEM Mobile应用程序功能板中的&#x200B;**管理文章**&#x200B;拼贴：
+下图显示了 **管理文章** AEM Mobile应用程序功能板中的拼贴：
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
 >[!NOTE]
 >
->请参阅&#x200B;[**管理文章**](/help/mobile/mobile-on-demand-managing-articles.md)，以了解如何创建、删除或更新文章。
+>请参阅 [**管理文章**](/help/mobile/mobile-on-demand-managing-articles.md) 用于创建、删除或更新文章。
 
-### 管理收藏集拼贴{#the-manage-collections-tile}
+### 管理收藏集拼贴 {#the-manage-collections-tile}
 
-使用&#x200B;**管理收藏集**&#x200B;拼贴可管理收藏集的内容。 收藏集会显示以下信息：
+的 **管理收藏集** 利用拼贴，可管理集合的内容。 收藏集会显示以下信息：
 
 * 图像
 * **标题**:集合的名称
@@ -124,13 +124,13 @@ ht-degree: 3%
 * **已发布**:上次发布的请求表AEM
 * **来源**:源(AEM本地或远程来自Mobile On-Demand)
 
-下图显示了AEM Mobile应用程序功能板中的&#x200B;**管理收藏集**&#x200B;拼贴：
+下图显示了 **管理收藏集** AEM Mobile应用程序功能板中的拼贴：
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
 >[!NOTE]
 >
->请参阅&#x200B;**[管理收藏集](/help/mobile/mobile-on-demand-managing-collections.md)**&#x200B;以创建、删除或更新收藏集。
+>请参阅 **[管理收藏集](/help/mobile/mobile-on-demand-managing-collections.md)** 用于创建、删除或更新收藏集。
 
 ### 后续步骤 {#the-next-steps}
 

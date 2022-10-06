@@ -104,7 +104,6 @@ ht-degree: 16%
 >
 >* 要通过触发概览来为视频添加交互性。
 >* 您的Experience Manager实施可以 *not* 使用电子商务集成框架，将产品数据从任何电子商务解决方案(如IBM® WebSphere® Commerce、Elastic Path、Hybris或Intershop)提取到Experience Manager中。 请参阅 [Experience Manager Assets中的电子商务概念](/help/commerce/cif-classic/administering/concepts.md).
-
 >
 >如果您的Experience Manager实施使用电子商务，则可以跳过此任务并继续执行下一项任务。
 
@@ -317,11 +316,11 @@ ht-degree: 16%
         </tr>
         <tr>
         <td>3分钟或更多</td>
-        <td>60秒</td>
+        <td>60 秒</td>
         </tr>
         <tr>
         <td>2-3分钟</td>
-        <td>30秒</td>
+        <td>30 秒</td>
         </tr>
         <tr>
         <td>1-2 分钟</td>
@@ -329,11 +328,11 @@ ht-degree: 16%
         </tr>
         <tr>
         <td>30-60秒</td>
-        <td>10秒</td>
+        <td>10 秒</td>
         </tr>
         <tr>
         <td>30秒或更少</td>
-        <td>5秒</td>
+        <td>5 秒</td>
         </tr>
       </tbody>
     </table>
@@ -781,6 +780,6 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
-## 使用概览创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
+## 使用 Quickview 创建自定义弹出窗口 {#using-quickviews-to-create-custom-pop-ups}
 
 请参阅 [使用概览创建自定义弹出窗口](/help/assets/custom-pop-ups.md).

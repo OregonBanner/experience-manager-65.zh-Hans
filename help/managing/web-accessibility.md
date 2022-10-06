@@ -11,7 +11,7 @@ ht-degree: 70%
 
 # AEM 和 Web 辅助功能规范{#aem-and-the-web-accessibility-guidelines}
 
-出于许多社会、经济和法律动因，需要确保 Web 内容尽可能设计地能够让任何目标受众访问，而无论他们具有任何缺陷或限制。因此，使用Adobe Experience Manager(AEM)进行Web无障碍是良好Web设计中一个越来越重要的方面。
+出于许多社会、经济和法律动因，在设计 Web 内容时需要确保尽可能让任何目标受众都可以访问，不论他们是否身有残疾或受任何限制。因此，使用Adobe Experience Manager(AEM)进行Web无障碍是良好Web设计中一个越来越重要的方面。
 
 创建具有AEM影响的无障碍网站和内容：
 
@@ -23,11 +23,11 @@ ht-degree: 70%
 
 * 在实施网站设计时，模板开发人员还应注意到此类问题。
 
-Adobe Experience Manager与[万维网联盟](#world-wide-web-consortium)提供的[准则](#wcag-accessibility-guidelines)配合使用。
+Adobe Experience Manager与 [准则](#wcag-accessibility-guidelines) 由提供 [万维网联盟](#world-wide-web-consortium).
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅 [Adobe 解决方案的“无障碍合规性”报告](https://www.adobe.com/accessibility/compliance.html)。
+>有关更多详细信息，请参阅 [Adobe 解决方案的“无障碍合规性”报告](https://www.adobe.com/cn/accessibility/compliance.html)。
 
 ## 万维网联盟 {#world-wide-web-consortium}
 
@@ -47,11 +47,11 @@ WCAG 2.1 提供了[涵盖无障碍级别和如何符合这些级别的准则（�
 
 * [创建无障碍内容](/help/sites-authoring/creating-accessible-content.md)详细介绍了这些内容与 AEM 的关系。
 
-* [配置富文本编辑器以制作无障碍站](/help/sites-administering/rte-accessible-content.md)
-点准则关于管理员如何配置AEM以制作无障碍内容的准则。
+* [配置富文本编辑器以创建无障碍站点](/help/sites-administering/rte-accessible-content.md)
+关于管理员如何配置AEM以制作无障碍内容的准则。
 
-* [创建无障碍自](/help/forms/using/creating-accessible-adaptive-forms.md)
-适应表单AdobeExperience Manager(AEM)包含许多特性和功能，可增强具有不同功能的用户的自适应表单的可用性。该解决方案还帮助表单作者创建无障碍的自适应表单。
+* [创建无障碍的自适应Forms](/help/forms/using/creating-accessible-adaptive-forms.md)
+Adobe Experience Manager(AEM)包含许多特性和功能，可增强具有不同功能的用户自适应表单的可用性。 该解决方案还帮助表单作者创建无障碍的自适应表单。
 
 >[!NOTE]
 >
@@ -59,4 +59,4 @@ WCAG 2.1 提供了[涵盖无障碍级别和如何符合这些级别的准则（�
 
 ## Adobe 辅助功能 {#accessibility-at-adobe}
 
-有关其他信息，请访问 [Adobe 辅助功能资源中心](https://www.adobe.com/accessibility/)。
+有关其他信息，请访问 [Adobe 辅助功能资源中心](https://www.adobe.com/cn/accessibility/)。

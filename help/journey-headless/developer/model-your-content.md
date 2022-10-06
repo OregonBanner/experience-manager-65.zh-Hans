@@ -1,10 +1,11 @@
 ---
 title: 如何对内容进行建模
 description: 在AEM无头开发人员历程的这一部分中，了解如何使用内容片段模型和内容片段的内容建模来为AEM无头交付构建内容模型。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1826'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -241,7 +242,7 @@ AEM提供了以下数据类型来为内容建模：
 * 关联内容.
 * 编辑元数据。
 * 显示树结构。
-* 预览JSON表示形式。
+* 预览 JSON 表示形式.
 
 ### 创建内容片段 {#creating-content-fragments}
 

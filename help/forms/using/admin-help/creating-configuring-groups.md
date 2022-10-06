@@ -1,8 +1,8 @@
 ---
 title: 创建和配置组
-seo-title: 创建和配置组
+seo-title: Creating and configuring groups
 description: 了解如何手动或动态创建群组、编辑群组、查看群组详细信息或删除群组。
-seo-description: 了解如何手动或动态创建群组、编辑群组、查看群组详细信息或删除群组。
+seo-description: Learn how to create groups manually or dynamically, edit a group, view details about a group, or delete a group.
 uuid: 8532d72b-270a-4fcf-b7a5-56fca979a5fe
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 2058b501-65ce-4ad3-8e1b-b2eab896f70f
 exl-id: 72edd8d1-8573-4942-8ced-1a100af58d78
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 可以使用两种不同类型的组。 您可以手动创建群组，并将用户和其他群组添加到该群组。 您还可以创建动态组，以自动包含满足一组指定规则的所有用户。
 
-如果用户属于多个组（例如，500个或更多组），或者如果这些组深度嵌套（例如，30个级别），则响应时间可能会变慢。 如果您遇到此问题，可以将AEM表单配置为从某些域预取信息。 (请参阅[配置AEM表单以预取域信息](/help/forms/using/admin-help/configure-aem-forms-prefetch-domain.md#configure-aem-forms-to-prefetch-domain-information)。)
+如果用户属于多个组（例如，500个或更多组），或者如果这些组深度嵌套（例如，30个级别），则响应时间可能会变慢。 如果您遇到此问题，可以将AEM表单配置为从某些域预取信息。 (请参阅 [配置AEM表单以预取域信息](/help/forms/using/admin-help/configure-aem-forms-prefetch-domain.md#configure-aem-forms-to-prefetch-domain-information).)
 
-## 手动创建组{#create-a-group-manually}
+## 手动创建群组 {#create-a-group-manually}
 
 手动创建群组时，您可以向其添加用户和其他群组，并为群组分配角色。 您还可以将群组与父群组关联。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
    规范名称是组的唯一标识符。 域中的每个组和用户都必须具有唯一的规范名称。 选中系统生成复选框，让用户管理分配唯一值，或清除该复选框并为规范名称指定自定义值。
 
-   避免在规范名称中使用下划线字符(_)，例如`sample_group`。 根据组的规范名称搜索组时，不会返回包含下划线字符的组。
+   避免在规范名称中使用下划线字符(_)，例如， `sample_group`. 根据组的规范名称搜索组时，不会返回包含下划线字符的组。
 
 1. 要将用户和组添加到此新组，请单击查找用户/组并执行以下任务：
 
@@ -57,31 +57,31 @@ ht-degree: 0%
 1. 要为组分配角色，请单击“查找角色”，选中要分配给组的每个角色对应的复选框，然后单击“确定”。 组中的用户将继承在组级别分配的角色。
 1. 单击“完成”。
 
-## 创建动态组{#create-a-dynamic-group}
+## 创建动态组 {#create-a-dynamic-group}
 
 在动态组中，您不会单独选择属于该组的用户。 相反，您会指定一组规则，并且符合这些规则的所有用户都会自动添加到动态组中。
 
 使用以下两种方式之一创建动态组：
 
-* 允许根据电子邮件域(如@adobe.com)自动创建动态组。 启用此功能后，用户管理会为AEM Forms数据库中的每个唯一电子邮件域创建一个动态组。 使用cron表达式指定用户管理在AEM表单数据库中搜索新电子邮件域的频率。 这些动态组将添加到DefaultDom本地域，并命名为“所有具有&#x200B;*`[email domain]`*&#x200B;邮件ID的用户”。
+* 允许根据电子邮件域(如@adobe.com)自动创建动态组。 启用此功能后，用户管理会为AEM Forms数据库中的每个唯一电子邮件域创建一个动态组。 使用cron表达式指定用户管理在AEM表单数据库中搜索新电子邮件域的频率。 这些动态组将添加到DefaultDom本地域，并命名为“All users with *`[email domain]`* 邮件ID。”
 * 根据指定的条件（包括用户的电子邮件域、描述、规范名称和域名）创建动态组。 要属于动态组，用户必须满足所有指定的标准。 要设置“或”条件，请创建两个单独的动态组，并将它们都添加到本地组。 例如，使用这种方法可创建一组属于@adobe.com电子邮件域或其规范名称包含ou=adobe.com的用户。 但是，用户不一定必须满足这两个条件。
 
 动态组仅包含用户。 不能包含其他组。 但是，动态组可以属于父组。
 
-### 根据电子邮件域{#automatically-create-dynamic-groups-based-on-email-domains}自动创建动态组
+### 根据电子邮件域自动创建动态组 {#automatically-create-dynamic-groups-based-on-email-domains}
 
 1. 在管理控制台中，单击设置>用户管理>配置>配置高级系统属性。
 1. 在“自动创建动态组”(Auto Creation of Dynamic Group)下，选中复选框。
 1. 指定用户管理器何时检查新的电子邮件域。 此时间应该在域同步时间之后，因为只有在域同步完成后，才会逻辑创建动态组。
 
    * 要每天启用自动同步，请在“每日发生次数”框中以24小时格式键入时间。 保存设置时，此值将转换为cron表达式，该表达式显示在下方的框中。
-   * 要计划在一周或月的特定日期或特定月的同步，请在框中键入相应的cron表达式。 默认值为`0 00 4 ? * *`（即每天凌晨4点检查）。
+   * 要计划在一周或月的特定日期或特定月的同步，请在框中键入相应的cron表达式。 默认值为 `0 00 4 ? * *`（这意味着每天凌晨4点检查）。
 
       cron表达式的使用基于Quartz开源作业调度系统1.4.0版。
 
-1. 单击保存。
+1. 单击“保存”。
 
-### 根据指定的标准{#create-a-dynamic-group-based-on-specified-criteria}创建动态组
+### 根据指定的条件创建动态组 {#create-a-dynamic-group-based-on-specified-criteria}
 
 1. 在管理控制台中，单击设置>用户管理>用户和群组。
 1. 单击新建动态组。
@@ -92,13 +92,13 @@ ht-degree: 0%
    >
    >使用Equals运算符时，电子邮件、描述和规范名称属性区分大小写。 对于“开头为”、“结尾为”或“包含”运算符，它们不区分大小写。
 
-   **电子邮件：** 用户的电子邮件域，如 `@adobe.com`。
+   **电子邮件：** 用户的电子邮件域，如 `@adobe.com`.
 
-   **描述：** 用户的描述，如“计算机科学家”
+   **描述：** 用户描述，如“计算机科学家”
 
-   **规范名称：** 用户的规范名称，例如  `ou=adobe.com`
+   **规范名称：** 用户的规范名称，如 `ou=adobe.com`
 
-   **域名：** 用户所属域的名称，如 `DefaultDom`。使用Contains运算符时， Domain Name属性区分大小写。 对于Starts With、Ends With或Equals运算符，此变量不区分大小写。
+   **域名：** 用户所属域的名称，如 `DefaultDom`. 使用Contains运算符时， Domain Name属性区分大小写。 对于Starts With、Ends With或Equals运算符，此变量不区分大小写。
 
 1. 单击测试。 测试页面会显示符合定义标准的前200位用户。 单击关闭。
 1. 如果测试返回预期结果，请单击“下一步”。 否则，请编辑动态组标准并再次进行测试。
@@ -112,14 +112,14 @@ ht-degree: 0%
 1. 要为动态组分配角色，请单击“查找角色”，选中要分配给该组的每个角色对应的复选框，然后单击“确定”。 组中的用户将继承在组级别分配的角色。
 1. 单击“完成”。
 
-## 查看有关组{#view-details-about-a-group}的详细信息
+## 查看有关群组的详细信息 {#view-details-about-a-group}
 
 1. 在管理控制台中，单击设置>用户管理>用户和群组。
 1. 在“在”列表中，选择“组”，然后单击“查找”。 搜索结果列在页面底部。 您可以通过单击任意列标题对列表进行排序。
 1. 单击群组的名称可显示有关的详细信息。 此时将显示“组详细信息”页。
 1. 要查看组的直接成员，请单击“子承担者”(Child Principals)。
 
-## 编辑组{#edit-a-group}
+## 编辑群组 {#edit-a-group}
 
 1. 在管理控制台中，单击设置>用户管理>用户和群组。
 1. 要查找要编辑的组，请执行以下任务：
@@ -149,7 +149,7 @@ ht-degree: 0%
    * 要添加角色，请选中该角色的复选框，单击确定，然后单击保存。
    * 要取消分配角色，请选中该角色的复选框，单击取消分配，然后单击保存。
 
-## 删除组{#delete-a-group}
+## 删除群组 {#delete-a-group}
 
 1. 在管理控制台中，单击设置>用户管理>用户和群组。
 1. 在“查找”列表中，选择“组”，然后单击“查找”。

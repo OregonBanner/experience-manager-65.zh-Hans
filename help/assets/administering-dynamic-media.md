@@ -11,11 +11,11 @@ feature: Configuration
 source-git-commit: 8353e6fcc76dd63a0816babbe593f474abbc4508
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
-# 设置Dynamic Media {#setting-up-dynamic-media}
+# 设置 Dynamic Media {#setting-up-dynamic-media}
 
 [Dynamic Media 可按需提供丰富的产品销售和市场营销可视资产，还能根据 Web、移动设备、社交网站等不同销售渠道的各种需求自动调整资产供应情况，是您资产管理工作的得力助手。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)Dynamic Media使用一组主源资产，通过其全球、可扩展、性能优化的网络，实时生成并传送多种丰富内容变体。
 

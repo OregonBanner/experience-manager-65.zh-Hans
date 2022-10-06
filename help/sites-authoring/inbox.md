@@ -1,8 +1,8 @@
 ---
 title: 您的收件箱
-seo-title: 您的收件箱
+seo-title: Your Inbox
 description: 使用收件箱管理您的任务
-seo-description: 使用收件箱管理您的任务
+seo-description: Managing your tasks with the inbox
 uuid: ddd48019-ce69-4a47-be2b-5b66ae2fe3c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 76%
+source-wordcount: '1140'
+ht-degree: 77%
 
 ---
 
@@ -45,10 +45,10 @@ ht-degree: 76%
 >有关这些项目类型的更多信息，另请参阅：
 >
 >* [项目](/help/sites-authoring/touch-ui-managing-projects.md)
-* [项目 - 处理任务](/help/sites-authoring/task-content.md)
-* [工作流](/help/sites-authoring/workflows.md)
-* [表单](/help/forms/home.md)
-
+>* [项目 - 处理任务](/help/sites-authoring/task-content.md)
+>* [工作流](/help/sites-authoring/workflows.md)
+>* [Forms](/help/forms/home.md)
+>
 
 
 ## 标题中的收件箱 {#inbox-in-the-header}
@@ -58,9 +58,10 @@ ht-degree: 76%
 ![wf-80](assets/wf-80.png)
 
 >[!NOTE]
-某些操作也将显示在[相应资源的卡片视图](/help/sites-authoring/basic-handling.md#card-view)中。
+>
+>某些操作也将显示在[相应资源的卡片视图](/help/sites-authoring/basic-handling.md#card-view)中。
 
-## 现成的管理任务   {#out-of-the-box-administrative-tasks}
+## 现成的管理任务  {#out-of-the-box-administrative-tasks}
 
 AEM 预先加载了四项分配给管理员用户组的现成任务。
 
@@ -83,15 +84,16 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
    ![wf-79](assets/inbox-list-view.png)
 
 >[!NOTE]
-收件箱作为控制台运行，因此当您完成操作后，可使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)或[搜索](/help/sites-authoring/search.md)导航到其他位置。
+>
+>收件箱作为控制台运行，因此当您完成操作后，可使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)或[搜索](/help/sites-authoring/search.md)导航到其他位置。
 
-### 收件箱 - 列表视图 {#inbox-list-view}
+### 收件箱 – 列表视图 {#inbox-list-view}
 
 该视图可列出所有项目以及重要相关信息：
 
 ![wf-82](assets/wf-82.png)
 
-### 收件箱 - 日历视图 {#inbox-calendar-view}
+### 收件箱 – 日历视图 {#inbox-calendar-view}
 
 该视图可根据项目在日历中的位置以及您选择的精确视图来显示这些项目：
 
@@ -108,7 +110,7 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
 ![wf-91](assets/wf-91.png)
 
-### 收件箱 — 设置{#inbox-view-settings}
+### 收件箱 — 设置 {#inbox-view-settings}
 
 对于这两个视图（列表和日历），您可以定义设置：
 
@@ -131,7 +133,7 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
    ![wf-83](assets/inbox-settings.png)
 
-### 收件箱 — 管理员控制{#inbox-admin-control}
+### 收件箱 — 管理员控制 {#inbox-admin-control}
 
 通过“管理控制”选项，管理员可以：
 
@@ -141,30 +143,31 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
 * 控制标题中可用导航链接的显示
 
-“管理控制”选项仅对`administrators`或`workflow-administrators`组的成员可见。
+“管理控制”选项仅对 `administrators` 或 `workflow-administrators` 群组。
 
 * **列自定义**:自定义AEM收件箱以更改列的默认标题、重新排序列的位置，并根据工作流的数据显示其他列。
    * **添加列**:选择要添加到AEM收件箱中的列。
-   * **编辑列**:将鼠标悬停在列标题上，然后点 ![](assets/edit.svg) 按编辑键以输入列显示名称。
-   * **删除列**:点按删 ![](assets/delete_updated.svg) 除图标，以从AEM收件箱中删除列。
-   * **移动列**:拖动 ![](assets/move_updated.svg) 移动图标以在AEM收件箱中将列移动到新位置。
+   * **编辑列**:将鼠标悬停在列标题上并点按 ![编辑](assets/edit.svg) 图标以输入列显示名称。
+   * **删除列**:点按 ![删除](assets/delete_updated.svg) 图标，以从AEM收件箱中删除列。
+   * **移动列**:拖动 ![移动](assets/move_updated.svg) 图标将列移动到AEM收件箱中的新位置。
 
    ![管理控制](assets/admin-control-column-customize.png)
 
 * **品牌化自定义**
 
-   * **自定义标题文本：** 指定要在标题中显示的文本，以替换默认的 **Adobe Experience** Manager文本。
+   * **自定义标题文本：** 指定要在标题中显示的文本以替换默认 **Adobe Experience Manager** 文本。
 
-   * **自定义徽标：** 指定要在标题中显示为徽标的图像。在数字资产管理(DAM)中上传图像，并在字段中引用该图像。
+   * **自定义徽标：** 指定要在标题中显示为徽标的图像。 在数字资产管理(DAM)中上传图像，并在字段中引用该图像。
 
 * **用户导航**
-   * **隐藏导航选项：** 选择此选项可隐藏标题中可用的导航选项。导航选项包括指向其他解决方案的链接、帮助链接以及点按Adobe Experience Manager徽标或文本时可用的创作选项。
+   * **隐藏导航选项：** 选择此选项可隐藏标题中可用的导航选项。 导航选项包括指向其他解决方案的链接、帮助链接以及点按Adobe Experience Manager徽标或文本时可用的创作选项。
 * **保存：** 点按/单击此选项以保存设置。
 
 ## 对某个项目执行操作 {#taking-action-on-an-item}
 
 >[!NOTE]
-尽管可以选择多个项目，但一次只能对一个项目执行操作。
+>
+>尽管可以选择多个项目，但一次只能对一个项目执行操作。
 
 
 1. 要对某个项目执行操作，请选择相应项目的缩略图。工具栏中将显示适用于该项目的操作图标：
@@ -185,8 +188,10 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
    * 从该项目创建一个项目.
 
    >[!NOTE]
-   有关更多信息，请参阅：
-   * 工作流项目 - [参与工作流](/help/sites-authoring/workflows-participating.md)
+   >
+   >有关更多信息，请参阅：
+   >
+   >* 工作流项目 - [参与工作流](/help/sites-authoring/workflows-participating.md)
 
 
 1. 根据所选项目，将会启动相应的操作；例如：
@@ -228,21 +233,23 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
    * **高级**
 
-      * **名称**:此URL将用于形成URL;如果留空，则将基于&#x200B;**标题**。
+      * **名称**:此URL将用于形成URL;如果为空，则将基于 **标题**.
 
    ![wf-87](assets/wf-87.png)
 
 1. 选择&#x200B;**提交**。
 
-## 创建项目  {#creating-a-project}
+## 创建项目 {#creating-a-project}
 
 对于某些任务，您可以创建一个基于该任务的[项目](/help/sites-authoring/projects.md)：
 
 1. 通过点按/单击缩略图选择相应的任务。
 
    >[!NOTE]
-   只有使用&#x200B;**收件箱**&#x200B;的&#x200B;**创建**&#x200B;选项创建的任务才能用于创建项目。
-   不能使用工作项（来自工作流）创建项目。
+   >
+   >只有使用&#x200B;**收件箱**&#x200B;的&#x200B;**创建**&#x200B;选项创建的任务才能用于创建项目。
+   >
+   >不能使用工作项（来自工作流）创建项目。
 
 1. 从工具栏中选择“**创建项目**”以打开向导。
 1. 选择相应的模板，然后选择&#x200B;**下一步**。
@@ -259,17 +266,18 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
 
       * **名称**
    >[!NOTE]
-   有关完整信息，请参阅[创建项目](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)。
+   >
+   >有关完整信息，请参阅[创建项目](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)。
 
 1. 选择&#x200B;**创建**&#x200B;以确认操作。
 
-## 筛选“AEM 收件箱”中的项目 {#filtering-items-in-the-aem-inbox}
+## 筛选 AEM 收件箱中的项目 {#filtering-items-in-the-aem-inbox}
 
 您可以筛选列出的项目：
 
 1. 打开 **AEM 收件箱**。
 
-1. 打开筛选器选择器：
+1. 打开过滤器选择器：
 
    ![wf-88](assets/wf-88.png)
 
@@ -278,4 +286,5 @@ AEM 预先加载了四项分配给管理员用户组的现成任务。
    ![wf-89](assets/wf-89.png)
 
    >[!NOTE]
-   通过[视图设置](#inbox-view-settings)，您还可以在使用[列表视图](#inbox-list-view)时配置排序顺序。
+   >
+   >通过[视图设置](#inbox-view-settings)，您还可以在使用[列表视图](#inbox-list-view)时配置排序顺序。

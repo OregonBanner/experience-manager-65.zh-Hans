@@ -1,18 +1,19 @@
 ---
 title: 内容片段结构树
-description: 使用AEM中内容片段编辑器的结构树功能，更好地了解您的无头内容。
+description: 使用 AEM 中内容片段编辑器的结构树功能，更好地了解您的 headless 内容。
 feature: Content Fragments
 role: User
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
+exl-id: 1cf8d3a3-1d9a-42fc-9da0-a20c65f021e4
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 0%
+ht-degree: 86%
 
 ---
 
 # 内容片段结构树 {#content-fragment-structure-tree}
 
-使用AEM中内容片段编辑器的结构树功能，更好地了解您的无头内容。
+使用 AEM 中内容片段编辑器的结构树功能，更好地了解您的 headless 内容。
 
 在内容片段编辑器中，您可以选择结构树图标：
 

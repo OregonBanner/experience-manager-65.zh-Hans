@@ -1,5 +1,5 @@
 ---
-title: AEM Tagging Framework
+title: AEM 标记框架
 seo-title: AEM Tagging Framework
 description: 标记内容并利用AEM标记基础结构
 seo-description: Tag content and leverage the AEM Tagging infrastructure
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ---
 
-# AEM Tagging Framework {#aem-tagging-framework}
+# AEM 标记框架 {#aem-tagging-framework}
 
 要标记内容并利用AEM标记基础结构，请执行以下操作：
 
@@ -183,7 +183,6 @@ TagID由 [命名空间](#tag-namespace) 后跟本地TagID。 [容器标记](#con
 >* 页面( `cq:Page`)其中 `jcr:content`节点类型 `cq:PageContent` 包括 `cq:Taggable` 混合。
 >
 >* 资产( `cq:Asset`)其中 `jcr:content/metadata` 节点始终具有 `cq:Taggable` 混合。
-
 >
 
 

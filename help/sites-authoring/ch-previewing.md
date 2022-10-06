@@ -1,8 +1,8 @@
 ---
 title: 使用 ContextHub 数据预览页面
-seo-title: 使用 ContextHub 数据预览页面
+seo-title: Previewing Pages Using ContextHub Data
 description: ContextHub 工具栏显示 ContextHub 存储区中的数据，并允许您更改存储区数据，该工具栏可用于预览内容
-seo-description: ContextHub 工具栏显示 ContextHub 存储区中的数据，并允许您更改存储区数据，该工具栏可用于预览内容
+seo-description: The ContextHub toolbar displays data from ContextHub stores and enables you to change store data and  is useful for previewing content
 uuid: 0150555a-0a92-4692-a706-bbe59fd34d6a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 93%
+source-wordcount: '365'
+ht-degree: 96%
 
 ---
 
@@ -44,13 +44,13 @@ ContextHub 工具栏在“预览”模式下可用。该工具栏仅在创作实
 
    ![](do-not-localize/screen_shot_2018-03-23at093621.png)
 
-## UI 模块功能  {#ui-module-features}
+## UI 模块功能 {#ui-module-features}
 
 每个 UI 模块都提供了不同的功能集，但以下类型的功能是通用的。由于 UI 模块是可扩展的，因此您的开发人员可以根据需要实现其他功能。
 
-### 工具栏内容  {#toolbar-content}
+### 工具栏内容 {#toolbar-content}
 
-UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的数据。UI模块使用图标和标题来标识自己。
+UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的数据。UI 模块使用图标和标题来标识自身。
 
 ![screen_shot_2018-03-23at093936](assets/screen_shot_2018-03-23at093936.png)
 
@@ -64,7 +64,7 @@ UI 模块可以在工具栏中显示一个或多个 ContextHub 存储区中的�
 
 模块的弹出覆盖窗口可以包含表单元素，使您能够更改 ContextHub 存储区中的数据。如果页面内容由存储区数据决定，您可以使用表单并观察页面内容的更改。
 
-### 全屏模式  {#fullscreen-mode}
+### 全屏模式 {#fullscreen-mode}
 
 弹出覆盖窗口可以包含一个图标，单击或点按该图标会展开弹出窗口内容以覆盖整个浏览器窗口或屏幕。
 

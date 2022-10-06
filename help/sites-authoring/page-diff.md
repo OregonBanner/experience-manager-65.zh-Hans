@@ -1,8 +1,8 @@
 ---
 title: 页面差异
-seo-title: 页面差异
+seo-title: Page Diff
 description: 通过页面差异功能，可以方便地将两个页面并排比较，并突出显示它们的差异。
-seo-description: 通过页面差异功能，可以方便地将两个页面并排比较，并突出显示它们的差异。
+seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
 uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 97%
+source-wordcount: '560'
+ht-degree: 99%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 97%
 >
 >请参阅[开发和页面差异](/help/sites-developing/pagediff.md#operation-details)，以了解有关此功能的更多技术详细信息。
 
-## 用法 {#use}
+## 使用 {#use}
 
 可以并排比较以下内容：
 
 * [版本](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - 将页面的以前版本与其当前状态进行比较
-* [](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)Live Copy - 将 Live Copy 与其 Blueprint 进行比较
-* [启动项](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - 将启动项与其源进行比较
-* [](/help/sites-administering/tc-manage.md#comparing-language-copies)语言副本 - 将翻译之前和翻译之后（重新翻译）的页面进行比较
+* [Live Copy](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) – 将 Live Copy 与其 Blueprint 进行比较
+* [启动项](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) – 将启动项与其源进行比较
+* [语言副本](/help/sites-administering/tc-manage.md#comparing-language-copies) – 将翻译之前和翻译之后（重新翻译）的页面进行比较
 
 请参阅有关如何在这些情况下启动差异比较的相关主题。
 
-### 差异表示形式  {#presentation-of-differences}
+### 差异表示形式 {#presentation-of-differences}
 
 无论比较何种内容，差异的表示形式都保持相同。
 
@@ -70,7 +70,7 @@ ht-degree: 97%
 >
 >在比较语言副本时，会取消激活突出显示功能，因为在翻译中，所有内容都会发生更改，突出显示没有任何用处。
 
-### 全屏和退出  {#fullscreen-and-exiting}
+### 全屏和退出 {#fullscreen-and-exiting}
 
 为了集中查看特定内容，您可以单击并排差异比较任何一侧的全屏图标，以将其放大到整个浏览器窗口。
 
@@ -91,10 +91,10 @@ ht-degree: 97%
 在某些情况下，页面差异功能可能检测不到预期的差异。
 
 * 在比较版本和启动项时，差异不会考虑动态组件，如痕迹导航、菜单、产品列表或徽标（依赖站点结构呈现其内容的组件）。
-* 对于版本，差异不会重新创建访问控制策略和Live Copy关系。
+* 对于版本，差异不会重新创建访问控制策略和 Live Copy 关系。
 * 如果页面发生移动，将无法再使用移动前制作的任何版本执行差异。
 
-   * 如果您遇到差异问题，请检查页面的[时间轴](/help/sites-authoring/basic-handling.md#timeline)以查看页面是否已被移动。
+   * 如果您遇到差异问题，请检查页面的[时间线](/help/sites-authoring/basic-handling.md#timeline)以查看页面是否已被移动。
 
 >[!NOTE]
 >

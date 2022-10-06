@@ -1,8 +1,8 @@
 ---
 title: 组件侧加载
-seo-title: 组件侧加载
+seo-title: Component Sideloading
 description: 将网页设计为简单的单页应用程序时，如果该应用程序会根据网站访客选择的内容动态更改显示的内容，则社区组件会侧加载非常有用
-seo-description: 将网页设计为简单的单页应用程序时，如果该应用程序会根据网站访客选择的内容动态更改显示的内容，则社区组件会侧加载非常有用
+seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
 uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 exl-id: 960e132c-b370-43d1-bd8f-e7d0ded7c0b3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
 
-# 组件侧加载{#component-sideloading}
+# 组件侧加载 {#component-sideloading}
 
 ## 概述 {#overview}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 1. [将组件添加到DOM](#dynamically-add-component-to-dom)
 
-1. [使用以下](#sideload-by-invoking-scf) 两种方法之一侧载组件：
+1. [侧载组件](#sideload-by-invoking-scf) 使用以下两种方法之一：
 
 * [动态包含](#dynamic-inclusion)
    * 引导所有动态添加的组件
@@ -42,13 +42,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->不支持对[非现有资源](scf.md#add-or-include-a-communities-component)进行侧加载。
+>副加载 [非现有资源](scf.md#add-or-include-a-communities-component) 不支持。
 
 ## 将组件动态添加到DOM {#dynamically-add-component-to-dom}
 
 无论组件是动态包含的还是动态加载的，都必须先将其添加到DOM中。
 
-添加SCF组件时，最常用的标记是DIV标记，但也可能使用其他标记。 由于SCF仅在页面最初加载时才检查DOM，因此在明确调用SCF之前，DOM的这一附加内容不会被注意。
+添加SCF组件时，最常用的标记是DIV标记，但也可以使用其他标记。 由于SCF仅在页面最初加载时才检查DOM，因此在明确调用SCF之前，DOM的这一附加内容不会被注意。
 
 无论使用什么标记，元素都必须至少符合正常的SCF根元素模式，方法是包含以下两个属性：
 
@@ -71,9 +71,9 @@ ht-degree: 0%
 </div>
 ```
 
-## 通过调用SCF {#sideload-by-invoking-scf}进行侧载
+## 通过调用SCF进行侧载 {#sideload-by-invoking-scf}
 
-### 动态包含{#dynamic-inclusion}
+### 动态包含 {#dynamic-inclusion}
 
 动态包含使用引导请求，导致SCF检查DOM并引导页面上找到的所有SCF组件。
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 `$(document).trigger(SCF.events.BOOTSTRAP_REQUEST);`
 
-### 动态加载{#dynamic-loading}
+### 动态加载 {#dynamic-loading}
 
 动态加载可以控制对SCF组件的加载。
 
@@ -89,4 +89,4 @@ ht-degree: 0%
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-其中`someId`是`data-component-id`属性的值。
+其中 `someId` 是 `data-component-id` 属性。

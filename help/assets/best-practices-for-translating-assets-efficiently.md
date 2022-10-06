@@ -3,20 +3,20 @@ title: 翻译资产的最佳实践
 description: 有效管理资产的最佳实践，可同步各种翻译版本并简化翻译工作流程。
 contentOwner: AG
 role: Admin
-feature: 资产管理
+feature: Asset Management
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '416'
 ht-degree: 1%
 
 ---
 
 # 翻译资产的最佳实践 {#best-practices-for-translating-assets-efficiently}
 
-[!DNL Adobe Experience Manager Assets] 支持多语言工作流，将数字资产的二进制文件、元数据和标记翻译为多个区域设置，并管理已翻译的资产。有关详细信息，请参阅[多语言资产](multilingual-assets.md)。
+[!DNL Adobe Experience Manager Assets] 支持多语言工作流，将数字资产的二进制文件、元数据和标记翻译为多个区域设置，并管理已翻译的资产。 有关详细信息，请参阅 [多语言资产](multilingual-assets.md).
 
-为了有效管理资产以确保不同翻译版本保持同步，请在运行翻译工作流之前创建资产的[语言副本](preparing-assets-for-translation.md)。
+为了有效管理资产以确保不同翻译版本保持同步，请创建 [语言副本](preparing-assets-for-translation.md) 资产。
 
 资产或资产组的语言副本是具有相似内容层次结构的同级语言（或同一语言中资产的版本）。
 
@@ -43,9 +43,9 @@ ht-degree: 1%
    >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
 -->
 
-1. 启用[!UICONTROL 设置上次修改日期]工作流。
+1. 启用 [!UICONTROL 设置上次修改日期] 工作流。
 
-   [!UICONTROL DAM MetaData Writeback]工作流配置资产的上次修改日期。 由于您在步骤2中禁用此工作流，[!DNL Assets]无法再使资产的上次修改日期保持为最新。 因此，请启用&#x200B;*设置上次修改日期*&#x200B;工作流，以确保资产的上次修改日期为最新日期。 具有过期的上次修改日期的资产可能会导致错误。
+   的 [!UICONTROL DAM元数据写回] 工作流为资产配置上次修改日期。 由于您在步骤2中禁用此工作流， [!DNL Assets] 无法再将资产的上次修改日期保持为最新。 因此，请启用 *设置上次修改日期* 工作流，以确保资产的上次修改日期为最新。 具有过期的上次修改日期的资产可能会导致错误。
 
-1. [配置翻译集成框架以](/help/sites-administering/tc-tic.md) 停止翻译资产二进制文件。取消选择[!UICONTROL Assets]选项卡下的&#x200B;**[!UICONTROL 转换资产]**&#x200B;选项，以停止转换资产二进制文件。
-1. 使用[多语言资产工作流](multilingual-assets.md)翻译资产元数据/标记。
+1. [配置翻译集成框架](/help/sites-administering/tc-tic.md) 停止转换资产二进制文件。 取消选择 **[!UICONTROL 转换资产]** 选项 [!UICONTROL 资产] 选项卡，以停止转换资产二进制文件。
+1. 使用 [多语言资产工作流](multilingual-assets.md).

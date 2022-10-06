@@ -1,57 +1,57 @@
 ---
 title: 创建内容片段无头快速入门指南
-description: 了解如何使用AEM内容片段设计、创建、策划和使用独立于页面的内容进行无头交付。
+description: 了解如何使用 AEM 的内容片段设计、创建、管理和使用独立于页面的内容，用于 Headless 投放。
 exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
 source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 2%
+ht-degree: 91%
 
 ---
 
 # 创建内容片段无头快速入门指南 {#creating-content-fragments}
 
-了解如何使用AEM内容片段设计、创建、策划和使用独立于页面的内容进行无头交付。
+了解如何使用 AEM 的内容片段设计、创建、管理和使用独立于页面的内容，用于 Headless 投放。
 
 ## 什么是内容片段？ {#what-are-content-fragments}
 
-[现在，您已创建资产文件夹](create-assets-folder.md) 现在，您可以在其中存储内容片段，以创建片段！
+[现在您已经创建了资源文件夹](create-assets-folder.md)，可以在其中存储您的内容片段，接下来可以创建片段！
 
-内容片段允许您设计、创建、策划和发布独立于页面的内容。 利用这些功能，可准备内容以准备在多个位置和多个渠道上使用。
+您可使用内容片段设计、创建、管理和发布独立于页面的内容。利用它们，您可以准备内容以用于多个位置和多个渠道。
 
-内容片段包含结构化内容，可以采用JSON格式交付。
+内容片段包含结构化内容，可以采用 JSON 格式投放。
 
 ## 如何创建内容片段 {#how-to-create-a-content-fragment}
 
-内容作者将创建任意数量的内容片段来表示他们创建的内容。 这将是他们在AEM中的主要任务。 在本快速入门指南中，我们只需创建一个。
+内容作者将创建任意数量的内容片段，用于呈现他们创建的内容。这将是他们在 AEM 中的主要任务。对于本指南快速入门，我们只需要创建一个。
 
 1. 登录AEM，然后从主菜单中选择 **导航 — >资产**.
 1. 导航到 [文件夹。](create-assets-folder.md)
-1. 点按或单击 **创建 — >内容片段**.
-1. 内容片段的创建将以两个步骤的向导形式呈现。 首先选择要用于创建内容片段的模型，然后点按或单击 **下一个**.
-   * 可用的模型取决于 [**云配置** 您为assets文件夹定义的](create-assets-folder.md) 在其中创建内容片段。
-   * 如果您收到消息 `We could not find any models`，请检查资产文件夹的配置。
+1. 点击或单击&#x200B;**创建 -> 内容片段**。
+1. 内容片段的创建以两步向导的方式呈现。首先选择您希望使用什么模型来创建内容片段，然后点击或单击&#x200B;**下一步**。
+   * 可用的模型取决于&#x200B;[**您为资源文件夹定义的云配置**](create-assets-folder.md)，您将在该文件夹中创建内容片段。
+   * 如果您收到消息 `We could not find any models`，请检查资源文件夹的配置。
 
    ![选择内容片段模型](../assets/content-fragment-model-select.png)
-1. 提供 **标题**, **描述**&#x200B;和 **标记** 根据需要，点按或单击 **创建**.
+1. 根据需要提供&#x200B;**标题**、**描述**&#x200B;和&#x200B;**标记**，然后点击或单击&#x200B;**创建**。
 
    ![创建内容片段](../assets/content-fragment-create.png)
-1. 点按或单击 **打开** 在确认窗口中。
+1. 在确认窗口中，点击或单击&#x200B;**打开**。
 
-   ![内容片段创建的确认](../assets/content-fragment-confirmation.png)
+   ![内容片段创建确认](../assets/content-fragment-confirmation.png)
 1. 在内容片段编辑器中提供内容片段的详细信息。
 
    ![内容片段编辑器](../assets/content-fragment-edit.png)
-1. 点按或单击 **保存** 或  **保存并关闭**.
+1. 点击或单击&#x200B;**保存**&#x200B;或&#x200B;**保存并关闭**。
 
-内容片段可以引用其他内容片段，从而允许在必要时使用嵌套的内容结构。
+内容片段可以引用其他内容片段，在需要时允许嵌套内容结构。
 
-内容片段还可以引用AEM中的其他资产。 [这些资产需要存储在AEM中](/help/assets/manage-assets.md) 创建引用内容片段之前。
+内容片段还可以引用 AEM 中的其他资源。[这些资源需要存储在 AEM 中](/help/assets/manage-assets.md)，然后才能创建引用内容片段。
 
 ## 后续步骤 {#next-steps}
 
-现在，您已创建内容片段，接下来可以转到快速入门指南的最后部分和 [创建API请求以访问和交付内容片段。](create-api-request.md)
+现在您已经创建了内容片段，接下来可以转到快速入门指南的最后一个部分并[创建 API 请求来访问和提供内容片段。](create-api-request.md)
 
 >[!TIP]
 >
->有关管理内容片段的完整详细信息，请参阅 [内容片段文档](/help/assets/content-fragments/content-fragments.md)
+>有关管理内容片段的完整详细信息，请参阅[内容片段文档](/help/assets/content-fragments/content-fragments.md)

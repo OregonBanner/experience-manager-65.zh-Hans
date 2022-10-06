@@ -1,8 +1,8 @@
 ---
 title: AEM平台简介
-seo-title: AEM平台简介
+seo-title: Introduction to the AEM Platform
 description: 本文提供了AEM平台及其最重要组件的一般概述。
-seo-description: 本文提供了AEM平台及其最重要组件的一般概述。
+seo-description: This article provides a general overview of the AEM platform and its most important components.
 uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,12 +13,12 @@ legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
 
-# AEM Platform{#introduction-to-the-aem-platform}简介
+# AEM平台简介{#introduction-to-the-aem-platform}
 
 AEM 6中的AEM平台基于Apache Jackrabbit Oak。
 
@@ -26,16 +26,16 @@ Apache Jackrabbit Oak旨在实施可扩展且性能卓越的分层内容存储�
 
 它是Jackrabbit 2的后续版本，由AEM 6用作其内容存储库CRX的默认后端。
 
-## 设计原则和目标{#design-principles-and-goals}
+## 设计原则和目标 {#design-principles-and-goals}
 
-Oak实施[JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html)(JCR 2.0)规范。 其主要设计目标是：
+Oak实施 [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html) (JCR 2.0)规范。 其主要设计目标是：
 
 * 更好地支持大型存储库
 * 多个分布式群集节点以实现高可用性
 * 性能更佳
 * 支持许多子节点和访问控制级别
 
-## 架构概念{#architecture-concept}
+## 架构概念 {#architecture-concept}
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -64,13 +64,13 @@ Oak JCR的主要目标是将JCR语义转换为树操作。 它还负责：
 
 此外，现在还可以实施非Java，这是Oak JCR概念的一部分。
 
-## 存储概述{#storage-overview}
+## 存储概述 {#storage-overview}
 
 Oak存储层为内容的实际存储提供了一个抽象层。
 
-目前，AEM6中提供了两种存储实施：**Tar存储**&#x200B;和&#x200B;**MongoDB存储**。
+目前，AEM6中提供了两种存储实施： **焦油存储** 和 **MongoDB存储**.
 
-### 焦油存储{#tar-storage}
+### 焦油存储 {#tar-storage}
 
 Tar存储使用tar文件。 它将内容存储为较大区段内的各种类型记录。 日记帐用于跟踪存储库的最新状态。
 
@@ -88,9 +88,9 @@ Tar存储使用tar文件。 它将内容存储为较大区段内的各种类型�
 
 * **紧实度**
 
-记录格式在大小方面进行了优化，以降低IO成本，并尽可能地适应缓存中的内容。
+记录格式在大小方面进行了优化，以降低IO成本，并尽可能地适合缓存中的内容。
 
-### Mongo存储{#mongo-storage}
+### Mongo存储 {#mongo-storage}
 
 MongoDB存储利用MongoDB进行分片和群集。 存储库树保存在一个MongoDB数据库中，其中每个节点都是一个单独的文档。
 
@@ -120,7 +120,7 @@ MongoDB存储通过每次修改将数据添加到文档中。 但是，仅当明
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-## 跟Jackrabbit 2有什么不同？{#what-is-different-from-jackrabbit}
+## 跟Jackrabbit 2有什么不同？ {#what-is-different-from-jackrabbit}
 
 由于Oak旨在向后兼容JCR 1.0标准，因此用户级别几乎不会发生任何更改。 但是，在设置基于Oak的AEM安装时，您需要考虑一些显着的差异：
 
@@ -128,7 +128,7 @@ MongoDB存储通过每次修改将数据添加到文档中。 但是，仅当明
 * 与Jackrabbit 2不同，Oak会话始终反映存储库的最新状态，而Oak会话则反映从获取会话时存储库的稳定视图。 这是由于Oak所基于的MVCC模型所致。
 * Oak不支持同名同级(SNS)。
 
-## 其他平台相关文档{#other-platform-related-documentation}
+## 其他平台相关文档 {#other-platform-related-documentation}
 
 有关AEM平台的更多信息，另请查看以下文章：
 

@@ -1,8 +1,8 @@
 ---
 title: 以JSON格式获取页面信息
-seo-title: 以JSON格式获取页面信息
+seo-title: Obtaining Page Information in JSON Format
 description: 要获取页面信息，请向PageInfo servlet发送请求，以获取JSON格式的页面元数据
-seo-description: 要获取页面信息，请向PageInfo servlet发送请求，以获取JSON格式的页面元数据
+seo-description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
 uuid: fb4f56b9-55e2-4622-a0d1-a86d6f2cce86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,16 +12,16 @@ discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '943'
 ht-degree: 1%
 
 ---
 
-# 获取JSON格式的页面信息{#obtaining-page-information-in-json-format}
+# 以JSON格式获取页面信息{#obtaining-page-information-in-json-format}
 
 要获取页面信息，请向PageInfo servlet发送请求，以获取JSON格式的页面元数据。
 
-PageInfo Servlet返回有关存储库中资源的信息。 Servlet绑定到URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json`，并使用`path`参数来标识资源。 以下示例URL返回有关`/content/we-retail/us/en`节点的信息：
+PageInfo Servlet返回有关存储库中资源的信息。 Servlet绑定到URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` 和使用 `path` 用于标识资源的参数。 以下示例URL返回有关 `/content/we-retail/us/en` 节点：
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -31,17 +31,15 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >
 >如果您需要JSON格式的页面信息来将内容交付到非传统AEM网页的渠道，例如：
 >
->* 单页应用程序
+>* 单页面应用程序
 >* 本机移动设备应用程序
 >* AEM外部的其他渠道和接触点
-
 >
->
-请参阅文档[JSON Exporter for Content Services](/help/sites-developing/json-exporter.md)。
+>查看文档 [内容服务的JSON导出程序](/help/sites-developing/json-exporter.md).
 
-## 页面信息提供程序{#page-information-providers}
+## 页面信息提供程序 {#page-information-providers}
 
-页面组件可以与一个或多个生成页面元数据的`com.day.cq.wcm.api.PageInfoProvider`服务相关联。 PageInfo servlet调用每个PageInfoProvider服务并聚合元数据：
+页面组件可以与一个或多个 `com.day.cq.wcm.api.PageInfoProvider` 生成页面元数据的服务。 PageInfo servlet调用每个PageInfoProvider服务并聚合元数据：
 
 1. HTTP客户端向PageInfo servlet发送请求，该PageInfo Servlet包含页面的URL。
 1. PageInfo servlet可发现呈现页面的组件。
@@ -52,21 +50,21 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->与PageInfoProviders类似，使用ListInfoProviders以JSON格式更新信息列表。 （请参阅[自定义网站管理控制台](/help/sites-developing/customizing-siteadmin.md)。）
+>与PageInfoProviders类似，使用ListInfoProviders以JSON格式更新信息列表。 (请参阅 [自定义网站管理控制台](/help/sites-developing/customizing-siteadmin.md).)
 
-## 默认页面信息提供程序{#default-page-information-providers}
+## 默认页面信息提供程序 {#default-page-information-providers}
 
-`/libs/foundation/components/page`组件与以下PageInfoProvider服务关联：
+的 `/libs/foundation/components/page` 组件与以下PageInfoProvider服务关联：
 
-* **默认页面状态提供程序：** 有关页面状态的信息，例如页面是否已锁定，页面是否为活动工作流的有效负荷，以及哪些工作流可用于页面。
+* **默认页面状态提供程序：** 有关页面状态的信息，例如页面是否已锁定、页面是否是活动工作流的有效负荷以及哪些工作流可用于页面。
 * **实时关系信息提供程序：** 有关多站点管理(MSM)的信息，例如页面是否属于蓝色打印的一部分，以及页面是否属于Live Copy。
 * **内容语言Servlet:** 当前页面的语言，以及有关页面可用的每种语言的信息。
-* **工作流状态提供程序：** 有关正在运行的工作流的状态信息，该工作流将页面作为有效负载。
-* **工作流包信息提供程序：** 有关存储在存储库中的每个工作流包以及每个包是否包含当前资源的信息。
-* **模拟器信息提供程序：** 有关可用于此资源的移动设备模拟器的信息。如果页面组件不呈现移动页面，则不会提供模拟器。
-* **批注信息提供程序：** 有关页面上批注的信息。
+* **工作流状态提供程序：** 有关将页面作为有效负载的正在运行的工作流的状态信息。
+* **工作流包信息提供程序：** 有关存储在存储库中的每个工作流包以及每个工作流包是否包含当前资源的信息。
+* **模拟器信息提供程序：** 有关此资源可用的移动设备模拟器的信息。 如果页面组件不呈现移动页面，则不会提供模拟器。
+* **注释信息提供程序：** 有关页面上批注的信息。
 
-例如，PageInfo servlet会为`/content/we-retail/us/en`节点返回以下JSON响应：
+例如，PageInfo servlet会返回 `/content/we-retail/us/en` 节点：
 
 ```
 {
@@ -471,7 +469,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 }
 ```
 
-## 筛选工作流包信息{#filtering-workflow-package-information}
+## 筛选工作流包信息 {#filtering-workflow-package-information}
 
 配置Day CQ WCM工作流包信息提供程序服务，以便它仅返回有关您感兴趣的工作流包的信息。 默认情况下，工作流包信息提供程序服务会返回有关存储库中每个工作流包的信息。 在工作流包的子集上迭代使用较少的服务器资源。
 
@@ -479,8 +477,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >
 >Sidekick的“工作流”选项卡使用PageInfo servlet获取工作流包的列表。 从列表中，您可以选择要将当前页面添加到的包。 您创建的过滤器会影响此列表。
 
-
-服务的ID为`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`。 要创建过滤器，请为`workflowpackageinfoprovider.filter`属性指定一个值。
+服务的ID是 `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. 要创建过滤器，请为 `workflowpackageinfoprovider.filter` 属性。
 
 属性值前缀为+或 — 字符，后跟包路径：
 
@@ -497,7 +494,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->使用AEM时，可通过多种方法来管理此类服务的配置设置。 有关完整的详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md) 。
+>使用AEM时，可通过多种方法来管理此类服务的配置设置。 请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解完整详细信息。
 
 例如，要使用CRXDE Lite配置服务，请执行以下操作：
 
@@ -519,7 +516,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 1. 在项目源中找到或创建AEM应用程序的配置文件夹。
 
-   例如，如果您使用内容包Maven插件的多模块原型创建项目，则文件夹路径为`<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`。
+   例如，如果您使用内容包Maven插件的多模块原型创建项目，则文件夹路径为 `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
 1. 在配置文件夹中，创建一个名为com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml的文本文件
 1. 将以下文本复制到文件：
 
@@ -531,33 +528,33 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. 在`workflowpackageinfoprovider.filter`属性周围的括号(`[]`)中，键入以逗号分隔的筛选值列表，如下例所示：
+1. 括号内(`[]`) `workflowpackageinfoprovider.filter` 属性中，键入以逗号分隔的筛选值列表，该列表与以下示例类似：
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
 1. 保存文件。
 
-## 创建页面信息提供程序{#creating-a-page-information-provider}
+## 创建页面信息提供程序 {#creating-a-page-information-provider}
 
 创建自定义页面信息提供程序服务，以添加应用程序可以轻松获取的页面元数据。
 
-1. 实施`com.day.cq.wcm.api.PageInfoProvider`接口。
+1. 实施 `com.day.cq.wcm.api.PageInfoProvider` 接口。
 1. 将类捆绑并部署为OSGi服务。
-1. 在应用程序中创建页面组件。 使用`foundation/components/page`作为`sling:resourceSuperType`属性的值。
+1. 在应用程序中创建页面组件。 使用 `foundation/components/page` 作为 `sling:resourceSuperType` 属性。
 
-1. 在名为`cq:infoProviders`的组件节点下添加一个节点。
-1. 在`cq:infoProviders`节点下，为您的PageInfoProvider服务添加一个节点。 您可以为节点指定任何名称。
+1. 在名为的组件节点下添加一个节点 `cq:infoProviders`.
+1. 在 `cq:infoProviders` 节点，为您的PageInfoProvider服务添加一个节点。 您可以为节点指定任何名称。
 1. 将以下属性添加到PageInfoProvider节点：
 
    * 名称：className
    * 类型：字符串
    * 值：PageInfoProvider服务的PID。
 
-对于将您的应用程序页面组件用作`sling:resourceType`的资源，PageInfo servlet除了返回默认的PageInfoProvider元数据外，还返回自定义PageInfoProvider元数据。
+对于将应用程序页面组件用作 `sling:resourceType`，除默认的PageInfoProvider元数据外，PageInfo servlet还会返回自定义PageInfoProvider元数据。
 
-### PageInfoProvider实施示例{#example-pageinfoprovider-implementation}
+### PageInfoProvider实施示例 {#example-pageinfoprovider-implementation}
 
-以下Java类实现[PageInfoProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)并返回当前页面资源的已发布URL。
+以下Java类实现 [PageInfoProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) 和会返回当前页面资源的已发布URL。
 
 ```java
 package com.adobe.example;
@@ -608,7 +605,7 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
-PageUrlInfoProvider服务会返回`/content/we-retail/us/en`节点的以下数据：
+PageUrlInfoProvider服务会返回 `/content/we-retail/us/en` 节点：
 
 ```xml
 "URLs": {

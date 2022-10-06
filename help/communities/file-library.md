@@ -1,8 +1,8 @@
 ---
 title: 文件库功能
-seo-title: 文件库功能
+seo-title: File Library Feature
 description: “文件库”功能允许登录站点的访客上传、管理和下载文件
-seo-description: “文件库”功能允许登录站点的访客上传、管理和下载文件
+seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '735'
 ht-degree: 7%
 
 ---
@@ -27,33 +27,33 @@ ht-degree: 7%
 文档的此部分描述：
 
 * 将文件库功能添加到AEM站点。
-* `File Library`组件的配置设置。
+* 的配置设置 `File Library` 组件。
 
-### 将文件库添加到页面{#adding-a-file-library-to-a-page}
+### 将文件库添加到页面 {#adding-a-file-library-to-a-page}
 
-要在创作模式下向页面添加`File Library`组件，请找到该组件：
+添加 `File Library` 组件添加到创作模式下的页面，找到组件：
 
 * `Communities / File Library`
 
 并将其拖动到页面上的位置。
 
-有关必要信息，请访问[社区组件基础知识](/help/communities/basics.md)。
+有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-当包含[所需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side)时，将显示`File Library`组件：
+当 [所需的客户端库](/help/communities/essentials-file-library.md#essentials-for-client-side) 包含，这是 `File Library` 组件将显示：
 
 ![file-library1](assets/file-library1.png)
 
-### 配置文件库{#configuring-file-library}
+### 配置文件库 {#configuring-file-library}
 
-选择要访问的已放置的`File Library`组件，然后选择`Configure`图标以打开编辑对话框。
+选择已放置的 `File Library` 要访问和选择的组件 `Configure` 图标，打开编辑对话框。
 
 ![configure-new](assets/configure-new.png)
 
 ![file-library2](assets/file-library2.png)
 
-#### “注释”选项卡{#comments-tab}
+#### “注释”选项卡 {#comments-tab}
 
-在&#x200B;**注释**&#x200B;选项卡下，指定上载文件的注释是否以及显示方式：
+在 **评论** 选项卡，指定上传文件的注释的显示方式和方式：
 
 * **允许对文件发表评论**
 
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 * **每页的评论数**
 
-   限制每页显示的评论数以及显示的回复数。 默认值为&#x200B;**10**。
+   限制每页显示的评论数以及显示的回复数。 默认为 **10**.
 
 * **最大文件大小**
 
@@ -101,7 +101,7 @@ ht-degree: 7%
 
 * **允许关注**
 
-   如果选中此项，请为博客文章添加以下功能，该功能允许成员在新帖子中[收到通知](/help/communities/notifications.md)。 默认为未选中。
+   如果选中此项，请为博客文章包含以下功能，该功能允许成员 [通知](/help/communities/notifications.md) 新职位数量。 默认为未选中。
 
 * **启用提及功能**
 
@@ -113,15 +113,15 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-   指定允许的模式字符串以标记帖子中注册用户(@mention)。 例如~{{familyName}}{{givenName}}。
+   指定允许的模式字符串以标记帖子中注册用户(@mention)。 例如~{{familyName}}{{givenName}}.
 
 * **允许主题回复**
 
    如果选中此项，则允许对已发布的评论进行回复。 默认为未选中。
 
-#### “用户审核”选项卡{#user-moderation-tab}
+#### “用户审核”选项卡 {#user-moderation-tab}
 
-在&#x200B;**用户审核**&#x200B;选项卡下，配置评论的审核（如果允许评论）：
+在 **用户审核** ，则配置审核评论（如果允许评论）：
 
 * **预审**
 
@@ -153,13 +153,13 @@ ht-degree: 7%
 
 * **审核阈值**
 
-   输入在通知审核者之前，访客必须标记评论的次数。 默认值为一次(**1**)。
+   输入在通知审核者之前，访客必须标记评论的次数。 默认为一次(**1**)。
 
 * **标记限制**
 
-   输入在注释在公共视图中隐藏之前必须标记的次数。 此数字必须大于或等于&#x200B;**审核阈值**。 默认值为5。
+   输入在注释在公共视图中隐藏之前必须标记的次数。 此数字必须大于或等于 **审核阈值**. 默认值为5。
 
-### 排序设置选项卡{#sort-settings-tab}
+### 排序设置选项卡 {#sort-settings-tab}
 
 排序方式
 
@@ -167,8 +167,8 @@ ht-degree: 7%
 
 ### 附加信息 {#additional-information}
 
-有关更多信息，请参阅面向开发人员的[File Library Essentials](/help/communities/essentials-file-library.md)页面。
+有关 [文件库要点](/help/communities/essentials-file-library.md) 页面。
 
-有关审核已发布的主题和评论，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
+有关审核已发布的主题和评论，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
 
-有关标记已发布的主题和评论，请参阅[标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记已发布的主题和评论，请参阅 [标记用户生成的内容](/help/communities/tag-ugc.md).

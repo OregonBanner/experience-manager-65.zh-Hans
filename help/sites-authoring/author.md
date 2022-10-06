@@ -1,8 +1,8 @@
 ---
 title: 创作
-seo-title: 创作
+seo-title: Authoring
 description: 在 AEM 中进行创作的概念
-seo-description: 在 AEM 中进行创作的概念
+seo-description: Concepts of authoring in AEM
 uuid: eaa5f613-a138-4215-8f84-dfc962fe7fa7
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,18 +13,18 @@ docset: aem65
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '538'
 ht-degree: 88%
 
 ---
 
 # 创作{#authoring}
 
-## 创作（和发布）的概念  {#concept-of-authoring-and-publishing}
+## 创作（和发布）的概念 {#concept-of-authoring-and-publishing}
 
 AEM 提供了两种环境：
 
-* 作者
+* 创作
 * 发布
 
 通过这些交互可以将内容放到您的网站上，以便您的访客可以阅读该内容。
@@ -68,7 +68,7 @@ AEM 提供了两种环境：
 
 #### 发布环境 {#publish-environment}
 
-准备就绪后，AEM站点的内容将发布到&#x200B;**发布环境**。 在该环境中，根据设计界面的具体观感，目标受众可以使用网站页面。
+准备就绪后，AEM网站的内容会发布到 **发布环境**. 在该环境中，根据设计界面的具体观感，目标受众可以使用网站页面。
 
 通常，发布环境位于内网与外网的“隔离区”中；换句话说，可用于 Internet，但不再处于内部网络的完全保护之下。
 
@@ -80,18 +80,15 @@ AEM 提供了两种环境：
 >
 >* **发布/取消发布**
    >  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
-   >
-   >
-* **激活／取消激活**
+>
+>* **激活／取消激活**
    >  这两个术语与发布/取消发布同义。
-   >
-   >
-* **复制**
+>
+>* **复制**
    >  这些是用于指示数据（例如页面内容、文件、代码、用户评论）从一个环境移动到另一个环境的技术术语；例如，在发布或反向复制用户评论时。
 >
 
 
-
 #### Dispatcher {#dispatcher}
 
-为优化网站访问性能，**[调度程序](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)实施了负载平衡和缓存。**
+为了优化网站访客体验，**[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 实施了负载平衡和缓存。**

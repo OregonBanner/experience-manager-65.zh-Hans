@@ -1,8 +1,8 @@
 ---
 title: Web 控制台
-seo-title: Web 控制台
+seo-title: Web Console
 description: 了解如何在AEM中使用Web控制台。
-seo-description: 了解如何在AEM中使用Web控制台。
+seo-description: Learn how to use the web console in AEM.
 uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,14 @@ discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '719'
 ht-degree: 2%
 
 ---
 
 # Web 控制台{#web-console}
 
-AEM中的Web控制台基于[Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)。 Apache Felix是为实施OSGi R4服务平台（包括OSGi框架和标准服务）而做出的社区努力。
+AEM中的Web控制台基于 [Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix是为实施OSGi R4服务平台（包括OSGi框架和标准服务）而做出的社区努力。
 
 >[!NOTE]
 >
@@ -34,19 +34,19 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 所做的任何更改都会立即应用于正在运行的系统。 无需重新启动。
 
-可以从`../system/console`访问控制台；例如：
+可以从访问控制台 `../system/console`;例如：
 
 `http://localhost:4502/system/console/components`
 
 ## 配置 {#configuration}
 
-**Configuration**&#x200B;选项卡用于配置OSGi包，因此是配置AEM系统参数的基础机制。
+的 **配置** 选项卡用于配置OSGi包，因此是配置AEM系统参数的基础机制。
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅使用Web控制台进行的[OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 。
+>请参阅 [使用Web控制台进行OSGi配置](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 以了解更多详细信息。
 
-**Configuration**&#x200B;选项卡可通过以下任一方式访问：
+的 **配置** 选项卡可通过以下方式访问：
 
 * 下拉菜单：
 
@@ -105,7 +105,7 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 ## 包 {#bundles}
 
-**Bundles**&#x200B;选项卡是安装AEM所需的OSGi包的机制。 可通过以下任一方法访问选项卡：
+的 **包** 选项卡是安装AEM所需的OSGi包的机制。 可通过以下任一方法访问选项卡：
 
 * 下拉菜单：
 
@@ -123,7 +123,7 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 * **安装或更新**
 
-   您可以&#x200B;**浏览**&#x200B;以查找包含包的文件，并指定它是否应立即启动&#x200B;****，在该启动级别&#x200B;**。**
+   您可以 **浏览** 查找包含包的文件，并指定是否应 **开始** 立即 **开始级别**.
 
 * **重新加载**
 
@@ -135,7 +135,7 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
    例如，在更新后，由于以前的引用，旧版本和新版本可能仍在运行。 此选项将检查并移动对新版本的所有引用，从而允许停止旧版本。
 
-* **开始**
+* **启动**
 
    根据指定的开始级别启动包。
 
@@ -153,11 +153,11 @@ Web控制台提供了一系列用于维护OSGi包的选项卡，包括：
 
 >[!NOTE]
 >
->在&#x200B;**Update**&#x200B;之后，建议执行&#x200B;**刷新包**。
+>之后 **更新** 建议执行 **刷新包**.
 
 ## 组件 {#components}
 
-**组件**&#x200B;选项卡允许您启用和/或禁用各种组件。 它可通过以下任一方式访问：
+的 **组件** 选项卡允许您启用和/或禁用各种组件。 它可通过以下任一方式访问：
 
 * 下拉菜单：
 

@@ -1,32 +1,32 @@
 ---
 title: 自适应表单组件的内联样式
-seo-title: 自适应表单组件的内联CSS属性
+seo-title: Inline CSS properties for adaptive form components
 description: 虽然您可以在自适应表单上应用自定义样式，但也可以在自适应表单的各个组件上应用内联CSS属性。
-seo-description: 虽然您可以在自适应表单上应用自定义样式，但也可以在自适应表单的各个组件上应用内联CSS属性。
+seo-description: While you can apply custom styles on an adaptive form, you can also apply inline CSS properties on individual components of an adaptive form.
 uuid: e863780e-2250-4bea-9569-22be5638d54e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 3%
+source-wordcount: '525'
+ht-degree: 2%
 
 ---
 
-# 自适应表单组件的内联样式{#inline-styling-of-adaptive-form-components}
+# 自适应表单组件的内联样式 {#inline-styling-of-adaptive-form-components}
 
-您可以通过使用[主题编辑器](../../forms/using/themes.md)指定样式来定义自适应表单的整体外观和样式。 此外，您还可以将内联CSS样式应用于单个自适应表单组件，并即时预览更改。 内联样式会覆盖主题中提供的样式。
+您可以通过使用指定样式来定义自适应表单的整体外观和样式 [主题编辑器](../../forms/using/themes.md). 此外，您还可以将内联CSS样式应用于单个自适应表单组件，并即时预览更改。 内联样式会覆盖主题中提供的样式。
 
-## 应用内联CSS属性{#apply-inline-css-properties}
+## 应用内联CSS属性 {#apply-inline-css-properties}
 
 要向组件添加内联样式，请执行以下操作：
 
-1. 在表单编辑器中打开表单，然后将模式更改为样式模式。 要将模式更改为样式模式，请在页面工具栏中，点按![Canvas-down-down-load](assets/canvas-drop-down.png) > **Style**。
-1. 在页面中选择一个组件，然后点按编辑按钮![edit-button](assets/edit-button.png)。 在侧栏中打开样式属性。
+1. 在表单编辑器中打开表单，然后将模式更改为样式模式。 要将模式更改为样式模式，请在页面工具栏中，点按 ![画布下拉列表](assets/canvas-drop-down.png) > **样式**.
+1. 在页面中选择组件，然后点按编辑按钮 ![edit-button](assets/edit-button.png). 在侧栏中打开样式属性。
 
    您还可以从侧栏的表单层次结构树中选择组件。 表单层次结构树在侧栏中可用作表单对象。
 
@@ -44,9 +44,9 @@ ht-degree: 3%
    * 高级（允许您为组件编写自定义CSS）
 
 1. 同样，您也可以将样式应用于组件的其他部分，如小组件、题注和帮助。
-1. 点按&#x200B;**完成**&#x200B;以确认更改，或点按&#x200B;**取消**&#x200B;以放弃更改。
+1. 点按 **完成** 确认更改或 **取消** 以放弃更改。
 
-## 示例：字段组件{#example-inline-styles-for-a-field-component}的内联样式
+## 示例：字段组件的内联样式 {#example-inline-styles-for-a-field-component}
 
 以下图像描述了将内联样式应用于文本字段前后的文本字段。
 

@@ -2,7 +2,7 @@
 title: Client Context Javascript API
 seo-title: Client Context Javascript API
 description: 适用于Client Context的Javascript API
-seo-description: 适用于Client Context的Javascript API
+seo-description: The Javascript API for Client Context
 uuid: be58998c-f23e-4768-8394-1f1ad3994c4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ feature: Context Hub
 exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3153'
 ht-degree: 2%
 
 ---
@@ -28,9 +28,9 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 ### 方法 {#methods}
 
-#### getRegisteredStore(name){#getregisteredstore-name}
+#### getRegisteredStore(name) {#getregisteredstore-name}
 
-返回指定名称的会话存储。 另请参阅[访问会话存储](/help/sites-developing/client-context.md#accessing-session-stores)。
+返回指定名称的会话存储。 另请参阅 [访问会话存储](/help/sites-developing/client-context.md#accessing-session-stores).
 
 **参数**
 
@@ -38,9 +38,9 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 **返回结果**
 
-表示给定名称的会话存储的CQ_Analytics.SessionStore对象。 如果给定名称不存在存储，则返回`null`。
+表示给定名称的会话存储的CQ_Analytics.SessionStore对象。 返回结果 `null` 当不存在给定名称的存储时。
 
-#### register(sessionstore){#register-sessionstore}
+#### register(sessionstore) {#register-sessionstore}
 
 使用Client Context注册会话存储。 完成后触发storeregister和storeupdate事件。
 
@@ -54,11 +54,11 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 ## CQ_Analytics.ClientContextUtils {#cq-analytics-clientcontextutils}
 
-提供用于侦听会话存储激活和注册的方法。 另请参阅[检查会话存储是否已定义并已初始化](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized)。
+提供用于侦听会话存储激活和注册的方法。 另请参阅 [检查会话存储是否已定义并初始化](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized).
 
-### 方法{#methods-1}
+### 方法 {#methods-1}
 
-#### onStoreInitialized(storeName， callback， delay){#onstoreinitialized-storename-callback-delay}
+#### onStoreInitialized(storeName， callback， delay) {#onstoreinitialized-storename-callback-delay}
 
 注册在初始化会话存储时调用的回调函数。 对于已初始化多次的存储，请指定回调延迟，以便只调用一次回调函数：
 
@@ -72,21 +72,21 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 * 存储已预填充默认值（init属性），但请求失败（超时）。 只有一个具有默认值的初始化。
 * 已预填充该商店。
 
-当延迟设置为`true`或毫秒数时，方法将等待调用回调方法。 如果在延迟传递之前触发另一个初始化事件，则会等待延迟时间超过且没有初始化事件。 这允许等待触发第二个初始化事件，并在最佳情况下调用回调函数。
+当延迟设置为 `true` 或者，方法将等待数毫秒，然后再调用回调方法。 如果在延迟传递之前触发另一个初始化事件，则会等待延迟时间超过且没有初始化事件。 这允许等待触发第二个初始化事件，并在最佳情况下调用回调函数。
 
 **参数**
 
 * storeName:字符串。 要添加监听程序的会话存储的名称。
 * 回调：函数。 在存储初始化时要调用的函数。
-* 延迟：布尔值或数字。 回调函数的调用延迟时间（以毫秒为单位）。 布尔值`true`使用默认延迟`200 ms`。 布尔值`false`或负数不会导致使用延迟。
+* 延迟：布尔值或数字。 回调函数的调用延迟时间（以毫秒为单位）。 布尔值 `true` 使用的默认延迟为 `200 ms`. 布尔值 `false` 或者，负数不会导致使用延迟。
 
 **返回结果**
 
 没有返回值。
 
-#### onStoreRegistered(storeName， callback){#onstoreregistered-storename-callback}
+#### onStoreRegistered(storeName， callback) {#onstoreregistered-storename-callback}
 
-注册会话存储时调用的回调函数。 将存储注册到[CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr)时，会发生注册事件。
+注册会话存储时调用的回调函数。 在向注册商店时，会发生注册事件 [CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr).
 
 **参数**
 
@@ -99,7 +99,7 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 ## CQ_Analytics.JSONPStore {#cq-analytics-jsonpstore}
 
-包含JSON数据的非持久会话存储。 数据从外部JSONP服务中检索。 使用`getInstance`或`getRegisteredInstance`方法创建此类的实例。
+包含JSON数据的非持久会话存储。 数据从外部JSONP服务中检索。 使用 `getInstance` 或 `getRegisteredInstance` 方法创建此类的实例。
 
 扩展CQ_Analytics.JSONStore。
 
@@ -107,11 +107,11 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 有关继承属性，请参阅CQ_Analytics.JSONStore和CQ_Analytics.SessonStore 。
 
-### 方法{#methods-2}
+### 方法 {#methods-2}
 
 另请参阅CQ_Analytics.JSONStore和CQ_Analytics.SessonStore ，了解继承的方法。
 
-#### getInstance(storeName， serviceURL， dynamicData， deferLoading， loadingCallback){#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback}
+#### getInstance(storeName， serviceURL， dynamicData， deferLoading， loadingCallback) {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback}
 
 创建CQ_Analytics.JSONPStore对象。
 
@@ -139,7 +139,7 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 表示服务URL的字符串，或者如果未配置服务URL，则为null。
 
-#### load(serviceURL， dynamicData， callback){#load-serviceurl-dynamicdata-callback}
+#### load(serviceURL， dynamicData， callback) {#load-serviceurl-dynamicdata-callback}
 
 调用JSONP服务。 JSONP URL是后缀为给定回调函数名称的服务URL。
 
@@ -153,7 +153,7 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 没有返回值。
 
-#### registerNewInstance(storeName， serviceURL， dynamicData， callback){#registernewinstance-storename-serviceurl-dynamicdata-callback}
+#### registerNewInstance(storeName， serviceURL， dynamicData， callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback}
 
 创建CQ_Analytics.JSONPStore对象，并使用Client Context注册存储。
 
@@ -168,7 +168,7 @@ CQ_Analytics.ClientContextMgr对象是一个单独的对象，其中包含一组
 
 注册的CQ_Analytics.JSONPStore对象。
 
-#### setServiceURL(serviceURL){#setserviceurl-serviceurl}
+#### setServiceURL(serviceURL) {#setserviceurl-serviceurl}
 
 设置用于检索JSON数据的JSONP服务的URL。
 
@@ -194,13 +194,13 @@ JSON对象的容器。 创建此类的实例，以创建包含JSON数据的非�
 
 #### STOREKEY {#storekey}
 
-用于标识存储的键。 使用`getInstance`方法检索此值。
+用于标识存储的键。 使用 `getInstance` 方法检索此值。
 
 #### 存储重命名 {#storename}
 
-商店的名称。 使用`getInstance`方法检索此值。
+商店的名称。 使用 `getInstance` 方法检索此值。
 
-### 方法{#methods-3}
+### 方法 {#methods-3}
 
 另请参阅CQ_Analytics.SessionStore ，了解继承的方法。
 
@@ -216,7 +216,7 @@ JSON对象的容器。 创建此类的实例，以创建包含JSON数据的非�
 
 没有返回值。
 
-#### getInstance(storeName， jsonData){#getinstance-storename-jsondata}
+#### getInstance(storeName， jsonData) {#getinstance-storename-jsondata}
 
 创建一个具有给定名称的CQ_Analytics.JSONStore对象，并使用给定JSON数据进行初始化（调用initJSON方法）。
 
@@ -243,7 +243,7 @@ CQ_Analytics.JSONStore对象。
 
 #### init() {#init}
 
-清除会话存储，并使用初始化属性对其进行初始化。 将初始化标志设置为`true`，然后触发`initialize`和`update`事件。
+清除会话存储，并使用初始化属性对其进行初始化。 将初始化标志设置为 `true` 然后触发 `initialize` 和 `update` 事件。
 
 **参数**
 
@@ -253,7 +253,7 @@ CQ_Analytics.JSONStore对象。
 
 没有返回的数据。
 
-#### initJSON(jsonData， doNotClear){#initjson-jsondata-donotclear}
+#### initJSON(jsonData， doNotClear) {#initjson-jsondata-donotclear}
 
 从JSON对象中的数据创建初始化属性。 您可以选择删除所有现有的初始化属性。
 
@@ -284,7 +284,7 @@ B/B1: "valueBB1"
 
 没有返回值。
 
-#### registerNewInstance(storeName， jsonData){#registernewinstance-storename-jsondata}
+#### registerNewInstance(storeName， jsonData) {#registernewinstance-storename-jsondata}
 
 创建一个具有给定名称的CQ_Analytics.JSONStore对象，并使用给定JSON数据进行初始化（调用initJSON方法）。 新对象将自动在Clickstream Cloud Manager中注册。
 
@@ -297,15 +297,15 @@ B/B1: "valueBB1"
 
 CQ_Analytics.JSONStore对象。
 
-## CQ_Analytics.可观察{#cq-analytics-observable}
+## CQ_Analytics.可观察 {#cq-analytics-observable}
 
 触发事件并允许其他对象侦听这些事件并做出反应。 扩展此类的类可以触发导致调用侦听器的事件。
 
-### 方法{#methods-4}
+### 方法 {#methods-4}
 
-#### addListener(event， fct， scope){#addlistener-event-fct-scope}
+#### addListener(event， fct， scope) {#addlistener-event-fct-scope}
 
-为事件注册侦听器。 另请参阅[创建侦听器以对会话存储更新做出响应](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update)。
+为事件注册侦听器。 另请参阅 [创建侦听器以对会话存储更新做出响应](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update).
 
 **参数**
 
@@ -317,7 +317,7 @@ CQ_Analytics.JSONStore对象。
 
 没有返回值。
 
-#### removeListener(event， fct){#removelistener-event-fct}
+#### removeListener(event， fct) {#removelistener-event-fct}
 
 删除事件的给定事件处理程序。
 
@@ -336,11 +336,11 @@ CQ_Analytics.JSONStore对象。
 
 扩展CQ_Analytics.PersiredJSONStore。
 
-### 方法{#methods-5}
+### 方法 {#methods-5}
 
 另请参阅CQ_Analytics.PeristedJSONStore ，了解继承的方法。
 
-#### getInstance(storeName， serviceURL， dynamicData， deferLoading， loadingCallback){#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback-1}
+#### getInstance(storeName， serviceURL， dynamicData， deferLoading， loadingCallback) {#getinstance-storename-serviceurl-dynamicdata-deferloading-loadingcallback-1}
 
 创建CQ_Analytics.PersiredJSONPStore对象。
 
@@ -356,7 +356,7 @@ CQ_Analytics.JSONStore对象。
 
 新的CQ_Analytics.PersiredJSONPStore对象；或者，如果storeName为null，则为null。
 
-#### getServiceURL(){#getserviceurl-1}
+#### getServiceURL() {#getserviceurl-1}
 
 检索此对象用于检索JSON数据的JSONP服务的URL。
 
@@ -368,7 +368,7 @@ CQ_Analytics.JSONStore对象。
 
 表示服务URL的字符串，或者如果未配置服务URL，则为null。
 
-#### load(serviceURL， dynamicData， callback){#load-serviceurl-dynamicdata-callback-1}
+#### load(serviceURL， dynamicData， callback) {#load-serviceurl-dynamicdata-callback-1}
 
 调用JSONP服务。 JSONP URL是后缀为给定回调函数名称的服务URL。
 
@@ -382,7 +382,7 @@ CQ_Analytics.JSONStore对象。
 
 没有返回值。
 
-#### registerNewInstance(storeName， serviceURL， dynamicData， callback){#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
+#### registerNewInstance(storeName， serviceURL， dynamicData， callback) {#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
 
 创建CQ_Analytics.PersiedJSONPStore对象，并在Client Context中注册该存储。
 
@@ -397,7 +397,7 @@ CQ_Analytics.JSONStore对象。
 
 已注册的CQ_Analytics.PersiredJSONPStore对象。
 
-#### setServiceURL(serviceURL){#setserviceurl-serviceurl-1}
+#### setServiceURL(serviceURL) {#setserviceurl-serviceurl-1}
 
 设置用于检索JSON数据的JSONP服务的URL。
 
@@ -413,23 +413,23 @@ CQ_Analytics.JSONStore对象。
 
 JSON对象的持久容器。
 
-扩展`CQ_Analytics.PersistedSessionStore`。
+扩展 `CQ_Analytics.PersistedSessionStore`.
 
 ### 属性 {#properties-2}
 
 #### STOREKEY {#storekey-1}
 
-用于标识存储的键。 使用`getInstance`方法检索此值。
+用于标识存储的键。 使用 `getInstance` 方法检索此值。
 
-#### 存储{#storename-1}
+#### 存储重命名 {#storename-1}
 
-商店的名称。 使用`getInstance`方法检索此值。
+商店的名称。 使用 `getInstance` 方法检索此值。
 
-### 方法{#methods-6}
+### 方法 {#methods-6}
 
 另请参阅CQ_Analytics.PersiredSessionStore ，了解继承的方法。
 
-#### getInstance(storeName， jsonData){#getinstance-storename-jsondata-1}
+#### getInstance(storeName， jsonData) {#getinstance-storename-jsondata-1}
 
 创建一个具有给定名称的CQ_Analytics.PersiredJSONStore对象，并使用给定JSON数据进行初始化（调用initJSON方法）。
 
@@ -442,7 +442,7 @@ JSON对象的持久容器。
 
 CQ_Analytics.PersiredJSONStore对象。
 
-#### getJSON(){#getjson-1}
+#### getJSON() {#getjson-1}
 
 检索JSON格式的会话存储的数据。
 
@@ -454,7 +454,7 @@ CQ_Analytics.PersiredJSONStore对象。
 
 表示JSON格式的存储数据的对象。
 
-#### initJSON(jsonData， doNotClear){#initjson-jsondata-donotclear-1}
+#### initJSON(jsonData， doNotClear) {#initjson-jsondata-donotclear-1}
 
 从JSON对象中的数据创建初始化属性。 您可以选择删除所有现有的初始化属性。
 
@@ -485,7 +485,7 @@ B/B1: "valueBB1"
 
 没有返回值。
 
-#### registerNewInstance(storeName， jsonData){#registernewinstance-storename-jsondata-1}
+#### registerNewInstance(storeName， jsonData) {#registernewinstance-storename-jsondata-1}
 
 创建一个具有给定名称的CQ_Analytics.PersiredJSONStore对象，并使用给定JSON数据进行初始化（调用initJSON方法）。 新对象将自动注册到Client Context Manager中。
 
@@ -512,15 +512,15 @@ CQ_Analytics.PersiredJSONStore对象。
 
 默认值为 `key`.
 
-### 方法{#methods-7}
+### 方法 {#methods-7}
 
 有关继承的方法，请参阅CQ_Analytics.SessionStore 。
 
-当使用继承方法`clear`、`setProperty`、`setProperties`、`removeProperty`来更改存储数据时，将自动保留所做的更改，除非将更改的属性标记为“未持久”。
+继承方法 `clear`, `setProperty`, `setProperties`, `removeProperty` 将用于更改存储数据，除非将更改的属性标记为“未保留”，否则将自动保留这些更改。
 
 #### getStoreKey() {#getstorekey}
 
-检索`STOREKEY`属性。
+检索 `STOREKEY` 属性。
 
 **参数**
 
@@ -528,9 +528,9 @@ CQ_Analytics.PersiredJSONStore对象。
 
 **返回结果**
 
-`STOREKEY`属性的值。
+的值 `STOREKEY` 属性。
 
-#### isPersisted(name){#ispersisted-name}
+#### isPersisted(name) {#ispersisted-name}
 
 确定是否保留数据属性。
 
@@ -540,15 +540,15 @@ CQ_Analytics.PersiredJSONStore对象。
 
 **返回结果**
 
-如果保留属性，则布尔值为`true`；如果值不是保留属性，则布尔值为`false`。
+布尔值 `true` 如果保留属性，并且值为 `false` 如果值不是持久属性。
 
 #### persist() {#persist}
 
-保留会话存储。 默认持久性模式使用浏览器`localStorage`作为名称(`window.localStorage.set("ClientSidePersistance", store);`)`ClientSidePersistence`
+保留会话存储。 默认持久性模式使用浏览器 `localStorage` 使用 `ClientSidePersistence` 作为名称( `window.localStorage.set("ClientSidePersistance", store);`)
 
 如果localStorage不可用或不可写，则该存储将作为窗口的属性被保留。
 
-完成后触发`persist`事件。
+触发 `persist` 事件。
 
 **参数**
 
@@ -558,19 +558,19 @@ CQ_Analytics.PersiredJSONStore对象。
 
 没有返回值。
 
-#### reset(deferEvent){#reset-deferevent}
+#### reset(deferEvent) {#reset-deferevent}
 
-从存储中删除所有数据属性并保留该存储。 （可选）在完成后不触发`udpate`事件。
+从存储中删除所有数据属性并保留该存储。 （可选）不触发 `udpate` 事件。
 
 **参数**
 
-* deferEvent:值为true可阻止触发`update`事件。 值`false`会触发更新事件。
+* deferEvent:值为true可阻止 `update` 事件。 值 `false` 会触发更新事件。
 
 **返回结果**
 
 没有返回值。
 
-#### setNonPersisted(name){#setnonpersisted-name}
+#### setNonPersired(name) {#setnonpersisted-name}
 
 将数据属性标记为不保留。
 
@@ -592,13 +592,13 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 ### 属性 {#properties-4}
 
-#### 存储{#storename-2}
+#### 存储重命名 {#storename-2}
 
 会话存储的名称。 使用getName检索此属性的值。
 
-### 方法{#methods-8}
+### 方法 {#methods-8}
 
-#### addInitProperty(name， value){#addinitproperty-name-value}
+#### addInitProperty(name， value) {#addinitproperty-name-value}
 
 向会话存储初始化数据添加属性和值。
 
@@ -625,9 +625,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 没有返回值。
 
-#### getData(excluded){#getdata-excluded}
+#### getData(excluded) {#getdata-excluded}
 
-返回存储数据。 （可选）从数据中排除名称属性。 如果存储的data属性不存在，则调用`init`方法。
+返回存储数据。 （可选）从数据中排除名称属性。 调用 `init` 方法。
 
 **参数**
 
@@ -637,7 +637,7 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 属性及其值的对象。
 
-#### getInitProperty(name){#getinitproperty-name}
+#### getInitProperty(name) {#getinitproperty-name}
 
 检索数据属性的值。
 
@@ -647,7 +647,7 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 **返回结果**
 
-数据属性的值。 如果会话存储不包含给定名称的属性，则返回`null`。
+数据属性的值。 返回 `null` 如果会话存储不包含给定名称的属性。
 
 #### getName() {#getname}
 
@@ -661,9 +661,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 表示存储名称的字符串值。
 
-#### getProperty(name， raw){#getproperty-name-raw}
+#### getProperty(name， raw) {#getproperty-name-raw}
 
-返回属性的值。 返回的值将作为原始属性或XSS筛选的值。 如果存储的data属性不存在，则调用`init`方法。
+返回属性的值。 返回的值将作为原始属性或XSS筛选的值。 调用 `init` 方法。
 
 **参数**
 
@@ -674,9 +674,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 数据属性的值。
 
-#### getPropertyNames(excluded){#getpropertynames-excluded}
+#### getPropertyNames(excluded) {#getpropertynames-excluded}
 
-返回会话存储所包含属性的名称。 如果存储的data属性不存在，则调用`init`方法。
+返回会话存储所包含属性的名称。 调用 `init` 方法。
 
 **参数**
 
@@ -698,9 +698,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 此
 
-#### init(){#init-1}
+#### init() {#init-1}
 
-将存储标记为已初始化，并触发`initialize`事件。
+将存储标记为已初始化，并触发 `initialize` 事件。
 
 **参数**
 
@@ -720,9 +720,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 **返回结果**
 
-如果存储已初始化，则值为`true`；如果存储未初始化，则值为`false`。
+值 `true` 如果已初始化存储，并且 `false` 未初始化存储。
 
-#### loadInitProperties(obj， setValues){#loadinitproperties-obj-setvalues}
+#### loadInitProperties(obj， setValues) {#loadinitproperties-obj-setvalues}
 
 将给定对象的属性添加到会话存储的初始化数据中。 或者，对象数据也被添加到存储数据中。
 
@@ -735,9 +735,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 没有返回值。
 
-#### removeProperty(name){#removeproperty-name}
+#### removeProperty(name) {#removeproperty-name}
 
-从会话存储中删除属性。 完成后触发`update`事件。 如果存储的data属性不存在，则调用`init`方法。
+从会话存储中删除属性。 触发 `update` 事件。 调用 `init` 方法。
 
 **参数**
 
@@ -749,7 +749,7 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 #### 重置() {#reset}
 
-恢复数据存储的初始值。 默认实施只会删除所有数据。 完成后触发`update`事件。
+恢复数据存储的初始值。 默认实施只会删除所有数据。 触发 `update` 事件。
 
 **参数**
 
@@ -759,9 +759,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 没有返回值。
 
-#### setProperties(properties){#setproperties-properties}
+#### setProperties(properties) {#setproperties-properties}
 
-设置多个属性的值。 完成后触发`update`事件。 如果存储的data属性不存在，则调用`init`方法。
+设置多个属性的值。 触发 `update` 事件。 调用 `init` 方法。
 
 **参数**
 
@@ -771,9 +771,9 @@ CQ_Analytics.SessionStore表示会话存储。 创建此类的实例以创建会
 
 没有返回值。
 
-#### setProperty(name， value){#setproperty-name-value}
+#### setProperty(name， value) {#setproperty-name-value}
 
-设置属性的值。 完成后触发`update`事件。 如果存储的data属性不存在，则调用`init`方法。
+设置属性的值。 触发 `update` 事件。 调用 `init` 方法。
 
 **参数**
 

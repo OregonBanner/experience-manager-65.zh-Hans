@@ -1,22 +1,22 @@
 ---
-title: 对内容片段的远程AEM GraphQL查询进行身份验证
-description: 了解远程AEM GraphQL查询所需的身份验证，以保护无头内容交付的安全。
+title: 对内容片段的远程 AEM GraphQL 查询的身份验证
+description: 了解远程 AEM GraphQL 查询所需的身份验证，用于保护您的 Headless 内容投放。
 feature: Content Fragments,GraphQL API
 exl-id: 167f3318-7bc7-48fc-aaa9-73da43433f2f
 source-git-commit: 9278ba4fe85edca4ab5741f89c0fc0ef2cf2764d
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 0%
+ht-degree: 61%
 
 ---
 
-# 对内容片段的远程AEM GraphQL查询进行身份验证 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
+# 对内容片段的远程 AEM GraphQL 查询的身份验证 {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-用于 [Adobe Experience Manager(AEM)用于内容片段交付的GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 接受来自第三方应用程序或服务的远程查询。 这些远程查询可能需要经过验证的API访问，以保护无头内容交付的安全。
+用于 [Adobe Experience Manager(AEM)用于内容片段交付的GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) 接受来自第三方应用程序或服务的远程查询。 这些远程查询可能需要经过身份验证的 API 访问，以保护 Headless 内容投放。
 
 >[!NOTE]
 >
->要进行测试和开发，您还可以使用 [GraphiQL接口](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) 界面。
+>对于测试和开发，您还可以使用 [GraphiQL](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) 接口直接访问 AEM GraphQL API。
 
 为了进行身份验证，第三方服务需要使用AEM帐户用户名和密码进行身份验证。
 

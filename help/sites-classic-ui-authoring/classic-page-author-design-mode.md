@@ -1,8 +1,8 @@
 ---
 title: 在设计模式中配置组件
-seo-title: 在设计模式中配置组件
+seo-title: Configuring Components in Design Mode
 description: 安装现成 AEM 实例后，Sidekick 中会提供一些可立即使用的组件。除了这些组件以外，还有其他一些组件可用。您可以使用设计模式启用/禁用这类组件。
-seo-description: 安装现成 AEM 实例后，Sidekick 中会提供一些可立即使用的组件。除了这些组件以外，还有其他一些组件可用。您可以使用设计模式启用/禁用这类组件。
+seo-description: When AEM instance is installed out-of-the-box, a selection of components are immediately available in the sidekick. In addition to these, various other components are also available. You can use Design mode to Enable/disable such components.
 uuid: 2cd5dad0-2f9c-4f34-aae8-1638d1445eb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '500'
 ht-degree: 92%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 92%
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 单击段落系统（**段落设计**）上的&#x200B;**编辑**。
+1. 单击 **编辑** (a)段制(**段落设计**)。
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
@@ -63,7 +63,7 @@ ht-degree: 92%
 
    ![](do-not-localize/sidekick-collapsed.png)
 
-## 配置组件的设计  {#configuring-the-design-of-a-component}
+## 配置组件的设计 {#configuring-the-design-of-a-component}
 
 在设计模式中，还可以配置单个组件的属性。每个组件都有其自身的参数，下面的示例说明了&#x200B;**图像**&#x200B;组件的配置方法：
 
@@ -73,7 +73,7 @@ ht-degree: 92%
 
 1. 您可以配置组件的设计。
 
-   例如，如果单击图像组件（**图像设计**）上的&#x200B;**编辑**，则可以配置组件特定的参数：
+   例如，如果您单击 **编辑** (**图像设计**)，您可以配置组件特定的参数：
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 

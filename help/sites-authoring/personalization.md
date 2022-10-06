@@ -1,8 +1,8 @@
 ---
 title: 个性化和内容定位
-seo-title: 个性化和内容定位
-description: 了解AEM如何创建个性化内容
-seo-description: 了解AEM如何创建个性化内容
+seo-title: Personalization and Content Targeting
+description: 了解 AEM 如何创建个性化内容
+seo-description: Learn how AEM can create personalized content
 uuid: 3a1aaa3d-5f57-4fb7-a4be-523f0d274b79
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: 850da0da-f7c3-4dd7-bb06-404c14a2a791
 exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 84%
+source-wordcount: '519'
+ht-degree: 87%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 84%
 
 AEM 为创作目标内容和呈现个性化体验提供了一个工具框架。
 
-## 定位模式  {#targeting-mode}
+## 定位模式 {#targeting-mode}
 
-[可使用 AEM 的定位模式创作目标内容。](/help/sites-authoring/content-targeting-touch.md)定位模式和 Target 组件提供了一些工具，用于为您的营销活动体验创建内容。
+可使用 AEM 的定位模式[创作目标内容](/help/sites-authoring/content-targeting-touch.md)。定位模式和 Target 组件提供了一些工具，用于为您的营销活动体验创建内容。
 
 ## 活动 {#activities}
 
@@ -55,7 +55,7 @@ AEM 为创作目标内容和呈现个性化体验提供了一个工具框架。
 
 使用[“选件”控制台](/help/sites-authoring/offerlib.md)，可创建您可以在多个体验中使用的选件。[创作目标内容](/help/sites-authoring/content-targeting-touch.md)时，可创建单次使用选件或添加选件库中的选件。
 
-## 定位引擎  {#targeting-engine}
+## 定位引擎 {#targeting-engine}
 
 定位引擎是驱动目标内容逻辑的机制。[活动](/help/sites-authoring/activitylib.md)会配置为使用以下两个可用的定位引擎之一：AEM 和 Adobe Target。
 
@@ -70,4 +70,4 @@ Adobe Target 定位引擎允许从 Adobe Target 中跟踪的页面访问收集�
 * 使用此定位引擎时，您可以使用从 Adobe Target 导入的区段来定义体验受众。
 * 使用 Adobe Target 引擎的活动会[同步到 Target](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)。
 
-将[与Adobe Target](/help/sites-administering/opt-in.md)集成后，即可使用此引擎。
+您可以在 [与Adobe Target集成](/help/sites-administering/opt-in.md).

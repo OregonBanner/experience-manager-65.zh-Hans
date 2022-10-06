@@ -1,8 +1,8 @@
 ---
 title: 启动项
-seo-title: 启动项
+seo-title: Launches
 description: 使用启动项，您可以有效地开发内容的将来版本。它们允许您进行更改以准备将来发布，同时保留当前页面
-seo-description: 使用启动项，您可以有效地开发内容的将来版本。它们允许您进行更改以准备将来发布，同时保留当前页面
+seo-description: Launches enable you to efficiently develop content for a future release. They allow you to make changes ready for future publication, while maintaining your current pages
 uuid: 4bbd9865-735d-4232-b69c-b64193ac5d83
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 92%
+source-wordcount: '827'
+ht-degree: 94%
 
 ---
 
@@ -57,10 +57,10 @@ ht-degree: 92%
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-* 编辑启动配置：
+* 编辑启动项配置：
 
    * 在启动项中添加或删除页面和/或分支。
-   * 编辑启动项属性；如标 **题**、启 **动日期**、生 **产就绪标记** 。
+   * 编辑启动项属性；例如&#x200B;**标题**、**启动日期**、**生产就绪**&#x200B;标记。
 
 * 您可以手动或自动提升和发布内容：
 
@@ -69,12 +69,12 @@ ht-degree: 92%
       * 准备好发布时，将您的启动项内容提升回&#x200B;**目标**（源页面）。
       * 发布源（在提升回后）页面中的内容。
       * 提升所有页面或仅提升已修改的页面。
-   * 自动 - 这涉及以下各项：
+   * 自动 – 这涉及以下各项：
 
       * **启动**（**起始**）**日期**&#x200B;字段：可在创建或编辑启动项时设置此字段。
 
       * **生产就绪**&#x200B;标记：只能在编辑启动项时设置此标记。
-      * 如果&#x200B;**生产就绪**&#x200B;标记已设置，则启动项将于指定的&#x200B;**启动**（**起始**）**日期**&#x200B;自动提升到生产页面。升级后，生产页面会自动发布。\
+      * 如果&#x200B;**生产就绪**&#x200B;标记已设置，则启动项将于指定的&#x200B;**启动**（**起始**）**日期**&#x200B;自动提升到生产页面。提升后，生产页面会自动发布。\
          如果未设置日期，该标记将不起作用。
 
 
@@ -98,7 +98,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->创建和编辑启动项需要具有`/content/launches`的访问权限 — 与默认组`content-authors`的访问权限相同。
+>要创建和编辑启动项，需要拥有 `/content/launches` 的访问权限 – 与默认组 `content-authors` 的权限相同。
 >
 >如果您遇到任何问题，请联系您的系统管理员。
 
@@ -109,15 +109,15 @@ ht-degree: 92%
 >提升页面时，将反映任何内容更改，但组件位置不会发生更改。
 
 
-### “启动项”控制台{#the-launches-console}
+### “启动项”控制台 {#the-launches-console}
 
-“启动项”控制台提供了启动项的概览，并允许您对列出的启动项执行操作。该控制台可以通过以下方式访问：
+“启动项”控制台提供了启动项的概览，并允许您对列出的启动项执行操作。可以通过以下方式访问该控制台：
 
 * **工具**&#x200B;控制台：**工具**、**站点**、**启动项**。
 
-* 或直接使用[https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
+* 或直接使用 [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
-## 引用（站点控制台）{#launches-in-references-sites-console}中的启动项
+## “引用”（“站点”控制台）中的启动项 {#launches-in-references-sites-console}
 
 1. 在&#x200B;**站点**&#x200B;控制台中，导航到启动项的源。
 1. 打开&#x200B;**引用**&#x200B;边栏并选择源页面。

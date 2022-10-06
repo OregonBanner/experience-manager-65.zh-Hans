@@ -1,14 +1,15 @@
 ---
-title: 了解如何在内容片段中使用引用
+title: 了解如何在内容片段中使用参考内容
 description: 了解如何在内容片段、内容、其他片段和其他资产（媒体）中使用引用。 介绍无头CMS创作中嵌套片段的必要性和机制。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
-# 了解如何在内容片段中使用引用 {#author-headless-references}
+# 了解如何在内容片段中使用参考内容 {#author-headless-references}
 
 ## 迄今为止的故事 {#story-so-far}
 
@@ -55,7 +56,7 @@ ht-degree: 2%
 * 城市
 * 公司
 * 人员
-* 奖项
+* 奖励
 
 看起来很简单，但公司当然有CEO和员工…….这些都是人，每个人都定义为人。
 
@@ -124,6 +125,6 @@ ht-degree: 2%
 * 入门指南
    * [创建Assets文件夹无标题快速入门指南](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
-* [AEM Headless Content Architect历程](/help/journey-headless/architect/overview.md)
+* [AEM Headless 内容架构师历程](/help/journey-headless/architect/overview.md)
 
 * [AEM无头翻译历程](/help/journey-headless/translation/overview.md)

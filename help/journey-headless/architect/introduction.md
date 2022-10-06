@@ -1,18 +1,19 @@
 ---
-title: AEM Headless Content Architect历程
+title: AEM Headless 内容架构师历程
 description: 介绍Adobe Experience Manager强大、灵活、无头的功能，以及如何为项目建立内容模型。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# 使用AEM实现无头内容建模 — 简介 {#architect-headless-introduction}
+# 使用 AEM 对 Headless 进行内容建模 – 简介 {#architect-headless-introduction}
 
 在 [AEM Headless Content Architect历程](overview.md)，您可以了解了解使用Adobe Experience Manager(AEM)进行无头内容交付的内容建模所需的（基本）概念和术语。
 
-本文档可帮助您了解无头内容交付、AEM如何支持无头，以及如何为无头内容建模。 阅读后，您应该：
+本文档可帮助您了解无头内容交付、AEM如何支持无头，以及如何为无头内容建模。 阅读本文档后，您应：
 
 * 了解无头内容交付的基本概念。
 * 熟悉AEM如何支持无头和内容建模。
@@ -47,7 +48,7 @@ ht-degree: 0%
 
 当我们讨论无头CMS时，CMS会管理内容并继续向消费者提供内容。 但是，通过仅提供 **内容** 无头CMS以标准化方式忽略最终输出渲染，从而将 **演示文稿** 内容到消费服务。
 
-![无头CMS](/help/journey-headless/developer/assets/headless-cms.png)
+![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
 消费性服务(无论是AR体验、网店、移动体验、渐进式Web应用程序(PWA)等)从无头CMS中获取内容并提供自己的呈现。 他们负责为您的内容提供自己的头脑。
 

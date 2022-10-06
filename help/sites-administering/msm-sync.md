@@ -1,8 +1,8 @@
 ---
 title: 配置 Live Copy 同步
-seo-title: 配置 Live Copy 同步
+seo-title: Configuring Live Copy Synchronization
 description: 了解有关配置 Live Copy 同步的信息。
-seo-description: 了解有关配置 Live Copy 同步的信息。
+seo-description: Learn about configuring Live Copy Synchronization.
 uuid: a5db0bee-a761-4cff-81dc-31b374525f47
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,12 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
-feature: 多站点管理器
+feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2710'
-ht-degree: 76%
+source-wordcount: '2697'
+ht-degree: 83%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 76%
 * 确定现有的转出配置是否符合您的要求，或者您是否需要创建一个或多个配置。
 * 指定要用于 Live Copy 的转出配置。
 
-## 已安装的自定义转出配置  {#installed-and-custom-rollout-configurations}
+## 已安装的自定义转出配置 {#installed-and-custom-rollout-configurations}
 
 本部分提供有关已安装转出配置、其所使用的同步操作以及如何在需要时创建自定义配置的信息。
 
 >[!CAUTION]
 >
->建议更新或更改现成的（已安装）转出配置&#x200B;**不**。 如果需要自定义实时操作，则应在自定义转出配置中添加该操作。
+>正在更新或更改现成的（已安装）转出配置 **not** 推荐。 如果需要自定义实时操作，则应将其添加到自定义转出配置中。
 
 ### 转出触发器 {#rollout-triggers}
 
@@ -40,7 +40,7 @@ ht-degree: 76%
 
 * **转出**：在 Blue Print 页面上使用&#x200B;**转出**&#x200B;命令，或者在 Live Copy 页面上使用&#x200B;**同步**&#x200B;命令。
 
-* **修改时**:源页面已修改。
+* **修改**：修改源页面。
 
 * **激活**：激活源页面。
 
@@ -48,9 +48,9 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->使用“修改”触发器可能会影响性能。请参阅 [MSM 最佳实践](/help/sites-administering/msm-best-practices.md#onmodify)以了解更多信息。
+>使用修改触发器可能会影响性能。请参阅 [MSM 最佳实践](/help/sites-administering/msm-best-practices.md#onmodify)以了解更多信息。
 
-### 已安装的转出配置  {#installed-rollout-configurations}
+### 已安装的转出配置 {#installed-rollout-configurations}
 
 下表列出了随 AEM 一起安装的转出配置。该表包含每个转出配置的触发器和同步操作。如果已安装的转出配置操作不符合您的要求，您可以[创建一个新的转出配置](#creating-a-rollout-configuration)。
 
@@ -64,7 +64,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>标准转出配置</td>
-   <td>标准转出配置，允许在触发转出时启动转出流程，并执行以下操作：创建、更新、删除内容和排序子节点。</td>
+   <td>标准转出配置，允许在触发转出时启动转出流程，并执行以下操作：创建、更新、删除内容和对子节点进行排序。</td>
    <td>转出</td>
    <td>contentUpdate<br /> contentCopy<br /> contentDelete<br /> referencesUpdate<br /> productUpdate<br /> orderChildren</td>
   </tr>
@@ -125,9 +125,9 @@ ht-degree: 76%
  </tbody>
 </table>
 
-### 已安装的同步操作  {#installed-synchronization-actions}
+### 已安装的同步操作 {#installed-synchronization-actions}
 
-下表列出了随 AEM 一起安装的同步操作。如果已安装的操作不符合您的要求，您可以[创建新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)。
+下表列出了随 AEM 一起安装的同步操作。如果已安装的操作不符合您的要求，您可以 [创建新的同步操作](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action).
 
 <table>
  <tbody>
@@ -138,25 +138,25 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>contentCopy</td>
-   <td>当源节点在 Live Copy 上不存在时，将节点复制到 Live Copy。<a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM内容复制操作服</a> 务，以指定要排除的节点类型、段落项和页面属性。  <br /> </td>
+   <td>当源节点在 Live Copy 上不存在时，将节点复制到 Live Copy。<a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM内容复制操作服务</a> 指定要排除的节点类型、段落项和页面属性。 <br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td>contentDelete</td>
-   <td><p>删除源上不存在的Live Copy节点。 <a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM内容删除操作服</a> 务，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
+   <td><p>删除源上不存在的Live Copy节点。 <a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 内容删除操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
    <td>contentUpdate</td>
-   <td>使用来自源的更改来更新 Live Copy 内容。<a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM内容更新操作服</a> 务，以指定要排除的节点类型、段落项和页面属性。  <br /> </td>
+   <td>使用来自源的更改来更新 Live Copy 内容。<a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM内容更新操作服务</a> 指定要排除的节点类型、段落项和页面属性。 <br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td>editProperties</td>
-   <td><p>编辑 Live Copy 的属性。editMap 属性确定编辑哪些属性及其值。editMap 属性的值必须使用以下格式：</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br />... ,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p><code>current_value</code>和<code>new_value</code>项目是正则表达式。<br /> </p> <p>例如，考虑 editMap 的以下值：</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage，<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>该值将按照如下所示编辑 Live Copy 节点的属性：</p>
+   <td><p>编辑 Live Copy 的属性。editMap 属性确定编辑哪些属性及其值。editMap 属性的值必须使用以下格式：</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br /> ... ,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p>的 <code>current_value</code> 和 <code>new_value</code> 项目是正则表达式。 <br /> </p> <p>例如，考虑 editMap 的以下值：</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage，<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>该值将按照如下所示编辑 Live Copy 节点的属性：</p>
     <ul>
-     <li>将设置为<code>contentpage</code>或设置为<code>homepage</code>的<code>sling:resourceType</code>属性设置为 <code>mobilecontentpage.</code></li>
-     <li>设置为<code>contentpage</code>的<code>cq:template</code>属性将设置为 <code>mobilecontentpage.</code></li>
+     <li>的 <code>sling:resourceType</code> 属性设置为 <code>contentpage</code> 或 <code>homepage</code> 设置为 <code>mobilecontentpage.</code></li>
+     <li>的 <code>cq:template</code> 设置为的属性 <code>contentpage</code> 设置为 <code>mobilecontentpage.</code></li>
     </ul> </td>
    <td><p> </p> <p>editMap：（字符串）标识属性、当前值和新值。请参阅“描述”以了解相关信息。<br /> </p> </td>
   </tr>
@@ -172,7 +172,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>referencesUpdate</td>
-   <td><p>在 Live Copy 上，此同步操作会更新引用，如链接。<br />将搜索 Live Copy 页面中指向 Blueprint 内资源的路径。找到后，它会更新路径以指向 Live Copy（而不是 Blueprint）内的相关资源。具有 Blueprint 外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM引用更新操作服</a> 务，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
+   <td><p>在 Live Copy 上，此同步操作会更新引用，如链接。<br />将搜索 Live Copy 页面中指向 Blueprint 内资源的路径。找到后，它会更新路径以指向 Live Copy（而不是 Blueprint）内的相关资源。具有 Blueprint 外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 引用更新操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -203,7 +203,7 @@ ht-degree: 76%
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
     </ul> <p>仅对页面使用此操作。</p> </td>
-   <td>目标：（字符串）您为其设置权限的组的ID。<br /> </td>
+   <td>目标：（字符串）您为其设置权限的组的ID。 <br /> </td>
   </tr>
   <tr>
    <td>mandatoryContent</td>
@@ -265,21 +265,21 @@ ht-degree: 76%
 
 在 Blueprint 或 Live Copy 页面上设置转出配置时，您可以使用该新转出配置。
 
-### 从同步中排除属性和节点类型  {#excluding-properties-and-node-types-from-synchronization}
+### 从同步中排除属性和节点类型 {#excluding-properties-and-node-types-from-synchronization}
 
 您可以配置多个支持相应同步操作的 OSGi 服务，以便它们不会影响特定的节点类型和属性。例如，许多与 AEM 内部功能相关的属性和子节点不应包含在 Live Copy 中。只应复制与页面用户相关的内容。
 
-使用AEM时，可通过多种方法来管理此类服务的配置设置；有关更多详细信息和建议的实践，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md) 。
+使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的实践。
 
 下表列出了可以为其指定要排除节点的同步操作。该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
 
-| 同步操作 | Web控制台中的服务名称 | 服务PID |
+| 同步操作 | Web 控制台中的服务名称 | 服务 PID |
 |---|---|---|
-| contentCopy | CQ MSM内容复制操作 | com.day.cq.wcm.msm.impl.actions.ContentCopyActionFactory |
-| contentDelete | CQ MSM内容删除操作 | com.day.cq.wcm.msm.impl.actions.ContentDeleteActionFactory |
-| contentUpdate | CQ MSM内容更新操作 | com.day.cq.wcm.msm.impl.actions.ContentUpdateActionFactory |
-| PageMoveAction | CQ MSM页面移动操作 | com.day.cq.wcm.msm.impl.actions.PageMoveActionFactory |
-| referencesUpdate | CQ MSM引用更新操作 | com.day.cq.wcm.msm.impl.actions.ReferencesUpdateActionFactory |
+| contentCopy | CQ MSM 内容复制操作 | com.day.cq.wcm.msm.impl.actions.ContentCopyActionFactory |
+| contentDelete | CQ MSM 内容删除操作 | com.day.cq.wcm.msm.impl.actions.ContentDeleteActionFactory |
+| contentUpdate | CQ MSM 内容更新操作 | com.day.cq.wcm.msm.impl.actions.ContentUpdateActionFactory |
+| PageMoveAction | CQ MSM 页面移动操作 | com.day.cq.wcm.msm.impl.actions.PageMoveActionFactory |
+| referencesUpdate | CQ MSM 引用更新操作 | com.day.cq.wcm.msm.impl.actions.ReferencesUpdateActionFactory |
 
 下表描述了您可以配置的属性：
 
@@ -291,18 +291,18 @@ ht-degree: 76%
   </tr>
   <tr>
    <td><p>排除的节点类型</p> <p>cq.wcm.msm.action.excludednodetypes</p> </td>
-   <td>与要从同步操作中排除的节点类型匹配的正则表达式。</td>
+   <td>匹配要从同步操作中排除的节点类型的正则表达式.</td>
   </tr>
   <tr>
-   <td><p>排除的段落项目</p> <p>cq.wcm.msm.action.excludedparagraphitems</p> </td>
-   <td>与要从同步操作中排除的段落项目匹配的正则表达式。</td>
+   <td><p>排除的段落项</p> <p>cq.wcm.msm.action.excludedparagraphitems</p> </td>
+   <td>匹配要从同步操作中排除的段落项的正则表达式.</td>
   </tr>
   <tr>
    <td><p>排除的页面属性</p> <p>cq.wcm.msm.action.excludedprops</p> </td>
-   <td>与要从同步操作中排除的页面属性匹配的正则表达式。</td>
+   <td>匹配要从同步操作中排除的页面属性的正则表达式.</td>
   </tr>
   <tr>
-   <td><p>忽略的Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
+   <td><p>忽略的 Mixin 节点类型</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
    <td>仅适用于CQ MSM内容更新操作。 与要从同步操作中排除的mixin节点类型名称匹配的正则表达式。</td>
   </tr>
  </tbody>
@@ -334,7 +334,7 @@ ht-degree: 76%
 
 您可以配置多个 OSGi 服务以支持与更新引用相关的对应同步操作。
 
-使用AEM时，可通过多种方法来管理此类服务的配置设置；有关更多详细信息和建议的实践，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md) 。
+使用AEM时，可通过多种方法来管理此类服务的配置设置；请参阅 [配置OSGi](/help/sites-deploying/configuring-osgi.md) 以了解更多详细信息和建议的实践。
 
 下表列出了可以为其指定引用更新的同步操作。该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
 
@@ -345,25 +345,25 @@ ht-degree: 76%
    <th>描述</th>
   </tr>
   <tr>
-   <td><p>更新嵌套LiveCopy中的引用</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td>
+   <td><p>跨嵌套 Live Copy 更新引用</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td>
    <td>仅适用于CQ MSM引用更新操作。 选择此选项（Web控制台）或将此布尔属性设置为true（存储库配置），以替换针对位于最顶部LiveCopy分支中的任何资源的引用。</td>
   </tr>
   <tr>
    <td><p>更新引用页面</p> <p>cq.wcm.msm.impl.actions.pagemove.prop_referenceUpdate</p> </td>
-   <td>仅适用于CQ MSM页面移动操作。 选择此选项（Web控制台）或将此布尔属性设置为<code>true</code>（存储库配置）以更新任何引用，以使用原始页面来引用LiveCopy页面。</td>
+   <td>仅适用于CQ MSM页面移动操作。 选择此选项（Web控制台）或将此布尔属性设置为 <code>true</code> （存储库配置），以更新任何引用，以改为使用原始页面引用LiveCopy页面。</td>
   </tr>
  </tbody>
 </table>
 
 ## 指定要使用的转出配置 {#specifying-the-rollout-configurations-to-use}
 
-MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖特定 Live Copy 的转出配置。MSM 提供了多个位置可指定要使用的转出配置。该位置将确定配置是否适用于特定的 Live Copy。
+MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖特定 Live Copy 的转出配置。MSM 提供了多个位置来指定要使用的转出配置。该位置将确定配置是否适用于特定的 Live Copy。
 
 下文列出了可在其中指定要使用的转出配置的位置，并描述了 MSM 如何确定要用于 Live Copy 的转出配置：
 
 * **[Live Copy 页面属性](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)：**&#x200B;当 Live Copy 页面配置为使用一个或多个转出配置时，MSM 将使用这些转出配置。
 * **[Blueprint 页面属性](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)：**&#x200B;当 Live Copy 基于 Blueprint 且 Live Copy 页面未配置转出配置时，将使用与 Blueprint 源页面关联的转出配置。
-* **Live Copy父页面属性：** 如果Live Copy页面和Blueprint源页面均未使用转出配置进行配置，则会使用应用于Live Copy页面父页面的转出配置。
+* **Live Copy父页面属性：** 如果Live Copy页面和Blueprint源页面均未使用转出配置进行配置，则会使用适用于Live Copy页面父页面的转出配置。
 * **[系统默认](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):** 当无法确定Live Copy父页面的转出配置时，将使用系统默认转出配置。
 
 例如，某个 Blueprint 使用 We.Retail 引用站点作为源内容。从该 Blueprint 创建一个网站。以下列表中的每个项都描述了有关使用转出配置的不同场景：
@@ -372,7 +372,7 @@ MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖�
 * We.Retail 引用站点的根页面配置了多个转出配置。MSM 对所有 Live Copy 页面使用这些转出配置。
 * We.Retail引用站点的根页面配置了多个转出配置，而Live Copy站点的根页面配置了一组不同的转出配置。 MSM 使用在 Live Copy 站点根页面上配置的转出配置。
 
-### 为 Live Copy 页面设置转出配置  {#setting-the-rollout-configurations-for-a-live-copy-page}
+### 为 Live Copy 页面设置转出配置 {#setting-the-rollout-configurations-for-a-live-copy-page}
 
 使用要在转出源页面时使用的转出配置对 Live Copy 页面进行配置。子页面默认情况下会继承该配置。在配置要使用的转出配置时，将覆盖 Live Copy 页面从其父页面继承的配置。
 
@@ -396,7 +396,7 @@ MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖�
 
 1. 单击或点按&#x200B;**保存**。
 
-### 为 Blueprint 页面设置转出配置  {#setting-the-rollout-configuration-for-a-blueprint-page}
+### 为 Blueprint 页面设置转出配置 {#setting-the-rollout-configuration-for-a-blueprint-page}
 
 使用要在转出 Blueprint 页面时使用的转出配置对 Blueprint 页面进行配置。
 
@@ -418,6 +418,6 @@ MSM 允许您指定一般使用的转出配置集，并在需要时可以覆盖�
 使用 [Web 控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[存储库节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)配置服务。
 
 * 在 Web 控制台中，要配置的属性名称是默认转出配置。
-* 使用存储库节点，要配置的属性名称为`liverelationshipmgr.relationsconfig.default`。
+* 使用存储库节点，要配置的属性的名称是 `liverelationshipmgr.relationsconfig.default`。
 
-将此属性值设置为要用作系统默认值的转出配置的路径。默认值为`/libs/msm/wcm/rolloutconfigs/default`，它是&#x200B;**标准转出配置**。
+将此属性值设置为要用作系统默认值的转出配置的路径。默认值为 `/libs/msm/wcm/rolloutconfigs/default`，这是&#x200B;**标准转出配置**。

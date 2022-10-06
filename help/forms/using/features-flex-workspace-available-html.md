@@ -1,8 +1,8 @@
 ---
 title: Flex工作区的功能在AEM Forms工作区中不可用
-seo-title: Flex工作区的功能在AEM Forms工作区中不可用
+seo-title: Features of Flex workspace not available in AEM Forms workspace
 description: AEM Forms工作区在基于Flex的工作区之外进行创新。 了解特性和功能的差异。
-seo-description: AEM Forms工作区在基于Flex的工作区之外进行创新。 了解特性和功能的差异。
+seo-description: AEM Forms workspace innovates beyond Flex-based Workspace. Read about the differences in features and capabilities.
 uuid: 128729b3-2367-42e8-8159-a080595e8455
 contentOwner: robhagat
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
 exl-id: a9d2fd77-e8cf-45bf-8492-f1bb8d580548
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-# Flex工作区的功能在AEM Forms工作区中不可用{#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+# Flex工作区的功能在AEM Forms工作区中不可用 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
 
 AEM Forms工作区是全新的工作区。 以下是基于Flex的工作区的一些功能在AEM Forms工作区中不可用。
 

@@ -1,22 +1,22 @@
 ---
 title: 自适应表单关键词
-seo-title: 自适应表单关键词
+seo-title: Adaptive forms keywords
 description: 您不能在自适应表单中将这些保留字用作标识符。
-seo-description: 您不能在自适应表单中将这些保留字用作标识符。
+seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
-feature: 自适应表单
+feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '208'
 ht-degree: 5%
 
 ---
 
-# 自适应表单关键词{#adaptive-forms-keywords}
+# 自适应表单关键词 {#adaptive-forms-keywords}
 
 自适应表单关键字是预定义的保留标识符，对自适应表单具有特殊含义。 您不能在自适应表单中将这些关键词用作标识符。 下表列出了作为自适应表单保留标识符的所有关键词。
 
@@ -130,7 +130,7 @@ ht-degree: 5%
   <tr>
    <td><p>宽度</p> </td>
    <td><p>buttonText</p> </td>
-   <td><p>索引</p> </td>
+   <td><p>index</p> </td>
   </tr>
   <tr>
    <td><p>高度</p> </td>
@@ -240,4 +240,4 @@ ht-degree: 5%
  </tbody>
 </table>
 
-除了上面列出的关键字外，请避免使用与[自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63)类似的名称。
+除了上面列出的关键词外，请避免使用与 [自适应表单JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63).

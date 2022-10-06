@@ -13,7 +13,7 @@ exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
 source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 20%
+ht-degree: 23%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 20%
 
 在 **项目** 控制台中，您可以访问和管理项目。
 
-![项目控制台](assets/projects-console.png)
+![“项目”控制台](assets/projects-console.png)
 
 使用控制台，您可以创建项目、将资源与项目关联，以及删除项目或资源链接。
 
@@ -39,11 +39,11 @@ ht-degree: 20%
 按照以下步骤创建新项目。
 
 1. 在 **项目** 控制台，点按或单击 **创建** 打开 **创建项目** 向导。
-1. 选择模板并单击 **下一个**. 您可以进一步了解标准项目模板 [这里。](/help/sites-authoring/projects.md#project-templates)
+1. 选择模板并单击&#x200B;**下一步**。您可以进一步了解标准项目模板 [这里。](/help/sites-authoring/projects.md#project-templates)
 
    ![创建项目向导](assets/create-project-wizard.png)
 
-1. 定义 **标题** 和 **描述** 并添加 **缩略图** 图像（如果需要）。 您还可以添加或删除用户以及他们所属的组。
+1. 定义&#x200B;**标题**&#x200B;和&#x200B;**描述**，然后根据需要添加&#x200B;**缩略图**&#x200B;图像。您还可以添加或删除用户以及他们所属的组。
 
    ![向导的属性步骤](assets/create-project-wizard-properties.png)
 
@@ -96,9 +96,9 @@ ht-degree: 20%
 
    ![项目任务](assets/project-tasks.png)
 
-### 查看项目时间轴 {#viewing-a-project-timeline}
+### 查看项目时间线 {#viewing-a-project-timeline}
 
-项目时间轴提供了项目中的资产上次使用时间的相关信息。要查看项目时间轴，请执行以下步骤。
+项目时间线提供了项目中的资产上次使用时间的相关信息。要查看项目时间轴，请执行以下步骤。
 
 1. 在 **项目** 控制台，单击或点按 **时间轴** 在控制台左上角的边栏选择器中。
    ![选择时间轴模式](assets/projects-timeline-rail.png)

@@ -1,8 +1,8 @@
 ---
 title: 使用富文本编辑器创作内容
-seo-title: 使用富文本编辑器创作内容
+seo-title: Using the Rich Text Editor to Author Content
 description: 使用富文本编辑器创作内容
-seo-description: 使用富文本编辑器创作内容
+seo-description: Using the Rich Text Editor to Author Content
 uuid: 70f4d4b2-cbc6-4fef-9262-1696804008d8
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,8 +11,8 @@ docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 70%
+source-wordcount: '260'
+ht-degree: 68%
 
 ---
 
@@ -44,11 +44,11 @@ ht-degree: 70%
 * **关闭**
 * **保存**
 
-## 全屏编辑  {#full-screen-editing}
+## 全屏编辑 {#full-screen-editing}
 
-对于基于文本的组件，从工具栏![](do-not-localize/screen_shot_2018-03-21at163236.png)中点按全屏模式会打开富文本编辑器，并隐藏页面内容的其余部分。
+对于基于文本的组件，点按工具栏中的全屏模式 ![](do-not-localize/screen_shot_2018-03-21at163236.png) 打开富文本编辑器，并隐藏页面内容的其余部分。
 
-全屏模式显示可用于创作的所有已配置选项。 可用性取决于配置](/help/sites-administering/rich-text-editor.md)。[
+全屏模式显示可用于创作的所有已配置选项。 可用性是选项 [取决于配置](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 

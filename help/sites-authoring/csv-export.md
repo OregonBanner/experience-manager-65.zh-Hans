@@ -1,8 +1,8 @@
 ---
 title: 导出到 CSV
-seo-title: 导出到 CSV
+seo-title: Export to CSV
 description: 将页面的相关信息导出到本地系统上的 CSV 文件
-seo-description: 将页面的相关信息导出到本地系统上的 CSV 文件
+seo-description: Export information about your pages to a CSV file on your local system
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 86%
+source-wordcount: '191'
+ht-degree: 85%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 86%
       * 工作流
    * 翻译
       * 已翻译
-   * Analytics
+   * 分析
       * 页面查看次数
       * 独特访客
       * 页面停留时间
@@ -55,7 +55,7 @@ ht-degree: 86%
 
 ![etc-01](assets/etc-01.png)
 
-在浏览&#x200B;**Sites**&#x200B;控制台（在“列表”视图中）时，可以使用创建&#x200B;**CSV报表**&#x200B;选项：它是&#x200B;**创建**&#x200B;下拉菜单的一个选项：
+创建 **CSV报表** 选项在浏览时可用 **站点** 控制台（在列表视图中）：它是 **创建** 下拉菜单：
 
 ![etc-02](assets/etc-02.png)
 

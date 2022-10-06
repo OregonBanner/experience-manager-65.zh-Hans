@@ -14,7 +14,7 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 85%
+ht-degree: 88%
 
 ---
 
@@ -48,7 +48,6 @@ ht-degree: 85%
 >* 将触发一个工作流，向相应的人员通知您的发布请求。
 >* 您的开发团队可能已[自定义此工作流](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6)。
 >* 将显示一条简短的消息，通知您工作流已经触发。
-
 >
 
 
@@ -92,7 +91,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->无法发布编辑器中由[别名](/help/sites-authoring/editing-page-properties.md#advanced)访问的页面。 编辑器中的发布选项仅适用于通过实际路径访问的页面。
+>无法发布编辑器中按[别名](/help/sites-authoring/editing-page-properties.md#advanced)处理的页面。编辑器中的发布选项仅适用于通过其实际路径访问的页面。
 
 ### 从控制台中发布 {#publishing-from-the-console}
 
@@ -111,7 +110,7 @@ ht-degree: 85%
 
    ![pp-02](assets/pp-02.png)
 
-1. 在“快速发布”对话框中，单击&#x200B;**Publish**&#x200B;以确认发布，或单击&#x200B;**Cancel**&#x200B;以取消发布。 请记住，任何未发布的引用也将被自动发布。
+1. 在快速发布对话框中，单击 **发布** 或单击以取消 **取消**. 请记住，任何未发布的引用也将被自动发布。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -144,7 +143,7 @@ ht-degree: 85%
 
    单击&#x200B;**下一步**&#x200B;以继续。
 
-1. 在“管理发布”向导的下一步&#x200B;**范围**&#x200B;中，您可以定义发布/取消发布的范围，如包括子页面和/或包括引用。
+1. 在“管理发布”向导的下一步中， **范围**，您可以定义发布/取消发布的范围，如包括子页面和/或包括引用。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -164,9 +163,9 @@ ht-degree: 85%
 
    单击&#x200B;**包括子项**&#x200B;会打开一个对话框，它允许您：
 
-   * 仅包括下级子项。
-   * 仅包括已修改的页面。
-   * 仅包括已发布的页面。
+   * 仅包括下级子项.
+   * 仅包括已修改的页面.
+   * 仅包括已发布的页面.
 
    单击&#x200B;**添加**&#x200B;可根据选择的选项将子页面添加到要发布或取消发布的页面列表中。单击&#x200B;**取消**&#x200B;可取消所做的选择并返回到向导。
 
@@ -178,9 +177,9 @@ ht-degree: 85%
 
    ![pp-04](assets/pp-04.png)
 
-   **已发布引用**&#x200B;对话框显示所选内容的引用。 默认情况下，这些引用全部处于选中状态并将进行发布/取消发布，但您可以取消选择它们，以便将它们排除在操作之外。
+   的 **发布的引用** 对话框显示所选内容的引用。 默认情况下，这些引用全部处于选中状态并将进行发布/取消发布，但您可以取消选择它们，以便将它们排除在操作之外。
 
-   单击&#x200B;**完成**&#x200B;以保存更改，或单击&#x200B;**取消**&#x200B;以取消选择并返回到向导。
+   单击 **完成** 保存更改或 **取消** 以取消选择并返回到向导。
 
    返回到向导后，**引用**&#x200B;列将进行相应的更新，以反映您选择的要发布或取消发布的引用。
 
@@ -194,12 +193,12 @@ ht-degree: 85%
 
    >[!NOTE]
    >
-   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。有关详细信息，请参阅此页面](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)上有关发布权限的[前一注释，以及[管理对工作流的访问](/help/sites-administering/workflows-managing.md)和[将工作流应用到页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)。
+   >将根据用户可能拥有也可能没有的权限显示&#x200B;**工作流**&#x200B;步骤。请参阅 [本页的前面注释](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) 关于发布权限 [管理工作流的访问权限](/help/sites-administering/workflows-managing.md) 和 [将工作流应用于页面](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) 以了解详细信息。
 
    资源将按触发的工作流分组，并且每组都提供了用于执行以下操作的选项：
 
    * 定义工作流的标题。
-   * 保留工作流包，前提是工作流具有[多资源支持](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)。
+   * 保留工作流包，前提是工作流已 [多资源支持](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
    * 在选择保留工作流包的选项时，定义工作流包的标题。
 
    单击&#x200B;**发布**&#x200B;或&#x200B;**稍后发布**&#x200B;以完成发布。
@@ -221,7 +220,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->无法取消发布编辑器中由[别名](/help/sites-authoring/editing-page-properties.md#advanced)访问的页面。 编辑器中的发布选项仅适用于通过实际路径访问的页面。
+>无法取消发布编辑器中按[别名](/help/sites-authoring/editing-page-properties.md#advanced)处理的页面。编辑器中的发布选项仅适用于通过其实际路径访问的页面。
 
 ### 从控制台中取消发布 {#unpublishing-from-the-console}
 
@@ -265,7 +264,7 @@ ht-degree: 85%
 
    请记住，您还可以通过&#x200B;**已发布引用**&#x200B;选项查看要发布的引用。
 
-1. [按照标准继续“管理发](#manage-publication) 布”向导，以完成发布或取消发布树的过程。
+1. [照常继续“管理发布”向导](#manage-publication) 以完成树的发布或取消发布。
 
 ## 确定发布状态 {#determining-publication-status}
 
@@ -275,9 +274,9 @@ ht-degree: 85%
 
    ![screenshot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-   站点控制台的[卡片](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)和[列表](/help/sites-authoring/basic-handling.md#list-view)视图中将显示发布状态。
+   站点控制台的[信息卡](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)和[列表](/help/sites-authoring/basic-handling.md#list-view)视图中将显示发布状态。
 
-* 在[时间轴](/help/sites-authoring/basic-handling.md#timeline)中
+* 在[时间线](/help/sites-authoring/basic-handling.md#timeline)中
 
    ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 

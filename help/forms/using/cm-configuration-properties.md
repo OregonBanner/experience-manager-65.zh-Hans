@@ -1,25 +1,25 @@
 ---
 title: 通信管理配置属性
-seo-title: 通信管理配置属性
+seo-title: Correspondence Management Configuration Properties
 description: 本主题介绍如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍了可编辑的属性及其说明、默认值和可接受值。
-seo-description: 本主题介绍如何使用特定于解决方案的配置来修改资产编辑器。 本主题详细介绍了可编辑的属性及其说明、默认值和可接受值。
+seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
 uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
-feature: 通信管理
+feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '845'
 ht-degree: 3%
 
 ---
 
-# 通信管理配置属性{#correspondence-management-configuration-properties}
+# 通信管理配置属性 {#correspondence-management-configuration-properties}
 
-要配置这些属性，请在浏览器中打开以下URL:`https://<server>:<port>/<contextPath>/system/console/configMgr`并选择&#x200B;**通信管理配置**。
+要配置这些属性，请在浏览器中打开以下URL: `https://<server>:<port>/<contextPath>/system/console/configMgr` 选择 **通信管理配置**.
 
 通信管理具有以下配置属性：
 
@@ -39,7 +39,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td>最小宽度数</td>
-   <td>使用编号列表和罗马数字之外的列表时，要应用于项目符号/数字字段的最小宽度</td>
+   <td>除罗马数字外，使用编号列表时，要应用于项目符号/数字字段的最小宽度</td>
    <td>8.0毫米</td>
    <td>任意数字</td>
   </tr>
@@ -52,12 +52,12 @@ ht-degree: 3%
   <tr>
    <td>演绎版类型</td>
    <td>创建通信应用程序用于呈现信件预览的呈现类型。 </td>
-   <td>HTML呈现版本</td>
+   <td>HTML呈现</td>
    <td>HTML呈现版本/PDF呈现版本</td>
   </tr>
   <tr>
-   <td><p>启用CCR PDF突出显示</p> </td>
-   <td><p>在“创建通信”应用程序中，在PDF上启用高亮显示</p> </td>
+   <td><p>启用CCRPDF高亮显示</p> </td>
+   <td><p>在“创建通信”应用程序中，允许在PDF上突出显示</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -71,7 +71,7 @@ ht-degree: 3%
    <td><p>目标高亮显示颜色</p> </td>
    <td><p>创建通信应用程序中的目标高亮颜色</p> </td>
    <td><p>90;155;245</p> </td>
-   <td><p>格式为R;G;B的任意RGB颜色</p> </td>
+   <td><p>格式为R;G;B的任何RGB颜色</p> </td>
   </tr>
   <tr>
    <td><p>内容突出显示类型</p> </td>
@@ -83,7 +83,7 @@ ht-degree: 3%
    <td><p>内容高亮显示颜色</p> </td>
    <td><p>创建通信应用程序中的内容高亮显示颜色</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>格式为R;G;B的任意RGB颜色</p> </td>
+   <td><p>格式为R;G;B的任何RGB颜色</p> </td>
   </tr>
   <tr>
    <td><p>字段高亮显示类型</p> </td>
@@ -95,7 +95,7 @@ ht-degree: 3%
    <td><p>字段高亮显示颜色</p> </td>
    <td><p>创建通信应用程序中的字段高亮颜色</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>格式为R;G;B的任意RGB颜色</p> </td>
+   <td><p>格式为R;G;B的任何RGB颜色</p> </td>
   </tr>
   <tr>
    <td><p>应用程序超时</p> </td>
@@ -129,7 +129,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>PDF提交类型</p> </td>
-   <td><p>PDF提交类型（从“创建通信”应用程序提交时生成的PDF类型）</p> </td>
+   <td><p>PDF提交类型(从“创建通信”应用程序提交时生成的PDF类型)</p> </td>
    <td><p>非交互式</p> </td>
    <td><p>交互式/非交互式</p> </td>
   </tr>
@@ -249,13 +249,13 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>信件缓存大小</p> </td>
-   <td><p>指定要保留在缓存中的最大字母数。</p> <p>更改此值将清理<code>in-memory</code>缓存。</p> </td>
+   <td><p>指定要保留在缓存中的最大字母数。</p> <p>更改此值将清理 <code>in-memory</code> 缓存。</p> </td>
    <td><p>100</p> </td>
    <td><p>任何数值</p> </td>
   </tr>
   <tr>
    <td><p>启用信件缓存</p> </td>
-   <td><p>启用/禁用信件缓存。</p> <p>更改此值将清理<code>in-memory </code>缓存。</p> </td>
+   <td><p>启用/禁用信件缓存。</p> <p>更改此值将清理 <code>in-memory </code> 缓存。</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -291,7 +291,7 @@ ht-degree: 3%
   </tr>
   <tr>
    <td><p>调试目录 </p> <p> </p> </td>
-   <td>用于调试的文件系统文件夹位置。 如果目录不是<code>exists</code>，则不会生成任何调试转储。</td>
+   <td>用于调试的文件系统文件夹位置。 如果目录没有 <code>exists</code>，则不会生成调试转储。</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>

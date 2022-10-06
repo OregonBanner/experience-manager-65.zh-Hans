@@ -1,8 +1,8 @@
 ---
 title: 将收藏集发布到 Brand Portal
-seo-title: 将收藏集发布到 Brand Portal
+seo-title: Publish collections to Brand Portal
 description: 了解如何将收藏集发布和取消发布到Brand Portal。
-seo-description: 了解如何将收藏集发布和取消发布到Brand Portal。
+seo-description: Learn how to publish and unpublish collections to Brand Portal.
 uuid: 7de58548-4cfa-4a94-bac7-9e914dee9042
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -15,7 +15,7 @@ role: User
 exl-id: 8f426012-d9ec-418e-8ab6-78e4aeff7538
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '322'
 ht-degree: 36%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->无法将内容片段发布到 Brand Portal。因此，如果在AEM作者上选择内容片段，则&#x200B;**发布到Brand Portal**&#x200B;操作将不可用。
+>无法将内容片段发布到 Brand Portal。因此，如果您在AEM作者上选择内容片段，则 **发布到Brand Portal** 操作不可用。
 >
 >如果包含内容片段的收藏集从AEM创作发布到Brand Portal，则文件夹（内容片段除外）的所有内容都将复制到Brand Portal界面。
 

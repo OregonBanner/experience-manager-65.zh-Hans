@@ -4,7 +4,7 @@ description: 为PDFG配置禁用UAC的步骤
 source-git-commit: f6dcb488c64dad2d65facc0e8e1d6685b7375a08
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 

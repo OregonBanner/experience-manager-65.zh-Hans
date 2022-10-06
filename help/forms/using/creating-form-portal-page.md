@@ -1,8 +1,8 @@
 ---
 title: 创建表单门户页面
-seo-title: 创建表单门户页面
+seo-title: Creating a forms portal page
 description: Forms门户为Web开发人员提供了组件，用于在使用Adobe Experience Manager(AEM)创作的网站上创建和自定义表单门户。
-seo-description: Forms门户为Web开发人员提供了组件，用于在使用Adobe Experience Manager(AEM)创作的网站上创建和自定义表单门户。
+seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
 uuid: a5017de5-616c-4ce4-81aa-f28c741f8e8f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,25 +10,25 @@ topic-tags: publish
 discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1641'
 ht-degree: 1%
 
 ---
 
-
 # 创建表单门户页面{#creating-a-forms-portal-page}
 
-Forms门户组件为Web开发人员提供了组件，用于在使用Adobe Experience Manager(AEM)创作的网站上创建和自定义表单门户。 有关表单门户的快速概述，请参阅[在门户上发布表单的简介](../../forms/using/introduction-publishing-forms.md)。
+Forms门户组件为Web开发人员提供了组件，用于在使用Adobe Experience Manager(AEM)创作的网站上创建和自定义表单门户。 有关Forms Portal的快速概述，请参阅 [在门户上发布表单简介](../../forms/using/introduction-publishing-forms.md).
 
 ## 前提条件 {#prerequisites}
 
-默认情况下，Forms门户组件不可用。 确保按照[启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)中所述启用以下表单门户组件类别。
+默认情况下，Forms门户组件不可用。 确保启用以下表单门户组件类别，如 [启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md).
 
-**文档** 服务包括搜索和制表人、链接以及草稿和提交组件。
+**文档服务** 包括搜索和制表人、链接以及草稿和提交组件。
 
-**文档服务谓** 词包括日期谓词、全文谓词、属性谓词和标记谓词组件。这些组件用于在搜索和制表人组件中配置搜索。
+**文档服务谓词** 包括“日期谓词”、“全文谓词”、“属性谓词”和“标记谓词”组件。 这些组件用于在搜索和制表人组件中配置搜索。
 
 在AEM站点页面上启用组件类别后，即可在组件浏览器中使用这些组件类别。
 
@@ -36,7 +36,7 @@ Forms门户组件为Web开发人员提供了组件，用于在使用Adobe Experi
 
 Forms门户组件类别
 
-## 搜索和制表程序组件{#search-amp-lister-component}
+## 搜索和制表人组件 {#search-amp-lister-component}
 
 “文档服务”组件类别下的“搜索和制表人”组件用于在页面上列出表单，并对列出的表单实施搜索。 组件包含两个窗格：
 
@@ -49,34 +49,34 @@ Forms门户组件类别
 
 在具有网格布局的页面中搜索和制表人组件
 
-### 列表窗格{#list-pane}
+### 列表窗格 {#list-pane}
 
 “列表”窗格是列出表单的区域。 “搜索和制表人”组件提供了各种配置选项，可用于控制列表窗格中表单的显示。
 
-要配置“列表”窗格，请点按搜索和制表人组件，然后点按![settings_icon](assets/settings_icon.png)。 将打开&#x200B;**[!UICONTROL 编辑组件]**&#x200B;对话框。
+要配置列表窗格，请点按搜索和制表人组件，然后点按 ![settings_icon](assets/settings_icon.png). 的 **[!UICONTROL 编辑组件]** 对话框。
 
 ![编辑模式下的列表窗格](assets/edit-list.png)
 
 编辑模式下的列表窗格
 
-**编辑**&#x200B;对话框包含多个选项卡，提供下表所述的配置选项。 完成后，点按&#x200B;**确定**&#x200B;以保存配置。
+的 **编辑** 对话框包括若干选项卡，提供下表所述的配置选项。 点按 **确定** ，以保存配置。
 
 <table>
  <tbody>
   <tr>
-   <th>选项卡·</th>
+   <th>制表符</th>
    <th>配置</th>
    <th>描述</th>
   </tr>
   <tr>
-   <td><span class="uicontrol"><strong>资产文件夹</strong></code></td>
+   <td><span class="uicontrol"><strong>资源文件夹</strong></code></td>
    <td>添加项目</td>
-   <td>使用AEM Forms UI配置上传资产的文件夹。 默认情况下，该报表会列出所有上传的资产。 有关AEM Forms UI的更多信息，请参阅<a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表单简介</a>。</td>
+   <td>使用AEM Forms UI配置上传资产的文件夹。 默认情况下，该报表会列出所有上传的资产。 有关AEM Forms UI的更多信息，请参阅 <a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表单简介</a>.</td>
   </tr>
   <tr>
    <td><p><span class="uicontrol"><strong>显示器</strong></code></p> </td>
    <td>标题文本</td>
-   <td>搜索和制表器组件的标题。 默认标题为<strong>Forms Portal.</strong></td>
+   <td>搜索和制表器组件的标题。 默认标题为 <strong>Forms门户。</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -101,22 +101,22 @@ Forms门户组件类别
   <tr>
    <td> </td>
    <td>结果文本</td>
-   <td><p>配置结果文本（例如，1-12个结果，共601个<strong>Results</strong>）。 默认值为<strong>Results</strong>。</p> <p>例如，如果在此字段中指定了<strong>Forms </strong>，并且共有601个表单，则结果文本将更改为1-12个，共601个<strong>Forms。</strong></p> </td>
+   <td><p>配置结果文本（例如，601的1-12个） <strong>结果</strong>)。 默认值为 <strong>结果</strong>.</p> <p>例如，如果您指定 <strong>Forms </strong>在此字段中，共有601个表单，结果文本更改为601的1-12个 <strong>Forms。</strong></p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>页面文本</td>
-   <td><p>配置页面文本（例如，第<strong>页面</strong>1/51页）。 默认值为<strong>Page</strong>。</p> <p>例如，如果在此字段中指定<strong>应用程序表单</strong>，并且有51页，则页面文本将变为<strong>应用程序表单</strong>1（共51页）。</p> </td>
+   <td><p>配置页面文本(例如， <strong>页面 </strong>1/51)。 默认值为 <strong>页面</strong>.</p> <p>例如，如果您指定 <strong>申请表 </strong>在此字段中，共有51个页面，页面文本会更改为 <strong>申请表 </strong>51.1</p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>Of 文本</td>
-   <td><p>将</strong>的单词<strong>替换为指定的文本（</strong>51的第1页<strong>）。 默认值为<strong>of</strong>。</strong></strong></p> <p>例如，如果在此字段中指定<strong>out of </strong>，则文本将变为第1页<strong>out of </strong>51。</p> </td>
+   <td><p>替换单词 <strong>of</strong> （第1页） <strong>of </strong>51)。 默认值为 <strong>of</strong>.</p> <p>例如，如果您指定 <strong>出 </strong>在此字段中，文本将更改为第1页 <strong>出 </strong>51.</p> </td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>表单链接</strong></code></td>
    <td>呈现类型</td>
-   <td>根据指定的渲染类型控制表单列表。 可用选项包括PDF和HTML。 例如，如果只选择HTML作为渲染类型，则PDF forms会被过滤掉。</td>
+   <td>根据指定的渲染类型控制表单列表。 可用选项包括PDF和HTML。 例如，如果您只选择HTML作为呈现类型，则PDF forms会被过滤掉。</td>
   </tr>
   <tr>
    <td> </td>
@@ -136,17 +136,17 @@ Forms门户组件类别
   <tr>
    <td> </td>
    <td>HTML渲染操作工具提示</td>
-   <td>配置工具提示的文本，该文本将指针悬停在<img height="16" src="assets/aem6forms_panel-html.png" width="13" />（HTML5图标）上时显示。</td>
+   <td>配置工具提示的文本，将指针悬停在工具提示上时显示该文本 <img height="16" src="assets/aem6forms_panel-html.png" width="13" /> (HTML5图标)。</td>
   </tr>
   <tr>
    <td> </td>
    <td>PDF渲染操作工具提示</td>
-   <td>配置工具提示的文本，该文本将指针悬停在<img height="16" src="assets/aem6forms_panel-pdf.png" width="14" />（PDF图标）上时显示。</td>
+   <td>配置工具提示的文本，将指针悬停在工具提示上时显示该文本 <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDF图标)。</td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>样式</strong></code></td>
    <td>样式类型</td>
-   <td>用于指定<strong>无样式、默认样式</strong>或<strong>自定义样式</strong>以列出表单。</td>
+   <td>允许您指定 <strong>无样式、默认样式</strong>或 <strong>自定义样式 </strong>，以列出表单。</td>
   </tr>
   <tr>
    <td> </td>
@@ -156,11 +156,11 @@ Forms门户组件类别
  </tbody>
 </table>
 
-### 搜索窗格{#search-pane}
+### 搜索窗格 {#search-pane}
 
 通过“搜索”窗格，您可以从AEM Sidekick的“文档服务谓词”类别中添加“日期谓词”、“全文谓词”、“属性谓词”和“标记谓词”组件。 这些组件为用户实施了搜索功能，以便对列出的表单执行搜索。
 
-**提示：** *您可以根据预设条件控制在表单门户中显示的表单列表，并为最终用户隐藏搜索功能。要控制表单列表，请使用谓词组件来应用搜索过滤器。 您还可以指定默认筛选器值，并从“编辑组件”对话框的“显示”选项卡中禁用搜索。*
+**提示：** *您可以根据预设条件控制在表单门户上显示的表单列表，并为最终用户隐藏搜索功能。 要控制表单列表，请使用谓词组件来应用搜索过滤器。 您还可以指定默认的过滤器值，并从编辑组件对话框的显示选项卡中禁用搜索。*
 
 ![包含“日期”、“全文”、“属性”和“标记谓词”的搜索面板](assets/search-with-predicates.png)
 
@@ -172,18 +172,18 @@ Forms门户组件类别
 
 要配置日期谓词组件，请执行以下操作：
 
-1. 点按组件，然后点按![settings_icon](assets/settings_icon.png)。 此时将打开编辑对话框。
+1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 此时将打开编辑对话框。
 1. 指定以下内容：
 
-   * **类型：** 唯一可用的选项是“上次修 **改日期”**
+   * **类型：** 唯一可用的选项是 **上次修改日期**
 
-   * **文本：** 日期谓词组件的标签或标题。默认值为&#x200B;**上次修改日期。**
+   * **文本：** 日期谓词组件的标签或说明。 默认值为 **上次修改日期。**
 
    * **开始日期标签：** 开始日期字段的标签或标题
    * **结束日期标签：** 结束日期字段的标签或标题
-   * **隐藏：** 要强制执行默认日期过滤器来列出表单，请执行以下操作
+   * **隐藏：** 强制执行默认日期过滤器以列出表单
 
-1. 点按&#x200B;**确定**
+1. 点按 **确定**
 
 #### 全文谓词 {#full-text-predicate}
 
@@ -191,9 +191,9 @@ Forms门户组件类别
 
 要配置全文谓词组件，请执行以下操作：
 
-1. 点按组件，然后点按![settings_icon](assets/settings_icon.png)。 此时将打开编辑对话框。
-1. 在&#x200B;**主标题**&#x200B;字段中指定标题。
-1. 点按&#x200B;**确定**
+1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 此时将打开编辑对话框。
+1. 在 **主标题** 字段。
+1. 点按 **确定**
 
 #### 属性谓词 {#properties-predicate}
 
@@ -201,15 +201,15 @@ Forms门户组件类别
 
 要配置属性谓词组件，请执行以下操作：
 
-1. 点按组件，然后点按![settings_icon](assets/settings_icon.png)。 此时将打开编辑对话框。
-1. 在常规选项卡中，指定搜索标签。 默认值为&#x200B;**Properties**
+1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 此时将打开编辑对话框。
+1. 在常规选项卡中，指定搜索标签。 默认值为 **属性**
 
-1. 在选项选项卡中，点按&#x200B;**添加项目。**
+1. 在选项选项卡中，点按 **添加项目。**
 1. 从下拉列表中选择一个属性，然后在下拉列表下方的字段中为其指定搜索标签。
-1. 重复步骤4以添加更多属性。 您还可以指定默认筛选器值，以根据指定的条件列出表单，并隐藏属性以供最终用户搜索。 选中属性的隐藏复选框，然后指定默认的过滤器值。
+1. 重复步骤4以添加更多属性。 您还可以指定默认筛选器值，以根据指定的条件列出表单，并隐藏属性以供最终用户搜索。 选中属性的隐藏复选框，然后指定默认筛选器值。
 例如，如果要显示标题中包含“Travel”的表单，请选择“Title”属性旁边的“隐藏”。 此外，指定默认过滤值文本框中的行程。
 
-1. 点按&#x200B;**确定**
+1. 点按 **确定**
 
 #### 标记谓词 {#tags-predicate}
 
@@ -217,22 +217,22 @@ Forms门户组件类别
 
 要配置“标记谓词”组件，请执行以下操作：
 
-1. 点按组件，然后点按![settings_icon](assets/settings_icon.png)。 此时将打开编辑对话框。
+1. 点按组件，然后点按 ![settings_icon](assets/settings_icon.png). 此时将打开编辑对话框。
 1. 点按“标记”字段旁边的向下箭头按钮。
 1. 选择适当的标记
-1. 点按&#x200B;**确定**
+1. 点按 **确定**
 
 选定的标记随选复选框一起显示在“搜索”窗格中。 用户现在可以根据标记缩小搜索范围。
 
-## 在页面{#list-forms-on-a-page-br}上列出表单
+## 在页面上列出表单 {#list-forms-on-a-page-br}
 
-要在页面上列出表单，请将&#x200B;**[!UICONTROL Search &amp; Lister]**&#x200B;组件添加到页面中，并配置&#x200B;**[!UICONTROL List Pane]**。 要使最终用户能够使用日期、文本和标记搜索表单，请添加&#x200B;**[!UICONTROL 搜索窗格]**&#x200B;组件。
+要在页面上列出表单，请将 **[!UICONTROL 搜索和制表人]** 组件添加到页面并配置 **[!UICONTROL 列表窗格]**. 要使最终用户能够搜索包含日期、文本和标签的表单，请添加 **[!UICONTROL 搜索窗格]** 组件。
 
-要从页面上的任意位置链接表单，请使用链接组件。 有关链接组件的更多信息，请参阅[在页面](../../forms/using/embedding-link-component-page.md)中嵌入链接组件。
+要从页面上的任意位置链接表单，请使用链接组件。 有关链接组件的更多信息，请参阅 [在页面中嵌入链接组件](../../forms/using/embedding-link-component-page.md).
 
-要列出处于草稿状态的表单和已提交的表单，请使用&#x200B;**[!UICONTROL 草稿和提交]**&#x200B;组件。 有关更多信息，请参阅[自定义草稿和提交组件](../../forms/using/draft-submission-component.md)。
+要列出处于草稿状态的表单和已提交的表单，请使用 **[!UICONTROL 草稿和提交]** 组件。 有关更多信息，请参阅 [自定义草稿和提交组件](../../forms/using/draft-submission-component.md).
 
-## 移动设备友好性{#mobile-device-friendliness}
+## 移动设备友好性 {#mobile-device-friendliness}
 
 Forms Portal Search &amp; Lister组件对移动设备友好，会相应地进行调整。 所有三个默认视图：网格、卡片、面板根据打开网站的设备重新发布，该设备提供网页也会调整的事实。 简单的事实是，Search &amp; Lister仅是一个组件，不控制页面级别的样式。
 
@@ -242,13 +242,13 @@ Forms Portal Search &amp; Lister组件对移动设备友好，会相应地进行
 
 搜索和制表器组件
 
-## 自定义表单门户页面{#customizing-a-forms-portal-page-br}
+## 自定义表单门户页面 {#customizing-a-forms-portal-page-br}
 
-您可以自定义表单门户页面，以为页面提供不同的外观。 您还可以添加元数据以改善搜索体验、更改页面布局和添加自定义CSS样式。 有关更多信息，请参阅[自定义Forms Portal组件的模板](../../forms/using/customizing-templates-forms-portal-components.md)。
+您可以自定义表单门户页面，以为页面提供不同的外观。 您还可以添加元数据以改善搜索体验、更改页面布局和添加自定义CSS样式。 有关更多信息，请参阅 [自定义Forms Portal组件的模板](../../forms/using/customizing-templates-forms-portal-components.md).
 
-AEM Forms UI允许您向表单添加自定义元数据。 自定义元数据在向最终用户提供列表和搜索表单体验时非常有用。 有关自定义元数据的更多信息，请参阅[自定义Forms Portal组件的模板](../../forms/using/customizing-templates-forms-portal-components.md)。
+AEM Forms UI允许您向表单添加自定义元数据。 自定义元数据在向最终用户提供列表和搜索表单体验时非常有用。 有关自定义元数据的更多信息，请参阅 [自定义Forms Portal组件的模板](../../forms/using/customizing-templates-forms-portal-components.md).
 
-开箱即用的Forms Portal提供渲染操作。 您可以自定义表单门户以添加更多操作。 有关详细信息，请参阅[对表单制表符项目添加自定义操作。](../../forms/using/add-custom-action-form-lister.md)
+开箱即用的Forms Portal提供渲染操作。 您可以自定义表单门户以添加更多操作。 有关详细信息，请参阅 [对表单制表符项目添加自定义操作。](../../forms/using/add-custom-action-form-lister.md)
 
 ## 相关文章
 

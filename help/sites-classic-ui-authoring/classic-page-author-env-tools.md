@@ -1,8 +1,8 @@
 ---
 title: 创作 - 环境和工具
-seo-title: 创作 - 环境和工具
+seo-title: Authoring - the Environment and Tools
 description: 通过网站控制台，您可以管理网站以及在网站中导航。利用两个窗格，可以扩展网站的结构，并对所需元素执行相应的操作。
-seo-description: 通过网站控制台，您可以管理网站以及在网站中导航。利用两个窗格，可以扩展网站的结构，并对所需元素执行相应的操作。
+seo-description: The Websites console allows you to manage and navigate your website. Using two panes, the structure of your website can be expanded and actions taken on the required elements.
 uuid: 0a9ce725-042a-4697-81fe-ac86cbab0398
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '899'
 ht-degree: 87%
 
 ---
 
 # 创作 - 环境和工具 {#authoring-the-environment-and-tools}
 
-AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
+AEM 的创作环境提供了各种可用于组织和编辑内容的机制. 可以从各种控制台和页面编辑器访问提供的工具。
 
 ## 站点管理 {#site-administration}
 
@@ -84,7 +84,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 您在页面中创建了 Download 段落后，可以拖曳项目并将其放置在段落中。
 
-![chlimage_1-192](assets/chlimage_1-112.png)
+![chlimage_1-112](assets/chlimage_1-112.png)
 
 ### 查找电影 {#finding-movies}
 
@@ -149,7 +149,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 >[!NOTE]
 >
->您还可以使用[SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)搜索。
+>您还可以使用 [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) 搜索。
 
 ## 显示引用 {#showing-references}
 
@@ -161,7 +161,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. 选择&#x200B;**显示引用……** AEM打开“引用”窗口，并显示哪些页面引用选定页面，包括其路径。
+1. 选择 **显示引用……** AEM会打开引用窗口，并显示哪些页面引用选定页面，包括其路径。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -182,7 +182,7 @@ AEM 允许您查看哪些页面链接至您当前工作的页面。
 
 ## 页面信息 {#page-information}
 
-网站控制台还[提供有关页面](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)当前状态的信息，如发布、修改、锁定、Live Copy等。
+网站控制台 [提供有关页面当前状态的信息](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) 如发布、修改、锁定、Live Copy等。
 
 ## 页面模式 {#page-modes}
 
@@ -206,9 +206,9 @@ Sidekick 底部的图标行用于切换处理页面的模式：
 >还有其他一些可用选项：
 >
 >* [基架](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
-* [ClientContext](/help/sites-administering/client-context.md)
-* 网站  — 将打开“网站”控制台。
-* 重新加载 - 将刷新页面。
+>* [ClientContext](/help/sites-administering/client-context.md)
+>* 网站 - 将打开“网站”控制台。
+>* 重新加载 - 将刷新页面。
 
 
 ## 键盘快捷键 {#keyboard-shortcuts}

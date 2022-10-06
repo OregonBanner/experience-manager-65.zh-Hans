@@ -1,7 +1,7 @@
 ---
 title: 互动交流中的文本
 seo-title: Text in Interactive Communications
-description: '创建和编辑要在交互式通信中使用的文本文档片段 — 文本是用于构建交互式通信的四种类型的文档片段之一。 其他三个包括条件、列表和布局片段。  '
+description: 创建和编辑要在交互式通信中使用的文本文档片段 — 文本是用于构建交互式通信的四种类型的文档片段之一。 其他三个包括条件、列表和布局片段。
 seo-description: Creating and editing text document fragments to be used in Interactive Communications
 uuid: fdac3dd8-c6d0-418e-b969-fc791b7bd509
 topic-tags: interactive-communications

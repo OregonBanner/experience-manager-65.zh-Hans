@@ -1,6 +1,6 @@
 ---
 title: 组件和服务Java APIQ快速开始(SOAP)
-seo-title: 组件和服务Java APIQ快速开始(SOAP)
+seo-title: Components and Services Java APIQuick Start(SOAP)
 description: 组件和服务Java APIQ快速开始(SOAP)
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
@@ -10,14 +10,14 @@ topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
-# 组件和服务Java API快速入门(SOAP){#components-and-services-java-apiquick-start-soap}
+# 组件和服务Java API快速入门(SOAP) {#components-and-services-java-apiquick-start-soap}
 
 Java API快速入门(SOAP)适用于组件和服务。
 
@@ -43,15 +43,15 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
 
 >[!NOTE]
 >
->“使用AEM表单进行编程”中的快速入门基于JBoss和Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
+>“使用AEM表单进行编程”中的快速入门基于JBoss和Windows操作系统上部署的Forms服务器。 但是，如果您使用的是其他操作系统（如Unix），请将特定于Windows的路径替换为适用操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 >[!NOTE]
 >
->如果您有自定义组件，并且使用SOAP或EJB协议在同一本地服务器上调用DSC，并且这些调用在升级后停止工作，则使用VM内([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY))调用策略。 将VM内DSC调用方法与默认的ServiceClientFactory结合使用，而不要使用SOAP或EJB协议构建ServiceClientFactory。
+>如果您有自定义组件，并且使用SOAP或EJB协议在同一本地服务器上调用DSC，并且这些调用在升级后停止工作，则使用VM内调用策略。 将VM内DSC调用方法与默认ServiceClientFactory结合使用，而不要使用SOAP或EJB协议构建ServiceClientFactory。
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}部署组件
+## 快速入门（SOAP模式）：使用Java API部署组件 {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
-以下Java示例部署了一个基于&#x200B;*adobe-emailSample-dsc.jar*&#x200B;的JAR文件的组件。
+以下Java示例部署了一个基于名为的JAR文件的组件 *adobe-emailSample-dsc.jar*.
 
 ```java
  /* 
@@ -151,9 +151,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}设置服务的执行上下文
+## 快速入门（SOAP模式）：使用Java API设置服务的执行上下文 {#quick-start-soap-mode-setting-the-execution-context-of-a-service-using-the-java-api}
 
-以下Java代码示例将“运行方式调用程序”执行上下文设置为名为&#x200B;*EncryptDocument*&#x200B;的示例服务。
+以下Java代码示例将“运行为调用程序”执行上下文设置为名为的示例服务 *EncryptDocument*.
 
 ```java
  /* 
@@ -243,7 +243,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-disabling-service-security-using-the-java-api}禁用服务安全性
+## 快速入门（SOAP模式）：使用Java API禁用服务安全性 {#quick-start-soap-mode-disabling-service-security-using-the-java-api}
 
 以下Java代码示例禁用了示例EncryptDocument服务以及从此服务（Set Value和Encryption服务）中调用的服务的安全性。
 
@@ -356,9 +356,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-starting-a-service-using-the-java-api}启动服务
+## 快速入门（SOAP模式）：使用Java API启动服务 {#quick-start-soap-mode-starting-a-service-using-the-java-api}
 
-以下Java代码示例启动名为&#x200B;*SendEmailService*&#x200B;的服务。
+以下Java代码示例启动名为 *SendEmailService*.
 
 ```java
  package com.adobe.sample.servicemanager; 
@@ -414,7 +414,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}修改服务配置值
+## 快速入门（SOAP模式）：使用Java API修改服务配置值 {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
 以下Java示例修改属于SendEmail服务的配置值。
 
@@ -526,7 +526,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，连接模式应设置�
  
 ```
 
-## 快速入门（SOAP模式）：使用Java API {#quick-start-soap-mode-removing-components-using-the-java-api}删除组件
+## 快速入门（SOAP模式）：使用Java API删除组件 {#quick-start-soap-mode-removing-components-using-the-java-api}
 
 以下Java代码示例使用Java API删除组件。
 

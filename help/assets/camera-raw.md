@@ -49,7 +49,7 @@ ht-degree: 1%
 
    ![chlimage_1-130](assets/chlimage_1-336.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。
+1. 单击“**[!UICONTROL 保存]**”。
 
 >[!NOTE]
 >

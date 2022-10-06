@@ -1,8 +1,8 @@
 ---
 title: 社区站点
-seo-title: 社区站点
+seo-title: Communities Sites
 description: AEM Communities文档概述
-seo-description: AEM Communities文档概述
+seo-description: Overview of the AEM Communities documentation
 uuid: 9842ce6c-1af8-4b27-b199-07410e797ab2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '470'
 ht-degree: 5%
 
 ---
@@ -34,9 +34,9 @@ ht-degree: 5%
 
 ### 社区站点创建和管理 {#communities-site-creation-and-management}
 
-* 社区[控制台](consoles.md)
+* 社区 [控制台](consoles.md)
 
-   * [站点](sites-console.md)
+   * [Sites](sites-console.md)
 
       * [组（子社区）](groups.md)
    * [审核](moderation.md)
@@ -45,7 +45,7 @@ ht-degree: 5%
    * [报告](reports.md)
 
 
-* 社区&#x200B;[*工具*](tools.md):
+* 社区 [*工具*](tools.md):
 
    * [站点模板](sites.md)
    * [组模板](tools-groups.md)
@@ -96,12 +96,12 @@ AEM Communities的一项主要功能是，通过登录网站访客（成员）�
 
 * [最新社区功能包](deploy-communities.md#latestfeaturepack)
 
-有关其他特定于Communities的信息，如[Upgrading](upgrade.md)、[Dispatcher](dispatcher.md)和[Replication](deploy-communities.md#replication-agents-on-author)的部署页面。
+有关其他特定于Communities的信息，请参阅部署页面，例如 [升级](upgrade.md), [Dispatcher](dispatcher.md) 和 [复制](deploy-communities.md#replication-agents-on-author).
 
 ## 相关社区文档 {#related-communities-documentation}
 
-* 访问[部署Communities](deploy-communities.md)以了解建议的部署。
+* 访问 [部署社区](deploy-communities.md) 以了解建议的部署。
 
-* 访问[开发社区](communities.md) ，了解社交组件框架(SCF)和自定义社区组件和功能。
+* 访问 [发展社区](communities.md) 了解社交组件框架(SCF)和自定义社区组件和功能。
 
-* 访问[创作社区组件](author-communities.md) ，了解如何使用和配置社区组件进行创作。
+* 访问 [创作社区组件](author-communities.md) 了解如何使用和配置社区组件进行创作。

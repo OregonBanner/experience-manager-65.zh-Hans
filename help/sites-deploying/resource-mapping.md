@@ -76,7 +76,7 @@ ResourceResolver.map方法用于将资源路径映射到URL的条目列表。
 
 要重定向请求，请执行以下操作：
 
-`https://localhost:4503/welcome` ``
+`https://localhost:4503/welcome` &quot;
 
 到:
 

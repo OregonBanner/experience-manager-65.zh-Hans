@@ -1,8 +1,8 @@
 ---
 title: Forms工作流概述
-seo-title: Forms工作流概述
+seo-title: Overview of Forms workflow
 description: Forms工作流让用户能够设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
-seo-description: Forms工作流让用户能够设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
+seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
@@ -12,12 +12,12 @@ discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '254'
 ht-degree: 2%
 
 ---
 
-# Forms工作流{#overview-of-forms-workflow}概述
+# Forms工作流概述 {#overview-of-forms-workflow}
 
 Forms工作流让用户能够设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
 

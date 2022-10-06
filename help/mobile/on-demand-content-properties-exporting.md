@@ -1,8 +1,8 @@
 ---
 title: 使用内容属性导出内容
-seo-title: 使用内容属性导出内容
+seo-title: Using Content Properties to Export Content
 description: 以下页面显示了应用程序属性和节点。
-seo-description: 以下页面显示了应用程序属性和节点。
+seo-description: The following page shows App Properties and Nodes.
 uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
 exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '330'
 ht-degree: 4%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 4%
 >
 >Adobe建议对需要基于单页应用程序框架的客户端渲染（例如React）的项目使用SPA编辑器。 [了解更多](/help/sites-developing/spa-overview.md)。
 
-应用程序在AEM中以&#x200B;*cq:Pages*&#x200B;表示。
+应用程序表示为 *cq:Pages* 在AEM中。
 
-除了下面显示的表示集成支持属性的其他属性外，它们还共享在任何&#x200B;*cq:Page*&#x200B;中找到的相同公共属性。
+它们共享在任何 *cq:Page* 除了下面显示的其他支持集成的属性之外，
 
 ## 应用程序属性 {#app-properties}
 
-下表显示了&#x200B;**应用程序属性和节点**。
+下表显示 **应用程序属性和节点**.
 
 <table>
  <tbody>
@@ -81,12 +81,12 @@ ht-degree: 4%
   <tr>
    <td>sling:resourceType</td>
    <td>字符串：路径</td>
-   <td><p>cq:Component的路径：是或扩展<i>mobileapps/core/components/instance的组件。</i></p> <p>这可提供应用程序目录中的存在和渲染情况。</p> </td>
+   <td><p>cq的路径：已扩展或已扩展的组件 <i>mobileapps/core/components/instance。</i></p> <p>这可提供应用程序目录中的存在和渲染情况。</p> </td>
   </tr>
  </tbody>
 </table>
 
-您可以使用&#x200B;***内容属性***&#x200B;创建内容。 请参阅以下资源以创建和导出文章和共享资源：
+您可以使用 ***内容属性*** 创建内容。 请参阅以下资源以创建和导出文章和共享资源：
 
 * [内容属性](/help/mobile/content-properties.md)
 * [创建文章导出配置](/help/mobile/creating-article-export-configuration.md)

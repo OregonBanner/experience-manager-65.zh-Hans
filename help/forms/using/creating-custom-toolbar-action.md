@@ -1,8 +1,8 @@
 ---
 title: 创建自定义工具栏操作
-seo-title: 创建自定义工具栏操作
+seo-title: Creating a custom toolbar action
 description: 表单开发人员可以在AEM Forms中为自适应表单创建自定义工具栏操作。 使用自定义操作，表单作者可以为其最终用户提供更多工作流和选项。
-seo-description: 表单开发人员可以在AEM Forms中为自适应表单创建自定义工具栏操作。 使用自定义操作，表单作者可以为其最终用户提供更多工作流和选项。
+seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
 uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ docset: aem65
 exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## 前提条件 {#prerequisite}
 
-在创建自定义工具栏操作之前，请熟悉[使用客户端库](/help/sites-developing/clientlibs.md)和[使用CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)进行开发。
+在创建自定义工具栏操作之前，请熟悉 [使用客户端库](/help/sites-developing/clientlibs.md) 和 [使用CRXDE Lite进行开发](/help/sites-developing/developing-with-crxde-lite.md).
 
-## 什么是操作{#what-is-an-action-br}
+## 什么是操作 {#what-is-an-action-br}
 
 自适应表单提供了一个工具栏，允许表单作者配置一组选项。 这些选项被定义为自适应表单的操作。 单击面板工具栏中的编辑按钮以设置自适应表单支持的操作。
 
@@ -35,26 +35,26 @@ ht-degree: 0%
 
 为了说明如何创建自定义工具栏操作，以下步骤指导您创建一个按钮，供最终用户在提交填写的表单之前查看所有自适应表单字段。
 
-1. 自适应表单支持的所有默认操作都位于`/libs/fd/af/components/actions`文件夹中。 在CRXDE中，将`fileattachmentlisting`节点从`/libs/fd/af/components/actions/fileattachmentlisting`复制到`/apps/customaction`。
+1. 自适应表单支持的所有默认操作均位于 `/libs/fd/af/components/actions` 文件夹。 在CRXDE中，复制 `fileattachmentlisting` 节点从 `/libs/fd/af/components/actions/fileattachmentlisting` to `/apps/customaction`.
 
-1. 将节点复制到`apps/customaction`文件夹后，将节点名称重命名为`reviewbeforesubmit`。 此外，还应更改节点的`jcr:title`和`jcr:description`属性。
+1. 将节点复制到 `apps/customaction` 文件夹，将节点名称重命名为 `reviewbeforesubmit`. 此外，更改 `jcr:title` 和 `jcr:description` 节点的属性。
 
-   `jcr:title`属性包含工具栏对话框中显示的操作名称。 `jcr:description`属性包含用户将指针悬停在操作上时显示的更多信息。
+   的 `jcr:title` 属性包含在工具栏对话框中显示的操作名称。 的 `jcr:description` 属性包含用户将指针悬停在操作上时显示的更多信息。
 
    ![用于自定义工具栏的节点层次结构](assets/action3.png)
 
-1. 在`reviewbeforesubmit`节点中选择`cq:template`节点。 确保`guideNodeClass`属性的值为`guideButton`，并相应地更改`jcr:title`属性。
-1. 在`cq:Template`节点中更改type属性。 对于当前示例，将type属性更改为按钮。
+1. 选择 `cq:template` 节点 `reviewbeforesubmit` 节点。 确保 `guideNodeClass` 属性 `guideButton` 更改 `jcr:title` 资产。
+1. 在 `cq:Template` 节点。 对于当前示例，将type属性更改为按钮。
 
    类型值将作为CSS类添加到组件的生成HTML中。 用户可以使用该CSS类来设置其操作的样式。 为按钮、提交、重置和保存类型值均提供了移动设备和桌面设备的默认样式。
 
 1. 从自适应表单编辑工具栏对话框中选择自定义操作。 “审阅”按钮将显示在面板的工具栏中。
 
-   ![工具栏中提供了自定义操](assets/custom_action_available_in_toolbar.png) ![作显示自定义创建的工具栏操作](assets/action7.png)
+   ![工具栏中提供了自定义操作](assets/custom_action_available_in_toolbar.png) ![显示自定义创建的工具栏操作](assets/action7.png)
 
-1. 要为“审阅”按钮提供功能，请在init.jsp文件中添加一些JavaScript和CSS代码以及服务器端代码，这些代码位于`reviewbeforesubmit`节点内。
+1. 要为“审阅”按钮提供功能，请在init.jsp文件中添加一些JavaScript和CSS代码以及服务器端代码，这些代码位于 `reviewbeforesubmit` 节点。
 
-   在`init.jsp`中添加以下代码。
+   在 `init.jsp`.
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -112,7 +112,7 @@ ht-degree: 0%
    </div><!-- /.modal -->
    ```
 
-   在`ReviewBeforeSubmit.js`文件中添加以下代码。
+   在 `ReviewBeforeSubmit.js` 文件。
 
    ```javascript
    /*anonymous function to handle show of review before submit view */
@@ -147,7 +147,7 @@ ht-degree: 0%
    });
    ```
 
-   将以下代码添加到`ReviewBeforeSubmit.css`文件。
+   将以下代码添加到 `ReviewBeforeSubmit.css` 文件。
 
    ```css
    .modal-list .reviewlabel {
@@ -180,7 +180,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >在创作模式下，未加载`GuideBridge`库。 因此，此自定义操作在创作模式下不起作用。
+   >的 `GuideBridge` 库未在创作模式下加载。 因此，此自定义操作在创作模式下不起作用。
 
    ![演示自定义审阅按钮的操作](assets/action9.png)
 

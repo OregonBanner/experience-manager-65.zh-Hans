@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Assets] HTTP API."'
+title: "[!DNL Assets] HTTP API."
 description: 在 [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Developer

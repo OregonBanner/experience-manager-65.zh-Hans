@@ -1,8 +1,8 @@
 ---
 title: 问答论坛功能
-seo-title: 问答论坛功能
+seo-title: Q&A Forum Feature
 description: 将QnA论坛功能添加到页面
-seo-description: 将QnA论坛功能添加到页面
+seo-description: Adding the QnA forum feature to a page
 uuid: e0d95009-0d04-4fa7-8d05-5948c4e37f08
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 17081710-35e0-4f5b-9485-1f85c065fd70
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 7%
+source-wordcount: '1368'
+ht-degree: 8%
 
 ---
 
@@ -35,29 +35,29 @@ ht-degree: 7%
 文档描述：
 
 * 将QnA论坛功能添加到AEM网站。
-* `QnA`组件的配置设置。
+* 的配置设置 `QnA`组件。
 
-## 向页面{#adding-a-q-a-forum-to-a-page}添加问题与解答论坛
+## 向页面添加问题与解答论坛 {#adding-a-q-a-forum-to-a-page}
 
-要在创作模式下将`QnA`组件添加到页面，请使用组件浏览器找到`Communities / QnA`并将其拖动到应显示QnA论坛的页面上。
+添加 `QnA` 组件添加到创作模式下的页面，可使用组件浏览器找到 `Communities / QnA` 并将其拖动到应显示QnA论坛的页面上。
 
-有关必要信息，请访问[社区组件基础知识](/help/communities/basics.md)。
+有关必要信息，请访问 [社区组件基础知识](/help/communities/basics.md).
 
-当包含[所需的客户端库](/help/communities/qna-essentials.md#essentials-for-client-side)时，`QnA`组件的显示方式如下：
+当 [所需的客户端库](/help/communities/qna-essentials.md#essentials-for-client-side) 包含，这是 `QnA` 组件显示：
 
 ![qna组件](assets/qna-component.png)
 
 ### 配置QnA {#configuring-qna}
 
-选择要访问的已放置的`QnA`组件，然后选择`Configure`图标以打开编辑对话框。
+选择已放置的 `QnA` 要访问和选择的组件 `Configure` 图标，打开编辑对话框。
 
 ![配置](assets/configure-new.png)
 
 ![qna-config](assets/qna-config.png)
 
-#### “设置”选项卡{#settings-tab}
+#### “设置”选项卡 {#settings-tab}
 
-在&#x200B;**设置**&#x200B;选项卡下，指定主题（问题）和回复（答案）的设置：
+在 **设置** 选项卡，指定主题（问题）和回复（答案）的设置：
 
 * **允许附加缩略图**
 
@@ -93,7 +93,7 @@ ht-degree: 7%
 
 * **允许标记**
 
-   如果选中此选项，则允许成员向其帖子中添加标签（请参阅&#x200B;**标签字段**&#x200B;选项卡）。 取消选择默认值。
+   如果选中此项，则允许成员向其帖子添加标签(请参阅 **标记字段** 选项卡。 取消选择默认值。
 
 * **允许文件上传**
 
@@ -101,7 +101,7 @@ ht-degree: 7%
 
 * **允许关注**
 
-   如果选中此项，则为论坛帖子添加以下功能，该功能允许成员在新帖子中[收到通知](/help/communities/notifications.md)。 取消选择默认值。
+   如果选中此项，则为论坛帖子包含以下功能，以允许成员 [通知](/help/communities/notifications.md) 新职位数量。 取消选择默认值。
 
 * **允许固定**
 
@@ -109,15 +109,15 @@ ht-degree: 7%
 
 * **允许电子邮件订阅**
 
-   如果选中此项，则允许成员通过电子邮件([subscription](/help/communities/subscriptions.md))接收新帖子的通知。 需要检查允许跟踪并[电子邮件配置](/help/communities/email.md)。 取消选择默认值。
+   如果选中此项，则允许成员通过电子邮件接收新帖子的通知([订阅](/help/communities/subscriptions.md))。 需要检查允许跟踪 [已配置电子邮件](/help/communities/email.md). 取消选择默认值。
 
 * **最大文件大小**
 
-   仅当选中`Allow File Uploads`时相关。 此字段限制已上传文件的大小（以字节为单位）。 默认为104857600(10 Mb)。
+   仅在 `Allow File Uploads` 复选框。 此字段限制已上传文件的大小（以字节为单位）。 默认为104857600(10 Mb)。
 
 * **允许的文件类型**
 
-   仅当选中`Allow File Uploads`时相关。 带“圆点”分隔符的文件扩展名列表（以逗号分隔）。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上载未指定的文件类型。 默认值未指定，以便允许** **所有文件类型。
+   仅在 `Allow File Uploads` 复选框。 带“圆点”分隔符的文件扩展名列表（以逗号分隔）。 例如：.jpg、.jpeg、.png、.doc、.docx、.pdf。 如果指定了任何文件类型，则不允许上载未指定的文件类型。 默认值未指定，以便允许** **所有文件类型。
 
 * **附加图像文件最大大小**
 
@@ -148,11 +148,11 @@ ht-degree: 7%
    如果选中，则显示的第一个答案为选定的答案。 取消选择默认值。
 * **显示徽章**
 
-   如果选中此项，则使用成员的博客条目显示已获得的和已分配的[徽章](/help/communities/implementing-scoring.md)。 取消选择默认值。
+   如果选中，则显示已获取和已分配的 [徽章](/help/communities/implementing-scoring.md) 的博客条目。 取消选择默认值。
 
 * **允许专题内容**
 
-   如果选中，则该构思可被标识为[特色内容](/help/communities/featured.md)。 取消选择默认值。
+   如果选中，则能将构思识别为 [特色内容](/help/communities/featured.md). 取消选择默认值。
 
 * **启用提及功能**
 
@@ -164,11 +164,11 @@ ht-degree: 7%
 
 * **UI 提及模式**
 
-   指定允许的模式字符串以标记(@mention)帖子中的注册用户。 例如，`~{{familyName}}{{givenName}}`。
+   指定允许的模式字符串以标记(@mention)帖子中的注册用户。 例如：`~{{familyName}}{{givenName}}`。
 
-#### “用户审核”选项卡{#user-moderation-tab}
+#### “用户审核”选项卡 {#user-moderation-tab}
 
-在&#x200B;**用户审核**&#x200B;选项卡下，指定如何管理已发布的主题（问题）和答案（用户生成的内容）。 有关更多信息，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
+在 **用户审核** 选项卡，指定如何管理已发布的主题（问题）和答案（用户生成的内容）。 有关更多信息，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
 
 * **拒绝回答**
 
@@ -178,8 +178,8 @@ ht-degree: 7%
 
    如果选中，受信任的成员审核者可以关闭问题（主题）以进一步编辑和回答，并重新打开问题。 取消选择默认值。
 
-* **移动**
-主题如果选中此选项，则允许发布端审核者移动问题。取消选择默认值。
+* **移动主题**
+如果选中此项，则允许发布端审核者移动问题。 取消选择默认值。
 
 * **标记帖子**
 
@@ -201,45 +201,45 @@ ht-degree: 7%
 
    输入在将问题或答案隐藏在公共视图中之前必须标记的次数。 如果设置为–1，则标记的问题或答案永远不会在公共视图中隐藏。 否则，此数字必须大于或等于审核阈值。 默认值为5。
 
-#### 标记字段选项卡{#tag-field-tab}
+#### 标记字段选项卡 {#tag-field-tab}
 
-在&#x200B;**标记字段**&#x200B;选项卡下，如果允许，在&#x200B;**设置**&#x200B;选项卡下，可以应用的标记会根据所选的命名空间而受到限制。
+在 **标记字段** 选项卡，如果允许，可在 **设置** 选项卡，具体受到的限制，具体取决于所选的命名空间。
 
 * **允许的命名空间**
 
-   如果在&#x200B;**设置**&#x200B;选项卡下选中`Allow Tagging`，则相关。 可应用的标记仅限于所选命名空间类别中的标记。 命名空间列表包括“标准标记”（默认命名空间）和“包括所有标记”。 默认为“未选中”，这表示允许使用所有命名空间。
+   相关条件 `Allow Tagging` 在 **设置** 选项卡。 可应用的标记仅限于所选命名空间类别中的标记。 命名空间列表包括“标准标记”（默认命名空间）和“包括所有标记”。 默认为“未选中”，这表示允许使用所有命名空间。
 
 * **建议限制**
 
    输入要作为建议显示给论坛成员的标记数。 值**-**1表示无限制。 默认值为0。
 
-#### 排序设置选项卡{#sort-settings-tab}
+#### 排序设置选项卡 {#sort-settings-tab}
 
-在&#x200B;**排序设置**&#x200B;选项卡下，指定在显示时对发布的评论进行排序的方式。
+在 **排序设置** 选项卡，指定在显示已发布评论时的排序方式。
 
 * **排序方式**
 
-   检查所有允许的排序选择：`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`。 默认值为`Newest, Oldest, Last Updated`。
+   检查所有允许的排序选择： `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. 默认为 `Newest, Oldest, Last Updated`.
 
 * **设置为默认**
 
-   下拉以选择要显示为默认的选中排序选项之一。 默认值为`Newest`。
+   下拉以选择要显示为默认的选中排序选项之一。 默认为 `Newest`.
 
 * **选择分析排序的时间选项**
 
-   下拉列表以选择`All, Last 24 Hours, Last 7 Days, Last 30 Days`中的一个。 默认值为`All`。
+   下拉列表以选择其中一个 `All, Last 24 Hours, Last 7 Days, Last 30 Days`. 默认为 `All`.
 
-## 网站访客体验{#site-visitor-experience}
+## 网站访客体验 {#site-visitor-experience}
 
-### 确定答案{#identifying-answers}
+### 确定答案 {#identifying-answers}
 
-使用`Select Answer`按钮可将一个答案标记为正确或有用的答案。 将问题标记为已回答后，只有在使用`Unmark Chosen Answer`按钮取消选择第一个答案后，才能选择另一个答案。
+可使用 `Select Answer` 按钮。 将问题标记为已回答后，只有在使用 `Unmark Chosen Answer` 按钮。
 
-选择作为可行答案后，可使用`Unmark Chosen Answer`按钮取消选择该答案。
+选择作为可行答案后，可使用 `Unmark Chosen Answer` 按钮。
 
-选择某个答案作为可行答案后，问题解答主页上的问题主题旁边会显示一个指示，表示问题已`Answered`。
+选择某个答案作为可行的答案后，即表示问题已 `Answered` 显示在主QnA页面上问题主题的旁边。
 
-#### 审核者和管理员{#moderators-and-administrators}
+#### 审核者和管理员 {#moderators-and-administrators}
 
 当登录用户具有审核者或管理员权限时，他们便能够执行组件配置所允许的审核任务，而不管是谁创作了问题或答案。
 
@@ -260,8 +260,8 @@ ht-degree: 7%
 
 ## 附加信息 {#additional-information}
 
-有关更多信息，请参阅面向开发人员的[QnA Essentials](/help/communities/qna-essentials.md)页面。
+有关详细信息，请参阅 [问题解答要点](/help/communities/qna-essentials.md) 页面。
 
-有关审核已发布的主题和评论，请参阅[审核用户生成的内容](/help/communities/moderate-ugc.md)。
+有关审核已发布的主题和评论，请参阅 [审核用户生成的内容](/help/communities/moderate-ugc.md).
 
-有关标记已发布的主题和评论，请参阅[标记用户生成的内容](/help/communities/tag-ugc.md)。
+有关标记已发布的主题和评论，请参阅 [标记用户生成的内容](/help/communities/tag-ugc.md).

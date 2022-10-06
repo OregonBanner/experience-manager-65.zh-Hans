@@ -1,6 +1,6 @@
 ---
-title: '获取带有附件的电子邮件的其他步骤 '
-description: '获取带有附件的电子邮件的其他步骤   '
+title: 获取带有附件的电子邮件的其他步骤
+description: 获取带有附件的电子邮件的其他步骤
 source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
 source-wordcount: '226'

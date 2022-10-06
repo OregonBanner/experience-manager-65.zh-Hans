@@ -1,8 +1,8 @@
 ---
 title: 管理项目 — 最佳实践检查列表
-seo-title: 管理项目 — 最佳实践检查列表
+seo-title: Managing Projects - Best Practices Checklist
 description: 管理项目以实施Adobe Experience Manager(AEM)需要规划和了解。 项目检查列表旨在作为项目交付的一组最佳实践。 它们指导您完成项目生命周期的所有阶段，并提供对您当前状态的高级监控。
-seo-description: 管理项目以实施Adobe Experience Manager(AEM)需要规划和了解。 项目检查列表旨在作为项目交付的一组最佳实践。 它们指导您完成项目生命周期的所有阶段，并提供对您当前状态的高级监控。
+seo-description: Managing a project to implement Adobe Experience Manager (AEM) requires planning and understanding. The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
 uuid: 859f73f4-535a-49a1-9ae4-a4aacd7f36dd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '3316'
-ht-degree: 1%
+source-wordcount: '3264'
+ht-degree: 2%
 
 ---
 
@@ -24,28 +24,28 @@ ht-degree: 1%
 
 为了帮助您，最佳实践包括：
 
-* [交互式检查列表](/help/managing/best-practices-checklist.md)允许您使用这些最佳实践跟踪和监控进度。
+* 安 [交互式核对清单](/help/managing/best-practices-checklist.md) 允许您使用这些最佳实践跟踪和监控进度。
 
    * 根据阶段、里程碑和角色定义输入和交付内容。
    * 提供自动的概述（质量、运行状况和完整性），以指示进度和项目运行状况。
 
-* 文档直接基于[清单](/help/managing/best-practices-checklist.md)，详细介绍：
+* 文档，直接基于 [核对清单](/help/managing/best-practices-checklist.md)，其中详细介绍：
 
-   * [项目](#projectheartbeat) 心率分析。
-   * [按角色显示的](#status-by-role) 状态概述。
-   * [阶段和里程碑](#phases-and-milestones)。
-   * [关键](#persona) 人物及其在每个阶段（相关）的参与。
-   * [[所需文档和交付件](#required-documents-and-deliverables)的术语表](/help/managing/best-practices-glossary.md)。
+   * [项目心率](#projectheartbeat) 分析。
+   * [按角色显示的状态](#status-by-role) 概述。
+   * [阶段和里程碑](#phases-and-milestones).
+   * [关键角色](#persona) 并在每个（相关）阶段参与。
+   * A [术语表](/help/managing/best-practices-glossary.md) 的 [所需文档和交付件](#required-documents-and-deliverables).
 
-* [进一步](/help/managing/best-practices-further-reference.md) 参考材料，以提供有关特定领域的更多详细信息。
+* [进一步参考](/help/managing/best-practices-further-reference.md) 提供有关特定区域的更多详细信息的材料。
 
-## 项目心率功能板{#project-heartbeat-dashboard}
+## 项目心率功能板 {#project-heartbeat-dashboard}
 
-**项目心率**&#x200B;工作表提供了项目关键量度的图形概述：
+的 **项目心率** 工作表提供了项目关键量度的图形概述：
 
 * **阶段质量**
 
-   * 指示项目中[所需文档和交付项](#required-documents-and-deliverables)的质量。
+   * 指示 [所需文档和交付件](#required-documents-and-deliverables) 在整个项目中。
 
 * **阶段健康**
 
@@ -55,15 +55,15 @@ ht-degree: 1%
 
    * 在项目期间的任何时间点，此值指示项目每个阶段已完成的进度。
 
-## 按角色{#status-by-role}列出的状态
+## 按角色显示的状态 {#status-by-role}
 
-**按角色列出的状态**&#x200B;工作表显示&#x200B;[**运行状况**、**质量**&#x200B;和&#x200B;**完整性**](#projectheartbeat)&#x200B;按&#x200B;**[阶段](#phases-and-milestones)**&#x200B;和&#x200B;**[角色](#persona)**&#x200B;的详细细目。
+的 **按角色显示的状态** 工作表显示详细的划分 [**健康**, **质量** 和 **完整性**](#projectheartbeat) by **[阶段](#phases-and-milestones)** 和 **[角色](#persona)**.
 
-## 阶段和里程碑{#phases-and-milestones}
+## 阶段和里程碑 {#phases-and-milestones}
 
 项目计划分为不同的（高级）阶段。
 
-每个阶段都包含其自己的里程碑。 对于每个[角色](#persona)（或角色），将列出相关里程碑，以及生成定义的交付件所需的文档。
+每个阶段都包含其自己的里程碑。 对于 [角色](#persona) （或角色），将列出相关里程碑，以及生成定义的交付件所需的文档。
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ ht-degree: 1%
 
 规划项目可整合准备。 在这里，您需要开始将目标和期望转化为一个明确的路线图，其中包括具体任务，并有明确的沟通约束，并有严格的审查来衡量进展。
 
-#### 里程碑{#milestones-1}
+#### 里程碑 {#milestones-1}
 
 * **切换**
 
@@ -157,11 +157,11 @@ ht-degree: 1%
 
       * 在项目开始时让主要参与者（包括潜在作者）参与进来，就会增加他们投入项目的机会。
 
-### 开发准备{#development-preparation}
+### 开发准备 {#development-preparation}
 
 规划开发是确保项目由具备所需知识的团队在坚实的设计基础上构建的关键。
 
-#### 里程碑{#milestones-2}
+#### 里程碑 {#milestones-2}
 
 * **开发小组人员配备和培训**
 
@@ -181,16 +181,16 @@ ht-degree: 1%
 
    系统架构定义了系统的概念视图；包括（其中包括其他资料）：
 
-   * [所有](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 所需环境的系统结构
+   * [系统结构](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) （适用于所有必需环境）
    * 子系统
    * 第三方系统
    * 界面；硬件、软件和人机交互
-   * 每个环境的服务器；请参阅[技术要求](/help/sites-deploying/technical-requirements.md)和[硬件大小调整指南](/help/managing/hardware-sizing-guidelines.md)
+   * 每个环境的服务器；请参阅 [技术要求](/help/sites-deploying/technical-requirements.md) 和 [硬件大小调整指南](/help/managing/hardware-sizing-guidelines.md)
 
    * 每个环境的流程；例如，部署和维护要求
    * 维护活动（数据存储GC、TarPM优化等）
-   * [](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) Dispatchercache
-   * [](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) ClusteringPublish/Authorshare
+   * [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) 缓存
+   * [聚类](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) 发布/创作共享
    * 客户端性能（JS缩小、简化、CSS Sprite、HTTP请求总数等）
 
 * **应用程序架构**
@@ -216,12 +216,12 @@ ht-degree: 1%
 
    系统集成要求您规划（然后实施）：
 
-   * 如何将所有子系统和[解决方案集成](/help/sites-administering/integration.md)整合在一起，作为一个协调的系统运行
+   * 子系统和 [解决方案集成](/help/sites-administering/integration.md) 将整合起来，作为一个连贯的系统运行
    * 如何集成任何第三方系统；与任何特殊注意事项一起使用，例如在第三方系统出现故障时，客户端/浏览器端或故障处理
 
 * **测试概念**
 
-   在开始开发之前，您应该针对项目的所有[测试](/help/sites-developing/planning.md)要求制定一个深入而全面的概念。
+   在开始开发之前，应该制定一个深入而全面的概念 [测试](/help/sites-developing/planning.md) 项目的要求。
 
    这应包括（其中包括）：
 
@@ -241,13 +241,13 @@ ht-degree: 1%
 
    在开发之前，应设置部署、发布、测试和报告问题所需的所有支持流程。
 
-   另请参阅[Adobe支持门户](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html)。
+   另请参阅 [Adobe支持门户](https://helpx.adobe.com/cn/marketing-cloud/contact-support.html).
 
-### 操作计划和操作{#operations-planning-and-operations}
+### 运营规划和运营 {#operations-planning-and-operations}
 
 在类似的基础上，必须正确规划操作，以确保您拥有项目生命周期所有阶段所需的环境。 您还需要适当的流程来维护它们。
 
-#### 里程碑{#milestones-3}
+#### 里程碑 {#milestones-3}
 
 * **权限**
 
@@ -255,13 +255,13 @@ ht-degree: 1%
 
    例如：
 
-   * 每个角色（即组）具有`read`/ `write`访问定义的列表
+   * 具有 `read`/ `write` 每个的访问定义
 
-   * 定义影响发布环境的权限的使用；例如，`replicate`
+   * 定义影响发布环境的权限的使用；例如， `replicate`
    * 对于具有最低权限的用户，应定义工作流
-   * `editor`组中的用户不应具有`admin`权限，也不应属于`administrators`组
+   * 中的用户 `editor` 组不应 `admin` 权利或不是 `administrators` 群组
 
-   有关更多信息，请参阅[用户管理和安全](/help/sites-administering/security.md)。
+   有关更多信息，请参阅 [用户管理和安全](/help/sites-administering/security.md).
 
 * **监控和维护**
 
@@ -270,7 +270,7 @@ ht-degree: 1%
    * 需要监控的内容
    * 维护任务；经常和特殊情况
 
-   另请参阅[监视和维护](/help/sites-deploying/monitoring-and-maintaining.md)以了解更多信息。
+   另请参阅 [监控和维护](/help/sites-deploying/monitoring-and-maintaining.md) 以了解更多信息。
 
 * **迁移**
 
@@ -284,7 +284,7 @@ ht-degree: 1%
 
 开发是一个关键阶段，需要的不仅仅是编码。
 
-#### 里程碑{#milestones-4}
+#### 里程碑 {#milestones-4}
 
 * **开发环境**
 
@@ -324,16 +324,16 @@ ht-degree: 1%
    * 部署频度
    * 第三方软件集成/依赖项
    * 安全设置
-   * 通过在生产设置中运行[Tough Day测试](/help/sites-developing/tough-day.md)来验证基线性能
-   * 性能测试的要求；请参阅[质量保证最佳实践](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
+   * 通过运行 [艰难的日子测试](/help/sites-developing/tough-day.md) 在生产设置中
+   * 性能测试的要求；请参阅 [质量保证最佳实践](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
 
 * **集成**
 
-   规划、记录和测试系统的所有方面和[解决方案集成](/help/sites-administering/integration.md)，包括：
+   规划、记录和测试系统的所有方面和 [解决方案集成](/help/sites-administering/integration.md)，包括：
 
    * 自动测试策略
-   * 将流程自动化到[，将应用程序从开发移动到测试，然后进行生产](/help/managing/enterprise-devops.md#code-movement)
-   * 将流程自动化到[将内容从生产移动到测试和开发](/help/managing/enterprise-devops.md#content-movement)
+   * 自动化流程 [将应用程序从开发移动到测试，然后转到生产](/help/managing/enterprise-devops.md#code-movement)
+   * 自动化流程 [将内容从生产移动到测试和开发](/help/managing/enterprise-devops.md#content-movement)
 
 * **迁移**
 
@@ -354,9 +354,9 @@ ht-degree: 1%
    * 任何可能影响升级的自定义设置
    * 发行说明
 
-### 性能和测试{#performance-and-testing}
+### 性能和测试 {#performance-and-testing}
 
-新应用程序一经推出，就需要进行严格的测试，包括功能和[性能](/help/sites-deploying/configuring-performance.md)。
+新应用程序一经推出，就需要进行严格的测试，包括功能和 [性能](/help/sites-deploying/configuring-performance.md).
 
 >[!NOTE]
 >
@@ -364,7 +364,7 @@ ht-degree: 1%
 >
 >项目经理有责任评估结果的任何影响并决定采取适当行动。
 
-#### 里程碑{#milestones-5}
+#### 里程碑 {#milestones-5}
 
 * **最终用户验收测试**
 
@@ -393,7 +393,7 @@ ht-degree: 1%
 
 推出新应用程序需要仔细规划以确保顺利上线。 这包括确认高级安全性、培训所有潜在用户并进行多次练习以确认已处理所有问题。
 
-#### 里程碑{#milestones-6}
+#### 里程碑 {#milestones-6}
 
 * **准备**
 
@@ -403,7 +403,7 @@ ht-degree: 1%
 
    确保所有有关工作人员都接受过培训。
 
-   请参阅课程目录中的[Adobe Experience Manager](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager)。
+   请参阅 [Adobe Experience Manager](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) 在课程目录中。
 
 * **接受过培训的管理员**
 
@@ -429,19 +429,19 @@ ht-degree: 1%
 
    为确保解决方案的安全性，请执行特定的渗透测试以及范围更广的安全测试。
 
-   有关更多详细信息，请参阅[安全检查表](/help/sites-administering/security-checklist.md)。
+   请参阅 [安全检查列表](/help/sites-administering/security-checklist.md) 以了解更多详细信息。
 
-### 上线{#go-live}
+### 上线 {#go-live}
 
 您希望“上线”尽可能顺畅。 最后的步骤同样需要规划清理执行。
 
-#### 里程碑{#milestones-7}
+#### 里程碑 {#milestones-7}
 
 * **准备**
 
    准备和规划将有助于确保顺利上线。
 
-* **安全**
+* **安全性**
 
    确认内部和外部用户及其内容解决方案的安全性。
 
@@ -465,9 +465,9 @@ ht-degree: 1%
 
 清单由人物设计。 这些角色在项目生命周期中具有重要的参与性。
 
-特定任务中还涉及一些其他角色](#other-persona)。[
+还有一些 [其他角色](#other-persona) 特定任务中涉及的问题。
 
-### 项目赞助商{#project-sponsor}
+### 项目赞助商 {#project-sponsor}
 
 项目发起人是：
 
@@ -479,7 +479,7 @@ ht-degree: 1%
 
 * 根据客户端路线图提供主要里程碑。
 
-### 项目经理{#project-manager}
+### 项目经理 {#project-manager}
 
 项目经理是：
 
@@ -495,7 +495,7 @@ ht-degree: 1%
 * 帮助定义AEM的实施策略。 例如，是实施群集安装，还是实施冷备用安装，或者当需要内容交付网络(CDN)时。
 * 此外，还根据客户端要求定义AEM解决方案架构。 这包括用户角色（具有相关权限）的概念、模板和组件之间的关系，或何时使用多站点管理。
 
-### 业务分析师{#business-analyst}
+### 业务分析师 {#business-analyst}
 
 业务分析师：
 
@@ -510,7 +510,7 @@ ht-degree: 1%
    * 成功标准。
    * KPI（既基于业务，也基于绩效）。
 
-### 开发领导{#development-lead}
+### 开发领导 {#development-lead}
 
 开发领导：
 
@@ -523,7 +523,7 @@ ht-degree: 1%
 
 * 与架构师密切合作(特别是在制定AEM开发策略时)，以定义各个方面，如模板与组件之间的关系、第三方应用程序的集成策略以及任何专门功能。
 
-### 质量潜在客户{#quality-lead}
+### 质量潜在客户 {#quality-lead}
 
 质量线索：
 
@@ -531,7 +531,7 @@ ht-degree: 1%
 * 定义质量量度，与所有利益相关方保持一致，制定测试计划并确保执行这些计划。
 * 创建报告并将其提交给项目利益相关者。
 
-### 系统工程师{#system-engineer}
+### 系统工程师 {#system-engineer}
 
 系统工程师：
 
@@ -543,14 +543,14 @@ ht-degree: 1%
 
 * 在上线之前和之后，提供硬件建议、监控各种实施并提供操作支持。
 
-### 安全线索{#security-lead}
+### 安全主管 {#security-lead}
 
 安全主管：
 
 * 负责解决方案的整体安全概念，确保与客户的任何要求和策略保持一致。
 * 为任何基于硬件的安全概念提供安全概念、安全操作和建议；例如区域和防火墙。
 
-### 其他角色{#other-persona}
+### 其他角色 {#other-persona}
 
 * 利益相关方
 
@@ -576,18 +576,18 @@ ht-degree: 1%
 
    * 将使用系统创建和维护网站内容的人员。
 
-## 所需文档和交付件{#required-documents-and-deliverables}
+## 所需文档和交付件 {#required-documents-and-deliverables}
 
-每个里程碑的&#x200B;**必需文档**&#x200B;和&#x200B;**可交付项**&#x200B;都包含检查列表。
+清单涵盖 **必需文档** 和 **交付项** （对于每个里程碑）。
 
 * 两者之间没有1:1的关系；例如，一组必需的文档可产生一个可交付项。
 * 同一里程碑期间，一个角色交付的内容可以是另一个角色的必需文档。
 
-### 所需文档{#required-documents}
+### 必需文档 {#required-documents}
 
-在生成相应的交付项时，相应角色需要&#x200B;**必需文档**。
+的 **必需文档** 在制作交付件时，需要相应角色来提供。
 
-对于每个&#x200B;**必需文档**，角色应指示：
+对于 **必需文档** 角色应该指示：
 
 * **Y/N**:是否收到。
 * **1-3**:接收文档的质量指示。
@@ -596,13 +596,13 @@ ht-degree: 1%
 
 对于每个里程碑，相应的角色负责提供特定文档，从而实现他们对特定里程碑的责任。
 
-对于每个&#x200B;**可交付项**，角色必须指示：
+对于 **可交付项** 角色必须指示：
 
 * **Y/N**:是否已完成。
 
-交付项通常用作当前或以后里程碑的&#x200B;**必需文档**。
+交付项通常用作 **必需文档** 用于当前里程碑或更高里程碑。
 
-## 相关最佳实践{#related-best-practices}
+## 相关最佳实践 {#related-best-practices}
 
 有关部署、管理、开发或创作的最佳实践，请参阅以下内容：
 
@@ -616,12 +616,11 @@ ht-degree: 1%
 * [开发最佳实践](/help/sites-developing/best-practices.md)
 * [创作最佳实践](/help/sites-authoring/best-practices.md)
 
-## 关键文档区域{#key-documentation-areas}
+## 关键文档区域 {#key-documentation-areas}
 
-* AEM文档
-此外，AEM文档的以下章节特别关注（但是，此列表并不详尽）：
+* AEM文档此外，AEM文档的以下部分特别关注（但是，此列表并不详尽）：
 
-   * [安全](/help/sites-developing/security.md)
+   * [安全性](/help/sites-developing/security.md)
    * [推荐的部署](/help/sites-deploying/recommended-deploys.md)
    * [企业 DevOps](/help/managing/enterprise-devops.md)
    * [硬件大小调整](/help/managing/hardware-sizing-guidelines.md)
@@ -629,8 +628,8 @@ ht-degree: 1%
 
       * [开发 — 基础知识](/help/sites-developing/the-basics.md)
       * [MSM概念](/help/sites-administering/msm.md)
-      * [HTML模板语言(HTL)](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
+      * [HTML模板语言(HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 
 * 相关文档
 
-   * Adobe Experience Cloud - [规划Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
+   * Adobe Experience Cloud - [Adobe Experience Cloud规划](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)

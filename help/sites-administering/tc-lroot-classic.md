@@ -1,8 +1,8 @@
 ---
 title: 使用经典UI创建语言根
-seo-title: 使用经典UI创建语言根
+seo-title: Creating a Language Root Using the Classic UI
 description: 了解如何使用经典UI创建语言根。
-seo-description: 了解如何使用经典UI创建语言根。
+seo-description: Learn how to create a language root using the Classic UI.
 uuid: 62e40d39-2868-4d3d-9af7-c60a1a658be0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,24 +10,24 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
-feature: 语言复制
+feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '316'
 ht-degree: 2%
 
 ---
 
 # 使用经典UI创建语言根{#creating-a-language-root-using-the-classic-ui}
 
-以下过程使用经典UI创建站点的语言根。 有关更多信息，请参阅[创建语言根](/help/sites-administering/tc-prep.md#creating-a-language-root)。
+以下过程使用经典UI创建站点的语言根。 有关更多信息，请参阅 [创建语言根](/help/sites-administering/tc-prep.md#creating-a-language-root).
 
 1. 在网站控制台的网站树中，选择站点的根页面。 ([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
 1. 添加表示网站语言版本的新子页面：
 
    1. 单击新建>新建页面。
-   1. 在对话框中，指定标题和名称。 名称的格式必须为`<language-code>`或`<language-code>_<country-code>`，例如en、en_US、en_us、en_GB、en_gb。
+   1. 在对话框中，指定标题和名称。 名称的格式必须为 `<language-code>` 或 `<language-code>_<country-code>`，例如en_US、en_us、en_GB、en_gb。
 
       * 支持的语言代码为小写，由ISO-639-1定义的双字母代码
       * 受支持的国家/地区代码为小写或大写，由ISO 3166定义的双字母代码

@@ -1,8 +1,8 @@
 ---
 title: 在AEM Forms工作区中使用的API
-seo-title: 在AEM Forms工作区中使用的API
+seo-title: APIs used in AEM Forms workspace
 description: 公共Java和JavaScript API以及LiveCycleAEM Forms工作区的方法，已公开以进行自定义和自动化。
-seo-description: 公共Java和JavaScript API以及LiveCycleAEM Forms工作区的方法，已公开以进行自定义和自动化。
+seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 0%
+source-wordcount: '997'
+ht-degree: 1%
 
 ---
 
-# AEM Forms工作区{#apis-used-in-aem-forms-workspace}中使用的API
+# 在AEM Forms工作区中使用的API {#apis-used-in-aem-forms-workspace}
 
 以下API在AEM Forms工作区中使用。
 

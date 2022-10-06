@@ -219,7 +219,7 @@ IMS 配置包括两个步骤：
 
    ![aem-stock-cloud-config](assets/aem-stock-cloud-config.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。
+1. 单击“**[!UICONTROL 保存并关闭]**”。
 
    您的 [!DNL Experience Manager Assets] 创作实例现在与集成 [!DNL Adobe Stock]. 您可以创建多个 [!DNL Adobe Stock] 配置（例如，基于区域设置的配置）。 您现在可以访问、搜索和许可 [!DNL Adobe Stock] 资产 [!DNL Experience Manager] 用户界面。
 
@@ -266,7 +266,7 @@ IMS 配置包括两个步骤：
 
 1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**. 选择 [!DNL Adobe Stock] 云配置，单击 **[!UICONTROL 属性]**.
 
-1. 将新创建的用户组添加到 [!DNL Adobe Stock] 配置。 单击&#x200B;**[!UICONTROL 保存并关闭]**。
+1. 将新创建的用户组添加到 [!DNL Adobe Stock] 配置。 单击“**[!UICONTROL 保存并关闭]**”。
 
    ![分配用户](assets/aem-stock-adduser.png)
 

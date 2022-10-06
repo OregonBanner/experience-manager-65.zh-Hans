@@ -10,26 +10,14 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: f97eb2e028263016131b0c86be5a0508ae4def9b
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2310'
 ht-degree: 3%
 
 ---
 
 # 查询生成器谓词参考{#query-builder-predicate-reference}
-
->[!CAUTION]
->
->此页面上的信息并不详尽。
->
->有关完整信息，请参阅 **可用谓词** （在查询生成器调试器控制台上）；例如，在：
->* [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
->
->例如，请参阅：
->
->* [http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29](http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29)
-
 
 ## 常规 {#general}
 

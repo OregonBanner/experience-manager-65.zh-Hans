@@ -4,13 +4,13 @@ description: 配置Experience Manager Assets以与Adobe资产链接扩展一起�
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-source-git-commit: e91fa04d87c7ecacf3ad8a148227948eafe15b1e
+exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
+source-git-commit: 84b16dd1a60f731b568dd87ef89699875cb86596
 workflow-type: tm+mt
 source-wordcount: '3149'
 ht-degree: 1%
 
 ---
-
 
 # 为Adobe资产链接配置Experience Manager Assets {#adobe-asset-link}
 
@@ -288,12 +288,7 @@ Experience Manager提供仅用于放置(FPO)的演绎版。 这些FPO呈现文�
 
 >[!MORELIKETHIS]
 >
->* [关于 Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [关于 Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
 >* [在Creative Cloud桌面应用程序中使用资产链接并管理资产](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
->* [配置Adobe Experience Manager Assetsas a Cloud Service](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
-
-
-
-
-
+>* [配置Adobe Experience Manager Assetsas a Cloud Service](https://helpx.adobe.com/cn/enterprise/using/configure-aem-assets-for-asset-link.html).
 

@@ -1,19 +1,19 @@
 ---
 title: 配置操作方法文章
-seo-title: 配置操作方法文章
+seo-title: Configuration How-To Articles
 description: 描述如何在AEM中完成特定部署任务的文章列表。
-seo-description: 描述如何在AEM中完成特定部署任务的文章列表。
+seo-description: A list of articles that describe how to accomplish specific deployment tasks in AEM.
 uuid: 5a339a6f-9c1a-4324-92d3-08b975131a1b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
-feature: 配置
+feature: Configuring
 exl-id: e9ea9df4-a355-41fc-a102-01a5d7ca2629
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: 编辑页面内容
-seo-title: 编辑页面内容
+seo-title: Editing Page Content
 description: 内容使用可拖动到页面上的组件进行添加。然后，可以就地编辑、移动或删除这些内容。
-seo-description: 内容使用可拖动到页面上的组件进行添加。然后，可以就地编辑、移动或删除这些内容。
+seo-description: Content is added using components that can be dragged onto the page. These can then be edited in place, moved, or deleted.
 uuid: e7b65ceb-263c-46f2-91e3-11dec3a016fa
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1755'
 ht-degree: 97%
 
 ---
@@ -87,7 +87,7 @@ ht-degree: 97%
 
 1. 在页面中插入所需组件。然后双击段落，此时将打开一个窗口，在此可以配置段落和添加内容。
 
-### 使用内容查找器插入组件  {#inserting-a-component-using-the-content-finder}
+### 使用内容查找器插入组件 {#inserting-a-component-using-the-content-finder}
 
 您还可以通过从[内容查找器](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)拖动资产来向页面添加新组件。这将自动创建包含资产的相应类型新组件。
 
@@ -114,7 +114,7 @@ ht-degree: 97%
 
 1. 根据需要[编辑](#editmovecopypastedelete)组件。
 
-## 编辑组件（内容和属性）  {#editing-a-component-content-and-properties}
+## 编辑组件（内容和属性） {#editing-a-component-content-and-properties}
 
 要编辑现有段落，请执行以下操作之一：
 
@@ -205,7 +205,7 @@ ht-degree: 97%
 
 [注释](/help/sites-classic-ui-authoring/classic-page-author-annotations.md)允许其他作者对内容提出反馈。该功能通常作审核和验证之用。
 
-## 预览页面  {#previewing-pages}
+## 预览页面 {#previewing-pages}
 
 Sidekick 的底部边框中有两个对于预览页面很重要的图标：
 
@@ -229,7 +229,7 @@ Sidekick 的底部边框中有两个对于预览页面很重要的图标：
 
 ## 锁定页面 {#locking-a-page}
 
-AEM 允许您锁定页面，以便其他人无法修改页面内容。当您对某个特定页面做出大量修改，或者需要冻结页面一段时间时，此功能非常有用。
+AEM 允许您锁定页面，这样其他人就无法修改页面内容。当您对某个特定页面做出大量修改，或者需要冻结页面一段时间时，此功能非常有用。
 
 >[!CAUTION]
 >
@@ -268,7 +268,7 @@ AEM 允许您锁定页面，以便其他人无法修改页面内容。当您对�
 >
 >有关撤消和重做页面编辑时可执行操作的完整详细信息，请参阅[撤消和重做页面编辑 - 理论](#undoing-and-redoing-page-edits-the-theory)。
 
-## 撤消和重做页面编辑 - 理论 {#undoing-and-redoing-page-edits-the-theory}
+## 撤消和重做页面编辑 – 理论 {#undoing-and-redoing-page-edits-the-theory}
 
 >[!NOTE]
 >
@@ -287,9 +287,7 @@ AEM 会按照您执行操作的顺序来存储这些操作的历史记录。所�
 >* 只要您在执行撤消操作之后没有进行任何页面编辑，就可以执行重做操作。
 >* 最多可撤消 20 次编辑操作（默认设置）。
 >* 也可以使用[键盘快捷键](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)执行撤消和重做操作。
-
 >
-
 
 
 您可以对以下类型的页面更改使用撤消和重做：

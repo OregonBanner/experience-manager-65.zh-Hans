@@ -1,8 +1,8 @@
 ---
 title: 营销活动管理
-seo-title: 营销活动管理
+seo-title: Campaign Management
 description: 营销活动管理为数字营销人员提供了发布个性化内容，进而为访客创建专有体验的机会。它可让您通过网络、电子邮件和移动服务精心策划市场营销活动，以此来吸引您的访客。
-seo-description: 营销活动管理为数字营销人员提供了发布个性化内容，进而为访客创建专有体验的机会。它可让您通过网络、电子邮件和移动服务精心策划市场营销活动，以此来吸引您的访客。
+seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.
 uuid: 202d614b-a607-45de-8c24-1ee66b230315
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,8 +12,8 @@ discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 exl-id: d1741525-a475-4a76-bd16-55318023495e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 92%
+source-wordcount: '628'
+ht-degree: 91%
 
 ---
 
@@ -39,16 +39,16 @@ ht-degree: 92%
 在AEM中，品牌是顶级单位，并构成 
 **营销活动**.
 
-* ****
-营销活动营销活动是单个 
+* **促销活动**
+营销活动是个人的集合 
 **体验**.
 
-* ****
-体验重点内容构成各种体验，呈现在 
+* **体验**
+重点内容构成了各种体验，呈现给访客的是 
 **触点**. 有若干类型的体验：
 
    * **Teaser**
-      [Teaser页面/段](#teasers) 落用于将特定访客区段 **** 定向到他们感兴趣的内容。
+      [Teaser页面/段落](#teasers) 用于控制特定访客的方向 **区段** 关注他们兴趣的内容。
 
       Teaser 页面可以：
 

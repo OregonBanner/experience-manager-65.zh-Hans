@@ -89,7 +89,7 @@ AEM 为一些常用功能（编辑、属性、复制/粘贴、显示各种侧边
 
 您可以在以下两个位置取消激活键盘快捷键：
 
-* [我的首选项](/help/sites-authoring/user-properties.md#my-preferences)
+* [我的偏好设置](/help/sites-authoring/user-properties.md#my-preferences)
 * [帮助菜单](/help/sites-authoring/basic-handling.md#accessing-help)
 
 >[!NOTE]

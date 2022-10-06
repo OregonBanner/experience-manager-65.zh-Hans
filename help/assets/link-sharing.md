@@ -90,7 +90,7 @@ ht-degree: 8%
 
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。
+1. 单击“**[!UICONTROL 保存]**”。
 
 ## 配置最大数据大小 {#configure-maximum-data-size}
 

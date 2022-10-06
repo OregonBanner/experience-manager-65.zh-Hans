@@ -1,5 +1,5 @@
 ---
-title: '概念 '
+title: 概念
 description: 使用AEM进行电子商务的一般概念。
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
@@ -36,7 +36,6 @@ ht-degree: 1%
 >* [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
 >* [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
 >* [SalesforceCommerce Cloud](https://github.com/adobe/commerce-salesforce)
-
 >
 
 
@@ -396,7 +395,7 @@ AEM支持多种语言的产品内容。 在请求数据时，集成框架从当�
 
 * 内容卷
 
-   * 资产
+   * Assets
    * 本地化的I18内部产品和SKU
 
 * 用户活动：
@@ -554,7 +553,7 @@ AEM支持多种语言的产品内容。 在请求数据时，集成框架从当�
    * 用于提升管理的渲染器和对话框
    * 用于渲染和编辑特定于升级处理程序的配置参数的子组件
 
-在AEM中，促销活动也集成到 [营销活动管理](/help/sites-authoring/personalization.md):
+在AEM中，促销活动也集成到 [Campaign Management](/help/sites-authoring/personalization.md):
 
 * a [营销活动](/help/sites-authoring/personalization.md) 指定开/关时间
 * [体验](/help/sites-authoring/personalization.md) *within* 营销活动用于根据与其对应的受众区段对资产（teaserpages、promotions等）进行分组

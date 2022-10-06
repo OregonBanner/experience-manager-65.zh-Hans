@@ -1,8 +1,8 @@
 ---
 title: 交互式通信配置属性
-seo-title: 交互式通信配置属性
+seo-title: Interactive Communication configuration properties
 description: 编辑交互式通信的默认配置属性
-seo-description: 编辑交互式通信的默认配置属性
+seo-description: Edit default configuration properties for Interactive Communications
 uuid: 4030078f-64a3-40bb-9892-49e22a8da561
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,20 +10,20 @@ content-type: reference
 topic-tags: interactive-communications
 discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
-feature: 交互式通信
+feature: Interactive Communication
 exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '614'
 ht-degree: 7%
 
 ---
 
 # 交互式通信配置属性{#interactive-communications-configuration-properties}
 
-交互式通信包括在安装[AEM Forms附加组件包](../../forms/using/installing-configuring-aem-forms-osgi.md)后自动配置的属性。 交互式通信作者可以使用&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;页面编辑这些默认配置属性。
+交互式通信包括在安装 [AEM Forms附加组件](../../forms/using/installing-configuring-aem-forms-osgi.md) 包。 交互式通信作者可以使用 **Adobe Experience Manager Web控制台配置** 页面。
 
-使用以下URL打开&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;页面：
+打开 **Adobe Experience Manager Web控制台配置** 页面：
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
@@ -34,9 +34,9 @@ ht-degree: 7%
 * [自适应表单与交互式通信Web信道配置](#adaptive-form-and-interactive-communication-web-channel-configuration)
 * [自适应表单与交互式通信Web渠道主题配置](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## 文档片段配置{#document-fragments-configuration}
+## 文档片段配置 {#document-fragments-configuration}
 
-点按&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;页面上的&#x200B;**文档片段配置** ，以查看文档片段的配置属性。
+点按 **文档片段配置** 在 **Adobe Experience Manager Web控制台配置** 页面以查看文档片段的配置属性。
 
 <table>
  <tbody> 
@@ -80,9 +80,9 @@ ht-degree: 7%
  </tbody> 
 </table>
 
-## 创建通信配置{#create-correspondence-configuration}
+## 创建通信配置 {#create-correspondence-configuration}
 
-点按&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;页面上的&#x200B;**创建通信配置** ，以查看代理UI的配置属性。
+点按 **创建通信配置** 在 **Adobe Experience Manager Web控制台配置** 页面查看代理UI的配置属性。
 
 <table>
  <tbody> 
@@ -106,16 +106,16 @@ ht-degree: 7%
   </tr> 
   <tr> 
    <td>在PDF中启用字体嵌入</td> 
-   <td><p>选中此复选框可启用在PDF文档中嵌入字体。 选择此选项后，您可以使用Agent UI在生成或预览PDF文档后嵌入新字体。 使用交互式通信的打印渠道生成和预览PDF文档。</p> <p>如果用于生成PDF的计算机上有字体，而访问PDF的客户端计算机上没有字体，则在PDF文档中嵌入字体非常有用。</p> <p>有关嵌入字体的更多信息，请参阅<a href="../../forms/using/customize-text-editor.md" target="_blank">自定义文本编辑器</a>。</p> </td> 
+   <td><p>选中此复选框可启用在PDF文档中嵌入字体。 选择此选项后，可以在使用Agent UI生成或预览PDF文档后嵌入新字体。 使用交互式通信的打印渠道生成和预览PDF文档。</p> <p>如果用于生成PDF的计算机上有字体，而访问PDF的客户端计算机上没有字体，则在PDF文档中嵌入字体非常有用。</p> <p>有关嵌入字体的更多信息，请参阅 <a href="../../forms/using/customize-text-editor.md" target="_blank">自定义文本编辑器</a>.</p> </td> 
    <td>未选择</td> 
    <td>不适用</td> 
   </tr> 
  </tbody> 
 </table>
 
-## 自适应表单和交互式通信Web通道配置{#adaptive-form-and-interactive-communication-web-channel-configuration}
+## 自适应表单与交互式通信Web信道配置 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-点按&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;页面上的&#x200B;**自适应表单和交互式通信Web渠道配置** ，以查看自适应Forms和交互式通信Web渠道的配置属性。 下表描述了与交互式通信相关的属性：
+点按 **自适应表单与交互式通信Web信道配置** 在 **Adobe Experience Manager Web控制台配置** 页面查看自适应Forms和交互式通信Web渠道的配置属性。 下表描述了与交互式通信相关的属性：
 
 | 属性 | 描述 | 默认 | 可接受的值 |
 |---|---|---|---|
@@ -123,9 +123,9 @@ ht-degree: 7%
 | 最大缓存条目数 | 设置可以使用缓存内存检索的自适应表单和交互式通信的最大数量。 | 100 | 数字 |
 | 使文件名唯一 | 选中此复选框可在自适应Forms和交互式通信中以附件形式包含文件的唯一名称。 | 未选择 | 不适用 |
 
-## 自适应表单和交互式通信Web渠道主题配置{#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## 自适应表单与交互式通信Web渠道主题配置 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-点按&#x200B;**Adobe Experience Manager Web控制台配置**&#x200B;页面上的&#x200B;**自适应表单和交互式通信Web渠道主题配置** ，以查看自适应Forms和交互式通信Web渠道主题的配置属性。
+点按 **自适应表单与交互式通信Web渠道主题配置** 在 **Adobe Experience Manager Web控制台配置** 页面以查看自适应Forms和交互式通信Web渠道主题的配置属性。
 
 <table>
  <tbody> 

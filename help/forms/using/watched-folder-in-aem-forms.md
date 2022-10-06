@@ -296,7 +296,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 1. 以编程方式或通过控制台https://&#39;创建系统用户[服务器]:[端口]“/crx/explorer”。 您还可以使用现有系统用户。 在此处与系统用户合作，而不是与普通用户合作非常重要。
 1. 在存储脚本的自定义位置上为新创建或现有系统用户提供读取权限。 您可以有多个自定义位置。 至少为所有自定义位置提供读取权限。
 1. 在Felix配置控制台(/system/console/configMgr)中，找到watch-folders的服务用户映射。 此映射类似于“映射：adobe-aemds-core-watch-folder=...&#39;。
-1. 单击映射。 对于条目“adobe-aemds-core-watch-folder:scripts=fd-service”，将fd-service更改为自定义系统用户的ID。 单击保存。
+1. 单击映射。 对于条目“adobe-aemds-core-watch-folder:scripts=fd-service”，将fd-service更改为自定义系统用户的ID。 单击“保存”。
 
 现在，您可以使用配置的自定义位置来保存脚本。
 

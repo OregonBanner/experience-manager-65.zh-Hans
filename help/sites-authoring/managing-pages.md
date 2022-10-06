@@ -5,7 +5,7 @@ exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2523'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 93%
 
 网站结构可以被视为包含内容页面的树结构。这些内容页面的名称用于组成 URL，而标题则会在查看页面内容时显示出来。
 
-以下显示了We.Retail网站的一个示例，该示例中访问了徒步短裤页面(`desert-sky-shorts`):
+以下显示了We.Retail网站的一个示例，其中是远足运动裤页面( `desert-sky-shorts`):
 
 * 创作环境
    `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
@@ -42,7 +42,7 @@ ht-degree: 93%
 * 发布环境
    `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-根据实例的配置，在发布环境中使用`/content`可能是可选的。
+根据实例的配置，使用 `/content` 在发布环境中可能是可选的。
 
 ```xml
  /content
@@ -104,7 +104,7 @@ ht-degree: 93%
 >
 >另请注意，某些浏览器（例如旧版本的 IE）只能接受一定长度的 URL，因此还有技术原因需缩短页面名称。
 
-创建新页面时，AEM将根据AEM和JCR实行的惯例](/help/sites-developing/naming-conventions.md)验证页面名称。[
+创建新页面时，AEM [将依据 AEM 和 JCR 实行的惯例来验证页面名称](/help/sites-developing/naming-conventions.md)。
 
 允许使用的字符最少包括：
 
@@ -114,7 +114,7 @@ ht-degree: 93%
 * `_`（下划线）
 * `-`（连字符/减号）
 
-有关允许使用的所有字符的完整详细信息可以在[命名惯例](/help/sites-developing/naming-conventions.md)中找到。
+有关允许使用的所有字符的完整详细信息，请参阅[命名惯例](/help/sites-developing/naming-conventions.md)。
 
 >[!NOTE]
 >
@@ -122,12 +122,12 @@ ht-degree: 93%
 
 #### 标题 {#title}
 
-如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**[，并依据 AEM 和 JCR 实行的惯例验证此名称。](/help/sites-developing/naming-conventions.md)虽然将接受包含无效字符的&#x200B;**标题**&#x200B;字段，但派生的名称会将无效的字符替换掉。例如：
+如果您在创建新页面时只提供一个页面&#x200B;**标题**，AEM 将从此字符串派生页面&#x200B;**名称**[，并依据 AEM 和 JCR 实行的惯例验证此名称](/help/sites-developing/naming-conventions.md)。虽然将接受包含无效字符的&#x200B;**标题**&#x200B;字段，但派生的名称会将无效的字符替换掉。例如：
 
 | 标题 | 派生的名称 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;*ç+ | sc---c-.html |
+| SC%&amp;&#42;ç+ | sc---c-.html |
 
 #### 名称 {#name}
 
@@ -164,7 +164,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 ### 组件 {#components}
 
-组件是 AEM 提供的元素，因此您可以添加特定类型的内容。 AEM附带一系列[现成组件](/help/sites-authoring/default-components-console.md)，这些组件提供了全面的功能。这些功能包括：
+组件是 AEM 提供的元素，因此您可以添加特定类型的内容。 AEM附带一系列 [开箱即用的组件](/help/sites-authoring/default-components-console.md) 提供全面功能。这些功能包括：
 
 * 文本
 * 图像
@@ -184,7 +184,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 除非已提前为您创建所有页面，否则必须先创建页面，然后才能开始创建内容：
 
-1. 打开站点控制台(例如，[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))。
+1. 打开站点控制台(例如， [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))。
 1. 导航到要创建新页面的位置。
 1. 使用工具栏中的&#x200B;**创建**&#x200B;打开下拉选择器，然后从列表中选择&#x200B;**页**：
 
@@ -260,7 +260,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 >
 >只有在“预览”模式下才能通过页面编辑器导航到其他页面，因为在“编辑”模式下，链接不处于活动状态。
 
-### 复制和粘贴页面  {#copying-and-pasting-a-page}
+### 复制和粘贴页面 {#copying-and-pasting-a-page}
 
 您可以将页面及其所有子页面复制到一个新位置：
 
@@ -299,7 +299,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 >[!NOTE]
 >
->页面只能移动到允许使用该页面所基于的模板的位置。有关更多信息，请参阅[模板可用性](/help/sites-developing/templates.md#template-availability)。
+>页面只能移动到允许使用该页面所基于的模板的位置。请参阅[模板可用性](/help/sites-developing/templates.md#template-availability)以了解更多信息。
 
 移动或重命名页面的过程基本相同，都由同一个向导来处理。通过此向导，您可以：
 
@@ -392,7 +392,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
 >[!NOTE]
 >
->有关异步作业处理以及如何配置页面移动/重命名操作限制的更多信息，请参阅管理用户指南中的[异步作业](/help/sites-administering/asynchronous-jobs.md)文档。
+>有关异步作业处理以及如何配置页面移动/重命名操作限制的更多信息，请参阅 [异步作业](/help/sites-administering/asynchronous-jobs.md) 文档。
 
 >[!NOTE]
 >
@@ -440,9 +440,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 >* 只有在&#x200B;**站点**&#x200B;下或其他文件夹下才能直接创建文件夹。不能在页面下创建文件夹。
 >* 可以对文件夹执行移动、复制、粘贴、删除、发布、取消发布和查看/编辑属性等标准操作。
 >* 无法在 Live Copy 中选择文件夹。
-
 >
-
 
 
 1. 打开&#x200B;**站点**&#x200B;控制台并导航到所需的位置。
