@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: fd9661ee94edf8f88a93ae35ba2563b3021add4d
+source-git-commit: 85987222e8b216f22ae1fec4e080488d01f23063
 workflow-type: tm+mt
-source-wordcount: '5901'
+source-wordcount: '5905'
 ht-degree: 0%
 
 ---
@@ -128,14 +128,14 @@ ht-degree: 0%
    ![版本清除配置](assets/version-purge-configuration.png)
 
    * **清除路径**
-设置要清除的内容的开始路径(例如， 
-`/content/wknd`）。
+设置要清除的内容的开始路径；例如， 
+`/content/wknd`。
 
       >[!CAUTION]
       >
       >强烈建议您为每个网站定义多个路径。
       >
-      >定义子项过多的路径会延长执行清除的时间。
+      >定义包含太多子项的路径会显着延长执行清除所需的时间。
 
    * **递归清除版本**
 
