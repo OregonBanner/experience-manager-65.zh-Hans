@@ -3,14 +3,8 @@ title: 安全性
 seo-title: Security
 description: 应用程序安全性在开发阶段启动
 seo-description: Application Security starts during the development phase
-uuid: efd5f3bc-da07-4fc8-a6ce-f1e6f5084c9e
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: introduction
-content-type: reference
-discoiquuid: d2267663-6c1d-413c-9862-e82e21ae6906
 exl-id: c4f7f45f-224b-4fc3-b4b0-f5b21b8a466f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c55b70ec11842d3f7d82adbf552b2624c1dcc599
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -23,7 +17,7 @@ ht-degree: 0%
 
 ## 使用请求会话 {#use-request-session}
 
-遵循最少权限的原则，Adobe建议使用绑定到用户请求的会话和适当的访问控制来完成每个存储库的访问。
+遵循最低权限原则，Adobe建议使用绑定到用户请求的会话和适当的访问控制来完成每个存储库的访问。
 
 ## Protect反对跨站点脚本(XSS) {#protect-against-cross-site-scripting-xss}
 
