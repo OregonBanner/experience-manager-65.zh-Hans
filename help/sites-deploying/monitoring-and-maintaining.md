@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 85987222e8b216f22ae1fec4e080488d01f23063
+source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
 workflow-type: tm+mt
-source-wordcount: '5905'
+source-wordcount: '5972'
 ht-degree: 0%
 
 ---
@@ -609,12 +609,12 @@ OSGi事件还会生成审核记录，这些记录可从 **配置状态** 选项�
   <tr>
    <td>线程转储</td>
    <td>观察JVM线程。 识别争议、锁和长跑者。</td>
-   <td><p>取决于操作系统：<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）：Ctrl-Break<br /> </p> <p>分析工具也可用，例如 <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td>
+   <td><p>取决于操作系统：<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（控制台模式）：Ctrl-Break<br /> </p> <p>分析工具也可用，例如 <a href="https://github.com/irockel/tda">TDA</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td>堆转储</td>
    <td>内存不足问题导致性能缓慢。</td>
-   <td><p>添加：<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 选项来调用AEM。</p> <p>请参阅 <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">带有热点虚拟机的Java SE 6疑难解答指南</a>.</p> </td>
+   <td><p>添加：<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> 选项来调用AEM。</p> <p>请参阅 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">“JVM故障诊断”页的选项/标记</a>.</p> </td>
   </tr>
   <tr>
    <td>系统调用</td>
@@ -624,7 +624,7 @@ OSGi事件还会生成审核记录，这些记录可从 **配置状态** 选项�
   <tr>
    <td>阿帕奇·本奇</td>
    <td>识别内存泄漏，有选择地分析响应时间。</td>
-   <td><p>基本用法为：</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>请参阅 <a href="#apache-bench">阿帕奇·本奇</a> 和 <a href="https://httpd.apache.org/docs/2.2/programs/ab.html">ab手册页</a> 以了解完整详细信息。</p> </td>
+   <td><p>基本用法为：</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>请参阅 <a href="#apache-bench">阿帕奇·本奇</a> 和 <a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ab手册页</a> 以了解完整详细信息。</p> </td>
   </tr>
   <tr>
    <td>搜索分析</td>
@@ -634,7 +634,7 @@ OSGi事件还会生成审核记录，这些记录可从 **配置状态** 选项�
   <tr>
    <td>JMeter</td>
    <td>加载和功能测试。</td>
-   <td><a href="https://jakarta.apache.org/jmeter/">https://jakarta.apache.org/jmeter/</a></td>
+   <td><a href="https://jmeter.apache.org/">https://jmeter.apache.org/</a></td>
   </tr>
   <tr>
    <td>JProfiler</td>
@@ -642,14 +642,19 @@ OSGi事件还会生成审核记录，这些记录可从 **配置状态** 选项�
    <td><a href="https://www.ej-technologies.com/">https://www.ej-technologies.com/</a></td>
   </tr>
   <tr>
+   <td>Java飞行记录器</td>
+   <td>Java飞行记录器(JFR)是一个用于收集有关正在运行的Java应用程序的诊断和分析数据的工具。</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE</a></td>
+  </tr>
+  <tr>
    <td>JConsole</td>
    <td>观察JVM量度和线程。</td>
-   <td><p>用法：jconsole</p> <p>请参阅 <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> 和 <a href="#monitoring-performance-using-jconsole">使用JConsole监控性能</a>.</p> <p><strong>注意：</strong> 在JDK 1.6中，JConsole可通过插件进行扩展；例如，Top或TDA（线程转储分析器）。</p> </td>
+   <td><p>用法：jconsole</p> <p>请参阅 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html">jconsole</a> 和 <a href="#monitoring-performance-using-jconsole">使用JConsole监控性能</a>.</p> <p><strong>注意：</strong> 在JDK 1.8中，JConsole可通过插件进行扩展；例如，Top或TDA（线程转储分析器）。</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>观察JVM量度、线程、内存和分析。</td>
-   <td><p>用法：jvisualvm或visualvm<br /> </p> <p>请参阅 <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.dev.java.net/">visualvm</a> 和 <a href="#monitoring-performance-using-j-visualvm">使用(J)VisualVM监控性能</a>.</p> <p><strong>注意：</strong> 借助JDK 1.6,VisualVM可通过插件进行扩展。</p> </td>
+   <td><p>用法：visualvm或visualvm<br /> </p> <p>请参阅 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">visualvm</a> 和 <a href="#monitoring-performance-using-j-visualvm">使用(J)VisualVM监控性能</a>.</p> <p><strong>注意：</strong> 借助JDK 1.8,VisualVM可通过插件进行扩展。 在JDK 9之后，VisualVM将停止运行。 请改用Java飞行记录器。</p> </td>
   </tr>
   <tr>
    <td>桁架/地带，lsof</td>
@@ -664,7 +669,7 @@ OSGi事件还会生成审核记录，这些记录可从 **配置状态** 选项�
   <tr>
    <td>CPU和内存分析工具<br /> </td>
    <td><a href="#interpreting-the-request-log">在开发过程中分析缓慢的请求时使用</a>.</td>
-   <td>例如， <a href="https://www.yourkit.com/">YourKit</a>.</td>
+   <td>例如， <a href="https://www.yourkit.com/">YourKit</a>. 或 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java飞行记录器</a>.</td>
   </tr>
   <tr>
    <td><a href="#information-collection">信息收集</a></td>
@@ -711,7 +716,7 @@ OSGi事件还会生成审核记录，这些记录可从 **配置状态** 选项�
 此日志中每个请求或响应有一行：
 
 * 发出每个请求或响应的日期。
-* 请求的编号，用方括号表示。 此数字与请求和响应的数字匹配。
+* 请求的编号，用方括号括起来。 此数字与请求和响应的数字匹配。
 * 一个箭头，指示这是请求（指向右侧的箭头）还是响应（向左的箭头）。
 * 对于请求，行包含：
 
@@ -810,7 +815,7 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
 
 ### 阿帕奇·本奇 {#apache-bench}
 
-为了最大限度地减少特殊情况（如垃圾收集等）的影响，建议使用诸如 `apachebench` (例如， [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) 以帮助识别内存泄漏并有选择地分析响应时间。
+为了最大限度地减少特殊情况（如垃圾收集等）的影响，建议使用诸如 `apachebench` (例如， [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) 以帮助识别内存泄漏并有选择地分析响应时间。
 
 Apache Bench可通过以下方式使用：
 
@@ -921,7 +926,7 @@ Percentage of the requests served within a certain time (ms)
 
 ### 使用(J)VisualVM监控性能 {#monitoring-performance-using-j-visualvm}
 
-自JDK 1.6起，工具命令 `jvisualvm` 中。 安装JDK 1.6后，您可以：
+对于JDK 6-8，工具命令 `visualvm` 中。 安装JDK后，您可以：
 
 1. 启动AEM实例。
 
@@ -932,7 +937,7 @@ Percentage of the requests served within a certain time (ms)
 1. 运行以下任一操作：
 
    * `jvisualvm`:在JDK 1.6 bin文件夹中（已测试版本）
-   * `visualvm`:可从下载 [VisualVM](https://visualvm.dev.java.net/) （放血边缘版本）
+   * `visualvm`:可从下载 [VisualVM](https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/) （放血边缘版本）
 
 1. 从 `Local` 应用程序，双击 `com.day.crx.quickstart.Main`;将默认显示概述：
 
@@ -1185,7 +1190,7 @@ Java虚拟机(JVM)在调整方面有了显着改进（尤其是自Java 7以来�
    ```
 
 * 然后，使用JConsole连接到JVM;请参阅：
-   ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
+   ` [https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html)`
 
 这将帮助您了解正在使用的内存量、GC算法的使用情况、运行时间以及这对应用程序性能有何影响。 如果没有这一点，调整就只是“随机摆弄旋钮”。
 
@@ -1193,4 +1198,4 @@ Java虚拟机(JVM)在调整方面有了显着改进（尤其是自Java 7以来�
 >
 >对于Oracle的VM，还有以下信息：
 >
->[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
