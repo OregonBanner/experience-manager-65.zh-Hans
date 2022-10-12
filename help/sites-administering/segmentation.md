@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d546462b4b78a743e047dcfea5fc2dc92d131bb5
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 81%
+source-wordcount: '1787'
+ht-degree: 78%
 
 ---
 
@@ -35,9 +35,13 @@ AEM使您能够轻松地个性化用户体验。 它还允许您验证区段定�
 
 的 [受众](/help/sites-authoring/managing-audiences.md) 控制台用于管理ContextHub或Client Context的区段，以及Adobe Target帐户的受众。 本文档介绍了如何管理 ContextHub 的区段。对于 [Client Context区段](/help/sites-administering/campaign-segmentation.md) 和Adobe Target区段，请参阅相关文档。
 
-要访问您的区段，请在全局导航中，选择&#x200B;**导航 > 个性化 > 受众**。
+要访问您的区段，您需要选择配置。 在全局导航中，选择 **导航>个性化>受众**. 您将看到可用的配置：
 
-![chlimage_1-310](assets/chlimage_1-310.png)
+![受众 — 配置](assets/segmentation-access-confs.png)
+
+选择您的配置以查看区段，例如WKND Site:
+
+![受众 — 区段](assets/segmentation-access-segments.png)
 
 ## 区段编辑器 {#segment-editor}
 
@@ -130,7 +134,7 @@ AEM使您能够轻松地个性化用户体验。 它还允许您验证区段定�
 
 要定义新区段，请执行以下操作：
 
-1. 在[访问区段](/help/sites-administering/segmentation.md#accessing-segments)后，[导航到文件夹](#organizing-segments)（您要在该文件夹中创建区段）或将它留在根中。
+1. 之后 [访问区段](/help/sites-administering/segmentation.md#accessing-segments), [导航到文件夹](#organizing-segments) 您希望在何处创建区段。
 
 1. 单击或点按创建按钮，然后选择 **创建ContextHub区段**.
 
