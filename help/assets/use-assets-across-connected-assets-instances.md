@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: 0df4bce6651517c6049578d0a1434726ab04e240
 workflow-type: tm+mt
-source-wordcount: '3803'
+source-wordcount: '3837'
 ht-degree: 18%
 
 ---
@@ -70,7 +70,9 @@ ht-degree: 18%
 
 ### 连接的资产架构 {#connected-assets-architecture}
 
-Experience Manager允许您将远程DAM部署作为源连接到多个Experience Manager [!DNL Sites] 部署。 最多可连接4个 [!DNL Sites] 部署到源远程DAM。 但是，您可以 [!DNL Sites] 部署时，只能使用一个远程DAM部署。
+Experience Manager允许您将远程DAM部署作为源连接到多个Experience Manager [!DNL Sites] 部署。 但是，您可以 [!DNL Sites] 部署时，只能使用一个远程DAM部署。
+
+评估要连接到远程DAM部署的最佳Sites实例数。 Adobe建议以增量方式将Sites实例连接到部署，并测试远程DAM上的性能没有影响，因为每个连接的Sites实例都会贡献到远程DAM上的数据流量。
 
 下图说明了支持的情景：
 
@@ -264,9 +266,9 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 
 +++
 
-+++**多少 [!DNL Sites] 部署在配置“连接的资产”后，是否可以连接到远程DAM部署？**
++++**能否连接多个 [!DNL Sites] 部署到远程DAM部署中的任何步骤？**
 
-最多可连接4个 [!DNL Sites] 部署到远程DAM部署。 有关更多信息，请参阅 [连接的资产架构](#connected-assets-architecture).
+是，您可以连接多个 [!DNL Sites] 部署到远程DAM部署。 有关更多信息，请参阅 [连接的资产架构](#connected-assets-architecture).
 
 +++
 
