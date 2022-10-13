@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e13953bed73481738832a00a7563a07149c2d3bd
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2079'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ npm模块： [@adobe/aem-react-editable-components](https://www.npmjs.com/packag
 
 #### Angular {#angular}
 
-npm模块：即将推出
+npm模块： [@adobe/aem-angular-editable-components](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 ## 主要服务和组件 {#main-services-and-components}
 
@@ -166,8 +166,6 @@ npm模块：即将推出
 
 * `gridClassNames:` 为响应式网格提供的类名称
 * `columnClassNames:` 为响应列提供的类名称
-
-另请参阅npm资源 [@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)
 
 #### 响应网格的占位符 {#placeholder-of-the-reponsive-grid}
 
