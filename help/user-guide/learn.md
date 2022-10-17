@@ -4,7 +4,7 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: 对AEM 6.5基本功能的描述
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 52385af23b04cda33a88ec42bb150650eb58fe4e
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 29%
@@ -15,7 +15,7 @@ ht-degree: 29%
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites是AdeobeExperience Manager内的一个内容管理系统，它为您提供了一个位置，用于在网站、移动设备网站和网站屏幕中创建、管理和提供数字体验，使其在全球范围内触及，但与个人相关且引人入胜。 [了解更多](https://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 或 [深入学习我们的一些新增视频功能教程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites是Adobe Experience Manager中的一个内容管理系统，它为您提供了一个位置来跨网站、移动设备网站和网站屏幕创建、管理和提供数字体验，从而使其在全球范围内访问，并且与个人相关且引人入胜。 [了解更多](https://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) 或 [深入学习我们的一些新增视频功能教程。](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
