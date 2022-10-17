@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3c691a9e8673f3229368abbd550982d207eb8ac6
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,15 @@ ht-degree: 0%
 
 要同步多个表单，请在创作实例中，在表单管理器中选择多个表单，然后点按 **与AEM Forms应用程序同步**. 发布表单后，AEM Forms应用程序可以连接到发布服务器并获取表单。
 
+如果您的AFA(AEM表单应用程序)Android应用程序无法同步，请执行以下步骤来修复同步问题：
+
+1. 转到 **https://&#39;[服务器]:[端口]&#39;system/console/configMgr**.
+1. 搜索 **[!UICONTROL AdobeGranite令牌身份验证处理程序]** 单击 **[!UICONTROL 编辑]**.
+1. 选择 **[!UICONTROL 无]** 选项 **[!UICONTROL 登录令牌Cookie的SameSite属性]** 属性。
+1. 单击“**[!UICONTROL 保存]**”。
+
+![与AFA Android应用程序同步图像](/help/forms/using/assets/afaandroid.png)
+
 >[!NOTE]
 >
 >支持的表单：
@@ -39,7 +48,8 @@ ht-degree: 0%
 >
 >在与AEM Forms OSGi服务器同步的AEM Forms应用程序中获取的自适应表单中，不支持表单级别附件。 如果作者在创作表单时启用了字段级附件，则用户可以在字段中附加文件。
 
+
 **打开和更新表单**
 
-1. 要打开表单，请点按主屏幕中的表单。
+1. 要打开表单，请点按 **[!UICONTROL 表单]** 在主屏幕中。
 1. 您可以更新表单的字段、添加附件、另存为草稿并提交它。
