@@ -11,9 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 51e36e874fe84eab8558271b5c84b1c2e2f58ef0
 workflow-type: tm+mt
-source-wordcount: '3999'
+source-wordcount: '4034'
 ht-degree: 0%
 
 ---
@@ -281,7 +281,10 @@ AEM Forms工作区有以下三种类型的待办事项列表：
 
 >[!NOTE]
 >
->要将工作区配置为使用相应的电子邮件模板，请参阅 [AEM Forms JEE管理员指南](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
+>* 要将工作区配置为使用相应的电子邮件模板，请参阅 [AEM Forms JEE管理员指南](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
+>
+>* 如果在AEM Forms工作区中提交任务后转发草稿，则会发送电子邮件通知。 如果草稿从AEM Forms工作区的起点转发，则不会发送电子邮件通知。
+
 
 通过电子邮件完成任务时，该任务会从AEM Forms工作区的“待办事项”列表中删除。
 
