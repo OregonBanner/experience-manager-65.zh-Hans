@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: de58ba638c22b7148e1349417d1f514c26c5887e
+source-git-commit: d303a374fd4ab8e398fd909dec4ce6155a2163f5
 workflow-type: tm+mt
-source-wordcount: '3525'
+source-wordcount: '3573'
 ht-degree: 2%
 
 ---
@@ -89,7 +89,7 @@ ht-degree: 2%
 在 **更多** 按钮。
 
 * [删除](#deleting-packages)
-* [覆盖率](#package-coverage)
+* [范围](#package-coverage)
 * [个内容](#viewing-package-contents-and-testing-installation)
 * [重新包装](#rewrapping-a-package)
 * [其他版本](#other-versions)
@@ -506,6 +506,16 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 1. 单击&#x200B;**安装**。
 
 1. 活动日志详细列出了安装进度。
+
+>[!CAUTION]
+>
+>* 如果要安装数字资产，您必须：
+   >  首先，停用WorkflowLauncher。
+   >  使用OSGi控制台的“组件”菜单选项停用
+   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
+>* 接下来，安装完成后，重新激活WorkflowLauncher。
+>
+>取消激活WorkflowLauncher可确保资产导入器框架不会（无意中）在安装时处理资产。
 
 安装完成并成功后，包列表会更新，并在 **已安装** 显示在包状态中。
 
