@@ -8,12 +8,13 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 652f2f9b55857b8962f5bfd4edb85f3700866485
+source-git-commit: b80886f1e45e0ed65ce2309ef6ea43bfa373a52b
 workflow-type: tm+mt
-source-wordcount: '5535'
+source-wordcount: '5529'
 ht-degree: 2%
 
 ---
+
 
 # 安装和配置文档服务 {#installing-and-configuring-document-services}
 
@@ -286,14 +287,6 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，运行AEM 
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
-### （仅限Windows）配置Install Ink and Shittring服务 {#configure-install-ink-and-handwriting-service}
-
-如果您运行的是Microsoft® Windows Server，请配置Ink and Sharting服务。 使用Microsoft® Office的链接功能打开Microsoft® PowerPoint文件时需要该服务：
-
-1. 打开服务器管理器。 单击 **[!UICONTROL 服务器管理器]** 图标。
-1. 单击 **[!UICONTROL 添加功能]** 在 **[!UICONTROL 功能]** 菜单。 选择 **[!UICONTROL 墨迹和手写服务]** 复选框。
-1. **[!UICONTROL 选择功能]** 对话框 **[!UICONTROL 墨迹和手写服务]** 选项。 单击 **[!UICONTROL 安装]** 并且服务已安装。
-
 ### （仅限Windows）为Microsoft® Office配置文件块设置 {#configure-the-file-block-settings-for-microsoft-office}
 
 更改Microsoft® Office信任中心设置，以启用PDF生成器服务来转换使用旧版Microsoft® Office创建的文件。
@@ -479,7 +472,9 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包包含AEM For
 
    1. 打开 [AEM包管理器](http://localhost:4502/crx/packmgr/index.jsp) 下载 `adobe-aemfd-pdfg-common-pkg-[version].zip` 文件。
    1. 解压缩下载的.zip文件。 使用管理权限打开命令提示符。
-   1. 导航到 [extract-zip-file]`\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` 目录访问Advertising Cloud的帮助。 运行以下批处理文件：
+   1. 导航到 `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
+   1. 解压缩 `adobe-aemfd-pdfg-common-pkg-[version]`.
+   1. 导航到 `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` 目录访问Advertising Cloud的帮助。 运行以下批处理文件：
 
       `Acrobat_for_PDFG_Configuration.bat`
 
@@ -589,7 +584,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 ## 系统就绪工具(SRT) {#SRT}
 
-“系统就绪”工具检查计算机是否配置正确以运行PDF生成器转换。 该工具在指定路径下生成报告。 要运行该工具，请执行以下操作：
+的 [系统就绪工具](#srt-configuration) 检查计算机是否配置正确以运行PDF生成器转换。 该工具在指定路径下生成报告。 要运行该工具，请执行以下操作：
 
 1. 打开命令提示符。 导航到 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` 文件夹。
 
@@ -597,39 +592,47 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
    `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
 
-   该命令会生成报告，并创建srt_config.yaml文件。
+   该命令会生成报告，并创建srt_config.yaml文件。 可以使用它为SRT工具配置选项。 为SRT工具配置选项是可选的。
 
    >[!NOTE]
    >
    > * 如果系统就绪工具报告pdfgen.api文件在Acrobat插件文件夹中不可用，请从 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目录 `[Acrobat_root]\Acrobat\plug_ins` 目录访问Advertising Cloud的帮助。
-   >
-   > * 您可以使用srt_config.yaml文件配置的各种设置。 文件格式为：
 
-       # SRT配置
-       
-       #注意 — 遵循正确的格式以避免解析失败
-       
-       #例如 &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
-       
-       #locale:（必填字段）用于SRT的区域设置。 支持的区域设置[en/fr/de/ja]。
-       区域设置：en
-       
-       #aemTempDir:AEM Temp目录
-       aemTempDir:
-       
-       #users:提供PDFG转换用户列表
-       #users:
-       # — 用户1
-       # — 用户2
-       用户：
-       
-       #profile:选择要运行特定检查的配置文件。 从[LCM]中进行选择，不久将添加更多内容
-       用户档案：
-       
-       #outputDir:保存输出文件的目录
-       outputDir:
-   >
 1. 导航到 `[Path_of_reports_folder]`。打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
+
+### 为SRT工具配置选项 {#srt-configuration}
+
+您可以使用srt_config.yaml文件为SRT工具配置各种设置。 文件格式为：
+
+```shell
+   # =================================================================
+   # SRT Configuration
+   # =================================================================
+   #Note - follow correct format to avoid parsing failures
+   #e.g. <param name>:<space><param value> 
+   #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
+   locale: en
+   
+   #aemTempDir: AEM Temp direcotry
+   aemTempDir:
+   
+   #users: provide PDFG converting users list
+   #users:
+   # - user1
+   # - user2
+   users:
+   
+   #profile: select profile to run specific checks. Choose from [LCM], more will be added soon 
+   profile:
+   
+   #outputDir: directory where output files will be saved
+   outputDir:
+```
+
+* **区域设置：** 它是一个必需参数。 它支持英语(en)、德语(de)、法语(fr)和日语(ja)。 默认值为en。 它对在OSGi上的AEM Forms上运行的PDF生成器服务没有影响。
+* **aemTempDir:** 它是一个可选参数。 它指定Adobe Experience Manager的临时存储位置。
+* **用户：** 它是一个可选参数。 您可以指定用户来检查用户是否具有运行PDF生成器所需的目录的所需权限和读/写访问权限。 如果未指定用户，则会跳过特定于用户的检查，并在报表中显示为失败。
+* **outputDir:** 指定保存SRT报告的位置。 缺省位置是SRT工具的当前工作目录。
 
 ## 疑难解答
 
@@ -666,7 +669,7 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
 **Linux®**
 
-* 安装 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支持32位和64位版本。 安装后，打开所有OpenOffice应用程序，取消所有对话框窗口，然后关闭应用程序。 重新打开应用程序，并确保打开OpenOffice应用程序时不显示对话框。
+* 安装 [受支持版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice的。 AEM Forms支持32位和64位版本。 安装后，打开所有OpenOffice应用程序，取消所有对话框窗口，然后关闭应用程序。 重新打开应用程序，并确保打开OpenOffice应用程序时不显示任何对话框。
 
 * 创建环境变量 `OpenOffice_PATH` 并将其设置为指向在 [控制台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) 或dt（设备树）配置文件。
 * 如果安装OpenOffice时出现问题，请确保 [32位库](#extrarequirements) OpenOffice安装所需的内容可用。
