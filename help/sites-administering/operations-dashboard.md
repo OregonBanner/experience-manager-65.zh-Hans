@@ -12,9 +12,9 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 891cb5bb8cc9b7114d23617c9164fd428718b302
+source-git-commit: ee45113daee495d9b56a0f6e2c463d9cca006540
 workflow-type: tm+mt
-source-wordcount: '6200'
+source-wordcount: '6230'
 ht-degree: 2%
 
 ---
@@ -110,11 +110,11 @@ A **复合运行状况检查** 是用于聚合多个单独检查中的信息的�
    * **名称:** `sling:resourceType`
 
       * **类型:** `String`
-      * **值：** `granite/operations/components/mbean`
+      * **值:** `granite/operations/components/mbean`
    * **名称:** `resource`
 
       * **类型:** `String`
-      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+      * **值:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
    >
@@ -172,11 +172,11 @@ A **复合运行状况检查** 是用于聚合多个单独检查中的信息的�
    * **名称:** `sling:resourceType`
 
       * **类型:** `String`
-      * **值：** `granite/operations/components/mbean`
+      * **值:** `granite/operations/components/mbean`
    * **名称:** `resource`
 
       * **类型:** `String`
-      * **值：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+      * **值:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
    >
@@ -324,6 +324,12 @@ A **复合运行状况检查** 是用于聚合多个单独检查中的信息的�
   </tr>
  </tbody>
 </table>
+
+### 运行状况检查配置 {#health-check-configuration}
+
+默认情况下，对于现成的AEM实例，运行状况检查每60秒运行一次。
+
+您可以配置 **句点** 和 [OSGi配置](/help/sites-deploying/configuring-osgi.md) **查询运行状况检查配置** (com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics)。
 
 ## 使用Nagios进行监控 {#monitoring-with-nagios}
 
