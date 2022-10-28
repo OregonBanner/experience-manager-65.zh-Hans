@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: 08e7cbe50fbfb301b38c3c36dfa22bfc1024e181
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 0%
@@ -214,7 +214,7 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持除以下项之�
 为此，您可以通过添加 `w=2` 参数，如下所示：
 
 ```xml
-java -Xmx4092m -XX:MaxPermSize=1024m -jar crx2oak.jar crx-quickstart/repository/ mongodb://localhost:27017/aem-author?replicaset=replica1&w=2
+java -Xmx4092m -jar crx2oak.jar crx-quickstart/repository/ mongodb://localhost:27017/aem-author?replicaset=replica1&w=2
 ```
 
 >[!NOTE]

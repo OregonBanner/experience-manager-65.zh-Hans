@@ -4,9 +4,9 @@ description: 了解如何执行就地升级。
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 6d2b7e341dcdedf3c000b9fb0ecd21722bdf2a27
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -116,8 +116,6 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * 如果您在未正确处理Java内存映射的Windows系统上执行升级，请添加 `--disable-mmap` 参数。
 
-* 如果您使用的是Java 7，请将 `-XX:MaxPermSize=2048m` 参数 `-Xmx` 参数。
-
 有关使用crx2oak工具的其他说明，请参阅使用 [CRX2Oak迁移工具](/help/sites-deploying/using-crx2oak.md). 如果需要，可以手动升级crx2oak帮助程序JAR，方法是在解压缩快速启动程序后将其手动替换为较新版本。 它在AEM安装文件夹中的位置是： `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. 可以从Adobe存储库下载最新版本的CRX2Oak迁移工具，网址为： [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
 如果迁移成功完成，则该工具将退出，退出代码为0。 此外，在 `upgrade.log` 文件，位于 `crx-quickstart/logs` 在AEM安装目录中，因为这些错误可能指示迁移期间发生的非致命错误。
@@ -181,7 +179,7 @@ While `FileDataStore` 是AEM 6.3安装的新默认设置，无需使用外部数
 1. 查找AEM流程。 它看起来像：
 
    ```shell
-   /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.2.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
+   /usr/bin/java -server -Xmx1024m -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.5.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
 1. 通过替换现有jar的路径( `crx-quickstart/app/aem-quickstart*.jar` 在本例中)，新jar是 `crx-quickstart` 文件夹。 以我们以前的命令为例，我们的命令将为：

@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
 workflow-type: tm+mt
 source-wordcount: '642'
 ht-degree: 0%
@@ -122,7 +122,7 @@ IntelliJ IDEA需要了解在何处查找JSP以进行调试。 由于IDEA无法�
 
 为此，您可以直接启动AEM jar文件并添加这些选项，例如使用以下命令行：
 
-`java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -XX:MaxPermSize=256M -jar cq-quickstart-5.6.1.jar`
+`java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 
 您还可以将这些选项添加到 `crx-quickstart/bin/start` 如下所示。
 
@@ -131,7 +131,7 @@ IntelliJ IDEA需要了解在何处查找JSP以进行调试。 由于IDEA无法�
 
 # default JVM options
 if [ -z "$CQ_JVM_OPTS" ]; then
- CQ_JVM_OPTS='-server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true'
+ CQ_JVM_OPTS='-server -Xmx1024m -Djava.awt.headless=true'
 fi
 
 CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y"

@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1808'
 ht-degree: 8%
 
 ---
@@ -77,7 +77,7 @@ Adobe Experience Manager 是基于 Web 的客户端服务器系统，可用于�
 * **网站**
 * **移动设备应用程序**
 * **数字出版物**
-* **Forms**
+* **表单**
 * **数字资产**
 * **社区**
 * **在线商务**
@@ -177,16 +177,10 @@ AEM软件包有两个形式：
 
 1. 要在GUI环境中启动实例，只需双击 **`cq-quickstart-6.5.0.jar`** 文件。
 
-   或者，您也可以从命令行启动AEM。 对于32位Java VM，请输入以下内容：
+   或者，您也可以从命令行启动AEM:
 
    ```shell
        java -Xmx1024M -jar cq-quickstart-6.5.0.jar
-   ```
-
-   对于64位VM，输入：
-
-   ```shell
-       java -XX:MaxPermSize=256m -Xmx1024M -jar cq-quickstart-6.5.0.jar
    ```
 
 AEM需要几分钟时间才能解压缩jar文件、安装自身并启动。 上述过程导致：

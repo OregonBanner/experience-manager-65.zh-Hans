@@ -6,9 +6,9 @@ seo-description: Learn about the options available when installing a standalone 
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: 3e18eed63d676e22e12483a1ee68e7e0148d8083
+source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1622'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，快速
 
    此命令将调用相应的脚本，该脚本将在64位Java而不是32位Java中启动Windows服务守护程序。
 
-1. 要阻止进程进入多个进程，请增加最大堆大小和PermGen JVM参数。 找到 `set jvm_options` 命令并设置值，如下所示：
+1. 要防止该进程进入多个进程，请增加PermGen JVM参数。 找到 `set jvm_options` 命令并设置值，如下所示：
 
-   `set jvm_options=-XX:MaxPermSize=256M;-Xmx1792m`
+   `set jvm_options=-Xmx1792m`
 
 1. 打开命令提示符，将当前目录更改为AEM安装的crx-quickstart/opt/helpers文件夹，然后输入以下命令以创建服务：
 
@@ -159,90 +159,116 @@ Java计算机临时文件夹的默认位置为 `/tmp`. AEM也使用此文件夹�
 
 快速入门帮助文件中介绍了更多选项和重命名约定，该文件可通过 — help选项获取。 要访问帮助，请键入：
 
-* `java -jar cq5-<*version*>.jar -help`
+* `java -jar cq-quickstart-6.5.0.jar -help`
+
+>[!CAUTION]
+>
+>这些选项自AEM 6.5(6.5.0.0)的原始版本起生效。 可以更改以后的SP版本。
 
 ```shell
 Loading quickstart properties: default
 Loading quickstart properties: instance
-Setting properties from filename '/Users/Desktop/AEM/cq-quickstart-5.6.0.jar'
+Setting properties from filename '/Users/Desktop/AEM/cq-quickstart-6.5.0.jar'
 --------------------------------------------------------------------------------
-Adobe Experience Manager Quickstart (build 20130129)
+Adobe Experience Manager Quickstart (build 20190328)                            
 --------------------------------------------------------------------------------
-Usage:
- Use these options on the Quickstart command line.
+Usage:                                                                          
+ Use these options on the Quickstart command line.                              
 --------------------------------------------------------------------------------
 
 -help (--help,-h)
-         Show this help message
+         Show this help message                                                 
 -quickstart.server.port (-p,-port) <port>
-         Set server port number
+         Set server port number                                                 
 -contextpath (-c,-org.apache.felix.http.context_path) <contextpath>
-         Set context path
+         Set context path                                                       
 -debug <port>
-         Enable Java Debugging on port number; forces forking
--gui
-         Show GUI if running on a terminal
+         Enable Java Debugging on port number; forces forking                   
+-gui 
+         Show GUI if running on a terminal                                      
 -nobrowser (-quickstart.nobrowser)
-         Do not open browser at startup
+         Do not open browser at startup                                         
 -unpack
-         Unpack installation files only, do not start the server (implies
-         -verbose)
+         Unpack installation files only, do not start the server (implies       
+         -verbose)                                                              
 -v (-verbose)
-         Do not redirect stdout/stderr to files and do not close stdin
+         Do not redirect stdout/stderr to files and do not close stdin          
 -nofork
-         Do not fork the JVM, even if not running on a console
+         Do not fork the JVM, even if not running on a console                  
 -fork
-         Force forking the JVM if running on a console, using recommended
-         default memory settings for the forked JVM.
+         Force forking the JVM if running on a console, using recommended       
+         default memory settings for the forked JVM.                            
 -forkargs <args> [<args> ...]
-         Additional arguments for the forked JVM, defaults to '-Xmx1024m
-         -XX:MaxPermSize=256m '.  Use -- to specify values starting with -,
-         example: '-forkargs -- -server'
+         Additional arguments for the forked JVM, defaults to '-Xmx1024m        
+         -XX:MaxPermSize=256m '.  Use -- to specify values starting with -,     
+         example: '-forkargs -- -server'                                        
 -a (--interface) <interface>
-         Optional IP address (interface) to bind to
+         Optional IP address (interface) to bind to                             
 -pt <string>
-         Process type (main/fork) - do not use directly, used when forking a
-         process
+         Process type (main/fork) - do not use directly, used when forking a    
+         process                                                                
 -r <string> [<string> [<string> [<string> [<string> [<string> [<string> [<string> [<string> [<string>]]]]]]]]]
-         Runmode(s) - Use this to define the run mode(s)
+         Runmode(s) - Use this to define the run mode(s)                        
 -b <string>
-         Base folder - defines the path under which the quickstart work folder
-         is created
+         Base folder - defines the path under which the quickstart work folder  
+         is created                                                             
 -low-mem-action <string>
-         Low memory action - what to do if memory is insufficient at startup
+         Low memory action - what to do if memory is insufficient at startup    
 -use-control-port
-         Start a control port
+         Start a control port                                                   
+-nointeractive
+         Start with no interactivity                                            
 -ll <level>
-         Define launchpad log level (1 = error...4 = debug)
+         Define launchpad log level (1 = error...4 = debug)                     
+-n   
+         Do not install shutdown hook                                           
+-D<property>=<value>
+         Additional framework properties.                                       
+-listener-port <listener-port>
+         Set listener port number                                               
+-x <string>
+         Run a Quickstart extension.                                            
+  Options for executing Quickstart extensions:
+                                                                                
+    -xargs <arg> [<arg> ...]
+         Construct an arguments list for a Quickstart extension (e.g. -xargs -- 
+         -arg1 val1 -arg2 val2).                                                
 --------------------------------------------------------------------------------
-Quickstart filename options
+Quickstart filename options                                                     
 --------------------------------------------------------------------------------
-Usage:
- Rename the jar file, including one of the patterns shown below, to set the
-corresponding option. Command-line options have priority on these filename
-patterns.
+Usage:                                                                          
+ Rename the jar file, including one of the patterns shown below, to set the     
+corresponding option. Command-line options have priority on these filename      
+patterns.                                                                       
 --------------------------------------------------------------------------------
 
 -NNNN
-         Include -NNNN.jar or -pNNNN in the renamed jar filename to run on port
-         NNNN, for example: quickstart-8085.jar
+         Include -NNNN.jar or -pNNNN in the renamed jar filename to run on port 
+         NNNN, for example: quickstart-8085.jar                                 
 -nobrowser
-         Include -nobrowser in the renamed jar filename to avoid opening the
-         browser at startup, example: quickstart-nobrowser-8085.jar
+         Include -nobrowser in the renamed jar filename to avoid opening the    
+         browser at startup, example: quickstart-nobrowser-8085.jar             
 -publish
-         Include -publish in the renamed jar filename to run cq5 in "publish"
-         mode, example: cq5-publish-7502.jar
+         Include -publish in the renamed jar filename to run in "publish" mode, 
+         example: cq-publish-7502.jar                                           
+-dynamicmedia
+         Include -dynamicmedia in the renamed jar filename to run in            
+         "dynamicmedia" mode, example: quickstart-dynamicmedia-4502.jar         
+-dynamicmedia_scene7
+         Include -dynamicmedia_scene7 in the renamed jar filename to run in     
+         "dynamicmedia_scene7" mode, example:                                   
+         quickstart-dynamicmedia_scene7-p4502.jar                               
 --------------------------------------------------------------------------------
 The license.properties file
 --------------------------------------------------------------------------------
-  The license.properties file stores licensing information, created from the
-  licensing form displayed on first startup and stored in the folder from where
-  Quickstart is run.
+  The license.properties file stores licensing information, created from the    
+  licensing form displayed on first startup and stored in the folder from where 
+  Quickstart is run.                                                            
 --------------------------------------------------------------------------------
 Log files
 --------------------------------------------------------------------------------
-  Once Quickstart has been unpacked and started, log files can be found under
-  ./crx-quickstart/logs.
+  Once Quickstart has been unpacked and started, log files can be found under   
+  /Users/aheimoz/CQInstallationKits/AEM-65150-L8/crx-quickstart/logs.           
 --------------------------------------------------------------------------------
 ```
 

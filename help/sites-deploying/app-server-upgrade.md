@@ -3,7 +3,7 @@ title: 应用程序服务器安装的升级步骤
 description: 了解如何升级通过应用程序服务器部署的AEM实例。
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 5e875e0420540ca209e7d677046e8d010ae4e145
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 1. 现在，使用crx2oak迁移工具迁移存储库。 为此，请从下载最新版本的crx2oak [此位置](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/).
 
    ```shell
-   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
+   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -jar crx2oak.jar --load-profile segment-fds
    ```
 
 1. 通过执行以下操作，删除sling.properties文件中的必需属性：
