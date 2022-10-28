@@ -10,368 +10,243 @@ topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7fed5ce55f6ee7638d2578ee7ef2d84deb24277f
 workflow-type: tm+mt
-source-wordcount: '2256'
-ht-degree: 1%
+source-wordcount: '1554'
+ht-degree: 70%
 
 ---
 
-# 与 Adobe Campaign Classic 集成{#integrating-with-adobe-campaign-classic}
 
->[!NOTE]
->
->本文档介绍如何将AEM与内部部署解决方案Adobe Campaign Classic集成。 如果您使用的是Adobe Campaign Standard，请参阅 [与Adobe Campaign Standard集成](/help/sites-administering/campaignstandard.md) 的说明。
+# 与 Adobe Campaign Classic 集成 {#integrating-campaign-classic}
 
-Adobe Campaign允许您直接在Adobe Experience Manager中管理电子邮件投放内容和表单。
+通过将AEM与Adobe Campaign集成，您可以直接在AEM中管理电子邮件投放、内容和表单。 需要同时完成 Adobe Campaign Classic 和 AEM 的配置步骤才可以实现解决方案之间的双向通信。
 
-要同时使用两个解决方案，您必须首先将它们配置为彼此连接。 这涉及在Adobe Campaign和Adobe Experience Manager中执行配置步骤。 本文档详细介绍了这些步骤。
+此集成允许单独使用AEM和Adobe Campaign Classic。 营销人员可以在Adobe Campaign中创建营销活动和使用定位，而内容创建者可以并行处理AEM中的内容设计。 该集成允许Adobe Campaign定位和交付AEM中营销活动的内容和设计。
 
-在AEM中使用Adobe Campaign包括通过Adobe Campaign发送电子邮件的功能，有关该功能的介绍请参阅 [使用Adobe Campaign](/help/sites-authoring/campaign.md). 它还包括在AEM页面上使用表单来处理数据。
+## 集成步骤 {#integration-steps}
 
-此外，将AEM与集成时，可能会关注以下主题 [Adobe Campaign](https://helpx.adobe.com/support/campaign/classic.html):
+AEM 和 Campaign 之间的集成需要在这两种解决方案中完成多个步骤。
 
-* [电子邮件模板最佳实践](/help/sites-administering/best-practices-for-email-templates.md)
-* [Adobe Campaign集成故障诊断](/help/sites-administering/troubleshooting-campaignintegration.md)
+1. [在 Campaign 中安装 AEM 集成包。](#install-package)
+1. [在 Campaign 中为 AEM 创建一个运算符](#create-operator)
+1. [在 AEM 中配置 Campaign 集成](#campaign-integration)
+1. [配置 AEM 外部化器](#externalizer)
+1. [在 AEM 中配置活动远程用户](#configure-user)
+1. [在 Campaign 中配置 AEM 外部账户](#acc-setup)
 
-如果您扩展了与Adobe Campaign的集成，则可能希望看到以下页面：
+本文档将详细介绍每一个步骤。
 
-* [创建自定义扩展](/help/sites-developing/extending-campaign-extensions.md)
-* [创建自定义表单映射](/help/sites-developing/extending-campaign-form-mapping.md)
+## 前提条件 {#prerequisites}
 
-## AEM和Adobe Campaign集成工作流程 {#aem-and-adobe-campaign-integration-workflow}
+* 具有 Adobe Campaign Classic 管理员访问权限
+   * 要执行集成，您需要一个有效的 Adobe Campaign Classic 实例，包括一个已配置的数据库。
+   * 如果您需要有关如何设置和配置 Adobe Campaign Classic 的更多详细信息，请参阅 [Adobe Campaign Classic 文档](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html)，特别是《安装和配置指南》。
+* 管理员对AEM的访问权限
 
-本节介绍创建营销活动和投放内容时AEM和Adobe Campaign之间的典型工作流程。
+## 在 Campaign 中安装 AEM 集成包 {#install-package}
 
-典型的工作流涉及以下内容，并对其进行了详细描述：
+Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许多标准配置。
 
-1. 开始构建您的营销活动(在Adobe Campaign和AEM中)。
-1. 在链接内容和交付之前，请先在AEM中个性化您的内容，并在Adobe Campaign中创建交付。
-1. 在Adobe Campaign中链接内容和交付。
+1. 作为管理员，使用客户端控制台登录到 Adobe Campaign 实例。
 
-### 开始构建营销活动 {#start-building-your-campaign}
+1. 选择&#x200B;**“工具”**>**“高级”**>**“导入软件包...”**。
 
-您可以随时开始构建营销活动。 在链接内容之前，AEM和AC是独立的。这意味着营销人员可以在Adobe Campaign中开始创建他们的营销活动和定位，而内容创建者则在AEM中处理设计。
+   ![导入软件包](assets/import-package.png)
 
-### 在链接内容和交付之前 {#before-linking-content-and-delivery}
+1. 单击&#x200B;**“安装标准包”**，然后单击&#x200B;**“下一个”**。
 
-在链接内容并创建投放机制之前，您需要执行以下操作：
+1. 检查&#x200B;**AEM 集成**&#x200B;包。
 
-**在AEM中**
+   ![安装标准包](assets/select-package.png)
 
-* 使用 **文本与个性化** 组件
+1. 单击&#x200B;**“下一个”**，然后单击&#x200B;**“开始”**&#x200B;以开始安装。
 
-**在 Adobe Campaign 中：**
+   ![安装进度](assets/installation.png)
 
-* 创建类型的投放 **aemContent**
+1. 安装完成后，单击&#x200B;**“关闭”**。
 
-### 链接内容并设置投放 {#linking-content-and-setting-delivery}
+集成包现在已安装。
 
-准备好内容以进行链接和交付后，您可以准确确定链接内容的方式和位置。
+## 在 Campaign 中为 AEM 创建运算符 {#create-operator}
 
-所有这些步骤均在Adobe Campaign中完成。
+集成包会自动创建 AEM 用于连接到 Adobe Campaign 的`aemserver`运算符。您必须为此运算符定义一个安全区域并设置密码。
 
-1. 指定要使用的AEM实例。
-1. 单击同步按钮以同步内容。
-1. 打开内容选取器以选取您的内容。
+1. 使用客户端控制台以管理员身份登录 Adobe Campaign。
 
-### 如果您是初次使用AEM {#if-you-are-new-to-aem}
+1. 从菜单栏选择&#x200B;**“工具”** -> **“资源管理器”**。
 
-如果您是初次使用AEM，可能会发现以下链接有助于您了解AEM:
+1. 在资源管理器中，导航到&#x200B;**“管理”**>**“访问管理“**＞**”运算符“**&#x200B;节点。
 
-* [启动AEM](/help/sites-deploying/deploy.md)
-* [了解复制代理](/help/sites-deploying/replication.md)
-* [查找和使用日志文件](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
-* [AEM平台简介](/help/sites-deploying/platform.md)
+1. 选择`aemserver`运算符。
 
-## 配置Adobe Campaign {#configuring-adobe-campaign}
+1. 在运算符的&#x200B;**”编辑“**&#x200B;选项卡上，选择&#x200B;**”访问权限“**&#x200B;子选项卡，然后单击&#x200B;**”修改访问参数...“**&#x200B;链接。
 
-配置Adobe Campaign涉及以下事项：
+   ![设置安全区域](assets/access-rights.png)
 
-1. 在Adobe Campaign中安装AEM集成包。
-1. 配置外部帐户。
-1. 验证AEMResourceTypeFilter是否正确配置。
+1. 选择适当的安全区域，并根据需要定义受信任的 IP 掩码。
 
-此外，您还可以进行一些高级配置，包括：
+1. 单击&#x200B;**”保存“**。
 
-* 管理内容块
-* 管理个性化字段
+1. 注销 Adobe Campaign 客户端。
 
-请参阅 [高级配置](#advanced-configurations).
+1. 在 Adobe Campaign 服务器的文件系统上，导航到 Campaign 安装位置，并以管理员身份编辑`serverConf.xml`文件。该文件通常位于以下位置：
+   * `C:\Program Files\Adobe\Adobe Campaign Classic v7\conf`在 Windows 中。
+   * `/usr/local/neolane/nl6/conf/eng` 在 Linux 中。
 
->[!NOTE]
->
->要执行这些操作，您必须具有 **管理** 在Adobe Campaign中的角色。
+1. 搜索`securityZone`，并确保为 AEM 运算符的安全区域设置了以下参数。
 
-### 前提条件 {#prerequisites}
+   * `allowHTTP="true"`
+   * `sessionTokenOnly="true"`
+   * `allowUserPassword="true"`。
 
-请事先确保您具有以下元素：
+1. 保存文件。
 
-* [AEM创作实例](/help/sites-deploying/deploy.md#getting-started)
-* [AEM发布实例](/help/sites-deploying/deploy.md#author-and-publish-installs)
-* [Adobe Campaign Classic实例](https://helpx.adobe.com/support/campaign/classic.html)  — 包括客户端和服务器
-* Internet Explorer 11
+1. 确保安全区域不会被`config-<server name>.xml`文件中的相应设置覆盖。
 
->[!NOTE]
->
->如果您运行的版本低于Adobe Campaign Classic内部版本8640，请参阅 [升级文档](https://docs.campaign.adobe.com/doc/AC6.1/en/PRO_Updating_Adobe_Campaign_Upgrading.html) 以了解更多信息。 请注意，必须将客户端和数据库都升级到同一内部版本。
+   * 如果配置文件包含单独的安全区域设置，则将`allowUserPassword`属性更改为`true`。
 
->[!CAUTION]
->
->操作详见 [配置Adobe Campaign](#configuring-adobe-campaign) 和 [配置Adobe Experience Manager](#configuring-adobe-experience-manager) 要使AEM和Adobe Campaign之间的集成功能正常工作，需要部分内容。
-
-### 安装AEM集成包 {#installing-the-aem-integration-package}
-
-您必须安装 **AEM集成** 包在Adobe Campaign中。 要执行此操作：
-
-1. 转到要与AEM链接的Adobe Campaign实例。
-1. 选择&#x200B;*“工具”*>*“高级”*>*“导入软件包...”*。
-
-   ![chlimage_1-132](assets/chlimage_1-132a.png)
-
-1. 单击 **安装标准包**，然后选择 **AEM集成** 包。
-
-   ![chlimage_1-133](assets/chlimage_1-133a.png)
-
-1. 单击 **下一个**，然后 **开始**.
-
-   此包包含 **aemserver** 运算符，用于将AEM服务器连接到Adobe Campaign。
+1. 如果要更改 Adobe Campaign Classic 服务器端口，请将`8080`替换为所需端口。
 
    >[!CAUTION]
    >
-   >默认情况下，不会为此运算符配置安全区域。 要通过AEM连接到Adobe Campaign，必须选择一个。
+   >默认情况下，没有为运算符配置安全区域。要使 AEM 连接到 Adobe Campaign，您必须按照前面步骤中的详细说明选择一个区域。
    >
-   >在 **serverConf.xml** 文件， **allowUserPassword** 必须将所选安全区域的属性设置为 **true** 授权AEM通过登录名/密码连接Adobe Campaign。
-   >
-   >我们强烈建议创建一个专用于AEM的安全区，以避免出现任何安全问题。 有关更多信息，请参阅 [安装指南](https://docs.campaign.adobe.com/doc/AC/en/INS_Additional_configurations_Configuring_Campaign_server.html).
+   >Adobe 强烈建议为 AEM 创建一个安全区域，以避免任何安全问题。有关此主题的更多信息，请参阅[ Adobe Campaign Classic 文档。](https://experienceleague.adobe.com/docs/campaign-classic/using/installing-campaign-classic/additional-configurations/security-zones.html)
 
-   ![chlimage_1-134](assets/chlimage_1-134a.png)
+1. 在 Campaign 客户端中，返回到`aemserver`运算符并选择&#x200B;**“常规”**&#x200B;选项卡。
 
-### 配置AEM外部帐户 {#configuring-an-aem-external-account}
+1. 单击&#x200B;**“重置密码...”**&#x200B;链接。
 
-您必须配置一个外部帐户，以便将Adobe Campaign连接到AEM实例。
+1. 指定密码并将其存储在安全位置以供将来使用。
+
+1. 单击&#x200B;**“确定”**&#x200B;以保存`aemserver`运算符的密码。
+
+## 在 AEM 中配置 Campaign 集成 {#campaign-integration}
+
+AEM 使用[您在 Campaign 中设置的运算符](#create-operator)与 Campaign 进行通信
+
+1. 以管理员身份登录到您的 AEM 创作实例。
+
+1. 从全局导航侧栏中，选择&#x200B;**“工具”**>**“Cloud Service”**＞**“传统 Cloud Service”**>**“Adobe Campaign”**，然后单击&#x200B;**“立即配置”**。
+
+   ![配置 Adobe Campaign](assets/configure-campaign-service.png)
+
+1. 在对话框中，通过输入&#x200B;**“标题”**&#x200B;并单击&#x200B;**“创建”**&#x200B;来创建 Campaign 服务配置。
+
+   ![配置 Campaign 对话框](assets/configure-campaign-dialog.png)
+
+1. 会打开新窗口和对话框会，用以编辑配置。 提供必要的信息。
+
+   * **用户名** – 这是在上一步创建的[ Adobe Campaign AEM 集成包运算符。](#create-operator)默认情况下，这是 `aemserver`。
+   * **密码** – 这是在上一步创建的 [Adobe Campaign AEM 集成包运算符的密码。](#create-operator)
+   * **API 端点** – 这是 Adobe Campaign 实例 URL。
+
+   ![在 AEM 中配置 Adobe Campaign](assets/configure-campaign.png)
+
+1. 选择&#x200B;**“连接到 Adobe Campaign”**&#x200B;以验证连接，然后单击&#x200B;**确定**。
+
+AEM 现在可以与 Adobe Campaign 通信。
 
 >[!NOTE]
 >
->* 安装 **AEM集成** 包中，将创建外部AEM帐户。 您可以通过该实例配置与AEM实例的连接，也可以创建一个新实例。
->* 在AEM中，确保为campaign-remote用户设置密码。 您需要设置此密码才能将Adobe Campaign与AEM连接。 以管理员身份登录，在用户管理控制台中，搜索campaign-remote用户并单击 **设置密码**.
->
+>确保您的 Adobe Campaign 服务器可以通过 Internet 访问。AEM无法访问专用网络。
 
+## 配置复制到AEM发布实例 {#replication}
 
-要配置外部AEM帐户，请执行以下操作：
+促销活动内容由内容作者在AEM创作实例上创建。 此实例通常仅在您的组织内部可用。 对于营销活动收件人可访问的图像和资产等内容，您需要发布该内容。
 
-1. 转到 **管理** > **平台** > **外部帐户** 节点。
-1. 创建新的外部帐户，然后选择 **AEM** 类型。
-1. 输入AEM创作实例的访问参数：用于连接到此实例的服务器地址以及ID和密码。 campaign-api用户帐户密码与您在AEM中为设置密码的campaign-remote用户相同。
+复制代理负责将您的内容从AEM创作实例发布到发布实例，且必须设置该内容才能使集成正常工作。 要将某些创作实例配置复制到发布实例中，还需要执行此步骤。
 
-   >[!NOTE]
-   >
-   >确保服务器地址为 **not** 以尾随斜杠结尾。 例如，输入 `https://yourserver:4502` 而不是 `https://yourserver:4502/`
+要配置从AEM创作实例到发布实例的复制，请执行以下操作：
 
-   ![chlimage_1-135](assets/chlimage_1-135a.png) ![chlimage_1-136](assets/chlimage_1-136a.png)
+1. 以管理员身份登录到您的 AEM 创作实例。
 
-1. 确保 **已启用** 复选框。
+1. 从全局导航侧边栏中，选择 **工具** > **部署** > **复制** > **作者代理**，然后点按或单击 **默认代理（发布）**.
 
-### 验证AEMResourceTypeFilter选项 {#verifying-the-aemresourcetypefilter-option}
-
-的 **AEMResourceTypeFilter** 选项用于筛选可在Adobe Campaign中使用的AEM资源类型。 这允许Adobe Campaign检索专门设计为仅在Adobe Campaign中使用的AEM内容。
-
-此选项应进行预配置；但是，如果更改此选项，可能会导致集成无法正常运行。
-
-验证 **AEMResourceTypeFilter** 选项：
-
-1. 转到 **平台** >**选项**.
-1. 在 **AEMResourceTypeFilter** 选项，检查路径是否正确。 此字段必须包含值：
-
-   **mcm/campaign/components/newsletter，mcm/campaign/components/campaign_newsletterpage，mcm/neolane/components/newsletter**
-
-   或者在某些情况下，该值如下所示：
-
-   **mcm/campaign/components/newsletter**
-
-   ![chlimage_1-137](assets/chlimage_1-137a.png)
-
-## 配置Adobe Experience Manager {#configuring-adobe-experience-manager}
-
-要配置AEM，您必须执行以下操作：
-
-* 配置实例之间的复制。
-* 通过AEM将Cloud Services连接到Adobe Campaign。
-* 配置外部器。
-
-### 在AEM实例之间配置复制 {#configuring-replication-between-aem-instances}
-
-首先，从AEM创作实例创建的内容会发送到发布实例。 您需要进行发布，以便新闻稿中的图像可在发布实例上和新闻稿的收件人获得。 因此，必须将复制代理配置为从AEM创作实例复制到AEM发布实例。
-
->[!NOTE]
->
->如果您不想使用复制URL，而是使用面向公众的URL，则可以将 **公共URL** 在OSGi的以下配置设置中(**AEM徽标** >  **工具** 图标>  **操作** > **Web控制台** > **OSGi配置** > **AEM Campaign集成 — 配置**):
-**公共URL:** com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
-
-要将某些创作实例配置复制到发布实例中，还需要执行此步骤。
-
-要在AEM实例之间配置复制，请执行以下操作：
-
-1. 在创作实例中，选择 **AEM徽标**> **工具** 图标> **部署** > **复制** > **作者代理**，然后单击 **默认代理**.
-
-   ![chlimage_1-138](assets/chlimage_1-138a.png)
-
-   >[!NOTE]
-   配置与Adobe Campaign的集成时，请避免使用localhost(AEM的本地副本)，除非发布和创作实例都位于同一台计算机上。
+   ![配置复制代理](assets/acc-replication-config.png)
 
 1. 点按或单击 **编辑** 然后选择 **运输** 选项卡。
-1. 通过替换 **localhost** 的IP地址或AEM发布实例的地址。
 
-   ![chlimage_1-139](assets/chlimage_1-139a.png)
+1. 配置 **URI** 字段 `localhost` 值。
 
-### 将AEM连接到Adobe Campaign {#connecting-aem-to-adobe-campaign}
+   ![“传输”选项卡](assets/acc-transport-tab.png)
 
-在将AEM和Adobe Campaign结合使用之前，您必须在两个解决方案之间建立链接，以便它们能够进行通信。
+1. 点按或单击 **确定** 以保存对代理设置的更改。
 
-1. 连接到AEM创作实例。
-1. 选择 **AEM徽标** > **工具** 图标> **部署** > **Cloud Services**，则 **立即配置** 在Adobe Campaign部分。
-
-   ![chlimage_1-140](assets/chlimage_1-140a.png)
-
-1. 通过输入 **标题** 单击 **创建**，或选择要与Adobe Campaign实例链接的现有配置。
-1. 编辑配置，使其与Adobe Campaign实例的参数匹配。
-
-   * **用户名**: **aemserver**，使用Adobe Campaign AEM集成包运算符在两个解决方案之间建立链接。
-   * **密码**:Adobe Campaign aemserver操作员密码。 您可能需要直接在Adobe Campaign中为此运算符重新指定密码。
-   * **API端点**:Adobe Campaign实例URL。
-
-1. 选择 **连接到Adobe Campaign** 单击 **确定**.
-
-   ![chlimage_1-141](assets/chlimage_1-141a.png)
-
-   >[!NOTE]
-   在 [创建电子邮件并发布](/help/sites-authoring/campaign.md)，则需要将配置重新发布到发布实例。
-
-   ![chlimage_1-142](assets/chlimage_1-142a.png)
+您已配置了复制到AEM发布实例，以便营销活动收件人可以访问您的内容。
 
 >[!NOTE]
-如果连接失败，请确保检查以下内容：
-* 使用到Adobe Campaign实例(https)的安全连接时，您可能会遇到证书问题。 您必须将Adobe Campaign实例证书添加到 **缓存** AEM实例JDK的文件。
-* 必须为 [aemserver运算符](#connecting-aem-to-adobe-campaign) 在Adobe Campaign。 此外，在 **serverConf.xml** 文件， **allowUserPassword** 必须将安全区域的属性设置为 **true** 使用登录/密码模式授权AEM与Adobe Campaign的连接。
 >
-此外，请参阅 [AEM/Adobe Campaign集成故障诊断](/help/sites-administering/troubleshooting-campaignintegration.md).
+>如果您不想使用复制URL，而是使用面向公众的URL，则可以通过OSGi在以下配置设置中设置公共URL
+>
+>从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **AEM Campaign集成 — 配置**. 编辑配置并更改字段 **公共URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`)。
 
-### 配置外部器 {#configuring-the-externalizer}
+## 配置 AEM 外部化器 {#externalizer}
 
-您需要 [配置外部器](/help/sites-developing/externalizer.md) 在AEM中。 外部器是一种OSGi服务，它允许您将资源路径转换为外部URL和绝对URL。 此服务提供了一个配置和构建这些外部URL的中心位置。
+[外部化器是 AEM 中的一个 OSGi 服务，它可将资源路径转换为外部和绝对 URL，这是 AEM 提供 Campaign 可以使用的内容所必需的。](/help/sites-developing/externalizer.md)您必须对其进行配置，Campaign集成才能正常工作。
 
-请参阅 [配置外部器](/help/sites-developing/externalizer.md) 常规说明。 对于Adobe Campaign集成，请确保在 `https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`未指向 `localhost:4503` 但可以连接到可通过Adobe Campaign控制台访问的服务器。
+1. 以管理员身份登录到 AEM 创作实例。
+1. 从全局导航侧边栏中，选择 **工具** > **操作** > **Web控制台** > **OSGi配置** 和搜索 **Day CQ链接外部器**.
+1. 默认情况下， **域** 字段。 将URL从默认 `http://localhost:4503` 到公开可用的发布实例。
 
-如果它指向 `localhost:4503` 或Adobe Campaign无法访问的其他服务器上，您的图像将不会显示在Adobe Campaign控制台中。
+   ![配置外部器](assets/acc-externalizer-config.png)
 
-![chlimage_1-143](assets/chlimage_1-143a.png)
+1. 点按或单击&#x200B;**保存**。
 
-## 高级配置 {#advanced-configurations}
-
-您还可以执行一些高级配置，即：
-
-* 管理个性化字段和块。
-* 停用个性化块。
-* 管理Target扩展数据。
-
-### 管理个性化字段和块 {#managing-personalization-fields-and-blocks}
-
-用于在AEM中向电子邮件内容添加个性化的字段和块由Adobe Campaign管理。
-
-提供了默认列表，但可以修改。 您还可以添加或隐藏个性化字段和块。
-
-#### 添加个性化字段 {#adding-a-personalization-field}
-
-要向已可用的个性化字段添加新的个性化字段，您必须扩展Adobe Campaign **nms:seedMember** 架构如下所示：
-
->[!CAUTION]
-您需要添加的字段必须已通过收件人模式扩展(**nms:recipient**)。 有关更多信息，请参阅 [配置](https://docs.campaign.adobe.com/doc/AC6.1/en/CFG_Editing_schemas_Editing_schemas.html) 的双曲余切值。
-
-1. 转到 **管理** > **配置** > **数据模式** 节点。
-1. 选择 **新建**.
-
-   ![chlimage_1-144](assets/chlimage_1-144a.png)
-
-1. 在弹出窗口中，选择 **使用扩展模式扩展表中的数据** 单击 **下一个**.
-
-   ![chlimage_1-145](assets/chlimage_1-145a.png)
-
-1. 输入扩展架构的不同参数：
-
-   * **架构**:选择 **nms:seedMember** 架构。 窗口中的其他字段会自动填写。
-   * **命名空间**:个性化扩展架构的命名空间。
-
-1. 编辑架构的XML代码，以指定要添加到该架构的字段。 有关在Adobe Campaign中扩展模式的更多信息，请参阅 [配置指南](https://docs.campaign.adobe.com/doc/AC6.1/en/CFG_Editing_schemas_Extending_a_schema.html).
-1. 保存您的架构，然后通过 **工具** > **高级** > **更新数据库结构** 菜单。
-1. 断开连接，然后重新连接到Adobe Campaign控制台以保存更改。 现在，新字段会显示在AEM中可用的个性化字段列表中。
-
-#### 示例 {#example}
-
-添加 **注册编号** 字段，则必须具有以下元素：
-
-* 的 **nms:recipient** 模式扩展名为 **cus:recipient** 包含：
-
-```xml
-<element desc="Recipient table (profiles)" img="nms:recipient.png" label="Recipients" labelSingular="Recipient" name="recipient">
-
-  <attribute dataPolicy="smartCase" desc="Recipient registration number"
-  label="Registration Number"
-  length="50" name="registrationNumber" type="string"/>
-
-</element>
-```
-
-的 **nms:seedMember** 模式扩展名为 **cus:seedMember** 包含：
-
-```xml
-<element desc="Seed to insert in the export files" img="nms:unknownad.png" label="Seed addresses" labelSingular="Seed" name="seedMember">
-
-  <element name="custom_nms_recipient">
-    <attribute name="registrationNumber"
-    template="cus:recipient:recipient/@registrationNumber"/>
-  </element>
-
-</element>
-```
-
-的 **注册编号** 字段现在是可用个性化字段的一部分：
-
-![chlimage_1-146](assets/chlimage_1-146.png)
-
-#### 隐藏个性化字段 {#hiding-a-personalization-field}
-
-要在已有可用的个性化字段中隐藏个性化字段，您必须扩展Adobe Campaign **nms:seedMember** 架构(详见 [添加个性化字段](#adding-a-personalization-field) 中。 应用以下步骤：
-
-1. 复制要从 **nms:seedMember** 扩展模式(**cus:seedMember** 例如)。
-1. 添加 **advanced=&quot;true&quot;** 字段的XML属性。 它不再显示在AEM中可用的个性化字段列表中。
-
-   例如，要隐藏 **中间名** 字段， **cud:seedMember** 架构必须包含以下元素：
-
-   ```xml
-   <element desc="Seed to insert in the export files" img="nms:unknownad.png" label="Seed addresses" labelSingular="Seed" name="seedMember">
-   
-     <element name="custom_nms_recipient">
-       <attribute advanced="true" name="middleName"/>
-     </element>
-   
-   </element>
-   ```
-
-### 停用个性化块 {#deactivating-a-personalization-block}
-
-要取消激活可用个性化块中的个性化块，请执行以下操作：
-
-1. 转到 **资源** > **Campaign Management** > **个性化块** 节点。
-1. 选择要在AEM中停用的个性化块。
-1. 清除 **在自定义菜单中可见** 复选框并保存更改。 块不再显示在Adobe Campaign中可用的个性化块列表中。
-
-   ![chlimage_1-147](assets/chlimage_1-147a.png)
-
-### 管理目标扩展数据 {#managing-target-extension-data}
-
-您还可以插入Target扩展数据以进行个性化。 Target扩展数据（也称为“Target数据”）来自于例如在营销活动工作流中扩充查询或在查询中添加数据。 有关更多信息，请参阅 [创建查询](https://docs.campaign.adobe.com/doc/AC/en/PTF_Creating_queries_About_queries_in_Campaign.html) 和 [扩充数据](https://docs.campaign.adobe.com/doc/AC/en/WKF_Use_cases_Enriching_data.html) 中。
+您已配置外部器，Adobe Campaign无法访问您的内容。
 
 >[!NOTE]
-只有将AEM内容与Adobe Campaign交付同步时，目标中的数据才可用。 请参阅 [将在AEM中创建的内容与来自Adobe Campaign的投放同步](/help/sites-authoring/campaign.md#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic).
+发布实例必须可以从 Adobe Campaign 服务器中访问。如果它指向 `localhost:4503` 或者Adobe Campaign无法访问的其他服务器，则来自AEM的图像将不会显示在Adobe Campaign控制台中。
 
-![chlimage_1-148](assets/chlimage_1-148a.png)
+## 在 AEM 中配置活动远程用户 {#configure-user}
+
+如要实现 Campaign 与 AEM 之间的通信，您需要在 AEM 中为 `campaign-remote` 用户设置一个密码。
+
+1. 以管理员身份登录 AEM。
+1. 在主导航控制台上，单击左栏中的&#x200B;**“工具”**。
+1. 然后单击&#x200B;**“安全”**-＞**“用户”**，打开用户管理控制台。
+1. 找到`campaign-remote`用户。
+1. 选择`campaign-remote`用户，然后单击&#x200B;**“属性”**&#x200B;来编辑用户。
+1. 在&#x200B;**“编辑用户设置”**&#x200B;窗口中，单击&#x200B;**“更改密码”**。
+1. 为用户提供新密码，并将密码记在安全位置以备将来使用。
+1. 单击&#x200B;**“保存”**&#x200B;以保存密码更改。
+1. 单击&#x200B;**“保存并关闭”**&#x200B;以将更改保存到`campaign-remote`用户。
+
+## 在 Campaign 中配置 AEM 外部账户 {#acc-setup}
+
+当[在 Campaign 中安装&#x200B;**AEM 集成**&#x200B;包时，](#install-package)会为 AEM 创建一个外部帐户。通过配置此外部帐户，Adobe Campaign可以连接到AEM，从而实现解决方案之间的双向通信。
+
+1. 使用客户端控制台以管理员身份登录 Adobe Campaign。
+
+1. 从菜单栏选择&#x200B;**“工具”** -> **“资源管理器”**。
+
+1. 在资源管理器中，导航到&#x200B;**“管理”** > **“Platform“**＞**”外部账户“**&#x200B;节点。
+
+   ![外部帐户](assets/external-accounts.png)
+
+1. 找到外部 AEM 帐户。默认情况下，它具有以下值：
+
+   * **类型** - `AEM`
+   * **标签** - `AEM Instance`
+   * **内部名称** - `aemInstance`
+
+1. 在该帐户的&#x200B;**“常规”**&#x200B;选项卡上，输入您在[设置活动远程用户密码](#set-campaign-remote-password)步骤中定义的用户信息。
+
+   * **服务器** – AEM 作者服务器地址
+      * AEM 作者服务器必须可以从 Adobe Campaign Classic 服务器实例中访问。
+      * 确保服务器地址的&#x200B;**不是**&#x200B;以尾随斜杠结尾。
+   * **帐户** – 默认情况下，这是您在[设置活动远程用户密码](#set-campaign-remote-password)步骤中在 AEM 中设置的`campaign-remote`用户。
+   * **密码** – 该密码与在[设置活动远程用户密码](#set-campaign-remote-password)步骤中在 AEM 中设置的`campaign-remote`用户密码相同。
+
+1. 选中&#x200B;**启用**&#x200B;复选框。
+
+1. 单击&#x200B;**保存**。
+
+Adobe Campaign 现在可以与 AEM 通信。
+
+## 后续步骤 {#next-steps}
+
+配置了Adobe Campaign Classic和AEM后，集成现已完成。
+
+您现在可以通过继续阅读[本文档](/help/sites-authoring/campaign.md)学习如何在 Adobe Experience Manager 中创建新闻稿。
