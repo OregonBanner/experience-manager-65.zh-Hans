@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 7fed5ce55f6ee7638d2578ee7ef2d84deb24277f
+source-git-commit: 4712f57808ae769646b00d1098648686815121b6
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 70%
+source-wordcount: '1556'
+ht-degree: 67%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 70%
 
 通过将AEM与Adobe Campaign集成，您可以直接在AEM中管理电子邮件投放、内容和表单。 需要同时完成 Adobe Campaign Classic 和 AEM 的配置步骤才可以实现解决方案之间的双向通信。
 
-此集成允许单独使用AEM和Adobe Campaign Classic。 营销人员可以在Adobe Campaign中创建营销活动和使用定位，而内容创建者可以并行处理AEM中的内容设计。 该集成允许Adobe Campaign定位和交付AEM中营销活动的内容和设计。
+此集成允许单独使用AEM和Adobe Campaign Classic。 营销人员可以在Adobe Campaign中创建营销活动和使用定位，而内容创建者可以并行处理AEM中的内容设计。 通过使用该集成，Adobe Campaign可以定位和交付在AEM中创建的营销活动的内容和设计。
 
 ## 集成步骤 {#integration-steps}
 
@@ -44,7 +44,7 @@ AEM 和 Campaign 之间的集成需要在这两种解决方案中完成多个步
    * 如果您需要有关如何设置和配置 Adobe Campaign Classic 的更多详细信息，请参阅 [Adobe Campaign Classic 文档](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html)，特别是《安装和配置指南》。
 * 管理员对AEM的访问权限
 
-## 在 Campaign 中安装 AEM 集成包 {#install-package}
+## 在Campaign中安装AEM集成包 {#install-package}
 
 Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许多标准配置。
 
@@ -68,7 +68,7 @@ Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许�
 
 集成包现在已安装。
 
-## 在 Campaign 中为 AEM 创建运算符 {#create-operator}
+## 在Campaign中为AEM创建运算符 {#create-operator}
 
 集成包会自动创建 AEM 用于连接到 Adobe Campaign 的`aemserver`运算符。您必须为此运算符定义一个安全区域并设置密码。
 
@@ -122,7 +122,7 @@ Adobe Campaign 中的 **AEM 集成**&#x200B;包含有连接到 AEM 所需的许�
 
 1. 单击&#x200B;**“确定”**&#x200B;以保存`aemserver`运算符的密码。
 
-## 在 AEM 中配置 Campaign 集成 {#campaign-integration}
+## 在AEM中配置Campaign集成 {#campaign-integration}
 
 AEM 使用[您在 Campaign 中设置的运算符](#create-operator)与 Campaign 进行通信
 
@@ -194,12 +194,12 @@ AEM 现在可以与 Adobe Campaign 通信。
 
 1. 点按或单击&#x200B;**保存**。
 
-您已配置外部器，Adobe Campaign无法访问您的内容。
+您已配置外部器，Adobe Campaign现在可以访问您的内容。
 
 >[!NOTE]
 发布实例必须可以从 Adobe Campaign 服务器中访问。如果它指向 `localhost:4503` 或者Adobe Campaign无法访问的其他服务器，则来自AEM的图像将不会显示在Adobe Campaign控制台中。
 
-## 在 AEM 中配置活动远程用户 {#configure-user}
+## 在AEM中配置campaign-remote用户 {#configure-user}
 
 如要实现 Campaign 与 AEM 之间的通信，您需要在 AEM 中为 `campaign-remote` 用户设置一个密码。
 
@@ -213,7 +213,7 @@ AEM 现在可以与 Adobe Campaign 通信。
 1. 单击&#x200B;**“保存”**&#x200B;以保存密码更改。
 1. 单击&#x200B;**“保存并关闭”**&#x200B;以将更改保存到`campaign-remote`用户。
 
-## 在 Campaign 中配置 AEM 外部账户 {#acc-setup}
+## 在Campaign中配置AEM外部帐户 {#acc-setup}
 
 当[在 Campaign 中安装&#x200B;**AEM 集成**&#x200B;包时，](#install-package)会为 AEM 创建一个外部帐户。通过配置此外部帐户，Adobe Campaign可以连接到AEM，从而实现解决方案之间的双向通信。
 
