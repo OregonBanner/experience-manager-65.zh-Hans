@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 1%
@@ -161,9 +161,8 @@ https://页面[*主机*]:[*端口*]/system/console/configMgr。
 
 >[!NOTE]
 >
-> * MySQL的JDBC驱动程序未提供示例。 确保已为其进行配置，并提供配置JDBC连接池所需的信息。
-> * 将创作实例和发布实例指向使用同一数据库。 对于所有创作实例和发布实例，JDBC连接URI字段的值必须相同。
-   >
+>* MySQL的JDBC驱动程序未提供示例。 确保已为其进行配置，并提供配置JDBC连接池所需的信息。
+>* 将创作实例和发布实例指向使用同一数据库。 对于所有创作实例和发布实例，JDBC连接URI字段的值必须相同。
 
 
 1. 保持其他配置原样，然后单击 **[!UICONTROL 保存]**.

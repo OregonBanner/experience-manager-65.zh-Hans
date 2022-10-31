@@ -2,7 +2,7 @@
 title: 创作商务体验
 description: 工作商务体验
 exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%
@@ -71,7 +71,7 @@ CIF产品目录页面是即时呈现的虚拟页面。 因此，无法嵌入超�
 
     >[!NOTE]
     >
-    >如果同时选择类别和产品，则会选择产品。
+    >如果同时选择类别和产品，则将采用产品。
 
 这会创建一个占位符链接，在页面呈现时，该链接将被实际链接替换。
 
@@ -101,4 +101,4 @@ CIF产品目录页面是即时呈现的虚拟页面。 因此，无法嵌入超�
 
     >[!NOTE]
     >
-    > Omnisearch中的全文搜索不支持关联的内容片段。 使用SKU或UID查找关联的内容片段。
+    >Omnisearch中的全文搜索不支持关联的内容片段。 使用SKU或UID查找关联的内容片段。

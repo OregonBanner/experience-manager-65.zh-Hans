@@ -2,7 +2,7 @@
 title: 使用IMS与Adobe Target集成
 description: 了解如何使用IMS将AEM与Adobe Target集成。
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 55%
@@ -278,9 +278,9 @@ ht-degree: 55%
 
 >[!NOTE]
 >
-> 如果要更改现有 Target 配置，请：
+>如果要更改现有 Target 配置，请：
 >
-> 1. 重新输入租户 ID。
-> 2. 重新连接到 Target。
-> 3. 保存配置。
+>1. 重新输入租户 ID。
+>2. 重新连接到 Target。
+>3. 保存配置。
 

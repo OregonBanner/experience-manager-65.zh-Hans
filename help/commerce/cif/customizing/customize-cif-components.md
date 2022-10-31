@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2604'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
-> 使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 启动您自己的商务实施时。
+>使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 启动您自己的商务实施时。
 
 ## 您将要构建的内容
 
@@ -44,7 +44,7 @@ Venia品牌最近开始使用可持续材料制造一些产品，该公司希望
 
 >[!NOTE]
 >
-> **随时可以使用现有项目** (基于包含CIF的AEM项目原型)并跳过此部分。
+>**随时可以使用现有项目** (基于包含CIF的AEM项目原型)并跳过此部分。
 
 1. 运行以下git命令以克隆项目：
 
@@ -83,7 +83,7 @@ Venia品牌最近开始使用可持续材料制造一些产品，该公司希望
 
    >[!NOTE]
    >
-   > 请注意，您还可以通过使用对话框(单击 _扳手_ 图标)。
+   >请注意，您还可以通过使用对话框(单击 _扳手_ 图标)。
 
 4. 此时您应会看到产品Teaser正在显示。 产品名称和产品价格是显示的默认属性。
 
@@ -95,7 +95,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 
 >[!TIP]
 >
-> 已具有自定义 **是/否** 属性作为产品属性集的一部分？ 请随时使用该插件并跳过此部分。
+>已具有自定义 **是/否** 属性作为产品属性集的一部分？ 请随时使用该插件并跳过此部分。
 
 1. 登录Adobe Commerce实例。
 1. 导航到 **目录** > **产品**.
@@ -124,7 +124,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 
    >[!TIP]
    >
-   > 有关管理的更多详细信息 [产品属性可在Adobe Commerce用户指南中找到](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html).
+   >有关管理的更多详细信息 [产品属性可在Adobe Commerce用户指南中找到](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html).
 
 1. 导航到 **系统** > **工具** > **缓存管理**. 由于对数据架构进行了更新，因此我们需要使Adobe Commerce中的某些缓存类型失效。
 1. 选中旁边的复选框 **配置** 并提交的缓存类型 **刷新**
@@ -133,7 +133,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 
    >[!TIP]
    >
-   > 有关 [缓存管理可在Adobe Commerce用户指南中找到](https://docs.magento.com/user-guide/system/cache-management.html).
+   >有关 [缓存管理可在Adobe Commerce用户指南中找到](https://docs.magento.com/user-guide/system/cache-management.html).
 
 ## 使用GraphQL IDE验证属性 {#use-graphql-ide}
 
@@ -182,7 +182,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 
    >[!TIP]
    >
-   > 有关 [Adobe Commerce GraphQL可在此处找到](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+   >有关 [Adobe Commerce GraphQL可在此处找到](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## 更新Product Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
@@ -289,7 +289,7 @@ Sling模型将作为Java实施，并可在 **核心** 模块。
 
    >[!NOTE]
    >
-   > 的 `createdAt()` 方法已作为 [产品界面](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). 大多数常见的架构属性都已实施，因此仅使用 `addCustomSimpleField` ，以了解真正的自定义属性。
+   >的 `createdAt()` 方法已作为 [产品界面](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). 大多数常见的架构属性都已实施，因此仅使用 `addCustomSimpleField` ，以了解真正的自定义属性。
 
 1. 添加日志记录器以帮助调试Java代码：
 
@@ -336,7 +336,7 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
 
 >[!NOTE]
 >
-> 如果您使用CIF产品和类别选取器（如此Product Teaser或CIF页面组件）自定义组件，请确保包含所需的 `cif.shell.picker` 组件对话框的clientlib 。 请参阅 [CIF产品和类别选取器的用法](use-cif-pickers.md) 以了解详细信息。
+>如果您使用CIF产品和类别选取器（如此Product Teaser或CIF页面组件）自定义组件，请确保包含所需的 `cif.shell.picker` 组件对话框的clientlib 。 请参阅 [CIF产品和类别选取器的用法](use-cif-pickers.md) 以了解详细信息。
 
 1. 在IDE中，导航并展开 `ui.apps` 模块，并将文件夹层次结构展开为： `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` 检查 `.content.xml` 文件。
 
@@ -430,7 +430,7 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
 
    >[!CAUTION]
    >
-   > 如果在Teaser中使用的产品没有 `eco_friendly` 属性。
+   >如果在Teaser中使用的产品没有 `eco_friendly` 属性。
 
 ## 为Eco友好徽章添加样式 {#add-styles}
 
@@ -471,7 +471,7 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
 
    >[!NOTE]
    >
-   > 查看 [样式CIF核心组件](./style-cif-component.md) 有关前端工作流的更多详细信息。
+   >查看 [样式CIF核心组件](./style-cif-component.md) 有关前端工作流的更多详细信息。
 
 1. 通过命令行终端保存更改并使用您的Maven技能部署对AEM的更新：
 
@@ -500,5 +500,5 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
 - [AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)
 - [自定义AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
 - [自定义核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
-- [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+- [开始使用AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
 - [CIF产品和类别选取器的用法](use-cif-pickers.md)

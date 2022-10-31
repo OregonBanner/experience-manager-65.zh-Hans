@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 923ee0e20a6e41c9493a77b179f93dd81ff91020
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3683'
 ht-degree: 1%
@@ -39,8 +39,8 @@ AEM Forms on JEE服务器可以使用支持的操作系统、应用程序服务�
 
 >[!NOTE]
 >
-> - 有关受支持服务器平台的例外的完整列表，请参阅 [受支持服务器平台的例外情况](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p).
-> - AEM Forms on JEE仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
+>- 有关受支持服务器平台的例外的完整列表，请参阅 [受支持服务器平台的例外情况](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p).
+>- AEM Forms on JEE仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
 
 
 ### 推荐配置 {#recommendedconfigurations}
@@ -77,15 +77,16 @@ Adobe建议进行这些配置，并作为标准软件维护协议的一部分提
 
 >[!NOTE]
 >
-> 为帮助AEM Forms客户降低拥有成本、简化部署架构和使开发堆栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。 Adobe继续通过简化的基础架构组件矩阵支持AEM Forms JEE堆栈。
+>为帮助AEM Forms客户降低拥有成本、简化部署架构和使开发堆栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。 Adobe继续通过简化的基础架构组件矩阵支持AEM Forms JEE堆栈。
 >
-> 在6.5版本中，不再支持在客户中使用率最低的基础架构组件，如下所示：
-> · IBM DB2数据库
-> · IBM AIX和Sun Solaris操作系统
+>在6.5版本中，不再支持在客户中使用率最低的基础架构组件，如下所示：
 >
-> 对于新安装，建议在可行时在现代OSGi堆栈上部署AEM Forms，以利用有关响应式自适应Forms的最新创新，通过表单数据模型进行移动、多渠道交互式通信和后端数据集成。
+>- IBM DB2数据库
+>- IBM AIX和Sun Solaris操作系统
 >
-> 我们认识到现有用户需要继续在JEE堆栈上部署AEM Forms。 在这些情况下，Adobe要求在受支持的基础架构上部署AEM Forms JEE，如本文档所述。 如果您升级到AEM 6.5 Forms，并在上一个AEM Forms版本中使用不受支持的平台，则可以联系Adobe支持部门以获取有关升级到受支持平台的帮助。
+>对于新安装，建议在可行时在现代OSGi堆栈上部署AEM Forms，以利用有关响应式自适应Forms的最新创新，通过表单数据模型进行移动、多渠道交互式通信和后端数据集成。
+>
+>我们认识到现有用户需要继续在JEE堆栈上部署AEM Forms。 在这些情况下，Adobe要求在受支持的基础架构上部署AEM Forms JEE，如本文档所述。 如果您升级到AEM 6.5 Forms，并在上一个AEM Forms版本中使用不受支持的平台，则可以联系Adobe支持部门以获取有关升级到受支持平台的帮助。
 
 ### Java虚拟机(JVM) {#java-virtual-machines-jvm}
 
@@ -133,8 +134,8 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
 
 >[!NOTE]
 >
-> - 建议跟踪Java供应商提供的安全公告，以确保生产环境的安全和安全，并安装最新的Java更新。
-> - JEE上的AEM Forms仅支持生产环境中的64位JVM。
+>- 建议跟踪Java供应商提供的安全公告，以确保生产环境的安全和安全，并安装最新的Java更新。
+>- JEE上的AEM Forms仅支持生产环境中的64位JVM。
 
 
 ### 数据库和CRX持久性 {#databases-and-crx-persistence}
@@ -281,7 +282,7 @@ Adobe Experience Manager Forms要求运行Java虚拟机，该虚拟机由Java开
 
 >[!NOTE]
 >
-> IBM® WebSphere®群集仅在网络部署版本中受支持。
+>IBM® WebSphere®群集仅在网络部署版本中受支持。
 
 ### 服务器操作系统 {#server-operating-systems}
 
@@ -517,18 +518,18 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 
 >[!NOTE]
 >
-> PDF生成器仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
+>PDF生成器仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
 >
-> 此外：
+>此外：
 >
-> - PDF生成器需要32位版本的 [Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017版本17.011.30078来执行转换。
-> - PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
-> - PDF生成器不支持Microsoft Office 365。
-> - PDF生成器转换仅在Windows和Linux上受支持。
-> - OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
-> - Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+>- PDF生成器需要32位版本的 [Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017版本17.011.30078来执行转换。
+>- PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
+>- PDF生成器不支持Microsoft Office 365。
+>- PDF生成器转换仅在Windows和Linux上受支持。
+>- OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
+>- Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
-> - PDF生成器服务不支持Microsoft Windows 10。
+>- PDF生成器服务不支持Microsoft Windows 10。
 
 
 ### 无障碍支持例外 {#exceptions-to-accessibility-support}
@@ -642,7 +643,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 
 >[!NOTE]
 >
-> Acrobat DC产品系列为Acrobat和Reader引入了两个基本上不同的产品：“Classic”和“Continuous”。 有关这两个跟踪的详细信息和比较，请参阅 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
+>Acrobat DC产品系列为Acrobat和Reader引入了两个基本上不同的产品：“Classic”和“Continuous”。 有关这两个跟踪的详细信息和比较，请参阅 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
 
 ### 浏览器 {#browsers}
 
@@ -695,13 +696,13 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 
 >[!NOTE]
 >
-> 桌面的一些与浏览器相关的例外如下：
+>桌面的一些与浏览器相关的例外如下：
 >
-> - Safari仅在Macintosh OS X上受支持。
-> - 工作区在Macintosh OS X 10.6和10.7上支持Safari 5.1(含Acrobat DC或更高版本)。 有关Safari 5.1与AcrobatAdobe Reader兼容的更多信息，请参阅 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
-> - Safari不支持管理控制台。
-> - 通信管理不支持用于AEM 6.1表单的Windows® Internet Explorer 9.0。
-> - Forms门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以便实现辅助功能。
+>- Safari仅在Macintosh OS X上受支持。
+>- 工作区在Macintosh OS X 10.6和10.7上支持Safari 5.1(含Acrobat DC或更高版本)。 有关Safari 5.1与AcrobatAdobe Reader兼容的更多信息，请参阅 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
+>- Safari不支持管理控制台。
+>- 通信管理不支持用于AEM 6.1表单的Windows® Internet Explorer 9.0。
+>- Forms门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以便实现辅助功能。
 
 
 #### 移动设备客户端 {#mobile-clients}
@@ -733,7 +734,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 
 >[!NOTE]
 >
-> - Forms Portal仅在iPad上的Safari上受支持。
+>- Forms Portal仅在iPad上的Safari上受支持。
 
 
 ### AEM Forms应用程序 {#aem-forms-workspace-app}
@@ -800,7 +801,7 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 
 >[!NOTE]
 >
-> 标记为 [在AEM Forms 6.5.12.0和6.5.10.0中已弃用，在AEM Forms 6.5 Service Pack 18(6.5.18.0)版本之前，仍支持](https://helpx.adobe.com/support/programs/eol-matrix.html).
+>标记为 [在AEM Forms 6.5.12.0和6.5.10.0中已弃用，在AEM Forms 6.5 Service Pack 18(6.5.18.0)版本之前，仍支持](https://helpx.adobe.com/support/programs/eol-matrix.html).
 
 ## 修订历史记录 {#revision-history}
 

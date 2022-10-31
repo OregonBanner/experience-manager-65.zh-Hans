@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 2%
@@ -493,11 +493,12 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 >在群集或共享数据存储设置（具有Mongo或Tar区段）中执行垃圾收集时，日志可能会显示有关无法删除某些Blob ID的警告。 之所以会出现这种情况，是因为之前垃圾收集中删除的Blob ID被没有ID删除信息的其他群集或共享节点再次错误地引用。 因此，在执行垃圾收集时，当垃圾收集尝试删除在上次运行中已删除的ID时，它会记录一则警告。 此行为不会影响性能或功能。
 
 >[!NOTE]
-> 如果您使用共享数据存储设置，并且数据存储垃圾收集被禁用，则运行Lucene Binary清理任务可能会突然增加所使用的磁盘空间。 要避免这种情况，您需要在所有创作实例和发布实例上禁用BlobTracker，如下所示：
 >
-> 1. 停止AEM实例。
-> 2. 添加 `blobTrackSnapshotIntervalInSecs=L"0"` 参数 `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 文件。 此参数需要Oak 1.12.0、1.10.2或更高版本。
-> 3. 重新启动AEM实例。
+>如果您使用共享数据存储设置，并且数据存储垃圾收集被禁用，则运行Lucene Binary清理任务可能会突然增加所使用的磁盘空间。 要避免这种情况，您需要在所有创作实例和发布实例上禁用BlobTracker，如下所示：
+>
+>1. 停止AEM实例。
+>2. 添加 `blobTrackSnapshotIntervalInSecs=L"0"` 参数 `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` 文件。 此参数需要Oak 1.12.0、1.10.2或更高版本。
+>3. 重新启动AEM实例。
 
 
 使用较新版本的AEM，还可以在由多个存储库共享的数据存储上运行数据存储垃圾收集。 为了能够在共享数据存储上运行数据存储垃圾收集，请执行以下步骤：

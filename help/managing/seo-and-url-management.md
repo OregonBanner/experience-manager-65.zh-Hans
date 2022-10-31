@@ -7,7 +7,7 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3802'
 ht-degree: 96%
@@ -366,9 +366,9 @@ AEM 使用 [Apache Sling Sitemap 模块](https://github.com/apache/sling-org-apa
 
 >[!NOTE]
 >
-> 自Adobe Experience Manager版本6.5.11.0起，此功能便可用作产品功能。
+>自Adobe Experience Manager版本6.5.11.0起，此功能便可用作产品功能。
 > 
-> 对于旧版本，您可以自行注册一个Sling Servlet，以侦听 `sitemap.xml` 调用并使用通过servlet API提供的资源来查找当前页面及其子体，以输出sitemap.xml文件。
+>对于旧版本，您可以自行注册一个Sling Servlet，以侦听 `sitemap.xml` 调用并使用通过servlet API提供的资源来查找当前页面及其子体，以输出sitemap.xml文件。
 
 对于由 `sling:sitemapRoot` 属性设置为 `true` 的任何资源生成的顶级 Sitemap 和嵌套 Sitemap，Apache Sling Sitemap 模块会予以区分。通常，使用树的顶级 Sitemap 路径上的选择器来呈现 Sitemap，而顶级 Sitemap 是没有其他 Sitemap 根祖先的资源。此顶级 Sitemap 根还公开 Sitemap 索引，该索引通常是站点所有者将在搜索引擎的配置门户中配置或添加到站点的 `robots.txt` 的内容。
 
@@ -380,7 +380,7 @@ AEM 使用 [Apache Sling Sitemap 模块](https://github.com/apache/sling-org-apa
 
 >[!NOTE]
 >
-> 选择器 `sitemap` 和 `sitemap-index` 可能会干扰自定义实现。如果您不想使用产品功能，请使用高于 0 的 `service.ranking` 来配置用于这些选择器的自己的 servlet。
+>选择器 `sitemap` 和 `sitemap-index` 可能会干扰自定义实现。如果您不想使用产品功能，请使用高于 0 的 `service.ranking` 来配置用于这些选择器的自己的 servlet。
 
 在默认配置中，“页面属性”对话框提供了一个选项，用于将页面标记为 Sitemap 根（如上所述）并生成 Sitemap 本身及其后代。此行为通过实施 `SitemapGenerator` 接口来实现，并且可以通过添加替代实施进行扩展。但是，由于重新生成 XML Sitemap 的频率在很大程度上取决于内容创作工作流和工作负载，因此，该产品不提供任何 `SitemapScheduler` 配置。这使得该功能可以有效地选择启用。
 

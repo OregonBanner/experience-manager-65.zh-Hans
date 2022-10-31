@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: b80886f1e45e0ed65ce2309ef6ea43bfa373a52b
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '5529'
 ht-degree: 2%
@@ -252,7 +252,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，运行AEM 
 >* 在基于UNIX的平台上，将OpenOffice安装为/root。 如果OpenOffice未作为根安装，则PDF生成器服务无法将OpenOffice文档转换为PDF文档。 如果您需要以非根用户身份安装和运行OpenOffice，请为非根用户提供sudo权限。
 >* 如果您在基于UNIX的平台上使用OpenOffice，请运行以下命令以设置路径变量：
 >
-> `export OpenOffice_PATH=/opt/openoffice.org4`
+>  `export OpenOffice_PATH=/opt/openoffice.org4`
 
 ### (仅适用于IBM® WebSphere®)配置IBM® SSL套接字提供程序 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
@@ -415,7 +415,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包包含AEM For
    >[!NOTE]
    >
    >您使用Adobe以外各方提供的字体的权利受此类各方向您提供的这些字体的许可协议约束，而且您使用Adobe软件的许可不涵盖这些权利。 Adobe建议您在将非Adobe字体与Adobe软件结合使用之前，先查看并确保遵守所有适用的非Adobe许可协议，特别是有关在服务器环境中使用字体的操作。
-   > 将新字体安装到字体文件夹后，请重新启动AEM Forms实例。
+   >将新字体安装到字体文件夹后，请重新启动AEM Forms实例。
 
 ### 配置本地用户帐户以运行PDF生成器服务  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
@@ -596,7 +596,8 @@ DocAssurance服务可以将使用权限应用于PDF文档。 要对PDF文档应�
 
    >[!NOTE]
    >
-   > * 如果系统就绪工具报告pdfgen.api文件在Acrobat插件文件夹中不可用，请从 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目录 `[Acrobat_root]\Acrobat\plug_ins` 目录访问Advertising Cloud的帮助。
+   >* 如果系统就绪工具报告pdfgen.api文件在Acrobat插件文件夹中不可用，请从 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` 目录 `[Acrobat_root]\Acrobat\plug_ins` 目录访问Advertising Cloud的帮助。
+
 
 1. 导航到 `[Path_of_reports_folder]`。打开SystemReadinessTool.html文件。 验证报告并修复上述问题。
 

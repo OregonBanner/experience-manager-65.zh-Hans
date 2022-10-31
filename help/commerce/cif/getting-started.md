@@ -4,7 +4,7 @@ description: 了解如何部署AEM内容和商务项目。
 topics: Commerce
 feature: Commerce Integration Framework
 exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 4%
@@ -70,17 +70,22 @@ CIF附加组件在 `/api/graphql` 可选择用于 [地方发展](develop.md). �
 - GraphQL客户端 — 为商务后端通信选择已配置的GraphQL客户端。 此设置通常应保持默认状态。
 - 存储视图 — 存储视图标识符。 如果为空，则使用默认的存储视图。
 - GraphQL代理路径 — AEM中用于将请求代理到商务后端GraphQL端点的URL路径GraphQL代理。
+
    >[!NOTE]
    >
-   > 在大多数设置中，默认值 `/api/graphql` 不得更改。 只有不使用提供的GraphQL代理的高级设置才应更改此设置。
+   >在大多数设置中，默认值 `/api/graphql` 不得更改。 只有不使用提供的GraphQL代理的高级设置才应更改此设置。
+
 - 启用目录UID支持 — 在商务后端GraphQL调用中启用对UID的支持，而不是ID。
+
    >[!NOTE]
    >
-   > 在Adobe Commerce 2.4.2中引入了对UID的支持。仅当商务后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此功能。
+   >在Adobe Commerce 2.4.2中引入了对UID的支持。仅当商务后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此功能。
+
 - 目录根类别标识符 — 存储目录根的标识符（UID或ID）
+
    >[!CAUTION]
    >
-   > 从CIF核心组件版本2.0.0开始，支持 `id` 已删除，替换为 `uid`. 如果您的项目使用CIF核心组件版本2.0.0，则必须启用“目录UID支持”，并使用有效的类别UID作为“目录根类别标识符”。
+   >从CIF核心组件版本2.0.0开始，支持 `id` 已删除，替换为 `uid`. 如果您的项目使用CIF核心组件版本2.0.0，则必须启用“目录UID支持”，并使用有效的类别UID作为“目录根类别标识符”。
 
 上面显示的配置供参考。 项目应提供自己的配置。
 

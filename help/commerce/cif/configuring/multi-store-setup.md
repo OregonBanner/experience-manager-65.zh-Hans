@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 1d4e9b7b-848b-4007-b884-dd48682d62e8
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 2%
@@ -46,7 +46,7 @@ AEM Live Copy和语言副本的多站点管理功能与商务集成框架结合�
 
    >[!TIP]
    >
-   > 可以使用ID或UID来寻址商务目录。 在Adobe Commerce 2.4.2中引入的UID。仅当商务后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此设置。
+   >可以使用ID或UID来寻址商务目录。 在Adobe Commerce 2.4.2中引入的UID。仅当商务后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此设置。
 
 4. 将子配置分配给AEM站点
 

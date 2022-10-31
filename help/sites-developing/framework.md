@@ -12,7 +12,7 @@ discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 4db9279f2d15f2e08939ba453ae8ddbbc3c3d69f
+source-git-commit: efb4f9f8a97baf8d3d02160226e4f4d3f8f64c89
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 0%
@@ -230,8 +230,9 @@ AEM中包含的节点类型的基本定义如下：
    >[!NOTE]
    >
    >的 `cq:movedTo` 仅当满足以下任一条件时，才会将属性添加到已移动或已合并的标记中：
-   > 1. 标记用于内容（即包含引用）或
-   > 1. 标记包含已移动的子项。
+   >
+   >1. 标记用于内容（即包含引用）或
+   >1. 标记包含已移动的子项。
 
 
 * `cq:backlinks` 将引用保持为相反方向，即保留已移动到标记B或与标记B合并的所有标记的列表。这通常是在 `cq:movedTo`属性。
@@ -240,8 +241,8 @@ AEM中包含的节点类型的基本定义如下：
    >
    >的 `cq:backlinks` 仅当满足以下任一条件时，才会将属性添加到已移动或已合并的标记中：
    >
-   > 1. 标记用于内容（即包含引用）或>
-   > 1. 标记包含已移动的子项。
+   >1. 标记用于内容（即包含引用）或
+   >1. 标记包含已移动的子项。
 
 
 * 阅读 `cq:tags` 内容节点的属性涉及以下解析：

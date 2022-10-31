@@ -2,7 +2,7 @@
 title: 扩展 [!DNL Adobe Experience Manager] 6.5。
 description: 扩展 [!DNL Adobe Experience Manager] 6.5。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -27,7 +27,7 @@ App Builder提供了统一的第三方可扩展性框架，用于集成和创建
 
 >[!NOTE]
 >
-> 对于要利用应用程序生成器的AEMas a Cloud Service客户，请转到 [使用Adobe Developer App Builder扩展Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
+>对于要利用应用程序生成器的AEMas a Cloud Service客户，请转到 [使用Adobe Developer App Builder扩展Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
 
 ## 架构 {#architecture}
 

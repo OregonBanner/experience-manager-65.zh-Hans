@@ -2,7 +2,7 @@
 title: AEM Headless开发人员历程
 description: AEM Headless CMS 文档。从这里开始，引导您了解 AEM 强大而灵活的 Headless 特性、它们的功能以及如何在您的第一个开发项目中利用它们。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 29%
@@ -33,7 +33,7 @@ ht-degree: 29%
 
 >[!TIP]
 >
-> 如果您愿意 **学习** 从技术上讲，您可以访问AEM Headless教程，这些教程由API和框架组织，在 [“其他资源”部分](#additional-resources) 在本文档末尾。
+>如果您愿意 **学习** 从技术上讲，您可以访问AEM Headless教程，这些教程由API和框架组织，在 [“其他资源”部分](#additional-resources) 在本文档末尾。
 
 ## 受众 {#audience}
 
@@ -69,7 +69,7 @@ ht-degree: 29%
 | 8 | [如何使用 Headless 应用程序上线](go-live.md) | 了解如何在Git中实时部署应用程序并获取本地代码，然后将其移至Cloud Manager Git for CI/CD管道。 |
 | 9 | [可选 — 如何使用AEM创建单页应用程序(SPA)](create-spa.md) | 了解AEM无标题功能后，请了解如何结合使用无标题和无标题交付，并了解如何使用AEM SPA编辑器框架创建可编辑的SPA。 |
 
-## 下一步 {#what-is-next}
+## 后续内容 {#what-is-next}
 
 现在，您已准备好开始AdobeHeadless历程。 我们鼓励您继续访问历程的下一部分并阅读文章 [了解CMS无头开发。](learn-about.md)
 

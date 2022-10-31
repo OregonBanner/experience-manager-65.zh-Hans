@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2567'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
-> 使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 启动您自己的商务实施时。
+>使用 [AEM项目原型](https://github.com/adobe/aem-project-archetype) 启动您自己的商务实施时。
 
 ## 您将要构建的内容
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> **随时可以使用现有项目** (基于包含CIF的AEM项目原型)并跳过此部分。
+>**随时可以使用现有项目** (基于包含CIF的AEM项目原型)并跳过此部分。
 
 1. 运行以下git命令以克隆项目：
 
@@ -137,7 +137,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > 此类文件会从源代码管理中忽略，因为它们应在生成期间生成。
+   >此类文件会从源代码管理中忽略，因为它们应在生成期间生成。
 
 1. Inspect文件 `ui.frontend/clientlib.config.js`.
 
@@ -168,7 +168,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > 此类文件也会从源代码管理中忽略，因为它们应该在生成期间生成。
+   >此类文件也会从源代码管理中忽略，因为它们应该在生成期间生成。
 
 1. 接下来，检查由项目生成的其他客户端库：
 
@@ -190,7 +190,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > 只有基础库会作为页面脚本的一部分进行“硬编码”。 `venia.site` 不包含在这些文件中，而是作为页面模板的一部分包含在内，以便获得更大的灵活性。 以后会检查。
+   >只有基础库会作为页面脚本的一部分进行“硬编码”。 `venia.site` 不包含在这些文件中，而是作为页面模板的一部分包含在内，以便获得更大的灵活性。 以后会检查。
 
 1. 从终端，构建整个项目并将其部署到AEM的本地实例：
 
@@ -265,7 +265,7 @@ ht-degree: 3%
 
    >[!NOTE]
    >
-   > 要从“AEM开始”屏幕中查看所有可用的模板，请导航至 **工具** > **常规** > **模板**.
+   >要从“AEM开始”屏幕中查看所有可用的模板，请导航至 **工具** > **常规** > **模板**.
 
 1. 在左上角，选择 **页面信息** 图标，单击 **页面策略**.
 
@@ -328,7 +328,7 @@ Webpack-dev-server代理来自AEM本地实例的图像和某些CSS/JavaScript，
 
    >[!CAUTION]
    >
-   > 如果出现与Sass相关的错误，请停止服务器并运行命令 `npm rebuild node-sass` 并重复上述步骤。 如果您的 `npm` 和 `node` 然后在项目中指定 `aem-cif-guides-venia/pom.xml`.
+   >如果出现与Sass相关的错误，请停止服务器并运行命令 `npm rebuild node-sass` 并重复上述步骤。 如果您的 `npm` 和 `node` 然后在项目中指定 `aem-cif-guides-venia/pom.xml`.
 
 1. 导航到 [http://localhost:8080/](http://localhost:8080/) 在新选项卡中，使用与已登录AEM实例相同的浏览器。 您应该通过Webpack-dev-server看到Venia主页：
 

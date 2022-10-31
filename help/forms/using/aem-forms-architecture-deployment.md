@@ -11,7 +11,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2460'
 ht-degree: 0%
@@ -76,7 +76,7 @@ AEM Forms on OSGi和AEM Forms on JEE都具有工作流功能。 您可以在OSGi
 
    >[!NOTE]
    >
-   > Adobe建议使用第三方数据存储来保存最终处理的数据，而不是使用AEM存储库。
+   >Adobe建议使用第三方数据存储来保存最终处理的数据，而不是使用AEM存储库。
 
 * **存储和后处理从发布实例到达的通信数据：** AEM工作流对相应的信件定义执行可选的后处理。 这些工作流可以将最终处理的数据保存到适当的外部数据存储中。
 
