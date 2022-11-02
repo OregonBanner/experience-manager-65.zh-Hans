@@ -12,9 +12,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: bc3dd7d229a75323b98a96d60dcbb3ae2b8c09ab
 workflow-type: tm+mt
-source-wordcount: '5475'
+source-wordcount: '5469'
 ht-degree: 2%
 
 ---
@@ -87,7 +87,7 @@ AEM WCM安装大量用户和组。 在安装后首次访问安全控制台时，
    <td>管理员</td>
    <td>组</td>
    <td><p>为其所有成员授予管理员权限的组。 只允许管理员编辑此群组。</p> <p>具有完全访问权限。</p> </td>
-   <td>如果您在节点上设置“deny-everyone”，则只有在再次为该组启用该属性时，管理员才具有访问权限。</td>
+   <td>即使您在节点上设置了“拒绝每个人”，管理员仍然可以访问该节点</td>
   </tr>
   <tr>
    <td>content-authors</td>
