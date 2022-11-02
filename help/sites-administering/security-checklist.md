@@ -12,7 +12,7 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: f60d3049b10a8ec500dd0cd4b1b5d4efbe415d84
+source-git-commit: 58c89e0b96da0f36d233cb8c14e259cc595ddda7
 workflow-type: tm+mt
 source-wordcount: '2859'
 ht-degree: 3%
@@ -409,18 +409,18 @@ Sling是 *以内容为中心*. 这意味着当每个(HTTP)请求以JCR资源（�
 1. 访问包含要复制的关键材料的AEM实例，通常是创作实例；
 1. 在本地文件系统中找到com.adobe.granite.crypto.file包。 例如，在以下路径下：
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
    的 `bundle.info` 每个文件夹中的文件将标识包名称。
 
 1. 导航到数据文件夹。 例如：
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 复制HMAC和主控文件。
 1. 然后，转到要将HMAC密钥复制到的目标实例，然后导航到数据文件夹。 例如：
 
-   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. 粘贴您之前复制的两个文件。
 1. [刷新加密包](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) 目标实例已在运行时。
