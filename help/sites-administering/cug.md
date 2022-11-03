@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 64d174cc824c8bf200cece4e29f60f946ee5560e
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 3%
+source-wordcount: '753'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 3%
 
 * [将此群组应用到所需页面](#applying-your-closed-user-group-to-content-pages) 并选择（或创建）供CUG成员使用的登录页面；在将CUG应用到内容页面时也指定。
 
-* [以某种形式创建一个链接，指向受保护区域内至少一个页面](#linking-to-the-realm)，否则将不可见。
+* [以某种形式创建一个链接，指向受保护区域内至少一个页面](#linking-to-the-cug-pages)，否则将不可见。
+
 * [配置Dispatcher](#configure-dispatcher-for-cugs) （如果在使用）。
 
 >[!CAUTION]
@@ -67,58 +68,63 @@ ht-degree: 3%
 
 ## 将已关闭的用户组应用到内容页面 {#applying-your-closed-user-group-to-content-pages}
 
-要将CUG应用到页面，请执行以下操作：
+要将CUG应用到一个或多个页面，请执行以下操作：
 
 1. 导航到要分配给CUG的受限部分的根页面。
-1. 单击页面的缩略图，然后单击 **属性** 中。
+1. 单击页面的缩略图并选择 **属性** 中。
 
    ![screenshot_2018-10-30at162632](assets/screenshot_2018-10-30at162632.png)
 
-1. 在以下窗口中，转到 **高级** 选项卡。
-1. 向下滚动并在 **身份验证要求** 中。
+1. 在以下窗口中，打开 **高级** 选项卡。
 
-1. 在下面添加配置路径，然后按保存。
-1. 接下来，转到 **权限** 按 **编辑已关闭的用户组** 按钮。
+1. 向下滚动到 **身份验证要求** 中。
+
+   1. 激活 **启用** 复选框。
+
+   1. 将路径添加到 **登录页面**.
+如果留空，则可选使用标准登录页面。
+
+   ![添加了CUG](assets/cug-authentication-requirement.png)
+
+1. 接下来，转到 **权限** 选项卡，选择 **编辑已关闭的用户组**.
 
    ![screenshot_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
    >[!NOTE]
    >
-   >请注意，“权限”选项卡中的 CUG 无法从 Blueprint 转出到 Live Copy。请在配置 Live Copy 时对此进行规划。
+   >“权限”选项卡中的CUG无法从Blueprint中转出到Live Copy。 请在配置 Live Copy 时对此进行规划。
    >
    >有关更多信息，请参阅 [本页](closed-user-groups.md#aem-livecopy).
 
-1. 在以下窗口中查找并添加您的CUG — 在本例中，添加名为 **cug_access**. 最后，按 **保存**.
-1. 单击 **已启用** 以定义此页面（和任何子页面）属于CUG。
-1. 指定 **登录页面** 会使用的；例如：
+1. 的 **编辑已关闭的用户组** 对话框。 在此，您可以搜索并选择您的CUG，然后使用确认群组选择 **保存**.
 
-   `/content/geometrixx/en/toolbar/login.html`
+   该组将被添加到列表中；例如，群组 **cug_access**.
 
-   如果留空，则可选使用标准登录页面。
+   ![添加了CUG](assets/cug-added.png)
 
-1. 添加 **允许的组**. 使用+添加组，或使用 — 删除。 只允许这些组的成员登录并访问页面。
-1. 分配 **领域** （页面组的名称）。 留空将使用页面标题。
-1. 单击 **确定** 以保存规范。
+1. 确认更改 **保存并关闭**.
 
-请参阅 [Identity Management](/help/sites-administering/identity-management.md) 有关发布环境中的用户档案以及提供用于登录和退出的表单的信息。
+>[!NOTE]
+>
+>请参阅 [Identity Management](/help/sites-administering/identity-management.md) 有关发布环境中的用户档案以及提供用于登录和退出的表单的信息。
 
-## 链接到领域 {#linking-to-the-realm}
+## 链接到CUG页面 {#linking-to-the-cug-pages}
 
-由于指向CUG领域的任何链接的目标对匿名用户不可见，因此链接检查器将删除此类链接。
+由于匿名用户看不到指向CUG页面的任何链接的目标，链接检查程序将删除此类链接。
 
-要避免这种情况，建议创建指向CUG领域内页面的未受保护的重定向页面。 然后，将呈现导航条目，而不会导致链接检查器出现任何问题。 仅当实际访问重定向页面时，用户才会在CUG领域内被重定向 — 成功提供其登录凭据后。
+要避免这种情况，建议创建指向CUG区域内页面的未受保护的重定向页面。 然后，将呈现导航条目，而不会导致链接检查器出现任何问题。 仅当实际访问重定向页面时，用户才会在CUG区域内被重定向 — 成功提供其登录凭据后。
 
 ## 为CUG配置Dispatcher {#configure-dispatcher-for-cugs}
 
 如果您使用的是Dispatcher，则需要定义具有以下属性的Dispatcher场：
 
-* [virtualhosts](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts):匹配CUG所应用的页面路径。
+* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#identifying-virtual-hosts-virtualhosts):匹配CUG所应用的页面路径。
 * \sessionmanagement:请参阅下文。
-* [缓存](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache):专用于CUG所应用文件的缓存目录。
+* [缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache):专用于CUG所应用文件的缓存目录。
 
 ### 为CUG配置Dispatcher会话管理 {#configuring-dispatcher-session-management-for-cugs}
 
-配置 [dispatcher.any文件中的会话管理](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) CUG的。 请求CUG页面访问时使用的身份验证处理程序决定了如何配置会话管理。
+配置 [dispatcher.any文件中的会话管理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) CUG的。 请求CUG页面访问时使用的身份验证处理程序决定了如何配置会话管理。
 
 ```xml
 /sessionmanagement
@@ -132,7 +138,7 @@ ht-degree: 3%
 >当调度程序场启用了会话管理时，不会缓存场处理的所有页面。 要缓存CUG外的页面，请在dispatcher.any中创建第二个场
 >来处理非CUG页面。
 
-1. 配置 [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) 通过定义 `/directory`;例如：
+1. 配置 [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) 通过定义 `/directory`;例如：
 
    ```xml
    /sessionmanagement
@@ -142,4 +148,4 @@ ht-degree: 3%
      }
    ```
 
-1. 已设置 [/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used) to `0`.
+1. 已设置 [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-when-authentication-is-used) to `0`.
