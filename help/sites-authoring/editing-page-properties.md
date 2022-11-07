@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
+source-git-commit: 1cd63d2ce5c5caf408b11eb6bac9b1a54dae0b25
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1886'
 ht-degree: 90%
 
 ---
@@ -199,8 +199,7 @@ ht-degree: 90%
 
    * **为 Facebook 启用用户共享**
    * **为 Pinterest 启用用户共享**
-   * **首选体验片段变量**
-定义用于为页面生成元数据的体验片段变量
+   * **首选体验片段变量** 定义用于为页面生成元数据的体验片段变量
 
 ### Cloud Service {#cloud-services}
 
@@ -368,7 +367,7 @@ ht-degree: 90%
 
       * 当您选择&#x200B;**完成**&#x200B;时，新值将会应用于所有选定页面。
       * 当字段有多个值时（例如“标记”），您可以附加一个新值，也可以删除相同的值。
-   * 如果不同页面具有相同的字段，但这些字段的值不同，则会用一个特殊的值表示它们，例如，文本 `<Mixed Entries>`。编辑此类字段时应格外小心，以防数据丢失。
+   * 如果不同页面具有相同的字段，但这些字段的值不同，则会用一个特殊的值表示它们，例如，文本 `<Mixed Entries>`。
 
 
 >[!NOTE]
