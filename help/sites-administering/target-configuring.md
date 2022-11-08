@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 813441a61baa560c9d317a5519b9e0c0d1da7a6e
+source-git-commit: f64319e88687ba1f53c98d4768492a0b4f4b08b8
 workflow-type: tm+mt
-source-wordcount: '2209'
-ht-degree: 43%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -126,9 +126,9 @@ AT.js 对 mbox.js 库进行了多项改进：
 
 使用以下过程可在 AEM 中创建 Target 云配置：
 
-1. 导航到 **Cloud Services** 通过 **AEM徽标** > **工具** > **部署** > **Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. 导航到 **Cloud Services** 通过 **AEM徽标** > **工具** > **Cloud Services** > **旧版Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
-   的 **Adobe Marketing Cloud** 将打开“概述”页面。
+   的 **Cloud Services** 将打开“概述”页面。
 
 1. 在 **Adobe Target** 部分中，单击&#x200B;**立即配置**。
 1. 在&#x200B;**创建配置**&#x200B;对话框中：
