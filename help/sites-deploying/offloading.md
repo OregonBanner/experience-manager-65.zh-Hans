@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 08a6777bf1ff3abf62f45fe1e164ef2027996848
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2364'
 ht-degree: 1%
 
 ---
@@ -237,7 +237,7 @@ Apache Sling作业使用者管理器服务提供主题允许列表和阻止列�
 
 >[!CAUTION]
 >
->自动生成的复制代理存在的一个已知问题要求您手动创建新的复制代理。 按照 [使用自动生成的复制代理时出现的问题](/help/sites-deploying/offloading.md#problems-using-the-automatically-generated-replication-agents) 创建卸载代理之前。
+>自动生成的复制代理存在的一个已知问题要求您手动创建新的复制代理。
 
 创建在实例之间传输作业负载以进行卸载的复制代理。 下图显示了从作者卸载到工作实例所需的代理。 作者的Sling ID为1，工作实例的Sling ID为2:
 
