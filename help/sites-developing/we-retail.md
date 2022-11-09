@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 12%
+source-wordcount: '750'
+ht-degree: 11%
 
 ---
 
@@ -36,10 +36,10 @@ We.Retail利用最新的AEM技术，例如HTL、响应式布局、可编辑的�
 | [全球化网站结构](/help/sites-administering/tc-bp.md) | We.Retail包含实时复制到特定于国家/地区的网站中的语言母版。 | [试试看！](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [响应式布局](/help/sites-authoring/responsive-layout.md) | 所有页面都具有响应式布局，可根据屏幕和设备大小动态进行调整。 | [试试看！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可编辑的模板](/help/sites-developing/page-templates-editable.md) | 所有页面都基于可编辑的模板，允许非开发人员调整和自定义模板。 | [试试看！](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML 模板语言](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) | 所有组件都基于HTL |  |
+| [HTML 模板语言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | 所有组件都基于HTL |  |
 | [电子商务功能](/help/commerce/cif-classic/developing/ecommerce.md) | 提供产品目录 |  |
 | [社区站点](/help/communities/overview.md) | 允许访客加入社区讨论、阅读博客等 |  |
-| [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) | 所有组件都基于新的核心组件，并且更易用，用户可开箱即用地配置 | [试试看！](/help/sites-developing/we-retail-core-components.md) |
+| [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) | 所有组件都基于新的核心组件，并且更易用，用户可开箱即用地配置 | [试试看！](/help/sites-developing/we-retail-core-components.md) |
 | [内容片段](/help/assets/content-fragments/content-fragments.md) | “We.Retail体验”部分展示了通过内容片段重用内容的强大功能。 | [试试看！](/help/sites-developing/we-retail-content-fragments.md) |
 | [体验片段](/help/sites-authoring/experience-fragments.md) | 体验片段是由一个或多个组件构成的组件组，包括可在页面内引用的内容和布局。 | [试试看！](/help/sites-developing/we-retail-experience-fragments.md) |
 
@@ -93,7 +93,7 @@ We.Retail在技术上更加稳健，利用最新的AEM技术更灵活、更具�
 | 手稿 | 不可用 | 可用 |
 | 轮播、下载、图表组件 | 不可用 | 可用 |
 | 列控件 | 替换为布局容器 | 可用 |
-| Forms | 不可用 | 可用 |
+| 表单 | 不可用 | 可用 |
 | 营销活动 | 无电子邮件示例 | 可用 |
 
 >[!NOTE]

@@ -3,10 +3,10 @@ title: AEM 6.5 Deploying用户指南
 seo-title: AEM 6.5 Deploying User Guide
 description: 了解如何安装和部署Adobe Experience Manager 6.5及其架构，包括我们的Adobe Managed Services云部署。
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
-source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 31%
+source-wordcount: '380'
+ht-degree: 26%
 
 ---
 
@@ -32,21 +32,21 @@ ht-degree: 31%
 | [Administering 指南](/help/sites-administering/home.md) | 了解如何管理 AEM |
 | [Authoring 指南](/help/sites-authoring/home.md) | 本指南介绍了在AEM中创作的概念。 |
 | [经典UI创作指南](/help/sites-classic-ui-authoring/home.md) | 本指南介绍在经典用户界面的AEM中创作的概念。 |
-| [Screens用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
+| [Screens用户指南](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | 了解用于发布动态和交互式数字体验的数字标牌解决方案。 |
 | [Deploying用户指南](/help/sites-deploying/home.md) | 本指南向您展示AEM的基础知识。 |
 | [Developing用户指南](/help/sites-developing/home.md) | 了解如何构建AEM实例。 |
 | [Managing用户指南](/help/managing/home.md) | 本指南介绍如何成功管理AEM项目。 |
 | [Commerce 用户指南](/help/commerce/home.md) | 了解AEM上的Commerce Integration Framework。 |
 | [Mobile用户指南](/help/mobile/home.md) | 本指南介绍如何为移动设备应用程序创建和管理内容。 |
-| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
+| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | 本指南将向您展示如何与Livefyre共享用户生成的内容。 |
 
 ## 关键AEM资源
 
 * [AEM教程](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher用户指南](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
-* [HTL用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html)
-* [核心组件用户指南](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Dispatcher用户指南](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)
+* [HTL用户指南](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [核心组件用户指南](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 * [GDPR 就绪](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM 社区论坛](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)

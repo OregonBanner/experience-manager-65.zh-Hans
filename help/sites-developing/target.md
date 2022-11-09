@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1266'
 ht-degree: 3%
 
 ---
@@ -199,7 +199,7 @@ JSP会将所需的Analytics Javascript对象和引用添加到客户端Javascrip
 
 用于创建mbox的默认mbox.js文件位于/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 要使用客户mbox.js文件，请将该文件添加到Target云配置中。 要添加文件，mbox.js文件必须在文件系统上可用。
 
-例如，如果要使用 [Marketing CloudID服务](https://docs.adobe.com/content/help/en/id-service/using/home.html) 您需要下载mbox.js，以便它包含 `imsOrgID` 变量，基于租户。 与Marketing CloudID服务集成时需要此变量。 有关信息，请参阅 [Adobe Analytics作为Adobe Target报表源](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/a4t.html) 和 [实施之前](https://docs.adobe.com/content/help/en/target/using/integrate/a4t/before-implement.html).
+例如，如果要使用 [Marketing CloudID服务](https://experienceleague.adobe.com/docs/id-service/using/home.html) 您需要下载mbox.js，以便它包含 `imsOrgID` 变量，基于租户。 与Marketing CloudID服务集成时需要此变量。 有关信息，请参阅 [Adobe Analytics作为Adobe Target报表源](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 和 [实施之前](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html).
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ JSP会将所需的Analytics Javascript对象和引用添加到客户端Javascrip
 >
 >如果您没有使用DTM，则会向Adobe Target发送订单确认。
 
-要跟踪网站的性能，请将购买信息从订单确认页面发送到Adobe Target。 (请参阅 [创建orderConfirmPage Mbox](https://docs.adobe.com/content/help/en/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html) (请参阅Adobe Target文档。) 当您的MBox名称为 `orderConfirmPage` 和会使用以下特定参数名称：
+要跟踪网站的性能，请将购买信息从订单确认页面发送到Adobe Target。 (请参阅 [创建orderConfirmPage Mbox](https://experienceleague.adobe.com/docs/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html) (请参阅Adobe Target文档。) 当您的MBox名称为 `orderConfirmPage` 和会使用以下特定参数名称：
 
 * productPurchasedId:标识已购产品的ID列表。
 * orderId:订单的ID。

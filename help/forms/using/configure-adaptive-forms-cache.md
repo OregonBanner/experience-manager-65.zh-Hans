@@ -11,9 +11,9 @@ discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -62,10 +62,10 @@ ht-degree: 1%
 
 执行下面列出的步骤，以在调度程序上启用和配置缓存自适应表单：
 
-1. 为您环境的每个发布实例打开以下URL，并 [为环境的publish实例启用刷新代理](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
+1. 为您环境的每个发布实例打开以下URL，并 [为环境的publish实例启用刷新代理](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
-1. [将以下内容添加到dispatcher.any文件](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
+1. [将以下内容添加到dispatcher.any文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
 
    ```JSON
       /invalidate
@@ -94,7 +94,7 @@ ht-degree: 1%
    * 自适应表单会一直保留在缓存中，直到未发布表单的更新版本为止。
 
    * 发布自适应表单中引用的较新版本资源后，受影响的自适应表单会自动失效。 引用资源的自动失效存在一些例外。 有关例外的解决方法，请参阅 [疑难解答](#troubleshooting) 中。
-1. [添加以下规则dispatcher.any或自定义规则文件](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache). 它不包括不支持缓存的URL。 例如，交互式通信。
+1. [添加以下规则dispatcher.any或自定义规则文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache). 它不包括不支持缓存的URL。 例如，交互式通信。
 
    ```JSON
       /0000 {
@@ -118,7 +118,7 @@ ht-degree: 1%
       }
    ```
 
-1. [将以下参数添加到忽略URL参数列表](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters):
+1. [将以下参数添加到忽略URL参数列表](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters):
 
    ```JSON
       /ignoreUrlParams {
@@ -128,7 +128,7 @@ ht-degree: 1%
       }
    ```
 
-您的AEM环境已配置为缓存自适应表单。 它会缓存所有类型的自适应表单。 如果在传送缓存的页面之前需要检查页面的用户访问权限，请参阅 [缓存受保护内容](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/permissions-cache.html).
+您的AEM环境已配置为缓存自适应表单。 它会缓存所有类型的自适应表单。 如果在传送缓存的页面之前需要检查页面的用户访问权限，请参阅 [缓存受保护内容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 
 ## 疑难解答 {#troubleshooting}
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1754'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ AEM必须知道可在何处检索远程渲染的内容。 无论 [选择为SSR�
 * **远程端点URL**  — 负责生成内容的端点的URL
    * 如果不在本地网络中，则使用安全HTTPS协议。
 * **其他请求头**  — 要添加到发送到远程端点的请求的其他标头
-   * 模式： `key=value`
+   * 图案: `key=value`
 * **请求超时**  — 远程主机请求超时（以毫秒为单位）
 
 >[!NOTE]
@@ -180,7 +180,7 @@ AEM中的SPA的SSR需要Adobe I/O Runtime，这用于渲染应用程序内容服
 
 >[!NOTE]
 >
->任何AEM项目都应利用 [AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
+>任何AEM项目都应利用 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
 
 ## 使用Node.js {#using-node-js}
 

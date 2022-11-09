@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 81%
+source-wordcount: '1216'
+ht-degree: 83%
 
 ---
 
@@ -68,7 +68,7 @@ AEM体验片段可导出到Adobe Target中的默认工作区，或导出到Adobe
 >有关更多信息，另请参阅：
 >
 >* [Adobe Target 开发](https://www.adobe.io/apis/experiencecloud/target.html)
->* [核心组件 – 体验片段](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
+>* [核心组件 – 体验片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html)
 >
 
 
@@ -118,7 +118,7 @@ AEM体验片段可导出到Adobe Target中的默认工作区，或导出到Adobe
    >
    >请参阅核心组件：
    >
-   >[核心组件 – 体验片段](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
+   >[核心组件 – 体验片段](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html)
 
    在 **Adobe Target** 下，选择：
 

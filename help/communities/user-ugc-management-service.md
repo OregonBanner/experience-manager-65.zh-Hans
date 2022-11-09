@@ -12,10 +12,10 @@ discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 0%
+source-wordcount: '589'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ AEM Communities提供了现成的API来管理用户配置文件和批量管理�
 
 >[!NOTE]
 >
->如果您配置了 [Adobe Analytics在AEM Communities](/help/communities/analytics.md) 站点中，捕获的用户数据会发送到Adobe Analytics服务器。 Adobe Analytics提供了一些API，允许您访问、导出和删除用户数据，并符合GDPR。 有关更多信息，请参阅 [提交访问和删除请求](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+>如果您配置了 [Adobe Analytics在AEM Communities](/help/communities/analytics.md) 站点中，捕获的用户数据会发送到Adobe Analytics服务器。 Adobe Analytics提供了一些API，允许您访问、导出和删除用户数据，并符合GDPR。 有关更多信息，请参阅 [提交访问和删除请求](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
 
 要使用这些API，您需要启用 `/services/social/ugcmanagement` 端点。 要激活此服务，请安装 [示例servlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) 可在 [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 然后，使用http请求，通过相应参数点击社区站点的发布实例上的端点，如下所示：
 
@@ -63,7 +63,7 @@ AEM Communities提供了现成的API来管理用户配置文件和批量管理�
 
 ### 从Adobe Analytics中删除UGC {#delete-ugc-from-adobe-analytics}
 
-要从Adobe Analytics中删除用户数据，请按照 [GDPR分析工作流程](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html);因为API不会从Adobe Analytics中删除用户数据。
+要从Adobe Analytics中删除用户数据，请按照 [GDPR分析工作流程](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html);因为API不会从Adobe Analytics中删除用户数据。
 
 有关AEM Communities使用的Adobe Analytics变量映射，请参阅下图：
 

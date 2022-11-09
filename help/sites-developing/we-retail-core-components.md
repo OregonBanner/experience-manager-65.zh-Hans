@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '535'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,6 @@ ht-degree: 1%
 
 ## 更多信息 {#further-information}
 
-有关核心组件的更多信息，请参阅创作文档 [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 有关核心组件和开发人员文档功能的概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以了解技术概述。
+有关核心组件的更多信息，请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 有关核心组件和开发人员文档功能的概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以了解技术概述。
 
 另外，您可能希望进一步调查 [可编辑模板](/help/sites-developing/we-retail-editable-templates.md). 请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md) 或开发人员文档页面 [模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 以了解有关可编辑模板的完整详细信息。

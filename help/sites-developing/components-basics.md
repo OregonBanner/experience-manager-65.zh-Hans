@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '4952'
+source-wordcount: '4948'
 ht-degree: 1%
 
 ---
@@ -67,13 +67,13 @@ ht-degree: 1%
 
 建议将负责标记和渲染的代码与用于控制组件内容选择逻辑的代码分开。
 
-这一理念得到了 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)，一种模板语言，有意限制该语言，以确保使用真实的编程语言来定义底层业务逻辑。 可通过特定命令从HTL调用此（可选）逻辑。 此机制会突出显示为给定视图调用的代码，并在必要时，允许对同一组件的不同视图使用特定逻辑。
+这一理念得到了 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，一种模板语言，有意限制该语言，以确保使用真实的编程语言来定义底层业务逻辑。 可通过特定命令从HTL调用此（可选）逻辑。 此机制会突出显示为给定视图调用的代码，并在必要时，允许对同一组件的不同视图使用特定逻辑。
 
 ### HTL与JSP {#htl-vs-jsp}
 
 HTL是AEM 6.0中引入的一种HTML模板语言。
 
-是否使用的探讨 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 或JSP（Java服务器页面）开发您自己的组件时应该直截了当，因为HTL现在是AEM的推荐脚本语言。
+是否使用的探讨 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 或JSP（Java服务器页面）开发您自己的组件时应该直截了当，因为HTL现在是AEM的推荐脚本语言。
 
 HTL和JSP都可用于为经典用户界面和触屏优化用户界面开发组件。 虽然可能会倾向于认为HTL仅适用于触屏UI，而JSP则适用于经典UI，但这是一种误解，而且更多是由于时间原因。 触屏优化UI和HTL大约在同一时段合并到AEM中。 由于HTL现在是推荐的语言，因此它正用于新组件，这些组件通常用于触屏UI。
 

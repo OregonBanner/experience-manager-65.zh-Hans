@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '427'
 ht-degree: 97%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Manager (AEM) 附带多种现成的组件，这些组件为网�
 
 以下页面提供了指向有关组件的一些其他重要信息的链接：
 
-* [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) - 核心组件提供了灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) - 核心组件提供了灵活且功能丰富的创作功能，可提供创建页面所需的基本内容类型。
 
 * [社区](/help/communities/author-communities.md) - 这些组件为网站提供了交互式功能，例如论坛和评论。当 [社区站点](/help/communities/overview.md) 创建时。
 

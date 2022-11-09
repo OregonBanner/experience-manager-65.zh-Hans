@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 24%
+source-wordcount: '1089'
+ht-degree: 25%
 
 ---
 
@@ -121,7 +121,7 @@ ht-degree: 24%
 1. 打开 **[!UICONTROL Forms通用配置服务].**
 1. 在 **[!UICONTROL 允许]** 字段， **选择** 所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签名表单，然后单击 **[!UICONTROL 保存].** 创作实例配置为使用 [!DNL Adobe Sign].
 1. 发布配置。
-1. 使用 [复制](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html) 以在相应的发布实例上创建相同的配置。
+1. 使用 [复制](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=zh-Hans) 以在相应的发布实例上创建相同的配置。
 
 现在， [!DNL Adobe Sign] 与AEM集成 [!DNL Forms] 并可在自适应表单中使用。 至 [在自适应表单中使用Adobe Sign服务](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)，在自适应表单属性中指定上面创建的配置容器。
 

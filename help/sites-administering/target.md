@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 63%
+source-wordcount: '598'
+ht-degree: 64%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 63%
 
 将AEM与Adobe Target集成需要了解Adobe Target、AEM活动管理和AEM受众管理。 您应熟悉以下信息：
 
-* Adobe Target（请参阅 [Adobe Target 文档](https://docs.adobe.com/content/help/en/target/using/target-home.html)）。
+* Adobe Target（请参阅 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/target-home.html)）。
 * AEM活动控制台(请参阅 [管理活动](/help/sites-authoring/activitylib.md))。
 * AEM受众(请参阅 [管理受众](/help/sites-authoring/managing-audiences.md))。
 

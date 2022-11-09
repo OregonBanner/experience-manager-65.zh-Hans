@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: f2a208acfa28f23cbf63d055c5d28698df476892
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '3485'
-ht-degree: 3%
+source-wordcount: '3477'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ AEM组件用于保存、格式化和渲染网页上提供的内容。
 
 ### 使用HTML模板语言 {#using-the-html-template-language}
 
-的 [HTML模板语言(HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)，在AEM 6.0中引入，取代了JSP(JavaServer Pages)，成为首选和推荐的服务器端模板系统，用于HTML。 对于需要构建强大企业网站的Web开发人员，HTL有助于提高安全性和开发效率。
+的 [HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，在AEM 6.0中引入，取代了JSP(JavaServer Pages)，成为首选和推荐的服务器端模板系统，用于HTML。 对于需要构建强大企业网站的Web开发人员，HTL有助于提高安全性和开发效率。
 
 >[!NOTE]
 >
@@ -433,7 +433,7 @@ GITHUB上的代码
 
 >[!NOTE]
 >
->现在，使用 [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 和可编辑的模板。 请参阅 [创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 有关定义与给定媒体类型自动关联的组件的详细信息。
+>现在，使用 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和可编辑的模板。 请参阅 [创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 有关定义与给定媒体类型自动关联的组件的详细信息。
 
 ## 使用AEM Brackets扩展 {#using-the-aem-brackets-extension}
 
@@ -442,7 +442,7 @@ GITHUB上的代码
 扩展：
 
 * 简化了同步（不需要Maven或File Vault），以帮助提高开发人员效率，并帮助知识有限的前端开发人员参与项目。
-* 提供一些 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 支持，模板语言旨在简化组件开发并提高安全性。
+* 提供一些 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 支持，模板语言旨在简化组件开发并提高安全性。
 
 >[!NOTE]
 >
@@ -454,7 +454,7 @@ GITHUB上的代码
 
 * HTL
 
-   * 使用 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 不是强制的，但如果您的组件需要更新，则最好考虑 [从JSP迁移到HTL](/help/sites-developing/components-basics.md#htl-vs-jsp).
+   * 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 不是强制的，但如果您的组件需要更新，则最好考虑 [从JSP迁移到HTL](/help/sites-developing/components-basics.md#htl-vs-jsp).
 
 * 组件
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,8 @@ AEM提供了各种机制，允许您自定义控制台( [页面创作功能](/he
 >* 使用和创建 [叠加](/help/sites-developing/overlays.md).
 >* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 >
->本主题还在 [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) 会话 —  [AEM 6.0的用户界面自定义](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html).
+
+
 
 >[!CAUTION]
 >

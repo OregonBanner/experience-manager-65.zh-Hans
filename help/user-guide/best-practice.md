@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Best Practices
 description: AEM 6.5最佳实践、疑难解答和培训资源
 seo-description: Resources for best practices, troubleshooting and training for AEM 6.5
 exl-id: 077c00b9-f2ec-49a3-8d85-a3d3ecf287bb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 53%
+source-wordcount: '425'
+ht-degree: 52%
 
 ---
 
@@ -46,7 +46,7 @@ AEM 在组织中具有多种用途，且内容广泛，足以为整个公司提�
 * [AEM Communities 快速入门](/help/communities/getting-started.md)
 * [AEM Livefyre 快速入门](https://answers.livefyre.com/developers/getting-started/)
 
-我们还有一个 [WKND教程，该教程是使用AEM创建首个网站的分步指南](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 以及 [部署数字化基础解决方案的分步方法](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)，其中AEM是关键构建基块。
+我们还有一个 [WKND教程，该教程是使用AEM创建首个网站的分步指南](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans) 以及 [部署数字化基础解决方案的分步方法](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)，其中AEM是关键构建基块。
 
 ## 推荐的AEM部署 {#deployments}
 

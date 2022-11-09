@@ -10,10 +10,10 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 10%
+source-wordcount: '590'
+ht-degree: 7%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 10%
 * 拥有标准化的用户界面。
 * 具有可配置的编辑行为。
 * 使用基于Granite UI组件使用子元素构建的对话框
-* 使用 [HTL](https://docs.adobe.com/content/help/zh-Hans/experience-manager-htl/using/overview.html) （推荐）或JSP。
+* 使用 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) （推荐）或JSP。
 * 可以开发以创建可扩展默认功能的自定义组件。
 
 由于组件是模块化的，因此您可以：
@@ -64,7 +64,7 @@ AEM附带多种 [开箱即用的组件](/help/sites-authoring/default-components
 
 提供了两组Adobe提供的AEM组件：
 
-* [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [基础组件](/help/sites-authoring/default-components-foundation.md)
 
 **核心组件** 已在AEM 6.3中引入，并提供了灵活且功能丰富的创作功能。 的 [We.Retail参考网站](/help/sites-developing/we-retail.md) 说明核心组件的使用方式，并代表组件开发的当前最佳实践。
@@ -73,7 +73,7 @@ AEM附带多种 [开箱即用的组件](/help/sites-authoring/default-components
 
 >[!NOTE]
 >
->[核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) 代表组件设计和开发的当前最佳实践，并用作参考实施。
+>[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) 代表组件设计和开发的当前最佳实践，并用作参考实施。
 >
 >[AEM现代化工具](modernization-tools.md) 有助于迁移到核心组件。
 
@@ -106,7 +106,7 @@ AEM附带多种 [开箱即用的组件](/help/sites-authoring/default-components
 * [内容片段的组件](/help/sites-developing/components-content-fragments.md)
 * [以JSON格式获取页面信息](/help/sites-developing/pageinfo.md)
 * [组件国际化](/help/sites-developing/i18n.md)
-* [核心组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [使用隐藏条件](/help/sites-developing/hide-conditions.md)
 * 经典 UI
 

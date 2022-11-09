@@ -11,10 +11,10 @@ topic-tags: introduction
 discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 22%
+source-wordcount: '259'
+ht-degree: 18%
 
 ---
 
@@ -30,16 +30,16 @@ ht-degree: 22%
 
 ![WKND](assets/screen_shot_2018-11-23at152453.png)
 
-[此处提供了WKND开发人员教程](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) 并指导您使用最新技术和最佳实践创建AEM项目。
+[此处提供了WKND开发人员教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans) 并指导您使用最新技术和最佳实践创建AEM项目。
 
 ## 核心概念 {#core-concepts}
 
 教程实施可利用AEM的许多强大功能。 网站将使用：
 
-* [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Sling 模型](https://sling.apache.org/documentation/bundles/models.html)
 * [触屏 UI](/help/sites-developing/touch-ui-concepts.md)
-* [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [可编辑模板](/help/sites-developing/page-templates-editable.md)
 
 在详细介绍上述概念之前，请先阅读本教程。

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1743'
 ht-degree: 2%
 
 ---
@@ -140,7 +140,7 @@ XX后缀是定义里程碑的跟踪偏移。 例如，指定4、8、16、20和28
 
 1. 要将CQ变量映射到Adobe Analytics属性，请将Adobe Analytics属性从ContentFinder拖动到组件上CQ变量旁边。
 
-   有关优化映射的信息，请参阅 [在Adobe Analytics中测量视频](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 的双曲余切值。
+   有关优化映射的信息，请参阅 [在Adobe Analytics中测量视频](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) 的双曲余切值。
 
 1. [添加框架](/help/sites-administering/adobeanalytics.md) 到页面。
 1. 在中测试设置 **预览模式**，请播放视频以触发Adobe Analytics调用。
@@ -275,7 +275,7 @@ eventdata.events.milestoneXX
 
 1. 要将CQ变量映射到Adobe Analytics属性，请将Adobe Analytics属性从ContentFinder拖动到组件上CQ变量旁边。
 
-   有关优化映射的信息，请参阅 [在Adobe Analytics中测量视频](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html) 的双曲余切值。
+   有关优化映射的信息，请参阅 [在Adobe Analytics中测量视频](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) 的双曲余切值。
 
 1. [添加框架](/help/sites-administering/adobeanalytics.md) 到页面。
 1. 在中测试设置 **预览模式**，请播放视频以触发Adobe Analytics调用。
@@ -383,4 +383,4 @@ eventdata.events.milestoneXX
 
 **本教程中使用的引用：**
 
-[0] [https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
+[0] [https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)

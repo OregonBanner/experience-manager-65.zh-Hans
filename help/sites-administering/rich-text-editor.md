@@ -3,9 +3,9 @@ title: 配置富文本编辑器以在Adobe Experience Manager中创作内容。
 description: 了解如何配置Adobe Experience Manager富文本编辑器以在Adobe Experience Manager中创作内容。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3020'
 ht-degree: 1%
 
 ---
@@ -181,9 +181,9 @@ RTE功能通过一系列插件提供，每个插件都具有features属性。 �
 
 >[!NOTE]
 >
->的 [核心组件文本组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) 允许模板编辑器将GUI中的许多RTE插件配置为内容策略，而无需进行技术配置。 内容策略可以与RTE UI配置配合使用，如本文档中所述。
+>的 [核心组件文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=en#the-text-component-and-the-rich-text-editor) 允许模板编辑器将GUI中的许多RTE插件配置为内容策略，而无需进行技术配置。 内容策略可以与RTE UI配置配合使用，如本文档中所述。
 >
->有关更多信息，请参阅 [RTE UI设置和内容策略](/help/sites-administering/rich-text-editor.md) 本文档的章节 [创建页面模板](/help/sites-authoring/templates.md) 和 [核心组件开发人员文档](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html).
+>有关更多信息，请参阅 [RTE UI设置和内容策略](/help/sites-administering/rich-text-editor.md) 本文档的章节 [创建页面模板](/help/sites-authoring/templates.md) 和 [核心组件开发人员文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >[!NOTE]
 >

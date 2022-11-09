@@ -2,10 +2,10 @@
 title: Adobe内容包Maven插件
 description: 使用内容包Maven插件部署AEM应用程序
 exl-id: 002c00ba-eda1-4481-bc35-1f4d972e4073
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 11%
+source-wordcount: '159'
+ht-degree: 9%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 11%
 >有关更多详细信息，请参阅：
 >
 >* 的 [Adobe内容包Maven插件](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools) 有关如何部署AEM应用程序的AEMas a Cloud Service文档中的文章。
->* 的 [AEM项目结构](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 有关如何构建现代AEM项目的AEMas a Cloud Service文档中的文章。
->* 的 [AEM项目原型](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/developing/archetype/overview.html) 文档介绍了如何使用原型启动新的AEM项目。
+>* 的 [AEM项目结构](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 有关如何构建现代AEM项目的AEMas a Cloud Service文档中的文章。
+>* 的 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 文档介绍了如何使用原型启动新的AEM项目。
 >
 >这三个文档都适用于AEM 6.5。

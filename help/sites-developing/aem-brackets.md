@@ -10,10 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 2%
+source-wordcount: '925'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 概述 {#overview}
 
-AEM Brackets扩展提供了一个顺畅的工作流，用于编辑AEM组件和客户端库，并利用 [括号](https://brackets.io/) 代码编辑器，用于从代码编辑器中访问Photoshop文件和层。 扩展提供的轻松同步（不需要Maven或File Vault）提高了开发人员的效率，并且还帮助了解有限AEM的前端开发人员参与项目。 此扩展还为 [HTML模板语言(HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)，这消除了JSP的复杂性，使组件开发更简单、更安全。
+AEM Brackets扩展提供了一个顺畅的工作流，用于编辑AEM组件和客户端库，并利用 [括号](https://brackets.io/) 代码编辑器，用于从代码编辑器中访问Photoshop文件和层。 扩展提供的轻松同步（不需要Maven或File Vault）提高了开发人员的效率，并且还帮助了解有限AEM的前端开发人员参与项目。 此扩展还为 [HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，这消除了JSP的复杂性，使组件开发更简单、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 

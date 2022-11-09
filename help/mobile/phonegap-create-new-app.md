@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
 exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ AEM Mobile应用程序基于定义页面结构和属性的蓝图。 您可以配
 内部版本云服务以及将AdobeMobile Services SDK插件集成到您的应用程序中，还存在其他（可选）选项卡。
 
 * 内部版本：单击此处管理配置并设置build.phonegap.com构建服务。 然后，从下拉列表中，您将能够选择新创建的PhoneGap内部版本云服务。
-* Analytics:单击管理配置并设置 [AdobeMobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html) 云服务。 然后，您将能够从下拉菜单中选择新创建的Mobile Service，以将其集成到您的移动设备应用程序中。
+* Analytics:单击管理配置并设置 [AdobeMobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) 云服务。 然后，您将能够从下拉菜单中选择新创建的Mobile Service，以将其集成到您的移动设备应用程序中。
 
 ## 使用应用程序模板 {#using-app-templates}
 

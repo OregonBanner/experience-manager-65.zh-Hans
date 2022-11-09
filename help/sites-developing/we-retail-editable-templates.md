@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 12%
+source-wordcount: '481'
+ht-degree: 11%
 
 ---
 
@@ -75,4 +75,4 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
 有关详细信息，请参阅创作文档 [创建页面模板](/help/sites-authoring/templates.md) 或开发人员文档页面 [模板 — 可编辑](/help/sites-developing/page-templates-editable.md) 以了解有关可编辑模板的完整技术详细信息。
 
-您可能还希望调查 [核心组件](/help/sites-developing/we-retail-core-components.md). 请参阅创作文档 [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 有关核心组件和开发人员文档功能的概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以了解技术概述。
+您可能还希望调查 [核心组件](/help/sites-developing/we-retail-core-components.md). 请参阅创作文档 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 有关核心组件和开发人员文档功能的概述 [开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) 以了解技术概述。

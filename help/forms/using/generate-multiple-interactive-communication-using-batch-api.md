@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2234'
+source-wordcount: '2228'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 1%
 
 要根据JSON文件中保存的记录创建交互式通信，请执行以下操作：
 
-1. 创建 [监视文件夹](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 并将其配置为使用批处理API:
+1. 创建 [监视文件夹](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 并将其配置为使用批处理API:
    1. 登录到AEM Forms创作实例。
    1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置监视文件夹]**. 点按 **[!UICONTROL 新建]**.
    1. 指定 **[!UICONTROL 名称]** 物理 **[!UICONTROL 路径]** 的子菜单。 例如：`c:\batchprocessing`。
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 #### 使用保存在外部数据源中并通过表单数据模型访问的输入数据来产生交互式通信 {#use-fdm-as-data-source}
 
-可将保存在外部数据源中的数据（记录）与交互式通信模板组合，以生成交互式通信。 创建交互式通信时，可通过表单数据模型(FDM)将其连接到外部数据源以访问数据。 您可以配置“监视文件夹”批处理服务，以便从外部数据源中使用相同的表单数据模型获取数据。 至 [根据保存在外部数据源中的记录创建交互式通信](https://docs.adobe.com/content/help/en/experience-manager-64/forms/form-data-model/work-with-form-data-model.html):
+可将保存在外部数据源中的数据（记录）与交互式通信模板组合，以生成交互式通信。 创建交互式通信时，可通过表单数据模型(FDM)将其连接到外部数据源以访问数据。 您可以配置“监视文件夹”批处理服务，以便从外部数据源中使用相同的表单数据模型获取数据。 至 [根据保存在外部数据源中的记录创建交互式通信](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html):
 
 1. 配置模板的表单数据模型：
    1. 打开与交互式通信模板关联的表单数据模型。
@@ -141,7 +141,7 @@ ht-degree: 1%
 
    1. 保存并关闭文件。
 
-1. 创建 [监视文件夹](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 并将其配置为使用批处理API服务：
+1. 创建 [监视文件夹](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) 并将其配置为使用批处理API服务：
    1. 登录到AEM Forms创作实例。
    1. 导航到 **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置监视文件夹]**. 点按 **[!UICONTROL 新建]**.
    1. 指定 **[!UICONTROL 名称]** 物理 **[!UICONTROL 路径]** 的子菜单。 例如：`c:\batchprocessing`。

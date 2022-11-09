@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: f64319e88687ba1f53c98d4768492a0b4f4b08b8
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2204'
+ht-degree: 44%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在AEM 6.3中，您可以选择Target库文件： [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，这是适用于Adobe Target的新实施库，专为典型的Web实施和单页应用程序而设计。
+>在AEM 6.3中，您可以选择Target库文件： [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html)，这是适用于Adobe Target的新实施库，专为典型的Web实施和单页应用程序而设计。
 >
 >AT.js 对 mbox.js 库进行了多项改进：
 >
@@ -107,7 +107,7 @@ ht-degree: 0%
 手动与Adobe Target集成，而不是使用选择加入向导。
 
 >[!NOTE]
-Target 库文件 [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html) 是 Adobe Target 的新实施库，专为典型的 Web 实施和单页应用程序而设计。Adobe 建议您使用 AT.js 而不是 mbox.js 作为客户端库。
+Target 库文件 [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html) 是 Adobe Target 的新实施库，专为典型的 Web 实施和单页应用程序而设计。Adobe 建议您使用 AT.js 而不是 mbox.js 作为客户端库。
 AT.js 对 mbox.js 库进行了多项改进：
 * 缩短了 Web 实现的页面加载时间
 * 提高了安全性
@@ -209,7 +209,7 @@ AT.js 对 mbox.js 库进行了多项改进：
 
 ### 将活动与Target云配置关联  {#associating-activities-with-the-target-cloud-configuration}
 
-关联您的 [AEM活动](/help/sites-authoring/activitylib.md) 配置，以便能够镜像 [Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html).
+关联您的 [AEM活动](/help/sites-authoring/activitylib.md) 配置，以便能够镜像 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 可用的活动类型由以下因素决定：

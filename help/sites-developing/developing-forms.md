@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: 4df14f837569997c3e4da8161ac2b099c39d89a6
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1940'
 ht-degree: 17%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->本文档重点介绍如何使用 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议利用 [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 和 [隐藏条件](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
+>本文档重点介绍如何使用 [基础组件](/help/sites-authoring/default-components-foundation.md) 在经典UI中。 Adobe建议利用 [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 和 [隐藏条件](/help/sites-developing/hide-conditions.md) 用于触屏UI中的表单开发。
 
 ## 预加载表单值 {#preloading-form-values}
 

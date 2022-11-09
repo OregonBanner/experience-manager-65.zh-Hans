@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2969'
+source-wordcount: '2967'
 ht-degree: 95%
 
 ---
@@ -111,7 +111,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
    <td><a href="/help/sites-authoring/experience-fragments.md">体验片段</a>是独立的体验，可以跨渠道重复使用，也可以具有变量，从而避免反复地复制和粘贴体验或体验的部分内容。</td>
   </tr>
   <tr>
-   <td>Forms</td>
+   <td>表单</td>
    <td>此控制台允许您创建、管理和处理您的<a href="/help/forms/home.md">表单和文档</a>。</td>
   </tr>
   <tr>
@@ -124,7 +124,7 @@ AEM 启用了针对触屏的用户界面。触屏界面允许您使用触屏，�
   </tr>
   <tr>
    <td>屏幕</td>
-   <td><a href="https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">屏幕</a>让您可以管理所有面向客户的屏幕，包括任何尺寸、任何位置的屏幕。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">屏幕</a>让您可以管理所有面向客户的屏幕，包括任何尺寸、任何位置的屏幕。</td>
   </tr>
   <tr>
    <td>Sites</td>

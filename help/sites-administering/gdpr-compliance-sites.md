@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 54%
+source-wordcount: '832'
+ht-degree: 55%
 
 ---
 
@@ -51,13 +51,13 @@ AEM具有 [cookie选择退出服务](/help/sites-developing/cookie-optout.md) �
 
 AEM Sites包含与Analytics“增强的分析”的可选集成，后者使用Adobe Analytics按需服务中的功能。
 
-有关管理与Adobe Analytics相关的GDPR数据主体请求的更多信息，请参阅 [Adobe Analytics和GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html).
+有关管理与Adobe Analytics相关的GDPR数据主体请求的更多信息，请参阅 [Adobe Analytics和GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html).
 
 ## 按Target增强的个性化功能 {#enhanced-personalization-by-target}
 
 AEM Sites包含与Enhanced Personalization by Target的可选集成，后者使用Adobe Target On-demand Service中的功能。
 
-有关管理与Adobe Target相关的GDPR数据主体请求的更多信息，请参阅 [Adobe Target — 隐私和《通用数据保护条例》](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+有关管理与Adobe Target相关的GDPR数据主体请求的更多信息，请参阅 [Adobe Target — 隐私和《通用数据保护条例》](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 

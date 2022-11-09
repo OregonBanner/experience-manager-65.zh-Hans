@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '414'
 ht-degree: 7%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >此示例假定已在实例上安装核心组件，如果实例正在与We.Retail示例内容一起运行，则是如此。 请参阅 [核心组件文档](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) 以了解更多信息。
+   >此示例假定已在实例上安装核心组件，如果实例正在与We.Retail示例内容一起运行，则是如此。 请参阅 [核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) 以了解更多信息。
 
 1. 导航到 `cq:dialog` 定义。
 1. 在字段节点上定义以下属性：

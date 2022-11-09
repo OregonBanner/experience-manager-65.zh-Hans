@@ -4,10 +4,10 @@ description: 流式体验功能列表
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 12%
+source-wordcount: '342'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 Adobe Experience Manager流式体验利用AEM Sites、AEM Dynamic Media和AEM Assets等强大的功能集，为无头内容交付提供了强大的解决方案。
 
-AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放用例。 通过 [完整的AEM Sites、 Assets和Dynamic Media解决方案。](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放用例。 通过 [完整的AEM Sites、 Assets和Dynamic Media解决方案。](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html?lang=zh-Hans)
 
 下表定义了AEM流式体验的功能并链接到相关支持文档。
 
@@ -53,7 +53,7 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [体验片段](/help/sites-authoring/experience-fragments.md) |
 | 适用于结构化内容的HTTP API（读取） |
 | 适用于结构化内容(CRUD)的HTTP API |
-| [核心组件](https://docs.adobe.com/content/help/zh-Hans/experience-manager-core-components/using/introduction.html) |
+| [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
 ## 管理和集成功能 {#admin-and-integration-features}
@@ -66,7 +66,7 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | [内容翻译](/help/sites-administering/translation.md) |
 | [监测](/help/sites-deploying/monitoring-and-maintaining.md) |
 | [备份](/help/sites-administering/backup-and-restore.md) |
-| [Cloud Manager](https://docs.adobe.com/content/help/zh-Hans/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) |
+| [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) |
 | [PIM集成](/help/sites-authoring/managing-product-information.md) |
 | [项目和任务](/help/sites-authoring/projects.md) |
 | [工作流](/help/sites-administering/workflows-starting.md) |
@@ -80,12 +80,12 @@ AEM Fluid Experiences将自己与经典AEM区别在于，只解决无头投放�
 | 由Adobe Analytics提供支持的增强分析功能 |
 | 由Adobe Target提供支持的增强分析功能 |
 
-## 了解更多信息 {#learn-more}
+## 了解详情 {#learn-more}
 
 * [无头用例的流畅体验](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
 * [AEM内容服务：什么，为什么，怎么？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
 * [使用内容服务](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
-* [开发移动应用程序](https://docs.adobe.com/content/help/en/experience-manager-64/mobile/developing/developing-content-services.html)
+* [开发移动应用程序](https://experienceleague.adobe.com/docs/experience-manager-64/mobile/developing/developing-content-services.html)
 * [第三方访问常见问题解答](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
 * [随时随地流畅体验](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
 * [使用Sling API](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)

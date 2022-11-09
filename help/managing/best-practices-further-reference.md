@@ -10,9 +10,9 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3757'
+source-wordcount: '3755'
 ht-degree: 1%
 
 ---
@@ -34,11 +34,11 @@ ht-degree: 1%
 考虑您将使用的AEM的功能及其对设计的影响；例如：
 
 * [商务](/help/commerce/cif-classic/administering/ecommerce.md)
-* [屏幕](https://docs.adobe.com/content/help/zh-Hans/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [屏幕](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [标记](/help/sites-administering/tags.md)
 * [多站点管理和翻译](/help/sites-administering/msm-and-translation.md)
-* [Forms](/help/forms/home.md)
+* [表单](/help/forms/home.md)
 * [社区](/help/communities/deploy-communities.md)
 * [Livefyre](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/livefyre-for-adobe-experience-manager/)
 
@@ -314,7 +314,7 @@ AEM可以与其他Adobe产品和/或第三方服务集成。 这些功能可以�
 * 搜索索引
 * 搜索功能的复杂性；仅允许输入1个搜索词的基本搜索功能比允许用户使用AND/OR/NOT构建复杂搜索语句的高级搜索更快。
 
-应从项目开始就计划并集成这些组件。 可用于监控的机制包括：
+这些组件应从您的项目开始就进行计划和集成。 可用于监控的机制包括：
 
 * **使用AEM request.log监控搜索响应时间**
 

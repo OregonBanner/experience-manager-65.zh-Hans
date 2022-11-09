@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '4703'
+source-wordcount: '4689'
 ht-degree: 3%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 3%
    1. 选择 **[!UICONTROL Forms]** 从 **[!UICONTROL 解决方案]** 下拉列表。
    2. 选择包的版本和类型。 您还可以使用 **[!UICONTROL 搜索下载]** 选项来筛选结果。
 1. 点按 **we-gov-forms.pkg.all-&lt;version>.zip** 包名称，选择 **[!UICONTROL 接受EULA条款]**，然后点按 **[!UICONTROL 下载]**.
-1. 打开[包管理器](https://docs.adobe.com/content/help/zh-Hans/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)，并单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择包并单击 **[!UICONTROL 安装]**.
 
    ![we gov表单包](assets/wegov_forms_package.jpg)
@@ -225,7 +225,7 @@ ht-degree: 3%
 
 **引用:**
 
-1. [Microsoft Dynamics OData配置](https://docs.adobe.com/content/help/en/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
+1. [Microsoft Dynamics OData配置](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
 1. [为Microsoft配置Dynamics](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
 
 #### MS Dynamics OData云服务 {#ms-dynamics-odata-cloud-service}
@@ -472,7 +472,7 @@ AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.anal
 
 在阅读进一步说明之前，请查看以下内容：
 
-* [配置自动化表单转换服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html)
+* [配置自动化表单转换服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 #### 创建IMS配置第1部分 {#creating-ims-config}
 
@@ -507,7 +507,7 @@ AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.anal
 
 1. 在Experience Cloud部分中，选择Forms转换工具。
 
-1. 单击继续。
+1. 单击“继续”。
 
 1. 输入集成的名称和描述。
 
@@ -569,7 +569,7 @@ AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.anal
 
 1. 对于此配置，我们将两个复选框值留空。
 
-   * 要进一步了解这些选项，请参阅 [配置云服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+   * 要进一步了解这些选项，请参阅 [配置云服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
 
 #### 配置云配置（We.Finance AFC生产） {#configure-cloud-configuration-wefinance}
 
@@ -599,7 +599,7 @@ AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.anal
 
 1. 对于此配置，我们将两个复选框值留空。
 
-   * 要进一步了解这些选项，请参阅 [配置云服务](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
+   * 要进一步了解这些选项，请参阅 [配置云服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service).
 
 #### 测试表单转换（We.Gov注册应用程序） {#test-forms-conversion}
 
@@ -639,7 +639,7 @@ AEM Forms Analytics数据在离线时可用，或者如果 `we-gov-forms.ui.anal
 
 #### 已知问题和说明 {#known-issues-notes}
 
-automated forms conversion服务包括 [最佳实践，已知的复杂模式](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和 [已知问题](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html). 在开始使用AEM FormsAutomated forms conversion服务之前，请查看这些内容。
+automated forms conversion服务包括 [最佳实践，已知的复杂模式](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)和 [已知问题](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/known-issues.html). 在开始使用AEM FormsAutomated forms conversion服务之前，请查看这些内容。
 
 1. 如果要在转换后将表单绑定到FDM，请生成未启用数据绑定的生成自适应表单。
 

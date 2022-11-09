@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '2394'
+source-wordcount: '2392'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 >
 >虽然HTML模板语言(HTL)和JSP都可用于开发经典UI的组件，但本页说明了如何使用JSP进行开发。 这完全是由于在经典UI中使用JSP的历史记录所致。
 >
->HTL现在是推荐的AEM脚本语言。 请参阅 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 和 [开发AEM组件](/help/sites-developing/developing-components.md) 来比较方法。
+>HTL现在是推荐的AEM脚本语言。 请参阅 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 和 [开发AEM组件](/help/sites-developing/developing-components.md) 来比较方法。
 
 ## 结构 {#structure}
 

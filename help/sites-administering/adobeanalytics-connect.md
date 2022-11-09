@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1528'
 ht-degree: 8%
 
 ---
@@ -87,7 +87,7 @@ AEM默认使用圣何塞(https://api.omniture.com/admin/1.4/rest/)数据中心�
 >
 >由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
 >
->的 [ActivityMap插件由Adobe Analytics提供](https://docs.adobe.com/content/help/zh-Hans/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
+>的 [ActivityMap插件由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
 
 ## 为Activity Map配置 {#configuring-for-the-activity-map}
 
@@ -95,7 +95,7 @@ AEM默认使用圣何塞(https://api.omniture.com/admin/1.4/rest/)数据中心�
 >
 >由于 Adobe Analytics API 中的安全性更改，无法再使用 AEM 中包含的 Activity Map 版本。
 >
->的 [ActivityMap插件由Adobe Analytics提供](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
+>的 [ActivityMap插件由Adobe Analytics提供](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) 现在应使用。
 
 ## 创建Adobe Analytics框架 {#creating-a-adobe-analytics-framework}
 
@@ -184,7 +184,7 @@ AEM默认使用圣何塞(https://api.omniture.com/admin/1.4/rest/)数据中心�
 1. 选择 **保存并关闭**.
 1. **[发布](/help/sites-authoring/publishing-pages.md)** 用于激活页面和任何连接的配置/文件的页面。
 1. 最后一步是访问发布实例上的页面，并使用 **搜索** 组件。
-1. 然后，您可以使用适当的工具检查对Adobe Analytics发出的调用；例如， [Adobe Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html).
+1. 然后，您可以使用适当的工具检查对Adobe Analytics发出的调用；例如， [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
 1. 使用提供的示例，调用应包含eVar7中输入的值（即茄子），事件列表应包含event3。
 
 ### 页面查看次数 {#page-views}

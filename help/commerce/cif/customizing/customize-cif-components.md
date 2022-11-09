@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2592'
 ht-degree: 2%
 
 ---
@@ -190,7 +190,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 
 Sling模型将作为Java实施，并可在 **核心** 模块。
 
-使用 [您选择的IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide) 导入Venia项目。 使用的屏幕截图来自 [Visual Studio代码IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+使用 [您选择的IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#set-up-the-development-ide) 导入Venia项目。 使用的屏幕截图来自 [Visual Studio代码IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?#microsoft-visual-studio-code).
 
 1. 在IDE中，在 **核心** 模块： `core/src/main/java/com/venia/core/models/commerce/MyProductTeaser.java`.
 
@@ -330,9 +330,9 @@ Sling模型将作为Java实施，并可在 **核心** 模块。
 
 ## 自定义Product Teaser的标记 {#customize-markup-product-teaser}
 
-AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 [HTL脚本](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) 组件用来呈现其标记的标记。 HTML模板语言(HTL)是一种轻量级的模板语言，AEM组件使用它根据创作内容动态渲染标记，从而允许重复使用组件。 例如，可以反复重复使用产品Teaser来显示不同的产品。
+AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 [HTL脚本](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) 组件用来呈现其标记的标记。 HTML模板语言(HTL)是一种轻量级的模板语言，AEM组件使用它根据创作内容动态渲染标记，从而允许重复使用组件。 例如，可以反复重复使用产品Teaser来显示不同的产品。
 
-在本例中，我们要在Teaser顶部渲染一个横幅，以指示产品基于自定义属性为“生态友好”。 的设计模式 [自定义标记](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) 组件的实际上是所有AEM组件的标准，而不仅仅是AEM CIF核心组件的标准。
+在本例中，我们要在Teaser顶部渲染一个横幅，以指示产品基于自定义属性为“生态友好”。 的设计模式 [自定义标记](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) 组件的实际上是所有AEM组件的标准，而不仅仅是AEM CIF核心组件的标准。
 
 >[!NOTE]
 >
@@ -352,7 +352,7 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
        componentGroup="Venia - Commerce"/>
    ```
 
-   上面是我们项目中Product Teaser组件的组件定义。 请注意资产 `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. 以下是创建 [代理组件](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html#create-proxy-components). 我们可以使用，而不是从AEM CIF核心组件中复制和粘贴所有Product Teaser HTL脚本 `sling:resourceSuperType` 继承所有功能。
+   上面是我们项目中Product Teaser组件的组件定义。 请注意资产 `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. 以下是创建 [代理组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html#create-proxy-components). 我们可以使用，而不是从AEM CIF核心组件中复制和粘贴所有Product Teaser HTL脚本 `sling:resourceSuperType` 继承所有功能。
 
 1. 打开文件 `productteaser.html`. 这是 `productteaser.html` 文件 [CIF产品Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)
 
@@ -392,7 +392,7 @@ AEM组件的常见扩展是修改由组件生成的标记。 这是通过覆盖 
 
    在HTL中调用Sling模型方法时， `get` 和 `is` 删除该方法的一部分，并将第一个字母转换为小写。 所以 `isShowBadge()` 变量 `.showBadge` 和 `isEcoFriendly` 变量 `.ecoFriendly`. 基于从 `.isEcoFriendly()` 确定是否 `<span>Eco Friendly</span>` 中。
 
-   有关 `data-sly-test` 其他 [可以在此处找到HTL块语句](https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/block-statements.html#test).
+   有关 `data-sly-test` 其他 [可以在此处找到HTL块语句](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html).
 
 1. 通过命令行终端保存更改并使用您的Maven技能部署对AEM的更新：
 
