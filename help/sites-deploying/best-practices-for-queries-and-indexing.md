@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b60278940f48731ee9085635c0d4a3d7da24ebc8
 workflow-type: tm+mt
-source-wordcount: '4679'
+source-wordcount: '4664'
 ht-degree: 10%
 
 ---
@@ -176,7 +176,7 @@ AEM还默认支持Solr索引。 此功能主要用于支持全文搜索，但也
 
 >[!NOTE]
 >
->而采用集成的Solr搜索方法将允许将索引卸载到Solr服务器。 如果通过基于爬网程序的方法使用Solr服务器的更高级功能，则需要额外的配置工作。 Headwire已创建 [开源连接器](https://www.aemsolrsearch.com/#/) 以加速这些类型的实施。
+>而采用集成的Solr搜索方法将允许将索引卸载到Solr服务器。 如果通过基于爬网程序的方法使用Solr服务器的更高级功能，则需要额外的配置工作。
 
 采用这种方法的缺点是，虽然在默认情况下，AEM查询将遵循ACL，从而隐藏用户无权访问的结果，但将搜索外部化到Solr服务器将不支持此功能。 如果要以这种方式将搜索外部化，则必须格外小心，以确保用户不会看到他们不应看到的结果。
 
@@ -458,9 +458,9 @@ Lucene索引的Oak文档列出了在设计索引时需要注意的几个事项�
 
 *在维护时段/低使用时段执行步骤1(a-b)，因为在此操作期间会遍历节点存储，这可能会对系统产生重大负载。*
 
-1a。 执行 `oak-run.jar --generate` 创建预提取其文本的节点列表。
+1a. 执行 `oak-run.jar --generate` 创建预提取其文本的节点列表。
 
-1b。 节点列表(1a)以CSV文件形式存储到文件系统中
+1b. 节点列表(1a)以CSV文件形式存储到文件系统中
 
 请注意，每次都会遍历整个节点存储（由oak-run命令中的路径指定） `--generate` 执行，并且 **新建** 将创建CSV文件。 CSV文件为 **not** 在文本预提取流程的离散执行之间重复使用（步骤1 - 2）。
 
@@ -468,9 +468,9 @@ Lucene索引的Oak文档列出了在设计索引时需要注意的几个事项�
 
 *如果AEM仅与数据存储交互，则在Data Store的正常操作期间可以执行步骤2(a-c)。*
 
-2a。 执行 `oak-run.jar --tika` 为在(1b)中生成的CSV文件中枚举的二进制节点预提取文本
+2a. 执行 `oak-run.jar --tika` 为在(1b)中生成的CSV文件中枚举的二进制节点预提取文本
 
-2b。 在(2a)中启动的进程会直接访问在数据存储的CSV中定义的二进制节点，并提取文本。
+2b. 在(2a)中启动的进程会直接访问在数据存储的CSV中定义的二进制节点，并提取文本。
 
 2c。  提取的文本以Oak重新索引过程(3a)可接收的格式存储在文件系统中
 
@@ -482,6 +482,6 @@ Lucene索引的Oak文档列出了在设计索引时需要注意的几个事项�
 
 *在维护/低使用期间执行重新索引（步骤3a-b），因为在此操作期间会遍历节点存储区，这可能会对系统产生重大负载。*
 
-3a。 [重新编入索引](#how-to-re-index) 在AEM中调用Lucene索引的
+3a. [重新编入索引](#how-to-re-index) 在AEM中调用Lucene索引的
 
-3b。 Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi配置（配置为通过文件系统路径指向提取的文本）会指示Oak从提取的文件中获取全文，并避免直接点击和处理存储在存储库中的数据。
+3b. Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi配置（配置为通过文件系统路径指向提取的文本）会指示Oak从提取的文件中获取全文，并避免直接点击和处理存储在存储库中的数据。
