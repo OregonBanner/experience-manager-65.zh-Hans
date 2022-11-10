@@ -10,16 +10,16 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2042'
 ht-degree: 1%
 
 ---
 
 # 配置数据源{#configure-data-sources}
 
-![](do-not-localize/data-integeration.png)
+![数据集成](do-not-localize/data-integeration.png)
 
 AEM Forms数据集成允许您配置不同的数据源并将其连接到不同的数据源。 支持开箱即用地使用以下类型。 但是，通过少量自定义，您也可以集成其他数据源。
 
@@ -35,7 +35,7 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 
 您可以使用AEM Web控制台配置来配置关系数据库。 执行以下操作：
 
-1. 转到AEM Web控制台，网址为https://server:host/system/console/configMgr。
+1. 转到AEM Web控制台(位于 `https://server:host/system/console/configMgr`.
 1. 查找 **[!UICONTROL Apache Sling连接池化数据源]** 配置。 点按以在编辑模式下打开配置。
 1. 在配置对话框中，指定要配置的数据库的详细信息，例如：
 
@@ -49,14 +49,10 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
    >
    >在配置数据源之前，请确保加密密码等敏感信息。 要加密：
    >
-   >    
-   >    
-   >    1. 转到https://&#39;[服务器]:[端口]“/system/console/crypto。
-   >    1. 在 **[!UICONTROL 纯文本]** 字段中，指定要加密和点按的密码或任何字符串 **[!UICONTROL Protect]**.
+   > 1. 转到https://&#39;[服务器]:[端口]“/system/console/crypto。
+   > 1. 在 **[!UICONTROL 纯文本]** 字段中，指定要加密和点按的密码或任何字符串 **[!UICONTROL Protect]**.
 
-   >    
-   >    
-   >    
+   >
    >加密文本显示在可在配置中指定的受保护文本字段中。
 
 1. 启用 **[!UICONTROL 借用测试]** 或 **[!UICONTROL 在返回时测试]** 指定在从和向池借用或返回对象之前，对这些对象进行验证。
@@ -67,13 +63,17 @@ AEM Forms数据集成允许您配置不同的数据源并将其连接到不同�
 
 1. 点按 **[!UICONTROL 保存]** 以保存配置。
 
+   >[!NOTE]
+   >
+   > 如果Forms数据模型包含的对象是关系数据库的保留关键字，则可能会导致数据添加、更新或检索问题。 因此，请避免在表单数据模型中使用此类对象。
+
 ## 配置AEM用户配置文件 {#configure-aem-user-profile}
 
 您可以在AEM Web Console中使用用户配置文件连接器配置来配置AEM用户配置文件。 执行以下操作：
 
 1. 转到AEM Web控制台，网址为https://&#39;[服务器]:[端口]&#39;system/console/configMgr.
 1. 查找 **[!UICONTROL AEM Forms数据集成 — 用户配置文件连接器配置]** 然后点按以在编辑模式下打开配置。
-1. 在用户配置文件连接器配置对话框中，您可以添加、删除或更新用户配置文件属性。 指定的属性将可在表单数据模型中使用。 使用以下格式指定用户配置文件属性：
+1. 在用户配置文件连接器配置对话框中，您可以添加、删除或更新用户配置文件属性。 指定的属性可在表单数据模型中使用。 使用以下格式指定用户配置文件属性：
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
 
@@ -161,7 +161,6 @@ RESTful Web服务可使用 [Swagger规范](https://swagger.io/specification/) JS
 
    * 指定 **[!UICONTROL 套接字超时]** 字段。 默认值为30秒。
 
-
 ## 配置SOAP Web服务 {#configure-soap-web-services}
 
 使用 [Web服务描述语言(WSDL)规范](https://www.w3.org/TR/wsdl). 要在AEM云服务中配置基于SOAP的Web服务，请确保您具有Web服务的WSDL URL，然后执行以下操作：
@@ -224,4 +223,4 @@ OData服务由其服务根URL标识。 要在AEM云服务中配置OData服务，
 
 ## 下面的步骤 {#next-steps}
 
-您已配置数据源。 接下来，您可以创建表单数据模型，或者如果已经创建了没有数据源的表单数据模型，则可以将其与您刚刚配置的数据源相关联。 请参阅 [创建表单数据模型](/help/forms/using/create-form-data-models.md) 以了解详细信息。
+您已配置数据源。 接下来，您可以创建表单数据模型，或者如果已经创建了没有数据源的表单数据模型，则可以将其与您配置的数据源相关联。 请参阅 [创建表单数据模型](/help/forms/using/create-form-data-models.md) 以了解详细信息。
