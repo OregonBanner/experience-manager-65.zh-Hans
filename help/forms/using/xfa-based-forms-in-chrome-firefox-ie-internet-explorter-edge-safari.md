@@ -2,9 +2,9 @@
 title: 无法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中打开基于XFA的PDF forms
 seo-title: Unable to open XFA-based PDF forms in Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer, or Apple Safari
 feature: Adaptive Forms
-source-git-commit: abaef885f1324c4e0e4c5d74485d5b419ff88e2b
+source-git-commit: f2b76ce0c2f296f81c3748794bf2ab74ccd5bb95
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 0%
 
 * 使用 [Adobe® Acrobat®](https://www.adobe.com/acrobat.html) 或 [Adobe®Adobe®Reader®](https://get.adobe.com/reader/)、版本8或更高版本，以打开并提交基于XFA的PDF forms。
 * Acrobat和Reader在Microsoft® Windows®上，允许您配置为在“受保护视图”模式下打开PDF，这会阻止打开基于XFA的PDF forms。 确保禁用Acrobat或Reader中的“受保护视图”模式。 有关更多信息，请参阅 [受保护视图（仅限Windows）](https://helpx.adobe.com/in/reader/using/protected-mode-windows.html).
-* (对于Forms开发人员)Adobe Experience Manager Forms还支持
+* (对于Forms开发人员)Adobe Experience Manager Forms还支持：
+
    * [将基于XFA的表单渲染到HTML5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/introduction.html?#key-capabilities-of-html-forms-br) 这样，在支持HTML5的浏览器(包括在iPad等移动设备上运行的浏览器)中就可以打开表单。 表单的HTML5呈现版本维护表单设计的布局，并支持XFA表单模板中嵌入的大多数表单逻辑（如JavaScript、表单计算和表单验证）。
    * [将基于XFA的表单转换为移动响应式自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-adaptive-form.html?#create-an-adaptive-form-based-on-an-xfa-form-template). 这些表单提供了响应式布局和个性化功能，并可根据需要添加或删除字段或部分，从而动态地适应用户响应。 它们还为各种数据源提供开箱即用的连接器、记录文档功能，以及轻松连接到Adobe Analytics以进行性能评估。 有关更多信息，请参阅 [主要特性和功能](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/key-features.html).
 
