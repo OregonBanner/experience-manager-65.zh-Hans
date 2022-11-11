@@ -10,7 +10,7 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
+source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
 workflow-type: tm+mt
 source-wordcount: '2831'
 ht-degree: 17%
@@ -21,13 +21,10 @@ ht-degree: 17%
 
 上传图像时，您可以通过将图像配置文件应用到文件夹，在上传时自动裁剪图像。
 
->[!NOTE]
->
->智能裁剪仅在Dynamic Media - Scene7模式下可用。
-
 >[!IMPORTANT]
 >
->图像配置文件不适用于PDF、动画GIF或INDD(Adobe InDesign)文件。
+>·智能裁剪仅在Dynamic Media - Scene7模式下可用。
+·图像配置文件不适用于PDF、动画GIF或INDD(Adobe InDesign)文件。
 
 ## 裁切选项 {#crop-options}
 
@@ -58,8 +55,7 @@ ht-degree: 17%
 使用&#x200B;**[!UICONTROL 钝化蒙版]**&#x200B;对最终取样缩小的图像微调锐化滤镜效果。您可以控制效果的强度、效果的半径（以像素为单位）以及被忽略的对比度阈值。 此效果使用的选项与Adobe Photoshop的 *钝化蒙版* 过滤器。
 
 >[!NOTE]
->
->USM锐化仅应用于PTIFF（金字塔tiff）中缩减采样率超过50%的缩小演绎版。 这意味着ptiff中最大大小的演绎版不会受到USM锐化的影响，而较小的演绎版（如缩略图）会发生更改（并显示USM锐化）。
+USM锐化仅应用于PTIFF（金字塔tiff）中缩减采样率超过50%的缩小演绎版。 这意味着ptiff中最大大小的演绎版不会受到USM锐化的影响，而较小的演绎版（如缩略图）会发生更改（并显示USM锐化）。
 
 在 **[!UICONTROL 钝化蒙版]**，则具有以下筛选选项：
 
@@ -163,9 +159,8 @@ ht-degree: 17%
 
 ## 编辑单个图像的智能裁剪或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
->[!NOTE]
->
->智能裁剪仅在Dynamic Media - Scene7模式下可用。
+>[!IMPORTANT]
+智能裁剪仅在Dynamic Media - Scene7模式下可用。
 
 您可以手动重新调整图像的智能裁剪窗口大小或调整其大小，以进一步优化其焦点。
 
