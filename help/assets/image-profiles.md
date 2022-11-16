@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
+source-git-commit: 008a27c6a1c818a96a24dfcc7f5650409d31e7c2
 workflow-type: tm+mt
-source-wordcount: '2831'
+source-wordcount: '2835'
 ht-degree: 17%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 17%
 
 在图像上实施智能裁剪时，Adobe建议采用以下最佳实践并强制实施以下限制：
 
-| 限制类型 | 最佳实践 | 规定的限制 | 2022年12月31日的上限变更 |
-| --- | --- | --- | --- |
-| 每个图像的智能作物数量 | 5 | 100 | 20 |
+| 限制类型 | 最佳实践 | 规定的限制 |
+| --- | --- | --- |
+| 每个图像的智能作物数量 | 5 | 100 |
 
 另请参阅 [Dynamic Media限制](/help/assets/limitations.md).
 
@@ -160,7 +160,7 @@ USM锐化仅应用于PTIFF（金字塔tiff）中缩减采样率超过50%的缩�
 ## 编辑单个图像的智能裁剪或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
-智能裁剪仅在Dynamic Media - Scene7模式下可用。
+·智能裁剪仅在Dynamic Media - Scene7模式下可用。
 
 您可以手动重新调整图像的智能裁剪窗口大小或调整其大小，以进一步优化其焦点。
 
@@ -188,6 +188,9 @@ USM锐化仅应用于PTIFF（金字塔tiff）中缩减采样率超过50%的缩�
 1. 在页面的右上角附近，选择 **[!UICONTROL 保存]**，然后选择 **[!UICONTROL 关闭]** ，以返回到资产文件夹。
 
 ## 编辑多幅图像的智能裁切或智能色板 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
+
+>[!IMPORTANT]
+·智能裁剪仅在Dynamic Media - Scene7模式下可用。
 
 将包含智能裁剪的图像配置文件应用到文件夹后，该文件夹中的所有图像都会对其应用裁剪。 如果需要，您可以 *手动* 重新调整多幅图像中智能裁剪窗口的大小或调整其大小，以进一步优化其焦点。
 
