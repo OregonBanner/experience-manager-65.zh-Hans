@@ -12,7 +12,7 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: ee45113daee495d9b56a0f6e2c463d9cca006540
+source-git-commit: dd8f24ce412a8ca6c44224a7602533dae0898e92
 workflow-type: tm+mt
 source-wordcount: '6230'
 ht-degree: 2%
@@ -521,7 +521,7 @@ Explain Query是一个工具，用于说明Oak如何执行查询。 可通过转
 
 也可以通过以下URL直接访问该域： `https://serveraddress:port/libs/granite/operations/content/diagnosistools/indexManager.html`
 
-![screenshot_2019-06-18at154754](assets/screen-shot_2019-06-18at154754.png)
+![index_manager](assets/index_manager.png)
 
 UI可用于筛选表格中的索引，方法是在屏幕左上角的搜索框中键入筛选条件。
 
