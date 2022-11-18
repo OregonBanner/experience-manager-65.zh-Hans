@@ -4,9 +4,9 @@ description: 了解内容片段模型如何作为AEM中无头内容的基础，�
 feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
-source-git-commit: 9b3e30f7523ff86fd1ed1b5fc55ce22b8e9f3429
+source-git-commit: 6b9eb1a6df7cc4a8afab1c83d93d8a53bd94f6f5
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2332'
 ht-degree: 95%
 
 ---
@@ -19,8 +19,8 @@ AEM中的内容片段模型为 [内容片段，](/help/assets/content-fragments/
 
 1. [为您的实例启用内容片段模型功能](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 1. [创建](#creating-a-content-fragment-model)和[配置](#defining-your-content-fragment-model)，内容片段模型
-1. [启用您的内容片段模型](#enabling-disabling-a-content-fragment-model)，以便在创建内容片段时使用
-1. [](#allowing-content-fragment-models-assets-folder)通过配置&#x200B;**策略**，允许在所需的 Assets 文件夹上创建内容片段模型。
+1. [启用内容片段模型](#enabling-disabling-a-content-fragment-model) 用于创建内容片段时
+1. 通过配置&#x200B;**策略**，[允许在所需的 Assets 文件夹上创建内容片段模型](#allowing-content-fragment-models-assets-folder)。
 
 ## 创建内容片段模型 {#creating-a-content-fragment-model}
 
