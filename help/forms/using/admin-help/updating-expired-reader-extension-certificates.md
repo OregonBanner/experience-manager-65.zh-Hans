@@ -2,7 +2,7 @@
 title: Reader扩展证书的过期时间及其影响
 description: Reader扩展证书的过期时间及其影响
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: f35a35577f06686558bb1277b0d9bb17f6f0b7bf
+source-git-commit: bcbfdcd305b7319506a11677909895c38f92a6cf
 workflow-type: tm+mt
 source-wordcount: '1114'
 ht-degree: 2%
@@ -27,7 +27,9 @@ Adobe利用公钥基础结构(PKI)颁发数字证书，以用于许可和功能�
 答：Adobe根CA是从中颁发Acrobat Reader扩展证书的证书颁发机构。 2023年1月7日，“Adobe根CA”及其颁发的所有证书将到期。
 
 **问：以前，Adobe曾就证书过期问题和对使用/打开PDF文档的影响发来过信函。 这种通信应该被忽略吗？**
-A.根据对情况的重新评估，2023年1月7日之前使用从旧的&quot;Adobe根CA&quot;颁发的生产证书扩展的所有PDF文件在2023年1月7日之后继续工作，不作任何更改。 如果您已经更新了PDF，则体验不会发生更改
+
+A.根据对情况的重新评估，2023年1月7日之前使用从旧的&quot;Adobe根CA&quot;颁发的生产证书扩展的所有PDF文件在2023年1月7日之后继续工作，不作任何更改。 如果您已经更新了PDF，则体验中不会发生任何更改。
+
 
 **如果我有其他问题，我应该联系谁？**
 
