@@ -3,10 +3,10 @@ title: 用于内容片段的 AEM GraphQL API
 description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 6f3f88ea0f07c97fa8d7ff3bdd1c89114d12a8a1
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '3986'
-ht-degree: 90%
+source-wordcount: '4089'
+ht-degree: 88%
 
 ---
 
@@ -543,6 +543,11 @@ query {
    * 将 `List` 添加到模型名称；例如，`cityList`
    * 请参阅[示例查询 – 关于所有城市的所有信息](#sample-all-information-all-cities)
 
+* 过滤器 `includeVariations` 包含在 `List` 查询类型。  要在查询结果中检索内容片段变量，请 `includeVariations` 筛选器必须设置为 `true`.
+
+   >[!CAUTION]
+   >过滤器 `includeVariations` 不能与系统生成的字段一起使用 `_variation`.
+
 * 如果您希望使用逻辑 OR：
    * 使用 ` _logOp: OR`
    * 请参阅[示例查询 – 所有名为“Jobs”或“Smith”的人](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-jobs-smith)
@@ -572,7 +577,18 @@ query {
          >
          >如果内容片段不存在给定的变量，则主控变量将作为（回退）默认值返回。
 
+         >[!CAUTION]
+         >系统生成的字段 `_variation` 不能与过滤器一起使用 `includeVariations`.
+
          * 请参阅[示例查询 – 具有指定变体的所有城市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+      * `_tags` :显示包含标记的内容片段或变体的ID;这是 `cq:tags` 标识符。
+
+         * 请参阅 [示例查询 — 标记为城市中断的所有城市的名称](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * 请参阅 [附加了特定标记的给定模型的内容片段变量查询示例](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+
+         >[!NOTE]
+         >
+         >还可以通过列出内容片段的元数据来查询标记。
    * 以及操作：
 
       * `_operator`：应用特定运算符；`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`
@@ -582,6 +598,8 @@ query {
          * 请参阅[示例查询 – 筛选数组中必须至少出现一次的项](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
       * `_ignoreCase`：在查询时忽略大小写
          * 请参阅[示例查询 – 名称中包含 SAN 的所有城市，不考虑大小写](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
+
+
 
 
 

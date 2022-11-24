@@ -4,10 +4,10 @@ description: 了解变量如何允许您为片段创作内容，然后根据目�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '2256'
-ht-degree: 95%
+source-wordcount: '2426'
+ht-degree: 87%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 95%
 * 为片段[输入内容](#authoring-your-content)，
 * [创建和管理&#x200B;**主**&#x200B;内容的变体](#managing-variations)，
 
-根据正在编辑的数据类型执行一系列其他操作；例如：
+根据所编辑的数据类型执行一系列其他操作；例如：
 
 * [将可视化资产插入片段](#inserting-assets-into-your-fragment)（图像）
 
@@ -40,24 +40,38 @@ ht-degree: 95%
 
 ## 创作内容 {#authoring-your-content}
 
-当您打开内容片段进行编辑时，**变体**&#x200B;选项卡将默认打开。 在此，您可以为主要或任何变体创作内容。 结构化片段包含内容模型中定义的各种数据类型的字段。
+当您打开内容片段进行编辑时，**变体**&#x200B;选项卡将默认打开。 在此，您可以为主要或任何变体创作内容。 结构化片段包含在内容模型中定义的各种数据类型的字段。
 
 例如：
 
 ![全屏编辑器](assets/cfm-variations-02.png)
+
 您可以：
 
-* 直接在&#x200B;**“变体”**&#x200B;选项卡中进行编辑
+* 直接在 **变体** 选项卡；每种数据类型提供不同的编辑选项，例如：
 
-   * 每种数据类型提供不同的编辑选项
+   * 对于&#x200B;**多行文本**&#x200B;字段，您还可以打开[全屏编辑器](#full-screen-editor)，以：
 
-* 对于&#x200B;**多行文本**&#x200B;字段，您还可以打开[全屏编辑器](#full-screen-editor)，以：
+      * 选择[格式](#formats)
+      * 查看更多编辑选项([富文本](#rich-text)格式)
+      * 访问[操作](#actions)
+   * 对于&#x200B;**片段引用**&#x200B;字段，[“编辑内容片段”](#fragment-references-edit-content-fragment)选项可用，具体取决于模型定义。
 
-   * 选择[格式](#formats)
-   * 查看更多编辑选项([富文本](#rich-text)格式)
-   * 访问[操作](#actions)
 
-* 对于&#x200B;**片段引用**&#x200B;字段，**[“编辑内容片段”](#fragment-references-edit-content-fragment)**&#x200B;选项可用，具体取决于模型定义。
+* 分配 **标记** （二）与当前变动值一致；可以添加、更新和删除标记
+
+   * [标记](/help/sites-authoring/tags.md)在组织片段时可发挥强大作用，因为其可用于内容分类和分类。 标记可用于查找内容（按标记）和应用批量操作。
+
+
+      * 搜索标记将返回片段，并突出显示标记变体。
+      * 变量标记还可用于对特定内容交付网络(CDN)配置文件（用于CDN缓存）的变量进行分组，而不是使用变量名称。
+
+      例如，您可以将相关片段标记为“圣诞节启动”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中的另一个启动项使用。
+   >[!NOTE]
+   >
+   >**标记** 也可以添加到 **主控** 变量)作为 [元数据](/help/assets/content-fragments/content-fragments-metadata.md)
+
+* [创建和管理变体](#managing-variations) 的 **主控** 内容。
 
 ### 全屏编辑器 {#full-screen-editor}
 
@@ -389,6 +403,9 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
    >[!NOTE]
    创建新变体时，复制的始终是&#x200B;**主要内容**，而不是当前打开的变体。
 
+   >[!NOTE]
+   创建新变体时，所有 **标记** 当前分配给 **主控** 变体将会复制到新变体中。
+
 ### 编辑变体 {#editing-a-variation}
 
 在执行以下任一操作后，您可以对变体内容进行更改：
@@ -435,7 +452,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >[!CAUTION]
 同步仅可将更改从&#x200B;***母版**复制到变体*。
 将仅同步变量的当前元素。
-同步仅适用于&#x200B;**多行文本**&#x200B;数据类型。
+同步仅适用于 **多行文本** 数据类型。
 不提供将更改&#x200B;*从变体传输到&#x200B;**母版***选项。
 
 <!-- needs new screenshot for synchronize effect -->
@@ -460,4 +477,4 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![与母版同步](assets/cfm-variations-11c.png)
 
-1. 选择&#x200B;**“同步”**，则将更新并显示变体。
+1. 选择 **同步**，则将更新并显示变体。
