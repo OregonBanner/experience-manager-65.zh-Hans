@@ -2,9 +2,9 @@
 title: Reader扩展证书的过期时间及其影响
 description: Reader扩展证书的过期时间及其影响
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: bbc8fdf2eb7dd35600e2e2a87550e9de557f0eb0
+source-git-commit: f35a35577f06686558bb1277b0d9bb17f6f0b7bf
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1114'
 ht-degree: 2%
 
 ---
@@ -26,9 +26,8 @@ Adobe利用公钥基础结构(PKI)颁发数字证书，以用于许可和功能�
 
 答：Adobe根CA是从中颁发Acrobat Reader扩展证书的证书颁发机构。 2023年1月7日，“Adobe根CA”及其颁发的所有证书将到期。
 
-**问：Adobe之前曾就证书过期和对使用/打开PDF的影响发出过信函？ 这种通信应该被忽略吗？**
-A.根据对情况的重新评估，2023年1月7日之前使用旧的&quot;Adobe根CA&quot;颁发的生产证书扩展的所有PDF文件在2023年1月7日之后继续工作，不作任何更改。 如果您已经更新了PDF，则体验不会发生更改
-
+**问：以前，Adobe曾就证书过期问题和对使用/打开PDF文档的影响发来过信函。 这种通信应该被忽略吗？**
+A.根据对情况的重新评估，2023年1月7日之前使用从旧的&quot;Adobe根CA&quot;颁发的生产证书扩展的所有PDF文件在2023年1月7日之后继续工作，不作任何更改。 如果您已经更新了PDF，则体验不会发生更改
 
 **如果我有其他问题，我应该联系谁？**
 
@@ -48,7 +47,7 @@ A.所有授权的Forms客户（具有活动许可证）都可以从 [Adobe许可
 
 **问：使用“Adobe根CA”（旧证书颁发机构）颁发的证书扩展的PDF文档是否在2023年1月7日之后继续工作？**
 
-答：是的，在2023年1月7日之前，所有使用“Adobe根CA”（旧证书颁发机构）颁发的生产证书扩展的PDF文档，在2023年1月7日之后仍可继续工作，而无任何更改。 使用评估证书扩展的PDF文档在过期日期后停止工作。
+A.是的，在2023年1月7日之前，所有使用“Adobe根CA”（旧证书颁发机构）颁发的生产证书扩展的PDF文档，在2023年1月7日之后仍可继续工作，而无任何更改。 使用评估证书扩展的PDF文档在过期日期后停止工作。
 
 **问：要继续使用通过“Adobe根CA”（旧的证书颁发机构）颁发的证书扩展的PDF文档，需要哪个版本的Adobe Acrobat Reader?**
 
@@ -70,7 +69,7 @@ A. Adobe Acrobat Reader 2020或更高版本需要使用通过“Adobe根CA 2”�
 
 答：是的，可以在多个环境中使用相同的Acrobat Reader扩展证书。
 
-**问：如何检查对PDF文档应用的使用权限？**
+**问：如何检查应用于PDF文档的使用权限？**
 
 A.您可以使用 [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) 用于检索有关应用于PDF文档的使用权限的信息的API。
 
