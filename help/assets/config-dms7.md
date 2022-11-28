@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
+source-git-commit: 89bb9223bb5e1e1d8719c5d957ec380872ed3e96
 workflow-type: tm+mt
-source-wordcount: '6282'
+source-wordcount: '6489'
 ht-degree: 3%
 
 ---
@@ -154,7 +154,9 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    激活资产后，任何更新都会立即实时发布到S7交付。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**。
-1. 为了在发布Dynamic Media内容之前安全地预览该内容，Experience Manager作者使用基于令牌的验证，因此默认情况下，Experience Manager作者会预览Dynamic Media内容。 但是，您可以允许列表更多IP，以便为用户提供安全预览内容的访问权限。 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
+1. 为了在发布Dynamic Media内容之前安全地预览该内容，Experience Manager作者使用基于令牌的验证，因此默认情况下，Experience Manager作者会预览Dynamic Media内容。 但是，您可以“”允许列表更多IP，以便为用户提供安全预览内容的访问权限。 要在Experience Manager中设置此操作，请参阅 [为图像服务器配置Dynamic Media发布设置 — 安全选项卡](/help/assets/dm-publish-settings.md#security-tab).
+
+如果要进一步自定义您的配置，例如启用ACL（访问控制列表）权限，则可以选择完成下的任何任务 [（可选）在Dynamic Media - Scene7模式下配置高级设置](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
@@ -165,8 +167,6 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
     * In the upper-right corner of the page, select **[!UICONTROL Save]**. -->
 
 您现在已完成基本配置；您已准备好使用Dynamic Media - Scene7模式。
-
-如果要进一步自定义配置，可以选择完成 [（可选）在Dynamic Media - Scene7模式下配置高级设置](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 ### 将密码更改为Dynamic Media {#change-dm-password}
 
@@ -203,6 +203,8 @@ Dynamic Media中的密码过期时间设置为从当前系统日期起100年。
 
 如果要进一步自定义Dynamic Media - Scene7模式的配置和设置，或优化其性能，可以完成以下一个或多个操作 *可选* 任务：
 
+* [（可选）在Dynamic Media - Scene7模式下启用ACL权限](#optional-enable-acl)
+
 * [（可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产](#optional-config-dms7-assets-larger-than-2gb)
 
 * [（可选）Dynamic Media - Scene7模式设置的设置和配置](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
@@ -210,6 +212,33 @@ Dynamic Media中的密码过期时间设置为从当前系统日期起100年。
 * [（可选）调整Dynamic Media - Scene7模式的性能](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [（可选）筛选用于复制的资产](#optional-filtering-assets-for-replication)
+
+### （可选）在Dynamic Media - Scene7模式下启用访问控制列表权限 {#optional-enable-acl}
+
+当您在AEM上运行Dynamic Media - Scene7模式时，它当前会转发 `/is/image` 请求安全预览图像服务，而不检查PlatformServerServlet的ACL（访问控制列表）权限。 但是， *启用* ACL权限。 这样做会转发授权的 `/is/image` 请求。 如果用户无权访问资产，则会显示“403 — 禁止”错误。
+
+**要在Dynamic Media - Scene7模式下启用ACL权限，请执行以下操作：**
+
+1. 从Experience Manager，导航到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**.
+
+   ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
+
+1. 将打开一个新的浏览器选项卡，该选项卡将显示 **[!UICONTROL Adobe Experience Manager Web控制台配置]** 页面。
+
+   ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
+
+1. 在页面上，滚动到名称 *Adobe CQ Scene7 PlatformServer*.
+
+1. 在名称的右侧，选择铅笔图标(**[!UICONTROL 编辑配置值]**)。
+
+1. 在 **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** ，请选中以下两个设置的复选框：
+
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — 启用后，此设置会缓存两分钟（默认）的权限结果以保存。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name`  — 启用后，此设置将在用户通过Dynamic Media Image Server预览资产时验证其访问权限。
+
+   ![在Dynamic Media - Scene7模式下启用访问控制列表设置](/help/assets/assets-dm/acl.png)
+
+1. 在页面的右下角附近，选择 **[!UICONTROL 保存]**.
 
 ### （可选）配置Dynamic Media - Scene7模式，以上传大于2 GB的资产 {#optional-config-dms7-assets-larger-than-2gb}
 
