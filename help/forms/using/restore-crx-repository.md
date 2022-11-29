@@ -2,9 +2,9 @@
 title: 无法恢复适用于JEE群集服务器的损坏的CRX存储库
 description: 恢复损坏的CRX存储库的步骤
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: cf034e8765317ee022aad4693ced37c3fa793ff2
+source-git-commit: c4f776b08cb8cc8c6eea78a3757735e063bec20c
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '179'
 ht-degree: 2%
 
 ---
@@ -35,4 +35,4 @@ ht-degree: 2%
 
 此解决方案适用于：
 
-* AEM Forms on JEE群集环境
+* AEM Forms on JEE Cluster
