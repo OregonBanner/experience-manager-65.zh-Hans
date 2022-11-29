@@ -1,10 +1,11 @@
 ---
 title: 无法恢复适用于JEE群集服务器的损坏的CRX存储库
 description: 恢复损坏的CRX存储库的步骤
-source-git-commit: a7d125503b0bd3c52cb3a959e2f0dde1a69cbe2b
+exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
+source-git-commit: cf034e8765317ee022aad4693ced37c3fa793ff2
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 1%
+source-wordcount: '182'
+ht-degree: 2%
 
 ---
 
@@ -12,27 +13,26 @@ ht-degree: 1%
 
 ## 带有 OS 剪贴板 {#issue}
 
-对于在JEE上部署的具有RDB持久性的AEM Forms,AEM Forms主机和数据库计算机必须处于绝对时间同步状态。 但是，如果时钟因某些原因不同步，则CRX存储库会损坏，并且其URL变得不可访问。 错误为 `AuthenticationsupportService missing` 在日志文件中发生。
+对于使用关系数据库的JEE上的AEM Forms，托管AEM Forms的计算机上的时间与关系数据库应始终保持绝对同步。 如果这些计算机上的时间不同步，则JEE服务器上AEM Forms的CRX存储库可能会变得无法访问。 它可能显示已损坏，并且无法通过URL访问。 的 `AuthenticationsupportService missing` 错误已记录。
+
+## 前提条件 {#prerequisites}
+
+在执行以下步骤之前，先备份CRX存储库。
 
 ## 解决方案 {#solution}
 
 执行以下步骤以解决问题：
-1. 转到  [https://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
+1. 转到  `https://[AEM Forms Server]:[port]/system/console/bundles`.
 
 1. 找到 `oak-core` 捆绑并检查它是否正在运行。
 
-1. 重新启动 `oak-core` 包（如果未运行）。 如果在 `oak-core` 包，则表示包处于运行状态。
+1. 重新启动 `oak-core` 包（如果未运行）。 如果  ![“暂停”按钮](/help/forms/using/assets/stop.png) 图标显示在 `oak-core` 包，则表示包处于运行状态。
 
 1. 如果问题仍未解决，请从备份中从CRX存储库还原；如果备份不可用，则重新构建CRX存储库。
 
-   >[!NOTE]
-   >
-   >在执行上述步骤之前，先备份CRX存储库。
 
 ## 适用于 {#applies-to}
 
 此解决方案适用于：
 
-* AEM Forms on JEE Cluster Server
-
-
+* AEM Forms on JEE群集环境
