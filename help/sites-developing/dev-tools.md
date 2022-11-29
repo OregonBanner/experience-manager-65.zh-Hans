@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4967a6d9ad92272a1ff442456fe65de51cc46a73
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '373'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,6 @@ Adobe发布了以下扩展：
 
 * [AEM Eclipse扩展](/help/sites-developing/aem-eclipse.md)
 * [AEM Brackets扩展](/help/sites-developing/aem-brackets.md)
-* [AEM IntelliJ扩展](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf) （从头线）
 
 ### 其他工具 {#other-tools}
 
