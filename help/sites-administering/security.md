@@ -12,9 +12,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: bc3dd7d229a75323b98a96d60dcbb3ae2b8c09ab
+source-git-commit: 97b0cec1c8091bbc5736bd68bdee257ca423f93e
 workflow-type: tm+mt
-source-wordcount: '5469'
+source-wordcount: '5454'
 ht-degree: 2%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 2%
 其主要目的是通过减少要更新的实体数来简化维护过程，因为对组所做的更改会应用于组的所有成员。 群体通常反映：
 
 * 在应用程序内的角色；例如，有权访问内容的人员，或有权提供内容的人员。
-* 您自己的组织；当参与者被限制到内容树中的不同分支时，您可能希望扩展角色以区分不同部门的参与者。
+* 您自己的组织；当参与者被限制到内容树中的不同分支时，您可能希望扩展角色以区分来自不同部门的参与者。
 
 因此，组通常保持稳定，而用户来来去的频率更高。
 
@@ -215,16 +215,17 @@ AEM WCM使用访问控制列表(ACL)来组织应用于各个页面的权限。
 
 >[!NOTE]
 >
->示例中包含一些ACL。 建议您查看并确定适合您的应用程序的内容。 要查看包含的ACL，请转到**CRXDE **并选择 **访问控制** 选项卡：
+>示例中包含一些ACL。 建议您查看并确定适合您的应用程序的内容。 要查看包含的ACL，请转到 **CRXDE** ，然后选择 **访问控制** 选项卡：
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:允许每个人读取访问权限。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:允许每个人读取访问权限。
->`/home/users/geometrixx-outdoors`:允许每个人读取 `*/profile*` 和
->`*/social/relationships/following/*`。
+>* `/etc/cloudservices`
+>* `/home/users/we-retail`
 >
->您的自定义应用程序可以设置其他关系的访问权限，例如 `*/social/relationships/friend/*` 或 `*/social/relationships/pending-following/*`.
+>您的自定义应用程序可以设置其他关系的访问权限，例如：
 >
->创建特定于社区的ACL时，加入这些社区的成员可能会被授予额外的权限。 例如，当用户在 `/content/geometrixx-outdoors/en/community/hiking` 或 `/content/geometrixx-outdoors/en/community/winter-sports`.
+>* `*/social/relationships/friend/*`
+>* 或 `*/social/relationships/pending-following/*`.
+>
+>创建特定于社区的ACL时，加入这些社区的成员可能会被授予额外的权限。 例如，当用户在以下位置加入社区时，可能会发生这种情况： `/content/we-retail/us/en/community`
 
 ### 权限状态 {#permission-states}
 
