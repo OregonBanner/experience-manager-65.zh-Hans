@@ -11,9 +11,9 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3466'
 ht-degree: 2%
 
 ---
@@ -298,10 +298,10 @@ ht-degree: 2%
 要将您在“记录文档”选项卡中输入的品牌信息本地化，您需要确保正确设置浏览器的区域设置。 要自定义记录文档的品牌信息，请完成以下步骤：
 
 1. 在记录文档中选择一个面板（根面板），然后点按 ![配置](assets/configure.png).
-1. 点按 ![多选项卡](assets/dortab.png). 将出现“记录文档”选项卡。
+1. 点按 ![多选项卡](/help/forms/using/assets/dortab.png). 将出现“记录文档”选项卡。
 1. 选择默认模板或用于呈现记录文档的自定义模板。 如果选择默认模板，则记录文档的缩略图预览将显示在“模板”下拉框的下方。
 
-   ![品牌模板](assets/brandingtemplate.png)
+   ![品牌模板](/help/forms/using/assets/brandingtemplate.png)
 
    如果选择选择自定义模板，请在AEM Forms服务器上浏览选择的XDP。 如果要使用AEM Forms服务器上尚未存在的模板，则需要先将XDP上传到AEM Forms服务器。
 
@@ -396,7 +396,7 @@ ht-degree: 2%
 **表单级别设置**
 
 * **在DoR中包含未绑定字段：** 设置属性包括记录文档中基于架构的自适应表单中的未绑定字段。 默认情况下，为true。
-* **隐藏时从DoR中排除字段：** 设置属性会覆盖“从记录文档中排除”字段级别属性（如果不为true）的行为。 如果字段在表单提交时处于隐藏状态，则如果该属性设置为true，则它们将从记录文档中排除，但前提是未设置“从记录文档排除”属性。
+* **隐藏时从DoR中排除字段：** 设置属性以从中排除隐藏字段 [!UICONTROL 记录文档] 表单提交时。 启用 [在服务器上重新验证](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)，服务器会在从 [!UICONTROL 记录文档].
 
 ## 在记录文档中应用分页符 {#apply-page-breaks-in-dor}
 
@@ -404,13 +404,12 @@ ht-degree: 2%
 
 要将分页符应用于记录文档，请执行以下操作：
 
-1. 点按面板并选择 ![配置](assets/configure-icon.svg).
-
+1. 点按面板并选择 ![配置](/help/forms/using/assets/configure.png)
 1. 展开 **[!UICONTROL 记录文档]** 以查看属性。
 
-1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](assets/folder-icon.svg) 在 **[!UICONTROL 位置]** 字段。
+1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 位置]** 字段。
 1. 点按 **[!UICONTROL 下一页顶部]** 点按 **[!UICONTROL 选择]**. 您还可以点按 **[!UICONTROL 页面顶部]**，选择主控页面，然后点按 **[!UICONTROL 选择]** 来应用分页符。
-1. 点按 ![保存](assets/save_icon.svg) 以保存属性。
+1. 点按 ![保存](/help/forms/using/assets/save_icon.png) 以保存属性。
 
 选定的面板将移至下一页。
 
@@ -424,13 +423,13 @@ ht-degree: 2%
 
 要将第二个主控页面属性应用到面板，将第三个主控页面属性应用到后续面板，请执行以下步骤：
 
-1. 点按面板以应用第二个主控页面，然后选择 ![配置](assets/configure-icon.svg).
-1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](assets/folder-icon.svg) 在 **[!UICONTROL 位置]** 字段。
+1. 点按面板以应用第二个主控页面，然后选择 ![配置](assets/cmppr.png).
+1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 位置]** 字段。
 1. 点按 **[!UICONTROL 页面上]**，选择第二个主控页面并点按 **[!UICONTROL 选择]**.
 AEM Forms将第二个主控页面应用到自适应表单中的面板和所有后续面板。
-1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](assets/folder-icon.svg) 在 **[!UICONTROL 之后]** 字段。
+1. 在 **[!UICONTROL 分页]** 部分，点按 ![文件夹](/help/forms/using/assets/folder-icon.png) 在 **[!UICONTROL 之后]** 字段。
 1. 点按 **[!UICONTROL 转到页面]**，选择第三个主控页面并点按 **[!UICONTROL 选择]**.
-1. 点按 ![保存](assets/save_icon.svg) 以保存属性。
+1. 点按 ![保存](/help/forms/using/assets/save_icon.png) 以保存属性。
 AEM Forms将第三个主控页面应用到自适应表单中的面板和所有后续面板。
 
 

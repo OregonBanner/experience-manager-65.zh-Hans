@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 937af2df46b93aab6c9010814175d72a9bd583db
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3176'
+source-wordcount: '3853'
 ht-degree: 4%
 
 ---
@@ -105,9 +105,44 @@ ht-degree: 4%
 
 ## [!DNL Forms] {#forms-6515}
 
->[!NOTE]
->
->的修复 [!DNL Experience Manager] Forms在计划的1周后通过单独的附加组件包交付 [!DNL Experience Manager] Service Pack发行日期。 在这种情况下，附加组件包将于2022年12月1日星期四发布。 此外，此部分还将添加Forms修复和增强功能的列表。
+### 主要功能 {#keyfeatures}
+
+* AEM Forms Designer现在以西班牙语区域设置提供。 (LC-3920051)
+* 您现在可以使用OAuth2通过Microsoft Office 365邮件服务器协议（SMTP和IMAP）进行身份验证。 (NPR-35177)
+* 您可以设置 [在服务器上重新验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) 属性设置为true，以标识要从服务器端记录文档中排除的隐藏字段。 (NPR-38149)
+* AEM Forms Designer要求使用32位版本的Visual C++ 2019 Redistributable(x86)。  (NPR-36690)
+
+### 修复 {#fixes}
+
+* 切换自适应表单的数据禁用属性后，单选按钮和复选框组的外观不会发生更改。 (NPR-39368)
+* 翻译自适应表单后，某些翻译会丢失且无法正确显示。 (NPR-39367)
+* 将页面的属性设置为隐藏时，不会从表单集中删除该页面。 (NPR-39325)
+* 在“记录文档”中，页面末尾的动态脚注部分不存在。 (NPR-39322)
+* 为自适应表单生成记录文档时，单选按钮和复选框仅允许垂直对齐。 用户无法为单选按钮和复选框设置水平对齐方式。 (NPR-39321)
+* 部署通信管理后，如果多个用户尝试访问表单，则org.apache.sling.i18n.impl.JcrResourceBundle.loadPotementLanguageRoots会成为瓶颈，并且大部分线程都会被触发。 即使服务器的负载非常低，加载各种表单页面请求通常也需要超过1分钟。 (NPR-39176、CQ-4347710)
+* 在自适应表单中，当您在延迟加载的自适应表单片段中使用富文本字段时，会遇到以下一些错误：
+   * 不能编辑内容或将任何内容附加到富文本字段。
+   * 不接受应用于富文本的显示模式。 
+   * 提交表单时，不会显示最小字段长度的错误消息。
+   * 此富文本字段的内容已多次包含在生成的submit-XML中。 (NPR-39168)
+* 在自适应表单中使用日期选取器选项时，无法将值转换为正确的格式。 (NPR-39156)
+* 预览自适应表单作为HTML表单时，由于某些子表单与父表单重叠，因此无法正确呈现自适应表单。 (NPR-39046)
+* 如果面板具有隐藏的表，并且自适应表单使用表格视图呈现，则无法正确显示第一个选项卡上的字段。 (NPR-39025)
+* 的 `Body` OOTB（现成）模板缺少标记。 (NPR-39022)
+* 记录文档不是以自适应表单的语言生成。 它始终以英语生成。 (NPR-39020)
+* 当自适应表单具有多个面板并且某些面板使用现成的 **文件附件** 组件， `Error occurred while draft saving` 出现错误。 (NPR-38978)
+* When `=` 在“自适应表单”的复选框、下拉列表或单选按钮字段中使用符号，然后生成“记录文档”， `=` 在生成的记录文档中不显示符号。(NPR-38859)
+* 升级6.5.11.0 Service Pack后，通知批处理错误的数量增加了多倍。 (NPR-39636)
+* 如果不提供测试数据，则通信管理信件无法在代理UI中加载。 (CQ-4348702)
+* 当用户从使用IBM® WebSphere®部署的AEM Forms中应用AEM Forms Service Pack 14(SP14)时，启动会在初始化数据库和 `java.lang.NoClassDefFoundError:org/apache/log4j/Logger` 出现错误。(NPR-39414)
+* 在OSGi服务器上的AEM表单上，使用文档服务API验证PDF时，表单失败，并出现错误：com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311-003。 (NPR-38855)
+* 当用户尝试使用包装器服务在AEM 6.3 Forms中渲染字母时， `java.lang.reflect.UndeclaredThrowableException` 出现错误。 (CQ-4347259)
+* 当XDP呈现为HTML5表单时，无论对象在自适应表单中的位置如何，都会先呈现主控页面的内容。 (CQ-4345218)
+* 目标服务器上的应用程序配置更改为源服务器上定义的设置，即使 **导入完成时覆盖配置** 导入应用程序时未选中选项。 (NPR-39044)
+* 当用户尝试使用配置管理器更新连接器配置时，该配置会失败。(CQ-4347077)
+* 当用户在更改管理员用户的默认密码后尝试在JEE修补程序上运行AEM Forms时，会出现异常 `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 发生。 (CQ-4348277)
+* 在AEM Designer中，不带字幕的表单字段放置在包括复选框在内的表单元格中。(LC-3920410)
+* 当用户尝试在AEM Forms Designer中打开帮助时，该帮助未正确显示。 (CQ-4341996)
 
 ## [!DNL Sites] {#sites-6515}
 
@@ -130,7 +165,7 @@ ht-degree: 4%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL引发异常。 例如，无法从内容片段获取变体标记。 没有名称为“electric”的变体。 此问题是由于调用 `getVariationTags` 对于引发异常的非现有变体。 (SITES-8898)
+* GraphQL引发了一个例外。 例如，无法从内容片段获取变体标记。 没有名称为“electric”的变体。 此问题是由于调用 `getVariationTags` 对于引发异常的非现有变体。 (SITES-8898)
 * 在列表视图中对标题排序（升序和降序），标题与A、C、B顺序的顺序(SITES-7585)
 * 为内容片段变量添加了标记支持。 (SITES-8168)
 * 从Experience Manager6.5中识别并删除了Odin特定代码，这是不必要的。 (SITES-3574)
@@ -284,7 +319,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0在 [Maven中央存储库](https://rep
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM包含GraphQL索引包1.0.5的内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 使用GraphQL的客户需要此包；这样，用户便可以根据实际使用的功能添加所需的索引定义。
 
 * 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支持的turnkey安装 [!DNL AEM Forms 6.5.10.0].
