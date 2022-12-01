@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '3830'
+source-wordcount: '3827'
 ht-degree: 4%
 
 ---
@@ -371,7 +371,6 @@ ht-degree: 4%
    + [Reader使用可移植保护库扩展受策略保护的PDF文档](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [使AEM能够搜索文档安全保护PDF和Microsoft Office文档](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect代表其他用户创建文档](using/protect-document-on-behalf-of-another-user.md)
-   + [对Microsoft邮件服务的oAuth2.0支持](/help/forms/using/oauth2-support-for-mail-service.md)
 + Forms Designer {#use-forms-designer}
    + [Forms Designer帮助](using/forms-designer-help.md)
    + [使用Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
@@ -453,6 +452,7 @@ ht-degree: 4%
    + 管理端点 {#manage-endpoints}
       + [添加、启用、修改或删除端点](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md)
       + [配置电子邮件端点](/help/forms/using/admin-help/configuring-email-endpoints.md)
+      + [配置oAuth2.0身份验证](/help/forms/using/oauth2-support-for-mail-service.md)
       + [配置远程处理端点](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
       + [配置监视文件夹端点](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
       + [配置任务管理器端点](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)

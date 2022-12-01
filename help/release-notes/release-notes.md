@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3858'
 ht-degree: 4%
 
 ---
@@ -107,9 +107,9 @@ ht-degree: 4%
 
 ### 主要功能 {#keyfeatures}
 
-* AEM Forms Designer现在以西班牙语区域设置提供。 (LC-3920051)
-* 您现在可以使用OAuth2通过Microsoft Office 365邮件服务器协议（SMTP和IMAP）进行身份验证。 (NPR-35177)
-* 您可以设置 [在服务器上重新验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) 属性设置为true，以标识要从服务器端记录文档中排除的隐藏字段。 (NPR-38149)
+* AEM Forms Designer现在在 [西班牙语区域设置](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). (LC-3920051)
+* 您现在可以使用 [OAuth2用Microsoft Office 365邮件服务器协议（SMTP和IMAP）进行身份验证](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
+* 您可以设置 [在服务器上重新验证](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) 属性设置为true，以标识要从服务器端记录文档中排除的隐藏字段。 (NPR-38149)
 * AEM Forms Designer要求使用32位版本的Visual C++ 2019 Redistributable(x86)。  (NPR-36690)
 
 ### 修复 {#fixes}
@@ -319,7 +319,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0在 [Maven中央存储库](https://rep
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM包含GraphQL索引包1.0.5的内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 使用GraphQL的客户需要此包；这样，用户便可以根据实际使用的功能添加所需的索引定义。
 
 * 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支持的turnkey安装 [!DNL AEM Forms 6.5.10.0].

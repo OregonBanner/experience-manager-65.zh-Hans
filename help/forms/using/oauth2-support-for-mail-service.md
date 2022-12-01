@@ -1,18 +1,16 @@
 ---
-title: 对Microsoft® Office 365邮件服务器协议的OAuth2支持
-description: 对Microsoft® Office 365邮件服务器协议的Oauth2支持
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+title: 为Microsoft® Office 365邮件服务器协议配置基于OAuth2的身份验证
+description: 为Microsoft® Office 365邮件服务器协议配置基于OAuth2的身份验证
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 3%
 
 ---
 
-# OAuth 2.0支持Microsoft® Office 365邮件服务器协议 {#oauth2-support-for-the-microsoft-mail-server-protocols}
+# 与Microsoft® Office 365邮件服务器协议集成 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
-AEM Forms提供了OAuth 2.0与Microsoft® Office 365邮件服务器协议的集成支持，以便组织能够遵守安全的电子邮件要求。 Azure Active Directory(Azure AD)提供OAuth 2.0身份验证服务，该服务允许您的应用程序与各种协议（如IMAP、POP或SMTP）连接，并访问Office 365用户的电子邮件数据。
-
-以下是配置Microsoft® Office 365邮件服务器协议以通过OAuth 2.0服务进行身份验证的分步说明：
+为了让组织遵守安全的电子邮件要求，AEM Forms提供了OAuth 2.0支持与Microsoft® Office 365邮件服务器协议集成。 您可以使用Azure Active Directory(Azure AD)OAuth 2.0身份验证服务，与各种协议（如IMAP、POP或SMTP）连接并访问Office 365用户的电子邮件数据。 以下是配置Microsoft® Office 365邮件服务器协议以通过OAuth 2.0服务进行身份验证的分步说明：
 
 1. 登录 [https://portal.azure.com/](https://portal.azure.com/) 和搜索 **Azure Active Directory** ，然后单击结果。
 或者，您可以直接浏览到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
@@ -22,9 +20,8 @@ AEM Forms提供了OAuth 2.0与Microsoft® Office 365邮件服务器协议的集�
 
 1. 根据您的要求填写信息，然后单击 **注册**.
    ![支持的帐户](/help/forms/using/assets/azure_suuportedaccountype.png)
-
-
-   在上述情况下， **任何组织目录（任何Azure AD目录 — 多租户）中的帐户和个人Microsoft®帐户（例如，Skype、Xbox）** 选项。
+在上述情况下， 
+**任何组织目录（任何Azure AD目录 — 多租户）中的帐户和个人Microsoft®帐户（例如，Skype、Xbox）** 选项。
 
    >[!NOTE]
    >
@@ -88,7 +85,9 @@ AEM Forms提供了OAuth 2.0与Microsoft® Office 365邮件服务器协议的集�
 ## 生成刷新令牌 {#generating-the-refresh-token}
 
 接下来，您需要生成刷新令牌，如以下步骤中所述：
+
 1. 打开命令提示符，然后使用以下cURL命令获取refreshToken。
+
 1. 替换 `clientID`, `client_secret` 和 `redirect_uri` ，以及 `<code>`:
 
    `curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/common/oauth2/v2.0/token`
@@ -163,9 +162,4 @@ AEM Forms提供了OAuth 2.0与Microsoft® Office 365邮件服务器协议的集�
 * 如果电子邮件服务无法正常工作。 尝试重新生成 `Refresh Token` 如上所述。 部署新值需要几分钟。
 
 * 使用Workbench在电子邮件端点中配置电子邮件服务器详细信息时出错。请尝试通过管理员UI而不是Workbench配置端点。
-
-
-
-
-
 
