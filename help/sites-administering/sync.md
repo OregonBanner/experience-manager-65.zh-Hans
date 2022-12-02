@@ -12,9 +12,9 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 002b9035f37a1379556378686b64d26bbbc30288
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2445'
 ht-degree: 4%
 
 ---
@@ -47,13 +47,13 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->如果需要会话，建议使用单点登录(SSO)解决方案或使用置顶会话，并在客户切换到其他发布者时让其登录。
+>如果需要会话，建议使用单点登录(SSO)解决方案或使用置顶会话，并在客户切换到其他发布实例时让其登录。
 
 >[!CAUTION]
 >
->同步 ***管理员*** 不支持组，即使启用了用户同步也是如此。 错误日志中将记录“导入差异”失败。
+>同步 **管理员** 不支持组，即使启用了用户同步也是如此。 错误日志中将记录“导入差异”失败。
 >
->因此，当部署为发布场时，如果将用户添加到或从*中删除&#x200B;**管理员** 群组中，必须在每个发布实例上手动进行修改。
+>因此，当部署为发布场时，如果将用户添加到 **管理员** 群组中，必须在每个发布实例上手动进行修改。
 
 ## 启用用户同步 {#enable-user-sync}
 
@@ -71,7 +71,7 @@ ht-degree: 4%
 
 ### 前提条件 {#prerequisites}
 
-1. 如果用户和用户组已在一个发布者上创建，则建议 [手动同步](#manually-syncing-users-and-user-groups) 在配置和启用用户同步之前，将用户数据发送给所有发布者。
+1. 如果已在一个发布实例上创建了用户和组，则建议 [手动同步](#manually-syncing-users-and-user-groups) 在配置和启用用户同步之前，将用户数据发送到所有发布实例。
 
 启用用户同步后，仅同步新创建的用户和组。
 
@@ -159,7 +159,7 @@ ht-degree: 4%
 
 **配置权限**
 
-授权用户后，**`administrators`**用户组（已在所有发布实例上创建），授权用户必须在创作时被标识为具有从创作同步到发布的用户数据的权限。
+授权用户后， **`administrators`** 用户组（已在所有发布实例上创建），授权用户必须在创作时被标识为具有从创作同步到发布的用户数据的权限。
 
 * **在作者**
 
@@ -181,7 +181,7 @@ ht-degree: 4%
 
 **启用用户同步**
 
-* **发布**:
+* **在每个发布实例上**:
 
    * 使用管理员权限登录
    * 访问 [Web控制台](/help/sites-deploying/configuring-osgi.md)
@@ -193,7 +193,7 @@ ht-degree: 4%
 
       * 选择 `Enabled` 复选框
       * 选择 `Save`
-   * **对每个发**实例重复执行
+   * **重复** 对于每个发布实例
 
 
 
@@ -267,13 +267,13 @@ ht-degree: 4%
 ![](assets/chlimage_1-25.png)
 
 * **导出程序端点**
-每个发布者都应有一个导出程序端点。 例如，如果有2个发布者，localhost:4503和4504，则应有2个条目：
+每个发布实例应具有导出程序端点。 例如，如果存在2个发布实例，localhost:4503和4504，则应存在2个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **导入程序端点**
-每个发布者都应有一个导入器端点。 例如，如果有2个发布者，localhost:4503和4504，则应有2个条目：
+每个发布实例应具有导入器端点。 例如，如果存在2个发布实例，localhost:4503和4504，则应存在2个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
@@ -400,7 +400,7 @@ ht-degree: 4%
 
 根据设计，在发布环境中创建的用户和配置文件（自注册）不会显示在创作环境中。
 
-当拓扑为 [发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm) 和用户同步的配置正确，*user *和 *用户配置文件* 会使用Sling分发在发布场中同步。
+当拓扑为 [发布场](/help/sites-deploying/recommended-deploys.md#tarmk-farm) 和用户同步已正确配置， *用户* 和 *用户配置文件* 会使用Sling分发在发布场中同步。
 
 ### 使用安全控制台创建用户或组 {#users-or-user-groups-are-created-using-security-console}
 
@@ -412,7 +412,7 @@ ht-degree: 4%
 
 ### 如何使用户同步脱机 {#how-to-take-user-sync-offline}
 
-要将用户同步脱机，请 [删除发布者](#how-to-remove-a-publisher) 或 [手动同步数据](#manually-syncing-users-and-user-groups)，则分发队列必须为空且安静。
+要使用户同步脱机，请 [删除发布实例](#how-to-remove-a-publish-instance) 或 [手动同步数据](#manually-syncing-users-and-user-groups)，则分发队列必须为空且安静。
 
 要检查分发队列的状态，请执行以下操作：
 
@@ -455,7 +455,7 @@ ht-degree: 4%
 
 ![](assets/chlimage_1-28.png)
 
-#### 如何为发布者运行诊断程序 {#how-to-run-diagnostics-for-publishers}
+#### 如何为发布实例运行诊断 {#how-to-run-diagnostics-for-publish-instances}
 
 从创作环境运行诊断时，传递/失败结果将包括 [信息] 显示已配置的用于确认的发布实例列表的部分。
 
@@ -531,7 +531,7 @@ ht-degree: 4%
 
 ### 手动同步用户和用户组 {#manually-syncing-users-and-user-groups}
 
-* 在存在用户和组的发布者上：
+* 在存在用户和组的发布实例上：
 
    * [如果启用，则禁用用户同步](#how-to-take-user-sync-offline)
    * [创建资源包](/help/sites-administering/package-manager.md#creating-a-new-package) of `/home`
@@ -549,13 +549,13 @@ ht-degree: 4%
 
 要配置或启用用户同步，请转到步骤1: [Apache Sling Distribution Agent — 同步代理工厂](#apache-sling-distribution-agent-sync-agents-factory)
 
-### 发布者不可用时 {#when-a-publisher-becomes-unavailable}
+### 发布实例不可用时 {#when-a-publish-instance-becomes-unavailable}
 
-当发布实例不可用时，如果它将来恢复为联机，则不应将其删除。 更改将排入发布者的队列，一旦它重新联机，将处理更改。
+当发布实例不可用时，如果它将来恢复为联机，则不应将其删除。 更改将排入发布实例的队列，一旦它重新联机，将处理更改。
 
 如果发布实例永远不会恢复为联机状态，如果它永久处于脱机状态，则必须删除该实例，因为队列累积将导致在创作环境中显着占用磁盘空间。
 
-当发布者关闭时，创作日志将出现类似以下内容的例外：
+当发布实例关闭时，创作日志将出现类似以下内容的例外：
 
 ```
 28.01.2016 15:57:48.475 ERROR
@@ -565,14 +565,14 @@ ht-degree: 4%
  org.apache.sling.distribution.packaging.DistributionPackageImportException: failed in importing package ...
 ```
 
-### 如何删除发布者 {#how-to-remove-a-publisher}
+### 如何删除发布实例 {#how-to-remove-a-publish-instance}
 
 从 [Apache Sling Distribution Agent — 同步代理工厂](#apache-sling-distribution-agent-sync-agents-factory)，则分发队列必须为空且安静。
 
 * 作者：
 
    * [使用户同步脱机](#how-to-take-user-sync-offline)
-   * 关注 [步骤7](#apache-sling-distribution-agent-sync-agents-factory) 要从两个服务器列表中删除发布者，请执行以下操作：
+   * 关注 [步骤7](#apache-sling-distribution-agent-sync-agents-factory) 要从两个服务器列表中删除发布实例，请执行以下操作：
 
       * `Exporter Endpoints`
       * `Importer Endpoints`
