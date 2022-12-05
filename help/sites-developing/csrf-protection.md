@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ### 复制加密密钥 {#replicating-crypto-keys}
 
-为了使用令牌，您需要复制 `/etc/keys/hmac` 二进制到部署中的所有实例。 将HMAC密钥复制到所有实例的一种简便方法是，创建一个包含密钥的包，并通过包管理器在所有实例上安装该密钥。
+要使用令牌，您需要将HMAC二进制文件复制到部署中的所有实例。 请参阅 [复制HMAC密钥](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) 以了解更多详细信息。
 
 >[!NOTE]
 >

@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
+source-git-commit: f8d249f5d3fac243b4989c3eca4be2730dcf16ec
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -68,16 +68,12 @@ ht-degree: 0%
 
 ### 复制HMAC密钥 {#replicating-the-hmac-key}
 
-HMAC密钥以的二进制属性存在 `/etc/key` 中。 您可以通过按 **视图** 链接：
-
-![chlimage_1-35](assets/chlimage_1-35a.png)
-
 要跨实例复制密钥，您需要：
 
 1. 访问包含要复制的关键材料的AEM实例，通常是创作实例；
 1. 找到 `com.adobe.granite.crypto.file` 包。 例如，在以下路径下：
 
-   * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
    的 `bundle.info` 每个文件夹中的文件将标识包名称。
 
