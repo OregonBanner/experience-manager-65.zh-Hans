@@ -10,9 +10,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 84ae92f889661a639e931b2a7ba9a999d5258841
+source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
 workflow-type: tm+mt
-source-wordcount: '6794'
+source-wordcount: '6888'
 ht-degree: 0%
 
 ---
@@ -572,6 +572,9 @@ AEM Forms会跟踪您上次用于写入规则的规则编辑器模式。 下次�
    1. 字符串
    1. 数字
    1. 布尔型
+   1. 范围
+
+   范围用于自适应表单的引荐字段。 当表单使用延迟加载时，您可以使用 `scope` 访问其字段。 您可以在加载字段时或将字段标记为全局字段时访问字段。
 
    所有其他参数类型都属于上述任一类型。 不支持“无”。 确保您选择以上类型之一。 类型不区分大小写。 参数中不允许有空格 `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
@@ -586,6 +589,29 @@ AEM Forms会跟踪您上次用于写入规则的规则编辑器模式。 下次�
    1. 布尔型
 
    所有其他回访类型均按上述任一类型分类。 不支持“无”。 确保您选择以上类型之一。 返回类型不区分大小写。
+
+* **此**
+语法： 
+`@this currentComponent`
+
+   使用@this引用写入规则的自适应表单组件。
+
+   以下示例基于字段值。 在以下示例中，规则隐藏表单中的字段。 的 `this` 部分 `this.value` 是指基础自适应表单组件，在该组件中写入规则。
+
+   ```
+      /**
+      * @function myTestFunction
+      * @this currentComponent
+      * @param {scope} scope in which code inside function will be executed.
+      */
+      myTestFunction = function (scope) {
+         if(this.value == "O"){
+               scope.age.visible = true;
+         } else {
+            scope.age.visible = false;
+         }
+      }
+   ```
 
 >[!NOTE]
 >
