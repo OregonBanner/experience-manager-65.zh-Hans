@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1877'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Client Context已被ContextHub取代。 有关更多详细信息，请参阅相关 [配置]ch-configuring.md)和 [开发人员](/help/sites-developing/contexthub.md) 文档。
+>Client Context已被ContextHub取代。 有关更多详细信息，请参阅相关 [配置](/help/sites-developing/ch-configuring.md) 和 [开发人员](/help/sites-developing/contexthub.md) 文档。
 
 Client Context是一种机制，可为您提供有关当前页面和访客的特定信息。 可以使用 **Ctrl-Alt-c** (windows)或 **control-option-c** (Mac):
 
