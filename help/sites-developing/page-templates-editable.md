@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 2801ef5ec5ed7b01f4eb046baa439f6d5de56b75
+source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
 workflow-type: tm+mt
-source-wordcount: '3249'
+source-wordcount: '3252'
 ht-degree: 10%
 
 ---
@@ -435,7 +435,7 @@ ht-degree: 10%
 1. 与创建任何可编辑模板一样创建模板 [如此处所述](/help/sites-authoring/templates.md#creating-a-new-template-template-author)，用作模板类型的基础。
 1. 使用CRXDE Lite，从 `templates` 节点 `template-types` 节点下 [模板文件夹](/help/sites-developing/page-templates-editable.md#template-folders).
 1. 从 `templates` 节点下 [模板文件夹](/help/sites-developing/page-templates-editable.md#template-folders).
-1. 在位于 `template-types` 节点，删除全部 `cq:template` 和 `cq:templateType` `jcr:content` 属性。
+1. 在位于 `template-types` 节点，删除全部 `cq:template` 和 `cq:templateType` 全部属性 `jcr:content` 节点。
 
 您还可以使用GitHub上提供的可编辑模板示例作为基础，开发您自己的模板类型。
 
