@@ -1,8 +1,8 @@
 ---
 title: 修订版清理
 seo-title: Revision Cleanup
-description: 了解如何使用AEM 6.3中的修订清理功能。
-seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.3.
+description: 了解如何使用AEM 6.5中的修订清理功能。
+seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.5.
 uuid: 321f5038-44b0-4f1e-a1aa-2d29074eed70
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
+source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
 workflow-type: tm+mt
-source-wordcount: '5912'
+source-wordcount: '5918'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 对存储库的每次更新都会创建新的内容修订版本。 因此，每次更新时，存储库的大小都会增大。 为避免存储库增长失控，需要清理旧的修订版本以释放磁盘资源。 此维护功能称为修订清理。 它自AEM 6.0起便已作为离线例程使用。
 
-在AEM 6.3中，引入了此功能的在线版本“在线修订清理”。 与必须关闭AEM实例的离线修订版清理相比，在AEM实例处于在线状态时可以运行在线修订版清理。 默认情况下，联机修订版清理处于打开状态，这是执行修订版清理的推荐方式。
+在AEM 6.3及更高版本中，引入了此功能的在线版本“在线修订清理”。 与必须关闭AEM实例的离线修订版清理相比，在AEM实例处于在线状态时可以运行在线修订版清理。 默认情况下，联机修订版清理处于打开状态，这是执行修订版清理的推荐方式。
 
 **注意**: [观看视频](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/revision-cleanup-technical-video-use.html) 有关介绍和如何使用在线修订清理的信息。
 
@@ -162,7 +162,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>是否仍支持以前的Tar格式？</strong></td>
-   <td>AEM 6.3仅支持新的Oak区段Tar。</td>
+   <td>AEM 6.3或更高版本仅支持新的Oak区段Tar。</td>
    <td> </td>
   </tr>
   <tr>
@@ -171,7 +171,7 @@ TarMK GC: no base state available, running full compaction instead
    <td> </td>
   </tr>
   <tr>
-   <td><strong>我是否可以升级到6.3并稍后进行迁移（例如，使用另一个维护窗口）？</strong></td>
+   <td><strong>我是否可以升级到6.3或更高版本并稍后进行迁移（例如，使用其他维护窗口）？</strong></td>
    <td>否，如上所述，内容迁移是强制性的。</td>
    <td> </td>
   </tr>
@@ -522,7 +522,7 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
     <th>阶段</th>
     <th>日志消息</th>
-    <th>说明</th>
+    <th>解释</th>
     <th>后续步骤</th>
   </tr>  
   <tr>
