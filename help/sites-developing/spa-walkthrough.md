@@ -1,24 +1,18 @@
 ---
 title: SPA 简介和演练
-seo-title: SPA Introduction and Walkthrough
 description: 本文介绍了SPA的概念，并演示了如何使用基本的SPA应用程序进行创作，其中显示了它与基础AEM SPA编辑器的关系。
-seo-description: This article introduces the concepts of a SPA and walks through using a basic SPA application for authoring, showing how it relates to the underlying AEM SPA Editor.
-uuid: 4b0a9e53-3892-4d60-8bd3-7ff740d2f137
-contentOwner: bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
-docset: aem65
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 0e8ad326e883f73e795929ce7d5d36f1bcdc5347
 workflow-type: tm+mt
 source-wordcount: '1966'
 ht-degree: 1%
 
 ---
 
-# SPA 简介和演练{#spa-introduction-and-walkthrough}
+
+# SPA 简介和演练 {#spa-introduction-and-walkthrough}
 
 单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用SPA框架构建站点，而作者则希望在AEM中为使用此类框架构建的站点无缝编辑内容。
 
@@ -36,16 +30,23 @@ SPA编辑器提供了一个全面的解决方案，可在AEM中支持SPA。 本�
 
 本介绍和演练的目标是向AEM开发人员演示SPA的相关性、其通常工作方式、AEM SPA编辑器如何处理SPA，以及它与标准AEM应用程序有何不同。
 
-演练基于标准AEM功能和示例We.Retail Journal应用程序。 必须满足以下要求：
+## 要求 {#requirements}
 
-* [带有Service Pack 2或更高版本的AEM版本6.4](/help/release-notes/release-notes.md)
-* [请在此处安装GitHub上提供的示例We.Retail Journal应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+演练基于标准AEM功能和示例WKND SPA项目应用程序。 要完成此演练，您必须具备以下功能。
+
+* [AEM 6.5.4或更高版本](/help/release-notes/release-notes.md)
+   * 您必须拥有系统的管理员权限。
+* [GitHub上提供的WKND SPA项目应用程序示例](https://github.com/adobe/aem-guides-wknd-spa)
+   * 下载 [最新版本的React应用程序。](https://github.com/adobe/aem-guides-wknd-spa/releases) 它的名称类似于 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
+   * 下载 [最新示例图像](https://github.com/adobe/aem-guides-wknd-spa/releases) 的URL。 它的名称类似于 `wknd-spa-sample-images-X.Y.Z.zip`.
+   * [使用包管理器](/help/sites-administering/package-manager.md) 以像在AEM中安装任何其他包一样安装包。
+   * 在本演练中，无需使用Maven安装应用程序。
 
 >[!CAUTION]
 >
->本文档使用 [We.Retail Journal应用程序](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 仅用于演示目的。 它不应用于任何项目工作。
+>本文档使用 [WKND Spa项目应用程序](https://github.com/adobe/aem-guides-wknd-spa) 仅用于演示目的。 它不应用于任何项目工作。
 >
->任何AEM项目都应利用 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
+>任何AEM项目都应利用 [AEM项目原型、](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) 支持使用React或Angular的SPA项目，并利用SPA SDK。
 
 ### 什么是SPA? {#what-is-a-spa}
 
@@ -98,39 +99,31 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
 构建SPA以利用AEM SPA编辑器时，内容作者注意到在编辑和创建内容时没有区别。 提供了常见的AEM功能，无需更改作者的工作流程。
 
->[!NOTE]
->
->演练基于标准AEM功能和示例We.Retail Journal应用程序。 必须满足以下要求：
->
->* [AEM版本6.4（带有Service Pack 2）](/help/release-notes/release-notes.md)
->* [请在此处安装GitHub上提供的示例We.Retail Journal应用程序。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
->
+1. 在AEM中编辑WKND SPA Project应用程序。
 
+   `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
-1. 在AEM中编辑We.Retail Journal应用程序。
-
-   `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
-
-   ![screen_shot_2018-06-07at142533](assets/screen_shot_2018-06-07at142533.png)
+   ![步骤 1](assets/spa-walkthrough-step-1.png)
 
 1. 选择标题组件后，请注意工具栏会像任何其他组件一样显示。 选择&#x200B;**编辑**。
 
-   ![screen_shot_2018-06-07at142937](assets/screen_shot_2018-06-07at142937.png)
+   ![步骤2](assets/spa-walkthrough-step-2.png)
 
 1. 在AEM中照常编辑内容，并注意将保留更改。
 
-   ![screen_shot_2018-06-07at143419](assets/screen_shot_2018-06-07at143419.png)
+   ![步骤3](assets/spa-walkthrough-step-3.png)
 
    >[!NOTE]
+   >
    >请参阅 [SPA编辑器概述](spa-overview.md#requirements-limitations) 有关就地文本编辑器和SPA的更多信息。
 
 1. 使用资产浏览器将新图像拖放到图像组件中。
 
-   ![screen_shot_2018-06-07at143530](assets/screen_shot_2018-06-07at143530.png)
+   ![步骤4](assets/spa-walkthrough-step-4.png)
 
 1. 将保留更改。
 
-   ![screen_shot_2018-06-07at143732](assets/screen_shot_2018-06-07at143732.png)
+   ![步骤5](assets/spa-walkthrough-step-5.png)
 
 与任何非SPA应用程序一样，支持其他创作工具，例如在页面上拖放其他组件、重新排列组件和修改布局。
 
@@ -138,7 +131,7 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 >
 >SPA编辑器不会修改应用程序的DOM。 SPA本身负责DOM。
 >
->要了解其工作原理，请继续阅读本文的下一节 [SPA应用程序和AEM SPA编辑器](/help/sites-developing/spa-walkthrough.md#spa-apps-and-the-aem-spa-editor).
+>要了解其工作原理，请继续阅读本文的下一节 [SPA应用程序和AEM SPA编辑器](#spa-apps-and-the-aem-spa-editor).
 
 ## SPA应用程序和AEM SPA编辑器 {#spa-apps-and-the-aem-spa-editor}
 
@@ -146,21 +139,21 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
 ### 使用SPA应用程序 {#using-an-spa-application}
 
-1. 在发布服务器上或使用选项加载We.Retail Journal应用程序 **查看已发布的项目** 从 **页面信息** 菜单。
+1. 在发布服务器上或使用选项加载WKND SPA Project应用程序 **查看已发布的项目** 从 **页面信息** 菜单。
 
-   `/content/we-retail-journal/react.html`
+   `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
-   ![screen_shot_2018-06-08at102650](assets/screen_shot_2018-06-08at102650.png)
+   ![步骤 1](assets/spa-walkthrough-step-1-1.png)
 
    请注意页面结构，包括导航到子页面、天气小组件和文章。
 
 1. 使用菜单导航到子页面，并查看页面是否立即加载，而无需刷新。
 
-   ![screen_shot_2018-06-08at102815](assets/screen_shot_2018-06-08at102815.png)
+   ![步骤2](assets/spa-walkthrough-step-1-2.png)
 
 1. 在导航子页面时，打开浏览器的内置开发人员工具并监视网络活动。
 
-   ![screen_shot_2018-06-08at103922](assets/screen_shot_2018-06-08at103922.png)
+   ![步骤3](assets/spa-walkthrough-step-1-3.png)
 
    当您在应用程序中从一个页面移动到另一个页面时，流量非常少。 不会重新加载页面，只会请求新图像。
 
@@ -168,104 +161,77 @@ SPA的主要思想是减少对服务器的调用和依赖，以最大限度地�
 
 那么，如果在子页面中导航时未重新加载页面，该页面是如何加载的？
 
-下一节， [加载SPA应用程序](/help/sites-developing/spa-walkthrough.md#loading-an-spa-application)，深入了解加载SPA的机制以及如何同步和异步加载内容。
+下一节， [加载SPA应用程序，](#loading-an-spa-application) 更深入地了解加载SPA的机制以及如何同步和异步加载内容。
 
 ### 加载SPA应用程序 {#loading-an-spa-application}
 
-1. 如果尚未加载，请在发布服务器上或使用选项加载We.Retail Journal应用程序 **查看已发布的项目** 从 **页面信息** 菜单。
+1. 如果尚未加载，请在发布服务器上或使用选项加载WKND SPA Project应用程序 **查看已发布的项目** 从 **页面信息** 菜单。
 
-   `/content/we-retail-journal/react.html`
+   `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
-   ![screen_shot_2018-06-07at144736](assets/screen_shot_2018-06-07at144736.png)
+   ![步骤 1](assets/spa-walkthrough-step-1-1.png)
 
 1. 使用浏览器的内置工具查看页面源。
 1. 请注意，源的内容非常有限。
 
-   ```
-   <!DOCTYPE HTML>
-   <html lang="en-CH">
-       <head>
-       <meta charset="UTF-8">
-       <title>We.Retail Journal</title>
-   
-       <meta name="template" content="we-retail-react-template"/>
-   
-   <link rel="stylesheet" href="/etc.clientlibs/we-retail-journal/react/clientlibs/we-retail-journal-react.css" type="text/css">
-   
-   <link rel="stylesheet" href="/libs/wcm/foundation/components/page/responsive.css" type="text/css">
-   
-   </head>
-       <body class="page basicpage">
-   
-   <div id="page"></div>
-   
-   <script type="text/javascript" src="/etc.clientlibs/we-retail-journal/react/clientlibs/we-retail-journal-react.js"></script>
-   
-       </body>
-   </html>
-   ```
-
-   页面的正文中没有任何内容。 它主要由样式表和对React脚本的调用组成， `we-retail-journal-react.js`.
-
-   此React脚本是此应用程序的主要驱动程序，负责渲染所有内容。
+   * 页面的正文中没有任何内容。 它主要由样式表和对各种脚本(如 `clientlib-react.min.js`.
+   * 这些脚本是此应用程序的主要驱动程序，负责渲染所有内容。
 
 1. 使用浏览器的内置工具检查页面。 查看已完全加载的DOM的内容。
 
-   ![screen_shot_2018-06-07at151848](assets/screen_shot_2018-06-07at151848.png)
+   ![步骤4](assets/spa-walkthrough-step-1-4.png)
 
-1. 切换到检查器中的“网络”选项卡，然后重新加载该页面。
+1. 切换到 **网络** ，然后重新加载页面。
 
    忽略图像请求，请注意，为页面加载的主要资源是页面本身、CSS、React Javascript、其依赖项以及页面的JSON数据。
 
-   ![screen_shot_2018-06-07at152155](assets/screen_shot_2018-06-07at152155.png)
+   ![步骤5](assets/spa-walkthrough-step-1-5.png)
 
 1. 加载 `react.model.json` 中。
 
-   `/content/we-retail-journal/react.model.json`
+   `http://<host>:<port>/content/wknd-spa-react/us/en/home.model.json`
 
-   ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
+   ![步骤6](assets/spa-walkthrough-step-1-6.png)
 
    AEM SPA编辑器可利用 [AEM Content Services](/help/assets/content-fragments/content-fragments.md) 以JSON模型的形式交付页面的整个内容。
 
    通过实施特定界面，Sling模型为SPA提供必要的信息。 JSON数据的提交会向下委派给每个组件（从页面、段落、组件等）。
 
-   每个组件都会选择它公开的内容和呈现方式（使用HTL的服务器端或使用React的客户端）。 当然，本文重点介绍使用React进行客户端渲染。
+   每个组件都会选择它公开的内容和呈现方式（使用HTL的服务器端或使用React的客户端）。 本文重点介绍使用React进行客户端渲染。
 
 1. 模型还可以将页面分组在一起，以便同步加载页面，从而减少需要重新加载页面的次数。
 
-   在We.Retail Journal的示例中， `home`, `blog`和 `aboutus` 页面会同步加载，因为访客通常会访问所有这些页面。 但是 `weather` 页面是异步加载的，因为访客不太可能访问该页面。
+   在WKND SPA Project应用程序的示例中， `home`, `page-1`, `page-2`和 `page-3` 页面会同步加载，因为访客通常会访问所有这些页面。
 
    此行为不是强制性的，且可完全定义。
 
-   ![screen_shot_2018-06-07at153945](assets/screen_shot_2018-06-07at153945.png)
+   ![步骤7](assets/spa-walkthrough-step-1-7.png)
 
-1. 要查看行为差异，请重新加载页面并清除检查器的网络活动。 在页面菜单中导航到博客和关于我们的页面，并查看没有报告网络活动。
+1. 要查看此行为差异，请重新加载页面并清除开发人员工具的网络活动。 导航到 `page-1` ，并查看 `page-1`. `page-1` 本身无需加载。
 
-   导航到天气页面，并查看 `weather.model.json` 异步调用。
-
-   ![screen_shot_2018-06-07at155738](assets/screen_shot_2018-06-07at155738.png)
+   ![步骤8](assets/spa-walkthrough-step-1-8.png)
 
 ### 与SPA编辑器交互 {#interaction-with-the-spa-editor}
 
-使用示例We.Retail Journal应用程序，可以清楚地知道应用程序的行为和在发布时加载的方式，从而可利用内容服务来交付JSON内容以及异步加载资源。
+使用WKND SPA Project示例应用程序，可以清楚地了解应用程序的行为和在发布时加载的方式，将内容服务用于JSON内容交付以及异步加载资源。
 
 此外，对于内容作者而言，在AEM中使用SPA编辑器进行内容创建是无缝的。
 
 在以下部分中，我们将探索允许SPA编辑器将SPA中的组件与AEM组件相关联，并实现这种无缝编辑体验的合同。
 
-1. 在编辑器中加载We.Retail Journal应用程序，并切换到 **预览** 模式。
+1. 在编辑器中加载WKND SPA Project应用程序，并切换到 **预览** 模式。
 
-   `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
+   `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
 1. 使用浏览器内置的开发人员工具，检查页面内容。 使用选择工具，在页面上选择一个可编辑的组件，然后查看元素详细信息。
 
    请注意，组件具有新的数据属性 `data-cq-data-path`.
 
-   ![screen_shot_2018-06-08at095124](assets/screen_shot_2018-06-08at095124.png)
+   ![步骤2](assets/spa-walkthrough-step-2-2.png)
 
    例如
 
-   `data-cq-data-path="root/responsivegrid/paragraph_1`
+   `data-cq-data-path="/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/text`
 
    此路径允许检索和关联每个组件的编辑上下文配置对象。
 
