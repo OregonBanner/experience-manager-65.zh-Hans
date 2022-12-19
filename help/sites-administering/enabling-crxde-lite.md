@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4183bb9d72763ebea3b464c77fce978c723e053
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,16 @@ ht-degree: 0%
 
 虽然此建议旨在尽可能减少攻击表面，但系统管理员有时可能需要访问CRXDE Lite，以浏览内容或调试生产实例上的问题。
 
+您可以通过以下任一方式启用CRXDE Lite [OSGi设置](#enabling-crxde-lite-osgi) 或 [cURL命令](#enabling-crxde-lite-curl).
+
+>[!WARNING]
+>
+>由于这些方法的操作方式略有不同，因此您应使用 ***e*** OSGI ***或*** cURL。
+>
+>这两种方法是 ***not*** 可互换。
+
+## 使用OSGI启用CRXDE Lite {#enabling-crxde-lite-osgi}
+
 如果禁用，则可以按照以下过程打开CRXDE Lite:
 
 1. 转到OSGi组件控制台(位于 `http://localhost:4502/system/console/components`
@@ -48,6 +58,8 @@ ht-degree: 0%
    * 勾选下方的方框 **使用绝对URI**.
 
 1. 使用完CRXDE Lite后，请确保再次禁用WebDAV。
+
+## 使用cURL启用CRXDE Lite {#enabling-crxde-lite-curl}
 
 您还可以通过运行以下命令通过cURL启用CRXDE Lite:
 
