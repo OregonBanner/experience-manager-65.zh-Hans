@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: 3c691a9e8673f3229368abbd550982d207eb8ac6
+source-git-commit: eb71119474f03a969a721c792b6f1ac330f9dbf3
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 如果您的AFA(AEM表单应用程序)Android应用程序无法同步，请执行以下步骤来修复同步问题：
 
-1. 转到 **https://&#39;[服务器]:[端口]&#39;system/console/configMgr**.
+1. 转到 **https://[服务器]:[端口]/system/console/configMgr**.
 1. 搜索 **[!UICONTROL AdobeGranite令牌身份验证处理程序]** 单击 **[!UICONTROL 编辑]**.
 1. 选择 **[!UICONTROL 无]** 选项 **[!UICONTROL 登录令牌Cookie的SameSite属性]** 属性。
 1. 单击“**[!UICONTROL 保存]**”。
