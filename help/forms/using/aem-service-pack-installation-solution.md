@@ -1,7 +1,7 @@
 ---
 title: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
 description: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
-source-git-commit: 4e4dca8ae8ed49c5b81934f22572c84938f4f676
+source-git-commit: be7a9cfc226537ab4b360064220fa03bf2045310
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 2%
@@ -31,9 +31,9 @@ ht-degree: 2%
 1. 找到 `bundle.info` 文件。
 1. 打开 `bundle.info` 文件，并将包名称搜索为 `org.apache.felix.http.bridge`.
 
->[!NOTE]
->
->如果 `bundle.info` 在 `bundle52` 不包含 `org.apache.felix.http.bridge` 包，检查包号中位于 `org.apache.felix.http.bridge`. 然后，导航到 [aem-forms根]\crx-repository\launchpad\felix\bundle[x] 并在此位置执行后续步骤。
+   >[!NOTE]
+   >
+   >如果 `bundle.info` 在 `bundle52` 不包含 `org.apache.felix.http.bridge` 包，检查包号中位于 `org.apache.felix.http.bridge`. 然后，导航到 [aem-forms根]\crx-repository\launchpad\felix\bundle[x] 并在此位置执行后续步骤。
 
 1. 导航至 URL: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
 1. 搜索 `bundle.jar` 并重命名 `bundle.jar` to `bundle.jar.bak`.
