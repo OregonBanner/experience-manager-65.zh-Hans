@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms 指南
 breadcrumb-title: Forms 指南
 user-guide-description: 创建、管理、发布和更新数字表单。
 role: User
-source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
+source-git-commit: 29b283970f2c37782700b69302715e8404ce83ae
 workflow-type: tm+mt
-source-wordcount: '3827'
+source-wordcount: '3835'
 ht-degree: 4%
 
 ---
@@ -688,6 +688,7 @@ ht-degree: 4%
    + [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
    + [无法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中打开基于XFA的PDF forms](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
    + [无法恢复CRX存储库](/help/forms/using/restore-crx-repository.md)
+   + [安装AEM 6.5.15.0 Service Pack后出现服务不可用错误](/help/forms/using/aem-service-pack-installation-solution.md)
 + 旧版文档 {#legacy-documentation}
    + [使用JEE Workbench上AEM Forms中的执行脚本服务来构建XML数据](developing/building-xml.md)
    + [在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](developing/compressing-decompressing-custom-dsc.md)
