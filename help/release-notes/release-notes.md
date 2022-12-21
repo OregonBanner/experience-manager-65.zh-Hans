@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 3e0380e85c300305cbb97e4d0a0918a60542610b
+source-git-commit: b383f9c55e1066666254f9fa788fd19fe23a4d41
 workflow-type: tm+mt
-source-wordcount: '3970'
+source-wordcount: '3974'
 ht-degree: 4%
 
 ---
@@ -166,7 +166,7 @@ ht-degree: 4%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL引发了一个例外。 例如，无法从内容片段获取变体标记。 没有名称为“electric”的变体。 此问题是由于调用 `getVariationTags` 对于引发异常的非现有变体。 (SITES-8898)
+* GraphQL引发异常。 例如，无法从内容片段获取变体标记。 没有名称为“electric”的变体。 此问题是由于调用 `getVariationTags` 对于引发异常的非现有变体。 (SITES-8898)
 * 在列表视图中对标题排序（升序和降序），标题与A、C、B顺序的顺序(SITES-7585)
 * 为内容片段变量添加了标记支持。 (SITES-8168)
 * 从Experience Manager6.5中识别并删除了Odin特定代码，这是不必要的。 (SITES-3574)
@@ -283,12 +283,12 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 1. 安装累积安装程序 [!DNL Experience Manager] Forms（在JEE上）和部署后配置中，请参阅 [发行说明](jee-patch-installer-65.md).
 
-1. 安装 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，并等待应用程序服务器稳定。
+1. 安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，并等待应用程序服务器稳定。
 1. 安装 [AEM 6.5.15.0 service pack](#install-service-pack).
 
    >[!NOTE]
    >
-   >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，片段servlet之前 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 在JEE环境中， CRX/bundle和开始页显示服务不可用错误， [单击此处](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑难解答步骤。
+   >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在 `Fragment for AEM 6.5 Forms on JEE Service Pack 15` 在JEE环境中， CRX/bundle和开始页显示服务不可用错误， [单击此处](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑难解答步骤。
 
 1. 安装 [最新Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，从中删除Forms附加组件包 `crx-repository\install` 文件夹，然后重新启动服务器。
 

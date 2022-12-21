@@ -1,9 +1,9 @@
 ---
 title: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
 description: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
-source-git-commit: 3c04322ef2801246044f9b316962d4d37b972213
+source-git-commit: cae425c7dbf315d0fb51ebc745b047d894328d5b
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '347'
 ht-degree: 2%
 
 ---
@@ -42,9 +42,9 @@ ht-degree: 2%
 
 1. 导航至 URL: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
 1. 搜索 `bundle.jar` 并重命名 `bundle.jar` to `bundle.jar.bak`.
-1. 复制 `bundle.jar` 从这个位置 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
+1. 复制 `Bundle for AEM 6.5 Forms on JEE Service Pack 15` 从这个位置 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. 启动应用程序服务器，等待日志稳定并检查包状态。
-1. 所有包都处于活动状态后，请安装 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段 `system/console/bundles` 等待应用服务器稳定。
+1. 所有包都处于活动状态后，请安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 从 `system/console/bundles` 等待应用服务器稳定。
 1. 停止应用程序服务器。
 1. 导航到 `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` 并删除 `bundle.jar`.
 1. 重命名 `bundle.jar.bak` 到 `bundle.jar`.
