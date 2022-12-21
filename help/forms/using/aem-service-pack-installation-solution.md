@@ -1,9 +1,9 @@
 ---
 title: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
 description: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
-source-git-commit: cae425c7dbf315d0fb51ebc745b047d894328d5b
+source-git-commit: 974796a6b9e921f8c2f40d72a4764eb9f4d8b92b
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '348'
 ht-degree: 2%
 
 ---

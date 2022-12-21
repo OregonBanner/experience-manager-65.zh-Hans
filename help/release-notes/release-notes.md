@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: c98ca7cafd559aaf0b0b889f8f03690de880e944
+source-git-commit: e73a65569963a5f60f7a4670998ada29deeb26b8
 workflow-type: tm+mt
-source-wordcount: '3975'
-ht-degree: 4%
+source-wordcount: '4036'
+ht-degree: 3%
 
 ---
 
@@ -166,7 +166,7 @@ ht-degree: 4%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL引发异常。 例如，无法从内容片段获取变体标记。 没有名称为“electric”的变体。 此问题是由于调用 `getVariationTags` 对于引发异常的非现有变体。 (SITES-8898)
+* GraphQL引发了一个例外。 例如，无法从内容片段获取变体标记。 没有名称为“electric”的变体。 此问题是由于调用 `getVariationTags` 对于引发异常的非现有变体。 (SITES-8898)
 * 在列表视图中对标题排序（升序和降序），标题与A、C、B顺序的顺序(SITES-7585)
 * 为内容片段变量添加了标记支持。 (SITES-8168)
 * 从Experience Manager6.5中识别并删除了Odin特定代码，这是不必要的。 (SITES-3574)
@@ -280,16 +280,14 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 >如果您未在 JEE 上使用 AEM Forms，请跳过。的修复 [!DNL Experience Manager] JEE上的Forms通过单独的安装程序交付。
 
 使用除JBoss EAP 7.4.0以外的任何应用程序服务器，对JEE环境上的所有AEM Forms执行以下步骤。
-
-1. 安装累积安装程序 [!DNL Experience Manager] Forms（在JEE上）和部署后配置中，请参阅 [发行说明](jee-patch-installer-65.md).
-
-1. 安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，并等待应用程序服务器稳定。
-1. 安装 [AEM 6.5.15.0 service pack](#install-service-pack).
+1. 安装 [AEM Forms JEE修补程序](jee-patch-installer-65.md). 包括JEE上AEM 6.5 Forms所有组件的所有已修复问题。
+1. 安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar). 片段添加了安装AEM Service Pack 15(6.5.15.0)所需的依赖项。
+1. 安装片段后，等待应用程序服务器稳定。
+1. [在Experience Manager6.5上安装Service Pack](#install-service-pack).
 
    >[!NOTE]
    >
-   >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在 `Fragment for AEM 6.5 Forms on JEE Service Pack 15` 在JEE环境中， CRX/bundle和开始页显示服务不可用错误， [单击此处](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑难解答步骤。
-
+   >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 在JEE环境上的AEM 6.5 Forms上，CRX/包和开始页面可能会停止工作，您会遇到“服务不可用”错误。 要解决此问题，请执行以下操作 [此处](/help/forms/using/aem-service-pack-installation-solution.md).
 1. 安装 [最新Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，从中删除Forms附加组件包 `crx-repository\install` 文件夹，然后重新启动服务器。
 
 ### UberJar {#uber-jar}
@@ -327,7 +325,7 @@ UberJar [!DNL Experience Manager] 6.5.15.0在 [Maven中央存储库](https://rep
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM包含GraphQL索引包1.0.5的内容片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM内容片段(包含GraphQL索引包1.0.5)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 使用GraphQL的客户需要此包；这样，用户便可以根据实际使用的功能添加所需的索引定义。
 
 * 作为 [!DNL Microsoft® Windows Server 2019] 不支持 [!DNL MySQL 5.7] 和 [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] 不支持的turnkey安装 [!DNL AEM Forms 6.5.10.0].
