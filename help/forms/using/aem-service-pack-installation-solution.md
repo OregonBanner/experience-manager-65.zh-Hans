@@ -1,7 +1,7 @@
 ---
 title: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
 description: 安装最新的6.5.15.0 Service Pack后，CRX/bundle和“启动页面”服务出现不可用错误
-source-git-commit: f5bf33e0a2ff73b8884a55bbe77e87ee991aeef9
+source-git-commit: 813d8ffc53dc1928674367c9568b6269642cecb7
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 2%
@@ -17,6 +17,11 @@ ht-degree: 2%
 * 错误 [FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent错误(org.osgi.framework.BundleException:无法解析org.apache.sling.scripting.console
 
 安装AEM 6.5.15.0 Service Pack后，CRX/bundle和起始页显示服务不可用错误。
+
+## 应用到 {#applies-to}
+
+此解决方案适用于：
+* AEM Forms在所有JEE服务器上，但JBoss EAP 7.4.0上运行的服务器除外
 
 ## 解决方案 {#solution}
 
@@ -39,13 +44,8 @@ ht-degree: 2%
 1. 搜索 `bundle.jar` 并重命名 `bundle.jar` to `bundle.jar.bak`.
 1. 复制 `bundle.jar` 从这个位置 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. 启动应用程序服务器，等待日志稳定并检查包状态。
-1. 所有包都处于激活状态后，请安装 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` servlet片段 `system/console/bundles` 从 [软件分发。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 等待应用服务器稳定。
+1. 所有包都处于激活状态后，请安装 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` servlet片段 `system/console/bundles` 从 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 等待应用服务器稳定。
 1. 停止应用程序服务器。
 1. 导航到 `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` 并删除 `bundle.jar`.
 1. 重命名 `bundle.jar.bak` 到 `bundle.jar`.
 1. 启动应用程序服务器。
-
-## 应用到 {#applies-to}
-
-此解决方案适用于：
-* AEM Forms在所有JEE服务器上，但JBoss EAP 7.4.0上运行的服务器除外
