@@ -12,7 +12,7 @@ discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 42feafa381c129117dae5345255702f0b0951a17
 workflow-type: tm+mt
 source-wordcount: '815'
 ht-degree: 1%
@@ -97,7 +97,7 @@ ASRP必须被标识为所有创作实例和发布实例上的公共存储。
 
 在AEM创作实例上：
 
-* 从主菜单导航到 **[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL 复制]**
+* 从主菜单导航到 **[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 复制]**
 * 选择 **激活树**
 * **开始路径**:浏览 `/conf/global/settings/communities/srpc/`
 * 取消选择 **仅已修改**
