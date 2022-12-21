@@ -3,9 +3,9 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 5d04a479001c5ea6423599969b39a4697a2da590
+source-git-commit: 3e0380e85c300305cbb97e4d0a0918a60542610b
 workflow-type: tm+mt
-source-wordcount: '3974'
+source-wordcount: '3970'
 ht-degree: 4%
 
 ---
@@ -258,10 +258,6 @@ ht-degree: 4%
 
 1. OSGi包 `org.apache.jackrabbit.oak-core` 是版本1.22.13或更高版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
->[!NOTE]
->
->如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，片段servlet之前 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 对于JEE环境中的AEM Forms, CRX/bundle和开始页显示服务不可用错误， [单击此处](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑难解答步骤。
-
 ### 安装 [!DNL Experience Manager] Forms附加组件包 {#install-aem-forms-add-on-package}
 
 >[!NOTE]
@@ -289,6 +285,11 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 1. 安装 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet片段，并等待应用程序服务器稳定。
 1. 安装 [AEM 6.5.15.0 service pack](#install-service-pack).
+
+   >[!NOTE]
+   >
+   >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，片段servlet之前 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` 在JEE环境中， CRX/bundle和开始页显示服务不可用错误， [单击此处](/help/forms/using/aem-service-pack-installation-solution.md) 以了解疑难解答步骤。
+
 1. 安装 [最新Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，从中删除Forms附加组件包 `crx-repository\install` 文件夹，然后重新启动服务器。
 
 ### UberJar {#uber-jar}
