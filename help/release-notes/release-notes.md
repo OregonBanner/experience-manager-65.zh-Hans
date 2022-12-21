@@ -3,7 +3,7 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: e73a65569963a5f60f7a4670998ada29deeb26b8
+source-git-commit: a27e460a19d3f986ee87b33263b8db1e45897497
 workflow-type: tm+mt
 source-wordcount: '4036'
 ht-degree: 3%
@@ -288,6 +288,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
    >[!NOTE]
    >
    >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 在JEE环境上的AEM 6.5 Forms上，CRX/包和开始页面可能会停止工作，您会遇到“服务不可用”错误。 要解决此问题，请执行以下操作 [此处](/help/forms/using/aem-service-pack-installation-solution.md).
+
 1. 安装 [最新Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，从中删除Forms附加组件包 `crx-repository\install` 文件夹，然后重新启动服务器。
 
 ### UberJar {#uber-jar}
