@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 33b8cf60e2a6ae13c103040d96b0e2db487ddd99
+source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
 workflow-type: tm+mt
-source-wordcount: '3452'
+source-wordcount: '3488'
 ht-degree: 1%
 
 ---
@@ -451,10 +451,6 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
    <td>WP、WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2019<br /> </td>
-   <td>VSD、VSDX</td>
-  </tr>
-  <tr>
    <td>Microsoft® Office Visio 2016（已弃用）<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
@@ -465,10 +461,6 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
   <tr>
    <td>Microsoft® Publisher 2016（已弃用）<br /> </td>
    <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® 2019工程<br /> </td>
-   <td>MPP</td>
   </tr>
   <tr>
    <td>Microsoft® Project 2016（已弃用）<br /> </td>
@@ -499,6 +491,8 @@ AEM Dynamic Media默认处于禁用状态。 请参阅此处 [启用Dynamic Medi
 >* OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
 >* Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF生成器服务不支持Microsoft Windows 10。
+>* PDF生成器无法使用Microsoft Visio 2019转换文件。 您可以继续使用Microsoft Visio 2016来转换.VSD和.VSDX文件。
+>* PDF生成器无法使用Microsoft Project 2019转换文件。 您可以继续使用Microsoft Project 2016来转换.VSD和.VSDX文件。
 >
 
 
