@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: a27e460a19d3f986ee87b33263b8db1e45897497
+source-git-commit: d3b830730ef06fb9968a46d6f26a275417cf36f0
 workflow-type: tm+mt
-source-wordcount: '4036'
-ht-degree: 3%
+source-wordcount: '4046'
+ht-degree: 4%
 
 ---
 
@@ -144,6 +144,7 @@ ht-degree: 3%
 * 当用户在更改管理员用户的默认密码后尝试在JEE修补程序上运行AEM表单时，会出现异常 `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 发生。 (CQ-4348277)
 * 在AEM Designer中，不带字幕的表单字段放置在包括复选框在内的表单元格中。(LC-3920410)
 * 当用户尝试在AEM Forms Designer中打开帮助时，该帮助未正确显示。 (CQ-4341996)
+* 具有多个区域设置的自适应Forms加载速度缓慢。 (NPR-39176)
 
 ## [!DNL Sites] {#sites-6515}
 
