@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
+source-git-commit: b2c8cf2fbc4db1d9f1b013fb93d71ed5c08eab59
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3717'
 ht-degree: 1%
 
 ---
@@ -492,10 +492,6 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
   <tr>
    <td>Microsoft® Publisher 2016（已弃用）<br /> </td>
    <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® 2019工程<br /> </td>
-   <td>MPP</td>
   </tr>
   <tr>
    <td>Microsoft® Project 2016（已弃用）<br /> </td>
