@@ -2,9 +2,9 @@
 title: Reader扩展证书的过期时间及其影响
 description: Reader扩展证书的过期时间及其影响
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 5f8061ebd2143f11567ac5b78162bdd02106d2e3
+source-git-commit: 6e9a7f3307ed05f887d60c7c7310100cd4596b23
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1121'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 2%
 
 Adobe Experience Manager Forms(AEM Forms)拥有Adobe Managed Services或内部部署企业基础许可证的客户有权使用Acrobat Reader DC扩展服务。 该服务通过扩展Acrobat Reader的功能（具有其他使用权限），使组织能够轻松共享交互式PDF文档。 该服务可向PDF文档添加使用权限，并激活在使用Adobe Acrobat Reader打开PDF文档时不可用的功能，例如向文档添加注释、填写表单和保存文档。 第三方用户无需使用其他软件或插件即可处理启用了权限的文档。 添加了使用权限的PDF文档称为启用权限的文档。 在Acrobat Reader中打开启用了权限的PDF文档的用户可以执行为该文档启用的操作。
 
-Adobe利用公钥基础结构(PKI)颁发数字证书，以用于许可和功能启用。 Adobe一直在根据证书颁发机构“Adobe根CA”颁发证书，该证书将于2023年1月7日到期。 新的证书颁发机构“Adobe根CA G2”和基于新证书颁发机构的证书现已可用。
+Adobe利用公钥基础结构(PKI)颁发数字证书，以用于许可和功能启用。 Adobe一直在凭证颁发机构颁发证书 **Adobe根CA**，将于2023年1月7日到期。 证书的过期不会影响使用通过 **Adobe根CA** 基于证书（旧证书）。 所有使用2023年1月7日之前的旧证书扩展的PDF文档（包括由您的客户下载的文档）将继续使用应用于这些文档的所有使用权限，并且不需要进行任何更新。
 
-2023年1月7日后，旧证书(基于“Adobe根CA”的证书)将不再有效。 Adobe建议您开始使用新的证书(即基于“Adobe根CA G2”的证书)，在2023年1月7日或之前Reader扩展PDF文档。  您可以 [从Adobe许可网站获取新证书](https://licensing.adobe.com/) 或Adobe支持。
-
-所有PDF文档(使用2023年1月7日之前的旧证书扩展的Reader，包括由您的客户下载的文档)将继续使用应用于这些文档的所有使用权限，并且不需要任何更新。
+新的证书颁发机构， **Adobe根CA G2**、和基于新证书颁发机构的证书现已可用。 2023年1月7日或之前，开始使用新证书，这些证书基于 **Adobe根CA G2** —Reader扩展新的PDF文档。  您可以 [从Adobe许可网站获取新证书](https://licensing.adobe.com/) 或Adobe支持。
 
 ## 常见问题解答
 
@@ -56,7 +54,7 @@ A.Adobe Acrobat Reader 2020或更高版本需要使用通过“Adobe根CA”（�
 
 **问：要继续使用通过“Adobe根CA 2”（新的证书颁发机构）颁发的证书扩展的PDF文档，需要哪个版本的Adobe Acrobat Reader?**
 
-A. Adobe Acrobat Reader 2020或更高版本需要使用通过“Adobe根CA 2”（新的证书颁发机构）扩展的PDF文档。 如果您使用 [不支持的Adobe Acrobat Reader版本](https://helpx.adobe.com/support/programs/eol-matrix.html),Adobe建议您 [下载并安装最新版本的Adobe Acrobat Reader](https://get.adobe.com/reader/).
+A. Adobe Acrobat Reader 2020或更高版本需要使用通过“Adobe根CA 2”（新的证书颁发机构）扩展的PDF文档。 如果您使用 [不支持的Adobe Acrobat Reader版本](https://helpx.adobe.com/cn/support/programs/eol-matrix.html),Adobe建议您 [下载并安装最新版本的Adobe Acrobat Reader](https://get.adobe.com/reader/).
 
 **问：我是否可以删除旧的Acrobat Reader扩展证书，并在Adobe Experience Manager Forms服务器上添加新证书，同时继续使用现有别名？**
 
