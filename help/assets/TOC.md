@@ -145,7 +145,7 @@ ht-degree: 51%
    + [为您的实例启用内容片段功能](content-fragments/content-fragments-configuration-browser.md)
    + [内容片段模型](content-fragments/content-fragments-models.md)
    + [管理内容片段](content-fragments/content-fragments-managing.md)
-   + [变量 – 创作片段内容](content-fragments/content-fragments-variations.md)
+   + [变体 – 创作片段内容](content-fragments/content-fragments-variations.md)
    + [内容片段关联内容](content-fragments/content-fragments-assoc-content.md)
    + [元数据 – 片段属性](content-fragments/content-fragments-metadata.md)
    + [内容片段 – 删除注意事项](content-fragments/content-fragments-delete.md)

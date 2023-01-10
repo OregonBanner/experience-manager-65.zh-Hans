@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -137,7 +137,7 @@ ht-degree: 36%
    + [与BrightEdge Content Optimizer集成](brightedge.md)
    + [目录制作者](catalog-producer.md)
    + [与Silverpop Engage集成](silverpop.md)
-   + [与Adobe Campaign集成](campaign.md)
+   + [与 Adobe Campaign 集成](campaign.md)
    + [与ExactTarget集成](exacttarget.md)
    + [Analytics与外部提供程序](external-providers.md)
    + [与Adobe Marketing Cloud集成](marketing-cloud.md)

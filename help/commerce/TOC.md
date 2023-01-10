@@ -40,10 +40,10 @@ ht-degree: 70%
 + [Adobe Commerce PWA Studio](cif/pwa-studio/getting-started.md)
 + [迁移](cif/migration.md)
 + 发行说明 {#release-notes}
-   + [2022年](cif/release-notes/release-notes-2022.md)
-   + [2021年](cif/release-notes/release-notes-2021.md)
-   + [2020年](cif/release-notes/release-notes-2020.md)
-   + [2019年](cif/release-notes/release-notes-2019.md)
+   + [2022](cif/release-notes/release-notes-2022.md)
+   + [2021](cif/release-notes/release-notes-2021.md)
+   + [2020](cif/release-notes/release-notes-2020.md)
+   + [2019](cif/release-notes/release-notes-2019.md)
 + [常见问题](cif/faq.md)
 + AEM CIF Classic {#classic}
    + [概述](/help/commerce/cif-classic/home.md)
