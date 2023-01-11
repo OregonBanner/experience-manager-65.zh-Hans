@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 0df4bce6651517c6049578d0a1434726ab04e240
+source-git-commit: cd7800546ec4ebc950c5ebca4d7c80779cb2632c
 workflow-type: tm+mt
-source-wordcount: '3837'
+source-wordcount: '3877'
 ht-degree: 18%
 
 ---
@@ -356,6 +356,13 @@ Experience Manager允许您将远程DAM部署作为源连接到多个Experience 
 * 如果您无法从本地访问远程DAM部署 [!DNL Sites] 部署，确保允许跨站点Cookie，并 [同一站点Cookie支持](/help/sites-administering/same-site-cookie-support.md) 已配置。 如果阻止跨站点Cookie的部署， [!DNL Experience Manager] 可能无法验证。 例如， [!DNL Google Chrome] 隐身模式下可能会阻止第三方Cookie。 允许在 [!DNL Chrome] 浏览器，单击地址栏中的“眼睛”图标，导航到 **网站不工作** > **已阻止**，选择远程DAM URL，并允许登录令牌Cookie。 或者，请参阅 [如何启用第三方Cookie](https://support.google.com/chrome/answer/95647).
 
    ![Chrome浏览器中的“隐身”模式出现Cookie错误](assets/chrome-cookies-incognito-dialog.png)
+
+* 如果您无法从Experience Manager Sitesas a Cloud ServiceSites部署访问Adobe Managed Services远程DAM部署，请更新 `aem_author.vhost` 文件，可在 `"/etc/httpd/conf.d/available_vhosts`，以便远程DAM在Dispatcher配置中包含以下标头：
+
+   ```xml
+   Header Set Access-Control-Allow-Origin <Local Sites instance host>
+   Header Set Access-Control-Allow-Credentials true
+   ```
 
 * 如果未检索到远程引用并导致出现错误消息，请检查是否 [!DNL Sites] 部署可用，并检查网络连接问题。 稍后重试以检查。 [!DNL Assets] 部署尝试两次与建立连接 [!DNL Sites] 部署，然后报告失败。
 
