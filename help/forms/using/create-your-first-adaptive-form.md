@@ -9,10 +9,10 @@ discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
+source-git-commit: 318347178fd626dea8e5a15caa7cdad8fe353eba
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 0%
+source-wordcount: '965'
+ht-degree: 9%
 
 ---
 
@@ -37,11 +37,11 @@ ht-degree: 0%
 
 网站为不同的客户提供一系列产品。 客户浏览门户，选择并订购产品。 每个客户都创建一个帐户并提供送货和帐单地址。 现有客户莎拉·罗丝正在寻求将她的送货地址添加到网站。 该网站提供在线表格以添加和更新送货地址。
 
-网站在Adobe Experience Manager(AEM)上运行，并使用AEM [!DNL Forms] 用于数据捕获和处理。 地址添加和更新表单是自适应表单。 网站将客户详细信息存储在数据库中。 他们使用地址添加和更新表单来检索和显示可用地址。 他们还使用自适应表单来接受更新和新地址。
+网站在Adobe Experience Manager(AEM)上运行，并使用AEM [!DNL Forms] 用于数据捕获和处理。 地址添加和更新表单是自适应表单。 网站将客户详细信息存储在数据库中。 他们使用地址添加和更新表单来检索和显示可用地址。 他们还使用自适应表单来接受更新的地址和新地址。
 
 ### 先决条件 {#prerequisite}
 
-* 设置AEM创作实例。
+* 设置 [AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#author-and-publish-installs)
 * 安装 [AEM Forms附加组件](../../forms/using/installing-configuring-aem-forms-osgi.md) 在创作实例上。
 * 从数据库提供程序获取JDBC数据库驱动程序（JAR文件）。 本教程中的示例基于 [!DNL MySQL] 数据库和使用 [!DNL Oracle's] [MySQL JDBC数据库驱动程序](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 * 创建提交操作以发送包含表单内容的电子邮件
 * 预览和提交自适应表单
 
-[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
+[![参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
 
 ## 步骤2:创建表单数据模型 {#step-create-form-data-model}
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 * 为表单数据模型配置读写服务
 * 测试表单数据模型和配置有测试数据的服务
 
-[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
+[![参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
 
 ## 步骤3:将规则应用于自适应表单字段 {#step-apply-rules-to-adaptive-form-fields}
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 * 创建规则并将其应用于自适应表单字段
 * 使用规则触发表单数据模型服务以将数据更新到数据库
 
-[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
+[![参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
 ## 步骤4:设置自适应表单的样式 {#step-style-your-adaptive-form}
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 * 使用主题编辑器创建自适应表单的主题
 * 在自定义主题中使用Web字体
 
-[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
+[![参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
 ## 步骤5:发布自适应表单 {#step-publish-your-adaptive-form}
 
@@ -119,4 +119,4 @@ ht-degree: 0%
 * 在AEM中嵌入自适应表单 [!DNL Sites] 页面
 * 将自适应表单嵌入到外部网页(在AEM外部托管的非AEM网页)
 
-[![请参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
+[![参阅指南](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
