@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 88763b318e25efb16f61bc16530082877392c588
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 83%
+source-wordcount: '1553'
+ht-degree: 65%
 
 ---
 
@@ -210,3 +210,85 @@ AEM体验片段可导出到Adobe Target中的默认工作区，或导出到Adobe
       * 该选件可能仍会呈现，因为体验片段 HTML 已推送到 Target
       * 如果也从 AEM 中删除了引用的资产，则体验片段中的任何引用都无法正常工作。
    * 当然，由于体验片段在 AEM 中不再存在，因此无法对体验片段进行任何进一步的修改。
+
+
+
+## 从导出到Target的体验片段中删除ClientLib {#removing-clientlibs-from-fragments-exported-target}
+
+体验片段包含完整的html标记和所有必需的客户端库(CSS/JS)，以便完全按照体验片段内容作者创建的片段进行呈现。 这是设计上的。
+
+在AEM交付的页面上使用体验片段选件和Adobe Target时，目标页面已包含所有必需的客户端库。 此外，体验片段选件中的无关HTML也不是必需的(请参阅 [注意事项](#considerations))。
+
+以下是体验片段选件中html的伪示例：
+
+```html
+<!DOCTYPE>
+<html>
+   <head>
+      <title>…</title>
+      <!-- all of the client libraries (css/js) -->
+      …
+   </head>
+   <body>
+        <!--/* Actual XF Offer content would appear here... */-->
+   </body>
+</html>
+```
+
+在高级别上，当AEM将体验片段导出到Adobe Target时，它会使用其他多个Sling选择器来执行此操作。 例如，导出的体验片段的URL可能如下所示(注意 `nocloudconfigs.atoffer`):
+
+* http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
+
+的 `nocloudconfigs` 选择器是通过使用HTL定义的，可通过从以下位置复制来覆盖它：
+
+* /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
+
+的 `atoffer` 选择器实际上是在后处理时使用 [Sling重写程序](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). 可以使用这两个选项来删除客户端库。
+
+### 示例 {#example}
+
+为此，我们将说明如何使用 `nocloudconfigs`.
+
+>[!NOTE]
+>
+>请参阅 [可编辑的模板](/help/sites-developing/templates.md#editable-templates) 以了解更多详细信息。
+
+#### 叠加 {#overlays}
+
+在本例中， [叠加](/help/sites-developing/overlays.md) 包含的将删除客户端库 *和* 无关的html。 假定您已创建体验片段模板类型。 需要从 `/libs/cq/experience-fragments/components/xfpage/` 包括：
+
+* `nocloudconfigs.html`
+* `head.nocloudconfigs.html`
+* `body.nocloudconfigs.html`
+
+#### 模板类型叠加图 {#template-type-overlays}
+
+在本例中，我们将使用以下结构：
+
+![模板类型叠加图](assets/xf-target-integration-02.png "模板类型叠加图")
+
+这些文件的内容如下：
+
+* `body.nocloudconfigs.html`
+
+   ![body.nocloudconfigs.html](assets/xf-target-integration-03.png "body.nocloudconfigs.html")
+
+* `head.nocloudconfigs.html`
+
+   ![head.nocloudconfigs.html](assets/xf-target-integration-04.png "head.nocloudconfigs.html")
+
+* `nocloudconfigs.html`
+
+   ![nocloudconfigs.html](assets/xf-target-integration-05.png "nocloudconfigs.html")
+
+>[!NOTE]
+>
+>使用 `data-sly-unwrap` 删除您需要的body标记 `nocloudconfigs.html`.
+
+### 注意事项 {#considerations}
+
+如果您同时需要在Adobe Target中使用体验片段选件支持AEM站点和非AEM站点，则将需要创建两个体验片段（两种不同的模板类型）：
+
+* 一个带有叠加的用于删除clientlibs/额外html
+
+* 没有叠加，因此包含所需的clientlib的
