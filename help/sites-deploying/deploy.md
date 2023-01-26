@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 85a0c578a2cf57e2b4d65123cffe3816624211c8
+source-git-commit: 2a350548674ff3f8dc49defa47ac2b028da76f4b
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 7%
@@ -165,7 +165,7 @@ AEM软件包有两个形式：
 
    *请注意，文件目录的路径必须只包含美国ASCII字符。*
 
-1. 将 **jar** 和 **许可证**&#x200B;此目录中的文件：
+1. 将 **jar** 和 **许可证** 此目录中的文件：
 
    ```shell
    <aem-install>/
