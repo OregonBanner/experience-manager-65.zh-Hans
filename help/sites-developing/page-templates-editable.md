@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
+source-git-commit: ae56ffafff38fe60530a8850732de58ba8c8f8f9
 workflow-type: tm+mt
 source-wordcount: '3252'
-ht-degree: 10%
+ht-degree: 9%
 
 ---
 
@@ -539,7 +539,7 @@ When [编辑可定义布局的模板](/help/sites-authoring/templates.md)，使�
 
 ### 内容策略 {#content-policies}
 
-内容（或设计）策略可定义组件的设计属性。例如，可用的组件或最小/最大尺寸。这些属性适用于模板（和使用模板创建的页面）。可以在模板编辑器中创建和选择内容策略。
+内容（或设计）策略可定义组件的设计属性，如组件的可用性或最小/最大维度。 这些属性适用于模板（和使用模板创建的页面）。可以在模板编辑器中创建和选择内容策略。
 
 * 资产 `cq:policy`，在 `root` 节点
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
