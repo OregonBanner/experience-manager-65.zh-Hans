@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 6%
@@ -37,7 +37,7 @@ SPA创作功能提供了一个全面的解决方案，可在AEM中支持SPA。 �
 您应该熟悉 [适用于AEM的SPA应用程序的结构](/help/sites-developing/spa-getting-started-react.md) 阅读本文之前。
 
 >[!CAUTION]
->本文档使用 [We.Retail Journal应用程序](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 仅用于演示目的。 它不应用于任何项目工作。
+>本文档使用 [We.Retail Journal应用程序](https://github.com/adobe/aem-sample-we-retail-journal) 仅用于演示目的。 它不应用于任何项目工作。
 >
 >任何AEM项目都应利用 [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目并利用SPA SDK。
 

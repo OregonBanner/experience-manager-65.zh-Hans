@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: e13953bed73481738832a00a7563a07149c2d3bd
+source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
@@ -150,7 +150,7 @@ npm模块： [@adobe/aem-angular-editable-components](https://www.npmjs.com/pack
 
 容器是用于包含和渲染子组件的组件。 为此，容器会遍历 `:itemsOrder`, `:items` 和 `:children` 模型的属性。
 
-容器会从的存储中动态获取子组件 ` [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)` 库。 然后，容器使用模型提供程序功能扩展子组件，并最终将其实例化。
+容器会从的存储中动态获取子组件 [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) 库。 然后，容器使用模型提供程序功能扩展子组件，并最终将其实例化。
 
 ### 页面 {#page}
 
