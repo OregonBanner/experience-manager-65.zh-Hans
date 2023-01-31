@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: b2c8cf2fbc4db1d9f1b013fb93d71ed5c08eab59
+source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
 workflow-type: tm+mt
-source-wordcount: '3717'
+source-wordcount: '3699'
 ht-degree: 1%
 
 ---
@@ -509,21 +509,17 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 </table>
 
 >[!NOTE]
->
->PDF生成器仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
->
->此外：
->
->- PDF生成器需要32位版本的 [Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017版本17.011.30078来执行转换。
->- PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
->- PDF生成器不支持Microsoft Office 365。
->- PDF生成器转换仅在Windows和Linux上受支持。
->- OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
->- Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
->
->- PDF生成器服务不支持Microsoft Windows 10。
->- PDF生成器无法使用Microsoft Visio 2019转换文件。 您可以继续使用Microsoft Visio 2016来转换.VSD和.VSDX文件。
->- PDF生成器无法使用Microsoft Project 2019转换文件。 您可以继续使用Microsoft Project 2016来转换.MPP文件。
+PDF生成器仅支持受支持操作系统和应用程序的英语、法语、德语和日语版本。
+此外：
+- PDF生成器需要32位版本的 [Acrobat 2020 Classic跟踪版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) 或Acrobat 2017版本17.011.30078来执行转换。
+- PDF生成器仅支持Microsoft Office Professional Plus的32位零售版本以及转换所需的其他软件。
+- PDF生成器不支持Microsoft Office 365。
+- PDF生成器转换仅在Windows和Linux上受支持。
+- OCRPDF、Optimize PDF和Export PDF功能仅在Windows上受支持。
+- Acrobat版本与AEM Forms捆绑在一起，以启用PDF生成器功能。 在AEM Forms许可证有效期内，捆绑版本只应通过AEM Forms以编程方式访问，以便与AEM FormsPDF生成器一起使用。 有关更多信息，请参阅根据您的部署对AEM Forms产品进行描述([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) 或 [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+- PDF生成器服务不支持Microsoft Windows 10。
+- PDF生成器无法使用Microsoft Visio 2019转换文件。 您可以继续使用Microsoft Visio 2016来转换.VSD和.VSDX文件。
+- PDF生成器无法使用Microsoft Project 2019转换文件。 您可以继续使用Microsoft Project 2016来转换.MPP文件。
 >
 
 
@@ -637,8 +633,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 </table>
 
 >[!NOTE]
->
->Acrobat DC产品系列为Acrobat和Reader引入了两个基本上不同的产品：“Classic”和“Continuous”。 有关这两个跟踪的详细信息和比较，请参阅 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
+Acrobat DC产品系列为Acrobat和Reader引入了两个基本上不同的产品：“Classic”和“Continuous”。 有关这两个跟踪的详细信息和比较，请参阅 [https://www.adobe.com/go/acrobatdctracks。](https://www.adobe.com/go/acrobatdctracks)
 
 ### 浏览器 {#browsers}
 
@@ -672,17 +667,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
    <td>所有更新</td>
   </tr>
   <tr>
-   <td>MAC OS X上的Google Chrome和Firefox</td>
-   <td>答：支持<br /> <br /> </td>
-   <td>所有更新</td>
-  </tr>
-  <tr>
-   <td>Apple Safari 11.x</td>
-   <td>答：支持</td>
-   <td>所有更新</td>
-  </tr>
-  <tr>
-   <td>Apple Safari 12.x<br /> <br /> </td>
+   <td>Apple Safari on macOS</td>
    <td>答：支持</td>
    <td>所有更新</td>
   </tr>
@@ -690,14 +675,12 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 </table>
 
 >[!NOTE]
->
->桌面的一些与浏览器相关的例外如下：
->
->- Safari仅在Macintosh OS X上受支持。
->- 工作区在Macintosh OS X 10.6和10.7上支持Safari 5.1(含Acrobat DC或更高版本)。 有关Safari 5.1与AcrobatAdobe Reader兼容的更多信息，请参阅 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
->- Safari不支持管理控制台。
->- 通信管理不支持用于AEM 6.1表单的Windows® Internet Explorer 9.0。
->- Forms门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以便实现辅助功能。
+桌面的一些与浏览器相关的例外如下：
+- Safari仅在Macintosh OS X上受支持。
+- 工作区在Macintosh OS X 10.6和10.7上支持Safari 5.1(含Acrobat DC或更高版本)。 有关Safari 5.1与AcrobatAdobe Reader兼容的更多信息，请参阅 [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
+- Safari不支持管理控制台。
+- 通信管理不支持用于AEM 6.1表单的Windows® Internet Explorer 9.0。
+- Forms门户支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件，以便实现辅助功能。
 
 
 #### 移动设备客户端 {#mobile-clients}
@@ -728,8 +711,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是支持的特定于�
 </table>
 
 >[!NOTE]
->
->- Forms Portal仅在iPad上的Safari上受支持。
+- Forms Portal仅在iPad上的Safari上受支持。
 
 
 ### AEM Forms应用程序 {#aem-forms-workspace-app}
@@ -795,8 +777,7 @@ Adobe保留在任何给定时刻更改AEM Forms on JEE版本支持的第三方�
 - OpenOffice 4.1.2
 
 >[!NOTE]
->
->标记为 [在AEM Forms 6.5.12.0和6.5.10.0中已弃用，在AEM Forms 6.5 Service Pack 18(6.5.18.0)版本之前，仍支持](https://helpx.adobe.com/cn/support/programs/eol-matrix.html).
+标记为 [在AEM Forms 6.5.12.0和6.5.10.0中已弃用，在AEM Forms 6.5 Service Pack 18(6.5.18.0)版本之前，仍支持](https://helpx.adobe.com/cn/support/programs/eol-matrix.html).
 
 ## 修订历史记录 {#revision-history}
 
