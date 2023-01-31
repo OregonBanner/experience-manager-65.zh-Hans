@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 2a889134943d75d147af6d06ea67397f75158d40
+source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '850'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,15 @@ SAML断言已签名，并且可以选择进行加密。 要使其正常工作，
 >
 >只有在处理程序应能对消息进行签名或解密时，才需要执行以下步骤。
 
-1. 通过单击 **选择私钥文件**. 密钥要求采用PKCS#8格式，且采用DER编码。
+1. 为AEM创建证书/密钥对。 通过openssl生成该域的命令应类似于以下示例：
+
+   `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
+
+1. 将密钥转换为PKCS#8格式，并使用DER编码。 这是AEM KeyStore所需的格式。
+
+   `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
+
+1. 通过单击 **选择私钥文件**.
 1. 通过单击 **选择证书链文件**.
 1. 分配别名，如下所示：
 
