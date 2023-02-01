@@ -1,9 +1,9 @@
 ---
 title: AEM Forms AEM Forms补丁安装说明
 description: AEM Forms Service Pack安装OSGi和JEE环境的说明
-source-git-commit: b52e050ffbda8c38a5ba53d1c72218c21a64d0b9
+source-git-commit: a470627eb87735dd55edda93c3e2dac4a2c36752
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1868'
 ht-degree: 7%
 
 ---
@@ -18,38 +18,44 @@ ht-degree: 7%
 | 版本 | 6.5.15.0 |
 | 类型 | Service Pack版本 |
 | 日期 | 2022 年 12 月 01 日 |
-
-## Experience Manager Forms 6.5.15.0中包含的内容
-
-Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，例如客户请求的关键增强功能、性能、稳定性和安全性改进。 AEM Forms会定期发布Service Pack，以提供最新功能和改进。 根据您的堆栈，选择以下路径之一以在您的环境中下载并安装Service Pack:
-
-* [在JEE环境上的AEM Forms上下载并安装Service Pack](#download-and-install-for-jee-service-pack)
-* [在OSGi环境中的AEM Forms上下载并安装Service Pack](#download-and-install-for-osgi-service-pack)
+| 下载 URL | [最新AEM Forms版本](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) |
 
 >[!NOTE]
 >
-> Adobe在每第6个Service Pack后发布一个完整安装程序。 JEE上的AEM 6.5 Forms Service Pack 12(6.5.12.0)是最后一个完整安装程序。 完整安装程序支持新平台，而常规Service Packack安装程序仅包含错误修复和常规改进。 如果您正在执行全新安装或计划，以在JEE环境中为AEM 6.5 Forms使用最新软件，则Adobe建议在2022年3月03日发布的JEEfull安装程序上使用AEM 6.5.12.0 Forms，而不是2019年4月08日发布的AEM 6.5 Forms安装程序。 使用完整安装程序后，安装最新的Service Pack。
+>查看最新 [AEM Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html#forms-6515) 以获取已修复问题的完整列表。
 
-## 在JEE环境上的AEM Forms上下载并安装Service Pack {#download-and-install-for-jee-service-pack}
+## Experience Manager Forms 6.5中包含的内容
 
-![](assets/aem-forms-on-jee.png)
+Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，例如客户请求的关键增强功能、性能、稳定性和安全性改进。 AEM Forms定期发行Service Pack，以提供最新功能和改进。 根据您的堆栈，选择以下路径之一以在您的环境中下载并安装Service Pack:
 
+* [在JEE环境的AEM表单上下载并安装Service Pack](#download-and-install-for-jee-service-pack)
+* [在OSGi环境的AEM表单上下载并安装Service Pack](#download-and-install-for-osgi-service-pack)
+
+>[!NOTE]
+>
+> Adobe在每第6个Service Pack后发布一个完整安装程序。 JEE上的AEM 6.5 Forms Service Pack 12(6.5.12.0)是最后一个完整安装程序。 完整安装程序为新平台提供支持，而常规Service Pack安装程序仅包含错误修复和常规改进。 如果您正在执行全新安装或计划在JEE环境中为AEM 6.5 Forms使用最新软件，则Adobe建议在2022年3月03日发布的JEE完整安装程序中使用AEM 6.5.12.0 Forms，而不是2019年4月08日发布的AEM 6.5 Forms安装程序。 使用完整安装程序后，安装最新的Service Pack。
+
+## 在JEE环境的AEM表单上下载并安装Service Pack {#download-and-install-for-jee-service-pack}
+
+![JEE安装](/help/forms/using/assets/jeeinstallation.png)
 
 +++1. 备份现有环境：
 
-1. 备份 [CRX存储库、数据库模式和GDS（全局文档存储）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
+1. 备份您的 [CRX存储库、数据库模式和GDS（全局文档存储）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 1. 备份&lt;*AEM_forms_root*>/deploy文件夹。 如果您决定卸载Service Pack，则需要此插件。
+
+>[!NOTE]
+>
+> 运行AEM Service Pack安装程序之前，请确保您对AEM安装目录具有写入访问权限。
 
 +++
 
 +++2.下载所需的软件：
 
-
-* AEM Forms on JEE 6.5.15.0 Service Pack
-* AEM 6.5.15.0 服务包
-* Forms 附加组件包
-* 包
-* 片段
+* [AEM Forms on JEE 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/jee-patch-installer-65.html)
+* [AEM 6.5.15.0 服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fservicepack%2Faem-service-pkg-6.5.15.0.zip)
+* [Forms 附加组件包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-forms-addon-2022.12.20.00-220900.zip)
+* [片段Servlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
 +++
 
@@ -64,17 +70,17 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 
       * （Windows 32位） `Windows\Disk1\InstData\VM`
       * （Windows 64位） `Windows_64Bit`\ `Disk1\InstData\VM`
-   * **Linux**
+   * **Linux®**
 导航到相应的目录，并从外壳和类型导航到 
 `./aem65_cfp_install.bin`。
 
-      * (Linux) `Linux/Disk1/InstData/NoVM`
+      * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    这会启动安装向导，引导您完成安装。
 
 1. 在“Introduction”面板上，单击 **[!UICONTROL Next]**。
 1. 在 **选择安装文件夹** 屏幕，验证显示的默认位置对于您的现有安装是否正确，或单击 **[!UICONTROL 浏览]** 要选择安装AEM表单的替代文件夹，请单击 **[!UICONTROL 下一个]**.
-1. 阅读“Sevice Pack（服务包）”摘要信息，然后单击 **[!UICONTROL 下一个]**.
+1. 阅读Service Pack摘要信息，然后单击 **[!UICONTROL 下一个]**.
 1. 阅读“Pre-Installation Summary”信息，然后单击 **[!UICONTROL Install]**。
 1. 安装完成后，单击 **[!UICONTROL Next]** 以将快速修补程序更新应用到已安装的文件。
 1. **[仅适用于Windows]:** 执行以下步骤之一：
@@ -89,25 +95,36 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 
 1. **[仅适用于基于Unix的]:** 的 **启动配置管理器** 复选框。 单击 **[!UICONTROL 完成]** 立即运行配置管理器或运行 **配置管理器** 稍后，取消选择 **启动配置管理器** 选项 **[!UICONTROL 完成]**. 您可以开始 **配置管理器** 稍后在 `[AEM_forms_root]/configurationManager/bin` 目录访问Advertising Cloud的帮助。
 
+   运行 **配置管理器**:
+   * 配置CRX
+   * 部署Adobe Experience Manager Forms EAR
+   * 初始化Adobe Experience Manager Forms数据库
+   * 部署Adobe Experience Manager Forms组件
+   * 部署和验证DSC jar。
+
 1. 根据您的应用程序服务器，选择以下文档之一，然后按照 *配置和部署AEM表单* 中。
 
-   * [安装和部署AEM forms for JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [安装和部署AEM for WebSphere表单](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [安装和部署AEM forms for JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [安装和部署AEM for WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
    * [安装和部署AEM Forms for WebLogic](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
+
+>[!NOTE]
+>
+> 在JEE Service Pack上安装AEM Forms后，您需要从 `crx-repository\install` 文件夹。 从下载最新的Forms附加组件包 [软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
 +++
 
 +++4. 安装Servlet片段
 
-必须安装 **servlet片段** 对于除运行在JBoss EAP 7.4.0上的应用程序服务器以外的所有应用程序服务器。要下载并安装Servlet片段，请执行以下操作：
+必须安装 **servlet片段** 对于除运行在JBoss® EAP 7.4.0上的应用程序服务器以外的所有应用程序服务器。要下载并安装Servlet片段，请执行以下操作：
 
-1. 如果尚未下载片段，请从下载 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
+1. 如果尚未下载片段，请从下载 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
 
 1. 启动应用程序服务器，等待日志稳定并检查包状态。
 
 1. 打开Web控制台包。 默认URL为 `http://[Server]:[Port]/system/console/bundles`.
 
-1. 单击“安装/更新”。 选择下载的片段org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar。 单击安装或更新。 等待应用程序服务器稳定
+1. 单击“安装/更新”。 选择下载的片段， `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`. 单击 **安装** 或 **更新**. 等待应用程序服务器稳定
 
 1. 停止应用程序服务器。
 
@@ -129,7 +146,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 * 将包放入 `../crx-quickstart/install` 文件夹。
 包会自动安装。
 
-* 使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用     `cmd=install&recursive=true` 以便安装嵌套包。
+* 使用 [包管理器中的HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). 使用  `cmd=install&recursive=true` 以便安装嵌套包。
 
    >[!NOTE]
    >
@@ -148,9 +165,9 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 +++6. 安装AEM Experience Manager Forms附加组件包
 
 1. 确保您已安装 [!DNL Experience Manager] 服务包。
-1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)中列出的相应 Forms 附加组件包。
-1. 按照 [安装AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-1. 如果您在Experience Manager6.5 Forms中使用字母，请安装 [最新的AEMFDCompatibility包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates)中列出的相应 Forms 附加组件包。
+1. 按照 [安装AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=en#install-aem-forms-add-on-package).
+1. 如果您在Experience Manager6.5 Forms中使用字母，请安装 [最新的AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 +++
 
@@ -166,14 +183,14 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 ### !-->
 
 
-## 在OSGi环境中的AEM Forms上下载并安装Service Pack {#download-and-install-for-osgi-service-pack}
+## 在OSGi环境的AEM表单上下载并安装Service Pack {#download-and-install-for-osgi-service-pack}
 
-![](assets/aem-forms-on-osgi.png)
+![OSGi安装步骤](/help/forms/using/assets/osgiinstallation.png)
 
 
 +++1. 备份现有环境：
 
-1. 备份 [CRX存储库和数据库架构](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
+1. 备份您的 [CRX存储库和数据库架构](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 
 >[!NOTE]
 >
@@ -183,8 +200,8 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 
 +++2.下载所需的软件：
 
-* [AEM 6.5.15.0 服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)
-* [Forms 附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)
+* [AEM 6.5.15.0 服务包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fservicepack%2Faem-service-pkg-6.5.15.0.zip)
+* [Forms 附加组件包](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-forms-addon-2022.12.20.00-220900.zip)
 
 +++
 
@@ -202,7 +219,7 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 可以使用两种不同的方法自动安装 [!DNL Experience Manager] 6.5.15.0。<!--       UPDATE FOR EACH NEW RELEASE -->
 
 * 将包放入 `../crx-quickstart/install` 文件夹。 包会自动安装。
-* 使用 [包管理器中的HTTP API](/help/sites-administering/package-manager.md#package-share). 使用     `cmd=install&recursive=true` 以便安装嵌套包。
+* 使用 [包管理器中的HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). 使用 `cmd=install&recursive=true` 以便安装嵌套包。
 
    >[!NOTE]
    >
@@ -223,16 +240,20 @@ Adobe Experience Manager(AEM)Forms service pack包含新增和升级的功能，
 +++4. 安装AEM Experience Manager Forms附加组件包
 
 1. 确保您已安装 [!DNL Experience Manager] 服务包。
-1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)中列出的相应 Forms 附加组件包。
-1. 按照 [安装AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package-install-aem-forms-add-on-package).
+1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates)中列出的相应 Forms 附加组件包。
+1. 按照 [安装AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=en#install-aem-forms-add-on-package).
 1. 如果您在Experience Manager6.5 Forms中使用字母，请安装 [最新的AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 +++
 
 ## 疑难解答
 
+* 如果AEM Forms Service Pack在安装过程中出错，请重新安装该Service Pack。 如果问题仍然存在，请联系产品团队。
+
 * 如果 **包管理器UI中的对话框** 在安装Service Pack期间退出，等待错误日志稳定后再访问部署。 请等待与卸载更新程序包相关的特定日志，然后才能确保安装成功。 通常，此问题会在Safari浏览器中发生，但可能会间歇性地在任何浏览器上发生。
 
 * 安装完成后，检查任何活动的监视器日志(error.log)。 等待几分钟，直到日志中没有活动。 重新启动AEM实例。
 
-* 如果您遇到 **服务不可用错误** 安装最新的AEM Forms 6.5.15.0 service pack后， [单击此处](/help/forms/using/aem-service-pack-installation-solution.md) 以查看疑难解答步骤。
+* 以防你 **服务不可用错误** 安装最新的AEM Forms 6.5.15.0 service pack后， [安装servlet片段和包](/help/forms/using/aem-service-pack-installation-solution.md) 来修复错误。
+
+

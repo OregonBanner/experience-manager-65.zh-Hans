@@ -3,10 +3,10 @@ title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: d3b830730ef06fb9968a46d6f26a275417cf36f0
+source-git-commit: ec9094f25cfbcd1497a6bbc87cce9754e247a770
 workflow-type: tm+mt
-source-wordcount: '4046'
-ht-degree: 4%
+source-wordcount: '3759'
+ht-degree: 3%
 
 ---
 
@@ -218,7 +218,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Adobe不建议您删除或卸载 [!DNL Experience Manager] 6.5.15.0包。 因此，在安装该包之前，您应该先创建 `crx-repository` 以防你需要把它卷回去。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> * Adobe不建议您删除或卸载 [!DNL Experience Manager] 6.5.15.0包。 因此，在安装该包之前，您应该先创建 `crx-repository` 以防你需要把它卷回去。 <!-- UPDATE FOR EACH NEW RELEASE -->
+> * 有关安装适用于AEM Forms的Service Pack的说明，请参阅 [AEM Forms Service Pack安装说明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+
 
 ### 在上安装Service Pack [!DNL Experience Manager] 6.5 {#install-service-pack}
 
@@ -259,38 +261,9 @@ ht-degree: 4%
 
 1. OSGi包 `org.apache.jackrabbit.oak-core` 是版本1.22.13或更高版本(使用Web控制台： `/system/console/bundles`)。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
-### 安装 [!DNL Experience Manager] Forms附加组件包 {#install-aem-forms-add-on-package}
+### 在上安装Service Pack [!DNL Experience Manager] Forms {#install-service-pack-on-aemforms}
 
->[!NOTE]
->
->如果您没有使用 [!DNL Experience Manager] Forms。
-
-<!-- 
-Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
--->
-
-1. 确保您已安装 [!DNL Experience Manager] 服务包。
-1. 下载适用于您的操作系统的 [AEM Forms 发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)中列出的相应 Forms 附加组件包。
-1. 按照 [安装AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-1. 如果您在Experience Manager6.5 Forms中使用字母，请安装 [最新的AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates).
-
-### 安装 [!DNL Experience Manager] Forms on JEE {#install-aem-forms-jee-installer}
-
->[!NOTE]
->
->如果您未在 JEE 上使用 AEM Forms，请跳过。的修复 [!DNL Experience Manager] JEE上的Forms通过单独的安装程序交付。
-
-使用除JBoss EAP 7.4.0以外的任何应用程序服务器，对JEE环境上的所有AEM Forms执行以下步骤。
-1. 安装 [AEM Forms JEE修补程序](jee-patch-installer-65.md). 包括JEE上AEM 6.5 Forms所有组件的所有已修复问题。
-1. 安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar). 片段添加了安装AEM Service Pack 15(6.5.15.0)所需的依赖项。
-1. 安装片段后，等待应用程序服务器稳定。
-1. [在Experience Manager6.5上安装Service Pack](#install-service-pack).
-
-   >[!NOTE]
-   >
-   >如果安装最新 [AEM service pack(6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)，在安装 [JEE Service Pack 15上AEM 6.5 Forms的片段](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) 在JEE环境上的AEM 6.5 Forms上，CRX/包和开始页面可能会停止工作，您会遇到“服务不可用”错误。 要解决此问题，请执行以下操作 [此处](/help/forms/using/aem-service-pack-installation-solution.md).
-
-1. 安装 [最新Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)，从中删除Forms附加组件包 `crx-repository\install` 文件夹，然后重新启动服务器。
+有关在AEM Forms上安装Service Pack的说明，请参阅 [AEM Forms Service Pack安装说明](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 ### UberJar {#uber-jar}
 
