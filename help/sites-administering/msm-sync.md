@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96aa75dec7433aa3961944fa57a80c4719316ba5
 workflow-type: tm+mt
-source-wordcount: '2697'
+source-wordcount: '2696'
 ht-degree: 83%
 
 ---
@@ -172,7 +172,7 @@ ht-degree: 83%
   </tr>
   <tr>
    <td>referencesUpdate</td>
-   <td><p>在 Live Copy 上，此同步操作会更新引用，如链接。<br />将搜索 Live Copy 页面中指向 Blueprint 内资源的路径。找到后，它会更新路径以指向 Live Copy（而不是 Blueprint）内的相关资源。具有 Blueprint 外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 引用更新操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
+   <td><p>在Live Copy上，此同步操作会更新引用，如链接。<br />将搜索 Live Copy 页面中指向 Blueprint 内资源的路径。找到后，它会更新路径以指向 Live Copy（而不是 Blueprint）内的相关资源。具有 Blueprint 外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置 CQ MSM 引用更新操作服务</a>，以指定要排除的节点类型、段落项和页面属性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
