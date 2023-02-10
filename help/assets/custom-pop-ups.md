@@ -1,9 +1,6 @@
 ---
 title: 使用 Quickview 创建自定义弹出窗口
-seo-title: Use Quickview to create custom pop-ups
 description: 默认的概览用于电子商务体验，其中会显示一个弹出窗口，其中包含产品信息以促进购买。 您可以触发要在弹出窗口中显示的自定义内容。
-seo-description: The default Quickview is used in ecommerce experiences whereby a pop-up is displayed with product information to drive a purchase. You can trigger custom content to display in the pop-ups.
-uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -12,9 +9,9 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1052'
 ht-degree: 3%
 
 ---
@@ -35,7 +32,7 @@ Dynamic Media中的以下查看器支持快速查看：
 
 1. 为上传的资产创建概览。
 
-   通常，在编辑资产以用于所使用的查看器的同时，会创建一个概览。
+   您通常会在编辑资产以用于所使用的查看器的同时创建概览。
 
    <table>
     <tbody>

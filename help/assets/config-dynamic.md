@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
+source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
 source-wordcount: '7792'
 ht-degree: 2%
@@ -161,13 +161,13 @@ Dynamic Media-Hybrid必须启用并配置以供使用。 根据您的用例，Dy
 
    * 添加 `-r dynamicmedia` 到命令行的末尾。
 
-   ```shell
+   ```shellsession {.line-numbers}
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -r dynamicmedia
    ```
 
    如果您要发布到s7delivery，则还必须包含以下trustStore参数：
 
-   ```
+   ```shellsession {.line-numbers}
    -Djavax.net.ssl.trustStore=<absoluteFilePath>/customerTrustStoreFileName>
    
     -Djavax.net.ssl.trustStorePassword=<passwordForTrustStoreFile>
@@ -216,7 +216,7 @@ Dynamic Media默认未启用。 但是，如果您之前已启用Dynamic Media�
 
    * 不添加 `-r dynamicmedia` 到命令行。
 
-   ```shell
+   ```shellsession {.line-numbers}
    java -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar
    ```
 
@@ -1079,7 +1079,7 @@ Adobe的标准颜色配置文件集仅在您具有 [Software Distribution的功�
    <td>Japan Web Coated（广告）</td>
   </tr>
   <tr>
-   <td>新闻纸SNAP2007</td>
+   <td>NewsprintSNAP2007</td>
    <td>CMYK</td>
    <td>美国新闻纸（2007年快照）</td>
   </tr>
@@ -1104,7 +1104,7 @@ Adobe的标准颜色配置文件集仅在您具有 [Software Distribution的功�
    <td>Photoshop 4默认CMYK</td>
   </tr>
   <tr>
-   <td>PS5默认</td>
+   <td>PS5Default</td>
    <td>CMYK</td>
    <td>Photoshop 5默认CMYK</td>
   </tr>

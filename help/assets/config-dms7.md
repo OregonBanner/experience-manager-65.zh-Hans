@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: d3045e1a68d05eb257a6444f75a30faae4950db1
+source-git-commit: a8db862b4a90ee6679de44df9508caf75a4c3eec
 workflow-type: tm+mt
 source-wordcount: '6489'
 ht-degree: 3%
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 要启用Dynamic Media，请使用 `dynamicmedia_scene7` 通过在终端窗口中输入以下命令行来运行模式（使用的示例端口为4502）：
 
-```shell
+```shell {.line-numbers}
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
@@ -533,7 +533,7 @@ Dynamic Media使用批量集预设将资产组织为一组图像（替代图像�
 
 例如，假定要创建一个名为 `spin-2dspin`. 您有一组包含三行的旋转集图像，每行12个图像。 这些图像的名称如下所示：
 
-```
+```xml {.line-numbers}
 spin-01-01
  spin-01-02
  …
