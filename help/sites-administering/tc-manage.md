@@ -1,20 +1,11 @@
 ---
 title: 管理翻译项目
-seo-title: Managing Translation Projects
 description: 了解如何在AEM中管理翻译项目。
-seo-description: Learn how to manage translation projects in AEM.
-uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
-feature: Language Copy
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7efb1b8d345b07835e5f45a1afe9da13163411b2
 workflow-type: tm+mt
-source-wordcount: '3442'
-ht-degree: 56%
+source-wordcount: '3536'
+ht-degree: 55%
 
 ---
 
@@ -418,6 +409,16 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
    ![chlimage_1-39](assets/chlimage_1-39.jpeg)
 
 1. 单击或点按开始。
+
+## 移动或重命名源页面 {#move-source}
+
+如果已翻译的源页面需要 [重命名或移动](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)，则在移动后再次翻译页面将根据新页面名称/位置创建新语言副本。 基于先前名称/位置的旧语言副本仍将存在。
+
+此情景中的最佳实践是遵循以下步骤：
+1. 取消发布与要移动的源页面关联的语言副本。
+1. 删除它们。
+1. 从新移动的源页面创建新语言副本。
+1. 发布新创建的语言副本。
 
 ## 使用项目控制台创建翻译项目 {#creating-a-translation-project-using-the-projects-console}
 
