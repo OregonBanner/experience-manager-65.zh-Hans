@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 2c4be989decbac2a4109e7c02cd9d6231c1d0753
+source-git-commit: 86394ab7e7de89615218d6ddd6843ec9276275cd
 workflow-type: tm+mt
-source-wordcount: '12541'
+source-wordcount: '12734'
 ht-degree: 16%
 
 ---
@@ -231,17 +231,17 @@ HLS是自适应视频流播放的Apple标准，可根据网络带宽容量自动
   <tr>
    <td>桌面设备</td>
    <td>Firefox 45或更高版本</td>
-   <td>DASH*或HLS</td>
+   <td>短划线*或HLS自适应流播放。</td>
   </tr>
   <tr>
    <td>桌面设备</td>
    <td>铬黄</td>
-   <td>DASH*或HLS</td>
+   <td>短划线*或HLS自适应流播放。</td>
   </tr>
   <tr>
    <td>桌面设备</td>
    <td>Safari(Mac)</td>
-   <td>HLS</td>
+   <td>HLS自适应流播放。</td>
   </tr>
   <tr>
    <td>移动设备</td>
@@ -251,7 +251,7 @@ HLS是自适应视频流播放的Apple标准，可根据网络带宽容量自动
   <tr>
    <td>移动设备</td>
    <td>Chrome(Android™ 7或更高版本)</td>
-   <td>DASH*或HLS</td>
+   <td>短划线*或HLS自适应流播放。</td>
   </tr>
   <tr>
    <td>移动设备</td>
@@ -261,17 +261,17 @@ HLS是自适应视频流播放的Apple标准，可根据网络带宽容量自动
   <tr>
    <td>移动设备</td>
    <td>Safari(iOS)</td>
-   <td>HLS</td>
+   <td>HLS自适应流播放。</td>
   </tr>
   <tr>
    <td>移动设备</td>
    <td>Chrome(iOS)</td>
-   <td>DASH*或HLS</td>
+   <td>HLS自适应流播放。</td>
   </tr>
   <tr>
    <td>移动设备</td>
    <td>BlackBerry®</td>
-   <td>DASH*或HLS</td>
+   <td>短划线*或HLS自适应流播放。/td&gt;
   </tr>
  </tbody>
 </table>
@@ -432,7 +432,7 @@ Dynamic Media 建议使用 MP4 H.264 视频编码预设。由于 MP4 文件使�
 
 ### 在您的帐户上启用短划线 {#enable-dash}
 
-DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，在不同的视频查看器中得到广泛采用。 启用短划线后，您可以选择从HLS或短划线中选择自适应视频流播放。 您还可以通过在播放器之间自动切换来选择两者。
+DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，在不同的视频查看器中得到广泛采用。 在您的帐户上启用短划线后，您可以选择从短划线或HLS中选择自适应视频流播放。 或者，您可以在 **[!UICONTROL 自动]** 在“查看器预设”中选择作为播放类型。
 
 在您的帐户中启用DASH的一些主要优势包括：
 
@@ -447,12 +447,28 @@ DASH（HTTP上的数字自适应流播放）是视频流播放的国际标准，
    >
    >目前，在您的帐户上启用DASH仅在北美地区可用。
 
+在您的帐户中启用DASH需要两个步骤：
+
+* 将Dynamic Media配置为使用DASH，您可以轻松自己执行该操作。
+* 配置Experience Manager6.5以使用DASH，DASH是通过您创建并提交的Adobe客户支持案例来完成的。
+
 **要在您的帐户上启用DASH，请执行以下操作：**
 
-1. 导航到 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. **配置Dynamic Media**  — 在Experience Manager6.5的Dynamic Media中，导航到 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. 搜索 **AEM Assets Dynamic Media视频高级流** 功能标记。
 1. 选中此复选框可启用（打开）短划线。
 1. 选择&#x200B;**[!UICONTROL 保存]**。
+1. **配置Experience Manager6.5** - [使用Admin Console开始创建新的支持案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html).
+1. 按照相关说明创建支持案例，同时确保提供以下信息：
+
+   * 主要联系人姓名、电子邮件、电话。
+   * 您的Dynamic Media帐户的名称。
+   * 指定希望在Experience Manager6.5中启用短划线。
+
+1. Adobe客户支持根据请求提交顺序将您添加到DASH客户等待列表。
+1. 当Adobe准备好处理您的请求时，客户支持团队会联系您，以协调并设置启用短划线的目标日期。
+1. 客户支持部门在完成后会通知您。
+1. 创建 [视频查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) 和往常一样。
 
 ## 将视频发布到YouTube {#publishing-videos-to-youtube}
 
