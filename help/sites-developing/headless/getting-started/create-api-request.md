@@ -1,17 +1,17 @@
 ---
 title: 访问和传送内容片段无头快速入门指南
-description: 了解如何使用AEM Assets REST API管理内容片段和GraphQL API来无头地交付内容片段内容。
-exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: 6c75af3957c319c38177cd62c90e781a982ba91b
+description: 了解如何使用AEM Assets REST API管理内容片段，以及使用GraphQL API无头交付内容片段内容。
+exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
+source-git-commit: f17674f535fe4ecfdf846132bfc7787384095892
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 77%
+source-wordcount: '573'
+ht-degree: 67%
 
 ---
 
 # 访问和传送内容片段无头快速入门指南 {#accessing-delivering-content-fragments}
 
-了解如何使用AEM Assets REST API管理内容片段和GraphQL API来无头地交付内容片段内容。
+了解如何使用AEM Assets REST API管理内容片段，以及使用GraphQL API无头交付内容片段内容。
 
 ## 什么是 GraphQL 和 Assets REST API？ {#what-are-the-apis}
 
@@ -27,8 +27,8 @@ ht-degree: 77%
 
 信息架构师需要为其渠道端点设计查询来投放内容。这些查询通常只需要为每个模型的每个端点考虑一次。对于本指南快速入门，我们只需要创建一个。
 
-1. 登录AEM并访问GraphiQL界面：
-   * 例如：`https://<host>:<port>/content/graphiql.html`。
+1. 登录AEM并访问 [GraphiQL接口](/help/assets/content-fragments/graphiql-ide.md):
+   * 例如：`http://<host>:<port>/aem/graphiql.html`。
 
 1. GraphiQL 是用于 GraphQL 的浏览器中查询编辑器。您可以使用它来构建查询，检索内容片段，以便通过 JSON 格式以 Headless 方式交付。
    * 左侧窗格允许您构建查询。
@@ -53,14 +53,18 @@ ht-degree: 77%
    ```
 
 1. 在左侧面板中输入查询。
-   ![GraphiQL 查询](../assets/graphiql-query.png)
 
-1. 单击&#x200B;**执行查询**&#x200B;按钮或者使用 `Ctrl-Enter` 热键，结果将在右侧面板中以 JSON 格式显示。
+<!--
+   ![GraphiQL query](../assets/graphiql-query.png)
+-->
+
+1. 单击 **执行查询** （向右箭头）图标或使用 `Ctrl-Enter` 热键和结果在右侧面板中显示为JSON。
    ![GraphiQL 结果](../assets/graphiql-results.png)
 
 1. 单击:
    * **文档** 页面右上角以显示上下文文档，以帮助您构建可自行调整模型的查询。
    * **历史** 来显示以前的查询。
+   * **另存为** 和 **保存** 以保存查询，之后可列出并检索查询 **持久化查询** 面板和 **发布**.
       ![GraphiQL 文档](../assets/graphiql-documentation.png)
 
 GraphQL 启用结构化查询，不仅针对特定数据集或者单独的数据对象，而且还可以提供对象的特定元素，嵌套结果，提供查询变量支持，以及诸多功能。
@@ -73,5 +77,7 @@ GraphQL 可以避免迭代 API 以及过度投放，而是允许作为对单个 
 
 * **[配置浏览器](create-configuration.md)**  — 有关AEM配置浏览器的详细信息
 * **[内容片段](/help/assets/content-fragments/content-fragments.md)** – 提供有关创建和管理内容片段的详细信息
+* **[GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md)** 有关使用GraphiQL IDE的更多详细信息
+* **[持久化查询](/help/assets/content-fragments/persisted-queries.md)** 有关保留查询的更多详细信息
 * **[AEM Assets HTTP API 中的内容片段支持](/help/assets/assets-api-content-fragments.md)** – 提供直接通过 HTTP API 使用 CRUD 操作（创建、读取、更新、删除）访问 AEM 内容的详细信息
 * **[GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)** – 提供有关如何以 Headless 方式投放内容片段的详细信息

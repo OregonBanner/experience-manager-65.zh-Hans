@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets 指南
 breadcrumb-title: Assets 指南
 user-guide-description: 创建、管理、处理和分发数字资产。
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '681'
 ht-degree: 51%
 
 ---
@@ -97,6 +97,8 @@ ht-degree: 51%
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [中的内容片段支持 [!DNL Assets] HTTP API](assets-api-content-fragments.md)
    + [内容片段的 GraphQL API](content-fragments/graphql-api-content-fragments.md)
+   + [使用 GraphiQL IDE](content-fragments/graphiql-ide.md)
+   + [持久化查询](content-fragments/persisted-queries.md)
    + [对内容片段的远程 GraphQL 查询的身份验证](content-fragments/graphql-authentication-content-fragments.md)
    + [带内容片段的 GraphQL API - 示例内容和查询](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] 代理开发](proxy.md)

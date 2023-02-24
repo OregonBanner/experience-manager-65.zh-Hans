@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: f578a3c5dee24bbb9995329777eea02bb8f1b654
 workflow-type: tm+mt
-source-wordcount: '4332'
-ht-degree: 16%
+source-wordcount: '4507'
+ht-degree: 15%
 
 ---
 
@@ -459,6 +459,19 @@ Experience Manager在从以下位置查看资产时，会显示各种查看器�
 
 1. （可选）在“编辑查看器预设”页面顶部附近，选择 **[!UICONTROL 桌面]**, **[!UICONTROL 平板电脑]**&#x200B;或 **[!UICONTROL 电话]** 用于为不同设备和屏幕类型唯一定义可视样式。
 1. 在“查看器预设编辑器”页面上，选择 **[!UICONTROL 行为]** 选项卡。 或者，您也可以选择查看器中的任何可视化元素，以选择进行配置。
+例如，对于 *VideoPlayer* 类型，下 **[!UICONTROL 修饰符]** > **[!UICONTROL 播放]**，您可以从以下三个自适应流选项之一进行选择：
+
+   * **[!UICONTROL 短划线]**  — 视频以短划线形式流。
+   * **[!UICONTROL hls]**  — 视频流仅作为hls。
+   * **[!UICONTROL 自动]**  — 最佳实践。 DASH和HLS流的创建是存储优化的。 因此，Adobe建议您始终选择 **[!UICONTROL 自动]** 类型。 视频以短划线、hls或渐进方式流，如下所示：
+      * 如果浏览器支持短划线，则首先使用短划线流。
+      * 如果浏览器不支持短划线，则使用HLS流，其次是。
+      * 如果浏览器不支持短划线或HLS，则最后使用渐进式播放。
+
+   >[!NOTE]
+   >
+   >要查看和使用 **[!UICONTROL 短划线]** 选项，则必须首先由您帐户上的Adobe技术支持人员启用。 请参阅 [在您的帐户上启用短划线](/help/assets/video.md#enable-dash).
+
 1. 从&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单中，选择要更改其行为的组件。
 
    可视化编辑器中的许多组件都有与其关联的详细说明。 当您展开组件以显示其关联参数时，这些描述会显示在蓝色框中。
@@ -477,6 +490,10 @@ Experience Manager在从以下位置查看资产时，会显示各种查看器�
 
    请参阅 [发布查看器预设](#publishing-viewer-presets).
 
+   >[!IMPORTANT]
+   >
+   >对于使用自适应流播放用户档案的旧视频，URL会继续照常播放（与HLS流播放），直到您 [重新处理视频资产](/help/assets/processing-profiles.md#reprocessing-assets). 重新处理后，同一URL将继续工作，但现在与 *both* 已启用DASH和HLS流。
+
 ### 创建交互式查看器预设的特殊注意事项 {#special-considerations-for-creating-an-interactive-viewer-preset}
 
 **关于面板中图像缩略图的显示模式**
@@ -490,7 +507,7 @@ Experience Manager在从以下位置查看资产时，会显示各种查看器�
    <td><strong>描述</strong></td>
   </tr>
   <tr>
-   <td>区段</td>
+   <td>市场细分</td>
    <td><p><code>Segment </code>是现成交互式视频查看器预设的默认显示模式 <code>Shoppable_Video_light</code> 和 <code>Shoppable_Video_dark</code> 以及您自己创建的任何交互式视频查看器预设。</p> <p>在此模式下，当分配给视频区段的缩略图数量少于显示面板中的可见点数时。 此外，来自下一个或上一个子区段的缩略图包括 <i>not </i>拉进来填充面板中的任何空白位置。 即，它保留分配给特定视频区段的色板的显示。</p> </td>
   </tr>
   <tr>
@@ -597,7 +614,7 @@ Experience Manager在从以下位置查看资产时，会显示各种查看器�
 
 1. 在Experience Manager的左上角，选择Experience Manager徽标，然后在左边栏中，选择 **[!UICONTROL 工具]** （锤子图标） **[!UICONTROL 资产]** > **[!UICONTROL 查看器预设]**.
 1. 在“查看器预设”页面上，选中预设标题，然后选择 **[!UICONTROL 垃圾]** 图标。
-1. 选择 **[!UICONTROL 删除]**.
+1. 选择&#x200B;**[!UICONTROL 删除]**。
 
 ## 将查看器预设应用到资产 {#applying-a-viewer-preset-to-an-asset}
 

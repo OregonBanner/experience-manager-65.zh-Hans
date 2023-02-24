@@ -3,10 +3,10 @@ title: 用于内容片段的 AEM GraphQL API
 description: 了解如何将Adobe Experience Manager(AEM)中的内容片段与AEM GraphQL API结合使用来交付无头内容。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
+source-git-commit: 42ef4694a3301ae1cd34766ce4c19f4b0e2f2c38
 workflow-type: tm+mt
-source-wordcount: '4089'
-ht-degree: 88%
+source-wordcount: '3695'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->GraphQL当前用于Adobe Experience Manager(AEM)中的两个（单独）方案：
+>GraphQL当前用于Adobe Experience Manager(AEM)的两个（单独）方案：
 >
 >* [AEM Commerce 通过 GraphQL 使用来自 Commerce 平台的数据](/help/commerce/cif/integrating/magento.md)。
 >* AEM 内容片段与 AEM GraphQL API（一种自定义实施，基于标准 GraphQL）配合使用，提供结构化内容用于您的应用程序。
@@ -100,14 +100,28 @@ GraphQL 使用以下对象：
 
 * **[条目列表](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-您还可以执行：
+AEM 提供将查询（两种类型）转换为[](/help/assets/content-fragments/persisted-queries.md)持久化查询的功能，可由 Dispatcher 和 CDN 缓存。
 
-* [缓存的持久查询](#persisted-queries-caching)
+### GraphQL 查询最佳实践（Dispatcher 和 CND） {#graphql-query-best-practices}
+
+[持久查询](/help/assets/content-fragments/persisted-queries.md)是推荐用于发布实例的方法：
+
+* 它们被缓存
+* 它们由AEM集中管理
 
 >[!NOTE]
->您可以使用 [GraphiQL IDE](#graphiql-interface) 测试和调试 GraphQL 查询。
+>
+>通常“作者”上没有 Dispatcher/CDN，因此在那里使用持久查询没有任何好处；除了测试它们。
 
-## 用于AEM端点的GraphQL {#graphql-aem-endpoint}
+不建议使用 POST 请求的 GraphQL 查询，因为它们未缓存，因此在默认实例中，Dispatcher 配置为阻止此类查询。
+
+虽然 GraphQL 也支持 GET 请求，但这些请求可能会达到限制（例如 URL 的长度），而使用“持久查询”可以避免这些限制。
+
+>[!NOTE]
+>
+>将来某个时候，执行直接查询的功能可能会被弃用。
+
+## GraphQL for AEM端点 {#graphql-aem-endpoint}
 
 端点是 AEM 用于访问 GraphQL 的路径。您（或您的应用程序）可以使用此路径来：
 
@@ -193,11 +207,13 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 ## GraphiQL接口 {#graphiql-interface}
 
-标准的实施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) 界面可与AEM GraphQL一起使用。 这可以[随 AEM 安装](#installing-graphiql-interface)。
+标准的实施 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) 界面可与AEM GraphQL一起使用。
 
 >[!NOTE]
 >
->GraphiQL 绑定全局端点（不可用于特定 Sites 配置的其他端点）。
+>GraphiQL 包含在 AEM 的所有环境中（但只有在配置端点时才可访问/显示）。
+>
+>在以前的版本中，安装 GraphiQL IDE 时需要软件包。 如果您已安装此软件，现可将其移除。
 
 此界面允许您直接输入和测试查询。
 
@@ -209,13 +225,9 @@ AEM 全局端点的 GraphQL 的存储库路径为：
 
 ![GraphiQL 接口](assets/cfm-graphiql-interface.png "GraphiQL 接口")
 
-### 安装AEM GraphiQL界面 {#installing-graphiql-interface}
-
-GraphiQL用户界面可以通过专用包安装在AEM上：the [GraphiQL内容包v0.0.6(2021.3)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-graphql/graphiql-0.0.6.zip) 包。
-
 >[!NOTE]
 >
->可用的包与AEM 6.5.10.0和AEMas a Cloud Service完全兼容。
+>有关更多详细信息，请参阅 [使用GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md).
 
 ## 针对创作环境和发布环境的用例 {#use-cases-author-publish-environments}
 
@@ -232,6 +244,10 @@ GraphiQL用户界面可以通过专用包安装在AEM上：the [GraphiQL内容�
 ## 权限 {#permission}
 
 权限是访问 Assets 所需的权限。
+
+GraphQL 查询是在基础请求的 AEM 用户的许可下执行的。如果用户对某些片段（存储为资产）没有读取权限，它们将不会成为结果集的一部分。
+
+此外，用户需要访问 GraphQL 端点才能执行 GraphQL 查询。
 
 ## 架构生成 {#schema-generation}
 
@@ -456,6 +472,7 @@ query GetArticlesByVariation($variation: String!) {
         items {
             _path
             author
+            _variations
         }
     }
 }
@@ -618,45 +635,46 @@ query {
 
    * 如果请求的变量在嵌套片段中不存在，则 **主控** 将返回变量。
 
-## 持久查询（缓存） {#persisted-queries-caching}
+<!--
+## Persisted Queries (Caching) {#persisted-queries-caching}
 
-在准备包含POST请求的查询后，可以使用可由HTTP缓存或CDN缓存的GET请求执行该查询。
+After preparing a query with a POST request, it can be executed with a GET request that can be cached by HTTP caches or a CDN.
 
-这是必需的，因为POST查询通常不会缓存，如果将GET与查询一起用作参数，则很有可能会使参数对HTTP服务和中间产品而言变得过大。
+This is required as POST queries are usually not cached, and if using GET with the query as a parameter there is a significant risk of the parameter becoming too large for HTTP services and intermediates.
 
-持久查询必须始终使用与[相应站点配置](#graphql-aem-endpoint)相关的端点，因此它们可以使用以下项之一或全部：
+Persisted queries must always use the endpoint related to the [appropriate Sites configuration](#graphql-aem-endpoint); so they can use either, or both:
 
-* 全球配置和端点
-查询具有对所有内容片段模型的访问权限。
-* 特定站点配置和端点
-为特定站点配置创建持久查询需要对应的站点配置特定的端点（用于提供对相关内容片段模型的访问权限）。
-例如，要创建特定于 WKND Sites 配置的持久查询，必须预先创建对应的 WKND 特定的端点。
-
->[!NOTE]
->
->有关更多详细信息，请参阅[在配置浏览器中启用内容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)。
->
->**GraphQL 持久查询**&#x200B;需要为对应的 Sites 配置启用。
-
-例如，如果存在名为 `my-query` 的特定查询，使用来自 Sites 配置 `my-conf` 的模型 `my-model`：
-
-* 您可以使用 `my-conf` 特定的端点创建查询，然后查询将保存如下：
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
-* 您可以使用 `global` 端点创建相同的查询，但然后查询将保存如下：
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+* The Global configuration and endpoint
+  The query has access to all Content Fragment Models.
+* Specific Sites configuration(s) and endpoint(s)
+  Creating a persisted query for a specific Sites configuration requires a corresponding Sites-configuration-specific endpoint (to provide access to the related Content Fragment Models). 
+  For example, to create a persisted query specifically for the WKND Sites configuration, a corresponding WKND-specific Sites configuration, and a WKND-specific endpoint must be created in advance.
 
 >[!NOTE]
 >
->这里有两种不同的查询，保存在不同的路径中。
+>See [Enable Content Fragment Functionality in Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) for more details.
 >
->它们只是正好使用了相同的模型，但通过不同的端点。
+>The **GraphQL Persistence Queries** need to be enabled, for the appropriate Sites configuration. 
+
+For example, if there is a particular query called `my-query`, which uses a model `my-model` from the Sites configuration `my-conf`:
+
+* You can create a query using the `my-conf` specific endpoint, and then the query will be saved as following: 
+`/conf/my-conf/settings/graphql/persistentQueries/my-query`
+* You can create the same query using `global` endpoint, but then the query will be saved as following:
+`/conf/global/settings/graphql/persistentQueries/my-query`
+
+>[!NOTE]
+>
+>These are two different queries - saved under different paths. 
+>
+>They just happen to use the same model - but via different endpoints.
 
 
-以下是保留给定查询所需的步骤：
+Here are the steps required to persist a given query:
 
-1. 使用 PUT 操作将查询放入新端点 URL `/graphql/persist.json/<config>/<persisted-label>` 来准备查询。
+1. Prepare the query by PUTing it to the new endpoint URL `/graphql/persist.json/<config>/<persisted-label>`.
 
-   例如，创建持久查询：
+   For example, create a persisted query:
 
    ```xml
    $ curl -X PUT \
@@ -677,32 +695,32 @@ query {
    }'
    ```
 
-1. 此时，检查响应。
+1. At this point, check the response.
 
-   例如，检查是否成功：
+   For example, check for success:
 
-   ```xml
-   {
-     "action": "create",
-     "configurationName": "wknd",
-     "name": "plain-article-query",
-     "shortPath": "/wknd/plain-article-query",
-     "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
-   }
-   ```
+     ```xml
+     {
+       "action": "create",
+       "configurationName": "wknd",
+       "name": "plain-article-query",
+       "shortPath": "/wknd/plain-article-query",
+       "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
+     }
+     ```
 
-1. 然后，您可以通过获取URL来重播保留的查询 `/graphql/execute.json/<shortPath>`.
+1. You can then replay the persisted query by GETing the URL `/graphql/execute.json/<shortPath>`.
 
-   例如，使用持久查询：
+   For example, use the persisted query:
 
    ```xml
    $ curl -X GET \
        http://localhost:4502/graphql/execute.json/wknd/plain-article-query
    ```
 
-1. 通过将持久查询 POST 到已经存在的查询路径来更新持久查询。
+1. Update a persisted query by POSTing to an already existing query path.
 
-   例如，使用持久查询：
+   For example, use the persisted query:
 
    ```xml
    $ curl -X POST \
@@ -726,9 +744,9 @@ query {
    }'
    ```
 
-1. 创建打包的简单查询。
+1. Create a wrapped plain query.
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -739,9 +757,9 @@ query {
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }"}'
    ```
 
-1. 使用缓存控制创建打包的简单查询。
+1. Create a wrapped plain query with cache control.
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -752,9 +770,9 @@ query {
    '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
    ```
 
-1. 使用参数创建持久查询：
+1. Create a persisted query with parameters:
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X PUT \
@@ -778,69 +796,69 @@ query {
      }'
    ```
 
-1. 使用参数执行查询。
+1. Executing a query with parameters.
 
-   例如：
+   For example:
 
    ```xml
    $ curl -X POST \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   
+
    $ curl -X GET \
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    ```
 
-1. 要在发布时执行查询，需要复制相关的持久树
+1. To execute the query on publish, the related persist tree need to replicated
 
-   * 使用 POST 进行复制：
+   * Using a POST for replication:
 
-      ```xml
-      $curl -X POST   http://localhost:4502/bin/replicate.json \
-        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-        -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-        -F cmd=activate
-      ```
+     ```xml
+     $curl -X POST   http://localhost:4502/bin/replicate.json \
+       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
+       -F cmd=activate
+     ```
 
-   * 使用包：
-      1. 创建新的包定义。
-      1. 包括配置（例如，`/conf/wknd/settings/graphql/persistentQueries`）。
-      1. 构建包。
-      1. 复制包。
-   * 使用复制/分发工具。
-      1. 转到分发工具。
-      1. 为配置选择树激活（例如，`/conf/wknd/settings/graphql/persistentQueries`）。
-   * 使用工作流（通过工作流启动器配置）：
-      1. 定义工作流启动器规则，用于执行将在不同事件上复制配置的工作流模型（例如，创建、修改及其他）。
+   * Using a package:
+     1. Create a new package definition.
+     1. Include the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
+     1. Build the package.
+     1. Replicate the package.
 
+   * Using replication/distribution tool.
+     1. Go to the Distribution tool.
+     1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
+   * Using a workflow (via workflow launcher configuration):
+     1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
 
-1. 发布查询配置后，同样的原则适用，只需使用发布端点即可。
-
-   >[!NOTE]
-   >
-   >对于匿名访问，系统假设 ACL 允许“所有人”可以访问查询配置。
-   >
-   >如果不是这种情况，它将无法执行。
+1. Once the query configuration is on publish, the same principles apply, just using the publish endpoint.
 
    >[!NOTE]
    >
-   >URL 中的任何分号（“;”）需要编码。
+   >For anonymous access the system assumes that the ACL allows "everyone" to have access to the query configuration.
    >
-   >例如，在请求中执行持久查询：
+   >If that is not the case it will not be able to execute.
+
+   >[!NOTE]
    >
+   >Any semicolons (";") in the URLs need to be encoded.
    >
-   ```xml
+   >For example, as in the request to Execute a persisted query:
+   >
+   >```xml
    >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    >```
 
-## 从外部网站查询 GraphQL 端点 {#query-graphql-endpoint-from-external-website}
+## Querying the GraphQL endpoint from an External Website {#query-graphql-endpoint-from-external-website}
 
-要从外部网站访问 GraphQL 端点，您需要配置：
+To access the GraphQL endpoint from an external website you need to configure the:
 
-* [CORS 筛选条件](#cors-filter)
-* [反向链接筛选条件](#referrer-filter)
+* [CORS Filter](#cors-filter)
+* [Referrer Filter](#referrer-filter)
+-->
 
 ### CORS 筛选条件 {#cors-filter}
 

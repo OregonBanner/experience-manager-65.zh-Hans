@@ -12,9 +12,9 @@ feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
 workflow-type: tm+mt
-source-wordcount: '3689'
+source-wordcount: '3727'
 ht-degree: 22%
 
 ---
@@ -76,23 +76,23 @@ Dynamic Media 附带预定义的自适应视频编码配置文件。此现成配
    <td>128</td>
   </tr>
   <tr>
-   <td><p>MP4 H.264(mp4)</p> </td>
-   <td>自动</td>
+   <td><p>MP4 H.264 (mp4)</p> </td>
+   <td>auto</td>
    <td>540</td>
    <td>是</td>
-   <td>2000年<br /> </td>
+   <td>2000<br /> </td>
    <td>30</td>
-   <td>杜比HE-AAC</td>
+   <td>Dolby HE-AAC</td>
    <td>128</td>
   </tr>
   <tr>
-   <td><p>MP4 H.264(mp4)</p> </td>
-   <td>自动</td>
+   <td><p>MP4 H.264 (mp4)</p> </td>
+   <td>auto</td>
    <td>720<br /> </td>
    <td>是</td>
    <td>3000<br /> </td>
    <td>30</td>
-   <td>杜比HE-AAC</td>
+   <td>Dolby HE-AAC</td>
    <td>128</td>
   </tr>
  </tbody>
@@ -284,7 +284,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    <td><code>keyframe</code></td>
    <td>关键帧之间的目标帧数。 计算此值，以便每2到10秒生成一个关键帧。 例如，在每秒30帧时，关键帧间隔应为60-300。<br /> <br /> 较低的关键帧间隔可改进自适应视频编码的流搜寻和流切换行为，并且还可以提高具有大量运动的视频的质量。 但是，由于关键帧会增加文件的大小，因此较低的关键帧间隔通常会导致在给定比特率下的整体视频质量降低。</td>
    <td><code>String</code></td>
-   <td><p>正数。</p> <p>默认值为300。</p> <p>HLS（HTTP实时流）的推荐值为60-90。</p> </td>
+   <td><p>正数。</p> <p>默认值为300。</p> <p>DASH或HLS的建议值为60-90。 (要对视频使用DASH，必须先在您的帐户中启用它。 请参阅 <a href="/help/assets/video.md#enable-dash">在您的帐户上启用短划线</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -302,7 +302,7 @@ Dynamic Media已附带预定义的自适应视频编码配置文件，该配置�
    <td><code>audioBitrateCustom</code></td>
    <td>将值设置为 <code>true</code> 强制音频流使用恒定比特率（如果音频编解码器支持）。</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>默认为 <code>false</code>.</p> <p>HLS（HTTP实时流）的推荐值为 <code>false</code>.</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>默认为 <code>false</code>.</p> <p>DASH或HLS的推荐值为 <code>false</code>. (要对视频使用DASH，必须先在您的帐户中启用它。 请参阅 <a href="/help/assets/video.md#enable-dash">在您的帐户上启用短划线</a>.)</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>

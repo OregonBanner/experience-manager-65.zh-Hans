@@ -4,10 +4,10 @@ description: 了解如何在配置浏览器中启用某些内容片段功能，�
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: 8dc8eff86ff25534a578dd227033aa185853d930
+source-git-commit: da41f48d08b7629a734e2f60077af6190a7fee8f
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 70%
+source-wordcount: '271'
+ht-degree: 78%
 
 ---
 
@@ -43,10 +43,6 @@ ht-degree: 70%
 >
 >有关更多详细信息，另请参阅[配置浏览器：](/help/sites-administering/configurations.md#using-configuration-browser)。
 
->[!CAUTION]
->
->支持与内容片段一起使用的子配置（嵌套在配置中的配置），但不能用于GraphQL查询。
-
 1. 导航到&#x200B;**工具**、**常规**，然后打开&#x200B;**配置浏览器**。
 
 1. 使用&#x200B;**“创建”**&#x200B;来打开对话框，您需要：
@@ -63,7 +59,7 @@ ht-degree: 70%
 
 <!-- 1. Select the location appropriate to your website. -->
 
-### 将配置应用到您的Assets文件夹 {#apply-the-configuration-to-your-assets-folder}
+### 将配置应用到 Assets 文件夹 {#apply-the-configuration-to-your-assets-folder}
 
 配置 **全球** ，则会应用于任何资产文件夹。
 
