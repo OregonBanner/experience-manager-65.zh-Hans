@@ -2,9 +2,9 @@
 title: 的发行说明 [!DNL Adobe Experience Manager] 6.5
 description: 查找发行信息、新增功能、安装操作方法，以及 [!DNL Adobe Experience Manager] 6.5。
 mini-toc-levels: 3
-source-git-commit: 156e83ad9f73e200da70f824b598a713c0e2e97f
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '2196'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 Dynamic Media的一个关键改进是：
 
-为Dynamic Media视频交付中的自适应流播放（使用CMAF）启动了新协议DASH（通过HTTP的动态自适应流播放）支持 [常用媒体应用程序格式] 启用)。
+启动了新协议DASH（通过HTTP的动态自适应流）支持，以在Dynamic Media视频交付中实现自适应比特率流传输（使用CMAF） [常用媒体应用程序格式] 启用)。
 
 * 自适应流播放(DASH/HLS)可确保最终用户更好地观看视频。
 * DASH是自适应视频流传输的国际标准协议，在业界得到广泛采用。
