@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 28046104e75a833736f53b0e9d1edf4c8fbe6249
+source-git-commit: 5c26a043d735921d91044156f2749dc761dbb566
 workflow-type: tm+mt
-source-wordcount: '5898'
+source-wordcount: '5901'
 ht-degree: 0%
 
 ---
@@ -574,7 +574,7 @@ TarMK GC: no base state available, running full compaction instead
 
 >[!CAUTION]
 >
->使用版本号（主要和次要）与AEM安装的Oak核心版本匹配的Oak-run工具版本。 例如，如果您的AEM实例具有Oak核心版本1.22.x，则您应该使用Oak-run工具版本1.22.x。
+>使用版本号（主要和次要）与AEM安装的Oak核心版本匹配的Oak-run工具版本。 例如，如果您的AEM实例具有Oak核心版本1.22.x，则您应使用最新版本的Oak-run tool 1.22.x。
 
 Adobe提供了一个名为的工具 **Oak-run** 以执行修订清理。 它可以在以下位置下载：
 
