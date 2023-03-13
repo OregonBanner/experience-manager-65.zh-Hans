@@ -11,18 +11,18 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 5c26a043d735921d91044156f2749dc761dbb566
+source-git-commit: 24a64e603d460c659467c7679934bbdfd381aaa8
 workflow-type: tm+mt
-source-wordcount: '5901'
+source-wordcount: '5903'
 ht-degree: 0%
 
 ---
 
 # 修订版清理{#revision-cleanup}
 
-## 简介 {#introduction}
+## 介绍 {#introduction}
 
-存储库的每次更新都会创建一个新的内容修订版本。 因此，存储库的大小会随着每次更新而增长。 为避免存储库增长失控，需要清理旧修订以释放磁盘资源。 此维护功能称为修订版清理。 自AEM 6.0起，它就作为离线例程提供。
+存储库的每次更新都会创建一个新的内容修订版本。 因此，每次更新后，存储库的大小都会增大。 需要清理旧修订版本以释放磁盘资源 — 这对于避免不受控制的存储库增长非常重要。 此维护功能称为修订版清理。 自AEM 6.0起，它就作为离线例程提供。
 
 在AEM 6.3及更高版本中，引入了此功能的在线版本，称为“在线修订版清理”。 与必须关闭AEM实例的脱机修订清理相比，可以在AEM实例处于联机状态时运行联机修订清理。 默认情况下，联机修订版清理处于打开状态，这是执行修订版清理的推荐方式。
 
