@@ -23,7 +23,7 @@ Please note that all links to other guides need to be absolute references with l
    + [什么是文档历程？](home.md)
 
 + Headless 历程 {#headless}
-   + [Headless历程主页](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
+   + [无头历程主页](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/home.html)
    + Headless 开发人员历程 {#developer}
       + [了解 AEM 中的 Headless](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
       + [了解 CMS Headless 开发](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
